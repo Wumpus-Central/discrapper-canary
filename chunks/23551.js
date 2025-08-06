@@ -20,36 +20,38 @@ let h = (e) => {
         text: x.name,
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: d } = e;
-            return (0, i.jsx)('div', {
+            return (0, i.jsx)("div", {
                 className: s()(g.wrapper, r),
                 children: (0, i.jsx)(l.tEY, {
-                    children: (0, i.jsx)('button', {
+                    children: (0, i.jsx)("button", {
                         onMouseEnter: o,
                         onMouseLeave: d,
                         className: s()(g.inner, h),
-                        type: 'button',
+                        type: "button",
                         disabled: t,
-                        style: { backgroundImage: "url('".concat((0, a.wj)(b) ? x.icon.darkSVG : x.icon.lightSVG, "')") },
+                        style: {
+                            backgroundImage: "url('".concat((0, a.wj)(b) ? x.icon.darkSVG : x.icon.lightSVG, "')"),
+                        },
                         onClick:
                             null != f
                                 ? f
                                 : () =>
                                       (function (e) {
                                           let t = c.Z.get(e);
-                                          ((0, u.Z)({
+                                          (0, u.Z)({
                                               platformType: t.type,
-                                              location: 'Friends List'
+                                              location: "Friends List",
                                           }),
                                               m.default.track(p.rMx.ACCOUNT_LINK_STEP, {
-                                                  previous_step: 'desktop connections',
-                                                  current_step: 'desktop oauth',
-                                                  platform_type: t.type
-                                              }));
+                                                  previous_step: "desktop connections",
+                                                  current_step: "desktop oauth",
+                                                  platform_type: t.type,
+                                              });
                                       })(n),
-                        'aria-label': x.name
-                    })
-                })
+                        "aria-label": x.name,
+                    }),
+                }),
             });
-        }
+        },
     });
 };

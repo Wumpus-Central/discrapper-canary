@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(35282));
+n.d(t, { Z: () => L }), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -32,7 +32,7 @@ function R(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -42,15 +42,15 @@ function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 R(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -58,11 +58,11 @@ function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -84,36 +84,36 @@ function L(e) {
         { themeType: M } = (0, b.z)(),
         k = (0, _.Z)({
             activity: o,
-            user: t
+            user: t,
         }),
         j = (0, E.Z)(o),
-        U = null != j.text && '' !== j.text,
+        U = null != j.text && "" !== j.text,
         { largeImage: G } = (0, d.FO)(o),
         { analyticsLocations: B } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         Z = (0, m.Z)({
-            display: 'live',
+            display: "live",
             user: t,
             activity: o,
             entry: k,
-            analyticsLocations: B
+            analyticsLocations: B,
         }),
         F = (0, g.Z)({
             userId: t.id,
-            onAction: Z
+            onAction: Z,
         });
     if (!(0, l.Z)(o)) return null;
     let V = () => {
             var e, n;
-            let l = null != (n = null == (e = o.state) ? void 0 : e.split(';')) ? n : [];
+            let l = null != (n = null == (e = o.state) ? void 0 : e.split(";")) ? n : [];
             return 0 === l.length
                 ? null
                 : null == o.sync_id
                   ? (0, r.jsx)(I.Z, {
-                        variant: 'text-xs/normal',
-                        text: l.join(', ')
+                        variant: "text-xs/normal",
+                        text: l.join(", "),
                     })
                   : (0, r.jsx)(I.Z, {
-                        variant: 'text-xs/normal',
+                        variant: "text-xs/normal",
                         text: l.map((e, n) =>
                             (0, r.jsxs)(
                                 i.Fragment,
@@ -122,16 +122,18 @@ function L(e) {
                                         (0, r.jsx)(s.P3F, {
                                             className: a()(C.clickableText, C.inline),
                                             onClick: (e) => {
-                                                (e.stopPropagation(), Z({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(o, t.id, n));
+                                                e.stopPropagation(),
+                                                    Z({ action: "OPEN_SPOTIFY_ARTIST" }),
+                                                    (0, h.d$)(o, t.id, n);
                                             },
-                                            children: e
+                                            children: e,
                                         }),
-                                        n < l.length - 1 ? ', ' : ''
-                                    ]
+                                        n < l.length - 1 ? ", " : "",
+                                    ],
                                 },
-                                n
-                            )
-                        )
+                                n,
+                            ),
+                        ),
                     });
         },
         H = () => {
@@ -142,19 +144,19 @@ function L(e) {
                 ? null
                 : (0, r.jsx)(T.Z, {
                       start: t,
-                      end: n
+                      end: n,
                   });
         },
         Y = () =>
             t.id === n.id
                 ? null
-                : (0, r.jsx)('div', {
+                : (0, r.jsx)("div", {
                       className: C.actions,
                       children: (0, r.jsx)(S.Z, {
                           user: t,
                           activity: o,
-                          onAction: Z
-                      })
+                          onAction: Z,
+                      }),
                   });
     return (0, r.jsx)(u.Gt, {
         value: B,
@@ -163,23 +165,23 @@ function L(e) {
             className: a()(C.card, R),
             onAction: Z,
             onClose: w,
-            'aria-labelledby': U ? ''.concat(x, ' ').concat(L) : L,
+            "aria-labelledby": U ? "".concat(x, " ").concat(L) : L,
             children: [
                 (0, r.jsx)(
                     v.Z,
                     D(P({ textId: x }, j), {
                         contextMenu: (0, r.jsx)(A.Z, {
-                            display: 'live',
+                            display: "live",
                             user: t,
                             activity: o,
                             entry: k,
-                            onClose: w
-                        })
-                    })
+                            onClose: w,
+                        }),
+                    }),
                 ),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: C.body,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: C.content,
                         children: [
                             (0, r.jsx)(f.E, {
@@ -187,40 +189,40 @@ function L(e) {
                                 size: M === N.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                 className: C.clickableImage,
                                 onClick: (e) => {
-                                    (e.stopPropagation(), Z({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(o, t.id));
-                                }
+                                    e.stopPropagation(), Z({ action: "OPEN_SPOTIFY_ALBUM" }), (0, h.Z5)(o, t.id);
+                                },
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: C.details,
                                 children: [
-                                    (0, r.jsxs)('div', {
+                                    (0, r.jsxs)("div", {
                                         children: [
                                             (0, r.jsx)(I.f, {
-                                                variant: 'heading-sm/semibold',
+                                                variant: "heading-sm/semibold",
                                                 text: o.details,
                                                 onClick: () => {
-                                                    (Z({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(o));
+                                                    Z({ action: "OPEN_SPOTIFY_TRACK" }), (0, h.aG)(o);
                                                 },
-                                                id: L
+                                                id: L,
                                             }),
-                                            V()
-                                        ]
+                                            V(),
+                                        ],
                                     }),
                                     (0, r.jsx)(y.Z, {
                                         user: t,
                                         activity: o,
-                                        className: C.badges
+                                        className: C.badges,
                                     }),
                                     H(),
-                                    M === N.lY.MODAL_V2 && Y()
-                                ]
+                                    M === N.lY.MODAL_V2 && Y(),
+                                ],
                             }),
-                            M === N.lY.MODAL && Y()
-                        ]
-                    })
+                            M === N.lY.MODAL && Y(),
+                        ],
+                    }),
                 }),
-                M !== N.lY.MODAL && M !== N.lY.MODAL_V2 && Y()
-            ]
-        })
+                M !== N.lY.MODAL && M !== N.lY.MODAL_V2 && Y(),
+            ],
+        }),
     });
 }

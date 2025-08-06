@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     K: () => O,
-    Z: () => I
+    Z: () => I,
 }),
-    n(997841));
+    n(997841);
 var r = n(255367);
 n(73800);
 var i = n(512722),
@@ -25,7 +25,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,11 +51,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,22 +71,69 @@ function y(e, t) {
     );
 }
 function O(e) {
-    let { purchaseType: t, plan: n, premiumSubscription: r, productLine: i, isGift: a, planGroup: s, isPrepaidPaymentSource: l, inReverseTrial: c, paymentSourceId: u, hasPaymentSources: _ } = e;
+    let {
+        purchaseType: t,
+        plan: n,
+        premiumSubscription: r,
+        productLine: i,
+        isGift: a,
+        planGroup: s,
+        isPrepaidPaymentSource: l,
+        inReverseTrial: c,
+        paymentSourceId: u,
+        hasPaymentSources: _,
+    } = e;
     if (null === u && _) return m.intl.string(m.t.CpOiEB);
     if (t === h.GZ.ONE_TIME) return a ? m.intl.string(m.t.ouo4FB) : m.intl.string(m.t.ExD0Nj);
-    if ((o()(null != n, 'Subscription plan must be selected to render SubscriptionReviewButton'), i === p.POd.BOOST)) return m.intl.string(m.t.eUEeCg);
+    if ((o()(null != n, "Subscription plan must be selected to render SubscriptionReviewButton"), i === p.POd.BOOST))
+        return m.intl.string(m.t.eUEeCg);
     if (a) return m.intl.string(m.t.ouo4FB);
     if (c) return m.intl.string(m.t.LQVQIi);
-    if ((0, d.PV)(n.id)) return l ? m.intl.string(m.t.cRCCJy) : null != r ? (r.isPausedAllowsResumeButNotUpdates ? m.intl.string(m.t.zpi5pq) : (0, f.R4)(r, n.id, s) ? m.intl.string(m.t.IJI7ys) : m.intl.string(m.t.VPuTc3)) : (0, d.W_)(null, n);
+    if ((0, d.PV)(n.id))
+        return l
+            ? m.intl.string(m.t.cRCCJy)
+            : null != r
+              ? r.isPausedAllowsResumeButNotUpdates
+                  ? m.intl.string(m.t.zpi5pq)
+                  : (0, f.R4)(r, n.id, s)
+                    ? m.intl.string(m.t.IJI7ys)
+                    : m.intl.string(m.t.VPuTc3)
+              : (0, d.W_)(null, n);
     return m.intl.string(m.t.YScQSE);
 }
 function v(e, t) {
-    null != e.current && (e.current.scrollIntoView({ behavior: 'smooth' }), t());
+    null != e.current && (e.current.scrollIntoView({ behavior: "smooth" }), t());
 }
 function I(e) {
     var t;
-    let { legalTermsNodeRef: n, invoiceError: i, planError: o, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: g, isGift: b, planGroup: I, isPrepaid: T, isTrial: S, makePurchase: A, needsPaymentSource: N, inReverseTrial: C, onNext: R, onPaymentSourceAdd: P } = e,
-        { application: w, selectedPlan: D, hasAcceptedTerms: L, purchaseType: x, paymentSourceId: M, activeSubscription: k, devShelfFetchState: j, hasPaymentSources: U } = (0, c.JL)(),
+    let {
+            legalTermsNodeRef: n,
+            invoiceError: i,
+            planError: o,
+            disablePurchase: d,
+            flashLegalTerms: f,
+            isSubmitting: h,
+            premiumSubscription: g,
+            isGift: b,
+            planGroup: I,
+            isPrepaid: T,
+            isTrial: S,
+            makePurchase: A,
+            needsPaymentSource: N,
+            inReverseTrial: C,
+            onNext: R,
+            onPaymentSourceAdd: P,
+        } = e,
+        {
+            application: w,
+            selectedPlan: D,
+            hasAcceptedTerms: L,
+            purchaseType: x,
+            paymentSourceId: M,
+            activeSubscription: k,
+            devShelfFetchState: j,
+            hasPaymentSources: U,
+        } = (0, c.JL)(),
         G = O({
             purchaseType: x,
             plan: D,
@@ -96,14 +143,14 @@ function I(e) {
             isPrepaidPaymentSource: T,
             inReverseTrial: C,
             paymentSourceId: M,
-            hasPaymentSources: U
+            hasPaymentSources: U,
         }),
         { analyticsLocations: B } = (0, l.ZP)();
     if (null != i || null != o || d)
         return (0, r.jsx)(a.zxk, {
-            variant: 'active',
+            variant: "active",
             text: G,
-            disabled: !0
+            disabled: !0,
         });
     if (N && U)
         return (0, r.jsx)(a.ua7, {
@@ -114,18 +161,18 @@ function I(e) {
                     y(
                         E(
                             {
-                                variant: 'primary',
-                                text: G
+                                variant: "primary",
+                                text: G,
                             },
-                            e
+                            e,
                         ),
                         {
-                            type: 'submit',
-                            'data-testid': 'submitButton',
-                            onClick: P
-                        }
-                    )
-                )
+                            type: "submit",
+                            "data-testid": "submitButton",
+                            onClick: P,
+                        },
+                    ),
+                ),
         });
     if (N && !U)
         return (0, r.jsx)(a.ua7, {
@@ -136,18 +183,18 @@ function I(e) {
                     y(
                         E(
                             {
-                                variant: 'active',
-                                text: G
+                                variant: "active",
+                                text: G,
                             },
-                            e
+                            e,
                         ),
                         {
-                            type: 'submit',
-                            'data-testid': 'submitButton',
-                            disabled: !0
-                        }
-                    )
-                )
+                            type: "submit",
+                            "data-testid": "submitButton",
+                            disabled: !0,
+                        },
+                    ),
+                ),
         });
     if ((0, u.yE)(null != (t = null == w ? void 0 : w.flags) ? t : 0, p.udG.EMBEDDED) && j === s.O.LOADING)
         return (0, r.jsx)(a.ua7, {
@@ -158,28 +205,28 @@ function I(e) {
                     y(
                         E(
                             {
-                                variant: 'active',
-                                text: G
+                                variant: "active",
+                                text: G,
                             },
-                            e
+                            e,
                         ),
                         {
-                            type: 'submit',
-                            'data-testid': 'submitButton',
-                            disabled: !0
-                        }
-                    )
-                )
+                            type: "submit",
+                            "data-testid": "submitButton",
+                            disabled: !0,
+                        },
+                    ),
+                ),
         });
     if (S)
         return (0, r.jsx)(a.zxk, {
-            variant: 'expressive',
-            'data-testid': L ? 'purchase' : 'submitButton',
+            variant: "expressive",
+            "data-testid": L ? "purchase" : "submitButton",
             text: G,
             onClick: L ? A : () => v(n, f),
             loading: h,
-            iconPosition: 'start',
-            icon: () => (0, r.jsx)(a.SrA, { color: 'currentColor' })
+            iconPosition: "start",
+            icon: () => (0, r.jsx)(a.SrA, { color: "currentColor" }),
         });
     else if (!L)
         return (0, r.jsx)(a.ua7, {
@@ -190,18 +237,18 @@ function I(e) {
                     y(
                         E(
                             {
-                                variant: 'active',
-                                text: G
+                                variant: "active",
+                                text: G,
                             },
-                            e
+                            e,
                         ),
                         {
-                            type: 'submit',
+                            type: "submit",
                             onClick: () => v(n, f),
-                            'data-testid': 'submitButton'
-                        }
-                    )
-                )
+                            "data-testid": "submitButton",
+                        },
+                    ),
+                ),
         });
     else if (C && null != k && null != M)
         return (0, r.jsx)(_.Z, {
@@ -210,14 +257,14 @@ function I(e) {
             isSubmitting: h,
             paymentSourceId: M,
             buttonLabel: G,
-            analyticsLocations: B
+            analyticsLocations: B,
         });
     else
         return (0, r.jsx)(a.zxk, {
-            variant: 'active',
+            variant: "active",
             text: G,
-            'data-testid': 'purchase',
+            "data-testid": "purchase",
             onClick: A,
-            loading: h
+            loading: h,
         });
 }

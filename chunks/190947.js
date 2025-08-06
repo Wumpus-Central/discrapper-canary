@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => s,
-    b: () => a
+    b: () => a,
 });
 var r = n(255367);
 n(73800);
@@ -10,9 +10,9 @@ function a(e) {
     let { currencies: t, className: n, children: i } = e;
     return t.length < 2
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: n,
-              children: i
+              children: i,
           });
 }
 let s = function (e) {
@@ -21,7 +21,7 @@ let s = function (e) {
     let c = t.map((e, t) => ({
             key: t,
             value: e,
-            label: ''.concat(e.toUpperCase(), ' - ').concat((0, o.T)(e))
+            label: "".concat(e.toUpperCase(), " - ").concat((0, o.T)(e)),
         })),
         u = (e) => {
             null != e && n(e);
@@ -31,6 +31,6 @@ let s = function (e) {
         options: c,
         onChange: u,
         className: s,
-        isDisabled: l
+        isDisabled: l,
     });
 };

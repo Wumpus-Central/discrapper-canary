@@ -1,4 +1,4 @@
-(e.d(n, { Z: () => p }), e(388685));
+e.d(n, { Z: () => p }), e(388685);
 var i = e(255367);
 e(73800);
 var a = e(442837),
@@ -24,11 +24,11 @@ function Z(t) {
                       className: g.emoji,
                       emojiId: l,
                       emojiName: r,
-                      animated: !!(null == d ? void 0 : d.animated)
+                      animated: !!(null == d ? void 0 : d.animated),
                   })
                 : null,
-            e
-        ]
+            e,
+        ],
     });
 }
 function p(t) {
@@ -39,8 +39,16 @@ function p(t) {
         g = (0, u.eV)(n),
         p = g.length >= h.Cn,
         b = (0, c.$R)(n);
-    if (null == n) return ((0, r.Zy)(), null);
-    if (!e || __OVERLAY__ || !n.isForumPost() || (null == s ? void 0 : s.length) === 0 || !b || n.isModeratorReportChannel()) return null;
+    if (null == n) return (0, r.Zy)(), null;
+    if (
+        !e ||
+        __OVERLAY__ ||
+        !n.isForumPost() ||
+        (null == s ? void 0 : s.length) === 0 ||
+        !b ||
+        n.isModeratorReportChannel()
+    )
+        return null;
     let C = (t) => {
             let e = new Set(g);
             if (e.has(t)) e.delete(t);
@@ -63,14 +71,14 @@ function p(t) {
                               label: (0, i.jsx)(Z, { tag: t }),
                               disabled: p && !n,
                               action: () => C(t),
-                              checked: n
+                              checked: n,
                           },
-                          t.id
+                          t.id,
                       );
                   });
     return (0, i.jsx)(l.sNh, {
-        id: 'edit-tags',
-        label: v.intl.string(v.t['436ZFx']),
-        children: m
+        id: "edit-tags",
+        label: v.intl.string(v.t["436ZFx"]),
+        children: m,
     });
 }

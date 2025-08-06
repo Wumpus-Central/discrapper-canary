@@ -26,14 +26,23 @@ function _() {
     switch (e) {
         case u.Z.Sizes.SMOL:
         case u.Z.Sizes.MINI:
-            return 'text-xxs/semibold';
+            return "text-xxs/semibold";
         case u.Z.Sizes.SMALLER:
         default:
-            return 'text-xs/medium';
+            return "text-xs/medium";
     }
 }
 function p(e) {
-    let { className: t, maxGuilds: n, guilds: i, onFocus: a, onClick: p, size: h = u.Z.Sizes.SMALLER, hideOverflowCount: m = !1, disableGuildNameTooltip: g = !1 } = e,
+    let {
+            className: t,
+            maxGuilds: n,
+            guilds: i,
+            onFocus: a,
+            onClick: p,
+            size: h = u.Z.Sizes.SMALLER,
+            hideOverflowCount: m = !1,
+            disableGuildNameTooltip: g = !1,
+        } = e,
         E = f(h);
     function b() {
         let e = i.length - n,
@@ -47,14 +56,14 @@ function p(e) {
                         i = t === b && !f,
                         a = o()(d.avatar, E, i && d.isLast);
                     return g
-                        ? (0, r.jsx)('div', {
+                        ? (0, r.jsx)("div", {
                               className: a,
                               children: (0, r.jsx)(u.Z, {
                                   guild: e,
                                   onClick: p,
                                   size: h,
-                                  showTooltip: !1
-                              })
+                                  showTooltip: !1,
+                              }),
                           })
                         : (0, r.jsx)(
                               c.DY3,
@@ -64,10 +73,10 @@ function p(e) {
                                   children: (0, r.jsx)(u.Z, {
                                       guild: e,
                                       onClick: p,
-                                      size: h
-                                  })
+                                      size: h,
+                                  }),
                               },
-                              e.id
+                              e.id,
                           );
                 })
                 .value();
@@ -81,16 +90,16 @@ function p(e) {
                 size: l.zx.Sizes.NONE,
                 children: (0, r.jsx)(c.Text, {
                     variant: e,
-                    children: t > 99 ? '>99' : '+'.concat(t)
-                })
+                    children: t > 99 ? ">99" : "+".concat(t),
+                }),
             });
         }
         return y;
     }
     return i.length <= 0
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: o()(t, d.avatars),
-              children: b()
+              children: b(),
           });
 }

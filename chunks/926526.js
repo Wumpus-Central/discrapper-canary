@@ -2,7 +2,7 @@ n.d(t, {
     Dq: () => s,
     ID: () => l,
     Pq: () => u,
-    pL: () => c
+    pL: () => c,
 });
 var r = n(314897),
     i = n(271383),
@@ -14,7 +14,7 @@ function s(e) {
         guild_id: t,
         viewing_user_id: r.default.getId(),
         application_user_id: n,
-        application_status: i
+        application_status: i,
     });
 }
 function l(e) {
@@ -23,7 +23,7 @@ function l(e) {
         guild_id: t,
         action_type: n,
         application_user_id: i,
-        viewing_user_id: r.default.getId()
+        viewing_user_id: r.default.getId(),
     });
 }
 function c(e) {
@@ -38,7 +38,7 @@ function c(e) {
         message_user_id: d,
         is_member: f,
         join_request_status: c,
-        join_request_user_id: u
+        join_request_user_id: u,
     });
 }
 function u(e) {

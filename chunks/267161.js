@@ -1,8 +1,8 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         default: () => W,
-        useAppSidebarState: () => F
-    }));
+        useAppSidebarState: () => F,
+    });
 var r = n(255367),
     i = n(73800),
     l = n(114858),
@@ -46,24 +46,24 @@ function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -100,7 +100,7 @@ function z() {
             let e = g.Z.getConnectedFrame();
             return {
                 application: u.Z.getApplication(null == e ? void 0 : e.applicationId),
-                isFrameInFocusedMode: g.Z.getFrameLayoutMode() === M.U.FOCUSED
+                isFrameInFocusedMode: g.Z.getFrameLayoutMode() === M.U.FOCUSED,
             };
         }),
         O =
@@ -108,55 +108,56 @@ function z() {
                 ? x.ZP.getApplicationIconURL({
                       id: m.id,
                       icon: m.icon,
-                      bot: m.bot
+                      bot: m.bot,
                   })
                 : void 0,
         E = null;
     return (
         null != m && _
             ? ((e = m.name),
-              (E = (0, r.jsx)('img', {
+              (E = (0, r.jsx)("img", {
                   className: V.appIcon,
                   alt: U.intl.string(U.t.X4IxWF),
                   src: O,
-                  'aria-hidden': !0,
-                  draggable: !1
+                  "aria-hidden": !0,
+                  draggable: !1,
               })))
             : h
-              ? ((e = U.intl.string(U.t.HcoRu7)), (E = (0, r.jsx)(s.Dkj, { size: 'xs' })))
+              ? ((e = U.intl.string(U.t.HcoRu7)), (E = (0, r.jsx)(s.Dkj, { size: "xs" })))
               : null != d
                 ? ((E = p
-                      ? (0, r.jsx)(s.r7p, { size: 'xs' })
+                      ? (0, r.jsx)(s.r7p, { size: "xs" })
                       : (0, r.jsx)(b.Z, {
                             guild: d,
                             size: b.Z.Sizes.MINI,
                             active: !0,
-                            className: V.guildIcon
+                            className: V.guildIcon,
                         })),
                   (e = d.name))
                 : null != a && (a.isDM() || a.isGroupDM())
-                  ? ((e = U.intl.string(U.t.YUU0RE)), (E = (0, r.jsx)(s.gw7, { size: 'xs' })))
+                  ? ((e = U.intl.string(U.t.YUU0RE)), (E = (0, r.jsx)(s.gw7, { size: "xs" })))
                   : t.pathname.startsWith(D.Z5c.GLOBAL_DISCOVERY)
-                    ? ((e = U.intl.string(U.t['4nEZLi'])), (E = (0, r.jsx)(s.Jmo, { size: 'xs' })))
+                    ? ((e = U.intl.string(U.t["4nEZLi"])), (E = (0, r.jsx)(s.Jmo, { size: "xs" })))
                     : t.pathname.startsWith(D.Z5c.NITRO_HOME)
-                      ? ((e = U.intl.string(U.t.Ipxkoq)), (E = (0, r.jsx)(s.SrA, { size: 'xs' })))
+                      ? ((e = U.intl.string(U.t.Ipxkoq)), (E = (0, r.jsx)(s.SrA, { size: "xs" })))
                       : t.pathname.startsWith(D.Z5c.COLLECTIBLES_SHOP)
-                        ? ((e = U.intl.string(U.t.pWG4zc)), (E = (0, r.jsx)(s.EOn, { size: 'xs' })))
+                        ? ((e = U.intl.string(U.t.pWG4zc)), (E = (0, r.jsx)(s.EOn, { size: "xs" })))
                         : t.pathname.startsWith(D.Z5c.FRIENDS)
-                          ? ((e = U.intl.string(U.t.TdEu5e)), (E = (0, r.jsx)(s.iFz, { size: 'xs' })))
-                          : t.pathname.startsWith(D.Z5c.FAMILY_CENTER) && ((e = U.intl.string(G.default.RZqaJi)), (E = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
+                          ? ((e = U.intl.string(U.t.TdEu5e)), (E = (0, r.jsx)(s.iFz, { size: "xs" })))
+                          : t.pathname.startsWith(D.Z5c.FAMILY_CENTER) &&
+                            ((e = U.intl.string(G.default.RZqaJi)), (E = (0, r.jsx)(s.BFJ, { size: "xs" }))),
         null != e &&
-            '' !== e &&
-            (0, r.jsxs)('div', {
+            "" !== e &&
+            (0, r.jsxs)("div", {
                 className: V.title,
                 children: [
                     E,
                     (0, r.jsx)(s.Text, {
-                        variant: 'text-sm/medium',
+                        variant: "text-sm/medium",
                         lineClamp: 1,
-                        children: e
-                    })
-                ]
+                        children: e,
+                    }),
+                ],
             })
     );
 }
@@ -164,10 +165,10 @@ let W = i.memo(function () {
     i.useLayoutEffect(() => {
         w.ZP.setMinimumSize(k.J, k.N);
     }, []);
-    let e = (0, h.T)('AppTitleBar'),
+    let e = (0, h.T)("AppTitleBar"),
         t = F((e) => e.isOpen),
-        { notificationCenterVariant: n, entrypoint: l } = y.Lk.useExperiment({ location: 'AppTitleBar' }),
-        { hasBugReporterAccess: a } = d.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
+        { notificationCenterVariant: n, entrypoint: l } = y.Lk.useExperiment({ location: "AppTitleBar" }),
+        { hasBugReporterAccess: a } = d.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
         u = !t && e,
         f = null !== n && l === y.u3.TITLE_BAR_LEFT,
         g = null === n;
@@ -178,11 +179,11 @@ let W = i.memo(function () {
         v = (0, o.e7)([Z.Z, C.Z], () => (0, L.rB)()),
         T = (function (e) {
             let { showCollapsedSidebarIcons: t, showNotificationsInbox: n, showRecentsButton: r } = e;
-            return i.useMemo(() => (t ? 'SIDEBAR' : n ? 'NOTIFICATIONS_INBOX' : r ? 'RECENTS' : 'HELP'), [t, n, r]);
+            return i.useMemo(() => (t ? "SIDEBAR" : n ? "NOTIFICATIONS_INBOX" : r ? "RECENTS" : "HELP"), [t, n, r]);
         })({
             showCollapsedSidebarIcons: u,
             showNotificationsInbox: f,
-            showRecentsButton: g
+            showRecentsButton: g,
         });
     return v
         ? null
@@ -200,13 +201,13 @@ let W = i.memo(function () {
                                               children: [
                                                   (0, r.jsx)(
                                                       s.P3F,
-                                                      B(H({}, 'SIDEBAR' === T ? e : {}), {
+                                                      B(H({}, "SIDEBAR" === T ? e : {}), {
                                                           className: V.button,
                                                           onClick: () => {
                                                               F.setState({ isOpen: !F.getState().isOpen });
                                                           },
-                                                          children: (0, r.jsx)(Y, {})
-                                                      })
+                                                          children: (0, r.jsx)(Y, {}),
+                                                      }),
                                                   ),
                                                   (0, r.jsx)(s.P3F, {
                                                       className: V.button,
@@ -214,14 +215,17 @@ let W = i.memo(function () {
                                                           c.Z.open(D.oAB.ACCOUNT);
                                                       },
                                                       children: (0, r.jsx)(s.ewm, {
-                                                          size: 'xs',
-                                                          color: 'currentColor'
-                                                      })
-                                                  })
-                                              ]
+                                                          size: "xs",
+                                                          color: "currentColor",
+                                                      }),
+                                                  }),
+                                              ],
                                           }),
-                                      f && (0, r.jsx)(I.Z, { focusSectionProps: 'NOTIFICATIONS_INBOX' === T ? e : void 0 })
-                                  ]
+                                      f &&
+                                          (0, r.jsx)(I.Z, {
+                                              focusSectionProps: "NOTIFICATIONS_INBOX" === T ? e : void 0,
+                                          }),
+                                  ],
                               }),
                               title: (0, r.jsx)(z, {}),
                               trailing: (0, r.jsxs)(r.Fragment, {
@@ -229,46 +233,46 @@ let W = i.memo(function () {
                                       (0, r.jsx)(m.Z, { className: V.button }),
                                       (0, r.jsx)(p.Z, {
                                           canShowReminder: !0,
-                                          className: V.button
+                                          className: V.button,
                                       }),
-                                      g && (0, r.jsx)(S.Z, B(H({}, 'RECENTS' === T ? e : {}), { className: V.button })),
+                                      g && (0, r.jsx)(S.Z, B(H({}, "RECENTS" === T ? e : {}), { className: V.button })),
                                       a
                                           ? (0, r.jsx)(O.Z, {
-                                                focusSectionProps: 'HELP' === T ? e : void 0,
-                                                className: V.button
+                                                focusSectionProps: "HELP" === T ? e : void 0,
+                                                className: V.button,
                                             })
                                           : (0, r.jsx)(_.Z, {
-                                                focusSectionProps: 'HELP' === T ? e : void 0,
-                                                className: V.button
+                                                focusSectionProps: "HELP" === T ? e : void 0,
+                                                className: V.button,
                                             }),
-                                      (0, r.jsx)(E.Z, { className: V.button })
-                                  ]
-                              })
-                          })
-                  })
+                                      (0, r.jsx)(E.Z, { className: V.button }),
+                                  ],
+                              }),
+                          }),
+                  }),
           });
 });
 function Y() {
-    return (0, r.jsxs)('svg', {
-        xmlns: 'http://www.w3.org/2000/svg',
+    return (0, r.jsxs)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
         className: V.icon,
-        width: '24',
-        height: '24',
-        viewBox: '0 0 24 24',
-        fill: 'none',
-        stroke: 'currentColor',
-        'stroke-width': '2',
-        'stroke-linecap': 'round',
-        'stroke-linejoin': 'round',
+        width: "24",
+        height: "24",
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        "stroke-width": "2",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
         children: [
-            (0, r.jsx)('rect', {
-                width: '18',
-                height: '18',
-                x: '3',
-                y: '3',
-                rx: '2'
+            (0, r.jsx)("rect", {
+                width: "18",
+                height: "18",
+                x: "3",
+                y: "3",
+                rx: "2",
             }),
-            (0, r.jsx)('path', { d: 'M9 3v18' })
-        ]
+            (0, r.jsx)("path", { d: "M9 3v18" }),
+        ],
     });
 }

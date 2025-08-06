@@ -3,8 +3,8 @@ var r = n(98405),
     o = n(480296);
 r(
     {
-        target: 'Object',
-        stat: !0
+        target: "Object",
+        stat: !0,
     },
     {
         fromEntries: function (e) {
@@ -15,10 +15,10 @@ r(
                     function (e, n) {
                         o(t, e, n);
                     },
-                    { AS_ENTRIES: !0 }
+                    { AS_ENTRIES: !0 },
                 ),
                 t
             );
-        }
-    }
+        },
+    },
 );

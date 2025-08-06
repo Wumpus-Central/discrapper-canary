@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685));
+n.d(t, { Z: () => R }), n(388685);
 var a = n(255367),
     l = n(73800),
     i = n(120356),
@@ -23,20 +23,39 @@ var a = n(255367),
 function x() {
     return (0, a.jsx)(u.Text, {
         className: _.helpdeskLink,
-        variant: 'text-xs/normal',
-        color: 'text-muted',
-        children: p.intl.format(p.t.ybi2tL, { helpdeskURL: h.Z.getSubmitRequestURL() })
+        variant: "text-xs/normal",
+        color: "text-muted",
+        children: p.intl.format(p.t.ybi2tL, { helpdeskURL: h.Z.getSubmitRequestURL() }),
     });
 }
 function R(e) {
     var t;
-    let { modalType: n, header: i, body: s, problemTitle: h, problems: R, transitionState: L, ratingOptions: T, ratingEmojiKind: j, ratingTextLabels: D, freeformNeededProblems: I = [], otherKey: C, hideDontShowAgainCheckbox: M, startRating: A = null, hideHelpDeskLink: P = !1, onSubmit: y, onClose: F, impression: $, freeformDescription: k } = e,
+    let {
+            modalType: n,
+            header: i,
+            body: s,
+            problemTitle: h,
+            problems: R,
+            transitionState: L,
+            ratingOptions: T,
+            ratingEmojiKind: j,
+            ratingTextLabels: D,
+            freeformNeededProblems: I = [],
+            otherKey: C,
+            hideDontShowAgainCheckbox: M,
+            startRating: A = null,
+            hideHelpDeskLink: P = !1,
+            onSubmit: y,
+            onClose: F,
+            impression: $,
+            freeformDescription: k,
+        } = e,
         U = (0, o.Z)(R),
         [Z, B] = l.useState(!1),
         [G, J] = l.useState(A),
         [w, H] = l.useState(null),
         [z, K] = l.useState(d().shuffle(R)),
-        [Y, X] = l.useState(''),
+        [Y, X] = l.useState(""),
         Q = (0, E.Dt)(),
         V = (0, O.Z)(G),
         W = (0, O.Z)(Z),
@@ -45,7 +64,11 @@ function R(e) {
         et = (0, O.Z)(Y),
         en = null;
     return (
-        null == G ? (en = 'RATING') : G !== S.aZ.GOOD && null == w ? (en = 'PROBLEM') : null != w && I.includes(w.value) && (en = 'FREEFORM'),
+        null == G
+            ? (en = "RATING")
+            : G !== S.aZ.GOOD && null == w
+              ? (en = "PROBLEM")
+              : null != w && I.includes(w.value) && (en = "FREEFORM"),
         l.useEffect(() => {
             d().isEqual(U, R) || K((0, N.Bi)(R, C));
         }, [R, U, C]),
@@ -53,24 +76,24 @@ function R(e) {
             () => (
                 f.default.track(m.rMx.OPEN_MODAL, {
                     type: n,
-                    source: 'Feedback Modal'
+                    source: "Feedback Modal",
                 }),
                 () => {
                     ee.current({
                         rating: V.current,
                         problem: q.current,
                         dontShowAgain: W.current,
-                        feedback: et.current
+                        feedback: et.current,
                     });
                 }
-            )
+            ),
         ),
         (0, a.jsxs)(u.Y0X, {
             impression: $,
             transitionState: L,
             className: _.modalRoot,
-            'aria-labelledby': Q,
-            parentComponent: 'FeedbackModal',
+            "aria-labelledby": Q,
+            parentComponent: "FeedbackModal",
             children: [
                 (0, a.jsxs)(u.xBx, {
                     separator: !1,
@@ -78,19 +101,19 @@ function R(e) {
                     children: [
                         (0, a.jsx)(u.X6q, {
                             id: Q,
-                            variant: 'heading-xl/extrabold',
-                            color: 'none',
-                            children: i
+                            variant: "heading-xl/extrabold",
+                            color: "none",
+                            children: i,
                         }),
                         (0, a.jsx)(u.Text, {
-                            variant: 'text-md/normal',
-                            color: 'none',
+                            variant: "text-md/normal",
+                            color: "none",
                             className: _.ratingBody,
-                            children: s
-                        })
-                    ]
+                            children: s,
+                        }),
+                    ],
                 }),
-                ('RATING' === en || ('PROBLEM' === en && null == D)) &&
+                ("RATING" === en || ("PROBLEM" === en && null == D)) &&
                     (0, a.jsx)(u.xJW, {
                         className: r()(_.problemInfo, _.ratingSelectorContainer),
                         children: (0, a.jsx)(g.Z, {
@@ -99,11 +122,11 @@ function R(e) {
                             textLabels: D,
                             selectedRating: G,
                             onChangeRating: function (e) {
-                                (J(e), e === S.aZ.GOOD && F());
-                            }
-                        })
+                                J(e), e === S.aZ.GOOD && F();
+                            },
+                        }),
                     }),
-                'PROBLEM' === en &&
+                "PROBLEM" === en &&
                     (0, a.jsx)(u.hzk, {
                         className: _.__invalid_content,
                         children: (0, a.jsx)(u.xJW, {
@@ -112,16 +135,16 @@ function R(e) {
                             children: (0, a.jsx)(v.Z, {
                                 options: z,
                                 onClick: function (e) {
-                                    (H(e), I.includes(e.value) || F());
+                                    H(e), I.includes(e.value) || F();
                                 },
                                 hideCaret: (e) => {
                                     let { value: t } = e;
                                     return !I.includes(t);
-                                }
-                            })
-                        })
+                                },
+                            }),
+                        }),
                     }),
-                'FREEFORM' === en &&
+                "FREEFORM" === en &&
                     (0, a.jsx)(u.hzk, {
                         className: _.__invalid_content,
                         children: (0, a.jsxs)(u.xJW, {
@@ -131,13 +154,13 @@ function R(e) {
                                 (0, a.jsx)(u.Kx8, {
                                     value: Y,
                                     maxLength: S.iF,
-                                    onChange: X
+                                    onChange: X,
                                 }),
-                                !P && (0, a.jsx)(x, {})
-                            ]
-                        })
+                                !P && (0, a.jsx)(x, {}),
+                            ],
+                        }),
                     }),
-                'RATING' === en &&
+                "RATING" === en &&
                     !M &&
                     (0, a.jsx)(u.mzw, {
                         className: _.footer,
@@ -148,36 +171,36 @@ function R(e) {
                             value: Z,
                             onChange: () => B(!Z),
                             children: (0, a.jsx)(u.Text, {
-                                variant: 'text-sm/normal',
-                                children: p.intl.string(p.t['5E9SBw'])
-                            })
-                        })
+                                variant: "text-sm/normal",
+                                children: p.intl.string(p.t["5E9SBw"]),
+                            }),
+                        }),
                     }),
-                ('FREEFORM' === en || ('PROBLEM' === en && null != D)) &&
+                ("FREEFORM" === en || ("PROBLEM" === en && null != D)) &&
                     (0, a.jsx)(u.mzw, {
                         className: _.footer,
                         direction: b.Z.Direction.HORIZONTAL,
                         children: (0, a.jsxs)(u.hE2, {
-                            direction: 'horizontal-reverse',
+                            direction: "horizontal-reverse",
                             children: [
                                 (0, a.jsx)(u.zxk, {
-                                    variant: 'secondary',
-                                    size: 'sm',
-                                    text: p.intl.string(p.t['13/7kZ']),
+                                    variant: "secondary",
+                                    size: "sm",
+                                    text: p.intl.string(p.t["13/7kZ"]),
                                     onClick: () => {
-                                        'FREEFORM' === en ? (H(null), X('')) : J(null);
-                                    }
+                                        "FREEFORM" === en ? (H(null), X("")) : J(null);
+                                    },
                                 }),
                                 (0, a.jsx)(u.zxk, {
-                                    variant: 'primary',
-                                    size: 'sm',
+                                    variant: "primary",
+                                    size: "sm",
                                     text: p.intl.string(p.t.geKm7u),
-                                    onClick: F
-                                })
-                            ]
-                        })
-                    })
-            ]
+                                    onClick: F,
+                                }),
+                            ],
+                        }),
+                    }),
+            ],
         })
     );
 }

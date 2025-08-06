@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(953529));
+n.d(t, { Z: () => y }), n(953529);
 var r = n(255367),
     s = n(73800),
     o = n(392711),
@@ -15,7 +15,7 @@ function g(e) {
     let { PurchasableComponent: t, item: n, itemId: o, currentPoints: a, onPurchase: i } = e,
         u = (0, l.Tw)(o),
         d = (0, s.useCallback)(() => {
-            ((0, c.xD)(o), i());
+            (0, c.xD)(o), i();
         }, [i, o]);
     return (0, r.jsx)(t, {
         itemId: o,
@@ -26,14 +26,21 @@ function g(e) {
         cost: n.cost,
         iconSrc: n.purchaseIconSrc,
         currentPoints: a,
-        onPurchase: d
+        onPurchase: d,
     });
 }
 function b(e) {
-    let { PurchasableComponent: t, upgrade: n, upgradeId: o, currentPoints: a, numAlreadyPurchased: i, onPurchase: u } = e,
+    let {
+            PurchasableComponent: t,
+            upgrade: n,
+            upgradeId: o,
+            currentPoints: a,
+            numAlreadyPurchased: i,
+            onPurchase: u,
+        } = e,
         d = (0, l.p9)(o),
         f = (0, s.useCallback)(() => {
-            ((0, c.Z_)(o), u());
+            (0, c.Z_)(o), u();
         }, [u, o]);
     return (0, r.jsx)(t, {
         itemId: n.itemId,
@@ -45,7 +52,7 @@ function b(e) {
         cost: n.cost({ numAlreadyPurchased: i }),
         iconSrc: n.purchaseIconSrc,
         currentPoints: a,
-        onPurchase: f
+        onPurchase: f,
     });
 }
 function y(e) {
@@ -74,18 +81,18 @@ function y(e) {
                                     (null == r.predicate ||
                                         r.predicate({
                                             numAlreadyPurchased: a,
-                                            lifetimePoints: h
+                                            lifetimePoints: h,
                                         }))
                                 );
                         }
                     })
                     .take(null != o ? o : n.length)
                     .value(),
-            [o, h, n, y, v]
+            [o, h, n, y, v],
         );
     return 0 === j.length
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: t,
               children: j.map((e) => {
                   switch (e.type) {
@@ -97,9 +104,9 @@ function y(e) {
                                   item: x[e.id],
                                   currentPoints: l,
                                   PurchasableComponent: c,
-                                  onPurchase: O
+                                  onPurchase: O,
                               },
-                              'item-'.concat(e.id)
+                              "item-".concat(e.id),
                           );
                       case d.h.ITEM_UPGRADE:
                           var t, n;
@@ -112,11 +119,11 @@ function y(e) {
                                   currentPoints: l,
                                   numAlreadyPurchased: s,
                                   PurchasableComponent: c,
-                                  onPurchase: O
+                                  onPurchase: O,
                               },
-                              'item-upgrade-'.concat(e.id)
+                              "item-upgrade-".concat(e.id),
                           );
                   }
-              })
+              }),
           });
 }

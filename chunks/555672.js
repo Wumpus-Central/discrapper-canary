@@ -1,7 +1,7 @@
 n.d(t, {
     Hs: () => f,
     ZP: () => m,
-    qy: () => p
+    qy: () => p,
 });
 var r = n(255367),
     i = n(73800),
@@ -22,7 +22,7 @@ let h = (e) => {
         let { entry: t, channel: n, selected: i } = e,
             { largeImage: o } = (0, a.rv)({
                 entry: t,
-                showCoverImage: !1
+                showCoverImage: !1,
             }),
             _ = (0, l.Nq)(t);
         return null != _ && p(_)
@@ -34,22 +34,22 @@ let h = (e) => {
                               (0, r.jsx)(u.F9, {
                                   entry: t,
                                   channelId: n.id,
-                                  guildId: n.guild_id
+                                  guildId: n.guild_id,
                               }),
                               (0, r.jsx)(u.ll, { children: t.extra.game_name }),
                               (0, r.jsx)(c.Gk, {
                                   location: c.Gt.CARD,
-                                  children: f.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
-                              })
-                          ]
+                                  children: f.map((e, n) => (0, r.jsx)(e, { entry: t }, n)),
+                              }),
+                          ],
                       }),
                       (0, r.jsx)(s.f, {
                           src: null == o ? void 0 : o.src,
                           size: 48,
                           className: d.thumbnail,
-                          alt: null == o ? void 0 : o.alt
-                      })
-                  ]
+                          alt: null == o ? void 0 : o.alt,
+                      }),
+                  ],
               })
             : null;
     },

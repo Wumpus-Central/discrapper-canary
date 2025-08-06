@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => E }), n(388685), n(804061), n(704826), n(35282));
+n.d(t, { ZP: () => E }), n(388685), n(804061), n(704826), n(35282);
 var r = n(348326),
     i = n(710845),
     o = n(38618),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,25 +25,25 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
-let p = new i.Z('Messages');
+let p = new i.Z("Messages");
 class h {
     static computeUsersAndMembers(e) {
         (0, d.Z)(e);
         let t = new Map(),
             n = new Map();
-        for (let r of e) (this.addIntoMap(t, r.users, (e) => e.id), this.addIntoMap(n, r.members, (e) => e.userId));
+        for (let r of e) this.addIntoMap(t, r.users, (e) => e.id), this.addIntoMap(n, r.members, (e) => e.userId);
         return [Array.from(t.values()), Array.from(n.values())];
     }
     static addIntoMap(e, t, n) {
@@ -54,11 +54,20 @@ class h {
         }
     }
     constructor(e) {
-        if ((f(this, 'connectionId', null), f(this, 'users', []), f(this, 'members', []), f(this, 'messages', []), e.length > 0)) {
+        if (
+            (f(this, "connectionId", null),
+            f(this, "users", []),
+            f(this, "members", []),
+            f(this, "messages", []),
+            e.length > 0)
+        ) {
             var t;
             let n = null == (t = e[0]) ? void 0 : t.connectionId,
                 [r, i] = h.computeUsersAndMembers(e);
-            (e.length > 0 && e.every((e) => e.connectionId === n) && (this.connectionId = n), (this.users = r), (this.members = i), (this.messages = e.map((e) => e.message)));
+            e.length > 0 && e.every((e) => e.connectionId === n) && (this.connectionId = n),
+                (this.users = r),
+                (this.members = i),
+                (this.messages = e.map((e) => e.message));
         }
     }
 }
@@ -76,17 +85,29 @@ class m {
         }
     }
     handleMessageCreate(e, t) {
-        e.optimistic || e.isPushNotification || null != e.sendMessageOptions || ((0, u.$)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, t));
+        e.optimistic ||
+            e.isPushNotification ||
+            null != e.sendMessageOptions ||
+            ((0, u.$)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, t));
     }
     handleMessageUpdate(e, t) {
-        null != e.message.id && null != e.message.channel_id && (0, u.$)(e.message.channel_id) && (g(e.message) ? this.upsertOne(e.guildId, e.message.channel_id, e.message, t) : this.updateOne(e.guildId, e.message.channel_id, e.message, t));
+        null != e.message.id &&
+            null != e.message.channel_id &&
+            (0, u.$)(e.message.channel_id) &&
+            (g(e.message)
+                ? this.upsertOne(e.guildId, e.message.channel_id, e.message, t)
+                : this.updateOne(e.guildId, e.message.channel_id, e.message, t));
     }
     handleMessagePreviewsLoaded(e, t) {
         for (let n of e.messages) (0, u.$)(n.channel_id) && this.insertStale(e.guildId, n.channel_id, n, t);
     }
     handleLoadMessagesSuccess(e, t) {
         let n = a.Z.getBasicChannel(e.channelId);
-        null != n && (0, u.$)(e.channelId) && (e.isAfter || e.isBefore || e.hasMoreAfter || !(e.limit > 5) ? this.upsertMany(n.guild_id, e.channelId, e.messages, t) : this.replaceAll(n.guild_id, e.channelId, e.messages, t));
+        null != n &&
+            (0, u.$)(e.channelId) &&
+            (e.isAfter || e.isBefore || e.hasMoreAfter || !(e.limit > 5)
+                ? this.upsertMany(n.guild_id, e.channelId, e.messages, t)
+                : this.replaceAll(n.guild_id, e.channelId, e.messages, t));
     }
     handleMessageDelete(e, t) {
         null != e.id && this.deleteOne(e.guildId, e.channelId, e.id, t);
@@ -109,7 +130,7 @@ class m {
     upsertOne(e, t, n, i) {
         let a = s.Z.messagesTransaction(i),
             u = o.Z.lastTimeConnectedChanged();
-        (a.put(e, t, l.a.fromMessage(e, t, n, u), r.Sn.Replace), a.trimChannel(e, t, c.ZP.saveLimit(t)));
+        a.put(e, t, l.a.fromMessage(e, t, n, u), r.Sn.Replace), a.trimChannel(e, t, c.ZP.saveLimit(t));
     }
     upsertMany(e, t, n, r) {
         let i = s.Z.messagesTransaction(r),
@@ -122,10 +143,11 @@ class m {
             a = o.Z.lastTimeConnectedChanged(),
             u = c.ZP.saveLimit(t),
             d = (n.length > u ? n.slice(n.length - u) : n).map((n) => l.a.fromMessage(e, t, n, a));
-        (i.replaceAll(e, t, d), i.trimChannel(e, t, c.ZP.saveLimit(t)));
+        i.replaceAll(e, t, d), i.trimChannel(e, t, c.ZP.saveLimit(t));
     }
     async updateOne(e, t, n, r) {
-        if (null == n.id) return void p.warn('updateOne: message.id is null; cannot update a message if we do not know its id.');
+        if (null == n.id)
+            return void p.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
         let i = s.Z.messages(r.database),
             a = await i.get(e, t, n.id),
             c = o.Z.lastTimeConnectedChanged();
@@ -141,7 +163,7 @@ class m {
         s.Z.messagesTransaction(t).deleteGuild(e);
     }
     constructor() {
-        f(this, 'actions', {
+        f(this, "actions", {
             CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
             GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
             LOAD_MESSAGES_SUCCESS: (e, t) => this.handleLoadMessagesSuccess(e, t),
@@ -149,7 +171,7 @@ class m {
             MESSAGE_DELETE_BULK: (e, t) => this.handleMessageDeleteBulk(e, t),
             MESSAGE_DELETE: (e, t) => this.handleMessageDelete(e, t),
             MESSAGE_PREVIEWS_LOADED: (e, t) => this.handleMessagePreviewsLoaded(e, t),
-            MESSAGE_UPDATE: (e, t) => this.handleMessageUpdate(e, t)
+            MESSAGE_UPDATE: (e, t) => this.handleMessageUpdate(e, t),
         });
     }
 }

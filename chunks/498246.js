@@ -1,7 +1,7 @@
-var t = 'Function.prototype.bind called on incompatible ',
+var t = "Function.prototype.bind called on incompatible ",
     n = Object.prototype.toString,
     r = Math.max,
-    i = '[object Function]',
+    i = "[object Function]",
     o = function (e, t) {
         for (var n = [], r = 0; r < e.length; r += 1) n[r] = e[r];
         for (var i = 0; i < t.length; i += 1) n[i + e.length] = t[i];
@@ -12,13 +12,13 @@ var t = 'Function.prototype.bind called on incompatible ',
         return n;
     },
     s = function (e, t) {
-        for (var n = '', r = 0; r < e.length; r += 1) ((n += e[r]), r + 1 < e.length && (n += t));
+        for (var n = "", r = 0; r < e.length; r += 1) (n += e[r]), r + 1 < e.length && (n += t);
         return n;
     };
 e.exports = function (e) {
     var l,
         c = this;
-    if ('function' != typeof c || n.apply(c) !== i) throw TypeError(t + c);
+    if ("function" != typeof c || n.apply(c) !== i) throw TypeError(t + c);
     for (
         var u = a(arguments, 1),
             d = function () {
@@ -34,10 +34,13 @@ e.exports = function (e) {
         p < f;
         p++
     )
-        _[p] = '$' + p;
-    if (((l = Function('binder', 'return function (' + s(_, ',') + '){ return binder.apply(this,arguments); }')(d)), c.prototype)) {
+        _[p] = "$" + p;
+    if (
+        ((l = Function("binder", "return function (" + s(_, ",") + "){ return binder.apply(this,arguments); }")(d)),
+        c.prototype)
+    ) {
         var h = function () {};
-        ((h.prototype = c.prototype), (l.prototype = new h()), (h.prototype = null));
+        (h.prototype = c.prototype), (l.prototype = new h()), (h.prototype = null);
     }
     return l;
 };

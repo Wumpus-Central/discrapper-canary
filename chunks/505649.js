@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(415506));
+n.d(t, { Z: () => I }), n(415506);
 var r,
     i = n(442837),
     o = n(570140),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,12 +26,13 @@ let p = !1,
     h = null,
     m = null;
 function g() {
-    ((p = !1), (m = null), (h = null));
+    (p = !1), (m = null), (h = null);
 }
 function E(e) {
     let { error: t } = e,
         { code: n, paymentId: r } = t;
-    if (n !== l.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return ((p = !1), !1);
+    if (n !== l.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED)
+        return (p = !1), !1;
     p || ((p = !0), (h = r), n === l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && b(r));
 }
 async function b(e) {
@@ -44,7 +45,7 @@ async function b(e) {
 }
 function y(e) {
     let { error: t } = e;
-    ((m = t), (p = !1));
+    (m = t), (p = !1);
 }
 function O(e) {
     let { payment: t } = e,
@@ -53,8 +54,10 @@ function O(e) {
     if (((p = !1), (h = null), t.status === d.PyE.FAILED)) {
         var r;
         let e = null;
-        ((null == (r = t.metadata) ? void 0 : r.billing_error_code) === l.SM.BILLING_INSUFFICIENT_FUNDS && (e = l.SM.BILLING_INSUFFICIENT_FUNDS), (m = new l.ZP(f.intl.string(f.t.khEaRE), e)));
-    } else ((m = null), o.Z.wait(a.fw), o.Z.wait(s.pB));
+        (null == (r = t.metadata) ? void 0 : r.billing_error_code) === l.SM.BILLING_INSUFFICIENT_FUNDS &&
+            (e = l.SM.BILLING_INSUFFICIENT_FUNDS),
+            (m = new l.ZP(f.intl.string(f.t.khEaRE), e));
+    } else (m = null), o.Z.wait(a.fw), o.Z.wait(s.pB);
 }
 class v extends (r = i.ZP.Store) {
     get isAwaitingAuthentication() {
@@ -67,7 +70,7 @@ class v extends (r = i.ZP.Store) {
         return h;
     }
 }
-_(v, 'displayName', 'PaymentAuthenticationStore');
+_(v, "displayName", "PaymentAuthenticationStore");
 let I = new v(o.Z, {
     BILLING_SUBSCRIPTION_UPDATE_START: g,
     PAYMENT_AUTHENTICATION_CLEAR_ERROR: g,
@@ -88,5 +91,5 @@ let I = new v(o.Z, {
     GIFT_CODE_REDEEM_FAILURE: E,
     PAYMENT_AUTHENTICATION_ERROR: y,
     PAYMENT_UPDATE: O,
-    BILLING_PAYMENT_FETCH_SUCCESS: O
+    BILLING_PAYMENT_FETCH_SUCCESS: O,
 });

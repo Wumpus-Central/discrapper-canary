@@ -1,15 +1,20 @@
-(n.d(t, {
+n.d(t, {
     ML: () => l,
     N8: () => u,
-    vh: () => c
+    vh: () => c,
 }),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(136015),
     o = n(91896),
     a = n(981631);
 function s(e, t) {
-    let [n] = (0, r.e7)([o.Z], () => [o.Z.getGameRelationshipsForUserByType(e, t), o.Z.getGameRelationshipsVersion()], [t, e], i.Q);
+    let [n] = (0, r.e7)(
+        [o.Z],
+        () => [o.Z.getGameRelationshipsForUserByType(e, t), o.Z.getGameRelationshipsVersion()],
+        [t, e],
+        i.Q,
+    );
     return n;
 }
 function l(e) {
@@ -27,7 +32,7 @@ function u(e, t) {
             return [n.length > 0, r];
         },
         [t, e],
-        i.Q
+        i.Q,
     );
     return n;
 }

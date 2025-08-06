@@ -8,19 +8,19 @@ var r = n(895829),
             if (t >= r) return e;
             var i = n[t];
             switch (((t += 1), e)) {
-                case '%%':
-                    return '%';
-                case '%s':
+                case "%%":
+                    return "%";
+                case "%s":
                     return String(i);
-                case '%d':
+                case "%d":
                     return Number(i);
-                case '%v':
-                    return '';
+                case "%v":
+                    return "";
             }
         });
     },
     a = function (e, t, n) {
-        var r = [e + '=' + (t.format instanceof Function ? t.format(t.push ? n : n[t.name]) : t.format)];
+        var r = [e + "=" + (t.format instanceof Function ? t.format(t.push ? n : n[t.name]) : t.format)];
         if (t.names)
             for (var i = 0; i < t.names.length; i += 1) {
                 var a = t.names[i];
@@ -29,15 +29,15 @@ var r = n(895829),
         else r.push(n[t.name]);
         return o.apply(null, r);
     },
-    s = ['v', 'o', 's', 'i', 'u', 'e', 'p', 'c', 'b', 't', 'r', 'z', 'a'],
-    l = ['i', 'c', 'b', 'a'];
+    s = ["v", "o", "s", "i", "u", "e", "p", "c", "b", "t", "r", "z", "a"],
+    l = ["i", "c", "b", "a"];
 e.exports = function (e, t) {
-    ((t = t || {}),
+    (t = t || {}),
         null == e.version && (e.version = 0),
-        null == e.name && (e.name = ' '),
+        null == e.name && (e.name = " "),
         e.media.forEach(function (e) {
-            null == e.payloads && (e.payloads = '');
-        }));
+            null == e.payloads && (e.payloads = "");
+        });
     var n = t.outerOrder || s,
         i = t.innerOrder || l,
         o = [];
@@ -54,7 +54,7 @@ e.exports = function (e, t) {
             });
         }),
         e.media.forEach(function (e) {
-            (o.push(a('m', r.m[0], e)),
+            o.push(a("m", r.m[0], e)),
                 i.forEach(function (t) {
                     r[t].forEach(function (n) {
                         n.name in e && null != e[n.name]
@@ -65,8 +65,8 @@ e.exports = function (e, t) {
                                   o.push(a(t, n, e));
                               });
                     });
-                }));
+                });
         }),
-        o.join('\r\n') + '\r\n'
+        o.join("\r\n") + "\r\n"
     );
 };

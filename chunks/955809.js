@@ -8,11 +8,11 @@ var i = n(442837),
 function o(t) {
     return (0, i.e7)([a.Z], () => a.Z.hasContext(t.id), [t.id])
         ? (0, r.jsx)(l.sNh, {
-              id: 'ingame-voice',
-              label: c.intl.string(c.t['pOul5+']),
+              id: "ingame-voice",
+              label: c.intl.string(c.t["pOul5+"]),
               action: () =>
                   (0, l.ZDy)(async () => {
-                      let { default: e } = await n.e('66063').then(n.bind(n, 344516));
+                      let { default: e } = await n.e("66063").then(n.bind(n, 344516));
                       return (n) => {
                           var i, l;
                           return (0, r.jsx)(
@@ -21,31 +21,31 @@ function o(t) {
                                   for (var e = 1; e < arguments.length; e++) {
                                       var n = null != arguments[e] ? arguments[e] : {},
                                           r = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (t) {
                                                   return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                              })
+                                              }),
                                           )),
                                           r.forEach(function (e) {
                                               var r;
-                                              ((r = n[e]),
+                                              (r = n[e]),
                                                   e in t
                                                       ? Object.defineProperty(t, e, {
                                                             value: r,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (t[e] = r));
-                                          }));
+                                                      : (t[e] = r);
+                                          });
                                   }
                                   return t;
                               })({}, n)),
                               (l = l =
                                   {
                                       mediaEngineContext: t.id,
-                                      title: t.name
+                                      title: t.name,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -59,10 +59,10 @@ function o(t) {
                                     })(Object(l)).forEach(function (t) {
                                         Object.defineProperty(i, t, Object.getOwnPropertyDescriptor(l, t));
                                     }),
-                              i)
+                              i),
                           );
                       };
-                  })
+                  }),
           })
         : null;
 }

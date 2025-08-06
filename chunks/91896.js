@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(539854), n(388685));
+n.d(t, { Z: () => A }), n(539854), n(388685);
 var r,
     i = n(442837),
     o = n(759174),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,20 +24,25 @@ function u(e) {
         applicationId: e.application_id,
         type: e.type,
         since: e.since,
-        dmAccessType: e.dm_access_type
+        dmAccessType: e.dm_access_type,
     };
 }
-let d = (e, t) => ''.concat(t, '-').concat(e),
+let d = (e, t) => "".concat(t, "-").concat(e),
     f = {
-        BY_APPLICATION_ID: (e) => 'application-id-'.concat(e),
-        BY_USER_ID: (e) => 'user-id-'.concat(e),
-        BY_RELATIONSHIP_TYPE: (e) => 'relationship-type-'.concat(e)
+        BY_APPLICATION_ID: (e) => "application-id-".concat(e),
+        BY_USER_ID: (e) => "user-id-".concat(e),
+        BY_RELATIONSHIP_TYPE: (e) => "relationship-type-".concat(e),
     };
 function _(e) {
     let t = [];
-    return (t.push(f.BY_APPLICATION_ID(e.applicationId)), t.push(f.BY_USER_ID(e.id)), t.push(f.BY_RELATIONSHIP_TYPE(e.type)), t);
+    return (
+        t.push(f.BY_APPLICATION_ID(e.applicationId)),
+        t.push(f.BY_USER_ID(e.id)),
+        t.push(f.BY_RELATIONSHIP_TYPE(e.type)),
+        t
+    );
 }
-let p = new o.h(_, (e) => ''.concat(e.since)),
+let p = new o.h(_, (e) => "".concat(e.since)),
     h = 0,
     m = 0,
     g = 0;
@@ -45,7 +50,7 @@ function E() {
     let e = 0,
         t = 0,
         n = 0;
-    (p.values().forEach((r) => {
+    p.values().forEach((r) => {
         let { type: i, id: o } = r;
         if (i === l.OGo.FRIEND) n += 1;
         else if (i === l.OGo.PENDING_OUTGOING) t += 1;
@@ -56,7 +61,7 @@ function E() {
     }),
         (h = e),
         (m = t),
-        (g = n));
+        (g = n);
 }
 function b(e) {
     p.set(d(e.id, e.applicationId), e);
@@ -67,22 +72,24 @@ function y(e, t) {
 function O(e) {
     let { unknownApplicationIds: t } = e;
     if (null != t) {
-        for (let e of t) for (let t of p.values(f.BY_APPLICATION_ID(e))) (t.type === l.OGo.PENDING_INCOMING || t.type === l.OGo.PENDING_OUTGOING) && y(t.id, e);
+        for (let e of t)
+            for (let t of p.values(f.BY_APPLICATION_ID(e)))
+                (t.type === l.OGo.PENDING_INCOMING || t.type === l.OGo.PENDING_OUTGOING) && y(t.id, e);
         E();
     }
 }
 function v(e) {
-    (p.clear(),
+    p.clear(),
         e.gameRelationships.forEach((e) => {
             b(u(e));
         }),
-        E());
+        E();
 }
 function I(e) {
-    (b(e.gameRelationship), E());
+    b(e.gameRelationship), E();
 }
 function T(e) {
-    (y(e.userId, e.applicationId), E());
+    y(e.userId, e.applicationId), E();
 }
 class S extends (r = i.ZP.Store) {
     initialize() {
@@ -122,10 +129,10 @@ class S extends (r = i.ZP.Store) {
         return p.version;
     }
 }
-c(S, 'displayName', 'GameRelationshipStore');
+c(S, "displayName", "GameRelationshipStore");
 let A = new S(a.Z, {
     CONNECTION_OPEN: v,
     GAME_RELATIONSHIP_ADD: I,
     GAME_RELATIONSHIP_REMOVE: T,
-    APPLICATIONS_FETCH_SUCCESS: O
+    APPLICATIONS_FETCH_SUCCESS: O,
 });

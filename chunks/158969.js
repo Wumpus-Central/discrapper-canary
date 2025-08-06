@@ -24,42 +24,44 @@ let T = i.memo(function (e) {
     let { message: t, notice: n, compact: i = !1, onDismiss: o } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a()(O.blockedNoticeContainer, { [O.compact]: i }),
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: O.blockedNoticeIcon,
                         children: (0, r.jsx)(u.b7C, {
-                            size: 'xs',
-                            color: 'currentColor',
-                            className: O.shieldIcon
-                        })
+                            size: "xs",
+                            color: "currentColor",
+                            className: O.shieldIcon,
+                        }),
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: O.blockedNotice,
                         children: (0, r.jsx)(u.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'interactive-normal',
-                            children: n
-                        })
-                    })
-                ]
+                            variant: "text-sm/normal",
+                            color: "interactive-normal",
+                            children: n,
+                        }),
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a()(O.ephemeralAccessories, { [O.compact]: i }),
                 children: (0, r.jsx)(h.Z, {
                     message: t,
                     onDeleteMessage: o,
                     children: (0, r.jsx)(u.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'interactive-normal',
-                        tag: 'span',
+                        variant: "text-xs/normal",
+                        color: "interactive-normal",
+                        tag: "span",
                         className: O.learnMore,
-                        children: y.intl.format(y.t.Nd3Gh4, { helpUrl: p.Z.getArticleURL(b.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
-                    })
-                })
-            })
-        ]
+                        children: y.intl.format(y.t.Nd3Gh4, {
+                            helpUrl: p.Z.getArticleURL(b.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
+                        }),
+                    }),
+                }),
+            }),
+        ],
     });
 });
 function S(e) {
@@ -75,13 +77,13 @@ function S(e) {
         i.useLayoutEffect(() => {
             A.current ? null != b && b() : (A.current = !0);
         }, [b, u.content, h, S, p]),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             id: (0, m.ut)(u),
             className: a()(o, I.markup, {
                 [v.messageContent]: !0,
-                [v.markupRtl]: 'rtl' === l()(u.content),
+                [v.markupRtl]: "rtl" === l()(u.content),
                 [O.blockedEdit]: null == N ? void 0 : N.isBlockedEdit,
-                [O.blockedSend]: !(null == N ? void 0 : N.isBlockedEdit)
+                [O.blockedSend]: !(null == N ? void 0 : N.isBlockedEdit),
             }),
             children: [
                 null != p ? p : (0, g.L5)(u, h),
@@ -89,25 +91,25 @@ function S(e) {
                     null != u.timestamp &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            ' ',
+                            " ",
                             (0, r.jsx)(E.Z, {
                                 timestamp: u.timestamp,
                                 isEdited: !0,
                                 isInline: !1,
-                                children: (0, r.jsxs)('span', {
+                                children: (0, r.jsxs)("span", {
                                     className: v.edited,
-                                    children: ['(', y.intl.string(y.t.Z7eEx8), ')']
-                                })
-                            })
-                        ]
+                                    children: ["(", y.intl.string(y.t.Z7eEx8), ")"],
+                                }),
+                            }),
+                        ],
                     }),
                 (0, r.jsx)(T, {
                     notice: null != (n = null == N ? void 0 : N.errorMessage) ? n : y.intl.string(y.t.zQ69pq),
                     message: u,
                     compact: s,
-                    onDismiss: C
-                })
-            ]
+                    onDismiss: C,
+                }),
+            ],
         })
     );
 }

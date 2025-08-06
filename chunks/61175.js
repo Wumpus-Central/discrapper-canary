@@ -1,4 +1,4 @@
-(n(42547),
+n(42547),
     (e.exports = {
         isValidBlock: function (e, t) {
             var n = e.getKey(),
@@ -18,7 +18,11 @@
             var i = e.getPrevSiblingKey();
             if (null != i && t.get(i).getNextSiblingKey() !== n) return !1;
             var o = e.getNextSiblingKey();
-            return (null == o || t.get(o).getPrevSiblingKey() === n) && (null === o || null === i || i !== o) && ('' == e.text || !(e.getChildKeys().size > 0));
+            return (
+                (null == o || t.get(o).getPrevSiblingKey() === n) &&
+                (null === o || null === i || i !== o) &&
+                ("" == e.text || !(e.getChildKeys().size > 0))
+            );
         },
         isConnectedTree: function (e) {
             var t = e.toArray().filter(function (e) {
@@ -52,5 +56,5 @@
                     return t.isValidBlock(n, e);
                 }) && this.isConnectedTree(e)
             );
-        }
-    }));
+        },
+    });

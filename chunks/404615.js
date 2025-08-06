@@ -7,9 +7,9 @@ let l = {
         subtitle: { onlyShowOnHover: !1 },
         description: {
             onlyShowOnHover: !0,
-            className: a.cardDescription
+            className: a.cardDescription,
         },
-        descriptionCta: { onlyShowOnHover: !0 }
+        descriptionCta: { onlyShowOnHover: !0 },
     },
     o = (e) => {
         let t = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
@@ -18,20 +18,20 @@ let l = {
                 [s.zW.REWARD]: {
                     subtitle: {
                         onlyShowOnHover: !0,
-                        textVariant: 'text-sm/semibold'
+                        textVariant: "text-sm/semibold",
                     },
                     description: {
                         onlyShowOnHover: !0,
-                        className: a.cardDescriptionTenureReward
+                        className: a.cardDescriptionTenureReward,
                     },
                     descriptionCta: {
                         onlyShowOnHover: !1,
                         hideOnHoverComponent: !0,
-                        className: a.descriptionCTATenureReward
+                        className: a.descriptionCTATenureReward,
                     },
-                    cardContainer: { className: t ? void 0 : a.nitroGradientBorderHover }
+                    cardContainer: { className: t ? void 0 : a.nitroGradientBorderHover },
                 },
-                [s.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: a.nitroGradientBorderHover } }
+                [s.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: a.nitroGradientBorderHover } },
             };
         return null != e ? n[e] : n[s.zW.DEFAULT];
     };

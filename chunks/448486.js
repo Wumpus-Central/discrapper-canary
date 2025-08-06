@@ -10,29 +10,29 @@ function u(e) {
         e.recipients
             .map((e) => r.default.getUser(e))
             .filter(s.lm)
-            .map((e) => a.ZP.getName(e))
+            .map((e) => a.ZP.getName(e)),
     );
     return l.useMemo(() => {
-        if ('' === e.name) return null;
+        if ("" === e.name) return null;
         if (0 === t.length) return null;
-        if (1 === t.length) return o.intl.formatToPlainString(o.t['J+Wpsr'], { first: t[0] });
+        if (1 === t.length) return o.intl.formatToPlainString(o.t["J+Wpsr"], { first: t[0] });
         if (2 === t.length)
             return o.intl.formatToPlainString(o.t.gwRP0d, {
                 first: t[0],
-                second: t[1]
+                second: t[1],
             });
         if (3 === t.length)
             return o.intl.formatToPlainString(o.t.QDB5en, {
                 first: t[0],
                 second: t[1],
-                third: t[2]
+                third: t[2],
             });
         let n = t.length - 3;
         return o.intl.formatToPlainString(o.t.VYfueX, {
             first: t[0],
             second: t[1],
             third: t[2],
-            count: n
+            count: n,
         });
     }, [e, t]);
 }

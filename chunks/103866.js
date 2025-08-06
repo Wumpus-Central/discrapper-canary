@@ -1,4 +1,4 @@
-(n.d(t, { f: () => _ }), n(388685));
+n.d(t, { f: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -9,11 +9,11 @@ var r = n(255367),
     u = n(993365),
     d = n(946598);
 function f(e) {
-    return 'string' == typeof e
+    return "string" == typeof e
         ? (0, r.jsx)(u.x, {
-              variant: 'text-md/normal',
-              color: 'text-secondary',
-              children: e
+              variant: "text-md/normal",
+              color: "text-secondary",
+              children: e,
           })
         : e;
 }
@@ -23,7 +23,7 @@ function _(e) {
     let i = f(n);
     return (0, r.jsx)(p, {
         controls: t,
-        children: i
+        children: i,
     });
 }
 function p(e) {
@@ -34,41 +34,48 @@ function p(e) {
         h = i.useRef(null),
         m = (0, s.throttle)(() => {
             var e;
-            (null == p ? void 0 : p.current) != null && null != t && u((null == (e = p.current) ? void 0 : e.getDistanceFromTop()) > 12);
+            (null == p ? void 0 : p.current) != null &&
+                null != t &&
+                u((null == (e = p.current) ? void 0 : e.getDistanceFromTop()) > 12);
         }, 200);
     return (
         i.useLayoutEffect(() => {
             var e, t;
             let n = new ResizeObserver(() => {
                     var e, t;
-                    let n = null != (t = null == p || null == (e = p.current) ? void 0 : e.getScrollerNode()) ? t : null;
+                    let n =
+                        null != (t = null == p || null == (e = p.current) ? void 0 : e.getScrollerNode()) ? t : null;
                     if (null == n || (null == h ? void 0 : h.current) == null) return;
                     let r = n.getBoundingClientRect();
                     _(h.current.getBoundingClientRect().height > r.height);
                 }),
                 r = null != (t = null == p || null == (e = p.current) ? void 0 : e.getScrollerNode()) ? t : null;
-            return (null != r && n.observe(r), (null == h ? void 0 : h.current) != null && n.observe(h.current), () => n.disconnect());
+            return (
+                null != r && n.observe(r),
+                (null == h ? void 0 : h.current) != null && n.observe(h.current),
+                () => n.disconnect()
+            );
         }, []),
         (0, r.jsxs)(l.y5, {
             children: [
-                (0, r.jsx)('div', { className: a()(d.bodySpacerTop, { [d.bodySpacerTopBorder]: f && null == t }) }),
+                (0, r.jsx)("div", { className: a()(d.bodySpacerTop, { [d.bodySpacerTopBorder]: f && null == t }) }),
                 null != t &&
-                    (0, r.jsx)('header', {
+                    (0, r.jsx)("header", {
                         className: a()(d.bodyControls, { [d.bodyControlsWithFade]: o }),
-                        children: t
+                        children: t,
                     }),
                 (0, r.jsx)(c.yW, {
                     ref: p,
                     className: d.body,
                     onScroll: m,
-                    children: (0, r.jsx)('main', {
+                    children: (0, r.jsx)("main", {
                         ref: h,
                         className: a()(d.bodyInner, { [d.bodyInnerShouldScroll]: f }),
-                        children: n
-                    })
+                        children: n,
+                    }),
                 }),
-                (0, r.jsx)('div', { className: a()(d.bodySpacerBottom, { [d.bodySpacerBottomBorder]: f }) })
-            ]
+                (0, r.jsx)("div", { className: a()(d.bodySpacerBottom, { [d.bodySpacerBottomBorder]: f }) }),
+            ],
         })
     );
 }

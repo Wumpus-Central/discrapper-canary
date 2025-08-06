@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     Pv: () => G,
     e5: () => P,
     gx: () => w,
     lp: () => U,
-    wi: () => D
+    wi: () => D,
 }),
     n(997841),
-    n(388685));
+    n(388685);
 var r = n(913527),
     i = n.n(r),
     o = n(920412),
@@ -36,7 +36,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -46,15 +46,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -62,11 +62,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -82,12 +82,18 @@ function S(e, t) {
     );
 }
 let A = new f.Z({
-    id: '???',
-    username: '???'
+    id: "???",
+    username: "???",
 });
 function N(e) {
     var t;
-    return null == e.author ? A : null != e.webhook_id ? new f.Z(e.author) : null != (t = h.default.getUser(e.author.id)) ? t : new f.Z(e.author);
+    return null == e.author
+        ? A
+        : null != e.webhook_id
+          ? new f.Z(e.author)
+          : null != (t = h.default.getUser(e.author.id))
+            ? t
+            : new f.Z(e.author);
 }
 function C(e) {
     return !1;
@@ -101,8 +107,8 @@ function R(e) {
             attachments: L(e),
             embeds: M(e),
             components: (0, s.uZ)(null != (t = e.components) ? t : [], { includeEmojiSrc: !1 }),
-            codedLinks: e.type === O.uaV.THREAD_CREATED ? [] : (0, a.ZP)(e.content)
-        })
+            codedLinks: e.type === O.uaV.THREAD_CREATED ? [] : (0, a.ZP)(e.content),
+        }),
     );
 }
 function P(e) {
@@ -121,17 +127,25 @@ function P(e) {
         G = null == e ? void 0 : e.gift_info,
         B = e.gifting_prompt,
         Z = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
-        F = e.type === O.uaV.THREAD_STARTER_MESSAGE ? (null == (r = e.referenced_message) || null == (n = r.author) ? void 0 : n.id) : void 0,
+        F =
+            e.type === O.uaV.THREAD_STARTER_MESSAGE
+                ? null == (r = e.referenced_message) || null == (n = r.author)
+                    ? void 0
+                    : n.id
+                : void 0,
         V = e.content;
     return new d.ZP(
-        (e.type === O.uaV.PREMIUM_REFERRAL ? ((h = E.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (V = '')) : e.type === O.uaV.CHAT_WALLPAPER_SET && ((m = (0, o.Z)(e.content)), (V = '')), C(e))
+        (e.type === O.uaV.PREMIUM_REFERRAL
+            ? ((h = E.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (V = ""))
+            : e.type === O.uaV.CHAT_WALLPAPER_SET && ((m = (0, o.Z)(e.content)), (V = "")),
+        C(e))
             ? S(I({}, U), {
                   id: e.id,
                   channel_id: e.channel_id,
                   type: O.uaV.DEFAULT,
                   author: M,
                   timestamp: T.timestamp,
-                  isUnsupported: !0
+                  isUnsupported: !0,
               })
             : S(I({}, e, U, T.toJS()), {
                   author: M,
@@ -150,7 +164,7 @@ function P(e) {
                       mentionEveryone: null != (f = e.mention_everyone) && f,
                       mentionUsers: A,
                       mentionRoles: P,
-                      mentionGames: D.map((e) => e.id)
+                      mentionGames: D.map((e) => e.id),
                   }),
                   giftCodes: (0, g.Fp)(e) ? (0, g.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, g.Q_)(e.content),
                   content: V,
@@ -167,15 +181,15 @@ function P(e) {
                   potions: e.potions,
                   giftInfo: null == G ? void 0 : G,
                   giftingPrompt: B,
-                  chatWallpaperInfo: m
-              })
+                  chatWallpaperInfo: m,
+              }),
     );
 }
 function w(e, t) {
     return null != t.edited_timestamp
         ? S(I({}, t), {
               reactions: e.reactions,
-              interaction_data: e.interaction_data
+              interaction_data: e.interaction_data,
           })
         : I({}, e, t);
 }
@@ -183,33 +197,45 @@ function D(e, t) {
     if (null != t.edited_timestamp)
         return P(t, {
             reactions: e.reactions,
-            interactionData: e.interactionData
+            interactionData: e.interactionData,
         });
     let n = e,
         r = !1;
-    if ((null != t.call && (n = n.set('call', x(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', L(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', M(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', j(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new f.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
+    if (
+        (null != t.call && (n = n.set("call", x(t.call, e.timestamp))),
+        null != t.attachments && (n = n.set("attachments", L(t))),
+        null != t.content && "" !== t.content && (n = n.set("content", t.content)),
+        null != t.embeds && (n = n.set("embeds", M(t))),
+        null != t.message_snapshots && (n = n.set("messageSnapshots", j(t))),
+        t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
+        null != n.webhookId && null != t.author && (n = n.set("author", new f.Z(t.author))),
+        null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
+        null != t.components && (n = n.set("components", (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))),
+        null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)),
+        null != t.reactions)
+    ) {
         var i;
-        n = n.set('reactions', k(null != (i = e.reactions) ? i : t.reactions));
+        n = n.set("reactions", k(null != (i = e.reactions) ? i : t.reactions));
     }
     return (
-        null != t.poll && (n = n.set('poll', (0, l.Z)(t.poll))),
+        null != t.poll && (n = n.set("poll", (0, l.Z)(t.poll))),
         null != t.mentions &&
             ((n = n.set(
-                'mentions',
-                t.mentions.map((e) => e.id)
+                "mentions",
+                t.mentions.map((e) => e.id),
             )),
             (r = !0)),
-        null != t.mention_games && ((n = n.set('mentionGames', t.mention_games)), (r = !0)),
-        null != t.mention_everyone && ((n = n.set('mentionEveryone', t.mention_everyone)), (r = !0)),
-        null != t.mention_roles && ((n = n.set('mentionRoles', t.mention_roles)), (r = !0)),
-        null != t.potions && (n = n.set('potions', t.potions)),
+        null != t.mention_games && ((n = n.set("mentionGames", t.mention_games)), (r = !0)),
+        null != t.mention_everyone && ((n = n.set("mentionEveryone", t.mention_everyone)), (r = !0)),
+        null != t.mention_roles && ((n = n.set("mentionRoles", t.mention_roles)), (r = !0)),
+        null != t.potions && (n = n.set("potions", t.potions)),
         r &&
             (n = n.set(
-                'mentioned',
+                "mentioned",
                 (0, b.ZP)({
                     message: n,
-                    userId: _.default.getId()
-                })
+                    userId: _.default.getId(),
+                }),
             )),
         n
     );
@@ -224,7 +250,7 @@ function x(e, t) {
         return {
             participants: e.participants,
             endedTimestamp: n,
-            duration: r
+            duration: r,
         };
     }
     return null;
@@ -245,21 +271,22 @@ function k(e, t) {
                   me_vote: e.me_voted,
                   emoji: {
                       id: e.id.toString(),
-                      name: '',
-                      animated: !1
+                      name: "",
+                      animated: !1,
                   },
                   me: !1,
                   me_burst: !1,
                   count: e.count,
-                  burst_count: 0
+                  burst_count: 0,
               }));
     return [...(null != e ? e : []), ...(null != r ? r : [])].map((e) => {
         let t = I({}, e);
         if ((null == t ? void 0 : t.count_details) != null) {
             var n, r;
-            ((t.burst_count = null != (n = t.count_details.burst) ? n : 0), (t.count = null != (r = t.count_details.normal) ? r : 0));
+            (t.burst_count = null != (n = t.count_details.burst) ? n : 0),
+                (t.count = null != (r = t.count_details.normal) ? r : 0);
         }
-        return (t.count < 0 && (t.count = 0), t.burst_count < 0 && (t.burst_count = 0), t);
+        return t.count < 0 && (t.count = 0), t.burst_count < 0 && (t.burst_count = 0), t;
     });
 }
 function j(e) {
@@ -269,11 +296,11 @@ function j(e) {
               let { message: t, moderator_report: n } = e;
               return new d.Hx({
                   message: R(t),
-                  moderator_report: n
+                  moderator_report: n,
               });
           });
 }
-let U = (e) => 0 === (0, c.cv)(e).length || '' !== e.content;
+let U = (e) => 0 === (0, c.cv)(e).length || "" !== e.content;
 function G(e) {
     return e.hasFlag(O.iLy.EPHEMERAL) && e.type !== O.uaV.IN_GAME_MESSAGE_NUX;
 }

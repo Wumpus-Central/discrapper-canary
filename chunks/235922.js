@@ -5,8 +5,8 @@ function i(n) {
     return (0, o.useMemo)(
         function () {
             var r = n.type;
-            return ((0, e.k)(null != r, 'spec.type must be defined'), r);
+            return (0, e.k)(null != r, "spec.type must be defined"), r;
         },
-        [n]
+        [n],
     );
 }

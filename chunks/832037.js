@@ -7,5 +7,5 @@ var i = n(481060),
 let s = {
     App: () => (0, r.jsx)(i.Sle, { children: (0, r.jsx)(a.Z, {}) }),
     Overlay: () => (0, r.jsx)(i.Sle, { children: (0, r.jsx)(a.a, {}) }),
-    OutdatedClient: o.Z
+    OutdatedClient: o.Z,
 };

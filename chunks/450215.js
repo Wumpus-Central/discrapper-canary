@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,7 +22,16 @@ var r = n(255367),
     y = n(301849);
 function C(e) {
     var t, n;
-    let { guildId: l, initialEditStateId: s, allSubscriptionListings: C, priceTiers: N, onDeleteEditState: I, groupListingId: E, onBeforeDispatchNewListing: S, onAfterDispatchNewListing: T } = e,
+    let {
+            guildId: l,
+            initialEditStateId: s,
+            allSubscriptionListings: C,
+            priceTiers: N,
+            onDeleteEditState: I,
+            groupListingId: E,
+            onBeforeDispatchNewListing: S,
+            onAfterDispatchNewListing: T,
+        } = e,
         [P, w] = i.useState(s),
         R = (0, c.e7)([h.Z], () => h.Z.getSubscriptionListing(P)),
         Z = null == R,
@@ -37,85 +46,85 @@ function C(e) {
         [H] = b.mR(P),
         [z] = b.PK(P),
         [W] = b.d9(P, 1024),
-        V = '' !== F ? F : O.intl.string(O.t.QWhe9P),
-        Y = '' !== F && null != W && '' !== z && null != H && !B,
+        V = "" !== F ? F : O.intl.string(O.t.QWhe9P),
+        Y = "" !== F && null != W && "" !== z && null != H && !B,
         K = b.rU(P),
         { loading: q, error: X, handleCreateOrUpdateFromEditState: J } = b.Xo(),
         { submitting: Q, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
         et = q || Q;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: y.container,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a()(y.header, { [y.headerExpanded]: D }),
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: y.headerImageContainer,
                         children:
                             null == W
                                 ? (0, r.jsx)(j.Z, {
                                       className: y.starIcon,
-                                      'aria-hidden': !0
+                                      "aria-hidden": !0,
                                   })
-                                : (0, r.jsx)('img', {
+                                : (0, r.jsx)("img", {
                                       className: y.headerImage,
                                       src: W,
-                                      alt: V
-                                  })
+                                      alt: V,
+                                  }),
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: y.headerListingInfo,
                         children: [
                             (0, r.jsx)(d.Text, {
-                                variant: 'text-md/medium',
-                                color: 'interactive-active',
-                                children: V
+                                variant: "text-md/medium",
+                                color: "interactive-active",
+                                children: V,
                             }),
                             (0, r.jsx)(d.LZC, { size: 2 }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: y.headerDescriptionContainer,
                                 children: [
                                     G &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.YELLOW_300),
                                             text: O.intl.string(O.t.vosPk5),
-                                            className: y.draftBadge
+                                            className: y.draftBadge,
                                         }),
                                     M &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.PRIMARY_500),
                                             text: O.intl.string(O.t.nhbtEh),
-                                            className: y.archivedBadge
+                                            className: y.archivedBadge,
                                         }),
                                     U &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.PRIMARY_500),
                                             text: O.intl.string(O.t.aiwXen),
-                                            className: y.unsavedBadge
+                                            className: y.unsavedBadge,
                                         }),
                                     null != k &&
                                         (0, r.jsxs)(d.Text, {
-                                            color: 'interactive-normal',
-                                            variant: 'text-sm/normal',
-                                            children: [(0, m.T4)(k.price, k.currency), '/', (0, g.JE)(k)]
-                                        })
-                                ]
-                            })
-                        ]
+                                            color: "interactive-normal",
+                                            variant: "text-sm/normal",
+                                            children: [(0, m.T4)(k.price, k.currency), "/", (0, g.JE)(k)],
+                                        }),
+                                ],
+                            }),
+                        ],
                     }),
                     D
-                        ? (0, r.jsxs)('div', {
+                        ? (0, r.jsxs)("div", {
                               className: y.headerActions,
                               children: [
                                   (0, r.jsx)(d.Avr, {
-                                      variant: 'secondary',
+                                      variant: "secondary",
                                       onClick: () => {
-                                          (b.GM(P), Z ? null == I || I() : A(!1));
+                                          b.GM(P), Z ? null == I || I() : A(!1);
                                       },
-                                      text: O.intl.string(O.t['ETE/oK'])
+                                      text: O.intl.string(O.t["ETE/oK"]),
                                   }),
                                   (0, r.jsx)(d.zxk, {
-                                      variant: 'primary',
+                                      variant: "primary",
                                       onClick: () =>
                                           J({
                                               guildId: l,
@@ -123,25 +132,25 @@ function C(e) {
                                               groupListingId: E,
                                               onBeforeDispatchNewListing: S,
                                               onAfterDispatchNewListing: (e) => {
-                                                  (w(e.id), null == T || T(e));
-                                              }
+                                                  w(e.id), null == T || T(e);
+                                              },
                                           }),
                                       disabled: !Y || !K,
                                       loading: et,
-                                      text: O.intl.string(O.t.R3BPHx)
-                                  })
-                              ]
+                                      text: O.intl.string(O.t.R3BPHx),
+                                  }),
+                              ],
                           })
                         : (0, r.jsx)(d.P3F, {
                               onClick: () => A(!0),
-                              'aria-label': O.intl.string(O.t['2qPbmJ']),
+                              "aria-label": O.intl.string(O.t["2qPbmJ"]),
                               children: (0, r.jsx)(d.vdY, {
-                                  size: 'xs',
-                                  color: 'currentColor',
-                                  className: y.pencilIcon
-                              })
-                          })
-                ]
+                                  size: "xs",
+                                  color: "currentColor",
+                                  className: y.pencilIcon,
+                              }),
+                          }),
+                ],
             }),
             D &&
                 (0, r.jsx)(x.I, {
@@ -154,17 +163,17 @@ function C(e) {
                         loading: et,
                         error: null != X ? X : $,
                         handlePublishTier: () => {
-                            (o()(null != E, 'group listing doesnt exist'),
-                                o()(null != R, 'subscription listing doesnt exist'),
+                            o()(null != E, "group listing doesnt exist"),
+                                o()(null != R, "subscription listing doesnt exist"),
                                 ee({
                                     guildId: l,
                                     groupListingId: E,
-                                    listingId: R.id
-                                }));
+                                    listingId: R.id,
+                                });
                         },
-                        onDeleteEditState: I
-                    })
-                })
-        ]
+                        onDeleteEditState: I,
+                    }),
+                }),
+        ],
     });
 }

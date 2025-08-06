@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Az: () => E,
     IZ: () => b,
     PP: () => g,
@@ -8,13 +8,13 @@
     mT: () => S,
     qn: () => O,
     rC: () => I,
-    tI: () => y
+    tI: () => y,
 }),
     n(35282),
     n(953529),
     n(388685),
     n(664751),
-    n(544891));
+    n(544891);
 var r = n(749210),
     i = n(336197),
     o = n(41776),
@@ -31,7 +31,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,15 +41,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -57,11 +57,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -82,7 +82,7 @@ async function m(e, t) {
         m = (0, a.s1)(),
         g = c.Z.getGuild(e),
         E = { state: { analyticsSource: t } };
-    (null != g && null != g.joinedAt
+    null != g && null != g.joinedAt
         ? p &&
           (null == o
               ? (0, s.X)(e, E)
@@ -90,14 +90,14 @@ async function m(e, t) {
                     d.Z5c.CHANNEL(e, o, n.messageId),
                     h(_({}, E), {
                         navigationReplace: !0,
-                        openChannel: !0
-                    })
+                        openChannel: !0,
+                    }),
                 ))
         : (await r.Z.joinGuild(e, {
               lurker: !0,
               source: u,
               loadId: f,
-              lurkLocation: null == t ? void 0 : t.page
+              lurkLocation: null == t ? void 0 : t.page,
           }),
           p &&
               (await r.Z.transitionToGuildSync(
@@ -106,12 +106,12 @@ async function m(e, t) {
                       welcomeModalChannelId: o,
                       navigationReplace: null != o,
                       openChannel: null != o,
-                      search: m.location.search
+                      search: m.location.search,
                   }),
                   o,
-                  n.messageId
+                  n.messageId,
               ))),
-        null == l || l());
+        null == l || l();
 }
 function g(e) {
     return {
@@ -131,7 +131,7 @@ function g(e) {
         emojiCount: e.emoji_count,
         stickers: e.stickers,
         stickerCount: e.sticker_count,
-        keywords: e.keywords
+        keywords: e.keywords,
     };
 }
 function E(e, t) {
@@ -139,7 +139,7 @@ function E(e, t) {
     u.default.track(d.rMx.GUILD_DISCOVERY_EXITED, {
         load_id: e,
         guild_ids_viewed: t,
-        recommendations_source: n
+        recommendations_source: n,
     });
 }
 function b(e) {
@@ -151,14 +151,14 @@ function y(e, t) {
         search_type: d.aib.GUILD_DISCOVERY,
         load_id: e,
         location: n.location,
-        category_id: t
+        category_id: t,
     });
 }
 function O(e) {
     let { withCounts: t, offset: n } = e;
     u.default.track(d.rMx.GUILD_DISCOVERY_SEARCH_START, {
         with_counts: t,
-        offset: n
+        offset: n,
     });
 }
 function v(e) {
@@ -168,7 +168,7 @@ function v(e) {
         request_status: n.status,
         request_error_code: n.code,
         will_request_retry: r,
-        is_request_retry: i
+        is_request_retry: i,
     });
 }
 function I(e) {
@@ -185,7 +185,7 @@ function T(e) {
         guild_ids: void 0 !== i ? i.map((e) => e.id) : null,
         query: r,
         location: o.location,
-        category_id: a
+        category_id: a,
     });
 }
 function S(e) {
@@ -193,6 +193,6 @@ function S(e) {
     u.default.track(d.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,
         load_id: t,
-        guild_size: l.Z.getMemberCount(e)
+        guild_size: l.Z.getMemberCount(e),
     });
 }

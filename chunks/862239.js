@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(953529));
+n.d(t, { Z: () => _ }), n(953529);
 var a = n(255367);
 n(73800);
 var r = n(866442),
@@ -13,61 +13,61 @@ function x(e) {
     let { listing: t } = e,
         { name: n, image: i, description: c } = t,
         d = (0, s.T4)(t.price_tier, o.pKx.USD);
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         children: [
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 className: m.listingInfoRow,
                 children: [
-                    (0, a.jsx)('img', {
+                    (0, a.jsx)("img", {
                         src: i,
-                        alt: '',
-                        className: m.avatar
+                        alt: "",
+                        className: m.avatar,
                     }),
-                    (0, a.jsxs)('div', {
+                    (0, a.jsxs)("div", {
                         children: [
                             (0, a.jsx)(l.X6q, {
-                                variant: 'heading-md/medium',
+                                variant: "heading-md/medium",
                                 className: m.tierName,
-                                children: n
+                                children: n,
                             }),
                             (0, a.jsx)(l.Text, {
-                                variant: 'text-md/medium',
-                                tag: 'span',
-                                children: d
+                                variant: "text-md/medium",
+                                tag: "span",
+                                children: d,
                             }),
                             (0, a.jsx)(l.Text, {
-                                variant: 'text-xxs/medium',
-                                tag: 'span',
-                                children: '/mo.'
-                            })
-                        ]
-                    })
-                ]
+                                variant: "text-xxs/medium",
+                                tag: "span",
+                                children: "/mo.",
+                            }),
+                        ],
+                    }),
+                ],
             }),
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 className: m.listingRoleRow,
                 children: [
-                    (0, a.jsx)('div', {
+                    (0, a.jsx)("div", {
                         style: { backgroundColor: (0, r.Rf)(t.role_color) },
-                        className: m.roleColor
+                        className: m.roleColor,
                     }),
-                    (0, a.jsx)('img', {
+                    (0, a.jsx)("img", {
                         src: i,
-                        alt: '',
-                        className: m.roleIcon
+                        alt: "",
+                        className: m.roleIcon,
                     }),
                     (0, a.jsx)(l.Text, {
-                        variant: 'text-xs/medium',
-                        children: n
-                    })
-                ]
+                        variant: "text-xs/medium",
+                        children: n,
+                    }),
+                ],
             }),
             (0, a.jsx)(l.Text, {
-                variant: 'text-xs/normal',
+                variant: "text-xs/normal",
                 className: m.tierDescription,
-                children: c
-            })
-        ]
+                children: c,
+            }),
+        ],
     });
 }
 function u(e) {
@@ -90,92 +90,96 @@ function u(e) {
                     return null;
             }
         })(t.type);
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         className: m.channelBenefitRow,
         children: [
             null != n &&
                 (0, a.jsx)(n, {
                     className: m.channelBenefitIcon,
-                    color: 'currentColor'
+                    color: "currentColor",
                 }),
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 className: m.channelBenefitText,
                 children: [
                     (0, a.jsx)(l.Text, {
-                        variant: 'text-sm/normal',
-                        children: t.name
+                        variant: "text-sm/normal",
+                        children: t.name,
                     }),
                     (0, a.jsx)(l.Text, {
-                        variant: 'text-xs/normal',
+                        variant: "text-xs/normal",
                         className: m.channelBenefitTagline,
-                        children: t.tagline
-                    })
-                ]
+                        children: t.tagline,
+                    }),
+                ],
             }),
             (0, a.jsx)(c.Z, {
                 className: m.__invalid_emojiIcon,
-                color: i.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
-            })
-        ]
+                color: i.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON,
+            }),
+        ],
     });
 }
 function p(e) {
     let { benefit: t } = e;
     return void 0 === t
         ? null
-        : (0, a.jsxs)('div', {
+        : (0, a.jsxs)("div", {
               className: m.intangibleBenefitRow,
               children: [
-                  (0, a.jsx)('div', { className: m.intangibleBenefitIcon }),
+                  (0, a.jsx)("div", { className: m.intangibleBenefitIcon }),
                   (0, a.jsx)(l.Text, {
-                      variant: 'text-sm/normal',
-                      children: t
-                  })
-              ]
+                      variant: "text-sm/normal",
+                      children: t,
+                  }),
+              ],
           });
 }
 function f(e) {
     let { listing: t } = e;
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         children: [
             (0, a.jsx)(l.X6q, {
-                variant: 'heading-sm/semibold',
+                variant: "heading-sm/semibold",
                 className: m.perksHeader,
-                children: d.intl.string(d.t.CjC5XV)
+                children: d.intl.string(d.t.CjC5XV),
             }),
             (0, a.jsx)(l.Text, {
-                variant: 'text-xs/semibold',
+                variant: "text-xs/semibold",
                 className: m.benefitTypeHeader,
-                children: d.intl.string(d.t.rI43W1)
+                children: d.intl.string(d.t.rI43W1),
             }),
             t.channels.map((e) => (0, a.jsx)(u, { channel: e }, e.id)),
             (0, a.jsx)(l.Text, {
-                variant: 'text-xs/semibold',
+                variant: "text-xs/semibold",
                 className: m.benefitTypeHeader,
-                children: d.intl.string(d.t.XqWRLi)
+                children: d.intl.string(d.t.XqWRLi),
             }),
-            t.additional_perks.map((e, t) => (0, a.jsx)(p, { benefit: e.name }, t))
-        ]
+            t.additional_perks.map((e, t) => (0, a.jsx)(p, { benefit: e.name }, t)),
+        ],
     });
 }
 function _(e) {
     let { selectedTemplate: t, handleSelectTemplate: n } = e;
     if (void 0 === t) return null;
     let r = t.listings[0];
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         className: m.container,
         children: [
             (0, a.jsxs)(l.zJl, {
                 className: m.content,
-                children: [(0, a.jsx)(x, { listing: r }), (0, a.jsx)('div', { className: m.divider }), (0, a.jsx)(f, { listing: r })]
+                children: [
+                    (0, a.jsx)(x, { listing: r }),
+                    (0, a.jsx)("div", { className: m.divider }),
+                    (0, a.jsx)(f, { listing: r }),
+                ],
             }),
             (0, a.jsx)(l.zxk, {
-                variant: 'primary',
-                text: d.intl.string(d.t['1W7mCg']),
+                variant: "primary",
+                text: d.intl.string(d.t["1W7mCg"]),
                 onClick: () => {
                     n(t);
-                }
-            })
-        ]
+                },
+            }),
+        ],
     });
 }

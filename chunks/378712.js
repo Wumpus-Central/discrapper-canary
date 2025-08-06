@@ -6,6 +6,6 @@ function d(n) {
     return i.tn.post({
         url: r.ANM.ADD_SAFETY_WARNING(n),
         body: { safety_warning_type: l.pj.LIKELY_ATO },
-        rejectWithError: !1
+        rejectWithError: !1,
     });
 }

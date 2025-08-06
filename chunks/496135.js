@@ -7,10 +7,10 @@ async function a(e, t, n) {
     if (a.type === o.d.ERROR) throw a.body;
     let { body: s } = a;
     r.Z.dispatch({
-        type: 'MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS',
+        type: "MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS",
         guildId: e,
         members: s.members,
         page_result_count: s.page_result_count,
-        total_result_count: s.total_result_count
+        total_result_count: s.total_result_count,
     });
 }

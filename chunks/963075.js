@@ -1,1 +1,1 @@
-e.exports = { select: 'select__71cea' };
+e.exports = { select: "select__71cea" };

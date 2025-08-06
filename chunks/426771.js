@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(953529));
+n.d(t, { Z: () => x }), n(388685), n(953529);
 var r = n(255367),
     o = n(73800),
     i = n(442837),
@@ -29,17 +29,17 @@ function x(e) {
                     r = null == n ? void 0 : n.ends_at;
                 return null == r ? e : null == e || r < e ? r : e;
             },
-            void 0
+            void 0,
         );
     void 0 !== w
         ? (_ = {
-              type: 'expiring',
-              expiringAt: w
+              type: "expiring",
+              expiringAt: w,
           })
         : y &&
           (_ = {
-              type: 'active',
-              statusText: m.intl.string(f.default.FFLkm5)
+              type: "active",
+              statusText: m.intl.string(f.default.FFLkm5),
           });
     let N = C.reduce((e, t) => {
             let { type: n, powerup: r } = t;
@@ -49,9 +49,13 @@ function x(e) {
             (e, t) => {
                 var n, r;
                 let { powerup: o } = t;
-                return e < (null != (n = null == o ? void 0 : o.cost) ? n : 0) ? e : null != (r = null == o ? void 0 : o.cost) ? r : 0;
+                return e < (null != (n = null == o ? void 0 : o.cost) ? n : 0)
+                    ? e
+                    : null != (r = null == o ? void 0 : o.cost)
+                      ? r
+                      : 0;
             },
-            null != (x = null == (n = C[0]) || null == (t = n.powerup) ? void 0 : t.cost) ? x : 0
+            null != (x = null == (n = C[0]) || null == (t = n.powerup) ? void 0 : t.cost) ? x : 0,
         ),
         S = C.reduce((e, t) => {
             var n;
@@ -59,7 +63,7 @@ function x(e) {
             return e + (null != (n = null == r ? void 0 : r.cost) ? n : 0);
         }, 0),
         T = y ? N : Z,
-        A = !y && S > T ? '+' : void 0,
+        A = !y && S > T ? "+" : void 0,
         R = !O && h ? I.image.animatedUrl : I.image.staticUrl;
     return (0, r.jsxs)(c.aB, {
         label: I.title,
@@ -69,10 +73,10 @@ function x(e) {
         onMouseOver: () => E(!0),
         onMouseLeave: () => E(!1),
         children: [
-            (0, r.jsx)('img', {
-                alt: '',
+            (0, r.jsx)("img", {
+                alt: "",
                 src: R,
-                className: g.image
+                className: g.image,
             }),
             (0, r.jsx)(c.Q9, {
                 title: I.title,
@@ -80,21 +84,21 @@ function x(e) {
                 footer: (0, r.jsx)(c.uf, {
                     status: _,
                     cost: T,
-                    costDecorator: A
+                    costDecorator: A,
                 }),
                 children: (0, r.jsx)(l.Text, {
                     className: g.description,
                     color: P,
-                    variant: 'text-sm/medium',
-                    children: I.description
-                })
+                    variant: "text-sm/medium",
+                    children: I.description,
+                }),
             }),
             (0, r.jsx)(c.N4, {
                 children: (0, r.jsx)(l.zxk, {
-                    text: m.intl.string(f.default['27GkOj']),
-                    fullWidth: !0
-                })
-            })
-        ]
+                    text: m.intl.string(f.default["27GkOj"]),
+                    fullWidth: !0,
+                }),
+            }),
+        ],
     });
 }

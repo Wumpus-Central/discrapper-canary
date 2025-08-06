@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     FL: () => B,
     Mq: () => j,
     NK: () => V,
@@ -8,9 +8,9 @@
     ge: () => H,
     hU: () => U,
     nY: () => I,
-    nj: () => W
+    nj: () => W,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(462382),
     o = n(259346),
@@ -35,7 +35,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -45,15 +45,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -61,11 +61,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -127,7 +127,7 @@ function N(e, t) {
 function C(e) {
     var t, n;
     let [r] = null != (t = e.embeds) ? t : [];
-    return null != (n = null == r ? void 0 : r.rawDescription) ? n : '';
+    return null != (n = null == r ? void 0 : r.rawDescription) ? n : "";
 }
 function R(e) {
     let t = N(e, s.G.DECISION_OUTCOME);
@@ -163,7 +163,7 @@ function x(e, t, n) {
             case i.J.NICKNAME_UPDATE:
                 return E.intl.string(E.t.t98DPT);
             case i.J.NICKNAME_RESET:
-                return E.intl.string(E.t['7u/rlZ']);
+                return E.intl.string(E.t["7u/rlZ"]);
             default:
                 return;
         }
@@ -188,15 +188,19 @@ function x(e, t, n) {
 }
 function M(e, t) {
     var n;
-    return t ? (null != (n = null == e ? void 0 : e.name) ? n : E.intl.string(E.t.J90oLS)) : E.intl.string(E.t['/YzI6+']);
+    return t
+        ? null != (n = null == e ? void 0 : e.name)
+            ? n
+            : E.intl.string(E.t.J90oLS)
+        : E.intl.string(E.t["/YzI6+"]);
 }
 function k(e, t, n) {
     let r = N(e, s.G.VOICE_CHANNEL_STATUS_OUTCOME);
     if (null == r) return null;
-    let i = 'blocked' === r ? E.t.cLQrq6 : E.t.bma6cn;
+    let i = "blocked" === r ? E.t.cLQrq6 : E.t.bma6cn;
     return E.intl.format(i, {
         channelName: t,
-        channelHook: n
+        channelHook: n,
     });
 }
 function j(e, t) {
@@ -223,37 +227,37 @@ function j(e, t) {
         : null != h
           ? _ === a.y.MODAL && null != i
               ? f !== o.P.BLOCKED
-                  ? E.intl.format(E.t['4xL9Sk'], {
+                  ? E.intl.format(E.t["4xL9Sk"], {
                         applicationName: h,
                         interactionUserHook: i,
-                        integrationOwnerHook: r
+                        integrationOwnerHook: r,
                     })
                   : E.intl.format(E.t.S3lNIS, {
                         applicationName: h,
                         interactionUserHook: i,
-                        integrationOwnerHook: r
+                        integrationOwnerHook: r,
                     })
               : f !== o.P.BLOCKED
                 ? E.intl.format(E.t.AXQufH, {
                       applicationName: h,
                       channelName: b,
                       channelHook: y,
-                      integrationOwnerHook: r
+                      integrationOwnerHook: r,
                   })
                 : E.intl.format(E.t.s3tjMD, {
                       applicationName: h,
                       channelName: b,
                       channelHook: y,
-                      integrationOwnerHook: r
+                      integrationOwnerHook: r,
                   })
           : f !== o.P.BLOCKED
             ? E.intl.format(E.t.IZg0VV, {
                   channelName: b,
-                  channelHook: y
+                  channelHook: y,
               })
             : E.intl.format(E.t.lOIOSE, {
                   channelName: b,
-                  channelHook: y
+                  channelHook: y,
               });
 }
 function U(e) {
@@ -263,7 +267,7 @@ function U(e) {
         case d.i.USERNAME:
             return E.intl.string(E.t.pJQVnp);
         case d.i.GLOBAL_NAME:
-            return E.intl.string(E.t['V9eJ8/']);
+            return E.intl.string(E.t["V9eJ8/"]);
         case d.i.CLAN_TAG:
             return E.intl.string(E.t.Rtum09);
         default:
@@ -291,7 +295,7 @@ function B(e) {
         raidType: null != a ? a : void 0,
         resolvedReason: null != s ? s : void 0,
         decisionId: null != c ? c : void 0,
-        suspiciousMentionActivityUntil: null != u ? new Date(u) : void 0
+        suspiciousMentionActivityUntil: null != u ? new Date(u) : void 0,
     };
 }
 function Z(e) {
@@ -314,7 +318,7 @@ function Z(e) {
         interactionCallbackType: N(e, s.G.INTERACTION_CALLBACK_TYPE),
         embedChannel: _.Z.getChannel(t),
         embedChannelId: t,
-        alertActionsExecution: null != r ? r : void 0
+        alertActionsExecution: null != r ? r : void 0,
     };
 }
 function F(e) {
@@ -331,7 +335,7 @@ function H(e) {
     if (null == e) return E.intl.string(E.t.Gh3A0N);
     switch (e) {
         case m.$l.LEGITIMATE_ACTIVITY:
-            return E.intl.string(E.t['riQ+HB']);
+            return E.intl.string(E.t["riQ+HB"]);
         case m.$l.DM_SPAM:
             return E.intl.string(E.t.j5V0io);
         case m.$l.JOIN_RAID:

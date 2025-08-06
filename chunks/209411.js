@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(35282), n(457542));
+n.d(t, { Z: () => x }), n(388685), n(35282), n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(593473),
@@ -31,22 +31,22 @@ function x(e) {
                     (null != (n = e.transitionTo) ? n : p.uL)(t);
                 }
             },
-            [e.transitionTo]
+            [e.transitionTo],
         ),
         { isAuthenticated: b, loginStatus: E } = (0, o.cj)([m.default], () => ({
             isAuthenticated: m.default.isAuthenticated(),
-            loginStatus: m.default.getLoginStatus()
+            loginStatus: m.default.getLoginStatus(),
         })),
         { location: v, redirectTo: j } = e,
         [I, O] = i.useState(b);
     function N(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: r } = e;
-        ((0, c.Yz)({
+        (0, c.Yz)({
             handoffKey: t,
             handoffToken: n,
-            handoffSource: r
+            handoffSource: r,
         }),
-            O(!1));
+            O(!1);
     }
     return ((0, u.ZP)(() => {
         if (null != v) {
@@ -54,17 +54,17 @@ function x(e) {
             if (null != e && null != t) {
                 let n = null != j ? (0, d.L)(j) : void 0;
                 I
-                    ? a.Z.logout('handoff', null).finally(() => {
+                    ? a.Z.logout("handoff", null).finally(() => {
                           N({
                               handoffKey: e,
                               handoffToken: t,
-                              handoffSource: n
+                              handoffSource: n,
                           });
                       })
                     : N({
                           handoffKey: e,
                           handoffToken: t,
-                          handoffSource: n
+                          handoffSource: n,
                       });
             }
         }
@@ -77,24 +77,24 @@ function x(e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
                           r = Object.keys(n);
-                      ('function' == typeof Object.getOwnPropertySymbols &&
+                      "function" == typeof Object.getOwnPropertySymbols &&
                           (r = r.concat(
                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                              })
+                              }),
                           )),
                           r.forEach(function (t) {
                               var r;
-                              ((r = n[t]),
+                              (r = n[t]),
                                   t in e
                                       ? Object.defineProperty(e, t, {
                                             value: r,
                                             enumerable: !0,
                                             configurable: !0,
-                                            writable: !0
+                                            writable: !0,
                                         })
-                                      : (e[t] = r));
-                          }));
+                                      : (e[t] = r);
+                          });
                   }
                   return e;
               })({}, e)),
@@ -111,6 +111,6 @@ function x(e) {
                     })(Object(n)).forEach(function (e) {
                         Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                     }),
-              t)
+              t),
           );
 }

@@ -12,8 +12,8 @@ function u(e) {
     return t.skuId === o.A$
         ? (0, r.jsx)(l.xv, {
               className: d.learnMore,
-              variant: 'text-sm/medium',
-              children: c.intl.format(i.default.fXE30d, { helpDeskArticle: s.Z.getArticleURL(a.BhN.GUILD_VANITY_URL) })
+              variant: "text-sm/medium",
+              children: c.intl.format(i.default.fXE30d, { helpDeskArticle: s.Z.getArticleURL(a.BhN.GUILD_VANITY_URL) }),
           })
         : null;
 }

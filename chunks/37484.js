@@ -1,12 +1,12 @@
 function a(e) {
-    return 'string' === n(e);
+    return "string" === n(e);
 }
 function n(e) {
-    return (Object.prototype.toString.call(e).match(/^\[object\s+(.*?)\]$/)[1] || '').toLowerCase();
+    return (Object.prototype.toString.call(e).match(/^\[object\s+(.*?)\]$/)[1] || "").toLowerCase();
 }
 function s(e, { precision: t, unit: r }) {
     return o(e)
-        ? 'none'
+        ? "none"
         : (function (e, t) {
               if (0 === e) return 0;
               let r = ~~e,
@@ -14,7 +14,7 @@ function s(e, { precision: t, unit: r }) {
               r && t && (a = ~~Math.log10(Math.abs(r)) + 1);
               let n = 10 ** (t - a);
               return Math.floor(e * n + 0.5) / n;
-          })(e, t) + (r ?? '');
+          })(e, t) + (r ?? "");
 }
 function o(e) {
     return Number.isNaN(e) || (e instanceof Number && e?.none);
@@ -37,13 +37,13 @@ r.d(t, {
     sI: () => i,
     sX: () => f,
     uZ: () => h,
-    zL: () => s
+    zL: () => s,
 });
 let c = {
     deg: 1,
     grad: 0.9,
     rad: 180 / Math.PI,
-    turn: 360
+    turn: 360,
 };
 function l(e) {
     if (!e) return;
@@ -60,15 +60,22 @@ function l(e) {
                 if (s) {
                     let e = s[0],
                         t = o.slice(0, -e.length);
-                    '%' === e ? ((o = new Number(t / 100)).type = '<percentage>') : (((o = new Number(t * c[e])).type = '<angle>'), (o.unit = e));
-                } else t.test(o) ? ((o = new Number(o)).type = '<number>') : 'none' === o && ((o = new Number(NaN)).none = !0);
-                (a.startsWith('/') && ((o = o instanceof Number ? o : new Number(o)).alpha = !0), 'object' == typeof o && o instanceof Number && (o.raw = n), e.push(o));
+                    "%" === e
+                        ? ((o = new Number(t / 100)).type = "<percentage>")
+                        : (((o = new Number(t * c[e])).type = "<angle>"), (o.unit = e));
+                } else
+                    t.test(o)
+                        ? ((o = new Number(o)).type = "<number>")
+                        : "none" === o && ((o = new Number(NaN)).none = !0);
+                a.startsWith("/") && ((o = o instanceof Number ? o : new Number(o)).alpha = !0),
+                    "object" == typeof o && o instanceof Number && (o.raw = n),
+                    e.push(o);
             }),
             {
                 name: a[1].toLowerCase(),
                 rawName: a[1],
                 rawArgs: a[2],
-                args: e
+                args: e,
             }
         );
     }
@@ -85,14 +92,14 @@ function b(e, t, r) {
 }
 function d(e) {
     return e.map((e) =>
-        e.split('|').map((e) => {
+        e.split("|").map((e) => {
             let t = (e = e.trim()).match(/^(<[a-z]+>)\[(-?[.\d]+),\s*(-?[.\d]+)\]?$/);
             if (t) {
                 let e = new String(t[1]);
-                return ((e.range = [+t[2], +t[3]]), e);
+                return (e.range = [+t[2], +t[3]]), e;
             }
             return e;
-        })
+        }),
     );
 }
 function h(e, t, r) {

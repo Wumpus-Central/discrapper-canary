@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685), n(539854));
+n.d(t, { Z: () => j }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -36,7 +36,7 @@ function L(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -46,15 +46,15 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 L(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -62,11 +62,11 @@ function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -98,11 +98,11 @@ function j(e) {
                       onClose: t,
                       channel: f,
                       imageUrl: u,
-                      mimeType: d
+                      mimeType: d,
                   });
               },
-              position: 'right',
-              align: 'top',
+              position: "right",
+              align: "top",
               animation: s.yRy.Animation.NONE,
               onRequestClose: t,
               shouldShow: n,
@@ -119,20 +119,20 @@ function j(e) {
                                   innerRef: E,
                                   onClick: t,
                                   onMouseEnter: () => {
-                                      (g(!0), p.onMouseEnter());
+                                      g(!0), p.onMouseEnter();
                                   },
                                   onMouseLeave: p.onMouseLeave,
-                                  'aria-label': w.intl.string(w.t.emnnEB),
+                                  "aria-label": w.intl.string(w.t.emnnEB),
                                   children: (0, r.jsx)(_, {
-                                      size: 'custom',
+                                      size: "custom",
                                       width: 20,
                                       height: 20,
-                                      color: 'currentColor'
-                                  })
-                              })
-                          )
+                                      color: "currentColor",
+                                  }),
+                              }),
+                          ),
                   });
-              }
+              },
           }));
 }
 function U(e) {
@@ -143,29 +143,29 @@ function U(e) {
         G = (0, E.g)(a),
         B = (0, _.PL)(!0, !0),
         Z = (0, _.LD)(a.guild_id, !0);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         (k === R.M.ERROR || (k === R.M.FETCHED && 0 === j.length)) && n();
     }, [k, j.length, n]),
         i.useEffect(() => {
             var e, t;
             if (U || 0 === j.length) return;
             let n = [];
-            (j.forEach((e) => {
-                (n.push(Number(e.command.id)), null != e.overrideSendCommand && n.push(Number(e.overrideSendCommand.id)));
+            j.forEach((e) => {
+                n.push(Number(e.command.id)), null != e.overrideSendCommand && n.push(Number(e.overrideSendCommand.id));
             }),
                 A.default.track(P.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
-                    guild_id: null != (e = null == a ? void 0 : a.guild_id) ? e : '',
-                    channel_id: null != (t = null == a ? void 0 : a.id) ? t : '',
+                    guild_id: null != (e = null == a ? void 0 : a.guild_id) ? e : "",
+                    channel_id: null != (t = null == a ? void 0 : a.id) ? t : "",
                     application_ids: [...j.map((e) => Number(e.command.applicationId))],
-                    command_ids: n
-                }));
-        }, [j, a, U]));
+                    command_ids: n,
+                });
+        }, [j, a, U]);
     let F = i.useCallback(
             async (e) => {
                 let t = await fetch(I),
                     n = await t.arrayBuffer(),
-                    r = L.join('/'),
-                    i = new File([n], 'image'.concat((0, C.Q)({ contentType: r })), { type: r });
+                    r = L.join("/"),
+                    i = new File([n], "image".concat((0, C.Q)({ contentType: r })), { type: r });
                 l.Z.setFile({
                     channelId: a.id,
                     id: e,
@@ -173,12 +173,12 @@ function U(e) {
                         id: e,
                         file: i,
                         platform: u.ow.WEB,
-                        origin: 'unknown:app_recommendation'
+                        origin: "unknown:app_recommendation",
                     },
-                    draftType: T.d.SlashCommand
+                    draftType: T.d.SlashCommand,
                 });
             },
-            [I, a.id, L]
+            [I, a.id, L],
         ),
         V = i.useCallback(
             async (e, t, n, r) => {
@@ -187,12 +187,12 @@ function U(e) {
                 let s = e.applicationId,
                     l = (null == (i = B.result) ? void 0 : i.sections[s]) != null,
                     u = (null == (o = Z.result) ? void 0 : o.sections[s]) != null;
-                (await F(r),
+                await F(r),
                     null != p.Z.getActiveCommand(a.id) &&
                         f.Po({
                             channelId: a.id,
                             command: null,
-                            section: null
+                            section: null,
                         }),
                     l || u || _.ZP.queryInstallOnDemandApp(e.applicationId, a.id),
                     f.Po({
@@ -205,19 +205,19 @@ function U(e) {
                             [r]: {
                                 type: c.jw.ATTACHMENT,
                                 name: r,
-                                value: 'image'
-                            }
+                                value: "image",
+                            },
                         },
-                        commandOrigin: n === h.Vh.IMAGE_RECS_SUBMENU ? h.bB.IMAGE_RECS_SUBMENU : h.bB.IMAGE_RECS_MENU
+                        commandOrigin: n === h.Vh.IMAGE_RECS_SUBMENU ? h.bB.IMAGE_RECS_SUBMENU : h.bB.IMAGE_RECS_MENU,
                     }),
                     (0, O.Mo)({
                         command: e,
                         location: n,
-                        sectionName: t.name
+                        sectionName: t.name,
                     }),
-                    N.S.dispatch(P.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id }));
+                    N.S.dispatch(P.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
             },
-            [a.id, F, G, B, Z]
+            [a.id, F, G, B, Z],
         ),
         H = i.useCallback(
             async (e, t, n) => {
@@ -233,13 +233,13 @@ function U(e) {
                     appLauncherContext: {
                         entrypoint: d._b.TEXT,
                         location: t,
-                        sectionName: void 0
-                    }
+                        sectionName: void 0,
+                    },
                 });
-                ((0, m.qJ)({
+                (0, m.qJ)({
                     command: e,
                     location: t,
-                    source: d._b.TEXT
+                    source: d._b.TEXT,
                 }),
                     c &&
                         (await F(n),
@@ -248,53 +248,54 @@ function U(e) {
                             optionValues: {
                                 [n]: [
                                     {
-                                        text: 'image',
-                                        type: 'text'
-                                    }
-                                ]
+                                        text: "image",
+                                        type: "text",
+                                    },
+                                ],
                             },
                             context: {
                                 channel: a,
-                                guild: M
+                                guild: M,
                             },
-                            commandOrigin: t === h.Vh.IMAGE_RECS_SUBMENU ? h.bB.IMAGE_RECS_SUBMENU : h.bB.IMAGE_RECS_MENU
-                        })));
+                            commandOrigin:
+                                t === h.Vh.IMAGE_RECS_SUBMENU ? h.bB.IMAGE_RECS_SUBMENU : h.bB.IMAGE_RECS_MENU,
+                        }));
             },
-            [a, M, B, Z, F]
+            [a, M, B, Z, F],
         );
     return (0, r.jsxs)(s.v2r, {
         onSelect: t,
-        navId: 'image-context-commands-popout',
+        navId: "image-context-commands-popout",
         onClose: n,
-        'aria-label': w.intl.string(w.t.P3ShV1),
+        "aria-label": w.intl.string(w.t.P3ShV1),
         children: [
             (0, r.jsx)(
                 s.sNh,
                 {
-                    id: 'menu-image-rec-header',
+                    id: "menu-image-rec-header",
                     render: () =>
                         (0, r.jsx)(s.Text, {
                             className: D.title,
-                            variant: 'text-md/bold',
-                            color: 'header-primary',
-                            children: w.intl.string(w.t.emnnEB)
+                            variant: "text-md/bold",
+                            color: "header-primary",
+                            children: w.intl.string(w.t.emnnEB),
                         }),
                     navigable: !1,
-                    disabled: !0
+                    disabled: !0,
                 },
-                'menu-image-rec-header'
+                "menu-image-rec-header",
             ),
             (0, r.jsx)(s.Clw, {}),
             U
                 ? (0, r.jsx)(
                       s.sNh,
                       {
-                          id: 'menu-image-recs-placeholder',
+                          id: "menu-image-recs-placeholder",
                           render: () => (0, r.jsx)(v.Z, {}),
                           navigable: !1,
-                          disabled: !0
+                          disabled: !0,
                       },
-                      'menu-image-recs-placeholder'
+                      "menu-image-recs-placeholder",
                   )
                 : (0, r.jsx)(r.Fragment, {
                       children: j
@@ -312,7 +313,9 @@ function U(e) {
                                         {
                                             id: e.command.id,
                                             action: () => {
-                                                o ? V(e.command, e.section, h.Vh.IMAGE_RECS_MENU, l) : H(i ? t : e.command, h.Vh.IMAGE_RECS_MENU, i ? n.imageOption : l);
+                                                o
+                                                    ? V(e.command, e.section, h.Vh.IMAGE_RECS_MENU, l)
+                                                    : H(i ? t : e.command, h.Vh.IMAGE_RECS_MENU, i ? n.imageOption : l);
                                             },
                                             label: e.command.displayName,
                                             subtext: e.command.displayDescription,
@@ -325,9 +328,9 @@ function U(e) {
                                                     width: 32,
                                                     height: 32,
                                                     isSquircle: !0,
-                                                    selectable: !1
+                                                    selectable: !1,
                                                 }),
-                                            iconLeftSize: 'lg',
+                                            iconLeftSize: "lg",
                                             showImageFirst: !0,
                                             disabled: !G && o,
                                             children: i
@@ -336,36 +339,42 @@ function U(e) {
                                                           (0, r.jsx)(
                                                               s.sNh,
                                                               {
-                                                                  id: ''.concat(e.command.id, '-send'),
-                                                                  label: w.intl.string(w.t['M+BhUV']),
+                                                                  id: "".concat(e.command.id, "-send"),
+                                                                  label: w.intl.string(w.t["M+BhUV"]),
                                                                   subtext: w.intl.string(w.t.zXFjJS),
-                                                                  action: () => H(t, h.Vh.IMAGE_RECS_SUBMENU, n.imageOption),
-                                                                  icon: s.Uuj
+                                                                  action: () =>
+                                                                      H(t, h.Vh.IMAGE_RECS_SUBMENU, n.imageOption),
+                                                                  icon: s.Uuj,
                                                               },
-                                                              ''.concat(e.command.id, '-send')
+                                                              "".concat(e.command.id, "-send"),
                                                           ),
                                                           (0, r.jsx)(
                                                               s.sNh,
                                                               {
-                                                                  id: ''.concat(e.command.id, '-edit'),
-                                                                  label: w.intl.string(w.t['wTaN+P']),
+                                                                  id: "".concat(e.command.id, "-edit"),
+                                                                  label: w.intl.string(w.t["wTaN+P"]),
                                                                   subtext: w.intl.string(w.t.bIB3bm),
                                                                   action: () => {
-                                                                      V(e.command, e.section, h.Vh.IMAGE_RECS_SUBMENU, l);
+                                                                      V(
+                                                                          e.command,
+                                                                          e.section,
+                                                                          h.Vh.IMAGE_RECS_SUBMENU,
+                                                                          l,
+                                                                      );
                                                                   },
                                                                   icon: s.vdY,
-                                                                  disabled: !G
+                                                                  disabled: !G,
                                                               },
-                                                              ''.concat(e.command.id, '-edit')
-                                                          )
-                                                      ]
+                                                              "".concat(e.command.id, "-edit"),
+                                                          ),
+                                                      ],
                                                   })
-                                                : null
+                                                : null,
                                         },
-                                        e.command.id
+                                        e.command.id,
                                     );
-                          })
-                  })
-        ]
+                          }),
+                  }),
+        ],
     });
 }

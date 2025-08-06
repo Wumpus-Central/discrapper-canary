@@ -11,40 +11,40 @@ var n = a(255367),
     m = a(386);
 let x = [
     {
-        label: 'Unset',
-        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET
+        label: "Unset",
+        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
     },
     {
-        label: 'All',
-        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL
+        label: "All",
+        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
     },
     {
-        label: 'Users With Game',
-        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME
+        label: "Users With Game",
+        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
     },
     {
-        label: 'None',
-        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE
-    }
+        label: "None",
+        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
+    },
 ];
 function h() {
     let e = r.useRef(null),
         t = c.JG.useSetting();
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         ref: e,
         className: i()(u.panel, m.panel),
         children: [
             (0, n.jsx)(o.Text, {
-                variant: 'text-md/normal',
-                children: 'Receive DMs In Game'
+                variant: "text-md/normal",
+                children: "Receive DMs In Game",
             }),
             (0, n.jsx)(o.PhF, {
                 options: x,
                 isSelected: (e) => e === t,
                 select: c.JG.updateSetting,
                 popoutLayerContext: d.O$,
-                serialize: (e) => e.toString()
-            })
-        ]
+                serialize: (e) => e.toString(),
+            }),
+        ],
     });
 }

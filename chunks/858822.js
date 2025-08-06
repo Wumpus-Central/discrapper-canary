@@ -17,22 +17,22 @@ function f(e, t) {
             [d.ZP],
             () => ({
                 muted: null != n ? d.ZP.isMuted(n) : void 0,
-                muteConfig: null != n ? d.ZP.getMuteConfig(n) : void 0
+                muteConfig: null != n ? d.ZP.getMuteConfig(n) : void 0,
             }),
-            [n]
+            [n],
         ),
         g = (0, u.U)(f);
     return null == n
         ? null
         : i
           ? (0, r.jsx)(s.sNh, {
-                id: 'unmute-guild',
+                id: "unmute-guild",
                 label: p.intl.string(p.t.De0BTE),
                 subtext: g,
-                action: () => o.Z.updateGuildNotificationSettings(n, { muted: !1 }, h.ZB.Unmuted)
+                action: () => o.Z.updateGuildNotificationSettings(n, { muted: !1 }, h.ZB.Unmuted),
             })
           : (0, r.jsx)(s.sNh, {
-                id: 'mute-guild',
+                id: "mute-guild",
                 label: p.intl.string(p.t.vRzp7O),
                 action: () => o.Z.updateGuildNotificationSettings(n, { muted: !0 }, h.ZB.Muted),
                 children: (0, c.k)().map((e) => {
@@ -40,28 +40,28 @@ function f(e, t) {
                     return (0, r.jsx)(
                         s.sNh,
                         {
-                            id: ''.concat(i),
+                            id: "".concat(i),
                             label: a,
                             action: () =>
                                 (function (e) {
                                     if (null == n) return;
-                                    let r = e > 0 ? l()().add(e, 'second').toISOString() : null;
+                                    let r = e > 0 ? l()().add(e, "second").toISOString() : null;
                                     o.Z.updateGuildNotificationSettings(
                                         n,
                                         {
                                             muted: !0,
                                             mute_config: {
                                                 selected_time_window: e,
-                                                end_time: r
-                                            }
+                                                end_time: r,
+                                            },
                                         },
                                         h.ZB.Muted,
-                                        t
+                                        t,
                                     );
-                                })(i)
+                                })(i),
                         },
-                        i
+                        i,
                     );
-                })
+                }),
             });
 }

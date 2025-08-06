@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,16 +32,20 @@ let m = {},
     O = !1,
     v = !1;
 function I() {
-    ((m = {}), (g = {}), (E = {}), (b = {}), (r = null), (O = !1), (v = !1), (y = !1));
+    (m = {}), (g = {}), (E = {}), (b = {}), (r = null), (O = !1), (v = !1), (y = !1);
 }
 function T(e) {
     let { channel: t } = e;
-    (delete m[t.id], delete g[t.id], delete E[t.id]);
+    delete m[t.id], delete g[t.id], delete E[t.id];
 }
 function S(e) {
     let { channelId: t, invite: n } = e,
         r = _.Z.createFromServer(n);
-    r.targetType === p.Iq.STREAM && null != r.targetUser ? (null == g[t] && (g[t] = {}), (g[t][String(r.targetUser.id)] = r)) : r.targetType === p.Iq.EMBEDDED_APPLICATION && null != r.targetApplication ? (null == E[t] && (E[t] = {}), (E[t][r.targetApplication.id] = r)) : (m[t] = r);
+    r.targetType === p.Iq.STREAM && null != r.targetUser
+        ? (null == g[t] && (g[t] = {}), (g[t][String(r.targetUser.id)] = r))
+        : r.targetType === p.Iq.EMBEDDED_APPLICATION && null != r.targetApplication
+          ? (null == E[t] && (E[t] = {}), (E[t][r.targetApplication.id] = r))
+          : (m[t] = r);
 }
 function A(e) {
     let { channelId: t } = e;
@@ -53,19 +57,21 @@ function N(e) {
 }
 function C(e) {
     var t;
-    ((b[e.invite.code] = _.Z.createFromServer(e.invite)), (r = null != (t = a()(l()(u()(Object.values(b), 'createdAt')))) ? t : null), (v = !1));
+    (b[e.invite.code] = _.Z.createFromServer(e.invite)),
+        (r = null != (t = a()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
+        (v = !1);
 }
 function R() {
     v = !1;
 }
 function P(e) {
     var t;
-    (null != e.invites &&
+    null != e.invites &&
         e.invites.forEach((e) => {
             null != b[e.code] && delete b[e.code];
         }),
-        (r = null != (t = a()(l()(u()(Object.values(b), 'createdAt')))) ? t : null),
-        (O = !1));
+        (r = null != (t = a()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
+        (O = !1);
 }
 function w() {
     O = !0;
@@ -78,12 +84,12 @@ function L() {
 }
 function x(e) {
     var t;
-    ((b = {}),
+    (b = {}),
         e.invites.forEach((e) => {
             b[e.code] = _.Z.createFromServer(e);
         }),
-        (r = null != (t = a()(l()(u()(Object.values(b), 'createdAt')))) ? t : null),
-        (y = !1));
+        (r = null != (t = a()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
+        (y = !1);
 }
 function M(e) {
     delete m[e.channelId];
@@ -91,8 +97,20 @@ function M(e) {
 class k extends (i = d.ZP.Store) {
     getInvite(e) {
         var t, n;
-        let { targetType: r, targetUserId: i, targetApplicationId: o } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return r === p.Iq.STREAM && null != i ? (null == (t = g[e]) ? void 0 : t[i]) : r === p.Iq.EMBEDDED_APPLICATION && null != o ? (null == (n = E[e]) ? void 0 : n[o]) : m[e];
+        let {
+            targetType: r,
+            targetUserId: i,
+            targetApplicationId: o,
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return r === p.Iq.STREAM && null != i
+            ? null == (t = g[e])
+                ? void 0
+                : t[i]
+            : r === p.Iq.EMBEDDED_APPLICATION && null != o
+              ? null == (n = E[e])
+                  ? void 0
+                  : n[o]
+              : m[e];
     }
     getFriendInvite() {
         return r;
@@ -104,7 +122,7 @@ class k extends (i = d.ZP.Store) {
         return null != r && !O && !v;
     }
 }
-h(k, 'displayName', 'InstantInviteStore');
+h(k, "displayName", "InstantInviteStore");
 let j = new k(f.Z, {
     CONNECTION_OPEN: I,
     CHANNEL_DELETE: T,
@@ -118,5 +136,5 @@ let j = new k(f.Z, {
     FRIEND_INVITE_CREATE_REQUEST: D,
     FRIEND_INVITES_FETCH_REQUEST: L,
     FRIEND_INVITES_FETCH_RESPONSE: x,
-    INSTANT_INVITE_CLEAR: M
+    INSTANT_INVITE_CLEAR: M,
 });

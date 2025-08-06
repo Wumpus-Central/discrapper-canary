@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -23,7 +23,7 @@ let h = (e) => {
             return null == (e = m.Z.getChannel(x.Z.getChannelId())) ? void 0 : e.guild_id;
         }),
         [O, Z] = l.useState(null);
-    (l.useEffect(() => {
+    l.useEffect(() => {
         null != O && (f(!0), j(!0));
     }, [O]),
         l.useEffect(() => {
@@ -46,22 +46,22 @@ let h = (e) => {
                     e = !0;
                 }
             );
-        }, [y, t.id]));
+        }, [y, t.id]);
     let I = l.useCallback(() => {
-            (j(!1),
+            j(!1),
                 o.ZP.trackWithMetadata(_.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
                     guild_id: y,
                     application_id: t.id,
-                    report_id: n
+                    report_id: n,
                 }),
                 null != y &&
                     null != O &&
                     c.Z.disableIntegration(y, O.id).catch(() => {
                         s.Z.show({
                             title: b.intl.string(b.t.wYqMmJ),
-                            body: b.intl.string(b.t.A4Mnsr)
+                            body: b.intl.string(b.t.A4Mnsr),
                         });
-                    }));
+                    });
         }, [t.id, y, O, n]),
         C = (0, i.e7)([g.Z, p.Z], () => {
             let e = p.Z.getGuild(y);
@@ -72,13 +72,13 @@ let h = (e) => {
         });
     return null != t && null != y && h && C
         ? (0, r.jsx)(u.ZP, {
-              title: b.intl.string(b.t['WV/CsL']),
-              description: b.intl.string(b.t['FlcC+/']),
-              buttonText: v ? b.intl.string(b.t.aCJlq6) : b.intl.string(b.t['6I1F3t']),
+              title: b.intl.string(b.t["WV/CsL"]),
+              description: b.intl.string(b.t["FlcC+/"]),
+              buttonText: v ? b.intl.string(b.t.aCJlq6) : b.intl.string(b.t["6I1F3t"]),
               buttonDisabled: !v,
               buttonColor: v ? a.zx.Colors.RED : a.zx.Colors.WHITE,
               buttonLook: v ? a.zx.Looks.FILLED : a.zx.Looks.LINK,
-              onButtonPress: I
+              onButtonPress: I,
           })
         : null;
 };

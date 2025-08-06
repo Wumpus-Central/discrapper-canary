@@ -12,7 +12,9 @@ var r = n(442837),
     f = n(981631),
     b = n(388032);
 function g(e, t) {
-    let n = (0, r.e7)([d.Z], () => null != e && d.Z.canWithPartialContext(f.Plq.MANAGE_MESSAGES, { channelId: e }), [e]),
+    let n = (0, r.e7)([d.Z], () => null != e && d.Z.canWithPartialContext(f.Plq.MANAGE_MESSAGES, { channelId: e }), [
+            e,
+        ]),
         g = (0, r.e7)([c.Z], () => c.Z.getChannel(e), [e]),
         O = (0, r.e7)([s.Z], () => (null != e && null != t ? s.Z.getMessage(e, t) : null)),
         E = (0, o.NK)(null != O ? O : null);
@@ -23,13 +25,13 @@ function g(e, t) {
         ? (0, l.jsx)(
               i.sNh,
               {
-                  id: 'mark-automod-alert-completed',
+                  id: "mark-automod-alert-completed",
                   label: P,
                   action: () => {
                       (0, u.Xx)(t, g, Z);
-                  }
+                  },
               },
-              'mark-automod-alert-completed'
+              "mark-automod-alert-completed",
           )
         : null;
 }

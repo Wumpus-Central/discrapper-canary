@@ -24,69 +24,71 @@ function x(e) {
             (0, c.Q3)(r.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
         },
         j = () => {
-            (a.Z.open(g.oAB.NOTIFICATIONS, null, { analyticsLocations: x }), _(h.L.SECONDARY));
+            a.Z.open(g.oAB.NOTIFICATIONS, null, { analyticsLocations: x }), _(h.L.SECONDARY);
         };
     return n && !u
         ? (0, i.jsx)(d.ZP, {
-              children: (0, i.jsxs)('div', {
+              children: (0, i.jsxs)("div", {
                   className: b.wrapper,
                   children: [
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: b.backgroundWrapper,
                           children: [
                               (0, i.jsx)(p.Z, {
                                   className: b.backgroundImage,
-                                  pageMultiplier: 5
+                                  pageMultiplier: 5,
                               }),
-                              (0, i.jsx)('div', { className: b.backgroundOverlay })
-                          ]
+                              (0, i.jsx)("div", { className: b.backgroundOverlay }),
+                          ],
                       }),
-                      (0, i.jsx)('div', { className: b.heroImage }),
-                      (0, i.jsxs)('div', {
+                      (0, i.jsx)("div", { className: b.heroImage }),
+                      (0, i.jsxs)("div", {
                           className: b.content,
                           children: [
-                              (0, i.jsxs)('div', {
+                              (0, i.jsxs)("div", {
                                   children: [
                                       (0, i.jsx)(s.X6q, {
-                                          variant: 'heading-md/bold',
+                                          variant: "heading-md/bold",
                                           color: void 0,
                                           className: b.specialText,
-                                          children: f.intl.string(f.t.zUhr3N)
+                                          children: f.intl.string(f.t.zUhr3N),
                                       }),
                                       (0, i.jsx)(s.Text, {
-                                          variant: 'text-xs/normal',
-                                          color: 'always-white',
+                                          variant: "text-xs/normal",
+                                          color: "always-white",
                                           children: f.intl.format(f.t.Xw2XUV, {
                                               settingsHook: (e, t) =>
                                                   (0, i.jsx)(
                                                       s.P3F,
                                                       {
-                                                          tag: 'span',
+                                                          tag: "span",
                                                           className: b.specialTextLink,
                                                           onClick: j,
-                                                          children: e
+                                                          children: e,
                                                       },
-                                                      t
-                                                  )
-                                          })
-                                      })
-                                  ]
+                                                      t,
+                                                  ),
+                                          }),
+                                      }),
+                                  ],
                               }),
                               (0, i.jsx)(s.P3F, {
                                   className: b.closeClickable,
                                   onClick: () => _(h.L.USER_DISMISS),
                                   children: (0, i.jsx)(s.Dio, {
-                                      color: 'currentColor',
-                                      size: 'xs'
-                                  })
-                              })
-                          ]
-                      })
-                  ]
-              })
+                                      color: "currentColor",
+                                      size: "xs",
+                                  }),
+                              }),
+                          ],
+                      }),
+                  ],
+              }),
           })
         : null;
 }
 function _() {
-    return null == u.Z.coachmarkDismissibleContent ? null : (0, i.jsx)(x, { dismissibleContent: u.Z.coachmarkDismissibleContent });
+    return null == u.Z.coachmarkDismissibleContent
+        ? null
+        : (0, i.jsx)(x, { dismissibleContent: u.Z.coachmarkDismissibleContent });
 }

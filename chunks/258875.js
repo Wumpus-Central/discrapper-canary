@@ -1,13 +1,13 @@
 e.exports = function (e) {
     return {
-        name: 'VBScript in HTML',
-        subLanguage: 'xml',
+        name: "VBScript in HTML",
+        subLanguage: "xml",
         contains: [
             {
-                begin: '<%',
-                end: '%>',
-                subLanguage: 'vbscript'
-            }
-        ]
+                begin: "<%",
+                end: "%>",
+                subLanguage: "vbscript",
+            },
+        ],
     };
 };

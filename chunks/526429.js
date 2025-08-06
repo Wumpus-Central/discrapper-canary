@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => I }), r(642613), r(539854), r(388685), r(392711));
+r.d(t, { Z: () => I }), r(642613), r(539854), r(388685), r(392711);
 var n,
     i,
     a,
@@ -20,9 +20,9 @@ class O extends (n = o.ZP.Store) {
         return [
             {
                 categoryId: c.Hk,
-                name: d.intl.string(d.t.Ym2Ri4)
+                name: d.intl.string(d.t.Ym2Ri4),
             },
-            ...e
+            ...e,
         ];
     }
     getClanDiscoveryCategories() {
@@ -30,9 +30,9 @@ class O extends (n = o.ZP.Store) {
         return [
             {
                 categoryId: c.Hk,
-                name: d.intl.string(d.t.QToH29)
+                name: d.intl.string(d.t.QToH29),
             },
-            ...e
+            ...e,
         ];
     }
     getAllCategories() {
@@ -45,15 +45,15 @@ class O extends (n = o.ZP.Store) {
         return e === c.Hk ? d.intl.string(d.t.Ym2Ri4) : E[e];
     }
 }
-((a = 'GuildDiscoveryCategoryStore'),
-    (i = 'displayName') in O
+(a = "GuildDiscoveryCategoryStore"),
+    (i = "displayName") in O
         ? Object.defineProperty(O, i, {
               value: a,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (O[i] = a));
+        : (O[i] = a);
 let I = new O(l.Z, {
     GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
         let t,
@@ -69,31 +69,31 @@ let I = new O(l.Z, {
                         if (r === c.dc) {
                             t = {
                                 categoryId: r,
-                                name: n
+                                name: n,
                             };
                             return;
                         }
-                        (!0 === o &&
+                        !0 === o &&
                             i.push({
                                 categoryId: r,
-                                name: n
+                                name: n,
                             }),
                             a.push({
                                 categoryId: r,
-                                name: n
+                                name: n,
                             }),
-                            (E[r] = n));
+                            (E[r] = n);
                     }
                 }),
             null != t)
         ) {
             let { categoryId: e, name: r } = t;
-            (i.push({
+            i.push({
                 categoryId: e,
-                name: r
+                name: r,
             }),
-                (E[e] = r));
+                (E[e] = r);
         }
-        ((u = n), (_ = i), (p = a));
-    }
+        (u = n), (_ = i), (p = a);
+    },
 });

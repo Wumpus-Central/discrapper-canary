@@ -17,11 +17,15 @@ function d() {
                 var t;
                 let { ensureFresh: n, hasFetched: i, hasRoleSubscriptions: r } = e,
                     s = a.Z.getActiveGuildSubscriptions();
-                return ((null != (t = null == s ? void 0 : s.length) ? t : 0) === 0 && !!r) || (!!n && !i) || (!i && !a.Z.hasFetchedSubscriptions());
+                return (
+                    ((null != (t = null == s ? void 0 : s.length) ? t : 0) === 0 && !!r) ||
+                    (!!n && !i) ||
+                    (!i && !a.Z.hasFetchedSubscriptions())
+                );
             })({
                 ensureFresh: e,
                 hasRoleSubscriptions: t,
-                hasFetched: d.current
+                hasFetched: d.current,
             }) && ((d.current = !0), s.jg());
         }, [e, t]),
         null != n ? n : c

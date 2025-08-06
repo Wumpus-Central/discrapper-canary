@@ -13,7 +13,7 @@ n.d(t, {
     uf: () => v,
     w8: () => g,
     z3: () => b,
-    zW: () => f
+    zW: () => f,
 });
 var r = n(73800),
     i = n(704215),
@@ -23,53 +23,55 @@ var r = n(73800),
     l = n(626135),
     c = n(981631),
     u = n(474936);
-let d = 'manual',
+let d = "manual",
     f = () => {
-        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'hex_input' }));
+        (d = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "hex_input" });
     },
     _ = () => {
-        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_picker' }));
+        (d = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_picker" });
     },
     p = () => {
-        l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'eye_dropper' });
+        l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "eye_dropper" });
     },
     h = () => {
-        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'add_color' }));
+        (d = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "add_color" });
     },
     m = () => {
-        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'remove_color' }));
+        (d = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "remove_color" });
     },
     g = () => {
-        l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_selected' });
+        l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_selected" });
     },
     E = () => {
-        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'gradient_direction' }));
+        (d = "manual"),
+            l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "gradient_direction" });
     },
     b = () => {
-        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_intensity' }));
+        (d = "manual"),
+            l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_intensity" });
     },
     y = () => {
-        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'base_theme' }));
+        (d = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "base_theme" });
     },
     O = () => {
-        ((d = 'surprise_me'), l.default.track(c.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {}));
+        (d = "surprise_me"), l.default.track(c.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
     },
     v = () => {
-        ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {}));
+        (d = "manual"), l.default.track(c.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
     },
     I = () => {
         l.default.track(c.rMx.CUSTOM_THEMES_BACK_BUTTON_CLICKED, {});
     },
     T = (e, t, n, r, i) => {
-        (l.default.track(c.rMx.CUSTOM_THEMES_UPDATED, {
+        l.default.track(c.rMx.CUSTOM_THEMES_UPDATED, {
             colors: e,
             color_intensity: t,
             gradient_angle: n,
             base_theme: r,
             location_stack: i,
-            creation_method: d
+            creation_method: d,
         }),
-            (d = 'manual'));
+            (d = "manual");
     },
     S = (e, t) => {
         let { analyticsLocations: n } = (0, o.ZP)(t);
@@ -77,7 +79,7 @@ let d = 'manual',
             e ||
                 l.default.track(c.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: u.cd.CUSTOM_THEMES_UPSELL,
-                    location_stack: n
+                    location_stack: n,
                 });
         }, [e, n]);
     },
@@ -85,15 +87,22 @@ let d = 'manual',
         let n = (0, s.Nj)(i.z.CUSTOM_THEME_COACHMARK);
         r.useEffect(() => {
             if (e && !n && t !== i.z.CUSTOM_THEME_COACHMARK) {
-                let { dailyCapReached: e, inCooldown: t, inAccountTenureRestriction: n, lastContentShown: r, currentFatigableWinner: o, lastDismissibleContentWinner: s } = (0, a.i)(i.z.CUSTOM_THEME_COACHMARK);
-                (e || t || n || ('CUSTOM_THEME_COACHMARK' !== o && 'None' !== o)) &&
+                let {
+                    dailyCapReached: e,
+                    inCooldown: t,
+                    inAccountTenureRestriction: n,
+                    lastContentShown: r,
+                    currentFatigableWinner: o,
+                    lastDismissibleContentWinner: s,
+                } = (0, a.i)(i.z.CUSTOM_THEME_COACHMARK);
+                (e || t || n || ("CUSTOM_THEME_COACHMARK" !== o && "None" !== o)) &&
                     l.default.track(c.rMx.CUSTOM_THEMES_COACHMARK_NOT_SHOWN_REASON, {
                         daily_cap_reached: e,
                         in_cooldown: t,
                         in_account_tenure_restriction: n,
                         last_content_shown: r,
                         current_fatigable_winner: o,
-                        last_dismissible_content_winner: s
+                        last_dismissible_content_winner: s,
                     });
             }
         }, [e, n, t]);

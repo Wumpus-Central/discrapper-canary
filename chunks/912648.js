@@ -7,15 +7,15 @@ var r = n(255367),
 function l(e) {
     let { channel: t } = e;
     return (0, r.jsx)(i.z, {
-        variant: 'secondary',
-        size: 'md',
+        variant: "secondary",
+        size: "md",
         onClick: () =>
             (0, o.i)({
                 analyticsLocation: {
                     section: a.jXE.EXPRESSION_PICKER,
-                    page: (null == t ? void 0 : t.guild_id) != null ? a.ZY5.GUILD_CHANNEL : a.ZY5.DM_CHANNEL
-                }
+                    page: (null == t ? void 0 : t.guild_id) != null ? a.ZY5.GUILD_CHANNEL : a.ZY5.DM_CHANNEL,
+                },
             }),
-        text: s.intl.string(s.t.iMJO39)
+        text: s.intl.string(s.t.iMJO39),
     });
 }

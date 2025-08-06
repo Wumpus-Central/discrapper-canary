@@ -10,19 +10,19 @@ function o(e) {
         d = l.useMemo(() => (0, i.zi)(t, r), [r, t]),
         u = (0, i.P8)(t),
         x = (e) => e.toString(),
-        j = (0, n.jsx)('div', {
+        j = (0, n.jsx)("div", {
             className: a.title,
-            children: c.intl.string(c.t['59TVxM'])
+            children: c.intl.string(c.t["59TVxM"]),
         });
     return (0, n.jsx)(s.xJW, {
         title: j,
         required: !0,
         children: (0, n.jsx)(s.PhF, {
-            placeholder: 'gaming',
+            placeholder: "gaming",
             options: u,
             select: o,
             serialize: x,
-            isSelected: (e) => null != d && x(e) === x(d)
-        })
+            isSelected: (e) => null != d && x(e) === x(d),
+        }),
     });
 }

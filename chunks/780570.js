@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     CP: () => l,
     Je: () => p,
     KJ: () => f,
@@ -6,22 +6,22 @@
     Tu: () => s,
     d0: () => d,
     lK: () => _,
-    xI: () => u
+    xI: () => u,
 }),
     n(388685),
-    n(35282));
+    n(35282);
 var r = n(695346),
     i = n(594174),
     o = n(55563),
     a = n(981631);
 function s(e, t) {
-    return ''.concat(e, ':').concat(t);
+    return "".concat(e, ":").concat(t);
 }
 function l(e) {
-    let [t, n] = e.split(':');
+    let [t, n] = e.split(":");
     return {
         applicationId: t,
-        branchId: n
+        branchId: n,
     };
 }
 function c(e, t) {
@@ -36,7 +36,11 @@ function d(e, t, n) {
     return !(null == t || (n.enabled && t.hasFlag(a.eHb.PRIVATE))) && !t.isHidden();
 }
 function f(e) {
-    return null == e ? null : e.type === a.vxO.INSTALLING || e.type === a.vxO.UPDATING || e.type === a.vxO.UNINSTALLING ? e : null;
+    return null == e
+        ? null
+        : e.type === a.vxO.INSTALLING || e.type === a.vxO.UPDATING || e.type === a.vxO.UNINSTALLING
+          ? e
+          : null;
 }
 function _(e) {
     return e.reduce(
@@ -46,13 +50,13 @@ function _(e) {
                 ? e
                 : {
                       total: e.total + Number(n.total),
-                      progress: e.progress + Number(n.progress)
+                      progress: e.progress + Number(n.progress),
                   };
         },
         {
             total: 0,
-            progress: 0
-        }
+            progress: 0,
+        },
     );
 }
 function p(e) {

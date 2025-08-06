@@ -1,4 +1,4 @@
-(n.d(t, { R: () => u }), n(388685));
+n.d(t, { R: () => u }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(843991),
@@ -17,9 +17,13 @@ function u() {
                 systemChannelId: e.systemChannelId,
                 afkChannelId: e.afkChannelId,
                 afkTimeout: e.afkTimeout,
-                defaultMessageNotifications: e.defaultMessageNotifications
+                defaultMessageNotifications: e.defaultMessageNotifications,
             };
-            if (((0, l.O)(new Set(e.features), new Set(t.features)) || (n.features = e.features), c.Z.hasChanges() && (await o.Z.saveGuild(e.id, n)), c.Z.widgetHasChanges())) {
+            if (
+                ((0, l.O)(new Set(e.features), new Set(t.features)) || (n.features = e.features),
+                c.Z.hasChanges() && (await o.Z.saveGuild(e.id, n)),
+                c.Z.widgetHasChanges())
+            ) {
                 let { enabled: t, channelId: n } = c.Z.getWidget();
                 await o.Z.updateEmbed(e.id, t, n);
             }
@@ -32,6 +36,6 @@ function u() {
         submitting: n,
         errorMessage: m,
         onSave: g,
-        onReset: p
+        onReset: p,
     });
 }

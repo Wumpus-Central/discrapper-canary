@@ -17,56 +17,56 @@ function m(e) {
         className: f.contentHeaderButton,
         innerClassName: f.iconButtonInner,
         onClick: n,
-        children: (0, i.jsx)(t, { size: 'sm' })
+        children: (0, i.jsx)(t, { size: "sm" }),
     });
 }
 function b(e) {
     let { title: t, onClose: n, setShowNavigationMobile: o } = e;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: f.contentHeader,
         children: [
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: f.contentHeaderLeft,
                 children: [
                     r.tq &&
                         (0, i.jsx)(m, {
                             icon: c.yFM,
-                            onClick: () => o(!0)
+                            onClick: () => o(!0),
                         }),
                     (0, i.jsx)(c.X6q, {
-                        variant: 'heading-md/normal',
-                        color: 'header-secondary',
-                        children: t
-                    })
-                ]
+                        variant: "heading-md/normal",
+                        color: "header-secondary",
+                        children: t,
+                    }),
+                ],
             }),
             !r.tq &&
                 (0, i.jsx)(m, {
                     icon: c.Uz9,
-                    onClick: n
-                })
-        ]
+                    onClick: n,
+                }),
+        ],
     });
 }
 let v = o.memo(function (e) {
     let { onClose: t, setShowNavigationMobile: n, setting: o } = e,
         l = o.useTitle(),
         { showNavigationMobile: s } = (0, u.t)();
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: a()(f.content, {
             [f.mobile]: r.tq,
-            [f.mobileNavigationOpen]: s
+            [f.mobileNavigationOpen]: s,
         }),
         children: [
             (0, i.jsx)(b, {
                 title: l,
                 onClose: t,
-                setShowNavigationMobile: n
+                setShowNavigationMobile: n,
             }),
             (0, i.jsx)(c.w0Z, {
                 className: f.contentScroller,
-                children: (0, i.jsx)(d.Z, { node: o })
-            })
-        ]
+                children: (0, i.jsx)(d.Z, { node: o }),
+            }),
+        ],
     });
 });

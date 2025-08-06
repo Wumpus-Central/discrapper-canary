@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -19,7 +19,7 @@ function h() {
         b = s.qs(e, t);
     function j() {
         (0, i.ZDy)(async () => {
-            let { default: e } = await n.e('22942').then(n.bind(n, 660727));
+            let { default: e } = await n.e("22942").then(n.bind(n, 660727));
             return (n) => {
                 var i, l;
                 return (0, r.jsx)(
@@ -28,24 +28,24 @@ function h() {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, n)),
@@ -55,13 +55,13 @@ function h() {
                             onUploadIcon: (e) =>
                                 h({
                                     icon: e,
-                                    unicodeEmoji: null
+                                    unicodeEmoji: null,
                                 }),
                             onSelectUnicodeEmoji: (e) =>
                                 h({
                                     icon: null,
-                                    unicodeEmoji: e
-                                })
+                                    unicodeEmoji: e,
+                                }),
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -75,79 +75,79 @@ function h() {
                           })(Object(l)).forEach(function (e) {
                               Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                           }),
-                    i)
+                    i),
                 );
             };
         });
     }
     let v = (0, l.mY)();
     return (0, r.jsx)(o.Z, {
-        title: m.intl.string(m.t['Ah+sQ0']),
+        title: m.intl.string(m.t["Ah+sQ0"]),
         description: m.intl.string(m.t.ixbWiI),
         children: (0, r.jsxs)(i.Kqy, {
-            direction: 'vertical',
+            direction: "vertical",
             gap: 24,
             children: [
                 (0, r.jsx)(i.hjN, {
-                    title: m.intl.string(m.t['6OUqDQ']),
+                    title: m.intl.string(m.t["6OUqDQ"]),
                     disabled: v,
                     children: (0, r.jsx)(d.Z, {
                         value: f,
                         onChange: x,
-                        disabled: v
-                    })
+                        disabled: v,
+                    }),
                 }),
                 (0, r.jsxs)(i.hjN, {
-                    title: m.intl.string(m.t['zn8/AQ']),
+                    title: m.intl.string(m.t["zn8/AQ"]),
                     disabled: v,
                     children: [
                         (0, r.jsx)(i.R94, {
                             type: i.R94.Types.DESCRIPTION,
                             className: g.formDescription,
                             disabled: v,
-                            children: m.intl.string(m.t.AqHUra)
+                            children: m.intl.string(m.t.AqHUra),
                         }),
                         (0, r.jsxs)(i.Kqy, {
-                            direction: 'horizontal',
+                            direction: "horizontal",
                             gap: 16,
                             children: [
                                 (0, r.jsx)(u.Z, {
                                     role: b,
-                                    'aria-label': m.intl.string(m.t.mD1oGB),
-                                    onClick: j,
-                                    disabled: v
-                                }),
-                                (0, r.jsx)(i.zxk, {
-                                    variant: 'secondary',
+                                    "aria-label": m.intl.string(m.t.mD1oGB),
                                     onClick: j,
                                     disabled: v,
-                                    text: m.intl.string(m.t.mD1oGB)
-                                })
-                            ]
-                        })
-                    ]
+                                }),
+                                (0, r.jsx)(i.zxk, {
+                                    variant: "secondary",
+                                    onClick: j,
+                                    disabled: v,
+                                    text: m.intl.string(m.t.mD1oGB),
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(i.Rny, {
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: p.previewContainer,
-                        'aria-hidden': !0,
+                        "aria-hidden": !0,
                         children: [
                             (0, r.jsx)(c.Z, {
                                 guildId: t,
                                 role: b,
                                 className: p.messageContainer,
-                                theme: 'light'
+                                theme: "light",
                             }),
                             (0, r.jsx)(c.Z, {
                                 guildId: t,
                                 role: b,
                                 className: p.messageContainer,
-                                theme: 'dark'
-                            })
-                        ]
-                    })
-                })
-            ]
-        })
+                                theme: "dark",
+                            }),
+                        ],
+                    }),
+                }),
+            ],
+        }),
     });
 }

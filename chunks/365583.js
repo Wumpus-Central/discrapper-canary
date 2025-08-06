@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => y,
-    Z: () => v
+    Z: () => v,
 });
 var r = n(255367);
 n(73800);
@@ -32,12 +32,12 @@ function O(e) {
     return null != n
         ? y({
               entry: n,
-              onOpenGameSettings: r
+              onOpenGameSettings: r,
           })
         : null != t
           ? b({
                 activity: t,
-                onOpenGameSettings: r
+                onOpenGameSettings: r,
             })
           : null;
 }
@@ -54,15 +54,15 @@ function v(e) {
     let f = O({
         activity: n,
         entry: a,
-        onOpenGameSettings: d
+        onOpenGameSettings: d,
     });
     return null == f
         ? null
         : (0, r.jsx)(o.sNh, {
-              id: 'manage-privacy',
+              id: "manage-privacy",
               label: g.intl.string(g.t.anfNPT),
               action: () => {
-                  (null == l || l({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), f(), (0, s.i)(u), null == c || c());
-              }
+                  null == l || l({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), f(), (0, s.i)(u), null == c || c();
+              },
           });
 }

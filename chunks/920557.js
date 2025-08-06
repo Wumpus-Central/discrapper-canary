@@ -1,4 +1,4 @@
-(n.d(t, { K: () => x }), n(388685), n(314940));
+n.d(t, { K: () => x }), n(388685), n(314940);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -24,7 +24,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -76,7 +76,8 @@ function S(e, t) {
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -86,7 +87,7 @@ function A(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let N = 24,
@@ -96,14 +97,14 @@ function P(e) {
     let { percentage: t, label: n, canShowVoterDetails: o, answerId: a } = e,
         l = (0, f.Dt)(),
         { channelId: c, messageId: u } = (0, E.pE)(),
-        [m, g] = i.useState(''),
+        [m, g] = i.useState(""),
         [b, O] = i.useState(!1),
-        I = '' !== m && b,
+        I = "" !== m && b,
         S = i.useCallback(() => {
             g((0, h.e1)(u, c, a));
         }, [u, c, a]),
         A = i.useCallback(() => {
-            (S(), O(!0));
+            S(), O(!0);
         }, [S]),
         N = i.useCallback(() => {
             O(!1);
@@ -112,7 +113,7 @@ function P(e) {
             (0, p.n)({
                 channelId: c,
                 messageId: u,
-                answerId: a
+                answerId: a,
             });
         }, [c, u, a]);
     return (
@@ -125,7 +126,7 @@ function P(e) {
                     }
                 );
         }, [b, S]),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: y.votesData,
             children: [
                 o
@@ -133,13 +134,13 @@ function P(e) {
                           children: [
                               (0, r.jsx)(d.ua7, {
                                   text: (0, r.jsx)(d.Text, {
-                                      variant: 'text-sm/normal',
-                                      color: 'text-muted',
+                                      variant: "text-sm/normal",
+                                      color: "text-muted",
                                       scaleFontToUserSetting: !0,
-                                      children: m
+                                      children: m,
                                   }),
                                   forceOpen: I,
-                                  'aria-label': !1,
+                                  "aria-label": !1,
                                   children: (e) =>
                                       (0, r.jsx)(
                                           d.Avr,
@@ -149,33 +150,33 @@ function P(e) {
                                               onFocus: A,
                                               onBlur: N,
                                               onClick: C,
-                                              'aria-describedby': I ? l : void 0,
+                                              "aria-describedby": I ? l : void 0,
                                               text: n,
-                                              variant: 'secondary',
-                                              textVariant: 'text-xs/semibold'
-                                          })
-                                      )
+                                              variant: "secondary",
+                                              textVariant: "text-xs/semibold",
+                                          }),
+                                      ),
                               }),
                               I &&
                                   (0, r.jsx)(s.T, {
                                       id: l,
-                                      children: m
-                                  })
-                          ]
+                                      children: m,
+                                  }),
+                          ],
                       })
                     : (0, r.jsx)(d.Text, {
-                          variant: 'text-xs/semibold',
-                          color: 'none',
+                          variant: "text-xs/semibold",
+                          color: "none",
                           scaleFontToUserSetting: !0,
-                          children: n
+                          children: n,
                       }),
                 (0, r.jsxs)(d.Text, {
-                    variant: 'text-md/bold',
-                    color: 'none',
+                    variant: "text-md/bold",
+                    color: "none",
                     scaleFontToUserSetting: !0,
-                    children: [t, '%']
-                })
-            ]
+                    children: [t, "%"],
+                }),
+            ],
         })
     );
 }
@@ -183,53 +184,53 @@ function w(e) {
     let { percentage: t, shouldAnimate: n } = e,
         i = (0, d.q_F)(
             {
-                from: { width: n ? '0%' : ''.concat(t, '%') },
-                to: { width: ''.concat(t, '%') },
+                from: { width: n ? "0%" : "".concat(t, "%") },
+                to: { width: "".concat(t, "%") },
                 config: {
                     duration: 1200,
-                    easing: u.Z.Easing.inOut(u.Z.Easing.ease)
-                }
+                    easing: u.Z.Easing.inOut(u.Z.Easing.ease),
+                },
             },
-            'animate-always'
+            "animate-always",
         );
     return (0, r.jsx)(l.animated.span, {
         className: y.votePercentageBar,
         style: i,
-        'aria-hidden': !0
+        "aria-hidden": !0,
     });
 }
 function D(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: o, isExpired: a, className: s } = e;
     return (0, c.EQ)({
         answersInteraction: t,
-        didSelfVote: i
+        didSelfVote: i,
     })
         .with({ answersInteraction: m.Y7.RADIO_BUTTONS }, () =>
             (0, r.jsx)(g.Og, {
                 isSelected: n,
                 size: C,
-                className: s
-            })
+                className: s,
+            }),
         )
         .with({ answersInteraction: m.Y7.CHECKBOXES }, () =>
             (0, r.jsx)(g.zs, {
                 isSelected: n,
                 size: R,
-                className: s
-            })
+                className: s,
+            }),
         )
         .with(
             {
                 answersInteraction: m.Y7.LIST,
-                didSelfVote: !0
+                didSelfVote: !0,
             },
             () =>
                 (0, r.jsx)(g.ZY, {
                     isVictor: o,
                     isExpired: a,
                     size: N,
-                    className: s
-                })
+                    className: s,
+                }),
         )
         .otherwise(() => null);
 }
@@ -239,37 +240,37 @@ function L(e) {
         u = !0 === t.didSelfVote,
         f = !0 === t.isVictor,
         _ = t.shouldAnimateTransition;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(y.answerInner, {
             [y.currentlyVoting]: i !== m.Y7.LIST,
-            [y.selected]: c
+            [y.selected]: c,
         }),
         children: [
             o
                 ? (0, r.jsx)(w, {
                       percentage: t.votesPercentage,
-                      shouldAnimate: _
+                      shouldAnimate: _,
                   })
                 : null,
             null != t.pollMedia.emoji &&
                 (0, r.jsx)(g.sc, {
                     className: y.emoji,
-                    emoji: t.pollMedia.emoji
+                    emoji: t.pollMedia.emoji,
                 }),
             (0, r.jsx)(d.Text, {
                 className: y.label,
-                variant: 'text-sm/semibold',
-                color: 'none',
+                variant: "text-sm/semibold",
+                color: "none",
                 scaleFontToUserSetting: !0,
-                children: t.pollMedia.text
+                children: t.pollMedia.text,
             }),
-            t.didSelfVote && (0, r.jsx)(s.T, { children: b.intl.string(b.t['8DAM+/']) }),
+            t.didSelfVote && (0, r.jsx)(s.T, { children: b.intl.string(b.t["8DAM+/"]) }),
             o &&
                 (0, r.jsx)(P, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: l,
-                    answerId: t.answerId
+                    answerId: t.answerId,
                 }),
             (0, r.jsx)(D, {
                 answersInteraction: i,
@@ -277,14 +278,14 @@ function L(e) {
                 didSelfVote: u,
                 isVictor: f,
                 isExpired: n,
-                className: y.answerSelectionIcon
-            })
-        ]
+                className: y.answerSelectionIcon,
+            }),
+        ],
     });
 }
 function x(e) {
     var { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: o } = e,
-        a = S(e, ['isExpired', 'answersInteraction', 'canShowVoteCounts', 'canTapAnswers']);
+        a = S(e, ["isExpired", "answersInteraction", "canShowVoteCounts", "canTapAnswers"]);
     return (0, r.jsx)(
         g.$e,
         v(
@@ -299,10 +300,10 @@ function x(e) {
                         isExpired: t,
                         answersInteraction: n,
                         canShowVoteCounts: i,
-                        canShowVoterDetails: o
-                    })
+                        canShowVoterDetails: o,
+                    }),
             },
-            a
-        )
+            a,
+        ),
     );
 }

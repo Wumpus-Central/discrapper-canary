@@ -36,7 +36,10 @@ var i = n(255367),
     L = n(65154),
     M = n(388032),
     B = n(20493);
-let U = ''.concat(m.Z.getArticleURL(k.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+let U = "".concat(
+    m.Z.getArticleURL(k.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+    "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm",
+);
 function V() {
     let { inputMode: e } = (0, s.cj)([d.Z], () => ({ inputMode: d.Z.getMode() })),
         t = (0, s.e7)([u.Z], () => u.Z.getSubsection()),
@@ -44,7 +47,8 @@ function V() {
         m = r.useRef(null);
     r.useEffect(() => {
         var e, i;
-        (t === Z.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), o.Z.clearSubsection()), t === Z.gP && (null == m || null == (i = m.current) || i.scrollIntoView(), o.Z.clearSubsection()));
+        t === Z.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), o.Z.clearSubsection()),
+            t === Z.gP && (null == m || null == (i = m.current) || i.scrollIntoView(), o.Z.clearSubsection());
     }, [n, m, t]);
     let k = (0, g.Z)();
     return (0, i.jsxs)(a.hjN, {
@@ -56,11 +60,11 @@ function V() {
                 children: [
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_DEVICES,
-                        children: (0, i.jsx)(j.Z, {})
+                        children: (0, i.jsx)(j.Z, {}),
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-                        children: (0, i.jsx)(D.Z, {})
+                        children: (0, i.jsx)(D.Z, {}),
                     }),
                     (0, i.jsxs)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_MIC_TEST,
@@ -69,42 +73,42 @@ function V() {
                             (0, i.jsx)(a.R94, {
                                 className: B.marginBottom20,
                                 type: a.R94.Types.DESCRIPTION,
-                                children: M.intl.format(M.t['V+B3FB'], { guideURL: U })
+                                children: M.intl.format(M.t["V+B3FB"], { guideURL: U }),
                             }),
-                            (0, i.jsx)(a.$i$, { className: B.marginBottom20 })
-                        ]
+                            (0, i.jsx)(a.$i$, { className: B.marginBottom20 }),
+                        ],
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                        children: (0, i.jsx)(E.Z, {})
+                        children: (0, i.jsx)(E.Z, {}),
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                        children: e === L.pM.VOICE_ACTIVITY && (0, i.jsx)(R.Z, {})
+                        children: e === L.pM.VOICE_ACTIVITY && (0, i.jsx)(R.Z, {}),
                     }),
-                    (0, i.jsx)(a.$i$, { className: B.marginBottom40 })
-                ]
+                    (0, i.jsx)(a.$i$, { className: B.marginBottom40 }),
+                ],
             }),
             (0, i.jsx)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                children: (0, i.jsx)('div', {
-                    style: { scrollMarginTop: '48px' },
-                    ref: n
-                })
+                children: (0, i.jsx)("div", {
+                    style: { scrollMarginTop: "48px" },
+                    ref: n,
+                }),
             }),
             (0, i.jsx)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_SOUNDS,
-                children: (0, i.jsx)(x.Z, {})
+                children: (0, i.jsx)(x.Z, {}),
             }),
             (0, i.jsxs)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_VIDEO,
                 children: [
-                    (0, i.jsx)('div', {
-                        style: { scrollMarginTop: '48px' },
-                        ref: m
+                    (0, i.jsx)("div", {
+                        style: { scrollMarginTop: "48px" },
+                        ref: m,
                     }),
-                    (0, i.jsx)(y.Z, {})
-                ]
+                    (0, i.jsx)(y.Z, {}),
+                ],
             }),
             (0, i.jsx)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_ADVANCED,
@@ -112,14 +116,14 @@ function V() {
                     component: (0, i.jsx)(a.vwX, {
                         tag: a.RB0.H1,
                         className: B.marginBottom20,
-                        children: M.intl.string(M.t['8/udY2'])
+                        children: M.intl.string(M.t["8/udY2"]),
                     }),
                     children: [
                         (0, i.jsx)(f.Z, {}),
                         (0, i.jsx)(A.Z, {}),
                         (0, i.jsx)(c.F, {
                             setting: w.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                            children: (0, i.jsx)(P.Z, {})
+                            children: (0, i.jsx)(P.Z, {}),
                         }),
                         (0, i.jsx)(I.Z, {}),
                         (0, i.jsx)(O.Z, {}),
@@ -132,24 +136,24 @@ function V() {
                         (0, i.jsx)(a.$i$, { className: B.marginBottom40 }),
                         (0, i.jsx)(c.F, {
                             setting: w.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, i.jsx)(_.Z, {})
+                            children: (0, i.jsx)(_.Z, {}),
                         }),
                         (0, i.jsx)(c.F, {
                             setting: w.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
                             children: (0, i.jsx)(a.xJW, {
                                 children: (0, i.jsx)(a.zxk, {
-                                    variant: 'critical-secondary',
-                                    size: 'sm',
-                                    text: M.intl.string(M.t['/RXu6+']),
+                                    variant: "critical-secondary",
+                                    size: "sm",
+                                    text: M.intl.string(M.t["/RXu6+"]),
                                     onClick: () => {
-                                        (0, p.Z)(M.intl.string(M.t['/RXu6+']), M.intl.string(M.t.sQ42iY), l.Z.reset);
-                                    }
-                                })
-                            })
-                        })
-                    ]
-                })
-            })
-        ]
+                                        (0, p.Z)(M.intl.string(M.t["/RXu6+"]), M.intl.string(M.t.sQ42iY), l.Z.reset);
+                                    },
+                                }),
+                            }),
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

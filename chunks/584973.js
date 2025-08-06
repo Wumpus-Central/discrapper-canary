@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e) {
     let { emoji: t, className: n, animate: o = !0, hideTooltip: p = !1, tooltipDelay: m = f.X } = e,
         g = u.Yk.useSetting(),
         E = i.useRef(null),
-        b = null != t.id ? ':'.concat(t.name, ':') : c.ZP.translateSurrogatesToInlineEmoji(t.name);
+        b = null != t.id ? ":".concat(t.name, ":") : c.ZP.translateSurrogatesToInlineEmoji(t.name);
     if (null == t.id && d.T.has(t.name))
-        return (0, r.jsx)('span', {
+        return (0, r.jsx)("span", {
             className: a()(_.emoji, n),
-            children: t.name
+            children: t.name,
         });
     let y = {
         className: a()(_.emoji, n),
@@ -57,7 +57,7 @@ function m(e) {
         animated: !!(t.animated && g && o),
         registerInnerRef: (e) => {
             E.current = e;
-        }
+        },
     };
     return p
         ? (0, r.jsx)(l.Z, h({}, y))
@@ -65,6 +65,6 @@ function m(e) {
               targetElementRef: E,
               text: b,
               delay: m,
-              children: (e) => (0, r.jsx)(l.Z, h({}, e, y))
+              children: (e) => (0, r.jsx)(l.Z, h({}, e, y)),
           });
 }

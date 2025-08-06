@@ -6,7 +6,7 @@ var l = n(120356),
     a = n.n(l),
     o = n(481060),
     s = n(114959),
-    c = (((r = c || {})[(r.ACCEPT = 0)] = 'ACCEPT'), (r[(r.DENY = 1)] = 'DENY'), (r[(r.DEFAULT = 2)] = 'DEFAULT'), r);
+    c = (((r = c || {})[(r.ACCEPT = 0)] = "ACCEPT"), (r[(r.DENY = 1)] = "DENY"), (r[(r.DEFAULT = 2)] = "DEFAULT"), r);
 function u(e) {
     let { icon: t, tooltip: n, onClick: r, actionType: l = 2, shouldHighlight: c } = e;
     return (0, i.jsx)(o.ua7, {
@@ -19,40 +19,40 @@ function u(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, e)),
                 (d = d =
                     {
-                        'aria-label': n,
+                        "aria-label": n,
                         onClick: r,
                         className: a()(s.actionButton, {
                             [s.actionAccept]: 0 === l,
                             [s.actionDeny]: 1 === l,
-                            [s.highlight]: c
+                            [s.highlight]: c,
                         }),
                         children: (0, i.jsx)(t, {
                             className: s.icon,
-                            color: 'currentColor'
-                        })
+                            color: "currentColor",
+                        }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(d))
@@ -66,9 +66,9 @@ function u(e) {
                       })(Object(d)).forEach(function (e) {
                           Object.defineProperty(u, e, Object.getOwnPropertyDescriptor(d, e));
                       }),
-                u)
+                u),
             );
-        }
+        },
     });
 }
 u.ActionTypes = c;

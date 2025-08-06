@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var r = n(73800),
     i = n(586739);
 let l = function () {
@@ -22,7 +22,7 @@ let l = function () {
         {
             teams: n,
             loading: s,
-            refresh: a
+            refresh: a,
         }
     );
 };

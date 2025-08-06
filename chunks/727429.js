@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => s,
-    e: () => l
+    e: () => l,
 });
 var r = n(442837),
     i = n(914010),
@@ -11,5 +11,9 @@ function s(e) {
     return null != t ? t : e.getGuildId();
 }
 function l(e) {
-    return i.Z.getGuildId() !== a.I_8 ? e.getGuildId() : o.Z.isFavorite(e.id) || (e.isThread() && o.Z.isFavorite(e.parent_id)) ? a.I_8 : e.getGuildId();
+    return i.Z.getGuildId() !== a.I_8
+        ? e.getGuildId()
+        : o.Z.isFavorite(e.id) || (e.isThread() && o.Z.isFavorite(e.parent_id))
+          ? a.I_8
+          : e.getGuildId();
 }

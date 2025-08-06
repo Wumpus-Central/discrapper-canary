@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(388685));
+n.d(t, { Z: () => o }), n(388685);
 var i = n(73800),
     r = n(562075),
     l = n(539202);
@@ -11,7 +11,7 @@ function o(e) {
                 a(o),
                 {
                     id: o,
-                    position: n
+                    position: n,
                 }
             ),
             canDrag: () => d,
@@ -20,21 +20,23 @@ function o(e) {
                 let n = t.getDropResult();
                 if (null == n) return void c();
                 s(n.optionId);
-            }
+            },
         }),
         [{ dragSourcePosition: m }, b] = (0, l.L)({
             accept: t,
             canDrop: () => !0,
             collect: (e) => {
                 let t = e.getItem();
-                return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
+                return null != t && e.isOver() && e.canDrop()
+                    ? { dragSourcePosition: t.position }
+                    : { dragSourcePosition: null };
             },
-            drop: () => ({ optionId: o })
+            drop: () => ({ optionId: o }),
         });
     return {
         drag: p,
         dragSourcePosition: m,
         drop: b,
-        setIsDraggable: u
+        setIsDraggable: u,
     };
 }

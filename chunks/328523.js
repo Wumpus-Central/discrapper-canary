@@ -3,7 +3,7 @@ var r = n(220159),
 r(
     {
         global: !0,
-        forced: parseInt !== o
+        forced: parseInt !== o,
     },
-    { parseInt: o }
+    { parseInt: o },
 );

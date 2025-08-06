@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => u,
-    Z: () => m
+    Z: () => m,
 });
 var r = n(255367);
 n(73800);
@@ -15,32 +15,32 @@ let u = (e) => {
         let { value: t, isPercent: n } = e;
         if (null == t) return null;
         let { formattedValue: i, isPositive: u } = (0, s.m5)(t, n);
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: d.trendContainer,
             children: [
                 (0, r.jsx)(o.Z, { className: l()(d.chartLineIcon, { [d.chartLineIconNegative]: !u }) }),
                 (0, r.jsx)(a.Text, {
-                    variant: 'text-md/normal',
+                    variant: "text-md/normal",
                     className: d.trendDescription,
-                    children: c.intl.format(c.t.OTHOvb, { value: i })
-                })
-            ]
+                    children: c.intl.format(c.t.OTHOvb, { value: i }),
+                }),
+            ],
         });
     },
     m = (e) => {
         let { label: t, sublabel: n, value: i, additionalContent: l, tooltip: s } = e;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: d.container,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: d.labelContainer,
                             children: [
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-xs/medium',
+                                    variant: "text-xs/medium",
                                     className: d.label,
-                                    children: t
+                                    children: t,
                                 }),
                                 null != s &&
                                     (0, r.jsx)(a.ua7, {
@@ -52,53 +52,54 @@ let u = (e) => {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
                                                             r = Object.keys(n);
-                                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                                        "function" == typeof Object.getOwnPropertySymbols &&
                                                             (r = r.concat(
                                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                                })
+                                                                    return Object.getOwnPropertyDescriptor(n, e)
+                                                                        .enumerable;
+                                                                }),
                                                             )),
                                                             r.forEach(function (t) {
                                                                 var r;
-                                                                ((r = n[t]),
+                                                                (r = n[t]),
                                                                     t in e
                                                                         ? Object.defineProperty(e, t, {
                                                                               value: r,
                                                                               enumerable: !0,
                                                                               configurable: !0,
-                                                                              writable: !0
+                                                                              writable: !0,
                                                                           })
-                                                                        : (e[t] = r));
-                                                            }));
+                                                                        : (e[t] = r);
+                                                            });
                                                     }
                                                     return e;
                                                 })(
                                                     {
-                                                        size: 'xs',
-                                                        color: 'currentColor',
-                                                        className: d.labelTooltipIcon
+                                                        size: "xs",
+                                                        color: "currentColor",
+                                                        className: d.labelTooltipIcon,
                                                     },
-                                                    e
-                                                )
-                                            )
+                                                    e,
+                                                ),
+                                            ),
                                     }),
                                 null != n
                                     ? (0, r.jsx)(a.Text, {
-                                          variant: 'text-xs/normal',
+                                          variant: "text-xs/normal",
                                           className: d.sublabel,
-                                          children: n
+                                          children: n,
                                       })
-                                    : null
-                            ]
+                                    : null,
+                            ],
                         }),
                         (0, r.jsx)(a.Text, {
                             className: d.value,
-                            variant: 'text-sm/normal',
-                            children: i
-                        })
-                    ]
+                            variant: "text-sm/normal",
+                            children: i,
+                        }),
+                    ],
                 }),
-                l
-            ]
+                l,
+            ],
         });
     };

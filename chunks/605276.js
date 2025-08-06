@@ -28,7 +28,7 @@ let v = r.memo(function (e) {
             : (0, l.jsx)(d.ZP, {
                   profile: t,
                   disableCTA: !0,
-                  disableGuildNameClick: !0
+                  disableGuildNameClick: !0,
               });
     }),
     _ = (e) => {
@@ -45,7 +45,7 @@ let v = r.memo(function (e) {
                 s.Z.fetchMessages({
                     channelId: n,
                     after: n,
-                    limit: 5
+                    limit: 5,
                 });
         }, [n, I]);
         let y = (e) => {
@@ -54,7 +54,7 @@ let v = r.memo(function (e) {
                     ? (0, p.C3)(d.guild_id, d.id)
                     : u.Z.openResourceChannelAsSidebar({
                           guildId: d.guild_id,
-                          channelId: d.id
+                          channelId: d.id,
                       }));
         };
         return (0, l.jsx)(
@@ -67,39 +67,39 @@ let v = r.memo(function (e) {
                         (() => {
                             let e = g.ZP.getResourceChannelIconURL({
                                 channelId: n,
-                                icon: o
+                                icon: o,
                             });
                             return null != o && null != e
-                                ? (0, l.jsx)('img', {
+                                ? (0, l.jsx)("img", {
                                       src: e,
                                       className: C.resourceImage,
-                                      alt: '',
-                                      'aria-hidden': !0
+                                      alt: "",
+                                      "aria-hidden": !0,
                                   })
                                 : null != Z
-                                  ? (0, l.jsx)('img', {
+                                  ? (0, l.jsx)("img", {
                                         className: C.resourceImage,
                                         src: Z.src,
-                                        alt: Z.alt
+                                        alt: Z.alt,
                                     })
-                                  : (0, l.jsx)('div', {
+                                  : (0, l.jsx)("div", {
                                         className: C.placeholderImage,
                                         children: (0, l.jsx)(i.hH0, {
-                                            size: 'xs',
-                                            color: 'currentColor'
-                                        })
+                                            size: "xs",
+                                            color: "currentColor",
+                                        }),
                                     });
                         })(),
                         (0, l.jsx)(i.Text, {
                             className: C.guildInfoText,
-                            variant: 'text-sm/semibold',
-                            color: 'none',
-                            children: t
-                        })
-                    ]
-                })
+                            variant: "text-sm/semibold",
+                            color: "none",
+                            children: t,
+                        }),
+                    ],
+                }),
             },
-            n
+            n,
         );
     },
     Z = r.memo(function (e) {
@@ -109,16 +109,16 @@ let v = r.memo(function (e) {
             ? null
             : (0, l.jsx)(i.Zbd, {
                   className: C.sidebarCardWrapper,
-                  children: (0, l.jsxs)('div', {
+                  children: (0, l.jsxs)("div", {
                       className: C.sidebarCard,
                       children: [
                           (0, l.jsx)(i.X6q, {
                               className: C.sidebarCardHeader,
-                              variant: 'heading-md/bold',
-                              color: 'header-primary',
-                              children: j.intl.string(j.t.xwY4LS)
+                              variant: "heading-md/bold",
+                              color: "header-primary",
+                              children: j.intl.string(j.t.xwY4LS),
                           }),
-                          (0, l.jsx)('div', {
+                          (0, l.jsx)("div", {
                               className: C.resourceChannelsList,
                               children: t.map((e) =>
                                   (0, l.jsx)(
@@ -126,20 +126,20 @@ let v = r.memo(function (e) {
                                       {
                                           channelId: e.channelId,
                                           title: e.title,
-                                          icon: e.icon
+                                          icon: e.icon,
                                       },
-                                      'widget-resource-'.concat(e.channelId)
-                                  )
-                              )
-                          })
-                      ]
-                  })
+                                      "widget-resource-".concat(e.channelId),
+                                  ),
+                              ),
+                          }),
+                      ],
+                  }),
               });
     }),
     I = r.memo(function (e) {
         let { guild: n, isNewMember: t } = e;
-        return (0, l.jsxs)('aside', {
+        return (0, l.jsxs)("aside", {
             className: C.sidebar,
-            children: [(0, l.jsx)(v, { guild: n }), t && (0, l.jsx)(Z, { guild: n })]
+            children: [(0, l.jsx)(v, { guild: n }), t && (0, l.jsx)(Z, { guild: n })],
         });
     });

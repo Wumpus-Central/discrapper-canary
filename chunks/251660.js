@@ -12,30 +12,30 @@ let d = (e) => {
     let { className: t, giftRecipient: n } = e;
     return null == n
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: o()(u.content, t),
               children: [
                   (0, r.jsx)(a.vwX, { children: c.intl.string(c.t.xFn72t) }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: u.giftRecipientInfo,
                       children: [
                           (0, r.jsx)(s.Z, {
                               user: n,
                               className: u.__invalid_giftRecipient,
-                              size: a.EFr.SIZE_20
+                              size: a.EFr.SIZE_20,
                           }),
                           (0, r.jsx)(a.X6q, {
                               className: u.giftRecipientName,
-                              variant: 'text-md/normal',
-                              children: l.ZP.getName(n)
+                              variant: "text-md/normal",
+                              children: l.ZP.getName(n),
                           }),
                           (0, r.jsx)(a.X6q, {
                               className: u.giftRecipientTag,
-                              variant: 'text-md/normal',
-                              children: l.ZP.getUserTag(n)
-                          })
-                      ]
-                  })
-              ]
+                              variant: "text-md/normal",
+                              children: l.ZP.getUserTag(n),
+                          }),
+                      ],
+                  }),
+              ],
           });
 };

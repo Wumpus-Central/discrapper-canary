@@ -11,42 +11,42 @@ var i = n(120356),
 function u(e) {
     let { className: t, avatarURL: n, name: i, bot: u, verifiedBot: m, userTag: g } = e,
         p = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l()(d.container, t),
         children: [
             (0, r.jsx)(s.qEK, {
                 className: d.avatar,
                 src: n,
                 size: s.EFr.SIZE_24,
-                'aria-label': i
+                "aria-label": i,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: d.textContainer,
                 children: [
                     (0, r.jsx)(s.Text, {
-                        tag: 'span',
+                        tag: "span",
                         className: d.name,
-                        color: 'header-primary',
-                        variant: 'text-sm/semibold',
-                        children: i
+                        color: "header-primary",
+                        variant: "text-sm/semibold",
+                        children: i,
                     }),
                     u
                         ? (0, r.jsx)(o.Z, {
                               className: d.botTag,
-                              verified: m
+                              verified: m,
                           })
                         : null,
                     p
                         ? null
                         : (0, r.jsx)(s.Text, {
-                              tag: 'span',
-                              color: 'interactive-normal',
+                              tag: "span",
+                              color: "interactive-normal",
                               className: d.userTag,
-                              variant: 'text-sm/normal',
-                              children: g
-                          })
-                ]
-            })
-        ]
+                              variant: "text-sm/normal",
+                              children: g,
+                          }),
+                ],
+            }),
+        ],
     });
 }

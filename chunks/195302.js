@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     d: () => u,
-    p: () => c
+    p: () => c,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(775953),
@@ -18,22 +18,22 @@ function c(e) {
         children: [
             t,
             null != n &&
-                (0, r.jsx)('div', {
-                    id: 'component-to-image-container',
+                (0, r.jsx)("div", {
+                    id: "component-to-image-container",
                     style: {
-                        position: 'fixed',
-                        top: '-1000px',
-                        right: '-1000px'
+                        position: "fixed",
+                        top: "-1000px",
+                        right: "-1000px",
                     },
-                    children: n
-                })
-        ]
+                    children: n,
+                }),
+        ],
     });
 }
 function u(e) {
     let { renderComponent: t, imageOptions: n } = e,
         r = i.useContext(l);
-    s()(null != r, 'useComponentToImageContext must be used within a ComponentToImageProvider');
+    s()(null != r, "useComponentToImageContext must be used within a ComponentToImageProvider");
     let [a, c] = i.useState(!1);
     return {
         generatingImage: a,
@@ -43,14 +43,14 @@ function u(e) {
                 let a = async (t) => {
                     try {
                         let r = await (0, o.SE)(t, n);
-                        (s()(null != r, 'Unable to generate image'), e(r));
+                        s()(null != r, "Unable to generate image"), e(r);
                     } catch (e) {
                         i(e);
                     } finally {
-                        (c(!1), r.setComponentToSnapshot(null));
+                        c(!1), r.setComponentToSnapshot(null);
                     }
                 };
                 r.setComponentToSnapshot(t({ generateImageRef: a }));
-            })
+            }),
     };
 }

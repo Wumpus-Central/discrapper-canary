@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(505266),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -84,12 +84,12 @@ function T(e) {
                             : _.ZP.getEmojiURL({
                                   id: n.id,
                                   animated: !1,
-                                  size: 22
+                                  size: 22,
                               }),
-                    colorize: !1
-                }
+                    colorize: !1,
+                },
             ],
-            [n.name, n.id]
+            [n.name, n.id],
         ),
         L = b.x - (b.width / 2) * v,
         x = b.y - (b.height / 2) * v,
@@ -98,27 +98,27 @@ function T(e) {
             to: { y: x },
             config: {
                 duration: O,
-                easing: s.Z.Easing.in(s.Z.Easing.exp)
+                easing: s.Z.Easing.in(s.Z.Easing.exp),
             },
             onChange: (e) => {
                 let { y: t } = e;
                 N(t);
-            }
+            },
         }),
         k = (0, l.q_F)({
             from: {
                 x: g.x,
                 scale: 1,
-                opacity: 1
+                opacity: 1,
             },
             to: {
                 x: L,
                 scale: v,
-                opacity: 0.4
+                opacity: 0.4,
             },
             config: {
                 duration: O,
-                easing: s.Z.Easing.in(s.Z.Easing.ease)
+                easing: s.Z.Easing.in(s.Z.Easing.ease),
             },
             onRest: () => {
                 (0, f.G)(t, n.name, n.id);
@@ -126,7 +126,7 @@ function T(e) {
             onChange: (e) => {
                 let { x: t } = e;
                 S(t);
-            }
+            },
         });
     return (
         i.useEffect(() => {
@@ -135,13 +135,13 @@ function T(e) {
                 w.createConfetti(
                     y(E({}, h.We), {
                         position: {
-                            type: 'static',
+                            type: "static",
                             value: {
                                 x: T,
-                                y: A
-                            }
-                        }
-                    })
+                                y: A,
+                            },
+                        },
+                    }),
                 );
         }, [w, T, A]),
         (0, r.jsxs)(r.Fragment, {
@@ -151,7 +151,7 @@ function T(e) {
                     sprites: D,
                     colors: I,
                     spriteWidth: h.Ko,
-                    spriteHeight: h.Ko
+                    spriteHeight: h.Ko,
                 }),
                 (0, r.jsx)(d.ZP, {
                     children: (0, r.jsx)(a.animated.div, {
@@ -164,12 +164,12 @@ function T(e) {
                                 emojiId: n.id,
                                 emojiName: n.name,
                                 animated: n.animated,
-                                size: 'jumbo'
-                            })
-                        })
-                    })
-                })
-            ]
+                                size: "jumbo",
+                            }),
+                        }),
+                    }),
+                }),
+            ],
         })
     );
 }

@@ -21,7 +21,7 @@ var r = n(220159),
     k = u(function () {
         v.sort(null);
     }),
-    C = p('sort'),
+    C = p("sort"),
     Z = !u(function () {
         if (m) return m < 70;
         if (!h || !(h > 3)) {
@@ -31,7 +31,7 @@ var r = n(220159),
                 t,
                 n,
                 r,
-                o = '';
+                o = "";
             for (e = 65; e < 76; e++) {
                 switch (((t = String.fromCharCode(e)), e)) {
                     case 66:
@@ -50,7 +50,7 @@ var r = n(220159),
                 for (r = 0; r < 47; r++)
                     v.push({
                         k: t + r,
-                        v: n
+                        v: n,
                     });
             }
             for (
@@ -61,15 +61,15 @@ var r = n(220159),
                 r < v.length;
                 r++
             )
-                ((t = v[r].k.charAt(0)), o.charAt(o.length - 1) !== t && (o += t));
-            return 'DGBEFHACIJK' !== o;
+                (t = v[r].k.charAt(0)), o.charAt(o.length - 1) !== t && (o += t);
+            return "DGBEFHACIJK" !== o;
         }
     });
 r(
     {
-        target: 'Array',
+        target: "Array",
         proto: !0,
-        forced: _ || !k || !C || !Z
+        forced: _ || !k || !C || !Z,
     },
     {
         sort: function (e) {
@@ -88,11 +88,10 @@ r(
                     t = s(o),
                     n = 0;
                 n < t;
-
             )
                 r[n] = o[n++];
             for (; n < u; ) c(r, n++);
             return r;
-        }
-    }
+        },
+    },
 );

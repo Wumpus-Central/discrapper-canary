@@ -5,21 +5,21 @@ function i() {
         t = (0, r.useCallback)((t, n, r, i) => {
             let o = (null == i ? void 0 : i.once)
                 ? (...t) => {
-                      (e.current.delete(r), r(...t));
+                      e.current.delete(r), r(...t);
                   }
                 : r;
-            (e.current.set(r, {
+            e.current.set(r, {
                 type: n,
                 eventTarget: t,
                 fn: o,
-                options: i
+                options: i,
             }),
-                t.addEventListener(n, o, i));
+                t.addEventListener(n, o, i);
         }, []),
         n = (0, r.useCallback)((t, n, r, i) => {
             var o;
             let a = (null == (o = e.current.get(r)) ? void 0 : o.fn) || r;
-            (t.removeEventListener(n, a, i), e.current.delete(r));
+            t.removeEventListener(n, a, i), e.current.delete(r);
         }, []),
         i = (0, r.useCallback)(() => {
             e.current.forEach((e, t) => {
@@ -31,7 +31,7 @@ function i() {
         {
             addGlobalListener: t,
             removeGlobalListener: n,
-            removeAllGlobalListeners: i
+            removeAllGlobalListeners: i,
         }
     );
 }

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     C: () => _,
-    u: () => h
+    u: () => h,
 }),
-    n(388685));
+    n(388685);
 var r = n(149765),
     i = n(668781),
     o = n(434404),
@@ -18,7 +18,7 @@ async function _(e, t) {
         null == e ||
         (await p(e, t, {
             removingView: !0,
-            removingChat: !0
+            removingChat: !0,
         }))
     );
 }
@@ -44,19 +44,21 @@ async function h(e, t, n) {
         l = null != s ? r.hX(s.deny, r.U_(s.allow)) : r.vB(0),
         c = {
             removingView: r.e$(t, d.Plq.VIEW_CHANNEL) && !r.e$(l, d.Plq.VIEW_CHANNEL),
-            removingChat: !1
+            removingChat: !1,
         };
     return (
-        e.isForumLikeChannel() ? (c.removingChat = r.e$(t, d.Plq.SEND_MESSAGES_IN_THREADS) && !r.e$(l, d.Plq.SEND_MESSAGES_IN_THREADS)) : (c.removingChat = r.e$(t, d.Plq.SEND_MESSAGES) && !r.e$(l, d.Plq.SEND_MESSAGES)),
+        e.isForumLikeChannel()
+            ? (c.removingChat = r.e$(t, d.Plq.SEND_MESSAGES_IN_THREADS) && !r.e$(l, d.Plq.SEND_MESSAGES_IN_THREADS))
+            : (c.removingChat = r.e$(t, d.Plq.SEND_MESSAGES) && !r.e$(l, d.Plq.SEND_MESSAGES)),
         (!c.removingChat && !c.removingView) ||
             !!(await p(a, e.id, c)) ||
             (i.Z.show({
                 title: f.intl.string(f.t.ut7sq6),
-                body: f.intl.format(f.t['Zaz+ur'], {
+                body: f.intl.format(f.t["Zaz+ur"], {
                     onClick: () => {
-                        (i.Z.close(), o.Z.open(a, d.pNK.ONBOARDING));
-                    }
-                })
+                        i.Z.close(), o.Z.open(a, d.pNK.ONBOARDING);
+                    },
+                }),
             }),
             !1)
     );

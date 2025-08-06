@@ -15,10 +15,10 @@ let d = (e) => {
                     let { categoryId: t, name: n } = e;
                     return {
                         value: t,
-                        label: n
+                        label: n,
                     };
                 }),
-            [u]
+            [u],
         );
     return 0 === m.length
         ? (0, r.jsx)(a.$jN, {})
@@ -34,6 +34,6 @@ let d = (e) => {
                   }
               },
               isDisabled: d,
-              multi: !0
+              multi: !0,
           });
 };

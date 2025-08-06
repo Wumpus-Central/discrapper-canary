@@ -7,17 +7,17 @@ var o = n(481060),
 function a(t) {
     let e = (0, c.Z)(
         {
-            location: 'ContentPopout',
+            location: "ContentPopout",
             applicationId: null == t ? void 0 : t.id,
             source: i.m1.ActivityCard,
             trackEntryPointImpression: !0,
-            sourceUserId: void 0
+            sourceUserId: void 0,
         },
-        {}
+        {},
     );
     return (0, r.jsx)(o.sNh, {
-        id: 'game-profile',
-        label: 'Game Profile',
-        action: e
+        id: "game-profile",
+        label: "Game Profile",
+        action: e,
     });
 }

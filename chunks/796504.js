@@ -21,26 +21,26 @@ function f(e) {
             null != g
                 ? (0, n.jsx)(s.Z, {
                       children: g.content,
-                      className: p.markdown
+                      className: p.markdown,
                   })
                 : (0, n.jsx)(o.$jN, { className: p.spinner });
     return (0, n.jsxs)(o.Y0X, {
         transitionState: f,
         size: o.CgR.SMALL,
-        'aria-label': b,
-        parentComponent: 'EULA',
+        "aria-label": b,
+        parentComponent: "EULA",
         children: [
             (0, n.jsxs)(o.xBx, {
                 justify: i.Z.Justify.BETWEEN,
                 children: [
                     (0, n.jsx)(o.X6q, {
-                        variant: 'heading-lg/semibold',
-                        children: b
+                        variant: "heading-lg/semibold",
+                        children: b,
                     }),
-                    (0, n.jsx)(o.olH, { onClick: h })
-                ]
+                    (0, n.jsx)(o.olH, { onClick: h }),
+                ],
             }),
-            (0, n.jsx)(o.hzk, { children: m })
-        ]
+            (0, n.jsx)(o.hzk, { children: m }),
+        ],
     });
 }

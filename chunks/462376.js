@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     d: () => S,
-    k: () => _
+    k: () => _,
 }),
-    n(388685));
+    n(388685);
 var l = n(255367),
     i = n(73800),
     r = n(780384),
@@ -28,7 +28,7 @@ function N(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,39 +37,48 @@ function N(e, t, n) {
 let _ = 44;
 class S extends i.Component {
     shouldComponentUpdate(e, t) {
-        return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel;
+        return (
+            this.state.sending !== t.sending ||
+            this.state.invited !== t.invited ||
+            this.state.hovered !== t.hovered ||
+            this.props.user !== e.user ||
+            this.props.channel !== e.channel
+        );
     }
     renderUserOrChannel() {
         let e,
             t,
             n,
             { user: i, channel: r } = this.props;
-        if (null != i) ((t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = I.ZP.getName(i)));
-        else if (null != r && ((t = (0, u.x)(r)), (n = (0, d.F6)(r, p.default, m.Z)), null == t && null != r.guild_id)) {
+        if (null != i) (t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = I.ZP.getName(i));
+        else if (
+            null != r &&
+            ((t = (0, u.x)(r)), (n = (0, d.F6)(r, p.default, m.Z)), null == t && null != r.guild_id)
+        ) {
             let n = g.Z.getGuild(r.guild_id);
             null != n &&
                 (null != n.icon
                     ? (t = v.ZP.getGuildIconURL({
                           id: r.guild_id,
                           icon: n.icon,
-                          size: 32
+                          size: 32,
                       }))
                     : (e = (0, x.Zg)(n.name)));
         }
         if (null == t || null == n)
             if (null != e)
                 return (0, l.jsx)(a.Text, {
-                    variant: 'text-md/medium',
+                    variant: "text-md/medium",
                     className: j.acronym,
-                    'aria-hidden': !0,
-                    children: e
+                    "aria-hidden": !0,
+                    children: e,
                 });
             else return null;
         return (0, l.jsx)(a.qEK, {
             src: t,
-            'aria-label': n,
+            "aria-label": n,
             size: a.EFr.SIZE_32,
-            className: j.inviteRowAvatar
+            className: j.inviteRowAvatar,
         });
     }
     render() {
@@ -83,7 +92,7 @@ class S extends i.Component {
                       size: s.zx.Sizes.SMALL,
                       disabled: !0,
                       color: (0, r.wj)(c.Z.theme) ? s.zx.Colors.WHITE : s.zx.Colors.BRAND,
-                      children: f.intl.string(f.t['dVT14+'])
+                      children: f.intl.string(f.t["dVT14+"]),
                   })
                 : (0, l.jsx)(s.zx, {
                       color: s.zx.Colors.GREEN,
@@ -92,47 +101,47 @@ class S extends i.Component {
                       size: s.zx.Sizes.SMALL,
                       submitting: i,
                       onClick: this.handleClickInvite,
-                      children: f.intl.string(f.t.jYnGPD)
+                      children: f.intl.string(f.t.jYnGPD),
                   })),
-            (0, l.jsxs)('div', {
+            (0, l.jsxs)("div", {
                 className: j.inviteRow,
                 onMouseEnter: this.handleMouseEnter,
                 onMouseLeave: this.handleMouseLeave,
                 children: [
-                    (0, l.jsxs)('div', {
+                    (0, l.jsxs)("div", {
                         className: j.inviteRowInfo,
                         children: [
                             this.renderUserOrChannel(),
-                            (0, l.jsxs)('div', {
+                            (0, l.jsxs)("div", {
                                 className: j.inviteRowName,
-                                children: [I.ZP.getName(t), null != n ? (0, d.F6)(n, p.default, m.Z, !0) : null]
-                            })
-                        ]
+                                children: [I.ZP.getName(t), null != n ? (0, d.F6)(n, p.default, m.Z, !0) : null],
+                            }),
+                        ],
                     }),
-                    e
-                ]
+                    e,
+                ],
             })
         );
     }
     constructor(...e) {
-        (super(...e),
-            N(this, 'state', {
+        super(...e),
+            N(this, "state", {
                 sending: !1,
                 invited: !1,
-                hovered: !1
+                hovered: !1,
             }),
-            N(this, 'handleMouseEnter', () => {
+            N(this, "handleMouseEnter", () => {
                 this.setState({ hovered: !0 });
             }),
-            N(this, 'handleMouseLeave', () => {
+            N(this, "handleMouseLeave", () => {
                 this.setState({ hovered: !1 });
             }),
-            N(this, 'getSuggestedProps', () => {
+            N(this, "getSuggestedProps", () => {
                 var e;
                 let { row: t } = this.props;
                 return null != (e = null != t ? h.Z.getSelectedInviteMetadata(t) : null) ? e : null;
             }),
-            N(this, 'handleClickInvite', () => {
+            N(this, "handleClickInvite", () => {
                 let { user: e, channel: t, inviteKey: n, location: l } = this.props;
                 null != n &&
                     (null != t
@@ -143,14 +152,14 @@ class S extends i.Component {
                                   channel: t,
                                   inviteKey: n,
                                   location: l,
-                                  suggested: this.getSuggestedProps()
+                                  suggested: this.getSuggestedProps(),
                               },
                               (e) => {
                                   this.setState({
                                       sending: !1,
-                                      invited: e
+                                      invited: e,
                                   });
-                              }
+                              },
                           ))
                         : null != e &&
                           (this.setState({ sending: !0 }),
@@ -160,15 +169,15 @@ class S extends i.Component {
                                   user: e,
                                   inviteKey: n,
                                   location: l,
-                                  suggested: this.getSuggestedProps()
+                                  suggested: this.getSuggestedProps(),
                               },
                               (e) => {
                                   this.setState({
                                       sending: !1,
-                                      invited: e
+                                      invited: e,
                                   });
-                              }
+                              },
                           )));
-            }));
+            });
     }
 }

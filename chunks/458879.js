@@ -16,20 +16,20 @@ let r = {
                         system_channel_id: n.system_channel_id,
                         roles: n.roles,
                         guild_template_code: n.code,
-                        staff_only: !!o || void 0
+                        staff_only: !!o || void 0,
                     },
                     trackedActionData: {
                         event: i.NetworkActionNames.GUILD_CREATE,
                         properties: {
                             template_name: n.id,
-                            is_community_intent: r
-                        }
+                            is_community_intent: r,
+                        },
                     },
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
             ).body;
         } catch (e) {
             throw new s.Hx(e);
         }
-    }
+    },
 };

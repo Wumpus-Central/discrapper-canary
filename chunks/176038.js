@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => _ }), a(388685), a(457542));
+a.d(t, { Z: () => _ }), a(388685), a(457542);
 var n = a(73800),
     r = a(442837),
     l = a(809206),
@@ -37,9 +37,9 @@ async function j() {
                 {
                     theme: t,
                     backgroundGradientPresetId: null != r ? r : void 0,
-                    customUserThemeSettings: void 0
+                    customUserThemeSettings: void 0,
                 },
-                u.fy.INFREQUENT_USER_ACTION
+                u.fy.INFREQUENT_USER_ACTION,
             );
         } else {
             let e = v(b);
@@ -47,9 +47,9 @@ async function j() {
                 {
                     theme: e,
                     backgroundGradientPresetId: void 0,
-                    customUserThemeSettings: void 0
+                    customUserThemeSettings: void 0,
                 },
-                u.fy.INFREQUENT_USER_ACTION
+                u.fy.INFREQUENT_USER_ACTION,
             );
         }
     } catch (e) {}
@@ -79,7 +79,7 @@ function _() {
             return [(0, o.Ad)(e), (0, o.jT)(e)];
         }),
         a = n.useCallback(() => {
-            (j(), g(e, t));
+            j(), g(e, t);
         }, [e, t]);
     n.useEffect(() => {
         let e = setInterval(() => {

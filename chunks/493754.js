@@ -1,6 +1,6 @@
 n.d(t, {
     W: () => S,
-    Z: () => A
+    Z: () => A,
 });
 var r = n(255367);
 n(73800);
@@ -25,7 +25,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,11 +51,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,7 +77,8 @@ function v(e, t) {
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -87,18 +88,29 @@ function I(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function T(e, t) {
     return null != e && null != t && p.Z.can(h.Plq.CREATE_INSTANT_INVITE, t);
 }
 function S(e) {
-    let { guild: t, channel: i, streamUserId: o, applicationId: a, appContext: s, exitFullScreen: l, analyticsLocation: c, guildScheduledEvent: d } = e;
-    (null == l || l(),
+    let {
+        guild: t,
+        channel: i,
+        streamUserId: o,
+        applicationId: a,
+        appContext: s,
+        exitFullScreen: l,
+        analyticsLocation: c,
+        guildScheduledEvent: d,
+    } = e;
+    null == l || l(),
         (0, u.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('7654'), n.e('49049'), n.e('29328')]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("29328")]).then(
+                    n.bind(n, 560114),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -109,20 +121,36 @@ function S(e) {
                             applicationId: a,
                             analyticsLocation: c,
                             source: i.isGuildStageVoice() ? h.t4x.STAGE_CHANNEL : h.t4x.STREAM_INVITE,
-                            guildScheduledEvent: d
-                        })
+                            guildScheduledEvent: d,
+                        }),
                     );
             },
             {
-                modalKey: 'stream-invite-modal',
-                contextKey: s === h.IlC.POPOUT ? u.u1M : u.z1l
-            }
-        ));
+                modalKey: "stream-invite-modal",
+                contextKey: s === h.IlC.POPOUT ? u.u1M : u.z1l,
+            },
+        );
 }
 function A(e) {
     var t,
-        { stream: n, applicationId: i, channel: a, exitFullScreen: u, appContext: p, analyticsLocation: h, className: E } = e,
-        y = v(e, ['stream', 'applicationId', 'channel', 'exitFullScreen', 'appContext', 'analyticsLocation', 'className']);
+        {
+            stream: n,
+            applicationId: i,
+            channel: a,
+            exitFullScreen: u,
+            appContext: p,
+            analyticsLocation: h,
+            className: E,
+        } = e,
+        y = v(e, [
+            "stream",
+            "applicationId",
+            "channel",
+            "exitFullScreen",
+            "appContext",
+            "analyticsLocation",
+            "className",
+        ]);
     let I = null == a ? void 0 : a.getGuildId(),
         A = null == a ? void 0 : a.id,
         N = (0, l.e7)([_.Z], () => (null != I ? _.Z.getGuild(I) : null), [I]),
@@ -130,7 +158,7 @@ function A(e) {
     if (!T(N, a)) return null;
     let R = m.intl.string(m.t.VINpSE);
     return (
-        null != n ? (R = m.intl.string(m.t['6VQaqa'])) : null != i && (R = m.intl.string(m.t['OzOM/v'])),
+        null != n ? (R = m.intl.string(m.t["6VQaqa"])) : null != i && (R = m.intl.string(m.t["OzOM/v"])),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(
@@ -141,8 +169,8 @@ function A(e) {
                                 size: null != (t = y.size) ? t : c.zx.Sizes.SMALL,
                                 color: g.buttonColor,
                                 onClick: () => {
-                                    (s()(null != N, 'guild cannot be null'),
-                                        s()(null != a, 'channel cannot be null'),
+                                    s()(null != N, "guild cannot be null"),
+                                        s()(null != a, "channel cannot be null"),
                                         S({
                                             guild: N,
                                             channel: a,
@@ -151,15 +179,15 @@ function A(e) {
                                             appContext: p,
                                             exitFullScreen: u,
                                             analyticsLocation: h,
-                                            guildScheduledEvent: C
-                                        }));
+                                            guildScheduledEvent: C,
+                                        });
                                 },
-                                className: o()(E, g.textButton)
+                                className: o()(E, g.textButton),
                             },
-                            y
+                            y,
                         ),
-                        { children: R }
-                    )
+                        { children: R },
+                    ),
                 ),
                 (0, r.jsx)(f.Z, {
                     channel: a,
@@ -168,9 +196,9 @@ function A(e) {
                     className: o()(E, g.iconButton),
                     exitFullScreen: u,
                     analyticsLocation: h,
-                    guildScheduledEvent: C
-                })
-            ]
+                    guildScheduledEvent: C,
+                }),
+            ],
         })
     );
 }

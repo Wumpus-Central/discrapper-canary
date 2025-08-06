@@ -1,7 +1,7 @@
 n.d(t, {
     Gi: () => c,
     YJ: () => u,
-    zY: () => d
+    zY: () => d,
 });
 var r = n(255367);
 n(73800);
@@ -15,11 +15,11 @@ function c(e) {
     return (0, r.jsx)(i.Is, {
         inputClassName: c,
         maxLength: s.tL,
-        value: null != t ? t : '',
+        value: null != t ? t : "",
         placeholder: n,
         onChange: l,
         disabled: a,
-        autoFocus: o
+        autoFocus: o,
     });
 }
 function u(e) {
@@ -31,8 +31,8 @@ function u(e) {
             value: t.response,
             disabled: !0,
             autoFocus: !0,
-            rows: 2
-        })
+            rows: 2,
+        }),
     });
 }
 function d(e) {
@@ -43,7 +43,7 @@ function d(e) {
             onChange: i,
             value: t.response,
             autofocus: n,
-            placeholder: a.intl.string(a.t['Sqn+Wl'])
-        })
+            placeholder: a.intl.string(a.t["Sqn+Wl"]),
+        }),
     });
 }

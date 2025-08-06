@@ -3,7 +3,7 @@ e.exports = (e, t) =>
     new r(e, t).set.map((e) =>
         e
             .map((e) => e.value)
-            .join(' ')
+            .join(" ")
             .trim()
-            .split(' ')
+            .split(" "),
     );

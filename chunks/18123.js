@@ -28,21 +28,21 @@ var n = r(73800),
                     {
                         default: {
                             picker: {
-                                position: 'relative',
+                                position: "relative",
                                 width: t,
-                                height: r
+                                height: r,
                             },
-                            hue: { radius: '2px' }
-                        }
+                            hue: { radius: "2px" },
+                        },
                     },
-                    void 0 === f ? {} : f
-                )
+                    void 0 === f ? {} : f,
+                ),
             );
         return n.createElement(
-            'div',
+            "div",
             {
                 style: h.picker,
-                className: 'hue-picker ' + (void 0 === d ? '' : d)
+                className: "hue-picker " + (void 0 === d ? "" : d),
             },
             n.createElement(
                 s.PS,
@@ -54,20 +54,20 @@ var n = r(73800),
                             a: 1,
                             h: e.h,
                             l: 0.5,
-                            s: 1
+                            s: 1,
                         });
                     },
-                    direction: u
-                })
-            )
+                    direction: u,
+                }),
+            ),
         );
     };
-((p.propTypes = { styles: a().object }),
+(p.propTypes = { styles: a().object }),
     (p.defaultProps = {
-        width: '316px',
-        height: '16px',
-        direction: 'horizontal',
+        width: "316px",
+        height: "16px",
+        direction: "horizontal",
         pointer: u.Z,
-        styles: {}
+        styles: {},
     }),
-    (0, s.t1)(p));
+    (0, s.t1)(p);

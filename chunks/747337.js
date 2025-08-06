@@ -17,11 +17,11 @@ function s(e, t) {
                     yearlen: c,
                     nextyearlen: u,
                     yearordinal: d,
-                    yearweekday: f
+                    yearweekday: f,
                 },
-                l(e)
+                l(e),
             ),
-            { wnomask: null }
+            { wnomask: null },
         );
     if ((0, o.cS)(t.byweekno)) return _;
     _.wnomask = (0, o.rx)(0, c + 7);
@@ -37,7 +37,8 @@ function s(e, t) {
     }
     if ((0, o.q9)(t.byweekno, 1)) {
         var E = p + 7 * h;
-        if ((p !== n && (E -= 7 - n), E < c)) for (var m = 0; m < 7 && ((_.wnomask[E] = 1), (E += 1), _.wdaymask[E] !== t.wkst); m++);
+        if ((p !== n && (E -= 7 - n), E < c))
+            for (var m = 0; m < 7 && ((_.wnomask[E] = 1), (E += 1), _.wdaymask[E] !== t.wkst); m++);
     }
     if (p) {
         var y = void 0;
@@ -47,7 +48,8 @@ function s(e, t) {
                 v = (0, o.Vy)(7 - O.valueOf() + t.wkst, 7),
                 I = (0, i.Eg)(e - 1) ? 366 : 365,
                 T = void 0;
-            (v >= 4 ? ((v = 0), (T = I + (0, o.Vy)(O - t.wkst, 7))) : (T = c - p), (y = Math.floor(52 + (0, o.Vy)(T, 7) / 4)));
+            v >= 4 ? ((v = 0), (T = I + (0, o.Vy)(O - t.wkst, 7))) : (T = c - p),
+                (y = Math.floor(52 + (0, o.Vy)(T, 7) / 4));
         }
         if ((0, o.q9)(t.byweekno, y)) for (var E = 0; E < p; E++) _.wnomask[E] = 1;
     }
@@ -63,13 +65,13 @@ function l(e) {
               mdaymask: a.qm,
               nmdaymask: a.nB,
               wdaymask: a.fV.slice(r),
-              mrange: a.sr
+              mrange: a.sr,
           }
         : {
               mmask: a.h3,
               mdaymask: a.fY,
               nmdaymask: a.RP,
               wdaymask: a.fV.slice(r),
-              mrange: a.Pi
+              mrange: a.Pi,
           };
 }

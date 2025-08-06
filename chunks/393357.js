@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => x }));
+n.r(t), n.d(t, { default: () => x });
 var r = n(255367);
 n(73800);
 var o = n(990547),
@@ -19,29 +19,29 @@ function x(e) {
         _ = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
         v = (0, f.Z)(t),
         b = (0, u.At)(),
-        j = (0, p.V)('GuildPowerupsPage'),
+        j = (0, p.V)("GuildPowerupsPage"),
         h = !_ || null == v || null == x,
         E = (0, l.ZP)(null != b ? b : []);
     return ((0, s.Z)(
         {
             type: o.ImpressionTypes.VIEW,
             name: o.ImpressionNames.BOOST_SHOP_OPENED,
-            properties: { location_stack: E.analyticsLocations }
+            properties: { location_stack: E.analyticsLocations },
         },
-        { disableTrack: h }
+        { disableTrack: h },
     ),
     h)
         ? null
         : v || j
           ? (0, r.jsx)(m.Z, {
                 guildId: t,
-                powerupSkuId: n
+                powerupSkuId: n,
             })
           : (0, r.jsx)(c.Z, {
                 analyticsLocation: {
                     section: g.jXE.CHANNEL_LIST,
-                    object: g.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
+                    object: g.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM,
                 },
-                guild: x
+                guild: x,
             });
 }

@@ -13,6 +13,6 @@ function l(n) {
         authToken: e,
         onContinue: t,
         onError: l,
-        onClose: a
+        onClose: a,
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(953529));
+n.d(t, { Z: () => y }), n(953529);
 var r = n(255367),
     s = n(120356),
     o = n.n(s),
@@ -13,11 +13,20 @@ var r = n(255367),
     m = n(458430),
     g = n(225893);
 function b(e) {
-    let { name: t, description: n, pointsDescription: s, points: o, cost: u, iconSrc: f, currentPoints: b, onPurchase: y } = e,
-        h = 'string' == typeof t ? t : p.intl.format(t, { numPurchasing: 0 }),
-        x = 'string' == typeof t ? t : p.intl.formatToPlainString(t, { numPurchasing: 0 });
+    let {
+            name: t,
+            description: n,
+            pointsDescription: s,
+            points: o,
+            cost: u,
+            iconSrc: f,
+            currentPoints: b,
+            onPurchase: y,
+        } = e,
+        h = "string" == typeof t ? t : p.intl.format(t, { numPurchasing: 0 }),
+        x = "string" == typeof t ? t : p.intl.formatToPlainString(t, { numPurchasing: 0 });
     return (0, r.jsx)(l.Z, {
-        borderColor: 'green',
+        borderColor: "green",
         text: (0, r.jsx)(d.Z, {
             name: h,
             description: n,
@@ -25,11 +34,11 @@ function b(e) {
                 0 !== o
                     ? p.intl.format(s, {
                           points: o,
-                          grassIconHook: a.Z
+                          grassIconHook: a.Z,
                       })
-                    : null
+                    : null,
         }),
-        'aria-label': x,
+        "aria-label": x,
         children: (e) => {
             var t, n;
             return (0, r.jsxs)(
@@ -38,24 +47,24 @@ function b(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -65,28 +74,28 @@ function b(e) {
                         disabled: b < u,
                         className: m.item,
                         children: [
-                            (0, r.jsx)('img', {
+                            (0, r.jsx)("img", {
                                 className: m.itemIcon,
                                 src: f,
-                                alt: ''
+                                alt: "",
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: m.pointsInfo,
                                 children: [
-                                    (0, r.jsx)('img', {
+                                    (0, r.jsx)("img", {
                                         className: m.pointsIcon,
                                         src: g,
-                                        alt: ''
+                                        alt: "",
                                     }),
-                                    ' ',
+                                    " ",
                                     (0, r.jsx)(c.Z, {
-                                        variant: 'text-md/medium',
-                                        color: 'currentColor',
-                                        children: u
-                                    })
-                                ]
-                            })
-                        ]
+                                        variant: "text-md/medium",
+                                        color: "currentColor",
+                                        children: u,
+                                    }),
+                                ],
+                            }),
+                        ],
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -100,9 +109,9 @@ function b(e) {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
+                t),
             );
-        }
+        },
     });
 }
 function y(e) {
@@ -111,6 +120,6 @@ function y(e) {
         className: o()(t, m.shop),
         purchasePriority: f.ne,
         PurchasableComponent: b,
-        itemsShown: 4
+        itemsShown: 4,
     });
 }

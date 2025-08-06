@@ -19,17 +19,17 @@ var l = t(255367),
     O = t(547754);
 function x(e) {
     let { icon: n, label: t } = e;
-    return (0, l.jsxs)('div', {
+    return (0, l.jsxs)("div", {
         className: O.failedRow,
         children: [
             n,
             (0, l.jsx)(o.Text, {
                 className: O.label,
-                variant: 'text-md/medium',
+                variant: "text-md/medium",
                 lineClamp: 1,
-                children: t
-            })
-        ]
+                children: t,
+            }),
+        ],
     });
 }
 function _(e) {
@@ -37,12 +37,12 @@ function _(e) {
         t = (0, s.ZP)(n);
     return (0, l.jsx)(x, {
         icon: (0, l.jsx)(u.Z, {
-            'aria-hidden': !0,
+            "aria-hidden": !0,
             size: o.EFr.SIZE_32,
             channel: n,
-            experimentLocation: 'forward-failed-retry-modal'
+            experimentLocation: "forward-failed-retry-modal",
         }),
-        label: t
+        label: t,
     });
 }
 function v(e) {
@@ -52,12 +52,12 @@ function v(e) {
         c = (0, i.e7)([m.Z], () => m.Z.getStatus(n.id));
     return (0, l.jsx)(x, {
         icon: (0, l.jsx)(a.Z, {
-            'aria-hidden': !0,
+            "aria-hidden": !0,
             size: o.EFr.SIZE_32,
             user: n,
-            status: c
+            status: c,
         }),
-        label: null != r ? r : t
+        label: null != r ? r : t,
     });
 }
 function w(e) {
@@ -68,18 +68,24 @@ function w(e) {
         icon: (0, l.jsx)(d.Z, {
             size: d.E.SMALL_32,
             guild: t,
-            channel: n
+            channel: n,
         }),
-        label: r
+        label: r,
     });
 }
 function P(e) {
     let { destination: n } = e,
         { channel: t, user: r } = (0, i.cj)([f.Z, j.default], () => ({
-            channel: 'channel' === n.type ? f.Z.getChannel(n.id) : null,
-            user: 'user' === n.type ? j.default.getUser(n.id) : null
+            channel: "channel" === n.type ? f.Z.getChannel(n.id) : null,
+            user: "user" === n.type ? j.default.getUser(n.id) : null,
         }));
-    return (null == t ? void 0 : t.isGroupDM()) ? (0, l.jsx)(_, { channel: t }) : null != r ? (0, l.jsx)(v, { user: r }) : null != t ? (0, l.jsx)(w, { channel: t }) : null;
+    return (null == t ? void 0 : t.isGroupDM())
+        ? (0, l.jsx)(_, { channel: t })
+        : null != r
+          ? (0, l.jsx)(v, { user: r })
+          : null != t
+            ? (0, l.jsx)(w, { channel: t })
+            : null;
 }
 function S(e) {
     var n,
@@ -95,21 +101,23 @@ function S(e) {
                         l,
                         r = {},
                         i = Object.keys(e);
-                    for (l = 0; l < i.length; l++) ((t = i[l]), n.indexOf(t) >= 0 || (r[t] = e[t]));
+                    for (l = 0; l < i.length; l++) (t = i[l]), n.indexOf(t) >= 0 || (r[t] = e[t]);
                     return r;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < i.length; l++) ((t = i[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]));
+                for (l = 0; l < i.length; l++)
+                    (t = i[l]),
+                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
             }
             return r;
-        })(e, ['message', 'failedDestinations', 'forwardOptions']);
+        })(e, ["message", "failedDestinations", "forwardOptions"]);
     let d = r.useCallback(() => {
         (0, g.l8)({
             message: i,
-            source: 'retry-modal',
+            source: "retry-modal",
             initialSelectedDestinations: a,
-            forwardOptions: s
+            forwardOptions: s,
         });
     }, [a, i, s]);
     return (0, l.jsxs)(
@@ -118,48 +126,48 @@ function S(e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
                     l = Object.keys(t);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (l = l.concat(
                         Object.getOwnPropertySymbols(t).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                        })
+                        }),
                     )),
                     l.forEach(function (n) {
                         var l;
-                        ((l = t[n]),
+                        (l = t[n]),
                             n in e
                                 ? Object.defineProperty(e, n, {
                                       value: l,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[n] = l));
-                    }));
+                                : (e[n] = l);
+                    });
             }
             return e;
         })(
             {
-                header: y.intl.string(y.t['/OPIaG']),
-                confirmText: y.intl.string(y.t['5911LS']),
-                cancelText: y.intl.string(y.t['ETE/oK']),
+                header: y.intl.string(y.t["/OPIaG"]),
+                confirmText: y.intl.string(y.t["5911LS"]),
+                cancelText: y.intl.string(y.t["ETE/oK"]),
                 confirmButtonColor: c.zx.Colors.BRAND,
-                onConfirm: d
+                onConfirm: d,
             },
-            u
+            u,
         )),
         (t = t =
             {
                 children: [
                     (0, l.jsx)(o.Text, {
-                        variant: 'text-md/medium',
-                        children: y.intl.format(y.t.cn9vFR, { count: a.length })
+                        variant: "text-md/medium",
+                        children: y.intl.format(y.t.cn9vFR, { count: a.length }),
                     }),
-                    (0, l.jsx)('div', {
+                    (0, l.jsx)("div", {
                         className: O.failedDestinations,
-                        children: a.map((e, n) => (0, l.jsx)(P, { destination: e }, n))
-                    })
-                ]
+                        children: a.map((e, n) => (0, l.jsx)(P, { destination: e }, n)),
+                    }),
+                ],
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
@@ -173,6 +181,6 @@ function S(e) {
               })(Object(t)).forEach(function (e) {
                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
               }),
-        n)
+        n),
     );
 }

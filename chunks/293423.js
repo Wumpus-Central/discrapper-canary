@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(953529));
+n.d(t, { Z: () => b }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -22,7 +22,7 @@ let b = (e) => {
         guildId: b.id,
         groupListingId: null == _ ? void 0 : _.id,
         location: f.Sbl.ROLE_SUBSCRIPTIONS_TAB,
-        relevantSubscriptionListingIds: null == _ ? void 0 : _.subscription_listings_ids
+        relevantSubscriptionListingIds: null == _ ? void 0 : _.subscription_listings_ids,
     });
     let { activeSubscription: O } = (0, o.Z)(null == _ ? void 0 : _.id),
         E = (0, l.YB)(b.id),
@@ -31,7 +31,7 @@ let b = (e) => {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(h.Z, {
-                title: g.intl.format(g.t['rm+ojI'], { serverName: b.name }),
+                title: g.intl.format(g.t["rm+ojI"], { serverName: b.name }),
                 description: null != y ? y : null,
                 coverImageAsset: null != (n = null == E ? void 0 : E.cover_image_asset) ? n : null,
                 guild: b,
@@ -40,11 +40,11 @@ let b = (e) => {
                         ? (0, r.jsx)(c.Z, {
                               className: m.pendingPlanChangeNotice,
                               groupListingId: _.id,
-                              subscription: O
+                              subscription: O,
                           })
                         : null,
-                    (0, r.jsx)(u.Z, { subscription: O })
-                ]
+                    (0, r.jsx)(u.Z, { subscription: O }),
+                ],
             }),
             (0, r.jsx)(i.y5t, {
                 children: (0, r.jsx)(d.Z, {
@@ -55,15 +55,15 @@ let b = (e) => {
                             p.Z,
                             {
                                 guildId: b.id,
-                                groupListingId: null != (t = null == _ ? void 0 : _.id) ? t : '',
+                                groupListingId: null != (t = null == _ ? void 0 : _.id) ? t : "",
                                 listingId: e,
-                                analyticsLocation: f.Sbl.ROLE_SUBSCRIPTIONS_TAB
+                                analyticsLocation: f.Sbl.ROLE_SUBSCRIPTIONS_TAB,
                             },
-                            e
+                            e,
                         );
-                    })
-                })
-            })
-        ]
+                    }),
+                }),
+            }),
+        ],
     });
 };

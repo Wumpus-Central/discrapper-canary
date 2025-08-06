@@ -9,10 +9,10 @@ function s(n, t, l) {
     return null != n
         ? (0, r.Z)(n, l, t)
         : (0, i.jsx)(e.sNh, {
-              id: 'channel-copy-link',
+              id: "channel-copy-link",
               label: c.intl.string(c.t.WqhZsr),
               action: () => {
-                  (0, a.JG)(null != t ? t : '');
-              }
+                  (0, a.JG)(null != t ? t : "");
+              },
           });
 }

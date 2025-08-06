@@ -5,7 +5,7 @@ var r = n(154028),
     s = n(179122),
     l = i([].concat);
 e.exports =
-    r('Reflect', 'ownKeys') ||
+    r("Reflect", "ownKeys") ||
     function (e) {
         var t = o.f(s(e)),
             n = a.f;

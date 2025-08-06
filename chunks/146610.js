@@ -12,39 +12,42 @@ var i = n(120356),
     m = n(769570);
 let g = [
         {
-            key: 'tier_name',
+            key: "tier_name",
             cellClassName: u.tierNameColumn,
-            renderHeader: () => d.intl.string(d.t['2Uiha2']),
+            renderHeader: () => d.intl.string(d.t["2Uiha2"]),
             render(e) {
                 let t,
                     { subscriptionListing: n } = e;
                 if (null != n) {
-                    let e = (null == n ? void 0 : n.image_asset) == null ? void 0 : (0, s._W)(n.application_id, n.image_asset, 128);
+                    let e =
+                        (null == n ? void 0 : n.image_asset) == null
+                            ? void 0
+                            : (0, s._W)(n.application_id, n.image_asset, 128);
                     t = (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)('img', {
+                            (0, r.jsx)("img", {
                                 src: e,
-                                alt: '',
-                                className: u.tierImage
+                                alt: "",
+                                className: u.tierImage,
                             }),
-                            n.name
-                        ]
+                            n.name,
+                        ],
                     });
                 }
                 return (0, r.jsx)(c.bL, {
                     className: u.tierNameCell,
-                    children: t
+                    children: t,
                 });
-            }
+            },
         },
         {
-            key: 'subscribers',
+            key: "subscribers",
             cellClassName: l()(u.subscribersColumn, m.cellAlignRight),
             renderHeader: () => d.intl.string(d.t.zu8go6),
-            render: (e) => (0, r.jsx)(c.av, { children: e.roleMemberCount })
+            render: (e) => (0, r.jsx)(c.av, { children: e.roleMemberCount }),
         },
         {
-            key: 'price',
+            key: "price",
             cellClassName: l()(u.priceColumn, m.cellAlignRight),
             renderHeader: () => d.intl.string(d.t.NcrbWF),
             render(e) {
@@ -52,20 +55,20 @@ let g = [
                     n = null == t ? void 0 : t.subscription_plans[0],
                     i = null == n ? void 0 : n.price;
                 return (0, r.jsx)(c.kA, { children: i });
-            }
-        }
+            },
+        },
     ],
     p = (e) => {
         let { totalPayoutsForPeriod: t, guildId: n, className: i } = e,
             s = (0, o.Z)(n, t);
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: l()(m.tableContainer, i),
             children: (0, r.jsx)(a.Z, {
                 columns: g,
                 data: s,
                 className: l()(m.table, u.table),
                 rowClassName: u.row,
-                headerClassName: l()(m.header, u.header)
-            })
+                headerClassName: l()(m.header, u.header),
+            }),
         });
     };

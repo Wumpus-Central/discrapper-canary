@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => b,
-    c: () => j
+    c: () => j,
 });
 var r = n(255367),
     i = n(73800),
@@ -30,15 +30,17 @@ function v(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['location']);
+        })(e, ["location"]);
     let l = (0, f.N)(),
         o = i.useCallback(() => {
             if (null != l) {
@@ -53,24 +55,24 @@ function v(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         var r;
-                        ((r = n[t]),
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = r));
-                    }));
+                                : (e[t] = r);
+                    });
             }
             return e;
         })(
@@ -80,15 +82,15 @@ function v(e) {
                 subscriptionTier: x.Si.TIER_2,
                 textOptions: { textOverride: o() },
                 size: a.zx.Sizes.TINY,
-                premiumModalAnalyticsLocation: t
+                premiumModalAnalyticsLocation: t,
             },
-            n
-        )
+            n,
+        ),
     );
 }
 function j() {
     let e = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: s()(_.reverseTrialEducationBannerContainer, { [_.reducedMotion]: e }),
         children: [
             (0, r.jsx)(c.Fmz, {
@@ -96,14 +98,14 @@ function j() {
                 loop: !1,
                 shouldAnimate: !e,
                 pauseAtFrame: e ? 149 : void 0,
-                importData: () => n.e('21812').then(n.t.bind(n, 741855, 19))
+                importData: () => n.e("21812").then(n.t.bind(n, 741855, 19)),
             }),
             (0, r.jsx)(c.Text, {
-                variant: 'text-xs/medium',
+                variant: "text-xs/medium",
                 className: _.reverseTrialEducationText,
-                children: g.intl.format(g.t.GimLpa, {})
-            })
-        ]
+                children: g.intl.format(g.t.GimLpa, {}),
+            }),
+        ],
     });
 }
 function b(e) {
@@ -111,38 +113,38 @@ function b(e) {
         o = {
             section: p.jXE.STREAM_SETTINGS,
             object: p.qAy.PREMIUM_UPSELL_BANNER,
-            objectType: p.Qqv.BUY
+            objectType: p.Qqv.BUY,
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: s()(_.upsellBanner, _.enhancedBanner, { [_.gradientGlow]: l }),
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: _.iconTextContainer,
                 children: [
                     (0, r.jsx)(c.SrA, {
-                        size: 'md',
-                        color: u.JX.PREMIUM_TIER_2
+                        size: "md",
+                        color: u.JX.PREMIUM_TIER_2,
                     }),
                     (0, r.jsx)(c.Text, {
-                        variant: 'text-sm/medium',
+                        variant: "text-sm/medium",
                         className: s()(_.upsellText, _.enhancedUpsellText),
                         children:
                             null != t
                                 ? t
-                                : g.intl.format(g.t['L/zCtr'], {
+                                : g.intl.format(g.t["L/zCtr"], {
                                       onClick: () =>
                                           i({
                                               analyticsLocation: o,
-                                              onClose: n
-                                          })
-                                  })
-                    })
-                ]
+                                              onClose: n,
+                                          }),
+                                  }),
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: _.enhancedCTAs,
-                children: (0, r.jsx)(v, { location: o })
-            })
-        ]
+                children: (0, r.jsx)(v, { location: o }),
+            }),
+        ],
     });
 }

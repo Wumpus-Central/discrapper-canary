@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     BV: () => b,
     Rm: () => g,
-    aO: () => O
+    aO: () => O,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -22,10 +22,10 @@ function m(e) {
     for (let t of u.Z.emojiAnimationTriggers) {
         let n = l.ZP.getByName(t);
         if (null != n) {
-            if (':'.concat(n.uniqueName, ':') === e) return !0;
+            if (":".concat(n.uniqueName, ":") === e) return !0;
             for (let t in n.diversityChildren) {
                 let r = n.diversityChildren[t];
-                if (':'.concat(r.uniqueName, ':') === e) return !0;
+                if (":".concat(r.uniqueName, ":") === e) return !0;
             }
         }
     }
@@ -33,7 +33,7 @@ function m(e) {
 }
 let g = i.createContext({
     triggerAnimation: () => {},
-    untriggerAnimation: () => {}
+    untriggerAnimation: () => {},
 });
 function E(e) {
     let { children: t } = e,
@@ -46,13 +46,13 @@ function E(e) {
                 },
                 untriggerAnimation: (e) => {
                     s !== h.IlC.OVERLAY && m(e) && o(e);
-                }
+                },
             }),
-            [s, n, o]
+            [s, n, o],
         );
     return (0, r.jsx)(g.Provider, {
         value: l,
-        children: t
+        children: t,
     });
 }
 function b(e) {
@@ -74,7 +74,12 @@ function y(e) {
         { triggerAnimation: l } = i.useContext(g);
     return (
         i.useEffect(() => {
-            if (!u.Z.triggerEmojiAnimationFromSentMessage || (null == s ? void 0 : s.state) !== h.yb.SENT || (0, f.JL)(r)) return;
+            if (
+                !u.Z.triggerEmojiAnimationFromSentMessage ||
+                (null == s ? void 0 : s.state) !== h.yb.SENT ||
+                (0, f.JL)(r)
+            )
+                return;
             let { top: e, bottom: n } = t.getBoundingClientRect();
             e >= 0 && n <= window.innerHeight && (l(a), (0, f.i9)(r));
         }, [a, t, null == s ? void 0 : s.state, r, l]),
@@ -92,6 +97,6 @@ function O(e) {
               emojiRef: c,
               channelId: t,
               messageId: n,
-              emojiName: i
+              emojiName: i,
           });
 }

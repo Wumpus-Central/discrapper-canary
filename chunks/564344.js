@@ -22,7 +22,7 @@ var i = n(255367),
     O = n(388032),
     v = n(545784);
 function S() {
-    o.Z.useExperiment({ location: 'profile_customization_auto' });
+    o.Z.useExperiment({ location: "profile_customization_auto" });
     let e = (0, s.e7)([d.Z], () => d.Z.getGuild()),
         t = (0, x.Z)(),
         n = (0, s.e7)([d.Z, h.Z], () => d.Z.showNotice() || h.Z.showNotice()),
@@ -33,33 +33,38 @@ function S() {
     function P(t) {
         if (I !== t) {
             if (n) {
-                (b.S.dispatch(j.CkL.SHAKE_APP, {
+                b.S.dispatch(j.CkL.SHAKE_APP, {
                     duration: 300,
-                    intensity: l.$x
+                    intensity: l.$x,
                 }),
-                    b.S.dispatch(j.CkL.EMPHASIZE_NOTICE));
+                    b.S.dispatch(j.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            (t === E.NB.GUILD && null == e && null != S && (0, c.Fq)(S), N(t));
+            t === E.NB.GUILD && null == e && null != S && (0, c.Fq)(S), N(t);
         }
     }
     r.useEffect(() => {
-        null != T && (0, m.Z)(T.id, T.getAvatarURL(null == S ? void 0 : S.id, 80), { guildId: null == S ? void 0 : S.id });
+        null != T &&
+            (0, m.Z)(T.id, T.getAvatarURL(null == S ? void 0 : S.id, 80), { guildId: null == S ? void 0 : S.id });
     }, [null == S ? void 0 : S.id, T]);
     let R = !0,
         D = !0;
     return (
-        y && 1 === A.length && (A.includes(C.s6.PROFILE_SERVER_PROFILES) ? (P(E.NB.GUILD), (D = !1)) : A.includes(C.s6.PROFILE_USER_PROFILE) && (P(E.NB.USER_PROFILE), (R = !1))),
+        y &&
+            1 === A.length &&
+            (A.includes(C.s6.PROFILE_SERVER_PROFILES)
+                ? (P(E.NB.GUILD), (D = !1))
+                : A.includes(C.s6.PROFILE_USER_PROFILE) && (P(E.NB.USER_PROFILE), (R = !1))),
         (0, i.jsxs)(a.y5t, {
             component: (0, i.jsx)(a.X6q, {
-                variant: 'heading-lg/semibold',
-                children: O.intl.string(O.t['vi7f+v'])
+                variant: "heading-lg/semibold",
+                children: O.intl.string(O.t["vi7f+v"]),
             }),
             children: [
                 (0, i.jsxs)(a.njP, {
                     className: v.tabBar,
-                    type: 'top',
-                    look: 'brand',
+                    type: "top",
+                    look: "brand",
                     selectedItem: I,
                     onItemSelect: P,
                     children: [
@@ -69,9 +74,9 @@ function S() {
                                   {
                                       className: v.tabBarItem,
                                       id: E.NB.USER_PROFILE,
-                                      children: O.intl.string(O.t['2p07FR'])
+                                      children: O.intl.string(O.t["2p07FR"]),
                                   },
-                                  E.NB.USER_PROFILE
+                                  E.NB.USER_PROFILE,
                               )
                             : null,
                         R
@@ -80,15 +85,15 @@ function S() {
                                   {
                                       className: v.tabBarItem,
                                       id: E.NB.GUILD,
-                                      children: O.intl.string(O.t.kPHroa)
+                                      children: O.intl.string(O.t.kPHroa),
                                   },
-                                  E.NB.GUILD
+                                  E.NB.GUILD,
                               )
-                            : null
-                    ]
+                            : null,
+                    ],
                 }),
-                I === E.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: S }) : (0, i.jsx)(p.Z, {})
-            ]
+                I === E.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: S }) : (0, i.jsx)(p.Z, {}),
+            ],
         })
     );
 }

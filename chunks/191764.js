@@ -22,19 +22,19 @@ function p(e) {
     return (null == n ? void 0 : n.type) !== f.IIU.HANG_STATUS || null == g
         ? null
         : (0, r.jsx)(d.tG, {
-              text: _.intl.string(_.t['9C444u']),
+              text: _.intl.string(_.t["9C444u"]),
               disabled: E,
               fullWidth: !0,
               onClick: (e) => {
-                  (e.stopPropagation(),
-                      null == p || p({ action: 'PRESS_HANG_STATUS_BUTTON' }),
+                  e.stopPropagation(),
+                      null == p || p({ action: "PRESS_HANG_STATUS_BUTTON" }),
                       o.default.selectVoiceChannel(g.id),
                       u.default.track(f.rMx.HANG_STATUS_CTA_CLICKED, {
                           channel_id: g.id,
                           guild_id: g.guild_id,
-                          source: m
+                          source: m,
                       }),
-                      null == h || h());
-              }
+                      null == h || h();
+              },
           });
 }

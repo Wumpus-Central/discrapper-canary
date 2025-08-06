@@ -4,7 +4,7 @@ n.d(t, {
     po: () => m,
     vN: () => _,
     xb: () => I,
-    zq: () => T
+    zq: () => T,
 });
 var r,
     l = n(73800),
@@ -21,7 +21,7 @@ let d = (e, t) => {
         userId: r,
         guildId: n,
         sourceAnalyticsLocations: t,
-        roleId: l
+        roleId: l,
     });
 };
 function _(e, t, n, r) {
@@ -37,10 +37,10 @@ function _(e, t, n, r) {
                     guildId: e.guildId,
                     analyticsLocations: null != n ? [n] : s,
                     onCloseContextMenu: r,
-                    isViewOnly: t
+                    isViewOnly: t,
                 }));
         },
-        [e, s, r, n, t]
+        [e, s, r, n, t],
     );
 }
 function A(e, t, n) {
@@ -56,25 +56,30 @@ function A(e, t, n) {
                     guildId: e.guildId,
                     analyticsLocations: null != t ? [t] : r,
                     onCloseContextMenu: n,
-                    showTransferOwnershipItem: !0
+                    showTransferOwnershipItem: !0,
                 }));
         },
-        [e, n, r, t]
+        [e, n, r, t],
     );
 }
 function T(e) {
-    return (0, s.e7)(
-        [u.Z, o.Z],
-        () => {
-            var t;
-            if (null == e) return null;
-            let n = u.Z.getGuild(e.guildId);
-            return null == n || null == e.highestRoleId ? null : null != (t = o.Z.getRole(n.id, e.highestRoleId)) ? t : null;
-        },
-        [e]
-    );
+    return (0, s.e7)([u.Z, o.Z], () => {
+        var t;
+        if (null == e) return null;
+        let n = u.Z.getGuild(e.guildId);
+        return null == n || null == e.highestRoleId
+            ? null
+            : null != (t = o.Z.getRole(n.id, e.highestRoleId))
+              ? t
+              : null;
+    }, [e]);
 }
-var m = (((r = {})[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), r);
+var m =
+    (((r = {})[(r.LOADING = 0)] = "LOADING"),
+    (r[(r.SUCCESS_STILL_INDEXING = 1)] = "SUCCESS_STILL_INDEXING"),
+    (r[(r.SUCCESS_EMPTY = 2)] = "SUCCESS_EMPTY"),
+    (r[(r.SUCCESS_FULL = 3)] = "SUCCESS_FULL"),
+    r);
 function I(e, t, n) {
     return t ? 0 : e ? 1 : n <= 0 ? 2 : 3;
 }

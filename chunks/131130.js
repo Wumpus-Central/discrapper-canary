@@ -1,4 +1,4 @@
-(n.d(t, { q: () => _ }), n(953529));
+n.d(t, { q: () => _ }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(704215),
@@ -28,14 +28,14 @@ let _ = (e) => {
                     children: [
                         (0, r.jsx)(o.RyX, {
                             onClick: () => a(d.L.USER_DISMISS),
-                            noticeType: n
+                            noticeType: n,
                         }),
                         (0, r.jsx)(o.OgN, {
-                            size: 'custom',
+                            size: "custom",
                             width: 20,
                             height: 20,
-                            color: 'currentColor',
-                            className: f.giftIcon
+                            color: "currentColor",
+                            className: f.giftIcon,
                         }),
                         null == e ? void 0 : e.description(),
                         (0, r.jsx)(o.NoS, {
@@ -45,15 +45,15 @@ let _ = (e) => {
                                     initialPlanId: null,
                                     analyticsLocations: _,
                                     analyticsLocation: null == e ? void 0 : e.analyticsLocation,
-                                    analyticsObject: { page: null == e ? void 0 : e.analyticsPage }
+                                    analyticsObject: { page: null == e ? void 0 : e.analyticsPage },
                                 });
                             },
                             noticeType: n,
-                            children: null == e ? void 0 : e.cta()
-                        })
-                    ]
+                            children: null == e ? void 0 : e.cta(),
+                        }),
+                    ],
                 });
             }
-        }
+        },
     });
 };

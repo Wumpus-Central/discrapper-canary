@@ -6,7 +6,7 @@ var r = n(570140),
 let s = {
     maybeOpenBlockUserFeedback(e) {
         let { location: t } = e;
-        (0, o.nZ)(t) && r.Z.dispatch({ type: 'BLOCK_USER_SHOW_FEEDBACK' });
+        (0, o.nZ)(t) && r.Z.dispatch({ type: "BLOCK_USER_SHOW_FEEDBACK" });
     },
     maybeOpenAgeVerificationUserFeedback(e) {
         let { location: t, visibleContent: n } = e;
@@ -14,8 +14,8 @@ let s = {
             null != n &&
             a.os.includes(n) &&
             r.Z.dispatch({
-                type: 'AGE_VERIFICATION_SHOW_FEEDBACK',
-                dismissibleContent: n
+                type: "AGE_VERIFICATION_SHOW_FEEDBACK",
+                dismissibleContent: n,
             });
-    }
+    },
 };

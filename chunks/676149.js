@@ -7,10 +7,10 @@ var i = n(120356),
     s = n(116181);
 function l(e) {
     let { divider: t, spacing: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()({
             [s.spacingLarge]: n === a.US.LARGE,
-            [s.divider]: t
-        })
+            [s.divider]: t,
+        }),
     });
 }

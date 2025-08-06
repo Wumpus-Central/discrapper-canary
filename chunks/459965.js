@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => _,
-    w: () => d
+    w: () => d,
 });
 var r = n(73800),
     i = n(442837),
@@ -13,10 +13,10 @@ var r = n(73800),
 function d(e, t, n) {
     let i = {
             closeModal: t,
-            isGift: n
+            isGift: n,
         },
         a = r.useRef(i);
-    (r.useEffect(() => {
+    r.useEffect(() => {
         a.current = i;
     }),
         r.useEffect(() => {
@@ -26,15 +26,15 @@ function d(e, t, n) {
                 null != e.paymentGateway &&
                 !n &&
                 (o.Z.show({
-                    title: u.intl.formatToPlainString(u.t['6mIX6u'], { paymentGatewayName: c.Vz[e.paymentGateway] }),
+                    title: u.intl.formatToPlainString(u.t["6mIX6u"], { paymentGatewayName: c.Vz[e.paymentGateway] }),
                     body: u.intl.format(u.t.EOa8en, {
                         paymentGatewayName: c.Vz[e.paymentGateway],
-                        subscriptionManagementLink: (0, l.JE)(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+                        subscriptionManagementLink: (0, l.JE)(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
                     }),
-                    confirmText: u.intl.string(u.t.BddRzc)
+                    confirmText: u.intl.string(u.t.BddRzc),
                 }),
                 t());
-        }, [e]));
+        }, [e]);
 }
 let f = [];
 function _(e, t) {
@@ -49,10 +49,11 @@ function _(e, t) {
                     let { parentId: t, consumed: n } = e;
                     return null != t && !n;
                 }),
-            [o]
+            [o],
         );
     return {
-        hasEntitlements: !t && null != n && null != c && c.length >= l.ZP.getIntervalMonths(n.interval, n.intervalCount),
-        entitlements: c
+        hasEntitlements:
+            !t && null != n && null != c && c.length >= l.ZP.getIntervalMonths(n.interval, n.intervalCount),
+        entitlements: c,
     };
 }

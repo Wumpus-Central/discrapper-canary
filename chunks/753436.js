@@ -8,8 +8,8 @@ var l = n(817053),
 function c(e) {
     let { game: t, userId: n, guildId: c, channelId: s, loading: d = !1, disableInteraction: u = !1 } = e;
     return d
-        ? (0, r.jsx)('div', { className: i.gameCover })
-        : (0, r.jsxs)('div', {
+        ? (0, r.jsx)("div", { className: i.gameCover })
+        : (0, r.jsxs)("div", {
               className: a.container,
               children: [
                   (0, r.jsx)(l.Z, {
@@ -17,15 +17,15 @@ function c(e) {
                       gameName: t.gameName,
                       applicationId: t.applicationId,
                       userId: n,
-                      disableInteraction: u
+                      disableInteraction: u,
                   }),
                   (0, r.jsx)(o.Z, {
                       applicationId: t.applicationId,
                       className: a.socialProof,
                       hideLabel: !0,
                       guildId: c,
-                      channelId: s
-                  })
-              ]
+                      channelId: s,
+                  }),
+              ],
           });
 }

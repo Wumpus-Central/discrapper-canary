@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(539854), n(388685));
+n.d(t, { Z: () => P }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -25,24 +25,24 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -78,9 +78,9 @@ function P(e) {
             return n || !i
                 ? null
                 : (0, r.jsx)(a.sNh, {
-                      id: 'xbox-connect',
+                      id: "xbox-connect",
                       action: () => c.Z.open(I.oAB.CONNECTIONS),
-                      label: C.intl.formatToPlainString(C.t.XWSHTU, { platform: T })
+                      label: C.intl.formatToPlainString(C.t.XWSHTU, { platform: T }),
                   });
         })(e),
         j = (function (e) {
@@ -103,14 +103,14 @@ function P(e) {
                                     DispatchApplicationStore: O.Z,
                                     ConnectedAppsStore: b.Z,
                                     applicationId: r.id,
-                                    branchId: null != i ? i.branchId : null
+                                    branchId: null != i ? i.branchId : null,
                                 }),
                                 isLaunching: g.Z.launchingGames.has(r.id),
                                 isRunning: f.ZP.getRunningVerifiedApplicationIds().includes(r.id),
-                                location: n.location
+                                location: n.location,
                             });
                         }),
-                [n.location, t]
+                [n.location, t],
             );
         })(e),
         A = [];
@@ -128,29 +128,45 @@ function P(e) {
                             type: I.mFx.JOIN_REQUEST,
                             userId: l.id,
                             activity: i,
-                            location: I.Sbl.USER_ACTIVITY_ACTIONS
+                            location: I.Sbl.USER_ACTIVITY_ACTIONS,
                         });
                         null != e && s.default.selectPrivateChannel(e.id);
                     }
                     return (0, r.jsx)(a.sNh, {
-                        id: 'join-'.concat(i.session_id),
-                        label: t ? C.intl.formatToPlainString(C.t.wFAvxM, { name: l.toString() }) : C.intl.string(C.t.OKsSCQ),
-                        action: c
+                        id: "join-".concat(i.session_id),
+                        label: t
+                            ? C.intl.formatToPlainString(C.t.wFAvxM, { name: l.toString() })
+                            : C.intl.string(C.t.OKsSCQ),
+                        action: c,
                     });
                 })(e, n),
                 (function (e, t) {
-                    let { activity: n, game: i, libraryApplication: l, location: o, canPlay: s, isRunning: c, isLaunching: u } = e;
+                    let {
+                        activity: n,
+                        game: i,
+                        libraryApplication: l,
+                        location: o,
+                        canPlay: s,
+                        isRunning: c,
+                        isLaunching: u,
+                    } = e;
                     if (!s || null == n) return null;
-                    let d = c ? C.intl.formatToPlainString(C.t['gBme//'], { name: i.name }) : u ? C.intl.formatToPlainString(C.t.WtSQwM, { name: i.name }) : void 0;
+                    let d = c
+                        ? C.intl.formatToPlainString(C.t["gBme//"], { name: i.name })
+                        : u
+                          ? C.intl.formatToPlainString(C.t.WtSQwM, { name: i.name })
+                          : void 0;
                     return (0, r.jsx)(a.sNh, {
-                        id: 'play-'.concat(n.session_id),
+                        id: "play-".concat(n.session_id),
                         action: function () {
-                            (0, v.playApplication)(i.id, l, { analyticsParams: { location: N(S({}, o), { object: I.qAy.LIST_ITEM }) } });
+                            (0, v.playApplication)(i.id, l, {
+                                analyticsParams: { location: N(S({}, o), { object: I.qAy.LIST_ITEM }) },
+                            });
                         },
                         label: t ? C.intl.formatToPlainString(C.t.ZDZEJC, { name: i.name }) : C.intl.string(C.t.XKUw8v),
-                        subtext: d
+                        subtext: d,
                     });
-                })(e, n)
+                })(e, n),
             );
     }
     return [P, ...A];

@@ -13,38 +13,52 @@ var i = n(442837),
     _ = n(388032),
     p = n(451316);
 function h(e) {
-    let { currentStep: t, className: n, purchaseState: h, premiumType: m, useWinterTheme: g = !1, onClose: E, hideCloseButton: b, showTrialBadge: y, showDiscountBadge: O, isGift: v, giftRecipient: I, isEligibleForTrial: T, enablePremiumBrandRefresh: S } = e,
+    let {
+            currentStep: t,
+            className: n,
+            purchaseState: h,
+            premiumType: m,
+            useWinterTheme: g = !1,
+            onClose: E,
+            hideCloseButton: b,
+            showTrialBadge: y,
+            showDiscountBadge: O,
+            isGift: v,
+            giftRecipient: I,
+            isEligibleForTrial: T,
+            enablePremiumBrandRefresh: S,
+        } = e,
         A = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
         N = g ? f.nL.WINTER : f.nL.DEFAULT,
         C = () => {
             switch (t) {
                 case s.h8.PLAN_SELECT:
-                    return m === f.p9.TIER_0 ? _.intl.string(_.t.rk4Uu7) : _.intl.string(_.t['7YWj6+']);
+                    return m === f.p9.TIER_0 ? _.intl.string(_.t.rk4Uu7) : _.intl.string(_.t["7YWj6+"]);
                 case s.h8.ADD_PAYMENT_STEPS:
                     return _.intl.string(_.t.vHqbJC);
                 case s.h8.REVIEW:
                     return _.intl.string(_.t.wKaVLC);
                 default:
-                    return _.intl.string(_.t['7YWj6+']);
+                    return _.intl.string(_.t["7YWj6+"]);
             }
         };
     return v && (0, l.pO)(I) && t !== s.h8.CONFIRM
         ? (0, r.jsxs)(o.xBx, {
               className: p.modalHeaderCustomGift,
               separator: !1,
-              'data-migration-pending': !0,
+              "data-migration-pending": !0,
               children: [
                   (0, r.jsx)(o.X6q, {
-                      variant: 'heading-lg/semibold',
-                      children: C()
+                      variant: "heading-lg/semibold",
+                      children: C(),
                   }),
                   (0, r.jsx)(o.olH, {
                       onClick: E,
                       className: p.closeButton,
                       innerClassName: p.closeButtonInner,
-                      'data-migration-pending': !0
-                  })
-              ]
+                      "data-migration-pending": !0,
+                  }),
+              ],
           })
         : S
           ? (0, r.jsx)(c.Z, {
@@ -54,9 +68,9 @@ function h(e) {
                 onClose: E,
                 isEligibleForTrial: T,
                 showTrialBadge: y,
-                showDiscountBadge: O
+                showDiscountBadge: O,
             })
-          : (0, r.jsx)('div', {
+          : (0, r.jsx)("div", {
                 className: n,
                 children: (0, r.jsx)(u.Z, {
                     hideCloseOnFullScreen: !0,
@@ -69,20 +83,20 @@ function h(e) {
                                   className: p.headerAnimation,
                                   currentStep: t,
                                   purchaseState: h,
-                                  pause: A
+                                  pause: A,
                               })
                             : m === f.p9.TIER_1
                               ? (0, r.jsx)(d.tK, {
                                     className: p.headerAnimation,
                                     currentStep: t,
                                     purchaseState: h,
-                                    pause: A
+                                    pause: A,
                                 })
                               : (0, r.jsx)(d.Bk, {
                                     className: p.headerAnimation,
                                     currentStep: t,
                                     purchaseState: h,
-                                    pause: A
+                                    pause: A,
                                 }),
                     plan: null,
                     isGift: !1,
@@ -90,7 +104,7 @@ function h(e) {
                     onClose: E,
                     headerTheme: N,
                     showTrialBadge: y,
-                    showDiscountBadge: O
-                })
+                    showDiscountBadge: O,
+                }),
             });
 }

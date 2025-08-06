@@ -17,21 +17,21 @@ async function _(e, t, n) {
         (null == (r = e.body) ? void 0 : r.code) === d.evJ.NON_MODERATED_TAG_REQUIRED
             ? o.Z.show({
                   title: t,
-                  body: n
+                  body: n,
               })
             : (null == (i = e.body) ? void 0 : i.code) === d.evJ.INVALID_FORM_BODY &&
               (null == (a = e.body) ? void 0 : a.errors.emoji) &&
               o.Z.show({
                   title: f.intl.string(f.t.T8sBLC),
-                  body: f.intl.string(f.t.aHt1BQ)
+                  body: f.intl.string(f.t.aHt1BQ),
               });
     }
 }
 let p = {
     resort(e) {
         i.Z.dispatch({
-            type: 'RESORT_THREADS',
-            channelId: e
+            type: "RESORT_THREADS",
+            channelId: e,
         });
     },
     createForumTag: (e, t) =>
@@ -41,9 +41,9 @@ let p = {
                 name: e.name,
                 emoji_id: e.emojiId,
                 emoji_name: null != e.emojiId ? void 0 : e.emojiName,
-                moderated: e.moderated
+                moderated: e.moderated,
             },
-            rejectWithError: !1
+            rejectWithError: !1,
         }),
     updateForumTag(e, t) {
         let n = r.tn.put({
@@ -52,32 +52,32 @@ let p = {
                 name: e.name,
                 emoji_id: e.emojiId,
                 emoji_name: null == e.emojiId ? e.emojiName : void 0,
-                moderated: e.moderated
+                moderated: e.moderated,
             },
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         _(() => n, f.intl.string(f.t.T8sBLC), f.intl.string(f.t.imcb5u));
     },
     deleteForumTag(e, t) {
         let n = r.tn.del({
             url: d.ANM.FORUM_TAG(e, t),
-            rejectWithError: !1
+            rejectWithError: !1,
         });
-        _(() => n, f.intl.string(f.t['0ZkNDQ']), f.intl.string(f.t.imcb5u));
+        _(() => n, f.intl.string(f.t["0ZkNDQ"]), f.intl.string(f.t.imcb5u));
     },
     updateForumPostTags: async (e, t) => (
         await a.Z.unarchiveThreadIfNecessary(e),
         r.tn.patch({
             url: d.ANM.CHANNEL(e),
             body: { applied_tags: t },
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     ),
     hideAdminOnboarding(e, t) {
         i.Z.dispatch({
-            type: 'ADMIN_ONBOARDING_GUIDE_HIDE',
+            type: "ADMIN_ONBOARDING_GUIDE_HIDE",
             channelId: e,
-            hide: t
+            hide: t,
         });
     },
     markPostAsSeen(e, t, n) {
@@ -92,39 +92,39 @@ let p = {
     },
     async searchForumPosts(e, t, n, r, o) {
         i.Z.dispatch({
-            type: 'FORUM_SEARCH_START',
-            channelId: t
+            type: "FORUM_SEARCH_START",
+            channelId: t,
         });
         try {
             let s = await a.Z.searchThreads(e, t, n, r, o);
-            ((0, u.Js)({
+            (0, u.Js)({
                 guildId: e,
                 channelId: t,
-                numSearchResults: s.length
+                numSearchResults: s.length,
             }),
                 i.Z.dispatch({
-                    type: 'FORUM_SEARCH_SUCCESS',
+                    type: "FORUM_SEARCH_SUCCESS",
                     channelId: t,
-                    threadIds: s
-                }));
+                    threadIds: s,
+                });
         } catch (e) {
             i.Z.dispatch({
-                type: 'FORUM_SEARCH_FAILURE',
-                channelId: t
+                type: "FORUM_SEARCH_FAILURE",
+                channelId: t,
             });
         }
     },
     updateForumSearchQuery(e, t) {
         i.Z.dispatch({
-            type: 'FORUM_SEARCH_QUERY_UPDATED',
+            type: "FORUM_SEARCH_QUERY_UPDATED",
             channelId: e,
-            query: t
+            query: t,
         });
     },
     clearForumSearch(e) {
         i.Z.dispatch({
-            type: 'FORUM_SEARCH_CLEAR',
-            channelId: e
+            type: "FORUM_SEARCH_CLEAR",
+            channelId: e,
         });
-    }
+    },
 };

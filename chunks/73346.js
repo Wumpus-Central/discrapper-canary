@@ -1,17 +1,17 @@
-(n.d(t, {
+n.d(t, {
     Gg: () => x,
     Kb: () => R,
     Ww: () => k,
     ZI: () => A,
     _W: () => N,
-    uF: () => P
+    uF: () => P,
 }),
     n(539854),
     n(388685),
     n(993155),
     n(415506),
     n(642613),
-    n(997841));
+    n(997841);
 var r = n(392711),
     i = n.n(r),
     o = n(913527),
@@ -39,7 +39,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -49,19 +49,19 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
-(n(388032), l().shim());
+n(388032), l().shim();
 let T = !c.tq && !c.Em && -1 !== (0, g.vu)(),
     S = 3;
 function A(e, t) {
@@ -69,11 +69,14 @@ function A(e, t) {
         l = {
             state: {
                 analyticsSource: n,
-                analyticsProperties: r
+                analyticsProperties: r,
             },
-            search: null != i ? '?store_listing_id='.concat(i) : ''
+            search: null != i ? "?store_listing_id=".concat(i) : "",
         };
-    return I({ pathname: null != a && null != s ? O.Z5c.CHANNEL(s, a, e) : O.Z5c.APPLICATION_STORE_LISTING_SKU(e, o) }, l);
+    return I(
+        { pathname: null != a && null != s ? O.Z5c.CHANNEL(s, a, e) : O.Z5c.APPLICATION_STORE_LISTING_SKU(e, o) },
+        l,
+    );
 }
 function N(e, t, n, r) {
     var i;
@@ -81,28 +84,28 @@ function N(e, t, n, r) {
         a = window.GLOBAL_ENV.CDN_HOST;
     if (null == r)
         switch (t.mimeType || t.mime_type) {
-            case 'video/quicktime':
-            case 'video/mp4':
-                r = 'mp4';
+            case "video/quicktime":
+            case "video/mp4":
+                r = "mp4";
                 break;
-            case 'image/gif':
-                r = 'gif';
+            case "image/gif":
+                r = "gif";
                 break;
             default:
-                r = 'webp';
+                r = "webp";
         }
-    'webp' !== r || T || (r = 'png');
-    let s = 'string' == typeof t ? t : t.id,
-        l = (i = 'https:');
+    "webp" !== r || T || (r = "png");
+    let s = "string" == typeof t ? t : t.id,
+        l = (i = "https:");
     return (
         (o =
             null != a
-                ? ''.concat(l, '//').concat(a, '/app-assets/').concat(e, '/store/').concat(s, '.').concat(r)
-                : ''
+                ? "".concat(l, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(s, ".").concat(r)
+                : ""
                       .concat(l)
                       .concat(window.GLOBAL_ENV.API_ENDPOINT)
                       .concat(O.ANM.STORE_ASSET(e, s, r))),
-        null != n && (o += '?size='.concat((0, f.oO)(n * (0, f.x_)()))),
+        null != n && (o += "?size=".concat((0, f.oO)(n * (0, f.x_)()))),
         o
     );
 }
@@ -114,7 +117,7 @@ function C() {
                 p.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
             };
             t();
-        } else (await (0, d.jg)(), e());
+        } else await (0, d.jg)(), e();
     });
 }
 async function R(e) {
@@ -123,24 +126,28 @@ async function R(e) {
         a = _.default.isAuthenticated();
     if (o && a) {
         let e = [];
-        (h.Z.hasFetchedPaymentSources || e.push(null != (n = p.Z.paymentSourcesFetchRequest) ? n : (0, d.tZ)()), p.Z.ipCountryCodeLoaded || e.push((0, d.GE)()), e.push(C()), await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]));
+        h.Z.hasFetchedPaymentSources || e.push(null != (n = p.Z.paymentSourcesFetchRequest) ? n : (0, d.tZ)()),
+            p.Z.ipCountryCodeLoaded || e.push((0, d.GE)()),
+            e.push(C()),
+            await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]);
     }
     let s = h.Z.getDefaultBillingCountryCode(),
         l = null != (r = null == (t = h.Z.defaultPaymentSource) ? void 0 : t.id) ? r : null,
         c = m.Z.getPremiumTypeSubscription();
-    (null != c && null != c.paymentSourceId && (l = c.paymentSourceId), null === s && (s = null != (i = p.Z.ipCountryCode) ? i : null));
+    null != c && null != c.paymentSourceId && (l = c.paymentSourceId),
+        null === s && (s = null != (i = p.Z.ipCountryCode) ? i : null);
     let f = {};
     if ((null != s && (f.country_code = s), null != l && (f.payment_source_id = l), null != s || null != l)) {
         if (
-            ('string' == typeof e &&
+            ("string" == typeof e &&
                 (e = {
                     url: e,
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 }),
-            'string' == typeof e.query)
+            "string" == typeof e.query)
         )
-            throw Error('string query not supported');
+            throw Error("string query not supported");
         e.query = I({}, f, e.query);
     }
     return u.tn.get(e);
@@ -160,7 +167,7 @@ function w(e, t, n) {
                     ? null
                     : {
                           user: n,
-                          startTime: i[n.id].startedPlaying
+                          startTime: i[n.id].startedPlaying,
                       };
             })
             .filter(b.lm)
@@ -169,7 +176,7 @@ function w(e, t, n) {
         ? null
         : {
               type: O.AzA.NOW_PLAYING,
-              userInfo: o
+              userInfo: o,
           };
 }
 function D(e, t, n) {
@@ -182,7 +189,7 @@ function D(e, t, n) {
                 ? null
                 : {
                       user: n,
-                      endTime: Date.parse(e.last_played_at)
+                      endTime: Date.parse(e.last_played_at),
                   };
         })
         .filter(b.lm)
@@ -191,7 +198,7 @@ function D(e, t, n) {
         ? null
         : {
               type: O.AzA.EVER_PLAYED,
-              userInfo: i
+              userInfo: i,
           };
 }
 let L = [];
@@ -228,20 +235,20 @@ function k(e, t, n) {
     let s = r.releaseDate;
     return (
         null != s &&
-            a()().diff(s, 'months') < S &&
+            a()().diff(s, "months") < S &&
             (r.accessType === O.kGb.EARLY_ACCESS
                 ? o.push({
                       type: O.AzA.EARLY_ACCESS,
-                      releaseDate: s
+                      releaseDate: s,
                   })
                 : o.push({
                       type: O.AzA.RECENT_RELEASE_DATE,
-                      releaseDate: s
+                      releaseDate: s,
                   })),
         null != i.flavorText &&
             o.push({
                 type: O.AzA.FLAVOR_TEXT,
-                flavorText: i.flavorText
+                flavorText: i.flavorText,
             }),
         o
     );

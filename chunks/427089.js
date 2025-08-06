@@ -1,68 +1,68 @@
 e.exports = function (e) {
     let t = e.regex,
         n = {
-            className: 'meta',
-            begin: '@[A-Za-z]+'
+            className: "meta",
+            begin: "@[A-Za-z]+",
         },
         r = {
-            className: 'subst',
+            className: "subst",
             variants: [
-                { begin: '\\$[A-Za-z0-9_]+' },
+                { begin: "\\$[A-Za-z0-9_]+" },
                 {
                     begin: /\$\{/,
-                    end: /\}/
-                }
-            ]
+                    end: /\}/,
+                },
+            ],
         },
         i = {
-            className: 'string',
+            className: "string",
             variants: [
                 {
                     begin: '"""',
-                    end: '"""'
+                    end: '"""',
                 },
                 {
                     begin: '"',
                     end: '"',
-                    illegal: '\\n',
-                    contains: [e.BACKSLASH_ESCAPE]
+                    illegal: "\\n",
+                    contains: [e.BACKSLASH_ESCAPE],
                 },
                 {
                     begin: '[a-z]+"',
                     end: '"',
-                    illegal: '\\n',
-                    contains: [e.BACKSLASH_ESCAPE, r]
+                    illegal: "\\n",
+                    contains: [e.BACKSLASH_ESCAPE, r],
                 },
                 {
-                    className: 'string',
+                    className: "string",
                     begin: '[a-z]+"""',
                     end: '"""',
                     contains: [r],
-                    relevance: 10
-                }
-            ]
+                    relevance: 10,
+                },
+            ],
         },
         o = {
-            className: 'type',
-            begin: '\\b[A-Z][A-Za-z0-9_]*',
-            relevance: 0
+            className: "type",
+            begin: "\\b[A-Z][A-Za-z0-9_]*",
+            relevance: 0,
         },
         a = {
-            className: 'title',
+            className: "title",
             begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
-            relevance: 0
+            relevance: 0,
         },
         s = {
-            className: 'class',
-            beginKeywords: 'class object trait type',
+            className: "class",
+            beginKeywords: "class object trait type",
             end: /[:={\[\n;]/,
             excludeEnd: !0,
             contains: [
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
                 {
-                    beginKeywords: 'extends with',
-                    relevance: 10
+                    beginKeywords: "extends with",
+                    relevance: 10,
                 },
                 {
                     begin: /\[/,
@@ -70,69 +70,70 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                    contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
                 },
                 {
-                    className: 'params',
+                    className: "params",
                     begin: /\(/,
                     end: /\)/,
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                    contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
                 },
-                a
-            ]
+                a,
+            ],
         },
         l = {
-            className: 'function',
-            beginKeywords: 'def',
+            className: "function",
+            beginKeywords: "def",
             end: t.lookahead(/[:={\[(\n;]/),
-            contains: [a]
+            contains: [a],
         },
         c = {
-            begin: [/^\s*/, 'extension', /\s+(?=[[(])/],
-            beginScope: { 2: 'keyword' }
+            begin: [/^\s*/, "extension", /\s+(?=[[(])/],
+            beginScope: { 2: "keyword" },
         },
         u = {
             begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/],
             beginScope: {
-                2: 'keyword',
-                4: 'keyword'
-            }
+                2: "keyword",
+                4: "keyword",
+            },
         },
         d = [
             { match: /\.inline\b/ },
             {
                 begin: /\binline(?=\s)/,
-                keywords: 'inline'
-            }
+                keywords: "inline",
+            },
         ],
         f = {
             begin: [/\(\s*/, /using/, /\s+(?!\))/],
-            beginScope: { 2: 'keyword' }
+            beginScope: { 2: "keyword" },
         };
     return {
-        name: 'Scala',
+        name: "Scala",
         keywords: {
-            literal: 'true false null',
-            keyword: 'type yield lazy override def with val var sealed abstract private trait object if then forSome for while do throw finally protected extends import final return else break new catch super class case package default try this match continue throws implicit export enum given transparent'
+            literal: "true false null",
+            keyword:
+                "type yield lazy override def with val var sealed abstract private trait object if then forSome for while do throw finally protected extends import final return else break new catch super class case package default try this match continue throws implicit export enum given transparent",
         },
         contains: [
             {
-                begin: ['//>', /\s+/, /using/, /\s+/, /\S+/],
+                begin: ["//>", /\s+/, /using/, /\s+/, /\S+/],
                 beginScope: {
-                    1: 'comment',
-                    3: 'keyword',
-                    5: 'type'
+                    1: "comment",
+                    3: "keyword",
+                    5: "type",
                 },
                 end: /$/,
                 contains: [
                     {
-                        className: 'string',
-                        begin: /\S+/
-                    }
-                ]
+                        className: "string",
+                        begin: /\S+/,
+                    },
+                ],
             },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
@@ -145,7 +146,7 @@ e.exports = function (e) {
             u,
             ...d,
             f,
-            n
-        ]
+            n,
+        ],
     };
 };

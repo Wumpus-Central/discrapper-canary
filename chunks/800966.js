@@ -19,7 +19,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,22 +37,22 @@ function m() {
         }).apply(this, arguments);
 }
 function g(e) {
-    if (null == e) throw TypeError('Cannot destructure ' + e);
+    if (null == e) throw TypeError("Cannot destructure " + e);
     return e;
 }
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -60,11 +60,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -85,58 +85,58 @@ function O(e) {
         (0, c.Z)(
             {
                 type: a.ImpressionTypes.VIEW,
-                name: a.ImpressionNames.HD_STREAMING_POPOUT
+                name: a.ImpressionNames.HD_STREAMING_POPOUT,
             },
             { disableTrack: t },
-            [t]
+            [t],
         ),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: o()(p.popoutContainer, { [p.hidden]: t }),
             children: [
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     className: p.image,
-                    src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
-                    alt: 'HD Streaming Nitro Perk'
+                    src: "https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png",
+                    alt: "HD Streaming Nitro Perk",
                 }),
                 (0, r.jsx)(s.zx, {
                     className: p.closeButton,
-                    'aria-label': _.intl.string(_.t.cpT0Cg),
+                    "aria-label": _.intl.string(_.t.cpT0Cg),
                     look: s.zx.Looks.BLANK,
                     size: s.zx.Sizes.NONE,
                     onClick: () => {
-                        (n(), u.default.track(f.rMx.HD_STREAMING_POPOUT_DISMISSED));
+                        n(), u.default.track(f.rMx.HD_STREAMING_POPOUT_DISMISSED);
                     },
                     children: (0, r.jsx)(l.Dio, {
-                        size: 'xs',
+                        size: "xs",
                         className: p.closeIcon,
-                        color: 'white'
-                    })
+                        color: "white",
+                    }),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: p.infoContainerParent,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: p.infoContainer,
                         children: [
                             (0, r.jsx)(l.Text, {
                                 className: p.infoText,
-                                variant: 'text-sm/medium',
-                                children: _.intl.format(_.t.ruvD7u, {})
+                                variant: "text-sm/medium",
+                                children: _.intl.format(_.t.ruvD7u, {}),
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: p.poweredByNitroContainer,
                                 children: [
-                                    (0, r.jsx)(l.SrA, { size: 'xs' }),
+                                    (0, r.jsx)(l.SrA, { size: "xs" }),
                                     (0, r.jsx)(l.Text, {
                                         className: p.infoText,
-                                        variant: 'text-sm/medium',
-                                        children: _.intl.string(_.t['BMw+7O'])
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                })
-            ]
+                                        variant: "text-sm/medium",
+                                        children: _.intl.string(_.t["BMw+7O"]),
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                }),
+            ],
         })
     );
 }

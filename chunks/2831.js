@@ -7,16 +7,27 @@ var r = n(444675);
             a = !1,
             s = e.document,
             l = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        ((l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? _() : p() ? h() : e.MessageChannel ? m() : s && 'onreadystatechange' in s.createElement('script') ? g() : E(), (l.setImmediate = c), (l.clearImmediate = u));
+        (l = l && l.setTimeout ? l : e),
+            "[object process]" === {}.toString.call(e.process)
+                ? _()
+                : p()
+                  ? h()
+                  : e.MessageChannel
+                    ? m()
+                    : s && "onreadystatechange" in s.createElement("script")
+                      ? g()
+                      : E(),
+            (l.setImmediate = c),
+            (l.clearImmediate = u);
     }
     function c(e) {
-        'function' != typeof e && (e = Function('' + e));
+        "function" != typeof e && (e = Function("" + e));
         for (var t = Array(arguments.length - 1), r = 0; r < t.length; r++) t[r] = arguments[r + 1];
         var a = {
             callback: e,
-            args: t
+            args: t,
         };
-        return ((o[i] = a), n(i), i++);
+        return (o[i] = a), n(i), i++;
     }
     function u(e) {
         delete o[e];
@@ -50,7 +61,7 @@ var r = n(444675);
                 try {
                     d(t);
                 } finally {
-                    (u(e), (a = !1));
+                    u(e), (a = !1);
                 }
             }
         }
@@ -70,39 +81,39 @@ var r = n(444675);
                 (e.onmessage = function () {
                     t = !1;
                 }),
-                e.postMessage('', '*'),
+                e.postMessage("", "*"),
                 (e.onmessage = n),
                 t
             );
         }
     }
     function h() {
-        var t = 'setImmediate$' + Math.random() + '$',
+        var t = "setImmediate$" + Math.random() + "$",
             r = function (n) {
-                n.source === e && 'string' == typeof n.data && 0 === n.data.indexOf(t) && f(+n.data.slice(t.length));
+                n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && f(+n.data.slice(t.length));
             };
-        (e.addEventListener ? e.addEventListener('message', r, !1) : e.attachEvent('onmessage', r),
+        e.addEventListener ? e.addEventListener("message", r, !1) : e.attachEvent("onmessage", r),
             (n = function (n) {
-                e.postMessage(t + n, '*');
-            }));
+                e.postMessage(t + n, "*");
+            });
     }
     function m() {
         var e = new MessageChannel();
-        ((e.port1.onmessage = function (e) {
+        (e.port1.onmessage = function (e) {
             f(e.data);
         }),
             (n = function (t) {
                 e.port2.postMessage(t);
-            }));
+            });
     }
     function g() {
         var e = s.documentElement;
         n = function (t) {
-            var n = s.createElement('script');
-            ((n.onreadystatechange = function () {
-                (f(t), (n.onreadystatechange = null), e.removeChild(n), (n = null));
+            var n = s.createElement("script");
+            (n.onreadystatechange = function () {
+                f(t), (n.onreadystatechange = null), e.removeChild(n), (n = null);
             }),
-                e.appendChild(n));
+                e.appendChild(n);
         };
     }
     function E() {
@@ -110,4 +121,4 @@ var r = n(444675);
             setTimeout(f, 0, e);
         };
     }
-})('undefined' == typeof self ? (void 0 === n.g ? this : n.g) : self);
+})("undefined" == typeof self ? (void 0 === n.g ? this : n.g) : self);

@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     $0: () => R,
     AN: () => k,
     Ct: () => A,
@@ -27,9 +27,9 @@
     uw: () => N,
     wN: () => G,
     zZ: () => U,
-    zm: () => x
+    zm: () => x,
 }),
-    n(49124));
+    n(49124);
 var r = n(848246),
     i = n(710845),
     o = n(380684),
@@ -37,23 +37,34 @@ var r = n(848246),
     s = n(526998),
     l = n(575691),
     c = n(474936);
-let u = new i.Z('ProductCatalog.tsx'),
+let u = new i.Z("ProductCatalog.tsx"),
     d = Object.freeze({
         [c.p9.TIER_0]: c.Si.TIER_0,
         [c.p9.TIER_1]: c.Si.TIER_1,
-        [c.p9.TIER_2]: c.Si.TIER_2
+        [c.p9.TIER_2]: c.Si.TIER_2,
     });
 function f(e, t) {
     if (null == t || null == t.premiumType) return !1;
     try {
         let n = d[t.premiumType];
-        if (null == n) return (u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1);
+        if (null == n)
+            return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
         let r = F[n];
-        if (null == r) return (u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1);
+        if (null == r)
+            return (
+                u.warn(
+                    "Cannot find the corresponding product catalog entry to the user's SKU "
+                        .concat(n, " and premium type ")
+                        .concat(t.premiumType),
+                ),
+                !1
+            );
         return r.skuFeatures.includes(e);
     } catch (e) {
         var n;
-        u.error("Error while retrieving user's feature access: ".concat(null != (n = e.message) ? n : JSON.stringify(e)));
+        u.error(
+            "Error while retrieving user's feature access: ".concat(null != (n = e.message) ? n : JSON.stringify(e)),
+        );
     }
     return !1;
 }
@@ -71,32 +82,61 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     y = new _(r.q.ANIMATED_AVATAR),
     O = new _(r.q.CUSTOM_DISCRIMINATOR),
     v = new _(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
-    I = new _('profileBadges'),
-    T = new _(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
-    S = new _('collectibles'),
-    A = new _('appIcons'),
+    I = new _("profileBadges"),
+    T = new _(r.q.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
+    S = new _("collectibles"),
+    A = new _("appIcons"),
     N = new _(r.q.CLIENT_THEMES),
-    C = new _('boostDiscount'),
-    R = new _('freeBoosts'),
+    C = new _("boostDiscount"),
+    R = new _("freeBoosts"),
     P = new _(r.q.STREAM_MID_QUALITY),
     w = new _(r.q.STREAM_HIGH_QUALITY),
     D = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
-    L = new _('fancyVoiceChannelReactions'),
-    x = new _('installPremiumApplications'),
-    M = new _('redeemPremiumPerks'),
+    L = new _("fancyVoiceChannelReactions"),
+    x = new _("installPremiumApplications"),
+    M = new _("redeemPremiumPerks"),
     k = new _(r.q.VIDEO_FILTER_ASSETS);
 new a.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, o.h);
 let j = new _(r.q.INCREASED_GUILD_LIMIT),
     U = new _(r.q.INCREASED_MESSAGE_LENGTH),
-    G = new _('increasedVideoUploadQuality'),
-    B = new _('uploadLargeFiles'),
+    G = new _("increasedVideoUploadQuality"),
+    B = new _("uploadLargeFiles"),
     Z = new _(r.q.CHAT_WALLPAPERS),
     F = Object.freeze({
         [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, k, G, B, A]),
         [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, C, P, L, G, B, A]),
-        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, O, v, I, T, N, C, R, P, w, L, x, M, k, j, U, G, B, A, S, D, b, Z])
+        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [
+            p,
+            h,
+            m,
+            g,
+            E,
+            y,
+            O,
+            v,
+            I,
+            T,
+            N,
+            C,
+            R,
+            P,
+            w,
+            L,
+            x,
+            M,
+            k,
+            j,
+            U,
+            G,
+            B,
+            A,
+            S,
+            D,
+            b,
+            Z,
+        ]),
     }),
     V = [C, R];
 function H(e, t, n) {
-    return !((0, s.U)('canUserUse', t) || (null !== n && n === c.a$.FP_ONLY && V.includes(e))) && e.getFeatureValue(t);
+    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && V.includes(e))) && e.getFeatureValue(t);
 }

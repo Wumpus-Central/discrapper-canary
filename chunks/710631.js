@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(539854), n(388685));
+n.d(t, { Z: () => C }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,9 +68,9 @@ function I(e, t) {
         e
     );
 }
-let T = 'max_uses',
-    S = 'User Invite Context Menu',
-    A = 'context_menu';
+let T = "max_uses",
+    S = "User Invite Context Menu",
+    A = "context_menu";
 function N(e, t) {
     s.Z.ensurePrivateChannel(e).then((e) => {
         null != d.Z.getChannel(e) && c.Z.sendInvite(e, t, A, null);
@@ -79,40 +79,37 @@ function N(e, t) {
 function C(e) {
     let { user: t, guildId: n, onAction: s } = e,
         c = (0, o.e7)([g.default], () => g.default.getCurrentUser(), []),
-        d = (0, o.Wu)(
-            [m.ZP, _.Z, p.Z],
-            () => {
-                let e = m.ZP.getFlattenedGuildIds(),
-                    t = [];
-                return (
-                    e.forEach((e) => {
-                        let r = _.Z.getGuild(e);
-                        null != r && (0, u.b)(p.Z, r) && r.id !== n && t.push(r);
-                    }),
-                    t
-                );
-            },
-            [n]
-        ),
+        d = (0, o.Wu)([m.ZP, _.Z, p.Z], () => {
+            let e = m.ZP.getFlattenedGuildIds(),
+                t = [];
+            return (
+                e.forEach((e) => {
+                    let r = _.Z.getGuild(e);
+                    null != r && (0, u.b)(p.Z, r) && r.id !== n && t.push(r);
+                }),
+                t
+            );
+        }, [n]),
         [y, v] = i.useState({});
     function A(e, t) {
         let n = f.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
         if (null != n) {
-            if ((v(I(O({}, y), { [e.id]: !0 })), !p.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)) return void N(t, e.vanityURLCode);
+            if ((v(I(O({}, y), { [e.id]: !0 })), !p.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode))
+                return void N(t, e.vanityURLCode);
             l.ZP.createInvite(
                 n.id,
                 {
                     [T]: 1,
-                    unique: !0
+                    unique: !0,
                 },
-                S
+                S,
             ).then((e) => N(t, e.code));
         }
     }
     return (null == c ? void 0 : c.id) === t.id || t.bot || 0 === d.length || h.Z.isBlockedOrIgnored(t.id)
         ? null
         : (0, r.jsx)(a.sNh, {
-              id: 'invite-to-server',
+              id: "invite-to-server",
               label: b.intl.string(b.t.Sd8Ix8),
               children: d.map((e) =>
                   y[e.id]
@@ -121,9 +118,9 @@ function C(e) {
                             {
                                 id: e.id,
                                 disabled: !0,
-                                label: b.intl.string(b.t.PuLLzM)
+                                label: b.intl.string(b.t.PuLLzM),
                             },
-                            e.id
+                            e.id,
                         )
                       : (0, r.jsx)(
                             a.sNh,
@@ -131,11 +128,11 @@ function C(e) {
                                 id: e.id,
                                 label: e.name,
                                 action: () => {
-                                    (null == s || s(), A(e, t.id));
-                                }
+                                    null == s || s(), A(e, t.id);
+                                },
                             },
-                            e.id
-                        )
-              )
+                            e.id,
+                        ),
+              ),
           });
 }

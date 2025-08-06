@@ -10,40 +10,40 @@ var r = a(442837),
     d = a(616257);
 let u = [
     {
-        key: 'user',
+        key: "user",
         cellClassName: c.userCell,
         render(e) {
             var t;
             let { user: a, key: n } = e;
             return null != (t = null == a ? void 0 : a.username) ? t : n;
-        }
+        },
     },
     {
-        key: 'affinity',
+        key: "affinity",
         renderHeader: () =>
             (0, n.jsx)(l.Text, {
-                variant: 'text-sm/semibold',
-                children: 'COMMUNICATION AFFINITY'
+                variant: "text-sm/semibold",
+                children: "COMMUNICATION AFFINITY",
             }),
         cellClassName: c.affinityCell,
         render(e) {
             let { affinity: t } = e;
             return t.toFixed(5);
-        }
+        },
     },
     {
-        key: 'vcProbability',
+        key: "vcProbability",
         renderHeader: () =>
             (0, n.jsx)(l.Text, {
-                variant: 'text-sm/semibold',
-                children: 'VOICE AFFINITY'
+                variant: "text-sm/semibold",
+                children: "VOICE AFFINITY",
             }),
         cellClassName: c.affinityCell,
         render(e) {
             let { vcProbability: t } = e;
             return t.toFixed(5);
-        }
-    }
+        },
+    },
 ];
 function m() {
     let e = (0, r.Wu)([i.Z, s.default], () =>
@@ -53,9 +53,9 @@ function m() {
                 user: s.default.getUser(t),
                 affinity: a,
                 vcProbability: n,
-                key: t
+                key: t,
             };
-        })
+        }),
     );
     return 0 === e.length
         ? null
@@ -63,6 +63,6 @@ function m() {
               className: d.panel,
               columns: u,
               rowClassName: c.row,
-              data: e
+              data: e,
           });
 }

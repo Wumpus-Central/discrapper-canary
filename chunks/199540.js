@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,9 +16,9 @@ function g(e) {
         i = (0, s.e7)([d.Z], () => d.Z.getGuild(t), [t]),
         l = (0, a.dQu)(a.TVs.modules.guildbar.AVATAR_SIZE);
     return null == i
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: o()(f.folderPreviewGuildIcon, f.folderPreviewGuildIconError),
-              children: (0, r.jsx)(a.Mgn, { color: 'currentColor' })
+              children: (0, r.jsx)(a.Mgn, { color: "currentColor" }),
           })
         : (0, r.jsx)(u.Z, {
               guild: i,
@@ -27,46 +27,46 @@ function g(e) {
               iconSize: l,
               lossless: !0,
               className: f.folderPreviewGuildIcon,
-              tabIndex: -1
+              tabIndex: -1,
           });
 }
 function m(e) {
     let { folderNode: t, hovered: n, sorting: i } = e,
         { children: l } = t,
         s = n && i,
-        c = (0, r.jsx)('div', {
+        c = (0, r.jsx)("div", {
             className: f.folderIconWrapper,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: f.folderIcon,
                 children: (0, r.jsx)(a.ROc, {
-                    size: 'sm',
-                    color: 'currentColor'
-                })
-            })
+                    size: "sm",
+                    color: "currentColor",
+                }),
+            }),
         }),
-        u = (0, r.jsx)('div', {
+        u = (0, r.jsx)("div", {
             className: f.folderPreviewWrapper,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: f.folderPreview,
                 children: l.slice(0, 4).map((e) =>
                     (0, r.jsx)(
                         g,
                         {
                             guildId: e.id,
-                            animate: n
+                            animate: n,
                         },
-                        e.id
-                    )
-                )
-            })
+                        e.id,
+                    ),
+                ),
+            }),
         });
-    return (0, r.jsxs)('div', {
-        'aria-hidden': !0,
+    return (0, r.jsxs)("div", {
+        "aria-hidden": !0,
         className: o()({
             [f.folderDragPreview]: s,
-            [f.folderButtonContent]: !s
+            [f.folderButtonContent]: !s,
         }),
-        children: [!s && c, u]
+        children: [!s && c, u],
     });
 }
 function b(e) {
@@ -86,8 +86,8 @@ function b(e) {
             onHoverChange: v,
             onKeyDown: j,
             treeItemProps: { onFocus: E },
-            'aria-setsize': S,
-            'aria-posinset': x
+            "aria-setsize": S,
+            "aria-posinset": x,
         } = e,
         I = (function (e, t) {
             if (null == e) return {};
@@ -99,21 +99,23 @@ function b(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e.treeItemProps, ['onFocus']),
+        })(e.treeItemProps, ["onFocus"]),
         [P, N] = i.useState(!1),
         w = i.useCallback(() => {
-            (s || N(!0), null == v || v(!0));
+            s || N(!0), null == v || v(!0);
         }, [s, v]),
         Z = i.useCallback(() => {
-            (s || N(!1), null == v || v(!1));
+            s || N(!1), null == v || v(!1);
         }, [s, v]),
         T = o || null == u ? null : (0, h.Or)(u),
         A = !o && d > 0 ? (0, h.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
@@ -124,24 +126,24 @@ function b(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })(
@@ -153,17 +155,17 @@ function b(e) {
                     onMouseLeave: Z,
                     onKeyDown: j,
                     onFocus: E,
-                    focusProps: { enabled: !1 }
+                    focusProps: { enabled: !1 },
                 },
-                I
+                I,
             )),
             (n = n =
                 {
-                    role: 'treeitem',
-                    'aria-setsize': S,
-                    'aria-posinset': x,
-                    'aria-expanded': o,
-                    'aria-owns': O,
+                    role: "treeitem",
+                    "aria-setsize": S,
+                    "aria-posinset": x,
+                    "aria-expanded": o,
+                    "aria-owns": O,
                     children: (0, r.jsxs)(a.aRk, {
                         isFolder: !0,
                         upperBadge: T,
@@ -171,27 +173,27 @@ function b(e) {
                         lowerBadgeSize: { width: (0, a.OVM)(d) },
                         children: [
                             (0, r.jsx)(a.nn4, {
-                                children: p.intl.formatToPlainString(p.t['90/DwM'], {
+                                children: p.intl.formatToPlainString(p.t["90/DwM"], {
                                     folderName: b,
-                                    mentions: d
-                                })
+                                    mentions: d,
+                                }),
                             }),
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: f.folderButtonInner,
                                 children:
                                     null != _
-                                        ? (0, r.jsx)('div', {
+                                        ? (0, r.jsx)("div", {
                                               className: f.folderIconWrapper,
-                                              children: _
+                                              children: _,
                                           })
                                         : (0, r.jsx)(m, {
                                               folderNode: l,
                                               hovered: P,
-                                              sorting: s
-                                          })
-                            })
-                        ]
-                    })
+                                              sorting: s,
+                                          }),
+                            }),
+                        ],
+                    }),
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -205,7 +207,7 @@ function b(e) {
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            t)
-        )
+            t),
+        ),
     });
 }

@@ -11,7 +11,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -37,11 +37,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,7 +63,8 @@ function d(e, t) {
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -73,39 +74,39 @@ function f(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let _ = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
-        h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
+        { size: s = "md", width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = "" } = e,
+        h = d(e, ["size", "width", "height", "color", "colorClass"]);
     let m = (0, a.m)(s),
         g = null != (t = null == m ? void 0 : m.width) ? t : c,
         E = null != (n = null == m ? void 0 : m.height) ? n : f;
     return (0, r.jsxs)(
-        'svg',
+        "svg",
         u(l({}, (0, o.Z)(h)), {
-            xmlns: 'http://www.w3.org/2000/svg',
+            xmlns: "http://www.w3.org/2000/svg",
             width: g,
             height: E,
-            fill: 'none',
-            viewBox: '0 0 24 24',
+            fill: "none",
+            viewBox: "0 0 24 24",
             children: [
-                (0, r.jsx)('path', {
-                    fill: 'string' == typeof _ ? _ : _.css,
-                    d: 'M6.69 2A3 3 0 0 0 3.7 4.67l-.33 3A3 3 0 0 0 6.35 11H7V9a1 1 0 0 1 2 0v2h6V9a1 1 0 1 1 2 0v2h.65a3.05 3.05 0 0 0 .9-.14 3 3 0 0 0 2.08-3.2l-.33-3A3 3 0 0 0 17.3 2H6.7Z',
-                    className: p
+                (0, r.jsx)("path", {
+                    fill: "string" == typeof _ ? _ : _.css,
+                    d: "M6.69 2A3 3 0 0 0 3.7 4.67l-.33 3A3 3 0 0 0 6.35 11H7V9a1 1 0 0 1 2 0v2h6V9a1 1 0 1 1 2 0v2h.65a3.05 3.05 0 0 0 .9-.14 3 3 0 0 0 2.08-3.2l-.33-3A3 3 0 0 0 17.3 2H6.7Z",
+                    className: p,
                 }),
-                (0, r.jsx)('path', {
-                    fill: 'string' == typeof _ ? _ : _.css,
-                    fillRule: 'evenodd',
-                    d: 'M15 13v1a1 1 0 1 0 2 0v-1h.65c1.43 0 2.72-.6 3.62-1.56l.04.22.68 5.88A4 4 0 0 1 18 22H6A4 4 0 0 1 2 17.54l.68-5.88.04-.22c.9.96 2.19 1.56 3.62 1.56H7v1a1 1 0 1 0 2 0v-1h6Zm-6 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z',
-                    clipRule: 'evenodd',
-                    className: p
-                })
-            ]
-        })
+                (0, r.jsx)("path", {
+                    fill: "string" == typeof _ ? _ : _.css,
+                    fillRule: "evenodd",
+                    d: "M15 13v1a1 1 0 1 0 2 0v-1h.65c1.43 0 2.72-.6 3.62-1.56l.04.22.68 5.88A4 4 0 0 1 18 22H6A4 4 0 0 1 2 17.54l.68-5.88.04-.22c.9.96 2.19 1.56 3.62 1.56H7v1a1 1 0 1 0 2 0v-1h6Zm-6 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z",
+                    clipRule: "evenodd",
+                    className: p,
+                }),
+            ],
+        }),
     );
 };

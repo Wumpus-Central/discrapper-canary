@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(457542));
+n.d(t, { Z: () => m }), n(388685), n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -17,7 +17,7 @@ let m = (e) => {
         [m, b] = i.useState(f.hO.INITIAL),
         [_, O] = i.useState(null != n);
     i.useEffect(() => {
-        null != n && a.ZP.resolveInvite(n, 'Hub').finally(() => O(!1));
+        null != n && a.ZP.resolveInvite(n, "Hub").finally(() => O(!1));
     }, [n]);
     let E = (0, l.e7)([u.Z], () => (null != n ? u.Z.getInvite(n) : null)),
         y = (0, l.e7)([c.Z], () => c.Z.getGuild(t));
@@ -28,7 +28,7 @@ let m = (e) => {
             b((t) => Math.max(t, e));
         }, []),
         I = (0, d.gK)();
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: g.page,
         children: (0, r.jsxs)(o.Z, {
             embedded: !0,
@@ -37,12 +37,12 @@ let m = (e) => {
             showLogo: !1,
             updateWaveState: v,
             children: [
-                (0, r.jsx)('div', { className: g.dragRegion }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", { className: g.dragRegion }),
+                (0, r.jsx)("div", {
                     className: g.contentWrapper,
-                    children: !_ && (0, r.jsx)(p.H, { invite: E })
-                })
-            ]
-        })
+                    children: !_ && (0, r.jsx)(p.H, { invite: E }),
+                }),
+            ],
+        }),
     });
 };

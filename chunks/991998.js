@@ -3,7 +3,14 @@ var r = n(528734),
     i = n(995638),
     o = n(951516);
 function a(e, t) {
-    var n = e.getFullYear() - t.getFullYear() || e.getMonth() - t.getMonth() || e.getDate() - t.getDate() || e.getHours() - t.getHours() || e.getMinutes() - t.getMinutes() || e.getSeconds() - t.getSeconds() || e.getMilliseconds() - t.getMilliseconds();
+    var n =
+        e.getFullYear() - t.getFullYear() ||
+        e.getMonth() - t.getMonth() ||
+        e.getDate() - t.getDate() ||
+        e.getHours() - t.getHours() ||
+        e.getMinutes() - t.getMinutes() ||
+        e.getSeconds() - t.getSeconds() ||
+        e.getMilliseconds() - t.getMilliseconds();
     return n < 0 ? -1 : n > 0 ? 1 : n;
 }
 function s(e, t) {

@@ -7,9 +7,9 @@ var i = n(481060),
 function s(e) {
     let { analyticsSection: t, buttonText: n } = e;
     return (0, r.jsx)(i.zxk, {
-        variant: 'expressive',
+        variant: "expressive",
         icon: i.SrA,
-        text: null != n ? n : a.intl.string(a.t['8Sh5fn']),
-        onClick: () => (0, o.Z)({ section: t })
+        text: null != n ? n : a.intl.string(a.t["8Sh5fn"]),
+        onClick: () => (0, o.Z)({ section: t }),
     });
 }

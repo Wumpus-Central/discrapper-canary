@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r,
     i = n(512722),
     o = n.n(i),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,30 +62,30 @@ let _ = null,
 function h(e) {
     let t = p.get(e);
     return null == t
-        ? (console.warn('Window state not initialized', e),
+        ? (console.warn("Window state not initialized", e),
           {
               isElementFullscreen: !1,
               focused: !1,
               windowSize: {
                   width: 0,
-                  height: 0
+                  height: 0,
               },
-              visible: !1
+              visible: !1,
           })
         : t;
 }
 function m(e) {
-    o()(!p.has(e.windowId), 'Window initialized multiple times');
+    o()(!p.has(e.windowId), "Window initialized multiple times");
     let { width: t, height: n, isElementFullscreen: r, focused: i, visible: a } = e;
     return (
         p.set(e.windowId, {
             windowSize: {
                 width: t,
-                height: n
+                height: n,
             },
             isElementFullscreen: r,
             focused: i,
-            visible: a
+            visible: a,
         }),
         i && (_ = e.windowId),
         !0
@@ -93,11 +93,17 @@ function m(e) {
 }
 function g(e) {
     let t = h(e.windowId);
-    return t.isElementFullscreen !== e.isElementFullscreen && (p.set(e.windowId, f(u({}, t), { isElementFullscreen: e.isElementFullscreen })), !0);
+    return (
+        t.isElementFullscreen !== e.isElementFullscreen &&
+        (p.set(e.windowId, f(u({}, t), { isElementFullscreen: e.isElementFullscreen })), !0)
+    );
 }
 function E(e) {
     let t = h(e.windowId);
-    return t.focused !== e.focused && (e.focused && (_ = e.windowId), p.set(e.windowId, f(u({}, t), { focused: e.focused })), !0);
+    return (
+        t.focused !== e.focused &&
+        (e.focused && (_ = e.windowId), p.set(e.windowId, f(u({}, t), { focused: e.focused })), !0)
+    );
 }
 function b(e) {
     let t = h(e.windowId);
@@ -112,15 +118,15 @@ function y(e) {
             f(u({}, t), {
                 windowSize: {
                     width: e.width,
-                    height: e.height
-                }
-            })
+                    height: e.height,
+                },
+            }),
         ),
         !0)
     );
 }
 function O(e) {
-    return (p.delete(e.windowId), _ === e.windowId && (_ = null), !0);
+    return p.delete(e.windowId), _ === e.windowId && (_ = null), !0;
 }
 class v extends (r = a.ZP.Store) {
     isFocused() {
@@ -155,14 +161,14 @@ class v extends (r = a.ZP.Store) {
         return h(e).windowSize;
     }
 }
-c(v, 'displayName', 'WindowStore');
+c(v, "displayName", "WindowStore");
 let I = new v(s.Z, {
     WINDOW_INIT: m,
     WINDOW_FULLSCREEN_CHANGE: g,
     WINDOW_FOCUS: E,
     WINDOW_RESIZED: y,
     WINDOW_UNLOAD: O,
-    WINDOW_VISIBILITY_CHANGE: b
+    WINDOW_VISIBILITY_CHANGE: b,
 });
 Promise.resolve()
     .then(n.bind(n, 626135))
@@ -170,9 +176,9 @@ Promise.resolve()
         let { addExtraAnalyticsDecorator: t } = e;
         t((e) => {
             {
-                e.client_app_state = I.isAppFocused() ? 'focused' : 'unfocused';
+                e.client_app_state = I.isAppFocused() ? "focused" : "unfocused";
                 let t = I.windowSize();
-                ((e.client_viewport_width = t.width), (e.client_viewport_height = t.height));
+                (e.client_viewport_width = t.width), (e.client_viewport_height = t.height);
             }
         });
     });

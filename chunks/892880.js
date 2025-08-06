@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => h }), n(539854), n(388685));
+n.d(t, { Z: () => h }), n(539854), n(388685);
 var i = n(31775),
     o = n.n(i),
     a = n(749210),
@@ -10,7 +10,7 @@ var i = n(31775),
     d = n(388032);
 let f = new (o())({ maxAge: +c.Z.Millis.MINUTE });
 function _(e, t, n) {
-    (null != r && clearTimeout(r),
+    null != r && clearTimeout(r),
         (r = setTimeout(() => {
             let r = [],
                 i = (e) => {
@@ -27,10 +27,10 @@ function _(e, t, n) {
                 null != t && i(t);
             }
             r.length > 0 && a.Z.requestMembers(r, t.toLocaleLowerCase(), n);
-        }, 200)));
+        }, 200));
 }
 function p(e, t) {
-    let n = ''.concat(null != e ? e : '', ':').concat(t),
+    let n = "".concat(null != e ? e : "", ":").concat(t),
         r = f.get(n);
     if (null != r) return r;
     f.set(n, !0);
@@ -39,18 +39,22 @@ let h = {
     getGuildNameSuggestion: function (e) {
         let t = l.default.getCurrentUser(),
             n = u.oY(t);
-        return null == n || 0 === n.length ? '' : d.intl.formatToPlainString(d.t.Y6Qfjo, { username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n });
+        return null == n || 0 === n.length
+            ? ""
+            : d.intl.formatToPlainString(d.t.Y6Qfjo, {
+                  username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n,
+              });
     },
     requestMembers(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
             r = Array.isArray(e),
             i = [],
             o = !1;
-        (r
+        r
             ? e.forEach((e) => {
                   null == p(e, t) && i.push(e);
               })
             : null == p(e, t) && (o = !0),
-            i.length > 0 && r ? _(i, t, n) : o && _(e, t, n));
-    }
+            i.length > 0 && r ? _(i, t, n) : o && _(e, t, n);
+    },
 };

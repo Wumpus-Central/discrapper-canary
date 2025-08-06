@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282));
+n.d(t, { Z: () => T }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
 var r = n(255367),
     a = n(73800),
     i = n(114858),
@@ -36,16 +36,17 @@ function T(e) {
         {
             query: w,
             page: D,
-            categoryId: k
+            categoryId: k,
         } = a.useMemo(() => {
             var e, t;
             let n = new URLSearchParams(R.search),
-                r = n.get('page'),
+                r = n.get("page"),
                 a = null != r ? Number(r) : 1;
             return {
-                query: null != (e = n.get('q')) ? e : '',
+                query: null != (e = n.get("q")) ? e : "",
                 page: a,
-                categoryId: null != (t = Number(n.get('category_id'))) ? t : P.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
+                categoryId:
+                    null != (t = Number(n.get("category_id"))) ? t : P.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID,
             };
         }, [R.search]),
         M = (0, o.e7)([_.Z], () => _.Z.getCategories()),
@@ -58,19 +59,19 @@ function T(e) {
                     current_page: y.m_.SEARCH,
                     result_page: D,
                     category: null == G ? void 0 : G.name,
-                    category_id: null == G ? void 0 : G.id
+                    category_id: null == G ? void 0 : G.id,
                 });
             },
-            [w, D, null == G ? void 0 : G.name, null == G ? void 0 : G.id]
+            [w, D, null == G ? void 0 : G.name, null == G ? void 0 : G.id],
         );
     a.useEffect(() => {
         var e;
-        (null == (e = L.current) || e.scrollTo({ to: 0 }),
+        null == (e = L.current) || e.scrollTo({ to: 0 }),
             w !== Z.current &&
                 ((Z.current = w),
                 h.yC({
                     query: w,
-                    options: { source: s.F.APP_DIRECTORY }
+                    options: { source: s.F.APP_DIRECTORY },
                 })),
             h.yC({
                 query: w,
@@ -78,10 +79,10 @@ function T(e) {
                     categoryId: k,
                     page: D,
                     pageSize: P.PAGE_SIZE,
-                    source: s.F.APP_DIRECTORY
+                    source: s.F.APP_DIRECTORY,
                 },
-                onSuccessCallback: B
-            }));
+                onSuccessCallback: B,
+            });
     }, [k, D, w, B]);
     let { fetchState: U, searchResults: z } = (0, o.cj)([b.Z], () => ({
             fetchState: b.Z.getFetchState({
@@ -89,44 +90,44 @@ function T(e) {
                 categoryId: k,
                 page: D,
                 pageSize: P.PAGE_SIZE,
-                source: s.F.APP_DIRECTORY
+                source: s.F.APP_DIRECTORY,
             }),
             searchResults: b.Z.getSearchResults({
                 query: w,
                 categoryId: k,
                 page: D,
                 pageSize: P.PAGE_SIZE,
-                source: s.F.APP_DIRECTORY
-            })
+                source: s.F.APP_DIRECTORY,
+            }),
         })),
         F = (0, o.cj)([b.Z], () => {
             let e = b.Z.getSearchResults({
                 query: w,
-                source: s.F.APP_DIRECTORY
+                source: s.F.APP_DIRECTORY,
             });
             return null != e
                 ? (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},
                               r = Object.keys(n);
-                          ('function' == typeof Object.getOwnPropertySymbols &&
+                          "function" == typeof Object.getOwnPropertySymbols &&
                               (r = r.concat(
                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                  })
+                                  }),
                               )),
                               r.forEach(function (t) {
                                   var r;
-                                  ((r = n[t]),
+                                  (r = n[t]),
                                       t in e
                                           ? Object.defineProperty(e, t, {
                                                 value: r,
                                                 enumerable: !0,
                                                 configurable: !0,
-                                                writable: !0
+                                                writable: !0,
                                             })
-                                          : (e[t] = r));
-                              }));
+                                          : (e[t] = r);
+                              });
                       }
                       return e;
                   })({ [x.MU]: e.totalCount }, e.countsByCategory)
@@ -139,70 +140,71 @@ function T(e) {
                 (0, I.pR)({
                     query: w,
                     categoryId: k,
-                    page: e
+                    page: e,
                 });
             },
-            [k, w]
+            [k, w],
         ),
         W = a.useCallback(
             (e) => {
-                ((0, v.zZ)(E.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
+                (0, v.zZ)(E.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                     category: e.name,
                     category_id: e.id,
-                    current_page: y.m_.SEARCH
+                    current_page: y.m_.SEARCH,
                 }),
                     (0, I.pR)({
                         query: w,
-                        categoryId: e.id
-                    }));
+                        categoryId: e.id,
+                    });
             },
-            [w]
+            [w],
         ),
         X = a.useCallback(
             (e, t) => {
-                ((0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+                (0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: y.m_.SEARCH,
                     application_id: e,
                     load_id: null == H ? void 0 : H.loadId,
                     search_term: w,
-                    position: t
+                    position: t,
                 }),
-                    n(e));
+                    n(e);
             },
-            [null == H ? void 0 : H.loadId, n, w]
+            [null == H ? void 0 : H.loadId, n, w],
         ),
         K = (0, g.K)();
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: N.container,
         children: [
             (0, r.jsx)(p.Z, {
                 ref: L,
                 onScroll: T,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: N.innerContainer,
                     children: [
-                        A ? null : (0, r.jsx)('div', { className: N.centeringBuffer }),
+                        A ? null : (0, r.jsx)("div", { className: N.centeringBuffer }),
                         (0, r.jsx)(u.Z, {
-                            children: (0, r.jsxs)('div', {
+                            children: (0, r.jsxs)("div", {
                                 className: N.contentContainer,
                                 children: [
-                                    (0, r.jsx)('div', {
+                                    (0, r.jsx)("div", {
                                         className: N.topFilterContainer,
                                         children: (0, r.jsx)(O.V, {
                                             countsByCategory: F,
                                             selectedCategoryId: k,
-                                            onSelectCategory: W
-                                        })
+                                            onSelectCategory: W,
+                                        }),
                                     }),
                                     (0, r.jsx)(C.Z, {
                                         loading: U === f.M.FETCHING,
                                         children:
-                                            U === f.M.FETCHED && (null == H || (null == H ? void 0 : H.results.length) === 0)
+                                            U === f.M.FETCHED &&
+                                            (null == H || (null == H ? void 0 : H.results.length) === 0)
                                                 ? (0, r.jsx)(S.Z, {
                                                       selectedCategoryId: null != k ? k : K.id,
-                                                      searchAllCategories: () => W(K)
+                                                      searchAllCategories: () => W(K),
                                                   })
-                                                : (0, r.jsx)('div', {
+                                                : (0, r.jsx)("div", {
                                                       className: N.content,
                                                       children:
                                                           null == H
@@ -215,41 +217,44 @@ function T(e) {
                                                                             {
                                                                                 application: n,
                                                                                 onSelectApplication: (e) => X(e, t),
-                                                                                showCategory: !0
+                                                                                showCategory: !0,
                                                                             },
-                                                                            n.id
+                                                                            n.id,
                                                                         );
                                                                     }
                                                                     return null;
-                                                                })
-                                                  })
+                                                                }),
+                                                  }),
                                     }),
                                     (0, r.jsx)(c.DsT, {
                                         className: N.paginationInput,
-                                        totalCount: Math.min((null != (t = null == H ? void 0 : H.totalPages) ? t : 0) * P.PAGE_SIZE, P.MAX_PAGES * P.PAGE_SIZE),
+                                        totalCount: Math.min(
+                                            (null != (t = null == H ? void 0 : H.totalPages) ? t : 0) * P.PAGE_SIZE,
+                                            P.MAX_PAGES * P.PAGE_SIZE,
+                                        ),
                                         pageSize: P.PAGE_SIZE,
                                         disablePaginationGap: !0,
                                         hideMaxPage: !0,
                                         currentPage: D,
-                                        onPageChange: Y
-                                    })
-                                ]
-                            })
-                        })
-                    ]
-                })
+                                        onPageChange: Y,
+                                    }),
+                                ],
+                            }),
+                        }),
+                    ],
+                }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: N.sideFilterContainer,
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: N.sideFilterContent,
                     children: (0, r.jsx)(O.Z, {
                         countsByCategory: F,
                         selectedCategoryId: k,
-                        onSelectCategory: W
-                    })
-                })
-            })
-        ]
+                        onSelectCategory: W,
+                    }),
+                }),
+            }),
+        ],
     });
 }

@@ -22,7 +22,7 @@ function u() {
         {
             defaultBillingCountryCode: e,
             ipCountryCode: null == t ? void 0 : t.countryCode,
-            ipSubdivisionCode: null == t ? void 0 : t.subdivisionCode
+            ipSubdivisionCode: null == t ? void 0 : t.subdivisionCode,
         }
     );
 }

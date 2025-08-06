@@ -15,11 +15,11 @@ function d(e, t, n) {
         {
             shouldFetchPreview: h,
             previewUrl: m,
-            isLoading: g
+            isLoading: g,
         } = (0, i.cj)([a.Z], () => ({
             shouldFetchPreview: !d && a.Z.shouldFetchPreview(e, t, n),
             previewUrl: d ? null : a.Z.getPreviewURL(e, t, n),
-            isLoading: !d && a.Z.getIsPreviewLoading(e, t, n)
+            isLoading: !d && a.Z.getIsPreviewLoading(e, t, n),
         })),
         E = _ || p;
     return (r.useEffect(() => {
@@ -28,10 +28,10 @@ function d(e, t, n) {
     d || !E)
         ? {
               previewUrl: void 0,
-              isLoading: !1
+              isLoading: !1,
           }
         : {
               previewUrl: m,
-              isLoading: g
+              isLoading: g,
           };
 }

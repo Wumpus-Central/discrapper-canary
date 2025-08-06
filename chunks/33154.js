@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => m,
-    s: () => h
+    s: () => h,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -16,7 +16,7 @@ var r = n(255367),
     _ = n(388032),
     p = n(695256),
     h = (function (e) {
-        return ((e[(e.CHAT = 0)] = 'CHAT'), (e[(e.REACTIONS = 1)] = 'REACTIONS'), e);
+        return (e[(e.CHAT = 0)] = "CHAT"), (e[(e.REACTIONS = 1)] = "REACTIONS"), e;
     })({});
 let m = (e) => {
     let { type: t, guild: h, closePopout: m, ctaRef: g } = e,
@@ -42,53 +42,53 @@ let m = (e) => {
     let T = async () => {
         y(!0);
         try {
-            (await l.Z.joinGuild(h.id, { source: f.vtS.CHAT_INPUT_BLOCKER }), m());
+            await l.Z.joinGuild(h.id, { source: f.vtS.CHAT_INPUT_BLOCKER }), m();
         } catch (e) {
             y(!1);
         }
     };
     return (0, r.jsxs)(s.VqE, {
         className: p.container,
-        'aria-labelledby': E,
+        "aria-labelledby": E,
         children: [
-            (0, r.jsx)('img', {
-                alt: '',
+            (0, r.jsx)("img", {
+                alt: "",
                 className: p.image,
-                src: n(64395)
+                src: n(64395),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: p.content,
                 children: [
                     (0, r.jsx)(s.X6q, {
-                        variant: 'heading-md/semibold',
+                        variant: "heading-md/semibold",
                         id: E,
-                        children: v
+                        children: v,
                     }),
                     (0, r.jsx)(s.Text, {
-                        color: 'header-secondary',
-                        variant: 'text-sm/normal',
-                        children: I
+                        color: "header-secondary",
+                        variant: "text-sm/normal",
+                        children: I,
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: p.buttonContainer,
                         children: [
                             (0, r.jsx)(s.zxk, {
-                                variant: 'primary',
-                                text: _.intl.string(_.t['9VLmlZ']),
+                                variant: "primary",
+                                text: _.intl.string(_.t["9VLmlZ"]),
                                 buttonRef: g,
                                 onClick: T,
-                                loading: b
+                                loading: b,
                             }),
                             (0, r.jsx)(a.zx, {
                                 onClick: m,
                                 look: a.zx.Looks.BLANK,
                                 className: p.cancel,
-                                children: _.intl.string(_.t['2m+Sqq'])
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
+                                children: _.intl.string(_.t["2m+Sqq"]),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 };

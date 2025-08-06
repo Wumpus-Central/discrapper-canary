@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,17 +23,17 @@ let u = {},
     f = 86400000,
     _ = 3600000;
 function p() {
-    s.d.getCurrentConfig({ location: 'LibraryApplicationStatisticsStore.handleConnectionOpen' }).enabled && (0, a.N)();
+    s.d.getCurrentConfig({ location: "LibraryApplicationStatisticsStore.handleConnectionOpen" }).enabled && (0, a.N)();
 }
 function h() {
-    ((u = {}), (d = null));
+    (u = {}), (d = null);
 }
 function m(e) {
     let { statistics: t } = e;
-    (t.forEach((e) => {
+    t.forEach((e) => {
         u[e.application_id] = e;
     }),
-        (d = Date.now()));
+        (d = Date.now());
 }
 function g(e) {
     let { duration: t, applicationId: n, distributor: r } = e,
@@ -43,16 +43,16 @@ function g(e) {
         s = 0;
     if (null != i) {
         var c;
-        ((a = i.total_duration), (s = null != (c = i.total_discord_sku_duration) ? c : 0));
+        (a = i.total_duration), (s = null != (c = i.total_discord_sku_duration) ? c : 0);
     }
-    ((a += t),
+    (a += t),
         r === l.GQo.DISCORD && (s += t),
         (u[n] = {
             application_id: n,
             total_duration: a,
             last_played_at: o,
-            total_discord_sku_duration: s
-        }));
+            total_discord_sku_duration: s,
+        });
 }
 class E extends (r = i.ZP.Store) {
     get applicationStatistics() {
@@ -81,15 +81,32 @@ class E extends (r = i.ZP.Store) {
         if (null != t) {
             let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / f),
                 r = Math.floor((1000 * t.total_duration) / _);
-            (0 === e ? (n += 50) : e >= 1 && e < 2 ? (n += 40) : e >= 2 && e < 4 ? (n += 30) : e >= 4 && e < 7 ? (n += 20) : e >= 7 && (n += 10), 0 === r ? (n += 0) : r >= 1 && r < 12 ? (n += 10) : r >= 12 && r < 168 ? (n += 20) : r >= 168 && r < 720 ? (n += 40) : r >= 720 && (n += 50));
+            0 === e
+                ? (n += 50)
+                : e >= 1 && e < 2
+                  ? (n += 40)
+                  : e >= 2 && e < 4
+                    ? (n += 30)
+                    : e >= 4 && e < 7
+                      ? (n += 20)
+                      : e >= 7 && (n += 10),
+                0 === r
+                    ? (n += 0)
+                    : r >= 1 && r < 12
+                      ? (n += 10)
+                      : r >= 12 && r < 168
+                        ? (n += 20)
+                        : r >= 168 && r < 720
+                          ? (n += 40)
+                          : r >= 720 && (n += 50);
         }
         return n;
     }
 }
-c(E, 'displayName', 'LibraryApplicationStatisticsStore');
+c(E, "displayName", "LibraryApplicationStatisticsStore");
 let b = new E(o.Z, {
     USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: m,
     ACTIVITY_UPDATE_START: g,
     LOGOUT: h,
-    CONNECTION_OPEN: p
+    CONNECTION_OPEN: p,
 });

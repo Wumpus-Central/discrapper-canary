@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => N }), r(388685));
+r.d(t, { Z: () => N }), r(388685);
 var n = r(255367),
     l = r(73800),
     a = r(979554),
@@ -32,7 +32,7 @@ function N(e) {
     var t;
     let { isFetchingCategories: r, isFullScreen: N, scrollerRef: A, tab: w } = e,
         B = (0, p.sp)(),
-        R = null != (t = null == B ? void 0 : B.sessionId) ? t : '',
+        R = null != (t = null == B ? void 0 : B.sessionId) ? t : "",
         { noCache: Z, includeUnpublished: D } = (0, v.Z)(),
         F = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         M = (0, i.e7)([g.Z], () => g.Z.productsWithVariantsAsGroup),
@@ -48,7 +48,7 @@ function N(e) {
                 case C.AW.AVATAR_DECORATIONS:
                     return [E.intl.string(E.t.dRZYND), z ? P.Z : j.Z, a.Z.AVATAR_DECORATION];
                 case C.AW.PROFILE_EFFECTS:
-                    return [E.intl.string(E.t['1cNjt7']), z ? k.Z : I.Z, a.Z.PROFILE_EFFECT];
+                    return [E.intl.string(E.t["1cNjt7"]), z ? k.Z : I.Z, a.Z.PROFILE_EFFECT];
                 case C.AW.NAMEPLATES:
                     return [E.intl.string(E.t.V68Fq6), z ? L.Z : T.Z, a.Z.NAMEPLATE];
                 case C.AW.BUNDLES:
@@ -61,10 +61,14 @@ function N(e) {
                 Y(
                     M.filter((e) => {
                         var t;
-                        return e.type === K || (e.type === a.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === K)) === !0);
-                    })
+                        return (
+                            e.type === K ||
+                            (e.type === a.Z.VARIANTS_GROUP &&
+                                (null == (t = e.variants) ? void 0 : t.some((e) => e.type === K)) === !0)
+                        );
+                    }),
                 ),
-            [M, K, Y]
+            [M, K, Y],
         ),
         J = (0, h.l)(X);
     return (l.useEffect(() => {
@@ -74,7 +78,7 @@ function N(e) {
             tab: w,
             isFullScreen: N,
             unpublishedCategoriesShown: D,
-            cacheDisabled: Z
+            cacheDisabled: Z,
         });
     }, []),
     l.useEffect(() => {
@@ -85,22 +89,22 @@ function N(e) {
                 tab: w,
                 isFullScreen: N,
                 unpublishedCategoriesShown: D,
-                cacheDisabled: Z
+                cacheDisabled: Z,
             });
     }, [R, N, D, Z, r, w]),
     r || null == F)
         ? (0, n.jsx)(_.Z, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsx)('div', {
-                      style: { backgroundImage: 'url('.concat(q, ')') },
+                  (0, n.jsx)("div", {
+                      style: { backgroundImage: "url(".concat(q, ")") },
                       className: S.bannerContainer,
                       children: (0, n.jsx)(s.X6q, {
-                          variant: 'heading-xxl/extrabold',
-                          children: G
-                      })
+                          variant: "heading-xxl/extrabold",
+                          children: G,
+                      }),
                   }),
-                  (0, n.jsx)('div', {
+                  (0, n.jsx)("div", {
                       className: S.products,
                       children: J.slice(40 * (H - 1), 40 * H).map((e, t) => {
                           let r = g.Z.getCategory(e.categorySkuId);
@@ -116,40 +120,40 @@ function N(e) {
                                                 product: e,
                                                 user: F,
                                                 category: r,
-                                                tab: w
+                                                tab: w,
                                             },
-                                            e.skuId
-                                        )
+                                            e.skuId,
+                                        ),
                                     },
-                                    e.skuId
+                                    e.skuId,
                                 );
-                      })
+                      }),
                   }),
                   J.length > 40 &&
-                      (0, n.jsx)('div', {
+                      (0, n.jsx)("div", {
                           className: S.paginationContainer,
-                          children: (0, n.jsx)('div', {
+                          children: (0, n.jsx)("div", {
                               children: (0, n.jsx)(s.DsT, {
                                   currentPage: H,
                                   totalCount: J.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      (d.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                      d.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                           collectibles_shop_session_id: null == B ? void 0 : B.sessionId,
                                           page_section: null == B ? void 0 : B.pageSection,
                                           page_category: null == B ? void 0 : B.pageCategory,
                                           page_index: e,
                                           page_size: 40,
-                                          cta_name: ''.concat(w, ' page ').concat(e),
-                                          page_type: w
+                                          cta_name: "".concat(w, " page ").concat(e),
+                                          page_type: w,
                                       }),
                                           W(e),
-                                          V());
+                                          V();
                                   },
-                                  disablePaginationGap: !0
-                              })
-                          })
-                      })
-              ]
+                                  disablePaginationGap: !0,
+                              }),
+                          }),
+                      }),
+              ],
           });
 }

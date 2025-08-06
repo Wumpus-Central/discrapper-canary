@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => T }), r(388685));
+r.d(t, { Z: () => T }), r(388685);
 var n = r(73800),
     i = r(399606),
     a = r(544891),
@@ -14,24 +14,24 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -72,20 +72,25 @@ let I = +u.Z.Millis.DAY,
                             a.tn
                                 .post({
                                     url: p.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e),
-                                    rejectWithError: !0
+                                    rejectWithError: !0,
                                 })
                                 .then(
                                     (t) => {
                                         var r, n;
                                         o.Z.dispatch({
-                                            type: 'COMMANDS_MIGRATION_UPDATE_SUCCESS',
+                                            type: "COMMANDS_MIGRATION_UPDATE_SUCCESS",
                                             guildId: e,
-                                            integrationIdsWithAppCommands: null != (n = null == (r = t.body) ? void 0 : r.integration_ids_with_app_commands) ? n : []
+                                            integrationIdsWithAppCommands:
+                                                null !=
+                                                (n =
+                                                    null == (r = t.body) ? void 0 : r.integration_ids_with_app_commands)
+                                                    ? n
+                                                    : [],
                                         });
                                     },
                                     () => {
                                         A.set(e, n);
-                                    }
+                                    },
                                 ));
                     })(e);
             }, [e, t]);
@@ -94,38 +99,38 @@ let I = +u.Z.Millis.DAY,
         },
         dismissNotice(e) {
             o.Z.dispatch({
-                type: 'COMMANDS_MIGRATION_NOTICE_DISMISSED',
-                guildId: e
+                type: "COMMANDS_MIGRATION_NOTICE_DISMISSED",
+                guildId: e,
             });
         },
         dismissOverviewTooltip(e, t) {
             var r;
-            (o.Z.dispatch({
-                type: 'COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED',
+            o.Z.dispatch({
+                type: "COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED",
                 guildId: e,
-                integrationId: t.id
+                integrationId: t.id,
             }),
                 d.default.track(
                     p.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED,
                     O(E({}, (0, l.hH)(e)), {
                         application_id: null == (r = t.application) ? void 0 : r.id,
-                        location: 'overview'
-                    })
-                ));
+                        location: "overview",
+                    }),
+                );
         },
         dismissToggleTooltip(e, t) {
             var r;
             void 0 !== t &&
                 (o.Z.dispatch({
-                    type: 'COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED',
-                    integrationId: t.id
+                    type: "COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED",
+                    integrationId: t.id,
                 }),
                 d.default.track(
                     p.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED,
                     O(E({}, (0, l.hH)(e)), {
                         application_id: null == (r = t.application) ? void 0 : r.id,
-                        location: 'toggle'
-                    })
+                        location: "toggle",
+                    }),
                 ));
-        }
+        },
     };

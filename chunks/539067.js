@@ -1,4 +1,4 @@
-(r.d(t, { y: () => s }), r(388685));
+r.d(t, { y: () => s }), r(388685);
 var n = r(73800),
     l = r(442837),
     o = r(19780),
@@ -16,9 +16,9 @@ function s(e) {
                 let r = i.GB,
                     n = await (0, c.uX)(r),
                     l = await (0, c.J6)(e, t, r);
-                (d(n), p(l));
+                d(n), p(l);
             } catch (e) {
-                (d(!1), p(!1));
+                d(!1), p(!1);
             } finally {
                 a(!1);
             }
@@ -30,7 +30,7 @@ function s(e) {
         {
             loading: s,
             isCurrentUserKeyPersistent: u,
-            isOtherUserKeyPersistent: f
+            isOtherUserKeyPersistent: f,
         }
     );
 }

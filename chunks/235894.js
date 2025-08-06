@@ -1,7 +1,7 @@
 n.d(t, {
     Eq: () => a,
     NV: () => s,
-    Uw: () => o
+    Uw: () => o,
 });
 var r = n(358085),
     i = n(477931);
@@ -20,9 +20,9 @@ let o = (e) => {
         null != e.id
             ? {
                   id: e.id,
-                  name: e.name
+                  name: e.name,
               }
             : {
                   name: e.optionallyDiverseSequence,
-                  id: void 0
+                  id: void 0,
               };

@@ -17,44 +17,44 @@ var n = r(73800),
                     {
                         default: {
                             hue: {
-                                height: '12px',
-                                position: 'relative'
+                                height: "12px",
+                                position: "relative",
                             },
-                            Hue: { radius: '2px' }
-                        }
+                            Hue: { radius: "2px" },
+                        },
                     },
-                    void 0 === a ? {} : a
-                )
+                    void 0 === a ? {} : a,
+                ),
             );
         return n.createElement(
-            'div',
+            "div",
             {
                 style: p.wrap || {},
-                className: 'slider-picker ' + (void 0 === c ? '' : c)
+                className: "slider-picker " + (void 0 === c ? "" : c),
             },
             n.createElement(
-                'div',
+                "div",
                 { style: p.hue },
                 n.createElement(s.PS, {
                     style: p.Hue,
                     hsl: t,
                     pointer: o,
-                    onChange: r
-                })
+                    onChange: r,
+                }),
             ),
             n.createElement(
-                'div',
+                "div",
                 { style: p.swatches },
                 n.createElement(u.Z, {
                     hsl: t,
-                    onClick: r
-                })
-            )
+                    onClick: r,
+                }),
+            ),
         );
     };
-((p.propTypes = { styles: a().object }),
+(p.propTypes = { styles: a().object }),
     (p.defaultProps = {
         pointer: c.Z,
-        styles: {}
+        styles: {},
     }),
-    (0, s.t1)(p));
+    (0, s.t1)(p);

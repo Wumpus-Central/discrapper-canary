@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,28 +74,28 @@ function E(e, t) {
         { Component: v, events: I, play: T } = (0, l.z)();
     return n
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: a()(d.CT, _.buttonContainer),
               ref: t,
               children: (0, r.jsx)(
                   u.Z,
                   g(h({ className: a()(_.button, _.stickerButton) }, I), {
                       onClick: () => {
-                          (O(), T());
+                          O(), T();
                       },
                       isActive: b,
-                      'aria-label': f.intl.string(f.t.rZpidX),
-                      'aria-expanded': b,
-                      'aria-haspopup': 'dialog',
-                      'aria-controls': m,
+                      "aria-label": f.intl.string(f.t.rZpidX),
+                      "aria-expanded": b,
+                      "aria-haspopup": "dialog",
+                      "aria-controls": m,
                       sparkle: E,
                       notification: y ? u.j.UPDATE : null,
                       children: (0, r.jsx)(v, {
-                          size: 'refresh_sm',
-                          color: 'currentColor'
-                      })
-                  })
-              )
+                          size: "refresh_sm",
+                          color: "currentColor",
+                      }),
+                  }),
+              ),
           });
 }
 let b = i.memo(i.forwardRef(E));

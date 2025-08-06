@@ -7,7 +7,11 @@ var r,
     l = n(689933),
     u = n(592802),
     d = o.Function,
-    p = /MSIE .\./.test(c) || ('BUN' === s && ((r = o.Bun.version.split('.')).length < 3 || ('0' === r[0] && (r[1] < 3 || ('3' === r[1] && '0' === r[2])))));
+    p =
+        /MSIE .\./.test(c) ||
+        ("BUN" === s &&
+            ((r = o.Bun.version.split(".")).length < 3 ||
+                ("0" === r[0] && (r[1] < 3 || ("3" === r[1] && "0" === r[2])))));
 e.exports = function (e, t) {
     var n = t ? 2 : 1;
     return p

@@ -2,15 +2,15 @@ function r(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -21,7 +21,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -48,11 +48,11 @@ var o = n(968514),
         redoStack: f(),
         selection: null,
         treeMap: null,
-        undoStack: f()
+        undoStack: f(),
     }),
     p = (function () {
-        ((t.createEmpty = function (e) {
-            return t.createWithContent(a.createFromText(''), e);
+        (t.createEmpty = function (e) {
+            return t.createWithContent(a.createFromText(""), e);
         }),
             (t.createWithContent = function (e, n) {
                 if (0 === e.getBlockMap().count()) return t.createEmpty(n);
@@ -62,7 +62,7 @@ var o = n(968514),
                     undoStack: f(),
                     redoStack: f(),
                     decorator: n || null,
-                    selection: l.createEmpty(r)
+                    selection: l.createEmpty(r),
                 });
             }),
             (t.create = function (e) {
@@ -72,73 +72,74 @@ var o = n(968514),
                     new _(
                         r({}, e, {
                             treeMap: m(n, i),
-                            directionMap: s.getDirectionMap(n)
-                        })
-                    )
+                            directionMap: s.getDirectionMap(n),
+                        }),
+                    ),
                 );
             }),
             (t.set = function (e, n) {
                 return new t(
                     e.getImmutable().withMutations(function (t) {
-                        var r = t.get('decorator'),
+                        var r = t.get("decorator"),
                             i = r;
                         null === n.decorator ? (i = null) : n.decorator && (i = n.decorator);
                         var o = n.currentContent || e.getCurrentContent();
                         if (i !== r) {
                             var a,
-                                s = t.get('treeMap');
-                            ((a = i && r ? E(o, o.getBlockMap(), s, i, r) : m(o, i)),
+                                s = t.get("treeMap");
+                            (a = i && r ? E(o, o.getBlockMap(), s, i, r) : m(o, i)),
                                 t.merge({
                                     decorator: i,
                                     treeMap: a,
-                                    nativelyRenderedContent: null
-                                }));
+                                    nativelyRenderedContent: null,
+                                });
                             return;
                         }
-                        (o !== e.getCurrentContent() && t.set('treeMap', g(e, o.getBlockMap(), o.getEntityMap(), i)), t.merge(n));
-                    })
+                        o !== e.getCurrentContent() && t.set("treeMap", g(e, o.getBlockMap(), o.getEntityMap(), i)),
+                            t.merge(n);
+                    }),
                 );
-            }));
+            });
         var e = t.prototype;
         function t(e) {
-            (i(this, '_immutable', void 0), (this._immutable = e));
+            i(this, "_immutable", void 0), (this._immutable = e);
         }
         return (
             (e.toJS = function () {
                 return this.getImmutable().toJS();
             }),
             (e.getAllowUndo = function () {
-                return this.getImmutable().get('allowUndo');
+                return this.getImmutable().get("allowUndo");
             }),
             (e.getCurrentContent = function () {
-                return this.getImmutable().get('currentContent');
+                return this.getImmutable().get("currentContent");
             }),
             (e.getUndoStack = function () {
-                return this.getImmutable().get('undoStack');
+                return this.getImmutable().get("undoStack");
             }),
             (e.getRedoStack = function () {
-                return this.getImmutable().get('redoStack');
+                return this.getImmutable().get("redoStack");
             }),
             (e.getSelection = function () {
-                return this.getImmutable().get('selection');
+                return this.getImmutable().get("selection");
             }),
             (e.getDecorator = function () {
-                return this.getImmutable().get('decorator');
+                return this.getImmutable().get("decorator");
             }),
             (e.isInCompositionMode = function () {
-                return this.getImmutable().get('inCompositionMode');
+                return this.getImmutable().get("inCompositionMode");
             }),
             (e.mustForceSelection = function () {
-                return this.getImmutable().get('forceSelection');
+                return this.getImmutable().get("forceSelection");
             }),
             (e.getNativelyRenderedContent = function () {
-                return this.getImmutable().get('nativelyRenderedContent');
+                return this.getImmutable().get("nativelyRenderedContent");
             }),
             (e.getLastChangeType = function () {
-                return this.getImmutable().get('lastChangeType');
+                return this.getImmutable().get("lastChangeType");
             }),
             (e.getInlineStyleOverride = function () {
-                return this.getImmutable().get('inlineStyleOverride');
+                return this.getImmutable().get("inlineStyleOverride");
             }),
             (t.setInlineStyleOverride = function (e, n) {
                 return t.set(e, { inlineStyleOverride: n });
@@ -151,7 +152,7 @@ var o = n(968514),
                 return n.isCollapsed() ? y(t, n) : O(t, n);
             }),
             (e.getBlockTree = function (e) {
-                return this.getImmutable().getIn(['treeMap', e]);
+                return this.getImmutable().getIn(["treeMap", e]);
             }),
             (e.isSelectionAtStartOfContent = function () {
                 var e = this.getCurrentContent().getBlockMap().first().getKey();
@@ -163,13 +164,13 @@ var o = n(968514),
                 return this.getSelection().hasEdgeWithin(e.getKey(), t, t);
             }),
             (e.getDirectionMap = function () {
-                return this.getImmutable().get('directionMap');
+                return this.getImmutable().get("directionMap");
             }),
             (t.acceptSelection = function (e, t) {
                 return h(e, t, !1);
             }),
             (t.forceSelection = function (e, t) {
-                return (t.getHasFocus() || (t = t.set('hasFocus', !0)), h(e, t, !0));
+                return t.getHasFocus() || (t = t.set("hasFocus", !0)), h(e, t, !0);
             }),
             (t.moveSelectionToEnd = function (e) {
                 var n = e.getCurrentContent().getLastBlock(),
@@ -182,8 +183,8 @@ var o = n(968514),
                         anchorOffset: i,
                         focusKey: r,
                         focusOffset: i,
-                        isBackward: !1
-                    })
+                        isBackward: !1,
+                    }),
                 );
             }),
             (t.moveFocusToEnd = function (e) {
@@ -201,15 +202,18 @@ var o = n(968514),
                         lastChangeType: r,
                         selection: n.getSelectionAfter(),
                         forceSelection: i,
-                        inlineStyleOverride: null
+                        inlineStyleOverride: null,
                     });
                 var a = e.getSelection(),
                     l = e.getCurrentContent(),
                     c = e.getUndoStack(),
                     u = n;
-                a !== l.getSelectionAfter() || b(e, r) ? ((c = c.push(l)), (u = u.set('selectionBefore', a))) : ('insert-characters' === r || 'backspace-character' === r || 'delete-character' === r) && (u = u.set('selectionBefore', l.getSelectionBefore()));
+                a !== l.getSelectionAfter() || b(e, r)
+                    ? ((c = c.push(l)), (u = u.set("selectionBefore", a)))
+                    : ("insert-characters" === r || "backspace-character" === r || "delete-character" === r) &&
+                      (u = u.set("selectionBefore", l.getSelectionBefore()));
                 var d = e.getInlineStyleOverride();
-                -1 === ['adjust-depth', 'change-block-type', 'split-block'].indexOf(r) && (d = null);
+                -1 === ["adjust-depth", "change-block-type", "split-block"].indexOf(r) && (d = null);
                 var _ = {
                     currentContent: u,
                     directionMap: o,
@@ -218,7 +222,7 @@ var o = n(968514),
                     lastChangeType: r,
                     selection: n.getSelectionAfter(),
                     forceSelection: i,
-                    inlineStyleOverride: d
+                    inlineStyleOverride: d,
                 };
                 return t.set(e, _);
             }),
@@ -236,9 +240,9 @@ var o = n(968514),
                     redoStack: e.getRedoStack().push(i),
                     forceSelection: !0,
                     inlineStyleOverride: null,
-                    lastChangeType: 'undo',
+                    lastChangeType: "undo",
                     nativelyRenderedContent: null,
-                    selection: i.getSelectionBefore()
+                    selection: i.getSelectionBefore(),
                 });
             }),
             (t.redo = function (e) {
@@ -255,9 +259,9 @@ var o = n(968514),
                     redoStack: n.shift(),
                     forceSelection: !0,
                     inlineStyleOverride: null,
-                    lastChangeType: 'redo',
+                    lastChangeType: "redo",
                     nativelyRenderedContent: null,
-                    selection: r.getSelectionAfter()
+                    selection: r.getSelectionAfter(),
                 });
             }),
             (e.getImmutable = function () {
@@ -271,7 +275,7 @@ function h(e, t, n) {
         selection: t,
         forceSelection: n,
         nativelyRenderedContent: null,
-        inlineStyleOverride: null
+        inlineStyleOverride: null,
     });
 }
 function m(e, t) {
@@ -283,11 +287,11 @@ function m(e, t) {
         .toOrderedMap();
 }
 function g(e, t, n, r) {
-    var i = e.getCurrentContent().set('entityMap', n),
+    var i = e.getCurrentContent().set("entityMap", n),
         a = i.getBlockMap();
     return e
         .getImmutable()
-        .get('treeMap')
+        .get("treeMap")
         .merge(
             t
                 .toSeq()
@@ -296,7 +300,7 @@ function g(e, t, n, r) {
                 })
                 .map(function (e) {
                     return o.generate(i, e, r);
-                })
+                }),
         );
 }
 function E(e, t, n, r, i) {
@@ -308,11 +312,14 @@ function E(e, t, n, r, i) {
             })
             .map(function (t) {
                 return o.generate(e, t, r);
-            })
+            }),
     );
 }
 function b(e, t) {
-    return t !== e.getLastChangeType() || ('insert-characters' !== t && 'backspace-character' !== t && 'delete-character' !== t);
+    return (
+        t !== e.getLastChangeType() ||
+        ("insert-characters" !== t && "backspace-character" !== t && "delete-character" !== t)
+    );
 }
 function y(e, t) {
     var n = t.getStartKey(),

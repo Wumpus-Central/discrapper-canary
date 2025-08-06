@@ -18,7 +18,7 @@ function f(e) {
     return (0, r.jsx)(a.Z, {
         guild: t,
         onDismissed: () => n(u.L.UNKNOWN),
-        cta: p.intl.string(p.t['oPAx7+']),
+        cta: p.intl.string(p.t["oPAx7+"]),
         message: p.intl.format(p.t.AcaNY2, { boostsNeeded: f }),
         type: c.vID.GUILD_BANNER,
         image: h,
@@ -27,12 +27,12 @@ function f(e) {
                 analyticsLocations: g,
                 analyticsSourceLocation: {
                     section: c.jXE.CHANNEL_NOTICE,
-                    object: c.qAy.SERVER_BANNER_TOOLTIP
+                    object: c.qAy.SERVER_BANNER_TOOLTIP,
                 },
                 guild: t,
-                perks: (0, d.XO)()
+                perks: (0, d.XO)(),
             }),
         imageMarginTop: 15,
-        imageMarginX: 22
+        imageMarginX: 22,
     });
 }

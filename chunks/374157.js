@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685), n(784620), n(973216), n(583741));
+n.d(t, { Z: () => u }), n(388685), n(784620), n(973216), n(583741);
 var r = n(327432),
     i = n(436660),
     o = n(887490);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -35,11 +35,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -59,7 +59,13 @@ function u(e) {
     return (
         (e.apply = (n) => {
             var r;
-            if ('set_selection' === n.type && (null == (r = e.composition) ? void 0 : r.startedInsideInline) && o.M8.isRange(n.properties) && o.M8.isRange(n.newProperties) && o.M8.isCollapsed(n.newProperties)) {
+            if (
+                "set_selection" === n.type &&
+                (null == (r = e.composition) ? void 0 : r.startedInsideInline) &&
+                o.M8.isRange(n.properties) &&
+                o.M8.isRange(n.newProperties) &&
+                o.M8.isCollapsed(n.newProperties)
+            ) {
                 let t = o.bN.getParentInline(e, n.properties),
                     r = o.bN.getParentInline(e, n.newProperties);
                 if (null != t && (null == r || !o.C0.equals(t[1], r[1]))) return;
@@ -88,20 +94,24 @@ function u(e) {
                 if (null != d) {
                     let [, t] = d,
                         [i, a] = o.bN.edges(e, t);
-                    _ && o.Jz.equals(c, i) ? (c = null != (n = o.bN.before(e, i)) ? n : o.bN.start(e, [])) : !_ && o.Jz.equals(c, a) && (c = null != (r = o.bN.after(e, a)) ? r : o.bN.end(e, []));
+                    _ && o.Jz.equals(c, i)
+                        ? (c = null != (n = o.bN.before(e, i)) ? n : o.bN.start(e, []))
+                        : !_ && o.Jz.equals(c, a) && (c = null != (r = o.bN.after(e, a)) ? r : o.bN.end(e, []));
                 }
                 if (null != f) {
                     let [, t] = f,
                         [n, r] = o.bN.edges(e, t);
-                    !_ && o.Jz.equals(u, n) ? (u = null != (a = o.bN.before(e, n)) ? a : o.bN.start(e, [])) : _ && o.Jz.equals(u, r) && (u = null != (l = o.bN.after(e, r)) ? l : o.bN.end(e, []));
+                    !_ && o.Jz.equals(u, n)
+                        ? (u = null != (a = o.bN.before(e, n)) ? a : o.bN.start(e, []))
+                        : _ && o.Jz.equals(u, r) && (u = null != (l = o.bN.after(e, r)) ? l : o.bN.end(e, []));
                 }
                 return void i.Q.delete(e, {
                     at: {
                         anchor: c,
-                        focus: u
+                        focus: u,
                     },
-                    reverse: 'backward' === t,
-                    select: !0
+                    reverse: "backward" === t,
+                    select: !0,
                 });
             }
             s(t);
@@ -114,8 +124,8 @@ function d(e, t, n) {
     let r = o.bN.getCurrentInline(e),
         a = o.bN.getCurrentBlock(e),
         s = o.M8.toPoint(e.selection);
-    if (null == s || null == a || 'block' === t) return !0;
-    if ('line' === t && null == r) return !1;
+    if (null == s || null == a || "block" === t) return !0;
+    if ("line" === t && null == r) return !1;
     let l = r;
     if (null == l) {
         let t = (n ? o.bN.before : o.bN.after)(e, s);
@@ -133,8 +143,8 @@ function d(e, t, n) {
                 select: !0,
                 bounds: {
                     anchor: r,
-                    focus: l
-                }
+                    focus: l,
+                },
             });
         }
         return !0;
@@ -145,7 +155,7 @@ function d(e, t, n) {
             [r, i] = o.bN.edges(e, t);
         c = (n && o.Jz.equals(s, r)) || (!n && o.Jz.equals(s, i));
     }
-    if ('word' === t && !c) {
+    if ("word" === t && !c) {
         let r = o.bN.getCurrentText(e);
         if (null != r) {
             let [, a] = r,
@@ -158,8 +168,8 @@ function d(e, t, n) {
                     select: !0,
                     bounds: {
                         anchor: l,
-                        focus: c
-                    }
+                        focus: c,
+                    },
                 }),
                 !0
             );
@@ -170,7 +180,7 @@ function d(e, t, n) {
             at: s,
             unit: t,
             reverse: n,
-            select: !0
+            select: !0,
         }),
         !0
     );
@@ -179,9 +189,9 @@ let f = r.ML.positions;
 function* _(e) {
     var t, n, r, i, a, l, u, d;
     let _ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { at: p = e.selection, unit: h = 'offset', reverse: m = !1, voids: g = !1 } = null != _ ? _ : {};
-    if ('word' !== h) {
-        for (let t of f(e, c(s({}, _), { voids: g || 'block' === h }))) yield t;
+        { at: p = e.selection, unit: h = "offset", reverse: m = !1, voids: g = !1 } = null != _ ? _ : {};
+    if ("word" !== h) {
+        for (let t of f(e, c(s({}, _), { voids: g || "block" === h }))) yield t;
         return;
     }
     if (null == p) return;
@@ -206,23 +216,37 @@ function* _(e) {
                 r,
                 i = t.children[h],
                 a = [N, h];
-            if (((n = o.C0.equals(a, b.path) || o.C0.isAncestor(a, b.path) ? (!m && o.bN.isEnd(e, b, a) ? null : b) : o.bN.start(e, a)), (r = o.C0.equals(a, y.path) || o.C0.isAncestor(a, y.path) ? (m && o.bN.isStart(e, y, a) ? null : y) : o.bN.end(e, a)), null != n && null != r))
+            if (
+                ((n =
+                    o.C0.equals(a, b.path) || o.C0.isAncestor(a, b.path)
+                        ? !m && o.bN.isEnd(e, b, a)
+                            ? null
+                            : b
+                        : o.bN.start(e, a)),
+                (r =
+                    o.C0.equals(a, y.path) || o.C0.isAncestor(a, y.path)
+                        ? m && o.bN.isStart(e, y, a)
+                            ? null
+                            : y
+                        : o.bN.end(e, a)),
+                null != n && null != r)
+            )
                 if (o.LC.isText(i) && 0 === i.text.length) {
                     let e = {
                         path: a,
-                        offset: 0
+                        offset: 0,
                     };
-                    (yield e, yield e);
+                    yield e, yield e;
                 } else if (o.bN.isInline(e, i) && o.LC.isText(i.children[0]) && 0 === i.children[0].text.length) {
                     let e = {
                         path: o.C0.child(a, 0),
-                        offset: 0
+                        offset: 0,
                     };
-                    (yield e, yield e);
+                    yield e, yield e;
                 } else {
                     let t = {
                         anchor: n,
-                        focus: r
+                        focus: r,
                     };
                     for (let n of f(e, c(s({}, _), { at: t }))) yield n;
                 }

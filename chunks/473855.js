@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(953529));
+n.d(t, { Z: () => u }), n(953529);
 var i = n(255367);
 n(73800);
 var r = n(388905),
@@ -16,7 +16,7 @@ let d = {
     [a.HQ.CREATE_FROM_SCRATCH]: n(561030),
     [a.HQ.CAMPUS_CLUBS]: n(494207),
     [a.HQ.LEAGUE_CLUBS]: n(232454),
-    [a.HQ.GITHUB_HACKATHON]: n(123013)
+    [a.HQ.GITHUB_HACKATHON]: n(123013),
 };
 function u(e) {
     let { headerId: t, guildTemplate: n } = e,
@@ -25,32 +25,32 @@ function u(e) {
     if (null != o) {
         var C;
         let { header: e, description: d, author: m } = (0, s.Z)(u);
-        return (0, i.jsxs)('div', {
+        return (0, i.jsxs)("div", {
             children: [
-                (0, i.jsx)('img', {
+                (0, i.jsx)("img", {
                     className: c.image,
                     src: o,
-                    alt: ''
+                    alt: "",
                 }),
                 (0, i.jsx)(r.Dx, {
                     className: c.header,
                     id: t,
-                    children: e
+                    children: e,
                 }),
                 (0, i.jsx)(r.DK, { children: d }),
                 n.state === a.Rj.RESOLVED
                     ? (0, i.jsx)(l.D, {
                           className: c.usagePill,
                           count: null != (C = n.usageCount) ? C : 0,
-                          verifiedName: m
+                          verifiedName: m,
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     }
     return (0, i.jsx)(l.Z, {
         pillClassName: c.usagePill,
         guildTemplate: n,
-        tall: !0
+        tall: !0,
     });
 }

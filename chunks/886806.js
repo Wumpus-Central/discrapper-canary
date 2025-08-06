@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -20,84 +20,85 @@ function b(e) {
 }
 function E(e) {
     let { location: t, transitionTo: l = b } = e,
-        [o, E] = i.useState('submitting'),
+        [o, E] = i.useState("submitting"),
         v = i.useRef(void 0);
     (0, c.ZP)(() => {
-        (0, p.e)('verify_email');
+        (0, p.e)("verify_email");
         let e = (0, u.Z)(t);
-        if (null == e) return void E('failed');
+        if (null == e) return void E("failed");
         (async () => {
             try {
                 let t = await a.Z.verify(e);
-                (E('succeeded'), (v.current = t));
+                E("succeeded"), (v.current = t);
             } catch (e) {
-                E('failed');
+                E("failed");
             }
         })();
     });
     let j = i.useCallback(() => {
-            l(f.Z5c.LOGIN, { source: 'verify_email' });
+            l(f.Z5c.LOGIN, { source: "verify_email" });
         }, [l]),
         I = i.useCallback(() => {
-            (m.default.track(f.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, h.Z)('verify_email'));
+            m.default.track(f.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }),
+                (0, h.Z)("verify_email");
         }, []);
-    return 'failed' === o
+    return "failed" === o
         ? (0, r.jsxs)(d.ZP, {
               children: [
                   (0, r.jsx)(d.Ee, {
                       src: n(375673),
-                      className: s()(_.image, x.marginBottom20)
+                      className: s()(_.image, x.marginBottom20),
                   }),
                   (0, r.jsx)(d.Dx, {
                       className: x.marginBottom8,
-                      children: g.intl.string(g.t.PCgG39)
+                      children: g.intl.string(g.t.PCgG39),
                   }),
                   (0, r.jsx)(d.DK, {
                       className: x.marginBottom40,
-                      children: g.intl.string(g.t.tQpeAw)
+                      children: g.intl.string(g.t.tQpeAw),
                   }),
                   (0, r.jsx)(d.zx, {
                       onClick: j,
-                      children: g.intl.string(g.t.dKhVQE)
-                  })
-              ]
+                      children: g.intl.string(g.t.dKhVQE),
+                  }),
+              ],
           })
-        : 'succeeded' === o
+        : "succeeded" === o
           ? (0, r.jsxs)(d.ZP, {
                 children: [
                     (0, r.jsx)(d.Ee, {
                         src: n(73962),
-                        className: s()(_.image, x.marginBottom20)
+                        className: s()(_.image, x.marginBottom20),
                     }),
                     (0, r.jsx)(d.Dx, {
                         className: x.marginBottom40,
-                        children: g.intl.string(g.t.dAfGb2)
+                        children: g.intl.string(g.t.dAfGb2),
                     }),
                     (0, r.jsx)(d.zx, {
                         onClick: I,
-                        children: g.intl.string(g.t.uJWIj4)
-                    })
-                ]
+                        children: g.intl.string(g.t.uJWIj4),
+                    }),
+                ],
             })
           : (0, r.jsxs)(d.ZP, {
                 children: [
                     (0, r.jsx)(d.Ee, {
                         src: n(892235),
-                        className: s()(_.image, x.marginBottom20)
+                        className: s()(_.image, x.marginBottom20),
                     }),
                     (0, r.jsx)(d.Dx, {
                         className: x.marginBottom8,
-                        children: g.intl.string(g.t['0c8+5u'])
+                        children: g.intl.string(g.t["0c8+5u"]),
                     }),
                     (0, r.jsx)(d.DK, {
                         className: x.marginBottom40,
-                        children: g.intl.string(g.t.ULTCBA)
+                        children: g.intl.string(g.t.ULTCBA),
                     }),
                     (0, r.jsx)(d.zx, {
                         submitting: !0,
-                        color: d.zx.Colors.PRIMARY
-                    })
-                ]
+                        color: d.zx.Colors.PRIMARY,
+                    }),
+                ],
             });
 }
 o.ZP.initialize();

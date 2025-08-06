@@ -11,10 +11,10 @@ function s(e) {
         onClick: o,
         children: [
             (0, i.jsx)(t, {
-                color: 'currentColor',
-                size: 'refresh_sm'
+                color: "currentColor",
+                size: "refresh_sm",
             }),
-            n
-        ]
+            n,
+        ],
     });
 }

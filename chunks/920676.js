@@ -7,6 +7,6 @@ var i = n(507274),
 function s() {
     return (0, r.jsx)(i.V, {
         className: a.loadingPopout,
-        children: (0, r.jsx)(o.$, { type: o.R.SPINNING_CIRCLE })
+        children: (0, r.jsx)(o.$, { type: o.R.SPINNING_CIRCLE }),
     });
 }

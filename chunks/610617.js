@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685), n(953529));
+n.d(t, { Z: () => L }), n(388685), n(953529);
 var i = n(255367),
     s = n(73800),
     l = n(120356),
@@ -37,12 +37,12 @@ function L(e) {
         [G, D] = s.useState(!1),
         U = (0, E.LB)(),
         k = s.useCallback(() => {
-            (clearTimeout(w.current),
+            clearTimeout(w.current),
                 (R.current += 1),
                 R.current > 10 && (D(!0), h.K.set(E.CZ, !0)),
                 (w.current = setTimeout(() => {
                     R.current = 0;
-                }, 1000)));
+                }, 1000));
         }, []),
         [X, V] = o().partition(U, (e) => !e.requirePremium || (e.requirePremium && P)),
         W = X.map((e) => {
@@ -55,8 +55,8 @@ function L(e) {
                     ((t = e.value),
                     r()(_.option, {
                         [_.optionRedesign]: l,
-                        [_.optionPlaying]: t === M && y
-                    }))
+                        [_.optionPlaying]: t === M && y,
+                    })),
             };
         }),
         [B, J] = (0, m.US)([u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
@@ -65,84 +65,84 @@ function L(e) {
         () => () => {
             J(O.L.AUTO_DISMISS);
         },
-        [J]
+        [J],
     );
     let z = j.ZP.canUseCustomNotificationSounds(L),
         F = (0, c.e7)([p.ZP], () => p.ZP.isMuted(t), [t]);
     return null == L
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               children: [
-                  (0, i.jsxs)('div', {
+                  (0, i.jsxs)("div", {
                       className: _.header,
                       children: [
                           (0, i.jsx)(g.X6q, {
-                              variant: 'heading-md/semibold',
-                              children: Z.intl.string(Z.t.mrqSOj)
+                              variant: "heading-md/semibold",
+                              children: Z.intl.string(Z.t.mrqSOj),
                           }),
                           (0, i.jsx)(g.P3F, {
                               onClick: k,
                               className: _.nitroWheelContainer,
                               children: (0, i.jsx)(g.SrA, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: _.nitroWheel
-                              })
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: _.nitroWheel,
+                              }),
                           }),
                           Y &&
                               (0, i.jsx)(g.IGR, {
                                   className: _.newBadge,
-                                  text: Z.intl.string(Z.t.y2b7CA)
-                              })
-                      ]
+                                  text: Z.intl.string(Z.t.y2b7CA),
+                              }),
+                      ],
                   }),
                   (0, i.jsx)(g.Text, {
                       className: _.subheader,
-                      variant: 'text-sm/normal',
+                      variant: "text-sm/normal",
                       children: Z.intl.format(Z.t.LuYDy8, {
                           guildName: (e, t) =>
                               (0, i.jsx)(
                                   g.Text,
                                   {
-                                      tag: 'span',
-                                      variant: 'text-sm/medium',
-                                      children: null == a ? void 0 : a.name
+                                      tag: "span",
+                                      variant: "text-sm/medium",
+                                      children: null == a ? void 0 : a.name,
                                   },
-                                  t
-                              )
-                      })
+                                  t,
+                              ),
+                      }),
                   }),
                   F &&
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: _.warningContainer,
                           children: [
                               (0, i.jsx)(g.Mgn, {
-                                  size: 'custom',
+                                  size: "custom",
                                   width: 20,
                                   height: 20,
-                                  color: d.Z.STATUS_WARNING
+                                  color: d.Z.STATUS_WARNING,
                               }),
                               (0, i.jsx)(g.Text, {
                                   className: _.warningLabel,
-                                  variant: 'text-sm/medium',
-                                  children: Z.intl.string(Z.t['a9G/ER'])
-                              })
-                          ]
+                                  variant: "text-sm/medium",
+                                  children: Z.intl.string(Z.t["a9G/ER"]),
+                              }),
+                          ],
                       }),
                   (0, i.jsx)(g.xJW, {
                       className: _.optionsContainer,
                       title: Z.intl.string(Z.t.xxvoAg),
-                      children: (0, i.jsxs)('div', {
+                      children: (0, i.jsxs)("div", {
                           className: r()({ [_.options]: !z }),
                           children: [
                               (0, i.jsx)(g.FXm, {
                                   className: r()({ [_.options]: z }),
                                   value: null != A ? A : E.YC.CLASSIC,
                                   onChange: (e) => {
-                                      (T(e.value), P && (0, f.t)(t, A, e.value, 'notificationSettings'));
+                                      T(e.value), P && (0, f.t)(t, A, e.value, "notificationSettings");
                                   },
                                   options: W,
-                                  radioItemClassName: _.option
+                                  radioItemClassName: _.option,
                               }),
                               V.map((e, t) =>
                                   (0, i.jsx)(
@@ -152,15 +152,15 @@ function L(e) {
                                           label: e.label,
                                           description: e.description,
                                           soundpack: e.value,
-                                          location: 'notificationSettings'
+                                          location: "notificationSettings",
                                       },
-                                      'sound_option_'.concat(t)
-                                  )
-                              )
-                          ]
-                      })
+                                      "sound_option_".concat(t),
+                                  ),
+                              ),
+                          ],
+                      }),
                   }),
-                  !z && (0, i.jsx)(C.Z, { onClose: n })
-              ]
+                  !z && (0, i.jsx)(C.Z, { onClose: n }),
+              ],
           });
 }

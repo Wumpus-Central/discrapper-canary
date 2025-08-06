@@ -11,24 +11,24 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -56,56 +56,60 @@ function g(e) {
         ? null
         : e.id === a._
           ? (0, i.jsx)(l.sNh, {
-                id: 'create-category',
-                label: c.intl.string(c.t['ISN+ND']),
+                id: "create-category",
+                label: c.intl.string(c.t["ISN+ND"]),
                 action: () =>
                     (0, l.ZDy)(async () => {
-                        let { default: e } = await n.e('1812').then(n.bind(n, 477782));
+                        let { default: e } = await n.e("1812").then(n.bind(n, 477782));
                         return (t) => (0, i.jsx)(e, u({}, t));
-                    })
+                    }),
             })
           : t
             ? [
                   (0, i.jsx)(
                       l.sNh,
                       {
-                          id: 'create-channel',
-                          label: c.intl.string(c.t['fUYU+v']),
+                          id: "create-channel",
+                          label: c.intl.string(c.t["fUYU+v"]),
                           action: () =>
                               (0, l.ZDy)(async () => {
-                                  let { default: t } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                                  let { default: t } = await Promise.all([n.e("45094"), n.e("45822")]).then(
+                                      n.bind(n, 218613),
+                                  );
                                   return (n) =>
                                       (0, i.jsx)(
                                           t,
                                           d(u({}, n), {
                                               channelType: o.d4z.GUILD_TEXT,
-                                              guildId: e.id
-                                          })
+                                              guildId: e.id,
+                                          }),
                                       );
-                              })
+                              }),
                       },
-                      'create-channel'
+                      "create-channel",
                   ),
                   (0, i.jsx)(
                       l.sNh,
                       {
-                          id: 'create-category',
-                          label: c.intl.string(c.t['ISN+ND']),
+                          id: "create-category",
+                          label: c.intl.string(c.t["ISN+ND"]),
                           action: () =>
                               (0, l.ZDy)(async () => {
-                                  let { default: t } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                                  let { default: t } = await Promise.all([n.e("45094"), n.e("45822")]).then(
+                                      n.bind(n, 218613),
+                                  );
                                   return (n) =>
                                       (0, i.jsx)(
                                           t,
                                           d(u({}, n), {
                                               channelType: o.d4z.GUILD_CATEGORY,
-                                              guildId: e.id
-                                          })
+                                              guildId: e.id,
+                                          }),
                                       );
-                              })
+                              }),
                       },
-                      'create-category'
-                  )
+                      "create-category",
+                  ),
               ]
             : null;
 }

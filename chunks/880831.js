@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => x,
-    z: () => P
+    z: () => P,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -40,17 +40,24 @@ function D(e) {
         _ = i.useRef(null),
         p = i.useRef(void 0),
         h = i.useCallback(() => {
-            (l([]), f(!0));
+            l([]), f(!0);
         }, []);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         function e(e) {
             let { channelId: t, message: r, optimistic: i } = e;
-            t !== n || r.type === A.uaV.STAGE_START || r.type === A.uaV.STAGE_END || r.type === A.uaV.STAGE_TOPIC || r.type === A.uaV.STAGE_SPEAKER || r.type === A.uaV.STAGE_RAISE_HAND || i || (clearTimeout(p.current), (p.current = setTimeout(h, a)), l((e) => [...e, r.id]));
+            t !== n ||
+                r.type === A.uaV.STAGE_START ||
+                r.type === A.uaV.STAGE_END ||
+                r.type === A.uaV.STAGE_TOPIC ||
+                r.type === A.uaV.STAGE_SPEAKER ||
+                r.type === A.uaV.STAGE_RAISE_HAND ||
+                i ||
+                (clearTimeout(p.current), (p.current = setTimeout(h, a)), l((e) => [...e, r.id]));
         }
         return (
-            d.Z.subscribe('MESSAGE_CREATE', e),
+            d.Z.subscribe("MESSAGE_CREATE", e),
             () => {
-                d.Z.unsubscribe('MESSAGE_CREATE', e);
+                d.Z.unsubscribe("MESSAGE_CREATE", e);
             }
         );
     }, [n, h, o, a]),
@@ -58,7 +65,7 @@ function D(e) {
             () => () => {
                 clearTimeout(p.current);
             },
-            []
+            [],
         ),
         i.useEffect(() => {
             s.length > R &&
@@ -67,11 +74,11 @@ function D(e) {
                     return [...e.slice(t)];
                 });
         }, [s]),
-        r && null == _.current ? (_.current = s) : r || null == _.current || (_.current = null));
+        r && null == _.current ? (_.current = s) : r || null == _.current || (_.current = null);
     let m = null != (t = _.current) ? t : s;
     return {
         toastsHidden: u,
-        toastMessages: (0, c.Wu)([O.Z], () => m.map((e) => O.Z.getMessage(n, e)), [n, m]).filter(S.lm)
+        toastMessages: (0, c.Wu)([O.Z], () => m.map((e) => O.Z.getMessage(n, e)), [n, m]).filter(S.lm),
     };
 }
 function L(e) {
@@ -81,9 +88,9 @@ function L(e) {
             [v.Z],
             () => ({
                 isBlocked: v.Z.isBlockedForMessage(n),
-                isIgnored: v.Z.isIgnoredForMessage(n)
+                isIgnored: v.Z.isIgnoredForMessage(n),
             }),
-            [n]
+            [n],
         ),
         l = (0, g.Uj)(n),
         d = i.useContext(p.Z),
@@ -91,32 +98,32 @@ function L(e) {
         S = (0, h.p)(),
         A = i.useCallback(
             (e) => {
-                'A' !== e.target.nodeName &&
+                "A" !== e.target.nodeName &&
                     (f.Z.updateChatOpen(n.channel_id, !0),
                     _.Z.jumpToMessage({
                         channelId: n.channel_id,
                         messageId: n.id,
-                        flash: !0
+                        flash: !0,
                     }));
             },
-            [n.channel_id, n.id]
+            [n.channel_id, n.id],
         ),
         R =
-            null != n.content && '' !== n.content
+            null != n.content && "" !== n.content
                 ? (0, m.ZP)(n, {
                       isInteracting: O,
-                      shouldFilterKeywords: S
+                      shouldFilterKeywords: S,
                   }).content
                 : null,
         {
             contentPlaceholder: P,
             renderedContent: w,
             trailingIcon: D,
-            leadingIcon: L
+            leadingIcon: L,
         } = (0, E.f)(n, R, o, s, C.messageContent, {
             trailingIconClass: C.messageContentTrailingIcon,
             leadingIconClass: C.messageContentLeadingIcon,
-            iconSize: N.WW
+            iconSize: N.WW,
         }),
         x = (0, b.cv)(n),
         M =
@@ -128,10 +135,10 @@ function L(e) {
                               className: C.sticker,
                               size: 128,
                               sticker: e,
-                              isInteracting: O
+                              isInteracting: O,
                           },
-                          e.id
-                      )
+                          e.id,
+                      ),
                   )
                 : null;
     return (0, r.jsxs)(u.P3F, {
@@ -144,23 +151,27 @@ function L(e) {
         },
         onClick: A,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a()(C.messageContentWrapper, { [C.mentioned]: n.mentioned }),
-                children: [null != M ? null : L, null != (t = null != w ? w : M) ? t : (0, r.jsx)('span', { children: P }), null != M ? null : D]
+                children: [
+                    null != M ? null : L,
+                    null != (t = null != w ? w : M) ? t : (0, r.jsx)("span", { children: P }),
+                    null != M ? null : D,
+                ],
             }),
-            (0, r.jsx)('img', {
-                alt: '',
+            (0, r.jsx)("img", {
+                alt: "",
                 src:
                     (null == l ? void 0 : l.guildMemberAvatar) != null && null != d
                         ? (0, I.JM)({
                               guildId: d,
                               userId: n.author.id,
-                              avatar: l.guildMemberAvatar
+                              avatar: l.guildMemberAvatar,
                           })
                         : n.author.getAvatarURL(d, 32),
-                className: C.avatar
-            })
-        ]
+                className: C.avatar,
+            }),
+        ],
     });
 }
 function x(e) {
@@ -170,7 +181,7 @@ function x(e) {
             channelId: t,
             isFrozen: o,
             count: R,
-            lingerMs: P
+            lingerMs: P,
         }),
         _ = i.useRef({}),
         [p, h] = i.useState({}),
@@ -178,7 +189,7 @@ function x(e) {
             null == t ? delete _.current[e] : (_.current[e] = t);
         }, []),
         g = i.useRef(p);
-    (i.useLayoutEffect(() => {
+    i.useLayoutEffect(() => {
         g.current = p;
     }),
         i.useLayoutEffect(() => {
@@ -187,14 +198,14 @@ function x(e) {
             for (let r of f) {
                 var n;
                 let i = null != (n = _.current[r.id]) ? n : 0;
-                ((e[r.id] = t), (t += i + w));
+                (e[r.id] = t), (t += i + w);
             }
             (0, s.isEqual)(e, g.current) || h(e);
-        }, [f]));
+        }, [f]);
     let E = f.map((e) => ({
             message: e,
             height: _.current[e.id],
-            y: p[e.id]
+            y: p[e.id],
         })),
         b = (0, u.Yzy)(E, {
             keys: (e) => e.message.id,
@@ -203,7 +214,7 @@ function x(e) {
                 let { y: t } = e;
                 return {
                     opacity: 1,
-                    translateY: t
+                    translateY: t,
                 };
             },
             update: (e) => {
@@ -215,14 +226,14 @@ function x(e) {
                 return {
                     opacity: 0,
                     translateY: d ? n : -(null != t ? t : 0) - w,
-                    pointerEvents: 'none'
+                    pointerEvents: "none",
                 };
-            }
+            },
         });
     return (0, r.jsx)(u.f6W, {
         theme: A.BRd.DARK,
         children: (e) =>
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a()(n, e),
                 onMouseEnter: () => {
                     c(!0);
@@ -235,9 +246,9 @@ function x(e) {
                         ref: (e) => m(t.message.id, null != e ? e.offsetHeight : null),
                         className: C.toastWrapper,
                         style: e,
-                        children: (0, r.jsx)(L, { message: t.message })
-                    })
-                )
-            })
+                        children: (0, r.jsx)(L, { message: t.message }),
+                    }),
+                ),
+            }),
     });
 }

@@ -6,9 +6,17 @@ var r = n(255367),
     s = n(670596),
     l = n(561779),
     c = n(993817);
-let u = (e) => ''.concat(e.toFixed(0), '%'),
+let u = (e) => "".concat(e.toFixed(0), "%"),
     d = i.forwardRef(function (e, t) {
-        let { value: n, minValue: o = 0, maxValue: d = 100, onChange: f, onInteraction: _, renderValue: p = u, 'aria-label': h } = e,
+        let {
+                value: n,
+                minValue: o = 0,
+                maxValue: d = 100,
+                onChange: f,
+                onInteraction: _,
+                renderValue: p = u,
+                "aria-label": h,
+            } = e,
             m = i.useRef(null),
             g = i.useRef(a().debounce(() => (null == _ ? void 0 : _(s.U.SLIDER)), 100));
         i.useImperativeHandle(
@@ -22,14 +30,14 @@ let u = (e) => ''.concat(e.toFixed(0), '%'),
                     var e;
                     return null == (e = m.current) ? void 0 : e.blur();
                 },
-                activate: () => !1
+                activate: () => !1,
             }),
-            []
+            [],
         );
         let E = (e) => {
-            (f(e), g.current());
+            f(e), g.current();
         };
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: c.sliderContainer,
             children: (0, r.jsx)(l.i, {
                 ref: m,
@@ -42,8 +50,8 @@ let u = (e) => ''.concat(e.toFixed(0), '%'),
                 onValueChange: E,
                 asValueChanges: f,
                 onValueRender: p,
-                orientation: 'horizontal',
-                'aria-label': h
-            })
+                orientation: "horizontal",
+                "aria-label": h,
+            }),
         });
     });

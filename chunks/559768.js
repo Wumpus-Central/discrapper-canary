@@ -1,1 +1,1 @@
-t.exports = { modalContent: 'modalContent__55d91' };
+t.exports = { modalContent: "modalContent__55d91" };

@@ -10,18 +10,18 @@ function c(e) {
         n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion);
     return (0, r.useMemo)(() => {
         var r, i, o;
-        let l = (0, a.b)('collectibles/'.concat(e.src, 'img.png')),
-            c = (0, a.b)('collectibles/'.concat(e.src, 'asset.webm')),
-            u = (0, a.b)('collectibles/'.concat(e.src, 'static.png'));
+        let l = (0, a.b)("collectibles/".concat(e.src, "img.png")),
+            c = (0, a.b)("collectibles/".concat(e.src, "asset.webm")),
+            u = (0, a.b)("collectibles/".concat(e.src, "static.png"));
         if (e.preview)
             return {
                 staticAsset: null == (r = t(e.src)) ? void 0 : r.staticUrl,
-                animatedAsset: null == (i = t(e.src)) ? void 0 : i.animatedUrl
+                animatedAsset: null == (i = t(e.src)) ? void 0 : i.animatedUrl,
             };
-        let d = (null != (o = platform.name) ? o : 'unknown').toLowerCase();
+        let d = (null != (o = platform.name) ? o : "unknown").toLowerCase();
         return {
             staticAsset: u,
-            animatedAsset: n || (0, s.isLinux)() || 'safari' === d ? l : c
+            animatedAsset: n || (0, s.isLinux)() || "safari" === d ? l : c,
         };
     }, [e.preview, e.src, t, n]);
 }

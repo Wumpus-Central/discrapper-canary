@@ -2,7 +2,7 @@ n.d(t, {
     Xq: () => u,
     g8: () => _,
     hZ: () => d,
-    wk: () => f
+    wk: () => f,
 });
 var r = n(990547),
     i = n(283693),
@@ -13,22 +13,22 @@ var r = n(990547),
     c = n(981631);
 function u(e) {
     o.Z.dispatch({
-        type: 'SURVEY_OVERRIDE',
-        id: e
+        type: "SURVEY_OVERRIDE",
+        id: e,
     });
 }
 function d(e, t) {
-    (o.Z.dispatch({
-        type: 'SURVEY_HIDE',
-        key: e
+    o.Z.dispatch({
+        type: "SURVEY_HIDE",
+        key: e,
     }),
         t
             ? s.default.track(c.rMx.APP_NOTICE_CLOSED, {
                   notice_type: c.kVF.SURVEY,
                   survey_id: e,
-                  dismissed: t
+                  dismissed: t,
               })
-            : s.default.track(c.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: c.kVF.SURVEY }));
+            : s.default.track(c.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: c.kVF.SURVEY });
 }
 function f(e, t) {
     var n = {};
@@ -44,23 +44,23 @@ function f(e, t) {
                     var t;
                     let n = null == e || null == (t = e.body) ? void 0 : t.survey;
                     return (0, i.iG)({ key: null == n ? void 0 : n.key });
-                }
+                },
             },
-            rejectWithError: !1
+            rejectWithError: !1,
         }).then(
             (e) => {
                 var t;
                 o.Z.dispatch({
-                    type: 'SURVEY_FETCHED',
-                    survey: null == e || null == (t = e.body) ? void 0 : t.survey
+                    type: "SURVEY_FETCHED",
+                    survey: null == e || null == (t = e.body) ? void 0 : t.survey,
                 });
             },
             () => {
                 o.Z.dispatch({
-                    type: 'SURVEY_FETCHED',
-                    survey: null
+                    type: "SURVEY_FETCHED",
+                    survey: null,
                 });
-            }
+            },
         )
     );
 }
@@ -69,16 +69,16 @@ function _(e) {
     if (null === t || (null != t && Date.now() - t >= a.J))
         return (
             o.Z.dispatch({
-                type: 'SURVEY_SEEN',
-                key: e
+                type: "SURVEY_SEEN",
+                key: e,
             }),
             l.Z.post({
                 url: c.ANM.USER_SURVEY_SEEN(e),
                 trackedActionData: {
                     event: r.NetworkActionNames.USER_SURVEY_SEEN,
-                    properties: (t) => (0, i.iG)({ key: e })
+                    properties: (t) => (0, i.iG)({ key: e }),
                 },
-                rejectWithError: !1
+                rejectWithError: !1,
             })
         );
 }

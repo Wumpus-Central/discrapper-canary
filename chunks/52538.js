@@ -10,7 +10,7 @@ var r = n(704215),
 let d = () => {
     let e = (0, a.Z)(),
         t = (0, l.Z)({ guild: e });
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: c.wrapper,
         children: (0, i.jsx)(s.Z, {
             isPremiumFeature: !0,
@@ -20,9 +20,9 @@ let d = () => {
             onTryFeature: t,
             tryItText: o.intl.string(o.t.RzWDqa),
             header: o.intl.string(o.t.IIpTub),
-            body: o.intl.string(o.t['797pnJ']),
+            body: o.intl.string(o.t["797pnJ"]),
             dismissibleContent: r.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK,
-            maxWidth: 320
-        })
+            maxWidth: 320,
+        }),
     });
 };

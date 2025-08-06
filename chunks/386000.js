@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,7 +42,8 @@ function f(e, t) {
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -52,12 +53,30 @@ function _(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function p(e) {
-    var { selfMute: t, serverMute: n, suppress: u, centerButton: _ = !1, awaitingRemote: p, onMouseEnter: h, onMouseLeave: m, onClick: g } = e,
-        E = f(e, ['selfMute', 'serverMute', 'suppress', 'centerButton', 'awaitingRemote', 'onMouseEnter', 'onMouseLeave', 'onClick']);
+    var {
+            selfMute: t,
+            serverMute: n,
+            suppress: u,
+            centerButton: _ = !1,
+            awaitingRemote: p,
+            onMouseEnter: h,
+            onMouseLeave: m,
+            onClick: g,
+        } = e,
+        E = f(e, [
+            "selfMute",
+            "serverMute",
+            "suppress",
+            "centerButton",
+            "awaitingRemote",
+            "onMouseEnter",
+            "onMouseLeave",
+            "onClick",
+        ]);
     let { parentAnalyticsLocation: b } = (0, o.ZP)(),
         y = t || n || u,
         O = _ ? c.d : c.Z,
@@ -71,21 +90,21 @@ function p(e) {
                 {
                     iconComponent: S,
                     isTrayButton: !0,
-                    caretColor: y ? 'red' : 'primaryDark',
-                    color: y ? 'red' : void 0,
+                    caretColor: y ? "red" : "primaryDark",
+                    color: y ? "red" : void 0,
                     label: v,
                     onMouseEnter: (e) => {
-                        (null == h || h(e), I.onMouseEnter());
+                        null == h || h(e), I.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        (null == m || m(e), I.onMouseLeave());
+                        null == m || m(e), I.onMouseLeave();
                     },
                     onClick: (e) => {
-                        (null == g || g(e), (0, s.v)(b, s.d.MIC, t));
-                    }
+                        null == g || g(e), (0, s.v)(b, s.d.MIC, t);
+                    },
                 },
-                E
-            )
+                E,
+            ),
         )
     );
 }

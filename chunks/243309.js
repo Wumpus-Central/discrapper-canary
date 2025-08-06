@@ -12,29 +12,39 @@ function l(t) {
     (0, s.x5)(t) && (e = 1000 * (0, n.ph)());
     let a = (0, s.Ei)();
     if (!a) return;
-    c.X && o.kg.log(`[Profiling] started profiling span: ${(0, r.XU)(t).description}`);
+    c.X && o.kg.log(`[Profiling] started profiling span: ${((0, r.XU))(t).description}`);
     let l = (0, i.DM)();
     async function u() {
         if (t && a)
             return a
                 .stop()
                 .then((e) => {
-                    if ((I && (E.m9.clearTimeout(I), (I = void 0)), c.X && o.kg.log(`[Profiling] stopped profiling of span: ${(0, r.XU)(t).description}`), !e)) {
-                        c.X && o.kg.log(`[Profiling] profiler returned null profile for: ${(0, r.XU)(t).description}`, 'this may indicate an overlapping span or a call to stopProfiling with a profile title that was never started');
+                    if (
+                        (I && (E.m9.clearTimeout(I), (I = void 0)),
+                        c.X && o.kg.log(`[Profiling] stopped profiling of span: ${((0, r.XU))(t).description}`),
+                        !e)
+                    ) {
+                        c.X &&
+                            o.kg.log(
+                                `[Profiling] profiler returned null profile for: ${((0, r.XU))(t).description}`,
+                                "this may indicate an overlapping span or a call to stopProfiling with a profile title that was never started",
+                            );
                         return;
                     }
                     (0, s.dz)(l, e);
                 })
                 .catch((t) => {
-                    c.X && o.kg.log('[Profiling] error while stopping profiler:', t);
+                    c.X && o.kg.log("[Profiling] error while stopping profiler:", t);
                 });
     }
-    (0, _.nZ)().setContext('profile', {
+    (0, _.nZ)().setContext("profile", {
         profile_id: l,
-        start_timestamp: e
+        start_timestamp: e,
     });
     let I = E.m9.setTimeout(() => {
-            (c.X && o.kg.log('[Profiling] max profile duration elapsed, stopping profiling for:', (0, r.XU)(t).description), u());
+            c.X &&
+                o.kg.log("[Profiling] max profile duration elapsed, stopping profiling for:", (0, r.XU)(t).description),
+                u();
         }, s.WU),
         R = t.end.bind(t);
     t.end = function () {
@@ -45,7 +55,7 @@ function l(t) {
                   },
                   () => {
                       R();
-                  }
+                  },
               ),
               t)
             : R();

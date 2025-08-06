@@ -1,6 +1,6 @@
 n.d(t, {
     a: () => a,
-    y: () => s
+    y: () => s,
 });
 var r = n(255367);
 n(73800);
@@ -9,7 +9,7 @@ var i = n(481060),
 function a(e) {
     return e.map((e) => ({
         label: e.label,
-        value: e.id
+        value: e.id,
     }));
 }
 function s(e) {
@@ -18,6 +18,6 @@ function s(e) {
         value: null != s ? s.variantId : null,
         clearable: null != s,
         options: a(t.variants),
-        onChange: (e) => (0, o.rX)(t.system, n, e)
+        onChange: (e) => (0, o.rX)(t.system, n, e),
     });
 }

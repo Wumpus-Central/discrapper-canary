@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(126663),
@@ -13,7 +13,7 @@ let _ = -120,
     p = 6 * u.Z.Millis.SECOND,
     h = 2 * u.Z.Millis.SECOND,
     m = 2 * u.Z.Millis.SECOND,
-    g = (e) => 'scale('.concat(1 - e / _, ') rotate(').concat(e, 'deg)');
+    g = (e) => "scale(".concat(1 - e / _, ") rotate(").concat(e, "deg)");
 function E(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: u } = e,
         { emoji: E, sentAt: b } = n,
@@ -27,8 +27,8 @@ function E(e) {
             config: o.config.default,
             onRest: (e, t) => {
                 let { phase: n } = t;
-                'leave' === n && u();
-            }
+                "leave" === n && u();
+            },
         });
     return (i.useEffect(() => {
         let e;
@@ -37,9 +37,9 @@ function E(e) {
                 ? (0, d.H)(t)
                 : (e = setTimeout(
                       () => {
-                          (v(!1), I && (0, d.H)(t));
+                          v(!1), I && (0, d.H)(t);
                       },
-                      I ? h : p
+                      I ? h : p,
                   )),
             () => {
                 null != e && clearTimeout(e);
@@ -60,8 +60,8 @@ function E(e) {
                           className: f.voiceChannelEffectEmoji,
                           emojiId: E.id,
                           emojiName: E.name,
-                          animated: null != (n = E.animated) && n
-                      })
+                          animated: null != (n = E.animated) && n,
+                      }),
                   })
               );
           });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var r = n(73800),
     i = n(749210),
     l = n(287734),
@@ -19,15 +19,18 @@ function x(e, t) {
         error: h,
         onSave: async (r) => {
             let { topic: s, privacyLevel: d, sendStartNotification: x } = r;
-            if (null != e && '' !== s && null != d) {
-                (m(!0), g(null), null != n && (i.Z.selectGuild(n), l.default.selectVoiceChannel(e.id)));
+            if (null != e && "" !== s && null != d) {
+                m(!0), g(null), null != n && (i.Z.selectGuild(n), l.default.selectVoiceChannel(e.id));
                 try {
                     let n;
-                    (null != b ? (n = await c.Ef(e, s, d)) : ((n = await c.HO(e, s, d, null != x && x)), p && o.Kw(u.v.LIVE_STAGE_NOTIFICATION_BADGE)), t(n));
+                    null != b
+                        ? (n = await c.Ef(e, s, d))
+                        : ((n = await c.HO(e, s, d, null != x && x)), p && o.Kw(u.v.LIVE_STAGE_NOTIFICATION_BADGE)),
+                        t(n);
                 } catch (e) {
-                    (g(new a.Hx(e)), m(!1));
+                    g(new a.Hx(e)), m(!1);
                 }
             }
-        }
+        },
     };
 }

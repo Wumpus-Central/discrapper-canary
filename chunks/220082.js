@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     Cf: () => v,
     Dq: () => y,
     SR: () => m,
     ZP: () => O,
-    vM: () => E
+    vM: () => E,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(979590),
     o = n.n(i),
@@ -22,7 +22,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,7 +69,7 @@ function h(e, t) {
 }
 let m = (0, a.U)(() => ({
     palette: {},
-    fetching: {}
+    fetching: {},
 }));
 function g(e) {
     return null != m.getState().palette[e];
@@ -87,8 +87,8 @@ async function b(e) {
                 m.setState((r) => ({
                     fetching: h(_({}, r.fetching), { [e]: !1 }),
                     palette: h(_({}, r.palette), {
-                        [e]: [...t.slice(0, 2), ...n]
-                    })
+                        [e]: [...t.slice(0, 2), ...n],
+                    }),
                 }));
             });
         } catch (t) {
@@ -120,19 +120,19 @@ function v(e, t) {
                           {
                               h: i,
                               s,
-                              l
+                              l,
                           } = o()({
                               r: t,
                               g: n,
-                              b: r
+                              b: r,
                           }).toHsl();
                       return o()({
                           h: i,
                           s: s * a,
-                          l
+                          l,
                       }).toHexString();
                   }),
-        [i, a]
+        [i, a],
     );
     return null != s ? s : [t, t];
 }

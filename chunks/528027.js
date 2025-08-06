@@ -17,10 +17,10 @@ function d(e) {
               emojiId: null == m ? void 0 : m.id,
               emojiName: null != d ? d : null == m ? void 0 : m.name,
               animated: null != (t = null == m ? void 0 : m.animated) && t,
-              className: l()(s.emojiIcon, f)
+              className: l()(s.emojiIcon, f),
           })
         : (0, r.jsx)(c.Z, {
               className: l()(s.emojiIcon, f),
-              color: u.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
+              color: u.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON,
           });
 }

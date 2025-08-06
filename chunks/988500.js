@@ -8,17 +8,17 @@ var i = n(481060),
 let l = {
     [a.z.END_EARLY]: (e) =>
         (0, r.jsx)(i.sNh, {
-            id: 'end-poll-early',
+            id: "end-poll-early",
             label: s.intl.string(s.t.grdwws),
             icon: i.e0C,
             action: () => {
                 o.Z.endPollEarly({
                     channelId: e.channel_id,
-                    messageId: e.id
+                    messageId: e.id,
                 });
             },
-            iconProps: { color: 'currentColor' }
-        })
+            iconProps: { color: "currentColor" },
+        }),
 };
 function c(e) {
     let t = (0, a.Z)(e);

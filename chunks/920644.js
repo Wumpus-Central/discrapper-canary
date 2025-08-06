@@ -11,7 +11,7 @@ var i = n(990547),
     d = n(388032),
     p = n(274978);
 function h() {
-    ((0, c.qV)(), (0, o.uL)(u.Z5c.LOGIN, { source: 'existing_user_age_gate_underage' }));
+    (0, c.qV)(), (0, o.uL)(u.Z5c.LOGIN, { source: "existing_user_age_gate_underage" });
 }
 function f(e) {
     let { underageMessage: t, transitionState: o } = e,
@@ -19,55 +19,55 @@ function f(e) {
     return (0, r.jsxs)(l.Y0X, {
         transitionState: o,
         size: l.CgR.SMALL,
-        'aria-labelledby': c,
+        "aria-labelledby": c,
         impression: {
             impressionName: i.ImpressionNames.USER_AGE_GATE_UNDERAGE,
-            impressionProperties: { existing_user: !0 }
+            impressionProperties: { existing_user: !0 },
         },
-        parentComponent: 'ExistingUserAgeGateUnderage',
+        parentComponent: "ExistingUserAgeGateUnderage",
         children: [
             (0, r.jsx)(l.hzk, {
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: p.container,
                     children: [
-                        (0, r.jsx)('img', {
-                            alt: '',
+                        (0, r.jsx)("img", {
+                            alt: "",
                             src: n(231443),
-                            className: p.img
+                            className: p.img,
                         }),
                         (0, r.jsx)(l.X6q, {
-                            variant: 'heading-xl/semibold',
+                            variant: "heading-xl/semibold",
                             className: p.title,
                             id: c,
-                            children: d.intl.string(d.t['NR/zrK'])
+                            children: d.intl.string(d.t["NR/zrK"]),
                         }),
                         (0, r.jsx)(l.Text, {
-                            color: 'header-secondary',
+                            color: "header-secondary",
                             className: p.subtitle,
-                            variant: 'text-sm/normal',
+                            variant: "text-sm/normal",
                             children: d.intl.format(d.t.b0QzXV, {
                                 underageMessage: null != t ? t : d.intl.string(d.t.WqEH4O),
-                                helpURL: s.Z.getArticleURL(u.BhN.AGE_GATE)
-                            })
+                                helpURL: s.Z.getArticleURL(u.BhN.AGE_GATE),
+                            }),
                         }),
                         (0, r.jsx)(l.Text, {
-                            color: 'header-secondary',
+                            color: "header-secondary",
                             className: p.subtitle,
-                            variant: 'text-sm/normal',
-                            children: d.intl.format(d.t['3axQdH'], { days: 30 })
-                        })
-                    ]
-                })
+                            variant: "text-sm/normal",
+                            children: d.intl.format(d.t["3axQdH"], { days: 30 }),
+                        }),
+                    ],
+                }),
             }),
             (0, r.jsx)(l.mzw, {
                 children: (0, r.jsx)(l.zxk, {
-                    variant: 'primary',
-                    size: 'sm',
+                    variant: "primary",
+                    size: "sm",
                     text: d.intl.string(d.t.szzQ6O),
                     fullWidth: !0,
-                    onClick: h
-                })
-            })
-        ]
+                    onClick: h,
+                }),
+            }),
+        ],
     });
 }

@@ -16,5 +16,5 @@ async function o(e) {
     )
         return;
     let { default: s } = await Promise.resolve().then(n.bind(n, 17181));
-    (await s({ guildId: o.guild.id }), r.ZP.transitionToInvite(o, void 0, !0));
+    await s({ guildId: o.guild.id }), r.ZP.transitionToInvite(o, void 0, !0);
 }

@@ -10,7 +10,14 @@ var i = n(442837),
     u = n(907273);
 function d(e) {
     var t;
-    let { message: n, compact: d, usernameHook: f, onClickThread: _, onClickViewThreads: p, onContextMenuThread: h } = e,
+    let {
+            message: n,
+            compact: d,
+            usernameHook: f,
+            onClickThread: _,
+            onClickViewThreads: p,
+            onContextMenuThread: h,
+        } = e,
         m = (0, s.ZP)(n),
         g = f(m),
         E = (0, i.e7)([a.Z], () => {
@@ -23,18 +30,18 @@ function d(e) {
             threadName: null != (t = null == E ? void 0 : E.name) ? t : n.content,
             threadOnClick: {
                 onClick: _,
-                onContextMenu: h
+                onContextMenu: h,
             },
-            viewThreadsOnClick: p
+            viewThreadsOnClick: p,
         });
     return (0, r.jsx)(l.Z, {
         iconNode: (0, r.jsx)(o.or_, {
-            size: 'md',
-            color: 'currentColor',
-            className: u.icon
+            size: "md",
+            color: "currentColor",
+            className: u.icon,
         }),
         timestamp: n.timestamp,
         compact: d,
-        children: b
+        children: b,
     });
 }

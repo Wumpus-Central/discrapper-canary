@@ -22,24 +22,24 @@ function v(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                })
+                }),
             )),
             r.forEach(function (e) {
                 var r;
-                ((r = n[e]),
+                (r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (t[e] = r));
-            }));
+                        : (t[e] = r);
+            });
     }
     return t;
 }
@@ -74,30 +74,33 @@ function Z(t) {
         D = (0, s.Z)(n, e),
         T = (0, d.Z)(e);
     return (0, r.jsxs)(l.v2r, {
-        navId: 'game-context',
+        navId: "game-context",
         onClose: a.Zy,
-        'aria-label': P.intl.string(P.t.tKobzc),
+        "aria-label": P.intl.string(P.t.tKobzc),
         onSelect: c,
-        children: [u, Z, S, A, E, m, w, (0, r.jsx)(l.kSQ, { children: D }), (0, r.jsx)(l.kSQ, { children: T })]
+        children: [u, Z, S, A, E, m, w, (0, r.jsx)(l.kSQ, { children: D }), (0, r.jsx)(l.kSQ, { children: T })],
     });
 }
 function S(t) {
     let { applicationId: e, branchId: n } = t,
         l = (0, i.e7)([c.Z], () => c.Z.getApplication(e), [e]),
-        a = (0, i.e7)([u.Z], () => (null != n ? u.Z.getLibraryApplication(e, n) : u.Z.getActiveLibraryApplication(e)), [e, n]);
+        a = (0, i.e7)([u.Z], () => (null != n ? u.Z.getLibraryApplication(e, n) : u.Z.getActiveLibraryApplication(e)), [
+            e,
+            n,
+        ]);
     return null == l || null == a
         ? (0, r.jsx)(
               o.default,
               I(v({}, t), {
                   id: e,
-                  label: P.intl.string(P.t['FfCL+/'])
-              })
+                  label: P.intl.string(P.t["FfCL+/"]),
+              }),
           )
         : (0, r.jsx)(
               Z,
               I(v({}, t), {
                   application: l,
-                  libraryApplication: a
-              })
+                  libraryApplication: a,
+              }),
           );
 }

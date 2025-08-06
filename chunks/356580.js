@@ -6,26 +6,26 @@ let a = {
             full: "EEEE, do MMMM y 'р.'",
             long: "do MMMM y 'р.'",
             medium: "d MMM y 'р.'",
-            short: 'dd.MM.y'
+            short: "dd.MM.y",
         },
-        defaultWidth: 'full'
+        defaultWidth: "full",
     }),
     time: (0, t.Z)({
         formats: {
-            full: 'H:mm:ss zzzz',
-            long: 'H:mm:ss z',
-            medium: 'H:mm:ss',
-            short: 'H:mm'
+            full: "H:mm:ss zzzz",
+            long: "H:mm:ss z",
+            medium: "H:mm:ss",
+            short: "H:mm",
         },
-        defaultWidth: 'full'
+        defaultWidth: "full",
     }),
     dateTime: (0, t.Z)({
         formats: {
             full: "{{date}} 'о' {{time}}",
             long: "{{date}} 'о' {{time}}",
-            medium: '{{date}}, {{time}}',
-            short: '{{date}}, {{time}}'
+            medium: "{{date}}, {{time}}",
+            short: "{{date}}, {{time}}",
         },
-        defaultWidth: 'full'
-    })
+        defaultWidth: "full",
+    }),
 };

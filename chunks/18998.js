@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(583741), n(388685), n(539854));
+n.d(t, { Z: () => _ }), n(583741), n(388685), n(539854);
 var r,
     i = n(255367),
     l = n(73800),
@@ -17,7 +17,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,25 +27,25 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let m = {
     friction: 10,
-    tension: 300
+    tension: 300,
 };
 class b extends l.Component {
     shouldComponentUpdate(e, t) {
-        return !(0, d.Z)(this.props, e, ['animate']) || !(0, d.Z)(this.state, t);
+        return !(0, d.Z)(this.props, e, ["animate"]) || !(0, d.Z)(this.state, t);
     }
     componentDidMount() {
         let { hide: e } = this.props;
@@ -77,11 +77,11 @@ class b extends l.Component {
             className: s()(p.bar, e, { [p.hidden]: n }),
             onClick: r,
             style: this.getAnimatedStyle(),
-            'aria-hidden': n,
-            children: (0, i.jsx)('span', {
+            "aria-hidden": n,
+            children: (0, i.jsx)("span", {
                 className: p.text,
-                children: t
-            })
+                children: t,
+            }),
         });
     }
     getAnimatedStyle() {
@@ -92,19 +92,19 @@ class b extends l.Component {
                 {
                     translateY: e.interpolate({
                         inputRange: [0, 1],
-                        outputRange: ['0%', t ? '180%' : '-180%']
-                    })
-                }
-            ]
+                        outputRange: ["0%", t ? "180%" : "-180%"],
+                    }),
+                },
+            ],
         };
     }
     constructor(e) {
-        (super(e),
-            f(this, '_timeout', void 0),
+        super(e),
+            f(this, "_timeout", void 0),
             (this.state = {
                 translateY: new u.Z.Value(),
-                reduceMotion: !1
-            }));
+                reduceMotion: !1,
+            });
     }
 }
 class O extends (r = l.PureComponent) {
@@ -119,9 +119,17 @@ class O extends (r = l.PureComponent) {
     }
     render() {
         let { unread: e, mention: t } = this.state,
-            { textMention: n, textUnread: r, reverse: l, className: o, barClassName: a, hide: c, animate: u } = this.props,
+            {
+                textMention: n,
+                textUnread: r,
+                reverse: l,
+                className: o,
+                barClassName: a,
+                hide: c,
+                animate: u,
+            } = this.props,
             { reducedMotion: d } = this.context;
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: null != o ? o : void 0,
             children: (0, i.jsx)(b, {
                 hide: !0 === c || (null == e && null == t),
@@ -129,34 +137,48 @@ class O extends (r = l.PureComponent) {
                 text: null != t ? n : r,
                 reverse: l,
                 animate: u && !d.enabled,
-                onClick: this.handleClick
-            })
+                onClick: this.handleClick,
+            }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            f(this, 'state', {
+        super(...e),
+            f(this, "state", {
                 unread: null,
-                mention: null
+                mention: null,
             }),
             f(
                 this,
-                'calculateState',
+                "calculateState",
                 c()(() => {
-                    let { items: e, expandedFolders: t, isVisible: n, isUnread: r, isMentioned: i, reverse: l, onCalculate: o } = this.props,
+                    let {
+                            items: e,
+                            expandedFolders: t,
+                            isVisible: n,
+                            isUnread: r,
+                            isMentioned: i,
+                            reverse: l,
+                            onCalculate: o,
+                        } = this.props,
                         s = null,
                         a = null,
                         c = [];
                     e.forEach((e) => {
-                        'string' == typeof e ? c.push(e) : 'object' == typeof e && null != e.folderId ? (null != t && t.has(e.folderId) ? (c.push('folder:'.concat(e.folderId)), e.guildIds.forEach((e) => c.push(e))) : c.push(e.guildIds)) : c.push(e.guildIds[0]);
+                        "string" == typeof e
+                            ? c.push(e)
+                            : "object" == typeof e && null != e.folderId
+                              ? null != t && t.has(e.folderId)
+                                  ? (c.push("folder:".concat(e.folderId)), e.guildIds.forEach((e) => c.push(e)))
+                                  : c.push(e.guildIds)
+                              : c.push(e.guildIds[0]);
                     });
                     let u = (e) => {
-                            (null == s && i(e, l, c) && (s = e), null == a && r(e, l, c) && (a = e));
+                            null == s && i(e, l, c) && (s = e), null == a && r(e, l, c) && (a = e);
                         },
                         d = l ? c.length - 1 : 0,
                         h = c[d];
                     for (; null != h; ) {
-                        if ('string' == typeof h) {
+                        if ("string" == typeof h) {
                             if (n(h, l, c)) break;
                             u(h);
                         } else {
@@ -170,29 +192,29 @@ class O extends (r = l.PureComponent) {
                             }
                             if (e) break;
                         }
-                        ((d += l ? -1 : 1), (h = c[d]));
+                        (d += l ? -1 : 1), (h = c[d]);
                     }
-                    (null != o && o(s, a, l),
+                    null != o && o(s, a, l),
                         this.setState({
                             mention: s,
-                            unread: a
-                        }));
-                }, 200)
+                            unread: a,
+                        });
+                }, 200),
             ),
-            f(this, 'handleClick', (e) => {
-                (e.preventDefault(), e.stopPropagation());
+            f(this, "handleClick", (e) => {
+                e.preventDefault(), e.stopPropagation();
                 let { unread: t, mention: n } = this.state,
                     { onJumpTo: r } = this.props,
                     i = null != n ? n : t;
                 null != i && r(i, [n, t]);
-            }));
+            });
     }
 }
-(f(O, 'contextType', h.Sfi),
-    f(O, 'defaultProps', {
+f(O, "contextType", h.Sfi),
+    f(O, "defaultProps", {
         className: p.container,
         reverse: !1,
         hide: !1,
-        animate: !0
-    }));
+        animate: !0,
+    });
 let _ = O;

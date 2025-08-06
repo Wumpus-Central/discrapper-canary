@@ -1,4 +1,4 @@
-(n.d(t, { h: () => c }), n(388685));
+n.d(t, { h: () => c }), n(388685);
 var r = n(73800),
     i = n(442837),
     l = n(592125),
@@ -15,7 +15,7 @@ function c(e) {
             c,
             (e) => {
                 null != t && (u(e), (0, s.Pq)(t, o.Plq.REQUEST_TO_SPEAK, e));
-            }
+            },
         ]
     );
 }

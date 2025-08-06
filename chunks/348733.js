@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -18,13 +18,17 @@ function y(e) {
         o = r.useRef(null),
         p = (0, a.Wu)([c.Z], () => c.Z.getNotifications()),
         y = (0, a.e7)([d.default], () => d.default.getNotificationPositionMode());
-    if ((0, a.e7)([f.Z], () => f.Z.isNotificationDisabled(u.OverlayNotificationDisabledSetting.TEXT_CHAT)) || y === g._vf.DISABLED) return null;
+    if (
+        (0, a.e7)([f.Z], () => f.Z.isNotificationDisabled(u.OverlayNotificationDisabledSetting.TEXT_CHAT)) ||
+        y === g._vf.DISABLED
+    )
+        return null;
     let v = p.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
         _ = (0, s.groupBy)(v, (e) => e.type);
     return (0, i.jsx)(h.Z, {
         contentDomRef: o,
         observeInterval: 200,
-        children: (0, i.jsx)('div', {
+        children: (0, i.jsx)("div", {
             ref: o,
             className: l()(m.container, m[y]),
             children: Object.entries(_).map((e) => {
@@ -37,17 +41,17 @@ function y(e) {
                               locked: t,
                               keybind: n,
                               position: y,
-                              notification: o[0]
+                              notification: o[0],
                           },
-                          r
+                          r,
                       );
-            })
-        })
+            }),
+        }),
     });
 }
 function O(e) {
     let { notification: t, position: n, keybind: r, locked: o } = e;
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: m.notificationGroup,
         children: (0, i.jsx)(
             p.Z,
@@ -56,9 +60,9 @@ function O(e) {
                 position: n,
                 notification: t,
                 keybind: r,
-                locked: o
+                locked: o,
             },
-            t.id
-        )
+            t.id,
+        ),
     });
 }

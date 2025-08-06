@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -21,43 +21,45 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
 let v = {
         animation: {
             BEG: 0,
-            END: 75
+            END: 75,
         },
         LOOP: {
             BEG: 76,
-            END: 376
-        }
+            END: 376,
+        },
     },
     j = i.memo(function (e) {
         let { guildId: t, selected: l } = e,
             j = (0, m.ZP)(t),
             E = i.useCallback(() => {
                 var e;
-                ((0, h.jd)(t), (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW), null == j || null == (e = j.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION));
+                (0, h.jd)(t),
+                    (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    null == j || null == (e = j.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
             }, [t, j]),
             S = i.useCallback(() => {
                 var e;
@@ -71,13 +73,13 @@ let v = {
                     case p.J.NEW_PERK_AVAILABLE:
                         return (0, r.jsx)(g.cO, C({ guildId: t }, j.popout));
                     default:
-                        return (0, r.jsx)('div', {});
+                        return (0, r.jsx)("div", {});
                 }
             }, [t, null == j ? void 0 : j.popout]),
             x = (0, a.s9z)(a.JQI),
             I = (0, s.e7)([d.Z], () => d.Z.hasLayers()),
             [P, N] = i.useState(null),
-            w = null == P ? 'animation' : 'LOOP';
+            w = null == P ? "animation" : "LOOP";
         i.useEffect(() => {
             (null == j ? void 0 : j.popout) == null && N(null);
         }, [null == j ? void 0 : j.popout]);
@@ -89,8 +91,8 @@ let v = {
             targetElementRef: T,
             shouldShow: (null == j ? void 0 : j.popout) != null && !(x || I),
             nudgeAlignIntoViewport: !0,
-            animationPosition: 'bottom',
-            position: 'right',
+            animationPosition: "bottom",
+            position: "right",
             renderPopout: S,
             children: (e) => {
                 var i, s;
@@ -101,34 +103,34 @@ let v = {
                         {
                             ref: T,
                             className: y.container,
-                            id: 'skill-trees-'.concat(t),
+                            id: "skill-trees-".concat(t),
                             renderIcon: (e) =>
                                 (0, r.jsx)(a.$Eu, {
-                                    size: 'md',
+                                    size: "md",
                                     className: e,
-                                    color: 'currentColor'
+                                    color: "currentColor",
                                 }),
                             background:
                                 (null == j ? void 0 : j.popout) != null &&
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: y.lottieContainer,
                                     children: (0, r.jsx)(a.kci, {
                                         nextScene: w,
                                         className: y.lottie,
                                         sceneSegments: v,
-                                        importData: () => n.e('50821').then(n.t.bind(n, 548421, 19)),
+                                        importData: () => n.e("50821").then(n.t.bind(n, 548421, 19)),
                                         onScenePlay: Z,
-                                        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
-                                    })
+                                        rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
+                                    }),
                                 }),
-                            text: (0, r.jsx)('span', {
+                            text: (0, r.jsx)("span", {
                                 className: o()({ [y.textImportant]: (null == j ? void 0 : j.showUnread) === !0 }),
-                                children: _.intl.string(O.default.yv3DJC)
+                                children: _.intl.string(O.default.yv3DJC),
                             }),
                             selected: l,
                             onClick: E,
                             showUnread: (null == j ? void 0 : j.showUnread) === !0,
-                            trailing: null == j ? void 0 : j.trailing
+                            trailing: null == j ? void 0 : j.trailing,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
@@ -142,8 +144,8 @@ let v = {
                           })(Object(s)).forEach(function (e) {
                               Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
                           }),
-                    i)
+                    i),
                 );
-            }
+            },
         });
     });

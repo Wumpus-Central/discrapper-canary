@@ -16,7 +16,7 @@ var r = n(255367),
     b = n(450833);
 let _ = function () {
     let e = (0, a.e7)([s.Z], () => s.Z.hasLoadedExperiments),
-        t = f.Z.useField('selectedTab'),
+        t = f.Z.useField("selectedTab"),
         n = (function (e) {
             switch (e) {
                 case m.GlobalDiscoveryTab.SERVERS:
@@ -34,14 +34,14 @@ let _ = function () {
         i.useEffect(() => {
             let e = _.pathname,
                 t = (0, g.I)(e);
-            t !== f.Z.getField('selectedTab') && f.Z.setState({ selectedTab: t });
+            t !== f.Z.getField("selectedTab") && f.Z.setState({ selectedTab: t });
         }, [_.pathname]),
         i.useEffect(() => {
             e && (0, h.RI)({ selectedTab: t });
         }, [t, e]),
-        (0, r.jsxs)('section', {
+        (0, r.jsxs)("section", {
             className: b.container,
-            children: [(0, r.jsx)(o.yY, { location: (0, g.s)(t) }), (0, r.jsx)('div', { className: b.dragRegion }), n]
+            children: [(0, r.jsx)(o.yY, { location: (0, g.s)(t) }), (0, r.jsx)("div", { className: b.dragRegion }), n],
         })
     );
 };

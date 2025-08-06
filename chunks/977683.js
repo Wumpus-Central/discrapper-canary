@@ -19,8 +19,8 @@ function u(e, t) {
             (0, l.ZP)(u, d, {
                 animateEmoji: _,
                 theme: h,
-                formattedExpirationLabel: f
+                formattedExpirationLabel: f,
             }),
-        [_, u, d, f, h]
+        [_, u, d, f, h],
     );
 }

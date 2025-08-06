@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var r = n(147913),
     i = n(592125),
     o = n(851268);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,7 +23,7 @@ class s extends r.Z {
         null != r && r.isGuildVoice() && o.y(t);
     }
     constructor(...e) {
-        (super(...e), a(this, 'actions', { VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect }));
+        super(...e), a(this, "actions", { VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect });
     }
 }
 let l = new s();

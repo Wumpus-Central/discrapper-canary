@@ -10,16 +10,16 @@ function i(e) {
         s.useEffect(() => {
             l();
         }, [l, n]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             style: {
-                overflow: 'hidden',
-                pointerEvents: 'none',
-                position: 'absolute',
+                overflow: "hidden",
+                pointerEvents: "none",
+                position: "absolute",
                 top: 0,
                 left: 0,
-                width: '100%',
-                height: '100%',
-                zIndex: 5
+                width: "100%",
+                height: "100%",
+                zIndex: 5,
             },
             children: i.map((e) => {
                 let { id: n, collapsedLeft: s, expandedLeft: a, collapsedTop: i, expandedTop: l, width: u } = e,
@@ -30,7 +30,7 @@ function i(e) {
                         ref: d,
                         style: {
                             zIndex: 2,
-                            position: 'absolute',
+                            position: "absolute",
                             top: 0,
                             left: 0,
                             width: u,
@@ -38,20 +38,20 @@ function i(e) {
                                 [
                                     t.to({
                                         range: [0, 1],
-                                        output: [s, a]
+                                        output: [s, a],
                                     }),
                                     t.to({
                                         range: [0, 1],
-                                        output: [i, l]
-                                    })
+                                        output: [i, l],
+                                    }),
                                 ],
-                                (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')
-                            )
-                        }
+                                (e, t) => "translate(".concat(e, "px, ").concat(t, "px)"),
+                            ),
+                        },
                     },
-                    n
+                    n,
                 );
-            })
+            }),
         })
     );
 }

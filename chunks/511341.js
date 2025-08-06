@@ -19,31 +19,44 @@ var r = n(255367),
     y = n(366463);
 let O = (e) => {
     let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
-        o = ':'.concat(t.name, ':');
+        o = ":".concat(t.name, ":");
     switch (r) {
         case h.n_.ACTIVITY:
             let a = b.intl.formatToPlainString(b.t.EUFEJi, { username: n }),
-                s = '\n> '.concat(i);
-            return null != i ? ''.concat(_.jd).concat(a, '*').concat(s, '\n').concat(o) : ''.concat(_.jd).concat(a, '*\n').concat(o);
+                s = "\n> ".concat(i);
+            return null != i
+                ? "".concat(_.jd).concat(a, "*").concat(s, "\n").concat(o)
+                : "".concat(_.jd).concat(a, "*\n").concat(o);
         case h.n_.AVATAR:
             let l = b.intl.formatToPlainString(b.t.E6H15u, { username: n });
-            return ''.concat(_.jd).concat(l, '*\n').concat(o);
+            return "".concat(_.jd).concat(l, "*\n").concat(o);
         case h.n_.STATUS:
             let u = b.intl.formatToPlainString(b.t.XPQgLy, { username: n }),
-                d = '\n> '.concat(i);
-            return null != i ? ''.concat(_.jd).concat(u, '*').concat(d, '\n').concat(o) : ''.concat(_.jd).concat(u, '*\n').concat(o);
+                d = "\n> ".concat(i);
+            return null != i
+                ? "".concat(_.jd).concat(u, "*").concat(d, "\n").concat(o)
+                : "".concat(_.jd).concat(u, "*\n").concat(o);
         default:
             (0, c.vE)(r);
     }
 };
 function v(e) {
-    let { user: t, guildId: n, entry: c, sourceType: _, sourceDetails: b, setPopoutRef: v, onAction: I, onClose: T } = e,
+    let {
+            user: t,
+            guildId: n,
+            entry: c,
+            sourceType: _,
+            sourceDetails: b,
+            setPopoutRef: v,
+            onAction: I,
+            onClose: T,
+        } = e,
         { resetInteraction: S, setInteractionToast: A } = (0, f.Xo)(),
         { theme: N } = (0, p.z)(),
         C = (0, o.e7)([l.Z], () => l.Z.theme),
         R = (0, a.wj)(C) ? !(0, a.wj)(N) : (0, a.wj)(N),
         P = i.useRef(null);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         null == v || v(null == P ? void 0 : P.current);
     }, [P, v]),
         i.useEffect(() => {
@@ -51,30 +64,34 @@ function v(e) {
                 e.key === g.vn.ESCAPE && (e.stopPropagation(), S());
             };
             return (
-                document.addEventListener('keydown', e),
+                document.addEventListener("keydown", e),
                 () => {
-                    document.removeEventListener('keydown', e);
+                    document.removeEventListener("keydown", e);
                 }
             );
-        }, [T, S]));
+        }, [T, S]);
     let w = async (e) => {
         if (null == e) return;
-        _ === h.n_.AVATAR ? I({ action: 'SEND_REACT_AVATAR' }) : _ === h.n_.STATUS ? I({ action: 'SEND_REACT_CUSTOM_STATUS' }) : I({ action: 'SEND_REACT_ACTIVITY' });
+        _ === h.n_.AVATAR
+            ? I({ action: "SEND_REACT_AVATAR" })
+            : _ === h.n_.STATUS
+              ? I({ action: "SEND_REACT_CUSTOM_STATUS" })
+              : I({ action: "SEND_REACT_ACTIVITY" });
         let n = O({
             emoji: e,
             username: u.ZP.getName(t),
             sourceType: _,
-            sourceDetails: b
+            sourceDetails: b,
         });
         A(null);
         try {
             await (0, d.Z)({
                 userId: t.id,
                 content: n,
-                location: 'UserProfileReactPopout',
+                location: "UserProfileReactPopout",
                 openChannel: !1,
                 whenReady: !1,
-                entry: c
+                entry: c,
             });
         } catch (e) {}
         A(h.P.REACT);
@@ -85,8 +102,8 @@ function v(e) {
         closePopout: E.dG,
         onSelectEmoji: async (e) => {
             let { emoji: t, willClose: n } = e;
-            (await w(t), n && (S(), null == T || T()));
+            await w(t), n && (S(), null == T || T());
         },
-        pickerIntention: m.Hz.PROFILE
+        pickerIntention: m.Hz.PROFILE,
     });
 }

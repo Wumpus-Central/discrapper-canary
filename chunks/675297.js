@@ -1,4 +1,4 @@
-(n.d(t, { H: () => O }), n(953529));
+n.d(t, { H: () => O }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(399606),
@@ -19,7 +19,19 @@ var i = n(399606),
     b = n(981631);
 let y = 600;
 function O(e) {
-    let { guildProductListing: t, guildId: n, location: O, shouldShowFullDescriptionButton: v = !0, hideRoleTag: I = !1, lineClamp: T = 1, cardWidth: S, cardHeight: A, thumbnailHeight: N, descriptionTextVariant: C = 'text-sm/normal', showOpaqueBackground: R = !1 } = e,
+    let {
+            guildProductListing: t,
+            guildId: n,
+            location: O,
+            shouldShowFullDescriptionButton: v = !0,
+            hideRoleTag: I = !1,
+            lineClamp: T = 1,
+            cardWidth: S,
+            cardHeight: A,
+            thumbnailHeight: N,
+            descriptionTextVariant: C = "text-sm/normal",
+            showOpaqueBackground: R = !1,
+        } = e,
         P = (0, i.e7)([c.Z], () => c.Z.getGuild(n), [n]),
         w = (0, i.e7)([l.Z], () => {
             var e;
@@ -35,7 +47,7 @@ function O(e) {
             (0, g.e)({
                 guildId: n,
                 guildProductListingId: t.id,
-                analyticsLocation: O
+                analyticsLocation: O,
             }),
         U = () => {
             _.h(P.id, t.id);
@@ -60,7 +72,7 @@ function O(e) {
             onDeleteProduct: () => {},
             onReportProduct: G,
             onCopyProductLink: B,
-            onTestDownload: () => {}
+            onTestDownload: () => {},
         });
     return (0, r.jsx)(
         p.Z,
@@ -73,7 +85,7 @@ function O(e) {
             ctaComponent: (0, r.jsx)(E.Z, {
                 guildId: n,
                 guildProductListingId: t.id,
-                sourceAnalyticsLocations: O
+                sourceAnalyticsLocations: O,
             }),
             productType: L,
             shouldShowFullDescriptionButton: v,
@@ -87,8 +99,8 @@ function O(e) {
             cardHeight: A,
             thumbnailHeight: N,
             descriptionTextVariant: C,
-            isDraft: !t.published
+            isDraft: !t.published,
         },
-        t.id
+        t.id,
     );
 }

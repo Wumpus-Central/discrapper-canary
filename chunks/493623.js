@@ -11,7 +11,7 @@ function i(e) {
             x: e.offsetLeft,
             y: e.offsetTop,
             width: n,
-            height: i
+            height: i,
         }
     );
 }

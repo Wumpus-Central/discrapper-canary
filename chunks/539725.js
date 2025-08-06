@@ -11,24 +11,24 @@ function o(e) {
     return (0, n.jsxs)(i.Y0X, {
         size: i.CgR.SMALL,
         transitionState: t,
-        parentComponent: 'AddFriendModal',
+        parentComponent: "AddFriendModal",
         children: [
             (0, n.jsxs)(i.xBx, {
                 justify: l.k.Justify.BETWEEN,
                 children: [
                     (0, n.jsx)(i.X6q, {
-                        variant: 'heading-lg/semibold',
-                        children: a.intl.string(a.t.w5uwoK)
+                        variant: "heading-lg/semibold",
+                        children: a.intl.string(a.t.w5uwoK),
                     }),
-                    (0, n.jsx)(i.olH, { onClick: r })
-                ]
+                    (0, n.jsx)(i.olH, { onClick: r }),
+                ],
             }),
             (0, n.jsx)(i.hzk, {
-                children: (0, n.jsx)('div', {
+                children: (0, n.jsx)("div", {
                     className: u.content,
-                    children: (0, n.jsx)(s.Z, { placeholder: a.intl.string(a.t.IEpCBQ) })
-                })
-            })
-        ]
+                    children: (0, n.jsx)(s.Z, { placeholder: a.intl.string(a.t.IEpCBQ) }),
+                }),
+            }),
+        ],
     });
 }

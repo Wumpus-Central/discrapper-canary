@@ -5,18 +5,18 @@ var e = n(220159),
     s = n(475424);
 e(
     {
-        target: 'Object',
+        target: "Object",
         stat: !0,
         forced:
             !o ||
             i(function () {
                 u.f(1);
-            })
+            }),
     },
     {
         getOwnPropertySymbols: function (t) {
             var r = u.f;
             return r ? r(s(t)) : [];
-        }
-    }
+        },
+    },
 );

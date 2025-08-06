@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(115092);
@@ -14,17 +14,17 @@ function a(e) {
                 u === t.length - 1 ? (null == i || i(), d(0)) : d(u + 1);
             },
             interval: n,
-            isPaused: a
+            isPaused: a,
         }),
         (0, r.jsx)(
-            'img',
+            "img",
             {
                 ref: l,
                 className: c,
                 src: t[u],
-                alt: ''
+                alt: "",
             },
-            '1'
+            "1",
         )
     );
 }

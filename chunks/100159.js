@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,15 +18,15 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,14 +42,14 @@ function s(e) {
             application_id: e.applicationId,
             application_name: null != o ? o.name : null,
             store_title: e.name,
-            distribution_type: e.premium ? 'premium' : 'distribution'
+            distribution_type: e.premium ? "premium" : "distribution",
         },
         u = null;
     n &&
         (u = {
             price: null != s ? s.amount : null,
             regular_price: null != l ? l.amount : null,
-            currency: null != s ? s.currency : null
+            currency: null != s ? s.currency : null,
         });
     let d = null;
     return (
@@ -67,7 +67,7 @@ function s(e) {
                 has_spectator_mode: e.hasFeature(i.Qa3.SPECTATOR_MODE),
                 has_controller_support: e.hasFeature(i.Qa3.CONTROLLER_SUPPORT),
                 has_cloud_saves: e.hasFeature(i.Qa3.CLOUD_SAVES),
-                has_secure_networking: e.hasFeature(i.Qa3.SECURE_NETWORKING)
+                has_secure_networking: e.hasFeature(i.Qa3.SECURE_NETWORKING),
             }),
         a({}, c, u, d)
     );

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -26,18 +26,18 @@ function y(e) {
         else {
             let e = g.ZP.getApplicationIconURL({
                     id: s.application.id,
-                    icon: s.application.icon
+                    icon: s.application.icon,
                 }),
                 t = s.application.name;
             return (0, r.jsx)(a.ua7, {
                 text: t,
-                position: 'top',
+                position: "top",
                 children: () =>
-                    (0, r.jsx)('img', {
+                    (0, r.jsx)("img", {
                         alt: t,
                         src: e,
-                        className: O.applicationLargeImage
-                    })
+                        className: O.applicationLargeImage,
+                    }),
             });
         }
     let p = null != (t = d.large_image) ? t : d.small_image,
@@ -45,10 +45,10 @@ function y(e) {
         b = m ? O.spotifyLargeImage : O.applicationLargeImage,
         _ =
             null != p
-                ? (0, r.jsx)('img', {
-                      alt: null != (n = d.large_text) ? n : '',
+                ? (0, r.jsx)("img", {
+                      alt: null != (n = d.large_text) ? n : "",
                       src: (0, f.xF)(h, p, [128, 128]),
-                      className: b
+                      className: b,
                   })
                 : null;
     return m && null != u
@@ -57,11 +57,11 @@ function y(e) {
               onClick: () => {
                   u(l, o.id);
               },
-              children: _
+              children: _,
           })),
           (0, r.jsx)(a.ua7, {
               text: null != d.large_text ? d.large_text : null,
-              position: 'top',
+              position: "top",
               children: (e) => {
                   let { onClick: t } = e,
                       n = (function (e, t) {
@@ -74,17 +74,21 @@ function y(e) {
                                       r,
                                       i = {},
                                       l = Object.keys(e);
-                                  for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                  for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                   return i;
                               })(e, t);
                           if (Object.getOwnPropertySymbols) {
                               var l = Object.getOwnPropertySymbols(e);
-                              for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                              for (r = 0; r < l.length; r++)
+                                  (n = l[r]),
+                                      !(t.indexOf(n) >= 0) &&
+                                          Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                          (i[n] = e[n]);
                           }
                           return i;
-                      })(e, ['onClick']);
+                      })(e, ["onClick"]);
                   return null != _ ? i.cloneElement(_, n) : null;
-              }
+              },
           }))
         : _;
 }
@@ -96,20 +100,20 @@ function C(e) {
     if (null != n) s = n.application.name;
     else {
         if (!(null != t && (0, c.Z)(t)) || null == t.sync_id || null == l || null == i) return null;
-        ((o = l),
+        (o = l),
             (s = (0, r.jsx)(a.P3F, {
                 className: O.headerLink,
                 onClick: () => {
                     i(t);
                 },
-                children: l
-            })));
+                children: l,
+            }));
     }
     return (0, r.jsx)(a.X6q, {
-        variant: 'heading-sm/semibold',
-        color: 'header-primary',
+        variant: "heading-sm/semibold",
+        color: "header-primary",
         className: O.header,
-        children: s
+        children: s,
     });
 }
 function v(e) {
@@ -129,26 +133,26 @@ function v(e) {
                     canOpen: null != t.sync_id,
                     onOpenSpotifyArtist: (e) => {
                         null == i || i(t, n.id, e);
-                    }
+                    },
                 },
-                s
-            )
+                s,
+            ),
         ]),
-    null == a || '' === a)
+    null == a || "" === a)
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: o()(O.ellipsisRow, O.colorHeaderSecondary, O.bodyTextSize),
-              children: a
+              children: a,
           });
 }
 function j(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
-    return null == n || '' === n || (0, c.Z)(t)
+    return null == n || "" === n || (0, c.Z)(t)
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: o()(O.ellipsisRow, O.colorHeaderSecondary, O.bodyTextSize, O.__invalid_activity),
-              children: n
+              children: n,
           });
 }
 function E(e) {
@@ -162,13 +166,24 @@ function E(e) {
         end: l,
         className: O.timeBar,
         themed: !0,
-        singleLine: !0
+        singleLine: !0,
     });
 }
 function S(e) {
-    let { activity: t, embeddedApp: n, user: l, channel: o, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: f, onOpenSpotifyAlbum: g } = e,
+    let {
+            activity: t,
+            embeddedApp: n,
+            user: l,
+            channel: o,
+            sortedVoiceStates: u,
+            onOpenSpotifyTrack: h,
+            onOpenSpotifyArtist: f,
+            onOpenSpotifyAlbum: g,
+        } = e,
         S = [];
-    null != n ? (S = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (S = u.map((e) => e.user.id));
+    null != n
+        ? (S = Array.from(n.embeddedActivity.userIds))
+        : (0, c.Z)(t) && null != u && (S = u.map((e) => e.user.id));
     let x = (0, s.Wu)([p.default], () => S.map((e) => p.default.getUser(e)).filter(m.lm)),
         I = null != n || (0, c.Z)(t),
         P = i.useMemo(() => {
@@ -184,30 +199,30 @@ function S(e) {
             );
         }, [u, I]);
     return I
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: O.flexColumn,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: O.flexRow,
                       children: [
                           (0, r.jsx)(y, {
                               activity: t,
                               user: l,
                               embeddedApp: n,
-                              onOpenSpotifyAlbum: g
+                              onOpenSpotifyAlbum: g,
                           }),
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: O.detailsAndAvatarsContainer,
                               children: [
                                   (0, r.jsx)(C, {
                                       activity: t,
                                       embeddedApp: n,
-                                      onOpenSpotifyTrack: h
+                                      onOpenSpotifyTrack: h,
                                   }),
                                   (0, r.jsx)(v, {
                                       activity: t,
                                       user: l,
-                                      onOpenSpotifyArtist: f
+                                      onOpenSpotifyArtist: f,
                                   }),
                                   (0, r.jsx)(j, { activity: t }),
                                   S.length > 0 &&
@@ -226,27 +241,27 @@ function S(e) {
                                                   a.DY3,
                                                   {
                                                       text: i,
-                                                      position: 'bottom',
+                                                      position: "bottom",
                                                       children: (0, r.jsx)(
-                                                          'img',
+                                                          "img",
                                                           {
                                                               src: e.getAvatarURL(o.guild_id, _),
                                                               alt: i,
-                                                              className: O.avatar
+                                                              className: O.avatar,
                                                           },
-                                                          e.id
-                                                      )
+                                                          e.id,
+                                                      ),
                                                   },
-                                                  e.id
+                                                  e.id,
                                               );
-                                          }
-                                      })
-                              ]
-                          })
-                      ]
+                                          },
+                                      }),
+                              ],
+                          }),
+                      ],
                   }),
-                  (0, r.jsx)(E, { activity: t })
-              ]
+                  (0, r.jsx)(E, { activity: t }),
+              ],
           })
         : null;
 }

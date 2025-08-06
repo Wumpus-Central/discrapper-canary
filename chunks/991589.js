@@ -3,9 +3,9 @@ var n = r(73800),
     l = r(114858),
     a = r(675997);
 function i(e) {
-    let { children: t, routePattern: r = '/shop', className: i = 'shop-takeover' } = e,
+    let { children: t, routePattern: r = "/shop", className: i = "shop-takeover" } = e,
         o = (0, l.TH)(),
-        { enableShopTakeOver: s } = a.Z.useConfig({ location: 'CollectiblesShop' });
+        { enableShopTakeOver: s } = a.Z.useConfig({ location: "CollectiblesShop" });
     return (
         n.useEffect(
             () => (
@@ -14,7 +14,7 @@ function i(e) {
                     document.body.classList.remove(i);
                 }
             ),
-            [o.pathname, r, i, s]
+            [o.pathname, r, i, s],
         ),
         n.createElement(n.Fragment, null, t)
     );

@@ -9,11 +9,11 @@ var i,
     d = n(570140);
 let u = !1,
     m = [],
-    p = '',
+    p = "",
     g = !1,
     h = {
-        viewNonce: '',
-        regenerateNonce: ''
+        viewNonce: "",
+        regenerateNonce: "",
     };
 class f extends (s = c.ZP.Store) {
     getVerificationKey() {
@@ -32,19 +32,19 @@ class f extends (s = c.ZP.Store) {
         return g;
     }
 }
-((r = 'MFAStore'),
-    (i = 'displayName') in f
+(r = "MFAStore"),
+    (i = "displayName") in f
         ? Object.defineProperty(f, i, {
               value: r,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (f[i] = r));
+        : (f[i] = r);
 let b = new f(d.Z, {
     MFA_ENABLE_SUCCESS: function (e) {
         let { token: t, codes: n } = e;
-        (void 0 !== t && o.setToken(t), (m = n));
+        void 0 !== t && o.setToken(t), (m = n);
     },
     MFA_DISABLE_SUCCESS: function (e) {
         let { token: t } = e;
@@ -61,7 +61,7 @@ let b = new f(d.Z, {
     },
     MFA_VIEW_BACKUP_CODES: function (e) {
         let { codes: t, key: n } = e;
-        ((m = l().sortBy(t, 'code')), (p = n));
+        (m = l().sortBy(t, "code")), (p = n);
     },
     MFA_SEND_VERIFICATION_KEY: function (e) {
         let { nonces: t } = e;
@@ -70,5 +70,5 @@ let b = new f(d.Z, {
     MFA_SEEN_BACKUP_CODE_PROMPT: function () {
         g = !0;
     },
-    CONNECTION_OPEN: () => {}
+    CONNECTION_OPEN: () => {},
 });

@@ -10,7 +10,7 @@ var r = n(44837),
         CONTAINS: 3,
         ACRONYM: 2,
         MATCHES: 1,
-        NO_MATCH: 0
+        NO_MATCH: 0,
     };
 l.rankings = a;
 var s = function (e, t) {
@@ -45,8 +45,8 @@ function l(e, t, n) {
                 e.push(
                     (0, r.Z)({}, s, {
                         item: i,
-                        index: a
-                    })
+                        index: a,
+                    }),
                 ),
             e
         );
@@ -59,7 +59,7 @@ function c(e, t, n, r) {
             rankedValue: i,
             rank: u(i, n, r),
             keyIndex: -1,
-            keyThreshold: r.threshold
+            keyThreshold: r.threshold,
         };
     }
     return g(e, t).reduce(
@@ -82,7 +82,7 @@ function c(e, t, n, r) {
                     rankedValue: p,
                     rank: o,
                     keyIndex: l,
-                    keyThreshold: c
+                    keyThreshold: c,
                 }
             );
         },
@@ -90,18 +90,34 @@ function c(e, t, n, r) {
             rankedValue: e,
             rank: a.NO_MATCH,
             keyIndex: -1,
-            keyThreshold: r.threshold
-        }
+            keyThreshold: r.threshold,
+        },
     );
 }
 function u(e, t, n) {
-    return ((e = p(e, n)), (t = p(t, n)).length > e.length) ? a.NO_MATCH : e === t ? a.CASE_SENSITIVE_EQUAL : (e = e.toLowerCase()) === (t = t.toLowerCase()) ? a.EQUAL : e.startsWith(t) ? a.STARTS_WITH : e.includes(' ' + t) ? a.WORD_STARTS_WITH : e.includes(t) ? a.CONTAINS : 1 === t.length ? a.NO_MATCH : d(e).includes(t) ? a.ACRONYM : f(e, t);
+    return ((e = p(e, n)), (t = p(t, n)).length > e.length)
+        ? a.NO_MATCH
+        : e === t
+          ? a.CASE_SENSITIVE_EQUAL
+          : (e = e.toLowerCase()) === (t = t.toLowerCase())
+            ? a.EQUAL
+            : e.startsWith(t)
+              ? a.STARTS_WITH
+              : e.includes(" " + t)
+                ? a.WORD_STARTS_WITH
+                : e.includes(t)
+                  ? a.CONTAINS
+                  : 1 === t.length
+                    ? a.NO_MATCH
+                    : d(e).includes(t)
+                      ? a.ACRONYM
+                      : f(e, t);
 }
 function d(e) {
-    var t = '';
+    var t = "";
     return (
-        e.split(' ').forEach(function (e) {
-            e.split('-').forEach(function (e) {
+        e.split(" ").forEach(function (e) {
+            e.split("-").forEach(function (e) {
                 t += e.substr(0, 1);
             });
         }),
@@ -112,7 +128,7 @@ function f(e, t) {
     var n = 0,
         r = 0;
     function i(e, t, r) {
-        for (var i = r, o = t.length; i < o; i++) if (t[i] === e) return ((n += 1), i + 1);
+        for (var i = r, o = t.length; i < o; i++) if (t[i] === e) return (n += 1), i + 1;
         return -1;
     }
     function o(e) {
@@ -136,28 +152,28 @@ function _(e, t, n) {
     return o !== s ? (o > s ? r : i) : a === l ? n(e, t) : a < l ? r : i;
 }
 function p(e, t) {
-    return ((e = '' + e), t.keepDiacritics || (e = o()(e)), e);
+    return (e = "" + e), t.keepDiacritics || (e = o()(e)), e;
 }
 function h(e, t) {
     var n;
-    if (('object' == typeof t && (t = t.key), 'function' == typeof t)) n = t(e);
+    if (("object" == typeof t && (t = t.key), "function" == typeof t)) n = t(e);
     else if (null == e) n = null;
     else if (Object.hasOwnProperty.call(e, t)) n = e[t];
     else {
-        if (t.includes('.')) return m(t, e);
+        if (t.includes(".")) return m(t, e);
         n = null;
     }
     return null == n ? [] : Array.isArray(n) ? n : [String(n)];
 }
 function m(e, t) {
-    for (var n = e.split('.'), r = [t], i = 0, o = n.length; i < o; i++) {
+    for (var n = e.split("."), r = [t], i = 0, o = n.length; i < o; i++) {
         for (var a = n[i], s = [], l = 0, c = r.length; l < c; l++) {
             var u = r[l];
             if (null != u)
                 if (Object.hasOwnProperty.call(u, a)) {
                     var d = u[a];
                     null != d && s.push(d);
-                } else '*' === a && (s = s.concat(u));
+                } else "*" === a && (s = s.concat(u));
         }
         r = s;
     }
@@ -172,14 +188,14 @@ function g(e, t) {
         for (var o = t[r], a = b(o), s = h(e, o), l = 0, c = s.length; l < c; l++)
             n.push({
                 itemValue: s[l],
-                attributes: a
+                attributes: a,
             });
     return n;
 }
 var E = {
     maxRanking: 1 / 0,
-    minRanking: -1 / 0
+    minRanking: -1 / 0,
 };
 function b(e) {
-    return 'string' == typeof e ? E : (0, r.Z)({}, E, e);
+    return "string" == typeof e ? E : (0, r.Z)({}, E, e);
 }

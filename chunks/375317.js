@@ -5,7 +5,7 @@ function r(e) {
             (e[t.name] = n
                 ? Object.assign({}, n, t, {
                       options: Object.assign({}, n.options, t.options),
-                      data: Object.assign({}, n.data, t.data)
+                      data: Object.assign({}, n.data, t.data),
                   })
                 : t),
             e

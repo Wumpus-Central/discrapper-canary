@@ -33,13 +33,20 @@ function D(e) {
         v = null == (t = m.V$(p.zUn.REASON, s)) ? void 0 : t.newValue,
         D = m.J5(s),
         b = (0, _.LJ)(s.id),
-        L = (0, u.e7)([f.ZP], () => (null != s.userId ? f.ZP.getMember(a.guildId, s.userId) : null), [a.guildId, s.userId]),
-        x = (0, g.X7)(null == L ? void 0 : L.guildId, null == L ? void 0 : L.userId, null != (n = null == L ? void 0 : L.colorStrings) ? n : null),
+        L = (0, u.e7)([f.ZP], () => (null != s.userId ? f.ZP.getMember(a.guildId, s.userId) : null), [
+            a.guildId,
+            s.userId,
+        ]),
+        x = (0, g.X7)(
+            null == L ? void 0 : L.guildId,
+            null == L ? void 0 : L.userId,
+            null != (n = null == L ? void 0 : L.colorStrings) ? n : null,
+        ),
         U = l.useCallback(
             (e) => (t) => {
-                (t.preventDefault(), t.stopPropagation(), null != e && (0, A.RE)(e, T));
+                t.preventDefault(), t.stopPropagation(), null != e && (0, A.RE)(e, T);
             },
-            [T]
+            [T],
         ),
         M = l.useCallback(
             () =>
@@ -51,127 +58,123 @@ function D(e) {
                               var t;
                               let { onMouseEnter: n, onMouseLeave: l } = e;
                               return (0, r.jsx)(c.P3F, {
-                                  tag: 'span',
+                                  tag: "span",
                                   className: S.username,
                                   onClick: U(L),
                                   onMouseEnter: n,
                                   onMouseLeave: l,
                                   children: (0, r.jsxs)(c.Text, {
-                                      variant: 'text-sm/medium',
-                                      tag: 'span',
+                                      variant: "text-sm/medium",
+                                      tag: "span",
                                       children: [
-                                          '@',
+                                          "@",
                                           (0, r.jsx)(c.PUh, {
                                               name: h.ZP.getName(a.guildId, null, s.user),
                                               colorString: null != (t = null == L ? void 0 : L.colorString) ? t : null,
-                                              colorStrings: x
-                                          })
-                                      ]
-                                  })
+                                              colorStrings: x,
+                                          }),
+                                      ],
+                                  }),
                               });
-                          }
+                          },
                       }),
-            [U, s.user, a.guildId, L, x]
+            [U, s.user, a.guildId, L, x],
         )();
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: i()(C.modInfoItem, S.auditLogItem),
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: S.auditLogItemTitleContainer,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: S.auditLogItemTitle,
                         children: [
                             null != N &&
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-sm/semibold',
-                                    color: 'header-primary',
-                                    children: N
+                                    variant: "text-sm/semibold",
+                                    color: "header-primary",
+                                    children: N,
                                 }),
                             null != O &&
                                 (0, r.jsxs)(c.Text, {
-                                    variant: 'text-sm/normal',
-                                    color: 'header-secondary',
-                                    children: ['(', 'string' == typeof O ? O : o()(O).fromNow(), ')']
-                                })
-                        ]
+                                    variant: "text-sm/normal",
+                                    color: "header-secondary",
+                                    children: ["(", "string" == typeof O ? O : o()(O).fromNow(), ")"],
+                                }),
+                        ],
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: S.auditLogItemDate,
                         children: (0, r.jsx)(c.Text, {
-                            variant: 'text-sm/medium',
-                            color: 'header-primary',
-                            children: b
-                        })
-                    })
-                ]
+                            variant: "text-sm/medium",
+                            color: "header-primary",
+                            children: b,
+                        }),
+                    }),
+                ],
             }),
             null != v &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: S.auditLogSecondaryContainer,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: S.auditLogReason,
                         children: [
                             M,
                             (0, r.jsx)(c.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-muted',
-                                tag: 'span',
-                                children: v
-                            })
-                        ]
-                    })
+                                variant: "text-sm/normal",
+                                color: "text-muted",
+                                tag: "span",
+                                children: v,
+                            }),
+                        ],
+                    }),
                 }),
             null == v &&
                 null != D &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: S.auditLogSecondaryContainer,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: S.auditLogSecondary,
                         children: [
                             M,
                             (0, r.jsx)(c.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-muted',
-                                tag: 'span',
-                                children: D
-                            })
-                        ]
-                    })
+                                variant: "text-sm/normal",
+                                color: "text-muted",
+                                tag: "span",
+                                children: D,
+                            }),
+                        ],
+                    }),
                 }),
             null == v &&
                 null == D &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: S.auditLogSecondaryContainer,
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: S.auditLogSecondary,
                         children: (0, r.jsx)(c.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-muted',
-                            tag: 'span',
+                            variant: "text-sm/normal",
+                            color: "text-muted",
+                            tag: "span",
                             children: (0, r.jsx)(I.tP, {
                                 log: s,
                                 guild: E,
                                 onContentClick: () => {},
-                                className: S.auditLogExpandedChangeDetails
-                            })
-                        })
-                    })
-                })
-        ]
+                                className: S.auditLogExpandedChangeDetails,
+                            }),
+                        }),
+                    }),
+                }),
+        ],
     });
 }
 function b(e) {
     let { member: t } = e,
         n = (0, u.e7)([N.Z], () => N.Z.getGuild(t.guildId), [t.guildId]),
-        s = (0, u.e7)(
-            [T.Z],
-            () => {
-                let e = T.Z.logs;
-                return null == e || null == n ? [] : m._$(e, n);
-            },
-            [n]
-        );
+        s = (0, u.e7)([T.Z], () => {
+            let e = T.Z.logs;
+            return null == e || null == n ? [] : m._$(e, n);
+        }, [n]);
     return (l.useEffect(() => {
         !(async function (e, t) {
             await E.gV(t, e);
@@ -191,12 +194,12 @@ function b(e) {
                                     {
                                         log: e,
                                         member: t,
-                                        guild: n
+                                        guild: n,
                                     },
-                                    e.id
-                                )
-                            )
+                                    e.id,
+                                ),
+                            ),
                         })
-                      : null
+                      : null,
           });
 }

@@ -22,7 +22,7 @@ function _(e) {
 function p(e) {
     var t;
     let { stream: n, width: p, avError: h, avErrorContext: m, selected: g = !1, noArt: E = !1 } = e,
-        { avErrorUIEnabled: b } = (0, s.JN)({ location: 'StreamWarning' }),
+        { avErrorUIEnabled: b } = (0, s.JN)({ location: "StreamWarning" }),
         y = _(m),
         O = null == (t = (0, a.hp)(null != h ? h : a.u.STREAM_FAILED_TO_START)) ? void 0 : t.errorCode;
     return (0, r.jsx)(u.Z, {
@@ -31,10 +31,10 @@ function p(e) {
         noArt: E,
         selected: g,
         description: f.intl.format(f.t.sXsgsL, { helpUrl: c.Z.getArticleURL(d.BhN.STREAM_FAILED) }),
-        errorCodeMessage: b ? f.intl.formatToPlainString(f.t['ejOT9/'], { errorCode: O }) : void 0,
+        errorCodeMessage: b ? f.intl.formatToPlainString(f.t["ejOT9/"], { errorCode: O }) : void 0,
         onCTAClick: () => {
-            ((0, o.w)(i.Yn.STREAM, n.ownerId), (0, l.Z)(n));
+            (0, o.w)(i.Yn.STREAM, n.ownerId), (0, l.Z)(n);
         },
-        callToAction: f.intl.string(f.t['4EGMWF'])
+        callToAction: f.intl.string(f.t["4EGMWF"]),
     });
 }

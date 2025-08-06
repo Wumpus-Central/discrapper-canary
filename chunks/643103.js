@@ -1,4 +1,4 @@
-(a.d(t, { p: () => N }), a(642613), a(388685));
+a.d(t, { p: () => N }), a(642613), a(388685);
 var n = a(255367),
     r = a(73800),
     s = a(120356),
@@ -15,7 +15,7 @@ function _(e, t, a) {
                   value: a,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = a),
         e
@@ -36,7 +36,7 @@ class N extends r.PureComponent {
                     .map((e) => {
                         let t = (function (e) {
                             try {
-                                return a(621287)('./'.concat(e, '.png'));
+                                return a(621287)("./".concat(e, ".png"));
                             } catch (e) {
                                 return null;
                             }
@@ -44,23 +44,27 @@ class N extends r.PureComponent {
                         return null == t
                             ? null
                             : (0, n.jsxs)(
-                                  'li',
+                                  "li",
                                   {
-                                      className: (0, o.l)(u, 'locale', null != r && e.code === r.code ? 'Current' : null),
+                                      className: (0, o.l)(
+                                          u,
+                                          "locale",
+                                          null != r && e.code === r.code ? "Current" : null,
+                                      ),
                                       onClick: () => this.setLocale(e.code),
                                       children: [
-                                          (0, n.jsx)('img', {
+                                          (0, n.jsx)("img", {
                                               className: u.localeImage,
                                               src: t,
-                                              alt: e.name
+                                              alt: e.name,
                                           }),
-                                          e.name
-                                      ]
+                                          e.name,
+                                      ],
                                   },
-                                  e.code
+                                  e.code,
                               );
                     })),
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 className: l()(u.localePicker, s),
                 onMouseEnter: this.open,
                 onMouseLeave: this.close,
@@ -68,52 +72,52 @@ class N extends r.PureComponent {
                 children: [
                     (0, n.jsxs)(i.k, {
                         align: i.k.Align.CENTER,
-                        className: (0, o.l)(u, 'opener', e ? 'Open' : null),
+                        className: (0, o.l)(u, "opener", e ? "Open" : null),
                         children: [
-                            (0, n.jsx)('span', { className: u.line }),
-                            (0, n.jsx)('img', {
+                            (0, n.jsx)("span", { className: u.line }),
+                            (0, n.jsx)("img", {
                                 className: u.localeIcon,
                                 src: c.r.ICON_TRANSLATE,
-                                alt: 'Choose Locale'
+                                alt: "Choose Locale",
                             }),
-                            (0, n.jsx)('img', {
+                            (0, n.jsx)("img", {
                                 className: u.arrowIcon,
                                 src: c.r.ICON_ARROW_DOWN,
-                                alt: 'Open Locale'
-                            })
-                        ]
+                                alt: "Open Locale",
+                            }),
+                        ],
                     }),
-                    (0, n.jsx)('ul', {
-                        className: (0, o.l)(u, 'localeList', e ? 'Open' : 'Closed'),
-                        children: d
-                    })
-                ]
+                    (0, n.jsx)("ul", {
+                        className: (0, o.l)(u, "localeList", e ? "Open" : "Closed"),
+                        children: d,
+                    }),
+                ],
             })
         );
     }
     constructor(...e) {
-        (super(...e),
-            _(this, 'state', {
+        super(...e),
+            _(this, "state", {
                 languages: d.Z.getLanguages().filter((e) => e.enabled),
                 current: d.Z.getLocaleInfo(),
-                isOpen: !1
+                isOpen: !1,
             }),
-            _(this, 'setLocale', (e) => {
+            _(this, "setLocale", (e) => {
                 null != d.Z && (d.Z.setLocale(e), this.callChangeLocale(e));
             }),
-            _(this, 'callChangeLocale', (e) => {
+            _(this, "callChangeLocale", (e) => {
                 let { onChange: t } = this.props;
                 null != t && t(e);
             }),
-            _(this, 'open', () => {
+            _(this, "open", () => {
                 this.setState({ isOpen: !0 });
             }),
-            _(this, 'close', () => {
+            _(this, "close", () => {
                 this.setState({ isOpen: !1 });
             }),
-            _(this, 'toggle', () => {
+            _(this, "toggle", () => {
                 let { isOpen: e } = this.state;
                 this.setState({ isOpen: !e });
-            }));
+            });
     }
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(255367),
     o = n(73800),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,32 +36,46 @@ class h extends (r = o.PureComponent) {
         null != r && (e ? r.setGrabber(0) : r.setGrabber(t / n));
     }
     render() {
-        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: o, currentWindow: a, muted: _, minValue: h, maxValue: m, value: g, onVolumeShow: E, onVolumeHide: b } = this.props,
+        let {
+                iconClassName: e,
+                iconColor: t,
+                className: n,
+                sliderWrapperClassName: r,
+                sliderClassName: o,
+                currentWindow: a,
+                muted: _,
+                minValue: h,
+                maxValue: m,
+                value: g,
+                onVolumeShow: E,
+                onVolumeHide: b,
+            } = this.props,
             { hovered: y, focused: O, dragging: v } = this.state,
             I = c.gj8;
         return (
             _ || g === h ? (I = c.OyP) : g < m / 2 && (I = c.X2j),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: s()(n, f.container),
                 onMouseEnter: () => {
-                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), null == E || E());
+                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), null == E || E();
                 },
                 onMouseLeave: () => {
-                    (clearTimeout(this._hoverTimeout),
+                    clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            (this.setState({ hovered: !1 }), null == b || b());
-                        }, p)));
+                            this.setState({ hovered: !1 }), null == b || b();
+                        }, p));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: s()(f.volumeButtonSlider, r, { [f.sliderVisible]: y || O || v }),
                         onMouseEnter: () => {
-                            (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
+                            clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
                         },
                         onMouseLeave: () => {
-                            (clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), p)));
+                            clearTimeout(this._hoverTimeout),
+                                (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), p));
                         },
                         children: (0, i.jsx)(u.Z, {
                             sliderClassName: o,
@@ -71,78 +85,78 @@ class h extends (r = o.PureComponent) {
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
                             currentWindow: a,
-                            ref: this._mediaBar
-                        })
+                            ref: this._mediaBar,
+                        }),
                     }),
                     (0, i.jsx)(l.zx, {
                         className: f.volumeButton,
-                        'aria-label': d.intl.string(d.t['19lt29']),
+                        "aria-label": d.intl.string(d.t["19lt29"]),
                         size: l.zx.Sizes.NONE,
                         look: l.zx.Looks.BLANK,
                         onClick: this.handleToggleMute,
                         children: (0, i.jsx)(I, {
                             color: t,
-                            className: e
-                        })
-                    })
-                ]
+                            className: e,
+                        }),
+                    }),
+                ],
             })
         );
     }
     constructor(...e) {
-        (super(...e),
-            _(this, '_mediaBar', o.createRef()),
-            _(this, '_hoverTimeout', void 0),
-            _(this, 'state', {
+        super(...e),
+            _(this, "_mediaBar", o.createRef()),
+            _(this, "_hoverTimeout", void 0),
+            _(this, "state", {
                 hovered: !1,
                 focused: !1,
-                dragging: !1
+                dragging: !1,
             }),
-            _(this, 'handleValueChange', (e) => {
+            _(this, "handleValueChange", (e) => {
                 let { maxValue: t, onValueChange: n } = this.props,
                     r = e * t;
                 null == n || n(r);
             }),
-            _(this, 'handleToggleMute', () => {
+            _(this, "handleToggleMute", () => {
                 let { onToggleMute: e } = this.props;
                 null == e || e();
             }),
-            _(this, 'handleKeyDown', (e) => {
+            _(this, "handleKeyDown", (e) => {
                 let { minValue: t, value: n, maxValue: r, onValueChange: i } = this.props,
                     o = 0.05 * (r - t);
                 switch (e.key) {
-                    case 'ArrowUp':
+                    case "ArrowUp":
                         if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
                             this.setState({ focused: !0 });
                             break;
                         }
                         null == i || i(Math.min(r, n + o));
                         break;
-                    case 'ArrowDown':
+                    case "ArrowDown":
                         if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
                             this.setState({ focused: !0 });
                             break;
                         }
                         null == i || i(Math.max(t, n - o));
                         break;
-                    case 'Escape':
-                        (this.setState({ focused: !1 }), e.stopPropagation(), e.preventDefault());
+                    case "Escape":
+                        this.setState({ focused: !1 }), e.stopPropagation(), e.preventDefault();
                 }
             }),
-            _(this, 'handleDragStart', () => {
+            _(this, "handleDragStart", () => {
                 this.setState({ dragging: !0 });
             }),
-            _(this, 'handleDragEnd', () => {
+            _(this, "handleDragEnd", () => {
                 this.setState({ dragging: !1 });
             }),
-            _(this, 'blur', () => {
+            _(this, "blur", () => {
                 this.setState({ focused: !1 });
-            }));
+            });
     }
 }
-_(h, 'defaultProps', {
+_(h, "defaultProps", {
     minValue: 0,
     maxValue: 100,
-    handleSize: 16
+    handleSize: 16,
 });
 let m = h;

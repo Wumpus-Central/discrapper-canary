@@ -12,39 +12,39 @@ let d = (e) => {
         n = (0, l.e7)([s.Z], () => s.Z.getGuild(t.guild_id));
     return null == n
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: c.container,
               children: [
                   (0, r.jsx)(i.X6q, {
                       className: c.header,
-                      variant: 'heading-sm/semibold',
-                      children: o.intl.string(o.t.SDTOLy)
+                      variant: "heading-sm/semibold",
+                      children: o.intl.string(o.t.SDTOLy),
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: c.guildContainer,
                       children: [
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: c.guildInfo,
                               children: [
                                   (0, r.jsx)(a.Z, {
                                       guild: n,
                                       size: a.Z.Sizes.MINI,
-                                      className: c.guildIcon
+                                      className: c.guildIcon,
                                   }),
                                   (0, r.jsx)(i.Text, {
-                                      color: 'header-secondary',
-                                      variant: 'text-sm/normal',
-                                      children: n.name
-                                  })
-                              ]
+                                      color: "header-secondary",
+                                      variant: "text-sm/normal",
+                                      children: n.name,
+                                  }),
+                              ],
                           }),
                           (0, r.jsx)(i.Text, {
-                              variant: 'text-md/semibold',
-                              color: 'header-primary',
-                              children: t.name
-                          })
-                      ]
-                  })
-              ]
+                              variant: "text-md/semibold",
+                              color: "header-primary",
+                              children: t.name,
+                          }),
+                      ],
+                  }),
+              ],
           });
 };

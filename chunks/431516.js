@@ -8,6 +8,6 @@ function s() {
         t = (0, r.e7)([i.Z], () => i.Z.getProps().mfaLevel);
     return {
         isUserMFAEnabled: (null == e ? void 0 : e.mfaEnabled) === !0,
-        isModerationMFAEnabled: t === a.BpS.ELEVATED
+        isModerationMFAEnabled: t === a.BpS.ELEVATED,
     };
 }

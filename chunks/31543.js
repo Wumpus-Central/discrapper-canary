@@ -17,28 +17,32 @@ let p = i.forwardRef(function (e, t) {
         { searchQuery: E, isSearchSuggestion: b } = (0, c.Iu)(
             (e) => ({
                 searchQuery: e.searchQuery,
-                isSearchSuggestion: e.isSearchSuggestion
+                isSearchSuggestion: e.isSearchSuggestion,
             }),
-            o.X
+            o.X,
         ),
         y = l.ZN.useStore((e) => e.searchPlaceholder),
         O = l.ZN.useStore((e) => e.inspectedExpressionPosition, o.X),
         v = i.useCallback(
             (e) => {
                 var t;
-                (l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, c.ql)(e), null == (t = p.current) || t.scrollTo(0));
+                l.ZN.setActiveCategoryIndex("" === e ? 0 : d.c),
+                    l.ZN.setInspectedExpressionPosition(0, 0),
+                    l.ZN.setSearchPlaceholder(null),
+                    (0, c.ql)(e),
+                    null == (t = p.current) || t.scrollTo(0);
             },
-            [p]
+            [p],
         ),
         I = i.useCallback(() => {
-            (0, c.ql)('');
+            (0, c.ql)("");
         }, []);
     return (
         i.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
                 return null == (e = g.current) ? void 0 : e.focus();
-            }
+            },
         })),
         i.useLayoutEffect(() => {
             if (b) {
@@ -46,25 +50,25 @@ let p = i.forwardRef(function (e, t) {
                 null == (e = g.current) || e.focus();
             }
         }, [b]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: _.wrapper,
             children: (0, r.jsx)(s.E1j, {
                 autoFocus: m,
                 disabled: !m,
                 query: E,
                 ref: g,
-                placeholder: null != y ? y : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
+                placeholder: null != y ? y : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t["Pck/4e"]),
                 onClear: I,
                 onKeyDown: n,
                 onChange: v,
                 className: _.__invalid_searchBar,
                 inputProps: {
-                    'aria-haspopup': 'grid',
-                    'aria-controls': d.Vr,
-                    'aria-expanded': !0,
-                    'aria-activedescendant': (0, a.NE)(d.Vr, O.columnIndex, O.rowIndex)
-                }
-            })
+                    "aria-haspopup": "grid",
+                    "aria-controls": d.Vr,
+                    "aria-expanded": !0,
+                    "aria-activedescendant": (0, a.NE)(d.Vr, O.columnIndex, O.rowIndex),
+                },
+            }),
         })
     );
 });

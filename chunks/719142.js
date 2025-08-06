@@ -1,1 +1,1 @@
-e.exports = { loadingSpinner: 'loadingSpinner__5b1b2' };
+e.exports = { loadingSpinner: "loadingSpinner__5b1b2" };

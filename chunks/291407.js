@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(539854));
+n.d(t, { Z: () => f }), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -13,10 +13,13 @@ function f(e) {
         p = (0, o.e7)([c.Z], () => c.Z.hasCurrentUserSentMessageSinceAppStart()),
         h = i.useMemo(() => {
             let e = [];
-            return (p && e.push(a.z.DESKTOP_APP_LAUNCHER_ONBOARDING), e);
+            return p && e.push(a.z.DESKTOP_APP_LAUNCHER_ONBOARDING), e;
         }, [p]),
         m = () => {
-            setTimeout(() => (0, s.Q3)(a.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: d.L.AUTO_DISMISS }), 10000);
+            setTimeout(
+                () => (0, s.Q3)(a.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: d.L.AUTO_DISMISS }),
+                10000,
+            );
         };
     return (0, r.jsx)(l.ZP, {
         contentTypes: h,
@@ -28,9 +31,9 @@ function f(e) {
                       glowClassName: f,
                       trinketsClassName: _,
                       onMount: m,
-                      children: t
+                      children: t,
                   })
                 : t;
-        }
+        },
     });
 }

@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => ei,
     lE: () => en,
-    lX: () => et
+    lX: () => et,
 }),
     n(388685),
     n(539854),
-    n(997841));
+    n(997841);
 var i = n(255367),
     r = n(73800),
     o = n(512722),
@@ -54,24 +54,24 @@ function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -96,59 +96,59 @@ function Q(e, t) {
 function K(e) {
     let { entry: t, currentUserActivity: n, idx: o } = e,
         a = (0, u.e7)([R.default], () => R.default.getUser(t.author_id)),
-        [s, c] = r.useState('unsent'),
+        [s, c] = r.useState("unsent"),
         [h, y] = r.useState(!1);
     r.useEffect(() => {
-        if ('sent' === s) {
+        if ("sent" === s) {
             let e = setTimeout(() => y(!0), 2000);
             return () => clearTimeout(e);
         }
     }, [s]);
     let O = null != n && (0, v.Z)(n, G.xjy.JOIN),
         E = async (e) => {
-            if (null != a && 'unsent' === s) {
+            if (null != a && "unsent" === s) {
                 e.stopPropagation();
                 try {
-                    if ((c('sending'), O))
+                    if ((c("sending"), O))
                         await f.Z.sendActivityInviteUser({
                             type: G.mFx.JOIN,
                             userId: a.id,
                             activity: n,
-                            location: G.Sbl.UNLOCKED_OVERLAY
+                            location: G.Sbl.UNLOCKED_OVERLAY,
                         });
                     else {
                         var i;
                         let e = await m.Z.getOrEnsurePrivateChannel(a.id),
                             n = null != (i = T.Z.getChannel(e)) ? i : null;
-                        (l()(null != n, 'Send channel must be defined'),
+                        l()(null != n, "Send channel must be defined"),
                             (0, C.uL)(G.Z5c.CHANNEL(n.guild_id, n.id)),
                             (0, b.i)(G.IlC.OVERLAY, !0),
-                            'fake_inventory_item' in t.extra && !0 === t.extra.fake_inventory_item
+                            "fake_inventory_item" in t.extra && !0 === t.extra.fake_inventory_item
                                 ? await (0, S.k)({
                                       channel: n,
                                       content: B.intl.formatToPlainString(B.t.UVBA9v, { gameName: t.extra.game_name }),
-                                      whenReady: !0
+                                      whenReady: !0,
                                   })
                                 : await (0, S.p)({
                                       channel: n,
                                       content: B.intl.string(B.t.DwAcMz),
                                       entry: t,
-                                      whenReady: !0
-                                  }));
+                                      whenReady: !0,
+                                  });
                     }
-                    (g.Z.track(G.rMx.OVERLAY_GAME_INVITE_SENT, {
+                    g.Z.track(G.rMx.OVERLAY_GAME_INVITE_SENT, {
                         target_user_id: a.id,
                         target_content_entry_id: t.id,
-                        target_index: o
+                        target_index: o,
                     }),
                         (0, W.Ws)(G.Odu.ACTIVITY, {
                             type: W.Qu.INVITE,
                             value: W.bk.INVITE_SENT,
-                            userId: a.id
+                            userId: a.id,
                         }),
-                        c('sent'));
+                        c("sent");
                 } catch (e) {
-                    c('unsent');
+                    c("unsent");
                 }
             }
         },
@@ -157,33 +157,33 @@ function K(e) {
             if (null == a) return;
             let t = await m.Z.getOrEnsurePrivateChannel(a.id),
                 n = null != (e = T.Z.getChannel(t)) ? e : null;
-            (l()(null != n, 'Send channel must be defined'),
+            l()(null != n, "Send channel must be defined"),
                 (0, C.uL)(G.Z5c.CHANNEL(n.guild_id, n.id)),
                 (0, b.i)(G.IlC.OVERLAY, !0),
                 (0, W.Ws)(G.Odu.ACTIVITY, {
                     type: W.Qu.REDIRECT,
                     value: W.bk.CHAT,
-                    userId: a.id
-                }));
+                    userId: a.id,
+                });
         },
-        x = O ? B.intl.string(B.t['3fRyS0']) : B.intl.string(B.t.XHxDIS),
+        x = O ? B.intl.string(B.t["3fRyS0"]) : B.intl.string(B.t.XHxDIS),
         I = O
             ? (0, i.jsx)(p.ejJ, {
-                  color: 'currentColor',
-                  size: 'sm'
+                  color: "currentColor",
+                  size: "sm",
               })
             : (0, i.jsx)(p.Uuj, {
-                  color: 'currentColor',
-                  size: 'sm'
+                  color: "currentColor",
+                  size: "sm",
               });
     return (0, i.jsx)(p.ua7, {
         text: x,
-        'aria-label': x,
+        "aria-label": x,
         children: (e) =>
             (0, i.jsx)(
                 d.zx,
                 Q(Y({}, e), {
-                    submitting: 'sending' === s,
+                    submitting: "sending" === s,
                     onClick: h ? _ : E,
                     className: H.inviteButton,
                     wrapperClassName: H.inviteButtonWrapper,
@@ -193,19 +193,19 @@ function K(e) {
                     size: d.Ph.ICON,
                     grow: !1,
                     children:
-                        'sent' === s
+                        "sent" === s
                             ? h
                                 ? (0, i.jsx)(p.kBi, {
-                                      color: 'currentColor',
-                                      size: 'sm'
+                                      color: "currentColor",
+                                      size: "sm",
                                   })
                                 : (0, i.jsx)(p.kSu, {
-                                      color: 'currentColor',
-                                      size: 'sm'
+                                      color: "currentColor",
+                                      size: "sm",
                                   })
-                            : I
-                })
-            )
+                            : I,
+                }),
+            ),
     });
 }
 function X(e) {
@@ -214,39 +214,39 @@ function X(e) {
         l = (0, u.e7)([R.default], () => R.default.getUser(n.author_id)),
         a = null != (t = null == o ? void 0 : o.application_id) ? t : n.extra.application_id,
         s = (0, u.e7)([k.Z], () => (null != l ? k.Z.getApplicationActivity(l.id, a) : null), [a, l]),
-        [c, h] = r.useState('unsent');
+        [c, h] = r.useState("unsent");
     if (!(null != s && (0, v.Z)(s, G.xjy.JOIN))) return null;
     let m = async (e) => {
-            if (null != l && 'unsent' === c) {
+            if (null != l && "unsent" === c) {
                 e.stopPropagation();
                 try {
-                    (h('sending'),
+                    h("sending"),
                         await f.Z.sendActivityInviteUser({
                             type: G.mFx.JOIN_REQUEST,
                             userId: l.id,
                             activity: s,
-                            location: G.Sbl.UNLOCKED_OVERLAY
+                            location: G.Sbl.UNLOCKED_OVERLAY,
                         }),
                         (0, W.Ws)(G.Odu.ACTIVITY, {
                             type: W.Qu.INVITE,
                             value: W.bk.JOIN_REQUEST_SENT,
-                            userId: l.id
+                            userId: l.id,
                         }),
-                        h('sent'));
+                        h("sent");
                 } catch (e) {
-                    h('unsent');
+                    h("unsent");
                 }
             }
         },
         g = B.intl.string(B.t.OKsSCQ);
     return (0, i.jsx)(p.ua7, {
         text: g,
-        'aria-label': g,
+        "aria-label": g,
         children: (e) =>
             (0, i.jsx)(
                 d.zx,
                 Q(Y({}, e), {
-                    submitting: 'sending' === c,
+                    submitting: "sending" === c,
                     onClick: m,
                     className: H.inviteButton,
                     wrapperClassName: H.inviteButtonWrapper,
@@ -256,17 +256,17 @@ function X(e) {
                     size: d.Ph.ICON,
                     grow: !1,
                     children:
-                        'sent' === c
+                        "sent" === c
                             ? (0, i.jsx)(p.kSu, {
-                                  color: 'currentColor',
-                                  size: 'sm'
+                                  color: "currentColor",
+                                  size: "sm",
                               })
                             : (0, i.jsx)(p.V9, {
-                                  color: 'currentColor',
-                                  size: 'sm'
-                              })
-                })
-            )
+                                  color: "currentColor",
+                                  size: "sm",
+                              }),
+                }),
+            ),
     });
 }
 function J(e) {
@@ -279,58 +279,60 @@ function J(e) {
                 null == o
                     ? {
                           isMobileOnline: void 0,
-                          status: void 0
+                          status: void 0,
                       }
                     : {
                           isMobileOnline: k.Z.isMobileOnline(o.id),
-                          status: k.Z.getStatus(o.id)
+                          status: k.Z.getStatus(o.id),
                       },
-            [o]
+            [o],
         );
     return null == o
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               className: H.row,
               children: [
                   (0, i.jsx)(y.Z, {
                       className: H.avatar,
                       user: o,
                       isMobile: a,
-                      status: s
+                      status: s,
                   }),
-                  (0, i.jsxs)('div', {
+                  (0, i.jsxs)("div", {
                       className: H.details,
                       children: [
-                          (0, i.jsxs)('div', {
+                          (0, i.jsxs)("div", {
                               className: H.usernameWrapper,
                               children: [
                                   (0, i.jsx)(p.Text, {
                                       className: H.username,
-                                      variant: 'text-md/medium',
-                                      color: 'header-primary',
-                                      children: U.ZP.getName(void 0, void 0, o)
+                                      variant: "text-md/medium",
+                                      color: "header-primary",
+                                      children: U.ZP.getName(void 0, void 0, o),
                                   }),
-                                  null != l && (0, i.jsx)(_.ZP, { className: H.liveIndicator })
-                              ]
+                                  null != l && (0, i.jsx)(_.ZP, { className: H.liveIndicator }),
+                              ],
                           }),
                           (0, i.jsx)(x.Gk, {
                               location: x.Gt.OVERLAY,
                               className: H.badgesContainer,
-                              children: [x.OV, x.wO, x.f, x.v1, x.pQ].map((e, n) => (0, i.jsx)(e, { entry: t }, 'entry-'.concat(n)))
-                          })
-                      ]
+                              children: [x.OV, x.wO, x.f, x.v1, x.pQ].map((e, n) =>
+                                  (0, i.jsx)(e, { entry: t }, "entry-".concat(n)),
+                              ),
+                          }),
+                      ],
                   }),
                   (0, i.jsx)(X, {
                       entry: t,
                       currentUserActivity: n,
-                      idx: r
+                      idx: r,
                   }),
                   (0, i.jsx)(K, {
                       entry: t,
                       currentUserActivity: n,
-                      idx: r
-                  })
-              ]
+                      idx: r,
+                  }),
+              ],
           });
 }
 function q(e) {
@@ -354,9 +356,9 @@ function $(e) {
                                 return t === c.N.IS_LIVE;
                             })
                         );
-                    })
+                    }),
                 ),
-            [t]
+            [t],
         ),
         u = (0, W.ee)(() => new Set(t.map((e) => e.id)), [t]);
     return (r.useEffect(() => {
@@ -364,23 +366,23 @@ function $(e) {
             locked: M.default.isInstanceLocked(),
             shownUserIds: Array.from(a),
             liveUserIds: Array.from(s),
-            contentInventoryIds: Array.from(u)
+            contentInventoryIds: Array.from(u),
         });
     }, [a, s, u]),
     0 === t.length)
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               className: o,
               children: [
                   !l &&
-                      (0, i.jsx)('div', {
+                      (0, i.jsx)("div", {
                           className: H.contentInventoryHeader,
                           children: (0, i.jsx)(p.Text, {
-                              variant: 'text-xs/medium',
-                              color: 'header-secondary',
-                              tag: 'div',
-                              children: B.intl.string(B.t.y9eo7e)
-                          })
+                              variant: "text-xs/medium",
+                              color: "header-secondary",
+                              tag: "div",
+                              children: B.intl.string(B.t.y9eo7e),
+                          }),
                       }),
                   t.map((e, t) =>
                       (0, i.jsx)(
@@ -388,56 +390,57 @@ function $(e) {
                           {
                               idx: t,
                               entry: e,
-                              currentUserActivity: n
+                              currentUserActivity: n,
                           },
-                          t
-                      )
-                  )
-              ]
+                          t,
+                      ),
+                  ),
+              ],
           });
 }
 function ee(e) {
     let { gamingId: t, maxUserShowCount: n, userAffinityThresholdV2: i = 0.0029 } = e,
-        o = (0, I.Z)(t, 'useLiveActivityRows');
+        o = (0, I.Z)(t, "useLiveActivityRows");
     (0, O.ZP)(() => {
         (0, N._)();
     });
     let l = (0, u.e7)([A.Z], () => (null == t ? null : A.Z.getApplicationActivity(t)), [t]),
-        d = (0, u.Wu)(
-            [L.Z, D.Z, w.Z],
-            () => {
-                if (null == t) return [];
-                let e = L.Z.nowPlayingCards,
-                    n = { v2: i };
-                return e
-                    .reduce((e, n) => {
-                        if (n.type !== G.GOo.USER) return e;
-                        let i = n.party.currentActivities;
-                        if (0 === i.length) return e;
-                        for (let n of i) n.game.id === t && null != n.activity && e.push(n);
-                        return e;
-                    }, [])
-                    .filter((e) => {
-                        let t = e.activityUser.id,
-                            i = D.Z.isFriend(t);
-                        return (function (e, t, n) {
-                            let { v2: i } = n;
-                            if (null == e) return t;
-                            let { communicationProbability: r, dmProbability: o, serverMessageProbability: l, vcProbability: a } = e;
-                            switch (!0) {
-                                case r > i:
-                                case o > i:
-                                case l > i:
-                                case a > i:
-                                    return !0;
-                                default:
-                                    return t;
-                            }
-                        })(w.Z.getUserAffinity(t), i, n);
-                    });
-            },
-            [t, i]
-        );
+        d = (0, u.Wu)([L.Z, D.Z, w.Z], () => {
+            if (null == t) return [];
+            let e = L.Z.nowPlayingCards,
+                n = { v2: i };
+            return e
+                .reduce((e, n) => {
+                    if (n.type !== G.GOo.USER) return e;
+                    let i = n.party.currentActivities;
+                    if (0 === i.length) return e;
+                    for (let n of i) n.game.id === t && null != n.activity && e.push(n);
+                    return e;
+                }, [])
+                .filter((e) => {
+                    let t = e.activityUser.id,
+                        i = D.Z.isFriend(t);
+                    return (function (e, t, n) {
+                        let { v2: i } = n;
+                        if (null == e) return t;
+                        let {
+                            communicationProbability: r,
+                            dmProbability: o,
+                            serverMessageProbability: l,
+                            vcProbability: a,
+                        } = e;
+                        switch (!0) {
+                            case r > i:
+                            case o > i:
+                            case l > i:
+                            case a > i:
+                                return !0;
+                            default:
+                                return t;
+                        }
+                    })(w.Z.getUserAffinity(t), i, n);
+                });
+        }, [t, i]);
     return (
         (0, O.ZP)(() => (j.L(), () => j.v())),
         {
@@ -447,15 +450,23 @@ function ee(e) {
                         ...d.map((e) =>
                             (function (e) {
                                 var t, n, i, r, o, l, u;
-                                let d = null != (o = null == (n = e.activity) || null == (t = n.timestamps) ? void 0 : t.start) ? o : Date.now();
+                                let d =
+                                    null !=
+                                    (o = null == (n = e.activity) || null == (t = n.timestamps) ? void 0 : t.start)
+                                        ? o
+                                        : Date.now();
                                 return {
                                     id: V.default.fromTimestamp(d),
                                     author_id: e.activityUser.id,
                                     extra: {
-                                        type: 'played_game_extra',
-                                        game_name: null != (l = null == (i = e.activity) ? void 0 : i.name) ? l : e.game.name,
-                                        application_id: null != (u = null == (r = e.activity) ? void 0 : r.application_id) ? u : e.game.id,
-                                        fake_inventory_item: !0
+                                        type: "played_game_extra",
+                                        game_name:
+                                            null != (l = null == (i = e.activity) ? void 0 : i.name) ? l : e.game.name,
+                                        application_id:
+                                            null != (u = null == (r = e.activity) ? void 0 : r.application_id)
+                                                ? u
+                                                : e.game.id,
+                                        fake_inventory_item: !0,
                                     },
                                     content_type: s.s.PLAYED_GAME,
                                     author_type: a.i.USER,
@@ -463,17 +474,17 @@ function ee(e) {
                                     traits: [
                                         {
                                             type: c.N.IS_LIVE,
-                                            is_live: !0
-                                        }
-                                    ]
+                                            is_live: !0,
+                                        },
+                                    ],
                                 };
-                            })(e)
+                            })(e),
                         ),
-                        ...e
+                        ...e,
                     ];
                 return null != n ? t.slice(0, n) : t;
             }, [o, d, n]),
-            currentUserActivity: l
+            currentUserActivity: l,
         }
     );
 }
@@ -495,24 +506,24 @@ function en(e) {
                       activity: t,
                       user: n,
                       currentUser: n,
-                      appContext: G.IlC.OVERLAY
+                      appContext: G.IlC.OVERLAY,
                   }),
                   o && !a && r
                       ? (0, i.jsx)(d.zx, {
                             className: H.inviteFriendsButton,
                             onClick: () => {
-                                ((0, h.h7)(t, !1, G.IlC.POPOUT),
+                                (0, h.h7)(t, !1, G.IlC.POPOUT),
                                     (0, W.Ws)(G.Odu.ACTIVITY, {
                                         type: W.Qu.INVITE,
-                                        value: W.bk.PANEL_OPENED
-                                    }));
+                                        value: W.bk.PANEL_OPENED,
+                                    });
                             },
                             size: d.Ph.SMALL,
                             color: d.Tt.PRIMARY,
-                            children: B.intl.string(B.t['6Qgren'])
+                            children: B.intl.string(B.t["6Qgren"]),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           });
 }
 function ei(e) {
@@ -520,7 +531,7 @@ function ei(e) {
         n = (0, F.II)(),
         r = null == n ? void 0 : n.id,
         o = null == n ? void 0 : n.altId,
-        l = (0, I.Z)(r, 'ActivityWidget'),
+        l = (0, I.Z)(r, "ActivityWidget"),
         a = (0, u.e7)([R.default], () => R.default.getCurrentUser()),
         s = null != o ? o : r,
         c = (0, u.e7)([A.Z], () => (null == s ? null : A.Z.getApplicationActivity(s)), [s]);
@@ -528,24 +539,24 @@ function ei(e) {
     let d = ee({
         gamingId: s,
         userAffinityThresholdV2: 0.00145,
-        maxUserShowCount: 12
+        maxUserShowCount: 12,
     });
     return t || (0 === l.length && null == c)
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               className: H.container,
               children: [
                   (0, i.jsx)(en, {
                       activity: c,
-                      currentUser: a
+                      currentUser: a,
                   }),
                   (0, i.jsx)(
                       $,
                       Q(Y({}, d), {
                           className: H.contentInventoryContainer,
-                          hideHeader: !0
-                      })
-                  )
-              ]
+                          hideHeader: !0,
+                      }),
+                  ),
+              ],
           });
 }

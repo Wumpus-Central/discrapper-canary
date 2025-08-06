@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => f,
-    y: () => p
+    y: () => p,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -18,7 +18,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,13 +28,19 @@ let p = {
     DropdownSizes: s.Z.DropdownSizes,
     Sizes: s.Z.Sizes,
     Colors: s.Z.Colors,
-    Looks: s.Z.Looks
+    Looks: s.Z.Looks,
 };
 class h extends i.PureComponent {
     render() {
         var e, t;
         let n = this.props,
-            { storeListings: i, primaryStoreListing: l, skuId: a, onStoreListingSelect: o, currentStoreListingId: c } = n,
+            {
+                storeListings: i,
+                primaryStoreListing: l,
+                skuId: a,
+                onStoreListingSelect: o,
+                currentStoreListingId: c,
+            } = n,
             p = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -45,15 +51,17 @@ class h extends i.PureComponent {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
-            })(n, ['storeListings', 'primaryStoreListing', 'skuId', 'onStoreListingSelect', 'currentStoreListingId']),
+            })(n, ["storeListings", "primaryStoreListing", "skuId", "onStoreListingSelect", "currentStoreListingId"]),
             h = +(null != l);
         return (h += i.length) < 2
             ? null
@@ -63,24 +71,24 @@ class h extends i.PureComponent {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},
                               r = Object.keys(n);
-                          ('function' == typeof Object.getOwnPropertySymbols &&
+                          "function" == typeof Object.getOwnPropertySymbols &&
                               (r = r.concat(
                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                  })
+                                  }),
                               )),
                               r.forEach(function (t) {
                                   d(e, t, n[t]);
-                              }));
+                              });
                       }
                       return e;
                   })(
                       {
                           onClick: this.handleContextMenu,
                           onDropdownClick: this.handleContextMenu,
-                          onContextMenu: this.handleContextMenu
+                          onContextMenu: this.handleContextMenu,
                       },
-                      p
+                      p,
                   )),
                   (t = t = { children: u.intl.string(u.t.hElye3) }),
                   Object.getOwnPropertyDescriptors
@@ -95,41 +103,46 @@ class h extends i.PureComponent {
                         })(Object(t)).forEach(function (n) {
                             Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                         }),
-                  e)
+                  e),
               );
     }
     constructor(...e) {
-        (super(...e),
-            d(this, 'renderContextMenu', () => {
-                let { storeListings: e, onStoreListingSelect: t, currentStoreListingId: n, onMenuSelect: i } = this.props,
+        super(...e),
+            d(this, "renderContextMenu", () => {
+                let {
+                        storeListings: e,
+                        onStoreListingSelect: t,
+                        currentStoreListingId: n,
+                        onMenuSelect: i,
+                    } = this.props,
                     l = e.map((e) =>
                         e.id !== n
                             ? (0, r.jsx)(a.sNh, {
-                                  id: ''.concat(e.id),
+                                  id: "".concat(e.id),
                                   label: e.id,
                                   action: () => {
-                                      (o.Zy(), null == t || t(e));
-                                  }
+                                      o.Zy(), null == t || t(e);
+                                  },
                               })
-                            : null
+                            : null,
                     );
                 return (0, r.jsx)(a.v2r, {
                     onSelect: i,
-                    navId: 'test-store-listing',
-                    'aria-label': u.intl.string(u.t.ogxXGh),
+                    navId: "test-store-listing",
+                    "aria-label": u.intl.string(u.t.ogxXGh),
                     onClose: o.Zy,
-                    children: l
+                    children: l,
                 });
             }),
-            d(this, 'handleContextMenu', (e) => {
-                (e.stopPropagation(), o.vq(e, this.renderContextMenu));
-            }));
+            d(this, "handleContextMenu", (e) => {
+                e.stopPropagation(), o.vq(e, this.renderContextMenu);
+            });
     }
 }
 let f = l.ZP.connectStores([c.Z], (e) => {
     let { skuId: t } = e;
     return {
         storeListings: c.Z.getUnpublishedForSKU(t),
-        primaryStoreListing: c.Z.getForSKU(t)
+        primaryStoreListing: c.Z.getForSKU(t),
     };
 })(h);

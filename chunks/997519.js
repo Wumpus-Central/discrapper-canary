@@ -9,14 +9,14 @@ function c(e, t) {
     let n = null == t ? void 0 : t.team,
         { payoutsByPeriod: c, loading: d } = (0, l.Z)(null == t ? void 0 : t.id, {
             groupType: o.uw.SERVER_ROLE_SUBSCRIPTION,
-            teamId: null == n ? void 0 : n.id
+            teamId: null == n ? void 0 : n.id,
         }),
-        u = (0, a.f)('useEarningMetrics'),
+        u = (0, a.f)("useEarningMetrics"),
         m = (0, s.Z)(e),
         {
             currentPeriod: g,
             previousPeriods: p,
-            metrics: h
+            metrics: h,
         } = r.useMemo(() => {
             var e, t;
             let { currentPeriod: n, previousPeriods: r } = (0, i.Br)(c),
@@ -29,31 +29,31 @@ function c(e, t) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, l)),
                     (t = t =
                         {
                             subscribers: m,
-                            subscriberChange: l.paymentsCountChange
+                            subscriberChange: l.paymentsCountChange,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -67,7 +67,7 @@ function c(e, t) {
                           })(Object(t)).forEach(function (n) {
                               Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                           }),
-                    e)
+                    e),
             };
         }, [c, m]);
     return {
@@ -76,6 +76,6 @@ function c(e, t) {
         currentPeriod: g,
         previousPeriods: p,
         allPeriods: c,
-        metrics: h
+        metrics: h,
     };
 }

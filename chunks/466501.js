@@ -1,4 +1,4 @@
-(n.d(t, { default: () => y }), n(953529));
+n.d(t, { default: () => y }), n(953529);
 var r = n(255367),
     i = n(73800),
     c = n(82659),
@@ -20,18 +20,18 @@ function f(e) {
                 actions: {
                     onEnableMFAClick: a.ZP.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        ((0, l.Mr3)(d.Q), s.Z.open(p, h.pNK.SAFETY, void 0, h.KsC.SAFETY_PERMISSIONS));
-                    }
-                }
+                        (0, l.Mr3)(d.Q), s.Z.open(p, h.pNK.SAFETY, void 0, h.KsC.SAFETY_PERMISSIONS);
+                    },
+                },
             }),
-            [p, f]
+            [p, f],
         ),
         j = (0, o.Z)(t, y);
     return null != c
-        ? (0, r.jsx)('div', { children: (0, r.jsx)(u.Z, { children: c.message }) })
+        ? (0, r.jsx)("div", { children: (0, r.jsx)(u.Z, { children: c.message }) })
         : null == j || n
-          ? (0, r.jsx)('div', { children: (0, r.jsx)(l.$jN, {}) })
-          : (0, r.jsx)('div', {
+          ? (0, r.jsx)("div", { children: (0, r.jsx)(l.$jN, {}) })
+          : (0, r.jsx)("div", {
                 children: j.map((e, t) =>
                     (0, r.jsxs)(
                         i.Fragment,
@@ -42,21 +42,28 @@ function f(e) {
                                     description: e.description,
                                     checked: e.checked,
                                     actionLabel: e.actionLabel,
-                                    actionHandler: e.actionHandler
+                                    actionHandler: e.actionHandler,
                                 }),
-                                t < j.length - 1 ? (0, r.jsx)(l.$i$, {}) : null
-                            ]
+                                t < j.length - 1 ? (0, r.jsx)(l.$i$, {}) : null,
+                            ],
                         },
-                        e.checkedLabel
-                    )
-                )
+                        e.checkedLabel,
+                    ),
+                ),
             });
 }
 function y(e) {
-    let { eligibility: t, eligibilityLoading: n, eligibilityError: i, refreshEligibility: o, guildId: s, transitionState: a } = e;
+    let {
+        eligibility: t,
+        eligibilityLoading: n,
+        eligibilityError: i,
+        refreshEligibility: o,
+        guildId: s,
+        transitionState: a,
+    } = e;
     return (0, r.jsx)(c.Modal, {
         transitionState: a,
-        title: p.intl.string(p.t['3s47iI']),
+        title: p.intl.string(p.t["3s47iI"]),
         actions: [],
         onClose: async () => {
             await (0, l.Mr3)(d.Q);
@@ -66,7 +73,7 @@ function y(e) {
             eligibilityLoading: n,
             eligibilityError: i,
             guildId: s,
-            onEligibilityBecameStale: o
-        })
+            onEligibilityBecameStale: o,
+        }),
     });
 }

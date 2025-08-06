@@ -7,16 +7,16 @@ var e = n(255367),
 function c(t) {
     let { tag: i } = t;
     return (0, e.jsx)(a.v2r, {
-        navId: 'forum-tag',
+        navId: "forum-tag",
         onClose: s.Zy,
-        'aria-label': r.intl.string(r.t.AzTwio),
+        "aria-label": r.intl.string(r.t.AzTwio),
         onSelect: void 0,
-        className: 'context-menu',
+        className: "context-menu",
         children: (0, e.jsx)(a.kSQ, {
             children: (0, l.Z)({
                 id: i.id,
-                label: r.intl.string(r.t['8VG6IS'])
-            })
-        })
+                label: r.intl.string(r.t["8VG6IS"]),
+            }),
+        }),
     });
 }

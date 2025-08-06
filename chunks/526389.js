@@ -6,8 +6,8 @@ let o = function (e) {
             return n.call(e);
         } catch (e) {}
         try {
-            return e + '';
+            return e + "";
         } catch (e) {}
     }
-    return '';
+    return "";
 };

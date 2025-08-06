@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685), n(539854), n(642613));
+n.d(t, { Z: () => M }), n(388685), n(539854), n(642613);
 var r = n(255367),
     i = n(73800),
     o = n(772848),
@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -79,7 +79,8 @@ function C(e, t) {
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,7 +90,7 @@ function R(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let P = 4,
@@ -101,7 +102,17 @@ let P = 4,
         return t > 0 ? t + P : 0;
     };
 function x(e) {
-    let { user: t, currentUser: n, guild: l, guildMember: u, roles: d, highestRole: f, canManageRoles: _, onAddRole: p, onRemoveRole: E } = e,
+    let {
+            user: t,
+            currentUser: n,
+            guild: l,
+            guildMember: u,
+            roles: d,
+            highestRole: f,
+            canManageRoles: _,
+            onAddRole: p,
+            onRemoveRole: E,
+        } = e,
         T = i.useRef({}),
         A = (e, t) => {
             null != t ? (T.current[e] = t) : delete T.current[e];
@@ -112,7 +123,7 @@ function x(e) {
         G = i.useRef(null),
         B = i.useRef(null),
         Z = i.useRef(0);
-    (i.useLayoutEffect(() => {
+    i.useLayoutEffect(() => {
         Z.current = 0;
     }, [d]),
         i.useLayoutEffect(() => {
@@ -132,21 +143,21 @@ function x(e) {
                     }
                     let a = Math.min(o.getBoundingClientRect().width, t);
                     if (e + a > t) break;
-                    ((e += a + P), n.push(i));
+                    (e += a + P), n.push(i);
                 }
             }
-            (x(n.length === R.length ? R : n), k(r), Z.current++);
-        }, [d, R, j]));
-    let F = i.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
+            x(n.length === R.length ? R : n), k(r), Z.current++;
+        }, [d, R, j]);
+    let F = i.useMemo(() => "roles-".concat((0, o.Z)()), []),
         V = (0, a.ZP)({
             id: F,
             isEnabled: !0,
             scrollToStart: O.Cyb,
             scrollToEnd: O.Cyb,
-            wrap: !0
+            wrap: !0,
         }),
         H = d.length,
-        Y = 0 === H ? v.intl.string(v.t['vR7M+/']) : v.intl.formatToPlainString(v.t.PCs0oq, { numRoles: H }),
+        Y = 0 === H ? v.intl.string(v.t["vR7M+/"]) : v.intl.formatToPlainString(v.t.PCs0oq, { numRoles: H }),
         W = (j ? d : R).map((e, i) => {
             var o;
             return (0, r.jsx)(
@@ -158,34 +169,37 @@ function x(e) {
                     disableBorderColor: !0,
                     ref: (t) => A(e.id, t),
                     onRemove: () => E(e),
-                    canRemove: (null == (o = e.tags) ? void 0 : o.guild_connections) === null ? t.id === n.id : _ && m.r6(l, n.id, f, e)
+                    canRemove:
+                        (null == (o = e.tags) ? void 0 : o.guild_connections) === null
+                            ? t.id === n.id
+                            : _ && m.r6(l, n.id, f, e),
                 },
-                e.id
+                e.id,
             );
         }),
         { trackUserProfileAction: K } = (0, g.KZ)(),
         z = i.useCallback(() => {
-            (U(!0), K({ action: 'EXPAND_ROLES' }));
+            U(!0), K({ action: "EXPAND_ROLES" });
         }, [K]),
         q = i.useCallback(() => {
-            (U(!1), K({ action: 'COLLAPSE_ROLES' }));
+            U(!1), K({ action: "COLLAPSE_ROLES" });
         }, [K]);
     return (0, r.jsx)(s.bG, {
         navigator: V,
         children: (0, r.jsx)(s.SJ, {
             children: (e) => {
                 var { ref: t } = e,
-                    n = C(e, ['ref']);
+                    n = C(e, ["ref"]);
                 return (0, r.jsxs)(
-                    'div',
+                    "div",
                     N(
                         S(
                             {
                                 className: I.root,
-                                'aria-label': Y,
-                                ref: t
+                                "aria-label": Y,
+                                ref: t,
                             },
-                            n
+                            n,
                         ),
                         {
                             children: [
@@ -200,9 +214,9 @@ function x(e) {
                                                   children: (0, r.jsx)(h.Z, {
                                                       direction: h.Z.Directions.LEFT,
                                                       width: 12,
-                                                      height: 12
-                                                  })
-                                              })
+                                                      height: 12,
+                                                  }),
+                                              }),
                                           })
                                         : (0, r.jsx)(c.DY3, {
                                               text: v.intl.string(v.t.DY6n4u),
@@ -211,10 +225,10 @@ function x(e) {
                                                   onClick: z,
                                                   className: I.expandButton,
                                                   children: (0, r.jsx)(c.Text, {
-                                                      variant: 'text-xs/medium',
-                                                      children: '+'.concat(d.length - R.length)
-                                                  })
-                                              })
+                                                      variant: "text-xs/medium",
+                                                      children: "+".concat(d.length - R.length),
+                                                  }),
+                                              }),
                                           })
                                     : null,
                                 _ && null != u
@@ -224,15 +238,15 @@ function x(e) {
                                           guildMember: u,
                                           numRoles: H,
                                           highestRole: f,
-                                          onAddRole: p
+                                          onAddRole: p,
                                       })
-                                    : null
-                            ]
-                        }
-                    )
+                                    : null,
+                            ],
+                        },
+                    ),
                 );
-            }
-        })
+            },
+        }),
     });
 }
 function M(e) {
@@ -246,19 +260,21 @@ function M(e) {
         v = i.useCallback(
             (e) => {
                 var n, r;
-                a({ action: 'REMOVE_ROLE' });
+                a({ action: "REMOVE_ROLE" });
                 let i = null != (r = null == c ? void 0 : c.filter((t) => t !== e.id)) ? r : [];
-                (null == (n = e.tags) ? void 0 : n.guild_connections) === null ? u.Z.unassignGuildRoleConnection(o.id, e.id) : d.Z.updateMemberRoles(o.id, t.id, i, [], [e.id]);
+                (null == (n = e.tags) ? void 0 : n.guild_connections) === null
+                    ? u.Z.unassignGuildRoleConnection(o.id, e.id)
+                    : d.Z.updateMemberRoles(o.id, t.id, i, [], [e.id]);
             },
-            [c, o.id, t.id, a]
+            [c, o.id, t.id, a],
         ),
         I = i.useCallback(
             (e) => {
-                a({ action: 'ADD_ROLE' });
+                a({ action: "ADD_ROLE" });
                 let n = null != c ? c : [];
-                (n.includes(e) || (n = [...n, e]), d.Z.updateMemberRoles(o.id, t.id, n, [e], []));
+                n.includes(e) || (n = [...n, e]), d.Z.updateMemberRoles(o.id, t.id, n, [e], []);
             },
-            [c, o.id, t.id, a]
+            [c, o.id, t.id, a],
         ),
         T = y && null != s;
     return 0 !== h.length || T
@@ -271,7 +287,7 @@ function M(e) {
               highestRole: b,
               canManageRoles: y,
               onAddRole: I,
-              onRemoveRole: v
+              onRemoveRole: v,
           })
         : null;
 }

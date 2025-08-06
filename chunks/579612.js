@@ -2,7 +2,7 @@ n.d(t, {
     GQ: () => g,
     MC: () => m,
     P: () => E,
-    ZP: () => b
+    ZP: () => b,
 });
 var r = n(255367);
 n(73800);
@@ -26,19 +26,19 @@ function m(e) {
         if (null == n) return null;
         let i = n.getAvatarURL(null, 20);
         return (0, r.jsx)(a.qEK, {
-            'aria-hidden': !0,
+            "aria-hidden": !0,
             className: h.searchResultDMChannelIcon,
             size: a.EFr.SIZE_20,
-            src: i
+            src: i,
         });
     }
     if (t.isGroupDM())
         return (0, r.jsx)(c.Z, {
-            'aria-hidden': !0,
+            "aria-hidden": !0,
             className: h.searchResultGDMChannelIcon,
             channel: t,
             size: a.EFr.SIZE_20,
-            experimentLocation: 'search_popout'
+            experimentLocation: "search_popout",
         });
     let n = (0, l.KS)(t);
     return null == n ? null : (0, r.jsx)(n, { className: h.searchResultChannelIcon });
@@ -46,11 +46,11 @@ function m(e) {
 function g(e) {
     let { channel: t } = e;
     return t.isDM() || t.isGroupDM()
-        ? (0, r.jsx)('span', {
+        ? (0, r.jsx)("span", {
               className: h.searchResultDMChannelName,
-              children: (0, s.F6)(t, _.default, d.Z)
+              children: (0, s.F6)(t, _.default, d.Z),
           })
-        : (0, r.jsx)('strong', { children: (0, s.F6)(t, _.default, d.Z) });
+        : (0, r.jsx)("strong", { children: (0, s.F6)(t, _.default, d.Z) });
 }
 function E(e) {
     let { channel: t } = e,
@@ -60,29 +60,31 @@ function E(e) {
             n = _.default.getUser(e);
         return null == n
             ? null
-            : (0, r.jsx)('span', {
+            : (0, r.jsx)("span", {
                   className: h.searchResultDMUserName,
-                  children: p.ZP.getUserTag(n, { identifiable: f.Z.enabled && f.Z.hidePersonalInformation ? 'never' : 'always' })
+                  children: p.ZP.getUserTag(n, {
+                      identifiable: f.Z.enabled && f.Z.hidePersonalInformation ? "never" : "always",
+                  }),
               });
     }
     if (null != n)
-        return (0, r.jsx)('span', {
+        return (0, r.jsx)("span", {
             className: h.searchResultChannelCategory,
-            children: (0, s.F6)(n, _.default, d.Z)
+            children: (0, s.F6)(n, _.default, d.Z),
         });
 }
 function b(e) {
     let { channel: t, text: n, channelContainerClassName: i, textContainerClassName: a } = e;
     return null == t
-        ? (0, r.jsx)('strong', { children: n })
-        : (0, r.jsxs)('div', {
+        ? (0, r.jsx)("strong", { children: n })
+        : (0, r.jsxs)("div", {
               className: o()(h.resultChannel, i),
               children: [
                   (0, r.jsx)(m, { channel: t }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: a,
-                      children: [(0, r.jsx)(g, { channel: t }), (0, r.jsx)(E, { channel: t })]
-                  })
-              ]
+                      children: [(0, r.jsx)(g, { channel: t }), (0, r.jsx)(E, { channel: t })],
+                  }),
+              ],
           });
 }

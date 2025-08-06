@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(642613), n(539854));
+n.d(t, { Z: () => m }), n(388685), n(642613), n(539854);
 var r = n(255367),
     l = n(73800),
     i = n(990547),
@@ -19,7 +19,16 @@ var r = n(255367),
     b = n(710111),
     E = n(840558);
 function m(e) {
-    let { guildId: t, channel: n, width: m, height: C, keepOpen: T, interactive: I = !0, analyticsSource: v, onClose: j } = e,
+    let {
+            guildId: t,
+            channel: n,
+            width: m,
+            height: C,
+            keepOpen: T,
+            interactive: I = !0,
+            analyticsSource: v,
+            onClose: j,
+        } = e,
         _ = (function (e) {
             let [t, n] = (0, s.Wu)([g.Z], () => [g.Z.getSounds(), g.Z.getFavorites()]);
             return l.useMemo(() => {
@@ -27,12 +36,16 @@ function m(e) {
                     l = [...e, b.X8],
                     i = (e, l) => {
                         var i, s;
-                        for (let a of null != (s = null == (i = t.get(e)) ? void 0 : i.sort((e, t) => h.default.compare(e.soundId, t.soundId))) ? s : []) {
+                        for (let a of null !=
+                        (s =
+                            null == (i = t.get(e)) ? void 0 : i.sort((e, t) => h.default.compare(e.soundId, t.soundId)))
+                            ? s
+                            : []) {
                             let e = n.has(a.soundId);
                             ((e && l) || (!e && !l)) && a.available && r.push(a);
                         }
                     };
-                return (l.forEach((e) => i(e, !0)), l.forEach((e) => i(e, !1)), r);
+                return l.forEach((e) => i(e, !0)), l.forEach((e) => i(e, !1)), r;
             }, [t, n, e]);
         })((0, O.h)(n, !0)),
         S = (0, N.j)(),
@@ -42,12 +55,12 @@ function m(e) {
         { analyticsLocations: D } = (0, o.ZP)(a.Z.SOUNDBOARD_WHEEL),
         Z = l.useCallback(
             (e) => {
-                ((0, p.GN)(e, n.id, D), j());
+                (0, p.GN)(e, n.id, D), j();
             },
-            [D, n.id, j]
+            [D, n.id, j],
         );
-    (l.useEffect(() => {
-        (f.w(), u.DZ.loadIfNecessary());
+    l.useEffect(() => {
+        f.w(), u.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
             0 === _.length && 0 === S.length && j();
@@ -57,7 +70,7 @@ function m(e) {
                 let e = P.current;
                 T || null == e || Z(e);
             },
-            [T, Z]
+            [T, Z],
         ),
         (0, c.Z)(
             {
@@ -66,13 +79,13 @@ function m(e) {
                 properties: {
                     source: v,
                     guild_id: t,
-                    media_session_id: w
-                }
+                    media_session_id: w,
+                },
             },
-            { disableTrack: !I }
-        ));
+            { disableTrack: !I },
+        );
     let k = l.useCallback((e) => {
-            ((P.current = e), R(null == e ? void 0 : e.soundId));
+            (P.current = e), R(null == e ? void 0 : e.soundId);
         }, []),
         M = l.useCallback(
             (e) => {
@@ -80,7 +93,7 @@ function m(e) {
                 let t = _[e];
                 null != t && k(t);
             },
-            [k, _]
+            [k, _],
         ),
         U = l.useCallback(
             (e) => {
@@ -88,7 +101,7 @@ function m(e) {
                 let t = _[e];
                 null != t && Z(t);
             },
-            [_, Z]
+            [_, Z],
         ),
         B = l.useMemo(
             () =>
@@ -100,12 +113,12 @@ function m(e) {
                             className: E.soundButton,
                             sound: e,
                             focused: A === e.soundId,
-                            channel: n
+                            channel: n,
                         },
-                        e.soundId
-                    )
+                        e.soundId,
+                    ),
                 ),
-            [A, n, I, _]
+            [A, n, I, _],
         );
     return 0 === _.length
         ? null
@@ -122,7 +135,7 @@ function m(e) {
                   onItemAction: U,
                   onClose: j,
                   interactive: I,
-                  children: B
-              })
+                  children: B,
+              }),
           });
 }

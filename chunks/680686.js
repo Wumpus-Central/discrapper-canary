@@ -10,6 +10,6 @@ function l(e, t, n, o) {
         source: o,
         is_premium: (0, i.Wo)(),
         party_id: s.includes(e) && (null == n ? void 0 : n.party) != null ? n.party.id : null,
-        other_user_id: t.id
+        other_user_id: t.id,
     });
 }

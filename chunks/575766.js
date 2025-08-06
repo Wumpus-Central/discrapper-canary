@@ -9,6 +9,6 @@ function a(e) {
                 r.kr(e);
             }
         ),
-        [e]
+        [e],
     );
 }

@@ -3,7 +3,7 @@ n.d(t, {
     Q6: () => c,
     cu: () => u,
     m8: () => d,
-    uq: () => s
+    uq: () => s,
 });
 var r = n(289393),
     i = n(430824),
@@ -18,7 +18,9 @@ function l(e) {
     let n = r.Z.getMonetizationRestrictionsFetchState(e),
         o = r.Z.getMonetizationRestrictions(e),
         l = i.Z.getGuild(e);
-    return n === r.M.FETCHED ? s(o) : null == (t = null == l ? void 0 : l.features.has(a.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || t;
+    return n === r.M.FETCHED
+        ? s(o)
+        : null == (t = null == l ? void 0 : l.features.has(a.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || t;
 }
 function c(e) {
     return null != e && e.includes(o.o.SETTINGS_READ_ONLY);
@@ -29,7 +31,9 @@ function u(e) {
     let n = r.Z.getMonetizationRestrictionsFetchState(e),
         o = r.Z.getMonetizationRestrictions(e),
         s = i.Z.getGuild(e);
-    return n === r.M.FETCHED ? c(o) : null == (t = null == s ? void 0 : s.features.has(a.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || t;
+    return n === r.M.FETCHED
+        ? c(o)
+        : null == (t = null == s ? void 0 : s.features.has(a.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || t;
 }
 function d(e) {
     return null != e && e.includes(o.o.REAPPLICATION_DISABLED);

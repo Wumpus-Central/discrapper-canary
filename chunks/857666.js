@@ -13,22 +13,22 @@ var r = n(255367),
 function m(e, t) {
     let m = (0, s.Z)(t);
     return o.useMemo(() => {
-        if ('guildTagsBadgePacks' === e) {
+        if ("guildTagsBadgePacks" === e) {
             let o = d.intl.string(u.default.KC9HRU),
                 s = d.intl.string(u.default.GJiSmJ),
                 g = m
                     ? () => {
-                          (l.Z.open(t, c.pNK.TAG, c.jXE.GUILD_POWERUPS_OVERVIEW_CARD), (0, i.pTH)());
+                          l.Z.open(t, c.pNK.TAG, c.jXE.GUILD_POWERUPS_OVERVIEW_CARD), (0, i.pTH)();
                       }
                     : void 0,
                 x = m ? d.intl.string(u.default.lvk1GR) : void 0,
-                _ = m ? d.intl.string(u.default['9CfkLC']) : void 0;
+                _ = m ? d.intl.string(u.default["9CfkLC"]) : void 0;
             return {
                 title: o,
                 description: s,
                 openModal: (e) => {
                     (0, i.ZDy)(async () => {
-                        let { default: i } = await n.e('64767').then(n.bind(n, 754887));
+                        let { default: i } = await n.e("64767").then(n.bind(n, 754887));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -36,24 +36,24 @@ function m(e, t) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                ((r = n[t]),
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = r));
-                                            }));
+                                                        : (e[t] = r);
+                                            });
                                     }
                                     return e;
                                 })(
@@ -64,19 +64,19 @@ function m(e, t) {
                                         powerups: e,
                                         footerInfoText: x,
                                         footerButtonText: _,
-                                        footerButtonOnClick: g
+                                        footerButtonOnClick: g,
                                     },
-                                    n
-                                )
+                                    n,
+                                ),
                             );
                     });
                 },
-                badge: 'beta',
+                badge: "beta",
                 image: {
                     staticUrl: f.Z,
-                    animatedUrl: p.Z
+                    animatedUrl: p.Z,
                 },
-                skuIds: a.z[e]
+                skuIds: a.z[e],
             };
         }
     }, [e, t, m]);

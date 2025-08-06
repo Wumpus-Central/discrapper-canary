@@ -13,19 +13,19 @@ function d(e) {
         { themeType: d } = (0, s.z)(),
         f = (0, o.Z)(t);
     if (!(0, a.Z)(t) || null == f) return null;
-    let _ = (e) => (e.stopPropagation(), null == n || n({ action: 'PRESS_WATCH_BUTTON' }), window.open(f));
+    let _ = (e) => (e.stopPropagation(), null == n || n({ action: "PRESS_WATCH_BUTTON" }), window.open(f));
     return d === c.lY.MODAL_V2
         ? (0, r.jsx)(l.tG, {
-              text: u.intl.string(u.t['I6JG4+']),
+              text: u.intl.string(u.t["I6JG4+"]),
               size: i.Ph.TINY,
-              themeColor: 'secondary',
-              onClick: _
+              themeColor: "secondary",
+              onClick: _,
           })
         : (0, r.jsx)(l.tG, {
-              text: u.intl.string(u.t['I6JG4+']),
+              text: u.intl.string(u.t["I6JG4+"]),
               size: i.Ph.SMALL,
               fullWidth: !0,
-              themeColor: 'secondary',
-              onClick: _
+              themeColor: "secondary",
+              onClick: _,
           });
 }

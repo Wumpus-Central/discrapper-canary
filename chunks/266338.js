@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     UC: () => l,
     YP: () => s,
-    c: () => a
+    c: () => a,
 }),
-    n(388685));
+    n(388685);
 let r = new WeakMap(),
     i = new WeakMap();
 function o(e, t) {
@@ -15,12 +15,12 @@ function o(e, t) {
 }
 function a(e) {
     let t = r.get(e);
-    return (null == t && ((t = new IntersectionObserver(o, e)), r.set(e, t), i.set(t, new WeakMap())), t);
+    return null == t && ((t = new IntersectionObserver(o, e)), r.set(e, t), i.set(t, new WeakMap())), t;
 }
 function s(e, t, n) {
     var r;
     let o = null != (r = i.get(e)) ? r : new WeakMap();
-    (o.has(t) || e.observe(t), o.set(t, n), i.set(e, o));
+    o.has(t) || e.observe(t), o.set(t, n), i.set(e, o);
 }
 function l(e, t) {
     var n;

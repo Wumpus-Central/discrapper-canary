@@ -1,4 +1,4 @@
-(n.d(t, { _: () => T }), n(642613), n(388685));
+n.d(t, { _: () => T }), n(642613), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -30,8 +30,8 @@ var r = n(255367),
 let Z = {
     offset: {
         left: 4,
-        right: -12
-    }
+        right: -12,
+    },
 };
 function T(e) {
     let { setTab: t, closePopout: n } = e;
@@ -39,32 +39,35 @@ function T(e) {
         i.useEffect(() => {
             (0, m.kg)();
         }, []),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: o()(w.container, w.widerInbox),
             children: [
                 (0, r.jsx)(I.Z, {
                     tab: d.X.SCHEDULED,
                     setTab: t,
-                    closePopout: n
+                    closePopout: n,
                 }),
-                (0, r.jsx)(A, {})
-            ]
+                (0, r.jsx)(A, {}),
+            ],
         })
     );
 }
 function A() {
     let e = (0, u.e7)([b.Z], () => b.Z.getScheduledMessagesForInbox(), []),
-        t = i.useMemo(() => Object.values(e).sort((e, t) => (new Date(e.sendAtTimestamp) > new Date(t.sendAtTimestamp) ? -1 : 1)), [e]),
+        t = i.useMemo(
+            () => Object.values(e).sort((e, t) => (new Date(e.sendAtTimestamp) > new Date(t.sendAtTimestamp) ? -1 : 1)),
+            [e],
+        ),
         n = (0, u.e7)([b.Z], () => b.Z.loading, []),
         l = i.useRef(null),
-        o = (0, p.Z)('scheduled-messages', l);
+        o = (0, p.Z)("scheduled-messages", l);
     return n
         ? (0, r.jsx)(h.$jN, { className: w.loadingPlaceholder })
         : 0 === t.length
           ? (0, r.jsx)(x.Z, {
                 Icon: h.T39,
                 header: N.intl.string(N.t.aJQZfX),
-                tip: N.intl.string(N.t.rCN4pK)
+                tip: N.intl.string(N.t.rCN4pK),
             })
           : (0, r.jsx)(c.bG, {
                 navigator: o,
@@ -83,49 +86,55 @@ function A() {
                                             r,
                                             i = {},
                                             l = Object.keys(e);
-                                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                         return i;
                                     })(e, t);
                                 if (Object.getOwnPropertySymbols) {
                                     var l = Object.getOwnPropertySymbols(e);
-                                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                                    for (r = 0; r < l.length; r++)
+                                        (n = l[r]),
+                                            !(t.indexOf(n) >= 0) &&
+                                                Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                (i[n] = e[n]);
                                 }
                                 return i;
-                            })(e, ['ref']);
+                            })(e, ["ref"]);
                         return (0, r.jsx)(
                             h.Den,
                             ((n = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })(
                                 {
                                     ref: (e) => {
                                         var t;
-                                        ((l.current = e), (o.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
-                                    }
+                                        (l.current = e),
+                                            (o.current =
+                                                null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                                    },
                                 },
-                                s
+                                s,
                             )),
                             (i = i = { children: (0, r.jsx)(R, { scheduledMessages: t }) }),
                             Object.getOwnPropertyDescriptors
@@ -140,10 +149,10 @@ function A() {
                                   })(Object(i)).forEach(function (e) {
                                       Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                   }),
-                            n)
+                            n),
                         );
-                    }
-                })
+                    },
+                }),
             });
 }
 function R(e) {
@@ -157,26 +166,29 @@ function R(e) {
                         null == i ||
                             (e[i.id] = {
                                 channel: i,
-                                scheduledMessages: [...(null != (r = null == (n = e[i.id]) ? void 0 : n.scheduledMessages) ? r : []), t]
+                                scheduledMessages: [
+                                    ...(null != (r = null == (n = e[i.id]) ? void 0 : n.scheduledMessages) ? r : []),
+                                    t,
+                                ],
                             }),
                         e
                     );
                 }, {}),
-            [t]
+            [t],
         ),
         l = (0, u.e7)([b.Z], () => b.Z.getMessagesPendingDeletion(), []);
     return (0, r.jsx)(r.Fragment, {
         children: Object.entries(n).map((e) => {
             let [t, { channel: n, scheduledMessages: i }] = e;
             return (0, r.jsxs)(
-                'div',
+                "div",
                 {
                     className: w.channelRow,
                     children: [
                         (0, r.jsx)(S.Z, {
                             channel: n,
                             gotoChannel: () => (0, g.uL)(P.Z5c.CHANNEL(n.getGuildId(), n.id)),
-                            children: null
+                            children: null,
                         }),
                         i.map((e) => {
                             let t = l.has(e.scheduledMessageId);
@@ -185,16 +197,16 @@ function R(e) {
                                 {
                                     scheduledMessage: e,
                                     channel: n,
-                                    isPendingDeletion: t
+                                    isPendingDeletion: t,
                                 },
-                                e.scheduledMessageId
+                                e.scheduledMessageId,
                             );
-                        })
-                    ]
+                        }),
+                    ],
                 },
-                t
+                t,
             );
-        })
+        }),
     });
 }
 let D = i.memo(function (e) {
@@ -204,39 +216,39 @@ let D = i.memo(function (e) {
             content: t.scheduledMessage.content,
             author: j.default.getUser(t.userId),
             timestamp: a()(t.sendAtTimestamp).toDate(),
-            channel_id: t.scheduledMessage.channelId
+            channel_id: t.scheduledMessage.channelId,
         }),
         { isError: c, stateMessage: u } = (function (e) {
             switch (e) {
                 case O._.SCHEDULED:
                     return {
                         isError: !1,
-                        stateMessage: N.intl.string(N.t.Fn6Odn)
+                        stateMessage: N.intl.string(N.t.Fn6Odn),
                     };
                 case O._.ERROR_CHANNEL_NOT_FOUND:
                     return {
                         isError: !0,
-                        stateMessage: N.intl.string(N.t.v5O2dH)
+                        stateMessage: N.intl.string(N.t.v5O2dH),
                     };
                 case O._.ERROR_USER_NOT_FOUND:
                     return {
                         isError: !0,
-                        stateMessage: N.intl.string(N.t.j8uIfH)
+                        stateMessage: N.intl.string(N.t.j8uIfH),
                     };
                 case O._.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES:
                     return {
                         isError: !0,
-                        stateMessage: N.intl.string(N.t.w6zHX1)
+                        stateMessage: N.intl.string(N.t.w6zHX1),
                     };
                 case O._.ERROR_SEND_FAILED:
                     return {
                         isError: !0,
-                        stateMessage: N.intl.string(N.t['pflV7+'])
+                        stateMessage: N.intl.string(N.t["pflV7+"]),
                     };
                 case O._.ERROR_SCHEDULED_MESSAGES_DISABLED:
                     return {
                         isError: !0,
-                        stateMessage: N.intl.string(N.t.j8uIfH)
+                        stateMessage: N.intl.string(N.t.j8uIfH),
                     };
                 default:
                     (0, E.vE)(e);
@@ -252,23 +264,23 @@ let D = i.memo(function (e) {
                 });
         }, [t.scheduledMessageId]);
     return (0, r.jsx)(
-        'div',
+        "div",
         {
             className: o()(w.messageContainer, {
                 [w.messageSendError]: c,
-                [w.messageSendScheduled]: !c
+                [w.messageSendScheduled]: !c,
             }),
             children: l
                 ? (0, r.jsx)(h.$jN, { className: w.messageSpinner })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(h.Text, {
-                              variant: 'text-xs/semibold',
-                              color: c ? 'text-danger' : 'text-feedback-positive',
+                              variant: "text-xs/semibold",
+                              color: c ? "text-danger" : "text-feedback-positive",
                               className: w.messageState,
-                              children: u
+                              children: u,
                           }),
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: w.channelMessageAndCancelButton,
                               children: [
                                   (0, r.jsx)(
@@ -279,20 +291,20 @@ let D = i.memo(function (e) {
                                           className: w.message,
                                           compact: y.jU.getSetting(),
                                           animateAvatar: !1,
-                                          focusProps: Z
+                                          focusProps: Z,
                                       },
-                                      s.id
+                                      s.id,
                                   ),
                                   (0, r.jsx)(h.P3F, {
                                       className: w.cancelMessageButton,
                                       onClick: d,
-                                      children: (0, r.jsx)(h.k$p, {})
-                                  })
-                              ]
-                          })
-                      ]
-                  })
+                                      children: (0, r.jsx)(h.k$p, {}),
+                                  }),
+                              ],
+                          }),
+                      ],
+                  }),
         },
-        s.id
+        s.id,
     );
 });

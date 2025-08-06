@@ -16,20 +16,20 @@ let u = function (e) {
             if (null != t) return o.VY.filter((e) => i.e$(i.vB(t), e));
         }, [null == n || null == (t = n.install_params) ? void 0 : t.permissions]);
     return null != u && u.length > 0
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: d.sectionContainer,
               children: [
                   (0, r.jsx)(l.X6q, {
-                      variant: 'heading-lg/semibold',
-                      color: 'header-primary',
-                      children: c.intl.string(c.t.runNFx)
+                      variant: "heading-lg/semibold",
+                      color: "header-primary",
+                      children: c.intl.string(c.t.runNFx),
                   }),
                   (0, r.jsx)(s.Z, {
                       className: d.contentContainer,
                       grantedPermissions: u,
-                      grantedPermissionsHeader: c.intl.string(c.t.SLgiND)
-                  })
-              ]
+                      grantedPermissionsHeader: c.intl.string(c.t.SLgiND),
+                  }),
+              ],
           })
         : null;
 };

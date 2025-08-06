@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => O,
-    tE: () => y
+    tE: () => y,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -22,7 +22,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,17 +69,17 @@ function E(e, t) {
 }
 function b(e) {
     let { icon: t, iconSize: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: _.iconContainer,
         style: {
             height: n,
-            width: n
+            width: n,
         },
-        children: t
+        children: t,
     });
 }
 var y = (function (e) {
-    return ((e[(e.PILL_ICON_SIZE = 16)] = 'PILL_ICON_SIZE'), (e[(e.ROW_ICON_SIZE = 24)] = 'ROW_ICON_SIZE'), e);
+    return (e[(e.PILL_ICON_SIZE = 16)] = "PILL_ICON_SIZE"), (e[(e.ROW_ICON_SIZE = 24)] = "ROW_ICON_SIZE"), e;
 })({});
 function O(e) {
     let { selectActionComponent: t, queryOptions: n, renderIcon: o, renderOptionLabel: h, defaultValues: g } = e,
@@ -95,37 +95,42 @@ function O(e) {
         if (e.every((e) => D.includes(e)) && D.every((t) => e.includes(t))) return;
         L(e);
         let t = new Map(null == g ? void 0 : g.map((e) => [e.value, e]));
-        (R(t), w(new Set(t.keys())), M((e) => e + 1));
+        R(t), w(new Set(t.keys())), M((e) => e + 1);
     }, [g, D]);
     let {
             state: k,
             executeStateUpdate: j,
             visualState: U,
             isDisabled: G,
-            error: B
+            error: B,
         } = (0, u.Ee)(t, {
             type: y,
-            selectedOptions: Array.from(C.values())
+            selectedOptions: Array.from(C.values()),
         }),
         Z = v > 1,
         F = U === d.gH.LOADING;
     i.useEffect(() => {
-        if ((null == k ? void 0 : k.type) === l.re.USER_SELECT || (null == k ? void 0 : k.type) === l.re.ROLE_SELECT || (null == k ? void 0 : k.type) === l.re.MENTIONABLE_SELECT || (null == k ? void 0 : k.type) === l.re.CHANNEL_SELECT) {
+        if (
+            (null == k ? void 0 : k.type) === l.re.USER_SELECT ||
+            (null == k ? void 0 : k.type) === l.re.ROLE_SELECT ||
+            (null == k ? void 0 : k.type) === l.re.MENTIONABLE_SELECT ||
+            (null == k ? void 0 : k.type) === l.re.CHANNEL_SELECT
+        ) {
             let e = new Map(k.selectedOptions.map((e) => [e.value, e]));
-            (R(e), w(new Set(e.keys())));
+            R(e), w(new Set(e.keys()));
         }
     }, [k]);
     let V = i.useCallback(() => {
         j({
             type: y,
-            selectedOptions: Array.from(C.values())
+            selectedOptions: Array.from(C.values()),
         }) && w(new Set(C.keys()));
     }, [j, y, C]);
     i.useEffect(() => {
         !T && !A && ((C.size === P.size && Array.from(C.keys()).every((e) => P.has(e))) || V());
     }, [T, A, P, C, V]);
     let H = (e) => {
-            (T || N(!0), R(new Map(e.map((e) => [e.value, e]))));
+            T || N(!0), R(new Map(e.map((e) => [e.value, e])));
         },
         Y = (e) => R(null != e ? new Map([[e.value, e]]) : new Map()),
         W = (e) =>
@@ -139,7 +144,7 @@ function O(e) {
             return null != a
                 ? (0, r.jsx)(b, {
                       icon: a,
-                      iconSize: i
+                      iconSize: i,
                   })
                 : null;
         },
@@ -156,11 +161,11 @@ function O(e) {
             maxVisibleItems: 5,
             optionClassName: _.__invalid_selectOption,
             renderOptionPrefix: K,
-            renderOptionLabel: h
+            renderOptionLabel: h,
         };
     return (0, r.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: _.container,
                 children: Z
                     ? (0, r.jsx)(
@@ -174,14 +179,14 @@ function O(e) {
                                   inputClassNames: a()({
                                       [_.soloInput]: 0 === C.size,
                                       [_.inlineInput]: C.size > 0,
-                                      [_.hidden]: !z
+                                      [_.hidden]: !z,
                                   }),
                                   closeOnSelect: !1,
-                                  centerCaret: !0
+                                  centerCaret: !0,
                               },
-                              q
+                              q,
                           ),
-                          x
+                          x,
                       )
                     : (0, r.jsx)(
                           s.VcW,
@@ -191,14 +196,14 @@ function O(e) {
                                   value: [...C.values()][0],
                                   onChange: Y,
                                   clearable: !0,
-                                  centerCaret: !0
+                                  centerCaret: !0,
                               },
-                              q
+                              q,
                           ),
-                          x
-                      )
+                          x,
+                      ),
             }),
-            null != B ? (0, r.jsx)(c.st, E(m({}, (0, c.c4)(B)), { className: p.error })) : null
-        ]
+            null != B ? (0, r.jsx)(c.st, E(m({}, (0, c.c4)(B)), { className: p.error })) : null,
+        ],
     });
 }

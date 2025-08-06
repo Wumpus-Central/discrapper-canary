@@ -11,13 +11,16 @@ function o(n) {
         h = (0, c.Z)(t, o, u),
         p = (0, r.Z)({
             id: l,
-            label: s.intl.string(s.t.gFHI3t)
+            label: s.intl.string(s.t.gFHI3t),
         });
     return (0, i.jsxs)(e.v2r, {
-        navId: 'channel-mention-context',
+        navId: "channel-mention-context",
         onClose: a.Zy,
         onSelect: d,
-        'aria-label': s.intl.string(s.t.feGACA),
-        children: [(0, i.jsx)(e.kSQ, { children: h }, 'channel-mention-actions'), (0, i.jsx)(e.kSQ, { children: p }, 'developer-actions')]
+        "aria-label": s.intl.string(s.t.feGACA),
+        children: [
+            (0, i.jsx)(e.kSQ, { children: h }, "channel-mention-actions"),
+            (0, i.jsx)(e.kSQ, { children: p }, "developer-actions"),
+        ],
     });
 }

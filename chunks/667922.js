@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -79,8 +79,8 @@ function T(e, t) {
             !h.ZP.isEmojiFilteredOrLocked({
                 emoji: e,
                 channel: t,
-                intention: g.Hz.REACTION
-            })
+                intention: g.Hz.REACTION,
+            }),
     )
         .slice(0, I)
         .map((i, o) => {
@@ -88,62 +88,62 @@ function T(e, t) {
             return (0, r.jsx)(
                 a.sNh,
                 {
-                    color: 'default',
+                    color: "default",
                     id: null != (u = null != (s = i.id) ? s : i.optionallyDiverseSequence) ? u : i.name,
-                    label: ':'.concat(i.name, ':'),
+                    label: ":".concat(i.name, ":"),
                     icon: (e) =>
                         (0, r.jsx)(
                             S,
                             v(y({}, e), {
                                 reducedMotionEnabled: n.enabled,
-                                emoji: i
-                            })
+                                emoji: i,
+                            }),
                         ),
                     action: () => {
                         (0, l.rU)(t.id, e.id, (0, c.g1)(i), l.TW.MESSAGE_CONTEXT_MENU);
                     },
-                    dontCloseOnActionIfHoldingShiftKey: !0
+                    dontCloseOnActionIfHoldingShiftKey: !0,
                 },
-                o
+                o,
             );
         });
     return (0, r.jsx)(a.sNh, {
-        id: 'add-reaction',
+        id: "add-reaction",
         label: E.intl.string(E.t.lfIHs7),
         action: () => {
             p.S.dispatchKeyed(m.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
-        color: 'default',
+        color: "default",
         children: (0, r.jsxs)(r.Fragment, {
             children: [
                 T,
                 (0, r.jsx)(a.Clw, {}),
                 (0, r.jsx)(a.sNh, {
-                    color: 'default',
-                    id: 'other-reactions',
-                    label: E.intl.string(E.t['OBCR+v']),
+                    color: "default",
+                    id: "other-reactions",
+                    label: E.intl.string(E.t["OBCR+v"]),
                     icon: a.EO4,
                     action: () => {
                         p.S.dispatchKeyed(m.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
-                    }
-                })
-            ]
-        })
+                    },
+                }),
+            ],
+        }),
     });
 }
 function S(e) {
     var t;
-    let { emoji: n, reducedMotionEnabled: i, className: o = '', isFocused: a = !1 } = e;
-    return (0, r.jsx)('img', {
+    let { emoji: n, reducedMotionEnabled: i, className: o = "", isFocused: a = !1 } = e;
+    return (0, r.jsx)("img", {
         className: o,
         src:
             null != n.id
                 ? _.ZP.getEmojiURL({
                       id: n.id,
                       animated: n.animated && (!i || a),
-                      size: 18
+                      size: 18,
                   })
-                : h.ZP.getURL(null != (t = n.optionallyDiverseSequence) ? t : ''),
-        alt: ''
+                : h.ZP.getURL(null != (t = n.optionallyDiverseSequence) ? t : ""),
+        alt: "",
     });
 }

@@ -1,4 +1,4 @@
-(n.d(e, { Z: () => y }), n(388685), n(781311));
+n.d(e, { Z: () => y }), n(388685), n(781311);
 var l = n(255367),
     a = n(73800),
     i = n(650557),
@@ -14,48 +14,51 @@ var l = n(255367),
     f = n(388032),
     h = n(826390);
 function y(t) {
-    let e = c.C.useExperiment({ location: 'ChannelTextAreaContextMenu' }),
+    let e = c.C.useExperiment({ location: "ChannelTextAreaContextMenu" }),
         { selection: y } = t,
         m =
             null != y
                 ? (0, b.sk)(p.bN.richValue(t), {
-                      mode: 'plain',
+                      mode: "plain",
                       range: y,
-                      preventEmojiSurrogates: !1
+                      preventEmojiSurrogates: !1,
                   })
-                : '',
+                : "",
         S = a.useCallback(
             (e) => {
-                (i.F3.focus(t),
+                i.F3.focus(t),
                     d.T.withSingleEntry(t, () => {
-                        (t.deleteFragment(), t.insertText(e));
-                    }));
+                        t.deleteFragment(), t.insertText(e);
+                    });
             },
-            [t]
+            [t],
         ),
         j = (function (t, e) {
             let [n, i] = a.useState(!1),
                 r = a.useCallback(async () => {
                     if (!n) {
-                        (i(!0), (0, o.showToast)((0, o.createToast)(f.intl.string(f.t.p54KYW), o.ToastType.AI)));
+                        i(!0), (0, o.showToast)((0, o.createToast)(f.intl.string(f.t.p54KYW), o.ToastType.AI));
                         try {
                             let n = await s.tn.post({
                                 url: g.ANM.AI_FIX_GRAMMAR,
                                 body: { content: t },
-                                rejectWithError: !1
+                                rejectWithError: !1,
                             });
-                            n.ok && n.body && (e(n.body.content), (0, o.showToast)((0, o.createToast)(f.intl.string(f.t.mxQpUV), o.ToastType.SUCCESS)));
+                            n.ok &&
+                                n.body &&
+                                (e(n.body.content),
+                                (0, o.showToast)((0, o.createToast)(f.intl.string(f.t.mxQpUV), o.ToastType.SUCCESS)));
                         } finally {
                             i(!1);
                         }
                     }
                 }, [n, t, e]);
             return (0, l.jsx)(o.sNh, {
-                id: 'fix-grammar',
+                id: "fix-grammar",
                 label: n ? f.intl.string(f.t.p54KYW) : f.intl.string(f.t.fCpOHh),
                 icon: o.$2U,
                 action: r,
-                disabled: n
+                disabled: n,
             });
         })(m, S),
         T = (function (t, e) {
@@ -67,58 +70,71 @@ function y(t) {
                         let a = null != n ? n : d;
                         c(!0);
                         let r = null != l ? l : a;
-                        (0, o.showToast)((0, o.createToast)(f.intl.formatToPlainString(f.t.Znl8Z2, { targetLanguage: r }), o.ToastType.AI));
+                        (0, o.showToast)(
+                            (0, o.createToast)(
+                                f.intl.formatToPlainString(f.t.Znl8Z2, { targetLanguage: r }),
+                                o.ToastType.AI,
+                            ),
+                        );
                         try {
                             let n = await s.tn.post({
                                 url: g.ANM.AI_TRANSLATE,
                                 body: {
                                     content: t,
-                                    locale: a
+                                    locale: a,
                                 },
-                                rejectWithError: !1
+                                rejectWithError: !1,
                             });
-                            n.ok && n.body && (e(n.body.content), (0, o.showToast)((0, o.createToast)(f.intl.formatToPlainString(f.t.FtVUqq, { targetLanguage: r }), o.ToastType.SUCCESS)));
+                            n.ok &&
+                                n.body &&
+                                (e(n.body.content),
+                                (0, o.showToast)(
+                                    (0, o.createToast)(
+                                        f.intl.formatToPlainString(f.t.FtVUqq, { targetLanguage: r }),
+                                        o.ToastType.SUCCESS,
+                                    ),
+                                ));
                         } finally {
                             c(!1);
                         }
                     },
-                    [i, d, t, e]
+                    [i, d, t, e],
                 ),
                 p = (0, f.getAvailableLocales)().map((t) => {
                     let e;
                     try {
-                        e = n(621287)('./'.concat(t.value, '.png'));
+                        e = n(621287)("./".concat(t.value, ".png"));
                     } catch (t) {
                         e = n(1474);
                     }
                     return (0, l.jsx)(
                         o.sNh,
                         {
-                            id: 'translate-'.concat(t.value),
+                            id: "translate-".concat(t.value),
                             label: t.name,
                             icon: () =>
-                                (0, l.jsx)('img', {
-                                    alt: '',
+                                (0, l.jsx)("img", {
+                                    alt: "",
                                     src: e,
-                                    className: h.flagIcon
+                                    className: h.flagIcon,
                                 }),
                             action: () => b(t.value, t.name),
-                            disabled: i
+                            disabled: i,
                         },
-                        t.value
+                        t.value,
                     );
                 });
             return (0, l.jsx)(o.sNh, {
-                id: 'translate',
-                label: i ? f.intl.string(f.t.SVKIdX) : f.intl.string(f.t['6epDlZ']),
+                id: "translate",
+                label: i ? f.intl.string(f.t.SVKIdX) : f.intl.string(f.t["6epDlZ"]),
                 action: () => b(),
                 disabled: i,
-                children: p
+                children: p,
             });
         })(m, S);
-    return '' !== m.trim() && (null == e ? void 0 : e.enableAIFeatures)
+    return "" !== m.trim() && (null == e ? void 0 : e.enableAIFeatures)
         ? (0, l.jsxs)(l.Fragment, {
-              children: [j, T]
+              children: [j, T],
           })
         : null;
 }

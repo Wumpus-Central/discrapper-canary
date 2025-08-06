@@ -27,7 +27,7 @@ function p(e) {
     let C = m === E.IlC.POPOUT,
         A = (0, c.Z)({
             guild: v,
-            analyticsLocation: y
+            analyticsLocation: y,
         }),
         I = (0, u.Aq)();
     if (null == v || C) return null;
@@ -35,23 +35,26 @@ function p(e) {
         D = _ === p,
         x = g.Z.canManageUser(E.Plq.MANAGE_NICKNAMES, p, v);
     if (!(T || x || D) || null == S || M) return null;
-    let w = v.features.has(E.oNc.HUB) ? Z.intl.string(Z.t['+MWrWl']) : Z.intl.string(Z.t['PKQB/P']),
+    let w = v.features.has(E.oNc.HUB) ? Z.intl.string(Z.t["+MWrWl"]) : Z.intl.string(Z.t["PKQB/P"]),
         U = D ? w : Z.intl.string(Z.t.dilOFx);
     return (0, l.jsx)(a.sNh, {
-        id: 'change-nickname',
-        label: (0, l.jsx)('div', {
+        id: "change-nickname",
+        label: (0, l.jsx)("div", {
             className: P.labelWrapper,
-            children: (0, l.jsx)('span', {
+            children: (0, l.jsx)("span", {
                 className: P.label,
-                children: U
-            })
+                children: U,
+            }),
         }),
         icon: h,
         action: () => {
             D
-                ? ((0, s.Z)(S.id, S.getAvatarURL(t, 80), { guildId: t }), A(), I.dispatch(E.CkL.POPOUT_CLOSE), (0, a.pTH)())
+                ? ((0, s.Z)(S.id, S.getAvatarURL(t, 80), { guildId: t }),
+                  A(),
+                  I.dispatch(E.CkL.POPOUT_CLOSE),
+                  (0, a.pTH)())
                 : (0, a.ZDy)(async () => {
-                      let { default: e } = await n.e('17712').then(n.bind(n, 620021));
+                      let { default: e } = await n.e("17712").then(n.bind(n, 620021));
                       return (n) => {
                           var r, i;
                           return (0, l.jsx)(
@@ -60,24 +63,24 @@ function p(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           l = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (l = l.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           l.forEach(function (t) {
                                               var l;
-                                              ((l = n[t]),
+                                              (l = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: l,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = l));
-                                          }));
+                                                      : (e[t] = l);
+                                          });
                                   }
                                   return e;
                               })({}, n)),
@@ -86,7 +89,7 @@ function p(e) {
                                       guildId: t,
                                       user: S,
                                       analyticsSource: y,
-                                      analyticsLocations: j
+                                      analyticsLocations: j,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -100,10 +103,10 @@ function p(e) {
                                     })(Object(i)).forEach(function (e) {
                                         Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                                     }),
-                              r)
+                              r),
                           );
                       };
                   });
-        }
+        },
     });
 }

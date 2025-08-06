@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     FW: () => p,
     Pk: () => a,
     Rq: () => f,
     W_: () => s,
     dK: () => o,
-    qd: () => m
+    qd: () => m,
 }),
     n(410992),
     n(227481),
@@ -25,50 +25,56 @@
     n(704826),
     n(35282),
     n(608445),
-    n(415506));
+    n(415506);
 var r = n(512722),
     i = n.n(r),
     l = n(598077);
 function s() {
     return window.crypto.subtle.generateKey(
         {
-            name: 'RSA-OAEP',
+            name: "RSA-OAEP",
             modulusLength: 2048,
             publicExponent: new Uint8Array([1, 0, 1]),
-            hash: 'SHA-256'
+            hash: "SHA-256",
         },
         !0,
-        ['decrypt']
+        ["decrypt"],
     );
 }
 async function o(e) {
-    return (i()(null != e.publicKey, 'public key cannot be null'), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey)))));
+    return (
+        i()(null != e.publicKey, "public key cannot be null"),
+        btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey("spki", e.publicKey))))
+    );
 }
 async function a(e) {
-    return (i()(null != e.publicKey, 'public key cannot be null'), d(await window.crypto.subtle.exportKey('spki', e.publicKey)));
+    return (
+        i()(null != e.publicKey, "public key cannot be null"),
+        d(await window.crypto.subtle.exportKey("spki", e.publicKey))
+    );
 }
 function c(e) {
     return btoa(String.fromCharCode(...new Uint8Array(e)))
-        .replace(/\//g, '_')
-        .replace(/\+/g, '-')
-        .replace(/={1,2}$/, '');
+        .replace(/\//g, "_")
+        .replace(/\+/g, "-")
+        .replace(/={1,2}$/, "");
 }
 function u(e) {
     return Uint8Array.from(atob(e), (e) => e.charCodeAt(0));
 }
 async function d(e) {
-    return c(await window.crypto.subtle.digest({ name: 'SHA-256' }, e));
+    return c(await window.crypto.subtle.digest({ name: "SHA-256" }, e));
 }
 function h(e, t) {
     return (
-        i()(null != e.privateKey, 'private key cannot be null'),
+        i()(null != e.privateKey, "private key cannot be null"),
         window.crypto.subtle.decrypt(
             {
-                name: 'RSA-OAEP',
-                hash: 'SHA-256'
+                name: "RSA-OAEP",
+                hash: "SHA-256",
             },
             e.privateKey,
-            t
+            t,
         )
     );
 }
@@ -82,12 +88,12 @@ async function m(e, t) {
 }
 async function f(e, t) {
     let n = (t = await p(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
-    if (null == n) throw Error('Invalid encoded user record.');
+    if (null == n) throw Error("Invalid encoded user record.");
     let [, r, i, s, o] = n;
     return new l.Z({
         id: r,
         discriminator: i,
-        avatar: '0' === s ? null : s,
-        username: o
+        avatar: "0" === s ? null : s,
+        username: o,
     });
 }

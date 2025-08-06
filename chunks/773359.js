@@ -14,17 +14,17 @@ let d = (e) => {
         }, [t]);
     return (0, r.jsx)(a.i, {
         bannerHeader: (0, r.jsx)(o.Text, {
-            variant: 'text-md/medium',
-            color: 'text-muted',
-            children: c.intl.string(l.default['0eUUeH'])
+            variant: "text-md/medium",
+            color: "text-muted",
+            children: c.intl.string(l.default["0eUUeH"]),
         }),
         headerStyles: u.bannerHeader,
         containerStyles: u.bannerContainer,
         children: (0, r.jsx)(o.zxk, {
-            variant: 'secondary',
-            size: 'sm',
-            text: c.intl.string(l.default['6quCi4']),
-            onClick: n
-        })
+            variant: "secondary",
+            size: "sm",
+            text: c.intl.string(l.default["6quCi4"]),
+            onClick: n,
+        }),
     });
 };

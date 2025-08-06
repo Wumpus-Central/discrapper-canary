@@ -17,7 +17,7 @@ e.exports = function (e, t, n, s) {
                   value: n,
                   enumerable: !1,
                   configurable: !s.nonConfigurable,
-                  writable: !s.nonWritable
+                  writable: !s.nonWritable,
               });
     }
     return e;

@@ -22,14 +22,14 @@ function d(e) {
                       contextMenu: m
                           ? null
                           : (0, s.jsx)(o.Z, {
-                                display: 'recent',
+                                display: "recent",
                                 entry: t,
                                 user: a,
                                 onClose: x,
-                                appContext: j
-                            })
-                  })
-              })
+                                appContext: j,
+                            }),
+                  }),
+              }),
           })
         : null;
 }

@@ -13,8 +13,8 @@ function u(e) {
     return (0, r.jsxs)(l.Y0X, {
         className: c.container,
         transitionState: t,
-        'aria-labelledby': p,
-        parentComponent: 'ActionCompletedSuccessModal',
+        "aria-labelledby": p,
+        parentComponent: "ActionCompletedSuccessModal",
         children: [
             (0, r.jsxs)(l.hzk, {
                 children: [
@@ -23,25 +23,25 @@ function u(e) {
                     (0, r.jsx)(l.X6q, {
                         id: p,
                         className: c.__invalid_title,
-                        variant: 'heading-xl/semibold',
-                        children: u
+                        variant: "heading-xl/semibold",
+                        children: u,
                     }),
                     (0, r.jsx)(l.LZC, { size: 8 }),
                     (0, r.jsx)(l.Text, {
                         className: c.body,
-                        variant: 'text-sm/normal',
-                        children: d
-                    })
-                ]
+                        variant: "text-sm/normal",
+                        children: d,
+                    }),
+                ],
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(i.zx, {
                 size: i.zx.Sizes.MEDIUM,
                 grow: !1,
                 onClick: f,
-                children: a.intl.string(a.t['NX+WJC'])
-            })
-        ]
+                children: a.intl.string(a.t["NX+WJC"]),
+            }),
+        ],
     });
 }
 function d(e) {
@@ -52,27 +52,27 @@ function d(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
-            })({}, t, e)
-        )
+            })({}, t, e),
+        ),
     );
 }

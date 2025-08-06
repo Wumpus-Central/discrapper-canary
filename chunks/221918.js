@@ -9,7 +9,7 @@ function a(n) {
             function () {
                 return new o.Y(r.getBackend());
             },
-            [r]
+            [r],
         );
     return (
         (0, u.L)(
@@ -22,7 +22,7 @@ function a(n) {
                     }
                 );
             },
-            [n]
+            [n],
         ),
         t
     );

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var r = n(73800),
     i = n(913527),
     o = n.n(i),
@@ -9,13 +9,13 @@ let c = [
         [2 * s.Z.Seconds.MINUTE, s.Z.Seconds.SECOND],
         [5 * s.Z.Seconds.MINUTE, s.Z.Seconds.MINUTE],
         [45 * s.Z.Seconds.MINUTE, 2 * s.Z.Seconds.MINUTE],
-        [21 * s.Z.Seconds.HOUR, 5 * s.Z.Seconds.MINUTE]
+        [21 * s.Z.Seconds.HOUR, 5 * s.Z.Seconds.MINUTE],
     ],
     u = 2 * s.Z.Seconds.HOUR;
 function d(e) {
     let t = (0, a.Z)();
     return (r.useEffect(() => {
-        if ('R' !== e.format) return;
+        if ("R" !== e.format) return;
         let n = 1000 * u,
             r = Math.abs(e.parsed.diff(o()()));
         for (let [e, t] of c)
@@ -28,7 +28,7 @@ function d(e) {
         }, n);
         return () => clearInterval(i);
     }, [t, e.format, e.parsed]),
-    'R' === e.format)
+    "R" === e.format)
         ? l.Qh.R(e.parsed)
         : e.formatted;
 }

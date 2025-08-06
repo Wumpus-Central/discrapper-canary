@@ -22,24 +22,24 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -64,7 +64,7 @@ function m(e, t) {
 let x = [
     {
         key: null,
-        renderStep: (e) => (0, n.jsx)(O.v, v({}, e))
+        renderStep: (e) => (0, n.jsx)(O.v, v({}, e)),
     },
     {
         key: u.h8.ADD_PAYMENT_STEPS,
@@ -73,27 +73,29 @@ let x = [
                 f.J,
                 m(v({}, e), {
                     onReturn: () => {
-                        0 === Object.keys(y.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(u.h8.REVIEW, { trackedFromStep: u.h8.ADD_PAYMENT_STEPS });
-                    }
-                })
-            )
+                        0 === Object.keys(y.Z.paymentSources).length
+                            ? e.handleClose()
+                            : e.handleStepChange(u.h8.REVIEW, { trackedFromStep: u.h8.ADD_PAYMENT_STEPS });
+                    },
+                }),
+            ),
     },
     {
         key: u.h8.AWAITING_PURCHASE_TOKEN_AUTH,
-        renderStep: () => (0, n.jsx)(d.Z, {})
+        renderStep: () => (0, n.jsx)(d.Z, {}),
     },
     {
         key: u.h8.AWAITING_AUTHENTICATION,
-        renderStep: () => (0, n.jsx)(b.Z, {})
+        renderStep: () => (0, n.jsx)(b.Z, {}),
     },
     {
         key: u.h8.REVIEW,
-        renderStep: (e) => (0, n.jsx)(p.l, v({}, e))
+        renderStep: (e) => (0, n.jsx)(p.l, v({}, e)),
     },
     {
         key: u.h8.CONFIRM,
-        renderStep: (e) => (0, n.jsx)(j.Z, v({}, e))
-    }
+        renderStep: (e) => (0, n.jsx)(j.Z, v({}, e)),
+    },
 ];
 function S(e) {
     var { guildProductContext: t, sourceAnalyticsLocations: r, applicationId: u } = e,
@@ -107,15 +109,17 @@ function S(e) {
                         n,
                         o = {},
                         c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) ((r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
+                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++) ((r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
+                for (n = 0; n < c.length; n++)
+                    (r = c[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, ['guildProductContext', 'sourceAnalyticsLocations', 'applicationId']);
+        })(e, ["guildProductContext", "sourceAnalyticsLocations", "applicationId"]);
     let { analyticsLocations: b } = (0, c.ZP)(r, o.Z.GUILD_PRODUCT_PAYMENT_MODAL);
     return (0, n.jsx)(
         g.R,
@@ -136,15 +140,15 @@ function S(e) {
                                     {
                                         initialPlanId: null,
                                         analyticsLocations: b,
-                                        renderHeader: P.L
+                                        renderHeader: P.L,
                                     },
-                                    f
-                                )
-                            )
-                        })
-                    })
-                })
-            })
-        })
+                                    f,
+                                ),
+                            ),
+                        }),
+                    }),
+                }),
+            }),
+        }),
     );
 }

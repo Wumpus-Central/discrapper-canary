@@ -16,43 +16,43 @@ function h(e) {
     let { markAsDismissed: t, onCTA: n } = e,
         h = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
         f = (0, c.M5)(h, u.p9.TIER_2);
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: p.popup,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: p.content,
             children: [
                 (0, i.jsx)(a.P3F, {
                     className: p.closeIcon,
                     onClick: () => t(d.L.USER_DISMISS),
-                    children: (0, i.jsx)(a.Dio, { size: 'xs' })
+                    children: (0, i.jsx)(a.Dio, { size: "xs" }),
                 }),
-                (0, i.jsx)('img', {
+                (0, i.jsx)("img", {
                     src: g,
-                    alt: '',
-                    className: p.asset
+                    alt: "",
+                    className: p.asset,
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     children: [
                         (0, i.jsx)(a.X6q, {
-                            variant: 'heading-md/semibold',
-                            color: 'text-primary',
+                            variant: "heading-md/semibold",
+                            color: "text-primary",
                             className: p.title,
-                            children: m.intl.string(m.t['PRXV4+'])
+                            children: m.intl.string(m.t["PRXV4+"]),
                         }),
                         (0, i.jsx)(a.Text, {
-                            variant: 'text-sm/medium',
-                            color: 'text-secondary',
-                            children: m.intl.string(m.t.RSHtFx)
-                        })
-                    ]
+                            variant: "text-sm/medium",
+                            color: "text-secondary",
+                            children: m.intl.string(m.t.RSHtFx),
+                        }),
+                    ],
                 }),
                 f
                     ? (0, i.jsx)(a.zxk, {
                           text: m.intl.string(m.t.LhcHi4),
                           fullWidth: !0,
                           onClick: () => {
-                              (t(d.L.TAKE_ACTION), n());
-                          }
+                              t(d.L.TAKE_ACTION), n();
+                          },
                       })
                     : (0, i.jsx)(l.Z, {
                           onClick: () => {
@@ -63,9 +63,9 @@ function h(e) {
                           size: s.zx.Sizes.LARGE,
                           color: s.zx.Colors.CUSTOM,
                           textOptions: { textOverride: m.intl.string(m.t.pj0XBA) },
-                          className: p.button
-                      })
-            ]
-        })
+                          className: p.button,
+                      }),
+            ],
+        }),
     });
 }

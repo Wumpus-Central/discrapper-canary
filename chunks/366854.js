@@ -1,4 +1,4 @@
-(r.d(e, { default: () => p }), r(388685));
+r.d(e, { default: () => p }), r(388685);
 var n = r(255367),
     o = r(73800),
     i = r(755721),
@@ -20,25 +20,27 @@ let p = function (t) {
                         n,
                         o = {},
                         i = Object.keys(t);
-                    for (n = 0; n < i.length; n++) ((r = i[n]), e.indexOf(r) >= 0 || (o[r] = t[r]));
+                    for (n = 0; n < i.length; n++) (r = i[n]), e.indexOf(r) >= 0 || (o[r] = t[r]);
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < i.length; n++) ((r = i[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]));
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
+                        !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
             }
             return o;
-        })(t, ['channelId', 'application', 'onClose']);
+        })(t, ["channelId", "application", "onClose"]);
     let [O, y] = o.useState(!1),
         j = async () => {
             try {
-                (y(!0), await a.ZP.removeLinkedLobby(p), u());
+                y(!0), await a.ZP.removeLinkedLobby(p), u();
             } catch (t) {
-                (y(!1),
+                y(!1),
                     l.Z.show({
                         title: s.intl.string(s.t.vFzPFh),
-                        body: s.intl.string(s.t['6D5WVl'])
-                    }));
+                        body: s.intl.string(s.t["6D5WVl"]),
+                    });
             }
         };
     return (0, n.jsx)(
@@ -47,44 +49,44 @@ let p = function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (e) {
                         var n;
-                        ((n = r[e]),
+                        (n = r[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (t[e] = n));
-                    }));
+                                : (t[e] = n);
+                    });
             }
             return t;
         })(
             {
                 header: s.intl.string(s.t.JmUENj),
-                confirmText: s.intl.string(s.t['cY+Ooa']),
-                cancelText: s.intl.string(s.t['ETE/oK']),
+                confirmText: s.intl.string(s.t["cY+Ooa"]),
+                cancelText: s.intl.string(s.t["ETE/oK"]),
                 confirmButtonColor: i.zx.Colors.BRAND,
                 onConfirm: j,
                 loading: O,
-                onClose: u
+                onClose: u,
             },
-            f
+            f,
         )),
         (r = r =
             {
                 children: (0, n.jsx)(c.Text, {
-                    variant: 'text-sm/normal',
-                    children: s.intl.format(s.t['6l2osr'], { applicationName: b.name })
-                })
+                    variant: "text-sm/normal",
+                    children: s.intl.format(s.t["6l2osr"], { applicationName: b.name }),
+                }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -98,6 +100,6 @@ let p = function (t) {
               })(Object(r)).forEach(function (t) {
                   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
               }),
-        e)
+        e),
     );
 };

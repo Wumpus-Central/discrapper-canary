@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     MessageReminderEditMenu: () => h,
-    r: () => p
+    r: () => p,
 }),
-    n(539854));
+    n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(481060),
@@ -17,7 +17,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,7 @@ function p(e) {
     let { createReminder: t } = e,
         a = i.useCallback(() => {
             (0, o.ZDy)(async () => {
-                let { default: e } = await n.e('43866').then(n.bind(n, 423639));
+                let { default: e } = await n.e("43866").then(n.bind(n, 423639));
                 return (n) => (0, r.jsx)(e, _(d({}, n), { createReminder: t }));
             });
         }, [t]);
@@ -76,11 +76,11 @@ function p(e) {
             return (0, r.jsx)(
                 o.sNh,
                 {
-                    id: 'create-reminder-'.concat(i()),
+                    id: "create-reminder-".concat(i()),
                     label: i(),
-                    action: () => t(n())
+                    action: () => t(n()),
                 },
-                'create-reminder-'.concat(i())
+                "create-reminder-".concat(i()),
             );
         });
         return (
@@ -88,12 +88,12 @@ function p(e) {
                 (0, r.jsx)(
                     o.sNh,
                     {
-                        id: 'create-reminder-custom',
+                        id: "create-reminder-custom",
                         label: c.intl.string(c.t.OLA8Zm),
-                        action: a
+                        action: a,
                     },
-                    'custom'
-                )
+                    "custom",
+                ),
             ),
             e
         );
@@ -106,17 +106,17 @@ function h(e) {
                 (0, s.z)({
                     channelId: t.channel_id,
                     messageId: t.id,
-                    dueAt: e
-                })
+                    dueAt: e,
+                }),
         });
     return (0, r.jsx)(o.v2r, {
-        navId: 'message-reminder-create',
+        navId: "message-reminder-create",
         onClose: a.Zy,
-        'aria-label': c.intl.string(c.t.mJ3P0N),
+        "aria-label": c.intl.string(c.t.mJ3P0N),
         onSelect: () => null,
         children: (0, r.jsx)(o.kSQ, {
             label: n,
-            children: i
-        })
+            children: i,
+        }),
     });
 }

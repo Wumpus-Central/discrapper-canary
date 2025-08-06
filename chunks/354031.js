@@ -1,4 +1,4 @@
-(n.d(t, { P: () => u }), n(388685), n(953529));
+n.d(t, { P: () => u }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -12,9 +12,10 @@ function u(e) {
         u = i.useCallback(
             (e) => {
                 let n = new Set(t);
-                (e ? n.add(o.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(o.oNc.SUMMARIES_ENABLED_BY_USER), s.Z.updateGuild({ features: n }));
+                e ? n.add(o.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(o.oNc.SUMMARIES_ENABLED_BY_USER),
+                    s.Z.updateGuild({ features: n });
             },
-            [t]
+            [t],
         );
     return (0, r.jsxs)(l.hjN, {
         children: [
@@ -24,15 +25,17 @@ function u(e) {
                     c.intl.string(c.t.FOYxgo),
                     (0, r.jsx)(l.IGR, {
                         text: c.intl.string(c.t.oW0eUV),
-                        color: l.TVs.unsafe_rawColors.BRAND_500.css
-                    })
-                ]
+                        color: l.TVs.unsafe_rawColors.BRAND_500.css,
+                    }),
+                ],
             }),
             (0, r.jsx)(l.Text, {
-                variant: 'text-sm/medium',
-                color: 'text-secondary',
+                variant: "text-sm/medium",
+                color: "text-secondary",
                 className: d.description,
-                children: c.intl.format(c.t['c6Cy/v'], { helpdeskArticle: a.Z.getArticleURL(o.BhN.CONVERSATION_SUMMARIES) })
+                children: c.intl.format(c.t["c6Cy/v"], {
+                    helpdeskArticle: a.Z.getArticleURL(o.BhN.CONVERSATION_SUMMARIES),
+                }),
             }),
             (0, r.jsx)(l.j7V, {
                 className: d.switch,
@@ -40,8 +43,8 @@ function u(e) {
                 value: t.has(o.oNc.SUMMARIES_ENABLED_BY_USER),
                 hideBorder: !0,
                 disabled: !n,
-                children: c.intl.string(c.t.vmEDQk)
-            })
-        ]
+                children: c.intl.string(c.t.vmEDQk),
+            }),
+        ],
     });
 }

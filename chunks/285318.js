@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -9,24 +9,24 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -55,46 +55,49 @@ function u(e) {
                 n = null;
             switch (e) {
                 case a.Ux.PROFANITY:
-                    ((t = s.intl.string(s.t['I+BDrK'])), (n = (0, r.jsx)(r.Fragment, { children: s.intl.string(s.t.hISCmp) })));
+                    (t = s.intl.string(s.t["I+BDrK"])),
+                        (n = (0, r.jsx)(r.Fragment, { children: s.intl.string(s.t.hISCmp) }));
                     break;
                 case a.Ux.SEXUAL_CONTENT:
-                    ((t = s.intl.string(s.t.URSMen)), (n = (0, r.jsx)(r.Fragment, { children: s.intl.string(s.t.oRQDBg) })));
+                    (t = s.intl.string(s.t.URSMen)),
+                        (n = (0, r.jsx)(r.Fragment, { children: s.intl.string(s.t.oRQDBg) }));
                     break;
                 case a.Ux.SLURS:
-                    ((t = s.intl.string(s.t.xjK2Mz)), (n = (0, r.jsx)(r.Fragment, { children: s.intl.string(s.t.oJYXBA) })));
+                    (t = s.intl.string(s.t.xjK2Mz)),
+                        (n = (0, r.jsx)(r.Fragment, { children: s.intl.string(s.t.oJYXBA) }));
                     break;
                 default:
-                    ((t = 'Error'), (n = 'Unrecognized list'));
+                    (t = "Error"), (n = "Unrecognized list");
             }
             return {
                 headerText: t,
-                subtitleText: n
+                subtitleText: n,
             };
         })(t);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o.keywordListContainer,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: o.keywordListTextContainer,
                 children: [
                     (0, r.jsx)(l.X6q, {
-                        variant: 'heading-sm/semibold',
-                        children: c
+                        variant: "heading-sm/semibold",
+                        children: c,
                     }),
                     (0, r.jsx)(l.Text, {
-                        color: 'interactive-normal',
-                        variant: 'text-xs/medium',
-                        children: d
-                    })
-                ]
+                        color: "interactive-normal",
+                        variant: "text-xs/medium",
+                        children: d,
+                    }),
+                ],
             }),
             (0, r.jsx)(l.XZJ, {
                 className: o.toggle,
                 type: l.XZJ.Types.INVERTED,
                 value: n,
-                onChange: () => i(t)
-            })
-        ]
+                onChange: () => i(t),
+            }),
+        ],
     });
 }
 function m(e) {
@@ -105,29 +108,29 @@ function m(e) {
             () => (e) => {
                 l(d(c({}, n), { triggerMetadata: d(c({}, n.triggerMetadata), { presets: e }) }));
             },
-            [l, n]
+            [l, n],
         ),
         g = (e) => {
             let t = new Set(s);
-            (t.has(e) ? t.delete(e) : t.add(e), o(t), m(Array.from(t)));
+            t.has(e) ? t.delete(e) : t.add(e), o(t), m(Array.from(t));
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(u, {
                 preset: a.Ux.PROFANITY,
                 toggled: s.has(a.Ux.PROFANITY),
-                onToggle: g
+                onToggle: g,
             }),
             (0, r.jsx)(u, {
                 preset: a.Ux.SLURS,
                 toggled: s.has(a.Ux.SLURS),
-                onToggle: g
+                onToggle: g,
             }),
             (0, r.jsx)(u, {
                 preset: a.Ux.SEXUAL_CONTENT,
                 toggled: s.has(a.Ux.SEXUAL_CONTENT),
-                onToggle: g
-            })
-        ]
+                onToggle: g,
+            }),
+        ],
     });
 }

@@ -33,24 +33,24 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -62,27 +62,27 @@ function A(e) {
         M = i.useRef(Date.now()),
         { analyticsLocations: U } = (0, h.ZP)(d.Z.USER_PROFILE_SIDEBAR),
         H = (0, f.ZB)({
-            layout: 'SIDEBAR',
+            layout: "SIDEBAR",
             userId: t.id,
-            channelId: A.id
+            channelId: A.id,
         }),
         G = i.useRef(null),
         F = (0, c.Z)(G),
         B = (0, b.$m)(),
         z = (0, o.q_F)({
             opacity: +(null != B.interactionType),
-            config: { duration: 150 }
+            config: { duration: 150 },
         }),
         V = (e) => {
             (0, y.openUserProfileModal)(
                 w(
                     {
                         sourceAnalyticsLocations: U,
-                        hideRestrictedProfile: !0
+                        hideRestrictedProfile: !0,
                     },
                     H,
-                    e
-                )
+                    e,
+                ),
             );
         };
     return (0, r.jsx)(h.Gt, {
@@ -105,7 +105,7 @@ function A(e) {
                         null != B.interactionType &&
                             (0, r.jsx)(l.animated.div, {
                                 style: z,
-                                className: R.backdrop
+                                className: R.backdrop,
                             }),
                         (0, r.jsxs)(a.u2, {
                             children: [
@@ -114,17 +114,17 @@ function A(e) {
                                         (0, r.jsx)(E.Z, {
                                             user: t,
                                             themeType: T.lY.SIDEBAR,
-                                            shouldShowTooltip: null === B.interactionType
+                                            shouldShowTooltip: null === B.interactionType,
                                         }),
                                         t.bot
                                             ? (0, r.jsx)(v.Z, { user: t })
                                             : (0, r.jsx)(S.Z, {
-                                                  type: 'banner',
-                                                  user: t
-                                              })
-                                    ]
+                                                  type: "banner",
+                                                  user: t,
+                                              }),
+                                    ],
                                 }),
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: R.header,
                                     children: [
                                         (0, r.jsx)(j.Z, {
@@ -132,28 +132,28 @@ function A(e) {
                                             displayProfile: L,
                                             themeType: T.lY.SIDEBAR,
                                             animateOnHover: !F,
-                                            className: R.banner
+                                            className: R.banner,
                                         }),
                                         (0, r.jsx)(_.Z, {
                                             userId: t.id,
-                                            className: R.toast
+                                            className: R.toast,
                                         }),
                                         (0, r.jsx)(x.Z, {
-                                            location: 'UserProfileSidebar',
+                                            location: "UserProfileSidebar",
                                             user: t,
                                             displayProfile: L,
                                             channelId: A.id,
                                             themeType: T.lY.SIDEBAR,
-                                            onOpenProfile: D ? void 0 : V
+                                            onOpenProfile: D ? void 0 : V,
                                         }),
                                         (0, r.jsx)(Z.Z, {
-                                            location: 'UserProfileSidebar',
+                                            location: "UserProfileSidebar",
                                             user: t,
                                             channelId: A.id,
                                             themeType: T.lY.SIDEBAR,
-                                            disableToolbar: t.bot
-                                        })
-                                    ]
+                                            disableToolbar: t.bot,
+                                        }),
+                                    ],
                                 }),
                                 (0, r.jsx)(I.Z, {
                                     user: t,
@@ -161,16 +161,16 @@ function A(e) {
                                     displayProfile: L,
                                     channel: A,
                                     isHovering: null == B.interactionType && F,
-                                    onOpenProfile: D ? void 0 : V
+                                    onOpenProfile: D ? void 0 : V,
                                 }),
                                 (0, r.jsx)(P.Z, {
                                     user: t,
-                                    channelId: A.id
-                                })
-                            ]
+                                    channelId: A.id,
+                                }),
+                            ],
                         }),
                         !D &&
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: R.footer,
                                 children: (0, r.jsx)(s.zx, {
                                     fullWidth: !0,
@@ -178,29 +178,29 @@ function A(e) {
                                     look: s.zx.Looks.BLANK,
                                     color: R.footerButtonColor,
                                     onClick: () => {
-                                        (V(),
+                                        V(),
                                             (0, g.pQ)(
                                                 w(
                                                     {
-                                                        action: 'PRESS_VIEW_PROFILE',
-                                                        analyticsLocations: U
+                                                        action: "PRESS_VIEW_PROFILE",
+                                                        analyticsLocations: U,
                                                     },
-                                                    H
-                                                )
-                                            ));
+                                                    H,
+                                                ),
+                                            );
                                     },
-                                    children: N.intl.string(N.t['+Xp3ho'])
-                                })
+                                    children: N.intl.string(N.t["+Xp3ho"]),
+                                }),
                             }),
                         (null == L ? void 0 : L.profileEffectId) != null &&
                             (0, r.jsx)(p.Z, {
                                 profileEffectId: null == L ? void 0 : L.profileEffectId,
                                 isHovering: F,
-                                urlQueryString: 'dmView'
-                            })
-                    ]
-                })
-            })
-        })
+                                urlQueryString: "dmView",
+                            }),
+                    ],
+                }),
+            }),
+        }),
     });
 }

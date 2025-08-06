@@ -23,24 +23,24 @@ function y(e, t, n) {
         _ = a.ZP.getRunningGames().find((e) => e.id === t),
         x = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
         S = (0, p.oY)(null == v ? void 0 : v.guild_id, null == v ? void 0 : v.id, O),
-        I = (0, i.jsxs)('div', {
+        I = (0, i.jsxs)("div", {
             className: g.nowPlayingNotification,
             children: [
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: g.nowPlayingNotificationIcon,
                     children: (0, i.jsx)(o.Z, {
                         user: O,
-                        'aria-hidden': !0,
-                        size: r.EFr.SIZE_24
-                    })
+                        "aria-hidden": !0,
+                        size: r.EFr.SIZE_24,
+                    }),
                 }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: g.body,
                     children: (0, i.jsx)(r.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'interactive-normal',
+                        variant: "text-sm/medium",
+                        color: "interactive-normal",
                         className: g.bodyText,
-                        children: m.intl.format(m.t['q7/rgo'], {
+                        children: m.intl.format(m.t["q7/rgo"], {
                             username: null != S ? S : O.username,
                             gameName: x,
                             gameIcon: () =>
@@ -49,19 +49,19 @@ function y(e, t, n) {
                                           game: E,
                                           pid: null == _ ? void 0 : _.pid,
                                           size: s.Z.Sizes.XSMALL,
-                                          className: g.gameIcon
+                                          className: g.gameIcon,
                                       })
-                                    : null
-                        })
-                    })
-                })
-            ]
+                                    : null,
+                        }),
+                    }),
+                }),
+            ],
         }),
         { trackView: j, trackClick: C } = (0, f.R)(h.n0.NowPlayingNotification, {
             notif_type: h.n0.NowPlayingNotification,
             notif_user_id: O.id,
             activity_type: n.type,
-            activity_name: null != x ? x : n.name
+            activity_name: null != x ? x : n.name,
         });
     return {
         body: I,
@@ -74,7 +74,7 @@ function y(e, t, n) {
             j();
         },
         onDismissClick: () => {
-            C('dismiss');
-        }
+            C("dismiss");
+        },
     };
 }

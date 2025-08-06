@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var l = n(255367),
     a = n(73800),
     i = n(120356),
@@ -14,7 +14,7 @@ var l = n(255367),
 let g = {
         startPositionMs: 0,
         endPositionMs: 2 * (10 * o.Z.Millis.SECOND),
-        playheadPositionMs: 0
+        playheadPositionMs: 0,
     },
     p = a.memo(function (e) {
         let { className: t, volume: n, disabled: i = !1, onChange: p } = e,
@@ -31,10 +31,10 @@ let g = {
                     j({
                         playheadPositionMs: 0,
                         endPositionMs: y.duration * o.Z.Millis.SECOND,
-                        startPositionMs: 0
+                        startPositionMs: 0,
                     }),
                     () => {
-                        (y.pause(), v(!1));
+                        y.pause(), v(!1);
                     }
                 );
         }, [y]);
@@ -42,42 +42,45 @@ let g = {
                 (e) => {
                     null != y && (y.pause(), null != e && (y.currentTime = e), v(!1));
                 },
-                [y]
+                [y],
             ),
             Z = a.useCallback(() => {
                 if (null != y) {
                     if (b) return void P();
-                    (w >= N ? (y.currentTime = (0, f.my)(C)) : (y.currentTime = (0, f.my)(w)), (y.volume = (0, u.Z)(n)), y.play(), v(!0));
+                    w >= N ? (y.currentTime = (0, f.my)(C)) : (y.currentTime = (0, f.my)(w)),
+                        (y.volume = (0, u.Z)(n)),
+                        y.play(),
+                        v(!0);
                 }
             }, [y, N, P, w, b, C, n]),
             M = a.useCallback(
                 (e) => {
-                    (j(e),
+                    j(e),
                         null == p ||
                             p({
                                 startMs: e.startPositionMs,
-                                endMs: e.endPositionMs
-                            }));
+                                endMs: e.endPositionMs,
+                            });
                 },
-                [p]
+                [p],
             ),
             k = a.useCallback(
                 (e) => {
                     null != y && (y.currentTime = e);
                 },
-                [y]
+                [y],
             );
-        return (0, l.jsxs)('div', {
+        return (0, l.jsxs)("div", {
             className: r()(
                 h.container,
                 {
                     [h.initialized]: S,
-                    [h.disabled]: !S || i
+                    [h.disabled]: !S || i,
                 },
-                t
+                t,
             ),
             children: [
-                (0, l.jsxs)('div', {
+                (0, l.jsxs)("div", {
                     className: h.playButtonContainer,
                     children: [
                         (0, l.jsx)(s.P3F, {
@@ -85,34 +88,34 @@ let g = {
                             onClick: S ? Z : void 0,
                             children: b
                                 ? (0, l.jsx)(s.wNq, {
-                                      size: 'xs',
-                                      color: 'currentColor',
-                                      className: h.playButtonIcon
+                                      size: "xs",
+                                      color: "currentColor",
+                                      className: h.playButtonIcon,
                                   })
                                 : (0, l.jsx)(s.o1U, {
-                                      size: 'xs',
-                                      color: 'currentColor',
-                                      className: h.playButtonIcon
-                                  })
+                                      size: "xs",
+                                      color: "currentColor",
+                                      className: h.playButtonIcon,
+                                  }),
                         }),
-                        (0, l.jsx)('div', {
+                        (0, l.jsx)("div", {
                             className: h.durationContainer,
                             children: (0, l.jsx)(s.Text, {
                                 className: h.__invalid_duration,
-                                variant: 'text-xs/normal',
-                                color: E ? 'text-feedback-warning' : 'text-feedback-positive',
-                                children: ''.concat((0, f.my)(O).toFixed(2), 's')
-                            })
-                        })
-                    ]
+                                variant: "text-xs/normal",
+                                color: E ? "text-feedback-warning" : "text-feedback-positive",
+                                children: "".concat((0, f.my)(O).toFixed(2), "s"),
+                            }),
+                        }),
+                    ],
                 }),
                 (0, l.jsx)(d.Z, {
                     playing: b,
                     onPlaybackChange: k,
                     onPausePlayback: P,
                     onChangePosition: M,
-                    disabled: i
-                })
-            ]
+                    disabled: i,
+                }),
+            ],
         });
     });

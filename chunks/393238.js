@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     PM: () => c,
     ZP: () => s,
-    kE: () => l
+    kE: () => l,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(374470),
     o = n(393903),
@@ -18,14 +18,14 @@ function s() {
             l,
             (e) => {
                 let { width: t, height: n } = e;
-                (s(n), o(t));
+                s(n), o(t);
             },
-            t
+            t,
         ),
         {
             ref: l,
             width: i,
-            height: a
+            height: a,
         }
     );
 }
@@ -36,15 +36,15 @@ function l() {
             if (!(0, i.k)(e.target, HTMLElement))
                 return {
                     scrollWidth: void 0,
-                    scrollHeight: void 0
+                    scrollHeight: void 0,
                 };
             let n = e.target;
-            (s(n.scrollHeight), t(n.scrollWidth));
+            s(n.scrollHeight), t(n.scrollWidth);
         });
     return {
         ref: (0, o.y)(l),
         scrollWidth: e,
-        scrollHeight: n
+        scrollHeight: n,
     };
 }
 function c(e, t) {
@@ -58,15 +58,16 @@ function c(e, t) {
                     let t = e.current;
                     if (null != t) {
                         let e = window.getComputedStyle(t);
-                        (null == c && (c = parseFloat(null != (s = e.width) ? s : '0')), null == u && (u = parseFloat(null != (l = e.height) ? l : '0')));
+                        null == c && (c = parseFloat(null != (s = e.width) ? s : "0")),
+                            null == u && (u = parseFloat(null != (l = e.height) ? l : "0"));
                     }
                 }
                 t({
                     width: c,
-                    height: u
+                    height: u,
                 });
             },
-            [e, t]
+            [e, t],
         );
     (0, o.s)(e, i, n);
 }

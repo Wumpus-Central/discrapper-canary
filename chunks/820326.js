@@ -2,7 +2,7 @@ n.d(t, { Z: () => i });
 var o =
     Number.isNaN ||
     function (e) {
-        return 'number' == typeof e && e != e;
+        return "number" == typeof e && e != e;
     };
 function r(e, t) {
     if (e.length !== t.length) return !1;
@@ -20,7 +20,7 @@ function i(e, t) {
             (n = {
                 lastResult: i,
                 lastArgs: o,
-                lastThis: this
+                lastThis: this,
             }),
             i
         );

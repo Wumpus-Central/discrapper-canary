@@ -1,16 +1,16 @@
-(n.d(t, {
+n.d(t, {
     e: () => i,
-    s: () => l
+    s: () => l,
 }),
     n(388685),
-    n(642613));
+    n(642613);
 var r = n(823379);
 function i(e, t) {
     let n = e.find((e) => e.processId === t);
     return null == n ? null : l(e, n);
 }
-let o = '356869127241072640',
-    a = 'league of legends.exe';
+let o = "356869127241072640",
+    a = "league of legends.exe";
 function s(e, t) {
     let n = t.processPath.length > 1 ? t.processPath[t.processPath.length - 2] : 0,
         r = e.filter((e) => e.applicationId === o && e.processPath.includes(n)),
@@ -31,7 +31,7 @@ function l(e, t) {
                 ? null
                 : {
                       application: e,
-                      rootedPath: e.processPath.slice(t)
+                      rootedPath: e.processPath.slice(t),
                   };
         })
         .filter(r.lm)
@@ -40,7 +40,7 @@ function l(e, t) {
         let n = e.rootedPath.map((e) => i.get(e)).filter((e) => null != e && null != e.windowHandle),
             r = c(
                 t.rootedPath.map((e) => i.get(e)).filter((e) => null != e && null != e.windowHandle),
-                n
+                n,
             );
         return 0 !== r ? r : c(t.rootedPath, e.rootedPath);
     });

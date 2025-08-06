@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(997841), n(388685), n(642613));
+n.d(t, { Z: () => H }), n(997841), n(388685), n(642613);
 var r,
     i = n(348327),
     o = n.n(i),
@@ -26,7 +26,7 @@ function I(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -66,7 +66,7 @@ function k(e) {
     }
 }
 function j() {
-    ((P = !0), (A = S), U());
+    (P = !0), (A = S), U();
 }
 function U() {
     var e;
@@ -83,34 +83,34 @@ function U() {
     let r = O.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));
     let i = O.Z.getHiddenActivities();
-    (D !== i && (D = i),
+    D !== i && (D = i),
         t &&
             (L = s()([...C, ...w.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
-                .uniqBy((e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name))
-                .value()));
+                .uniqBy((e) => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+                .value());
 }
 function G(e) {
-    return ((T = e.invisible), U());
+    return (T = e.invisible), U();
 }
 function B() {
-    return ((T = !1), U());
+    return (T = !1), U();
 }
 function Z() {
-    ((P = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(S, L));
+    (P = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(S, L);
 }
 function F() {
     Z();
 }
 class V extends (r = l.ZP.Store) {
     initialize() {
-        (this.waitFor(g.Z, _.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], U));
+        this.waitFor(g.Z, _.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], U);
     }
     getLocalPresence() {
         return {
             status: S,
             since: N,
             activities: C,
-            afk: R
+            afk: R,
         };
     }
     getStatus() {
@@ -136,7 +136,7 @@ class V extends (r = l.ZP.Store) {
         return this.getActivities(t).find(e);
     }
 }
-I(V, 'displayName', 'SelfPresenceStore');
+I(V, "displayName", "SelfPresenceStore");
 let H = new V(c.Z, {
     START_SESSION: U,
     CONNECTION_OPEN: F,
@@ -158,5 +158,5 @@ let H = new V(c.Z, {
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: U,
     LOGOUT: j,
     FORCE_INVISIBLE: G,
-    WINDOW_FOCUS: B
+    WINDOW_FOCUS: B,
 });

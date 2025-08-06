@@ -4,5 +4,5 @@ var r = n(73800),
     o = n(136954);
 function a() {
     var e = (0, r.useContext)(o.L).dragDropManager;
-    return ((0, i.k)(null != e, 'Expected drag drop context'), e);
+    return (0, i.k)(null != e, "Expected drag drop context"), e;
 }

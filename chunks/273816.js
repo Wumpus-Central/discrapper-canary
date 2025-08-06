@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -17,24 +17,24 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -63,7 +63,16 @@ function b(e) {
     (0, u.nU)();
     let E = (0, a.e7)([p.Z], () => p.Z.getWindow(m.$J)),
         [_, x] = (0, u.m8)(b),
-        { currentFPS: S, averageFrameTime: I, timeSinceLastDrop: j, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: w, bufferFramecountRef: Z, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
+        {
+            currentFPS: S,
+            averageFrameTime: I,
+            timeSinceLastDrop: j,
+            onResetFrameData: C,
+            droppedFramesRef: N,
+            renderedFrameCount: w,
+            bufferFramecountRef: Z,
+            frameCheckerEffect: P,
+        } = (0, u.d6)(!0, _, !0),
         [T, A, k] = (0, u.ZF)(b),
         [D, R] = (0, u.Y5)(T, P, E),
         L = performance.now() - x.current < u.MC,
@@ -74,10 +83,10 @@ function b(e) {
             () => {
                 R();
             }
-        )
+        ),
     );
     let z = r.useCallback(() => {
-            (C(), k(), D());
+            C(), k(), D();
         }, [C, k, D]),
         [U, V] = r.useState(!0),
         [W, F] = r.useState(!0),
@@ -86,211 +95,217 @@ function b(e) {
         [Q, K] = r.useState(!0);
     return t && !n
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               className: l()(g.panelGroup, !o && g.rightAligned),
               children: [
                   (U || !t) &&
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: g.measurement,
                           children: [
                               !t &&
-                                  (0, i.jsx)('div', {
+                                  (0, i.jsx)("div", {
                                       className: g.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
                                           value: U,
-                                          onChange: (e, t) => V(t)
-                                      })
+                                          onChange: (e, t) => V(t),
+                                      }),
                                   }),
                               (0, i.jsxs)(s.Text, {
-                                  variant: 'text-md/normal',
-                                  color: 'text-secondary',
+                                  variant: "text-md/normal",
+                                  color: "text-secondary",
                                   className: g.measurementText,
                                   children: [
-                                      'FPS:',
-                                      ' ',
+                                      "FPS:",
+                                      " ",
                                       (0, i.jsx)(s.Text, {
-                                          tag: 'span',
-                                          variant: 'code',
-                                          color: S < 30 ? 'text-danger' : S < 45 ? 'text-feedback-warning' : 'text-primary',
-                                          children: S.toFixed(2)
-                                      })
-                                  ]
-                              })
-                          ]
+                                          tag: "span",
+                                          variant: "code",
+                                          color:
+                                              S < 30
+                                                  ? "text-danger"
+                                                  : S < 45
+                                                    ? "text-feedback-warning"
+                                                    : "text-primary",
+                                          children: S.toFixed(2),
+                                      }),
+                                  ],
+                              }),
+                          ],
                       }),
                   (W || !t) &&
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: g.measurement,
                           children: [
                               !t &&
-                                  (0, i.jsx)('div', {
+                                  (0, i.jsx)("div", {
                                       className: g.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
                                           value: W,
-                                          onChange: (e, t) => F(t)
-                                      })
+                                          onChange: (e, t) => F(t),
+                                      }),
                                   }),
                               (0, i.jsxs)(s.Text, {
-                                  variant: 'text-md/normal',
-                                  color: 'text-secondary',
+                                  variant: "text-md/normal",
+                                  color: "text-secondary",
                                   className: g.measurementText,
                                   children: [
-                                      'Frame Times:',
-                                      ' ',
+                                      "Frame Times:",
+                                      " ",
                                       (0, i.jsxs)(s.Text, {
-                                          tag: 'span',
-                                          variant: 'code',
-                                          color: I > 1.1 * u.tO ? 'text-feedback-warning' : 'text-primary',
-                                          children: [I.toFixed(2), 'ms']
-                                      })
-                                  ]
-                              })
-                          ]
+                                          tag: "span",
+                                          variant: "code",
+                                          color: I > 1.1 * u.tO ? "text-feedback-warning" : "text-primary",
+                                          children: [I.toFixed(2), "ms"],
+                                      }),
+                                  ],
+                              }),
+                          ],
                       }),
                   (G || !t) &&
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: g.measurement,
                           children: [
                               !t &&
-                                  (0, i.jsx)('div', {
+                                  (0, i.jsx)("div", {
                                       className: g.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
                                           value: G,
-                                          onChange: (e, t) => B(t)
-                                      })
+                                          onChange: (e, t) => B(t),
+                                      }),
                                   }),
                               (0, i.jsxs)(s.Text, {
-                                  variant: 'text-md/normal',
-                                  color: 'text-secondary',
+                                  variant: "text-md/normal",
+                                  color: "text-secondary",
                                   className: g.measurementText,
                                   children: [
-                                      'Dropped Frames:',
-                                      ' ',
+                                      "Dropped Frames:",
+                                      " ",
                                       (0, i.jsx)(s.Text, {
-                                          tag: 'span',
-                                          variant: 'code',
-                                          color: j < 2 ? 'text-danger' : j < 5 ? 'text-feedback-warning' : 'text-primary',
-                                          children: N.current
+                                          tag: "span",
+                                          variant: "code",
+                                          color:
+                                              j < 2 ? "text-danger" : j < 5 ? "text-feedback-warning" : "text-primary",
+                                          children: N.current,
                                       }),
                                       (0, i.jsxs)(s.Text, {
-                                          tag: 'span',
-                                          variant: 'code',
-                                          color: 'text-secondary',
+                                          tag: "span",
+                                          variant: "code",
+                                          color: "text-secondary",
                                           className: g.secondaryInfoText,
-                                          children: ['(', ((N.current / w.current) * 100).toFixed(3), '%)']
-                                      })
-                                  ]
-                              })
-                          ]
+                                          children: ["(", ((N.current / w.current) * 100).toFixed(3), "%)"],
+                                      }),
+                                  ],
+                              }),
+                          ],
                       }),
                   (H || !t) &&
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: g.measurement,
                           children: [
                               !t &&
-                                  (0, i.jsx)('div', {
+                                  (0, i.jsx)("div", {
                                       className: g.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
                                           value: H,
-                                          onChange: (e, t) => Y(t)
-                                      })
+                                          onChange: (e, t) => Y(t),
+                                      }),
                                   }),
                               (0, i.jsxs)(s.Text, {
-                                  variant: 'text-md/normal',
-                                  color: 'text-secondary',
+                                  variant: "text-md/normal",
+                                  color: "text-secondary",
                                   className: g.measurementText,
                                   children: [
-                                      'Rendered Frames:',
-                                      ' ',
+                                      "Rendered Frames:",
+                                      " ",
                                       (0, i.jsx)(s.Text, {
-                                          tag: 'span',
-                                          variant: 'code',
-                                          color: 'text-primary',
-                                          children: w.current.toFixed(0)
-                                      })
-                                  ]
-                              })
-                          ]
+                                          tag: "span",
+                                          variant: "code",
+                                          color: "text-primary",
+                                          children: w.current.toFixed(0),
+                                      }),
+                                  ],
+                              }),
+                          ],
                       }),
                   (Q || !t) &&
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: g.measurement,
                           children: [
                               !t &&
-                                  (0, i.jsx)('div', {
+                                  (0, i.jsx)("div", {
                                       className: g.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
                                           value: Q,
-                                          onChange: (e, t) => K(t)
-                                      })
+                                          onChange: (e, t) => K(t),
+                                      }),
                                   }),
                               (0, i.jsx)(s.ua7, {
-                                  position: 'left',
+                                  position: "left",
                                   text: "The average amount of 'lag' between us rendering a frame and being able to process background tasks. Values constantly above 1-2ms means our main thread is being burried by work and is taking all of its time in animation frames, most likely producing user interaciton blocking jank. (This doesn't work when the app is backgrounded though)",
                                   children: (e) =>
                                       (0, i.jsx)(
-                                          'div',
+                                          "div",
                                           O(y({}, e), {
                                               children: (0, i.jsxs)(s.Text, {
-                                                  variant: 'text-md/normal',
-                                                  color: 'text-secondary',
+                                                  variant: "text-md/normal",
+                                                  color: "text-secondary",
                                                   className: g.measurementText,
                                                   children: [
-                                                      'Idle Frame Delta:',
-                                                      ' ',
+                                                      "Idle Frame Delta:",
+                                                      " ",
                                                       (0, i.jsxs)(s.Text, {
-                                                          tag: 'span',
-                                                          variant: 'code',
-                                                          color: M > 1 ? 'text-danger' : 'text-primary',
-                                                          children: [M.toFixed(2), 'ms']
-                                                      })
-                                                  ]
-                                              })
-                                          })
-                                      )
-                              })
-                          ]
+                                                          tag: "span",
+                                                          variant: "code",
+                                                          color: M > 1 ? "text-danger" : "text-primary",
+                                                          children: [M.toFixed(2), "ms"],
+                                                      }),
+                                                  ],
+                                              }),
+                                          }),
+                                      ),
+                              }),
+                          ],
                       }),
                   L &&
                       (0, i.jsx)(s.ua7, {
-                          position: 'left',
+                          position: "left",
                           text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
                           children: (e) =>
                               (0, i.jsx)(
-                                  'span',
+                                  "span",
                                   O(y({}, e), {
                                       children: (0, i.jsx)(s.Text, {
-                                          tag: 'span',
-                                          variant: 'code',
-                                          color: 'text-danger',
-                                          children: '(Main App Backgrounded)'
-                                      })
-                                  })
-                              )
+                                          tag: "span",
+                                          variant: "code",
+                                          color: "text-danger",
+                                          children: "(Main App Backgrounded)",
+                                      }),
+                                  }),
+                              ),
                       }),
                   v &&
                       (0, i.jsx)(s.Text, {
-                          tag: 'span',
-                          variant: 'code',
-                          color: 'text-feedback-positive',
-                          children: '(Using GPU Priority - Realtime)'
+                          tag: "span",
+                          variant: "code",
+                          color: "text-feedback-positive",
+                          children: "(Using GPU Priority - Realtime)",
                       }),
                   !t &&
-                      (0, i.jsx)('div', {
+                      (0, i.jsx)("div", {
                           className: g.bottomPanelButton,
                           children: (0, i.jsx)(f.Z, {
                               children: (0, i.jsx)(s.zxk, {
-                                  variant: 'primary',
-                                  text: 'Reset Frame Data',
-                                  onClick: z
-                              })
-                          })
-                      })
-              ]
+                                  variant: "primary",
+                                  text: "Reset Frame Data",
+                                  onClick: z,
+                              }),
+                          }),
+                      }),
+              ],
           });
 }

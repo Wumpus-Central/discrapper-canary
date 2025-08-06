@@ -1,4 +1,4 @@
-(n.d(e, { default: () => b }), n(388685));
+n.d(e, { default: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(399606),
@@ -21,41 +21,44 @@ function f(t) {
             s.default.track(d.rMx.VIBING_WUMPUS_VIEWED, { source: f }),
             (0, l.JO)(),
             () => {
-                (s.default.track(d.rMx.VIBING_WUMPUS_CLOSED, {
+                s.default.track(d.rMx.VIBING_WUMPUS_CLOSED, {
                     duration_open_ms: new Date().getTime() - t.getTime(),
-                    source: f
+                    source: f,
                 }),
-                    (0, l.zu)());
+                    (0, l.zu)();
             }
         );
     }, [f]);
     let N = () => {
-        (m ? ((0, l.JO)(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.PLAY })) : ((0, l.hW)(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.PAUSE })), g(!m));
+        m
+            ? ((0, l.JO)(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.PLAY }))
+            : ((0, l.hW)(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.PAUSE })),
+            g(!m);
     };
     async function I() {
-        let { default: t } = await n.e('29641').then(n.t.bind(n, 937359, 19));
+        let { default: t } = await n.e("29641").then(n.t.bind(n, 937359, 19));
         return t;
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: _.ringContainer,
-                children: (0, r.jsx)('img', {
+                children: (0, r.jsx)("img", {
                     src: O,
-                    alt: '',
-                    className: _.__invalid_ringArt
-                })
+                    alt: "",
+                    className: _.__invalid_ringArt,
+                }),
             }),
             (0, r.jsx)(o.Fmz, {
                 importData: I,
                 shouldAnimate: !m && !b,
                 className: _.wumpus,
-                pauseAtFrame: b ? 200 : void 0
+                pauseAtFrame: b ? 200 : void 0,
             }),
             (0, r.jsx)(o.ua7, {
                 text: m ? p.intl.string(p.t.RscU7O) : p.intl.string(p.t.ZcgDJS),
-                position: 'top',
-                'aria-label': m ? p.intl.string(p.t.RscU7O) : p.intl.string(p.t.ZcgDJS),
+                position: "top",
+                "aria-label": m ? p.intl.string(p.t.RscU7O) : p.intl.string(p.t.ZcgDJS),
                 children: (t) => {
                     var e, n;
                     return (0, r.jsx)(
@@ -64,24 +67,24 @@ function f(t) {
                             for (var e = 1; e < arguments.length; e++) {
                                 var n = null != arguments[e] ? arguments[e] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (t) {
                                             return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (e) {
                                         var r;
-                                        ((r = n[e]),
+                                        (r = n[e]),
                                             e in t
                                                 ? Object.defineProperty(t, e, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (t[e] = r));
-                                    }));
+                                                : (t[e] = r);
+                                    });
                             }
                             return t;
                         })({}, t)),
@@ -91,15 +94,15 @@ function f(t) {
                                 className: _.iconButton,
                                 children: m
                                     ? (0, r.jsx)(o.o1U, {
-                                          size: 'xs',
-                                          color: 'currentColor',
-                                          className: _.icon
+                                          size: "xs",
+                                          color: "currentColor",
+                                          className: _.icon,
                                       })
                                     : (0, r.jsx)(o.fpf, {
-                                          size: 'xs',
-                                          color: 'currentColor',
-                                          className: _.icon
-                                      })
+                                          size: "xs",
+                                          color: "currentColor",
+                                          className: _.icon,
+                                      }),
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -113,52 +116,52 @@ function f(t) {
                               })(Object(n)).forEach(function (t) {
                                   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                               }),
-                        e)
+                        e),
                     );
-                }
+                },
             }),
             (0, r.jsx)(o.hzk, {
-                'data-migration-pending': !0,
+                "data-migration-pending": !0,
                 className: _.body,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: _.textContainer,
                     children: [
                         (0, r.jsx)(o.X6q, {
-                            variant: 'heading-xl/semibold',
-                            color: 'header-primary',
-                            children: p.intl.string(p.t.L4ifkZ)
+                            variant: "heading-xl/semibold",
+                            color: "header-primary",
+                            children: p.intl.string(p.t.L4ifkZ),
                         }),
                         (0, r.jsx)(o.Text, {
-                            variant: 'text-md/normal',
-                            color: 'header-secondary',
-                            children: p.intl.string(p.t.R8LCMT)
-                        })
-                    ]
-                })
+                            variant: "text-md/normal",
+                            color: "header-secondary",
+                            children: p.intl.string(p.t.R8LCMT),
+                        }),
+                    ],
+                }),
             }),
             (0, r.jsx)(o.mzw, {
-                'data-migration-pending': !0,
-                children: (0, r.jsx)('div', {
+                "data-migration-pending": !0,
+                children: (0, r.jsx)("div", {
                     className: _.buttonContainer,
                     children: (0, r.jsx)(o.zxk, {
-                        variant: 'primary',
-                        text: p.intl.string(p.t['8eKkaW']),
+                        variant: "primary",
+                        text: p.intl.string(p.t["8eKkaW"]),
                         fullWidth: !0,
                         onClick: () => {
-                            (e(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.BACK_TO_CONVERSATION }));
-                        }
-                    })
-                })
-            })
-        ]
+                            e(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.BACK_TO_CONVERSATION });
+                        },
+                    }),
+                }),
+            }),
+        ],
     });
 }
 let b = (t) => {
     let { onClose: e, transitionState: n } = t;
     return (0, r.jsx)(o.Y0X, {
-        'data-migration-pending': !0,
+        "data-migration-pending": !0,
         transitionState: n,
-        parentComponent: 'VibingWumpusModal',
-        children: (0, r.jsx)(f, { onClose: e })
+        parentComponent: "VibingWumpusModal",
+        children: (0, r.jsx)(f, { onClose: e }),
     });
 };

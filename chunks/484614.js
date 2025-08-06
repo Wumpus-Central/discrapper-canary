@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,22 +28,22 @@ class f extends (r = l.PureComponent) {
         var e, t;
         let { text: n } = this.props,
             { mode: r } = this.state,
-            l = r === a.kO8.Modes.SUCCESS ? u.intl.string(u.t['t5VZ8/']) : n;
+            l = r === a.kO8.Modes.SUCCESS ? u.intl.string(u.t["t5VZ8/"]) : n;
         return (0, i.jsx)(
             a.kO8,
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             d(e, t, n[t]);
-                        }));
+                        });
                 }
                 return e;
             })({}, this.props)),
@@ -52,7 +52,7 @@ class f extends (r = l.PureComponent) {
                     onCopy: this.handleCopy,
                     mode: r,
                     text: l,
-                    supportsCopy: c.wS
+                    supportsCopy: c.wS,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -66,18 +66,18 @@ class f extends (r = l.PureComponent) {
                   })(Object(t)).forEach(function (n) {
                       Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                   }),
-            e)
+            e),
         );
     }
     handleCopy(e) {
         let { onCopy: t, delay: n = 1000 } = this.props;
-        ((0, c.JG)(
+        (0, c.JG)(
             e,
             () => this.setState({ mode: a.kO8.Modes.SUCCESS }),
-            () => this.setState({ mode: a.kO8.Modes.ERROR })
+            () => this.setState({ mode: a.kO8.Modes.ERROR }),
         ),
             this._timeout.start(n, () => this.setState({ mode: a.kO8.Modes.DEFAULT })),
-            null == t || t(e));
+            null == t || t(e);
     }
     getVerticalButtonColor(e) {
         switch (e) {
@@ -90,8 +90,12 @@ class f extends (r = l.PureComponent) {
         }
     }
     constructor(e) {
-        (super(e), d(this, '_timeout', void 0), (this.state = { mode: a.kO8.Modes.DEFAULT }), (this._timeout = new s.V7()), (this.handleCopy = this.handleCopy.bind(this)));
+        super(e),
+            d(this, "_timeout", void 0),
+            (this.state = { mode: a.kO8.Modes.DEFAULT }),
+            (this._timeout = new s.V7()),
+            (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-d(f, 'defaultProps', { delay: 1000 });
+d(f, "defaultProps", { delay: 1000 });
 let p = f;

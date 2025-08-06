@@ -14,7 +14,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,19 +77,27 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e) {
-    let { applicationId: t, skuId: u, onClose: f, onComplete: h, analyticsLocations: m, analyticsLocationObject: g, contextKey: E } = e,
+    let {
+            applicationId: t,
+            skuId: u,
+            onClose: f,
+            onComplete: h,
+            analyticsLocations: m,
+            analyticsLocationObject: g,
+            contextKey: E,
+        } = e,
         b = !1,
         y = (0, i.Z)();
     (0, o.ZDy)(
         async () => {
-            let { default: e } = await n.e('61670').then(n.bind(n, 409600));
+            let { default: e } = await n.e("61670").then(n.bind(n, 409600));
             return (n) => {
                 var { onClose: i } = n,
-                    o = p(n, ['onClose']);
+                    o = p(n, ["onClose"]);
                 return (0, r.jsx)(
                     e,
                     _(d({}, o), {
@@ -98,19 +107,19 @@ function m(e) {
                         analyticsLocations: m,
                         analyticsLocationObject: g,
                         onClose: (e) => {
-                            (i(), null == f || f(e));
+                            i(), null == f || f(e);
                         },
                         onComplete: (e) => {
-                            ((b = !0), null == h || h(e));
-                        }
-                    })
+                            (b = !0), null == h || h(e);
+                        },
+                    }),
                 );
             };
         },
         {
             contextKey: E,
             onCloseCallback: () => {
-                (b ||
+                b ||
                     l.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: y,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
@@ -118,13 +127,13 @@ function m(e) {
                         is_gift: !1,
                         sku_id: u,
                         application_id: t,
-                        location_stack: m
+                        location_stack: m,
                     }),
                     (0, a.fw)(),
                     (0, s.p)(),
-                    null == f || f(b));
+                    null == f || f(b);
             },
-            onCloseRequest: c.dG4
-        }
+            onCloseRequest: c.dG4,
+        },
     );
 }

@@ -16,7 +16,7 @@ function Z(e, t, Z) {
         b = f(h);
     if (null == e || !b || !g || (null == h ? void 0 : h.entity_type) === u.WX.EXTERNAL) return null;
     let j = () => {
-        ((null == Z ? void 0 : Z.isGuildStageVoice()) ? (0, o.NZ)(Z) : null != e && s.Z.endEvent(e, t.id), (0, l.pTH)());
+        (null == Z ? void 0 : Z.isGuildStageVoice()) ? (0, o.NZ)(Z) : null != e && s.Z.endEvent(e, t.id), (0, l.pTH)();
     };
     return (0, i.jsx)(l.sNh, {
         id: d.intl.string(d.t.qaYzPD),
@@ -34,19 +34,19 @@ function Z(e, t, Z) {
                         actions: [
                             {
                                 onClick: n,
-                                variant: 'secondary',
-                                text: d.intl.string(d.t['ETE/oK'])
+                                variant: "secondary",
+                                text: d.intl.string(d.t["ETE/oK"]),
                             },
                             {
                                 onClick: j,
-                                variant: 'critical-primary',
-                                text: d.intl.string(d.t.mjB9pa)
-                            }
-                        ]
+                                variant: "critical-primary",
+                                text: d.intl.string(d.t.mjB9pa),
+                            },
+                        ],
                     });
                 };
             });
         },
-        color: 'danger'
+        color: "danger",
     });
 }

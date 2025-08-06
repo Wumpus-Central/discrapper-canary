@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -13,24 +13,24 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -53,11 +53,21 @@ function f(e, t) {
     );
 }
 let g = function (e) {
-    let { index: t, children: l, user: g, channel: m, onClick: b, isFocused: _, isActive: O, onOtherHover: E, className: y } = e,
+    let {
+            index: t,
+            children: l,
+            user: g,
+            channel: m,
+            onClick: b,
+            isFocused: _,
+            isActive: O,
+            onOtherHover: E,
+            className: y,
+        } = e,
         [v, I] = i.useState(!1),
         [C, S] = i.useState(!1),
         N = () => {
-            (I(!0), !_ || O || C || null == E || E());
+            I(!0), !_ || O || C || null == E || E();
         },
         T = () => {
             I(!1);
@@ -68,14 +78,14 @@ let g = function (e) {
                 (0, u.jW)(
                     e,
                     async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
+                        let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
                         return (n) => (0, r.jsx)(e, f(h({}, n), { user: t }));
                     },
                     {
                         onClose: () => {
                             S(!1);
-                        }
-                    }
+                        },
+                    },
                 ));
         };
     return (0, r.jsx)(s.mh, {
@@ -84,7 +94,7 @@ let g = function (e) {
             (0, r.jsx)(c.tEY, {
                 offset: {
                     left: -8,
-                    right: -8
+                    right: -8,
                 },
                 children: (0, r.jsx)(
                     o.Z.div,
@@ -93,7 +103,7 @@ let g = function (e) {
                             {
                                 className: a()(p.messageRequestItem, y, {
                                     [p.active]: O || C,
-                                    [p.firstItem]: 0 === t
+                                    [p.firstItem]: 0 === t,
                                 }),
                                 onContextMenu: (e) => P(e, g),
                                 onMouseEnter: N,
@@ -101,14 +111,14 @@ let g = function (e) {
                                 onClick: null != b ? b : void 0,
                                 style: {
                                     LIST_ROW_HEIGHT: d.WN,
-                                    opacity: 1
-                                }
+                                    opacity: 1,
+                                },
                             },
-                            e
+                            e,
                         ),
-                        { children: l(v || O || C) }
-                    )
-                )
-            })
+                        { children: l(v || O || C) },
+                    ),
+                ),
+            }),
     });
 };

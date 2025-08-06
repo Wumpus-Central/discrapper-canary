@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Fl: () => p,
     d7: () => h,
-    p: () => _
+    p: () => _,
 }),
     n(415506),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(374470),
@@ -15,17 +15,31 @@ let c = i.createContext({
     registerAsset: () => {},
     unregisterAsset: () => {},
     hasError: !1,
-    isLoading: !0
+    isLoading: !0,
 });
 function u(e) {
-    return (0, o.k)(e, HTMLImageElement) ? e.complete : (0, o.k)(e, HTMLVideoElement) ? e.readyState >= 2 : !!(0, o.k)(e, HTMLDivElement) || !0;
+    return (0, o.k)(e, HTMLImageElement)
+        ? e.complete
+        : (0, o.k)(e, HTMLVideoElement)
+          ? e.readyState >= 2
+          : !!(0, o.k)(e, HTMLDivElement) || !0;
 }
 function d(e) {
-    return (0, o.k)(e, HTMLImageElement) ? 'load' : (0, o.k)(e, HTMLVideoElement) ? 'canplaythrough' : ((0, o.k)(e, HTMLDivElement), 'load');
+    return (0, o.k)(e, HTMLImageElement)
+        ? "load"
+        : (0, o.k)(e, HTMLVideoElement)
+          ? "canplaythrough"
+          : ((0, o.k)(e, HTMLDivElement), "load");
 }
 function f(e) {
     var t, n;
-    return (0, o.k)(e, HTMLImageElement) ? e.getAttribute('src') : (0, o.k)(e, HTMLVideoElement) ? (null != (n = null == (t = e.querySelectorAll('source')[0]) ? void 0 : t.getAttribute('src')) ? n : 'video') : ((0, o.k)(e, HTMLDivElement), e.tagName);
+    return (0, o.k)(e, HTMLImageElement)
+        ? e.getAttribute("src")
+        : (0, o.k)(e, HTMLVideoElement)
+          ? null != (n = null == (t = e.querySelectorAll("source")[0]) ? void 0 : t.getAttribute("src"))
+              ? n
+              : "video"
+          : ((0, o.k)(e, HTMLDivElement), e.tagName);
 }
 function _(e) {
     let { children: t, isPreview: n = !1, source: o, questId: _ } = e,
@@ -46,26 +60,26 @@ function _(e) {
                     (a.default.track(l.rMx.QUEST_ASSET_LOADING_FAILURE, {
                         source: o,
                         quest_id: _,
-                        asset_id: f(t)
+                        asset_id: f(t),
                     }),
                     s.Z.captureException(
                         Error(
-                            ''
-                                .concat(i, ': ')
-                                .concat(null != c ? ''.concat(c, ', ') : '')
-                                .concat(f(t), ', ')
-                                .concat(r)
+                            ""
+                                .concat(i, ": ")
+                                .concat(null != c ? "".concat(c, ", ") : "")
+                                .concat(f(t), ", ")
+                                .concat(r),
                         ),
-                        { tags: { source: o } }
+                        { tags: { source: o } },
                     ),
                     h(!0));
             },
-            [n, o, _]
+            [n, o, _],
         ),
         v = i.useCallback((e) => {
             g((t) => {
                 let n = new Set(t);
-                return (n.delete(e), n);
+                return n.delete(e), n;
             });
         }, []),
         I = i.useCallback(
@@ -73,25 +87,25 @@ function _(e) {
                 if ((b(!0), u(e))) return;
                 g((t) => {
                     let n = new Set(t);
-                    return (n.add(e), n);
+                    return n.add(e), n;
                 });
                 let n = d(e);
                 function r() {
-                    (v(e), e.removeEventListener(n, r));
+                    v(e), e.removeEventListener(n, r);
                 }
                 function i(n) {
-                    (v(e),
+                    v(e),
                         O({
                             assetNode: e,
                             nodeId: t,
-                            errorPrefix: 'Error loading asset',
-                            errorMessage: 'message' in n ? n.message : null
+                            errorPrefix: "Error loading asset",
+                            errorMessage: "message" in n ? n.message : null,
                         }),
-                        e.removeEventListener('error', i));
+                        e.removeEventListener("error", i);
                 }
-                (e.addEventListener(n, r), e.addEventListener('error', i));
+                e.addEventListener(n, r), e.addEventListener("error", i);
             },
-            [O, v]
+            [O, v],
         ),
         T = i.useMemo(() => m.size > 0 || !E, [E, m]);
     i.useEffect(() => {
@@ -102,13 +116,13 @@ function _(e) {
             registerAsset: I,
             unregisterAsset: v,
             hasError: p,
-            isLoading: T && !y.current
+            isLoading: T && !y.current,
         }),
-        [I, v, p, T]
+        [I, v, p, T],
     );
     return (0, r.jsx)(c.Provider, {
         value: S,
-        children: t
+        children: t,
     });
 }
 function p(e) {
@@ -132,6 +146,6 @@ function h() {
     let { hasError: e, isLoading: t } = i.useContext(c);
     return {
         hasError: e,
-        isLoading: t
+        isLoading: t,
     };
 }

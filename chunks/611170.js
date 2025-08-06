@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     aB: () => f,
     rJ: () => _,
-    yF: () => d
+    yF: () => d,
 }),
-    n(953529));
+    n(953529);
 var r = n(255367);
 n(73800);
 var i = n(295435),
@@ -16,7 +16,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,7 +70,7 @@ function d(e) {
         maxWidth: e.maxWidth,
         maxHeight: e.maxHeight,
         useFullWidth: e.useFullWidth,
-        mediaLayoutType: e.mediaLayoutType
+        mediaLayoutType: e.mediaLayoutType,
     });
 }
 function f(e) {
@@ -83,9 +83,9 @@ function f(e) {
             placeholder: t.placeholder,
             placeholderVersion: t.placeholderVersion,
             sourceMetadata: { message: e.message },
-            analyticsSource: 'renderImageComponentForGalleryItem',
-            srcIsAnimated: e.item.srcIsAnimated
-        })
+            analyticsSource: "renderImageComponentForGalleryItem",
+            srcIsAnimated: e.item.srcIsAnimated,
+        }),
     );
 }
 function _(e) {
@@ -93,7 +93,7 @@ function _(e) {
         n = o.Z.toURLSafe(t.proxyUrl);
     return null == n
         ? null
-        : (n.searchParams.append('format', 'webp'),
+        : (n.searchParams.append("format", "webp"),
           (0, a.lV)(
               u(l({}, e), {
                   poster: n.toString(),
@@ -101,7 +101,7 @@ function _(e) {
                   src: t.proxyUrl,
                   placeholder: t.placeholder,
                   placeholderVersion: t.placeholderVersion,
-                  sourceMetadata: { message: e.message }
-              })
+                  sourceMetadata: { message: e.message },
+              }),
           ));
 }

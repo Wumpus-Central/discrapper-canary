@@ -26,24 +26,24 @@ function b(e) {
             userId: t.id,
             applicationId: b,
             isGameRelationship: y,
-            location: A
+            location: A,
         }),
         R = i.useCallback(() => {
-            (N(), S({ action: y ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' }));
+            N(), S({ action: y ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" });
         }, [N, y, S]),
         P = i.useCallback(() => {
-            (C(), S({ action: y ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' }));
+            C(), S({ action: y ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
         }, [C, y, S]),
         w = null != b,
         D = (0, u.q)(b);
     return w && null == D
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: a()(E.container, O),
               children: [
                   w
                       ? (0, r.jsx)(l.Text, {
-                            variant: 'text-sm/normal',
+                            variant: "text-sm/normal",
                             children: g.intl.format(y ? g.t.syHjLC : g.t.V15uUF, {
                                 username: T,
                                 applicationIcon: () =>
@@ -52,18 +52,18 @@ function b(e) {
                                         {
                                             className: E.gameIcon,
                                             game: D,
-                                            size: d.Z.Sizes.XXSMALL
+                                            size: d.Z.Sizes.XXSMALL,
                                         },
-                                        null == D ? void 0 : D.id
+                                        null == D ? void 0 : D.id,
                                     ),
-                                applicationName: null == D ? void 0 : D.name
-                            })
+                                applicationName: null == D ? void 0 : D.name,
+                            }),
                         })
                       : (0, r.jsx)(l.Text, {
-                            variant: 'text-sm/normal',
-                            children: g.intl.format(g.t.uIomX1, { username: T })
+                            variant: "text-sm/normal",
+                            children: g.intl.format(g.t.uIomX1, { username: T }),
                         }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: E.buttonContainer,
                       children: [
                           (0, r.jsx)(s.zx, {
@@ -72,7 +72,7 @@ function b(e) {
                               size: s.zx.Sizes.SMALL,
                               className: E.button,
                               onClick: R,
-                              children: g.intl.string(g.t.ZcibdX)
+                              children: g.intl.string(g.t.ZcibdX),
                           }),
                           (0, r.jsx)(s.zx, {
                               look: s.zx.Looks.FILLED,
@@ -80,10 +80,10 @@ function b(e) {
                               size: s.zx.Sizes.SMALL,
                               className: E.button,
                               onClick: P,
-                              children: g.intl.string(g.t.xuio0N)
-                          })
-                      ]
-                  })
-              ]
+                              children: g.intl.string(g.t.xuio0N),
+                          }),
+                      ],
+                  }),
+              ],
           });
 }

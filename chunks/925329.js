@@ -15,7 +15,7 @@ let f = {
     SMALL: d.small,
     MEDIUM: d.medium,
     LARGE: d.large,
-    XLARGE: d.xlarge
+    XLARGE: d.xlarge,
 };
 function _(e) {
     switch (e) {
@@ -64,29 +64,45 @@ function h(e) {
 }
 let m = (e) => {
     let t,
-        { game: n, guild: i, skuId: c, pid: m, className: g, guildClassName: E, size: b = f.MEDIUM, allowUnknownGameIcon: y = !0 } = e;
-    if ((null != c && (t = p(c)), null != n && null == t && (t = n.getIconURL(_(b))), null == (t = (0, s.Z)(m, t)) && null != i)) {
+        {
+            game: n,
+            guild: i,
+            skuId: c,
+            pid: m,
+            className: g,
+            guildClassName: E,
+            size: b = f.MEDIUM,
+            allowUnknownGameIcon: y = !0,
+        } = e;
+    if (
+        (null != c && (t = p(c)),
+        null != n && null == t && (t = n.getIconURL(_(b))),
+        null == (t = (0, s.Z)(m, t)) && null != i)
+    ) {
         let e = h(b);
         return (0, r.jsx)(l.Z, {
             className: o()(d.gameIcon, E, g),
             guild: i,
-            size: e
+            size: e,
         });
     }
     if (null == t)
         return y
             ? (0, r.jsx)(a.IMN, {
-                  size: 'md',
-                  color: 'currentColor',
-                  className: o()(d.gameIcon, b, g)
+                  size: "md",
+                  color: "currentColor",
+                  className: o()(d.gameIcon, b, g),
               })
             : null;
     let O = null == n ? void 0 : n.name,
-        v = null != O && '' !== O ? u.intl.formatToPlainString(u.t.tiKyYm, { applicationName: O }) : u.intl.string(u.t['2B/phI']);
-    return (0, r.jsx)('img', {
+        v =
+            null != O && "" !== O
+                ? u.intl.formatToPlainString(u.t.tiKyYm, { applicationName: O })
+                : u.intl.string(u.t["2B/phI"]);
+    return (0, r.jsx)("img", {
         alt: v,
         src: t,
-        className: o()(d.gameIcon, b, g)
+        className: o()(d.gameIcon, b, g),
     });
 };
 m.Sizes = f;

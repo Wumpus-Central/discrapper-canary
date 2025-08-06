@@ -13,39 +13,39 @@ var i = n(255367),
 let g = (e) => {
         let { supportHEVCAlpha: t, isMotionReduced: n, containerVisibilityPercentage: r } = e;
         return n
-            ? (0, i.jsx)('div', {
+            ? (0, i.jsx)("div", {
                   className: d.flyingWumpusContainer,
-                  children: (0, i.jsx)('img', {
+                  children: (0, i.jsx)("img", {
                       src: p.Z,
-                      alt: '',
-                      className: d.flyingWumpusAsset
-                  })
+                      alt: "",
+                      className: d.flyingWumpusAsset,
+                  }),
               })
-            : (0, i.jsx)('div', {
+            : (0, i.jsx)("div", {
                   className: d.flyingWumpusContainer,
                   children: (0, i.jsx)(o.ZP, {
                       scaleAnimationData: {
                           startScale: 0.9,
                           endScale: 1,
-                          duration: o.SR
+                          duration: o.SR,
                       },
                       yAxisAnimationData: {
                           range: 20,
                           duration: o.b5,
-                          path: o.js.SINE
+                          path: o.js.SINE,
                       },
                       parallaxAnimationData: {
                           pathDirection: o.eo.UP,
                           range: 200,
                           containerVisibilityPercentage: r,
-                          changeOpacity: !1
+                          changeOpacity: !1,
                       },
                       animateXAxisWiggle: !0,
                       children: t
-                          ? (0, i.jsx)('img', {
+                          ? (0, i.jsx)("img", {
                                 src: u.Z,
-                                alt: '',
-                                className: d.flyingWumpusAsset
+                                alt: "",
+                                className: d.flyingWumpusAsset,
                             })
                           : (0, i.jsx)(
                                 a.Z,
@@ -55,11 +55,11 @@ let g = (e) => {
                                     playsInline: !0,
                                     loop: !0,
                                     className: d.flyingWumpusAsset,
-                                    children: (0, i.jsx)('source', { src: m.Z })
+                                    children: (0, i.jsx)("source", { src: m.Z }),
                                 },
-                                m.Z
-                            )
-                  })
+                                m.Z,
+                            ),
+                  }),
               });
     },
     h = (e) => {
@@ -71,7 +71,7 @@ let g = (e) => {
                 (0, i.jsx)(g, {
                     supportHEVCAlpha: a,
                     isMotionReduced: n,
-                    containerVisibilityPercentage: t
+                    containerVisibilityPercentage: t,
                 }),
                 (0, i.jsx)(c.Z, {
                     isMotionReduced: n,
@@ -80,8 +80,8 @@ let g = (e) => {
                     carTrinketClassName: d.car,
                     hammerTrinketClassName: d.hammer,
                     keyTrinketClassName: d.key,
-                    starTrinketClassName: d.star
-                })
-            ]
+                    starTrinketClassName: d.star,
+                }),
+            ],
         });
     };

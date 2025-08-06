@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -75,11 +75,11 @@ function b() {
                     ? r
                     : {
                           channelId: t,
-                          ringing: []
+                          ringing: [],
                       }),
             l.Z.dispatch({
-                type: 'CALL_CONNECT',
-                channelId: t
+                type: "CALL_CONNECT",
+                channelId: t,
             }),
             !0
         );
@@ -91,10 +91,10 @@ function y() {
 }
 function O(e) {
     let { callStoreInternalState: t } = e;
-    ((g = p({}, t.calls)), (E = p({}, t.enqueuedRings)));
+    (g = p({}, t.calls)), (E = p({}, t.enqueuedRings));
 }
 function v() {
-    ((g = {}), (E = {}));
+    (g = {}), (E = {});
 }
 function I() {
     return b(!0);
@@ -117,25 +117,25 @@ function A(e) {
             region: r,
             ringing: i,
             unavailable: !1,
-            regionUpdated: !1
+            regionUpdated: !1,
         }),
         null != E[t])
     ) {
         let e = E[t];
-        (delete E[t],
-            1 !== e.indexOf('all') && (e = null),
+        delete E[t],
+            1 !== e.indexOf("all") && (e = null),
             s.tn.post({
                 url: f.ANM.CALL_RING(t),
                 body: { recipients: e },
                 oldFormErrors: !0,
-                rejectWithError: !0
-            }));
+                rejectWithError: !0,
+            });
     }
 }
 function N(e) {
     var t;
     let { channelId: n, recipients: r } = e;
-    E[n] = o().union(null != (t = E[n]) ? t : [], null != r ? r : ['all']);
+    E[n] = o().union(null != (t = E[n]) ? t : [], null != r ? r : ["all"]);
 }
 function C(e) {
     let { channelId: t, messageId: n, region: r, ringing: i } = e,
@@ -145,13 +145,13 @@ function C(e) {
         messageId: n,
         region: r,
         ringing: i,
-        regionUpdated: a
+        regionUpdated: a,
     });
 }
 function R(e) {
     let { channelId: t, unavailable: n } = e,
         r = g[t];
-    (!0 === n && null != r
+    !0 === n && null != r
         ? (g[t] = m(p({}, r), { unavailable: n }))
         : (g[t] = {
               channelId: t,
@@ -159,9 +159,9 @@ function R(e) {
               messageId: null,
               region: null,
               regionUpdated: !1,
-              unavailable: n
+              unavailable: n,
           }),
-        null != E[t] && delete E[t]);
+        null != E[t] && delete E[t];
 }
 function P(e) {
     let { channelId: t } = e;
@@ -192,11 +192,11 @@ class w extends (r = a.ZP.Store) {
     getInternalState() {
         return {
             calls: g,
-            enqueuedRings: E
+            enqueuedRings: E,
         };
     }
 }
-_(w, 'displayName', 'CallStore');
+_(w, "displayName", "CallStore");
 let D = new w(l.Z, {
     CONNECTION_OPEN: y,
     CONNECTION_CLOSED: v,
@@ -208,5 +208,5 @@ let D = new w(l.Z, {
     CALL_UPDATE: C,
     CALL_DELETE: R,
     CALL_ENQUEUE_RING: N,
-    VOICE_CHANNEL_SELECT: P
+    VOICE_CHANNEL_SELECT: P,
 });

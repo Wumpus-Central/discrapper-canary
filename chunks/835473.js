@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => d,
-    q: () => f
+    q: () => f,
 });
 var r = n(73800),
     i = n(392711),
@@ -15,7 +15,9 @@ function d(e) {
         n = r.useRef([]);
     return (
         r.useEffect(() => {
-            t && !(0, s.E)(e, n.current) && (c.ZP.fetchApplications(o()(e).filter(l.lm).uniq().value(), !1), (n.current = e));
+            t &&
+                !(0, s.E)(e, n.current) &&
+                (c.ZP.fetchApplications(o()(e).filter(l.lm).uniq().value(), !1), (n.current = e));
         }, [e, t]),
         (0, a.Wu)([u.Z], () => e.map((e) => (null != e ? u.Z.getApplication(e) : void 0)))
     );

@@ -15,10 +15,10 @@ function l(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   t,
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: s.errorCodeMessage,
-                      children: l
-                  })
-              ]
+                      children: l,
+                  }),
+              ],
           });
 }

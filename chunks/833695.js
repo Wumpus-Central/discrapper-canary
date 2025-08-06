@@ -37,37 +37,37 @@ function v(e) {
                         revenue: v.metrics.revenue,
                         revenueTrend: v.metrics.revenuePctChange,
                         summaryMetricLabel: b.intl.string(b.t.R3PCmZ),
-                        summaryMetricValue: null != (n = v.metrics.paymentsCount) ? n : '-',
+                        summaryMetricValue: null != (n = v.metrics.paymentsCount) ? n : "-",
                         summaryMetricTrend: null != (s = v.metrics.paymentsCountChange) ? s : 0,
                         summaryMetricTrendIsPercent: !1,
                         children: (0, r.jsx)(x.Z, {
                             guildId: h,
-                            earningsData: v
-                        })
+                            earningsData: v,
+                        }),
                     }),
                     (0, r.jsx)(l.hjN, {
-                        title: b.intl.string(b.t['+5Rmho']),
+                        title: b.intl.string(b.t["+5Rmho"]),
                         children: (0, r.jsx)(o.Z, {
                             ListingIdLabel: j,
                             payoutsByPeriod: v.payoutsByPeriod,
-                            team: null == (t = v.application) ? void 0 : t.team
-                        })
+                            team: null == (t = v.application) ? void 0 : t.team,
+                        }),
                     }),
                     (0, r.jsx)(l.hjN, {
                         title: b.intl.string(b.t.O8cDAA),
                         disabled: _,
                         children: (0, r.jsx)(m.Z, {
                             guildId: h,
-                            application: v.application
-                        })
+                            application: v.application,
+                        }),
                     }),
                     (0, r.jsx)(l.hjN, {
-                        title: b.intl.string(b.t['0n7R2d']),
+                        title: b.intl.string(b.t["0n7R2d"]),
                         children: (0, r.jsx)(g.Z, {
                             guildId: h,
-                            allPeriods: v.payoutsByPeriod
-                        })
-                    })
-                ]
+                            allPeriods: v.payoutsByPeriod,
+                        }),
+                    }),
+                ],
             });
 }

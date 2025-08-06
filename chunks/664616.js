@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(388685));
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -26,7 +26,7 @@ let _ = {
         1: [n(731544), n(904194), n(96599), n(590881)],
         2: [h, x, v, O],
         3: [j, N, P],
-        4: [m, g, b, y]
+        4: [m, g, b, y],
     },
     C = { state: 2 };
 function Z(e) {
@@ -40,7 +40,15 @@ function Z(e) {
             0 === g && m({ state: 1 });
         }, [m, g]),
         x = (0, s.useCallback)(() => {
-            2 === g ? ((0, i.KH)(f.yN.PET_WUMPUS, b.points), m({ state: 3 })) : 3 === g ? (0.2 > Math.random() ? m({ state: 4 }) : m({ state: 2 })) : 1 === g ? m({ state: 2 }) : 4 === g && m({ state: 0 });
+            2 === g
+                ? ((0, i.KH)(f.yN.PET_WUMPUS, b.points), m({ state: 3 }))
+                : 3 === g
+                  ? 0.2 > Math.random()
+                      ? m({ state: 4 })
+                      : m({ state: 2 })
+                  : 1 === g
+                    ? m({ state: 2 })
+                    : 4 === g && m({ state: 0 });
         }, [b.points, m, g]);
     return (0, r.jsx)(d.Z, {
         className: a()(p.outer, { [p.clickable]: 0 === g }),
@@ -50,7 +58,7 @@ function Z(e) {
             sources: y,
             interval: 500,
             isPaused: n,
-            onLoopEnd: x
-        })
+            onLoopEnd: x,
+        }),
     });
 }

@@ -4,10 +4,10 @@ var a = r(760919),
 let s = 1 / 512,
     o = 16 / 512,
     i = new a.Z({
-        id: 'prophoto',
-        cssId: 'prophoto-rgb',
-        name: 'ProPhoto',
+        id: "prophoto",
+        cssId: "prophoto-rgb",
+        name: "ProPhoto",
         base: n.Z,
         toBase: (e) => e.map((e) => (e < o ? e / 16 : e ** 1.8)),
-        fromBase: (e) => e.map((e) => (e >= s ? e ** (1 / 1.8) : 16 * e))
+        fromBase: (e) => e.map((e) => (e >= s ? e ** (1 / 1.8) : 16 * e)),
     });

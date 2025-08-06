@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => eu }), n(388685));
+n.d(t, { Z: () => eu }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -63,7 +63,7 @@ function eo(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -73,15 +73,15 @@ function es(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 eo(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -93,141 +93,173 @@ class ec extends i.PureComponent {
     renderSparkles() {
         let { useReducedMotion: e } = this.props;
         async function t() {
-            let { default: e } = await n.e('5217').then(n.t.bind(n, 801048, 19));
+            let { default: e } = await n.e("5217").then(n.t.bind(n, 801048, 19));
             return e;
         }
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: el.sparkleContainer,
             children: (0, r.jsx)(u.Fmz, {
                 importData: t,
                 shouldAnimate: !e,
-                className: el.sparkles
-            })
+                className: el.sparkles,
+            }),
         });
     }
     renderActions() {
         return (0, r.jsx)(et.J, es({}, this.props));
     }
     renderGame() {
-        let { isStreaming: e, application: t, runningGame: n, isForceShowSharingPopout: i, setIsForceShowSharingPopout: l } = this.props;
+        let {
+            isStreaming: e,
+            application: t,
+            runningGame: n,
+            isForceShowSharingPopout: i,
+            setIsForceShowSharingPopout: l,
+        } = this.props;
         return (0, r.jsx)(en.k, {
             isStreaming: e,
             application: t,
             game: n,
             onClickNotSharing: () => l(!0),
             isForceShowSharingPopout: i,
-            setIsForceShowSharingPopout: l
+            setIsForceShowSharingPopout: l,
         });
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
             { title: i, sanitizedTitle: l } = (0, T.Z)(t);
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: el.gameWrapper,
             children: [
                 e
                     ? (0, r.jsx)(A.Z, {
                           title: l,
-                          icon: null == t ? void 0 : t.sourceIcon
+                          icon: null == t ? void 0 : t.sourceIcon,
                       })
                     : (0, r.jsx)(S.ZP, {
                           look: S.ZP.Looks.GRAY,
                           size: S.ZP.Sizes.SMALL,
-                          className: el.liveIndicator
+                          className: el.liveIndicator,
                       }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: el.info,
                     children: [
                         (0, r.jsx)(ee.Z, { children: i }),
                         null != n &&
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: el.perksDemoContainer,
                                 children: [
                                     (0, r.jsx)(u.SrA, {
-                                        size: 'xxs',
-                                        color: I.JX.PREMIUM_TIER_2
+                                        size: "xxs",
+                                        color: I.JX.PREMIUM_TIER_2,
                                     }),
                                     (0, r.jsx)(k.Z, {
                                         className: el.perksDemoText,
-                                        variant: 'text-xxs/semibold',
-                                        children: n
-                                    })
-                                ]
-                            })
-                    ]
-                })
-            ]
+                                        variant: "text-xxs/semibold",
+                                        children: n,
+                                    }),
+                                ],
+                            }),
+                    ],
+                }),
+            ],
         });
     }
     renderEmbeddedActivity() {
         let e,
-            { application: t, embeddedActivity: n, channel: i, channelName: l, guildForConnectedChannel: o, isForceShowSharingPopout: s, setIsForceShowSharingPopout: a } = this.props;
+            {
+                application: t,
+                embeddedActivity: n,
+                channel: i,
+                channelName: l,
+                guildForConnectedChannel: o,
+                isForceShowSharingPopout: s,
+                setIsForceShowSharingPopout: a,
+            } = this.props;
         if (null == n || null == t) return null;
         let c = { start: n.connectedSince },
             u = l;
-        null != o && null != i ? ((e = er.Z5c.CHANNEL(o.id, i.id)), (u = ''.concat(u, ' / ').concat(o.name))) : null != i && (e = er.Z5c.CHANNEL(er.ME, i.id));
+        null != o && null != i
+            ? ((e = er.Z5c.CHANNEL(o.id, i.id)), (u = "".concat(u, " / ").concat(o.name)))
+            : null != i && (e = er.Z5c.CHANNEL(er.ME, i.id));
         let d = (0, r.jsx)(D.Z, {
                 href: e,
                 onClick: this.handleChannelLinkClick,
                 children: (0, r.jsx)($.Z, {
                     className: el.channel,
-                    children: u
-                })
+                    children: u,
+                }),
             }),
             h = (0, r.jsx)(D.Z, {
                 href: e,
                 onClick: this.handleApplicationLinkClick,
                 children: (0, r.jsx)(ee.Z, {
                     className: el.underlineOnHover,
-                    children: t.name
-                })
+                    children: t.name,
+                }),
             }),
             p = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(N.Z, {
                         className: el.gameIcon,
                         game: t,
-                        size: N.Z.Sizes.SMALL
+                        size: N.Z.Sizes.SMALL,
                     }),
                     (0, r.jsx)(C.j, {
                         isForceShowSharingPopout: s,
                         setIsForceShowSharingPopout: a,
-                        children: (0, r.jsxs)('div', {
+                        children: (0, r.jsxs)("div", {
                             className: el.info,
-                            children: [h, null != i && (0, U.Qm)(i.type) ? d : (0, r.jsx)(ea, { timestamps: c })]
-                        })
-                    })
-                ]
+                            children: [h, null != i && (0, U.Qm)(i.type) ? d : (0, r.jsx)(ea, { timestamps: c })],
+                        }),
+                    }),
+                ],
             });
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: el.gameWrapper,
-            children: p
+            children: p,
         });
     }
     render() {
-        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: i, streamMetadata: l, application: s, activity: a, className: c } = this.props;
+        let {
+            canGoLive: e,
+            embeddedActivity: t,
+            runningGame: n,
+            isStreaming: i,
+            streamMetadata: l,
+            application: s,
+            activity: a,
+            className: c,
+        } = this.props;
         return i || (((0, et.y)(s, a, t) || e) && (null != n || null != t))
-            ? (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", {
                   className: o()(el.panel, c),
-                  children: (0, r.jsxs)('div', {
+                  children: (0, r.jsxs)("div", {
                       className: el.body,
-                      children: [null == n || (i && (null == l ? void 0 : l.pid) == null) ? (null != t ? this.renderEmbeddedActivity() : this.renderScreenshare()) : this.renderGame(), this.renderActions()]
-                  })
+                      children: [
+                          null == n || (i && (null == l ? void 0 : l.pid) == null)
+                              ? null != t
+                                  ? this.renderEmbeddedActivity()
+                                  : this.renderScreenshare()
+                              : this.renderGame(),
+                          this.renderActions(),
+                      ],
+                  }),
               })
             : null;
     }
     constructor(...e) {
-        (super(...e),
-            eo(this, 'activityPopoutTargetRef', i.createRef()),
-            eo(this, 'handleApplicationLinkClick', () => {
+        super(...e),
+            eo(this, "activityPopoutTargetRef", i.createRef()),
+            eo(this, "handleApplicationLinkClick", () => {
                 let { isActivityPopoutOpen: e } = this.props;
-                (this.handleChannelLinkClick(), e && d.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }));
+                this.handleChannelLinkClick(), e && d.Z.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
             }),
-            eo(this, 'handleChannelLinkClick', () => {
+            eo(this, "handleChannelLinkClick", () => {
                 var e;
                 let { channel: t, embeddedActivity: n, isActivityPopoutOpen: r } = this.props;
-                (a()(null != n, 'Activity cannot be null during navigation click'),
-                    a()(null != t, 'Channel cannot be null during navigation click'),
+                a()(null != n, "Activity cannot be null during navigation click"),
+                    a()(null != t, "Channel cannot be null during navigation click"),
                     p.Z.channelListScrollTo(null != (e = t.guild_id) ? e : er.ME, t.id),
                     !r &&
                         ((0, U.vd)(t.type) &&
@@ -235,11 +267,11 @@ class ec extends i.PureComponent {
                                 t.id,
                                 (0, j.gN)({
                                     applicationId: n.applicationId,
-                                    instanceId: n.compositeInstanceId
-                                })
+                                    instanceId: n.compositeInstanceId,
+                                }),
                             ),
-                        (0, U.Qm)(t.type) && (0, O.tg)(ei.Ez.PANEL)));
-            }));
+                        (0, U.Qm)(t.type) && (0, O.tg)(ei.Ez.PANEL));
+            });
     }
 }
 let eu = (0, g.Z)(function (e) {
@@ -257,15 +289,17 @@ let eu = (0, g.Z)(function (e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['guildId']);
+        })(e, ["guildId"]);
     let a = (0, c.e7)([B.default], () => B.default.getId()),
         u = (0, c.e7)([P.ZP, Q.Z], () => (0, R.Z)(P.ZP, Q.Z)),
         d = (0, c.e7)([q.Z, V.Z], () => V.Z.getChannel(q.Z.getVoiceChannelId())),
@@ -275,8 +309,22 @@ let eu = (0, g.Z)(function (e) {
         [g, O] = (0, c.Wu)([G.Z], () => [G.Z.getCurrentUserActiveStream(), G.Z.getStreamerActiveStreamMetadata()]),
         C = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         j = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        S = (0, c.e7)([H.Z, W.Z, F.ZP], () => (null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(F.ZP.getChannels(o), H.Z, W.Z).length > 0)),
-        [I] = (0, v.Z)([null != (l = null != O && null != O.id ? O.id : null != u && null != u.id ? u.id : null != j ? j.applicationId : void 0) ? l : '']),
+        S = (0, c.e7)([H.Z, W.Z, F.ZP], () =>
+            null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(F.ZP.getChannels(o), H.Z, W.Z).length > 0,
+        ),
+        [I] = (0, v.Z)([
+            null !=
+            (l =
+                null != O && null != O.id
+                    ? O.id
+                    : null != u && null != u.id
+                      ? u.id
+                      : null != j
+                        ? j.applicationId
+                        : void 0)
+                ? l
+                : "",
+        ]),
         N = (0, c.e7)([x.Z], () => x.Z.getFakeGameData()),
         T = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         A = (0, y.Z)() && null != T && (0, b.R)(),
@@ -310,7 +358,7 @@ let eu = (0, g.Z)(function (e) {
                 streamQualityIndicator: ee,
                 isForceShowSharingPopout: et,
                 setIsForceShowSharingPopout: en,
-                isActivityPopoutOpen: ei
+                isActivityPopoutOpen: ei,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -324,6 +372,6 @@ let eu = (0, g.Z)(function (e) {
               })(Object(n)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
-        t)
+        t),
     );
 });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -17,7 +17,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,10 +25,12 @@ function f(e, t, n) {
 }
 class g extends i.PureComponent {
     getInviteText() {
-        return (0, o.jW)({ location: 'invite_notice' }).entrypoints ? p.intl.string(p.t.Sd8Ix8) : p.intl.string(p.t.BN75l5);
+        return (0, o.jW)({ location: "invite_notice" }).entrypoints
+            ? p.intl.string(p.t.Sd8Ix8)
+            : p.intl.string(p.t.BN75l5);
     }
     render() {
-        let e = ''.concat(p.intl.string(p.t.VWqWZW), '\n').concat(p.intl.string(p.t['0Lgb/P'])),
+        let e = "".concat(p.intl.string(p.t.VWqWZW), "\n").concat(p.intl.string(p.t["0Lgb/P"])),
             t = this.getInviteText();
         return (0, r.jsx)(c.Z, {
             guild: this.props.guild,
@@ -39,15 +41,15 @@ class g extends i.PureComponent {
             trackingSource: u.PsQ.INVITE_NOTICE,
             type: u.vID.INVITE,
             image: h,
-            imageMarginX: 46
+            imageMarginX: 46,
         });
     }
     constructor(...e) {
-        (super(...e),
-            f(this, 'handleInvite', () => {
+        super(...e),
+            f(this, "handleInvite", () => {
                 let { guild: e } = this.props;
                 (0, l.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                    let { default: t } = await Promise.all([n.e("7654"), n.e("17439")]).then(n.bind(n, 560114));
                     return (n) => {
                         var i, l;
                         return (0, r.jsx)(
@@ -56,22 +58,22 @@ class g extends i.PureComponent {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             f(e, t, n[t]);
-                                        }));
+                                        });
                                 }
                                 return e;
                             })({}, n)),
                             (l = l =
                                 {
                                     guild: e,
-                                    source: u.t4x.INVITE_NOTICE
+                                    source: u.t4x.INVITE_NOTICE,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -85,16 +87,16 @@ class g extends i.PureComponent {
                                   })(Object(l)).forEach(function (e) {
                                       Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
-                            i)
+                            i),
                         );
                     };
                 });
             }),
-            f(this, 'handleClose', () => {
+            f(this, "handleClose", () => {
                 let e = s.Z.getChannelId(),
                     t = p.intl.formatToPlainString(p.t.DEn7np, { invitePeople: this.getInviteText() });
-                (this.props.markAsDismissed(d.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, t));
-            }));
+                this.props.markAsDismissed(d.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, t);
+            });
     }
 }
 let m = g;

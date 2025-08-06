@@ -22,21 +22,21 @@ function f(e) {
             (e, n) => {
                 (0, c.f4)(t, j, e, n);
             },
-            [j, t]
+            [j, t],
         ),
         _ = i.useCallback(
             (e) => {
-                (e.preventDefault(),
+                e.preventDefault(),
                     e.stopPropagation(),
                     (0, c.E6)({
                         guild: t,
                         analyticsLocations: j,
                         analyticsSection: d.jXE.GUILD_BANNER,
                         analyticsObject: d.qAy.UPLOAD_IMAGE,
-                        perks: (0, u.XO)()
-                    }));
+                        perks: (0, u.XO)(),
+                    });
             },
-            [j, t]
+            [j, t],
         ),
         O = (0, r.jsx)(s.Z, {
             image: t.banner,
@@ -45,9 +45,9 @@ function f(e) {
                     ? o.ZP.getGuildBannerURL(
                           {
                               id: t.id,
-                              banner: e
+                              banner: e,
                           },
-                          x
+                          x,
                       )
                     : null,
             disabled: !b,
@@ -63,19 +63,19 @@ function f(e) {
                     },
                     analyticsLocation: {
                         page: d.ZY5.GUILD_SETTINGS,
-                        section: d.jXE.GUILD_BANNER
+                        section: d.jXE.GUILD_BANNER,
                     },
-                    analyticsLocations: j
+                    analyticsLocations: j,
                 }),
-            enabled: b
+            enabled: b,
         });
     return f
         ? O
         : (0, r.jsx)(l.P3F, {
-              'aria-hidden': !0,
+              "aria-hidden": !0,
               tabIndex: -1,
               className: h.upsell,
               onClick: _,
-              children: O
+              children: O,
           });
 }

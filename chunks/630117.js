@@ -8,10 +8,10 @@ function a(e) {
         a = (0, i.aW)(t);
     return null == a
         ? null
-        : (0, r.jsx)('img', {
+        : (0, r.jsx)("img", {
               src: a.iconSource,
               width: n,
               alt: o.intl.string(o.t.N4YDam),
-              draggable: !1
+              draggable: !1,
           });
 }

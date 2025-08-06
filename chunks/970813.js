@@ -8,14 +8,14 @@ var r = n(722932),
 function o(e) {
     let { refreshStyles: t = !1 } = e,
         { volume: n, onVolumeChange: o } = (0, s.Z)();
-    return (0, r.X0)({ location: 'UserSettingsSoundmojiVolume' })
+    return (0, r.X0)({ location: "UserSettingsSoundmojiVolume" })
         ? (0, i.jsx)(a.Z, {
               title: l.intl.string(l.t.w9Hq8P),
               description: l.intl.string(l.t.INenzc),
-              label: l.intl.string(l.t['2JbvKy']),
+              label: l.intl.string(l.t["2JbvKy"]),
               volume: n,
               onVolumeChange: o,
-              refreshStyles: t
+              refreshStyles: t,
           })
         : null;
 }

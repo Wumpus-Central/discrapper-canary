@@ -10,11 +10,13 @@ function a(e) {
         u = (0, s.e7)([o.Z], () => o.Z.getWindow(a)),
         d = (0, r.useCallback)(
             (e) => {
-                (n(null != l.current ? (e - l.current) / 1000 : 0), (l.current = e), i.current || (c.current = null == u ? void 0 : u.requestAnimationFrame(d)));
+                n(null != l.current ? (e - l.current) / 1000 : 0),
+                    (l.current = e),
+                    i.current || (c.current = null == u ? void 0 : u.requestAnimationFrame(d));
             },
-            [u, n]
+            [u, n],
         );
-    ((0, r.useEffect)(() => {
+    (0, r.useEffect)(() => {
         i.current = t;
     }, [t]),
         (0, r.useEffect)(
@@ -24,12 +26,12 @@ function a(e) {
                     null != c.current && (null == u || u.cancelAnimationFrame(c.current));
                 }
             ),
-            [u, t, d]
+            [u, t, d],
         ),
         (0, r.useEffect)(
             () => () => {
                 null != c.current && (null == u || u.cancelAnimationFrame(c.current));
             },
-            [u]
-        ));
+            [u],
+        );
 }

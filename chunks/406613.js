@@ -2,17 +2,17 @@ n.d(t, { F: () => a });
 var i = n(818083),
     r = n(984134);
 let s = (0, i.B)({
-    kind: 'user',
-    id: '2025-01_voice_and_video_settings_refresh',
-    label: 'Voice and Video Settings Refresh',
+    kind: "user",
+    id: "2025-01_voice_and_video_settings_refresh",
+    label: "Voice and Video Settings Refresh",
     defaultConfig: { showRefreshedSettings: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Show refreshed settings',
-            config: { showRefreshedSettings: !0 }
-        }
-    ]
+            label: "Show refreshed settings",
+            config: { showRefreshedSettings: !0 },
+        },
+    ],
 });
 function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -21,7 +21,7 @@ function a(e) {
         { location: t },
         {
             disable: i,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     );
 }

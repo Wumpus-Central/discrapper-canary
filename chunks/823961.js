@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => w }), n(388685));
+n.d(t, { Z: () => w }), n(388685);
 var i,
     o = n(442837),
     a = n(570140),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,10 +30,10 @@ let u = new Map(),
         d.add(e.skuId);
     },
     b = (e) => {
-        (u.set(e.skuId, e.price), d.delete(e.skuId));
+        u.set(e.skuId, e.price), d.delete(e.skuId);
     },
     y = (e) => {
-        (d.delete(e.skuId), _.add(e.skuId));
+        d.delete(e.skuId), _.add(e.skuId);
     },
     O = (e) => {
         _.delete(e.skuId);
@@ -44,10 +44,10 @@ let u = new Map(),
         l.Rm.has(t.sku_id) && p.set(e.skuId, s.Z.createFromServer(t));
     },
     I = (e) => {
-        (f.delete(e.skuId), p.set(e.skuId, e.entitlement), null != e.numPotions && h.set(e.skuId, e.numPotions));
+        f.delete(e.skuId), p.set(e.skuId, e.entitlement), null != e.numPotions && h.set(e.skuId, e.numPotions);
     },
     T = (e) => {
-        (_.add(e.skuId), f.delete(e.skuId));
+        _.add(e.skuId), f.delete(e.skuId);
     },
     S = (e) => {
         f.add(e.skuId);
@@ -63,7 +63,7 @@ let u = new Map(),
         r = {
             emoji: t,
             boundingRect: n,
-            triggerTime: Date.now()
+            triggerTime: Date.now(),
         };
     },
     R = (e) => {
@@ -101,7 +101,7 @@ class P extends (i = o.ZP.Store) {
         return m;
     }
 }
-c(P, 'displayName', 'ConsumablesStore');
+c(P, "displayName", "ConsumablesStore");
 let w = new P(a.Z, {
     CONSUMABLES_PRICE_FETCH_STARTED: E,
     CONSUMABLES_PRICE_FETCH_SUCCEEDED: b,
@@ -114,5 +114,5 @@ let w = new P(a.Z, {
     SET_PREVIOUS_GO_LIVE_SETTINGS: A,
     CLEAR_CONSUMED_ENTITLEMENT: N,
     POTIONS_TRIGGER_MESSAGE_CONFETTI: C,
-    POTIONS_SET_CONFETTI_MODE: R
+    POTIONS_SET_CONFETTI_MODE: R,
 });

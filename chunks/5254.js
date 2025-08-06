@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var i,
     r = n(392711),
     l = n.n(r),
@@ -15,7 +15,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,7 +33,7 @@ function h(e) {
         name: null == (t = l().first(e.reasons)) ? void 0 : t.name,
         user: new o.Z(e.suggested_user),
         mutualFriendsCount: e.mutual_friends_count,
-        contactNames: n
+        contactNames: n,
     };
 }
 class m extends (i = s.ZP.Store) {
@@ -53,29 +53,30 @@ class m extends (i = s.ZP.Store) {
         return f[e];
     }
 }
-p(m, 'displayName', 'FriendSuggestionStore');
+p(m, "displayName", "FriendSuggestionStore");
 let y = new m(a.Z, {
     CONNECTION_OPEN: function (e) {
-        ((f = {}), (g = e.friendSuggestionCount) > 0 ? ((O = !0), !N && O && ((N = !0), (O = !1), u.Z.fetch())) : (0, d.Z)());
+        (f = {}),
+            (g = e.friendSuggestionCount) > 0 ? ((O = !0), !N && O && ((N = !0), (O = !1), u.Z.fetch())) : (0, d.Z)();
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
         var t, n;
         let i = h(e.suggestion);
         if (null != f[i.key]) return !1;
-        (g++,
+        g++,
             (t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         i.forEach(function (t) {
                             p(e, t, n[t]);
-                        }));
+                        });
                 }
                 return e;
             })({}, f)),
@@ -92,23 +93,23 @@ let y = new m(a.Z, {
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            (f = t));
+            (f = t);
     },
     FRIEND_SUGGESTION_DELETE: function (e) {
-        ((g = Math.max(0, --g)), delete f[e.suggestedUserId]);
+        (g = Math.max(0, --g)), delete f[e.suggestedUserId];
     },
     LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
         var t;
-        ((N = !1),
+        (N = !1),
             (t = e.suggestions),
             (f = l()
                 .chain(t)
                 .map((e) => h(e))
                 .keyBy((e) => e.key)
                 .value()),
-            (g = l().keys(f).length));
+            (g = l().keys(f).length);
     },
     LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-        ((N = !1), (f = {}));
-    }
+        (N = !1), (f = {});
+    },
 });

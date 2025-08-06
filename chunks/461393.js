@@ -9,17 +9,17 @@ function i(e, t, n, i) {
     }
     return {
         width: (l = Math.max(n, l)),
-        height: (a = Math.max(n, a))
+        height: (a = Math.max(n, a)),
     };
 }
 function r(e, t) {
     let { maxWidth: n, maxHeight: i } = t;
     return {
         width: Math.max(0, Math.min(e.width, n)),
-        height: Math.max(0, Math.min(e.height, i))
+        height: Math.max(0, Math.min(e.height, i)),
     };
 }
 n.d(t, {
     S: () => i,
-    h: () => r
+    h: () => r,
 });

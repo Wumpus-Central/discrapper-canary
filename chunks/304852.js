@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => o,
-    Z: () => a
+    Z: () => a,
 });
 var r = n(73800),
     i = n(149203);
@@ -10,7 +10,7 @@ function o(e) {
     return {
         visibleTopEmojis: o,
         visibleNewlyAddedEmojis: n,
-        allEmojis: o.concat(n)
+        allEmojis: o.concat(n),
     };
 }
 function a(e) {

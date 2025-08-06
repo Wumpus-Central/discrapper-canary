@@ -1,4 +1,4 @@
-(n.d(t, { H: () => f }), n(415506));
+n.d(t, { H: () => f }), n(415506);
 var r = n(442837),
     i = n(592125),
     o = n(430824),
@@ -12,7 +12,7 @@ function u(e, t, n, r, i, o) {
         : null != e && null != n
           ? {
                 type: c.aib.GUILD,
-                guildId: e
+                guildId: e,
             }
           : null == t || null == r
             ? null
@@ -20,13 +20,13 @@ function u(e, t, n, r, i, o) {
               ? { type: c.aib.DMS }
               : {
                     type: c.aib.CHANNEL,
-                    channelId: t
+                    channelId: t,
                 };
 }
 let d = (0, s.oH)(u);
 function f(e) {
     let { guildId: t, channelId: n } = e,
-        s = (0, l.U)({ location: 'useDesktopSearchContext' });
+        s = (0, l.U)({ location: "useDesktopSearchContext" });
     return (0, r.e7)([o.Z, i.Z, a.Z], () => {
         let e = o.Z.getGuild(t),
             r = i.Z.getChannel(n);

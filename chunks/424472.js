@@ -11,24 +11,24 @@ var r = n(255367),
 function p(e) {
     let { application: t, className: n } = e,
         p = a.useCallback((e) => {
-            ((0, l.zZ)(c.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
+            (0, l.zZ)(c.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                 category: e.name,
                 category_id: e.id,
-                current_page: s.m_.APPLICATION
+                current_page: s.m_.APPLICATION,
             }),
-                (0, o.pR)({ categoryId: e.id }));
+                (0, o.pR)({ categoryId: e.id });
         }, []);
     return null == t.categories || 0 === t.categories.length
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: n,
               children: [
                   (0, r.jsx)(i.X6q, {
-                      variant: 'heading-sm/semibold',
-                      color: 'header-primary',
-                      children: d.intl.string(d.t.s7ialZ)
+                      variant: "heading-sm/semibold",
+                      color: "header-primary",
+                      children: d.intl.string(d.t.s7ialZ),
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: u.categories,
                       children: t.categories.map((e) =>
                           (0, r.jsx)(
@@ -37,15 +37,15 @@ function p(e) {
                                   className: u.category,
                                   onClick: () => p(e),
                                   children: (0, r.jsx)(i.Text, {
-                                      variant: 'text-sm/semibold',
-                                      color: 'redesign-button-tertiary-text',
-                                      children: e.name
-                                  })
+                                      variant: "text-sm/semibold",
+                                      color: "redesign-button-tertiary-text",
+                                      children: e.name,
+                                  }),
                               },
-                              e.id
-                          )
-                      )
-                  })
-              ]
+                              e.id,
+                          ),
+                      ),
+                  }),
+              ],
           });
 }

@@ -4,7 +4,7 @@ var r = n(430824),
     o = n(981631);
 function a(e, t) {
     if (null == t) return !1;
-    let n = (0, i.p)(t, 'should_show_report_to_mod_survey'),
+    let n = (0, i.p)(t, "should_show_report_to_mod_survey"),
         a = r.Z.getGuild(t);
     return n && null != a && a.ownerId === e.id && a.features.has(o.oNc.REPORT_TO_MOD_SURVEY);
 }

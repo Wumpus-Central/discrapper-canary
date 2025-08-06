@@ -16,15 +16,15 @@ function h(e) {
     let { application: a, className: l, innerClassName: o } = e,
         c = null != (n = null == (t = a.directory_entry) ? void 0 : t.external_urls) ? n : [];
     return null != a.terms_of_service_url || null != a.privacy_policy_url || c.length > 0
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: i()(m.container, l),
               children: [
                   (0, r.jsx)(s.X6q, {
-                      variant: 'heading-sm/semibold',
-                      color: 'header-primary',
-                      children: p.intl.string(p.t.l6DP2t)
+                      variant: "heading-sm/semibold",
+                      color: "header-primary",
+                      children: p.intl.string(p.t.l6DP2t),
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: i()(m.list, o),
                       children: [
                           c.map((e, t) =>
@@ -32,28 +32,28 @@ function h(e) {
                                   g,
                                   {
                                       url: e.url,
-                                      children: e.name
+                                      children: e.name,
                                   },
-                                  t
-                              )
+                                  t,
+                              ),
                           ),
                           null != a.terms_of_service_url
                               ? (0, r.jsx)(f, {
                                     icon: s.aAW,
                                     url: a.terms_of_service_url,
-                                    children: p.intl.string(p.t.s7STcX)
+                                    children: p.intl.string(p.t.s7STcX),
                                 })
                               : null,
                           null != a.privacy_policy_url
                               ? (0, r.jsx)(f, {
                                     icon: s.mBM,
                                     url: a.privacy_policy_url,
-                                    children: p.intl.string(p.t.kH3JR0)
+                                    children: p.intl.string(p.t.kH3JR0),
                                 })
-                              : null
-                      ]
-                  })
-              ]
+                              : null,
+                      ],
+                  }),
+              ],
           })
         : null;
 }
@@ -62,12 +62,18 @@ function g(e) {
     let { url: a, children: i } = e,
         o = (0, c.ZP)(),
         u = d.Z.getByUrl(a),
-        p = (0, l.wj)(o) ? (null == u || null == (t = u.icon) ? void 0 : t.darkSVG) : null == u || null == (n = u.icon) ? void 0 : n.lightSVG;
+        p = (0, l.wj)(o)
+            ? null == u || null == (t = u.icon)
+                ? void 0
+                : t.darkSVG
+            : null == u || null == (n = u.icon)
+              ? void 0
+              : n.lightSVG;
     return (0, r.jsx)(f, {
         icon: void 0 === p ? s.xPt : void 0,
         imageSrc: p,
         url: a,
-        children: i
+        children: i,
     });
 }
 function f(e) {
@@ -77,33 +83,33 @@ function f(e) {
     null != t
         ? (p = (0, r.jsx)(t, {
               className: m.listIcon,
-              color: null != a ? a : 'currentColor',
+              color: null != a ? a : "currentColor",
               width: 20,
               height: 20,
-              size: 'custom'
+              size: "custom",
           }))
         : null != n &&
-          (p = (0, r.jsx)('img', {
+          (p = (0, r.jsx)("img", {
               className: m.listImage,
               src: n,
-              alt: ''
+              alt: "",
           }));
     let h = (0, r.jsxs)(r.Fragment, {
         children: [
             p,
             (0, r.jsx)(s.Text, {
                 className: m.listText,
-                variant: 'text-sm/medium',
+                variant: "text-sm/medium",
                 selectable: !0,
-                children: c
-            })
-        ]
+                children: c,
+            }),
+        ],
     });
     return (0, r.jsx)(o.Z, {
         href: l,
         className: i()(m.listItem, m.linkItem),
         trusted: !d,
         useDefaultUnderlineStyles: !1,
-        children: h
+        children: h,
     });
 }

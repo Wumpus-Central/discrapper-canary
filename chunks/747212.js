@@ -16,7 +16,7 @@ let o = (e) => {
             options: c,
             value: t,
             onChange: n,
-            optionClassName: a.dropdownOption
-        })
+            optionClassName: a.dropdownOption,
+        }),
     });
 };

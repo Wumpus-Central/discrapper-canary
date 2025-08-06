@@ -17,12 +17,12 @@ function l(e, t) {
         if (null != e)
             return {
                 viewableTabs: c,
-                filteredTab: e
+                filteredTab: e,
             };
     }
     let d = c.find((e) => null != e && e.setting === o);
     return {
         viewableTabs: c,
-        filteredTab: d
+        filteredTab: d,
     };
 }

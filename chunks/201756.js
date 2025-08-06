@@ -26,24 +26,24 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -75,22 +75,23 @@ function S(e, t) {
                 r,
                 l = {},
                 o = Object.keys(e);
-            for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+            for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
             return l;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
     }
     return l;
 }
 let Z = l.forwardRef(function (e, t) {
     var { label: n, onFilter: l, isFiltered: o, isSorted: a, className: s } = e,
-        c = S(e, ['label', 'onFilter', 'isFiltered', 'isSorted', 'className']);
-    let d = o ? 'header-primary' : 'header-secondary';
+        c = S(e, ["label", "onFilter", "isFiltered", "isSorted", "className"]);
+    let d = o ? "header-primary" : "header-secondary";
     return (
-        a && (d = 'text-brand'),
-        (0, r.jsx)('th', {
+        a && (d = "text-brand"),
+        (0, r.jsx)("th", {
             className: i()(H.tableHeaderCellContainer, s),
             children: (0, r.jsxs)(
                 u.P3F,
@@ -100,24 +101,24 @@ let Z = l.forwardRef(function (e, t) {
                     className: i()(H.tableHeaderCell, { [H.tableHeaderCellWithFilter]: null != l }),
                     children: [
                         (0, r.jsx)(u.Text, {
-                            variant: 'eyebrow',
+                            variant: "eyebrow",
                             color: d,
-                            children: n
+                            children: n,
                         }),
                         null != l &&
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: H.filterIconButton,
                                 children: (0, r.jsx)(u.gXV, {
-                                    size: 'custom',
+                                    size: "custom",
                                     className: H.filterIcon,
                                     color: o ? u.TVs.colors.CONTROL_BRAND_FOREGROUND.css : u.TVs.colors.TEXT_MUTED.css,
                                     width: 16,
-                                    height: 16
-                                })
-                            })
-                    ]
-                })
-            )
+                                    height: 16,
+                                }),
+                            }),
+                    ],
+                }),
+            ),
         })
     );
 });
@@ -131,13 +132,17 @@ function D(e) {
         I = (0, c.e7)([p.Z], () => p.Z.getSearchStateByGuildId(t), [t], s()),
         P = (0, c.e7)([C.Z, d.Z], () => C.Z.can(y.Plq.MANAGE_GUILD, d.Z.getGuild(t)), [t]),
         { selectedUserIds: M, addUsers: V, clearSelection: E } = (0, f.Z)(t),
-        T = I.requireUnusualDmActivity || I.requireCommunicationDisabled || I.requireUnusualAccountActivity || I.requireUsernameQuarantined,
+        T =
+            I.requireUnusualDmActivity ||
+            I.requireCommunicationDisabled ||
+            I.requireUnusualAccountActivity ||
+            I.requireUsernameQuarantined,
         k = I.selectedRoleIds.size > 0,
         A = null != I.selectedJoinDateOption.afterDate,
         B = I.selectedSort === m.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
         U = null != I.selectedAccountAgeOption.afterDate,
         F = I.selectedSort === m.d$.ORDER_BY_USER_ID_ASC || I.selectedSort === m.d$.ORDER_BY_USER_ID_DESC,
-        q = null != I.selectedSourceInviteCode && '' !== I.selectedSourceInviteCode,
+        q = null != I.selectedSourceInviteCode && "" !== I.selectedSourceInviteCode,
         z = null != I.selectedJoinSourceType,
         G = q || z,
         Y = (0, b.xC)(t),
@@ -147,12 +152,12 @@ function D(e) {
         K = l.useCallback(() => {
             X && (J ? E() : V(W));
         }, [X, J, E, V, W]);
-    return (0, r.jsx)('thead', {
-        children: (0, r.jsxs)('tr', {
+    return (0, r.jsx)("thead", {
+        children: (0, r.jsxs)("tr", {
             className: H.tableHeaderRow,
             children: [
                 Y &&
-                    (0, r.jsx)('th', {
+                    (0, r.jsx)("th", {
                         className: i()(H.tableHeaderCellContainer, _.xsmallCol),
                         children: (0, r.jsx)(u.ua7, {
                             shouldShow: !X,
@@ -166,11 +171,11 @@ function D(e) {
                                         children: (0, r.jsx)(u.XZJ, {
                                             type: u.XZJ.Types.INVERTED,
                                             value: J,
-                                            disabled: !X
-                                        })
-                                    })
-                                )
-                        })
+                                            disabled: !X,
+                                        }),
+                                    }),
+                                ),
+                        }),
                     }),
                 (0, r.jsx)(Z, { label: O.intl.string(O.t.Es7n9f) }),
                 P
@@ -179,17 +184,17 @@ function D(e) {
                               (0, r.jsx)(u.yRy, {
                                   targetElementRef: o,
                                   animation: u.yRy.Animation.FADE,
-                                  position: 'bottom',
+                                  position: "bottom",
                                   spacing: 4,
-                                  align: 'left',
+                                  align: "left",
                                   renderPopout: () =>
                                       (0, r.jsx)(g.Z, {
                                           guildId: t,
-                                          onClose: y.dG4
+                                          onClose: y.dG4,
                                       }),
                                   children: (e) => {
                                       var { onClick: t } = e,
-                                          n = S(e, ['onClick']);
+                                          n = S(e, ["onClick"]);
                                       return (0, r.jsx)(
                                           Z,
                                           w(
@@ -199,27 +204,27 @@ function D(e) {
                                                   onFilter: t,
                                                   isFiltered: A,
                                                   isSorted: B,
-                                                  className: _.smallCol
+                                                  className: _.smallCol,
                                               },
-                                              n
-                                          )
+                                              n,
+                                          ),
                                       );
-                                  }
+                                  },
                               }),
                               (0, r.jsx)(u.yRy, {
                                   targetElementRef: a,
                                   animation: u.yRy.Animation.FADE,
-                                  position: 'bottom',
+                                  position: "bottom",
                                   spacing: 4,
-                                  align: 'left',
+                                  align: "left",
                                   renderPopout: () =>
                                       (0, r.jsx)(h.Z, {
                                           guildId: t,
-                                          onClose: y.dG4
+                                          onClose: y.dG4,
                                       }),
                                   children: (e) => {
                                       var { onClick: t } = e,
-                                          n = S(e, ['onClick']);
+                                          n = S(e, ["onClick"]);
                                       return (0, r.jsx)(
                                           Z,
                                           w(
@@ -229,42 +234,42 @@ function D(e) {
                                                   onFilter: t,
                                                   isFiltered: U,
                                                   isSorted: F,
-                                                  className: _.smallCol
+                                                  className: _.smallCol,
                                               },
-                                              n
-                                          )
+                                              n,
+                                          ),
                                       );
-                                  }
-                              })
-                          ]
+                                  },
+                              }),
+                          ],
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(Z, {
                                   label: O.intl.string(O.t.xcKP1N),
-                                  className: _.smallCol
+                                  className: _.smallCol,
                               }),
                               (0, r.jsx)(Z, {
                                   label: O.intl.string(O.t.sPph4O),
-                                  className: _.smallCol
-                              })
-                          ]
+                                  className: _.smallCol,
+                              }),
+                          ],
                       }),
                 P
                     ? (0, r.jsx)(u.yRy, {
                           targetElementRef: D,
                           animation: u.yRy.Animation.FADE,
-                          position: 'bottom',
+                          position: "bottom",
                           spacing: 4,
-                          align: 'left',
+                          align: "left",
                           renderPopout: () =>
                               (0, r.jsx)(x.Z, {
                                   guildId: t,
-                                  onClose: y.dG4
+                                  onClose: y.dG4,
                               }),
                           children: (e) => {
                               var { onClick: t } = e,
-                                  n = S(e, ['onClick']);
+                                  n = S(e, ["onClick"]);
                               return (0, r.jsx)(
                                   Z,
                                   w(
@@ -273,99 +278,100 @@ function D(e) {
                                           label: O.intl.string(O.t.yn0w19),
                                           onFilter: t,
                                           isFiltered: G,
-                                          className: _.smallCol
+                                          className: _.smallCol,
                                       },
-                                      n
-                                  )
+                                      n,
+                                  ),
                               );
-                          }
+                          },
                       })
                     : P &&
                       (0, r.jsx)(Z, {
                           label: O.intl.string(O.t.yn0w19),
-                          className: _.smallCol
+                          className: _.smallCol,
                       }),
                 (0, r.jsx)(u.yRy, {
                     targetElementRef: L,
                     animation: u.yRy.Animation.FADE,
-                    position: 'bottom',
+                    position: "bottom",
                     spacing: 4,
-                    align: 'left',
+                    align: "left",
                     renderPopout: (e) => {
                         let { closePopout: n } = e;
                         return (0, r.jsx)(v.Z, {
                             guildId: t,
-                            onClose: n
+                            onClose: n,
                         });
                     },
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = S(e, ['onClick']);
+                            n = S(e, ["onClick"]);
                         return (0, r.jsx)(
                             Z,
                             w(
                                 {
                                     ref: L,
-                                    label: O.intl.string(O.t['2SZsWV']),
+                                    label: O.intl.string(O.t["2SZsWV"]),
                                     onFilter: t,
                                     isFiltered: k,
-                                    className: _.mediumCol
+                                    className: _.mediumCol,
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         );
-                    }
+                    },
                 }),
                 (0, r.jsx)(u.ua7, {
-                    text: O.intl.string(O.t['2cRO3d']),
-                    position: 'top',
-                    align: 'left',
+                    text: O.intl.string(O.t["2cRO3d"]),
+                    position: "top",
+                    align: "left",
                     shouldShow: !0,
                     color: u.ua7.Colors.BRAND,
                     children: (e) =>
                         (0, r.jsx)(u.yRy, {
                             targetElementRef: R,
                             animation: u.yRy.Animation.FADE,
-                            position: 'bottom',
+                            position: "bottom",
                             spacing: 4,
-                            align: 'left',
+                            align: "left",
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
                                 return (0, r.jsx)(j.Z, {
                                     guildId: t,
-                                    onClose: n
+                                    onClose: n,
                                 });
                             },
                             children: (t) =>
                                 (0, r.jsx)(Z, {
                                     ref: R,
-                                    label: O.intl.string(O.t['7V375+']),
-                                    'aria-label': O.intl.string(O.t['2cRO3d']),
+                                    label: O.intl.string(O.t["7V375+"]),
+                                    "aria-label": O.intl.string(O.t["2cRO3d"]),
                                     onFilter: (n) => {
                                         var r, l;
-                                        (null == (r = t.onClick) || r.call(t, n), null == (l = e.onClick) || l.call(e));
+                                        null == (r = t.onClick) || r.call(t, n), null == (l = e.onClick) || l.call(e);
                                     },
                                     isFiltered: T,
                                     className: _.smallCol,
                                     onMouseEnter: () => {
                                         var n, r;
-                                        (null == (n = e.onMouseEnter) || n.call(e), null == (r = t.onMouseEnter) || r.call(t));
+                                        null == (n = e.onMouseEnter) || n.call(e),
+                                            null == (r = t.onMouseEnter) || r.call(t);
                                     },
                                     onMouseDown: t.onMouseDown,
                                     onMouseLeave: e.onMouseLeave,
                                     onBlur: e.onBlur,
                                     onFocus: e.onFocus,
                                     onKeyDown: t.onKeyDown,
-                                    'aria-controls': t['aria-controls'],
-                                    'aria-expanded': t['aria-expanded']
-                                })
-                        })
+                                    "aria-controls": t["aria-controls"],
+                                    "aria-expanded": t["aria-expanded"],
+                                }),
+                        }),
                 }),
                 (0, r.jsx)(Z, {
-                    label: O.intl.string(O.t['5Q9xGh']),
-                    className: _.smallCol
-                })
-            ]
-        })
+                    label: O.intl.string(O.t["5Q9xGh"]),
+                    className: _.smallCol,
+                }),
+            ],
+        }),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(780384),
@@ -17,7 +17,16 @@ var i = n(255367),
     x = n(408942);
 function j(e) {
     let t,
-        { guild: n, channel: j, customWebhooks: v, editedWebhook: O, selectableWebhookChannels: y, refToScroller: _, errors: C, canNavigate: N } = e,
+        {
+            guild: n,
+            channel: j,
+            customWebhooks: v,
+            editedWebhook: O,
+            selectableWebhookChannels: y,
+            refToScroller: _,
+            errors: C,
+            canNavigate: N,
+        } = e,
         S = (0, d.ZP)(),
         [I, w] = r.useState(null),
         [Z, E] = r.useState(null);
@@ -34,16 +43,16 @@ function j(e) {
                     t && t.code === b.evJ.TOO_MANY_WEBHOOKS
                         ? a.Z.show({
                               title: g.intl.string(g.t.cCqscX),
-                              body: g.intl.string(g.t['w+QZoa'])
+                              body: g.intl.string(g.t["w+QZoa"]),
                           })
                         : 429 === n
                           ? a.Z.show({
                                 title: g.intl.string(g.t.cCqscX),
-                                body: g.intl.string(g.t['YBM+UV'])
+                                body: g.intl.string(g.t["YBM+UV"]),
                             })
                           : a.Z.show({
                                 title: g.intl.string(g.t.cCqscX),
-                                body: g.intl.string(g.t['/4TwKS'])
+                                body: g.intl.string(g.t["/4TwKS"]),
                             }),
                     null
                 );
@@ -61,23 +70,23 @@ function j(e) {
                 type: o.geA.DESCRIPTION,
                 children: g.intl.format(g.t.WL0d0d, {
                     helpdeskArticle: p.Z.getArticleURL(b.BhN.WEBHOOKS),
-                    developersArticle: b.EYA.API_DOCS_WEBHOOKS
-                })
+                    developersArticle: b.EYA.API_DOCS_WEBHOOKS,
+                }),
             }),
             (0, i.jsx)(o.$i$, { className: f.headerDivider }),
             v.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)('div', {
-                              'data-button-hoisted-classname-wrapper': !0,
+                          (0, i.jsx)("div", {
+                              "data-button-hoisted-classname-wrapper": !0,
                               className: f.createButton,
                               children: (0, i.jsx)(o.zxk, {
-                                  variant: 'primary',
-                                  size: 'sm',
-                                  text: g.intl.string(g.t['nrO/HB']),
+                                  variant: "primary",
+                                  size: "sm",
+                                  text: g.intl.string(g.t["nrO/HB"]),
                                   disabled: !T,
-                                  onClick: P
-                              })
+                                  onClick: P,
+                              }),
                           }),
                           (0, i.jsx)(m.Z, {
                               webhooks: v,
@@ -85,9 +94,9 @@ function j(e) {
                               selectableWebhookChannels: y,
                               lastCreatedWebhookId: null == I ? void 0 : I.id,
                               errors: C,
-                              canNavigate: N
-                          })
-                      ]
+                              canNavigate: N,
+                          }),
+                      ],
                   })
                 : (function (e, t, n) {
                       let r = (0, l.wj)(e) ? h : x;
@@ -95,28 +104,28 @@ function j(e) {
                           direction: u.Z.Direction.VERTICAL,
                           align: u.Z.Align.CENTER,
                           children: [
-                              (0, i.jsx)('img', {
-                                  alt: '',
+                              (0, i.jsx)("img", {
+                                  alt: "",
                                   src: r,
-                                  className: f.emptyStateImage
+                                  className: f.emptyStateImage,
                               }),
                               (0, i.jsx)(o.X6q, {
-                                  variant: 'heading-md/semibold',
-                                  children: g.intl.string(g.t.LzmsWl)
+                                  variant: "heading-md/semibold",
+                                  children: g.intl.string(g.t.LzmsWl),
                               }),
-                              (0, i.jsx)('div', {
-                                  'data-button-hoisted-classname-wrapper': !0,
+                              (0, i.jsx)("div", {
+                                  "data-button-hoisted-classname-wrapper": !0,
                                   className: f.emptyStateButton,
                                   children: (0, i.jsx)(o.zxk, {
-                                      variant: 'primary',
+                                      variant: "primary",
                                       text: g.intl.string(g.t.lOQqJC),
                                       disabled: !t,
-                                      onClick: n
-                                  })
-                              })
-                          ]
+                                      onClick: n,
+                                  }),
+                              }),
+                          ],
                       });
-                  })(S, T, P)
-        ]
+                  })(S, T, P),
+        ],
     });
 }

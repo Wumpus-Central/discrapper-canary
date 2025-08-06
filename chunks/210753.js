@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     $: () => h,
-    M: () => p
+    M: () => p,
 }),
     n(539854),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(392711),
     o = n.n(i),
@@ -18,7 +18,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,18 +31,20 @@ class f {
     }
     _flush() {
         let e = [];
-        (this._pending.forEach((t) => {
-            (this._fetched.add(t), e.push(t));
+        this._pending.forEach((t) => {
+            this._fetched.add(t), e.push(t);
         }),
             this._pending.clear(),
             o()
                 .chunk(e, d)
                 .forEach((e) => {
                     l.Z.getDetectableGamesSupplemental(e);
-                }));
+                });
     }
     constructor() {
-        (u(this, '_fetched', new Set()), u(this, '_pending', new Set()), u(this, '_flushHandler', new s.sW(32, () => this._flush())));
+        u(this, "_fetched", new Set()),
+            u(this, "_pending", new Set()),
+            u(this, "_flushHandler", new s.sW(32, () => this._flush()));
     }
 }
 let _ = new f();
@@ -58,10 +60,10 @@ function h(e, t) {
             null != t
                 ? {
                       width: t.coverImageWidth,
-                      height: t.coverImageHeight
+                      height: t.coverImageHeight,
                   }
                 : void 0,
-        [t]
+        [t],
     );
     return (0, a.cj)([c.Z], () =>
         null == e
@@ -69,13 +71,13 @@ function h(e, t) {
                   isFetching: !1,
                   localizedName: void 0,
                   themes: void 0,
-                  coverImageUrl: void 0
+                  coverImageUrl: void 0,
               }
             : {
                   isFetching: c.Z.isFetching(e),
                   localizedName: c.Z.getLocalizedName(e),
                   themes: c.Z.getThemes(e),
-                  coverImageUrl: c.Z.getCoverImageUrl(e, n)
-              }
+                  coverImageUrl: c.Z.getCoverImageUrl(e, n),
+              },
     );
 }

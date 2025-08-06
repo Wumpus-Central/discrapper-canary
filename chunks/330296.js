@@ -23,9 +23,9 @@ function l(e, t, n) {
                 s.push({
                     offset: r.strlen(o.slice(0, t)),
                     length: r.strlen(o.slice(t, i)),
-                    style: n
+                    style: n,
                 });
-            }
+            },
         ),
         s
     );

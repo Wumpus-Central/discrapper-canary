@@ -6,13 +6,14 @@ var r = n(621796),
     l = n(630685),
     c = n(803068),
     u = n(467159),
-    d = a.isEngine('Gecko'),
-    f = '\n\n';
+    d = a.isEngine("Gecko"),
+    f = "\n\n";
 function _(e, t) {
-    return 'deleteContentBackward' === e ? c(t) : t;
+    return "deleteContentBackward" === e ? c(t) : t;
 }
 e.exports = function (e, t) {
-    void 0 !== e._pendingStateFromBeforeInput && (e.update(e._pendingStateFromBeforeInput), (e._pendingStateFromBeforeInput = void 0));
+    void 0 !== e._pendingStateFromBeforeInput &&
+        (e.update(e._pendingStateFromBeforeInput), (e._pendingStateFromBeforeInput = void 0));
     var n,
         a,
         c,
@@ -20,7 +21,10 @@ e.exports = function (e, t) {
         h = e.editor.ownerDocument.defaultView.getSelection(),
         m = h.anchorNode,
         g = h.isCollapsed;
-    if ((null == m ? void 0 : m.nodeType) === Node.TEXT_NODE || (null == m ? void 0 : m.nodeType) === Node.ELEMENT_NODE) {
+    if (
+        (null == m ? void 0 : m.nodeType) === Node.TEXT_NODE ||
+        (null == m ? void 0 : m.nodeType) === Node.ELEMENT_NODE
+    ) {
         if (m.nodeType === Node.TEXT_NODE && (null !== m.previousSibling || null !== m.nextSibling)) {
             var E = m.parentNode;
             m.nodeValue = E.textContent;
@@ -33,7 +37,7 @@ e.exports = function (e, t) {
             T = I.blockKey,
             S = I.decoratorKey,
             A = I.leafKey,
-            N = O.getBlockTree(T).getIn([S, 'leaves', A]),
+            N = O.getBlockTree(T).getIn([S, "leaves", A]),
             C = N.start,
             R = N.end,
             P = O.getCurrentContent(),
@@ -51,25 +55,26 @@ e.exports = function (e, t) {
             k = M.merge({
                 anchorOffset: C,
                 focusOffset: R,
-                isBackward: !1
+                isBackward: !1,
             }),
             j = w.getEntityAt(C),
             U = s(j) ? P.getEntity(j) : null,
             G = null != U ? U.getMutability() : null,
-            B = 'MUTABLE' === G,
-            Z = B ? 'spellcheck-change' : 'apply-entity',
+            B = "MUTABLE" === G,
+            Z = B ? "spellcheck-change" : "apply-entity",
             F = r.replaceText(P, k, y, w.getInlineStyleAt(C), B ? w.getEntityAt(C) : null);
-        if (d) ((n = h.anchorOffset), (p = (c = C + Math.min(n, (a = h.focusOffset))) + Math.abs(n - a)), (n = c), (a = p));
+        if (d)
+            (n = h.anchorOffset), (p = (c = C + Math.min(n, (a = h.focusOffset))) + Math.abs(n - a)), (n = c), (a = p);
         else {
             var V = y.length - D.length;
-            ((c = M.getStartOffset()), (p = M.getEndOffset()), (n = g ? p + V : c), (a = p + V));
+            (c = M.getStartOffset()), (p = M.getEndOffset()), (n = g ? p + V : c), (a = p + V);
         }
         var H = F.merge({
             selectionBefore: P.getSelectionAfter(),
             selectionAfter: M.merge({
                 anchorOffset: n,
-                focusOffset: a
-            })
+                focusOffset: a,
+            }),
         });
         e.update(o.push(O, H, Z));
     }

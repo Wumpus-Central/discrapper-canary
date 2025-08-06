@@ -8,19 +8,19 @@ async function s(e) {
         let t = await r.tn.post({
                 url: a.ANM.PLATFORM_APPLICATION,
                 body: { sku: e },
-                rejectWithError: !1
+                rejectWithError: !1,
             }),
             n = 200 === t.status ? t.body.application : null;
         i.Z.dispatch({
-            type: 'ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS',
+            type: "ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS",
             universeId: e,
-            application: null != n ? o.ZP.createFromServer(n) : null
+            application: null != n ? o.ZP.createFromServer(n) : null,
         });
     } catch (t) {
         i.Z.dispatch({
-            type: 'ROBLOX_SUBGAME_APPLICATION_FETCH_FAILURE',
+            type: "ROBLOX_SUBGAME_APPLICATION_FETCH_FAILURE",
             universeId: e,
-            error: t
+            error: t,
         });
     }
 }

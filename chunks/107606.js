@@ -8,20 +8,20 @@ var r = a(442837),
     o = a(716561);
 function c() {
     let e = (0, r.e7)([s.Z], () => s.Z.isRandomlyChangingPremiumOptions);
-    return (0, n.jsx)('div', {
+    return (0, n.jsx)("div", {
         className: o.container,
-        children: (0, n.jsx)('div', {
-            'data-button-hoisted-classname-wrapper': !0,
+        children: (0, n.jsx)("div", {
+            "data-button-hoisted-classname-wrapper": !0,
             className: o.button,
             children: (0, n.jsx)(l.xJW, {
                 children: (0, n.jsx)(l.j7V, {
                     value: e,
-                    note: 'Randomizes theme, avatar decorations, and nameplates, every 5 seconds',
+                    note: "Randomizes theme, avatar decorations, and nameplates, every 5 seconds",
                     onChange: (e) => (0, i.Qh)({ isRandomlyChangingPremiumOptions: e }),
                     hideBorder: !0,
-                    children: 'Randomize Premium Features'
-                })
-            })
-        })
+                    children: "Randomize Premium Features",
+                }),
+            }),
+        }),
     });
 }

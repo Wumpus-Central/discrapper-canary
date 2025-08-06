@@ -15,50 +15,50 @@ var i = n(120356),
     h = n(765214);
 function f(e) {
     let { pills: t } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: h.row,
         children: t.map((e) =>
             (0, r.jsx)(
-                'div',
+                "div",
                 {
                     className: h.pill,
                     children: (0, r.jsx)(s.Text, {
-                        variant: 'text-sm/normal',
-                        children: e
-                    })
+                        variant: "text-sm/normal",
+                        children: e,
+                    }),
                 },
-                e
-            )
-        )
+                e,
+            ),
+        ),
     });
 }
 function x(e) {
     let { guildId: t, showCTA: n, responsive: i = !0 } = e,
         x = [
-            [p.intl.string(p.t['73h51N']), p.intl.string(p.t['gbjs//'])],
-            [p.intl.string(p.t.mCoH0d), p.intl.string(p.t['l/BuSE'])],
+            [p.intl.string(p.t["73h51N"]), p.intl.string(p.t["gbjs//"])],
+            [p.intl.string(p.t.mCoH0d), p.intl.string(p.t["l/BuSE"])],
             [p.intl.string(p.t.psQktr), p.intl.string(p.t.nMhIZW)],
-            [p.intl.string(p.t['0ItLmJ']), p.intl.string(p.t.yQHqsL)]
+            [p.intl.string(p.t["0ItLmJ"]), p.intl.string(p.t.yQHqsL)],
         ];
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: l()({ [h.responsive]: i }),
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: h.container,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: h.content,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: h.pillContainer,
-                            children: x.map((e, t) => (0, r.jsx)(f, { pills: e }, 'pill-row-'.concat(t)))
+                            children: x.map((e, t) => (0, r.jsx)(f, { pills: e }, "pill-row-".concat(t))),
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: h.ctaContent,
                             children: [
                                 (0, r.jsx)(s.Text, {
-                                    variant: 'text-lg/medium',
-                                    color: 'header-primary',
-                                    children: p.intl.string(p.t['67arYG'])
+                                    variant: "text-lg/medium",
+                                    color: "header-primary",
+                                    children: p.intl.string(p.t["67arYG"]),
                                 }),
                                 n &&
                                     (0, r.jsxs)(s.gtL, {
@@ -68,30 +68,31 @@ function x(e) {
                                         shineSize: s.gtL.ShineSizes.SMALL,
                                         onClick: () => {
                                             var e, n;
-                                            (u.default.track(
+                                            u.default.track(
                                                 g.rMx.GUILD_SHOP_PREVIEW_CLICK,
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
                                                             r = Object.keys(n);
-                                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                                        "function" == typeof Object.getOwnPropertySymbols &&
                                                             (r = r.concat(
                                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                                })
+                                                                    return Object.getOwnPropertyDescriptor(n, e)
+                                                                        .enumerable;
+                                                                }),
                                                             )),
                                                             r.forEach(function (t) {
                                                                 var r;
-                                                                ((r = n[t]),
+                                                                (r = n[t]),
                                                                     t in e
                                                                         ? Object.defineProperty(e, t, {
                                                                               value: r,
                                                                               enumerable: !0,
                                                                               configurable: !0,
-                                                                              writable: !0
+                                                                              writable: !0,
                                                                           })
-                                                                        : (e[t] = r));
-                                                            }));
+                                                                        : (e[t] = r);
+                                                            });
                                                     }
                                                     return e;
                                                 })({}, (0, o.hH)(t))),
@@ -106,41 +107,45 @@ function x(e) {
                                                           }
                                                           return n;
                                                       })(Object(n)).forEach(function (t) {
-                                                          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                                                          Object.defineProperty(
+                                                              e,
+                                                              t,
+                                                              Object.getOwnPropertyDescriptor(n, t),
+                                                          );
                                                       }),
-                                                e)
+                                                e),
                                             ),
-                                                d.Z.open(t, g.pNK.GUILD_PRODUCTS));
+                                                d.Z.open(t, g.pNK.GUILD_PRODUCTS);
                                         },
                                         children: [
                                             p.intl.string(p.t.oyzLpK),
                                             (0, r.jsx)(s.ZSh, {
-                                                size: 'md',
-                                                color: 'currentColor',
-                                                className: h.getStartedArrow
-                                            })
-                                        ]
-                                    })
-                            ]
-                        })
-                    ]
+                                                size: "md",
+                                                color: "currentColor",
+                                                className: h.getStartedArrow,
+                                            }),
+                                        ],
+                                    }),
+                            ],
+                        }),
+                    ],
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: h.muralImageContainer,
                     children: [
-                        (0, r.jsx)('img', {
-                            src: (0, c.b)('server_products/storefront/preview-mural.png'),
-                            alt: '',
-                            className: h.muralImage
+                        (0, r.jsx)("img", {
+                            src: (0, c.b)("server_products/storefront/preview-mural.png"),
+                            alt: "",
+                            className: h.muralImage,
                         }),
-                        (0, r.jsx)('img', {
-                            src: (0, c.b)('server_products/storefront/preview-mural-reduced.png'),
-                            alt: '',
-                            className: h.muralImageReducedWidth
-                        })
-                    ]
-                })
-            ]
-        })
+                        (0, r.jsx)("img", {
+                            src: (0, c.b)("server_products/storefront/preview-mural-reduced.png"),
+                            alt: "",
+                            className: h.muralImageReducedWidth,
+                        }),
+                    ],
+                }),
+            ],
+        }),
     });
 }

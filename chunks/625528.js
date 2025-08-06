@@ -26,23 +26,27 @@ function _() {
                 webSetting: b.s6.VOICE_AND_VIDEO_VIDEO,
                 children: [
                     (0, i.jsxs)(l.Z, {
-                        children: [(0, i.jsx)(c.Z, {}), (0, i.jsx)(d.Z, {}), (0, i.jsx)(u.Z, {})]
+                        children: [(0, i.jsx)(c.Z, {}), (0, i.jsx)(d.Z, {}), (0, i.jsx)(u.Z, {})],
                     }),
-                    (0, i.jsx)(h.Z, {})
-                ]
+                    (0, i.jsx)(h.Z, {}),
+                ],
             }),
             (0, i.jsx)(a.Z, {
                 title: x.intl.string(x.t.KDdjoq),
                 webSetting: b.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
                 children: (0, i.jsxs)(l.Z, {
-                    children: [(0, i.jsx)(g.Z, { refreshStyles: !0 }), e && (0, i.jsx)(p.Z, { refreshStyles: !0 }), (0, i.jsx)(m.Z, { refreshStyles: !0 })]
-                })
+                    children: [
+                        (0, i.jsx)(g.Z, { refreshStyles: !0 }),
+                        e && (0, i.jsx)(p.Z, { refreshStyles: !0 }),
+                        (0, i.jsx)(m.Z, { refreshStyles: !0 }),
+                    ],
+                }),
             }),
             (0, i.jsx)(a.Z, {
-                title: x.intl.string(x.t['8/udY2']),
+                title: x.intl.string(x.t["8/udY2"]),
                 webSetting: b.s6.VOICE_AND_VIDEO_VIDEO_ADVANCED,
-                children: (0, i.jsx)(l.Z, { children: (0, i.jsx)(f.Z, { refreshStyles: !0 }) })
-            })
-        ]
+                children: (0, i.jsx)(l.Z, { children: (0, i.jsx)(f.Z, { refreshStyles: !0 }) }),
+            }),
+        ],
     });
 }

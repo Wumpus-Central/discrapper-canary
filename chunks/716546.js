@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(668781),
     i = n(998502),
     o = n(58406),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -47,18 +47,18 @@ class l extends o.g {
             body: n,
             onConfirm: i,
             cancelText: o,
-            confirmText: a
+            confirmText: a,
         });
     }
     constructor(...e) {
-        (super(...e), s(this, 'nativeUtils', i.ZP.getDiscordUtils()));
+        super(...e), s(this, "nativeUtils", i.ZP.getDiscordUtils());
     }
 }
-s(l, 'requestTypeLookup', {
+s(l, "requestTypeLookup", {
     [a.Eu.CAMERA]: i.jK.Camera,
     [a.Eu.AUDIO]: i.jK.Microphone,
     [a.Eu.PHOTOS]: i.jK.Photo,
     [a.Eu.INPUT_MONITORING]: i.jK.InputMonitoring,
-    [a.Eu.SCREEN_RECORDING]: i.jK.ScreenRecording
+    [a.Eu.SCREEN_RECORDING]: i.jK.ScreenRecording,
 });
 let c = new l();

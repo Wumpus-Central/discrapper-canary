@@ -9,18 +9,22 @@ var e = i(481060),
 function c(t) {
     let { onSelect: n, backgroundOption: i, optionIsInUse: c } = t;
     return (0, r.jsx)(e.v2r, {
-        navId: 'video-background-context',
+        navId: "video-background-context",
         onClose: a.Zy,
         onSelect: n,
-        'aria-label': o.intl.string(o.t.ptxALC),
+        "aria-label": o.intl.string(o.t.ptxALC),
         children: (0, r.jsx)(e.sNh, {
-            id: 'remove',
+            id: "remove",
             action: () => {
                 (0, l.rD)(i) && ((0, s.KH)(i), (0, l.$w)(i));
             },
-            label: (0, l.rD)(i) ? (c ? o.intl.string(o.t['xh/P//']) : o.intl.string(o.t.oKuPwc)) : o.intl.string(o.t.hFYUDA),
+            label: (0, l.rD)(i)
+                ? c
+                    ? o.intl.string(o.t["xh/P//"])
+                    : o.intl.string(o.t.oKuPwc)
+                : o.intl.string(o.t.hFYUDA),
             disabled: !(0, l.rD)(i) || c,
-            color: 'danger'
-        })
+            color: "danger",
+        }),
     });
 }

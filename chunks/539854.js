@@ -8,17 +8,17 @@ var r = n(98405),
     }),
     c = function () {
         try {
-            Object.defineProperty([], 'length', { writable: !1 }).push();
+            Object.defineProperty([], "length", { writable: !1 }).push();
         } catch (e) {
             return e instanceof TypeError;
         }
     };
 r(
     {
-        target: 'Array',
+        target: "Array",
         proto: !0,
         arity: 1,
-        forced: l || !c()
+        forced: l || !c(),
     },
     {
         push: function (e) {
@@ -26,8 +26,8 @@ r(
                 n = o(t),
                 r = arguments.length;
             s(n + r);
-            for (var l = 0; l < r; l++) ((t[n] = arguments[l]), n++);
-            return (a(t, n), n);
-        }
-    }
+            for (var l = 0; l < r; l++) (t[n] = arguments[l]), n++;
+            return a(t, n), n;
+        },
+    },
 );

@@ -17,9 +17,9 @@ var e = n(220159),
     b = d.getterFor;
 t.exports = function (t, r, n) {
     var d,
-        m = -1 !== t.indexOf('Map'),
-        S = -1 !== t.indexOf('Weak'),
-        w = m ? 'set' : 'add',
+        m = -1 !== t.indexOf("Map"),
+        S = -1 !== t.indexOf("Weak"),
+        w = m ? "set" : "add",
         O = o[t],
         j = O && O.prototype,
         A = {};
@@ -33,45 +33,45 @@ t.exports = function (t, r, n) {
                 })))
     ) {
         var E = (d = r(function (r, n) {
-                (g(f(r, E), {
+                g(f(r, E), {
                     type: t,
-                    collection: new O()
+                    collection: new O(),
                 }),
                     l(n) ||
                         c(n, r[w], {
                             that: r,
-                            AS_ENTRIES: m
-                        }));
+                            AS_ENTRIES: m,
+                        });
             })).prototype,
             T = b(t);
-        (h(['add', 'clear', 'delete', 'forEach', 'get', 'has', 'set', 'keys', 'values', 'entries'], function (t) {
-            var r = 'add' === t || 'set' === t;
+        h(["add", "clear", "delete", "forEach", "get", "has", "set", "keys", "values", "entries"], function (t) {
+            var r = "add" === t || "set" === t;
             t in j &&
-                !(S && 'clear' === t) &&
+                !(S && "clear" === t) &&
                 s(E, t, function (n, e) {
                     var o = T(this).collection;
-                    if (!r && S && !p(n)) return 'get' === t && void 0;
+                    if (!r && S && !p(n)) return "get" === t && void 0;
                     var i = o[t](0 === n ? 0 : n, e);
                     return r ? this : i;
                 });
         }),
             S ||
-                y(E, 'size', {
+                y(E, "size", {
                     configurable: !0,
                     get: function () {
                         return T(this).collection.size;
-                    }
-                }));
-    } else ((d = n.getConstructor(r, t, m, w)), i.enable());
+                    },
+                });
+    } else (d = n.getConstructor(r, t, m, w)), i.enable();
     return (
         v(d, t, !1, !0),
         (A[t] = d),
         e(
             {
                 global: !0,
-                forced: !0
+                forced: !0,
             },
-            A
+            A,
         ),
         S || n.setStrong(d, t, m),
         d

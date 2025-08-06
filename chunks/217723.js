@@ -1,4 +1,4 @@
-(i.d(n, { default: () => l }), i(388685));
+i.d(n, { default: () => l }), i(388685);
 var a = i(255367),
     s = i(73800),
     c = i(82659),
@@ -22,19 +22,19 @@ function l(t) {
     return (0, a.jsx)(c.Modal, {
         transitionState: n,
         onClose: p,
-        title: e.intl.string(e.t['66tnnp']),
-        subtitle: e.intl.string(e.t['c/k4SU']),
+        title: e.intl.string(e.t["66tnnp"]),
+        subtitle: e.intl.string(e.t["c/k4SU"]),
         actions: [
             {
-                text: e.intl.string(e.t['ETE/oK']),
+                text: e.intl.string(e.t["ETE/oK"]),
                 onClick: p,
-                variant: 'secondary'
+                variant: "secondary",
             },
             {
-                text: e.intl.string(e.t['cY+Ooa']),
+                text: e.intl.string(e.t["cY+Ooa"]),
                 onClick: d,
-                loading: r
-            }
-        ]
+                loading: r,
+            },
+        ],
     });
 }

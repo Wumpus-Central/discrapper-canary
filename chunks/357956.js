@@ -10,12 +10,12 @@ let o = function (e) {
         o = (0, s.Z)(n);
     return (0, i.jsx)(r.Text, {
         className: t,
-        variant: 'text-sm/medium',
-        color: 'text-muted',
+        variant: "text-sm/medium",
+        color: "text-muted",
         children: (0, a.QX)(o, {
             days: l.t.WUTPDQ,
             hours: l.t.c1qodX,
-            minutes: l.t['2+A3dn']
-        })
+            minutes: l.t["2+A3dn"],
+        }),
     });
 };

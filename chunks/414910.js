@@ -5,7 +5,7 @@ let o = Object.freeze({
     [r.fO.STREAM]: i.Yn.STREAM,
     [r.fO.HIDDEN_STREAM]: i.Yn.STREAM,
     [r.fO.USER]: i.Yn.DEFAULT,
-    [r.fO.ACTIVITY]: i.Yn.DEFAULT
+    [r.fO.ACTIVITY]: i.Yn.DEFAULT,
 });
 function a(e) {
     return o[e];

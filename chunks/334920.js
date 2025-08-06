@@ -5,28 +5,34 @@ var r = n(255367),
     a = n.n(o),
     s = n(532145);
 let l = (e) => {
-    let { src: t, alt: n, size: o, 'aria-label': l, className: c } = e,
+    let { src: t, alt: n, size: o, "aria-label": l, className: c } = e,
         u = i.useRef(null),
         d = i.useRef(!1),
         f = d.current ? s.image : s.imageLoading;
-    return (0, r.jsx)('img', {
+    return (0, r.jsx)("img", {
         className: a()(f, c),
         alt: n,
         src: t,
         ref: u,
-        'aria-label': l,
+        "aria-label": l,
         style: {
             backgroundSize: o,
             height: o,
-            width: o
+            width: o,
         },
         onLoad: d.current
             ? void 0
             : (e) => {
                   var t, n, r;
-                  (null != (r = null == (n = e.currentTarget) || null == (t = n.ownerDocument) ? void 0 : t.defaultView) ? r : window).requestAnimationFrame(() => {
-                      null != u.current && ((d.current = !0), u.current.classList.remove(s.imageLoading), u.current.classList.add(s.image));
+                  (null != (r = null == (n = e.currentTarget) || null == (t = n.ownerDocument) ? void 0 : t.defaultView)
+                      ? r
+                      : window
+                  ).requestAnimationFrame(() => {
+                      null != u.current &&
+                          ((d.current = !0),
+                          u.current.classList.remove(s.imageLoading),
+                          u.current.classList.add(s.image));
                   });
-              }
+              },
     });
 };

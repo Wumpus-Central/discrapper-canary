@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(415506));
+n.d(t, { Z: () => m }), n(388685), n(415506);
 var r = n(392711),
     i = n.n(r),
     o = n(570140),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,7 +49,18 @@ function h() {
 }
 let m = {
     fetchTabMessages: function (e) {
-        let { searchContext: t, searchTabs: n, searchQueryString: r, pagination: l, trackExactTotalHits: d, getId: p, getLimit: h, onFetchStart: m, onFetchSuccess: g, searchMode: E = u.QIO.NEWEST } = e,
+        let {
+                searchContext: t,
+                searchTabs: n,
+                searchQueryString: r,
+                pagination: l,
+                trackExactTotalHits: d,
+                getId: p,
+                getLimit: h,
+                onFetchStart: m,
+                onFetchSuccess: g,
+                searchMode: E = u.QIO.NEWEST,
+            } = e,
             b = (0, s.kG)(r),
             y = (0, s.$G)(b);
         _(y);
@@ -63,26 +74,26 @@ let m = {
             searchTabs: n,
             getLimit: h,
             pagination: l,
-            trackExactTotalHits: d
+            trackExactTotalHits: d,
         });
         null == m ||
             m({
                 searchContext: t,
                 searchQueryString: r,
-                searchQuery: O
+                searchQuery: O,
             });
         let T = n.map((e) => p(e));
         return (
             o.Z.dispatch({
-                type: 'SEARCH_MESSAGES_START',
-                ids: T
+                type: "SEARCH_MESSAGES_START",
+                ids: T,
             }),
             I.fetch(
                 (e) => {
                     let { body: n } = e,
                         r = Object.entries(n.tabs);
-                    (o.Z.dispatch({
-                        type: 'SEARCH_MESSAGES_SUCCESS',
+                    o.Z.dispatch({
+                        type: "SEARCH_MESSAGES_SUCCESS",
                         guildId: v,
                         data: r.map((e) => {
                             var t, r, o;
@@ -99,29 +110,29 @@ let m = {
                                 threads: null != (r = l.threads) ? r : [],
                                 members: (null != (o = l.members) ? o : []).map((e) => (0, a.Z)(e)),
                                 doingHistoricalIndex: n.doing_deep_historical_index,
-                                documentsIndexed: n.documents_indexed
+                                documentsIndexed: n.documents_indexed,
                             };
-                        })
+                        }),
                     }),
                         null == g ||
                             g({
                                 searchContext: t,
-                                tabEntries: r
-                            }));
+                                tabEntries: r,
+                            });
                 },
                 () => {
                     o.Z.dispatch({
-                        type: 'SEARCH_MESSAGES_INDEXING',
-                        ids: T
+                        type: "SEARCH_MESSAGES_INDEXING",
+                        ids: T,
                     });
                 },
                 (e) => {
                     o.Z.dispatch({
-                        type: 'SEARCH_MESSAGES_FAILURE',
+                        type: "SEARCH_MESSAGES_FAILURE",
                         ids: T,
-                        error: e
+                        error: e,
                     });
-                }
+                },
             ),
             !0
         );
@@ -129,22 +140,22 @@ let m = {
     fetchMessages: function (e) {
         let { searchContext: t, query: n, searchEverywhere: r } = e,
             i = (0, s.s5)(t);
-        (null != i && (0, s.jW)(n, i), r && (n.search_everywhere = !0));
+        null != i && (0, s.jW)(n, i), r && (n.search_everywhere = !0);
         let c = (0, s.Tm)(t),
             u = l.Z.create({
                 id: c,
                 searchType: t.type,
-                searchQuery: n
+                searchQuery: n,
             });
-        (o.Z.dispatch({
-            type: 'SEARCH_MESSAGES_START',
-            ids: [c]
+        o.Z.dispatch({
+            type: "SEARCH_MESSAGES_START",
+            ids: [c],
         }),
             u.fetch(
                 (e) => {
                     var t, n, r;
                     o.Z.dispatch({
-                        type: 'SEARCH_MESSAGES_SUCCESS',
+                        type: "SEARCH_MESSAGES_SUCCESS",
                         guildId: i,
                         data: [
                             {
@@ -157,154 +168,154 @@ let m = {
                                 doingHistoricalIndex: e.body.doing_deep_historical_index,
                                 documentsIndexed: e.body.documents_indexed,
                                 channels: null != (r = e.body.channels) ? r : [],
-                                cursor: null
-                            }
-                        ]
+                                cursor: null,
+                            },
+                        ],
                     });
                 },
                 () => {
                     o.Z.dispatch({
-                        type: 'SEARCH_MESSAGES_INDEXING',
-                        ids: [c]
+                        type: "SEARCH_MESSAGES_INDEXING",
+                        ids: [c],
                     });
                 },
                 (e) => {
                     o.Z.dispatch({
-                        type: 'SEARCH_MESSAGES_FAILURE',
+                        type: "SEARCH_MESSAGES_FAILURE",
                         ids: [c],
-                        error: e
+                        error: e,
                     });
-                }
-            ));
+                },
+            );
     },
     clearSearchRecentMessages: function () {
-        o.Z.dispatch({ type: 'SEARCH_RECENT_MESSAGES_CLEAR' });
+        o.Z.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
     },
     clearAllSearchMesssages: function () {
-        o.Z.dispatch({ type: 'SEARCH_MESSAGES_CLEAR_ALL' });
+        o.Z.dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
     },
     clearSearchMessages: function (e) {
         o.Z.dispatch({
-            type: 'SEARCH_MESSAGES_CLEAR',
-            id: e
+            type: "SEARCH_MESSAGES_CLEAR",
+            id: e,
         });
     },
     addNativeSearchHistoryItem: function (e, t) {
         if (!p() || (e.type !== u.aib.DMS && e.type !== u.aib.GUILD)) return;
         let n = (0, s.Tm)(e);
         o.Z.dispatch({
-            type: 'SEARCH_HISTORY_NATIVE_ADD_ITEM',
+            type: "SEARCH_HISTORY_NATIVE_ADD_ITEM",
             id: n,
-            item: t
+            item: t,
         });
     },
     removeNativeSearchHistoryItem: function (e, t) {
         if (!p()) return;
         let n = (0, s.Tm)(e);
         o.Z.dispatch({
-            type: 'SEARCH_HISTORY_NATIVE_REMOVE_ITEM',
+            type: "SEARCH_HISTORY_NATIVE_REMOVE_ITEM",
             id: n,
-            item: t
+            item: t,
         });
     },
     clearNativeSearchHistory: function (e) {
         if (!p()) return;
         let t = (0, s.Tm)(e);
         o.Z.dispatch({
-            type: 'SEARCH_HISTORY_NATIVE_CLEAR_ITEMS',
-            id: t
+            type: "SEARCH_HISTORY_NATIVE_CLEAR_ITEMS",
+            id: t,
         });
     },
     addWebSearchHistoryItem: function (e, t) {
         if (!h()) return;
         let n = (0, s.Tm)(e);
         o.Z.dispatch({
-            type: 'SEARCH_HISTORY_WEB_ADD_ITEM',
+            type: "SEARCH_HISTORY_WEB_ADD_ITEM",
             id: n,
-            query: t
+            query: t,
         });
     },
     removeWebSearchHistoryItem: function (e, t) {
         if (!h()) return;
         let n = (0, s.Tm)(e);
         o.Z.dispatch({
-            type: 'SEARCH_HISTORY_WEB_REMOVE_ITEM',
+            type: "SEARCH_HISTORY_WEB_REMOVE_ITEM",
             id: n,
-            query: t
+            query: t,
         });
     },
     clearWebSearchHistory: function (e) {
         if (!h()) return;
         let t = (0, s.Tm)(e);
         o.Z.dispatch({
-            type: 'SEARCH_HISTORY_WEB_CLEAR_ITEMS',
-            id: t
+            type: "SEARCH_HISTORY_WEB_CLEAR_ITEMS",
+            id: t,
         });
     },
     openSearchScreen: function (e) {
         o.Z.dispatch({
-            type: 'SEARCH_SCREEN_OPEN',
+            type: "SEARCH_SCREEN_OPEN",
             searchContext: e,
-            id: (0, s.Tm)(e)
+            id: (0, s.Tm)(e),
         });
     },
     setShowBlockedResults: function (e, t) {
         let n = (0, s.Tm)(e);
         o.Z.dispatch({
-            type: 'SEARCH_SET_SHOW_BLOCKED_RESULTS',
+            type: "SEARCH_SET_SHOW_BLOCKED_RESULTS",
             id: n,
-            showBlocked: t
+            showBlocked: t,
         });
     },
     setShowNoResultsAlt: function (e) {
         let t = (0, s.Tm)(e);
         o.Z.dispatch({
-            type: 'SEARCH_SET_SHOW_NO_RESULTS_ALT',
-            id: t
+            type: "SEARCH_SET_SHOW_NO_RESULTS_ALT",
+            id: t,
         });
     },
     updateSearchResultsQuery: function (e, t, n, r) {
         let i = (0, s.Tm)(e);
         o.Z.dispatch({
-            type: 'SEARCH_RESULTS_QUERY_UPDATE',
+            type: "SEARCH_RESULTS_QUERY_UPDATE",
             id: i,
             queryString: t,
             query: n,
-            offset: r
+            offset: r,
         });
     },
     ensureSearchState: function (e) {
         let t = (0, s.Tm)(e);
         o.Z.wait(() =>
             o.Z.dispatch({
-                type: 'SEARCH_ENSURE_SEARCH_STATE',
-                id: t
-            })
+                type: "SEARCH_ENSURE_SEARCH_STATE",
+                id: t,
+            }),
         );
     },
     setSearchState: function (e, t) {
         let n = (0, s.Tm)(e);
         o.Z.dispatch({
-            type: 'SEARCH_EDITOR_STATE_CHANGE',
+            type: "SEARCH_EDITOR_STATE_CHANGE",
             id: n,
-            editorState: t
+            editorState: t,
         });
     },
     clearSearchState: function (e) {
         let t = (0, s.Tm)(e);
         o.Z.wait(() =>
             o.Z.dispatch({
-                type: 'SEARCH_EDITOR_STATE_CLEAR',
-                id: t
-            })
+                type: "SEARCH_EDITOR_STATE_CLEAR",
+                id: t,
+            }),
         );
     },
     updateAutocompleteQuery: function (e, t, n) {
         o.Z.dispatch({
-            type: 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE',
+            type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
             searchContext: e,
             tokens: t,
-            cursorScope: n
+            cursorScope: n,
         });
-    }
+    },
 };

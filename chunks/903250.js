@@ -28,7 +28,14 @@ var i = n(255367),
     y = n(313199),
     A = n(821969);
 let P = r.forwardRef((e, t) => {
-    let { className: n, buttonClassName: r, subscriptionTier: s, isDarkMode: P, isEligibleForBogoPromotion: R, videoRef: D } = e,
+    let {
+            className: n,
+            buttonClassName: r,
+            subscriptionTier: s,
+            isDarkMode: P,
+            isEligibleForBogoPromotion: R,
+            videoRef: D,
+        } = e,
         { analyticsLocations: Z } = (0, m.ZP)(u.Z.PREMIUM_MARKETING_HERO_CTA),
         w = (0, b._O)(),
         k = (0, f.Nx)(),
@@ -37,81 +44,85 @@ let P = r.forwardRef((e, t) => {
         B = null != M,
         U = P ? o.Tt.WHITE : o.Tt.BRAND,
         V = L.length > 0,
-        G = (0, x.Z)({ location: 'HeroHeading' }) ? T.intl.string(T.t['EW+VIS']) : T.intl.string(T.t.YCZldH),
+        G = (0, x.Z)({ location: "HeroHeading" }) ? T.intl.string(T.t["EW+VIS"]) : T.intl.string(T.t.YCZldH),
         F = (0, g.rO)(),
         H = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(m.Gt, {
         value: Z,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: a()(I.container, I.heroHeadingContainer, n),
             ref: t,
-            'data-testid': 'marketing-page-hero-header',
+            "data-testid": "marketing-page-hero-header",
             children: [
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: I.container,
-                    children: (0, i.jsxs)('div', {
+                    children: (0, i.jsxs)("div", {
                         className: I.marketingPageTextContainer,
                         children: [
                             k && (0, i.jsx)(v.Z, {}),
                             (0, i.jsx)(c.X6q, {
                                 className: I.marketingPageHeading,
-                                variant: 'display-sm',
-                                color: 'header-primary',
-                                children: G
+                                variant: "display-sm",
+                                color: "header-primary",
+                                children: G,
                             }),
                             B
                                 ? (0, i.jsx)(C.Z, { referrer: M })
                                 : V &&
-                                  (0, i.jsx)('div', {
+                                  (0, i.jsx)("div", {
                                       className: I.affinityDescriptionContainer,
                                       children: (0, i.jsx)(E.Z, {
-                                          textColor: 'text-default',
+                                          textColor: "text-default",
                                           smallerText: !1,
-                                          isApplicationHome: !0
-                                      })
+                                          isApplicationHome: !0,
+                                      }),
                                   }),
                             w
-                                ? (0, i.jsx)('div', {
-                                      className: a()(I.buttonContainer, I.marketingPageCTAContainer, { [I.marketingPageCTAMargin]: !(V || B) }),
+                                ? (0, i.jsx)("div", {
+                                      className: a()(I.buttonContainer, I.marketingPageCTAContainer, {
+                                          [I.marketingPageCTAMargin]: !(V || B),
+                                      }),
                                       children: (0, i.jsx)(j.Z, {
                                           className: a()(I.button, r),
-                                          color: U
-                                      })
+                                          color: U,
+                                      }),
                                   })
                                 : (0, i.jsx)(O.PK, {
                                       subscriptionTier: s,
                                       inOfferExperience: k,
-                                      containerClassName: a()(I.marketingPageCTAContainer, { [I.marketingPageCTAMargin]: !(V || B) }),
+                                      containerClassName: a()(I.marketingPageCTAContainer, {
+                                          [I.marketingPageCTAMargin]: !(V || B),
+                                      }),
                                       buttonClassName: r,
                                       isApplicationHome: !0,
                                       isDarkMode: P,
-                                      isEligibleForBogoPromotion: R
+                                      isEligibleForBogoPromotion: R,
                                   }),
                             (0, i.jsx)(O._O, {
-                                variant: 'text-sm/normal',
+                                variant: "text-sm/normal",
                                 withBottomMargin: !1,
-                                isApplicationHome: !0
-                            })
-                        ]
-                    })
+                                isApplicationHome: !0,
+                            }),
+                        ],
+                    }),
                 }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: I.heroHeadingV2ArtContainer,
                     children: (0, i.jsx)(p.Z, {
                         autoPlay: !H,
                         playsInline: !0,
-                        preload: H ? 'none' : 'auto',
+                        preload: H ? "none" : "auto",
                         poster: y.Z,
                         loop: !0,
                         className: I.heroHeadingV2Art,
                         ref: D,
-                        children: (0, i.jsx)('source', {
+                        children: (0, i.jsx)("source", {
                             src: F ? N.Z : A.Z,
-                            type: F ? S.m.MP4 : S.m.WEBM
-                        })
-                    })
-                })
-            ]
-        })
+                            type: F ? S.m.MP4 : S.m.WEBM,
+                        }),
+                    }),
+                }),
+            ],
+        }),
     });
 });

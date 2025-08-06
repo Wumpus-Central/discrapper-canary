@@ -6,7 +6,7 @@ n(987382);
 var s = Array.prototype,
     c = {
         DOMTokenList: !0,
-        NodeList: !0
+        NodeList: !0,
     };
 t.exports = function (t) {
     var r = t.forEach;

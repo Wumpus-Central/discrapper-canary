@@ -12,17 +12,17 @@ var r = n(255367),
 function _() {
     let e = [
             {
-                keybinds: ['Spacebar', 'Enter'],
-                name: d.intl.string(d.t['cs/HVF'])
+                keybinds: ["Spacebar", "Enter"],
+                name: d.intl.string(d.t["cs/HVF"]),
             },
             {
-                keybinds: ['up', 'down'],
-                name: d.intl.string(d.t.dmMqa2)
+                keybinds: ["up", "down"],
+                name: d.intl.string(d.t.dmMqa2),
             },
             {
-                keybinds: ['ESC'],
-                name: d.intl.string(d.t['1ioMJS'])
-            }
+                keybinds: ["ESC"],
+                name: d.intl.string(d.t["1ioMJS"]),
+            },
         ],
         t = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         n = (0, u.zP)();
@@ -32,23 +32,23 @@ function _() {
             enter: {
                 from: {
                     opacity: 0,
-                    y: 80 * !t
+                    y: 80 * !t,
                 },
                 to: {
                     opacity: 1,
-                    y: 0
-                }
+                    y: 0,
+                },
             },
             leave: {
                 opacity: 0,
-                y: 80 * !t
+                y: 80 * !t,
             },
-            config: o.config.stiff
+            config: o.config.stiff,
         },
-        'animate-always'
+        "animate-always",
     )((t, n) =>
         n
-            ? (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", {
                   className: f.positioner,
                   children: (0, r.jsx)(o.animated.div, {
                       className: f.container,
@@ -60,28 +60,28 @@ function _() {
                               {
                                   children: [
                                       (0, r.jsx)(l.Text, {
-                                          variant: 'text-md/semibold',
+                                          variant: "text-md/semibold",
                                           className: f.bindName,
-                                          children: a
+                                          children: a,
                                       }),
                                       o.map((e) =>
                                           (0, r.jsx)(
                                               s.M,
                                               {
                                                   shortcut: e,
-                                                  className: f.shortcut
+                                                  className: f.shortcut,
                                               },
-                                              e
-                                          )
+                                              e,
+                                          ),
                                       ),
-                                      n < e.length - 1 ? (0, r.jsx)('span', { className: f.separator }) : null
-                                  ]
+                                      n < e.length - 1 ? (0, r.jsx)("span", { className: f.separator }) : null,
+                                  ],
                               },
-                              a
+                              a,
                           );
-                      })
-                  })
+                      }),
+                  }),
               })
-            : null
+            : null,
     );
 }

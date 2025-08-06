@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Sz: () => O,
-    of: () => E
+    of: () => E,
 }),
     n(539854),
     n(388685),
-    n(642613));
+    n(642613);
 var i = n(255367),
     r = n(73800),
     a = n(913527),
@@ -25,24 +25,32 @@ var i = n(255367),
     g = n(388032),
     C = n(714421);
 async function j(e) {
-    let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: r, setIsCancelling: a, analyticsLocations: s, analyticsLocation: o } = e;
+    let {
+        premiumSubscription: t,
+        pauseDuration: n,
+        onClose: i,
+        setHasError: r,
+        setIsCancelling: a,
+        analyticsLocations: s,
+        analyticsLocation: o,
+    } = e;
     try {
-        (a(!0),
+        a(!0),
             r(!1),
             await (0, d.Mg)(
                 t,
                 { pauseDuration: n },
                 {
                     amount: 0,
-                    currency: t.currency
+                    currency: t.currency,
                 },
                 (0, b.UX)(t.items, t.currency, t.paymentSourceId),
                 s,
-                o
+                o,
             ),
-            i());
+            i();
     } catch (e) {
-        (r(!0), a(!1));
+        r(!0), a(!1);
     }
 }
 function E(e) {
@@ -52,7 +60,7 @@ function E(e) {
                 let { value: t } = e;
                 s(t);
             },
-            [s]
+            [s],
         ),
         p = c.status === h.O0b.PAUSED ? g.intl.string(g.t.Lp9WoK) : g.intl.string(g.t.eSR83d),
         _ = (function (e) {
@@ -64,7 +72,7 @@ function E(e) {
                 r.push({
                     name: g.intl.formatToPlainString(t, { days: n - i }),
                     value: n,
-                    radioItemIconClassName: C.radioOption
+                    radioItemIconClassName: C.radioOption,
                 });
             }
             return (
@@ -73,7 +81,7 @@ function E(e) {
                     name: g.intl.string(g.t.OCPUMz),
                     value: 0,
                     radioBarClassName: C.cancelText,
-                    radioItemIconClassName: C.cancelText
+                    radioItemIconClassName: C.cancelText,
                 }),
                 r
             );
@@ -86,39 +94,39 @@ function E(e) {
             children: [
                 (0, i.jsx)(y.Z, {
                     premiumType: t,
-                    onClose: n
+                    onClose: n,
                 }),
                 (0, i.jsx)(u.xBx, {
                     separator: !1,
-                    children: (0, i.jsxs)('div', {
+                    children: (0, i.jsxs)("div", {
                         className: C.__invalid_header,
                         children: [
                             (0, i.jsx)(u.X6q, {
-                                variant: 'heading-xl/bold',
+                                variant: "heading-xl/bold",
                                 className: C.__invalid_modalHeader,
-                                children: g.intl.string(g.t.f3nnBw)
+                                children: g.intl.string(g.t.f3nnBw),
                             }),
                             (0, i.jsx)(u.X6q, {
-                                variant: 'heading-sm/medium',
+                                variant: "heading-sm/medium",
                                 className: C.subtitle,
-                                children: p
-                            })
-                        ]
-                    })
+                                children: p,
+                            }),
+                        ],
+                    }),
                 }),
                 (0, i.jsx)(u.hzk, {
                     className: C.body,
                     children: (0, i.jsx)(u.FXm, {
                         options: _,
                         onChange: d,
-                        value: a
-                    })
+                        value: a,
+                    }),
                 }),
                 (0, i.jsx)(u.mzw, {
                     justify: f.Z.Justify.START,
-                    children: l
-                })
-            ]
+                    children: l,
+                }),
+            ],
         })
     );
 }
@@ -131,12 +139,12 @@ function O(e) {
         v = null,
         N = null,
         I = [h.O0b.PAST_DUE, h.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
-        T = s()(I).add(o, 'days').toDate();
+        T = s()(I).add(o, "days").toDate();
     switch (t.status) {
         case h.O0b.PAST_DUE:
-            N = g.intl.format(g.t['xaS18/'], {
+            N = g.intl.format(g.t["xaS18/"], {
                 pauseDuration: o,
-                resumeDate: T
+                resumeDate: T,
             });
             break;
         case h.O0b.PAUSED:
@@ -146,30 +154,30 @@ function O(e) {
             N = g.intl.format(g.t.W85vFB, {
                 pauseDate: I,
                 resumeDate: T,
-                pauseDuration: o
+                pauseDuration: o,
             });
     }
     return (
-        (v = (0, i.jsx)('div', {
+        (v = (0, i.jsx)("div", {
             className: C.body,
-            children: N
+            children: N,
         })),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(y.Z, {
                     premiumType: n,
-                    onClose: a
+                    onClose: a,
                 }),
                 (0, i.jsx)(u.xBx, {
                     separator: !1,
-                    children: (0, i.jsx)('div', {
+                    children: (0, i.jsx)("div", {
                         className: C.__invalid_header,
                         children: (0, i.jsx)(u.X6q, {
-                            variant: 'heading-xl/bold',
+                            variant: "heading-xl/bold",
                             className: C.__invalid_modalHeader,
-                            children: g.intl.string(g.t['AnMG5+'])
-                        })
-                    })
+                            children: g.intl.string(g.t["AnMG5+"]),
+                        }),
+                    }),
                 }),
                 (0, i.jsxs)(u.hzk, {
                     className: C.body,
@@ -177,20 +185,20 @@ function O(e) {
                         m
                             ? (0, i.jsx)(u.kzN, {
                                   className: C.errorBlock,
-                                  children: g.intl.string(g.t['5mlOCQ'])
+                                  children: g.intl.string(g.t["5mlOCQ"]),
                               })
                             : null,
-                        v
-                    ]
+                        v,
+                    ],
                 }),
                 (0, i.jsx)(u.mzw, {
                     justify: f.Z.Justify.START,
-                    children: (0, i.jsxs)('div', {
+                    children: (0, i.jsxs)("div", {
                         className: C.whatYouLoseButtonContainer,
                         children: [
                             (0, i.jsx)(u.zxk, {
-                                variant: 'critical-primary',
-                                text: g.intl.string(g.t['cY+Ooa']),
+                                variant: "critical-primary",
+                                text: g.intl.string(g.t["cY+Ooa"]),
                                 disabled: E || null == o,
                                 onClick: async () => {
                                     await j({
@@ -200,20 +208,20 @@ function O(e) {
                                         setHasError: b,
                                         onClose: a,
                                         analyticsLocations: x,
-                                        analyticsLocation: d
+                                        analyticsLocation: d,
                                     });
-                                }
+                                },
                             }),
                             (0, i.jsx)(c.zx, {
                                 look: c.zx.Looks.LINK,
                                 color: (0, l.wj)(P) ? c.zx.Colors.WHITE : c.zx.Colors.PRIMARY,
                                 onClick: a,
-                                children: g.intl.string(g.t.h9tkAA)
-                            })
-                        ]
-                    })
-                })
-            ]
+                                children: g.intl.string(g.t.h9tkAA),
+                            }),
+                        ],
+                    }),
+                }),
+            ],
         })
     );
 }

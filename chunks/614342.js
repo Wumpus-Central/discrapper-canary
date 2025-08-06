@@ -12,23 +12,24 @@ function d(e) {
         case s.d5.NEEDS_COMMUNITY:
             return {
                 visibility: t,
-                noticeText: c.intl.string(c.t['0Z2Qxs']),
+                noticeText: c.intl.string(c.t["0Z2Qxs"]),
                 ctaLabel: c.intl.string(c.t.BOJpl5),
                 ctaClickable: null != e,
                 onCtaClicked() {
                     var t;
-                    (i()(null != e, 'Guild must be not null open COMMUNITY settings'), a.Z.open(null != (t = null == e ? void 0 : e.id) ? t : '', o.pNK.COMMUNITY));
-                }
+                    i()(null != e, "Guild must be not null open COMMUNITY settings"),
+                        a.Z.open(null != (t = null == e ? void 0 : e.id) ? t : "", o.pNK.COMMUNITY);
+                },
             };
         case s.d5.WAITLIST_ONLY:
             return {
                 visibility: t,
-                noticeText: c.intl.string(c.t['5vz88P']),
-                ctaLabel: c.intl.string(c.t['6yjvmp']),
+                noticeText: c.intl.string(c.t["5vz88P"]),
+                ctaLabel: c.intl.string(c.t["6yjvmp"]),
                 ctaClickable: !0,
                 onCtaClicked() {
-                    (0, l.Z)('https://dis.gd/creators-waitlist');
-                }
+                    (0, l.Z)("https://dis.gd/creators-waitlist");
+                },
             };
         default:
             return;

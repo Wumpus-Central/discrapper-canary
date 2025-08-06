@@ -27,14 +27,14 @@ function E(e) {
     let t,
         { editRoleId: n, setEditRoleId: l, selectedSection: E, setSelectedSection: S } = e,
         T = (0, s.e7)([f.Z], () => f.Z.guild, []);
-    a()(null != T, 'guildId cannot be null here');
+    a()(null != T, "guildId cannot be null here");
     let { role: P, permissionSearchQuery: w } = (0, s.cj)(
         [f.Z],
         () => ({
             role: f.Z.getRole(n),
-            permissionSearchQuery: f.Z.getPermissionSearchQuery()
+            permissionSearchQuery: f.Z.getPermissionSearchQuery(),
         }),
-        [n]
+        [n],
     );
     i.useEffect(() => {
         null == P && l(null);
@@ -45,7 +45,7 @@ function E(e) {
         A = (0, s.e7)([x.Z], () => x.Z.getProps().integrations),
         k = {
             role: P,
-            editRoleId: n
+            editRoleId: n,
         },
         L = i.useRef(k);
     if (
@@ -63,24 +63,24 @@ function E(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })(
@@ -91,10 +91,10 @@ function E(e) {
                         role_mentionable: null == n ? void 0 : n.mentionable,
                         role_hoist: null == n ? void 0 : n.hoist,
                         role_permissions: null == n ? void 0 : n.permissions.toString(),
-                        role_num_members: l
+                        role_num_members: l,
                     },
-                    (0, c.hH)(T.id)
-                )
+                    (0, c.hH)(T.id),
+                ),
             );
         }, [E, T.id, null == P ? void 0 : P.id]),
         i.useEffect(() => {
@@ -110,7 +110,7 @@ function E(e) {
                 role: P,
                 locked: Z,
                 highestRole: R,
-                setSelectedSection: S
+                setSelectedSection: S,
             });
             break;
         case C.ZI.PERMISSIONS:
@@ -119,7 +119,7 @@ function E(e) {
                 role: P,
                 locked: Z,
                 setSelectedSection: S,
-                initialSearchQuery: w
+                initialSearchQuery: w,
             });
             break;
         case C.ZI.VERIFICATIONS:
@@ -128,7 +128,7 @@ function E(e) {
                 role: P,
                 locked: Z,
                 setSelectedSection: S,
-                integrations: null != A ? A : void 0
+                integrations: null != A ? A : void 0,
             });
             break;
         case C.ZI.MEMBERS:
@@ -136,7 +136,7 @@ function E(e) {
                 guild: T,
                 role: P,
                 locked: Z,
-                setSelectedSection: S
+                setSelectedSection: S,
             });
             break;
         default:
@@ -149,16 +149,16 @@ function E(e) {
                 guild: T,
                 currentRoleId: n,
                 setCurrentRoleId: l,
-                setSelectedSection: S
+                setSelectedSection: S,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: I.contentContainer,
                 ref: D,
                 children: (0, r.jsx)(o.JcV, {
                     containerRef: D,
-                    children: t
-                })
-            })
-        ]
+                    children: t,
+                }),
+            }),
+        ],
     });
 }

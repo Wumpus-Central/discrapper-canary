@@ -1,4 +1,4 @@
-(r.d(e, { default: () => g }), r(388685), r(781311));
+r.d(e, { default: () => g }), r(388685), r(781311);
 var n = r(255367),
     a = r(73800),
     i = r(97613),
@@ -19,28 +19,28 @@ let g = function (t) {
                     ? void 0
                     : i.values.map((t) => ({
                           id: o()(),
-                          value: t
+                          value: t,
                       }))
                 : [
                       {
                           id: o()(),
-                          value: ''
-                      }
-                  ]
+                          value: "",
+                      },
+                  ],
         ),
         [v, O] = a.useState(null),
         j = async () => {
             null != v && O(null);
-            let t = f.map((t) => t.value.trim()).filter((t) => '' !== t);
+            let t = f.map((t) => t.value.trim()).filter((t) => "" !== t);
             if (0 === t.length) return void O(b.intl.string(b.t.TCHkcX));
             let e = {
                 field_type: u.QJ.TERMS,
-                label: b.intl.string(b.t['9suSIC']),
+                label: b.intl.string(b.t["9suSIC"]),
                 values: t,
-                required: !0
+                required: !0,
             };
             try {
-                (await g(e), _());
+                await g(e), _();
             } catch (t) {
                 O(new c.Hx(t).getAnyErrorMessage());
             }
@@ -53,38 +53,38 @@ let g = function (t) {
                 for (var e = 1; e < arguments.length; e++) {
                     var r = null != arguments[e] ? arguments[e] : {},
                         n = Object.keys(r);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (n = n.concat(
                             Object.getOwnPropertySymbols(r).filter(function (t) {
                                 return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                            })
+                            }),
                         )),
                         n.forEach(function (e) {
                             var n;
-                            ((n = r[e]),
+                            (n = r[e]),
                                 e in t
                                     ? Object.defineProperty(t, e, {
                                           value: n,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (t[e] = n));
-                        }));
+                                    : (t[e] = n);
+                        });
                 }
                 return t;
             })({}, t)),
             (r = r =
                 {
                     errorText: v,
-                    title: b.intl.string(b.t['3pz9t7']),
+                    title: b.intl.string(b.t["3pz9t7"]),
                     onCancel: _,
                     onConfirm: j,
                     children: (0, n.jsx)(s.k, {
                         guild: y,
                         rules: f,
-                        setRules: m
-                    })
+                        setRules: m,
+                    }),
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -98,7 +98,7 @@ let g = function (t) {
                   })(Object(r)).forEach(function (t) {
                       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                   }),
-            e)
-        )
+            e),
+        ),
     });
 };

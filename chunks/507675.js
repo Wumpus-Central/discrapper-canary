@@ -16,9 +16,9 @@ function s(e) {
                 header: t,
                 description: n,
                 errorCodeMessage: s,
-                size: c
+                size: c,
             }),
-            l
-        ]
+            l,
+        ],
     });
 }

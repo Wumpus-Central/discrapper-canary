@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,7 @@ let E = i.memo(function (e) {
     let { width: t, height: n, src: o, url: p, format: m, className: E } = e,
         [b, y] = i.useState(!1),
         O = (0, c.hb)((0, l.iy)(p)),
-        v = O ? f.intl.string(f.t['5/NS7+']) : f.intl.string(f.t.nIH0v7),
+        v = O ? f.intl.string(f.t["5/NS7+"]) : f.intl.string(f.t.nIH0v7),
         I = O ? s.r7p : s.vxU;
     i.useEffect(() => {
         if (!b) return;
@@ -76,7 +76,7 @@ let E = i.memo(function (e) {
         return () => clearTimeout(e);
     }, [b]);
     let T = (e) => {
-        (e.preventDefault(),
+        e.preventDefault(),
             e.stopPropagation(),
             y(!0),
             O
@@ -86,9 +86,9 @@ let E = i.memo(function (e) {
                       src: o,
                       width: t,
                       height: n,
-                      format: m
+                      format: m,
                   }),
-                  u.S.dispatch(d.CkL.FAVORITE_GIF)));
+                  u.S.dispatch(d.CkL.FAVORITE_GIF));
     };
     return (0, r.jsx)(s.ua7, {
         text: v,
@@ -98,19 +98,19 @@ let E = i.memo(function (e) {
                 g(h({}, e), {
                     className: a()(E, _.gifFavoriteButton, {
                         [_.selected]: O,
-                        [_.showPulse]: b
+                        [_.showPulse]: b,
                     }),
                     onMouseDown: (e) => e.preventDefault(),
                     onClick: T,
                     onDoubleClick: (e) => e.preventDefault(),
                     children: (0, r.jsx)(I, {
-                        color: 'currentColor',
+                        color: "currentColor",
                         className: _.icon,
-                        size: 'custom',
+                        size: "custom",
                         width: 20,
-                        height: 20
-                    })
-                })
-            )
+                        height: 20,
+                    }),
+                }),
+            ),
     });
 });

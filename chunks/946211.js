@@ -11,7 +11,7 @@ function u(e) {
     return (0, n.jsx)(c.Z, {
         guildProductListing: r,
         className: i.header,
-        onClose: t
+        onClose: t,
     });
 }
 let a = (e, t, r) => (r === o.h8.CONFIRM ? null : (0, n.jsx)(u, { onClose: () => t(!1) }));

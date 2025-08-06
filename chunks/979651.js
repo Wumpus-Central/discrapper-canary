@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { Z: () => F }), n(388685));
+n.d(t, { Z: () => F }), n(388685);
 var o,
     a = n(392711),
     s = n.n(a),
@@ -15,7 +15,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,20 +31,20 @@ let p = 0,
     O = {},
     v = {};
 function I(e, t) {
-    return ''.concat(e, ':').concat(t);
+    return "".concat(e, ":").concat(t);
 }
 function T(e, t) {
     let n = e[t];
-    return (null == n && ((n = {}), (e[t] = n)), n);
+    return null == n && ((n = {}), (e[t] = n)), n;
 }
 function S(e) {
     var t;
     let n = null != (t = m[d.ME]) ? t : {},
         r = {};
-    (s().each(n, (t, n) => {
+    s().each(n, (t, n) => {
         t.channelId !== e && (r[n] = t);
     }),
-        (m[d.ME] = r));
+        (m[d.ME] = r);
 }
 function A(e) {
     var t;
@@ -62,13 +62,27 @@ function R(e, t, n) {
     let r = T(m, null != e ? e : d.ME),
         i = r[t],
         o = n(i);
-    return i === o ? [!1, o, i] : (null != i && (delete r[t], null != i.channelId && (delete T(b, i.channelId)[t], delete T(y, i.channelId)[t]), null != i.sessionId && delete T(O, t)[i.sessionId], C(null != e ? e : d.ME, t)), null != o && ((r[t] = o), null != o.channelId && ((T(b, o.channelId)[t] = o), o.selfVideo && ((T(y, o.channelId)[t] = o), N(null != e ? e : d.ME, t))), null != o.sessionId && (T(O, t)[o.sessionId] = o)), [!0, o, i]);
+    return i === o
+        ? [!1, o, i]
+        : (null != i &&
+              (delete r[t],
+              null != i.channelId && (delete T(b, i.channelId)[t], delete T(y, i.channelId)[t]),
+              null != i.sessionId && delete T(O, t)[i.sessionId],
+              C(null != e ? e : d.ME, t)),
+          null != o &&
+              ((r[t] = o),
+              null != o.channelId &&
+                  ((T(b, o.channelId)[t] = o), o.selfVideo && ((T(y, o.channelId)[t] = o), N(null != e ? e : d.ME, t))),
+              null != o.sessionId && (T(O, t)[o.sessionId] = o)),
+          [!0, o, i]);
 }
 function P(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let [n, r, o] = L(t.guildId, t);
-        return n ? (t.sessionId === i && null != r && null != o && o.channelId !== r.channelId && (p += 1), h++, !0) : e;
+        return n
+            ? (t.sessionId === i && null != r && null != o && o.channelId !== r.channelId && (p += 1), h++, !0)
+            : e;
     }, !1);
 }
 function w(e) {
@@ -77,8 +91,8 @@ function w(e) {
         let [r] = L(e.guildId, n);
         t = t || r;
     }
-    for (let n of e.removedVoiceStateUsers) (R(e.guildId, n, () => null), (t = !0));
-    return (t && h++, t);
+    for (let n of e.removedVoiceStateUsers) R(e.guildId, n, () => null), (t = !0);
+    return t && h++, t;
 }
 function D(e) {
     let { userId: t, channelId: n, platform: r } = e;
@@ -100,7 +114,7 @@ function L(e, t) {
                 sessionId: t.sessionId,
                 suppress: t.suppress,
                 userId: t.userId,
-                discoverable: t.discoverable
+                discoverable: t.discoverable,
             };
             return null != e ? e.merge(n) : new u.Z(n);
         }
@@ -108,28 +122,29 @@ function L(e, t) {
 }
 function x(e) {
     let { guildId: t, channelId: n } = e,
-        [i] = R(t, r, (e) => (null == e ? void 0 : e.set('channelId', n)));
+        [i] = R(t, r, (e) => (null == e ? void 0 : e.set("channelId", n)));
     return i;
 }
 function M(e) {
     let { user: t, sessionId: n } = e,
         o = null != r && r !== t.id;
-    return (o && ((m = {}), (b = {}), (O = {}), (y = {}), E.clear()), (r = t.id), (i = n), o);
+    return o && ((m = {}), (b = {}), (O = {}), (y = {}), E.clear()), (r = t.id), (i = n), o;
 }
 function k() {
-    ((m = {}), (b = {}), (O = {}), (y = {}), E.clear());
+    (m = {}), (b = {}), (O = {}), (y = {}), E.clear();
 }
 function j(e) {
     let { voiceStates: t, user: n, sessionId: o } = e;
-    for (let [e, n] of ((m = {}), (b = {}), (O = {}), (y = {}), Object.entries(t))) for (let [t, r] of Object.entries(n)) R(e, t, () => new u.Z(r));
-    ((r = n.id), (i = o));
+    for (let [e, n] of ((m = {}), (b = {}), (O = {}), (y = {}), Object.entries(t)))
+        for (let [t, r] of Object.entries(n)) R(e, t, () => new u.Z(r));
+    (r = n.id), (i = o);
 }
 function U(e) {
     let { guild: t } = e;
-    (s().forEach(m[t.id], (e) => {
+    s().forEach(m[t.id], (e) => {
         R(t.id, e.userId, () => null);
     }),
-        delete m[t.id]);
+        delete m[t.id];
 }
 function G(e) {
     let { channel: t } = e;
@@ -211,7 +226,7 @@ class Z extends (o = l.ZP.Store) {
         return p;
     }
 }
-_(Z, 'displayName', 'VoiceStateStore');
+_(Z, "displayName", "VoiceStateStore");
 let F = new Z(c.Z, {
     CONNECTION_OPEN: M,
     CONNECTION_OPEN_SUPPLEMENTAL: k,
@@ -223,5 +238,5 @@ let F = new Z(c.Z, {
     CHANNEL_DELETE: G,
     CALL_DELETE: B,
     PASSIVE_UPDATE_V2: w,
-    RTC_CONNECTION_PLATFORM: D
+    RTC_CONNECTION_PLATFORM: D,
 });

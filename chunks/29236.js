@@ -3,7 +3,7 @@ var r = n(329569),
     o = n(748513),
     a = n(294199);
 function i(e, t) {
-    var n = null == e ? null : (void 0 !== r && o(e)) || e['@@iterator'];
+    var n = null == e ? null : (void 0 !== r && o(e)) || e["@@iterator"];
     if (null != n) {
         var i,
             s,
@@ -18,7 +18,7 @@ function i(e, t) {
                 d = !1;
             } else for (; !(d = (i = c.call(n)).done) && (a(u).call(u, i.value), u.length !== t); d = !0);
         } catch (e) {
-            ((p = !0), (s = e));
+            (p = !0), (s = e);
         } finally {
             try {
                 if (!d && null != n.return && ((l = n.return()), Object(l) !== l)) return;

@@ -26,29 +26,29 @@ function m(e) {
             name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: {
                 guild_id: t,
-                is_owner: m
-            }
+                is_owner: m,
+            },
         }),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: f.container,
             children: (0, r.jsx)(s.ZP, {
                 header: h.intl.string(h.t.C0m4ra),
                 content: h.intl.string(h.t.zOHfER),
-                asset: (0, r.jsx)('div', {
+                asset: (0, r.jsx)("div", {
                     className: f.image,
-                    children: (0, r.jsx)('img', {
+                    children: (0, r.jsx)("img", {
                         alt: h.intl.string(h.t.xad4wc),
                         src: g,
-                        className: f.image
-                    })
+                        className: f.image,
+                    }),
                 }),
                 buttonCTA: h.intl.string(h.t.OgQQbG),
                 onClick: () => {
                     o.Z.open(t, p.pNK.ROLE_SUBSCRIPTIONS);
                 },
                 secondaryButtonCTA: h.intl.string(h.t.WAI6xs),
-                markAsDismissed: n
-            })
+                markAsDismissed: n,
+            }),
         })
     );
 }

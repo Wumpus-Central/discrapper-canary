@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -17,25 +17,25 @@ class h extends i.PureComponent {
             onDismissed: () => n(u.L.UNKNOWN),
             onClick: this.handleButtonClick,
             message: null == t || t < 30 ? d.intl.string(d.t.hlitVV) : d.intl.string(d.t.XHtaDA),
-            cta: d.intl.string(d.t['vqb+Hx']),
+            cta: d.intl.string(d.t["vqb+Hx"]),
             trackingSource: c.PsQ.GUILD_SUBSCRIPTION_NOTICE,
             type: c.vID.GUILD_BOOSTING,
             image: p,
-            imageMarginX: 26
+            imageMarginX: 26,
         });
     }
     constructor(...e) {
         var t, n;
-        (super(...e),
-            (t = 'handleButtonClick'),
+        super(...e),
+            (t = "handleButtonClick"),
             (n = () => {
                 let { guild: e } = this.props;
                 (0, o.f)({
                     guildId: e.id,
                     location: {
                         section: c.jXE.CHANNEL_NOTICE,
-                        object: c.qAy.SERVER_STATUS_CTA
-                    }
+                        object: c.qAy.SERVER_STATUS_CTA,
+                    },
                 });
             }),
             t in this
@@ -43,9 +43,9 @@ class h extends i.PureComponent {
                       value: n,
                       enumerable: !0,
                       configurable: !0,
-                      writable: !0
+                      writable: !0,
                   })
-                : (this[t] = n));
+                : (this[t] = n);
     }
 }
 let f = l.ZP.connectStores([s.Z], (e) => {

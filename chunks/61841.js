@@ -1,4 +1,4 @@
-(e(539854), e(388685), e(642613));
+e(539854), e(388685), e(642613);
 let n = (t, r, e, n) => {
     var o;
     let i,
@@ -22,17 +22,17 @@ let n = (t, r, e, n) => {
         h = [...l].sort()[Math.floor(0.95 * l.length)];
     return {
         normalizedData: v,
-        normalizedVolumeMultipler: Math.min((null != (o = n.loudnessThreshold) ? o : h) / h, 1)
+        normalizedVolumeMultipler: Math.min((null != (o = n.loudnessThreshold) ? o : h) / h, 1),
     };
 };
-self.addEventListener('message', (t) => {
+self.addEventListener("message", (t) => {
     let {
-            data: { rawBufferData: r, width: e, options: o, config: i, id: a }
+            data: { rawBufferData: r, width: e, options: o, config: i, id: a },
         } = t,
         { normalizedData: s, normalizedVolumeMultipler: u } = n(r, e, o, i);
     self.postMessage({
         waveform: s,
         id: a,
-        normalizedVolumeMultipler: u
+        normalizedVolumeMultipler: u,
     });
 });

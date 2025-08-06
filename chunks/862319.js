@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => h,
-    w: () => f
+    w: () => f,
 });
 var r = n(255367);
 n(73800);
@@ -17,24 +17,24 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -59,43 +59,45 @@ function p(e, t) {
 function h(e) {
     let { channelBenefits: t, intangibleBenefits: i, subscriptionListings: s, onImport: h } = e,
         f = (0, d.mY)();
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: m.container,
         children: s.map((e) =>
             (0, r.jsxs)(
-                'div',
+                "div",
                 {
                     className: m.row,
                     children: [
-                        (0, r.jsx)('img', {
-                            alt: '',
+                        (0, r.jsx)("img", {
+                            alt: "",
                             src: null == e.image_asset ? void 0 : (0, o._W)(e.application_id, e.image_asset, 512),
-                            className: l()(m.rowIcon, m.listingImage)
+                            className: l()(m.rowIcon, m.listingImage),
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: m.rowBody,
                             children: [
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'header-primary',
+                                    variant: "text-md/normal",
+                                    color: "header-primary",
                                     className: l()(m.rowText, m.listingName),
-                                    children: e.name
+                                    children: e.name,
                                 }),
                                 (0, r.jsx)(a.Text, {
-                                    color: 'header-secondary',
-                                    variant: 'text-sm/normal',
-                                    children: u.intl.format(u.t['QMj+Ii'], {
+                                    color: "header-secondary",
+                                    variant: "text-sm/normal",
+                                    children: u.intl.format(u.t["QMj+Ii"], {
                                         channels: e.role_benefits.benefits.filter(c.rC).length,
-                                        benefits: e.role_benefits.benefits.filter(c.lL).length
-                                    })
-                                })
-                            ]
+                                        benefits: e.role_benefits.benefits.filter(c.lL).length,
+                                    }),
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(a.zxk, {
-                            variant: 'secondary',
+                            variant: "secondary",
                             onClick: () => {
                                 (0, a.ZDy)(async () => {
-                                    let { ImportBenefitsFromSubscriptionListingModal: l } = await n.e('31667').then(n.bind(n, 880229));
+                                    let { ImportBenefitsFromSubscriptionListingModal: l } = await n
+                                        .e("31667")
+                                        .then(n.bind(n, 880229));
                                     return (n) =>
                                         (0, r.jsx)(
                                             l,
@@ -103,19 +105,19 @@ function h(e) {
                                                 fromSubscriptionListing: e,
                                                 existingChannelBenefits: t,
                                                 existingIntangibleBenefits: i,
-                                                onSubmit: h
-                                            })
+                                                onSubmit: h,
+                                            }),
                                         );
                                 });
                             },
                             disabled: f,
-                            text: u.intl.string(u.t['90bIv7'])
-                        })
-                    ]
+                            text: u.intl.string(u.t["90bIv7"]),
+                        }),
+                    ],
                 },
-                e.id
-            )
-        )
+                e.id,
+            ),
+        ),
     });
 }
 function f(e) {
@@ -126,36 +128,36 @@ function f(e) {
             ? void 0
             : function () {
                   (0, a.ZDy)(async () => {
-                      let { ImportBenefitsFromRoleModal: e } = await n.e('31667').then(n.bind(n, 880229));
+                      let { ImportBenefitsFromRoleModal: e } = await n.e("31667").then(n.bind(n, 880229));
                       return (n) =>
                           (0, r.jsx)(
                               e,
                               p(g({}, n), {
                                   guildId: t,
-                                  onImport: i
-                              })
+                                  onImport: i,
+                              }),
                           );
                   });
               },
-        'aria-disabled': o,
+        "aria-disabled": o,
         children: [
             (0, r.jsx)(a.lZ8, {
-                size: 'custom',
+                size: "custom",
                 width: 23,
                 height: 23,
-                color: 'currentColor',
-                className: m.rowIcon
+                color: "currentColor",
+                className: m.rowIcon,
             }),
             (0, r.jsx)(a.Text, {
-                variant: 'text-md/normal',
-                color: 'header-primary',
+                variant: "text-md/normal",
+                color: "header-primary",
                 className: m.rowText,
-                children: u.intl.string(u.t.xK9pBA)
+                children: u.intl.string(u.t.xK9pBA),
             }),
             (0, r.jsx)(s.Z, {
                 direction: s.Z.Directions.RIGHT,
-                className: m.caret
-            })
-        ]
+                className: m.caret,
+            }),
+        ],
     });
 }

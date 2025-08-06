@@ -29,15 +29,15 @@ function Z(e) {
     };
     return x
         ? (0, i.jsx)(r.sNh, {
-              id: 'invite-speaker',
-              label: O ? b.intl.string(b.t['W6c/VV']) : b.intl.string(b.t.VUCWcH),
-              action: _
+              id: "invite-speaker",
+              label: O ? b.intl.string(b.t["W6c/VV"]) : b.intl.string(b.t.VUCWcH),
+              action: _,
           })
         : h && O
           ? (0, i.jsx)(r.sNh, {
-                id: 'invite-speaker',
-                label: b.intl.string(b.t['W6c/VV']),
-                action: _
+                id: "invite-speaker",
+                label: b.intl.string(b.t["W6c/VV"]),
+                action: _,
             })
           : null;
 }

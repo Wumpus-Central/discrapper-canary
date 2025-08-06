@@ -5,23 +5,23 @@ var r = n(525654),
 let s = {
     dump(e) {
         let t;
-        (null != performance.memory &&
+        null != performance.memory &&
             (t = {
                 jsHeapSizeLimit: performance.memory.jsHeapSizeLimit,
                 totalJSHeapSize: performance.memory.totalJSHeapSize,
-                usedJSHeapSize: performance.memory.usedJSHeapSize
+                usedJSHeapSize: performance.memory.usedJSHeapSize,
             }),
             e({
                 browser: {
                     name: i().name,
-                    version: i().version
+                    version: i().version,
                 },
                 os: {
                     name: i().os.family,
-                    version: i().os.version
+                    version: i().os.version,
                 },
-                memory: t
-            }));
+                memory: t,
+            });
     },
-    getTimeSinceNavigationStart: () => Date.now() - l.mb
+    getTimeSinceNavigationStart: () => Date.now() - l.mb,
 };

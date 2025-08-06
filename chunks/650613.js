@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => b }), a(388685), a(361932), a(187205));
+a.d(t, { Z: () => b }), a(388685), a(361932), a(187205);
 var n = a(255367),
     r = a(442837),
     l = a(481060),
@@ -22,29 +22,26 @@ function f(e) {
               onClick: function () {
                   (0, s.openUserProfileModal)({
                       sourceAnalyticsLocations: [i.Z.DEV_TOOLS],
-                      userId: t
+                      userId: t,
                   });
               },
               children: (0, n.jsx)(l.Text, {
-                  variant: 'text-md/semibold',
-                  children: a.username
-              })
+                  variant: "text-md/semibold",
+                  children: a.username,
+              }),
           });
 }
 function b() {
     var e;
     let t = (0, r.e7)([u.Z], () => u.Z.getFeed(h.YN.GLOBAL_FEED)),
         a = (0, r.e7)([u.Z], () => u.Z.getFilters()),
-        i = (0, r.cj)(
-            [c.Z],
-            () => {
-                var e;
-                let a = {};
-                for (let n of null != (e = null == t ? void 0 : t.entries) ? e : []) a[(0, c.T)(n.content)] = c.Z.canRenderContent(n.content);
-                return a;
-            },
-            [t]
-        ),
+        i = (0, r.cj)([c.Z], () => {
+            var e;
+            let a = {};
+            for (let n of null != (e = null == t ? void 0 : t.entries) ? e : [])
+                a[(0, c.T)(n.content)] = c.Z.canRenderContent(n.content);
+            return a;
+        }, [t]),
         s = (0, r.e7)([d.Z], () => d.Z.getImpressionCappedItemIds());
     if (null == a) return null;
     let o =
@@ -55,35 +52,38 @@ function b() {
                   if (!(0, m.g)(a, t)) return [];
                   let r = i[(0, c.T)(t)];
                   return (0, n.jsxs)(
-                      'li',
+                      "li",
                       {
                           className: p.locatorEntry,
                           children: [
                               (0, n.jsx)(f, {
                                   type: t.author_type,
-                                  id: t.author_id
+                                  id: t.author_id,
                               }),
                               !r &&
                                   (0, n.jsx)(l.Text, {
-                                      variant: 'text-md/normal',
-                                      children: 'Expired or no matching presence'
+                                      variant: "text-md/normal",
+                                      children: "Expired or no matching presence",
                                   }),
                               (0, x.n2)(t) &&
                                   (0, n.jsxs)(l.Text, {
-                                      variant: 'text-md/normal',
-                                      children: ['Expired at ', t.expires_at]
+                                      variant: "text-md/normal",
+                                      children: ["Expired at ", t.expires_at],
                                   }),
                               s.has(t.id) &&
                                   (0, n.jsx)(l.Text, {
-                                      variant: 'text-md/normal',
-                                      children: 'Impression capped'
-                                  })
-                          ]
+                                      variant: "text-md/normal",
+                                      children: "Impression capped",
+                                  }),
+                          ],
                       },
-                      t.id
+                      t.id,
                   );
               });
     return (0, n.jsxs)(l.hjN, {
-        children: [(0, n.jsx)(l.vwX, { children: 'Selected Content' }), null != o ? (0, n.jsx)('ul', { children: o }) : (0, n.jsx)('div', { children: '(none?)' })]
+        children: [
+            (0, n.jsx)(l.vwX, { children: "Selected Content" }),
+            null != o ? (0, n.jsx)("ul", { children: o }) : (0, n.jsx)("div", { children: "(none?)" }),
+        ],
     });
 }

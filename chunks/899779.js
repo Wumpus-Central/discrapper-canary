@@ -1,1 +1,1 @@
-e.exports = { doubleInput: 'doubleInput__594ce' };
+e.exports = { doubleInput: "doubleInput__594ce" };

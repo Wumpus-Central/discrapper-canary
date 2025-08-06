@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => ej }), n(388685), n(539854));
+n.d(t, { Z: () => ej }), n(388685), n(539854);
 var r,
     i = n(512722),
     o = n.n(i),
@@ -31,7 +31,7 @@ function C(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,15 +41,15 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 C(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -57,11 +57,11 @@ function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -76,7 +76,7 @@ function w(e, t) {
         e
     );
 }
-let D = new d.Z('ChannelRTCStore'),
+let D = new d.Z("ChannelRTCStore"),
     L = Object.freeze([]),
     x = [],
     M = {},
@@ -92,7 +92,7 @@ let D = new d.Z('ChannelRTCStore'),
     Y = {};
 function W(e) {
     let t = M[e];
-    return (null == t && ((t = new S.ZP(e)), (M[e] = t)), t);
+    return null == t && ((t = new S.ZP(e)), (M[e] = t)), t;
 }
 function K() {
     for (let e of x) ei(e);
@@ -106,9 +106,10 @@ function z() {
     null == n || e.includes(n) || e.push(n);
     let r = f.Z.getRemoteSessionId(),
         i = T.Z.getVoiceStateForSession(m.default.getId(), r);
-    ((null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), s().difference(x, e).forEach(ei));
+    (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId),
+        s().difference(x, e).forEach(ei);
     let o = s().difference(e, x);
-    return ((x = e), o);
+    return (x = e), o;
 }
 function q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
@@ -135,21 +136,21 @@ function $(e) {
             gridDurationMs: 0,
             focusDurationMs: 0,
             toggleCount: 0,
-            lastUpdate: 0
+            lastUpdate: 0,
         });
     let t = j[e],
         n = performance.now(),
         r = J(e);
     if (t.lastUpdate > 0) {
         let e = n - t.lastUpdate;
-        t[r ? 'focusDurationMs' : 'gridDurationMs'] += e;
+        t[r ? "focusDurationMs" : "gridDurationMs"] += e;
     }
     t.lastUpdate = n;
 }
 function ee(e, t) {
     $(e);
     let n = J(e);
-    (null == t ? delete k[e] : (k[e] = t), n !== J(e) && j[e].toggleCount++);
+    null == t ? delete k[e] : (k[e] = t), n !== J(e) && j[e].toggleCount++;
 }
 function et(e) {
     return e.size(S.sI.STREAM) > 0 || e.size(S.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
@@ -160,7 +161,7 @@ function en(e) {
     if (0 === n.size() || y.Z.getVoiceChannelId() !== e) return void ee(e, null);
     let r = A.dF.NONE,
         i = n.toArray(S.sI.STREAM).find((e) => e.type === A.fO.STREAM && h.Z.getActiveStreamForStreamKey(e.id));
-    if (null != i) (o()(i.type === A.fO.STREAM, 'Impossible condition'), (r = i.id));
+    if (null != i) o()(i.type === A.fO.STREAM, "Impossible condition"), (r = i.id);
     else if (1 === n.size()) r = t;
     else if (1 === n.size(S.sI.VIDEO)) {
         let [e] = n.toArray(S.sI.VIDEO);
@@ -184,20 +185,26 @@ function er(e) {
     n === N.WtW.VOICE ? (delete U[e], delete G[e]) : (U[e] = n);
 }
 function ei(e) {
-    (delete M[e], delete k[e], delete U[e], delete G[e]);
+    delete M[e], delete k[e], delete U[e], delete G[e];
 }
 function eo() {
     return q((e) => e.rebuild(), z());
 }
 function ea(e) {
     let { channelId: t, currentVoiceChannelId: n } = e;
-    return (null != t ? delete j[t] : null != n && (delete F[n], delete H[n], $(n)), eo());
+    return null != t ? delete j[t] : null != n && (delete F[n], delete H[n], $(n)), eo();
 }
 function es(e) {
     let { channelId: t, messageId: n } = e,
         r = eo(),
         i = E.Z.getChannel(t);
-    return null == t || null == n || ((null == i ? void 0 : i.type) !== N.d4z.GUILD_VOICE && (null == i ? void 0 : i.type) !== N.d4z.GUILD_STAGE_VOICE) || F[t] ? r : ((V[t] = !1), (F[t] = !0), !0);
+    return null == t ||
+        null == n ||
+        ((null == i ? void 0 : i.type) !== N.d4z.GUILD_VOICE &&
+            (null == i ? void 0 : i.type) !== N.d4z.GUILD_STAGE_VOICE) ||
+        F[t]
+        ? r
+        : ((V[t] = !1), (F[t] = !0), !0);
 }
 function el(e) {
     let { voiceStates: t, initial: n } = e;
@@ -208,9 +215,9 @@ function el(e) {
             p.Z.getCurrentConfig(
                 {
                     guildId: o,
-                    location: 'voice_status_update'
+                    location: "voice_status_update",
                 },
-                { autoTrackExposure: !1 }
+                { autoTrackExposure: !1 },
             ).enabled &&
             W(i).updateGuildRingingUsers(r, !1),
         n && null != i && !x.includes(i))
@@ -280,11 +287,11 @@ function ey(e) {
 }
 function eO(e) {
     let { channelId: t, chatOpen: n } = e;
-    ((F[t] = n), n && (V[t] = !1));
+    (F[t] = n), n && (V[t] = !1);
 }
 function ev(e) {
     let { channelId: t, participantsListOpen: n } = e;
-    ((V[t] = n), n && (F[t] = !1));
+    (V[t] = n), n && (F[t] = !1);
 }
 function eI(e) {
     let { channelId: t, id: n } = e,
@@ -299,7 +306,7 @@ function eI(e) {
             let { ownerId: e } = (0, _.my)(n);
             e === m.default.getId() && X(e, [t]);
         } catch (e) {
-            D.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
+            D.warn("INVALID STREAM KEY FORMAT ".concat(n), e);
         }
         et(r) || (B[t] = !1);
     }
@@ -310,16 +317,21 @@ function eT(e) {
         let e = t.originChannelId;
         if (null != e) {
             var n, r;
-            return ((G[t.id] = { [N.IlC.APP]: null != (r = null == (n = G[e]) ? void 0 : n[N.IlC.APP]) ? r : N.AEg.NORMAL }), !0);
+            return (
+                (G[t.id] = {
+                    [N.IlC.APP]: null != (r = null == (n = G[e]) ? void 0 : n[N.IlC.APP]) ? r : N.AEg.NORMAL,
+                }),
+                !0
+            );
         }
     }
     return !1;
 }
 function eS(e) {
     let {
-        channel: { id: t }
+        channel: { id: t },
     } = e;
-    return (delete F[t], delete V[t], delete H[t], ei(t));
+    return delete F[t], delete V[t], delete H[t], ei(t);
 }
 function eA(e) {
     let { channelId: t, layout: n, appContext: r } = e;
@@ -356,24 +368,24 @@ function eL(e) {
     if (
         !p.Z.getCurrentConfig({
             guildId: n,
-            location: 'guild_ring_start'
+            location: "guild_ring_start",
         }).enabled
     )
         return !1;
     let i = W(t);
-    return (r.forEach((e) => i.updateGuildRingingUsers(e, !0)), q((e) => e.rebuild(), [t]));
+    return r.forEach((e) => i.updateGuildRingingUsers(e, !0)), q((e) => e.rebuild(), [t]);
 }
 function ex(e) {
     let { channelId: t, guildId: n, ringing: r } = e;
     if (
         !p.Z.getCurrentConfig({
             guildId: n,
-            location: 'guild_ring_start'
+            location: "guild_ring_start",
         }).enabled
     )
         return !1;
     let i = W(t);
-    return (r.forEach((e) => i.updateGuildRingingUsers(e, !1)), q((e) => e.rebuild(), [t]));
+    return r.forEach((e) => i.updateGuildRingingUsers(e, !1)), q((e) => e.rebuild(), [t]);
 }
 function eM(e) {
     var t;
@@ -381,7 +393,12 @@ function eM(e) {
 }
 class ek extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(h.Z, m.default, g.Z, E.Z, u.ZP, b.Z, y.Z, O.Z, v.default, I.Z, T.Z), this.syncWith([u.ZP], ec), this.syncWith([b.Z], eu), this.syncWith([f.Z], eo), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(Z, null == e ? void 0 : e.voiceParticipantsHidden));
+        this.waitFor(h.Z, m.default, g.Z, E.Z, u.ZP, b.Z, y.Z, O.Z, v.default, I.Z, T.Z),
+            this.syncWith([u.ZP], ec),
+            this.syncWith([b.Z], eu),
+            this.syncWith([f.Z], eo),
+            (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 &&
+                Object.assign(Z, null == e ? void 0 : e.voiceParticipantsHidden);
     }
     getState() {
         return { voiceParticipantsHidden: Z };
@@ -442,7 +459,7 @@ class ek extends (r = l.ZP.PersistedStore) {
             : {
                   view_mode_grid_duration_ms: Math.floor(t.gridDurationMs),
                   view_mode_focus_duration_ms: Math.floor(t.focusDurationMs),
-                  view_mode_toggle_count: t.toggleCount
+                  view_mode_toggle_count: t.toggleCount,
               };
     }
     getGuildRingingUsers(e) {
@@ -481,7 +498,7 @@ class ek extends (r = l.ZP.PersistedStore) {
         return Y[e];
     }
 }
-(C(ek, 'displayName', 'ChannelRTCStore'), C(ek, 'persistKey', 'ChannelRTCStore'));
+C(ek, "displayName", "ChannelRTCStore"), C(ek, "persistKey", "ChannelRTCStore");
 let ej = new ek(c.Z, {
     CONNECTION_OPEN: K,
     CONNECTION_OPEN_SUPPLEMENTAL: eo,
@@ -520,5 +537,5 @@ let ej = new ek(c.Z, {
     GUILD_RING_STOP: ex,
     USER_UPDATE: ef,
     GUILD_MEMBER_UPDATE: ef,
-    GUILD_DELETE: eh
+    GUILD_DELETE: eh,
 });

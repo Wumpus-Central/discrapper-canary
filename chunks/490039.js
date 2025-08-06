@@ -6,9 +6,9 @@ var r = n(220159),
     c = n(795462);
 r(
     {
-        target: 'Promise',
+        target: "Promise",
         stat: !0,
-        forced: n(806414)
+        forced: n(806414),
     },
     {
         race: function (e) {
@@ -21,7 +21,7 @@ r(
                         o(i, t, e).then(n.resolve, r);
                     });
                 });
-            return (l.error && r(l.value), n.promise);
-        }
-    }
+            return l.error && r(l.value), n.promise;
+        },
+    },
 );

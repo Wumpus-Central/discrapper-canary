@@ -10,7 +10,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,7 +62,8 @@ function u(e, t) {
         i = d(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -72,30 +73,30 @@ function d(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let f = (e) => {
     var t,
         n,
-        { size: a = 'md', width: l, height: d, color: f = '#C12A35', colorClass: _ = '' } = e,
-        p = u(e, ['size', 'width', 'height', 'color', 'colorClass']);
+        { size: a = "md", width: l, height: d, color: f = "#C12A35", colorClass: _ = "" } = e,
+        p = u(e, ["size", "width", "height", "color", "colorClass"]);
     let h = (0, o.m)(a),
         m = null != (t = null == h ? void 0 : h.width) ? t : l,
         g = null != (n = null == h ? void 0 : h.height) ? n : d;
     return (0, r.jsx)(
-        'svg',
+        "svg",
         c(s({}, (0, i.Z)(p)), {
-            xmlns: 'http://www.w3.org/2000/svg',
+            xmlns: "http://www.w3.org/2000/svg",
             width: m,
             height: g,
-            fill: 'none',
-            viewBox: '0 0 24 24',
-            children: (0, r.jsx)('path', {
-                fill: 'string' == typeof f ? f : f.css,
-                d: 'M2 13a1 1 0 0 1 1-1 9 9 0 0 1 9 9 1 1 0 1 1-2 0 7 7 0 0 0-7-7 1 1 0 0 1-1-1ZM2 17.83c0-.46.37-.83.83-.83C5.13 17 7 18.87 7 21.17c0 .46-.37.83-.83.83H3a1 1 0 0 1-1-1v-3.17Z',
-                className: _
-            })
-        })
+            fill: "none",
+            viewBox: "0 0 24 24",
+            children: (0, r.jsx)("path", {
+                fill: "string" == typeof f ? f : f.css,
+                d: "M2 13a1 1 0 0 1 1-1 9 9 0 0 1 9 9 1 1 0 1 1-2 0 7 7 0 0 0-7-7 1 1 0 0 1-1-1ZM2 17.83c0-.46.37-.83.83-.83C5.13 17 7 18.87 7 21.17c0 .46-.37.83-.83.83H3a1 1 0 0 1-1-1v-3.17Z",
+                className: _,
+            }),
+        }),
     );
 };

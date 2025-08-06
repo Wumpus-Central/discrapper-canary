@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     $x: () => c,
     AB: () => o,
     EC: () => f,
@@ -8,21 +8,33 @@
     Vg: () => i,
     Z7: () => u,
     oC: () => r,
-    zZ: () => l
+    zZ: () => l,
 }),
-    n(388685));
+    n(388685);
 var r = (function (e) {
-    return ((e.ROLE_SUBSCRIPTIONS = 'role-subscriptions'), (e.GUILD_SHOP = 'shop'), (e.MEMBER_APPLICATIONS = 'member-applications'), (e.GUILD_HOME = '@home'), (e.CHANNEL_BROWSER = 'channel-browser'), (e.GUILD_ONBOARDING = 'onboarding'), (e.CUSTOMIZE_COMMUNITY = 'customize-community'), (e.MEMBER_SAFETY = 'member-safety'), (e.GUILD_BOOSTS = 'boosts'), (e.REPORT_TO_MOD = 'report-to-mod'), e);
+    return (
+        (e.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
+        (e.GUILD_SHOP = "shop"),
+        (e.MEMBER_APPLICATIONS = "member-applications"),
+        (e.GUILD_HOME = "@home"),
+        (e.CHANNEL_BROWSER = "channel-browser"),
+        (e.GUILD_ONBOARDING = "onboarding"),
+        (e.CUSTOMIZE_COMMUNITY = "customize-community"),
+        (e.MEMBER_SAFETY = "member-safety"),
+        (e.GUILD_BOOSTS = "boosts"),
+        (e.REPORT_TO_MOD = "report-to-mod"),
+        e
+    );
 })({});
 let i = new Set(Object.values(r));
 function o(e) {
     return i.has(e);
 }
 function a(e, t) {
-    return ''.concat(e, '-').concat(t);
+    return "".concat(e, "-").concat(t);
 }
 function s(e) {
-    return !!(null == e ? void 0 : e.includes('@home'));
+    return !!(null == e ? void 0 : e.includes("@home"));
 }
 let l = Object.freeze({
         GUILD_FEED_REMOVED: 1,
@@ -40,11 +52,18 @@ let l = Object.freeze({
         HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768,
         IS_JOIN_REQUEST_INTERVIEW_CHANNEL: 65536,
         OBFUSCATED: 131072,
-        IS_MODERATOR_REPORT_CHANNEL: 524288
+        IS_MODERATOR_REPORT_CHANNEL: 524288,
     }),
     c = 1024,
     u = 4096;
 var d = (function (e) {
-    return ((e.GUILD_HOME = 'home'), (e.SERVER_GUIDE = 'guide'), (e.CHANNEL_BROWSER = 'browse'), (e.CUSTOMIZE_COMMUNITY = 'customize'), (e.LINKED_ROLES = 'linked-roles'), e);
+    return (
+        (e.GUILD_HOME = "home"),
+        (e.SERVER_GUIDE = "guide"),
+        (e.CHANNEL_BROWSER = "browse"),
+        (e.CUSTOMIZE_COMMUNITY = "customize"),
+        (e.LINKED_ROLES = "linked-roles"),
+        e
+    );
 })({});
 let f = new Set(Object.values(d));

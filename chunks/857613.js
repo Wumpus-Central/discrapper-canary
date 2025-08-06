@@ -9,5 +9,6 @@ function a() {
         a = null == e ? void 0 : e.uuid;
     a !== (null == t ? void 0 : t.client_heartbeat_session_id) && (n.client_heartbeat_session_id = a);
     let s = o.Z.getState();
-    (s !== (null == t ? void 0 : t.client_app_state) && (n.client_app_state = s), Object.keys(n).length > 0 && (0, r.extendSuperProperties)(n));
+    s !== (null == t ? void 0 : t.client_app_state) && (n.client_app_state = s),
+        Object.keys(n).length > 0 && (0, r.extendSuperProperties)(n);
 }

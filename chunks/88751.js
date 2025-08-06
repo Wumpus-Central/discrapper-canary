@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => M }), n(388685));
+n.d(t, { ZP: () => M }), n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,7 +29,7 @@ function g(e, t, n) {
 let E = {},
     b = {
         speaker: !1,
-        moderator: !1
+        moderator: !1,
     };
 function y(e, t) {
     let n = _.Z.getVoiceStateForChannel(t, e);
@@ -41,7 +41,7 @@ function O(e, t, n) {
         user: e,
         context: t,
         overwrites: n.permissionOverwrites,
-        roles: u.Z.getUnsafeMutableRoles(t.id)
+        roles: u.Z.getUnsafeMutableRoles(t.id),
     });
 }
 function v(e, t) {
@@ -52,7 +52,7 @@ function v(e, t) {
     return null != o && null != r && r.isGuildStageVoice()
         ? {
               speaker: y(e, t),
-              moderator: n ? O(e, o, r) : null
+              moderator: n ? O(e, o, r) : null,
           }
         : b;
 }
@@ -60,7 +60,7 @@ function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     null == E[t] && (E[t] = {});
     let r = v(e, t, n);
-    return ((E[t][e] = r), r);
+    return (E[t][e] = r), r;
 }
 function T(e, t) {
     var n;
@@ -141,7 +141,7 @@ class x extends (r = a.ZP.Store) {
         return I(e, t, r);
     }
 }
-g(x, 'displayName', 'StageChannelRoleStore');
+g(x, "displayName", "StageChannelRoleStore");
 let M = new x(s.Z, {
     CHANNEL_UPDATES: N,
     CONNECTION_OPEN: D,
@@ -151,5 +151,5 @@ let M = new x(s.Z, {
     PASSIVE_UPDATE_V2: w,
     VOICE_STATE_UPDATES: P,
     GUILD_CREATE: L,
-    GUILD_DELETE: L
+    GUILD_DELETE: L,
 });

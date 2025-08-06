@@ -43,14 +43,14 @@ let D = (0, u.Z)(
                 L = (0, A.Z)({
                     userId: n.id,
                     guildId: t,
-                    channelId: G
+                    channelId: G,
                 }),
                 V = (0, _.Z)(n, t, u),
                 q = (0, C.Z)(n.id, u),
                 H = (0, w.Z)(n.id),
                 B = (0, y.Z)({
                     user: n,
-                    context: u
+                    context: u,
                 }),
                 W = (0, i.e7)([p.Z, O.Z], () => {
                     let e = p.Z.getVoiceChannelId();
@@ -58,7 +58,7 @@ let D = (0, u.Z)(
                 }),
                 { enabled: K } = b.Z.useExperiment({
                     guildId: null == W ? void 0 : W.guild_id,
-                    location: 'ThreadUserContextMenu'
+                    location: "ThreadUserContextMenu",
                 }),
                 F = K ? (null == W ? void 0 : W.id) : null,
                 Q = (0, T.Z)(n, F),
@@ -66,7 +66,7 @@ let D = (0, u.Z)(
                     user: n,
                     guildId: t,
                     channelId: G,
-                    context: u
+                    context: u,
                 }),
                 X = (0, h.Z)({ user: n }),
                 J = (0, Z.Z)({
@@ -75,13 +75,13 @@ let D = (0, u.Z)(
                     analyticsLocation: {
                         page: M.ZY5.GUILD_CHANNEL,
                         section: M.jXE.CHAT_USERNAME,
-                        object: M.qAy.CONTEXT_MENU_ITEM
+                        object: M.qAy.CONTEXT_MENU_ITEM,
                     },
-                    context: u
+                    context: u,
                 }),
                 z = (0, E.Z)({
                     user: n,
-                    guildId: t
+                    guildId: t,
                 }),
                 $ = (0, c.Z)(null, n),
                 ee = (0, m.Z)({ user: n }),
@@ -91,20 +91,20 @@ let D = (0, u.Z)(
                     user: n,
                     guildId: t,
                     channelId: G,
-                    location: 'ThreadUserContextMenu'
+                    location: "ThreadUserContextMenu",
                 }),
                 ei = (0, N.Z)({
                     user: n,
                     guildId: t,
                     channelId: G,
-                    location: 'ThreadUserContextMenu'
+                    location: "ThreadUserContextMenu",
                 }),
                 er = (0, U.Z)(n, t, G),
                 ea = (0, k.Z)(n.id, t),
                 eo = (0, I.Z)(n, t),
                 eu = (0, g.Z)({
                     id: n.id,
-                    label: R.intl.string(R.t['/AXYnJ'])
+                    label: R.intl.string(R.t["/AXYnJ"]),
                 }),
                 es = (0, f.Z)(n),
                 ec = (0, v.Z)({
@@ -112,13 +112,13 @@ let D = (0, u.Z)(
                     commandTargetId: n.id,
                     channel: o,
                     guildId: t,
-                    onHeightUpdate: D
+                    onHeightUpdate: D,
                 }),
                 ed = n.isNonUserBot();
             return (0, l.jsxs)(r.v2r, {
-                navId: 'user-context',
+                navId: "user-context",
                 onClose: a.Zy,
-                'aria-label': R.intl.string(R.t.liqwPD),
+                "aria-label": R.intl.string(R.t.liqwPD),
                 onSelect: d,
                 children: [
                     !ed &&
@@ -126,23 +126,23 @@ let D = (0, u.Z)(
                             children: [
                                 (0, l.jsx)(r.kSQ, { children: es }),
                                 (0, l.jsxs)(r.kSQ, {
-                                    children: [L, V, q, B, Q, Y, X, H]
+                                    children: [L, V, q, B, Q, Y, X, H],
                                 }),
                                 (0, l.jsx)(r.kSQ, { children: $ }),
                                 (0, l.jsxs)(r.kSQ, {
-                                    children: [J, ec, z, ee, en, et, ei, el]
+                                    children: [J, ec, z, ee, en, et, ei, el],
                                 }),
                                 (0, l.jsx)(r.kSQ, { children: er }),
                                 (0, l.jsxs)(r.kSQ, {
-                                    children: [ea, eo]
-                                })
-                            ]
+                                    children: [ea, eo],
+                                }),
+                            ],
                         }),
-                    (0, l.jsx)(r.kSQ, { children: eu })
-                ]
+                    (0, l.jsx)(r.kSQ, { children: eu }),
+                ],
             });
         },
-        { object: M.qAy.CONTEXT_MENU }
+        { object: M.qAy.CONTEXT_MENU },
     ),
-    [d.Z.CONTEXT_MENU, d.Z.THREAD_USER_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.THREAD_USER_MENU],
 );

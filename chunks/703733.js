@@ -9,12 +9,12 @@ function a(e) {
         d = (0, o.Z)({
             guildId: n,
             leaderboardId: a,
-            intervalOffset: s
+            intervalOffset: s,
         }),
         f = null == d ? void 0 : d.users.find((e) => e.user_id === t),
         _ = null == f ? void 0 : f.statistics[l];
     return {
         lastUpdateRequested: u,
-        statisticLastUpdatedDate: null != _ ? new Date(_.updated_at) : void 0
+        statisticLastUpdatedDate: null != _ ? new Date(_.updated_at) : void 0,
     };
 }

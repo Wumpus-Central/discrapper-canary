@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => f,
-    y: () => d
+    y: () => d,
 }),
-    n(314940));
+    n(314940);
 var r = n(73800),
     i = n(278074),
     o = n(442837),
@@ -12,12 +12,14 @@ var r = n(73800),
     c = n(710111),
     u = n(388032),
     d = (function (e) {
-        return ((e[(e.JOIN_GUILD = 0)] = 'JOIN_GUILD'), (e[(e.GET_NITRO = 1)] = 'GET_NITRO'), (e[(e.NONE = 2)] = 'NONE'), e);
+        return (
+            (e[(e.JOIN_GUILD = 0)] = "JOIN_GUILD"), (e[(e.GET_NITRO = 1)] = "GET_NITRO"), (e[(e.NONE = 2)] = "NONE"), e
+        );
     })({});
 function f(e, t, n, d) {
     let f = e.guildId === c.X8,
         _ = (0, o.e7)([a.default], () => s.ZP.canUseSoundboardEverywhere(a.default.getCurrentUser())),
-        p = (0, l.V2)({ location: 'useSoundmojiGuildInfoData' }),
+        p = (0, l.V2)({ location: "useSoundmojiGuildInfoData" }),
         h = e.guildId !== (null == t ? void 0 : t.guild_id);
     return {
         buttonType: r.useMemo(() => (f || !p ? 2 : p && !_ ? 1 : n || null == d ? 2 : 0), [f, _, p, n, d]),
@@ -29,67 +31,67 @@ function f(e, t, n, d) {
                 isGuildDiscoverable: e,
                 isSoundFromDifferentGuild: h,
                 canSendSoundmojis: p,
-                isDefaultSound: f
+                isDefaultSound: f,
             })
                 .with({ canSendSoundmojis: !1 }, () => u.intl.string(u.t.x2kyyM))
                 .with({ isDefaultSound: !0 }, () => u.intl.string(u.t.AabHen))
                 .with(
                     {
                         isInGuild: !1,
-                        isGuildDiscoverable: !1
+                        isGuildDiscoverable: !1,
                     },
-                    () => u.intl.string(u.t.MRYt09)
+                    () => u.intl.string(u.t.MRYt09),
                 )
                 .with(
                     {
                         hasSoundmojiPermissions: !0,
                         isInGuild: !0,
-                        isSoundFromDifferentGuild: !1
+                        isSoundFromDifferentGuild: !1,
                     },
-                    () => u.intl.string(u.t.p17MQE)
+                    () => u.intl.string(u.t.p17MQE),
                 )
                 .with(
                     {
                         hasSoundmojiPermissions: !0,
                         isInGuild: !0,
-                        isSoundFromDifferentGuild: !0
+                        isSoundFromDifferentGuild: !0,
                     },
-                    () => u.intl.string(u.t.Lkbm5u)
+                    () => u.intl.string(u.t.Lkbm5u),
                 )
                 .with(
                     {
                         hasSoundmojiPermissions: !0,
                         isInGuild: !1,
-                        isGuildDiscoverable: !0
+                        isGuildDiscoverable: !0,
                     },
-                    () => u.intl.string(u.t.GTJmaW)
+                    () => u.intl.string(u.t.GTJmaW),
                 )
                 .with(
                     {
                         hasSoundmojiPermissions: !1,
                         isInGuild: !0,
-                        isSoundFromDifferentGuild: !1
+                        isSoundFromDifferentGuild: !1,
                     },
-                    () => u.intl.string(u.t['sj/imZ'])
+                    () => u.intl.string(u.t["sj/imZ"]),
                 )
                 .with(
                     {
                         hasSoundmojiPermissions: !1,
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !0,
-                        canSendSoundmojis: !0
+                        canSendSoundmojis: !0,
                     },
-                    () => u.intl.string(u.t['3Ru2//'])
+                    () => u.intl.string(u.t["3Ru2//"]),
                 )
                 .with(
                     {
                         hasSoundmojiPermissions: !1,
                         isInGuild: !1,
-                        isGuildDiscoverable: !0
+                        isGuildDiscoverable: !0,
                     },
-                    () => u.intl.string(u.t.qRkWhY)
+                    () => u.intl.string(u.t.qRkWhY),
                 )
                 .exhaustive();
-        }, [f, d, _, n, h, p])
+        }, [f, d, _, n, h, p]),
     };
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     LN: () => s,
     dj: () => _,
-    hj: () => l
+    hj: () => l,
 });
 var r = n(798681),
     i = n(450109);
@@ -12,13 +12,13 @@ function s() {
 }
 function l(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a,
-        r = i.Z.getAccumulatedPerformanceStats(e, t, 'short'),
-        o = i.Z.getAccumulatedPerformanceStats(e, t, 'long');
+        r = i.Z.getAccumulatedPerformanceStats(e, t, "short"),
+        o = i.Z.getAccumulatedPerformanceStats(e, t, "long");
     return null == r || null == o || r.numDatapoints < n || o.numDatapoints < n
         ? null
         : {
               short: r,
-              long: o
+              long: o,
           };
 }
 let c = 30,

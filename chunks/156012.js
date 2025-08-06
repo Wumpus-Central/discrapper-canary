@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r,
     i = n(442837),
     o = n(570140);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -35,11 +35,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -60,7 +60,7 @@ let u = !1,
     _ = {};
 function p(e) {
     let { channelId: t, scheduledMessageSend: n } = e;
-    ((d = c(s({}, d), { [n.scheduledMessageId]: n })), (_ = s({}, _)), delete _[t]);
+    (d = c(s({}, d), { [n.scheduledMessageId]: n })), (_ = s({}, _)), delete _[t];
 }
 function h(e) {
     let { scheduledMessageId: t } = e;
@@ -70,7 +70,7 @@ function h(e) {
 function m(e) {
     let { scheduledMessageId: t } = e;
     if (!f.has(t)) return !1;
-    ((f = new Set(f)).delete(t), (d = s({}, d)), delete d[t]);
+    (f = new Set(f)).delete(t), (d = s({}, d)), delete d[t];
 }
 function g(e) {
     let { scheduledMessageId: t } = e;
@@ -85,13 +85,13 @@ function b(e) {
     _ = c(s({}, _), {
         [t]: {
             channelId: t,
-            scheduledTimestamp: n
-        }
+            scheduledTimestamp: n,
+        },
     });
 }
 function y(e) {
     let { channelId: t } = e;
-    ((_ = s({}, _)), delete _[t]);
+    (_ = s({}, _)), delete _[t];
 }
 function O(e) {
     let { messages: t } = e;
@@ -120,7 +120,7 @@ class T extends (r = i.ZP.Store) {
         return u;
     }
 }
-a(T, 'displayName', 'scheduledMessageStore');
+a(T, "displayName", "scheduledMessageStore");
 let S = new T(o.Z, {
     SCHEDULED_MESSAGES_CREATE_SUCCESS: p,
     SCHEDULED_MESSAGES_DELETE_START: h,
@@ -132,5 +132,5 @@ let S = new T(o.Z, {
     CREATE_PENDING_SCHEDULED_MESSAGE: b,
     DELETE_PENDING_SCHEDULED_MESSAGE: y,
     LOGOUT: E,
-    CONNECTION_OPEN: E
+    CONNECTION_OPEN: E,
 });

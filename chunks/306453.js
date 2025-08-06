@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     D: () => f,
-    Z: () => g
+    Z: () => g,
 }),
-    n(953529));
+    n(953529);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -19,28 +19,28 @@ var r = n(120356),
 function h() {
     return (0, i.jsx)(c.Z, {
         className: m.verifiedIcon,
-        children: (0, i.jsx)('div', {
+        children: (0, i.jsx)("div", {
             className: m.verifiedCheckContainer,
             children: (0, i.jsx)(l.kmB, {
-                size: 'xs',
-                color: 'currentColor',
-                className: m.verifiedCheck
-            })
-        })
+                size: "xs",
+                color: "currentColor",
+                className: m.verifiedCheck,
+            }),
+        }),
     });
 }
 function x(e) {
     let { verified: t, text: n } = e;
     return t
-        ? (0, i.jsxs)('div', {
+        ? (0, i.jsxs)("div", {
               className: m.verifiedNameContainer,
-              children: [(0, i.jsx)(h, {}), n]
+              children: [(0, i.jsx)(h, {}), n],
           })
         : n;
 }
 function f(e) {
     let { className: t, count: n, creator: r, verifiedName: l } = e;
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: s()(m.usagePill, t, m.userText),
         children:
             null != r || null != l
@@ -52,69 +52,69 @@ function f(e) {
                               x,
                               {
                                   text: e,
-                                  verified: null != l
+                                  verified: null != l,
                               },
-                              t
-                          )
+                              t,
+                          ),
                   })
-                : C.intl.format(C.t.cGXXHB, { usageCount: n })
+                : C.intl.format(C.t.cGXXHB, { usageCount: n }),
     });
 }
 function g(e) {
     var t;
     let { guildTemplate: n, error: r, tall: c, pillClassName: h } = e;
-    if (null != r && '' !== r)
-        return (0, i.jsxs)('div', {
+    if (null != r && "" !== r)
+        return (0, i.jsxs)("div", {
             className: m.container,
-            children: [(0, i.jsx)(a.Dx, { children: C.intl.string(C.t.mDFGFh) }), (0, i.jsx)(a.DK, { children: r })]
+            children: [(0, i.jsx)(a.Dx, { children: C.intl.string(C.t.mDFGFh) }), (0, i.jsx)(a.DK, { children: r })],
         });
     if (n.state === o.Rj.RESOLVING)
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: m.container,
-            children: (0, i.jsx)(l.$jN, {})
+            children: (0, i.jsx)(l.$jN, {}),
         });
     let x = (0, u.Z)(n.code).header;
     return c
-        ? (0, i.jsxs)('div', {
+        ? (0, i.jsxs)("div", {
               className: m.container,
               children: [
                   (0, i.jsx)(a.Dx, {
                       className: m.title,
-                      children: x
+                      children: x,
                   }),
                   (0, i.jsx)(a.DK, {
                       className: s()(m.subtitle, L.__invalid_marginTop2),
-                      children: C.intl.string(C.t['h+vyOz'])
+                      children: C.intl.string(C.t["h+vyOz"]),
                   }),
                   (0, i.jsx)(a.Dx, {
                       className: s()(m.title, m.userText),
-                      children: n.name
+                      children: n.name,
                   }),
                   null != n.description &&
-                      '' !== n.description &&
+                      "" !== n.description &&
                       (0, i.jsx)(a.DK, {
                           className: s()(m.subtitle, m.userText, L.marginTop8),
-                          children: n.description
+                          children: n.description,
                       }),
                   (0, i.jsx)(f, {
                       className: h,
                       count: null != (t = n.usageCount) ? t : 0,
                       creator: n.creator.username,
-                      verifiedName: (0, d.R)(n.code)
-                  })
-              ]
+                      verifiedName: (0, d.R)(n.code),
+                  }),
+              ],
           })
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               className: m.container,
               children: [
                   (0, i.jsx)(a.Dx, {
                       className: m.title,
-                      children: x
+                      children: x,
                   }),
                   (0, i.jsx)(a.DK, {
                       className: s()(m.subtitle, m.userText),
-                      children: n.name
-                  })
-              ]
+                      children: n.name,
+                  }),
+              ],
           });
 }

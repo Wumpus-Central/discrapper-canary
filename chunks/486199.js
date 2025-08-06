@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(953529));
+n.d(t, { Z: () => d }), n(953529);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -8,7 +8,19 @@ var r = n(120356),
     s = n(388032),
     c = n(410322);
 function d(e) {
-    let { name: t, description: n, icon: r, imageSrc: d, iconBackgroundColor: u, iconClassName: p, iconWrapperClassName: m, details: b, detailsClassName: g, isHeader: f, isPremium: h } = e;
+    let {
+        name: t,
+        description: n,
+        icon: r,
+        imageSrc: d,
+        iconBackgroundColor: u,
+        iconClassName: p,
+        iconWrapperClassName: m,
+        details: b,
+        detailsClassName: g,
+        isHeader: f,
+        isPremium: h,
+    } = e;
     return (0, i.jsxs)(a.Z, {
         justify: a.Z.Justify.CENTER,
         className: c.wrapper,
@@ -19,34 +31,34 @@ function d(e) {
                       grow: 0,
                       children: (function (e, t, n, r, o) {
                           if (null != t)
-                              return (0, i.jsx)('img', {
-                                  alt: '',
+                              return (0, i.jsx)("img", {
+                                  alt: "",
                                   src: t,
-                                  className: l()(c.iconWrapper, r)
+                                  className: l()(c.iconWrapper, r),
                               });
                           let s = null;
                           return (
                               null != e &&
                                   (s =
-                                      'string' == typeof e
-                                          ? (0, i.jsx)('img', {
-                                                alt: '',
+                                      "string" == typeof e
+                                          ? (0, i.jsx)("img", {
+                                                alt: "",
                                                 src: e,
-                                                className: l()(c.icon, r)
+                                                className: l()(c.icon, r),
                                             })
                                           : (0, i.jsx)(e, {
                                                 className: l()(c.icon, r),
-                                                color: 'currentColor'
+                                                color: "currentColor",
                                             })),
                               (0, i.jsx)(a.Z, {
                                   align: a.Z.Align.CENTER,
                                   justify: a.Z.Justify.CENTER,
                                   style: { backgroundColor: n },
                                   className: l()(c.iconWrapper, o),
-                                  children: s
+                                  children: s,
                               })
                           );
-                      })(r, d, u, p, m)
+                      })(r, d, u, p, m),
                   })
                 : null,
             (function (e) {
@@ -57,33 +69,33 @@ function d(e) {
                             : r.map((e, t) => {
                                   let { icon: n, text: r } = e;
                                   return (0, i.jsxs)(
-                                      'div',
+                                      "div",
                                       {
                                           className: l()(c.detailsWrapper, u ? c.headerDetailsWrapper : null),
                                           children: [
                                               null != n
                                                   ? (0, i.jsx)(n, {
-                                                        size: 'xs',
-                                                        color: 'currentColor',
-                                                        className: c.detailsIcon
+                                                        size: "xs",
+                                                        color: "currentColor",
+                                                        className: c.detailsIcon,
                                                     })
                                                   : null,
                                               (0, i.jsx)(o.Text, {
-                                                  variant: 'text-xs/normal',
-                                                  color: 'header-secondary',
+                                                  variant: "text-xs/normal",
+                                                  color: "header-secondary",
                                                   className: d,
-                                                  children: r
-                                              })
-                                          ]
+                                                  children: r,
+                                              }),
+                                          ],
                                       },
-                                      t
+                                      t,
                                   );
                               });
                 return (0, i.jsxs)(a.Z, {
                     direction: a.Z.Direction.VERTICAL,
                     children: [
                         (0, i.jsxs)(o.X6q, {
-                            variant: u ? 'heading-xl/semibold' : 'heading-md/medium',
+                            variant: u ? "heading-xl/semibold" : "heading-md/medium",
                             className: u ? c.header : c.secondaryHeader,
                             children: [
                                 t,
@@ -98,32 +110,33 @@ function d(e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
                                                             i = Object.keys(n);
-                                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                                        "function" == typeof Object.getOwnPropertySymbols &&
                                                             (i = i.concat(
                                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                                })
+                                                                    return Object.getOwnPropertyDescriptor(n, e)
+                                                                        .enumerable;
+                                                                }),
                                                             )),
                                                             i.forEach(function (t) {
                                                                 var i;
-                                                                ((i = n[t]),
+                                                                (i = n[t]),
                                                                     t in e
                                                                         ? Object.defineProperty(e, t, {
                                                                               value: i,
                                                                               enumerable: !0,
                                                                               configurable: !0,
-                                                                              writable: !0
+                                                                              writable: !0,
                                                                           })
-                                                                        : (e[t] = i));
-                                                            }));
+                                                                        : (e[t] = i);
+                                                            });
                                                     }
                                                     return e;
                                                 })(
                                                     {
-                                                        size: 'xs',
-                                                        color: 'currentColor'
+                                                        size: "xs",
+                                                        color: "currentColor",
                                                     },
-                                                    e
+                                                    e,
                                                 )),
                                                 (n = n = { className: c.premiumIcon }),
                                                 Object.getOwnPropertyDescriptors
@@ -136,28 +149,32 @@ function d(e) {
                                                           }
                                                           return n;
                                                       })(Object(n)).forEach(function (e) {
-                                                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                                          Object.defineProperty(
+                                                              t,
+                                                              e,
+                                                              Object.getOwnPropertyDescriptor(n, e),
+                                                          );
                                                       }),
-                                                t)
+                                                t),
                                             );
-                                        }
-                                    })
-                            ]
+                                        },
+                                    }),
+                            ],
                         }),
                         null != n
                             ? (0, i.jsx)(o.Text, {
-                                  variant: 'text-sm/normal',
-                                  color: 'header-secondary',
-                                  children: n
+                                  variant: "text-sm/normal",
+                                  color: "header-secondary",
+                                  children: n,
                               })
                             : null,
                         (0, i.jsx)(a.Z, {
                             direction: a.Z.Direction.HORIZONTAL,
                             align: a.Z.Align.CENTER,
                             wrap: a.Z.Wrap.WRAP,
-                            children: m
-                        })
-                    ]
+                            children: m,
+                        }),
+                    ],
                 });
             })({
                 name: t,
@@ -165,8 +182,8 @@ function d(e) {
                 details: b,
                 detailsClassName: g,
                 isHeader: f,
-                isPremium: h
-            })
-        ]
+                isPremium: h,
+            }),
+        ],
     });
 }

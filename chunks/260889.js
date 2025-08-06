@@ -16,24 +16,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -65,9 +65,9 @@ function _(e) {
               (0, r.jsx)(
                   a.sNh,
                   {
-                      id: 'join-voice',
+                      id: "join-voice",
                       action: function () {
-                          ((0, c.Kh)(n.channel.id),
+                          (0, c.Kh)(n.channel.id),
                               o.default.selectVoiceChannel(n.channel.id),
                               s.ZP.trackWithMetadata(
                                   f.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED,
@@ -75,38 +75,38 @@ function _(e) {
                                       {
                                           source: b(m({}, t.location), { object: f.qAy.LIST_ITEM }),
                                           guild_id: n.guild.id,
-                                          channel_id: n.channel.id
+                                          channel_id: n.channel.id,
                                       },
-                                      (0, p.y)(e)
-                                  )
-                              ));
+                                      (0, p.y)(e),
+                                  ),
+                              );
                       },
-                      label: g.intl.string(g.t['8yOlh4']),
-                      disabled: !_
+                      label: g.intl.string(g.t["8yOlh4"]),
+                      disabled: !_,
                   },
-                  'join-voice'
+                  "join-voice",
               ),
               (0, r.jsx)(
                   a.sNh,
                   {
-                      id: 'goto-server',
+                      id: "goto-server",
                       action: function () {
-                          ((0, u.X)(n.guild.id),
+                          (0, u.X)(n.guild.id),
                               s.ZP.trackWithMetadata(
                                   f.rMx.ACTIVITY_FEED_GUILD_VISITED,
                                   m(
                                       {
                                           source: b(m({}, t.location), { object: f.qAy.LIST_ITEM }),
                                           guild_id: n.guild.id,
-                                          af_recently_played: !1
+                                          af_recently_played: !1,
                                       },
-                                      (0, p.y)(e)
-                                  )
-                              ));
+                                      (0, p.y)(e),
+                                  ),
+                              );
                       },
-                      label: g.intl.string(g.t.RGgqm5)
+                      label: g.intl.string(g.t.RGgqm5),
                   },
-                  'goto-server'
-              )
+                  "goto-server",
+              ),
           ];
 }

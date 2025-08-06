@@ -6,28 +6,39 @@ var r = n(120356),
     a = n(584973),
     l = n(60213);
 function o(e) {
-    let { activity: t, className: n, emojiClassName: r, textClassName: o, placeholderText: c, soloEmojiClassName: d, animate: u = !0, hideTooltip: m = !1, hideEmoji: p = !1, children: g } = e;
+    let {
+        activity: t,
+        className: n,
+        emojiClassName: r,
+        textClassName: o,
+        placeholderText: c,
+        soloEmojiClassName: d,
+        animate: u = !0,
+        hideTooltip: m = !1,
+        hideEmoji: p = !1,
+        children: g,
+    } = e;
     if (null == t) return null;
     let { emoji: h } = t,
-        f = null != t.state && '' !== t.state ? t.state : c;
-    return (0, i.jsxs)('div', {
+        f = null != t.state && "" !== t.state ? t.state : c;
+    return (0, i.jsxs)("div", {
         className: s()(l.__invalid_container, n),
         children: [
             p || null == h
                 ? null
                 : (0, i.jsx)(a.Z, {
                       emoji: h,
-                      className: s()(l.emoji, r, null != d ? { [d]: null == f || '' === f } : null),
+                      className: s()(l.emoji, r, null != d ? { [d]: null == f || "" === f } : null),
                       animate: u,
-                      hideTooltip: m
+                      hideTooltip: m,
                   }),
             null != f && f.length > 0
-                ? (0, i.jsx)('span', {
+                ? (0, i.jsx)("span", {
                       className: o,
-                      children: f
+                      children: f,
                   })
                 : null,
-            g
-        ]
+            g,
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(388685));
+n.d(t, { Z: () => o }), n(388685);
 var r = n(73800);
 function i(e, t) {
     let n = e.getBoundingClientRect();
@@ -11,14 +11,14 @@ function o(e) {
         r.useEffect(() => {
             if (s)
                 return (
-                    window.addEventListener('mouseup', e),
-                    window.addEventListener('mousemove', r),
+                    window.addEventListener("mouseup", e),
+                    window.addEventListener("mousemove", r),
                     () => {
-                        (window.removeEventListener('mouseup', e), window.removeEventListener('mousemove', r));
+                        window.removeEventListener("mouseup", e), window.removeEventListener("mousemove", r);
                     }
                 );
             function e() {
-                (null == a || a(), l(!1));
+                null == a || a(), l(!1);
             }
             function r(e) {
                 let r = t.current;
@@ -33,8 +33,8 @@ function o(e) {
                     let r = t.current;
                     null != r && (l(!0), null == o || o(), null == n || n(i(r, e)));
                 },
-                [t, o, n]
-            )
+                [t, o, n],
+            ),
         ]
     );
 }

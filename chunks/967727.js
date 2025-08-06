@@ -9,7 +9,7 @@ function a(n, r) {
             function () {
                 return new o.x(t.getBackend());
             },
-            [t]
+            [t],
         );
     return (
         (0, u.L)(
@@ -22,7 +22,7 @@ function a(n, r) {
                     }
                 );
             },
-            [a, n]
+            [a, n],
         ),
         (0, u.L)(
             function () {
@@ -34,7 +34,7 @@ function a(n, r) {
                     }
                 );
             },
-            [a, r]
+            [a, r],
         ),
         a
     );

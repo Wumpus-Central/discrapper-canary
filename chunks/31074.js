@@ -9,7 +9,7 @@ function s(e) {
             if (null == e) return null;
             (0, o.Z)({
                 platformType: e,
-                location: 'Member List Content Popout'
+                location: "Member List Content Popout",
             });
         }, [e]);
     if (null != e) return t ? void 0 : n;

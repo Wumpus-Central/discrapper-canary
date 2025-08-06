@@ -2,18 +2,18 @@ e.exports = function (e) {
     var t = !0,
         n = !0,
         r = !1;
-    if ('function' == typeof e) {
+    if ("function" == typeof e) {
         try {
-            (e.call('f', function (e, n, r) {
-                'object' != typeof r && (t = !1);
+            e.call("f", function (e, n, r) {
+                "object" != typeof r && (t = !1);
             }),
                 e.call(
                     [null],
                     function () {
-                        n = 'string' == typeof this;
+                        n = "string" == typeof this;
                     },
-                    'x'
-                ));
+                    "x",
+                );
         } catch (e) {
             r = !0;
         }

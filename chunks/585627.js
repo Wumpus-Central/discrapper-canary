@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     JJ: () => a,
     KG: () => i,
-    jo: () => o
+    jo: () => o,
 }),
-    n(388685));
+    n(388685);
 var r = n(260866);
 function i(e, t) {
     return new Promise((n) => {
@@ -19,9 +19,9 @@ function i(e, t) {
                     }
                     s > t && ((t = s), (o = l.getAttribute(r.ie)));
                 }
-                (i.disconnect(), n(o));
+                i.disconnect(), n(o);
             },
-            { root: e }
+            { root: e },
         );
         for (let e of t) i.observe(e);
     });
@@ -41,9 +41,9 @@ function o(e, t) {
                     }
                     l > t && ((t = l), (o = c.getAttribute(r.ie)));
                 }
-                (i.disconnect(), n(o));
+                i.disconnect(), n(o);
             },
-            { root: e }
+            { root: e },
         );
         for (let e of t) i.observe(e);
     });
@@ -54,9 +54,9 @@ function a(e, t) {
         let i = new IntersectionObserver(
             (e) => {
                 let t = e[0];
-                (i.disconnect(), r(t.intersectionRatio >= n));
+                i.disconnect(), r(t.intersectionRatio >= n);
             },
-            { root: e }
+            { root: e },
         );
         i.observe(t);
     });

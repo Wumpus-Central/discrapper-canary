@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => O,
-    s: () => l
+    s: () => l,
 });
 var r = n(536895);
 function i(e, t, n) {
@@ -10,7 +10,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -56,7 +56,7 @@ function s(e, t) {
     );
 }
 var l = (function (e) {
-    return ((e.UPDATE_COLUMN_COUNTS = 'UPDATE_COLUMN_COUNTS'), (e.SET_FOCUSED_POSITION = 'SET_FOCUSED_POSITION'), e);
+    return (e.UPDATE_COLUMN_COUNTS = "UPDATE_COLUMN_COUNTS"), (e.SET_FOCUSED_POSITION = "SET_FOCUSED_POSITION"), e;
 })({});
 function c(e, t) {
     return Number.isNaN(e) ? t : Number.isNaN(t) ? e : Math.max(e, t);
@@ -70,7 +70,7 @@ function d(e, t) {
     return s(o({}, e), {
         columnCounts: n,
         focusedX: u(null == n[r] ? 0 : n[r] - 1, e.focusedX),
-        focusedY: r
+        focusedY: r,
     });
 }
 function f(e, t) {
@@ -78,21 +78,21 @@ function f(e, t) {
         i = c(0, u(r, e.columnCounts.length - 1));
     return s(o({}, e), {
         focusedX: c(0, u(n, e.columnCounts[i] - 1)),
-        focusedY: i
+        focusedY: i,
     });
 }
 function _(e, t) {
     let n = c(0, e.focusedY - 1);
     return s(o({}, e), {
         focusedX: u(e.columnCounts[n] - 1, e.focusedX),
-        focusedY: n
+        focusedY: n,
     });
 }
 function p(e, t) {
     let n = u(e.focusedY + 1, e.columnCounts.length - 1);
     return s(o({}, e), {
         focusedX: u(e.columnCounts[n] - 1, e.focusedX),
-        focusedY: n
+        focusedY: n,
     });
 }
 function h(e, t) {
@@ -101,7 +101,7 @@ function h(e, t) {
         i = n ? e.focusedY + 1 : e.focusedY;
     return s(o({}, e), {
         focusedX: r,
-        focusedY: i
+        focusedY: i,
     });
 }
 function m(e, t) {
@@ -110,7 +110,7 @@ function m(e, t) {
         i = n ? e.columnCounts[r] - 1 : c(0, e.focusedX - 1);
     return s(o({}, e), {
         focusedX: i,
-        focusedY: r
+        focusedY: r,
     });
 }
 function g(e, t) {
@@ -122,14 +122,14 @@ function E(e, t) {
 function b(e, t) {
     return s(o({}, e), {
         focusedX: 0,
-        focusedY: 0
+        focusedY: 0,
     });
 }
 function y(e, t) {
     let n = e.columnCounts.length - 1;
     return s(o({}, e), {
         focusedX: e.columnCounts[n] - 1,
-        focusedY: n
+        focusedY: n,
     });
 }
 function O(e, t) {
@@ -150,14 +150,14 @@ function O(e, t) {
             return b(e, t);
         case r.Us.NAVIGATE_END:
             return y(e, t);
-        case 'UPDATE_COLUMN_COUNTS':
+        case "UPDATE_COLUMN_COUNTS":
             return d(e, t);
-        case 'SET_FOCUSED_POSITION':
+        case "SET_FOCUSED_POSITION":
             return f(e, t);
         case r.Us.SELECT_FOCUSED_ITEM:
             break;
         default:
-            console.warn('Grid navigator was given an unhandled action '.concat(t.type));
+            console.warn("Grid navigator was given an unhandled action ".concat(t.type));
     }
     return e;
 }

@@ -12,16 +12,18 @@ e.exports = function (e) {
         c = e.getCurrentContent(),
         u = c.getBlockForKey(l).getLength();
     if (u <= 1) return e;
-    s === u ? ((t = a.set('anchorOffset', s - 1)), (n = a)) : (n = (t = a.set('focusOffset', s + 1)).set('anchorOffset', s + 1));
+    s === u
+        ? ((t = a.set("anchorOffset", s - 1)), (n = a))
+        : (n = (t = a.set("focusOffset", s + 1)).set("anchorOffset", s + 1));
     var d = o(c, t),
-        f = r.removeRange(c, t, 'backward'),
+        f = r.removeRange(c, t, "backward"),
         _ = f.getSelectionAfter(),
         p = _.getAnchorOffset() - 1,
         h = _.merge({
             anchorOffset: p,
-            focusOffset: p
+            focusOffset: p,
         }),
         m = r.replaceWithFragment(f, h, d),
-        g = i.push(e, m, 'insert-fragment');
+        g = i.push(e, m, "insert-fragment");
     return i.acceptSelection(g, n);
 };

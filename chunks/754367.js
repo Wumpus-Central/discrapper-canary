@@ -19,15 +19,15 @@ function p() {
                 setting: u.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
                 children: (0, i.jsx)(r.xJW, {
                     children: (0, i.jsx)(r.zxk, {
-                        variant: 'critical-secondary',
-                        size: 'sm',
-                        text: m.intl.string(m.t['4iKQ//']),
+                        variant: "critical-secondary",
+                        size: "sm",
+                        text: m.intl.string(m.t["4iKQ//"]),
                         onClick: () => {
-                            (0, c.Z)(m.intl.string(m.t['4iKQ//']), m.intl.string(m.t.sQ42iY), s.Z.reset);
-                        }
-                    })
-                })
-            })
-        ]
+                            (0, c.Z)(m.intl.string(m.t["4iKQ//"]), m.intl.string(m.t.sQ42iY), s.Z.reset);
+                        },
+                    }),
+                }),
+            }),
+        ],
     });
 }

@@ -6,7 +6,9 @@ var l = n(55935),
     o = n(388032);
 let s = (t) => {
     let e = Date.now() + t;
-    return (0, l.KC)(new Date(), new Date(e)) ? o.intl.formatToPlainString(o.t['+3jw2t'], { time: o.intl.data.formatTime(e, { format: 'short' }) }) : o.intl.formatToPlainString(o.t['/Avy4O'], { time: o.intl.data.formatTime(e, { format: 'short' }) });
+    return (0, l.KC)(new Date(), new Date(e))
+        ? o.intl.formatToPlainString(o.t["+3jw2t"], { time: o.intl.data.formatTime(e, { format: "short" }) })
+        : o.intl.formatToPlainString(o.t["/Avy4O"], { time: o.intl.data.formatTime(e, { format: "short" }) });
 };
 function u(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -22,7 +24,7 @@ function u(t) {
             return o.intl.formatToPlainString(o.t.Yizuvb, { hours: 1 });
         case i.FO.MINUTES_30:
             if (e) return s(30 * a.Z.Millis.MINUTE);
-            return o.intl.formatToPlainString(o.t['/XUoq6'], { minutes: 30 });
+            return o.intl.formatToPlainString(o.t["/XUoq6"], { minutes: 30 });
         case i.FO.DONT_CLEAR:
             return o.intl.string(o.t.bRn8cn);
         default:

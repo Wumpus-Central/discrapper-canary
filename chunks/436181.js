@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,11 +22,11 @@ function c(e) {
     s = {
         progress: t,
         total: n,
-        name: r
+        name: r,
     };
 }
 function u() {
-    ((s = null), (l = !1));
+    (s = null), (l = !1);
 }
 function d() {
     l = !0;
@@ -39,9 +39,9 @@ class f extends (r = i.ZP.Store) {
         return l;
     }
 }
-a(f, 'displayName', 'DispatchApplicationLaunchSetupStore');
+a(f, "displayName", "DispatchApplicationLaunchSetupStore");
 let _ = new f(o.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: d,
     DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: c,
-    DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: u
+    DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: u,
 });

@@ -6,9 +6,9 @@ var r = n(621523),
         return n === u || (n !== c && (i(t) ? r(t) : !!t));
     },
     s = (a.normalize = function (e) {
-        return String(e).replace(o, '.').toLowerCase();
+        return String(e).replace(o, ".").toLowerCase();
     }),
     l = (a.data = {}),
-    c = (a.NATIVE = 'N'),
-    u = (a.POLYFILL = 'P');
+    c = (a.NATIVE = "N"),
+    u = (a.POLYFILL = "P");
 e.exports = a;

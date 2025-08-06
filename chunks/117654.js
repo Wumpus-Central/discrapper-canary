@@ -6,7 +6,7 @@ var i = s(573736),
 class a {
     constructor(t, e) {
         let s, i;
-        ((s = t || new r.s()), (i = e || new r.s()), (this._stack = [{ scope: s }]), (this._isolationScope = i));
+        (s = t || new r.s()), (i = e || new r.s()), (this._stack = [{ scope: s }]), (this._isolationScope = i);
     }
     withScope(t) {
         let e,
@@ -21,7 +21,7 @@ class a {
                   (t) => (this._popScope(), t),
                   (t) => {
                       throw (this._popScope(), t);
-                  }
+                  },
               )
             : (this._popScope(), e);
     }
@@ -42,7 +42,7 @@ class a {
         return (
             this._stack.push({
                 client: this.getClient(),
-                scope: t
+                scope: t,
             }),
             t
         );
@@ -73,6 +73,6 @@ function p() {
         withSetScope: u,
         withSetIsolationScope: (t, e) => _(e),
         getCurrentScope: () => c().getScope(),
-        getIsolationScope: () => c().getIsolationScope()
+        getIsolationScope: () => c().getIsolationScope(),
     };
 }

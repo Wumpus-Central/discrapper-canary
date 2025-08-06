@@ -18,15 +18,20 @@ let f = (0, c.Z)(
             p = (0, u.Z)(e),
             E = (0, a.Z)({
                 id: e.id,
-                label: d.intl.string(d.t.gFHI3t)
+                label: d.intl.string(d.t.gFHI3t),
             });
         return (0, r.jsxs)(l.v2r, {
-            navId: 'channel-context',
+            navId: "channel-context",
             onClose: i.Zy,
-            'aria-label': d.intl.string(d.t.Xm41aW),
+            "aria-label": d.intl.string(d.t.Xm41aW),
             onSelect: c,
-            children: [(0, r.jsx)(l.kSQ, { children: o }), (0, r.jsx)(l.kSQ, { children: f }), (0, r.jsx)(l.kSQ, { children: p }), (0, r.jsx)(l.kSQ, { children: E })]
+            children: [
+                (0, r.jsx)(l.kSQ, { children: o }),
+                (0, r.jsx)(l.kSQ, { children: f }),
+                (0, r.jsx)(l.kSQ, { children: p }),
+                (0, r.jsx)(l.kSQ, { children: E }),
+            ],
         });
     },
-    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_LIST_STORE_CHANNEL_MENU]
+    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_LIST_STORE_CHANNEL_MENU],
 );

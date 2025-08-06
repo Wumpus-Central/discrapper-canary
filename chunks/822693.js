@@ -1,4 +1,4 @@
-(n.d(t, { m: () => j }), n(388685), n(290780));
+n.d(t, { m: () => j }), n(388685), n(290780);
 var r = n(255367),
     i = n(73800),
     l = n(149765),
@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(800223),
     h = n(981631),
     f = n(388032);
-let x = 'NO_CHANNEL',
+let x = "NO_CHANNEL",
     b = l.$e(h.Plq.VIEW_CHANNEL, h.Plq.CREATE_INSTANT_INVITE);
 function j(e) {
     let { guildId: t, widgetEnabled: n, widgetChannelId: l, className: h, enableLocalUpdate: j } = e,
@@ -32,13 +32,13 @@ function j(e) {
                     let { channel: t } = e;
                     return {
                         value: t.id,
-                        label: (0, o.F6)(t, m.default, u.Z, !0)
+                        label: (0, o.F6)(t, m.default, u.Z, !0),
                     };
                 });
             return (
                 e.unshift({
                     value: x,
-                    label: f.intl.string(f.t.u197b2)
+                    label: f.intl.string(f.t.u197b2),
                 }),
                 e
             );
@@ -47,12 +47,12 @@ function j(e) {
             (e) => {
                 j ? (0, p.c)(t, n, e !== x ? e : null) : g.Z.updateEmbed(t, n, e !== x ? e : null);
             },
-            [t, n, j]
+            [t, n, j],
         );
     return (0, r.jsx)(s.q4e, {
         options: _,
         value: l,
         onChange: O,
-        className: h
+        className: h,
     });
 }

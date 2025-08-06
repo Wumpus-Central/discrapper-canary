@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,7 +22,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -64,7 +64,7 @@ function y(e, t) {
 }
 let v = {
     HOST: 5,
-    LISTENER: 4
+    LISTENER: 4,
 };
 class I extends i.PureComponent {
     isHost() {
@@ -72,8 +72,15 @@ class I extends i.PureComponent {
         return e.id === (null == t ? void 0 : t.id);
     }
     renderTitle() {
-        return (0, r.jsxs)('div', {
-            children: [(0, r.jsx)(g.Z, { children: this.isHost() ? b.intl.formatToPlainString(b.t['6UJ7mp'], { count: this.props.party.length }) : b.intl.string(b.t.RZufbG) }), (0, r.jsx)(f.Z, { children: b.intl.string(b.t['0ZHLIi']) })]
+        return (0, r.jsxs)("div", {
+            children: [
+                (0, r.jsx)(g.Z, {
+                    children: this.isHost()
+                        ? b.intl.formatToPlainString(b.t["6UJ7mp"], { count: this.props.party.length })
+                        : b.intl.string(b.t.RZufbG),
+                }),
+                (0, r.jsx)(f.Z, { children: b.intl.string(b.t["0ZHLIi"]) }),
+            ],
         });
     }
     renderStopListeningButton() {
@@ -83,7 +90,7 @@ class I extends i.PureComponent {
             : (0, r.jsx)(h.Z, {
                   tooltipText: b.intl.string(b.t.LeZSp6),
                   onClick: e,
-                  icon: o.Dio
+                  icon: o.Dio,
               });
     }
     renderHelpIcon() {
@@ -91,14 +98,14 @@ class I extends i.PureComponent {
             ? (0, r.jsx)(h.Z, {
                   tooltipText: b.intl.string(b.t.U7N2Hh),
                   onClick: () => {
-                      window.open(p.Z.getArticleURL(m.BhN.SPOTIFY_CONNECTION), '_blank');
+                      window.open(p.Z.getArticleURL(m.BhN.SPOTIFY_CONNECTION), "_blank");
                   },
-                  icon: o.d3s
+                  icon: o.d3s,
               })
             : null;
     }
     render() {
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: _.listeningAlong,
             children: [
                 this.renderTitle(),
@@ -109,21 +116,21 @@ class I extends i.PureComponent {
                         users: this.props.party,
                         max: this.isHost() ? v.HOST : v.LISTENER,
                         renderUser: this.renderPartyMember,
-                        renderMoreUsers: this.renderPartyMemberOverflow
-                    })
+                        renderMoreUsers: this.renderPartyMemberOverflow,
+                    }),
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: _.icons,
-                    children: [this.renderHelpIcon(), this.renderStopListeningButton()]
-                })
-            ]
+                    children: [this.renderHelpIcon(), this.renderStopListeningButton()],
+                }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            O(this, 'partyMemberAvatarRef', i.createRef()),
-            O(this, 'partyMemberOverflowRef', i.createRef()),
-            O(this, 'renderPartyMember', (e, t) => {
+        super(...e),
+            O(this, "partyMemberAvatarRef", i.createRef()),
+            O(this, "partyMemberOverflowRef", i.createRef()),
+            O(this, "renderPartyMember", (e, t) => {
                 let n;
                 if (null == e) return null;
                 let { host: l, onUserContextMenu: c } = this.props;
@@ -135,8 +142,8 @@ class I extends i.PureComponent {
                             targetElementRef: this.partyMemberAvatarRef,
                             user: e,
                             newAnalyticsLocations: [s.Z.AVATAR],
-                            position: 'top',
-                            align: 'center',
+                            position: "top",
+                            align: "center",
                             clickTrap: !0,
                             children: (l) =>
                                 (0, r.jsx)(o.ua7, {
@@ -150,21 +157,21 @@ class I extends i.PureComponent {
                                                 src: e.getAvatarURL(void 0, 24),
                                                 size: o.EFr.SIZE_24,
                                                 className: a()(_.avatar, t),
-                                                'aria-label': e.username,
+                                                "aria-label": e.username,
                                                 onMouseEnter: r,
                                                 onMouseLeave: s,
                                                 onContextMenu: (t) => void (null != e && (null == c || c(t, e))),
-                                                avatarContentRef: this.partyMemberAvatarRef
-                                            })
+                                                avatarContentRef: this.partyMemberAvatarRef,
+                                            }),
                                         );
-                                    }
-                                })
+                                    },
+                                }),
                         },
-                        e.id
+                        e.id,
                     )
                 );
             }),
-            O(this, 'renderPartyMemberOverflow', (e, t, n) => {
+            O(this, "renderPartyMemberOverflow", (e, t, n) => {
                 let { renderOverflowPopout: i } = this.props;
                 return (0, r.jsx)(
                     o.yRy,
@@ -176,24 +183,24 @@ class I extends i.PureComponent {
                                 text: b.intl.string(b.t.Zf4NPT),
                                 children: (i) =>
                                     (0, r.jsx)(
-                                        'div',
+                                        "div",
                                         y(
                                             E(
                                                 {
                                                     ref: this.partyMemberOverflowRef,
-                                                    className: a()(_.overflow, t)
+                                                    className: a()(_.overflow, t),
                                                 },
                                                 i,
-                                                n
+                                                n,
                                             ),
-                                            { children: e }
-                                        )
-                                    )
-                            })
+                                            { children: e },
+                                        ),
+                                    ),
+                            }),
                     },
-                    n
+                    n,
                 );
-            }));
+            });
     }
 }
 let C = I;

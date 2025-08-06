@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(539854), n(388685));
+n.d(t, { Z: () => h }), n(539854), n(388685);
 var r,
     i = n(255367),
     o = n(73800),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,12 +23,12 @@ function f(e, t, n) {
 }
 function _(e, t, n) {
     return (0, i.jsx)(
-        'div',
+        "div",
         {
             className: t,
-            children: e
+            children: e,
         },
-        n
+        n,
     );
 }
 class p extends (r = o.PureComponent) {
@@ -39,63 +39,63 @@ class p extends (r = o.PureComponent) {
             a = 0;
         for (; a < o && a < e.length; ) {
             let t = a === e.length - 1;
-            (i.push(n(e[a] || null, t ? null : u.avatarMasked, 'user-'.concat(a), t)), a++);
+            i.push(n(e[a] || null, t ? null : u.avatarMasked, "user-".concat(a), t)), a++;
         }
         if (a < e.length) {
             let t = Math.min(e.length - a, 99);
-            i.push(r('+'.concat(t), u.moreUsers, 'more-users', t));
+            i.push(r("+".concat(t), u.moreUsers, "more-users", t));
         }
         return i;
     }
     renderIcon() {
         return this.props.icon
-            ? (0, i.jsx)('div', {
+            ? (0, i.jsx)("div", {
                   className: u.iconContainer,
                   children: (0, i.jsx)(l.gj8, {
-                      size: 'xs',
-                      color: 'currentColor',
+                      size: "xs",
+                      color: "currentColor",
                       colorClass: u.foreground,
-                      className: u.icon
-                  })
+                      className: u.icon,
+                  }),
               })
             : null;
     }
     render() {
         let { className: e } = this.props;
-        return (0, i.jsxs)('div', {
+        return (0, i.jsxs)("div", {
             className: s()(e, u.container),
             ref: (e) => {
                 this._ref = e;
             },
-            children: [this.renderIcon(), this.renderUsers()]
+            children: [this.renderIcon(), this.renderUsers()],
         });
     }
     constructor(...e) {
-        (super(...e),
-            f(this, '_ref', void 0),
-            f(this, 'defaultRenderUser', (e, t, n, r) => {
+        super(...e),
+            f(this, "_ref", void 0),
+            f(this, "defaultRenderUser", (e, t, n, r) => {
                 let { onClick: o, size: a, guildId: f } = this.props,
                     _ = e instanceof c.Z ? e : null != e ? e.user : null;
                 return null == _
-                    ? (0, i.jsx)('div', { className: s()(u.emptyUser, t) }, n)
+                    ? (0, i.jsx)("div", { className: s()(u.emptyUser, t) }, n)
                     : (0, i.jsx)(
                           l.qEK,
                           {
                               tabIndex: 0,
                               src: _.getAvatarURL(f, (0, l.pxk)(a)),
                               size: a,
-                              'aria-label': _.username,
+                              "aria-label": _.username,
                               className: s()(t, d.cursorPointer, u.avatarSize),
-                              onClick: (e) => (null != o ? o(e, _, this._ref) : null)
+                              onClick: (e) => (null != o ? o(e, _, this._ref) : null),
                           },
-                          _.id
+                          _.id,
                       );
-            }));
+            });
     }
 }
-f(p, 'defaultProps', {
+f(p, "defaultProps", {
     max: 10,
     renderMoreUsers: _,
-    size: l.EFr.SIZE_24
+    size: l.EFr.SIZE_24,
 });
 let h = p;

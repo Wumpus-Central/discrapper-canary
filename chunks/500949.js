@@ -1,4 +1,4 @@
-(a.d(t, {
+a.d(t, {
     $R: () => K,
     A0: () => et,
     GU: () => Y,
@@ -20,12 +20,12 @@
     rd: () => ed,
     t4: () => ec,
     uF: () => em,
-    zn: () => $
+    zn: () => $,
 }),
     a(467055),
     a(388685),
     a(35282),
-    a(539854));
+    a(539854);
 var n,
     r,
     l = a(73800),
@@ -66,24 +66,24 @@ function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(a);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(a).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = a[t]),
+                (n = a[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -131,13 +131,13 @@ let F = {
         REC_2100_HLG: S.Z,
         REC_2100_PQ: P.Z,
         XYZ_D50: w.Z,
-        XYZ_D65: I.Z
+        XYZ_D65: I.Z,
     },
     z = Object.fromEntries(Object.keys(F).map((e) => [e, e]));
 Object.values(F).forEach((e) => R.Z.register(e));
 let { SemanticColors: G } = L.V,
     V = G,
-    H = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
+    H = CSS.supports("color", "color(display-p3 1 0 0)") && CSS.supports("color", "color(display-p3 1 0 0 / 1)");
 function W(e, t) {
     let [a, n] = l.useState(() => {
         let a = D.K.get(e);
@@ -159,11 +159,11 @@ function K(e) {
                 e,
                 {
                     color: t[e].raw,
-                    opacity: t[e].opacity
-                }
-            ])
+                    opacity: t[e].opacity,
+                },
+            ]),
         ),
-        highlight: !1
+        highlight: !1,
     };
 }
 function X(e, t, a, n, r) {
@@ -172,29 +172,29 @@ function X(e, t, a, n, r) {
         colors: U(B({}, e.colors), {
             [r]: {
                 color: a,
-                opacity: n
-            }
+                opacity: n,
+            },
         }),
-        highlight: !1
+        highlight: !1,
     };
 }
 function Y(e) {
     return U(B({}, e), { highlight: !e.highlight });
 }
 function J(e) {
-    return (0, k.Z)((0, A.Z)(e, i.Z), { format: 'hex' });
+    return (0, k.Z)((0, A.Z)(e, i.Z), { format: "hex" });
 }
-var q = (((n = {}).TOKENS = 'Tokens'), (n.PALETTES = 'Palettes'), n);
+var q = (((n = {}).TOKENS = "Tokens"), (n.PALETTES = "Palettes"), n);
 function $() {
     return (function (e, t) {
-        let [a, n] = W(''.concat(e, '-states'), [t]),
-            [r, i] = W(''.concat(e, '-index'), 0),
+        let [a, n] = W("".concat(e, "-states"), [t]),
+            [r, i] = W("".concat(e, "-index"), 0),
             s = a[r],
             o = l.useCallback(
                 (e) => {
-                    (n(['function' == typeof e ? e(s) : e, ...a].slice(0, 20)), i(0));
+                    n(["function" == typeof e ? e(s) : e, ...a].slice(0, 20)), i(0);
                 },
-                [i, n, a, s]
+                [i, n, a, s],
             ),
             c = l.useCallback(() => {
                 i(Math.min(a.length - 1, r + 1));
@@ -203,29 +203,37 @@ function $() {
                 i(Math.max(0, r - 1));
             }, [r, i]);
         return [s, o, c, d, r < a.length - 1, r > 0];
-    })('color-override-9-24-2024', {
+    })("color-override-9-24-2024", {
         semanticColorOverrides: {},
         rawColorOverrides: {},
-        tab: 'Tokens',
-        scales: []
+        tab: "Tokens",
+        scales: [],
     });
 }
-let Q = [100, 130, 160, 200, 230, 260, 300, 330, 345, 360, 400, 430, 460, 500, 530, 560, 600, 630, 660, 700, 730, 760, 800, 830, 860, 900],
+let Q = [
+        100, 130, 160, 200, 230, 260, 300, 330, 345, 360, 400, 430, 460, 500, 530, 560, 600, 630, 660, 700, 730, 760,
+        800, 830, 860, 900,
+    ],
     ee = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
 function et(e) {
-    return 'plum' === e ? ee : Q;
+    return "plum" === e ? ee : Q;
 }
-var ea = (((r = {}).LINEAR = 'Linear'), (r.EASE_IN = 'Ease In'), (r.EASE_OUT = 'Ease Out'), (r.EASE_IN_OUT = 'Ease In Out'), r);
+var ea =
+    (((r = {}).LINEAR = "Linear"),
+    (r.EASE_IN = "Ease In"),
+    (r.EASE_OUT = "Ease Out"),
+    (r.EASE_IN_OUT = "Ease In Out"),
+    r);
 function en(e, t) {
     let a = et(t),
-        n = Object.keys(e).map((e) => parseInt(e.split('-')[1])),
+        n = Object.keys(e).map((e) => parseInt(e.split("-")[1])),
         r = Math.max(...n) / (a.length - 1),
         l = {};
     return (
         a.forEach((e, a) => {
             let i = Math.round(a * r),
                 s = n.reduce((e, t) => (Math.abs(t - i) < Math.abs(e - i) ? t : e));
-            l[''.concat(t, '-').concat(s)] = ''.concat(t, '-').concat(e);
+            l["".concat(t, "-").concat(s)] = "".concat(t, "-").concat(e);
         }),
         l
     );
@@ -234,13 +242,13 @@ function er(e) {
     let { name: t, base: a, steps: n = 26, darkness: r, lightness: l, easingStrength: s = 1 } = e,
         o = F[e.colorSpace],
         c = (0, A.Z)(a, o),
-        d = (0, Z.CD)(c, 'white', 1 - r, {
+        d = (0, Z.CD)(c, "white", 1 - r, {
             space: o,
-            outputSpace: i.Z
+            outputSpace: i.Z,
         }),
-        u = (0, Z.CD)(c, 'black', 1 - l, {
+        u = (0, Z.CD)(c, "black", 1 - l, {
             space: o,
-            outputSpace: i.Z
+            outputSpace: i.Z,
         }),
         m = Math.floor(n / 2),
         x = n - m,
@@ -248,13 +256,13 @@ function er(e) {
             steps: m,
             outputSpace: o,
             space: o,
-            progression: (e) => e ** s
+            progression: (e) => e ** s,
         }),
         p = (0, Z.w6)(u, c, {
             steps: x,
             outputSpace: o,
             space: o,
-            progression: (e) => e ** s
+            progression: (e) => e ** s,
         }),
         f = [];
     for (let e = 0; e < m; e++) {
@@ -266,10 +274,14 @@ function er(e) {
         let t = p(1 - e / x);
         f.push(t);
     }
-    return Object.fromEntries(f.map((e, a) => [''.concat(t, '-').concat(a), e]));
+    return Object.fromEntries(f.map((e, a) => ["".concat(t, "-").concat(a), e]));
 }
 function el(e, t, a) {
-    a((a) => (null == a.scales.find((t) => t.name === e) ? a : U(B({}, a), { scales: a.scales.map((a) => (a.name === e ? t(a) : a)) })));
+    a((a) =>
+        null == a.scales.find((t) => t.name === e)
+            ? a
+            : U(B({}, a), { scales: a.scales.map((a) => (a.name === e ? t(a) : a)) }),
+    );
 }
 function ei(e, t, a) {
     el(e, (e) => U(B({}, e), { darkness: t }), a);

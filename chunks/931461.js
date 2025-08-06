@@ -16,9 +16,9 @@ function g() {
     return (0, i.jsx)(c.f, {
         label: p.t.EUo0ys,
         labelHook: () => {
-            window.open(d.Z.getArticleURL(e), '_blank');
+            window.open(d.Z.getArticleURL(e), "_blank");
         },
-        noticeType: m.nq.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE
+        noticeType: m.nq.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
     });
 }
 function h() {
@@ -27,12 +27,12 @@ function h() {
         labelHook: () => {
             r.Z.showAgeVerificationGetStartedModal(s.cU.CONTENT_AND_SOCIAL_NOTICE);
         },
-        noticeType: m.nq.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE
+        noticeType: m.nq.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
     });
 }
 function f() {
     var e;
     let t = null == (e = (0, o.Z)()) || e,
         n = (0, a.l6)();
-    return (0, u.pY)('ContentAndSocialNotice') && !n ? (0, i.jsx)(h, {}) : t ? null : (0, i.jsx)(g, {});
+    return (0, u.pY)("ContentAndSocialNotice") && !n ? (0, i.jsx)(h, {}) : t ? null : (0, i.jsx)(g, {});
 }

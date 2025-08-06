@@ -22,8 +22,8 @@ function b() {
         children: [
             (0, i.jsx)(s.X6q, {
                 className: f.heading,
-                variant: 'heading-xl/semibold',
-                children: h.intl.string(h.t.URyqtL)
+                variant: "heading-xl/semibold",
+                children: h.intl.string(h.t.URyqtL),
             }),
             (0, i.jsx)(s.njP, {
                 className: f.tabBar,
@@ -31,56 +31,56 @@ function b() {
                 onItemSelect: (e) => {
                     a.Z.setSection(g.oAB.GAMES, e);
                 },
-                orientation: 'horizontal',
-                type: 'top',
-                look: 'brand',
+                orientation: "horizontal",
+                type: "top",
+                look: "brand",
                 children: e.map((e) =>
                     (0, i.jsxs)(
                         s.njP.Item,
                         {
                             className: f.tab,
                             id: e.id,
-                            'aria-label': e.title,
+                            "aria-label": e.title,
                             children: [
                                 (0, i.jsx)(e.icon, {
                                     className: f.tabIcon,
-                                    color: 'currentColor'
+                                    color: "currentColor",
                                 }),
-                                (0, i.jsx)('div', {
+                                (0, i.jsx)("div", {
                                     className: f.iconTitle,
-                                    children: e.title
-                                })
-                            ]
+                                    children: e.title,
+                                }),
+                            ],
                         },
-                        e.id
-                    )
-                )
+                        e.id,
+                    ),
+                ),
             }),
             (() => {
                 switch (n) {
                     case p.Z.CLIPS:
                         return (0, i.jsx)(l.Z, {
                             className: f.body,
-                            showHeader: !1
+                            showHeader: !1,
                         });
                     case p.Z.OVERLAY:
                         return (0, i.jsx)(u.Z, {
                             className: f.body,
-                            showHeader: !1
+                            showHeader: !1,
                         });
                     case p.Z.ACTIVITY_PRIVACY:
                         return (0, i.jsx)(c.Z, {
                             className: f.body,
-                            showHeader: !1
+                            showHeader: !1,
                         });
                     case p.Z.MY_GAMES:
                     default:
                         return (0, i.jsx)(d.Z, {
                             className: f.body,
-                            showHeader: !1
+                            showHeader: !1,
                         });
                 }
-            })()
-        ]
+            })(),
+        ],
     });
 }

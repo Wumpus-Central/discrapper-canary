@@ -4,6 +4,6 @@ var r = n(287353),
 e.exports =
     !!Object.getOwnPropertySymbols &&
     !i(function () {
-        var e = Symbol('symbol detection');
+        var e = Symbol("symbol detection");
         return !o(e) || !(Object(e) instanceof Symbol) || (!Symbol.sham && r && r < 41);
     });

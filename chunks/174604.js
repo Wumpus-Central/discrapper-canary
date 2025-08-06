@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685), n(583741), n(953529));
+n.d(t, { Z: () => v }), n(388685), n(583741), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,10 +68,10 @@ function y(e, t) {
 function O(e) {
     let { powerup: t } = e;
     return (0, r.jsx)(l.xv, {
-        tag: 'span',
-        variant: 'text-md/semibold',
+        tag: "span",
+        variant: "text-md/semibold",
         className: m.highlight,
-        children: t.title
+        children: t.title,
     });
 }
 function v(e) {
@@ -85,32 +85,32 @@ function v(e) {
             scale: 0.8,
             config: {
                 tension: 500,
-                friction: 10
-            }
+                friction: 10,
+            },
         }));
     i.useEffect(() => {
         let e = setTimeout(() => {
-            (T({ scale: 1 }), v(!0));
+            T({ scale: 1 }), v(!0);
         }, 300);
         return () => clearTimeout(e);
     }, [T]);
     let S = i.useMemo(() => {
         let e;
-        if (null == g || 0 === g.length) return '';
+        if (null == g || 0 === g.length) return "";
         if (1 === g.length) e = (0, r.jsx)(O, { powerup: g[0] });
         else if (2 === g.length)
             e = h.intl.format(p.default.MNO3sL, {
                 perk1: (0, r.jsx)(O, { powerup: g[0] }),
-                perk2: (0, r.jsx)(O, { powerup: g[1] })
+                perk2: (0, r.jsx)(O, { powerup: g[1] }),
             });
         else {
             let t = Array.from(g).reverse();
             e = h.intl.format(p.default.GmN3VV, {
                 perk1: (0, r.jsx)(O, { powerup: t[0] }),
-                perk2: (0, r.jsx)(O, { powerup: t[1] })
+                perk2: (0, r.jsx)(O, { powerup: t[1] }),
             });
         }
-        return h.intl.format(p.default['/6GgQk'], { perks: e });
+        return h.intl.format(p.default["/6GgQk"], { perks: e });
     }, [g]);
     return null == g || 0 === g.length
         ? null
@@ -119,19 +119,19 @@ function v(e) {
               style: y(E({}, I), { opacity: +!!b }),
               children: [
                   (0, r.jsx)(l.xv, {
-                      tag: 'span',
-                      variant: 'text-md/semibold',
+                      tag: "span",
+                      variant: "text-md/semibold",
                       className: a()(m.description, {
                           [m.text]: !n,
-                          [m.responsiveText]: n
+                          [m.responsiveText]: n,
                       }),
-                      children: S
+                      children: S,
                   }),
                   (0, r.jsx)(u.zx, {
                       className: m.button,
                       onClick: o,
-                      children: h.intl.string(p.default.E5V5KC)
-                  })
-              ]
+                      children: h.intl.string(p.default.E5V5KC),
+                  }),
+              ],
           });
 }

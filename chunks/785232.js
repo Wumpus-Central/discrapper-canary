@@ -12,7 +12,8 @@ function l(e, t) {
         i = c(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -22,12 +23,12 @@ function c(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let u = function (e) {
     var { recipients: t, size: n, status: c, isTyping: u, className: d } = e,
-        f = l(e, ['recipients', 'size', 'status', 'isTyping', 'className']);
+        f = l(e, ["recipients", "size", "status", "isTyping", "className"]);
     let _ = o.ny6[n],
         p = (0, i.Wu)(
             [s.default],
@@ -36,16 +37,16 @@ let u = function (e) {
                     let t = s.default.getUser(e);
                     if (null != t) return t.getAvatarURL(void 0, _.size, !1);
                 }),
-            [t, _.size]
+            [t, _.size],
         );
     return (0, r.jsx)(a.Z, {
-        'aria-label': f['aria-label'],
-        'aria-hidden': f['aria-hidden'],
+        "aria-label": f["aria-label"],
+        "aria-hidden": f["aria-hidden"],
         backSrc: p[0],
         frontSrc: p[1],
         size: n,
         status: c,
         isTyping: null != u && u,
-        className: d
+        className: d,
     });
 };

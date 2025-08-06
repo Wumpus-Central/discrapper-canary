@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     l = n(73800),
     s = n(120356),
@@ -58,25 +58,25 @@ function S(e) {
                 (0, T.nb)(n, [t]),
                 (0, I.Z)(t, void 0, {
                     guildId: n,
-                    dispatchWait: !0
-                })
+                    dispatchWait: !0,
+                }),
             ];
-            (await Promise.all(e), U(!1));
+            await Promise.all(e), U(!1);
         })();
     }, [n, t]),
     D)
         ? x || null == b || null == L
-            ? (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", {
                   className: i()(R.sidebarContainer, R.loadingContainer, S),
                   style: v,
                   children: (0, r.jsx)(o.$jN, {
                       animated: !0,
-                      type: x ? o.$jN.Type.SPINNING_CIRCLE : o.$jN.Type.CHASING_DOTS
-                  })
+                      type: x ? o.$jN.Type.SPINNING_CIRCLE : o.$jN.Type.CHASING_DOTS,
+                  }),
               })
             : (0, r.jsx)(A.Gt, {
                   value: j,
-                  children: (0, r.jsx)('div', {
+                  children: (0, r.jsx)("div", {
                       className: i()(R.sidebarContainer, S),
                       style: v,
                       children: (0, r.jsx)(g.Z, {
@@ -86,24 +86,24 @@ function S(e) {
                           themeOverride: w,
                           forceShowPremium: !0,
                           className: R.profileThemedContainer,
-                          children: (0, r.jsxs)('div', {
+                          children: (0, r.jsxs)("div", {
                               className: R.innerContainer,
                               children: [
                                   (0, r.jsx)(p.ZP, {
                                       userId: t,
                                       guildId: n,
-                                      onClose: s
+                                      onClose: s,
                                   }),
                                   (0, r.jsx)(O.Z, {
                                       userId: t,
                                       guildId: n,
                                       onClose: s,
-                                      className: C
-                                  })
-                              ]
-                          })
-                      })
-                  })
+                                      className: C,
+                                  }),
+                              ],
+                          }),
+                      }),
+                  }),
               })
         : null;
 }

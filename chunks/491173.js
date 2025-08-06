@@ -29,12 +29,12 @@ let E = (0, d.Mg)(o.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
                 (n = (0, r.jsx)(h.Z, {
                     size: b,
                     sticker: (0, p.Zt)(i),
-                    disableAnimation: !0
+                    disableAnimation: !0,
                 })));
         }
         return {
             title: t,
-            graphic: n
+            graphic: n,
         };
     },
     O = i.memo(function (e) {
@@ -47,7 +47,7 @@ let E = (0, d.Mg)(o.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
                 return (null == o ? void 0 : o.type) === _.al.CREATE_STICKER
                     ? {
                           guild_id: o.guild_id,
-                          name: o.name
+                          name: o.name,
                       }
                     : (null == o ? void 0 : o.type) !== _.al.STICKER
                       ? null
@@ -61,20 +61,20 @@ let E = (0, d.Mg)(o.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
                           isInteracting: !0,
                           size: E,
                           sticker: o,
-                          disableAnimation: !0
+                          disableAnimation: !0,
                       })
-                    : (0, r.jsx)('div', {
+                    : (0, r.jsx)("div", {
                           className: g.iconWrapper,
                           children: (0, r.jsx)(a.qJs, {
-                              size: 'md',
-                              color: 'currentColor',
-                              className: g.icon
-                          })
+                              size: "md",
+                              color: "currentColor",
+                              className: g.icon,
+                          }),
                       });
         return (0, r.jsx)(c.Z, {
             graphicPrimary: d,
             graphicSecondary: s,
             titlePrimary: o.name,
-            titleSecondary: (0, p.jl)(o) || (0, p.J8)(o) ? u : null
+            titleSecondary: (0, p.jl)(o) || (0, p.J8)(o) ? u : null,
         });
     });

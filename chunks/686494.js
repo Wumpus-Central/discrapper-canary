@@ -8,19 +8,26 @@ var i = t(212598),
     a = t(344595),
     c = t(322539);
 function d(n) {
-    let { isWaitingForConnection: e, onWaitingForConnection: t, expectedCallbackState: d, onAuthToken: u, onError: C, onClose: _ } = n,
+    let {
+            isWaitingForConnection: e,
+            onWaitingForConnection: t,
+            expectedCallbackState: d,
+            onAuthToken: u,
+            onError: C,
+            onClose: _,
+        } = n,
         h = e
-            ? (0, o.jsx)('img', {
+            ? (0, o.jsx)("img", {
                   src: c,
-                  width: '168',
-                  height: '124',
-                  alt: ''
+                  width: "168",
+                  height: "124",
+                  alt: "",
               })
-            : (0, o.jsx)('img', {
+            : (0, o.jsx)("img", {
                   src: a,
-                  width: '152',
-                  height: '123',
-                  alt: ''
+                  width: "152",
+                  height: "123",
+                  alt: "",
               }),
         p = e ? l.intl.string(l.t.tZ6ze3) : l.intl.string(l.t.siPkNj),
         x = e ? l.intl.string(l.t.VgWnwM) : l.intl.string(l.t.oS4NEB);
@@ -35,6 +42,6 @@ function d(n) {
         img: h,
         title: p,
         body: x,
-        redirectDestination: r.pY
+        redirectDestination: r.pY,
     });
 }

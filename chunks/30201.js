@@ -6,16 +6,16 @@ var r = n(220159),
     c = Object.freeze;
 r(
     {
-        target: 'Object',
+        target: "Object",
         stat: !0,
         forced: a(function () {
             c(1);
         }),
-        sham: !o
+        sham: !o,
     },
     {
         freeze: function (e) {
             return c && i(e) ? c(s(e)) : e;
-        }
-    }
+        },
+    },
 );

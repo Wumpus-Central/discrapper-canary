@@ -8,8 +8,8 @@ function s(e) {
     let { source: t, className: n } = e;
     return null == t
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: o()(a.container, n),
-              style: { backgroundImage: 'url('.concat(t, ')') }
+              style: { backgroundImage: "url(".concat(t, ")") },
           });
 }

@@ -18,73 +18,80 @@ let g = (e) => {
     return (0, r.jsx)(
         u.Z,
         {
-            borderColor: 'red',
-            text: (0, r.jsxs)('div', {
+            borderColor: "red",
+            text: (0, r.jsxs)("div", {
                 className: m.tooltipContent,
                 children: [
                     (0, r.jsx)(l.Z, {
-                        variant: 'text-sm/normal',
-                        children: n.name.toLocaleLowerCase()
+                        variant: "text-sm/normal",
+                        children: n.name.toLocaleLowerCase(),
                     }),
                     (0, r.jsx)(l.Z, {
-                        variant: 'text-sm/normal',
+                        variant: "text-sm/normal",
                         className: m.tooltipCounter,
                         children: p.intl.format(f.default.VN4aTU, {
                             points: Math.abs(s),
-                            grassIconHook: c.Z
-                        })
-                    })
-                ]
+                            grassIconHook: c.Z,
+                        }),
+                    }),
+                ],
             }),
-            'aria-label': n.name,
+            "aria-label": n.name,
             tooltipClassName: m.tooltip,
             spacing: -16,
-            position: 'bottom',
+            position: "bottom",
             children: (e) =>
                 (0, r.jsx)(
-                    'img',
+                    "img",
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })(
                         {
                             src: n.purchaseIconSrc,
-                            alt: '',
-                            className: m.debuff
+                            alt: "",
+                            className: m.debuff,
                         },
-                        e
-                    )
-                )
+                        e,
+                    ),
+                ),
         },
-        t
+        t,
     );
 };
 function b() {
     let e = (0, o.e7)([i.Z], () => i.Z.purchasedItems),
-        t = (0, s.useMemo)(() => d.ZJ.filter((t) => null != e[t.id] && (null == t.neutralizerId || !i.Z.hasPurchasedUpgrade(t.id, t.neutralizerId))), [e]);
-    return (0, r.jsx)('div', {
+        t = (0, s.useMemo)(
+            () =>
+                d.ZJ.filter(
+                    (t) =>
+                        null != e[t.id] && (null == t.neutralizerId || !i.Z.hasPurchasedUpgrade(t.id, t.neutralizerId)),
+                ),
+            [e],
+        );
+    return (0, r.jsx)("div", {
         className: m.container,
-        children: t.map((e) => (0, r.jsx)(g, { id: e.id }, e.id))
+        children: t.map((e) => (0, r.jsx)(g, { id: e.id }, e.id)),
     });
 }

@@ -1,8 +1,8 @@
-(r.d(n, {
+r.d(n, {
     Z: () => L,
-    n: () => P
+    n: () => P,
 }),
-    r(35282));
+    r(35282);
 var l = r(255367),
     t = r(73800),
     o = r(120356),
@@ -35,7 +35,7 @@ let P = (0, f.IC)(90),
             a = (0, i.e7)([m.default], () => m.default.getCurrentUser());
         return p.ZP.canUseCollectibles(a)
             ? n.summary
-            : T.intl.format(T.t['9hafRk'], {
+            : T.intl.format(T.t["9hafRk"], {
                   getPremium: (e) =>
                       (0, l.jsx)(s.P3F, {
                           innerRef: o,
@@ -44,32 +44,32 @@ let P = (0, f.IC)(90),
                               (0, b.Z)({
                                   subscriptionTier: S.Si.TIER_2,
                                   analyticsLocations: r,
-                                  returnRef: o
+                                  returnRef: o,
                               });
                           },
-                          tag: 'span',
+                          tag: "span",
                           children: (0, l.jsx)(s.Text, {
-                              variant: 'text-md/normal',
-                              color: 'always-white',
-                              tag: 'span',
-                              children: e
-                          })
-                      })
+                              variant: "text-md/normal",
+                              color: "always-white",
+                              tag: "span",
+                              children: e,
+                          }),
+                      }),
               });
     },
     E = (e) => {
         let { src: n } = e;
         return /.*\.png/i.test(n)
-            ? (0, l.jsx)('img', {
+            ? (0, l.jsx)("img", {
                   src: n,
-                  alt: '',
-                  className: k.animationAsset
+                  alt: "",
+                  className: k.animationAsset,
               })
             : (0, l.jsx)(g.Z, {
                   src: n,
                   className: k.animationAsset,
                   autoPlay: !0,
-                  loop: !0
+                  loop: !0,
               });
     };
 function L(e) {
@@ -85,48 +85,48 @@ function L(e) {
         style:
             null != o
                 ? {
-                      background: ''.concat((0, h.nH)(o), ' border-box border-box'),
-                      outlineColor: o.border.toHslString()
+                      background: "".concat((0, h.nH)(o), " border-box border-box"),
+                      outlineColor: o.border.toHslString(),
                   }
                 : void 0,
         children: [
             !d && null != p && g && (0, l.jsx)(E, { src: p }),
             (null == b ? void 0 : b.addAttributionLogo)
-                ? (0, l.jsxs)('div', {
+                ? (0, l.jsxs)("div", {
                       className: k.discordLogo,
                       children: [
                           (0, l.jsx)(s.gw7, {
-                              size: 'custom',
+                              size: "custom",
                               width: 28,
                               height: 28,
-                              color: 'currentColor',
-                              className: k.discordIcon
+                              color: "currentColor",
+                              className: k.discordIcon,
                           }),
-                          (0, l.jsx)(O.Z, { className: k.discordWordmark })
-                      ]
+                          (0, l.jsx)(O.Z, { className: k.discordWordmark }),
+                      ],
                   })
                 : (0, l.jsx)(s.LZC, { size: 28 }),
             (null == b ? void 0 : b.addLogo)
-                ? (0, l.jsx)('img', {
+                ? (0, l.jsx)("img", {
                       className: k.categoryLogo,
                       src: (0, f.uV)(n.logo, { size: P }),
                       alt: n.name,
-                      style: { maxWidth: null == b ? void 0 : b.logoMaxWidth }
+                      style: { maxWidth: null == b ? void 0 : b.logoMaxWidth },
                   })
                 : (0, l.jsx)(s.LZC, { size: 90 }),
-            '' !== n.summary &&
+            "" !== n.summary &&
                 (0, l.jsx)(s.Text, {
                     className: a()(k.summary, { [k.blackSummary]: S }),
                     style: null != n.bannerTextColor ? { color: n.bannerTextColor } : void 0,
-                    variant: 'text-md/normal',
-                    children: n.skuId === u.T.DISXCORE ? (0, l.jsx)(A, { category: n }) : n.summary
+                    variant: "text-md/normal",
+                    children: n.skuId === u.T.DISXCORE ? (0, l.jsx)(A, { category: n }) : n.summary,
                 }),
             !t &&
                 (0, l.jsx)(B.Z, {
                     category: n,
                     className: k.limitedTimeBadge,
-                    display: 'banner'
-                })
-        ]
+                    display: "banner",
+                }),
+        ],
     });
 }

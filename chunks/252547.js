@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => g }), r(388685));
+r.d(t, { Z: () => g }), r(388685);
 var n = r(255367),
     a = r(73800),
     i = r(120356),
@@ -14,26 +14,26 @@ function g(e) {
         p = t.length > 7,
         [f, x] = a.useState(!1),
         j = a.useMemo(() => t.slice(0, p && !f ? 6 : void 0), [t, p, f]);
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         children: [
             (0, n.jsx)(o.X6, {
                 className: u.sectionHeader,
-                variant: 'text-md/semibold',
-                color: 'header-primary',
-                children: d.intl.string(d.t.ak8OHh)
+                variant: "text-md/semibold",
+                color: "header-primary",
+                children: d.intl.string(d.t.ak8OHh),
             }),
             0 === t.length
                 ? (0, n.jsx)(o.xv, {
-                      variant: 'text-xs/semibold',
-                      color: 'text-primary',
+                      variant: "text-xs/semibold",
+                      color: "text-primary",
                       className: m.emptyState,
-                      children: d.intl.string(d.t.R5fYVF)
+                      children: d.intl.string(d.t.R5fYVF),
                   })
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)('div', {
+                          (0, n.jsx)("div", {
                               className: l()(m.friends, { [m.fadedEntries]: p && !f }),
-                              children: (0, n.jsx)('div', {
+                              children: (0, n.jsx)("div", {
                                   className: u.column,
                                   children: j.map((e) =>
                                       (0, n.jsx)(
@@ -42,12 +42,12 @@ function g(e) {
                                               entry: e,
                                               viewId: r,
                                               onClose: g,
-                                              officialGuildId: i
+                                              officialGuildId: i,
                                           },
-                                          e.id
-                                      )
-                                  )
-                              })
+                                          e.id,
+                                      ),
+                                  ),
+                              }),
                           }),
                           p &&
                               !f &&
@@ -56,15 +56,15 @@ function g(e) {
                                   onClick: () => x(!0),
                                   children: [
                                       (0, n.jsx)(o.xv, {
-                                          variant: 'text-xs/semibold',
-                                          color: 'interactive-normal',
-                                          children: d.intl.string(d.t.yohc6O)
+                                          variant: "text-xs/semibold",
+                                          color: "interactive-normal",
+                                          children: d.intl.string(d.t.yohc6O),
                                       }),
-                                      (0, n.jsx)(s.CJ0, { size: 'xs' })
-                                  ]
-                              })
-                      ]
-                  })
-        ]
+                                      (0, n.jsx)(s.CJ0, { size: "xs" }),
+                                  ],
+                              }),
+                      ],
+                  }),
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(592125),
     i = n(750041);
 function o(e, t, n) {
@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,20 @@ function c(e) {
 }
 function u(e) {
     let t = !1;
-    return (c(e) && !a.has(e.id) && (a.add(e.id), (t = !0)), !c(e) && a.has(e.id) && (a.delete(e.id), (t = !0)), !c(e) && s.has(e.id) && (s.delete(e.id), (t = !0)), t);
+    return (
+        c(e) && !a.has(e.id) && (a.add(e.id), (t = !0)),
+        !c(e) && a.has(e.id) && (a.delete(e.id), (t = !0)),
+        !c(e) && s.has(e.id) && (s.delete(e.id), (t = !0)),
+        t
+    );
 }
 function d() {
-    (a.clear(),
+    a.clear(),
         s.clear(),
         Object.values(r.Z.getMutablePrivateChannels()).forEach((e) => {
             u(e);
         }),
-        (l = !0));
+        (l = !0);
 }
 function f(e) {
     let { channelId: t } = e;
@@ -47,7 +52,7 @@ function p(e) {
 function h(e) {
     let { channel: t } = e,
         n = !1;
-    return (a.has(t.id) && (a.delete(t.id), (n = !0)), n);
+    return a.has(t.id) && (a.delete(t.id), (n = !0)), n;
 }
 class m extends i.Z {
     initialize() {
@@ -60,7 +65,7 @@ class m extends i.Z {
     takeSnapshot() {
         return {
             version: m.LATEST_SNAPSHOT_VERSION,
-            data: Array.from(a)
+            data: Array.from(a),
         };
     }
     getSpamChannelIds() {
@@ -86,9 +91,9 @@ class m extends i.Z {
             CHANNEL_CREATE: _,
             CHANNEL_UPDATES: p,
             CHANNEL_DELETE: h,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f,
         });
     }
 }
-(o(m, 'displayName', 'SpamMessageRequestStore'), o(m, 'LATEST_SNAPSHOT_VERSION', 1));
+o(m, "displayName", "SpamMessageRequestStore"), o(m, "LATEST_SNAPSHOT_VERSION", 1);
 let g = new m();

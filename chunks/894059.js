@@ -11,12 +11,17 @@ function a(e) {
         u = (0, o.Z)();
     return a
         ? (0, n.jsx)(i.sNh, {
-              id: 'create-event',
-              label: c.intl.string(c.t['60lJ0N']),
+              id: "create-event",
+              label: c.intl.string(c.t["60lJ0N"]),
               icon: t ? i.VZI : void 0,
               action: () => {
                   (0, i.ZDy)(async () => {
-                      let { default: t } = await Promise.all([r.e('22347'), r.e('82758'), r.e('58023'), r.e('7131')]).then(r.bind(r, 779250));
+                      let { default: t } = await Promise.all([
+                          r.e("22347"),
+                          r.e("82758"),
+                          r.e("58023"),
+                          r.e("7131"),
+                      ]).then(r.bind(r, 779250));
                       return (r) => {
                           var i, l;
                           return (0, n.jsx)(
@@ -25,24 +30,24 @@ function a(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
                                           n = Object.keys(r);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (n = n.concat(
                                               Object.getOwnPropertySymbols(r).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           n.forEach(function (t) {
                                               var n;
-                                              ((n = r[t]),
+                                              (n = r[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: n,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = n));
-                                          }));
+                                                      : (e[t] = n);
+                                          });
                                   }
                                   return e;
                               })({}, r)),
@@ -59,11 +64,11 @@ function a(e) {
                                     })(Object(l)).forEach(function (e) {
                                         Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
-                              i)
+                              i),
                           );
                       };
                   }, u);
-              }
+              },
           })
         : null;
 }

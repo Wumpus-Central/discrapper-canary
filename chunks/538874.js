@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var r = n(241601),
     i = n(147913),
     o = n(607802);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,12 +24,12 @@ class s extends i.Z {
         null == (e = (t = this)._unsubscribeIntlLoadingStore) || e.call(t);
     }
     constructor(...e) {
-        (super(...e),
-            a(this, 'actions', {
+        super(...e),
+            a(this, "actions", {
                 USER_SETTINGS_PROTO_UPDATE: o.Pe,
-                POST_CONNECTION_OPEN: o.Pe
+                POST_CONNECTION_OPEN: o.Pe,
             }),
-            a(this, '_unsubscribeIntlLoadingStore', void 0));
+            a(this, "_unsubscribeIntlLoadingStore", void 0);
     }
 }
 let l = new s();

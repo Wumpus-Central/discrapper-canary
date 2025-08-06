@@ -8,10 +8,10 @@ var r = n(481060),
     c = n(49898),
     s = n(388032);
 function d(e) {
-    let { enabled: t } = l.c.useExperiment({ location: 'useApplicationDirectoryItem' }, { autoTrackExposure: !0 }),
+    let { enabled: t } = l.c.useExperiment({ location: "useApplicationDirectoryItem" }, { autoTrackExposure: !0 }),
         n = t ? r.iWm : r.jje;
     return (0, i.jsx)(r.sNh, {
-        id: 'application-directory',
+        id: "application-directory",
         label: (0, i.jsx)(i.Fragment, { children: s.intl.string(s.t.AKcFUl) }),
         icon: n,
         action: () => {
@@ -19,9 +19,9 @@ function d(e) {
                 tab: c.GlobalDiscoveryTab.APPS,
                 newSessionState: {
                     entrypoint: { name: o.xF.GUILD_HEADER_POPOUT },
-                    guildId: e.id
-                }
+                    guildId: e.id,
+                },
             });
-        }
+        },
     });
 }

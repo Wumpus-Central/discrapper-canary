@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => G }), n(388685));
+n.d(t, { Z: () => G }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -29,7 +29,7 @@ function A(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,15 +39,15 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -55,11 +55,11 @@ function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,26 +77,36 @@ function R(e, t) {
 let P = (0, l.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     w = {
         opacity: 0,
-        transform: 'translate3d(100%, 0, 0)'
+        transform: "translate3d(100%, 0, 0)",
     },
     D = {
         opacity: 1,
-        transform: 'translate3d(0%, 0, 0)'
+        transform: "translate3d(0%, 0, 0)",
     },
     L = { opacity: 0 },
     x = { opacity: 1 },
-    M = { borderRadius: ''.concat(P, 'px ').concat(P, 'px ').concat(P, 'px ').concat(P, 'px') },
-    k = { borderRadius: '0px '.concat(P, 'px ').concat(P, 'px 0px') },
+    M = { borderRadius: "".concat(P, "px ").concat(P, "px ").concat(P, "px ").concat(P, "px") },
+    k = { borderRadius: "0px ".concat(P, "px ").concat(P, "px 0px") },
     j = {
         mass: 1,
         tension: 500,
         friction: 18,
-        clamp: !0
+        clamp: !0,
     },
     U = (e) => {
         let t,
             o,
-            { participant: s, isUpsellEnabled: l, shape: d, size: m, didTrackUpsellViewed: A, setDidTrackUpsellViewed: C, className: P, premiumIndicator: w, quality: D } = e,
+            {
+                participant: s,
+                isUpsellEnabled: l,
+                shape: d,
+                size: m,
+                didTrackUpsellViewed: A,
+                setDidTrackUpsellViewed: C,
+                className: P,
+                premiumIndicator: w,
+                quality: D,
+            } = e,
             { analyticsLocations: L } = (0, p.ZP)(),
             x = null != (0, O.Z)(s);
         try {
@@ -117,7 +127,7 @@ let P = (0, l.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 U &&
                     M &&
                     (0, f.ZDy)(async () => {
-                        let { default: e } = await n.e('28479').then(n.bind(n, 78865));
+                        let { default: e } = await n.e("28479").then(n.bind(n, 78865));
                         return (t) => (0, r.jsx)(e, R(N({}, t), { analyticsSource: k }));
                     });
             }, [U, M, k]),
@@ -130,7 +140,7 @@ let P = (0, l.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         type: I.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: o,
-                        location_stack: L
+                        location_stack: L,
                     }),
                     C(!0));
             }, [t, o, M, A, C, L]),
@@ -139,36 +149,42 @@ let P = (0, l.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             return null;
         let Z = (0, r.jsx)(f.ua7, {
             text: B(),
-            position: 'bottom',
+            position: "bottom",
             color: f.ua7.Colors.GREY,
             children: (e) =>
                 (0, r.jsxs)(
                     f.P3F,
                     R(N({}, e), {
                         onClick: G,
-                        className: a()(S.qualityIndicator, m, h.eE[d], x ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, { [S.clickable]: U && M }),
+                        className: a()(
+                            S.qualityIndicator,
+                            m,
+                            h.eE[d],
+                            x ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality,
+                            { [S.clickable]: U && M },
+                        ),
                         children: [
                             M
                                 ? (0, r.jsx)(f.SrA, {
-                                      size: 'md',
-                                      color: 'currentColor',
-                                      className: S.premiumStreamIcon
+                                      size: "md",
+                                      color: "currentColor",
+                                      className: S.premiumStreamIcon,
                                   })
                                 : null,
-                            (0, r.jsx)('span', {
+                            (0, r.jsx)("span", {
                                 className: S.qualityResolution,
-                                children: (0, y.ml)(D.maxResolution)
+                                children: (0, y.ml)(D.maxResolution),
                             }),
-                            (0, r.jsx)('span', { children: (0, y.bp)(D.maxFrameRate) })
-                        ]
-                    })
-                )
+                            (0, r.jsx)("span", { children: (0, y.bp)(D.maxFrameRate) }),
+                        ],
+                    }),
+                ),
         });
         return (0, r.jsx)(f.IGR, {
             text: Z,
             className: a()(P, S.qualityIndicatorBadge, { [S.qualityIndicatorBadgePremium]: M && w }),
             color: u.Z.unsafe_rawColors.PRIMARY_500.css,
-            shape: h.eE[d]
+            shape: h.eE[d],
         });
     },
     G = (e) => {
@@ -185,24 +201,24 @@ let P = (0, l.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 {
                     enter: {
                         from: g.enabled ? L : w,
-                        to: g.enabled ? x : D
+                        to: g.enabled ? x : D,
                     },
                     leave: g.enabled ? L : w,
-                    config: j
+                    config: j,
                 },
-                'animate-always'
+                "animate-always",
             ),
             O = (0, f.q_F)(
                 {
                     to: E ? k : M,
-                    config: j
+                    config: j,
                 },
-                'animate-always'
+                "animate-always",
             );
         return ((e) => {
             let { className: n, popoutProps: i } = e;
             return (0, r.jsxs)(
-                'div',
+                "div",
                 R(N({ className: a()(S.streamQualityIndicator, n) }, i), {
                     children: [
                         b((e, n) =>
@@ -218,10 +234,10 @@ let P = (0, l.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                                           didTrackUpsellViewed: d,
                                           setDidTrackUpsellViewed: _,
                                           premiumIndicator: u,
-                                          quality: p
-                                      })
+                                          quality: p,
+                                      }),
                                   })
-                                : null
+                                : null,
                         ),
                         (0, r.jsx)(s.animated.div, {
                             style: O,
@@ -229,11 +245,11 @@ let P = (0, l.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                             children: (0, r.jsx)(h.ZP, {
                                 look: h.jZ.RED,
                                 size: l,
-                                shape: E ? f.Dv2.ROUND_RIGHT : f.Dv2.ROUND
-                            })
-                        })
-                    ]
-                })
+                                shape: E ? f.Dv2.ROUND_RIGHT : f.Dv2.ROUND,
+                            }),
+                        }),
+                    ],
+                }),
             );
         })({ className: c });
     };

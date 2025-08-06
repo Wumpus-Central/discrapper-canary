@@ -14,24 +14,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (o = o.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             o.forEach(function (t) {
                 var o;
-                ((o = n[t]),
+                (o = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: o,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = o));
-            }));
+                        : (e[t] = o);
+            });
     }
     return e;
 }
@@ -48,39 +48,41 @@ function m(e) {
                         o,
                         r = {},
                         c = Object.keys(e);
-                    for (o = 0; o < c.length; o++) ((n = c[o]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    for (o = 0; o < c.length; o++) (n = c[o]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < c.length; o++) ((n = c[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (o = 0; o < c.length; o++)
+                    (n = c[o]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(e, ['reportId', 'reportType']);
+        })(e, ["reportId", "reportType"]);
     return (
         r.useEffect(() => {
             i.default.track(b.rMx.IAR_FEEDBACK_MODAL_VIEWED, {
                 report_id: t,
-                report_type: m
+                report_type: m,
             });
         }, [t, m]),
         (0, o.jsx)(
             l.Z,
             p(
                 {
-                    modalType: 'in_app_report',
+                    modalType: "in_app_report",
                     header: d.intl.string(d.t.MP5lDg),
-                    body: d.intl.string(d.t['7Ct0Dg']),
+                    body: d.intl.string(d.t["7Ct0Dg"]),
                     problemTitle: d.intl.string(d.t.FJmoxM),
                     problems: (0, _.Z)(),
                     freeformNeededProblems: f,
                     onSubmit: function (e) {
                         var r;
                         let { rating: l, problem: i, dontShowAgain: _, feedback: b } = e;
-                        (_ &&
+                        _ &&
                             (0, a.Uv)({
                                 feedbackType: s.nw.IN_APP_REPORTS,
-                                location: 'InAppReportsFeedbackModal'
+                                location: "InAppReportsFeedbackModal",
                             }),
                             (0, u.Z)({
                                 rating: l,
@@ -88,19 +90,19 @@ function m(e) {
                                 feedback: b,
                                 reportId: t,
                                 reportType: m,
-                                dontShowAgain: _
+                                dontShowAgain: _,
                             }),
                             null != l &&
                                 null != i &&
                                 (0, c.ZDy)(async () => {
-                                    let { default: e } = await n.e('14466').then(n.bind(n, 729328));
-                                    return (t) => (0, o.jsx)(e, p({ body: d.intl.string(d.t['d9+vQ0']) }, t));
-                                }));
+                                    let { default: e } = await n.e("14466").then(n.bind(n, 729328));
+                                    return (t) => (0, o.jsx)(e, p({ body: d.intl.string(d.t["d9+vQ0"]) }, t));
+                                });
                     },
-                    otherKey: _.f.OTHER
+                    otherKey: _.f.OTHER,
                 },
-                g
-            )
+                g,
+            ),
         )
     );
 }

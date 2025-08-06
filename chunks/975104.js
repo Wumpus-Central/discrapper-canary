@@ -1,11 +1,11 @@
-(n.d(t, { Z: () => o }), n(415506));
+n.d(t, { Z: () => o }), n(415506);
 var r = n(255367),
     i = n(73800);
 function o() {
     let e = i.createContext(void 0);
     function t() {
         let t = i.useContext(e);
-        if (null == t) throw Error('Context was used outside of defined provider.');
+        if (null == t) throw Error("Context was used outside of defined provider.");
         return t;
     }
     function n() {
@@ -14,7 +14,7 @@ function o() {
             let { children: i } = t;
             return (0, r.jsx)(e.Provider, {
                 value: n,
-                children: i
+                children: i,
             });
         };
     }

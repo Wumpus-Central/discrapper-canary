@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -12,7 +12,7 @@ var i = n(442837),
     p = n(665149),
     h = n(981631),
     f = n(388032);
-let g = new Set(['ko', 'ja']);
+let g = new Set(["ko", "ja"]);
 function m(e) {
     let { className: t, focusSectionProps: n } = e,
         m = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
@@ -20,7 +20,7 @@ function m(e) {
         _ = (0, d.EO)(m);
     return (0, r.jsx)(a.eee, {
         href: u.w,
-        target: '_blank',
+        target: "_blank",
         tabIndex: -1,
         children: (0, r.jsx)(
             p.JO,
@@ -28,37 +28,37 @@ function m(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })(
                 {
-                    color: _ ? l.Z.unsafe_rawColors.GREEN_360.css : 'currentColor',
+                    color: _ ? l.Z.unsafe_rawColors.GREEN_360.css : "currentColor",
                     className: t,
                     onClick: () => c.default.track(h.rMx.HELP_CLICKED, { highlighted: _ }),
                     icon: a.idN,
-                    tooltipPosition: g.has(b) ? 'left' : void 0,
-                    tooltip: f.intl.string(f.t.cqEoj4)
+                    tooltipPosition: g.has(b) ? "left" : void 0,
+                    tooltip: f.intl.string(f.t.cqEoj4),
                 },
-                n
-            )
-        )
+                n,
+            ),
+        ),
     });
 }

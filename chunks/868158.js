@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     Eb: () => D,
     Fx: () => M,
     IM: () => L,
     J2: () => Z,
-    r$: () => w
+    r$: () => w,
 }),
     n(539854),
     n(388685),
-    n(415506));
+    n(415506);
 var r = n(512722),
     i = n.n(r),
     o = n(392711),
@@ -33,7 +33,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -43,15 +43,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -59,11 +59,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -85,7 +85,8 @@ function S(e, t) {
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -95,17 +96,17 @@ function A(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let N = new _.Z('ReadyPayloadUtils'),
+let N = new _.Z("ReadyPayloadUtils"),
     C = {},
     R = null,
     P = {};
 function w(e, t) {
     var n,
         { guilds: r, merged_members: i, merged_presences: o } = e,
-        a = S(e, ['guilds', 'merged_members', 'merged_presences']);
+        a = S(e, ["guilds", "merged_members", "merged_presences"]);
     let s = k(P, null == o ? void 0 : o.friends),
         l =
             null !=
@@ -118,7 +119,7 @@ function w(e, t) {
                           return T(v({}, e), {
                               unavailable: void 0 === e.voice_states,
                               presences: n,
-                              members: r
+                              members: r,
                           });
                       }))
                 ? n
@@ -129,41 +130,56 @@ function w(e, t) {
             presences: e.presences,
             activity_instances: e.activity_instances,
             voice_states: e.voice_states,
-            unavailable: !1
+            unavailable: !1,
         }));
     return (
         null != c && l.push(c),
         (P = {}),
         T(v({}, a), {
             presences: s,
-            guilds: l
+            guilds: l,
         })
     );
 }
 function D() {
     let e = s.Z.database(),
         t = (0, f.O)() ? l.Z.getCommittedVersions() : Promise.resolve({});
-    return Promise.all([t, (0, f.O)() ? u.Z.getGuildIds() : Promise.resolve(new Set()), null != e ? c.Z.okAsync(e) : Promise.resolve(!1)]).then((e) => {
+    return Promise.all([
+        t,
+        (0, f.O)() ? u.Z.getGuildIds() : Promise.resolve(new Set()),
+        null != e ? c.Z.okAsync(e) : Promise.resolve(!1),
+    ]).then((e) => {
         let [t, n, r] = e;
         return {
             guildVersions: t,
             guildChannels: n,
-            databaseOk: r
+            databaseOk: r,
         };
     });
 }
 function L(e, t, n) {
     var r,
         { users: o, relationships: s, private_channels: l, merged_members: c, guilds: u } = e,
-        d = S(e, ['users', 'relationships', 'private_channels', 'merged_members', 'guilds']);
+        d = S(e, ["users", "relationships", "private_channels", "merged_members", "guilds"]);
     U(n);
     let f = k((P = a().keyBy(o, (e) => e.id)), s);
     null == l ||
         l.forEach((e) => {
             let t = e.recipient_ids;
-            (null != t && (e.recipients = t.map((e) => (i()(null != P[e], 'Missing user in compressed ready payload'), P[e]))), delete e.recipient_ids);
+            null != t &&
+                (e.recipients = t.map((e) => (i()(null != P[e], "Missing user in compressed ready payload"), P[e]))),
+                delete e.recipient_ids;
         });
-    let _ = null != (r = null == u ? void 0 : u.map((e, t) => (!0 === e.unavailable ? e : ((e.members = k(P, null == c ? void 0 : c[t])), B(e))))) ? r : [],
+    let _ =
+            null !=
+            (r =
+                null == u
+                    ? void 0
+                    : u.map((e, t) =>
+                          !0 === e.unavailable ? e : ((e.members = k(P, null == c ? void 0 : c[t])), B(e)),
+                      ))
+                ? r
+                : [],
         p = x(t, u, (e) => B(e));
     return (
         null != p && _.push(p),
@@ -172,7 +188,7 @@ function L(e, t, n) {
             presences: [],
             relationships: f,
             guilds: _,
-            private_channels: null != l ? l : []
+            private_channels: null != l ? l : [],
         })
     );
 }
@@ -190,13 +206,13 @@ function M(e, t) {
                       properties: b.dS(o),
                       roles: g.Z.getRolesSnapshot(o.id),
                       emojis: null != (r = null == (n = p.ZP.getGuilds()[o.id]) ? void 0 : n.rawEmojis) ? r : null,
-                      stickers: null != (i = h.Z.getRawStickersByGuild().get(o.id)) ? i : null
-                  }
+                      stickers: null != (i = h.Z.getRawStickersByGuild().get(o.id)) ? i : null,
+                  },
         );
     return (
         (R = {
             guild: e,
-            identifyTime: t
+            identifyTime: t,
         }),
         a
     );
@@ -208,17 +224,23 @@ function k(e, t) {
             t.forEach((t) => {
                 if (null == t) return;
                 let r = t.user_id;
-                (null != r && (i()(null != e[r], 'Missing user['.concat(r, '] in compressed ready payload')), (t.user = e[r])), delete t.user_id, n.push(t));
+                null != r &&
+                    (i()(null != e[r], "Missing user[".concat(r, "] in compressed ready payload")), (t.user = e[r])),
+                    delete t.user_id,
+                    n.push(t);
             }),
         n
     );
 }
 function j(e) {
     let t = C[e];
-    return (delete C[e], t);
+    return delete C[e], t;
 }
 function U(e) {
-    (null != s.Z.database() && !1 === e.databaseOk && d.Z.replaceDisableAllDatabases('ReadyPayloadUtils: database was not ok'), (C = {}));
+    null != s.Z.database() &&
+        !1 === e.databaseOk &&
+        d.Z.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
+        (C = {});
     let t = E.Z.getGuildsArray(),
         n = p.ZP.getGuilds(),
         r = h.Z.getRawStickersByGuild();
@@ -230,35 +252,35 @@ function U(e) {
                 properties: b.dS(s),
                 roles: g.Z.getRolesSnapshot(s.id),
                 emojis: null != (o = null == (i = n[s.id]) ? void 0 : i.rawEmojis) ? o : null,
-                stickers: null != (a = r.get(s.id)) ? a : null
+                stickers: null != (a = r.get(s.id)) ? a : null,
             });
     }
 }
 function G(e, t, n) {
-    (null != t || (t = []), null != n || (n = []));
+    null != t || (t = []), null != n || (n = []);
     let r = new Set(n);
     for (let { id: e } of t) r.add(e);
     let i = null;
     return (
         null != e && (i = e.filter((e) => !r.has(e.id))).push(...t),
         {
-            op: 'update',
+            op: "update",
             writes: t,
             deletes: n,
-            items: i
+            items: i,
         }
     );
 }
 function B(e) {
     var t, n, r, i, o, a, s, l;
     let c = j(e.id);
-    if ('partial' !== e.data_mode)
+    if ("partial" !== e.data_mode)
         return {
             id: e.id,
             dataMode: e.data_mode,
             emojis: {
-                op: 'full_sync',
-                items: e.emojis
+                op: "full_sync",
+                items: e.emojis,
             },
             guild_scheduled_events: e.guild_scheduled_events,
             joined_at: e.joined_at,
@@ -270,26 +292,33 @@ function B(e) {
             roles: e.roles,
             stage_instances: e.stage_instances,
             stickers: {
-                op: 'full_sync',
-                items: e.stickers
+                op: "full_sync",
+                items: e.stickers,
             },
             threads: null != (i = null == (r = e.threads) ? void 0 : r.map((t) => (0, m.q_)(t, e.id))) ? i : [],
             threadMessages: F(e.threads),
             channels: {
-                op: 'full_sync',
-                items: e.channels.map((t) => ((t.guild_id = e.id), (0, m.q_)(t, e.id)))
+                op: "full_sync",
+                items: e.channels.map((t) => ((t.guild_id = e.id), (0, m.q_)(t, e.id))),
             },
             version: e.version,
-            hasThreadsSubscription: e.has_threads_subscription
+            hasThreadsSubscription: e.has_threads_subscription,
         };
-    if (null == c) throw (N.log('no cache entry for partial guild (guild: '.concat(e.id, ', type: ready)')), Error('Guild data was missing from store, but hash was still available.'));
+    if (null == c)
+        throw (
+            (N.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: ready)")),
+            Error("Guild data was missing from store, but hash was still available."))
+        );
     return {
         id: e.id,
         dataMode: e.data_mode,
         channels: {
-            op: 'update',
-            writes: null != (o = null == (t = e.partial_updates.channels) ? void 0 : t.map((t) => (0, m.q_)(t, e.id))) ? o : [],
-            deletes: null != (a = e.partial_updates.deleted_channel_ids) ? a : []
+            op: "update",
+            writes:
+                null != (o = null == (t = e.partial_updates.channels) ? void 0 : t.map((t) => (0, m.q_)(t, e.id)))
+                    ? o
+                    : [],
+            deletes: null != (a = e.partial_updates.deleted_channel_ids) ? a : [],
         },
         channelTimestampUpdates: e.channel_updates,
         emojis: G(c.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
@@ -307,12 +336,12 @@ function B(e) {
         threads: null != (l = null == (n = e.threads) ? void 0 : n.map((t) => (0, m.q_)(t, e.id))) ? l : [],
         threadMessages: F(e.threads),
         version: e.version,
-        hasThreadsSubscription: e.has_threads_subscription
+        hasThreadsSubscription: e.has_threads_subscription,
     };
 }
 function Z(e, t) {
     var n, r, i, o, a, s, l, c;
-    if ((null == t && (t = j(e.id)), 'partial' !== e.data_mode))
+    if ((null == t && (t = j(e.id)), "partial" !== e.data_mode))
         return {
             id: e.id,
             guild_scheduled_events: e.guild_scheduled_events,
@@ -332,25 +361,32 @@ function Z(e, t) {
             version: e.version,
             hasThreadsSubscription: e.has_threads_subscription,
             emojis: {
-                op: 'full_sync',
-                items: e.emojis
+                op: "full_sync",
+                items: e.emojis,
             },
             stickers: {
-                op: 'full_sync',
-                items: e.stickers
+                op: "full_sync",
+                items: e.stickers,
             },
             channels: {
-                op: 'full_sync',
-                items: e.channels.map((t) => ((t.guild_id = e.id), (0, m.q_)(t, e.id)))
-            }
+                op: "full_sync",
+                items: e.channels.map((t) => ((t.guild_id = e.id), (0, m.q_)(t, e.id))),
+            },
         };
-    if (null == t) throw (N.log('no cache entry for partial guild (guild: '.concat(e.id, ', type: post_ready)')), Error('Guild data was missing from store, but hash was still available.'));
+    if (null == t)
+        throw (
+            (N.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: post_ready)")),
+            Error("Guild data was missing from store, but hash was still available."))
+        );
     return {
         id: e.id,
         channels: {
-            op: 'update',
-            writes: null != (a = null == (n = e.partial_updates.channels) ? void 0 : n.map((t) => (0, m.q_)(t, e.id))) ? a : [],
-            deletes: null != (s = e.partial_updates.deleted_channel_ids) ? s : []
+            op: "update",
+            writes:
+                null != (a = null == (n = e.partial_updates.channels) ? void 0 : n.map((t) => (0, m.q_)(t, e.id)))
+                    ? a
+                    : [],
+            deletes: null != (s = e.partial_updates.deleted_channel_ids) ? s : [],
         },
         channelTimestampUpdates: e.channel_updates,
         activity_instances: e.activity_instances,
@@ -371,7 +407,7 @@ function Z(e, t) {
         threadMessages: F(e.threads),
         voice_states: e.voice_states,
         version: e.version,
-        hasThreadsSubscription: e.has_threads_subscription
+        hasThreadsSubscription: e.has_threads_subscription,
     };
 }
 function F(e) {

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     f: () => d,
-    l: () => f
+    l: () => f,
 }),
-    n(415506));
+    n(415506);
 var r = n(255367),
     i = n(73800),
     o = n(399606),
@@ -15,12 +15,25 @@ function u(e, t) {
 }
 function d(e) {
     let t = i.useContext(c);
-    if (null == t) throw Error(''.concat(null != e ? e : 'useGroupListingsFetchContext', ' must be used within a GroupListingsFetchContextProvider'));
+    if (null == t)
+        throw Error(
+            "".concat(
+                null != e ? e : "useGroupListingsFetchContext",
+                " must be used within a GroupListingsFetchContextProvider",
+            ),
+        );
     let { listingsLoaded: n, fetchGroupListingsForGuild: r } = t;
-    return (r(), n);
+    return r(), n;
 }
 function f(e) {
-    let { guildId: t, children: n, refetchOnMount: d, includeSoftDeleted: f, countryCode: _, dontFetchWhileTrue: p } = e,
+    let {
+            guildId: t,
+            children: n,
+            refetchOnMount: d,
+            includeSoftDeleted: f,
+            countryCode: _,
+            dontFetchWhileTrue: p,
+        } = e,
         h = (0, o.e7)([a.Z], () => a.Z.isConnected()),
         m = (0, o.e7)([l.Z], () => (null != t ? l.Z.getSubscriptionGroupListingsForGuildFetchState(t) : l.M.FETCHED)),
         g = i.useRef(d),
@@ -31,15 +44,15 @@ function f(e) {
                 ((g.current = !1),
                 s.FP(t, {
                     includeSoftDeleted: f,
-                    countryCode: _
+                    countryCode: _,
                 }));
         }, [h, t, f, _, p]),
         b = u(m, g);
     return (0, r.jsx)(c.Provider, {
         value: {
             listingsLoaded: b,
-            fetchGroupListingsForGuild: E
+            fetchGroupListingsForGuild: E,
         },
-        children: n
+        children: n,
     });
 }

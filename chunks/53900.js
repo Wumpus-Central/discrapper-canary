@@ -6,6 +6,10 @@ function o() {
     let e = (0, r.e7)([l.Z], () => l.Z.getPremiumTypeSubscription());
     return (0, r.e7)([i.Z], () => {
         var t;
-        return (null == e ? void 0 : e.paymentSourceId) != null ? (null == (t = i.Z.getPaymentSource(e.paymentSourceId)) ? void 0 : t.country) : null;
+        return (null == e ? void 0 : e.paymentSourceId) != null
+            ? null == (t = i.Z.getPaymentSource(e.paymentSourceId))
+                ? void 0
+                : t.country
+            : null;
     });
 }

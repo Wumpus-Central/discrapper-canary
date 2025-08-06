@@ -10,9 +10,9 @@ class a extends r.yZ {
             null != t
                 ? o.intl.formatToPlainString(o.t.aKRa0d, {
                       statusPageURL: i.yXt.STATUS,
-                      details: ''.concat(t)
+                      details: "".concat(t),
                   })
-                : o.intl.formatToPlainString(o.t.aTVNen, { statusPageURL: i.yXt.STATUS })
+                : o.intl.formatToPlainString(o.t.aTVNen, { statusPageURL: i.yXt.STATUS }),
         );
     }
 }

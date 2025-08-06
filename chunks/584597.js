@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,6 +18,6 @@ class o extends r.Z {
         return new o(e);
     }
     constructor(e) {
-        (super(), i(this, 'id', void 0), i(this, 'name', void 0), (this.id = e.id), (this.name = e.name));
+        super(), i(this, "id", void 0), i(this, "name", void 0), (this.id = e.id), (this.name = e.name);
     }
 }

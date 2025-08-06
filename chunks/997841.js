@@ -9,31 +9,31 @@ i &&
     o(function () {
         var t = !0;
         try {
-            u('.', 'd');
+            u(".", "d");
         } catch (e) {
             t = !1;
         }
         var e = {},
-            r = '',
-            n = t ? 'dgimsy' : 'gimsy',
+            r = "",
+            n = t ? "dgimsy" : "gimsy",
             i = function (t, n) {
                 Object.defineProperty(e, t, {
                     get: function () {
-                        return ((r += n), !0);
-                    }
+                        return (r += n), !0;
+                    },
                 });
             },
             s = {
-                dotAll: 's',
-                global: 'g',
-                ignoreCase: 'i',
-                multiline: 'm',
-                sticky: 'y'
+                dotAll: "s",
+                global: "g",
+                ignoreCase: "i",
+                multiline: "m",
+                sticky: "y",
             };
-        for (var a in (t && (s.hasIndices = 'd'), s)) i(a, s[a]);
-        return Object.getOwnPropertyDescriptor(h, 'flags').get.call(e) !== n || r !== n;
+        for (var a in (t && (s.hasIndices = "d"), s)) i(a, s[a]);
+        return Object.getOwnPropertyDescriptor(h, "flags").get.call(e) !== n || r !== n;
     }) &&
-    s(h, 'flags', {
+    s(h, "flags", {
         configurable: !0,
-        get: a
+        get: a,
     });

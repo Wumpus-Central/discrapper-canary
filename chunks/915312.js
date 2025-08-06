@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     LL: () => h,
-    bN: () => f
+    bN: () => f,
 }),
     n(388685),
     n(49124),
     n(539854),
-    n(953529));
+    n(953529);
 var r = n(73800),
     a = n(97519),
     l = n(731965),
@@ -13,7 +13,7 @@ var r = n(73800),
     u = n(626135),
     o = n(532810),
     c = n(981631);
-let s = new i.Z('a11y_violations'),
+let s = new i.Z("a11y_violations"),
     d = (0, a.U)(() => ({ check: null }));
 function f(e) {
     let t = (0, r.useCallback)((e) => {
@@ -27,8 +27,8 @@ function f(e) {
                             (s.add(e),
                             u.default.track(c.rMx.A11Y_RUNTIME_VIOLATION, {
                                 rule_id: t,
-                                trace: n.join('\n'),
-                                hash: r
+                                trace: n.join("\n"),
+                                hash: r,
                             }));
                     }
     }, []);
@@ -52,7 +52,7 @@ function h() {
                 id: r.id,
                 tags: r.tags,
                 elements: n,
-                message: l
+                message: l,
             });
         }
     return t;

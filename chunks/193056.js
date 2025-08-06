@@ -1,85 +1,85 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = 'HTTP/([32]|1\\.[01])',
+        n = "HTTP/([32]|1\\.[01])",
         r = /[A-Za-z][A-Za-z0-9-]*/,
         i = {
-            className: 'attribute',
-            begin: t.concat('^', r, '(?=\\:\\s)'),
+            className: "attribute",
+            begin: t.concat("^", r, "(?=\\:\\s)"),
             starts: {
                 contains: [
                     {
-                        className: 'punctuation',
+                        className: "punctuation",
                         begin: /: /,
                         relevance: 0,
                         starts: {
-                            end: '$',
-                            relevance: 0
-                        }
-                    }
-                ]
-            }
+                            end: "$",
+                            relevance: 0,
+                        },
+                    },
+                ],
+            },
         },
         o = [
             i,
             {
-                begin: '\\n\\n',
+                begin: "\\n\\n",
                 starts: {
                     subLanguage: [],
-                    endsWithParent: !0
-                }
-            }
+                    endsWithParent: !0,
+                },
+            },
         ];
     return {
-        name: 'HTTP',
-        aliases: ['https'],
+        name: "HTTP",
+        aliases: ["https"],
         illegal: /\S/,
         contains: [
             {
-                begin: '^(?=' + n + ' \\d{3})',
+                begin: "^(?=" + n + " \\d{3})",
                 end: /$/,
                 contains: [
                     {
-                        className: 'meta',
-                        begin: n
+                        className: "meta",
+                        begin: n,
                     },
                     {
-                        className: 'number',
-                        begin: '\\b\\d{3}\\b'
-                    }
+                        className: "number",
+                        begin: "\\b\\d{3}\\b",
+                    },
                 ],
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: o
-                }
+                    contains: o,
+                },
             },
             {
-                begin: '(?=^[A-Z]+ (.*?) ' + n + '$)',
+                begin: "(?=^[A-Z]+ (.*?) " + n + "$)",
                 end: /$/,
                 contains: [
                     {
-                        className: 'string',
-                        begin: ' ',
-                        end: ' ',
+                        className: "string",
+                        begin: " ",
+                        end: " ",
                         excludeBegin: !0,
-                        excludeEnd: !0
+                        excludeEnd: !0,
                     },
                     {
-                        className: 'meta',
-                        begin: n
+                        className: "meta",
+                        begin: n,
                     },
                     {
-                        className: 'keyword',
-                        begin: '[A-Z]+'
-                    }
+                        className: "keyword",
+                        begin: "[A-Z]+",
+                    },
                 ],
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: o
-                }
+                    contains: o,
+                },
             },
-            e.inherit(i, { relevance: 0 })
-        ]
+            e.inherit(i, { relevance: 0 }),
+        ],
     };
 };

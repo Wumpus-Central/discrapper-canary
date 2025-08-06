@@ -1,1 +1,1 @@
-e.exports = { body: 'body__96722' };
+e.exports = { body: "body__96722" };

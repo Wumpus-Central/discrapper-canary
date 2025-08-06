@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(873546),
@@ -16,7 +16,11 @@ var r = n(255367),
     g = n(280306);
 function E(e) {
     let { code: t, message: n } = e,
-        [E, b, y] = (0, a.Wu)([p.Z], () => [p.Z.getApplication(t), p.Z.isInvalidApplication(t), p.Z.getApplicationFetchState(t)], [t]),
+        [E, b, y] = (0, a.Wu)(
+            [p.Z],
+            () => [p.Z.getApplication(t), p.Z.isInvalidApplication(t), p.Z.getApplicationFetchState(t)],
+            [t],
+        ),
         O = (0, a.e7)([d.Z], () => {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
@@ -29,10 +33,10 @@ function E(e) {
         A = i.useCallback(() => {
             f.default.track(h.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                 application_id: t,
-                device_platform: o.tq ? 'mobile_web' : 'desktop_web',
+                device_platform: o.tq ? "mobile_web" : "desktop_web",
                 sender_user_id: n.author.id,
                 guild_id: O,
-                channel_id: n.channel_id
+                channel_id: n.channel_id,
             });
         }, [t, O, n.author.id, n.channel_id]);
     return (i.useEffect(() => {
@@ -45,10 +49,10 @@ function E(e) {
         v &&
             b &&
             f.default.track(h.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
-                device_platform: o.tq ? 'mobile_web' : 'desktop_web',
+                device_platform: o.tq ? "mobile_web" : "desktop_web",
                 sender_user_id: n.author.id,
                 guild_id: O,
-                channel_id: n.channel_id
+                channel_id: n.channel_id,
             });
     }, [v, O, b, n.author.id, n.channel_id]),
     b)
@@ -57,28 +61,31 @@ function E(e) {
               children: [
                   (0, r.jsx)(c.Z.Header, { text: m.intl.string(m.t.j4KtLS) }),
                   (0, r.jsx)(c.Z.Body, {
-                      children: (0, r.jsxs)('div', {
+                      children: (0, r.jsxs)("div", {
                           className: g.invalidBody,
                           children: [
                               (0, r.jsx)(c.Z.Icon, { expired: !0 }),
                               (0, r.jsx)(c.Z.Info, {
                                   expired: !0,
                                   title: m.intl.string(m.t.NaQLEx),
-                                  children: m.intl.string(m.t['0H5OT0'])
-                              })
-                          ]
-                      })
-                  })
-              ]
+                                  children: m.intl.string(m.t["0H5OT0"]),
+                              }),
+                          ],
+                      }),
+                  }),
+              ],
           })
         : null == E || y === p.M.FETCHING
           ? (0, r.jsxs)(c.Z, {
                 containerRef: S,
-                children: [(0, r.jsx)(c.Z.Header, { text: m.intl.string(m.t.m9hXGR) }), (0, r.jsx)(c.Z.Body, { resolving: !0 })]
+                children: [
+                    (0, r.jsx)(c.Z.Header, { text: m.intl.string(m.t.m9hXGR) }),
+                    (0, r.jsx)(c.Z.Body, { resolving: !0 }),
+                ],
             })
           : (0, r.jsx)(l.O, {
                 app: u.ZP.createFromServer(E),
                 linkType: l.U.APP_DISCOVERY,
-                onView: A
+                onView: A,
             });
 }

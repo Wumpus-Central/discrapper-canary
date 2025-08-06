@@ -4,13 +4,13 @@ var r = n(179560),
     a = n(166691),
     s = n(566817),
     l = n(143988),
-    c = a('Object.prototype.toString'),
+    c = a("Object.prototype.toString"),
     u = n(195653)(),
-    d = 'undefined' == typeof globalThis ? n.g : globalThis,
+    d = "undefined" == typeof globalThis ? n.g : globalThis,
     f = i(),
-    _ = a('String.prototype.slice'),
+    _ = a("String.prototype.slice"),
     p =
-        a('Array.prototype.indexOf', !0) ||
+        a("Array.prototype.indexOf", !0) ||
         function (e, t) {
             for (var n = 0; n < e.length; n += 1) if (e[n] === t) return n;
             return -1;
@@ -22,13 +22,13 @@ u && s && l
           if (Symbol.toStringTag in t && l) {
               var n = l(t),
                   r = s(n, Symbol.toStringTag);
-              (!r && n && (r = s(l(n), Symbol.toStringTag)), (h['$' + e] = o(r.get)));
+              !r && n && (r = s(l(n), Symbol.toStringTag)), (h["$" + e] = o(r.get));
           }
       })
     : r(f, function (e) {
           var t = new d[e](),
               n = t.slice || t.set;
-          n && (h['$' + e] = o(n));
+          n && (h["$" + e] = o(n));
       });
 var m = function (e) {
         var t = !1;
@@ -36,7 +36,7 @@ var m = function (e) {
             r(h, function (n, r) {
                 if (!t)
                     try {
-                        '$' + n(e) === r && (t = _(r, 1));
+                        "$" + n(e) === r && (t = _(r, 1));
                     } catch (e) {}
             }),
             t
@@ -48,17 +48,17 @@ var m = function (e) {
             r(h, function (n, r) {
                 if (!t)
                     try {
-                        (n(e), (t = _(r, 1)));
+                        n(e), (t = _(r, 1));
                     } catch (e) {}
             }),
             t
         );
     };
 e.exports = function (e) {
-    if (!e || 'object' != typeof e) return !1;
+    if (!e || "object" != typeof e) return !1;
     if (!u) {
         var t = _(c(e), 8, -1);
-        return p(f, t) > -1 ? t : 'Object' === t && g(e);
+        return p(f, t) > -1 ? t : "Object" === t && g(e);
     }
     return s ? m(e) : null;
 };

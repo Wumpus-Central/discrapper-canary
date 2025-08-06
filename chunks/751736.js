@@ -5,8 +5,8 @@ var r = n(127849),
     s = n(504290),
     l = n(677671),
     c = r.Symbol,
-    u = i('wks'),
+    u = i("wks"),
     d = l ? c.for || c : (c && c.withoutSetter) || a;
 e.exports = function (e) {
-    return (o(u, e) || (u[e] = s && o(c, e) ? c[e] : d('Symbol.' + e)), u[e]);
+    return o(u, e) || (u[e] = s && o(c, e) ? c[e] : d("Symbol." + e)), u[e];
 };

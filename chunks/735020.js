@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,11 +19,11 @@ function l(e, t, n) {
 }
 let c = {};
 function u(e) {
-    return ''.concat(e.channel_id, ':').concat(e.id);
+    return "".concat(e.channel_id, ":").concat(e.id);
 }
 function d(e) {
     let { data: t } = e;
-    ((c = {}),
+    (c = {}),
         t.forEach((e) => {
             let { messages: t } = e;
             t.forEach((e) => {
@@ -31,7 +31,7 @@ function d(e) {
                     c[u(e)] = (0, a.e5)(e);
                 });
             });
-        }));
+        });
 }
 function f(e) {
     let { message: t } = e;
@@ -42,7 +42,7 @@ function f(e) {
         null != r &&
         ((c[n] = (0, a.wi)(r, {
             attachments: t.attachments,
-            embeds: t.embeds
+            embeds: t.embeds,
         })),
         !0)
     );
@@ -51,7 +51,7 @@ function _(e) {
     let { messageId: t, channelId: n } = e,
         r = u({
             id: t,
-            channel_id: n
+            channel_id: n,
         }),
         i = c[r];
     null != i && (c[r] = (0, s.Cm)(i));
@@ -70,17 +70,17 @@ class g extends (r = i.ZP.Store) {
         return c[
             u({
                 id: e,
-                channel_id: t
+                channel_id: t,
             })
         ];
     }
 }
-l(g, 'displayName', 'SearchMessageStore');
+l(g, "displayName", "SearchMessageStore");
 let E = new g(o.Z, {
     SEARCH_MESSAGES_SUCCESS: d,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: d,
     MESSAGE_UPDATE: f,
     LOGOUT: p,
     CONNECTION_OPEN: h,
-    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: _
+    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: _,
 });

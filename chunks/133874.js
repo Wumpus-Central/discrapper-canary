@@ -1,7 +1,7 @@
 function r(e) {
-    return e && 'object' == typeof e && 'default' in e ? e.default : e;
+    return e && "object" == typeof e && "default" in e ? e.default : e;
 }
-Object.defineProperty(t, '__esModule', { value: !0 });
+Object.defineProperty(t, "__esModule", { value: !0 });
 var i = n(698091),
     o = r(n(117374)),
     a = r(n(570571)),
@@ -9,7 +9,7 @@ var i = n(698091),
     l = n(239189),
     c = n(73800),
     u = n(263114),
-    d = Symbol.for('Animated:node'),
+    d = Symbol.for("Animated:node"),
     f = function (e) {
         return !!e && e[d] === e;
     },
@@ -24,7 +24,7 @@ var i = n(698091),
     },
     m = (function () {
         function e() {
-            ((this.payload = void 0), p(this, this));
+            (this.payload = void 0), p(this, this);
         }
         return (
             (e.prototype.getPayload = function () {
@@ -36,12 +36,21 @@ var i = n(698091),
     g = (function (e) {
         function t(t) {
             var n;
-            return (((n = e.call(this) || this)._value = t), (n.done = !0), (n.elapsedTime = void 0), (n.lastPosition = void 0), (n.lastVelocity = void 0), (n.v0 = void 0), i.is.num(n._value) && (n.lastPosition = n._value), n);
+            return (
+                ((n = e.call(this) || this)._value = t),
+                (n.done = !0),
+                (n.elapsedTime = void 0),
+                (n.lastPosition = void 0),
+                (n.lastVelocity = void 0),
+                (n.v0 = void 0),
+                i.is.num(n._value) && (n.lastPosition = n._value),
+                n
+            );
         }
-        (o(t, e),
+        o(t, e),
             (t.create = function (e, n) {
                 return new t(e);
-            }));
+            });
         var n = t.prototype;
         return (
             (n.getPayload = function () {
@@ -51,11 +60,21 @@ var i = n(698091),
                 return this._value;
             }),
             (n.setValue = function (e, t) {
-                return (i.is.num(e) && ((this.lastPosition = e), t && ((e = Math.round(e / t) * t), this.done && (this.lastPosition = e))), this._value !== e && ((this._value = e), !0));
+                return (
+                    i.is.num(e) &&
+                        ((this.lastPosition = e),
+                        t && ((e = Math.round(e / t) * t), this.done && (this.lastPosition = e))),
+                    this._value !== e && ((this._value = e), !0)
+                );
             }),
             (n.reset = function () {
                 var e = this.done;
-                ((this.done = !1), i.is.num(this._value) && ((this.elapsedTime = 0), (this.lastPosition = this._value), e && (this.lastVelocity = null), (this.v0 = null)));
+                (this.done = !1),
+                    i.is.num(this._value) &&
+                        ((this.elapsedTime = 0),
+                        (this.lastPosition = this._value),
+                        e && (this.lastVelocity = null),
+                        (this.v0 = null));
             }),
             t
         );
@@ -68,16 +87,16 @@ var i = n(698091),
                 (r._string = null),
                 (r._toString = void 0),
                 (r._toString = i.createInterpolator({
-                    output: [t, n]
+                    output: [t, n],
                 })),
                 r
             );
         }
-        (o(t, e),
+        o(t, e),
             (t.create = function (e, n) {
                 if ((void 0 === n && (n = e), i.is.str(e) && i.is.str(n))) return new t(e, n);
                 throw TypeError('Expected "from" and "to" to be strings');
-            }));
+            });
         var n = t.prototype;
         return (
             (n.getValue = function () {
@@ -88,16 +107,16 @@ var i = n(698091),
                 if (i.is.num(t))
                     if (!e.prototype.setValue.call(this, t)) return !1;
                     else this._string = null;
-                else ((this._string = t), (this._value = 1));
+                else (this._string = t), (this._value = 1);
                 return !0;
             }),
             (n.reset = function (t) {
-                (t &&
+                t &&
                     (this._toString = i.createInterpolator({
-                        output: [this.getValue(), t]
+                        output: [this.getValue(), t],
                     })),
                     (this._value = 0),
-                    e.prototype.reset.call(this));
+                    e.prototype.reset.call(this);
             }),
             t
         );
@@ -106,7 +125,7 @@ var i = n(698091),
     y = (function (e) {
         function t(t) {
             var n;
-            return (void 0 === t && (t = null), ((n = e.call(this) || this).source = void 0), n.setValue(t), n);
+            return void 0 === t && (t = null), ((n = e.call(this) || this).source = void 0), n.setValue(t), n;
         }
         o(t, e);
         var n = t.prototype;
@@ -126,7 +145,7 @@ var i = n(698091),
                 );
             }),
             (n.setValue = function (e) {
-                ((this.source = e), (this.payload = this._makePayload(e)));
+                (this.source = e), (this.payload = this._makePayload(e));
             }),
             (n.reset = function () {
                 this.payload &&
@@ -137,7 +156,7 @@ var i = n(698091),
             (n._makePayload = function (e) {
                 if (e) {
                     var t = new Set();
-                    return (i.each(e, this._addToPayload, t), Array.from(t));
+                    return i.each(e, this._addToPayload, t), Array.from(t);
                 }
             }),
             (n._addToPayload = function (e) {
@@ -155,12 +174,16 @@ var i = n(698091),
     O = (function (e) {
         function t(t, n) {
             var r;
-            return (((r = e.call(this, null) || this).source = void 0), e.prototype.setValue.call(a(r), r._makeAnimated(t, n)), r);
+            return (
+                ((r = e.call(this, null) || this).source = void 0),
+                e.prototype.setValue.call(a(r), r._makeAnimated(t, n)),
+                r
+            );
         }
-        (o(t, e),
+        o(t, e),
             (t.create = function (e, n) {
                 return new t(e, n);
-            }));
+            });
         var n = t.prototype;
         return (
             (n.getValue = function () {
@@ -192,7 +215,7 @@ var i = n(698091),
     v = (function (e) {
         function t(t) {
             var n;
-            return (((n = e.call(this, null) || this).update = t), (n.dirty = !1), n);
+            return ((n = e.call(this, null) || this).update = t), (n.dirty = !1), n;
         }
         o(t, e);
         var n = t.prototype;
@@ -203,17 +226,17 @@ var i = n(698091),
                         var r = n.host.createAnimatedStyle;
                         t = s(s({}, t), {}, { style: r(t.style) });
                     }
-                    (e.prototype.setValue.call(this, t), (b.current = null));
+                    e.prototype.setValue.call(this, t), (b.current = null);
                 }
             }),
             (n.onParentChange = function (e) {
                 var t = this,
                     n = e.type;
                 this.dirty ||
-                    'change' !== n ||
+                    "change" !== n ||
                     ((this.dirty = !0),
                     l.frameLoop.onFrame(function () {
-                        ((t.dirty = !1), t.update());
+                        (t.dirty = !1), t.update();
                     }));
             }),
             t
@@ -235,7 +258,7 @@ var i = n(698091),
             return (
                 d.setValue(n, {
                     dependencies: f,
-                    host: t
+                    host: t,
                 }),
                 u.useLayoutEffect(function () {
                     return (
@@ -256,16 +279,16 @@ var i = n(698091),
                             a &&
                             function (e) {
                                 o.current = T(r, e);
-                            }
-                    })
+                            },
+                    }),
                 )
             );
         });
     };
 function T(e, t) {
-    return (e && (i.is.fun(e) ? e(t) : (e.current = t)), t);
+    return e && (i.is.fun(e) ? e(t) : (e.current = t)), t;
 }
-var S = Symbol.for('AnimatedComponent'),
+var S = Symbol.for("AnimatedComponent"),
     A = function (e, t) {
         var n = void 0 === t ? {} : t,
             r = n.applyAnimatedValues,
@@ -291,15 +314,15 @@ var S = Symbol.for('AnimatedComponent'),
                         ? function (e) {
                               return e;
                           }
-                        : l
+                        : l,
             },
             u = function (e) {
-                var t = N(e) || 'Anonymous';
-                return (((e = i.is.str(e) ? I(e, c) : e[S] || (e[S] = I(e, c))).displayName = 'Animated(' + t + ')'), e);
+                var t = N(e) || "Anonymous";
+                return ((e = i.is.str(e) ? I(e, c) : e[S] || (e[S] = I(e, c))).displayName = "Animated(" + t + ")"), e;
             };
         return (
             i.each(e, function (e, t) {
-                (i.is.str(t) || (t = N(e)), (u[t] = u(e)));
+                i.is.str(t) || (t = N(e)), (u[t] = u(e));
             }),
             { animated: u }
         );
@@ -307,4 +330,14 @@ var S = Symbol.for('AnimatedComponent'),
     N = function (e) {
         return i.is.str(e) ? e : e && i.is.str(e.displayName) ? e.displayName : (i.is.fun(e) && e.name) || null;
     };
-((t.Animated = m), (t.AnimatedArray = O), (t.AnimatedObject = y), (t.AnimatedProps = v), (t.AnimatedString = E), (t.AnimatedValue = g), (t.createHost = A), (t.getAnimated = _), (t.getPayload = h), (t.isAnimated = f), (t.setAnimated = p));
+(t.Animated = m),
+    (t.AnimatedArray = O),
+    (t.AnimatedObject = y),
+    (t.AnimatedProps = v),
+    (t.AnimatedString = E),
+    (t.AnimatedValue = g),
+    (t.createHost = A),
+    (t.getAnimated = _),
+    (t.getPayload = h),
+    (t.isAnimated = f),
+    (t.setAnimated = p);

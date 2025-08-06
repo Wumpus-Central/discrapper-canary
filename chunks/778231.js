@@ -25,17 +25,17 @@ let b = (e) => {
         y.current || (s.Z.fetch(), (y.current = !0));
     }, []);
     let O = null != f ? p.default.extractTimestamp(f.id) : void 0;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: x.container,
         children: [
             (0, r.jsx)(a.X6q, {
                 className: x.header,
-                variant: 'heading-sm/semibold',
-                children: g.intl.string(g.t['aYfK//'])
+                variant: "heading-sm/semibold",
+                children: g.intl.string(g.t["aYfK//"]),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: x.appContainer,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: x.appInfo,
                     children: [
                         (0, r.jsx)(o.ZP, {
@@ -43,55 +43,57 @@ let b = (e) => {
                             width: 40,
                             height: 40,
                             className: x.appIconMask,
-                            children: (0, r.jsx)('img', {
+                            children: (0, r.jsx)("img", {
                                 src: v,
-                                alt: '',
-                                className: x.appIcon
-                            })
+                                alt: "",
+                                className: x.appIcon,
+                            }),
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: x.textContainer,
                             children: [
                                 (0, r.jsx)(a.Text, {
-                                    color: 'header-primary',
-                                    variant: 'text-md/medium',
-                                    children: h
+                                    color: "header-primary",
+                                    variant: "text-md/medium",
+                                    children: h,
                                 }),
                                 j.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(a.Text, {
-                                                  color: 'text-default',
-                                                  variant: 'text-md/normal',
-                                                  children: (0, u.Z)(j.length)
+                                                  color: "text-default",
+                                                  variant: "text-md/normal",
+                                                  children: (0, u.Z)(j.length),
                                               }),
                                               (0, r.jsx)(c.Z, {
                                                   className: x.guildStack,
                                                   guilds: j,
-                                                  maxGuilds: 6
-                                              })
-                                          ]
+                                                  maxGuilds: 6,
+                                              }),
+                                          ],
                                       })
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(a.Text, {
-                                                  color: 'text-default',
-                                                  variant: 'text-md/normal',
-                                                  children: null == (t = b.bot) ? void 0 : t.tag
+                                                  color: "text-default",
+                                                  variant: "text-md/normal",
+                                                  children: null == (t = b.bot) ? void 0 : t.tag,
                                               }),
                                               null != O &&
                                                   (0, r.jsx)(a.Text, {
-                                                      color: 'text-default',
-                                                      variant: 'text-md/normal',
-                                                      children: g.intl.formatToPlainString(g.t.C9rUOz, { authorizedAt: O })
-                                                  })
-                                          ]
-                                      })
-                            ]
-                        })
-                    ]
-                })
-            })
-        ]
+                                                      color: "text-default",
+                                                      variant: "text-md/normal",
+                                                      children: g.intl.formatToPlainString(g.t.C9rUOz, {
+                                                          authorizedAt: O,
+                                                      }),
+                                                  }),
+                                          ],
+                                      }),
+                            ],
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 };

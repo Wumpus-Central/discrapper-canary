@@ -14,33 +14,33 @@ function m(e) {
         o = s.ZP.getEmojiURL({
             id: t.id,
             animated: t.animated,
-            size: 32
+            size: 32,
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l()(u.emojiRow, { [u.disabled]: i }),
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 className: u.emojiImage,
                 src: o,
-                alt: t.name
+                alt: t.name,
             }),
             (0, r.jsx)(a.Text, {
-                color: 'header-primary',
-                variant: 'text-md/medium',
+                color: "header-primary",
+                variant: "text-md/medium",
                 className: u.emojiAlias,
-                children: t.name
+                children: t.name,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.deleteButton,
                 children: (0, r.jsx)(a.hU, {
-                    variant: 'secondary',
+                    variant: "secondary",
                     icon: a.XHJ,
                     onClick: () => n(t),
-                    'aria-label': d.intl.string(d.t.dVS92d),
-                    disabled: i
-                })
-            })
-        ]
+                    "aria-label": d.intl.string(d.t.dVS92d),
+                    disabled: i,
+                }),
+            }),
+        ],
     });
 }
 function g(e) {
@@ -48,7 +48,7 @@ function g(e) {
         l = (0, c.Z)(n),
         a = null != t ? l.filter((e) => t.has(e.id)) : [],
         s = (0, o.mY)();
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: u.container,
         children: a.map((e) =>
             (0, r.jsx)(
@@ -56,10 +56,10 @@ function g(e) {
                 {
                     emoji: e,
                     onRemoveEmoji: () => i(e),
-                    disabled: s
+                    disabled: s,
                 },
-                e.id
-            )
-        )
+                e.id,
+            ),
+        ),
     });
 }

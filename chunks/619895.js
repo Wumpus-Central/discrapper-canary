@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Q: () => h,
-    h: () => m
+    h: () => m,
 }),
-    n(35282));
+    n(35282);
 var r = n(73800),
     i = n(892814),
     o = n(442837),
@@ -18,7 +18,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,11 +44,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,16 +66,16 @@ function p(e, t) {
 function h(e) {
     let { contentType: t } = e;
     switch (t) {
-        case 'image/jpeg':
-        case 'image/jpg':
-            return '.jpg';
-        case 'image/png':
-        case 'image/apng':
-            return '.png';
-        case 'image/webp':
-            return '.webp';
+        case "image/jpeg":
+        case "image/jpg":
+            return ".jpg";
+        case "image/png":
+        case "image/apng":
+            return ".png";
+        case "image/webp":
+            return ".webp";
         default:
-            return '';
+            return "";
     }
 }
 function m(e) {
@@ -110,16 +110,22 @@ function m(e) {
                         let v = (0, s.Z8)({
                                 rootCommand: E,
                                 command: E,
-                                applicationId: O.id
+                                applicationId: O.id,
                             }),
-                            I = null == (i = y.command_metadata) || null == (r = i[t]) || null == (n = r.overrideSendCommandInfo) ? void 0 : n.commandId;
+                            I =
+                                null == (i = y.command_metadata) ||
+                                null == (r = i[t]) ||
+                                null == (n = r.overrideSendCommandInfo)
+                                    ? void 0
+                                    : n.commandId;
                         if (null != I) {
-                            let e = null != I ? (null == (m = y.commands) ? void 0 : m.find((e) => e.id === I)) : void 0;
+                            let e =
+                                null != I ? (null == (m = y.commands) ? void 0 : m.find((e) => e.id === I)) : void 0;
                             null != e &&
                                 (b = (0, s.Z8)({
                                     rootCommand: e,
                                     command: e,
-                                    applicationId: O.id
+                                    applicationId: O.id,
                                 }));
                         }
                         return {
@@ -127,24 +133,29 @@ function m(e) {
                                 displayName: v.displayName
                                     .split(/[_ ]/)
                                     .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
-                                    .join(' ')
+                                    .join(" "),
                             }),
-                            imageOption: null == (l = y.command_metadata) || null == (o = l[t]) ? void 0 : o.imageOption,
+                            imageOption:
+                                null == (l = y.command_metadata) || null == (o = l[t]) ? void 0 : o.imageOption,
                             overrideSendCommand: b,
-                            overrideSendCommandInfo: null == (u = y.command_metadata) || null == (c = u[t]) ? void 0 : c.overrideSendCommandInfo,
-                            onlyAllowEdit: null == (_ = y.command_metadata) || null == (d = _[t]) ? void 0 : d.onlyAllowEdit,
+                            overrideSendCommandInfo:
+                                null == (u = y.command_metadata) || null == (c = u[t])
+                                    ? void 0
+                                    : c.overrideSendCommandInfo,
+                            onlyAllowEdit:
+                                null == (_ = y.command_metadata) || null == (d = _[t]) ? void 0 : d.onlyAllowEdit,
                             section: {
                                 type: a.Qi.APPLICATION,
                                 id: O.id,
                                 icon: O.icon,
                                 name: null != (g = null == O || null == (h = O.bot) ? void 0 : h.username) ? g : O.name,
-                                application: O
-                            }
+                                application: O,
+                            },
                         };
                     })
                     .filter(l.lm)
             );
-        }, [i])
+        }, [i]),
     };
 }
 function g(e) {
@@ -154,19 +165,19 @@ function g(e) {
             () => ({
                 channelId: t,
                 location: n,
-                withCommands: !0
+                withCommands: !0,
             }),
-            [t, n]
+            [t, n],
         );
     r.useEffect(() => {
         (0, c.a)(a);
     }, [a]);
     let { fetchState: s, recommendationsSections: l } = (0, o.cj)([u.ZP], () => ({
         fetchState: u.ZP.getFetchState(a),
-        recommendationsSections: u.ZP.getRecommendations(a)
+        recommendationsSections: u.ZP.getRecommendations(a),
     }));
     return {
         fetchState: s,
-        recommendationsSections: l
+        recommendationsSections: l,
     };
 }

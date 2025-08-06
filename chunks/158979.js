@@ -16,24 +16,24 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -56,14 +56,14 @@ function m(e, t) {
     );
 }
 function y() {
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: f.footer,
         children: (0, i.jsx)(r.zx, {
             color: r.zx.Colors.GREEN,
             size: r.zx.Sizes.SMALL,
             className: f.ctaButton,
-            children: p.intl.string(p.t.U76Ft7)
-        })
+            children: p.intl.string(p.t.U76Ft7),
+        }),
     });
 }
 function O(e) {
@@ -76,7 +76,7 @@ function O(e) {
                 title: null,
                 body: p.intl.formatToPlainString(p.t.z9znpa, {
                     game: t.name,
-                    server: r.name
+                    server: r.name,
                 }),
                 hint: () => (0, i.jsx)(y, {}),
                 renderFooter: () => (0, i.jsx)(y, {}),
@@ -84,12 +84,16 @@ function O(e) {
                     f();
                 },
                 onNotificationClick: (e, t) => {
-                    (O('unlock'), l.Z.updateNotificationStatus(t));
+                    O("unlock"), l.Z.updateNotificationStatus(t);
                     let d = s.default.isOverlayOOPEnabledForPid((0, c.getPID)());
-                    if ((d ? l.Z.setInputLocked(!1, (0, c.getPID)()) : l.Z.setInstanceLocked(!1), null == a.default.getCurrentUser())) return;
+                    if (
+                        (d ? l.Z.setInputLocked(!1, (0, c.getPID)()) : l.Z.setInstanceLocked(!1),
+                        null == a.default.getCurrentUser())
+                    )
+                        return;
                     let h = d ? { contextKey: o.u1M } : void 0;
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
+                        let { default: e } = await Promise.all([n.e("46746"), n.e("33641")]).then(n.bind(n, 60594));
                         return (t) =>
                             (0, i.jsx)(
                                 e,
@@ -97,35 +101,37 @@ function O(e) {
                                     sourcePID: (0, c.getPID)(),
                                     selectSource: !1,
                                     guildId: r.id,
-                                    analyticsLocation: u.Sbl.OVERLAY_NUDGE
-                                })
+                                    analyticsLocation: u.Sbl.OVERLAY_NUDGE,
+                                }),
                             );
                     }, h);
                 },
                 onDismissClick: () => {
-                    O('dismiss');
-                }
+                    O("dismiss");
+                },
             };
         }
         case h.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: r, trackClick: a } = (0, d.R)(h.n0.GoLiveNonVoiceNudge, { notif_type: h.n0.GoLiveNonVoiceNudge });
+                { trackView: r, trackClick: a } = (0, d.R)(h.n0.GoLiveNonVoiceNudge, {
+                    notif_type: h.n0.GoLiveNonVoiceNudge,
+                });
             return {
                 icon: n(847881),
                 title: null,
-                body: p.intl.formatToPlainString(p.t['0SVWgI'], { game: t.name }),
+                body: p.intl.formatToPlainString(p.t["0SVWgI"], { game: t.name }),
                 hint: () => (0, i.jsx)(y, {}),
                 renderFooter: () => (0, i.jsx)(y, {}),
                 onNotificationShow: () => {
                     r();
                 },
                 onNotificationClick: (e, t) => {
-                    (a('unlock'), l.Z.updateNotificationStatus(t));
+                    a("unlock"), l.Z.updateNotificationStatus(t);
                     let r = s.default.isOverlayOOPEnabledForPid((0, c.getPID)());
                     r ? l.Z.setInputLocked(!1, (0, c.getPID)()) : l.Z.setInstanceLocked(!1);
                     let d = r ? { contextKey: o.u1M } : void 0;
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
+                        let { default: e } = await Promise.all([n.e("46746"), n.e("33641")]).then(n.bind(n, 60594));
                         return (t) =>
                             (0, i.jsx)(
                                 e,
@@ -133,14 +139,14 @@ function O(e) {
                                     sourcePID: (0, c.getPID)(),
                                     selectSource: !1,
                                     selectGuild: !0,
-                                    analyticsLocation: u.Sbl.OVERLAY_NUDGE
-                                })
+                                    analyticsLocation: u.Sbl.OVERLAY_NUDGE,
+                                }),
                             );
                     }, d);
                 },
                 onDismissClick: () => {
-                    a('dismiss');
-                }
+                    a("dismiss");
+                },
             };
         }
     }

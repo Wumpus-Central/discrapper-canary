@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,40 +43,40 @@ function m(e) {
     let { focused: t, channelId: n, streamerId: o, stream: u } = e,
         p = i.useRef(null),
         h = (0, s.e7)([c.default], () => c.default.getCurrentUser());
-    (a()(null != h, 'user cannot be null'), (0, f.Z)(p, h, o, n));
+    a()(null != h, "user cannot be null"), (0, f.Z)(p, h, o, n);
     let {
         handleClick: m,
         handleMouseDown: g,
         handleMouseEnter: E,
         handleMouseMove: b,
-        handleMouseUp: y
+        handleMouseUp: y,
     } = (0, d.Z)({
         user: h,
         channelId: n,
         streamerId: o,
         stream: u,
         focused: t,
-        canvas: p.current
+        canvas: p.current,
     });
     return (0, r.jsx)(l.Z, {
-        children: (0, r.jsx)('canvas', {
+        children: (0, r.jsx)("canvas", {
             ref: p,
             onClick: m,
             onMouseDown: g,
             onMouseEnter: E,
             onMouseMove: b,
             onMouseUp: y,
-            className: _.sharedCanvas
-        })
+            className: _.sharedCanvas,
+        }),
     });
 }
 function g(e) {
     let { isSharedCanvasEnabled: t } = u.Z.useExperiment(
         {
             guildId: e.guildId,
-            location: 'd0de1c_1'
+            location: "d0de1c_1",
         },
-        { autoTrackExposure: !0 }
+        { autoTrackExposure: !0 },
     );
     return !t || e.hasScreenMessage ? null : (0, r.jsx)(m, h({}, e));
 }

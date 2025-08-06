@@ -28,7 +28,7 @@ let x = i.memo(function (e) {
                 channel: t,
                 connected: l,
                 needSubscriptionToAccess: _,
-                locked: !1
+                locked: !1,
             });
         }, [t, l, _]);
     return (i.useEffect(
@@ -38,14 +38,14 @@ let x = i.memo(function (e) {
                 g.S.unsubscribe(b.CkL.CALL_START, v);
             }
         ),
-        [v]
+        [v],
     ),
     h.tM.useExperiment(
         {
             guildId: t.guild_id,
-            location: '63250c_1'
+            location: "63250c_1",
         },
-        { autoTrackExposure: !1 }
+        { autoTrackExposure: !1 },
     ).enabled &&
         !n &&
         !l &&
@@ -55,7 +55,7 @@ let x = i.memo(function (e) {
         ? (0, r.jsx)(m.ZP.Icon, {
               icon: o.Csw,
               onClick: v,
-              tooltip: x ? y.intl.string(y.t.fdEeb2) : y.intl.string(y.t.focH1t)
+              tooltip: x ? y.intl.string(y.t.fdEeb2) : y.intl.string(y.t.focH1t),
           })
         : null;
 });

@@ -35,13 +35,13 @@ function x(e) {
                                       let { user: t } = e;
                                       return t;
                                   }),
-                    selected: e.id === t
+                    selected: e.id === t,
                 }),
-                value: e.id
+                value: e.id,
             };
         });
     return (0, r.jsx)(m.Z, {
-        title: h.intl.string(h.t['eg7R/v']),
+        title: h.intl.string(h.t["eg7R/v"]),
         scrollerInnerClassName: p.channelSelectScrollerInner,
         children: (0, r.jsx)(l.FXm, {
             options: j,
@@ -51,7 +51,7 @@ function x(e) {
             onChange: (e) => {
                 let { value: t } = e;
                 return x(t);
-            }
-        })
+            },
+        }),
     });
 }

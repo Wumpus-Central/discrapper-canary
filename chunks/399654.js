@@ -13,19 +13,19 @@ async function u(e) {
         d = s.ZP.getFetchState({
             location: n,
             channelId: t,
-            withCommands: a
+            withCommands: a,
         }),
         f = s.ZP.getLastFetchTimeMs({
             location: n,
             channelId: t,
-            withCommands: a
+            withCommands: a,
         });
     if (d !== s.M.FETCHING && (null == f || !(f + c > u))) {
         i.Z.dispatch({
-            type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS',
+            type: "APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS",
             location: n,
             channelId: t,
-            withCommands: a
+            withCommands: a,
         });
         try {
             var _;
@@ -35,23 +35,23 @@ async function u(e) {
                     locale: o.default.locale,
                     channel_id: t,
                     location: n,
-                    with_commands: a
+                    with_commands: a,
                 },
-                rejectWithError: !1
+                rejectWithError: !1,
             });
             i.Z.dispatch({
-                type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS',
+                type: "APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS",
                 location: n,
                 channelId: t,
                 recommendations: null != (_ = e.body) ? _ : [],
-                withCommands: a
+                withCommands: a,
             });
         } catch (e) {
             i.Z.dispatch({
-                type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE',
+                type: "APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE",
                 location: n,
                 channelId: t,
-                withCommands: a
+                withCommands: a,
             });
         }
     }

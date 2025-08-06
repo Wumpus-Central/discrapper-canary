@@ -9,9 +9,9 @@ var i = n(442837),
 function c(e) {
     let t = (0, i.e7)([a.Z], () => a.Z.getToastsEnabled(e));
     return (0, r.jsx)(o.S89, {
-        id: 'show-call-chat-toasts',
-        label: l.intl.string(l.t['5NL5vb']),
+        id: "show-call-chat-toasts",
+        label: l.intl.string(l.t["5NL5vb"]),
         checked: t,
-        action: () => s.Z.setCallChatToastsEnabled(e, !t)
+        action: () => s.Z.setCallChatToastsEnabled(e, !t),
     });
 }

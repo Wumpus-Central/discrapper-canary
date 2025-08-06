@@ -6,7 +6,7 @@ a.d(e, {
     _4: () => h,
     _j: () => P,
     cN: () => G,
-    to: () => L
+    to: () => L,
 });
 var c = a(622916),
     E = a(688838),
@@ -20,19 +20,19 @@ var c = a(622916),
 let A = {},
     f = {};
 function T(t, e = !1) {
-    return S('cls', t, D, r, e);
+    return S("cls", t, D, r, e);
 }
 function p(t, e = !1) {
-    return S('lcp', t, m, n, e);
+    return S("lcp", t, m, n, e);
 }
 function L(t) {
-    return S('fid', t, C, _);
+    return S("fid", t, C, _);
 }
 function h(t) {
-    return S('ttfb', t, v, o);
+    return S("ttfb", t, v, o);
 }
 function O(t) {
-    return S('inp', t, y, i);
+    return S("inp", t, y, i);
 }
 function P(t, e) {
     return (
@@ -40,14 +40,14 @@ function P(t, e) {
         f[t] ||
             ((function (t) {
                 let e = {};
-                ('event' === t && (e.durationThreshold = 0),
+                "event" === t && (e.durationThreshold = 0),
                     (0, d.N)(
                         t,
                         (e) => {
                             g(t, { entries: e });
                         },
-                        e
-                    ));
+                        e,
+                    );
             })(t),
             (f[t] = !0)),
         b(t, e)
@@ -66,47 +66,47 @@ function g(t, e) {
 Type: ${t}
 Name: ${(0, E.$P)(r)}
 Error:`,
-                        e
+                        e,
                     );
             }
 }
 function D() {
     return (0, l.m)(
         (t) => {
-            (g('cls', { metric: t }), (r = t));
+            g("cls", { metric: t }), (r = t);
         },
-        { reportAllChanges: !0 }
+        { reportAllChanges: !0 },
     );
 }
 function C() {
     return (0, u.F)((t) => {
-        (g('fid', { metric: t }), (_ = t));
+        g("fid", { metric: t }), (_ = t);
     });
 }
 function m() {
     return (0, R.N)(
         (t) => {
-            (g('lcp', { metric: t }), (n = t));
+            g("lcp", { metric: t }), (n = t);
         },
-        { reportAllChanges: !0 }
+        { reportAllChanges: !0 },
     );
 }
 function v() {
     return (0, N.m)((t) => {
-        (g('ttfb', { metric: t }), (o = t));
+        g("ttfb", { metric: t }), (o = t);
     });
 }
 function y() {
     return (0, I.Y)((t) => {
-        (g('inp', { metric: t }), (i = t));
+        g("inp", { metric: t }), (i = t);
     });
 }
 function S(t, e, a, r, _ = !1) {
     let n;
-    return (U(t, e), f[t] || ((n = a()), (f[t] = !0)), r && e({ metric: r }), b(t, e, _ ? n : void 0));
+    return U(t, e), f[t] || ((n = a()), (f[t] = !0)), r && e({ metric: r }), b(t, e, _ ? n : void 0);
 }
 function U(t, e) {
-    ((A[t] = A[t] || []), A[t].push(e));
+    (A[t] = A[t] || []), A[t].push(e);
 }
 function b(t, e, a) {
     return () => {
@@ -118,5 +118,5 @@ function b(t, e, a) {
     };
 }
 function G(t) {
-    return 'duration' in t;
+    return "duration" in t;
 }

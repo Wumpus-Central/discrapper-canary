@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(539854), n(388685));
+n.d(t, { Z: () => b }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -18,7 +18,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,45 +35,45 @@ class m extends i.PureComponent {
             i = null;
         if (null != e) {
             let r = h.Z5c.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
-            ((i = r),
+            (i = r),
                 null != t &&
                     n.push({
                         id: h.Z5c.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
-                        label: t.name
+                        label: t.name,
                     }),
                 n.push({
                     id: r,
-                    label: e.name
-                }));
+                    label: e.name,
+                });
         }
         return (0, r.jsx)(a.OoM, {
             renderCustomBreadcrumb: this.renderCustomBreadcrumb,
             onBreadcrumbClick: this.handleClick,
             breadcrumbs: n,
-            activeId: i
+            activeId: i,
         });
     }
     constructor(...e) {
-        (super(...e),
-            g(this, 'handleClick', (e) => {
+        super(...e),
+            g(this, "handleClick", (e) => {
                 let { sku: t } = this.props;
                 (0, d.uL)(e.id, {
                     state: {
                         analyticsSource: {
                             object: h.qAy.NAVIGATION_LINK,
                             section: h.jXE.NAVIGATION,
-                            page: null == t ? h.ZY5.STORE_DIRECTORY_BROWSE : h.ZY5.STORE_LISTING
-                        }
-                    }
+                            page: null == t ? h.ZY5.STORE_DIRECTORY_BROWSE : h.ZY5.STORE_LISTING,
+                        },
+                    },
                 });
             }),
-            g(this, 'renderCustomBreadcrumb', (e, t) =>
+            g(this, "renderCustomBreadcrumb", (e, t) =>
                 (0, r.jsx)(u.Z.Title, {
                     className: t ? null : f.breadcrumb,
                     muted: !t,
-                    children: e.label
-                })
-            ));
+                    children: e.label,
+                }),
+            );
     }
 }
 let b = (0, s.Z)(
@@ -84,7 +84,7 @@ let b = (0, s.Z)(
         return {
             primarySkuId: r,
             isFetchingPrimarySku: null != r && p.Z.isFetching(r),
-            primarySku: null != r ? p.Z.get(r) : null
+            primarySku: null != r ? p.Z.get(r) : null,
         };
-    })(m)
+    })(m),
 );

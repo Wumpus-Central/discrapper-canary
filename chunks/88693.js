@@ -12,7 +12,8 @@ function o(e) {
                 let r = Math.round(e);
                 switch (o) {
                     case a.GlobalDiscoverySearchBarState.DEFAULT:
-                        r < 20 && c(n ? a.GlobalDiscoverySearchBarState.COLLAPSED : a.GlobalDiscoverySearchBarState.FLOATING);
+                        r < 20 &&
+                            c(n ? a.GlobalDiscoverySearchBarState.COLLAPSED : a.GlobalDiscoverySearchBarState.FLOATING);
                         break;
                     case a.GlobalDiscoverySearchBarState.COLLAPSED:
                         r > l && c(a.GlobalDiscoverySearchBarState.DEFAULT);
@@ -21,7 +22,7 @@ function o(e) {
                         r > s && c(a.GlobalDiscoverySearchBarState.DEFAULT);
                 }
             },
-            [n, t, o, c]
+            [n, t, o, c],
         ),
         u = r.useCallback(() => {
             c(a.GlobalDiscoverySearchBarState.FLOATING);
@@ -33,6 +34,6 @@ function o(e) {
         onTabsAvailableWidthChange: d,
         tabsClassName: o === a.GlobalDiscoverySearchBarState.FLOATING ? i.floatingSearchTabsMask : void 0,
         onCollapsedSearchBarClick: u,
-        onSearchBarBlur: p
+        onSearchBarBlur: p,
     };
 }

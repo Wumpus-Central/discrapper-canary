@@ -13,10 +13,13 @@ let u = function (e) {
         d = (0, a.e7)([l.Z], () => l.Z.validate(e), [e]),
         m = (0, a.e7)([l.Z], () => l.Z.isRateLimited()),
         g = (0, s.c)(),
-        f = n.useMemo(() => (0, i.debounce)((e) => o.Z.attemptPomelo(e, r ? 'registration' : 'modal', r, u), g), [g, r, u]);
+        f = n.useMemo(
+            () => (0, i.debounce)((e) => o.Z.attemptPomelo(e, r ? "registration" : "modal", r, u), g),
+            [g, r, u],
+        );
     return (
         n.useEffect(() => {
-            t && !m && null == d && '' !== e && f(e);
+            t && !m && null == d && "" !== e && f(e);
         }, [t, m, d, e, f]),
         n.useMemo(() => (null != d ? (0, c.ti)(d) : void 0), [d])
     );

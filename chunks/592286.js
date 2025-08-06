@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     N4: () => _,
     Pn: () => p,
     RS: () => f,
@@ -9,11 +9,11 @@
     hZ: () => i,
     mb: () => c,
     nx: () => o,
-    tL: () => d
+    tL: () => d,
 }),
-    n(388685));
+    n(388685);
 var r = n(246364);
-(r.QJ.VERIFICATION, r.QJ.TERMS);
+r.QJ.VERIFICATION, r.QJ.TERMS;
 let i = new Set([r.QJ.MULTIPLE_CHOICE, r.QJ.TEXT_INPUT, r.QJ.PARAGRAPH]),
     o = 5,
     a = 16,
@@ -23,5 +23,5 @@ let i = new Set([r.QJ.MULTIPLE_CHOICE, r.QJ.TEXT_INPUT, r.QJ.PARAGRAPH]),
     u = 150,
     d = 150,
     f = 1000,
-    _ = 'Membership Gating',
-    p = 'in-app-member-verification';
+    _ = "Membership Gating",
+    p = "in-app-member-verification";

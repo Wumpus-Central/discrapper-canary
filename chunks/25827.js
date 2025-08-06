@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => O,
-    Z: () => y
+    Z: () => y,
 });
 var r = n(255367),
     i = n(73800),
@@ -20,7 +20,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,7 +72,8 @@ function E(e, t) {
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -82,15 +83,24 @@ function b(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function y(e) {
     let t = (0, u.X)(e),
-        { enabled: n, cameraUnavailable: o, onChange: a, onCameraUnavailable: d, hasPermission: _, children: p, channelLimitReached: h = !1, join: m } = e,
+        {
+            enabled: n,
+            cameraUnavailable: o,
+            onChange: a,
+            onCameraUnavailable: d,
+            hasPermission: _,
+            children: p,
+            channelLimitReached: h = !1,
+            join: m,
+        } = e,
         g = (0, c.bp)(),
         E = o ? () => d() : () => a(!e.enabled, g),
-        { Component: b, play: y, events: O } = (0, s.o)(m || n ? 'disable' : 'enable');
+        { Component: b, play: y, events: O } = (0, s.o)(m || n ? "disable" : "enable");
     i.useEffect(() => () => y(), [n, y]);
     let v = m ? l.Odl : g === f.IlC.POPOUT ? (n ? l.Odl : l.Amn) : b;
     return (0, r.jsx)(r.Fragment, {
@@ -99,20 +109,46 @@ function y(e) {
             isActive: n,
             disabled: !n && (!_ || h),
             iconComponent: v,
-            iconColor: 'currentColor',
+            iconColor: "currentColor",
             label: t,
             unavailable: o,
             onMouseEnter: m ? void 0 : O.onMouseEnter,
-            onMouseLeave: m ? void 0 : O.onMouseLeave
-        })
+            onMouseLeave: m ? void 0 : O.onMouseLeave,
+        }),
     });
 }
 function O(e) {
-    var { enabled: t, join: n, channel: i, onChange: o, onCameraUnavailable: s, cameraUnavailable: l, hasPermission: c, className: u, channelLimitReached: f, channelLimit: p, centerButton: m = !1, onPopoutClick: b } = e,
-        O = E(e, ['enabled', 'join', 'channel', 'onChange', 'onCameraUnavailable', 'cameraUnavailable', 'hasPermission', 'className', 'channelLimitReached', 'channelLimit', 'centerButton', 'onPopoutClick']);
+    var {
+            enabled: t,
+            join: n,
+            channel: i,
+            onChange: o,
+            onCameraUnavailable: s,
+            cameraUnavailable: l,
+            hasPermission: c,
+            className: u,
+            channelLimitReached: f,
+            channelLimit: p,
+            centerButton: m = !1,
+            onPopoutClick: b,
+        } = e,
+        O = E(e, [
+            "enabled",
+            "join",
+            "channel",
+            "onChange",
+            "onCameraUnavailable",
+            "cameraUnavailable",
+            "hasPermission",
+            "className",
+            "channelLimitReached",
+            "channelLimit",
+            "centerButton",
+            "onPopoutClick",
+        ]);
     let v = m ? d.d : d.Z,
-        I = () => (n ? 'join' : t ? 'green' : 'primaryDark'),
-        T = (e) => (n ? 'join' : e ? 'green' : O.color);
+        I = () => (n ? "join" : t ? "green" : "primaryDark"),
+        T = (e) => (n ? "join" : e ? "green" : O.color);
     return (0, r.jsx)(y, {
         enabled: t,
         join: n,
@@ -125,7 +161,7 @@ function O(e) {
         channelLimit: p,
         children: (e) => {
             var { unavailable: t, onMouseEnter: i, onMouseLeave: o, isActive: s } = e,
-                l = E(e, ['unavailable', 'onMouseEnter', 'onMouseLeave', 'isActive']);
+                l = E(e, ["unavailable", "onMouseEnter", "onMouseLeave", "isActive"]);
             return (0, r.jsx)(
                 v,
                 g(h({}, l, O), {
@@ -134,17 +170,17 @@ function O(e) {
                     isActive: s,
                     onMouseEnter: (e) => {
                         var t;
-                        (null == (t = O.onMouseEnter) || t.call(O, e), null == i || i());
+                        null == (t = O.onMouseEnter) || t.call(O, e), null == i || i();
                     },
                     onMouseLeave: (e) => {
                         var t;
-                        (null == (t = O.onMouseLeave) || t.call(O, e), null == o || o());
+                        null == (t = O.onMouseLeave) || t.call(O, e), null == o || o();
                     },
                     className: a()(u, { [_.fauxDisabled]: t }),
                     onPopoutClick: b,
-                    isTrayButton: !n
-                })
+                    isTrayButton: !n,
+                }),
             );
-        }
+        },
     });
 }

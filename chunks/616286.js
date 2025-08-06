@@ -1,4 +1,4 @@
-(n.d(t, { T: () => R }), n(388685), n(539854));
+n.d(t, { T: () => R }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -25,7 +25,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -54,7 +54,8 @@ function T(e, t) {
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -64,7 +65,7 @@ function S(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function A(e) {
@@ -74,15 +75,15 @@ function A(e) {
             [_.ZP],
             () => ({
                 unreadCount: _.ZP.getUnreadCount(e),
-                mentionCount: _.ZP.getMentionCount(e)
+                mentionCount: _.ZP.getMentionCount(e),
             }),
-            [e]
+            [e],
         );
     return {
         unreadCount: r,
         mentionCount: i,
         voiceChannelIsSelected: n,
-        isTyping: t
+        isTyping: t,
     };
 }
 function N(e) {
@@ -95,13 +96,13 @@ function N(e) {
                 a(!1);
             }, g.z);
             return () => {
-                (clearTimeout(e), a(!1));
+                clearTimeout(e), a(!1);
             };
         }, [t]),
         {
             isShowing: o || n > 0 || r,
             unreadCount: t,
-            mentionCount: n
+            mentionCount: n,
         }
     );
 }
@@ -113,30 +114,46 @@ function C(e) {
         unreadCount: i,
         mentionCount: o,
         isTyping: a,
-        canBadge: s
+        canBadge: s,
     });
 }
 function R(e) {
     let t;
-    var { channelId: n, className: o, showingClassName: s, onClick: _, inPopout: p, showRequestToSpeakSidebar: h, toggleRequestToSpeakSidebar: g } = e,
-        E = T(e, ['channelId', 'className', 'showingClassName', 'onClick', 'inPopout', 'showRequestToSpeakSidebar', 'toggleRequestToSpeakSidebar']);
+    var {
+            channelId: n,
+            className: o,
+            showingClassName: s,
+            onClick: _,
+            inPopout: p,
+            showRequestToSpeakSidebar: h,
+            toggleRequestToSpeakSidebar: g,
+        } = e,
+        E = T(e, [
+            "channelId",
+            "className",
+            "showingClassName",
+            "onClick",
+            "inPopout",
+            "showRequestToSpeakSidebar",
+            "toggleRequestToSpeakSidebar",
+        ]);
     let { parentAnalyticsLocation: v } = (0, u.ZP)(),
         { disabled: S } = E,
         A = i.useRef(null),
         R = (0, l.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         { isShowing: P, unreadCount: w, mentionCount: D } = N(n),
         L = i.useCallback(() => {
-            ((0, f.v)(v, f.d.CHAT, !R), null == _ || _(), !R && h && (null == g || g()), c.Z.updateChatOpen(n, !R));
+            (0, f.v)(v, f.d.CHAT, !R), null == _ || _(), !R && h && (null == g || g()), c.Z.updateChatOpen(n, !R);
         }, [n, R, _, h, g, v]),
         x = i.useCallback(
             (e) => {
                 let { className: t } = e;
                 return (0, r.jsx)(C, {
                     className: t,
-                    channelId: n
+                    channelId: n,
                 });
             },
-            [n]
+            [n],
         ),
         M = i.useCallback(() => {
             var e;
@@ -144,15 +161,15 @@ function R(e) {
         }, []);
     (0, m.yp)({
         event: y.CkL.FOCUS_CHAT_BUTTON,
-        handler: S ? null : M
+        handler: S ? null : M,
     });
     let [k, j] = i.useState(!1),
         U = i.useCallback(() => {
             p && j(!0);
         }, [p]);
-    ((0, m.yp)({
+    (0, m.yp)({
         event: y.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: U
+        handler: U,
     }),
         i.useEffect(() => {
             let e;
@@ -165,10 +182,10 @@ function R(e) {
                     clearTimeout(e);
                 }
             );
-        }, [k]));
-    let G = [(t = p && S ? O.intl.string(O.t.DPgc5u) : R ? O.intl.string(O.t.nthdxM) : O.intl.string(O.t['5KxXrK']))];
+        }, [k]);
+    let G = [(t = p && S ? O.intl.string(O.t.DPgc5u) : R ? O.intl.string(O.t.nthdxM) : O.intl.string(O.t["5KxXrK"]))];
     return (
-        D > 0 && G.push(O.intl.formatToPlainString(O.t['3l1GOz'], { mentionCount: D })),
+        D > 0 && G.push(O.intl.formatToPlainString(O.t["3l1GOz"], { mentionCount: D })),
         w > 0 && G.push(O.intl.string(O.t.x5zAGR)),
         (0, r.jsx)(
             b.Z,
@@ -177,14 +194,14 @@ function R(e) {
                     buttonRef: A,
                     onClick: L,
                     label: t,
-                    'aria-label': G.join(', '),
+                    "aria-label": G.join(", "),
                     iconComponent: x,
-                    tooltipPosition: 'bottom',
+                    tooltipPosition: "bottom",
                     wrapperClassName: a()(o, null != s && { [s]: P }),
-                    forceTooltipOpen: k
+                    forceTooltipOpen: k,
                 },
-                E
-            )
+                E,
+            ),
         )
     );
 }

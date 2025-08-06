@@ -10,23 +10,23 @@ let c = (e) => {
     return (0, r.jsxs)(o.Z, {
         assetComponent: (0, r.jsx)(a.Z, { className: l.orbBadgeAsset }),
         tooltipWordmarkComponent: (0, r.jsx)(i.X6, {
-            variant: 'heading-md/extrabold',
+            variant: "heading-md/extrabold",
             className: l.tooltipWordmark,
-            children: s.intl.string(s.t.ElYQFR)
+            children: s.intl.string(s.t.ElYQFR),
         }),
         children: [
             (0, r.jsx)(i.X6, {
-                variant: 'heading-xl/extrabold',
+                variant: "heading-xl/extrabold",
                 className: t ? void 0 : l.orbHeaderWithSpacing,
-                children: s.intl.string(s.t.lTHkqa)
+                children: s.intl.string(s.t.lTHkqa),
             }),
             t
                 ? (0, r.jsx)(i.xv, {
-                      variant: 'text-xs/normal',
+                      variant: "text-xs/normal",
                       className: l.orbSubtext,
-                      children: s.intl.string(s.t.MEV0GB)
+                      children: s.intl.string(s.t.MEV0GB),
                   })
-                : void 0
-        ]
+                : void 0,
+        ],
     });
 };

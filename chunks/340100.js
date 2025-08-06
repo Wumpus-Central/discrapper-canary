@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(784620), n(973216));
+n.d(t, { Z: () => d }), n(784620), n(973216);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -14,39 +14,39 @@ let d = function (e) {
         { percentComplete: _, completedRatioDisplay: p } = (0, l.I)(i);
     return !d && f.length > 0
         ? (0, r.jsx)(c.Z, { children: f.at(0) })
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: o()(u.wrapper, t),
               style: { color: n.css },
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: u.percentCompleteWrapper,
                       children: [
                           (0, r.jsx)(s.Text, {
-                              variant: 'text-xs/semibold',
+                              variant: "text-xs/semibold",
                               className: u.percentCompleteLabel,
-                              color: 'none',
-                              children: p
+                              color: "none",
+                              children: p,
                           }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: u.percentCompleteLabelOffset,
-                              style: { width: ''.concat(100 - _, '%') }
-                          })
-                      ]
+                              style: { width: "".concat(100 - _, "%") },
+                          }),
+                      ],
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: u.progressBar,
-                      role: 'progressbar',
-                      'aria-valuenow': _,
-                      children: (0, r.jsx)('div', {
+                      role: "progressbar",
+                      "aria-valuenow": _,
+                      children: (0, r.jsx)("div", {
                           className: u.progressBarFill,
-                          style: { width: ''.concat(_, '%') }
-                      })
+                          style: { width: "".concat(_, "%") },
+                      }),
                   }),
                   f.length > 0 &&
                       (0, r.jsx)(c.Z, {
                           isInventory: d,
-                          children: f.at(0)
-                      })
-              ]
+                          children: f.at(0),
+                      }),
+              ],
           });
 };

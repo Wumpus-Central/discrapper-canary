@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => h,
-    W: () => m
+    W: () => m,
 });
 var r = n(590921),
     i = n(521090),
@@ -14,7 +14,19 @@ var r = n(590921),
     f = n(65090),
     _ = n(591236),
     p = n(233577);
-let h = [r.eq.CHOICES, r.eq.GAME, r.eq.GIFS, r.eq.STICKERS, r.eq.COMMAND_OPTIONS, r.eq.EMOJIS_AND_STICKERS, r.eq.REACTIONS, r.eq.CHANNELS, r.eq.MENTIONS, r.eq.COMMANDS, r.eq.LEGACY_COMMANDS],
+let h = [
+        r.eq.CHOICES,
+        r.eq.GAME,
+        r.eq.GIFS,
+        r.eq.STICKERS,
+        r.eq.COMMAND_OPTIONS,
+        r.eq.EMOJIS_AND_STICKERS,
+        r.eq.REACTIONS,
+        r.eq.CHANNELS,
+        r.eq.MENTIONS,
+        r.eq.COMMANDS,
+        r.eq.LEGACY_COMMANDS,
+    ],
     m = {
         [r.eq.CHANNELS]: i.Z,
         [r.eq.COMMANDS]: o.Z,
@@ -26,5 +38,5 @@ let h = [r.eq.CHOICES, r.eq.GAME, r.eq.GIFS, r.eq.STICKERS, r.eq.COMMAND_OPTIONS
         [r.eq.LEGACY_COMMANDS]: d.Z,
         [r.eq.MENTIONS]: f.Z,
         [r.eq.REACTIONS]: _.Z,
-        [r.eq.GAME]: c.Z
+        [r.eq.GAME]: c.Z,
     };

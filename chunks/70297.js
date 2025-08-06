@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => C,
-    q: () => _
+    q: () => _,
 }),
-    n(953529));
+    n(953529);
 var l = n(255367);
 n(73800);
 var r = n(120356),
@@ -31,66 +31,66 @@ function C(e) {
     let C = n
         ? (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, l.jsxs)('div', {
+                  (0, l.jsxs)("div", {
                       children: [
                           (0, l.jsx)(o.X6q, {
                               className: g.heading,
-                              color: 'always-white',
-                              variant: 'heading-lg/semibold',
-                              children: f.intl.string(f.t.AalzkJ)
+                              color: "always-white",
+                              variant: "heading-lg/semibold",
+                              children: f.intl.string(f.t.AalzkJ),
                           }),
                           (0, l.jsx)(o.Text, {
                               className: g.description,
-                              variant: 'text-md/normal',
-                              color: 'always-white',
-                              children: f.intl.string(f.t.CXh95e)
+                              variant: "text-md/normal",
+                              color: "always-white",
+                              children: f.intl.string(f.t.CXh95e),
                           }),
                           (0, l.jsx)(o.zxk, {
-                              variant: 'overlay-primary',
+                              variant: "overlay-primary",
                               onClick: () => {
-                                  (d.Z.open(t.id, h.pNK.ONBOARDING), (0, s.Q3)(_, { dismissAction: p.L.PRIMARY }));
+                                  d.Z.open(t.id, h.pNK.ONBOARDING), (0, s.Q3)(_, { dismissAction: p.L.PRIMARY });
                               },
-                              text: f.intl.string(f.t['+OtO4e'])
-                          })
-                      ]
+                              text: f.intl.string(f.t["+OtO4e"]),
+                          }),
+                      ],
                   }),
-                  (0, l.jsx)(u.j, { isTooltip: !0 })
-              ]
+                  (0, l.jsx)(u.j, { isTooltip: !0 }),
+              ],
           })
-        : (0, l.jsxs)('div', {
+        : (0, l.jsxs)("div", {
               className: g.nuxContent,
               children: [
-                  (0, l.jsx)('img', {
+                  (0, l.jsx)("img", {
                       width: 180,
                       className: g.image,
                       src: x,
-                      alt: '',
-                      'aria-hidden': !0
+                      alt: "",
+                      "aria-hidden": !0,
                   }),
-                  (0, l.jsxs)('div', {
+                  (0, l.jsxs)("div", {
                       children: [
                           (0, l.jsx)(o.X6q, {
                               className: g.heading,
-                              variant: 'heading-lg/semibold',
-                              color: 'header-primary',
-                              children: f.intl.string(f.t.utqWEB)
+                              variant: "heading-lg/semibold",
+                              color: "header-primary",
+                              children: f.intl.string(f.t.utqWEB),
                           }),
                           (0, l.jsx)(o.Text, {
-                              variant: 'text-md/normal',
-                              color: 'header-secondary',
-                              children: f.intl.string(f.t['+9etcH'])
+                              variant: "text-md/normal",
+                              color: "header-secondary",
+                              children: f.intl.string(f.t["+9etcH"]),
                           }),
                           (0, l.jsx)(o.Text, {
                               className: g.tip,
-                              variant: 'text-md/normal',
-                              color: 'header-secondary',
-                              children: f.intl.format(f.t.Z0axjo, {})
-                          })
-                      ]
-                  })
-              ]
+                              variant: "text-md/normal",
+                              color: "header-secondary",
+                              children: f.intl.format(f.t.Z0axjo, {}),
+                          }),
+                      ],
+                  }),
+              ],
           });
-    return (0, l.jsxs)('div', {
+    return (0, l.jsxs)("div", {
         className: i()(g.container, { [g.adminUpsell]: n }),
         children: [
             (0, l.jsx)(o.P3F, {
@@ -99,11 +99,11 @@ function C(e) {
                     (0, s.Q3)(_, { dismissAction: p.L.DISMISS });
                 },
                 children: (0, l.jsx)(o.Dio, {
-                    size: 'md',
-                    color: 'currentColor'
-                })
+                    size: "md",
+                    color: "currentColor",
+                }),
             }),
-            C
-        ]
+            C,
+        ],
     });
 }

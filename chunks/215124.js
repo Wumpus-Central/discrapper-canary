@@ -18,27 +18,30 @@ function m(e) {
         x = m.filter((e) => {
             var t;
             let n = Object.values(null != (t = e.ppgs) ? t : {})[0];
-            return (null == n ? void 0 : n.status) === d.x_.OPEN || (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED;
+            return (
+                (null == n ? void 0 : n.status) === d.x_.OPEN ||
+                (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED
+            );
         }),
         b = p.length > 0,
         j = h.length > 0,
         v = x.length > 0;
     return null == g
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               children: [
                   (0, r.jsx)(l.R94, {
                       type: l.R94.Types.DESCRIPTION,
-                      children: u.intl.format(u.t.fvOn6O, { guildName: g.name })
+                      children: u.intl.format(u.t.fvOn6O, { guildName: g.name }),
                   }),
                   (0, r.jsx)(l.LZC, { size: 16 }),
                   (0, r.jsx)(l.zxk, {
-                      variant: 'critical-primary',
+                      variant: "critical-primary",
                       text: u.intl.string(u.t.FrOFSk),
                       disabled: !f || b || j || v,
                       onClick: () => {
                           (0, l.ZDy)(async () => {
-                              let { default: e } = await n.e('35282').then(n.bind(n, 157429));
+                              let { default: e } = await n.e("35282").then(n.bind(n, 157429));
                               return (t) => {
                                   var n, i;
                                   return (0, r.jsx)(
@@ -47,24 +50,24 @@ function m(e) {
                                           for (var t = 1; t < arguments.length; t++) {
                                               var n = null != arguments[t] ? arguments[t] : {},
                                                   r = Object.keys(n);
-                                              ('function' == typeof Object.getOwnPropertySymbols &&
+                                              "function" == typeof Object.getOwnPropertySymbols &&
                                                   (r = r.concat(
                                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                      })
+                                                      }),
                                                   )),
                                                   r.forEach(function (t) {
                                                       var r;
-                                                      ((r = n[t]),
+                                                      (r = n[t]),
                                                           t in e
                                                               ? Object.defineProperty(e, t, {
                                                                     value: r,
                                                                     enumerable: !0,
                                                                     configurable: !0,
-                                                                    writable: !0
+                                                                    writable: !0,
                                                                 })
-                                                              : (e[t] = r));
-                                                  }));
+                                                              : (e[t] = r);
+                                                  });
                                           }
                                           return e;
                                       })({}, t)),
@@ -81,12 +84,12 @@ function m(e) {
                                             })(Object(i)).forEach(function (e) {
                                                 Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                             }),
-                                      n)
+                                      n),
                                   );
                               };
                           });
-                      }
-                  })
-              ]
+                      },
+                  }),
+              ],
           });
 }

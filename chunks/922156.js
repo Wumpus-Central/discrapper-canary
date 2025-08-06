@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,8 +31,8 @@ class _ extends (r = i.ZP.Store) {
         return l;
     }
 }
-s(_, 'displayName', 'DispatchApplicationErrorStore');
+s(_, "displayName", "DispatchApplicationErrorStore");
 let p = new _(o.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: f,
-    DISPATCH_APPLICATION_ERROR: d
+    DISPATCH_APPLICATION_ERROR: d,
 });

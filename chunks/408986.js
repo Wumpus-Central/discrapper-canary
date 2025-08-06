@@ -21,22 +21,22 @@ function p(e) {
             null == m && g
                 ? Array.from({ length: 10 }).map((e, t) =>
                       (0, r.jsxs)(
-                          'div',
+                          "div",
                           {
                               className: f.guildsLoadingItem,
                               children: [
                                   (0, r.jsx)(i.ZT, {
                                       width: 40,
-                                      opacity: 0.08
+                                      opacity: 0.08,
                                   }),
                                   (0, r.jsx)(i.ZT, {
                                       width: 135,
-                                      opacity: 0.08
-                                  })
-                              ]
+                                      opacity: 0.08,
+                                  }),
+                              ],
                           },
-                          t
-                      )
+                          t,
+                      ),
                   )
                 : (null != m || g) && (null == m ? void 0 : m.length) !== 0
                   ? null == m
@@ -50,12 +50,12 @@ function p(e) {
                                     guild: l,
                                     nick: i,
                                     onSelect: () => {
-                                        (p({ action: 'PRESS_MUTUAL_GUILD' }), (0, a.X)(l.id), n(), (0, o.xf)());
-                                    }
+                                        p({ action: "PRESS_MUTUAL_GUILD" }), (0, a.X)(l.id), n(), (0, o.xf)();
+                                    },
                                 },
-                                l.id
+                                l.id,
                             );
                         })
-                  : (0, r.jsx)(u.b0, {})
+                  : (0, r.jsx)(u.b0, {}),
     });
 }

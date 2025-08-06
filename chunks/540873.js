@@ -3,7 +3,18 @@ var o = n(183759),
     r = n(565963),
     i = n(381537),
     a = n(73800),
-    s = ['defaultInputValue', 'defaultMenuIsOpen', 'defaultValue', 'inputValue', 'menuIsOpen', 'onChange', 'onInputChange', 'onMenuClose', 'onMenuOpen', 'value'];
+    s = [
+        "defaultInputValue",
+        "defaultMenuIsOpen",
+        "defaultValue",
+        "inputValue",
+        "menuIsOpen",
+        "onChange",
+        "onInputChange",
+        "onMenuClose",
+        "onMenuOpen",
+        "value",
+    ];
 function u(e) {
     var t = e.defaultInputValue,
         n = e.defaultMenuIsOpen,
@@ -16,7 +27,7 @@ function u(e) {
         h = e.onMenuOpen,
         v = e.value,
         m = (0, i.Z)(e, s),
-        g = (0, a.useState)(void 0 !== l ? l : void 0 === t ? '' : t),
+        g = (0, a.useState)(void 0 !== l ? l : void 0 === t ? "" : t),
         b = (0, r.Z)(g, 2),
         y = b[0],
         O = b[1],
@@ -30,28 +41,28 @@ function u(e) {
         E = M[1],
         k = (0, a.useCallback)(
             function (e, t) {
-                ('function' == typeof d && d(e, t), E(e));
+                "function" == typeof d && d(e, t), E(e);
             },
-            [d]
+            [d],
         ),
         V = (0, a.useCallback)(
             function (e, t) {
                 var n;
-                ('function' == typeof p && (n = p(e, t)), O(void 0 !== n ? n : e));
+                "function" == typeof p && (n = p(e, t)), O(void 0 !== n ? n : e);
             },
-            [p]
+            [p],
         ),
         R = (0, a.useCallback)(
             function () {
-                ('function' == typeof h && h(), C(!0));
+                "function" == typeof h && h(), C(!0);
             },
-            [h]
+            [h],
         ),
         P = (0, a.useCallback)(
             function () {
-                ('function' == typeof f && f(), C(!1));
+                "function" == typeof f && f(), C(!1);
             },
-            [f]
+            [f],
         ),
         D = void 0 !== l ? l : y,
         F = void 0 !== c ? c : Z,
@@ -66,7 +77,7 @@ function u(e) {
             onInputChange: V,
             onMenuClose: P,
             onMenuOpen: R,
-            value: L
-        }
+            value: L,
+        },
     );
 }

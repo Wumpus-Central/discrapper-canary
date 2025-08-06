@@ -11,7 +11,14 @@ var i = n(215569),
     u = n(11532);
 function m(e) {
     let { guildId: t, existingRules: n } = e,
-        { cancelEditingRule: m, isLoading: g, hasChanges: p, editingRule: h, errorMessage: f, saveEditingRule: x } = (0, c.w)(),
+        {
+            cancelEditingRule: m,
+            isLoading: g,
+            hasChanges: p,
+            editingRule: h,
+            errorMessage: f,
+            saveEditingRule: x,
+        } = (0, c.w)(),
         { updateRule: b } = (0, o.pH)(t),
         j = null != h,
         v = j && !(0, s.Vb)(h),
@@ -30,18 +37,18 @@ function m(e) {
                 null != e && b(e);
             }
         },
-        y = d.intl.string(d.t['ETE/oK']),
+        y = d.intl.string(d.t["ETE/oK"]),
         C = !p && j ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == h ? void 0 : h.name }) : void 0;
     return (
         null != f &&
             (C = (0, r.jsx)(l.Text, {
-                variant: 'text-md/normal',
-                color: 'text-danger',
+                variant: "text-md/normal",
+                color: "text-danger",
                 className: u.message,
-                children: f
+                children: f,
             })),
         (0, r.jsx)(i.W, {
-            component: 'div',
+            component: "div",
             className: u.saveNoticeContainer,
             children:
                 _ &&
@@ -52,9 +59,9 @@ function m(e) {
                         onSave: O,
                         onReset: m,
                         onResetText: y,
-                        message: C
-                    })
-                })
+                        message: C,
+                    }),
+                }),
         })
     );
 }

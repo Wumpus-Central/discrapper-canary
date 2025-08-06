@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => s,
-    Z: () => l
+    Z: () => l,
 });
 var r = n(255367);
 n(73800);
@@ -10,7 +10,7 @@ var i = n(596454),
 let s = {
     SMALL: a.small,
     MEDIUM: a.medium,
-    LARGE: a.large
+    LARGE: a.large,
 };
 function l(e) {
     let { emojiId: t, emojiName: n, defaultComponent: a, size: l = s.MEDIUM } = e,
@@ -22,6 +22,6 @@ function l(e) {
               animated: null != c && c.animated,
               emojiId: null == c ? void 0 : c.id,
               autoplay: !0,
-              className: l
+              className: l,
           });
 }

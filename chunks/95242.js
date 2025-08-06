@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => i }), n(388685));
+n.d(t, { Z: () => i }), n(388685);
 var r = n(73800);
 function i(e) {
     var t;
@@ -11,7 +11,7 @@ function i(e) {
         }, [e, null == (t = l.current) ? void 0 : t.offsetHeight]),
         {
             headerHeight: n,
-            headerRef: l
+            headerRef: l,
         }
     );
 }

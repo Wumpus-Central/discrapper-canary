@@ -1,4 +1,4 @@
-(n.d(t, { E: () => m }), n(388685));
+n.d(t, { E: () => m }), n(388685);
 var r = n(358221),
     i = n(569545),
     o = n(199902),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,7 +53,7 @@ let h = 20 * s.Z.Millis.SECOND,
                 (null != _ && performance.now() - _ < h) ||
                 Object.entries(n.getRemoteVideoSinkWants()).every((e) => {
                     let [t, n] = e;
-                    return 'any' === t || 0 === n;
+                    return "any" === t || 0 === n;
                 })
             )
                 return null;
@@ -62,7 +62,11 @@ let h = 20 * s.Z.Millis.SECOND,
             let g = (0, d.hj)(s, e.ownerId);
             if (null == g) return null;
             let E = (0, l.Wc)(m);
-            return null == E ? null : g.short.frameRate < (0, d.dj)(E.maxFrameRate) || g.long.frameRate < (0, d.dj)(E.maxFrameRate) ? [p({ type: c.u.STREAM_SEND_LOW_FPS }, (0, u.rT)((0, i.V9)(e)))] : null;
+            return null == E
+                ? null
+                : g.short.frameRate < (0, d.dj)(E.maxFrameRate) || g.long.frameRate < (0, d.dj)(E.maxFrameRate)
+                  ? [p({ type: c.u.STREAM_SEND_LOW_FPS }, (0, u.rT)((0, i.V9)(e)))]
+                  : null;
         },
-        makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
+        makeErrorContextKey: (e) => "".concat(e.streamKey, ":").concat(e.mediaSessionId),
     };

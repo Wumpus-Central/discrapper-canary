@@ -1,1 +1,1 @@
-e.exports = { appMount: 'appMount__51fd7' };
+e.exports = { appMount: "appMount__51fd7" };

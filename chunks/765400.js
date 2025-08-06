@@ -8,5 +8,5 @@ let s = () =>
     (0, r.jsx)(i.IGR, {
         color: i.TVs.unsafe_rawColors.YELLOW_300.css,
         text: o.intl.string(o.t.vosPk5),
-        className: a.draftBadge
+        className: a.draftBadge,
     });

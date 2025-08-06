@@ -24,15 +24,15 @@ function x(e) {
             value: n,
             onChange: c.Z.setExperimentalEncoders,
             hideBorder: t,
-            children: f.intl.string(f.t.AxnPm5)
-        })
+            children: f.intl.string(f.t.AxnPm5),
+        }),
     });
 }
 function _(e) {
     let { refreshStyles: t = !1 } = e,
         { openH264: n, hardwareEncoding: s } = (0, l.cj)([u.Z], () => ({
             openH264: u.Z.getOpenH264(),
-            hardwareEncoding: u.Z.getHardwareEncoding()
+            hardwareEncoding: u.Z.getHardwareEncoding(),
         })),
         _ = r.useRef(null);
     (0, m.Z)(_, g.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
@@ -47,41 +47,41 @@ function _(e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
                                       i = Object.keys(n);
-                                  ('function' == typeof Object.getOwnPropertySymbols &&
+                                  "function" == typeof Object.getOwnPropertySymbols &&
                                       (i = i.concat(
                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                          })
+                                          }),
                                       )),
                                       i.forEach(function (t) {
                                           var i;
-                                          ((i = n[t]),
+                                          (i = n[t]),
                                               t in e
                                                   ? Object.defineProperty(e, t, {
                                                         value: i,
                                                         enumerable: !0,
                                                         configurable: !0,
-                                                        writable: !0
+                                                        writable: !0,
                                                     })
-                                                  : (e[t] = i));
-                                      }));
+                                                  : (e[t] = i);
+                                      });
                               }
                               return e;
                           })(
                               {
                                   header: f.intl.string(f.t.mly1DA),
                                   confirmText: f.intl.string(f.t.BddRzc),
-                                  cancelText: f.intl.string(f.t['ETE/oK']),
-                                  onConfirm: () => c.Z.setHardwareEncoding(!1)
+                                  cancelText: f.intl.string(f.t["ETE/oK"]),
+                                  onConfirm: () => c.Z.setHardwareEncoding(!1),
                               },
-                              e
+                              e,
                           )),
                           (n = n =
                               {
                                   children: (0, i.jsx)(o.Text, {
-                                      variant: 'text-sm/normal',
-                                      children: f.intl.format(f.t.aPStAQ, {})
-                                  })
+                                      variant: "text-sm/normal",
+                                      children: f.intl.format(f.t.aPStAQ, {}),
+                                  }),
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -95,7 +95,7 @@ function _(e) {
                                 })(Object(n)).forEach(function (e) {
                                     Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                 }),
-                          t)
+                          t),
                       );
                   });
         }, []),
@@ -108,33 +108,33 @@ function _(e) {
                         value: n,
                         onChange: c.Z.setOpenH264,
                         hideBorder: t,
-                        children: f.intl.string(f.t['71Ve19'])
-                    })
+                        children: f.intl.string(f.t["71Ve19"]),
+                    }),
                 }),
                 (0, i.jsx)(d.F, {
                     setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
-                    children: (0, i.jsxs)('div', {
+                    children: (0, i.jsxs)("div", {
                         children: [
                             (0, i.jsx)(o.j7V, {
-                                style: { scrollMarginTop: '48px' },
+                                style: { scrollMarginTop: "48px" },
                                 containerRef: _,
                                 className: t ? null : a()(b.marginTop8, b.marginBottom20),
                                 value: s,
                                 onChange: j,
                                 note: f.intl.string(f.t.P1UKqq),
                                 hideBorder: t,
-                                children: f.intl.string(f.t.Sln58f)
+                                children: f.intl.string(f.t.Sln58f),
                             }),
                             !s &&
                                 (0, i.jsx)(p.Z, {
                                     look: p.z.WARNING,
-                                    children: f.intl.string(f.t['Uz6L6+'])
-                                })
-                        ]
-                    })
+                                    children: f.intl.string(f.t["Uz6L6+"]),
+                                }),
+                        ],
+                    }),
                 }),
-                (0, i.jsx)(x, { refreshStyles: t })
-            ]
+                (0, i.jsx)(x, { refreshStyles: t }),
+            ],
         });
     return (0, i.jsx)(d.F, {
         setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
@@ -143,7 +143,7 @@ function _(e) {
             : (0, i.jsx)(o.hjN, {
                   className: b.marginBottom20,
                   title: f.intl.string(f.t.Tceiq6),
-                  children: E
-              })
+                  children: E,
+              }),
     });
 }

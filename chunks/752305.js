@@ -1,85 +1,85 @@
 function r() {
     return {
-        textValue: '',
+        textValue: "",
         richValue: [
             {
-                type: 'line',
-                children: [{ text: '' }]
-            }
-        ]
+                type: "line",
+                children: [{ text: "" }],
+            },
+        ],
     };
 }
 function i(e) {
     return {
         textValue: e,
-        richValue: a(e)
+        richValue: a(e),
     };
 }
-(n.d(t, {
+n.d(t, {
     H2: () => r,
     JM: () => a,
     VI: () => s,
-    eK: () => i
+    eK: () => i,
 }),
     n(35282),
-    n(415506));
+    n(415506);
 let o = Object.freeze([
     Object.freeze({
-        type: 'line',
-        children: Object.freeze([Object.freeze({ text: '' })])
-    })
+        type: "line",
+        children: Object.freeze([Object.freeze({ text: "" })]),
+    }),
 ]);
 function a(e) {
-    return '' !== e
-        ? e.split('\n').map((e) => ({
-              type: 'line',
-              children: [{ text: e }]
+    return "" !== e
+        ? e.split("\n").map((e) => ({
+              type: "line",
+              children: [{ text: e }],
           }))
         : o;
 }
 function s(e) {
     switch (e.type) {
-        case 'userMention':
+        case "userMention":
             return {
-                type: 'userMention',
-                userId: e.userId
+                type: "userMention",
+                userId: e.userId,
             };
-        case 'channelMention':
+        case "channelMention":
             return {
-                type: 'channelMention',
-                channelId: e.channelId
+                type: "channelMention",
+                channelId: e.channelId,
             };
-        case 'soundboard':
+        case "soundboard":
             return {
-                type: 'soundboard',
+                type: "soundboard",
                 guildId: e.guildId,
-                soundId: e.soundId
+                soundId: e.soundId,
             };
-        case 'roleMention':
+        case "roleMention":
             return {
-                type: 'roleMention',
-                roleId: e.roleId
+                type: "roleMention",
+                roleId: e.roleId,
             };
-        case 'textMention':
+        case "textMention":
             return {
-                type: 'textMention',
-                text: e.name
+                type: "textMention",
+                text: e.name,
             };
-        case 'emoji':
+        case "emoji":
             return {
-                type: 'emoji',
+                type: "emoji",
                 name: e.emoji.name,
-                surrogate: e.emoji.surrogate
+                surrogate: e.emoji.surrogate,
             };
-        case 'customEmoji':
+        case "customEmoji":
             return {
-                type: 'customEmoji',
+                type: "customEmoji",
                 emojiId: e.emoji.emojiId,
                 name: e.emoji.name,
-                animated: e.emoji.animated
+                animated: e.emoji.animated,
             };
-        case 'testInlineVoid':
-            throw Error('Unable to convert test types');
+        case "testInlineVoid":
+            throw Error("Unable to convert test types");
     }
     return null;
 }

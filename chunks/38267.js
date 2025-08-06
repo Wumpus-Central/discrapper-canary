@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(73800),
     i = n(585483),
     o = n(981631);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,7 +43,13 @@ function c(e, t) {
             a((t) => {
                 let n = s({}, t, e),
                     r = l(n);
-                return (r !== d.current && ((d.current = r), null != f.current && (cancelAnimationFrame(f.current), (f.current = null)), r ? u(!0) : (f.current = requestAnimationFrame(() => u(!1)))), n);
+                return (
+                    r !== d.current &&
+                        ((d.current = r),
+                        null != f.current && (cancelAnimationFrame(f.current), (f.current = null)),
+                        r ? u(!0) : (f.current = requestAnimationFrame(() => u(!1)))),
+                    n
+                );
             });
         }, []);
     return (
@@ -52,15 +58,18 @@ function c(e, t) {
                 let { emojiPicker: t, emojiBurstPicker: n } = e;
                 return _({
                     emojiPicker: t,
-                    emojiBurstPicker: n
+                    emojiBurstPicker: n,
                 });
             };
-            return (i.S.subscribeKeyed(o.LPv.TOGGLE_REACTION_POPOUT, e, t), () => void i.S.unsubscribeKeyed(o.LPv.TOGGLE_REACTION_POPOUT, e, t));
+            return (
+                i.S.subscribeKeyed(o.LPv.TOGGLE_REACTION_POPOUT, e, t),
+                () => void i.S.unsubscribeKeyed(o.LPv.TOGGLE_REACTION_POPOUT, e, t)
+            );
         }, [e, _]),
         {
             popouts: n,
             setPopout: _,
-            selected: c
+            selected: c,
         }
     );
 }

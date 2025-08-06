@@ -1,7 +1,7 @@
 e.d(n, { Z: () => l });
 var t = e(528734),
     a = e(757490),
-    r = ['неділю', 'понеділок', 'вівторок', 'середу', 'четвер', 'п\u2019ятницю', 'суботу'];
+    r = ["неділю", "понеділок", "вівторок", "середу", "четвер", "п\u2019ятницю", "суботу"];
 function u(i) {
     return "'у " + r[i] + " о' p";
 }
@@ -43,9 +43,9 @@ var o = {
                 return "'у наступний " + s + " о' p";
         }
     },
-    other: 'P'
+    other: "P",
 };
 let l = function (i, n, e, t) {
     var a = o[i];
-    return 'function' == typeof a ? a(n, e, t) : a;
+    return "function" == typeof a ? a(n, e, t) : a;
 };

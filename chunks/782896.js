@@ -1,4 +1,4 @@
-(n.d(t, { c: () => m }), n(388685), n(290780));
+n.d(t, { c: () => m }), n(388685), n(290780);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -17,43 +17,43 @@ function f(e) {
         mask: s.ZP.Masks.SQUIRCLE,
         width: 25,
         height: 25,
-        children: t
+        children: t,
     });
 }
 function g(e) {
     let { guilds: t, numTruncated: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: p.guildIconList,
         children: [
             t.map((e) =>
                 (0, r.jsxs)(
-                    'div',
+                    "div",
                     {
                         className: p.guildIconItem,
                         children: [
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 children: (0, r.jsx)(u.V, {
                                     guild: e,
-                                    size: 20
-                                })
+                                    size: 20,
+                                }),
                             }),
                             (0, r.jsx)(o.Text, {
                                 className: p.guildIconItemText,
-                                variant: 'text-xs/medium',
-                                children: e.name
-                            })
-                        ]
+                                variant: "text-xs/medium",
+                                children: e.name,
+                            }),
+                        ],
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             ),
             n > 0 &&
                 (0, r.jsx)(o.Text, {
-                    variant: 'text-xs/medium',
-                    color: 'text-secondary',
-                    children: h.intl.format(d.default.bAzBIS, { numServers: n })
-                })
-        ]
+                    variant: "text-xs/medium",
+                    color: "text-secondary",
+                    children: h.intl.format(d.default.bAzBIS, { numServers: n }),
+                }),
+        ],
     });
 }
 function m(e) {
@@ -65,7 +65,7 @@ function m(e) {
             visibleGuilds: b,
             numTruncated: O,
             visibleGuildsTooltip: _,
-            numTruncatedTooltipGuilds: y
+            numTruncatedTooltipGuilds: y,
         } = (0, i.useMemo)(() => {
             let e = [...m];
             if (null != n) {
@@ -77,23 +77,23 @@ function m(e) {
                       visibleGuilds: e,
                       numTruncated: 0,
                       visibleGuildsTooltip: e,
-                      numTruncatedTooltipGuilds: 0
+                      numTruncatedTooltipGuilds: 0,
                   }
                 : {
                       visibleGuilds: e.slice(0, 3),
                       numTruncated: e.length - 3,
                       visibleGuildsTooltip: e.slice(0, 15),
-                      numTruncatedTooltipGuilds: e.length - 15
+                      numTruncatedTooltipGuilds: e.length - 15,
                   };
         }, [m, n]);
     return (0, r.jsx)(o.DY3, {
-        'aria-label': h.intl.string(d.default.TG0Qsb),
+        "aria-label": h.intl.string(d.default.TG0Qsb),
         text: (0, r.jsx)(g, {
             guilds: _,
-            numTruncated: y
+            numTruncated: y,
         }),
-        position: 'top',
-        children: (0, r.jsxs)('div', {
+        position: "top",
+        children: (0, r.jsxs)("div", {
             className: p.facepile,
             children: [
                 b.map((e) =>
@@ -102,22 +102,22 @@ function m(e) {
                         {
                             children: (0, r.jsx)(u.V, {
                                 guild: e,
-                                size: 20
-                            })
+                                size: 20,
+                            }),
                         },
-                        e.id
-                    )
+                        e.id,
+                    ),
                 ),
                 O > 0 &&
                     (0, r.jsx)(f, {
                         children: (0, r.jsxs)(o.Text, {
                             className: p.textItem,
-                            color: 'text-secondary',
-                            variant: 'text-xxs/semibold',
-                            children: ['+', O]
-                        })
-                    })
-            ]
-        })
+                            color: "text-secondary",
+                            variant: "text-xxs/semibold",
+                            children: ["+", O],
+                        }),
+                    }),
+            ],
+        }),
     });
 }

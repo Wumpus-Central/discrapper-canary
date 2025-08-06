@@ -14,7 +14,19 @@ var e = n(324474),
             l = 7 === t,
             v = 5 === t || p;
         return function (y, h, x, d) {
-            for (var g, b, m = u(y), S = i(m), w = s(S), O = e(h, x), j = 0, A = d || c, E = r ? A(y, w) : n || l ? A(y, 0) : void 0; w > j; j++)
+            for (
+                var g,
+                    b,
+                    m = u(y),
+                    S = i(m),
+                    w = s(S),
+                    O = e(h, x),
+                    j = 0,
+                    A = d || c,
+                    E = r ? A(y, w) : n || l ? A(y, 0) : void 0;
+                w > j;
+                j++
+            )
                 if ((v || j in S) && ((b = O((g = S[j]), j, m)), t))
                     if (r) E[j] = b;
                     else if (b)
@@ -46,5 +58,5 @@ t.exports = {
     every: a(4),
     find: a(5),
     findIndex: a(6),
-    filterReject: a(7)
+    filterReject: a(7),
 };

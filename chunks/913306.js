@@ -1,13 +1,13 @@
 var t,
-    n = 'function' == typeof Map && Map.prototype ? Map : null,
-    r = 'function' == typeof Set && Set.prototype ? Set : null;
+    n = "function" == typeof Map && Map.prototype ? Map : null,
+    r = "function" == typeof Set && Set.prototype ? Set : null;
 n ||
     (t = function (e) {
         return !1;
     });
 var i = n ? Map.prototype.has : null,
     o = r ? Set.prototype.has : null;
-(t ||
+t ||
     i ||
     (t = function (e) {
         return !1;
@@ -15,7 +15,7 @@ var i = n ? Map.prototype.has : null,
     (e.exports =
         t ||
         function (e) {
-            if (!e || 'object' != typeof e) return !1;
+            if (!e || "object" != typeof e) return !1;
             try {
                 if ((i.call(e), o))
                     try {
@@ -26,4 +26,4 @@ var i = n ? Map.prototype.has : null,
                 return e instanceof n;
             } catch (e) {}
             return !1;
-        }));
+        });

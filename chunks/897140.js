@@ -15,7 +15,18 @@ var i = e(392711),
     x = e(262529);
 let p = [e(4921), e(663416), e(838295)],
     f = [u, b, x],
-    v = [() => g.intl.string(g.t['w2o/6+']), () => g.intl.string(g.t.FiAvKi), () => g.intl.string(g.t.vKUFen), () => g.intl.string(g.t.veQl5e), () => g.intl.string(g.t.Pxb7BQ), () => g.intl.string(g.t['W03w+/']), () => g.intl.string(g.t['95HTb2']), () => g.intl.string(g.t['+XFel5']), () => g.intl.string(g.t.hedHen), () => g.intl.string(g.t.jgC65u)],
+    v = [
+        () => g.intl.string(g.t["w2o/6+"]),
+        () => g.intl.string(g.t.FiAvKi),
+        () => g.intl.string(g.t.vKUFen),
+        () => g.intl.string(g.t.veQl5e),
+        () => g.intl.string(g.t.Pxb7BQ),
+        () => g.intl.string(g.t["W03w+/"]),
+        () => g.intl.string(g.t["95HTb2"]),
+        () => g.intl.string(g.t["+XFel5"]),
+        () => g.intl.string(g.t.hedHen),
+        () => g.intl.string(g.t.jgC65u),
+    ],
     h = (t) => {
         let { transitionState: s, onClose: e } = t,
             i = (0, d.ZP)(),
@@ -26,36 +37,36 @@ let p = [e(4921), e(663416), e(838295)],
         return (0, n.jsxs)(o.Y0X, {
             transitionState: s,
             className: m.root,
-            'aria-labelledby': u,
-            parentComponent: 'FollowSuccessModal',
+            "aria-labelledby": u,
+            parentComponent: "FollowSuccessModal",
             children: [
-                (0, n.jsx)('img', {
-                    alt: '',
+                (0, n.jsx)("img", {
+                    alt: "",
                     src: x,
-                    className: m.image
+                    className: m.image,
                 }),
                 (0, n.jsxs)(o.hzk, {
                     className: m.modal,
                     children: [
                         (0, n.jsx)(o.X6q, {
-                            variant: 'heading-xl/semibold',
+                            variant: "heading-xl/semibold",
                             className: m.followSuccessHeader,
                             id: u,
-                            children: h()
+                            children: h(),
                         }),
                         (0, n.jsx)(o.Text, {
-                            color: 'text-muted',
-                            variant: 'text-md/medium',
+                            color: "text-muted",
+                            variant: "text-md/medium",
                             className: m.body,
-                            children: g.intl.string(g.t['2QbSeX'])
+                            children: g.intl.string(g.t["2QbSeX"]),
                         }),
                         (0, n.jsx)(o.zxk, {
-                            variant: 'primary',
-                            text: g.intl.string(g.t['+IrDzM']),
-                            onClick: e
-                        })
-                    ]
-                })
-            ]
+                            variant: "primary",
+                            text: g.intl.string(g.t["+IrDzM"]),
+                            onClick: e,
+                        }),
+                    ],
+                }),
+            ],
         });
     };

@@ -7,7 +7,7 @@ function l(e) {
             (e, r) => {
                 t.markAsSeen(r, e, n);
             },
-            [t, n]
+            [t, n],
         ),
         a = r.useCallback(
             (e, t, r, l) =>
@@ -16,15 +16,15 @@ function l(e) {
                     guildId: e,
                     index: t,
                     categoryId: r,
-                    analyticsLocation: l
+                    analyticsLocation: l,
                 }),
-            [n]
+            [n],
         );
     return r.useMemo(
         () => ({
             onGuildCardSeen: l,
-            onGuildCardClick: a
+            onGuildCardClick: a,
         }),
-        [a, l]
+        [a, l],
     );
 }

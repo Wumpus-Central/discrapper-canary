@@ -10,10 +10,10 @@ function u(e, t) {
     return t === a.IlC.POPOUT
         ? null
         : (0, n.jsx)(o.sNh, {
-              id: 'nav-server-settings',
-              label: l.intl.string(l.t['154/bG']),
+              id: "nav-server-settings",
+              label: l.intl.string(l.t["154/bG"]),
               action: () => {
-                  ((0, c.xf)(), i.Z.open(e, a.pNK.MODERATION));
-              }
+                  (0, c.xf)(), i.Z.open(e, a.pNK.MODERATION);
+              },
           });
 }

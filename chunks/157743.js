@@ -12,44 +12,44 @@ function d(e) {
     return (0, s.jsx)(r.Y0X, {
         className: l.modal,
         transitionState: d,
-        'aria-label': i.intl.string(i.t.B2panJ),
+        "aria-label": i.intl.string(i.t.B2panJ),
         size: r.CgR.DYNAMIC,
-        parentComponent: 'GuildActiveThreadsModal',
-        children: (0, s.jsxs)('div', {
+        parentComponent: "GuildActiveThreadsModal",
+        children: (0, s.jsxs)("div", {
             className: l.container,
             children: [
-                (0, s.jsxs)('div', {
+                (0, s.jsxs)("div", {
                     className: l.header,
                     children: [
                         (0, s.jsx)(r.or_, {
-                            size: 'md',
-                            color: 'currentColor',
-                            className: l.threadIcon
+                            size: "md",
+                            color: "currentColor",
+                            className: l.threadIcon,
                         }),
                         (0, s.jsx)(r.X6q, {
-                            variant: 'heading-md/semibold',
+                            variant: "heading-md/semibold",
                             className: l.__invalid_title,
-                            children: i.intl.string(i.t['dOWb+f'])
+                            children: i.intl.string(i.t["dOWb+f"]),
                         }),
-                        (0, s.jsx)('div', { className: l.spacer }),
+                        (0, s.jsx)("div", { className: l.spacer }),
                         (0, s.jsx)(r.P3F, {
                             className: l.closeIcon,
                             onClick: n,
-                            'aria-label': i.intl.string(i.t.cpT0Cg),
+                            "aria-label": i.intl.string(i.t.cpT0Cg),
                             children: (0, s.jsx)(r.Dio, {
-                                size: 'md',
-                                color: 'currentColor'
-                            })
-                        })
-                    ]
+                                size: "md",
+                                color: "currentColor",
+                            }),
+                        }),
+                    ],
                 }),
                 (0, s.jsx)(o.Z, {
                     guildId: a,
                     goToThread: (e, a) => {
-                        (n(), (0, t.ok)(e, !a, c.on.GUILD_ACTIVE_THREADS_MODAL));
-                    }
-                })
-            ]
-        })
+                        n(), (0, t.ok)(e, !a, c.on.GUILD_ACTIVE_THREADS_MODAL);
+                    },
+                }),
+            ],
+        }),
     });
 }

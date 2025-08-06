@@ -11,6 +11,6 @@ function l(e, t) {
         () => () => {
             l && (o.Z.lastDCDismissed !== e || (0, a.fn)(e)) && t(s.L.AUTO_DISMISS, !0);
         },
-        [l, t, e]
+        [l, t, e],
     );
 }

@@ -21,19 +21,21 @@ function d(t) {
                         n,
                         o = {},
                         a = Object.keys(t);
-                    for (n = 0; n < a.length; n++) ((r = a[n]), e.indexOf(r) >= 0 || (o[r] = t[r]));
+                    for (n = 0; n < a.length; n++) (r = a[n]), e.indexOf(r) >= 0 || (o[r] = t[r]);
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < a.length; n++) ((r = a[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]));
+                for (n = 0; n < a.length; n++)
+                    (r = a[n]),
+                        !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
             }
             return o;
-        })(t, ['onClose']);
-    let f = (0, n.jsx)('img', {
+        })(t, ["onClose"]);
+    let f = (0, n.jsx)("img", {
         src: r(414190),
         className: b.art,
-        alt: ''
+        alt: "",
     });
     return (0, n.jsx)(
         c.Z,
@@ -41,31 +43,31 @@ function d(t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (e) {
                         var n;
-                        ((n = r[e]),
+                        (n = r[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (t[e] = n));
-                    }));
+                                : (t[e] = n);
+                    });
             }
             return t;
         })(
             {
                 title: u.intl.string(u.t.YqknLi),
-                glowUp: u.intl.string(u.t['3hj4kZ']),
-                body: u.intl.string(u.t['3hj4kZ']),
+                glowUp: u.intl.string(u.t["3hj4kZ"]),
+                body: u.intl.string(u.t["3hj4kZ"]),
                 artElement: f,
                 artContainerClassName: b.artContainer,
                 type: l.cd.VOICE_FILTERS_UPSELL,
@@ -73,13 +75,13 @@ function d(t) {
                 onSubscribeClick: o.Z,
                 secondaryCTA: u.intl.string(u.t.ZnqyZ2),
                 onSecondaryClick: function () {
-                    ((0, o.Z)(),
+                    (0, o.Z)(),
                         e(),
                         s.default.track(i.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_section: i.jXE.VOICE_FILTERS_UPSELL_MODAL,
-                            location_object: i.qAy.NAVIGATION_LINK
+                            location_object: i.qAy.NAVIGATION_LINK,
                         }),
-                        (0, a.uL)(i.Z5c.APPLICATION_STORE));
+                        (0, a.uL)(i.Z5c.APPLICATION_STORE);
                 },
                 showEnhancedUpsell: !0,
                 enableArtBoxShadow: !1,
@@ -88,9 +90,9 @@ function d(t) {
                 smallText: !0,
                 footerClassName: b.footer,
                 subscribeButtonClassname: b.subscribeButton,
-                showBetaBadge: !0
+                showBetaBadge: !0,
             },
-            d
-        )
+            d,
+        ),
     );
 }

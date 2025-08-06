@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => V }), n(953529));
+n.d(t, { Z: () => V }), n(953529);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -48,7 +48,7 @@ function V(e) {
             tryItOutAvatar: K,
             tryItOutBanner: q,
             tryItOutProfileEffectId: X,
-            tryItOutAvatarDecoration: J
+            tryItOutAvatarDecoration: J,
         } = (0, s.cj)([S.Z], () => {
             var e, t;
             let n = S.Z.getAllPending(),
@@ -58,24 +58,24 @@ function V(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
                 })({}, n, S.Z.getAllTryItOut())),
@@ -99,12 +99,18 @@ function V(e) {
         { preset: $, onShuffle: ee } = (0, b.Z)(),
         et = r.useRef(null);
     (0, v.Z)(et, M.Y_.TRY_IT_OUT);
-    let { analyticsLocations: en, newestAnalyticsLocation: ei, sourceAnalyticsLocations: er } = (0, c.ZP)(o.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
+    let {
+            analyticsLocations: en,
+            newestAnalyticsLocation: ei,
+            sourceAnalyticsLocations: er,
+        } = (0, c.ZP)(o.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
         es = (e) => {
             if (e) {
                 if (((0, l.I5)(K), (0, O.z5)(Y), (0, O.ho)(q), null != J)) {
                     let e = u.Z.getProduct(J.skuId);
-                    null != e && (0, p.G1)(e) ? (0, d.fK)(e.skuId).then(() => (0, l.cV)(J)) : null != m.Z.getPurchase(J.skuId) && (0, l.cV)(J);
+                    null != e && (0, p.G1)(e)
+                        ? (0, d.fK)(e.skuId).then(() => (0, l.cV)(J))
+                        : null != m.Z.getPurchase(J.skuId) && (0, l.cV)(J);
                 }
                 T.default.track(k.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: $ });
             }
@@ -114,7 +120,7 @@ function V(e) {
             T.default.track(k.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: L.cd.PREMIUM_PROFILE_TRY_IT_OUT,
                 location: { page: k.ZY5.USER_SETTINGS },
-                location_stack: er
+                location_stack: er,
             });
     }, [er, V, G]);
     let ea = (null == (n = (0, f.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === L.Si.TIER_2,
@@ -135,64 +141,64 @@ function V(e) {
                           profilePreviewTitle: (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(a.SrA, {
-                                      size: 'md',
-                                      color: 'currentColor',
-                                      className: U.premiumIcon
+                                      size: "md",
+                                      color: "currentColor",
+                                      className: U.premiumIcon,
                                   }),
-                                  B.intl.string(B.t.gMlDNT)
-                              ]
+                                  B.intl.string(B.t.gMlDNT),
+                              ],
                           }),
                           profilePreview: (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(x.Z, {
                                       preset: $,
-                                      onShuffle: ee
+                                      onShuffle: ee,
                                   }),
-                                  (0, i.jsx)(w.Z, { user: V })
-                              ]
+                                  (0, i.jsx)(w.Z, { user: V }),
+                              ],
                           }),
-                          children: (0, i.jsxs)('div', {
+                          children: (0, i.jsxs)("div", {
                               className: U.editor,
                               children: [
-                                  (0, i.jsxs)('div', {
+                                  (0, i.jsxs)("div", {
                                       children: [
                                           (0, i.jsx)(a.X6q, {
-                                              variant: 'heading-xl/extrabold',
-                                              children: B.intl.string(B.t['2zGdAQ'])
+                                              variant: "heading-xl/extrabold",
+                                              children: B.intl.string(B.t["2zGdAQ"]),
                                           }),
                                           (0, i.jsx)(a.Text, {
                                               className: U.description,
-                                              variant: 'text-sm/normal',
-                                              children: B.intl.string(B.t.xeEC29)
-                                          })
-                                      ]
+                                              variant: "text-sm/normal",
+                                              children: B.intl.string(B.t.xeEC29),
+                                          }),
+                                      ],
                                   }),
                                   (0, i.jsx)(Z.Z, {
                                       className: U.customizationSection,
                                       user: V,
                                       pendingAvatarSrc: (0, C.SD)({
                                           userId: V.id,
-                                          image: null != K ? K : z
+                                          image: null != K ? K : z,
                                       }),
                                       pendingColors: null != Y ? Y : W,
                                       onThemeColorsChange: O.rf,
                                       showPremiumIcon: !1,
-                                      preventDisabled: !0
+                                      preventDisabled: !0,
                                   }),
                                   (0, i.jsx)(R.Z, {
                                       className: U.customizationSection,
                                       isTryItOutFlow: !0,
                                       showRemoveBannerButton: null != q,
                                       onBannerChange: O.f4,
-                                      showPremiumIcon: !1
+                                      showPremiumIcon: !1,
                                   }),
                                   (0, i.jsx)(A.Z, {
                                       className: U.customizationSection,
                                       isTryItOutFlow: !0,
                                       onAvatarChange: O.c_,
                                       showRemoveAvatarButton: !1,
-                                      changeAvatarButtonText: B.intl.string(B.t['7z0D1d']),
-                                      sectionTitle: B.intl.string(B.t.vtFfPT)
+                                      changeAvatarButtonText: B.intl.string(B.t["7z0D1d"]),
+                                      sectionTitle: B.intl.string(B.t.vtFfPT),
                                   }),
                                   (0, i.jsx)(
                                       y.Z,
@@ -200,9 +206,9 @@ function V(e) {
                                           isTryItOutFlow: !0,
                                           className: U.customizationSection,
                                           user: V,
-                                          sectionTitle: B.intl.string(B.t['7v0T9P'])
+                                          sectionTitle: B.intl.string(B.t["7v0T9P"]),
                                       },
-                                      'decoration'
+                                      "decoration",
                                   ),
                                   (0, i.jsx)(
                                       D.Z,
@@ -211,17 +217,17 @@ function V(e) {
                                           isTryItOutFlow: !0,
                                           initialSelectedEffectId: Q,
                                           user: V,
-                                          sectionTitle: B.intl.string(B.t.wR5wOj)
+                                          sectionTitle: B.intl.string(B.t.wR5wOj),
                                       },
-                                      'effect'
+                                      "effect",
                                   ),
                                   !ea &&
                                       (0, i.jsx)(a.Text, {
-                                          variant: 'text-sm/normal',
-                                          children: B.intl.string(B.t['smo74+'])
-                                      })
-                              ]
-                          })
+                                          variant: "text-sm/normal",
+                                          children: B.intl.string(B.t["smo74+"]),
+                                      }),
+                              ],
+                          }),
                       }),
                       !ea &&
                           (0, i.jsx)(_.p, {
@@ -232,26 +238,32 @@ function V(e) {
                                   onClick: () => {
                                       (0, E.y)({
                                           analyticsSource: ei,
-                                          onSubscribeFinish: es
+                                          onSubscribeFinish: es,
                                       });
-                                  }
+                                  },
                               }),
-                              button: H ? B.intl.string(B.t.AfRWIy) : eo ? B.intl.formatToPlainString(B.t.bkQ4bG, { percent: null == el ? void 0 : el.discount.amount }) : B.intl.string(B.t.pj0XBA),
-                              position: 'inline',
-                              showShadow: !1
+                              button: H
+                                  ? B.intl.string(B.t.AfRWIy)
+                                  : eo
+                                    ? B.intl.formatToPlainString(B.t.bkQ4bG, {
+                                          percent: null == el ? void 0 : el.discount.amount,
+                                      })
+                                    : B.intl.string(B.t.pj0XBA),
+                              position: "inline",
+                              showShadow: !1,
                           }),
                       ea &&
-                          (0, i.jsxs)('div', {
+                          (0, i.jsxs)("div", {
                               children: [
-                                  (0, i.jsx)('div', { className: U.premiumTier2Divider }),
+                                  (0, i.jsx)("div", { className: U.premiumTier2Divider }),
                                   (0, i.jsx)(j.ZP, {
                                       type: L.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
-                                      subscriptionTier: L.Si.TIER_2
-                                  })
-                              ]
-                          })
-                  ]
-              })
+                                      subscriptionTier: L.Si.TIER_2,
+                                  }),
+                              ],
+                          }),
+                  ],
+              }),
           })
         : null;
 }

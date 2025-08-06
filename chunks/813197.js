@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Fq: () => f,
     ZP: () => p,
-    Zj: () => u
+    Zj: () => u,
 }),
-    n(388685));
+    n(388685);
 var r,
     i = n(255367),
     o = n(73800),
@@ -17,7 +17,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,31 +27,31 @@ function u() {
     return [
         {
             name: l.intl.string(l.t.Sp2NFx),
-            extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp', 'avif']
-        }
+            extensions: ["jpg", "jpeg", "png", "gif", "webp", "avif"],
+        },
     ];
 }
 function d(e, t) {
     if (null != e) {
         let n = new FileReader();
-        ((n.onload = (n) => {
+        (n.onload = (n) => {
             var r;
-            'string' == typeof (null == (r = n.target) ? void 0 : r.result) && t(n.target.result, e);
+            "string" == typeof (null == (r = n.target) ? void 0 : r.result) && t(n.target.result, e);
         }),
-            n.readAsDataURL(e));
+            n.readAsDataURL(e);
     }
 }
 function f(e, t, n) {
     d(e, (r) => {
         if (e.type === s.m.MP4) return t(r, e);
         let i = new Image();
-        ((i.src = r),
+        (i.src = r),
             (i.onload = () => {
                 t(r, e);
             }),
             (i.onerror = () => {
                 n();
-            }));
+            });
     });
 }
 class _ extends (r = o.PureComponent) {
@@ -63,7 +63,7 @@ class _ extends (r = o.PureComponent) {
         null == (e = this._ref.current) || e.activateUploadDialogue();
     }
     render() {
-        let { multiple: e, disabled: t, className: n, tabIndex: r, 'aria-label': o, filters: s } = this.props;
+        let { multiple: e, disabled: t, className: n, tabIndex: r, "aria-label": o, filters: s } = this.props;
         return (0, i.jsx)(a.Z, {
             ref: this._ref,
             onClick: this.props.onClick,
@@ -73,14 +73,14 @@ class _ extends (r = o.PureComponent) {
             disabled: t,
             className: n,
             tabIndex: r,
-            'aria-label': o
+            "aria-label": o,
         });
     }
     constructor(...e) {
-        (super(...e),
-            c(this, '_ref', o.createRef()),
-            c(this, '_isMounted', !1),
-            c(this, 'handleFileChange', (e) => {
+        super(...e),
+            c(this, "_ref", o.createRef()),
+            c(this, "_isMounted", !1),
+            c(this, "handleFileChange", (e) => {
                 let { onFileSizeError: t, maxFileSizeBytes: n } = this.props;
                 if ((e.stopPropagation(), e.preventDefault(), null != e.currentTarget.files))
                     for (let r = 0; r < e.currentTarget.files.length; r++) {
@@ -92,22 +92,22 @@ class _ extends (r = o.PureComponent) {
                         f(i, this.handleFileRead, this.handleFileError);
                     }
             }),
-            c(this, 'handleFileRead', (e, t) => {
+            c(this, "handleFileRead", (e, t) => {
                 let { onChange: n } = this.props;
                 this._isMounted && n(e, t);
             }),
-            c(this, 'handleFileError', async () => {
+            c(this, "handleFileError", async () => {
                 let { openUploadError: e } = await Promise.resolve().then(n.bind(n, 531643));
                 e({
-                    title: l.intl.string(l.t['0egKg4']),
-                    help: l.intl.string(l.t['7PnXqq'])
+                    title: l.intl.string(l.t["0egKg4"]),
+                    help: l.intl.string(l.t["7PnXqq"]),
                 });
-            }));
+            });
     }
 }
-c(_, 'defaultProps', {
+c(_, "defaultProps", {
     multiple: !0,
     tabIndex: -1,
-    maxFileSizeBytes: 1 / 0
+    maxFileSizeBytes: 1 / 0,
 });
 let p = _;

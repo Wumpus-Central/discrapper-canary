@@ -6,18 +6,18 @@ var n = r(98405),
     u = r(861567);
 n(
     {
-        target: 'Array',
+        target: "Array",
         proto: !0,
         arity: 1,
         forced:
             1 !== [].unshift(0) ||
             !(function () {
                 try {
-                    Object.defineProperty([], 'length', { writable: !1 }).unshift();
+                    Object.defineProperty([], "length", { writable: !1 }).unshift();
                 } catch (t) {
                     return t instanceof TypeError;
                 }
-            })()
+            })(),
     },
     {
         unshift: function (t) {
@@ -33,6 +33,6 @@ n(
                 for (var f = 0; f < n; f++) e[f] = arguments[f];
             }
             return a(e, r + n);
-        }
-    }
+        },
+    },
 );

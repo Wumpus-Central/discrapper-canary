@@ -15,30 +15,30 @@ function _(e) {
         i = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
         _ = () =>
             n
-                .e('78698')
+                .e("78698")
                 .then(n.t.bind(n, 141923, 19))
                 .then((e) => {
                     let { default: t } = e;
                     return t;
                 });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: d.root,
         children: [
             (0, r.jsx)(s.Fmz, {
                 importData: _,
                 shouldAnimate: !i,
-                className: o()(d.art, { [d.hidden]: t <= f })
+                className: o()(d.art, { [d.hidden]: t <= f }),
             }),
             (0, r.jsx)(s.X6q, {
                 className: d.header,
-                variant: 'heading-md/bold',
-                children: u.intl.string(u.t['C+tj1d'])
+                variant: "heading-md/bold",
+                children: u.intl.string(u.t["C+tj1d"]),
             }),
             (0, r.jsx)(s.Text, {
-                variant: 'text-md/normal',
-                color: 'header-secondary',
-                children: u.intl.format(u.t['nNHd//'], { onCancel: c.s6 })
-            })
-        ]
+                variant: "text-md/normal",
+                color: "header-secondary",
+                children: u.intl.format(u.t["nNHd//"], { onCancel: c.s6 }),
+            }),
+        ],
     });
 }

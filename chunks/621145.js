@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(997841), n(388685), n(457542));
+n.d(t, { Z: () => D }), n(997841), n(388685), n(457542);
 var i = n(255367),
     a = n(73800),
     l = n(392711),
@@ -32,24 +32,24 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -77,12 +77,12 @@ let L = (e, t, n, i) => {
             let r = I(k({}, e), {
                 filename: (0, P.eS)(e),
                 size: 0,
-                proxy_url: e.url
+                proxy_url: e.url,
             });
             return (0, c.CO)(e.filename) || (0, c.NU)(e.filename)
                 ? I(k({}, r), {
                       width: null != (a = null == (n = t[e.id]) ? void 0 : n.width) ? a : T.Sv,
-                      height: null != (l = null == (i = t[e.id]) ? void 0 : i.height) ? l : T.EY
+                      height: null != (l = null == (i = t[e.id]) ? void 0 : i.height) ? l : T.EY,
                   })
                 : r;
         });
@@ -95,23 +95,23 @@ let L = (e, t, n, i) => {
                             null != n
                                 ? n
                                 : {
-                                      id: '',
+                                      id: "",
                                       avatar: void 0,
-                                      discriminator: '0000',
-                                      username: i
+                                      discriminator: "0000",
+                                      username: i,
                                   },
                         nonce: e.id,
                         content: e.content,
                         type: S.uaV.DEFAULT,
-                        channelId: S.lds
-                    })
+                        channelId: S.lds,
+                    }),
                 ),
                 {
                     timestamp: new Date(A.default.extractTimestamp(e.id)).toISOString(),
                     attachments: a,
-                    state: S.yb.SENT
-                }
-            )
+                    state: S.yb.SENT,
+                },
+            ),
         );
     },
     U = (e) => {
@@ -126,21 +126,22 @@ let L = (e, t, n, i) => {
                         width: t.width,
                         height: t.height,
                         maxWidth: T.Sv,
-                        maxHeight: T.EY
+                        maxHeight: T.EY,
                     });
-                    ((a = (0, l.clamp)(Math.round(t.width * e), 0, T.Sv)), (r = (0, l.clamp)(Math.round(t.height * e), 0, T.EY)));
+                    (a = (0, l.clamp)(Math.round(t.width * e), 0, T.Sv)),
+                        (r = (0, l.clamp)(Math.round(t.height * e), 0, T.EY));
                 }
-                return (0, i.jsx)('div', {
+                return (0, i.jsx)("div", {
                     style: {
-                        width: n ? a : '100%',
-                        height: n ? r : '100%'
+                        width: n ? a : "100%",
+                        height: n ? r : "100%",
                     },
                     children: (0, i.jsx)(s.ZP, {
                         className: e.className,
                         forceExternal: !1,
                         src: t.url,
-                        width: n ? a : '100%',
-                        height: n ? r : '100%',
+                        width: n ? a : "100%",
+                        height: n ? r : "100%",
                         responsive: !0,
                         volume: e.volume,
                         autoPlay: !1,
@@ -156,15 +157,15 @@ let L = (e, t, n, i) => {
                         onEnded: e.onEnded,
                         onVolumeChange: e.onVolumeChange,
                         onMute: e.onMute,
-                        downloadable: !1
-                    })
+                        downloadable: !1,
+                    }),
                 });
             },
             r = 1 === n.length;
         function o(e, t) {
             return (0, d.dn)(e.originalItem, t);
         }
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: N.classificationEvidenceMessageAttachment,
             children: (0, i.jsx)(x.Z, {
                 items: n.map((e) => {
@@ -179,7 +180,7 @@ let L = (e, t, n, i) => {
                             width: e.width,
                             spoiler: e.spoiler,
                             contentType: e.content_type,
-                            srcIsAnimated: (0, E.yE)(null != (n = e.flags) ? n : 0, S.J0y.IS_ANIMATED)
+                            srcIsAnimated: (0, E.yE)(null != (n = e.flags) ? n : 0, S.J0y.IS_ANIMATED),
                         },
                         message: t,
                         mediaLayoutType: C.hV.MOSAIC,
@@ -194,18 +195,18 @@ let L = (e, t, n, i) => {
                                 I(k({}, e), {
                                     hiddenSpoilers: !0,
                                     shouldHideMediaOptions: !0,
-                                    shouldLink: !1
-                                })
+                                    shouldLink: !1,
+                                }),
                             ),
                         renderAudioComponent: g.q7,
                         renderPlaintextFilePreview: g.d4,
                         renderGenericFileComponent: g.ZK,
                         renderMosaicItemFooter: g.L9,
                         getObscureReason: o,
-                        gifFavoriteButton: () => null
+                        gifFavoriteButton: () => null,
                     };
-                })
-            })
+                }),
+            }),
         });
     };
 function D(e) {
@@ -223,7 +224,7 @@ function D(e) {
             allowList: !1,
             allowHeading: !1,
             allowLinks: !1,
-            previewLinkTarget: !1
+            previewLinkTarget: !1,
         });
     return (a.useEffect(() => {
         Promise.all(
@@ -236,37 +237,37 @@ function D(e) {
                     new Promise((t, n) => {
                         if ((0, c.CO)(e.filename)) {
                             let i = new Image();
-                            ((i.src = e.url),
+                            (i.src = e.url),
                                 (i.onload = () => {
                                     t(i);
                                 }),
                                 (i.onerror = () => {
                                     n();
-                                }));
+                                });
                         } else if ((0, c.NU)(e.filename)) {
-                            let i = document.createElement('video');
-                            ((i.src = e.url),
+                            let i = document.createElement("video");
+                            (i.src = e.url),
                                 (i.onloadedmetadata = () => {
                                     t({
                                         width: i.videoWidth,
-                                        height: i.videoHeight
+                                        height: i.videoHeight,
                                     });
                                 }),
                                 (i.onerror = () => {
                                     n();
-                                }));
+                                });
                         } else
                             t({
                                 width: 0,
-                                height: 0
+                                height: 0,
                             });
-                    }).then((t) => d((n) => I(k({}, n), { [e.id]: t })))
-                )
+                    }).then((t) => d((n) => I(k({}, n), { [e.id]: t }))),
+                ),
         ).finally(() => p(!1));
     }, [g.attachments]),
-    '' === y.content && 0 === y.attachments.length)
+    "" === y.content && 0 === y.attachments.length)
         ? null
-        : (0, i.jsx)('div', {
+        : (0, i.jsx)("div", {
               className: N.classificationEvidenceCard,
               children: u
                   ? (0, i.jsx)(o.$jN, {})
@@ -274,9 +275,9 @@ function D(e) {
                         compact: !1,
                         childrenHeader: (0, b.Z)({
                             author: I(k({}, l), {
-                                colorString: '',
+                                colorString: "",
                                 colorStrings: null,
-                                nick: null != (t = null == l ? void 0 : l.username) ? t : m
+                                nick: null != (t = null == l ? void 0 : l.username) ? t : m,
                             }),
                             message: y,
                             channel: void 0,
@@ -285,13 +286,13 @@ function D(e) {
                             animateAvatar: !1,
                             isGroupStart: !0,
                             roleIcon: void 0,
-                            hideTimestamp: !1
+                            hideTimestamp: !1,
                         }),
                         childrenAccessories: (0, i.jsx)(U, { message: y }),
                         childrenMessageContent: (0, v.Z)({ message: y }, E.content),
                         hasThread: !1,
                         hasReply: !1,
-                        author: x
-                    })
+                        author: x,
+                    }),
           });
 }

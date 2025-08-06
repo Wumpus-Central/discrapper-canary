@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => i,
-    s: () => o
+    s: () => o,
 });
 var r = n(981631);
 function i(e) {

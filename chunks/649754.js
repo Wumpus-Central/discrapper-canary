@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var r = n(992774);
 function i(e, t, n) {
     return (
@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,7 +33,7 @@ class o {
         e();
     }
     constructor() {
-        i(this, 'streams', {});
+        i(this, "streams", {});
     }
 }
 let a = new o();

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685), n(539854));
+n.d(t, { Z: () => S }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(658722),
@@ -22,9 +22,9 @@ var r = n(255367),
     I = n(318135);
 function T(e) {
     var t;
-    return (0, r.jsx)('span', {
-        style: { color: null != (t = e.colorString) ? t : 'currentColor' },
-        children: e.name
+    return (0, r.jsx)("span", {
+        style: { color: null != (t = e.colorString) ? t : "currentColor" },
+        children: e.name,
     });
 }
 function S(e) {
@@ -35,7 +35,7 @@ function S(e) {
         A = (0, l.e7)([_.Z], () => _.Z.getSortedRoles(t)),
         { impersonateType: N, viewingRoles: C } = (0, l.cj)([b.Z], () => ({
             impersonateType: b.Z.getImpersonateType(t),
-            viewingRoles: b.Z.getViewingRoles(t)
+            viewingRoles: b.Z.getViewingRoles(t),
         })),
         R = N === y.z.SERVER_SHOP,
         P = (0, l.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
@@ -51,7 +51,7 @@ function S(e) {
             }
             (0, E.Zm)(t.id, {
                 type: N,
-                roles: e
+                roles: e,
             });
         }
     }, [w, N, S]);
@@ -66,7 +66,7 @@ function S(e) {
                           })
                           .filter((e) => (null == x ? void 0 : x.id) === e.id || m.r6(o, n.id, x, e))
                     : [],
-            [o, n, R, x, A]
+            [o, n, R, x, A],
         );
     if (null == n || null == o || null == P) return null;
     let k = {};
@@ -77,11 +77,11 @@ function S(e) {
     s.e$(
         m.I0({
             forceRoles: k,
-            context: o
+            context: o,
         }),
-        s.$e(O.Plq.MANAGE_GUILD, O.Plq.MANAGE_ROLES)
+        s.$e(O.Plq.MANAGE_GUILD, O.Plq.MANAGE_ROLES),
     ) || (0, u.eM)(o, n))
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: I.container,
               children: (0, r.jsx)(c.hQY, {
                   placeholder: v.intl.string(v.t.Sojqsr),
@@ -97,14 +97,17 @@ function S(e) {
                                               c.lo1,
                                               {
                                                   value: n.id,
-                                                  children: [(0, r.jsx)(c.lo1.Label, { children: T(n) }), (0, r.jsx)(c.lo1.Checkbox, {})]
+                                                  children: [
+                                                      (0, r.jsx)(c.lo1.Label, { children: T(n) }),
+                                                      (0, r.jsx)(c.lo1.Checkbox, {}),
+                                                  ],
                                               },
-                                              n.id
-                                          )
+                                              n.id,
+                                          ),
                                       ),
                                   t
                               ),
-                              []
+                              [],
                           ),
                           n = S[(0, u.lV)(o)];
                       return (
@@ -115,18 +118,21 @@ function S(e) {
                                       {
                                           value: n.id,
                                           disabled: !0,
-                                          children: [(0, r.jsx)(c.lo1.Label, { children: T(n) }), (0, r.jsx)(c.lo1.Checkbox, { checked: !0 })]
+                                          children: [
+                                              (0, r.jsx)(c.lo1.Label, { children: T(n) }),
+                                              (0, r.jsx)(c.lo1.Checkbox, { checked: !0 }),
+                                          ],
                                       },
-                                      n.id
-                                  )
+                                      n.id,
+                                  ),
                               ),
                           t
                       );
-                  }
-              })
+                  },
+              }),
           })
         : (0, r.jsx)(c.Text, {
-              variant: 'text-md/medium',
-              children: v.intl.string(v.t.MNSTbW)
+              variant: "text-md/medium",
+              children: v.intl.string(v.t.MNSTbW),
           });
 }

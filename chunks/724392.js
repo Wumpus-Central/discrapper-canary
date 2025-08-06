@@ -13,8 +13,8 @@ class d extends a.PureComponent {
             ? (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
             : (0, n.jsx)(l.hjN, {
                   tag: l.RB0.H2,
-                  title: c.intl.string(c.t['3u0gIC']),
-                  children: (0, s.V)(e, t)
+                  title: c.intl.string(c.t["3u0gIC"]),
+                  children: (0, s.V)(e, t),
               });
     }
 }

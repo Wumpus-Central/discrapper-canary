@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,5 +24,5 @@ class c extends (r = i.ZP.Store) {
         return s;
     }
 }
-a(c, 'displayName', 'ProxyBlockStore');
+a(c, "displayName", "ProxyBlockStore");
 let u = new c(o.Z, { PROXY_BLOCKED_REQUEST: l });

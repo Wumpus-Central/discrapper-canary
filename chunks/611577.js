@@ -6,7 +6,7 @@ function l(e) {
     return null !=
         (0, i.ZP)({
             application: t,
-            channelId: n
+            channelId: n,
         })
         ? r.u1M
         : r.z1l;

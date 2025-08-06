@@ -1,4 +1,4 @@
-(n.d(t, { D: () => h }), n(388685));
+n.d(t, { D: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -17,22 +17,22 @@ function p(e) {
         m = null != p && p >= 1 && p <= n,
         g = (e) => {
             let t = parseInt(e);
-            if ('' === e || isNaN(t)) return void h(null);
+            if ("" === e || isNaN(t)) return void h(null);
             h(t);
         },
         E = (e) => {
-            'Enter' === e.key && null != p && m && (s(p), f(!1), h(null));
+            "Enter" === e.key && null != p && m && (s(p), f(!1), h(null));
         };
     return o
         ? (0, r.jsx)(
               u.X6q,
               {
                   className: _.gap,
-                  'aria-hidden': !0,
-                  variant: 'heading-sm/semibold',
-                  children: '\u2026'
+                  "aria-hidden": !0,
+                  variant: "heading-sm/semibold",
+                  children: "\u2026",
               },
-              t.key
+              t.key,
           )
         : d
           ? (0, r.jsx)(
@@ -40,15 +40,15 @@ function p(e) {
                 {
                     autoFocus: !0,
                     className: _.jumpToPageInlineInput,
-                    value: null == p ? '' : ''.concat(p),
+                    value: null == p ? "" : "".concat(p),
                     onChange: g,
                     onBlur: () => {
-                        (f(!1), h(null));
+                        f(!1), h(null);
                     },
                     onKeyPress: E,
-                    disabled: o
+                    disabled: o,
                 },
-                t.key
+                t.key,
             )
           : (0, r.jsx)(
                 l.P,
@@ -56,16 +56,26 @@ function p(e) {
                     onClick: () => f(!0),
                     children: (0, r.jsx)(u.X6q, {
                         className: a()(_.roundButton, _.gap),
-                        'aria-hidden': !0,
-                        variant: 'heading-sm/semibold',
-                        children: '\u2026'
-                    })
+                        "aria-hidden": !0,
+                        variant: "heading-sm/semibold",
+                        children: "\u2026",
+                    }),
                 },
-                t.key
+                t.key,
             );
 }
 function h(e) {
-    let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: o, disablePaginationGap: c, onPageChange: h, hideMaxPage: m = !1, className: g, renderPageWrapper: E } = e,
+    let {
+            currentPage: t,
+            totalCount: n,
+            pageSize: i,
+            maxVisiblePages: o,
+            disablePaginationGap: c,
+            onPageChange: h,
+            hideMaxPage: m = !1,
+            className: g,
+            renderPageWrapper: E,
+        } = e,
         b = Math.ceil(n / i);
     function y(e) {
         null != h && h(e);
@@ -81,18 +91,18 @@ function h(e) {
                 color: s.zx.Colors.TRANSPARENT,
                 onClick: i,
                 disabled: n,
-                rel: 'prev',
+                rel: "prev",
                 children: [
                     (0, r.jsx)(u.V7D, {
-                        size: 'md',
-                        color: 'currentColor',
+                        size: "md",
+                        color: "currentColor",
                         className: _.iconCaret,
-                        'aria-hidden': !0
+                        "aria-hidden": !0,
                     }),
-                    (0, r.jsx)('span', { children: f.intl.string(f.t['13/7kZ']) })
-                ]
+                    (0, r.jsx)("span", { children: f.intl.string(f.t["13/7kZ"]) }),
+                ],
             },
-            t
+            t,
         );
     }
     function v(e) {
@@ -106,18 +116,18 @@ function h(e) {
                 color: s.zx.Colors.TRANSPARENT,
                 onClick: i,
                 disabled: n,
-                rel: 'next',
+                rel: "next",
                 children: [
-                    (0, r.jsx)('span', { children: f.intl.string(f.t.PDTjLC) }),
+                    (0, r.jsx)("span", { children: f.intl.string(f.t.PDTjLC) }),
                     (0, r.jsx)(u.Fbu, {
-                        size: 'md',
-                        color: 'currentColor',
+                        size: "md",
+                        color: "currentColor",
                         className: _.iconCaret,
-                        'aria-hidden': !0
-                    })
-                ]
+                        "aria-hidden": !0,
+                    }),
+                ],
             },
-            t
+            t,
         );
     }
     function I(e) {
@@ -126,11 +136,11 @@ function h(e) {
             {
                 className: a()(_.roundButton, { [_.activeButton]: e.selected }),
                 onClick: e.selected ? void 0 : e.navigateToPage,
-                'aria-label': f.intl.formatToPlainString(f.t.IGMs8f, { pageNumber: e.targetPage }),
-                'aria-current': e.selected ? 'page' : void 0,
-                children: (0, r.jsx)('span', { children: e.targetPage })
+                "aria-label": f.intl.formatToPlainString(f.t.IGMs8f, { pageNumber: e.targetPage }),
+                "aria-current": e.selected ? "page" : void 0,
+                children: (0, r.jsx)("span", { children: e.targetPage }),
             },
-            e.key
+            e.key,
         );
     }
     function T(e) {
@@ -144,17 +154,17 @@ function h(e) {
                 page: e,
                 totalPageCount: b,
                 disabled: !!c,
-                onPageChange: h
+                onPageChange: h,
             },
-            e.key
+            e.key,
         );
     }
     function A(e) {
         let { pages: t, hasMultiplePages: n } = e;
         return n
-            ? (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", {
                   className: a()(_.pageControlContainer, g),
-                  children: (0, r.jsx)('nav', {
+                  children: (0, r.jsx)("nav", {
                       className: _.pageControl,
                       children: t.map((e) => {
                           switch (e.type) {
@@ -169,8 +179,8 @@ function h(e) {
                               default:
                                   return null;
                           }
-                      })
-                  })
+                      }),
+                  }),
               })
             : null;
     }
@@ -180,6 +190,6 @@ function h(e) {
         maxVisiblePages: o,
         hideMaxPage: m,
         onPageChange: y,
-        children: A
+        children: A,
     });
 }

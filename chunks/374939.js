@@ -4,11 +4,11 @@ n(73800);
 var a = n(767786);
 function i(e) {
     let { children: t } = e;
-    return (0, r.jsx)('section', {
+    return (0, r.jsx)("section", {
         className: a.contentSection,
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: a.content,
-            children: t
-        })
+            children: t,
+        }),
     });
 }

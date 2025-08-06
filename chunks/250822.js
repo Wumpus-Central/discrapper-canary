@@ -5,5 +5,8 @@ var r = n(73800),
 let i = [];
 function a(e) {
     let t = (0, l.e7)([o.Z], () => o.Z.getUserProfile(e));
-    return (0, r.useMemo)(() => ((null == t ? void 0 : t.applicationRoleConnections) == null ? i : t.applicationRoleConnections), [null == t ? void 0 : t.applicationRoleConnections]);
+    return (0, r.useMemo)(
+        () => ((null == t ? void 0 : t.applicationRoleConnections) == null ? i : t.applicationRoleConnections),
+        [null == t ? void 0 : t.applicationRoleConnections],
+    );
 }

@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     J6: () => G,
     LO: () => D,
     TQ: () => w,
@@ -13,7 +13,7 @@
     om: () => F,
     pL: () => P,
     uV: () => C,
-    uX: () => V
+    uX: () => V,
 }),
     n(410992),
     n(227481),
@@ -27,7 +27,7 @@
     n(121784),
     n(644351),
     n(146733),
-    n(388685));
+    n(388685);
 var r = n(250683),
     i = n(512722),
     o = n.n(i),
@@ -63,12 +63,12 @@ function P() {
     return g.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
 }
 function w(e, t, n, r, i) {
-    (n ? O.Z.createSecureFramesVerifiedKey(e, t) : O.Z.createSecureFramesTransientKey(e, t),
+    n ? O.Z.createSecureFramesVerifiedKey(e, t) : O.Z.createSecureFramesTransientKey(e, t),
         (0, T.M1)({
             channelId: r,
             userId: e,
-            analyticsLocation: i
-        }));
+            analyticsLocation: i,
+        });
 }
 function D(e, t, n) {
     if (n) {
@@ -78,11 +78,11 @@ function D(e, t, n) {
 }
 function L(e, t) {
     I.Z.openSecureFramesUpdateConfirmation({
-        title: N.intl.string(N.t['hdL15+']),
-        subtitle: N.intl.string(N.t['8VGYKi']),
+        title: N.intl.string(N.t["hdL15+"]),
+        subtitle: N.intl.string(N.t["8VGYKi"]),
         onConfirm: () => {
-            (O.Z.deleteSecureFramesVerifiedKey(e, t), (0, T.Pn)());
-        }
+            O.Z.deleteSecureFramesVerifiedKey(e, t), (0, T.Pn)();
+        },
     });
 }
 function x(e) {
@@ -92,20 +92,20 @@ function x(e) {
         title: N.intl.formatToPlainString(N.t.K6NGBw, { username: n }),
         subtitle: N.intl.string(N.t.F1BQKy),
         onConfirm: () => {
-            (O.Z.deleteSecureFramesUserVerifiedKeys(e), (0, T.DF)());
-        }
+            O.Z.deleteSecureFramesUserVerifiedKeys(e), (0, T.DF)();
+        },
     });
 }
 function M(e) {
     let t = s()(e),
-        n = s()().diff(t, 's');
+        n = s()().diff(t, "s");
     if (n > 12 * m.Z.Seconds.DAYS_30) {
         let e = Math.round(n / (12 * m.Z.Seconds.DAYS_30));
         return N.intl.formatToPlainString(N.t.F1wqkJ, { count: e });
     }
     if (n > m.Z.Seconds.DAYS_30) {
         let e = Math.round(n / m.Z.Seconds.DAYS_30);
-        return N.intl.formatToPlainString(N.t['iT+b+/'], { count: e });
+        return N.intl.formatToPlainString(N.t["iT+b+/"], { count: e });
     }
     if (n > 7 * m.Z.Seconds.DAY) {
         let e = Math.round(n / (7 * m.Z.Seconds.DAY));
@@ -119,7 +119,7 @@ function M(e) {
         let e = Math.round(n / m.Z.Seconds.HOUR);
         return N.intl.formatToPlainString(N.t.KULxVV, { count: e });
     } else {
-        if (!(n > m.Z.Seconds.MINUTE)) return N.intl.formatToPlainString(N.t['/w0Qp6'], { count: n });
+        if (!(n > m.Z.Seconds.MINUTE)) return N.intl.formatToPlainString(N.t["/w0Qp6"], { count: n });
         let e = Math.round(n / m.Z.Seconds.MINUTE);
         return N.intl.formatToPlainString(N.t.ws6rWl, { count: e });
     }
@@ -127,23 +127,23 @@ function M(e) {
 function k(e) {
     let { isCurrentUserKeyPersistent: t, isOtherUserKeyPersistent: n, otherUserNickname: r } = e;
     return t && n
-        ? N.intl.format(N.t['FJN+kp'], { helpArticle: C() })
+        ? N.intl.format(N.t["FJN+kp"], { helpArticle: C() })
         : t
-          ? N.intl.format(N.t['p/9PGh'], {
+          ? N.intl.format(N.t["p/9PGh"], {
                 username: r,
-                helpArticle: C()
+                helpArticle: C(),
             })
           : n
-            ? N.intl.format(N.t['qT5z8/'], { helpArticle: C() })
-            : N.intl.format(N.t['6JLy+v'], { helpArticle: C() });
+            ? N.intl.format(N.t["qT5z8/"], { helpArticle: C() })
+            : N.intl.format(N.t["6JLy+v"], { helpArticle: C() });
 }
 async function j(e) {
     let t = d.default.getStaticAuthSessionId();
-    return (o()(null != t, '[getCurrentUserPublicKey] session id should not be null'), await f.Z.getMLSSigningKey(t, e));
+    return o()(null != t, "[getCurrentUserPublicKey] session id should not be null"), await f.Z.getMLSSigningKey(t, e);
 }
 function U(e) {
     let t = r.fromByteArray(new Uint8Array(e));
-    return 'data:application/octet-stream;base64,'.concat(t);
+    return "data:application/octet-stream;base64,".concat(t);
 }
 async function G(e, t, n) {
     try {
@@ -152,9 +152,9 @@ async function G(e, t, n) {
                 url: A.ANM.VOICE_MATCH_PUBLIC_KEY(e),
                 body: {
                     public_key: U(t),
-                    key_version: n
+                    key_version: n,
                 },
-                rejectWithError: !1
+                rejectWithError: !1,
             })
         ).body.is_match;
     } catch (e) {
@@ -164,16 +164,16 @@ async function G(e, t, n) {
 async function B(e) {
     let { key: t, signature: n } = await j(e);
     try {
-        (await l.tn.put({
+        await l.tn.put({
             url: A.ANM.VOICE_PUBLIC_KEYS(),
             body: {
                 public_key: U(t),
                 signature: U(n),
-                key_version: e
+                key_version: e,
             },
-            rejectWithError: !1
+            rejectWithError: !1,
         }),
-            O.Z.addUploadedKeyVersion(e));
+            O.Z.addUploadedKeyVersion(e);
     } catch (e) {
         throw (b.Z.captureException(e), e);
     }
@@ -185,11 +185,11 @@ async function F(e) {
     Z(e) || (await B(e));
 }
 async function V(e) {
-    if (!Z(e)) return (await B(e), !0);
+    if (!Z(e)) return await B(e), !0;
     let t = d.default.getId(),
         { key: n } = await j(e),
         r = await G(t, n, e);
-    return (r || (0, T.KA)(e), r);
+    return r || (0, T.KA)(e), r;
 }
 function H(e, t) {
     let [n, r] = t;
@@ -208,16 +208,16 @@ function H(e, t) {
 }
 function Y(e) {
     let { userId: t, channelId: n, nickname: r } = e;
-    ((0, T.CW)({
+    (0, T.CW)({
         userId: t,
         channelId: n,
         keyVersion: S.GB,
-        reason: S.Xe.OTHER_USER_INCONSISTENT_KEYS
+        reason: S.Xe.OTHER_USER_INCONSISTENT_KEYS,
     }),
         u.Z.show({
             title: N.intl.string(N.t.mznLyc),
-            body: N.intl.format(N.t.WY6IKS, { username: r })
-        }));
+            body: N.intl.format(N.t.WY6IKS, { username: r }),
+        });
 }
 function W(e) {
     let { userId: t, guildId: n, channelId: r } = e;
@@ -229,7 +229,7 @@ function W(e) {
             Y({
                 userId: t,
                 channelId: r,
-                nickname: i
+                nickname: i,
             }),
             !1
         );

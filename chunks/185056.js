@@ -6,14 +6,14 @@ var r = n(220159),
     c = a.set;
 r(
     {
-        target: 'Map',
+        target: "Map",
         proto: !0,
         real: !0,
-        forced: !0
+        forced: !0,
     },
     {
         getOrInsert: function (e, t) {
             return s(o(this), e) ? i(this, e) : (c(this, e, t), t);
-        }
-    }
+        },
+    },
 );

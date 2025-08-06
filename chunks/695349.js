@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => h,
-    W: () => g
+    W: () => g,
 });
 var r = n(442837),
     i = n(496929),
@@ -22,10 +22,18 @@ async function h(e) {
         c.Z.fetchedEndedEntitlements ||
         (await (0, i.p0)({
             entitlementType: _.qc2.FRACTIONAL_REDEMPTION,
-            excludeEnded: !1
+            excludeEnded: !1,
         }));
     let r = c.Z.getReverseTrialEntitlement(!0);
-    return (!(!(!n && null != r && null != r.endsAt && r.endsAt.getTime() < Date.now()) || r.endsAt.getTime() < Date.now() - p) && r.sourceType === _.kNB.REVERSE_TRIAL && (null == e && (await (0, d.T)()), null != l.Z.getUserTrialOffer(f.Rt))) || !1;
+    return (
+        (!(
+            !(!n && null != r && null != r.endsAt && r.endsAt.getTime() < Date.now()) ||
+            r.endsAt.getTime() < Date.now() - p
+        ) &&
+            r.sourceType === _.kNB.REVERSE_TRIAL &&
+            (null == e && (await (0, d.T)()), null != l.Z.getUserTrialOffer(f.Rt))) ||
+        !1
+    );
 }
 function m() {
     let e = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
@@ -34,7 +42,12 @@ function m() {
         l = (0, r.e7)([c.Z], () => c.Z.getReverseTrialEntitlement(!1));
     return (
         (0, o.ZP)(() => {
-            null != e && (0, u.I5)(e) && !n && (c.Z.fetchedAllEntitlements || c.Z.fetchingAllEntitlements || (0, i.p0)({ entitlementType: _.qc2.FRACTIONAL_REDEMPTION }));
+            null != e &&
+                (0, u.I5)(e) &&
+                !n &&
+                (c.Z.fetchedAllEntitlements ||
+                    c.Z.fetchingAllEntitlements ||
+                    (0, i.p0)({ entitlementType: _.qc2.FRACTIONAL_REDEMPTION }));
         }),
         n ? null : l
     );

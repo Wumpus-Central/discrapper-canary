@@ -1,21 +1,21 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = ['GET', 'POST', 'HEAD', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'PATCH', 'TRACE'];
+        n = ["GET", "POST", "HEAD", "PUT", "DELETE", "CONNECT", "OPTIONS", "PATCH", "TRACE"];
     return {
-        name: 'Apache Access Log',
+        name: "Apache Access Log",
         contains: [
             {
-                className: 'number',
+                className: "number",
                 begin: /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?\b/,
-                relevance: 5
+                relevance: 5,
             },
             {
-                className: 'number',
+                className: "number",
                 begin: /\b\d+\b/,
-                relevance: 0
+                relevance: 0,
             },
             {
-                className: 'string',
+                className: "string",
                 begin: t.concat(/"/, t.either(...n)),
                 end: /"/,
                 keywords: n,
@@ -24,37 +24,37 @@ e.exports = function (e) {
                 contains: [
                     {
                         begin: /HTTP\/[12]\.\d'/,
-                        relevance: 5
-                    }
-                ]
+                        relevance: 5,
+                    },
+                ],
             },
             {
-                className: 'string',
+                className: "string",
                 begin: /\[\d[^\]\n]{8,}\]/,
                 illegal: /\n/,
-                relevance: 1
+                relevance: 1,
             },
             {
-                className: 'string',
+                className: "string",
                 begin: /\[/,
                 end: /\]/,
                 illegal: /\n/,
-                relevance: 0
+                relevance: 0,
             },
             {
-                className: 'string',
+                className: "string",
                 begin: /"Mozilla\/\d\.\d \(/,
                 end: /"/,
                 illegal: /\n/,
-                relevance: 3
+                relevance: 3,
             },
             {
-                className: 'string',
+                className: "string",
                 begin: /"/,
                 end: /"/,
                 illegal: /\n/,
-                relevance: 0
-            }
-        ]
+                relevance: 0,
+            },
+        ],
     };
 };

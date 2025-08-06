@@ -1,6 +1,6 @@
 n.d(t, {
     TZ: () => u,
-    y6: () => c
+    y6: () => c,
 });
 var r = n(904245),
     i = n(594174),
@@ -20,13 +20,13 @@ let c = (e) => {
             channel: e,
             message: t,
             shouldMention: !0,
-            showMentionToggle: !0
+            showMentionToggle: !0,
         };
-        (r.Z.sendGreetMessage(e.id, n, r.Z.getSendMessageOptionsForReply(s)),
+        r.Z.sendGreetMessage(e.id, n, r.Z.getSendMessageOptionsForReply(s)),
             o.default.track(l.rMx.WELCOME_CTA_CLICKED, {
                 is_reply: !0,
                 sticker_id: n,
                 target_user: t.author.id,
-                sender: null == (a = i.default.getCurrentUser()) ? void 0 : a.id
-            }));
+                sender: null == (a = i.default.getCurrentUser()) ? void 0 : a.id,
+            });
     };

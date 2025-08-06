@@ -6,7 +6,7 @@ async function r() {
         await a.tn.post({
             url: n.ANM.AGE_ASSURANCE_TEST,
             body: {},
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     ).body;
 }

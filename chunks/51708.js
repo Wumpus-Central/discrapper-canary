@@ -21,37 +21,39 @@ function _(e) {
         { analyticsLocations: j } = (0, o.ZP)(s.Z.GO_LIVE_MODAL_V2),
         b = (0, d.N)(),
         S = (0, c.Ng)(),
-        C = (null == b || null == (t = b.subscription_trial) ? void 0 : t.sku_id) === h.Si.TIER_2 || (0, c.Wp)(S, h.Si.TIER_2),
-        y = x.intl.string(p.default['+f+cqq']);
+        C =
+            (null == b || null == (t = b.subscription_trial) ? void 0 : t.sku_id) === h.Si.TIER_2 ||
+            (0, c.Wp)(S, h.Si.TIER_2),
+        y = x.intl.string(p.default["+f+cqq"]);
     return (
         C &&
             (null != b
                 ? (y = (0, f.Rt)({
                       intervalType: null == b || null == (n = b.subscription_trial) ? void 0 : n.interval,
-                      intervalCount: null == b || null == (_ = b.subscription_trial) ? void 0 : _.interval_count
+                      intervalCount: null == b || null == (_ = b.subscription_trial) ? void 0 : _.interval_count,
                   }))
                 : null != S && (y = x.intl.formatToPlainString(x.t.bkQ4bG, { percent: S.discount.amount }))),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: g.root,
             children: [
                 (0, r.jsxs)(l.Text, {
                     className: g.infoText,
-                    variant: 'text-xs/normal',
-                    color: 'always-white',
+                    variant: "text-xs/normal",
+                    color: "always-white",
                     children: [
                         (0, r.jsx)(l.mBM, {
-                            size: 'xxs',
-                            color: 'currentColor'
+                            size: "xxs",
+                            color: "currentColor",
                         }),
                         x.intl.format(x.t.sLJ3ER, {
                             onNitroClick: function () {
                                 (0, m.E)({
                                     analyticsLocation: j[0],
-                                    onClose: v
+                                    onClose: v,
                                 });
-                            }
-                        })
-                    ]
+                            },
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(u.Z, {
                     className: g.ctaButton,
@@ -66,10 +68,10 @@ function _(e) {
                     },
                     textOptions: {
                         subscribeText: y,
-                        textClassName: g.ctaButtonText
-                    }
-                })
-            ]
+                        textClassName: g.ctaButtonText,
+                    },
+                }),
+            ],
         })
     );
 }

@@ -16,19 +16,27 @@ function g(e) {
     let g = (0, o.SE)(e),
         m = f.$X.some((t) => (null == e ? void 0 : e.id) !== h._ && c.oz(t, e)),
         b = (null == e ? void 0 : e.defaultMessageNotifications) === d.bL.ALL_MESSAGES,
-        _ = (0, u.FT)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (t = null == e ? void 0 : e.id) ? t : d.lds),
+        _ = (0, u.FT)(
+            l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,
+            null != (t = null == e ? void 0 : e.id) ? t : d.lds,
+        ),
         O = g && (m || b) && !_,
         E = i.useCallback(() => {
             var t;
-            (0, u.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (t = null == e ? void 0 : e.id) ? t : d.lds, !0, p.L.DISMISS);
+            (0, u.Qd)(
+                l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,
+                null != (t = null == e ? void 0 : e.id) ? t : d.lds,
+                !0,
+                p.L.DISMISS,
+            );
         }, [e]),
         y = i.useRef(!1);
     i.useEffect(() => {
         if (O && !y.current) {
             var t;
-            ((0, a.ZDy)(
+            (0, a.ZDy)(
                 async () => {
-                    let { default: t } = await n.e('54597').then(n.bind(n, 29022));
+                    let { default: t } = await n.e("54597").then(n.bind(n, 29022));
                     return (n) =>
                         (0, r.jsx)(
                             t,
@@ -36,43 +44,43 @@ function g(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })(
                                 {
                                     guild: e,
                                     canEveryoneModerate: m,
-                                    isDefaultNotificationsAllMessages: b
+                                    isDefaultNotificationsAllMessages: b,
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         );
                 },
-                { onCloseCallback: E }
+                { onCloseCallback: E },
             ),
                 s.default.track(d.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                     type: l.C[l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
-                    guild_id: null != (t = null == e ? void 0 : e.id) ? t : d.lds
+                    guild_id: null != (t = null == e ? void 0 : e.id) ? t : d.lds,
                 }),
-                (y.current = !0));
+                (y.current = !0);
         }
     }, [m, e, E, b, O]);
 }

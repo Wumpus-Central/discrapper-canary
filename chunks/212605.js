@@ -6,5 +6,5 @@ let r = {
     md: 24,
     lg: 32,
     custom: void 0,
-    refresh_sm: 20
+    refresh_sm: 20,
 };

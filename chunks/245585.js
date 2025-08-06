@@ -1,4 +1,4 @@
-(n.d(t, { u: () => a }), n(804061), n(704826), n(35282));
+n.d(t, { u: () => a }), n(804061), n(704826), n(35282);
 var r = n(503461),
     i = n(190313);
 function o(e, t, n) {
@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,7 +27,7 @@ class a {
     getLatest(e, t, n) {
         return this.table.getMany([e, t], {
             ordering: r.Sk.Descending,
-            limit: n
+            limit: n,
         });
     }
     getRange(e, t, n, r, i) {
@@ -64,7 +64,10 @@ class a {
         return new s(this.table.upgradeTransaction(e));
     }
     constructor(e, t, n, r = !0) {
-        (o(this, 'originalPrefix', void 0), o(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r)));
+        o(this, "originalPrefix", void 0),
+            o(this, "table", void 0),
+            (this.originalPrefix = e),
+            (this.table = new i.i([e], t, n, r));
     }
 }
 class s {
@@ -112,7 +115,7 @@ class s {
         this.transaction.messages.trimChannelsNotIn(e, t);
     }
     constructor(e) {
-        (o(this, 'transaction', void 0), (this.transaction = e));
+        o(this, "transaction", void 0), (this.transaction = e);
     }
 }
 function l(e, t, n) {
@@ -120,10 +123,10 @@ function l(e, t, n) {
     return {
         key: [e, t, r],
         data: n,
-        generation: r
+        generation: r,
     };
 }
 function c(e) {
     let t = 19;
-    return e.padStart(t, '0');
+    return e.padStart(t, "0");
 }

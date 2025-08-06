@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     a: () => p,
-    j: () => m
+    j: () => m,
 }),
-    n(539854));
+    n(539854);
 var r = n(544891),
     i = n(570140),
     o = n(626135),
@@ -20,16 +20,16 @@ async function p(e, t) {
         p = 0,
         m = [];
     switch (e.type) {
-        case 'channel':
+        case "channel":
             n = l.ANM.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
             break;
-        case 'guild':
+        case "guild":
             n = l.ANM.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
             break;
-        case 'user':
+        case "user":
             n = l.ANM.APPLICATION_COMMAND_INDEX_USER;
             break;
-        case 'application':
+        case "application":
             n = l.ANM.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId);
     }
     let g = async (t) =>
@@ -37,8 +37,8 @@ async function p(e, t) {
                 ? (m.push(_),
                   b({ error: !0 }),
                   i.Z.dispatch({
-                      type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
-                      target: e
+                      type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
+                      target: e,
                   }))
                 : (await new Promise((e) => setTimeout(e, t)), E()),
         E = () =>
@@ -48,7 +48,7 @@ async function p(e, t) {
                     retries: u - p - 1,
                     signal: t.signal,
                     onRequestCreated: () => p++,
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
                 .then(
                     (t) =>
@@ -56,14 +56,14 @@ async function p(e, t) {
                             ? (m.push(202), g(c))
                             : (b({ error: !1 }),
                               i.Z.dispatch({
-                                  type: 'APPLICATION_COMMAND_INDEX_FETCH_SUCCESS',
+                                  type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS",
                                   target: e,
-                                  index: t.body
+                                  index: t.body,
                               })),
                     (n) => {
                         var r;
                         if (t.signal.aborted) {
-                            (m.push(f), b({ error: !0 }));
+                            m.push(f), b({ error: !0 });
                             return;
                         }
                         return 429 === n.status
@@ -71,10 +71,10 @@ async function p(e, t) {
                             : (m.push(null != (r = n.status) ? r : d),
                               b({ error: !0 }),
                               i.Z.dispatch({
-                                  type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
-                                  target: e
+                                  type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
+                                  target: e,
                               }));
-                    }
+                    },
                 ),
         b = (r) => {
             let { error: i } = r,
@@ -90,20 +90,20 @@ async function p(e, t) {
                 url: n,
                 target_type: e.type,
                 target_id: h(e),
-                failure_statuses: m
+                failure_statuses: m,
             });
         };
     await E();
 }
 function h(e) {
     switch (e.type) {
-        case 'channel':
+        case "channel":
             return e.channelId;
-        case 'guild':
+        case "guild":
             return e.guildId;
-        case 'user':
+        case "user":
             return null;
-        case 'application':
+        case "application":
             return e.applicationId;
         default:
             (0, s.vE)(e);
@@ -111,7 +111,7 @@ function h(e) {
 }
 function m(e) {
     i.Z.dispatch({
-        type: 'APPLICATION_COMMAND_INDEX_FETCH_REQUEST',
-        target: e
+        type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST",
+        target: e,
     });
 }

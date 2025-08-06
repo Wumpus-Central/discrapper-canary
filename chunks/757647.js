@@ -1,1 +1,1 @@
-e.exports = n(748790)('toUpperCase');
+e.exports = n(748790)("toUpperCase");

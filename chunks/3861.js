@@ -15,18 +15,42 @@ var r = n(255367),
     m = n(354459),
     g = n(363987);
 let E = (0, o.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: o, participantsVersion: E, layout: b, onSelectParticipant: y, onContextMenuParticipant: O, onFullscreenParticipant: v, channel: I, hasConnectPermission: T, className: S, inCall: A, showParticipants: N = !0, width: C, height: R, idle: P, mode: w, popoutWindow: D, awaitingRemoteSessionInfo: L, callContainerDimensions: x } = e;
+    let {
+        participants: t,
+        filteredParticipants: n,
+        selectedParticipant: o,
+        participantsVersion: E,
+        layout: b,
+        onSelectParticipant: y,
+        onContextMenuParticipant: O,
+        onFullscreenParticipant: v,
+        channel: I,
+        hasConnectPermission: T,
+        className: S,
+        inCall: A,
+        showParticipants: N = !0,
+        width: C,
+        height: R,
+        idle: P,
+        mode: w,
+        popoutWindow: D,
+        awaitingRemoteSessionInfo: L,
+        callContainerDimensions: x,
+    } = e;
     i.useEffect(() => {
         c.S.dispatch(h.CkL.REMEASURE_TARGET);
     }, [C, R, x.width, x.height]);
-    let M = i.useMemo(() => n.filter((e) => e.type !== m.fO.ACTIVITY || !e.participants.some((e) => (0, a.J)(e))), [n, E]);
+    let M = i.useMemo(
+        () => n.filter((e) => e.type !== m.fO.ACTIVITY || !e.participants.some((e) => (0, a.J)(e))),
+        [n, E],
+    );
     return (null == L ? void 0 : L.channelId) === I.id
         ? (0, r.jsx)(d.Z, { height: R })
         : (null == I ? void 0 : I.isGuildVocal()) && !A
           ? (0, r.jsx)(u.Z, {
                 channel: I,
                 participants: t,
-                hasConnectPermission: T
+                hasConnectPermission: T,
             })
           : w === h.WtW.VOICE
             ? (0, r.jsx)(s.Z, {
@@ -34,7 +58,7 @@ let E = (0, o.Z)((e) => {
                   width: C,
                   className: g.voiceCallWrapper,
                   participants: t,
-                  onContextMenu: O
+                  onContextMenu: O,
               })
             : ((n = A ? n : t), null == o)
               ? 0 === n.length
@@ -51,8 +75,8 @@ let E = (0, o.Z)((e) => {
                             onClick: y,
                             onDoubleClick: v,
                             onContextMenu: O,
-                            inCall: A
-                        })
+                            inCall: A,
+                        }),
                     })
               : (0, r.jsx)(_.Z, {
                     onFullscreenParticipant: v,
@@ -69,6 +93,6 @@ let E = (0, o.Z)((e) => {
                     layout: b,
                     inCall: A,
                     channel: I,
-                    showParticipants: N
+                    showParticipants: N,
                 });
 });

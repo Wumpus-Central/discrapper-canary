@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,7 +46,7 @@ let f = Object.freeze({
         [l.KQ.ContentAndSocialScrollPositions.DM_SAFETY_ALERTS_V2]: c.oAB.CONTENT_AND_SOCIAL,
         [l.KQ.ContentAndSocialScrollPositions.MESSAGE_REQUESTS_V2]: c.oAB.CONTENT_AND_SOCIAL,
         [l.KQ.ContentAndSocialScrollPositions.EXPLICIT_MEDIA_REDACTION_V2]: c.oAB.CONTENT_AND_SOCIAL,
-        [l.KQ.ContentAndSocialScrollPositions.RESTRICTED_ACCOUNTS]: c.oAB.CONTENT_AND_SOCIAL
+        [l.KQ.ContentAndSocialScrollPositions.RESTRICTED_ACCOUNTS]: c.oAB.CONTENT_AND_SOCIAL,
     }),
     _ = function (e, t, n) {
         let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
@@ -58,7 +58,7 @@ let f = Object.freeze({
                 t === u &&
                 setTimeout(() => {
                     let e = requestAnimationFrame(() => {
-                        (r.scrollIntoView(d({ behavior: c ? 'auto' : 'smooth' }, n)), o.Z.clearScrollPosition(f[t]));
+                        r.scrollIntoView(d({ behavior: c ? "auto" : "smooth" }, n)), o.Z.clearScrollPosition(f[t]);
                     });
                     return () => cancelAnimationFrame(e);
                 }, l);

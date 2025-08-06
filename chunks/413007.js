@@ -1,6 +1,6 @@
 e.exports = function (e) {
     return {
-        name: 'FIX',
+        name: "FIX",
         contains: [
             {
                 begin: /[^\u2401\u0001]+/,
@@ -14,18 +14,18 @@ e.exports = function (e) {
                         end: /=([^\u2401\u0001=]+)/,
                         returnEnd: !0,
                         returnBegin: !1,
-                        className: 'attr'
+                        className: "attr",
                     },
                     {
                         begin: /=/,
                         end: /([\u2401\u0001])/,
                         excludeEnd: !0,
                         excludeBegin: !0,
-                        className: 'string'
-                    }
-                ]
-            }
+                        className: "string",
+                    },
+                ],
+            },
         ],
-        case_insensitive: !0
+        case_insensitive: !0,
     };
 };

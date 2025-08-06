@@ -18,29 +18,29 @@ function d(e) {
             children: [
                 null != f &&
                     (0, r.jsx)(f, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         width: 20,
                         height: 20,
-                        className: u.channelIcon
+                        className: u.channelIcon,
                     }),
                 (0, r.jsx)(l.Text, {
-                    color: 'header-secondary',
-                    variant: 'text-sm/normal',
+                    color: "header-secondary",
+                    variant: "text-sm/normal",
                     className: u.locationText,
-                    children: (0, s.m)(g, !0)
-                })
-            ]
+                    children: (0, s.m)(g, !0),
+                }),
+            ],
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: u.row,
         children:
             null != p
                 ? (0, r.jsx)(l.P3F, {
                       className: h ? u.externalLocation : u.channelLocation,
                       onClick: p,
-                      children: _
+                      children: _,
                   })
-                : _
+                : _,
     });
 }

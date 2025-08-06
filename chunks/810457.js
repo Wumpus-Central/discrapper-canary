@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685), n(387201), n(642613), n(539854));
+n.d(t, { Z: () => c }), n(388685), n(387201), n(642613), n(539854);
 var r = n(392711),
     i = n.n(r),
     o = n(709054),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,14 +18,17 @@ function s(e, t, n) {
 }
 class l {
     updateChannelIds(e) {
-        ((this._channelIds = new Set(e)), (this._messages = this._messages.filter((e) => e.kind !== a.fL.ALL_MESSAGES_CHANNEL || this._channelIds.has(e.channelId))));
+        (this._channelIds = new Set(e)),
+            (this._messages = this._messages.filter(
+                (e) => e.kind !== a.fL.ALL_MESSAGES_CHANNEL || this._channelIds.has(e.channelId),
+            ));
     }
     addMessage(e) {
-        ((this._messages = [...this._messages, e]), this.maybeTruncate());
+        (this._messages = [...this._messages, e]), this.maybeTruncate();
     }
     addChannelMessages(e) {
         let { channel: t, channelMessages: n, userId: r } = e;
-        ((this._messages = [
+        (this._messages = [
             ...this._messages,
             ...n
                 .filter((e) => e.author.id !== r && o.default.age(e.id) < a.ib)
@@ -34,29 +37,36 @@ class l {
                     channelId: e.channel_id,
                     guildId: null == t ? void 0 : t.guild_id,
                     kind: e.mentioned ? a.fL.MENTION : a.fL.ALL_MESSAGES_CHANNEL,
-                    message: e
-                }))
+                    message: e,
+                })),
         ]),
             (this._isSorted = !1),
-            this.maybeTruncate());
+            this.maybeTruncate();
     }
     addMessages(e) {
-        ((this._messages = [...this._messages, ...e]), (this._isSorted = !1), this.maybeTruncate());
+        (this._messages = [...this._messages, ...e]), (this._isSorted = !1), this.maybeTruncate();
     }
     deleteMessages(e) {
-        return !!this._messages.some((t) => e.includes(t.id)) && ((this._messages = this._messages.filter((t) => !e.includes(t.id))), !0);
+        return (
+            !!this._messages.some((t) => e.includes(t.id)) &&
+            ((this._messages = this._messages.filter((t) => !e.includes(t.id))), !0)
+        );
     }
     getMessages() {
-        return (this._isSorted || this.sortMessages(), this._messages);
+        return this._isSorted || this.sortMessages(), this._messages;
     }
     sortMessages() {
         this._isSorted ||
             ((this._messages = i().sortedUniqBy(
                 this._messages.toSorted((e, t) => {
                     let n = o.default.compare(e.id, t.id);
-                    return 0 !== n ? n : e.kind === a.fL.MENTION && t.kind !== a.fL.MENTION ? -1 : +(e.kind !== a.fL.MENTION && t.kind === a.fL.MENTION);
+                    return 0 !== n
+                        ? n
+                        : e.kind === a.fL.MENTION && t.kind !== a.fL.MENTION
+                          ? -1
+                          : +(e.kind !== a.fL.MENTION && t.kind === a.fL.MENTION);
                 }),
-                'id'
+                "id",
             )),
             (this._isSorted = !0));
     }
@@ -69,23 +79,23 @@ class l {
                 (null == t[e.channelId] &&
                     (t[e.channelId] = {
                         mentions: [],
-                        messages: []
+                        messages: [],
                     }),
                 e.kind === a.fL.MENTION ? t[e.channelId].mentions.push(e) : t[e.channelId].messages.push(e));
         let n = [];
-        (Object.values(t).forEach((e) => {
+        Object.values(t).forEach((e) => {
             let t = [...e.mentions, ...e.messages].sort((e, t) => o.default.compare(e.id, t.id)).slice(-a.AQ),
                 r = new Set(),
                 i = [];
-            for (let e of t) (r.add(e.id), i.push(e));
+            for (let e of t) r.add(e.id), i.push(e);
             for (let t of e.mentions) r.has(t.id) || i.push(t);
             n.push(...i);
         }),
             (this._messages = n),
-            (this._isSorted = !1));
+            (this._isSorted = !1);
     }
     constructor() {
-        (s(this, '_messages', []), s(this, '_isSorted', !0), s(this, '_channelIds', new Set()));
+        s(this, "_messages", []), s(this, "_isSorted", !0), s(this, "_channelIds", new Set());
     }
 }
 let c = l;

@@ -23,7 +23,7 @@ var i = n(255367),
 function v(e) {
     let { className: t, showHeader: n = !0 } = e,
         v = u.tU.useSetting(),
-        { enableViewerClipping: S } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
+        { enableViewerClipping: S } = d.Z.useExperiment({ location: "Clips Settings" }, { autoTrackExposure: !1 }),
         { analyticsLocations: T } = (0, o.ZP)(),
         I = (0, p.Go)(),
         { viewerClipsEnabled: N } = (0, s.cj)([g.Z], () => g.Z.getSettings()),
@@ -40,17 +40,17 @@ function v(e) {
                         className: t,
                         tag: l.RB0.H1,
                         title: n
-                            ? (0, i.jsxs)('div', {
+                            ? (0, i.jsxs)("div", {
                                   className: E.headerContainer,
-                                  children: [j.intl.string(j.t.z2jK6e), (0, i.jsx)(b.Z, {})]
+                                  children: [j.intl.string(j.t.z2jK6e), (0, i.jsx)(b.Z, {})],
                               })
                             : null,
                         children:
                             I &&
-                            (0, i.jsxs)('form', {
+                            (0, i.jsxs)("form", {
                                 onSubmit: (e) => e.preventDefault(),
-                                children: [(0, i.jsx)(x.Z, {}), (0, i.jsx)(_.Z, {})]
-                            })
+                                children: [(0, i.jsx)(x.Z, {}), (0, i.jsx)(_.Z, {})],
+                            }),
                     }),
                 I && (0, i.jsx)(l.$i$, {}),
                 (0, i.jsxs)(l.hjN, {
@@ -60,9 +60,9 @@ function v(e) {
                             hideBorder: !0,
                             className: C.formItem,
                             value: v,
-                            note: j.intl.string(j.t['wW9/zc']),
+                            note: j.intl.string(j.t["wW9/zc"]),
                             onChange: (e) => f.yg({ allowVoiceRecording: e }),
-                            children: j.intl.string(j.t.AGDDkJ)
+                            children: j.intl.string(j.t.AGDDkJ),
                         }),
                         S &&
                             y &&
@@ -70,17 +70,17 @@ function v(e) {
                                 hideBorder: !0,
                                 className: C.formItem,
                                 value: N,
-                                note: j.intl.string(j.t['0vjy8P']),
+                                note: j.intl.string(j.t["0vjy8P"]),
                                 onChange: (e) =>
                                     f.yl({
                                         enabled: e,
-                                        trackAnalytics: !0
+                                        trackAnalytics: !0,
                                     }),
-                                children: j.intl.string(j.t.NWw7kZ)
-                            })
-                    ]
-                })
-            ]
+                                children: j.intl.string(j.t.NWw7kZ),
+                            }),
+                    ],
+                }),
+            ],
         })
     );
 }

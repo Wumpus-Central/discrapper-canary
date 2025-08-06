@@ -15,41 +15,42 @@ let x = (t) => {
     return (0, i.jsxs)(o.Y0X, {
         transitionState: x,
         size: o.CgR.SMALL,
-        'aria-label': d.intl.string(d.t.uAmAiI),
-        parentComponent: 'MuteAppNotificationsModal',
+        "aria-label": d.intl.string(d.t.uAmAiI),
+        parentComponent: "MuteAppNotificationsModal",
         children: [
             (0, i.jsx)(o.olH, {
                 className: u.closeButton,
-                onClick: n
+                onClick: n,
             }),
             (0, i.jsxs)(o.hzk, {
                 className: u.content,
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: u.iconContainer,
-                        children: h ? (0, i.jsx)(o.owu, { size: 'md' }) : (0, i.jsx)(o.Dkj, { size: 'md' })
+                        children: h ? (0, i.jsx)(o.owu, { size: "md" }) : (0, i.jsx)(o.Dkj, { size: "md" }),
                     }),
                     (0, i.jsx)(o.X6q, {
                         className: u.heading,
-                        variant: 'heading-xl/bold',
-                        children: h ? d.intl.string(d.t['4rg7cH']) : d.intl.string(d.t.uAmAiI)
+                        variant: "heading-xl/bold",
+                        children: h ? d.intl.string(d.t["4rg7cH"]) : d.intl.string(d.t.uAmAiI),
                     }),
                     (0, i.jsx)(o.Text, {
                         className: u.infoText,
-                        variant: 'text-md/normal',
-                        color: 'text-default',
-                        children: h ? d.intl.string(d.t['5vton5']) : d.intl.string(d.t.mscFJS)
+                        variant: "text-md/normal",
+                        color: "text-default",
+                        children: h ? d.intl.string(d.t["5vton5"]) : d.intl.string(d.t.mscFJS),
                     }),
                     (0, i.jsx)(a.zx, {
                         className: u.button,
                         color: h ? a.zx.Colors.PRIMARY : a.zx.Colors.RED,
                         onClick: () => {
-                            (l.Z.updateChannelOverrideSettings(null, e, { muted: !h }, h ? c.ZB.Unmuted : c.ZB.Muted), n());
+                            l.Z.updateChannelOverrideSettings(null, e, { muted: !h }, h ? c.ZB.Unmuted : c.ZB.Muted),
+                                n();
                         },
-                        children: h ? d.intl.string(d.t.YqAjX1) : d.intl.string(d.t['w4m94+'])
-                    })
-                ]
-            })
-        ]
+                        children: h ? d.intl.string(d.t.YqAjX1) : d.intl.string(d.t["w4m94+"]),
+                    }),
+                ],
+            }),
+        ],
     });
 };

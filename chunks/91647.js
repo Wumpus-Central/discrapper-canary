@@ -7,9 +7,9 @@ var r = a(101284),
     c = a(939747);
 class E {
     constructor(t) {
-        ((this._client = t), (this._buckets = new Map()), (this._interval = setInterval(() => this.flush(), n.RF)));
+        (this._client = t), (this._buckets = new Map()), (this._interval = setInterval(() => this.flush(), n.RF));
     }
-    add(t, e, a, o = 'none', E = {}, s = (0, r.ph)()) {
+    add(t, e, a, o = "none", E = {}, s = (0, r.ph)()) {
         let l = Math.floor(s),
             u = (0, c.s3)(e),
             I = (0, c.Bg)(E),
@@ -25,18 +25,18 @@ class E {
                   metricType: t,
                   name: u,
                   unit: R,
-                  tags: I
+                  tags: I,
               }),
               this._buckets.set(d, N));
-        let f = 'string' == typeof a ? N.metric.weight - A : a;
+        let f = "string" == typeof a ? N.metric.weight - A : a;
         (0, _.yc)(t, u, f, R, E, d);
     }
     flush() {
         if (0 === this._buckets.size) return;
         let t = Array.from(this._buckets.values());
-        ((0, o.o)(this._client, t), this._buckets.clear());
+        (0, o.o)(this._client, t), this._buckets.clear();
     }
     close() {
-        (clearInterval(this._interval), this.flush());
+        clearInterval(this._interval), this.flush();
     }
 }

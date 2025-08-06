@@ -17,17 +17,22 @@ let g = {
     top: 8,
     bottom: 8,
     left: -4,
-    right: -4
+    right: -4,
 };
 function E(e) {
     let { channel: t, children: n } = e;
     return (0, r.jsx)(a.tE, {
         offset: g,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: m.channelHeader,
-            'data-recents-channel': t.id,
-            children: [(0, r.jsx)(b, { channel: t }), t.isPrivate() ? null : (0, r.jsx)(s.Fbu, { size: 'xxs' }), (0, r.jsx)(y, { channel: t }), n]
-        })
+            "data-recents-channel": t.id,
+            children: [
+                (0, r.jsx)(b, { channel: t }),
+                t.isPrivate() ? null : (0, r.jsx)(s.Fbu, { size: "xxs" }),
+                (0, r.jsx)(y, { channel: t }),
+                n,
+            ],
+        }),
     });
 }
 function b(e) {
@@ -38,17 +43,17 @@ function b(e) {
               className: m.icon,
               guild: n,
               size: _.Z.Sizes.SMALLER,
-              'aria-hidden': !0
+              "aria-hidden": !0,
           })
         : t.isGroupDM()
           ? (0, r.jsx)(f.Z, {
                 channel: t,
                 size: c.EFr.SIZE_24,
-                experimentLocation: 'ForLaterChannelHeader'
+                experimentLocation: "ForLaterChannelHeader",
             })
-          : (0, r.jsx)('div', {
+          : (0, r.jsx)("div", {
                 className: o()(m.icon, m.dmIcon),
-                children: (0, r.jsx)(s.kBi, { size: 'xxs' })
+                children: (0, r.jsx)(s.kBi, { size: "xxs" }),
             });
 }
 function y(e) {
@@ -58,20 +63,20 @@ function y(e) {
         o = (0, d.KS)(t, n),
         a = t.isPrivate() || null == o,
         s = t.isDM() ? h.intl.formatToPlainString(h.t.smD7XV, { username: i }) : i;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: m.channelNameSection,
         children: [
             a
                 ? null
                 : (0, r.jsx)(o, {
                       className: m.channelTypeIcon,
-                      size: 'xxs'
+                      size: "xxs",
                   }),
             (0, r.jsx)(c.X6q, {
-                variant: 'text-md/semibold',
-                color: 'header-secondary',
-                children: s
-            })
-        ]
+                variant: "text-md/semibold",
+                color: "header-secondary",
+                children: s,
+            }),
+        ],
     });
 }

@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => J }), n(388685));
+n.d(t, { Z: () => J }), n(388685);
 var i,
     o = n(512722),
     a = n.n(o),
@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -43,7 +43,7 @@ let S = {},
     D = {};
 function L(e, t, n, i) {
     return (
-        a()(null != r, 'Creating RTCConnection without session.'),
+        a()(null != r, "Creating RTCConnection without session."),
         new _.Z({
             sessionId: r,
             streamKey: e,
@@ -52,34 +52,43 @@ function L(e, t, n, i) {
             initialLayout: w,
             analyticsContext: i,
             isStreamer: null != A[e],
-            parentMediaSessionId: O.Z.getMediaSessionId()
+            parentMediaSessionId: O.Z.getMediaSessionId(),
         })
     );
 }
 function x() {
     l().forEach(D, (e, t) => {
-        (e.destroy(e.isOwner ? 'sender-disconnect' : 'receiver-disconnect'), delete D[t], delete P[t]);
+        e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete D[t], delete P[t];
     });
 }
 function M(e) {
-    ((r = e.sessionId), x());
+    (r = e.sessionId), x();
 }
 function k() {
-    ((r = null), x());
+    (r = null), x();
 }
 function j(e) {
-    let { streamType: t, guildId: n, channelId: r, appContext: i, pid: o, sourceId: a, nativePickerStyleUsed: s, goLiveModalDurationMs: c } = e,
+    let {
+            streamType: t,
+            guildId: n,
+            channelId: r,
+            appContext: i,
+            pid: o,
+            sourceId: a,
+            nativePickerStyleUsed: s,
+            goLiveModalDurationMs: c,
+        } = e,
         u = (0, p.V9)({
             streamType: t,
             guildId: n,
             channelId: r,
-            ownerId: E.default.getId()
+            ownerId: E.default.getId(),
         });
     if (
         ((S[u] = i),
         l().forEach(D, (e) => {
             let { analyticsContext: t, isOwner: n } = e;
-            (t.setActionContext(i), t.setNativePickerStyleUsed(s), n && t.trackStart());
+            t.setActionContext(i), t.setNativePickerStyleUsed(s), n && t.trackStart();
         }),
         (C[u] = a),
         (N[u] = o),
@@ -93,21 +102,21 @@ function j(e) {
                 exe: e.exeName,
                 distributor: e.distributor,
                 sku: e.sku,
-                gameMetadata: e.gameMetadata
+                gameMetadata: e.gameMetadata,
             });
     }
     null != c ? (R[u] = c) : delete R[u];
 }
 function U(e) {
     let { appContext: t, streamKey: n } = e;
-    ((S[n] = t),
+    (S[n] = t),
         l().forEach(D, (e) => {
             let { analyticsContext: n, isOwner: r } = e;
-            (n.setActionContext(t), r && n.trackEnd());
+            n.setActionContext(t), r && n.trackEnd();
         }),
         (C[n] = null),
         (N[n] = null),
-        delete R[n]);
+        delete R[n];
 }
 function G(e) {
     let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: i, viewerIds: o } = e,
@@ -122,15 +131,15 @@ function G(e) {
             streamSourceType: X(C[t]),
             actionContext: S[t],
             numViewers: null != o ? o.length : 0,
-            goLiveModalDurationMs: R[t]
+            goLiveModalDurationMs: R[t],
         });
-        ((a = L(t, n, r, s)), (D[t] = a));
+        (a = L(t, n, r, s)), (D[t] = a);
     }
-    (delete P[t],
+    delete P[t],
         d.Z.dispatch({
-            type: 'MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET',
-            mediaEngineConnectionId: a.getMediaEngineConnectionId()
-        }));
+            type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
+            mediaEngineConnectionId: a.getMediaEngineConnectionId(),
+        });
 }
 function B(e) {
     let t = D[e.streamKey];
@@ -147,22 +156,22 @@ function F(e) {
     let { streamKey: t, viewerIds: n, paused: r } = e,
         i = D[t];
     if (null == i) return !1;
-    (null != n && i.analyticsContext.trackViewerCount(n.length), i.streamUpdate(r));
+    null != n && i.analyticsContext.trackViewerCount(n.length), i.streamUpdate(r);
 }
 function V(e) {
     let { streamKey: t } = e,
         n = D[t];
     if (null == n) return !1;
-    (d.Z.dispatch({
-        type: 'MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET',
-        mediaEngineConnectionId: n.getMediaEngineConnectionId()
+    d.Z.dispatch({
+        type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
+        mediaEngineConnectionId: n.getMediaEngineConnectionId(),
     }),
-        n.destroy('stream-end'),
-        delete D[t]);
+        n.destroy("stream-end"),
+        delete D[t];
 }
 function H(e) {
     let { layout: t } = e;
-    ((w = t), Object.values(D).forEach((e) => e.layoutChange(t)));
+    (w = t), Object.values(D).forEach((e) => e.layoutChange(t));
 }
 function Y() {
     return !0;
@@ -173,14 +182,14 @@ function W(e) {
             streamType: null == i ? I.lo.CALL : I.lo.GUILD,
             guildId: i,
             channelId: o,
-            ownerId: r
+            ownerId: r,
         });
     if (
         t !== u.Yn.STREAM ||
         null == D[a] ||
         !Object.entries(n).some((e) => {
             let [t, n] = e;
-            return 'any' !== t && 0 !== n;
+            return "any" !== t && 0 !== n;
         })
     )
         return !1;
@@ -203,16 +212,16 @@ function q(e) {
 }
 function X(e) {
     var t, n, r;
-    if (null == e) return 'unknown';
-    if (g.isPlatformEmbedded || (null == (t = platform) ? void 0 : t.name) === 'Chrome') {
-        if (e.startsWith('web-contents-media-stream:')) return 'tab';
-        else if (e.startsWith('window:')) return 'window';
-        else if (e.startsWith('screen:')) return 'screen';
-    } else if ((null == (n = platform) ? void 0 : n.name) === 'Firefox')
-        if ('' !== e) return 'window';
-        else return 'screen';
-    else if ((null == (r = platform) ? void 0 : r.name) === 'Safari') return 'window';
-    return 'unknown';
+    if (null == e) return "unknown";
+    if (g.isPlatformEmbedded || (null == (t = platform) ? void 0 : t.name) === "Chrome") {
+        if (e.startsWith("web-contents-media-stream:")) return "tab";
+        else if (e.startsWith("window:")) return "window";
+        else if (e.startsWith("screen:")) return "screen";
+    } else if ((null == (n = platform) ? void 0 : n.name) === "Firefox")
+        if ("" !== e) return "window";
+        else return "screen";
+    else if ((null == (r = platform) ? void 0 : r.name) === "Safari") return "window";
+    return "unknown";
 }
 class Q extends (i = c.ZP.Store) {
     getRTCConnections() {
@@ -244,9 +253,9 @@ class Q extends (i = c.ZP.Store) {
         return null != t ? t.getVideoStats() : null;
     }
     getHostname(e) {
-        if (null == e) return '';
+        if (null == e) return "";
         let t = D[e];
-        return null != t && null != t.hostname ? t.hostname : '';
+        return null != t && null != t.hostname ? t.hostname : "";
     }
     getRegion(e) {
         if (null == e) return null;
@@ -282,7 +291,7 @@ class Q extends (i = c.ZP.Store) {
         return null == r ? void 0 : r.get(t);
     }
 }
-T(Q, 'displayName', 'StreamRTCConnectionStore');
+T(Q, "displayName", "StreamRTCConnectionStore");
 let J = new Q(
     d.Z,
     !b.Z.isSupported() || __OVERLAY__
@@ -305,6 +314,6 @@ let J = new Q(
               MEDIA_ENGINE_CONNECTION_STATS: Z,
               STREAM_LAYOUT_UPDATE: H,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: z,
-              VIDEO_SIZE_UPDATE: q
-          }
+              VIDEO_SIZE_UPDATE: q,
+          },
 );

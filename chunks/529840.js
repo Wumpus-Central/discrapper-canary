@@ -11,13 +11,13 @@ function C(e) {
     let { user: r, checked: i, onChange: C, disabled: d } = e,
         { avatarSrc: c, eventHandlers: x } = (0, l.Z)({
             userId: null == r ? void 0 : r.id,
-            size: n.EFr.SIZE_32
+            size: n.EFr.SIZE_32,
         }),
         f = null != (t = r.globalName) ? t : r.username;
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         className: o.container,
         children: [
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 className: o.user,
                 children: [
                     (0, a.jsx)(
@@ -26,51 +26,51 @@ function C(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     a = Object.keys(r);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (a = a.concat(
                                         Object.getOwnPropertySymbols(r).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     a.forEach(function (t) {
                                         var a;
-                                        ((a = r[t]),
+                                        (a = r[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: a,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = a));
-                                    }));
+                                                : (e[t] = a);
+                                    });
                             }
                             return e;
                         })(
                             {
                                 className: s()({ [o.muted]: d }),
                                 src: c,
-                                'aria-label': f,
-                                size: n.EFr.SIZE_32
+                                "aria-label": f,
+                                size: n.EFr.SIZE_32,
                             },
-                            x
-                        )
+                            x,
+                        ),
                     ),
                     (0, a.jsx)(n.Text, {
-                        color: d ? 'text-muted' : 'text-default',
-                        variant: 'text-md/semibold',
-                        children: f
-                    })
-                ]
+                        color: d ? "text-muted" : "text-default",
+                        variant: "text-md/semibold",
+                        children: f,
+                    }),
+                ],
             }),
-            (0, a.jsx)('div', {
+            (0, a.jsx)("div", {
                 className: o.checkbox,
                 children: (0, a.jsx)(n.XZJ, {
                     disabled: d,
                     value: i,
-                    onChange: (e, t) => C(r, t)
-                })
-            })
-        ]
+                    onChange: (e, t) => C(r, t),
+                }),
+            }),
+        ],
     });
 }

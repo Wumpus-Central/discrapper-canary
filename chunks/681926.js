@@ -3,17 +3,17 @@ var r = n(818083),
     i = n(984134);
 let o = { doGroupEligibilityCheck: !1 },
     a = (0, r.B)({
-        kind: 'user',
-        id: '2025-04_feedback_trigger_experiment',
-        label: 'Feedback trigger logic changes',
+        kind: "user",
+        id: "2025-04_feedback_trigger_experiment",
+        label: "Feedback trigger logic changes",
         defaultConfig: o,
         treatments: [
             {
                 id: 1,
-                label: 'Do group eligibility check',
-                config: { doGroupEligibilityCheck: !0 }
-            }
-        ]
+                label: "Do group eligibility check",
+                config: { doGroupEligibilityCheck: !0 },
+            },
+        ],
     });
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -22,7 +22,7 @@ function s(e) {
         { location: t },
         {
             disable: r,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     );
 }

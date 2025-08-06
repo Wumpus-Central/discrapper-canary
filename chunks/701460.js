@@ -1,4 +1,4 @@
-(n.d(e, { default: () => h }), n(388685), n(415506), n(953529));
+n.d(e, { default: () => h }), n(388685), n(415506), n(953529);
 var i = n(255367),
     a = n(73800),
     r = n(481060),
@@ -11,22 +11,22 @@ var i = n(255367),
 function h(t) {
     var e, n;
     let { onClose: h, transitionState: x, location: m, successRedirect: f, platformType: p } = t,
-        [j, v] = a.useState(''),
+        [j, v] = a.useState(""),
         [_, g] = a.useState(null),
         [S, b] = a.useState(!1),
-        k = null != (n = null == (e = o.Z.get(p)) ? void 0 : e.name) ? n : d.intl.string(d.t['bU/GZm']),
+        k = null != (n = null == (e = o.Z.get(p)) ? void 0 : e.name) ? n : d.intl.string(d.t["bU/GZm"]),
         y = async () => {
-            (b(!0), g(null));
+            b(!0), g(null);
             try {
                 let t = await (0, c.H)(p, {
                     location: m,
                     successRedirect: f,
-                    handle: j
+                    handle: j,
                 });
                 if (null == t) throw Error();
                 h();
             } catch (t) {
-                (g(d.intl.string(d.t['7wbPNj'])), b(!1));
+                g(d.intl.string(d.t["7wbPNj"])), b(!1);
             }
         },
         B = (0, l.r)(p),
@@ -34,7 +34,7 @@ function h(t) {
     return (0, i.jsxs)(r.Y0X, {
         transitionState: x,
         className: u.__invalid_modal,
-        parentComponent: 'FederatedSocialModal',
+        parentComponent: "FederatedSocialModal",
         children: [
             (0, i.jsxs)(r.xBx, {
                 direction: s.Z.Direction.VERTICAL,
@@ -42,28 +42,28 @@ function h(t) {
                 separator: !1,
                 children: [
                     (0, i.jsx)(r.X6q, {
-                        variant: 'heading-xl/semibold',
-                        children: d.intl.formatToPlainString(d.t.ImMhq6, { serviceName: k })
+                        variant: "heading-xl/semibold",
+                        children: d.intl.formatToPlainString(d.t.ImMhq6, { serviceName: k }),
                     }),
                     (0, i.jsx)(r.olH, {
                         className: u.closeButton,
-                        onClick: h
-                    })
-                ]
+                        onClick: h,
+                    }),
+                ],
             }),
-            (0, i.jsxs)('form', {
+            (0, i.jsxs)("form", {
                 onSubmit: (t) => {
-                    (t.preventDefault(), y());
+                    t.preventDefault(), y();
                 },
                 children: [
                     (0, i.jsxs)(r.hzk, {
                         className: u.content,
                         children: [
                             (0, i.jsx)(r.Text, {
-                                variant: 'text-md/normal',
-                                color: 'header-secondary',
+                                variant: "text-md/normal",
+                                color: "header-secondary",
                                 className: u.description,
-                                children: d.intl.formatToPlainString(d.t['7TByKi'], { serviceName: k })
+                                children: d.intl.formatToPlainString(d.t["7TByKi"], { serviceName: k }),
                             }),
                             (0, i.jsx)(r.xJW, {
                                 title: d.intl.string(d.t.tZ9QFR),
@@ -73,33 +73,33 @@ function h(t) {
                                     placeholder: B,
                                     value: j,
                                     disabled: S,
-                                    autoFocus: !0
-                                })
-                            })
-                        ]
+                                    autoFocus: !0,
+                                }),
+                            }),
+                        ],
                     }),
                     (0, i.jsx)(r.mzw, {
                         className: u.footer,
                         children: (0, i.jsxs)(r.hE2, {
-                            direction: 'horizontal-reverse',
+                            direction: "horizontal-reverse",
                             children: [
                                 (0, i.jsx)(r.zxk, {
-                                    variant: 'primary',
+                                    variant: "primary",
                                     text: d.intl.string(d.t.PDTjLC),
-                                    type: 'submit',
+                                    type: "submit",
                                     loading: S,
-                                    disabled: !N
+                                    disabled: !N,
                                 }),
                                 (0, i.jsx)(r.zxk, {
-                                    variant: 'secondary',
-                                    text: d.intl.string(d.t['ETE/oK']),
-                                    onClick: h
-                                })
-                            ]
-                        })
-                    })
-                ]
-            })
-        ]
+                                    variant: "secondary",
+                                    text: d.intl.string(d.t["ETE/oK"]),
+                                    onClick: h,
+                                }),
+                            ],
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

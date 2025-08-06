@@ -14,61 +14,61 @@ function m(e) {
     let { transitionState: i, onClose: n, guildTemplate: t } = e,
         { form: m, preview: p, handleSubmit: h } = (0, d.Z)(t, !1),
         C = (0, l.Dt)();
-    return (0, a.jsx)('div', {
+    return (0, a.jsx)("div", {
         children: (0, a.jsxs)(o.Y0X, {
             size: o.CgR.DYNAMIC,
             transitionState: i,
             className: f.modalRoot,
-            'aria-labelledby': C,
-            parentComponent: 'GuildTemplateModal',
+            "aria-labelledby": C,
+            parentComponent: "GuildTemplateModal",
             children: [
-                (0, a.jsxs)('div', {
+                (0, a.jsxs)("div", {
                     className: f.modalContainer,
                     children: [
-                        (0, a.jsx)('div', {
+                        (0, a.jsx)("div", {
                             className: c()(f.modalSection, f.ctaSection),
-                            children: (0, a.jsx)('div', {
+                            children: (0, a.jsx)("div", {
                                 className: f.ctaContainer,
                                 children: (0, a.jsx)(_.Z, {
                                     guildTemplate: t,
-                                    headerId: C
-                                })
-                            })
+                                    headerId: C,
+                                }),
+                            }),
                         }),
-                        (0, a.jsx)('div', {
+                        (0, a.jsx)("div", {
                             className: c()(f.modalSection, f.formSection),
                             children: (0, a.jsxs)(o.Ttm, {
                                 className: f.formContainer,
                                 children: [
                                     (0, a.jsx)(r.Dx, {
                                         className: f.header,
-                                        children: s.intl.string(s.t.UNFvtL)
+                                        children: s.intl.string(s.t.UNFvtL),
                                     }),
                                     m,
-                                    p
-                                ]
-                            })
-                        })
-                    ]
+                                    p,
+                                ],
+                            }),
+                        }),
+                    ],
                 }),
                 (0, a.jsxs)(o.mzw, {
                     className: f.modalFooter,
                     children: [
                         (0, a.jsx)(o.zxk, {
-                            variant: 'secondary',
+                            variant: "secondary",
                             text: s.intl.string(s.t.cpT0Cg),
-                            onClick: n
+                            onClick: n,
                         }),
                         (0, a.jsx)(o.zxk, {
-                            variant: 'active',
+                            variant: "active",
                             text: s.intl.string(s.t.CumH4u),
                             onClick: async () => {
                                 null != (await h()) && n();
-                            }
-                        })
-                    ]
-                })
-            ]
-        })
+                            },
+                        }),
+                    ],
+                }),
+            ],
+        }),
     });
 }

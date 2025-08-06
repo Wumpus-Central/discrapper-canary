@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(415506));
+n.d(t, { Z: () => p }), n(415506);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -16,7 +16,7 @@ async function f(e) {
     window.location.reload(!0);
 }
 async function _() {
-    (await (0, a.bF)(), window.location.reload(!0));
+    await (0, a.bF)(), window.location.reload(!0);
 }
 let p = i.memo(function (e) {
     let { url: t } = e,
@@ -29,7 +29,7 @@ let p = i.memo(function (e) {
                 var e;
                 return f(null == (e = a.override) ? void 0 : e.targetBuildOverride);
             }
-            return null == p ? Promise.reject(Error('Invalid override payload')) : ((0, u.Z)(a.override, p), d(p));
+            return null == p ? Promise.reject(Error("Invalid override payload")) : ((0, u.Z)(a.override, p), d(p));
         }, [p, a]);
     return null != h
         ? (0, r.jsx)(c.Z, {
@@ -38,7 +38,7 @@ let p = i.memo(function (e) {
               currentOverrides: n.overrides,
               applyBuildOverride: g,
               clearBuildOverride: _,
-              url: h
+              url: h,
           })
         : null;
 });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r = n(348327),
     i = n.n(r),
     o = n(392711),
@@ -25,7 +25,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,33 +33,66 @@ function v(e, t, n) {
 }
 class I extends u.Z {
     _initialize() {
-        this.isSupported && (s.Z.subscribe('AUDIO_SET_MODE', this.handleViewUpdate), s.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate), s.Z.subscribe('START_SESSION', this.handleViewUpdate), s.Z.subscribe('CONNECTION_OPEN', this.handleViewUpdate), s.Z.subscribe('CONNECTION_CLOSED', this.handleViewUpdate), s.Z.subscribe('CALL_CREATE', this.handleViewUpdate), s.Z.subscribe('CALL_UPDATE', this.handleViewUpdate), s.Z.subscribe('CALL_DELETE', this.handleViewUpdate), s.Z.subscribe('CHANNEL_DELETE', this.handleViewUpdate), s.Z.subscribe('VOICE_STATE_UPDATES', this.handleViewUpdate), s.Z.subscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate), s.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate), s.Z.subscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate), s.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate), b.ZP.on('THUMBAR_BUTTONS_CLICKED', (e, t) => this.buttonClicked(t)));
+        this.isSupported &&
+            (s.Z.subscribe("AUDIO_SET_MODE", this.handleViewUpdate),
+            s.Z.subscribe("VOICE_CHANNEL_SELECT", this.handleViewUpdate),
+            s.Z.subscribe("START_SESSION", this.handleViewUpdate),
+            s.Z.subscribe("CONNECTION_OPEN", this.handleViewUpdate),
+            s.Z.subscribe("CONNECTION_CLOSED", this.handleViewUpdate),
+            s.Z.subscribe("CALL_CREATE", this.handleViewUpdate),
+            s.Z.subscribe("CALL_UPDATE", this.handleViewUpdate),
+            s.Z.subscribe("CALL_DELETE", this.handleViewUpdate),
+            s.Z.subscribe("CHANNEL_DELETE", this.handleViewUpdate),
+            s.Z.subscribe("VOICE_STATE_UPDATES", this.handleViewUpdate),
+            s.Z.subscribe("AUDIO_TOGGLE_SELF_MUTE", this.handleViewUpdate),
+            s.Z.subscribe("AUDIO_TOGGLE_SELF_DEAF", this.handleViewUpdate),
+            s.Z.subscribe("AUDIO_TOGGLE_LOCAL_MUTE", this.handleViewUpdate),
+            s.Z.subscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleViewUpdate),
+            b.ZP.on("THUMBAR_BUTTONS_CLICKED", (e, t) => this.buttonClicked(t)));
     }
     _terminate() {
-        this.isSupported && (s.Z.unsubscribe('AUDIO_SET_MODE', this.handleViewUpdate), s.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate), s.Z.unsubscribe('START_SESSION', this.handleViewUpdate), s.Z.unsubscribe('CONNECTION_OPEN', this.handleViewUpdate), s.Z.unsubscribe('CONNECTION_CLOSED', this.handleViewUpdate), s.Z.unsubscribe('CALL_CREATE', this.handleViewUpdate), s.Z.unsubscribe('CALL_UPDATE', this.handleViewUpdate), s.Z.unsubscribe('CALL_DELETE', this.handleViewUpdate), s.Z.unsubscribe('CHANNEL_DELETE', this.handleViewUpdate), s.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleViewUpdate), s.Z.unsubscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate), s.Z.unsubscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate), s.Z.unsubscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate), s.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate));
+        this.isSupported &&
+            (s.Z.unsubscribe("AUDIO_SET_MODE", this.handleViewUpdate),
+            s.Z.unsubscribe("VOICE_CHANNEL_SELECT", this.handleViewUpdate),
+            s.Z.unsubscribe("START_SESSION", this.handleViewUpdate),
+            s.Z.unsubscribe("CONNECTION_OPEN", this.handleViewUpdate),
+            s.Z.unsubscribe("CONNECTION_CLOSED", this.handleViewUpdate),
+            s.Z.unsubscribe("CALL_CREATE", this.handleViewUpdate),
+            s.Z.unsubscribe("CALL_UPDATE", this.handleViewUpdate),
+            s.Z.unsubscribe("CALL_DELETE", this.handleViewUpdate),
+            s.Z.unsubscribe("CHANNEL_DELETE", this.handleViewUpdate),
+            s.Z.unsubscribe("VOICE_STATE_UPDATES", this.handleViewUpdate),
+            s.Z.unsubscribe("AUDIO_TOGGLE_SELF_MUTE", this.handleViewUpdate),
+            s.Z.unsubscribe("AUDIO_TOGGLE_SELF_DEAF", this.handleViewUpdate),
+            s.Z.unsubscribe("AUDIO_TOGGLE_LOCAL_MUTE", this.handleViewUpdate),
+            s.Z.unsubscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleViewUpdate));
     }
     setThumbarButtons(e) {
         i()(this.prevButtons, e) || ((this.prevButtons = e), b.ZP.setThumbarButtons(e));
     }
     constructor(...e) {
-        (super(...e),
-            v(this, 'callbackActions', {
+        super(...e),
+            v(this, "callbackActions", {
                 [b.tS.VIDEO]: () => {
                     m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, p.Z)(() => l.Z.setVideoEnabled(!0), y.IlC.APP);
                 },
-                [b.tS.MUTE]: () => l.Z.toggleSelfMute({ location: 'Thumbar' }),
-                [b.tS.DEAFEN]: () => l.Z.toggleSelfDeaf({ location: 'Thumbar' }),
-                [b.tS.DISCONNECT]: () => c.default.disconnect()
+                [b.tS.MUTE]: () => l.Z.toggleSelfMute({ location: "Thumbar" }),
+                [b.tS.DEAFEN]: () => l.Z.toggleSelfDeaf({ location: "Thumbar" }),
+                [b.tS.DISCONNECT]: () => c.default.disconnect(),
             }),
-            v(this, 'isSupported', (0, E.isMac)() || (0, E.isWindows)()),
-            v(this, 'prevButtons', []),
-            v(this, 'buttonClicked', (e) => {
-                if (!(e.buttonName in this.callbackActions)) return void console.error('ThumbarButtonsManager: Unknown callback eventName: "'.concat(e.buttonName, '"'), e);
+            v(this, "isSupported", (0, E.isMac)() || (0, E.isWindows)()),
+            v(this, "prevButtons", []),
+            v(this, "buttonClicked", (e) => {
+                if (!(e.buttonName in this.callbackActions))
+                    return void console.error(
+                        'ThumbarButtonsManager: Unknown callback eventName: "'.concat(e.buttonName, '"'),
+                        e,
+                    );
                 this.callbackActions[e.buttonName]();
             }),
             v(
                 this,
-                'handleViewUpdate',
+                "handleViewUpdate",
                 a().debounce(() => {
                     let e = g.Z.getVoiceChannelId();
                     if (null == e) return void this.setThumbarButtons([]);
@@ -74,7 +107,7 @@ class I extends u.Z {
                                 ? (0, d.t)(o)
                                 : {
                                       reachedLimit: void 0,
-                                      limit: void 0
+                                      limit: void 0,
                                   },
                         c = (0, _.X)({
                             enabled: r,
@@ -83,33 +116,33 @@ class I extends u.Z {
                             cameraUnavailable: !i,
                             hasPermission: a,
                             channelLimit: l,
-                            channelLimitReached: s
+                            channelLimitReached: s,
                         });
                     this.setThumbarButtons([
                         {
                             name: b.tS.VIDEO,
                             active: !r,
                             tooltip: c,
-                            flags: i ? [] : ['disabled']
+                            flags: i ? [] : ["disabled"],
                         },
                         {
                             name: b.tS.MUTE,
                             active: t,
-                            tooltip: t ? O.intl.string(O.t.YqAjX1) : O.intl.string(O.t['w4m94+'])
+                            tooltip: t ? O.intl.string(O.t.YqAjX1) : O.intl.string(O.t["w4m94+"]),
                         },
                         {
                             name: b.tS.DEAFEN,
                             active: n,
-                            tooltip: n ? O.intl.string(O.t['2US87+']) : O.intl.string(O.t.wjcRFR)
+                            tooltip: n ? O.intl.string(O.t["2US87+"]) : O.intl.string(O.t.wjcRFR),
                         },
                         {
                             name: b.tS.DISCONNECT,
                             active: !0,
-                            tooltip: O.intl.string(O.t['6vrfgo'])
-                        }
+                            tooltip: O.intl.string(O.t["6vrfgo"]),
+                        },
                     ]);
-                }, 100)
-            ));
+                }, 100),
+            );
     }
 }
 let T = new I();

@@ -17,39 +17,42 @@ function p(e) {
             ? t
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)('img', {
+                      (0, r.jsx)("img", {
                           className: u.backgroundArtwork,
                           src: d,
-                          alt: ''
+                          alt: "",
                       }),
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: u.container,
                           children: (0, r.jsxs)(l.ZP, {
                               children: [
                                   (0, r.jsx)(l.Dx, {
                                       className: u.appOpenedTitle,
-                                      children: c.intl.string(c.t.csrAMD)
+                                      children: c.intl.string(c.t.csrAMD),
                                   }),
-                                  (0, r.jsx)(l.DK, { children: c.intl.string(c.t.ghBJz8) })
-                              ]
-                          })
-                      })
-                  ]
+                                  (0, r.jsx)(l.DK, { children: c.intl.string(c.t.ghBJz8) }),
+                              ],
+                          }),
+                      }),
+                  ],
               })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)('img', {
+                  (0, r.jsx)("img", {
                       className: u.backgroundArtwork,
                       src: d,
-                      alt: ''
+                      alt: "",
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: u.container,
                       children: (0, r.jsxs)(l.ZP, {
-                          children: [(0, r.jsx)(l.Dx, { children: c.intl.string(c.t['Z+hCVV']) }), (0, r.jsx)(l.Hh, {})]
-                      })
-                  })
-              ]
+                          children: [
+                              (0, r.jsx)(l.Dx, { children: c.intl.string(c.t["Z+hCVV"]) }),
+                              (0, r.jsx)(l.Hh, {}),
+                          ],
+                      }),
+                  }),
+              ],
           });
 }
 function h(e) {
@@ -62,30 +65,36 @@ function h(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, t),
-                'deeplink-wrapper'
-            )
+                "deeplink-wrapper",
+            ),
         });
     }
-    return ((i.displayName = 'Deeplink('.concat(null != (n = null != (t = e.displayName) ? t : e.name) ? n : '<Unknown>', ')')), i);
+    return (
+        (i.displayName = "Deeplink(".concat(
+            null != (n = null != (t = e.displayName) ? t : e.name) ? n : "<Unknown>",
+            ")",
+        )),
+        i
+    );
 }

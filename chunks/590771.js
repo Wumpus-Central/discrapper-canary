@@ -30,7 +30,7 @@ function f(e) {
             loading: u,
             onScroll: t,
             onGuildCardSeen: n,
-            onGuildCardClick: a
+            onGuildCardClick: a,
         })
     );
 }
@@ -55,7 +55,7 @@ function g(e) {
             loading: g,
             onScroll: n,
             onGuildCardSeen: a,
-            onGuildCardClick: o
+            onGuildCardClick: o,
         })
     );
 }
@@ -73,7 +73,7 @@ function m(e) {
                 tab: t,
                 onScroll: n,
                 onGuildCardClick: s,
-                onGuildCardSeen: l
+                onGuildCardSeen: l,
             });
         case h.vf.GAMING:
         case h.vf.MUSIC:
@@ -86,9 +86,9 @@ function m(e) {
                     tab: t,
                     onScroll: n,
                     onGuildCardClick: s,
-                    onGuildCardSeen: l
+                    onGuildCardSeen: l,
                 },
-                t
+                t,
             );
         case h.vf.HUBS:
             return (0, r.jsx)(p.Z, { onScroll: n });

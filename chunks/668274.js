@@ -6,10 +6,10 @@ async function o(e) {
     let t = await n.tn.get({
         url: a.ANM.STORE_EULA(e),
         oldFormErrors: !0,
-        rejectWithError: !1
+        rejectWithError: !1,
     });
     l.Z.dispatch({
-        type: 'EULA_FETCH_SUCCESS',
-        eula: t.body
+        type: "EULA_FETCH_SUCCESS",
+        eula: t.body,
     });
 }

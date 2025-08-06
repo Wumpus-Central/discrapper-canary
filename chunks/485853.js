@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -48,9 +48,9 @@ class a {
             {
                 key: [e],
                 data: t,
-                generation: null
+                generation: null,
             },
-            n
+            n,
         );
     }
     delete(e) {
@@ -69,7 +69,10 @@ class a {
         return this.table.getMapEntriesSyncUnsafe();
     }
     constructor(e, t, n, r = !0) {
-        (o(this, 'originalPrefix', void 0), o(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r)));
+        o(this, "originalPrefix", void 0),
+            o(this, "table", void 0),
+            (this.originalPrefix = e),
+            (this.table = new i.i([e], t, n, r));
     }
 }
 class s {
@@ -82,15 +85,15 @@ class s {
             {
                 key: [e],
                 data: t,
-                generation: null
+                generation: null,
             },
-            n
+            n,
         );
     }
     delete(e) {
         return 0 == arguments.length ? this.transaction.delete() : this.transaction.delete([e]);
     }
     constructor(e) {
-        (o(this, 'transaction', void 0), (this.transaction = e));
+        o(this, "transaction", void 0), (this.transaction = e);
     }
 }

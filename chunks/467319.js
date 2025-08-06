@@ -1,12 +1,12 @@
 n.d(t, {
     H: () => i,
-    a: () => o
+    a: () => o,
 });
 var r = n(460083);
 function i(e) {
     let { enabled: t } = r.d.getCurrentConfig({
         guildId: e,
-        location: '988d4e_3'
+        location: "988d4e_3",
     });
     return t;
 }
@@ -15,9 +15,9 @@ function o(e) {
         { enabled: n } = r.d.useExperiment(
             {
                 guildId: e,
-                location: '988d4e_4'
+                location: "988d4e_4",
             },
-            { autoTrackExposure: t }
+            { autoTrackExposure: t },
         );
     return n;
 }

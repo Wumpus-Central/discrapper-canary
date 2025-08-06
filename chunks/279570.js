@@ -10,24 +10,24 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -50,12 +50,24 @@ function d(e, t) {
     );
 }
 let u = {
-    sm: 'xs',
-    md: 'refresh_sm',
-    lg: 'md'
+    sm: "xs",
+    md: "refresh_sm",
+    lg: "md",
 };
 function m(e) {
-    var { role: t = 'button', type: n = 'button', size: r = 'md', variant: m = 'secondary', icon: p, iconOpticalOffsetMargin: g = 0, focusProps: h, pressed: f = !1, 'aria-label': b, className: x, style: _ } = e,
+    var {
+            role: t = "button",
+            type: n = "button",
+            size: r = "md",
+            variant: m = "secondary",
+            icon: p,
+            iconOpticalOffsetMargin: g = 0,
+            focusProps: h,
+            pressed: f = !1,
+            "aria-label": b,
+            className: x,
+            style: _,
+        } = e,
         j = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -66,43 +78,57 @@ function m(e) {
                         i,
                         r = {},
                         s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (i = 0; i < s.length; i++)
+                    (n = s[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(e, ['role', 'type', 'size', 'variant', 'icon', 'iconOpticalOffsetMargin', 'focusProps', 'pressed', 'aria-label', 'className', 'style']);
+        })(e, [
+            "role",
+            "type",
+            "size",
+            "variant",
+            "icon",
+            "iconOpticalOffsetMargin",
+            "focusProps",
+            "pressed",
+            "aria-label",
+            "className",
+            "style",
+        ]);
     return (0, i.jsx)(
         a.t,
         d(c({}, h), {
             children: (0, i.jsx)(
-                'button',
+                "button",
                 d(
                     c(
                         {
                             role: t,
                             type: n,
-                            'aria-pressed': f,
+                            "aria-pressed": f,
                             className: s()(l.button, o.button, l[r], o[m], { [o.pressed]: f }),
-                            'aria-label': b
+                            "aria-label": b,
                         },
-                        j
+                        j,
                     ),
                     {
-                        children: (0, i.jsx)('div', {
+                        children: (0, i.jsx)("div", {
                             className: l.buttonChildrenWrapper,
                             children: (0, i.jsx)(p, {
-                                color: 'currentColor',
+                                color: "currentColor",
                                 style: 0 === g ? {} : { marginLeft: g },
-                                size: u[r]
-                            })
-                        })
-                    }
-                )
-            )
-        })
+                                size: u[r],
+                            }),
+                        }),
+                    },
+                ),
+            ),
+        }),
     );
 }

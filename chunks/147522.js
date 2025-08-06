@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(361932), n(187205), n(539854));
+n.d(t, { Z: () => d }), n(361932), n(187205), n(539854);
 var r = n(255367);
 n(73800);
 var i = n(392711),
@@ -24,10 +24,10 @@ function d(e, t, n) {
                               {
                                   className: u.divider,
                                   contentClassName: u.dividerContent,
-                                  children: c.intl.string(c.t.roBMzs)
+                                  children: c.intl.string(c.t.roBMzs),
                               },
-                              'old-divider'
-                          )
+                              "old-divider",
+                          ),
                       )
                     : e.hasLoadedAnything &&
                       e.sortOrder === a.As.NoNotifications &&
@@ -37,10 +37,10 @@ function d(e, t, n) {
                               {
                                   className: u.divider,
                                   contentClassName: u.dividerContent,
-                                  children: c.intl.string(c.t['2Ys7np'])
+                                  children: c.intl.string(c.t["2Ys7np"]),
                               },
-                              'disabled-divider'
-                          )
+                              "disabled-divider",
+                          ),
                       )),
             l.push(
                 (0, r.jsx)(
@@ -52,10 +52,10 @@ function d(e, t, n) {
                         toggle: p,
                         deleteChannel: h,
                         onJump: n,
-                        getNumUnreadChannels: f
+                        getNumUnreadChannels: f,
                     },
-                    e.channelId
-                )
+                    e.channelId,
+                ),
             ),
             l
         );

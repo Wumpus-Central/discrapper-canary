@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(314940));
+n.d(t, { Z: () => f }), n(314940);
 var r = n(73800),
     i = n(278074),
     o = n(979554),
@@ -21,9 +21,9 @@ let f = (e) => {
                     .otherwise(() => void 0),
                 feature_tier: (0, c.G1)(l) ? d.h1.FREE : d.h1.PREMIUM_STANDARD,
                 feature_selection: null == l ? void 0 : l.name,
-                location_stack: e
+                location_stack: e,
             });
         },
-        [t, e]
+        [t, e],
     );
 };

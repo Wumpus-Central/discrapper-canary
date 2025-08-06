@@ -9,9 +9,9 @@ function i(e) {
             null != n && null != i
                 ? {
                       x: n,
-                      y: i
+                      y: i,
                   }
                 : null,
-        [n, i]
+        [n, i],
     );
 }

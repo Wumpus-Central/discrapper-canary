@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(314940));
+n.d(t, { Z: () => C }), n(314940);
 var r = n(255367);
 n(73800);
 var i = n(278074),
@@ -24,7 +24,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -75,12 +75,12 @@ function S(e) {
         {
             avatarDecorationSrc: n,
             eventHandlers: i,
-            avatarPlaceholderSrc: o
+            avatarPlaceholderSrc: o,
         } = (0, l.Z)({
             avatarDecorationOverride: t,
-            size: (0, s.y9)(a.EFr.SIZE_152)
+            size: (0, s.y9)(a.EFr.SIZE_152),
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: E.giftMainAnimationWrapper,
         children: (0, r.jsx)(
             T,
@@ -89,38 +89,38 @@ function S(e) {
                 src: o,
                 className: E.avatar,
                 size: a.EFr.SIZE_152,
-                'aria-label': g.intl.string(g.t.lqaIxM)
-            })
-        )
+                "aria-label": g.intl.string(g.t.lqaIxM),
+            }),
+        ),
     });
 }
 function A(e) {
     var t;
     let { id: n } = e,
         i = null == (t = (0, _.V)(n)) ? void 0 : t.config;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: E.profileEffectContainer,
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 src: b,
                 alt: null == i ? void 0 : i.accessibilityLabel,
-                className: E.profileEffectBackground
+                className: E.profileEffectBackground,
             }),
-            (0, r.jsx)(p.Z, { profileEffectId: n })
-        ]
+            (0, r.jsx)(p.Z, { profileEffectId: n }),
+        ],
     });
 }
 function N(e) {
     let { nameplate: t } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: E.nameplateContainer,
         children: (0, r.jsx)(u.Z, {
             nameplate: t,
             className: E.nameplate,
-            nameplatePreviewSize: 'xlarge',
+            nameplatePreviewSize: "xlarge",
             isHighlighted: !0,
-            showPlaceholderUser: !0
-        })
+            showPlaceholderUser: !0,
+        }),
     });
 }
 function C(e) {
@@ -134,14 +134,14 @@ function C(e) {
             .with({ type: o.Z.NAMEPLATE }, (e) => (0, r.jsx)(N, { nameplate: e }))
             .otherwise(() => null);
     return null != n && null == l
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: E.giftMainAnimationWrapper,
               children: (0, r.jsx)(f.Z, {
                   defaultAnimationState: d.SR.LOOP,
                   giftStyle: n,
                   shouldAnimate: !0,
-                  className: E.__invalid_giftMainAnimation
-              })
+                  className: E.__invalid_giftMainAnimation,
+              }),
           })
         : l;
 }

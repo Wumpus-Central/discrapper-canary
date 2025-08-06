@@ -18,27 +18,33 @@ function g() {
             (0, i.jsx)(c.U, {
                 setting: u.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
                 children: (0, i.jsx)(d.Z, {
-                    title: p.intl.string(p.t['7x9dyM']),
+                    title: p.intl.string(p.t["7x9dyM"]),
                     value: t.all,
-                    onChange: (e) => l.xq.updateSetting(e ? m.HGf : m.HGf & ~m.SOq.NO_RELATION)
-                })
+                    onChange: (e) => l.xq.updateSetting(e ? m.HGf : m.HGf & ~m.SOq.NO_RELATION),
+                }),
             }),
             (0, i.jsx)(c.U, {
                 setting: u.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
                 children: (0, i.jsx)(d.Z, {
                     title: p.intl.string(p.t.NfeuZ2),
                     value: t.all || t.mutualFriends,
-                    onChange: (t) => l.xq.updateSetting(t ? s.pj(e, m.SOq.MUTUAL_FRIENDS) : s.M1(e, m.SOq.MUTUAL_FRIENDS, m.SOq.NO_RELATION))
-                })
+                    onChange: (t) =>
+                        l.xq.updateSetting(
+                            t ? s.pj(e, m.SOq.MUTUAL_FRIENDS) : s.M1(e, m.SOq.MUTUAL_FRIENDS, m.SOq.NO_RELATION),
+                        ),
+                }),
             }),
             (0, i.jsx)(c.U, {
                 setting: u.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
                 children: (0, i.jsx)(d.Z, {
                     title: p.intl.string(p.t.qsMfsL),
                     value: t.all || t.mutualGuilds,
-                    onChange: (t) => l.xq.updateSetting(t ? s.pj(e, m.SOq.MUTUAL_GUILDS) : s.M1(e, m.SOq.MUTUAL_GUILDS, m.SOq.NO_RELATION))
-                })
-            })
-        ]
+                    onChange: (t) =>
+                        l.xq.updateSetting(
+                            t ? s.pj(e, m.SOq.MUTUAL_GUILDS) : s.M1(e, m.SOq.MUTUAL_GUILDS, m.SOq.NO_RELATION),
+                        ),
+                }),
+            }),
+        ],
     });
 }

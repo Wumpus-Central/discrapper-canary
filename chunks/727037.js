@@ -22,7 +22,7 @@ class s {
                 s = this.fieldNoToField.get(o);
             if (!s) {
                 let i = n.readUnknownField;
-                if ('throw' == i) throw Error(`Unknown field ${o} (wire type ${a}) for ${this.info.typeName}`);
+                if ("throw" == i) throw Error(`Unknown field ${o} (wire type ${a}) for ${this.info.typeName}`);
                 let s = e.skip(a);
                 !1 !== i && (!0 === i ? r.z.onRead : i)(this.info.typeName, t, o, a, s);
                 continue;
@@ -31,10 +31,10 @@ class s {
                 c = s.repeat,
                 u = s.localName;
             switch ((s.oneof && (l = l[s.oneof]).oneofKind !== u && (l = t[s.oneof] = { oneofKind: u }), s.kind)) {
-                case 'scalar':
-                case 'enum':
-                    let d = 'enum' == s.kind ? i.wx.INT32 : s.T,
-                        f = 'scalar' == s.kind ? s.L : void 0;
+                case "scalar":
+                case "enum":
+                    let d = "enum" == s.kind ? i.wx.INT32 : s.T,
+                        f = "scalar" == s.kind ? s.L : void 0;
                     if (c) {
                         let t = l[u];
                         if (a == r.TD.LengthDelimited && d != i.wx.STRING && d != i.wx.BYTES) {
@@ -43,14 +43,14 @@ class s {
                         } else t.push(this.scalar(e, d, f));
                     } else l[u] = this.scalar(e, d, f);
                     break;
-                case 'message':
+                case "message":
                     if (c) {
                         let t = l[u],
                             r = s.T().internalBinaryRead(e, e.uint32(), n);
                         t.push(r);
                     } else l[u] = s.T().internalBinaryRead(e, e.uint32(), n, l[u]);
                     break;
-                case 'map':
+                case "map":
                     let [_, p] = this.mapEntry(s, e, n);
                     l[u][_] = p;
             }
@@ -69,13 +69,13 @@ class s {
                     break;
                 case 2:
                     switch (e.V.kind) {
-                        case 'scalar':
+                        case "scalar":
                             o = this.scalar(t, e.V.T, e.V.L);
                             break;
-                        case 'enum':
+                        case "enum":
                             o = t.int32();
                             break;
-                        case 'message':
+                        case "message":
                             o = e.V.T().internalBinaryRead(t, t.uint32(), n);
                     }
                     break;
@@ -89,13 +89,13 @@ class s {
         }
         if (void 0 === o)
             switch (e.V.kind) {
-                case 'scalar':
+                case "scalar":
                     o = (0, a.N)(e.V.T, e.V.L);
                     break;
-                case 'enum':
+                case "enum":
                     o = 0;
                     break;
-                case 'message':
+                case "message":
                     o = e.V.T().create();
             }
         return [r, o];

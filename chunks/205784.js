@@ -18,32 +18,32 @@ function p(e) {
         y = (0, u.Z)(null != (t = null == h ? void 0 : h.guildIds) ? t : []),
         k = (0, l.e7)([d.Z], () => d.Z.getExpandedFolders().size > 0);
     return (0, r.jsxs)(i.v2r, {
-        navId: 'guild-context',
-        'aria-label': f.intl.string(f.t.HpQykZ),
+        navId: "guild-context",
+        "aria-label": f.intl.string(f.t.HpQykZ),
         onClose: o.Zy,
         onSelect: O,
         children: [
             (0, r.jsx)(i.kSQ, {
                 children: (0, r.jsx)(i.sNh, {
-                    id: 'mark-folder-read',
+                    id: "mark-folder-read",
                     label: f.intl.string(f.t.thzRJC),
                     action: function () {
                         if (null == h) return;
                         let { guildIds: e } = h;
                         (0, c.Z)(e, b.jXE.GUILD_LIST);
                     },
-                    disabled: !m
-                })
+                    disabled: !m,
+                }),
             }),
             null != y ? (0, r.jsx)(i.kSQ, { children: y }) : null,
             (0, r.jsxs)(i.kSQ, {
                 children: [
                     (0, r.jsx)(i.sNh, {
-                        id: 'folder-settings',
+                        id: "folder-settings",
                         label: f.intl.string(f.t.Dx7im5),
                         action: () =>
                             (0, i.ZDy)(async () => {
-                                let { default: e } = await n.e('66915').then(n.bind(n, 662708));
+                                let { default: e } = await n.e("66915").then(n.bind(n, 662708));
                                 return (t) => {
                                     var n, l;
                                     return (0, r.jsx)(
@@ -52,24 +52,24 @@ function p(e) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     r = Object.keys(n);
-                                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                                "function" == typeof Object.getOwnPropertySymbols &&
                                                     (r = r.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        })
+                                                        }),
                                                     )),
                                                     r.forEach(function (t) {
                                                         var r;
-                                                        ((r = n[t]),
+                                                        (r = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: r,
                                                                       enumerable: !0,
                                                                       configurable: !0,
-                                                                      writable: !0
+                                                                      writable: !0,
                                                                   })
-                                                                : (e[t] = r));
-                                                    }));
+                                                                : (e[t] = r);
+                                                    });
                                             }
                                             return e;
                                         })({}, t)),
@@ -77,7 +77,7 @@ function p(e) {
                                             {
                                                 folderId: p,
                                                 folderName: j,
-                                                folderColor: g
+                                                folderColor: g,
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -91,19 +91,19 @@ function p(e) {
                                               })(Object(l)).forEach(function (e) {
                                                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                                               }),
-                                        n)
+                                        n),
                                     );
                                 };
-                            })
+                            }),
                     }),
                     k &&
                         (0, r.jsx)(i.sNh, {
-                            id: 'folder-collapse',
+                            id: "folder-collapse",
                             label: f.intl.string(f.t.rCPsbm),
-                            action: () => a.Z.collapseAllFolders()
-                        })
-                ]
-            })
-        ]
+                            action: () => a.Z.collapseAllFolders(),
+                        }),
+                ],
+            }),
+        ],
     });
 }

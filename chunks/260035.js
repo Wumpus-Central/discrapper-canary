@@ -1,4 +1,4 @@
-(n.d(t, { m: () => d }), n(388685));
+n.d(t, { m: () => d }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(505266),
@@ -15,7 +15,7 @@ function d(e) {
         [h, m] = i.useState(!1),
         g = (0, a.e7)([s.Z], () => s.Z.getCurrentlySelectedChannelId()),
         E = i.useCallback((e) => {
-            (p.current.delete(e), m(p.current.size > 0));
+            p.current.delete(e), m(p.current.size > 0);
         }, []),
         b = i.useCallback((e) => (p.current.add(e), m(!0), () => E(e)), [E]),
         y = i.useCallback((e, t) => {
@@ -33,22 +33,22 @@ function d(e) {
                     baseConfig: c.We,
                     addClickListener: b,
                     removeClickListener: E,
-                    children: t
+                    children: t,
                 }),
                 (0, r.jsx)(o.O_, {
                     ref: _,
                     className: u.canvas,
                     environment: c.rq,
-                    onClick: h ? y : void 0
+                    onClick: h ? y : void 0,
                 }),
                 (0, r.jsx)(o.Ji, {
                     ref: d,
                     colors: c.Br,
                     sprites: c.CA,
                     spriteWidth: c.Ko,
-                    spriteHeight: c.Ko
-                })
-            ]
+                    spriteHeight: c.Ko,
+                }),
+            ],
         })
     );
 }

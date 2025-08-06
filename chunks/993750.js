@@ -8,8 +8,8 @@ var r = n(120356),
 let o = function (t) {
     let { children: e, style: n } = t;
     return (0, i.jsx)(l.hzk, {
-        'data-migration-pending': !0,
+        "data-migration-pending": !0,
         className: s()(a.modalContent, n),
-        children: e
+        children: e,
     });
 };

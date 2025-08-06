@@ -1,10 +1,10 @@
 let r;
-(n.d(t, {
+n.d(t, {
     U: () => Z,
-    Z: () => Q
+    Z: () => Q,
 }),
     n(388685),
-    n(642613));
+    n(642613);
 var i,
     o = n(392711),
     a = n.n(o),
@@ -28,7 +28,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -58,7 +58,13 @@ function k(e) {
 }
 function j(e) {
     return function (t, n) {
-        return (0, b.yv)(t) ? -1 : (0, b.yv)(n) ? 1 : e === l.z.LATEST_ACTIVITY ? E.default.compare(M(n), M(t)) : E.default.compare(n, t);
+        return (0, b.yv)(t)
+            ? -1
+            : (0, b.yv)(n)
+              ? 1
+              : e === l.z.LATEST_ACTIVITY
+                ? E.default.compare(M(n), M(t))
+                : E.default.compare(n, t);
     };
 }
 function U(e, t) {
@@ -72,12 +78,23 @@ function U(e, t) {
     };
 }
 function G() {
-    ((C = []), (r = null), (I = null), (T = new Set()), (S = l.z.LATEST_ACTIVITY), (A = s.z.MATCH_SOME), (N = 0), (P = []), (w = a().chain(O)), (D = a().chain(O)), x.clear(), L.clear());
+    (C = []),
+        (r = null),
+        (I = null),
+        (T = new Set()),
+        (S = l.z.LATEST_ACTIVITY),
+        (A = s.z.MATCH_SOME),
+        (N = 0),
+        (P = []),
+        (w = a().chain(O)),
+        (D = a().chain(O)),
+        x.clear(),
+        L.clear();
 }
 function B() {
     var e;
     let t = g.Z.getChannelId();
-    if (null == t || !(null == (e = h.Z.getChannel(t)) ? void 0 : e.isForumLikeChannel())) return (G(), !1);
+    if (null == t || !(null == (e = h.Z.getChannel(t)) ? void 0 : e.isForumLikeChannel())) return G(), !1;
     F({ refreshThreadIds: !0 });
 }
 function Z(e) {
@@ -94,7 +111,7 @@ function Z(e) {
 function F(e) {
     let t = h.Z.getChannel(I);
     if (null == t) return;
-    ((null == e ? void 0 : e.refreshThreadIds) &&
+    (null == e ? void 0 : e.refreshThreadIds) &&
         ((P = Object.values(f.Z.getThreadsForParent(t.guild_id, t.id)).map((e) => {
             let { id: t } = e;
             return t;
@@ -103,7 +120,8 @@ function F(e) {
         (R = !0)),
         0 !== L.size && ((P = P.filter((e) => !L.has(e))), L.clear()),
         0 !== x.size && ((P = Array.from(new Set([...P, ...x]))), x.clear()),
-        ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((D = a().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (w = a().chain(P).sort(j(l.z.CREATION_DATE)))));
+        ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) &&
+            ((D = a().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (w = a().chain(P).sort(j(l.z.CREATION_DATE))));
     let n = (S === l.z.LATEST_ACTIVITY ? D : w).value(),
         i = (C = 0 === T.size ? n : n.filter(U(T, A))).find((e) => k(e));
     r = null == i ? null : i;
@@ -119,10 +137,10 @@ function H(e) {
     if (null == t.parent_id || t.parent_id !== I) return !1;
     let n = (0, b.yv)(t.id),
         r = x.has(t.id);
-    if (n && !r) (x.add(t.id), F({ sortThreadIds: !0 }));
+    if (n && !r) x.add(t.id), F({ sortThreadIds: !0 });
     else {
         if (n || !r) return !1;
-        (x.delete(t.id), F({ sortThreadIds: !0 }));
+        x.delete(t.id), F({ sortThreadIds: !0 });
     }
 }
 function Y(e) {
@@ -133,7 +151,7 @@ function Y(e) {
 function W(e) {
     let { channel: t } = e;
     if (null == t.parent_id || t.parent_id !== I) return !1;
-    (L.add(t.id), F({ sortThreadIds: !0 }));
+    L.add(t.id), F({ sortThreadIds: !0 });
 }
 function K(e) {
     let { channel: t } = e;
@@ -165,20 +183,27 @@ class X extends (i = u.ZP.Store) {
             o = !(0, c.O)(n, T),
             a = t !== S,
             s = r !== A;
-        return ((I = e), (T = n), (S = t), (A = r), i ? F({ refreshThreadIds: !0 }) : a ? F({ sortThreadIds: !0 }) : (o || s) && F(), C);
+        return (
+            (I = e),
+            (T = n),
+            (S = t),
+            (A = r),
+            i ? F({ refreshThreadIds: !0 }) : a ? F({ sortThreadIds: !0 }) : (o || s) && F(),
+            C
+        );
     }
     getCurrentThreadIds() {
         return C;
     }
     getAndDeleteMostRecentUserCreatedThreadId() {
         let e = v;
-        return ((v = null), e);
+        return (v = null), e;
     }
     getFirstNoReplyThreadId() {
         return r;
     }
 }
-y(X, 'displayName', 'ForumActivePostStore');
+y(X, "displayName", "ForumActivePostStore");
 let Q = new X(d.Z, {
     CONNECTION_OPEN: B,
     OVERLAY_INITIALIZE: B,
@@ -190,5 +215,5 @@ let Q = new X(d.Z, {
     THREAD_UPDATE: H,
     THREAD_DELETE: W,
     RESORT_THREADS: z,
-    CHANNEL_ACK: q
+    CHANNEL_ACK: q,
 });

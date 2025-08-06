@@ -26,13 +26,13 @@ let h = (t) => {
                 (0, I.aP)({
                     action: t,
                     channelId: e,
-                    messageId: h
+                    messageId: h,
                 });
             },
-            [e, h]
+            [e, h],
         ),
         p = a.useCallback(() => {
-            (R(),
+            R(),
                 M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
                 (0, l.ZDy)(async () => {
                     let { default: t } = await n(788679);
@@ -43,138 +43,145 @@ let h = (t) => {
                                 for (var e = 1; e < arguments.length; e++) {
                                     var n = null != arguments[e] ? arguments[e] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (t) {
                                                 return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (e) {
                                             var r;
-                                            ((r = n[e]),
+                                            (r = n[e]),
                                                 e in t
                                                     ? Object.defineProperty(t, e, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (t[e] = r));
-                                        }));
+                                                    : (t[e] = r);
+                                        });
                                 }
                                 return t;
                             })(
                                 {
                                     channelId: e,
-                                    messageId: h
+                                    messageId: h,
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         );
-                }));
+                });
         }, [e, h, R, M]);
     a.useEffect(() => {
         (0, I.aP)({
             action: I.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
             channelId: e,
-            messageId: h
+            messageId: h,
         });
     }, [e, h]);
     let N = a.useCallback(
         () =>
             y
-                ? C.intl.format(C.t['TGqx+v'], {
+                ? C.intl.format(C.t["TGqx+v"], {
                       handleOnHelpUrlHook: () => {
-                          (s.Z.openUrl(E.Z.getArticleURL(u.BhN.TIGGER_PAWTECT_LEARN_MORE)), M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE));
-                      }
+                          s.Z.openUrl(E.Z.getArticleURL(u.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                              M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+                      },
                   })
                 : g
                   ? null
                   : C.intl.format(C.t.Ge0HUl, {
                         handleFalsePositiveHook: () => {
-                            (p(), M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE));
-                        }
+                            p(), M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE);
+                        },
                     }),
-        [y, g, p, M]
+        [y, g, p, M],
     );
     return (0, r.jsxs)(l.Y0X, {
         transitionState: x,
-        'aria-label': C.intl.string(C.t.xdm3XF),
-        parentComponent: 'ExplicitMediaLearnMoreModal',
+        "aria-label": C.intl.string(C.t.xdm3XF),
+        parentComponent: "ExplicitMediaLearnMoreModal",
         children: [
             (0, r.jsx)(l.xBx, {
                 separator: !1,
                 className: m.modalHeader,
-                children: (0, r.jsx)('img', {
+                children: (0, r.jsx)("img", {
                     src: A,
                     alt: C.intl.string(C.t.id3fND),
-                    className: m.headerImg
-                })
+                    className: m.headerImg,
+                }),
             }),
             (0, r.jsxs)(l.hzk, {
                 className: m.modalBody,
                 children: [
                     (0, r.jsx)(l.X6q, {
-                        variant: 'heading-lg/bold',
+                        variant: "heading-lg/bold",
                         className: m.modalInteriorHeader,
-                        children: C.intl.string(C.t.sGW77u)
+                        children: C.intl.string(C.t.sGW77u),
                     }),
                     (0, r.jsx)(l.Text, {
-                        variant: 'text-md/normal',
-                        color: 'header-secondary',
+                        variant: "text-md/normal",
+                        color: "header-secondary",
                         children: (function () {
                             if (y) return C.intl.string(C.t.f3ARDQ);
                             let t = C.intl.string(C.t.RUw0ZG),
-                                e = C.intl.string(C.t['E/oQYG']);
+                                e = C.intl.string(C.t["E/oQYG"]);
                             return L ? t : e;
-                        })()
+                        })(),
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: m.buttonContainer,
                         children: [
                             y
                                 ? (0, r.jsx)(l.zxk, {
-                                      variant: 'primary',
+                                      variant: "primary",
                                       text: C.intl.string(C.t.KPGVWl),
                                       onClick: function () {
-                                          (R(), M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY), s.Z.showAgeVerificationGetStartedModal(c.cU.SENSITIVE_MEDIA_LEARN_MORE));
+                                          R(),
+                                              M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
+                                              s.Z.showAgeVerificationGetStartedModal(c.cU.SENSITIVE_MEDIA_LEARN_MORE);
                                       },
-                                      fullWidth: !0
+                                      fullWidth: !0,
                                   })
                                 : L
                                   ? (0, r.jsx)(l.zxk, {
-                                        variant: 'primary',
-                                        text: C.intl.string(C.t['9D+zGR']),
+                                        variant: "primary",
+                                        text: C.intl.string(C.t["9D+zGR"]),
                                         onClick: function () {
-                                            (M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), i.Z.open(u.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: f.FY.EXPLICIT_MEDIA_REDACTION_V2 }), R());
+                                            M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
+                                                i.Z.open(u.oAB.CONTENT_AND_SOCIAL, null, {
+                                                    scrollPosition: f.FY.EXPLICIT_MEDIA_REDACTION_V2,
+                                                }),
+                                                R();
                                         },
-                                        fullWidth: !0
+                                        fullWidth: !0,
                                     })
                                   : (0, r.jsx)(l.zxk, {
-                                        variant: 'primary',
+                                        variant: "primary",
                                         text: C.intl.string(C.t.hvVgAQ),
                                         onClick: () => {
                                             (0, o.Z)(E.Z.getArticleURL(u.BhN.EXPLICIT_MEDIA_REDACTION));
                                         },
-                                        fullWidth: !0
+                                        fullWidth: !0,
                                     }),
                             (0, r.jsx)(l.zxk, {
-                                variant: 'secondary',
+                                variant: "secondary",
                                 text: C.intl.string(C.t.bmbHPD),
                                 onClick: function () {
-                                    (R(), M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS));
+                                    R(), M(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
                                 },
-                                fullWidth: !0
+                                fullWidth: !0,
                             }),
                             (0, r.jsx)(l.Text, {
-                                variant: 'text-sm/medium',
-                                color: 'header-secondary',
-                                children: N()
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
+                                variant: "text-sm/medium",
+                                color: "header-secondary",
+                                children: N(),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -24,16 +24,16 @@ let _ = (e) => {
                 (y(!0),
                 s.ZP.trackWithMetadata(g.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
                     other_user_id: t.id,
-                    report_id: _
+                    report_id: _,
                 }),
                 a.Z.updateChannelOverrideSettings(null, b, { muted: !0 }, p.ZB.Muted),
                 o.Z.showMuteSuccessToast(t.id, n));
         }, [b, n, t, _]);
     return (0, r.jsx)(c.ZP, {
         title: x.intl.formatToPlainString(x.t.TRp5wc, { username: f }),
-        description: x.intl.string(x.t['yM/+AA']),
+        description: x.intl.string(x.t["yM/+AA"]),
         buttonText: j ? x.intl.string(x.t.E8x4Nj) : x.intl.string(x.t.HITUcX),
         buttonDisabled: j,
-        onButtonPress: O
+        onButtonPress: O,
     });
 };

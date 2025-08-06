@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(953529));
+n.d(t, { Z: () => b }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,24 +16,24 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -64,26 +64,26 @@ let b = function (e) {
     let E = null == C || 0 === C.length,
         S = u.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
-            icon: l.icon
+            icon: l.icon,
         }),
         {
             drag: T,
             dragSourcePosition: P,
             drop: w,
-            setIsDraggable: R
+            setIsDraggable: R,
         } = (0, o.Z)({
-            type: 'RESOURCE_CHANNEL',
+            type: "RESOURCE_CHANNEL",
             optionId: l.channelId,
             index: b,
             onDragStart: v,
             onDragComplete: j,
-            onDragReset: _
+            onDragReset: _,
         }),
         Z = i.useCallback(
             (e) => {
                 (0, m.XG)(l.channelId, e);
             },
-            [l.channelId]
+            [l.channelId],
         ),
         D = i.useCallback(
             (e, n) => {
@@ -94,12 +94,12 @@ let b = function (e) {
                         (0, m.mM)(t, e.channelId, n);
                     }));
             },
-            [t, l]
+            [t, l],
         ),
         A = i.useCallback(
             () =>
                 (0, s.ZDy)(async () => {
-                    let { default: e } = await n.e('84725').then(n.bind(n, 462499));
+                    let { default: e } = await n.e("84725").then(n.bind(n, 462499));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -108,67 +108,67 @@ let b = function (e) {
                                 resourceChannel: l,
                                 onSave: Z,
                                 onDelete: () => (0, m.Hz)(l.channelId),
-                                onIconUpload: D
-                            })
+                                onIconUpload: D,
+                            }),
                         );
                 }),
-            [t, l, Z, D]
+            [t, l, Z, D],
         );
     return null == N
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: h.resourceChannelContainer,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: a()(h.resourceChannel, {
                           [h.dropIndicatorBefore]: null != P && b < P,
                           [h.dropIndicatorAfter]: null != P && b > P,
-                          [h.resourceChannelError]: null != I
+                          [h.resourceChannelError]: null != I,
                       }),
                       ref: (e) => {
                           T(w(e));
                       },
                       children: [
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: h.dragContainer,
                               onMouseEnter: () => R(!0),
                               onMouseLeave: () => R(!1),
                               children: (0, r.jsx)(s.Vni, {
-                                  size: 'xs',
-                                  color: 'currentColor',
-                                  className: h.dragIcon
-                              })
+                                  size: "xs",
+                                  color: "currentColor",
+                                  className: h.dragIcon,
+                              }),
                           }),
                           null != S &&
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: h.iconWrapper,
-                                  children: (0, r.jsx)('img', {
+                                  children: (0, r.jsx)("img", {
                                       src: S,
                                       className: h.icon,
                                       width: 32,
                                       height: 32,
-                                      alt: '',
-                                      'aria-hidden': !0
-                                  })
+                                      alt: "",
+                                      "aria-hidden": !0,
+                                  }),
                               }),
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: h.resourceChannelContent,
                               children: [
                                   (0, r.jsx)(s.Text, {
                                       className: h.resourceChannelTitle,
-                                      variant: 'text-md/semibold',
-                                      color: 'header-primary',
-                                      children: O
+                                      variant: "text-md/semibold",
+                                      color: "header-primary",
+                                      children: O,
                                   }),
                                   !E &&
                                       (0, r.jsx)(s.Text, {
                                           className: h.resourceChannelDescription,
-                                          variant: 'text-xs/medium',
-                                          color: 'text-muted',
+                                          variant: "text-xs/medium",
+                                          color: "text-muted",
                                           lineClamp: 1,
-                                          children: C
-                                      })
-                              ]
+                                          children: C,
+                                      }),
+                              ],
                           }),
                           (0, r.jsx)(s.ua7, {
                               text: p.intl.string(p.t.bt75u7),
@@ -177,21 +177,21 @@ let b = function (e) {
                                       s.hU,
                                       x(f({}, e), {
                                           icon: s.vdY,
-                                          size: 'sm',
-                                          variant: 'primary',
+                                          size: "sm",
+                                          variant: "primary",
                                           onClick: A,
-                                          'aria-label': p.intl.string(p.t.bt75u7)
-                                      })
-                                  )
-                          })
-                      ]
+                                          "aria-label": p.intl.string(p.t.bt75u7),
+                                      }),
+                                  ),
+                          }),
+                      ],
                   }),
                   null != I &&
                       (0, r.jsx)(s.Text, {
-                          variant: 'text-xs/medium',
-                          color: 'text-danger',
-                          children: I
-                      })
-              ]
+                          variant: "text-xs/medium",
+                          color: "text-danger",
+                          children: I,
+                      }),
+              ],
           });
 };

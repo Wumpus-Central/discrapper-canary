@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,18 +43,18 @@ function _(e) {
                 {
                     location: t,
                     source: a.m1.UserProfile,
-                    trackEntryPointImpression: !0
+                    trackEntryPointImpression: !0,
                 },
                 (0, c.nK)({
                     user: n,
                     activity: _,
-                    entry: h
-                })
-            )
+                    entry: h,
+                }),
+            ),
         ),
         E = (0, u.Z)({
             applicationId: null == p ? void 0 : p.id,
-            onClose: m
+            onClose: m,
         }),
         b = (0, i.Z)(_);
     return b && null != p
@@ -66,7 +66,7 @@ function _(e) {
                   (0, l.s)({
                       activity: _,
                       user: n,
-                      index: 0
+                      index: 0,
                   })
             : void 0;
 }

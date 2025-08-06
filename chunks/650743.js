@@ -26,7 +26,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -63,30 +63,30 @@ function T(e) {
                     ? (0, r.jsx)(s.Z, {
                           emojiId: t.emojiId,
                           emojiName: t.emojiName,
-                          className: O.emoji
+                          className: O.emoji,
                       })
                     : (0, r.jsx)(a.XBm, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: O.emoji
+                          size: "md",
+                          color: "currentColor",
+                          className: O.emoji,
                       }),
             graphicSecondary:
                 null != A
                     ? (0, r.jsx)(u.Z, {
                           guild: A,
-                          shouldAnimate: !N && C
+                          shouldAnimate: !N && C,
                       })
                     : null,
             titlePrimary: t.name,
             titleSecondary: null == A ? void 0 : A.name,
-            isFavorite: S
+            isFavorite: S,
         });
     let P = () => {
-            (v(),
+            v(),
                 (0, a.ZDy)(async () => {
-                    let { default: e } = await n.e('58120').then(n.bind(n, 355453));
+                    let { default: e } = await n.e("58120").then(n.bind(n, 355453));
                     return (t) => (0, r.jsx)(e, I({}, t));
-                }));
+                });
         },
         w = (0, c.zu)(o.z.SOUNDBOARD_KEYBIND_TIP),
         D = () => (0, c.Q3)(o.z.SOUNDBOARD_KEYBIND_TIP),
@@ -99,38 +99,38 @@ function T(e) {
                               a.eee,
                               {
                                   onClick: P,
-                                  children: e
+                                  children: e,
                               },
-                              t
-                          )
+                              t,
+                          ),
                   })
                 : null;
     return null == L
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: O.keybindHint,
               children: [
                   (0, r.jsx)(a.Mgn, {
-                      size: 'custom',
+                      size: "custom",
                       width: 20,
                       height: 20,
-                      color: 'currentColor',
-                      className: O.warningIcon
+                      color: "currentColor",
+                      className: O.warningIcon,
                   }),
                   (0, r.jsx)(a.Text, {
-                      variant: 'text-sm/medium',
-                      color: 'text-default',
+                      variant: "text-sm/medium",
+                      color: "text-default",
                       className: O.keybindHintText,
-                      children: L
+                      children: L,
                   }),
                   (0, r.jsx)(a.P3F, {
                       className: O.closeButton,
                       onClick: D,
                       children: (0, r.jsx)(a.Dio, {
-                          size: 'xs',
-                          color: 'currentColor'
-                      })
-                  })
-              ]
+                          size: "xs",
+                          color: "currentColor",
+                      }),
+                  }),
+              ],
           });
 }

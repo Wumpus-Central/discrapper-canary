@@ -9,12 +9,12 @@ function s() {
         children: [
             (0, a.jsx)(r.Text, {
                 className: t.marker,
-                tag: 'span',
-                variant: 'text-md/semibold',
-                color: 'text-danger',
-                children: '*'
+                tag: "span",
+                variant: "text-md/semibold",
+                color: "text-danger",
+                children: "*",
             }),
-            (0, a.jsx)(r.nn4, { children: i.intl.string(i.t.EkokLy) })
-        ]
+            (0, a.jsx)(r.nn4, { children: i.intl.string(i.t.EkokLy) }),
+        ],
     });
 }

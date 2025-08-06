@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685), n(953529), n(781311));
+n.d(t, { Z: () => S }), n(388685), n(953529), n(781311);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -28,16 +28,16 @@ function S() {
         a = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
         [u, p] = r.useState(!1);
     r.useEffect(() => {
-        ((0, f.Q3)(c.z.AUTH_SESSIONS_NEW, { dismissAction: C.L.AUTO }), (0, g.fw)());
+        (0, f.Q3)(c.z.AUTH_SESSIONS_NEW, { dismissAction: C.L.AUTO }), (0, g.fw)();
         let e = setTimeout(() => p(!0), 500);
         return () => {
-            (clearTimeout(e), (0, g.$Z)());
+            clearTimeout(e), (0, g.$Z)();
         };
     }, []);
     let _ = () => {
             o.tn.post({
                 url: E.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG,
-                rejectWithError: !0
+                rejectWithError: !0,
             });
         },
         [j, S] = r.useState(new Set());
@@ -46,14 +46,14 @@ function S() {
         : ((e =
               null == t && 0 === n.length
                   ? u
-                      ? (0, i.jsx)('div', {
+                      ? (0, i.jsx)("div", {
                             className: v.loading,
-                            children: (0, i.jsx)(d.$jN, {})
+                            children: (0, i.jsx)(d.$jN, {}),
                         })
                       : null
                   : (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsxs)('div', {
+                            (0, i.jsxs)("div", {
                                 className: v.sessions,
                                 children: [
                                     (0, i.jsx)(d.hjN, {
@@ -64,9 +64,9 @@ function S() {
                                             null != t
                                                 ? (0, i.jsx)(T, {
                                                       session: t,
-                                                      current: !0
+                                                      current: !0,
                                                   })
-                                                : null
+                                                : null,
                                     }),
                                     !(n.length > 0) && (null == a ? void 0 : a.mfaEnabled)
                                         ? null
@@ -85,16 +85,16 @@ function S() {
                                                               checked: j.has(e.id_hash),
                                                               setChecked: (t) => {
                                                                   let n = new Set(j);
-                                                                  (t ? n.add(e.id_hash) : n.delete(e.id_hash), S(n));
-                                                              }
+                                                                  t ? n.add(e.id_hash) : n.delete(e.id_hash), S(n);
+                                                              },
                                                           },
-                                                          e.id_hash
-                                                      )
+                                                          e.id_hash,
+                                                      ),
                                                   ),
-                                                  (null == a ? void 0 : a.mfaEnabled) ? null : (0, i.jsx)(I, {})
-                                              ]
-                                          })
-                                ]
+                                                  (null == a ? void 0 : a.mfaEnabled) ? null : (0, i.jsx)(I, {}),
+                                              ],
+                                          }),
+                                ],
                             }),
                             n.length > 0
                                 ? (0, i.jsxs)(d.hjN, {
@@ -103,94 +103,104 @@ function S() {
                                       children: [
                                           (0, i.jsx)(d.R94, {
                                               type: d.geA.DESCRIPTION,
-                                              children: O.intl.string(O.t.OTXyaW)
+                                              children: O.intl.string(O.t.OTXyaW),
                                           }),
-                                          (0, i.jsx)('div', {
-                                              'data-button-hoisted-classname-wrapper': !0,
+                                          (0, i.jsx)("div", {
+                                              "data-button-hoisted-classname-wrapper": !0,
                                               className: v.logOutAllButton,
                                               children: (0, i.jsx)(d.zxk, {
-                                                  variant: 'critical-secondary',
-                                                  size: 'sm',
-                                                  text: j.size > 0 ? O.intl.formatToPlainString(O.t['83CPLi'], { count: j.size }) : O.intl.string(O.t.cLmmeX),
+                                                  variant: "critical-secondary",
+                                                  size: "sm",
+                                                  text:
+                                                      j.size > 0
+                                                          ? O.intl.formatToPlainString(O.t["83CPLi"], { count: j.size })
+                                                          : O.intl.string(O.t.cLmmeX),
                                                   onClick: () => {
-                                                      j.size > 0 ? (0, g.L$)(Array.from(j)) : (0, g.L$)(n.map((e) => e.id_hash));
-                                                  }
-                                              })
-                                          })
-                                      ]
+                                                      j.size > 0
+                                                          ? (0, g.L$)(Array.from(j))
+                                                          : (0, g.L$)(n.map((e) => e.id_hash));
+                                                  },
+                                              }),
+                                          }),
+                                      ],
                                   })
-                                : null
-                        ]
+                                : null,
+                        ],
                     })),
           (0, i.jsxs)(d.hjN, {
               tag: d.RB0.H1,
-              title: O.intl.string(O.t['+1h0k5']),
+              title: O.intl.string(O.t["+1h0k5"]),
               children: [
                   (0, i.jsx)(d.R94, {
                       type: d.geA.DESCRIPTION,
                       className: v.description,
-                      children: O.intl.string(O.t.zZp619)
+                      children: O.intl.string(O.t.zZp619),
                   }),
                   (null == a ? void 0 : a.isStaff())
-                      ? (0, i.jsxs)('div', {
+                      ? (0, i.jsxs)("div", {
                             className: v.tools,
                             children: [
                                 (0, i.jsx)(d.Text, {
                                     className: v.toolsTitle,
-                                    variant: 'text-md/bold',
-                                    children: 'DEV TOOLS'
+                                    variant: "text-md/bold",
+                                    children: "DEV TOOLS",
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     className: v.toolsTitle,
-                                    variant: 'text-sm/normal',
-                                    color: 'text-danger',
-                                    children: 'These tools are only shown to staff users.'
+                                    variant: "text-sm/normal",
+                                    color: "text-danger",
+                                    children: "These tools are only shown to staff users.",
                                 }),
                                 (0, i.jsx)(d.ua7, {
-                                    text: 'Triggers mobile and email suspicious session notifications for the current user',
+                                    text: "Triggers mobile and email suspicious session notifications for the current user",
                                     children: (e) => {
                                         let { onMouseEnter: t, onMouseLeave: n } = e;
                                         return (0, i.jsx)(d.zxk, {
-                                            variant: 'secondary',
-                                            size: 'sm',
-                                            text: 'Trigger Suspicious Sessions Notification',
+                                            variant: "secondary",
+                                            size: "sm",
+                                            text: "Trigger Suspicious Sessions Notification",
                                             onClick: _,
                                             onMouseEnter: t,
-                                            onMouseLeave: n
+                                            onMouseLeave: n,
                                         });
-                                    }
-                                })
-                            ]
+                                    },
+                                }),
+                            ],
                         })
                       : null,
-                  e
-              ]
+                  e,
+              ],
           }));
 }
 function T(e) {
     var t, n, r, s, l;
     let { session: o, current: c, setChecked: u, checked: m, useChecks: p } = e,
-        f = null != (l = null == (t = o.client_info) ? void 0 : t.location) ? l : null == (n = o.client_info) ? void 0 : n.ip,
+        f =
+            null != (l = null == (t = o.client_info) ? void 0 : t.location)
+                ? l
+                : null == (n = o.client_info)
+                  ? void 0
+                  : n.ip,
         b = null == (r = o.client_info) ? void 0 : r.platform,
         { text: x, icon: _ } = (function (e) {
             switch (null == e ? void 0 : e.toLowerCase().trim()) {
                 case null:
                 case void 0:
-                case '':
+                case "":
                     return {
                         text: O.intl.string(O.t.cDHCNT),
-                        icon: d.pzj
+                        icon: d.pzj,
                     };
-                case 'ios':
-                case 'android':
+                case "ios":
+                case "android":
                     return {
                         text: e,
-                        icon: d.AtH
+                        icon: d.AtH,
                     };
                 default:
                     return {
                         text: e,
-                        icon: d.pzj
+                        icon: d.pzj,
                     };
             }
         })(null == (s = o.client_info) ? void 0 : s.os),
@@ -198,100 +208,113 @@ function T(e) {
         C = [x, b].filter(j.lm),
         S = [f, E].filter(j.lm);
     return (0, i.jsxs)(
-        'div',
+        "div",
         {
             className: a()(v.session, c ? v.currentSession : null),
             children: [
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: v.sessionIcon,
                     children: (0, i.jsx)(_, {
-                        size: 'md',
-                        color: 'currentColor'
-                    })
+                        size: "md",
+                        color: "currentColor",
+                    }),
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: v.sessionInfo,
                     children: [
                         (0, i.jsxs)(d.Text, {
-                            variant: 'eyebrow',
+                            variant: "eyebrow",
                             className: v.sessionInfoRow,
                             children: [
-                                (0, i.jsx)('span', { children: C[0] }),
+                                (0, i.jsx)("span", { children: C[0] }),
                                 C.length > 1 &&
                                     (0, i.jsxs)(i.Fragment, {
-                                        children: [(0, i.jsx)('span', { children: '\xB7' }), (0, i.jsx)('span', { children: C[1] })]
-                                    })
-                            ]
+                                        children: [
+                                            (0, i.jsx)("span", { children: "\xB7" }),
+                                            (0, i.jsx)("span", { children: C[1] }),
+                                        ],
+                                    }),
+                            ],
                         }),
                         (0, i.jsxs)(d.Text, {
-                            variant: 'text-sm/medium',
+                            variant: "text-sm/medium",
                             className: v.sessionInfoRow,
                             children: [
-                                (0, i.jsx)('span', { children: S[0] }),
+                                (0, i.jsx)("span", { children: S[0] }),
                                 S.length > 1 &&
                                     (0, i.jsxs)(i.Fragment, {
-                                        children: [(0, i.jsx)('span', { children: '\xB7' }), (0, i.jsx)('span', { children: S[1] })]
-                                    })
-                            ]
-                        })
-                    ]
+                                        children: [
+                                            (0, i.jsx)("span", { children: "\xB7" }),
+                                            (0, i.jsx)("span", { children: S[1] }),
+                                        ],
+                                    }),
+                            ],
+                        }),
+                    ],
                 }),
                 c
                     ? null
                     : p
-                      ? (0, i.jsx)('div', {
+                      ? (0, i.jsx)("div", {
                             className: v.sessionCheckbox,
                             children: (0, i.jsx)(d.XZJ, {
                                 onChange: (e, t) => {
                                     null == u || u(t);
                                 },
-                                value: m
-                            })
+                                value: m,
+                            }),
                         })
                       : (0, i.jsx)(d.P3F, {
                             className: v.sessionMoreButton,
                             onClick: (e) => {
                                 e.shiftKey ? null == u || u(!0) : (0, g.L$)(o.id_hash);
                             },
-                            'aria-label': O.intl.string(O.t.E4MJNj),
+                            "aria-label": O.intl.string(O.t.E4MJNj),
                             children: (0, i.jsx)(d.Dio, {
-                                size: 'md',
-                                color: 'currentColor'
-                            })
-                        })
-            ]
+                                size: "md",
+                                color: "currentColor",
+                            }),
+                        }),
+            ],
         },
-        o.id_hash
+        o.id_hash,
     );
 }
 function I() {
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: a()(v.session, v.legacySession),
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: v.sessionIcon,
                 children: (0, i.jsx)(_.Z, {
-                    width: '32',
-                    height: '32'
-                })
+                    width: "32",
+                    height: "32",
+                }),
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: v.sessionInfo,
                 children: [
                     (0, i.jsx)(d.Text, {
-                        variant: 'eyebrow',
+                        variant: "eyebrow",
                         className: v.sessionInfoRow,
-                        color: 'text-muted',
-                        children: (0, i.jsx)('span', { children: O.intl.string(O.t.iUa0sr) })
+                        color: "text-muted",
+                        children: (0, i.jsx)("span", { children: O.intl.string(O.t.iUa0sr) }),
                     }),
                     (0, i.jsx)(d.Text, {
-                        variant: 'text-sm/medium',
+                        variant: "text-sm/medium",
                         className: v.sessionInfoRow,
-                        color: 'text-muted',
-                        children: (0, i.jsx)('span', { children: O.intl.format(O.t['044+8v'], { onClick: () => u.Z.setSection(E.oAB.ACCOUNT, null, { analyticsLocations: [p.Z.USER_SETTINGS_SESSIONS] }) }) })
-                    })
-                ]
-            })
-        ]
+                        color: "text-muted",
+                        children: (0, i.jsx)("span", {
+                            children: O.intl.format(O.t["044+8v"], {
+                                onClick: () =>
+                                    u.Z.setSection(E.oAB.ACCOUNT, null, {
+                                        analyticsLocations: [p.Z.USER_SETTINGS_SESSIONS],
+                                    }),
+                            }),
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

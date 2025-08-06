@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var i,
     o = n(392711),
     a = n.n(o),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,14 +22,17 @@ function u(e, t, n) {
 let d = {},
     f = {};
 function _(e, t) {
-    return (null == t && (t = 'guild'), ''.concat(e, ':').concat(t));
+    return null == t && (t = "guild"), "".concat(e, ":").concat(t);
 }
 function p(e) {
-    return (null != d[e] || (d[e] = {}), d[e]);
+    return null != d[e] || (d[e] = {}), d[e];
 }
 function h(e) {
     let { guildId: t, channelId: n, webhooks: i, error: o } = e;
-    if (null == i) return void (null != o ? ((r = o), delete f[_(t, n)]) : null != n && null != d[t] && ((r = null), c.Z.fetchForChannel(t, n)));
+    if (null == i)
+        return void (null != o
+            ? ((r = o), delete f[_(t, n)])
+            : null != n && null != d[t] && ((r = null), c.Z.fetchForChannel(t, n)));
     r = null;
     let s = [];
     null != n &&
@@ -38,7 +41,7 @@ function h(e) {
             .filter((e) => e.channel_id !== n)
             .value());
     let l = (d[t] = {});
-    (s.concat(i).forEach((e) => (l[e.id] = e)), delete f[_(t, n)]);
+    s.concat(i).forEach((e) => (l[e.id] = e)), delete f[_(t, n)];
 }
 function m(e) {
     let { guildId: t, channelId: n } = e;
@@ -69,11 +72,11 @@ class b extends (i = s.ZP.Store) {
         return r;
     }
 }
-u(b, 'displayName', 'WebhooksStore');
+u(b, "displayName", "WebhooksStore");
 let y = new b(l.Z, {
     WEBHOOKS_UPDATE: h,
     WEBHOOKS_FETCHING: m,
     WEBHOOK_CREATE: g,
     WEBHOOK_UPDATE: g,
-    WEBHOOK_DELETE: E
+    WEBHOOK_DELETE: E,
 });

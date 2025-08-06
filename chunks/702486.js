@@ -15,7 +15,7 @@ let c = (e, t, r, n) => {
                     source: r,
                     page_height: Math.round(i),
                     page_width: Math.round(s),
-                    page_session_id: t
+                    page_session_id: t,
                 });
         }
     },
@@ -29,13 +29,13 @@ let c = (e, t, r, n) => {
                 if (null != e.current) {
                     let t = e.current.getScrollerNode();
                     null != t &&
-                        o(s.rMx.COLLECTIBLES_SHOP_SCROLLED, null != d ? d : '', r, {
+                        o(s.rMx.COLLECTIBLES_SHOP_SCROLLED, null != d ? d : "", r, {
                             scrollTop: t.scrollTop,
                             scrollOffset: t.offsetHeight,
                             scrollHeight: t.scrollHeight,
-                            scrollWidth: t.scrollWidth
+                            scrollWidth: t.scrollWidth,
                         });
                 }
-            }, [o, r, d, e])
+            }, [o, r, d, e]),
         };
     };

@@ -1,5 +1,5 @@
 let r, i, o;
-(n.d(t, { Z: () => W }), n(388685));
+n.d(t, { Z: () => W }), n(388685);
 var a,
     s = n(392711),
     l = n(442837),
@@ -16,7 +16,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -42,41 +42,42 @@ let m = new Map(),
     L = 0,
     x = (e) => {
         let { skuId: t } = e;
-        ((R = new Set(R)).add(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t));
+        (R = new Set(R)).add(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
     },
     M = (e) => {
         let { skuId: t, error: n } = e;
-        ((R = new Set(R)).delete(t), (P = new Map(P)).set(t, n), (w = new Map(w)).set(t, Date.now()));
+        (R = new Set(R)).delete(t), (P = new Map(P)).set(t, n), (w = new Map(w)).set(t, Date.now());
     },
     k = (e) => {
         let { skuId: t, product: n } = e;
-        (v.set(t, n), (R = new Set(R)).delete(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t));
+        v.set(t, n), (R = new Set(R)).delete(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
     },
     j = (e) => {
-        ((C = !0), (r = void 0), (o = void 0), (D = e.options));
+        (C = !0), (r = void 0), (o = void 0), (D = e.options);
     },
     U = (e) => {
         let { error: t } = e;
-        ((O = m), (v = g), (A = y), (C = !1), (R = new Set()), (r = t), (o = Date.now()));
+        (O = m), (v = g), (A = y), (C = !1), (R = new Set()), (r = t), (o = Date.now());
     },
     G = (e) => {
-        if (0 === e.categories.length) ((O = m), (v = g));
+        if (0 === e.categories.length) (O = m), (v = g);
         else if (!(0, s.isEqual)([...O.values()], e.categories) && !e.noOp) {
             let t = new Map(e.categories.map((e) => [e.skuId, e])),
                 n = new Date();
-            (O.forEach((e, r) => {
+            O.forEach((e, r) => {
                 !t.has(r) && (null == e.unpublishedAt || e.unpublishedAt > n) && t.set(r, e);
             }),
                 (S = new Map([...(O = t).values()].map((e) => [e.storeListingId, e]))),
                 (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e]))),
-                (T = [...(I = new Map((0, _.Cs)(O, !1).map((e) => [e.storeListingId, e]))).values()]));
+                (T = [...(I = new Map((0, _.Cs)(O, !1).map((e) => [e.storeListingId, e]))).values()]);
         }
-        (Z(e.categories, v), (i = Date.now()), (C = !1), (r = void 0), (o = void 0));
+        Z(e.categories, v), (i = Date.now()), (C = !1), (r = void 0), (o = void 0);
     },
     B = (e) => {
         if (0 === e.shopHome.categories.length) return;
         let t = new Map(e.shopHome.categories.map((e) => [e.skuId, e]));
-        ((S = new Map([...(O = new Map([...O, ...t])).values()].map((e) => [e.storeListingId, e]))), (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e]))));
+        (S = new Map([...(O = new Map([...O, ...t])).values()].map((e) => [e.storeListingId, e]))),
+            (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e])));
     },
     Z = (e, t) => {
         if (0 === e.length) {
@@ -96,19 +97,31 @@ let m = new Map(),
         }
     },
     F = () => {
-        ((O = m), (v = g), (A = y), (i = void 0), (C = !1), (R = new Set()), (r = void 0), (o = void 0), (D = {}), (L = 0));
+        (O = m),
+            (v = g),
+            (A = y),
+            (i = void 0),
+            (C = !1),
+            (R = new Set()),
+            (r = void 0),
+            (o = void 0),
+            (D = {}),
+            (L = 0);
     },
     V = () => {
         if (!u.Z.hasLoadedExperiments) return;
-        let { giftRecommendationAlgorithm: e } = d.G.getCurrentConfig({ location: 'CollectiblesCategoryStore handleExperimentChange' }, { autoTrackExposure: !1 });
-        (e !== N && (i = void 0), (N = e));
+        let { giftRecommendationAlgorithm: e } = d.G.getCurrentConfig(
+            { location: "CollectiblesCategoryStore handleExperimentChange" },
+            { autoTrackExposure: !1 },
+        );
+        e !== N && (i = void 0), (N = e);
     },
     H = (e) => {
         L = e.skipNumCategories;
     };
 class Y extends (a = l.ZP.Store) {
     initialize() {
-        (this.syncWith([f.default], F), this.syncWith([u.Z], V));
+        this.syncWith([f.default], F), this.syncWith([u.Z], V);
     }
     get isFetchingCategories() {
         return C;
@@ -169,7 +182,7 @@ class Y extends (a = l.ZP.Store) {
         return this.getCategory(null == t ? void 0 : t.categorySkuId);
     }
 }
-h(Y, 'displayName', 'CollectiblesCategoryStore');
+h(Y, "displayName", "CollectiblesCategoryStore");
 let W = new Y(c.Z, {
     COLLECTIBLES_CATEGORIES_FETCH: j,
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: G,
@@ -179,5 +192,5 @@ let W = new Y(c.Z, {
     COLLECTIBLES_PRODUCT_FETCH_FAILURE: M,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: B,
     COLLECTIBLES_SKIP_NUM_CATEGORIES: H,
-    LOGOUT: F
+    LOGOUT: F,
 });

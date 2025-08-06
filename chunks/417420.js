@@ -15,11 +15,11 @@ function u() {
         children: (0, i.jsx)(r.j7V, {
             note: d.intl.string(d.t.WNbX4O),
             onChange: (e) => {
-                (l.qF.updateSetting(e), a.default.track(c.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e }));
+                l.qF.updateSetting(e), a.default.track(c.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
             },
             value: e,
             hideBorder: !0,
-            children: d.intl.string(d.t['3Ppr1t'])
-        })
+            children: d.intl.string(d.t["3Ppr1t"]),
+        }),
     });
 }

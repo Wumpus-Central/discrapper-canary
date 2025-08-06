@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(913527),
@@ -16,14 +16,14 @@ var r = n(255367),
     g = n(474936),
     E = n(388032),
     b = n(400641);
-let y = 'premiumRetentionEmojiPickerNotice',
+let y = "premiumRetentionEmojiPickerNotice",
     O = l.K.get(y),
     v = (e) => {
         let { closePopout: t, channel: n } = e,
             [o, v] = i.useState(!1),
             { subscription: I, hasFetchedSubscriptions: T } = (0, s.cj)([_.Z], () => ({
                 subscription: _.Z.getPremiumSubscription(),
-                hasFetchedSubscriptions: _.Z.hasFetchedSubscriptions()
+                hasFetchedSubscriptions: _.Z.hasFetchedSubscriptions(),
             }));
         if (
             (i.useEffect(() => {
@@ -33,47 +33,52 @@ let y = 'premiumRetentionEmojiPickerNotice',
         )
             return null;
         let S = I.status === m.O0b.PAST_DUE ? (0, p.lY)(I).expiresDate : a()(I.currentPeriodStart).add(g.gh),
-            A = ''.concat(I.id, ':').concat(S.toISOString());
+            A = "".concat(I.id, ":").concat(S.toISOString());
         if (O === A) return null;
-        let N = p.ZP.getPremiumType(I.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : p.ZP.getPremiumType(I.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
-        return (0, r.jsxs)('div', {
+        let N =
+            p.ZP.getPremiumType(I.planId) === g.p9.TIER_0
+                ? f.JX.PREMIUM_TIER_0
+                : p.ZP.getPremiumType(I.planId) === g.p9.TIER_1
+                  ? f.JX.PREMIUM_TIER_1
+                  : f.JX.PREMIUM_TIER_2;
+        return (0, r.jsxs)("div", {
             className: b.premiumRetentionNotice,
             children: [
                 (0, r.jsx)(c.SrA, {
-                    size: 'md',
+                    size: "md",
                     className: b.premiumRetentionNoticeIcon,
-                    color: N
+                    color: N,
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: b.premiumRetentionNoticeContent,
                     children: [
                         (0, r.jsx)(c.Text, {
-                            variant: 'text-xs/normal',
+                            variant: "text-xs/normal",
                             children: E.intl.format(E.t.bTMjiI, {
                                 planName: p.ZP.getDisplayPremiumType(I.planId),
-                                endsAt: S.toDate()
-                            })
+                                endsAt: S.toDate(),
+                            }),
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             children: (0, r.jsx)(c.eee, {
                                 onClick: () => {
-                                    ((0, h.A3)(n), t(), d.Z.open(m.oAB.PREMIUM));
+                                    (0, h.A3)(n), t(), d.Z.open(m.oAB.PREMIUM);
                                 },
-                                children: E.intl.string(E.t.W3aavr)
-                            })
-                        })
-                    ]
+                                children: E.intl.string(E.t.W3aavr),
+                            }),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(c.P3F, {
                     onClick: () => {
-                        (l.K.set(y, A), (O = A), v(!0));
+                        l.K.set(y, A), (O = A), v(!0);
                     },
                     children: (0, r.jsx)(c.Dio, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: b.premiumRetentionNoticeClose
-                    })
-                })
-            ]
+                        size: "md",
+                        color: "currentColor",
+                        className: b.premiumRetentionNoticeClose,
+                    }),
+                }),
+            ],
         });
     };

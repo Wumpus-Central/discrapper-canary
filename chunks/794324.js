@@ -3,7 +3,7 @@ r.d(n, {
     YG: () => g,
     hr: () => d,
     mB: () => v,
-    t0: () => b
+    t0: () => b,
 });
 var l = r(73800),
     t = r(264181),
@@ -28,8 +28,16 @@ let d = (e) => {
                 bannerStyleOverrides: b ? void 0 : null != (i = e.bannerConfig) ? i : o,
                 logoStyleOverrides: b ? void 0 : e.logoConfig,
                 heroLogo: null != n ? n : e.logoUrl,
-                heroBannerStatic: null != (s = null != r ? r : null == (l = e.bannerAsset) ? void 0 : l.static) ? s : e.fallbackBannerUrl,
-                heroBannerAnimated: null != (d = null != t ? t : null == g || null == (a = g.heroBanner) ? void 0 : a.animationSource) ? d : null == (u = e.bannerAsset) ? void 0 : u.animated
+                heroBannerStatic:
+                    null != (s = null != r ? r : null == (l = e.bannerAsset) ? void 0 : l.static)
+                        ? s
+                        : e.fallbackBannerUrl,
+                heroBannerAnimated:
+                    null != (d = null != t ? t : null == g || null == (a = g.heroBanner) ? void 0 : a.animationSource)
+                        ? d
+                        : null == (u = e.bannerAsset)
+                          ? void 0
+                          : u.animated,
             };
         }, [n, r, t, e, o]);
     },
@@ -42,7 +50,7 @@ let d = (e) => {
                     null != t
                         ? (0, o.uV)(t, {
                               size: c.J0,
-                              format: 'png'
+                              format: "png",
                           })
                         : void 0;
             return { featuredBlockBanner: null != (l = null != r ? r : null == n ? void 0 : n.bannerUrl) ? l : a };
@@ -56,8 +64,16 @@ let d = (e) => {
             let s = (0, c.ZS)(e.skuId);
             return {
                 bannerOverrides: s,
-                shopAllBannerStatic: null != (a = null != (o = null != n ? n : r) ? o : null == (l = e.bannerAsset) ? void 0 : l.static) ? a : e.banner,
-                shopAllBannerAnimated: null != (i = null != (u = null != r ? r : n) ? u : null == s ? void 0 : s.animatedBanner) ? i : null == (t = e.bannerAsset) ? void 0 : t.animated
+                shopAllBannerStatic:
+                    null != (a = null != (o = null != n ? n : r) ? o : null == (l = e.bannerAsset) ? void 0 : l.static)
+                        ? a
+                        : e.banner,
+                shopAllBannerAnimated:
+                    null != (i = null != (u = null != r ? r : n) ? u : null == s ? void 0 : s.animatedBanner)
+                        ? i
+                        : null == (t = e.bannerAsset)
+                          ? void 0
+                          : t.animated,
             };
         }, [n, r, e]);
     },
@@ -67,9 +83,9 @@ let d = (e) => {
         return l.useMemo(
             () => ({
                 pdpBackground: null != n ? n : e.pdpBg,
-                logo: null != r ? r : (0, o.uV)(e.logo, { size: a.n })
+                logo: null != r ? r : (0, o.uV)(e.logo, { size: a.n }),
             }),
-            [n, e.pdpBg, e.logo, r]
+            [n, e.pdpBg, e.logo, r],
         );
     },
     v = (e) => {
@@ -93,7 +109,7 @@ let d = (e) => {
                 buttonBGHoverLight: null != (s = null != o ? o : n) ? s : null == p ? void 0 : p.light,
                 buttonBGRestingDark: null != (g = null != u ? u : a) ? g : null == O ? void 0 : O.dark,
                 buttonBGRestingLight: null != (b = null != c ? c : a) ? b : null == O ? void 0 : O.light,
-                coachtipAvatar: null != d ? d : null == e ? void 0 : e.avatar
+                coachtipAvatar: null != d ? d : null == e ? void 0 : e.avatar,
             };
         }, [n, r, o, a, u, c, d, e]);
     };

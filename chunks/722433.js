@@ -1,7 +1,7 @@
 function r(e) {
-    return e && 'object' == typeof e && 'default' in e ? e.default : e;
+    return e && "object" == typeof e && "default" in e ? e.default : e;
 }
-Object.defineProperty(t, '__esModule', { value: !0 });
+Object.defineProperty(t, "__esModule", { value: !0 });
 var i = r(n(715753)),
     o = n(197812),
     a = n(867309),
@@ -12,38 +12,42 @@ var i = r(n(715753)),
     d = r(n(117374)),
     f = /^--/;
 function _(e, t) {
-    return null == t || 'boolean' == typeof t || '' === t ? '' : 'number' != typeof t || 0 === t || f.test(e) || (m.hasOwnProperty(e) && m[e]) ? ('' + t).trim() : t + 'px';
+    return null == t || "boolean" == typeof t || "" === t
+        ? ""
+        : "number" != typeof t || 0 === t || f.test(e) || (m.hasOwnProperty(e) && m[e])
+          ? ("" + t).trim()
+          : t + "px";
 }
 var p = {};
 function h(e, t) {
     if (!e.nodeType || !e.setAttribute) return !1;
-    var n = 'filter' === e.nodeName || (e.parentNode && 'filter' === e.parentNode.nodeName),
+    var n = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),
         r = t,
         o = r.style,
         a = r.children,
         s = r.scrollTop,
         l = r.scrollLeft,
-        c = i(r, ['style', 'children', 'scrollTop', 'scrollLeft']),
+        c = i(r, ["style", "children", "scrollTop", "scrollLeft"]),
         d = Object.values(c),
         h = Object.keys(c).map(function (t) {
             return n || e.hasAttribute(t)
                 ? t
                 : p[t] ||
                       (p[t] = t.replace(/([A-Z])/g, function (e) {
-                          return '-' + e.toLowerCase();
+                          return "-" + e.toLowerCase();
                       }));
         });
     u.Globals.frameLoop.onWrite(function () {
         for (var t in (void 0 !== a && (e.textContent = a), o))
             if (o.hasOwnProperty(t)) {
                 var n = _(t, o[t]);
-                'float' === t ? (t = 'cssFloat') : f.test(t) ? e.style.setProperty(t, n) : (e.style[t] = n);
+                "float" === t ? (t = "cssFloat") : f.test(t) ? e.style.setProperty(t, n) : (e.style[t] = n);
             }
-        (h.forEach(function (t, n) {
+        h.forEach(function (t, n) {
             e.setAttribute(t, d[n]);
         }),
             void 0 !== s && (e.scrollTop = s),
-            void 0 !== l && (e.scrollLeft = l));
+            void 0 !== l && (e.scrollLeft = l);
     });
 }
 var m = {
@@ -87,12 +91,12 @@ var m = {
         strokeDashoffset: !0,
         strokeMiterlimit: !0,
         strokeOpacity: !0,
-        strokeWidth: !0
+        strokeWidth: !0,
     },
     g = function (e, t) {
         return e + t.charAt(0).toUpperCase() + t.substring(1);
     },
-    E = ['Webkit', 'Ms', 'Moz', 'O'];
+    E = ["Webkit", "Ms", "Moz", "O"];
 m = Object.keys(m).reduce(function (e, t) {
     return (
         E.forEach(function (n) {
@@ -121,7 +125,7 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
             var n = t.x,
                 r = t.y,
                 o = t.z,
-                a = i(t, ['x', 'y', 'z']),
+                a = i(t, ["x", "y", "z"]),
                 s = [],
                 l = [];
             return (
@@ -129,61 +133,67 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                     (s.push([n || 0, r || 0, o || 0]),
                     l.push(function (e) {
                         return [
-                            'translate3d(' +
+                            "translate3d(" +
                                 e
                                     .map(function (e) {
-                                        return v(e, 'px');
+                                        return v(e, "px");
                                     })
-                                    .join(',') +
-                                ')',
-                            I(e, 0)
+                                    .join(",") +
+                                ")",
+                            I(e, 0),
                         ];
                     })),
                 u.each(a, function (e, t) {
-                    if ('transform' === t)
-                        (s.push([e || '']),
+                    if ("transform" === t)
+                        s.push([e || ""]),
                             l.push(function (e) {
-                                return [e, '' === e];
-                            }));
+                                return [e, "" === e];
+                            });
                     else if (b.test(t)) {
                         if ((delete a[t], u.is.und(e))) return;
-                        var n = y.test(t) ? 'px' : O.test(t) ? 'deg' : '';
-                        (s.push(u.toArray(e)),
+                        var n = y.test(t) ? "px" : O.test(t) ? "deg" : "";
+                        s.push(u.toArray(e)),
                             l.push(
-                                'rotate3d' === t
+                                "rotate3d" === t
                                     ? function (e) {
                                           var t = e[0],
                                               r = e[1],
                                               i = e[2],
                                               o = e[3];
-                                          return ['rotate3d(' + t + ',' + r + ',' + i + ',' + v(o, n) + ')', I(o, 0)];
+                                          return ["rotate3d(" + t + "," + r + "," + i + "," + v(o, n) + ")", I(o, 0)];
                                       }
                                     : function (e) {
                                           return [
                                               t +
-                                                  '(' +
+                                                  "(" +
                                                   e
                                                       .map(function (e) {
                                                           return v(e, n);
                                                       })
-                                                      .join(',') +
-                                                  ')',
-                                              I(e, +!!t.startsWith('scale'))
+                                                      .join(",") +
+                                                  ")",
+                                              I(e, +!!t.startsWith("scale")),
                                           ];
-                                      }
-                            ));
+                                      },
+                            );
                     }
                 }),
                 s.length && (a.transform = new S(s, l)),
                 e.call(this, a) || this
             );
         }
-        return (d(t, e), t);
+        return d(t, e), t;
     })(c.AnimatedObject),
     S = (function (e) {
         function t(t, n) {
             var r;
-            return (((r = e.call(this) || this).inputs = t), (r.transforms = n), (r._value = null), (r._children = new Set()), r);
+            return (
+                ((r = e.call(this) || this).inputs = t),
+                (r.transforms = n),
+                (r._value = null),
+                (r._children = new Set()),
+                r
+            );
         }
         d(t, e);
         var n = t.prototype;
@@ -193,7 +203,7 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
             }),
             (n._get = function () {
                 var e = this,
-                    t = '',
+                    t = "",
                     n = !0;
                 return (
                     u.each(this.inputs, function (r, i) {
@@ -201,47 +211,181 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
                             a = e.transforms[i](u.is.arr(o) ? o : r.map(u.getFluidValue)),
                             s = a[0],
                             l = a[1];
-                        ((t += ' ' + s), (n = n && l));
+                        (t += " " + s), (n = n && l);
                     }),
-                    n ? 'none' : t
+                    n ? "none" : t
                 );
             }),
             (n.addChild = function (e) {
                 var t = this;
-                (this._children.size ||
+                this._children.size ||
                     u.each(this.inputs, function (e) {
                         return u.each(e, function (e) {
                             var n = u.getFluidConfig(e);
                             n && n.addChild(t);
                         });
                     }),
-                    this._children.add(e));
+                    this._children.add(e);
             }),
             (n.removeChild = function (e) {
                 var t = this;
-                (this._children.delete(e),
+                this._children.delete(e),
                     this._children.size ||
                         u.each(this.inputs, function (e) {
                             return u.each(e, function (e) {
                                 var n = u.getFluidConfig(e);
                                 n && n.removeChild(t);
                             });
-                        }));
+                        });
             }),
             (n.onParentChange = function (e) {
-                ('change' == e.type && (this._value = null),
+                "change" == e.type && (this._value = null),
                     u.each(this._children, function (t) {
                         t.onParentChange(e);
-                    }));
+                    });
             }),
             t
         );
     })(u.FluidValue),
-    A = ['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'picture', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 'ul', 'var', 'video', 'wbr', 'circle', 'clipPath', 'defs', 'ellipse', 'foreignObject', 'g', 'image', 'line', 'linearGradient', 'mask', 'path', 'pattern', 'polygon', 'polyline', 'radialGradient', 'rect', 'stop', 'svg', 'text', 'tspan'];
+    A = [
+        "a",
+        "abbr",
+        "address",
+        "area",
+        "article",
+        "aside",
+        "audio",
+        "b",
+        "base",
+        "bdi",
+        "bdo",
+        "big",
+        "blockquote",
+        "body",
+        "br",
+        "button",
+        "canvas",
+        "caption",
+        "cite",
+        "code",
+        "col",
+        "colgroup",
+        "data",
+        "datalist",
+        "dd",
+        "del",
+        "details",
+        "dfn",
+        "dialog",
+        "div",
+        "dl",
+        "dt",
+        "em",
+        "embed",
+        "fieldset",
+        "figcaption",
+        "figure",
+        "footer",
+        "form",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "head",
+        "header",
+        "hgroup",
+        "hr",
+        "html",
+        "i",
+        "iframe",
+        "img",
+        "input",
+        "ins",
+        "kbd",
+        "keygen",
+        "label",
+        "legend",
+        "li",
+        "link",
+        "main",
+        "map",
+        "mark",
+        "menu",
+        "menuitem",
+        "meta",
+        "meter",
+        "nav",
+        "noscript",
+        "object",
+        "ol",
+        "optgroup",
+        "option",
+        "output",
+        "p",
+        "param",
+        "picture",
+        "pre",
+        "progress",
+        "q",
+        "rp",
+        "rt",
+        "ruby",
+        "s",
+        "samp",
+        "script",
+        "section",
+        "select",
+        "small",
+        "source",
+        "span",
+        "strong",
+        "style",
+        "sub",
+        "summary",
+        "sup",
+        "table",
+        "tbody",
+        "td",
+        "textarea",
+        "tfoot",
+        "th",
+        "thead",
+        "time",
+        "title",
+        "tr",
+        "track",
+        "u",
+        "ul",
+        "var",
+        "video",
+        "wbr",
+        "circle",
+        "clipPath",
+        "defs",
+        "ellipse",
+        "foreignObject",
+        "g",
+        "image",
+        "line",
+        "linearGradient",
+        "mask",
+        "path",
+        "pattern",
+        "polygon",
+        "polyline",
+        "radialGradient",
+        "rect",
+        "stop",
+        "svg",
+        "text",
+        "tspan",
+    ];
 o.Globals.assign({
     colorNames: l,
     createStringInterpolator: s.createStringInterpolator,
-    batchedUpdates: a.unstable_batchedUpdates
+    batchedUpdates: a.unstable_batchedUpdates,
 });
 var N = c.createHost(A, {
     applyAnimatedValues: h,
@@ -249,17 +393,17 @@ var N = c.createHost(A, {
         return new T(e);
     },
     getComponentProps: function (e) {
-        return (e.scrollTop, e.scrollLeft, i(e, ['scrollTop', 'scrollLeft']));
-    }
+        return e.scrollTop, e.scrollLeft, i(e, ["scrollTop", "scrollLeft"]);
+    },
 }).animated;
-(Object.keys(o).forEach(function (e) {
-    'default' !== e &&
+Object.keys(o).forEach(function (e) {
+    "default" !== e &&
         Object.defineProperty(t, e, {
             enumerable: !0,
             get: function () {
                 return o[e];
-            }
+            },
         });
 }),
     (t.a = N),
-    (t.animated = N));
+    (t.animated = N);

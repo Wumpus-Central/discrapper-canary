@@ -20,17 +20,28 @@ let b = [],
             n = (0, a.e7)([d.Z], () => d.Z.getGuild(t)),
             j = (0, a.Wu)([g.Z], () => {
                 var e, t;
-                return null != (t = null == (e = g.Z.getSettings().resourceChannels) ? void 0 : e.map((e) => e.channelId)) ? t : b;
+                return null !=
+                    (t = null == (e = g.Z.getSettings().resourceChannels) ? void 0 : e.map((e) => e.channelId))
+                    ? t
+                    : b;
             }),
             v = (0, a.Wu)([g.Z], () => g.Z.getDismissedSuggestedChannelIds(t)),
             _ = (0, a.e7)([c.ZP], () => c.ZP.getSelectableChannels(t)),
             O = i.useMemo(
                 () =>
                     (0, l.chain)(_)
-                        .filter((e) => e.channel.type === h.d4z.GUILD_TEXT && e.channel.id !== (null == n ? void 0 : n.rulesChannelId) && !v.includes(e.channel.id) && !j.includes(e.channel.id) && u.Uu(h.Plq.VIEW_CHANNEL, e.channel) && !u.Uu(h.Plq.SEND_MESSAGES, e.channel))
+                        .filter(
+                            (e) =>
+                                e.channel.type === h.d4z.GUILD_TEXT &&
+                                e.channel.id !== (null == n ? void 0 : n.rulesChannelId) &&
+                                !v.includes(e.channel.id) &&
+                                !j.includes(e.channel.id) &&
+                                u.Uu(h.Plq.VIEW_CHANNEL, e.channel) &&
+                                !u.Uu(h.Plq.SEND_MESSAGES, e.channel),
+                        )
                         .take(5)
                         .value(),
-                [_, v, null == n ? void 0 : n.rulesChannelId, j]
+                [_, v, null == n ? void 0 : n.rulesChannelId, j],
             ),
             y = i.useCallback(() => {
                 let e = O.map((e) => e.channel.id);
@@ -40,55 +51,55 @@ let b = [],
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: x.suggestedChannelsSection,
                           children: [
                               (0, r.jsx)(s.Text, {
-                                  variant: 'text-md/semibold',
-                                  children: f.intl.string(f.t.WThgAQ)
+                                  variant: "text-md/semibold",
+                                  children: f.intl.string(f.t.WThgAQ),
                               }),
-                              (0, r.jsxs)('div', {
+                              (0, r.jsxs)("div", {
                                   className: x.suggestedChannelsHeader,
                                   children: [
                                       (0, r.jsx)(s.Text, {
-                                          variant: 'text-xs/medium',
-                                          color: 'text-muted',
-                                          children: f.intl.string(f.t.YtNI8P)
+                                          variant: "text-xs/medium",
+                                          color: "text-muted",
+                                          children: f.intl.string(f.t.YtNI8P),
                                       }),
                                       (0, r.jsxs)(s.P3F, {
                                           className: x.suggestedChannelsDismiss,
                                           onClick: y,
                                           children: [
                                               (0, r.jsx)(s.dz2, {
-                                                  size: 'md',
-                                                  color: 'currentColor',
-                                                  className: x.suggestedChannelsDismissCheck
+                                                  size: "md",
+                                                  color: "currentColor",
+                                                  className: x.suggestedChannelsDismissCheck,
                                               }),
                                               (0, r.jsx)(s.Text, {
-                                                  variant: 'text-xs/semibold',
-                                                  color: 'text-brand',
-                                                  children: f.intl.string(f.t.aLqZTk)
-                                              })
-                                          ]
-                                      })
-                                  ]
+                                                  variant: "text-xs/semibold",
+                                                  color: "text-brand",
+                                                  children: f.intl.string(f.t.aLqZTk),
+                                              }),
+                                          ],
+                                      }),
+                                  ],
                               }),
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: x.suggestedChannels,
                                   children: O.map((e, t) =>
                                       (0, r.jsx)(
                                           p.Z,
                                           {
                                               channel: e.channel,
-                                              end: t < O.length - 1
+                                              end: t < O.length - 1,
                                           },
-                                          e.channel.id
-                                      )
-                                  )
-                              })
-                          ]
+                                          e.channel.id,
+                                      ),
+                                  ),
+                              }),
+                          ],
                       }),
-                      (0, r.jsx)('div', { className: x.sectionSeparator })
-                  ]
+                      (0, r.jsx)("div", { className: x.sectionSeparator }),
+                  ],
               });
     };

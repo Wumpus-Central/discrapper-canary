@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(388685));
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -25,24 +25,24 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -76,8 +76,8 @@ function Z(e) {
         targetElementRef: a,
         shouldShow: n,
         animation: o.yRy.Animation.NONE,
-        position: 'bottom',
-        align: 'right',
+        position: "bottom",
+        align: "right",
         autoInvert: !1,
         onRequestClose: () => l(!1),
         renderPopout: function (e) {
@@ -92,11 +92,11 @@ function Z(e) {
                     onClick: s,
                     tooltip: n ? null : c,
                     icon: o.xhG,
-                    'aria-label': c,
-                    selected: n
-                })
+                    "aria-label": c,
+                    selected: n,
+                }),
             );
-        }
+        },
     });
 }
 function I(e) {
@@ -107,24 +107,24 @@ function I(e) {
         S = (0, m.Z)(t),
         Z = (0, x.Z)({
             id: t.id,
-            label: C.intl.string(C.t.DQ797u)
+            label: C.intl.string(C.t.DQ797u),
         }),
         I = (0, u.Z)(t),
         P = (0, d.Z)(t),
-        T = (0, h.Z)(t, 'Toolbar Overflow'),
+        T = (0, h.Z)(t, "Toolbar Overflow"),
         N = (0, g.Z)(t),
         R = (0, p.Z)(t),
         w = (0, y.Z)(t),
         A = _.vF.useSetting(),
         D = (0, s.e7)([O.Z], () => !a().isEmpty(O.Z.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(o.v2r, {
-        navId: 'thread-context',
+        navId: "thread-context",
         onClose: n,
-        'aria-label': C.intl.string(C.t['1NBjqa']),
+        "aria-label": C.intl.string(C.t["1NBjqa"]),
         onSelect: i,
         children: [
             (0, r.jsxs)(o.kSQ, {
-                children: [T, R]
+                children: [T, R],
             }),
             (0, r.jsxs)(o.kSQ, {
                 children: [
@@ -133,21 +133,21 @@ function I(e) {
                     E,
                     A && !D
                         ? (0, r.jsx)(o.sNh, {
-                              id: 'open',
+                              id: "open",
                               label: C.intl.string(C.t.bX7EaG),
                               action: function () {
                                   (0, v.ok)(t);
-                              }
+                              },
                           })
-                        : null
-                ]
+                        : null,
+                ],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [w, l, j, P]
+                children: [w, l, j, P],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [I, Z]
-            })
-        ]
+                children: [I, Z],
+            }),
+        ],
     });
 }

@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,7 +68,8 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -78,17 +79,17 @@ function E(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function b(e) {
     var { channel: t, centerButton: n = !1, onCallJoined: _ } = e,
-        h = g(e, ['channel', 'centerButton', 'onCallJoined']);
+        h = g(e, ["channel", "centerButton", "onCallJoined"]);
     let { parentAnalyticsLocation: E } = (0, s.ZP)(),
         b = n ? u.d : u.Z,
-        y = t.isManaged() || !t.isPrivate() ? f.intl.string(f.t.S0W8Z2) : f.intl.string(f.t['0D/6R0']),
+        y = t.isManaged() || !t.isPrivate() ? f.intl.string(f.t.S0W8Z2) : f.intl.string(f.t["0D/6R0"]),
         O = i.useCallback(() => {
-            (null == _ || _(), (0, l.v)(E, l.d.JOIN_CALL), a.default.selectVoiceChannel(t.id));
+            null == _ || _(), (0, l.v)(E, l.d.JOIN_CALL), a.default.selectVoiceChannel(t.id);
         }, [t.id, _, E]);
     return (
         i.useEffect(
@@ -98,7 +99,7 @@ function b(e) {
                     c.S.unsubscribe(d.CkL.CALL_ACCEPT, O);
                 }
             ),
-            [O]
+            [O],
         ),
         (0, r.jsx)(
             b,
@@ -106,8 +107,8 @@ function b(e) {
                 iconComponent: o.Csw,
                 label: y,
                 onClick: O,
-                isTrayButton: !1
-            })
+                isTrayButton: !1,
+            }),
         )
     );
 }

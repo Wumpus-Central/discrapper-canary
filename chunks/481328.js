@@ -15,10 +15,10 @@ var s = n(73800),
             });
         },
     d = {
-        component: 'div',
+        component: "div",
         childFactory: function (e) {
             return e;
-        }
+        },
     },
     f = (function (e) {
         function t(t, n) {
@@ -28,7 +28,7 @@ var s = n(73800),
                 (r.state = {
                     contextValue: { isMounting: !0 },
                     handleExited: i,
-                    firstRender: !0
+                    firstRender: !0,
                 }),
                 r
             );
@@ -37,7 +37,7 @@ var s = n(73800),
         var n = t.prototype;
         return (
             (n.componentDidMount = function () {
-                ((this.mounted = !0), this.setState({ contextValue: { isMounting: !1 } }));
+                (this.mounted = !0), this.setState({ contextValue: { isMounting: !1 } });
             }),
             (n.componentWillUnmount = function () {
                 this.mounted = !1;
@@ -47,7 +47,7 @@ var s = n(73800),
                     r = t.handleExited;
                 return {
                     children: t.firstRender ? (0, c.Kg)(e, r) : (0, c.Rp)(e, n, r),
-                    firstRender: !1
+                    firstRender: !1,
                 };
             }),
             (n.handleExited = function (e, t) {
@@ -57,20 +57,22 @@ var s = n(73800),
                     this.mounted &&
                         this.setState(function (t) {
                             var n = (0, i.Z)({}, t.children);
-                            return (delete n[e.key], { children: n });
+                            return delete n[e.key], { children: n };
                         }));
             }),
             (n.render = function () {
                 var e = this.props,
                     t = e.component,
                     n = e.childFactory,
-                    i = (0, r.Z)(e, ['component', 'childFactory']),
+                    i = (0, r.Z)(e, ["component", "childFactory"]),
                     o = this.state.contextValue,
                     a = u(this.state.children).map(n);
-                return (delete i.appear, delete i.enter, delete i.exit, null === t) ? s.createElement(l.Z.Provider, { value: o }, a) : s.createElement(l.Z.Provider, { value: o }, s.createElement(t, i, a));
+                return (delete i.appear, delete i.enter, delete i.exit, null === t)
+                    ? s.createElement(l.Z.Provider, { value: o }, a)
+                    : s.createElement(l.Z.Provider, { value: o }, s.createElement(t, i, a));
             }),
             t
         );
     })(s.Component);
-((f.propTypes = {}), (f.defaultProps = d));
+(f.propTypes = {}), (f.defaultProps = d);
 let _ = f;

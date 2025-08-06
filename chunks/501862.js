@@ -8,20 +8,20 @@ function l(e) {
     let { countdownText: t, className: n, showInfoIcon: i } = e,
         l = i
             ? (0, r.jsx)(a.d3s, {
-                  size: 'xs',
-                  color: 'var(--custom-premium-colors-banner-yellow)',
-                  className: s.largePillIcon
+                  size: "xs",
+                  color: "var(--custom-premium-colors-banner-yellow)",
+                  className: s.largePillIcon,
               })
             : null;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(s.largeCountdownPill, n),
         children: [
             (0, r.jsx)(a.Text, {
-                variant: 'text-xs/bold',
+                variant: "text-xs/bold",
                 className: s.largeCountdownPillText,
-                children: t.toUpperCase()
+                children: t.toUpperCase(),
             }),
-            l
-        ]
+            l,
+        ],
     });
 }

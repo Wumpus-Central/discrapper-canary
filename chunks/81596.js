@@ -1,4 +1,4 @@
-(e.d(n, { default: () => N }), e(388685));
+e.d(n, { default: () => N }), e(388685);
 var i = e(255367),
     r = e(73800),
     s = e(442837),
@@ -21,79 +21,81 @@ function N(t) {
         (0, i.jsxs)(o.Y0X, {
             size: o.CgR.SMALL,
             transitionState: N,
-            parentComponent: 'UserProfileActivityDeleteHistoryModal',
+            parentComponent: "UserProfileActivityDeleteHistoryModal",
             children: [
                 (0, i.jsxs)(o.hzk, {
                     className: x.content,
                     children: [
                         null != L
-                            ? (0, i.jsxs)('div', {
+                            ? (0, i.jsxs)("div", {
                                   className: x.error,
                                   children: [
                                       (0, i.jsx)(o.k$p, { color: o.TVs.colors.STATUS_DANGER }),
                                       (0, i.jsx)(o.Text, {
-                                          variant: 'text-sm/medium',
-                                          children: T.intl.string(T.t.FMbL3t)
-                                      })
-                                  ]
+                                          variant: "text-sm/medium",
+                                          children: T.intl.string(T.t.FMbL3t),
+                                      }),
+                                  ],
                               })
                             : null,
                         (0, i.jsx)(o.X6q, {
-                            variant: 'heading-lg/semibold',
-                            children: (0, _.y)(e)
+                            variant: "heading-lg/semibold",
+                            children: (0, _.y)(e),
                         }),
                         (0, i.jsx)(o.Text, {
-                            variant: 'text-sm/normal',
-                            tag: 'span',
+                            variant: "text-sm/normal",
+                            tag: "span",
                             children: T.intl.format(T.t.KV72oa, {
                                 settingsHook: (t, n) => {
                                     let r = (0, h.C)({
                                         entry: e,
-                                        onOpenGameSettings: R
+                                        onOpenGameSettings: R,
                                     });
                                     return (0, i.jsx)(
                                         o.eee,
                                         {
                                             onClick: () => {
-                                                (null == f || f({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : a.Z.open(), p());
+                                                null == f || f({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
+                                                    null != r ? r() : a.Z.open(),
+                                                    p();
                                             },
-                                            children: t
+                                            children: t,
                                         },
-                                        n
+                                        n,
                                     );
-                                }
-                            })
+                                },
+                            }),
                         }),
                         (0, i.jsx)(u.Z, {
                             user: n,
                             entry: e,
                             className: x.card,
-                            hideContextMenu: !0
-                        })
-                    ]
+                            hideContextMenu: !0,
+                        }),
+                    ],
                 }),
                 (0, i.jsxs)(o.mzw, {
                     className: x.footer,
                     children: [
                         (0, i.jsx)(o.zxk, {
-                            variant: 'critical-primary',
-                            size: 'sm',
-                            text: null != L ? T.intl.string(T.t['5911LS']) : T.intl.string(T.t.VkKicX),
+                            variant: "critical-primary",
+                            size: "sm",
+                            text: null != L ? T.intl.string(T.t["5911LS"]) : T.intl.string(T.t.VkKicX),
                             disabled: C,
                             onClick: () => {
-                                (null == f || f({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, c.CV)(e, n.id, p));
-                            }
+                                null == f || f({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, c.CV)(e, n.id, p);
+                            },
                         }),
                         (0, i.jsx)(l.zx, {
                             onClick: p,
                             size: l.Ph.SMALL,
                             look: l.iL.FILLED,
                             color: l.Tt.TRANSPARENT,
-                            children: T.intl.string(T.t['ETE/oK'])
-                        })
-                    ]
-                })
-            ]
+                            children: T.intl.string(T.t["ETE/oK"]),
+                        }),
+                    ],
+                }),
+            ],
         })
     );
 }

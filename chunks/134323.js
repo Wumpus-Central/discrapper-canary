@@ -8,12 +8,12 @@ var i = n(481060),
 function l(e, t) {
     return (0, o.U)(t, e)
         ? (0, r.jsx)(i.sNh, {
-              id: 'reply',
-              label: s.intl.string(s.t['5IEsGx']),
+              id: "reply",
+              label: s.intl.string(s.t["5IEsGx"]),
               icon: i.n$P,
               action: (n) => {
                   (0, a.HH)(t, e, n);
-              }
+              },
           })
         : null;
 }

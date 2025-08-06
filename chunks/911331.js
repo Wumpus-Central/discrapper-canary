@@ -1,8 +1,8 @@
 function r(e) {
-    return 'object' == typeof e && null != e && 1 === e.nodeType;
+    return "object" == typeof e && null != e && 1 === e.nodeType;
 }
 function i(e, t) {
-    return (!t || 'hidden' !== e) && 'visible' !== e && 'clip' !== e;
+    return (!t || "hidden" !== e) && "visible" !== e && "clip" !== e;
 }
 function o(e, t) {
     if (e.clientHeight < e.scrollHeight || e.clientWidth < e.scrollWidth) {
@@ -26,7 +26,13 @@ function o(e, t) {
     return !1;
 }
 function a(e, t, n, r, i, o, a, s) {
-    return (o < e && a > t) || (o > e && a < t) ? 0 : (o <= e && s <= n) || (a >= t && s >= n) ? o - e - r : (a > t && s < n) || (o < e && s > n) ? a - t + i : 0;
+    return (o < e && a > t) || (o > e && a < t)
+        ? 0
+        : (o <= e && s <= n) || (a >= t && s >= n)
+          ? o - e - r
+          : (a > t && s < n) || (o < e && s > n)
+            ? a - t + i
+            : 0;
 }
 n.d(t, { Z: () => s });
 var s = function (e, t) {
@@ -37,20 +43,39 @@ var s = function (e, t) {
         c = t.boundary,
         u = t.skipOverflowHiddenElements,
         d =
-            'function' == typeof c
+            "function" == typeof c
                 ? c
                 : function (e) {
                       return e !== c;
                   };
-    if (!r(e)) throw TypeError('Invalid target');
+    if (!r(e)) throw TypeError("Invalid target");
     for (var f, _, p = document.scrollingElement || document.documentElement, h = [], m = e; r(m) && d(m); ) {
         if ((m = null == (_ = (f = m).parentElement) ? f.getRootNode().host || null : _) === p) {
             h.push(m);
             break;
         }
-        (null != m && m === document.body && o(m) && !o(document.documentElement)) || (null != m && o(m, u) && h.push(m));
+        (null != m && m === document.body && o(m) && !o(document.documentElement)) ||
+            (null != m && o(m, u) && h.push(m));
     }
-    for (var g = n.visualViewport ? n.visualViewport.width : innerWidth, E = n.visualViewport ? n.visualViewport.height : innerHeight, b = window.scrollX || pageXOffset, y = window.scrollY || pageYOffset, O = e.getBoundingClientRect(), v = O.height, I = O.width, T = O.top, S = O.right, A = O.bottom, N = O.left, C = 'start' === s || 'nearest' === s ? T : 'end' === s ? A : T + v / 2, R = 'center' === l ? N + I / 2 : 'end' === l ? S : N, P = [], w = 0; w < h.length; w++) {
+    for (
+        var g = n.visualViewport ? n.visualViewport.width : innerWidth,
+            E = n.visualViewport ? n.visualViewport.height : innerHeight,
+            b = window.scrollX || pageXOffset,
+            y = window.scrollY || pageYOffset,
+            O = e.getBoundingClientRect(),
+            v = O.height,
+            I = O.width,
+            T = O.top,
+            S = O.right,
+            A = O.bottom,
+            N = O.left,
+            C = "start" === s || "nearest" === s ? T : "end" === s ? A : T + v / 2,
+            R = "center" === l ? N + I / 2 : "end" === l ? S : N,
+            P = [],
+            w = 0;
+        w < h.length;
+        w++
+    ) {
         var D = h[w],
             L = D.getBoundingClientRect(),
             x = L.height,
@@ -59,7 +84,7 @@ var s = function (e, t) {
             j = L.right,
             U = L.bottom,
             G = L.left;
-        if ('if-needed' === i && T >= 0 && N >= 0 && A <= E && S <= g && T >= k && A <= U && N >= G && S <= j) break;
+        if ("if-needed" === i && T >= 0 && N >= 0 && A <= E && S <= g && T >= k && A <= U && N >= G && S <= j) break;
         var B = getComputedStyle(D),
             Z = parseInt(B.borderLeftWidth, 10),
             F = parseInt(B.borderTopWidth, 10),
@@ -67,21 +92,55 @@ var s = function (e, t) {
             H = parseInt(B.borderBottomWidth, 10),
             Y = 0,
             W = 0,
-            K = 'offsetWidth' in D ? D.offsetWidth - D.clientWidth - Z - V : 0,
-            z = 'offsetHeight' in D ? D.offsetHeight - D.clientHeight - F - H : 0,
-            q = 'offsetWidth' in D ? (0 === D.offsetWidth ? 0 : M / D.offsetWidth) : 0,
-            X = 'offsetHeight' in D ? (0 === D.offsetHeight ? 0 : x / D.offsetHeight) : 0;
-        if (p === D) ((Y = 'start' === s ? C : 'end' === s ? C - E : 'nearest' === s ? a(y, y + E, E, F, H, y + C, y + C + v, v) : C - E / 2), (W = 'start' === l ? R : 'center' === l ? R - g / 2 : 'end' === l ? R - g : a(b, b + g, g, Z, V, b + R, b + R + I, I)), (Y = Math.max(0, Y + y)), (W = Math.max(0, W + b)));
+            K = "offsetWidth" in D ? D.offsetWidth - D.clientWidth - Z - V : 0,
+            z = "offsetHeight" in D ? D.offsetHeight - D.clientHeight - F - H : 0,
+            q = "offsetWidth" in D ? (0 === D.offsetWidth ? 0 : M / D.offsetWidth) : 0,
+            X = "offsetHeight" in D ? (0 === D.offsetHeight ? 0 : x / D.offsetHeight) : 0;
+        if (p === D)
+            (Y =
+                "start" === s
+                    ? C
+                    : "end" === s
+                      ? C - E
+                      : "nearest" === s
+                        ? a(y, y + E, E, F, H, y + C, y + C + v, v)
+                        : C - E / 2),
+                (W =
+                    "start" === l
+                        ? R
+                        : "center" === l
+                          ? R - g / 2
+                          : "end" === l
+                            ? R - g
+                            : a(b, b + g, g, Z, V, b + R, b + R + I, I)),
+                (Y = Math.max(0, Y + y)),
+                (W = Math.max(0, W + b));
         else {
-            ((Y = 'start' === s ? C - k - F : 'end' === s ? C - U + H + z : 'nearest' === s ? a(k, U, x, F, H + z, C, C + v, v) : C - (k + x / 2) + z / 2), (W = 'start' === l ? R - G - Z : 'center' === l ? R - (G + M / 2) + K / 2 : 'end' === l ? R - j + V + K : a(G, j, M, Z, V + K, R, R + I, I)));
+            (Y =
+                "start" === s
+                    ? C - k - F
+                    : "end" === s
+                      ? C - U + H + z
+                      : "nearest" === s
+                        ? a(k, U, x, F, H + z, C, C + v, v)
+                        : C - (k + x / 2) + z / 2),
+                (W =
+                    "start" === l
+                        ? R - G - Z
+                        : "center" === l
+                          ? R - (G + M / 2) + K / 2
+                          : "end" === l
+                            ? R - j + V + K
+                            : a(G, j, M, Z, V + K, R, R + I, I));
             var Q = D.scrollLeft,
                 J = D.scrollTop;
-            ((C += J - (Y = Math.max(0, Math.min(J + Y / X, D.scrollHeight - x / X + z)))), (R += Q - (W = Math.max(0, Math.min(Q + W / q, D.scrollWidth - M / q + K)))));
+            (C += J - (Y = Math.max(0, Math.min(J + Y / X, D.scrollHeight - x / X + z)))),
+                (R += Q - (W = Math.max(0, Math.min(Q + W / q, D.scrollWidth - M / q + K))));
         }
         P.push({
             el: D,
             top: Y,
-            left: W
+            left: W,
         });
     }
     return P;

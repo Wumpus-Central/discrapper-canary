@@ -5,17 +5,17 @@ var i = n(120356),
     o = n.n(i),
     a = n(669546);
 function s(e) {
-    let { asset: t, size: n = 'md', className: i } = e,
+    let { asset: t, size: n = "md", className: i } = e,
         s = o()(
             a.asset,
             {
                 [a.assetPlaceholder]: null == t && !1,
-                [a['asset--'.concat(n)]]: null != n
+                [a["asset--".concat(n)]]: null != n,
             },
-            i
+            i,
         );
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: s,
-        children: null != t ? t : null
+        children: null != t ? t : null,
     });
 }

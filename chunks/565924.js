@@ -17,7 +17,13 @@ function a(e, t) {
     let c = o(e.record),
         u = o(t.record);
     if (c !== u) return c - u;
-    let d = null != (a = null != (i = e.sortable) ? i : null == (n = e.comparator) ? void 0 : n.toLocaleLowerCase()) ? a : '',
-        f = null != (l = null != (s = e.sortable) ? s : null == (r = t.comparator) ? void 0 : r.toLocaleLowerCase()) ? l : '';
+    let d =
+            null != (a = null != (i = e.sortable) ? i : null == (n = e.comparator) ? void 0 : n.toLocaleLowerCase())
+                ? a
+                : "",
+        f =
+            null != (l = null != (s = e.sortable) ? s : null == (r = t.comparator) ? void 0 : r.toLocaleLowerCase())
+                ? l
+                : "";
     return d < f ? -1 : +(d > f);
 }

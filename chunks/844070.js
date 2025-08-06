@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => d,
-    z: () => f
+    z: () => f,
 });
 var r = n(493683),
     i = n(529103),
@@ -20,17 +20,17 @@ function u(e, t, n) {
             omitClickTracking: !0,
             tag: e.id,
             onClick: n,
-            isUserAvatar: !0
-        }
+            isUserAvatar: !0,
+        },
     );
 }
 function d(e) {
-    u(e, c.intl.string(c.t['t3+Af3']), () => {
+    u(e, c.intl.string(c.t["t3+Af3"]), () => {
         {
             let { openUserProfileModal: t } = n(892001);
             t({
                 userId: e.id,
-                sourceAnalyticsLocations: [a.Z.FRIEND_REQUEST_NOTIFICATION]
+                sourceAnalyticsLocations: [a.Z.FRIEND_REQUEST_NOTIFICATION],
             });
         }
         i.Z.transitionToSection(l.pJs.PENDING, { explicit: !0 });

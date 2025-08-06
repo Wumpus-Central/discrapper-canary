@@ -8,13 +8,14 @@ var i = n(904245),
     c = n(585483),
     d = n(981631);
 let u = {
-    binds: ['shift+esc'],
+    binds: ["shift+esc"],
     comboKeysBindGlobal: !0,
     action() {
         let e = o.Z.getGuildId();
         if (null == e || !s.default.getGuildHasUnreadIgnoreMuted(e)) return;
         (0, r.Z)([e]);
         let t = l.Z.getChannelId(e);
-        null != t && (a.Z.getMessages(t).hasMoreAfter ? i.Z.jumpToPresent(t, d.AQB) : c.S.dispatch(d.CkL.SCROLLTO_PRESENT));
-    }
+        null != t &&
+            (a.Z.getMessages(t).hasMoreAfter ? i.Z.jumpToPresent(t, d.AQB) : c.S.dispatch(d.CkL.SCROLLTO_PRESENT));
+    },
 };

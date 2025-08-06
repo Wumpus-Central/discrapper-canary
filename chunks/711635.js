@@ -1,13 +1,24 @@
-(r.r(t), r.d(t, { default: () => s }), r(388685));
+r.r(t), r.d(t, { default: () => s }), r(388685);
 var u = r(255367),
     n = r(73800),
     d = r(399882);
 let s = n.forwardRef(function (e, t) {
-    let { className: r, src: s, playing: a, preload: l = '', onEnded: f, onLoadedMetadata: i, onError: o, muted: c, volume: v, playbackRate: E } = e,
+    let {
+            className: r,
+            src: s,
+            playing: a,
+            preload: l = "",
+            onEnded: f,
+            onLoadedMetadata: i,
+            onError: o,
+            muted: c,
+            volume: v,
+            playbackRate: E,
+        } = e,
         p = n.useRef(null),
         [m] = n.useState(() => {
             let e = new d.Z.OGVPlayer();
-            return ((e.preload = l), (e.controls = !1), e);
+            return (e.preload = l), (e.controls = !1), e;
         });
     return (
         n.useImperativeHandle(t, () => m, [m]),
@@ -49,33 +60,33 @@ let s = n.forwardRef(function (e, t) {
         n.useEffect(() => {
             if (null != f)
                 return (
-                    m.addEventListener('ended', f),
+                    m.addEventListener("ended", f),
                     () => {
-                        m.removeEventListener('ended', f);
+                        m.removeEventListener("ended", f);
                     }
                 );
         }, [m, f]),
         n.useEffect(() => {
             if (null != i)
                 return (
-                    m.addEventListener('loadedmetadata', i),
+                    m.addEventListener("loadedmetadata", i),
                     () => {
-                        m.removeEventListener('loadedmetadata', i);
+                        m.removeEventListener("loadedmetadata", i);
                     }
                 );
         }, [m, i]),
         n.useEffect(() => {
             if (null != o)
                 return (
-                    m.addEventListener('error', o),
+                    m.addEventListener("error", o),
                     () => {
-                        m.removeEventListener('error', o);
+                        m.removeEventListener("error", o);
                     }
                 );
         }, [m, o]),
-        (0, u.jsx)('div', {
+        (0, u.jsx)("div", {
             ref: p,
-            className: r
+            className: r,
         })
     );
 });

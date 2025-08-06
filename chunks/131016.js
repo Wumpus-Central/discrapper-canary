@@ -1,7 +1,7 @@
 n.d(t, {
     aY: () => c,
     bN: () => l,
-    hX: () => s
+    hX: () => s,
 });
 var r = n(688619),
     i = n.n(r),
@@ -9,13 +9,13 @@ var r = n(688619),
     a = n(660662);
 function s(e) {
     let t = i()(e),
-        n = t.get('hsl.l');
+        n = t.get("hsl.l");
     return {
         main: e,
-        light1: t.set('hsl.l', Math.min(1, 1.2 * n)).hex(),
-        light2: t.set('hsl.l', Math.min(1, 1.6 * n)).hex(),
-        dark1: t.set('hsl.l', Math.max(0, 0.6 * n)).hex(),
-        dark2: t.set('hsl.l', Math.max(0, 0.2 * n)).hex()
+        light1: t.set("hsl.l", Math.min(1, 1.2 * n)).hex(),
+        light2: t.set("hsl.l", Math.min(1, 1.6 * n)).hex(),
+        dark1: t.set("hsl.l", Math.max(0, 0.6 * n)).hex(),
+        dark2: t.set("hsl.l", Math.max(0, 0.2 * n)).hex(),
     };
 }
 function l(e) {
@@ -24,7 +24,7 @@ function l(e) {
         : {
               fontId: e.font_id,
               effectId: e.effect_id,
-              colors: e.colors
+              colors: e.colors,
           };
 }
 function c() {
@@ -38,6 +38,6 @@ function c() {
     return {
         fontId: n,
         effectId: t,
-        colors: e
+        colors: e,
     };
 }

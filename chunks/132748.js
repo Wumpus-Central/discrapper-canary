@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var r,
     i,
     o = n(73800);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,9 +31,10 @@ let l = (0, n(112724).Z)(
             return n(r, e, t);
         }
         constructor(...e) {
-            (super(...e), a(this, 'state', { columns: s(this.props.width, this.props.desiredItemWidth, this.props.maxColumns) }));
+            super(...e),
+                a(this, "state", { columns: s(this.props.width, this.props.desiredItemWidth, this.props.maxColumns) });
         }
     }),
-    a(i, 'defaultProps', { desiredItemWidth: 200 }),
-    i)
+    a(i, "defaultProps", { desiredItemWidth: 200 }),
+    i),
 );

@@ -20,7 +20,7 @@ let h = (e) => {
         {
             value: n,
             children: (0, r.jsx)(s.lo1.Label, {
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: m.row,
                     children: [
                         h
@@ -28,23 +28,23 @@ let h = (e) => {
                                   className: m.__invalid_emoji,
                                   emojiId: l,
                                   emojiName: d,
-                                  animated: !!(null == u ? void 0 : u.animated)
+                                  animated: !!(null == u ? void 0 : u.animated),
                               })
                             : (0, r.jsx)(s.lO_, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: m.__invalid_emoji
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: m.__invalid_emoji,
                               }),
                         (0, r.jsx)(s.Text, {
-                            variant: 'text-md/semibold',
-                            color: 'header-secondary',
-                            children: i
-                        })
-                    ]
-                })
-            })
+                            variant: "text-md/semibold",
+                            color: "header-secondary",
+                            children: i,
+                        }),
+                    ],
+                }),
+            }),
         },
-        n
+        n,
     );
 };
 function g(e) {
@@ -58,7 +58,7 @@ function g(e) {
             (!i || n.has(e)) && (a(e), o());
         },
         placeholder: u.intl.string(u.t.MbhGm5),
-        'aria-label': u.intl.string(u.t.MbhGm5),
-        children: (e) => m(e, c).map((e) => (0, r.jsx)(h, { tag: e }, e.id))
+        "aria-label": u.intl.string(u.t.MbhGm5),
+        children: (e) => m(e, c).map((e) => (0, r.jsx)(h, { tag: e }, e.id)),
     });
 }

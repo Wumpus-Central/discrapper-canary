@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => d }), t(539854));
+t.d(n, { Z: () => d }), t(539854);
 var l = t(255367),
     i = t(73800),
     r = t(120356),
@@ -14,17 +14,17 @@ function d(e) {
         var e, n, t;
         return null == (t = h.current) || null == (n = t.ref) || null == (e = n.blur) ? void 0 : e.call(n);
     }, []);
-    let g = a.intl.formatToPlainString(a.t['ZrTT/P'], { userCount: d }),
+    let g = a.intl.formatToPlainString(a.t["ZrTT/P"], { userCount: d }),
         m = [
             (0, l.jsx)(
                 c.njP.Item,
                 {
                     className: u.tabBarItem,
                     id: s.fL.EVENT_INFO,
-                    children: a.intl.string(a.t.iW6Xur)
+                    children: a.intl.string(a.t.iW6Xur),
                 },
-                'event-details'
-            )
+                "event-details",
+            ),
         ];
     return (
         f ||
@@ -34,34 +34,34 @@ function d(e) {
                     {
                         className: u.tabBarItem,
                         id: s.fL.RSVP_LIST,
-                        children: g
+                        children: g,
                     },
-                    'is-hub'
-                )
+                    "is-hub",
+                ),
             ),
-        (0, l.jsxs)('div', {
+        (0, l.jsxs)("div", {
             className: u.container,
             children: [
                 (0, l.jsx)(c.P3F, {
                     ref: h,
                     onClick: n,
                     className: u.closeButton,
-                    'aria-label': a.intl.string(a.t.cpT0Cg),
+                    "aria-label": a.intl.string(a.t.cpT0Cg),
                     children: (0, l.jsx)(c.Dio, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: o()(u.closeIcon, _ && u.closeIconBanner)
-                    })
+                        size: "md",
+                        color: "currentColor",
+                        className: o()(u.closeIcon, _ && u.closeIconBanner),
+                    }),
                 }),
                 (0, l.jsx)(c.njP, {
                     className: u.tabBar,
-                    'aria-label': a.intl.string(a.t['+1H47u']),
+                    "aria-label": a.intl.string(a.t["+1H47u"]),
                     selectedItem: t,
-                    type: 'top',
+                    type: "top",
                     onItemSelect: r,
-                    children: m
-                })
-            ]
+                    children: m,
+                }),
+            ],
         })
     );
 }

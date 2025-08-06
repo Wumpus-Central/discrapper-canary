@@ -17,24 +17,24 @@ function p(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                })
+                }),
             )),
             l.forEach(function (n) {
                 var l;
-                ((l = t[n]),
+                (l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[n] = l));
-            }));
+                        : (e[n] = l);
+            });
     }
     return e;
 }
@@ -58,11 +58,11 @@ function m(e, n) {
 }
 function h(e, n, h) {
     let j = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    ((0, o.$)(j), (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]));
+    (0, o.$)(j), (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
     let P = (0, r.e7)([g.Z], () => g.Z.getChannel(h)),
         v = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
         x = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
-        y = (0, u.Z)(P, 'Context Menu'),
+        y = (0, u.Z)(P, "Context Menu"),
         N = (0, d.yw)(null == P ? void 0 : P.id);
     return (null == x ? void 0 : x.id) === e.id
         ? [y]
@@ -71,49 +71,55 @@ function h(e, n, h) {
           : [
                 N
                     ? (0, l.jsx)(a.sNh, {
-                          id: 'remove',
-                          label: P.isForumPost() ? O.intl.formatToPlainString(O.t.v2KNNz, { user: e.username }) : O.intl.formatToPlainString(O.t['27xWaW'], { user: e.username }),
-                          color: 'danger',
-                          action: () => c.Z.removeMember(P.id, e.id, 'Context Menu')
+                          id: "remove",
+                          label: P.isForumPost()
+                              ? O.intl.formatToPlainString(O.t.v2KNNz, { user: e.username })
+                              : O.intl.formatToPlainString(O.t["27xWaW"], { user: e.username }),
+                          color: "danger",
+                          action: () => c.Z.removeMember(P.id, e.id, "Context Menu"),
                       })
                     : null,
                 (0, s.BK)(e, v)
                     ? (0, l.jsx)(a.sNh, {
-                          id: 'kick',
-                          label: N ? O.intl.formatToPlainString(O.t['1Ie87u'], { user: e.username }) : O.intl.formatToPlainString(O.t['9l/iTU'], { user: e.username }),
-                          color: 'danger',
+                          id: "kick",
+                          label: N
+                              ? O.intl.formatToPlainString(O.t["1Ie87u"], { user: e.username })
+                              : O.intl.formatToPlainString(O.t["9l/iTU"], { user: e.username }),
+                          color: "danger",
                           action: () =>
                               (0, a.ZDy)(async () => {
-                                  let { default: n } = await t.e('5454').then(t.bind(t, 854360));
+                                  let { default: n } = await t.e("5454").then(t.bind(t, 854360));
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,
                                           m(p({}, t), {
                                               guildId: v.id,
-                                              user: e
-                                          })
+                                              user: e,
+                                          }),
                                       );
-                              })
+                              }),
                       })
                     : null,
                 (0, s.mm)(e, v)
                     ? (0, l.jsx)(a.sNh, {
-                          id: 'ban',
-                          label: N ? O.intl.formatToPlainString(O.t.i62APT, { user: e.username }) : O.intl.formatToPlainString(O.t.WnpUBg, { user: e.username }),
-                          color: 'danger',
+                          id: "ban",
+                          label: N
+                              ? O.intl.formatToPlainString(O.t.i62APT, { user: e.username })
+                              : O.intl.formatToPlainString(O.t.WnpUBg, { user: e.username }),
+                          color: "danger",
                           action: () =>
                               (0, a.ZDy)(async () => {
-                                  let { default: n } = await t.e('43350').then(t.bind(t, 98746));
+                                  let { default: n } = await t.e("43350").then(t.bind(t, 98746));
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,
                                           m(p({}, t), {
                                               guildId: v.id,
-                                              user: e
-                                          })
+                                              user: e,
+                                          }),
                                       );
-                              })
+                              }),
                       })
-                    : null
+                    : null,
             ];
 }

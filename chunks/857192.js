@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => S }), n(997841));
+n.r(t), n.d(t, { default: () => S }), n(997841);
 var r,
     i = n(261470),
     o = n(213919),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,20 +27,20 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let m = (() => {
-        let e = ''.concat(location.protocol, '//').concat(location.host, '/__development/source_maps'),
+        let e = "".concat(location.protocol, "//").concat(location.host, "/__development/source_maps"),
             t = null,
             n = new i.Z(5 * d.Z.Millis.SECOND, +d.Z.Millis.MINUTE, !0),
             r = () => {
@@ -49,15 +49,20 @@ let m = (() => {
                         url: e,
                         headers: { Authorization: o.getToken() },
                         oldFormErrors: !0,
-                        rejectWithError: !0
+                        rejectWithError: !0,
                     })
                     .then(
                         (e) => {
-                            401 === e.status || 403 === e.status ? ((t = null), (0, u.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (t = setTimeout(r, n.fail())) : (n.succeed(), (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * d.Z.Millis.SECOND * 0.75)));
+                            401 === e.status || 403 === e.status
+                                ? ((t = null), (0, u.y)({ sourceMapsEnabled: !1 }))
+                                : 200 !== e.status
+                                  ? (t = setTimeout(r, n.fail()))
+                                  : (n.succeed(),
+                                    (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * d.Z.Millis.SECOND * 0.75)));
                         },
                         () => {
                             t = setTimeout(r, n.fail());
-                        }
+                        },
                     );
             };
         return {
@@ -71,12 +76,12 @@ let m = (() => {
                               url: e,
                               headers: { Authorization: o.getToken() },
                               oldFormErrors: !0,
-                              rejectWithError: !0
+                              rejectWithError: !0,
                           })));
-            }
+            },
         };
     })(),
-    g = 'DeveloperOptionsStore',
+    g = "DeveloperOptionsStore",
     E = {
         trace: !1,
         canary: !1,
@@ -94,11 +99,11 @@ let m = (() => {
         disableAppCollectionsCache: !1,
         isStreamInfoOverlayEnabled: !1,
         preventPopoutClose: !1,
-        logKeyboardMismatches: !1
+        logKeyboardMismatches: !1,
     },
     b = h({}, E);
 function y(e) {
-    ((b = h({}, E, b, e)), m.set(b.sourceMapsEnabled), l.K.set(g, b));
+    (b = h({}, E, b, e)), m.set(b.sourceMapsEnabled), l.K.set(g, b);
 }
 function O(e) {
     let { settings: t } = e;
@@ -111,7 +116,7 @@ function I(e) {
     var t;
     let n = ((null != (t = e.user.flags) ? t : 0) & _.xW$.STAFF) === _.xW$.STAFF,
         r = n || null != e.user.personal_connection_id;
-    (n && m.set(b.sourceMapsEnabled), f.Z.setTags({ isStaff: r.toString() }));
+    n && m.set(b.sourceMapsEnabled), f.Z.setTags({ isStaff: r.toString() });
 }
 class T extends (r = a.ZP.Store) {
     initialize() {
@@ -174,13 +179,13 @@ class T extends (r = a.ZP.Store) {
             Object.keys(b).map((e) => b[e]),
             Object.keys(b)
                 .filter((e) => b[e])
-                .join(',')
+                .join(",")
         );
     }
 }
-p(T, 'displayName', 'DeveloperOptionsStore');
+p(T, "displayName", "DeveloperOptionsStore");
 let S = new T(c.Z, {
     LOGOUT: v,
     CONNECTION_OPEN: I,
-    DEVELOPER_OPTIONS_UPDATE_SETTINGS: O
+    DEVELOPER_OPTIONS_UPDATE_SETTINGS: O,
 });

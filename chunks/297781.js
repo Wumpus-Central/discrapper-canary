@@ -17,7 +17,7 @@ n.d(t, {
     n8: () => K,
     pQ: () => F,
     v1: () => V,
-    wO: () => Z
+    wO: () => Z,
 });
 var r = n(255367),
     i = n(73800),
@@ -48,7 +48,7 @@ function S(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -58,15 +58,15 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 S(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -74,11 +74,11 @@ function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -100,7 +100,8 @@ function R(e, t) {
         i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -110,7 +111,7 @@ function P(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let w = {
@@ -118,10 +119,22 @@ let w = {
     [c.s.PLAYED_GAME]: [U, G, j, z, Z, H, K, V, F],
     [c.s.TOP_GAME]: [Y],
     [c.s.WATCHED_MEDIA]: [q, X],
-    [c.s.LAUNCHED_ACTIVITY]: [U, G, j, z, K, F]
+    [c.s.LAUNCHED_ACTIVITY]: [U, G, j, z, K, F],
 };
 var D = (function (e) {
-    return ((e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED'), (e[(e.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (e[(e.OVERLAY = 7)] = 'OVERLAY'), (e[(e.FRIENDS_POPOUT = 8)] = 'FRIENDS_POPOUT'), (e[(e.APP_LAUNCHER = 9)] = 'APP_LAUNCHER'), e);
+    return (
+        (e[(e.CARD = 0)] = "CARD"),
+        (e[(e.POPOUT = 1)] = "POPOUT"),
+        (e[(e.STREAMING_POPOUT = 2)] = "STREAMING_POPOUT"),
+        (e[(e.GAME_PROFILE = 3)] = "GAME_PROFILE"),
+        (e[(e.USER_PROFILE = 4)] = "USER_PROFILE"),
+        (e[(e.EMBED = 5)] = "EMBED"),
+        (e[(e.LEADERBOARD_POPOUT = 6)] = "LEADERBOARD_POPOUT"),
+        (e[(e.OVERLAY = 7)] = "OVERLAY"),
+        (e[(e.FRIENDS_POPOUT = 8)] = "FRIENDS_POPOUT"),
+        (e[(e.APP_LAUNCHER = 9)] = "APP_LAUNCHER"),
+        e
+    );
 })({});
 let L = i.createContext({});
 function x() {
@@ -129,8 +142,8 @@ function x() {
 }
 function M(e) {
     var { children: t } = e,
-        n = R(e, ['children']);
-    return (0, r.jsx)('div', C(A({ className: T.badgeContainer }, n), { children: t }));
+        n = R(e, ["children"]);
+    return (0, r.jsx)("div", C(A({ className: T.badgeContainer }, n), { children: t }));
 }
 function k(e) {
     let { Icon: t, text: n, iconColor: i, tooltipText: o, showTooltip: a } = e,
@@ -144,19 +157,19 @@ function k(e) {
                 C(A({}, e), {
                     children: [
                         (0, r.jsx)(t, {
-                            size: 'xxs',
-                            color: null != i ? i : l
+                            size: "xxs",
+                            color: null != i ? i : l,
                         }),
                         (0, r.jsx)(f.Text, {
-                            variant: 'text-xs/normal',
+                            variant: "text-xs/normal",
                             color: s,
                             className: T.badgeLabel,
                             scaleFontToUserSetting: 5 === c,
-                            children: n
-                        })
-                    ]
-                })
-            )
+                            children: n,
+                        }),
+                    ],
+                }),
+            ),
     });
 }
 function j(e) {
@@ -167,7 +180,7 @@ function j(e) {
         ? null
         : (0, r.jsx)(k, {
               Icon: f.gj8,
-              text: n.name
+              text: n.name,
           });
 }
 function U(e) {
@@ -175,24 +188,24 @@ function U(e) {
         { defaultTextColor: i, defaultIconColor: o, location: a } = x(),
         s = (0, b.Jg)(t) && (0, h.Hi)(a, [0, 4, 7, 9]),
         l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : o,
-        c = s ? 'text-feedback-positive' : i,
+        c = s ? "text-feedback-positive" : i,
         { streamPreviewUrl: u } = (0, E.Z)(t),
-        { enabled: d } = _.c.useExperiment({ location: 'GameTimestampBadge' }, { autoTrackExposure: !0 }),
+        { enabled: d } = _.c.useExperiment({ location: "GameTimestampBadge" }, { autoTrackExposure: !0 }),
         p = null != u ? f.hGI : (0, g.Mq)(t) && !d ? f.jje : f.iWm;
     return (0, r.jsxs)(M, {
         children: [
             (0, r.jsx)(p, {
-                size: 'xxs',
-                color: l
+                size: "xxs",
+                color: l,
             }),
             (0, r.jsx)(O.ZP, {
                 entry: t,
                 textColor: c,
                 hovered: n,
                 bold: !0,
-                scaleFontToUserSetting: 5 === a
-            })
-        ]
+                scaleFontToUserSetting: 5 === a,
+            }),
+        ],
     });
 }
 function G(e) {
@@ -205,16 +218,16 @@ function G(e) {
         : (0, r.jsxs)(M, {
               children: [
                   (0, r.jsx)(f.BFJ, {
-                      size: 'xxs',
-                      color: i
+                      size: "xxs",
+                      color: i,
                   }),
                   (0, r.jsx)(f.Text, {
-                      variant: 'text-xs/normal',
+                      variant: "text-xs/normal",
                       color: n,
                       lineClamp: 1,
-                      children: s
-                  })
-              ]
+                      children: s,
+                  }),
+              ],
           });
 }
 function B(e) {
@@ -222,21 +235,21 @@ function B(e) {
         { defaultTextColor: i, defaultIconColor: o, location: a } = x(),
         s = (0, b.Jg)(t) && (0, h.Hi)(a, [0, 4]),
         l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : o,
-        c = s ? 'text-feedback-positive' : i;
-    return (0, r.jsxs)('div', {
+        c = s ? "text-feedback-positive" : i;
+    return (0, r.jsxs)("div", {
         className: T.badgeContainer,
         children: [
             (0, r.jsx)(f.RZG, {
-                size: 'xxs',
-                color: l
+                size: "xxs",
+                color: l,
             }),
             (0, r.jsx)(O.ZP, {
                 entry: t,
                 textColor: c,
                 hovered: n,
-                bold: !0
-            })
-        ]
+                bold: !0,
+            }),
+        ],
     });
 }
 function Z(e) {
@@ -247,7 +260,7 @@ function Z(e) {
         ? (0, r.jsx)(k, {
               Icon: f._IE,
               text: I.intl.string(I.t.keY6mZ),
-              iconColor: i
+              iconColor: i,
           })
         : null;
 }
@@ -264,7 +277,7 @@ function F(e) {
               Icon: f.ANZ,
               text: a,
               tooltipText: s,
-              showTooltip: o
+              showTooltip: o,
           });
 }
 function V(e) {
@@ -278,7 +291,7 @@ function V(e) {
         Icon: f.Oe7,
         showTooltip: !i,
         tooltipText: a,
-        text: i ? a : I.intl.string(I.t.adnLsL)
+        text: i ? a : I.intl.string(I.t.adnLsL),
     });
 }
 function H(e) {
@@ -289,8 +302,8 @@ function H(e) {
         ? (0, r.jsx)(k, {
               Icon: f.qOE,
               showTooltip: 0 === n,
-              text: I.intl.formatToPlainString(I.t['Klie/P'], { days: i }),
-              tooltipText: I.intl.formatToPlainString(I.t.PwMe0t, { days: i })
+              text: I.intl.formatToPlainString(I.t["Klie/P"], { days: i }),
+              tooltipText: I.intl.formatToPlainString(I.t.PwMe0t, { days: i }),
           })
         : null;
 }
@@ -300,13 +313,13 @@ function Y(e) {
         i = 0 !== n,
         o = (0, b.yA)(t);
     if (null == o) return null;
-    let a = i ? ' \u2014 ' : ': ',
+    let a = i ? " \u2014 " : ": ",
         s = i ? I.t.C0Axoa : I.t.SDRHgo;
     return (0, r.jsx)(k, {
         Icon: f.rm8,
         text: (0, r.jsxs)(r.Fragment, {
-            children: [I.intl.string(I.t['/50eHh']), a, I.intl.format(s, { hours: Math.round(o / p.Z.Seconds.HOUR) })]
-        })
+            children: [I.intl.string(I.t["/50eHh"]), a, I.intl.format(s, { hours: Math.round(o / p.Z.Seconds.HOUR) })],
+        }),
     });
 }
 function W(e) {
@@ -315,10 +328,12 @@ function W(e) {
         { location: i } = x(),
         o = null == (t = (0, b.PJ)(n, u.N.AGGREGATE_COUNT)) ? void 0 : t.count;
     if (null == o) return null;
-    let a = (0, h.Hi)(i, [1, 2, 5]) ? I.intl.formatToPlainString(I.t.HtifnJ, { count: o }) : I.intl.formatToPlainString(I.t['jq/Bmp'], { count: o });
+    let a = (0, h.Hi)(i, [1, 2, 5])
+        ? I.intl.formatToPlainString(I.t.HtifnJ, { count: o })
+        : I.intl.formatToPlainString(I.t["jq/Bmp"], { count: o });
     return (0, r.jsx)(k, {
         Icon: f.rm8,
-        text: a
+        text: a,
     });
 }
 function K(e) {
@@ -330,7 +345,7 @@ function K(e) {
         ? null
         : (0, r.jsx)(k, {
               Icon: f.YqE,
-              text: I.intl.string(I.t.kAlUs7)
+              text: I.intl.string(I.t.kAlUs7),
           });
 }
 function z(e) {
@@ -338,11 +353,11 @@ function z(e) {
         { location: n } = x();
     if (3 === n) return null;
     let i = m.default.extractTimestamp(t.extra.application_id);
-    return l()().diff(l()(i), 'days') > v.G
+    return l()().diff(l()(i), "days") > v.G
         ? null
         : (0, r.jsx)(k, {
               Icon: f.rIT,
-              text: I.intl.string(I.t.vYuyWV)
+              text: I.intl.string(I.t.vYuyWV),
           });
 }
 function q(e) {
@@ -350,21 +365,21 @@ function q(e) {
         { defaultTextColor: i, defaultIconColor: o, location: a } = x(),
         s = (0, b.Jg)(t) && 4 === a,
         l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : o,
-        c = s ? 'text-feedback-positive' : i;
-    return (0, r.jsxs)('div', {
+        c = s ? "text-feedback-positive" : i;
+    return (0, r.jsxs)("div", {
         className: T.badgeContainer,
         children: [
             (0, r.jsx)(f.ARS, {
-                size: 'xxs',
-                color: l
+                size: "xxs",
+                color: l,
             }),
             (0, r.jsx)(O.ZP, {
                 entry: t,
                 textColor: c,
                 hovered: n,
-                bold: !0
-            })
-        ]
+                bold: !0,
+            }),
+        ],
     });
 }
 function X(e) {
@@ -374,7 +389,7 @@ function X(e) {
         ? null
         : (0, r.jsx)(k, {
               Icon: f.sVe,
-              text: n
+              text: n,
           });
 }
 function Q(e) {
@@ -383,33 +398,33 @@ function Q(e) {
     return (
         (t = (0, h.Hi)(n, [1, 5, 6])
             ? {
-                  defaultTextColor: 'content-inventory-overlay-text-secondary',
-                  defaultIconColor: f.TVs.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
+                  defaultTextColor: "content-inventory-overlay-text-secondary",
+                  defaultIconColor: f.TVs.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
               }
             : 2 === n
-              ? { defaultTextColor: 'interactive-normal' }
+              ? { defaultTextColor: "interactive-normal" }
               : 3 === n
-                ? { defaultTextColor: 'text-muted' }
+                ? { defaultTextColor: "text-muted" }
                 : 4 === n
                   ? {
-                        defaultTextColor: 'text-secondary',
-                        defaultIconColor: f.TVs.colors.TEXT_SECONDARY
+                        defaultTextColor: "text-secondary",
+                        defaultIconColor: f.TVs.colors.TEXT_SECONDARY,
                     }
-                  : { defaultTextColor: 'text-secondary' }),
+                  : { defaultTextColor: "text-secondary" }),
         (0, r.jsx)(L.Provider, {
             value: A({ location: n }, t),
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: a()(
                     T.badgesContainer,
                     {
                         [T.badgesContainerCard]: 0 === n,
                         [T.badgesContainerPopout]: (0, h.Hi)(n, [1, 2]),
-                        [T.badgesContainerGameProfile]: 3 === n
+                        [T.badgesContainerGameProfile]: 3 === n,
                     },
-                    o
+                    o,
                 ),
-                children: i
-            })
+                children: i,
+            }),
         })
     );
 }
@@ -437,6 +452,6 @@ function $(e) {
         : (0, r.jsx)(Q, {
               location: n,
               className: i,
-              children: o
+              children: o,
           });
 }

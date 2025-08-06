@@ -4,6 +4,6 @@ var r = {
     },
     inject: function (e) {
         r.current = e;
-    }
+    },
 };
 e.exports = r;

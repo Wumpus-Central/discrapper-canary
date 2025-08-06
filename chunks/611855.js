@@ -9,22 +9,22 @@ var i = n(120356),
     c = n(388032),
     u = n(286737);
 let d = function (e) {
-    let { className: t, color: n = 'header-primary', textOpacity: i = 0.9 } = e,
+    let { className: t, color: n = "header-primary", textOpacity: i = 0.9 } = e,
         d = (0, l.Fg)(),
         f = (0, a.wj)(d) ? 0.2 : 0.08;
     return (0, r.jsxs)(s.Text, {
-        variant: 'text-xxs/medium',
+        variant: "text-xxs/medium",
         color: n,
         className: o()(u.promotedTag, t),
         children: [
-            (0, r.jsx)('span', {
+            (0, r.jsx)("span", {
                 className: u.promotedTagBackground,
-                style: { backgroundColor: 'rgba(0, 0, 0, '.concat(f, ')') }
+                style: { backgroundColor: "rgba(0, 0, 0, ".concat(f, ")") },
             }),
-            (0, r.jsx)('span', {
+            (0, r.jsx)("span", {
                 style: { opacity: i },
-                children: c.intl.string(c.t.o6FLcH)
-            })
-        ]
+                children: c.intl.string(c.t.o6FLcH),
+            }),
+        ],
     });
 };

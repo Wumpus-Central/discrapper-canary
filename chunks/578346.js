@@ -1,7 +1,7 @@
 a.d(e, {
     D2: () => E,
     Hj: () => c,
-    rK: () => s
+    rK: () => s,
 });
 var r = a(176984),
     _ = a(622916),
@@ -9,7 +9,7 @@ var r = a(176984),
 let o = {},
     i = {};
 function c(t, e) {
-    ((o[t] = o[t] || []), o[t].push(e));
+    (o[t] = o[t] || []), o[t].push(e);
 }
 function E(t, e) {
     i[t] || (e(), (i[t] = !0));
@@ -27,7 +27,7 @@ function s(t, e) {
 Type: ${t}
 Name: ${(0, n.$P)(o)}
 Error:`,
-                        e
+                        e,
                     );
             }
 }

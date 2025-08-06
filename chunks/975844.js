@@ -3,15 +3,15 @@ var a = r(98405),
     s = r(146063),
     o = r(967333),
     i = Array;
-(a(
+a(
     {
-        target: 'Array',
-        proto: !0
+        target: "Array",
+        proto: !0,
     },
     {
         toReversed: function () {
             return n(s(this), i);
-        }
-    }
+        },
+    },
 ),
-    o('toReversed'));
+    o("toReversed");

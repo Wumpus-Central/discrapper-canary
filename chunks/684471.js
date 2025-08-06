@@ -21,27 +21,27 @@ function h(t) {
         header: u.intl.string(u.t.sSMgCw),
         description: u.intl.formatToPlainString(u.t.q2QrTU, { username: f }),
         heroImageSrc: p,
-        heroImageAlt: u.intl.string(u.t['3QhxXF']),
-        children: (0, r.jsxs)('div', {
+        heroImageAlt: u.intl.string(u.t["3QhxXF"]),
+        children: (0, r.jsxs)("div", {
             className: x.buttonContainer,
             children: [
                 (0, r.jsx)(i.zxk, {
-                    text: u.intl.string(u.t['+o4Q7e']),
-                    variant: 'primary',
+                    text: u.intl.string(u.t["+o4Q7e"]),
+                    variant: "primary",
                     fullWidth: !0,
                     onClick: () => {
-                        (h(l.x.TAKE_ACTION), n(c.NM.USER_TAKEOVER_MODAL_TAKE_ACTION));
-                    }
+                        h(l.x.TAKE_ACTION), n(c.NM.USER_TAKEOVER_MODAL_TAKE_ACTION);
+                    },
                 }),
                 (0, r.jsx)(i.zxk, {
                     text: u.intl.string(u.t.xLkGzM),
-                    variant: 'secondary',
+                    variant: "secondary",
                     fullWidth: !0,
                     onClick: () => {
-                        (h(l.x.SAFETY_TIPS), n(c.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS));
-                    }
-                })
-            ]
-        })
+                        h(l.x.SAFETY_TIPS), n(c.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS);
+                    },
+                }),
+            ],
+        }),
     });
 }

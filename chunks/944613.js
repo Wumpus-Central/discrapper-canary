@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(658722),
@@ -26,7 +26,7 @@ let h = function (e) {
         value: new Set(),
         onChange: h,
         placeholder: _.intl.string(_.t.XPGZXF),
-        'aria-label': _.intl.string(_.t.ljnBlp),
+        "aria-label": _.intl.string(_.t.ljnBlp),
         onClose: m,
         children: (e) =>
             b(e).map((e) => {
@@ -36,24 +36,24 @@ let h = function (e) {
                     {
                         value: e.id,
                         children: [
-                            'dot' === i
+                            "dot" === i
                                 ? (0, r.jsx)(c.FhE, {
                                       className: p.popoutRoleDot,
                                       color: null != (t = e.colorString) ? t : f.Pbq,
                                       colors: E ? e.colorStrings : null,
                                       background: !1,
-                                      tooltip: !1
+                                      tooltip: !1,
                                   })
                                 : (0, r.jsx)(c.xko, {
                                       className: p.popoutRoleCircle,
                                       color: null != (n = e.colorString) ? n : f.Pbq,
-                                      colors: E ? e.colorStrings : null
+                                      colors: E ? e.colorStrings : null,
                                   }),
-                            (0, r.jsx)(c.lo1.Label, { children: e.name })
-                        ]
+                            (0, r.jsx)(c.lo1.Label, { children: e.name }),
+                        ],
                     },
-                    e.id
+                    e.id,
                 );
-            })
+            }),
     });
 };

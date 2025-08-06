@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800),
     i = n(881052),
     l = n(728345);
@@ -17,21 +17,21 @@ function a() {
                             name: o,
                             guildId: e.id,
                             type: r,
-                            teamId: n
+                            teamId: n,
                         })),
                     await l.ZP.getApplicationsForGuild(e.id, {
                         type: r,
-                        includeTeam: !0
+                        includeTeam: !0,
                     }),
                     !0
                 );
             } catch (e) {
-                return (a(new i.Hx(e)), !1);
+                return a(new i.Hx(e)), !1;
             } finally {
                 t(!1);
             }
         },
         submitting: e,
-        error: n
+        error: n,
     };
 }

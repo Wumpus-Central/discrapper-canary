@@ -1,4 +1,4 @@
-(n.d(t, { $: () => m }), n(388685));
+n.d(t, { $: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,7 +76,7 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e, t) {
@@ -88,8 +89,28 @@ function m(e, t) {
             });
         });
     return i.forwardRef(function (t, u) {
-        var { children: f, className: h, onResize: m, contentClassName: g, onScroll: E, dir: b = 'ltr', fade: y = !1, customTheme: O = !1, style: v } = t,
-            I = p(t, ['children', 'className', 'onResize', 'contentClassName', 'onScroll', 'dir', 'fade', 'customTheme', 'style']);
+        var {
+                children: f,
+                className: h,
+                onResize: m,
+                contentClassName: g,
+                onScroll: E,
+                dir: b = "ltr",
+                fade: y = !1,
+                customTheme: O = !1,
+                style: v,
+            } = t,
+            I = p(t, [
+                "children",
+                "className",
+                "onResize",
+                "contentClassName",
+                "onScroll",
+                "dir",
+                "fade",
+                "customTheme",
+                "style",
+            ]);
         let T = i.useRef(null),
             S = i.useRef(null),
             [A, N] = i.useState(!1),
@@ -102,40 +123,40 @@ function m(e, t) {
                     {
                         getScrollerNode: () => C.current,
                         isScrolling: () => null != T.current,
-                        getScrollerState: R
+                        getScrollerState: R,
                     },
-                    (0, l.Ue)(C, R, P)
+                    (0, l.Ue)(C, R, P),
                 ),
-            [C, R, P]
+            [C, R, P],
         );
         let w = i.useCallback(
             (e) => {
-                (null == T.current ? N(!0) : clearTimeout(T.current),
+                null == T.current ? N(!0) : clearTimeout(T.current),
                     (T.current = setTimeout(() => {
-                        ((T.current = null), N(!1));
+                        (T.current = null), N(!1);
                     }, 200)),
-                    null != E && E(e));
+                    null != E && E(e);
             },
-            [E]
+            [E],
         );
         return (
             i.useEffect(() => () => clearTimeout(T.current), []),
             (0, l.zn)({
                 ref: C,
-                key: 'container',
+                key: "container",
                 onUpdate: m,
                 resizeObserver: o,
-                listenerMap: n
+                listenerMap: n,
             }),
             (0, l.zn)({
                 ref: S,
-                key: 'content',
+                key: "content",
                 onUpdate: m,
                 resizeObserver: o,
-                listenerMap: n
+                listenerMap: n,
             }),
             (0, r.jsx)(
-                'div',
+                "div",
                 _(
                     d(
                         {
@@ -145,25 +166,25 @@ function m(e, t) {
                                 [c.customTheme]: O,
                                 [e]: !0,
                                 [c.managedReactiveScroller]: !0,
-                                [c.scrolling]: A && y
+                                [c.scrolling]: A && y,
                             }),
                             style: v,
                             dir: b,
-                            onScroll: w
+                            onScroll: w,
                         },
-                        I
+                        I,
                     ),
                     {
                         children: (0, r.jsx)(s.J, {
                             containerRef: S,
-                            children: (0, r.jsxs)('div', {
+                            children: (0, r.jsxs)("div", {
                                 ref: S,
                                 className: a()(g, c.content),
-                                children: [f, A && (0, r.jsx)('div', { className: c.pointerCover })]
-                            })
-                        })
-                    }
-                )
+                                children: [f, A && (0, r.jsx)("div", { className: c.pointerCover })],
+                            }),
+                        }),
+                    },
+                ),
             )
         );
     });

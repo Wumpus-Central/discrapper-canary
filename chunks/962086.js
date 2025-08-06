@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     Zm: () => I,
     aq: () => R,
     iD: () => v,
     mL: () => T,
     og: () => C,
-    zS: () => N
+    zS: () => N,
 }),
-    n(388685));
+    n(388685);
 var r = n(570140),
     i = n(367907),
     o = n(703656),
@@ -29,7 +29,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,15 +39,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -55,11 +55,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -75,30 +75,40 @@ function O(e, t) {
     );
 }
 function v(e, t) {
-    (_.default.track(m.rMx.VIEW_AS_ROLES_SELECTED, O(b({ num_roles: Object.keys(t.roles).length }, (0, i.hH)(e)), { is_viewing_as_member: t.type === h.z.NEW_MEMBER })),
-        r.Z.dispatch({
-            type: 'IMPERSONATE_UPDATE',
-            guildId: e,
-            data: t
+    _.default.track(
+        m.rMx.VIEW_AS_ROLES_SELECTED,
+        O(b({ num_roles: Object.keys(t.roles).length }, (0, i.hH)(e)), {
+            is_viewing_as_member: t.type === h.z.NEW_MEMBER,
         }),
-        S(e));
+    ),
+        r.Z.dispatch({
+            type: "IMPERSONATE_UPDATE",
+            guildId: e,
+            data: t,
+        }),
+        S(e);
 }
 function I(e, t) {
     let n = p.Z.getData(e);
     null != n &&
         n.type === t.type &&
-        (_.default.track(m.rMx.VIEW_AS_ROLES_SELECTED, O(b({ num_roles: Object.keys(n.roles).length }, (0, i.hH)(e)), { is_viewing_as_member: n.type === h.z.NEW_MEMBER })),
+        (_.default.track(
+            m.rMx.VIEW_AS_ROLES_SELECTED,
+            O(b({ num_roles: Object.keys(n.roles).length }, (0, i.hH)(e)), {
+                is_viewing_as_member: n.type === h.z.NEW_MEMBER,
+            }),
+        ),
         r.Z.dispatch({
-            type: 'IMPERSONATE_UPDATE',
+            type: "IMPERSONATE_UPDATE",
             guildId: e,
-            data: b({}, n, t)
+            data: b({}, n, t),
         }),
         S(e));
 }
 function T(e) {
     r.Z.dispatch({
-        type: 'IMPERSONATE_STOP',
-        guildId: e
+        type: "IMPERSONATE_STOP",
+        guildId: e,
     });
 }
 function S(e) {
@@ -117,17 +127,17 @@ function A(e, t) {
         if (null == t) return !1;
         if (r.some((e) => !t.roles.includes(e))) return !0;
         let i = [...s.ZP.getSelectableChannelIds(e), ...s.ZP.getVocalChannelIds(e)].filter((e) => !n.includes(e));
-        return (i.length > 0 && N(e, i, []), !1);
+        return i.length > 0 && N(e, i, []), !1;
     });
 }
 function N(e, t, n) {
     let r = new Set(f.ZP.getOptedInChannels(e));
-    (t.forEach((e) => r.add(e)),
+    t.forEach((e) => r.add(e)),
         n.forEach((e) => r.delete(e)),
         I(e, {
             type: h.z.NEW_MEMBER,
-            optInChannels: r
-        }));
+            optInChannels: r,
+        });
 }
 function C(e, t) {
     A(e, t);
@@ -135,7 +145,7 @@ function C(e, t) {
     for (let r of c.Z.getManyRoles(e, t)) n[r.id] = r;
     I(e, {
         type: h.z.NEW_MEMBER,
-        roles: n
+        roles: n,
     });
 }
 function R(e, t) {

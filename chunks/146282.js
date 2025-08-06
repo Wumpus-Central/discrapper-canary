@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var i,
     o = n(442837),
     a = n(570140),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,11 +22,11 @@ let c = new Map(),
     d = new Map(),
     f = !1;
 function _(e) {
-    (e(c), (c = new Map(c)));
+    e(c), (c = new Map(c));
 }
 function p(e) {
     let { feedId: t, feed: n } = e;
-    (_((e) => e.set(t, n)), d.set(t, new Date()));
+    _((e) => e.set(t, n)), d.set(t, new Date());
 }
 function h(e) {
     let { feedId: t, state: n } = e;
@@ -78,12 +78,12 @@ class y extends (i = o.ZP.Store) {
         return (0, s.vu)(o, t);
     }
 }
-l(y, 'displayName', 'ContentInventoryStore');
+l(y, "displayName", "ContentInventoryStore");
 let O = new y(a.Z, {
     CONNECTION_OPEN: m,
     CONTENT_INVENTORY_SET_FEED: p,
     CONTENT_INVENTORY_SET_FEED_STATE: h,
     CONTENT_INVENTORY_SET_FILTERS: E,
     CONTENT_INVENTORY_CLEAR_FEED: g,
-    CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: b
+    CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: b,
 });

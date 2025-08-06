@@ -1,7 +1,7 @@
 n.d(t, {
     US: () => h,
     ZP: () => g,
-    fF: () => p
+    fF: () => p,
 });
 var r = n(255367);
 n(73800);
@@ -16,10 +16,10 @@ var i = n(120356),
     f = n(981631),
     _ = n(582835),
     p = (function (e) {
-        return ((e[(e.SMALL = 24)] = 'SMALL'), (e[(e.MEDIUM = 32)] = 'MEDIUM'), e);
+        return (e[(e.SMALL = 24)] = "SMALL"), (e[(e.MEDIUM = 32)] = "MEDIUM"), e;
     })({}),
     h = (function (e) {
-        return ((e[(e.SMALL = 2)] = 'SMALL'), (e[(e.MEDIUM = 8)] = 'MEDIUM'), e);
+        return (e[(e.SMALL = 2)] = "SMALL"), (e[(e.MEDIUM = 8)] = "MEDIUM"), e;
     })({});
 function m(e) {
     switch (e) {
@@ -30,67 +30,84 @@ function m(e) {
     }
 }
 let g = function (e) {
-    let { className: t, logotypeClassName: n, gameTileSize: i = 24, quest: p, separatorSpacing: h = 2, theme: g = f.BRd.DARK, withCosponsor: E = !0, withGameTile: b = !0, onLoadComplete: y } = e,
+    let {
+            className: t,
+            logotypeClassName: n,
+            gameTileSize: i = 24,
+            quest: p,
+            separatorSpacing: h = 2,
+            theme: g = f.BRd.DARK,
+            withCosponsor: E = !0,
+            withGameTile: b = !0,
+            onLoadComplete: y,
+        } = e,
         O = (0, s.wj)(g) ? f.BRd.DARK : f.BRd.LIGHT,
         v = (0, c.Gd)(p.id, O),
         I = E && null != p.config.cosponsorMetadata && null != v;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(_.partnerBranding, t),
         children: [
             b &&
                 (0, r.jsx)(d.Fl, {
-                    id: 'QuestPartnerBranding_gameTile',
+                    id: "QuestPartnerBranding_gameTile",
                     children: (e) =>
-                        (0, r.jsx)('img', {
+                        (0, r.jsx)("img", {
                             ref: e,
                             className: _.partnerBrandingGameTile,
-                            alt: '',
+                            alt: "",
                             src: (0, u.fh)(p, u.eC.GAME_TILE, O).url,
                             style: {
                                 borderRadius: m(i),
                                 width: i,
-                                height: i
+                                height: i,
                             },
-                            onLoad: y
-                        })
+                            onLoad: y,
+                        }),
                 }),
             (0, r.jsx)(d.Fl, {
-                id: 'QuestPartnerBranding_gameLogotype',
+                id: "QuestPartnerBranding_gameLogotype",
                 children: (e) =>
-                    (0, r.jsx)('img', {
+                    (0, r.jsx)("img", {
                         ref: e,
                         className: o()(_.partnerBrandingLogotype, n, { [_.partnerBrandingLogotypeWithCosponsor]: I }),
                         alt: p.config.messages.gameTitle,
                         src: (0, u.fh)(p, u.eC.LOGO_TYPE, O).url,
-                        onLoad: y
-                    })
+                        onLoad: y,
+                    }),
             }),
             I &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: _.cosponsorBrandSeparatorWrapper,
-                            style: { margin: '0 '.concat(h, 'px') },
+                            style: { margin: "0 ".concat(h, "px") },
                             children: (0, r.jsx)(l.P$X, {
                                 className: _.cosponsorBrandSeparator,
-                                color: a.Z.colors.WHITE
-                            })
+                                color: a.Z.colors.WHITE,
+                            }),
                         }),
                         (0, r.jsx)(d.Fl, {
-                            id: 'QuestPartnerBranding_cosponsorLogotype',
+                            id: "QuestPartnerBranding_cosponsorLogotype",
                             children: (e) => {
                                 var t, i;
-                                return (0, r.jsx)('img', {
+                                return (0, r.jsx)("img", {
                                     ref: e,
-                                    className: o()(_.partnerBrandingLogotype, _.partnerBrandingLogotypeWithCosponsor, n),
-                                    alt: null != (i = null == (t = p.config.cosponsorMetadata) ? void 0 : t.name) ? i : '',
+                                    className: o()(
+                                        _.partnerBrandingLogotype,
+                                        _.partnerBrandingLogotypeWithCosponsor,
+                                        n,
+                                    ),
+                                    alt:
+                                        null != (i = null == (t = p.config.cosponsorMetadata) ? void 0 : t.name)
+                                            ? i
+                                            : "",
                                     src: v.url,
-                                    onLoad: y
+                                    onLoad: y,
                                 });
-                            }
-                        })
-                    ]
-                })
-        ]
+                            },
+                        }),
+                    ],
+                }),
+        ],
     });
 };

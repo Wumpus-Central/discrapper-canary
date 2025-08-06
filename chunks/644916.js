@@ -11,7 +11,9 @@ function d(e) {
     switch (e) {
         case i.z.COLLECTIBLES_SHOP_ENTRY_MARKETING:
             var t, n;
-            return null != (n = null == (t = c.Z.getMarketingBySurface(r.K.DESKTOP_SHOP_BUTTON)) ? void 0 : t.version) ? n : 0;
+            return null != (n = null == (t = c.Z.getMarketingBySurface(r.K.DESKTOP_SHOP_BUTTON)) ? void 0 : t.version)
+                ? n
+                : 0;
         case i.z.GIFTING_PROMOTION_ICON:
         case i.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK:
         case i.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET:
@@ -20,11 +22,11 @@ function d(e) {
         case i.z.ACTIVITIES_VOICE_LAUNCHER_BADGE:
             return (0, l.O)({
                 storeState: s.ZP.getState(),
-                surface: a.eR.VOICE_LAUNCHER
+                surface: a.eR.VOICE_LAUNCHER,
             });
         case i.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK:
             return 0;
         default:
-            return ((0, o.UT)(e, { andFail: !1 }), 0);
+            return (0, o.UT)(e, { andFail: !1 }), 0;
     }
 }

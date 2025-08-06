@@ -4,10 +4,10 @@ var r = n(220159),
     i = n(717853);
 r(
     {
-        target: 'Map',
+        target: "Map",
         proto: !0,
         real: !0,
-        forced: !0
+        forced: !0,
     },
     {
         find: function (e) {
@@ -18,9 +18,9 @@ r(
                     function (e, r) {
                         if (n(e, r, t)) return { value: e };
                     },
-                    !0
+                    !0,
                 );
             return r && r.value;
-        }
-    }
+        },
+    },
 );

@@ -6,7 +6,7 @@ var r = n(840475),
     l = r.getTypedArrayConstructor,
     c = r.exportTypedArrayMethod,
     u = i(r.TypedArrayPrototype.sort);
-c('toSorted', function (e) {
+c("toSorted", function (e) {
     void 0 !== e && o(e);
     var t = s(this);
     return u(a(l(t), t), e);

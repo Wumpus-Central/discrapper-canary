@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685), n(953529), n(539854));
+n.d(t, { Z: () => h }), n(388685), n(953529), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(481060);
@@ -14,24 +14,24 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -61,14 +61,14 @@ function h() {
         let { channelId: r, description: i, emojiId: l, emojiName: a } = e,
             s = [...n],
             o = {
-                name: '',
+                name: "",
                 description: i,
                 emoji_id: l,
                 emoji_name: a,
                 ref_type: u.Qs.CHANNEL,
-                ref_id: r
+                ref_id: r,
             };
-        (null != t ? (s[t] = o) : s.push(o), h(s));
+        null != t ? (s[t] = o) : s.push(o), h(s);
     }
     let b = (0, a.mY)();
     return (0, r.jsxs)(r.Fragment, {
@@ -87,18 +87,18 @@ function h() {
                                 onDelete: () =>
                                     (function (e) {
                                         let t = [...n];
-                                        (t.splice(e, 1), h(t));
-                                    })(e)
-                            })
-                        )
+                                        t.splice(e, 1), h(t);
+                                    })(e),
+                            }),
+                        ),
                     );
                 },
                 onMove: function (e, t) {
                     let r = [...n],
                         [i] = r.splice(e, 1);
-                    (r.splice(t, 0, i), h(r));
+                    r.splice(t, 0, i), h(r);
                 },
-                guildId: t
+                guildId: t,
             }),
             n.length > 0 && (0, r.jsx)(l.LZC, { size: 8 }),
             (0, r.jsx)(d.s, {
@@ -109,14 +109,14 @@ function h() {
                             p(g({}, e), {
                                 guildId: t,
                                 omitChannelIds: f,
-                                onSave: (e) => x(e)
-                            })
-                        )
+                                onSave: (e) => x(e),
+                            }),
+                        ),
                     );
                 },
                 disabled: b,
-                children: m.intl.string(m.t.PLSCUl)
-            })
-        ]
+                children: m.intl.string(m.t.PLSCUl),
+            }),
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(35282));
+n.d(t, { Z: () => y }), n(35282);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -19,24 +19,24 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -64,7 +64,7 @@ function _(e) {
         d = (0, c.qw)({
             profile: t,
             defaultColor: s.hex(),
-            forceDefaultColor: !1
+            forceDefaultColor: !1,
         });
     return (0, r.jsx)(o.ua7, {
         text: x.intl.string(x.t.W4Nd7e),
@@ -72,15 +72,17 @@ function _(e) {
             (0, r.jsx)(
                 o.P3F,
                 v(j({}, e), {
-                    'aria-disabled': !n,
+                    "aria-disabled": !n,
                     tabIndex: n ? 0 : -1,
-                    'aria-label': x.intl.string(x.t.W4Nd7e),
+                    "aria-label": x.intl.string(x.t.W4Nd7e),
                     onClick: n ? i : void 0,
                     style: { background: (0, c.dG)(d) },
                     className: a()(b.itemContainer, { [b.disabled]: !n }),
-                    children: (0, r.jsx)('div', { className: a()({ [b.itemSelected]: !l && null == t.brandColorPrimary }) })
-                })
-            )
+                    children: (0, r.jsx)("div", {
+                        className: a()({ [b.itemSelected]: !l && null == t.brandColorPrimary }),
+                    }),
+                }),
+            ),
     });
 }
 function O(e) {
@@ -94,47 +96,47 @@ function O(e) {
                 : m.ZP.getGuildDiscoverySplashURL({
                       id: n.id,
                       splash: n.customBanner,
-                      size: 300 * (0, g.Z)()
+                      size: 300 * (0, g.Z)(),
                   });
         }, [n]);
     if (!t) return null;
     let p =
         null != u
-            ? (0, r.jsx)('img', {
+            ? (0, r.jsx)("img", {
                   className: b.uploadedImage,
                   src: u,
-                  alt: '',
-                  'aria-hidden': !0
+                  alt: "",
+                  "aria-hidden": !0,
               })
-            : (0, r.jsx)(o.dZu, { size: 'md' });
-    return (0, r.jsx)('div', {
+            : (0, r.jsx)(o.dZu, { size: "md" });
+    return (0, r.jsx)("div", {
         className: b.uploadItemContainer,
         children: (0, r.jsx)(o.tEY, {
             within: !0,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: a()(b.uploadItemWrapper, { [b.uploadItemSelected]: c }),
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: a()(b.uploadItem, { [b.disabled]: !s }),
                     children: [
                         p,
-                        (0, r.jsx)('div', { className: b.overlay }),
+                        (0, r.jsx)("div", { className: b.overlay }),
                         (0, r.jsx)(o.vdY, {
-                            size: 'custom',
+                            size: "custom",
                             className: b.overlayIcon,
                             width: 20,
                             height: 20,
-                            color: 'white'
+                            color: "white",
                         }),
                         (0, r.jsx)(d.ZP, {
                             multiple: !1,
                             tabIndex: 0,
                             onChange: l,
-                            disabled: !s
-                        })
-                    ]
-                })
-            })
-        })
+                            disabled: !s,
+                        }),
+                    ],
+                }),
+            }),
+        }),
     });
 }
 function y(e) {
@@ -147,22 +149,22 @@ function y(e) {
             (e) => () => {
                 p.Z.updateGuildProfile(y, {
                     brandColorPrimary: e,
-                    customBanner: null
+                    customBanner: null,
                 });
             },
-            [y]
+            [y],
         ),
         N = i.useCallback((e) => (!g || null == n.customBanner) && e === n.brandColorPrimary, [n, g]);
     return (0, r.jsx)(o.hjN, {
         title: x.intl.string(x.t.BSVog4),
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: b.grid,
             children: [
                 (0, r.jsx)(_, {
                     profile: n,
                     canManageGuild: d,
                     handleClick: C(null),
-                    hasCustomBanner: g && null != n.customBanner
+                    hasCustomBanner: g && null != n.customBanner,
                 }),
                 f.cb.map((e) => {
                     let { name: t, color: n } = e;
@@ -174,26 +176,26 @@ function y(e) {
                                 (0, r.jsx)(
                                     o.P3F,
                                     v(j({}, e), {
-                                        'aria-disabled': !d,
+                                        "aria-disabled": !d,
                                         tabIndex: d ? 0 : -1,
-                                        'aria-label': t,
+                                        "aria-label": t,
                                         onClick: d ? C(n) : void 0,
                                         style: { background: (0, c.dG)(n) },
                                         className: a()(b.itemContainer, { [b.disabled]: !d }),
-                                        children: (0, r.jsx)('div', { className: a()({ [b.itemSelected]: N(n) }) })
-                                    })
-                                )
+                                        children: (0, r.jsx)("div", { className: a()({ [b.itemSelected]: N(n) }) }),
+                                    }),
+                                ),
                         },
-                        t
+                        t,
                     );
                 }),
                 (0, r.jsx)(O, {
                     canManageGuild: d,
                     isDiscoverable: g,
                     profile: n,
-                    onCustomBannerChange: l
-                })
-            ]
-        })
+                    onCustomBannerChange: l,
+                }),
+            ],
+        }),
     });
 }

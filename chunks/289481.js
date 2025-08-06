@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -24,24 +24,24 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -62,27 +62,27 @@ let S = i.memo(function (e) {
                     config: {
                         clamp: !0,
                         friction: 18,
-                        tension: 200
+                        tension: 200,
                     },
                     opacity: +!d,
                     size: +!d,
                     onRest: () => {
                         n(t.channelId);
-                    }
+                    },
                 },
-                'animate-always'
+                "animate-always",
             ),
             f = {
                 opacity: h,
                 height: p.to((e) => {
                     var t, n;
-                    return d ? ((t = o), (n = a) + (t - n) * e) : 'auto';
-                })
+                    return d ? ((t = o), (n = a) + (t - n) * e) : "auto";
+                }),
             };
         return (0, r.jsx)(s.animated.div, {
             ref: l,
             style: f,
-            children: (0, r.jsx)(x, E({}, e))
+            children: (0, r.jsx)(x, E({}, e)),
         });
     }),
     x = i.memo(function (e) {
@@ -94,19 +94,19 @@ let S = i.memo(function (e) {
                     !t.isFullyLoaded ||
                     t.hasError ||
                     t.collapsed ||
-                    'messages' !== t.type ||
+                    "messages" !== t.type ||
                     0 !== t.messages.length ||
                     d.Z.wait(() => {
-                        ((0, h.In)(
+                        (0, h.In)(
                             t.channelId,
                             {
                                 section: C.jXE.INBOX,
                                 object: C.qAy.ACK_INBOX_CHANNEL_NO_MESSAGES,
-                                objectType: C.Qqv.ACK_AUTOMATIC
+                                objectType: C.Qqv.ACK_AUTOMATIC,
                             },
-                            !0
+                            !0,
                         ),
-                            l(t.channelId));
+                            l(t.channelId);
                     });
             }),
             null == s || !t.hasLoadedAnything)
@@ -115,12 +115,12 @@ let S = i.memo(function (e) {
         let a = (e, r) => {
             (0, p.yw)(C.rMx.INBOX_CHANNEL_CLICKED, {
                 channel_id: t.channelId,
-                guild_id: t.guildId
+                guild_id: t.guildId,
             });
             let i = null != r ? r : t.oldestUnreadMessageId;
-            ((0, f.uL)(C.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : i)), n(e));
+            (0, f.uL)(C.Z5c.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : i)), n(e);
         };
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: j.channel,
             children: (0, r.jsx)(u.y5t, {
                 component: (0, r.jsxs)(O.Z, {
@@ -129,24 +129,28 @@ let S = i.memo(function (e) {
                     mentionCount: t.mentionCount,
                     toggleCollapsed: o,
                     channelState: t,
-                    children: [(0, r.jsx)(b.Z, { channel: s }), (0, r.jsx)(I, E({}, e)), 'nsfw' === t.type ? null : (0, r.jsx)(P, E({}, e))]
+                    children: [
+                        (0, r.jsx)(b.Z, { channel: s }),
+                        (0, r.jsx)(I, E({}, e)),
+                        "nsfw" === t.type ? null : (0, r.jsx)(P, E({}, e)),
+                    ],
                 }),
                 children: t.collapsed
                     ? null
-                    : 'messages' === t.type
+                    : "messages" === t.type
                       ? (0, r.jsx)(y.Z, {
                             channel: t,
                             channelRecord: s,
-                            gotoChannel: a
+                            gotoChannel: a,
                         })
-                      : 'forum' === t.type
+                      : "forum" === t.type
                         ? (0, r.jsx)(_.Z, {
                               channel: t,
                               channelRecord: s,
-                              deleteChannel: l
+                              deleteChannel: l,
                           })
-                        : null
-            })
+                        : null,
+            }),
         });
     });
 function I(e) {
@@ -154,38 +158,38 @@ function I(e) {
         o = (0, a.Z)() && null != t.guildId;
     return (0, r.jsx)(u.M0o, {
         className: j.markReadButton,
-        tooltip: o ? v.intl.string(v.t['5lLMhI']) : v.intl.string(v.t.e6RscX),
+        tooltip: o ? v.intl.string(v.t["5lLMhI"]) : v.intl.string(v.t.e6RscX),
         color: u.YX$.TERTIARY,
         icon: o
             ? (0, r.jsx)(u.W6s, {
-                  size: 'xs',
-                  color: 'currentColor'
+                  size: "xs",
+                  color: "currentColor",
               })
             : (0, r.jsx)(u.dz2, {
-                  size: 'xs',
-                  color: 'currentColor'
+                  size: "xs",
+                  color: "currentColor",
               }),
         onClick: function () {
-            (o && null != t.guildId ? i(t.guildId) : n(t),
+            o && null != t.guildId ? i(t.guildId) : n(t),
                 (0, p.yw)(C.rMx.INBOX_CHANNEL_ACKED, {
                     channel_id: t.channelId,
                     guild_id: t.guildId,
                     marked_all_channels_as_read: !1,
-                    num_unread_channels_remaining: l() - 1
-                }));
-        }
+                    num_unread_channels_remaining: l() - 1,
+                });
+        },
     });
 }
 function P(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: i } = e;
     function l() {
-        (n(t),
+        n(t),
             (0, p.yw)(C.rMx.INBOX_CHANNEL_COLLAPSED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId,
                 num_unread_channels_remaining: i(),
-                is_now_collapsed: !t.collapsed
-            }));
+                is_now_collapsed: !t.collapsed,
+            });
     }
     return (0, r.jsx)(u.ua7, {
         text: v.intl.string(v.t.iTcumZ),
@@ -200,8 +204,8 @@ function P(e) {
                         onClick: l,
                         children: (0, r.jsx)(m.Z, {
                             width: 16,
-                            height: 16
-                        })
+                            height: 16,
+                        }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -215,8 +219,8 @@ function P(e) {
                       })(Object(i)).forEach(function (e) {
                           Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
-                n)
+                n),
             );
-        }
+        },
     });
 }

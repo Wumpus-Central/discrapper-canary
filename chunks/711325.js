@@ -9,14 +9,14 @@ var i = n(255367),
 function d(e) {
     let { selected: t, onSelect: n } = e,
         d = (0, s.ZP)();
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: c.picker,
         children: [
             (0, i.jsx)(r.Text, {
-                variant: 'text-sm/semibold',
-                children: 'Preselected Gradient'
+                variant: "text-sm/semibold",
+                children: "Preselected Gradient",
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: c.themes,
                 children: l.vs.map((e) => {
                     let r = d !== o.BRd.LIGHT ? e.darkBackground : e.lightBackground,
@@ -27,12 +27,12 @@ function d(e) {
                             onSelect: () => n(e),
                             style: { background: r },
                             name: e.name,
-                            isSelected: s
+                            isSelected: s,
                         },
-                        e.name
+                        e.name,
                     );
-                })
-            })
-        ]
+                }),
+            }),
+        ],
     });
 }

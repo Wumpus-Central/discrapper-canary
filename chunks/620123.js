@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var i = n(255367),
     s = n(73800),
     r = n(442837),
@@ -23,20 +23,20 @@ class c extends s.Component {
                 null != e
                     ? e.map((e) => ({
                           label: e.name,
-                          value: e.id
+                          value: e.id,
                       }))
                     : [],
             placeholder: s ? d.intl.string(d.t.hKcgPz) : d.intl.string(d.t.QV60Ul),
             value: t,
             onChange: this.handleChange,
             className: n,
-            isDisabled: s
+            isDisabled: s,
         });
     }
     constructor(...e) {
         var t, n;
-        (super(...e),
-            (t = 'handleChange'),
+        super(...e),
+            (t = "handleChange"),
             (n = (e) => {
                 this.props.onChange(e);
             }),
@@ -45,9 +45,9 @@ class c extends s.Component {
                       value: n,
                       enumerable: !0,
                       configurable: !0,
-                      writable: !0
+                      writable: !0,
                   })
-                : (this[t] = n));
+                : (this[t] = n);
     }
 }
 let h = r.ZP.connectStores([o.Z], (e) => {

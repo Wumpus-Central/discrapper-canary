@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -33,37 +33,37 @@ function I(e) {
                     r &&
                         (0, _.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_VIEWED, {
                             collection_id: t,
-                            collection_position: n
+                            collection_position: n,
                         });
                 }, [r, t, n]),
                 l
             );
         })({
             collectionId: t.id,
-            index: n
+            index: n,
         }),
         o = a.useCallback(
             (e, r) => {
-                ((0, _.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                (0, _.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                     collection_id: t.id,
                     item_position: r,
                     collection_position: n,
-                    application_id: e
+                    application_id: e,
                 }),
-                    i(e));
+                    i(e);
             },
-            [t.id, n, i]
+            [t.id, n, i],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         ref: s,
         children: [
             (0, r.jsx)(p.X6q, {
                 className: l()(j.sectionTitle, { [j.titleExtraPadding]: 0 === n }),
-                variant: 'heading-lg/semibold',
-                color: 'header-primary',
-                children: t.title
+                variant: "heading-lg/semibold",
+                color: "header-primary",
+                children: t.title,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: j.content,
                 children: t.application_directory_collection_items.map((e, t) =>
                     e.type !== c.C.APPLICATION || null == e.application
@@ -73,13 +73,13 @@ function I(e) {
                               {
                                   application: e.application,
                                   onSelectApplication: () => o(e.application.id, t),
-                                  showCategory: !0
+                                  showCategory: !0,
                               },
-                              e.id
-                          )
-                )
-            })
-        ]
+                              e.id,
+                          ),
+                ),
+            }),
+        ],
     });
 }
 let O = function (e) {
@@ -88,26 +88,26 @@ let O = function (e) {
         i = (0, u.e7)([f.Z], () =>
             f.Z.getFetchState({
                 surface: y,
-                activeState: n
-            })
+                activeState: n,
+            }),
         ),
         l = (0, u.e7)([f.Z], () =>
             f.Z.getCollections({
                 surface: y,
-                activeState: n
-            })
+                activeState: n,
+            }),
         );
     a.useEffect(() => {
         g.XK({
             surface: y,
-            activeState: n
+            activeState: n,
         });
     }, [n]);
     let o = a.useMemo(() => (null == l ? void 0 : l.filter((e) => e.type !== d.o.GALLERY)), [l]);
     return i === f.M.ERROR
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: j.errorContainer,
-              children: (0, r.jsx)(v.Z, { className: j.error })
+              children: (0, r.jsx)(v.Z, { className: j.error }),
           })
         : (0, r.jsx)(b.Z, {
               loading: i === f.M.FETCHING,
@@ -120,10 +120,10 @@ let O = function (e) {
                                 {
                                     collection: e,
                                     index: n,
-                                    onSelectApplication: t
+                                    onSelectApplication: t,
                                 },
-                                n
-                            )
-                        )
+                                n,
+                            ),
+                        ),
           });
 };

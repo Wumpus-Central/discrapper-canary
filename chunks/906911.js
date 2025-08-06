@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685), n(539854));
+n.d(t, { Z: () => u }), n(388685), n(539854);
 var r = n(243814),
     i = n(45792),
     l = n(699516),
@@ -19,6 +19,6 @@ let u = {
                 t.push((0, o.kb)(l, e.socket.application.id));
             }
             return { relationships: t };
-        }
-    })
+        },
+    }),
 };

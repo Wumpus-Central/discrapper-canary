@@ -15,36 +15,36 @@ var i = n(120356),
     h = n(474936),
     m = n(388032),
     g = n(645885);
-let E = 'https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4',
+let E = "https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4",
     b = 32;
 function y(e) {
     var t, n;
     let { onDismiss: i } = e,
         y = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-        O = m.intl.string(m.t['eikz4+']),
+        O = m.intl.string(m.t["eikz4+"]),
         v = (0, d.N)(),
         I = (0, u.Ng)(),
         T = (null == v ? void 0 : v.subscription_trial) != null || null != I,
         S = {
             object: p.qAy.BUTTON_CTA,
-            section: p.jXE.SUPER_REACTION_PICKER
+            section: p.jXE.SUPER_REACTION_PICKER,
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.wrapper,
         children: [
             (0, r.jsx)(s.P3F, {
                 onClick: i,
                 className: g.closeButton,
-                'aria-label': m.intl.string(m.t.WAI6xs),
+                "aria-label": m.intl.string(m.t.WAI6xs),
                 children: (0, r.jsx)(s.Dio, {
-                    size: 'md',
-                    color: 'currentColor'
-                })
+                    size: "md",
+                    color: "currentColor",
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.content,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: g.contentFill,
                         children: (0, r.jsx)(c.Z, {
                             className: o()(g.banner, { [g.hasTrialOffer]: T }),
@@ -52,54 +52,57 @@ function y(e) {
                             loop: !0,
                             autoPlay: !y,
                             muted: !0,
-                            controls: !0
-                        })
+                            controls: !0,
+                        }),
                     }),
                     T
                         ? (0, r.jsx)(_.ZP, {
                               type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
-                              subscriptionTier: null != (n = null == v || null == (t = v.subscription_trial) ? void 0 : t.sku_id) ? n : h.Si.TIER_2,
+                              subscriptionTier:
+                                  null != (n = null == v || null == (t = v.subscription_trial) ? void 0 : t.sku_id)
+                                      ? n
+                                      : h.Si.TIER_2,
                               headingText: m.intl.string(m.t.Wfl5zs),
                               analyticsLocationObject: S,
                               discountOffer: I,
                               trialOffer: v,
-                              children: O
+                              children: O,
                           })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsxs)('div', {
+                                  (0, r.jsxs)("div", {
                                       className: g.header,
                                       children: [
                                           (0, r.jsx)(s.SrA, {
-                                              size: 'custom',
-                                              color: 'currentColor',
+                                              size: "custom",
+                                              color: "currentColor",
                                               className: g.nitroWheel,
                                               width: b,
-                                              height: b
+                                              height: b,
                                           }),
                                           (0, r.jsx)(s.X6q, {
                                               className: g.headerText,
-                                              variant: 'heading-xl/bold',
-                                              children: m.intl.string(m.t.Wfl5zs)
-                                          })
-                                      ]
+                                              variant: "heading-xl/bold",
+                                              children: m.intl.string(m.t.Wfl5zs),
+                                          }),
+                                      ],
                                   }),
                                   (0, r.jsx)(s.Text, {
                                       className: g.subheaderText,
-                                      variant: 'text-md/normal',
-                                      children: O
+                                      variant: "text-md/normal",
+                                      children: O,
                                   }),
-                                  (0, r.jsx)('div', {
+                                  (0, r.jsx)("div", {
                                       className: g.ctaActionWrapper,
                                       children: (0, r.jsx)(f.Z, {
                                           subscriptionTier: h.Si.TIER_2,
-                                          textOptions: { textOverride: m.intl.string(m.t.sEAnVF) }
-                                      })
-                                  })
-                              ]
-                          })
-                ]
-            })
-        ]
+                                          textOptions: { textOverride: m.intl.string(m.t.sEAnVF) },
+                                      }),
+                                  }),
+                              ],
+                          }),
+                ],
+            }),
+        ],
     });
 }

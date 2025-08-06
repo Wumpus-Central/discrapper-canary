@@ -1,4 +1,4 @@
-(r.d(t, { default: () => w }), r(388685), r(781311));
+r.d(t, { default: () => w }), r(388685), r(781311);
 var n = r(255367),
     i = r(73800),
     a = r(442837),
@@ -21,24 +21,24 @@ var n = r(255367),
     h = r(691);
 function x(e) {
     var t = (function (e, t) {
-        if ('object' !== C(e) || null === e) return e;
+        if ("object" !== C(e) || null === e) return e;
         var r = e[Symbol.toPrimitive];
         if (void 0 !== r) {
-            var n = r.call(e, t || 'default');
-            if ('object' !== C(n)) return n;
-            throw TypeError('@@toPrimitive must return a primitive value.');
+            var n = r.call(e, t || "default");
+            if ("object" !== C(n)) return n;
+            throw TypeError("@@toPrimitive must return a primitive value.");
         }
-        return ('string' === t ? String : Number)(e);
-    })(e, 'string');
-    return 'symbol' === C(t) ? t : String(t);
+        return ("string" === t ? String : Number)(e);
+    })(e, "string");
+    return "symbol" === C(t) ? t : String(t);
 }
 function C(e) {
-    return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
+    return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
 function w(e) {
     let { transitionState: t, onClose: r, roleId: C, guildId: w } = e,
         S = (0, a.e7)([g.Z], () => g.Z.getRole(C), [C]),
-        [M, P] = i.useState(''),
+        [M, P] = i.useState(""),
         [E, R] = i.useState({}),
         [T, Z] = i.useState(!1);
     i.useEffect(() => {
@@ -51,7 +51,7 @@ function w(e) {
             let e = Object.values(E).map((e) => e.row.id);
             Z(!0);
             try {
-                (await p.Z.bulkAddMemberRoles(w, C, e), (0, y.H)(w, C, !1), r());
+                await p.Z.bulkAddMemberRoles(w, C, e), (0, y.H)(w, C, !1), r();
             } catch (e) {
                 Z(!1);
             }
@@ -62,24 +62,24 @@ function w(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
                                 n = Object.keys(r);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (n = n.concat(
                                     Object.getOwnPropertySymbols(r).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 n.forEach(function (t) {
                                     var n;
-                                    ((n = r[t]),
+                                    (n = r[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: n,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = n));
-                                }));
+                                            : (e[t] = n);
+                                });
                         }
                         return e;
                     })({}, t),
@@ -91,9 +91,9 @@ function w(e) {
                               display: {
                                   type: c.F.MEMBER,
                                   label: e.name,
-                                  avatar: e.avatarURL
+                                  avatar: e.avatarURL,
                               },
-                              row: e
+                              row: e,
                           }),
                     r
                 );
@@ -112,12 +112,16 @@ function w(e) {
                                 n,
                                 i = {},
                                 a = Object.keys(e);
-                            for (n = 0; n < a.length; n++) ((r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
+                            for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var a = Object.getOwnPropertySymbols(e);
-                        for (n = 0; n < a.length; n++) ((r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
+                        for (n = 0; n < a.length; n++)
+                            (r = a[n]),
+                                !(t.indexOf(r) >= 0) &&
+                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
+                                    (i[r] = e[r]);
                     }
                     return i;
                 })(t, [e].map(x));
@@ -138,41 +142,41 @@ function w(e) {
                         bot: e.bot,
                         verifiedBot: e.verifiedBot,
                         disabled: !1,
-                        key: e.id
+                        key: e.id,
                     };
                 }),
-            [B]
+            [B],
         ),
         G = i.useMemo(() => Object.keys(E).length, [E]),
         I = [
             {
-                text: k.intl.string(k.t['ETE/oK']),
-                variant: 'secondary',
-                onClick: r
+                text: k.intl.string(k.t["ETE/oK"]),
+                variant: "secondary",
+                onClick: r,
             },
             {
                 text: k.intl.string(k.t.OYkgVl),
-                variant: 'primary',
+                variant: "primary",
                 onClick: L,
                 loading: T,
-                disabled: 0 === G || G > O.ey
-            }
+                disabled: 0 === G || G > O.ey,
+            },
         ];
     return (0, n.jsxs)(l.I, {
         onClose: r,
         transitionState: t,
         children: [
             (0, n.jsx)(u.x, {
-                title: k.intl.string(k.t['ZYOK4+']),
+                title: k.intl.string(k.t["ZYOK4+"]),
                 subtitle:
                     null != S
-                        ? k.intl.format(k.t['qP+nub'], {
+                        ? k.intl.format(k.t["qP+nub"], {
                               numMembers: O.ey,
-                              roleName: S.name
+                              roleName: S.name,
                           })
-                        : k.intl.format(k.t['3OxP4u'], { numMembers: O.ey }),
+                        : k.intl.format(k.t["3OxP4u"], { numMembers: O.ey }),
                 alignCenter: !0,
-                titleTextVariant: 'heading-xl/semibold'
+                titleTextVariant: "heading-xl/semibold",
             }),
             (0, n.jsx)(s.f, {
                 children: (0, n.jsx)(b.t, {
@@ -185,10 +189,10 @@ function w(e) {
                     roles: [],
                     members: N,
                     placeholderText: k.intl.string(k.t.vMiCaW),
-                    renderEmptyText: (e) => k.intl.format(k.t.eq8a8f, { query: e })
-                })
+                    renderEmptyText: (e) => k.intl.format(k.t.eq8a8f, { query: e }),
+                }),
             }),
-            (0, n.jsx)(o.G, { actions: I })
-        ]
+            (0, n.jsx)(o.G, { actions: I }),
+        ],
     });
 }

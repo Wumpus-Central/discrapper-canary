@@ -4,7 +4,7 @@ n.d(t, {
     ZF: () => p,
     gP: () => _,
     mh: () => h,
-    sF: () => f
+    sF: () => f,
 });
 var r = n(73800),
     i = n(392711),
@@ -19,7 +19,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,7 +45,7 @@ function d(e, t, n) {
     s.default.track(l.rMx.FORWARD_MESSAGE_STARTED, {
         channel_id: e,
         message_id: t,
-        source: n
+        source: n,
     });
 }
 function f(e) {
@@ -54,11 +54,21 @@ function f(e) {
         channel_id: t,
         message_id: n,
         num_destination_changes: r,
-        num_query_changes: i
+        num_query_changes: i,
     });
 }
 function _(e) {
-    let { channelId: t, messageId: n, hasError: r, hasContextMessage: i, numDestinations: c, numDestinationChanges: d, numQueryChanges: f, anyDestinationHasSlowmode: _, source: p } = e;
+    let {
+        channelId: t,
+        messageId: n,
+        hasError: r,
+        hasContextMessage: i,
+        numDestinations: c,
+        numDestinationChanges: d,
+        numQueryChanges: f,
+        anyDestinationHasSlowmode: _,
+        source: p,
+    } = e;
     if (
         (s.default.track(l.rMx.FORWARD_MESSAGE_SENT, {
             channel_id: t,
@@ -68,21 +78,21 @@ function _(e) {
             num_destinations: c,
             num_destination_changes: d,
             num_query_changes: f,
-            any_destination_has_slowmode: _
+            any_destination_has_slowmode: _,
         }),
-        'message-shortcut' === p)
+        "message-shortcut" === p)
     ) {
         let e = a.Z.getChannel(t);
         s.default.track(
             l.rMx.MESSAGE_SHORTCUT_ACTION_SENT,
             u(
                 {
-                    action: 'forward',
-                    original_message_id: n
+                    action: "forward",
+                    original_message_id: n,
                 },
                 (0, o.hH)(null == e ? void 0 : e.guild_id),
-                (0, o.v_)(e)
-            )
+                (0, o.v_)(e),
+            ),
         );
     }
 }
@@ -93,10 +103,10 @@ function p() {
                 s.default.track(l.rMx.FORWARD_ADD_RECIPIENT, {
                     channel_id: e,
                     message_id: t,
-                    has_query: n
+                    has_query: n,
                 });
             }),
-        []
+        [],
     );
 }
 function h() {
@@ -105,10 +115,10 @@ function h() {
             (0, i.once)((e, t) => {
                 s.default.track(l.rMx.FORWARD_EDIT_SEARCH, {
                     channel_id: e,
-                    message_id: t
+                    message_id: t,
                 });
             }),
-        []
+        [],
     );
 }
 function m() {
@@ -117,9 +127,9 @@ function m() {
             (0, i.once)((e, t) => {
                 s.default.track(l.rMx.FORWARD_EDIT_CONTEXT_MESSAGE, {
                     channel_id: e,
-                    message_id: t
+                    message_id: t,
                 });
             }),
-        []
+        [],
     );
 }

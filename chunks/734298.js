@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(539854), n(388685));
+n.d(t, { Z: () => o }), n(539854), n(388685);
 var r = n(46973),
     i = n(198274);
 function o(e) {
@@ -10,8 +10,8 @@ function o(e) {
         e.eachConnection((e) =>
             o.push({
                 connection: e,
-                stats: e.emitStats()
-            })
+                stats: e.emitStats(),
+            }),
         );
         let a = [];
         for (let e of o) {
@@ -19,10 +19,10 @@ function o(e) {
             null != t &&
                 a.push({
                     connection: e.connection,
-                    stats: t
+                    stats: t,
                 });
         }
-        (e.emit(r.aB.ConnectionStats, a), setTimeout(n, i.T));
+        e.emit(r.aB.ConnectionStats, a), setTimeout(n, i.T);
     };
     setTimeout(n, i.T);
 }

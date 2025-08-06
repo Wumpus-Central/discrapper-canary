@@ -11,18 +11,18 @@ var i = n(120356),
 function u(e) {
     let { className: t, shouldShine: n = !0, size: i = 14 } = e,
         u = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l()([d.guildProductRoleIcon, t]),
         children: [
             (0, r.jsx)(c.Z, {
                 height: i,
-                width: i
+                width: i,
             }),
             (0, r.jsx)(s.ZX5, {
                 className: d.shine,
                 shinePaused: u || !n,
-                shineSize: s.gtL.ShineSizes.SMALL
-            })
-        ]
+                shineSize: s.gtL.ShineSizes.SMALL,
+            }),
+        ],
     });
 }

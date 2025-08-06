@@ -15,200 +15,200 @@ let l = function (e) {
                     t(
                         {
                             hex: e.hex,
-                            source: 'hex'
+                            source: "hex",
                         },
-                        r
+                        r,
                     );
             else if (e.rgb) {
-                var n = e.rgb.split(',');
-                a.p7(e.rgb, 'rgb') &&
+                var n = e.rgb.split(",");
+                a.p7(e.rgb, "rgb") &&
                     t(
                         {
                             r: n[0],
                             g: n[1],
                             b: n[2],
                             a: 1,
-                            source: 'rgb'
+                            source: "rgb",
                         },
-                        r
+                        r,
                     );
             } else if (e.hsv) {
-                var o = e.hsv.split(',');
-                a.p7(e.hsv, 'hsv') &&
-                    ((o[2] = o[2].replace('%', '')),
-                    (o[1] = o[1].replace('%', '')),
-                    (o[0] = o[0].replace('\xB0', '')),
+                var o = e.hsv.split(",");
+                a.p7(e.hsv, "hsv") &&
+                    ((o[2] = o[2].replace("%", "")),
+                    (o[1] = o[1].replace("%", "")),
+                    (o[0] = o[0].replace("\xB0", "")),
                     1 == o[1] ? (o[1] = 0.01) : 1 == o[2] && (o[2] = 0.01),
                     t(
                         {
                             h: Number(o[0]),
                             s: Number(o[1]),
                             v: Number(o[2]),
-                            source: 'hsv'
+                            source: "hsv",
                         },
-                        r
+                        r,
                     ));
             } else if (e.hsl) {
-                var i = e.hsl.split(',');
-                a.p7(e.hsl, 'hsl') &&
-                    ((i[2] = i[2].replace('%', '')),
-                    (i[1] = i[1].replace('%', '')),
-                    (i[0] = i[0].replace('\xB0', '')),
+                var i = e.hsl.split(",");
+                a.p7(e.hsl, "hsl") &&
+                    ((i[2] = i[2].replace("%", "")),
+                    (i[1] = i[1].replace("%", "")),
+                    (i[0] = i[0].replace("\xB0", "")),
                     1 == h[1] ? (h[1] = 0.01) : 1 == h[2] && (h[2] = 0.01),
                     t(
                         {
                             h: Number(i[0]),
                             s: Number(i[1]),
                             v: Number(i[2]),
-                            source: 'hsl'
+                            source: "hsl",
                         },
-                        r
+                        r,
                     ));
             }
         },
         p = (0, o.default)({
             default: {
                 wrap: {
-                    display: 'flex',
-                    height: '100px',
-                    marginTop: '4px'
+                    display: "flex",
+                    height: "100px",
+                    marginTop: "4px",
                 },
-                fields: { width: '100%' },
+                fields: { width: "100%" },
                 column: {
-                    paddingTop: '10px',
-                    display: 'flex',
-                    justifyContent: 'space-between'
+                    paddingTop: "10px",
+                    display: "flex",
+                    justifyContent: "space-between",
                 },
                 double: {
-                    padding: '0px 4.4px',
-                    boxSizing: 'border-box'
+                    padding: "0px 4.4px",
+                    boxSizing: "border-box",
                 },
                 input: {
-                    width: '100%',
-                    height: '38px',
-                    boxSizing: 'border-box',
-                    padding: '4px 10% 3px',
-                    textAlign: 'center',
-                    border: '1px solid #dadce0',
-                    fontSize: '11px',
-                    textTransform: 'lowercase',
-                    borderRadius: '5px',
-                    outline: 'none',
-                    fontFamily: 'Roboto,Arial,sans-serif'
+                    width: "100%",
+                    height: "38px",
+                    boxSizing: "border-box",
+                    padding: "4px 10% 3px",
+                    textAlign: "center",
+                    border: "1px solid #dadce0",
+                    fontSize: "11px",
+                    textTransform: "lowercase",
+                    borderRadius: "5px",
+                    outline: "none",
+                    fontFamily: "Roboto,Arial,sans-serif",
                 },
                 input2: {
-                    height: '38px',
-                    width: '100%',
-                    border: '1px solid #dadce0',
-                    boxSizing: 'border-box',
-                    fontSize: '11px',
-                    textTransform: 'lowercase',
-                    borderRadius: '5px',
-                    outline: 'none',
-                    paddingLeft: '10px',
-                    fontFamily: 'Roboto,Arial,sans-serif'
+                    height: "38px",
+                    width: "100%",
+                    border: "1px solid #dadce0",
+                    boxSizing: "border-box",
+                    fontSize: "11px",
+                    textTransform: "lowercase",
+                    borderRadius: "5px",
+                    outline: "none",
+                    paddingLeft: "10px",
+                    fontFamily: "Roboto,Arial,sans-serif",
                 },
                 label: {
-                    textAlign: 'center',
-                    fontSize: '12px',
-                    background: '#fff',
-                    position: 'absolute',
-                    textTransform: 'uppercase',
-                    color: '#3c4043',
-                    width: '35px',
-                    top: '-6px',
-                    left: '0',
-                    right: '0',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    fontFamily: 'Roboto,Arial,sans-serif'
+                    textAlign: "center",
+                    fontSize: "12px",
+                    background: "#fff",
+                    position: "absolute",
+                    textTransform: "uppercase",
+                    color: "#3c4043",
+                    width: "35px",
+                    top: "-6px",
+                    left: "0",
+                    right: "0",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                    fontFamily: "Roboto,Arial,sans-serif",
                 },
                 label2: {
-                    left: '10px',
-                    textAlign: 'center',
-                    fontSize: '12px',
-                    background: '#fff',
-                    position: 'absolute',
-                    textTransform: 'uppercase',
-                    color: '#3c4043',
-                    width: '32px',
-                    top: '-6px',
-                    fontFamily: 'Roboto,Arial,sans-serif'
+                    left: "10px",
+                    textAlign: "center",
+                    fontSize: "12px",
+                    background: "#fff",
+                    position: "absolute",
+                    textTransform: "uppercase",
+                    color: "#3c4043",
+                    width: "32px",
+                    top: "-6px",
+                    fontFamily: "Roboto,Arial,sans-serif",
                 },
                 single: {
-                    flexGrow: '1',
-                    margin: '0px 4.4px'
-                }
-            }
+                    flexGrow: "1",
+                    margin: "0px 4.4px",
+                },
+            },
         }),
-        f = r.r + ', ' + r.g + ', ' + r.b,
-        d = Math.round(l.h) + '\xB0, ' + Math.round(100 * l.s) + '%, ' + Math.round(100 * l.l) + '%',
-        h = Math.round(u.h) + '\xB0, ' + Math.round(100 * u.s) + '%, ' + Math.round(100 * u.v) + '%';
+        f = r.r + ", " + r.g + ", " + r.b,
+        d = Math.round(l.h) + "\xB0, " + Math.round(100 * l.s) + "%, " + Math.round(100 * l.l) + "%",
+        h = Math.round(u.h) + "\xB0, " + Math.round(100 * u.s) + "%, " + Math.round(100 * u.v) + "%";
     return n.createElement(
-        'div',
+        "div",
         {
             style: p.wrap,
-            className: 'flexbox-fix'
+            className: "flexbox-fix",
         },
         n.createElement(
-            'div',
+            "div",
             { style: p.fields },
             n.createElement(
-                'div',
+                "div",
                 { style: p.double },
                 n.createElement(i.Vm, {
                     style: {
                         input: p.input,
-                        label: p.label
+                        label: p.label,
                     },
-                    label: 'hex',
+                    label: "hex",
                     value: s,
-                    onChange: c
-                })
+                    onChange: c,
+                }),
             ),
             n.createElement(
-                'div',
+                "div",
                 { style: p.column },
                 n.createElement(
-                    'div',
+                    "div",
                     { style: p.single },
                     n.createElement(i.Vm, {
                         style: {
                             input: p.input2,
-                            label: p.label2
+                            label: p.label2,
                         },
-                        label: 'rgb',
+                        label: "rgb",
                         value: f,
-                        onChange: c
-                    })
+                        onChange: c,
+                    }),
                 ),
                 n.createElement(
-                    'div',
+                    "div",
                     { style: p.single },
                     n.createElement(i.Vm, {
                         style: {
                             input: p.input2,
-                            label: p.label2
+                            label: p.label2,
                         },
-                        label: 'hsv',
+                        label: "hsv",
                         value: h,
-                        onChange: c
-                    })
+                        onChange: c,
+                    }),
                 ),
                 n.createElement(
-                    'div',
+                    "div",
                     { style: p.single },
                     n.createElement(i.Vm, {
                         style: {
                             input: p.input2,
-                            label: p.label2
+                            label: p.label2,
                         },
-                        label: 'hsl',
+                        label: "hsl",
                         value: d,
-                        onChange: c
-                    })
-                )
-            )
-        )
+                        onChange: c,
+                    }),
+                ),
+            ),
+        ),
     );
 };

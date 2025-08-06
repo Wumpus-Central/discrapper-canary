@@ -1,6 +1,6 @@
 n.d(t, {
     kq: () => g,
-    vy: () => m
+    vy: () => m,
 });
 var r = n(392711),
     i = n(544891),
@@ -21,7 +21,7 @@ function h(e) {
         }, 1000);
     return {
         abortController: t,
-        onRequestProgress: n
+        onRequestProgress: n,
     };
 }
 function m(e, t, n) {
@@ -30,41 +30,41 @@ function m(e, t, n) {
         p = null != (r = u.Z.getState().animationType) ? r : f.q.BASIC,
         m = {
             animation_type: p,
-            animation_id: (0, d.Iu)(p, d.v)
+            animation_id: (0, d.Iu)(p, d.v),
         };
-    (i.tn
+    i.tn
         .post({
             url: _.ANM.CUSTOM_CALL_SOUNDS(e),
             body: m,
             signal: a.signal,
             onRequestProgress: c,
-            rejectWithError: !0
+            rejectWithError: !0,
         })
         .then(_.VqG, () => {
             if (a.signal.aborted) return;
         }),
-        (0, l.Z)([o.Z.CHANNEL_CALL], n, t, s.jy.ENTRY));
+        (0, l.Z)([o.Z.CHANNEL_CALL], n, t, s.jy.ENTRY);
 }
 function g(e, t, n, r) {
     var o, c;
-    let u = a.ZP.getCustomEmojiById(null != (o = t.emojiId) ? o : ''),
+    let u = a.ZP.getCustomEmojiById(null != (o = t.emojiId) ? o : ""),
         { abortController: d, onRequestProgress: f } = h(e),
         m = {
             sound_id: t.soundId,
             emoji_id: t.emojiId,
-            emoji_name: null != (c = t.emojiName) ? c : null == u ? void 0 : u.name
+            emoji_name: null != (c = t.emojiName) ? c : null == u ? void 0 : u.name,
         };
-    (t.guildId !== p.X8 && (m.source_guild_id = t.guildId),
+    t.guildId !== p.X8 && (m.source_guild_id = t.guildId),
         i.tn
             .post({
                 url: _.ANM.SEND_SOUNDBOARD_SOUND(e),
                 body: m,
                 signal: d.signal,
                 onRequestProgress: f,
-                rejectWithError: !0
+                rejectWithError: !0,
             })
             .then(_.VqG, () => {
                 if (d.signal.aborted) return;
             }),
-        (0, l.Z)(null != r ? r : [], n, t, s.jy.DEFAULT));
+        (0, l.Z)(null != r ? r : [], n, t, s.jy.DEFAULT);
 }

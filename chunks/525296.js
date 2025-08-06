@@ -9,24 +9,24 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -58,8 +58,8 @@ function d(e) {
                         onMessageUser: this.handleMessageUser,
                         onUserContextMenu: this.handleUserContextMenu,
                         onGuildContextMenu: this.handleGuildContextMenu,
-                        onChannelContextMenu: this.handleChannelContextMenu
-                    })
+                        onChannelContextMenu: this.handleChannelContextMenu,
+                    }),
                 );
             }
             handleMessageUser(e, t) {
@@ -69,15 +69,29 @@ function d(e) {
                 (0, a.jW)(
                     e,
                     async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
+                        let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
                         return (n) => (0, r.jsx)(e, u(c({}, n), { user: t }));
                     },
-                    { onClose: i }
+                    { onClose: i },
                 );
             }
             handleGuildContextMenu(e, t) {
                 (0, a.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('1806'), n.e('7654'), n.e('58175'), n.e('44156'), n.e('13616'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('22988'), n.e('87154'), n.e('33213'), n.e('15875')]).then(n.bind(n, 545135));
+                    let { default: e } = await Promise.all([
+                        n.e("1806"),
+                        n.e("7654"),
+                        n.e("58175"),
+                        n.e("44156"),
+                        n.e("13616"),
+                        n.e("6850"),
+                        n.e("58227"),
+                        n.e("54408"),
+                        n.e("20087"),
+                        n.e("22988"),
+                        n.e("87154"),
+                        n.e("33213"),
+                        n.e("15875"),
+                    ]).then(n.bind(n, 545135));
                     return (n) => (0, r.jsx)(e, u(c({}, n), { guild: t }));
                 });
             }
@@ -85,17 +99,17 @@ function d(e) {
                 let i = s.Z.getGuild(t.getGuildId());
                 if (null == i) return null;
                 (0, a.jW)(e, async () => {
-                    let { default: e } = await n.e('40283').then(n.bind(n, 428108));
+                    let { default: e } = await n.e("40283").then(n.bind(n, 428108));
                     return (n) =>
                         (0, r.jsx)(
                             e,
                             u(c({}, n), {
                                 channel: t,
-                                guild: i
-                            })
+                                guild: i,
+                            }),
                         );
                 });
             }
-        }
+        },
     );
 }

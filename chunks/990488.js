@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     W: () => j,
-    r: () => C
+    r: () => C,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -21,24 +21,24 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -87,9 +87,9 @@ function v(e) {
                         {
                             channelId: a,
                             formField: e,
-                            onChange: (e, n) => c(t, n)
+                            onChange: (e, n) => c(t, n),
                         },
-                        t
+                        t,
                     );
                 case o.QJ.TEXT_INPUT:
                     return (0, r.jsx)(
@@ -97,9 +97,9 @@ function v(e) {
                         {
                             formField: e,
                             autofocus: 0 === t,
-                            onChange: (e) => u(t, e)
+                            onChange: (e) => u(t, e),
                         },
-                        t
+                        t,
                     );
                 case o.QJ.PARAGRAPH:
                     return (0, r.jsx)(
@@ -107,18 +107,18 @@ function v(e) {
                         {
                             formField: e,
                             autofocus: 0 === t,
-                            onChange: (e) => u(t, e)
+                            onChange: (e) => u(t, e),
                         },
-                        t
+                        t,
                     );
                 case o.QJ.MULTIPLE_CHOICE:
                     return (0, r.jsx)(
                         d.sp,
                         {
                             formField: e,
-                            onChange: (e) => f(t, e)
+                            onChange: (e) => f(t, e),
                         },
-                        t
+                        t,
                     );
             }
         };
@@ -137,9 +137,9 @@ function j(e) {
                   (0, r.jsx)(v, {
                       guildId: n,
                       formFields: i,
-                      updateFormFields: s
-                  })
-              ]
+                      updateFormFields: s,
+                  }),
+              ],
           });
 }
 function C(e) {
@@ -150,7 +150,11 @@ function C(e) {
         x = (null == m ? void 0 : m.isPhoneVerified()) || (null == m ? void 0 : m.isStaff()),
         g = (null == m ? void 0 : m.verified) || x,
         b = !1;
-    h === p.sFg.NONE ? ((b = !0), (t = null)) : h === p.sFg.VERY_HIGH ? ((b = null != x && x), (t = f.v)) : ((b = null != g && g), (t = u.B));
+    h === p.sFg.NONE
+        ? ((b = !0), (t = null))
+        : h === p.sFg.VERY_HIGH
+          ? ((b = null != x && x), (t = f.v))
+          : ((b = null != g && g), (t = u.B));
     let j = i.useRef(b);
     return null == m
         ? null
@@ -160,8 +164,8 @@ function C(e) {
                   (0, r.jsx)(v, {
                       guildId: n,
                       formFields: s,
-                      updateFormFields: o
-                  })
-              ]
+                      updateFormFields: o,
+                  }),
+              ],
           });
 }

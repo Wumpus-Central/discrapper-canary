@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -17,14 +17,14 @@ function p(e) {
         [y] = E,
         { voiceChannel: O } = (0, c.Z)({
             userId: t.id,
-            guildId: h
+            guildId: h,
         }),
         v = t.id === n.id,
         I = (0, i.e7)([s.Z, a.Z], () => {
             let e = v ? s.Z.getStatus() : a.Z.getStatus(t.id, h);
             return e === _.Sk.OFFLINE || e === _.Sk.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: T } = (0, o.U)({ location: 'UserProfileFeaturedActivity' });
+        { voiceActivityStatusEnabled: T } = (0, o.U)({ location: "UserProfileFeaturedActivity" });
     return I || null == b
         ? I || null == y
             ? T && !I && null != O
@@ -33,7 +33,7 @@ function p(e) {
                       currentUser: n,
                       voiceChannel: O,
                       className: m,
-                      onClose: g
+                      onClose: g,
                   })
                 : null
             : (0, r.jsx)(u.Z, {
@@ -42,15 +42,15 @@ function p(e) {
                   activity: y,
                   profileGuildId: null == p ? void 0 : p.guildId,
                   className: m,
-                  onClose: g
+                  onClose: g,
               })
         : (0, r.jsx)(d.Z, {
-              location: 'UserProfileFeaturedActivity',
+              location: "UserProfileFeaturedActivity",
               user: t,
               currentUser: n,
               stream: b,
               profileGuildId: null == p ? void 0 : p.guildId,
               className: m,
-              onClose: g
+              onClose: g,
           });
 }

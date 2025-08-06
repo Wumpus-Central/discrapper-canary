@@ -17,24 +17,24 @@ function h(t) {
     return (null == n ? void 0 : n.isForumLikeChannel()) && e
         ? t.hasFlag(c.zZ.PINNED)
             ? (0, i.jsx)(l.sNh, {
-                  id: 'unpin-thread',
+                  id: "unpin-thread",
                   label: f.intl.string(f.t.trD8am),
-                  action: () => s.Z.unpin(t)
+                  action: () => s.Z.unpin(t),
               })
             : (0, i.jsx)(l.sNh, {
-                  id: 'pin-thread',
+                  id: "pin-thread",
                   label: f.intl.string(f.t.EnaWho),
                   action: function () {
                       null != h
                           ? r.Z.show({
                                 title: f.intl.string(f.t.IMbjxs),
-                                body: f.intl.string(f.t['mi5+Vl']),
+                                body: f.intl.string(f.t["mi5+Vl"]),
                                 onConfirm: async () => {
-                                    (await s.Z.unpin(h), s.Z.pin(t));
-                                }
+                                    await s.Z.unpin(h), s.Z.pin(t);
+                                },
                             })
                           : s.Z.pin(t);
-                  }
+                  },
               })
         : null;
 }

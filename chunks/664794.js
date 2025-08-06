@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,7 +48,8 @@ function E(e, t) {
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -58,12 +59,12 @@ function b(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function y(e) {
     var { type: t, user: n, guildId: m, viewProfileItem: b, appContext: y } = e,
-        O = E(e, ['type', 'user', 'guildId', 'viewProfileItem', 'appContext']);
+        O = E(e, ["type", "user", "guildId", "viewProfileItem", "appContext"]);
     let v = i.useRef(null),
         { trackUserProfileAction: I } = (0, _.KZ)(),
         { analyticsLocations: T, newestAnalyticsLocation: S } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
@@ -72,31 +73,31 @@ function y(e) {
             guildId: m,
             onAction: () =>
                 I({
-                    action: 'PRESS_INVITE_TO_SERVER',
-                    analyticsLocations: T
-                })
+                    action: "PRESS_INVITE_TO_SERVER",
+                    analyticsLocations: T,
+                }),
         }),
         N = (0, c.Z)({
             user: n,
             guildId: m,
             location: S,
-            color: 'danger',
+            color: "danger",
             appContext: y,
             onBlock: () =>
                 I({
-                    action: 'BLOCK',
-                    analyticsLocations: T
+                    action: "BLOCK",
+                    analyticsLocations: T,
                 }),
             onIgnore: () =>
                 I({
-                    action: 'IGNORE',
-                    analyticsLocations: T
+                    action: "IGNORE",
+                    analyticsLocations: T,
                 }),
             onUnblock: () =>
                 I({
-                    action: 'UNBLOCK',
-                    analyticsLocations: T
-                })
+                    action: "UNBLOCK",
+                    analyticsLocations: T,
+                }),
         }),
         C = (0, u.Z)({
             user: n,
@@ -105,31 +106,31 @@ function y(e) {
             appContext: y,
             onBlock: () =>
                 I({
-                    action: 'BLOCK',
-                    analyticsLocations: T
+                    action: "BLOCK",
+                    analyticsLocations: T,
                 }),
             onIgnore: () =>
                 I({
-                    action: 'IGNORE',
-                    analyticsLocations: T
+                    action: "IGNORE",
+                    analyticsLocations: T,
                 }),
             onUnignore: () =>
                 I({
-                    action: 'UNIGNORE',
-                    analyticsLocations: T
-                })
+                    action: "UNIGNORE",
+                    analyticsLocations: T,
+                }),
         }),
         R = (0, f.Z)({
             user: n,
             guildId: m,
             location: S,
             appContext: y,
-            color: 'danger',
+            color: "danger",
             onAction: () =>
                 I({
-                    action: 'REPORT',
-                    analyticsLocations: T
-                })
+                    action: "REPORT",
+                    analyticsLocations: T,
+                }),
         }),
         P = [
             [b, A],
@@ -142,25 +143,25 @@ function y(e) {
                     guildId: m,
                     location: S,
                     appContext: y,
-                    color: 'danger',
+                    color: "danger",
                     onAction: () =>
                         I({
-                            action: 'REPORT',
-                            analyticsLocations: T
-                        })
-                })
+                            action: "REPORT",
+                            analyticsLocations: T,
+                        }),
+                }),
             ],
             [
                 (0, l.Z)({
                     id: n.id,
-                    label: h.intl.string(h.t['/AXYnJ']),
+                    label: h.intl.string(h.t["/AXYnJ"]),
                     onSuccess: () =>
                         I({
-                            action: 'COPY_USER_ID',
-                            analyticsLocations: T
-                        })
-                })
-            ]
+                            action: "COPY_USER_ID",
+                            analyticsLocations: T,
+                        }),
+                }),
+            ],
         ];
     if (P.every((e) => e.every((e) => null == e))) return null;
     let w = t === p.j8.BANNER ? p.oY : p.ef;
@@ -171,11 +172,11 @@ function y(e) {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(o.v2r, {
-                    navId: 'user-profile-overflow-menu',
+                    navId: "user-profile-overflow-menu",
                     onSelect: void 0,
                     onClose: t,
-                    'aria-label': h.intl.string(h.t.AXIHpa),
-                    children: P.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
+                    "aria-label": h.intl.string(h.t.AXIHpa),
+                    children: P.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t)),
                 });
             },
             children: (e) =>
@@ -184,14 +185,14 @@ function y(e) {
                     g(
                         {
                             ref: v,
-                            action: 'PRESS_OPTIONS',
+                            action: "PRESS_OPTIONS",
                             icon: o.xhG,
-                            tooltipText: h.intl.string(h.t.UKOtz8)
+                            tooltipText: h.intl.string(h.t.UKOtz8),
                         },
                         e,
-                        O
-                    )
-                )
-        })
+                        O,
+                    ),
+                ),
+        }),
     });
 }

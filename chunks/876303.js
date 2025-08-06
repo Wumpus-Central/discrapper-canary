@@ -5,16 +5,16 @@ var r = n(220159),
     s = n(336769);
 r(
     {
-        target: 'Object',
+        target: "Object",
         stat: !0,
         forced: o(function () {
             i(1);
         }),
-        sham: !s
+        sham: !s,
     },
     {
         getPrototypeOf: function (e) {
             return i(a(e));
-        }
-    }
+        },
+    },
 );

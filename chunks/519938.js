@@ -6,60 +6,60 @@ n.d(t, {
     bA: () => i,
     d7: () => c,
     k3: () => d,
-    xv: () => o
+    xv: () => o,
 });
 var r = n(570140);
 function i(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     r.Z.dispatch({
-        type: 'PICTURE_IN_PICTURE_OPEN',
+        type: "PICTURE_IN_PICTURE_OPEN",
         id: e,
         component: t,
-        props: n
+        props: n,
     });
 }
 function o(e) {
     r.Z.dispatch({
-        type: 'PICTURE_IN_PICTURE_CLOSE',
-        id: e
+        type: "PICTURE_IN_PICTURE_CLOSE",
+        id: e,
     });
 }
 function a(e) {
     r.Z.dispatch({
-        type: 'PICTURE_IN_PICTURE_HIDE',
-        id: e
+        type: "PICTURE_IN_PICTURE_HIDE",
+        id: e,
     });
 }
 function s(e) {
     r.Z.dispatch({
-        type: 'PICTURE_IN_PICTURE_SHOW',
-        id: e
+        type: "PICTURE_IN_PICTURE_SHOW",
+        id: e,
     });
 }
 function l(e, t) {
     r.Z.dispatch({
-        type: 'PICTURE_IN_PICTURE_MOVE',
+        type: "PICTURE_IN_PICTURE_MOVE",
         id: e,
-        position: t
+        position: t,
     });
 }
 function c(e, t) {
     r.Z.dispatch({
-        type: 'PICTURE_IN_PICTURE_RESIZE',
+        type: "PICTURE_IN_PICTURE_RESIZE",
         width: e,
-        pipType: t
+        pipType: t,
     });
 }
 function u(e, t) {
     r.Z.dispatch({
-        type: 'PICTURE_IN_PICTURE_UPDATE_RECT',
+        type: "PICTURE_IN_PICTURE_UPDATE_RECT",
         id: e,
-        rect: t
+        rect: t,
     });
 }
 function d(e) {
     r.Z.dispatch({
-        type: 'PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW',
-        id: e
+        type: "PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW",
+        id: e,
     });
 }

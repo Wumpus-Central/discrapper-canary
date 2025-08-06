@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => F }), n(388685));
+n.d(t, { Z: () => F }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -39,24 +39,24 @@ function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -78,7 +78,7 @@ function U(e, t) {
         e
     );
 }
-let B = w.isPlatformEmbedded || 'Safari' !== o().name;
+let B = w.isPlatformEmbedded || "Safari" !== o().name;
 function F() {
     let e = (0, c.e7)([Z.Z], () => Z.Z.getProps().guild),
         { analyticsLocations: t } = (0, x.ZP)(f.Z.GUILD_SETTINGS_SOUNDBOARD);
@@ -89,17 +89,17 @@ function F() {
               children: (0, r.jsx)(m.hjN, {
                   tag: m.RB0.H1,
                   title: L.intl.string(L.t.OWQNYm),
-                  children: (0, r.jsx)(Y, { guild: e })
-              })
+                  children: (0, r.jsx)(Y, { guild: e }),
+              }),
           });
 }
 function H(e) {
     let { children: t } = e;
     return (0, r.jsx)(m.X6q, {
         className: M.tableHeader,
-        variant: 'heading-sm/semibold',
-        color: 'header-secondary',
-        children: t
+        variant: "heading-sm/semibold",
+        color: "header-secondary",
+        children: t,
     });
 }
 function z(e) {
@@ -108,10 +108,10 @@ function z(e) {
         a = null != l ? (0, P.nL)(l) : 0;
     return 0 === t
         ? (0, r.jsx)(r.Fragment, {
-              children: L.intl.format(L.t['7E9Hd3'], {
+              children: L.intl.format(L.t["7E9Hd3"], {
                   slots: n,
-                  totalSlots: a
-              })
+                  totalSlots: a,
+              }),
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -125,20 +125,20 @@ function z(e) {
                                       guildId: i,
                                       location: {
                                           section: A.jXE.GUILD_SETTINGS_SOUNDBOARD,
-                                          object: A.qAy.BOOST_GEM_ICON
-                                      }
+                                          object: A.qAy.BOOST_GEM_ICON,
+                                      },
                                   });
                               },
                               tabIndex: -1,
-                              children: (0, r.jsx)(S.Z, G({}, e))
-                          })
+                              children: (0, r.jsx)(S.Z, G({}, e)),
+                          }),
                   }),
                   L.intl.format(L.t.HHCdvb, {
                       slots: n,
                       totalSlots: a,
-                      boostLevel: t
-                  })
-              ]
+                      boostLevel: t,
+                  }),
+              ],
           });
 }
 let W = (e) => {
@@ -153,19 +153,21 @@ let W = (e) => {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
-            })(e, ['renderPopoutBody', 'renderPopoutChildren', 'popoutTargetRef']);
+            })(e, ["renderPopoutBody", "renderPopoutChildren", "popoutTargetRef"]);
         let [s, o] = i.useState(!1),
             c = i.useMemo(() => new d.V7(), []),
             u = i.useCallback(() => {
-                (c.stop(), o(!0));
+                c.stop(), o(!0);
             }, [c]),
             g = i.useCallback(() => {
                 c.start(200, () => o(!1));
@@ -181,16 +183,16 @@ let W = (e) => {
                                 className: M.browserUnsupportedDialog,
                                 onMouseEnter: u,
                                 onMouseLeave: g,
-                                children: t(e)
-                            })
+                                children: t(e),
+                            }),
                     },
-                    a
+                    a,
                 ),
                 {
                     targetElementRef: l,
-                    children: (e) => n(e)
-                }
-            )
+                    children: (e) => n(e),
+                },
+            ),
         );
     },
     V = () => {
@@ -198,9 +200,9 @@ let W = (e) => {
         return (0, r.jsx)(W, {
             renderPopoutBody: () =>
                 (0, r.jsx)(m.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'header-secondary',
-                    children: L.intl.format(L.t.bGXPVl, {})
+                    variant: "text-sm/normal",
+                    color: "header-secondary",
+                    children: L.intl.format(L.t.bGXPVl, {}),
                 }),
             renderPopoutChildren: (t) =>
                 (0, r.jsx)(
@@ -208,17 +210,20 @@ let W = (e) => {
                     U(G({}, t), {
                         disabled: !0,
                         buttonRef: e,
-                        children: L.intl.string(L.t['/uNYPD'])
-                    })
+                        children: L.intl.string(L.t["/uNYPD"]),
+                    }),
                 ),
-            popoutTargetRef: e
+            popoutTargetRef: e,
         });
     };
 function Y(e) {
     let { guild: t } = e,
         [l, a] = (0, c.Wu)([_.Z], () => {
             var e;
-            return [null != (e = _.Z.getSoundsForGuild(t.id)) ? e : k.Hy, _.Z.isFetchingSounds() || _.Z.isFetchingDefaultSounds()];
+            return [
+                null != (e = _.Z.getSoundsForGuild(t.id)) ? e : k.Hy,
+                _.Z.isFetchingSounds() || _.Z.isFetchingDefaultSounds(),
+            ];
         }),
         { canCreateExpressions: s } = (0, j.XJ)(t),
         o = i.useRef(null),
@@ -242,39 +247,39 @@ function Y(e) {
                 var e;
                 null == (e = o.current) || e.pause();
             },
-            []
+            [],
         ),
         a)
     )
         return (0, r.jsx)(m.$jN, {});
     let b = B
         ? (0, r.jsx)(m.zxk, {
-              variant: 'primary',
-              text: L.intl.string(L.t['/uNYPD']),
+              variant: "primary",
+              text: L.intl.string(L.t["/uNYPD"]),
               onClick: function () {
                   (0, m.ZDy)(async () => {
-                      let { default: e } = await Promise.all([n.e('56035'), n.e('15878')]).then(n.bind(n, 758961));
+                      let { default: e } = await Promise.all([n.e("56035"), n.e("15878")]).then(n.bind(n, 758961));
                       return (n) => (0, r.jsx)(e, U(G({}, n), { guildId: t.id }));
                   });
               },
-              disabled: g <= 0 || !s
+              disabled: g <= 0 || !s,
           })
         : (0, r.jsx)(V, {});
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(m.Text, {
                         className: M.helpText,
-                        variant: 'text-sm/normal',
-                        color: 'header-secondary',
-                        children: L.intl.string(L.t.BohnsL)
+                        variant: "text-sm/normal",
+                        color: "header-secondary",
+                        children: L.intl.string(L.t.BohnsL),
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: M.buttons,
-                        children: !f && b
-                    })
-                ]
+                        children: !f && b,
+                    }),
+                ],
             }),
             f
                 ? (0, r.jsxs)(m.ubH, {
@@ -285,40 +290,44 @@ function Y(e) {
                               darkSrc: n(458601),
                               lightSrc: n(673557),
                               width: 272,
-                              height: 212
+                              height: 212,
                           }),
                           (0, r.jsx)(m.OZU, {
                               note: L.intl.string(L.t.ZhoSBA),
                               noteClassName: M.emptyText,
-                              children: L.intl.string(L.t.I6P1p6)
+                              children: L.intl.string(L.t.I6P1p6),
                           }),
-                          b
-                      ]
+                          b,
+                      ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(m.$i$, { className: M.divider }),
                           (0, r.jsx)(m.X6q, {
                               className: M.tableTitle,
-                              variant: 'heading-md/bold',
-                              color: 'header-primary',
+                              variant: "heading-md/bold",
+                              color: "header-primary",
                               children: (0, r.jsx)(z, {
                                   guildId: t.id,
                                   currentTier: u,
-                                  availableSounds: g
-                              })
+                                  availableSounds: g,
+                              }),
                           }),
                           (0, r.jsx)(D.Z, {
                               guild: t,
                               numSounds: l.length,
-                              isOutOfSlots: 0 === g
+                              isOutOfSlots: 0 === g,
                           }),
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: M.soundTable,
                               children: [
-                                  (0, r.jsxs)('div', {
+                                  (0, r.jsxs)("div", {
                                       className: M.tableHeaders,
-                                      children: [(0, r.jsx)(H, { children: L.intl.string(L.t.sMOuub) }), (0, r.jsx)(H, { children: L.intl.string(L.t.lLFvlZ) }), (0, r.jsx)(H, { children: L.intl.string(L.t['85qMS0']) })]
+                                      children: [
+                                          (0, r.jsx)(H, { children: L.intl.string(L.t.sMOuub) }),
+                                          (0, r.jsx)(H, { children: L.intl.string(L.t.lLFvlZ) }),
+                                          (0, r.jsx)(H, { children: L.intl.string(L.t["85qMS0"]) }),
+                                      ],
                                   }),
                                   l.map((e) =>
                                       (0, r.jsx)(
@@ -327,16 +336,16 @@ function Y(e) {
                                               sound: e,
                                               isPlaying: !1,
                                               guild: t,
-                                              onPlaySound: x
+                                              onPlaySound: x,
                                           },
-                                          e.soundId
-                                      )
-                                  )
-                              ]
-                          })
-                      ]
-                  })
-        ]
+                                          e.soundId,
+                                      ),
+                                  ),
+                              ],
+                          }),
+                      ],
+                  }),
+        ],
     });
 }
 function K(e) {
@@ -370,23 +379,23 @@ function K(e) {
                 (0, N.openUserProfileModal)({
                     userId: y.id,
                     guildId: o.id,
-                    sourceAnalyticsLocations: O
+                    sourceAnalyticsLocations: O,
                 });
         }, [y, o.id, O]),
         B = R.ZP.useUserTag(y);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(M.row, { [M.active]: l }),
         children: [
             P
                 ? (0, r.jsx)(p.Z, {
                       emojiId: b,
                       emojiName: _,
-                      className: M.emoji
+                      className: M.emoji,
                   })
                 : (0, r.jsx)(m.XBm, {
-                      size: 'md',
-                      color: 'currentColor',
-                      className: M.emoji
+                      size: "md",
+                      color: "currentColor",
+                      className: M.emoji,
                   }),
             (0, r.jsx)(m.P3F, {
                 onClick: () => {
@@ -395,18 +404,18 @@ function K(e) {
                 onContextMenu: D,
                 className: M.soundName,
                 children: (0, r.jsxs)(m.Text, {
-                    variant: 'text-sm/normal',
+                    variant: "text-sm/normal",
                     className: M.soundName,
                     children: [
                         u,
-                        ' ',
+                        " ",
                         (0, r.jsx)(m.gj8, {
-                            size: 'md',
-                            color: 'currentColor',
-                            className: M.soundPreviewIcon
-                        })
-                    ]
-                })
+                            size: "md",
+                            color: "currentColor",
+                            className: M.soundPreviewIcon,
+                        }),
+                    ],
+                }),
             }),
             null != y &&
                 (0, r.jsxs)(m.P3F, {
@@ -414,82 +423,86 @@ function K(e) {
                     onClick: k,
                     children: [
                         (0, r.jsx)(m.qEK, {
-                            'aria-label': B,
+                            "aria-label": B,
                             size: m.EFr.SIZE_24,
                             className: M.uploaderAvatar,
-                            src: (0, T.ov)(y, !1, 24)
+                            src: (0, T.ov)(y, !1, 24),
                         }),
                         (0, r.jsx)(m.Text, {
-                            variant: 'text-sm/normal',
+                            variant: "text-sm/normal",
                             lineClamp: 1,
-                            children: B
-                        })
-                    ]
+                            children: B,
+                        }),
+                    ],
                 }),
             S
-                ? (0, r.jsxs)('div', {
+                ? (0, r.jsxs)("div", {
                       className: M.soundEditContainer,
                       children: [
                           (0, r.jsx)(m.P3F, {
                               className: M.soundUpdate,
                               onClick: function (e) {
-                                  (e.stopPropagation(),
+                                  e.stopPropagation(),
                                       (0, m.ZDy)(async () => {
-                                          let { default: e } = await Promise.all([n.e('56035'), n.e('15878')]).then(n.bind(n, 758961));
+                                          let { default: e } = await Promise.all([n.e("56035"), n.e("15878")]).then(
+                                              n.bind(n, 758961),
+                                          );
                                           return (n) =>
                                               (0, r.jsx)(
                                                   e,
                                                   U(G({}, n), {
                                                       guildId: o.id,
-                                                      existingSound: t
-                                                  })
+                                                      existingSound: t,
+                                                  }),
                                               );
-                                      }));
+                                      });
                               },
-                              'aria-label': L.intl.string(L.t.bt75u7),
+                              "aria-label": L.intl.string(L.t.bt75u7),
                               children: (0, r.jsx)(m.vdY, {
-                                  size: 'xs',
-                                  color: 'currentColor',
-                                  className: M.soundEditIcon
-                              })
+                                  size: "xs",
+                                  color: "currentColor",
+                                  className: M.soundEditIcon,
+                              }),
                           }),
                           (0, r.jsx)(m.P3F, {
                               className: M.soundRemove,
                               onClick: function (e) {
-                                  (e.stopPropagation(),
+                                  e.stopPropagation(),
                                       (0, m.h7j)((e) =>
                                           (0, r.jsx)(
                                               m.ConfirmModal,
                                               U(
                                                   G(
                                                       {
-                                                          header: L.intl.formatToPlainString(L.t['PR/VbG'], { soundName: u }),
+                                                          header: L.intl.formatToPlainString(L.t["PR/VbG"], {
+                                                              soundName: u,
+                                                          }),
                                                           confirmText: L.intl.string(L.t.oyYWHB),
-                                                          cancelText: L.intl.string(L.t['ETE/oK']),
-                                                          onConfirm: A
+                                                          cancelText: L.intl.string(L.t["ETE/oK"]),
+                                                          onConfirm: A,
                                                       },
-                                                      e
+                                                      e,
                                                   ),
                                                   {
                                                       children: (0, r.jsx)(m.Text, {
-                                                          variant: 'text-md/normal',
-                                                          children: L.intl.format(L.t['u6+CmJ'], { soundName: u })
-                                                      })
-                                                  }
-                                              )
-                                          )
-                                      ));
+                                                          variant: "text-md/normal",
+                                                          children: L.intl.format(L.t["u6+CmJ"], { soundName: u }),
+                                                      }),
+                                                  },
+                                              ),
+                                          ),
+                                      );
                               },
-                              'aria-label': L.intl.string(L.t.N86XcH),
+                              "aria-label": L.intl.string(L.t.N86XcH),
                               children: (0, r.jsx)(m.Dio, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: M.soundEditIcon
-                              })
-                          })
-                      ]
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: M.soundEditIcon,
+                              }),
+                          }),
+                      ],
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

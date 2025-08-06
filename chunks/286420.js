@@ -12,24 +12,24 @@ function c(e) {
     return (0, r.jsx)(i.sY7, {
         options: [
             {
-                name: 'SD',
-                value: 'sd'
+                name: "SD",
+                value: "sd",
             },
             {
-                name: 'HD',
-                value: 'hd',
-                className: a.premiumOption
-            }
+                name: "HD",
+                value: "hd",
+                className: a.premiumOption,
+            },
         ],
         className: a.selector,
-        value: 'sd',
-        look: 'pill',
+        value: "sd",
+        look: "pill",
         onChange: function (e) {
-            'hd' === e.value &&
+            "hd" === e.value &&
                 (0, o.E)({
                     analyticsLocation: null == n ? void 0 : n[0],
-                    onClose: t
+                    onClose: t,
                 });
-        }
+        },
     });
 }

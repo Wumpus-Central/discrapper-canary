@@ -6,5 +6,9 @@ var r = n(502087),
 function s(e) {
     if (null == e) return o.mBz;
     let t = r.Z.getPremiumTypeOverride();
-    return e.isStaff() && t === a.F_ ? o.PRK : null != e.premiumType && (0, i.I5)(e) ? a.a1[e.premiumType].fileSize : o.mBz;
+    return e.isStaff() && t === a.F_
+        ? o.PRK
+        : null != e.premiumType && (0, i.I5)(e)
+          ? a.a1[e.premiumType].fileSize
+          : o.mBz;
 }

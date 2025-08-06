@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => _,
-    q: () => f
+    q: () => f,
 }),
-    n(997841));
+    n(997841);
 var r = n(73800),
     i = n(915346),
     o = n(783097),
@@ -38,7 +38,7 @@ function _(e) {
                           (0, i.W)({
                               appId: t.id,
                               botId: l.id,
-                              analyticsLocations: null != o ? o : []
+                              analyticsLocations: null != o ? o : [],
                           });
                       }
                     : null != _ && null != h
@@ -46,11 +46,11 @@ function _(e) {
                             (0, i.W)({
                                 appId: _,
                                 botId: h.id,
-                                analyticsLocations: null != o ? o : []
+                                analyticsLocations: null != o ? o : [],
                             });
                         }
                       : void 0
                 : null,
-        [o, l, s, t, h, _]
+        [o, l, s, t, h, _],
     );
 }

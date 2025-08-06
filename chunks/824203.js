@@ -6,11 +6,11 @@ function o(e) {
         case r.O.FEATURE_LIMITED:
             return i.intl.string(i.t.WCvmra);
         case r.O.GUILD_FEATURE_LIMITED:
-            return i.intl.string(i.t['0QUDYW']);
+            return i.intl.string(i.t["0QUDYW"]);
         case r.O.USER_FEATURE_LIMITED:
             return i.intl.string(i.t.gs1sxc);
         case r.O.SLOWMODE:
-            return i.intl.string(i.t['9UAXh4']);
+            return i.intl.string(i.t["9UAXh4"]);
         case r.O.RATE_LIMIT:
             return i.intl.string(i.t.zBB9xM);
         case r.O.CANNOT_MESSAGE_USER:
@@ -30,7 +30,7 @@ function o(e) {
         case r.O.CANNOT_SEND_STICKERS:
             return i.intl.string(i.t.byrr7u);
         case r.O.AUTOMOD_BLOCKED:
-            return i.intl.string(i.t['24PAJy']);
+            return i.intl.string(i.t["24PAJy"]);
         case r.O.HARMFUL_LINK:
             return i.intl.string(i.t.zeqgmJ);
         case r.O.CANNOT_USE_COMMAND:
@@ -40,6 +40,6 @@ function o(e) {
         case r.O.CANNOT_USE_EXTERNAL_APPS:
             return i.intl.string(i.t.Ji4l7O);
         default:
-            return i.intl.string(i.t['v/OAcn']);
+            return i.intl.string(i.t["v/OAcn"]);
     }
 }

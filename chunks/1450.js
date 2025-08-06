@@ -34,8 +34,8 @@ let v = (e) => {
                     location: T,
                     guild_id: null == A ? void 0 : A.id,
                     channel_id: null == o ? void 0 : o.id,
-                    type: 'Expression Picker Inline Sticker Upsell',
-                    location_stack: S
+                    type: "Expression Picker Inline Sticker Upsell",
+                    location_stack: S,
                 }),
                 I(!0));
         }, [C, A, o, T, v, I, S, N]),
@@ -48,57 +48,57 @@ let v = (e) => {
                 analyticsLocations: S,
                 analyticsSourceLocation: T,
                 guild: A,
-                perks: (0, b.hC)()
+                perks: (0, b.hC)(),
             });
         };
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: a()(O.upsell, t),
             children: [
                 (0, r.jsx)(l.$zw, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: O.icon
+                    size: "md",
+                    color: "currentColor",
+                    className: O.icon,
                 }),
                 (0, r.jsx)(l.Text, {
-                    color: 'interactive-normal',
+                    color: "interactive-normal",
                     className: O.body,
-                    variant: 'text-sm/normal',
-                    children: y.intl.format(y.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) })
+                    variant: "text-sm/normal",
+                    children: y.intl.format(y.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) }),
                 }),
                 (0, r.jsx)(l.Avr, {
-                    variant: 'primary',
-                    text: y.intl.string(y.t['Gb+BJC']),
-                    onClick: e
-                })
-            ]
+                    variant: "primary",
+                    text: y.intl.string(y.t["Gb+BJC"]),
+                    onClick: e,
+                }),
+            ],
         });
     }
     {
         let e = () => {
-            ((0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, T));
+            (0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, T);
         };
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: a()(O.upsell, t),
             children: [
                 (0, r.jsx)(l.SlE, {
-                    size: 'custom',
-                    color: 'currentColor',
+                    size: "custom",
+                    color: "currentColor",
                     className: O.icon,
                     width: 20,
-                    height: 20
+                    height: 20,
                 }),
                 (0, r.jsx)(l.Text, {
-                    color: 'interactive-normal',
+                    color: "interactive-normal",
                     className: O.body,
-                    variant: 'text-sm/normal',
-                    children: y.intl.string(y.t.S83wgo)
+                    variant: "text-sm/normal",
+                    children: y.intl.string(y.t.S83wgo),
                 }),
                 (0, r.jsx)(l.Avr, {
-                    variant: 'primary',
+                    variant: "primary",
                     text: y.intl.string(y.t.bwNjur),
-                    onClick: e
-                })
-            ]
+                    onClick: e,
+                }),
+            ],
         });
     }
 };

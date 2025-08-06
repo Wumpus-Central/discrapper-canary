@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     E: () => d,
-    K: () => c
+    K: () => c,
 }),
     n(388685),
-    n(642613));
+    n(642613);
 var r = n(149765),
     i = n(605436),
     l = n(345162),
@@ -13,7 +13,7 @@ let o = (e, t, n) => {
     if (null == e.id) return !1;
     let i = a.I0({
         forceRoles: { [e.id]: e },
-        context: n
+        context: n,
     });
     return r.e$(i, t);
 };

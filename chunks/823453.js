@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -22,10 +22,10 @@ function b(e) {
         u = i.useMemo(() => E.has(s.pathname), [s.pathname]);
     (0, m.Z)(window, u);
     let d = (0, c.e7)([f.Z, _.Z], () => (_.Z.getWindowOpen(g.KJ3.DEVTOOLS_POPOUT) ? 0 : f.Z.sidebarWidth));
-    return (0, r.jsx)('html', {
+    return (0, r.jsx)("html", {
         lang: t,
-        style: ''.concat(n, ' --devtools-sidebar-width: ').concat(d, 'px;'),
-        className: a()(o, e, { overlay: __OVERLAY__ })
+        style: "".concat(n, " --devtools-sidebar-width: ").concat(d, "px;"),
+        className: a()(o, e, { overlay: __OVERLAY__ }),
     });
 }
 function y() {
@@ -34,27 +34,27 @@ function y() {
         i.useEffect(() => {
             Promise.all(
                 u.L.map((e) =>
-                    n(959598)('./'.concat(e, '.woff2')).then((e) => {
+                    n(959598)("./".concat(e, ".woff2")).then((e) => {
                         let { default: t } = e;
                         return t;
-                    })
-                )
+                    }),
+                ),
             ).then((e) => t(e));
         }, []),
         (0, r.jsx)(r.Fragment, {
             children: e.map((e, t) =>
                 (0, r.jsx)(
-                    'link',
+                    "link",
                     {
-                        rel: 'preload',
+                        rel: "preload",
                         href: e,
-                        as: 'font',
-                        type: 'font/woff2',
-                        crossOrigin: 'anonymous'
+                        as: "font",
+                        type: "font/woff2",
+                        crossOrigin: "anonymous",
                     },
-                    t
-                )
-            )
+                    t,
+                ),
+            ),
         })
     );
 }
@@ -62,9 +62,9 @@ function O(e) {
     let { children: t, skipsSettingDefaultPageTitle: n } = e;
     (0, h.ZD)({ skipsSettingDefaultPageTitle: n });
     let { clientThemesClassName: o, clientThemesCSS: a } = (0, d.ZP)(),
-        l = i.createElement('style', { [d.PQ]: !0 }, a);
+        l = i.createElement("style", { [d.PQ]: !0 }, a);
     return (0, r.jsxs)(s.ql, {
-        children: [b(o), y(), l, t]
+        children: [b(o), y(), l, t],
     });
 }
 let v = i.memo(O);

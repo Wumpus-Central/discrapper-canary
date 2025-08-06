@@ -3,9 +3,9 @@ function r() {
     return null != e && e.brands && Array.isArray(e.brands)
         ? e.brands
               .map(function (e) {
-                  return e.brand + '/' + e.version;
+                  return e.brand + "/" + e.version;
               })
-              .join(' ')
+              .join(" ")
         : navigator.userAgent;
 }
 n.d(t, { Z: () => r });

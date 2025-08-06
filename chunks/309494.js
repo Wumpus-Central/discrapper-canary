@@ -17,12 +17,12 @@ function p(e) {
         ? (0, i.jsx)(l.Z, {
               text: u.intl.string(u.t.y5MwJy),
               delay: 0,
-              'aria-label': !1,
+              "aria-label": !1,
               copyValue: c.ZP.getUserTag(t, {
-                  decoration: 'never',
-                  identifiable: 'always'
+                  decoration: "never",
+                  identifiable: "always",
               }),
-              onCopy: () => r({ action: 'COPY_USERNAME' }),
+              onCopy: () => r({ action: "COPY_USERNAME" }),
               children: (e) => {
                   var t, r;
                   return (0, i.jsx)(
@@ -31,35 +31,35 @@ function p(e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
                                   i = Object.keys(n);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (i = i.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   i.forEach(function (t) {
                                       var i;
-                                      ((i = n[t]),
+                                      (i = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: i,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = i));
-                                  }));
+                                              : (e[t] = i);
+                                  });
                           }
                           return e;
                       })({}, e)),
                       (r = r =
                           {
                               className: s()(m.copyButton, { [m.visible]: n }),
-                              'aria-label': u.intl.string(u.t.y5MwJy),
+                              "aria-label": u.intl.string(u.t.y5MwJy),
                               children: (0, i.jsx)(a.TIy, {
-                                  size: 'xs',
-                                  color: 'currentColor'
-                              })
+                                  size: "xs",
+                                  color: "currentColor",
+                              }),
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -73,9 +73,9 @@ function p(e) {
                             })(Object(r)).forEach(function (e) {
                                 Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                             }),
-                      t)
+                      t),
                   );
-              }
+              },
           })
         : null;
 }

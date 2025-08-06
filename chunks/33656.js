@@ -21,7 +21,7 @@ function _(e) {
         value: !!r,
         onChange: n,
         note: s,
-        children: t
+        children: t,
     });
 }
 function j() {
@@ -41,13 +41,13 @@ function j() {
             [g.$Z.SOCIAL]: h.s6.NOTIFICATIONS_EMAILS_SOCIAL,
             [g.$Z.UPDATES_AND_ANNOUNCEMENTS]: h.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
             [g.$Z.TIPS]: h.s6.NOTIFICATIONS_EMAILS_TIPS,
-            [g.$Z.RECOMMENDATIONS_AND_EVENTS]: h.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
+            [g.$Z.RECOMMENDATIONS_AND_EVENTS]: h.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS,
         };
     return s
         ? (0, i.jsxs)(d.F, {
               setting: h.s6.NOTIFICATIONS_EMAILS,
               children: [
-                  (0, i.jsx)('div', { ref: t }),
+                  (0, i.jsx)("div", { ref: t }),
                   (0, i.jsxs)(c.hjN, {
                       className: x.marginTop40,
                       tag: c.RB0.H1,
@@ -64,18 +64,18 @@ function j() {
                                           enabled: n[t],
                                           onChange: (e) => {
                                               (0, m.pR)(t, e);
-                                          }
+                                          },
                                       },
-                                      r()
+                                      r(),
                                   );
                               return null != a
                                   ? (0, i.jsx)(
                                         d.F,
                                         {
                                             setting: a,
-                                            children: l
+                                            children: l,
                                         },
-                                        r()
+                                        r(),
                                     )
                                   : l;
                           }),
@@ -88,18 +88,18 @@ function j() {
                                       look: o.iL.LINK,
                                       color: o.Tt.LINK,
                                       onClick: m.oc,
-                                      children: f.intl.string(f.t.Ra9Pws)
+                                      children: f.intl.string(f.t.Ra9Pws),
                                   }),
                                   (0, i.jsx)(c.R94, {
                                       type: c.geA.DESCRIPTION,
-                                      children: f.intl.string(f.t.iYjQ8f)
+                                      children: f.intl.string(f.t.iYjQ8f),
                                   }),
-                                  (0, i.jsx)(c.$i$, { className: a()(x.marginTop40, x.marginBottom40) })
-                              ]
-                          })
-                      ]
-                  })
-              ]
+                                  (0, i.jsx)(c.$i$, { className: a()(x.marginTop40, x.marginBottom40) }),
+                              ],
+                          }),
+                      ],
+                  }),
+              ],
           })
         : null;
 }

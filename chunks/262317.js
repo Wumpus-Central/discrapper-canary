@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     XX: () => F,
     ZP: () => Y,
-    ul: () => V
+    ul: () => V,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -44,7 +44,7 @@ function k(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -54,15 +54,15 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 k(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -70,11 +70,11 @@ function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -96,7 +96,8 @@ function B(e, t) {
         i = Z(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -106,45 +107,81 @@ function Z(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function F(e) {
     let { numUsers: t } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: M.moreContainer,
         children: (0, r.jsxs)(l.Text, {
-            color: 'text-muted',
-            variant: 'text-sm/medium',
-            children: ['+', t]
-        })
+            color: "text-muted",
+            variant: "text-sm/medium",
+            children: ["+", t],
+        }),
     });
 }
 function V(e) {
     let { numAudience: t, collapsed: n } = e,
-        i = n ? t : x.intl.formatToPlainString(x.t['+v2pNz'], { count: t });
-    return (0, r.jsxs)('div', {
+        i = n ? t : x.intl.formatToPlainString(x.t["+v2pNz"], { count: t });
+    return (0, r.jsxs)("div", {
         className: a()(M.audienceContainer, { [M.audienceContainerCollapsed]: n }),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: M.audienceIconContainer,
                 children: (0, r.jsx)(l.VWR, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: M.audienceIcon
-                })
+                    size: "md",
+                    color: "currentColor",
+                    className: M.audienceIcon,
+                }),
             }),
             (0, r.jsx)(l.Text, {
-                color: 'text-muted',
-                variant: 'text-sm/medium',
-                children: i
-            })
-        ]
+                color: "text-muted",
+                variant: "text-sm/medium",
+                children: i,
+            }),
+        ],
     });
 }
 function H(e) {
     var t;
-    let { collapsed: o, user: _, channel: k, mute: U, localMute: Z, localVideoDisabled: F, deaf: V, video: H, embeddedApplication: Y, serverMute: W, serverDeaf: K, nick: z, ringing: q, speaking: X, disconnected: Q, connectUserDragSource: J, canDrag: $, isStreaming: ee, isWatching: et, isGuest: en, priority: er, showPreview: ei, hidePreview: eo, shouldShowHoverPopout: ea, previewIsOpen: es, otherClientSessionType: el, voicePlatform: ec, isSelfOnOtherClient: eu = !1, tabIndex: ed, location: ef, isSelf: e_, application: ep, hangStatusActivity: eh, requestToStreamActivity: em, showHangStatus: eg } = e,
+    let {
+            collapsed: o,
+            user: _,
+            channel: k,
+            mute: U,
+            localMute: Z,
+            localVideoDisabled: F,
+            deaf: V,
+            video: H,
+            embeddedApplication: Y,
+            serverMute: W,
+            serverDeaf: K,
+            nick: z,
+            ringing: q,
+            speaking: X,
+            disconnected: Q,
+            connectUserDragSource: J,
+            canDrag: $,
+            isStreaming: ee,
+            isWatching: et,
+            isGuest: en,
+            priority: er,
+            showPreview: ei,
+            hidePreview: eo,
+            shouldShowHoverPopout: ea,
+            previewIsOpen: es,
+            otherClientSessionType: el,
+            voicePlatform: ec,
+            isSelfOnOtherClient: eu = !1,
+            tabIndex: ed,
+            location: ef,
+            isSelf: e_,
+            application: ep,
+            hangStatusActivity: eh,
+            requestToStreamActivity: em,
+            showHangStatus: eg,
+        } = e,
         eE = i.useRef(null),
         [eb, ey] = i.useState(!1),
         [eO, ev] = i.useState(!1),
@@ -163,7 +200,7 @@ function H(e) {
                 new s.sW(500, () => {
                     ev(!0);
                 }),
-            []
+            [],
         ),
         eC = (e) => {
             e && es ? eN.delay() : !e && eN.isDelayed() && eN.cancel();
@@ -178,13 +215,21 @@ function H(e) {
                 streamType: L.lo.GUILD,
                 ownerId: _.id,
                 channelId: k.id,
-                guildId: k.guild_id
+                guildId: k.guild_id,
             };
-            (N.default.getId() !== _.id && d.default.selectVoiceChannel(k.id), et ? ((0, O.Z)(e), c.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, f.iV)(e), null == eo || eo(_.id));
+            N.default.getId() !== _.id && d.default.selectVoiceChannel(k.id),
+                et ? ((0, O.Z)(e), c.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, f.iV)(e),
+                null == eo || eo(_.id);
         },
         eD = (e) => {
             (0, u.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('8982'), n.e('7717'), n.e('12658')]).then(n.bind(n, 757387));
+                let { default: e } = await Promise.all([
+                    n.e("79695"),
+                    n.e("98783"),
+                    n.e("8982"),
+                    n.e("7717"),
+                    n.e("12658"),
+                ]).then(n.bind(n, 757387));
                 return (t) =>
                     (0, r.jsx)(
                         e,
@@ -194,8 +239,10 @@ function H(e) {
                             channel: k,
                             showMediaItems: !0,
                             showStageChannelItems: k.isGuildStageVoice(),
-                            onInteraction: (0, m.u)('GuildChannelUserContextMenu', h.Z.VOICE_USER, { targetUserId: _.id })
-                        })
+                            onInteraction: (0, m.u)("GuildChannelUserContextMenu", h.Z.VOICE_USER, {
+                                targetUserId: _.id,
+                            }),
+                        }),
                     );
             });
         },
@@ -205,12 +252,12 @@ function H(e) {
                 channel: k,
                 hangStatusActivity: eh,
                 userId: _.id,
-                targetElementRef: eE
+                targetElementRef: eE,
             }),
         ex = () =>
             (0, r.jsx)(T.Z, {
                 userId: _.id,
-                channel: k
+                channel: k,
             }),
         eM = () =>
             (0, p.dl)() && (0, p.zd)(k.id)
@@ -220,10 +267,10 @@ function H(e) {
                       channel: k,
                       onWatch: ew,
                       previewIsOpen: es,
-                      location: ef
+                      location: ef,
                   }),
         ek = (e) => {
-            let t = D.al.has(null != el ? el : ''),
+            let t = D.al.has(null != el ? el : ""),
                 n = {
                     user: _,
                     speaking: X,
@@ -257,7 +304,7 @@ function H(e) {
                     application: ep,
                     channelId: k.id,
                     hangStatusActivity: eh,
-                    showHangStatus: eg
+                    showHangStatus: eg,
                 };
             if (eu) {
                 var i;
@@ -265,9 +312,9 @@ function H(e) {
                     text: null != (i = (0, E.Z)(el)) ? i : x.intl.string(x.t.IyYqqa),
                     children: (e) => {
                         var { onClick: t, onContextMenu: i } = e,
-                            o = B(e, ['onClick', 'onContextMenu']);
+                            o = B(e, ["onClick", "onContextMenu"]);
                         return (0, r.jsx)(A.ZP, j({ ref: eE }, n, o));
-                    }
+                    },
                 });
             }
             let s = () => null;
@@ -275,7 +322,7 @@ function H(e) {
                 eg && eO ? (s = eL) : ee ? (s = eM) : eI && _.id !== N.default.getId() && (s = ex),
                 (0, r.jsx)(l.yRy, {
                     targetElementRef: eE,
-                    position: 'right',
+                    position: "right",
                     renderPopout: s,
                     shouldShow: ea && !eb,
                     onRequestClose: eS,
@@ -288,19 +335,20 @@ function H(e) {
                                 onMouseDown: e.onMouseDown,
                                 onKeyDown: e.onKeyDown,
                                 handleHoverHangStatus: eC,
-                                handleHoverIcons: eR
-                            })
-                        )
+                                handleHoverIcons: eR,
+                            }),
+                        ),
                 })
             );
         },
-        ej = (0, r.jsx)('div', {
+        ej = (0, r.jsx)("div", {
             className: M.draggable,
-            'data-dnd-name': k.name,
+            "data-dnd-name": k.name,
             onMouseEnter: eu ? void 0 : eA,
             onMouseLeave: eu ? void 0 : eS,
             children: (0, r.jsx)(S.Z, {
-                clickTrap: (null == _ ? void 0 : _.id) === (null == (t = P.default.getCurrentUser()) ? void 0 : t.id) && eb,
+                clickTrap:
+                    (null == _ ? void 0 : _.id) === (null == (t = P.default.getCurrentUser()) ? void 0 : t.id) && eb,
                 targetElementRef: eE,
                 user: _,
                 guildId: k.guild_id,
@@ -308,8 +356,8 @@ function H(e) {
                 newAnalyticsLocations: [h.Z.VOICE_USER],
                 shouldShow: eb,
                 onRequestClose: () => ey(!1),
-                children: (e) => ek(e)
-            })
+                children: (e) => ek(e),
+            }),
         });
     return $ ? J(ej) : ej;
 }

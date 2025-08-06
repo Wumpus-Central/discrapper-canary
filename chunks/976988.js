@@ -1,1 +1,1 @@
-e.exports = { responseOptions: 'responseOptions_d650db' };
+e.exports = { responseOptions: "responseOptions_d650db" };

@@ -1,4 +1,4 @@
-(t.d(r, { default: () => h }), t(388685));
+t.d(r, { default: () => h }), t(388685);
 var n = t(255367),
     o = t(73800),
     i = t(512722),
@@ -24,74 +24,74 @@ let h = (e) => {
         }, []),
         { acceptLinkRequest: v, isAcceptLoading: _ } = (0, c.G)({
             onError: O,
-            onSuccess: j
+            onSuccess: j,
         });
     return (
-        a()(!x, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
+        a()(!x, "FamilyCenterAcceptLinkModal should only be rendered for teens."),
         (0, n.jsxs)(u.Z, {
             transitionState: i,
-            'aria-label': m.intl.string(b.default.rlNJwc),
+            "aria-label": m.intl.string(b.default.rlNJwc),
             className: p.root,
             children: [
                 (0, n.jsx)(u.Z.Error, { error: g ? m.intl.string(b.default.pegSMz) : void 0 }),
                 (0, n.jsxs)(s.hzk, {
-                    'data-migration-pending': !0,
+                    "data-migration-pending": !0,
                     children: [
                         (0, n.jsx)(u.Z.Header, {
                             currentUser: r,
                             otherUser: t,
                             header: m.intl.string(b.default.rlNJwc),
                             icon: (0, n.jsx)(s.xPt, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: p.linkIcon
-                            })
+                                size: "md",
+                                color: "currentColor",
+                                className: p.linkIcon,
+                            }),
                         }),
                         (0, n.jsxs)(u.Z.Content, {
                             children: [
                                 (0, n.jsx)(f.Z, { inModal: !0 }),
                                 (0, n.jsx)(s.Text, {
                                     className: p.disclaimer,
-                                    variant: 'text-xs/normal',
-                                    color: 'text-default',
-                                    children: m.intl.format(b.default.snlFqa, { username: l.ZP.getName(t) })
-                                })
-                            ]
-                        })
-                    ]
+                                    variant: "text-xs/normal",
+                                    color: "text-default",
+                                    children: m.intl.format(b.default.snlFqa, { username: l.ZP.getName(t) }),
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
                 (0, n.jsx)(s.mzw, {
-                    'data-migration-pending': !0,
-                    children: (0, n.jsx)('form', {
+                    "data-migration-pending": !0,
+                    children: (0, n.jsx)("form", {
                         onSubmit: (e) => {
-                            (e.preventDefault(), v(t));
+                            e.preventDefault(), v(t);
                         },
                         children: (0, n.jsx)(u.Z.ButtonFooter, {
                             children: (0, n.jsxs)(s.hE2, {
-                                direction: 'horizontal-reverse',
+                                direction: "horizontal-reverse",
                                 children: [
                                     (0, n.jsx)(s.zxk, {
-                                        variant: 'secondary',
-                                        size: 'sm',
-                                        text: m.intl.string(m.t['ETE/oK']),
-                                        type: 'button',
+                                        variant: "secondary",
+                                        size: "sm",
+                                        text: m.intl.string(m.t["ETE/oK"]),
+                                        type: "button",
                                         disabled: _,
-                                        onClick: h
+                                        onClick: h,
                                     }),
                                     (0, n.jsx)(s.zxk, {
-                                        variant: 'primary',
-                                        size: 'sm',
-                                        text: m.intl.string(b.default['wI/jo6']),
-                                        type: 'submit',
+                                        variant: "primary",
+                                        size: "sm",
+                                        text: m.intl.string(b.default["wI/jo6"]),
+                                        type: "submit",
                                         disabled: _,
-                                        loading: _
-                                    })
-                                ]
-                            })
-                        })
-                    })
-                })
-            ]
+                                        loading: _,
+                                    }),
+                                ],
+                            }),
+                        }),
+                    }),
+                }),
+            ],
         })
     );
 };

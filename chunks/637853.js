@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Ee: () => O,
     L6: () => D,
     V7: () => I,
@@ -11,13 +11,13 @@
     kl: () => A,
     mn: () => S,
     p3: () => b,
-    wC: () => E
+    wC: () => E,
 }),
     n(997841),
     n(388685),
     n(539854),
     n(472816),
-    n(794429));
+    n(794429);
 var r = n(442837),
     i = n(902704),
     o = n(447003),
@@ -50,13 +50,20 @@ function E(e) {
 }
 function b(e, t) {
     var n;
-    if (null == e || !e.features.has(p.oNc.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < m) return !1;
+    if (
+        null == e ||
+        !e.features.has(p.oNc.GUILD_ONBOARDING) ||
+        null == t ||
+        null == t.joinedAt ||
+        new Date(t.joinedAt) < m
+    )
+        return !1;
     let r = null != (n = t.flags) ? n : 0;
     return u.yE(r, h.q.STARTED_ONBOARDING) && !u.yE(r, h.q.COMPLETED_ONBOARDING);
 }
 function y(e, t, n) {
     let r = new Set();
-    (e.forEach((e) => {
+    e.forEach((e) => {
         e.options.forEach((e) => {
             var t;
             null == e ||
@@ -66,9 +73,12 @@ function y(e, t, n) {
                 });
         });
     }),
-        t.forEach((e) => r.add(e)));
+        t.forEach((e) => r.add(e));
     let i = n.filter((e) => !e.isCategory() && !e.isThread() && !(0, o.Z)(e));
-    return [i.filter((e) => r.has(e.id) || (null != e.parent_id && r.has(e.parent_id))), i.filter((e) => !r.has(e.id) && !(null != e.parent_id && r.has(e.parent_id)))];
+    return [
+        i.filter((e) => r.has(e.id) || (null != e.parent_id && r.has(e.parent_id))),
+        i.filter((e) => !r.has(e.id) && !(null != e.parent_id && r.has(e.parent_id))),
+    ];
 }
 function O(e, t, n) {
     return y(
@@ -77,7 +87,7 @@ function O(e, t, n) {
         s.ZP.getChannels(e)[s.sH].map((e) => {
             let { channel: t } = e;
             return t;
-        })
+        }),
     );
 }
 function v(e, t, n) {
@@ -87,14 +97,18 @@ function v(e, t, n) {
         (0, r.e7)([s.ZP], () => s.ZP.getChannels(e))[s.sH].map((e) => {
             let { channel: t } = e;
             return t;
-        })
+        }),
     );
 }
 function I(e) {
     return T(a.Z.getChannel(e));
 }
 function T(e) {
-    return null != e && !!(0, _.s)(e.guild_id, e.id) && (e.isForumChannel() ? f.Uu(p.Plq.SEND_MESSAGES_IN_THREADS, e) : f.Uu(p.Plq.SEND_MESSAGES, e));
+    return (
+        null != e &&
+        !!(0, _.s)(e.guild_id, e.id) &&
+        (e.isForumChannel() ? f.Uu(p.Plq.SEND_MESSAGES_IN_THREADS, e) : f.Uu(p.Plq.SEND_MESSAGES, e))
+    );
 }
 function S(e) {
     return (0, r.e7)([a.Z], () => {
@@ -116,7 +130,7 @@ function A(e, t, n) {
                         e,
                         n.channelIds,
                         (e) => e.id,
-                        (e) => r(e) && !i.includes(e)
+                        (e) => r(e) && !i.includes(e),
                     );
                     return o.length < t.length ? o : t;
                 }, a);
@@ -137,7 +151,10 @@ function C(e, t) {
         i = s.ZP.getChannels(e)[s.sH],
         o = [];
     for (let { channel: e } of i)
-        if ((0, _.s)(e.guild_id, e.id) && ((t.includes(e.id) && !e.isCategory()) || (!e.isThread() && null != e.parent_id && t.includes(e.parent_id)))) {
+        if (
+            (0, _.s)(e.guild_id, e.id) &&
+            ((t.includes(e.id) && !e.isCategory()) || (!e.isThread() && null != e.parent_id && t.includes(e.parent_id)))
+        ) {
             let t = n(e);
             r(t) && o.push(t);
         }
@@ -154,9 +171,9 @@ function R(e, t) {
                 let { id: t } = e;
                 return t;
             }),
-            i
+            i,
         ),
-        n
+        n,
     ];
 }
 function P(e, t) {
@@ -170,11 +187,15 @@ function w(e, t) {
                 r = [],
                 i = [],
                 o = {};
-            for (let e of n[s.sH]) (0, _.s)(e.channel.guild_id, e.channel.id) && ((t.has(e.channel.id) && !e.channel.isCategory()) || (!e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id))) && ((o[e.channel.id] = e), r.push(e.channel), T(e.channel) && i.push(e.channel.id));
+            for (let e of n[s.sH])
+                (0, _.s)(e.channel.guild_id, e.channel.id) &&
+                    ((t.has(e.channel.id) && !e.channel.isCategory()) ||
+                        (!e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id))) &&
+                    ((o[e.channel.id] = e), r.push(e.channel), T(e.channel) && i.push(e.channel.id));
             return [i, r];
         },
         [e, t],
-        P
+        P,
     );
 }
 function D(e) {
@@ -182,7 +203,7 @@ function D(e) {
         e
             .map((e) => e.roleIds)
             .flat()
-            .filter(d.lm)
+            .filter(d.lm),
     );
 }
 function L(e) {
@@ -190,6 +211,6 @@ function L(e) {
         e
             .map((e) => e.channelIds)
             .flat()
-            .filter(d.lm)
+            .filter(d.lm),
     );
 }

@@ -12,40 +12,40 @@ var i = n(481060),
 function m(e) {
     let { addFormField: t, onSelect: n, guild: o, allowTerms: m } = e;
     return (0, r.jsx)(i.v2r, {
-        navId: 'add-questions',
+        navId: "add-questions",
         className: u.menu,
         onClose: l.Zy,
-        'aria-label': d.intl.string(d.t.liqwPD),
+        "aria-label": d.intl.string(d.t.liqwPD),
         onSelect: n,
         children: (0, r.jsxs)(i.kSQ, {
             children: [
                 (0, r.jsx)(i.sNh, {
-                    id: 'text-input',
+                    id: "text-input",
                     icon: (0, i.GSL)(a.Z),
                     label: d.intl.string(d.t.w6Q9w8),
-                    action: () => (0, c.Md)(s.QJ.TEXT_INPUT, t, o)
+                    action: () => (0, c.Md)(s.QJ.TEXT_INPUT, t, o),
                 }),
                 (0, r.jsx)(i.sNh, {
-                    id: 'paragraph',
+                    id: "paragraph",
                     icon: i.OvV,
                     label: d.intl.string(d.t.gG0JBA),
-                    action: () => (0, c.Md)(s.QJ.PARAGRAPH, t, o)
+                    action: () => (0, c.Md)(s.QJ.PARAGRAPH, t, o),
                 }),
                 (0, r.jsx)(i.sNh, {
-                    id: 'multiple-choice',
+                    id: "multiple-choice",
                     icon: i.jE$,
                     label: d.intl.string(d.t.ooKh3t),
-                    action: () => (0, c.Md)(s.QJ.MULTIPLE_CHOICE, t, o)
+                    action: () => (0, c.Md)(s.QJ.MULTIPLE_CHOICE, t, o),
                 }),
                 m &&
                     (0, r.jsx)(i.sNh, {
-                        id: 'terms',
+                        id: "terms",
                         icon: i.snC,
-                        label: d.intl.string(d.t['3pz9t7']),
-                        action: () => (0, c.Md)(s.QJ.TERMS, t, o)
-                    })
-            ]
-        })
+                        label: d.intl.string(d.t["3pz9t7"]),
+                        action: () => (0, c.Md)(s.QJ.TERMS, t, o),
+                    }),
+            ],
+        }),
     });
 }
 let g = function (e) {
@@ -64,24 +64,24 @@ let g = function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, e)),
@@ -89,7 +89,7 @@ let g = function (e) {
                             {
                                 addFormField: t,
                                 guild: n,
-                                allowTerms: i
+                                allowTerms: i,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
@@ -103,14 +103,14 @@ let g = function (e) {
                               })(Object(a)).forEach(function (e) {
                                   Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
-                        l)
+                        l),
                     );
                 },
                 {
-                    position: 'top',
-                    align: 'center'
-                }
+                    position: "top",
+                    align: "center",
+                },
             );
-        }
+        },
     });
 };

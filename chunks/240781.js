@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(314940));
+n.d(t, { Z: () => T }), n(314940);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -21,20 +21,20 @@ var r = n(255367),
 let v = [
         {
             avatarSize: c.EFr.SIZE_40,
-            showStatus: !1
+            showStatus: !1,
         },
         {
             avatarSize: c.EFr.SIZE_32,
-            showStatus: !1
+            showStatus: !1,
         },
         {
             avatarSize: c.EFr.SIZE_40,
-            showStatus: !0
+            showStatus: !0,
         },
         {
             avatarSize: c.EFr.SIZE_32,
-            showStatus: !0
-        }
+            showStatus: !0,
+        },
     ],
     I = (e) => {
         let { purchase: t } = e,
@@ -43,52 +43,52 @@ let v = [
             o = null != t.expiresAt ? (0, g.TD)(Date.now(), t.expiresAt) : null,
             a = (0, _.a)(t),
             s = t.purchasedAt.toLocaleDateString(n, {
-                month: 'long',
-                year: 'numeric'
+                month: "long",
+                year: "numeric",
             });
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: O.purchaseInfo,
             children: [
                 (0, r.jsx)(c.Text, {
-                    variant: 'text-sm/semibold',
-                    color: 'header-primary',
-                    children: a
+                    variant: "text-sm/semibold",
+                    color: "header-primary",
+                    children: a,
                 }),
                 null != o &&
                     (0, r.jsx)(c.Text, {
-                        variant: 'text-xxs/normal',
-                        color: 'text-muted',
-                        children: y.intl.format(y.t.Io7ozs, { days: o.days.toString() })
+                        variant: "text-xxs/normal",
+                        color: "text-muted",
+                        children: y.intl.format(y.t.Io7ozs, { days: o.days.toString() }),
                     }),
                 (0, r.jsxs)(c.Text, {
-                    variant: 'text-xxs/normal',
-                    color: 'text-muted',
+                    variant: "text-xxs/normal",
+                    color: "text-muted",
                     children: [
-                        i ? y.intl.format(y.t['req+eX'], { dateAcquired: s }) : y.intl.format(y.t.gW9R4O, { date: s }),
+                        i ? y.intl.format(y.t["req+eX"], { dateAcquired: s }) : y.intl.format(y.t.gW9R4O, { date: s }),
                         null != t.expiresAt &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)('br', {}),
+                                    (0, r.jsx)("br", {}),
                                     y.intl.format(y.t.eZSTa2, {
                                         date: t.expiresAt.toLocaleDateString(n, {
-                                            minute: 'numeric',
-                                            hour: 'numeric',
-                                            day: 'numeric',
-                                            month: 'long',
-                                            year: 'numeric'
-                                        })
-                                    })
-                                ]
-                            })
-                    ]
+                                            minute: "numeric",
+                                            hour: "numeric",
+                                            day: "numeric",
+                                            month: "long",
+                                            year: "numeric",
+                                        }),
+                                    }),
+                                ],
+                            }),
+                    ],
                 }),
                 i &&
                     (0, r.jsx)(c.Text, {
-                        variant: 'text-xxs/normal',
-                        color: 'text-muted',
-                        children: y.intl.string(y.t.nKdAlJ)
-                    })
-            ]
+                        variant: "text-xxs/normal",
+                        color: "text-muted",
+                        children: y.intl.string(y.t.nKdAlJ),
+                    }),
+            ],
         });
     },
     T = (e) => {
@@ -104,61 +104,61 @@ let v = [
             w = i.useMemo(
                 () =>
                     C
-                        ? y.intl.string(y.t['7vkeu7'])
+                        ? y.intl.string(y.t["7vkeu7"])
                         : (0, s.EQ)([N, S, R])
                               .with([!0, !0, !1], () => y.intl.string(y.t.hmyYKy))
                               .with([!0, !1, !0], () => y.intl.string(y.t.q0PlFh))
-                              .with([!0, !1, !1], () => y.intl.string(y.t['0xs2sL']))
+                              .with([!0, !1, !1], () => y.intl.string(y.t["0xs2sL"]))
                               .otherwise(() => y.intl.string(y.t.fEGjVV)),
-                [C, N, S, R]
+                [C, N, S, R],
             );
         return null != g && (null == T || C)
-            ? (0, r.jsxs)('div', {
+            ? (0, r.jsxs)("div", {
                   className: a()(O.modalPreview, O.shopPreviewContainer, _),
                   children: [
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: O.shopPreviewBanner,
                           children: (0, r.jsx)(b.Z, {
                               user: t,
                               guildId: n,
-                              avatarDecorationOverride: o
-                          })
+                              avatarDecorationOverride: o,
+                          }),
                       }),
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: O.shopPreviewTextContainer,
                           children: [
                               (0, r.jsx)(c.Text, {
-                                  variant: 'text-sm/semibold',
-                                  children: P
+                                  variant: "text-sm/semibold",
+                                  children: P,
                               }),
                               (0, r.jsx)(c.Text, {
-                                  variant: 'text-sm/normal',
-                                  children: w
-                              })
-                          ]
-                      })
-                  ]
+                                  variant: "text-sm/normal",
+                                  children: w,
+                              }),
+                          ],
+                      }),
+                  ],
               })
-            : (0, r.jsxs)('div', {
+            : (0, r.jsxs)("div", {
                   className: a()(O.modalPreview, _),
                   children: [
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: O.previewSections,
                           children: [
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: O.decorationPreview,
                                   children: (0, r.jsx)(b.Z, {
                                       user: t,
                                       guildId: n,
-                                      avatarDecorationOverride: o
-                                  })
+                                      avatarDecorationOverride: o,
+                                  }),
                               }),
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: O.smallDecorationPreviewsContainer,
                                   children: v.map((e) => {
                                       let { avatarSize: i, showStatus: a } = e;
                                       return (0, r.jsx)(
-                                          'div',
+                                          "div",
                                           {
                                               className: O.smallDecorationPreview,
                                               children: (0, r.jsx)(b.Z, {
@@ -167,16 +167,16 @@ let v = [
                                                   avatarSize: i,
                                                   avatarDecorationOverride: o,
                                                   status: a ? h : void 0,
-                                                  'aria-hidden': !0
-                                              })
+                                                  "aria-hidden": !0,
+                                              }),
                                           },
-                                          ''.concat(i).concat(a)
+                                          "".concat(i).concat(a),
                                       );
-                                  })
-                              })
-                          ]
+                                  }),
+                              }),
+                          ],
                       }),
-                      null != T && (0, r.jsx)(I, { purchase: T })
-                  ]
+                      null != T && (0, r.jsx)(I, { purchase: T }),
+                  ],
               });
     };

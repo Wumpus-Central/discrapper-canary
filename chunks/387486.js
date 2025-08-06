@@ -2,21 +2,21 @@ a.d(e, { f: () => o });
 var r = a(650093),
     _ = a(867921),
     n = a(928541);
-function o(t, e = (0, r.L2)('fetch')) {
+function o(t, e = (0, r.L2)("fetch")) {
     let a = 0,
         i = 0;
     return (0, _.q)(t, function (_) {
         let o = _.body.length;
-        ((a += o), i++);
+        (a += o), i++;
         let c = {
             body: _.body,
-            method: 'POST',
-            referrerPolicy: 'origin',
+            method: "POST",
+            referrerPolicy: "origin",
             headers: t.headers,
             keepalive: a <= 60000 && i < 15,
-            ...t.fetchOptions
+            ...t.fetchOptions,
         };
-        if (!e) return ((0, r._6)('fetch'), (0, n.$2)('No fetch implementation available'));
+        if (!e) return (0, r._6)("fetch"), (0, n.$2)("No fetch implementation available");
         try {
             return e(t.url, c).then(
                 (t) => (
@@ -25,14 +25,14 @@ function o(t, e = (0, r.L2)('fetch')) {
                     {
                         statusCode: t.status,
                         headers: {
-                            'x-sentry-rate-limits': t.headers.get('X-Sentry-Rate-Limits'),
-                            'retry-after': t.headers.get('Retry-After')
-                        }
+                            "x-sentry-rate-limits": t.headers.get("X-Sentry-Rate-Limits"),
+                            "retry-after": t.headers.get("Retry-After"),
+                        },
                     }
-                )
+                ),
             );
         } catch (t) {
-            return ((0, r._6)('fetch'), (a -= o), i--, (0, n.$2)(t));
+            return (0, r._6)("fetch"), (a -= o), i--, (0, n.$2)(t);
         }
     });
 }

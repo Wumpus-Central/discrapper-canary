@@ -8,6 +8,6 @@ function a(e) {
     return (0, r.jsx)(i.Z, {
         className: l.title,
         id: n,
-        children: t
+        children: t,
     });
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     ND: () => p,
     P5: () => h,
-    g6: () => m
+    g6: () => m,
 });
 var r = n(255367);
 n(73800);
@@ -20,7 +20,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,21 +30,21 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let p = (e, t) =>
         (0, o.ZDy)(async () => {
-            let { default: i } = await Promise.all([n.e('91689'), n.e('89289'), n.e('3974')]).then(n.bind(n, 28130));
+            let { default: i } = await Promise.all([n.e("91689"), n.e("89289"), n.e("3974")]).then(n.bind(n, 28130));
             return (n) =>
                 (0, r.jsx)(
                     i,
@@ -54,13 +54,13 @@ let p = (e, t) =>
                             onComplete: e,
                             uploadType: u.pC.AVATAR,
                             showUpsellHeader: !1,
-                            modalTitle: d.intl.string(d.t['6yrpFR']),
+                            modalTitle: d.intl.string(d.t["6yrpFR"]),
                             analyticsLocation: l.Z.GROUP_DM_ICON_EDITOR,
                             analyticsLocations: t,
-                            allowRecentAvatarsSelection: !1
+                            allowRecentAvatarsSelection: !1,
                         },
-                        n
-                    )
+                        n,
+                    ),
                 );
         }),
     h = (e, t) => {
@@ -68,7 +68,7 @@ let p = (e, t) =>
             (n) => {
                 s.Z.setIcon(e, n.imageUri, t).catch(m);
             },
-            [t]
+            [t],
         );
     },
     m = (e) => {
@@ -76,13 +76,13 @@ let p = (e, t) =>
         if ((null == e || null == (t = e.body) ? void 0 : t.retry_after) != null) {
             let t = (0, i.Z)(new Date(), e.body.retry_after);
             a.Z.show({
-                title: d.intl.string(d.t['Whhv4+']),
+                title: d.intl.string(d.t["Whhv4+"]),
                 body: d.intl.format(d.t.VIJkAw, {
                     duration: (0, r.jsx)(c.Z, {
                         showUnits: !0,
-                        deadline: t
-                    })
-                })
+                        deadline: t,
+                    }),
+                }),
             });
         }
     };

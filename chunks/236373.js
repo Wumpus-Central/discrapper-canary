@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     Gb: () => _,
     J1: () => l,
     KV: () => c,
     Ql: () => s,
-    j$: () => p
+    j$: () => p,
 }),
-    n(953529));
+    n(953529);
 var r = n(314897),
     i = n(230900),
     o = n(854698),
@@ -25,9 +25,10 @@ function l(e) {
               by_weekday: e.byWeekday,
               by_n_weekday: e.byNWeekday,
               by_month: e.byMonth,
-              by_month_day: (null != (n = null == (t = e.byMonthDay) ? void 0 : t.length) ? n : 0) > 0 ? e.byMonthDay : null,
+              by_month_day:
+                  (null != (n = null == (t = e.byMonthDay) ? void 0 : t.length) ? n : 0) > 0 ? e.byMonthDay : null,
               by_year_day: e.byYearDay,
-              count: e.count
+              count: e.count,
           };
 }
 function c(e) {
@@ -43,7 +44,7 @@ function c(e) {
               byMonth: e.by_month,
               byMonthDay: e.by_month_day,
               byYearDay: e.by_year_day,
-              count: e.count
+              count: e.count,
           };
 }
 function u(e) {
@@ -53,7 +54,7 @@ function u(e) {
         guild_id: e.guildId,
         scheduled_start_time: e.scheduledStartTime,
         scheduled_end_time: e.scheduledEndTime,
-        is_canceled: e.isCanceled
+        is_canceled: e.isCanceled,
     }));
 }
 function d(e) {
@@ -63,14 +64,26 @@ function d(e) {
         guildId: e.guild_id,
         scheduledStartTime: e.scheduled_start_time,
         scheduledEndTime: e.scheduled_end_time,
-        isCanceled: e.is_canceled
+        isCanceled: e.is_canceled,
     }));
 }
 function f(e) {
-    return null != e && 'id' in e;
+    return null != e && "id" in e;
 }
 function _(e, t, n) {
-    let { name: i, description: o, privacyLevel: s, channelId: c, scheduledStartTime: d, scheduledEndTime: f, entityType: _, entityMetadata: p, image: h, recurrenceRule: m, eventExceptions: g } = e;
+    let {
+        name: i,
+        description: o,
+        privacyLevel: s,
+        channelId: c,
+        scheduledStartTime: d,
+        scheduledEndTime: f,
+        entityType: _,
+        entityMetadata: p,
+        image: h,
+        recurrenceRule: m,
+        eventExceptions: g,
+    } = e;
     return {
         id: null != n ? n : a.Ku,
         name: i,
@@ -86,15 +99,15 @@ function _(e, t, n) {
         creator_id: r.default.getId(),
         status: a.p1.SCHEDULED,
         recurrence_rule: l(m),
-        guild_scheduled_event_exceptions: u(g)
+        guild_scheduled_event_exceptions: u(g),
     };
 }
 function p(e, t) {
     var n, r, s, l, u, _, p;
     let h = {
-        name: null != (n = null == e ? void 0 : e.name) ? n : '',
+        name: null != (n = null == e ? void 0 : e.name) ? n : "",
         privacyLevel: null != (r = null == e ? void 0 : e.privacy_level) ? r : a.j8.GUILD_ONLY,
-        description: null != (s = null == e ? void 0 : e.description) ? s : '',
+        description: null != (s = null == e ? void 0 : e.description) ? s : "",
         scheduledStartTime: null != (l = null == e ? void 0 : e.scheduled_start_time) ? l : (0, o.ib)().toISOString(),
         entityType: null != (u = null == e ? void 0 : e.entity_type) ? u : a.WX.NONE,
         entityMetadata: null != (_ = null == e ? void 0 : e.entity_metadata) ? _ : void 0,
@@ -103,11 +116,17 @@ function p(e, t) {
         image: null == e ? void 0 : e.image,
         scheduledEndTime: null == e ? void 0 : e.scheduled_end_time,
         recurrenceRule: c(null == e ? void 0 : e.recurrence_rule),
-        eventExceptions: d(null != (p = null == e ? void 0 : e.guild_scheduled_event_exceptions) ? p : [])
+        eventExceptions: d(null != (p = null == e ? void 0 : e.guild_scheduled_event_exceptions) ? p : []),
     };
     if (f(e) && (null == e ? void 0 : e.entity_type) === a.WX.EXTERNAL) {
         let t = (0, i.cS)(e);
         null != t && (h.entityMetadata = { location: t });
-    } else null == h.channelId && null != t && ((h.channelId = t.id), t.isGuildStageVoice() ? (h.entityType = a.WX.STAGE_INSTANCE) : t.isGuildVoice() && (h.entityType = a.WX.VOICE));
+    } else
+        null == h.channelId &&
+            null != t &&
+            ((h.channelId = t.id),
+            t.isGuildStageVoice()
+                ? (h.entityType = a.WX.STAGE_INSTANCE)
+                : t.isGuildVoice() && (h.entityType = a.WX.VOICE));
     return h;
 }

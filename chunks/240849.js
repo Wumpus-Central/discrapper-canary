@@ -10,10 +10,10 @@ function l(e, t) {
 class c {
     initialize() {
         (0, o.isDesktop)() &&
-            (a.ZP.on('NAVIGATE_BACK', (e, t) => {
+            (a.ZP.on("NAVIGATE_BACK", (e, t) => {
                 l(t, s.qXD.Back) && (0, r.op)();
             }),
-            a.ZP.on('NAVIGATE_FORWARD', (e, t) => {
+            a.ZP.on("NAVIGATE_FORWARD", (e, t) => {
                 l(t, s.qXD.Forward) && (0, r.eH)();
             }));
     }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685));
+n.d(t, { Z: () => R }), n(388685);
 var r,
     i = n(873546),
     o = n(442837),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,30 +74,34 @@ function y() {
         }
 }
 function O(e) {
-    ((p = _(d({}, p), { [e.tutorialId]: !1 })), (h = d({}, h)), delete h[e.tutorialId], y());
+    (p = _(d({}, p), { [e.tutorialId]: !1 })), (h = d({}, h)), delete h[e.tutorialId], y();
 }
 function v(e) {
     h = _(d({}, h), { [e.tutorialId]: e.renderData });
 }
 function I(e) {
-    ((h = d({}, h)), delete h[e.tutorialId]);
+    (h = d({}, h)), delete h[e.tutorialId];
 }
 function T() {
     m = !0;
 }
 function S(e) {
     let { tutorial: t } = e;
-    ((E = !0), (m = !0), (p = {}), null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (p[e] = !1))), y());
+    (E = !0),
+        (m = !0),
+        (p = {}),
+        null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (p[e] = !1))),
+        y();
 }
 function A() {
     E = !1;
 }
 function N(e) {
-    return i.tq && ['writing-messages', 'organize-by-topic'].includes(e);
+    return i.tq && ["writing-messages", "organize-by-topic"].includes(e);
 }
 class C extends (r = o.ZP.Store) {
     initialize() {
-        (y(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(s.Z));
+        y(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(s.Z);
     }
     shouldShow(e) {
         return !(!E || m || c.a || N(e)) && (g[e] || !1);
@@ -116,12 +120,12 @@ class C extends (r = o.ZP.Store) {
         return null != t ? t[e] : null;
     }
 }
-u(C, 'displayName', 'TutorialIndicatorStore');
+u(C, "displayName", "TutorialIndicatorStore");
 let R = new C(a.Z, {
     CONNECTION_OPEN: S,
     CONNECTION_CLOSED: A,
     TUTORIAL_INDICATOR_DISMISS: O,
     TUTORIAL_INDICATOR_SHOW: v,
     TUTORIAL_INDICATOR_HIDE: I,
-    TUTORIAL_INDICATOR_SUPPRESS_ALL: T
+    TUTORIAL_INDICATOR_SUPPRESS_ALL: T,
 });

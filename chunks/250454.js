@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,15 +18,15 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -34,11 +34,11 @@ function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -55,23 +55,23 @@ function l(e, t) {
 }
 let c = {
         persistToBackend: !1,
-        showMobileOptOuts: !1
+        showMobileOptOuts: !1,
     },
     u = (0, r.B)({
-        kind: 'user',
-        id: '2025-05_feedback_persistence_experiment',
-        label: 'Feedback metadata persistence',
+        kind: "user",
+        id: "2025-05_feedback_persistence_experiment",
+        label: "Feedback metadata persistence",
         defaultConfig: c,
         treatments: [
             {
                 id: 1,
-                label: 'Persist impression times and opt-outs to backend; show mobile opt-outs',
+                label: "Persist impression times and opt-outs to backend; show mobile opt-outs",
                 config: l(a({}, c), {
                     persistToBackend: !0,
-                    showMobileOptOuts: !0
-                })
-            }
-        ]
+                    showMobileOptOuts: !0,
+                }),
+            },
+        ],
     });
 function d(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -80,7 +80,7 @@ function d(e) {
         { location: t },
         {
             disable: r,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     );
 }

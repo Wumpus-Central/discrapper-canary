@@ -24,12 +24,12 @@ function l(e) {
                       ? a.intl.format(a.t.AcqBmJ, {
                             username: p,
                             usernameHook: h,
-                            callDuration: m
+                            callDuration: m,
                         })
-                      : a.intl.format(a.t['43phHx'], {
+                      : a.intl.format(a.t["43phHx"], {
                             username: p,
-                            usernameHook: h
-                        })
+                            usernameHook: h,
+                        }),
           })
         : (0, r.jsxs)(o.Z, {
               icon: n(344163),
@@ -37,21 +37,21 @@ function l(e) {
               compact: l,
               children: [
                   null != m
-                      ? a.intl.format(a.t['7TeC1N'], {
+                      ? a.intl.format(a.t["7TeC1N"], {
                             username: p,
                             usernameHook: h,
-                            callDuration: m
+                            callDuration: m,
                         })
                       : a.intl.format(a.t.LuB5RE, {
                             username: p,
-                            usernameHook: h
+                            usernameHook: h,
                         }),
                   u
                       ? (0, r.jsx)(o.Z.Action, {
                             onClick: f,
-                            children: a.intl.string(a.t.oa9mvb)
+                            children: a.intl.string(a.t.oa9mvb),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           });
 }

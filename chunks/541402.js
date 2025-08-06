@@ -4,16 +4,16 @@ var r = n(220159),
     i = n(717130),
     s = n(565130),
     c = n(317043),
-    l = o(''.indexOf);
+    l = o("".indexOf);
 r(
     {
-        target: 'String',
+        target: "String",
         proto: !0,
-        forced: !c('includes')
+        forced: !c("includes"),
     },
     {
         includes: function (e) {
             return !!~l(s(i(this)), s(a(e)), arguments.length > 1 ? arguments[1] : void 0);
-        }
-    }
+        },
+    },
 );

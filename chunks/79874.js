@@ -1,7 +1,7 @@
 n.d(t, {
     Kq: () => c,
     ZP: () => s,
-    zI: () => l
+    zI: () => l,
 });
 var r = n(442837),
     i = n(924301),
@@ -26,12 +26,12 @@ function u(e, t, n) {
     if (null == e.recurrence_rule || null == n)
         return {
             startTime: new Date(e.scheduled_start_time),
-            endTime: null != e.scheduled_end_time ? new Date(e.scheduled_end_time) : null
+            endTime: null != e.scheduled_end_time ? new Date(e.scheduled_end_time) : null,
         };
     let r = (0, a.iA)(n, e),
         { startDate: i, endDate: o } = (0, a.x6)(r, t);
     return {
         startTime: i.toDate(),
-        endTime: null == o ? void 0 : o.toDate()
+        endTime: null == o ? void 0 : o.toDate(),
     };
 }

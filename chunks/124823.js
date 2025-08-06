@@ -32,24 +32,24 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -61,9 +61,9 @@ function w(e) {
         L = i.useRef(Date.now()),
         { analyticsLocations: k } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
         M = (0, f.ZB)({
-            layout: 'SIDEBAR',
+            layout: "SIDEBAR",
             userId: t.id,
-            channelId: n.id
+            channelId: n.id,
         }),
         U = i.useRef(null),
         H = (0, s.Z)(U),
@@ -72,11 +72,11 @@ function w(e) {
                 R(
                     {
                         sourceAnalyticsLocations: k,
-                        hideRestrictedProfile: !0
+                        hideRestrictedProfile: !0,
                     },
                     M,
-                    e
-                )
+                    e,
+                ),
             );
         };
     return (0, r.jsx)(u.Gt, {
@@ -97,25 +97,25 @@ function w(e) {
                     (0, r.jsxs)(l.u2, {
                         children: [
                             (0, r.jsx)(Z.Z, { children: (0, r.jsx)(S.Z, { user: t }) }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: T.header,
                                 children: [
                                     (0, r.jsx)(j.Z, {
                                         user: t,
                                         displayProfile: A,
                                         themeType: I.lY.SIDEBAR,
-                                        animateOnHover: !H
+                                        animateOnHover: !H,
                                     }),
                                     (0, r.jsx)(y.Z, {
                                         user: t,
                                         displayProfile: A,
                                         channelId: n.id,
                                         themeType: I.lY.SIDEBAR,
-                                        onOpenProfile: w ? void 0 : G
-                                    })
-                                ]
+                                        onOpenProfile: w ? void 0 : G,
+                                    }),
+                                ],
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: N.body,
                                 children: [
                                     (0, r.jsx)(E.Z, {
@@ -125,35 +125,35 @@ function w(e) {
                                         onOpenProfile: w ? void 0 : G,
                                         tags: (0, r.jsx)(x.Z, {
                                             displayProfile: A,
-                                            themeType: I.lY.SIDEBAR
-                                        })
+                                            themeType: I.lY.SIDEBAR,
+                                        }),
                                     }),
                                     (0, r.jsxs)(C.Z.Overlay, {
                                         className: N.overlay,
                                         children: [
                                             (0, r.jsx)(v.Z, {
-                                                heading: P.intl.string(P.t['61W33d']),
-                                                headingColor: 'header-primary',
+                                                heading: P.intl.string(P.t["61W33d"]),
+                                                headingColor: "header-primary",
                                                 children: (0, r.jsx)(_.Z, {
                                                     userBio: null == A ? void 0 : A.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
-                                                    isHovering: H
-                                                })
+                                                    isHovering: H,
+                                                }),
                                             }),
                                             (0, r.jsx)(v.Z, {
-                                                heading: P.intl.string(P.t['A//N4u']),
-                                                headingColor: 'header-primary',
-                                                children: (0, r.jsx)(O.Z, { userId: t.id })
-                                            })
-                                        ]
-                                    })
-                                ]
-                            })
-                        ]
+                                                heading: P.intl.string(P.t["A//N4u"]),
+                                                headingColor: "header-primary",
+                                                children: (0, r.jsx)(O.Z, { userId: t.id }),
+                                            }),
+                                        ],
+                                    }),
+                                ],
+                            }),
+                        ],
                     }),
                     !w &&
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: T.footer,
                             children: (0, r.jsx)(a.zx, {
                                 fullWidth: !0,
@@ -161,27 +161,27 @@ function w(e) {
                                 look: a.zx.Looks.BLANK,
                                 color: T.footerButtonColor,
                                 onClick: () => {
-                                    (G(),
+                                    G(),
                                         (0, g.pQ)(
                                             R(
                                                 {
-                                                    action: 'PRESS_VIEW_PROFILE',
-                                                    analyticsLocations: k
+                                                    action: "PRESS_VIEW_PROFILE",
+                                                    analyticsLocations: k,
                                                 },
-                                                M
-                                            )
-                                        ));
+                                                M,
+                                            ),
+                                        );
                                 },
-                                children: P.intl.string(P.t['+Xp3ho'])
-                            })
+                                children: P.intl.string(P.t["+Xp3ho"]),
+                            }),
                         }),
                     (null == A ? void 0 : A.profileEffectId) != null &&
                         (0, r.jsx)(h.Z, {
                             profileEffectId: null == A ? void 0 : A.profileEffectId,
-                            isHovering: H
-                        })
-                ]
-            })
-        })
+                            isHovering: H,
+                        }),
+                ],
+            }),
+        }),
     });
 }

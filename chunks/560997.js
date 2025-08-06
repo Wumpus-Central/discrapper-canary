@@ -2,7 +2,7 @@ n.d(t, {
     KM: () => f,
     R2: () => _,
     TG: () => p,
-    Zc: () => d
+    Zc: () => d,
 });
 var r = n(442837),
     i = n(570140),
@@ -17,7 +17,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,11 +27,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -50,10 +50,10 @@ function d(e, t, n, i) {
                 (e) => {
                     e[t] = i(n, e[t]);
                 },
-                o
-            )
+                o,
+            ),
         ),
-        useSetting: u
+        useSetting: u,
     };
 }
 function f(e, t, n) {
@@ -76,11 +76,11 @@ function f(e, t, n) {
             o.Z.shouldSync(t)
                 ? e.updateSetting(r)
                 : (i.Z.dispatch({
-                      type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
-                      changes: { [t]: { settings: { [n]: r } } }
+                      type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
+                      changes: { [t]: { settings: { [n]: r } } },
                   }),
-                  Promise.resolve())
-        )
+                  Promise.resolve()),
+        ),
     };
 }
 function _(e, t, n, r) {
@@ -99,16 +99,23 @@ function _(e, t, n, r) {
             o,
             (n) => (
                 i.Z.dispatch({
-                    type: 'USER_SETTINGS_OVERRIDE_CLEAR',
-                    settings: [t]
+                    type: "USER_SETTINGS_OVERRIDE_CLEAR",
+                    settings: [t],
                 }),
                 e.updateSetting(n)
-            )
-        )
+            ),
+        ),
     };
 }
 function p(e) {
-    let { baseSetting: t, isEligible: n, useIsEligible: r, eligibleDefault: i, ineligibleDefault: o, onUseDefault: a } = e;
+    let {
+        baseSetting: t,
+        isEligible: n,
+        useIsEligible: r,
+        eligibleDefault: i,
+        ineligibleDefault: o,
+        onUseDefault: a,
+    } = e;
     return {
         getSetting: () => {
             let e = t.getSetting();
@@ -119,11 +126,11 @@ function p(e) {
                 n = r();
             return null != e ? e : (null == a || a(), n ? i() : o);
         },
-        updateSetting: (e) => t.updateSetting(e)
+        updateSetting: (e) => t.updateSetting(e),
     };
 }
 function h(e, t) {
     return function (n) {
-        return 'function' == typeof n ? t(n(e())) : t(n);
+        return "function" == typeof n ? t(n(e())) : t(n);
     };
 }

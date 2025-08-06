@@ -22,17 +22,17 @@ function f(e) {
                     (0, u.fz)({
                         userId: t,
                         channelId: n,
-                        guildId: f
+                        guildId: f,
                     }),
-                v
+                v,
             );
         }, [v, n, f, t]);
     return !Z || m
         ? null
         : (0, i.jsx)(a.sNh, {
-              id: 'secure-frames-user-verification',
-              label: g.intl.string(g.t['8ErYvb']),
+              id: "secure-frames-user-verification",
+              label: g.intl.string(g.t["8ErYvb"]),
               action: p,
-              icon: b ? a._uN : null
+              icon: b ? a._uN : null,
           });
 }

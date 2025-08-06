@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var r = n(442837),
     i = n(570140),
     o = n(147913),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,8 +27,8 @@ class u extends o.Z {
                 r.ZP.Emitter.batched(() => {
                     for (let t of e)
                         i.Z.dispatch({
-                            type: 'THREAD_DELETE',
-                            channel: t
+                            type: "THREAD_DELETE",
+                            channel: t,
                         });
                 });
         }
@@ -37,7 +37,11 @@ class u extends o.Z {
         var t, n, r;
         let { channelId: i, message: o } = e,
             c = l.Z.getChannel(i);
-        if ((null == (t = o.author) ? void 0 : t.id) !== s.default.getId() || !(null == c ? void 0 : c.isActiveThread())) return;
+        if (
+            (null == (t = o.author) ? void 0 : t.id) !== s.default.getId() ||
+            !(null == c ? void 0 : c.isActiveThread())
+        )
+            return;
         let u = new Date(null != (r = null == (n = c.threadMetadata) ? void 0 : n.archiveTimestamp) ? r : 0).getTime();
         Date.now() - u < 5000 && a.Z.resort(c.parent_id);
     }
@@ -48,18 +52,18 @@ class u extends o.Z {
             r.ZP.Emitter.batched(() => {
                 for (let e of n)
                     i.Z.dispatch({
-                        type: 'THREAD_DELETE',
-                        channel: e
+                        type: "THREAD_DELETE",
+                        channel: e,
                     });
             });
     }
     constructor(...e) {
-        (super(...e),
-            c(this, 'actions', {
+        super(...e),
+            c(this, "actions", {
                 CHANNEL_DELETE: this.handleChannelDelete,
                 MESSAGE_CREATE: this.handleMessageCreate,
-                GUILD_DELETE: this.handleGuildDelete
-            }));
+                GUILD_DELETE: this.handleGuildDelete,
+            });
     }
 }
 let d = new u();

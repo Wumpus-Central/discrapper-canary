@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(872810),
     i = n(147913),
     o = n(994339),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,7 +29,11 @@ class f extends i.Z {
             let t = c.Z.getPendingRequestForUser(e.userId);
             if (null == t) continue;
             let d = s.Z.getMessage(e.channelId, t);
-            if ((null == d || null == (n = d.activity) ? void 0 : n.type) !== u.mFx.STREAM_REQUEST || (null == (i = d.application) ? void 0 : i.id) == null) continue;
+            if (
+                (null == d || null == (n = d.activity) ? void 0 : n.type) !== u.mFx.STREAM_REQUEST ||
+                (null == (i = d.application) ? void 0 : i.id) == null
+            )
+                continue;
             let f = l.Z.getApplicationActivity(e.userId, d.application.id, e.guildId);
             if (!(0, o.Z)(f, d, d.application.id)) continue;
             let _ = a.Z.getStreamForUser(e.userId, e.guildId);
@@ -37,7 +41,7 @@ class f extends i.Z {
         }
     }
     constructor(...e) {
-        (super(...e), d(this, 'actions', { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates }));
+        super(...e), d(this, "actions", { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates });
     }
 }
 let _ = new f();

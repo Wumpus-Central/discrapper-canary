@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var r = n(73800),
     l = n(442837),
     i = n(951539),
@@ -13,7 +13,7 @@ function d(e, t, n) {
         h = r.useRef(!1),
         v = null == e ? void 0 : e.id,
         p = null == e ? void 0 : e.features.has(c.oNc.HAS_DIRECTORY_ENTRY);
-    (r.useEffect(() => {
+    r.useEffect(() => {
         if (!p) return void m(u);
         h.current ||
             null == v ||
@@ -32,12 +32,12 @@ function d(e, t, n) {
             var e;
             if (!d.can_broadcast) return void g(!1);
             g(null == (e = d.has_broadcast) || e);
-        }, [d]));
+        }, [d]);
     let f = (0, l.e7)([a.Z], () => (0, i.wg)(n, [a.Z]));
     return {
         broadcastInfo: d,
         broadcastToDirectoryChannels: f && x,
         setBroadcastToDirectoryChannels: g,
-        canEveryoneRoleViewEvent: f
+        canEveryoneRoleViewEvent: f,
     };
 }

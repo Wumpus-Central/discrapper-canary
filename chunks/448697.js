@@ -14,7 +14,7 @@ function p() {
     let e = (0, s.cj)([c.Z], () => c.Z.getOngoingDownloads()),
         t = i.useRef({});
     i.useEffect(() => {
-        (0 === Object.entries(e).length && (t.current = {}), Object.assign(t.current, e));
+        0 === Object.entries(e).length && (t.current = {}), Object.assign(t.current, e);
     }, [e]);
     let n = Object.values(t.current),
         r = n.some((e) => {
@@ -31,62 +31,62 @@ function p() {
         });
     return {
         hasActiveDownloads: r,
-        progress: 0 === l ? 0 : Math.floor((a / l) * 100)
+        progress: 0 === l ? 0 : Math.floor((a / l) * 100),
     };
 }
 function h() {
     let { hasActiveDownloads: e, progress: t } = p(),
         { activeVoice: n } = (0, u.o)(),
         i = null != n,
-        o = e ? (i ? 'voice-on' : 'voice-off') : null;
+        o = e ? (i ? "voice-on" : "voice-off") : null;
     return (0, l.Yzy)(
         o,
         {
             from: {
                 opacity: 0,
-                translateY: 20
+                translateY: 20,
             },
             enter: (e) => ({
                 opacity: 1,
-                translateY: 'voice-on' === e ? -72 : 0
+                translateY: "voice-on" === e ? -72 : 0,
             }),
             leave: {
                 opacity: 0,
-                translateY: 80
-            }
+                translateY: 80,
+            },
         },
-        'respect-motion-settings'
+        "respect-motion-settings",
     )((e, n) =>
         null != n
             ? (0, r.jsx)(a.animated.div, {
                   style: e,
                   className: _.floaterWrapper,
-                  children: (0, r.jsxs)('div', {
+                  children: (0, r.jsxs)("div", {
                       className: _.visibleFloater,
                       children: [
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: _.progressText,
                               children: [
                                   (0, r.jsx)(l.Text, {
-                                      variant: 'text-sm/semibold',
-                                      color: 'text-primary',
-                                      children: f.intl.format(f.t['r+uZYW'], { progress: t })
+                                      variant: "text-sm/semibold",
+                                      color: "text-primary",
+                                      children: f.intl.format(f.t["r+uZYW"], { progress: t }),
                                   }),
                                   (0, r.jsx)(l.Avr, {
-                                      text: f.intl.string(f.t['ETE/oK']),
+                                      text: f.intl.string(f.t["ETE/oK"]),
                                       onClick: d.ge,
-                                      variant: 'always-white',
-                                      textVariant: 'text-sm/normal'
-                                  })
-                              ]
+                                      variant: "always-white",
+                                      textVariant: "text-sm/normal",
+                                  }),
+                              ],
                           }),
                           (0, r.jsx)(l.Exd, {
                               percent: t,
-                              size: l.Exd.Sizes.XSMALL
-                          })
-                      ]
-                  })
+                              size: l.Exd.Sizes.XSMALL,
+                          }),
+                      ],
+                  }),
               })
-            : null
+            : null,
     );
 }

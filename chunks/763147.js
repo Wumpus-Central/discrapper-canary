@@ -1,1 +1,1 @@
-e.exports = { member: 'member__122b7' };
+e.exports = { member: "member__122b7" };

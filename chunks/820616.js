@@ -8,8 +8,8 @@ t.exports = function (t, e) {
     var r = t.exec;
     if (s(r)) {
         var h = n(r, t, e);
-        return (null !== h && i(h), h);
+        return null !== h && i(h), h;
     }
-    if ('RegExp' === a(t)) return n(o, t, e);
-    throw new u('RegExp#exec called on incompatible receiver');
+    if ("RegExp" === a(t)) return n(o, t, e);
+    throw new u("RegExp#exec called on incompatible receiver");
 };

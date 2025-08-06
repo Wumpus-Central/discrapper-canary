@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(990547),
@@ -12,7 +12,11 @@ var r = n(255367),
     _ = n(433534);
 function p(e) {
     let { applicationId: t } = e,
-        [n, o, s] = (0, a.Wu)([d.Z], () => [d.Z.getApplication(t), d.Z.isFetchingApplication(t), d.Z.didFetchingApplicationFail(t)], [t]);
+        [n, o, s] = (0, a.Wu)(
+            [d.Z],
+            () => [d.Z.getApplication(t), d.Z.isFetchingApplication(t), d.Z.didFetchingApplicationFail(t)],
+            [t],
+        );
     return (i.useEffect(() => {
         null != n || o || s || u.ZP.fetchApplication(t);
     }, [n, o, s, t]),
@@ -20,7 +24,7 @@ function p(e) {
         (0, _.Eb)({
             customInstallUrl: n.customInstallUrl,
             installParams: n.installParams,
-            integrationTypesConfig: n.integrationTypesConfig
+            integrationTypesConfig: n.integrationTypesConfig,
         }))
         ? (0, r.jsx)(h, { application: n })
         : null;
@@ -31,7 +35,7 @@ function h(e) {
             (0, c.h)({
                 type: o.ImpressionTypes.VIEW,
                 name: o.ImpressionNames.APP_OAUTH2_LINK_EMBED,
-                properties: { application_id: t.id }
+                properties: { application_id: t.id },
             });
         }, [t.id]),
         { analyticsLocations: a } = (0, l.ZP)(s.Z.APP_OAUTH2_LINK_EMBED);
@@ -40,7 +44,7 @@ function h(e) {
         children: (0, r.jsx)(f.O, {
             app: t,
             linkType: f.U.OAUTH,
-            onView: n
-        })
+            onView: n,
+        }),
     });
 }

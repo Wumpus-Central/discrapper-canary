@@ -10,27 +10,27 @@ let d = () => {
     let e = (0, r.e7)([s.Z], () => s.Z.useReducedMotion);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: o.jumpingWumpusContainer,
                 children: (0, i.jsx)(a.ZP, {
                     scaleAnimationData: {
                         startScale: 0.9,
                         endScale: 1,
-                        duration: a.SR
+                        duration: a.SR,
                     },
                     yAxisAnimationData: {
                         range: 20,
                         duration: a.b5,
-                        path: a.js.SINE
+                        path: a.js.SINE,
                     },
                     animateXAxisWiggle: !0,
                     isMotionReduced: e,
-                    children: (0, i.jsx)('img', {
+                    children: (0, i.jsx)("img", {
                         src: c.Z,
-                        alt: '',
-                        className: o.jumpingWumpus
-                    })
-                })
+                        alt: "",
+                        className: o.jumpingWumpus,
+                    }),
+                }),
             }),
             (0, i.jsx)(l.Z, {
                 isMotionReduced: e,
@@ -38,8 +38,8 @@ let d = () => {
                 carTrinketClassName: o.car,
                 hammerTrinketClassName: o.hammer,
                 keyTrinketClassName: o.key,
-                starTrinketClassName: o.star
-            })
-        ]
+                starTrinketClassName: o.star,
+            }),
+        ],
     });
 };

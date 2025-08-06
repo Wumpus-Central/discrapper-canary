@@ -7,6 +7,6 @@ function o(e, t) {
     return (0, r.jsx)(i.Z, {
         message: n,
         content: t,
-        compact: null != o && o
+        compact: null != o && o,
     });
 }

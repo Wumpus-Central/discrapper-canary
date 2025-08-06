@@ -10,6 +10,6 @@ function l(e) {
         publishDragSource: (0, i.U)(e),
         hover: (0, o.s)(e),
         drop: (0, a._)(e),
-        endDrag: (0, s.F)(e)
+        endDrag: (0, s.F)(e),
     };
 }

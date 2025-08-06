@@ -12,24 +12,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -45,7 +45,7 @@ function h(e) {
         b = n.length - h.length > 0;
     return (m || t) && !b && 0 !== g.length
         ? (0, r.jsx)(l.sNh, {
-              id: 'message',
+              id: "message",
               action: function () {
                   a.Z.openPrivateChannel({ recipientIds: g }).then((t) => {
                       var n, r;
@@ -70,15 +70,15 @@ function h(e) {
                                             }),
                                       n),
                                   channel_id: t,
-                                  recipient_id: 'string' == typeof g ? g : g[0],
-                                  af_recently_played: !1
+                                  recipient_id: "string" == typeof g ? g : g[0],
+                                  af_recently_played: !1,
                               },
-                              (0, s.y)(e)
-                          )
+                              (0, s.y)(e),
+                          ),
                       );
                   });
               },
-              label: d.intl.string(d.t['g33r/P'])
+              label: d.intl.string(d.t["g33r/P"]),
           })
         : null;
 }

@@ -19,9 +19,9 @@ var i = n(255367),
     j = n(450890),
     E = n(145133);
 let C = (0, r.Un)({
-    createPromise: () => n.e('67544').then(n.bind(n, 894308)),
+    createPromise: () => n.e("67544").then(n.bind(n, 894308)),
     webpackId: 894308,
-    name: 'ClickerGamePopoutWindow'
+    name: "ClickerGamePopoutWindow",
 });
 function O() {
     let e = (0, a.e7)([p.Z], () => p.Z.lifetimePoints > 0),
@@ -29,7 +29,7 @@ function O() {
         r = () => {
             u.bA(f.KJ3.CLICKER_GAME, (e) => (0, i.jsx)(C, { windowKey: e }), {
                 defaultWidth: 854,
-                defaultHeight: 768
+                defaultHeight: 768,
             });
         },
         O = () => {
@@ -44,24 +44,24 @@ function O() {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           i = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (i = i.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           i.forEach(function (t) {
                                               var i;
-                                              ((i = n[t]),
+                                              (i = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: i,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = i));
-                                          }));
+                                                      : (e[t] = i);
+                                          });
                                   }
                                   return e;
                               })({}, t)),
@@ -69,13 +69,13 @@ function O() {
                                   {
                                       header: x.intl.string(b.default.SvQ1xM),
                                       confirmText: x.intl.string(b.default.vLz9lJ),
-                                      cancelText: x.intl.string(b.default['+Mgv5O']),
+                                      cancelText: x.intl.string(b.default["+Mgv5O"]),
                                       onConfirm: r,
                                       confirmButtonColor: l.zx.Colors.GREEN,
                                       children: (0, i.jsx)(s.xv, {
-                                          variant: 'text-md/normal',
-                                          children: x.intl.string(b.default['v6v/BQ'])
-                                      })
+                                          variant: "text-md/normal",
+                                          children: x.intl.string(b.default["v6v/BQ"]),
+                                      }),
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
@@ -89,88 +89,88 @@ function O() {
                                     })(Object(a)).forEach(function (e) {
                                         Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                                     }),
-                              n)
+                              n),
                           );
                       };
                   })
                 : r();
         };
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: _.container,
         children: [
-            (0, i.jsx)('div', { className: _.backgroundOverlay }),
-            (0, i.jsxs)('div', {
+            (0, i.jsx)("div", { className: _.backgroundOverlay }),
+            (0, i.jsxs)("div", {
                 className: _.mainContent,
                 children: [
-                    (0, i.jsx)('img', {
+                    (0, i.jsx)("img", {
                         src: j,
-                        alt: x.intl.string(b.default['7qZdOz'])
+                        alt: x.intl.string(b.default["7qZdOz"]),
                     }),
                     (0, i.jsxs)(g.Z, {
                         muted: !0,
                         className: _.playButton,
-                        color: 'white',
+                        color: "white",
                         disabled: t,
                         onClick: O,
                         children: [
                             (0, i.jsx)(h.Z, {
-                                color: 'always-white',
-                                variant: 'text-lg/bold',
-                                children: e ? x.intl.string(b.default.ziFxys) : x.intl.string(b.default.vLz9lJ)
+                                color: "always-white",
+                                variant: "text-lg/bold",
+                                children: e ? x.intl.string(b.default.ziFxys) : x.intl.string(b.default.vLz9lJ),
                             }),
                             (0, i.jsx)(h.Z, {
-                                color: 'always-white',
-                                variant: 'text-xxs/medium',
-                                children: x.intl.string(b.default['10J8k5'])
-                            })
-                        ]
+                                color: "always-white",
+                                variant: "text-xxs/medium",
+                                children: x.intl.string(b.default["10J8k5"]),
+                            }),
+                        ],
                     }),
                     (0, i.jsx)(g.Z, {
                         muted: !0,
                         className: _.resetButton,
-                        color: 'white',
+                        color: "white",
                         disabled: t || !e,
                         onClick: () => {
-                            ((0, m.yW)(), O());
+                            (0, m.yW)(), O();
                         },
                         children: (0, i.jsx)(h.Z, {
-                            color: 'always-white',
-                            variant: 'text-xs/bold',
-                            children: x.intl.string(b.default['/A+1UF'])
-                        })
-                    })
-                ]
+                            color: "always-white",
+                            variant: "text-xs/bold",
+                            children: x.intl.string(b.default["/A+1UF"]),
+                        }),
+                    }),
+                ],
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: _.footer,
                 children: [
                     (0, i.jsx)(h.Z, {
                         className: _.availability,
-                        color: 'always-white',
-                        variant: 'text-xxs/medium',
-                        children: x.intl.string(b.default.eZleys)
+                        color: "always-white",
+                        variant: "text-xxs/medium",
+                        children: x.intl.string(b.default.eZleys),
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: _.footerCenter,
                         children: (0, i.jsx)(g.Z, {
                             muted: !0,
-                            color: 'white',
-                            href: 'https://www.youtube.com/watch?v=h-9SUgIeJnY',
-                            tag: 'a',
-                            target: '_blank',
+                            color: "white",
+                            href: "https://www.youtube.com/watch?v=h-9SUgIeJnY",
+                            tag: "a",
+                            target: "_blank",
                             children: (0, i.jsx)(h.Z, {
-                                color: 'always-white',
-                                variant: 'text-xs/bold',
-                                children: x.intl.string(b.default.CQXsEh)
-                            })
-                        })
+                                color: "always-white",
+                                variant: "text-xs/bold",
+                                children: x.intl.string(b.default.CQXsEh),
+                            }),
+                        }),
                     }),
-                    (0, i.jsx)('img', {
+                    (0, i.jsx)("img", {
                         src: E,
-                        alt: x.intl.string(b.default.ABYTMz)
-                    })
-                ]
-            })
-        ]
+                        alt: x.intl.string(b.default.ABYTMz),
+                    }),
+                ],
+            }),
+        ],
     });
 }

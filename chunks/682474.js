@@ -13,7 +13,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,7 +71,7 @@ function g(e, t) {
     return (
         (h[e] = {
             loaded: !0,
-            message: n
+            message: n,
         }),
         !0
     );
@@ -101,7 +101,9 @@ function I(e) {
 }
 function T(e) {
     if (e.isPushNotification || !m(e.message)) return !1;
-    e.message.channel_id === u.default.castMessageIdAsChannelId(e.message.id) ? g(e.message.channel_id, null) : g(e.message.channel_id, e.message);
+    e.message.channel_id === u.default.castMessageIdAsChannelId(e.message.id)
+        ? g(e.message.channel_id, null)
+        : g(e.message.channel_id, e.message);
 }
 function S(e) {
     if (!m(e.message) || e.message.channel_id === e.message.id) return !1;
@@ -112,11 +114,11 @@ function A(e) {
 }
 function N(e) {
     let { threads: t, mostRecentMessages: n } = e;
-    (t.forEach((e) => g(e.id, null)),
+    t.forEach((e) => g(e.id, null)),
         null == n ||
             n.filter(c.lm).forEach((e) => {
                 g(e.channel_id, e);
-            }));
+            });
 }
 class C extends (r = i.ZP.Store) {
     initialize() {
@@ -127,13 +129,13 @@ class C extends (r = i.ZP.Store) {
             e in h ||
                 (h[e] = {
                     loaded: !1,
-                    message: null
+                    message: null,
                 }),
             h[e]
         );
     }
 }
-(d(C, 'displayName', 'ForumPostRecentMessageStore'),
+d(C, "displayName", "ForumPostRecentMessageStore"),
     new C(o.Z, {
         CONNECTION_OPEN: v,
         MESSAGE_CREATE: T,
@@ -141,5 +143,5 @@ class C extends (r = i.ZP.Store) {
         MESSAGE_DELETE: A,
         LOAD_FORUM_POSTS: I,
         LOAD_ARCHIVED_THREADS_SUCCESS: N,
-        LOAD_THREADS_SUCCESS: N
-    }));
+        LOAD_THREADS_SUCCESS: N,
+    });

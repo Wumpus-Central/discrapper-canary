@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     ImportBenefitsFromRoleModal: () => q,
-    ImportBenefitsFromSubscriptionListingModal: () => L
+    ImportBenefitsFromSubscriptionListingModal: () => L,
 }),
     n(388685),
     n(953529),
     n(361932),
-    n(187205));
+    n(187205);
 var i = n(255367),
     l = n(73800),
     r = n(120356),
@@ -47,52 +47,52 @@ function R(e) {
         emojiId: n,
         emojiName: l,
         animated: null != (t = null == o ? void 0 : o.animated) && t,
-        className: r
+        className: r,
     });
 }
 function O(e) {
     let { icon: t, children: n, checked: l, disabled: r = !1, onChange: a } = e,
         s = l || r;
-    return (0, i.jsxs)('label', {
+    return (0, i.jsxs)("label", {
         className: o()(M.row, {
             [M.checked]: s,
-            [M.disabled]: r
+            [M.disabled]: r,
         }),
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: M.rowIconWrapper,
-                children: t
+                children: t,
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: M.rowText,
-                children: n
+                children: n,
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: M.rowCheckbox,
                 children: [
                     (0, i.jsx)(m.tEY, {
-                        children: (0, i.jsx)('input', {
-                            type: 'checkbox',
+                        children: (0, i.jsx)("input", {
+                            type: "checkbox",
                             checked: s,
                             disabled: r,
                             className: M.checkboxInput,
                             onChange: function (e) {
                                 a(e.target.checked);
-                            }
-                        })
+                            },
+                        }),
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: M.checkboxDisplay,
                         children: (0, i.jsx)(m.dz2, {
-                            size: 'md',
-                            color: 'currentColor',
+                            size: "md",
+                            color: "currentColor",
                             className: M.checkboxIcon,
-                            'aria-hidden': !0
-                        })
-                    })
-                ]
-            })
-        ]
+                            "aria-hidden": !0,
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function D(e) {
@@ -104,26 +104,26 @@ function D(e) {
               className: M.section,
               children: [
                   l.length - r.size > 1 &&
-                      (0, i.jsx)('div', {
+                      (0, i.jsx)("div", {
                           className: M.list,
                           children: (0, i.jsx)(O, {
                               icon: (0, i.jsx)(m.avL, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: M.rowIcon
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: M.rowIcon,
                               }),
                               checked: s,
                               onChange: function (e) {
                                   for (let t of l) r.has(t) || a(t, e);
                               },
                               children: (0, i.jsx)(m.Text, {
-                                  color: 'header-primary',
-                                  variant: 'text-md/normal',
-                                  children: n
-                              })
-                          })
+                                  color: "header-primary",
+                                  variant: "text-md/normal",
+                                  children: n,
+                              }),
+                          }),
                       }),
-                  (0, i.jsx)('div', {
+                  (0, i.jsx)("div", {
                       className: M.list,
                       children: l.map((e) =>
                           (0, i.jsxs)(
@@ -132,34 +132,41 @@ function D(e) {
                                   icon: (0, i.jsx)(R, {
                                       emojiId: e.emoji_id,
                                       emojiName: e.emoji_name,
-                                      className: M.rowIcon
+                                      className: M.rowIcon,
                                   }),
                                   checked: o.has(e),
                                   disabled: r.has(e),
                                   onChange: (t) => a(e, t),
                                   children: [
                                       (0, i.jsx)(m.Text, {
-                                          color: 'header-primary',
-                                          variant: 'text-md/semibold',
-                                          children: (0, Z.Z)(e)
+                                          color: "header-primary",
+                                          variant: "text-md/semibold",
+                                          children: (0, Z.Z)(e),
                                       }),
                                       (0, i.jsx)(m.Text, {
-                                          color: 'interactive-normal',
-                                          variant: 'text-sm/normal',
-                                          children: e.description
-                                      })
-                                  ]
+                                          color: "interactive-normal",
+                                          variant: "text-sm/normal",
+                                          children: e.description,
+                                      }),
+                                  ],
                               },
-                              (0, k.ab)(e)
-                          )
-                      )
-                  })
-              ]
+                              (0, k.ab)(e),
+                          ),
+                      ),
+                  }),
+              ],
           })
         : null;
 }
 function L(e) {
-    let { transitionState: t, fromSubscriptionListing: n, existingChannelBenefits: r, existingIntangibleBenefits: o, onSubmit: a, onClose: d } = e,
+    let {
+            transitionState: t,
+            fromSubscriptionListing: n,
+            existingChannelBenefits: r,
+            existingIntangibleBenefits: o,
+            onSubmit: a,
+            onClose: d,
+        } = e,
         h = n.role_benefits.benefits,
         [u, x] = l.useState(() => new Set(h)),
         f = l.useMemo(() => h.filter(k.rC), [h]),
@@ -170,51 +177,51 @@ function L(e) {
     function v(e, t) {
         x((n) => {
             let i = new Set(n);
-            return (t ? i.add(e) : i.delete(e), i);
+            return t ? i.add(e) : i.delete(e), i;
         });
     }
     function b(e) {
         e.preventDefault();
         let t = h.filter((e) => u.has(e));
-        (a(
+        a(
             t.filter(k.rC).filter((e) => !p.has(e)),
-            t.filter(k.lL).filter((e) => !_.has(e))
+            t.filter(k.lL).filter((e) => !_.has(e)),
         ),
-            d());
+            d();
     }
-    return (0, i.jsx)('form', {
+    return (0, i.jsx)("form", {
         onSubmit: b,
         children: (0, i.jsxs)(c.Modal, {
             transitionState: t,
             onClose: d,
-            title: z.intl.format(z.t['7zpiYG'], { tierName: n.name }).toString(),
+            title: z.intl.format(z.t["7zpiYG"], { tierName: n.name }).toString(),
             actions: [
                 {
-                    variant: 'secondary',
-                    text: z.intl.string(z.t['ETE/oK']),
-                    onClick: d
+                    variant: "secondary",
+                    text: z.intl.string(z.t["ETE/oK"]),
+                    onClick: d,
                 },
                 {
-                    variant: 'primary',
-                    text: z.intl.string(z.t['27a219']),
+                    variant: "primary",
+                    text: z.intl.string(z.t["27a219"]),
                     disabled: 0 === u.size,
-                    onClick: b
-                }
+                    onClick: b,
+                },
             ],
             children: [
                 0 === j.length &&
                     0 === g.length &&
                     (0, i.jsx)(m.Text, {
-                        variant: 'text-md/normal',
-                        children: z.intl.string(z.t['I+16xs'])
+                        variant: "text-md/normal",
+                        children: z.intl.string(z.t["I+16xs"]),
                     }),
                 (0, i.jsx)(D, {
                     title: z.intl.string(z.t.S2kKzM),
-                    selectAllText: z.intl.string(z.t['5Q/fLC']),
+                    selectAllText: z.intl.string(z.t["5Q/fLC"]),
                     benefits: j,
                     dupeBenefits: p,
                     selectedBenefits: u,
-                    onToggleBenefit: v
+                    onToggleBenefit: v,
                 }),
                 (0, i.jsx)(D, {
                     title: z.intl.string(z.t.RdwKw8),
@@ -222,10 +229,10 @@ function L(e) {
                     benefits: g,
                     dupeBenefits: _,
                     selectedBenefits: u,
-                    onToggleBenefit: v
-                })
-            ]
-        })
+                    onToggleBenefit: v,
+                }),
+            ],
+        }),
     });
 }
 function F(e) {
@@ -234,13 +241,13 @@ function F(e) {
         a = (0, p.p9)({
             guildId: n,
             roleId: l.id,
-            size: P
+            size: P,
         });
     return (0, i.jsxs)(m.P3F, {
         className: M.roleRow,
         onClick: o,
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: M.rowIconWrapper,
                 children:
                     null != a
@@ -250,57 +257,57 @@ function F(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           i = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (i = i.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           i.forEach(function (t) {
                                               var i;
-                                              ((i = n[t]),
+                                              (i = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: i,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = i));
-                                          }));
+                                                      : (e[t] = i);
+                                          });
                                   }
                                   return e;
-                              })({}, a)
+                              })({}, a),
                           )
                         : (0, i.jsx)(m.lZ8, {
-                              size: 'custom',
+                              size: "custom",
                               width: 23,
                               height: 23,
                               color: null != (t = l.colorString) ? t : T.Pbq,
-                              className: M.roleRowIconDefault
-                          })
+                              className: M.roleRowIconDefault,
+                          }),
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: M.rowText,
                 children: [
                     (0, i.jsx)(m.Text, {
-                        color: 'header-primary',
-                        variant: 'text-md/normal',
+                        color: "header-primary",
+                        variant: "text-md/normal",
                         className: M.__invalid_benefitTitle,
-                        children: l.name
+                        children: l.name,
                     }),
                     (0, i.jsx)(m.Text, {
-                        color: 'header-secondary',
-                        variant: 'text-sm/normal',
-                        children: z.intl.format(z.t['2KzH8/'], { num: r })
-                    })
-                ]
+                        color: "header-secondary",
+                        variant: "text-sm/normal",
+                        children: z.intl.format(z.t["2KzH8/"], { num: r }),
+                    }),
+                ],
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: M.rowCheckbox,
-                children: (0, i.jsx)(N.Z, { direction: N.Z.Directions.RIGHT })
-            })
-        ]
+                children: (0, i.jsx)(N.Z, { direction: N.Z.Directions.RIGHT }),
+            }),
+        ],
     });
 }
 function H(e) {
@@ -318,27 +325,32 @@ function H(e) {
                         .map((e) => {
                             let { channel: t } = e;
                             return t;
-                        })
+                        }),
                 ),
-            [o]
+            [o],
         ),
         c = l.useMemo(
             () =>
                 r.flatMap((e) => {
                     var t;
-                    if ((0, v.fI)(e) || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null || (0, v._N)(e, T.TC2)) return [];
+                    if (
+                        (0, v.fI)(e) ||
+                        (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null ||
+                        (0, v._N)(e, T.TC2)
+                    )
+                        return [];
                     let n = (0, y.Z)(s, e).length;
                     return n > 0
                         ? {
                               role: e,
-                              channelCount: n
+                              channelCount: n,
                           }
                         : [];
                 }),
-            [r, s]
+            [r, s],
         );
     return c.length > 0
-        ? (0, i.jsx)('div', {
+        ? (0, i.jsx)("div", {
               className: M.list,
               children: c.map((e) =>
                   (0, i.jsx)(
@@ -347,15 +359,15 @@ function H(e) {
                           guildId: t.id,
                           role: e.role,
                           channelCount: e.channelCount,
-                          onSelect: () => n(e.role)
+                          onSelect: () => n(e.role),
                       },
-                      e.role.id
-                  )
-              )
+                      e.role.id,
+                  ),
+              ),
           })
         : (0, i.jsx)(m.Text, {
-              variant: 'text-md/normal',
-              children: z.intl.string(z.t.u09gKi)
+              variant: "text-md/normal",
+              children: z.intl.string(z.t.u09gKi),
           });
 }
 function K(e) {
@@ -366,29 +378,29 @@ function K(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)(m.xBx, {
-                      'data-migration-pending': !0,
+                      "data-migration-pending": !0,
                       children: [
                           (0, i.jsx)(m.X6q, {
                               id: B,
-                              variant: 'heading-md/semibold',
-                              children: z.intl.string(z.t['3JrZ/P'])
+                              variant: "heading-md/semibold",
+                              children: z.intl.string(z.t["3JrZ/P"]),
                           }),
                           (0, i.jsx)(m.olH, {
-                              'data-migration-pending': !0,
+                              "data-migration-pending": !0,
                               className: M.modalCloseButton,
-                              onClick: t
-                          })
-                      ]
+                              onClick: t,
+                          }),
+                      ],
                   }),
                   (0, i.jsx)(m.hzk, {
-                      'data-migration-pending': !0,
+                      "data-migration-pending": !0,
                       className: M.modalContent,
                       children: (0, i.jsx)(H, {
                           guild: r,
-                          onSelect: l
-                      })
-                  })
-              ]
+                          onSelect: l,
+                      }),
+                  }),
+              ],
           });
 }
 function W(e) {
@@ -407,7 +419,7 @@ function W(e) {
                     .map((e) => {
                         let { channel: t } = e;
                         return t;
-                    })
+                    }),
             );
         }),
         h = l.useMemo(() => (0, y.Z)(d, c), [d, c]),
@@ -415,54 +427,54 @@ function W(e) {
     function g(e, t) {
         j((n) => {
             let i = new Set(n);
-            return (t ? i.add(e) : i.delete(e), i);
+            return t ? i.add(e) : i.delete(e), i;
         });
     }
-    return (0, i.jsxs)('form', {
+    return (0, i.jsxs)("form", {
         onSubmit: function (e) {
-            (e.preventDefault(), a(h.map((e) => e.id).filter((e) => f.has(e))), t());
+            e.preventDefault(), a(h.map((e) => e.id).filter((e) => f.has(e))), t();
         },
         className: M.slideForm,
         children: [
             (0, i.jsxs)(m.xBx, {
-                'data-migration-pending': !0,
+                "data-migration-pending": !0,
                 children: [
                     (0, i.jsx)(m.X6q, {
                         id: E,
-                        variant: 'heading-md/semibold',
-                        children: z.intl.format(z.t.iuPodH, { roleName: c.name })
+                        variant: "heading-md/semibold",
+                        children: z.intl.format(z.t.iuPodH, { roleName: c.name }),
                     }),
                     (0, i.jsx)(m.olH, {
-                        'data-migration-pending': !0,
+                        "data-migration-pending": !0,
                         className: M.modalCloseButton,
-                        onClick: t
-                    })
-                ]
+                        onClick: t,
+                    }),
+                ],
             }),
             (0, i.jsxs)(m.hzk, {
-                'data-migration-pending': !0,
+                "data-migration-pending": !0,
                 className: M.modalContent,
                 children: [
                     h.length > 1 &&
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: M.list,
                             children: (0, i.jsx)(O, {
                                 icon: (0, i.jsx)(m.avL, {
-                                    size: 'md',
-                                    color: 'currentColor'
+                                    size: "md",
+                                    color: "currentColor",
                                 }),
                                 checked: f.size === h.length,
                                 onChange: function (e) {
                                     for (let t of h) g(t.id, e);
                                 },
                                 children: (0, i.jsx)(m.Text, {
-                                    color: 'header-primary',
-                                    variant: 'text-md/normal',
-                                    children: z.intl.string(z.t['5Q/fLC'])
-                                })
-                            })
+                                    color: "header-primary",
+                                    variant: "text-md/normal",
+                                    children: z.intl.string(z.t["5Q/fLC"]),
+                                }),
+                            }),
                         }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: M.list,
                         children: h.map((e) => {
                             var t;
@@ -470,61 +482,61 @@ function W(e) {
                             return (0, i.jsx)(
                                 O,
                                 {
-                                    icon: (0, i.jsx)('div', {
+                                    icon: (0, i.jsx)("div", {
                                         className: M.rowIcon,
                                         children: (0, i.jsx)(n, {
-                                            size: 'custom',
-                                            color: 'currentColor',
-                                            width: '100%',
-                                            height: '100%'
-                                        })
+                                            size: "custom",
+                                            color: "currentColor",
+                                            width: "100%",
+                                            height: "100%",
+                                        }),
                                     }),
                                     checked: f.has(e.id),
                                     onChange: (t) => g(e.id, t),
                                     children: (0, i.jsx)(m.Text, {
-                                        color: 'header-primary',
-                                        variant: 'text-md/normal',
+                                        color: "header-primary",
+                                        variant: "text-md/normal",
                                         className: M.__invalid_benefitTitle,
-                                        children: e.name
-                                    })
+                                        children: e.name,
+                                    }),
                                 },
-                                e.id
+                                e.id,
                             );
-                        })
-                    })
-                ]
+                        }),
+                    }),
+                ],
             }),
             (0, i.jsx)(m.mzw, {
-                'data-migration-pending': !0,
+                "data-migration-pending": !0,
                 children: (0, i.jsxs)(m.hE2, {
-                    direction: 'horizontal-reverse',
+                    direction: "horizontal-reverse",
                     children: [
                         (0, i.jsx)(m.zxk, {
-                            variant: 'primary',
-                            text: z.intl.string(z.t['1j8So6']),
-                            type: 'submit'
+                            variant: "primary",
+                            text: z.intl.string(z.t["1j8So6"]),
+                            type: "submit",
                         }),
                         (0, i.jsx)(m.zxk, {
-                            variant: 'secondary',
-                            text: z.intl.string(z.t['ETE/oK']),
-                            onClick: o
-                        })
-                    ]
-                })
-            })
-        ]
+                            variant: "secondary",
+                            text: z.intl.string(z.t["ETE/oK"]),
+                            onClick: o,
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }
 function q(e) {
     let { transitionState: t, guildId: n, onClose: r, onImport: o } = e,
         [a, s] = l.useState();
     return (0, i.jsx)(m.Y0X, {
-        'data-migration-pending': !0,
+        "data-migration-pending": !0,
         transitionState: t,
-        'aria-labelledby': null == a ? B : E,
-        parentComponent: 'ImportBenefitsModal',
+        "aria-labelledby": null == a ? B : E,
+        parentComponent: "ImportBenefitsModal",
         children: (0, i.jsxs)(m.MyZ, {
-            contentDisplay: 'flex',
+            contentDisplay: "flex",
             activeSlide: +(null != a),
             width: 440,
             children: [
@@ -533,8 +545,8 @@ function q(e) {
                     children: (0, i.jsx)(K, {
                         onClose: r,
                         guildId: n,
-                        onSelect: s
-                    })
+                        onSelect: s,
+                    }),
                 }),
                 (0, i.jsx)(m.Mi4, {
                     id: 1,
@@ -543,10 +555,10 @@ function q(e) {
                         guildId: n,
                         role: a,
                         onCancel: () => s(void 0),
-                        onImport: o
-                    })
-                })
-            ]
-        })
+                        onImport: o,
+                    }),
+                }),
+            ],
+        }),
     });
 }

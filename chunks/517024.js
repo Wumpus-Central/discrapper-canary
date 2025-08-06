@@ -1,7 +1,7 @@
 function n(e, t) {
-    var n = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
+    var n = ("undefined" != typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
     if (!n) {
-        if (Array.isArray(e) || (n = r(e)) || (t && e && 'number' == typeof e.length)) {
+        if (Array.isArray(e) || (n = r(e)) || (t && e && "number" == typeof e.length)) {
             n && (e = n);
             var i = 0,
                 o = function () {};
@@ -12,16 +12,18 @@ function n(e, t) {
                         ? { done: !0 }
                         : {
                               done: !1,
-                              value: e[i++]
+                              value: e[i++],
                           };
                 },
                 e: function (e) {
                     throw e;
                 },
-                f: o
+                f: o,
             };
         }
-        throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+        throw TypeError(
+            "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+        );
     }
     var a,
         s = !0,
@@ -32,10 +34,10 @@ function n(e, t) {
         },
         n: function () {
             var e = n.next();
-            return ((s = e.done), e);
+            return (s = e.done), e;
         },
         e: function (e) {
-            ((l = !0), (a = e));
+            (l = !0), (a = e);
         },
         f: function () {
             try {
@@ -43,15 +45,16 @@ function n(e, t) {
             } finally {
                 if (l) throw a;
             }
-        }
+        },
     };
 }
 function r(e, t) {
     if (e) {
-        if ('string' == typeof e) return i(e, t);
+        if ("string" == typeof e) return i(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
-        if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return i(e, t);
+        if (("Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n))
+            return Array.from(e);
+        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return i(e, t);
     }
 }
 function i(e, t) {
@@ -59,7 +62,7 @@ function i(e, t) {
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
-((t.type = (e) => e.split(/ *; */).shift()),
+(t.type = (e) => e.split(/ *; */).shift()),
     (t.params = (e) => {
         let t = {};
         var r,
@@ -95,14 +98,21 @@ function i(e, t) {
         }
         return t;
     }),
-    (t.cleanHeader = (e, t) => (delete e['content-type'], delete e['content-length'], delete e['transfer-encoding'], delete e.host, t && (delete e.authorization, delete e.cookie), e)),
-    (t.isObject = (e) => null !== e && 'object' == typeof e),
+    (t.cleanHeader = (e, t) => (
+        delete e["content-type"],
+        delete e["content-length"],
+        delete e["transfer-encoding"],
+        delete e.host,
+        t && (delete e.authorization, delete e.cookie),
+        e
+    )),
+    (t.isObject = (e) => null !== e && "object" == typeof e),
     (t.hasOwn =
         Object.hasOwn ||
         function (e, t) {
-            if (null == e) throw TypeError('Cannot convert undefined or null to object');
+            if (null == e) throw TypeError("Cannot convert undefined or null to object");
             return Object.prototype.hasOwnProperty.call(Object(e), t);
         }),
     (t.mixin = (e, n) => {
         for (let r in n) t.hasOwn(n, r) && (e[r] = n[r]);
-    }));
+    });

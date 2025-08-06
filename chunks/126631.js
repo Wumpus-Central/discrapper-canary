@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -13,12 +13,20 @@ var i = n(255367),
     g = n(967600);
 let h = (0, c.hQ)(),
     f = (0, d.kt)({
-        id: '1',
-        type: m.d4z.DM
+        id: "1",
+        type: m.d4z.DM,
     }),
     b = (0, c.hQ)();
 function x(e) {
-    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: x, currentBio: _, disabled: j = !1 } = e,
+    let {
+            sectionTitle: t,
+            errors: n,
+            onBioChange: c,
+            pendingBio: d,
+            placeholder: x,
+            currentBio: _,
+            disabled: j = !1,
+        } = e,
         [E, C] = r.useState(null != d ? d : _),
         [O, v] = r.useState((0, l.JM)(E)),
         S = r.useRef(!1);
@@ -26,7 +34,7 @@ function x(e) {
         r.useEffect(() => {
             if (void 0 === d) {
                 let e = (0, l.JM)(_);
-                (C(_), v(e));
+                C(_), v(e);
             }
         }, [d, _]),
         (0, i.jsxs)(u.Z, {
@@ -37,8 +45,8 @@ function x(e) {
             disabled: j,
             children: [
                 (0, i.jsx)(o.ZP, {
-                    'aria-describedby': b,
-                    'aria-labelledby': h,
+                    "aria-describedby": b,
+                    "aria-labelledby": h,
                     className: g.bioTextAreaContainer,
                     innerClassName: g.bioTextArea,
                     maxCharacterCount: m.tPV,
@@ -61,16 +69,16 @@ function x(e) {
                         return new Promise((e) => {
                             e({
                                 shouldClear: !1,
-                                shouldRefocus: !0
+                                shouldRefocus: !0,
                             });
                         });
-                    }
+                    },
                 }),
                 (0, i.jsx)(s.nn4, {
                     id: b,
-                    children: p.intl.format(p.t['+DFxLS'], { maxLength: m.tPV })
-                })
-            ]
+                    children: p.intl.format(p.t["+DFxLS"], { maxLength: m.tPV }),
+                }),
+            ],
         })
     );
 }

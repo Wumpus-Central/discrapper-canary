@@ -17,34 +17,34 @@ function x(e) {
                 className: c.header,
                 separator: !1,
                 children: [
-                    (0, r.jsx)('img', {
+                    (0, r.jsx)("img", {
                         src: d,
                         className: c.illustration,
-                        width: '254',
-                        height: '127',
-                        alt: ''
+                        width: "254",
+                        height: "127",
+                        alt: "",
                     }),
                     (0, r.jsx)(n.X6q, {
                         className: c.title,
-                        variant: 'heading-xl/extrabold',
-                        children: x
+                        variant: "heading-xl/extrabold",
+                        children: x,
                     }),
                     null != t &&
                         (0, r.jsx)(n.olH, {
                             className: c.closeButton,
-                            onClick: t
-                        })
-                ]
+                            onClick: t,
+                        }),
+                ],
             }),
             (0, r.jsx)(n.hzk, {
                 className: c.body,
                 paddingFix: !1,
                 children: (0, r.jsx)(n.Text, {
-                    tag: 'p',
-                    variant: 'text-md/normal',
-                    color: 'header-secondary',
-                    children: u
-                })
+                    tag: "p",
+                    variant: "text-md/normal",
+                    color: "header-secondary",
+                    children: u,
+                }),
             }),
             (0, r.jsx)(n.mzw, {
                 className: c.footer,
@@ -53,15 +53,15 @@ function x(e) {
                     color: s.zx.Colors.BRAND,
                     onClick: a,
                     children: [
-                        o.intl.string(o.t['7NqTJi']),
+                        o.intl.string(o.t["7NqTJi"]),
                         (0, r.jsx)(n.rgF, {
-                            color: 'currentColor',
+                            color: "currentColor",
                             className: c.launchIcon,
-                            size: 'xs'
-                        })
-                    ]
-                })
-            })
-        ]
+                            size: "xs",
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

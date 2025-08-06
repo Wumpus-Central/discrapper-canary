@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685), n(539854));
+n.d(t, { Z: () => N }), n(388685), n(539854);
 var r,
     i = n(442837),
     o = n(570140),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -37,7 +37,7 @@ let c = 2592000000,
     d = 2048,
     f = () => ({
         itemImpressions: [],
-        hidden: !1
+        hidden: !1,
     }),
     _ = f(),
     p = new Set(),
@@ -56,14 +56,15 @@ function y() {
         if (i < n) t = e + 1;
         else break;
     }
-    (t > 0 && (_.itemImpressions = _.itemImpressions.slice(t)), _.itemImpressions.length > d && (_.itemImpressions = _.itemImpressions.slice(-d)));
+    t > 0 && (_.itemImpressions = _.itemImpressions.slice(t)),
+        _.itemImpressions.length > d && (_.itemImpressions = _.itemImpressions.slice(-d));
     let r = E ? b : u,
         i = new Set(),
         o = new Set(),
         a = Date.now() - r,
         s = null;
-    for (let [e, t] of _.itemImpressions) (t < a ? i.add(e) : null == s && (s = t + r), o.add(e));
-    ((p = i), (h = o), (m = null != s ? s : 1 / 0), (g = !0));
+    for (let [e, t] of _.itemImpressions) t < a ? i.add(e) : null == s && (s = t + r), o.add(e);
+    (p = i), (h = o), (m = null != s ? s : 1 / 0), (g = !0);
 }
 function O(e) {
     let { itemIds: t } = e;
@@ -71,13 +72,13 @@ function O(e) {
     let n = Date.now(),
         r = !1;
     for (let e of t) h.has(e) || (_.itemImpressions.push([e, n]), (r = !0));
-    return (y(r), r);
+    return y(r), r;
 }
 function v() {
-    ((_.itemImpressions = []), y(!0));
+    (_.itemImpressions = []), y(!0);
 }
 function I() {
-    return (console.log('Item impressions:', _.itemImpressions), !1);
+    return console.log("Item impressions:", _.itemImpressions), !1;
 }
 function T() {
     E = !E;
@@ -93,7 +94,7 @@ class A extends (r = i.ZP.PersistedStore) {
         return _;
     }
     getImpressionCappedItemIds() {
-        return (y(), p);
+        return y(), p;
     }
     getDebugFastImpressionCappingEnabled() {
         return E;
@@ -105,11 +106,11 @@ class A extends (r = i.ZP.PersistedStore) {
         _ = f();
     }
 }
-(s(A, 'displayName', 'ContentInventoryPersistedStore'), s(A, 'persistKey', 'ContentInventoryPersistedStore'));
+s(A, "displayName", "ContentInventoryPersistedStore"), s(A, "persistKey", "ContentInventoryPersistedStore");
 let N = new A(o.Z, {
     CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: O,
     CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: v,
     CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: I,
     CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: T,
-    CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: S
+    CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: S,
 });

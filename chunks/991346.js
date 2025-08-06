@@ -1,16 +1,16 @@
-(n.d(t, {
+n.d(t, {
     Gj: () => V,
     Pt: () => U,
     VO: () => F,
     ji: () => W,
-    q8: () => H
+    q8: () => H,
 }),
     n(836215),
     n(472816),
     n(794429),
     n(388685),
     n(467055),
-    n(539854));
+    n(539854);
 var i = n(73800),
     r = n(442837),
     s = n(704215),
@@ -53,40 +53,93 @@ function B(e) {
         r = [
             {
                 header: M.intl.string(M.t.cduTBA),
-                settings: n ? [k.s6.ACCOUNT, k.s6.GAMES, k.s6.PROFILE_CUSTOMIZATION, k.s6.CONTENT_SOCIAL, k.s6.DATA_PRIVACY, k.s6.PRIVACY_FAMILY_CENTER, k.s6.THIRD_PARTY_ACCESS, k.s6.SESSIONS, k.s6.CLIPS] : [k.s6.ACCOUNT, k.s6.GAMES, k.s6.PROFILE_CUSTOMIZATION, k.s6.CONTENT_SOCIAL, k.s6.DATA_PRIVACY, k.s6.PRIVACY_FAMILY_CENTER, k.s6.AUTHORIZED_APPS, k.s6.SESSIONS, k.s6.CONNECTIONS, k.s6.CLIPS]
+                settings: n
+                    ? [
+                          k.s6.ACCOUNT,
+                          k.s6.GAMES,
+                          k.s6.PROFILE_CUSTOMIZATION,
+                          k.s6.CONTENT_SOCIAL,
+                          k.s6.DATA_PRIVACY,
+                          k.s6.PRIVACY_FAMILY_CENTER,
+                          k.s6.THIRD_PARTY_ACCESS,
+                          k.s6.SESSIONS,
+                          k.s6.CLIPS,
+                      ]
+                    : [
+                          k.s6.ACCOUNT,
+                          k.s6.GAMES,
+                          k.s6.PROFILE_CUSTOMIZATION,
+                          k.s6.CONTENT_SOCIAL,
+                          k.s6.DATA_PRIVACY,
+                          k.s6.PRIVACY_FAMILY_CENTER,
+                          k.s6.AUTHORIZED_APPS,
+                          k.s6.SESSIONS,
+                          k.s6.CONNECTIONS,
+                          k.s6.CLIPS,
+                      ],
             },
             {
-                header: M.intl.string(M.t['4uOdGh']),
+                header: M.intl.string(M.t["4uOdGh"]),
                 divider: !0,
-                settings: [k.s6.PREMIUM, k.s6.GUILD_BOOSTING, k.s6.SUBSCRIPTIONS, k.s6.GIFT_INVENTORY, k.s6.BILLING]
+                settings: [k.s6.PREMIUM, k.s6.GUILD_BOOSTING, k.s6.SUBSCRIPTIONS, k.s6.GIFT_INVENTORY, k.s6.BILLING],
             },
             {
                 header: M.intl.string(M.t.f2n1TE),
                 divider: !0,
-                settings: [k.s6.APPEARANCE, k.s6.ACCESSIBILITY, k.s6.VOICE_AND_VIDEO, k.s6.CLICKER_GAME, k.s6.POGGERMODE, k.s6.CHAT, k.s6.NOTIFICATIONS, k.s6.KEYBINDS, k.s6.LANGUAGE, k.s6.WINDOW_SETTINGS, k.s6.LINUX_SETTINGS, k.s6.STREAMER_MODE, k.s6.SETTINGS_ADVANCED]
+                settings: [
+                    k.s6.APPEARANCE,
+                    k.s6.ACCESSIBILITY,
+                    k.s6.VOICE_AND_VIDEO,
+                    k.s6.CLICKER_GAME,
+                    k.s6.POGGERMODE,
+                    k.s6.CHAT,
+                    k.s6.NOTIFICATIONS,
+                    k.s6.KEYBINDS,
+                    k.s6.LANGUAGE,
+                    k.s6.WINDOW_SETTINGS,
+                    k.s6.LINUX_SETTINGS,
+                    k.s6.STREAMER_MODE,
+                    k.s6.SETTINGS_ADVANCED,
+                ],
             },
             {
                 divider: !0,
-                settings: [k.s6.CHANGELOG, k.s6.MERCHANDISE, k.s6.HYPESQUAD, k.s6.TOWNHALL]
+                settings: [k.s6.CHANGELOG, k.s6.MERCHANDISE, k.s6.HYPESQUAD, k.s6.TOWNHALL],
             },
             {
-                header: 'Developer Only',
+                header: "Developer Only",
                 divider: !0,
-                settings: i ? [k.s6.EXPERIMENTS, k.s6.DEVELOPER_OPTIONS, k.s6.HOTSPOT_OPTIONS, k.s6.DISMISSIBLE_CONTENT_OPTIONS, k.s6.PAYMENT_FLOW_MODALS, k.s6.REVENUE_STORYBOOK, k.s6.VIRTUAL_CURRENCY_CONFIGURATION, k.s6.DESIGN_SYSTEMS, k.s6.INTL_TESTING, k.s6.SHOP_KEEPER, k.s6.WEB_SETTING_TREE_TOOL, k.s6.QUEST_PREVIEW_TOOL, k.s6.QUEST_MINOR_REWARD_CAPPING_CONFIG] : []
+                settings: i
+                    ? [
+                          k.s6.EXPERIMENTS,
+                          k.s6.DEVELOPER_OPTIONS,
+                          k.s6.HOTSPOT_OPTIONS,
+                          k.s6.DISMISSIBLE_CONTENT_OPTIONS,
+                          k.s6.PAYMENT_FLOW_MODALS,
+                          k.s6.REVENUE_STORYBOOK,
+                          k.s6.VIRTUAL_CURRENCY_CONFIGURATION,
+                          k.s6.DESIGN_SYSTEMS,
+                          k.s6.INTL_TESTING,
+                          k.s6.SHOP_KEEPER,
+                          k.s6.WEB_SETTING_TREE_TOOL,
+                          k.s6.QUEST_PREVIEW_TOOL,
+                          k.s6.QUEST_MINOR_REWARD_CAPPING_CONFIG,
+                      ]
+                    : [],
             },
             {
                 divider: !0,
-                settings: [k.s6.LOGOUT]
+                settings: [k.s6.LOGOUT],
             },
             {
                 divider: !0,
-                settings: [k.s6.SOCIAL_LINKS, k.s6.CLIENT_DEBUG_INFO]
-            }
+                settings: [k.s6.SOCIAL_LINKS, k.s6.CLIENT_DEBUG_INFO],
+            },
         ],
         s = {
             header: M.intl.string(M.t.SmHCFR),
             divider: !0,
-            settings: [k.s6.ACTIVITY_PRIVACY, k.s6.REGISTERED_GAMES, k.s6.OVERLAY]
+            settings: [k.s6.ACTIVITY_PRIVACY, k.s6.REGISTERED_GAMES, k.s6.OVERLAY],
         };
     return t ? r : r.toSpliced(3, 0, s);
 }
@@ -99,37 +152,37 @@ function U() {
         M = (0, Z.bC)(),
         B = (0, o.Go)(),
         [U] = (0, c.cv)(B ? [s.z.CLIPS_SETTINGS_BETA_TAG] : []),
-        { shouldMergeGameSettings: V } = y.b.useExperiment({ location: 'settings' }),
-        G = (0, m.Xo)({ location: 'settings' }),
+        { shouldMergeGameSettings: V } = y.b.useExperiment({ location: "settings" }),
+        G = (0, m.Xo)({ location: "settings" }),
         F = null != (n = null == (e = N.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
-        H = (0, E.y0)({ location: 'settings' }),
-        z = (0, j.v4)({ location: 'settings' }),
+        H = (0, E.y0)({ location: "settings" }),
+        z = (0, j.v4)({ location: "settings" }),
         W = (0, l.Q)(),
         Y = (0, x.Zy)({ location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         K = (0, r.e7)([v.Z], () => v.Z.hasLibraryApplication()),
         q = (0, r.e7)([C.default], () => C.default.hasTOTPEnabled()),
         X = P.Sb.useSetting(),
         J = (0, p.Z)(),
-        { hypeSquadRemoved: Q } = u.Z.useExperiment({ location: 'settings' }),
+        { hypeSquadRemoved: Q } = u.Z.useExperiment({ location: "settings" }),
         $ = null == (a = (0, g.Z)()) || a,
         ee = (null == (t = (0, _.s)()) ? void 0 : t.length) > 0,
         { hasBlockedUsers: et, hasIgnoredUsers: en } = (0, r.cj)([T.Z], () => ({
             hasBlockedUsers: T.Z.getBlockedIDs().length > 0,
-            hasIgnoredUsers: T.Z.getIgnoredIDs().length > 0
+            hasIgnoredUsers: T.Z.getIgnoredIDs().length > 0,
         })),
         { showRefreshedSettings: ei } = (0, D.F)({
-            location: 'SettingRendererUtils',
-            autoTrackExposure: !1
+            location: "SettingRendererUtils",
+            autoTrackExposure: !1,
         }),
-        er = (0, d.UQ)('SettingRendererUtils'),
+        er = (0, d.UQ)("SettingRendererUtils"),
         {
             inputMode: es,
             activeInputProfile: ea,
-            isInputProfileCustom: el
+            isInputProfileCustom: el,
         } = (0, r.cj)([S.Z], () => ({
             activeInputProfile: S.Z.getActiveInputProfile(),
             inputMode: S.Z.getMode(),
-            isInputProfileCustom: S.Z.isInputProfileCustom()
+            isInputProfileCustom: S.Z.isInputProfileCustom(),
         }));
     return i.useMemo(
         () =>
@@ -160,9 +213,9 @@ function U() {
                 isEligibleForSensitiveContentDefaults: er,
                 inputMode: es,
                 activeInputProfile: ea,
-                isInputProfileCustom: el
+                isInputProfileCustom: el,
             }),
-        [X, U, et, en, K, ee, q, Q, w, $, Y, z, H, G, M, F, J, k, W, V, A, O, ei, er, es, ea, el]
+        [X, U, et, en, K, ee, q, Q, w, $, Y, z, H, G, M, F, J, k, W, V, A, O, ei, er, es, ea, el],
     );
 }
 function V(e) {
@@ -173,7 +226,7 @@ function V(e) {
             Object.entries(n).filter((e) => {
                 let [t, n] = e;
                 return n.section === i.section;
-            })
+            }),
         ),
         s = Object.fromEntries(
             Object.entries(r)
@@ -184,7 +237,7 @@ function V(e) {
                 .map((e) => {
                     let [t, { parent: n }] = e;
                     return [t, n];
-                })
+                }),
         ),
         a = new Set(),
         l = (e) => {
@@ -213,7 +266,7 @@ function V(e) {
                 a.clear();
                 break;
             }
-            (Object.values(s).includes(e) && o(e), l(e));
+            Object.values(s).includes(e) && o(e), l(e);
         }
     return a;
 }
@@ -243,7 +296,7 @@ function G(e, t, n) {
                 null != e.header &&
                     i.push({
                         section: a.ID.HEADER,
-                        label: e.header
+                        label: e.header,
                     }),
                 e.settings.forEach((e) => {
                     var r, a;
@@ -252,28 +305,32 @@ function G(e, t, n) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        ((i = n[t]),
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = i));
-                                    }));
+                                                : (e[t] = i);
+                                    });
                             }
                             return e;
                         })({}, t[e])),
-                        (a = a = { tabPredicate: () => null == n || (e === k.s6.SEARCH_NO_RESULTS && 0 === n.size) || s.has(e) || n.has(e) }),
+                        (a = a =
+                            {
+                                tabPredicate: () =>
+                                    null == n || (e === k.s6.SEARCH_NO_RESULTS && 0 === n.size) || s.has(e) || n.has(e),
+                            }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
                             : (function (e, t) {
@@ -286,7 +343,7 @@ function G(e, t, n) {
                               })(Object(a)).forEach(function (e) {
                                   Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
-                        r)
+                        r),
                     );
                 }));
         }),
@@ -295,26 +352,26 @@ function G(e, t, n) {
 }
 function F() {
     let e = U(),
-        { shouldMergeGameSettings: t } = y.b.useExperiment({ location: 'settings' }),
-        { showRedesign: n } = A.b.useExperiment({ location: 'settings' }),
+        { shouldMergeGameSettings: t } = y.b.useExperiment({ location: "settings" }),
+        { showRedesign: n } = A.b.useExperiment({ location: "settings" }),
         r = i.useMemo(
             () =>
                 B({
                     shouldMergeGameSettings: t,
-                    showRedesignedThirdPartyAccessSettings: n
+                    showRedesignedThirdPartyAccessSettings: n,
                 }),
-            [t, n]
+            [t, n],
         );
     return i.useMemo(() => G(r, e), [r, e]);
 }
 function H(e) {
     let t = U(),
         n = (function () {
-            let { shouldMergeGameSettings: e } = y.b.useExperiment({ location: 'settings' }),
-                { showRedesign: t } = A.b.useExperiment({ location: 'settings' }),
+            let { shouldMergeGameSettings: e } = y.b.useExperiment({ location: "settings" }),
+                { showRedesign: t } = A.b.useExperiment({ location: "settings" }),
                 n = B({
                     shouldMergeGameSettings: e,
-                    showRedesignedThirdPartyAccessSettings: t
+                    showRedesignedThirdPartyAccessSettings: t,
                 });
             return i.useMemo(
                 () => [
@@ -327,11 +384,11 @@ function H(e) {
                                     return t;
                                 })
                                 .flat(1),
-                            k.s6.SEARCH_NO_RESULTS
-                        ]
-                    }
+                            k.s6.SEARCH_NO_RESULTS,
+                        ],
+                    },
                 ],
-                [n]
+                [n],
             );
         })();
     return i.useMemo(() => G(n, t, new Set(e)), [n, t, e]);
@@ -341,7 +398,7 @@ function z(e) {
         Object.entries(e).filter((e) => {
             let [t, n] = e;
             return n.section !== a.ID.CUSTOM && null != n.searchableTitles && (null == n.predicate || n.predicate());
-        })
+        }),
     );
 }
 function W(e) {

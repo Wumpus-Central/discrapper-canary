@@ -5,5 +5,5 @@ var r = n(64791),
     a = n(986175),
     s = n(291541);
 let l = {
-    groups: [n(322217).i, i.B, a.I, o.z, s.y, r.D]
+    groups: [n(322217).i, i.B, a.I, o.z, s.y, r.D],
 };

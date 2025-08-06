@@ -6,6 +6,6 @@ e.exports = function (e) {
     if (!r(e)) return o(e);
     var t = i(e),
         n = [];
-    for (var s in e) ('constructor' == s && (t || !a.call(e, s))) || n.push(s);
+    for (var s in e) ("constructor" == s && (t || !a.call(e, s))) || n.push(s);
     return n;
 };

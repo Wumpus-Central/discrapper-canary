@@ -1,1 +1,1 @@
-e.exports = { badgeContainer: 'badgeContainer_fc0249' };
+e.exports = { badgeContainer: "badgeContainer_fc0249" };

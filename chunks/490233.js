@@ -6,11 +6,11 @@ var n = r(556585),
     u = o.prototype,
     h = i(u.getAll),
     c = i(u.has),
-    f = new o('a=1');
-(f.has('a', 2) || !f.has('a', void 0)) &&
+    f = new o("a=1");
+(f.has("a", 2) || !f.has("a", void 0)) &&
     n(
         u,
-        'has',
+        "has",
         function (t) {
             var e = arguments.length,
                 r = e < 2 ? void 0 : arguments[1];
@@ -22,6 +22,6 @@ var n = r(556585),
         },
         {
             enumerable: !0,
-            unsafe: !0
-        }
+            unsafe: !0,
+        },
     );

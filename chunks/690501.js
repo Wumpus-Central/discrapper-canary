@@ -1,4 +1,4 @@
-(n.d(t, { N: () => f }), n(388685), n(415506));
+n.d(t, { N: () => f }), n(388685), n(415506);
 var r = n(255367),
     i = n(73800),
     o = n(481060),
@@ -20,7 +20,7 @@ function f(e) {
                           return t;
                       })
                     : d,
-            [_, t]
+            [_, t],
         ),
         g = (0, a.Z)(m, _),
         E = i.useMemo(() => g.filter(s.lm), [g]),
@@ -30,14 +30,14 @@ function f(e) {
         ariaLabel: b,
         tooltipText: i.useMemo(() => {
             if (t.length > 0) return (0, r.jsx)(l.k, { applications: E });
-            if (n) return u.intl.string(u.t['0eWeam']);
+            if (n) return u.intl.string(u.t["0eWeam"]);
             if (f) return u.intl.string(u.t.MCgl9f);
-            throw Error('[GameRelationshipButton] Tooltip text should not be undefined.');
+            throw Error("[GameRelationshipButton] Tooltip text should not be undefined.");
         }, [E, t.length, n, f]),
         icon: i.useMemo(() => {
             if (t.length > 0) return o.KED;
             if (n || f) return o.iHX;
-            throw Error('[GameRelationshipButton] Icon should not be undefined.');
-        }, [t.length, n, f])
+            throw Error("[GameRelationshipButton] Icon should not be undefined.");
+        }, [t.length, n, f]),
     };
 }

@@ -3,14 +3,14 @@ var r = a(899517),
     _ = a(679179);
 let n = (0, a(151122)._I)((t = {}) => {
     let e = t.root,
-        a = t.prefix || 'app:///',
-        n = 'window' in r.n && void 0 !== r.n.window,
+        a = t.prefix || "app:///",
+        n = "window" in r.n && void 0 !== r.n.window,
         o =
             t.iteratee ||
             (function ({ isBrowser: t, root: e, prefix: a }) {
                 return (r) => {
                     if (!r.filename) return r;
-                    let n = /^[a-zA-Z]:\\/.test(r.filename) || (r.filename.includes('\\') && !r.filename.includes('/')),
+                    let n = /^[a-zA-Z]:\\/.test(r.filename) || (r.filename.includes("\\") && !r.filename.includes("/")),
                         o = /^\//.test(r.filename);
                     if (t) {
                         if (e) {
@@ -18,7 +18,7 @@ let n = (0, a(151122)._I)((t = {}) => {
                             0 === t.indexOf(e) && (r.filename = t.replace(e, a));
                         }
                     } else if (n || o) {
-                        let t = n ? r.filename.replace(/^[a-zA-Z]:/, '').replace(/\\/g, '/') : r.filename,
+                        let t = n ? r.filename.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/") : r.filename,
                             o = e ? (0, _.Gf)(e, t) : (0, _.EZ)(t);
                         r.filename = `${a}${o}`;
                     }
@@ -27,10 +27,10 @@ let n = (0, a(151122)._I)((t = {}) => {
             })({
                 isBrowser: n,
                 root: e,
-                prefix: a
+                prefix: a,
             });
     return {
-        name: 'RewriteFrames',
+        name: "RewriteFrames",
         processEvent(t) {
             let e = t;
             return (
@@ -49,12 +49,12 @@ let n = (0, a(151122)._I)((t = {}) => {
                                             ...(t.stacktrace && {
                                                 stacktrace: {
                                                     ...(e = t.stacktrace),
-                                                    frames: e && e.frames && e.frames.map((t) => o(t))
-                                                }
-                                            })
+                                                    frames: e && e.frames && e.frames.map((t) => o(t)),
+                                                },
+                                            }),
                                         };
-                                    })
-                                }
+                                    }),
+                                },
                             };
                         } catch (e) {
                             return t;
@@ -62,6 +62,6 @@ let n = (0, a(151122)._I)((t = {}) => {
                     })(e)),
                 e
             );
-        }
+        },
     };
 });

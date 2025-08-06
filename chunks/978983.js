@@ -4,10 +4,10 @@ n(73800);
 var i = n(481060),
     o = n(816398);
 let a = () =>
-    (0, r.jsx)('div', {
+    (0, r.jsx)("div", {
         className: o.loadingWrapper,
         children: (0, r.jsx)(i.bbz, {
             dotRadius: 4,
-            themed: !0
-        })
+            themed: !0,
+        }),
     });

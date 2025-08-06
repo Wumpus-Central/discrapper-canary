@@ -1,4 +1,4 @@
-(n(539854),
+n(539854),
     n(415506),
     !(function (e) {
         var t = Date.now ? Date.now() : +new Date(),
@@ -10,9 +10,10 @@
                 return o;
             },
             a = function (e, t) {
-                for (var n, i = r.length; i--; ) (n = r[i]).entryType == e && (void 0 === t || n.name == t) && r.splice(i, 1);
+                for (var n, i = r.length; i--; )
+                    (n = r[i]).entryType == e && (void 0 === t || n.name == t) && r.splice(i, 1);
             };
-        (n.now ||
+        n.now ||
             (n.now =
                 n.webkitNow ||
                 n.mozNow ||
@@ -26,56 +27,62 @@
                     function (e) {
                         var t = {
                             name: e,
-                            entryType: 'mark',
+                            entryType: "mark",
                             startTime: n.now(),
-                            duration: 0
+                            duration: 0,
                         };
-                        (r.push(t), (i[e] = t));
+                        r.push(t), (i[e] = t);
                     }),
             n.measure ||
                 (n.measure =
                     n.webkitMeasure ||
                     function (e, t, o) {
                         var a, s;
-                        if (void 0 !== o && void 0 === i[o]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + o + "' does not exist.");
-                        if (void 0 !== t && void 0 === i[t]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + t + "' does not exist.");
-                        ((a = i[t] ? i[t].startTime : 0),
+                        if (void 0 !== o && void 0 === i[o])
+                            throw SyntaxError(
+                                "Failed to execute 'measure' on 'Performance': The mark '" + o + "' does not exist.",
+                            );
+                        if (void 0 !== t && void 0 === i[t])
+                            throw SyntaxError(
+                                "Failed to execute 'measure' on 'Performance': The mark '" + t + "' does not exist.",
+                            );
+                        (a = i[t] ? i[t].startTime : 0),
                             (s = i[o] ? i[o].startTime : n.now()),
                             r.push({
                                 name: e,
-                                entryType: 'measure',
+                                entryType: "measure",
                                 startTime: a,
-                                duration: s - a
-                            }));
+                                duration: s - a,
+                            });
                     }),
             n.getEntriesByType ||
                 (n.getEntriesByType =
                     n.webkitGetEntriesByType ||
                     function (e) {
-                        return o('entryType', e);
+                        return o("entryType", e);
                     }),
             n.getEntriesByName ||
                 (n.getEntriesByName =
                     n.webkitGetEntriesByName ||
                     function (e) {
-                        return o('name', e);
+                        return o("name", e);
                     }),
             n.clearMarks ||
                 (n.clearMarks =
                     n.webkitClearMarks ||
                     function (e) {
-                        a('mark', e);
+                        a("mark", e);
                     }),
             n.clearMeasures ||
                 (n.clearMeasures =
                     n.webkitClearMeasures ||
                     function (e) {
-                        a('measure', e);
+                        a("measure", e);
                     }),
             (e.performance = n),
-            'function' == typeof define &&
+            "function" == typeof define &&
                 (define.amd || define.ajs) &&
-                define('performance', [], function () {
+                define("performance", [], function () {
                     return n;
-                }));
-    })(n.g));
+                });
+    })(n.g);

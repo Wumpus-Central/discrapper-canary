@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,21 +39,28 @@ function u() {
         n = r.useCallback(
             (e) => ({
                 size: {
-                    type: 'static-random',
+                    type: "static-random",
                     minValue: e.confettiSize - c,
-                    maxValue: e.confettiSize + c
-                }
+                    maxValue: e.confettiSize + c,
+                },
             }),
-            []
+            [],
         );
     return r.useMemo(
         () => ({
             fire: (r, i, o) => {
                 var a, s;
                 let c = (null == o ? void 0 : o.settings) != null ? l({}, t, o.settings) : t;
-                e(r, i, n(c), (null != (a = null == o ? void 0 : o.count) ? a : c.confettiCount) * (null != (s = null == o ? void 0 : o.countMultiplier) ? s : 1), { sprite: null == o ? void 0 : o.sprite });
-            }
+                e(
+                    r,
+                    i,
+                    n(c),
+                    (null != (a = null == o ? void 0 : o.count) ? a : c.confettiCount) *
+                        (null != (s = null == o ? void 0 : o.countMultiplier) ? s : 1),
+                    { sprite: null == o ? void 0 : o.sprite },
+                );
+            },
         }),
-        [e, n, t]
+        [e, n, t],
     );
 }

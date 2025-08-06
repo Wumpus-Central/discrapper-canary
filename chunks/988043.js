@@ -27,35 +27,35 @@ function C(e) {
         S = r.useCallback(
             (e) => {
                 let i = (0, o.YK)();
-                (e ? i.delete(n) : i.add(n),
+                e ? i.delete(n) : i.add(n),
                     d.h2.updateSetting(Array.from(i)),
                     l.default.track(j.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: f.Y.DIRECT_MESSAGES_TOGGLE,
                         ingress: t,
-                        guild_id: n
-                    }));
+                        guild_id: n,
+                    });
             },
-            [n, t]
+            [n, t],
         );
     function T(e, t) {
         l.default.track(j.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
-            applied_to_existing_guilds: t
+            applied_to_existing_guilds: t,
         });
     }
     let I = (e) => {
             (0, h.V)({
-                header: E.intl.string(E.t['uUr+GR']),
+                header: E.intl.string(E.t["uUr+GR"]),
                 body: E.intl.string(E.t.hjGJBg),
                 confirmText: E.intl.string(E.t.gm1Ven),
                 cancelText: E.intl.string(E.t.p89ACg),
                 confirmButtonColor: s.zx.Colors.BRAND,
                 onConfirm: () => {
-                    (d.gR.updateSetting(e), T(e, !1));
+                    d.gR.updateSetting(e), T(e, !1);
                 },
                 onCancel: () => {
-                    (d.gR.updateSetting(e), d.h2.updateSetting(e ? a.Z.getGuildIds() : []), T(e, !0));
-                }
+                    d.gR.updateSetting(e), d.h2.updateSetting(e ? a.Z.getGuildIds() : []), T(e, !0);
+                },
             });
         },
         N = v ? E.intl.string(E.t.PMsfcH) : E.intl.string(E.t.RAQUSE);
@@ -69,14 +69,14 @@ function C(e) {
                       value: !O,
                       onChange: (e) => {
                           I(!e);
-                      }
+                      },
                   })
                 : (0, i.jsx)(g.Z, {
                       title: N,
                       note: b ? E.intl.string(E.t.V0ka0d) : v ? E.intl.string(E.t.F9WY3d) : E.intl.string(E.t.G7c3Xl),
                       value: !C,
-                      onChange: S
-                  })
+                      onChange: S,
+                  }),
     });
 }
 function O(e) {
@@ -84,6 +84,6 @@ function O(e) {
         r = (0, m.is)();
     return (0, i.jsx)(C, {
         ingress: t,
-        guildId: null != n ? n : r
+        guildId: null != n ? n : r,
     });
 }

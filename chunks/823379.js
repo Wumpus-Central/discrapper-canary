@@ -1,5 +1,5 @@
 function r(e) {
-    throw Error('Unhandled value: '.concat(e));
+    throw Error("Unhandled value: ".concat(e));
 }
 function i(e) {
     return null != e;
@@ -7,9 +7,9 @@ function i(e) {
 function o(e, t) {
     return t.includes(e);
 }
-(n.d(t, {
+n.d(t, {
     Hi: () => o,
     lm: () => i,
-    vE: () => r
+    vE: () => r,
 }),
-    n(415506));
+    n(415506);

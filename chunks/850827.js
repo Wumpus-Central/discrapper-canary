@@ -43,7 +43,7 @@ function G(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -53,15 +53,15 @@ function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 G(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -69,11 +69,11 @@ function Z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -92,7 +92,7 @@ let V = (e) => {
         let { user: t, color: n, look: i, activity: o, onAction: a } = e,
             s = (0, f.Aq)(),
             l = () => {
-                (s.dispatch(x.CkL.POPOUT_CLOSE), (0, h.closeUserProfileModal)(), null == a || a());
+                s.dispatch(x.CkL.POPOUT_CLOSE), (0, h.closeUserProfileModal)(), null == a || a();
             };
         return (0, r.jsx)(
             S.Z,
@@ -101,16 +101,29 @@ let V = (e) => {
                 color: n,
                 look: i,
                 activity: o,
-                onAction: l
+                onAction: l,
             },
-            'custom-activity-button'
+            "custom-activity-button",
         );
     },
     H = (0, u.Z)((e) => {
-        let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: u, guildId: f, channelId: h, source: G, color: Z = c.zx.Colors.WHITE, look: H = c.zx.Looks.OUTLINED, type: Y, onAction: W } = e,
+        let {
+                activity: t,
+                embeddedActivity: n,
+                user: i,
+                applicationStream: a,
+                className: u,
+                guildId: f,
+                channelId: h,
+                source: G,
+                color: Z = c.zx.Colors.WHITE,
+                look: H = c.zx.Looks.OUTLINED,
+                type: Y,
+                onAction: W,
+            } = e,
             K = (0, l.e7)([g.default], () => {
                 let e = g.default.getCurrentUser();
-                return (s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e);
+                return s()(null != e, "UserActivityActions: currentUser cannot be undefined"), e;
             }),
             z = Y === I.Y.STREAM_PREVIEW || null != a,
             q = (0, O.Z)(t),
@@ -123,15 +136,15 @@ let V = (e) => {
         if ((null == t ? void 0 : t.application_id) === M.bO)
             return (
                 (t = F(B({}, t), {
-                    buttons: [k.intl.string(j.default['Fv/2Oz'])],
-                    metadata: { button_urls: [M.U8] }
+                    buttons: [k.intl.string(j.default["Fv/2Oz"])],
+                    metadata: { button_urls: [M.U8] },
                 })),
                 (0, r.jsx)(V, {
                     user: i,
                     color: Z,
                     look: H,
                     activity: t,
-                    onAction: W
+                    onAction: W,
                 })
             );
         let $ = () => {
@@ -143,9 +156,9 @@ let V = (e) => {
                             look: H,
                             color: Z,
                             onAction: W,
-                            Icon: y.Z
+                            Icon: y.Z,
                         },
-                        'ConnectPlatformActivityButton'
+                        "ConnectPlatformActivityButton",
                     );
                 if ((null == t ? void 0 : t.platform) === x.M7m.PS4 || (null == t ? void 0 : t.platform) === x.M7m.PS5)
                     return (0, r.jsx)(
@@ -155,9 +168,9 @@ let V = (e) => {
                             color: Z,
                             platform: d.Z.get(x.ABu.PLAYSTATION),
                             onAction: W,
-                            Icon: b.Z
+                            Icon: b.Z,
                         },
-                        'ConnectPlatformActivityButton'
+                        "ConnectPlatformActivityButton",
                     );
                 if (q) {
                     let e = (0, r.jsx)(
@@ -170,9 +183,9 @@ let V = (e) => {
                                 source: G,
                                 look: H,
                                 color: Z,
-                                onAction: W
+                                onAction: W,
                             },
-                            'spotify-activity-sync-button'
+                            "spotify-activity-sync-button",
                         ),
                         n = (0, r.jsx)(
                             P.Z,
@@ -182,12 +195,12 @@ let V = (e) => {
                                 source: G,
                                 look: H,
                                 color: Z,
-                                onAction: W
+                                onAction: W,
                             },
-                            'spotify-activity-play-button'
+                            "spotify-activity-play-button",
                         );
                     return (0, r.jsxs)(r.Fragment, {
-                        children: [n, e]
+                        children: [n, e],
                     });
                 }
                 if ((0, p.dS)(t)) {
@@ -201,9 +214,9 @@ let V = (e) => {
                                   channelId: e.channelId,
                                   color: Z,
                                   look: H,
-                                  onAction: W
+                                  onAction: W,
                               },
-                              e.channelId
+                              e.channelId,
                           );
                 }
                 return z
@@ -214,9 +227,9 @@ let V = (e) => {
                               color: Z,
                               look: H,
                               applicationStream: a,
-                              onAction: W
+                              onAction: W,
                           },
-                          'watch-button'
+                          "watch-button",
                       )
                     : Q && null != J
                       ? (0, r.jsx)(
@@ -225,9 +238,9 @@ let V = (e) => {
                                 color: Z,
                                 look: H,
                                 hangStatusChannel: J,
-                                onAction: W
+                                onAction: W,
                             },
-                            'hang-status-button'
+                            "hang-status-button",
                         )
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
@@ -237,9 +250,9 @@ let V = (e) => {
                                         activity: t,
                                         color: Z,
                                         look: H,
-                                        onAction: W
+                                        onAction: W,
                                     },
-                                    'watch-button'
+                                    "watch-button",
                                 ),
                                 (0, r.jsx)(
                                     A.Z,
@@ -249,9 +262,9 @@ let V = (e) => {
                                         user: i,
                                         color: Z,
                                         look: H,
-                                        onAction: W
+                                        onAction: W,
                                     },
-                                    'join-activity-button'
+                                    "join-activity-button",
                                 ),
                                 (0, r.jsx)(
                                     R.Z,
@@ -260,9 +273,9 @@ let V = (e) => {
                                         user: i,
                                         color: Z,
                                         look: H,
-                                        onAction: W
+                                        onAction: W,
                                     },
-                                    'notify-button'
+                                    "notify-button",
                                 ),
                                 (0, r.jsx)(
                                     S.Z,
@@ -271,11 +284,11 @@ let V = (e) => {
                                         color: Z,
                                         look: H,
                                         activity: t,
-                                        onAction: W
+                                        onAction: W,
                                     },
-                                    'custom-activity-button'
-                                )
-                            ]
+                                    "custom-activity-button",
+                                ),
+                            ],
                         });
             },
             ee = X === _.Z.Direction.VERTICAL;
@@ -285,6 +298,6 @@ let V = (e) => {
             direction: X,
             wrap: ee ? _.Z.Wrap.WRAP : _.Z.Wrap.NO_WRAP,
             className: o()(u, U.buttonsWrapper, ee ? U.vertical : U.horizontal),
-            children: $()
+            children: $(),
         });
     });

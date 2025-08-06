@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685), n(539854));
+n.d(t, { Z: () => u }), n(388685), n(539854);
 var l = n(255367),
     r = n(73800),
     i = n(692547),
@@ -27,7 +27,7 @@ function u(e) {
                     e.push({
                         value: t.id,
                         label: t.title,
-                        key: t.id
+                        key: t.id,
                     });
                 }),
                 e
@@ -42,10 +42,10 @@ function u(e) {
                     return (0, l.jsx)(o.Z, {
                         emojiId: null == (t = a.emoji) ? void 0 : t.id,
                         emojiName: null == (n = a.emoji) ? void 0 : n.name,
-                        animated: null != (i = null == (r = a.emoji) ? void 0 : r.animated) && i
+                        animated: null != (i = null == (r = a.emoji) ? void 0 : r.animated) && i,
                     });
             },
-            [p]
+            [p],
         ),
         x = r.useCallback(
             (e, t) => {
@@ -54,7 +54,7 @@ function u(e) {
                 if (null == n || !d(n.emoji)) return;
                 let r = null == h || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => h[e])),
                     o = null != h && r > 0;
-                return (0, l.jsxs)('div', {
+                return (0, l.jsxs)("div", {
                     className: c.suffix,
                     children: [
                         m &&
@@ -62,33 +62,33 @@ function u(e) {
                             (0, l.jsx)(a.IGR, {
                                 color: i.Z.unsafe_rawColors.BRAND_260.css,
                                 text: s.intl.string(s.t.y2b7CA),
-                                className: c.newBadge
+                                className: c.newBadge,
                             }),
                         o &&
-                            (0, l.jsx)('div', {
+                            (0, l.jsx)("div", {
                                 className: c.memberCount,
-                                'data-hover': !0,
+                                "data-hover": !0,
                                 children: (0, l.jsx)(a.Text, {
-                                    variant: 'text-xs/normal',
-                                    color: 'always-white',
-                                    children: s.intl.format(s.t.EgKsZG, { memberCount: r })
-                                })
-                            })
-                    ]
+                                    variant: "text-xs/normal",
+                                    color: "always-white",
+                                    children: s.intl.format(s.t.EgKsZG, { memberCount: r }),
+                                }),
+                            }),
+                    ],
                 });
             },
-            [m, h, p]
+            [m, h, p],
         ),
         _ = r.useCallback(
             (e) => {
                 let t = [];
-                (e.forEach((e) => {
+                e.forEach((e) => {
                     let n = p.get(e);
                     null != n && t.push(n);
                 }),
-                    u(t));
+                    u(t);
             },
-            [u, p]
+            [u, p],
         );
     return (0, l.jsx)(a.VcW, {
         multi: !0,
@@ -97,6 +97,6 @@ function u(e) {
         value: n,
         closeOnSelect: !1,
         renderOptionSuffix: x,
-        renderOptionPrefix: g
+        renderOptionPrefix: g,
     });
 }

@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     n: () => P,
-    v: () => N
+    v: () => N,
 }),
     n(388685),
     n(290780),
     n(415506),
-    n(482853));
+    n(482853);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -31,7 +31,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,15 +41,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -57,11 +57,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -82,55 +82,58 @@ class A extends i.PureComponent {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
             o = i ? E.Dv.ENTERED : this.state.transitionState;
         return (0, r.jsx)(t, {
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: a()(y.layer, !n && y.inactive),
                 children: e({
                     transitionState: o,
-                    onClose: this.close
-                })
-            })
+                    onClose: this.close,
+                }),
+            }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            O(this, 'state', { transitionState: null }),
-            O(this, 'componentWillAppear', (e) => {
+        super(...e),
+            O(this, "state", { transitionState: null }),
+            O(this, "componentWillAppear", (e) => {
                 this.componentWillEnter(e);
             }),
-            O(this, 'componentWillEnter', (e) => {
+            O(this, "componentWillEnter", (e) => {
                 let { instant: t } = this.props;
-                (this.setState({ transitionState: E.Dv.ENTERING }),
+                this.setState({ transitionState: E.Dv.ENTERING }),
                     setTimeout(
                         () => {
-                            (this.setState({ transitionState: E.Dv.ENTERED }), null == e || e());
+                            this.setState({ transitionState: E.Dv.ENTERED }), null == e || e();
                         },
-                        t ? 0 : E.CT
-                    ));
+                        t ? 0 : E.CT,
+                    );
             }),
-            O(this, 'componentWillLeave', (e) => {
+            O(this, "componentWillLeave", (e) => {
                 let { instant: t } = this.props;
-                (this.setState({ transitionState: E.Dv.EXITING }),
+                this.setState({ transitionState: E.Dv.EXITING }),
                     setTimeout(
                         () => {
-                            (this.setState({ transitionState: E.Dv.EXITED }), e());
+                            this.setState({ transitionState: E.Dv.EXITED }), e();
                         },
-                        t ? 0 : E.CT
-                    ));
+                        t ? 0 : E.CT,
+                    );
             }),
-            O(this, 'componentDidUpdate', (e) => {
+            O(this, "componentDidUpdate", (e) => {
                 if (e.isVisible !== this.props.isVisible) {
                     let { transitionState: e } = this.state;
-                    (e === E.Dv.HIDDEN && this.props.isVisible && this.componentWillEnter(), this.props.isVisible || (e !== E.Dv.ENTERING && e !== E.Dv.ENTERED) || this.setState({ transitionState: E.Dv.HIDDEN }));
+                    e === E.Dv.HIDDEN && this.props.isVisible && this.componentWillEnter(),
+                        this.props.isVisible ||
+                            (e !== E.Dv.ENTERING && e !== E.Dv.ENTERED) ||
+                            this.setState({ transitionState: E.Dv.HIDDEN });
                 }
             }),
             O(
                 this,
-                'close',
+                "close",
                 () =>
                     new Promise((e) => {
-                        (this.props.closeModal(this.props.modalKey), setTimeout(() => e(), E.CT));
-                    })
-            ));
+                        this.props.closeModal(this.props.modalKey), setTimeout(() => e(), E.CT);
+                    }),
+            );
     }
 }
 function N() {
@@ -143,8 +146,8 @@ function C(e) {
         var r;
         let o = e[i],
             a = null == (r = e[i + 1]) ? void 0 : r.stackingBehavior,
-            s = n || 'replace' === a;
-        (t.unshift(T(v({}, o), { isVisible: !s })), 'replaceAll' === o.stackingBehavior && (n = !0));
+            s = n || "replace" === a;
+        t.unshift(T(v({}, o), { isVisible: !s })), "replaceAll" === o.stackingBehavior && (n = !0);
     }
     return t;
 }
@@ -153,7 +156,7 @@ function P() {
     let e = N(),
         t = (0, g.s9)((t) => (void 0 !== t[e] ? t[e] : R)),
         n = i.useMemo(() => C(t), [t]),
-        o = (0, _.q)('Modals'),
+        o = (0, _.q)("Modals"),
         a = i.useRef(void 0);
     i.useLayoutEffect(() => {
         a.current = t[t.length - 1];
@@ -179,7 +182,7 @@ function P() {
             (t) => {
                 (0, g.Mr)(t, e);
             },
-            [e]
+            [e],
         ),
         E = S.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === p.ZP)));
     return (0, r.jsxs)(c.W, {
@@ -194,13 +197,13 @@ function P() {
                           e,
                           {
                               children: (0, r.jsx)(d.ZMr, {
-                                  variant: s === d.fCB.LIGHTBOX || s === d.fCB.IMMERSIVE ? 'lightbox' : 'default',
-                                  animationVariant: (null == a ? void 0 : a.instant) ? 'instant' : 'default',
+                                  variant: s === d.fCB.LIGHTBOX || s === d.fCB.IMMERSIVE ? "lightbox" : "default",
+                                  animationVariant: (null == a ? void 0 : a.instant) ? "instant" : "default",
                                   isVisible: E[n],
-                                  onClick: f
-                              })
+                                  onClick: f,
+                              }),
                           },
-                          'layer-'.concat(n)
+                          "layer-".concat(n),
                       )
                     : (0, r.jsx)(
                           u.Z,
@@ -209,9 +212,9 @@ function P() {
                               backdropStyle: s,
                               onClose: f,
                               LayerComponent: e,
-                              backdropInstant: null == a ? void 0 : a.instant
+                              backdropInstant: null == a ? void 0 : a.instant,
                           },
-                          'layer-'.concat(n)
+                          "layer-".concat(n),
                       );
             }),
             n.map((e, t) => {
@@ -225,11 +228,11 @@ function P() {
                         isTopModal: t === n.length - 1,
                         render: a,
                         closeModal: h,
-                        instant: s
+                        instant: s,
                     },
-                    i
+                    i,
                 );
-            })
-        ]
+            }),
+        ],
     });
 }

@@ -1,10 +1,10 @@
-(t.d(n, {
+t.d(n, {
     GV: () => m,
-    iQ: () => g
+    iQ: () => g,
 }),
     t(539854),
     t(388685),
-    t(415506));
+    t(415506);
 var i = t(512722),
     l = t.n(i),
     r = t(333848),
@@ -23,7 +23,7 @@ async function v(e, n) {
         guildId: e.id,
         type: h.d4z.GUILD_STAGE_VOICE,
         name: n.substring(0, 100),
-        permissionOverwrites: i
+        permissionOverwrites: i,
     });
     if (null == l || 201 !== l.status) throw Error("Can't create channel for event");
     return (0, s.q_)(l.body);
@@ -38,7 +38,7 @@ async function m(e, n) {
             let r = c.Z.getChannel(i);
             return null == r ? v(l, e.name, n) : Promise.resolve(r);
         })(e, n);
-        l()(null != t, 'could not find or create channel');
+        l()(null != t, "could not find or create channel");
     }
 }
 async function g(e) {
@@ -46,10 +46,10 @@ async function g(e) {
         { channel_id: t, entity_type: i, name: r, id: s, guild_id: c } = e;
     switch (i) {
         case d.WX.STAGE_INSTANCE:
-            (l()(null != t, 'channel_id is required'), await (0, a.me)(t, r, d.j8.GUILD_ONLY, n, s));
+            l()(null != t, "channel_id is required"), await (0, a.me)(t, r, d.j8.GUILD_ONLY, n, s);
             break;
         case d.WX.VOICE:
-            (l()(null != t, 'channel_id is required'), await u.Z.startEvent(s, c));
+            l()(null != t, "channel_id is required"), await u.Z.startEvent(s, c);
             break;
         case d.WX.EXTERNAL:
             await u.Z.startEvent(s, c);

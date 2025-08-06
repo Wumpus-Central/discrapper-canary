@@ -14,16 +14,16 @@ var a = n(255367),
 function v(e) {
     let { user: t } = e,
         n = m.ZP.useName(null, null, t);
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         className: f.userItem,
         children: [
             (0, a.jsx)(u.Z, { user: t }),
             (0, a.jsx)(s.Text, {
-                color: 'header-primary',
-                variant: 'text-sm/medium',
-                children: n
-            })
-        ]
+                color: "header-primary",
+                variant: "text-sm/medium",
+                children: n,
+            }),
+        ],
     });
 }
 function h(e) {
@@ -35,42 +35,42 @@ function h(e) {
                     n = l[t];
                 return null == n ? null : (0, a.jsx)(v, { user: n }, t);
             },
-            [l]
+            [l],
         );
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         className: i()(n, f.root),
         children: [
-            (0, a.jsx)('div', {
+            (0, a.jsx)("div", {
                 className: f.__invalid_header,
                 children: (0, a.jsxs)(s.vwX, {
                     className: f.title,
                     children: [
                         p.intl.string(p.t.WTozwc),
-                        (0, a.jsxs)('div', {
+                        (0, a.jsxs)("div", {
                             className: f.userCountPill,
                             children: [
                                 (0, a.jsx)(s.Text, {
-                                    color: 'text-default',
-                                    variant: 'text-xs/medium',
-                                    children: l.length
+                                    color: "text-default",
+                                    variant: "text-xs/medium",
+                                    children: l.length,
                                 }),
                                 (0, a.jsx)(s.iFz, {
-                                    size: 'xs',
-                                    color: 'currentColor',
-                                    className: f.userCountIcon
-                                })
-                            ]
-                        })
-                    ]
-                })
+                                    size: "xs",
+                                    color: "currentColor",
+                                    className: f.userCountIcon,
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
             }),
             (0, a.jsx)(s.aVo, {
                 className: f.__invalid_userList,
                 sectionHeight: 0,
                 rowHeight: 40,
                 sections: [l.length],
-                renderRow: u
-            })
-        ]
+                renderRow: u,
+            }),
+        ],
     });
 }

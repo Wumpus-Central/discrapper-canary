@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(147913),
     i = n(367907),
     o = n(728345),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,8 +32,8 @@ async function m(e) {
 async function g(e) {
     if (null == e) return;
     let t = c.Z.getChannel(e),
-        { enableHangStatus: n } = s.n.getCurrentConfig({ location: 'GameActivityManager' }, { autoTrackExposure: !1 });
-    if (null == t || !((0, f.Ku)('running_games_change', !1) || n)) return;
+        { enableHangStatus: n } = s.n.getCurrentConfig({ location: "GameActivityManager" }, { autoTrackExposure: !1 });
+    if (null == t || !((0, f.Ku)("running_games_change", !1) || n)) return;
     let r = d.Z.getActivities();
     if (0 === r.length) return;
     let o = h([...r]);
@@ -44,7 +44,7 @@ async function g(e) {
             channel_id: e,
             guild_id: t.guild_id,
             game_name: u.name,
-            user_id: l.default.getId()
+            user_id: l.default.getId(),
         });
 }
 class E extends r.Z {
@@ -56,11 +56,11 @@ class E extends r.Z {
         g(t);
     }
     constructor(...e) {
-        (super(...e),
-            p(this, 'actions', {
+        super(...e),
+            p(this, "actions", {
                 RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
-                VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect
-            }));
+                VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
+            });
     }
 }
 let b = new E();

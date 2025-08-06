@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var a = n(255367),
     r = n(73800),
     l = n(442837),
@@ -12,62 +12,62 @@ var a = n(255367),
 function p(e) {
     var t, n;
     let { clip: p } = e,
-        [f] = (0, o.Z)([null != (t = p.applicationId) ? t : '']),
+        [f] = (0, o.Z)([null != (t = p.applicationId) ? t : ""]),
         v = (0, l.e7)([u.default], () => u.default.locale),
         h = r.useMemo(() => new Date(c.default.extractTimestamp(p.id)), [p.id]);
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         className: m.root,
         children: [
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 className: m.nameSection,
                 children: [
                     (0, a.jsx)(s.Z, { game: f }),
                     (0, a.jsx)(i.Text, {
                         className: m.name,
-                        variant: 'text-md/medium',
-                        color: 'interactive-active',
-                        children: null != (n = null == f ? void 0 : f.name) ? n : p.applicationName
-                    })
-                ]
+                        variant: "text-md/medium",
+                        color: "interactive-active",
+                        children: null != (n = null == f ? void 0 : f.name) ? n : p.applicationName,
+                    }),
+                ],
             }),
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 className: m.timeContainer,
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, a.jsxs)("div", {
                         children: [
                             (0, a.jsx)(i.vwX, {
                                 className: m.timeTitle,
-                                children: d.intl.string(d.t.g8pDeX)
+                                children: d.intl.string(d.t.g8pDeX),
                             }),
                             (0, a.jsx)(i.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'interactive-active',
+                                variant: "text-sm/normal",
+                                color: "interactive-active",
                                 children: h.toLocaleDateString(v, {
-                                    year: '2-digit',
-                                    month: '2-digit',
-                                    day: '2-digit'
-                                })
-                            })
-                        ]
+                                    year: "2-digit",
+                                    month: "2-digit",
+                                    day: "2-digit",
+                                }),
+                            }),
+                        ],
                     }),
-                    (0, a.jsxs)('div', {
+                    (0, a.jsxs)("div", {
                         children: [
                             (0, a.jsx)(i.vwX, {
                                 className: m.timeTitle,
-                                children: d.intl.string(d.t.v6XAgo)
+                                children: d.intl.string(d.t.v6XAgo),
                             }),
                             (0, a.jsx)(i.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'interactive-active',
+                                variant: "text-sm/normal",
+                                color: "interactive-active",
                                 children: h.toLocaleTimeString(v, {
-                                    hour: 'numeric',
-                                    minute: 'numeric'
-                                })
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
+                                    hour: "numeric",
+                                    minute: "numeric",
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 }

@@ -9,7 +9,7 @@ function a(e, n, t) {
                   value: t,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[n] = t),
         e
@@ -35,8 +35,8 @@ class o extends (l = i.ZP.PersistedStore) {
         return u;
     }
 }
-(a(o, 'displayName', 'ChannelListVoiceCategoryStore'), a(o, 'persistKey', 'ChannelListVoiceCategoryStore'));
+a(o, "displayName", "ChannelListVoiceCategoryStore"), a(o, "persistKey", "ChannelListVoiceCategoryStore");
 let d = new o(r.Z, {
     VOICE_CATEGORY_COLLAPSE: s,
-    VOICE_CATEGORY_EXPAND: s
+    VOICE_CATEGORY_EXPAND: s,
 });

@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     B6: () => I,
     ZP: () => v,
-    qc: () => T
+    qc: () => T,
 }),
     n(388685),
     n(704826),
     n(35282),
-    n(539854));
+    n(539854);
 var r = n(738774),
     i = n(906411),
     o = n(889564),
@@ -22,7 +22,12 @@ var r = n(738774),
 let h = 2097152,
     m = new Set([p.Z5.PREMIUM_LOCKED, p.Z5.ROLE_SUBSCRIPTION_LOCKED]),
     g = new Set([...m, p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE]),
-    E = new Set([p.Z5.DISALLOW_CUSTOM, p.Z5.DISALLOW_EXTERNAL, p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, p.Z5.ONLY_GUILD_EMOJIS_ALLOWED]);
+    E = new Set([
+        p.Z5.DISALLOW_CUSTOM,
+        p.Z5.DISALLOW_EXTERNAL,
+        p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE,
+        p.Z5.ONLY_GUILD_EMOJIS_ALLOWED,
+    ]);
 function b(e) {
     return e.type === i.B.GUILD || null != e.guildId;
 }
@@ -30,7 +35,13 @@ function y(e, t) {
     return null != e && null != t && (!b(e) || t === e.guildId);
 }
 function O(e) {
-    let { emoji: t, channel: n, guildId: i = null == n ? void 0 : n.getGuildId(), intention: c, forceIncludeExternalGuilds: u } = e;
+    let {
+        emoji: t,
+        channel: n,
+        guildId: i = null == n ? void 0 : n.getGuildId(),
+        intention: c,
+        forceIncludeExternalGuilds: u,
+    } = e;
     if (!b(t)) return null;
     if (c === p.Hz.GUILD_PROFILE) return p.Z5.DISALLOW_CUSTOM;
     let d = null != n && (0, a.zi)(n.type),
@@ -45,11 +56,17 @@ function O(e) {
         if (c === p.Hz.STATUS) return p.Z5.PREMIUM_LOCKED;
         else if (!t.managed) return p.Z5.PREMIUM_LOCKED;
     }
-    return (0, o.Fv)(t, null != i ? i : void 0) ? ((0, r.Ol)(t.guildId) ? p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : p.Z5.ROLE_SUBSCRIPTION_LOCKED) : !t.animated || f.ZP.canUseAnimatedEmojis(E) || (0, o.yH)(t) ? null : p.Z5.PREMIUM_LOCKED;
+    return (0, o.Fv)(t, null != i ? i : void 0)
+        ? (0, r.Ol)(t.guildId)
+            ? p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE
+            : p.Z5.ROLE_SUBSCRIPTION_LOCKED
+        : !t.animated || f.ZP.canUseAnimatedEmojis(E) || (0, o.yH)(t)
+          ? null
+          : p.Z5.PREMIUM_LOCKED;
 }
 let v = {
     sanitizeEmojiName(e) {
-        for (e = e.replace(p.sW, '').slice(0, p.Yc); e.length < 2; ) e += '_';
+        for (e = e.replace(p.sW, "").slice(0, p.Yc); e.length < 2; ) e += "_";
         return e;
     },
     filterUnsupportedEmojis: u.Z.filterUnsupportedEmojis,
@@ -68,19 +85,21 @@ let v = {
                 emoji: e,
                 channel: n,
                 guildId: r,
-                intention: i
+                intention: i,
             });
             if (null == t) {
                 a.push(e);
                 continue;
             }
-            (E.has(t) || a.push(e), g.has(t) && (null != e.id && o.add(e.id), m.has(t) && (l || t !== p.Z5.PREMIUM_LOCKED || (l = !0), s++)));
+            E.has(t) || a.push(e),
+                g.has(t) &&
+                    (null != e.id && o.add(e.id), m.has(t) && (l || t !== p.Z5.PREMIUM_LOCKED || (l = !0), s++));
         }
         return {
             emojisDisabled: o,
             emojisUnfiltered: a,
             emojisPremiumLockedCount: s,
-            emojiNitroLocked: l
+            emojiNitroLocked: l,
         };
     },
     isEmojiFiltered(e) {
@@ -100,7 +119,7 @@ let v = {
                 emoji: e,
                 channel: n,
                 intention: i,
-                guildId: r
+                guildId: r,
             });
             t === p.Z5.PREMIUM_LOCKED ? ((o = !0), a++) : t === p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE && a++;
         }
@@ -114,7 +133,7 @@ let v = {
         return g.has(t);
     },
     isFileTooBig: (e) => e.size > h,
-    isDataTooBig: (e) => (0, d.QB)(e) > p.h_
+    isDataTooBig: (e) => (0, d.QB)(e) > p.h_,
 };
 async function I(e) {
     return await u.Z.getEmojiColors(e);
@@ -126,7 +145,7 @@ function T(e) {
         ? c.ZP.getEmojiURL({
               id: n,
               size: t,
-              animated: null != i && i
+              animated: null != i && i,
           })
         : u.Z.getURL(r);
 }

@@ -16,38 +16,43 @@ function f(e) {
     let { application: t } = e,
         n = a.useMemo(() => {
             var e, n, r;
-            return null != (r = (null != (n = null == (e = t.directory_entry) ? void 0 : e.carousel_items) ? n : []).map(s.RF).filter(l.lm)) ? r : [];
+            return null !=
+                (r = (null != (n = null == (e = t.directory_entry) ? void 0 : e.carousel_items) ? n : [])
+                    .map(s.RF)
+                    .filter(l.lm))
+                ? r
+                : [];
         }, [t]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.aboutContainer,
                 children: [
                     (0, r.jsx)(o.Z, {
                         application: t,
-                        carouselItems: n
+                        carouselItems: n,
                     }),
                     (0, r.jsx)(p.Z, { application: t }),
                     (0, r.jsx)(c.Z, { application: t }),
                     (0, r.jsx)(m.Z, { application: t }),
-                    (0, r.jsx)(d.Z, { application: t })
-                ]
+                    (0, r.jsx)(d.Z, { application: t }),
+                ],
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.informationContainer,
                 children: [
-                    (0, r.jsx)('div', { className: g.divider }),
+                    (0, r.jsx)("div", { className: g.divider }),
                     (0, r.jsx)(i.X6, {
-                        variant: 'heading-lg/semibold',
-                        color: 'header-primary',
-                        children: h.intl.string(h.t['mD+J/v'])
+                        variant: "heading-lg/semibold",
+                        color: "header-primary",
+                        children: h.intl.string(h.t["mD+J/v"]),
                     }),
                     (0, r.jsx)(u.Z, {
                         application: t,
-                        view: 'embedded'
-                    })
-                ]
-            })
-        ]
+                        view: "embedded",
+                    }),
+                ],
+            }),
+        ],
     });
 }

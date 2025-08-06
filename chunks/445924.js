@@ -9,19 +9,19 @@ let a = (e) => {
         className: s,
         onClose: a,
         onSelect: void 0,
-        navId: 'user-settings-change-avatar',
-        'aria-label': o.intl.string(o.t.ldIeAQ),
+        navId: "user-settings-change-avatar",
+        "aria-label": o.intl.string(o.t.ldIeAQ),
         children: [
             (0, r.jsx)(i.sNh, {
-                id: 'change-avatar',
+                id: "change-avatar",
                 action: t,
-                label: o.intl.string(o.t['4OynCA'])
+                label: o.intl.string(o.t["4OynCA"]),
             }),
             (0, r.jsx)(i.sNh, {
-                id: 'change-avatar-decoration',
+                id: "change-avatar-decoration",
                 action: n,
-                label: o.intl.string(o.t.BVcYCw)
-            })
-        ]
+                label: o.intl.string(o.t.BVcYCw),
+            }),
+        ],
     });
 };

@@ -22,19 +22,21 @@ function j(e) {
         j = (0, a.e7)([m.Z], () => m.Z.getGuild(i)),
         v = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         { onAdoptTag: _, isAdopting: O } = (0, u.Z)(i),
-        y = (null == v || null == (t = v.primaryGuild) ? void 0 : t.identityGuildId) === i && (null == v || null == (n = v.primaryGuild) ? void 0 : n.identityEnabled) === !0;
+        y =
+            (null == v || null == (t = v.primaryGuild) ? void 0 : t.identityGuildId) === i &&
+            (null == v || null == (n = v.primaryGuild) ? void 0 : n.identityEnabled) === !0;
     if (null != v && null != j && (0, c.jq)(j))
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: b.container,
             children: [
                 (0, r.jsx)(s.Text, {
                     className: b.section,
-                    variant: 'text-xs/medium',
-                    color: 'text-muted',
-                    children: y ? x.intl.string(f.default['6xBCpK']) : x.intl.string(f.default.eSRKe3)
+                    variant: "text-xs/medium",
+                    color: "text-muted",
+                    children: y ? x.intl.string(f.default["6xBCpK"]) : x.intl.string(f.default.eSRKe3),
                 }),
-                (0, r.jsx)('div', { className: b.divider }),
-                (0, r.jsxs)('div', {
+                (0, r.jsx)("div", { className: b.divider }),
+                (0, r.jsxs)("div", {
                     className: l()(b.section, b.body),
                     children: [
                         (0, r.jsx)(h.l, {
@@ -42,27 +44,27 @@ function j(e) {
                                 user: v,
                                 guildId: i,
                                 avatarSize: s.EFr.SIZE_40,
-                                'aria-hidden': !0
+                                "aria-hidden": !0,
                             }),
                             decorations: (0, r.jsx)(d.m0, {
                                 guildId: j.id,
                                 guildBadge: j.profile.badge,
                                 guildTag: j.profile.tag,
-                                inline: !1
+                                inline: !1,
                             }),
                             username: p.ZP.getName(i, null, v),
-                            message: x.intl.string(x.t['6OSasb'])
+                            message: x.intl.string(x.t["6OSasb"]),
                         }),
                         (0, r.jsx)(s.zxk, {
-                            variant: 'primary',
+                            variant: "primary",
                             text: x.intl.string(x.t.cQDYRk),
                             onClick: _,
                             loading: O,
                             disabled: y,
-                            fullWidth: !0
-                        })
-                    ]
-                })
-            ]
+                            fullWidth: !0,
+                        }),
+                    ],
+                }),
+            ],
         });
 }

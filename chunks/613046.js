@@ -13,5 +13,5 @@ let u = {
     deltaEJz: o.Z,
     deltaEITP: i.Z,
     deltaEOK: c.Z,
-    deltaEHCT: l.Z
+    deltaEHCT: l.Z,
 };

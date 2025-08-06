@@ -1,1 +1,1 @@
-e.exports = { guildFeatureAvailabilityIndicator: 'guildFeatureAvailabilityIndicator__956b8' };
+e.exports = { guildFeatureAvailabilityIndicator: "guildFeatureAvailabilityIndicator__956b8" };

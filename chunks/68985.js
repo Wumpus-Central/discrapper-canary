@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685));
+n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -58,7 +58,7 @@ function _(e, t) {
         e
     );
 }
-let p = 'daily_cap',
+let p = "daily_cap",
     h = 3,
     m = {
         numberOfDCsShownToday: 0,
@@ -68,13 +68,13 @@ let p = 'daily_cap',
         newUserMinAgeRequiredOverridden: !1,
         renderedAtTimestamps: new Map(),
         lastDCDismissed: null,
-        seenForGuildId: new Map()
+        seenForGuildId: new Map(),
     };
 function g() {
     m = _(d({}, m), {
         dismissibleContentSeenDuringSession: new Set(),
         renderedAtTimestamps: new Map(),
-        seenForGuildId: new Map()
+        seenForGuildId: new Map(),
     });
 }
 function E(e) {
@@ -99,40 +99,47 @@ function O(e) {
             if (i) {
                 var o;
                 let e = null != (o = m.seenForGuildId.get(n)) ? o : new Set();
-                (e.add(t), m.seenForGuildId.set(n, e));
+                e.add(t), m.seenForGuildId.set(n, e);
             } else m.dismissibleContentSeenDuringSession.add(t);
             if (null == m.dailyCapPeriodStart) {
                 let e = new Date();
-                (e.setHours(0, 0, 0, 0), (m.dailyCapPeriodStart = e.getTime()));
+                e.setHours(0, 0, 0, 0), (m.dailyCapPeriodStart = e.getTime());
             }
-            ((m.numberOfDCsShownToday += 1),
+            (m.numberOfDCsShownToday += 1),
                 m.numberOfDCsShownToday > h &&
                     a.default.track(c.rMx.DCF_CAP_EXCEEDED, {
                         cap_type: p,
                         dismissible_content: t,
-                        shown_dcs: m.numberOfDCsShownToday
-                    }));
+                        shown_dcs: m.numberOfDCsShownToday,
+                    });
         }
     }
 }
 function v(e) {
     let { dismissibleContent: t } = e;
-    ((m.lastDCDismissed = t), m.renderedAtTimestamps.delete(t));
+    (m.lastDCDismissed = t), m.renderedAtTimestamps.delete(t);
 }
 function I(e) {
     let { dismissibleContent: t } = e;
     m.lastDCDismissed = null != t ? t : null;
 }
 function T() {
-    ((m.dailyCapPeriodStart = null), (m.numberOfDCsShownToday = 0), (m.dismissibleContentSeenDuringSession = new Set()), (m.seenForGuildId = new Map()), (m.lastDCDismissed = null));
+    (m.dailyCapPeriodStart = null),
+        (m.numberOfDCsShownToday = 0),
+        (m.dismissibleContentSeenDuringSession = new Set()),
+        (m.seenForGuildId = new Map()),
+        (m.lastDCDismissed = null);
 }
 class S extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, r;
-            ((m.numberOfDCsShownToday = null != (t = e.numberOfDCsShownToday) ? t : 0), (m.dailyCapPeriodStart = e.dailyCapPeriodStart), (m.dailyCapOverridden = null != (n = e.dailyCapOverridden) && n), (m.newUserMinAgeRequiredOverridden = null != (r = e.newUserMinAgeRequiredOverridden) && r));
+            (m.numberOfDCsShownToday = null != (t = e.numberOfDCsShownToday) ? t : 0),
+                (m.dailyCapPeriodStart = e.dailyCapPeriodStart),
+                (m.dailyCapOverridden = null != (n = e.dailyCapOverridden) && n),
+                (m.newUserMinAgeRequiredOverridden = null != (r = e.newUserMinAgeRequiredOverridden) && r);
         }
-        ((m.dismissibleContentSeenDuringSession = new Set()), (m.seenForGuildId = new Map()), (m.lastDCDismissed = null));
+        (m.dismissibleContentSeenDuringSession = new Set()), (m.seenForGuildId = new Map()), (m.lastDCDismissed = null);
     }
     getState() {
         return m;
@@ -156,10 +163,18 @@ class S extends (r = i.ZP.PersistedStore) {
             if ((n && null != t && y(e, t)) || (!n && m.dismissibleContentSeenDuringSession.has(e))) return !1;
         }
         let n = new Date();
-        return (n.setHours(0, 0, 0, 0), null != m.dailyCapPeriodStart && m.dailyCapPeriodStart < n.getTime() && ((m.numberOfDCsShownToday = 0), (m.dailyCapPeriodStart = null)), m.numberOfDCsShownToday >= h);
+        return (
+            n.setHours(0, 0, 0, 0),
+            null != m.dailyCapPeriodStart &&
+                m.dailyCapPeriodStart < n.getTime() &&
+                ((m.numberOfDCsShownToday = 0), (m.dailyCapPeriodStart = null)),
+            m.numberOfDCsShownToday >= h
+        );
     }
 }
-(u(S, 'displayName', 'DismissibleContentFrameworkStore'), u(S, 'persistKey', 'DismissibleContentFrameworkStore'), u(S, 'migrations', [(e) => d({}, e)]));
+u(S, "displayName", "DismissibleContentFrameworkStore"),
+    u(S, "persistKey", "DismissibleContentFrameworkStore"),
+    u(S, "migrations", [(e) => d({}, e)]);
 let A = new S(o.Z, {
     LOGOUT: g,
     DCF_DAILY_CAP_OVERRIDE: E,
@@ -167,5 +182,5 @@ let A = new S(o.Z, {
     DCF_HANDLE_DC_SHOWN: O,
     DCF_HANDLE_DC_DISMISSED: v,
     DCF_OVERRIDE_LAST_DC_DISMISSED: I,
-    DCF_RESET: T
+    DCF_RESET: T,
 });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -22,7 +22,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,13 +30,13 @@ function O(e, t, n) {
 }
 class E extends i.Component {
     componentDidMount() {
-        document.addEventListener('keydown', this.handleKeyDown);
+        document.addEventListener("keydown", this.handleKeyDown);
     }
     componentWillUnmount() {
-        (c.Z.wait(() => u.wX(null)), document.removeEventListener('keydown', this.handleKeyDown));
+        c.Z.wait(() => u.wX(null)), document.removeEventListener("keydown", this.handleKeyDown);
     }
     reset() {
-        (u.wX(null), u.JZ(''));
+        u.wX(null), u.JZ("");
     }
     focusInput() {
         let { searchBarRef: e } = this;
@@ -53,10 +53,10 @@ class E extends i.Component {
     render() {
         let { filterQuery: e } = this.props,
             { focused: t } = this.state;
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: a()({
                 [_.libraryFilter]: !0,
-                [_.focused]: t
+                [_.focused]: t,
             }),
             children: (0, r.jsx)(s.E1j, {
                 className: _.searchBar,
@@ -64,24 +64,24 @@ class E extends i.Component {
                 onChange: u.JZ,
                 onFocus: () => this.setState({ focused: !0 }),
                 onBlur: () => this.setState({ focused: !1 }),
-                name: 'filter',
+                name: "filter",
                 onClear: () => {
-                    (this.reset(), this.focusInput());
+                    this.reset(), this.focusInput();
                 },
                 maxLength: 100,
                 query: e,
-                placeholder: b.intl.string(b.t.aSxWSk)
-            })
+                placeholder: b.intl.string(b.t.aSxWSk),
+            }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            O(this, 'searchBarRef', null),
-            O(this, 'state', { focused: !1 }),
-            O(this, 'setRef', (e) => {
+        super(...e),
+            O(this, "searchBarRef", null),
+            O(this, "state", { focused: !1 }),
+            O(this, "setRef", (e) => {
                 this.searchBarRef = e;
             }),
-            O(this, 'handleKeyDown', (e) => {
+            O(this, "handleKeyDown", (e) => {
                 var t;
                 let { activeRowKey: n, hasModalOpen: r, applicationViewItems: i } = this.props,
                     { searchBarRef: l } = this;
@@ -104,20 +104,22 @@ class E extends i.Component {
                                         location: {
                                             page: m.ZY5.LIBRARY,
                                             section: m.jXE.LIBRARY_APPLICATION_LIST,
-                                            object: m.qAy.BUTTON_CTA
-                                        }
-                                    }
+                                            object: m.qAy.BUTTON_CTA,
+                                        },
+                                    },
                                 });
                             }
                             break;
                         case m.yXg.ARROW_DOWN:
                         case m.yXg.ARROW_UP:
-                            (e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === m.yXg.ARROW_DOWN ? 1 : -1));
+                            e.preventDefault(),
+                                e.stopPropagation(),
+                                this.updateActiveRow(e.which === m.yXg.ARROW_DOWN ? 1 : -1);
                             break;
                         default:
                             null != l.inputRef.current && e.target !== l.inputRef.current && l.focus();
                     }
-            }));
+            });
     }
 }
 function y() {
@@ -127,6 +129,6 @@ function y() {
         activeRowKey: (0, o.e7)([h.Z], () => h.Z.activeRowKey),
         hasModalOpen: t || e,
         filterQuery: (0, o.e7)([p.Z], () => p.Z.applicationFilterQuery),
-        applicationViewItems: (0, o.e7)([p.Z], () => p.Z.sortedFilteredLibraryApplicationViewItems)
+        applicationViewItems: (0, o.e7)([p.Z], () => p.Z.sortedFilteredLibraryApplicationViewItems),
     });
 }

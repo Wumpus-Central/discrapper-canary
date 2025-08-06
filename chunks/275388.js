@@ -1,7 +1,7 @@
 n.d(t, {
     GE: () => p,
     qA: () => h,
-    r9: () => d
+    r9: () => d,
 });
 var r = n(255367),
     i = n(772848),
@@ -10,10 +10,16 @@ var r = n(255367),
     s = n(396639),
     a = n(981631),
     c = n(602091);
-let u = 'orb-checkout-payment-modal-key',
+let u = "orb-checkout-payment-modal-key",
     d = () => (0, o.VXO)(u),
     h = (e) => {
-        var { skuId: t, analyticsLocations: l = [], analyticsSourceLocation: c, onCloseCallback: d, onCheckoutSuccess: h } = e,
+        var {
+                skuId: t,
+                analyticsLocations: l = [],
+                analyticsSourceLocation: c,
+                onCloseCallback: d,
+                onCheckoutSuccess: h,
+            } = e,
             p = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -24,15 +30,17 @@ let u = 'orb-checkout-payment-modal-key',
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
-            })(e, ['skuId', 'analyticsLocations', 'analyticsSourceLocation', 'onCloseCallback', 'onCheckoutSuccess']);
+            })(e, ["skuId", "analyticsLocations", "analyticsSourceLocation", "onCloseCallback", "onCheckoutSuccess"]);
         let f = !1,
             g = (0, i.Z)();
         return (0, o.ZDy)(
@@ -46,24 +54,24 @@ let u = 'orb-checkout-payment-modal-key',
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })(
@@ -72,11 +80,11 @@ let u = 'orb-checkout-payment-modal-key',
                                 analyticsLocations: l,
                                 analyticsSourceLocation: c,
                                 onCheckoutSuccess: (e) => {
-                                    (f || h(e), (f = !0));
-                                }
+                                    f || h(e), (f = !0);
+                                },
                             },
                             p,
-                            n
+                            n,
                         )),
                         (o = o = { loadId: g }),
                         Object.getOwnPropertyDescriptors
@@ -91,24 +99,24 @@ let u = 'orb-checkout-payment-modal-key',
                               })(Object(o)).forEach(function (e) {
                                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
                               }),
-                        i)
+                        i),
                     );
                 };
             },
             {
                 onCloseCallback: d,
                 onCloseRequest() {
-                    (f ||
+                    f ||
                         (0, s._Y)(a.rMx.PAYMENT_FLOW_CANCELED, {
                             loadId: g,
                             skuId: t,
                             analyticsLocations: l,
-                            analyticsSourceLocation: c
+                            analyticsSourceLocation: c,
                         }),
-                        (0, o.Mr3)(u));
+                        (0, o.Mr3)(u);
                 },
-                modalKey: u
-            }
+                modalKey: u,
+            },
         );
     };
 function p(e) {
@@ -117,6 +125,6 @@ function p(e) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.z1,
                 r = e[n];
             return null != r && r.some((e) => e.key !== t);
-        })(t, e)
+        })(t, e),
     );
 }

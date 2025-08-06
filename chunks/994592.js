@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     j0: () => p,
     mY: () => _,
-    on: () => f
+    on: () => f,
 }),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(652515),
     o = n(200876),
@@ -31,6 +31,6 @@ function _(e) {
 }
 function p(e) {
     let t = _(e),
-        n = (0, i.RF)(e, 'useShowRoleSubscriptionsInChannelList');
+        n = (0, i.RF)(e, "useShowRoleSubscriptionsInChannelList");
     return t && !n;
 }

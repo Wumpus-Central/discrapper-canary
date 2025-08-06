@@ -1,6 +1,6 @@
 function r(e, t, n) {
     let r = e[t];
-    return null == r ? (n ? ''.concat(e.any, ' (any)') : '100') : r.toString();
+    return null == r ? (n ? "".concat(e.any, " (any)") : "100") : r.toString();
 }
 function i(e, t) {
     let n = e[t];
@@ -8,5 +8,5 @@ function i(e, t) {
 }
 n.d(t, {
     F: () => i,
-    f: () => r
+    f: () => r,
 });

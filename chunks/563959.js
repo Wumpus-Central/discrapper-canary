@@ -1,6 +1,6 @@
 n.d(t, {
     P: () => E,
-    e: () => b
+    e: () => b,
 });
 var r = n(255367),
     i = n(73800),
@@ -19,7 +19,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,7 +72,7 @@ function g(e, t) {
                     id: i.id,
                     icon: i.icon,
                     bot: i.bot,
-                    botIconFirst: !0
+                    botIconFirst: !0,
                 }),
                 { bot: d } = i;
             return null == d
@@ -92,14 +92,14 @@ function g(e, t) {
                                   o.eee,
                                   m(p({}, e), {
                                       ref: n,
-                                      children: a
-                                  })
-                              )
+                                      children: a,
+                                  }),
+                              ),
                       },
-                      s
+                      s,
                   );
         },
-        [e, t.id]
+        [e, t.id],
     );
 }
 function E(e) {
@@ -110,7 +110,7 @@ function E(e) {
             user: t.author,
             channelId: i.id,
             guildId: i.guild_id,
-            messageId: t.id
+            messageId: t.id,
         }),
         p = g(i, t);
     return (0, r.jsx)(l.Z, {
@@ -121,8 +121,8 @@ function E(e) {
             application: u,
             username: c.nick,
             usernameHook: _(c),
-            applicationNameHook: null != u ? p(u) : f.dG4
-        })
+            applicationNameHook: null != u ? p(u) : f.dG4,
+        }),
     });
 }
 function b(e) {
@@ -133,7 +133,7 @@ function b(e) {
             user: t.author,
             channelId: i.id,
             guildId: i.guild_id,
-            messageId: t.id
+            messageId: t.id,
         }),
         p = g(i, t);
     return (0, r.jsx)(l.Z, {
@@ -144,7 +144,7 @@ function b(e) {
             application: u,
             username: c.nick,
             usernameHook: _(c),
-            applicationNameHook: null != u ? p(u) : f.dG4
-        })
+            applicationNameHook: null != u ? p(u) : f.dG4,
+        }),
     });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => b,
-    Z: () => y
+    Z: () => y,
 });
 var r = n(255367),
     i = n(73800),
@@ -35,39 +35,44 @@ let y = i.memo(function (e) {
             (0, r.jsx)(a.nn4, {
                 children: f.intl.format(f.t.UaqbkZ, {
                     title: h,
-                    count: x
-                })
+                    count: x,
+                }),
             }),
             (0, r.jsxs)(a.P3F, {
                 onClick: (e) => {
-                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return j ? (0, c.lY)() : x > 3 ? b() : (0, p.dG4)();
+                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
+                        return j ? (0, c.lY)() : x > 3 ? b() : (0, p.dG4)();
                 },
                 onContextMenu: _,
-                tag: 'span',
-                'aria-hidden': !0,
+                tag: "span",
+                "aria-hidden": !0,
                 className: g.headerContainer,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: g.header,
                         children: [
-                            (0, r.jsxs)('span', {
-                                children: [h, ' \u2014 ', x]
+                            (0, r.jsxs)("span", {
+                                children: [h, " \u2014 ", x],
                             }),
-                            (0, r.jsx)(d.Z, {})
-                        ]
+                            (0, r.jsx)(d.Z, {}),
+                        ],
                     }),
                     x <= 3 && !j
                         ? null
-                        : ((t = j ? (0, r.jsx)(a.u04, { className: g.toggleExpandIcon }) : y ? (0, r.jsx)(a.CJ0, { className: g.toggleExpandIcon }) : (0, r.jsx)(a.Fbu, { className: g.toggleExpandIcon })),
+                        : ((t = j
+                              ? (0, r.jsx)(a.u04, { className: g.toggleExpandIcon })
+                              : y
+                                ? (0, r.jsx)(a.CJ0, { className: g.toggleExpandIcon })
+                                : (0, r.jsx)(a.Fbu, { className: g.toggleExpandIcon })),
                           (0, r.jsx)(a.tEY, {
-                              children: (0, r.jsx)('div', {
+                              children: (0, r.jsx)("div", {
                                   tabIndex: 0,
                                   className: g.toggleExpandIcon,
-                                  children: t
-                              })
-                          }))
-                ]
-            })
-        ]
+                                  children: t,
+                              }),
+                          })),
+                ],
+            }),
+        ],
     });
 });

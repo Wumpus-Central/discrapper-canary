@@ -13,24 +13,24 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -39,10 +39,10 @@ function f(e) {
         m = {
             text: p.intl.string(p.t.JzJpg4),
             onClick: () => {
-                (s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, h({}, (0, o.hH)(t))),
+                s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, h({}, (0, o.hH)(t))),
                     f(d.L.PRIMARY),
                     (0, a.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                        let { default: e } = await Promise.all([n.e("45094"), n.e("45822")]).then(n.bind(n, 218613));
                         return (n) => {
                             var i, l;
                             return (0, r.jsx)(
@@ -51,7 +51,7 @@ function f(e) {
                                 (l = l =
                                     {
                                         channelType: u.d4z.GUILD_MEDIA,
-                                        guildId: t
+                                        guildId: t,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -65,36 +65,36 @@ function f(e) {
                                       })(Object(l)).forEach(function (e) {
                                           Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                       }),
-                                i)
+                                i),
                             );
                         };
-                    }));
+                    });
             },
-            variant: 'primary'
+            variant: "primary",
         },
         b = i.useRef(null);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 ref: b,
-                children: g()
+                children: g(),
             }),
             (0, r.jsx)(l.Mb, {
                 title: p.intl.string(p.t.fW7UqK),
-                body: p.intl.string(p.t['yQ0X+f']),
+                body: p.intl.string(p.t["yQ0X+f"]),
                 caretConfig: {
-                    position: 'top',
-                    align: 'center'
+                    position: "top",
+                    align: "center",
                 },
-                assetUrl: 'https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4',
+                assetUrl: "https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4",
                 action: m,
                 textLink: {
                     link: c.Z.getCreatorSupportArticleURL(u.BhN.MEDIA_CHANNEL),
-                    text: p.intl.string(p.t.w4DutL)
+                    text: p.intl.string(p.t.w4DutL),
                 },
                 targetElementRef: b,
-                onRequestClose: () => f(d.L.DISMISS)
-            })
-        ]
+                onRequestClose: () => f(d.L.DISMISS),
+            }),
+        ],
     });
 }

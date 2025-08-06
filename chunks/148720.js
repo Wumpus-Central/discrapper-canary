@@ -26,21 +26,21 @@ function g(e) {
             r.Z.show({
                 title: m.intl.string(m.t.PtobXV),
                 body: m.intl.string(m.t.UXoQTk),
-                hideActionSheet: !1
+                hideActionSheet: !1,
             });
             break;
         case h.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
             r.Z.show({
                 title: m.intl.string(m.t.PtobXV),
                 body: m.intl.string(m.t.uGDCc3),
-                hideActionSheet: !1
+                hideActionSheet: !1,
             });
             break;
         case h.Fw.ACTIVITY_AGE_GATED:
             r.Z.show({
                 title: m.intl.string(m.t.PtobXV),
-                body: m.intl.string(m.t['4WuFRE']),
-                hideActionSheet: !1
+                body: m.intl.string(m.t["4WuFRE"]),
+                hideActionSheet: !1,
             });
             break;
         case h.Fw.NO_CHANNEL_CONNECT_PERMISSION:
@@ -50,13 +50,24 @@ function g(e) {
             r.Z.show({
                 title: m.intl.string(m.t.PtobXV),
                 body: m.intl.string(m.t.FUCQcn),
-                hideActionSheet: !1
+                hideActionSheet: !1,
             });
     }
 }
 async function E(e) {
-    let { channelId: t, applicationId: n, launchId: r, inputApplication: o, analyticsLocations: m, launchingComponentId: E, sectionName: b, inviterUserId: y } = e,
-        O = f.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == r || e.launchId === r)),
+    let {
+            channelId: t,
+            applicationId: n,
+            launchId: r,
+            inputApplication: o,
+            analyticsLocations: m,
+            launchingComponentId: E,
+            sectionName: b,
+            inviterUserId: y,
+        } = e,
+        O = f.ZP.getEmbeddedActivitiesForChannel(t).find(
+            (e) => e.applicationId === n && (null == r || e.launchId === r),
+        ),
         v = o;
     if (null == v) {
         let e = await i.ZP.fetchApplication(n);
@@ -73,7 +84,7 @@ async function E(e) {
                 analyticsLocations: m,
                 componentId: E,
                 sectionName: b,
-                inviterUserId: y
+                inviterUserId: y,
             }));
     }
     g({
@@ -86,8 +97,8 @@ async function E(e) {
             ChannelStore: s.Z,
             VoiceStateStore: d.Z,
             PermissionStore: c.Z,
-            GuildStore: l.Z
+            GuildStore: l.Z,
         }),
-        handleCanJoin: T
+        handleCanJoin: T,
     });
 }

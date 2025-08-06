@@ -3,6 +3,6 @@ e.exports = function (e, t) {
         enumerable: !(1 & e),
         configurable: !(2 & e),
         writable: !(4 & e),
-        value: t
+        value: t,
     };
 };

@@ -8,19 +8,19 @@ var r = n(255367),
     c = n(733316);
 function u(e) {
     let { label: t, className: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(c.labelRow, n),
         children: [
             (0, r.jsx)(l.Z, {
                 label: t,
-                size: 'xxs'
+                size: "xxs",
             }),
             (0, r.jsx)(a.Text, {
-                variant: 'text-xs/medium',
-                color: 'text-muted',
+                variant: "text-xs/medium",
+                color: "text-muted",
                 className: c.labelText,
-                children: (0, s.Z)(t)
-            })
-        ]
+                children: (0, s.Z)(t),
+            }),
+        ],
     });
 }

@@ -21,14 +21,10 @@ var i = n(442837),
     v = n(388032);
 function P(e, t) {
     let n = (0, i.e7)([c.ZP], () => c.ZP.getChannels(t)[c.Zb], [t]),
-        P = (0, i.e7)(
-            [O.Z, d.Z],
-            () => {
-                let n = O.Z.getUserVoiceChannelId(t, e.id);
-                return d.Z.getChannel(n);
-            },
-            [t, e.id]
-        );
+        P = (0, i.e7)([O.Z, d.Z], () => {
+            let n = O.Z.getUserVoiceChannelId(t, e.id);
+            return d.Z.getChannel(n);
+        }, [t, e.id]);
     if ((0, i.e7)([g.ZP], () => g.ZP.isGuestOrLurker(t, e.id), [t, e.id]) || null == P) return null;
     let p = e.id === u.default.getId();
     if (!p && !f.Z.can(j.Plq.MOVE_MEMBERS, P)) return null;
@@ -43,7 +39,7 @@ function P(e, t) {
                       E.BT({
                           permission: j.Plq.CONNECT,
                           user: e,
-                          context: n
+                          context: n,
                       })) &&
                   !(0, h.rY)(n, O.Z, Z.Z))
         );
@@ -51,7 +47,7 @@ function P(e, t) {
     return 0 === y.length
         ? null
         : (0, l.jsx)(r.sNh, {
-              id: 'voice-move',
+              id: "voice-move",
               label: v.intl.string(v.t.FAplmp),
               children: y.map((n) => {
                   let { channel: i } = n;
@@ -60,12 +56,14 @@ function P(e, t) {
                       {
                           id: i.id,
                           action: () => {
-                              e.id === u.default.getId() ? a.default.selectVoiceChannel(i.id) : o.Z.setChannel(t, e.id, i.id);
+                              e.id === u.default.getId()
+                                  ? a.default.selectVoiceChannel(i.id)
+                                  : o.Z.setChannel(t, e.id, i.id);
                           },
-                          label: (0, s.F6)(i, m.default, b.Z)
+                          label: (0, s.F6)(i, m.default, b.Z),
                       },
-                      i.id
+                      i.id,
                   );
-              })
+              }),
           });
 }

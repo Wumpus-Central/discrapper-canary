@@ -29,18 +29,18 @@ function I(e) {
             async (e) => {
                 if (!n.current)
                     try {
-                        (await (0, p.k)(e), (0, h.V)(e), (0, s.le)(), (0, s.aC)(e));
+                        await (0, p.k)(e), (0, h.V)(e), (0, s.le)(), (0, s.aC)(e);
                     } finally {
                         n.current = !0;
                     }
             },
-            [n]
+            [n],
         );
     switch (t.joinType) {
         case O.A.INVITE:
             return (0, r.jsx)(j.A, {
                 requireTerms: t.requireTerms,
-                rules: t.termRules
+                rules: t.termRules,
             });
         case O.A.APPLY:
             return (0, r.jsx)(x.r, { pendingFields: t.pendingVerificationFields });
@@ -49,7 +49,7 @@ function I(e) {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
-                rules: t.termRules
+                rules: t.termRules,
             });
     }
 }
@@ -59,7 +59,7 @@ function E(e) {
             var e, n;
             return {
                 nsfwLevel: null == (e = d.Z.getGuild(t)) ? void 0 : e.nsfwLevel,
-                ownerConfiguredContentLevel: null == (n = d.Z.getGuild(t)) ? void 0 : n.ownerConfiguredContentLevel
+                ownerConfiguredContentLevel: null == (n = d.Z.getGuild(t)) ? void 0 : n.ownerConfiguredContentLevel,
             };
         }),
         o = (0, l.e7)([v.Z], () => {
@@ -70,7 +70,7 @@ function E(e) {
             (e) => {
                 f.Z.setIsAgeRestricted(t, e);
             },
-            [t]
+            [t],
         ),
         m = n === y.V_K.AGE_RESTRICTED && s !== y.V_K.AGE_RESTRICTED;
     return (0, r.jsx)(a.hjN, {
@@ -79,9 +79,11 @@ function E(e) {
             value: o,
             hideBorder: !0,
             disabled: m,
-            note: C.intl.format(C.t['iyQQ6+'], { helpArticleLink: u.Z.getArticleURL(y.BhN.NSFW_SERVER_AGE_RESTRICTION) }),
-            children: C.intl.string(C.t.N9xEJC)
-        })
+            note: C.intl.format(C.t["iyQQ6+"], {
+                helpArticleLink: u.Z.getArticleURL(y.BhN.NSFW_SERVER_AGE_RESTRICTION),
+            }),
+            children: C.intl.string(C.t.N9xEJC),
+        }),
     });
 }
 function S(e) {
@@ -89,11 +91,11 @@ function S(e) {
         n = (0, c.U)();
     return !(0, m.j0)({
         guildId: t,
-        location: 'guild-settings'
+        location: "guild-settings",
     }) || n
         ? null
         : (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)('div', { className: N.divider }), (0, r.jsx)(E, { guildId: t })]
+              children: [(0, r.jsx)("div", { className: N.divider }), (0, r.jsx)(E, { guildId: t })],
           });
 }
 function T() {
@@ -106,7 +108,7 @@ function T() {
         (t) => {
             (null == e ? void 0 : e.id) != null && f.Z.setSelectedJoinType(e.id, t);
         },
-        [null == e ? void 0 : e.id]
+        [null == e ? void 0 : e.id],
     );
     if (null == e || null == t) return null;
     let { joinType: s } = t;
@@ -114,18 +116,18 @@ function T() {
         gap: 32,
         children: [
             (0, r.jsx)(a.X6q, {
-                color: 'header-primary',
-                variant: 'heading-lg/semibold',
-                children: C.intl.string(C.t.YJlvBA)
+                color: "header-primary",
+                variant: "heading-lg/semibold",
+                children: C.intl.string(C.t.YJlvBA),
             }),
             (0, r.jsx)(_.h, {
                 onTypePicked: n,
                 activeType: s,
-                guild: e
+                guild: e,
             }),
-            (0, r.jsx)('div', { className: N.divider }),
-            (0, r.jsx)('div', { children: (0, r.jsx)(I, { pendingState: t }) }),
-            null != e && (0, r.jsx)(S, { guildId: e.id })
-        ]
+            (0, r.jsx)("div", { className: N.divider }),
+            (0, r.jsx)("div", { children: (0, r.jsx)(I, { pendingState: t }) }),
+            null != e && (0, r.jsx)(S, { guildId: e.id }),
+        ],
     });
 }

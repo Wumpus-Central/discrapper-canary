@@ -1,4 +1,4 @@
-(n.d(t, { DesktopRefreshOnboardingModal: () => w }), n(388685), n(539854));
+n.d(t, { DesktopRefreshOnboardingModal: () => w }), n(388685), n(539854);
 var i = n(255367),
     s = n(73800),
     r = n(120356),
@@ -20,7 +20,7 @@ var i = n(255367),
 function f(e) {
     let { options: t, selected: n, onSelect: s, showLabels: r, renderOptionContainer: l } = e;
     return (0, i.jsx)(c.Kqy, {
-        direction: 'horizontal',
+        direction: "horizontal",
         gap: 8,
         children: t.map((e, t) => {
             var o;
@@ -39,47 +39,47 @@ function f(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             i = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (i = i.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             i.forEach(function (t) {
                                                 var i;
-                                                ((i = n[t]),
+                                                (i = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: i,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = i));
-                                            }));
+                                                        : (e[t] = i);
+                                            });
                                     }
                                     return e;
                                 })({}, t)),
                                 (o = o =
                                     {
-                                        'data-selected': e.id === n,
+                                        "data-selected": e.id === n,
                                         onClick: () => s(e.id),
                                         className: a()(e.className, O.option),
                                         style: e.style,
                                         children: [
                                             r &&
                                                 (0, i.jsx)(c.Text, {
-                                                    variant: 'text-sm/medium',
-                                                    color: 'text-primary',
-                                                    children: e.label
+                                                    variant: "text-sm/medium",
+                                                    color: "text-primary",
+                                                    children: e.label,
                                                 }),
                                             e.new &&
                                                 (0, i.jsx)(c.IGR, {
                                                     color: c.TVs.colors.BG_BRAND.css,
                                                     text: j.intl.string(j.t.y2b7CA),
-                                                    className: O.new
-                                                })
-                                        ]
+                                                    className: O.new,
+                                                }),
+                                        ],
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
@@ -93,61 +93,61 @@ function f(e) {
                                       })(Object(o)).forEach(function (e) {
                                           Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                                       }),
-                                l)
+                                l),
                             );
-                        }
-                    })
+                        },
+                    }),
                 },
-                t
+                t,
             );
             return null != (o = null == l ? void 0 : l(e, d)) ? o : d;
-        })
+        }),
     });
 }
 let v = [
         {
             id: b.BR.LIGHT,
             label: j.intl.string(j.t.K2sFfn),
-            className: a()('theme-light', O.themeOption)
+            className: a()("theme-light", O.themeOption),
         },
         {
             id: b.BR.DARK,
             label: j.intl.string(j.t.SMPT1t),
-            className: a()('theme-dark', O.themeOption)
+            className: a()("theme-dark", O.themeOption),
         },
         {
             id: b.BR.DARKER,
             label: j.intl.string(j.t.b8Cei4),
-            className: a()('theme-darker', O.themeOption),
-            new: !0
+            className: a()("theme-darker", O.themeOption),
+            new: !0,
         },
         {
             id: b.BR.MIDNIGHT,
             label: j.intl.string(j.t.Do4ZJy),
-            className: a()('theme-midnight', O.themeOption),
-            new: !0
-        }
+            className: a()("theme-midnight", O.themeOption),
+            new: !0,
+        },
     ],
     _ = [
         {
-            id: 'compact',
-            label: j.intl.string(j.t['7iegX1'])
+            id: "compact",
+            label: j.intl.string(j.t["7iegX1"]),
         },
         {
-            id: 'default',
-            label: j.intl.string(j.t.bBvAEB)
+            id: "default",
+            label: j.intl.string(j.t.bBvAEB),
         },
         {
-            id: 'cozy',
-            label: j.intl.string(j.t['4cuYHx'])
-        }
+            id: "cozy",
+            label: j.intl.string(j.t["4cuYHx"]),
+        },
     ];
 function w(e) {
     let { transitionState: t, onClose: n } = e,
         [r] = s.useState(() => h.Z.gradientPreset),
         b = (0, l.e7)([p.Z], () => p.Z.theme),
         [w] = s.useState(() => u.ZP.useSystemTheme === x.KW.ON),
-        [N, k] = s.useState(() => (w ? 'system' : null != r ? 'gradient' : b)),
+        [N, k] = s.useState(() => (w ? "system" : null != r ? "gradient" : b)),
         { density: C } = (0, c.TCT)(),
         P = s.useMemo(() => {
             if (null == r && !w) return v;
@@ -156,35 +156,35 @@ function w(e) {
                 let { colors: t, angle: n, theme: i, getName: s } = r,
                     l = (0, g.VK)({
                         colors: t,
-                        angle: n
+                        angle: n,
                     }),
                     o = s();
                 e.push({
-                    id: 'gradient',
+                    id: "gradient",
                     label: o,
                     className: a()((0, c.wjy)(i) ? O.darkOverlay : O.lightOverlay, O.themeOption),
-                    style: { background: 'var(--background-gradient), '.concat(l) }
+                    style: { background: "var(--background-gradient), ".concat(l) },
                 });
             }
             return (
                 w &&
                     e.push({
-                        id: 'system',
-                        label: j.intl.string(j.t['7rOU6u']),
-                        className: O.themeOption
+                        id: "system",
+                        label: j.intl.string(j.t["7rOU6u"]),
+                        className: O.themeOption,
                     }),
                 e
             );
         }, [r, w]),
-        K = (0, m.Z)('(max-height: 800px)');
+        K = (0, m.Z)("(max-height: 800px)");
     return (0, i.jsxs)(c.Y0X, {
         transitionState: t,
         size: c.CgR.DYNAMIC,
         className: O.root,
-        'data-modal-align': 'top',
-        parentComponent: 'DesktopRefreshOnboardingModal',
+        "data-modal-align": "top",
+        parentComponent: "DesktopRefreshOnboardingModal",
         children: [
-            (0, i.jsx)('div', { className: O.gradient }),
+            (0, i.jsx)("div", { className: O.gradient }),
             (0, i.jsx)(c.xBx, {
                 className: O.header,
                 children: (0, i.jsxs)(c.Kqy, {
@@ -193,21 +193,21 @@ function w(e) {
                         (0, i.jsxs)(c.Kqy, {
                             gap: K ? 8 : 16,
                             children: [
-                                (0, i.jsx)('div', { className: O.headerImage }),
+                                (0, i.jsx)("div", { className: O.headerImage }),
                                 (0, i.jsx)(c.X6q, {
-                                    variant: K ? 'heading-lg/semibold' : 'heading-xl/semibold',
-                                    color: 'header-primary',
-                                    children: j.intl.string(j.t['7+iCGx'])
-                                })
-                            ]
+                                    variant: K ? "heading-lg/semibold" : "heading-xl/semibold",
+                                    color: "header-primary",
+                                    children: j.intl.string(j.t["7+iCGx"]),
+                                }),
+                            ],
                         }),
                         (0, i.jsx)(c.X6q, {
-                            variant: K ? 'heading-sm/medium' : 'heading-md/medium',
-                            color: 'text-secondary',
-                            children: j.intl.string(j.t.fZMMqK)
-                        })
-                    ]
-                })
+                            variant: K ? "heading-sm/medium" : "heading-md/medium",
+                            color: "text-secondary",
+                            children: j.intl.string(j.t.fZMMqK),
+                        }),
+                    ],
+                }),
             }),
             (0, i.jsx)(c.hzk, {
                 className: O.content,
@@ -218,36 +218,36 @@ function w(e) {
                             gap: K ? 8 : 12,
                             children: [
                                 (0, i.jsx)(c.X6q, {
-                                    variant: 'heading-md/medium',
-                                    children: j.intl.string(j.t.Ksh3io)
+                                    variant: "heading-md/medium",
+                                    children: j.intl.string(j.t.Ksh3io),
                                 }),
                                 (0, i.jsx)(f, {
                                     showLabels: !1,
                                     options: P,
                                     selected: N,
                                     onSelect: (e) => {
-                                        (k(e),
-                                            'gradient' === e
+                                        k(e),
+                                            "gradient" === e
                                                 ? null != r &&
                                                   (0, d.ZI)({
                                                       backgroundGradientPresetId: r.id,
-                                                      theme: r.theme
+                                                      theme: r.theme,
                                                   })
-                                                : (0, d.ZI)({ theme: e }));
+                                                : (0, d.ZI)({ theme: e });
                                     },
                                     renderOptionContainer: (e, t) =>
-                                        'gradient' === e.id
+                                        "gradient" === e.id
                                             ? t
-                                            : 'system' === e.id
+                                            : "system" === e.id
                                               ? (0, i.jsxs)(c.Kqy, {
                                                     className: O.systemOption,
                                                     children: [
                                                         t,
                                                         (0, i.jsx)(c.DuK, {
-                                                            size: 'sm',
-                                                            className: O.systemIcon
-                                                        })
-                                                    ]
+                                                            size: "sm",
+                                                            className: O.systemIcon,
+                                                        }),
+                                                    ],
                                                 })
                                               : (0, i.jsx)(c.f6W, {
                                                     theme: e.id,
@@ -255,11 +255,11 @@ function w(e) {
                                                     children: (e) =>
                                                         (0, i.jsx)(c.Kqy, {
                                                             className: e,
-                                                            children: t
-                                                        })
-                                                })
-                                })
-                            ]
+                                                            children: t,
+                                                        }),
+                                                }),
+                                }),
+                            ],
                         }),
                         (0, i.jsxs)(c.Kqy, {
                             gap: K ? 8 : 12,
@@ -268,26 +268,26 @@ function w(e) {
                                     gap: 0,
                                     children: [
                                         (0, i.jsxs)(c.Kqy, {
-                                            direction: 'horizontal',
+                                            direction: "horizontal",
                                             gap: 4,
-                                            align: 'center',
+                                            align: "center",
                                             children: [
                                                 (0, i.jsx)(c.X6q, {
-                                                    variant: 'heading-md/medium',
-                                                    children: j.intl.string(j.t['C/5V0N'])
+                                                    variant: "heading-md/medium",
+                                                    children: j.intl.string(j.t["C/5V0N"]),
                                                 }),
                                                 (0, i.jsx)(c.IGR, {
                                                     color: c.TVs.colors.BG_BRAND.css,
-                                                    text: j.intl.string(j.t.y2b7CA)
-                                                })
-                                            ]
+                                                    text: j.intl.string(j.t.y2b7CA),
+                                                }),
+                                            ],
                                         }),
                                         (0, i.jsx)(c.Text, {
-                                            variant: 'text-sm/medium',
-                                            color: 'text-secondary',
-                                            children: j.intl.string(j.t['2w1sEB'])
-                                        })
-                                    ]
+                                            variant: "text-sm/medium",
+                                            color: "text-secondary",
+                                            children: j.intl.string(j.t["2w1sEB"]),
+                                        }),
+                                    ],
                                 }),
                                 (0, i.jsx)(f, {
                                     showLabels: !0,
@@ -295,30 +295,30 @@ function w(e) {
                                     selected: C,
                                     onSelect: (e) => {
                                         switch (e) {
-                                            case 'default':
+                                            case "default":
                                                 y.YC.updateSetting(o.Pi.DEFAULT);
                                                 break;
-                                            case 'compact':
+                                            case "compact":
                                                 y.YC.updateSetting(o.Pi.COMPACT);
                                                 break;
-                                            case 'cozy':
+                                            case "cozy":
                                                 y.YC.updateSetting(o.Pi.COZY);
                                         }
-                                    }
-                                })
-                            ]
-                        })
-                    ]
-                })
+                                    },
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
             }),
             (0, i.jsx)(c.mzw, {
                 className: O.footer,
                 children: (0, i.jsx)(c.zxk, {
-                    variant: 'primary',
-                    text: j.intl.string(j.t['1Qm829']),
-                    onClick: n
-                })
-            })
-        ]
+                    variant: "primary",
+                    text: j.intl.string(j.t["1Qm829"]),
+                    onClick: n,
+                }),
+            }),
+        ],
     });
 }

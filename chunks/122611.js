@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -31,7 +31,7 @@ function P(e) {
     let { guild: n } = e,
         [p, f] = i.useState(null != (t = o.K.get(C.Iv)) ? t : 0),
         g = (e) => {
-            (o.K.set(C.Iv, e), f(e));
+            o.K.set(C.Iv, e), f(e);
         },
         m = (0, l.Wu)(
             C.HG,
@@ -40,7 +40,7 @@ function P(e) {
                     let { dismissibleContentType: t, store: r } = e;
                     return !0 === (null == r ? void 0 : r.channelNoticePredicate(n, p)) && !N.has(t);
                 }).map((e) => e.dismissibleContentType),
-            [n, p]
+            [n, p],
         );
     return (0, r.jsx)(c.ZP, {
         contentTypes: m,
@@ -48,39 +48,39 @@ function P(e) {
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e,
                 l = () => {
-                    (g(Date.now()), i(S.L.UNKNOWN));
+                    g(Date.now()), i(S.L.UNKNOWN);
                 },
                 o = (() => {
                     switch (t) {
                         case a.z.CHANNEL_NOTICE_HUBLINK:
                             return (0, r.jsx)(h.Z, {
                                 guild: n,
-                                markAsDismissed: l
+                                markAsDismissed: l,
                             });
                         case a.z.CHANNEL_NOTICE_INVITE:
                             return (0, r.jsx)(E.Z, {
                                 guild: n,
-                                markAsDismissed: l
+                                markAsDismissed: l,
                             });
                         case a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
                             return (0, r.jsx)(d.Z, {
                                 guild: n,
-                                markAsDismissed: l
+                                markAsDismissed: l,
                             });
                         case a.z.CHANNEL_NOTICE_QUICKSWITCHER:
                             return (0, r.jsx)(v.Z, {
                                 guild: n,
-                                markAsDismissed: l
+                                markAsDismissed: l,
                             });
                         case a.z.CHANNEL_NOTICE_GUILD_BANNER:
                             return (0, r.jsx)(u.Z, {
                                 guild: n,
-                                markAsDismissed: l
+                                markAsDismissed: l,
                             });
                         case a.z.LINKED_ROLE_ADMIN_GUILD:
                             return (0, r.jsx)(s.Z, {
                                 guild: n,
-                                markAsDismissed: () => i(S.L.UNKNOWN)
+                                markAsDismissed: () => i(S.L.UNKNOWN),
                             });
                         default:
                             return null;
@@ -88,11 +88,11 @@ function P(e) {
                 })();
             return null == o
                 ? null
-                : (0, r.jsx)('div', {
+                : (0, r.jsx)("div", {
                       onContextMenu: T,
-                      children: o
+                      children: o,
                   });
-        }
+        },
     });
 }
 let j = (e) => {

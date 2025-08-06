@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(626135),
@@ -20,15 +20,15 @@ function x(e) {
         p = r.useCallback(
             (e) => {
                 let i = (0, l._o)();
-                (e ? i.delete(n) : i.add(n),
+                e ? i.delete(n) : i.add(n),
                     o.SE.updateSetting([...i]),
                     s.default.track(f.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: m.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
                         ingress: t,
-                        guild_id: n
-                    }));
+                        guild_id: n,
+                    });
             },
-            [t, n]
+            [t, n],
         );
     return n === h.T
         ? null
@@ -38,8 +38,10 @@ function x(e) {
                   title: b.intl.string(b.t.IQO6Bg),
                   value: !c,
                   onChange: p,
-                  note: b.intl.format(b.t.v03Xpq, { helpdeskArticle: a.Z.getArticleURL(f.BhN.ACTIVITY_STATUS_SETTINGS) })
-              })
+                  note: b.intl.format(b.t.v03Xpq, {
+                      helpdeskArticle: a.Z.getArticleURL(f.BhN.ACTIVITY_STATUS_SETTINGS),
+                  }),
+              }),
           });
 }
 function _(e) {
@@ -47,6 +49,6 @@ function _(e) {
         r = (0, c.is)();
     return (0, i.jsx)(x, {
         ingress: t,
-        guildId: null != n ? n : r
+        guildId: null != n ? n : r,
     });
 }

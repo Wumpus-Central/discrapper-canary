@@ -32,24 +32,24 @@ function _(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         var r;
-                        ((r = n[t]),
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = r));
-                    }));
+                                : (e[t] = r);
+                    });
             }
             return e;
         })({}, e)),
@@ -57,44 +57,44 @@ function _(e) {
             {
                 size: c.CgR.DYNAMIC,
                 className: h.root,
-                parentComponent: 'InteractionIframeModal',
-                'data-migration-pending': !0,
-                children: (0, r.jsxs)('div', {
+                parentComponent: "InteractionIframeModal",
+                "data-migration-pending": !0,
+                children: (0, r.jsxs)("div", {
                     style: { width: A },
                     children: [
                         (0, r.jsxs)(c.xBx, {
                             separator: !1,
                             className: h.modalHeader,
-                            'data-migration-pending': !0,
+                            "data-migration-pending": !0,
                             children: [
                                 (0, r.jsx)(c.qEK, {
                                     src: v,
                                     size: c.EFr.SIZE_32,
-                                    'aria-label': y,
-                                    className: h.applicationIcon
+                                    "aria-label": y,
+                                    className: h.applicationIcon,
                                 }),
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: h.flexRow,
                                     children: [
-                                        (0, r.jsxs)('div', {
+                                        (0, r.jsxs)("div", {
                                             children: [
                                                 (0, r.jsx)(c.X6q, {
-                                                    variant: 'heading-sm/bold',
-                                                    children: y
+                                                    variant: "heading-sm/bold",
+                                                    children: y,
                                                 }),
                                                 (0, r.jsx)(c.Text, {
-                                                    variant: 'text-xs/medium',
-                                                    color: 'interactive-normal',
-                                                    children: p
-                                                })
-                                            ]
+                                                    variant: "text-xs/medium",
+                                                    color: "interactive-normal",
+                                                    children: p,
+                                                }),
+                                            ],
                                         }),
                                         (0, r.jsx)(l.Z, {
                                             type: b.Hb.BOT,
                                             className: h.botTag,
-                                            verified: null == (t = e.application.bot) ? void 0 : t.verified
-                                        })
-                                    ]
+                                            verified: null == (t = e.application.bot) ? void 0 : t.verified,
+                                        }),
+                                    ],
                                 }),
                                 (0, r.jsx)(i.zx, {
                                     onClick: _,
@@ -102,15 +102,15 @@ function _(e) {
                                     className: h.closeButtonContainer,
                                     look: i.zx.Looks.BLANK,
                                     size: i.zx.Sizes.NONE,
-                                    'aria-label': O.intl.string(O.t.WAI6xs),
-                                    'data-migration-pending': !0,
+                                    "aria-label": O.intl.string(O.t.WAI6xs),
+                                    "data-migration-pending": !0,
                                     children: (0, r.jsx)(c.Dio, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: h.closeIcon
-                                    })
-                                })
-                            ]
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: h.closeIcon,
+                                    }),
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(u.Z, {
                             aspectRatio: 16 / 9,
@@ -118,11 +118,11 @@ function _(e) {
                                 url: I,
                                 shouldRefocus: !0,
                                 className: h.iframe,
-                                queryParams: x
-                            })
-                        })
-                    ]
-                })
+                                queryParams: x,
+                            }),
+                        }),
+                    ],
+                }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
@@ -136,6 +136,6 @@ function _(e) {
               })(Object(o)).forEach(function (e) {
                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
               }),
-        n)
+        n),
     );
 }

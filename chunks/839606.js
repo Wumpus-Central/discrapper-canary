@@ -1,11 +1,11 @@
 n.d(t, {
     B: () => a,
-    j: () => o
+    j: () => o,
 });
 var r = n(97519),
     i = n(731965),
     o = (function (e) {
-        return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.COACHMARK = 1)] = 'COACHMARK'), e);
+        return (e[(e.DEFAULT = 0)] = "DEFAULT"), (e[(e.COACHMARK = 1)] = "COACHMARK"), e;
     })({});
 let a = (0, r.U)((e) => ({
     activePickerChannelId: void 0,
@@ -19,7 +19,7 @@ let a = (0, r.U)((e) => ({
         (0, i.j)(() => {
             e({
                 activePickerChannelId: void 0,
-                previewWallpaperId: void 0
+                previewWallpaperId: void 0,
             });
         }),
     setPreviewWallpaperId: (t) =>
@@ -29,5 +29,5 @@ let a = (0, r.U)((e) => ({
     setLastShownChatWallpaperPickerType: (t) =>
         (0, i.j)(() => {
             e({ lastShownChatWallpaperPickerType: t });
-        })
+        }),
 }));

@@ -10,19 +10,19 @@ function c(e) {
     let { application: n, loading: c } = (0, i.Z)(e, s.wW.GUILD_ROLE_SUBSCRIPTIONS),
         { payoutsByPeriod: d, loading: u } = (0, a.Z)(null == n ? void 0 : n.id, {
             groupType: o.uw.GUILD_PRODUCT,
-            teamId: null == n || null == (t = n.team) ? void 0 : t.id
+            teamId: null == n || null == (t = n.team) ? void 0 : t.id,
         }),
         {
             currentPeriod: m,
             previousPeriods: g,
-            metrics: p
+            metrics: p,
         } = r.useMemo(() => {
             let { currentPeriod: e, previousPeriods: t } = (0, l.Br)(d),
                 n = (0, l.Uj)(e, t[0]);
             return {
                 currentPeriod: e,
                 previousPeriods: t,
-                metrics: n
+                metrics: n,
             };
         }, [d]);
     return {
@@ -31,6 +31,6 @@ function c(e) {
         currentPeriod: m,
         previousPeriods: g,
         metrics: p,
-        application: n
+        application: n,
     };
 }

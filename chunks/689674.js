@@ -11,21 +11,24 @@ let d = 0;
 function f(e) {
     var t, n;
     let { message: f, channel: _, enabled: p = !0 } = e,
-        h = (0, o.e7)(
-            [s.Z],
-            () => {
-                var e;
-                let t = s.Z.getGuild(_.guild_id);
-                return null != (e = null == t ? void 0 : t.features.has(u.oNc.COMMUNITY)) && e;
-            },
-            [_.guild_id]
-        ),
-        m = (null == (t = f.messageReference) ? void 0 : t.guild_id) != null && null != f.webhookId && f.hasFlag(u.iLy.IS_CROSSPOST) && null != _.guild_id,
+        h = (0, o.e7)([s.Z], () => {
+            var e;
+            let t = s.Z.getGuild(_.guild_id);
+            return null != (e = null == t ? void 0 : t.features.has(u.oNc.COMMUNITY)) && e;
+        }, [_.guild_id]),
+        m =
+            (null == (t = f.messageReference) ? void 0 : t.guild_id) != null &&
+            null != f.webhookId &&
+            f.hasFlag(u.iLy.IS_CROSSPOST) &&
+            null != _.guild_id,
         g = _.type === i.d.GUILD_ANNOUNCEMENT && h,
         E = !f.hasFlag(u.iLy.EPHEMERAL) && (m || g),
         b = m && null != f.messageReference ? f.messageReference.message_id : f.id,
         y = m && null != f.messageReference ? f.messageReference.channel_id : _.id,
-        O = m && (null == (n = f.messageReference) ? void 0 : n.guild_id) != null ? f.messageReference.guild_id : _.guild_id,
+        O =
+            m && (null == (n = f.messageReference) ? void 0 : n.guild_id) != null
+                ? f.messageReference.guild_id
+                : _.guild_id,
         v = r.useCallback(
             (e) => {
                 e
@@ -34,18 +37,18 @@ function f(e) {
                           channelId: _.id,
                           guildId: _.guild_id,
                           sourceChannelId: y,
-                          sourceGuildId: O
+                          sourceGuildId: O,
                       })
                     : c.Z.handleMessageLostVisibility(b);
             },
-            [b, _.id, _.guild_id, y, O]
+            [b, _.id, _.guild_id, y, O],
         ),
         I = l.Z.useExperiment(
-            { location: '836a4b_1' },
+            { location: "836a4b_1" },
             {
                 disable: !E || !p,
-                autoTrackExposure: !0
-            }
+                autoTrackExposure: !0,
+            },
         ).enabled,
         T = (0, a.O)(v, d, I);
     return (
@@ -53,7 +56,7 @@ function f(e) {
             () => () => {
                 c.Z.handleMessageLostVisibility(b);
             },
-            [b]
+            [b],
         ),
         T
     );

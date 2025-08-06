@@ -9,11 +9,11 @@ var i = n(442837),
 function c() {
     let e = (0, i.e7)([o.Z], () => o.Z.enabled, []);
     return (0, r.jsx)(l.S89, {
-        id: 'streamer-mode-toggle',
+        id: "streamer-mode-toggle",
         label: s.intl.string(s.t.p9ZAJS),
         action: () => {
             a.Z.setEnabled(!e);
         },
-        checked: e
+        checked: e,
     });
 }

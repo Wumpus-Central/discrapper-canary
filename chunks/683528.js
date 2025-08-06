@@ -13,15 +13,15 @@ var r = n(255367),
     p = n(581327);
 let h = 40;
 function m(e) {
-    return 'media-view-scroll-thumbnail-'.concat(e);
+    return "media-view-scroll-thumbnail-".concat(e);
 }
 function g(e) {
-    return 'IMAGE' === e.type
+    return "IMAGE" === e.type
         ? (0, u.q)({
               proxyURL: e.proxyUrl,
-              url: e.url
+              url: e.url,
           })
-        : 'VIDEO' === e.type && null != e.proxyUrl
+        : "VIDEO" === e.type && null != e.proxyUrl
           ? (0, d.Dt)(e.proxyUrl)
           : null;
 }
@@ -42,7 +42,7 @@ function E(e) {
               shouldRenderAccessory: !1,
               srcIsAnimated: i.srcIsAnimated,
               alt: i.alt,
-              mediaLayoutType: f.hV.MOSAIC
+              mediaLayoutType: f.hV.MOSAIC,
           });
 }
 let b = i.memo(E);
@@ -57,19 +57,19 @@ function y(e) {
                 u.current.scrollIntoViewNode({
                     node: e,
                     animate: !l.Z.useReducedMotion,
-                    padding: h / 2
+                    padding: h / 2,
                 });
         }, [n]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: a()(p.galleryContainer, c),
             children: (0, r.jsx)(s.h21, {
-                orientation: 'horizontal',
+                orientation: "horizontal",
                 className: a()(p.gallery, c),
                 ref: u,
                 onClick: (e) => e.stopPropagation(),
                 children: t.map((e, i) => {
                     let l = i === n,
-                        c = l ? _.t['qv/U5e'] : _.t.zviMAA;
+                        c = l ? _.t["qv/U5e"] : _.t.zviMAA;
                     return (0, r.jsx)(
                         s.P3F,
                         {
@@ -77,19 +77,19 @@ function y(e) {
                             className: a()(p.galleryItem, {
                                 [p.inactive]: !l,
                                 [p.first]: 0 === i,
-                                [p.last]: i === t.length - 1
+                                [p.last]: i === t.length - 1,
                             }),
-                            'aria-label': _.intl.formatToPlainString(c, {
+                            "aria-label": _.intl.formatToPlainString(c, {
                                 pageNumber: i + 1,
-                                totalPages: t.length
+                                totalPages: t.length,
                             }),
                             onClick: () => o(i),
-                            children: (0, r.jsx)(b, { item: e })
+                            children: (0, r.jsx)(b, { item: e }),
                         },
-                        i
+                        i,
                     );
-                })
-            })
+                }),
+            }),
         })
     );
 }

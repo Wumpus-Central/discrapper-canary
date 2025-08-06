@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685), n(781311));
+n.d(t, { Z: () => g }), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -21,49 +21,69 @@ function h(e) {
                 if (t) return;
                 let _ = null != i ? i : r;
                 n(!0);
-                let h = null != (u = null != o ? o : null == (c = (0, f.getAvailableLocales)().find((e) => e.value === _)) ? void 0 : c.name) ? u : _;
-                (p.has(e.id) || p.set(e.id, e.content), (0, s.showToast)((0, s.createToast)(f.intl.formatToPlainString(f.t.Znl8Z2, { targetLanguage: h }), s.ToastType.AI)));
+                let h =
+                    null !=
+                    (u =
+                        null != o
+                            ? o
+                            : null == (c = (0, f.getAvailableLocales)().find((e) => e.value === _))
+                              ? void 0
+                              : c.name)
+                        ? u
+                        : _;
+                p.has(e.id) || p.set(e.id, e.content),
+                    (0, s.showToast)(
+                        (0, s.createToast)(
+                            f.intl.formatToPlainString(f.t.Znl8Z2, { targetLanguage: h }),
+                            s.ToastType.AI,
+                        ),
+                    );
                 try {
                     let t = await a.tn.post({
                         url: d.ANM.AI_TRANSLATE,
                         body: {
                             content: e.content,
-                            locale: _
+                            locale: _,
                         },
-                        rejectWithError: !1
+                        rejectWithError: !1,
                     });
                     t.ok &&
                         t.body &&
                         (l.Z.dispatch({
-                            type: 'MESSAGE_UPDATE',
+                            type: "MESSAGE_UPDATE",
                             message: {
                                 id: e.id,
                                 channel_id: e.channel_id,
-                                content: t.body.content
-                            }
+                                content: t.body.content,
+                            },
                         }),
-                        (0, s.showToast)((0, s.createToast)(f.intl.formatToPlainString(f.t.FtVUqq, { targetLanguage: h }), s.ToastType.SUCCESS)));
+                        (0, s.showToast)(
+                            (0, s.createToast)(
+                                f.intl.formatToPlainString(f.t.FtVUqq, { targetLanguage: h }),
+                                s.ToastType.SUCCESS,
+                            ),
+                        ));
                 } finally {
                     n(!1);
                 }
             },
-            [e, t, r]
+            [e, t, r],
         ),
         handleRevertTranslation: i.useCallback(() => {
             let t = p.get(e.id);
             null != t &&
                 (l.Z.dispatch({
-                    type: 'MESSAGE_UPDATE',
+                    type: "MESSAGE_UPDATE",
                     message: {
                         id: e.id,
                         channel_id: e.channel_id,
-                        content: t
-                    }
+                        content: t,
+                    },
                 }),
                 p.delete(e.id));
         }, [e.id, e.channel_id]),
         isTranslating: t,
-        isTranslated: p.has(e.id)
+        isTranslated: p.has(e.id),
     };
 }
 function m(e, t) {
@@ -73,49 +93,49 @@ function m(e, t) {
             o.map((i) => {
                 let o;
                 try {
-                    o = n(621287)('./'.concat(i.value, '.png'));
+                    o = n(621287)("./".concat(i.value, ".png"));
                 } catch (e) {
                     o = n(1474);
                 }
                 return (0, r.jsx)(
                     s.sNh,
                     {
-                        id: 'translate-'.concat(i.value),
+                        id: "translate-".concat(i.value),
                         label: i.name,
                         icon: () =>
-                            (0, r.jsx)('img', {
-                                alt: '',
+                            (0, r.jsx)("img", {
+                                alt: "",
                                 src: o,
-                                className: _.flagIcon
+                                className: _.flagIcon,
                             }),
                         action: () => e(i.value, i.name),
-                        disabled: t
+                        disabled: t,
                     },
-                    i.value
+                    i.value,
                 );
             }),
-        [e, t, o]
+        [e, t, o],
     );
 }
 function g(e, t) {
-    let n = c.C.useExperiment({ location: 'MessageContextMenu' }),
+    let n = c.C.useExperiment({ location: "MessageContextMenu" }),
         { handleTranslate: i, handleRevertTranslation: o, isTranslating: a, isTranslated: l } = h(e),
         u = m(i, a);
-    return null != e.content && '' !== e.content.trim() && (null == n ? void 0 : n.enableAIFeatures)
+    return null != e.content && "" !== e.content.trim() && (null == n ? void 0 : n.enableAIFeatures)
         ? l
             ? (0, r.jsx)(s.sNh, {
-                  id: 'revert-translation',
+                  id: "revert-translation",
                   label: f.intl.string(f.t.JC9BXl),
                   icon: s.os0,
                   action: o,
-                  disabled: a
+                  disabled: a,
               })
             : (0, r.jsx)(s.sNh, {
-                  id: 'translate',
-                  label: a ? f.intl.string(f.t.SVKIdX) : f.intl.string(f.t['6epDlZ']),
+                  id: "translate",
+                  label: a ? f.intl.string(f.t.SVKIdX) : f.intl.string(f.t["6epDlZ"]),
                   action: () => i(),
                   disabled: a,
-                  children: u
+                  children: u,
               })
         : null;
 }

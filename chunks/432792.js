@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     M: () => S,
     M4: () => I,
     WS: () => P,
-    t4: () => j
+    t4: () => j,
 }),
     n(388685),
-    n(953529));
+    n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -26,38 +26,40 @@ var r = n(255367),
     y = n(973792),
     C = n(447489),
     v = n(484885);
-let j = () => (0, g.Lk)(document.body.style.getPropertyValue('--custom-app-panels-height'), 56) + 8,
+let j = () => (0, g.Lk)(document.body.style.getPropertyValue("--custom-app-panels-height"), 56) + 8,
     E = {
         discover: o.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
-        shop: o.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK
+        shop: o.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK,
     },
     S = (e) => {
         let { onboardingCoachmarkType: t, prevCoachmarksDismissed: n = !0, onShowCoachmarkHandler: r } = e,
             l = (0, h.Nj)(o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
-            { enabled: s } = (0, m.WX)({ location: 'virtual_currency_onboarding_coachmark' }),
+            { enabled: s } = (0, m.WX)({ location: "virtual_currency_onboarding_coachmark" }),
             a = E[t],
             c = (0, h.Nj)(a),
             u = s && l && n && !c,
             d = i.useCallback(
                 function () {
-                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'CLOSE';
+                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "CLOSE";
                     c ||
                         (0, h.Q3)(E[t], {
                             forceTrack: !0,
-                            dismissAction: 'CTA_CLICK' === e ? _.L.TAKE_ACTION : _.L.USER_DISMISS,
-                            groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING
+                            dismissAction: "CTA_CLICK" === e ? _.L.TAKE_ACTION : _.L.USER_DISMISS,
+                            groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING,
                         });
                 },
-                [c, t]
+                [c, t],
             ),
             [f, g] = i.useState(!1);
         return (
             i.useEffect(() => {
-                u ? f || ((0, p.kk)(a, { groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING }), void 0 !== r && r(), g(!0)) : f && g(!1);
+                u
+                    ? f || ((0, p.kk)(a, { groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING }), void 0 !== r && r(), g(!0))
+                    : f && g(!1);
             }, [u, r, f, a]),
             {
                 shouldShow: f,
-                closeCoachmarkIfOpen: d
+                closeCoachmarkIfOpen: d,
             }
         );
     },
@@ -67,30 +69,39 @@ let j = () => (0, g.Lk)(document.body.style.getPropertyValue('--custom-app-panel
             i = void 0 !== t ? t.animated : v.Z,
             o = void 0 !== t ? t.static : C.Z;
         return n || null == i
-            ? (0, r.jsx)('img', {
+            ? (0, r.jsx)("img", {
                   src: o,
                   className: y.orbAsset,
-                  alt: 'Orb'
+                  alt: "Orb",
               })
             : (0, r.jsxs)(d.Z, {
                   autoPlay: !0,
                   loop: !0,
                   className: y.orbAsset,
                   children: [
-                      (0, r.jsx)('source', {
+                      (0, r.jsx)("source", {
                           src: v.Z,
-                          type: 'video/webm'
+                          type: "video/webm",
                       }),
-                      (0, r.jsx)('img', {
+                      (0, r.jsx)("img", {
                           src: C.Z,
                           className: y.orbAsset,
-                          alt: 'Orb'
-                      })
-                  ]
+                          alt: "Orb",
+                      }),
+                  ],
               });
     },
     I = (e) => {
-        let { titleText: t, descriptionText: n, ctaText: i, onCtaClick: l, onClose: c, customIconSrcs: u, position: d = 'right', align: h = 'bottom' } = e;
+        let {
+            titleText: t,
+            descriptionText: n,
+            ctaText: i,
+            onCtaClick: l,
+            onClose: c,
+            customIconSrcs: u,
+            position: d = "right",
+            align: h = "bottom",
+        } = e;
         return (0, r.jsx)(f.Z, {
             dismissibleContent: o.z.COLLECTIBLES_NAMEPLATE_SHOP_COACHMARK,
             inlineArt: !0,
@@ -98,13 +109,13 @@ let j = () => (0, g.Lk)(document.body.style.getPropertyValue('--custom-app-panel
             onTryFeature: l,
             header: (0, r.jsx)(a.X6q, {
                 className: y.title,
-                variant: 'heading-md/bold',
-                children: t
+                variant: "heading-md/bold",
+                children: t,
             }),
             body: (0, r.jsx)(a.Text, {
-                variant: 'text-sm/medium',
+                variant: "text-sm/medium",
                 className: y.description,
-                children: n
+                children: n,
             }),
             position: d,
             align: h,
@@ -114,12 +125,23 @@ let j = () => (0, g.Lk)(document.body.style.getPropertyValue('--custom-app-panel
             contentClassName: y.container,
             pointerClassName: y.coachmarkPointer,
             tryItButtonColor: s.zx.Colors.BRAND,
-            art: (0, r.jsx)(x, { customIconSrcs: u })
+            art: (0, r.jsx)(x, { customIconSrcs: u }),
         });
     };
 function P(e) {
-    let { calculateVisibility: t, children: n, popoutElement: l, positionControlRef: o, targetElementRef: s, defaultCoachmarkAlign: u, disableAutoInvert: d, onGetTargetElementDimensions: h, spacing: p, position: f = 'right' } = e,
-        [g, m] = i.useState('bottom' === u),
+    let {
+            calculateVisibility: t,
+            children: n,
+            popoutElement: l,
+            positionControlRef: o,
+            targetElementRef: s,
+            defaultCoachmarkAlign: u,
+            disableAutoInvert: d,
+            onGetTargetElementDimensions: h,
+            spacing: p,
+            position: f = "right",
+        } = e,
+        [g, m] = i.useState("bottom" === u),
         [O, _] = i.useState(!0),
         [y, C] = i.useState(String(Date.now())),
         v = (0, c.Z)(),
@@ -128,7 +150,7 @@ function P(e) {
                 let n = t(e);
                 n !== O && _(n);
             },
-            [O, t]
+            [O, t],
         ),
         E = s.current,
         S = i.useCallback(() => {
@@ -136,12 +158,12 @@ function P(e) {
         }, [o]);
     i.useEffect(
         () => (
-            null != E && E.ownerDocument.addEventListener('scroll', S, !0),
+            null != E && E.ownerDocument.addEventListener("scroll", S, !0),
             () => {
-                null != E && E.ownerDocument.removeEventListener('scroll', S, !0);
+                null != E && E.ownerDocument.removeEventListener("scroll", S, !0);
             }
         ),
-        [E, S]
+        [E, S],
     );
     let x = i.useCallback(
         (e) => {
@@ -150,25 +172,25 @@ function P(e) {
                 (null != h &&
                     h({
                         height: t,
-                        width: n
+                        width: n,
                     }),
                 null != r)
             ) {
                 if ((j(r), i && C(String(Date.now())), d)) return;
                 let e = r.top < window.innerHeight / 2;
                 if (e === g) return;
-                (m(e), C(String(Date.now())));
+                m(e), C(String(Date.now()));
             }
         },
-        [g, j, h, d]
+        [g, j, h, d],
     );
     (0, b.fu)({
         onGetElementDimensionsAndBoundingRect: x,
         positionControlRef: o,
         shouldPollPositionOnMount: !0,
-        targetElementRef: s
+        targetElementRef: s,
     });
-    let I = i.useMemo(() => (d ? (null != u ? u : 'bottom') : g ? 'top' : 'bottom'), [d, u, g]),
+    let I = i.useMemo(() => (d ? (null != u ? u : "bottom") : g ? "top" : "bottom"), [d, u, g]),
         P = O && !v,
         N = i.Children.map(l, (e) => i.cloneElement(e, { align: I }));
     return (0, r.jsx)(a.yRy, {
@@ -182,6 +204,6 @@ function P(e) {
         positionKey: y,
         animation: a.yRy.Animation.TRANSLATE,
         targetElementRef: s,
-        children: () => n
+        children: () => n,
     });
 }

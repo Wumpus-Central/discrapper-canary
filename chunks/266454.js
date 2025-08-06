@@ -3,7 +3,7 @@ n.d(t, {
     Ob: () => _,
     Q3: () => f,
     wE: () => p,
-    zu: () => u
+    zu: () => u,
 });
 var r = n(442837),
     i = n(675478),
@@ -31,15 +31,18 @@ function _(e, t) {
     if ((0, c.Bh)(e))
         return {
             isDismissed: !0,
-            lastDismissedSnowflakeId: null
+            lastDismissedSnowflakeId: null,
         };
-    let i = null == (r = o.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates[e]) ? void 0 : n.lastDismissedObjectId;
+    let i =
+        null == (r = o.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates[e])
+            ? void 0
+            : n.lastDismissedObjectId;
     return {
         isDismissed: null != i && 1 !== a.default.compare(t, i),
-        lastDismissedSnowflakeId: i
+        lastDismissedSnowflakeId: i,
     };
 }
 async function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    ((0, l.u9)(e, n), await (0, l.XM)(e, t), (0, l.ME)(e, n));
+    (0, l.u9)(e, n), await (0, l.XM)(e, t), (0, l.ME)(e, n);
 }

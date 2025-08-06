@@ -28,24 +28,24 @@ var r = n(255367),
 function R(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(u.P3F, {
-        'aria-label': N.intl.string(N.t.WAI6xs),
+        "aria-label": N.intl.string(N.t.WAI6xs),
         onClick: t,
         className: C.upsellCloseIconWrapper,
         children: (0, r.jsx)(u.Dio, {
-            size: 'xs',
+            size: "xs",
             className: C.upsellCloseIcon,
-            color: 'currentColor'
-        })
+            color: "currentColor",
+        }),
     });
 }
 function P(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
         { analyticsLocations: o, newestAnalyticsLocation: a } = (0, d.ZP)(),
         { trackUserProfileAction: s } = (0, y.KZ)();
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: C.upsellButtons,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: C.upsellButtonWrapper,
                 children: n
                     ? (0, r.jsxs)(u.gtL, {
@@ -57,19 +57,21 @@ function P(e) {
                           innerClassName: C.viewPremiumPerksButtonInner,
                           buttonShineClassName: C.viewPremiumPerksButtonShine,
                           onClick: () => {
-                              (s({ action: I.yM.VIEW_PREMIUM_PERKS }), (0, E.uL)(T.Z5c.APPLICATION_STORE), null == i || i());
+                              s({ action: I.yM.VIEW_PREMIUM_PERKS }),
+                                  (0, E.uL)(T.Z5c.APPLICATION_STORE),
+                                  null == i || i();
                           },
                           children: [
                               (0, r.jsx)(u.SrA, {
-                                  size: 'xs',
-                                  color: 'currentColor'
+                                  size: "xs",
+                                  color: "currentColor",
                               }),
-                              N.intl.string(N.t['0Q61kJ'])
-                          ]
+                              N.intl.string(N.t["0Q61kJ"]),
+                          ],
                       })
                     : (0, r.jsx)(g.Z, {
                           onClick: () => {
-                              (s({ action: I.yM.GET_PREMIUM }), null == i || i());
+                              s({ action: I.yM.GET_PREMIUM }), null == i || i();
                           },
                           textOptions: { textOverride: N.intl.string(N.t.x6rkDg) },
                           subscriptionTier: A.Si.TIER_2,
@@ -78,10 +80,10 @@ function P(e) {
                           size: t ? c.zx.Sizes.TINY : c.zx.Sizes.SMALL,
                           look: c.zx.Looks.FILLED,
                           color: c.zx.Colors.PRIMARY,
-                          onlyShineOnHover: !0
-                      })
+                          onlyShineOnHover: !0,
+                      }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: C.upsellButtonWrapper,
                 children: (0, r.jsx)(v.tG, {
                     icon: u.EOn,
@@ -89,20 +91,20 @@ function P(e) {
                     text: N.intl.string(N.t.b2d0Nz),
                     look: c.zx.Looks.FILLED,
                     color: c.zx.Colors.PRIMARY,
-                    themeColor: 'none',
+                    themeColor: "none",
                     size: t ? c.zx.Sizes.TINY : c.zx.Sizes.SMALL,
                     className: C.upsellButton,
                     onClick: () => {
-                        ((0, f.mK)({
+                        (0, f.mK)({
                             analyticsLocations: o,
                             openInLayer: !1,
-                            analyticsSource: a
+                            analyticsSource: a,
                         }),
-                            null == i || i());
-                    }
-                })
-            })
-        ]
+                            null == i || i();
+                    },
+                }),
+            }),
+        ],
     });
 }
 function w(e) {
@@ -126,51 +128,51 @@ function w(e) {
     )
         return null;
     let y = (0, r.jsx)(u.X6q, {
-            variant: 'text-sm/normal',
+            variant: "text-sm/normal",
             id: c,
-            children: N.intl.string(N.t.EIYbj4)
+            children: N.intl.string(N.t.EIYbj4),
         }),
         v = (0, r.jsx)(R, {
             onClose: () => {
                 (0, h.Q3)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS, {
                     dismissAction: S.L.USER_DISMISS,
                     guildId: E,
-                    forceTrack: !0
+                    forceTrack: !0,
                 });
-            }
+            },
         }),
         T = (0, r.jsx)(P, {
             isPremiumUser: t,
             onInteraction: n,
-            tiny: f
+            tiny: f,
         });
     return f
-        ? (0, r.jsx)('aside', {
+        ? (0, r.jsx)("aside", {
               className: a()(C.upsellContainer, o),
-              'aria-labelledby': c,
-              children: (0, r.jsxs)('div', {
+              "aria-labelledby": c,
+              children: (0, r.jsxs)("div", {
                   className: a()(C.upsellContent, C.upsellRowContent),
                   children: [
                       y,
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: C.upsellRowRight,
-                          children: [(0, r.jsx)('div', { children: T }), (0, r.jsx)('div', { children: v })]
-                      })
-                  ]
-              })
+                          children: [(0, r.jsx)("div", { children: T }), (0, r.jsx)("div", { children: v })],
+                      }),
+                  ],
+              }),
           })
-        : (0, r.jsx)('aside', {
+        : (0, r.jsx)("aside", {
               className: a()(C.upsellContainer, o),
-              'aria-labelledby': c,
-              children: (0, r.jsxs)('div', {
+              "aria-labelledby": c,
+              children: (0, r.jsxs)("div", {
                   className: a()(C.upsellContent, C.upsellDefaultContent),
                   children: [
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: C.upsellHeader,
-                          children: [y, (0, r.jsx)('div', { children: v })]
+                          children: [y, (0, r.jsx)("div", { children: v })],
                       }),
-                      T
-                  ]
-              })
+                      T,
+                  ],
+              }),
           });
 }

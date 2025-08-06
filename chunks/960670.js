@@ -1,4 +1,4 @@
-(r.d(t, { default: () => a }), r(388685));
+r.d(t, { default: () => a }), r(388685);
 var n = r(255367),
     o = r(73800),
     c = r(481060),
@@ -18,15 +18,17 @@ function a(e) {
                         n,
                         o = {},
                         c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) ((r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
+                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++) ((r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
+                for (n = 0; n < c.length; n++)
+                    (r = c[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, ['header', 'body', 'onSubmit']);
+        })(e, ["header", "body", "onSubmit"]);
     let [p, f] = o.useState(!1);
     return (0, n.jsxs)(
         c.ConfirmModal,
@@ -34,43 +36,43 @@ function a(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (t) {
                         var n;
-                        ((n = r[t]),
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = n));
-                    }));
+                                : (e[t] = n);
+                    });
             }
             return e;
         })(
             {
                 header: a,
-                confirmText: i.intl.string(i.t['26C4oq']),
-                cancelText: i.intl.string(i.t['ETE/oK']),
+                confirmText: i.intl.string(i.t["26C4oq"]),
+                cancelText: i.intl.string(i.t["ETE/oK"]),
                 onConfirm: () => {
                     b(null, p);
-                }
+                },
             },
-            u
+            u,
         )),
         (r = r =
             {
                 children: [
                     (0, n.jsx)(c.Text, {
-                        variant: 'text-md/normal',
-                        children: s
+                        variant: "text-md/normal",
+                        children: s,
                     }),
                     (0, n.jsx)(c.XZJ, {
                         type: c.XZJ.Types.INVERTED,
@@ -78,11 +80,11 @@ function a(e) {
                         onChange: () => f((e) => !e),
                         className: l.checkbox,
                         children: (0, n.jsx)(c.Text, {
-                            variant: 'text-md/normal',
-                            children: i.intl.string(i.t.bq3JXl)
-                        })
-                    })
-                ]
+                            variant: "text-md/normal",
+                            children: i.intl.string(i.t.bq3JXl),
+                        }),
+                    }),
+                ],
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -96,6 +98,6 @@ function a(e) {
               })(Object(r)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
-        t)
+        t),
     );
 }

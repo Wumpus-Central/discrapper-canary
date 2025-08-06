@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -19,25 +19,27 @@ function b(e) {
         m = (0, d.Z)({
             applicationId: t.id,
             size: 600,
-            names: ['embedded_cover']
+            names: ["embedded_cover"],
         }),
         h = a.useMemo(() => {
             let e = (0, u.yJ)(t);
-            return null != e && null != e.activity_preview_video_asset_id ? (0, c.Z)(t.id, e.activity_preview_video_asset_id) : null;
+            return null != e && null != e.activity_preview_video_asset_id
+                ? (0, c.Z)(t.id, e.activity_preview_video_asset_id)
+                : null;
         }, [t]),
         { imageUrl: f, imageUrlAnimated: _ } = a.useMemo(
             () =>
-                'fetched' === m.state && null != m.url
+                "fetched" === m.state && null != m.url
                     ? { imageUrl: m.url }
                     : {
                           imageUrl: i,
-                          imageUrlAnimated: s
+                          imageUrlAnimated: s,
                       },
-            [m.state, m.url, i, s]
+            [m.state, m.url, i, s],
         ),
         b = null != f,
         j = null != h;
-    return 'loading' === m.state
+    return "loading" === m.state
         ? null
         : j
           ? (0, r.jsxs)(r.Fragment, {
@@ -46,25 +48,25 @@ function b(e) {
                         ? (0, r.jsx)(x, {
                               isHovered: n,
                               url: f,
-                              animatedUrl: void 0
+                              animatedUrl: void 0,
                           })
                         : (0, r.jsx)(p.Z, {
                               src: h,
                               className: l()(g.bannerImage, g.bannerContent),
-                              muted: !0
+                              muted: !0,
                           }),
                     (0, r.jsx)(v, {
                         isHovered: n,
                         url: h,
-                        isVideo: !0
-                    })
-                ]
+                        isVideo: !0,
+                    }),
+                ],
             })
           : b
             ? (0, r.jsx)(x, {
                   isHovered: n,
                   url: f,
-                  animatedUrl: _
+                  animatedUrl: _,
               })
             : (0, r.jsx)(C, { iconURL: o });
 }
@@ -73,20 +75,20 @@ function x(e) {
         [s, o] = a.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 src: n,
-                alt: '',
+                alt: "",
                 className: l()(g.bannerImage, g.bannerContent, { [g.loaded]: s }),
-                onLoad: () => o(!0)
+                onLoad: () => o(!0),
             }),
             null != i
                 ? (0, r.jsx)(v, {
                       isHovered: t,
                       url: i,
-                      isVideo: !1
+                      isVideo: !1,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 function v(e) {
@@ -97,10 +99,10 @@ function v(e) {
         t && d(!0);
     }, [t]),
     c)
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: l()(g.bannerAnimatedContainer, {
                   [g.videoFadeOut]: !t,
-                  [g.videoFadeIn]: t && s
+                  [g.videoFadeIn]: t && s,
               }),
               onAnimationEnd: () => (t ? null : d(!1)),
               children: i
@@ -110,23 +112,23 @@ function v(e) {
                         autoPlay: !0,
                         muted: !0,
                         className: g.bannerContent,
-                        onLoadedData: () => o(!0)
+                        onLoadedData: () => o(!0),
                     })
-                  : (0, r.jsx)('img', {
+                  : (0, r.jsx)("img", {
                         src: n,
-                        alt: '',
+                        alt: "",
                         className: g.bannerContent,
-                        onLoad: () => o(!0)
-                    })
+                        onLoad: () => o(!0),
+                    }),
           })
         : null;
 }
 function C(e) {
     let { iconURL: t } = e,
         { backgroundGradient: n, hasFetchedColors: a } = (0, h.u)(t);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: l()(g.bannerContent, g.bannerGradient, { [g.loaded]: a }),
-        style: { backgroundImage: n }
+        style: { backgroundImage: n },
     });
 }
 let j = function (e) {
@@ -148,7 +150,7 @@ let j = function (e) {
                               id: j.id,
                               banner: j.banner,
                               canAnimate: !1,
-                              size: 600
+                              size: 600,
                           }),
                           botBannerUrlAnimated: l
                               ? void 0
@@ -156,32 +158,32 @@ let j = function (e) {
                                     id: j.id,
                                     banner: j.banner,
                                     canAnimate: !0,
-                                    size: 600
-                                })
+                                    size: 600,
+                                }),
                       },
-            [null == j ? void 0 : j.id, null == j ? void 0 : j.banner, l]
+            [null == j ? void 0 : j.id, null == j ? void 0 : j.banner, l],
         );
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: g.bannerContainer,
-        style: { aspectRatio: 'card' === n ? f : _ },
+        style: { aspectRatio: "card" === n ? f : _ },
         onMouseEnter: p,
         onFocus: p,
         onMouseLeave: h,
         onBlur: h,
         children:
-            'card' === n && v
+            "card" === n && v
                 ? (0, r.jsx)(b, {
                       application: t,
                       isHovered: c,
                       botBannerUrl: null == y ? void 0 : y,
-                      botBannerUrlAnimated: null == I ? void 0 : I
+                      botBannerUrlAnimated: null == I ? void 0 : I,
                   })
                 : null != y
                   ? (0, r.jsx)(x, {
                         isHovered: c,
                         url: y,
-                        animatedUrl: I
+                        animatedUrl: I,
                     })
-                  : (0, r.jsx)(C, { iconURL: i })
+                  : (0, r.jsx)(C, { iconURL: i }),
     });
 };

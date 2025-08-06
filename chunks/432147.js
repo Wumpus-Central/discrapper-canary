@@ -24,7 +24,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -54,13 +54,13 @@ function v(e) {
         : (0, r.jsx)(I, {
               channel: i,
               compact: n,
-              isSystemMessage: (0, c.Z)(t)
+              isSystemMessage: (0, c.Z)(t),
           });
 }
 function I(e) {
     let { channel: t, compact: i, isSystemMessage: c } = e;
     function u(e) {
-        (e.stopPropagation(), (0, m.ok)(t, e.shiftKey));
+        e.stopPropagation(), (0, m.ok)(t, e.shiftKey);
     }
     function d(e) {
         e.stopPropagation();
@@ -70,7 +70,7 @@ function I(e) {
     }
     function p(e) {
         (0, l.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e('46154'), n.e('48334')]).then(n.bind(n, 422200));
+            let { default: e } = await Promise.all([n.e("46154"), n.e("48334")]).then(n.bind(n, 422200));
             return (n) => (0, r.jsx)(e, O({ channel: t }, n));
         });
     }
@@ -79,47 +79,47 @@ function I(e) {
         v = null != h && h > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: o()(b.spine, {
                     [b.cozy]: !i,
-                    [b.systemMessageSpine]: c
-                })
+                    [b.systemMessageSpine]: c,
+                }),
             }),
             (0, r.jsx)(s.P3F, {
                 onClick: u,
                 onKeyDown: d,
                 onContextMenu: p,
-                'aria-roledescription': E.intl.string(E.t['8ipxiY']),
+                "aria-roledescription": E.intl.string(E.t["8ipxiY"]),
                 className: o()(b.container, { [b.systemMessageContainer]: c }),
                 children: (0, r.jsxs)(s.nuw, {
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: b.topLine,
                             children: [
-                                (0, r.jsx)(s.nn4, { children: E.intl.string(E.t['7Xm5QE']) }),
-                                (0, r.jsx)('span', {
+                                (0, r.jsx)(s.nn4, { children: E.intl.string(E.t["7Xm5QE"]) }),
+                                (0, r.jsx)("span", {
                                     className: b.name,
-                                    children: t.name
+                                    children: t.name,
                                 }),
-                                (0, r.jsx)('span', {
+                                (0, r.jsx)("span", {
                                     className: b.cta,
-                                    'aria-hidden': !v,
-                                    children: (0, f.WE)(h, t.id)
-                                })
-                            ]
+                                    "aria-hidden": !v,
+                                    children: (0, f.WE)(h, t.id),
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(s.Text, {
-                            variant: 'text-sm/normal',
-                            'aria-hidden': !0,
+                            variant: "text-sm/normal",
+                            "aria-hidden": !0,
                             lineClamp: 1,
-                            color: 'header-secondary',
+                            color: "header-secondary",
                             className: b.bottomLine,
-                            children: y
-                        })
-                    ]
-                })
-            })
-        ]
+                            children: y,
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }
 function T(e) {
@@ -134,23 +134,23 @@ function T(e) {
           : null == n
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)('span', { children: E.intl.string(E.t.ZTo4HR) }),
-                      (0, r.jsx)('span', {
+                      (0, r.jsx)("span", { children: E.intl.string(E.t.ZTo4HR) }),
+                      (0, r.jsx)("span", {
                           className: b.timestamp,
-                          children: (0, p.Ye)(o)
-                      })
-                  ]
+                          children: (0, p.Ye)(o),
+                      }),
+                  ],
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(h.Z, {
                           message: n,
-                          channel: e
+                          channel: e,
                       }),
-                      (0, r.jsx)('span', {
+                      (0, r.jsx)("span", {
                           className: b.timestamp,
-                          children: (0, p.Ye)(o)
-                      })
-                  ]
+                          children: (0, p.Ye)(o),
+                      }),
+                  ],
               });
 }

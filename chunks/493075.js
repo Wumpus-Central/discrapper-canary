@@ -1,4 +1,4 @@
-(n.d(t, { s: () => d }), n(388685), n(953529));
+n.d(t, { s: () => d }), n(388685), n(953529);
 var r = n(73800),
     i = n(442837),
     o = n(588486),
@@ -18,15 +18,15 @@ function d() {
             for (let [n, r] of Object.entries(e))
                 t[n] = {
                     system: s.I.LEGACY,
-                    kind: r.type === c.xY.USER ? 'user' : 'guild',
+                    kind: r.type === c.xY.USER ? "user" : "guild",
                     name: n,
                     title: r.title,
                     variants: r.buckets.map((e, t) => ({
                         id: e.valueOf(),
-                        label: 'object' == typeof r.description ? r.description[t] : a.Z.getExperimentBucketName(e),
+                        label: "object" == typeof r.description ? r.description[t] : a.Z.getExperimentBucketName(e),
                         shortLabel: a.Z.getExperimentBucketName(e),
-                        type: u(e)
-                    }))
+                        type: u(e),
+                    })),
                 };
             return t;
         }, [e]),
@@ -36,9 +36,9 @@ function d() {
                 e[n] = {
                     experimentId: n,
                     variantId: r.bucket.valueOf(),
-                    originalDescriptor: r
+                    originalDescriptor: r,
                 };
             return e;
-        }, [t])
+        }, [t]),
     };
 }

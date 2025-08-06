@@ -3,7 +3,7 @@ n.d(t, {
     ZP: () => g,
     _6: () => h,
     aV: () => p,
-    z6: () => u
+    z6: () => u,
 });
 var r,
     a = n(255367),
@@ -18,8 +18,8 @@ function u(e) {
     return (0, a.jsx)(o.animated.div, {
         className: d.backdrop,
         style: {
-            opacity: null == t ? void 0 : t.to([0, 100], [0, 1])
-        }
+            opacity: null == t ? void 0 : t.to([0, 100], [0, 1]),
+        },
     });
 }
 function p(e) {
@@ -27,7 +27,7 @@ function p(e) {
     return (0, a.jsx)(t, {
         className: d.icon,
         color: c.TVs.colors.HEADER_PRIMARY,
-        size: 'md'
+        size: "md",
     });
 }
 function m(e) {
@@ -36,17 +36,17 @@ function m(e) {
         className: d.iconButton,
         onClick: t,
         children: (0, a.jsx)(n, {
-            color: 'currentColor',
-            size: 'sm'
-        })
+            color: "currentColor",
+            size: "sm",
+        }),
     });
 }
-var h = (((r = {}).OVERLAY = 'overlay'), (r.RELATIVE = 'relative'), r);
+var h = (((r = {}).OVERLAY = "overlay"), (r.RELATIVE = "relative"), r);
 function g(e) {
     let { className: t, variant: n, children: r } = e,
-        l = i.useMemo(() => ('overlay' === n ? d.overlay : d.relative), [n]);
-    return (0, a.jsx)('div', {
+        l = i.useMemo(() => ("overlay" === n ? d.overlay : d.relative), [n]);
+    return (0, a.jsx)("div", {
         className: s()(d.headerBar, l, t),
-        children: r
+        children: r,
     });
 }

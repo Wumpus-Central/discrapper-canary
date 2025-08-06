@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => em }), n(388685));
+n.d(t, { Z: () => em }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -72,24 +72,28 @@ function eo(e) {
               label: l ? ea.intl.string(ea.t.GCimTk) : o ? ea.intl.string(ea.t.hLbG5O) : ea.intl.string(ea.t.e4WMv7),
               iconComponent: c.V9,
               onClick: () => {
-                  ((0, y.v)(n, y.d.REQUEST_TO_SPEAK, !l), a());
+                  (0, y.v)(n, y.d.REQUEST_TO_SPEAK, !l), a();
               },
-              color: l ? 'green' : void 0,
-              disabled: !o && !l
+              color: l ? "green" : void 0,
+              disabled: !o && !l,
           });
 }
 let ec = i.memo(function (e) {
     let { channel: t } = e,
         n = (0, s.e7)([G.Z], () => G.Z.getVoiceChannelId() === t.id, [t.id]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: es.container,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: es.buttonSection,
-                children: [(0, r.jsx)(ep, { channelId: t.id }), n ? (0, r.jsx)(eo, { channel: t }) : null, (0, r.jsx)(N.Z, { channel: t })]
+                children: [
+                    (0, r.jsx)(ep, { channelId: t.id }),
+                    n ? (0, r.jsx)(eo, { channel: t }) : null,
+                    (0, r.jsx)(N.Z, { channel: t }),
+                ],
             }),
-            (0, r.jsx)(ed, { channel: t })
-        ]
+            (0, r.jsx)(ed, { channel: t }),
+        ],
     });
 });
 function eu(e) {
@@ -98,10 +102,10 @@ function eu(e) {
     return (0, r.jsx)(A.d, {
         isTrayButton: !0,
         onClick: () => {
-            ((0, z.RK)(t, !1), (0, y.v)(n, y.d.SPEAK_ON_STAGE));
+            (0, z.RK)(t, !1), (0, y.v)(n, y.d.SPEAK_ON_STAGE);
         },
         iconComponent: c.Lrb,
-        label: ea.intl.string(ea.t['8Joh+v'])
+        label: ea.intl.string(ea.t["8Joh+v"]),
     });
 }
 function ed(e) {
@@ -125,23 +129,23 @@ function ed(e) {
             color: o.zx.Colors.GREEN,
             className: a()(es.buttonSpacing, es.buttonWithTextButton),
             onClick: () => {
-                ((0, y.v)(I, y.d.JOIN_STAGE), (0, V.TM)(t));
+                (0, y.v)(I, y.d.JOIN_STAGE), (0, V.TM)(t);
             },
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: es.buttonWithTextInnerContainer,
                 children: [
                     (0, r.jsx)(c.Csw, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: es.buttonWithTextIcon
+                        size: "md",
+                        color: "currentColor",
+                        className: es.buttonWithTextIcon,
                     }),
                     (0, r.jsx)(c.Text, {
-                        color: 'none',
-                        variant: 'text-sm/medium',
-                        children: ea.intl.string(ea.t['7vb2cX'])
-                    })
-                ]
-            })
+                        color: "none",
+                        variant: "text-sm/medium",
+                        children: ea.intl.string(ea.t["7vb2cX"]),
+                    }),
+                ],
+            }),
         });
     let N = () =>
         (function (e) {
@@ -150,7 +154,7 @@ function ed(e) {
             u.default.disconnect();
         })({
             channel: t,
-            appContext: l
+            appContext: l,
         });
     return (C || Z) && null != g
         ? (0, r.jsx)(c.yRy, {
@@ -159,23 +163,23 @@ function ed(e) {
                   let { closePopout: i } = e;
                   return (0, r.jsx)(w.Z, {
                       children: (0, r.jsx)(c.v2r, {
-                          navId: 'exit-options',
-                          'aria-label': ea.intl.string(ea.t['3Uj+2t']),
+                          navId: "exit-options",
+                          "aria-label": ea.intl.string(ea.t["3Uj+2t"]),
                           onClose: i,
                           onSelect: n,
-                          onInteraction: (0, x.u)('End Stage', I, { entrypoint: el.A5.CARET }),
+                          onInteraction: (0, x.u)("End Stage", I, { entrypoint: el.A5.CARET }),
                           children: (0, r.jsx)(c.sNh, {
-                              id: 'end-stage',
-                              color: 'danger',
+                              id: "end-stage",
+                              color: "danger",
                               action: () => (0, B.Ev)(t, l),
                               label: ea.intl.string(ea.t.Fmx5y8),
-                              icon: c.k$p
-                          })
-                      })
+                              icon: c.k$p,
+                          }),
+                      }),
                   });
               },
-              align: 'center',
-              position: 'top',
+              align: "center",
+              position: "top",
               spacing: 16,
               animation: c.yRy.Animation.FADE,
               children: (e, t) => {
@@ -186,18 +190,18 @@ function ed(e) {
                       label: ea.intl.string(ea.t.c6qKws),
                       onClick: N,
                       onPopoutClick: n,
-                      popoutOpen: i
+                      popoutOpen: i,
                   });
-              }
+              },
           })
         : (j && !S) || v
           ? (0, r.jsx)(D.Z, {
                 label: ea.intl.string(ea.t.SMKyio),
-                onClick: N
+                onClick: N,
             })
           : (0, r.jsx)(D.Z, {
                 label: ea.intl.string(ea.t.c6qKws),
-                onClick: N
+                onClick: N,
             });
 }
 function eh(e) {
@@ -208,8 +212,8 @@ function eh(e) {
         iconComponent: c.zRq,
         label: ea.intl.string(ea.t.ezLpY2),
         onClick: () => {
-            ((0, y.v)(n, y.d.MOVE_TO_AUDIENCE), (0, z.yi)(t));
-        }
+            (0, y.v)(n, y.d.MOVE_TO_AUDIENCE), (0, z.yi)(t);
+        },
     });
 }
 function ep(e) {
@@ -224,20 +228,20 @@ function ep(e) {
               isActive: !i,
               label: i ? ea.intl.string(ea.t.ScHlfn) : ea.intl.string(ea.t.zqxfra),
               iconComponent: i ? c.xjP : c.RZG,
-              color: i ? void 0 : 'green',
+              color: i ? void 0 : "green",
               onClick: () => {
-                  ((0, y.v)(n, y.d.STAGE_MUSIC, i), (0, X.v)(!i));
-              }
+                  (0, y.v)(n, y.d.STAGE_MUSIC, i), (0, X.v)(!i);
+              },
           })
         : (0, r.jsx)(A.d, {
               isTrayButton: !0,
               isActive: a,
               label: a ? ea.intl.string(ea.t.zqxfra) : ea.intl.string(ea.t.ScHlfn),
               iconComponent: a ? c.RZG : c.xjP,
-              color: a ? 'green' : void 0,
+              color: a ? "green" : void 0,
               onClick: () => {
-                  ((0, y.v)(n, y.d.STAGE_MUSIC, !a), (0, X.z)(!a));
-              }
+                  (0, y.v)(n, y.d.STAGE_MUSIC, !a), (0, X.z)(!a);
+              },
           });
 }
 let ef = i.memo(function (e) {
@@ -256,7 +260,7 @@ let ef = i.memo(function (e) {
         H = (0, Q.PK)(t.id),
         B = v > 0,
         z = (C && !H) || (null != M && M.user.id !== (null == E ? void 0 : E.id)),
-        V = (0, x.u)('AudioDeviceMenu', n, { entrypoint: el.A5.CARET }),
+        V = (0, x.u)("AudioDeviceMenu", n, { entrypoint: el.A5.CARET }),
         Y = i.useRef(null),
         q = i.useRef(null);
     if (null == E) return null;
@@ -268,12 +272,12 @@ let ef = i.memo(function (e) {
                 children: (0, r.jsx)(m.Z, {
                     onClose: t,
                     minimal: !0,
-                    onInteraction: (0, x.u)('VideoDeviceMenu', n, { entrypoint: el.A5.CARET })
-                })
+                    onInteraction: (0, x.u)("VideoDeviceMenu", n, { entrypoint: el.A5.CARET }),
+                }),
             });
         },
-        position: 'top',
-        align: 'right',
+        position: "top",
+        align: "right",
         spacing: 16,
         animation: c.yRy.Animation.FADE,
         children: (e, t) => {
@@ -290,15 +294,15 @@ let ef = i.memo(function (e) {
                 channelLimitReached: C,
                 channelLimit: v,
                 popoutOpen: i,
-                onPopoutClick: n
+                onPopoutClick: n,
             });
-        }
+        },
     });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: es.wrapper,
         children: [
             D && !l
-                ? (0, r.jsxs)('div', {
+                ? (0, r.jsxs)("div", {
                       className: es.buttonSection,
                       children: [
                           (0, r.jsx)(c.yRy, {
@@ -315,12 +319,12 @@ let ef = i.memo(function (e) {
                                           renderOutputVolume: !0,
                                           renderDeafen: !0,
                                           minimal: !0,
-                                          onInteraction: V
-                                      })
+                                          onInteraction: V,
+                                      }),
                                   });
                               },
-                              align: 'right',
-                              position: 'top',
+                              align: "right",
+                              position: "top",
                               spacing: 16,
                               animation: c.yRy.Animation.FADE,
                               children: (e, t) => {
@@ -334,16 +338,16 @@ let ef = i.memo(function (e) {
                                       serverMute: o,
                                       suppress: l,
                                       popoutOpen: i,
-                                      onClick: () => (0, b.Z)(o, l, 'Stage Channel Controls'),
-                                      awaitingRemote: d
+                                      onClick: () => (0, b.Z)(o, l, "Stage Channel Controls"),
+                                      awaitingRemote: d,
                                   });
-                              }
+                              },
                           }),
-                          B && K
-                      ]
+                          B && K,
+                      ],
                   })
                 : null,
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: es.buttonSection,
                 children: [
                     D && !l && B
@@ -353,31 +357,31 @@ let ef = i.memo(function (e) {
                               exitFullScreen: () => null,
                               canGoLive: A,
                               hasPermission: O,
-                              disabled: z
+                              disabled: z,
                           })
                         : null,
                     (0, r.jsx)(ep, { channelId: t.id }),
                     D && (0, r.jsx)(eo, { channel: t }),
                     D && u && l && (0, r.jsx)(eu, { channel: t }),
                     D && !l && (0, r.jsx)(eh, { channel: t }),
-                    (0, r.jsx)(N.Z, { channel: t })
-                ]
+                    (0, r.jsx)(N.Z, { channel: t }),
+                ],
             }),
-            (0, r.jsx)(ed, { channel: t })
-        ]
+            (0, r.jsx)(ed, { channel: t }),
+        ],
     });
 });
 function eg(e) {
     let { channel: t } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: es.wrapper,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: es.buttonSection,
-                children: (0, r.jsx)(ep, { channelId: t.id })
+                children: (0, r.jsx)(ep, { channelId: t.id }),
             }),
-            (0, r.jsx)(ed, { channel: t })
-        ]
+            (0, r.jsx)(ed, { channel: t }),
+        ],
     });
 }
 let em = i.memo(function (e) {
@@ -391,25 +395,25 @@ let em = i.memo(function (e) {
     return n
         ? (0, r.jsx)(eg, { channel: t })
         : i || l
-          ? (0, r.jsxs)('div', {
+          ? (0, r.jsxs)("div", {
                 className: es.containerColumn,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: es.eventPrompts,
                         children: [
                             u ? (0, r.jsx)(v.Z, { channelId: null == t ? void 0 : t.id }) : null,
-                            (0, r.jsx)('div', { className: es.separator }),
+                            (0, r.jsx)("div", { className: es.separator }),
                             u && a
                                 ? (0, r.jsx)(C.Z, {
                                       highlight: !0,
-                                      channel: t
+                                      channel: t,
                                   })
                                 : null,
-                            (0, r.jsx)('div', { className: es.separator })
-                        ]
+                            (0, r.jsx)("div", { className: es.separator }),
+                        ],
                     }),
-                    (0, r.jsx)(ef, { channel: t })
-                ]
+                    (0, r.jsx)(ef, { channel: t }),
+                ],
             })
           : (0, r.jsx)(ec, { channel: t });
 });

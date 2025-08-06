@@ -9,6 +9,6 @@ function s(e) {
         title: i.intl.string(i.t.INwPCQ),
         body: i.intl.string(i.t.GyXRR0),
         onClose: n,
-        onContinue: t
+        onContinue: t,
     });
 }

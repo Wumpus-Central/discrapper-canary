@@ -4,7 +4,7 @@ e.exports = {
         return r(
             e.map(function (e) {
                 return [e.getKey(), e];
-            })
+            }),
         );
-    }
+    },
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -17,24 +17,24 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -57,7 +57,17 @@ function x(e, t) {
     );
 }
 function _(e) {
-    let { onChange: t, onClose: n, color: s, suggestedColors: _, disabled: j, label: E, colorPickerMiddle: C, colorPickerFooter: O, showEyeDropper: v } = e,
+    let {
+            onChange: t,
+            onClose: n,
+            color: s,
+            suggestedColors: _,
+            disabled: j,
+            label: E,
+            colorPickerMiddle: C,
+            colorPickerFooter: O,
+            showEyeDropper: v,
+        } = e,
         S = r.useRef(null),
         T = (0, d.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
         I = c.Z.colors.BACKGROUND_ACCENT.css,
@@ -84,8 +94,8 @@ function _(e) {
                         suggestedColors: _,
                         middle: C,
                         footer: O,
-                        showEyeDropper: v
-                    })
+                        showEyeDropper: v,
+                    }),
                 ),
             onRequestClose: n,
             children: (e) => {
@@ -100,16 +110,20 @@ function _(e) {
                                     i,
                                     r = {},
                                     s = Object.keys(e);
-                                for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                                for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                                 return r;
                             })(e, t);
                         if (Object.getOwnPropertySymbols) {
                             var s = Object.getOwnPropertySymbols(e);
-                            for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                            for (i = 0; i < s.length; i++)
+                                (n = s[i]),
+                                    !(t.indexOf(n) >= 0) &&
+                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                        (r[n] = e[n]);
                         }
                         return r;
-                    })(e, ['onClick']);
-                return (0, i.jsxs)('div', {
+                    })(e, ["onClick"]);
+                return (0, i.jsxs)("div", {
                     ref: S,
                     className: a()(f.colorSwatch, { [f.disabled]: j }),
                     children: [
@@ -120,24 +134,24 @@ function _(e) {
                                 onClick: j ? g.dG4 : t,
                                 style: {
                                     backgroundColor: y,
-                                    borderColor: A
+                                    borderColor: A,
                                 },
                                 className: f.swatch,
-                                'aria-label': h.intl.string(h.t.Qp04hI),
+                                "aria-label": h.intl.string(h.t.Qp04hI),
                                 focusProps: { ringTarget: S },
                                 children: (0, i.jsx)(d.vdY, {
-                                    size: 'custom',
+                                    size: "custom",
                                     className: f.editPencilIcon,
                                     width: 14,
                                     height: 14,
-                                    color: P
-                                })
-                            })
+                                    color: P,
+                                }),
+                            }),
                         ),
-                        E
-                    ]
+                        E,
+                    ],
                 });
-            }
+            },
         })
     );
 }

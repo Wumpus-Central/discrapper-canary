@@ -7,10 +7,10 @@ function o(e) {
         ? i.intl.format(i.t.dXdgnp, {
               username: n,
               applicationName: t.name,
-              usernameHook: o
+              usernameHook: o,
           })
         : i.intl.format(i.t.O829Ul, {
               username: n,
-              usernameHook: o
+              usernameHook: o,
           });
 }

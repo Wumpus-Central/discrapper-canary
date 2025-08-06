@@ -6,6 +6,6 @@ function a() {
     return (0, r.cj)([i.Z, o.Z], () => ({
         activeVoice: i.Z.getActiveVoiceFilter(),
         mostRecentlyRequestedVoiceId: i.Z.getMostRecentlyRequestedVoiceFilter(),
-        lastInitAttemptMayHaveCrashed: o.Z.getLastInitAttemptMayHaveCrashed()
+        lastInitAttemptMayHaveCrashed: o.Z.getLastInitAttemptMayHaveCrashed(),
     }));
 }

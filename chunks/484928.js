@@ -6,71 +6,84 @@ let r = {
         parsePattern: /\d+/i,
         valueCallback: function (i) {
             return parseInt(i, 10);
-        }
+        },
     }),
     era: (0, t.Z)({
         matchPatterns: {
             narrow: /^p(r|o)\.?\s?(kr\.?|me)/i,
             abbreviated: /^(pr\.\s?(kr\.|m\.\s?e\.)|po\s?kr\.|mūsų eroje)/i,
-            wide: /^(prieš Kristų|prieš mūsų erą|po Kristaus|mūsų eroje)/i
+            wide: /^(prieš Kristų|prieš mūsų erą|po Kristaus|mūsų eroje)/i,
         },
-        defaultMatchWidth: 'wide',
+        defaultMatchWidth: "wide",
         parsePatterns: {
             wide: [/prieš/i, /(po|mūsų)/i],
-            any: [/^pr/i, /^(po|m)/i]
+            any: [/^pr/i, /^(po|m)/i],
         },
-        defaultParseWidth: 'any'
+        defaultParseWidth: "any",
     }),
     quarter: (0, t.Z)({
         matchPatterns: {
             narrow: /^([1234])/i,
             abbreviated: /^(I|II|III|IV)\s?ketv?\.?/i,
-            wide: /^(I|II|III|IV)\s?ketvirtis/i
+            wide: /^(I|II|III|IV)\s?ketvirtis/i,
         },
-        defaultMatchWidth: 'wide',
+        defaultMatchWidth: "wide",
         parsePatterns: {
             narrow: [/1/i, /2/i, /3/i, /4/i],
-            any: [/I$/i, /II$/i, /III/i, /IV/i]
+            any: [/I$/i, /II$/i, /III/i, /IV/i],
         },
-        defaultParseWidth: 'any',
+        defaultParseWidth: "any",
         valueCallback: function (i) {
             return i + 1;
-        }
+        },
     }),
     month: (0, t.Z)({
         matchPatterns: {
             narrow: /^[svkbglr]/i,
             abbreviated: /^(saus\.|vas\.|kov\.|bal\.|geg\.|birž\.|liep\.|rugp\.|rugs\.|spal\.|lapkr\.|gruod\.)/i,
-            wide: /^(sausi(s|o)|vasari(s|o)|kov(a|o)s|balandž?i(s|o)|gegužės?|birželi(s|o)|liep(a|os)|rugpjū(t|č)i(s|o)|rugsėj(is|o)|spali(s|o)|lapkri(t|č)i(s|o)|gruodž?i(s|o))/i
+            wide: /^(sausi(s|o)|vasari(s|o)|kov(a|o)s|balandž?i(s|o)|gegužės?|birželi(s|o)|liep(a|os)|rugpjū(t|č)i(s|o)|rugsėj(is|o)|spali(s|o)|lapkri(t|č)i(s|o)|gruodž?i(s|o))/i,
         },
-        defaultMatchWidth: 'wide',
+        defaultMatchWidth: "wide",
         parsePatterns: {
             narrow: [/^s/i, /^v/i, /^k/i, /^b/i, /^g/i, /^b/i, /^l/i, /^r/i, /^r/i, /^s/i, /^l/i, /^g/i],
-            any: [/^saus/i, /^vas/i, /^kov/i, /^bal/i, /^geg/i, /^birž/i, /^liep/i, /^rugp/i, /^rugs/i, /^spal/i, /^lapkr/i, /^gruod/i]
+            any: [
+                /^saus/i,
+                /^vas/i,
+                /^kov/i,
+                /^bal/i,
+                /^geg/i,
+                /^birž/i,
+                /^liep/i,
+                /^rugp/i,
+                /^rugs/i,
+                /^spal/i,
+                /^lapkr/i,
+                /^gruod/i,
+            ],
         },
-        defaultParseWidth: 'any'
+        defaultParseWidth: "any",
     }),
     day: (0, t.Z)({
         matchPatterns: {
             narrow: /^[spatkš]/i,
             short: /^(sk|pr|an|tr|kt|pn|št)/i,
             abbreviated: /^(sk|pr|an|tr|kt|pn|št)/i,
-            wide: /^(sekmadien(is|į)|pirmadien(is|į)|antradien(is|į)|trečiadien(is|į)|ketvirtadien(is|į)|penktadien(is|į)|šeštadien(is|į))/i
+            wide: /^(sekmadien(is|į)|pirmadien(is|į)|antradien(is|į)|trečiadien(is|į)|ketvirtadien(is|į)|penktadien(is|į)|šeštadien(is|į))/i,
         },
-        defaultMatchWidth: 'wide',
+        defaultMatchWidth: "wide",
         parsePatterns: {
             narrow: [/^s/i, /^p/i, /^a/i, /^t/i, /^k/i, /^p/i, /^š/i],
             wide: [/^se/i, /^pi/i, /^an/i, /^tr/i, /^ke/i, /^pe/i, /^še/i],
-            any: [/^sk/i, /^pr/i, /^an/i, /^tr/i, /^kt/i, /^pn/i, /^št/i]
+            any: [/^sk/i, /^pr/i, /^an/i, /^tr/i, /^kt/i, /^pn/i, /^št/i],
         },
-        defaultParseWidth: 'any'
+        defaultParseWidth: "any",
     }),
     dayPeriod: (0, t.Z)({
         matchPatterns: {
             narrow: /^(pr.\s?p.|pop.|vidurnaktis|(vidurdienis|perpiet)|rytas|(diena|popietė)|vakaras|naktis)/i,
-            any: /^(priešpiet|popiet$|vidurnaktis|(vidurdienis|perpiet)|rytas|(diena|popietė)|vakaras|naktis)/i
+            any: /^(priešpiet|popiet$|vidurnaktis|(vidurdienis|perpiet)|rytas|(diena|popietė)|vakaras|naktis)/i,
         },
-        defaultMatchWidth: 'any',
+        defaultMatchWidth: "any",
         parsePatterns: {
             narrow: {
                 am: /^pr/i,
@@ -80,7 +93,7 @@ let r = {
                 morning: /rytas/i,
                 afternoon: /(die|popietė)/i,
                 evening: /vakaras/i,
-                night: /naktis/i
+                night: /naktis/i,
             },
             any: {
                 am: /^pr/i,
@@ -90,9 +103,9 @@ let r = {
                 morning: /rytas/i,
                 afternoon: /(die|popietė)/i,
                 evening: /vakaras/i,
-                night: /naktis/i
-            }
+                night: /naktis/i,
+            },
         },
-        defaultParseWidth: 'any'
-    })
+        defaultParseWidth: "any",
+    }),
 };

@@ -3,7 +3,7 @@ n.d(t, {
     W5: () => m,
     ZP: () => g,
     nz: () => h,
-    yP: () => p
+    yP: () => p,
 });
 var r = n(255367),
     i = n(73800),
@@ -16,7 +16,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,19 +26,19 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
-let { Layer: c, LayerContainer: u, LayerProvider: d, layerContext: f } = (0, o.Xv)('App'),
+let { Layer: c, LayerContainer: u, LayerProvider: d, layerContext: f } = (0, o.Xv)("App"),
     _ = u,
     p = d,
     h = f,

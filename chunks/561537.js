@@ -15,18 +15,18 @@ function o(e) {
                 e
             );
         }, [o]);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: a()(l.wrapper, t),
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: a()(l.header, s),
-                children: n
+                children: n,
             }),
             c &&
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: l.content,
-                    children: o
-                })
-        ]
+                    children: o,
+                }),
+        ],
     });
 }

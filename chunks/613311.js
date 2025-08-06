@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => eh }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841));
+n.d(t, { Z: () => eh }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -66,7 +66,7 @@ function ec(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -76,15 +76,15 @@ function eu(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 ec(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -111,50 +111,73 @@ class ep extends i.PureComponent {
         return null != this.props.channel;
     }
     componentDidMount() {
-        let { sku: e, storeListing: t, isFetchingEntitlements: n, shouldFetchStatistics: r, didFetchEntitlements: i, location: l, fetchStoreListing: a } = this.props;
+        let {
+            sku: e,
+            storeListing: t,
+            isFetchingEntitlements: n,
+            shouldFetchStatistics: r,
+            didFetchEntitlements: i,
+            location: l,
+            fetchStoreListing: a,
+        } = this.props;
         if (null != l.state) {
             let { analyticsSource: e, analyticsProperties: t } = l.state;
-            ((this._analyticsSource = e), (this._extraAnalyticsProperties = t));
+            (this._analyticsSource = e), (this._extraAnalyticsProperties = t);
         } else this._analyticsSource = el.SaU;
-        ((null == t || t.isSlimDirectoryVersion()) && a(), null != e && (n || i || (0, f.yD)(e.applicationId), r && p.Z.wait(() => (0, h.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug());
+        (null == t || t.isSlimDirectoryVersion()) && a(),
+            null != e && (n || i || (0, f.yD)(e.applicationId), r && p.Z.wait(() => (0, h.$)(e.applicationId))),
+            this.trackViewed(),
+            this.replaceUrlWithSlug();
     }
     componentDidUpdate(e) {
-        let { locale: t, sku: n, shouldFetchStatistics: r, skuId: i, storeListingId: l, slug: a, storeListing: o, fetchStoreListing: s } = this.props;
+        let {
+            locale: t,
+            sku: n,
+            shouldFetchStatistics: r,
+            skuId: i,
+            storeListingId: l,
+            slug: a,
+            storeListing: o,
+            fetchStoreListing: s,
+        } = this.props;
         if (
             (o !== e.storeListing &&
                 null != o &&
                 (0, z.s)(ea.jE.STORE_LISTING, {
                     skuId: i,
-                    slug: a
+                    slug: a,
                 }),
             (t !== e.locale || i !== e.skuId) && s(),
             r && !e.shouldFetchStatistics)
         ) {
-            if (null == n) throw Error('Unexpected missing sku');
+            if (null == n) throw Error("Unexpected missing sku");
             p.Z.wait(() => (0, h.$)(n.applicationId));
         }
-        ((i !== e.skuId || l !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug());
+        (i !== e.skuId || l !== e.storeListingId) && (this._trackedViewed = !1),
+            this.trackViewed(),
+            this.replaceUrlWithSlug();
     }
     componentWillUnmount() {
         this.showCopyLinkTextTimeout.stop();
         let {
-            analyticsContext: { loadId: e, loadDate: t }
+            analyticsContext: { loadId: e, loadDate: t },
         } = this.props;
         null != t &&
             G.default.track(el.rMx.STORE_LISTING_EXITED, {
                 load_id: e,
-                duration_ms: Date.now() - t
+                duration_ms: Date.now() - t,
             });
     }
     replaceUrlWithSlug() {}
     trackViewed() {
         let { sku: e, storeListing: t, hasFetchedNews: n, analyticsContext: r } = this.props;
-        if (this._trackedViewed || null == e || null == t || null == t.description || !(this.isChannelType || n)) return;
+        if (this._trackedViewed || null == e || null == t || null == t.description || !(this.isChannelType || n))
+            return;
         let i = t.carouselItems.reduce((e, t) => (null != t.assetId ? e.images++ : e.videos++, e), {
             images: 0,
-            videos: 0
+            videos: 0,
         });
-        (G.default.track(
+        G.default.track(
             el.rMx.STORE_LISTING_VIEWED,
             eu(
                 ed(eu({}, this._extraAnalyticsProperties), {
@@ -164,12 +187,12 @@ class ep extends i.PureComponent {
                     carousel_image_count: i.images,
                     carousel_video_count: i.videos,
                     location: r.location.page,
-                    source: this._analyticsSource
+                    source: this._analyticsSource,
                 }),
-                (0, N.Z)(e, !0)
-            )
+                (0, N.Z)(e, !0),
+            ),
         ),
-            (this._trackedViewed = !0));
+            (this._trackedViewed = !0);
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: l } = this.props;
@@ -182,32 +205,32 @@ class ep extends i.PureComponent {
                           children: [
                               (0, r.jsx)(P.Z.Icon, {
                                   icon: d.lO_,
-                                  'aria-label': eo.intl.string(eo.t['P1/Erq'])
+                                  "aria-label": eo.intl.string(eo.t["P1/Erq"]),
                               }),
-                              (0, r.jsx)(P.Z.Title, { children: n.name })
-                          ]
+                              (0, r.jsx)(P.Z.Title, { children: n.name }),
+                          ],
                       })
                     : null != t && t.premium
                       ? (0, r.jsxs)(i.Fragment, {
                             children: [
                                 (0, r.jsx)(P.Z.Icon, {
                                     icon: d.SrA,
-                                    'aria-label': eo.intl.string(eo.t.Ipxkoq)
+                                    "aria-label": eo.intl.string(eo.t.Ipxkoq),
                                 }),
-                                (0, r.jsx)(ee.Z, { sku: t })
-                            ]
+                                (0, r.jsx)(ee.Z, { sku: t }),
+                            ],
                         })
                       : null != t
                         ? (0, r.jsxs)(i.Fragment, {
                               children: [
                                   (0, r.jsx)(P.Z.Icon, {
                                       icon: d.lO_,
-                                      'aria-label': eo.intl.string(eo.t['P1/Erq'])
+                                      "aria-label": eo.intl.string(eo.t["P1/Erq"]),
                                   }),
-                                  (0, r.jsx)(P.Z.Title, { children: t.name })
-                              ]
+                                  (0, r.jsx)(P.Z.Title, { children: t.name }),
+                              ],
                           })
-                        : null
+                        : null,
         });
     }
     parseMediaItems(e, t, n) {
@@ -216,56 +239,59 @@ class ep extends i.PureComponent {
             let t = n.find((e) => e.id === r);
             if (null != t) {
                 let { width: n, height: r } = t;
-                if (null == n || null == r) throw Error('ApplicationStoreListing.parseMediaItems: Video and Image assets must have a width and height defined');
-                return t.mimeType.startsWith('video/')
+                if (null == n || null == r)
+                    throw Error(
+                        "ApplicationStoreListing.parseMediaItems: Video and Image assets must have a width and height defined",
+                    );
+                return t.mimeType.startsWith("video/")
                     ? {
                           type: el.s9s.VIDEO,
-                          thumbnailSrc: (0, F._W)(e.id, t, 1024, 'webp'),
+                          thumbnailSrc: (0, F._W)(e.id, t, 1024, "webp"),
                           src: (0, F._W)(e.id, t),
                           height: r,
-                          width: n
+                          width: n,
                       }
                     : {
                           type: el.s9s.IMG,
                           src: (0, F._W)(e.id, t, 1024),
                           height: r,
-                          width: n
+                          width: n,
                       };
             }
         }
         if (null != i)
             return {
                 type: el.s9s.YOUTUBE_VIDEO,
-                youtubeVideoId: i
+                youtubeVideoId: i,
             };
-        throw Error('Store carousel item must have one of assetId or youtubeVideoId');
+        throw Error("Store carousel item must have one of assetId or youtubeVideoId");
     }
     renderHeaderAssets(e, t, n) {
         let { theme: i } = this.props,
             l = t.headerBackground,
             a = (0, c.ap)(i) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
         return null == l || null == a
-            ? (0, r.jsx)('div', { className: es.noHeaderSpacer })
-            : (0, r.jsxs)('div', {
+            ? (0, r.jsx)("div", { className: es.noHeaderSpacer })
+            : (0, r.jsxs)("div", {
                   className: es.headerAssets,
                   children: [
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: es.headerBackground,
-                          style: { backgroundImage: 'url('.concat((0, F._W)(e.id, l, 1024, 'png'), ')') }
+                          style: { backgroundImage: "url(".concat((0, F._W)(e.id, l, 1024, "png"), ")") },
                       }),
-                      (0, r.jsx)('img', {
+                      (0, r.jsx)("img", {
                           className: es.headerLogo,
-                          src: (0, F._W)(e.id, a, 1024, 'png'),
-                          alt: n.name
-                      })
-                  ]
+                          src: (0, F._W)(e.id, a, 1024, "png"),
+                          alt: n.name,
+                      }),
+                  ],
               });
     }
     renderWhyYouMightLikeThis(e, t) {
         return (0, r.jsx)($.Z, {
             sku: e,
             storeListing: t,
-            className: es.whyYouMightLikeIt
+            className: es.whyYouMightLikeIt,
         });
     }
     renderVerifiedGuildInvite(e, t) {
@@ -276,7 +302,7 @@ class ep extends i.PureComponent {
             guild: e.guild,
             className: es.guildInvite,
             inChannel: null != n,
-            pageSize: i
+            pageSize: i,
         });
     }
     renderFeatures(e) {
@@ -288,17 +314,17 @@ class ep extends i.PureComponent {
             : (0, r.jsx)(et.Z, {
                   className: es.systemRequirements,
                   systemRequirements: e.systemRequirements,
-                  pageSize: this.props.pageSize
+                  pageSize: this.props.pageSize,
               });
     }
     renderDescription(e, t, n) {
         let { description: l } = t;
-        if (null == l) throw Error('Rendering ApplicationStoreListing without description');
+        if (null == l) throw Error("Rendering ApplicationStoreListing without description");
         return (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(v.Z, {
-                    tag: 'h1',
-                    children: eo.intl.format(eo.t.tluX4O, { name: n.name })
+                    tag: "h1",
+                    children: eo.intl.format(eo.t.tluX4O, { name: n.name }),
                 }),
                 (0, r.jsx)(b.Z, {}),
                 (0, r.jsx)(Y.Z, {
@@ -306,21 +332,21 @@ class ep extends i.PureComponent {
                     blurb: t.summary,
                     description: l,
                     className: es.description,
-                    assets: t.assets
-                })
-            ]
+                    assets: t.assets,
+                }),
+            ],
         });
     }
     renderApplicationContentRating(e) {
         return (0, r.jsx)(W.Z, {
             sku: e,
-            className: es.contentRating
+            className: es.contentRating,
         });
     }
     renderApplicationLegalInfo(e) {
         return (0, r.jsx)(q.Z, {
             sku: e,
-            className: es.legalInfo
+            className: es.legalInfo,
         });
     }
     renderJsonLD() {
@@ -328,53 +354,70 @@ class ep extends i.PureComponent {
         if (null == e || null == t || null == n) return null;
         let i = [],
             l = n.getSplashURL(1024);
-        (null != l && i.push(l), null != t.headerLogoLightTheme && i.unshift((0, F._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg')));
+        null != l && i.push(l),
+            null != t.headerLogoLightTheme && i.unshift((0, F._W)(n.id, t.headerLogoLightTheme, 1024, "jpg"));
         let a = C.Z.Product({
                 name: e.name,
-                description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
+                description: null != e.summary && "" !== e.summary ? e.summary : t.tagline,
                 image: C.Z.Product.Image(i),
-                sku: e.id
+                sku: e.id,
             }),
             o = e.getPrice();
         if (null != o) {
             let { amount: e, currency: t } = o;
             a.offers = C.Z.Offer({
                 priceCurrency: t.toUpperCase(),
-                price: (0, B.T4)(e, t, { style: 'decimal' })
+                price: (0, B.T4)(e, t, { style: "decimal" }),
             });
         }
         let s = C.Z.ItemPage({ mainEntity: a });
         return (0, r.jsx)(C.Z, { data: s });
     }
     renderSmall(e, t, n) {
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: a()(es.listing, es.listingSmall),
-            children: [this.renderHeaderAssets(e, t, n), this.renderCarousel(e, t), this.renderWhyYouMightLikeThis(n, t), this.renderDescription(e, t, n), this.renderVerifiedGuildInvite(t, n), this.renderFeatures(n), this.renderSystemRequirements(n), this.renderApplicationContentRating(n), this.renderApplicationLegalInfo(n)]
+            children: [
+                this.renderHeaderAssets(e, t, n),
+                this.renderCarousel(e, t),
+                this.renderWhyYouMightLikeThis(n, t),
+                this.renderDescription(e, t, n),
+                this.renderVerifiedGuildInvite(t, n),
+                this.renderFeatures(n),
+                this.renderSystemRequirements(n),
+                this.renderApplicationContentRating(n),
+                this.renderApplicationLegalInfo(n),
+            ],
         });
     }
     renderLarge(e, t, n) {
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: es.listing,
             children: [
                 this.renderHeaderAssets(e, t, n),
                 this.renderCarousel(e, t),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: es.listingLarge,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: es.body,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: es.leftColumn,
-                                children: [this.renderWhyYouMightLikeThis(n, t), this.renderDescription(e, t, n), this.renderSystemRequirements(n), this.renderApplicationContentRating(n), this.renderApplicationLegalInfo(n)]
+                                children: [
+                                    this.renderWhyYouMightLikeThis(n, t),
+                                    this.renderDescription(e, t, n),
+                                    this.renderSystemRequirements(n),
+                                    this.renderApplicationContentRating(n),
+                                    this.renderApplicationLegalInfo(n),
+                                ],
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: es.rightColumn,
-                                children: [this.renderVerifiedGuildInvite(t, n), this.renderFeatures(n)]
-                            })
-                        ]
-                    })
-                })
-            ]
+                                children: [this.renderVerifiedGuildInvite(t, n), this.renderFeatures(n)],
+                            }),
+                        ],
+                    }),
+                }),
+            ],
         });
     }
     render() {
@@ -386,120 +429,131 @@ class ep extends i.PureComponent {
                     (0, r.jsx)(I.Z, {
                         align: I.Z.Align.CENTER,
                         justify: I.Z.Justify.CENTER,
-                        children: (0, r.jsx)(d.$jN, { className: es.spinner })
-                    })
-                ]
+                        children: (0, r.jsx)(d.$jN, { className: es.spinner }),
+                    }),
+                ],
             });
         if (!l && t.showAgeGate) {
             let n = a
                 ? null
-                : (0, r.jsx)('div', {
+                : (0, r.jsx)("div", {
                       className: es.gatedListing,
-                      children: this.renderListing()
+                      children: this.renderListing(),
                   });
             return (0, r.jsxs)(i.Fragment, {
-                children: [(0, r.jsx)(S.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(Q.Z, { game: e }), n]
+                children: [
+                    (0, r.jsx)(S.yY, { location: e.name }),
+                    this.renderJsonLD(),
+                    this.renderHeader(e, t),
+                    (0, r.jsx)(Q.Z, { game: e }),
+                    n,
+                ],
             });
         }
         return a
-            ? (0, r.jsxs)('div', {
+            ? (0, r.jsxs)("div", {
                   className: es.listingWrapper,
                   children: [
                       (0, r.jsx)(S.yY, { location: e.name }),
                       this.renderJsonLD(),
                       (0, r.jsx)(m.Z, {
                           section: el.jXE.NAVIGATION,
-                          children: this.renderHeader(e, t)
+                          children: this.renderHeader(e, t),
                       }),
                       (0, r.jsx)(m.Z, {
                           section: el.jXE.BODY,
-                          children: this.renderListing()
-                      })
-                  ]
+                          children: this.renderListing(),
+                      }),
+                  ],
               })
-            : (0, r.jsxs)('div', {
-                  children: [(0, r.jsx)(S.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
+            : (0, r.jsxs)("div", {
+                  children: [
+                      (0, r.jsx)(S.yY, { location: e.name }),
+                      this.renderJsonLD(),
+                      this.renderHeader(e, t),
+                      this.renderListing(),
+                  ],
               });
     }
     constructor(...e) {
-        (super(...e),
-            ec(this, 'showCopyLinkTextTimeout', new s.V7()),
-            ec(this, '_trackedViewed', !1),
-            ec(this, '_analyticsSource', null),
-            ec(this, '_extraAnalyticsProperties', null),
-            ec(this, 'state', {
+        super(...e),
+            ec(this, "showCopyLinkTextTimeout", new s.V7()),
+            ec(this, "_trackedViewed", !1),
+            ec(this, "_analyticsSource", null),
+            ec(this, "_extraAnalyticsProperties", null),
+            ec(this, "state", {
                 showHeaderPurchaseUnit: !1,
-                showLinkCopied: !1
+                showLinkCopied: !1,
             }),
-            ec(this, 'trackCarouselScroll', (e, t, n) => {
+            ec(this, "trackCarouselScroll", (e, t, n) => {
                 let { sku: r } = this.props;
                 null != r &&
                     G.default.track(
                         el.rMx.STORE_LISTING_MEDIA_SCROLLED,
                         ed(eu({}, (0, N.Z)(r)), {
                             card_index: n,
-                            card_type: e.type === el.s9s.IMG ? 'image' : 'video'
-                        })
+                            card_type: e.type === el.s9s.IMG ? "image" : "video",
+                        }),
                     );
             }),
-            ec(this, 'copyCurrentUrl', () => {
+            ec(this, "copyCurrentUrl", () => {
                 var e;
                 let { location: t } = this.props,
-                    n = ((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e));
+                    n = ((e = t.pathname), "".concat(location.protocol, "//").concat(location.host).concat(e));
                 (0, V.JG)(n, () =>
                     this.setState({ showLinkCopied: !0 }, () => {
                         this.showCopyLinkTextTimeout.start(1500, () => {
                             this.setState({ showLinkCopied: !1 });
                         });
-                    })
+                    }),
                 );
             }),
-            ec(this, 'handleCreateInstantInvite', () => {
+            ec(this, "handleCreateInstantInvite", () => {
                 let { channel: e, guild: t } = this.props;
                 null != e &&
                     null != t &&
                     (0, d.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                        let { default: i } = await Promise.all([n.e("7654"), n.e("17439")]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
                                 ed(eu({}, n), {
                                     guild: t,
                                     channel: e,
-                                    source: el.t4x.GUILD_CHANNELS
-                                })
+                                    source: el.t4x.GUILD_CHANNELS,
+                                }),
                             );
                     });
             }),
-            ec(this, 'renderInviteLink', () => {
+            ec(this, "renderInviteLink", () => {
                 let { channel: e, guild: t } = this.props;
                 return null != e && null != t && (x.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
                     ? (0, r.jsx)(u.zx, {
-                          'aria-label': eo.intl.string(eo.t.zJrgTE),
+                          "aria-label": eo.intl.string(eo.t.zJrgTE),
                           look: u.zx.Looks.BLANK,
                           size: u.zx.Sizes.NONE,
                           onClick: this.handleCreateInstantInvite,
                           className: es.link,
                           children: (0, r.jsx)(d.xPt, {
-                              size: 'md',
-                              color: 'currentColor',
-                              className: es.linkIcon
-                          })
+                              size: "md",
+                              color: "currentColor",
+                              className: es.linkIcon,
+                          }),
                       })
                     : null;
             }),
-            ec(this, 'renderCopyLink', () => {
+            ec(this, "renderCopyLink", () => {
                 let { showLinkCopied: e } = this.state;
                 return this.isChannelType
                     ? this.renderInviteLink()
                     : (0, r.jsx)(d.ua7, {
                           text: e ? eo.intl.string(eo.t.uvTCOT) : null,
-                          position: 'left',
+                          position: "left",
                           forceOpen: e,
                           children: (t) => {
                               let { onMouseEnter: n, onMouseLeave: i } = t;
                               return (0, r.jsx)(u.zx, {
-                                  'aria-label': e ? eo.intl.string(eo.t.uvTCOT) : eo.intl.string(eo.t.WqhZsr),
+                                  "aria-label": e ? eo.intl.string(eo.t.uvTCOT) : eo.intl.string(eo.t.WqhZsr),
                                   look: u.zx.Looks.BLANK,
                                   size: u.zx.Sizes.NONE,
                                   onClick: this.copyCurrentUrl,
@@ -507,26 +561,26 @@ class ep extends i.PureComponent {
                                   onMouseLeave: i,
                                   className: es.link,
                                   children: (0, r.jsx)(d.xPt, {
-                                      size: 'md',
-                                      color: 'currentColor',
-                                      className: es.linkIcon
-                                  })
+                                      size: "md",
+                                      color: "currentColor",
+                                      className: es.linkIcon,
+                                  }),
                               });
-                          }
+                          },
                       });
             }),
-            ec(this, 'renderHeaderToolbar', (e, t) => {
+            ec(this, "renderHeaderToolbar", (e, t) => {
                 let {
                         isInTestMode: n,
                         slug: i,
                         storeListing: l,
-                        analyticsContext: { location: o }
+                        analyticsContext: { location: o },
                     } = this.props,
                     { showHeaderPurchaseUnit: s } = this.state;
-                return (0, r.jsxs)('div', {
+                return (0, r.jsxs)("div", {
                     className: es.headerBarListing,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: es.headerSection,
                             children:
                                 n && null != t
@@ -545,33 +599,33 @@ class ep extends i.PureComponent {
                                                       analyticsSource: {
                                                           page: o.page,
                                                           section: el.jXE.NAVIGATION,
-                                                          object: null
+                                                          object: null,
                                                       },
-                                                      storeListingId: e.id
+                                                      storeListingId: e.id,
                                                   });
-                                          }
+                                          },
                                       })
-                                    : null
+                                    : null,
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: es.headerSection,
-                            children: (0, r.jsxs)('div', {
+                            children: (0, r.jsxs)("div", {
                                 className: a()(es.headerPurchase, { [es.active]: s }),
                                 children: [
                                     null != t ? (0, T.Z)(t) : null,
-                                    null != e && null != t ? (0, r.jsx)('div', { children: 'deprecated!' }) : null,
+                                    null != e && null != t ? (0, r.jsx)("div", { children: "deprecated!" }) : null,
                                     (0, r.jsx)(J.Z, {
                                         messageStyle: J.G.SHORT,
-                                        className: es.purchaseError
-                                    })
-                                ]
-                            })
+                                        className: es.purchaseError,
+                                    }),
+                                ],
+                            }),
                         }),
-                        this.renderCopyLink()
-                    ]
+                        this.renderCopyLink(),
+                    ],
                 });
             }),
-            ec(this, 'renderCarousel', (e, t) => {
+            ec(this, "renderCarousel", (e, t) => {
                 if (0 === t.carouselItems.length) return null;
                 let { pageSize: n, isFocused: i } = this.props;
                 return (0, r.jsx)(m.Z, {
@@ -581,22 +635,22 @@ class ep extends i.PureComponent {
                         items: t.carouselItems.map((n) => this.parseMediaItems(e, n, t.assets)),
                         autoplayInterval: 8000,
                         paused: !i,
-                        onIntentionalChange: this.trackCarouselScroll
-                    })
+                        onIntentionalChange: this.trackCarouselScroll,
+                    }),
                 });
             }),
-            ec(this, 'renderListing', () => {
+            ec(this, "renderListing", () => {
                 let { application: e, storeListing: t, sku: n, pageSize: i } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
                     ? (0, r.jsx)(I.Z, {
                           align: I.Z.Align.CENTER,
                           justify: I.Z.Justify.CENTER,
-                          children: (0, r.jsx)(d.$jN, {})
+                          children: (0, r.jsx)(d.$jN, {}),
                       })
                     : i === ei.b.SMALL
                       ? this.renderSmall(e, t, n)
                       : this.renderLarge(e, t, n);
-            }));
+            });
     }
 }
 let eh = (0, _.Z)(
@@ -607,11 +661,11 @@ let eh = (0, _.Z)(
                 r,
                 { inputSkuId: i, applicationId: l, storeListingId: a, isAuthenticated: o, channel: s } = e;
             if (null == l) {
-                if (null == i) throw Error('Needs applicationId or skuId');
-                ((t = i), null != (l = null != (n = D.Z.get(i)) ? n.applicationId : null) && (r = y.Z.getApplication(l)));
+                if (null == i) throw Error("Needs applicationId or skuId");
+                (t = i), null != (l = null != (n = D.Z.get(i)) ? n.applicationId : null) && (r = y.Z.getApplication(l));
             } else if (null == i) {
-                if (null == l) throw Error('Needs applicationId or skuId');
-                (null != (r = y.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? D.Z.get(t) : null));
+                if (null == l) throw Error("Needs applicationId or skuId");
+                null != (r = y.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? D.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, H.yE)(n.flags, el.l4R.STICKER_PACK) && (n = null);
             let c = null != l && (M.Z.inTestModeForApplication(l) || E.Z.inDevModeForApplication(l));
@@ -627,14 +681,14 @@ let eh = (0, _.Z)(
                     storeListingId: a,
                     skuId: t,
                     channelId: null != s ? s.id : null,
-                    isTestMode: c
+                    isTestMode: c,
                 }),
                 isInTestMode: null != l && c,
                 matureAgree: L.Z.didMatureAgree,
                 theme: A.Z.theme,
                 locale: j.default.locale,
-                guild: null != s ? Z.Z.getGuild(s.getGuildId()) : null
+                guild: null != s ? Z.Z.getGuild(s.getGuildId()) : null,
             };
-        })(ep)
-    )
+        })(ep),
+    ),
 );

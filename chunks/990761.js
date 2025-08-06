@@ -1,1 +1,1 @@
-e.exports = { successImg: 'successImg_f05c94' };
+e.exports = { successImg: "successImg_f05c94" };

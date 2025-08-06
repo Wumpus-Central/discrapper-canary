@@ -5,7 +5,7 @@ r(
     {
         global: !0,
         bind: !0,
-        forced: o.setInterval !== a
+        forced: o.setInterval !== a,
     },
-    { setInterval: a }
+    { setInterval: a },
 );

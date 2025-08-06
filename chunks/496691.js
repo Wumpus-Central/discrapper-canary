@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { default: () => h }), a(388685));
+a.r(t), a.d(t, { default: () => h }), a(388685);
 var n = a(255367),
     r = a(73800),
     s = a(548668),
@@ -14,7 +14,10 @@ var n = a(255367),
 class p extends r.Component {
     shouldScrollToTop(e) {
         let { location: t } = e;
-        return t.pathname.startsWith(_.Z5c.APPLICATION_STORE_LISTING_SKU('')) || t.pathname.startsWith(_.Z5c.APPLICATION_STORE_LISTING_APPLICATION(''));
+        return (
+            t.pathname.startsWith(_.Z5c.APPLICATION_STORE_LISTING_SKU("")) ||
+            t.pathname.startsWith(_.Z5c.APPLICATION_STORE_LISTING_APPLICATION(""))
+        );
     }
     render() {
         let { location: e, className: t, render: a, locale: o } = this.props;
@@ -34,7 +37,7 @@ class p extends r.Component {
                             mobileClassName: m.marketingHeader,
                             openNavAriaLabel: N.intl.string(N.t.Fs9k3N),
                             hideNavAriaLabel: N.intl.string(N.t.AbfyHB),
-                            skipToContentLabel: N.intl.string(N.t['18gavL'])
+                            skipToContentLabel: N.intl.string(N.t["18gavL"]),
                         }),
                         a(t, i),
                         (0, n.jsx)(s.$, {
@@ -42,16 +45,16 @@ class p extends r.Component {
                             authRedirectTo: e.pathname,
                             avoidRouter: !0,
                             track: u.default.track,
-                            className: m.marketingFooter
-                        })
-                    ]
-                })
+                            className: m.marketingFooter,
+                        }),
+                    ],
+                }),
         });
     }
     constructor(...e) {
         var t, a;
-        (super(...e),
-            (t = 'handleHeaderLocaleChange'),
+        super(...e),
+            (t = "handleHeaderLocaleChange"),
             (a = (e) => {
                 e !== this.props.locale && c.ZP.overrideLocale(e);
             }),
@@ -60,9 +63,9 @@ class p extends r.Component {
                       value: a,
                       enumerable: !0,
                       configurable: !0,
-                      writable: !0
+                      writable: !0,
                   })
-                : (this[t] = a));
+                : (this[t] = a);
     }
 }
 let h = o.ZP.connectStores([d.default], () => ({ locale: d.default.locale }))(p);

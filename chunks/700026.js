@@ -1,6 +1,6 @@
 n.d(t, {
     V5: () => c,
-    ie: () => a
+    ie: () => a,
 });
 var r = n(680089),
     i = n(496675),
@@ -13,12 +13,23 @@ function a(e, t, n) {
             !(function (e, t) {
                 if (t === l.wZ) {
                     let t = e.getGuildActionSection().getRows();
-                    return (1 === t.length && t[0] === o.z.GUILD_PREMIUM_PROGRESS_BAR) || e.getGuildActionSection().isEmpty();
+                    return (
+                        (1 === t.length && t[0] === o.z.GUILD_PREMIUM_PROGRESS_BAR) ||
+                        e.getGuildActionSection().isEmpty()
+                    );
                 }
                 return 0 === e.getSections(!1)[t];
             })(e, n) &&
-            (n === l.wZ || (!!t && (n === l.p2 || (n !== l.wd && (n === e.recentsSectionNumber || (e.voiceChannelsSectionNumber, !1)))))),
-        canHaveVoiceSummary: n !== l.wZ && n !== l.p2 && n !== l.wd && n !== e.recentsSectionNumber && n !== e.voiceChannelsSectionNumber
+            (n === l.wZ ||
+                (!!t &&
+                    (n === l.p2 ||
+                        (n !== l.wd && (n === e.recentsSectionNumber || (e.voiceChannelsSectionNumber, !1)))))),
+        canHaveVoiceSummary:
+            n !== l.wZ &&
+            n !== l.p2 &&
+            n !== l.wd &&
+            n !== e.recentsSectionNumber &&
+            n !== e.voiceChannelsSectionNumber,
     };
 }
 function c(e) {
@@ -38,7 +49,7 @@ function c(e) {
             category: t,
             selectedChannelId: l,
             selectedVoiceChannelId: o,
-            voiceStates: n
+            voiceStates: n,
         }).length > 0
     );
 }

@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     dR: () => d,
-    k3: () => p
+    k3: () => p,
 }),
     n(980754),
     n(388685),
     n(953529),
     n(539854),
-    n(415506));
+    n(415506);
 var r = n(230367),
     i = n(320215),
     o = n(240773),
@@ -15,54 +15,86 @@ var r = n(230367),
     l = n(381499),
     c = n(835913),
     u = (function (e) {
-        return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.USER = 1)] = 'USER'), e);
+        return (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"), (e[(e.USER = 1)] = "USER"), e;
     })({}),
     d = (function (e) {
-        return ((e[(e.SURFACE_UNSPECIFIED = 0)] = 'SURFACE_UNSPECIFIED'), (e[(e.API = 1)] = 'API'), (e[(e.APP = 2)] = 'APP'), e);
+        return (
+            (e[(e.SURFACE_UNSPECIFIED = 0)] = "SURFACE_UNSPECIFIED"),
+            (e[(e.API = 1)] = "API"),
+            (e[(e.APP = 2)] = "APP"),
+            e
+        );
     })({}),
     f = (function (e) {
-        return ((e[(e.ENABLED = 0)] = 'ENABLED'), (e[(e.DISABLED = 1)] = 'DISABLED'), e);
+        return (e[(e.ENABLED = 0)] = "ENABLED"), (e[(e.DISABLED = 1)] = "DISABLED"), e;
     })({}),
     _ = (function (e) {
-        return ((e[(e.FULL = 0)] = 'FULL'), (e[(e.FORCE_DEFAULT = 1)] = 'FORCE_DEFAULT'), (e[(e.OVERRIDE_ONLY = 2)] = 'OVERRIDE_ONLY'), e);
+        return (
+            (e[(e.FULL = 0)] = "FULL"),
+            (e[(e.FORCE_DEFAULT = 1)] = "FORCE_DEFAULT"),
+            (e[(e.OVERRIDE_ONLY = 2)] = "OVERRIDE_ONLY"),
+            e
+        );
     })({}),
     p = (function (e) {
-        return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.CONTROL = 1)] = 'CONTROL'), (e[(e.TREATMENT = 2)] = 'TREATMENT'), (e[(e.OVERRIDE = 3)] = 'OVERRIDE'), e);
+        return (
+            (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+            (e[(e.CONTROL = 1)] = "CONTROL"),
+            (e[(e.TREATMENT = 2)] = "TREATMENT"),
+            (e[(e.OVERRIDE = 3)] = "OVERRIDE"),
+            e
+        );
     })({}),
     h = (function (e) {
-        return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.ACTIVE = 1)] = 'ACTIVE'), (e[(e.UNUSED = 2)] = 'UNUSED'), (e[(e.BURNED = 3)] = 'BURNED'), e);
+        return (
+            (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+            (e[(e.ACTIVE = 1)] = "ACTIVE"),
+            (e[(e.UNUSED = 2)] = "UNUSED"),
+            (e[(e.BURNED = 3)] = "BURNED"),
+            e
+        );
     })({}),
     m = (function (e) {
-        return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.DRAFT = 1)] = 'DRAFT'), (e[(e.TESTING = 2)] = 'TESTING'), (e[(e.TESTING_ENDED = 3)] = 'TESTING_ENDED'), (e[(e.ROLLING_OUT = 4)] = 'ROLLING_OUT'), (e[(e.ROLLED_OUT = 5)] = 'ROLLED_OUT'), (e[(e.ARCHIVED = 6)] = 'ARCHIVED'), (e[(e.AA_MODE = 7)] = 'AA_MODE'), e);
+        return (
+            (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+            (e[(e.DRAFT = 1)] = "DRAFT"),
+            (e[(e.TESTING = 2)] = "TESTING"),
+            (e[(e.TESTING_ENDED = 3)] = "TESTING_ENDED"),
+            (e[(e.ROLLING_OUT = 4)] = "ROLLING_OUT"),
+            (e[(e.ROLLED_OUT = 5)] = "ROLLED_OUT"),
+            (e[(e.ARCHIVED = 6)] = "ARCHIVED"),
+            (e[(e.AA_MODE = 7)] = "AA_MODE"),
+            e
+        );
     })({});
 class g extends a.C {
     create(e) {
         let t = {
-            id: '0',
-            name: '',
-            creatorId: '0',
+            id: "0",
+            name: "",
+            creatorId: "0",
             version: 0,
-            editorId: '0',
-            title: '',
-            description: '',
+            editorId: "0",
+            title: "",
+            description: "",
             revision: 0,
-            hashKey: '',
+            hashKey: "",
             unitType: 0,
             variants: [],
             rules: [],
             status: 0,
             surfaces: [],
-            owningTeamName: '',
-            cachedNotificationChannelId: '0',
+            owningTeamName: "",
+            cachedNotificationChannelId: "0",
             exposureTracking: 0,
             assignmentMode: 0,
             enableEditRawJsonUi: !1,
-            winningVariantId: 0
+            winningVariantId: 0,
         };
         return (
             globalThis.Object.defineProperty(t, o.C, {
                 enumerable: !1,
-                value: this
+                value: this,
             }),
             void 0 !== e && (0, i.l)(this, t, e),
             t
@@ -126,7 +158,8 @@ class g extends a.C {
                     o.status = e.int32();
                     break;
                 case 19:
-                    if (i === r.TD.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t; ) o.surfaces.push(e.int32());
+                    if (i === r.TD.LengthDelimited)
+                        for (let t = e.int32() + e.pos; e.pos < t; ) o.surfaces.push(e.int32());
                     else o.surfaces.push(e.int32());
                     break;
                 case 20:
@@ -149,7 +182,10 @@ class g extends a.C {
                     break;
                 default:
                     let a = n.readUnknownField;
-                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                    if ("throw" === a)
+                        throw new globalThis.Error(
+                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                        );
                     let u = e.skip(i);
                     !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, u);
             }
@@ -157,167 +193,188 @@ class g extends a.C {
         return o;
     }
     internalBinaryWrite(e, t, n) {
-        ('0' !== e.id && t.tag(1, r.TD.Bit64).fixed64(e.id), '' !== e.name && t.tag(2, r.TD.LengthDelimited).string(e.name), e.createdAt && c.E.internalBinaryWrite(e.createdAt, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.creatorId && t.tag(4, r.TD.Bit64).fixed64(e.creatorId), 0 !== e.version && t.tag(5, r.TD.Varint).int32(e.version), e.editedAt && c.E.internalBinaryWrite(e.editedAt, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.editorId && t.tag(7, r.TD.Bit64).fixed64(e.editorId), '' !== e.title && t.tag(8, r.TD.LengthDelimited).string(e.title), '' !== e.description && t.tag(9, r.TD.LengthDelimited).string(e.description), e.hypothesis && l.Gm.internalBinaryWrite(e.hypothesis, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.techSpecLink && l.Gm.internalBinaryWrite(e.techSpecLink, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.revision && t.tag(12, r.TD.Varint).int32(e.revision), '' !== e.hashKey && t.tag(13, r.TD.LengthDelimited).string(e.hashKey), 0 !== e.unitType && t.tag(14, r.TD.Varint).int32(e.unitType));
-        for (let i = 0; i < e.variants.length; i++) b.internalBinaryWrite(e.variants[i], t.tag(15, r.TD.LengthDelimited).fork(), n).join();
-        for (let i = 0; i < e.rules.length; i++) s.$9.internalBinaryWrite(e.rules[i], t.tag(16, r.TD.LengthDelimited).fork(), n).join();
+        "0" !== e.id && t.tag(1, r.TD.Bit64).fixed64(e.id),
+            "" !== e.name && t.tag(2, r.TD.LengthDelimited).string(e.name),
+            e.createdAt && c.E.internalBinaryWrite(e.createdAt, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
+            "0" !== e.creatorId && t.tag(4, r.TD.Bit64).fixed64(e.creatorId),
+            0 !== e.version && t.tag(5, r.TD.Varint).int32(e.version),
+            e.editedAt && c.E.internalBinaryWrite(e.editedAt, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
+            "0" !== e.editorId && t.tag(7, r.TD.Bit64).fixed64(e.editorId),
+            "" !== e.title && t.tag(8, r.TD.LengthDelimited).string(e.title),
+            "" !== e.description && t.tag(9, r.TD.LengthDelimited).string(e.description),
+            e.hypothesis && l.Gm.internalBinaryWrite(e.hypothesis, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
+            e.techSpecLink &&
+                l.Gm.internalBinaryWrite(e.techSpecLink, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
+            0 !== e.revision && t.tag(12, r.TD.Varint).int32(e.revision),
+            "" !== e.hashKey && t.tag(13, r.TD.LengthDelimited).string(e.hashKey),
+            0 !== e.unitType && t.tag(14, r.TD.Varint).int32(e.unitType);
+        for (let i = 0; i < e.variants.length; i++)
+            b.internalBinaryWrite(e.variants[i], t.tag(15, r.TD.LengthDelimited).fork(), n).join();
+        for (let i = 0; i < e.rules.length; i++)
+            s.$9.internalBinaryWrite(e.rules[i], t.tag(16, r.TD.LengthDelimited).fork(), n).join();
         if ((0 !== e.status && t.tag(18, r.TD.Varint).int32(e.status), e.surfaces.length)) {
             t.tag(19, r.TD.LengthDelimited).fork();
             for (let n = 0; n < e.surfaces.length; n++) t.int32(e.surfaces[n]);
             t.join();
         }
-        ('' !== e.owningTeamName && t.tag(20, r.TD.LengthDelimited).string(e.owningTeamName), '0' !== e.cachedNotificationChannelId && t.tag(21, r.TD.Bit64).fixed64(e.cachedNotificationChannelId), 0 !== e.exposureTracking && t.tag(22, r.TD.Varint).int32(e.exposureTracking), 0 !== e.assignmentMode && t.tag(25, r.TD.Varint).int32(e.assignmentMode), !1 !== e.enableEditRawJsonUi && t.tag(23, r.TD.Varint).bool(e.enableEditRawJsonUi), 0 !== e.winningVariantId && t.tag(24, r.TD.Varint).int32(e.winningVariantId));
+        "" !== e.owningTeamName && t.tag(20, r.TD.LengthDelimited).string(e.owningTeamName),
+            "0" !== e.cachedNotificationChannelId && t.tag(21, r.TD.Bit64).fixed64(e.cachedNotificationChannelId),
+            0 !== e.exposureTracking && t.tag(22, r.TD.Varint).int32(e.exposureTracking),
+            0 !== e.assignmentMode && t.tag(25, r.TD.Varint).int32(e.assignmentMode),
+            !1 !== e.enableEditRawJsonUi && t.tag(23, r.TD.Varint).bool(e.enableEditRawJsonUi),
+            0 !== e.winningVariantId && t.tag(24, r.TD.Varint).int32(e.winningVariantId);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
     constructor() {
-        super('discord_protos.discord_experimentation.v1.Experiment', [
+        super("discord_protos.discord_experimentation.v1.Experiment", [
             {
                 no: 1,
-                name: 'id',
-                kind: 'scalar',
-                T: 6
+                name: "id",
+                kind: "scalar",
+                T: 6,
             },
             {
                 no: 2,
-                name: 'name',
-                kind: 'scalar',
-                T: 9
+                name: "name",
+                kind: "scalar",
+                T: 9,
             },
             {
                 no: 3,
-                name: 'created_at',
-                kind: 'message',
-                T: () => c.E
+                name: "created_at",
+                kind: "message",
+                T: () => c.E,
             },
             {
                 no: 4,
-                name: 'creator_id',
-                kind: 'scalar',
-                T: 6
+                name: "creator_id",
+                kind: "scalar",
+                T: 6,
             },
             {
                 no: 5,
-                name: 'version',
-                kind: 'scalar',
-                T: 5
+                name: "version",
+                kind: "scalar",
+                T: 5,
             },
             {
                 no: 6,
-                name: 'edited_at',
-                kind: 'message',
-                T: () => c.E
+                name: "edited_at",
+                kind: "message",
+                T: () => c.E,
             },
             {
                 no: 7,
-                name: 'editor_id',
-                kind: 'scalar',
-                T: 6
+                name: "editor_id",
+                kind: "scalar",
+                T: 6,
             },
             {
                 no: 8,
-                name: 'title',
-                kind: 'scalar',
-                T: 9
+                name: "title",
+                kind: "scalar",
+                T: 9,
             },
             {
                 no: 9,
-                name: 'description',
-                kind: 'scalar',
-                T: 9
+                name: "description",
+                kind: "scalar",
+                T: 9,
             },
             {
                 no: 10,
-                name: 'hypothesis',
-                kind: 'message',
-                T: () => l.Gm
+                name: "hypothesis",
+                kind: "message",
+                T: () => l.Gm,
             },
             {
                 no: 11,
-                name: 'tech_spec_link',
-                kind: 'message',
-                T: () => l.Gm
+                name: "tech_spec_link",
+                kind: "message",
+                T: () => l.Gm,
             },
             {
                 no: 12,
-                name: 'revision',
-                kind: 'scalar',
-                T: 5
+                name: "revision",
+                kind: "scalar",
+                T: 5,
             },
             {
                 no: 13,
-                name: 'hash_key',
-                kind: 'scalar',
-                T: 9
+                name: "hash_key",
+                kind: "scalar",
+                T: 9,
             },
             {
                 no: 14,
-                name: 'unit_type',
-                kind: 'enum',
-                T: () => ['discord_protos.discord_experimentation.v1.Experiment.UnitType', u]
+                name: "unit_type",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", u],
             },
             {
                 no: 15,
-                name: 'variants',
-                kind: 'message',
+                name: "variants",
+                kind: "message",
                 repeat: 1,
-                T: () => b
+                T: () => b,
             },
             {
                 no: 16,
-                name: 'rules',
-                kind: 'message',
+                name: "rules",
+                kind: "message",
                 repeat: 1,
-                T: () => s.$9
+                T: () => s.$9,
             },
             {
                 no: 18,
-                name: 'status',
-                kind: 'enum',
-                T: () => ['discord_protos.discord_experimentation.v1.Status', m]
+                name: "status",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Status", m],
             },
             {
                 no: 19,
-                name: 'surfaces',
-                kind: 'enum',
+                name: "surfaces",
+                kind: "enum",
                 repeat: 1,
-                T: () => ['discord_protos.discord_experimentation.v1.Experiment.Surface', d]
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Surface", d],
             },
             {
                 no: 20,
-                name: 'owning_team_name',
-                kind: 'scalar',
-                T: 9
+                name: "owning_team_name",
+                kind: "scalar",
+                T: 9,
             },
             {
                 no: 21,
-                name: 'cached_notification_channel_id',
-                kind: 'scalar',
-                T: 6
+                name: "cached_notification_channel_id",
+                kind: "scalar",
+                T: 6,
             },
             {
                 no: 22,
-                name: 'exposure_tracking',
-                kind: 'enum',
-                T: () => ['discord_protos.discord_experimentation.v1.Experiment.ExposureTracking', f]
+                name: "exposure_tracking",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.ExposureTracking", f],
             },
             {
                 no: 25,
-                name: 'assignment_mode',
-                kind: 'enum',
-                T: () => ['discord_protos.discord_experimentation.v1.Experiment.AssignmentMode', _]
+                name: "assignment_mode",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", _],
             },
             {
                 no: 23,
-                name: 'enable_edit_raw_json_ui',
-                kind: 'scalar',
-                T: 8
+                name: "enable_edit_raw_json_ui",
+                kind: "scalar",
+                T: 8,
             },
             {
                 no: 24,
-                name: 'winning_variant_id',
-                kind: 'scalar',
-                T: 5
-            }
+                name: "winning_variant_id",
+                kind: "scalar",
+                T: 5,
+            },
         ]);
     }
 }
@@ -326,15 +383,15 @@ class E extends a.C {
     create(e) {
         let t = {
             id: 0,
-            label: '',
+            label: "",
             targetAllocation: 0,
             allocations: [],
-            type: 0
+            type: 0,
         };
         return (
             globalThis.Object.defineProperty(t, o.C, {
                 enumerable: !1,
-                value: this
+                value: this,
             }),
             void 0 !== e && (0, i.l)(this, t, e),
             t
@@ -363,7 +420,10 @@ class E extends a.C {
                     break;
                 default:
                     let a = n.readUnknownField;
-                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                    if ("throw" === a)
+                        throw new globalThis.Error(
+                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                        );
                     let s = e.skip(i);
                     !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, s);
             }
@@ -371,45 +431,48 @@ class E extends a.C {
         return o;
     }
     internalBinaryWrite(e, t, n) {
-        (0 !== e.id && t.tag(1, r.TD.Varint).int32(e.id), '' !== e.label && t.tag(2, r.TD.LengthDelimited).string(e.label), 0 !== e.targetAllocation && t.tag(3, r.TD.Varint).int32(e.targetAllocation));
-        for (let i = 0; i < e.allocations.length; i++) O.internalBinaryWrite(e.allocations[i], t.tag(4, r.TD.LengthDelimited).fork(), n).join();
+        0 !== e.id && t.tag(1, r.TD.Varint).int32(e.id),
+            "" !== e.label && t.tag(2, r.TD.LengthDelimited).string(e.label),
+            0 !== e.targetAllocation && t.tag(3, r.TD.Varint).int32(e.targetAllocation);
+        for (let i = 0; i < e.allocations.length; i++)
+            O.internalBinaryWrite(e.allocations[i], t.tag(4, r.TD.LengthDelimited).fork(), n).join();
         0 !== e.type && t.tag(5, r.TD.Varint).int32(e.type);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
     constructor() {
-        super('discord_protos.discord_experimentation.v1.Variant', [
+        super("discord_protos.discord_experimentation.v1.Variant", [
             {
                 no: 1,
-                name: 'id',
-                kind: 'scalar',
-                T: 5
+                name: "id",
+                kind: "scalar",
+                T: 5,
             },
             {
                 no: 2,
-                name: 'label',
-                kind: 'scalar',
-                T: 9
+                name: "label",
+                kind: "scalar",
+                T: 9,
             },
             {
                 no: 3,
-                name: 'target_allocation',
-                kind: 'scalar',
-                T: 5
+                name: "target_allocation",
+                kind: "scalar",
+                T: 5,
             },
             {
                 no: 4,
-                name: 'allocations',
-                kind: 'message',
+                name: "allocations",
+                kind: "message",
                 repeat: 1,
-                T: () => O
+                T: () => O,
             },
             {
                 no: 5,
-                name: 'type',
-                kind: 'enum',
-                T: () => ['discord_protos.discord_experimentation.v1.Variant.Type', p]
-            }
+                name: "type",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Variant.Type", p],
+            },
         ]);
     }
 }
@@ -419,12 +482,12 @@ class y extends a.C {
         let t = {
             start: 0,
             stop: 0,
-            type: 0
+            type: 0,
         };
         return (
             globalThis.Object.defineProperty(t, o.C, {
                 enumerable: !1,
-                value: this
+                value: this,
             }),
             void 0 !== e && (0, i.l)(this, t, e),
             t
@@ -447,7 +510,10 @@ class y extends a.C {
                     break;
                 default:
                     let a = n.readUnknownField;
-                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                    if ("throw" === a)
+                        throw new globalThis.Error(
+                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                        );
                     let s = e.skip(i);
                     !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, s);
             }
@@ -455,30 +521,32 @@ class y extends a.C {
         return o;
     }
     internalBinaryWrite(e, t, n) {
-        (0 !== e.start && t.tag(1, r.TD.Varint).int32(e.start), 0 !== e.stop && t.tag(2, r.TD.Varint).int32(e.stop), 0 !== e.type && t.tag(3, r.TD.Varint).int32(e.type));
+        0 !== e.start && t.tag(1, r.TD.Varint).int32(e.start),
+            0 !== e.stop && t.tag(2, r.TD.Varint).int32(e.stop),
+            0 !== e.type && t.tag(3, r.TD.Varint).int32(e.type);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
     constructor() {
-        super('discord_protos.discord_experimentation.v1.VariantAllocation', [
+        super("discord_protos.discord_experimentation.v1.VariantAllocation", [
             {
                 no: 1,
-                name: 'start',
-                kind: 'scalar',
-                T: 5
+                name: "start",
+                kind: "scalar",
+                T: 5,
             },
             {
                 no: 2,
-                name: 'stop',
-                kind: 'scalar',
-                T: 5
+                name: "stop",
+                kind: "scalar",
+                T: 5,
             },
             {
                 no: 3,
-                name: 'type',
-                kind: 'enum',
-                T: () => ['discord_protos.discord_experimentation.v1.VariantAllocation.Type', h]
-            }
+                name: "type",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.VariantAllocation.Type", h],
+            },
         ]);
     }
 }

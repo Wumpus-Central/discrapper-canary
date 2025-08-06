@@ -1,4 +1,4 @@
-(n.d(e, { Z: () => d }), n(388685));
+n.d(e, { Z: () => d }), n(388685);
 var r = n(255367);
 n(73800);
 var o = n(442837),
@@ -11,29 +11,25 @@ var o = n(442837),
     f = n(981631),
     b = n(388032);
 function d(t, e, n) {
-    let [d, p] = (0, o.Wu)(
-            [u.Z, a.Z, l.Z],
-            () => {
-                let t = u.Z.getChannelId(e),
-                    n = a.Z.getChannel(t);
-                return [t, null != n && (n.isPrivate() || l.Z.can(f.Plq.SEND_MESSAGES, n))];
-            },
-            [e]
-        ),
+    let [d, p] = (0, o.Wu)([u.Z, a.Z, l.Z], () => {
+            let t = u.Z.getChannelId(e),
+                n = a.Z.getChannel(t);
+            return [t, null != n && (n.isPrivate() || l.Z.can(f.Plq.SEND_MESSAGES, n))];
+        }, [e]),
         v = n === f.IlC.POPOUT;
     return !p || v
         ? null
         : (0, r.jsx)(i.sNh, {
-              id: 'mention',
+              id: "mention",
               label: b.intl.string(b.t.P8tvKC),
               action: function () {
                   let { id: e } = t,
-                      n = '@'.concat(t.name);
-                  (s.S.dispatchToLastSubscribed(f.CkL.INSERT_TEXT, {
+                      n = "@".concat(t.name);
+                  s.S.dispatchToLastSubscribed(f.CkL.INSERT_TEXT, {
                       plainText: n,
-                      rawText: '<@$'.concat(e, '>')
+                      rawText: "<@$".concat(e, ">"),
                   }),
-                      null != d && c.Z.startTyping(d));
-              }
+                      null != d && c.Z.startTyping(d);
+              },
           });
 }

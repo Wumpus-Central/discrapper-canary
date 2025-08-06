@@ -13,8 +13,8 @@ function s(e) {
                 let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return await (0, o.CR)(e, t);
             },
-            [e]
+            [e],
         ),
-        fetchStatus: n
+        fetchStatus: n,
     };
 }

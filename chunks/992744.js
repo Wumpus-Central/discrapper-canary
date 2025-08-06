@@ -17,7 +17,7 @@ let g = () => {
         o.ZP.trackWithMetadata(u.rMx.GUILD_OUTAGE_VIEWED, {});
     }, []);
     let t = (0, l.wj)(e) ? p : f;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: h.container,
         children: [
             (0, r.jsxs)(c.Z, {
@@ -25,31 +25,31 @@ let g = () => {
                 children: [
                     (0, r.jsx)(c.Z.Icon, {
                         icon: a.VL1,
-                        'aria-hidden': !0
+                        "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(c.Z.Title, { children: d.intl.string(d.t['8LKcho']) })
-                ]
+                    (0, r.jsx)(c.Z.Title, { children: d.intl.string(d.t["8LKcho"]) }),
+                ],
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.content,
                 children: [
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("img", {
+                        alt: "",
                         className: h.splashImage,
-                        src: t
+                        src: t,
                     }),
                     (0, r.jsx)(a.X6q, {
                         className: h.splashHeader,
-                        variant: 'heading-lg/medium',
-                        children: d.intl.string(d.t.m9gRVF)
+                        variant: "heading-lg/medium",
+                        children: d.intl.string(d.t.m9gRVF),
                     }),
                     (0, r.jsx)(a.Text, {
                         className: h.splashText,
-                        variant: 'text-md/normal',
-                        children: d.intl.string(d.t['wC3j5+'])
-                    })
-                ]
-            })
-        ]
+                        variant: "text-md/normal",
+                        children: d.intl.string(d.t["wC3j5+"]),
+                    }),
+                ],
+            }),
+        ],
     });
 };

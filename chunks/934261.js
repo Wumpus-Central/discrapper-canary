@@ -28,24 +28,24 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -64,77 +64,93 @@ let I = (e) => {
             N = (0, p.M)(!x || b),
             D = w(O, x, b, N);
         return null != r
-            ? (0, n.jsx)('div', {
+            ? (0, n.jsx)("div", {
                   className: t ? S.effectDescriptionNoGradient : S.effectDescriptionBorderWithGradient,
-                  children: (0, n.jsxs)('div', {
+                  children: (0, n.jsxs)("div", {
                       className: S.effectDescriptionContainer,
                       children: [
                           (0, n.jsx)(o.Text, {
-                              color: 'header-primary',
-                              variant: 'text-sm/semibold',
+                              color: "header-primary",
+                              variant: "text-sm/semibold",
                               className: S.effectName,
-                              children: (0, i.isEmpty)(I) ? Z : I
+                              children: (0, i.isEmpty)(I) ? Z : I,
                           }),
                           null != f
                               ? null
                               : (0, n.jsx)(o.Text, {
-                                    color: 'text-default',
-                                    variant: 'text-sm/normal',
+                                    color: "text-default",
+                                    variant: "text-sm/normal",
                                     className: S.effectDescription,
-                                    children: D
+                                    children: D,
                                 }),
                           null != C &&
                               (0, n.jsx)(o.Text, {
-                                  variant: 'text-xxs/normal',
-                                  color: 'text-muted',
+                                  variant: "text-xxs/normal",
+                                  color: "text-muted",
                                   className: S.effectPurchasedAt,
-                                  children: _.intl.format(_.t.Io7ozs, { days: C.days.toString() })
+                                  children: _.intl.format(_.t.Io7ozs, { days: C.days.toString() }),
                               }),
                           null != f &&
                               (0, n.jsxs)(o.Text, {
-                                  variant: 'text-xxs/normal',
-                                  color: 'text-muted',
+                                  variant: "text-xxs/normal",
+                                  color: "text-muted",
                                   className: S.effectPurchasedAt,
                                   children: [
                                       _.intl.format(_.t.gW9R4O, {
                                           date: f.purchasedAt.toLocaleDateString(h, {
-                                              month: 'long',
-                                              year: 'numeric'
-                                          })
+                                              month: "long",
+                                              year: "numeric",
+                                          }),
                                       }),
                                       null != f.expiresAt &&
                                           (0, n.jsxs)(n.Fragment, {
                                               children: [
-                                                  (0, n.jsx)('br', {}),
+                                                  (0, n.jsx)("br", {}),
                                                   _.intl.format(_.t.eZSTa2, {
                                                       date: f.expiresAt.toLocaleDateString(h, {
-                                                          minute: 'numeric',
-                                                          hour: 'numeric',
-                                                          day: 'numeric',
-                                                          month: 'long',
-                                                          year: 'numeric'
-                                                      })
-                                                  })
-                                              ]
-                                          })
-                                  ]
+                                                          minute: "numeric",
+                                                          hour: "numeric",
+                                                          day: "numeric",
+                                                          month: "long",
+                                                          year: "numeric",
+                                                      }),
+                                                  }),
+                                              ],
+                                          }),
+                                  ],
                               }),
                           y &&
                               (0, n.jsx)(o.Text, {
-                                  variant: 'text-xxs/normal',
-                                  color: 'text-muted',
+                                  variant: "text-xxs/normal",
+                                  color: "text-muted",
                                   className: S.effectPurchasedAt,
-                                  children: _.intl.string(_.t.nKdAlJ)
-                              })
-                      ]
-                  })
+                                  children: _.intl.string(_.t.nKdAlJ),
+                              }),
+                      ],
+                  }),
               })
             : null;
     },
-    w = (e, t, r, n) => (e ? _.intl.string(_.t['1UPza2']) : t && r ? _.intl.string(_.t.hmyYKy) : t && !r ? (n ? _.intl.string(_.t.meldu7) : _.intl.string(_.t.JtAKws)) : _.intl.string(_.t.fEGjVV)),
+    w = (e, t, r, n) =>
+        e
+            ? _.intl.string(_.t["1UPza2"])
+            : t && r
+              ? _.intl.string(_.t.hmyYKy)
+              : t && !r
+                ? n
+                    ? _.intl.string(_.t.meldu7)
+                    : _.intl.string(_.t.JtAKws)
+                : _.intl.string(_.t.fEGjVV),
     Z = (e) => {
         var t, r, i;
-        let { user: o, pendingProfileEffectRecord: s, canApplySelectedChange: c, product: a, purchase: u, guild: p } = e,
+        let {
+                user: o,
+                pendingProfileEffectRecord: s,
+                canApplySelectedChange: c,
+                product: a,
+                purchase: u,
+                guild: p,
+            } = e,
             {
                 pendingGlobalName: j,
                 pendingNickname: v,
@@ -144,16 +160,16 @@ let I = (e) => {
                 pendingAvatar: Z,
                 pendingAvatarDecoration: N,
                 pendingThemeColors: D,
-                pendingAccentColor: k
+                pendingAccentColor: k,
             } = (0, l.cj)([d.Z, O.Z], () =>
                 C(
                     {
                         pendingNickname: void 0,
                         pendingGlobalName: void 0,
-                        pendingAccentColor: void 0
+                        pendingAccentColor: void 0,
                     },
-                    null != p ? d.Z.getAllPending() : O.Z.getAllPending()
-                )
+                    null != p ? d.Z.getAllPending() : O.Z.getAllPending(),
+                ),
             ),
             A = E.ZP.isPremium(o),
             T = E.ZP.canUsePremiumProfileCustomization(o),
@@ -170,7 +186,7 @@ let I = (e) => {
                 useLargeBanner: !0,
                 pendingAvatar: (0, g.SD)({
                     userId: o.id,
-                    image: Z
+                    image: Z,
                 }),
                 pendingAvatarDecoration: N,
                 pendingThemeColors: D,
@@ -179,9 +195,9 @@ let I = (e) => {
                 hideFakeActivity: R,
                 canUsePremiumCustomization: T,
                 onUpsellClick: x.Z,
-                onBannerChange: h.g_
+                onBannerChange: h.g_,
             };
-        return (0, n.jsxs)('div', {
+        return (0, n.jsxs)("div", {
             className: S.previewContainer,
             children: [
                 (0, n.jsx)(
@@ -190,7 +206,7 @@ let I = (e) => {
                     (i = i =
                         {
                             disabledInputs: !0,
-                            hideCustomStatus: !0
+                            hideCustomStatus: !0,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -204,7 +220,7 @@ let I = (e) => {
                           })(Object(i)).forEach(function (e) {
                               Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                           }),
-                    r)
+                    r),
                 ),
                 !1,
                 (0, n.jsx)(I, {
@@ -212,8 +228,8 @@ let I = (e) => {
                     pendingProfileEffectRecord: s,
                     product: a,
                     purchase: u,
-                    userIsPremium: A
-                })
-            ]
+                    userIsPremium: A,
+                }),
+            ],
         });
     };

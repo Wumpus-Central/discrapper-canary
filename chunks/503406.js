@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -17,7 +17,7 @@ var r = n(255367),
 let _ = (0, h.hQ)(),
     v = (e) => {
         let { email: t, guildId: n, onClose: i } = e,
-            [s, h] = l.useState(''),
+            [s, h] = l.useState(""),
             [v, N] = l.useState(null),
             E = l.useCallback(async () => {
                 if (null != n)
@@ -32,45 +32,45 @@ let _ = (0, h.hQ)(),
                 u.Z.sendVerificationEmail(t, !0, n);
             }, 1000),
             y = async (e) => {
-                null != s && '' !== s && e.charCode === x.yXg.ENTER && (await E());
+                null != s && "" !== s && e.charCode === x.yXg.ENTER && (await E());
             };
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: g.container,
             children: [
-                (0, r.jsx)('div', { className: g.topImage }),
+                (0, r.jsx)("div", { className: g.topImage }),
                 (0, r.jsx)(d.X6q, {
                     className: a()(g.centerText, g.header),
-                    variant: 'heading-xl/semibold',
-                    children: p.intl.string(p.t.SJ3Lxc)
+                    variant: "heading-xl/semibold",
+                    children: p.intl.string(p.t.SJ3Lxc),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: g.descriptionWidth,
                     children: (0, r.jsx)(d.Text, {
                         className: g.centerText,
-                        variant: 'text-sm/normal',
-                        color: 'header-secondary',
-                        children: p.intl.format(p.t['b+W0oq'], {
+                        variant: "text-sm/normal",
+                        color: "header-secondary",
+                        children: p.intl.format(p.t["b+W0oq"], {
                             email: t,
-                            onClick: S
-                        })
-                    })
+                            onClick: S,
+                        }),
+                    }),
                 }),
                 (0, r.jsxs)(d.xJW, {
                     className: g.formItem,
                     children: [
                         (0, r.jsx)(d.vwX, {
                             id: _,
-                            children: p.intl.string(p.t.rpWT1t)
+                            children: p.intl.string(p.t.rpWT1t),
                         }),
                         (0, r.jsx)(d.oil, {
                             onKeyPress: y,
                             onChange: (e) => {
-                                null != e && '' !== e && h(e);
+                                null != e && "" !== e && h(e);
                             },
                             error: null == v ? void 0 : v.getAnyErrorMessage(),
-                            'aria-labelledby': _
-                        })
-                    ]
+                            "aria-labelledby": _,
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(c.zx, {
                     fullWidth: !0,
@@ -79,10 +79,10 @@ let _ = (0, h.hQ)(),
                     color: c.zx.Colors.BRAND,
                     children: (0, r.jsx)(d.Text, {
                         className: g.submitText,
-                        variant: 'text-sm/normal',
-                        children: p.intl.string(p.t.geKm7u)
-                    })
-                })
-            ]
+                        variant: "text-sm/normal",
+                        children: p.intl.string(p.t.geKm7u),
+                    }),
+                }),
+            ],
         });
     };

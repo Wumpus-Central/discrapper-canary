@@ -5,13 +5,13 @@ var i = n(925549),
     a = n(944486),
     l = n(981631);
 let o = {
-    binds: ['mod+alt+left'],
+    binds: ["mod+alt+left"],
     comboKeysBindGlobal: !0,
     action() {
         var e;
         if (!s.Z.isConnected()) return !1;
         let t = null != (e = s.Z.getGuildId()) ? e : l.ME,
             n = a.Z.getChannelId(t);
-        return ((0, r.K)(t, n), i.Z.channelListScrollTo(t, s.Z.getChannelId()), !1);
-    }
+        return (0, r.K)(t, n), i.Z.channelListScrollTo(t, s.Z.getChannelId()), !1;
+    },
 };

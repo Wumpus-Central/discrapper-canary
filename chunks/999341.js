@@ -1,42 +1,42 @@
-(t(864733)(r, '__esModule', { value: !0 }),
+t(864733)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
         accessibleNameRequired: !0,
         baseConcepts: [],
         childrenPresentational: !1,
-        nameFrom: ['author', 'contents'],
+        nameFrom: ["author", "contents"],
         prohibitedProps: [],
         props: {
-            'aria-disabled': null,
-            'aria-expanded': null
+            "aria-disabled": null,
+            "aria-expanded": null,
         },
         relatedConcepts: [
             {
                 concept: {
-                    attributes: [{ name: 'href' }],
-                    name: 'a'
+                    attributes: [{ name: "href" }],
+                    name: "a",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
-                    attributes: [{ name: 'href' }],
-                    name: 'area'
+                    attributes: [{ name: "href" }],
+                    name: "area",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
-                    attributes: [{ name: 'href' }],
-                    name: 'link'
+                    attributes: [{ name: "href" }],
+                    name: "link",
                 },
-                module: 'HTML'
-            }
+                module: "HTML",
+            },
         ],
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
         requiredProps: {},
-        superClass: [['roletype', 'widget', 'command']]
-    }));
+        superClass: [["roletype", "widget", "command"]],
+    });

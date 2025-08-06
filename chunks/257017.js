@@ -10,6 +10,6 @@ function a(e) {
         cancelText: s.intl.string(s.t.psXQHB),
         onCancel() {
             window.open(l.Z.getArticleURL(r.BhN.PERMISSIONS_LOCKOUT));
-        }
+        },
     });
 }

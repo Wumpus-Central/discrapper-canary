@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(997841));
+n.d(t, { Z: () => v }), n(997841);
 var i = n(255367),
     r = n(73800),
     l = n(131388),
@@ -20,24 +20,36 @@ function v(e) {
     let v,
         j,
         { showBenefits: y, handleClose: C, onSubscriptionConfirmation: O } = e,
-        { updatedSubscription: S, readySlideId: P, selectedSku: N, selectedStoreListing: k, application: _ } = (0, d.JL)(),
+        {
+            updatedSubscription: S,
+            readySlideId: P,
+            selectedSku: N,
+            selectedStoreListing: k,
+            application: _,
+        } = (0, d.JL)(),
         E = (0, l.Z)(g.i),
         { createMultipleConfettiAt: T } = r.useContext(o.h),
-        w = null != (t = null == N ? void 0 : N.name) ? t : '',
+        w = null != (t = null == N ? void 0 : N.name) ? t : "",
         Z = () => {
-            (C(), null == O || O());
+            C(), null == O || O();
         },
         I = P === m.h8.CONFIRM,
         A = (0, s.KW)(null != (n = null == N ? void 0 : N.flags) ? n : 0),
-        D = null != k && k.benefits.length > 0 ? x.intl.formatToPlainString(x.t['+IQQVF'], { benefitCount: k.benefits.length }) : null;
+        D =
+            null != k && k.benefits.length > 0
+                ? x.intl.formatToPlainString(x.t["+IQQVF"], { benefitCount: k.benefits.length })
+                : null;
     return (
         y
             ? E
                 ? (v = (0, i.jsx)(u.h, {
                       title: x.intl.format(x.t.ea6tZm, { tierName: w }),
-                      subtitle: null != k && k.benefits.length > 0 ? x.intl.formatToPlainString(x.t.HNepfn, { benefits: D }) : null,
+                      subtitle:
+                          null != k && k.benefits.length > 0
+                              ? x.intl.formatToPlainString(x.t.HNepfn, { benefits: D })
+                              : null,
                       onConfirm: Z,
-                      confirmCta: x.intl.string(x.t.nlkyw8)
+                      confirmCta: x.intl.string(x.t.nlkyw8),
                   }))
                 : ((v =
                       null != k && null != _
@@ -45,26 +57,28 @@ function v(e) {
                                 icon: k.thumbnail,
                                 storeListingBenefits: k.benefits,
                                 application: _,
-                                title: x.intl.format(x.t['Q+qktb'], { tier: w }),
+                                title: x.intl.format(x.t["Q+qktb"], { tier: w }),
                                 subtitle: x.intl.string(x.t.ECKxXV),
-                                description: A ? x.intl.format(x.t.MAtQk5, { applicationName: null == _ ? void 0 : _.name }) : x.intl.format(x.t.vHkMFx, { tier: w })
+                                description: A
+                                    ? x.intl.format(x.t.MAtQk5, { applicationName: null == _ ? void 0 : _.name })
+                                    : x.intl.format(x.t.vHkMFx, { tier: w }),
                             })
                           : (0, i.jsx)(p.Z, {})),
                   (j = (0, i.jsx)(f.Z, {
                       onPrimary: Z,
                       primaryCTA: f.g.CONTINUE,
-                      primaryText: x.intl.string(x.t['JtWl+f'])
+                      primaryText: x.intl.string(x.t["JtWl+f"]),
                   })))
             : (v = E
                   ? (0, i.jsx)(u.m, {
                         tierName: w,
                         onConfirm: Z,
-                        subscription: S
+                        subscription: S,
                     })
                   : (0, i.jsx)(c.xe, {
                         tierName: w,
                         onConfirm: Z,
-                        subscription: S
+                        subscription: S,
                     })),
         r.useEffect(() => {
             a.Z.useReducedMotion && I && T(window.innerWidth / 2, window.innerHeight / 2);
@@ -72,10 +86,10 @@ function v(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(b.C3, {
-                    children: [(0, i.jsx)(h.Z, {}), v]
+                    children: [(0, i.jsx)(h.Z, {}), v],
                 }),
-                null != j && (0, i.jsx)(b.O3, { children: j })
-            ]
+                null != j && (0, i.jsx)(b.O3, { children: j }),
+            ],
         })
     );
 }

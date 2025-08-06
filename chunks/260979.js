@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(539854));
+n.d(t, { Z: () => s }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(965288),
@@ -15,14 +15,14 @@ let s = i.memo(function (e) {
                     l.Z,
                     {
                         channel: t,
-                        participant: i
+                        participant: i,
                     },
-                    i.id
-                )
+                    i.id,
+                ),
             );
         } else s.push((0, r.jsx)(l.y, {}, e));
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a.participants,
-        children: s
+        children: s,
     });
 });

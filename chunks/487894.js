@@ -10,45 +10,45 @@ function c(e) {
     let { channel: t, header: n, startThread: c } = e,
         d = (0, s.NE)(t),
         u = (0, s.Xu)(t);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: i.container,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: i.iconContainer,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: i.icon,
                         children: (0, r.jsx)(l.or_, {
-                            size: 'custom',
-                            color: 'currentColor',
+                            size: "custom",
+                            color: "currentColor",
                             width: 36,
-                            height: 36
-                        })
+                            height: 36,
+                        }),
                     }),
-                    (0, r.jsx)(a.Z, { className: i.stars })
-                ]
+                    (0, r.jsx)(a.Z, { className: i.stars }),
+                ],
             }),
             (0, r.jsx)(l.X6q, {
                 className: i.header,
-                variant: 'heading-xl/semibold',
-                children: n
+                variant: "heading-xl/semibold",
+                children: n,
             }),
             (0, r.jsx)(l.Text, {
-                color: 'header-secondary',
-                variant: 'text-md/normal',
-                children: o.intl.string(o.t.jmq9GB)
+                color: "header-secondary",
+                variant: "text-md/normal",
+                children: o.intl.string(o.t.jmq9GB),
             }),
             d || u
-                ? (0, r.jsx)('div', {
-                      'data-button-hoisted-classname-wrapper': !0,
+                ? (0, r.jsx)("div", {
+                      "data-button-hoisted-classname-wrapper": !0,
                       className: i.cta,
                       children: (0, r.jsx)(l.zxk, {
-                          variant: 'primary',
+                          variant: "primary",
                           text: o.intl.string(o.t.rBIGBA),
-                          onClick: c
-                      })
+                          onClick: c,
+                      }),
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

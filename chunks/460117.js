@@ -15,11 +15,11 @@ function u(e) {
             let { emoji: l, willClose: r } = t;
             null != l &&
                 (null == l.id
-                    ? m({ name: null != (n = l.optionallyDiverseSequence) ? n : '' })
+                    ? m({ name: null != (n = l.optionallyDiverseSequence) ? n : "" })
                     : m({
                           id: l.id,
                           name: null != (i = l.originalName) ? i : l.name,
-                          animated: l.animated
+                          animated: l.animated,
                       }),
                 r && e());
         },
@@ -32,7 +32,7 @@ function u(e) {
                           className: n,
                           animated: null != (e = u.animated) && e,
                           emojiId: u.id,
-                          emojiName: u.name
+                          emojiName: u.name,
                       });
                   };
     return (0, i.jsx)(c.Z, {
@@ -42,14 +42,14 @@ function u(e) {
         },
         children: (0, i.jsx)(r.yRy, {
             targetElementRef: v,
-            position: 'bottom',
+            position: "bottom",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, i.jsx)(a.Z, {
                     closePopout: t,
                     onSelectEmoji: h(t),
                     pickerIntention: d.Hz.COMMUNITY_CONTENT,
-                    channel: j
+                    channel: j,
                 });
             },
             children: (e, n) => {
@@ -61,24 +61,24 @@ function u(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    ((i = n[t]),
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = i));
-                                }));
+                                            : (e[t] = i);
+                                });
                         }
                         return e;
                     })({}, e)),
@@ -88,7 +88,7 @@ function u(e) {
                             tabIndex: 0,
                             active: o,
                             className: t,
-                            renderButtonContents: p
+                            renderButtonContents: p,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
@@ -102,9 +102,9 @@ function u(e) {
                           })(Object(r)).forEach(function (e) {
                               Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
-                    l)
+                    l),
                 );
-            }
-        })
+            },
+        }),
     });
 }

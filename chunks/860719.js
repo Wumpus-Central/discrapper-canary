@@ -1,4 +1,4 @@
-(n.d(t, { w: () => a }), n(997841));
+n.d(t, { w: () => a }), n(997841);
 var r = n(85025);
 function a(e) {
     let { flags: t } = e,
@@ -10,6 +10,6 @@ function a(e) {
         hasMessageContent: a,
         hasGuildPresences: i,
         hasGuildMembers: l,
-        hasIntents: a || i || l
+        hasIntents: a || i || l,
     };
 }

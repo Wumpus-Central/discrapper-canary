@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     U: () => c,
-    Z: () => u
+    Z: () => u,
 }),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(314897),
     o = n(271383),
@@ -10,7 +10,12 @@ var r = n(442837),
     s = n(430824),
     l = n(981631);
 function c(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == e ? null : o.ZP.getMember(e, i.default.getId()),
+    let n =
+            arguments.length > 2 && void 0 !== arguments[2]
+                ? arguments[2]
+                : null == e
+                  ? null
+                  : o.ZP.getMember(e, i.default.getId()),
         [r] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [s.Z],
         a = r.getGuild(e);
     if (null == a || null == n || !a.features.has(l.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) return !1;

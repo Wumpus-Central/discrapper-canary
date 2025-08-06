@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     IZ: () => f,
     Re: () => s,
-    j_: () => _
+    j_: () => _,
 }),
     n(953529),
     n(539854),
-    n(388685));
+    n(388685);
 var r = n(512722),
     i = n.n(r),
     o = n(668757);
@@ -16,30 +16,43 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 let s = [],
-    l = Symbol('unknown');
+    l = Symbol("unknown");
 class c {
     getEnabledFeatureName() {
         let e = this.getCachedConfig();
-        return void 0 === e || e.treatmentId <= 0 ? null : ''.concat(this.id, ':').concat(e.treatmentId);
+        return void 0 === e || e.treatmentId <= 0 ? null : "".concat(this.id, ":").concat(e.treatmentId);
     }
     getCachedConfig() {
-        return (this.cachedConfig === l && ((0, o.X6)() ? (this.cachedConfig = (0, o.Md)().getConfig(this.id)) : (this.cachedConfig = void 0)), this.cachedConfig);
+        return (
+            this.cachedConfig === l &&
+                ((0, o.X6)() ? (this.cachedConfig = (0, o.Md)().getConfig(this.id)) : (this.cachedConfig = void 0)),
+            this.cachedConfig
+        );
     }
     setExperiment(e) {
         this.inner = e;
     }
     getCurrentConfig() {
-        return (i()(null != this.inner, 'experiment must be set before calling getCurrentConfig'), this.inner.getCurrentConfig({ location: 'default' }));
+        return (
+            i()(null != this.inner, "experiment must be set before calling getCurrentConfig"),
+            this.inner.getCurrentConfig({ location: "default" })
+        );
     }
     constructor(e) {
-        (a(this, 'id', void 0), a(this, 'inner', void 0), a(this, 'cachedConfig', void 0), (this.id = e), (this.inner = null), (this.cachedConfig = l), s.push(this));
+        a(this, "id", void 0),
+            a(this, "inner", void 0),
+            a(this, "cachedConfig", void 0),
+            (this.id = e),
+            (this.inner = null),
+            (this.cachedConfig = l),
+            s.push(this);
     }
 }
 class u extends c {
@@ -48,62 +61,62 @@ class u extends c {
         let t = this.getCachedConfig();
         switch (null != (e = null == t ? void 0 : t.treatmentId) ? e : -1) {
             case 1:
-                return 'typescript-libdiscore-dual-read';
+                return "typescript-libdiscore-dual-read";
             case 2:
-                return 'libdiscore';
+                return "libdiscore";
             default:
-                return 'typescript';
+                return "typescript";
         }
     }
     getEnabledFeatureName() {
         let e = this.getCachedKvStoreMode();
-        return 'typescript' === e ? null : 'KvStore['.concat(this.storeName, ',').concat(e, ']');
+        return "typescript" === e ? null : "KvStore[".concat(this.storeName, ",").concat(e, "]");
     }
     getLabel() {
-        return 'libdiscore KVStore['.concat(this.storeName, '] Migration');
+        return "libdiscore KVStore[".concat(this.storeName, "] Migration");
     }
     getTreatments() {
         return [
             {
                 treatmentId: 0,
-                label: 'Use typescript as the source of truth'
+                label: "Use typescript as the source of truth",
             },
             {
                 treatmentId: 1,
-                label: 'Typescript <-> libdiscore Dual Read, Typescript is the source of truth'
+                label: "Typescript <-> libdiscore Dual Read, Typescript is the source of truth",
             },
             {
                 treatmentId: 2,
-                label: 'Use libdiscore as the source of truth'
-            }
+                label: "Use libdiscore as the source of truth",
+            },
         ];
     }
     constructor(e, t) {
-        (super(e), a(this, 'storeName', void 0), (this.storeName = t));
+        super(e), a(this, "storeName", void 0), (this.storeName = t);
     }
 }
 class d extends c {
     getLabel() {
-        return 'libdiscore Telemetry';
+        return "libdiscore Telemetry";
     }
     getTreatments() {
         return [
             {
                 treatmentId: 0,
-                label: 'Disabled'
+                label: "Disabled",
             },
             {
                 treatmentId: 1,
-                label: 'Enabled (1% sample rate)'
+                label: "Enabled (1% sample rate)",
             },
             {
                 treatmentId: 2,
-                label: 'Enabled (5% sample rate)'
+                label: "Enabled (5% sample rate)",
             },
             {
                 treatmentId: 3,
-                label: 'Enabled (100% sample rate)'
-            }
+                label: "Enabled (100% sample rate)",
+            },
         ];
     }
     getMetricsSampleRate() {
@@ -124,12 +137,14 @@ class d extends c {
     }
     shouldCollectMetrics() {
         let e = this.getMetricsSampleRate();
-        return 0 !== e && (1 === e || (!(this.emissionsCount >= this.MAX_EMISSIONS_PER_APP_LAUNCH) && Math.random() < e));
+        return (
+            0 !== e && (1 === e || (!(this.emissionsCount >= this.MAX_EMISSIONS_PER_APP_LAUNCH) && Math.random() < e))
+        );
     }
     constructor(...e) {
-        (super(...e), a(this, 'MAX_EMISSIONS_PER_APP_LAUNCH', 5), a(this, 'emissionsCount', 0));
+        super(...e), a(this, "MAX_EMISSIONS_PER_APP_LAUNCH", 5), a(this, "emissionsCount", 0);
     }
 }
-let f = new u('2025-05_libdiscore_notestore_v2', 'NoteStore'),
-    _ = new u('2025-07_libdiscore_guildstore_v2', 'GuildStore');
-new d('2025-07_libdiscore_telemetry');
+let f = new u("2025-05_libdiscore_notestore_v2", "NoteStore"),
+    _ = new u("2025-07_libdiscore_guildstore_v2", "GuildStore");
+new d("2025-07_libdiscore_telemetry");

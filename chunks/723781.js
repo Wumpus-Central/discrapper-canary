@@ -1,1 +1,1 @@
-e.exports = { questsCollectibleReward: 'questsCollectibleReward__16be0' };
+e.exports = { questsCollectibleReward: "questsCollectibleReward__16be0" };

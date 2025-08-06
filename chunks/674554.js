@@ -16,5 +16,5 @@ var e = n(658971),
     };
 t.exports = {
     includes: u(!0),
-    indexOf: u(!1)
+    indexOf: u(!1),
 };

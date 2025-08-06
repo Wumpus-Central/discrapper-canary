@@ -11,24 +11,24 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -42,7 +42,7 @@ function p(e) {
             null != b &&
                 m() &&
                 (0, l.ZDy)(async () => {
-                    let { default: e } = await n.e('78786').then(n.bind(n, 50474));
+                    let { default: e } = await n.e("78786").then(n.bind(n, 50474));
                     return (n) =>
                         (0, i.jsx)(
                             e,
@@ -52,17 +52,17 @@ function p(e) {
                                     applicationId: b.applicationId,
                                     applicationName: p,
                                     command: b,
-                                    guildId: g
+                                    guildId: g,
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         );
                 });
         }, [t, p, m, b, g]),
         x = r.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
-                    let { default: e } = await n.e('5396').then(n.bind(n, 731646));
+                    let { default: e } = await n.e("5396").then(n.bind(n, 731646));
                     return (t) => {
                         var n, r;
                         return (0, i.jsx)(
@@ -71,7 +71,7 @@ function p(e) {
                             (r = r =
                                 {
                                     id: b.id,
-                                    label: c.intl.string(c.t.oJ1Mu7)
+                                    label: c.intl.string(c.t.oJ1Mu7),
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -85,12 +85,12 @@ function p(e) {
                                   })(Object(r)).forEach(function (e) {
                                       Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                   }),
-                            n)
+                            n),
                         );
                     };
                 });
             },
-            [b]
+            [b],
         ),
         j = b.type === a.yU.CHAT ? l.SsZ : l.hH0,
         v = (0, s.gw)(b.type, b.displayName);
@@ -99,39 +99,39 @@ function p(e) {
         className: d.item,
         onContextMenu: x,
         children: [
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: d.identifier,
                 children: [
                     (0, i.jsx)(j, {
                         className: d.icon,
-                        size: 'md',
-                        color: 'currentColor'
+                        size: "md",
+                        color: "currentColor",
                     }),
                     (0, i.jsx)(l.Text, {
-                        variant: 'text-md/normal',
-                        children: v
-                    })
-                ]
+                        variant: "text-md/normal",
+                        children: v,
+                    }),
+                ],
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: d.statusContainer,
                 children: f
-                    ? (0, i.jsxs)('div', {
+                    ? (0, i.jsxs)("div", {
                           className: d.statusLine,
                           children: [
                               (0, i.jsx)(l.Text, {
-                                  variant: 'text-md/normal',
-                                  children: c.intl.string(c.t.jH4B9P)
+                                  variant: "text-md/normal",
+                                  children: c.intl.string(c.t.jH4B9P),
                               }),
                               (0, i.jsx)(l.d3s, {
-                                  size: 'sm',
-                                  color: 'currentColor',
-                                  className: d.statusIcon
-                              })
-                          ]
+                                  size: "sm",
+                                  color: "currentColor",
+                                  className: d.statusIcon,
+                              }),
+                          ],
                       })
-                    : null
-            })
-        ]
+                    : null,
+            }),
+        ],
     });
 }

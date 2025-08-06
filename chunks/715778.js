@@ -1,11 +1,11 @@
 e.exports = function (e) {
     return {
-        name: 'Backus\u2013Naur Form',
+        name: "Backus\u2013Naur Form",
         contains: [
             {
-                className: 'attribute',
+                className: "attribute",
                 begin: /</,
-                end: />/
+                end: />/,
             },
             {
                 begin: /::=/,
@@ -13,14 +13,14 @@ e.exports = function (e) {
                 contains: [
                     {
                         begin: /</,
-                        end: />/
+                        end: />/,
                     },
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE,
                     e.APOS_STRING_MODE,
-                    e.QUOTE_STRING_MODE
-                ]
-            }
-        ]
+                    e.QUOTE_STRING_MODE,
+                ],
+            },
+        ],
     };
 };

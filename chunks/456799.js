@@ -11,15 +11,15 @@ let l = function (e) {
         children: (0, r.jsx)(a.Zbd, {
             className: o()(i.componentPreviewWrapper, { [i.componentPreviewWrapperBordered]: s }),
             outline: s,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: i.componentPreview,
                 onClickCapture: t
                     ? void 0
                     : function (e) {
                           e.stopPropagation();
                       },
-                children: n
-            })
-        })
+                children: n,
+            }),
+        }),
     });
 };

@@ -1,4 +1,4 @@
-(n.d(t, { G: () => f }), n(388685), n(73800));
+n.d(t, { G: () => f }), n(388685), n(73800);
 var r = n(374470),
     i = n(730606),
     o = n(312097),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -58,15 +58,15 @@ function u(e, t) {
 function d(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         a = arguments.length > 4 ? arguments[4] : void 0;
-    (e.preventDefault(),
+    e.preventDefault(),
         (0, r.k)(e.currentTarget) && e.currentTarget.blur(),
         (0, o.K)(
             u(l({}, i), {
                 items: t,
                 startingIndex: n,
-                location: null != a ? a : 'zoomedMediaModalHelper'
-            })
-        ));
+                location: null != a ? a : "zoomedMediaModalHelper",
+            }),
+        );
 }
 function f(e, t, n) {
     let r = {},
@@ -74,12 +74,12 @@ function f(e, t, n) {
     for (let [s, l] of e.entries()) {
         let c = (0, a.q)({
             proxyURL: l.proxyUrl,
-            url: l.url
+            url: l.url,
         });
-        ((r[c] = (r) => d(r, e, s, t, n)), (o[c] = () => (0, i.WG)(l, e.length > 1)));
+        (r[c] = (r) => d(r, e, s, t, n)), (o[c] = () => (0, i.WG)(l, e.length > 1));
     }
     return {
         srcToOnClickOverride: r,
-        srcToHandlePreloadImage: o
+        srcToHandlePreloadImage: o,
     };
 }

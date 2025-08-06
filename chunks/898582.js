@@ -1,1 +1,1 @@
-e.exports = { manageSubscription: 'manageSubscription__37c99' };
+e.exports = { manageSubscription: "manageSubscription__37c99" };

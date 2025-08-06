@@ -26,7 +26,7 @@ function I(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,7 +73,17 @@ function A(e, t) {
 }
 let N = i.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: I, channel: S, compact: N = !1, referencedUsernameProfile: C, referencedAvatarProfile: R, setPopout: P, isReplySpineClickable: w, showReplySpine: D } = e,
+    let {
+            baseMessage: n,
+            referencedMessage: I,
+            channel: S,
+            compact: N = !1,
+            referencedUsernameProfile: C,
+            referencedAvatarProfile: R,
+            setPopout: P,
+            isReplySpineClickable: w,
+            showReplySpine: D,
+        } = e,
         L = I.state === _.Y.LOADED ? I.message : void 0,
         x = (0, g.Uj)(L),
         M = (0, c.p)(),
@@ -85,55 +95,56 @@ let N = i.memo(function (e) {
                 return (0, a.Rp)(
                     v.intl.formatToParts(h.Z.getSystemMessageUserJoin(e.id), {
                         username: null != x ? x.nick : e.author.username,
-                        usernameHook: (e) => e
-                    })
+                        usernameHook: (e) => e,
+                    }),
                 );
             if (e.type === O.uaV.ROLE_SUBSCRIPTION_PURCHASE)
                 return (0, a.Rp)(
                     (0, l.PA)({
                         username: null != x ? x.nick : e.author.username,
                         guildId: null == S ? void 0 : S.guild_id,
-                        roleSubscriptionData: e.roleSubscriptionData
-                    })
+                        roleSubscriptionData: e.roleSubscriptionData,
+                    }),
                 );
             if (e.type === O.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
                 return (0, a.Rp)(
                     (0, d.Y)({
                         application: null == e ? void 0 : e.application,
-                        username: null == x ? void 0 : x.nick
-                    })
+                        username: null == x ? void 0 : x.nick,
+                    }),
                 );
             if (e.type === O.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
                 return (0, a.Rp)(
                     (0, f.B2)({
                         application: null == e ? void 0 : e.application,
-                        username: null == x ? void 0 : x.nick
-                    })
+                        username: null == x ? void 0 : x.nick,
+                    }),
                 );
             if (e.type === O.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
                 return (0, a.Rp)(
                     (0, f.hj)({
                         application: null == e ? void 0 : e.application,
-                        username: null == x ? void 0 : x.nick
-                    })
+                        username: null == x ? void 0 : x.nick,
+                    }),
                 );
-            else if (e.type === O.uaV.GUILD_DEADCHAT_REVIVE_PROMPT) return '' !== e.content ? e.content : v.intl.string(v.t.wnn1DQ);
-            if (null != e.content && '' !== e.content) {
+            else if (e.type === O.uaV.GUILD_DEADCHAT_REVIVE_PROMPT)
+                return "" !== e.content ? e.content : v.intl.string(v.t.wnn1DQ);
+            if (null != e.content && "" !== e.content) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: M
+                        shouldFilterKeywords: M,
                     },
                     n = e.isFirstMessageInForumPost(S)
                         ? A(T({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
-                              allowList: !0
+                              allowList: !0,
                           })
                         : A(T({}, t), {
                               formatInline: !0,
                               allowHeading: k,
-                              allowList: k
+                              allowList: k,
                           });
                 return (0, m.ZP)(e, n).content;
             }
@@ -143,9 +154,9 @@ let N = i.memo(function (e) {
             [p.Z],
             () => ({
                 isReplyAuthorBlocked: null != L && p.Z.isBlockedForMessage(L),
-                isReplyAuthorIgnored: null != L && p.Z.isIgnoredForMessage(L)
+                isReplyAuthorIgnored: null != L && p.Z.isIgnoredForMessage(L),
             }),
-            [L]
+            [L],
         ),
         B = (0, y.wq)(null == L ? void 0 : L.author.id, S.id),
         Z = (0, y.$3)(n, L),
@@ -154,7 +165,7 @@ let N = i.memo(function (e) {
         H = i.useCallback(() => {
             P({
                 referencedUsernameProfile: !1,
-                referencedAvatarProfile: !1
+                referencedAvatarProfile: !1,
             });
         }, [P]),
         Y = (0, g.Uj)(n);
@@ -177,11 +188,22 @@ let N = i.memo(function (e) {
         onContextMenu: B,
         onPopoutRequestClose: H,
         isReplySpineClickable: w,
-        showReplySpine: D
+        showReplySpine: D,
     });
 });
 function C(e) {
-    let { message: t, channel: n, compact: i, setPopout: o, referencedUsernameProfile: a, referencedAvatarProfile: s, replyReference: l, replyMessage: c, isReplySpineClickable: u, showReplySpine: d = !0 } = e;
+    let {
+        message: t,
+        channel: n,
+        compact: i,
+        setPopout: o,
+        referencedUsernameProfile: a,
+        referencedAvatarProfile: s,
+        replyReference: l,
+        replyMessage: c,
+        isReplySpineClickable: u,
+        showReplySpine: d = !0,
+    } = e;
     return (
         null != l &&
         (0, r.jsx)(N, {
@@ -194,7 +216,7 @@ function C(e) {
             referencedUsernameProfile: a,
             referencedAvatarProfile: s,
             isReplySpineClickable: u,
-            showReplySpine: d
+            showReplySpine: d,
         })
     );
 }

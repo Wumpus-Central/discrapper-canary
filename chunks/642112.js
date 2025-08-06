@@ -14,7 +14,7 @@ function n(t, e, a = 250, c, E, s, l) {
                     o(s, l);
                     let r = e(a, n[c]),
                         E = u.length;
-                    (i(r, c, E, l), (u = t(e, a, _, n[c], c, [r, ...u], r, E)));
+                    i(r, c, E, l), (u = t(e, a, _, n[c], c, [r, ...u], r, E));
                 }
                 return (
                     Array.isArray(n.errors) &&
@@ -23,7 +23,7 @@ function n(t, e, a = 250, c, E, s, l) {
                                 o(s, l);
                                 let r = e(a, n),
                                     I = u.length;
-                                (i(r, `errors[${E}]`, I, l), (u = t(e, a, _, n, c, [r, ...u], r, I)));
+                                i(r, `errors[${E}]`, I, l), (u = t(e, a, _, n, c, [r, ...u], r, I));
                             }
                         }),
                     u
@@ -33,26 +33,26 @@ function n(t, e, a = 250, c, E, s, l) {
             u.map((t) => (t.value && (t.value = (0, _.$G)(t.value, I)), t))));
 }
 function o(t, e) {
-    ((t.mechanism = t.mechanism || {
-        type: 'generic',
-        handled: !0
+    (t.mechanism = t.mechanism || {
+        type: "generic",
+        handled: !0,
     }),
         (t.mechanism = {
             ...t.mechanism,
-            ...('AggregateError' === t.type && { is_exception_group: !0 }),
-            exception_id: e
-        }));
+            ...("AggregateError" === t.type && { is_exception_group: !0 }),
+            exception_id: e,
+        });
 }
 function i(t, e, a, r) {
-    ((t.mechanism = t.mechanism || {
-        type: 'generic',
-        handled: !0
+    (t.mechanism = t.mechanism || {
+        type: "generic",
+        handled: !0,
     }),
         (t.mechanism = {
             ...t.mechanism,
-            type: 'chained',
+            type: "chained",
             source: e,
             exception_id: a,
-            parent_id: r
-        }));
+            parent_id: r,
+        });
 }

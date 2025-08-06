@@ -15,26 +15,26 @@ function h(e) {
     let { context: t, entrypoint: n, title: o, look: h, items: m, sectionName: g, sectionOverallPosition: E } = e,
         b = (0, u.s)(),
         y = i.useMemo(() => (n === c._b.TEXT ? d.kA : d.qR), [n]);
-    return (0, r.jsxs)('section', {
+    return (0, r.jsxs)("section", {
         className: p.container,
-        'aria-label': _.intl.formatToPlainString(_.t.iobNIC, { sectionTitle: o }),
+        "aria-label": _.intl.formatToPlainString(_.t.iobNIC, { sectionTitle: o }),
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: p.header,
                 children: [
                     (0, r.jsx)(f.Z, { className: p.backButton }),
                     (0, r.jsx)(s.X6q, {
-                        variant: 'heading-md/medium',
-                        color: 'header-primary',
-                        children: o
-                    })
-                ]
+                        variant: "heading-md/medium",
+                        color: "header-primary",
+                        children: o,
+                    }),
+                ],
             }),
             (0, r.jsx)(s.Ttm, {
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: a()({
                         [p.appGrid]: h !== d.U4.ROW,
-                        [p.rows]: h === d.U4.ROW
+                        [p.rows]: h === d.U4.ROW,
                     }),
                     children: m.map((e, n) => {
                         let { application: i, installOnDemand: o, showsPromoted: a } = e;
@@ -50,13 +50,13 @@ function h(e) {
                                 installOnDemand: o,
                                 isOneClickCTA: b,
                                 sectionOverallPosition: E,
-                                showsPromoted: a
+                                showsPromoted: a,
                             },
-                            i.id
+                            i.id,
                         );
-                    })
-                })
-            })
-        ]
+                    }),
+                }),
+            }),
+        ],
     });
 }

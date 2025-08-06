@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     B_: () => p,
     Lm: () => c,
     Ol: () => u,
@@ -8,10 +8,10 @@
     cj: () => a,
     qi: () => m,
     qu: () => h,
-    sd: () => _
+    sd: () => _,
 }),
     n(35282),
-    n(415506));
+    n(415506);
 var r = n(654861),
     i = n.n(r);
 function o(e, t, n) {
@@ -21,7 +21,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,7 +35,7 @@ function c(e) {
 }
 function u(e) {
     let t = e - a;
-    return t <= 0 ? '0' : i()(t).shiftLeft(l).toString();
+    return t <= 0 ? "0" : i()(t).shiftLeft(l).toString();
 }
 function d(e, t) {
     let n = e - a;
@@ -54,7 +54,19 @@ function p(e) {
     return Date.now() - c(e);
 }
 function h(e, t) {
-    return e === t ? 0 : null == t ? 1 : null == e ? -1 : e.length > t.length ? 1 : e.length < t.length ? -1 : e > t ? 1 : -1;
+    return e === t
+        ? 0
+        : null == t
+          ? 1
+          : null == e
+            ? -1
+            : e.length > t.length
+              ? 1
+              : e.length < t.length
+                ? -1
+                : e > t
+                  ? 1
+                  : -1;
 }
 function m(e) {
     if (null == e || !/^\d{17,19}$/.test(e)) return !1;
@@ -66,13 +78,13 @@ function m(e) {
 }
 class g {
     next() {
-        if (this.seq > s) throw Error('Snowflake sequence number overflow: '.concat(this.seq));
+        if (this.seq > s) throw Error("Snowflake sequence number overflow: ".concat(this.seq));
         return this.seq++;
     }
     reset() {
         this.seq = 0;
     }
     constructor() {
-        (o(this, 'seq', void 0), (this.seq = 0));
+        o(this, "seq", void 0), (this.seq = 0);
     }
 }

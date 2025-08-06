@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,36 +61,45 @@ function p(e, t) {
 }
 function h(e) {
     switch (e) {
-        case 'tab':
+        case "tab":
         default:
             return u.tabContainer;
-        case 'pill':
+        case "pill":
             return u.pillContainer;
     }
 }
 function m(e) {
     switch (e) {
-        case 'tab':
+        case "tab":
         default:
             return u.tabItem;
-        case 'pill':
+        case "pill":
             return u.pillItem;
     }
 }
 function g(e) {
     switch (e) {
-        case 'tab':
+        case "tab":
         default:
             return u.tabItemSelected;
-        case 'pill':
+        case "pill":
             return u.pillItemSelected;
     }
 }
 function E(e) {
-    return 'pill' === e ? u.pillItemText : void 0;
+    return "pill" === e ? u.pillItemText : void 0;
 }
 function b(e) {
-    let { option: t, selected: n, onClick: o, look: d, className: _, disabled: h = !1, tooltip: b, tooltipAriaLabel: y } = e,
+    let {
+            option: t,
+            selected: n,
+            onClick: o,
+            look: d,
+            className: _,
+            disabled: h = !1,
+            tooltip: b,
+            tooltipAriaLabel: y,
+        } = e,
         O = i.useCallback((e) => o(t, e), [o, t]),
         v = (e) =>
             (0, r.jsx)(
@@ -100,34 +109,34 @@ function b(e) {
                         {
                             className: a()(m(d), _, {
                                 [g(d)]: n,
-                                [u.disabled]: h
+                                [u.disabled]: h,
                             }),
-                            'aria-disabled': h
+                            "aria-disabled": h,
                         },
-                        e
+                        e,
                     ),
                     {
                         onClick: h ? void 0 : O,
                         children: (0, r.jsxs)(l.x, {
                             className: a()(u.controlText, E(d)),
-                            variant: 'text-sm/medium',
-                            color: 'none',
-                            children: [null != t.icon ? (0, r.jsx)(t.icon, { className: u.icon }) : null, t.name]
-                        })
-                    }
-                )
+                            variant: "text-sm/medium",
+                            color: "none",
+                            children: [null != t.icon ? (0, r.jsx)(t.icon, { className: u.icon }) : null, t.name],
+                        }),
+                    },
+                ),
             );
     return null == b
         ? v()
         : (0, r.jsx)(c.ua7, {
               shouldShow: !h,
-              'aria-label': y,
+              "aria-label": y,
               text: b,
-              children: (e) => v(e)
+              children: (e) => v(e),
           });
 }
 function y(e) {
-    let { options: t, value: n, onChange: o, look: s = 'tab', className: l, optionClassName: c, disabled: d = !1 } = e,
+    let { options: t, value: n, onChange: o, look: s = "tab", className: l, optionClassName: c, disabled: d = !1 } = e,
         f = i.useCallback(
             (e) => {
                 var t;
@@ -142,15 +151,15 @@ function y(e) {
                         disabled: d,
                         className: a()(c, e.className),
                         tooltip: e.tooltip,
-                        tooltipAriaLabel: e.tooltipAriaLabel
+                        tooltipAriaLabel: e.tooltipAriaLabel,
                     },
-                    null != (t = e.key) ? t : String(e.value)
+                    null != (t = e.key) ? t : String(e.value),
                 );
             },
-            [n, s, o, c, d]
+            [n, s, o, c, d],
         );
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(h(s), l, { [u.disabledContainer]: d }),
-        children: t.map(f)
+        children: t.map(f),
     });
 }

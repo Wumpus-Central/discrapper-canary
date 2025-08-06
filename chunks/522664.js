@@ -2,7 +2,7 @@ n.d(t, {
     Eq: () => a,
     Uj: () => o,
     gx: () => l,
-    qO: () => s
+    qO: () => s,
 });
 var r = n(544891),
     i = n(981631);
@@ -13,9 +13,9 @@ function o(e, t, n, o) {
             channel_id: e,
             message_id: t,
             attachment_ids: n,
-            embed_ids: o
+            embed_ids: o,
         },
-        rejectWithError: !1
+        rejectWithError: !1,
     });
 }
 function a(e, t, n, o) {
@@ -25,26 +25,26 @@ function a(e, t, n, o) {
             channel_id: e,
             message_id: t,
             attachment_ids: n,
-            filenames: o
+            filenames: o,
         },
-        rejectWithError: !1
+        rejectWithError: !1,
     });
 }
 function s(e, t) {
     return r.tn.patch({
         url: i.ANM.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
         body: { message_ids: t },
-        rejectWithError: !1
+        rejectWithError: !1,
     });
 }
 function l(e) {
     let t = e.map((e) => ({
         channel_id: e.channel_id,
-        message_id: e.id
+        message_id: e.id,
     }));
     return r.tn.patch({
         url: i.ANM.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES,
         body: { messages: t },
-        rejectWithError: !1
+        rejectWithError: !1,
     });
 }

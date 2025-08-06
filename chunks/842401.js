@@ -7,42 +7,42 @@ var l = n(481060),
     s = n(178816);
 let o = (e) => {
     let { user: t } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: s.container,
         children: [
             (0, r.jsx)(l.X6q, {
                 className: s.header,
-                variant: 'heading-sm/semibold',
-                children: a.intl.string(a.t['Rsth7+'])
+                variant: "heading-sm/semibold",
+                children: a.intl.string(a.t["Rsth7+"]),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: s.userContainer,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: s.userInfo,
                     children: [
                         (0, r.jsx)(i.Z, {
                             className: s.userIcon,
                             user: t,
-                            size: l.EFr.SIZE_40
+                            size: l.EFr.SIZE_40,
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
                                     (0, r.jsx)(l.Text, {
-                                        variant: 'text-md/semibold',
-                                        color: 'header-primary',
-                                        children: t.globalName
+                                        variant: "text-md/semibold",
+                                        color: "header-primary",
+                                        children: t.globalName,
                                     }),
                                 (0, r.jsx)(l.Text, {
-                                    color: 'header-secondary',
-                                    variant: 'text-sm/normal',
-                                    children: t.username
-                                })
-                            ]
-                        })
-                    ]
-                })
-            })
-        ]
+                                    color: "header-secondary",
+                                    variant: "text-sm/normal",
+                                    children: t.username,
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 };

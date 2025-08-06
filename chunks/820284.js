@@ -33,6 +33,6 @@ let o = function () {
                 a = (0, _.s3)(),
                 r = e.getSession();
             a && r && a.captureSession(r);
-        }
+        },
     };
 };

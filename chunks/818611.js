@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(314940));
+n.d(t, { Z: () => P }), n(314940);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,7 +72,8 @@ function O(e, t) {
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -82,7 +83,7 @@ function v(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let I = 3,
@@ -92,25 +93,32 @@ let I = 3,
     N = () => T,
     C = (e) => {
         var { children: t, className: n, onSelect: i, isSelected: o = !1 } = e,
-            s = O(e, ['children', 'className', 'onSelect', 'isSelected']);
+            s = O(e, ["children", "className", "onSelect", "isSelected"]);
         return (0, r.jsx)(
             l.P3F,
             y(E({ className: a()(m.decorationGridItem, o ? m.selected : void 0, n) }, s), {
                 onClick: i,
-                children: t
-            })
+                children: t,
+            }),
         );
     },
     R = (e) => {
-        var { user: t, avatarDecoration: n, innerRef: o, section: a, isSelected: s = !1, canUsePremiumCollectibles: l } = e,
-            d = O(e, ['user', 'avatarDecoration', 'innerRef', 'section', 'isSelected', 'canUsePremiumCollectibles']);
+        var {
+                user: t,
+                avatarDecoration: n,
+                innerRef: o,
+                section: a,
+                isSelected: s = !1,
+                canUsePremiumCollectibles: l,
+            } = e,
+            d = O(e, ["user", "avatarDecoration", "innerRef", "section", "isSelected", "canUsePremiumCollectibles"]);
         let f = i.useRef(null),
             h = (0, c.Z)(null != o ? o : f),
             { avatarDecorationSrc: g } = (0, p.Z)({
                 user: t,
                 avatarDecorationOverride: n,
                 size: T,
-                onlyAnimateOnHover: !h
+                onlyAnimateOnHover: !h,
             });
         return (0, r.jsxs)(
             C,
@@ -118,30 +126,37 @@ let I = 3,
                 E(
                     {
                         innerRef: null != o ? o : f,
-                        isSelected: s
+                        isSelected: s,
                     },
-                    d
+                    d,
                 ),
                 {
                     children: [
-                        (0, r.jsx)('img', {
+                        (0, r.jsx)("img", {
                             className: m.presetDecorationImg,
                             src: g,
-                            alt: n.label
+                            alt: n.label,
                         }),
                         (0, r.jsx)(u.Z, {
                             isPurchaseSection: a === _.$0.PURCHASE,
                             isPremiumSection: a === _.$0.PREMIUM_PURCHASE,
                             canUsePremiumCollectibles: l,
-                            skuId: n.skuId
-                        })
-                    ]
-                }
-            )
+                            skuId: n.skuId,
+                        }),
+                    ],
+                },
+            ),
         );
     },
     P = (e) => {
-        let { user: t, guild: n, pendingAvatarDecoration: i, selectedAvatarDecorationRef: o, onSelect: a, onOpenShop: c } = e,
+        let {
+                user: t,
+                guild: n,
+                pendingAvatarDecoration: i,
+                selectedAvatarDecorationRef: o,
+                onSelect: a,
+                onOpenShop: c,
+            } = e,
             u = (0, _.ZP)(),
             p = d.ZP.canUseCollectibles(t),
             g = (e, d, g, b) => {
@@ -156,19 +171,21 @@ let I = 3,
                                 onSelect: () => a(null),
                                 children: [
                                     (0, r.jsx)(l.t6m, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: m.icon
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: m.icon,
                                     }),
                                     (0, r.jsx)(l.Text, {
-                                        variant: 'text-xs/normal',
-                                        color: 'header-primary',
-                                        children: (0, f.ad)(t, n) ? h.intl.string(h.t.CHf9iI) : h.intl.string(h.t.PoWNfX)
-                                    })
-                                ]
+                                        variant: "text-xs/normal",
+                                        color: "header-primary",
+                                        children: (0, f.ad)(t, n)
+                                            ? h.intl.string(h.t.CHf9iI)
+                                            : h.intl.string(h.t.PoWNfX),
+                                    }),
+                                ],
                             },
-                            b
-                        )
+                            b,
+                        ),
                     )
                     .with(_.oT, () =>
                         (0, r.jsxs)(
@@ -178,21 +195,21 @@ let I = 3,
                                 onSelect: c,
                                 children: [
                                     (0, r.jsx)(l.EOn, {
-                                        size: 'custom',
+                                        size: "custom",
                                         width: 23,
                                         height: 23,
-                                        color: 'currentColor',
-                                        className: m.shopIcon
+                                        color: "currentColor",
+                                        className: m.shopIcon,
                                     }),
                                     (0, r.jsx)(l.Text, {
-                                        variant: 'text-xs/normal',
-                                        color: 'header-primary',
-                                        children: h.intl.string(h.t.pWG4zc)
-                                    })
-                                ]
+                                        variant: "text-xs/normal",
+                                        color: "header-primary",
+                                        children: h.intl.string(h.t.pWG4zc),
+                                    }),
+                                ],
                             },
-                            b
-                        )
+                            b,
+                        ),
                     )
                     .otherwise((e) => {
                         let n = (null == i ? void 0 : i.id) === e.id;
@@ -206,18 +223,18 @@ let I = 3,
                                 innerRef: n ? o : void 0,
                                 isSelected: n,
                                 onSelect: () => a(e),
-                                canUsePremiumCollectibles: p
+                                canUsePremiumCollectibles: p,
                             },
-                            b
+                            b,
                         );
                     });
             },
             b = (e, t) => {
                 let { header: n } = u[e];
-                return (0, r.jsx)('div', {
+                return (0, r.jsx)("div", {
                     className: m.headings,
-                    style: y(E({}, t), { position: 'absolute' }),
-                    children: (0, r.jsx)(l.vwX, { children: n })
+                    style: y(E({}, t), { position: "absolute" }),
+                    children: (0, r.jsx)(l.vwX, { children: n }),
                 });
             };
         return (0, r.jsx)(l.GMG, {
@@ -237,6 +254,6 @@ let I = 3,
             renderSection: b,
             getSectionHeight: (e) => u[e].height,
             getItemKey: (e, t) => u[e].items[t].id,
-            getItemHeight: N
+            getItemHeight: N,
         });
     };

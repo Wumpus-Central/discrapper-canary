@@ -1,1 +1,1 @@
-e.exports = { list: 'list__38262' };
+e.exports = { list: "list__38262" };

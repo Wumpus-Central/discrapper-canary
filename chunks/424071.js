@@ -4,8 +4,8 @@ t(73800);
 var s = t(475286);
 function n(e) {
     let { children: a } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: s.slideContainer,
-        children: a
+        children: a,
     });
 }

@@ -10,7 +10,7 @@ let u = (e) => {
     let { guild: t, onAddGuild: u } = e,
         d = i.useCallback(() => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('7654'), n.e('39725')]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e("7654"), n.e("39725")]).then(n.bind(n, 560114));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
@@ -19,24 +19,24 @@ let u = (e) => {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, n)),
@@ -44,7 +44,7 @@ let u = (e) => {
                             {
                                 guild: t,
                                 source: s.t4x.HUB_DIRECTORY,
-                                analyticsLocation: { section: s.jXE.HUB_WELCOME_CTA }
+                                analyticsLocation: { section: s.jXE.HUB_WELCOME_CTA },
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -58,28 +58,28 @@ let u = (e) => {
                               })(Object(l)).forEach(function (e) {
                                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        i)
+                        i),
                     );
                 };
             });
         }, [t]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: c.emptyWrapper,
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 className: c.emptyImage,
-                alt: '',
-                src: n(705845)
+                alt: "",
+                src: n(705845),
             }),
             (0, r.jsx)(l.X6q, {
                 className: c.emptyTitle,
-                variant: 'heading-xl/semibold',
-                children: o.intl.format(o.t.vyvrpK, { guildName: t.name })
+                variant: "heading-xl/semibold",
+                children: o.intl.format(o.t.vyvrpK, { guildName: t.name }),
             }),
             (0, r.jsx)(l.Text, {
-                variant: 'text-md/normal',
+                variant: "text-md/normal",
                 className: c.emptySubtitle,
-                children: o.intl.string(o.t.WypE0t)
+                children: o.intl.string(o.t.WypE0t),
             }),
             null != u
                 ? (0, r.jsx)(a.i, {
@@ -87,7 +87,7 @@ let u = (e) => {
                       iconUrl: n(362827),
                       header: o.intl.string(o.t.hyK15u),
                       completed: !1,
-                      onClick: u
+                      onClick: u,
                   })
                 : null,
             (0, r.jsx)(a.i, {
@@ -95,8 +95,8 @@ let u = (e) => {
                 iconUrl: n(538548),
                 header: o.intl.string(o.t.L4bwJy),
                 completed: !1,
-                onClick: d
-            })
-        ]
+                onClick: d,
+            }),
+        ],
     });
 };

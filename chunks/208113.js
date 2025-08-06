@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(539854));
+n.d(t, { Z: () => g }), n(539854);
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -17,12 +17,12 @@ function g(e) {
             audioSubsystem: n,
             legacyAudioSubsystemSupported: g,
             experimentalAudioSubsystemSupported: h,
-            automaticAudioSubsystemSupported: f
+            automaticAudioSubsystemSupported: f,
         } = (0, r.cj)([o.Z], () => ({
             audioSubsystem: o.Z.getAudioSubsystem(),
             legacyAudioSubsystemSupported: o.Z.supports(u.AN.LEGACY_AUDIO_SUBSYSTEM),
             experimentalAudioSubsystemSupported: o.Z.supports(u.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM),
-            automaticAudioSubsystemSupported: o.Z.supports(u.AN.AUTOMATIC_AUDIO_SUBSYSTEM)
+            automaticAudioSubsystemSupported: o.Z.supports(u.AN.AUTOMATIC_AUDIO_SUBSYSTEM),
         })),
         b = (0, i.jsx)(s.q4e, {
             className: p.marginBottom20,
@@ -31,43 +31,43 @@ function g(e) {
                 let i = [
                     {
                         value: u.iA.STANDARD,
-                        label: m.intl.string(m.t.dqb2JS)
-                    }
+                        label: m.intl.string(m.t.dqb2JS),
+                    },
                 ];
                 return (
                     e &&
                         i.push({
                             value: u.iA.LEGACY,
-                            label: m.intl.string(m.t['TYfH+/'])
+                            label: m.intl.string(m.t["TYfH+/"]),
                         }),
                     t &&
                         i.push({
                             value: u.iA.EXPERIMENTAL,
-                            label: m.intl.string(m.t.liQmtr)
+                            label: m.intl.string(m.t.liQmtr),
                         }),
                     n &&
                         i.push({
                             value: u.iA.AUTOMATIC,
-                            label: m.intl.string(m.t.qNgtOz)
+                            label: m.intl.string(m.t.qNgtOz),
                         }),
                     i
                 );
             })(g, h, f),
             onChange: (e) => {
                 (0, c.Z)(m.intl.string(m.t.uY7AcX), m.intl.string(m.t.gBqik5), () => a.Z.setAudioSubsystem(e));
-            }
+            },
         });
     return (0, i.jsx)(l.F, {
         setting: d.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
         children: t
             ? (0, i.jsx)(s.xJW, {
                   title: m.intl.string(m.t.wVBHr6),
-                  children: b
+                  children: b,
               })
             : (0, i.jsxs)(s.hjN, {
                   className: p.marginBottom20,
                   title: m.intl.string(m.t.wVBHr6),
-                  children: [b, (0, i.jsx)(s.$i$, { className: p.marginBottom20 })]
-              })
+                  children: [b, (0, i.jsx)(s.$i$, { className: p.marginBottom20 })],
+              }),
     });
 }

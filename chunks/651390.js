@@ -16,15 +16,15 @@ function d(e) {
         className: c.previewButton,
         children: [
             (0, r.jsx)(l.xv, {
-                tag: 'span',
-                variant: 'text-sm/semibold',
-                color: 'text-brand',
-                children: o.intl.string(o.t.SKNnqq)
+                tag: "span",
+                variant: "text-sm/semibold",
+                color: "text-brand",
+                children: o.intl.string(o.t.SKNnqq),
             }),
             (0, r.jsx)(a.rgF, {
-                size: 'xs',
-                color: 'currentColor'
-            })
-        ]
+                size: "xs",
+                color: "currentColor",
+            }),
+        ],
     });
 }

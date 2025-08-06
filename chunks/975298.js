@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(642613), n(583741), n(388685), n(415506));
+n.d(t, { Z: () => S }), n(642613), n(583741), n(388685), n(415506);
 var r = n(73800),
     i = n(512722),
     o = n.n(i),
@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,22 +69,36 @@ function v(e, t) {
 }
 let I = (e) => {
     var t;
-    let { isFetching: n = !1, entitlements: r, unactivatedFractionalPremiumUnits: i, currentUser: a, premiumSubscription: s, fetchedAllEntitlements: c, excludeReverseTrialFromCountdown: u } = e,
+    let {
+            isFetching: n = !1,
+            entitlements: r,
+            unactivatedFractionalPremiumUnits: i,
+            currentUser: a,
+            premiumSubscription: s,
+            fetchedAllEntitlements: c,
+            excludeReverseTrialFromCountdown: u,
+        } = e,
         d = {
             isFractionalPremiumActive: !1,
             fractionalState: E.a$.NONE,
             startsAt: l()(0),
             endsAt: l()(0),
-            currentEntitlementId: '',
+            currentEntitlementId: "",
             unactivatedUnits: [],
-            fetched: c
+            fetched: c,
         };
     if (n) return v(y({}, d), { fetched: !1 });
     if (null == a || (0 === r.length && 0 === i.length)) return d;
-    let f = r.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((o()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
+    let f = r
+        .filter((e) => null != e.endsAt && null != e.startsAt)
+        .sort((e, t) =>
+            (o()(null != e.endsAt && null != t.endsAt, "endsAt should not be null"), e.endsAt < t.endsAt)
+                ? -1
+                : +(e.endsAt > t.endsAt),
+        );
     if ((f.reverse(), f.length > 0 && (f.length !== r.length || null == f[0].startsAt || null == f[0].endsAt))) {
         let e = Array.from(r.values()).map((e) => e.id),
-            t = 'fractional redemption entitlements should have startsAt/endsAt';
+            t = "fractional redemption entitlements should have startsAt/endsAt";
         throw ((0, h.g9)(t, { extra: { entitlementIds: e } }), Error(t));
     }
     let _ = null != (t = f[0]) ? t : null,
@@ -96,9 +110,9 @@ let I = (e) => {
         fractionalState: p,
         startsAt: null != _ ? l()(_.startsAt) : l()(0),
         endsAt: null != _ ? l()((0, m.N1)(_.endsAt, i, void 0, b)) : l()(0),
-        currentEntitlementId: null != _ ? _.id : '',
+        currentEntitlementId: null != _ ? _.id : "",
         unactivatedUnits: i,
-        fetched: c
+        fetched: c,
     };
 };
 function T(e, t) {
@@ -108,13 +122,13 @@ function S() {
     let {
             forceFetch: e,
             excludeReverseTrial: t,
-            excludeReverseTrialFromCountdown: n
+            excludeReverseTrialFromCountdown: n,
         } = arguments.length > 0 && void 0 !== arguments[0]
             ? arguments[0]
             : {
                   forceFetch: !1,
                   excludeReverseTrial: !1,
-                  excludeReverseTrialFromCountdown: !1
+                  excludeReverseTrialFromCountdown: !1,
               },
         i = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
         o = (0, c.Wu)([p.Z], () => p.Z.getFractionalPremium({ excludeReverseTrial: t })),
@@ -129,8 +143,8 @@ function S() {
                 currentUser: i,
                 premiumSubscription: h,
                 fetchedAllEntitlements: s,
-                excludeReverseTrialFromCountdown: n
-            })
+                excludeReverseTrialFromCountdown: n,
+            }),
         );
     return (
         (0, d.ZP)(() => {
@@ -143,7 +157,7 @@ function S() {
                 currentUser: i,
                 premiumSubscription: h,
                 fetchedAllEntitlements: s,
-                excludeReverseTrialFromCountdown: n
+                excludeReverseTrialFromCountdown: n,
             });
             E((t) => ((0, a.isEqual)(t, e) ? t : e));
         }, [i, o, h, l, s, n]),

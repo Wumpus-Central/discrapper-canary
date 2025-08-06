@@ -1,14 +1,14 @@
 n.d(t, {
     KR: () => l,
     p8: () => s,
-    sJ: () => c
+    sJ: () => c,
 });
 var r = n(73800),
     i = n(97519),
     o = n(731965);
 let a = Object.freeze({
         id: null,
-        activeDescendant: null
+        activeDescendant: null,
     }),
     s = (0, i.U)(() => a);
 function l(e, t, n) {
@@ -17,11 +17,11 @@ function l(e, t, n) {
             t
                 ? s.setState({
                       id: e,
-                      activeDescendant: n
+                      activeDescendant: n,
                   })
                 : s.setState({
                       id: null,
-                      activeDescendant: null
+                      activeDescendant: null,
                   });
         });
     }, [e, t, n]);

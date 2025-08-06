@@ -17,7 +17,7 @@ function c(e) {
             scopes: t.scopes,
             showLogout: !0,
             isTrustedName: !0,
-            callbackWithoutPost: f
-        })
+            callbackWithoutPost: f,
+        }),
     });
 }

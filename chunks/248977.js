@@ -1,9 +1,9 @@
 function r(e) {
-    let t = '';
+    let t = "";
     for (let n of Object.keys(e)) {
         let r = e[n];
-        void 0 !== r && ('boolean' == typeof r && (r = r ? 'yes' : 'no'), (t += ''.concat(n, '=').concat(r, ',')));
+        void 0 !== r && ("boolean" == typeof r && (r = r ? "yes" : "no"), (t += "".concat(n, "=").concat(r, ",")));
     }
     return t;
 }
-(n.d(t, { Z: () => r }), n(388685));
+n.d(t, { Z: () => r }), n(388685);

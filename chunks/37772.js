@@ -38,24 +38,24 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -80,10 +80,24 @@ function U(e, t) {
 let G = i.memo(function e(t) {
     var n;
     let i,
-        { channel: l, message: a, compact: A = !1, className: L, onContextMenu: G, onClick: V, disableInteraction: F = !1, hasThread: H, treatSpam: z } = t,
+        {
+            channel: l,
+            message: a,
+            compact: A = !1,
+            className: L,
+            onContextMenu: G,
+            onClick: V,
+            disableInteraction: F = !1,
+            hasThread: H,
+            treatSpam: z,
+        } = t,
         W = R.OBS.has(a.type) ? a.messageReference : void 0,
         K = (0, s.e7)([p.Z], () => p.Z.getMessageByReference(W)),
-        Y = (0, s.e7)([g.Z], () => (a.type === R.uaV.THREAD_STARTER_MESSAGE && K.state === p.Y.LOADED ? g.Z.getChannel(K.message.channel_id) : null)),
+        Y = (0, s.e7)([g.Z], () =>
+            a.type === R.uaV.THREAD_STARTER_MESSAGE && K.state === p.Y.LOADED
+                ? g.Z.getChannel(K.message.channel_id)
+                : null,
+        ),
         q = f.x4.useSetting(),
         X = f.RS.useSetting(),
         Q = f.NA.useSetting(),
@@ -96,16 +110,19 @@ let G = i.memo(function e(t) {
             allowList: $,
             allowHeading: $,
             allowLinks: !0,
-            previewLinkTarget: !0
+            previewLinkTarget: !0,
         }),
         ei = (0, v.ZP)(a),
-        el = (0, s.e7)([g.Z], () => a.hasFlag(R.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(a.id))),
+        el = (0, s.e7)(
+            [g.Z],
+            () => a.hasFlag(R.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(a.id)),
+        ),
         eo = a.type === R.uaV.THREAD_STARTER_MESSAGE && K.state === p.Y.LOADED && null != Y,
         es = !eo && void 0 === i,
         ea = (0, I.Z)({
             message: a,
             channel: l,
-            enabled: es
+            enabled: es,
         }),
         ec = (0, c.v)(a),
         eu = (0, O.ro)(a.id, a.channel_id),
@@ -116,29 +133,34 @@ let G = i.memo(function e(t) {
               U(k({}, t), {
                   message: K.message,
                   channel: Y,
-                  hasThread: !1
-              })
+                  hasThread: !1,
+              }),
           )
-        : (m.Z.isBlockedForMessage(a) ? (i = D.t['+FcYMz']) : m.Z.isIgnoredForMessage(a) ? (i = D.t.VFWjc3) : (0, y.DQ)(a) && z && (i = D.t.xfkfTE), void 0 !== i)
+        : (m.Z.isBlockedForMessage(a)
+                ? (i = D.t["+FcYMz"])
+                : m.Z.isIgnoredForMessage(a)
+                  ? (i = D.t.VFWjc3)
+                  : (0, y.DQ)(a) && z && (i = D.t.xfkfTE),
+            void 0 !== i)
           ? (0, r.jsx)(B, {
                 className: L,
                 compact: A,
                 count: 1,
-                collapsedReason: i
+                collapsedReason: i,
             })
           : (0, r.jsx)(E.Z, {
                 compact: A,
                 className: o()(L, {
                     [M.ephemeral]: (0, _.Pv)(a),
                     [M.disableInteraction]: F,
-                    [M.groupStart]: t.isGroupStart
+                    [M.groupStart]: t.isGroupStart,
                 }),
                 childrenRepliedMessage: (0, T.Z)(a, l, W, K, A),
                 childrenHeader: (0, N.Z)(
                     U(k({}, t), {
                         author: ei,
-                        guildId: l.guild_id
-                    })
+                        guildId: l.guild_id,
+                    }),
                 ),
                 childrenAccessories: (0, r.jsx)(S.BB, {
                     channel: l,
@@ -161,7 +183,7 @@ let G = i.memo(function e(t) {
                     showMaskedLinks: $,
                     shouldHideMediaOptions: ee,
                     enabledContentHarmTypeFlags: ec,
-                    ctaButtonType: eu
+                    ctaButtonType: eu,
                 }),
                 childrenExecutedCommand: (0, Z.Z)(a, l, A),
                 childrenMessageContent: (0, P.Z)(t, en),
@@ -172,7 +194,7 @@ let G = i.memo(function e(t) {
                 hasReply: a.type === R.uaV.REPLY,
                 isSystemMessage: (0, C.Z)(a),
                 messageRef: ea,
-                author: ei
+                author: ei,
             });
 });
 function B(e) {
@@ -180,19 +202,19 @@ function B(e) {
     return (0, r.jsx)(E.Z, {
         className: t,
         compact: i,
-        role: 'group',
+        role: "group",
         childrenMessageContent: (0, r.jsx)(A.Z, {
             compact: i,
             className: L.blockedSystemMessage,
             iconNode: (0, r.jsx)(a.Dio, {
-                size: 'md',
-                color: 'currentColor',
-                className: L.blockedIcon
+                size: "md",
+                color: "currentColor",
+                className: L.blockedIcon,
             }),
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: L.blockedMessageText,
-                children: D.intl.format(l, { count: n })
-            })
-        })
+                children: D.intl.format(l, { count: n }),
+            }),
+        }),
     });
 }

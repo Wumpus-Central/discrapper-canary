@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,7 +46,8 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -56,33 +57,33 @@ function g(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = 2.1,
     b = (e) => {
         var { handleLearnMore: t } = e,
-            n = m(e, ['handleLearnMore']);
+            n = m(e, ["handleLearnMore"]);
         let p = (0, i.e7)([o.Z], () => o.Z.getGuildId()),
             g = (0, s.iL)({
                 guildId: p,
                 onClick: () => {
-                    window.open(l.Z.getArticleURL(u.BhN.NITRO_FAQ), '_blank');
-                }
+                    window.open(l.Z.getArticleURL(u.BhN.NITRO_FAQ), "_blank");
+                },
             }),
             b = (0, a.rO)() ? f.Z : _.Z;
         return (0, r.jsx)(
             c.Z,
             h(
                 {
-                    gradientColor: 'nitro-pink',
-                    title: d.intl.string(d.t['9C+41t']),
+                    gradientColor: "nitro-pink",
+                    title: d.intl.string(d.t["9C+41t"]),
                     subtitle: g,
                     videoSrc: b,
                     loopAt: E,
-                    onSecondaryClick: t
+                    onSecondaryClick: t,
                 },
-                n
-            )
+                n,
+            ),
         );
     };

@@ -20,7 +20,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,9 +65,21 @@ function b(e, t) {
         e
     );
 }
-let y = 'Console Transfer Item';
+let y = "Console Transfer Item";
 function O(e, t) {
-    return e === p.ABu.XBOX ? (t ? h.intl.string(h.t['qVE/VF']) : h.intl.string(h.t.E8euSk)) : e === p.ABu.PLAYSTATION ? (t ? h.intl.string(h.t.vzfxmZ) : h.intl.string(h.t.QxEYDg)) : e === p.ABu.PLAYSTATION_STAGING ? (t ? h.intl.string(h.t.BDiXtb) : h.intl.string(h.t['bhdB9/'])) : void 0;
+    return e === p.ABu.XBOX
+        ? t
+            ? h.intl.string(h.t["qVE/VF"])
+            : h.intl.string(h.t.E8euSk)
+        : e === p.ABu.PLAYSTATION
+          ? t
+              ? h.intl.string(h.t.vzfxmZ)
+              : h.intl.string(h.t.QxEYDg)
+          : e === p.ABu.PLAYSTATION_STAGING
+            ? t
+                ? h.intl.string(h.t.BDiXtb)
+                : h.intl.string(h.t["bhdB9/"])
+            : void 0;
 }
 function v(e) {
     let t = (0, i.e7)([l.Z], () => l.Z.getChannelId() === e.id),
@@ -82,47 +94,47 @@ function v(e) {
         if (!t.twoWayLink || t.revoked)
             return void (0, a.Z)({
                 platformType: t.type,
-                location: y
+                location: y,
             });
         t.type === p.ABu.XBOX
             ? (0, o.ZDy)(async () => {
-                  let { default: t } = await Promise.all([n.e('68214'), n.e('522')]).then(n.bind(n, 200623));
+                  let { default: t } = await Promise.all([n.e("68214"), n.e("522")]).then(n.bind(n, 200623));
                   return (n) => (0, r.jsx)(t, b(g({}, n), { channel: e }));
               })
             : (t.type === p.ABu.PLAYSTATION || t.type === p.ABu.PLAYSTATION_STAGING) &&
               (0, o.ZDy)(async () => {
-                  let { default: i } = await n.e('638').then(n.bind(n, 543974));
+                  let { default: i } = await n.e("638").then(n.bind(n, 543974));
                   return (n) =>
                       (0, r.jsx)(
                           i,
                           b(g({}, n), {
                               platform: t.type,
-                              channel: e
-                          })
+                              channel: e,
+                          }),
                       );
               });
     };
     return E
         ? (0, r.jsx)(o.sNh, {
               label: h.intl.string(h.t.PlwgdX),
-              id: 'handoff',
+              id: "handoff",
               action: () => {
                   (0, u.F)(m);
               },
               icon: (0, _.Z)(void 0),
-              disabled: T
+              disabled: T,
           })
         : S.map((e) =>
               (0, r.jsx)(
                   o.sNh,
                   {
-                      id: 'transfer-'.concat(e.type, '-').concat(e.id),
+                      id: "transfer-".concat(e.type, "-").concat(e.id),
                       label: O(e.type, t),
                       action: () => A(e),
                       icon: (0, _.Z)(e.type),
-                      disabled: T
+                      disabled: T,
                   },
-                  e.id
-              )
+                  e.id,
+              ),
           );
 }

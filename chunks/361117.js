@@ -1,4 +1,4 @@
-(r.d(t, { G: () => l }), r(388685), r(457542));
+r.d(t, { G: () => l }), r(388685), r(457542);
 var n = r(399606),
     i = r(570140),
     a = r(493773),
@@ -11,23 +11,23 @@ let l = (e) => {
             () => (
                 s.Z.wasSuggestionsFetched()
                     ? i.Z.dispatch({
-                          type: 'POMELO_SUGGESTIONS_FETCH',
-                          usernameSuggestionLoading: !1
+                          type: "POMELO_SUGGESTIONS_FETCH",
+                          usernameSuggestionLoading: !1,
                       })
                     : o.Z.fetchSuggestions(e).finally(() => {
                           i.Z.dispatch({
-                              type: 'POMELO_SUGGESTIONS_FETCH',
-                              usernameSuggestionLoading: !1
+                              type: "POMELO_SUGGESTIONS_FETCH",
+                              usernameSuggestionLoading: !1,
                           });
                       }),
                 () => {
                     o.Z.resetSuggestions();
                 }
-            )
+            ),
         ),
         {
             usernameSuggestion: t,
-            usernameSuggestionLoading: r
+            usernameSuggestionLoading: r,
         }
     );
 };

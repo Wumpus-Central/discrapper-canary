@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,15 +51,15 @@ function g(e) {
     return b
         ? null == y
             ? (0, r.jsx)(f.O1, {
-                  action: 'EDIT_PROFILE',
+                  action: "EDIT_PROFILE",
                   text: _.intl.string(_.t.s5vZlZ),
                   icon: a.vdY,
                   autoFocus: !0,
                   fullWidth: h,
-                  variant: 'primary',
+                  variant: "primary",
                   onClick: () => {
-                      (null == E || E(), v(), (0, s.i)(g));
-                  }
+                      null == E || E(), v(), (0, s.i)(g);
+                  },
               })
             : (0, r.jsx)(a.yRy, {
                   targetElementRef: T,
@@ -68,29 +68,29 @@ function g(e) {
                       return (0, r.jsxs)(a.v2r, {
                           className: p.popoutMenu,
                           onSelect: void 0,
-                          navId: 'edit-profile-popout',
+                          navId: "edit-profile-popout",
                           onClose: () => {
-                              (t(), null == E || E());
+                              t(), null == E || E();
                           },
-                          'aria-label': _.intl.string(_.t.AXIHpa),
+                          "aria-label": _.intl.string(_.t.AXIHpa),
                           children: [
                               (0, r.jsx)(a.sNh, {
-                                  id: 'edit-server-profile',
-                                  label: _.intl.string(_.t['PKQB/P']),
+                                  id: "edit-server-profile",
+                                  label: _.intl.string(_.t["PKQB/P"]),
                                   subtext: _.intl.string(_.t.VYHWKC),
                                   action: () => {
-                                      (I({ action: 'EDIT_GUILD_PROFILE' }), O(), (0, s.i)(g));
-                                  }
+                                      I({ action: "EDIT_GUILD_PROFILE" }), O(), (0, s.i)(g);
+                                  },
                               }),
                               (0, r.jsx)(a.sNh, {
-                                  id: 'edit-main-profile',
+                                  id: "edit-main-profile",
                                   label: _.intl.string(_.t.HmFaFB),
-                                  subtext: _.intl.string(_.t['+EERMj']),
+                                  subtext: _.intl.string(_.t["+EERMj"]),
                                   action: () => {
-                                      (I({ action: 'EDIT_PROFILE' }), v(), (0, s.i)(g));
-                                  }
-                              })
-                          ]
+                                      I({ action: "EDIT_PROFILE" }), v(), (0, s.i)(g);
+                                  },
+                              }),
+                          ],
                       });
                   },
                   children: (e) =>
@@ -103,11 +103,11 @@ function g(e) {
                                   icon: a.vdY,
                                   autoFocus: !0,
                                   fullWidth: h,
-                                  variant: 'primary'
+                                  variant: "primary",
                               },
-                              e
-                          )
-                      )
+                              e,
+                          ),
+                      ),
               })
         : null;
 }

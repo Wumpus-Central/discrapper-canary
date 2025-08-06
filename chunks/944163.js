@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => f,
-    t: () => u
+    t: () => u,
 }),
-    n(953529));
+    n(953529);
 var r,
     l = n(392711),
     i = n.n(l),
@@ -16,16 +16,16 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 let u = {
-        version: '',
-        description: '',
-        formFields: []
+        version: "",
+        description: "",
+        formFields: [],
     },
     d = {};
 class m extends (r = o.ZP.Store) {
@@ -37,7 +37,7 @@ class m extends (r = o.ZP.Store) {
         return i().find(null == (t = d[e]) ? void 0 : t.formFields, s.J);
     }
 }
-c(m, 'displayName', 'MemberVerificationFormStore');
+c(m, "displayName", "MemberVerificationFormStore");
 let f = new m(a.Z, {
     INVITE_ACCEPT_SUCCESS: function (e) {
         let { invite: t } = e,
@@ -48,9 +48,9 @@ let f = new m(a.Z, {
             return (
                 (d[r.id] = {
                     version: n.version,
-                    description: null != (l = n.description) ? l : '',
+                    description: null != (l = n.description) ? l : "",
                     formFields: n.form_fields,
-                    guild: r
+                    guild: r,
                 }),
                 !0
             );
@@ -67,15 +67,15 @@ let f = new m(a.Z, {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             c(e, t, n[t]);
-                        }));
+                        });
                 }
                 return e;
             })({}, e, t);
@@ -89,5 +89,5 @@ let f = new m(a.Z, {
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         delete d[null == t ? void 0 : t.id];
-    }
+    },
 });

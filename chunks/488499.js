@@ -9,14 +9,14 @@ function l(t) {
     return [a.pC.BANNER, a.pC.AVATAR].includes(e) && c
         ? (0, o.jsx)(i.Z, {
               analyticsSection: l,
-              type: e
+              type: e,
           })
         : e === a.pC.GUILD_BANNER
           ? (0, o.jsx)(r.Z, {
                 analyticsSection: l,
                 analyticsPage: n,
                 isGIF: c,
-                banner: s
+                banner: s,
             })
           : null;
 }

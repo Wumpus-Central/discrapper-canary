@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -29,45 +29,45 @@ let j = r.forwardRef((e, t) => {
         }, [s, E, I]),
         (0, i.jsx)(c.Gt, {
             value: O,
-            children: (0, i.jsxs)('div', {
+            children: (0, i.jsxs)("div", {
                 ref: t,
                 className: a()(f.container, n),
                 children: [
                     (0, i.jsx)(l.X6q, {
                         className: f.footerHeader,
-                        variant: 'display-md',
-                        color: 'header-primary',
-                        children: h.intl.string(h.t.lEw32t)
+                        variant: "display-md",
+                        color: "header-primary",
+                        children: h.intl.string(h.t.lEw32t),
                     }),
                     (0, i.jsx)(p.PK, {
                         subscriptionTier: C,
                         inOfferExperience: v,
                         containerClassName: f.footerCTAContainer,
                         isApplicationHome: !0,
-                        isDarkMode: j
+                        isDarkMode: j,
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: f.footerArtContainer,
                         children: (0, i.jsx)(d.Z, {
                             playsInline: !0,
                             muted: !0,
-                            preload: 'auto',
+                            preload: "auto",
                             poster: x.Z,
                             className: f.footerArt,
                             onEnded: () => {
                                 N(!0);
                             },
                             ref: T,
-                            children: (0, i.jsx)('source', {
+                            children: (0, i.jsx)("source", {
                                 src: S ? b.Z : _.Z,
-                                type: S ? g.m.MP4 : g.m.WEBM
-                            })
-                        })
+                                type: S ? g.m.MP4 : g.m.WEBM,
+                            }),
+                        }),
                     }),
-                    (0, i.jsx)('div', { className: f.leftGradient }),
-                    (0, i.jsx)('div', { className: f.rightGradient })
-                ]
-            })
+                    (0, i.jsx)("div", { className: f.leftGradient }),
+                    (0, i.jsx)("div", { className: f.rightGradient }),
+                ],
+            }),
         })
     );
 });

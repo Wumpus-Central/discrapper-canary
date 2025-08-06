@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,9 +45,9 @@ function m(e) {
         b = i.useMemo(
             () => ({
                 channel: m,
-                type: 'channel'
+                type: "channel",
             }),
-            [m]
+            [m],
         ),
         { commands: y } = a.Qm(b, t, n),
         O = i.useMemo(
@@ -58,31 +58,31 @@ function m(e) {
                           let { nsfw: t } = e;
                           return !0 !== t;
                       }),
-            [y]
+            [y],
         );
     if (null == O || 0 === O.length) return null;
     let v = (e) => {
-        (null == g || g(),
-            E({ action: 'PRESS_APP_COMMAND' }),
+        null == g || g(),
+            E({ action: "PRESS_APP_COMMAND" }),
             l.default.track(
                 d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED,
                 h(
                     {
                         application_id: t,
                         command_id: e,
-                        guild_id: p
+                        guild_id: p,
                     },
-                    (0, o.JS)(m.id)
-                )
-            ));
+                    (0, o.JS)(m.id),
+                ),
+            );
     };
     return (0, r.jsx)(u.Z, {
-        heading: f.intl.string(f.t['0hKkS0']),
-        children: (0, r.jsx)('ul', {
+        heading: f.intl.string(f.t["0hKkS0"]),
+        children: (0, r.jsx)("ul", {
             className: _.list,
             children: O.map((e) =>
                 (0, r.jsx)(
-                    'li',
+                    "li",
                     {
                         children: (0, r.jsx)(s.wz, {
                             commandId: e.id,
@@ -91,12 +91,12 @@ function m(e) {
                             onClick: v,
                             guildId: p,
                             channelId: m.id,
-                            applicationId: e.applicationId
-                        })
+                            applicationId: e.applicationId,
+                        }),
                     },
-                    e.id
-                )
-            )
-        })
+                    e.id,
+                ),
+            ),
+        }),
     });
 }

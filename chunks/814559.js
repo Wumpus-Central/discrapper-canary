@@ -1,9 +1,9 @@
 var n = r(46015),
     i = r(527160),
     s = Math.floor,
-    a = n(''.charAt),
-    o = n(''.replace),
-    u = n(''.slice),
+    a = n("".charAt),
+    o = n("".replace),
+    u = n("".slice),
     h = /\$([$&'`]|\d{1,2}|<[^>]*>)/g,
     c = /\$([$&'`]|\d{1,2})/g;
 t.exports = function (t, e, r, n, f, l) {
@@ -15,15 +15,15 @@ t.exports = function (t, e, r, n, f, l) {
         o(l, g, function (i, o) {
             var h;
             switch (a(o, 0)) {
-                case '$':
-                    return '$';
-                case '&':
+                case "$":
+                    return "$";
+                case "&":
                     return t;
-                case '`':
+                case "`":
                     return u(e, 0, r);
                 case "'":
                     return u(e, p);
-                case '<':
+                case "<":
                     h = f[u(o, 1, -1)];
                     break;
                 default:
@@ -37,7 +37,7 @@ t.exports = function (t, e, r, n, f, l) {
                     }
                     h = n[c - 1];
             }
-            return void 0 === h ? '' : h;
+            return void 0 === h ? "" : h;
         })
     );
 };

@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,7 +20,10 @@ class s {
         let e = this.cpuHistogram.getReport(),
             t = this.memoryHistogram.getReport(),
             n = i.Z.getCumulativeCPUUsage(),
-            r = null == this.startCPU || null == n ? void 0 : ((n.usage - this.startCPU.usage) * 100) / ((n.sampleTime - this.startCPU.sampleTime) / 1000);
+            r =
+                null == this.startCPU || null == n
+                    ? void 0
+                    : ((n.usage - this.startCPU.usage) * 100) / ((n.sampleTime - this.startCPU.sampleTime) / 1000);
         return {
             client_performance_cpu_percentile25: e.percentiles[25],
             client_performance_cpu_percentile50: e.percentiles[50],
@@ -35,7 +38,7 @@ class s {
             client_performance_memory_percentile95: t.percentiles[95],
             client_performance_memory_min: t.min,
             client_performance_memory_max: t.max,
-            client_performance_memory_mean: t.mean
+            client_performance_memory_mean: t.mean,
         };
     }
     takeSample() {
@@ -74,15 +77,19 @@ class s {
             ? {
                   startBattery: this.lastBattery,
                   currentBattery: e,
-                  batteryUsageRounded: null
+                  batteryUsageRounded: null,
               }
             : {
                   startBattery: this.lastBattery,
                   currentBattery: e,
-                  batteryUsageRounded: Math.round((e - this.lastBattery) * 1000) / 1000
+                  batteryUsageRounded: Math.round((e - this.lastBattery) * 1000) / 1000,
               };
     }
     constructor() {
-        (a(this, 'cpuHistogram', new o.b()), a(this, 'memoryHistogram', new o.b()), a(this, 'startCPU', i.Z.getCumulativeCPUUsage()), a(this, 'lastCPU', this.startCPU), a(this, 'lastBattery', null));
+        a(this, "cpuHistogram", new o.b()),
+            a(this, "memoryHistogram", new o.b()),
+            a(this, "startCPU", i.Z.getCumulativeCPUUsage()),
+            a(this, "lastCPU", this.startCPU),
+            a(this, "lastBattery", null);
     }
 }

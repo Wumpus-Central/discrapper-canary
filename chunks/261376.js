@@ -1,4 +1,4 @@
-(n.d(t, { O: () => i }), n(388685));
+n.d(t, { O: () => i }), n(388685);
 var r = n(704215);
 let i = new Set([
     r.z.APPLICATION_COMMAND_TOOLTIP,
@@ -105,5 +105,5 @@ let i = new Set([
     r.z.BOGO_2025_ANNOUNCEMENT_MODAL,
     r.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
     r.z.NITRO_PRIVATE_BROWSING_SURVEY,
-    r.z.NAGBAR_NOTICE_OFFER_EXPIRING
+    r.z.NAGBAR_NOTICE_OFFER_EXPIRING,
 ]);

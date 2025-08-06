@@ -6,14 +6,14 @@ var r = n(399606),
     s = n(592125),
     l = n(226027),
     c = n(918559);
-let u = 'no_text_activity',
+let u = "no_text_activity",
     d = {
         [u]: [l.E.NEW_MESSAGES, l.E.OPT_IN_CHANNEL, l.E.SUMMARIES],
         [c.Ez.DISCONNECTED]: [l.E.NEW_MESSAGES, l.E.OPT_IN_CHANNEL, l.E.SUMMARIES],
         [c.Ez.LAUNCHING_WITH_ORIENTATION_CHANGE]: [l.E.NEW_MESSAGES, l.E.OPT_IN_CHANNEL, l.E.SUMMARIES],
         [c.Ez.PANEL]: [],
         [c.Ez.PIP]: [l.E.NEW_MESSAGES, l.E.OPT_IN_CHANNEL, l.E.SUMMARIES],
-        [c.Ez.ACTIVITY_POPOUT_WINDOW]: [l.E.NEW_MESSAGES, l.E.OPT_IN_CHANNEL, l.E.SUMMARIES]
+        [c.Ez.ACTIVITY_POPOUT_WINDOW]: [l.E.NEW_MESSAGES, l.E.OPT_IN_CHANNEL, l.E.SUMMARIES],
     };
 function f() {
     let e = (0, r.e7)([i.ZP], () => i.ZP.getCurrentEmbeddedActivity()),

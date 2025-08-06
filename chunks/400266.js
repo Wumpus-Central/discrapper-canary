@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(704826), n(35282));
+n.d(t, { Z: () => d }), n(704826), n(35282);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -9,44 +9,49 @@ var i = n(120356),
     c = n(94488);
 function u(e) {
     let t = /intl-[^/]+\//;
-    return e.replace(t, '');
+    return e.replace(t, "");
 }
 function d(e) {
     let {
         className: t,
-        embed: { url: n }
+        embed: { url: n },
     } = e;
     if (null == n) return null;
     let i = null,
         d = null;
     try {
         let e = a.parse(u(n), !0);
-        ((i = e.host), (d = e.pathname));
+        (i = e.host), (d = e.pathname);
     } catch (e) {
         return null;
     }
     if (!(0, s.E)(i) || null == d) return null;
-    let f = d.split('/'),
+    let f = d.split("/"),
         _ = null != f[1] ? f[1].toLowerCase() : null,
         p = null != f[3] ? f[3].toLowerCase() : null,
         h = f[4];
-    if (!['track', 'playlist', 'album', 'artist', 'user', 'show', 'episode'].includes(null != _ ? _ : '') || ('user' === _ && 'playlist' !== p)) return null;
-    'user' === _ && 'playlist' === p && null != h && (d = '/playlist/'.concat(h));
+    if (
+        !["track", "playlist", "album", "artist", "user", "show", "episode"].includes(null != _ ? _ : "") ||
+        ("user" === _ && "playlist" !== p)
+    )
+        return null;
+    "user" === _ && "playlist" === p && null != h && (d = "/playlist/".concat(h));
     let m = 352;
     return (
-        'track' === _ ? (m = 80) : ('episode' === _ || 'show' === _) && (m = 232),
-        (0, r.jsx)('iframe', {
+        "track" === _ ? (m = 80) : ("episode" === _ || "show" === _) && (m = 232),
+        (0, r.jsx)("iframe", {
             className: o()(c.embedSpotify, t),
             src: l.C7.EMBED(d),
             style: {
                 maxWidth: 400,
                 minWidth: 300,
-                width: '100%',
-                height: m
+                width: "100%",
+                height: m,
             },
             frameBorder: 0,
-            sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts',
-            allow: 'clipboard-write'
+            sandbox:
+                "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
+            allow: "clipboard-write",
         })
     );
 }

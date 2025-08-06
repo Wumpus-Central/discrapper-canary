@@ -9,7 +9,7 @@ n.d(t, {
     dX: () => s,
     kq: () => d,
     m9: () => l,
-    y0: () => f
+    y0: () => f,
 });
 var r = n(876215),
     i = n(758713);
@@ -23,7 +23,7 @@ function s(e) {
     return o(e) || a(e);
 }
 function l(e) {
-    return (null == e ? void 0 : e.extra) != null && 'application_id' in (null == e ? void 0 : e.extra);
+    return (null == e ? void 0 : e.extra) != null && "application_id" in (null == e ? void 0 : e.extra);
 }
 function c(e) {
     return (null == e ? void 0 : e.content_type) === r.s.LISTENED_SESSION;

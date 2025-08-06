@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     DR: () => I,
     S4: () => O,
     bD: () => v,
-    oK: () => y
+    oK: () => y,
 }),
-    n(314940));
+    n(314940);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -26,7 +26,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,27 +72,38 @@ function b(e, t) {
     );
 }
 function y() {
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: h.selectionCircle,
         children: (0, r.jsx)(u.owK, {
-            size: 'md',
-            color: 'currentColor',
+            size: "md",
+            color: "currentColor",
             className: h.checkmarkCircle,
             colorClass: h.checkmark,
-            secondaryColor: l.Z.unsafe_rawColors.WHITE_500.css
-        })
+            secondaryColor: l.Z.unsafe_rawColors.WHITE_500.css,
+        }),
     });
 }
 function O(e) {
-    let { name: t, className: n, style: i, onSelect: a, isSelected: s = !1, tabIndex: l, children: c, showBadge: d, showLockedBadge: f, showSelectionCircle: p = !1 } = e,
+    let {
+            name: t,
+            className: n,
+            style: i,
+            onSelect: a,
+            isSelected: s = !1,
+            tabIndex: l,
+            children: c,
+            showBadge: d,
+            showLockedBadge: f,
+            showSelectionCircle: p = !1,
+        } = e,
         m = (0, u.xUy)({
             label: t,
-            isSelected: s
+            isSelected: s,
         });
     return (0, r.jsx)(u.ua7, {
         text: t,
         children: (e) =>
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.themeSelectionContainer,
                 children: [
                     (0, r.jsx)(
@@ -102,21 +113,21 @@ function O(e) {
                             className: o()(h.themeSelection, { [h.selected]: s }, n),
                             style: i,
                             onClick: s ? _.dG4 : a,
-                            children: c
-                        })
+                            children: c,
+                        }),
                     ),
                     (s || p) && (0, r.jsx)(y, {}),
-                    !s && d && (0, r.jsx)('div', { className: h.redCircle }),
+                    !s && d && (0, r.jsx)("div", { className: h.redCircle }),
                     f &&
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: h.lockedBadgeContainer,
                             children: (0, r.jsx)(u.mBM, {
                                 className: h.lockedBadge,
-                                color: 'currentColor'
-                            })
-                        })
-                ]
-            })
+                                color: "currentColor",
+                            }),
+                        }),
+                ],
+            }),
     });
 }
 function v(e) {
@@ -125,35 +136,35 @@ function v(e) {
         c = d.Z.themePreferenceForSystemTheme(l),
         f = (0, a.EQ)({
             theme: t,
-            themePreferenceForSystemTheme: c
+            themePreferenceForSystemTheme: c,
         })
             .with(
                 {
-                    theme: 'system',
-                    themePreferenceForSystemTheme: _.BRd.LIGHT
+                    theme: "system",
+                    themePreferenceForSystemTheme: _.BRd.LIGHT,
                 },
-                () => h.lightIcon
+                () => h.lightIcon,
             )
             .with(
                 {
-                    theme: 'system',
-                    themePreferenceForSystemTheme: _.BRd.DARK
+                    theme: "system",
+                    themePreferenceForSystemTheme: _.BRd.DARK,
                 },
-                () => h.darkIcon
+                () => h.darkIcon,
             )
             .with(
                 {
-                    theme: 'system',
-                    themePreferenceForSystemTheme: _.BRd.DARKER
+                    theme: "system",
+                    themePreferenceForSystemTheme: _.BRd.DARKER,
                 },
-                () => h.darkerIcon
+                () => h.darkerIcon,
             )
             .with(
                 {
-                    theme: 'system',
-                    themePreferenceForSystemTheme: _.BRd.MIDNIGHT
+                    theme: "system",
+                    themePreferenceForSystemTheme: _.BRd.MIDNIGHT,
                 },
-                () => h.midnightIcon
+                () => h.midnightIcon,
             )
             .with({ theme: _.BRd.LIGHT }, () => h.lightIcon)
             .with({ theme: _.BRd.DARK }, () => h.darkIcon)
@@ -165,7 +176,7 @@ function v(e) {
             .with(_.BRd.DARK, () => p.intl.string(p.t.SMPT1t))
             .with(_.BRd.DARKER, () => p.intl.string(p.t.b8Cei4))
             .with(_.BRd.MIDNIGHT, () => p.intl.string(p.t.Do4ZJy))
-            .with('system', () => p.intl.string(p.t['7rOU6u']))
+            .with("system", () => p.intl.string(p.t["7rOU6u"]))
             .exhaustive();
     return (0, r.jsx)(O, {
         onSelect: i,
@@ -173,14 +184,14 @@ function v(e) {
         name: m,
         className: o()(h.defaultThemeSelection, f),
         children:
-            'system' === t &&
-            (0, r.jsx)('div', {
+            "system" === t &&
+            (0, r.jsx)("div", {
                 className: h.iconWrapper,
                 children: (0, r.jsx)(u.f6W, {
                     theme: c,
-                    children: (e) => (0, r.jsx)(u.DuK, { className: e })
-                })
-            })
+                    children: (e) => (0, r.jsx)(u.DuK, { className: e }),
+                }),
+            }),
     });
 }
 function I(e) {
@@ -188,16 +199,16 @@ function I(e) {
         { colors: d, angle: _, theme: p } = t,
         m = (0, f.VK)({
             colors: d,
-            angle: _
+            angle: _,
         });
     return (0, r.jsx)(O, {
         onSelect: i ? void 0 : s,
         isSelected: n,
         name: t.getName(),
         className: o()([i ? h.disabled : null, (0, c.wj)(p) ? h.darkOverlay : h.lightOverlay]),
-        style: { background: 'var(--background-gradient), '.concat(m) },
+        style: { background: "var(--background-gradient), ".concat(m) },
         tabIndex: a,
         showBadge: l,
-        showLockedBadge: u
+        showLockedBadge: u,
     });
 }

@@ -20,13 +20,13 @@ function m(e, t) {
           : 2 === t.length
             ? p.intl.formatToPlainString(p.t.dcyZf3, {
                   a: (0, u.Z)(e, t[0]),
-                  b: (0, u.Z)(e, t[1])
+                  b: (0, u.Z)(e, t[1]),
               })
             : t.length > 2
-              ? p.intl.formatToPlainString(p.t['44/Obm'], {
+              ? p.intl.formatToPlainString(p.t["44/Obm"], {
                     a: (0, u.Z)(e, t[0]),
                     b: (0, u.Z)(e, t[1]),
-                    n: t.length - 2
+                    n: t.length - 2,
                 })
               : void 0;
 }
@@ -38,11 +38,11 @@ let g = function (e) {
             E ? (0, l.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id)) : s.default.selectVoiceChannel(n.id);
         }, [n.id, n.guild_id, E]),
         y = 4 === g.length ? 2 : 3;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: h.container,
         children: [
             (0, r.jsx)(f.Z, {}),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: h.tiles,
                 style: { maxWidth: 168 * y },
                 children: g.slice(0, 5).map((e) =>
@@ -55,24 +55,24 @@ let g = function (e) {
                             inCall: !0,
                             noVideoRender: !0,
                             inPopout: !1,
-                            width: 48
+                            width: 48,
                         },
-                        e.id
-                    )
-                )
+                        e.id,
+                    ),
+                ),
             }),
             (0, r.jsx)(a.X6q, {
                 className: h.channelName,
-                variant: 'heading-xxl/semibold',
-                children: n.name
+                variant: "heading-xxl/semibold",
+                children: n.name,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: h.participantsRow,
                 children: (0, r.jsx)(a.Text, {
-                    color: 'header-secondary',
-                    variant: 'text-sm/normal',
-                    children: m(n, g)
-                })
+                    color: "header-secondary",
+                    variant: "text-sm/normal",
+                    children: m(n, g),
+                }),
             }),
             (0, r.jsx)(o.zx, {
                 disabled: !u,
@@ -80,8 +80,8 @@ let g = function (e) {
                 color: u ? o.zx.Colors.WHITE : o.zx.Colors.PRIMARY,
                 onClick: b,
                 size: o.zx.Sizes.MEDIUM,
-                children: u ? p.intl.string(p.t['96ANUF']) : p.intl.string(p.t.TVBCKS)
-            })
-        ]
+                children: u ? p.intl.string(p.t["96ANUF"]) : p.intl.string(p.t.TVBCKS),
+            }),
+        ],
     });
 };

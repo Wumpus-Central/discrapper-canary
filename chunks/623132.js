@@ -13,50 +13,50 @@ var r = n(255367),
     m = n(418718);
 function g(e) {
     let { text: t, user: n, guildId: l, channelId: i } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(o.PEf, {
-                size: 'xxs',
+                size: "xxs",
                 color: o.TVs.colors.ICON_TERTIARY,
-                className: m.icon
+                className: m.icon,
             }),
             (0, r.jsx)(o.nn4, { children: f.intl.format(f.t.TM0XDQ, { name: c.ZP.getName(l, i, n) }) }),
             (0, r.jsx)(o.Text, {
-                variant: 'text-sm/normal',
-                color: 'text-tertiary',
-                children: t
-            })
-        ]
+                variant: "text-sm/normal",
+                color: "text-tertiary",
+                children: t,
+            }),
+        ],
     });
 }
 function b(e) {
     let { applicationId: t, userId: n, gameName: c, className: s, children: d } = e,
         u = (0, a.Z)({
-            location: 'UserProfileWidgetGameDetailsCard',
+            location: "UserProfileWidgetGameDetailsCard",
             applicationId: t,
             source: i.m1.UserProfile,
             sourceUserId: n,
-            trackEntryPointImpression: !0
+            trackEntryPointImpression: !0,
         }),
         p = l.useCallback(
             (e) => {
                 e.target === e.currentTarget && (null == u || u(e));
             },
-            [u]
+            [u],
         ),
         g = null != c ? c : f.intl.string(f.t.GIWFlJ),
         b = null != u;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: s,
         children: [
             b &&
                 (0, r.jsx)(o.P3F, {
                     className: m.clickableCard,
-                    'aria-label': f.intl.formatToPlainString(f.t['8QLQBw'], { gameName: g }),
-                    onClick: p
+                    "aria-label": f.intl.formatToPlainString(f.t["8QLQBw"], { gameName: g }),
+                    onClick: p,
                 }),
-            d
-        ]
+            d,
+        ],
     });
 }
 function j(e) {
@@ -70,49 +70,49 @@ function j(e) {
                         gameName: f,
                         applicationId: h,
                         userId: t.id,
-                        disableInteraction: !0
+                        disableInteraction: !0,
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: m.details,
                         children: [
                             (0, r.jsx)(o.X6q, {
-                                variant: 'text-md/normal',
-                                color: 'text-default',
-                                children: f
+                                variant: "text-md/normal",
+                                color: "text-default",
+                                children: f,
                             }),
                             null != y &&
                                 (0, r.jsx)(g, {
                                     text: y,
                                     user: t,
                                     guildId: n,
-                                    channelId: l
+                                    channelId: l,
                                 }),
                             (0, r.jsx)(d.Z, { tags: v }),
                             (0, r.jsx)(u.Z, {
                                 applicationId: h,
                                 guildId: n,
                                 channelId: l,
-                                className: m.socialProof
-                            })
-                        ]
-                    })
-                ]
+                                className: m.socialProof,
+                            }),
+                        ],
+                    }),
+                ],
             });
     return a
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: m.card,
-              children: [(0, r.jsx)('div', { className: p.gameCover }), (0, r.jsx)('div', { className: m.details })]
+              children: [(0, r.jsx)("div", { className: p.gameCover }), (0, r.jsx)("div", { className: m.details })],
           })
         : c
-          ? (0, r.jsx)('div', {
+          ? (0, r.jsx)("div", {
                 className: m.card,
-                children: O()
+                children: O(),
             })
           : (0, r.jsx)(b, {
                 applicationId: h,
                 userId: t.id,
                 gameName: f,
                 className: m.card,
-                children: O()
+                children: O(),
             });
 }

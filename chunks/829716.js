@@ -5,7 +5,7 @@ var r = n(481060);
 let s = (e) => {
     let { analyticsLocations: t, guild: s } = e;
     (0, r.ZDy)(async () => {
-        let { default: e } = await n.e('47495').then(n.bind(n, 766950));
+        let { default: e } = await n.e("47495").then(n.bind(n, 766950));
         return (n) => {
             var r, a;
             return (0, i.jsx)(
@@ -14,31 +14,31 @@ let s = (e) => {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
                 })({}, n)),
                 (a = a =
                     {
                         guild: s,
-                        analyticsLocations: t
+                        analyticsLocations: t,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
@@ -52,7 +52,7 @@ let s = (e) => {
                       })(Object(a)).forEach(function (e) {
                           Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
-                r)
+                r),
             );
         };
     }, {});

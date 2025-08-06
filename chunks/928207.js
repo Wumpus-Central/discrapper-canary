@@ -21,7 +21,7 @@ let _ = l.ZP.connectStores([h.default], () => ({ user: h.default.getCurrentUser(
             let { isAuthenticated: t, user: n } = e,
                 { analyticsLocations: l } = (0, u.ZP)(c.Z.HOME_PAGE_PREMIUM_TAB);
             return t
-                ? (0, r.jsxs)('div', {
+                ? (0, r.jsxs)("div", {
                       className: b.homeWrapperNormal,
                       children: [
                           null == n && (0, r.jsx)(f.Z, {}),
@@ -32,13 +32,13 @@ let _ = l.ZP.connectStores([h.default], () => ({ user: h.default.getCurrentUser(
                                       ? (0, r.jsx)(d.Z, {
                                             align: d.Z.Align.CENTER,
                                             justify: d.Z.Justify.CENTER,
-                                            children: (0, r.jsx)(a.$jN, { className: b.spinner })
+                                            children: (0, r.jsx)(a.$jN, { className: b.spinner }),
                                         })
-                                      : (0, r.jsx)(p.Z, { entrypoint: m.EZ.ApplicationStoreHome })
-                          })
-                      ]
+                                      : (0, r.jsx)(p.Z, { entrypoint: m.EZ.ApplicationStoreHome }),
+                          }),
+                      ],
                   })
                 : (0, r.jsx)(i.l_, { to: g.Z5c.LOGIN });
-        })
-    )
+        }),
+    ),
 );

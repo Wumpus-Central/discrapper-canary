@@ -3,10 +3,10 @@ n.d(t, {
     LH: () => o,
     Wj: () => a,
     aQ: () => i,
-    pL: () => s
+    pL: () => s,
 });
-let r = 'hello',
-    i = 'version',
-    o = 'force-resync-version',
+let r = "hello",
+    i = "version",
+    o = "force-resync-version",
     a = 3,
-    s = 'stable-57';
+    s = "stable-57";

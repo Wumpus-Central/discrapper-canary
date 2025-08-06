@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(35282));
+n.d(t, { Z: () => _ }), n(35282);
 var r,
     a,
     i = n(255367);
@@ -16,24 +16,24 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -51,25 +51,25 @@ let f = /^discord.gg\/[a-zA-Z0-9-]+/,
                         let r = (0, p.zO)(e[0]);
                         return null == r || r.type !== u.g.INVITE
                             ? {
-                                  type: 'text',
-                                  content: e[0]
+                                  type: "text",
+                                  content: e[0],
                               }
                             : {
-                                  type: 'inviteLink',
+                                  type: "inviteLink",
                                   content: [
                                       {
-                                          type: 'text',
-                                          content: e[0]
-                                      }
+                                          type: "text",
+                                          content: e[0],
+                                      },
                                   ],
                                   onClick: () => {
                                       var e;
-                                      (c.ZP.acceptInviteAndTransitionToInviteChannel({
+                                      c.ZP.acceptInviteAndTransitionToInviteChannel({
                                           inviteKey: r.code,
-                                          context: { location: 'Application Directory' }
+                                          context: { location: "Application Directory" },
                                       }),
-                                          null == (e = n.closeModal) || e.call(n));
-                                  }
+                                          null == (e = n.closeModal) || e.call(n);
+                                  },
                               };
                     },
                     react: (e, t, n) =>
@@ -77,13 +77,13 @@ let f = /^discord.gg\/[a-zA-Z0-9-]+/,
                             o.eee,
                             {
                                 onClick: (t) => {
-                                    (t.preventDefault(), e.onClick());
+                                    t.preventDefault(), e.onClick();
                                 },
-                                children: (0, m.S)(e, t, n)
+                                children: (0, m.S)(e, t, n),
                             },
-                            n.key
-                        )
-                }
+                            n.key,
+                        ),
+                },
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))

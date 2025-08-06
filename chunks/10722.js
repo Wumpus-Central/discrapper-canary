@@ -20,68 +20,68 @@ function k(e) {
         y = (0, t.q)(null == (a = n.linkedLobby) ? void 0 : a.application_id);
     return (0, l.jsxs)(i.Y0X, {
         transitionState: N,
-        'aria-label': m.intl.string(m.t.X8jMDg),
+        "aria-label": m.intl.string(m.t.X8jMDg),
         className: b.modal,
-        parentComponent: 'ChannelTopicModal',
+        parentComponent: "ChannelTopicModal",
         children: [
             (0, l.jsxs)(i.xBx, {
                 className: b.modalHeader,
                 separator: !1,
                 children: [
-                    (0, l.jsxs)('div', {
+                    (0, l.jsxs)("div", {
                         className: b.header,
                         children: [
                             null != u &&
                                 (0, l.jsx)(u, {
-                                    size: 'md',
-                                    color: 'currentColor',
-                                    className: b.channelIcon
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: b.channelIcon,
                                 }),
                             (0, l.jsx)(i.Text, {
-                                variant: 'text-md/semibold',
-                                color: 'header-primary',
-                                children: j
-                            })
-                        ]
+                                variant: "text-md/semibold",
+                                color: "header-primary",
+                                children: j,
+                            }),
+                        ],
                     }),
-                    (0, l.jsx)(i.olH, { onClick: o })
-                ]
+                    (0, l.jsx)(i.olH, { onClick: o }),
+                ],
             }),
             (0, l.jsxs)(i.hzk, {
                 children: [
                     (0, l.jsx)(i.Text, {
                         selectable: !0,
-                        variant: 'text-md/normal',
+                        variant: "text-md/normal",
                         className: c()(b.content, x.markup),
-                        children: d.Z.parseTopic(n.topic, !0, { channelId: n.id })
+                        children: d.Z.parseTopic(n.topic, !0, { channelId: n.id }),
                     }),
                     null != y
-                        ? (0, l.jsxs)('div', {
+                        ? (0, l.jsxs)("div", {
                               className: b.linkedLobbyNotice,
                               children: [
                                   (0, l.jsx)(i.DuK, { className: b.linkedLobbyApplicationIcon }),
                                   (0, l.jsx)(i.Text, {
-                                      variant: 'text-sm/normal',
-                                      color: 'header-secondary',
+                                      variant: "text-sm/normal",
+                                      color: "header-secondary",
                                       children: m.intl.format(m.t.Ud5rys, {
                                           applicationName: y.name,
                                           helpdeskArticle: p.Z.getArticleURL(h.BhN.LINKED_LOBBIES),
                                           separatorHook: (e, a) =>
                                               (0, l.jsx)(
-                                                  'span',
+                                                  "span",
                                                   {
                                                       className: b.linkedLobbyNoticeSeparator,
-                                                      children: e
+                                                      children: e,
                                                   },
-                                                  a
-                                              )
-                                      })
-                                  })
-                              ]
+                                                  a,
+                                              ),
+                                      }),
+                                  }),
+                              ],
                           })
-                        : null
-                ]
-            })
-        ]
+                        : null,
+                ],
+            }),
+        ],
     });
 }

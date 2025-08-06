@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(911969),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,14 +26,14 @@ function f(e) {
 class _ extends i.PureComponent {
     render() {
         let { className: e, textValue: t, richValue: n, message: i, channel: o, onCancel: a, children: s } = this.props,
-            l = (0, r.jsx)('div', {
+            l = (0, r.jsx)("div", {
                 className: u.operations,
                 children: c.intl.format(c.t.wDsPXl, {
                     onCancel: () => a(o.id),
-                    onSave: this.onClickSave
-                })
+                    onSave: this.onClickSave,
+                }),
             });
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: e,
             ref: this.node,
             onContextMenu: f,
@@ -46,43 +46,53 @@ class _ extends i.PureComponent {
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown,
-                    renderLeftAccessories: () => l
+                    renderLeftAccessories: () => l,
                 }),
-                l
-            ]
+                l,
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            d(this, 'node', i.createRef()),
-            d(this, 'onClickSave', () => {
+        super(...e),
+            d(this, "node", i.createRef()),
+            d(this, "onClickSave", () => {
                 let { textValue: e } = this.props;
                 this.onSubmit(e);
             }),
-            d(this, 'onSubmit', (e) => {
-                let { message: t, channel: n, onConfirmDelete: r, onCancel: i, saveMessage: c, validateEdit: u } = this.props;
+            d(this, "onSubmit", (e) => {
+                let {
+                    message: t,
+                    channel: n,
+                    onConfirmDelete: r,
+                    onCancel: i,
+                    saveMessage: c,
+                    validateEdit: u,
+                } = this.props;
                 return 0 === e.length
                     ? (r(n, t),
                       i(n.id),
                       Promise.resolve({
                           shouldClear: !1,
-                          shouldRefocus: !1
+                          shouldRefocus: !1,
                       }))
                     : u({
                           value: e,
-                          channel: n
+                          channel: n,
                       }).then((r) => {
                           let { valid: u } = r;
                           if (!u)
                               return Promise.resolve({
                                   shouldClear: !1,
-                                  shouldRefocus: !1
+                                  shouldRefocus: !1,
                               });
                           let d = (0, a.g)(e, {
                               channel: n,
-                              isEdit: !0
+                              isEdit: !0,
                           });
-                          if (((null == d ? void 0 : d.content) != null && (e = d.content), t.hasFlag(l.iLy.IS_COMPONENTS_V2) && this.props.channel.type === l.d4z.GUILD_ANNOUNCEMENT)) {
+                          if (
+                              ((null == d ? void 0 : d.content) != null && (e = d.content),
+                              t.hasFlag(l.iLy.IS_COMPONENTS_V2) && this.props.channel.type === l.d4z.GUILD_ANNOUNCEMENT)
+                          ) {
                               let t = s.ZP.parse(this.props.channel, e),
                                   n = this.props.message.components.filter((e) => e.type === o.re.TEXT_DISPLAY);
                               if (1 === n.length) {
@@ -91,26 +101,27 @@ class _ extends i.PureComponent {
                               }
                           } else {
                               let t = s.ZP.parse(this.props.channel, e);
-                              t.content !== this.props.message.content && c(this.props.channel.id, this.props.message.id, t);
+                              t.content !== this.props.message.content &&
+                                  c(this.props.channel.id, this.props.message.id, t);
                           }
                           return (
                               i(n.id),
                               Promise.resolve({
                                   shouldClear: !0,
-                                  shouldRefocus: !0
+                                  shouldRefocus: !0,
                               })
                           );
                       });
             }),
-            d(this, 'onChange', (e, t, n) => {
+            d(this, "onChange", (e, t, n) => {
                 let { channel: r, onChange: i } = this.props;
                 i(r.id, t, n);
             }),
-            d(this, 'onKeyDown', (e) => {
+            d(this, "onKeyDown", (e) => {
                 if (e.keyCode === l.yXg.ESCAPE && !e.shiftKey) {
                     let { channel: t, onCancel: n } = this.props;
-                    (e.preventDefault(), e.stopPropagation(), n(t.id));
+                    e.preventDefault(), e.stopPropagation(), n(t.id);
                 }
-            }));
+            });
     }
 }

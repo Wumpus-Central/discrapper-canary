@@ -14,21 +14,21 @@ function d(e) {
             .filter((e) => i.e$(e.permissions, s.Plq.MANAGE_GUILD))
             .map((e) => ({
                 value: e.id,
-                label: e.name
+                label: e.name,
             }));
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: c.selectorGroup,
         children: [
             (0, r.jsx)(a.X6q, {
-                variant: 'heading-deprecated-12/semibold',
+                variant: "heading-deprecated-12/semibold",
                 className: c.sectionLabel,
-                children: l.intl.string(l.t['1DXFFR'])
+                children: l.intl.string(l.t["1DXFFR"]),
             }),
-            null != t && '' !== t
+            null != t && "" !== t
                 ? (0, r.jsx)(o.x, {
-                      variant: 'text-xs/normal',
-                      color: 'text-danger',
-                      children: t
+                      variant: "text-xs/normal",
+                      color: "text-danger",
+                      children: t,
                   })
                 : null,
             (0, r.jsx)(a.VcW, {
@@ -38,14 +38,14 @@ function d(e) {
                 options: p,
                 onChange: d,
                 isDisabled: _,
-                value: n
+                value: n,
             }),
             (0, r.jsx)(o.x, {
-                variant: 'text-xs/medium',
-                color: 'header-secondary',
+                variant: "text-xs/medium",
+                color: "header-secondary",
                 className: c.label,
-                children: l.intl.format(l.t.t9Jm9v, {})
-            })
-        ]
+                children: l.intl.format(l.t.t9Jm9v, {}),
+            }),
+        ],
     });
 }

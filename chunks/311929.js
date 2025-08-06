@@ -1,14 +1,14 @@
-(n.d(t, {
+n.d(t, {
     $E: () => E,
     TS: () => _,
     Wh: () => h,
     bk: () => m,
     oI: () => p,
-    t8: () => f
+    t8: () => f,
 }),
     n(388685),
     n(49124),
-    n(415506));
+    n(415506);
 var r = n(512722),
     i = n.n(r),
     o = n(843991),
@@ -21,7 +21,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -79,16 +79,28 @@ function _(e, t) {
     return null != n ? n : e;
 }
 function p(e, t, n) {
-    return (i()(null == t || t[a.O] === e, 'Existing record type does not match the expected type'), null != t && E(t, n)) ? t : m(e, n);
+    return (i()(null == t || t[a.O] === e, "Existing record type does not match the expected type"),
+    null != t && E(t, n))
+        ? t
+        : m(e, n);
 }
 function h(e, t) {
-    return 'object' == typeof t && null != t && (a.O in t && t[a.O]) === e;
+    return "object" == typeof t && null != t && (a.O in t && t[a.O]) === e;
 }
 function m(e, t) {
-    return ((t[a.O] = e), t);
+    return (t[a.O] = e), t;
 }
 function g(e, t) {
-    return null == e || null == t ? e === t : e === t || (e instanceof Date && t instanceof Date ? e.getTime() === t.getTime() : e instanceof Set && t instanceof Set ? (0, o.O)(e, t) : Array.isArray(e) && Array.isArray(t) ? (0, s.E)(e, t) : 'object' == typeof e && 'object' == typeof t && (0, s.Z)(e, t));
+    return null == e || null == t
+        ? e === t
+        : e === t ||
+              (e instanceof Date && t instanceof Date
+                  ? e.getTime() === t.getTime()
+                  : e instanceof Set && t instanceof Set
+                    ? (0, o.O)(e, t)
+                    : Array.isArray(e) && Array.isArray(t)
+                      ? (0, s.E)(e, t)
+                      : "object" == typeof e && "object" == typeof t && (0, s.Z)(e, t));
 }
 function E(e, t) {
     if (e === t) return !0;

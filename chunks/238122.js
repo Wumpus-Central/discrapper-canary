@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(413496), n(433524), n(35282));
+n.d(t, { Z: () => m }), n(388685), n(413496), n(433524), n(35282);
 var r = n(255367),
     l = n(73800),
     i = n(481060),
@@ -13,7 +13,7 @@ let u = (e) => {
                 data: { title: u, subtitle: m, placeholder: p, rows: g, character_limit: x, pattern: _ },
                 onChange: b,
                 initialText: h,
-                isRequired: f
+                isRequired: f,
             } = e,
             v = l.useRef(
                 a.Z.reactParserFor(
@@ -21,24 +21,24 @@ let u = (e) => {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, a.Z.defaultRules)),
@@ -55,14 +55,14 @@ let u = (e) => {
                           })(Object(n)).forEach(function (e) {
                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
-                    t)
-                )
+                    t),
+                ),
             ),
-            [j, y] = l.useState(''),
+            [j, y] = l.useState(""),
             [O, Z] = l.useState(null);
         l.useEffect(() => {
             var e;
-            y(null != (e = null == h ? void 0 : h.value) ? e : '');
+            y(null != (e = null == h ? void 0 : h.value) ? e : "");
         }, [h]);
         let I = l.useCallback(
             (e) => {
@@ -73,33 +73,33 @@ let u = (e) => {
                       y(e),
                       b({
                           value: e,
-                          isValid: !0
+                          isValid: !0,
                       }))
-                    : (Z(o.intl.string(o.t['24xrGR'])),
+                    : (Z(o.intl.string(o.t["24xrGR"])),
                       b({
                           value: e,
-                          isValid: !1
+                          isValid: !1,
                       }));
             },
-            [b, _]
+            [b, _],
         );
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: d.marginBottom8,
             children: [
                 null != u &&
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: d.marginBottom8,
                         children: (0, r.jsxs)(i.Text, {
-                            variant: 'text-sm/bold',
+                            variant: "text-sm/bold",
                             children: [
                                 u,
                                 f &&
-                                    (0, r.jsx)('span', {
+                                    (0, r.jsx)("span", {
                                         className: c.required,
-                                        children: '*'
-                                    })
-                            ]
-                        })
+                                        children: "*",
+                                    }),
+                            ],
+                        }),
                     }),
                 (0, r.jsx)(i.Kx8, {
                     maxLength: x,
@@ -108,16 +108,16 @@ let u = (e) => {
                     error: O,
                     rows: g,
                     placeholder: p,
-                    autoFocus: !0
+                    autoFocus: !0,
                 }),
                 null != m &&
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         children: (0, r.jsx)(i.Text, {
-                            variant: 'text-sm/normal',
-                            children: v.current(m)
-                        })
-                    })
-            ]
+                            variant: "text-sm/normal",
+                            children: v.current(m),
+                        }),
+                    }),
+            ],
         });
     },
     m = (e) => {
@@ -131,10 +131,10 @@ let u = (e) => {
                         data: e.data,
                         onChange: (e) => n(i, e.value, e.isValid),
                         initialText: null != (t = null == l ? void 0 : l[i]) ? t : void 0,
-                        isRequired: e.should_submit_data
+                        isRequired: e.should_submit_data,
                     },
-                    i
+                    i,
                 );
             });
-        return (0, r.jsx)('div', { children: i });
+        return (0, r.jsx)("div", { children: i });
     };

@@ -1,6 +1,6 @@
 n.d(t, {
     O: () => u,
-    Z: () => l
+    Z: () => l,
 });
 var r = n(255367),
     s = n(120356),
@@ -10,9 +10,9 @@ var r = n(255367),
     c = n(543856);
 function l(e) {
     let { className: t, children: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()(c.toolbar, t),
-        children: n
+        children: n,
     });
 }
 function u(e) {
@@ -27,24 +27,24 @@ function u(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -52,11 +52,11 @@ function u(e) {
                     {
                         onClick: s,
                         className: c.toolbarButton,
-                        children: (0, r.jsx)('img', {
+                        children: (0, r.jsx)("img", {
                             className: c.icon,
                             src: t,
-                            alt: n
-                        })
+                            alt: n,
+                        }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
@@ -70,8 +70,8 @@ function u(e) {
                       })(Object(a)).forEach(function (e) {
                           Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
-                o)
+                o),
             );
-        }
+        },
     });
 }

@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,5 +29,5 @@ class u extends (i = o.ZP.PersistedStore) {
         return { animationType: r };
     }
 }
-(l(u, 'displayName', 'VoiceChannelEffectsPersistedStore'), l(u, 'persistKey', 'VoiceChannelEffectsPersistedStore'));
+l(u, "displayName", "VoiceChannelEffectsPersistedStore"), l(u, "persistKey", "VoiceChannelEffectsPersistedStore");
 let d = new u(a.Z, { VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: c });

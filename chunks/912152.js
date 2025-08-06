@@ -11,42 +11,54 @@ var r = n(481060),
     u = n(388032),
     m = n(839058);
 let p = function (e) {
-    let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: p, subscriptionIsPausedOrPausePending: g } = e,
+    let {
+            hasAppliedGuildBoosts: t,
+            hasBoostPerk: n,
+            hasGuildAffinitiesOrInGuild: p,
+            subscriptionIsPausedOrPausePending: g,
+        } = e,
         { subtitle: h, flavor: f } = (function (e) {
-            let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: i, subscriptionIsPausedOrPausePending: r } = e;
+            let {
+                hasAppliedGuildBoosts: t,
+                hasBoostPerk: n,
+                hasGuildAffinitiesOrInGuild: i,
+                subscriptionIsPausedOrPausePending: r,
+            } = e;
             if (r) return { flavor: u.intl.format(u.t.doslJi, { onClick: () => s.Z.open(c.oAB.SUBSCRIPTIONS) }) };
             if (!i) return { subtitle: u.intl.string(u.t.oiWYAQ) };
             if (t)
                 return {
                     subtitle: u.intl.string(u.t.W5rDjY),
-                    flavor: u.intl.format(u.t.cUHcaW, { helpdeskArticle: a.Z.getArticleURL(c.BhN.GUILD_SUBSCRIPTIONS) })
+                    flavor: u.intl.format(u.t.cUHcaW, {
+                        helpdeskArticle: a.Z.getArticleURL(c.BhN.GUILD_SUBSCRIPTIONS),
+                    }),
                 };
             let m = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
                 p = l.ZP.getDefaultPrice(m.id, n),
                 g = (0, o.og)((0, o.T4)(p.amount, p.currency), m.interval, m.intervalCount);
             return {
                 subtitle: n ? u.intl.string(u.t.bhPzXV) : u.intl.string(u.t.Zs9h9f),
-                flavor: u.intl.formatToPlainString(u.t.PGgTdH, { monthlyGuildBoostPrice: g })
+                flavor: u.intl.formatToPlainString(u.t.PGgTdH, { monthlyGuildBoostPrice: g }),
             };
         })({
             hasAppliedGuildBoosts: t,
             hasBoostPerk: n,
             hasGuildAffinitiesOrInGuild: p,
-            subscriptionIsPausedOrPausePending: g
+            subscriptionIsPausedOrPausePending: g,
         });
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: m.wrapper,
         children: [
             (0, i.jsx)(r.X6q, {
-                variant: 'heading-lg/bold',
+                variant: "heading-lg/bold",
                 className: m.subtitle,
-                children: h
+                children: h,
             }),
             null != f &&
                 (0, i.jsx)(r.Text, {
-                    variant: 'text-sm/normal',
-                    children: f
-                })
-        ]
+                    variant: "text-sm/normal",
+                    children: f,
+                }),
+        ],
     });
 };

@@ -19,15 +19,15 @@ function p(e) {
         }, []),
         (0, l.jsxs)(i.Y0X, {
             transitionState: t,
-            role: 'alertdialog',
-            'aria-labelledby': p,
-            parentComponent: 'KeyboardNavigationModal',
+            role: "alertdialog",
+            "aria-labelledby": p,
+            parentComponent: "KeyboardNavigationModal",
             children: [
                 (0, l.jsxs)(i.hzk, {
                     className: h.content,
                     children: [
                         (0, l.jsx)(i.X6q, {
-                            variant: 'heading-xl/semibold',
+                            variant: "heading-xl/semibold",
                             id: p,
                             className: h.header,
                             children: _.intl.format(_.t.V4fxrq, {
@@ -35,56 +35,56 @@ function p(e) {
                                     (0, l.jsx)(
                                         i.M2$,
                                         {
-                                            shortcut: 'tab',
-                                            className: h.headerShortcut
+                                            shortcut: "tab",
+                                            className: h.headerShortcut,
                                         },
-                                        t
-                                    )
-                            })
+                                        t,
+                                    ),
+                            }),
                         }),
                         (0, l.jsx)(i.Text, {
-                            variant: 'text-md/normal',
-                            children: _.intl.string(_.t['oQA/OD'])
+                            variant: "text-md/normal",
+                            children: _.intl.string(_.t["oQA/OD"]),
                         }),
-                        (0, l.jsxs)('ul', {
+                        (0, l.jsxs)("ul", {
                             className: h.tips,
                             children: [
-                                (0, l.jsxs)('li', {
+                                (0, l.jsxs)("li", {
                                     children: [
-                                        (0, l.jsx)(i.M2$, { shortcut: r._.binds['0'] }),
+                                        (0, l.jsx)(i.M2$, { shortcut: r._.binds["0"] }),
                                         (0, l.jsx)(i.Text, {
-                                            variant: 'text-md/normal',
-                                            children: _.intl.string(_.t['43Qn2t'])
-                                        })
-                                    ]
+                                            variant: "text-md/normal",
+                                            children: _.intl.string(_.t["43Qn2t"]),
+                                        }),
+                                    ],
                                 }),
-                                (0, l.jsxs)('li', {
+                                (0, l.jsxs)("li", {
                                     children: [
-                                        (0, l.jsx)(i.M2$, { shortcut: c.$.binds['0'] }),
+                                        (0, l.jsx)(i.M2$, { shortcut: c.$.binds["0"] }),
                                         (0, l.jsx)(i.Text, {
-                                            variant: 'text-md/normal',
-                                            children: _.intl.string(_.t.zJg4FR)
-                                        })
-                                    ]
-                                })
-                            ]
+                                            variant: "text-md/normal",
+                                            children: _.intl.string(_.t.zJg4FR),
+                                        }),
+                                    ],
+                                }),
+                            ],
                         }),
                         (0, l.jsx)(i.Text, {
-                            variant: 'text-md/normal',
-                            children: _.intl.format(_.t.EWFVSU, { link: o.Z.getArticleURL(d.BhN.KEYBOARD_NAVIGATION) })
-                        })
-                    ]
+                            variant: "text-md/normal",
+                            children: _.intl.format(_.t.EWFVSU, { link: o.Z.getArticleURL(d.BhN.KEYBOARD_NAVIGATION) }),
+                        }),
+                    ],
                 }),
                 (0, l.jsx)(i.mzw, {
                     children: (0, l.jsx)(i.zxk, {
-                        variant: 'primary',
-                        size: 'sm',
+                        variant: "primary",
+                        size: "sm",
                         text: _.intl.string(_.t.BddRzc),
                         onClick: n,
-                        autoFocus: !0
-                    })
-                })
-            ]
+                        autoFocus: !0,
+                    }),
+                }),
+            ],
         })
     );
 }

@@ -13,17 +13,24 @@ var l = r(120356),
 let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
     f = (e) => {
         var t, r;
-        let { item: l, user: u, isHighlighted: f = !1, isPurchased: h = !1, avatarSize: b = o.EFr.SIZE_152, avatarPlaceholderSrc: _ } = e,
+        let {
+                item: l,
+                user: u,
+                isHighlighted: f = !1,
+                isPurchased: h = !1,
+                avatarSize: b = o.EFr.SIZE_152,
+                avatarPlaceholderSrc: _,
+            } = e,
             m = (0, s.y9)(b),
             {
                 avatarDecorationSrc: v,
                 eventHandlers: C,
-                avatarPlaceholderSrc: O
+                avatarPlaceholderSrc: O,
             } = (0, c.Z)({
                 user: u,
                 avatarDecorationOverride: (null == l ? void 0 : l.type) === i.Z.AVATAR_DECORATION ? l : void 0,
                 size: m,
-                onlyAnimateOnHover: !f
+                onlyAnimateOnHover: !f,
             }),
             E = d.intl.formatToPlainString(d.t.Do2lxM, { a11y_text: l.label });
         return (0, n.jsx)(
@@ -32,24 +39,24 @@ let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
                 for (var t = 1; t < arguments.length; t++) {
                     var r = null != arguments[t] ? arguments[t] : {},
                         n = Object.keys(r);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (n = n.concat(
                             Object.getOwnPropertySymbols(r).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                            })
+                            }),
                         )),
                         n.forEach(function (t) {
                             var n;
-                            ((n = r[t]),
+                            (n = r[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: n,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = n));
-                        }));
+                                    : (e[t] = n);
+                        });
                 }
                 return e;
             })({}, C)),
@@ -60,7 +67,7 @@ let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
                     imageClassName: f ? p.fadeInAvatarImg : void 0,
                     className: a()(p.avatar, { [p.avatarPurchased]: h && !f }),
                     size: b,
-                    'aria-label': E
+                    "aria-label": E,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -74,6 +81,6 @@ let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
                   })(Object(r)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                   }),
-            t)
+            t),
         );
     };

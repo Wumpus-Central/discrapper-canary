@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => l,
-    z: () => c
+    z: () => c,
 });
 var r = n(255367),
     i = n(73800),
@@ -10,7 +10,7 @@ let s = i.createContext({
     theme: a.Z.themePreferenceForSystemTheme((0, o.Z)()),
     themeType: null,
     primaryColor: null,
-    secondaryColor: null
+    secondaryColor: null,
 });
 function l(e) {
     let { theme: t, themeType: n, primaryColor: o, secondaryColor: a, children: l } = e,
@@ -19,13 +19,13 @@ function l(e) {
                 theme: t,
                 themeType: n,
                 primaryColor: o,
-                secondaryColor: a
+                secondaryColor: a,
             }),
-            [t, n, o, a]
+            [t, n, o, a],
         );
     return (0, r.jsx)(s.Provider, {
         value: c,
-        children: l
+        children: l,
     });
 }
 let c = () => i.useContext(s);

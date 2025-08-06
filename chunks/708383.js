@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(35282));
+n.d(t, { Z: () => p }), n(35282);
 var i = n(255367),
     r = n(73800),
     o = n(114858),
@@ -19,13 +19,13 @@ class h extends r.Component {
         let {
             guildId: t,
             channelId: n,
-            messageId: i
+            messageId: i,
         } = (function (e) {
             let { guildId: t, channelId: n, messageId: i } = e.params;
             return {
-                guildId: null != t && '' !== t ? t : u.ME,
+                guildId: null != t && "" !== t ? t : u.ME,
                 channelId: n,
-                messageId: i
+                messageId: i,
             };
         })(e);
         (0, c.Ss)(t) && (0, c.cq)(n)
@@ -33,7 +33,7 @@ class h extends r.Component {
               s.default.selectChannel({
                   guildId: t,
                   channelId: n,
-                  messageId: i
+                  messageId: i,
               }))
             : (0, d.dL)(u.Z5c.ME);
     }
@@ -45,9 +45,9 @@ let p = () =>
     (0, i.jsxs)(o.rs, {
         children: [
             (0, i.jsx)(a.Z, {
-                path: u.Z5c.CHANNEL(c.Hw.guildId(), c.Hw.channelId({ optional: !0 }), ':messageId?'),
-                component: h
+                path: u.Z5c.CHANNEL(c.Hw.guildId(), c.Hw.channelId({ optional: !0 }), ":messageId?"),
+                component: h,
             }),
-            (0, i.jsx)(a.Z, { component: h })
-        ]
+            (0, i.jsx)(a.Z, { component: h }),
+        ],
     });

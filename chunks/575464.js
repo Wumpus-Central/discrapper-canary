@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(35282));
+n.d(t, { Z: () => b }), n(35282);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -19,7 +19,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,9 +65,22 @@ function E(e, t) {
     );
 }
 function b(e) {
-    let { user: t, row: n, hideDiscriminator: i, comparator: h, selected: g, checked: b, disabled: y = !1, inlineUsername: O = !0, onClick: v, onMouseEnter: I, 'aria-setsize': T, 'aria-posinset': S } = e,
+    let {
+            user: t,
+            row: n,
+            hideDiscriminator: i,
+            comparator: h,
+            selected: g,
+            checked: b,
+            disabled: y = !1,
+            inlineUsername: O = !0,
+            onClick: v,
+            onMouseEnter: I,
+            "aria-setsize": T,
+            "aria-posinset": S,
+        } = e,
         A = (0, s.e7)([f.Z], () => f.Z.getStatus(t.id)),
-        N = () => (null != h && h === t.tag ? _.ZP.getName(t) : null != h && '' !== h ? h : _.ZP.getName(t)),
+        N = () => (null != h && h === t.tag ? _.ZP.getName(t) : null != h && "" !== h ? h : _.ZP.getName(t)),
         C = () => {
             null != I && I(n);
         },
@@ -80,30 +93,30 @@ function b(e) {
         E(
             m(
                 {
-                    id: 'user-row-'.concat(n),
+                    id: "user-row-".concat(n),
                     className: o()(p.friendWrapper, { [p.disabled]: y }),
                     onClick: R,
-                    onMouseEnter: C
+                    onMouseEnter: C,
                 },
-                P
+                P,
             ),
             {
-                role: 'option',
-                'aria-selected': b,
-                'aria-disabled': y,
-                'aria-setsize': T,
-                'aria-posinset': S,
+                role: "option",
+                "aria-selected": b,
+                "aria-disabled": y,
+                "aria-setsize": T,
+                "aria-posinset": S,
                 children: (0, r.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,
                     className: o()(p.friend, {
                         [p.friendSelected]: g,
-                        [p.twoRows]: !O
+                        [p.twoRows]: !O,
                     }),
                     children: [
                         (0, r.jsx)(u.Z, {
                             user: t,
                             status: A,
-                            className: p.avatar
+                            className: p.avatar,
                         }),
                         (0, r.jsxs)(d.Z, {
                             className: p.match,
@@ -111,36 +124,36 @@ function b(e) {
                             direction: O ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
                             children: [
                                 (0, r.jsx)(l.Text, {
-                                    tag: 'strong',
+                                    tag: "strong",
                                     className: p.nickname,
-                                    'aria-hidden': !0,
-                                    variant: 'text-md/medium',
-                                    children: N()
+                                    "aria-hidden": !0,
+                                    variant: "text-md/medium",
+                                    children: N(),
                                 }),
                                 (0, r.jsx)(l.Text, {
-                                    variant: 'text-xs/normal',
-                                    color: 'text-muted',
+                                    variant: "text-xs/normal",
+                                    color: "text-muted",
                                     children: (0, r.jsx)(c.Z, {
                                         user: t,
                                         hideDiscriminator: i,
                                         className: p.discordTag,
                                         usernameClass: p.__invalid_weightMedium,
                                         discriminatorClass: p.__invalid_weightMedium,
-                                        forceUsername: !0
-                                    })
-                                })
-                            ]
+                                        forceUsername: !0,
+                                    }),
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(l.XZJ, {
                             displayOnly: !0,
                             size: 22,
                             value: b,
                             disabled: y,
-                            className: p.checkbox
-                        })
-                    ]
-                })
-            }
-        )
+                            className: p.checkbox,
+                        }),
+                    ],
+                }),
+            },
+        ),
     );
 }

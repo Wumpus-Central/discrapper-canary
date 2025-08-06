@@ -9,9 +9,14 @@ function o(e, t) {
             let n = 0,
                 r = 0,
                 o = 0;
-            (e.forEach((e) => {
+            e.forEach((e) => {
                 let t = e.image;
-                null != t && (null != t.emoji ? (r += 1) : null != t.stickerId ? (o += 1) : null != t.mediaAttachmentState && (n += 1));
+                null != t &&
+                    (null != t.emoji
+                        ? (r += 1)
+                        : null != t.stickerId
+                          ? (o += 1)
+                          : null != t.mediaAttachmentState && (n += 1));
             }),
                 l.ZP.trackWithMetadata(i.rMx.POLL_CREATION_CANCELLED, {
                     answers_count: e.length,
@@ -19,8 +24,8 @@ function o(e, t) {
                     emojis_count: r,
                     stickers_count: o,
                     allow_multiselect: t,
-                    layout_type: a.C.DEFAULT
-                }));
-        }, [e, t])
+                    layout_type: a.C.DEFAULT,
+                });
+        }, [e, t]),
     };
 }

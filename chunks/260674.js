@@ -7,7 +7,7 @@ e.exports = function () {
     var e,
         t = {
             assert: function (e) {
-                if (!t.has(e)) throw new r('Side channel does not contain ' + i(e));
+                if (!t.has(e)) throw new r("Side channel does not contain " + i(e));
             },
             delete: function (t) {
                 return !!e && e.delete(t);
@@ -19,8 +19,8 @@ e.exports = function () {
                 return !!e && e.has(t);
             },
             set: function (t, n) {
-                (e || (e = s()), e.set(t, n));
-            }
+                e || (e = s()), e.set(t, n);
+            },
         };
     return t;
 };

@@ -25,27 +25,32 @@ var r = n(255367),
     A = n(388032),
     N = n(752386);
 function C() {
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: N.headerContainer,
         children: [
             (0, r.jsx)(S.Z, {
-                size: 'xs',
+                size: "xs",
                 className: N.headerIcon,
-                color: l.Z.colors.TEXT_LOW_CONTRAST
+                color: l.Z.colors.TEXT_LOW_CONTRAST,
             }),
             (0, r.jsx)(o.xv, {
                 className: N.headerText,
-                variant: 'text-sm/semibold',
-                color: 'text-low-contrast',
-                children: A.intl.string(A.t.ToyvLi)
-            })
-        ]
+                variant: "text-sm/semibold",
+                color: "text-low-contrast",
+                children: A.intl.string(A.t.ToyvLi),
+            }),
+        ],
     });
 }
 function R(e) {
     let { message: t, snapshot: n, index: d } = e,
         f = i.useMemo(() => new v.r(t, n, d), [t, n, d]),
-        _ = (0, a.e7)([m.Z, O.default, y.Z, b.Z, E.Z, u.Z], () => f.getForwardInfo(m.Z, O.default, y.Z, b.Z, E.Z, u.Z).footerInfo, [f], s.Z),
+        _ = (0, a.e7)(
+            [m.Z, O.default, y.Z, b.Z, E.Z, u.Z],
+            () => f.getForwardInfo(m.Z, O.default, y.Z, b.Z, E.Z, u.Z).footerInfo,
+            [f],
+            s.Z,
+        ),
         p = i.useCallback(() => {
             (0, I.Z)(t);
         }, [t]);
@@ -56,23 +61,23 @@ function R(e) {
               onClick: p,
               children: [
                   null != _.originIconUrl
-                      ? (0, r.jsx)('img', {
+                      ? (0, r.jsx)("img", {
                             className: N.originIcon,
                             src: _.originIconUrl,
-                            alt: ''
+                            alt: "",
                         })
                       : null,
                   (0, r.jsx)(o.xv, {
                       className: N.footerText,
-                      variant: 'text-sm/medium',
-                      color: 'none',
-                      children: ''.concat(_.originLabel, '  \u2022  ').concat(_.timestampLabel)
+                      variant: "text-sm/medium",
+                      color: "none",
+                      children: "".concat(_.originLabel, "  \u2022  ").concat(_.timestampLabel),
                   }),
                   (0, r.jsx)(c.Fbu, {
-                      size: 'xxs',
-                      color: l.Z.colors.TEXT_LOW_CONTRAST
-                  })
-              ]
+                      size: "xxs",
+                      color: l.Z.colors.TEXT_LOW_CONTRAST,
+                  }),
+              ],
           });
 }
 function P(e) {
@@ -92,48 +97,48 @@ function P(e) {
             allowHeading: y,
             allowLinks: !0,
             allowDevLinks: b,
-            previewLinkTarget: !0
+            previewLinkTarget: !0,
         }),
         I = (0, a.e7)([m.Z], () => m.Z.getChannel(n.channel_id)),
         S = h.jU.useSetting();
     return null == I
         ? null
         : (0, r.jsxs)(
-              'div',
+              "div",
               {
                   className: N.container,
                   children: [
-                      (0, r.jsx)('div', { className: N.quote }),
-                      (0, r.jsxs)('div', {
+                      (0, r.jsx)("div", { className: N.quote }),
+                      (0, r.jsxs)("div", {
                           className: N.content,
                           children: [
                               (0, r.jsx)(C, {}),
                               (0, r.jsx)(f.ZP, {
                                   message: l,
                                   content: O,
-                                  compact: S
+                                  compact: S,
                               }),
                               (0, p.Z)({
                                   channelMessageProps: {
                                       message: l,
                                       channel: I,
-                                      compact: S
+                                      compact: S,
                                   },
                                   hasSpoilerEmbeds: v,
                                   isInteracting: !1,
                                   isMessageSnapshot: !0,
-                                  renderThreadAccessory: !1
+                                  renderThreadAccessory: !1,
                               }),
                               (0, r.jsx)(R, {
                                   message: n,
                                   snapshot: o,
-                                  index: s
-                              })
-                          ]
-                      })
-                  ]
+                                  index: s,
+                              }),
+                          ],
+                      }),
+                  ],
               },
-              s
+              s,
           );
 }
 function w(e) {
@@ -145,10 +150,10 @@ function w(e) {
                 {
                     message: t,
                     snapshot: e,
-                    index: n
+                    index: n,
                 },
-                n
-            )
-        )
+                n,
+            ),
+        ),
     });
 }

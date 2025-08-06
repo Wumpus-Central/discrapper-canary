@@ -25,5 +25,5 @@ e.exports = {
     Z_BINARY: 0,
     Z_TEXT: 1,
     Z_UNKNOWN: 2,
-    Z_DEFLATED: 8
+    Z_DEFLATED: 8,
 };

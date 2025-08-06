@@ -1,7 +1,7 @@
 n.d(t, {
     EI: () => i,
     XM: () => r,
-    qK: () => o
+    qK: () => o,
 });
 let r = 30 * n(70956).Z.Millis.MINUTE,
     i = 1;

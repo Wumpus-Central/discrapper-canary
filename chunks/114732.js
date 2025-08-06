@@ -18,38 +18,38 @@ let d = function (e) {
                 separator: !1,
                 className: l.header,
                 children: [
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("img", {
+                        alt: "",
                         className: l.headerImage,
-                        src: d ? c : u
+                        src: d ? c : u,
                     }),
                     (0, r.jsx)(o.X6q, {
                         className: l.title,
-                        variant: 'heading-xl/medium',
-                        children: s.intl.string(s.t.tWYWJy)
+                        variant: "heading-xl/medium",
+                        children: s.intl.string(s.t.tWYWJy),
                     }),
                     (0, r.jsx)(o.olH, {
                         onClick: t,
-                        className: l.modalCloseButton
-                    })
-                ]
+                        className: l.modalCloseButton,
+                    }),
+                ],
             }),
             (0, r.jsx)(o.hzk, {
                 className: l.content,
-                scrollbarType: 'none',
+                scrollbarType: "none",
                 children: (0, r.jsx)(o.Text, {
-                    variant: 'text-md/normal',
-                    children: s.intl.string(s.t.JNQRU1)
-                })
+                    variant: "text-md/normal",
+                    children: s.intl.string(s.t.JNQRU1),
+                }),
             }),
             (0, r.jsx)(o.mzw, {
                 className: l.modalFooter,
                 children: (0, r.jsx)(o.zxk, {
-                    variant: 'primary',
+                    variant: "primary",
                     text: s.intl.string(s.t.cpT0Cg),
-                    onClick: t
-                })
-            })
-        ]
+                    onClick: t,
+                }),
+            }),
+        ],
     });
 };

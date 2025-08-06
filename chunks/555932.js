@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685), n(583741));
+n.d(t, { Z: () => O }), n(388685), n(583741);
 var r = n(255367),
     i = n(73800),
     o = n(126663),
@@ -36,34 +36,34 @@ function y(e) {
         config: {
             tension: 15,
             friction: 7,
-            clamp: !0
+            clamp: !0,
         },
         onChange: y,
         onStart: () => {
             _(!1);
         },
         onRest: () => {
-            (_(!0),
+            _(!0),
                 r === f.Eu4.TIER_3 &&
                     (m(!0),
                     window.setTimeout(() => {
                         b.current && m(!1);
-                    }, h)));
-        }
+                    }, h));
+        },
     });
     return (
         i.useEffect(
             () => () => {
                 b.current = !1;
             },
-            []
+            [],
         ),
         {
             isProgressBarAnimationComplete: u,
             progressBarFillWidthFactor: O,
             setShouldFireConfetti: m,
             shouldFireConfetti: p,
-            tierMarkerAnimationPosition: l
+            tierMarkerAnimationPosition: l,
         }
     );
 }
@@ -80,13 +80,13 @@ function O(e) {
             isProgressBarAnimationComplete: A,
             setShouldFireConfetti: N,
             shouldFireConfetti: C,
-            tierMarkerAnimationPosition: R
+            tierMarkerAnimationPosition: R,
         } = y({
             fillFactor: I,
             isRevealed: v,
             useReducedMotion: n,
             premiumTier: t.premiumTier,
-            guildBoostCount: T
+            guildBoostCount: T,
         });
     return (
         i.useEffect(() => {
@@ -97,19 +97,19 @@ function O(e) {
                 window.clearTimeout(e);
             };
         }, []),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: p.progressBar,
-            role: 'progressbar',
-            'aria-valuenow': T,
-            'aria-valuetext':
+            role: "progressbar",
+            "aria-valuenow": T,
+            "aria-valuetext":
                 t.premiumTier === f.Eu4.NONE
                     ? _.intl.formatToPlainString(_.t.Ukqm9v, { numSubscriptionsApplied: T })
                     : _.intl.formatToPlainString(_.t.qWunaW, {
                           numSubscriptionsApplied: T,
-                          tierName: (0, c.nW)(t.premiumTier, { useLevels: !1 })
+                          tierName: (0, c.nW)(t.premiumTier, { useLevels: !1 }),
                       }),
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: p.progressBarScrubber,
                     children: [
                         (0, r.jsx)(o.animated.div, {
@@ -117,12 +117,12 @@ function O(e) {
                             style: {
                                 width: S.to({
                                     range: [0, 1],
-                                    output: [0, 100]
-                                }).to((e) => ''.concat(e, '%'))
-                            }
+                                    output: [0, 100],
+                                }).to((e) => "".concat(e, "%")),
+                            },
                         }),
-                        (0, r.jsx)('div', { className: p.progressBarTrack })
-                    ]
+                        (0, r.jsx)("div", { className: p.progressBarTrack }),
+                    ],
                 }),
                 b.map((e) =>
                     (0, r.jsx)(
@@ -136,17 +136,17 @@ function O(e) {
                             tier: e,
                             tierMarkerAnimationPosition: R,
                             totalAvailableBoostsCount: T,
-                            children: (0, c.nW)(e)
+                            children: (0, c.nW)(e),
                         },
-                        e
-                    )
+                        e,
+                    ),
                 ),
                 (0, r.jsx)(u.Z, {
                     confettiCount: g,
                     confettiTriggerRef: O,
-                    isFiring: C
-                })
-            ]
+                    isFiring: C,
+                }),
+            ],
         })
     );
 }

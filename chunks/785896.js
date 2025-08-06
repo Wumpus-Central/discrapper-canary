@@ -1,4 +1,4 @@
-(n.d(t, { i: () => d }), n(388685));
+n.d(t, { i: () => d }), n(388685);
 var r = n(73800),
     i = n(399606),
     o = n(430824),
@@ -11,11 +11,11 @@ let u = (e, t, n) => {
         return (null == r ? void 0 : r.type) === s.B.GUILD
             ? {
                   emoji: r,
-                  joinedEmojiSourceGuildRecord: t.getGuild(null == r ? void 0 : r.guildId)
+                  joinedEmojiSourceGuildRecord: t.getGuild(null == r ? void 0 : r.guildId),
               }
             : {
                   emoji: null,
-                  joinedEmojiSourceGuildRecord: null
+                  joinedEmojiSourceGuildRecord: null,
               };
     },
     d = (e) => {
@@ -48,7 +48,7 @@ let u = (e, t, n) => {
                             case l.w6.GUILD:
                                 O(n.guild);
                         }
-                    (m(!1), null == (e = T.current) || e.call(T));
+                    m(!1), null == (e = T.current) || e.call(T);
                 };
                 if (p) return void r();
                 null == (n = T.current) || n.call(T);
@@ -60,7 +60,7 @@ let u = (e, t, n) => {
                 joinedEmojiSourceGuildRecord: s,
                 hasJoinedEmojiSourceGuild: f,
                 emoji: d,
-                isFetching: h
+                isFetching: h,
             }
         );
     };

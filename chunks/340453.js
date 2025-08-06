@@ -15,38 +15,38 @@ function u(e) {
         {
             avatarSrc: p,
             avatarDecorationSrc: g,
-            eventHandlers: h
+            eventHandlers: h,
         } = (0, s.Z)({
             userId: a.id,
             size: r.EFr.SIZE_40,
-            animateOnHover: !0
+            animateOnHover: !0,
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(
-                'div',
+                "div",
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
                 })({}, h)),
@@ -57,8 +57,8 @@ function u(e) {
                             src: p,
                             avatarDecoration: g,
                             size: r.EFr.SIZE_40,
-                            'aria-label': a.username
-                        })
+                            "aria-label": a.username,
+                        }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -72,23 +72,23 @@ function u(e) {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
+                t),
             ),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: c.userPreview,
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: c.userContainerWithTimestamp,
-                        children: (0, i.jsx)(o.Z, { user: a })
+                        children: (0, i.jsx)(o.Z, { user: a }),
                     }),
                     (0, i.jsx)(r.Text, {
                         className: c.__invalid_timestamp,
-                        color: 'text-muted',
-                        variant: 'text-xs/normal',
-                        children: m
-                    })
-                ]
-            })
-        ]
+                        color: "text-muted",
+                        variant: "text-xs/normal",
+                        children: m,
+                    }),
+                ],
+            }),
+        ],
     });
 }

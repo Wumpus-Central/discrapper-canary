@@ -11,24 +11,24 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -59,49 +59,49 @@ function p(e) {
         ? null
         : (null == m ? void 0 : m.guildId) != null
           ? (0, r.jsx)(l.sNh, {
-                id: 'view-main-profile',
+                id: "view-main-profile",
                 label: d.intl.string(d.t.GISTtb),
-                subtext: d.intl.formatToPlainString(d.t['mn/nW1'], { displayName: i.ZP.getName(void 0, void 0, t) }),
+                subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: i.ZP.getName(void 0, void 0, t) }),
                 action: () => {
-                    (null == g || g(),
+                    null == g || g(),
                         (0, c.openUserProfileModal)(
                             f(u({}, h), {
                                 showGuildProfile: !1,
-                                sourceAnalyticsLocations: j
-                            })
+                                sourceAnalyticsLocations: j,
+                            }),
                         ),
                         y(
                             u(
                                 {
-                                    action: 'PRESS_VIEW_MAIN_PROFILE',
-                                    analyticsLocations: b
+                                    action: "PRESS_VIEW_MAIN_PROFILE",
+                                    analyticsLocations: b,
                                 },
-                                h
-                            )
-                        ));
-                }
+                                h,
+                            ),
+                        );
+                },
             })
           : (0, r.jsx)(l.sNh, {
-                id: 'view-server-profile',
+                id: "view-server-profile",
                 label: d.intl.string(d.t.DisZzM),
-                subtext: d.intl.formatToPlainString(d.t['mn/nW1'], { displayName: i.ZP.getName(n, p, t) }),
+                subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: i.ZP.getName(n, p, t) }),
                 action: () => {
-                    (null == g || g(),
+                    null == g || g(),
                         (0, c.openUserProfileModal)(
                             f(u({}, h), {
                                 showGuildProfile: !0,
-                                sourceAnalyticsLocations: j
-                            })
+                                sourceAnalyticsLocations: j,
+                            }),
                         ),
                         y(
                             u(
                                 {
-                                    action: 'PRESS_VIEW_SERVER_PROFILE',
-                                    analyticsLocations: b
+                                    action: "PRESS_VIEW_SERVER_PROFILE",
+                                    analyticsLocations: b,
                                 },
-                                h
-                            )
-                        ));
-                }
+                                h,
+                            ),
+                        );
+                },
             });
 }

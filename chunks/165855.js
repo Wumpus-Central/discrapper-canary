@@ -20,8 +20,14 @@ function f(n) {
     return (null == e ? void 0 : e.isStaff()) !== !0
         ? null
         : (0, i.jsxs)(r.sNh, {
-              id: 'dev tools',
-              label: 'Dev Tools',
-              children: [(0, i.jsx)(r.kSQ, { children: f }), (0, i.jsx)(r.kSQ, { children: Z }), (0, i.jsx)(r.kSQ, { children: g }), (0, i.jsx)(r.kSQ, { children: h }), (0, i.jsx)(r.kSQ, { children: S })]
+              id: "dev tools",
+              label: "Dev Tools",
+              children: [
+                  (0, i.jsx)(r.kSQ, { children: f }),
+                  (0, i.jsx)(r.kSQ, { children: Z }),
+                  (0, i.jsx)(r.kSQ, { children: g }),
+                  (0, i.jsx)(r.kSQ, { children: h }),
+                  (0, i.jsx)(r.kSQ, { children: S }),
+              ],
           });
 }

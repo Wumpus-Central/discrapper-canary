@@ -7,17 +7,21 @@ var r = a(395848),
     c = a(662355);
 let E = [800, 1800],
     s = (t) => {
-        r.m.document && r.m.document.prerendering ? (0, c.A)(() => s(t)) : r.m.document && 'complete' !== r.m.document.readyState ? addEventListener('load', () => s(t), !0) : setTimeout(t, 0);
+        r.m.document && r.m.document.prerendering
+            ? (0, c.A)(() => s(t))
+            : r.m.document && "complete" !== r.m.document.readyState
+              ? addEventListener("load", () => s(t), !0)
+              : setTimeout(t, 0);
     },
     l = (t, e = {}) => {
-        let a = (0, i.I)('TTFB'),
+        let a = (0, i.I)("TTFB"),
             r = (0, _._)(t, a, E, e.reportAllChanges);
         s(() => {
             let t = (0, o.W)();
             if (t) {
                 let e = t.responseStart;
                 if (e <= 0 || e > performance.now()) return;
-                ((a.value = Math.max(e - (0, n.A)(), 0)), (a.entries = [t]), r(!0));
+                (a.value = Math.max(e - (0, n.A)(), 0)), (a.entries = [t]), r(!0);
             }
         });
     };

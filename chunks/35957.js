@@ -8,25 +8,25 @@ function n(e, t) {
 function s(e, t, r) {
     var a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
         s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1 / 0;
-    if ('Object' === e) {
+    if ("Object" === e) {
         var o = Object.getOwnPropertyNames(t);
-        (r && o.sort(!0 === r ? void 0 : r),
+        r && o.sort(!0 === r ? void 0 : r),
             (i = {
                 entries: (o = o.slice(a, s + 1)).map(function (e) {
                     return {
                         key: e,
-                        value: t[e]
+                        value: t[e],
                     };
-                })
-            }));
-    } else if ('Array' === e)
+                }),
+            });
+    } else if ("Array" === e)
         i = {
             entries: t.slice(a, s + 1).map(function (e, t) {
                 return {
                     key: t + a,
-                    value: e
+                    value: e,
                 };
-            })
+            }),
         };
     else {
         var i,
@@ -34,18 +34,23 @@ function s(e, t, r) {
             l = 0,
             u = [],
             f = !0,
-            b = 'function' == typeof t.set,
+            b = "function" == typeof t.set,
             d = (function (e, t) {
-                var r = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
+                var r = ("undefined" != typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
                 if (!r) {
                     if (
                         Array.isArray(e) ||
                         (r = (function (e, t) {
                             if (e) {
-                                if ('string' == typeof e) return n(e, void 0);
+                                if ("string" == typeof e) return n(e, void 0);
                                 var r = Object.prototype.toString.call(e).slice(8, -1);
-                                if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
-                                if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return n(e, t);
+                                if (
+                                    ("Object" === r && e.constructor && (r = e.constructor.name),
+                                    "Map" === r || "Set" === r)
+                                )
+                                    return Array.from(e);
+                                if ("Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r))
+                                    return n(e, t);
                             }
                         })(e))
                     ) {
@@ -59,16 +64,18 @@ function s(e, t, r) {
                                     ? { done: !0 }
                                     : {
                                           done: !1,
-                                          value: e[a++]
+                                          value: e[a++],
                                       };
                             },
                             e: function (e) {
                                 throw e;
                             },
-                            f: s
+                            f: s,
                         };
                     }
-                    throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+                    throw TypeError(
+                        "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+                    );
                 }
                 var o,
                     i = !0,
@@ -79,10 +86,10 @@ function s(e, t, r) {
                     },
                     n: function () {
                         var e = r.next();
-                        return ((i = e.done), e);
+                        return (i = e.done), e;
                     },
                     e: function (e) {
-                        ((c = !0), (o = e));
+                        (c = !0), (o = e);
                     },
                     f: function () {
                         try {
@@ -90,7 +97,7 @@ function s(e, t, r) {
                         } finally {
                             if (c) throw o;
                         }
-                    }
+                    },
                 };
             })(t);
         try {
@@ -100,25 +107,25 @@ function s(e, t, r) {
                     f = !1;
                     break;
                 }
-                (a <= l &&
+                a <= l &&
                     (b && Array.isArray(h)
-                        ? 'string' == typeof h[0] || 'number' == typeof h[0]
+                        ? "string" == typeof h[0] || "number" == typeof h[0]
                             ? u.push({
                                   key: h[0],
-                                  value: h[1]
+                                  value: h[1],
                               })
                             : u.push({
-                                  key: '[entry '.concat(l, ']'),
+                                  key: "[entry ".concat(l, "]"),
                                   value: {
-                                      '[key]': h[0],
-                                      '[value]': h[1]
-                                  }
+                                      "[key]": h[0],
+                                      "[value]": h[1],
+                                  },
                               })
                         : u.push({
                               key: l,
-                              value: h
+                              value: h,
                           })),
-                    l++);
+                    l++;
             }
         } catch (e) {
             d.e(e);
@@ -127,7 +134,7 @@ function s(e, t, r) {
         }
         i = {
             hasMore: !f,
-            entries: u
+            entries: u,
         };
     }
     return i;
@@ -137,7 +144,7 @@ function o(e, t, r) {
     for (var n = e; n <= t; n += r)
         a.push({
             from: n,
-            to: Math.min(t, n + r - 1)
+            to: Math.min(t, n + r - 1),
         });
     return a;
 }
@@ -148,15 +155,18 @@ function i(e, t, r, n) {
         u = s.bind(null, e, t, r);
     if (!n) return u().entries;
     var f = l < 1 / 0,
-        b = Math.min(l - c, 'Object' === e ? Object.keys(t).length : 'Array' === e ? t.length : 1 / 0);
-    if ('Iterable' !== e) {
+        b = Math.min(l - c, "Object" === e ? Object.keys(t).length : "Array" === e ? t.length : 1 / 0);
+    if ("Iterable" !== e) {
         if (b <= n || n < 7) return u(c, l).entries;
     } else if (b <= n && !f) return u(c, l).entries;
-    if ('Iterable' === e) {
+    if ("Iterable" === e) {
         var d = u(c, c + n - 1),
             h = d.hasMore,
             p = d.entries;
         i = h ? [].concat((0, a.Z)(p), (0, a.Z)(o(c + n, c + 2 * n - 1, n))) : p;
-    } else i = f ? o(c, l, n) : [].concat((0, a.Z)(u(0, n - 5).entries), (0, a.Z)(o(n - 4, b - 5, n)), (0, a.Z)(u(b - 4, b - 1).entries));
+    } else
+        i = f
+            ? o(c, l, n)
+            : [].concat((0, a.Z)(u(0, n - 5).entries), (0, a.Z)(o(n - 4, b - 5, n)), (0, a.Z)(u(b - 4, b - 1).entries));
     return i;
 }

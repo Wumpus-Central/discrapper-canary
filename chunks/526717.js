@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(73800),
     i = n(768581),
     l = n(776155),
@@ -30,7 +30,7 @@ function s(e, t, n) {
         h = i.ZP.getGuildIconURL({
             id: e,
             icon: p,
-            size: n
+            size: n,
         }),
         f = r.useMemo(() => (null != g && g.length > t ? g.slice(0, t) : g), [g, t]),
         x = null != g && g.length > t ? g.length - t : null,
@@ -50,12 +50,12 @@ function s(e, t, n) {
                   storePageUrl: j,
                   subscriberCount: _,
                   emojisToShow: f,
-                  notShownEmojiCount: x
-              }
+                  notShownEmojiCount: x,
+              },
           }
         : {
               hasAllImperativeDetails: O,
               isLoading: c,
-              error: d
+              error: d,
           };
 }

@@ -25,15 +25,15 @@ function d(e) {
                     loop: !0,
                     muted: !0,
                     playsInline: !0,
-                    autoPlay: !0
+                    autoPlay: !0,
                 }),
                 (0, r.jsx)(i.Z, {
                     itemId: c.yN.AT_SOMEONE,
                     pointsPerInterval: d,
                     interval: 1000,
-                    isPaused: t
-                })
-            ]
+                    isPaused: t,
+                }),
+            ],
         })
     );
 }

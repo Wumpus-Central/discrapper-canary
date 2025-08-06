@@ -6,9 +6,9 @@ var e = n(779688),
         return n === a || (n !== f && (o(r) ? e(r) : !!r));
     },
     s = (u.normalize = function (t) {
-        return String(t).replace(i, '.').toLowerCase();
+        return String(t).replace(i, ".").toLowerCase();
     }),
     c = (u.data = {}),
-    f = (u.NATIVE = 'N'),
-    a = (u.POLYFILL = 'P');
+    f = (u.NATIVE = "N"),
+    a = (u.POLYFILL = "P");
 t.exports = u;

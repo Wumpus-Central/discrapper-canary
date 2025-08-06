@@ -20,7 +20,7 @@ function f(e) {
             o.Z.closeChannelSidebar(s.uZ);
         }, []),
         _ = i.useCallback(() => {
-            (o.Z.closeChannelSidebar(s.uZ), g && (0, a.Kh)(f.id));
+            o.Z.closeChannelSidebar(s.uZ), g && (0, a.Kh)(f.id);
         }, [f.id, g]),
         {
             acceptMessageRequest: O,
@@ -29,55 +29,55 @@ function f(e) {
             isRejectLoading: v,
             isUserProfileLoading: I,
             isOptimisticAccepted: C,
-            isOptimisticRejected: S
+            isOptimisticRejected: S,
         } = (0, u.m)({
             user: n,
             onAcceptSuccess: _,
             onRejectSuccess: b,
-            onError: m
+            onError: m,
         }),
         N = y || v || I || C || S;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: h.container,
         children: [
             (0, r.jsx)(d.Z, {
                 channel: f,
                 otherUser: n,
-                active: t
+                active: t,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.actions,
                 children: [
-                    (0, r.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
+                    (0, r.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
                         className: h.button,
                         children: (0, r.jsx)(l.zxk, {
-                            variant: 'secondary',
-                            size: 'sm',
+                            variant: "secondary",
+                            size: "sm",
                             text: p.intl.string(p.t.B2nygY),
                             onClick: (e) => {
-                                (e.stopPropagation(), E(f.id));
+                                e.stopPropagation(), E(f.id);
                             },
                             disabled: N,
-                            loading: v || S
-                        })
+                            loading: v || S,
+                        }),
                     }),
-                    (0, r.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
+                    (0, r.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
                         className: h.button,
                         children: (0, r.jsx)(l.zxk, {
-                            variant: 'primary',
-                            size: 'sm',
+                            variant: "primary",
+                            size: "sm",
                             text: p.intl.string(p.t.Kz8Pws),
                             onClick: (e) => {
-                                (e.stopPropagation(), O(f.id));
+                                e.stopPropagation(), O(f.id);
                             },
                             disabled: N,
-                            loading: y || I || C
-                        })
-                    })
-                ]
-            })
-        ]
+                            loading: y || I || C,
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

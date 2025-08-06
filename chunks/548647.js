@@ -20,9 +20,9 @@ let x = () => {
                 classification_ids: null != e ? [Number(e)] : null,
                 source: c.s.AppealIngestion,
                 is_dsa_eligible: x,
-                violation_type: n.violationType
+                violation_type: n.violationType,
             });
         },
-        [t.state, e, n, x]
+        [t.state, e, n, x],
     );
 };

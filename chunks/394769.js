@@ -11,33 +11,33 @@ var i = n(126663),
 let d = function (e) {
     let { closeLayer: t, guild: n, isVisible: d } = e,
         f = (0, a.q_F)({
-            transform: d ? 'translateY(-100%)' : 'translateY(0%)',
+            transform: d ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!d,
             config: {
                 tension: 120,
-                friction: 12
-            }
+                friction: 12,
+            },
         });
     return (0, r.jsx)(i.animated.div, {
         className: u.wrapper,
         style: f,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: u.innerWrapper,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: u.guildInfo,
                     children: [
                         (0, r.jsx)(s.Z, {
                             className: u.guildIcon,
                             guild: n,
-                            size: s.Z.Sizes.LARGER
+                            size: s.Z.Sizes.LARGER,
                         }),
                         (0, r.jsx)(a.X6q, {
                             className: u.guildName,
-                            variant: 'text-lg/bold',
-                            children: n.name
-                        })
-                    ]
+                            variant: "text-lg/bold",
+                            children: n.name,
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(l.Z, {
                     className: u.ctaButton,
@@ -46,13 +46,13 @@ let d = function (e) {
                         page: c.ZY5.PREMIUM_GUILD_USER_MODAL,
                         section: c.jXE.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
                         object: c.qAy.BUTTON_CTA,
-                        objectType: c.Qqv.BUY
+                        objectType: c.Qqv.BUY,
                     },
                     closeLayer: t,
                     pauseAnimation: !d,
-                    size: o.zx.Sizes.LARGE
-                })
-            ]
-        })
+                    size: o.zx.Sizes.LARGE,
+                }),
+            ],
+        }),
     });
 };

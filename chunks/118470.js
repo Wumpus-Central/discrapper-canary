@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685), n(539854));
+n.d(t, { Z: () => f }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -16,33 +16,29 @@ function f(e) {
         f = (0, u.h6)(n),
         g = () => (0, c.sB)(n.id),
         m = i.useMemo(() => new Set(f.map((e) => e.applicationId)), [f]),
-        b = (0, l.Wu)(
-            [a.Z],
-            () => {
-                let e = [];
-                for (let t of m) {
-                    let n = a.Z.getApplication(t);
-                    null != n && e.push(n);
-                }
-                return e;
-            },
-            [m]
-        );
+        b = (0, l.Wu)([a.Z], () => {
+            let e = [];
+            for (let t of m) {
+                let n = a.Z.getApplication(t);
+                null != n && e.push(n);
+            }
+            return e;
+        }, [m]);
     return 0 === b.length
         ? null
         : ((t =
               1 === b.length
-                  ? p.intl.formatToPlainString(p.t['Egq+Gx'], { a: b[0].name })
+                  ? p.intl.formatToPlainString(p.t["Egq+Gx"], { a: b[0].name })
                   : 2 === b.length
                     ? p.intl.formatToPlainString(p.t.LxU9R0, {
                           a: b[0].name,
-                          b: b[1].name
+                          b: b[1].name,
                       })
                     : 3 === b.length
                       ? p.intl.formatToPlainString(p.t.crKXMD, {
                             a: b[0].name,
                             b: b[1].name,
-                            c: b[2].name
+                            c: b[2].name,
                         })
                       : p.intl.string(p.t.MvfowM)),
           (0, r.jsx)(o.Z, {
@@ -52,10 +48,10 @@ function f(e) {
               type: d.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: h,
               onClick: () => {
-                  (g(), s.Z.open(n.id, d.pNK.INTEGRATIONS));
+                  g(), s.Z.open(n.id, d.pNK.INTEGRATIONS);
               },
               imageMarginTop: 6,
               imageMarginX: 46,
-              cta: p.intl.string(p.t.Rr3MAQ)
+              cta: p.intl.string(p.t.Rr3MAQ),
           }));
 }

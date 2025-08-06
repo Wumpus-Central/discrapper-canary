@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => S,
-    b: () => T
+    b: () => T,
 });
 var r = n(255367);
 n(73800);
@@ -21,7 +21,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,73 +31,81 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
-let m = window.matchMedia('(prefers-reduced-motion: reduce)'),
-    g = window.matchMedia('(prefers-contrast: more)'),
-    E = window.matchMedia('(prefers-contrast: less)'),
-    b = window.matchMedia('(prefers-color-scheme: dark)'),
-    y = window.matchMedia('(prefers-color-scheme: light)'),
-    O = window.matchMedia('(forced-colors: active)'),
+let m = window.matchMedia("(prefers-reduced-motion: reduce)"),
+    g = window.matchMedia("(prefers-contrast: more)"),
+    E = window.matchMedia("(prefers-contrast: less)"),
+    b = window.matchMedia("(prefers-color-scheme: dark)"),
+    y = window.matchMedia("(prefers-color-scheme: light)"),
+    O = window.matchMedia("(forced-colors: active)"),
     v = 5;
 function I() {
     let e = s.default.getCurrentUser();
     return null == e || Date.now() - +e.createdAt < 86400000;
 }
 function T() {
-    return 'windows' === (0, c.getOS)();
+    return "windows" === (0, c.getOS)();
 }
 let S = {
     initBasic() {
-        (m.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(m), b.addListener(this.handleSystemColorPreferencesChanged), y.addListener(this.handleSystemColorPreferencesChanged), O.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), g.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged());
+        m.addListener(this.handleSystemPrefersReducedMotionChanged),
+            this.handleSystemPrefersReducedMotionChanged(m),
+            b.addListener(this.handleSystemColorPreferencesChanged),
+            y.addListener(this.handleSystemColorPreferencesChanged),
+            O.addListener(this.handleSystemColorPreferencesChanged),
+            this.handleSystemColorPreferencesChanged(),
+            g.addListener(this.handleSystemPrefersContrastChanged),
+            E.addListener(this.handleSystemPrefersContrastChanged),
+            this.handleSystemPrefersContrastChanged();
     },
     init() {
-        (this.initBasic(),
-            o.Z.subscribe('ACCESSIBILITY_COLORBLIND_TOGGLE', () => {
+        this.initBasic(),
+            o.Z.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
                 l.default.track(f.rMx.LOCAL_SETTINGS_UPDATED, { colorblind_enabled: d.Z.colorblindMode });
             }),
-            o.Z.subscribe('ACCESSIBILITY_SET_SATURATION', (e) => {
+            o.Z.subscribe("ACCESSIBILITY_SET_SATURATION", (e) => {
                 l.default.track(f.rMx.LOCAL_SETTINGS_UPDATED, { saturation_level: e.saturation });
-            }));
+            });
     },
     maybeShowKeyboardNavigationExplainerModal() {
-        ((v = Math.max(v - 1, 0)),
+        (v = Math.max(v - 1, 0)),
             I() ||
                 d.Z.keyboardNavigationExplainerModalSeen ||
                 0 !== v ||
                 (0, i.ZDy)(async () => {
-                    let { default: e } = await n.e('73872').then(n.bind(n, 461964));
+                    let { default: e } = await n.e("73872").then(n.bind(n, 461964));
                     return (t) => (0, r.jsx)(e, h({}, t));
-                }));
+                });
     },
     handleSystemPrefersReducedMotionChanged(e) {
         o.Z.wait(() => {
-            u.Nc(e.matches ? 'reduce' : 'no-preference');
+            u.Nc(e.matches ? "reduce" : "no-preference");
         });
     },
     handleSystemColorPreferencesChanged() {
         let e = _.zd.NO_PREFERENCE;
         b.matches ? (e = _.zd.DARK) : y.matches && (e = _.zd.LIGHT);
-        let t = (!c.isPlatformEmbedded || T()) && O.matches ? 'active' : 'none';
+        let t = (!c.isPlatformEmbedded || T()) && O.matches ? "active" : "none";
         o.Z.wait(() => {
-            (a.Q_(e), u.Ej(t));
+            a.Q_(e), u.Ej(t);
         });
     },
     handleSystemPrefersContrastChanged() {
-        let e = 'no-preference';
-        (g.matches ? (e = 'more') : E.matches && (e = 'less'),
+        let e = "no-preference";
+        g.matches ? (e = "more") : E.matches && (e = "less"),
             o.Z.wait(() => {
                 u.TX(e);
-            }));
-    }
+            });
+    },
 };

@@ -7,9 +7,9 @@ function o(e) {
             n = e.getRegistry();
         a(t);
         var r = t.getSourceId();
-        return (null != r && (n.getSource(r, !0).endDrag(t, r), n.unpinSource()), { type: i.Bs });
+        return null != r && (n.getSource(r, !0).endDrag(t, r), n.unpinSource()), { type: i.Bs };
     };
 }
 function a(e) {
-    (0, r.k)(e.isDragging(), 'Cannot call endDrag while not dragging.');
+    (0, r.k)(e.isDragging(), "Cannot call endDrag while not dragging.");
 }

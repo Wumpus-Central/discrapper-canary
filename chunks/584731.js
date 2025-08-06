@@ -13,14 +13,14 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 let d = -1 / 0,
-    p = new a.Z('MessagePreviewStore');
+    p = new a.Z("MessagePreviewStore");
 class h extends r.ZP.Store {
     isLatest(e, t) {
         var n;
@@ -36,12 +36,14 @@ class h extends r.ZP.Store {
         return null != (r = null == (n = this.guilds.get(e)) ? void 0 : n.messageRecord(t)) ? r : null;
     }
     data(e) {
-        return (this.guilds.has(e) || this.guilds.set(e, new c.B()), this.guilds.get(e));
+        return this.guilds.has(e) || this.guilds.set(e, new c.B()), this.guilds.get(e);
     }
     handleOneGuildCreate(e) {
         var t, n;
         let r = this.data(e.id);
-        (r.putMany(null != (t = e.lastMessages) ? t : [], this.generation), r.putMany(null != (n = e.threadMessages) ? n : [], this.generation), null != e.lastMessages && (r.localNeeded = !1));
+        r.putMany(null != (t = e.lastMessages) ? t : [], this.generation),
+            r.putMany(null != (n = e.threadMessages) ? n : [], this.generation),
+            null != e.lastMessages && (r.localNeeded = !1);
     }
     handleConnectionOpen(e) {
         for (let t of ((this.generation += 1), e.guilds)) this.handleOneGuildCreate(t);
@@ -84,22 +86,25 @@ class h extends r.ZP.Store {
         var t, n;
         let r = o.Z.getBasicChannel(e.channelId);
         if (null == r) return !1;
-        ((0, l.Z)(e.messages), e.isAfter || e.isBefore || e.hasMoreAfter ? this.data(r.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, this.generation) : this.data(r.guild_id).put(e.channelId, null != (t = e.messages[0]) ? t : null, this.generation));
+        (0, l.Z)(e.messages),
+            e.isAfter || e.isBefore || e.hasMoreAfter
+                ? this.data(r.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, this.generation)
+                : this.data(r.guild_id).put(e.channelId, null != (t = e.messages[0]) ? t : null, this.generation);
     }
     handleLocalMessagesLoaded(e) {
         let t = o.Z.getBasicChannel(e.channelId);
         if (null != t) {
             var n;
-            ((0, l.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, d));
+            (0, l.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, d);
         }
     }
     handleMessagePreviewsLoaded(e) {
-        p.verbose('adding remote previews (guildId: '.concat(e.guildId, ', messages: ').concat(e.messages.length, ')'));
+        p.verbose("adding remote previews (guildId: ".concat(e.guildId, ", messages: ").concat(e.messages.length, ")"));
         let t = this.data(e.guildId);
         for (let n of e.messages) t.isLatest(n.channel_id, this.generation) || t.put(n.channel_id, n, this.generation);
     }
     handleMessagePreviewsLocallyLoaded(e) {
-        p.verbose('adding local previews (guildId: '.concat(e.guildId, ', messages: ').concat(e.messages.length, ')'));
+        p.verbose("adding local previews (guildId: ".concat(e.guildId, ", messages: ").concat(e.messages.length, ")"));
         let t = this.data(e.guildId);
         for (let [n, r] of e.messages) t.has(n) || t.put(n, r, d);
         t.localNeeded = !1;
@@ -108,7 +113,7 @@ class h extends r.ZP.Store {
         this.guilds.clear();
     }
     constructor() {
-        (super(i.Z, {
+        super(i.Z, {
             CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
             GUILD_CREATE: (e) => this.handleGuildCreate(e),
             GUILD_DELETE: (e) => this.handleGuildDelete(e),
@@ -120,10 +125,10 @@ class h extends r.ZP.Store {
             MESSAGE_PREVIEWS_LOADED: (e) => this.handleMessagePreviewsLoaded(e),
             MESSAGE_PREVIEWS_LOCALLY_LOADED: (e) => this.handleMessagePreviewsLocallyLoaded(e),
             MESSAGE_UPDATE: (e) => this.handleMessageUpdate(e),
-            THREAD_LIST_SYNC: (e) => this.handleThreadListSync(e)
+            THREAD_LIST_SYNC: (e) => this.handleThreadListSync(e),
         }),
-            u(this, 'guilds', new Map()),
-            u(this, 'generation', 0));
+            u(this, "guilds", new Map()),
+            u(this, "generation", 0);
     }
 }
 new h();

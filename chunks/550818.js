@@ -24,24 +24,24 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -52,9 +52,9 @@ function E(e) {
         I = (0, a.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: P } = (0, u.ZP)(I ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
         T = (0, p.ZB)({
-            layout: 'SIDEBAR',
+            layout: "SIDEBAR",
             userId: t.id,
-            channelId: n.id
+            channelId: n.id,
         }),
         N = i.useRef(null);
     return (0, r.jsx)(u.Gt, {
@@ -71,73 +71,77 @@ function E(e) {
                 themeType: j.lY.SIDEBAR,
                 themeOverride: Z,
                 children: (0, r.jsx)(l.u2, {
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: O.container,
                         children: [
-                            (0, r.jsx)('img', {
-                                alt: '',
+                            (0, r.jsx)("img", {
+                                alt: "",
                                 src: v,
                                 className: O.preview,
-                                'aria-hidden': !0
+                                "aria-hidden": !0,
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: O.body,
                                 children: [
-                                    (0, r.jsxs)('div', {
+                                    (0, r.jsxs)("div", {
                                         className: O.headerContainer,
                                         children: [
                                             (0, r.jsx)(m.Z, { user: t }),
                                             (0, r.jsx)(s.X6q, {
-                                                variant: 'heading-lg/bold',
-                                                children: _.intl.string(_.t.b33pLC)
+                                                variant: "heading-lg/bold",
+                                                children: _.intl.string(_.t.b33pLC),
                                             }),
                                             (0, r.jsx)(s.Text, {
-                                                variant: 'text-sm/medium',
-                                                children: _.intl.format(I ? _.t['8F+WNz'] : _.t['/cZp5u'], { username: h.ZP.getName(n.guild_id, n.id, t) })
-                                            })
-                                        ]
+                                                variant: "text-sm/medium",
+                                                children: _.intl.format(I ? _.t["8F+WNz"] : _.t["/cZp5u"], {
+                                                    username: h.ZP.getName(n.guild_id, n.id, t),
+                                                }),
+                                            }),
+                                        ],
                                     }),
                                     (0, r.jsxs)(s.Kqy, {
-                                        align: 'center',
+                                        align: "center",
                                         children: [
                                             (0, r.jsx)(x.Z, {
                                                 isBlocked: I,
                                                 onClick: () => {
-                                                    (E(),
+                                                    E(),
                                                         (0, f.pQ)(
                                                             C(
                                                                 {
-                                                                    action: I ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-                                                                    analyticsLocations: P
+                                                                    action: I
+                                                                        ? "VIEW_BLOCKED_PROFILE"
+                                                                        : "VIEW_IGNORED_PROFILE",
+                                                                    analyticsLocations: P,
                                                                 },
-                                                                T
-                                                            )
-                                                        ));
-                                                }
+                                                                T,
+                                                            ),
+                                                        );
+                                                },
                                             }),
                                             (0, r.jsx)(y.Z, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    (E(),
+                                                    E(),
                                                         (0, f.pQ)(
                                                             C(
                                                                 {
-                                                                    action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
-                                                                    analyticsLocations: P
+                                                                    action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
+                                                                    analyticsLocations: P,
                                                                 },
-                                                                T
-                                                            )
-                                                        ));
-                                                }
-                                            })
-                                        ]
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                })
-            })
-        })
+                                                                T,
+                                                            ),
+                                                        );
+                                                },
+                                            }),
+                                        ],
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                }),
+            }),
+        }),
     });
 }

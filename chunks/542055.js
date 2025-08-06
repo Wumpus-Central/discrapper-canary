@@ -1,4 +1,4 @@
-(n.d(t, { default: () => E }), n(388685), n(781311), n(642613));
+n.d(t, { default: () => E }), n(388685), n(781311), n(642613);
 var r = n(255367),
     l = n(73800),
     a = n(658722),
@@ -25,24 +25,24 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -66,8 +66,8 @@ function N(e, t) {
 }
 function E(e) {
     let { channelId: t, onClose: a, transitionState: o } = e,
-        [E, S] = l.useState(''),
-        [k, Z] = l.useState('descending'),
+        [E, S] = l.useState(""),
+        [k, Z] = l.useState("descending"),
         [L, D] = l.useState(!0),
         [I, T] = l.useState(null),
         M = l.useDeferredValue(E),
@@ -77,36 +77,45 @@ function E(e) {
         A = (0, u.Wu)([j.Z], () => j.Z.getNewClipIds()),
         { analyticsLocations: H } = (0, f.ZP)(m.Z.CLIPS_GALLERY),
         V = l.useMemo(() => [...z, ..._], [_, z]);
-    ((0, b.Z)(
+    (0, b.Z)(
         {
             type: c.ImpressionTypes.MODAL,
             name: c.ImpressionNames.CLIP_GALLERY_VIEWED,
-            properties: { number_of_clips_loaded: V.length }
+            properties: { number_of_clips_loaded: V.length },
         },
         { disableTrack: L },
-        [V.length, L]
+        [V.length, L],
     ),
         l.useEffect(
             () => (
                 (0, h.eL)(),
                 () => {
-                    ((0, h.eL)(), (0, h.zq)());
+                    (0, h.eL)(), (0, h.zq)();
                 }
             ),
-            []
-        ));
+            [],
+        );
     let B = l.useMemo(
         () =>
             s()(V)
                 .filter((e) => {
-                    if ('' === M.trim()) return !0;
+                    if ("" === M.trim()) return !0;
                     let t = M.toLowerCase();
-                    return (null != e.name && '' !== e.name && i()(t, e.name.toLowerCase())) || i()(t, e.applicationName.toLowerCase());
+                    return (
+                        (null != e.name && "" !== e.name && i()(t, e.name.toLowerCase())) ||
+                        i()(t, e.applicationName.toLowerCase())
+                    );
                 })
-                .sort((e, t) => ('ascending' === k ? g.default.compare(e.id, t.id) : 'descending' === k ? g.default.compare(t.id, e.id) : 0))
+                .sort((e, t) =>
+                    "ascending" === k
+                        ? g.default.compare(e.id, t.id)
+                        : "descending" === k
+                          ? g.default.compare(t.id, e.id)
+                          : 0,
+                )
                 .chunk(3)
                 .value(),
-        [V, M, k]
+        [V, M, k],
     );
     l.useEffect(() => {
         !(async function () {
@@ -122,35 +131,35 @@ function E(e) {
             (e) => {
                 (0, p.ZDy)(
                     async () => {
-                        let { default: l } = await n.e('61526').then(n.bind(n, 22989));
+                        let { default: l } = await n.e("61526").then(n.bind(n, 22989));
                         return (n) =>
                             (0, r.jsx)(
                                 l,
                                 N(w({}, n), {
                                     channelId: t,
-                                    clip: e
-                                })
+                                    clip: e,
+                                }),
                             );
                     },
-                    { modalKey: C.Ut }
+                    { modalKey: C.Ut },
                 );
             },
-            [t]
+            [t],
         ),
         { onShareClick: G } = (0, y.Z)({
             channelId: t,
-            setExporting: T
+            setExporting: T,
         }),
         Y = l.useCallback((e, t) => {
             (0, p.ZDy)(async () => {
-                let { default: l } = await n.e('15915').then(n.bind(n, 799677));
+                let { default: l } = await n.e("15915").then(n.bind(n, 799677));
                 return (n) =>
                     (0, r.jsx)(
                         l,
                         N(w({ clip: e }, n), {
                             onBeforeDelete: t,
-                            onAfterDelete: () => n.onClose()
-                        })
+                            onAfterDelete: () => n.onClose(),
+                        }),
                     );
             });
         }, []),
@@ -159,7 +168,7 @@ function E(e) {
                 let { row: t } = e,
                     n = B[t];
                 return (0, r.jsx)(
-                    'div',
+                    "div",
                     {
                         className: P.clipsRow,
                         children: n.map((e) => {
@@ -175,42 +184,42 @@ function E(e) {
                                     onShare: (e) =>
                                         G({
                                             clip: e,
-                                            onShareComplete: () => d.Mr(C.Qr)
+                                            onShareComplete: () => d.Mr(C.Qr),
                                         }),
-                                    clip: e
+                                    clip: e,
                                 },
-                                e.id
+                                e.id,
                             );
-                        })
+                        }),
                     },
-                    'clips-gallery-'.concat(t)
+                    "clips-gallery-".concat(t),
                 );
             },
-            [B, A, I, G, Y, F]
+            [B, A, I, G, Y, F],
         ),
         U =
             L || 0 !== B.length
                 ? L
-                    ? (0, r.jsx)('div', {
+                    ? (0, r.jsx)("div", {
                           className: P.spinnerContainer,
-                          children: (0, r.jsx)(p.$jN, {})
+                          children: (0, r.jsx)(p.$jN, {}),
                       })
                     : (0, r.jsx)(p.aVo, {
                           className: P.clipGrid,
                           sections: [B.length],
                           sectionHeight: 0,
                           rowHeight: 328.25,
-                          renderRow: K
+                          renderRow: K,
                       })
                 : (0, r.jsx)(v.Z, {
                       isEmptyBecauseQuery: V.length > 0,
-                      closePopout: a
+                      closePopout: a,
                   });
     return (0, r.jsx)(p.Y0X, {
         size: p.CgR.DYNAMIC,
         transitionState: o,
         className: P.root,
-        parentComponent: 'ClipsGalleryModal',
+        parentComponent: "ClipsGalleryModal",
         children: (0, r.jsxs)(f.Gt, {
             value: H,
             children: [
@@ -219,10 +228,10 @@ function E(e) {
                     filterQuery: E,
                     setFilterQuery: S,
                     sortOrder: k,
-                    setSortOrder: Z
+                    setSortOrder: Z,
                 }),
-                U
-            ]
-        })
+                U,
+            ],
+        }),
     });
 }

@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => d }), r(388685));
+r.d(t, { Z: () => d }), r(388685);
 var n = r(255367),
     l = r(73800),
     a = r(120356),
@@ -23,20 +23,20 @@ let d = (e) => {
         }
     }, [g, a]),
     null != t)
-        ? (0, n.jsxs)('div', {
+        ? (0, n.jsxs)("div", {
               className: i()(c.previewContainer, {
                   [c.previewContainerAnimation]: a,
-                  [c.previewContainerSetHeight]: !p
+                  [c.previewContainerSetHeight]: !p,
               }),
               children: [
-                  (0, n.jsx)('img', {
+                  (0, n.jsx)("img", {
                       src: u,
-                      alt: ' ',
+                      alt: " ",
                       className: a ? c.previewForCollected : c.preview,
-                      'aria-hidden': !0
+                      "aria-hidden": !0,
                   }),
                   !f &&
-                      (0, n.jsx)('div', {
+                      (0, n.jsx)("div", {
                           className: d ? c.purchasedEffect : void 0,
                           children: (0, n.jsx)(s.Z, {
                               profileEffectId: t,
@@ -47,10 +47,10 @@ let d = (e) => {
                               isHovering: r,
                               introDelay: g,
                               useOpacityOnHover: !1,
-                              shopPreview: !0
-                          })
-                      })
-              ]
+                              shopPreview: !0,
+                          }),
+                      }),
+              ],
           })
         : null;
 };

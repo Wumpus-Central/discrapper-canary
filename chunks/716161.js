@@ -5,7 +5,7 @@ n.d(t, {
     Nm: () => E,
     RI: () => m,
     Up: () => h,
-    XV: () => f
+    XV: () => f,
 });
 var r = n(544891),
     i = n(570140),
@@ -20,22 +20,22 @@ async function f() {
     try {
         let e = await r.tn.get({
             url: d.ANM.VIDEO_FILTER_ASSETS,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         return (
             i.Z.dispatch({
-                type: 'VIDEO_FILTER_ASSETS_FETCH_SUCCESS',
-                assets: e.body
+                type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS",
+                assets: e.body,
             }),
             e
         );
     } catch (e) {
         throw (
-            i.Z.dispatch({
-                type: 'VIDEO_FILTER_ASSETS_FETCH_FAILURE',
-                error: e
+            (i.Z.dispatch({
+                type: "VIDEO_FILTER_ASSETS_FETCH_FAILURE",
+                error: e,
             }),
-            e
+            e)
         );
     }
 }
@@ -46,14 +46,14 @@ async function _(e, t, n) {
             body: {
                 type: t,
                 asset: e,
-                last_used: null == n ? void 0 : n.toISOString()
+                last_used: null == n ? void 0 : n.toISOString(),
             },
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         return (
             i.Z.dispatch({
-                type: 'VIDEO_FILTER_ASSET_UPLOAD_SUCCESS',
-                videoFilterAsset: o.body
+                type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS",
+                videoFilterAsset: o.body,
             }),
             o.body
         );
@@ -64,50 +64,50 @@ async function _(e, t, n) {
 async function p(e) {
     await r.tn.del({
         url: d.ANM.VIDEO_FILTER_ASSET(e.id),
-        rejectWithError: !1
+        rejectWithError: !1,
     });
     let t = (0, l.P)(s.default.getCurrentUser());
-    ((0, c.rD)(t) && t.id === e.id && h(null),
+    (0, c.rD)(t) && t.id === e.id && h(null),
         i.Z.dispatch({
-            type: 'VIDEO_FILTER_ASSET_DELETE_SUCCESS',
-            videoFilterAsset: e
-        }));
+            type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS",
+            videoFilterAsset: e,
+        });
 }
 async function h(e) {
     if (
         (await o.hW.updateAsync(
-            'voiceAndVideo',
+            "voiceAndVideo",
             (t) => {
                 t.videoBackgroundFilterDesktop = (0, c.i7)(e);
             },
-            o.fy.FREQUENT_USER_ACTION
+            o.fy.FREQUENT_USER_ACTION,
         ),
         (0, c.rD)(e))
     ) {
         let t = await r.tn.post({
             url: d.ANM.VIDEO_FILTER_ASSET_LAST_USED(e.id),
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         i.Z.dispatch({
-            type: 'VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION',
-            backgroundOption: t.body
+            type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
+            backgroundOption: t.body,
         });
     } else
         i.Z.dispatch({
-            type: 'VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION',
-            backgroundOption: e
+            type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
+            backgroundOption: e,
         });
 }
 function m(e) {
     a.Z.isSupported() &&
         i.Z.dispatch({
-            type: 'MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS',
-            settings: e
+            type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS",
+            settings: e,
         });
 }
 function g() {
-    a.Z.isSupported() && i.Z.dispatch({ type: 'MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START' });
+    a.Z.isSupported() && i.Z.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
 }
 function E() {
-    i.Z.dispatch({ type: 'MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR' });
+    i.Z.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
 }

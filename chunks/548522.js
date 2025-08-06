@@ -1,4 +1,4 @@
-(n.d(t, { y: () => h }), n(388685));
+n.d(t, { y: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(793030),
@@ -22,48 +22,49 @@ function h(e) {
         O = i.useMemo(() => h.length === m.nx, [h]),
         y = i.useCallback(
             (e) => {
-                (u.Z.setPendingMemberVerificationRules(n.id, e), x(e), null != j && v(null));
+                u.Z.setPendingMemberVerificationRules(n.id, e), x(e), null != j && v(null);
             },
-            [j, n.id]
+            [j, n.id],
         ),
         C = i.useCallback(
             (e) => {
                 y([...h, e]);
             },
-            [h, y]
+            [h, y],
         ),
         N = i.useCallback(
             (e) => {
                 y([...h.slice(0, e), ...h.slice(e + 1)]);
             },
-            [h, y]
+            [h, y],
         ),
         I = i.useCallback(
             (e, t) => {
                 if (h[e] === t) return;
                 let n = [...h];
-                ((n[e] = t), y(n));
+                (n[e] = t), y(n);
             },
-            [h, y]
+            [h, y],
         ),
         E = i.useCallback(
             (e, t, n) => {
                 let r = h.indexOf(e),
                     i = [...h];
-                (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)), n ? (y(i), null !== j && v(null)) : j !== t && v(t));
+                null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)),
+                    n ? (y(i), null !== j && v(null)) : j !== t && v(t);
             },
-            [j, h, y]
+            [j, h, y],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.X6, {
-                variant: 'text-xs/bold',
-                color: 'text-muted',
+                variant: "text-xs/bold",
+                color: "text-muted",
                 className: p.title,
-                children: g.intl.format(g.t['sm+75u'], {
+                children: g.intl.format(g.t["sm+75u"], {
                     currentCount: h.length,
-                    maxCount: m.nx
-                })
+                    maxCount: m.nx,
+                }),
             }),
             h.map((e) =>
                 (0, d.a0)({
@@ -77,21 +78,21 @@ function h(e) {
                     updateFormField: I,
                     updateFormFieldOrder: E,
                     canRemove: h.length > 1,
-                    actionsLocation: 'side',
-                    fieldStyle: a.it.COMPACT
-                })
+                    actionsLocation: "side",
+                    fieldStyle: a.it.COMPACT,
+                }),
             ),
             !O &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: p.addQuestionsContainer,
                     children: (0, r.jsx)(o.Z, {
                         addFormField: C,
                         guild: n,
-                        allowTerms: !_
-                    })
+                        allowTerms: !_,
+                    }),
                 }),
-            !O && (0, r.jsx)(f, { addFormField: C })
-        ]
+            !O && (0, r.jsx)(f, { addFormField: C }),
+        ],
     });
 }
 function f(e) {
@@ -104,9 +105,9 @@ function f(e) {
                         t({
                             field_type: a.QJ.TEXT_INPUT,
                             label: g.intl.string(g.t.EOwiEh),
-                            required: !0
+                            required: !0,
                         });
-                    }
+                    },
                 },
                 {
                     text: g.intl.string(g.t.jqrNDg),
@@ -114,9 +115,9 @@ function f(e) {
                         t({
                             field_type: a.QJ.TEXT_INPUT,
                             label: g.intl.string(g.t.jqrNDg),
-                            required: !0
+                            required: !0,
                         });
-                    }
+                    },
                 },
                 {
                     text: g.intl.string(g.t.I5q8vr),
@@ -124,22 +125,22 @@ function f(e) {
                         t({
                             field_type: a.QJ.TEXT_INPUT,
                             label: g.intl.string(g.t.I5q8vr),
-                            required: !0
+                            required: !0,
                         });
-                    }
-                }
+                    },
+                },
             ],
-            [t]
+            [t],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.X6, {
-                variant: 'text-xs/bold',
-                color: 'text-muted',
+                variant: "text-xs/bold",
+                color: "text-muted",
                 className: p.examplesHeader,
-                children: g.intl.string(g.t.ID04cH)
+                children: g.intl.string(g.t.ID04cH),
             }),
-            (0, r.jsx)(c.j, { pills: n })
-        ]
+            (0, r.jsx)(c.j, { pills: n }),
+        ],
     });
 }

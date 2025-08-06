@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -13,11 +13,11 @@ let m = i.memo(
         let { disabled: n, type: l, className: m, onClick: h } = e,
             [g, f] = (0, c.Iu)((e) => [e.activeView, e.activeViewType], s.X),
             x = i.useCallback(() => {
-                ((0, c.j9)(l), null == h || h());
+                (0, c.j9)(l), null == h || h();
             }, [l, h]);
         return n
             ? null
-            : (0, r.jsx)('div', {
+            : (0, r.jsx)("div", {
                   className: a()(d.CT, u.buttonContainer),
                   ref: t,
                   children: (0, r.jsx)(o.Z, {
@@ -30,10 +30,10 @@ let m = i.memo(
                               top: 4,
                               bottom: 4,
                               left: -4,
-                              right: -4
-                          }
-                      }
-                  })
+                              right: -4,
+                          },
+                      },
+                  }),
               });
-    })
+    }),
 );

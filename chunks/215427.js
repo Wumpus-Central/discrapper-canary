@@ -11,18 +11,18 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let c = 'MaintenanceStore',
+let c = "MaintenanceStore",
     u = null,
     d = null,
     f = null;
 function _() {
-    ((u = null), s.Z.checkScheduledMaintenances());
+    (u = null), s.Z.checkScheduledMaintenances();
 }
 function p(e) {
     u = e.incident;
@@ -32,7 +32,7 @@ function h(e) {
 }
 function m() {
     if (null == d) return !1;
-    ((f = d.id), o.K.set(c, f));
+    (f = d.id), o.K.set(c, f);
 }
 class g extends (r = i.ZP.Store) {
     initialize() {
@@ -45,10 +45,10 @@ class g extends (r = i.ZP.Store) {
         return null != d && d.id !== f ? d : null;
     }
 }
-l(g, 'displayName', 'MaintenanceStore');
+l(g, "displayName", "MaintenanceStore");
 let E = new g(a.Z, {
     CONNECTION_OPEN: _,
     STATUS_PAGE_INCIDENT: p,
     STATUS_PAGE_SCHEDULED_MAINTENANCE: h,
-    STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: m
+    STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: m,
 });

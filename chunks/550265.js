@@ -13,12 +13,12 @@ function u(n) {
         u = (0, o.c)(t),
         p = (0, r.EQ)(t),
         x = (0, c.ZP)(t),
-        k = (0, d.Mn)('NotificationsInboxMessageContextMenu') && l.$N.has(t.type);
+        k = (0, d.Mn)("NotificationsInboxMessageContextMenu") && l.$N.has(t.type);
     return (0, i.jsxs)(s.v2r, {
-        navId: 'notifications-inbox-message-context',
+        navId: "notifications-inbox-message-context",
         onClose: a.Zy,
-        'aria-label': h.intl.string(h.t.Xm41aW),
+        "aria-label": h.intl.string(h.t.Xm41aW),
         onSelect: e,
-        children: [(0, i.jsx)(s.kSQ, { children: x }), k ? p : (0, i.jsx)(s.kSQ, { children: u })]
+        children: [(0, i.jsx)(s.kSQ, { children: x }), k ? p : (0, i.jsx)(s.kSQ, { children: u })],
     });
 }

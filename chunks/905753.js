@@ -1,5 +1,5 @@
 let i, r, l;
-(n.d(t, { Z: () => h }), n(467055), n(388685));
+n.d(t, { Z: () => h }), n(467055), n(388685);
 var o,
     a = n(442837),
     s = n(570140),
@@ -12,7 +12,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,7 +22,7 @@ let p = {},
     m = {},
     b = !1;
 function g() {
-    ((i = void 0), (p = {}), (m = {}), (r = void 0), (l = void 0), (b = !1));
+    (i = void 0), (p = {}), (m = {}), (r = void 0), (l = void 0), (b = !1);
 }
 class f extends (o = a.ZP.Store) {
     getApplicationPermissions() {
@@ -47,7 +47,7 @@ class f extends (o = a.ZP.Store) {
         return i;
     }
 }
-u(f, 'displayName', 'IntegrationPermissionStore');
+u(f, "displayName", "IntegrationPermissionStore");
 let h = new f(s.Z, {
     LOGOUT: g,
     INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: function (e) {
@@ -58,7 +58,7 @@ let h = new f(s.Z, {
     INTEGRATION_PERMISSION_SETTINGS_CLEAR: g,
     INTEGRATION_PERMISSION_SETTINGS_INIT: function (e) {
         let { applicationId: t } = e;
-        (g(), (i = t));
+        g(), (i = t);
     },
     INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE: function (e) {
         var t, n;
@@ -75,15 +75,15 @@ let h = new f(s.Z, {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         i.forEach(function (t) {
                             u(e, t, n[t]);
-                        }));
+                        });
                 }
                 return e;
             })({}, a)),
@@ -109,7 +109,7 @@ let h = new f(s.Z, {
             ? (r = o)
             : (l = {
                   commandId: n,
-                  permissions: o
+                  permissions: o,
               });
     },
     INTEGRATION_PERMISSION_SETTINGS_RESET: function (e) {
@@ -131,11 +131,11 @@ let h = new f(s.Z, {
                 let t = (0, c.Z8)({
                         rootCommand: e,
                         command: e,
-                        applicationId: e.application_id
+                        applicationId: e.application_id,
                     }),
                     n = l[e.id];
-                (null != n && (t.permissions = (0, d.tk)(n)), (o[e.id] = t));
+                null != n && (t.permissions = (0, d.tk)(n)), (o[e.id] = t);
             }
         m = o;
-    }
+    },
 });

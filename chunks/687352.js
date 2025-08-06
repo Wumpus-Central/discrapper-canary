@@ -11,33 +11,33 @@ function c(e) {
     if (n.length <= 0) return null;
     {
         if (1 === n.length)
-            return (0, r.jsx)('div', {
+            return (0, r.jsx)("div", {
                 className: l()(a.container, t, i && a.modeMuted),
                 children: (0, r.jsx)(s.Z, {
                     game: n[0].application,
-                    className: a.icon20px
-                })
+                    className: a.icon20px,
+                }),
             });
         let e = n.length - 1;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: l()(a.container, t, i && a.modeMuted),
             children: [
                 (0, r.jsx)(s.Z, {
                     game: n[0].application,
-                    className: a.icon20px
+                    className: a.icon20px,
                 }),
                 2 === n.length
                     ? (0, r.jsx)(s.Z, {
                           game: n[1].application,
-                          className: a.icon20px
+                          className: a.icon20px,
                       })
                     : (0, r.jsx)(o.Text, {
                           className: a.overflow,
-                          variant: 'text-xs/bold',
-                          color: 'interactive-active',
-                          children: '+'.concat(e)
-                      })
-            ]
+                          variant: "text-xs/bold",
+                          color: "interactive-active",
+                          children: "+".concat(e),
+                      }),
+            ],
         });
     }
 }

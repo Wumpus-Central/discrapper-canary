@@ -28,14 +28,14 @@ var r = n(255367),
 function N(e) {
     let { guild: t, markAsDismissed: n } = e,
         l = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0 ? g.DF.LEFT_TOP : g.DF.TOP_CENTER,
-        N = l === g.DF.TOP_CENTER || l === g.DF.LEFT_TOP ? S[l] : '',
+        N = l === g.DF.TOP_CENTER || l === g.DF.LEFT_TOP ? S[l] : "",
         { analyticsLocations: w } = (0, d.ZP)(u.Z.GUILD_BOOSTING_ENHANCED_ROLE_COLOR_COACHMARK),
         Z = i.useCallback(() => {
             (0, p.u)({
                 analyticsLocation: { section: C.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
                 numberOfBoostsToAdd: 1,
                 analyticsLocations: w,
-                guild: t
+                guild: t,
             });
         }, [t, w]),
         T = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
@@ -46,63 +46,63 @@ function N(e) {
                 : {
                       primaryColor: (0, s.Rf)(y.oC.primary_color),
                       secondaryColor: (0, s.Rf)(y.oC.secondary_color),
-                      tertiaryColor: null
+                      tertiaryColor: null,
                   };
         })(t.id),
         { gradientStyle: R, gradientClassname: D } = (0, c.Icv)({
             colorStrings: A,
-            roleStyle: 'username',
+            roleStyle: "username",
             includeConvenienceGlow: !0,
-            animateGradient: !0
+            animateGradient: !0,
         });
     return (0, r.jsx)(g.ZP, {
-        asset: (0, r.jsxs)('div', {
+        asset: (0, r.jsxs)("div", {
             className: S.imageContainer,
             children: [
                 null != T
-                    ? (0, r.jsx)('div', {
+                    ? (0, r.jsx)("div", {
                           className: S.messageContainer,
                           children: (0, r.jsx)(f.l, {
                               avatar: (0, r.jsx)(h.Z, {
                                   user: T,
                                   guildId: t.id,
                                   avatarSize: c.EFr.SIZE_40,
-                                  'aria-hidden': !0
+                                  "aria-hidden": !0,
                               }),
                               usernameStyle: R,
                               usernameClassName: o()(D, x.animateGradient),
                               username: O.ZP.getName(t.id, null, T),
-                              asset: (0, r.jsx)('img', {
-                                  alt: '',
-                                  src: I.Z
-                              })
-                          })
+                              asset: (0, r.jsx)("img", {
+                                  alt: "",
+                                  src: I.Z,
+                              }),
+                          }),
                       })
-                    : (0, r.jsx)('img', {
-                          alt: '',
+                    : (0, r.jsx)("img", {
+                          alt: "",
                           src: P.Z,
-                          className: S.image
+                          className: S.image,
                       }),
                 (0, r.jsx)(c.olH, {
                     className: S.close,
                     innerClassName: S.innerClose,
-                    onClick: () => (null == n ? void 0 : n(v.L.USER_DISMISS))
-                })
-            ]
+                    onClick: () => (null == n ? void 0 : n(v.L.USER_DISMISS)),
+                }),
+            ],
         }),
         header: (0, r.jsx)(c.Text, {
-            variant: 'text-md/semibold',
-            children: E.intl.string(j.default.bw76aG)
+            variant: "text-md/semibold",
+            children: E.intl.string(j.default.bw76aG),
         }),
         content: (0, r.jsx)(c.Text, {
-            variant: 'text-sm/medium',
-            color: 'text-muted',
-            children: E.intl.string(j.default['/DTbiY'])
+            variant: "text-sm/medium",
+            color: "text-muted",
+            children: E.intl.string(j.default["/DTbiY"]),
         }),
-        buttonCTA: E.intl.string(E.t['oPAx7+']),
+        buttonCTA: E.intl.string(E.t["oPAx7+"]),
         onClick: Z,
         className: o()(S.container, N),
         caretPosition: l,
-        markAsDismissed: n
+        markAsDismissed: n,
     });
 }

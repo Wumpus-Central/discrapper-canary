@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(73800),
     i = n(392711),
     o = n(442837),
@@ -21,7 +21,7 @@ function f(e, t) {
         h = (0, s.Aq)();
     return (
         r.useEffect(() => {
-            if (t) return (n.addEventListener('blur', e), () => n.removeEventListener('blur', e));
+            if (t) return n.addEventListener("blur", e), () => n.removeEventListener("blur", e);
             function e() {
                 f && (h.dispatch(u.CkL.POPOUT_CLOSE), c.S.dispatch(u.CkL.CONTEXT_MENU_CLOSE));
             }
@@ -34,14 +34,17 @@ function f(e, t) {
             function s(t) {
                 let n = t.relatedTarget;
                 setTimeout(() => {
-                    (null != n && 'BUTTON' !== n.tagName) || a || d(e);
+                    (null != n && "BUTTON" !== n.tagName) || a || d(e);
                 }, 100);
             }
             return (
-                null == o || o.addEventListener('focusout', s),
-                (null == (r = n.document.activeElement) ? void 0 : r.tagName) === 'IFRAME' || a || null == o || o.focus(),
+                null == o || o.addEventListener("focusout", s),
+                (null == (r = n.document.activeElement) ? void 0 : r.tagName) === "IFRAME" ||
+                    a ||
+                    null == o ||
+                    o.focus(),
                 () => {
-                    (null == o || o.removeEventListener('focusout', s), (a = !0));
+                    null == o || o.removeEventListener("focusout", s), (a = !0);
                 }
             );
         }, [t, _, i, e, n, f]),

@@ -20,7 +20,7 @@ function b(e) {
         T = (0, p.X)(),
         S = u.ZP.getApplicationIconURL({
             id: n.id,
-            icon: n.icon
+            icon: n.icon,
         }),
         A = u.ZP.getUserAvatarURL(t),
         N = i.useMemo(
@@ -29,79 +29,85 @@ function b(e) {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(l.x, {
-                                  variant: 'text-lg/normal',
-                                  color: 'header-secondary',
-                                  children: g.intl.string(g.t.uT1CPT)
+                                  variant: "text-lg/normal",
+                                  color: "header-secondary",
+                                  children: g.intl.string(g.t.uT1CPT),
                               }),
                               (0, r.jsx)(o.X6, {
-                                  variant: 'heading-xxl/bold',
-                                  color: 'header-primary',
-                                  children: n.name
-                              })
-                          ]
+                                  variant: "heading-xxl/bold",
+                                  color: "header-primary",
+                                  children: n.name,
+                              }),
+                          ],
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsxs)(l.x, {
-                                  variant: 'text-lg/bold',
-                                  color: 'header-primary',
+                                  variant: "text-lg/bold",
+                                  color: "header-primary",
                                   children: [
                                       n.name,
                                       null != b
                                           ? (0, r.jsx)(c.Z, {
                                                 className: E.botTag,
-                                                verified: null != b.public_flags && (0, d.yE)(b.public_flags, h.xW$.VERIFIED_BOT)
+                                                verified:
+                                                    null != b.public_flags &&
+                                                    (0, d.yE)(b.public_flags, h.xW$.VERIFIED_BOT),
                                             })
-                                          : null
-                                  ]
+                                          : null,
+                                  ],
                               }),
                               y.length > 0
                                   ? (0, r.jsx)(l.x, {
-                                        variant: 'text-md/normal',
-                                        color: 'header-secondary',
-                                        children: g.intl.string(g.t.jFbDnJ)
+                                        variant: "text-md/normal",
+                                        color: "header-secondary",
+                                        children: g.intl.string(g.t.jFbDnJ),
                                     })
                                   : (0, r.jsx)(l.x, {
-                                        variant: 'text-md/normal',
-                                        color: 'header-secondary',
-                                        children: g.intl.string(g.t['X+Fdpq'])
-                                    })
-                          ]
+                                        variant: "text-md/normal",
+                                        color: "header-secondary",
+                                        children: g.intl.string(g.t["X+Fdpq"]),
+                                    }),
+                          ],
                       }),
-            [y.length, n, b, I]
+            [y.length, n, b, I],
         );
-    return (0, r.jsxs)('header', {
+    return (0, r.jsxs)("header", {
         id: T,
         className: E.header,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: E.headerIcons,
                 children: [
                     (0, r.jsx)(a.qE, {
                         className: E.avatar,
                         src: S,
                         size: m.EF.SIZE_80,
-                        'aria-label': n.name
+                        "aria-label": n.name,
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: E.ellipseGroup,
-                        children: [(0, r.jsx)('div', { className: E.ellipse }), (0, r.jsx)('div', { className: E.ellipse }), (0, r.jsx)('div', { className: E.ellipse })]
+                        children: [
+                            (0, r.jsx)("div", { className: E.ellipse }),
+                            (0, r.jsx)("div", { className: E.ellipse }),
+                            (0, r.jsx)("div", { className: E.ellipse }),
+                        ],
                     }),
                     (0, r.jsx)(a.qE, {
                         className: E.avatar,
                         src: A,
                         size: m.EF.SIZE_80,
-                        'aria-label': t.username
-                    })
-                ]
+                        "aria-label": t.username,
+                    }),
+                ],
             }),
             N,
             O
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: E.currentUser,
                       children: (0, r.jsxs)(l.x, {
-                          variant: 'text-sm/normal',
-                          color: 'text-muted',
+                          variant: "text-sm/normal",
+                          color: "text-muted",
                           children: [
                               g.intl.format(g.t.qRvpYW, {
                                   userHook: () =>
@@ -109,30 +115,30 @@ function b(e) {
                                           l.x,
                                           {
                                               className: E.currentUserTag,
-                                              variant: 'text-sm/normal',
+                                              variant: "text-sm/normal",
                                               children: [
                                                   t.username,
                                                   !t.hasUniqueUsername() &&
                                                       (0, r.jsx)(l.x, {
                                                           className: E.currentUserDiscriminator,
-                                                          variant: 'text-sm/normal',
-                                                          children: '#'.concat(t.discriminator)
-                                                      })
-                                              ]
+                                                          variant: "text-sm/normal",
+                                                          children: "#".concat(t.discriminator),
+                                                      }),
+                                              ],
                                           },
-                                          t.id
-                                      )
+                                          t.id,
+                                      ),
                               }),
                               (0, r.jsx)(s.P, {
-                                  tag: 'a',
+                                  tag: "a",
                                   className: E.logoutLink,
-                                  onClick: () => (0, f.c$)(v, 'oauth2_logout'),
-                                  children: g.intl.string(g.t['yV/hjI'])
-                              })
-                          ]
-                      })
+                                  onClick: () => (0, f.c$)(v, "oauth2_logout"),
+                                  children: g.intl.string(g.t["yV/hjI"]),
+                              }),
+                          ],
+                      }),
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

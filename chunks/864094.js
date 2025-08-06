@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -35,11 +35,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -56,25 +56,25 @@ function c(e, t) {
 }
 let u = {
         enable: {
-            name: 'enable',
+            name: "enable",
             start: 0,
-            duration: 70
+            duration: 70,
         },
         disable: {
-            name: 'disable',
+            name: "disable",
             start: 90,
-            duration: 70
+            duration: 70,
         },
         hover_enabled: {
-            name: 'hover_enabled',
+            name: "hover_enabled",
             start: 180,
-            duration: 40
+            duration: 40,
         },
         hover_disabled: {
-            name: 'hover_disabled',
+            name: "hover_disabled",
             start: 240,
-            duration: 40
-        }
+            duration: 40,
+        },
     },
     d = (e) => {
         let t = i.useRef(null),
@@ -84,16 +84,16 @@ let u = {
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
-                [e]
+                [e],
             ),
             d = i.useCallback(() => {
                 if (null == t.current) return;
-                let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
+                let n = "enable" === e ? "hover_disabled" : "hover_enabled";
                 t.current.play(n);
             }, [e]),
             f = i.useCallback(() => {
                 if (null == t.current) return;
-                let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
+                let n = "enable" === e ? "hover_disabled" : "hover_enabled";
                 t.current.stopIfPlaying(n);
             }, [e]),
             _ = i.useCallback(
@@ -101,19 +101,19 @@ let u = {
                     (0, r.jsx)(
                         o.L,
                         c(s({}, e), {
-                            src: () => n.e('59682').then(n.t.bind(n, 126683, 19)),
+                            src: () => n.e("59682").then(n.t.bind(n, 126683, 19)),
                             ref: t,
                             initialAnimation: a.current,
-                            markers: u
-                        })
+                            markers: u,
+                        }),
                     ),
-                []
+                [],
             );
         return {
             events: {
                 onClick: l,
                 onMouseEnter: d,
-                onMouseLeave: f
+                onMouseLeave: f,
             },
             play: l,
             getDuration: i.useCallback(() => {
@@ -124,6 +124,6 @@ let u = {
                 var e, n;
                 return null != (n = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? n : null;
             }, []),
-            Component: _
+            Component: _,
         };
     };

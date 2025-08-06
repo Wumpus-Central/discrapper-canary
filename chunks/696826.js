@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Dk: () => T,
     QF: () => O,
     Sk: () => u.Skl,
@@ -7,9 +7,9 @@
     qb: () => R,
     rs: () => N,
     vP: () => A,
-    vj: () => b
+    vj: () => b,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -29,7 +29,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,15 +39,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -55,11 +55,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -105,13 +105,13 @@ function O(e) {
     return (0, s.wj)(e) ? d.VZ.BLACK : d.VZ.WHITE;
 }
 function v(e, t, n, r) {
-    return 'scale('
-        .concat(t, ') translate(')
-        .concat(0.5625 * e + r, ' ')
-        .concat(0.75 * e + n, ')');
+    return "scale("
+        .concat(t, ") translate(")
+        .concat(0.5625 * e + r, " ")
+        .concat(0.75 * e + n, ")");
 }
 function I(e, t, n) {
-    return ''.concat(0.5625 * e + n, 'px ').concat(0.75 * e + t, 'px');
+    return "".concat(0.5625 * e + n, "px ").concat(0.75 * e + t, "px");
 }
 function T(e) {
     let { size: t, status: n, isMobile: r, isTyping: i, topOffset: o = 0, leftOffset: a = 0 } = e,
@@ -133,7 +133,7 @@ function T(e) {
             polygonOrigin: I(t, s, l),
             dotY: 0.75 * t + s,
             dotX: 0.5 * t + l,
-            dotRadius: 0
+            dotRadius: 0,
         };
     switch (n) {
         case u.Skl.ONLINE:
@@ -153,7 +153,7 @@ function T(e) {
                     polygonOrigin: I(t, s, l),
                     dotY: 1.25 * t,
                     dotX: 0.5 * t + l,
-                    dotRadius: 0.125 * t
+                    dotRadius: 0.125 * t,
                 };
             return {
                 bgRadius: 0.5 * t,
@@ -170,7 +170,7 @@ function T(e) {
                 polygonOrigin: I(t, s, l),
                 dotY: 0.75 * t + s,
                 dotX: 0.5 * t + l,
-                dotRadius: 0
+                dotRadius: 0,
             };
         case u.Skl.IDLE:
             return {
@@ -188,7 +188,7 @@ function T(e) {
                 polygonOrigin: I(t, s, l),
                 dotY: 0.75 * t + s,
                 dotX: 0.5 * t + l,
-                dotRadius: 0
+                dotRadius: 0,
             };
         case u.Skl.DND:
             return {
@@ -206,7 +206,7 @@ function T(e) {
                 polygonOrigin: I(t, s, l),
                 dotY: 0.75 * t + s,
                 dotX: 0.5 * t + l,
-                dotRadius: 0
+                dotRadius: 0,
             };
         case u.Skl.STREAMING:
             return {
@@ -224,7 +224,7 @@ function T(e) {
                 polygonOrigin: I(t, s, l),
                 dotY: 0.75 * t + s,
                 dotX: 0.5 * t + l,
-                dotRadius: 0
+                dotRadius: 0,
             };
         case u.Skl.INVISIBLE:
         case u.Skl.UNKNOWN:
@@ -245,21 +245,37 @@ function T(e) {
                 polygonOrigin: I(t, s, l),
                 dotY: 0.75 * t + s,
                 dotX: 0.5 * t + l,
-                dotRadius: 0
+                dotRadius: 0,
             };
     }
 }
 function S(e) {
-    return '-'
-        .concat(0.216506 * e, ',-')
-        .concat(0.25 * e, ' ')
-        .concat(0.216506 * e, ',0 -')
-        .concat(0.216506 * e, ',')
+    return "-"
+        .concat(0.216506 * e, ",-")
+        .concat(0.25 * e, " ")
+        .concat(0.216506 * e, ",0 -")
+        .concat(0.216506 * e, ",")
         .concat(0.25 * e);
 }
 function A(e, t, n) {
-    let { bgRadius: i, bgY: o, bgX: s, bgHeight: l, bgWidth: c, cutoutX: u, cutoutY: d, cutoutWidth: f, cutoutHeight: _, cutoutRadius: p, polygonScale: h, polygonOrigin: m, dotY: g, dotX: E, dotRadius: b } = e;
-    return (0, r.jsxs)('mask', {
+    let {
+        bgRadius: i,
+        bgY: o,
+        bgX: s,
+        bgHeight: l,
+        bgWidth: c,
+        cutoutX: u,
+        cutoutY: d,
+        cutoutWidth: f,
+        cutoutHeight: _,
+        cutoutRadius: p,
+        polygonScale: h,
+        polygonOrigin: m,
+        dotY: g,
+        dotX: E,
+        dotRadius: b,
+    } = e;
+    return (0, r.jsxs)("mask", {
         id: n,
         children: [
             (0, r.jsx)(a.animated.rect, {
@@ -269,7 +285,7 @@ function A(e, t, n) {
                 height: l,
                 rx: i,
                 ry: i,
-                fill: 'white'
+                fill: "white",
             }),
             (0, r.jsx)(a.animated.rect, {
                 x: u,
@@ -278,21 +294,21 @@ function A(e, t, n) {
                 height: _,
                 rx: p,
                 ry: p,
-                fill: 'black'
+                fill: "black",
             }),
             (0, r.jsx)(a.animated.polygon, {
                 points: S(t),
-                fill: 'black',
+                fill: "black",
                 transform: h,
-                style: { transformOrigin: m }
+                style: { transformOrigin: m },
             }),
             (0, r.jsx)(a.animated.circle, {
-                fill: 'black',
+                fill: "black",
                 cx: E,
                 cy: g,
-                r: b
-            })
-        ]
+                r: b,
+            }),
+        ],
     });
 }
 function N(e, t) {
@@ -320,11 +336,11 @@ function C(e, t, n) {
     return t === u.Skl.ONLINE && n && !r
         ? {
               width: e,
-              height: e * d.EW
+              height: e * d.EW,
           }
         : {
               width: r ? e * d.D6 : e,
-              height: e
+              height: e,
           };
 }
 function R(e) {
@@ -338,16 +354,16 @@ function R(e) {
                 {
                     mask: N(t, d),
                     className: o()(f.mask, a),
-                    style: s
+                    style: s,
                 },
-                C(i, t, d)
+                C(i, t, d),
             ),
             {
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     style: { backgroundColor: _ },
-                    className: f.status
-                })
-            }
-        )
+                    className: f.status,
+                }),
+            },
+        ),
     );
 }

@@ -9,11 +9,11 @@ var s = t(481060),
 function a(n) {
     return (0, e.$D)(n)
         ? (0, r.jsx)(s.sNh, {
-              id: 'role-subscription-settings',
+              id: "role-subscription-settings",
               label: l.intl.string(l.t.jMN5ZG),
               action: () => {
                   o.Z.open(n.id, c.pNK.ROLE_SUBSCRIPTIONS);
-              }
+              },
           })
         : null;
 }

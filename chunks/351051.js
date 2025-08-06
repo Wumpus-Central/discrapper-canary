@@ -7,5 +7,7 @@ var i = n(442837),
     o = n(408491);
 function s() {
     let e = (0, i.e7)([l.Z], () => l.Z.getConnectedFrame());
-    return (0, i.e7)([l.Z], () => l.Z.getFrameLayoutMode()) !== o.U.FOCUSED || null == e ? null : (0, r.jsx)(a.Z, { frame: e });
+    return (0, i.e7)([l.Z], () => l.Z.getFrameLayoutMode()) !== o.U.FOCUSED || null == e
+        ? null
+        : (0, r.jsx)(a.Z, { frame: e });
 }

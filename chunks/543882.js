@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,29 +26,29 @@ let d = 120000,
     h = {},
     m = new Set();
 function g() {
-    ((p = {}), (h = {}));
+    (p = {}), (h = {});
 }
 function E(e) {
     let { streamKey: t, previewURL: n } = e;
-    ((p[t] = {
+    (p[t] = {
         url: n,
-        expires: Date.now() + d
+        expires: Date.now() + d,
     }),
         (h[t] = 0),
-        m.delete(t));
+        m.delete(t);
 }
 function b(e) {
     let { streamKey: t, retryAfter: n } = e;
-    ((p[t] = {
+    (p[t] = {
         url: null,
-        expires: Date.now() + (null != n ? n : f * h[t])
+        expires: Date.now() + (null != n ? n : f * h[t]),
     }),
-        m.delete(t));
+        m.delete(t);
 }
 function y(e) {
     var t;
     let { streamKey: n } = e;
-    ((h[n] = (null != (t = h[n]) ? t : 0) + 1), m.add(n));
+    (h[n] = (null != (t = h[n]) ? t : 0) + 1), m.add(n);
 }
 function O(e) {
     let { voiceStates: t } = e;
@@ -61,9 +61,9 @@ function O(e) {
                 streamType: null != r ? c.lo.GUILD : c.lo.CALL,
                 guildId: r,
                 channelId: i,
-                ownerId: n
+                ownerId: n,
             });
-            return (delete p[a], delete h[a], !0);
+            return delete p[a], delete h[a], !0;
         }, !1)
     );
 }
@@ -75,7 +75,7 @@ class v extends (r = a.ZP.Store) {
                     streamType: null != e ? c.lo.GUILD : c.lo.CALL,
                     guildId: e,
                     channelId: t,
-                    ownerId: n
+                    ownerId: n,
                 })
             ];
         return null == r ? void 0 : r.url;
@@ -86,7 +86,7 @@ class v extends (r = a.ZP.Store) {
                 streamType: null != e ? c.lo.GUILD : c.lo.CALL,
                 guildId: e,
                 channelId: t,
-                ownerId: n
+                ownerId: n,
             }),
             o = p[i],
             a = null != (r = h[i]) ? r : 0,
@@ -102,17 +102,17 @@ class v extends (r = a.ZP.Store) {
             streamType: null != e ? c.lo.GUILD : c.lo.CALL,
             guildId: e,
             channelId: t,
-            ownerId: n
+            ownerId: n,
         });
         return m.has(r);
     }
 }
-u(v, 'displayName', 'ApplicationStreamPreviewStore');
+u(v, "displayName", "ApplicationStreamPreviewStore");
 let I = new v(s.Z, {
     CONNECTION_OPEN: g,
     LOGOUT: g,
     STREAM_PREVIEW_FETCH_START: y,
     STREAM_PREVIEW_FETCH_SUCCESS: E,
     STREAM_PREVIEW_FETCH_FAIL: b,
-    VOICE_STATE_UPDATES: O
+    VOICE_STATE_UPDATES: O,
 });

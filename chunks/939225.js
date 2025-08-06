@@ -20,9 +20,9 @@ function u(e) {
                         ctaMessage: c.intl.string(c.t.RXsxqa),
                         onClick: () => {
                             l.Z.open(o.oAB.SUBSCRIPTIONS, s.cP);
-                        }
-                    })
-                ]
+                        },
+                    }),
+                ],
             })
           : null;
 }

@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => _ }));
+n.r(t), n.d(t, { default: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(399606),
@@ -17,14 +17,14 @@ function _(e) {
         g = h.attachments.map((e) => e.filename),
         { reportFalsePositive: E, isReportFalsePositiveLoading: b } = (0, u.$)({
             onSuccess: () => {
-                ((0, d.s)(p), a.Z.disableFalsePositiveButton(t, n));
+                (0, d.s)(p), a.Z.disableFalsePositiveButton(t, n);
             },
             onError: () => {
                 (0, o.showToast)((0, o.createToast)(f.intl.string(f.t.R0RpRU), o.ToastType.FAILURE));
             },
             report: () => {
                 (0, s.Eq)(t, n, m, g);
-            }
+            },
         });
     return (
         h.attachments.length > 0 || p(),
@@ -35,7 +35,7 @@ function _(e) {
             analyticsContext: l.UU.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
             onConfirmPress: E,
             transitionState: _,
-            onClose: p
+            onClose: p,
         })
     );
 }

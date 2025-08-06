@@ -8,7 +8,7 @@ n.d(t, {
     X6: () => i.X,
     oC: () => r.oC,
     pf: () => s,
-    rs: () => c
+    rs: () => c,
 });
 var r = n(128813),
     i = n(511495);
@@ -23,7 +23,7 @@ function s(e) {
     (0, r.ZP)().BlockedDomainsStore.startFetchingBlockedDomains(e);
 }
 function l() {
-    return 'libdiscore logs are part of the main app logs';
+    return "libdiscore logs are part of the main app logs";
 }
 function c(e, t) {
     return (0, r.ZP)().rustMultiply(e, t);

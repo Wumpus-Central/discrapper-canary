@@ -6,12 +6,12 @@ var i = n(831209),
     o = n(646094);
 function s(e) {
     let { mentionsCount: t, isMentionLowImportance: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o.mentionsBadge,
-        'aria-hidden': !0,
+        "aria-hidden": !0,
         children: (0, r.jsx)(l.mAB, {
             count: t,
-            color: n ? i.Z.BACKGROUND_ACCENT : i.Z.STATUS_DANGER
-        })
+            color: n ? i.Z.BACKGROUND_ACCENT : i.Z.STATUS_DANGER,
+        }),
     });
 }

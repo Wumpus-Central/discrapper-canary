@@ -2,22 +2,22 @@ r.d(t, { Z: () => s });
 var a = r(665352),
     n = r(566162);
 let s = new a.Z({
-    id: 'hwb',
-    name: 'HWB',
+    id: "hwb",
+    name: "HWB",
     coords: {
         h: {
             refRange: [0, 360],
-            type: 'angle',
-            name: 'Hue'
+            type: "angle",
+            name: "Hue",
         },
         w: {
             range: [0, 100],
-            name: 'Whiteness'
+            name: "Whiteness",
         },
         b: {
             range: [0, 100],
-            name: 'Blackness'
-        }
+            name: "Blackness",
+        },
     },
     base: n.Z,
     fromBase(e) {
@@ -33,7 +33,7 @@ let s = new a.Z({
     },
     formats: {
         hwb: {
-            coords: ['<number> | <angle>', '<percentage> | <number>', '<percentage> | <number>']
-        }
-    }
+            coords: ["<number> | <angle>", "<percentage> | <number>", "<percentage> | <number>"],
+        },
+    },
 });

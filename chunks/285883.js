@@ -1,13 +1,13 @@
 a.d(e, {
     EN: () => E,
     IQ: () => s,
-    bU: () => o
+    bU: () => o,
 });
 var r = a(176984),
     _ = a(573736),
     n = a(622916);
-let o = 'baggage',
-    i = 'sentry-',
+let o = "baggage",
+    i = "sentry-",
     c = /^sentry-/;
 function E(t) {
     let e = (function (t) {
@@ -20,7 +20,7 @@ function E(t) {
                           }),
                           t
                       ),
-                      {}
+                      {},
                   )
                 : l(t);
     })(t);
@@ -35,14 +35,20 @@ function s(t) {
             ? Object.entries(e).reduce((t, [e, a], _) => {
                   let o = `${encodeURIComponent(e)}=${encodeURIComponent(a)}`,
                       i = 0 === _ ? o : `${t},${o}`;
-                  return i.length > 8192 ? (r.X && n.kg.warn(`Not adding key: ${e} with val: ${a} to baggage header due to exceeding baggage size limits.`), t) : i;
-              }, '')
+                  return i.length > 8192
+                      ? (r.X &&
+                            n.kg.warn(
+                                `Not adding key: ${e} with val: ${a} to baggage header due to exceeding baggage size limits.`,
+                            ),
+                        t)
+                      : i;
+              }, "")
             : void 0;
     }
 }
 function l(t) {
     return t
-        .split(',')
-        .map((t) => t.split('=').map((t) => decodeURIComponent(t.trim())))
+        .split(",")
+        .map((t) => t.split("=").map((t) => decodeURIComponent(t.trim())))
         .reduce((t, [e, a]) => (e && a && (t[e] = a), t), {});
 }

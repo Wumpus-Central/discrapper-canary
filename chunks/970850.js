@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(388685), n(49124));
+n.d(t, { Z: () => o }), n(388685), n(49124);
 var r = n(73800),
     i = n(442837),
     l = n(518944),
@@ -18,14 +18,14 @@ function o(e) {
                 (o(
                     (0, a.Vj)({
                         sort_by: null == c ? void 0 : c.sort_by,
-                        sort_order: null == c ? void 0 : c.sort_order
-                    })
+                        sort_order: null == c ? void 0 : c.sort_order,
+                    }),
                 ),
                 (u.current = c));
         }, [c]),
         {
             searchMode: n,
-            setSearchMode: o
+            setSearchMode: o,
         }
     );
 }

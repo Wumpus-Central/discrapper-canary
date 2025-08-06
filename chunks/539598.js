@@ -24,21 +24,21 @@ function m(e) {
         n = (0, l.ql)(t, s.tuJ.PREMIUM_TIER_2);
     if (null == n) return null;
     let m = (0, a.qr)(n.amount, n.currency);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: u.container,
         children: [
             (0, r.jsx)(i.ua7, {
                 text: c.intl.string(c.t.MPFyJy),
-                'aria-label': c.intl.string(c.t.X3Ekj4),
+                "aria-label": c.intl.string(c.t.X3Ekj4),
                 children: (e) => {
                     var t,
                         n,
                         a = d(
                             {},
                             (function (e) {
-                                if (null == e) throw TypeError('Cannot destructure ' + e);
+                                if (null == e) throw TypeError("Cannot destructure " + e);
                                 return e;
-                            })(e)
+                            })(e),
                         );
                     return (0, r.jsx)(
                         i.SrA,
@@ -46,32 +46,32 @@ function m(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })(
                             {
-                                size: 'md',
-                                color: 'currentColor'
+                                size: "md",
+                                color: "currentColor",
                             },
-                            a
+                            a,
                         )),
                         (n = n = { className: u.nitroIcon }),
                         Object.getOwnPropertyDescriptors
@@ -86,17 +86,17 @@ function m(e) {
                               })(Object(n)).forEach(function (e) {
                                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                               }),
-                        t)
+                        t),
                     );
-                }
+                },
             }),
             (0, r.jsx)(i.Text, {
-                variant: 'text-xs/medium',
+                variant: "text-xs/medium",
                 children: c.intl.format(c.t.Sv8iiY, {
                     price: m,
-                    subscribeNowHook: (e) => (0, r.jsx)(o.F, { text: e })
-                })
-            })
-        ]
+                    subscribeNowHook: (e) => (0, r.jsx)(o.F, { text: e }),
+                }),
+            }),
+        ],
     });
 }

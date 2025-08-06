@@ -11,10 +11,10 @@ function s(t) {
     return null == t || null == n
         ? null
         : (0, l.jsx)(r.sNh, {
-              id: 'report-event',
+              id: "report-event",
               label: c.intl.string(c.t.IBA5wc),
               action: () => (0, o.d$)(n),
               icon: r.U65,
-              color: 'danger'
+              color: "danger",
           });
 }

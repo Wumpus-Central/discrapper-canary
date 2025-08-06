@@ -1,6 +1,6 @@
 n.d(t, {
     default: () => E,
-    m: () => b
+    m: () => b,
 });
 var r = n(255367);
 n(73800);
@@ -21,7 +21,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,7 +50,8 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -60,18 +61,18 @@ function g(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function E(e) {
     var t,
         n,
         { onClose: i, analyticsSource: p } = e,
-        g = m(e, ['onClose', 'analyticsSource']);
-    let E = d.intl.format(d.t['JmbS+f'], {
+        g = m(e, ["onClose", "analyticsSource"]);
+    let E = d.intl.format(d.t["JmbS+f"], {
             onClick: () => {
-                (o.Z.open(u.oAB.PREMIUM), i());
-            }
+                o.Z.open(u.oAB.PREMIUM), i();
+            },
         }),
         b = (0, s.N)(),
         y = (0, a.Ng)(),
@@ -91,15 +92,16 @@ function E(e) {
                 analyticsSource: p,
                 analyticsLocation: {
                     page: u.ZY5.PREMIUM_UPSELL_BURST_REACTIONS,
-                    object: u.qAy.BUTTON_CTA
+                    object: u.qAy.BUTTON_CTA,
                 },
                 onClose: i,
-                subscribeButtonText: O ? void 0 : d.intl.string(d.t['8x0jKS']),
-                subscriptionTier: null != (n = null == b || null == (t = b.subscription_trial) ? void 0 : t.sku_id) ? n : c.Si.TIER_2,
-                backButtonText: d.intl.string(d.t.f3Pet7)
+                subscribeButtonText: O ? void 0 : d.intl.string(d.t["8x0jKS"]),
+                subscriptionTier:
+                    null != (n = null == b || null == (t = b.subscription_trial) ? void 0 : t.sku_id) ? n : c.Si.TIER_2,
+                backButtonText: d.intl.string(d.t.f3Pet7),
             },
-            g
-        )
+            g,
+        ),
     );
 }
 function b(e) {

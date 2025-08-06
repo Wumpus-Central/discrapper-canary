@@ -1,10 +1,10 @@
-(IntlMessageFormat.__addLocaleData({
-    locale: 'ko',
+IntlMessageFormat.__addLocaleData({
+    locale: "ko",
     pluralRuleFunction: function (e, t) {
-        return 'other';
-    }
+        return "other";
+    },
 }),
     IntlMessageFormat.__addLocaleData({
-        locale: 'ko-KP',
-        parentLocale: 'ko'
-    }));
+        locale: "ko-KP",
+        parentLocale: "ko",
+    });

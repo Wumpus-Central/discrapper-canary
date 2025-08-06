@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -25,7 +25,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,27 +33,37 @@ function y(e, t, n) {
 }
 class v extends p.Z {
     _initialize() {
-        (super._initialize(), __OVERLAY__ || l.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest));
+        super._initialize(),
+            __OVERLAY__ ||
+                l.Z.subscribe(
+                    "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST",
+                    this._handleOverlaySoundboardSoundsFetchRequest,
+                );
     }
     _terminate() {
-        (super._terminate(), __OVERLAY__ || l.Z.unsubscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest));
+        super._terminate(),
+            __OVERLAY__ ||
+                l.Z.unsubscribe(
+                    "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST",
+                    this._handleOverlaySoundboardSoundsFetchRequest,
+                );
     }
     constructor(...e) {
         var t;
-        (super(...e),
+        super(...e),
             (t = this),
-            y(this, 'playingSoundsWeb', new Map()),
-            y(this, '_stopAndClearSounds', () => {
-                (c.Z.supports(E.AN.SAMPLE_PLAYBACK) &&
+            y(this, "playingSoundsWeb", new Map()),
+            y(this, "_stopAndClearSounds", () => {
+                c.Z.supports(E.AN.SAMPLE_PLAYBACK) &&
                     c.Z.getMediaEngine().eachConnection((e) => {
                         e.stopAllSamplesLocalPlayback();
                     }),
                     this.playingSoundsWeb.forEach((e) => {
-                        (e.pause(), (e.src = ''));
+                        e.pause(), (e.src = "");
                     }),
-                    (this.playingSoundsWeb = new Map()));
+                    (this.playingSoundsWeb = new Map());
             }),
-            y(this, '_playSound', async function (e) {
+            y(this, "_playSound", async function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     r = arguments.length > 2 ? arguments[2] : void 0,
                     i = arguments.length > 3 ? arguments[3] : void 0,
@@ -61,20 +71,20 @@ class v extends p.Z {
                 if ((null == i || l) && !c.Z.isDeaf() && !f.Z.isLocalSoundboardMuted(r))
                     try {
                         let i = {
-                            soundKey: ''.concat(r, '-').concat(e),
+                            soundKey: "".concat(r, "-").concat(e),
                             soundURL: (0, m.Z)(e),
                             soundVolume: (0, b.Z)(n),
-                            reportSoundStartedPlaying: () => (0, h.xR)(e, r)
+                            reportSoundStartedPlaying: () => (0, h.xR)(e, r),
                         };
                         c.Z.supports(E.AN.SAMPLE_PLAYBACK) ? await (0, _.$)(i) : await (0, _.h)(i, t.playingSoundsWeb);
                     } finally {
                         (0, h.R)(e, r);
                     }
             }),
-            y(this, '_handleOverlaySoundboardSoundsFetchRequest', () => {
+            y(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
                 (0, h.w)();
             }),
-            y(this, '_handleOpenEducationModal', (e, t) => {
+            y(this, "_handleOpenEducationModal", (e, t) => {
                 if (null == e) return;
                 let l = s.Z.getChannel(t),
                     c = d.ZP.getKeybindForAction(O.kg4.SOUNDBOARD_HOLD);
@@ -83,7 +93,7 @@ class v extends p.Z {
                     null != c &&
                     o.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
                     (0, i.ZDy)(async () => {
-                        let { default: t } = await n.e('69208').then(n.bind(n, 490166));
+                        let { default: t } = await n.e("69208").then(n.bind(n, 490166));
                         return (n) => {
                             var i, a;
                             return (0, r.jsx)(
@@ -92,15 +102,15 @@ class v extends p.Z {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             r.forEach(function (t) {
                                                 y(e, t, n[t]);
-                                            }));
+                                            });
                                     }
                                     return e;
                                 })({}, n)),
@@ -108,7 +118,7 @@ class v extends p.Z {
                                     {
                                         guildId: e,
                                         keybind: c,
-                                        channel: l
+                                        channel: l,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
@@ -122,11 +132,11 @@ class v extends p.Z {
                                       })(Object(a)).forEach(function (e) {
                                           Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
-                                i)
+                                i),
                             );
                         };
                     });
-            }));
+            });
     }
 }
 let I = new v();

@@ -11,25 +11,25 @@ function c(e) {
     return (0, r.jsxs)(l.hjN, {
         className: o.settings,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: o.halfWidth,
                 children: [
-                    (0, r.jsx)(l.vwX, { children: s.intl.string(s.t['23TVho']) }),
+                    (0, r.jsx)(l.vwX, { children: s.intl.string(s.t["23TVho"]) }),
                     (0, r.jsxs)(i.xv, {
-                        variant: 'text-sm/medium',
-                        color: 'text-secondary',
-                        children: [s.intl.string(s.t.U4LwWF), ' ', s.intl.string(s.t.xdY0pK)]
-                    })
-                ]
+                        variant: "text-sm/medium",
+                        color: "text-secondary",
+                        children: [s.intl.string(s.t.U4LwWF), " ", s.intl.string(s.t.xdY0pK)],
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: o.halfWidth,
                 children: (0, r.jsx)(a.z, {
                     guildId: t,
                     defaultSettings: n,
-                    canManageGuild: c
-                })
-            })
-        ]
+                    canManageGuild: c,
+                }),
+            }),
+        ],
     });
 }

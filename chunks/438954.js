@@ -5,5 +5,5 @@ let r = {
     QUEST_BAR_V2: 2,
     QUEST_BAR_MOBILE: 2,
     ACTIVITY_PANEL: 4,
-    QUEST_LIVE_STREAM: 8
+    QUEST_LIVE_STREAM: 8,
 };

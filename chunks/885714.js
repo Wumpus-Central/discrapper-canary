@@ -10,7 +10,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,7 +62,8 @@ function u(e, t) {
         i = d(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -72,25 +73,25 @@ function d(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function f(e) {
     var { onCloseCallback: t, analyticsLocations: a } = e,
-        l = u(e, ['onCloseCallback', 'analyticsLocations']);
+        l = u(e, ["onCloseCallback", "analyticsLocations"]);
     (0, i.ZDy)(
         async () => {
-            let { default: e } = await n.e('11166').then(n.bind(n, 971949));
+            let { default: e } = await n.e("11166").then(n.bind(n, 971949));
             return (t) =>
                 (0, r.jsx)(
                     e,
                     c(s({}, t, l), {
                         analyticsLocations: a,
                         guildCount: o.Z.getGuildCount(),
-                        'aria-labelledby': 'nitro-guild-cap-upsell'
-                    })
+                        "aria-labelledby": "nitro-guild-cap-upsell",
+                    }),
                 );
         },
-        { onCloseCallback: t }
+        { onCloseCallback: t },
     );
 }

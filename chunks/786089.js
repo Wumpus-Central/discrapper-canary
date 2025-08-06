@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685));
+n.d(t, { Z: () => P }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -37,8 +37,8 @@ let P = (0, i.memo)(function (e) {
         { ref: H, height: B = 0 } = (0, p.ZP)(),
         F = (0, h.ZP)(),
         z = (0, O.B6)(null == (t = Z.userStatus) ? void 0 : t.claimedAt, {
-            month: 'numeric',
-            day: 'numeric'
+            month: "numeric",
+            day: "numeric",
         }),
         W = null != (j = null == (n = Z.userStatus) ? void 0 : n.claimedTier) ? j : 0,
         Y = Z.config.rewards[W],
@@ -71,59 +71,61 @@ let P = (0, i.memo)(function (e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(er, ['content_position', 'row_index']),
+        })(er, ["content_position", "row_index"]),
         eo = () => {
-            (w(!0),
+            w(!0),
                 b.default.track(
                     S.rMx.QUEST_HOVER,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
-                    })({ quest_id: Z.id }, ea)
-                ));
+                    })({ quest_id: Z.id }, ea),
+                );
         },
         es = () => w(!1),
         ec = (e) => {
-            (k(!0),
+            k(!0),
                 b.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
-                    quest_id: Z.id
-                }));
+                    quest_id: Z.id,
+                });
         };
     return null == Y || D
         ? null
         : (0, r.jsx)(d.tEY, {
-              children: (0, r.jsxs)('div', {
+              children: (0, r.jsxs)("div", {
                   ref: M,
                   tabIndex: 0,
                   onFocus: eo,
@@ -135,15 +137,15 @@ let P = (0, i.memo)(function (e) {
                       null != V &&
                           q &&
                           null != J &&
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               ref: G,
                               className: T.decoWrapper,
                               style: { top: L },
                               children: (0, r.jsx)(f.Z, {
                                   avatarDecorationOverride: J,
                                   user: V,
-                                  guildId: null
-                              })
+                                  guildId: null,
+                              }),
                           }),
                       K
                           ? (0, r.jsx)(v.Z, { className: T.image })
@@ -153,56 +155,56 @@ let P = (0, i.memo)(function (e) {
                               ? (0, r.jsx)(g.Z, {
                                     className: T.assetBlurred,
                                     autoPlay: !1,
-                                    children: (0, r.jsx)('source', {
+                                    children: (0, r.jsx)("source", {
                                         src: et.url,
                                         type: null != (A = et.mimetype) ? A : void 0,
-                                        onError: () => ec(et.url)
-                                    })
+                                        onError: () => ec(et.url),
+                                    }),
                                 })
-                              : (0, r.jsx)('img', {
+                              : (0, r.jsx)("img", {
                                     className: T.image,
                                     src: et.url,
                                     alt: Z.config.messages.questName,
-                                    onError: () => ec(et.url)
+                                    onError: () => ec(et.url),
                                 }),
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: a()(T.overlay, {
                               [T.darkThemeGradient]: $,
-                              [T.lightThemeGradient]: !$
-                          })
+                              [T.lightThemeGradient]: !$,
+                          }),
                       }),
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           ref: U,
                           className: T.logoContainer,
-                          style: { transform: 'translateY(-'.concat(en, 'px)') },
+                          style: { transform: "translateY(-".concat(en, "px)") },
                           children: (0, r.jsx)(C.ZP, {
                               logotypeClassName: a()(T.logo, { [T.logoWithCosponsor]: ee }),
                               quest: Z,
-                              withGameTile: !1
-                          })
+                              withGameTile: !1,
+                          }),
                       }),
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           ref: H,
                           className: T.details,
                           children: [
                               (0, r.jsx)(d.X6q, {
                                   className: T.title,
-                                  variant: 'heading-md/semibold',
-                                  color: 'always-white',
-                                  children: N.intl.format(N.t.EAYZAg, { questName: Z.config.messages.questName })
+                                  variant: "heading-md/semibold",
+                                  color: "always-white",
+                                  children: N.intl.format(N.t.EAYZAg, { questName: Z.config.messages.questName }),
                               }),
                               (0, r.jsx)(d.Text, {
-                                  variant: 'text-sm/medium',
-                                  color: $ ? 'text-muted' : 'always-white',
+                                  variant: "text-sm/medium",
+                                  color: $ ? "text-muted" : "always-white",
                                   style: { opacity: $ ? 1 : 0.75 },
                                   children: N.intl.format(N.t.kXVcV1, {
                                       reward: Y.name,
-                                      claimedDate: z
-                                  })
-                              })
-                          ]
-                      })
-                  ]
-              })
+                                      claimedDate: z,
+                                  }),
+                              }),
+                          ],
+                      }),
+                  ],
+              }),
           });
 });

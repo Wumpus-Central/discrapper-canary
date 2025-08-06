@@ -14,7 +14,7 @@ function u(e) {
             (e) => {
                 (0, s.TA)(t, null != e ? e : c.o3);
             },
-            [t]
+            [t],
         ),
         h = i.useMemo(
             () =>
@@ -22,10 +22,10 @@ function u(e) {
                     let { categoryId: t, name: n } = e;
                     return {
                         value: t,
-                        label: n
+                        label: n,
                     };
                 }),
-            [g]
+            [g],
         );
     return 0 === g.length
         ? (0, r.jsx)(a.$jN, {})
@@ -37,8 +37,8 @@ function u(e) {
                   options: h,
                   onChange: p,
                   isDisabled: u,
-                  clearable: m
+                  clearable: m,
               },
-              h.length
+              h.length,
           );
 }

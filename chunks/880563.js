@@ -5,12 +5,12 @@ var i = n(869153);
 let o = (e) => {
     let { children: t, shouldAnimate: n } = e;
     return n
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: i.outerContainer,
-              children: (0, r.jsx)('div', {
+              children: (0, r.jsx)("div", {
                   className: i.innerContainer,
-                  children: t
-              })
+                  children: t,
+              }),
           })
         : t;
 };

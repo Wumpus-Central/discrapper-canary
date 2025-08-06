@@ -34,11 +34,11 @@ function P(e) {
         x = (0, _.f)(),
         { shouldHideGuildPurchaseEntryPoints: w, restrictionsLoading: L } = (0, h.uP)(t),
         R = null == n || !x || Z || L;
-    ((0, u.Tt)({
-        subsection: N.intl.string(N.t['KzCF//']),
-        location: null == n ? void 0 : n.name
+    (0, u.Tt)({
+        subsection: N.intl.string(N.t["KzCF//"]),
+        location: null == n ? void 0 : n.name,
     }),
-        (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0));
+        (0, c.Z)(l.tq ? "role-subscriptions-overview" : void 0);
     let D = P && (null == n || !(j || A) || (w && !L));
     if (
         (i.useEffect(() => {
@@ -52,7 +52,7 @@ function P(e) {
         let e = null == n ? v.J.NOT_GUILD_MEMBER : v.J.GUILD_NOT_ELIGIBLE;
         return (0, r.jsx)(v.z, { errorType: e });
     }
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: T.container,
         children: [
             (0, r.jsxs)(g.Z, {
@@ -61,25 +61,25 @@ function P(e) {
                 children: [
                     (0, r.jsx)(g.Z.Icon, {
                         icon: (0, o.GSL)(E.Z),
-                        'aria-hidden': !0
+                        "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(g.Z.Title, { children: N.intl.string(N.t['KzCF//']) })
-                ]
+                    (0, r.jsx)(g.Z.Title, { children: N.intl.string(N.t["KzCF//"]) }),
+                ],
             }),
-            (0, r.jsx)('div', { id: C.v }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", { id: C.v }),
+            (0, r.jsx)("div", {
                 className: T.content,
                 children: j
                     ? (0, r.jsx)(o.u2D, {
                           className: T.scroller,
-                          children: (0, r.jsx)('div', {
+                          children: (0, r.jsx)("div", {
                               className: T.scrollerContent,
-                              children: R ? (0, r.jsx)(o.$jN, {}) : (0, r.jsx)(y.Z, { guild: n })
-                          })
+                              children: R ? (0, r.jsx)(o.$jN, {}) : (0, r.jsx)(y.Z, { guild: n }),
+                          }),
                       })
-                    : (0, r.jsx)(I.Z, {})
-            })
-        ]
+                    : (0, r.jsx)(I.Z, {}),
+            }),
+        ],
     });
 }
 function j(e) {
@@ -87,6 +87,6 @@ function j(e) {
     return (0, r.jsx)(_.l, {
         guildId: t,
         refetchOnMount: !0,
-        children: (0, r.jsx)(P, { guildId: t })
+        children: (0, r.jsx)(P, { guildId: t }),
     });
 }

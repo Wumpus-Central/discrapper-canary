@@ -14,7 +14,7 @@ async function c(e, t) {
         p = (0, l.Z)({
             applicationId: e,
             activityConfigs: f,
-            applications: _
+            applications: _,
         });
     if (u(null == p ? void 0 : p.application)) return null == p ? void 0 : p.application;
     {

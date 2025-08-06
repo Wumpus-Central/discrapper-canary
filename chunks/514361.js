@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var o,
     a = n(442837),
     s = n(704215),
@@ -27,7 +27,7 @@ function S(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -62,7 +62,7 @@ let A = !0,
         null != i && (0, m.zi)(i.type) && (N = !0);
     };
 function D() {
-    (A && (r = void 0), (N = !1));
+    A && (r = void 0), (N = !1);
 }
 let L = () => {
         let e = !b.ZP.canUseClientThemes(E.default.getCurrentUser());
@@ -70,7 +70,7 @@ let L = () => {
         A = e;
     },
     x = () => {
-        if (!u.Z.shouldSync('appearance')) return !1;
+        if (!u.Z.shouldSync("appearance")) return !1;
         let e = p.L1.getSetting().backgroundGradientPresetId;
         if (null == e) {
             if (null == r) return !1;
@@ -82,7 +82,7 @@ let L = () => {
         }
     },
     M = () => {
-        if (!u.Z.shouldSync('appearance') || (0, v.zu)()) return !1;
+        if (!u.Z.shouldSync("appearance") || (0, v.zu)()) return !1;
         let e = p.L1.getSetting().backgroundGradientPresetId;
         if ((_.ZP.useSystemTheme === T.KW.ON && null != e && (0, d.hi)(T.KW.OFF), null == e)) {
             null != r && (r = void 0);
@@ -94,7 +94,10 @@ let L = () => {
     };
 class k extends (o = a.ZP.PersistedStore) {
     initialize(e) {
-        (null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], L), this.syncWith([u.Z], x));
+        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0),
+            this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z),
+            this.syncWith([E.default], L),
+            this.syncWith([u.Z], x);
     }
     getState() {
         return A ? {} : { gradientPresetId: null == r ? void 0 : r.id };
@@ -115,16 +118,16 @@ class k extends (o = a.ZP.PersistedStore) {
         return i;
     }
     constructor(...e) {
-        (super(...e),
-            S(this, 'migrations', [
+        super(...e),
+            S(this, "migrations", [
                 (e) => {
                     var t;
                     return { gradientPresetId: null == e || null == (t = e.gradientPreset) ? void 0 : t.id };
-                }
-            ]));
+                },
+            ]);
     }
 }
-(S(k, 'displayName', 'ClientThemesBackgroundStore'), S(k, 'persistKey', 'ClientThemesBackgroundStore'));
+S(k, "displayName", "ClientThemesBackgroundStore"), S(k, "persistKey", "ClientThemesBackgroundStore");
 let j = new k(l.Z, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: C,
     UPDATE_MOBILE_PENDING_THEME_INDEX: R,
@@ -137,5 +140,5 @@ let j = new k(l.Z, {
     OVERLAY_INITIALIZE: M,
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: M,
     UNSYNCED_USER_SETTINGS_UPDATE: M,
-    USER_SETTINGS_PROTO_UPDATE: M
+    USER_SETTINGS_PROTO_UPDATE: M,
 });

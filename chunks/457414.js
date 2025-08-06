@@ -1,6 +1,6 @@
 n.d(t, {
     S: () => c,
-    w: () => f
+    w: () => f,
 });
 var r = n(481060),
     i = n(925221),
@@ -39,7 +39,7 @@ let c = (e) => {
             return t.triggerMetadata.regexPatterns.length > 0
                 ? o.intl.formatToPlainString(o.t.xZUvxc, {
                       keywordCount: t.triggerMetadata.keywordFilter.length,
-                      regexPatternCount: t.triggerMetadata.regexPatterns.length
+                      regexPatternCount: t.triggerMetadata.regexPatterns.length,
                   })
                 : o.intl.formatToPlainString(o.t.dJN7Li, { keywordCount: t.triggerMetadata.keywordFilter.length });
     },
@@ -79,11 +79,11 @@ function f(e, t) {
     var n, i, l, a, s;
     return null != e && d(e)
         ? {
-              headerText: null != (n = u(e, t)) ? n : '',
-              headerSubtext: null != (i = m(e, t)) ? i : '',
-              descriptionText: null != (l = g(e)) ? l : '',
-              descriptionSubtext: null != (a = p(e)) ? a : '',
-              icon: null != (s = h(e)) ? s : r.xPt
+              headerText: null != (n = u(e, t)) ? n : "",
+              headerSubtext: null != (i = m(e, t)) ? i : "",
+              descriptionText: null != (l = g(e)) ? l : "",
+              descriptionSubtext: null != (a = p(e)) ? a : "",
+              icon: null != (s = h(e)) ? s : r.xPt,
           }
         : null;
 }

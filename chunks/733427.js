@@ -7,7 +7,7 @@ let i = () => {
             () => () => {
                 e.current = !1;
             },
-            []
+            [],
         ),
         r.useCallback(() => e.current, [])
     );

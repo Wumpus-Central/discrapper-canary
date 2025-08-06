@@ -89,12 +89,12 @@ b.a(_, async function (_, a) {
             z3: () => n.z3,
             z9: () => n.z9,
             zF: () => n.zF,
-            zr: () => n.zr
+            zr: () => n.zr,
         });
         var c = b(842321),
             n = b(970711),
             d = _([c]);
-        ((c = (d.then ? (await d)() : d)[0]), (0, n.oT)(c), c.__wbindgen_start(), a());
+        (c = (d.then ? (await d)() : d)[0]), (0, n.oT)(c), c.__wbindgen_start(), a();
     } catch (_) {
         a(_);
     }

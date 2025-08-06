@@ -1,4 +1,4 @@
-(n.d(t, { E: () => I }), n(49124));
+n.d(t, { E: () => I }), n(49124);
 var r = n(544891),
     i = n(668757),
     o = n(881052),
@@ -15,7 +15,7 @@ var r = n(544891),
     m = n(981631);
 let g = 9437184,
     E = 14680064,
-    b = new d.Z('DebugUploadManager'),
+    b = new d.Z("DebugUploadManager"),
     y = null,
     O = null;
 function v(e) {
@@ -36,17 +36,17 @@ function v(e) {
 }
 async function I(e, t) {
     try {
-        (await T(e), await (0, a.u)(E, t));
+        await T(e), await (0, a.u)(E, t);
     } catch (t) {
         let e;
         throw (
-            t instanceof o.n0 && (e = v(t)),
+            (t instanceof o.n0 && (e = v(t)),
             (0, s.kr)({
                 type: s.u.DEBUG_LOG_UPLOAD_FAILED,
                 underlyingError: e,
-                errorMessage: t.message
+                errorMessage: t.message,
             }),
-            t
+            t)
         );
     }
 }
@@ -56,50 +56,53 @@ async function T(e) {
         try {
             n = u.Pz();
         } catch (e) {
-            n = 'Logs failed: '.concat(e);
+            n = "Logs failed: ".concat(e);
         }
         try {
-            o = (null == y ? void 0 : y.getSystemLog) != null ? await new Promise((e) => y.getSystemLog(e)) : '';
+            o = (null == y ? void 0 : y.getSystemLog) != null ? await new Promise((e) => y.getSystemLog(e)) : "";
         } catch (e) {
-            o = 'System Logs failed '.concat(e);
+            o = "System Logs failed ".concat(e);
         }
         try {
             a = await (0, _.Z)().then((e) => (0, h.Z)(e, !0));
         } catch (e) {
-            a = 'Push logs failed: '.concat(e);
+            a = "Push logs failed: ".concat(e);
         }
         try {
             var t;
-            s = null != (t = (0, i.AG)()) ? t : '';
+            s = null != (t = (0, i.AG)()) ? t : "";
         } catch (e) {
-            s = 'LibDiscore logs failed: '.concat(e);
+            s = "LibDiscore logs failed: ".concat(e);
         }
         let d = n.length + o.length + a.length + s.length;
         if (d > g) {
             let e = 1 - g / d;
-            ((n = n.slice(n.length - Math.floor(n.length * e))), (o = o.slice(o.length - Math.floor(o.length * e))), (a = a.slice(a.length - Math.floor(a.length * e))), (s = s.slice(s.length - Math.floor(s.length * e))));
+            (n = n.slice(n.length - Math.floor(n.length * e))),
+                (o = o.slice(o.length - Math.floor(o.length * e))),
+                (a = a.slice(a.length - Math.floor(a.length * e))),
+                (s = s.slice(s.length - Math.floor(s.length * e)));
         }
         let E = (null == O ? void 0 : O.AppOpenedTimestamp) != null ? O.AppOpenedTimestamp : null,
-            b = '\n    '
-                .concat((0, p.Z)(E), '\n\n    ')
-                .concat((0, l.EA)(), '\n\n    Metadata:\n    ')
-                .concat(JSON.stringify((0, f.Z)(), void 0, 2), '\n\n    ChannelStore:\n    ')
-                .concat(JSON.stringify(c.Z.getDebugInfo(), void 0, 2), '\n\n    Logs:\n    ')
-                .concat(n, '\n\n    System logs:\n    ')
-                .concat(o, '\n\n    LibDiscore logs:\n    ')
-                .concat(s, '\n\n    Push Notifications:\n    ')
-                .concat(a, '\n    ');
+            b = "\n    "
+                .concat((0, p.Z)(E), "\n\n    ")
+                .concat((0, l.EA)(), "\n\n    Metadata:\n    ")
+                .concat(JSON.stringify((0, f.Z)(), void 0, 2), "\n\n    ChannelStore:\n    ")
+                .concat(JSON.stringify(c.Z.getDebugInfo(), void 0, 2), "\n\n    Logs:\n    ")
+                .concat(n, "\n\n    System logs:\n    ")
+                .concat(o, "\n\n    LibDiscore logs:\n    ")
+                .concat(s, "\n\n    Push Notifications:\n    ")
+                .concat(a, "\n    ");
         u.ZH();
-        let v = m.ANM.DEBUG_LOG(e, 'discord_app_logs');
+        let v = m.ANM.DEBUG_LOG(e, "discord_app_logs");
         await r.tn.post({
             url: v,
             body: b,
             retries: 3,
-            headers: { 'Content-Type': 'text/plain' },
+            headers: { "Content-Type": "text/plain" },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
     } catch (e) {
-        b.error('uploadAppLogFiles: upload app log files error '.concat(e.message));
+        b.error("uploadAppLogFiles: upload app log files error ".concat(e.message));
     }
 }

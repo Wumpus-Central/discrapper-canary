@@ -1,7 +1,7 @@
 n.d(t, {
     ec: () => p,
     l4: () => E,
-    zj: () => b
+    zj: () => b,
 });
 var r = n(524437),
     i = n(695346),
@@ -16,7 +16,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,57 +26,57 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let u = {
         [s.TI.DISABLED.valueOf()]: r.Q4.SHOW,
         [s.TI.NON_FRIENDS.valueOf()]: r.Q4.SHOW,
-        [s.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK
+        [s.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK,
     },
     d = {
         [s.TI.DISABLED.valueOf()]: r.Q4.SHOW,
         [s.TI.NON_FRIENDS.valueOf()]: r.Q4.BLOCK,
-        [s.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK
+        [s.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK,
     },
     f = {
         [s.TI.DISABLED.valueOf()]: r.Q4.BLUR,
         [s.TI.NON_FRIENDS.valueOf()]: r.Q4.BLUR,
-        [s.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK
+        [s.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK,
     },
     _ = {
         [s.TI.DISABLED.valueOf()]: r.Q4.BLUR,
         [s.TI.NON_FRIENDS.valueOf()]: r.Q4.BLOCK,
-        [s.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK
+        [s.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK,
     },
     p = (e) => {
         let { setting: t, isDm: n = !1, isFriend: i = !1 } = e;
         if (null != t && t !== r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
         let s = o.default.getCurrentUser();
-        return (0, a.bc)('resolveSettingWithDefaults')
+        return (0, a.bc)("resolveSettingWithDefaults")
             ? g({
                   isDm: n,
-                  isFriend: i
+                  isFriend: i,
               })
-            : (0, a.g2)('resolveSettingWithDefaults')
+            : (0, a.g2)("resolveSettingWithDefaults")
               ? r.Q4.BLUR
               : (null == s ? void 0 : s.nsfwAllowed) === !1
                 ? m({
                       isDm: n,
-                      isFriend: i
+                      isFriend: i,
                   })
                 : h({
                       isDm: n,
-                      isFriend: i
+                      isFriend: i,
                   });
     },
     h = (e) => {
@@ -101,13 +101,13 @@ let u = {
             explicitContentGuilds: p({ setting: null == t ? void 0 : t.explicitContentGuilds }),
             explicitContentNonFriendDm: p({
                 setting: null == t ? void 0 : t.explicitContentNonFriendDm,
-                isDm: !0
+                isDm: !0,
             }),
             explicitContentFriendDm: p({
                 setting: null == t ? void 0 : t.explicitContentFriendDm,
                 isDm: !0,
-                isFriend: !0
-            })
+                isFriend: !0,
+            }),
         };
     },
     b = (e) => {

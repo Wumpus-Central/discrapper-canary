@@ -17,18 +17,22 @@ function f(e) {
         {
             pendingAvatar: g,
             pendingAvatarDecoration: E,
-            pendingErrors: b
+            pendingErrors: b,
         } = (0, i.cj)([c.Z, a.Z], () => ({
             pendingAvatar: t ? c.Z.getTryItOutAvatar() : null != f ? a.Z.getPendingAvatar() : c.Z.getPendingAvatar(),
-            pendingAvatarDecoration: t ? c.Z.getTryItOutAvatarDecoration() : null != f ? a.Z.getPendingAvatarDecoration() : c.Z.getPendingAvatarDecoration(),
-            pendingErrors: null != f ? a.Z.getErrors().avatarDecoration : c.Z.getErrors().avatarDecoration
+            pendingAvatarDecoration: t
+                ? c.Z.getTryItOutAvatarDecoration()
+                : null != f
+                  ? a.Z.getPendingAvatarDecoration()
+                  : c.Z.getPendingAvatarDecoration(),
+            pendingErrors: null != f ? a.Z.getErrors().avatarDecoration : c.Z.getErrors().avatarDecoration,
         })),
         y = (0, r.useCallback)((e) => (0, s.Jw)(e, null == _ ? void 0 : _.avatar), [null == _ ? void 0 : _.avatar]),
         O = (0, r.useCallback)(
             (e) => {
-                ((0, s.PO)(f, e), null != e && m(e));
+                (0, s.PO)(f, e), null != e && m(e);
             },
-            [m, f]
+            [m, f],
         );
     return {
         pendingAvatar: g,
@@ -36,6 +40,6 @@ function f(e) {
         setPendingAvatar: t ? d.c_ : y,
         setPendingAvatarDecoration: t ? d.Xz : O,
         savedAvatarDecoration: h,
-        pendingErrors: b
+        pendingErrors: b,
     };
 }

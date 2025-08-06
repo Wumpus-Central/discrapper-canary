@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685), n(415506));
+n.d(t, { Z: () => u }), n(388685), n(415506);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -15,10 +15,10 @@ function u(e) {
         [b, y] = i.useState(!1),
         [O, v] = i.useState(-1),
         I = () => {
-            ((m.current = (0, l._)(t, p)), v((e) => e + 1));
+            (m.current = (0, l._)(t, p)), v((e) => e + 1);
         },
         T = () => {
-            (E(!1), y(!0), v(-1), h(d));
+            E(!1), y(!0), v(-1), h(d);
         };
     i.useEffect(() => {
         null == f && h(d);
@@ -28,10 +28,10 @@ function u(e) {
             idleAnimationState: f,
             isChanging: b,
             resetAnimation: T,
-            versionKey: O
+            versionKey: O,
         },
         A = i.useRef(S);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         A.current = S;
     }),
         i.useEffect(() => {
@@ -46,17 +46,17 @@ function u(e) {
         i.useEffect(() => {
             let { applyAnimation: e, idleAnimationState: t } = A.current;
             b && (E(null == t), y(!1), e());
-        }, [b]));
+        }, [b]);
     let N = () => {
         null != f && (h(f), E(!0));
     };
-    if (!c.Cj.hasOwnProperty(t)) throw Error('Unexpected giftStyle '.concat(t));
+    if (!c.Cj.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
     return (0, r.jsx)(a.Fmz, {
         importData: m.current,
         shouldAnimate: !_ && u,
         className: n,
         versionKey: O,
         onComplete: null != f ? N : void 0,
-        loop: g
+        loop: g,
     });
 }

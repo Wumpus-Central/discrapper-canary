@@ -1,10 +1,10 @@
-(n.d(t, { v: () => a }), n(388685), n(413496), n(433524), n(35282));
+n.d(t, { v: () => a }), n(388685), n(413496), n(433524), n(35282);
 var r = n(591759);
 let i = new Set(n(821445)),
     o = {
-        'github.com': RegExp('/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*'),
-        'bitbucket.org': RegExp('/downloads\\S*/[^/]*'),
-        'gitlab.com': RegExp('/downloads\\S*/[^/]*')
+        "github.com": RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*"),
+        "bitbucket.org": RegExp("/downloads\\S*/[^/]*"),
+        "gitlab.com": RegExp("/downloads\\S*/[^/]*"),
     };
 function a(e) {
     var t, n;
@@ -16,13 +16,13 @@ function a(e) {
     try {
         c = decodeURIComponent(a);
     } catch (e) {}
-    let u = c.split('/'),
+    let u = c.split("/"),
         d = null,
         f = 0;
     for (let e = u.length - 1; e >= 0; e--) {
         let t = u[e];
-        if ('' !== t && '.' !== t) {
-            if ('..' === t) {
+        if ("" !== t && "." !== t) {
+            if (".." === t) {
                 f++;
                 continue;
             }
@@ -32,7 +32,7 @@ function a(e) {
         }
     }
     if (null == d) return null;
-    let _ = d.split('.');
+    let _ = d.split(".");
     if (_.length < 2) return null;
     let p = null == (t = _.pop()) ? void 0 : t.toLowerCase();
     return null != p && i.has(p) ? p : null;

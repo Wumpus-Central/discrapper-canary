@@ -16,7 +16,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,32 +62,41 @@ function h(e, t) {
     );
 }
 function m(e) {
-    let { user: t, guildId: f, channelId: p, onBlock: m, onIgnore: g, onUnblock: E, location: b = 'ContextMenu', appContext: y = u.IlC.APP } = e,
+    let {
+            user: t,
+            guildId: f,
+            channelId: p,
+            onBlock: m,
+            onIgnore: g,
+            onUnblock: E,
+            location: b = "ContextMenu",
+            appContext: y = u.IlC.APP,
+        } = e,
         { id: O } = t,
-        v = (0, i.e7)(
-            [c.default],
-            () => {
-                var e;
-                return (null == (e = c.default.getCurrentUser()) ? void 0 : e.id) === O;
-            },
-            [O]
-        ),
+        v = (0, i.e7)([c.default], () => {
+            var e;
+            return (null == (e = c.default.getCurrentUser()) ? void 0 : e.id) === O;
+        }, [O]),
         I = (0, i.e7)([l.Z], () => l.Z.isBlocked(O), [O]),
-        T = I ? 'default' : 'danger';
+        T = I ? "default" : "danger";
     return v
         ? null
         : (0, r.jsx)(o.sNh, {
-              id: 'block',
-              color: null != T ? T : 'default',
+              id: "block",
+              color: null != T ? T : "default",
               label: I ? d.intl.string(d.t.XyHpKC) : d.intl.string(d.t.l4EmaW),
               action: I
                   ? () => {
-                        (null == E || E(), a.Z.unblockUser(O, { location: b }), s.Z.showUnblockSuccessToast(O, null != p ? p : void 0));
+                        null == E || E(),
+                            a.Z.unblockUser(O, { location: b }),
+                            s.Z.showUnblockSuccessToast(O, null != p ? p : void 0);
                     }
                   : () => {
                         (0, o.ZDy)(
                             async () => {
-                                let { default: e } = await Promise.all([n.e('97652'), n.e('98707')]).then(n.bind(n, 478923));
+                                let { default: e } = await Promise.all([n.e("97652"), n.e("98707")]).then(
+                                    n.bind(n, 478923),
+                                );
                                 return (n) =>
                                     (0, r.jsx)(
                                         e,
@@ -97,12 +106,12 @@ function m(e) {
                                             channelId: p,
                                             onBlock: m,
                                             onIgnore: g,
-                                            location: b
-                                        })
+                                            location: b,
+                                        }),
                                     );
                             },
-                            { contextKey: (0, o.VnL)(y) }
+                            { contextKey: (0, o.VnL)(y) },
                         );
-                    }
+                    },
           });
 }

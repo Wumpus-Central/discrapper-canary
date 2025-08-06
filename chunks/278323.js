@@ -9,14 +9,25 @@ var r = n(544891),
     u = n(981631);
 let d = {
     updateActivity(e) {
-        let { applicationId: t, distributor: n, shareActivity: o, token: a = null, duration: s = 0, closed: l = !1, exePath: c = null, voiceChannelId: d = null, sessionId: f = null, mediaSessionId: _ = null } = e;
-        (i.Z.wait(() =>
+        let {
+            applicationId: t,
+            distributor: n,
+            shareActivity: o,
+            token: a = null,
+            duration: s = 0,
+            closed: l = !1,
+            exePath: c = null,
+            voiceChannelId: d = null,
+            sessionId: f = null,
+            mediaSessionId: _ = null,
+        } = e;
+        i.Z.wait(() =>
             i.Z.dispatch({
-                type: 'ACTIVITY_UPDATE_START',
+                type: "ACTIVITY_UPDATE_START",
                 applicationId: t,
                 duration: s,
-                distributor: n
-            })
+                distributor: n,
+            }),
         ),
             r.tn
                 .post({
@@ -31,42 +42,42 @@ let d = {
                         exePath: c,
                         voice_channel_id: d,
                         session_id: f,
-                        media_session_id: _
+                        media_session_id: _,
                     },
                     retries: 1,
                     oldFormErrors: !0,
-                    rejectWithError: !0
+                    rejectWithError: !0,
                 })
                 .then((e) => {
                     let {
-                        body: { token: r }
+                        body: { token: r },
                     } = e;
                     i.Z.dispatch({
-                        type: 'ACTIVITY_UPDATE_SUCCESS',
+                        type: "ACTIVITY_UPDATE_SUCCESS",
                         applicationId: t,
                         token: r,
                         duration: s,
-                        distributor: n
+                        distributor: n,
                     });
                 })
                 .catch(() => {
                     i.Z.dispatch({
-                        type: 'ACTIVITY_UPDATE_FAIL',
-                        applicationId: t
+                        type: "ACTIVITY_UPDATE_FAIL",
+                        applicationId: t,
                     });
-                }));
+                });
     },
     sendActivityInvite(e) {
         let { channelId: t, type: n, activity: r, content: i, targetUserId: l, location: d } = e,
             f = s.Z.getChannel(t);
         if (null == f) return Promise.resolve(null);
-        let _ = a.ZP.parse(f, null != i ? i : '');
+        let _ = a.ZP.parse(f, null != i ? i : "");
         return c.Z.sendMessage(f.id, _, !1, {
             activityAction: {
                 type: n,
                 activity: r,
-                targetUserId: l
-            }
+                targetUserId: l,
+            },
         }).then(
             (e) => (
                 o.ZP.trackWithMetadata(u.rMx.INVITE_SENT, {
@@ -75,11 +86,11 @@ let d = {
                     application_id: r.application_id,
                     guild_id: f.getGuildId(),
                     channel_id: f.id,
-                    message_id: null != e ? e.body.id : null
+                    message_id: null != e ? e.body.id : null,
                 }),
                 Promise.resolve(f)
             ),
-            (e) => Promise.reject(e)
+            (e) => Promise.reject(e),
         );
     },
     sendActivityInviteUser(e) {
@@ -90,8 +101,8 @@ let d = {
                 type: n,
                 activity: r,
                 content: i,
-                location: o
-            })
+                location: o,
+            }),
         );
     },
     async getJoinSecret(e, t, n, i, o) {
@@ -104,7 +115,7 @@ let d = {
                     url: u.ANM.USER_ACTIVITY_JOIN(e, t, n),
                     retries: 3,
                     query: a,
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
             ).body.secret
         );
@@ -117,7 +128,7 @@ let d = {
                 application_id: n,
                 party_id: r,
                 message_id: i,
-                channel_id: o
+                channel_id: o,
             };
         });
         return (
@@ -125,8 +136,8 @@ let d = {
                 url: u.ANM.USER_ACTIVITY_SUBSCRIBE,
                 body: { subscriptions: t },
                 retries: 1,
-                rejectWithError: !1
+                rejectWithError: !1,
             })
         ).body;
-    }
+    },
 };

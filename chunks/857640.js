@@ -10,20 +10,20 @@ function c(e) {
     let { message: t, compact: n, usernameHook: c } = e,
         u = (0, o.ZP)(t),
         d = c(u),
-        f = s.intl.format(s.t['zla/u7'], {
+        f = s.intl.format(s.t["zla/u7"], {
             username: u.nick,
             usernameHook: d,
-            topic: t.content
+            topic: t.content,
         });
     return (0, r.jsx)(a.Z, {
         className: l.stageSystemMessage,
         iconNode: (0, r.jsx)(i.ewx, {
-            size: 'md',
-            color: 'currentColor'
+            size: "md",
+            color: "currentColor",
         }),
         iconContainerClassName: l.iconContainer,
         timestamp: t.timestamp,
         compact: n,
-        children: f
+        children: f,
     });
 }

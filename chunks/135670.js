@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(415506), n(388685));
+n.d(t, { Z: () => c }), n(415506), n(388685);
 var r = n(47770),
     i = n(46973),
     o = n(65154);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,7 +23,7 @@ function l(e) {
 }
 class c extends r.Z {
     destroy() {
-        (this.emit(i.aB.Destroy), this.removeAllListeners());
+        this.emit(i.aB.Destroy), this.removeAllListeners();
     }
     interact() {}
     supported() {
@@ -33,7 +33,7 @@ class c extends r.Z {
         return e === o.AN.AUTO_ENABLE && __OVERLAY__;
     }
     connect(e, t, n) {
-        throw Error('NOT_IMPLEMENTED');
+        throw Error("NOT_IMPLEMENTED");
     }
     eachConnection() {}
     enable() {
@@ -57,16 +57,16 @@ class c extends r.Z {
         e([]);
     }
     getCodecCapabilities(e) {
-        e('');
+        e("");
     }
     getCodecSurvey() {
-        return Promise.reject(Error('getCodecSurvey is not implemented for MediaEngineDummy'));
+        return Promise.reject(Error("getCodecSurvey is not implemented for MediaEngineDummy"));
     }
     getAudioSubsystem() {
         return o.iA.STANDARD;
     }
     getAudioLayer() {
-        return '';
+        return "";
     }
     setGoLiveSource(e, t) {}
     setClipsSource(e) {}
@@ -78,26 +78,26 @@ class c extends r.Z {
     }
     setSoundshareSource(e, t, n) {}
     getDesktopSource() {
-        return Promise.reject(Error('NO_STREAM'));
+        return Promise.reject(Error("NO_STREAM"));
     }
     getScreenPreviews(e, t) {
-        return Promise.reject(Error('UNSUPPORTED'));
+        return Promise.reject(Error("UNSUPPORTED"));
     }
     getWindowPreviews(e, t) {
-        return Promise.reject(Error('UNSUPPORTED'));
+        return Promise.reject(Error("UNSUPPORTED"));
     }
     setClipBufferLength(e) {}
     saveClip(e, t) {
-        return Promise.reject(Error('UNSUPPORTED'));
+        return Promise.reject(Error("UNSUPPORTED"));
     }
     saveClipForUser(e, t, n) {
-        return Promise.reject(Error('UNSUPPORTED'));
+        return Promise.reject(Error("UNSUPPORTED"));
     }
     updateClipMetadata(e, t) {
-        return Promise.reject(Error('UNSUPPORTED'));
+        return Promise.reject(Error("UNSUPPORTED"));
     }
     exportClip(e, t) {
-        return Promise.reject(Error('UNSUPPORTED'));
+        return Promise.reject(Error("UNSUPPORTED"));
     }
     setAudioSubsystem(e) {}
     queueAudioSubsystem(e) {}
@@ -107,7 +107,7 @@ class c extends r.Z {
     }
     setDebugLogging(e) {}
     writeAudioDebugState() {
-        return Promise.reject(Error('Audio debug state is not supported.'));
+        return Promise.reject(Error("Audio debug state is not supported."));
     }
     setLoopback(e, t) {}
     getLoopback() {
@@ -123,18 +123,18 @@ class c extends r.Z {
     startRecordingRawSamples(e) {}
     stopRecordingRawSamples() {}
     createReplayConnection(e, t) {
-        throw Error('Connection replay is not supported.');
+        throw Error("Connection replay is not supported.");
     }
     setOnVideoContainerResized(e) {}
     setMaxSyncDelayOverride(e) {}
     rankRtcRegions(e) {
-        return Promise.reject(Error('RTC region latency test is not supported.'));
+        return Promise.reject(Error("RTC region latency test is not supported."));
     }
     applyMediaFilterSettings(e) {
         return Promise.resolve();
     }
     startLocalAudioRecording() {
-        return Promise.reject(Error('startLocalAudioRecording is not supported.'));
+        return Promise.reject(Error("startLocalAudioRecording is not supported."));
     }
     stopLocalAudioRecording(e) {}
     setHasFullbandPerformance(e) {}
@@ -145,7 +145,7 @@ class c extends r.Z {
         e([]);
     }
     getMLSSigningKey(e, t) {
-        return Promise.reject(Error('NOT_IMPLEMENTED'));
+        return Promise.reject(Error("NOT_IMPLEMENTED"));
     }
     setSidechainCompression(e) {}
     setSidechainCompressionStrength(e) {}
@@ -158,10 +158,10 @@ class c extends r.Z {
         return Promise.resolve();
     }
     getNoiseCancellationStats() {
-        return Promise.reject(Error('Dummy noise cancellation stats not supported'));
+        return Promise.reject(Error("Dummy noise cancellation stats not supported"));
     }
     setNoiseCancellationEnableStats(e) {}
     constructor(...e) {
-        (super(...e), a(this, 'Video', s), a(this, 'Camera', l));
+        super(...e), a(this, "Video", s), a(this, "Camera", l);
     }
 }

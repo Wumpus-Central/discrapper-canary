@@ -12,23 +12,38 @@ var r = n(154028),
     p = n(507604),
     h = n(511696);
 e.exports = function (e, t, n, m) {
-    var g = 'stackTraceLimit',
+    var g = "stackTraceLimit",
         E = m ? 2 : 1,
-        b = e.split('.'),
+        b = e.split("."),
         y = b[b.length - 1],
         O = r.apply(null, b);
     if (O) {
         var v = O.prototype;
-        if ((!h && i(v, 'cause') && delete v.cause, !n)) return O;
-        var I = r('Error'),
+        if ((!h && i(v, "cause") && delete v.cause, !n)) return O;
+        var I = r("Error"),
             T = t(function (e, t) {
                 var n = d(m ? t : e, void 0),
                     r = m ? new O(e) : new O();
-                return (void 0 !== n && o(r, 'message', n), _(r, T, r.stack, 2), this && a(v, this) && u(r, this, T), arguments.length > E && f(r, arguments[E]), r);
+                return (
+                    void 0 !== n && o(r, "message", n),
+                    _(r, T, r.stack, 2),
+                    this && a(v, this) && u(r, this, T),
+                    arguments.length > E && f(r, arguments[E]),
+                    r
+                );
             });
-        if (((T.prototype = v), 'Error' !== y ? (s ? s(T, I) : l(T, I, { name: !0 })) : p && g in O && (c(T, O, g), c(T, O, 'prepareStackTrace')), l(T, O), !h))
+        if (
+            ((T.prototype = v),
+            "Error" !== y
+                ? s
+                    ? s(T, I)
+                    : l(T, I, { name: !0 })
+                : p && g in O && (c(T, O, g), c(T, O, "prepareStackTrace")),
+            l(T, O),
+            !h)
+        )
             try {
-                (v.name !== y && o(v, 'name', y), (v.constructor = T));
+                v.name !== y && o(v, "name", y), (v.constructor = T);
             } catch (e) {}
         return T;
     }

@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     OG: () => j,
     ZP: () => C,
-    Zu: () => v
+    Zu: () => v,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -36,18 +36,21 @@ function O(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return (
-        a()(t.type !== h.eD.ROOT, '[GuildDropTarget] Tried using a root node as a drop target.'),
+        a()(t.type !== h.eD.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
         {
             accept: e,
-            canDrop: (e) => e.nodeId !== t.id && (!r || e.type !== h.eD.FOLDER || t.type !== h.eD.FOLDER) && (e.type !== h.eD.FOLDER || null == t.parentId),
+            canDrop: (e) =>
+                e.nodeId !== t.id &&
+                (!r || e.type !== h.eD.FOLDER || t.type !== h.eD.FOLDER) &&
+                (e.type !== h.eD.FOLDER || null == t.parentId),
             drop(e) {
                 let { nodeId: i } = e;
-                (r && t.type !== h.eD.FOLDER && d.default.track(f.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(i, t.id, n, r));
+                r && t.type !== h.eD.FOLDER && d.default.track(f.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(i, t.id, n, r);
             },
             collect: (e) => ({
                 canDrop: e.canDrop(),
-                isOver: e.isOver()
-            })
+                isOver: e.isOver(),
+            }),
         }
     );
 }
@@ -57,14 +60,14 @@ function _(e) {
         [{ canDrop: a, isOver: u }, d] = (0, c.L)(s),
         p = b([
             [a, m.autoPointerEvents],
-            [u, m.dragOver]
+            [u, m.dragOver],
         ]);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         ref: (e) => {
-            ((p.current = e), d(e));
+            (p.current = e), d(e);
         },
-        'data-dnd-name': g.intl.formatToPlainString(g.t.A5aDw8, { itemName: t }),
-        className: m.target
+        "data-dnd-name": g.intl.formatToPlainString(g.t.A5aDw8, { itemName: t }),
+        className: m.target,
     });
 }
 function y(e) {
@@ -75,7 +78,7 @@ function y(e) {
     }, [l, a]);
     let d = b([
         [s, m.autoPointerEvents],
-        [a, m.dragOver]
+        [a, m.dragOver],
     ]);
     return (0, r.jsx)(p.Z, {
         text: t,
@@ -83,35 +86,35 @@ function y(e) {
         forceOpen: a,
         disableWrapper: !0,
         tooltipClass: m.centerTargetTooltip,
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             ref: (e) => {
-                ((d.current = e), u(e));
+                (d.current = e), u(e);
             },
-            'data-dnd-name': g.intl.formatToPlainString(g.t.qiQ0QE, { itemName: t }),
-            className: o()(m.centerTarget, {})
-        })
+            "data-dnd-name": g.intl.formatToPlainString(g.t.qiQ0QE, { itemName: t }),
+            className: o()(m.centerTarget, {}),
+        }),
     });
 }
 let C = i.memo(function (e) {
     let { name: t, targetNode: n, noCombine: i = !1, below: l = !1, onDragOverChanged: o } = e,
         s = !i && null == n.parentId;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: m.wrapper,
-        'aria-hidden': !0,
+        "aria-hidden": !0,
         children: [
             (0, r.jsx)(_, {
                 name: t,
                 targetNode: n,
-                below: l
+                below: l,
             }),
             s
                 ? (0, r.jsx)(y, {
                       name: t,
                       targetNode: n,
-                      onDragOverChanged: o
+                      onDragOverChanged: o,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 });
 function v(e) {
@@ -120,31 +123,31 @@ function v(e) {
         s = b([[l, m.wrapperOver]]),
         a = b([
             [l, m.dragOver],
-            [i, m.autoPointerEvents]
+            [i, m.autoPointerEvents],
         ]);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         ref: s,
         className: m.folderEndWrapper,
-        'aria-hidden': !0,
-        children: (0, r.jsx)('div', {
+        "aria-hidden": !0,
+        children: (0, r.jsx)("div", {
             className: m.folderTarget,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 ref: (e) => {
-                    ((a.current = e), o(e));
+                    (a.current = e), o(e);
                 },
-                'aria-label': 'At end of '.concat(t),
-                className: m.target
-            })
-        })
+                "aria-label": "At end of ".concat(t),
+                className: m.target,
+            }),
+        }),
     });
 }
 function j(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         ref: (e) => {
             n(e);
         },
-        children: t
+        children: t,
     });
 }

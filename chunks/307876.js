@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,14 +37,14 @@ function _(e) {
 }
 class p extends i.Z {
     constructor(e) {
-        (super(),
-            u(this, 'handleShowUrgentMessageAlert', void 0),
-            u(this, 'actions', void 0),
+        super(),
+            u(this, "handleShowUrgentMessageAlert", void 0),
+            u(this, "actions", void 0),
             (this.handleShowUrgentMessageAlert = e),
             (this.actions = {
                 POST_CONNECTION_OPEN: () => f(this.handleShowUrgentMessageAlert),
                 MESSAGE_CREATE: () => f(this.handleShowUrgentMessageAlert),
-                CHANNEL_SELECT: _
-            }));
+                CHANNEL_SELECT: _,
+            });
     }
 }

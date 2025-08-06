@@ -5,7 +5,7 @@ var r = n(73800),
     l = n(346811),
     i = n(4242);
 function c(e) {
-    let { user: t, guildId: n, location: c = '' } = e,
+    let { user: t, guildId: n, location: c = "" } = e,
         { enabled: u } = l.Z.useConfig({ location: c }),
         d = (0, a.e7)([o.ZP], () => (null != n && null != t ? o.ZP.getMember(n, t.id) : null));
     return (0, r.useMemo)(() => {

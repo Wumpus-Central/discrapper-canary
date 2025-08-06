@@ -16,11 +16,11 @@ function o(e) {
         context: n,
         object: u.qAy.CONTEXT_MENU,
         children: (0, i.jsxs)(s.v2r, {
-            navId: 'user-context',
+            navId: "user-context",
             onClose: d.Zy,
-            'aria-label': l.intl.string(l.t.liqwPD),
+            "aria-label": l.intl.string(l.t.liqwPD),
             onSelect: o,
-            children: [(0, i.jsx)(s.kSQ, { children: v }), (0, i.jsx)(s.kSQ, { children: h })]
-        })
+            children: [(0, i.jsx)(s.kSQ, { children: v }), (0, i.jsx)(s.kSQ, { children: h })],
+        }),
     });
 }

@@ -1,4 +1,4 @@
-(t.r(n), t.d(n, { default: () => c }));
+t.r(n), t.d(n, { default: () => c });
 var r = t(255367),
     o = t(238246),
     i = t(952561),
@@ -12,6 +12,6 @@ function c(e) {
         withTitleBar: !0,
         windowKey: t,
         title: null != (n = null == c ? void 0 : c.name) ? n : a.intl.string(a.t.IC5Anp),
-        children: (0, r.jsx)(l.Z, {})
+        children: (0, r.jsx)(l.Z, {}),
     });
 }

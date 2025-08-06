@@ -14,16 +14,16 @@ let c = function (e) {
                       guild: t,
                       size: a.Z.Sizes.MEDIUM,
                       className: o()(l.icon, null == t.icon ? l.textIcon : l.imageIcon),
-                      active: !0
+                      active: !0,
                   })
                 : null;
-    return (0, r.jsxs)('span', {
+    return (0, r.jsxs)("span", {
         children: [
             (0, r.jsx)(s.Z, { children: i }),
-            (0, r.jsx)('span', {
+            (0, r.jsx)("span", {
                 className: l.name,
-                children: n
-            })
-        ]
+                children: n,
+            }),
+        ],
     });
 };

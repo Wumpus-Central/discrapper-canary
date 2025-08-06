@@ -5,14 +5,14 @@ var e = n(764908),
     s = n(178476),
     c = n(975378),
     f = function () {},
-    a = s('Reflect', 'construct'),
+    a = s("Reflect", "construct"),
     p = /^\s*(?:class|function)\b/,
     l = e(p.exec),
     v = !p.test(f),
     y = function (t) {
         if (!i(t)) return !1;
         try {
-            return (a(f, [], t), !0);
+            return a(f, [], t), !0;
         } catch (t) {
             return !1;
         }
@@ -20,9 +20,9 @@ var e = n(764908),
     h = function (t) {
         if (!i(t)) return !1;
         switch (u(t)) {
-            case 'AsyncFunction':
-            case 'GeneratorFunction':
-            case 'AsyncGeneratorFunction':
+            case "AsyncFunction":
+            case "GeneratorFunction":
+            case "AsyncGeneratorFunction":
                 return !1;
         }
         try {
@@ -31,7 +31,7 @@ var e = n(764908),
             return !0;
         }
     };
-((h.sham = !0),
+(h.sham = !0),
     (t.exports =
         !a ||
         o(function () {
@@ -46,4 +46,4 @@ var e = n(764908),
             );
         })
             ? h
-            : y));
+            : y);

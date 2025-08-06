@@ -6,7 +6,7 @@ function a(e) {
     let { groups: t, selectedStory: n, onStorySelect: a } = e;
     return (0, r.jsx)(o.n, {
         selectedItem: n,
-        orientation: 'vertical',
+        orientation: "vertical",
         onItemSelect: (e) => {
             null != e && a(e);
         },
@@ -25,16 +25,16 @@ function a(e) {
                                     onItemSelect: () => {
                                         a(e.id);
                                     },
-                                    children: e.name
+                                    children: e.name,
                                 },
-                                e.id
-                            )
+                                e.id,
+                            ),
                         ),
-                        s < t.length - 1 && (0, r.jsx)(o.n.Separator, {})
-                    ]
+                        s < t.length - 1 && (0, r.jsx)(o.n.Separator, {}),
+                    ],
                 },
-                e.title
-            )
-        )
+                e.title,
+            ),
+        ),
     });
 }

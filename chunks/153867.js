@@ -1,7 +1,7 @@
 n.d(t, {
     V1: () => h,
     ZI: () => E,
-    ZP: () => b
+    ZP: () => b,
 });
 var r = n(524437),
     i = n(381499),
@@ -17,14 +17,21 @@ var r = n(524437),
     p = n(874893);
 function h(e) {
     return f.hW.updateAsync(
-        'guildFolders',
+        "guildFolders",
         (t) => {
             t.folders = e.map((e) => {
                 let t = r.yX.create({ guildIds: e.guildIds });
-                return (null != e.folderId && (t.id = i.r1.create({ value: String(e.folderId) })), null != e.folderColor && (t.color = i.wA.create({ value: String(e.folderColor) })), null != e.folderName && '' !== e.folderName && (t.name = i.Gm.create({ value: String(e.folderName) })), t);
+                return (
+                    null != e.folderId && (t.id = i.r1.create({ value: String(e.folderId) })),
+                    null != e.folderColor && (t.color = i.wA.create({ value: String(e.folderColor) })),
+                    null != e.folderName &&
+                        "" !== e.folderName &&
+                        (t.name = i.Gm.create({ value: String(e.folderName) })),
+                    t
+                );
             });
         },
-        f.fy.FREQUENT_USER_ACTION
+        f.fy.FREQUENT_USER_ACTION,
     );
 }
 function m(e) {
@@ -43,73 +50,74 @@ function m(e) {
 }
 function g(e) {
     return {
-        backgroundGradientPresetId: null != e.backgroundGradientPresetId ? i.yC.create({ value: e.backgroundGradientPresetId }) : void 0,
+        backgroundGradientPresetId:
+            null != e.backgroundGradientPresetId ? i.yC.create({ value: e.backgroundGradientPresetId }) : void 0,
         customUserThemeSettings:
             null != e.customUserThemeSettings
                 ? {
                       colors: e.customUserThemeSettings.colors,
                       gradientColorStops: e.customUserThemeSettings.gradientColorStops,
                       gradientAngle: e.customUserThemeSettings.gradientAngle,
-                      baseMix: e.customUserThemeSettings.baseMix
+                      baseMix: e.customUserThemeSettings.baseMix,
                   }
-                : void 0
+                : void 0,
     };
 }
 function E(e) {
     let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: r, useSystemTheme: i } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.fy.INFREQUENT_USER_ACTION,
-        u = 'system' === r ? p.KW.ON : p.KW.OFF,
+        u = "system" === r ? p.KW.ON : p.KW.OFF,
         d = null != i ? i : u;
     if (
         (a.Z.dispatch({
-            type: 'UNSYNCED_USER_SETTINGS_UPDATE',
-            settings: { useSystemTheme: d }
+            type: "UNSYNCED_USER_SETTINGS_UPDATE",
+            settings: { useSystemTheme: d },
         }),
-        null == t && 'system' !== r && (0, o.wj)(r) && (0, c.Ag)({ [p.zd.DARK]: r }),
+        null == t && "system" !== r && (0, o.wj)(r) && (0, c.Ag)({ [p.zd.DARK]: r }),
         a.Z.dispatch({
-            type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
+            type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
                 appearance: {
                     settings: {
                         clientThemeSettings: {
                             backgroundGradientPresetId: t,
-                            customUserThemeSettings: n
+                            customUserThemeSettings: n,
                         },
-                        theme: 'system' === r ? void 0 : r
-                    }
-                }
-            }
+                        theme: "system" === r ? void 0 : r,
+                    },
+                },
+            },
         }),
-        l.Z.shouldSync('appearance'))
+        l.Z.shouldSync("appearance"))
     )
         return f.hW.updateAsync(
-            'appearance',
+            "appearance",
             (e) => {
-                ((e.theme = m(r)),
+                (e.theme = m(r)),
                     (e.clientThemeSettings = g({
                         backgroundGradientPresetId: t,
-                        customUserThemeSettings: n
-                    })));
+                        customUserThemeSettings: n,
+                    }));
             },
-            s
+            s,
         );
 }
 let b = {
     overrideLocale(e) {
         a.Z.dispatch({
-            type: 'USER_SETTINGS_LOCALE_OVERRIDE',
-            locale: e
+            type: "USER_SETTINGS_LOCALE_OVERRIDE",
+            locale: e,
         });
     },
     updatedUnsyncedSettings(e) {
         a.Z.dispatch({
-            type: 'UNSYNCED_USER_SETTINGS_UPDATE',
-            settings: e
+            type: "UNSYNCED_USER_SETTINGS_UPDATE",
+            settings: e,
         });
     },
     setShouldSyncTextSettings(e) {
         a.Z.dispatch({
-            type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
+            type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
                 text: {
                     shouldSync: e,
@@ -122,16 +130,16 @@ let b = {
                               renderReactions: d.nc.getSetting(),
                               animateEmoji: d.Yk.getSetting(),
                               animateStickers: d.Wp.getSetting(),
-                              gifAutoPlay: d.QK.getSetting()
-                          }
-                }
-            }
+                              gifAutoPlay: d.QK.getSetting(),
+                          },
+                },
+            },
         });
     },
     setShouldSyncAppearanceSettings(e) {
         var t;
         a.Z.dispatch({
-            type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
+            type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
                 appearance: {
                     shouldSync: e,
@@ -139,46 +147,48 @@ let b = {
                         ? {}
                         : {
                               theme: u.Z.theme,
-                              clientThemeSettings: { backgroundGradientPresetId: null == (t = s.Z.gradientPreset) ? void 0 : t.id },
-                              developerMode: d.Sb.getSetting()
-                          }
-                }
-            }
+                              clientThemeSettings: {
+                                  backgroundGradientPresetId: null == (t = s.Z.gradientPreset) ? void 0 : t.id,
+                              },
+                              developerMode: d.Sb.getSetting(),
+                          },
+                },
+            },
         });
     },
     applySettingsOverride(e) {
         a.Z.dispatch({
-            type: 'USER_SETTINGS_OVERRIDE_APPLY',
-            settings: e
+            type: "USER_SETTINGS_OVERRIDE_APPLY",
+            settings: e,
         });
     },
     clearSettingsOverride() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         a.Z.dispatch({
-            type: 'USER_SETTINGS_OVERRIDE_CLEAR',
-            settings: t
+            type: "USER_SETTINGS_OVERRIDE_CLEAR",
+            settings: t,
         });
     },
     updateLocale: (e) =>
         f.hW.updateAsync(
-            'localization',
+            "localization",
             (t) => {
                 t.locale = i.Gm.create({ value: e });
             },
-            f.fy.INFREQUENT_USER_ACTION
+            f.fy.INFREQUENT_USER_ACTION,
         ),
     updateTheme(e) {
-        (a.Z.dispatch({
-            type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
-            changes: { appearance: { settings: { theme: e } } }
+        a.Z.dispatch({
+            type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
+            changes: { appearance: { settings: { theme: e } } },
         }),
-            l.Z.shouldSync('appearance') &&
+            l.Z.shouldSync("appearance") &&
                 f.hW.updateAsync(
-                    'appearance',
+                    "appearance",
                     (t) => {
                         t.theme = m(e);
                     },
-                    f.fy.INFREQUENT_USER_ACTION
-                ));
-    }
+                    f.fy.INFREQUENT_USER_ACTION,
+                );
+    },
 };

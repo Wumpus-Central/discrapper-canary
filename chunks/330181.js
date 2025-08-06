@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(913527),
@@ -14,7 +14,7 @@ let p = (e) => {
         [i, s] = r.useState(null);
     return {
         resetRenewalMutation: async (t) => {
-            (n(!0), s(null));
+            n(!0), s(null);
             try {
                 await (0, l.qu)(t, e);
             } catch (e) {
@@ -24,7 +24,7 @@ let p = (e) => {
             }
         },
         submitting: t,
-        error: i
+        error: i,
     };
 };
 function g(e) {
@@ -36,27 +36,27 @@ function g(e) {
             if ((null == n ? void 0 : n.renewalMutations) == null)
                 return {
                     currentListing: void 0,
-                    nextListing: void 0
+                    nextListing: void 0,
                 };
             let e = n.items[0].planId,
                 t = n.renewalMutations.items[0].planId;
             return {
                 currentListing: b.find((t) => t.subscription_plans[0].id === e),
-                nextListing: b.find((e) => e.subscription_plans[0].id === t)
+                nextListing: b.find((e) => e.subscription_plans[0].id === t),
             };
         }, [n, b]);
     if (null == n || null == x || null == _) return null;
-    let j = a()(n.currentPeriodEnd).format('MMM DD, YYYY');
+    let j = a()(n.currentPeriodEnd).format("MMM DD, YYYY");
     return (0, i.jsx)(u.Z, {
         message: m.intl.format(m.t.chw89f, {
             currentListing: x.name,
             nextListing: _.name,
-            changeDate: j
+            changeDate: j,
         }),
         error: null == f ? void 0 : f.message,
         onClick: () => g(n),
         submitting: h,
         ctaMessage: m.intl.string(m.t.De4wIy),
-        className: s
+        className: s,
     });
 }

@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     FO: () => Z,
     nA: () => y,
     qQ: () => O,
-    r7: () => b
+    r7: () => b,
 }),
     n(388685),
     n(642613),
-    n(583741));
+    n(583741);
 var r = n(73800),
     l = n(392711),
     a = n.n(l),
@@ -44,7 +44,7 @@ function Z(e) {
                         .filter((e) => d.Z.can(p.Pl.VIEW_CHANNEL, e))
                         .map((e) => e.id)
                         .value(),
-                [e.guild_id, e.id]
+                [e.guild_id, e.id],
             );
             return r.useMemo(
                 () =>
@@ -52,13 +52,13 @@ function Z(e) {
                         .sort((e, t) => g.default.compare(u.ZP.lastMessageId(e), u.ZP.lastMessageId(t)))
                         .reverse()
                         .value(),
-                [t]
+                [t],
             );
         })(e),
         [n, l] = (0, s.e7)([j.Z], () => a().partition(t, (e) => j.Z.hasJoined(e)), [t], s.pF);
     return {
         joinedThreadIds: n,
-        unjoinedThreadIds: l
+        unjoinedThreadIds: l,
     };
 }
 function y(e) {
@@ -77,7 +77,7 @@ function y(e) {
                 .filter((e) => d.Z.can(p.Pl.VIEW_CHANNEL, e))
                 .map((e) => e.id)
                 .value(),
-        [e]
+        [e],
     );
     return r.useMemo(
         () =>
@@ -85,7 +85,7 @@ function y(e) {
                 .sort((e, t) => g.default.compare(u.ZP.lastMessageId(e), u.ZP.lastMessageId(t)))
                 .reverse()
                 .value(),
-        [t]
+        [t],
     );
 }
 function O(e, t, n, l) {
@@ -95,12 +95,12 @@ function O(e, t, n, l) {
             canLoadMore: g,
             loading: m,
             nextOffset: j,
-            isInitialLoad: x
+            isInitialLoad: x,
         } = (0, s.cj)([f.Z], () => ({
             loading: f.Z.isLoading(e.id, t, n, l),
             isInitialLoad: f.Z.isInitialLoad,
             canLoadMore: f.Z.canLoadMore,
-            nextOffset: f.Z.nextOffset
+            nextOffset: f.Z.nextOffset,
         })),
         b = r.useCallback(() => {
             d.Z.can(p.Pl.READ_MESSAGE_HISTORY, e) &&
@@ -111,7 +111,7 @@ function O(e, t, n, l) {
                     sortOrder: t,
                     tagFilter: n,
                     tagSetting: l,
-                    offset: j
+                    offset: j,
                 });
         }, [e, t, n, l, j, h, u]),
         Z = r.useRef(b);
@@ -133,11 +133,11 @@ function O(e, t, n, l) {
                         let t = c.Z.getChannel(e);
                         return null != t && d.Z.can(p.Pl.VIEW_CHANNEL, t);
                     })
-                    .value()
+                    .value(),
             ),
             canLoadMore: g,
             loading: (m || x) && h,
-            loadMore: b
+            loadMore: b,
         }
     );
 }

@@ -4,5 +4,10 @@ var n = r(176338),
 let a = function (e) {
     if (!(0, o.Z)(e)) return !1;
     var t = (0, n.Z)(e);
-    return '[object Function]' == t || '[object GeneratorFunction]' == t || '[object AsyncFunction]' == t || '[object Proxy]' == t;
+    return (
+        "[object Function]" == t ||
+        "[object GeneratorFunction]" == t ||
+        "[object AsyncFunction]" == t ||
+        "[object Proxy]" == t
+    );
 };

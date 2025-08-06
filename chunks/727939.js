@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685));
+n.d(t, { Z: () => u }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -9,7 +9,7 @@ let c = {
         top: 48,
         bottom: 32,
         left: 32,
-        right: 32
+        right: 32,
     },
     u = function (e) {
         let { className: t, defaultPosition: n = l.VD2.BOTTOM_RIGHT, children: u, topOffset: d } = e,
@@ -26,6 +26,6 @@ let c = {
             edgeOffsetBottom: c.bottom,
             edgeOffsetLeft: c.left,
             edgeOffsetRight: c.right,
-            children: u
+            children: u,
         });
     };

@@ -16,23 +16,19 @@ var r = n(255367),
 function h(e) {
     let { guild: t, onSubmit: o } = e,
         h = (0, a.e7)([C.Z], () => C.Z.getMembersCountByGuildId(t.id, u.R_.NEW_GUILD_MEMBER), [t.id]),
-        j = (0, a.e7)(
-            [C.Z],
-            () => {
-                let e = C.Z.getNewMemberTimestamp(t.id);
-                return i()(e).format('h:mm A');
-            },
-            [t.id]
-        ),
+        j = (0, a.e7)([C.Z], () => {
+            let e = C.Z.getNewMemberTimestamp(t.id);
+            return i()(e).format("h:mm A");
+        }, [t.id]),
         g = (0, a.e7)([C.Z], () => C.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
         x = l.useCallback(() => {
-            ((0, m.YO)(t.id), null == o || o());
+            (0, m.YO)(t.id), null == o || o();
         }, [t.id, o]),
         v = l.useCallback(() => {
             g
                 ? x()
                 : (0, c.ZDy)(async () => {
-                      let { default: e } = await n.e('24478').then(n.bind(n, 319481));
+                      let { default: e } = await n.e("24478").then(n.bind(n, 319481));
                       return (t) => {
                           var n, l;
                           return (0, r.jsx)(
@@ -41,24 +37,24 @@ function h(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           r.forEach(function (t) {
                                               var r;
-                                              ((r = n[t]),
+                                              (r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: r,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = r));
-                                          }));
+                                                      : (e[t] = r);
+                                          });
                                   }
                                   return e;
                               })({}, t)),
@@ -75,7 +71,7 @@ function h(e) {
                                     })(Object(l)).forEach(function (e) {
                                         Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
-                              n)
+                              n),
                           );
                       };
                   });
@@ -86,25 +82,25 @@ function h(e) {
         _ = l.useMemo(() => 1 + +!!O + +!!H, [O, H]);
     return 0 === h
         ? null
-        : (0, r.jsxs)('tr', {
+        : (0, r.jsxs)("tr", {
               className: f.newMembersNotice,
               onClick: v,
               children: [
-                  (0, r.jsx)('td', {
+                  (0, r.jsx)("td", {
                       colSpan: 3,
                       children: (0, r.jsx)(c.Text, {
-                          variant: 'text-sm/normal',
-                          color: 'always-white',
-                          children: b.intl.format(b.t['/i5uJy'], {
+                          variant: "text-sm/normal",
+                          color: "always-white",
+                          children: b.intl.format(b.t["/i5uJy"], {
                               count: y,
-                              date: j
-                          })
-                      })
+                              date: j,
+                          }),
+                      }),
                   }),
-                  (0, r.jsx)('td', { colSpan: _ }),
-                  (0, r.jsx)('td', {
+                  (0, r.jsx)("td", { colSpan: _ }),
+                  (0, r.jsx)("td", {
                       colSpan: 2,
-                      children: (0, r.jsx)('div', {
+                      children: (0, r.jsx)("div", {
                           className: p.actionCell,
                           children: (0, r.jsx)(s.zx, {
                               size: s.zx.Sizes.SMALL,
@@ -112,23 +108,23 @@ function h(e) {
                               look: s.zx.Looks.LINK,
                               className: f.memberNoticeActionButton,
                               children: (0, r.jsxs)(c.Text, {
-                                  variant: 'text-sm/normal',
-                                  color: 'always-white',
+                                  variant: "text-sm/normal",
+                                  color: "always-white",
                                   className: f.memberNoticeAction,
                                   children: [
-                                      (0, r.jsx)('div', { children: b.intl.string(b.t.rkyOzM) }),
+                                      (0, r.jsx)("div", { children: b.intl.string(b.t.rkyOzM) }),
                                       (0, r.jsx)(c.tBG, {
-                                          size: 'custom',
-                                          color: 'currentColor',
+                                          size: "custom",
+                                          color: "currentColor",
                                           width: 20,
                                           height: 20,
-                                          className: f.memberNoticeActionIcon
-                                      })
-                                  ]
-                              })
-                          })
-                      })
-                  })
-              ]
+                                          className: f.memberNoticeActionIcon,
+                                      }),
+                                  ],
+                              }),
+                          }),
+                      }),
+                  }),
+              ],
           });
 }

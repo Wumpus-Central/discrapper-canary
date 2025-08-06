@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => O }), n(388685));
+n.d(t, { ZP: () => O }), n(388685);
 var r = n(255367),
     o = n(73800),
     i = n(120356),
@@ -22,22 +22,22 @@ function E(e) {
     let t,
         { active: n, nextActive: o, position: i } = e;
     return (
-        (t = n && !1 !== o ? 'full' : n && !1 === o ? 'half' : 'none'),
-        (0, r.jsxs)('div', {
+        (t = n && !1 !== o ? "full" : n && !1 === o ? "half" : "none"),
+        (0, r.jsxs)("div", {
             className: h.progressContainer,
             children: [
-                (0, r.jsx)('div', { className: l()(h.progress, h[i], h[t]) }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", { className: l()(h.progress, h[i], h[t]) }),
+                (0, r.jsx)("div", {
                     className: l()(h.boostContainer, j.boostProgressBackground, {
                         [h.boostContainerActive]: n,
-                        [j.active]: n
+                        [j.active]: n,
                     }),
                     children: (0, r.jsx)(a.$Eu, {
-                        size: 'sm',
-                        color: 'white'
-                    })
-                })
-            ]
+                        size: "sm",
+                        color: "white",
+                    }),
+                }),
+            ],
         })
     );
 }
@@ -53,39 +53,39 @@ function C(e) {
                 ? void 0
                 : t.map((e, t) =>
                       (0, r.jsxs)(
-                          'div',
+                          "div",
                           {
                               className: h.perkRow,
                               children: [
                                   (0, r.jsx)(e.icon, {
                                       color: l,
-                                      size: 'sm'
+                                      size: "sm",
                                   }),
                                   (0, r.jsx)(s.xv, {
                                       className: h.perkText,
                                       color: i,
-                                      variant: 'text-sm/medium',
-                                      children: e.getCopy()
-                                  })
-                              ]
+                                      variant: "text-sm/medium",
+                                      children: e.getCopy(),
+                                  }),
+                              ],
                           },
-                          'perk-'.concat(n, '-').concat(t)
-                      )
+                          "perk-".concat(n, "-").concat(t),
+                      ),
                   );
         }, [n, l, i]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: h.perkRowContainer,
         children: [
             a,
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: h.perkRow,
                 children: (0, r.jsx)(s.xv, {
                     color: i,
-                    variant: 'text-sm/medium',
-                    children: b.intl.string(v.default.nIj3LS)
-                })
-            })
-        ]
+                    variant: "text-sm/medium",
+                    children: b.intl.string(v.default.nIj3LS),
+                }),
+            }),
+        ],
     });
 }
 function O(e) {
@@ -104,9 +104,9 @@ function O(e) {
         className: h.card,
         children: [
             (0, r.jsx)(E, {
-                position: 0 === n ? 'start' : null == l ? 'end' : 'middle',
+                position: 0 === n ? "start" : null == l ? "end" : "middle",
                 active: c,
-                nextActive: null != l ? _ : void 0
+                nextActive: null != l ? _ : void 0,
             }),
             (0, r.jsx)(d.Q9, {
                 title: i.title,
@@ -116,21 +116,21 @@ function O(e) {
                     (0, r.jsx)(f.g, {
                         className: h.footer,
                         guildId: t,
-                        powerup: i
+                        powerup: i,
                     }),
                 children: (0, r.jsx)(C, {
                     isActive: c,
-                    index: n
-                })
+                    index: n,
+                }),
             }),
             !v &&
                 (0, r.jsx)(d.N4, {
                     children: (0, r.jsx)(p.ZP, {
                         guildId: t,
                         powerup: i,
-                        onError: j
-                    })
-                })
-        ]
+                        onError: j,
+                    }),
+                }),
+        ],
     });
 }

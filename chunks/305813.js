@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685));
+n.d(t, { Z: () => N }), n(388685);
 var r = n(255367),
     o = n(73800),
     l = n(120356),
@@ -26,24 +26,24 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -72,9 +72,9 @@ function N(e) {
                 displayNameStyles: {
                     fontId: n,
                     effectId: l,
-                    colors: N
-                }
-            })
+                    colors: N,
+                },
+            }),
         ),
         w = (0, s.ZP)(),
         L = (0, i.wjy)(w),
@@ -83,28 +83,28 @@ function N(e) {
         { bannerSrc: M } = (0, h.Z)({
             displayProfile: R,
             size: 413,
-            canAnimate: !1
+            canAnimate: !1,
         }),
         B = I ? _.BRd.DARK : _.BRd.LIGHT;
     ((L && I) || (!L && !I)) && (B = w);
     let Z = (0, o.useCallback)(() => {
-            (j.default.track(_.rMx.DISPLAY_NAME_STYLES_CLOSED), T());
+            j.default.track(_.rMx.DISPLAY_NAME_STYLES_CLOSED), T();
         }, [T]),
         Y = (0, o.useCallback)((e) => {
-            (A(e === _.BRd.DARK), j.default.track(_.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === _.BRd.DARK }));
+            A(e === _.BRd.DARK), j.default.track(_.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === _.BRd.DARK });
         }, []);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: P.previewSection,
         children: [
             (0, r.jsx)(i.xBx, {
-                'data-migration-pending': !0,
+                "data-migration-pending": !0,
                 separator: !1,
                 className: P.sectionHeader,
                 children: (0, r.jsx)(i.olH, {
-                    'data-migration-pending': !0,
+                    "data-migration-pending": !0,
                     onClick: Z,
-                    innerClassName: P.closeButton
-                })
+                    innerClassName: P.closeButton,
+                }),
             }),
             null != M &&
                 (0, r.jsx)(b.Z, {
@@ -113,15 +113,15 @@ function N(e) {
                     themeType: O.lY.MODAL_V2,
                     className: P.backgroundThemeContainer,
                     forceUserTheme: !0,
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: P.bannerBackground,
-                        style: { backgroundImage: 'url('.concat(M, ')') }
-                    })
+                        style: { backgroundImage: "url(".concat(M, ")") },
+                    }),
                 }),
             (0, r.jsx)(i.f6W, {
                 theme: B,
                 children: (e) =>
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: a()(P.previewCards, e),
                         inert: !0,
                         children: [
@@ -133,7 +133,7 @@ function N(e) {
                                 hideCustomStatus: !0,
                                 containerClassName: P.profile,
                                 interactive: !1,
-                                hideViewFullProfileButton: !0
+                                hideViewFullProfileButton: !0,
                             }),
                             (0, r.jsx)(f.Z, {
                                 author: (0, p.ij)(D, null),
@@ -142,45 +142,47 @@ function N(e) {
                                         v(
                                             {},
                                             (0, u.ZP)({
-                                                channelId: '1337',
-                                                content: C.intl.string(y.default.h5Cuen)
-                                            })
+                                                channelId: "1337",
+                                                content: C.intl.string(y.default.h5Cuen),
+                                            }),
                                         ),
                                         {
                                             state: _.yb.SENT,
-                                            id: '0'
-                                        }
-                                    )
+                                            id: "0",
+                                        },
+                                    ),
                                 ),
                                 isGroupStart: !0,
                                 hideSimpleEmbedContent: !0,
                                 hideGuildTag: !0,
-                                className: P.chatMessage
+                                className: P.chatMessage,
                             }),
                             (0, r.jsx)(c.Z, {
                                 user: D,
                                 nameplate: null,
                                 nameplateData: D.nameplate,
-                                className: P.nameplate
-                            })
-                        ]
-                    })
+                                className: P.nameplate,
+                            }),
+                        ],
+                    }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: P.themeToggleSection,
                 children: [
                     (0, r.jsx)(i.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-muted',
-                        children: C.intl.format(y.default.prQba2, { helpArticleLink: S.Z.getArticleURL(_.BhN.DISPLAY_NAME_STYLES) })
+                        variant: "text-xs/normal",
+                        color: "text-muted",
+                        children: C.intl.format(y.default.prQba2, {
+                            helpArticleLink: S.Z.getArticleURL(_.BhN.DISPLAY_NAME_STYLES),
+                        }),
                     }),
                     (0, r.jsx)(k, {
                         darkPreview: I,
-                        onToggleTheme: Y
-                    })
-                ]
-            })
-        ]
+                        onToggleTheme: Y,
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function k(e) {
@@ -190,23 +192,23 @@ function k(e) {
         optionClassName: P.themeToggleOption,
         options: [
             {
-                name: '',
+                name: "",
                 tooltip: C.intl.string(C.t.b8Cei4),
                 value: _.BRd.DARK,
-                icon: i.Z6G
+                icon: i.Z6G,
             },
             {
-                name: '',
+                name: "",
                 tooltip: C.intl.string(C.t.K2sFfn),
                 value: _.BRd.LIGHT,
-                icon: i.chG
-            }
+                icon: i.chG,
+            },
         ],
         value: t ? _.BRd.DARK : _.BRd.LIGHT,
         onChange: (e) => {
             let { value: t } = e;
             return n(t);
         },
-        look: 'pill'
+        look: "pill",
     });
 }

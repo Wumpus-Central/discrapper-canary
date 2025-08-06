@@ -8,6 +8,6 @@ t.exports =
         s(1);
     }) || u
         ? function (t) {
-              return !!o(t) && (!u || 'ArrayBuffer' !== i(t)) && (!s || s(t));
+              return !!o(t) && (!u || "ArrayBuffer" !== i(t)) && (!s || s(t));
           }
         : s;

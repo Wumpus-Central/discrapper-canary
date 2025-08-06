@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,8 +35,8 @@ class f extends (i = o.ZP.Store) {
         return r;
     }
 }
-c(f, 'displayName', 'OverlayRunningGameStore');
+c(f, "displayName", "OverlayRunningGameStore");
 let _ = new f(a.Z, {
     OVERLAY_INITIALIZE: u,
-    OVERLAY_SET_ASSOCIATED_GAME: d
+    OVERLAY_SET_ASSOCIATED_GAME: d,
 });

@@ -12,28 +12,32 @@ function d() {
     return t
         ? (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsxs)('div', {
+                  (0, n.jsxs)("div", {
                       className: a.previewNotice,
                       children: [
                           (0, n.jsx)(o.kZF, {
-                              size: 'xs',
-                              color: 'currentColor'
+                              size: "xs",
+                              color: "currentColor",
                           }),
                           (0, n.jsx)(o.Text, {
-                              variant: 'text-sm/normal',
+                              variant: "text-sm/normal",
                               className: a.previewNoticeText,
-                              children: e === s.y.GUILD_PRODUCTS_PREVIEW ? c.intl.string(c.t.F4Z0nZ) : c.intl.string(c.t.pzTFpK)
-                          })
-                      ]
+                              children:
+                                  e === s.y.GUILD_PRODUCTS_PREVIEW
+                                      ? c.intl.string(c.t.F4Z0nZ)
+                                      : c.intl.string(c.t.pzTFpK),
+                          }),
+                      ],
                   }),
                   (0, n.jsx)(i.zx, {
                       size: i.zx.Sizes.MIN,
                       color: i.zx.Colors.PRIMARY,
                       className: a.removePreviewButton,
                       onClick: r,
-                      children: e === s.y.GUILD_PRODUCTS_PREVIEW ? c.intl.string(c.t.YF35pa) : c.intl.string(c.t.r30bk5)
-                  })
-              ]
+                      children:
+                          e === s.y.GUILD_PRODUCTS_PREVIEW ? c.intl.string(c.t.YF35pa) : c.intl.string(c.t.r30bk5),
+                  }),
+              ],
           })
         : null;
 }

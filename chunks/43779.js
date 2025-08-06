@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(953529));
+n.d(t, { Z: () => S }), n(953529);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -21,10 +21,19 @@ var r = n(255367),
     C = n(642145),
     y = n(388032),
     O = n(882067);
-let E = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
+let E = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
 function S(e) {
     var t, n, o, S, T;
-    let { quest: P, questContent: A, isHovering: N, contentPosition: R, rowIndex: B, isVisibleInViewport: k, onReceiveErrorHints: I, sourceQuestContent: q } = e,
+    let {
+            quest: P,
+            questContent: A,
+            isHovering: N,
+            contentPosition: R,
+            rowIndex: B,
+            isVisibleInViewport: k,
+            onReceiveErrorHints: I,
+            sourceQuestContent: q,
+        } = e,
         D = s.useMemo(() => g.r.build(P.config), [P.config]),
         Q = D.defaultRewardName,
         V = D.defaultRewardNameWithArticle,
@@ -39,24 +48,24 @@ function S(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, C.Y)),
@@ -73,7 +82,7 @@ function S(e) {
                       })(Object(T)).forEach(function (e) {
                           Object.defineProperty(S, e, Object.getOwnPropertyDescriptor(T, e));
                       }),
-                S)
+                S),
         }),
         z = (null == (n = P.userStatus) ? void 0 : n.completedAt) != null,
         F = (null == (o = P.userStatus) ? void 0 : o.claimedAt) != null,
@@ -84,23 +93,23 @@ function S(e) {
         $ = s.useMemo(
             () =>
                 F && X
-                    ? y.intl.format(y.t['8Op4c3'], {
+                    ? y.intl.format(y.t["8Op4c3"], {
                           balanceHook: () =>
                               (0, r.jsxs)(w, {
                                   questId: P.id,
                                   children: [
                                       (0, r.jsx)(p.Z, {
                                           shouldUseThemeColor: !0,
-                                          className: O.orbsBalanceIcon
+                                          className: O.orbsBalanceIcon,
                                       }),
-                                      K
-                                  ]
-                              })
+                                      K,
+                                  ],
+                              }),
                       })
                     : F
                       ? (0, r.jsx)(w, {
                             questId: P.id,
-                            children: Q
+                            children: Q,
                         })
                       : X
                         ? y.intl.format(y.t.ro1szc, {
@@ -110,37 +119,37 @@ function S(e) {
                                       children: [
                                           (0, r.jsx)(p.Z, {
                                               shouldUseThemeColor: !0,
-                                              className: O.orbsBalanceIcon
+                                              className: O.orbsBalanceIcon,
                                           }),
-                                          K
-                                      ]
-                                  })
+                                          K,
+                                      ],
+                                  }),
                           })
-                        : y.intl.format(y.t['0IUT4e'], {
+                        : y.intl.format(y.t["0IUT4e"], {
                               rewardWithArticleHook: () =>
                                   (0, r.jsx)(w, {
                                       questId: P.id,
-                                      children: V
-                                  })
+                                      children: V,
+                                  }),
                           }),
-            [Q, F, V, P.id, K, X]
+            [Q, F, V, P.id, K, X],
         ),
         ee = s.useMemo(() => {
             if (null != J)
                 return (0, r.jsx)(c.Text, {
-                    variant: 'text-sm/medium',
-                    color: 'text-muted',
+                    variant: "text-sm/medium",
+                    color: "text-muted",
                     className: O.description,
-                    children: J
+                    children: J,
                 });
         }, [J]),
         et = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: O.container,
         children: [
             (0, r.jsxs)(i.animated.div, {
                 style: {
-                    maxHeight: H.to([0, 1], [104, (null != Z ? Z : 0) + 12])
+                    maxHeight: H.to([0, 1], [104, (null != Z ? Z : 0) + 12]),
                 },
                 className: O.rewardDescriptionContainer,
                 children: [
@@ -148,12 +157,12 @@ function S(e) {
                         showPlaceholder: !k,
                         width: 80,
                         height: 80,
-                        children: (0, r.jsxs)('div', {
+                        children: (0, r.jsxs)("div", {
                             className: O.assetWrapper,
                             children: [
-                                !F && z && (0, r.jsx)('div', { className: O.completionAnimation }),
+                                !F && z && (0, r.jsx)("div", { className: O.completionAnimation }),
                                 L && !F
-                                    ? (0, r.jsxs)('div', {
+                                    ? (0, r.jsxs)("div", {
                                           className: O.progressWrapper,
                                           children: [
                                               z &&
@@ -162,14 +171,14 @@ function S(e) {
                                                       className: O.confetti,
                                                       loop: !1,
                                                       autoplay: !1,
-                                                      shouldAnimate: !et
+                                                      shouldAnimate: !et,
                                                   }),
                                               (0, r.jsx)(x.Z, {
                                                   quest: P,
                                                   size: 76,
                                                   percentComplete: Y,
                                                   percentCompleteText: N && !(0, m.zi)(P) ? G : void 0,
-                                                  children: (0, r.jsx)('div', {
+                                                  children: (0, r.jsx)("div", {
                                                       className: O.circularRewardTileWrapper,
                                                       children: (0, r.jsx)(h.Z, {
                                                           quest: P,
@@ -179,11 +188,11 @@ function S(e) {
                                                           autoplay: N,
                                                           onLoadComplete: U,
                                                           lazyLoad: !0,
-                                                          sourceQuestContent: q
-                                                      })
-                                                  })
-                                              })
-                                          ]
+                                                          sourceQuestContent: q,
+                                                      }),
+                                                  }),
+                                              }),
+                                          ],
                                       })
                                     : (0, r.jsx)(h.Z, {
                                           quest: P,
@@ -193,38 +202,38 @@ function S(e) {
                                           location: v.dr.QUEST_HOME_DESKTOP,
                                           onLoadComplete: U,
                                           lazyLoad: !0,
-                                          sourceQuestContent: q
-                                      })
-                            ]
-                        })
+                                          sourceQuestContent: q,
+                                      }),
+                            ],
+                        }),
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         ref: M,
                         className: a()(O.textContainer, { [O.justifyCenter]: !W }),
                         children: [
                             (0, r.jsx)(c.X6q, {
-                                variant: 'eyebrow',
-                                color: 'text-brand',
+                                variant: "eyebrow",
+                                color: "text-brand",
                                 className: O.questName,
-                                children: y.intl.format(y.t.EAYZAg, { questName: P.config.messages.questName })
+                                children: y.intl.format(y.t.EAYZAg, { questName: P.config.messages.questName }),
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: 'text-md/semibold',
-                                color: 'header-primary',
+                                variant: "text-md/semibold",
+                                color: "header-primary",
                                 className: O.header,
-                                children: $
+                                children: $,
                             }),
-                            ee
-                        ]
+                            ee,
+                        ],
                     }),
                     W &&
                         (0, r.jsx)(i.animated.div, {
                             style: {
-                                opacity: H.to([0, 1], [1, 0])
+                                opacity: H.to([0, 1], [1, 0]),
                             },
-                            className: O.textOverflowBlur
-                        })
-                ]
+                            className: O.textOverflowBlur,
+                        }),
+                ],
             }),
             (0, r.jsx)(_.Z, {
                 quest: P,
@@ -232,9 +241,9 @@ function S(e) {
                 contentPosition: R,
                 rowIndex: B,
                 onReceiveErrorHints: I,
-                sourceQuestContent: q
-            })
-        ]
+                sourceQuestContent: q,
+            }),
+        ],
     });
 }
 let w = s.memo(function (e) {
@@ -242,12 +251,12 @@ let w = s.memo(function (e) {
     return (0, r.jsx)(
         c.Text,
         {
-            variant: 'text-md/semibold',
-            color: 'header-primary',
-            tag: 'span',
+            variant: "text-md/semibold",
+            color: "header-primary",
+            tag: "span",
             className: O.header,
-            children: n
+            children: n,
         },
-        ''.concat(t, '_reward')
+        "".concat(t, "_reward"),
     );
 });

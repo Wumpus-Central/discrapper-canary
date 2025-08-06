@@ -11,43 +11,43 @@ function d() {
     let e = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         { styleLarge: t, styleSmall: n } = i.useMemo(
             () => ({
-                styleLarge: { width: ''.concat(10 + 50 * Math.random(), '%') },
-                styleSmall: { width: ''.concat(30 + 60 * Math.random(), '%') }
+                styleLarge: { width: "".concat(10 + 50 * Math.random(), "%") },
+                styleSmall: { width: "".concat(30 + 60 * Math.random(), "%") },
             }),
-            []
+            [],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(u.container, { [u.noAnimation]: e }),
         children: [
-            (0, r.jsx)('div', { className: u.iconPlaceholder }),
-            (0, r.jsxs)('div', {
+            (0, r.jsx)("div", { className: u.iconPlaceholder }),
+            (0, r.jsxs)("div", {
                 className: u.textContainer,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: u.textPlaceholder,
                         style: t,
                         children: (0, r.jsx)(l.X6q, {
                             className: u.hidden,
-                            variant: 'heading-md/semibold',
-                            color: 'header-primary',
+                            variant: "heading-md/semibold",
+                            color: "header-primary",
                             lineClamp: 1,
-                            children: '_'
-                        })
+                            children: "_",
+                        }),
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: u.textPlaceholder,
                         style: n,
                         children: (0, r.jsx)(l.Text, {
                             className: u.hidden,
-                            variant: 'text-sm/normal',
-                            color: 'text-secondary',
+                            variant: "text-sm/normal",
+                            color: "text-secondary",
                             lineClamp: 1,
-                            children: '_'
-                        })
-                    })
-                ]
+                            children: "_",
+                        }),
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', { className: u.underline })
-        ]
+            (0, r.jsx)("div", { className: u.underline }),
+        ],
     });
 }

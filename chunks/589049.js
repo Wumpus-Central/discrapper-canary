@@ -13,14 +13,14 @@ function f() {
     let e = (0, a.bp)(),
         { analyticsLocations: t } = (0, s.ZP)(),
         n = () => {
-            ((0, l.Z)(), o.Z.open(u.oAB.VOICE, null, { analyticsLocations: t }));
+            (0, l.Z)(), o.Z.open(u.oAB.VOICE, null, { analyticsLocations: t });
         };
     return e === u.IlC.APP || c.isPlatformEmbedded
         ? (0, r.jsx)(i.sNh, {
-              id: 'voice-and-video-settings',
+              id: "voice-and-video-settings",
               label: d.intl.string(d.t.dsXapK),
               action: n,
-              icon: i.ewm
+              icon: i.ewm,
           })
         : null;
 }

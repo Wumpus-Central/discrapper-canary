@@ -10,10 +10,10 @@ class c extends i.Z {
         return (0, o.isDesktop)() && (0, o.isMac)() && !a.s.isDiscordTestSet();
     }
     _initialize() {
-        this.isEnabled() && r.Z.subscribe('AUDIO_SET_MODE', this.handleAudioSetMode);
+        this.isEnabled() && r.Z.subscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
     }
     _terminate() {
-        this.isEnabled() && r.Z.unsubscribe('AUDIO_SET_MODE', this.handleAudioSetMode);
+        this.isEnabled() && r.Z.unsubscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
     }
     handleAudioSetMode(e) {
         let { mode: t } = e;

@@ -9,21 +9,21 @@ var r = n(73800),
 function u(e, t, n) {
     let { analyticsLocations: u } = (0, l.ZP)(t);
     return r.useCallback(() => {
-        ((0, i.yw)(a.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+        (0, i.yw)(a.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
             location: { section: n },
             guild_id: e.id,
-            location_stack: u
+            location_stack: u,
         }),
             (0, o.Z)({
                 analyticsLocations: u,
                 analyticsSourceLocation: {
                     page: a.ZY5.GUILD_CHANNEL,
                     section: n,
-                    object: a.qAy.TOOLTIP
+                    object: a.qAy.TOOLTIP,
                 },
                 guild: e,
                 perks: (0, s.VF)(),
-                perkIntro: c.intl.string(c.t.ZhvSn5)
-            }));
+                perkIntro: c.intl.string(c.t.ZhvSn5),
+            });
     }, [u, n, e]);
 }

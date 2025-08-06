@@ -1,7 +1,7 @@
 n(220159)(
     {
-        target: 'Symbol',
-        stat: !0
+        target: "Symbol",
+        stat: !0,
     },
-    { isRegisteredSymbol: n(703458) }
+    { isRegisteredSymbol: n(703458) },
 );

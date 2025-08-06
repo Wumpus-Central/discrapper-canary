@@ -10,8 +10,8 @@ var r = n(764908),
     p = {},
     h = function (e, t, n) {
         if (!i(p, t)) {
-            for (var r = [], o = 0; o < t; o++) r[o] = 'a[' + o + ']';
-            p[t] = l('C,a', 'return new C(' + d(r, ',') + ')');
+            for (var r = [], o = 0; o < t; o++) r[o] = "a[" + o + "]";
+            p[t] = l("C,a", "return new C(" + d(r, ",") + ")");
         }
         return p[t](e, n);
     };
@@ -25,5 +25,5 @@ e.exports = c
                   var n = u(r, s(arguments));
                   return this instanceof i ? h(t, n.length, n) : t.apply(e, n);
               };
-          return (a(n) && (i.prototype = n), i);
+          return a(n) && (i.prototype = n), i;
       };

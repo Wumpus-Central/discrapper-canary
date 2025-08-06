@@ -1,4 +1,4 @@
-(n.d(t, { A: () => f }), n(388685));
+n.d(t, { A: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -21,14 +21,14 @@ function f(e) {
                 if (null == f || null == n) return null;
                 m.Z.setPendingInviteRules(f, e, [...n]);
             },
-            [f, n]
+            [f, n],
         ),
         b = i.useCallback(
             (e) => {
                 if (null == f) return null;
                 m.Z.setPendingInviteRules(f, t, e);
             },
-            [f, t]
+            [f, t],
         );
     return null == l
         ? null
@@ -36,53 +36,53 @@ function f(e) {
           ? (0, r.jsx)(c.$jN, {})
           : (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: h.headerContainer,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: h.headerText,
                                 children: [
                                     (0, r.jsx)(s.X6, {
-                                        variant: 'heading-md/semibold',
-                                        color: 'header-primary',
-                                        children: p.intl.string(p.t.d21uOj)
+                                        variant: "heading-md/semibold",
+                                        color: "header-primary",
+                                        children: p.intl.string(p.t.d21uOj),
                                     }),
                                     (0, r.jsx)(s.xv, {
-                                        tag: 'p',
-                                        variant: 'text-sm/medium',
-                                        color: 'text-secondary',
+                                        tag: "p",
+                                        variant: "text-sm/medium",
+                                        color: "text-secondary",
                                         className: h.bodyText,
-                                        children: p.intl.string(p.t.SzpUBA)
-                                    })
-                                ]
+                                        children: p.intl.string(p.t.SzpUBA),
+                                    }),
+                                ],
                             }),
                             (0, r.jsx)(c.rsf, {
                                 onChange: x,
-                                checked: t
-                            })
-                        ]
+                                checked: t,
+                            }),
+                        ],
                     }),
                     t && (0, r.jsx)(g.c, { guildId: l.id }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: a()(h.rules, { [h.disabled]: !t }),
-                        children: (0, r.jsxs)('div', {
-                            inert: t ? void 0 : '',
+                        children: (0, r.jsxs)("div", {
+                            inert: t ? void 0 : "",
                             children: [
                                 (0, r.jsx)(s.X6, {
-                                    variant: 'text-xs/bold',
-                                    color: 'text-muted',
+                                    variant: "text-xs/bold",
+                                    color: "text-muted",
                                     className: h.rulesHeader,
-                                    children: p.intl.string(p.t.XcAzbm)
+                                    children: p.intl.string(p.t.XcAzbm),
                                 }),
                                 (0, r.jsx)(d.k, {
                                     guild: l,
                                     rules: n,
                                     setRules: b,
-                                    disabled: !t
-                                })
-                            ]
-                        })
-                    })
-                ]
+                                    disabled: !t,
+                                }),
+                            ],
+                        }),
+                    }),
+                ],
             });
 }

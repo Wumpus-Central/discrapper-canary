@@ -25,14 +25,27 @@ var r = n(255367),
 let A = {
         xlarge: c.EFr.SIZE_48,
         large: c.EFr.SIZE_40,
-        default: c.EFr.SIZE_32
+        default: c.EFr.SIZE_32,
     },
     N = (e) => {
-        let { user: t, guildId: n, nameplate: o, nameplateData: N, className: C, innerClassName: R, isHighlighted: P, showStatus: w, showPlaceholderUser: D, pendingGlobalName: L, nameplatePreviewSize: x = 'default', isPurchased: M = !1 } = e,
+        let {
+                user: t,
+                guildId: n,
+                nameplate: o,
+                nameplateData: N,
+                className: C,
+                innerClassName: R,
+                isHighlighted: P,
+                showStatus: w,
+                showPlaceholderUser: D,
+                pendingGlobalName: L,
+                nameplatePreviewSize: x = "default",
+                isPurchased: M = !1,
+            } = e,
             k = (0, s.e7)([E.Z], () => (0, l.wj)(E.Z.theme)),
             j = null != o ? (0, O.EU)(o) : N,
             U = (0, s.e7)([y.Z], () => (null != t ? y.Z.getStatus(t.id) : c.Skl.ONLINE)),
-            G = k ? '#706F74' : '#aaaab2',
+            G = k ? "#706F74" : "#aaaab2",
             B = i.useRef(null),
             Z = (0, s.e7)([b.ZP], () => (null != n && null != t ? b.ZP.getMember(n, t.id) : null)),
             F =
@@ -41,22 +54,22 @@ let A = {
                           pendingNickname: void 0,
                           pendingGlobalName: L,
                           user: t,
-                          guildMember: Z
+                          guildMember: Z,
                       })
                     : void 0,
             V = A[x];
-        return (0, r.jsx)('div', {
-            role: 'img',
-            'aria-label': v.intl.string(v.t.SZeUdX),
+        return (0, r.jsx)("div", {
+            role: "img",
+            "aria-label": v.intl.string(v.t.SZeUdX),
             style: {
-                color: k ? 'white' : 'black',
-                width: '100%'
+                color: k ? "white" : "black",
+                width: "100%",
             },
             children: (0, r.jsxs)(c.Rny, {
                 className: a()(C, I.nameplatePreview, {
                     [I.nameplatePurchased]: M && !P,
-                    [I.large]: 'large' === x,
-                    [I.xlarge]: 'xlarge' === x
+                    [I.large]: "large" === x,
+                    [I.xlarge]: "xlarge" === x,
                 }),
                 children: [
                     null != j &&
@@ -66,15 +79,15 @@ let A = {
                                 nameplate: j,
                                 hovered: P,
                                 placement: h.i.PREVIEW,
-                                content: D ? void 0 : B
+                                content: D ? void 0 : B,
                             },
-                            null == o ? void 0 : o.id
+                            null == o ? void 0 : o.id,
                         ),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: I.overlayContainer,
                         children: [
                             null != t
-                                ? (0, r.jsx)('div', {
+                                ? (0, r.jsx)("div", {
                                       className: a()(I.avatarContainer, !D && I.avatarVisible),
                                       children: (0, r.jsx)(u.Z, {
                                           ref: B,
@@ -83,39 +96,39 @@ let A = {
                                               guildId: n,
                                               avatarSize: V,
                                               status: w ? U : void 0,
-                                              'aria-hidden': !0
+                                              "aria-hidden": !0,
                                           }),
                                           decorators: (0, r.jsx)(p.ZP, {
                                               userId: t.id,
                                               contextGuildId: n,
-                                              className: I.tagChiplet
+                                              className: I.tagChiplet,
                                           }),
                                           name: (0, r.jsx)(_.Z, {
                                               userName: F,
                                               displayNameStyles: t.displayNameStyles,
-                                              effectDisplayType: f.F.ANIMATED
+                                              effectDisplayType: f.F.ANIMATED,
                                           }),
-                                          innerClassName: R
-                                      })
+                                          innerClassName: R,
+                                      }),
                                   })
                                 : null,
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: a()(I.avatarContainer, D && I.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
                                         src: k ? T : S,
                                         size: V,
-                                        'aria-hidden': !0,
+                                        "aria-hidden": !0,
                                         status: c.Skl.ONLINE,
                                         statusColor: G,
-                                        className: I.avatar
+                                        className: I.avatar,
                                     }),
-                                    (0, r.jsx)('div', { className: I.placeholderUsername })
-                                ]
-                            })
-                        ]
-                    })
-                ]
-            })
+                                    (0, r.jsx)("div", { className: I.placeholderUsername }),
+                                ],
+                            }),
+                        ],
+                    }),
+                ],
+            }),
         });
     };

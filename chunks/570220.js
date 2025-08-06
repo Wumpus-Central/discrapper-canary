@@ -1,4 +1,4 @@
-(n.d(t, { f6: () => a }), n(415506));
+n.d(t, { f6: () => a }), n(415506);
 var r = n(73800),
     i = n(836560);
 class o extends i.EventEmitter {

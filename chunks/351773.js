@@ -8,9 +8,9 @@ function i(e, t) {
                 null == n.current || n.current.contains(e.target) || t();
             }
             return (
-                document.addEventListener('mousedown', e),
+                document.addEventListener("mousedown", e),
                 () => {
-                    document.removeEventListener('mousedown', e);
+                    document.removeEventListener("mousedown", e);
                 }
             );
         }, [n, t]),

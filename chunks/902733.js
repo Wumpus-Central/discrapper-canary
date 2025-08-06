@@ -17,10 +17,10 @@ function d(e) {
         onClick: c,
         className: u.iconContainer,
         children: (0, r.jsx)(s, {
-            size: 'md',
-            color: 'currentColor',
-            className: u.icon
-        })
+            size: "md",
+            color: "currentColor",
+            className: u.icon,
+        }),
     });
 }
 let h = function (e) {
@@ -30,9 +30,9 @@ let h = function (e) {
     }, [t]);
     let h = i.useCallback(
         (e) => {
-            (l(),
+            l(),
                 (0, a.ZDy)(async () => {
-                    let { default: i } = await n.e('11298').then(n.bind(n, 229612));
+                    let { default: i } = await n.e("11298").then(n.bind(n, 229612));
                     return (n) => {
                         var l, a;
                         return (0, r.jsx)(
@@ -41,31 +41,31 @@ let h = function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })({}, n)),
                             (a = a =
                                 {
                                     searchContext: t,
-                                    rating: e
+                                    rating: e,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
@@ -79,34 +79,34 @@ let h = function (e) {
                                   })(Object(a)).forEach(function (e) {
                                       Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
-                            l)
+                            l),
                         );
                     };
-                }));
+                });
         },
-        [l, t]
+        [l, t],
     );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: u.container,
         children: [
             (0, r.jsx)(a.Text, {
-                variant: 'text-sm/medium',
-                color: 'text-primary',
-                children: c.intl.string(c.t['I+4OJC'])
+                variant: "text-sm/medium",
+                color: "text-primary",
+                children: c.intl.string(c.t["I+4OJC"]),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: u.icons,
                 children: [
                     (0, r.jsx)(d, {
                         rating: o.aZ.GOOD,
-                        onClick: h
+                        onClick: h,
                     }),
                     (0, r.jsx)(d, {
                         rating: o.aZ.BAD,
-                        onClick: h
-                    })
-                ]
-            })
-        ]
+                        onClick: h,
+                    }),
+                ],
+            }),
+        ],
     });
 };

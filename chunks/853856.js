@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,31 +25,31 @@ function _(e) {
     var t;
     return (0, l.kt)({
         id: e.id,
-        name: null != (t = e.nickname) ? t : '',
+        name: null != (t = e.nickname) ? t : "",
         type: c.d4z.GUILD_CATEGORY,
         position: e.order,
-        guild_id: c.I_8
+        guild_id: c.I_8,
     });
 }
 function p() {
     var e, t, n;
-    ((f = null != (n = null == (e = s.Z.settings.favorites) ? void 0 : e.muted) && n), (d = {}));
+    (f = null != (n = null == (e = s.Z.settings.favorites) ? void 0 : e.muted) && n), (d = {});
     let r = null == (t = s.Z.settings.favorites) ? void 0 : t.favoriteChannels;
     if (null == r) return !1;
     for (let e in r) {
         let t = r[e];
         d[e] = {
             id: e,
-            nickname: '' !== t.nickname ? t.nickname : null,
+            nickname: "" !== t.nickname ? t.nickname : null,
             type: t.type,
             order: t.position,
-            parentId: '0' !== t.parentId ? t.parentId : null
+            parentId: "0" !== t.parentId ? t.parentId : null,
         };
     }
 }
 class h extends (r = i.ZP.Store) {
     initialize() {
-        (this.waitFor(s.Z), p(), this.syncWith([s.Z], p));
+        this.waitFor(s.Z), p(), this.syncWith([s.Z], p);
     }
     getFavoriteChannels() {
         return d;
@@ -72,5 +72,5 @@ class h extends (r = i.ZP.Store) {
         return null != (t = null == n ? void 0 : n.nickname) ? t : void 0;
     }
 }
-u(h, 'displayName', 'FavoriteStore');
+u(h, "displayName", "FavoriteStore");
 let m = new h(a.Z, {});

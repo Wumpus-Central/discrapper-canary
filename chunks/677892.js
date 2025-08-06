@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     $$: () => b,
     P_: () => _,
     ap: () => v,
-    ku: () => j
+    ku: () => j,
 }),
     n(953529),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -23,109 +23,109 @@ function f(e) {
     let t,
         { title: n, description: i, icon: l, hasStarted: s, status: o, onEdit: c, extra: d } = e;
     switch (o) {
-        case 'good':
+        case "good":
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(a.dz2, {
-                        size: 'xs',
-                        color: 'currentColor',
-                        className: h.checkmark
+                        size: "xs",
+                        color: "currentColor",
+                        className: h.checkmark,
                     }),
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-xs/semibold',
-                        color: 'status-positive',
+                        variant: "text-xs/semibold",
+                        color: "status-positive",
                         className: h.statusText,
-                        children: p.intl.string(p.t.rPnzRU)
-                    })
-                ]
+                        children: p.intl.string(p.t.rPnzRU),
+                    }),
+                ],
             });
             break;
-        case 'warning':
+        case "warning":
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(a.Mgn, {
-                        size: 'xs',
-                        color: 'currentColor',
-                        className: h.warning
+                        size: "xs",
+                        color: "currentColor",
+                        className: h.warning,
                     }),
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-xs/semibold',
-                        color: 'status-warning',
+                        variant: "text-xs/semibold",
+                        color: "status-warning",
                         className: h.statusText,
-                        children: p.intl.string(p.t['yTa+dn'])
-                    })
-                ]
+                        children: p.intl.string(p.t["yTa+dn"]),
+                    }),
+                ],
             });
             break;
-        case 'required':
+        case "required":
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(a.Mgn, {
-                        size: 'xs',
-                        color: 'currentColor',
-                        className: h.danger
+                        size: "xs",
+                        color: "currentColor",
+                        className: h.danger,
                     }),
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-xs/semibold',
-                        color: 'status-danger',
+                        variant: "text-xs/semibold",
+                        color: "status-danger",
                         className: h.statusText,
-                        children: p.intl.string(p.t.EkokLy)
-                    })
-                ]
+                        children: p.intl.string(p.t.EkokLy),
+                    }),
+                ],
             });
     }
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: h.onboardingStepContainer,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.leftContainer,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: h.iconContainer,
-                        children: l
+                        children: l,
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: h.onboardingStepText,
                         children: [
                             (0, r.jsx)(a.X6q, {
-                                variant: 'heading-md/semibold',
-                                children: n
+                                variant: "heading-md/semibold",
+                                children: n,
                             }),
                             (0, r.jsx)(a.Text, {
-                                variant: 'text-xs/normal',
-                                color: s && 'required' === o ? 'status-danger' : 'text-default',
-                                children: i
-                            })
-                        ]
-                    })
-                ]
+                                variant: "text-xs/normal",
+                                color: s && "required" === o ? "status-danger" : "text-default",
+                                children: i,
+                            }),
+                        ],
+                    }),
+                ],
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.rightContainer,
                 children: [
                     t,
                     d,
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: h.cta,
                         children: s
                             ? (0, r.jsx)(a.zxk, {
-                                  size: 'sm',
-                                  variant: 'secondary',
+                                  size: "sm",
+                                  variant: "secondary",
                                   onClick: c,
-                                  text: p.intl.string(p.t.bt75u7)
+                                  text: p.intl.string(p.t.bt75u7),
                               })
                             : (0, r.jsx)(a.zxk, {
                                   icon: a.ZSh,
-                                  iconPosition: 'end',
-                                  size: 'sm',
-                                  variant: 'secondary',
+                                  iconPosition: "end",
+                                  size: "sm",
+                                  variant: "secondary",
                                   onClick: c,
-                                  text: p.intl.string(p.t['0GWElZ'])
-                              })
-                    })
-                ]
-            })
-        ]
+                                  text: p.intl.string(p.t["0GWElZ"]),
+                              }),
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function x(e) {
@@ -152,25 +152,25 @@ function j(e) {
         C = y
             ? p.intl.formatToPlainString(p.t.nHwnLC, {
                   numDefaultChannels: v,
-                  numFromQuestions: u - v
+                  numFromQuestions: u - v,
               })
             : _
               ? p.intl.formatToPlainString(p.t.HxEwSk, { numDefaultChannels: v })
               : p.intl.formatToPlainString(p.t.ey3uVV, {
                     numDefaultChannels: g.md,
-                    numChattableChannels: g.X
+                    numChattableChannels: g.X,
                 });
     return (0, r.jsx)(f, {
-        title: y ? p.intl.string(p.t.YZookZ) : p.intl.string(p.t['4GSygo']),
+        title: y ? p.intl.string(p.t.YZookZ) : p.intl.string(p.t["4GSygo"]),
         description: C,
         icon: (0, r.jsx)(a.VL1, {
-            size: 'md',
-            color: 'currentColor',
-            className: h.channelIcon
+            size: "md",
+            color: "currentColor",
+            className: h.channelIcon,
         }),
         hasStarted: v > 0 || y,
-        status: _ || O ? (c ? 'none' : 'good') : 'required',
-        onEdit: n
+        status: _ || O ? (c ? "none" : "good") : "required",
+        onEdit: n,
     });
 }
 function v(e) {
@@ -184,9 +184,9 @@ function v(e) {
         j = (x / b) * 100,
         v = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
         _ = u > 0,
-        O = 'none';
+        O = "none";
     return (
-        _ && (j >= 85 && !i ? (O = 'good') : j < 85 && (O = 'warning')),
+        _ && (j >= 85 && !i ? (O = "good") : j < 85 && (O = "warning")),
         (0, r.jsx)(f, {
             title: v ? p.intl.string(p.t.AGjtFh) : p.intl.string(p.t.dqCzoa),
             description: p.intl.format(p.t.iuNisr, {
@@ -194,22 +194,22 @@ function v(e) {
                 numTotalChannels: b,
                 channelsHook: (e, t) =>
                     (0, r.jsx)(
-                        'span',
+                        "span",
                         {
-                            style: { color: j > 85 ? 'var(--header-primary)' : 'var(--status-warning)' },
-                            children: e
+                            style: { color: j > 85 ? "var(--header-primary)" : "var(--status-warning)" },
+                            children: e,
                         },
-                        t
-                    )
+                        t,
+                    ),
             }),
             icon: (0, r.jsx)(a.iFz, {
-                size: 'md',
-                color: 'currentColor',
-                className: h.channelIcon
+                size: "md",
+                color: "currentColor",
+                className: h.channelIcon,
             }),
             hasStarted: _,
             status: O,
-            onEdit: n
+            onEdit: n,
         })
     );
 }
@@ -223,8 +223,8 @@ function _(e) {
             (0, d.To)(t, !b);
         }, [t, b]),
         v = !(0, c.av)(m),
-        _ = 'none';
-    v && (x && !o ? (_ = 'good') : x || (_ = 'required'));
+        _ = "none";
+    v && (x && !o ? (_ = "good") : x || (_ = "required"));
     let O = p.intl.string(p.t.GMOwOD);
     x ? v || (O = p.intl.string(p.t.wHOoyM)) : (O = p.intl.string(p.t.wXFbgY));
     let y = null;
@@ -235,20 +235,20 @@ function _(e) {
                 className: h.inlineSwitch,
                 checked: b,
                 onChange: j,
-                disabled: !x
+                disabled: !x,
             })),
         (0, r.jsx)(f, {
             title: p.intl.string(p.t.mRHqsr),
             description: O,
             icon: (0, r.jsx)(a.Vy8, {
-                size: 'md',
-                color: 'currentColor',
-                className: h.channelIcon
+                size: "md",
+                color: "currentColor",
+                className: h.channelIcon,
             }),
             hasStarted: v,
             status: _,
             onEdit: n,
-            extra: y
+            extra: y,
         })
     );
 }

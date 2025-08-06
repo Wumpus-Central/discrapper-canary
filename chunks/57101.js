@@ -7,5 +7,5 @@ function o(e) {
 }
 let a = (0, r.memoize)(o, (e) => {
     let { theme: t, layoutType: n } = e;
-    return ''.concat(t, ':').concat(n);
+    return "".concat(t, ":").concat(n);
 });

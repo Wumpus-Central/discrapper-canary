@@ -11,15 +11,15 @@ function s(e) {
         message: t,
         channel: n,
         compact: s,
-        isInteractionUserBlocked: l
+        isInteractionUserBlocked: l,
     });
 }
 function l(e, t, n) {
-    return null != e.interaction && '' !== e.interaction.displayName
+    return null != e.interaction && "" !== e.interaction.displayName
         ? (0, r.jsx)(s, {
               message: e,
               channel: t,
-              compact: n
+              compact: n,
           })
         : null;
 }

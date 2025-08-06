@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     IO: () => d,
     h3: () => u,
     k1: () => a,
-    tU: () => c
+    tU: () => c,
 }),
-    n(388685));
+    n(388685);
 var r = n(709054),
     i = n(355298),
     o = n(333984);
@@ -14,7 +14,7 @@ function a(e) {
         s(e).filter((e) => {
             let [, r] = e;
             return !t.isMessageRequest(r.id) && !n.isSpam(r.id);
-        })
+        }),
     );
 }
 function s(e) {

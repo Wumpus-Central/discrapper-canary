@@ -14,34 +14,44 @@ var r = n(214788),
                             c = r.getChildKeys(),
                             u = r.getParentKey(),
                             d = i();
-                        if (((n[a] = d), s && (e.get(s) ? e.setIn([s, 'prevSibling'], d) : e.setIn([a, 'nextSibling'], null)), l && (e.get(l) ? e.setIn([l, 'nextSibling'], d) : e.setIn([a, 'prevSibling'], null)), u && e.get(u))) {
+                        if (
+                            ((n[a] = d),
+                            s && (e.get(s) ? e.setIn([s, "prevSibling"], d) : e.setIn([a, "nextSibling"], null)),
+                            l && (e.get(l) ? e.setIn([l, "nextSibling"], d) : e.setIn([a, "prevSibling"], null)),
+                            u && e.get(u))
+                        ) {
                             var f = e.get(u).getChildKeys();
-                            e.setIn([u, 'children'], f.set(f.indexOf(r.getKey()), d));
-                        } else (e.setIn([a, 'parent'], null), t && (e.setIn([t.getKey(), 'nextSibling'], d), e.setIn([a, 'prevSibling'], n[t.getKey()])), (t = e.get(a)));
+                            e.setIn([u, "children"], f.set(f.indexOf(r.getKey()), d));
+                        } else
+                            e.setIn([a, "parent"], null),
+                                t &&
+                                    (e.setIn([t.getKey(), "nextSibling"], d),
+                                    e.setIn([a, "prevSibling"], n[t.getKey()])),
+                                (t = e.get(a));
                         c.forEach(function (t) {
                             e.get(t)
-                                ? e.setIn([t, 'parent'], d)
+                                ? e.setIn([t, "parent"], d)
                                 : e.setIn(
-                                      [a, 'children'],
+                                      [a, "children"],
                                       r.getChildKeys().filter(function (e) {
                                           return e !== t;
-                                      })
+                                      }),
                                   );
                         });
                     });
                 })
                 .toArray()
                 .map(function (e) {
-                    return [n[e.getKey()], e.set('key', n[e.getKey()])];
-                })
+                    return [n[e.getKey()], e.set("key", n[e.getKey()])];
+                }),
         );
     },
     s = function (e) {
         return o(
             e.toArray().map(function (e) {
                 var t = i();
-                return [t, e.set('key', t)];
-            })
+                return [t, e.set("key", t)];
+            }),
         );
     };
 e.exports = function (e) {

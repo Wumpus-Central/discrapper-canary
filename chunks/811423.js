@@ -13,17 +13,17 @@ function c(e, t) {
         ? null
         : (0, r.jsx)(o.kSQ, {
               children: (0, r.jsx)(o.sNh, {
-                  id: 'report-app',
-                  color: 'danger',
+                  id: "report-app",
+                  color: "danger",
                   label: l.intl.string(l.t.NgA5vr),
                   action: () =>
                       (0, a.uu)({
                           application: e,
-                          entrypoint: 'activity_ui_channel_call',
+                          entrypoint: "activity_ui_channel_call",
                           contextualGuildId: null != c ? c : void 0,
-                          contextualChannelId: null == n ? void 0 : n.id
+                          contextualChannelId: null == n ? void 0 : n.id,
                       }),
-                  icon: o.U65
-              })
+                  icon: o.U65,
+              }),
           });
 }

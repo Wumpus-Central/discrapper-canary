@@ -1,27 +1,27 @@
 n.d(t, {
     iN: () => i,
-    oV: () => o
+    oV: () => o,
 });
 var r = n(846027);
 let i = {
-        binds: ['mod+shift+m'],
+        binds: ["mod+shift+m"],
         comboKeysBindGlobal: !0,
         action: () => (
             r.Z.toggleSelfMute({
                 usedKeybind: !0,
-                location: 'Default Keybind'
+                location: "Default Keybind",
             }),
             !1
-        )
+        ),
     },
     o = {
-        binds: ['mod+shift+d'],
+        binds: ["mod+shift+d"],
         comboKeysBindGlobal: !0,
         action: () => (
             r.Z.toggleSelfDeaf({
                 usedKeybind: !0,
-                location: 'Default Keybind'
+                location: "Default Keybind",
             }),
             !1
-        )
+        ),
     };

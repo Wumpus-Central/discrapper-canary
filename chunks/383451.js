@@ -1,21 +1,21 @@
 n.d(t, {
     H: () => l,
-    f: () => a
+    f: () => a,
 });
 var i = n(818083),
     r = n(984134);
 let s = (0, i.B)({
-    kind: 'user',
-    id: '2025-05_push_to_talk_latching',
-    label: 'Push to Talk Latching',
+    kind: "user",
+    id: "2025-05_push_to_talk_latching",
+    label: "Push to Talk Latching",
     defaultConfig: { enableLatching: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Enable latching feature',
-            config: { enableLatching: !0 }
-        }
-    ]
+            label: "Enable latching feature",
+            config: { enableLatching: !0 },
+        },
+    ],
 });
 function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -24,8 +24,8 @@ function a(e) {
         { location: t },
         {
             disable: i,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     );
 }
 function l(e) {
@@ -35,7 +35,7 @@ function l(e) {
         { location: t },
         {
             disable: i,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     );
 }

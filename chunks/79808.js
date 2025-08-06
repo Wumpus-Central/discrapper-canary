@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var i = n(255367),
     o = n(73800),
     l = n(120356),
@@ -26,28 +26,28 @@ function m(e) {
                     N(Math.max(p - 1, 0));
                 },
                 pushPanel(e) {
-                    (j([...x.slice(0, p + 1), e]), N(p + 1));
-                }
+                    j([...x.slice(0, p + 1), e]), N(p + 1);
+                },
             }),
-            [p, x, v]
+            [p, x, v],
         );
     return (0, i.jsx)(d.j.Provider, {
         value: C,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: a()(f.container, { [f.mobile]: r.tq }),
             children: [
                 (0, i.jsx)(u.d, { onClose: l }),
                 (0, i.jsx)(c.P, {
                     root: t,
                     header: m,
-                    footer: b
+                    footer: b,
                 }),
                 (0, i.jsx)(s.Z, {
                     onClose: l,
                     setShowNavigationMobile: g,
-                    setting: x[p]
-                })
-            ]
-        })
+                    setting: x[p],
+                }),
+            ],
+        }),
     });
 }

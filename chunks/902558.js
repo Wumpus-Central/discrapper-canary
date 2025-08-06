@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(268146),
     i = n(46973),
     o = n(147913),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,7 +20,14 @@ function c(e, t, n) {
 }
 let u = new Set();
 function d() {
-    for (let e of [r.X4.HasRTCConnection, r.X4.IsSendingVideo, r.X4.IsSendingStream, r.X4.IsReceivingVideo, r.X4.IsReceivingStream]) s.ZP.setCrashInformation(e, 0);
+    for (let e of [
+        r.X4.HasRTCConnection,
+        r.X4.IsSendingVideo,
+        r.X4.IsSendingStream,
+        r.X4.IsReceivingVideo,
+        r.X4.IsReceivingStream,
+    ])
+        s.ZP.setCrashInformation(e, 0);
 }
 function f(e) {
     switch (e) {
@@ -36,13 +43,13 @@ function _(e) {
 }
 function p(e) {
     var t;
-    let n = (null != (t = e.channelId) ? t : 'unknown') + e.context;
+    let n = (null != (t = e.channelId) ? t : "unknown") + e.context;
     switch (e.state) {
         case l.hes.RTC_CONNECTED:
-            (u.add(n), s.ZP.setCrashInformation(r.X4.HasRTCConnection, 1));
+            u.add(n), s.ZP.setCrashInformation(r.X4.HasRTCConnection, 1);
             break;
         case l.hes.DISCONNECTED:
-            (s.ZP.setCrashInformation(f(e.context), null), u.delete(n), 0 === u.size && d());
+            s.ZP.setCrashInformation(f(e.context), null), u.delete(n), 0 === u.size && d();
     }
 }
 function h(e) {
@@ -60,12 +67,12 @@ function h(e) {
 }
 class m extends o.Z {
     constructor(...e) {
-        (super(...e),
-            c(this, 'actions', {
+        super(...e),
+            c(this, "actions", {
                 RTC_CONNECTION_STATE: p,
                 RTC_CONNECTION_VIDEO: h,
-                MEDIA_SESSION_JOINED: _
-            }));
+                MEDIA_SESSION_JOINED: _,
+            });
     }
 }
 let g = new m();

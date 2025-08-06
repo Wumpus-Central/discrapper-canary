@@ -24,40 +24,40 @@ function h(e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
                                   i = Object.keys(n);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (i = i.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   i.forEach(function (t) {
                                       var i;
-                                      ((i = n[t]),
+                                      (i = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: i,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = i));
-                                  }));
+                                              : (e[t] = i);
+                                  });
                           }
                           return e;
                       })({}, n)),
                       (c = c =
                           {
                               onConfirm: () => {
-                                  (l.Z.setUseSystemScreensharePicker(e), o.Z.app.relaunch());
+                                  l.Z.setUseSystemScreensharePicker(e), o.Z.app.relaunch();
                               },
                               confirmButtonColor: s.zx.Colors.BRAND,
-                              header: p.intl.string(p.t['9jf31N']),
-                              cancelText: p.intl.string(p.t['ETE/oK']),
+                              header: p.intl.string(p.t["9jf31N"]),
+                              cancelText: p.intl.string(p.t["ETE/oK"]),
                               confirmText: p.intl.string(p.t.BddRzc),
                               children: (0, i.jsx)(a.Text, {
-                                  variant: 'text-md/normal',
-                                  children: p.intl.string(p.t.uBd6JS)
-                              })
+                                  variant: "text-md/normal",
+                                  children: p.intl.string(p.t.uBd6JS),
+                              }),
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(c))
@@ -71,7 +71,7 @@ function h(e) {
                             })(Object(c)).forEach(function (e) {
                                 Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(c, e));
                             }),
-                      r)
+                      r),
                   );
               };
           })
@@ -84,13 +84,13 @@ function f(e) {
             experimentalSoundshare: s,
             supportsExperimentalSoundshare: o,
             supportsHookSoundshare: u,
-            useSystemScreensharePicker: f
+            useSystemScreensharePicker: f,
         } = (0, r.cj)([d.Z], () => ({
             videoHook: d.Z.getVideoHook(),
             experimentalSoundshare: d.Z.getExperimentalSoundshare(),
             supportsExperimentalSoundshare: d.Z.supportsExperimentalSoundshare(),
             supportsHookSoundshare: d.Z.supportsHookSoundshare(),
-            useSystemScreensharePicker: d.Z.getUseSystemScreensharePicker()
+            useSystemScreensharePicker: d.Z.getUseSystemScreensharePicker(),
         })),
         b = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -99,10 +99,10 @@ function f(e) {
                     children: (0, i.jsx)(a.j7V, {
                         value: n,
                         onChange: (e) => l.Z.setVideoHook(e),
-                        note: p.intl.string(p.t['Fj/xn5']),
+                        note: p.intl.string(p.t["Fj/xn5"]),
                         hideBorder: t,
-                        children: p.intl.string(p.t.GmWk2N)
-                    })
+                        children: p.intl.string(p.t.GmWk2N),
+                    }),
                 }),
                 o &&
                     u &&
@@ -112,8 +112,8 @@ function f(e) {
                             value: s,
                             onChange: (e) => l.Z.setExperimentalSoundshare(e),
                             hideBorder: t,
-                            children: p.intl.string(p.t['4I0qzc'])
-                        })
+                            children: p.intl.string(p.t["4I0qzc"]),
+                        }),
                     }),
                 (0, i.jsx)(c.F, {
                     setting: m.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_SYSTEM_PICKER,
@@ -121,10 +121,10 @@ function f(e) {
                         value: f,
                         onChange: h,
                         hideBorder: t,
-                        children: p.intl.string(p.t.ie1mgY)
-                    })
-                })
-            ]
+                        children: p.intl.string(p.t.ie1mgY),
+                    }),
+                }),
+            ],
         });
     return (0, i.jsx)(c.F, {
         setting: m.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
@@ -133,7 +133,7 @@ function f(e) {
             : (0, i.jsx)(a.hjN, {
                   className: g.marginBottom20,
                   title: p.intl.string(p.t.NMCIf3),
-                  children: b
-              })
+                  children: b,
+              }),
     });
 }

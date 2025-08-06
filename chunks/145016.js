@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,7 +24,7 @@ let c = {
         computeWeight: a.M$.original,
         lookupKey: (e) => e,
         maxSamples: 256,
-        numFrequentlyItems: 1 / 0
+        numFrequentlyItems: 1 / 0,
     },
     u = new a.ZP(c),
     d = new a.ZP(c),
@@ -43,13 +43,16 @@ function h(e) {
 }
 class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(s.Z), (null == e ? void 0 : e.inputDeviceFrecency) != null && u.overwriteHistory(e.inputDeviceFrecency), (null == e ? void 0 : e.outputDeviceFrecency) != null && d.overwriteHistory(e.outputDeviceFrecency), (null == e ? void 0 : e.videoDeviceFrecency) != null && f.overwriteHistory(e.videoDeviceFrecency));
+        this.waitFor(s.Z),
+            (null == e ? void 0 : e.inputDeviceFrecency) != null && u.overwriteHistory(e.inputDeviceFrecency),
+            (null == e ? void 0 : e.outputDeviceFrecency) != null && d.overwriteHistory(e.outputDeviceFrecency),
+            (null == e ? void 0 : e.videoDeviceFrecency) != null && f.overwriteHistory(e.videoDeviceFrecency);
     }
     getState() {
         return {
             inputDeviceFrecency: u.usageHistory,
             outputDeviceFrecency: d.usageHistory,
-            videoDeviceFrecency: f.usageHistory
+            videoDeviceFrecency: f.usageHistory,
         };
     }
     getInputDeviceIdsSortedByFrecency() {
@@ -62,9 +65,9 @@ class m extends (r = i.ZP.PersistedStore) {
         return f.frequently;
     }
 }
-(l(m, 'displayName', 'DeviceFrecencyStore'), l(m, 'persistKey', 'DeviceFrecencyStore'));
+l(m, "displayName", "DeviceFrecencyStore"), l(m, "persistKey", "DeviceFrecencyStore");
 let g = new m(o.Z, {
     AUDIO_SET_INPUT_DEVICE: _,
     AUDIO_SET_OUTPUT_DEVICE: p,
-    MEDIA_ENGINE_SET_VIDEO_DEVICE: h
+    MEDIA_ENGINE_SET_VIDEO_DEVICE: h,
 });

@@ -18,6 +18,6 @@ let s = o.memo(function (e) {
               className: r.category,
               title: d,
               titleClassName: r.categoryTitle,
-              children: s.map((e) => (0, i.jsx)(a.Z, { node: e }, e.key))
+              children: s.map((e) => (0, i.jsx)(a.Z, { node: e }, e.key)),
           });
 });

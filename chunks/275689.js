@@ -15,22 +15,22 @@ var r = a(394798),
     N = a(881243);
 class A {
     constructor(t = {}) {
-        ((this._traceId = t.traceId || (0, r.DM)()),
+        (this._traceId = t.traceId || (0, r.DM)()),
             (this._spanId = t.spanId || (0, r.DM)().substring(16)),
             (this._startTime = t.startTimestamp || (0, _.ph)()),
             (this._attributes = {}),
             this.setAttributes({
-                [l.S3]: 'manual',
+                [l.S3]: "manual",
                 [l.$J]: t.op,
-                ...t.attributes
+                ...t.attributes,
             }),
             (this._name = t.name),
             t.parentSpanId && (this._parentSpanId = t.parentSpanId),
-            'sampled' in t && (this._sampled = t.sampled),
+            "sampled" in t && (this._sampled = t.sampled),
             t.endTimestamp && (this._endTime = t.endTimestamp),
             (this._events = []),
             (this._isStandaloneSpan = t.isStandalone),
-            this._endTime && this._onSpanEnded());
+            this._endTime && this._onSpanEnded();
     }
     addLink(t) {
         return this;
@@ -44,23 +44,23 @@ class A {
         return {
             spanId: t,
             traceId: e,
-            traceFlags: a ? u.i0 : u.ve
+            traceFlags: a ? u.i0 : u.ve,
         };
     }
     setAttribute(t, e) {
-        return (void 0 === e ? delete this._attributes[t] : (this._attributes[t] = e), this);
+        return void 0 === e ? delete this._attributes[t] : (this._attributes[t] = e), this;
     }
     setAttributes(t) {
-        return (Object.keys(t).forEach((e) => this.setAttribute(e, t[e])), this);
+        return Object.keys(t).forEach((e) => this.setAttribute(e, t[e])), this;
     }
     updateStartTime(t) {
         this._startTime = (0, u.$k)(t);
     }
     setStatus(t) {
-        return ((this._status = t), this);
+        return (this._status = t), this;
     }
     updateName(t) {
-        return ((this._name = t), this);
+        return (this._name = t), this;
     }
     end(t) {
         this._endTime || ((this._endTime = (0, u.$k)(t)), (0, R.w)(this), this._onSpanEnded());
@@ -82,53 +82,58 @@ class A {
             exclusive_time: this._attributes[l.JQ],
             measurements: (0, d.l)(this._events),
             is_segment: (this._isStandaloneSpan && (0, u.Gx)(this) === this) || void 0,
-            segment_id: this._isStandaloneSpan ? (0, u.Gx)(this).spanContext().spanId : void 0
+            segment_id: this._isStandaloneSpan ? (0, u.Gx)(this).spanContext().spanId : void 0,
         });
     }
     isRecording() {
         return !this._endTime && !!this._sampled;
     }
     addEvent(t, e, a) {
-        c.X && o.kg.log('[Tracing] Adding an event to span:', t);
+        c.X && o.kg.log("[Tracing] Adding an event to span:", t);
         let r = f(e) ? e : a || (0, _.ph)(),
             n = f(e) ? {} : e || {},
             i = {
                 name: t,
                 time: (0, u.$k)(r),
-                attributes: n
+                attributes: n,
             };
-        return (this._events.push(i), this);
+        return this._events.push(i), this;
     }
     isStandaloneSpan() {
         return !!this._isStandaloneSpan;
     }
     _onSpanEnded() {
         let t = (0, i.s3)();
-        if ((t && t.emit('spanEnd', this), !(this._isStandaloneSpan || this === (0, u.Gx)(this)))) return;
+        if ((t && t.emit("spanEnd", this), !(this._isStandaloneSpan || this === (0, u.Gx)(this)))) return;
         if (this._isStandaloneSpan)
             return void (this._sampled
                 ? (function (t) {
                       let e = (0, i.s3)();
                       if (!e) return;
                       let a = t[1];
-                      if (!a || 0 === a.length) return e.recordDroppedEvent('before_send', 'span');
+                      if (!a || 0 === a.length) return e.recordDroppedEvent("before_send", "span");
                       let r = e.getTransport();
                       r &&
                           r.send(t).then(null, (t) => {
-                              c.X && o.kg.error('Error while sending span:', t);
+                              c.X && o.kg.error("Error while sending span:", t);
                           });
                   })((0, E.uE)([this], t))
-                : (c.X && o.kg.log('[Tracing] Discarding standalone span because its trace was not chosen to be sampled.'), t && t.recordDroppedEvent('sample_rate', 'span')));
+                : (c.X &&
+                      o.kg.log("[Tracing] Discarding standalone span because its trace was not chosen to be sampled."),
+                  t && t.recordDroppedEvent("sample_rate", "span")));
         let e = this._convertSpanToTransaction();
         e && ((0, N.I1)(this).scope || (0, i.nZ)()).captureEvent(e);
     }
     _convertSpanToTransaction() {
         if (!T((0, u.XU)(this))) return;
-        this._name || (c.X && o.kg.warn('Transaction has no name, falling back to `<unlabeled transaction>`.'), (this._name = '<unlabeled transaction>'));
+        this._name ||
+            (c.X && o.kg.warn("Transaction has no name, falling back to `<unlabeled transaction>`."),
+            (this._name = "<unlabeled transaction>"));
         let { scope: t, isolationScope: e } = (0, N.I1)(this),
             a = (t || (0, i.nZ)()).getClient() || (0, i.s3)();
         if (!0 !== this._sampled) {
-            (c.X && o.kg.log('[Tracing] Discarding transaction because its trace was not chosen to be sampled.'), a && a.recordDroppedEvent('sample_rate', 'transaction'));
+            c.X && o.kg.log("[Tracing] Discarding transaction because its trace was not chosen to be sampled."),
+                a && a.recordDroppedEvent("sample_rate", "transaction");
             return;
         }
         let r = (0, u.Dp)(this)
@@ -145,21 +150,28 @@ class A {
                 start_timestamp: this._startTime,
                 timestamp: this._endTime,
                 transaction: this._name,
-                type: 'transaction',
+                type: "transaction",
                 sdkProcessingMetadata: {
                     capturedSpanScope: t,
                     capturedSpanIsolationScope: e,
-                    ...(0, n.Jr)({ dynamicSamplingContext: (0, I.jC)(this) })
+                    ...(0, n.Jr)({ dynamicSamplingContext: (0, I.jC)(this) }),
                 },
                 _metrics_summary: (0, s.y)(this),
-                ...(_ && { transaction_info: { source: _ } })
+                ...(_ && { transaction_info: { source: _ } }),
             },
             R = (0, d.l)(this._events);
-        return (R && Object.keys(R).length && (c.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (E.measurements = R)), E);
+        return (
+            R &&
+                Object.keys(R).length &&
+                (c.X &&
+                    o.kg.log("[Measurements] Adding measurements to transaction event", JSON.stringify(R, void 0, 2)),
+                (E.measurements = R)),
+            E
+        );
     }
 }
 function f(t) {
-    return (t && 'number' == typeof t) || t instanceof Date || Array.isArray(t);
+    return (t && "number" == typeof t) || t instanceof Date || Array.isArray(t);
 }
 function T(t) {
     return !!t.start_timestamp && !!t.timestamp && !!t.span_id && !!t.trace_id;

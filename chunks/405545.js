@@ -7,7 +7,18 @@ var i = n(120356),
     s = n(137158),
     o = n(664305);
 let c = function (e) {
-    let { formField: t, index: n, isDragEnabled: i, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: g, actionsLocation: p, fieldStyle: h } = e,
+    let {
+            formField: t,
+            index: n,
+            isDragEnabled: i,
+            isDropHovered: c,
+            onDrop: d,
+            onEdit: u,
+            onRemove: m,
+            canRemove: g,
+            actionsLocation: p,
+            fieldStyle: h,
+        } = e,
         { label: f } = t;
     return (0, r.jsx)(s.Z, {
         field: t,
@@ -25,7 +36,7 @@ let c = function (e) {
             field: t,
             value: void 0,
             radioItemClassName: l()(o.fieldBackground, o.multipleChoiceFixedTextColor),
-            disabled: !1
-        })
+            disabled: !1,
+        }),
     });
 };

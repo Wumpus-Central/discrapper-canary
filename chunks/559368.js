@@ -11,13 +11,13 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let c = ['pct_retained', 'new_members', 'visitors', 'communicators'],
+let c = ["pct_retained", "new_members", "visitors", "communicators"],
     d = {},
     u = null;
 function m(e) {
@@ -27,29 +27,29 @@ function m(e) {
         i = {},
         a = n[0],
         s = n[1];
-    (null != a &&
+    null != a &&
         c.forEach((e) => {
             if (null != a[e]) {
                 let t = l()(e);
-                (null != s && 0 !== s[e] && (r[''.concat(t, 'Change')] = ((a[e] - s[e]) * 100) / s[e]), (i[t] = a[e]));
+                null != s && 0 !== s[e] && (r["".concat(t, "Change")] = ((a[e] - s[e]) * 100) / s[e]), (i[t] = a[e]);
             }
         }),
         (d[t] = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         o(e, t, n[t]);
-                    }));
+                    });
             }
             return e;
-        })({}, i, r, d[t])));
+        })({}, i, r, d[t]));
 }
 function g(e) {
     let { error: t } = e;
@@ -63,12 +63,12 @@ class p extends (r = a.ZP.Store) {
         return u;
     }
 }
-o(p, 'displayName', 'GuildSettingsAnalyticsStore');
+o(p, "displayName", "GuildSettingsAnalyticsStore");
 let h = new p(s.Z, {
     GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: m,
     GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: m,
     GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: m,
     GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: g,
     GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: g,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: g
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: g,
 });

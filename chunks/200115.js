@@ -31,55 +31,58 @@ function p(e) {
                       },
                       style: { marginBottom: 0 },
                       note: m.intl.string(m.t.IngcUl),
-                      children: m.intl.format(m.t['J+7D9P'], { name: p.name })
+                      children: m.intl.format(m.t["J+7D9P"], { name: p.name }),
                   }),
                   v &&
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: x.mutedConfig,
                           children: [
-                              (0, i.jsxs)('div', {
+                              (0, i.jsxs)("div", {
                                   children: [
                                       (0, i.jsx)(a.vwX, {
-                                          tag: 'h3',
-                                          children: m.intl.string(m.t.Ztu2Ym)
+                                          tag: "h3",
+                                          children: m.intl.string(m.t.Ztu2Ym),
                                       }),
                                       (0, i.jsx)(a.Text, {
-                                          variant: 'text-xs/normal',
-                                          color: 'text-muted',
+                                          variant: "text-xs/normal",
+                                          color: "text-muted",
                                           children:
                                               null == (n = j) || null == n.end_time
                                                   ? null
                                                   : m.intl.formatToPlainString(m.t.j7h4AA, {
-                                                        endTime: new Date(n.end_time).toLocaleString(m.intl.currentLocale, {
-                                                            month: 'numeric',
-                                                            day: 'numeric',
-                                                            hour: 'numeric',
-                                                            minute: '2-digit'
-                                                        })
-                                                    })
-                                      })
-                                  ]
+                                                        endTime: new Date(n.end_time).toLocaleString(
+                                                            m.intl.currentLocale,
+                                                            {
+                                                                month: "numeric",
+                                                                day: "numeric",
+                                                                hour: "numeric",
+                                                                minute: "2-digit",
+                                                            },
+                                                        ),
+                                                    }),
+                                      }),
+                                  ],
                               }),
                               (0, i.jsx)(a.q4e, {
                                   onChange: (e) => {
-                                      let t = e > 0 ? l()().add(e, 'second').toISOString() : null;
+                                      let t = e > 0 ? l()().add(e, "second").toISOString() : null;
                                       o.Z.updateGuildNotificationSettings(
                                           s,
                                           {
                                               mute_config: {
                                                   selected_time_window: e,
-                                                  end_time: t
+                                                  end_time: t,
                                               },
-                                              muted: !0
+                                              muted: !0,
                                           },
-                                          u.ZB.Muted
+                                          u.ZB.Muted,
                                       );
                                   },
                                   options: (0, h.W9)(),
-                                  value: null != (t = null == j ? void 0 : j.selected_time_window) ? t : g.Oe.ALWAYS
-                              })
-                          ]
-                      })
-              ]
+                                  value: null != (t = null == j ? void 0 : j.selected_time_window) ? t : g.Oe.ALWAYS,
+                              }),
+                          ],
+                      }),
+              ],
           });
 }

@@ -16,41 +16,41 @@ function m(e) {
             let e = (0, c.Ib)(t);
             return {
                 name: e.getName(),
-                header: e.getHeaderSrc()
+                header: e.getHeaderSrc(),
             };
         }, [t]);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: u.container,
         children: [
             (0, i.jsx)(a.P3F, {
                 onClick: () => {
-                    (n(), p.startAnimation(!1));
+                    n(), p.startAnimation(!1);
                 },
                 className: u.button,
-                'aria-label': d.intl.string(d.t['44yJxs']),
-                children: p.render()
+                "aria-label": d.intl.string(d.t["44yJxs"]),
+                children: p.render(),
             }),
             (0, i.jsxs)(a.P3F, {
                 onClick: () => {
-                    (n(), p.startAnimation(!1));
+                    n(), p.startAnimation(!1);
                 },
-                'aria-label': ''.concat(g, ': ').concat(d.intl.string(d.t['44yJxs'])),
+                "aria-label": "".concat(g, ": ").concat(d.intl.string(d.t["44yJxs"])),
                 className: u.select,
                 children: [
-                    (0, i.jsx)('img', {
-                        alt: '',
-                        'aria-hidden': !0,
+                    (0, i.jsx)("img", {
+                        alt: "",
+                        "aria-hidden": !0,
                         src: h,
-                        className: u.presetImage
+                        className: u.presetImage,
                     }),
                     (0, i.jsx)(a.Text, {
                         className: u.presetLabel,
-                        variant: 'text-sm/bold',
-                        color: 'always-white',
-                        children: g
-                    })
-                ]
-            })
-        ]
+                        variant: "text-sm/bold",
+                        color: "always-white",
+                        children: g,
+                    }),
+                ],
+            }),
+        ],
     });
 }

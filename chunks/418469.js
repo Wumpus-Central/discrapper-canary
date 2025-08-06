@@ -15,7 +15,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,15 +49,15 @@ function _(e, t, d) {
                 media_session_id: c.Z.getMediaSessionId(m),
                 rtc_connection_id: c.Z.getRtcConnectionId(m),
                 stream_region: c.Z.getRegion(m),
-                max_viewers: c.Z.getMaxViewers(m)
+                max_viewers: c.Z.getMaxViewers(m),
             },
-            g
+            g,
         ),
         b = () => {
-            (null == d || d(),
+            null == d || d(),
                 null != e &&
                     (0, o.ZDy)(async () => {
-                        let { default: t } = await n.e('18912').then(n.bind(n, 340140));
+                        let { default: t } = await n.e("18912").then(n.bind(n, 340140));
                         return (n) =>
                             (0, r.jsx)(
                                 t,
@@ -66,18 +66,18 @@ function _(e, t, d) {
                                         stream: e,
                                         streamApplication: p,
                                         isStreamer: h === (null == e ? void 0 : e.ownerId),
-                                        analyticsData: E
+                                        analyticsData: E,
                                     },
-                                    n
-                                )
+                                    n,
+                                ),
                             );
-                    }));
+                    });
         };
     return (0, r.jsx)(o.sNh, {
-        id: 'report-stream-problem',
-        color: 'danger',
+        id: "report-stream-problem",
+        color: "danger",
         label: u.intl.string(u.t.sdnCxc),
         action: b,
-        icon: o.Mgn
+        icon: o.Mgn,
     });
 }

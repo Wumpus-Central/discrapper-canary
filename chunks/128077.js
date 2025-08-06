@@ -1,9 +1,9 @@
-(r.d(t, { f: () => i }), r(388685));
+r.d(t, { f: () => i }), r(388685);
 var n = r(73800),
     a = r(751648),
     l = r(388032);
 function i() {
-    let [e, t] = (0, n.useState)(''),
+    let [e, t] = (0, n.useState)(""),
         [r, i] = (0, n.useState)([]),
         [o, s] = (0, n.useState)(null),
         [c, u] = (0, n.useState)(!1);
@@ -11,10 +11,10 @@ function i() {
         (0, n.useEffect)(() => {
             if (null != o)
                 return void t(
-                    l.intl.format(l.t['7gHWra'], {
-                        amount: '1 orb',
-                        errorMessage: o.message
-                    })
+                    l.intl.format(l.t["7gHWra"], {
+                        amount: "1 orb",
+                        errorMessage: o.message,
+                    }),
                 );
             if (null != r && r.length > 0) {
                 let e = r.map((e) => {
@@ -23,17 +23,17 @@ function i() {
                 });
                 t(
                     l.intl.format(l.t.JxNFam, {
-                        amountDescription: '1 orb',
-                        redeemedItemDescription: ''
-                            .concat(1 === e.length ? 'SKU' : 'SKUs', ': ')
-                            .concat(e.join(', '), '. Entitlement ')
-                            .concat(1 === r.length ? 'ID' : 'IDs', ': ')
-                            .concat(r.map((e) => e.id).join(', '))
-                    })
+                        amountDescription: "1 orb",
+                        redeemedItemDescription: ""
+                            .concat(1 === e.length ? "SKU" : "SKUs", ": ")
+                            .concat(e.join(", "), ". Entitlement ")
+                            .concat(1 === r.length ? "ID" : "IDs", ": ")
+                            .concat(r.map((e) => e.id).join(", ")),
+                    }),
                 );
                 return;
             }
-            t('');
+            t("");
         }, [r, o]),
         {
             entitlements: r,
@@ -45,16 +45,16 @@ function i() {
                     skuId: e,
                     loadId: t,
                     onRedeemStart: () => {
-                        (u(!0), s(null));
+                        u(!0), s(null);
                     },
                     onRedeemSucceed: (e) => {
-                        (i(e), u(!1), null == r || r(e));
+                        i(e), u(!1), null == r || r(e);
                     },
                     onRedeemFail: (e) => {
-                        (s(e), u(!1));
-                    }
+                        s(e), u(!1);
+                    },
                 });
-            }
+            },
         }
     );
 }

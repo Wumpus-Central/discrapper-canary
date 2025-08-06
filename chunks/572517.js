@@ -24,23 +24,23 @@ function _() {
                 ? void 0
                 : e.call(m, {
                       isDarkMode: _,
-                      isAndroid: !1
+                      isAndroid: !1,
                   }),
         j = (0, C.Tl)(h);
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: p.promotionalFooterBanner,
         style: j,
         children: [
             (0, n.jsx)(u.Z, {
                 claimableRewards: x,
                 maxRewardImageSrc: m.getImageUrl(_, r),
-                size: o.EFr.SIZE_40
+                size: o.EFr.SIZE_40,
             }),
             (0, n.jsx)(o.Text, {
-                variant: 'text-md/medium',
+                variant: "text-md/medium",
                 className: p.bannerText,
-                children: m.desktopBannerText(x.length)
-            })
-        ]
+                children: m.desktopBannerText(x.length),
+            }),
+        ],
     });
 }

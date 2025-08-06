@@ -1,131 +1,131 @@
 var a = t(705723);
-(t(864733)(r, '__esModule', { value: !0 }),
+t(864733)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = new (a(t(485749)).default)([
-        ['aria-activedescendant', { type: 'id' }],
-        ['aria-atomic', { type: 'boolean' }],
+        ["aria-activedescendant", { type: "id" }],
+        ["aria-atomic", { type: "boolean" }],
         [
-            'aria-autocomplete',
+            "aria-autocomplete",
             {
-                type: 'token',
-                values: ['inline', 'list', 'both', 'none']
-            }
+                type: "token",
+                values: ["inline", "list", "both", "none"],
+            },
         ],
-        ['aria-busy', { type: 'boolean' }],
-        ['aria-checked', { type: 'tristate' }],
-        ['aria-colcount', { type: 'integer' }],
-        ['aria-colindex', { type: 'integer' }],
-        ['aria-colspan', { type: 'integer' }],
-        ['aria-controls', { type: 'idlist' }],
+        ["aria-busy", { type: "boolean" }],
+        ["aria-checked", { type: "tristate" }],
+        ["aria-colcount", { type: "integer" }],
+        ["aria-colindex", { type: "integer" }],
+        ["aria-colspan", { type: "integer" }],
+        ["aria-controls", { type: "idlist" }],
         [
-            'aria-current',
+            "aria-current",
             {
-                type: 'token',
-                values: ['page', 'step', 'location', 'date', 'time', !0, !1]
-            }
+                type: "token",
+                values: ["page", "step", "location", "date", "time", !0, !1],
+            },
         ],
-        ['aria-describedby', { type: 'idlist' }],
-        ['aria-details', { type: 'id' }],
-        ['aria-disabled', { type: 'boolean' }],
+        ["aria-describedby", { type: "idlist" }],
+        ["aria-details", { type: "id" }],
+        ["aria-disabled", { type: "boolean" }],
         [
-            'aria-dropeffect',
+            "aria-dropeffect",
             {
-                type: 'tokenlist',
-                values: ['copy', 'execute', 'link', 'move', 'none', 'popup']
-            }
+                type: "tokenlist",
+                values: ["copy", "execute", "link", "move", "none", "popup"],
+            },
         ],
-        ['aria-errormessage', { type: 'id' }],
+        ["aria-errormessage", { type: "id" }],
         [
-            'aria-expanded',
+            "aria-expanded",
             {
-                type: 'boolean',
-                allowundefined: !0
-            }
+                type: "boolean",
+                allowundefined: !0,
+            },
         ],
-        ['aria-flowto', { type: 'idlist' }],
+        ["aria-flowto", { type: "idlist" }],
         [
-            'aria-grabbed',
+            "aria-grabbed",
             {
-                type: 'boolean',
-                allowundefined: !0
-            }
-        ],
-        [
-            'aria-haspopup',
-            {
-                type: 'token',
-                values: [!1, !0, 'menu', 'listbox', 'tree', 'grid', 'dialog']
-            }
+                type: "boolean",
+                allowundefined: !0,
+            },
         ],
         [
-            'aria-hidden',
+            "aria-haspopup",
             {
-                type: 'boolean',
-                allowundefined: !0
-            }
+                type: "token",
+                values: [!1, !0, "menu", "listbox", "tree", "grid", "dialog"],
+            },
         ],
         [
-            'aria-invalid',
+            "aria-hidden",
             {
-                type: 'token',
-                values: ['grammar', !1, 'spelling', !0]
-            }
+                type: "boolean",
+                allowundefined: !0,
+            },
         ],
-        ['aria-keyshortcuts', { type: 'string' }],
-        ['aria-label', { type: 'string' }],
-        ['aria-labelledby', { type: 'idlist' }],
-        ['aria-level', { type: 'integer' }],
         [
-            'aria-live',
+            "aria-invalid",
             {
-                type: 'token',
-                values: ['assertive', 'off', 'polite']
-            }
+                type: "token",
+                values: ["grammar", !1, "spelling", !0],
+            },
         ],
-        ['aria-modal', { type: 'boolean' }],
-        ['aria-multiline', { type: 'boolean' }],
-        ['aria-multiselectable', { type: 'boolean' }],
+        ["aria-keyshortcuts", { type: "string" }],
+        ["aria-label", { type: "string" }],
+        ["aria-labelledby", { type: "idlist" }],
+        ["aria-level", { type: "integer" }],
         [
-            'aria-orientation',
+            "aria-live",
             {
-                type: 'token',
-                values: ['vertical', 'undefined', 'horizontal']
-            }
+                type: "token",
+                values: ["assertive", "off", "polite"],
+            },
         ],
-        ['aria-owns', { type: 'idlist' }],
-        ['aria-placeholder', { type: 'string' }],
-        ['aria-posinset', { type: 'integer' }],
-        ['aria-pressed', { type: 'tristate' }],
-        ['aria-readonly', { type: 'boolean' }],
+        ["aria-modal", { type: "boolean" }],
+        ["aria-multiline", { type: "boolean" }],
+        ["aria-multiselectable", { type: "boolean" }],
         [
-            'aria-relevant',
+            "aria-orientation",
             {
-                type: 'tokenlist',
-                values: ['additions', 'all', 'removals', 'text']
-            }
+                type: "token",
+                values: ["vertical", "undefined", "horizontal"],
+            },
         ],
-        ['aria-required', { type: 'boolean' }],
-        ['aria-roledescription', { type: 'string' }],
-        ['aria-rowcount', { type: 'integer' }],
-        ['aria-rowindex', { type: 'integer' }],
-        ['aria-rowspan', { type: 'integer' }],
+        ["aria-owns", { type: "idlist" }],
+        ["aria-placeholder", { type: "string" }],
+        ["aria-posinset", { type: "integer" }],
+        ["aria-pressed", { type: "tristate" }],
+        ["aria-readonly", { type: "boolean" }],
         [
-            'aria-selected',
+            "aria-relevant",
             {
-                type: 'boolean',
-                allowundefined: !0
-            }
+                type: "tokenlist",
+                values: ["additions", "all", "removals", "text"],
+            },
         ],
-        ['aria-setsize', { type: 'integer' }],
+        ["aria-required", { type: "boolean" }],
+        ["aria-roledescription", { type: "string" }],
+        ["aria-rowcount", { type: "integer" }],
+        ["aria-rowindex", { type: "integer" }],
+        ["aria-rowspan", { type: "integer" }],
         [
-            'aria-sort',
+            "aria-selected",
             {
-                type: 'token',
-                values: ['ascending', 'descending', 'none', 'other']
-            }
+                type: "boolean",
+                allowundefined: !0,
+            },
         ],
-        ['aria-valuemax', { type: 'number' }],
-        ['aria-valuemin', { type: 'number' }],
-        ['aria-valuenow', { type: 'number' }],
-        ['aria-valuetext', { type: 'string' }]
-    ])));
+        ["aria-setsize", { type: "integer" }],
+        [
+            "aria-sort",
+            {
+                type: "token",
+                values: ["ascending", "descending", "none", "other"],
+            },
+        ],
+        ["aria-valuemax", { type: "number" }],
+        ["aria-valuemin", { type: "number" }],
+        ["aria-valuenow", { type: "number" }],
+        ["aria-valuetext", { type: "string" }],
+    ]));

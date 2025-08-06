@@ -5,7 +5,7 @@ function i(e, t) {
         type: r.TL,
         payload: {
             sourceClientOffset: t || null,
-            clientOffset: e || null
-        }
+            clientOffset: e || null,
+        },
     };
 }

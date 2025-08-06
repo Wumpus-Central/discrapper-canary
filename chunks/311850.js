@@ -10,9 +10,9 @@ function i(e) {
                   (t[n] = {
                       countryPrices: {
                           countryCode: i.country_prices.country_code,
-                          prices: i.country_prices.prices.map((e) => (0, r.kH)(e, !0))
+                          prices: i.country_prices.prices.map((e) => (0, r.kH)(e, !0)),
                       },
-                      paymentSourcePrices: {}
+                      paymentSourcePrices: {},
                   }),
                   t
               );

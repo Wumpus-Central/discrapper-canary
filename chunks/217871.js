@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685), n(358797));
+n.d(t, { Z: () => N }), n(388685), n(358797);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -28,25 +28,25 @@ let I = 1000,
             [u, f] = i.useState(!1);
         i.useEffect(() => {
             if (null == a ? void 0 : a.displayed) return;
-            (f(!1),
+            f(!1),
                 setImmediate(() => {
                     f((null != a ? (0, b.Eo)(a.combo) : 0) > 0);
-                }));
+                });
             let e = setTimeout(() => {
-                (f(!1), null != a && (0, m.ew)(a));
+                f(!1), null != a && (0, m.ew)(a);
             }, T);
             return () => clearTimeout(e);
         }, [a]);
-        let _ = null != a ? '100%' : '200%',
+        let _ = null != a ? "100%" : "200%",
             p = (0, c.q_F)(
                 {
                     opacity: +!!u,
-                    translateY: u ? '0' : _,
-                    pointerEvents: 'none',
+                    translateY: u ? "0" : _,
+                    pointerEvents: "none",
                     width: n,
-                    config: o ? s.config.stiff : s.config.slow
+                    config: o ? s.config.stiff : s.config.slow,
                 },
-                'animate-always'
+                "animate-always",
             );
         return (
             null != a &&
@@ -55,9 +55,9 @@ let I = 1000,
                 style: p,
                 children: (0, r.jsx)(c.Text, {
                     className: v.comboScore,
-                    variant: 'text-sm/bold',
-                    children: (0, b.Eo)(a.combo)
-                })
+                    variant: "text-sm/bold",
+                    children: (0, b.Eo)(a.combo),
+                }),
             })
         );
     }),
@@ -69,60 +69,60 @@ let I = 1000,
             children: [
                 (0, r.jsx)(c.Text, {
                     className: v.comboValue,
-                    variant: 'text-sm/bold',
-                    children: t
+                    variant: "text-sm/bold",
+                    children: t,
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: v.comboNameplate,
                     style: { color: u },
                     children: [
                         (0, r.jsx)(c.Text, {
                             className: v.comboMultiplier,
                             style: { color: u },
-                            variant: 'text-sm/bold',
-                            children: O.intl.format(O.t['6bgVlp'], { multiplier: n })
+                            variant: "text-sm/bold",
+                            children: O.intl.format(O.t["6bgVlp"], { multiplier: n }),
                         }),
                         s &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)('div', {
+                                    (0, r.jsx)("div", {
                                         className: a()(v.comboSquare, v.left),
-                                        style: { backgroundColor: u }
+                                        style: { backgroundColor: u },
                                     }),
-                                    (0, r.jsx)('div', {
+                                    (0, r.jsx)("div", {
                                         className: a()(v.comboSquare, v.right),
-                                        style: { backgroundColor: u }
-                                    })
-                                ]
+                                        style: { backgroundColor: u },
+                                    }),
+                                ],
                             }),
                         l &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)('div', {
+                                    (0, r.jsx)("div", {
                                         className: a()(v.confettiIcon, v.left),
                                         children: (0, r.jsx)(h.Z, {
                                             width: 24,
-                                            height: 24
-                                        })
+                                            height: 24,
+                                        }),
                                     }),
-                                    (0, r.jsx)('div', {
+                                    (0, r.jsx)("div", {
                                         className: a()(v.confettiIcon, v.right),
                                         children: (0, r.jsx)(h.Z, {
                                             width: 24,
-                                            height: 24
-                                        })
-                                    })
-                                ]
+                                            height: 24,
+                                        }),
+                                    }),
+                                ],
                             }),
                         1 === n &&
                             (0, r.jsx)(c.Text, {
                                 className: v.tip,
-                                variant: 'text-sm/bold',
-                                children: O.intl.string(O.t.b5Cpoa)
-                            })
-                    ]
-                })
-            ]
+                                variant: "text-sm/bold",
+                                children: O.intl.string(O.t.b5Cpoa),
+                            }),
+                    ],
+                }),
+            ],
         });
     }),
     N = i.memo(function (e) {
@@ -142,9 +142,9 @@ let I = 1000,
         }, [T]);
         let N = (0, c.q_F)({
                 opacity: +!!m,
-                transform: m ? 'translateY(0)' : 'translateY(100%)',
-                pointerEvents: 'none',
-                config: s.config.stiff
+                transform: m ? "translateY(0)" : "translateY(100%)",
+                pointerEvents: "none",
+                config: s.config.stiff,
             }),
             C = i.useMemo(
                 () =>
@@ -152,9 +152,9 @@ let I = 1000,
                         ? O
                         : {
                               value: 0,
-                              multiplier: 1
+                              multiplier: 1,
                           },
-                [O]
+                [O],
             ),
             R = i.useRef(C);
         i.useEffect(() => {
@@ -163,15 +163,15 @@ let I = 1000,
         let { multiplier: P, value: w } = i.useMemo(
             () => ({
                 value: T ? C.value : R.current.value,
-                multiplier: T ? C.multiplier : R.current.multiplier
+                multiplier: T ? C.multiplier : R.current.multiplier,
             }),
-            [T, C, R]
+            [T, C, R],
         );
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(S, {
                     channelId: t,
-                    width: h
+                    width: h,
                 }),
                 (0, r.jsx)(s.animated.div, {
                     ref: f,
@@ -179,9 +179,9 @@ let I = 1000,
                     style: N,
                     children: (0, r.jsx)(A, {
                         value: w,
-                        multiplier: P
-                    })
-                })
-            ]
+                        multiplier: P,
+                    }),
+                }),
+            ],
         });
     });

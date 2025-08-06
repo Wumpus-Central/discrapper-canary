@@ -14,20 +14,20 @@ function f(e) {
         {
             activityUrlOverride: i,
             useActivityUrlOverride: f,
-            filter: _
+            filter: _,
         } = (0, a.cj)(
             [c.Z],
             () => ({
                 activityUrlOverride: c.Z.getActivityUrlOverride(),
                 useActivityUrlOverride: c.Z.getUseActivityUrlOverride(),
-                filter: c.Z.getFilter()
+                filter: c.Z.getFilter(),
             }),
-            []
+            [],
         );
     function p() {
-        l.a8('');
+        l.a8("");
     }
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(d.container, n),
         children: [
             (0, r.jsx)(s.XZJ, {
@@ -35,32 +35,32 @@ function f(e) {
                 value: f,
                 onClick: l.Y$,
                 children: (0, r.jsx)(s.Text, {
-                    variant: 'text-md/semibold',
-                    children: u.intl.string(u.t['3TSGuL'])
-                })
+                    variant: "text-md/semibold",
+                    children: u.intl.string(u.t["3TSGuL"]),
+                }),
             }),
             f
                 ? (0, r.jsx)(s.xJW, {
-                      title: u.intl.string(u.t['9rnmen']),
+                      title: u.intl.string(u.t["9rnmen"]),
                       children: (0, r.jsx)(s.oil, {
                           disabled: !f,
                           value: null != i ? i : void 0,
                           onChange: l.jS,
-                          placeholder: 'https://localhost:3000'
-                      })
+                          placeholder: "https://localhost:3000",
+                      }),
                   })
                 : null,
             !0 === t
                 ? null
-                : (0, r.jsx)('div', {
+                : (0, r.jsx)("div", {
                       children: (0, r.jsx)(s.E1j, {
-                          size: 'sm',
+                          size: "sm",
                           className: d.searchBar,
                           query: _,
                           onChange: l.a8,
-                          onClear: p
-                      })
-                  })
-        ]
+                          onClear: p,
+                      }),
+                  }),
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
+n.d(t, { Z: () => E }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -19,24 +19,24 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -73,26 +73,26 @@ function E() {
         w = (0, r.useCallback)(
             (e) => {
                 let t = P[e];
-                (null != t &&
+                null != t &&
                     g({
                         src: t.url,
                         palette: t.palette,
-                        preview: !0
+                        preview: !0,
                     }),
                     g((t) =>
                         null == t
                             ? {
                                   src: e,
                                   palette: m.jD,
-                                  preview: !0
+                                  preview: !0,
                               }
                             : j(_({}, t), {
                                   src: e,
-                                  preview: !0
-                              })
-                    ));
+                                  preview: !0,
+                              }),
+                    );
             },
-            [P]
+            [P],
         ),
         k = (0, r.useCallback)((e) => {
             g((t) =>
@@ -100,15 +100,15 @@ function E() {
                     ? null
                     : j(_({}, t), {
                           palette: e,
-                          preview: !0
-                      })
+                          preview: !0,
+                      }),
             );
         }, []),
         L = (0, r.useCallback)(
             (e) => {
                 D(e);
             },
-            [D]
+            [D],
         ),
         M = (0, r.useCallback)((e) => {
             if (null != N.current) {
@@ -118,51 +118,57 @@ function E() {
         }, []),
         B = (0, r.useCallback)(
             (e) => {
-                (e.preventDefault(), e.stopPropagation());
+                e.preventDefault(), e.stopPropagation();
                 let t = (e) => {
-                        (e.preventDefault(), M(e));
+                        e.preventDefault(), M(e);
                     },
                     n = () => {
-                        (null != y.current && (document.removeEventListener('mousemove', y.current), (y.current = null)), null != A.current && (document.removeEventListener('mouseup', A.current), (A.current = null)));
+                        null != y.current && (document.removeEventListener("mousemove", y.current), (y.current = null)),
+                            null != A.current &&
+                                (document.removeEventListener("mouseup", A.current), (A.current = null));
                     };
-                ((y.current = t), (A.current = n), document.addEventListener('mousemove', t), document.addEventListener('mouseup', n));
+                (y.current = t),
+                    (A.current = n),
+                    document.addEventListener("mousemove", t),
+                    document.addEventListener("mouseup", n);
             },
-            [M]
+            [M],
         );
     return (
         (0, r.useEffect)(
             () => () => {
-                (null != y.current && (document.removeEventListener('mousemove', y.current), (y.current = null)), null != A.current && (document.removeEventListener('mouseup', A.current), (A.current = null)));
+                null != y.current && (document.removeEventListener("mousemove", y.current), (y.current = null)),
+                    null != A.current && (document.removeEventListener("mouseup", A.current), (A.current = null));
             },
-            []
+            [],
         ),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: x.controls,
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, i.jsxs)("div", {
                             className: x.toggles,
                             children: [
                                 (0, i.jsx)(a.zxk, {
-                                    size: 'sm',
+                                    size: "sm",
                                     onClick: () => {
-                                        (l(!1), n((e) => !e));
+                                        l(!1), n((e) => !e);
                                     },
-                                    variant: 'secondary',
-                                    text: 'Toggle Themes'
+                                    variant: "secondary",
+                                    text: "Toggle Themes",
                                 }),
                                 (0, i.jsx)(a.zxk, {
-                                    size: 'sm',
+                                    size: "sm",
                                     onClick: () => {
-                                        (n(!1), l((e) => !e));
+                                        n(!1), l((e) => !e);
                                     },
-                                    variant: 'secondary',
-                                    text: 'Toggle Gradients'
-                                })
-                            ]
+                                    variant: "secondary",
+                                    text: "Toggle Gradients",
+                                }),
+                            ],
                         }),
-                        (0, i.jsxs)('div', {
+                        (0, i.jsxs)("div", {
                             className: x.themePicker,
                             children: [
                                 t && (0, i.jsx)(c.i, {}),
@@ -170,61 +176,61 @@ function E() {
                                     (0, i.jsx)(h.Z, {
                                         selected: null == d || null == (e = d.palette) ? void 0 : e.name,
                                         onSelect: (e) => {
-                                            ((null == d ? void 0 : d.src) != null && R(d.src, d.src, e), k(e));
-                                        }
-                                    })
-                            ]
-                        })
-                    ]
+                                            (null == d ? void 0 : d.src) != null && R(d.src, d.src, e), k(e);
+                                        },
+                                    }),
+                            ],
+                        }),
+                    ],
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: x.main,
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, i.jsxs)("div", {
                             ref: N,
                             className: x.previews,
-                            style: { width: ''.concat(f, 'px') },
+                            style: { width: "".concat(f, "px") },
                             children: [
                                 (0, i.jsx)(a.Text, {
-                                    variant: 'text-sm/semibold',
-                                    children: 'Memberlist'
+                                    variant: "text-sm/semibold",
+                                    children: "Memberlist",
                                 }),
                                 (0, i.jsx)(S, { nameplate: d }),
                                 (0, i.jsx)(a.Text, {
-                                    variant: 'text-sm/semibold',
-                                    children: 'DMs'
+                                    variant: "text-sm/semibold",
+                                    children: "DMs",
                                 }),
                                 (0, i.jsx)(T, { nameplate: d }),
                                 (0, i.jsx)(a.Text, {
-                                    variant: 'text-sm/semibold',
-                                    children: 'RTC'
+                                    variant: "text-sm/semibold",
+                                    children: "RTC",
                                 }),
                                 (0, i.jsx)(I, { nameplate: d }),
-                                (0, i.jsx)('div', {
+                                (0, i.jsx)("div", {
                                     className: x.resizeHandle,
-                                    onMouseDown: B
-                                })
-                            ]
+                                    onMouseDown: B,
+                                }),
+                            ],
                         }),
-                        (0, i.jsxs)('div', {
+                        (0, i.jsxs)("div", {
                             className: x.buttons,
                             children: [
                                 (0, i.jsx)(a.Text, {
-                                    variant: 'text-sm/semibold',
-                                    children: 'Drag background image to screen'
+                                    variant: "text-sm/semibold",
+                                    children: "Drag background image to screen",
                                 }),
                                 (0, i.jsx)(o.Z, {
-                                    title: 'upload image',
-                                    description: 'upload the background',
+                                    title: "upload image",
+                                    description: "upload the background",
                                     icons: b.pA,
                                     onDrop: async (e) => {
                                         let t = URL.createObjectURL(e[0]),
                                             n = e[0],
                                             i = await n.arrayBuffer();
-                                        (Z(t, t, (0, p.xh)(i)), R(t, t, m.jD));
-                                    }
+                                        Z(t, t, (0, p.xh)(i)), R(t, t, m.jD);
+                                    },
                                 }),
-                                (0, i.jsx)('div', {
+                                (0, i.jsx)("div", {
                                     className: x.uploadedArea,
                                     children: Object.values(P).map((e) => {
                                         let { url: t } = e;
@@ -233,183 +239,183 @@ function E() {
                                             {
                                                 src: t,
                                                 onSetStatic: w,
-                                                removeAsset: L
+                                                removeAsset: L,
                                             },
-                                            t
+                                            t,
                                         );
-                                    })
+                                    }),
                                 }),
                                 (0, i.jsx)(v, {
-                                    label: 'gradient override',
+                                    label: "gradient override",
                                     onChange: (e) =>
                                         k({
                                             name: m._j,
                                             darkBackground: e,
-                                            lightBackground: e
-                                        })
+                                            lightBackground: e,
+                                        }),
                                 }),
                                 (0, i.jsx)(O, {
-                                    label: 'set',
-                                    onClick: () => {}
-                                })
-                            ]
-                        })
-                    ]
-                })
-            ]
+                                    label: "set",
+                                    onClick: () => {},
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            ],
         })
     );
 }
 function C(e) {
     let { src: t, onSetStatic: n, removeAsset: r } = e;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: x.uploaded,
         children: [
             (0, i.jsx)(a.P3F, {
                 onClick: () => r(t),
                 className: x.xicon,
                 children: (0, i.jsx)(a.Dio, {
-                    size: 'custom',
+                    size: "custom",
                     width: 16,
                     height: 16,
-                    name: 'x'
-                })
+                    name: "x",
+                }),
             }),
-            (0, i.jsx)('img', {
+            (0, i.jsx)("img", {
                 className: x.uploadedImg,
                 src: t,
-                alt: ''
+                alt: "",
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: x.uploadedControls,
                 children: (0, i.jsx)(a.zxk, {
                     onClick: () => n(t),
-                    size: 'sm',
-                    variant: 'secondary',
-                    text: 'set nameplate'
-                })
-            })
-        ]
+                    size: "sm",
+                    variant: "secondary",
+                    text: "set nameplate",
+                }),
+            }),
+        ],
     });
 }
 function O(e) {
     let { label: t, onClick: n } = e;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: x.flex,
         children: [
             (0, i.jsx)(a.Text, {
-                variant: 'text-sm/normal',
-                children: 'coming soon'
+                variant: "text-sm/normal",
+                children: "coming soon",
             }),
             (0, i.jsx)(a.zxk, {
-                variant: 'secondary',
-                size: 'sm',
+                variant: "secondary",
+                size: "sm",
                 text: t,
                 disabled: !0,
-                onClick: n
-            })
-        ]
+                onClick: n,
+            }),
+        ],
     });
 }
 function v(e) {
     let { label: t, onChange: n } = e;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: x.hexInput,
         children: [
             (0, i.jsx)(a.Text, {
-                variant: 'text-sm/normal',
-                children: t
+                variant: "text-sm/normal",
+                children: t,
             }),
-            (0, i.jsx)('input', {
+            (0, i.jsx)("input", {
                 onChange: (e) => {
                     n(e.target.value);
                 },
                 className: x.inputs,
-                placeholder: '#000000'
-            })
-        ]
+                placeholder: "#000000",
+            }),
+        ],
     });
 }
 function S(e) {
     let { nameplate: t } = e,
         n = (0, s.e7)([d.default], () => d.default.getCurrentUser());
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: x.preview,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: x.simArea,
             children: [
                 (0, i.jsx)(a.Text, {
                     className: x.label,
-                    variant: 'text-sm/semibold',
-                    children: 'DEFAULT'
+                    variant: "text-sm/semibold",
+                    children: "DEFAULT",
                 }),
                 (0, i.jsx)(l.Z, {
                     nameplate: t,
                     user: n,
-                    currentUser: n
+                    currentUser: n,
                 }),
                 (0, i.jsx)(a.Text, {
                     className: x.label,
-                    variant: 'text-sm/semibold',
-                    children: 'FOCUSED'
+                    variant: "text-sm/semibold",
+                    children: "FOCUSED",
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     children: [
                         (0, i.jsx)(l.Z, {
                             nameplate: t,
                             selected: !0,
                             user: n,
-                            currentUser: n
+                            currentUser: n,
                         }),
                         (0, i.jsx)(l.Z, {
                             selected: !0,
                             user: n,
-                            currentUser: n
-                        })
-                    ]
-                })
-            ]
-        })
+                            currentUser: n,
+                        }),
+                    ],
+                }),
+            ],
+        }),
     });
 }
 function T(e) {
     let { nameplate: t } = e;
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: x.preview,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: x.simArea,
             children: [
                 (0, i.jsx)(a.Text, {
                     className: x.label,
-                    variant: 'text-sm/semibold',
-                    children: 'DEFAULT'
+                    variant: "text-sm/semibold",
+                    children: "DEFAULT",
                 }),
                 (0, i.jsx)(f.Z, { nameplate: t }),
                 (0, i.jsx)(a.Text, {
                     className: x.label,
-                    variant: 'text-sm/semibold',
-                    children: 'FOCUSED'
+                    variant: "text-sm/semibold",
+                    children: "FOCUSED",
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     children: [
                         (0, i.jsx)(f.Z, {
                             selected: !0,
-                            nameplate: t
+                            nameplate: t,
                         }),
-                        (0, i.jsx)(f.Z, { selected: !0 })
-                    ]
-                })
-            ]
-        })
+                        (0, i.jsx)(f.Z, { selected: !0 }),
+                    ],
+                }),
+            ],
+        }),
     });
 }
 function I(e) {
     let { nameplate: t } = e;
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: x.preview,
-        children: (0, i.jsx)('div', {
+        children: (0, i.jsx)("div", {
             className: x.rtcSim,
-            children: (0, i.jsx)(g.Z, { nameplate: t })
-        })
+            children: (0, i.jsx)(g.Z, { nameplate: t }),
+        }),
     });
 }

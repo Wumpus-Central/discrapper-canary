@@ -1,6 +1,6 @@
 n.d(t, {
     Ft: () => _,
-    R$: () => f
+    R$: () => f,
 });
 var r = n(255367);
 n(73800);
@@ -20,10 +20,10 @@ function f(e) {
         width: n,
         height: n,
         className: i,
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: o()(d.guildIconImage, d.acronym),
-            children: a
-        })
+            children: a,
+        }),
     });
 }
 function _(e) {
@@ -35,7 +35,7 @@ function _(e) {
                   id: t,
                   icon: i,
                   size: f,
-                  canAnimate: h && m
+                  canAnimate: h && m,
               });
     if (null == g) {
         let e = (0, u.Zg)(n);
@@ -44,10 +44,10 @@ function _(e) {
             width: f,
             height: f,
             className: _,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: o()(d.guildIconImage, d.acronym, p),
-                children: e
-            })
+                children: e,
+            }),
         });
     }
     return (0, r.jsx)(s.ZP, {
@@ -55,10 +55,10 @@ function _(e) {
         width: f,
         height: f,
         className: _,
-        children: (0, r.jsx)('img', {
+        children: (0, r.jsx)("img", {
             src: g,
             alt: n,
-            className: d.guildIconImage
-        })
+            className: d.guildIconImage,
+        }),
     });
 }

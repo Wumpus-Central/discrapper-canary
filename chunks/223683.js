@@ -3,7 +3,7 @@ n.d(t, {
     KP: () => _,
     Tn: () => c,
     dt: () => p,
-    xx: () => d
+    xx: () => d,
 });
 var r = n(392711),
     i = n.n(r),
@@ -15,7 +15,7 @@ async function c() {
     return (
         await o.tn.get({
             url: a.ANM.NOTIFICATION_SNAPSHOTS,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     ).body;
 }
@@ -24,7 +24,7 @@ async function u(e) {
         await o.tn.post({
             url: a.ANM.NOTIFICATION_SNAPSHOTS,
             body: { label: e },
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     ).body;
 }
@@ -32,7 +32,7 @@ async function d(e) {
     return (
         await o.tn.post({
             url: a.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e),
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     ).body;
 }
@@ -40,7 +40,7 @@ async function f(e) {
     return (
         await o.tn.del({
             url: a.ANM.NOTIFICATION_SNAPSHOT(e),
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     ).body;
 }
@@ -59,5 +59,5 @@ async function p(e) {
             await f(t[0].id);
         }
     }
-    return u('Backup from '.concat(new Date().toLocaleDateString()));
+    return u("Backup from ".concat(new Date().toLocaleDateString()));
 }

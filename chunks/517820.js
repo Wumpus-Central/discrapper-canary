@@ -39,7 +39,7 @@ function k(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -49,15 +49,15 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 k(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -65,11 +65,11 @@ function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -85,7 +85,7 @@ function G(e, t) {
     );
 }
 function B() {
-    return (0, r.jsx)('div', { className: M.dot });
+    return (0, r.jsx)("div", { className: M.dot });
 }
 function Z(e) {
     let { message: t, compact: n } = e,
@@ -95,17 +95,17 @@ function Z(e) {
         case u.p.RAID:
             return (0, r.jsx)(Y, {
                 message: t,
-                compact: n
+                compact: n,
             });
         case u.p.MENTION_RAID:
             return (0, r.jsx)(W, {
                 message: t,
-                compact: n
+                compact: n,
             });
         case u.p.ACTIVITY_ALERTS_ENABLED:
             return (0, r.jsx)(H, {
                 message: t,
-                compact: n
+                compact: n,
             });
         case u.p.INTERACTION_BLOCKED:
             return (0, r.jsx)(V, { compact: n });
@@ -120,21 +120,21 @@ function F(e) {
         header: (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(p.Mgn, {
-                    size: 'xs',
-                    color: _.Z.colors.HEADER_SECONDARY.css
+                    size: "xs",
+                    color: _.Z.colors.HEADER_SECONDARY.css,
                 }),
                 (0, r.jsx)(p.Text, {
-                    variant: 'text-md/semibold',
-                    color: 'header-secondary',
-                    children: x.intl.string(x.t.VdZCcH)
-                })
-            ]
+                    variant: "text-md/semibold",
+                    color: "header-secondary",
+                    children: x.intl.string(x.t.VdZCcH),
+                }),
+            ],
         }),
         content: (0, r.jsx)(p.Text, {
-            variant: 'text-md/normal',
-            color: 'text-muted',
-            children: x.intl.string(x.t.NxHYX1)
-        })
+            variant: "text-md/normal",
+            color: "text-muted",
+            children: x.intl.string(x.t.NxHYX1),
+        }),
     });
 }
 function V(e) {
@@ -144,21 +144,21 @@ function V(e) {
         header: (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(p.Mgn, {
-                    size: 'xs',
-                    color: _.Z.colors.HEADER_SECONDARY.css
+                    size: "xs",
+                    color: _.Z.colors.HEADER_SECONDARY.css,
                 }),
                 (0, r.jsx)(p.Text, {
-                    variant: 'text-md/semibold',
-                    color: 'header-secondary',
-                    children: x.intl.string(x.t['2qTBw8'])
-                })
-            ]
+                    variant: "text-md/semibold",
+                    color: "header-secondary",
+                    children: x.intl.string(x.t["2qTBw8"]),
+                }),
+            ],
         }),
         content: (0, r.jsx)(p.Text, {
-            variant: 'text-md/normal',
-            color: 'text-muted',
-            children: x.intl.string(x.t.Dc9wCg)
-        })
+            variant: "text-md/normal",
+            color: "text-muted",
+            children: x.intl.string(x.t.Dc9wCg),
+        }),
     });
 }
 function H(e) {
@@ -170,11 +170,11 @@ function H(e) {
         {
             avatarSrc: u,
             avatarDecorationSrc: d,
-            eventHandlers: f
+            eventHandlers: f,
         } = (0, I.Z)({
             userId: null == a ? void 0 : a.id,
             guildId: s,
-            size: 12
+            size: 12,
         }),
         h = i.useRef(null);
     return (0, r.jsx)(K, {
@@ -182,20 +182,20 @@ function H(e) {
         header: (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(p.bgT, {
-                    size: 'xs',
-                    color: _.Z.colors.TEXT_FEEDBACK_POSITIVE.css
+                    size: "xs",
+                    color: _.Z.colors.TEXT_FEEDBACK_POSITIVE.css,
                 }),
                 (0, r.jsx)(p.Text, {
-                    variant: 'text-md/semibold',
-                    color: 'text-feedback-positive',
-                    children: x.intl.string(x.t.lVLiFh)
-                })
-            ]
+                    variant: "text-md/semibold",
+                    color: "text-feedback-positive",
+                    children: x.intl.string(x.t.lVLiFh),
+                }),
+            ],
         }),
-        subheader: (0, r.jsxs)('div', {
+        subheader: (0, r.jsxs)("div", {
             className: M.dotSeparatedRow,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: M.alertsEnabledSubHeader,
                     children:
                         null != c &&
@@ -203,9 +203,9 @@ function H(e) {
                         (0, r.jsxs)(i.Fragment, {
                             children: [
                                 (0, r.jsx)(p.Text, {
-                                    variant: 'text-xs/medium',
-                                    color: 'text-default',
-                                    children: x.intl.string(x.t.qlFrXV)
+                                    variant: "text-xs/medium",
+                                    color: "text-default",
+                                    children: x.intl.string(x.t.qlFrXV),
                                 }),
                                 (0, r.jsx)(T.Z, {
                                     targetElementRef: h,
@@ -220,49 +220,54 @@ function H(e) {
                                                 j(
                                                     {
                                                         innerRef: h,
-                                                        className: M.alertsEnabledSubHeaderAvatarUsername
+                                                        className: M.alertsEnabledSubHeaderAvatarUsername,
                                                     },
-                                                    e
+                                                    e,
                                                 ),
                                                 {
                                                     children: [
                                                         (0, r.jsx)(
-                                                            'div',
+                                                            "div",
                                                             G(j({}, f), {
                                                                 children: (0, r.jsx)(p.qEK, {
                                                                     src: u,
                                                                     avatarDecoration: d,
                                                                     size: p.EFr.SIZE_16,
-                                                                    'aria-label': 'TODO'
-                                                                })
-                                                            })
+                                                                    "aria-label": "TODO",
+                                                                }),
+                                                            }),
                                                         ),
                                                         (0, r.jsxs)(p.Text, {
-                                                            variant: 'text-xs/medium',
-                                                            style: { color: null != c.colorString ? c.colorString : _.Z.colors.TEXT_DEFAULT.css },
-                                                            children: [' ', '@', a.username]
-                                                        })
-                                                    ]
-                                                }
-                                            )
-                                        )
-                                })
-                            ]
-                        })
+                                                            variant: "text-xs/medium",
+                                                            style: {
+                                                                color:
+                                                                    null != c.colorString
+                                                                        ? c.colorString
+                                                                        : _.Z.colors.TEXT_DEFAULT.css,
+                                                            },
+                                                            children: [" ", "@", a.username],
+                                                        }),
+                                                    ],
+                                                },
+                                            ),
+                                        ),
+                                }),
+                            ],
+                        }),
                 }),
                 (0, r.jsx)(B, {}),
                 (0, r.jsx)(p.Text, {
-                    variant: 'text-xs/medium',
-                    color: 'text-default',
-                    children: l()(n.timestamp).fromNow()
-                })
-            ]
+                    variant: "text-xs/medium",
+                    color: "text-default",
+                    children: l()(n.timestamp).fromNow(),
+                }),
+            ],
         }),
         content: (0, r.jsx)(p.Text, {
-            variant: 'text-md/normal',
-            color: 'text-muted',
-            children: x.intl.string(x.t['QV/8u7'])
-        })
+            variant: "text-md/normal",
+            color: "text-muted",
+            children: x.intl.string(x.t["QV/8u7"]),
+        }),
     });
 }
 function Y(e) {
@@ -287,87 +292,89 @@ function Y(e) {
         header: (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(P, {
-                    size: 'xs',
-                    color: _.Z.colors.TEXT_DANGER.css
+                    size: "xs",
+                    color: _.Z.colors.TEXT_DANGER.css,
                 }),
                 (0, r.jsx)(p.Text, {
-                    variant: 'text-md/semibold',
-                    color: 'text-danger',
-                    children: C ? x.intl.string(x.t['8+lHUV']) : x.intl.string(x.t.xMwcwc)
-                })
-            ]
+                    variant: "text-md/semibold",
+                    color: "text-danger",
+                    children: C ? x.intl.string(x.t["8+lHUV"]) : x.intl.string(x.t.xMwcwc),
+                }),
+            ],
         }),
-        subheader: (0, r.jsxs)('div', {
+        subheader: (0, r.jsxs)("div", {
             className: M.dotSeparatedRow,
             children: [
                 null != a &&
                     (0, r.jsx)(p.Text, {
-                        variant: 'text-xs/medium',
-                        color: 'text-default',
-                        children: x.intl.format(x.t['4ylIio'], { joinCount: a })
+                        variant: "text-xs/medium",
+                        color: "text-default",
+                        children: x.intl.format(x.t["4ylIio"], { joinCount: a }),
                     }),
                 null != u &&
                     (0, r.jsx)(p.Text, {
-                        variant: 'text-xs/medium',
-                        color: 'text-default',
-                        children: x.intl.format(x.t['5C8Mh4'], { dmsSent: u })
+                        variant: "text-xs/medium",
+                        color: "text-default",
+                        children: x.intl.format(x.t["5C8Mh4"], { dmsSent: u }),
                     }),
                 null != s &&
                     (0, r.jsxs)(i.Fragment, {
                         children: [
                             (0, r.jsx)(B, {}),
                             (0, r.jsx)(p.Text, {
-                                variant: 'text-xs/medium',
-                                color: 'text-default',
-                                children: l()(s).fromNow()
-                            })
-                        ]
-                    })
-            ]
+                                variant: "text-xs/medium",
+                                color: "text-default",
+                                children: l()(s).fromNow(),
+                            }),
+                        ],
+                    }),
+            ],
         }),
         content:
             null != s
                 ? (0, r.jsx)(p.Text, {
-                      variant: 'text-md/normal',
-                      color: 'text-muted',
-                      children: x.intl.format(x.t['4QIIZm'], { dateTime: s.toLocaleString(x.intl.currentLocale, E.pQ) })
+                      variant: "text-md/normal",
+                      color: "text-muted",
+                      children: x.intl.format(x.t["4QIIZm"], {
+                          dateTime: s.toLocaleString(x.intl.currentLocale, E.pQ),
+                      }),
                   })
                 : null,
         footerButtons: I
-            ? (0, r.jsxs)('div', {
+            ? (0, r.jsxs)("div", {
                   className: M.footerRow,
                   children: [
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: M.footerAction,
                           children: [
                               (0, r.jsx)(p.b7C, {
-                                  size: 'xs',
+                                  size: "xs",
                                   color: c.Z.BRAND,
-                                  className: M.footerIcon
+                                  className: M.footerIcon,
                               }),
                               (0, r.jsx)(p.Avr, {
-                                  variant: 'primary',
-                                  size: 'sm',
-                                  textVariant: 'text-xs/medium',
+                                  variant: "primary",
+                                  size: "sm",
+                                  textVariant: "text-xs/medium",
                                   text: x.intl.string(x.t.DEoVWV),
-                                  onClick: A
-                              })
-                          ]
+                                  onClick: A,
+                              }),
+                          ],
                       }),
                       (0, r.jsx)(B, {}),
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: M.footerAction,
                           children: (0, r.jsx)(p.Avr, {
-                              variant: 'primary',
-                              textVariant: 'text-xs/medium',
-                              size: 'sm',
+                              variant: "primary",
+                              textVariant: "text-xs/medium",
+                              size: "sm",
                               text: (0, b.ge)(m),
-                              onClick: N
-                          })
-                      })
-                  ]
+                              onClick: N,
+                          }),
+                      }),
+                  ],
               })
-            : null
+            : null,
     });
 }
 function W(e) {
@@ -379,7 +386,7 @@ function W(e) {
         null != a &&
             null != c &&
             (0, O.UE)(a, c, () => {
-                ((0, h.c)(u), (0, O.T9)(a));
+                (0, h.c)(u), (0, O.T9)(a);
             });
     }
     function f() {
@@ -390,101 +397,101 @@ function W(e) {
         header: (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(p.Mgn, {
-                    size: 'xs',
-                    color: _.Z.colors.TEXT_DANGER.css
+                    size: "xs",
+                    color: _.Z.colors.TEXT_DANGER.css,
                 }),
                 (0, r.jsx)(p.Text, {
-                    variant: 'text-md/semibold',
-                    color: 'text-danger',
-                    children: x.intl.string(x.t.C2uIXF)
-                })
-            ]
+                    variant: "text-md/semibold",
+                    color: "text-danger",
+                    children: x.intl.string(x.t.C2uIXF),
+                }),
+            ],
         }),
-        subheader: (0, r.jsx)('div', {
+        subheader: (0, r.jsx)("div", {
             className: M.dotSeparatedRow,
             children:
                 null != s &&
                 (0, r.jsx)(p.Text, {
-                    variant: 'text-xs/medium',
-                    color: 'text-default',
-                    children: l()(s).fromNow()
-                })
+                    variant: "text-xs/medium",
+                    color: "text-default",
+                    children: l()(s).fromNow(),
+                }),
         }),
         content: (0, r.jsx)(p.Text, {
-            variant: 'text-md/normal',
-            color: 'text-muted',
-            children: x.intl.string(x.t.SWIWER)
+            variant: "text-md/normal",
+            color: "text-muted",
+            children: x.intl.string(x.t.SWIWER),
         }),
-        footerButtons: (0, r.jsxs)('div', {
+        footerButtons: (0, r.jsxs)("div", {
             className: M.footerRow,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: M.footerAction,
                     children: (0, r.jsx)(p.Avr, {
-                        variant: 'primary',
-                        textVariant: 'text-xs/medium',
-                        size: 'sm',
+                        variant: "primary",
+                        textVariant: "text-xs/medium",
+                        size: "sm",
                         text: x.intl.string(x.t.oX14Eh),
-                        onClick: d
-                    })
+                        onClick: d,
+                    }),
                 }),
                 (0, r.jsx)(B, {}),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: M.footerAction,
                     children: (0, r.jsx)(p.Avr, {
-                        variant: 'primary',
-                        textVariant: 'text-xs/medium',
-                        size: 'sm',
-                        text: x.intl.string(x.t['1R7QIy']),
-                        onClick: f
-                    })
-                })
-            ]
-        })
+                        variant: "primary",
+                        textVariant: "text-xs/medium",
+                        size: "sm",
+                        text: x.intl.string(x.t["1R7QIy"]),
+                        onClick: f,
+                    }),
+                }),
+            ],
+        }),
     });
 }
 function K(e) {
     let { compact: t, header: n, subheader: i, content: o, footerButtons: s } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(M.embedCard, { [M.compact]: t }),
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: M.cardContent,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: M.cardHeaderContianer,
                         children: [
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: M.cardHeader,
-                                children: n
+                                children: n,
                             }),
                             null != i &&
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: M.subheader,
-                                    children: i
-                                })
-                        ]
+                                    children: i,
+                                }),
+                        ],
                     }),
-                    o
-                ]
+                    o,
+                ],
             }),
             null != s &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: a()(M.centeredRowContainer, M.cardFooter, { [M.compact]: t }),
-                    children: s
-                })
-        ]
+                    children: s,
+                }),
+        ],
     });
 }
 function z(e) {
     let { id: t, compact: n, message: i, channel: o } = e,
         {
             avatarSrc: s,
-            eventHandlers: { onMouseEnter: l, onMouseLeave: c }
+            eventHandlers: { onMouseEnter: l, onMouseLeave: c },
         } = (0, P.m)(!0),
         { notificationType: d } = (0, b.FL)(i),
         f = null == d || d === u.p.RAID;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         onMouseEnter: l,
         onMouseLeave: c,
         children: (0, r.jsx)(w.Z, {
@@ -492,47 +499,47 @@ function z(e) {
             iconNode: n ? null : (0, r.jsx)(P.S, { src: s }),
             iconContainerClassName: M.iconContainer,
             compact: n,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: a()(M.content, { [M.compact]: n }),
                 children: [
                     (0, r.jsx)(C.nD, {
                         message: i,
                         messageClassname: M.spanCorrection,
                         className: a()(M.usernameContainer, M.spanCorrection, { [M.compact]: n }),
-                        username: (0, r.jsxs)('div', {
+                        username: (0, r.jsxs)("div", {
                             className: M.spanCorrection,
                             children: [
                                 (0, r.jsx)(p.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'text-brand',
-                                    tag: 'span',
+                                    variant: "text-md/normal",
+                                    color: "text-brand",
+                                    tag: "span",
                                     className: M.username,
-                                    children: x.intl.string(x.t.hG1StL)
+                                    children: x.intl.string(x.t.hG1StL),
                                 }),
                                 (0, r.jsx)(m.Z, {
                                     type: L.Hb.SYSTEM_DM,
-                                    className: M.systemTag
+                                    className: M.systemTag,
                                 }),
                                 f &&
                                     (0, r.jsx)(p.Text, {
-                                        variant: 'text-md/normal',
-                                        color: 'header-primary',
-                                        tag: 'span',
+                                        variant: "text-md/normal",
+                                        color: "header-primary",
+                                        tag: "span",
                                         className: M.spanCorrection,
-                                        children: x.intl.string(x.t.ufawc3)
-                                    })
-                            ]
+                                        children: x.intl.string(x.t.ufawc3),
+                                    }),
+                            ],
                         }),
                         compact: n,
-                        showTimestamp: !0
+                        showTimestamp: !0,
                     }),
-                    (0, r.jsx)('div', { className: M.flexLineBreak }),
+                    (0, r.jsx)("div", { className: M.flexLineBreak }),
                     (0, r.jsx)(Z, {
                         message: i,
-                        compact: n
-                    })
-                ]
-            })
-        })
+                        compact: n,
+                    }),
+                ],
+            }),
+        }),
     });
 }

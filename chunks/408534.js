@@ -28,7 +28,9 @@ function T(e) {
         P = (0, i.e7)([u.Z], () => u.Z.getGuild(T.guild_id), [T.guild_id]),
         w = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(C)),
         D = (null == w ? void 0 : w.type) === y.fO.STREAM ? w.stream : null,
-        L = (0, i.e7)([s.Z], () => ((null == w ? void 0 : w.type) === y.fO.ACTIVITY ? s.Z.getApplication(w.applicationId) : void 0)),
+        L = (0, i.e7)([s.Z], () =>
+            (null == w ? void 0 : w.type) === y.fO.ACTIVITY ? s.Z.getApplication(w.applicationId) : void 0,
+        ),
         x = (0, _.Z)(C),
         M = (0, E.Z)(C),
         k = (0, h.Z)(T, P, null == D ? void 0 : D.ownerId, null == L ? void 0 : L.id),
@@ -45,18 +47,25 @@ function T(e) {
         onClose: t,
         onSelect: n,
         onInteraction: A,
-        navId: 'more-settings-context',
-        'aria-label': v.intl.string(v.t.FTLzdX),
+        navId: "more-settings-context",
+        "aria-label": v.intl.string(v.t.FTLzdX),
         children: [
             (0, r.jsx)(o.kSQ, { children: R !== O.d4z.GUILD_STAGE_VOICE ? k : null }),
             (0, r.jsxs)(o.kSQ, {
-                children: [R === O.d4z.GUILD_STAGE_VOICE ? G : null, R === O.d4z.GUILD_STAGE_VOICE ? B : null, S || R === O.d4z.GUILD_STAGE_VOICE ? null : j, V, R !== O.d4z.GUILD_STAGE_VOICE ? x : null, R === O.d4z.GUILD_STAGE_VOICE || R === O.d4z.GUILD_VOICE ? M : null]
+                children: [
+                    R === O.d4z.GUILD_STAGE_VOICE ? G : null,
+                    R === O.d4z.GUILD_STAGE_VOICE ? B : null,
+                    S || R === O.d4z.GUILD_STAGE_VOICE ? null : j,
+                    V,
+                    R !== O.d4z.GUILD_STAGE_VOICE ? x : null,
+                    R === O.d4z.GUILD_STAGE_VOICE || R === O.d4z.GUILD_VOICE ? M : null,
+                ],
             }),
             (0, r.jsx)(o.kSQ, { children: H }),
             (0, r.jsx)(o.kSQ, { children: U }),
             (0, r.jsxs)(o.kSQ, {
-                children: [null != D ? Z : null, null != L ? F : null]
-            })
-        ]
+                children: [null != D ? Z : null, null != L ? F : null],
+            }),
+        ],
     });
 }

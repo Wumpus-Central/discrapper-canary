@@ -8,10 +8,10 @@ function i(t, n, e, i) {
               {
                   scheduled_start_time: r,
                   scheduled_end_time: o,
-                  is_canceled: !1
+                  is_canceled: !1,
               },
               n,
               e,
-              i
+              i,
           );
 }

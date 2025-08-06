@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(539854), n(388685));
+n.d(t, { Z: () => g }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -34,7 +34,7 @@ function g(e) {
               ? (0, r.jsx)(p.GN, {
                     isTabSelected: g,
                     userDiscount: y,
-                    includesAmountOff: !1
+                    includesAmountOff: !1,
                 })
               : null == j || S
                 ? null != n
@@ -42,16 +42,16 @@ function g(e) {
                     : (0, r.jsx)(b.Z, { isSelected: g })
                 : (0, r.jsx)(p.$H, {
                       isTabSelected: g,
-                      trialOffer: j
+                      trialOffer: j,
                   })),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: s()(m.premiumLabel, { [m.selected]: g && !v }),
-                    children: [l, t]
+                    children: [l, t],
                 }),
-                (0, r.jsx)('div', { className: s()(m.background, { [m.selectedBackground]: !v && g }) })
-            ]
+                (0, r.jsx)("div", { className: s()(m.background, { [m.selectedBackground]: !v && g }) }),
+            ],
         })
     );
 }

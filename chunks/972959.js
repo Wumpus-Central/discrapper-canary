@@ -37,6 +37,6 @@ function s(e) {
             return t.subscribe(e, n, r);
         },
         setState: u,
-        resetState: d
+        resetState: d,
     };
 }

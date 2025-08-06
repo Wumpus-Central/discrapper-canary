@@ -11,7 +11,18 @@ var n = a(255367),
 let _ = null;
 class N extends r.PureComponent {
     render() {
-        let { token: e, className: t, onChangeLocale: a, mainContentId: s, mobileClassName: i, avoidRouter: d, authRedirectTo: N, openNavAriaLabel: m, hideNavAriaLabel: p, skipToContentLabel: h } = this.props;
+        let {
+            token: e,
+            className: t,
+            onChangeLocale: a,
+            mainContentId: s,
+            mobileClassName: i,
+            avoidRouter: d,
+            authRedirectTo: N,
+            openNavAriaLabel: m,
+            hideNavAriaLabel: p,
+            skipToContentLabel: h,
+        } = this.props;
         return null == _
             ? null
             : (0, n.jsxs)(r.Fragment, {
@@ -24,7 +35,7 @@ class N extends r.PureComponent {
                           authRedirectTo: N,
                           onChangeLocale: a,
                           mainContentId: s,
-                          skipToContentLabel: h
+                          skipToContentLabel: h,
                       }),
                       (0, n.jsx)(c.D, {
                           className: l()(u.mobileHeader, i),
@@ -33,13 +44,13 @@ class N extends r.PureComponent {
                           TrackClick: _,
                           onChangeLocale: a,
                           openNavAriaLabel: m,
-                          hideNavAriaLabel: p
-                      })
-                  ]
+                          hideNavAriaLabel: p,
+                      }),
+                  ],
               });
     }
     constructor(e) {
-        (super(e),
+        super(e),
             null != e.locale && d.Z.setLocale(e.locale),
             (_ = (t) =>
                 (0, n.jsx)(
@@ -48,33 +59,33 @@ class N extends r.PureComponent {
                         for (var t = 1; t < arguments.length; t++) {
                             var a = null != arguments[t] ? arguments[t] : {},
                                 n = Object.keys(a);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (n = n.concat(
                                     Object.getOwnPropertySymbols(a).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 n.forEach(function (t) {
                                     var n;
-                                    ((n = a[t]),
+                                    (n = a[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: n,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = n));
-                                }));
+                                            : (e[t] = n);
+                                });
                         }
                         return e;
                     })(
                         {
                             track: e.track,
-                            trackOutboundLink: e.trackOutboundLink
+                            trackOutboundLink: e.trackOutboundLink,
                         },
-                        t
-                    )
-                )));
+                        t,
+                    ),
+                ));
     }
 }

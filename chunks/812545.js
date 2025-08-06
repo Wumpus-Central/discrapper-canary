@@ -1,4 +1,4 @@
-(l.d(t, { Z: () => r }), l(388685));
+l.d(t, { Z: () => r }), l(388685);
 var e = l(73800),
     i = l(442837),
     o = l(528963),
@@ -9,7 +9,9 @@ function r(n) {
         r = (0, i.e7)([s.Z], () => s.Z.getFollowerStatsForChannel(n), [n]);
     return (
         e.useEffect(() => {
-            (null == r || Date.now() - r.lastFetched > a) && !t ? (l(!0), o.Z.fetchChannelFollowerStats(n)) : null != r && t && l(!1);
+            (null == r || Date.now() - r.lastFetched > a) && !t
+                ? (l(!0), o.Z.fetchChannelFollowerStats(n))
+                : null != r && t && l(!1);
         }, [n, r, t]),
         [r, t]
     );

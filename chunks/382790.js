@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var i,
     r = n(255367),
     o = n(73800),
@@ -22,7 +22,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,36 +41,36 @@ class b extends (i = o.PureComponent) {
                           p.Z,
                           {
                               guildId: e,
-                              onDragStart: this.onDragStart
+                              onDragStart: this.onDragStart,
                           },
-                          e
+                          e,
                       )
                     : (0, r.jsx)(m.Z, {
                           title: y.intl.string(y.t.YUU0RE),
                           renderSettings: _,
                           onDragStart: this.onDragStart,
-                          children: (0, r.jsx)(g.Z, {})
+                          children: (0, r.jsx)(g.Z, {}),
                       }),
-            l = n ? 'div' : h.ZP;
+            l = n ? "div" : h.ZP;
         return (0, r.jsxs)(l, {
             className: s()(O.base, { [O.widget]: !n }, i),
             children: [
                 (0, r.jsx)(d.Z, {
                     isOverlay: !0,
                     disableAppDownload: !0,
-                    isVisible: !t
+                    isVisible: !t,
                 }),
-                o
-            ]
+                o,
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            v(this, 'onDragStart', (e) => {
+        super(...e),
+            v(this, "onDragStart", (e) => {
                 let { dragStart: t } = this.props;
                 t(c.B.MOVE, e.clientX, e.clientY);
-            }));
+            });
     }
 }
-v(b, 'defaultProps', { contained: !1 });
+v(b, "defaultProps", { contained: !1 });
 let E = a.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(b);

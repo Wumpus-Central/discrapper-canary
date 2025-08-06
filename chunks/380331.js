@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => z }), n(388685));
+n.d(t, { Z: () => z }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -33,7 +33,7 @@ function P(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -43,15 +43,15 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 P(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -59,11 +59,11 @@ function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -92,29 +92,38 @@ let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     Y = k + j + 2 * U,
     W = 7;
 function K(e) {
-    let { activeIndex: t, categoryIndex: n, analyticsContext: o, categories: s, category: l, handleCategorySelect: u, isWindowFocused: d, useReducedMotion: _ } = e,
-        p = (0, c.JA)('expression-guild-'.concat(n)),
+    let {
+            activeIndex: t,
+            categoryIndex: n,
+            analyticsContext: o,
+            categories: s,
+            category: l,
+            handleCategorySelect: u,
+            isWindowFocused: d,
+            useReducedMotion: _,
+        } = e,
+        p = (0, c.JA)("expression-guild-".concat(n)),
         h = l.type === S.En.GUILD ? null : l.id,
         m = t === n,
         E = l.type === S.En.GUILD ? l.guild : null,
         y = (0, r.jsxs)(
             f.P3F,
             L(w({}, p), {
-                'aria-label': (0, O.Nf)(l, E),
+                "aria-label": (0, O.Nf)(l, E),
                 className: a()({
                     [R.categoryItemGuildCategory]: null != E,
                     [R.categoryItemDefaultCategory]: null == E,
                     [R.categoryItemDefaultCategorySelected]: null == E && m,
-                    [R.categoryItemRecentEmoji]: l.type === S.En.RECENT
+                    [R.categoryItemRecentEmoji]: l.type === S.En.RECENT,
                 }),
                 onClick: () => {
-                    (null != E &&
+                    null != E &&
                         b.default.track(A.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: null == o ? void 0 : o.location,
                             tab: N.X1.EMOJI,
-                            guild_id: E.id
+                            guild_id: E.id,
                         }),
-                        u(n));
+                        u(n);
                 },
                 children: [
                     null != E
@@ -122,7 +131,7 @@ function K(e) {
                               guild: E,
                               isSelected: m,
                               shouldAnimate: !_ && d,
-                              isLocked: l.isNitroLocked
+                              isLocked: l.isNitroLocked,
                           })
                         : null,
                     null == E && null != h
@@ -131,11 +140,11 @@ function K(e) {
                               className: R.categoryIcon,
                               height: k,
                               width: k,
-                              size: 'custom'
+                              size: "custom",
                           })
-                        : null
-                ]
-            })
+                        : null,
+                ],
+            }),
         ),
         T = s[n + 1],
         C = null != T && l.type === S.En.GUILD && T.type !== S.En.GUILD;
@@ -145,19 +154,27 @@ function K(e) {
                   (0, r.jsx)(g.Z, {
                       guild: E,
                       includeActivity: !1,
-                      children: (0, r.jsx)('div', { children: y })
+                      children: (0, r.jsx)("div", { children: y }),
                   }),
-                  C ? (0, r.jsx)('hr', { className: R.guildCategorySeparator }, 'separator') : null
-              ]
+                  C ? (0, r.jsx)("hr", { className: R.guildCategorySeparator }, "separator") : null,
+              ],
           })
         : y;
 }
 let z = (e) => {
-    let { className: t, emojiListRef: n, sectionDescriptors: o, intention: s, channel: c, shouldShowSoundmojiInEmojiPicker: d = !1, showOnlyUnicode: g = !1 } = e,
+    let {
+            className: t,
+            emojiListRef: n,
+            sectionDescriptors: o,
+            intention: s,
+            channel: c,
+            shouldShowSoundmojiInEmojiPicker: d = !1,
+            showOnlyUnicode: g = !1,
+        } = e,
         b = h.kJ.useStore((e) => e.activeCategoryIndex),
         y = (0, T.Ni)({
             sectionDescriptors: o,
-            emojiListRef: n
+            emojiListRef: n,
         }),
         v = (0, _.O)(),
         I = (0, O.kI)(s, c, null == c ? void 0 : c.guild_id, d),
@@ -180,12 +197,12 @@ let z = (e) => {
                                 categoryIndex: t,
                                 handleCategorySelect: y,
                                 isWindowFocused: P,
-                                useReducedMotion: w
+                                useReducedMotion: w,
                             },
-                            t
+                            t,
                         );
                 }),
-            [b, v, A, y, P, w]
+            [b, v, A, y, P, w],
         ),
         L = i.useMemo(() => [8, 8, 0, 8], []),
         x = i.useCallback(
@@ -198,27 +215,31 @@ let z = (e) => {
                 }
                 return Y;
             },
-            [A]
+            [A],
         ),
         {
             nonUnicodeCategoryCount: U,
             firstUnicodeCategoryIndex: z,
             firstUnicodeCategoryOffsetTop: q,
-            rowCountBySection: X
+            rowCountBySection: X,
         } = i.useMemo(() => {
             let e = 0,
                 t = 0,
                 n = 0,
                 r = 0;
             A.forEach((i) => {
-                i.type === S.En.GUILD ? ((t += 1), (n += 1)) : i.type === S.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
+                i.type === S.En.GUILD
+                    ? ((t += 1), (n += 1))
+                    : i.type === S.En.UNICODE
+                      ? (r += 1)
+                      : ((e += 1), (t += 1));
             });
             let i = F + t * V + H;
             return {
                 nonUnicodeCategoryCount: t,
                 firstUnicodeCategoryIndex: t,
                 firstUnicodeCategoryOffsetTop: i,
-                rowCountBySection: [e, n, r]
+                rowCountBySection: [e, n, r],
             };
         }, [A]),
         [Q, J] = i.useState(!0);
@@ -231,14 +252,14 @@ let z = (e) => {
                 let n = null == (t = N.current) ? void 0 : t.getListDimensions();
                 null != n && (e + n.height - B >= q ? J(!1) : J(!0));
             },
-            [q]
+            [q],
         ),
         ee = i.useCallback(
             (e) => {
                 var t;
-                (e(z), null == (t = N.current) || t.scrollTo(q));
+                e(z), null == (t = N.current) || t.scrollTo(q);
             },
-            [q, z]
+            [q, z],
         ),
         et = i.useCallback(
             (e, t) => {
@@ -252,16 +273,16 @@ let z = (e) => {
                 }
                 return t ? M + r : 2 * M;
             },
-            [A, Q]
+            [A, Q],
         ),
         en = i.useMemo(
             () =>
                 function (e, t) {
                     return (0, r.jsx)(i.Fragment, { children: t }, e);
                 },
-            []
+            [],
         ),
-        er = Q ? 'shortcut' : 'hiddenshortcut';
+        er = Q ? "shortcut" : "hiddenshortcut";
     return (0, r.jsx)(m.Z, {
         categoryListRef: N,
         expressionsListRef: n,
@@ -281,19 +302,19 @@ let z = (e) => {
             (0, r.jsx)(
                 f.P3F,
                 {
-                    'aria-hidden': !Q,
-                    'aria-label': C.intl.string(C.t.dT0ct7),
+                    "aria-hidden": !Q,
+                    "aria-label": C.intl.string(C.t.dT0ct7),
                     className: a()(R.unicodeShortcut, { [R.unicodeShortcutInvisible]: !Q }),
                     tabIndex: Q ? 0 : -1,
                     onClick: () => ee(e),
                     children: (0, r.jsx)(f.EO4, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         height: k,
-                        width: k
-                    })
+                        width: k,
+                    }),
                 },
-                er
-            )
+                er,
+            ),
     });
 };

@@ -6,5 +6,5 @@ var i = n(120356),
     s = n(216404);
 function o(e) {
     let { separator: t = !1 } = e;
-    return (0, r.jsx)('div', { className: l()(s.divider, { [s.separator]: t }) });
+    return (0, r.jsx)("div", { className: l()(s.divider, { [s.separator]: t }) });
 }

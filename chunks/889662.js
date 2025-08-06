@@ -1,4 +1,4 @@
-(n.d(e, { default: () => b }), n(388685));
+n.d(e, { default: () => b }), n(388685);
 var r = n(255367),
     l = n(73800),
     c = n(374470),
@@ -11,43 +11,43 @@ var r = n(255367),
 function b(t) {
     let { text: e, target: n, onHeightUpdate: b, onSelect: d } = t,
         f = l.useCallback(() => {
-            ((0, s.Zy)(), (0, c.k)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0)));
+            (0, s.Zy)(), (0, c.k)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0));
         }, [n]),
         [h, y] = (0, o.Z)({
             text: e,
             target: n,
-            onHeightUpdate: b
+            onHeightUpdate: b,
         });
     if (!a.isPlatformEmbedded || !((0, c.k)(n, HTMLInputElement) || (0, c.k)(n, HTMLTextAreaElement))) return null;
     let O =
-        '' !== e
+        "" !== e
             ? [
                   (0, r.jsx)(
                       i.sNh,
                       {
-                          id: 'copy',
+                          id: "copy",
                           label: p.intl.string(p.t.OpuAlJ),
-                          hint: (0, a.isMac)() ? '\u2318C' : 'Ctrl+C',
-                          action: () => u.ZP.copy(e)
+                          hint: (0, a.isMac)() ? "\u2318C" : "Ctrl+C",
+                          action: () => u.ZP.copy(e),
                       },
-                      'copy'
+                      "copy",
                   ),
                   (0, r.jsx)(
                       i.sNh,
                       {
-                          id: 'cut',
+                          id: "cut",
                           label: p.intl.string(p.t.pNPVhY),
-                          hint: (0, a.isMac)() ? '\u2318X' : 'Ctrl+X',
-                          action: () => setTimeout(() => u.ZP.cut(), 0)
+                          hint: (0, a.isMac)() ? "\u2318X" : "Ctrl+X",
+                          action: () => setTimeout(() => u.ZP.cut(), 0),
                       },
-                      'cut'
-                  )
+                      "cut",
+                  ),
               ]
             : null;
     return (0, r.jsxs)(i.v2r, {
-        navId: 'textarea-context',
+        navId: "textarea-context",
         onClose: f,
-        'aria-label': p.intl.string(p.t.NWlDSE),
+        "aria-label": p.intl.string(p.t.NWlDSE),
         onSelect: d,
         children: [
             (0, r.jsx)(i.kSQ, { children: h }),
@@ -56,13 +56,13 @@ function b(t) {
                 children: [
                     O,
                     (0, r.jsx)(i.sNh, {
-                        id: 'paste',
+                        id: "paste",
                         label: p.intl.string(p.t.lMUxVl),
-                        hint: (0, a.isMac)() ? '\u2318V' : 'Ctrl+V',
-                        action: () => setTimeout(() => u.ZP.paste(), 0)
-                    })
-                ]
-            })
-        ]
+                        hint: (0, a.isMac)() ? "\u2318V" : "Ctrl+V",
+                        action: () => setTimeout(() => u.ZP.paste(), 0),
+                    }),
+                ],
+            }),
+        ],
     });
 }

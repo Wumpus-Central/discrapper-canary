@@ -1,4 +1,4 @@
-(n.d(t, { g: () => E }), n(539854));
+n.d(t, { g: () => E }), n(539854);
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -24,13 +24,15 @@ function E(e) {
         E = (0, r.e7)([o.Z], () => (0, s.wj)(o.Z.theme)),
         { multiAccountUsers: C } = (0, f.L)(),
         O = (e) => {
-            e !== (null == t ? void 0 : t.id) && (m.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: x.jXE.USER_PROFILE } }), g.yD(e));
+            e !== (null == t ? void 0 : t.id) &&
+                (m.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: x.jXE.USER_PROFILE } }),
+                g.yD(e));
         },
         v = C.map((r) => {
             let s = new c.Z(r),
                 o = s.id === (null == t ? void 0 : t.id),
                 d = r.tokenStatus === h.q.INVALID,
-                u = n ? null : '#'.concat(s.discriminator);
+                u = n ? null : "#".concat(s.discriminator);
             return (0, i.jsx)(
                 a.sNh,
                 {
@@ -38,55 +40,59 @@ function E(e) {
                     focusedClassName: j.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
-                        return (0, i.jsxs)('div', {
+                        return (0, i.jsxs)("div", {
                             className: j.userMenuItem,
                             children: [
                                 (0, i.jsx)(a.qEK, {
                                     src: s.getAvatarURL(void 0, 40),
                                     size: a.EFr.SIZE_24,
-                                    'aria-label': r.username
+                                    "aria-label": r.username,
                                 }),
-                                (0, i.jsxs)('div', {
+                                (0, i.jsxs)("div", {
                                     className: j.userMenuUsername,
                                     children: [
                                         (0, i.jsx)(a.Text, {
                                             className: j.userMenuText,
-                                            variant: 'text-sm/normal',
+                                            variant: "text-sm/normal",
                                             children: p.ZP.getUserTag(s, {
-                                                mode: 'username',
-                                                identifiable: n ? 'never' : 'always'
-                                            })
+                                                mode: "username",
+                                                identifiable: n ? "never" : "always",
+                                            }),
                                         }),
                                         !s.hasUniqueUsername() &&
                                             (0, i.jsx)(a.Text, {
                                                 className: j.userMenuDiscriminator,
-                                                variant: 'text-sm/normal',
-                                                children: u
-                                            })
-                                    ]
+                                                variant: "text-sm/normal",
+                                                children: u,
+                                            }),
+                                    ],
                                 }),
                                 o &&
                                     (0, i.jsx)(a.owK, {
-                                        size: 'sm',
+                                        size: "sm",
                                         color: (0, l.Lq)(t ? x.Ilk.WHITE_500 : x.Ilk.BRAND_500),
-                                        secondaryColor: (0, l.Lq)((t && E) || (t && !E) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
-                                        className: j.activeIcon
+                                        secondaryColor: (0, l.Lq)(
+                                            (t && E) || (t && !E) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500,
+                                        ),
+                                        className: j.activeIcon,
                                     }),
                                 d &&
                                     (0, i.jsx)(a.Mgn, {
                                         color: (0, l.Lq)(x.Ilk.RED_400),
-                                        secondaryColor: (0, l.Lq)((t && E) || (t && !E) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
-                                        size: 'xs',
-                                        className: j.activeIcon
-                                    })
-                            ]
+                                        secondaryColor: (0, l.Lq)(
+                                            (t && E) || (t && !E) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500,
+                                        ),
+                                        size: "xs",
+                                        className: j.activeIcon,
+                                    }),
+                            ],
                         });
                     },
                     action: () => {
-                        (null == e || e(), d ? (0, b.Z)() : O(s.id));
-                    }
+                        null == e || e(), d ? (0, b.Z)() : O(s.id);
+                    },
                 },
-                s.id
+                s.id,
             );
         });
     return (
@@ -95,14 +101,14 @@ function E(e) {
                 children: [
                     (0, i.jsx)(a.Clw, {}),
                     (0, i.jsx)(a.sNh, {
-                        id: 'manage-accounts',
+                        id: "manage-accounts",
                         label: _.intl.string(_.t.WbFpq6),
                         action: () => {
-                            (null == e || e(), (0, b.Z)());
-                        }
-                    })
-                ]
-            })
+                            null == e || e(), (0, b.Z)();
+                        },
+                    }),
+                ],
+            }),
         ),
         v
     );

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => x,
-    g: () => g
+    g: () => g,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     o = n(73800),
     i = n(434650),
@@ -21,32 +21,37 @@ function g(e) {
         { guildId: s, powerup: u, className: d } = e,
         g = (0, a.Z)(s, u),
         x = g.type !== p.A3.LEVEL_ACTIVATED,
-        _ = (0, l.Z)(s, u, 'GuildPowerupCardBodyFooter');
+        _ = (0, l.Z)(s, u, "GuildPowerupCardBodyFooter");
     return (
         (null == (t = g.sourceEntitlement) ? void 0 : t.ends_at) != null
             ? (i = {
-                  type: 'expiring',
-                  expiringAt: g.sourceEntitlement.ends_at
+                  type: "expiring",
+                  expiringAt: g.sourceEntitlement.ends_at,
               })
             : _ && null != u.storeRemovalDate
               ? (i = {
-                    type: 'removing',
-                    removingAt: u.storeRemovalDate
+                    type: "removing",
+                    removingAt: u.storeRemovalDate,
                 })
               : g.type === p.A3.LEVEL_ACTIVATED
                 ? (i = {
-                      type: 'active',
-                      statusText: m.intl.formatToPlainString(f.default.WRRYUV, { perkName: null != (o = null == (n = g.sourcePowerup) ? void 0 : n.title) ? o : m.intl.string(m.t.BfF6EB) })
+                      type: "active",
+                      statusText: m.intl.formatToPlainString(f.default.WRRYUV, {
+                          perkName:
+                              null != (o = null == (n = g.sourcePowerup) ? void 0 : n.title)
+                                  ? o
+                                  : m.intl.string(m.t.BfF6EB),
+                      }),
                   })
                 : g.type === p.A3.POWERUP_ACTIVATED &&
                   (i = {
-                      type: 'active',
-                      statusText: m.intl.string(f.default.FFLkm5)
+                      type: "active",
+                      statusText: m.intl.string(f.default.FFLkm5),
                   }),
         (0, r.jsx)(c.uf, {
             status: i,
             cost: x ? u.cost : void 0,
-            className: d
+            className: d,
         })
     );
 }
@@ -57,7 +62,7 @@ function x(e) {
         b = (0, a.Z)(n, f),
         j = b.type !== p.A3.INACTIVE,
         h = (null == (t = b.sourceEntitlement) ? void 0 : t.ends_at) != null,
-        E = (0, l.Z)(n, f, 'GuildPowerupCard'),
+        E = (0, l.Z)(n, f, "GuildPowerupCard"),
         C = o.useRef(null),
         { onShowMore: O } = (0, d.ZP)(n, f),
         [I, y] = o.useState(!1),
@@ -75,17 +80,17 @@ function x(e) {
                 onMouseLeave: () => (null == x ? void 0 : x(!1)),
                 className: g,
                 ref: (e) => {
-                    ((C.current = e), (P.current = e));
+                    (C.current = e), (P.current = e);
                 },
-                children: _
+                children: _,
             }),
             !E &&
                 v &&
                 (0, r.jsx)(u.Z, {
                     powerup: f,
                     targetRef: C,
-                    isCardVisible: I
-                })
-        ]
+                    isCardVisible: I,
+                }),
+        ],
     });
 }

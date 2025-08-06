@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,7 +50,7 @@ let h = () => {
     return (
         i.useEffect(() => {
             if (e) {
-                let e = u.Z.getCurrentConfig({ location: 'InteractionRequired' }).enabled;
+                let e = u.Z.getCurrentConfig({ location: "InteractionRequired" }).enabled;
                 t.current = (0, s.h7j)((t) =>
                     e
                         ? (0, r.jsx)(
@@ -58,31 +58,31 @@ let h = () => {
                               p(
                                   {
                                       title: f.intl.string(f.t.dLLxCw),
-                                      subtitle: f.intl.string(f.t['64lmt7']),
+                                      subtitle: f.intl.string(f.t["64lmt7"]),
                                       actions: [
                                           {
                                               text: f.intl.string(f.t.BddRzc),
                                               onClick: () => {
-                                                  (_(), t.onClose());
-                                              }
-                                          }
-                                      ]
+                                                  _(), t.onClose();
+                                              },
+                                          },
+                                      ],
                                   },
-                                  t
-                              )
+                                  t,
+                              ),
                           )
                         : (0, r.jsx)(
                               c.default,
                               p(
                                   {
                                       title: f.intl.string(f.t.dLLxCw),
-                                      body: f.intl.string(f.t['64lmt7']),
+                                      body: f.intl.string(f.t["64lmt7"]),
                                       onConfirm: _,
-                                      confirmText: f.intl.string(f.t.BddRzc)
+                                      confirmText: f.intl.string(f.t.BddRzc),
                                   },
-                                  t
-                              )
-                          )
+                                  t,
+                              ),
+                          ),
                 );
             } else n();
             return () => {

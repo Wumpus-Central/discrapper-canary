@@ -15,18 +15,18 @@ let s = (0, u.Z)(
             let { userId: t, onSelect: n } = e,
                 i = (0, a.Z)({
                     id: t,
-                    label: f.intl.string(f.t['/AXYnJ']),
-                    showWithoutDeveloperMode: !0
+                    label: f.intl.string(f.t["/AXYnJ"]),
+                    showWithoutDeveloperMode: !0,
                 });
             return (0, r.jsx)(o.v2r, {
-                navId: 'unknown-user-context',
+                navId: "unknown-user-context",
                 onClose: c.Zy,
-                'aria-label': f.intl.string(f.t.liqwPD),
+                "aria-label": f.intl.string(f.t.liqwPD),
                 onSelect: n,
-                children: (0, r.jsx)(o.kSQ, { children: i })
+                children: (0, r.jsx)(o.kSQ, { children: i }),
             });
         },
-        { object: b.qAy.CONTEXT_MENU }
+        { object: b.qAy.CONTEXT_MENU },
     ),
-    [l.Z.CONTEXT_MENU, l.Z.UNKNOWN_USER_MENU]
+    [l.Z.CONTEXT_MENU, l.Z.UNKNOWN_USER_MENU],
 );

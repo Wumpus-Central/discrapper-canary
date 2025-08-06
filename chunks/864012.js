@@ -1,1 +1,1 @@
-e.exports = { slideContainer: 'slideContainer__01ce3' };
+e.exports = { slideContainer: "slideContainer__01ce3" };

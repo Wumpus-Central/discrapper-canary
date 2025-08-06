@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => x }), r(388685), r(539854));
+r.d(t, { Z: () => x }), r(388685), r(539854);
 var n = r(255367),
     a = r(73800),
     i = r(120356),
@@ -12,24 +12,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -46,33 +46,35 @@ function p(e) {
                         n,
                         a = {},
                         i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]));
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
                     return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
             }
             return a;
-        })(e, ['platform']);
+        })(e, ["platform"]);
     switch (t) {
         case o.z.DESKTOP:
-            return (0, n.jsx)(s.pzj, m({ size: 'xs' }, r));
+            return (0, n.jsx)(s.pzj, m({ size: "xs" }, r));
         case o.z.XBOX:
-            return (0, n.jsx)(s.Mko, m({ size: 'xs' }, r));
+            return (0, n.jsx)(s.Mko, m({ size: "xs" }, r));
         case o.z.PLAYSTATION:
-            return (0, n.jsx)(s.Tsp, m({ size: 'xs' }, r));
+            return (0, n.jsx)(s.Tsp, m({ size: "xs" }, r));
         case o.z.NINTENDO:
-            return (0, n.jsx)(s.aPH, m({ size: 'xs' }, r));
+            return (0, n.jsx)(s.aPH, m({ size: "xs" }, r));
         default:
             return null;
     }
 }
 function f(e) {
     let { platforms: t } = e;
-    return (0, n.jsx)('div', {
+    return (0, n.jsx)("div", {
         className: l()(u.row, u.gapSm),
-        style: { alignItems: 'center' },
+        style: { alignItems: "center" },
         children: t.map((e) =>
             (0, n.jsx)(
                 c.ua7,
@@ -109,13 +111,13 @@ function f(e) {
                                   })(Object(a)).forEach(function (e) {
                                       Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
-                            r)
+                            r),
                         );
-                    }
+                    },
                 },
-                e
-            )
-        )
+                e,
+            ),
+        ),
     });
 }
 function x(e) {
@@ -123,12 +125,15 @@ function x(e) {
         i = a.useMemo(() => {
             let e = new Set(t.platforms),
                 r = [...e];
-            return (!e.has(o.z.DESKTOP) && (e.has(o.z.MACOS) || e.has(o.z.LINUX)) && r.push(o.z.DESKTOP), r.filter((e) => g.includes(e)));
+            return (
+                !e.has(o.z.DESKTOP) && (e.has(o.z.MACOS) || e.has(o.z.LINUX)) && r.push(o.z.DESKTOP),
+                r.filter((e) => g.includes(e))
+            );
         }, [t.platforms]);
     return 0 === i.length
         ? null
-        : (0, n.jsx)('div', {
+        : (0, n.jsx)("div", {
               className: l()(u.column, u.gapLg, r),
-              children: i.length > 0 && (0, n.jsx)(f, { platforms: i })
+              children: i.length > 0 && (0, n.jsx)(f, { platforms: i }),
           });
 }

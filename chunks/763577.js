@@ -11,8 +11,8 @@ function d() {
     return (0, n.jsx)(l.Kq, {
         gap: 24,
         padding: 8,
-        style: { boxSizing: 'border-box' },
-        children: e
+        style: { boxSizing: "border-box" },
+        children: e,
     });
 }
 function u(e) {
@@ -25,43 +25,43 @@ function u(e) {
         {
             gap: 8,
             children: [
-                (0, n.jsx)('label', { children: t }),
+                (0, n.jsx)("label", { children: t }),
                 (0, n.jsxs)(l.Kq, {
-                    justify: 'space-between',
-                    direction: 'horizontal',
-                    align: 'center',
+                    justify: "space-between",
+                    direction: "horizontal",
+                    align: "center",
                     children: [
-                        (0, n.jsx)('input', {
-                            type: 'file',
-                            accept: '.riv',
+                        (0, n.jsx)("input", {
+                            type: "file",
+                            accept: ".riv",
                             onChange: (e) => {
                                 var t;
                                 let n = null == (t = e.target.files) ? void 0 : t[0];
                                 if (null == n) return;
                                 let r = new FileReader();
-                                ((r.onload = (e) => {
+                                (r.onload = (e) => {
                                     var t;
                                     let n = null == (t = e.target) ? void 0 : t.result;
                                     (0, s.JG)(a, n);
                                 }),
-                                    r.readAsArrayBuffer(n));
+                                    r.readAsArrayBuffer(n);
                             },
-                            ref: d
+                            ref: d,
                         }),
                         (0, n.jsx)(o.h, {
-                            'aria-label': 'Clear override for '.concat(t),
+                            "aria-label": "Clear override for ".concat(t),
                             onClick: () => {
-                                (null != d.current && (d.current.value = ''), (0, s.JG)(a, null));
+                                null != d.current && (d.current.value = ""), (0, s.JG)(a, null);
                             },
                             icon: c.XHJ,
-                            variant: 'critical-primary',
-                            size: 'sm',
-                            disabled: null == u
-                        })
-                    ]
-                })
-            ]
+                            variant: "critical-primary",
+                            size: "sm",
+                            disabled: null == u,
+                        }),
+                    ],
+                }),
+            ],
         },
-        t
+        t,
     );
 }

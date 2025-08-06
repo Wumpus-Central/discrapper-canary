@@ -16,10 +16,10 @@ var a = r(44837),
         var t,
             r =
                 ((t = (function () {
-                    if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
-                    if ('function' == typeof Proxy) return !0;
+                    if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
+                    if ("function" == typeof Proxy) return !0;
                     try {
-                        return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
+                        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
                     } catch (e) {
                         return !1;
                     }
@@ -27,14 +27,19 @@ var a = r(44837),
                 function () {
                     var e,
                         r = (0, l.Z)(b);
-                    return ((e = t ? Reflect.construct(r, arguments, (0, l.Z)(this).constructor) : r.apply(this, arguments)), (0, c.Z)(this, e));
+                    return (
+                        (e = t
+                            ? Reflect.construct(r, arguments, (0, l.Z)(this).constructor)
+                            : r.apply(this, arguments)),
+                        (0, c.Z)(this, e)
+                    );
                 });
         function b(e) {
             var t;
             return (
                 (0, n.Z)(this, b),
                 (t = r.call(this, e)),
-                (0, u.Z)((0, o.Z)(t), 'handleClick', function () {
+                (0, u.Z)((0, o.Z)(t), "handleClick", function () {
                     t.setState({ expanded: !t.state.expanded });
                 }),
                 (t.state = { expanded: !1 }),
@@ -44,7 +49,7 @@ var a = r(44837),
         return (
             (0, s.Z)(b, [
                 {
-                    key: 'render',
+                    key: "render",
                     value: function () {
                         var e = this.props,
                             t = e.styling,
@@ -53,29 +58,29 @@ var a = r(44837),
                             s = e.renderChildNodes,
                             o = e.nodeType;
                         return this.state.expanded
-                            ? f.createElement('div', t('itemRange', this.state.expanded), s(this.props, r, n))
+                            ? f.createElement("div", t("itemRange", this.state.expanded), s(this.props, r, n))
                             : f.createElement(
-                                  'div',
-                                  (0, a.Z)({}, t('itemRange', this.state.expanded), { onClick: this.handleClick }),
+                                  "div",
+                                  (0, a.Z)({}, t("itemRange", this.state.expanded), { onClick: this.handleClick }),
                                   f.createElement(h.Z, {
                                       nodeType: o,
                                       styling: t,
                                       expanded: !1,
                                       onClick: this.handleClick,
-                                      arrowStyle: 'double'
+                                      arrowStyle: "double",
                                   }),
-                                  ''.concat(r, ' ... ').concat(n)
+                                  "".concat(r, " ... ").concat(n),
                               );
-                    }
-                }
+                    },
+                },
             ]),
             b
         );
     })(f.Component);
-(0, u.Z)(p, 'propTypes', {
+(0, u.Z)(p, "propTypes", {
     styling: d().func.isRequired,
     from: d().number.isRequired,
     to: d().number.isRequired,
     renderChildNodes: d().func.isRequired,
-    nodeType: d().string.isRequired
+    nodeType: d().string.isRequired,
 });

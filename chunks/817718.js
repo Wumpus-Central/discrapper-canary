@@ -3,7 +3,7 @@ n.d(t, {
     XM: () => d,
     hd: () => c,
     lI: () => o,
-    py: () => u
+    py: () => u,
 });
 var r = n(481060),
     a = n(819640),
@@ -11,33 +11,33 @@ var r = n(481060),
     l = n(981631);
 let s = () => a.Z.hasLayers() || (0, r.$sL)(),
     o = {
-        binds: ['right'],
+        binds: ["right"],
         comboKeysBindGlobal: !0,
         action() {
-            if (!s()) return (i.S.dispatch(l.CkL.CAROUSEL_NEXT), !1);
-        }
+            if (!s()) return i.S.dispatch(l.CkL.CAROUSEL_NEXT), !1;
+        },
     },
     c = {
-        binds: ['left'],
+        binds: ["left"],
         comboKeysBindGlobal: !0,
         action() {
-            if (!s()) return (i.S.dispatch(l.CkL.CAROUSEL_PREV), !1);
-        }
+            if (!s()) return i.S.dispatch(l.CkL.CAROUSEL_PREV), !1;
+        },
     },
     d = {
-        binds: ['right', 'down', 'space'],
+        binds: ["right", "down", "space"],
         comboKeysBindGlobal: !0,
-        action: () => (i.S.dispatch(l.CkL.MODAL_CAROUSEL_NEXT), !1)
+        action: () => (i.S.dispatch(l.CkL.MODAL_CAROUSEL_NEXT), !1),
     },
     u = {
-        binds: ['left', 'up'],
+        binds: ["left", "up"],
         comboKeysBindGlobal: !0,
-        action: () => (i.S.dispatch(l.CkL.MODAL_CAROUSEL_PREV), !1)
+        action: () => (i.S.dispatch(l.CkL.MODAL_CAROUSEL_PREV), !1),
     },
     p = {
-        binds: ['esc'],
+        binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-            if (i.S.hasSubscribers(l.CkL.MODAL_CLOSE)) return (i.S.dispatch(l.CkL.MODAL_CLOSE), !1);
-        }
+            if (i.S.hasSubscribers(l.CkL.MODAL_CLOSE)) return i.S.dispatch(l.CkL.MODAL_CLOSE), !1;
+        },
     };

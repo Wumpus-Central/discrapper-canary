@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,9 +63,9 @@ function d(e) {
                 embeddedActivity: t,
                 joinability: n,
                 currentEmbeddedActivity: i,
-                channel: o
+                channel: o,
             }),
-        [t, n, i, o]
+        [t, n, i, o],
     );
 }
 function f(e) {
@@ -75,19 +75,19 @@ function f(e) {
             disabled: !1,
             isJoinAction: !c,
             text: c ? a.intl.string(a.t.I0v0Qk) : a.intl.string(a.t.sqe0ho),
-            tooltip: void 0
+            tooltip: void 0,
         },
         f = (0, i.WS)(s);
     if (null != t && null != r && t.launchId === r.launchId)
         return u(l({}, d), {
             disabled: !0,
             text: a.intl.string(a.t.DPfdsr),
-            tooltip: a.intl.string(a.t.wJNK8P)
+            tooltip: a.intl.string(a.t.wJNK8P),
         });
     if (c)
         return u(l({}, d), {
             disabled: !f,
-            tooltip: f ? void 0 : a.intl.string(a.t.f41E1t)
+            tooltip: f ? void 0 : a.intl.string(a.t.f41E1t),
         });
     if (null != n && n !== o.Fw.CAN_JOIN) {
         let e;
@@ -96,7 +96,7 @@ function f(e) {
                 e = a.intl.string(a.t.hHGrW1);
                 break;
             case o.Fw.ACTIVITY_AGE_GATED:
-                e = a.intl.string(a.t['4WuFRE']);
+                e = a.intl.string(a.t["4WuFRE"]);
                 break;
             case o.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
                 e = a.intl.string(a.t.uGDCc3);
@@ -118,7 +118,7 @@ function f(e) {
         }
         return u(l({}, d), {
             disabled: !0,
-            tooltip: e
+            tooltip: e,
         });
     }
     return d;

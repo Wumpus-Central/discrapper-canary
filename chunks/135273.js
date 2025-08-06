@@ -6,15 +6,15 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-(n.d(t, { Z: () => l }), n(980754), n(290780), n(539854));
+n.d(t, { Z: () => l }), n(980754), n(290780), n(539854);
 let o = null != (r = globalThis.__getTotalRequireTime) ? r : () => 0,
-    a = 'undefined' != typeof performance;
+    a = "undefined" != typeof performance;
 class s {
     get isTracing() {
         return !!a && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
@@ -23,45 +23,46 @@ class s {
         return this.endTime_;
     }
     set endTime(e) {
-        ((this.endTime_ = e), (this.isTracing_ = !0));
+        (this.endTime_ = e), (this.isTracing_ = !0);
     }
     resumeTracing() {
-        (this.isTracing ||
+        this.isTracing ||
             (this.logGroups.unshift({
                 index: this.logGroups.length,
                 timestamp: Date.now(),
                 logs: [],
-                nativeLogs: []
+                nativeLogs: [],
             }),
             (this.logs = this.logGroups[0].logs)),
-            (this.endTime = Date.now() + 10000));
+            (this.endTime = Date.now() + 10000);
     }
     mark(e, t, n) {
         this.isTracing &&
             (this.logs.push({
                 emoji: e,
-                prefix: ''.concat(this.prefix),
+                prefix: "".concat(this.prefix),
                 log: t,
                 delta: n,
-                timestamp: Date.now()
+                timestamp: Date.now(),
             }),
             this.addImportLogDetail());
     }
     markAndLog(e, t, n, r) {
-        (e.log(n),
+        e.log(n),
             this.isTracing &&
                 (this.logs.push({
                     emoji: t,
                     prefix: this.prefix,
                     log: n,
                     delta: r,
-                    timestamp: Date.now()
+                    timestamp: Date.now(),
                 }),
-                this.addImportLogDetail()));
+                this.addImportLogDetail());
     }
     addImportLogDetail() {
         let e = o();
-        e - this.lastImportDuration > 25 && (this.addDetail('JS Imports', Math.ceil(e) + 'ms'), (this.lastImportDuration = e));
+        e - this.lastImportDuration > 25 &&
+            (this.addDetail("JS Imports", Math.ceil(e) + "ms"), (this.lastImportDuration = e));
     }
     markWithDelta(e, t) {
         let n = this.logs[this.logs.length - 1];
@@ -79,7 +80,7 @@ class s {
             emoji: e,
             log: t,
             timestamp: n,
-            prefix: null != (i = null == (r = this.logs[o]) ? void 0 : r.prefix) ? i : ''
+            prefix: null != (i = null == (r = this.logs[o]) ? void 0 : r.prefix) ? i : "",
         });
     }
     addDetail(e, t) {
@@ -87,43 +88,43 @@ class s {
             this.logs.push({
                 emoji: this.logs[this.logs.length - 1].emoji,
                 prefix: this.prefix,
-                log: '  \u21AA '.concat(e, ' ').concat(t)
+                log: "  \u21AA ".concat(e, " ").concat(t),
             });
     }
     time(e, t, n) {
         if (!this.isTracing) return n();
         let r = this.prefix;
-        (this.mark(e, 'Start '.concat(t)), (this.prefix += '| '));
+        this.mark(e, "Start ".concat(t)), (this.prefix += "| ");
         let i = Date.now(),
             o = n(),
             a = Date.now() - i;
-        return ((this.prefix = r), this.mark(e, 'Finish '.concat(t), a), o);
+        return (this.prefix = r), this.mark(e, "Finish ".concat(t), a), o;
     }
     async timeAsync(e, t, n) {
         if (!this.isTracing) return n();
-        this.mark(e, 'Start '.concat(t));
+        this.mark(e, "Start ".concat(t));
         let r = Date.now(),
             i = await n(),
             o = Date.now() - r;
-        return (this.mark(e, 'Finish '.concat(t), o), i);
+        return this.mark(e, "Finish ".concat(t), o), i;
     }
     setServerTrace(e) {
         this.logGroups[0].serverTrace = e;
     }
     constructor() {
-        (i(this, 'isTracing_', !0),
-            i(this, 'endTime_', Date.now() + 15000),
-            i(this, 'lastImportDuration', 0),
-            i(this, 'logGroups', [
+        i(this, "isTracing_", !0),
+            i(this, "endTime_", Date.now() + 15000),
+            i(this, "lastImportDuration", 0),
+            i(this, "logGroups", [
                 {
                     index: 0,
                     timestamp: Date.now(),
                     logs: [],
-                    nativeLogs: []
-                }
+                    nativeLogs: [],
+                },
             ]),
-            i(this, 'logs', this.logGroups[0].logs),
-            i(this, 'prefix', ''));
+            i(this, "logs", this.logGroups[0].logs),
+            i(this, "prefix", "");
     }
 }
 let l = new s();

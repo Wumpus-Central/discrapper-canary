@@ -1,12 +1,12 @@
-(r.d(e, {
+r.d(e, {
     ParagraphFormFieldModal: () => g,
-    TextInputFormFieldModal: () => b
+    TextInputFormFieldModal: () => b,
 }),
     r(953529),
     r(388685),
     r(704826),
     r(35282),
-    r(781311));
+    r(781311);
 var n = r(255367),
     i = r(73800),
     o = r(481060),
@@ -19,43 +19,43 @@ function d(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                })
+                }),
             )),
             n.forEach(function (e) {
                 var n;
-                ((n = r[e]),
+                (n = r[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (t[e] = n));
-            }));
+                        : (t[e] = n);
+            });
     }
     return t;
 }
 function p(t) {
     var e, r, l;
     let { type: p, title: b, description: g, field: y, onSave: _, onClose: f } = t,
-        [m, O] = i.useState(null != (e = null == y ? void 0 : y.label) ? e : ''),
+        [m, O] = i.useState(null != (e = null == y ? void 0 : y.label) ? e : ""),
         [j, x] = i.useState(null),
         h = async () => {
             null != j && x(null);
             let t = m.trim();
-            if ('' === t) return void x(u.intl.string(u.t['G+TI4+']));
+            if ("" === t) return void x(u.intl.string(u.t["G+TI4+"]));
             try {
-                (await _({
+                await _({
                     field_type: p,
                     label: t,
-                    required: !0
+                    required: !0,
                 }),
-                    f());
+                    f();
             } catch (t) {
                 x(new a.Hx(t).getAnyErrorMessage());
             }
@@ -73,13 +73,13 @@ function p(t) {
                 children: (0, n.jsx)(o.oil, {
                     onChange: (t) => {
                         null != j && x(null);
-                        let e = t.replace(/(\r\n|\n|\r)/g, ' ');
-                        (e.length > s.XN && (e = e.slice(0, s.XN)), O(e));
+                        let e = t.replace(/(\r\n|\n|\r)/g, " ");
+                        e.length > s.XN && (e = e.slice(0, s.XN)), O(e);
                     },
                     placeholder: u.intl.string(u.t.fqVmbG),
                     value: m,
-                    onKeyDown: (t) => 'Enter' === t.key && h()
-                })
+                    onKeyDown: (t) => "Enter" === t.key && h(),
+                }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
@@ -93,7 +93,7 @@ function p(t) {
               })(Object(l)).forEach(function (t) {
                   Object.defineProperty(r, t, Object.getOwnPropertyDescriptor(l, t));
               }),
-        r)
+        r),
     );
 }
 function b(t) {
@@ -102,11 +102,11 @@ function b(t) {
         d(
             {
                 title: u.intl.string(u.t.w6Q9w8),
-                description: u.intl.string(u.t['A6M+qq']),
-                type: l.QJ.TEXT_INPUT
+                description: u.intl.string(u.t["A6M+qq"]),
+                type: l.QJ.TEXT_INPUT,
             },
-            t
-        )
+            t,
+        ),
     );
 }
 function g(t) {
@@ -116,9 +116,9 @@ function g(t) {
             {
                 title: u.intl.string(u.t.gG0JBA),
                 description: u.intl.string(u.t.SMX0iY),
-                type: l.QJ.PARAGRAPH
+                type: l.QJ.PARAGRAPH,
             },
-            t
-        )
+            t,
+        ),
     );
 }

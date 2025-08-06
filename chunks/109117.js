@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,20 +25,20 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let p = window.DiscordNative,
-    h = ''.concat(d.rMx.APP_NATIVE_CRASH, 'Storage');
+    h = "".concat(d.rMx.APP_NATIVE_CRASH, "Storage");
 function m(e) {
     var t, n, r, i;
     return {
@@ -46,7 +46,7 @@ function m(e) {
         electron_crash_reporter_did_crash: !0,
         child_process_crash_type: null != (n = null == (t = e.type) ? void 0 : t.toLowerCase()) ? n : null,
         child_process_crash_reason: null != (r = e.reason) ? r : null,
-        child_process_crash_exit_code: null != (i = e.exitCode) ? i : null
+        child_process_crash_exit_code: null != (i = e.exitCode) ? i : null,
     };
 }
 function g(e, t) {
@@ -57,11 +57,14 @@ async function E() {
     var e;
     if (__OVERLAY__) return;
     let t = null == p || null == (e = p.processUtils) ? void 0 : e.getLastCrash;
-    if (((0, l.isDesktop)() && c.ZP.on('CRASH_REPORTER_NEW_CRASH', g), null == t)) return void console.log('AppCrashedFatalReport: getLastCrash not supported.');
+    if (((0, l.isDesktop)() && c.ZP.on("CRASH_REPORTER_NEW_CRASH", g), null == t))
+        return void console.log("AppCrashedFatalReport: getLastCrash not supported.");
     let n = await t(),
         { didCrashReporterSeeCrash: r, didCrashOrUncleanExit: o } = b(i.K.get(h, {}), n),
         a = O(r, o, n);
-    (s.default.track(d.rMx.APP_NATIVE_CRASH, a), i.K.set(h, { lastId: null == n ? void 0 : n.id }), o && setTimeout(async () => await y(), 10000));
+    s.default.track(d.rMx.APP_NATIVE_CRASH, a),
+        i.K.set(h, { lastId: null == n ? void 0 : n.id }),
+        o && setTimeout(async () => await y(), 10000);
 }
 function b(e, t) {
     var n;
@@ -70,16 +73,18 @@ function b(e, t) {
         o = r || (null != i && 0 !== i);
     return {
         didCrashReporterSeeCrash: r,
-        didCrashOrUncleanExit: o
+        didCrashOrUncleanExit: o,
     };
 }
 async function y() {
     var e, t;
     if (null != (t = null == (e = a.default.getCurrentUser()) ? void 0 : e.isStaff()) && t)
         try {
-            (await o.Z.getMediaEngine().writeAudioDebugState(), await (0, u.E)(d.GU0.RTC), console.log('Successfully uploaded debug files'));
+            await o.Z.getMediaEngine().writeAudioDebugState(),
+                await (0, u.E)(d.GU0.RTC),
+                console.log("Successfully uploaded debug files");
         } catch (e) {
-            console.log('Failed to upload debug files');
+            console.log("Failed to upload debug files");
         }
 }
 function O(e, t, n) {
@@ -88,7 +93,9 @@ function O(e, t, n) {
         return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e];
     }
     function S(e) {
-        return (null == n ? void 0 : n.storedInformation) == null || null == n.storedInformation[e] ? null : n.storedInformation[e];
+        return (null == n ? void 0 : n.storedInformation) == null || null == n.storedInformation[e]
+            ? null
+            : n.storedInformation[e];
     }
     let A = {
         did_crash: t,
@@ -104,12 +111,20 @@ function O(e, t, n) {
         was_receiving_stream: T(r.X4.IsReceivingStream),
         video_media_session_id: S(r.X4.VideoMediaSessionId),
         stream_media_session_id: S(r.X4.StreamMediaSessionId),
-        last_memory_usage_kb: null != (f = null == n || null == (i = n.lastMemoryInformation) ? void 0 : i.memoryUsageKB) ? f : null,
-        last_used_js_heap_size_kb: null != (p = null == n || null == (o = n.lastMemoryInformation) ? void 0 : o.usedJSHeapSizeKB) ? p : null,
-        last_memory_usage_uptime: null != (h = null == n || null == (a = n.lastMemoryInformation) ? void 0 : a.uptimeSeconds) ? h : null,
-        highest_memory_usage_kb: null != (m = null == n || null == (s = n.highestMemoryInformation) ? void 0 : s.memoryUsageKB) ? m : null,
-        highest_used_js_heap_size_kb: null != (g = null == n || null == (l = n.highestMemoryInformation) ? void 0 : l.usedJSHeapSizeKB) ? g : null,
-        highest_memory_usage_uptime: null != (E = null == n || null == (c = n.highestMemoryInformation) ? void 0 : c.uptimeSeconds) ? E : null
+        last_memory_usage_kb:
+            null != (f = null == n || null == (i = n.lastMemoryInformation) ? void 0 : i.memoryUsageKB) ? f : null,
+        last_used_js_heap_size_kb:
+            null != (p = null == n || null == (o = n.lastMemoryInformation) ? void 0 : o.usedJSHeapSizeKB) ? p : null,
+        last_memory_usage_uptime:
+            null != (h = null == n || null == (a = n.lastMemoryInformation) ? void 0 : a.uptimeSeconds) ? h : null,
+        highest_memory_usage_kb:
+            null != (m = null == n || null == (s = n.highestMemoryInformation) ? void 0 : s.memoryUsageKB) ? m : null,
+        highest_used_js_heap_size_kb:
+            null != (g = null == n || null == (l = n.highestMemoryInformation) ? void 0 : l.usedJSHeapSizeKB)
+                ? g
+                : null,
+        highest_memory_usage_uptime:
+            null != (E = null == n || null == (c = n.highestMemoryInformation) ? void 0 : c.uptimeSeconds) ? E : null,
     };
     if (!e || null == n)
         return _(
@@ -119,11 +134,11 @@ function O(e, t, n) {
                 minidump_exception_module_name: null,
                 minidump_relative_crash_address: null,
                 minidump_exception_module_version: null,
-                minidump_exception_module_code_id: null
+                minidump_exception_module_code_id: null,
             },
-            A
+            A,
         );
-    console.log('AppCrashedFatalReport lastCrash:', n, e);
+    console.log("AppCrashedFatalReport lastCrash:", n, e);
     let N = null == n ? void 0 : n.minidumpInformation;
     return _(
         {
@@ -132,8 +147,8 @@ function O(e, t, n) {
             minidump_exception_module_name: null != (y = null == N ? void 0 : N.exceptionModuleName) ? y : null,
             minidump_relative_crash_address: null != (O = null == N ? void 0 : N.relativeCrashAddress) ? O : null,
             minidump_exception_module_version: null != (v = null == N ? void 0 : N.exceptionModuleVersion) ? v : null,
-            minidump_exception_module_code_id: null != (I = null == N ? void 0 : N.exceptionModuleCodeId) ? I : null
+            minidump_exception_module_code_id: null != (I = null == N ? void 0 : N.exceptionModuleCodeId) ? I : null,
         },
-        A
+        A,
     );
 }

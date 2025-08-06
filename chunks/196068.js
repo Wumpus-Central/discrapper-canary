@@ -22,14 +22,16 @@ let O = (e) => {
         n = (0, u.a0)(),
         O = (0, o.e7)([f.default], () => p.ZP.isPremiumExactly(f.default.getCurrentUser(), E.p9.TIER_2)),
         { enabled: v } = c.g.useExperiment(
-            { location: 'OutboundPromotionNotice' },
+            { location: "OutboundPromotionNotice" },
             {
                 autoTrackExposure: !1,
-                disable: O
-            }
+                disable: O,
+            },
         ),
         I = i.useCallback(() => {
-            (_.default.track(g.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), l.Z.open(g.oAB.INVENTORY), d.ZP.dismissOutboundPromotionNotice());
+            _.default.track(g.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED),
+                l.Z.open(g.oAB.INVENTORY),
+                d.ZP.dismissOutboundPromotionNotice();
         }, []);
     if (null == n) return null;
     let T = (e) =>
@@ -39,23 +41,23 @@ let O = (e) => {
                 (0, r.jsx)(s.RyX, {
                     noticeType: g.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        (d.ZP.dismissOutboundPromotionNotice(), null !== e && e(m.L.USER_DISMISS));
-                    }
+                        d.ZP.dismissOutboundPromotionNotice(), null !== e && e(m.L.USER_DISMISS);
+                    },
                 }),
                 (0, r.jsx)(s.SrA, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: y.premiumIcon
+                    size: "md",
+                    color: "currentColor",
+                    className: y.premiumIcon,
                 }),
-                v ? b.intl.string(b.t['5JMiOj']) : b.intl.string(b.t['Pzh+Gx']),
+                v ? b.intl.string(b.t["5JMiOj"]) : b.intl.string(b.t["Pzh+Gx"]),
                 (0, r.jsx)(s.NoS, {
                     noticeType: g.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        (I(), null !== e && e(m.L.TAKE_ACTION));
+                        I(), null !== e && e(m.L.TAKE_ACTION);
                     },
-                    children: b.intl.string(b.t.jVcuVV)
-                })
-            ]
+                    children: b.intl.string(b.t.jVcuVV),
+                }),
+            ],
         });
     return (0, r.jsx)(h.O1, {
         contentType: t,
@@ -66,6 +68,6 @@ let O = (e) => {
         children: (e) => {
             let { visibleContent: t, markAsDismissed: n } = e;
             if (t === a.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR) return T(n);
-        }
+        },
     });
 };

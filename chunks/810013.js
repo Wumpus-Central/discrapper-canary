@@ -28,8 +28,8 @@ function f(e) {
                     .map((e) => {
                         let { user: t } = e;
                         return t;
-                    })
-            })
-        })
+                    }),
+            }),
+        }),
     });
 }

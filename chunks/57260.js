@@ -1,4 +1,4 @@
-(n.d(t, { z: () => f }), n(388685));
+n.d(t, { z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -20,9 +20,9 @@ function f(e) {
             {
                 height: b ? O + I : I,
                 config: s.config.stiff,
-                onRest: () => E(!0)
+                onRest: () => E(!0),
             },
-            h ? 'animate-never' : 'respect-motion-settings'
+            h ? "animate-never" : "respect-motion-settings",
         ),
         S = i.useCallback(() => {
             p(!_);
@@ -34,23 +34,23 @@ function f(e) {
             }, d);
             return () => clearTimeout(e);
         }, []),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: a()(u.collapseable, { [u.toggled]: b }, n),
             children: (0, r.jsxs)(s.animated.div, {
                 className: a()(u.contentExpandContainer, { [u.showOverflow]: b && g }),
                 style: T,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         ref: v,
                         className: a()(u.header, { [u.toggled]: b }),
-                        children: t({ onClick: S })
+                        children: t({ onClick: S }),
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         ref: y,
-                        children: o
-                    })
-                ]
-            })
+                        children: o,
+                    }),
+                ],
+            }),
         })
     );
 }

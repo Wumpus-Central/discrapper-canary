@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => i }), n(388685));
+n.d(t, { Z: () => i }), n(388685);
 var r = n(70722),
     l = n(388032);
 function i(e) {
@@ -10,40 +10,40 @@ function i(e) {
             return [
                 {
                     value: r.kr.BLACK_SCREEN,
-                    label: t ? l.intl.string(l.t['0X5Zbm']) : l.intl.string(l.t.fxiRNj)
+                    label: t ? l.intl.string(l.t["0X5Zbm"]) : l.intl.string(l.t.fxiRNj),
                 },
                 {
                     value: r.kr.BLURRY,
-                    label: t ? l.intl.string(l.t.VVPQy8) : l.intl.string(l.t.E8jTMD)
+                    label: t ? l.intl.string(l.t.VVPQy8) : l.intl.string(l.t.E8jTMD),
                 },
                 {
                     value: r.kr.LAGGING,
-                    label: t ? l.intl.string(l.t.ObEHd3) : l.intl.string(l.t.VoSJER)
+                    label: t ? l.intl.string(l.t.ObEHd3) : l.intl.string(l.t.VoSJER),
                 },
                 {
                     value: r.kr.OUT_OF_SYNC,
-                    label: t ? l.intl.string(l.t.mYmwDw) : l.intl.string(l.t['+NluQk'])
+                    label: t ? l.intl.string(l.t.mYmwDw) : l.intl.string(l.t["+NluQk"]),
                 },
                 {
                     value: r.kr.AUDIO_MISSING,
-                    label: t ? l.intl.string(l.t.Xwv419) : l.intl.string(l.t.G2egzc)
+                    label: t ? l.intl.string(l.t.Xwv419) : l.intl.string(l.t.G2egzc),
                 },
                 {
                     value: r.kr.AUDIO_POOR,
-                    label: t ? l.intl.string(l.t['fHey+f']) : l.intl.string(l.t.aHOfIi)
+                    label: t ? l.intl.string(l.t["fHey+f"]) : l.intl.string(l.t.aHOfIi),
                 },
                 {
                     value: r.kr.STREAM_STOPPED,
-                    label: l.intl.string(l.t.uEoqQk)
+                    label: l.intl.string(l.t.uEoqQk),
                 },
                 {
                     value: r.kr.VIBES_OFF,
-                    label: l.intl.string(l.t['++JLLy'])
+                    label: l.intl.string(l.t["++JLLy"]),
                 },
                 {
                     value: r.kr.OTHER,
-                    label: l.intl.string(l.t['emlT9/'])
-                }
+                    label: l.intl.string(l.t["emlT9/"]),
+                },
             ];
         })(e).filter((e) => {
             let { value: n } = e;

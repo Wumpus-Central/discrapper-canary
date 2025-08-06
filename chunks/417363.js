@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => $ }), n(388685), n(415506), n(358797));
+n.d(t, { Z: () => $ }), n(388685), n(415506), n(358797);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,8 +72,8 @@ let T = 200,
     S = 200,
     A = +_.Z.Millis.MINUTE,
     N = {},
-    C = 'content',
-    R = 'file://',
+    C = "content",
+    R = "file://",
     P = !1,
     w = 0,
     D = 0,
@@ -89,7 +89,20 @@ function G(e, t) {
     return t.some((t) => t.platforms.includes(e));
 }
 function B(e) {
-    let { build_id: t, target_build_id: n, manifest_ids: r, target_manifest_ids: i, application_id: a, branch_id: s, launch_commands: c, launch_options: u, storage: d, install_path: _, installed_size: p, repairing: m } = e,
+    let {
+            build_id: t,
+            target_build_id: n,
+            manifest_ids: r,
+            target_manifest_ids: i,
+            application_id: a,
+            branch_id: s,
+            launch_commands: c,
+            launch_options: u,
+            storage: d,
+            install_path: _,
+            installed_size: p,
+            repairing: m,
+        } = e,
         { should_patch: g } = e;
     switch ((null == g && (g = !0), e.state.type)) {
         case b.DJE.COMPLETE: {
@@ -109,30 +122,30 @@ function B(e) {
                                 { executable: r, name: i, working_dir: o } = n,
                                 a = i,
                                 s = l.Z.fileManager.join(e, r);
-                            ((0, h.isMac)() && !s.startsWith(R) && (s = ''.concat(R).concat(s)),
+                            (0, h.isMac)() && !s.startsWith(R) && (s = "".concat(R).concat(s)),
                                 (t = null != o ? l.Z.fileManager.join(e, o) : l.Z.fileManager.dirname(s)),
                                 (E[a] = I(O({}, n), {
                                     id: a,
                                     fullExecutablePath: s,
-                                    fullWorkingDir: t
+                                    fullWorkingDir: t,
                                 })),
-                                null == y && (y = a));
+                                null == y && (y = a);
                         }
                 } else if (null != c) {
                     t === b.QR$.WIN64 && null == c[t] && (t = b.QR$.WIN32);
                     let n = c[t];
                     if (null != n) {
                         let { executable: r } = n,
-                            i = 'Default',
+                            i = "Default",
                             o = i;
-                        ((E[o] = I(O({}, n), {
+                        (E[o] = I(O({}, n), {
                             name: i,
                             id: o,
                             fullExecutablePath: l.Z.fileManager.join(e, r),
                             fullWorkingDir: e,
-                            platforms: [t]
+                            platforms: [t],
                         })),
-                            (y = o));
+                            (y = o);
                     }
                 }
             }
@@ -149,15 +162,30 @@ function B(e) {
                 launchOptions: E,
                 defaultLaunchOptionId: y,
                 shouldPatch: g,
-                storage: d
+                storage: d,
             };
         }
         case b.DJE.TRANSITION: {
             let o,
-                { stage: l, disk_progress: c, network_progress: u, reader_progress: d, progress: f, total: h, paused: E } = e.state,
+                {
+                    stage: l,
+                    disk_progress: c,
+                    network_progress: u,
+                    reader_progress: d,
+                    progress: f,
+                    total: h,
+                    paused: E,
+                } = e.state,
                 y = l.type;
             return {
-                type: (o = y === b.f07.UNINSTALLING ? b.vxO.UNINSTALLING : m ? b.vxO.REPAIRING : null == t ? b.vxO.INSTALLING : b.vxO.UPDATING),
+                type: (o =
+                    y === b.f07.UNINSTALLING
+                        ? b.vxO.UNINSTALLING
+                        : m
+                          ? b.vxO.REPAIRING
+                          : null == t
+                            ? b.vxO.INSTALLING
+                            : b.vxO.UPDATING),
                 stage: y,
                 applicationId: a,
                 branchId: s,
@@ -173,28 +201,34 @@ function B(e) {
                 progress: f,
                 total: h,
                 paused: E,
-                shouldPatch: g
+                shouldPatch: g,
             };
         }
     }
-    throw Error('Invalid Dispatch State. state='.concat(e.state.type));
+    throw Error("Invalid Dispatch State. state=".concat(e.state.type));
 }
 function Z(e) {
-    return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.networkProgress : null;
+    return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING
+        ? e.networkProgress
+        : null;
 }
 function F(e) {
-    return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.diskProgress : null;
+    return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING
+        ? e.diskProgress
+        : null;
 }
 function V(e) {
-    return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.readerProgress : null;
+    return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING
+        ? e.readerProgress
+        : null;
 }
 function H(e) {
     M = (M = [
         {
             bytes: e,
-            timestamp: Date.now()
+            timestamp: Date.now(),
         },
-        ...M
+        ...M,
     ]).slice(0, S);
 }
 function Y(e) {
@@ -203,9 +237,9 @@ function Y(e) {
     x = (x = [
         {
             bytes: e,
-            timestamp: t
+            timestamp: t,
         },
-        ...x
+        ...x,
     ])
         .slice(0, S)
         .filter((e) => {
@@ -217,9 +251,9 @@ function W(e) {
     k = (k = [
         {
             bytes: e,
-            timestamp: Date.now()
+            timestamp: Date.now(),
         },
-        ...k
+        ...k,
     ]).slice(0, S);
 }
 let K = o().throttle(H, T),
@@ -248,26 +282,30 @@ function Q(e) {
                 let s = X(n, a, V);
                 if ((s > 0 && z((L += s)), i === t)) {
                     let e = n[a];
-                    if (!0 !== e.paused && (e.type === b.vxO.UNINSTALLING || e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING))
+                    if (
+                        !0 !== e.paused &&
+                        (e.type === b.vxO.UNINSTALLING || e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING)
+                    )
                         switch (e.stage) {
                             case b.f07.PATCHING:
                             case b.f07.FINALIZING:
                             case b.f07.VERIFYING:
                             case b.f07.REPAIRING:
                             case b.f07.POST_INSTALL_SCRIPTS:
-                                (c.Z.setProgress('dispatch_application_progress', (0, p.xI)(e.progress, e.total) / 100), (o = !0));
+                                c.Z.setProgress("dispatch_application_progress", (0, p.xI)(e.progress, e.total) / 100),
+                                    (o = !0);
                         }
                 }
             }
             if (!j) {
                 let r = l.Z.fileManager.dirname(n[a].installPath);
-                (E.Z.getInstallationPath(e, t) !== r &&
+                E.Z.getInstallationPath(e, t) !== r &&
                     s.Z.wait(() => {
                         s.Z.dispatch({
-                            type: 'DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS',
+                            type: "DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS",
                             applicationId: e,
                             branchId: t,
-                            installationPath: r
+                            installationPath: r,
                         });
                     }),
                     -1 === g.Z.getQueuePosition(e, t) &&
@@ -276,15 +314,17 @@ function Q(e) {
                         E.Z.shouldBeInstalled(e, t) &&
                         s.Z.wait(() => {
                             s.Z.dispatch({
-                                type: 'DISPATCH_APPLICATION_UPDATE',
+                                type: "DISPATCH_APPLICATION_UPDATE",
                                 applicationId: e,
                                 branchId: t,
-                                automatic: !0
+                                automatic: !0,
                             });
-                        }));
+                        });
             }
         }
-    (o || 'dispatch_application_progress' !== c.Z.taskID || c.Z.clearProgress('dispatch_application_progress'), (N = n), (j = !0));
+    o || "dispatch_application_progress" !== c.Z.taskID || c.Z.clearProgress("dispatch_application_progress"),
+        (N = n),
+        (j = !0);
 }
 class J extends (r = a.ZP.Store) {
     initialize() {
@@ -336,12 +376,12 @@ class J extends (r = a.ZP.Store) {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (P) return (setImmediate(e), !1);
+            if (P) return setImmediate(e), !1;
         });
     }
 }
-y(J, 'displayName', 'DispatchApplicationStore');
+y(J, "displayName", "DispatchApplicationStore");
 let $ = new J(s.Z, {
     CONNECTION_OPEN: U,
-    DISPATCH_APPLICATION_STATE_UPDATE: Q
+    DISPATCH_APPLICATION_STATE_UPDATE: Q,
 });

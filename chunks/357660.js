@@ -7,8 +7,8 @@ function a(e) {
         n = t.render;
     return null != n
         ? (0, i.jsx)(n, {})
-        : (0, i.jsx)('div', {
+        : (0, i.jsx)("div", {
               className: l.panel,
-              children: (0, i.jsx)(o.Z, { node: t })
+              children: (0, i.jsx)(o.Z, { node: t }),
           });
 }

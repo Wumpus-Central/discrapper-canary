@@ -18,15 +18,15 @@ function p(t) {
         ? e
             ? null
             : (0, r.jsx)(l.sNh, {
-                  id: 'uninstall',
+                  id: "uninstall",
                   label: b.intl.string(b.t.DwgfOD),
-                  action: () => (0, a.W)(t.id, t.branchId, d.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL)
+                  action: () => (0, a.W)(t.id, t.branchId, d.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
               })
         : null == p
           ? null
           : (0, r.jsx)(l.sNh, {
-                id: 'install',
-                label: b.intl.string(b.t['N+XVnp']),
-                action: () => s.installApplication(t.id, t.branchId, d.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL)
+                id: "install",
+                label: b.intl.string(b.t["N+XVnp"]),
+                action: () => s.installApplication(t.id, t.branchId, d.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
             });
 }

@@ -6,6 +6,6 @@ function o(e) {
     r.default.track(i.rMx.ORBS_ENTRYPOINT_CLICKED, {
         location_page: t,
         location_section: n,
-        location_object: o
+        location_object: o,
     });
 }

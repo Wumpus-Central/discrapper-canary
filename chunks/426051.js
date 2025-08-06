@@ -17,51 +17,52 @@ function b(e) {
     let { active: t, user: n, channel: b } = e,
         _ = (0, d.V)(),
         O = i.useCallback(() => {
-            ((0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW }));
+            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)),
+                o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         E = i.useCallback(() => {
             c.Z.closeChannelSidebar(u.uZ);
         }, []),
         y = i.useCallback(() => {
-            (c.Z.closeChannelSidebar(u.uZ), _ && (0, s.Kh)(b.id));
+            c.Z.closeChannelSidebar(u.uZ), _ && (0, s.Kh)(b.id);
         }, [b.id, _]),
         {
             acceptMessageRequest: v,
             isAcceptLoading: I,
             isUserProfileLoading: C,
-            isOptimisticAccepted: S
+            isOptimisticAccepted: S,
         } = (0, p.m)({
             user: n,
             onAcceptSuccess: y,
             onRejectSuccess: E,
-            onError: O
+            onError: O,
         }),
         N = I || C,
         T = N || S;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: m.container,
         children: [
             (0, r.jsx)(h.Z, {
                 otherUser: n,
                 channel: b,
-                active: t
+                active: t,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: m.actions,
                 children: [
                     (0, r.jsx)(a.zxk, {
-                        variant: 'secondary',
-                        size: 'sm',
+                        variant: "secondary",
+                        size: "sm",
                         text: g.intl.string(g.t.vicfl5),
                         onClick: (e) => {
-                            (v(b.id), e.stopPropagation());
+                            v(b.id), e.stopPropagation();
                         },
                         disabled: T,
-                        loading: N
+                        loading: N,
                     }),
-                    (0, r.jsx)(f.Z, { channel: b })
-                ]
-            })
-        ]
+                    (0, r.jsx)(f.Z, { channel: b }),
+                ],
+            }),
+        ],
     });
 }

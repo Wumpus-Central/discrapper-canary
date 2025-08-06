@@ -1,4 +1,4 @@
-(n.d(t, { e: () => l }), n(997841));
+n.d(t, { e: () => l }), n(997841);
 var r = n(544891),
     i = n(570140),
     o = n(962086),
@@ -9,15 +9,15 @@ function l(e, t) {
     return a.Z.isFullServerPreview(e)
         ? void (0, o.aq)(e, { memberOptions: t })
         : (i.Z.dispatch({
-              type: 'GUILD_MEMBER_UPDATE_LOCAL',
+              type: "GUILD_MEMBER_UPDATE_LOCAL",
               guildId: e,
               roles: t.roles,
-              flags: t.flags
+              flags: t.flags,
           }),
           r.tn.patch({
               url: s.ANM.SET_GUILD_MEMBER(e),
               body: t,
               oldFormErrors: !!n || void 0,
-              rejectWithError: !1
+              rejectWithError: !1,
           }));
 }

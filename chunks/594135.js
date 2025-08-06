@@ -1,6 +1,6 @@
 n.d(t, {
     D: () => a,
-    a: () => l
+    a: () => l,
 });
 var i = n(73800),
     r = n(257465),
@@ -21,6 +21,6 @@ let a = i.createContext({
         renewalInvoice: null,
         renewalInvoiceDetails: null,
         handleCancellation: async () => {},
-        applyOffer: async () => {}
+        applyOffer: async () => {},
     }),
     l = () => i.useContext(a);

@@ -1,17 +1,17 @@
 var r = n(764908),
     o = /[^\0-\u007E]/,
     a = /[.\u3002\uFF0E\uFF61]/g,
-    i = 'Overflow: input needs wider integers to process',
+    i = "Overflow: input needs wider integers to process",
     s = RangeError,
     c = r(a.exec),
     l = Math.floor,
     u = String.fromCharCode,
-    d = r(''.charCodeAt),
+    d = r("".charCodeAt),
     p = r([].join),
     h = r([].push),
-    f = r(''.replace),
-    m = r(''.split),
-    y = r(''.toLowerCase),
+    f = r("".replace),
+    m = r("".split),
+    y = r("".toLowerCase),
     v = function (e) {
         for (var t = [], n = 0, r = e.length; n < r; ) {
             var o = d(e, n++);
@@ -27,7 +27,7 @@ var r = n(764908),
     },
     b = function (e, t, n) {
         var r = 0;
-        for (e = n ? l(e / 700) : e >> 1, e += l(e / t); e > 455; ) ((e = l(e / 35)), (r += 36));
+        for (e = n ? l(e / 700) : e >> 1, e += l(e / t); e > 455; ) (e = l(e / 35)), (r += 36);
         return l(r + (36 * e) / (e + 38));
     },
     _ = function (e) {
@@ -41,7 +41,7 @@ var r = n(764908),
         for (t = 0; t < e.length; t++) (n = e[t]) < 128 && h(r, u(n));
         var f = r.length,
             m = f;
-        for (f && h(r, '-'); m < o; ) {
+        for (f && h(r, "-"); m < o; ) {
             var y = 2147483647;
             for (t = 0; t < e.length; t++) (n = e[t]) >= a && n < y && (y = n);
             var _ = m + 1;
@@ -54,20 +54,20 @@ var r = n(764908),
                         if (k < Z) break;
                         var w = k - Z,
                             S = 36 - Z;
-                        (h(r, u(g(Z + (w % S)))), (k = l(w / S)), (C += 36));
+                        h(r, u(g(Z + (w % S)))), (k = l(w / S)), (C += 36);
                     }
-                    (h(r, u(g(k))), (d = b(c, _, m === f)), (c = 0), m++);
+                    h(r, u(g(k))), (d = b(c, _, m === f)), (c = 0), m++;
                 }
             }
-            (c++, a++);
+            c++, a++;
         }
-        return p(r, '');
+        return p(r, "");
     };
 e.exports = function (e) {
     var t,
         n,
         r = [],
-        i = m(f(y(e), a, '.'), '.');
-    for (t = 0; t < i.length; t++) h(r, c(o, (n = i[t])) ? 'xn--' + _(n) : n);
-    return p(r, '.');
+        i = m(f(y(e), a, "."), ".");
+    for (t = 0; t < i.length; t++) h(r, c(o, (n = i[t])) ? "xn--" + _(n) : n);
+    return p(r, ".");
 };

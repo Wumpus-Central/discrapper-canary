@@ -25,7 +25,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -64,7 +64,7 @@ function T(e) {
                     size: n ? o.EFr.SIZE_16 : o.EFr.SIZE_24,
                     src: i.getAvatarURL(null == S ? void 0 : S.id, t),
                     status: n ? null : p.Z.getStatus(i.id),
-                    'aria-hidden': !0
+                    "aria-hidden": !0,
                 });
             }
             if ((null == e ? void 0 : e.type) === g.tM.ROLE) {
@@ -75,10 +75,10 @@ function T(e) {
                 return null != a
                     ? (0, r.jsx)(s.Z, I({}, a))
                     : (0, r.jsx)(o.lZ8, {
-                          size: 'custom',
+                          size: "custom",
                           color: null != (i = n.colorString) ? i : y.Pbq,
                           height: t,
-                          width: t
+                          width: t,
                       });
             }
         },
@@ -93,36 +93,36 @@ function T(e) {
                         discriminatorClass: O.discriminator,
                         botClass: O.bot,
                         user: n,
-                        forceUsername: !0
+                        forceUsername: !0,
                     }));
             } else if (e.type === g.tM.ROLE) {
                 let n = null != S ? f.Z.getRole(S.id, e.value) : void 0,
                     i = null == n ? null : null == A ? void 0 : A[n.id];
                 null != i &&
-                    (t = (0, r.jsxs)('div', {
+                    (t = (0, r.jsxs)("div", {
                         className: O.roleCountContainer,
                         children: [
                             (0, r.jsx)(o.tBG, {
-                                size: 'sm',
-                                color: 'currentColor',
-                                className: O.roleCountIcon
+                                size: "sm",
+                                color: "currentColor",
+                                className: O.roleCountIcon,
                             }),
-                            (0, r.jsx)('span', {
+                            (0, r.jsx)("span", {
                                 className: O.roleCountText,
-                                children: i
-                            })
-                        ]
+                                children: i,
+                            }),
+                        ],
                     }));
             }
-            return (0, r.jsxs)('span', {
+            return (0, r.jsxs)("span", {
                 className: O.label,
                 children: [
-                    (0, r.jsx)('span', {
+                    (0, r.jsx)("span", {
                         className: O.labelText,
-                        children: e.label
+                        children: e.label,
                     }),
-                    t
-                ]
+                    t,
+                ],
             });
         },
         P = i.useMemo(() => (0, E.tx)(e.defaultValues, null == S ? void 0 : S.id), [e.defaultValues, S]);
@@ -131,6 +131,6 @@ function T(e) {
         queryOptions: N,
         renderIcon: C,
         renderOptionLabel: R,
-        defaultValues: P
+        defaultValues: P,
     });
 }

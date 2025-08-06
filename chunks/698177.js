@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(35282));
+n.d(t, { Z: () => x }), n(388685), n(35282);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -15,14 +15,14 @@ var r = n(255367),
     g = n(893354),
     _ = n(20493);
 let x = () => {
-    let [e, t] = i.useState(''),
-        [l, x] = i.useState(''),
+    let [e, t] = i.useState(""),
+        [l, x] = i.useState(""),
         [b, E] = i.useState(!1),
         [v, j] = i.useState(!1),
         [I, O] = i.useState(null),
         [N, S] = i.useState(null),
         C = (0, o.e7)([d.Z], () => d.Z.getCountryCode()),
-        y = C.code.split(' ')[0],
+        y = C.code.split(" ")[0],
         A = async () => {
             try {
                 await c.Z.resendCode(e);
@@ -34,7 +34,7 @@ let x = () => {
             E(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(y + e, l);
-                (O(null), S(null), j(!0), c.Z.validatePhoneForSupport(t));
+                O(null), S(null), j(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
                 e.body.message ? (O(null), S(e.body.message)) : (O(e.body.phone), S(e.body.code));
             } finally {
@@ -49,13 +49,13 @@ let x = () => {
                     children: [
                         f.intl.string(f.t.WWzQtb),
                         (0, r.jsx)(a.owK, {
-                            size: 'md',
-                            color: 'currentColor',
-                            className: _.marginLeft8
-                        })
-                    ]
-                })
-            ]
+                            size: "md",
+                            color: "currentColor",
+                            className: _.marginLeft8,
+                        }),
+                    ],
+                }),
+            ],
         });
     return v
         ? P
@@ -64,7 +64,7 @@ let x = () => {
                   (0, r.jsx)(p.Dx, { children: f.intl.string(f.t.o4JNrK) }),
                   (0, r.jsx)(p.DK, {
                       className: _.marginTop8,
-                      children: f.intl.string(f.t.y0tVbm)
+                      children: f.intl.string(f.t.y0tVbm),
                   }),
                   (0, r.jsxs)(p.gO, {
                       className: _.marginTop20,
@@ -74,11 +74,11 @@ let x = () => {
                               alpha2: C.alpha2,
                               countryCode: y,
                               value: e,
-                              autoComplete: 'off',
-                              spellCheck: 'false',
+                              autoComplete: "off",
+                              spellCheck: "false",
                               onChange: t,
                               forceMode: u.Nz.PHONE,
-                              error: I
+                              error: I,
                           }),
                           (0, r.jsx)(p.II, {
                               className: _.marginTop20,
@@ -86,22 +86,22 @@ let x = () => {
                               value: l,
                               onChange: x,
                               maxLength: m.z,
-                              error: N
+                              error: N,
                           }),
                           (0, r.jsx)(p.zx, {
                               size: p.zx.Sizes.SMALL,
                               look: p.zx.Looks.LINK,
                               onClick: A,
-                              children: f.intl.string(f.t['5b60go'])
+                              children: f.intl.string(f.t["5b60go"]),
                           }),
                           (0, r.jsx)(p.zx, {
                               className: _.marginTop20,
                               onClick: T,
                               submitting: b,
-                              children: f.intl.string(f.t.i4jeWV)
-                          })
-                      ]
-                  })
-              ]
+                              children: f.intl.string(f.t.i4jeWV),
+                          }),
+                      ],
+                  }),
+              ],
           });
 };

@@ -3,10 +3,10 @@ var r = n(220159),
     o = n(857186);
 r(
     {
-        target: 'String',
+        target: "String",
         proto: !0,
-        name: 'trimStart',
-        forced: ''.trimStart !== o
+        name: "trimStart",
+        forced: "".trimStart !== o,
     },
-    { trimStart: o }
+    { trimStart: o },
 );

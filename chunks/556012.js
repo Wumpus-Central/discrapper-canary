@@ -24,7 +24,7 @@ let d = (e) => e !== l.jj.QUARANTINE_USER,
             case l.jj.BLOCK_MESSAGE:
                 return u.intl.string(u.t.d1ab8v);
             case l.jj.FLAG_TO_CHANNEL:
-                return u.intl.string(u.t['Y+Vmvb']);
+                return u.intl.string(u.t["Y+Vmvb"]);
             case l.jj.USER_COMMUNICATION_DISABLED:
                 return u.intl.string(u.t.Xz2njI);
             case l.jj.QUARANTINE_USER:
@@ -37,7 +37,7 @@ let d = (e) => e !== l.jj.QUARANTINE_USER,
             case l.jj.BLOCK_MESSAGE:
                 switch (t) {
                     case l.fX.MENTION_SPAM:
-                        return u.intl.string(u.t['8hdId3']);
+                        return u.intl.string(u.t["8hdId3"]);
                     case l.fX.ML_SPAM:
                         return u.intl.string(u.t.tLQYs7);
                     default:
@@ -46,9 +46,9 @@ let d = (e) => e !== l.jj.QUARANTINE_USER,
             case l.jj.FLAG_TO_CHANNEL:
                 return u.intl.string(u.t.BHAXfX);
             case l.jj.USER_COMMUNICATION_DISABLED:
-                return u.intl.string(u.t['bNK+gI']);
+                return u.intl.string(u.t["bNK+gI"]);
             case l.jj.QUARANTINE_USER:
-                return u.intl.string(u.t['/7nL5e']);
+                return u.intl.string(u.t["/7nL5e"]);
         }
     },
     h = (e, t) => {
@@ -89,11 +89,11 @@ function g(e, t, n) {
     var i, o, a, s;
     return f(e)
         ? {
-              headerText: null != (i = _(e)) ? i : '',
-              descriptionText: null != (o = p(e, n)) ? o : '',
+              headerText: null != (i = _(e)) ? i : "",
+              descriptionText: null != (o = p(e, n)) ? o : "",
               helperText: null != (a = h(e, t)) ? a : null,
               icon: null != (s = m(e)) ? s : r.k$p,
-              isEditable: d(e)
+              isEditable: d(e),
           }
         : null;
 }

@@ -1,18 +1,18 @@
 n.d(t, {
     M: () => a,
-    l: () => s
+    l: () => s,
 });
 var r = n(131704),
     i = n(411198),
     o = n(981631);
 function a(e, t) {
-    if (null == e || '' === e) return null;
+    if (null == e || "" === e) return null;
     let n = new Date(e);
     return !(n instanceof Date) || isNaN(n.getTime())
         ? null
         : n.toLocaleDateString(t, {
-              year: 'numeric',
-              month: 'short'
+              year: "numeric",
+              month: "short",
           });
 }
 function s(e) {

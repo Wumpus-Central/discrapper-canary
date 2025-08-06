@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -21,26 +21,26 @@ function f(e) {
         (0, a.Ng)(() => _()),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: s()(u.title, u.scrollWrapper),
                     children: [
                         (0, r.jsx)(o.vwX, {
                             className: d.formItemTitle,
-                            children: t
+                            children: t,
                         }),
-                        (0, r.jsx)(c.Z, { separator: h })
-                    ]
+                        (0, r.jsx)(c.Z, { separator: h }),
+                    ],
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: n,
                     children: (0, r.jsx)(o.Den, {
                         ref: m,
                         className: s()(u.scrollerInner, l, { [u.bottomSeparator]: x }),
                         onScroll: _,
-                        children: f
-                    })
-                })
-            ]
+                        children: f,
+                    }),
+                }),
+            ],
         })
     );
 }

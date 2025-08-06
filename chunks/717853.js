@@ -6,7 +6,7 @@ e.exports = function (e, t, n) {
               function (e) {
                   return t(e[1], e[0]);
               },
-              !0
+              !0,
           )
         : e.forEach(t);
 };

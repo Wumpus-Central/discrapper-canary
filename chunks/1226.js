@@ -3,7 +3,7 @@ n.d(t, {
     cq: () => p,
     gI: () => f,
     xN: () => h,
-    yA: () => d
+    yA: () => d,
 });
 var i = n(348327),
     r = n.n(i),
@@ -13,24 +13,24 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -69,9 +69,9 @@ function p(e, t) {
             streams: s(a({}, e.streams), {
                 [n]: {
                     zoom: t,
-                    fitOverride: null == (i = e.streams[n]) ? void 0 : i.fitOverride
-                }
-            })
+                    fitOverride: null == (i = e.streams[n]) ? void 0 : i.fitOverride,
+                },
+            }),
         });
     }, !0);
 }
@@ -83,9 +83,9 @@ function f(e, t) {
             streams: s(a({}, e.streams), {
                 [n]: {
                     zoom: null == (i = e.streams[n]) ? void 0 : i.zoom,
-                    fitOverride: t
-                }
-            })
+                    fitOverride: t,
+                },
+            }),
         });
     });
 }

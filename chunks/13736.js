@@ -12,10 +12,10 @@ function s(t) {
     return !n || !e || s || t.isModeratorReportChannel() || __OVERLAY__
         ? null
         : (0, i.jsx)(a.sNh, {
-              id: 'edit-thread',
-              label: t.isForumPost() ? o.intl.string(o.t.NP1yHB) : o.intl.string(o.t['2Mk1TE']),
+              id: "edit-thread",
+              label: t.isForumPost() ? o.intl.string(o.t.NP1yHB) : o.intl.string(o.t["2Mk1TE"]),
               action: () => {
-                  ((0, a.pTH)(), l.ZP.open(t.id));
-              }
+                  (0, a.pTH)(), l.ZP.open(t.id);
+              },
           });
 }

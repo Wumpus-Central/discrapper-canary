@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => X }), n(388685));
+n.d(t, { Z: () => X }), n(388685);
 var i = n(255367),
     l = n(73800),
     r = n(120356),
@@ -41,24 +41,24 @@ function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -94,64 +94,65 @@ function W(e) {
             switch (b) {
                 case D.m$.ROLES:
                     var N;
-                    ((j =
-                        (h = n[v]).rowType === D.aC.ROLE && (null == (N = h.tags) ? void 0 : N.guild_connections) === null
+                    (j =
+                        (h = n[v]).rowType === D.aC.ROLE &&
+                        (null == (N = h.tags) ? void 0 : N.guild_connections) === null
                             ? (0, i.jsx)(f.Z, {
                                   className: V.shield,
                                   color: h.colorString,
-                                  size: 20
+                                  size: 20,
                               })
                             : (0, i.jsx)(c.lZ8, {
-                                  size: 'custom',
+                                  size: "custom",
                                   className: V.shield,
                                   color: h.colorString,
-                                  height: 20
+                                  height: 20,
                               })),
                         (o = (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)('div', {
+                                (0, i.jsx)("div", {
                                     className: V.rowHeight,
-                                    children: j
+                                    children: j,
                                 }),
                                 (0, i.jsx)(c.Text, {
-                                    variant: 'text-sm/normal',
+                                    variant: "text-sm/normal",
                                     className: V.rowLabel,
-                                    color: h.disabled ? 'text-muted' : 'text-default',
-                                    children: h.name
-                                })
-                            ]
+                                    color: h.disabled ? "text-muted" : "text-default",
+                                    children: h.name,
+                                }),
+                            ],
                         })),
-                        (C = h.disabled));
+                        (C = h.disabled);
                     break;
                 case D.m$.MEMBERS:
-                    ((h = l[v]),
+                    (h = l[v]),
                         (o = (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(c.qEK, {
                                     src: h.avatarURL,
                                     size: c.EFr.SIZE_24,
-                                    'aria-hidden': !0
+                                    "aria-hidden": !0,
                                 }),
                                 (0, i.jsx)(c.Text, {
                                     className: V.rowLabel,
-                                    variant: 'text-sm/normal',
-                                    children: h.name
+                                    variant: "text-sm/normal",
+                                    children: h.name,
                                 }),
                                 h.bot &&
                                     (0, i.jsx)(p.Z, {
                                         verified: h.verifiedBot,
-                                        className: V.rowBotTag
+                                        className: V.rowBotTag,
                                     }),
                                 null != h.nickname &&
                                     (0, i.jsx)(c.Text, {
-                                        color: 'text-muted',
+                                        color: "text-muted",
                                         className: V.rowLabelSubText,
-                                        variant: 'text-sm/normal',
-                                        children: h.username
-                                    })
-                            ]
+                                        variant: "text-sm/normal",
+                                        children: h.username,
+                                    }),
+                            ],
                         })),
-                        (C = h.disabled));
+                        (C = h.disabled);
                     break;
                 default:
                     h = null;
@@ -169,12 +170,12 @@ function W(e) {
                             justify: x.Z.Justify.START,
                             align: x.Z.Align.CENTER,
                             className: V.__invalid_memberRowBody,
-                            children: o
+                            children: o,
                         }),
                         (0, i.jsx)(c.Text, {
-                            color: 'text-muted',
-                            variant: 'text-xs/normal',
-                            children: I.zB(h.rowType)
+                            color: "text-muted",
+                            variant: "text-xs/normal",
+                            children: I.zB(h.rowType),
                         }),
                         h.rowType !== D.aC.EMPTY_STATE &&
                             (0, i.jsx)(c.DY3, {
@@ -192,29 +193,35 @@ function W(e) {
                                             void d.Z.show({
                                                 title: B.intl.string(B.t.GuPYQE),
                                                 body: B.intl.format(B.t.xERCnZ, { name: n }),
-                                                cancelText: B.intl.string(B.t['ETE/oK']),
+                                                cancelText: B.intl.string(B.t["ETE/oK"]),
                                                 onConfirm: () =>
                                                     (function (e, n) {
                                                         if (t.isGuildStageVoice()) {
-                                                            let i = (0, y._L)(e, n === D.aC.ROLE ? m.BN.ROLE : m.BN.MEMBER, t);
-                                                            (0, y.Os)(i) ? u.Z.clearPermissionOverwrite(t.id, i.id) : (0, g.hw)(t.id, [i]);
+                                                            let i = (0, y._L)(
+                                                                e,
+                                                                n === D.aC.ROLE ? m.BN.ROLE : m.BN.MEMBER,
+                                                                t,
+                                                            );
+                                                            (0, y.Os)(i)
+                                                                ? u.Z.clearPermissionOverwrite(t.id, i.id)
+                                                                : (0, g.hw)(t.id, [i]);
                                                         } else u.Z.clearPermissionOverwrite(t.id, e);
-                                                    })(e, i)
+                                                    })(e, i),
                                             }))
                                         );
                                     },
-                                    'aria-disabled': !S,
-                                    'aria-label': B.intl.string(B.t.N86XcH),
+                                    "aria-disabled": !S,
+                                    "aria-label": B.intl.string(B.t.N86XcH),
                                     children: (0, i.jsx)(c.k$p, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: s()(V.removeIcon, { [V.disabledRemoveIcon]: C || r })
-                                    })
-                                })
-                            })
-                    ]
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: s()(V.removeIcon, { [V.disabledRemoveIcon]: C || r }),
+                                    }),
+                                }),
+                            }),
+                    ],
                 },
-                h.id
+                h.id,
             );
         },
         rowHeight: 40,
@@ -222,12 +229,12 @@ function W(e) {
             let { section: t } = e;
             switch (t) {
                 case D.m$.ROLES:
-                    return (0, i.jsx)(z, { title: B.intl.string(B.t.LPJmLy) }, 'roles-title');
+                    return (0, i.jsx)(z, { title: B.intl.string(B.t.LPJmLy) }, "roles-title");
                 case D.m$.MEMBERS:
-                    return (0, i.jsx)(z, { title: B.intl.string(B.t['9Oq93t']) }, 'members-title');
+                    return (0, i.jsx)(z, { title: B.intl.string(B.t["9Oq93t"]) }, "members-title");
             }
         },
-        sectionHeight: 49
+        sectionHeight: 49,
     });
 }
 function G(e) {
@@ -238,26 +245,26 @@ function G(e) {
         h = (0, y.nG)(l.id);
     function g() {
         (0, c.ZDy)(async () => {
-            let { default: e } = await n.e('46786').then(n.bind(n, 388131));
+            let { default: e } = await n.e("46786").then(n.bind(n, 388131));
             return (t) => (0, i.jsx)(e, H(U({}, t), { channelId: l.id }));
         });
     }
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: s()(V.settingCard, V.active),
         children: [
             (0, i.jsx)(A.Z, {
                 label: B.intl.string(B.t.StpcFR),
                 description: B.intl.string(B.t.f7VbhI),
                 icon: (0, i.jsx)(c.ewx, {
-                    size: 'custom',
-                    color: 'currentColor',
+                    size: "custom",
+                    color: "currentColor",
                     className: V.cardIcon,
                     height: 20,
-                    width: 20
+                    width: 20,
                 }),
-                id: 'StageModeratorSettingCard'
+                id: "StageModeratorSettingCard",
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: V.cardFolder,
                 children: [
                     (0, i.jsxs)(x.Z, {
@@ -266,9 +273,9 @@ function G(e) {
                         className: V.folderHeader,
                         children: [
                             (0, i.jsx)(c.vwX, {
-                                tag: 'h5',
+                                tag: "h5",
                                 className: V.folderTitle,
-                                children: B.intl.string(B.t['7BWDRU'])
+                                children: B.intl.string(B.t["7BWDRU"]),
                             }),
                             (0, i.jsx)(c.ua7, {
                                 text: B.intl.string(B.t.arRuER),
@@ -279,31 +286,31 @@ function G(e) {
                                         H(
                                             U(
                                                 {
-                                                    variant: 'primary',
-                                                    size: 'sm',
-                                                    text: B.intl.string(B.t.dMJ3Y2)
+                                                    variant: "primary",
+                                                    size: "sm",
+                                                    text: B.intl.string(B.t.dMJ3Y2),
                                                 },
-                                                e
+                                                e,
                                             ),
                                             {
                                                 onClick: g,
-                                                disabled: !h
-                                            }
-                                        )
-                                    )
-                            })
-                        ]
+                                                disabled: !h,
+                                            },
+                                        ),
+                                    ),
+                            }),
+                        ],
                     }),
                     (0, i.jsx)(W, {
                         channel: l,
                         roles: d,
                         members: u,
                         disabledReason: h ? null : B.intl.string(B.t.arRuER),
-                        getRemoveTooltipHint: N.kk
-                    })
-                ]
-            })
-        ]
+                        getRemoveTooltipHint: N.kk,
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function F(e) {
@@ -325,62 +332,66 @@ function F(e) {
                             header: B.intl.string(B.t.ZzdgUl),
                             confirmText: B.intl.string(B.t.BddRzc),
                             children: (0, i.jsx)(c.Text, {
-                                variant: 'text-md/normal',
+                                variant: "text-md/normal",
                                 children: B.intl.format(B.t.DwY2vL, {
                                     onClick: () => {
-                                        (v.Z.open(t.id, M.pNK.ONBOARDING), n.onClose());
-                                    }
-                                })
-                            })
-                        })
+                                        v.Z.open(t.id, M.pNK.ONBOARDING), n.onClose();
+                                    },
+                                }),
+                            }),
+                        }),
                     );
             });
-        (I.$e(l, e, r), r || null == s || h || I.Yh(l, e));
+        I.$e(l, e, r), r || null == s || h || I.Yh(l, e);
     }
     let f = {
         title: B.intl.string(B.t.aUI70t),
         subtitle: B.intl.string(B.t.hfbjIC),
-        formLabel: B.intl.string(B.t.P6eCbG)
+        formLabel: B.intl.string(B.t.P6eCbG),
     };
     return (
-        l.isCategory() ? ((f.title = B.intl.string(B.t.lEPAZ2)), (f.subtitle = B.intl.string(B.t['RQUk6+'])), (f.formLabel = B.intl.string(B.t['8VIxJi']))) : l.type === M.d4z.GUILD_VOICE && (f.subtitle = B.intl.string(B.t.cLjvKi)),
-        (0, i.jsxs)('div', {
+        l.isCategory()
+            ? ((f.title = B.intl.string(B.t.lEPAZ2)),
+              (f.subtitle = B.intl.string(B.t["RQUk6+"])),
+              (f.formLabel = B.intl.string(B.t["8VIxJi"])))
+            : l.type === M.d4z.GUILD_VOICE && (f.subtitle = B.intl.string(B.t.cLjvKi)),
+        (0, i.jsxs)("div", {
             className: s()(V.settingCard, { [V.active]: r }),
             children: [
                 (0, i.jsx)(A.Z, {
                     description: f.subtitle,
                     icon: (0, i.jsx)(c.mBM, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         className: V.cardIcon,
                         height: 20,
-                        width: 20
+                        width: 20,
                     }),
-                    id: 'PrivateChannelSettingCard',
+                    id: "PrivateChannelSettingCard",
                     label: f.title,
                     onChange: p,
-                    value: r
+                    value: r,
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: V.cardFolder,
                     children: [
                         m &&
-                            (0, i.jsx)('div', {
+                            (0, i.jsx)("div", {
                                 className: V.adminWarning,
                                 children: (0, i.jsx)(c.Wn, {
                                     messageType: c.QYI.WARNING,
-                                    children: B.intl.string(B.t['5f3HIC'])
-                                })
+                                    children: B.intl.string(B.t["5f3HIC"]),
+                                }),
                             }),
                         !g &&
                             !m &&
                             !r &&
-                            (0, i.jsx)('div', {
+                            (0, i.jsx)("div", {
                                 className: V.adminWarning,
                                 children: (0, i.jsx)(c.Wn, {
                                     messageType: c.QYI.WARNING,
-                                    children: B.intl.string(B.t.ZAk4Q0)
-                                })
+                                    children: B.intl.string(B.t.ZAk4Q0),
+                                }),
                             }),
                         r &&
                             (0, i.jsxs)(i.Fragment, {
@@ -391,55 +402,57 @@ function F(e) {
                                         className: V.folderHeader,
                                         children: [
                                             (0, i.jsx)(c.vwX, {
-                                                tag: 'h5',
+                                                tag: "h5",
                                                 className: V.folderTitle,
-                                                children: f.formLabel
+                                                children: f.formLabel,
                                             }),
                                             (0, i.jsx)(c.zxk, {
-                                                variant: 'primary',
-                                                size: 'sm',
+                                                variant: "primary",
+                                                size: "sm",
                                                 text: B.intl.string(B.t.dMJ3Y2),
                                                 onClick: function () {
                                                     (0, c.ZDy)(async () => {
-                                                        let { default: e } = await Promise.resolve().then(n.bind(n, 185413));
+                                                        let { default: e } = await Promise.resolve().then(
+                                                            n.bind(n, 185413),
+                                                        );
                                                         return (t) =>
                                                             (0, i.jsx)(
                                                                 e,
                                                                 H(U({}, t), {
                                                                     channelId: l.id,
-                                                                    inSettings: !0
-                                                                })
+                                                                    inSettings: !0,
+                                                                }),
                                                             );
                                                     });
-                                                }
-                                            })
-                                        ]
+                                                },
+                                            }),
+                                        ],
                                     }),
                                     (0, i.jsx)(W, {
                                         channel: l,
                                         roles: d,
                                         members: u,
-                                        getRemoveTooltipHint: I.yv
-                                    })
-                                ]
-                            })
-                    ]
-                })
-            ]
+                                        getRemoveTooltipHint: I.yv,
+                                    }),
+                                ],
+                            }),
+                    ],
+                }),
+            ],
         })
     );
 }
 function z(e) {
     let { title: t } = e;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(c.$i$, { className: V.divider }),
             (0, i.jsx)(c.vwX, {
                 className: s()(V.folderTitle, V.sectionTitle),
-                tag: 'h5',
-                children: t
-            })
-        ]
+                tag: "h5",
+                children: t,
+            }),
+        ],
     });
 }
 let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
@@ -455,13 +468,13 @@ let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
         let n = E.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
             let a = O.Z.getSortedRoles(e.id);
-            ((r = S.Z.editedPermissionIds.reduce((e, t) => {
+            (r = S.Z.editedPermissionIds.reduce((e, t) => {
                 let n = S.Z.getPermissionOverwrite(t);
-                return (null != n && (e[t] = n), e);
+                return null != n && (e[t] = n), e;
             }, {})),
                 (i = I.kA(e, a, t, t.accessPermissions, r)),
                 (l = I.cR(n, t, e, t.accessPermissions, r)),
-                (s = I.Yk(t, r)));
+                (s = I.Yk(t, r));
         }
     }
     return {
@@ -473,23 +486,33 @@ let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
         guild: e,
         isPrivateGuildChannel: s,
         locked: S.Z.locked,
-        permissionUpdates: r
+        permissionUpdates: r,
     };
 })(function (e) {
-    let { canSyncChannel: t, category: r, channel: s, filteredMembers: a, filteredRoles: o, guild: d, isPrivateGuildChannel: u, locked: g, permissionUpdates: m } = e,
+    let {
+            canSyncChannel: t,
+            category: r,
+            channel: s,
+            filteredMembers: a,
+            filteredRoles: o,
+            guild: d,
+            isPrivateGuildChannel: u,
+            locked: g,
+            permissionUpdates: m,
+        } = e,
         [p, f] = l.useState(!_.Uu(k.Pl.SEND_MESSAGES, s));
     if (null == s || null == d) return null;
     let x = {
         title: B.intl.string(B.t.BAZMBg),
-        subtitle: B.intl.string(B.t.XLrZys)
+        subtitle: B.intl.string(B.t.XLrZys),
     };
     return (
-        s.isCategory() && ((x.title = B.intl.string(B.t['/uELTk'])), (x.subtitle = B.intl.string(B.t['8iAg3d']))),
+        s.isCategory() && ((x.title = B.intl.string(B.t["/uELTk"])), (x.subtitle = B.intl.string(B.t["8iAg3d"]))),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.vwX, {
-                    tag: 'h1',
-                    children: x.title
+                    tag: "h1",
+                    children: x.title,
                 }),
                 (0, i.jsx)(c.R94, { children: x.subtitle }),
                 null != r && t
@@ -497,7 +520,7 @@ let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
                         ? (0, i.jsx)(L.Z, {
                               canSync: !1,
                               icon: c.DuK,
-                              noticeText: B.intl.format(B.t.ETJqLi, { categoryName: r.name })
+                              noticeText: B.intl.format(B.t.ETJqLi, { categoryName: r.name }),
                           })
                         : (0, i.jsx)(L.Z, {
                               buttonText: B.intl.string(B.t.NVwuHh),
@@ -517,19 +540,23 @@ let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
                                                       onConfirm: async () => {
                                                           let { guild_id: e } = r,
                                                               t = U({}, r.permissionOverwrites);
-                                                          (null != e && null == t[e] && (t[e] = _.we(e)), (await (0, j.u)(s, t[e].deny, t[e].allow)) && (0, h.wk)(s.id, { permissionOverwrites: Object.values(t) }));
-                                                      }
-                                                  })
+                                                          null != e && null == t[e] && (t[e] = _.we(e)),
+                                                              (await (0, j.u)(s, t[e].deny, t[e].allow)) &&
+                                                                  (0, h.wk)(s.id, {
+                                                                      permissionOverwrites: Object.values(t),
+                                                                  });
+                                                      },
+                                                  }),
                                               );
                                       });
-                              }
+                              },
                           })
                     : null,
                 s.isGuildStageVoice()
                     ? (0, i.jsx)(G, {
                           guild: d,
                           channel: s,
-                          permissionUpdates: m
+                          permissionUpdates: m,
                       })
                     : null,
                 (0, i.jsx)(F, {
@@ -537,11 +564,11 @@ let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
                     guild: d,
                     isPrivateGuildChannel: u,
                     roles: o,
-                    members: a
+                    members: a,
                 }),
                 !1,
-                (0, i.jsx)(P.Z, {})
-            ]
+                (0, i.jsx)(P.Z, {}),
+            ],
         })
     );
 });

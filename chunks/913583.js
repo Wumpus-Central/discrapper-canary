@@ -13,35 +13,35 @@ function d(e) {
     return (
         (0, s.Z)({
             type: i.ImpressionTypes.MODAL,
-            name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING
+            name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
         }),
         (0, r.jsxs)(o.ZP, {
             className: u.chooseAccountAuthBox,
             children: [
-                (0, r.jsx)(o.Dx, { children: c.intl.string(c.t['bVbB6+']) }),
+                (0, r.jsx)(o.Dx, { children: c.intl.string(c.t["bVbB6+"]) }),
                 (0, r.jsx)(l.Text, {
                     className: u.chooseAccountHelpText,
-                    variant: 'text-md/normal',
-                    color: 'header-secondary',
-                    children: c.intl.string(c.t['0M5fNz'])
+                    variant: "text-md/normal",
+                    color: "header-secondary",
+                    children: c.intl.string(c.t["0M5fNz"]),
                 }),
                 (0, r.jsx)(a.Z, {
-                    actionText: c.intl.string(c.t['DSN+h4']),
+                    actionText: c.intl.string(c.t["DSN+h4"]),
                     onAction: (e) => {
                         e === a.W.LOGIN_REQUIRED && t();
-                    }
+                    },
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: u.actions,
                     children: (0, r.jsx)(l.Avr, {
-                        variant: 'secondary',
-                        size: 'md',
-                        textVariant: 'text-sm/medium',
-                        text: c.intl.string(c.t['9g2mqa']),
-                        onClick: t
-                    })
-                })
-            ]
+                        variant: "secondary",
+                        size: "md",
+                        textVariant: "text-sm/medium",
+                        text: c.intl.string(c.t["9g2mqa"]),
+                        onClick: t,
+                    }),
+                }),
+            ],
         })
     );
 }

@@ -15,38 +15,38 @@ function p(t) {
         { clipsLength: i } = (0, e.cj)([r.Z], () => r.Z.getSettings()),
         p = (0, s.Z)();
     return (0, l.jsxs)(a.v2r, {
-        navId: 'clips-context',
-        'aria-label': h.intl.string(h.t.J1hsY2),
+        navId: "clips-context",
+        "aria-label": h.intl.string(h.t.J1hsY2),
         onClose: c.Zy,
         onSelect: n,
         children: [
             (0, l.jsx)(a.kSQ, {
                 children: (0, l.jsx)(a.sNh, {
-                    id: 'clips-duration',
+                    id: "clips-duration",
                     label: h.intl.string(h.t.OgfUio),
                     children: p.map((t) => {
                         let { value: n, label: e } = t;
                         return (0, l.jsx)(
                             a.k5B,
                             {
-                                id: 'clips-duration-'.concat(n),
-                                group: 'clips-duration',
+                                id: "clips-duration-".concat(n),
+                                group: "clips-duration",
                                 label: e,
                                 action: () => (0, u.eU)(n),
-                                checked: n === i
+                                checked: n === i,
                             },
-                            n
+                            n,
                         );
-                    })
-                })
+                    }),
+                }),
             }),
             (0, l.jsx)(a.kSQ, {
                 children: (0, l.jsx)(a.sNh, {
-                    id: 'clips-settings',
+                    id: "clips-settings",
                     label: h.intl.string(h.t.J1hsY2),
-                    action: () => (0, o.Z)(d.Z.CLIPS)
-                })
-            })
-        ]
+                    action: () => (0, o.Z)(d.Z.CLIPS),
+                }),
+            }),
+        ],
     });
 }

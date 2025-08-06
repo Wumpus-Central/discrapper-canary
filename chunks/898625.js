@@ -3,7 +3,7 @@ i.d(e, {
     O1: () => h,
     hO: () => r,
     pg: () => n,
-    uo: () => a
+    uo: () => a,
 });
 let s = 780,
     n = 1000,
@@ -13,5 +13,5 @@ let s = 780,
         INITIAL: 0,
         ENTERED: 1,
         FILLING: 2,
-        FILLED: 3
+        FILLED: 3,
     };

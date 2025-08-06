@@ -1,7 +1,7 @@
 n.d(t, {
     C3: () => b,
     O3: () => y,
-    ZP: () => E
+    ZP: () => E,
 });
 var r = n(255367),
     i = n(73800),
@@ -22,7 +22,8 @@ function h(e, t) {
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -32,7 +33,7 @@ function m(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function g(e) {
@@ -40,19 +41,28 @@ function g(e) {
     return {
         header: t,
         isLargeModal: n,
-        stepProps: h(e, ['header', 'isLargeModal'])
+        stepProps: h(e, ["header", "isLargeModal"]),
     };
 }
 function E(e) {
     var t, n, o, s, c, h;
     let { header: m, isLargeModal: E, stepProps: b } = g(e),
-        { step: y, stepConfigs: O, setBodyNode: v, setFooterNode: I, setModalOverlayNode: T, setReadySlideId: S, premiumBrandRefreshBackgroundClassName: A, selectedSkuId: N } = (0, d.JL)(),
+        {
+            step: y,
+            stepConfigs: O,
+            setBodyNode: v,
+            setFooterNode: I,
+            setModalOverlayNode: T,
+            setReadySlideId: S,
+            premiumBrandRefreshBackgroundClassName: A,
+            selectedSkuId: N,
+        } = (0, d.JL)(),
         C = null != N && N in _.y7,
         R = O.find((e) => e.key === y);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         T(null);
     }, [y, T]),
-        l()(null != R, 'Unknown step for current payment flow.'));
+        l()(null != R, "Unknown step for current payment flow.");
     let P = null != (c = null == R || null == (t = R.options) ? void 0 : t.hideSlider) && c,
         w = null == R || null == (n = R.options) ? void 0 : n.bodyClassName,
         D = null == R || null == (o = R.options) ? void 0 : o.sliderBodyClassName;
@@ -67,10 +77,10 @@ function E(e) {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.hzk, {
-                                  'data-migration-pending': !0,
+                                  "data-migration-pending": !0,
                                   className: a()(w, p.body, A, {
                                       [p.reviewStep]: y === f.h8.REVIEW,
-                                      [p.addPaymentStepForPremium]: y === f.h8.ADD_PAYMENT_STEPS && C
+                                      [p.addPaymentStepForPremium]: y === f.h8.ADD_PAYMENT_STEPS && C,
                                   }),
                                   children: (0, r.jsx)(u.MyZ, {
                                       activeSlide: y,
@@ -82,28 +92,28 @@ function E(e) {
                                               u.Mi4,
                                               {
                                                   id: e.key,
-                                                  children: (0, r.jsx)('form', {
+                                                  children: (0, r.jsx)("form", {
                                                       className: a()(p.sliderBody, D),
                                                       ref: (e) => {
                                                           v(e);
                                                       },
-                                                      onSubmit: (e) => e.preventDefault()
-                                                  })
+                                                      onSubmit: (e) => e.preventDefault(),
+                                                  }),
                                               },
-                                              e.key
-                                          )
-                                      )
-                                  })
+                                              e.key,
+                                          ),
+                                      ),
+                                  }),
                               }),
-                              (0, r.jsx)('div', { ref: (e) => I(e) }),
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", { ref: (e) => I(e) }),
+                              (0, r.jsx)("div", {
                                   ref: (e) => {
                                       T(e);
-                                  }
-                              })
-                          ]
-                      })
-            ]
+                                  },
+                              }),
+                          ],
+                      }),
+            ],
         })
     );
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(953529));
+n.d(t, { Z: () => c }), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -10,36 +10,36 @@ let c = (e) => {
         {
             usageWidth: n,
             descriptionWidth: o,
-            sourceWidth: c
+            sourceWidth: c,
         } = i.useMemo(
             () => ({
                 usageWidth: a().random(60, 120),
                 descriptionWidth: a().random(200, 600),
-                sourceWidth: a().random(45, 90)
+                sourceWidth: a().random(45, 90),
             }),
-            []
+            [],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l.wrapper,
         children: [
-            t ? (0, r.jsx)('div', { className: l.image }) : null,
-            (0, r.jsxs)('div', {
+            t ? (0, r.jsx)("div", { className: l.image }) : null,
+            (0, r.jsxs)("div", {
                 className: l.infoWrapper,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         style: { maxWidth: (0, s.Q1)(n) },
-                        className: l.usageWrapper
+                        className: l.usageWrapper,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         style: { maxWidth: (0, s.Q1)(o) },
-                        className: l.description
-                    })
-                ]
+                        className: l.description,
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 style: { width: (0, s.Q1)(c) },
-                className: l.source
-            })
-        ]
+                className: l.source,
+            }),
+        ],
     });
 };

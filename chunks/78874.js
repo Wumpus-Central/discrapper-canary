@@ -22,15 +22,15 @@ function f(t, e) {
                     DispatchApplicationStore: u.Z,
                     ConnectedAppsStore: c.Z,
                     applicationId: t.id,
-                    branchId: t.branchId
+                    branchId: t.branchId,
                 }),
-            [t.branchId, t.id]
+            [t.branchId, t.id],
         );
     return n || !f
         ? null
         : (0, r.jsx)(l.sNh, {
-              id: 'launch',
+              id: "launch",
               label: p.intl.string(p.t.XKUw8v),
-              action: () => d.playApplication(t.id, t, { analyticsParams: { location: e } })
+              action: () => d.playApplication(t.id, t, { analyticsParams: { location: e } }),
           });
 }

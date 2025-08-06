@@ -16,9 +16,17 @@ var i = n(255367),
     b = n(66094);
 function x() {
     let e = (0, a.wj)((0, c.ZP)()),
-        t = r.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
+        t = r.useMemo(
+            () => ({
+                backgroundImage: "url(".concat(
+                    "https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png",
+                    ")",
+                ),
+            }),
+            [],
+        ),
         n = r.useCallback(() => {
-            ((0, o.xf)(),
+            (0, o.xf)(),
                 (0, p.navigateToQuestHome)({ fromContent: m.jn.QUEST_HOME_MOVE_CALLOUT }),
                 d.default.track(
                     g.rMx.QUEST_CONTENT_CLICKED,
@@ -26,74 +34,74 @@ function x() {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    ((i = n[t]),
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = i));
-                                }));
+                                            : (e[t] = i);
+                                });
                         }
                         return e;
                     })(
                         {
                             cta_name: u.jZ.VIEW_QUESTS,
                             click_id: (0, s.Z)(),
-                            is_targeted: !1
+                            is_targeted: !1,
                         },
-                        (0, u.mH)(m.jn.QUEST_HOME_MOVE_CALLOUT)
-                    )
-                ));
+                        (0, u.mH)(m.jn.QUEST_HOME_MOVE_CALLOUT),
+                    ),
+                );
         }, []);
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: f.container,
         style: t,
         children: (0, i.jsxs)(l.Kqy, {
             className: f.textContainer,
-            justify: 'space-between',
+            justify: "space-between",
             children: [
                 (0, i.jsxs)(l.Kqy, {
                     gap: 4,
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, i.jsxs)("div", {
                             className: f.headerContainer,
                             children: [
-                                (0, i.jsx)('img', {
-                                    alt: '',
+                                (0, i.jsx)("img", {
+                                    alt: "",
                                     src: b,
-                                    className: f.icon
+                                    className: f.icon,
                                 }),
                                 (0, i.jsx)(l.X6q, {
-                                    variant: 'heading-lg/bold',
-                                    color: 'always-white',
-                                    children: h.intl.string(h.t.z8YP2N)
-                                })
-                            ]
+                                    variant: "heading-lg/bold",
+                                    color: "always-white",
+                                    children: h.intl.string(h.t.z8YP2N),
+                                }),
+                            ],
                         }),
                         (0, i.jsx)(l.Text, {
-                            variant: 'text-md/medium',
-                            color: 'text-secondary',
-                            children: h.intl.string(h.t.IqmRZ2)
-                        })
-                    ]
+                            variant: "text-md/medium",
+                            color: "text-secondary",
+                            children: h.intl.string(h.t.IqmRZ2),
+                        }),
+                    ],
                 }),
                 (0, i.jsx)(l.zxk, {
-                    variant: e ? 'primary' : 'overlay-primary',
+                    variant: e ? "primary" : "overlay-primary",
                     text: h.intl.string(h.t.GURBQk),
-                    onClick: n
-                })
-            ]
-        })
+                    onClick: n,
+                }),
+            ],
+        }),
     });
 }

@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => d }), a(388685));
+a.d(t, { Z: () => d }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(442837),
@@ -20,31 +20,31 @@ function d() {
                                 note: t,
                                 onChange: (e) => (0, s.Z)(t, e),
                                 hideBorder: !0,
-                                children: r
-                            })
+                                children: r,
+                            }),
                         },
-                        t
+                        t,
                     );
                 }),
-            [e]
+            [e],
         );
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: c.container,
         children: [
-            (0, n.jsx)('div', {
-                'data-button-hoisted-classname-wrapper': !0,
+            (0, n.jsx)("div", {
+                "data-button-hoisted-classname-wrapper": !0,
                 className: c.button,
                 children: (0, n.jsx)(i.zxk, {
-                    variant: 'primary',
-                    text: 'Clear all',
+                    variant: "primary",
+                    text: "Clear all",
                     onClick: s.q,
-                    fullWidth: !0
-                })
+                    fullWidth: !0,
+                }),
             }),
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 className: c.rowsContainer,
-                children: t
-            })
-        ]
+                children: t,
+            }),
+        ],
     });
 }

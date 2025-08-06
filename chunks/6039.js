@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -29,14 +29,14 @@ function N(e) {
                 (null == t ? void 0 : t.splash) != null
                     ? h.ZP.getGuildSplashURL({
                           id: null == t ? void 0 : t.id,
-                          splash: null == t ? void 0 : t.splash
+                          splash: null == t ? void 0 : t.splash,
                       })
                     : null,
-            [null == t ? void 0 : t.splash, null == t ? void 0 : t.id]
+            [null == t ? void 0 : t.splash, null == t ? void 0 : t.id],
         ),
         o = (0, u.N)(a);
     return null == a
-        ? (0, r.jsx)('div', { className: S.defaultGradient })
+        ? (0, r.jsx)("div", { className: S.defaultGradient })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(c.Z, {
@@ -44,15 +44,19 @@ function N(e) {
                       src: a,
                       imageClassName: S.cover,
                       width: n,
-                      height: l
+                      height: l,
                   }),
                   null != o &&
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: S.splashGradient,
-                          style: { background: 'linear-gradient(180deg, '.concat((0, f.aD)(o, 0.16), ' 0%, ').concat((0, f.aD)(o, 1), ' 100%)') }
+                          style: {
+                              background: "linear-gradient(180deg, "
+                                  .concat((0, f.aD)(o, 0.16), " 0%, ")
+                                  .concat((0, f.aD)(o, 1), " 100%)"),
+                          },
                       }),
-                  (0, r.jsx)('div', { className: S.splashGradient })
-              ]
+                  (0, r.jsx)("div", { className: S.splashGradient }),
+              ],
           });
 }
 let T = (e) => {
@@ -63,16 +67,16 @@ let T = (e) => {
         P = (0, l.e7)([p.Z], () => p.Z.getGuild(t)),
         { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: A } = (0, l.cj)([_.Z], () => ({
             hasFetchedRequestToJoinGuilds: _.Z.hasFetchedRequestToJoinGuilds,
-            guildPreviewDisabled: _.Z.getJoinRequestGuild(t)
+            guildPreviewDisabled: _.Z.getJoinRequestGuild(t),
         }));
-    (i.useEffect(() => {
+    i.useEffect(() => {
         null != P && (0, d.uL)(v.Z5c.CHANNEL(t));
     }, [P, t]),
         i.useEffect(() => {
             j || g.Z.fetchRequestToJoinGuilds();
-        }, [j]));
+        }, [j]);
     let Z = i.useCallback(() => {
-            (f(Math.max(h, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME));
+            f(Math.max(h, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME);
         }, [t, h]),
         x = (e, t) => () => {
             (0, o.h7j)((n) => {
@@ -83,24 +87,24 @@ let T = (e) => {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })(
@@ -109,17 +113,17 @@ let T = (e) => {
                             cancelText: C.intl.string(C.t.oEAioK),
                             onConfirm: t,
                             confirmText: C.intl.string(C.t.p89ACg),
-                            confirmButtonColor: a.zx.Colors.RED
+                            confirmButtonColor: a.zx.Colors.RED,
                         },
-                        n
+                        n,
                     )),
                     (l = l =
                         {
                             children: (0, r.jsx)(o.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'header-secondary',
-                                children: e
-                            })
+                                variant: "text-sm/normal",
+                                color: "header-secondary",
+                                children: e,
+                            }),
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -133,25 +137,25 @@ let T = (e) => {
                           })(Object(l)).forEach(function (e) {
                               Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                           }),
-                    i)
+                    i),
                 );
             });
         },
         w = async () => {
-            (await g.Z.resetGuildJoinRequest(t), (0, m.hk)(t));
+            await g.Z.resetGuildJoinRequest(t), (0, m.hk)(t);
         },
-        L = x(C.intl.format(C.t['9ZezpK'], { name: null == A ? void 0 : A.name }), Z),
+        L = x(C.intl.format(C.t["9ZezpK"], { name: null == A ? void 0 : A.name }), Z),
         R = x(C.intl.format(C.t.fJwWVl, { name: null == A ? void 0 : A.name }), Z);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: S.page,
         ref: n,
         children: [
             (0, r.jsx)(N, {
                 guild: A,
                 height: u,
-                width: c
+                width: c,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: S.contentWrapper,
                 children: (() => {
                     if (null == T) return null;
@@ -159,7 +163,7 @@ let T = (e) => {
                         case b.wB.SUBMITTED:
                             return (0, r.jsx)(y.Z, {
                                 onWithdrawApplication: L,
-                                guild: A
+                                guild: A,
                             });
                         case b.wB.REJECTED:
                             return (0, r.jsx)(E.Z, {
@@ -168,18 +172,18 @@ let T = (e) => {
                                 confirmText: C.intl.string(C.t.g9tK0t),
                                 onWithdrawApplication: L,
                                 rejectionReason: T.rejectionReason,
-                                guild: A
+                                guild: A,
                             });
                         default:
                             return (0, r.jsx)(O.s, {
                                 onDiscardApplication: R,
                                 onContinueApplication: () => (0, m.hk)(t),
-                                guild: A
+                                guild: A,
                             });
                     }
-                })()
+                })(),
             }),
-            (0, r.jsx)('div', { className: S.dragRegion })
-        ]
+            (0, r.jsx)("div", { className: S.dragRegion }),
+        ],
     });
 };

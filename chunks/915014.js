@@ -17,7 +17,7 @@ function h(e) {
         { mutualFriends: h, mutualGuilds: m } = (0, l.Z)(t),
         g = null != h && h.length > 0,
         E = null != m && m.length > 0,
-        b = g && E ? 'text-xs/normal' : 'text-sm/normal';
+        b = g && E ? "text-xs/normal" : "text-sm/normal";
     if (!g && !E) return null;
     let y = () =>
             g
@@ -34,22 +34,22 @@ function h(e) {
                               size: f.EF.SIZE_16,
                               hideOverflowCount: !0,
                               disableUsernameTooltip: !0,
-                              'aria-hidden': !0
+                              "aria-hidden": !0,
                           }),
                           (0, r.jsx)(i.Text, {
                               className: _.text,
                               variant: b,
-                              color: 'interactive-normal',
-                              children: (0, c.Z)(h.length)
-                          })
-                      ]
+                              color: "interactive-normal",
+                              children: (0, c.Z)(h.length),
+                          }),
+                      ],
                   })
                 : null,
         O = () =>
             g && E
-                ? (0, r.jsx)('div', {
-                      'aria-hidden': 'true',
-                      className: _.spacer
+                ? (0, r.jsx)("div", {
+                      "aria-hidden": "true",
+                      className: _.spacer,
                   })
                 : null,
         v = () =>
@@ -67,19 +67,19 @@ function h(e) {
                                   }),
                                   size: s.Z.Sizes.SMOL,
                                   hideOverflowCount: !0,
-                                  disableGuildNameTooltip: !0
+                                  disableGuildNameTooltip: !0,
                               }),
                           (0, r.jsx)(i.Text, {
                               className: _.text,
                               variant: b,
-                              color: 'interactive-normal',
-                              children: (0, u.Z)(m.length)
-                          })
-                      ]
+                              color: "interactive-normal",
+                              children: (0, u.Z)(m.length),
+                          }),
+                      ],
                   })
                 : null;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: _.mutuals,
-        children: [y(), O(), v()]
+        children: [y(), O(), v()],
     });
 }

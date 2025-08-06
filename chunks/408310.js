@@ -10,11 +10,20 @@ var i = n(481060),
     u = n(176480);
 let d = (e) => {
     let t,
-        { searchQuery: n, setSearchQuery: d, mostRecentQuery: h, handleClearSearch: p, handleSearchKeyPress: f, handleCreateOrAddGuild: g, searchResults: m, searchFetching: b } = e;
+        {
+            searchQuery: n,
+            setSearchQuery: d,
+            mostRecentQuery: h,
+            handleClearSearch: p,
+            handleSearchKeyPress: f,
+            handleCreateOrAddGuild: g,
+            searchResults: m,
+            searchFetching: b,
+        } = e;
     if (b)
-        t = (0, r.jsx)('div', {
+        t = (0, r.jsx)("div", {
             className: o.pageContainer,
-            children: (0, r.jsx)(i.$jN, { className: o.spinner })
+            children: (0, r.jsx)(i.$jN, { className: o.spinner }),
         });
     else if (0 === m.length) {
         let e =
@@ -25,65 +34,65 @@ let d = (e) => {
                               i.eee,
                               {
                                   onClick: g,
-                                  children: e
+                                  children: e,
                               },
-                              t
+                              t,
                           );
-                      }
+                      },
                   })
                 : s.intl.string(s.t.vYyEnp);
-        t = (0, r.jsxs)('div', {
+        t = (0, r.jsxs)("div", {
             className: c.emptySearchWrapper,
             children: [
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     className: c.emptySearchImage,
-                    alt: '',
-                    src: u
+                    alt: "",
+                    src: u,
                 }),
                 (0, r.jsx)(i.X6q, {
-                    variant: 'heading-xl/semibold',
-                    color: 'header-primary',
+                    variant: "heading-xl/semibold",
+                    color: "header-primary",
                     className: c.emptySearchTitle,
-                    children: s.intl.string(s.t['6HXiuL'])
+                    children: s.intl.string(s.t["6HXiuL"]),
                 }),
                 (0, r.jsx)(i.Text, {
-                    variant: 'text-md/normal',
-                    color: 'header-secondary',
+                    variant: "text-md/normal",
+                    color: "header-secondary",
                     className: c.emptySearchSubtitle,
-                    children: e
-                })
-            ]
+                    children: e,
+                }),
+            ],
         });
     } else
-        t = (0, r.jsx)('div', {
+        t = (0, r.jsx)("div", {
             className: o.cardsContainer,
-            children: m.map((e) => (0, r.jsx)(a.Z, { entry: e }, e.guildId))
+            children: m.map((e) => (0, r.jsx)(a.Z, { entry: e }, e.guildId)),
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o.pageContainer,
         children: (0, r.jsxs)(i.w0Z, {
             className: o.scroller,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: c.searchHeader,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: c.headerTitleWrapper,
                             children: [
                                 (0, r.jsx)(i.P3F, {
                                     onClick: p,
                                     className: c.arrow,
-                                    children: (0, r.jsx)(l.Z, { direction: l.Z.Directions.LEFT })
+                                    children: (0, r.jsx)(l.Z, { direction: l.Z.Directions.LEFT }),
                                 }),
                                 (0, r.jsx)(i.X6q, {
-                                    variant: 'heading-xl/semibold',
+                                    variant: "heading-xl/semibold",
                                     className: c.searchPageTitle,
                                     children: s.intl.format(s.t.UkOHRU, {
                                         numResults: m.length,
-                                        query: h
-                                    })
-                                })
-                            ]
+                                        query: h,
+                                    }),
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(i.Rj2, {
                             searchTerm: n,
@@ -94,12 +103,12 @@ let d = (e) => {
                             onChange: d,
                             onClear: p,
                             onKeyPress: f,
-                            cta: null != n && n.length > 0 ? s.intl.string(s.t['CU+6oK']) : null
-                        })
-                    ]
+                            cta: null != n && n.length > 0 ? s.intl.string(s.t["CU+6oK"]) : null,
+                        }),
+                    ],
                 }),
-                t
-            ]
-        })
+                t,
+            ],
+        }),
     });
 };

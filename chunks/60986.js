@@ -10,28 +10,28 @@ var r = n(255367),
     u = n(544627);
 function m(e) {
     let t = i.useCallback(() => {
-        ((0, s.transitionToGlobalDiscovery)({
+        (0, s.transitionToGlobalDiscovery)({
             tab: c.GlobalDiscoveryTab.APPS,
             newSessionState: {
                 guildId: e.guildId,
                 entrypoint: {
                     name: o.xF.GUILD_SETTINGS,
-                    guildSettingsSection: e.section
-                }
-            }
+                    guildSettingsSection: e.section,
+                },
+            },
         }),
-            (0, a.xf)());
+            (0, a.xf)();
     }, [e.guildId, e.section]);
     return (0, r.jsxs)(l.P3F, {
         onClick: t,
         className: u.rowContainer,
         children: [
-            (0, r.jsx)('div', { children: d.intl.string(d.t.AKcFUl) }),
+            (0, r.jsx)("div", { children: d.intl.string(d.t.AKcFUl) }),
             (0, r.jsx)(l.rgF, {
-                size: 'xs',
-                color: 'currentColor',
-                className: u.linkIcon
-            })
-        ]
+                size: "xs",
+                color: "currentColor",
+                className: u.linkIcon,
+            }),
+        ],
     });
 }

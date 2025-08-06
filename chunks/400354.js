@@ -4,25 +4,25 @@ var r = n(255367),
     l = n(709014);
 let o = {
         deafen: {
-            name: 'deafen',
+            name: "deafen",
             start: 0,
-            duration: 70
+            duration: 70,
         },
         undeafen: {
-            name: 'undeafen',
+            name: "undeafen",
             start: 110,
-            duration: 70
+            duration: 70,
         },
         hover_undeafened: {
-            name: 'hover_undeafened',
+            name: "hover_undeafened",
             start: 200,
-            duration: 70
+            duration: 70,
         },
         hover_deafened: {
-            name: 'hover_deafened',
+            name: "hover_deafened",
             start: 300,
-            duration: 70
-        }
+            duration: 70,
+        },
     },
     a = (e) => {
         let t = i.useRef(null),
@@ -32,16 +32,16 @@ let o = {
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
-                [e]
+                [e],
             ),
             c = i.useCallback(() => {
                 if (null == t.current) return;
-                let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
+                let n = "deafen" === e ? "hover_undeafened" : "hover_deafened";
                 t.current.play(n);
             }, [e]),
             u = i.useCallback(() => {
                 if (null == t.current) return;
-                let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
+                let n = "deafen" === e ? "hover_undeafened" : "hover_deafened";
                 t.current.stopIfPlaying(n);
             }, [e]),
             d = i.useCallback((e) => {
@@ -52,33 +52,33 @@ let o = {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, e)),
                     (s = s =
                         {
-                            src: () => n.e('68449').then(n.t.bind(n, 406785, 19)),
+                            src: () => n.e("68449").then(n.t.bind(n, 406785, 19)),
                             ref: t,
                             initialAnimation: a.current,
-                            markers: o
+                            markers: o,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
@@ -92,14 +92,14 @@ let o = {
                           })(Object(s)).forEach(function (e) {
                               Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
                           }),
-                    i)
+                    i),
                 );
             }, []);
         return {
             events: {
                 onClick: s,
                 onMouseEnter: c,
-                onMouseLeave: u
+                onMouseLeave: u,
             },
             play: s,
             getDuration: i.useCallback(() => {
@@ -110,6 +110,6 @@ let o = {
                 var e, n;
                 return null != (n = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? n : null;
             }, []),
-            Component: d
+            Component: d,
         };
     };

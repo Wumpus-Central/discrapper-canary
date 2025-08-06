@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => b,
     c2: () => x,
-    cK: () => m
+    cK: () => m,
 });
 var r,
     i,
@@ -19,7 +19,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,22 +29,22 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
-var m = (((r = {}).SIZE_40 = 'SIZE_40'), (r.SIZE_60 = 'SIZE_60'), r);
+var m = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
 let f = Object.freeze({
-        SIZE_40: 'size-40',
-        SIZE_60: 'size-60'
+        SIZE_40: "size-40",
+        SIZE_60: "size-60",
     }),
     g = n(515695);
 class _ extends (i = o.PureComponent) {
@@ -61,20 +61,22 @@ class _ extends (i = o.PureComponent) {
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
-            })(e, ['className', 'text']);
-        return (0, s.jsx)('div', {
+            })(e, ["className", "text"]);
+        return (0, s.jsx)("div", {
             style: {
                 width: r.size,
                 height: r.size,
-                backgroundColor: r.bgColor
+                backgroundColor: r.bgColor,
             },
             className: c()(d.qrCodeContainer, t),
             children: (0, s.jsx)(
@@ -82,42 +84,42 @@ class _ extends (i = o.PureComponent) {
                 p(
                     {
                         value: n,
-                        level: 'M'
+                        level: "M",
                     },
-                    r
-                )
-            )
+                    r,
+                ),
+            ),
         });
     }
 }
-h(_, 'defaultProps', {
+h(_, "defaultProps", {
     size: 128,
-    bgColor: '#ffffff',
-    fgColor: '#000000'
+    bgColor: "#ffffff",
+    fgColor: "#000000",
 });
 class x extends (l = o.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
-            t = f[null != e ? e : 'SIZE_40'];
-        return (0, s.jsxs)('div', {
+            t = f[null != e ? e : "SIZE_40"];
+        return (0, s.jsxs)("div", {
             className: d.qrCodeOverlayContainer,
             children: [
                 (0, s.jsx)(_, p({}, this.props)),
-                (0, s.jsx)('div', {
+                (0, s.jsx)("div", {
                     className: d.qrCodeOverlay,
-                    children: (0, s.jsx)('img', {
+                    children: (0, s.jsx)("img", {
                         className: d[t],
                         src: g,
-                        alt: ''
-                    })
-                })
-            ]
+                        alt: "",
+                    }),
+                }),
+            ],
         });
     }
 }
-h(x, 'defaultProps', {
+h(x, "defaultProps", {
     size: 144,
-    bgColor: '#ffffff',
-    fgColor: '#000000'
+    bgColor: "#ffffff",
+    fgColor: "#000000",
 });
 let b = _;

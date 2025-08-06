@@ -1,4 +1,4 @@
-(t.d(r, { default: () => v }), t(953529));
+t.d(r, { default: () => v }), t(953529);
 var n = t(255367),
     o = t(73800),
     s = t(481060),
@@ -18,65 +18,65 @@ function f(e) {
     for (var r = 1; r < arguments.length; r++) {
         var t = null != arguments[r] ? arguments[r] : {},
             n = Object.keys(t);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (r) {
                 var n;
-                ((n = t[r]),
+                (n = t[r]),
                     r in e
                         ? Object.defineProperty(e, r, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[r] = n));
-            }));
+                        : (e[r] = n);
+            });
     }
     return e;
 }
-let g = 'premium-guild-subscription-upsell-modal-header';
+let g = "premium-guild-subscription-upsell-modal-header";
 function y(e) {
     let { title: r, subtitle: t, image: o } = e;
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: h.header,
         children: [
             (0, n.jsx)(s.X6q, {
-                variant: 'heading-xl/semibold',
+                variant: "heading-xl/semibold",
                 id: g,
-                color: 'header-primary',
+                color: "header-primary",
                 className: x.marginBottom8,
-                children: r
+                children: r,
             }),
             (0, n.jsx)(s.Text, {
-                variant: 'text-md/normal',
+                variant: "text-md/normal",
                 className: h.subtitleText,
-                children: t
+                children: t,
             }),
-            o
-        ]
+            o,
+        ],
     });
 }
 let O = (e) => {
         let { onClose: r, perks: t, perkIntro: o = m.intl.string(m.t.Dr3Goa), headerProps: c } = e;
-        return (0, n.jsxs)('div', {
+        return (0, n.jsxs)("div", {
             className: h.wrapper,
             children: [
                 (0, n.jsx)(s.olH, {
                     className: h.closeButton,
                     onClick: () => {
                         r();
-                    }
+                    },
                 }),
                 (0, n.jsx)(k, {
                     headerProps: c,
-                    perkIntro: o
+                    perkIntro: o,
                 }),
-                (0, n.jsx)('div', {
+                (0, n.jsx)("div", {
                     className: h.perks,
                     children: t.map((e, r) => {
                         let { icon: t, iconClassName: o, description: s, color: c } = e;
@@ -86,13 +86,13 @@ let O = (e) => {
                                 icon: t,
                                 iconClassName: o,
                                 description: s,
-                                color: c
+                                color: c,
                             },
-                            r
+                            r,
                         );
-                    })
-                })
-            ]
+                    }),
+                }),
+            ],
         });
     },
     k = (e) => {
@@ -101,17 +101,17 @@ let O = (e) => {
             children: [
                 null != r
                     ? (0, n.jsx)(y, f({}, r))
-                    : (0, n.jsx)('img', {
+                    : (0, n.jsx)("img", {
                           className: h.heroImage,
                           src: t(438471),
-                          alt: m.intl.string(m.t.PkcaAA)
+                          alt: m.intl.string(m.t.PkcaAA),
                       }),
                 (0, n.jsx)(s.Text, {
-                    variant: 'text-md/normal',
+                    variant: "text-md/normal",
                     className: h.heading,
-                    children: c
-                })
-            ]
+                    children: c,
+                }),
+            ],
         });
     },
     _ = (e) => {
@@ -119,18 +119,18 @@ let O = (e) => {
             i = {
                 section: b.jXE.PREMIUM_GUILD_UPSELL_MODAL,
                 object: b.qAy.BUTTON_CTA,
-                objectType: null != t ? (0, d.ge)(t) : null
+                objectType: null != t ? (0, d.ge)(t) : null,
             };
         return (0, n.jsxs)(s.mzw, {
             className: h.footer,
             children: [
                 (0, n.jsx)(s.zxk, {
-                    variant: 'secondary',
-                    size: 'sm',
+                    variant: "secondary",
+                    size: "sm",
                     text: m.intl.string(m.t.cpT0Cg),
                     onClick: () => {
                         o();
-                    }
+                    },
                 }),
                 (0, n.jsx)(j.Z, {
                     analyticsLocation: i,
@@ -139,15 +139,23 @@ let O = (e) => {
                     targetBoostedGuildTier: t,
                     onClose: () => {
                         o();
-                    }
-                })
-            ]
+                    },
+                }),
+            ],
         });
     };
 function v(e) {
     var r,
         t,
-        { analyticsSourceLocation: o, guild: u, targetBoostedGuildTier: d, perks: j, perkIntro: b, headerProps: m, onClose: h } = e,
+        {
+            analyticsSourceLocation: o,
+            guild: u,
+            targetBoostedGuildTier: d,
+            perks: j,
+            perkIntro: b,
+            headerProps: m,
+            onClose: h,
+        } = e,
         x = (function (e, r) {
             if (null == e) return {};
             var t,
@@ -158,15 +166,25 @@ function v(e) {
                         n,
                         o = {},
                         s = Object.keys(e);
-                    for (n = 0; n < s.length; n++) ((t = s[n]), r.indexOf(t) >= 0 || (o[t] = e[t]));
+                    for (n = 0; n < s.length; n++) (t = s[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
                     return o;
                 })(e, r);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < s.length; n++) ((t = s[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]));
+                for (n = 0; n < s.length; n++)
+                    (t = s[n]),
+                        !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
             }
             return o;
-        })(e, ['analyticsSourceLocation', 'guild', 'targetBoostedGuildTier', 'perks', 'perkIntro', 'headerProps', 'onClose']);
+        })(e, [
+            "analyticsSourceLocation",
+            "guild",
+            "targetBoostedGuildTier",
+            "perks",
+            "perkIntro",
+            "headerProps",
+            "onClose",
+        ]);
     let { analyticsLocations: y } = (0, i.ZP)(c.Z.ACTIVITY_DIRECTORY);
     return (0, n.jsx)(i.Gt, {
         value: y,
@@ -179,25 +197,25 @@ function v(e) {
                 ((r = f({}, x)),
                 (t = t =
                     {
-                        'aria-labelledby': g,
-                        parentComponent: 'GuildBoostingUpsellModal',
+                        "aria-labelledby": g,
+                        parentComponent: "GuildBoostingUpsellModal",
                         children: (0, n.jsx)(p.Z, {
                             hideBreadcrumbs: !0,
                             body: (0, n.jsx)(O, {
                                 onClose: h,
                                 perks: j,
                                 perkIntro: b,
-                                headerProps: m
+                                headerProps: m,
                             }),
                             footer: (0, n.jsx)(_, {
                                 guild: u,
                                 targetBoostedGuildTier: d,
                                 onClose: h,
-                                analyticsSourceLocation: o
+                                analyticsSourceLocation: o,
                             }),
                             steps: [l.h8.PREMIUM_GUILD_UPSELL],
-                            currentStep: l.h8.PREMIUM_GUILD_UPSELL
-                        })
+                            currentStep: l.h8.PREMIUM_GUILD_UPSELL,
+                        }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(t))
@@ -211,8 +229,8 @@ function v(e) {
                       })(Object(t)).forEach(function (e) {
                           Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(t, e));
                       }),
-                r)
-            )
-        })
+                r),
+            ),
+        }),
     });
 }

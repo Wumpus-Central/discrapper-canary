@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(354459),
     h = n(436992),
     m = n(20795);
-let g = 'CameraPreviewPosition',
+let g = "CameraPreviewPosition",
     E = 160,
     b = 8;
 function y() {
@@ -21,8 +21,8 @@ function y() {
     return [
         e,
         i.useCallback((e) => {
-            (l.K.set(g, e), t(e));
-        }, [])
+            l.K.set(g, e), t(e);
+        }, []),
     ];
 }
 function O(e, t) {
@@ -42,9 +42,9 @@ function I(e) {
         R = i.useMemo(
             () => ({
                 minWidth: O(p.Rv[p.cL.CAMERA_PREVIEW], N),
-                maxWidth: O(p.$i[p.cL.CAMERA_PREVIEW], N)
+                maxWidth: O(p.$i[p.cL.CAMERA_PREVIEW], N),
             }),
-            [N]
+            [N],
         );
     i.useLayoutEffect(() => {
         var e;
@@ -55,15 +55,15 @@ function I(e) {
                 let t = v(e, N);
                 c.d7(t, p.cL.CAMERA_PREVIEW);
             },
-            [N]
+            [N],
         ),
         w = i.useCallback(
             (e, t) => {
                 I(t);
             },
-            [I]
+            [I],
         );
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: h.container,
         children: (0, r.jsx)(u._, {
             position: b,
@@ -79,7 +79,7 @@ function I(e) {
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
             resizeConfig: R,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: h.tileContainer,
                 children: _.map((e) =>
                     (0, r.jsx)(
@@ -93,12 +93,12 @@ function I(e) {
                             inCall: !0,
                             inPopout: !1,
                             width: E,
-                            onClick: g
+                            onClick: g,
                         },
-                        e.id
-                    )
-                )
-            })
-        })
+                        e.id,
+                    ),
+                ),
+            }),
+        }),
     });
 }

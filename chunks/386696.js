@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     F: () => u,
-    Z: () => d
+    Z: () => d,
 }),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(601964),
     o = n(430824),
@@ -23,7 +23,7 @@ function u(e, t) {
             l.BT({
                 permission: c.Plq.ADMINISTRATOR,
                 user: f,
-                context: d
+                context: d,
             })
         ) && u.canManageUser(c.Plq.MODERATE_MEMBERS, f, d)
     );

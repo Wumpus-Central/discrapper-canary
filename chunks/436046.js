@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685), n(953529));
+n.d(t, { Z: () => N }), n(388685), n(953529);
 var s = n(255367),
     a = n(73800),
     o = n(512722),
@@ -23,14 +23,16 @@ function N(e) {
         v = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
         I = a.useRef(null);
     async function g(e) {
-        (e.preventDefault(), r()(null != o, 'Cannot submit null birthday.'), T(!0));
+        e.preventDefault(), r()(null != o, "Cannot submit null birthday."), T(!0);
         try {
-            (await u.Av(o, b.L0.NEW_USER_FLOW), t());
+            await u.Av(o, b.L0.NEW_USER_FLOW), t();
         } catch (e) {
-            if (null != e.body && null != e.body.date_of_birth) (u.wE(b.L0.NEW_USER_FLOW), u.hp(b.L0.NEW_USER_FLOW), n());
+            if (null != e.body && null != e.body.date_of_birth) u.wE(b.L0.NEW_USER_FLOW), u.hp(b.L0.NEW_USER_FLOW), n();
             else {
                 var s;
-                (null == e || null == (s = e.body) ? void 0 : s.username) != null ? E(h.intl.string(h.t['TGg/2t'])) : E(null == e ? void 0 : e.body.message);
+                (null == e || null == (s = e.body) ? void 0 : s.username) != null
+                    ? E(h.intl.string(h.t["TGg/2t"]))
+                    : E(null == e ? void 0 : e.body.message);
             }
         }
         T(!1);
@@ -42,7 +44,7 @@ function N(e) {
             (e) => {
                 N(e);
             },
-            [N]
+            [N],
         ),
         A = a.useCallback(() => {
             var e;
@@ -50,27 +52,27 @@ function N(e) {
         }, [I]);
     return null == v
         ? null
-        : (0, s.jsxs)('form', {
+        : (0, s.jsxs)("form", {
               className: x.content,
               onSubmit: g,
               children: [
                   (0, s.jsx)(d.gw7, {
-                      size: 'custom',
+                      size: "custom",
                       width: 56,
                       height: 40,
                       className: x.logo,
-                      color: l.Z.unsafe_rawColors.BRAND_500.css
+                      color: l.Z.unsafe_rawColors.BRAND_500.css,
                   }),
                   (0, s.jsx)(d.X6q, {
                       className: x.title,
-                      variant: 'heading-xl/semibold',
-                      children: h.intl.string(h.t.n7i7sr)
+                      variant: "heading-xl/semibold",
+                      children: h.intl.string(h.t.n7i7sr),
                   }),
                   (0, s.jsx)(d.Text, {
-                      color: 'text-default',
+                      color: "text-default",
                       className: x.description,
-                      variant: 'text-md/normal',
-                      children: h.intl.format(h.t.fa8kW1, { helpURL: f.Z.getArticleURL(m.BhN.AGE_GATE) })
+                      variant: "text-md/normal",
+                      children: h.intl.format(h.t.fa8kW1, { helpURL: f.Z.getArticleURL(m.BhN.AGE_GATE) }),
                   }),
                   (0, s.jsx)(d.ze6, {
                       theme: m.BRd.LIGHT,
@@ -79,28 +81,28 @@ function N(e) {
                           autoFocus: !0,
                           wrapperClassName: x.formItem,
                           label: h.intl.string(h.t.rhBeKS),
-                          name: 'birthday',
+                          name: "birthday",
                           onChange: O,
                           onPopulated: A,
                           error: C,
-                          value: o
-                      })
+                          value: o,
+                      }),
                   }),
-                  (0, s.jsx)('div', {
+                  (0, s.jsx)("div", {
                       className: x.footer,
-                      children: (0, s.jsx)('div', {
+                      children: (0, s.jsx)("div", {
                           className: x.buttonWrapper,
                           children: (0, s.jsx)(c.zx, {
                               buttonRef: I,
-                              type: 'submit',
+                              type: "submit",
                               size: c.zx.Sizes.LARGE,
                               submitting: j,
                               disabled: null == o,
                               fullWidth: !0,
-                              children: h.intl.string(h.t.PDTjLC)
-                          })
-                      })
-                  })
-              ]
+                              children: h.intl.string(h.t.PDTjLC),
+                          }),
+                      }),
+                  }),
+              ],
           });
 }

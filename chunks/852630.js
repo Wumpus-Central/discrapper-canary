@@ -8,16 +8,16 @@ function o(e) {
     let { selected: t, nameplate: n } = e,
         o = (0, s.x)(),
         c = new a.mn({
-            id: '0',
+            id: "0",
             type: l.d4z.DM,
-            name: 'self',
-            guild_id: '0',
-            recipients: [o.id]
+            name: "self",
+            guild_id: "0",
+            recipients: [o.id],
         });
     return (0, i.jsx)(r.RS, {
         selected: t,
         channel: c,
         user: o,
-        nameplate: n
+        nameplate: n,
     });
 }

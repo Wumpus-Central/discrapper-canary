@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,56 +11,62 @@ var r = n(255367),
 function h(e) {
     let { width: t = 24, height: n = 24, isBadged: l = !1 } = e,
         [a] = i.useState(() => (0, s.Z)());
-    return (0, r.jsxs)('svg', {
+    return (0, r.jsxs)("svg", {
         width: t,
         height: n,
-        viewBox: '0 0 24 24',
+        viewBox: "0 0 24 24",
         children: [
-            (0, r.jsx)('defs', {
-                children: (0, r.jsxs)('mask', {
+            (0, r.jsx)("defs", {
+                children: (0, r.jsxs)("mask", {
                     id: a,
                     children: [
-                        (0, r.jsx)('rect', {
-                            fill: 'white',
-                            width: '100%',
-                            height: '100%'
+                        (0, r.jsx)("rect", {
+                            fill: "white",
+                            width: "100%",
+                            height: "100%",
                         }),
                         l &&
-                            (0, r.jsx)('circle', {
-                                cx: '20',
-                                cy: '19',
-                                r: '10',
-                                fill: 'black'
-                            })
-                    ]
-                })
+                            (0, r.jsx)("circle", {
+                                cx: "20",
+                                cy: "19",
+                                r: "10",
+                                fill: "black",
+                            }),
+                    ],
+                }),
             }),
-            (0, r.jsx)('g', {
-                mask: 'url(#'.concat(a, ')'),
-                children: (0, r.jsx)(o.E0I, {})
-            })
-        ]
+            (0, r.jsx)("g", {
+                mask: "url(#".concat(a, ")"),
+                children: (0, r.jsx)(o.E0I, {}),
+            }),
+        ],
     });
 }
 function p(e) {
     let { className: t, numRequestToSpeak: n } = e,
         i = n > 0;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(d.raisedHandIcon, t),
         children: [
             (0, r.jsx)(h, { isBadged: i }),
             i
                 ? (0, r.jsx)(o.Text, {
                       className: d.raisedHandCount,
-                      variant: 'text-xs/semibold',
-                      children: n > 99 ? '99+' : n
+                      variant: "text-xs/semibold",
+                      children: n > 99 ? "99+" : n,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 function f(e) {
-    var { toggleRequestToSpeakSidebar: t, showRequestToSpeakSidebar: n, className: l, numRequestToSpeak: a, onClick: s } = e,
+    var {
+            toggleRequestToSpeakSidebar: t,
+            showRequestToSpeakSidebar: n,
+            className: l,
+            numRequestToSpeak: a,
+            onClick: s,
+        } = e,
         o = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -71,17 +77,25 @@ function f(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['toggleRequestToSpeakSidebar', 'showRequestToSpeakSidebar', 'className', 'numRequestToSpeak', 'onClick']);
+        })(e, [
+            "toggleRequestToSpeakSidebar",
+            "showRequestToSpeakSidebar",
+            "className",
+            "numRequestToSpeak",
+            "onClick",
+        ]);
     let d = i.useCallback(() => {
-        (null == s || s(), t());
+        null == s || s(), t();
     }, [s, t]);
     return (0, r.jsx)(
         c.Z,
@@ -89,24 +103,24 @@ function f(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         var r;
-                        ((r = n[t]),
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = r));
-                    }));
+                                : (e[t] = r);
+                    });
             }
             return e;
         })(
@@ -117,10 +131,10 @@ function f(e) {
                 iconComponent: () =>
                     (0, r.jsx)(p, {
                         numRequestToSpeak: a,
-                        className: l
-                    })
+                        className: l,
+                    }),
             },
-            o
-        )
+            o,
+        ),
     );
 }

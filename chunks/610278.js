@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => b,
-    ro: () => h
+    ro: () => h,
 });
 var r = n(570140),
     i = n(519938),
@@ -13,7 +13,7 @@ var r = n(570140),
     d = n(981631);
 let p = null;
 function h(e) {
-    return 'framepip:'.concat(e.applicationId);
+    return "framepip:".concat(e.applicationId);
 }
 function f() {
     let e = u.Z.getConnectedFrame();
@@ -28,13 +28,13 @@ function f() {
         let e = p;
         r.Z.wait(() => i.xv(e));
     }
-    return (r.Z.wait(() => i.bA(t, d.NYg.FRAME, {})), void (p = t));
+    return r.Z.wait(() => i.bA(t, d.NYg.FRAME, {})), void (p = t);
 }
 function g() {
     if (
         (0, a.Z)({
             LayerStore: s.Z,
-            PopoutWindowStore: o.Z
+            PopoutWindowStore: o.Z,
         })
     ) {
         let e = p;
@@ -46,10 +46,10 @@ function g() {
 }
 class m extends l.Z {
     _initialize() {
-        (u.Z.addChangeListener(f), s.Z.addChangeListener(g));
+        u.Z.addChangeListener(f), s.Z.addChangeListener(g);
     }
     _terminate() {
-        (u.Z.removeChangeListener(f), s.Z.removeChangeListener(g));
+        u.Z.removeChangeListener(f), s.Z.removeChangeListener(g);
     }
 }
 let b = new m();

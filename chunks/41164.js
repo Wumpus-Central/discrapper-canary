@@ -14,26 +14,26 @@ let m = (e) => {
     let { transitionState: t, onClose: n, classificationId: m, source: f } = e,
         h = (0, r.Z)(),
         g = () => {
-            (n(), l.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING));
+            n(), l.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
         };
     return (0, i.jsxs)(a.Y0X, {
         className: u.modalRoot,
         transitionState: t,
-        parentComponent: 'ClassificationDetailModal',
+        parentComponent: "ClassificationDetailModal",
         children: [
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: u.modalHeader,
                 children: [
-                    (0, i.jsx)('img', {
+                    (0, i.jsx)("img", {
                         className: u.image,
                         src: p,
-                        alt: ''
+                        alt: "",
                     }),
                     (0, i.jsx)(a.olH, {
                         className: u.modalClose,
-                        onClick: n
-                    })
-                ]
+                        onClick: n,
+                    }),
+                ],
             }),
             (0, i.jsx)(a.hzk, {
                 className: u.modalContent,
@@ -43,21 +43,21 @@ let m = (e) => {
                           classificationId: m,
                           source: f,
                           onError: g,
-                          onClose: g
-                      })
+                          onClose: g,
+                      }),
             }),
             (0, i.jsx)(a.mzw, {
-                children: (0, i.jsx)('div', {
-                    'data-button-hoisted-classname-wrapper': !0,
+                children: (0, i.jsx)("div", {
+                    "data-button-hoisted-classname-wrapper": !0,
                     className: u.__invalid_button,
                     children: (0, i.jsx)(a.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: d.intl.string(d.t.elrEjI),
-                        type: 'button',
-                        onClick: g
-                    })
-                })
-            })
-        ]
+                        type: "button",
+                        onClick: g,
+                    }),
+                }),
+            }),
+        ],
     });
 };

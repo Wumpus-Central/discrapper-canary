@@ -5,7 +5,7 @@ r(
     {
         global: !0,
         bind: !0,
-        forced: o.setTimeout !== a
+        forced: o.setTimeout !== a,
     },
-    { setTimeout: a }
+    { setTimeout: a },
 );

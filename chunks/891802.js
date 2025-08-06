@@ -5,24 +5,24 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (o = o.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             o.forEach(function (t) {
                 var o;
-                ((o = n[t]),
+                (o = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: o,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = o));
-            }));
+                        : (e[t] = o);
+            });
     }
     return e;
 }
@@ -47,36 +47,36 @@ function l(e, t) {
 let a = {
         showFormStyleSurvey: !1,
         hideNeutralOption: !1,
-        showVibesHoneypot: !1
+        showVibesHoneypot: !1,
     },
     s = (0, o.B)({
-        kind: 'user',
-        id: '2025-02_call_survey_refresh_web',
-        label: 'Call Survey Refresh (Web)',
+        kind: "user",
+        id: "2025-02_call_survey_refresh_web",
+        label: "Call Survey Refresh (Web)",
         defaultConfig: a,
         treatments: [
             {
                 id: 1,
-                label: 'Show form-style survey without neutral',
+                label: "Show form-style survey without neutral",
                 config: l(i({}, a), {
                     showFormStyleSurvey: !0,
-                    hideNeutralOption: !0
-                })
+                    hideNeutralOption: !0,
+                }),
             },
             {
                 id: 2,
-                label: 'Show survey without neutral',
-                config: l(i({}, a), { hideNeutralOption: !0 })
+                label: "Show survey without neutral",
+                config: l(i({}, a), { hideNeutralOption: !0 }),
             },
             {
                 id: 3,
-                label: 'Show survey without neutral, and with vibes honeypot',
+                label: "Show survey without neutral, and with vibes honeypot",
                 config: l(i({}, a), {
                     hideNeutralOption: !0,
-                    showVibesHoneypot: !0
-                })
-            }
-        ]
+                    showVibesHoneypot: !0,
+                }),
+            },
+        ],
     });
 function c(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -85,7 +85,7 @@ function c(e) {
         { location: t },
         {
             disable: o,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     );
 }

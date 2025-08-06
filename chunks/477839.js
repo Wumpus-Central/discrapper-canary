@@ -20,7 +20,7 @@ n.d(t, {
     tH: () => eO,
     uv: () => eT,
     w2: () => eS,
-    yN: () => eI
+    yN: () => eI,
 });
 var r = n(562858),
     i = n(702319),
@@ -92,226 +92,270 @@ var r = n(562858),
     em = n(718256),
     eg = n(255785),
     eE = n(429413);
-let eb = '1344176506041139230',
+let eb = "1344176506041139230",
     ey = [200, 500, 1000],
     eO = 5,
-    ev = 'https://discord.com/settings/clicker-game';
+    ev = "https://discord.com/settings/clicker-game";
 var eI = (function (e) {
-        return ((e[(e.CLICKER_BUTTON = 0)] = 'CLICKER_BUTTON'), (e[(e.RAIN = 1)] = 'RAIN'), (e[(e.SUN = 2)] = 'SUN'), (e[(e.STATS = 3)] = 'STATS'), (e[(e.RATE = 4)] = 'RATE'), (e[(e.ACHIEVEMENTS = 5)] = 'ACHIEVEMENTS'), (e[(e.SNEK = 6)] = 'SNEK'), (e[(e.WEEDS = 7)] = 'WEEDS'), (e[(e.PET_WUMPUS = 8)] = 'PET_WUMPUS'), (e[(e.BOUNCING_LOGO = 9)] = 'BOUNCING_LOGO'), (e[(e.NAGBAR = 10)] = 'NAGBAR'), (e[(e.ANT = 11)] = 'ANT'), (e[(e.SNAIL = 12)] = 'SNAIL'), (e[(e.BEE = 13)] = 'BEE'), (e[(e.WORM = 14)] = 'WORM'), (e[(e.BUTTERFLY = 15)] = 'BUTTERFLY'), (e[(e.TULIP = 16)] = 'TULIP'), (e[(e.SUNFLOWER = 17)] = 'SUNFLOWER'), (e[(e.ORCHID = 18)] = 'ORCHID'), (e[(e.LOOTBOXES = 19)] = 'LOOTBOXES'), (e[(e.MESSAGES = 20)] = 'MESSAGES'), (e[(e.AT_SOMEONE = 21)] = 'AT_SOMEONE'), (e[(e.CURSORS = 22)] = 'CURSORS'), (e[(e.POURING_WATER = 23)] = 'POURING_WATER'), (e[(e.WATERING_CAN = 24)] = 'WATERING_CAN'), (e[(e.LEVELING = 25)] = 'LEVELING'), (e[(e.MUSIC = 26)] = 'MUSIC'), (e[(e.LAWNMOWER = 27)] = 'LAWNMOWER'), (e[(e.COMPLETE_GAME = 28)] = 'COMPLETE_GAME'), e);
+        return (
+            (e[(e.CLICKER_BUTTON = 0)] = "CLICKER_BUTTON"),
+            (e[(e.RAIN = 1)] = "RAIN"),
+            (e[(e.SUN = 2)] = "SUN"),
+            (e[(e.STATS = 3)] = "STATS"),
+            (e[(e.RATE = 4)] = "RATE"),
+            (e[(e.ACHIEVEMENTS = 5)] = "ACHIEVEMENTS"),
+            (e[(e.SNEK = 6)] = "SNEK"),
+            (e[(e.WEEDS = 7)] = "WEEDS"),
+            (e[(e.PET_WUMPUS = 8)] = "PET_WUMPUS"),
+            (e[(e.BOUNCING_LOGO = 9)] = "BOUNCING_LOGO"),
+            (e[(e.NAGBAR = 10)] = "NAGBAR"),
+            (e[(e.ANT = 11)] = "ANT"),
+            (e[(e.SNAIL = 12)] = "SNAIL"),
+            (e[(e.BEE = 13)] = "BEE"),
+            (e[(e.WORM = 14)] = "WORM"),
+            (e[(e.BUTTERFLY = 15)] = "BUTTERFLY"),
+            (e[(e.TULIP = 16)] = "TULIP"),
+            (e[(e.SUNFLOWER = 17)] = "SUNFLOWER"),
+            (e[(e.ORCHID = 18)] = "ORCHID"),
+            (e[(e.LOOTBOXES = 19)] = "LOOTBOXES"),
+            (e[(e.MESSAGES = 20)] = "MESSAGES"),
+            (e[(e.AT_SOMEONE = 21)] = "AT_SOMEONE"),
+            (e[(e.CURSORS = 22)] = "CURSORS"),
+            (e[(e.POURING_WATER = 23)] = "POURING_WATER"),
+            (e[(e.WATERING_CAN = 24)] = "WATERING_CAN"),
+            (e[(e.LEVELING = 25)] = "LEVELING"),
+            (e[(e.MUSIC = 26)] = "MUSIC"),
+            (e[(e.LAWNMOWER = 27)] = "LAWNMOWER"),
+            (e[(e.COMPLETE_GAME = 28)] = "COMPLETE_GAME"),
+            e
+        );
     })({}),
     eT = (function (e) {
-        return ((e[(e.CLICKER_BUTTON_STRONGER = 0)] = 'CLICKER_BUTTON_STRONGER'), (e[(e.WEED_KILLER = 1)] = 'WEED_KILLER'), (e[(e.BOUNCING_LOGO_MORE_LOGOS = 2)] = 'BOUNCING_LOGO_MORE_LOGOS'), (e[(e.BOUNCING_LOGO_CORNERS = 3)] = 'BOUNCING_LOGO_CORNERS'), (e[(e.BOUNCING_LOGO_SPEED = 4)] = 'BOUNCING_LOGO_SPEED'), (e[(e.BOUNCING_LOGO_COLORS = 5)] = 'BOUNCING_LOGO_COLORS'), (e[(e.CLICKER_BUTTON_AFFIRMATIONS = 6)] = 'CLICKER_BUTTON_AFFIRMATIONS'), (e[(e.SUN_RAISE = 7)] = 'SUN_RAISE'), (e[(e.FULLSCREEN_AT_SOMEONE = 8)] = 'FULLSCREEN_AT_SOMEONE'), (e[(e.CLICKER_BUTTON_RAINBOW = 9)] = 'CLICKER_BUTTON_RAINBOW'), (e[(e.MUSIC_CHANGE = 10)] = 'MUSIC_CHANGE'), e);
+        return (
+            (e[(e.CLICKER_BUTTON_STRONGER = 0)] = "CLICKER_BUTTON_STRONGER"),
+            (e[(e.WEED_KILLER = 1)] = "WEED_KILLER"),
+            (e[(e.BOUNCING_LOGO_MORE_LOGOS = 2)] = "BOUNCING_LOGO_MORE_LOGOS"),
+            (e[(e.BOUNCING_LOGO_CORNERS = 3)] = "BOUNCING_LOGO_CORNERS"),
+            (e[(e.BOUNCING_LOGO_SPEED = 4)] = "BOUNCING_LOGO_SPEED"),
+            (e[(e.BOUNCING_LOGO_COLORS = 5)] = "BOUNCING_LOGO_COLORS"),
+            (e[(e.CLICKER_BUTTON_AFFIRMATIONS = 6)] = "CLICKER_BUTTON_AFFIRMATIONS"),
+            (e[(e.SUN_RAISE = 7)] = "SUN_RAISE"),
+            (e[(e.FULLSCREEN_AT_SOMEONE = 8)] = "FULLSCREEN_AT_SOMEONE"),
+            (e[(e.CLICKER_BUTTON_RAINBOW = 9)] = "CLICKER_BUTTON_RAINBOW"),
+            (e[(e.MUSIC_CHANGE = 10)] = "MUSIC_CHANGE"),
+            e
+        );
     })({});
 let eS = () => ({
     0: {
-        name: s.intl.string(a.default['1pCxsL']),
-        description: s.intl.string(a.default['1pCxsL']),
+        name: s.intl.string(a.default["1pCxsL"]),
+        description: s.intl.string(a.default["1pCxsL"]),
         pointsDescription: a.default.C3Yi6u,
         cost: 0,
-        purchaseIconSrc: B
+        purchaseIconSrc: B,
     },
     1: {
         name: s.intl.string(a.default.LpCYsb),
         description: s.intl.string(a.default.KBsLzc),
         pointsDescription: a.default.QMkrPj,
         cost: 2800,
-        purchaseIconSrc: es
+        purchaseIconSrc: es,
     },
     2: {
         name: s.intl.string(a.default.JTkCcX),
         description: s.intl.string(a.default.WasJEx),
         pointsDescription: a.default.QMkrPj,
         cost: 3200,
-        purchaseIconSrc: e_
+        purchaseIconSrc: e_,
     },
     3: {
         name: s.intl.string(a.default.bS8cBA),
         description: s.intl.string(a.default.ysljvr),
         pointsDescription: a.default.QMkrPj,
         cost: 850,
-        purchaseIconSrc: ef
+        purchaseIconSrc: ef,
     },
     4: {
-        name: s.intl.string(a.default['XNOF5+']),
+        name: s.intl.string(a.default["XNOF5+"]),
         description: s.intl.format(a.default.RDskBQ, { grassIconHook: i.Z }),
         pointsDescription: a.default.QMkrPj,
         cost: 70,
-        purchaseIconSrc: ec
+        purchaseIconSrc: ec,
     },
     5: {
-        name: s.intl.string(a.default['236TJC']),
-        description: s.intl.string(a.default['+OWe8v']),
+        name: s.intl.string(a.default["236TJC"]),
+        description: s.intl.string(a.default["+OWe8v"]),
         pointsDescription: a.default.QMkrPj,
         cost: 300,
-        purchaseIconSrc: l
+        purchaseIconSrc: l,
     },
     6: {
         name: s.intl.string(a.default.ysKTU1),
         description: s.intl.string(a.default.SfM2SU),
         pointsDescription: a.default.qI1UNj,
         cost: 4921,
-        purchaseIconSrc: ed
+        purchaseIconSrc: ed,
     },
     7: {
-        name: s.intl.string(a.default['s610+f']),
-        description: s.intl.string(a.default['02Ncoq']),
+        name: s.intl.string(a.default["s610+f"]),
+        description: s.intl.string(a.default["02Ncoq"]),
         pointsDescription: a.default.QMkrPj,
         cost: 0,
-        purchaseIconSrc: eg
+        purchaseIconSrc: eg,
     },
     8: {
         name: s.intl.string(a.default.QDlhR0),
         description: s.intl.string(a.default.DQ6qb2),
         pointsDescription: a.default.wV8Sj4,
         cost: 100,
-        purchaseIconSrc: eo
+        purchaseIconSrc: eo,
     },
     9: {
-        name: s.intl.string(a.default['y+f4AA']),
-        description: s.intl.string(a.default['/Tqbwc']),
+        name: s.intl.string(a.default["y+f4AA"]),
+        description: s.intl.string(a.default["/Tqbwc"]),
         pointsDescription: a.default.K3FGT0,
         cost: 4250,
-        purchaseIconSrc: x
+        purchaseIconSrc: x,
     },
     10: {
         name: s.intl.string(a.default.VyPADw),
-        description: s.intl.string(a.default['0mTeUl']),
+        description: s.intl.string(a.default["0mTeUl"]),
         pointsDescription: a.default.QMkrPj,
         cost: 4400,
-        purchaseIconSrc: en
+        purchaseIconSrc: en,
     },
     11: {
         name: s.intl.string(a.default.ay3NkZ),
         description: s.intl.string(a.default.tHSwqK),
         pointsDescription: a.default.QMkrPj,
         cost: 50,
-        purchaseIconSrc: w
+        purchaseIconSrc: w,
     },
     12: {
         name: s.intl.string(a.default.CWXupa),
         description: s.intl.string(a.default.D86W0t),
         pointsDescription: a.default.QMkrPj,
         cost: 480,
-        purchaseIconSrc: eu
+        purchaseIconSrc: eu,
     },
     13: {
         name: s.intl.string(a.default.qq9hpq),
-        description: s.intl.string(a.default['bROl6+']),
+        description: s.intl.string(a.default["bROl6+"]),
         pointsDescription: a.default.QMkrPj,
         cost: 600,
-        purchaseIconSrc: L
+        purchaseIconSrc: L,
     },
     14: {
-        name: s.intl.string(a.default['18Pd8/']),
-        description: s.intl.string(a.default['8KvaTE']),
+        name: s.intl.string(a.default["18Pd8/"]),
+        description: s.intl.string(a.default["8KvaTE"]),
         pointsDescription: a.default.QMkrPj,
         cost: 1150,
-        purchaseIconSrc: eE
+        purchaseIconSrc: eE,
     },
     15: {
         name: s.intl.string(a.default.qRLMe3),
-        description: s.intl.string(a.default['+J3v+/']),
+        description: s.intl.string(a.default["+J3v+/"]),
         pointsDescription: a.default.QMkrPj,
         cost: 2400,
-        purchaseIconSrc: G
+        purchaseIconSrc: G,
     },
     16: {
         name: s.intl.string(a.default.IZVSjo),
         description: s.intl.string(a.default.HNySeX),
         pointsDescription: a.default.QMkrPj,
         cost: 250,
-        purchaseIconSrc: eh
+        purchaseIconSrc: eh,
     },
     17: {
-        name: s.intl.string(a.default['p+2LlJ']),
+        name: s.intl.string(a.default["p+2LlJ"]),
         description: s.intl.string(a.default.tZGbND),
         pointsDescription: a.default.QMkrPj,
         cost: 15,
-        purchaseIconSrc: ep
+        purchaseIconSrc: ep,
     },
     18: {
-        name: s.intl.string(a.default['3p41io']),
+        name: s.intl.string(a.default["3p41io"]),
         description: s.intl.string(a.default.efABQk),
         pointsDescription: a.default.QMkrPj,
         cost: 1250,
-        purchaseIconSrc: ei
+        purchaseIconSrc: ei,
     },
     28: {
-        name: s.intl.string(a.default['2pbAaG']),
+        name: s.intl.string(a.default["2pbAaG"]),
         description: s.intl.string(a.default.hjqDg4),
         pointsDescription: a.default.QMkrPj,
         cost: 20000,
-        purchaseIconSrc: Z
+        purchaseIconSrc: Z,
     },
     19: {
         name: s.intl.string(a.default.WmIwqK),
-        description: s.intl.string(a.default['8Zgq//']),
+        description: s.intl.string(a.default["8Zgq//"]),
         pointsDescription: a.default.QMkrPj,
         cost: 3900,
-        purchaseIconSrc: ee
+        purchaseIconSrc: ee,
     },
     20: {
         name: s.intl.string(a.default.egjsSE),
-        description: s.intl.string(a.default['5cbdn5']),
+        description: s.intl.string(a.default["5cbdn5"]),
         pointsDescription: a.default.QMkrPj,
         cost: 6000,
-        purchaseIconSrc: er
+        purchaseIconSrc: er,
     },
     21: {
-        name: s.intl.string(a.default['5ApWJS']),
+        name: s.intl.string(a.default["5ApWJS"]),
         description: s.intl.string(a.default.gRvPqK),
         pointsDescription: a.default.QMkrPj,
         cost: 5200,
-        purchaseIconSrc: D
+        purchaseIconSrc: D,
     },
     22: {
         name: s.intl.string(a.default.YDLnVV),
         description: s.intl.string(a.default.KJ5fmZ),
         pointsDescription: a.default.C3Yi6u,
         cost: 2150,
-        purchaseIconSrc: F
+        purchaseIconSrc: F,
     },
     23: {
         name: s.intl.string(a.default.Bq5anp),
         description: s.intl.string(a.default.iVUZLi),
         pointsDescription: a.default.QMkrPj,
         cost: 9001,
-        purchaseIconSrc: ea
+        purchaseIconSrc: ea,
     },
     24: {
-        name: s.intl.string(a.default['/UFku7']),
+        name: s.intl.string(a.default["/UFku7"]),
         description: s.intl.string(a.default.DC3NPz),
         pointsDescription: a.default.QMkrPj,
         cost: 1000,
-        purchaseIconSrc: em
+        purchaseIconSrc: em,
     },
     25: {
         name: s.intl.string(a.default.L9Wvzs),
-        description: s.intl.string(a.default['4i9bg4']),
+        description: s.intl.string(a.default["4i9bg4"]),
         pointsDescription: a.default.QMkrPj,
         cost: 800,
-        purchaseIconSrc: $
+        purchaseIconSrc: $,
     },
     26: {
         name: s.intl.string(a.default.aaCahI),
         description: s.intl.string(a.default.CLhdsb),
         pointsDescription: a.default.QMkrPj,
         cost: 30,
-        purchaseIconSrc: et
+        purchaseIconSrc: et,
     },
     27: {
         name: s.intl.string(a.default.ynArnJ),
         description: s.intl.string(a.default.FBlH7u),
         pointsDescription: a.default.QMkrPj,
         cost: 0,
-        purchaseIconSrc: J
-    }
+        purchaseIconSrc: J,
+    },
 });
 function eA(e) {
     let { numAlreadyPurchased: t } = e,
         n = [1.67, 1.6, 1.25, 1.5],
         r = 250;
-    for (let e = 0; e < t; e++) ((r *= n[e % n.length]), (r = Math.floor(r)));
+    for (let e = 0; e < t; e++) (r *= n[e % n.length]), (r = Math.floor(r));
     return r;
 }
 let eN = () => ({
@@ -328,19 +372,19 @@ let eN = () => ({
                 let { numAlreadyPurchased: t, lifetimePoints: n } = e;
                 return t < 10 && n > 200;
             },
-            purchaseIconSrc: B
+            purchaseIconSrc: B,
         },
         1: {
             itemId: 7,
-            name: s.intl.string(a.default['0oZ4ZW']),
-            description: s.intl.string(a.default['0OIHs7']),
+            name: s.intl.string(a.default["0oZ4ZW"]),
+            description: s.intl.string(a.default["0OIHs7"]),
             pointsDescription: a.default.QMkrPj,
             cost: () => 2200,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
                 return t < 1;
             },
-            purchaseIconSrc: Q
+            purchaseIconSrc: Q,
         },
         2: {
             itemId: 9,
@@ -348,7 +392,7 @@ let eN = () => ({
             description: s.intl.string(a.default.cfQopK),
             pointsDescription: a.default.K3FGT0,
             cost: eA,
-            purchaseIconSrc: j
+            purchaseIconSrc: j,
         },
         3: {
             itemId: 9,
@@ -360,7 +404,7 @@ let eN = () => ({
                 let { numAlreadyPurchased: t } = e;
                 return t < 1;
             },
-            purchaseIconSrc: k
+            purchaseIconSrc: k,
         },
         4: {
             itemId: 9,
@@ -375,31 +419,31 @@ let eN = () => ({
                 let { numAlreadyPurchased: t, lifetimePoints: n } = e;
                 return t < ey.length - 1 && n > 20000;
             },
-            purchaseIconSrc: U
+            purchaseIconSrc: U,
         },
         5: {
             itemId: 9,
             name: s.intl.string(a.default.UbiSDQ),
-            description: s.intl.string(a.default['9l82i4']),
-            pointsDescription: a.default['V6/z2d'],
+            description: s.intl.string(a.default["9l82i4"]),
+            pointsDescription: a.default["V6/z2d"],
             cost: () => 8500,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
                 return t < 1;
             },
-            purchaseIconSrc: M
+            purchaseIconSrc: M,
         },
         6: {
             itemId: 0,
-            name: s.intl.string(a.default['9YDZd3']),
+            name: s.intl.string(a.default["9YDZd3"]),
             description: s.intl.string(a.default.qmvOkp),
-            pointsDescription: a.default['/IYwAQ'],
+            pointsDescription: a.default["/IYwAQ"],
             cost: () => 3500,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
                 return t < 1;
             },
-            purchaseIconSrc: P
+            purchaseIconSrc: P,
         },
         7: {
             itemId: 2,
@@ -414,11 +458,11 @@ let eN = () => ({
                 let { numAlreadyPurchased: t } = e;
                 return t < eO;
             },
-            purchaseIconSrc: e_
+            purchaseIconSrc: e_,
         },
         8: {
             itemId: 21,
-            name: s.intl.string(a.default['X3rm5+']),
+            name: s.intl.string(a.default["X3rm5+"]),
             description: s.intl.string(a.default.I8kmzc),
             pointsDescription: a.default.WX8jkp,
             cost: () => 13500,
@@ -426,19 +470,19 @@ let eN = () => ({
                 let { numAlreadyPurchased: t } = e;
                 return t < 1;
             },
-            purchaseIconSrc: D
+            purchaseIconSrc: D,
         },
         9: {
             itemId: 0,
             name: s.intl.string(a.default.cDFnMj),
             description: s.intl.string(a.default.xzoyFx),
-            pointsDescription: a.default['/IYwAQ'],
+            pointsDescription: a.default["/IYwAQ"],
             cost: () => 1400,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
                 return t < 1;
             },
-            purchaseIconSrc: el
+            purchaseIconSrc: el,
         },
         10: {
             itemId: 26,
@@ -450,183 +494,206 @@ let eN = () => ({
                 let { numAlreadyPurchased: t } = e;
                 return t < 1;
             },
-            purchaseIconSrc: et
-        }
+            purchaseIconSrc: et,
+        },
     }),
     eC = [
         {
             type: r.h.ITEM,
-            id: 17
+            id: 17,
         },
         {
             type: r.h.ITEM,
-            id: 26
+            id: 26,
         },
         {
             type: r.h.ITEM,
-            id: 11
+            id: 11,
         },
         {
             type: r.h.ITEM,
-            id: 4
+            id: 4,
         },
         {
             type: r.h.ITEM,
-            id: 8
+            id: 8,
         },
         {
             type: r.h.ITEM,
-            id: 16
+            id: 16,
         },
         {
             type: r.h.ITEM,
-            id: 5
+            id: 5,
         },
         {
             type: r.h.ITEM,
-            id: 12
+            id: 12,
         },
         {
             type: r.h.ITEM,
-            id: 13
+            id: 13,
         },
         {
             type: r.h.ITEM,
-            id: 25
+            id: 25,
         },
         {
             type: r.h.ITEM,
-            id: 3
+            id: 3,
         },
         {
             type: r.h.ITEM,
-            id: 24
+            id: 24,
         },
         {
             type: r.h.ITEM,
-            id: 14
+            id: 14,
         },
         {
             type: r.h.ITEM,
-            id: 18
+            id: 18,
         },
         {
             type: r.h.ITEM_UPGRADE,
-            id: 9
+            id: 9,
         },
         {
             type: r.h.ITEM,
-            id: 22
+            id: 22,
         },
         {
             type: r.h.ITEM_UPGRADE,
-            id: 1
+            id: 1,
         },
         {
             type: r.h.ITEM,
-            id: 15
+            id: 15,
         },
         {
             type: r.h.ITEM,
-            id: 1
+            id: 1,
         },
         {
             type: r.h.ITEM,
-            id: 2
+            id: 2,
         },
         {
             type: r.h.ITEM_UPGRADE,
-            id: 6
+            id: 6,
         },
         {
             type: r.h.ITEM,
-            id: 19
+            id: 19,
         },
         {
             type: r.h.ITEM,
-            id: 9
+            id: 9,
         },
         {
             type: r.h.ITEM,
-            id: 10
+            id: 10,
         },
         {
             type: r.h.ITEM,
-            id: 6
+            id: 6,
         },
         {
             type: r.h.ITEM_UPGRADE,
-            id: 10
+            id: 10,
         },
         {
             type: r.h.ITEM,
-            id: 21
+            id: 21,
         },
         {
             type: r.h.ITEM,
-            id: 20
+            id: 20,
         },
         {
             type: r.h.ITEM_UPGRADE,
-            id: 3
+            id: 3,
         },
         {
             type: r.h.ITEM_UPGRADE,
-            id: 5
+            id: 5,
         },
         {
             type: r.h.ITEM,
-            id: 23
+            id: 23,
         },
         {
             type: r.h.ITEM_UPGRADE,
-            id: 8
+            id: 8,
         },
         {
             type: r.h.ITEM,
-            id: 28
-        }
+            id: 28,
+        },
     ],
     eR = [
         {
             type: r.h.ITEM_UPGRADE,
-            id: 0
+            id: 0,
         },
         {
             type: r.h.ITEM_UPGRADE,
-            id: 2
+            id: 2,
         },
         {
             type: r.h.ITEM_UPGRADE,
-            id: 4
+            id: 4,
         },
         {
             type: r.h.ITEM_UPGRADE,
-            id: 7
-        }
+            id: 7,
+        },
     ],
     eP = [
         {
             itemId: 7,
-            purchasesRequired: 10
+            purchasesRequired: 10,
         },
         {
             itemId: 27,
-            purchasesRequired: 30
-        }
+            purchasesRequired: 30,
+        },
     ],
     ew = [
         {
             id: 7,
-            neutralizerId: 1
+            neutralizerId: 1,
         },
         {
             id: 27,
-            neutralizerId: null
-        }
+            neutralizerId: null,
+        },
     ];
 var eD = (function (e) {
-    return ((e[(e.CLICKS_1 = 0)] = 'CLICKS_1'), (e[(e.CLICKS_2 = 1)] = 'CLICKS_2'), (e[(e.CLICKS_3 = 2)] = 'CLICKS_3'), (e[(e.PURCHASE_1 = 3)] = 'PURCHASE_1'), (e[(e.PURCHASE_2 = 4)] = 'PURCHASE_2'), (e[(e.PURCHASE_3 = 5)] = 'PURCHASE_3'), (e[(e.PURCHASE_4 = 6)] = 'PURCHASE_4'), (e[(e.PURCHASE_5 = 7)] = 'PURCHASE_5'), (e[(e.LEVEL_1 = 8)] = 'LEVEL_1'), (e[(e.LEVEL_2 = 9)] = 'LEVEL_2'), (e[(e.LEVEL_3 = 10)] = 'LEVEL_3'), (e[(e.LEVEL_4 = 11)] = 'LEVEL_4'), (e[(e.WEED = 13)] = 'WEED'), (e[(e.LAWNMOWER_1 = 14)] = 'LAWNMOWER_1'), (e[(e.LAWNMOWER_2 = 15)] = 'LAWNMOWER_2'), (e[(e.MESSAGE_1 = 16)] = 'MESSAGE_1'), (e[(e.MESSAGE_2 = 17)] = 'MESSAGE_2'), (e[(e.MESSAGE_3 = 18)] = 'MESSAGE_3'), (e[(e.BOUNCE_1 = 19)] = 'BOUNCE_1'), (e[(e.BOUNCE_2 = 20)] = 'BOUNCE_2'), (e[(e.BOUNCE_3 = 21)] = 'BOUNCE_3'), e);
+    return (
+        (e[(e.CLICKS_1 = 0)] = "CLICKS_1"),
+        (e[(e.CLICKS_2 = 1)] = "CLICKS_2"),
+        (e[(e.CLICKS_3 = 2)] = "CLICKS_3"),
+        (e[(e.PURCHASE_1 = 3)] = "PURCHASE_1"),
+        (e[(e.PURCHASE_2 = 4)] = "PURCHASE_2"),
+        (e[(e.PURCHASE_3 = 5)] = "PURCHASE_3"),
+        (e[(e.PURCHASE_4 = 6)] = "PURCHASE_4"),
+        (e[(e.PURCHASE_5 = 7)] = "PURCHASE_5"),
+        (e[(e.LEVEL_1 = 8)] = "LEVEL_1"),
+        (e[(e.LEVEL_2 = 9)] = "LEVEL_2"),
+        (e[(e.LEVEL_3 = 10)] = "LEVEL_3"),
+        (e[(e.LEVEL_4 = 11)] = "LEVEL_4"),
+        (e[(e.WEED = 13)] = "WEED"),
+        (e[(e.LAWNMOWER_1 = 14)] = "LAWNMOWER_1"),
+        (e[(e.LAWNMOWER_2 = 15)] = "LAWNMOWER_2"),
+        (e[(e.MESSAGE_1 = 16)] = "MESSAGE_1"),
+        (e[(e.MESSAGE_2 = 17)] = "MESSAGE_2"),
+        (e[(e.MESSAGE_3 = 18)] = "MESSAGE_3"),
+        (e[(e.BOUNCE_1 = 19)] = "BOUNCE_1"),
+        (e[(e.BOUNCE_2 = 20)] = "BOUNCE_2"),
+        (e[(e.BOUNCE_3 = 21)] = "BOUNCE_3"),
+        e
+    );
 })({});
 let eL = {
         0: 100,
@@ -649,142 +716,148 @@ let eL = {
         18: 10,
         19: 1,
         20: 1000,
-        21: 5000
+        21: 5000,
     },
     ex = () => ({
         0: {
             icon: f,
             name: s.intl.string(a.default.hYTmQU),
-            description: s.intl.formatToPlainString(a.default['87JVSk'], { count: eL[0] })
+            description: s.intl.formatToPlainString(a.default["87JVSk"], { count: eL[0] }),
         },
         1: {
             icon: _,
             name: s.intl.string(a.default.Pf9Hv7),
-            description: s.intl.formatToPlainString(a.default['87JVSk'], { count: eL[1] })
+            description: s.intl.formatToPlainString(a.default["87JVSk"], { count: eL[1] }),
         },
         2: {
             icon: p,
             name: s.intl.string(a.default.oTL1qq),
-            description: s.intl.formatToPlainString(a.default['87JVSk'], { count: eL[2] })
+            description: s.intl.formatToPlainString(a.default["87JVSk"], { count: eL[2] }),
         },
         3: {
             icon: T,
-            name: s.intl.string(a.default['3FgleX']),
-            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[3] })
+            name: s.intl.string(a.default["3FgleX"]),
+            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[3] }),
         },
         4: {
             icon: S,
             name: s.intl.string(a.default.dWrQpq),
-            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[4] })
+            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[4] }),
         },
         5: {
             icon: A,
             name: s.intl.string(a.default.z4uabm),
-            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[5] })
+            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[5] }),
         },
         6: {
             icon: N,
             name: s.intl.string(a.default.mVKL2d),
-            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[6] })
+            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[6] }),
         },
         7: {
             icon: C,
             name: s.intl.string(a.default.effQ8v),
-            description: s.intl.string(a.default['1o7lUF'])
+            description: s.intl.string(a.default["1o7lUF"]),
         },
         8: {
             icon: g,
             name: s.intl.string(a.default.q6Wkho),
-            description: s.intl.formatToPlainString(a.default['3RaLUF'], { level: eL[8] })
+            description: s.intl.formatToPlainString(a.default["3RaLUF"], { level: eL[8] }),
         },
         9: {
             icon: E,
-            name: s.intl.string(a.default['g9+rmp']),
-            description: s.intl.formatToPlainString(a.default['3RaLUF'], { level: eL[9] })
+            name: s.intl.string(a.default["g9+rmp"]),
+            description: s.intl.formatToPlainString(a.default["3RaLUF"], { level: eL[9] }),
         },
         10: {
             icon: b,
             name: s.intl.string(a.default.qA3ns7),
-            description: s.intl.formatToPlainString(a.default['3RaLUF'], { level: eL[10] })
+            description: s.intl.formatToPlainString(a.default["3RaLUF"], { level: eL[10] }),
         },
         11: {
             icon: y,
             name: s.intl.string(a.default.gujDDQ),
-            description: s.intl.formatToPlainString(a.default['3RaLUF'], { level: eL[11] })
+            description: s.intl.formatToPlainString(a.default["3RaLUF"], { level: eL[11] }),
         },
         13: {
             icon: R,
             name: s.intl.string(a.default.ihlJt7),
-            description: s.intl.formatToPlainString(a.default.gNIyY2, { count: eL[13] })
+            description: s.intl.formatToPlainString(a.default.gNIyY2, { count: eL[13] }),
         },
         14: {
             icon: h,
             name: s.intl.string(a.default.IdVao6),
-            description: s.intl.formatToPlainString(a.default.AmNmLy, { count: eL[14] })
+            description: s.intl.formatToPlainString(a.default.AmNmLy, { count: eL[14] }),
         },
         15: {
             icon: m,
             name: s.intl.string(a.default.kM9kxs),
-            description: s.intl.formatToPlainString(a.default.AmNmLy, { count: eL[15] })
+            description: s.intl.formatToPlainString(a.default.AmNmLy, { count: eL[15] }),
         },
         16: {
             icon: O,
-            name: s.intl.string(a.default['6cJ+7+']),
-            description: s.intl.string(a.default.SZCKXl)
+            name: s.intl.string(a.default["6cJ+7+"]),
+            description: s.intl.string(a.default.SZCKXl),
         },
         17: {
             icon: v,
             name: s.intl.string(a.default.tWKo9v),
-            description: s.intl.formatToPlainString(a.default.C34HAQ, { count: eL[16] })
+            description: s.intl.formatToPlainString(a.default.C34HAQ, { count: eL[16] }),
         },
         18: {
             icon: I,
             name: s.intl.string(a.default.R6FY6O),
-            description: s.intl.formatToPlainString(a.default.C34HAQ, { count: eL[17] })
+            description: s.intl.formatToPlainString(a.default.C34HAQ, { count: eL[17] }),
         },
         19: {
             icon: c,
-            name: s.intl.string(a.default['x2/m4O']),
-            description: s.intl.string(a.default.KO94zc)
+            name: s.intl.string(a.default["x2/m4O"]),
+            description: s.intl.string(a.default.KO94zc),
         },
         20: {
             icon: u,
-            name: s.intl.string(a.default['0RU5mZ']),
-            description: s.intl.formatToPlainString(a.default['59Cedn'], { count: eL[19] })
+            name: s.intl.string(a.default["0RU5mZ"]),
+            description: s.intl.formatToPlainString(a.default["59Cedn"], { count: eL[19] }),
         },
         21: {
             icon: d,
             name: s.intl.string(a.default.la7ZOz),
-            description: s.intl.formatToPlainString(a.default['59Cedn'], { count: eL[20] })
-        }
+            description: s.intl.formatToPlainString(a.default["59Cedn"], { count: eL[20] }),
+        },
     });
 var eM = (function (e) {
-    return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CAT = 1)] = 'CAT'), (e[(e.SWORD = 2)] = 'SWORD'), (e[(e.PIZZA = 3)] = 'PIZZA'), e);
+    return (
+        (e[(e.DEFAULT = 0)] = "DEFAULT"),
+        (e[(e.CAT = 1)] = "CAT"),
+        (e[(e.SWORD = 2)] = "SWORD"),
+        (e[(e.PIZZA = 3)] = "PIZZA"),
+        e
+    );
 })({});
 let ek = () => ({
         0: {
             name: s.intl.string(a.default.jcJhmZ),
             src: W,
-            activeSrc: Y
+            activeSrc: Y,
         },
         1: {
             name: s.intl.string(a.default.ASuyiI),
             src: H,
-            activeSrc: V
+            activeSrc: V,
         },
         2: {
             name: s.intl.string(a.default.dkzm0t),
             src: X,
-            activeSrc: q
+            activeSrc: q,
         },
         3: {
             name: s.intl.string(a.default.T6kuMT),
             src: z,
-            activeSrc: K
-        }
+            activeSrc: K,
+        },
     }),
     ej = [0, 1, 2, 3],
     eU = 8,
-    eG = '1349486948942745695',
-    eB = '1349486948942745696',
+    eG = "1349486948942745695",
+    eB = "1349486948942745696",
     eZ = o.XAJ;

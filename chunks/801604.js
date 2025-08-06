@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(388685));
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -23,9 +23,9 @@ var i = n(120356),
     C = n(388032),
     y = n(326879);
 function O() {
-    return (0, r.jsx)('span', {
+    return (0, r.jsx)("span", {
         className: y.ellipsis,
-        children: '\u2022'
+        children: "\u2022",
     });
 }
 function I(e) {
@@ -34,35 +34,36 @@ function I(e) {
     return null == t
         ? (0, r.jsx)(a.hGI, {
               className: y.screenArrowIcon,
-              size: 'md',
-              color: 'currentColor'
+              size: "md",
+              color: "currentColor",
           })
         : (0, g.T)(t)
           ? (0, r.jsx)(d.Z, {
                 game: n,
-                pid: t.pid
+                pid: t.pid,
             })
-          : null == t.icon || '' === t.icon
+          : null == t.icon || "" === t.icon
             ? (0, r.jsx)(a.hGI, {
                   className: y.screenArrowIcon,
-                  size: 'md',
-                  color: 'currentColor'
+                  size: "md",
+                  color: "currentColor",
               })
-            : (0, r.jsx)('img', {
+            : (0, r.jsx)("img", {
                   src: t.icon,
-                  alt: '',
-                  className: y.sourceIcon
+                  alt: "",
+                  className: y.sourceIcon,
               });
 }
 function Z(e) {
     var t, n, i, c;
     let { nativePickerEnabled: d } = e,
-        [{ preset: g, resolution: Z, fps: w, muteStreamAudio: N, selectedSource: T, sourceType: E, audioSourceId: P }] = (0, _.E_)(),
+        [{ preset: g, resolution: Z, fps: w, muteStreamAudio: N, selectedSource: T, sourceType: E, audioSourceId: P }] =
+            (0, _.E_)(),
         { twoClickVariant: R } = (0, h.a)({
-            location: 'go_live_modal_refresh',
-            autoTrackExposure: !1
+            location: "go_live_modal_refresh",
+            autoTrackExposure: !1,
         }),
-        [A, M] = (0, u.L)(b.h7.AUDIO_INPUT, { location: 'StreamSettingsSummary' }),
+        [A, M] = (0, u.L)(b.h7.AUDIO_INPUT, { location: "StreamSettingsSummary" }),
         k = A.concat(M),
         [L, D] = null != (i = (0, v.Z)(g)) ? i : [Z, w],
         B = (0, p.L)(g),
@@ -70,78 +71,88 @@ function Z(e) {
         G = E === s.vA.CAMERA,
         W = null != T || (!!R && (!d || G)),
         F = null != T ? (null == T || null == (t = T.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : G,
-        H = W ? void 0 : g === j.tI.PRESET_VIDEO ? C.intl.string(S.default.MuHUFR) : g === j.tI.PRESET_DOCUMENTS ? C.intl.string(S.default.y0JuYW) : void 0,
+        H = W
+            ? void 0
+            : g === j.tI.PRESET_VIDEO
+              ? C.intl.string(S.default.MuHUFR)
+              : g === j.tI.PRESET_DOCUMENTS
+                ? C.intl.string(S.default.y0JuYW)
+                : void 0,
         z = (0, o.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, m.isLinux)());
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: y.root,
         children: [
             W && (0, r.jsx)(I, { source: T }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: y.summary,
                 children: [
                     (0, r.jsx)(a.Text, {
                         className: y.sourceOrPresetName,
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
-                        children: W ? (null != (c = null == T ? void 0 : T.name) ? c : C.intl.string(S.default['hJMA+/'])) : B
+                        variant: "text-md/semibold",
+                        color: "header-primary",
+                        children: W
+                            ? null != (c = null == T ? void 0 : T.name)
+                                ? c
+                                : C.intl.string(S.default["hJMA+/"])
+                            : B,
                     }),
                     (0, r.jsxs)(a.Text, {
                         className: y.summaryDetail,
-                        variant: 'text-xs/medium',
-                        color: 'text-muted',
+                        variant: "text-xs/medium",
+                        color: "text-muted",
                         children: [
                             W &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsxs)('span', {
+                                        (0, r.jsxs)("span", {
                                             className: y.iconSummaryContainer,
                                             children: [
                                                 (0, r.jsx)(a.ewm, {
                                                     className: y.icon,
-                                                    size: 'xxs',
-                                                    color: 'currentColor'
+                                                    size: "xxs",
+                                                    color: "currentColor",
                                                 }),
-                                                B
-                                            ]
+                                                B,
+                                            ],
                                         }),
-                                        (0, r.jsx)(O, {})
-                                    ]
+                                        (0, r.jsx)(O, {}),
+                                    ],
                                 }),
                             null != H &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)('span', { children: H }), (0, r.jsx)(O, {})]
+                                    children: [(0, r.jsx)("span", { children: H }), (0, r.jsx)(O, {})],
                                 }),
-                            (0, r.jsx)('span', { children: U }),
+                            (0, r.jsx)("span", { children: U }),
                             (0, r.jsx)(O, {}),
-                            (0, r.jsx)('span', { children: ''.concat(D, 'fps') }),
+                            (0, r.jsx)("span", { children: "".concat(D, "fps") }),
                             N &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(O, {}),
-                                        (0, r.jsxs)('span', {
+                                        (0, r.jsxs)("span", {
                                             className: y.iconSummaryContainer,
                                             children: [
                                                 (0, r.jsx)(a.OyP, {
                                                     className: l()(y.icon, y.mutedIcon),
-                                                    size: 'xxs',
-                                                    color: 'currentColor'
+                                                    size: "xxs",
+                                                    color: "currentColor",
                                                 }),
-                                                C.intl.string(S.default.FzMGWV)
-                                            ]
-                                        })
-                                    ]
+                                                C.intl.string(S.default.FzMGWV),
+                                            ],
+                                        }),
+                                    ],
                                 }),
                             !N &&
                                 !F &&
                                 z &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(O, {}), C.intl.string(S.default['n9/rUl'])]
+                                    children: [(0, r.jsx)(O, {}), C.intl.string(S.default["n9/rUl"])],
                                 }),
                             F
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(O, {}),
-                                          (0, r.jsx)('span', {
+                                          (0, r.jsx)("span", {
                                               children:
                                                   null ==
                                                   (n = k.find((e) => {
@@ -149,15 +160,15 @@ function Z(e) {
                                                       return P === t;
                                                   }))
                                                       ? void 0
-                                                      : n.name
-                                          })
-                                      ]
+                                                      : n.name,
+                                          }),
+                                      ],
                                   })
-                                : null
-                        ]
-                    })
-                ]
-            })
-        ]
+                                : null,
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 }

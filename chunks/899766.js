@@ -1,4 +1,4 @@
-(r.d(t, { J: () => f }), r(539854), r(35282));
+r.d(t, { J: () => f }), r(539854), r(35282);
 var n = r(255367),
     l = r(73800),
     a = r(120356),
@@ -13,98 +13,98 @@ function g(e) {
     let { endDate: t } = e,
         { days: r, hours: l, minutes: a } = (0, d.Z)(t),
         o = (function (e, t, r) {
-            let n = (e) => ''.concat(e.toString().padStart(2, '0')),
+            let n = (e) => "".concat(e.toString().padStart(2, "0")),
                 l = [];
-            return (l.push(n(e)), l.push(n(t)), l.push(n(r)), l.join(':'));
+            return l.push(n(e)), l.push(n(t)), l.push(n(r)), l.join(":");
         })(r, l, a);
-    return (0, n.jsx)('div', {
+    return (0, n.jsx)("div", {
         className: p.timerNumContainer,
-        role: 'timer',
-        'aria-relevant': 'all',
-        children: o.split('').map((e, t) =>
+        role: "timer",
+        "aria-relevant": "all",
+        children: o.split("").map((e, t) =>
             (0, n.jsx)(
                 u.X6q,
                 {
-                    variant: 'heading-md/medium',
+                    variant: "heading-md/medium",
                     className: i()({
-                        [p.timerDelineator]: ':' === e,
-                        [p.timerNum]: ':' !== e
+                        [p.timerDelineator]: ":" === e,
+                        [p.timerNum]: ":" !== e,
                     }),
-                    children: e
+                    children: e,
                 },
-                t
-            )
-        )
+                t,
+            ),
+        ),
     });
 }
 let f = l.memo(function (e) {
     let { record: t, isVisible: r, isFullScreen: l } = e,
         a = (0, u.q_F)({
-            transform: 'translateX(-50%) '.concat(r ? 'translateY(-75%)' : 'translateY(0%)'),
+            transform: "translateX(-50%) ".concat(r ? "translateY(-75%)" : "translateY(0%)"),
             opacity: +!!r,
             config: {
                 tension: 120,
-                friction: 12
-            }
+                friction: 12,
+            },
         });
     return (0, n.jsxs)(o.animated.div, {
         className: i()([p.countDownWrapper, l && p.fullScreenWrapper, s.tq && p.mobileWrapper]),
-        role: 'status',
+        role: "status",
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (t) {
                         var n;
-                        ((n = r[t]),
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = n));
-                    }));
+                                : (e[t] = n);
+                    });
             }
             return e;
         })(
             {},
             a,
             null != t.bannerUrl &&
-                '' !== t.bannerUrl && {
-                    backgroundImage: 'url('.concat(t.bannerUrl, ')'),
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'top'
-                }
+                "" !== t.bannerUrl && {
+                    backgroundImage: "url(".concat(t.bannerUrl, ")"),
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                },
         ),
         children: [
             (0, n.jsxs)(c.k, {
                 direction: c.k.Direction.VERTICAL,
                 children: [
                     (0, n.jsx)(u.Text, {
-                        variant: 'text-md/medium',
+                        variant: "text-md/medium",
                         className: p.countdownLabel,
-                        style: null != t.textColor && '' !== t.textColor ? { color: t.textColor } : void 0,
-                        children: t.title
+                        style: null != t.textColor && "" !== t.textColor ? { color: t.textColor } : void 0,
+                        children: t.title,
                     }),
                     null != t.body &&
-                        '' !== t.body &&
+                        "" !== t.body &&
                         (0, n.jsx)(u.Text, {
-                            variant: 'text-sm/medium',
+                            variant: "text-sm/medium",
                             className: p.countdownBody,
-                            style: null != t.textColor && '' !== t.textColor ? { color: t.textColor } : void 0,
-                            children: t.body
-                        })
-                ]
+                            style: null != t.textColor && "" !== t.textColor ? { color: t.textColor } : void 0,
+                            children: t.body,
+                        }),
+                ],
             }),
-            (0, n.jsx)(g, { endDate: t.endTime })
-        ]
+            (0, n.jsx)(g, { endDate: t.endTime }),
+        ],
     });
 });

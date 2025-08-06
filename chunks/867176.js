@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => R,
-    b: () => C
+    b: () => C,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -28,7 +28,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -38,15 +38,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -54,11 +54,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,7 +80,8 @@ function S(e, t) {
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -90,7 +91,7 @@ function A(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let N = (e) => {
@@ -99,7 +100,22 @@ let N = (e) => {
 };
 function C(e) {
     var t;
-    let { user: n, displayProfile: o, guildId: b, pendingBanner: O, children: v, className: I, avatarSize: T, avatarOffsetX: S, avatarOffsetY: A, bannerWidth: C, bannerHeight: R, themePadding: P, pendingAccentColor: w, animateOnHover: D = !1 } = e,
+    let {
+            user: n,
+            displayProfile: o,
+            guildId: b,
+            pendingBanner: O,
+            children: v,
+            className: I,
+            avatarSize: T,
+            avatarOffsetX: S,
+            avatarOffsetY: A,
+            bannerWidth: C,
+            bannerHeight: R,
+            themePadding: P,
+            pendingAccentColor: w,
+            animateOnHover: D = !1,
+        } = e,
         L = (0, _.Dt)(),
         [x, M] = i.useState(!1),
         k = (0, l.e7)([m.Z], () => m.Z.isFocused()),
@@ -108,7 +124,7 @@ function C(e) {
             displayProfile: o,
             pendingBanner: O,
             size: C,
-            canAnimate: D || !j ? x : k
+            canAnimate: D || !j ? x : k,
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
         Z = n.getAvatarURL(b, (0, u.pxk)(T)),
@@ -117,68 +133,68 @@ function C(e) {
         H = N(T),
         Y = H + S - P,
         W = R - A - P;
-    return (0, r.jsxs)('svg', {
+    return (0, r.jsxs)("svg", {
         className: y.mask,
-        viewBox: '0 0 '.concat(C, ' ').concat(R),
+        viewBox: "0 0 ".concat(C, " ").concat(R),
         style: {
             minWidth: C,
-            minHeight: R
+            minHeight: R,
         },
         children: [
-            (0, r.jsxs)('mask', {
+            (0, r.jsxs)("mask", {
                 id: L,
                 children: [
-                    (0, r.jsx)('rect', {
-                        fill: 'white',
-                        x: '0',
-                        y: '0',
-                        width: '100%',
-                        height: '100%'
+                    (0, r.jsx)("rect", {
+                        fill: "white",
+                        x: "0",
+                        y: "0",
+                        width: "100%",
+                        height: "100%",
                     }),
-                    (0, r.jsx)('circle', {
-                        fill: 'black',
+                    (0, r.jsx)("circle", {
+                        fill: "black",
                         cx: Y,
                         cy: W,
-                        r: H
-                    })
-                ]
+                        r: H,
+                    }),
+                ],
             }),
-            (0, r.jsxs)('foreignObject', {
-                x: '0',
-                y: '0',
-                width: '100%',
-                height: '100%',
-                overflow: 'visible',
-                mask: 'url(#'.concat(L, ')'),
+            (0, r.jsxs)("foreignObject", {
+                x: "0",
+                y: "0",
+                width: "100%",
+                height: "100%",
+                overflow: "visible",
+                mask: "url(#".concat(L, ")"),
                 children: [
                     v,
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: a()(y.banner, I),
                         onMouseMove: () => M(!0),
                         onMouseLeave: () => M(!1),
                         style: {
                             height: R,
                             minHeight: R,
-                            backgroundImage: null != U ? 'url('.concat(U, ')') : void 0,
-                            backgroundColor: 'COMPLETE' !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : V
+                            backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
+                            backgroundColor: "COMPLETE" !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : V,
                         },
-                        children: [!j && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }), v]
-                    })
-                ]
-            })
-        ]
+                        children: [!j && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }), v],
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function R(e) {
     var { themeType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1 } = e,
-        o = S(e, ['themeType', 'displayProfile', 'canUsePremiumProfileCustomization']);
+        o = S(e, ["themeType", "displayProfile", "canUsePremiumProfileCustomization"]);
     let a = b.q[t],
         s = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
     return (0, r.jsx)(
         C,
         T(v({}, o, a), {
             displayProfile: n,
-            themePadding: s ? a.themePadding : 0
-        })
+            themePadding: s ? a.themePadding : 0,
+        }),
     );
 }

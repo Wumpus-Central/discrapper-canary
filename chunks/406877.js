@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(73800),
     i = n(668781),
     o = n(881052),
@@ -17,21 +17,21 @@ function c(e, t) {
                         let { url: r } = await a.gs({
                             guildId: e,
                             productId: t,
-                            attachmentId: n
+                            attachmentId: n,
                         });
                         await s.L(r);
                     } catch (t) {
                         let e = t instanceof o.Hx ? t.getAnyErrorMessage() : void 0;
                         i.Z.show({
                             title: l.intl.string(l.t.R0RpRU),
-                            body: null != e ? e : l.intl.string(l.t.eAn6z8)
+                            body: null != e ? e : l.intl.string(l.t.eAn6z8),
                         });
                     } finally {
                         c(!1);
                     }
                 }
             },
-            [e, t]
-        )
+            [e, t],
+        ),
     };
 }

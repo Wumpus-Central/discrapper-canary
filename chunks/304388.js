@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(930295),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,7 +42,8 @@ function f(e, t) {
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -52,37 +53,46 @@ function _(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let p = 300,
     h = 200;
 function m(e) {
     var { renderPopout: t, onMouseEnter: n, onMouseLeave: o, closePopout: a, isHovered: s } = e,
-        l = f(e, ['renderPopout', 'onMouseEnter', 'onMouseLeave', 'closePopout', 'isHovered']);
+        l = f(e, ["renderPopout", "onMouseEnter", "onMouseLeave", "closePopout", "isHovered"]);
     return (
         i.useEffect(() => {
             s || a();
         }, [a, s]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             onMouseEnter: n,
             onMouseLeave: o,
-            children: t(d({ closePopout: a }, l))
+            children: t(d({ closePopout: a }, l)),
         })
     );
 }
 let g = i.forwardRef(function (e, t) {
-    let { renderPopout: n, popoutTargetRef: u, children: f, align: _ = 'left', isPopoutBlocked: g, onPopoutOpen: E, onPopoutClose: b, onRequestClose: y } = e,
+    let {
+            renderPopout: n,
+            popoutTargetRef: u,
+            children: f,
+            align: _ = "left",
+            isPopoutBlocked: g,
+            onPopoutOpen: E,
+            onPopoutClose: b,
+            onRequestClose: y,
+        } = e,
         [O, v] = i.useState(!1),
         { isHovered: I, setIsHovered: T, onMouseEnter: S, onMouseLeave: A, cancelTimers: N } = (0, s.Z)(h, p);
     function C(e) {
-        'focus' === e.type || O || S();
+        "focus" === e.type || O || S();
     }
     function R() {
         O || A();
     }
     function P(e) {
-        (N(), v(!O), O ? null == b || b() : null == E || E(), (!I || O) && e());
+        N(), v(!O), O ? null == b || b() : null == E || E(), (!I || O) && e();
     }
     function w(e, t) {
         (e.key === l.vn.ENTER || e.key === l.vn.SPACE) && P(() => t(e));
@@ -91,10 +101,10 @@ let g = i.forwardRef(function (e, t) {
         t,
         () => ({
             hidePopout() {
-                (T(!1), v(!1));
-            }
+                T(!1), v(!1);
+            },
         }),
-        [T, v]
+        [T, v],
     );
     let D = (I && !g) || O,
         L = O;
@@ -102,13 +112,13 @@ let g = i.forwardRef(function (e, t) {
         targetElementRef: u,
         animation: a.yRy.Animation.FADE,
         shouldShow: D,
-        animationPosition: 'top',
-        position: 'top',
+        animationPosition: "top",
+        position: "top",
         align: _,
         spacing: 16,
         onRequestClose: () => {
             if ((null == y ? void 0 : y()) === o.F) return o.F;
-            (T(!1), v(!1), null == b || b());
+            T(!1), v(!1), null == b || b();
         },
         renderPopout: (e) =>
             (0, r.jsx)(
@@ -119,10 +129,10 @@ let g = i.forwardRef(function (e, t) {
                         onFocus: () => v(!0),
                         onMouseEnter: S,
                         onMouseLeave: R,
-                        renderPopout: n
+                        renderPopout: n,
                     },
-                    e
-                )
+                    e,
+                ),
             ),
         children: (e) => {
             let { onClick: t, onKeyDown: n } = e;
@@ -133,9 +143,9 @@ let g = i.forwardRef(function (e, t) {
                     className: c.actionBarButton,
                     onMouseEnter: C,
                     onMouseLeave: R,
-                    isActive: L
-                })
+                    isActive: L,
+                }),
             });
-        }
+        },
     });
 });

@@ -7,10 +7,10 @@ function s(e) {
     let { isBlocked: t, onClick: n, size: s = i.Ph.SMALL } = e;
     return (0, r.jsx)(o.tG, {
         size: s,
-        action: t ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-        text: a.intl.string(a.t['UJKH/v']),
+        action: t ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
+        text: a.intl.string(a.t["UJKH/v"]),
         autoFocus: !0,
         fullWidth: !1,
-        onClick: n
+        onClick: n,
     });
 }

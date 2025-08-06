@@ -9,10 +9,10 @@ let a = function (e) {
         l = null != n ? (0, o.nK)(n.width, n.height) : void 0,
         c = (0, o.f0)(s.url, l);
     return null != c
-        ? (0, r.jsx)('img', {
+        ? (0, r.jsx)("img", {
               src: c,
               alt: t.config.messages.questName,
-              className: a
+              className: a,
           })
         : s.isAnimated
           ? (0, r.jsx)(i.Z, {
@@ -22,7 +22,7 @@ let a = function (e) {
                 muted: !0,
                 playsInline: !0,
                 controls: !1,
-                src: s.url
+                src: s.url,
             })
           : null;
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var i = n(255367),
     l = n(73800),
     r = n(748780),
@@ -25,18 +25,18 @@ function p() {
                         e
                             ? r.Z.timing(t, {
                                   toValue: 0,
-                                  duration: 250
+                                  duration: 250,
                               }).start(() => {
                                   (0, c.d$)(!1);
                               })
                             : ((0, c.d$)(!0),
                               r.Z.timing(t, {
                                   toValue: 1,
-                                  duration: 250
+                                  duration: 250,
                               }).start());
                     },
                     children: (0, i.jsxs)(o.vwX, {
-                        tag: 'h1',
+                        tag: "h1",
                         className: m.advancedTitle,
                         children: [
                             g.intl.string(g.t.dYRsrq),
@@ -44,18 +44,18 @@ function p() {
                                 expanded: e,
                                 className: m.titleCaret,
                                 width: 20,
-                                height: 20
-                            })
-                        ]
-                    })
+                                height: 20,
+                            }),
+                        ],
+                    }),
                 }),
                 children:
                     e &&
                     (0, i.jsx)(r.Z.div, {
                         style: { opacity: t },
-                        children: (0, i.jsx)(d.Z, {})
-                    })
-            })
-        ]
+                        children: (0, i.jsx)(d.Z, {}),
+                    }),
+            }),
+        ],
     });
 }

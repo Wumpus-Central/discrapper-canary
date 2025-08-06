@@ -17,6 +17,6 @@ function l(e, t) {
         orientation: t,
         setFocus: s,
         scrollToStart: a,
-        scrollToEnd: a
+        scrollToEnd: a,
     });
 }

@@ -1,5 +1,5 @@
 e.exports = {
-    messageContainer: 'messageContainer__7796e',
-    saveNoticeContainer: 'saveNoticeContainer__7796e',
-    buttonContainer: 'buttonContainer__7796e'
+    messageContainer: "messageContainer__7796e",
+    saveNoticeContainer: "saveNoticeContainer__7796e",
+    buttonContainer: "buttonContainer__7796e",
 };

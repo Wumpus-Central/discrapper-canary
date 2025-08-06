@@ -1,4 +1,4 @@
-(n.d(t, { P: () => j }), n(290780), n(388685));
+n.d(t, { P: () => j }), n(290780), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(524437),
@@ -24,28 +24,29 @@ function j(e) {
         { explicitContentGuilds: E, explicitContentFriendDm: C, explicitContentNonFriendDm: O } = (0, d.B)(),
         v = (e) => {
             let t = Object.values(e);
-            if ((0, o.Ks)() && t.includes(r.Q4.SHOW)) return void a.Z.showAgeVerificationGetStartedModal(l.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
+            if ((0, o.Ks)() && t.includes(r.Q4.SHOW))
+                return void a.Z.showAgeVerificationGetStartedModal(l.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
             (0, c.zj)(e);
         },
         S = [
             {
                 value: r.Q4.BLUR,
-                label: x.intl.string(x.t.S49UaW)
+                label: x.intl.string(x.t.S49UaW),
             },
             {
                 value: r.Q4.BLOCK,
-                label: x.intl.string(x.t['D/157e'])
-            }
+                label: x.intl.string(x.t["D/157e"]),
+            },
         ],
         T = [
             {
                 value: r.Q4.BLUR,
-                label: x.intl.string(x.t.S49UaW)
-            }
+                label: x.intl.string(x.t.S49UaW),
+            },
         ],
         I = {
             value: r.Q4.SHOW,
-            label: x.intl.string(x.t['5k5OFh'])
+            label: x.intl.string(x.t["5k5OFh"]),
         };
     return (
         j && (S.unshift(I), T.unshift(I)),
@@ -55,12 +56,12 @@ function j(e) {
             children: n
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsxs)('div', {
+                          (0, i.jsxs)("div", {
                               className: _.selectItemRow,
                               children: [
                                   (0, i.jsx)(s.Text, {
-                                      variant: 'text-md/medium',
-                                      children: x.intl.string(x.t['+uI23N'])
+                                      variant: "text-md/medium",
+                                      children: x.intl.string(x.t["+uI23N"]),
                                   }),
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,
@@ -71,16 +72,16 @@ function j(e) {
                                           let [t] = e;
                                           return (0, i.jsx)(u.Z, { option: t });
                                       },
-                                      renderOptionLabel: (e) => (0, i.jsx)(u.Z, { option: e })
-                                  })
-                              ]
+                                      renderOptionLabel: (e) => (0, i.jsx)(u.Z, { option: e }),
+                                  }),
+                              ],
                           }),
-                          (0, i.jsxs)('div', {
+                          (0, i.jsxs)("div", {
                               className: _.selectItemRow,
                               children: [
                                   (0, i.jsx)(s.Text, {
-                                      variant: 'text-md/medium',
-                                      children: x.intl.string(x.t['Yh+HX1'])
+                                      variant: "text-md/medium",
+                                      children: x.intl.string(x.t["Yh+HX1"]),
                                   }),
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,
@@ -91,17 +92,17 @@ function j(e) {
                                           let [t] = e;
                                           return (0, i.jsx)(u.Z, { option: t });
                                       },
-                                      renderOptionLabel: (e) => (0, i.jsx)(u.Z, { option: e })
-                                  })
-                              ]
+                                      renderOptionLabel: (e) => (0, i.jsx)(u.Z, { option: e }),
+                                  }),
+                              ],
                           }),
-                          (0, i.jsxs)('div', {
+                          (0, i.jsxs)("div", {
                               className: _.selectItemRow,
                               children: [
                                   (0, i.jsx)(s.Text, {
-                                      variant: 'text-md/medium',
-                                      color: j ? 'text-primary' : 'text-muted',
-                                      children: x.intl.string(x.t['FP+a4+'])
+                                      variant: "text-md/medium",
+                                      color: j ? "text-primary" : "text-muted",
+                                      children: x.intl.string(x.t["FP+a4+"]),
                                   }),
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,
@@ -113,32 +114,34 @@ function j(e) {
                                           let [t] = e;
                                           return (0, i.jsx)(u.Z, { option: t });
                                       },
-                                      renderOptionLabel: (e) => (0, i.jsx)(u.Z, { option: e })
-                                  })
-                              ]
+                                      renderOptionLabel: (e) => (0, i.jsx)(u.Z, { option: e }),
+                                  }),
+                              ],
                           }),
                           (0, i.jsx)(s.Text, {
-                              variant: 'text-sm/normal',
-                              color: 'text-muted',
-                              children: x.intl.string(x.t.Wnojv7)
-                          })
-                      ]
+                              variant: "text-sm/normal",
+                              color: "text-muted",
+                              children: x.intl.string(x.t.Wnojv7),
+                          }),
+                      ],
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(g.H, {
-                              header: x.intl.string(x.t['c/UOwM']),
-                              description: x.intl.format(x.t.ZUvrwM, { learnMoreLink: p.Z.getArticleURL(b.BhN.EXPLICIT_MEDIA_REDACTION) })
+                              header: x.intl.string(x.t["c/UOwM"]),
+                              description: x.intl.format(x.t.ZUvrwM, {
+                                  learnMoreLink: p.Z.getArticleURL(b.BhN.EXPLICIT_MEDIA_REDACTION),
+                              }),
                           }),
                           (0, i.jsx)(s.xJW, {
                               tag: s.RB0.H3,
-                              title: x.intl.string(x.t['6k0AgI']),
+                              title: x.intl.string(x.t["6k0AgI"]),
                               titleClassName: _.selectItemTitle,
                               children: (0, i.jsx)(s.q4e, {
                                   options: S,
                                   value: C,
-                                  onChange: (e) => v({ explicitContentFriendDm: e })
-                              })
+                                  onChange: (e) => v({ explicitContentFriendDm: e }),
+                              }),
                           }),
                           (0, i.jsx)(s.xJW, {
                               tag: s.RB0.H3,
@@ -147,22 +150,22 @@ function j(e) {
                               children: (0, i.jsx)(s.q4e, {
                                   options: S,
                                   value: O,
-                                  onChange: (e) => v({ explicitContentNonFriendDm: e })
-                              })
+                                  onChange: (e) => v({ explicitContentNonFriendDm: e }),
+                              }),
                           }),
                           (0, i.jsx)(s.xJW, {
                               tag: s.RB0.H3,
-                              title: x.intl.string(x.t['FP+a4+']),
+                              title: x.intl.string(x.t["FP+a4+"]),
                               titleClassName: _.selectItemTitle,
                               children: (0, i.jsx)(s.q4e, {
                                   options: T,
                                   value: E,
                                   onChange: (e) => v({ explicitContentGuilds: e }),
-                                  isDisabled: !j
-                              })
-                          })
-                      ]
-                  })
+                                  isDisabled: !j,
+                              }),
+                          }),
+                      ],
+                  }),
         })
     );
 }

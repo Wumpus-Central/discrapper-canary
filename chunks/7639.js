@@ -1,9 +1,84 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = ['false', 'synchronized', 'int', 'abstract', 'float', 'private', 'char', 'boolean', 'static', 'null', 'if', 'const', 'for', 'true', 'while', 'long', 'throw', 'strictfp', 'finally', 'protected', 'import', 'native', 'final', 'return', 'void', 'enum', 'else', 'extends', 'implements', 'break', 'transient', 'new', 'catch', 'instanceof', 'byte', 'super', 'volatile', 'case', 'assert', 'short', 'package', 'default', 'double', 'public', 'try', 'this', 'switch', 'continue', 'throws', 'privileged', 'aspectOf', 'adviceexecution', 'proceed', 'cflowbelow', 'cflow', 'initialization', 'preinitialization', 'staticinitialization', 'withincode', 'target', 'within', 'execution', 'getWithinTypeName', 'handler', 'thisJoinPoint', 'thisJoinPointStaticPart', 'thisEnclosingJoinPointStaticPart', 'declare', 'parents', 'warning', 'error', 'soft', 'precedence', 'thisAspectInstance'],
-        r = ['get', 'set', 'args', 'call'];
+        n = [
+            "false",
+            "synchronized",
+            "int",
+            "abstract",
+            "float",
+            "private",
+            "char",
+            "boolean",
+            "static",
+            "null",
+            "if",
+            "const",
+            "for",
+            "true",
+            "while",
+            "long",
+            "throw",
+            "strictfp",
+            "finally",
+            "protected",
+            "import",
+            "native",
+            "final",
+            "return",
+            "void",
+            "enum",
+            "else",
+            "extends",
+            "implements",
+            "break",
+            "transient",
+            "new",
+            "catch",
+            "instanceof",
+            "byte",
+            "super",
+            "volatile",
+            "case",
+            "assert",
+            "short",
+            "package",
+            "default",
+            "double",
+            "public",
+            "try",
+            "this",
+            "switch",
+            "continue",
+            "throws",
+            "privileged",
+            "aspectOf",
+            "adviceexecution",
+            "proceed",
+            "cflowbelow",
+            "cflow",
+            "initialization",
+            "preinitialization",
+            "staticinitialization",
+            "withincode",
+            "target",
+            "within",
+            "execution",
+            "getWithinTypeName",
+            "handler",
+            "thisJoinPoint",
+            "thisJoinPointStaticPart",
+            "thisEnclosingJoinPointStaticPart",
+            "declare",
+            "parents",
+            "warning",
+            "error",
+            "soft",
+            "precedence",
+            "thisAspectInstance",
+        ],
+        r = ["get", "set", "args", "call"];
     return {
-        name: 'AspectJ',
+        name: "AspectJ",
         keywords: n,
         illegal: /<\/|#/,
         contains: [
@@ -12,47 +87,50 @@ e.exports = function (e) {
                 contains: [
                     {
                         begin: /\w+@/,
-                        relevance: 0
+                        relevance: 0,
                     },
                     {
-                        className: 'doctag',
-                        begin: /@[A-Za-z]+/
-                    }
-                ]
+                        className: "doctag",
+                        begin: /@[A-Za-z]+/,
+                    },
+                ],
             }),
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             {
-                className: 'class',
-                beginKeywords: 'aspect',
+                className: "class",
+                beginKeywords: "aspect",
                 end: /[{;=]/,
                 excludeEnd: !0,
                 illegal: /[:;"\[\]]/,
                 contains: [
-                    { beginKeywords: 'extends implements pertypewithin perthis pertarget percflowbelow percflow issingleton' },
+                    {
+                        beginKeywords:
+                            "extends implements pertypewithin perthis pertarget percflowbelow percflow issingleton",
+                    },
                     e.UNDERSCORE_TITLE_MODE,
                     {
                         begin: /\([^\)]*/,
                         end: /[)]+/,
                         keywords: n.concat(r),
-                        excludeEnd: !1
-                    }
-                ]
+                        excludeEnd: !1,
+                    },
+                ],
             },
             {
-                className: 'class',
-                beginKeywords: 'class interface',
+                className: "class",
+                beginKeywords: "class interface",
                 end: /[{;=]/,
                 excludeEnd: !0,
                 relevance: 0,
-                keywords: 'class interface',
+                keywords: "class interface",
                 illegal: /[:"\[\]]/,
-                contains: [{ beginKeywords: 'extends implements' }, e.UNDERSCORE_TITLE_MODE]
+                contains: [{ beginKeywords: "extends implements" }, e.UNDERSCORE_TITLE_MODE],
             },
             {
-                beginKeywords: 'pointcut after before around throwing returning',
+                beginKeywords: "pointcut after before around throwing returning",
                 end: /[)]/,
                 excludeEnd: !1,
                 illegal: /["\[\]]/,
@@ -60,9 +138,9 @@ e.exports = function (e) {
                     {
                         begin: t.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/),
                         returnBegin: !0,
-                        contains: [e.UNDERSCORE_TITLE_MODE]
-                    }
-                ]
+                        contains: [e.UNDERSCORE_TITLE_MODE],
+                    },
+                ],
             },
             {
                 begin: /[:]/,
@@ -76,17 +154,17 @@ e.exports = function (e) {
                     {
                         begin: t.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/),
                         keywords: n.concat(r),
-                        relevance: 0
+                        relevance: 0,
                     },
-                    e.QUOTE_STRING_MODE
-                ]
+                    e.QUOTE_STRING_MODE,
+                ],
             },
             {
-                beginKeywords: 'new throw',
-                relevance: 0
+                beginKeywords: "new throw",
+                relevance: 0,
             },
             {
-                className: 'function',
+                className: "function",
                 begin: /\w+ +\w+(\.\w+)?\s*\([^\)]*\)\s*((throws)[\w\s,]+)?[\{;]/,
                 returnBegin: !0,
                 end: /[{;=]/,
@@ -97,25 +175,25 @@ e.exports = function (e) {
                         begin: t.concat(e.UNDERSCORE_IDENT_RE, /\s*\(/),
                         returnBegin: !0,
                         relevance: 0,
-                        contains: [e.UNDERSCORE_TITLE_MODE]
+                        contains: [e.UNDERSCORE_TITLE_MODE],
                     },
                     {
-                        className: 'params',
+                        className: "params",
                         begin: /\(/,
                         end: /\)/,
                         relevance: 0,
                         keywords: n,
-                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE]
+                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE],
                     },
                     e.C_LINE_COMMENT_MODE,
-                    e.C_BLOCK_COMMENT_MODE
-                ]
+                    e.C_BLOCK_COMMENT_MODE,
+                ],
             },
             e.C_NUMBER_MODE,
             {
-                className: 'meta',
-                begin: /@[A-Za-z]+/
-            }
-        ]
+                className: "meta",
+                begin: /@[A-Za-z]+/,
+            },
+        ],
     };
 };

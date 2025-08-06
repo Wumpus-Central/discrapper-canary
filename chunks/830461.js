@@ -1,4 +1,4 @@
-(n.d(t, { _: () => s }), n(388685));
+n.d(t, { _: () => s }), n(388685);
 var r = n(224706),
     i = n(594190),
     l = n(823379);
@@ -19,12 +19,12 @@ async function s() {
                     l = t.icon;
                 return null != n && null != i && null != l
                     ? {
-                          id: 'window:'.concat(n),
+                          id: "window:".concat(n),
                           name: i,
-                          url: 'data:image/bmp;base64,'.concat(l)
+                          url: "data:image/bmp;base64,".concat(l),
                       }
                     : null;
-            })
+            }),
         )
     ).filter(l.lm);
 }

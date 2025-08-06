@@ -1,4 +1,4 @@
-(n.d(e, { Z: () => p }), n(388685));
+n.d(e, { Z: () => p }), n(388685);
 var a = n(255367),
     r = n(73800),
     i = n(481060),
@@ -9,24 +9,24 @@ function c(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             a = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                })
+                }),
             )),
             a.forEach(function (e) {
                 var a;
-                ((a = n[e]),
+                (a = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: a,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (t[e] = a));
-            }));
+                        : (t[e] = a);
+            });
     }
     return t;
 }
@@ -51,229 +51,229 @@ function g(t, e) {
 function d(t) {
     let { user: e, tagId: n, title: r, messageCount: s, reactionCount: c, activeAgo: g, tags: d, attachment: m } = t,
         { name: u, avatarSrc: p } = e;
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         className: l.post,
         children: [
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, a.jsxs)("div", {
                         className: l.inline,
                         children: [
                             (0, a.jsxs)(i.Text, {
-                                color: 'header-primary',
-                                variant: 'text-xs/medium',
+                                color: "header-primary",
+                                variant: "text-xs/medium",
                                 className: l.inline,
                                 children: [
-                                    (0, a.jsx)('img', {
+                                    (0, a.jsx)("img", {
                                         src: p,
                                         alt: o.intl.string(o.t.lqaIxM),
                                         width: 16,
-                                        height: 16
+                                        height: 16,
                                     }),
-                                    u
-                                ]
+                                    u,
+                                ],
                             }),
                             null != n &&
                                 (0, a.jsxs)(a.Fragment, {
                                     children: [
-                                        (0, a.jsx)('span', {
+                                        (0, a.jsx)("span", {
                                             className: l.bullet,
-                                            children: '\u2022'
+                                            children: "\u2022",
                                         }),
                                         (0, a.jsx)(i.Text, {
-                                            color: 'header-primary',
-                                            variant: 'text-xxs/medium',
+                                            color: "header-primary",
+                                            variant: "text-xxs/medium",
                                             className: l.inlineTag,
-                                            children: d[n]
-                                        })
-                                    ]
-                                })
-                        ]
+                                            children: d[n],
+                                        }),
+                                    ],
+                                }),
+                        ],
                     }),
                     (0, a.jsx)(i.X6q, {
-                        color: 'header-primary',
-                        variant: 'heading-md/semibold',
+                        color: "header-primary",
+                        variant: "heading-md/semibold",
                         className: l.title,
-                        children: r
+                        children: r,
                     }),
-                    (0, a.jsxs)('div', {
+                    (0, a.jsxs)("div", {
                         className: l.inline,
                         children: [
                             (0, a.jsxs)(i.Text, {
-                                color: 'header-secondary',
-                                variant: 'text-xs/medium',
+                                color: "header-secondary",
+                                variant: "text-xs/medium",
                                 className: l.alignCenter,
                                 children: [
                                     (0, a.jsx)(i.kBi, {
-                                        size: 'xs',
-                                        color: 'currentColor',
-                                        className: l.icon
+                                        size: "xs",
+                                        color: "currentColor",
+                                        className: l.icon,
                                     }),
-                                    s
-                                ]
+                                    s,
+                                ],
                             }),
                             c > 0 &&
                                 (0, a.jsxs)(a.Fragment, {
                                     children: [
-                                        (0, a.jsx)('span', {
+                                        (0, a.jsx)("span", {
                                             className: l.bullet,
-                                            children: '\u2022'
+                                            children: "\u2022",
                                         }),
                                         (0, a.jsxs)(i.Text, {
-                                            color: 'header-secondary',
-                                            variant: 'text-xs/medium',
+                                            color: "header-secondary",
+                                            variant: "text-xs/medium",
                                             className: l.alignCenter,
                                             children: [
-                                                (0, a.jsx)('span', {
-                                                    role: 'img',
-                                                    'aria-label': o.intl.string(o.t.gHp0Cw),
+                                                (0, a.jsx)("span", {
+                                                    role: "img",
+                                                    "aria-label": o.intl.string(o.t.gHp0Cw),
                                                     className: l.icon,
-                                                    children: '\u2764️'
+                                                    children: "\u2764️",
                                                 }),
-                                                c
-                                            ]
-                                        })
-                                    ]
+                                                c,
+                                            ],
+                                        }),
+                                    ],
                                 }),
-                            (0, a.jsx)('span', {
+                            (0, a.jsx)("span", {
                                 className: l.bullet,
-                                children: '\u2022'
+                                children: "\u2022",
                             }),
                             (0, a.jsx)(i.Text, {
-                                color: 'header-secondary',
-                                variant: 'text-xs/medium',
-                                children: g
-                            })
-                        ]
-                    })
-                ]
+                                color: "header-secondary",
+                                variant: "text-xs/medium",
+                                children: g,
+                            }),
+                        ],
+                    }),
+                ],
             }),
             null != m &&
-                (0, a.jsx)('img', {
+                (0, a.jsx)("img", {
                     src: m,
                     alt: o.intl.formatToPlainString(o.t.MJHFt7, { name: r }),
-                    className: l.attachment
-                })
-        ]
+                    className: l.attachment,
+                }),
+        ],
     });
 }
 function m(t) {
     let { author: e, content: n } = t,
         { name: r, isOP: s, avatarSrc: c } = e;
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         className: l.message,
         children: [
-            (0, a.jsx)('img', {
+            (0, a.jsx)("img", {
                 src: c,
                 alt: o.intl.string(o.t.lqaIxM),
                 width: 40,
-                height: 40
+                height: 40,
             }),
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, a.jsxs)("div", {
                         className: l.inline,
                         children: [
                             (0, a.jsx)(i.Text, {
-                                color: 'header-primary',
-                                variant: 'text-sm/semibold',
-                                children: r
+                                color: "header-primary",
+                                variant: "text-sm/semibold",
+                                children: r,
                             }),
                             s &&
-                                (0, a.jsx)('span', {
+                                (0, a.jsx)("span", {
                                     className: l.opTag,
-                                    children: o.intl.string(o.t.fyE8sL)
-                                })
-                        ]
+                                    children: o.intl.string(o.t.fyE8sL),
+                                }),
+                        ],
                     }),
                     (0, a.jsx)(i.Text, {
-                        color: 'text-default',
-                        variant: 'text-sm/normal',
-                        children: n
-                    })
-                ]
-            })
-        ]
+                        color: "text-default",
+                        variant: "text-sm/normal",
+                        children: n,
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function u(t) {
     let { title: e, messages: n, maxHeight: r } = t;
-    return (0, a.jsx)('div', {
+    return (0, a.jsx)("div", {
         className: l.previewContainer,
         style: { maxHeight: r },
-        'aria-hidden': !0,
-        children: (0, a.jsxs)('div', {
+        "aria-hidden": !0,
+        children: (0, a.jsxs)("div", {
             className: l.preview,
             children: [
                 (0, a.jsx)(i.kBi, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: l.forumPostIcon
+                    size: "md",
+                    color: "currentColor",
+                    className: l.forumPostIcon,
                 }),
                 (0, a.jsx)(i.X6q, {
-                    color: 'header-primary',
-                    variant: 'heading-lg/semibold',
+                    color: "header-primary",
+                    variant: "heading-lg/semibold",
                     className: l.header,
-                    children: e
+                    children: e,
                 }),
-                (0, a.jsx)('div', {
+                (0, a.jsx)("div", {
                     className: l.messageContainer,
                     children: n.map((t, e) =>
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(m, c({}, t), e),
                                 0 === e &&
-                                    (0, a.jsxs)('div', {
+                                    (0, a.jsxs)("div", {
                                         children: [
-                                            (0, a.jsx)('hr', { className: l.topSeparator }),
-                                            (0, a.jsxs)('div', {
+                                            (0, a.jsx)("hr", { className: l.topSeparator }),
+                                            (0, a.jsxs)("div", {
                                                 className: l.actionBar,
                                                 children: [
                                                     (0, a.jsxs)(i.Text, {
-                                                        color: 'text-brand',
-                                                        variant: 'text-xs/medium',
+                                                        color: "text-brand",
+                                                        variant: "text-xs/medium",
                                                         className: l.fakeReactions,
                                                         children: [
-                                                            (0, a.jsx)('span', {
-                                                                role: 'img',
-                                                                'aria-label': o.intl.string(o.t.gHp0Cw),
+                                                            (0, a.jsx)("span", {
+                                                                role: "img",
+                                                                "aria-label": o.intl.string(o.t.gHp0Cw),
                                                                 className: l.icon,
-                                                                children: '\u2764️'
+                                                                children: "\u2764️",
                                                             }),
-                                                            '17'
-                                                        ]
+                                                            "17",
+                                                        ],
                                                     }),
                                                     (0, a.jsxs)(i.Text, {
-                                                        color: 'text-muted',
-                                                        variant: 'text-xs/medium',
+                                                        color: "text-muted",
+                                                        variant: "text-xs/medium",
                                                         className: l.following,
                                                         children: [
                                                             (0, a.jsx)(i.Dkj, {
-                                                                size: 'xs',
-                                                                color: 'currentColor'
+                                                                size: "xs",
+                                                                color: "currentColor",
                                                             }),
-                                                            o.intl.string(o.t['3aOv+v'])
-                                                        ]
-                                                    })
-                                                ]
+                                                            o.intl.string(o.t["3aOv+v"]),
+                                                        ],
+                                                    }),
+                                                ],
                                             }),
-                                            (0, a.jsx)('hr', { className: l.bottomSeparator })
-                                        ]
-                                    })
-                            ]
-                        })
-                    )
+                                            (0, a.jsx)("hr", { className: l.bottomSeparator }),
+                                        ],
+                                    }),
+                            ],
+                        }),
+                    ),
                 }),
-                (0, a.jsx)('div', {
+                (0, a.jsx)("div", {
                     className: l.chatInput,
                     children: (0, a.jsx)(i.Text, {
-                        color: 'text-muted',
-                        variant: 'text-sm/normal',
-                        children: o.intl.string(o.t.YzpScX)
-                    })
-                })
-            ]
-        })
+                        color: "text-muted",
+                        variant: "text-sm/normal",
+                        children: o.intl.string(o.t.YzpScX),
+                    }),
+                }),
+            ],
+        }),
     });
 }
 function p(t) {
@@ -287,41 +287,43 @@ function p(t) {
         }, [e]),
         r.useEffect(() => {
             var t;
-            0 === n && (null == m || null == (t = m.current) ? void 0 : t.clientHeight) != null && o(m.current.clientHeight - 40);
+            0 === n &&
+                (null == m || null == (t = m.current) ? void 0 : t.clientHeight) != null &&
+                o(m.current.clientHeight - 40);
         }, [n]),
-        (0, a.jsxs)('div', {
+        (0, a.jsxs)("div", {
             className: l.container,
-            role: 'image',
-            'aria-label': f,
+            role: "image",
+            "aria-label": f,
             children: [
-                (0, a.jsxs)('div', {
+                (0, a.jsxs)("div", {
                     ref: m,
                     className: l.browser,
-                    'aria-hidden': !0,
+                    "aria-hidden": !0,
                     children: [
-                        (0, a.jsx)('div', {
+                        (0, a.jsx)("div", {
                             className: l.tags,
                             children: p.map((t, e) =>
                                 (0, a.jsx)(
                                     i.Text,
                                     {
-                                        color: 'header-primary',
-                                        variant: 'text-xs/medium',
+                                        color: "header-primary",
+                                        variant: "text-xs/medium",
                                         className: l.tag,
-                                        children: t
+                                        children: t,
                                     },
-                                    e
-                                )
-                            )
+                                    e,
+                                ),
+                            ),
                         }),
-                        (0, a.jsx)('div', {
+                        (0, a.jsx)("div", {
                             className: l.posts,
-                            children: x.map((t, e) => (0, a.jsx)(d, g(c({}, t), { tags: p }), e))
-                        })
-                    ]
+                            children: x.map((t, e) => (0, a.jsx)(d, g(c({}, t), { tags: p }), e)),
+                        }),
+                    ],
                 }),
-                (0, a.jsx)(u, g(c({}, h), { maxHeight: n }))
-            ]
+                (0, a.jsx)(u, g(c({}, h), { maxHeight: n })),
+            ],
         })
     );
 }

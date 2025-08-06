@@ -8,14 +8,14 @@ let s = (e) => {
     let { product: t, animationState: r, className: l } = e,
         s = i.K[t.skuId];
     return null != s
-        ? (0, n.jsx)('div', {
+        ? (0, n.jsx)("div", {
               className: a()(o.externalProductWrapper, l),
               children:
                   null != s.render &&
                   s.render({
                       animationState: r,
-                      alt: t.name
-                  })
+                      alt: t.name,
+                  }),
           })
         : null;
 };

@@ -8,6 +8,6 @@ function u() {
         function () {
             return new o.p(n);
         },
-        [n]
+        [n],
     );
 }

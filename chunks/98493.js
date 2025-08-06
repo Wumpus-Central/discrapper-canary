@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     m: () => d,
-    p: () => u
+    p: () => u,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(913527),
     l = n.n(i),
@@ -21,7 +21,7 @@ function d(e) {
         fetchNextPage: r.useCallback(
             async (e, r) => {
                 if (i.current) return;
-                let g = ''.concat(e, '-').concat(r),
+                let g = "".concat(e, "-").concat(r),
                     m = !1;
                 if ((g !== p.current && ((p.current = g), (f.current = !1), (m = !0)), f.current)) return;
                 null != d && h(null);
@@ -33,7 +33,7 @@ function d(e) {
                             let t = e[e.length - 1];
                             return { before: i ? t.joinRequestId : t.actionedAt };
                         }
-                    if (r) return { after: s.default.fromTimestamp(l()().subtract(180, 'days').valueOf()) };
+                    if (r) return { after: s.default.fromTimestamp(l()().subtract(180, "days").valueOf()) };
                     {
                         let t = e[e.length - 1];
                         return { after: i ? t.joinRequestId : t.actionedAt };
@@ -46,24 +46,24 @@ function d(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })(
@@ -71,10 +71,10 @@ function d(e) {
                                 guildId: t,
                                 status: r,
                                 limit: u,
-                                force: !0
+                                force: !0,
                             },
-                            b
-                        )
+                            b,
+                        ),
                     );
                     if (null != e) {
                         let { guild_join_requests: t } = e.body;
@@ -86,8 +86,8 @@ function d(e) {
                     i.current = !1;
                 }
             },
-            [d, t, n]
+            [d, t, n],
         ),
-        error: d
+        error: d,
     };
 }

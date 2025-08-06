@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(539854));
+n.d(t, { Z: () => f }), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -13,7 +13,7 @@ function f(e) {
         h = (0, o.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()),
         m = i.useMemo(() => {
             let e = [];
-            return (h && n && e.push(a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e);
+            return h && n && e.push(a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e;
         }, [h, n]),
         g = () => {
             setTimeout(() => (0, l.Q3)(a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: d.L.AUTO_DISMISS }), 10000);
@@ -28,9 +28,9 @@ function f(e) {
                       glowClassName: _,
                       trinketsClassName: p,
                       onMount: g,
-                      children: t
+                      children: t,
                   })
                 : t;
-        }
+        },
     });
 }

@@ -28,11 +28,20 @@ var l = n(481060),
 let _ = (0, a.Z)(
     (0, o.Z)(
         function (e) {
-            let { user: t, guildId: n, channelId: o, showMediaItems: a = !1, mediaEngineContext: d, onSelect: _, onInteraction: I, appContext: D = C.IlC.APP } = e,
+            let {
+                    user: t,
+                    guildId: n,
+                    channelId: o,
+                    showMediaItems: a = !1,
+                    mediaEngineContext: d,
+                    onSelect: _,
+                    onInteraction: I,
+                    appContext: D = C.IlC.APP,
+                } = e,
                 U = (0, P.Z)({
                     userId: t.id,
                     guildId: n,
-                    channelId: o
+                    channelId: o,
                 }),
                 A = (0, m.Z)(t.id, D),
                 k = (0, v.Z)({ user: t }),
@@ -40,7 +49,7 @@ let _ = (0, a.Z)(
                     user: t,
                     guildId: n,
                     channelId: o,
-                    context: D
+                    context: D,
                 }),
                 L = (0, b.Z)({ user: t }),
                 N = (0, S.Z)(t.id),
@@ -55,14 +64,14 @@ let _ = (0, a.Z)(
                 J = (0, p.Z)({ user: t }),
                 W = (0, u.Z)({
                     id: t.id,
-                    label: E.intl.string(E.t['/AXYnJ'])
+                    label: E.intl.string(E.t["/AXYnJ"]),
                 }),
                 Q = (0, c.Z)(t),
                 Y = t.isNonUserBot();
             return (0, i.jsxs)(l.v2r, {
-                navId: 'user-context',
+                navId: "user-context",
                 onClose: r.Zy,
-                'aria-label': E.intl.string(E.t.liqwPD),
+                "aria-label": E.intl.string(E.t.liqwPD),
                 onSelect: _,
                 onInteraction: I,
                 children: [
@@ -71,20 +80,20 @@ let _ = (0, a.Z)(
                             children: [
                                 (0, i.jsx)(l.kSQ, { children: Q }),
                                 (0, i.jsxs)(l.kSQ, {
-                                    children: [U, A, k, w, L, N]
+                                    children: [U, A, k, w, L, N],
                                 }),
                                 a && (0, i.jsx)(l.kSQ, { children: T }),
                                 (0, i.jsx)(l.kSQ, { children: R }),
                                 (0, i.jsxs)(l.kSQ, {
-                                    children: [a && M, V, B, F, G, J, H]
-                                })
-                            ]
+                                    children: [a && M, V, B, F, G, J, H],
+                                }),
+                            ],
                         }),
-                    (0, i.jsx)(l.kSQ, { children: W })
-                ]
+                    (0, i.jsx)(l.kSQ, { children: W }),
+                ],
             });
         },
-        { object: C.qAy.CONTEXT_MENU }
+        { object: C.qAy.CONTEXT_MENU },
     ),
-    [d.Z.CONTEXT_MENU, d.Z.USER_GENERIC_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.USER_GENERIC_MENU],
 );

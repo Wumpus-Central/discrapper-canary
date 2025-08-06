@@ -17,57 +17,59 @@ function f(e) {
         {
             everyoneFilter: p,
             roleFilter: f,
-            guildFilter: g
+            guildFilter: g,
         } = (0, l.cj)([u.ZP], () => {
             let { everyoneFilter: e, roleFilter: t, guildFilter: n } = u.ZP;
             return {
                 everyoneFilter: e,
                 roleFilter: t,
-                guildFilter: n
+                guildFilter: n,
             };
         });
     return (0, r.jsxs)(o.v2r, {
-        navId: 'mentions-filter',
-        'aria-label': h.intl.string(h.t.pEasFR),
+        navId: "mentions-filter",
+        "aria-label": h.intl.string(h.t.pEasFR),
         onClose: t,
         onSelect: n,
         children: [
             (0, r.jsx)(o.S89, {
-                id: 'Everyone',
+                id: "Everyone",
                 label: h.intl.string(h.t.cdyUsb),
                 action: function () {
                     s.Z.setGuildFilter({ everyoneFilter: !p });
                 },
-                checked: p
+                checked: p,
             }),
             (0, r.jsx)(o.S89, {
-                id: 'Roles',
+                id: "Roles",
                 label: h.intl.string(h.t.lZejCg),
                 action: function () {
                     s.Z.setGuildFilter({ roleFilter: !f });
                 },
-                checked: f
+                checked: f,
             }),
             null == i || i.isPrivate()
                 ? null
                 : (0, r.jsx)(o.S89, {
-                      id: 'All Servers',
+                      id: "All Servers",
                       label: h.intl.string(h.t.GWMA6u),
                       action: function () {
-                          s.Z.setGuildFilter({ guildFilter: g === d.NgX.THIS_SERVER ? d.NgX.ALL_SERVERS : d.NgX.THIS_SERVER });
+                          s.Z.setGuildFilter({
+                              guildFilter: g === d.NgX.THIS_SERVER ? d.NgX.ALL_SERVERS : d.NgX.THIS_SERVER,
+                          });
                       },
-                      checked: g === d.NgX.ALL_SERVERS
-                  })
-        ]
+                      checked: g === d.NgX.ALL_SERVERS,
+                  }),
+        ],
     });
 }
 function g() {
     let e = i.useRef(null);
     return (0, r.jsx)(o.yRy, {
         targetElementRef: e,
-        align: 'right',
+        align: "right",
         animation: o.yRy.Animation.NONE,
-        position: 'bottom',
+        position: "bottom",
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(f, { closePopout: t });
@@ -79,12 +81,12 @@ function g() {
                 tooltip: h.intl.string(h.t.pEasFR),
                 color: o.YX$.TERTIARY,
                 icon: (0, r.jsx)(o.gXV, {
-                    size: 'xs',
-                    color: 'currentColor'
+                    size: "xs",
+                    color: "currentColor",
                 }),
                 className: p.controlButton,
-                onClick: n
+                onClick: n,
             });
-        }
+        },
     });
 }

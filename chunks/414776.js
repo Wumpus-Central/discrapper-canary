@@ -4,9 +4,9 @@ n.d(t, {
     Qb: () => a,
     UI: () => l,
     j$: () => i,
-    je: () => o
+    je: () => o,
 });
-var r = Symbol.for('FluidValue:config'),
+var r = Symbol.for("FluidValue:config"),
     i = function (e) {
         return !!a(e);
     };
@@ -20,7 +20,7 @@ function a(e) {
 function s(e, t) {
     Object.defineProperty(e, r, {
         value: t,
-        configurable: !0
+        configurable: !0,
     });
 }
 function l(e, t) {

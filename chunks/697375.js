@@ -1,1 +1,1 @@
-e.exports = { loader: 'loader__82471' };
+e.exports = { loader: "loader__82471" };

@@ -1,11 +1,11 @@
-(n.d(t, { m: () => c }), n(73800));
+n.d(t, { m: () => c }), n(73800);
 var r = n(442837);
-(n(565799), n(431328), n(501655));
+n(565799), n(431328), n(501655);
 var i = n(427679),
     l = n(517334);
 n(199902);
 var a = n(592125);
-(n(496675), n(938475));
+n(496675), n(938475);
 var o = n(151864);
 n(497656);
 var s = n(554747);
@@ -19,13 +19,13 @@ function c(e) {
             [o.Z],
             () => ({
                 isStageNoticeHidden: o.Z.isLiveChannelNoticeHidden({ stageId: null == u ? void 0 : u.id }),
-                isEventNoticeHidden: o.Z.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id })
+                isEventNoticeHidden: o.Z.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id }),
             }),
-            [u, d]
+            [u, d],
         );
     if (null != d)
         if (null != u) return !p;
         else return !h;
     return null != u && !p;
 }
-(n(765305), n(231338));
+n(765305), n(231338);

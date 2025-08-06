@@ -1,16 +1,16 @@
-(n.d(t, {
+n.d(t, {
     GN: () => O,
     be: () => y,
     g4: () => E,
     m7: () => g,
     r4: () => v,
     sO: () => T,
-    yL: () => I
+    yL: () => I,
 }),
     n(539854),
     n(388685),
     n(993155),
-    n(953529));
+    n(953529);
 var r = n(991637),
     i = n.n(r),
     o = n(399606),
@@ -69,7 +69,7 @@ function b(e) {
     for (let t of r) {
         let n = _.Z.getChannel(t);
         if (null != n) {
-            let t = n.set('guild_id', e);
+            let t = n.set("guild_id", e);
             i.push(t);
         }
     }
@@ -77,35 +77,35 @@ function b(e) {
 }
 function y(e) {
     let t = b(e);
-    ((m[e] = t),
+    (m[e] = t),
         t.forEach((e) => {
-            let t = e.set('flags', h.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+            let t = e.set("flags", h.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             a.Z.dispatch({
-                type: 'CHANNEL_CREATE',
-                channel: t
+                type: "CHANNEL_CREATE",
+                channel: t,
             });
-        }));
+        });
 }
 function O(e) {
     var t;
     (null != (t = m[e]) ? t : b(e)).forEach((e) => {
         a.Z.dispatch({
-            type: 'CHANNEL_DELETE',
-            channel: e
+            type: "CHANNEL_DELETE",
+            channel: e,
         });
     });
 }
 async function v(e, t) {
     let n = [],
         r = [];
-    (t.forEach((t) => {
+    t.forEach((t) => {
         let i = _.Z.getChannel(t.ref_id);
         null != i && (n.push(s.Z.createRoleSubscriptionTemplateChannel(e, i.name, i.type, i.topic)), r.push(i));
     }),
         0 !== n.length &&
             (await Promise.allSettled(n)).forEach((n, i) => {
                 let o = r[i].id;
-                if ('fulfilled' === n.status) {
+                if ("fulfilled" === n.status) {
                     let t = n.value.body,
                         r = d.n.getState().editStateIdsForGroup[e],
                         i = d.n.getState().listings;
@@ -122,7 +122,7 @@ async function v(e, t) {
                     let e = t.findIndex((e) => e.ref_id === o);
                     -1 !== e && (null == t || t.splice(e, 1));
                 }
-            }));
+            });
 }
 function I(e, t) {
     var n, r;
@@ -131,19 +131,27 @@ function I(e, t) {
     if (null == o)
         return {
             templateCategory: null,
-            hasChangeFromTemplate: null
+            hasChangeFromTemplate: null,
         };
     let a = _.Z.getTemplateWithCategory(t, o);
     if (null == a)
         return {
             templateCategory: null,
-            hasChangeFromTemplate: null
+            hasChangeFromTemplate: null,
         };
     let s = a.listings[0];
-    if ((null == i ? void 0 : i.name) !== s.name || (null == i ? void 0 : i.description) !== s.description || (null == i ? void 0 : i.priceTier) !== s.price_tier || (null == i ? void 0 : i.image) !== s.image || (null == i ? void 0 : i.roleColor) !== s.role_color || (null == i || null == (n = i.channelBenefits) ? void 0 : n.length) !== s.channels.length || (null == i || null == (r = i.intangibleBenefits) ? void 0 : r.length) !== s.additional_perks.length)
+    if (
+        (null == i ? void 0 : i.name) !== s.name ||
+        (null == i ? void 0 : i.description) !== s.description ||
+        (null == i ? void 0 : i.priceTier) !== s.price_tier ||
+        (null == i ? void 0 : i.image) !== s.image ||
+        (null == i ? void 0 : i.roleColor) !== s.role_color ||
+        (null == i || null == (n = i.channelBenefits) ? void 0 : n.length) !== s.channels.length ||
+        (null == i || null == (r = i.intangibleBenefits) ? void 0 : r.length) !== s.additional_perks.length
+    )
         return {
             templateCategory: a.category,
-            hasChangeFromTemplate: !0
+            hasChangeFromTemplate: !0,
         };
     for (let e = 0; e < s.channels.length; e++) {
         let t = i.channelBenefits[e],
@@ -151,7 +159,7 @@ function I(e, t) {
         if (t.name !== n.name || t.description !== n.description || t.emoji_name !== n.emoji_name)
             return {
                 templateCategory: a.category,
-                hasChangeFromTemplate: !0
+                hasChangeFromTemplate: !0,
             };
     }
     for (let e = 0; e < s.additional_perks.length; e++) {
@@ -160,12 +168,12 @@ function I(e, t) {
         if (t.name !== n.name || t.description !== n.description || t.emoji_name !== n.emoji_name)
             return {
                 templateCategory: a.category,
-                hasChangeFromTemplate: !0
+                hasChangeFromTemplate: !0,
             };
     }
     return {
         templateCategory: a.category,
-        hasChangeFromTemplate: !1
+        hasChangeFromTemplate: !1,
     };
 }
 function T(e) {

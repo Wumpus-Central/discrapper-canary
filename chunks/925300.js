@@ -9,7 +9,7 @@ function r(e) {
         var a = e.valueCallback ? e.valueCallback(o[0]) : o[0];
         return {
             value: (a = n.valueCallback ? n.valueCallback(a) : a),
-            rest: t.slice(i.length)
+            rest: t.slice(i.length),
         };
     };
 }

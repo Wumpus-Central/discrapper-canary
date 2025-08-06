@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => l,
-    Z: () => c
+    Z: () => c,
 });
 var r = n(442837),
     i = n(430824),
@@ -21,7 +21,7 @@ function l(e, t) {
                 type: a.A3.INACTIVE,
                 powerup: e,
                 sourceEntitlement: void 0,
-                sourcePowerup: void 0
+                sourcePowerup: void 0,
             };
         return (
             t
@@ -29,21 +29,21 @@ function l(e, t) {
                       type: a.A3.LEVEL_ACTIVATED,
                       powerup: e,
                       sourceEntitlement: n,
-                      sourcePowerup: r
+                      sourcePowerup: r,
                   })
                 : i
                   ? (l = {
                         type: a.A3.TIER_OVERRIDE_ACTIVATED,
                         powerup: e,
                         sourceEntitlement: void 0,
-                        sourcePowerup: e
+                        sourcePowerup: e,
                     })
                   : s &&
                     (l = {
                         type: a.A3.POWERUP_ACTIVATED,
                         powerup: e,
                         sourceEntitlement: o,
-                        sourcePowerup: e
+                        sourcePowerup: e,
                     }),
             l
         );
@@ -54,21 +54,21 @@ function l(e, t) {
             return {
                 isActiveFromLevel: !1,
                 levelEntitlement: void 0,
-                levelPowerup: void 0
+                levelPowerup: void 0,
             };
         let r = a.Rx[e.skuId];
         if (null == r)
             return {
                 isActiveFromLevel: !1,
                 levelEntitlement: void 0,
-                levelPowerup: void 0
+                levelPowerup: void 0,
             };
         let i = c.premiumTier >= r,
             o = a.Cp[r];
         return {
             isActiveFromLevel: i,
             levelEntitlement: null != o ? (null == (t = u.unlockedPowerups) ? void 0 : t[o]) : void 0,
-            levelPowerup: null != o ? (null == (n = u.allPowerups) ? void 0 : n[o]) : void 0
+            levelPowerup: null != o ? (null == (n = u.allPowerups) ? void 0 : n[o]) : void 0,
         };
     }
     function p(e) {
@@ -86,7 +86,7 @@ function c(e, t) {
         ? {
               type: a.A3.INACTIVE,
               sourceEntitlement: void 0,
-              sourcePowerup: void 0
+              sourcePowerup: void 0,
           }
         : n[0];
 }

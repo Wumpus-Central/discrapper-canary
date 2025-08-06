@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     NE: () => P,
     QN: () => A,
     Qf: () => w,
@@ -6,10 +6,10 @@
     TY: () => D,
     pQ: () => N,
     te: () => T,
-    z7: () => R
+    z7: () => R,
 }),
     n(539854),
-    n(388685));
+    n(388685);
 var r = n(367907),
     i = n(752048),
     o = n(199902),
@@ -32,7 +32,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -42,15 +42,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -58,11 +58,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -81,7 +81,11 @@ let v = (e) => {
         let { user: t, userProfile: n, guildMember: r, guildMemberProfile: i } = e,
             o = null != n ? n : i,
             a = [];
-        if (((null == r ? void 0 : r.nick) && a.push(h.cm.NICKNAME), (null == o ? void 0 : o.pronouns) && a.push(h.cm.PRONOUNS), null == t ? void 0 : t.avatar)) {
+        if (
+            ((null == r ? void 0 : r.nick) && a.push(h.cm.NICKNAME),
+            (null == o ? void 0 : o.pronouns) && a.push(h.cm.PRONOUNS),
+            null == t ? void 0 : t.avatar)
+        ) {
             let e = (0, d.xR)(null == t ? void 0 : t.avatar);
             a.push(e ? h.cm.ANIMATED_AVATAR : h.cm.AVATAR);
         }
@@ -89,14 +93,22 @@ let v = (e) => {
             let e = (0, d.xR)(null == o ? void 0 : o.banner);
             a.push(e ? h.cm.ANIMATED_BANNER : h.cm.BANNER);
         }
-        return ((null == o ? void 0 : o.bio) && a.push(h.cm.BIO), (null == o ? void 0 : o.themeColors) != null && void 0 !== o.themeColors.find((e) => null !== e) && a.push(h.cm.THEME), (null == t ? void 0 : t.avatarDecoration) != null && a.push(h.cm.AVATAR_DECORATION), (null == o ? void 0 : o.profileEffectId) != null && a.push(h.cm.PROFILE_EFFECT), a);
+        return (
+            (null == o ? void 0 : o.bio) && a.push(h.cm.BIO),
+            (null == o ? void 0 : o.themeColors) != null &&
+                void 0 !== o.themeColors.find((e) => null !== e) &&
+                a.push(h.cm.THEME),
+            (null == t ? void 0 : t.avatarDecoration) != null && a.push(h.cm.AVATAR_DECORATION),
+            (null == o ? void 0 : o.profileEffectId) != null && a.push(h.cm.PROFILE_EFFECT),
+            a
+        );
     },
     I = (e) => {
         let t = s.Z.getStatus(e),
             n = s.Z.isMobileOnline(e);
-        return t === g.Sk.ONLINE && n ? ''.concat(t, '-mobile') : t === g.Sk.ONLINE ? ''.concat(t, '-desktop') : t;
+        return t === g.Sk.ONLINE && n ? "".concat(t, "-mobile") : t === g.Sk.ONLINE ? "".concat(t, "-desktop") : t;
     },
-    T = (e) => (null == e ? e : 'VOICE' === e ? 'VOICE' : Object.keys(m.IIU)[Object.values(m.IIU).indexOf(e)]),
+    T = (e) => (null == e ? e : "VOICE" === e ? "VOICE" : Object.keys(m.IIU)[Object.values(m.IIU).indexOf(e)]),
     S = (e) => {
         var t, n;
         let { layout: r, userId: i, guildId: o, sessionId: l, sourceSessionId: u, showGuildProfile: d = !0 } = e,
@@ -110,11 +122,11 @@ let v = (e) => {
             source_profile_session_id: u,
             profile_properties: v({
                 user: f,
-                userProfile: null == _ ? void 0 : _._userProfile
+                userProfile: null == _ ? void 0 : _._userProfile,
             }),
             guild_profile_properties: v({
                 guildMember: h,
-                guildMemberProfile: null == _ ? void 0 : _._guildMemberProfile
+                guildMemberProfile: null == _ ? void 0 : _._guildMemberProfile,
             }),
             profile_activity_types: s.Z.getActivities(f.id)
                 .map((e) => {
@@ -133,7 +145,7 @@ let v = (e) => {
             profile_effect_sku_id: null == _ ? void 0 : _.profileEffectId,
             user_status: I(f.id),
             is_guild_profile: (null == _ ? void 0 : _.guildId) != null,
-            is_bot_profile: f.bot
+            is_bot_profile: f.bot,
         };
     },
     A = (e) => {
@@ -148,7 +160,7 @@ let v = (e) => {
             num_mutual_friends: f.Z.getMutualFriendsCount(n),
             num_mutual_guilds: null == (t = f.Z.getMutualGuilds(n)) ? void 0 : t.length,
             communication_probability: null == r ? void 0 : r.communicationProbability,
-            communication_rank: null == r ? void 0 : r.communicationRank
+            communication_rank: null == r ? void 0 : r.communicationRank,
         };
     },
     N = (e) => {
@@ -160,13 +172,23 @@ let v = (e) => {
                 profile_action: s,
                 profile_section: l,
                 source_message_id: i,
-                source_role_id: o
-            })
+                source_role_id: o,
+            }),
         );
     },
     C = (e) => {
-        if (!(0, _.E)({ location: 'UserProfileAnalyticsUtils' })) return;
-        let { guildId: t, channelId: n, analyticsLocations: i, profileUi: o, viewStartedAt: a, fetchStartedAt: s, timeToInteractiveMs: l, timeToLoadMs: c, timeToFetchMs: d } = e;
+        if (!(0, _.E)({ location: "UserProfileAnalyticsUtils" })) return;
+        let {
+            guildId: t,
+            channelId: n,
+            analyticsLocations: i,
+            profileUi: o,
+            viewStartedAt: a,
+            fetchStartedAt: s,
+            timeToInteractiveMs: l,
+            timeToLoadMs: c,
+            timeToFetchMs: d,
+        } = e;
         (null != l ? l : 0) <= 0 ||
             (null != c ? c : 0) <= 0 ||
             (null != d ? d : 0) <= 0 ||
@@ -179,12 +201,23 @@ let v = (e) => {
                     fetch_started_at: s,
                     time_to_interactive_ms: l,
                     time_to_load_ms: c,
-                    time_to_fetch_ms: d
-                })
+                    time_to_fetch_ms: d,
+                }),
             );
     },
     R = (e) => {
-        let { guildId: t, channelId: n, analyticsLocations: i, action: o, display: a, activity: s, stream: l, entry: c, outbox: d, voiceChannelId: f } = e;
+        let {
+            guildId: t,
+            channelId: n,
+            analyticsLocations: i,
+            action: o,
+            display: a,
+            activity: s,
+            stream: l,
+            entry: c,
+            outbox: d,
+            voiceChannelId: f,
+        } = e;
         u.default.track(
             m.rMx.USER_PROFILE_ACTIVITY_ACTION,
             O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e), A(e)), {
@@ -212,8 +245,8 @@ let v = (e) => {
                               let { author_id: t } = e;
                               return t;
                           }),
-                voice_channel_id: f
-            })
+                voice_channel_id: f,
+            }),
         );
     },
     P = (e) => {
@@ -222,8 +255,8 @@ let v = (e) => {
             m.rMx.USER_PROFILE_BADGE_PRESSED,
             O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e), A(e)), {
                 location_stack: i,
-                badge: o
-            })
+                badge: o,
+            }),
         );
     },
     w = (e) => {
@@ -232,8 +265,8 @@ let v = (e) => {
             m.rMx.USER_PROFILE_BADGE_HOVERED,
             O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e), A(e)), {
                 location_stack: i,
-                badge: o
-            })
+                badge: o,
+            }),
         );
     },
     D = (e) => {
@@ -249,11 +282,15 @@ let v = (e) => {
                     : null;
         u.default.track(m.rMx.DM_PROFILE_TOGGLED, {
             is_profile_open: a,
-            has_images: !!(null != (r = null == d || null == (t = d.assets) ? void 0 : t.large_image) ? r : null == d || null == (n = d.assets) ? void 0 : n.small_image),
+            has_images: !!(null != (r = null == d || null == (t = d.assets) ? void 0 : t.large_image)
+                ? r
+                : null == d || null == (n = d.assets)
+                  ? void 0
+                  : n.small_image),
             is_friend: l.Z.isFriend(c),
             viewed_profile_user_id: c,
             profile_has_nitro_customization: null == i ? void 0 : i.hasPremiumCustomization(),
             profile_has_theme_color_customized: null == i ? void 0 : i.hasThemeColors(),
-            profile_has_theme_animation: (null == i ? void 0 : i.popoutAnimationParticleType) != null
+            profile_has_theme_animation: (null == i ? void 0 : i.popoutAnimationParticleType) != null,
         });
     };

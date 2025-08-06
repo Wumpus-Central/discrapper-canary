@@ -5,7 +5,7 @@ n.d(t, {
     Vq: () => f,
     a1: () => x,
     kG: () => b,
-    y3: () => j
+    y3: () => j,
 });
 var i,
     r = n(913527),
@@ -22,24 +22,24 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -61,7 +61,7 @@ function h(e, t) {
         e
     );
 }
-var f = (((i = {}).UPCOMING = 'upcoming'), (i.EARNED = 'earned'), i);
+var f = (((i = {}).UPCOMING = "upcoming"), (i.EARNED = "earned"), i);
 function b() {
     let e = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         t = (0, m.l)(null == e ? void 0 : e.id);
@@ -76,14 +76,10 @@ let x = (e) =>
 function _() {
     let e = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         t = (0, u.M5)(e, p.p9.TIER_2),
-        n = (0, a.e7)(
-            [d.Z],
-            () => {
-                let e = d.Z.getPremiumSubscription();
-                return null != e && t ? e.premiumSince : null;
-            },
-            [t]
-        ),
+        n = (0, a.e7)([d.Z], () => {
+            let e = d.Z.getPremiumSubscription();
+            return null != e && t ? e.premiumSince : null;
+        }, [t]),
         i = x(null == e ? void 0 : e.id);
     return null != n ? n : i;
 }
@@ -93,8 +89,8 @@ let j = () => {
             n = (0, a.e7)([d.Z], () => d.Z.getPremiumTypeSubscription());
         if (!(0, u.M5)(t, p.p9.TIER_2) || null == n || null == n.premiumSince) return null;
         let i = s()(),
-            r = s()(n.premiumSince).add(1, 'day'),
-            l = i.diff(r, 'months');
+            r = s()(n.premiumSince).add(1, "day"),
+            l = i.diff(r, "months");
         return e.reduce((e, t) => {
             let { id: n, tenureReqNumMonths: i } = t;
             return l >= i ? n : e;
@@ -109,14 +105,14 @@ let j = () => {
         let e = _(),
             t = Object.values(p.vK);
         if (null == e || null == t) return null;
-        let n = s()().diff(e, 'days'),
+        let n = s()().diff(e, "days"),
             i = t[0],
             r = 30 * i.tenureReqNumMonths - n;
         return r <= 0
             ? null
             : h(g({}, i), {
                   daysLeft: r,
-                  status: 'upcoming'
+                  status: "upcoming",
               });
     },
     O = () => {
@@ -127,7 +123,7 @@ let j = () => {
         return null != t
             ? h(g({}, t), {
                   earnedOnDate: n,
-                  status: 'earned'
+                  status: "earned",
               })
             : null != i
               ? i

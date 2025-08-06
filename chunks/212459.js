@@ -1,6 +1,6 @@
 n.d(t, {
     Y: () => a,
-    z: () => o
+    z: () => o,
 });
 var r = n(73800),
     i = n(126663);
@@ -11,7 +11,7 @@ let o = (0, r.createContext)({
     setScale() {},
     setOffset() {},
     zoomed: !1,
-    setZoomed() {}
+    setZoomed() {},
 });
 function a() {
     return (0, r.useContext)(o);

@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => h,
-    s: () => m
+    s: () => m,
 });
 var r = n(399606),
     i = n(637853),
@@ -26,15 +26,14 @@ function p(e, t) {
 }
 function h(e) {
     let t = (0, u.Z)(e);
-    return (0, r.e7)(
-        [a.Z, s.Z, o.Z],
-        () => {
-            if (__OVERLAY__ || e === d.ME || e === d.I_8) return !1;
-            let n = s.Z.getGuild(e);
-            return !!(null == n ? void 0 : n.features.has(d.oNc.COMMUNITY)) && (o.Z.isFullServerPreview(e) ? _(n) : (0, i.wC)(e) ? t || p(e, a.Z) : !!(0, c.Z)(n) && (t || p(e, a.Z)));
-        },
-        [e, t]
-    );
+    return (0, r.e7)([a.Z, s.Z, o.Z], () => {
+        if (__OVERLAY__ || e === d.ME || e === d.I_8) return !1;
+        let n = s.Z.getGuild(e);
+        return (
+            !!(null == n ? void 0 : n.features.has(d.oNc.COMMUNITY)) &&
+            (o.Z.isFullServerPreview(e) ? _(n) : (0, i.wC)(e) ? t || p(e, a.Z) : !!(0, c.Z)(n) && (t || p(e, a.Z)))
+        );
+    }, [e, t]);
 }
 function m(e) {
     let t = s.Z.getGuild(e),
@@ -42,5 +41,8 @@ function m(e) {
     if (null == t || __OVERLAY__ || e === d.ME || e === d.I_8) return !1;
     if (n) return _(t);
     let r = (0, i.wC)(e) && t.features.has(d.oNc.GUILD_ONBOARDING) && t.features.has(d.oNc.GUILD_SERVER_GUIDE);
-    return ((t.features.has(d.oNc.GUILD_ONBOARDING) && t.features.has(d.oNc.GUILD_SERVER_GUIDE)) || r) && t.features.has(d.oNc.COMMUNITY);
+    return (
+        ((t.features.has(d.oNc.GUILD_ONBOARDING) && t.features.has(d.oNc.GUILD_SERVER_GUIDE)) || r) &&
+        t.features.has(d.oNc.COMMUNITY)
+    );
 }

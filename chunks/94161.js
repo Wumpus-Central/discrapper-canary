@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -16,24 +16,24 @@ function f(e, t) {
         }, [o]);
     return n
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: a()(u.CT, d.buttonContainer),
               ref: t,
               children: (0, r.jsx)(l.Z, {
                   className: d.emojiButton,
                   onClick: h,
                   active: f === u.X1.EMOJI && _ === o,
-                  'aria-controls': p,
+                  "aria-controls": p,
                   tabIndex: 0,
                   focusProps: {
                       offset: {
                           top: 4,
                           bottom: 4,
                           left: -4,
-                          right: -4
-                      }
-                  }
-              })
+                          right: -4,
+                      },
+                  },
+              }),
           });
 }
 let _ = i.memo(i.forwardRef(f));

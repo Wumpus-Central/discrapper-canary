@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,17 +32,17 @@ function _(e) {
             null != e && l.Cq(e);
         }, [_]),
         g = null != (n = null == p ? void 0 : p.topic) ? n : f.name,
-        E = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: g });
-    return (0, r.jsx)('div', {
+        E = d.intl.formatToPlainString(d.t["T+DNAA"], { channel: g });
+    return (0, r.jsx)("div", {
         ref: h,
         children: (0, r.jsx)(a.P3F, {
             onClick: m,
             focusProps: { ringTarget: h },
             children: (0, r.jsx)(a.X6q, {
-                variant: 'heading-sm/semibold',
-                children: E
-            })
-        })
+                variant: "heading-sm/semibold",
+                children: E,
+            }),
+        }),
     });
 }
 class p {
@@ -51,11 +51,11 @@ class p {
     }
     createHeader(e) {
         return {
-            subtitle: d.intl.string(d.t['+AJFJy']),
-            icon: null
+            subtitle: d.intl.string(d.t["+AJFJy"]),
+            icon: null,
         };
     }
     constructor() {
-        f(this, 'body', _);
+        f(this, "body", _);
     }
 }

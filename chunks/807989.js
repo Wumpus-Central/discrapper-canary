@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(997841), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685));
+n.d(t, { Z: () => b }), n(997841), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -39,33 +39,33 @@ function b(e) {
         } catch (e) {
             n = null;
         }
-    let N = c.w.useExperiment({ location: 'oauth2_authorize' });
-    return (0, r.jsxs)('div', {
+    let N = c.w.useExperiment({ location: "oauth2_authorize" });
+    return (0, r.jsxs)("div", {
         className: o()(g.applicationDetails, { [g.noPadding]: N.enabled }),
         children: [
             null != n
                 ? (0, r.jsx)(y, {
                       icon: l.xPt,
-                      text: m.intl.format(m.t['5k5OKC'], { origin: n })
+                      text: m.intl.format(m.t["5k5OKC"], { origin: n }),
                   })
                 : null,
             (0, r.jsx)(y, {
                 icon: l.mBM,
-                text: (0, _.i)(i)
+                text: (0, _.i)(i),
             }),
             (0, r.jsx)(y, {
                 icon: l.T39,
-                text: m.intl.formatToPlainString(m.t['+1bjc3'], { date: T })
+                text: m.intl.formatToPlainString(m.t["+1bjc3"], { date: T }),
             }),
             s.includes(a.x.BOT) && null != O
                 ? (0, r.jsx)(y, {
                       icon: l.wGt,
-                      text: m.intl.formatToPlainString(m.t.UHGHSE, { guildCount: O })
+                      text: m.intl.formatToPlainString(m.t.UHGHSE, { guildCount: O }),
                   })
                 : null,
             (0, r.jsx)(y, {
                 icon: l.b7C,
-                text: S
+                text: S,
             }),
             null != I
                 ? I.map((e) => {
@@ -74,28 +74,28 @@ function b(e) {
                       return null != n && null != t
                           ? (0, r.jsx)(y, {
                                 icon: n,
-                                text: t
+                                text: t,
                             })
                           : null;
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 function y(e) {
     let { icon: t, text: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.entry,
         children: [
             (0, r.jsx)(t, {
                 className: g.entryIcon,
-                color: 'currentColor'
+                color: "currentColor",
             }),
             (0, r.jsx)(s.x, {
-                variant: 'text-xs/normal',
+                variant: "text-xs/normal",
                 className: g.entryInner,
-                children: n
-            })
-        ]
+                children: n,
+            }),
+        ],
     });
 }

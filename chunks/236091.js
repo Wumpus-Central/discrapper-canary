@@ -23,7 +23,11 @@ let g = (e) => {
         if (null == n) return !1;
         let t = d.Z.getCurrentUserActiveStream(),
             r = null == (e = u.ZP.getVisibleGame()) ? void 0 : e.windowHandle;
-        return (null != t && !!_.Z.getSettings().clipsEnabled && !!i) || (null != r && !!_.Z.getSettings().decoupledClipsEnabled && !!g) || c.Z.getParticipants(n).some((e) => e.type === p.fO.USER && _.Z.isClipsEnabledForUser(e.user.id));
+        return (
+            (null != t && !!_.Z.getSettings().clipsEnabled && !!i) ||
+            (null != r && !!_.Z.getSettings().decoupledClipsEnabled && !!g) ||
+            c.Z.getParticipants(n).some((e) => e.type === p.fO.USER && _.Z.isClipsEnabledForUser(e.user.id))
+        );
     })
         ? (0, r.jsxs)(l.DY3, {
               text: h.intl.string(h.t.DJXW3N),
@@ -34,15 +38,15 @@ let g = (e) => {
                       icon: l.AlX,
                       shape: l.Dv2.ROUND_LEFT,
                       color: s.Z.unsafe_rawColors.PRIMARY_500.css,
-                      className: m.clipBadgeIcon
+                      className: m.clipBadgeIcon,
                   }),
                   (0, r.jsx)(l.IGR, {
                       text: h.intl.string(h.t.pCMkDQ),
                       shape: l.Dv2.ROUND_RIGHT,
                       color: s.Z.unsafe_rawColors.PRIMARY_500.css,
-                      className: m.clipBadgeText
-                  })
-              ]
+                      className: m.clipBadgeText,
+                  }),
+              ],
           })
         : null;
 };

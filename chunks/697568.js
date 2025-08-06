@@ -7,7 +7,7 @@ let a = (e) =>
         .get({
             url: o.ANM.STICKER_GUILD_DATA(e),
             oldFormErrors: !0,
-            rejectWithError: !0
+            rejectWithError: !0,
         })
         .then((e) => ((null == e ? void 0 : e.body) != null ? (0, i.PP)(e.body) : null))
         .catch(() => null);

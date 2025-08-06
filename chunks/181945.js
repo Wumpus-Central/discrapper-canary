@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(361932), n(187205), n(388685), n(539854));
+n.d(t, { Z: () => p }), n(361932), n(187205), n(388685), n(539854);
 var r = n(392711),
     i = n.n(r),
     o = n(45114),
@@ -26,24 +26,24 @@ function p(e, t, n) {
         .map((e) => ({
             channelId: e,
             readStateType: _.W.CHANNEL,
-            messageId: c.ZP.lastMessageId(e)
+            messageId: c.ZP.lastMessageId(e),
         }));
     return (
         e.forEach((e) => {
-            (r.push({
+            r.push({
                 channelId: d.default.cast(e),
                 readStateType: _.W.GUILD_EVENT,
-                messageId: c.ZP.lastMessageId(e, _.W.GUILD_EVENT)
+                messageId: c.ZP.lastMessageId(e, _.W.GUILD_EVENT),
             }),
                 r.push({
                     channelId: d.default.cast(e),
                     readStateType: _.W.GUILD_ONBOARDING_QUESTION,
-                    messageId: a.Z.ackIdForGuild(e)
-                }));
+                    messageId: a.Z.ackIdForGuild(e),
+                });
         }),
         u.default.track(f.rMx.MARK_AS_READ, {
             source: t,
-            type: 'guild'
+            type: "guild",
         }),
         (0, o.y5)(r, n)
     );

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,13 @@ function y(e, t) {
         e
     );
 }
-let O = () => [h.intl.string(h.t.EgWTY2), h.intl.string(h.t.umBn5e), h.intl.string(h.t.dG1wDw), h.intl.string(h.t.SesI4e), h.intl.string(h.t.RnMLvr)],
+let O = () => [
+        h.intl.string(h.t.EgWTY2),
+        h.intl.string(h.t.umBn5e),
+        h.intl.string(h.t.dG1wDw),
+        h.intl.string(h.t.SesI4e),
+        h.intl.string(h.t.RnMLvr),
+    ],
     v = () => {
         var e;
         return null != (e = l().sample(O())) ? e : h.intl.string(h.t.EgWTY2);
@@ -76,13 +82,13 @@ function I(e) {
         O = t === d.Ru.PIRATE,
         I = (0, c.xUy)({
             label: g,
-            isSelected: s
+            isSelected: s,
         });
     return (0, r.jsx)(c.ua7, {
         text: g,
         onTooltipShow: () => O && b(v()),
         children: (e) =>
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: m.appIconSelectionContainer,
                 children: [
                     (0, r.jsx)(
@@ -91,20 +97,20 @@ function I(e) {
                             tabIndex: null != l ? l : I.tabIndex,
                             className: a()(m.appIconSelection, { [m.selected]: s }, n),
                             onClick: s ? p.dG4 : () => (null == o ? void 0 : o(t)),
-                            children: f
-                        })
+                            children: f,
+                        }),
                     ),
                     s && (0, r.jsx)(u.oK, {}),
                     h &&
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: m.lockedBadgeContainer,
                             children: (0, r.jsx)(c.mBM, {
                                 className: m.lockedBadge,
-                                color: 'currentColor'
-                            })
-                        })
-                ]
-            })
+                                color: "currentColor",
+                            }),
+                        }),
+                ],
+            }),
     });
 }
 function T(e) {
@@ -118,7 +124,7 @@ function T(e) {
         locked: s,
         children: (0, r.jsx)(f.Z, {
             id: t.id,
-            width: _.M9
-        })
+            width: _.M9,
+        }),
     });
 }

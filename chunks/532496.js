@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(415506));
+n.d(t, { Z: () => p }), n(415506);
 var r = n(558706),
     i = n(170216),
     o = n(723642),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,7 +62,8 @@ function d(e, t) {
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -72,19 +73,19 @@ function f(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 class _ extends i.L {
     createRequestPayload(e) {
         let { searchQuery: t, searchTabs: n, getLimit: r, pagination: i, trackExactTotalHits: a } = e,
             { include_nsfw: s, channel_id: c } = t,
-            f = d(t, ['include_nsfw', 'channel_id']),
+            f = d(t, ["include_nsfw", "channel_id"]),
             _ = {
                 include_nsfw: s,
                 channel_ids: c,
                 tabs: {},
-                track_exact_total_hits: a
+                track_exact_total_hits: a,
             };
         return (
             n.forEach((e) => {
@@ -103,7 +104,7 @@ class _ extends i.L {
                 searchTabs: i,
                 getLimit: o,
                 pagination: s,
-                trackExactTotalHits: l
+                trackExactTotalHits: l,
             });
         switch (t.type) {
             case a.aib.GUILD:
@@ -115,11 +116,19 @@ class _ extends i.L {
             case a.aib.DMS:
                 return new r.tJ(t.type, t.type, n, c);
             default:
-                throw Error('[SearchFetchManager] Unsupported search context type: '.concat(t.type));
+                throw Error("[SearchFetchManager] Unsupported search context type: ".concat(t.type));
         }
     }
     create(e) {
-        let { id: t, searchContext: n, searchQuery: r, searchTabs: i, getLimit: o, pagination: a, trackExactTotalHits: s } = e;
+        let {
+            id: t,
+            searchContext: n,
+            searchQuery: r,
+            searchTabs: i,
+            getLimit: o,
+            pagination: a,
+            trackExactTotalHits: s,
+        } = e;
         this.cancel(t);
         let l = this.createWithPayload({
             searchContext: n,
@@ -127,9 +136,9 @@ class _ extends i.L {
             searchTabs: i,
             getLimit: o,
             pagination: a,
-            trackExactTotalHits: s
+            trackExactTotalHits: s,
         });
-        return (this.set(t, l), l);
+        return this.set(t, l), l;
     }
 }
 let p = new _();

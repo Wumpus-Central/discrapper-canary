@@ -1,4 +1,4 @@
-(r.d(e, { default: () => b }), r(388685));
+r.d(e, { default: () => b }), r(388685);
 var n = r(255367),
     a = r(73800),
     i = r(481060),
@@ -19,7 +19,7 @@ function b(t) {
         h = a.useCallback(async () => {
             null != m && O(null);
             try {
-                (await c.Z.saveGuild(b.id, { verificationLevel: f }), c.Z.updateGuild({ verificationLevel: f }), g());
+                await c.Z.saveGuild(b.id, { verificationLevel: f }), c.Z.updateGuild({ verificationLevel: f }), g();
             } catch (t) {
                 O(new o.Hx(t).getAnyErrorMessage());
             }
@@ -30,24 +30,24 @@ function b(t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (e) {
                         var n;
-                        ((n = r[e]),
+                        (n = r[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (t[e] = n));
-                    }));
+                                : (t[e] = n);
+                    });
             }
             return t;
         })({}, t)),
@@ -62,15 +62,15 @@ function b(t) {
                         (0, n.jsx)(i.R94, {
                             type: i.R94.Types.DESCRIPTION,
                             className: p.marginBottom20,
-                            children: u.intl.format(u.t.iuRk2t, {})
+                            children: u.intl.format(u.t.iuRk2t, {}),
                         }),
                         (0, n.jsx)(i.FXm, {
                             value: f,
                             options: v,
-                            onChange: (t) => _(t.value)
-                        })
-                    ]
-                })
+                            onChange: (t) => _(t.value),
+                        }),
+                    ],
+                }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -84,6 +84,6 @@ function b(t) {
               })(Object(r)).forEach(function (t) {
                   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
               }),
-        e)
+        e),
     );
 }

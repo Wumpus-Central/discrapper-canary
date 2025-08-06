@@ -14,7 +14,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,7 @@ let p = () => {
     h = (e) => {
         o.default.track(c.rMx.OPEN_MODAL, {
             type: l.N4,
-            guild_id: e
+            guild_id: e,
         });
     },
     m = {
@@ -77,7 +77,7 @@ let p = () => {
             };
             (0, i.ZD)(
                 async () => {
-                    let { default: t } = await Promise.all([n.e('54408'), n.e('77025')]).then(n.bind(n, 645264));
+                    let { default: t } = await Promise.all([n.e("54408"), n.e("77025")]).then(n.bind(n, 645264));
                     return (n) =>
                         (0, r.jsx)(
                             t,
@@ -91,34 +91,34 @@ let p = () => {
                                         if (s.rb.getState().hasUnsubmittedChanges) return void (0, s.PE)(!0);
                                         else p();
                                     await n.onClose();
-                                }
-                            })
+                                },
+                            }),
                         );
                 },
                 {
                     modalKey: l.Pn,
                     onCloseRequest: () => {
-                        (p(), s.rb.getState().hasUnsubmittedChanges ? (0, s.PE)(!0) : (0, i.Mr)(l.Pn));
+                        p(), s.rb.getState().hasUnsubmittedChanges ? (0, s.PE)(!0) : (0, i.Mr)(l.Pn);
                     },
-                    onCloseCallback: t
-                }
+                    onCloseCallback: t,
+                },
             );
         },
         closeMemberVerificationModal() {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            (e || p(), (0, i.Mr)(l.Pn));
+            e || p(), (0, i.Mr)(l.Pn);
         },
         openMemberVerificationPreviewModal(e) {
             (0, i.ZD)(async () => {
-                let { default: t } = await Promise.all([n.e('54408'), n.e('77025')]).then(n.bind(n, 645264));
+                let { default: t } = await Promise.all([n.e("54408"), n.e("77025")]).then(n.bind(n, 645264));
                 return (n) =>
                     (0, r.jsx)(
                         t,
                         _(d({}, n), {
                             guildId: e,
-                            isPreview: !0
-                        })
+                            isPreview: !0,
+                        }),
                     );
             });
-        }
+        },
     };

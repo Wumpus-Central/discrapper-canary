@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => d }), t(388685));
+t.d(n, { Z: () => d }), t(388685);
 var l,
     i = t(442837),
     r = t(570140);
@@ -9,19 +9,19 @@ function a(e, n, t) {
                   value: t,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[n] = t),
         e
     );
 }
 let u = {
-        enable_recently_active: 'Enable recently active channels',
-        theme_setting_in_account_sheet: 'Show theme settings in the Account action sheet',
-        nav_experiment_server_drawer_enabled: '[NavI] Enable expandable server drawer',
-        shop_include_unpublished: '[Shop] show unpublished items in shop',
-        show_icymi_debug_scores: 'Show ICYMI debug scores',
-        channel_list_scrim: 'Dim the channel list when chat appears'
+        enable_recently_active: "Enable recently active channels",
+        theme_setting_in_account_sheet: "Show theme settings in the Account action sheet",
+        nav_experiment_server_drawer_enabled: "[NavI] Enable expandable server drawer",
+        shop_include_unpublished: "[Shop] show unpublished items in shop",
+        show_icymi_debug_scores: "Show ICYMI debug scores",
+        channel_list_scrim: "Dim the channel list when chat appears",
     },
     s = {};
 class o extends (l = i.ZP.DeviceSettingsStore) {
@@ -40,7 +40,7 @@ class o extends (l = i.ZP.DeviceSettingsStore) {
         return null != (n = s[e]) && n;
     }
     set(e, n) {
-        return ((s[e] = n), n);
+        return (s[e] = n), n;
     }
     all() {
         return s;
@@ -52,9 +52,9 @@ class o extends (l = i.ZP.DeviceSettingsStore) {
         });
     }
 }
-(a(o, 'displayName', 'DevToolsDesignTogglesStore'), a(o, 'persistKey', 'DevToolsDesignTogglesStore'));
+a(o, "displayName", "DevToolsDesignTogglesStore"), a(o, "persistKey", "DevToolsDesignTogglesStore");
 let d = new o(r.Z, {
     DEV_TOOLS_DESIGN_TOGGLE_SET: function (e) {
         s[e.toggle] = e.value;
-    }
+    },
 });

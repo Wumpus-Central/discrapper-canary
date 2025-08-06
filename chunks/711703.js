@@ -4,6 +4,6 @@ var i = n(626135),
 let s = (e, t) => {
     i.default.track(r.rMx.SAFETY_SETTINGS_NOTICE_ACTION, {
         notice_type: e,
-        action: t
+        action: t,
     });
 };

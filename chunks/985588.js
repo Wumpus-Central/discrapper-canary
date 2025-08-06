@@ -1,6 +1,6 @@
 n.d(t, {
     V: () => g,
-    s: () => m
+    s: () => m,
 });
 var r = n(442837),
     i = n(387343),
@@ -16,7 +16,7 @@ var r = n(442837),
     p = n(979651),
     h = n(981631);
 function m(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'useCanRing',
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useCanRing",
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = (0, r.e7)([c.Z], () => c.Z.getChannel(n)),
         o = (0, r.e7)([s.default], () => s.default.getId() === e.id),
@@ -36,7 +36,7 @@ function g(e) {
     if (n) {
         let { enabled: t } = a.Z.getCurrentConfig({
                 guildId: e.guild_id,
-                location: 'ring'
+                location: "ring",
             }),
             n = p.Z.getVoiceState(e.guild_id, s.default.getId());
         return t && null != n && n.channelId === e.id;
@@ -44,7 +44,7 @@ function g(e) {
     return !1;
 }
 function E(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'useCanRingToGuildVoiceChannel',
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useCanRingToGuildVoiceChannel",
         n = arguments.length > 2 ? arguments[2] : void 0,
         s = (0, r.e7)([f.Z], () => null != n && (0, i.Z)(n, f.Z)),
         l = (0, r.e7)([u.ZP, d.Z], () => {
@@ -57,7 +57,7 @@ function E(e) {
         { needSubscriptionToAccess: c } = (0, o.Z)(null == n ? void 0 : n.id),
         { enabled: _ } = a.Z.useExperiment({
             guildId: null == n ? void 0 : n.guild_id,
-            location: t
+            location: t,
         }),
         p = (null == n ? void 0 : n.type) === h.d4z.GUILD_VOICE;
     return _ && p && l && s && !c;

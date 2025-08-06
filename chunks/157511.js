@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(442837),
@@ -32,24 +32,24 @@ function h(e) {
         }, [O, h, P, N]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     className: m.sun,
                     style: {
-                        bottom: 'calc('.concat(_, '% - ').concat(C / 2, 'px)'),
+                        bottom: "calc(".concat(_, "% - ").concat(C / 2, "px)"),
                         right: Z,
                         width: C,
-                        height: C
+                        height: C,
                     },
                     src: g,
-                    alt: p.intl.string(f.default.JTkCcX)
+                    alt: p.intl.string(f.default.JTkCcX),
                 }),
                 (0, r.jsx)(u.Z, {
                     itemId: d.yN.SUN,
                     pointsPerInterval: v,
                     interval: 1000,
-                    isPaused: n
-                })
-            ]
+                    isPaused: n,
+                }),
+            ],
         })
     );
 }

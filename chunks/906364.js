@@ -5,7 +5,15 @@ var r = n(481060),
     s = n(993413),
     a = n(388032);
 function l(e) {
-    let { sectionTitle: t, errors: n, onPronounsChange: l, pendingPronouns: o, placeholder: c, currentPronouns: d, disabled: u = !1 } = e;
+    let {
+        sectionTitle: t,
+        errors: n,
+        onPronounsChange: l,
+        pendingPronouns: o,
+        placeholder: c,
+        currentPronouns: d,
+        disabled: u = !1,
+    } = e;
     return (0, i.jsx)(s.Z, {
         title: t,
         errors: n,
@@ -17,7 +25,7 @@ function l(e) {
             onChange: function (e) {
                 l(e === d ? void 0 : e);
             },
-            disabled: u
-        })
+            disabled: u,
+        }),
     });
 }

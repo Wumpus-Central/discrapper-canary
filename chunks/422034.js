@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     O: () => g,
-    Z: () => m
+    Z: () => m,
 }),
-    n(583741));
+    n(583741);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -21,7 +21,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,10 +52,10 @@ function m(e) {
                 {
                     affinity: e,
                     applyMask: t !== h.length - 1,
-                    size: p ? d.EF.SIZE_24 : d.EF.SIZE_32
+                    size: p ? d.EF.SIZE_24 : d.EF.SIZE_32,
                 },
-                e.id
-            )
+                e.id,
+            ),
         ),
         E = (e) => (null != e.globalName ? e.globalName : e.username),
         b = i.useMemo(
@@ -65,45 +65,45 @@ function m(e) {
                     : 2 === h.length
                       ? f.intl.formatToPlainString(f.t.st8Rh4, {
                             username: E(h[1]),
-                            otherUsername: E(h[0])
+                            otherUsername: E(h[0]),
                         })
                       : 1 === h.length
                         ? f.intl.formatToPlainString(f.t.dpjXPD, { username: E(h[0]) })
-                        : '',
-            [h]
+                        : "",
+            [h],
         );
     if (0 === h.length) return null;
     function y() {
         return p
             ? (0, r.jsx)(l.Text, {
-                  variant: 'text-sm/medium',
+                  variant: "text-sm/medium",
                   color: o,
-                  children: b
+                  children: b,
               })
             : t || c
               ? (0, r.jsx)(l.Text, {
-                    variant: c ? 'text-sm/normal' : 'text-lg/medium',
+                    variant: c ? "text-sm/normal" : "text-lg/medium",
                     color: o,
-                    children: b
+                    children: b,
                 })
               : (0, r.jsx)(l.X6q, {
-                    variant: 'heading-xl/medium',
+                    variant: "heading-xl/medium",
                     color: o,
-                    children: b
+                    children: b,
                 });
     }
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(p ? _.premiumBrandRefreshContainer : _.container, n, { [_.v2Container]: !p && c }),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: _.iconContainer,
-                children: m
+                children: m,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: _.textContainer,
-                children: (0, r.jsx)(y, {})
-            })
-        ]
+                children: (0, r.jsx)(y, {}),
+            }),
+        ],
     });
 }
 function g(e) {
@@ -111,7 +111,7 @@ function g(e) {
         { avatarSrc: o, eventHandlers: s } = (0, c.Z)({
             userId: null == t ? void 0 : t.id,
             size: i,
-            animateOnHover: !0
+            animateOnHover: !0,
         });
     return (0, r.jsx)(
         l.qEK,
@@ -119,10 +119,10 @@ function g(e) {
             {
                 className: a()(_.icon, { [_.mask]: n }),
                 src: o,
-                'aria-label': t.username,
-                size: i
+                "aria-label": t.username,
+                size: i,
             },
-            s
-        )
+            s,
+        ),
     );
 }

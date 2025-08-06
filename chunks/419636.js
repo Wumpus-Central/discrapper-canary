@@ -9,58 +9,58 @@ var r = n(481060),
     c = n(842123);
 let d = { offset: { top: -8 } };
 function u() {
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: c.socialLinks,
         children: [
             (0, i.jsx)(r.eee, {
-                target: '_blank',
+                target: "_blank",
                 tabIndex: -1,
-                rel: 'author',
-                title: 'X',
+                rel: "author",
+                title: "X",
                 href: (0, s.Z)(o.RK.TWITTER),
                 className: c.link,
                 focusProps: d,
                 children: (0, i.jsx)(r.TAi, {
-                    size: 'xs',
-                    color: 'currentColor',
+                    size: "xs",
+                    color: "currentColor",
                     colorClass: c.foreground,
-                    'aria-hidden': !0
-                })
+                    "aria-hidden": !0,
+                }),
             }),
             (0, i.jsx)(r.eee, {
-                target: '_blank',
-                rel: 'author',
-                title: 'Instagram',
+                target: "_blank",
+                rel: "author",
+                title: "Instagram",
                 tabIndex: -1,
                 href: o.fK7.INSTAGRAM_URL,
                 className: c.link,
                 focusProps: d,
                 children: (0, i.jsx)(r.gST, {
-                    size: 'xs',
-                    color: 'currentColor',
+                    size: "xs",
+                    color: "currentColor",
                     colorClass: c.foreground,
-                    'aria-hidden': !0
-                })
+                    "aria-hidden": !0,
+                }),
             }),
             (0, i.jsx)(r.eee, {
-                target: '_blank',
-                rel: 'author',
-                title: 'Facebook',
+                target: "_blank",
+                rel: "author",
+                title: "Facebook",
                 tabIndex: -1,
                 href: o.fK7.FACEBOOK_URL,
                 className: c.link,
                 focusProps: d,
                 children: (0, i.jsx)(r.tdR, {
-                    size: 'xs',
-                    color: 'currentColor',
+                    size: "xs",
+                    color: "currentColor",
                     colorClass: c.foreground,
-                    'aria-hidden': !0
-                })
+                    "aria-hidden": !0,
+                }),
             }),
             (0, i.jsx)(r.eee, {
-                target: '_blank',
-                rel: 'author',
-                title: 'YouTube',
+                target: "_blank",
+                rel: "author",
+                title: "YouTube",
                 tabIndex: -1,
                 href: o.fK7.YOUTUBE_URL,
                 className: c.link,
@@ -69,13 +69,13 @@ function u() {
                     width: 16,
                     height: 16,
                     foreground: c.foreground,
-                    'aria-hidden': !0
-                })
+                    "aria-hidden": !0,
+                }),
             }),
             (0, i.jsx)(r.eee, {
-                target: '_blank',
-                rel: 'author',
-                title: 'TikTok',
+                target: "_blank",
+                rel: "author",
+                title: "TikTok",
                 tabIndex: -1,
                 href: o.fK7.TIKTOK_URL,
                 className: c.link,
@@ -84,9 +84,9 @@ function u() {
                     width: 16,
                     height: 16,
                     foreground: c.foreground,
-                    'aria-hidden': !0
-                })
-            })
-        ]
+                    "aria-hidden": !0,
+                }),
+            }),
+        ],
     });
 }

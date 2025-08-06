@@ -36,35 +36,35 @@ function g(e) {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(c.Z, {
                       children: (0, r.jsx)(a.v2r, {
-                          navId: 'exit-options',
+                          navId: "exit-options",
                           onSelect: () => {},
-                          'aria-label': m.intl.string(m.t['K6/mk5']),
+                          "aria-label": m.intl.string(m.t["K6/mk5"]),
                           onClose: t,
                           children: (0, r.jsx)(a.sNh, {
-                              id: 'end-voice-event',
-                              color: 'danger',
+                              id: "end-voice-event",
+                              color: "danger",
                               action: T,
                               label: m.intl.string(m.t.qaYzPD),
-                              icon: a.k$p
-                          })
-                      })
+                              icon: a.k$p,
+                          }),
+                      }),
                   });
               },
-              align: 'center',
-              position: 'top',
+              align: "center",
+              position: "top",
               animation: a.yRy.Animation.FADE,
               children: (e) => {
                   let { onClick: t } = e;
                   return (0, r.jsx)(u.Z, {
                       buttonRef: v,
-                      label: m.intl.string(m.t['6vrfgo']),
+                      label: m.intl.string(m.t["6vrfgo"]),
                       onClick: I,
-                      onPopoutClick: t
+                      onPopoutClick: t,
                   });
-              }
+              },
           })
         : (0, r.jsx)(u.Z, {
-              label: m.intl.string(m.t['6vrfgo']),
-              onClick: n
+              label: m.intl.string(m.t["6vrfgo"]),
+              onClick: n,
           });
 }

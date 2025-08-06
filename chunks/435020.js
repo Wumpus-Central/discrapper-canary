@@ -1,6 +1,6 @@
 n.d(t, {
     $: () => i,
-    m: () => r
+    m: () => r,
 });
 let r = (e, t) => (null == t || null == e ? null : e[t]),
     i = (e, t) => {

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var i = n(255367),
     o = n(73800),
     l = n(120356),
@@ -13,16 +13,16 @@ let d = o.memo(function (e) {
         [f, m] = o.useState(!1),
         b = null == n ? void 0 : n(f),
         v = null == d ? void 0 : d();
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: u.accordion,
         children: [
             (0, i.jsx)(c.x, {
                 title: b,
                 description: f ? void 0 : v,
                 secondaryTrailingElement: (0, i.jsx)(r.sXD, { className: a()(u.icon, { [u.iconClosed]: !f }) }),
-                onClick: () => m(!f)
+                onClick: () => m(!f),
             }),
-            f && l.map((e) => (0, i.jsx)(s.Z, { node: e }, e.key))
-        ]
+            f && l.map((e) => (0, i.jsx)(s.Z, { node: e }, e.key)),
+        ],
     });
 });

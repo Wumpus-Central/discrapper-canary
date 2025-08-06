@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,7 +67,8 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,24 +78,48 @@ function g(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function E(e) {
-    var { section: t, isSelected: n, width: o, height: f, className: p, selectable: g = !1, isSquircle: E, onFocus: b, onBlur: y, onMouseOver: O, onMouseLeave: v } = e,
-        I = m(e, ['section', 'isSelected', 'width', 'height', 'className', 'selectable', 'isSquircle', 'onFocus', 'onBlur', 'onMouseOver', 'onMouseLeave']);
+    var {
+            section: t,
+            isSelected: n,
+            width: o,
+            height: f,
+            className: p,
+            selectable: g = !1,
+            isSquircle: E,
+            onFocus: b,
+            onBlur: y,
+            onMouseOver: O,
+            onMouseLeave: v,
+        } = e,
+        I = m(e, [
+            "section",
+            "isSelected",
+            "width",
+            "height",
+            "className",
+            "selectable",
+            "isSquircle",
+            "onFocus",
+            "onBlur",
+            "onMouseOver",
+            "onMouseLeave",
+        ]);
     let [T, S] = i.useState(!1),
         A = i.useCallback(() => {
-            (S(!0), null == b || b());
+            S(!0), null == b || b();
         }, [b]),
         N = i.useCallback(() => {
-            (S(!1), null == y || y());
+            S(!1), null == y || y();
         }, [y]),
         C = i.useCallback(() => {
-            (S(!0), null == O || O());
+            S(!0), null == O || O();
         }, [O]),
         R = i.useCallback(() => {
-            (S(!1), null == v || v());
+            S(!1), null == v || v();
         }, [v]),
         P = i.useMemo(() => {
             var e;
@@ -105,15 +130,15 @@ function E(e) {
                       icon: t.icon,
                       bot: null == (e = t.application) ? void 0 : e.bot,
                       botIconFirst: !0,
-                      size: o
+                      size: o,
                   });
         }, [t, o]);
     return (0, r.jsx)(
-        'div',
+        "div",
         h(_({}, I), {
             className: a()(u.wrapper, p, {
                 [u.selectable]: g,
-                [u.selected]: g && n
+                [u.selected]: g && n,
             }),
             onFocus: A,
             onBlur: N,
@@ -124,16 +149,16 @@ function E(e) {
                 mask: E || (g && (n || T)) ? s.QS.SQUIRCLE : s.QS.AVATAR_DEFAULT,
                 width: o,
                 height: f,
-                children: (0, r.jsx)('img', {
-                    alt: '',
+                children: (0, r.jsx)("img", {
+                    alt: "",
                     className: u.icon,
                     style: {
                         width: o,
-                        height: f
+                        height: f,
                     },
-                    src: P
-                })
-            })
-        })
+                    src: P,
+                }),
+            }),
+        }),
     );
 }

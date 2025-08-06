@@ -1,6 +1,6 @@
 n.d(t, {
     h6: () => O,
-    mv: () => b
+    mv: () => b,
 });
 var r = n(255367),
     i = n(73800),
@@ -19,7 +19,7 @@ var r = n(255367),
 function b() {
     let { setSelectedFilter: e } = (0, d.Z)();
     return () => {
-        (e(f.V5.ALL), p.Z.setInboxReadState(!1, null));
+        e(f.V5.ALL), p.Z.setInboxReadState(!1, null);
     };
 }
 function O(e) {
@@ -30,7 +30,7 @@ function O(e) {
                     let { unreadRecentMentionsCount: e } = (0, h.O4)(),
                         { hasMoreMentions: t, mentionsLoading: n } = (0, s.cj)([c.ZP], () => ({
                             hasMoreMentions: c.ZP.hasMore,
-                            mentionsLoading: c.ZP.loading
+                            mentionsLoading: c.ZP.loading,
                         })),
                         r = Math.min(e, g.om),
                         i = e > r || t || n,
@@ -38,10 +38,10 @@ function O(e) {
                     return {
                         clampedCount: r,
                         isEstimated: i,
-                        width: l
+                        width: l,
                     };
                 })(),
-                t = i.useCallback((t) => (e.isEstimated ? ''.concat(t, '+') : t), [e.isEstimated]),
+                t = i.useCallback((t) => (e.isEstimated ? "".concat(t, "+") : t), [e.isEstimated]),
                 n = i.useMemo(
                     () =>
                         (function (e, t) {
@@ -50,31 +50,31 @@ function O(e) {
                                 count: n,
                                 renderBadgeCount: t,
                                 style: { width: i },
-                                className: m.badgeTransition
+                                className: m.badgeTransition,
                             });
                         })(e, t),
-                    [e, t]
+                    [e, t],
                 );
             return i.useMemo(
                 () => ({
                     badge: n,
-                    badgeType: 'mentions',
+                    badgeType: "mentions",
                     dimensions: {
                         height: g.hh,
-                        width: e.width
-                    }
+                        width: e.width,
+                    },
                 }),
-                [n, e.width]
+                [n, e.width],
             );
         })(),
-        { entrypoint: p } = u.Lk.useExperiment({ location: 'useInboxBadgeInfo' });
+        { entrypoint: p } = u.Lk.useExperiment({ location: "useInboxBadgeInfo" });
     return i.useMemo(() => {
         if (n > 0) return d;
         let e = l.length;
         if (0 === e)
             return {
                 badge: null,
-                badgeType: null
+                badgeType: null,
             };
         if (p === u.u3.SERVER_RAIL_TOP) {
             let n = (0, a.OVM)(e) - 3;
@@ -88,29 +88,29 @@ function O(e) {
                             lineHeight: g.zw,
                             height: g.zw,
                             minHeight: g.zw,
-                            minWidth: g.zw
+                            minWidth: g.zw,
                         },
-                        className: o()(m.badgeTransition, m.grayBadge, { [m.selected]: t })
+                        className: o()(m.badgeTransition, m.grayBadge, { [m.selected]: t }),
                     });
                 })(e, t),
-                badgeType: 'unread',
+                badgeType: "unread",
                 dimensions: {
                     height: g.zw,
-                    width: n
-                }
+                    width: n,
+                },
             };
         }
         return p === u.u3.TITLE_BAR_LEFT
             ? {
                   badge: (0, r.jsx)(a.Text, {
-                      variant: 'eyebrow',
-                      children: (0, a.NGo)(e)
+                      variant: "eyebrow",
+                      children: (0, a.NGo)(e),
                   }),
-                  badgeType: 'unread'
+                  badgeType: "unread",
               }
             : {
                   badge: null,
-                  badgeType: null
+                  badgeType: null,
               };
     }, [n, d, l.length, p, t]);
 }

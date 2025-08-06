@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => v }));
+r.r(t), r.d(t, { default: () => v });
 var n = r(255367),
     o = r(73800),
     c = r(442837),
@@ -19,24 +19,24 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -60,7 +60,7 @@ function g(e, t) {
 }
 let v = function (e) {
     let { transitionState: t, streamKey: r, channelId: v, onClose: x } = e,
-        _ = a.Z.useExperiment({ location: 'SecureFramesStreamVerificationModal' }, { autoTrackExposure: !0 }).enabled,
+        _ = a.Z.useExperiment({ location: "SecureFramesStreamVerificationModal" }, { autoTrackExposure: !0 }).enabled,
         P = (0, c.e7)([s.Z], () => {
             var e;
             return null == (e = s.Z.getSecureFramesState(r)) ? void 0 : e.epochAuthenticator;
@@ -68,7 +68,7 @@ let v = function (e) {
         w = (0, f.W)({
             fingerprintBase64: P,
             chunkSize: m.y6,
-            desiredLength: m.YP
+            desiredLength: m.YP,
         }),
         k = o.useCallback(() => {
             (0, u.ih)({ channelId: v });
@@ -76,44 +76,44 @@ let v = function (e) {
         S = {
             transitionState: t,
             title: y.intl.string(y.t.QogHlZ),
-            subtitle: y.intl.string(y.t.qODBkZ)
+            subtitle: y.intl.string(y.t.qODBkZ),
         },
         N = (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsxs)('div', {
+                (0, n.jsxs)("div", {
                     className: j.verification,
                     children: [
-                        (0, n.jsxs)('div', {
+                        (0, n.jsxs)("div", {
                             className: j.header,
                             children: [
                                 (0, n.jsx)(l.X6q, {
-                                    variant: 'text-sm/bold',
-                                    color: 'header-primary',
-                                    children: y.intl.string(y.t.cgBTyM)
+                                    variant: "text-sm/bold",
+                                    color: "header-primary",
+                                    children: y.intl.string(y.t.cgBTyM),
                                 }),
                                 null != w &&
                                     (0, n.jsx)(b.H, {
                                         className: j.copyIcon,
                                         chunks: w,
                                         color: l.TVs.colors.INTERACTIVE_NORMAL,
-                                        onCopy: k
-                                    })
-                            ]
+                                        onCopy: k,
+                                    }),
+                            ],
                         }),
                         (0, n.jsx)(p.b, {
                             className: j.code,
                             chunks: w,
-                            columns: m.WK
-                        })
-                    ]
+                            columns: m.WK,
+                        }),
+                    ],
                 }),
                 (0, n.jsx)(l.Text, {
                     className: j.footer,
-                    variant: 'text-sm/normal',
-                    color: 'text-muted',
-                    children: y.intl.format(y.t['H3+ktr'], { helpArticle: (0, d.uV)() })
-                })
-            ]
+                    variant: "text-sm/normal",
+                    color: "text-muted",
+                    children: y.intl.format(y.t["H3+ktr"], { helpArticle: (0, d.uV)() }),
+                }),
+            ],
         });
     return _
         ? (0, n.jsx)(
@@ -121,8 +121,8 @@ let v = function (e) {
               g(O({}, S), {
                   onClose: x,
                   actions: [],
-                  children: N
-              })
+                  children: N,
+              }),
           )
         : (0, n.jsx)(h.Z, g(O({}, S), { children: N }));
 };

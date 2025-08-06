@@ -18,9 +18,9 @@ function h(e) {
         m = i(h),
         {
             avatarSrc: g,
-            eventHandlers: { onMouseEnter: E, onMouseLeave: b }
+            eventHandlers: { onMouseEnter: E, onMouseLeave: b },
         } = (0, u.m)(!0);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         onMouseEnter: E,
         onMouseLeave: b,
         children: (0, r.jsx)(d.Z, {
@@ -28,41 +28,41 @@ function h(e) {
             iconNode: n ? null : (0, r.jsx)(u.S, { src: g }),
             iconContainerClassName: p.iconContainer,
             compact: n,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: o()(p.content, { [p.compact]: n }),
                 children: [
                     (0, r.jsx)(c.nD, {
                         message: t,
                         messageClassname: p.spanCorrection,
                         className: o()(p.usernameContainer, p.spanCorrection, { [p.compact]: n }),
-                        username: (0, r.jsxs)('div', {
+                        username: (0, r.jsxs)("div", {
                             className: p.spanCorrection,
                             children: [
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'text-brand',
-                                    tag: 'span',
+                                    variant: "text-md/normal",
+                                    color: "text-brand",
+                                    tag: "span",
                                     className: p.username,
-                                    children: _.intl.string(_.t.hG1StL)
+                                    children: _.intl.string(_.t.hG1StL),
                                 }),
                                 (0, r.jsx)(s.Z, {
                                     type: f.Hb.SYSTEM_DM,
-                                    className: p.systemTag
-                                })
-                            ]
+                                    className: p.systemTag,
+                                }),
+                            ],
                         }),
                         compact: n,
-                        showTimestamp: !0
+                        showTimestamp: !0,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: o()(p.__invalid_messageContent, { [p.compact]: n }),
                         children: _.intl.format(_.t.qntXNT, {
                             username: h.nick,
-                            usernameHook: m
-                        })
-                    })
-                ]
-            })
-        })
+                            usernameHook: m,
+                        }),
+                    }),
+                ],
+            }),
+        }),
     });
 }

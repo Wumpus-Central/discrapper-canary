@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -18,28 +18,28 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
-let j = { label: '' };
+let j = { label: "" };
 function v(e) {
     let { emoji: t, disabled: n, handleSelectEmoji: l } = e,
         a = i.useRef(null),
@@ -53,26 +53,26 @@ function v(e) {
                           return (0, r.jsx)(c.Z, {
                               animated: null != (e = t.animated) && e,
                               emojiId: t.id,
-                              emojiName: n
+                              emojiName: n,
                           });
                       },
-            [t]
+            [t],
         );
     return n
         ? (0, r.jsx)(d.Z, {
               tabIndex: -1,
               active: !1,
-              renderButtonContents: s
+              renderButtonContents: s,
           })
         : (0, r.jsx)(o.yRy, {
               targetElementRef: a,
-              position: 'bottom',
+              position: "bottom",
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(u.Z, {
                       closePopout: t,
                       onSelectEmoji: l(t),
-                      pickerIntention: p.Hz.GUILD_PROFILE
+                      pickerIntention: p.Hz.GUILD_PROFILE,
                   });
               },
               children: (e, t) => {
@@ -86,7 +86,7 @@ function v(e) {
                               ref: a,
                               tabIndex: 0,
                               active: l,
-                              renderButtonContents: s
+                              renderButtonContents: s,
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -100,9 +100,9 @@ function v(e) {
                             })(Object(i)).forEach(function (e) {
                                 Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                             }),
-                      n)
+                      n),
                   );
-              }
+              },
           });
 }
 function _(e) {
@@ -110,15 +110,15 @@ function _(e) {
         u = i.useCallback(() => {
             c(t, l, {
                 emoji: void 0,
-                label: ''
+                label: "",
             });
         }, [t, l, c]),
         m = i.useCallback(
             (e) => (n) => {
                 let { emoji: r, willClose: i } = n;
-                (c(t, l, { emoji: null != r ? r : void 0 }), i && e());
+                c(t, l, { emoji: null != r ? r : void 0 }), i && e();
             },
-            [t, l, c]
+            [t, l, c],
         ),
         [g, p] = i.useState(!1),
         h = i.useCallback(() => p(!0), []),
@@ -127,15 +127,15 @@ function _(e) {
             (e) => {
                 c(t, l, { label: e });
             },
-            [t, l, c]
+            [t, l, c],
         ),
         j = i.useMemo(() => n.emoji, [n.emoji]),
         _ = (null != n.label && n.label.length > 0) || null != n.emoji;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: f.traitWrapper,
         children: [
             (0, r.jsx)(s.Is, {
-                'aria-disabled': d,
+                "aria-disabled": d,
                 disabled: d,
                 value: n.label,
                 onChange: b,
@@ -143,23 +143,23 @@ function _(e) {
                 prefixElement: (0, r.jsx)(v, {
                     emoji: j,
                     disabled: d,
-                    handleSelectEmoji: m
+                    handleSelectEmoji: m,
                 }),
                 className: a()(f.traitContainer, { [f.traitContainerFocused]: g }),
                 inputClassName: f.traitInput,
                 onFocus: h,
-                onBlur: x
+                onBlur: x,
             }),
             _ &&
                 (0, r.jsx)(o.P3F, {
                     onClick: u,
                     className: f.traitRemoveButton,
                     children: (0, r.jsx)(o.k$p, {
-                        size: 'xs',
-                        color: 'currentColor'
-                    })
-                })
-        ]
+                        size: "xs",
+                        color: "currentColor",
+                    }),
+                }),
+        ],
     });
 }
 let O = [0, 1, 2, 3, 4];
@@ -169,24 +169,24 @@ function y(e) {
         a = i.useCallback(
             (e, t, n) => {
                 let r = [...l];
-                ((r[t] = b({}, l[t], n)), g.Z.updateGuildProfile(e, { traits: r }));
+                (r[t] = b({}, l[t], n)), g.Z.updateGuildProfile(e, { traits: r });
             },
-            [l]
+            [l],
         );
     return (0, r.jsxs)(o.hjN, {
         className: x.section,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: x.sectionHeader,
                 children: [
                     (0, r.jsx)(o.vwX, { children: h.intl.string(h.t.S6JNrq) }),
                     (0, r.jsx)(o.R94, {
-                        type: 'description',
-                        children: h.intl.string(h.t.l7Ig5e)
-                    })
-                ]
+                        type: "description",
+                        children: h.intl.string(h.t.l7Ig5e),
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: f.grid,
                 children: O.map((e) => {
                     var i;
@@ -197,12 +197,12 @@ function y(e) {
                             trait: null != (i = l[e]) ? i : j,
                             index: e,
                             onTraitUpdate: a,
-                            disabled: !n
+                            disabled: !n,
                         },
-                        'trait-'.concat(e)
+                        "trait-".concat(e),
                     );
-                })
-            })
-        ]
+                }),
+            }),
+        ],
     });
 }

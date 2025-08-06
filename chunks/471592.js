@@ -1,4 +1,4 @@
-(n(267047), n(515152));
+n(267047), n(515152);
 var r = n(220159),
     o = n(424353),
     a = n(236264),
@@ -29,30 +29,30 @@ var r = n(220159),
     R = n(592802),
     F = n(394370),
     O = n(862097),
-    E = F('iterator'),
-    I = 'URLSearchParams',
-    M = I + 'Iterator',
+    E = F("iterator"),
+    I = "URLSearchParams",
+    M = I + "Iterator",
     B = y.set,
     T = y.getterFor(I),
     D = y.getterFor(M),
-    L = a('fetch'),
-    V = a('Request'),
-    j = a('Headers'),
+    L = a("fetch"),
+    V = a("Request"),
+    j = a("Headers"),
     U = V && V.prototype,
     q = j && j.prototype,
     H = o.TypeError,
     K = o.encodeURIComponent,
     z = String.fromCharCode,
-    W = i('String', 'fromCodePoint'),
+    W = i("String", "fromCodePoint"),
     Y = parseInt,
-    G = c(''.charAt),
+    G = c("".charAt),
     $ = c([].join),
     Q = c([].push),
-    J = c(''.replace),
+    J = c("".replace),
     X = c([].shift),
     ee = c([].splice),
-    et = c(''.split),
-    en = c(''.slice),
+    et = c("".split),
+    en = c("".slice),
     er = c(/./.exec),
     eo = /\+/g,
     ea = /^[0-9a-f]+$/i,
@@ -82,16 +82,16 @@ var r = n(220159),
         return t > 1114111 ? null : t;
     },
     el = function (e) {
-        for (var t = (e = J(e, eo, ' ')).length, n = '', r = 0; r < t; ) {
+        for (var t = (e = J(e, eo, " ")).length, n = "", r = 0; r < t; ) {
             var o = G(e, r);
-            if ('%' === o) {
-                if ('%' === G(e, r + 1) || r + 3 > t) {
-                    ((n += '%'), r++);
+            if ("%" === o) {
+                if ("%" === G(e, r + 1) || r + 3 > t) {
+                    (n += "%"), r++;
                     continue;
                 }
                 var a = ei(e, r + 1);
                 if (a != a) {
-                    ((n += o), r++);
+                    (n += o), r++;
                     continue;
                 }
                 r += 2;
@@ -99,38 +99,38 @@ var r = n(220159),
                 if (0 === i) o = z(a);
                 else {
                     if (1 === i || i > 4) {
-                        ((n += '\uFFFD'), r++);
+                        (n += "\uFFFD"), r++;
                         continue;
                     }
-                    for (var s = [a], c = 1; c < i && !(++r + 3 > t) && '%' === G(e, r); ) {
+                    for (var s = [a], c = 1; c < i && !(++r + 3 > t) && "%" === G(e, r); ) {
                         var l = ei(e, r + 1);
                         if (l != l) {
                             r += 3;
                             break;
                         }
                         if (l > 191 || l < 128) break;
-                        (Q(s, l), (r += 2), c++);
+                        Q(s, l), (r += 2), c++;
                     }
                     if (s.length !== i) {
-                        n += '\uFFFD';
+                        n += "\uFFFD";
                         continue;
                     }
                     var u = ec(s);
-                    null === u ? (n += '\uFFFD') : (o = W(u));
+                    null === u ? (n += "\uFFFD") : (o = W(u));
                 }
             }
-            ((n += o), r++);
+            (n += o), r++;
         }
         return n;
     },
     eu = /[!'()~]|%20/g,
     ed = {
-        '!': '%21',
-        "'": '%27',
-        '(': '%28',
-        ')': '%29',
-        '~': '%7E',
-        '%20': '+'
+        "!": "%21",
+        "'": "%27",
+        "(": "%28",
+        ")": "%29",
+        "~": "%7E",
+        "%20": "+",
     },
     ep = function (e) {
         return ed[e];
@@ -144,7 +144,7 @@ var r = n(220159),
                 type: M,
                 target: T(e).entries,
                 index: 0,
-                kind: t
+                kind: t,
             });
         },
         I,
@@ -152,25 +152,30 @@ var r = n(220159),
             var e = D(this),
                 t = e.target,
                 n = e.index++;
-            if (!t || n >= t.length) return ((e.target = null), A(void 0, !0));
+            if (!t || n >= t.length) return (e.target = null), A(void 0, !0);
             var r = t[n];
             switch (e.kind) {
-                case 'keys':
+                case "keys":
                     return A(r.key, !1);
-                case 'values':
+                case "values":
                     return A(r.value, !1);
             }
             return A([r.key, r.value], !1);
         },
-        !0
+        !0,
     ),
     em = function (e) {
-        ((this.entries = []), (this.url = null), void 0 !== e && (Z(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === G(e, 0) ? en(e, 1) : e) : w(e))));
+        (this.entries = []),
+            (this.url = null),
+            void 0 !== e &&
+                (Z(e)
+                    ? this.parseObject(e)
+                    : this.parseQuery("string" == typeof e ? ("?" === G(e, 0) ? en(e, 1) : e) : w(e)));
     };
 em.prototype = {
     type: I,
     bindURL: function (e) {
-        ((this.url = e), this.update());
+        (this.url = e), this.update();
     },
     parseObject: function (e) {
         var t,
@@ -184,10 +189,11 @@ em.prototype = {
             u = P(e);
         if (u)
             for (n = (t = x(e, u)).next; !(r = s(n, t)).done; ) {
-                if ((i = s((a = (o = x(C(r.value))).next), o)).done || (c = s(a, o)).done || !s(a, o).done) throw new H('Expected sequence with length 2');
+                if ((i = s((a = (o = x(C(r.value))).next), o)).done || (c = s(a, o)).done || !s(a, o).done)
+                    throw new H("Expected sequence with length 2");
                 Q(l, {
                     key: w(i.value),
-                    value: w(c.value)
+                    value: w(c.value),
                 });
             }
         else
@@ -195,28 +201,28 @@ em.prototype = {
                 b(e, d) &&
                     Q(l, {
                         key: d,
-                        value: w(e[d])
+                        value: w(e[d]),
                     });
     },
     parseQuery: function (e) {
         if (e)
-            for (var t, n, r = this.entries, o = et(e, '&'), a = 0; a < o.length; )
+            for (var t, n, r = this.entries, o = et(e, "&"), a = 0; a < o.length; )
                 (t = o[a++]).length &&
                     Q(r, {
-                        key: el(X((n = et(t, '=')))),
-                        value: el($(n, '='))
+                        key: el(X((n = et(t, "=")))),
+                        value: el($(n, "=")),
                     });
     },
     serialize: function () {
-        for (var e, t = this.entries, n = [], r = 0; r < t.length; ) Q(n, eh((e = t[r++]).key) + '=' + eh(e.value));
-        return $(n, '&');
+        for (var e, t = this.entries, n = [], r = 0; r < t.length; ) Q(n, eh((e = t[r++]).key) + "=" + eh(e.value));
+        return $(n, "&");
     },
     update: function () {
-        ((this.entries.length = 0), this.parseQuery(this.url.query));
+        (this.entries.length = 0), this.parseQuery(this.url.query);
     },
     updateURL: function () {
         this.url && this.url.update();
-    }
+    },
 };
 var ey = function () {
         v(this, ev);
@@ -231,22 +237,31 @@ if (
         {
             append: function (e, t) {
                 var n = T(this);
-                (R(arguments.length, 2),
+                R(arguments.length, 2),
                     Q(n.entries, {
                         key: w(e),
-                        value: w(t)
+                        value: w(t),
                     }),
                     !l && this.length++,
-                    n.updateURL());
+                    n.updateURL();
             },
             delete: function (e) {
-                for (var t = T(this), n = R(arguments.length, 1), r = t.entries, o = w(e), a = n < 2 ? void 0 : arguments[1], i = void 0 === a ? a : w(a), s = 0; s < r.length; ) {
+                for (
+                    var t = T(this),
+                        n = R(arguments.length, 1),
+                        r = t.entries,
+                        o = w(e),
+                        a = n < 2 ? void 0 : arguments[1],
+                        i = void 0 === a ? a : w(a),
+                        s = 0;
+                    s < r.length;
+                ) {
                     var c = r[s];
                     if (c.key === o && (void 0 === i || c.value === i)) {
                         if ((ee(r, s, 1), void 0 !== i)) break;
                     } else s++;
                 }
-                (l || (this.size = r.length), t.updateURL());
+                l || (this.size = r.length), t.updateURL();
             },
             get: function (e) {
                 var t = T(this).entries;
@@ -261,7 +276,15 @@ if (
                 return r;
             },
             has: function (e) {
-                for (var t = T(this).entries, n = R(arguments.length, 1), r = w(e), o = n < 2 ? void 0 : arguments[1], a = void 0 === o ? o : w(o), i = 0; i < t.length; ) {
+                for (
+                    var t = T(this).entries,
+                        n = R(arguments.length, 1),
+                        r = w(e),
+                        o = n < 2 ? void 0 : arguments[1],
+                        a = void 0 === o ? o : w(o),
+                        i = 0;
+                    i < t.length;
+                ) {
                     var s = t[i++];
                     if (s.key === r && (void 0 === a || s.value === a)) return !0;
                 }
@@ -271,62 +294,67 @@ if (
                 var n,
                     r = T(this);
                 R(arguments.length, 1);
-                for (var o = r.entries, a = !1, i = w(e), s = w(t), c = 0; c < o.length; c++) (n = o[c]).key === i && (a ? ee(o, c--, 1) : ((a = !0), (n.value = s)));
-                (a ||
+                for (var o = r.entries, a = !1, i = w(e), s = w(t), c = 0; c < o.length; c++)
+                    (n = o[c]).key === i && (a ? ee(o, c--, 1) : ((a = !0), (n.value = s)));
+                a ||
                     Q(o, {
                         key: i,
-                        value: s
+                        value: s,
                     }),
                     l || (this.size = o.length),
-                    r.updateURL());
+                    r.updateURL();
             },
             sort: function () {
                 var e = T(this);
-                (O(e.entries, function (e, t) {
+                O(e.entries, function (e, t) {
                     return e.key > t.key ? 1 : -1;
                 }),
-                    e.updateURL());
+                    e.updateURL();
             },
             forEach: function (e) {
-                for (var t, n = T(this).entries, r = _(e, arguments.length > 1 ? arguments[1] : void 0), o = 0; o < n.length; ) r((t = n[o++]).value, t.key, this);
+                for (
+                    var t, n = T(this).entries, r = _(e, arguments.length > 1 ? arguments[1] : void 0), o = 0;
+                    o < n.length;
+                )
+                    r((t = n[o++]).value, t.key, this);
             },
             keys: function () {
-                return new ef(this, 'keys');
+                return new ef(this, "keys");
             },
             values: function () {
-                return new ef(this, 'values');
+                return new ef(this, "values");
             },
             entries: function () {
-                return new ef(this, 'entries');
-            }
+                return new ef(this, "entries");
+            },
         },
-        { enumerable: !0 }
+        { enumerable: !0 },
     ),
-    d(ev, E, ev.entries, { name: 'entries' }),
+    d(ev, E, ev.entries, { name: "entries" }),
     d(
         ev,
-        'toString',
+        "toString",
         function () {
             return T(this).serialize();
         },
-        { enumerable: !0 }
+        { enumerable: !0 },
     ),
     l &&
-        p(ev, 'size', {
+        p(ev, "size", {
             get: function () {
                 return T(this).entries.length;
             },
             configurable: !0,
-            enumerable: !0
+            enumerable: !0,
         }),
     f(ey, I),
     r(
         {
             global: !0,
             constructor: !0,
-            forced: !u
+            forced: !u,
         },
-        { URLSearchParams: ey }
+        { URLSearchParams: ey },
     ),
     !u && g(j))
 ) {
@@ -338,10 +366,11 @@ if (
                     n = e.body;
                 if (k(n) === I)
                     return (
-                        eg((t = e.headers ? new j(e.headers) : new j()), 'content-type') || eb(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
+                        eg((t = e.headers ? new j(e.headers) : new j()), "content-type") ||
+                            eb(t, "content-type", "application/x-www-form-urlencoded;charset=UTF-8"),
                         S(e, {
                             body: N(0, w(n)),
-                            headers: N(0, t)
+                            headers: N(0, t),
                         })
                     );
             }
@@ -354,33 +383,33 @@ if (
                     global: !0,
                     enumerable: !0,
                     dontCallGetSet: !0,
-                    forced: !0
+                    forced: !0,
                 },
                 {
                     fetch: function (e) {
                         return L(e, arguments.length > 1 ? e_(arguments[1]) : {});
-                    }
-                }
+                    },
+                },
             ),
         g(V))
     ) {
         var ek = function (e) {
-            return (v(this, U), new V(e, arguments.length > 1 ? e_(arguments[1]) : {}));
+            return v(this, U), new V(e, arguments.length > 1 ? e_(arguments[1]) : {});
         };
-        ((U.constructor = ek),
+        (U.constructor = ek),
             (ek.prototype = U),
             r(
                 {
                     global: !0,
                     constructor: !0,
                     dontCallGetSet: !0,
-                    forced: !0
+                    forced: !0,
                 },
-                { Request: ek }
-            ));
+                { Request: ek },
+            );
     }
 }
 e.exports = {
     URLSearchParams: ey,
-    getState: T
+    getState: T,
 };

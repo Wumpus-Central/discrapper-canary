@@ -1,4 +1,4 @@
-(r.d(t, { default: () => V }), r(388685));
+r.d(t, { default: () => V }), r(388685);
 var n = r(255367),
     a = r(73800),
     o = r(120356),
@@ -37,72 +37,76 @@ function R(e) {
         v = a.useRef(new i.qA()),
         L = (0, C.e7)([m.Z], () => m.Z.useReducedMotion),
         O = (null == (t = p.userStatus) ? void 0 : t.claimedAt) != null,
-        [M, k] = a.useState({ state: 'loading' });
+        [M, k] = a.useState({ state: "loading" });
     a.useEffect(() => {
         O ||
             (0, N.QB)(p.id, H.y$.CROSS_PLATFORM, j)
                 .then((e) => {
                     if ((null == e ? void 0 : e.claimedAt) != null)
                         return void k({
-                            state: 'claimed',
-                            entitlements: e
+                            state: "claimed",
+                            entitlements: e,
                         });
                     k({
-                        state: 'error',
-                        errorReason: 0
+                        state: "error",
+                        errorReason: 0,
                     });
                 })
                 .catch(() => {
                     k({
-                        state: 'error',
-                        errorReason: 0
+                        state: "error",
+                        errorReason: 0,
                     });
                 });
     }, [p, j, O]);
-    let w = 'loading' === M.state,
-        P = !L && !O && 'claimed' === M.state,
-        R = 'claimed' === M.state && null != M.entitlements && M.entitlements.items.some((e) => e.consumed);
+    let w = "loading" === M.state,
+        P = !L && !O && "claimed" === M.state,
+        R = "claimed" === M.state && null != M.entitlements && M.entitlements.items.some((e) => e.consumed);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(i.O_, {
                 ref: g,
                 className: Z.confettiCanvas,
-                environment: v.current
+                environment: v.current,
             }),
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 ref: _,
                 children: (0, n.jsx)(l.Y0X, {
                     transitionState: u,
                     size: l.CgR.DYNAMIC,
                     className: s()(Z.rootContainer, { [Z.rootContainerLoading]: w }),
                     hideShadow: !0,
-                    parentComponent: 'QuestsNitroRewardModal',
+                    parentComponent: "QuestsNitroRewardModal",
                     children: w
                         ? (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
-                        : 'error' === M.state
+                        : "error" === M.state
                           ? (0, n.jsx)(S, {
                                 errorReason: M.errorReason,
-                                onClose: h
+                                onClose: h,
                             })
                           : R
                             ? (0, n.jsx)(T, {
-                                  duration: (0, b.kb)(null != (c = null == (r = M.entitlements) ? void 0 : r.items) ? c : []),
-                                  onClose: h
+                                  duration: (0, b.kb)(
+                                      null != (c = null == (r = M.entitlements) ? void 0 : r.items) ? c : [],
+                                  ),
+                                  onClose: h,
                               })
                             : (0, n.jsx)(A, {
-                                  duration: (0, b.kb)(null != (d = null == (o = M.entitlements) ? void 0 : o.items) ? d : []),
-                                  onClose: h
-                              })
-                })
+                                  duration: (0, b.kb)(
+                                      null != (d = null == (o = M.entitlements) ? void 0 : o.items) ? d : [],
+                                  ),
+                                  onClose: h,
+                              }),
+                }),
             }),
             P &&
                 (0, n.jsx)(x.Z, {
                     confettiTarget: _.current,
                     confettiCanvas: f,
                     sprites: y.CA,
-                    colors: y.Br
-                })
-        ]
+                    colors: y.Br,
+                }),
+        ],
     });
 }
 function S(e) {
@@ -116,65 +120,65 @@ function S(e) {
                 children: [
                     (0, n.jsx)(l.X6q, {
                         className: Z.errorTitle,
-                        variant: 'heading-xl/medium',
-                        children: M.intl.string(M.t['UleS9/'])
+                        variant: "heading-xl/medium",
+                        children: M.intl.string(M.t["UleS9/"]),
                     }),
                     (0, n.jsx)(l.olH, {
                         onClick: t,
-                        className: Z.errorModalCloseButton
-                    })
-                ]
+                        className: Z.errorModalCloseButton,
+                    }),
+                ],
             }),
             (0, n.jsx)(l.hzk, {
                 className: Z.errorContent,
                 children: (0, n.jsx)(l.Text, {
-                    variant: 'text-md/normal',
-                    children: r
-                })
+                    variant: "text-md/normal",
+                    children: r,
+                }),
             }),
             (0, n.jsx)(l.mzw, {
                 className: Z.errorModalFooter,
                 children: (0, n.jsx)(l.zxk, {
-                    variant: 'primary',
+                    variant: "primary",
                     text: M.intl.string(M.t.cpT0Cg),
-                    onClick: t
-                })
-            })
-        ]
+                    onClick: t,
+                }),
+            }),
+        ],
     });
 }
 function T(e) {
     let { duration: t, onClose: r } = e,
         { theme: o } = (0, l.TCT)(),
         s = (0, h.Z)({ forceFetch: !0 }),
-        i = (0, g.vc)(s.endsAt, 'L'),
+        i = (0, g.vc)(s.endsAt, "L"),
         C = a.useCallback(() => {
             (0, j.$)(r);
         }, [r]);
     return s.fractionalState === O.a$.NONE
-        ? (0, n.jsx)('div', {
+        ? (0, n.jsx)("div", {
               className: Z.spinnerContainer,
-              children: (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
+              children: (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE }),
           })
         : (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsxs)('div', {
+                  (0, n.jsxs)("div", {
                       className: Z.nitroHeaderContainer,
                       children: [
-                          (0, n.jsx)('div', { className: Z.nitroHeaderClouds }),
+                          (0, n.jsx)("div", { className: Z.nitroHeaderClouds }),
                           (0, n.jsx)(f.Z, { className: Z.nitroHeaderWordmark }),
                           (0, n.jsx)(l.Eep, {
                               src: w,
                               width: 110,
                               height: 82,
                               zoomable: !1,
-                              className: Z.nitroHeaderWumpus
+                              className: Z.nitroHeaderWumpus,
                           }),
                           (0, n.jsx)(l.olH, {
                               className: Z.nitroHeaderClose,
-                              onClick: r
-                          })
-                      ]
+                              onClick: r,
+                          }),
+                      ],
                   }),
                   (0, n.jsxs)(l.mzw, {
                       className: Z.footerContainer,
@@ -185,29 +189,29 @@ function T(e) {
                               className: Z.nitroHeading,
                               premiumType: O.p9.TIER_2,
                               type: _.ZP.Types.PREMIUM_ACTIVATED,
-                              theme: o
+                              theme: o,
                           }),
                           (0, n.jsx)(l.Text, {
-                              variant: 'text-md/normal',
+                              variant: "text-md/normal",
                               className: Z.text,
                               children: M.intl.format(M.t.tgc1oq, {
                                   helpCenterLink: v.Z.getArticleURL(L.BhN.FRACTIONAL_PREMIUM_ABOUT),
                                   duration: t,
-                                  expirationDate: i
-                              })
+                                  expirationDate: i,
+                              }),
                           }),
-                          (0, n.jsx)('div', {
-                              'data-button-hoisted-classname-wrapper': !0,
+                          (0, n.jsx)("div", {
+                              "data-button-hoisted-classname-wrapper": !0,
                               className: Z.cta,
                               children: (0, n.jsx)(l.zxk, {
-                                  variant: 'primary',
-                                  text: M.intl.string(M.t['eQX+go']),
-                                  onClick: C
-                              })
-                          })
-                      ]
-                  })
-              ]
+                                  variant: "primary",
+                                  text: M.intl.string(M.t["eQX+go"]),
+                                  onClick: C,
+                              }),
+                          }),
+                      ],
+                  }),
+              ],
           });
 }
 function A(e) {
@@ -215,81 +219,81 @@ function A(e) {
         o = (0, h.Z)({ forceFetch: !0 }),
         i = (0, u.ZP)(),
         C = a.useCallback(() => {
-            (c.Z.open(L.oAB.SUBSCRIPTIONS, null, {}), r());
+            c.Z.open(L.oAB.SUBSCRIPTIONS, null, {}), r();
         }, [r]);
     if (!o.fetched)
-        return (0, n.jsx)('div', {
+        return (0, n.jsx)("div", {
             className: Z.spinnerContainer,
-            children: (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
+            children: (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE }),
         });
     let d = o.isFractionalPremiumActive
-        ? M.intl.string(M.t['1ku8i4'])
+        ? M.intl.string(M.t["1ku8i4"])
         : M.intl.format(M.t.fI1nLy, {
               helpCenterLink: v.Z.getArticleURL(L.BhN.FRACTIONAL_PREMIUM_ABOUT),
-              duration: t
+              duration: t,
           });
     return (0, n.jsx)(l.f6W, {
         theme: i,
         children: (e) =>
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 className: s()(Z.claimedRootContainer, e),
                 children: [
-                    (0, n.jsxs)('div', {
+                    (0, n.jsxs)("div", {
                         className: Z.headerContainer,
                         children: [
-                            (0, n.jsx)('img', {
+                            (0, n.jsx)("img", {
                                 className: Z.headerBackground,
                                 src: k,
-                                alt: M.intl.string(M.t['8SsCa2'])
+                                alt: M.intl.string(M.t["8SsCa2"]),
                             }),
                             (0, n.jsx)(p.Z, { className: Z.beta }),
-                            (0, n.jsxs)('div', {
+                            (0, n.jsxs)("div", {
                                 className: Z.headerForeground,
                                 children: [
-                                    (0, n.jsx)('div', {
+                                    (0, n.jsx)("div", {
                                         className: Z.rewardAssetContainer,
-                                        children: (0, n.jsx)('img', {
+                                        children: (0, n.jsx)("img", {
                                             src: P,
                                             alt: M.intl.string(M.t.OhPMam),
-                                            height: 120
-                                        })
+                                            height: 120,
+                                        }),
                                     }),
                                     (0, n.jsx)(l.olH, {
                                         className: Z.close,
                                         withCircleBackground: !0,
-                                        onClick: r
-                                    })
-                                ]
-                            })
-                        ]
+                                        onClick: r,
+                                    }),
+                                ],
+                            }),
+                        ],
                     }),
                     (0, n.jsxs)(l.mzw, {
                         className: Z.footerContainer,
                         separator: !1,
                         children: [
                             (0, n.jsx)(l.X6q, {
-                                variant: 'heading-lg/bold',
+                                variant: "heading-lg/bold",
                                 className: Z.heading,
-                                children: M.intl.string(M.t['+PHEo6'])
+                                children: M.intl.string(M.t["+PHEo6"]),
                             }),
                             (0, n.jsx)(l.Text, {
-                                variant: 'text-sm/normal',
+                                variant: "text-sm/normal",
                                 className: Z.text,
-                                children: d
+                                children: d,
                             }),
-                            (0, n.jsx)('div', {
-                                'data-button-hoisted-classname-wrapper': !0,
+                            (0, n.jsx)("div", {
+                                "data-button-hoisted-classname-wrapper": !0,
                                 className: Z.cta2,
                                 children: (0, n.jsx)(l.zxk, {
-                                    variant: 'primary',
+                                    variant: "primary",
                                     text: M.intl.string(M.t.LnsQGR),
-                                    onClick: C
-                                })
-                            })
-                        ]
-                    })
-                ]
-            })
+                                    onClick: C,
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
     });
 }
 function V(e) {
@@ -307,6 +311,6 @@ function V(e) {
               onClose: o,
               transitionState: s,
               quest: t,
-              location: r
+              location: r,
           });
 }

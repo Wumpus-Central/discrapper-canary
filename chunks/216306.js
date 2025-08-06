@@ -1,12 +1,12 @@
-(e.d(t, {
+e.d(t, {
     Fo: () => P,
     KY: () => u,
     Uo: () => I,
     fU: () => Z,
     qw: () => O,
-    tn: () => j
+    tn: () => j,
 }),
-    e(290780));
+    e(290780);
 var r = e(73800),
     g = e(658722),
     v = e.n(g),
@@ -36,18 +36,26 @@ function E(A, t) {
 function P(A, t, e, g) {
     g = g.toLowerCase();
     let n = (0, C.g)(A),
-        f = r.useCallback((A, t) => !(n && A.channel.hasFlag(d.zZ.IS_GUILD_RESOURCE_CHANNEL)) && A.channel.type !== M.d4z.GUILD_DIRECTORY && (0 === t.length || v()(t, A.channel.name.toLowerCase()) || A.channel.topic.toLowerCase().includes(t)), [n]);
+        f = r.useCallback(
+            (A, t) =>
+                !(n && A.channel.hasFlag(d.zZ.IS_GUILD_RESOURCE_CHANNEL)) &&
+                A.channel.type !== M.d4z.GUILD_DIRECTORY &&
+                (0 === t.length || v()(t, A.channel.name.toLowerCase()) || A.channel.topic.toLowerCase().includes(t)),
+            [n],
+        );
     return r.useMemo(() => {
         let A = {
             null: [],
-            _categories: []
+            _categories: [],
         };
         return (
             e[M.d4z.GUILD_CATEGORY].forEach((e) => {
                 let { channel: r } = e;
-                ('null' === r.id && (A.null = t.null.filter((A) => f(A, g))), (A[r.id] = t[r.id].filter((A) => f(A, g))));
+                "null" === r.id && (A.null = t.null.filter((A) => f(A, g))), (A[r.id] = t[r.id].filter((A) => f(A, g)));
             }),
-            (A._categories = t._categories.filter((t) => 'null' === t.channel.id || 0 === g.length || A[t.channel.id].length > 0)),
+            (A._categories = t._categories.filter(
+                (t) => "null" === t.channel.id || 0 === g.length || A[t.channel.id].length > 0,
+            )),
             (0, i.Z)(A._categories, A).forEach(E),
             A
         );
@@ -74,39 +82,35 @@ function u(A) {
 }
 function I(A, t) {
     let e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    ((0, w.n)(A, t),
+    (0, w.n)(A, t),
         (0, h.y5)(
             t.map((A) => ({
                 channelId: A,
                 readStateType: b.W.CHANNEL,
-                messageId: c.ZP.lastMessageId(A)
-            }))
+                messageId: c.ZP.lastMessageId(A),
+            })),
         ),
-        null != e && (0, s.uL)(M.Z5c.CHANNEL(A, e)));
+        null != e && (0, s.uL)(M.Z5c.CHANNEL(A, e));
 }
 function j(A, t, e, r) {
     let g = (0, o.Nj)(l.z.CHANNEL_BROWSER_NUX),
-        v = (0, B.cj)(
-            [Q.Z],
-            () => {
-                let t = {},
-                    e = Q.Z.getMutableGuildChannelsForGuild(A);
-                for (let A in e) {
-                    let { parent_id: g } = e[A];
-                    if (null != g) {
-                        var r;
-                        t[g] = (null != (r = t[g]) ? r : 0) + 1;
-                    }
+        v = (0, B.cj)([Q.Z], () => {
+            let t = {},
+                e = Q.Z.getMutableGuildChannelsForGuild(A);
+            for (let A in e) {
+                let { parent_id: g } = e[A];
+                if (null != g) {
+                    var r;
+                    t[g] = (null != (r = t[g]) ? r : 0) + 1;
                 }
-                return t;
-            },
-            [A]
-        ),
+            }
+            return t;
+        }, [A]),
         n = t._categories.map((A) => {
             let r = t[A.channel.id];
             return {
-                rowCount: 'null' !== A.channel.id && 0 === v[A.channel.id] ? 1 : r.length,
-                rowHeight: 0 === r.length ? 0 : e
+                rowCount: "null" !== A.channel.id && 0 === v[A.channel.id] ? 1 : r.length,
+                rowHeight: 0 === r.length ? 0 : e,
             };
         });
     return (
@@ -114,7 +118,7 @@ function j(A, t, e, r) {
             null == r ||
             n.unshift({
                 rowCount: 1,
-                rowHeight: r
+                rowHeight: r,
             }),
         n
     );
@@ -125,10 +129,12 @@ function Z(A) {
         g = r._categories.length,
         v = r._categories[r._categories.length - 1];
     if (null == v) return 0;
-    let n = r[null != (e = null == (t = v.channel) ? void 0 : t.id) ? e : 'null'];
+    let n = r[null != (e = null == (t = v.channel) ? void 0 : t.id) ? e : "null"];
     return null == n ? 0 : 0 === n.length ? v.index + 2 - g : n[n.length - 1].index + 2 - g;
 }
 function O(A) {
     var t;
-    return V.intl.formatToPlainString(V.t['8N0BHR'], { timeAgo: f()(D.default.extractTimestamp(null != (t = c.ZP.lastMessageId(A)) ? t : A)).fromNow() });
+    return V.intl.formatToPlainString(V.t["8N0BHR"], {
+        timeAgo: f()(D.default.extractTimestamp(null != (t = c.ZP.lastMessageId(A)) ? t : A)).fromNow(),
+    });
 }

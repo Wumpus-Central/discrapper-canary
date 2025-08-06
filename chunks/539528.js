@@ -4,40 +4,40 @@ n.d(t, {
     PP: () => M,
     lX: () => A,
     ob: () => p,
-    q_: () => L
+    q_: () => L,
 });
 var r = n(44837),
     i = n(634450),
     o = n(115953),
     a = n(431803);
 function s(e) {
-    return '/' === e.charAt(0) ? e : '/' + e;
+    return "/" === e.charAt(0) ? e : "/" + e;
 }
 function l(e) {
-    return '/' === e.charAt(0) ? e.substr(1) : e;
+    return "/" === e.charAt(0) ? e.substr(1) : e;
 }
 function c(e, t) {
-    return 0 === e.toLowerCase().indexOf(t.toLowerCase()) && -1 !== '/?#'.indexOf(e.charAt(t.length));
+    return 0 === e.toLowerCase().indexOf(t.toLowerCase()) && -1 !== "/?#".indexOf(e.charAt(t.length));
 }
 function u(e, t) {
     return c(e, t) ? e.substr(t.length) : e;
 }
 function d(e) {
-    return '/' === e.charAt(e.length - 1) ? e.slice(0, -1) : e;
+    return "/" === e.charAt(e.length - 1) ? e.slice(0, -1) : e;
 }
 function f(e) {
-    var t = e || '/',
-        n = '',
-        r = '',
-        i = t.indexOf('#');
+    var t = e || "/",
+        n = "",
+        r = "",
+        i = t.indexOf("#");
     -1 !== i && ((r = t.substr(i)), (t = t.substr(0, i)));
-    var o = t.indexOf('?');
+    var o = t.indexOf("?");
     return (
         -1 !== o && ((n = t.substr(o)), (t = t.substr(0, o))),
         {
             pathname: t,
-            search: '?' === n ? '' : n,
-            hash: '#' === r ? '' : r
+            search: "?" === n ? "" : n,
+            hash: "#" === r ? "" : r,
         }
     );
 }
@@ -45,22 +45,50 @@ function _(e) {
     var t = e.pathname,
         n = e.search,
         r = e.hash,
-        i = t || '/';
-    return (n && '?' !== n && (i += '?' === n.charAt(0) ? n : '?' + n), r && '#' !== r && (i += '#' === r.charAt(0) ? r : '#' + r), i);
+        i = t || "/";
+    return (
+        n && "?" !== n && (i += "?" === n.charAt(0) ? n : "?" + n),
+        r && "#" !== r && (i += "#" === r.charAt(0) ? r : "#" + r),
+        i
+    );
 }
 function p(e, t, n, o) {
     var a;
-    'string' == typeof e ? ((a = f(e)).state = t) : (void 0 === (a = (0, r.Z)({}, e)).pathname && (a.pathname = ''), a.search ? '?' !== a.search.charAt(0) && (a.search = '?' + a.search) : (a.search = ''), a.hash ? '#' !== a.hash.charAt(0) && (a.hash = '#' + a.hash) : (a.hash = ''), void 0 !== t && void 0 === a.state && (a.state = t));
+    "string" == typeof e
+        ? ((a = f(e)).state = t)
+        : (void 0 === (a = (0, r.Z)({}, e)).pathname && (a.pathname = ""),
+          a.search ? "?" !== a.search.charAt(0) && (a.search = "?" + a.search) : (a.search = ""),
+          a.hash ? "#" !== a.hash.charAt(0) && (a.hash = "#" + a.hash) : (a.hash = ""),
+          void 0 !== t && void 0 === a.state && (a.state = t));
     try {
         a.pathname = decodeURI(a.pathname);
     } catch (e) {
-        if (e instanceof URIError) throw URIError('Pathname "' + a.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.');
+        if (e instanceof URIError)
+            throw URIError(
+                'Pathname "' +
+                    a.pathname +
+                    '" could not be decoded. This is likely caused by an invalid percent-encoding.',
+            );
         throw e;
     }
-    return (n && (a.key = n), o ? (a.pathname ? '/' !== a.pathname.charAt(0) && (a.pathname = (0, i.Z)(a.pathname, o.pathname)) : (a.pathname = o.pathname)) : a.pathname || (a.pathname = '/'), a);
+    return (
+        n && (a.key = n),
+        o
+            ? a.pathname
+                ? "/" !== a.pathname.charAt(0) && (a.pathname = (0, i.Z)(a.pathname, o.pathname))
+                : (a.pathname = o.pathname)
+            : a.pathname || (a.pathname = "/"),
+        a
+    );
 }
 function h(e, t) {
-    return e.pathname === t.pathname && e.search === t.search && e.hash === t.hash && e.key === t.key && (0, o.Z)(e.state, t.state);
+    return (
+        e.pathname === t.pathname &&
+        e.search === t.search &&
+        e.hash === t.hash &&
+        e.key === t.key &&
+        (0, o.Z)(e.state, t.state)
+    );
 }
 function m() {
     var e = null,
@@ -76,8 +104,8 @@ function m() {
         },
         confirmTransitionTo: function (t, n, r, i) {
             if (null != e) {
-                var o = 'function' == typeof e ? e(t, n) : e;
-                'string' == typeof o ? ('function' == typeof r ? r(o, i) : i(!0)) : i(!1 !== o);
+                var o = "function" == typeof e ? e(t, n) : e;
+                "string" == typeof o ? ("function" == typeof r ? r(o, i) : i(!0)) : i(!1 !== o);
             } else i(!0);
         },
         appendListener: function (e) {
@@ -88,10 +116,10 @@ function m() {
             return (
                 t.push(r),
                 function () {
-                    ((n = !1),
+                    (n = !1),
                         (t = t.filter(function (e) {
                             return e !== r;
-                        })));
+                        }));
                 }
             );
         },
@@ -100,28 +128,35 @@ function m() {
             t.forEach(function (e) {
                 return e.apply(void 0, n);
             });
-        }
+        },
     };
 }
-var g = !!('undefined' != typeof window && window.document && window.document.createElement);
+var g = !!("undefined" != typeof window && window.document && window.document.createElement);
 function E(e, t) {
     t(window.confirm(e));
 }
 function b() {
     var e = window.navigator.userAgent;
-    return ((-1 === e.indexOf('Android 2.') && -1 === e.indexOf('Android 4.0')) || -1 === e.indexOf('Mobile Safari') || -1 !== e.indexOf('Chrome') || -1 !== e.indexOf('Windows Phone')) && window.history && 'pushState' in window.history;
+    return (
+        ((-1 === e.indexOf("Android 2.") && -1 === e.indexOf("Android 4.0")) ||
+            -1 === e.indexOf("Mobile Safari") ||
+            -1 !== e.indexOf("Chrome") ||
+            -1 !== e.indexOf("Windows Phone")) &&
+        window.history &&
+        "pushState" in window.history
+    );
 }
 function y() {
-    return -1 === window.navigator.userAgent.indexOf('Trident');
+    return -1 === window.navigator.userAgent.indexOf("Trident");
 }
 function O() {
-    return -1 === window.navigator.userAgent.indexOf('Firefox');
+    return -1 === window.navigator.userAgent.indexOf("Firefox");
 }
 function v(e) {
-    return void 0 === e.state && -1 === navigator.userAgent.indexOf('CriOS');
+    return void 0 === e.state && -1 === navigator.userAgent.indexOf("CriOS");
 }
-var I = 'popstate',
-    T = 'hashchange';
+var I = "popstate",
+    T = "hashchange";
 function S() {
     try {
         return window.history.state || {};
@@ -130,7 +165,7 @@ function S() {
     }
 }
 function A(e) {
-    (void 0 === e && (e = {}), g || (0, a.Z)(!1));
+    void 0 === e && (e = {}), g || (0, a.Z)(!1);
     var t = window.history,
         n = b(),
         i = !y(),
@@ -141,21 +176,21 @@ function A(e) {
         h = void 0 === f ? E : f,
         O = o.keyLength,
         A = void 0 === O ? 6 : O,
-        N = e.basename ? d(s(e.basename)) : '';
+        N = e.basename ? d(s(e.basename)) : "";
     function C(e) {
         var t = e || {},
             n = t.key,
             r = t.state,
             i = window.location,
             o = i.pathname + i.search + i.hash;
-        return (N && (o = u(o, N)), p(o, r, n));
+        return N && (o = u(o, N)), p(o, r, n);
     }
     function R() {
         return Math.random().toString(36).substr(2, A);
     }
     var P = m();
     function w(e) {
-        ((0, r.Z)(X, e), (X.length = t.length), P.notifyListeners(X.location, X.action));
+        (0, r.Z)(X, e), (X.length = t.length), P.notifyListeners(X.location, X.action);
     }
     function D(e) {
         v(e) || M(C(e.state));
@@ -165,14 +200,14 @@ function A(e) {
     }
     var x = !1;
     function M(e) {
-        if (x) ((x = !1), w());
+        if (x) (x = !1), w();
         else {
-            var t = 'POP';
+            var t = "POP";
             P.confirmTransitionTo(e, t, h, function (n) {
                 n
                     ? w({
                           action: t,
-                          location: e
+                          location: e,
                       })
                     : k(e);
             });
@@ -193,7 +228,7 @@ function A(e) {
         return N + _(e);
     }
     function B(e, r) {
-        var i = 'PUSH',
+        var i = "PUSH",
             o = p(e, r, R(), X.location);
         P.confirmTransitionTo(o, i, h, function (e) {
             if (e) {
@@ -205,10 +240,10 @@ function A(e) {
                         (t.pushState(
                             {
                                 key: a,
-                                state: s
+                                state: s,
                             },
                             null,
-                            r
+                            r,
                         ),
                         c)
                     )
@@ -216,19 +251,19 @@ function A(e) {
                     else {
                         var l = U.indexOf(X.location.key),
                             u = U.slice(0, l + 1);
-                        (u.push(o.key),
+                        u.push(o.key),
                             (U = u),
                             w({
                                 action: i,
-                                location: o
-                            }));
+                                location: o,
+                            });
                     }
                 else window.location.href = r;
             }
         });
     }
     function Z(e, r) {
-        var i = 'REPLACE',
+        var i = "REPLACE",
             o = p(e, r, R(), X.location);
         P.confirmTransitionTo(o, i, h, function (e) {
             if (e) {
@@ -240,21 +275,21 @@ function A(e) {
                         (t.replaceState(
                             {
                                 key: a,
-                                state: s
+                                state: s,
                             },
                             null,
-                            r
+                            r,
                         ),
                         c)
                     )
                         window.location.replace(r);
                     else {
                         var l = U.indexOf(X.location.key);
-                        (-1 !== l && (U[l] = o.key),
+                        -1 !== l && (U[l] = o.key),
                             w({
                                 action: i,
-                                location: o
-                            }));
+                                location: o,
+                            });
                     }
                 else window.location.replace(r);
             }
@@ -271,7 +306,9 @@ function A(e) {
     }
     var Y = 0;
     function W(e) {
-        1 === (Y += e) && 1 === e ? (window.addEventListener(I, D), i && window.addEventListener(T, L)) : 0 === Y && (window.removeEventListener(I, D), i && window.removeEventListener(T, L));
+        1 === (Y += e) && 1 === e
+            ? (window.addEventListener(I, D), i && window.addEventListener(T, L))
+            : 0 === Y && (window.removeEventListener(I, D), i && window.removeEventListener(T, L));
     }
     var K = !1;
     function z(e) {
@@ -280,7 +317,7 @@ function A(e) {
         return (
             K || (W(1), (K = !0)),
             function () {
-                return (K && ((K = !1), W(-1)), t());
+                return K && ((K = !1), W(-1)), t();
             }
         );
     }
@@ -289,13 +326,13 @@ function A(e) {
         return (
             W(1),
             function () {
-                (W(-1), t());
+                W(-1), t();
             }
         );
     }
     var X = {
         length: t.length,
-        action: 'POP',
+        action: "POP",
         location: j,
         createHref: G,
         push: B,
@@ -304,64 +341,64 @@ function A(e) {
         goBack: V,
         goForward: H,
         block: z,
-        listen: q
+        listen: q,
     };
     return X;
 }
-var N = 'hashchange',
+var N = "hashchange",
     C = {
         hashbang: {
             encodePath: function (e) {
-                return '!' === e.charAt(0) ? e : '!/' + l(e);
+                return "!" === e.charAt(0) ? e : "!/" + l(e);
             },
             decodePath: function (e) {
-                return '!' === e.charAt(0) ? e.substr(1) : e;
-            }
+                return "!" === e.charAt(0) ? e.substr(1) : e;
+            },
         },
         noslash: {
             encodePath: l,
-            decodePath: s
+            decodePath: s,
         },
         slash: {
             encodePath: s,
-            decodePath: s
-        }
+            decodePath: s,
+        },
     };
 function R(e) {
-    var t = e.indexOf('#');
+    var t = e.indexOf("#");
     return -1 === t ? e : e.slice(0, t);
 }
 function P() {
     var e = window.location.href,
-        t = e.indexOf('#');
-    return -1 === t ? '' : e.substring(t + 1);
+        t = e.indexOf("#");
+    return -1 === t ? "" : e.substring(t + 1);
 }
 function w(e) {
     window.location.hash = e;
 }
 function D(e) {
-    window.location.replace(R(window.location.href) + '#' + e);
+    window.location.replace(R(window.location.href) + "#" + e);
 }
 function L(e) {
-    (void 0 === e && (e = {}), g || (0, a.Z)(!1));
+    void 0 === e && (e = {}), g || (0, a.Z)(!1);
     var t = window.history;
     O();
     var n = e,
         i = n.getUserConfirmation,
         o = void 0 === i ? E : i,
         l = n.hashType,
-        c = void 0 === l ? 'slash' : l,
-        f = e.basename ? d(s(e.basename)) : '',
+        c = void 0 === l ? "slash" : l,
+        f = e.basename ? d(s(e.basename)) : "",
         h = C[c],
         b = h.encodePath,
         y = h.decodePath;
     function v() {
         var e = y(P());
-        return (f && (e = u(e, f)), p(e));
+        return f && (e = u(e, f)), p(e);
     }
     var I = m();
     function T(e) {
-        ((0, r.Z)(J, e), (J.length = t.length), I.notifyListeners(J.location, J.action));
+        (0, r.Z)(J, e), (J.length = t.length), I.notifyListeners(J.location, J.action);
     }
     var S = !1,
         A = null;
@@ -376,18 +413,18 @@ function L(e) {
             var n = v(),
                 r = J.location;
             if ((!S && L(r, n)) || A === _(n)) return;
-            ((A = null), M(n));
+            (A = null), M(n);
         }
     }
     function M(e) {
-        if (S) ((S = !1), T());
+        if (S) (S = !1), T();
         else {
-            var t = 'POP';
+            var t = "POP";
             I.confirmTransitionTo(e, t, o, function (n) {
                 n
                     ? T({
                           action: t,
-                          location: e
+                          location: e,
                       })
                     : k(e);
             });
@@ -408,12 +445,12 @@ function L(e) {
     var G = v(),
         B = [_(G)];
     function Z(e) {
-        var t = document.querySelector('base'),
-            n = '';
-        return (t && t.getAttribute('href') && (n = R(window.location.href)), n + '#' + b(f + _(e)));
+        var t = document.querySelector("base"),
+            n = "";
+        return t && t.getAttribute("href") && (n = R(window.location.href)), n + "#" + b(f + _(e));
     }
     function F(e, t) {
-        var n = 'PUSH',
+        var n = "PUSH",
             r = p(e, void 0, void 0, J.location);
         I.confirmTransitionTo(r, n, o, function (e) {
             if (e) {
@@ -421,21 +458,21 @@ function L(e) {
                     i = b(f + t),
                     o = P() !== i;
                 if (o) {
-                    ((A = t), w(i));
+                    (A = t), w(i);
                     var a = B.lastIndexOf(_(J.location)),
                         s = B.slice(0, a + 1);
-                    (s.push(t),
+                    s.push(t),
                         (B = s),
                         T({
                             action: n,
-                            location: r
-                        }));
+                            location: r,
+                        });
                 } else T();
             }
         });
     }
     function V(e, t) {
-        var n = 'REPLACE',
+        var n = "REPLACE",
             r = p(e, void 0, void 0, J.location);
         I.confirmTransitionTo(r, n, o, function (e) {
             if (e) {
@@ -444,11 +481,11 @@ function L(e) {
                     o = P() !== i;
                 o && ((A = t), D(i));
                 var a = B.indexOf(_(J.location));
-                (-1 !== a && (B[a] = t),
+                -1 !== a && (B[a] = t),
                     T({
                         action: n,
-                        location: r
-                    }));
+                        location: r,
+                    });
             }
         });
     }
@@ -472,7 +509,7 @@ function L(e) {
         return (
             q || (z(1), (q = !0)),
             function () {
-                return (q && ((q = !1), z(-1)), t());
+                return q && ((q = !1), z(-1)), t();
             }
         );
     }
@@ -481,13 +518,13 @@ function L(e) {
         return (
             z(1),
             function () {
-                (z(-1), t());
+                z(-1), t();
             }
         );
     }
     var J = {
         length: t.length,
-        action: 'POP',
+        action: "POP",
         location: G,
         createHref: Z,
         push: F,
@@ -496,7 +533,7 @@ function L(e) {
         goBack: Y,
         goForward: W,
         block: X,
-        listen: Q
+        listen: Q,
     };
     return J;
 }
@@ -508,63 +545,63 @@ function M(e) {
     var t = e,
         n = t.getUserConfirmation,
         i = t.initialEntries,
-        o = void 0 === i ? ['/'] : i,
+        o = void 0 === i ? ["/"] : i,
         a = t.initialIndex,
         s = void 0 === a ? 0 : a,
         l = t.keyLength,
         c = void 0 === l ? 6 : l,
         u = m();
     function d(e) {
-        ((0, r.Z)(N, e), (N.length = N.entries.length), u.notifyListeners(N.location, N.action));
+        (0, r.Z)(N, e), (N.length = N.entries.length), u.notifyListeners(N.location, N.action);
     }
     function f() {
         return Math.random().toString(36).substr(2, c);
     }
     var h = x(s, 0, o.length - 1),
         g = o.map(function (e) {
-            return 'string' == typeof e ? p(e, void 0, f()) : p(e, void 0, e.key || f());
+            return "string" == typeof e ? p(e, void 0, f()) : p(e, void 0, e.key || f());
         }),
         E = _;
     function b(e, t) {
-        var r = 'PUSH',
+        var r = "PUSH",
             i = p(e, t, f(), N.location);
         u.confirmTransitionTo(i, r, n, function (e) {
             if (e) {
                 var t = N.index,
                     n = t + 1,
                     o = N.entries.slice(0);
-                (o.length > n ? o.splice(n, o.length - n, i) : o.push(i),
+                o.length > n ? o.splice(n, o.length - n, i) : o.push(i),
                     d({
                         action: r,
                         location: i,
                         index: n,
-                        entries: o
-                    }));
+                        entries: o,
+                    });
             }
         });
     }
     function y(e, t) {
-        var r = 'REPLACE',
+        var r = "REPLACE",
             i = p(e, t, f(), N.location);
         u.confirmTransitionTo(i, r, n, function (e) {
             e &&
                 ((N.entries[N.index] = i),
                 d({
                     action: r,
-                    location: i
+                    location: i,
                 }));
         });
     }
     function O(e) {
         var t = x(N.index + e, 0, N.entries.length - 1),
-            r = 'POP',
+            r = "POP",
             i = N.entries[t];
         u.confirmTransitionTo(i, r, n, function (e) {
             e
                 ? d({
                       action: r,
                       location: i,
-                      index: t
+                      index: t,
                   })
                 : d();
         });
@@ -580,14 +617,14 @@ function M(e) {
         return t >= 0 && t < N.entries.length;
     }
     function S(e) {
-        return (void 0 === e && (e = !1), u.setPrompt(e));
+        return void 0 === e && (e = !1), u.setPrompt(e);
     }
     function A(e) {
         return u.appendListener(e);
     }
     var N = {
         length: g.length,
-        action: 'POP',
+        action: "POP",
         location: g[h],
         index: h,
         entries: g,
@@ -599,7 +636,7 @@ function M(e) {
         goForward: I,
         canGo: T,
         block: S,
-        listen: A
+        listen: A,
     };
     return N;
 }

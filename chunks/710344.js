@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => r }), n(388685));
+n.d(t, { Z: () => r }), n(388685);
 var i = n(73800);
 function r(e, t) {
     let [n, r] = i.useState(null),
@@ -24,14 +24,14 @@ function r(e, t) {
                     s = a.indexOf(r),
                     c = a.indexOf(l),
                     d = +(c - s > 0);
-                (a.splice(s, 1), (c = a.indexOf(l)), a.splice(c + d, 0, r), t(a));
+                a.splice(s, 1), (c = a.indexOf(l)), a.splice(c + d, 0, r), t(a);
             },
-            [e, n, o, t]
+            [e, n, o, t],
         );
     return {
         draggingId: n,
         handleDragStart: l,
         handleDragReset: o,
-        handleDragComplete: a
+        handleDragComplete: a,
     };
 }

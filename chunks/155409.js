@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,10 +71,26 @@ class m extends (r = o.Component) {
     }
     componentDidUpdate(e) {
         let { position: t, offsetX: n, offsetY: r, tutorialId: i, visible: o, windowSize: a } = e;
-        i !== this.props.tutorialId ? l.Z.hide(i) : (o !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || r !== this.props.offsetY || a !== this.props.windowSize) && this.show(this.props.visible);
+        i !== this.props.tutorialId
+            ? l.Z.hide(i)
+            : (o !== this.props.visible ||
+                  t !== this.props.position ||
+                  n !== this.props.offsetX ||
+                  r !== this.props.offsetY ||
+                  a !== this.props.windowSize) &&
+              this.show(this.props.visible);
     }
     show(e) {
-        let { childRef: t, tutorialId: n, position: r, offsetX: i, offsetY: o, visible: s, inlineSpecs: c, autoInvert: u } = this.props;
+        let {
+            childRef: t,
+            tutorialId: n,
+            position: r,
+            offsetX: i,
+            offsetY: o,
+            visible: s,
+            inlineSpecs: c,
+            autoInvert: u,
+        } = this.props;
         if (e && null == c) {
             let e = null == t ? void 0 : t.current;
             if (!(0, a.k)(e)) return;
@@ -86,17 +102,25 @@ class m extends (r = o.Component) {
                 autoInvert: u,
                 origin: {
                     x: c,
-                    y: s
+                    y: s,
                 },
                 offset: {
                     x: i,
-                    y: o
-                }
+                    y: o,
+                },
             });
         } else s && l.Z.hide(n);
     }
     render() {
-        let { inlineSpecs: e, tutorialId: t, children: n, visible: r, windowFocused: a, position: s, autoInvert: l } = this.props,
+        let {
+                inlineSpecs: e,
+                tutorialId: t,
+                children: n,
+                visible: r,
+                windowFocused: a,
+                position: s,
+                autoInvert: l,
+            } = this.props,
             c = d.Z.getData()[t];
         return null != e && null != c
             ? (0, i.jsxs)(i.Fragment, {
@@ -111,12 +135,12 @@ class m extends (r = o.Component) {
                                       position: s,
                                       tutorialId: t,
                                       tutorialDefinition: c,
-                                      focused: a
+                                      focused: a,
                                   },
-                                  e
-                              )
-                          )
-                  ]
+                                  e,
+                              ),
+                          ),
+                  ],
               })
             : o.Children.only(n);
     }
@@ -131,13 +155,13 @@ function g(e) {
         h(_({}, e), {
             visible: n,
             windowFocused: r,
-            windowSize: o
-        })
+            windowSize: o,
+        }),
     );
 }
-f(m, 'defaultProps', {
-    position: 'top',
+f(m, "defaultProps", {
+    position: "top",
     offsetX: 0,
     offsetY: 0,
-    autoInvert: !0
+    autoInvert: !0,
 });

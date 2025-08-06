@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => y,
-    z: () => O
+    z: () => O,
 });
 var r = n(73800),
     i = n(442837),
@@ -23,20 +23,16 @@ function b(e) {
         s = (0, p.Eb)({
             customInstallUrl: n,
             installParams: r,
-            integrationTypesConfig: a
+            integrationTypesConfig: a,
         }),
         l = (0, i.e7)([f.Z], () => {
             var e;
             return null != (e = f.Z.getGuildId()) ? e : void 0;
         }),
-        _ = (0, i.e7)(
-            [c.Z, u.Z, d.Z],
-            () => {
-                let e = c.Z.getChannel(d.Z.getChannelId());
-                return null != e && (e.isPrivate() || u.Z.can(m.Plq.SEND_MESSAGES, e));
-            },
-            []
-        ),
+        _ = (0, i.e7)([c.Z, u.Z, d.Z], () => {
+            let e = c.Z.getChannel(d.Z.getChannelId());
+            return null != e && (e.isPrivate() || u.Z.can(m.Plq.SEND_MESSAGES, e));
+        }, []),
         h = (0, o.PZ)(e, l) && _,
         g = t || h;
     return {
@@ -47,11 +43,19 @@ function b(e) {
         canViewApp: g,
         canOpenAppLauncher: h,
         isInstallable: s,
-        selectedGuildId: l
+        selectedGuildId: l,
     };
 }
 function y(e, t) {
-    let { canViewApp: n, canOpenAppLauncher: i, isInstallable: o, customInstallUrl: c, installParams: u, integrationTypesConfig: d, selectedGuildId: f } = b(e);
+    let {
+        canViewApp: n,
+        canOpenAppLauncher: i,
+        isInstallable: o,
+        customInstallUrl: c,
+        installParams: u,
+        integrationTypesConfig: d,
+        selectedGuildId: f,
+    } = b(e);
     return r.useMemo(
         () =>
             n
@@ -60,23 +64,23 @@ function y(e, t) {
                       (0, s.transitionToGlobalDiscovery)({
                           tab: g.GlobalDiscoveryTab.APPS,
                           applicationId: e.id,
-                          newSessionState: { entrypoint: { name: l.xF.APPLICATION_MESSAGE_EMBED } }
+                          newSessionState: { entrypoint: { name: l.xF.APPLICATION_MESSAGE_EMBED } },
                       });
                   }
                 : o
                   ? () => {
-                        (null == t || t(),
+                        null == t || t(),
                             (0, _.L)({
                                 applicationId: e.id,
                                 customInstallUrl: c,
                                 installParams: u,
                                 integrationTypesConfig: d,
                                 guildId: f,
-                                source: 'app_message_embed'
-                            }));
+                                source: "app_message_embed",
+                            });
                     }
                   : void 0,
-        [e.id, i, n, c, u, d, o, t, f]
+        [e.id, i, n, c, u, d, o, t, f],
     );
 }
 function O(e) {
@@ -90,7 +94,7 @@ function O(e) {
                       trackingArea: h.j_.VIEW,
                       onClick() {
                           i();
-                      }
+                      },
                   }
                 : n && null != i
                   ? {
@@ -98,9 +102,9 @@ function O(e) {
                         trackingArea: h.j_.ADD_APP,
                         onClick() {
                             i();
-                        }
+                        },
                     }
                   : void 0,
-        [t, n, i]
+        [t, n, i],
     );
 }

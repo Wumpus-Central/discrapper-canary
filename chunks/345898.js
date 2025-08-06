@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(953529));
+n.d(t, { Z: () => l }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -7,30 +7,30 @@ var i = n(120356),
     s = n(360044);
 let l = (e) => {
     let { renderTitle: t, renderTagline: n, renderActions: i, renderMedia: l, className: c, isHorizontal: u = !1 } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(s.tile, { [s.tileHorizontal]: u }, c),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: o()(s.media, { [s.mediaHorizontal]: u }),
-                children: null == l ? void 0 : l()
+                children: null == l ? void 0 : l(),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: s.description,
                 children: [
                     (0, r.jsx)(a.H, {
                         className: s.title,
-                        children: null == t ? void 0 : t()
+                        children: null == t ? void 0 : t(),
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: s.tagline,
-                        children: null == n ? void 0 : n()
+                        children: null == n ? void 0 : n(),
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: s.actions,
-                        children: null == i ? void 0 : i()
-                    })
-                ]
-            })
-        ]
+                        children: null == i ? void 0 : i(),
+                    }),
+                ],
+            }),
+        ],
     });
 };

@@ -18,61 +18,63 @@ let h = function (e) {
     if (
         ((0, o.ZP)(() => {
             d.default.track(f.rMx.OPEN_POPOUT, {
-                type: 'New Member Badge Popout',
+                type: "New Member Badge Popout",
                 guild_id: t.id,
-                channel_id: null == m ? void 0 : m.id
+                channel_id: null == m ? void 0 : m.id,
             });
         }),
         null == m)
     )
         return null;
     let g = () => {
-        (a.ZP.trackWithMetadata(f.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), h(), (0, l.q)(n.author, m.id));
+        a.ZP.trackWithMetadata(f.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }),
+            h(),
+            (0, l.q)(n.author, m.id);
     };
     return (0, r.jsx)(s.W_, {
         className: p.messagePopoutContent,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: p.popoutContainer,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: p.mainContent,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: p.iconContainer,
                             children: (0, r.jsx)(i.hg2, {
-                                size: 'custom',
-                                color: 'currentColor',
+                                size: "custom",
+                                color: "currentColor",
                                 width: 40,
-                                height: 40
-                            })
+                                height: 40,
+                            }),
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             children: [
                                 (0, r.jsx)(i.X6q, {
-                                    variant: 'heading-md/semibold',
+                                    variant: "heading-md/semibold",
                                     className: p.header,
-                                    children: _.intl.string(_.t['v/OYd3'])
+                                    children: _.intl.string(_.t["v/OYd3"]),
                                 }),
                                 (0, r.jsx)(i.Text, {
-                                    variant: 'text-sm/normal',
-                                    children: _.intl.string(_.t.Z85MlJ)
-                                })
-                            ]
-                        })
-                    ]
+                                    variant: "text-sm/normal",
+                                    children: _.intl.string(_.t.Z85MlJ),
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
-                (0, r.jsx)('div', {
-                    'data-button-hoisted-classname-wrapper': !0,
+                (0, r.jsx)("div", {
+                    "data-button-hoisted-classname-wrapper": !0,
                     className: p.ctaButton,
                     children: (0, r.jsx)(i.zxk, {
-                        variant: 'primary',
-                        size: 'sm',
-                        text: _.intl.format(_.t['+xsVS0'], { username: n.author.username }),
+                        variant: "primary",
+                        size: "sm",
+                        text: _.intl.format(_.t["+xsVS0"], { username: n.author.username }),
                         fullWidth: !0,
-                        onClick: g
-                    })
-                })
-            ]
-        })
+                        onClick: g,
+                    }),
+                }),
+            ],
+        }),
     });
 };

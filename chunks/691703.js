@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282));
+n.d(t, { Z: () => g }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
 var r = n(255367),
     a = n(73800),
     i = n(442837),
@@ -10,7 +10,7 @@ var r = n(255367),
     u = n(949507),
     p = n(981631),
     m = n(388032);
-let h = 'redirect_to_support_server';
+let h = "redirect_to_support_server";
 function g(e) {
     let { application: t, className: n } = e,
         { onGoToSupportServer: g } = (function (e) {
@@ -23,7 +23,7 @@ function g(e) {
                         if (null != n) {
                             (0, d.zZ)(p.rMx.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
                                 application_id: e.id,
-                                support_guild_id: n
+                                support_guild_id: n,
                             });
                             let t = { page: p.ZY5.APPLICATION_DIRECTORY };
                             await (0, c.Ub)(n, t);
@@ -33,34 +33,35 @@ function g(e) {
             return (
                 a.useEffect(() => {
                     let a = new URL(location.href);
-                    if (null != e && t && null != n && 'true' === a.searchParams.get(h)) {
+                    if (null != e && t && null != n && "true" === a.searchParams.get(h)) {
                         a.searchParams.delete(h);
                         let e = a.pathname + a.search;
-                        ((0, s.dL)(e), r());
+                        (0, s.dL)(e), r();
                     }
                 }, [t, r, n, e]),
                 {
                     onGoToSupportServer: a.useCallback(() => {
                         var n;
-                        null != (null == e || null == (n = e.guild) ? void 0 : n.id) && (t ? r() : (0, d.rf)({ [h]: 'true' }));
-                    }, [e, r, t])
+                        null != (null == e || null == (n = e.guild) ? void 0 : n.id) &&
+                            (t ? r() : (0, d.rf)({ [h]: "true" }));
+                    }, [e, r, t]),
                 }
             );
         })(t);
     return null != t.guild && t.guild.features.includes(p.oNc.DISCOVERABLE)
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: n,
               children: [
                   (0, r.jsx)(l.X6q, {
-                      variant: 'heading-sm/semibold',
-                      color: 'header-primary',
-                      children: m.intl.string(m.t.KJEO29)
+                      variant: "heading-sm/semibold",
+                      color: "header-primary",
+                      children: m.intl.string(m.t.KJEO29),
                   }),
                   (0, r.jsx)(u.Z, {
                       guild: t.guild,
-                      onClick: g
-                  })
-              ]
+                      onClick: g,
+                  }),
+              ],
           })
         : null;
 }

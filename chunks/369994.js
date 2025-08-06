@@ -1,11 +1,11 @@
-(n.d(e, {
+n.d(e, {
     C4: () => g,
     Fi: () => O,
     KK: () => p,
     f6: () => b,
-    n: () => f
+    n: () => f,
 }),
-    n(388685));
+    n(388685);
 var r = n(913527),
     i = n.n(r),
     l = n(544891),
@@ -25,31 +25,31 @@ function p(t) {
                 for (var e = 1; e < arguments.length; e++) {
                     var n = null != arguments[e] ? arguments[e] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (t) {
                                 return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (e) {
                             var r;
-                            ((r = n[e]),
+                            (r = n[e]),
                                 e in t
                                     ? Object.defineProperty(t, e, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (t[e] = r));
-                        }));
+                                    : (t[e] = r);
+                        });
                 }
                 return t;
             })({}, (0, s.hH)(t))),
             (r = r =
                 {
                     guild_id: t,
-                    raid_types: e
+                    raid_types: e,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -63,23 +63,30 @@ function p(t) {
                   })(Object(r)).forEach(function (t) {
                       Object.defineProperty(n, t, Object.getOwnPropertyDescriptor(r, t));
                   }),
-            n)
+            n),
         );
     }
 }
 async function b(t, e) {
     let n = new Set(t.features);
-    (n.has(u.oNc.COMMUNITY) ? (e ? n.delete(u.oNc.RAID_ALERTS_DISABLED) : n.add(u.oNc.RAID_ALERTS_DISABLED)) : e ? n.add(u.oNc.NON_COMMUNITY_RAID_ALERTS) : n.delete(u.oNc.NON_COMMUNITY_RAID_ALERTS), await a.Z.saveGuild(t.id, { features: n }, { throwErr: !0 }));
+    n.has(u.oNc.COMMUNITY)
+        ? e
+            ? n.delete(u.oNc.RAID_ALERTS_DISABLED)
+            : n.add(u.oNc.RAID_ALERTS_DISABLED)
+        : e
+          ? n.add(u.oNc.NON_COMMUNITY_RAID_ALERTS)
+          : n.delete(u.oNc.NON_COMMUNITY_RAID_ALERTS),
+        await a.Z.saveGuild(t.id, { features: n }, { throwErr: !0 });
 }
 async function f(t, e, n, r) {
-    let s = i()().add(r, 'hours').toISOString();
+    let s = i()().add(r, "hours").toISOString();
     return await l.tn.put({
         url: u.ANM.GUILD_INCIDENT_ACTIONS(t),
         body: {
             invites_disabled_until: e ? s : null,
-            dms_disabled_until: n ? s : null
+            dms_disabled_until: n ? s : null,
         },
-        rejectWithError: !1
+        rejectWithError: !1,
     });
 }
 async function O(t, e, n) {
@@ -90,9 +97,9 @@ async function O(t, e, n) {
               url: u.ANM.GUILD_INCIDENT_REPORT_FALSE_ALARM(t),
               body: {
                   alert_message_id: e,
-                  reason: n
+                  reason: n,
               },
-              rejectWithError: !1
+              rejectWithError: !1,
           });
 }
 async function g(t) {
@@ -101,6 +108,6 @@ async function g(t) {
         ? null
         : await l.tn.post({
               url: u.ANM.GUILD_INCIDENT_REPORT_RAID(t),
-              rejectWithError: !1
+              rejectWithError: !1,
           });
 }

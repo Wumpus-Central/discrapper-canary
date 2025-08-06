@@ -19,7 +19,7 @@ function a(e, t = r.pz.STRING) {
         case r.wx.BYTES:
             return new Uint8Array(0);
         case r.wx.STRING:
-            return '';
+            return "";
         default:
             return 0;
     }

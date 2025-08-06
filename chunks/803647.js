@@ -12,7 +12,7 @@ function s(e) {
             streamType: s,
             guildId: l,
             channelId: c,
-            ownerId: u
+            ownerId: u,
         });
-    (u === o.default.getId() && r.Z.setGoLiveSource(null), i.g(d, t, n));
+    u === o.default.getId() && r.Z.setGoLiveSource(null), i.g(d, t, n);
 }

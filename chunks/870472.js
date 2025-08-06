@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     Q: () => c,
-    V: () => o
+    V: () => o,
 }),
     n(388685),
     n(539854),
     n(35282),
     n(781311),
-    n(358797));
+    n(358797);
 var r = n(73800),
     i = n(348327),
     l = n.n(i),
@@ -21,9 +21,9 @@ function o(e) {
                 let r = e(s);
                 if (l()(s, r)) return;
                 let o = t.slice(0, i + 1);
-                (o.push(r), n(o), a(o.length - 1));
+                o.push(r), n(o), a(o.length - 1);
             },
-            [i, s, t]
+            [i, s, t],
         );
     return {
         state: s,
@@ -32,18 +32,18 @@ function o(e) {
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
                     n = Math.max(0, i - e);
-                return (a(n), t[n]);
+                return a(n), t[n];
             },
-            [i, t]
+            [i, t],
         ),
         goForward: r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
                     n = Math.min(t.length - 1, i + e);
-                return (a(n), t[n]);
+                return a(n), t[n];
             },
-            [i, t]
-        )
+            [i, t],
+        ),
     };
 }
 function c(e, t) {
@@ -52,11 +52,11 @@ function c(e, t) {
             state: { value: o, tags: c, selections: d },
             setState: u,
             goBack: m,
-            goForward: g
+            goForward: g,
         } = e;
     r.useLayoutEffect(() => {
         let e = (e) => (t) => {
-                ('Meta' === t.key || 'Control' === t.key) &&
+                ("Meta" === t.key || "Control" === t.key) &&
                     u((t) => {
                         var n, r;
                         return (
@@ -64,24 +64,24 @@ function c(e, t) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })({}, t)),
@@ -105,17 +105,17 @@ function c(e, t) {
             t = e(!0),
             n = e(!1);
         return (
-            document.addEventListener('keydown', t),
-            document.addEventListener('keyup', n),
+            document.addEventListener("keydown", t),
+            document.addEventListener("keyup", n),
             () => {
-                (document.removeEventListener('keydown', t), document.removeEventListener('keyup', n));
+                document.removeEventListener("keydown", t), document.removeEventListener("keyup", n);
             }
         );
     }, [u]);
     let p = r.useCallback(
             (e) => {
                 var t, r;
-                let i = (null != (r = e.clipboardData.getData('text')) ? r : '')
+                let i = (null != (r = e.clipboardData.getData("text")) ? r : "")
                     .split(s.uz)
                     .map((e) => e.trim())
                     .filter((e) => e.length > 0);
@@ -127,7 +127,7 @@ function c(e, t) {
                                 value: n,
                                 tags: [...t, ...i],
                                 selections: [],
-                                isSelecting: !1
+                                isSelecting: !1,
                             };
                         });
                     }),
@@ -135,7 +135,7 @@ function c(e, t) {
                     e.stopPropagation(),
                     null == (t = n.current) || t.scrollToBottom());
             },
-            [u, n]
+            [u, n],
         ),
         h = r.useCallback(
             (e) => {
@@ -145,11 +145,11 @@ function c(e, t) {
                         value: r,
                         tags: [...n.filter((t, n) => n !== e)],
                         selections: [],
-                        isSelecting: !1
+                        isSelecting: !1,
                     };
                 });
             },
-            [u]
+            [u],
         ),
         f = r.useCallback(
             (e) => (t) => {
@@ -162,12 +162,12 @@ function c(e, t) {
                             value: i,
                             tags: l,
                             selections: [],
-                            isSelecting: !1
+                            isSelecting: !1,
                         }
                     );
                 });
             },
-            [u]
+            [u],
         ),
         x = r.useCallback(
             (e) => {
@@ -177,11 +177,11 @@ function c(e, t) {
                         value: r,
                         tags: n,
                         selections: [...i, n[e]],
-                        isSelecting: l
+                        isSelecting: l,
                     };
                 });
             },
-            [u]
+            [u],
         ),
         b = r.useCallback(
             function (e) {
@@ -192,28 +192,28 @@ function c(e, t) {
                         value: i,
                         tags: r,
                         selections: t ? [] : l.filter((t) => t !== r[e]),
-                        isSelecting: a
+                        isSelecting: a,
                     };
                 });
             },
-            [u]
+            [u],
         ),
         j = r.useCallback(
             (e) => {
                 var t;
-                (u((e) => {
+                u((e) => {
                     let { tags: t, value: n } = e;
                     return {
                         value: n,
                         tags: t,
                         selections: [],
-                        isSelecting: !1
+                        isSelecting: !1,
                     };
                 }),
                     null != e && (e.preventDefault(), e.stopPropagation()),
-                    null == (t = i.current) || t.focus());
+                    null == (t = i.current) || t.focus();
             },
-            [i, u]
+            [i, u],
         ),
         v = r.useCallback(
             (e) => {
@@ -223,11 +223,11 @@ function c(e, t) {
                         value: e.target.value,
                         tags: n,
                         selections: [],
-                        isSelecting: !1
+                        isSelecting: !1,
                     };
                 });
             },
-            [u]
+            [u],
         ),
         _ = r.useCallback(
             function (e) {
@@ -238,37 +238,37 @@ function c(e, t) {
                         u((e) => {
                             let { tags: t } = e;
                             return {
-                                value: '',
+                                value: "",
                                 tags: [...t, o],
                                 selections: [],
-                                isSelecting: !1
+                                isSelecting: !1,
                             };
                         });
                     }),
                     r && null != n.current && n.current.scrollToBottom(),
                     t && (e.preventDefault(), e.stopPropagation()));
             },
-            [n, u, o]
+            [n, u, o],
         ),
         O = r.useCallback(
             (e) => {
                 let t = o.trim().length <= 0;
                 if (d.length > 0) {
                     var n;
-                    ((0, a.flushSync)(() => {
+                    (0, a.flushSync)(() => {
                         u((e) => {
                             let { tags: t, value: n, selections: r } = e;
                             return {
                                 value: n,
                                 tags: t.filter((e) => !r.includes(e)),
                                 selections: [],
-                                isSelecting: !1
+                                isSelecting: !1,
                             };
                         });
                     }),
                         null == (n = i.current) || n.focus(),
                         e.preventDefault(),
-                        e.stopPropagation());
+                        e.stopPropagation();
                 } else
                     t &&
                         ((0, a.flushSync)(() => {
@@ -277,25 +277,37 @@ function c(e, t) {
                                     n = [...t],
                                     r = n.pop();
                                 return {
-                                    value: null != r ? r : '',
+                                    value: null != r ? r : "",
                                     tags: [...n],
                                     selections: [],
-                                    isSelecting: !1
+                                    isSelecting: !1,
                                 };
                             });
                         }),
                         e.preventDefault(),
                         e.stopPropagation());
             },
-            [i, d.length, u, o]
+            [i, d.length, u, o],
         ),
         y = r.useCallback(
             (e) => {
                 var t, n, r, l;
                 let a = e.metaKey || e.ctrlKey;
-                'z' === e.key && a ? (m().selections.length > 0 ? null == (t = i.current) || t.blur() : null == (n = i.current) || n.focus(), e.preventDefault(), e.stopPropagation()) : 'y' === e.key && a && (g().selections.length > 0 ? null == (r = i.current) || r.blur() : null == (l = i.current) || l.focus(), e.preventDefault(), e.stopPropagation());
+                "z" === e.key && a
+                    ? (m().selections.length > 0
+                          ? null == (t = i.current) || t.blur()
+                          : null == (n = i.current) || n.focus(),
+                      e.preventDefault(),
+                      e.stopPropagation())
+                    : "y" === e.key &&
+                      a &&
+                      (g().selections.length > 0
+                          ? null == (r = i.current) || r.blur()
+                          : null == (l = i.current) || l.focus(),
+                      e.preventDefault(),
+                      e.stopPropagation());
             },
-            [m, g, i]
+            [m, g, i],
         ),
         C = r.useCallback(
             (e) => {
@@ -311,28 +323,28 @@ function c(e, t) {
                                 value: n,
                                 tags: t,
                                 selections: [...t],
-                                isSelecting: !1
+                                isSelecting: !1,
                             };
                         });
                     }),
                     setImmediate(() => {
                         var e;
-                        (null == (e = i.current) || e.blur(),
+                        null == (e = i.current) || e.blur(),
                             setTimeout(() => {
                                 var e;
                                 null == (e = l.current) || e.focus();
-                            }, 16));
+                            }, 16);
                     }),
                     e.preventDefault(),
                     e.stopPropagation());
             },
-            [l, i, u, c.length, o]
+            [l, i, u, c.length, o],
         ),
         N = r.useCallback(
             (e) => {
                 e.relatedTarget !== e.currentTarget && _(e, !1, !1);
             },
-            [_]
+            [_],
         );
     return {
         handlePasteEvent: p,
@@ -340,23 +352,40 @@ function c(e, t) {
         handleKeyDown: r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                'Meta' !== e.key && (s.ye.has(e.key) ? _(e) : 'Backspace' === e.key ? O(e) : 'Escape' === e.key ? j(e) : 'a' === e.key && t ? C(e) : s.Bd.has(e.key) && t && y(e));
+                "Meta" !== e.key &&
+                    (s.ye.has(e.key)
+                        ? _(e)
+                        : "Backspace" === e.key
+                          ? O(e)
+                          : "Escape" === e.key
+                            ? j(e)
+                            : "a" === e.key && t
+                              ? C(e)
+                              : s.Bd.has(e.key) && t && y(e));
             },
-            [_, O, j, C, y]
+            [_, O, j, C, y],
         ),
         handleContainerKeyUp: r.useCallback(
             (e) => {
                 if (document.activeElement !== l.current) return;
                 let t = e.metaKey || e.ctrlKey;
-                'Backspace' === e.key ? O(e) : 'a' === e.key && t ? C(e) : 'Escape' === e.key ? j(e) : s.Bd.has(e.key) && t ? y(e) : 'Meta' !== e.key && j(e);
+                "Backspace" === e.key
+                    ? O(e)
+                    : "a" === e.key && t
+                      ? C(e)
+                      : "Escape" === e.key
+                        ? j(e)
+                        : s.Bd.has(e.key) && t
+                          ? y(e)
+                          : "Meta" !== e.key && j(e);
             },
-            [y, O, C, j, l]
+            [y, O, C, j, l],
         ),
         handleRemoveTag: h,
         handleTagChangeEvent: f,
         handleSelectTag: x,
         handleUnselectTag: b,
         handleResetTagSelections: j,
-        handleInputBlurEvent: N
+        handleInputBlurEvent: N,
     };
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(772848),
@@ -22,7 +22,11 @@ function g(e) {
         function e(e) {
             var r;
             let { channelId: i, userId: a, emoji: s, animationType: l, animationId: _ } = e;
-            if ((null != g && g !== a) || (u.Z.getEnabled() && (0, d.Z)(null != (r = null == s ? void 0 : s.name) ? r : ''))) return;
+            if (
+                (null != g && g !== a) ||
+                (u.Z.getEnabled() && (0, d.Z)(null != (r = null == s ? void 0 : s.name) ? r : ""))
+            )
+                return;
             let h = null != s && null != l && null != _;
             if (i === t && !b && v && h) {
                 let e = (0, f._r)(s),
@@ -33,19 +37,19 @@ function g(e) {
                         animationId: _,
                         shouldResize: r,
                         url: e,
-                        userId: a
+                        userId: a,
                     };
-                (O((e) => [...e, i]),
+                O((e) => [...e, i]),
                     c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
                         channel_id: t,
-                        guild_id: n
-                    }));
+                        guild_id: n,
+                    });
             }
         }
         return (
-            s.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
+            s.Z.subscribe("VOICE_CHANNEL_EFFECT_SEND", e),
             () => {
-                s.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
+                s.Z.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
             }
         );
     }, [t, n, g, b, v]);
@@ -53,15 +57,15 @@ function g(e) {
         O((t) => {
             let n = [...t],
                 r = n.findIndex((t) => t.id === e);
-            return (n.splice(r, 1), n);
+            return n.splice(r, 1), n;
         });
     }, []);
     return b
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: h.effectsWrapper,
               style: { width: E.width },
-              children: (0, r.jsx)('div', {
+              children: (0, r.jsx)("div", {
                   className: h.effects,
                   children: y.map((e) =>
                       (0, r.jsx)(
@@ -69,11 +73,11 @@ function g(e) {
                           {
                               containerDimensions: E,
                               effect: e,
-                              onComplete: I
+                              onComplete: I,
                           },
-                          e.id
-                      )
-                  )
-              })
+                          e.id,
+                      ),
+                  ),
+              }),
           });
 }

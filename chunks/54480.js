@@ -14,6 +14,6 @@ function l(e) {
         canAccessPicker: l && (d || u) && (null == f ? void 0 : f.isChatWallpaperEnabled) === !0,
         entryPoint: c,
         isChatWallpaperSetterExperimentEnabled: l,
-        isDarkTheme: d
+        isDarkTheme: d,
     };
 }

@@ -34,81 +34,81 @@ function y(e) {
         { status: r } = e;
     switch (r) {
         case b.wB.REJECTED:
-            ((t = P.t['7YSJ6e']), (n = P.t.i05OUV));
+            (t = P.t["7YSJ6e"]), (n = P.t.i05OUV);
             break;
         case b.wB.APPROVED:
-            ((t = P.t.bv82GR), (n = P.t.D4OUHR));
+            (t = P.t.bv82GR), (n = P.t.D4OUHR);
             break;
         default:
-            ((t = P.t['/wqiSk']), (n = P.t.o47YZm));
+            (t = P.t["/wqiSk"]), (n = P.t.o47YZm);
     }
-    return (0, l.jsxs)('div', {
+    return (0, l.jsxs)("div", {
         className: R.emptyContainer,
         children: [
             (0, l.jsx)(d.dz2, {
-                size: 'md',
-                color: 'currentColor',
-                className: R.checkmark
+                size: "md",
+                color: "currentColor",
+                className: R.checkmark,
             }),
             (0, l.jsx)(d.X6q, {
-                variant: 'heading-md/medium',
-                children: P.intl.string(t)
+                variant: "heading-md/medium",
+                children: P.intl.string(t),
             }),
             (0, l.jsx)(d.Text, {
-                color: 'text-muted',
-                variant: 'text-sm/medium',
-                children: P.intl.string(n)
-            })
-        ]
+                color: "text-muted",
+                variant: "text-sm/medium",
+                children: P.intl.string(n),
+            }),
+        ],
     });
 }
 function M(e) {
     let { sortOrder: t, onSortChange: n } = e;
-    return (0, l.jsx)('thead', {
-        children: (0, l.jsxs)('tr', {
+    return (0, l.jsx)("thead", {
+        children: (0, l.jsxs)("tr", {
             className: Z.tableHeaderRow,
             children: [
-                (0, l.jsx)('th', {
+                (0, l.jsx)("th", {
                     className: R.headerCell,
                     children: (0, l.jsx)(d.Text, {
-                        variant: 'eyebrow',
-                        color: 'interactive-normal',
-                        children: P.intl.string(P.t.Es7n9f)
-                    })
+                        variant: "eyebrow",
+                        color: "interactive-normal",
+                        children: P.intl.string(P.t.Es7n9f),
+                    }),
                 }),
-                (0, l.jsx)('th', {
+                (0, l.jsx)("th", {
                     className: i()(R.headerCell, w.mediumCol),
                     children: (0, l.jsxs)(d.P3F, {
                         className: R.sortItem,
                         onClick: n,
                         children: [
                             (0, l.jsx)(d.Text, {
-                                variant: 'eyebrow',
-                                color: 'interactive-normal',
-                                children: P.intl.string(P.t.EZ5QWF)
+                                variant: "eyebrow",
+                                color: "interactive-normal",
+                                children: P.intl.string(P.t.EZ5QWF),
                             }),
                             t === b.Nw.TIMESTAMP_ASC
                                 ? (0, l.jsx)(_.Z, {
                                       className: R.sortIcon,
-                                      direction: _.Z.Directions.UP
+                                      direction: _.Z.Directions.UP,
                                   })
                                 : (0, l.jsx)(_.Z, {
                                       className: R.sortIcon,
-                                      direction: _.Z.Directions.DOWN
-                                  })
-                        ]
-                    })
+                                      direction: _.Z.Directions.DOWN,
+                                  }),
+                        ],
+                    }),
                 }),
-                (0, l.jsx)('th', {
+                (0, l.jsx)("th", {
                     className: i()(R.headerCell, R.moreOptionsCol),
                     children: (0, l.jsx)(d.Text, {
-                        variant: 'eyebrow',
-                        color: 'interactive-normal',
-                        children: P.intl.string(P.t['5Q9xGh'])
-                    })
-                })
-            ]
-        })
+                        variant: "eyebrow",
+                        color: "interactive-normal",
+                        children: P.intl.string(P.t["5Q9xGh"]),
+                    }),
+                }),
+            ],
+        }),
     });
 }
 let O = r.memo(function (e) {
@@ -117,28 +117,28 @@ let O = r.memo(function (e) {
             { analyticsLocations: s } = (0, x.ZP)(),
             o = r.useCallback(
                 (e) => {
-                    (e.stopPropagation(),
+                    e.stopPropagation(),
                         e.preventDefault(),
                         (0, T.openUserProfileModal)({
                             userId: n.id,
                             joinRequestId: a,
-                            sourceAnalyticsLocations: s
-                        }));
+                            sourceAnalyticsLocations: s,
+                        });
                 },
-                [n, a, s]
+                [n, a, s],
             );
-        return (0, l.jsxs)('div', {
+        return (0, l.jsxs)("div", {
             className: w.memberNameContainer,
             children: [
                 (0, l.jsx)(d.P3F, {
                     className: w.memberAvatar,
                     onClick: o,
-                    children: (0, l.jsx)(m.Z, { user: n })
+                    children: (0, l.jsx)(m.Z, { user: n }),
                 }),
-                (0, l.jsx)('div', {
+                (0, l.jsx)("div", {
                     className: w.memberName,
                     children: (0, l.jsx)(d.Text, {
-                        variant: 'text-sm/medium',
+                        variant: "text-sm/medium",
                         children: (0, l.jsxs)(d.P3F, {
                             onClick: o,
                             className: w.nameContainer,
@@ -148,26 +148,26 @@ let O = r.memo(function (e) {
                                     primaryGuild: null == n ? void 0 : n.primaryGuild,
                                     userId: null == n ? void 0 : n.id,
                                     contextGuildId: i,
-                                    containerClassName: w.memberClanTag
-                                })
-                            ]
-                        })
-                    })
+                                    containerClassName: w.memberClanTag,
+                                }),
+                            ],
+                        }),
+                    }),
                 }),
-                (0, l.jsx)('div', {
+                (0, l.jsx)("div", {
                     className: w.memberGlobalName,
                     children: (0, l.jsx)(d.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'header-secondary',
-                        tag: 'span',
+                        variant: "text-xs/normal",
+                        color: "header-secondary",
+                        tag: "span",
                         children: (0, l.jsx)(d.P3F, {
                             onClick: o,
-                            tag: 'span',
-                            children: S.ZP.getUserTag(n)
-                        })
-                    })
-                })
-            ]
+                            tag: "span",
+                            children: S.ZP.getUserTag(n),
+                        }),
+                    }),
+                }),
+            ],
         });
     }),
     A = r.memo(function (e) {
@@ -181,7 +181,7 @@ let O = r.memo(function (e) {
                 (0, u.jW)(
                     e,
                     async () => {
-                        let { default: e } = await n.e('84259').then(n.bind(n, 597409));
+                        let { default: e } = await n.e("84259").then(n.bind(n, 597409));
                         return (t) => {
                             var n, r;
                             return (0, l.jsx)(
@@ -190,31 +190,31 @@ let O = r.memo(function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             l = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (l = l.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             l.forEach(function (t) {
                                                 var l;
-                                                ((l = n[t]),
+                                                (l = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: l,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = l));
-                                            }));
+                                                        : (e[t] = l);
+                                            });
                                     }
                                     return e;
                                 })({}, t)),
                                 (r = r =
                                     {
                                         guild: f,
-                                        user: h
+                                        user: h,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -228,37 +228,39 @@ let O = r.memo(function (e) {
                                       })(Object(r)).forEach(function (e) {
                                           Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                       }),
-                                n)
+                                n),
                             );
                         };
                     },
                     {
-                        position: 'bottom',
-                        align: 'right'
-                    }
+                        position: "bottom",
+                        align: "right",
+                    },
                 );
             };
         return null == h
             ? null
-            : (0, l.jsxs)('tr', {
+            : (0, l.jsxs)("tr", {
                   onClick: a,
-                  className: i()(w.roundedRow, w.memberRowContainer, { [w.selected]: (null == j ? void 0 : j.joinRequestId) === t.joinRequestId }),
+                  className: i()(w.roundedRow, w.memberRowContainer, {
+                      [w.selected]: (null == j ? void 0 : j.joinRequestId) === t.joinRequestId,
+                  }),
                   children: [
-                      (0, l.jsx)('td', {
+                      (0, l.jsx)("td", {
                           children: (0, l.jsx)(O, {
                               joinRequest: t,
-                              user: h
-                          })
+                              user: h,
+                          }),
                       }),
-                      (0, l.jsx)('td', {
+                      (0, l.jsx)("td", {
                           className: w.mediumCol,
                           children: (0, l.jsx)(d.Text, {
-                              variant: 'text-sm/normal',
-                              color: 'header-secondary',
-                              children: o()(m).format('lll')
-                          })
+                              variant: "text-sm/normal",
+                              color: "header-secondary",
+                              children: o()(m).format("lll"),
+                          }),
                       }),
-                      (0, l.jsx)('td', {
+                      (0, l.jsx)("td", {
                           className: R.moreOptionsCol,
                           children:
                               v &&
@@ -272,56 +274,56 @@ let O = r.memo(function (e) {
                                           onClick: g,
                                           className: w.button,
                                           children: (0, l.jsx)(d.Huf, {
-                                              size: 'custom',
-                                              color: 'currentColor',
+                                              size: "custom",
+                                              color: "currentColor",
                                               width: 18,
-                                              height: 18
-                                          })
+                                              height: 18,
+                                          }),
                                       });
-                                  }
-                              })
-                      })
-                  ]
+                                  },
+                              }),
+                      }),
+                  ],
               });
     }),
     k = () => {
-        let e = ''.concat(Math.floor(50 * Math.random()) + 100, 'px'),
-            t = ''.concat(Math.floor(50 * Math.random()) + 100, 'px'),
-            n = ''.concat(Math.floor(25 * Math.random()) + 50, 'px');
-        return (0, l.jsxs)('tr', {
+        let e = "".concat(Math.floor(50 * Math.random()) + 100, "px"),
+            t = "".concat(Math.floor(50 * Math.random()) + 100, "px"),
+            n = "".concat(Math.floor(25 * Math.random()) + 50, "px");
+        return (0, l.jsxs)("tr", {
             className: i()(w.roundedRow, w.memberRowContainer),
             children: [
-                (0, l.jsx)('td', {
-                    children: (0, l.jsxs)('div', {
+                (0, l.jsx)("td", {
+                    children: (0, l.jsxs)("div", {
                         className: w.memberNameContainer,
                         children: [
-                            (0, l.jsx)('div', { className: i()(R.placeholderAvatar, w.memberAvatar) }),
-                            (0, l.jsx)('div', {
+                            (0, l.jsx)("div", { className: i()(R.placeholderAvatar, w.memberAvatar) }),
+                            (0, l.jsx)("div", {
                                 className: w.memberName,
-                                children: (0, l.jsx)('div', {
+                                children: (0, l.jsx)("div", {
                                     className: R.placeholderText,
-                                    style: { width: e }
-                                })
+                                    style: { width: e },
+                                }),
                             }),
-                            (0, l.jsx)('div', {
+                            (0, l.jsx)("div", {
                                 className: w.memberGlobalName,
-                                children: (0, l.jsx)('div', {
+                                children: (0, l.jsx)("div", {
                                     className: R.placeholderTextSmall,
-                                    style: { width: t }
-                                })
-                            })
-                        ]
-                    })
+                                    style: { width: t },
+                                }),
+                            }),
+                        ],
+                    }),
                 }),
-                (0, l.jsx)('td', {
+                (0, l.jsx)("td", {
                     className: w.mediumCol,
-                    children: (0, l.jsx)('div', {
+                    children: (0, l.jsx)("div", {
                         className: R.placeholderText,
-                        style: { width: n }
-                    })
+                        style: { width: n },
+                    }),
                 }),
-                (0, l.jsx)('td', { className: R.moreOptionsCol })
-            ]
+                (0, l.jsx)("td", { className: R.moreOptionsCol }),
+            ],
         });
     };
 function B(e) {
@@ -333,52 +335,52 @@ function B(e) {
         { guildJoinRequests: u } = (0, g.j)({
             guildId: t,
             applicationStatus: n,
-            sortOrder: s
+            sortOrder: s,
         }),
         { fetchNextPage: m } = (0, f.m)({
             guildId: t,
-            guildJoinRequests: u
+            guildJoinRequests: u,
         }),
         x = r.useCallback(async () => {
             let e = s === b.Nw.TIMESTAMP_ASC ? b.Nw.TIMESTAMP_DESC : b.Nw.TIMESTAMP_ASC;
-            (h.Z.setSelectedSortOrder(t, e), await m(e, n));
+            h.Z.setSelectedSortOrder(t, e), await m(e, n);
         }, [s, t, m, n]);
     return null == i
         ? null
-        : (0, l.jsx)('div', {
+        : (0, l.jsx)("div", {
               className: I.mainTableContainer,
               children: (0, l.jsx)(d.Den, {
                   className: I.horizatonalScroller,
                   ref: a,
-                  orientation: 'horizontal',
-                  children: (0, l.jsxs)('table', {
+                  orientation: "horizontal",
+                  children: (0, l.jsxs)("table", {
                       className: R.table,
                       children: [
                           (0, l.jsx)(M, {
                               sortOrder: s,
-                              onSortChange: x
+                              onSortChange: x,
                           }),
-                          (0, l.jsx)('tbody', {
+                          (0, l.jsx)("tbody", {
                               children: o
-                                  ? [, , , , ,].fill(0).map((e, t) => (0, l.jsx)(k, {}, 'placeholder-'.concat(t)))
+                                  ? [, , , , ,].fill(0).map((e, t) => (0, l.jsx)(k, {}, "placeholder-".concat(t)))
                                   : 0 === u.length
-                                    ? (0, l.jsx)('td', {
+                                    ? (0, l.jsx)("td", {
                                           colSpan: 3,
-                                          children: (0, l.jsx)(y, { status: n })
+                                          children: (0, l.jsx)(y, { status: n }),
                                       })
                                     : u.map((e) =>
                                           (0, l.jsx)(
                                               A,
                                               {
                                                   joinRequest: e,
-                                                  onSelect: () => h.Z.setSelectedGuildJoinRequest(t, e)
+                                                  onSelect: () => h.Z.setSelectedGuildJoinRequest(t, e),
                                               },
-                                              e.joinRequestId
-                                          )
-                                      )
-                          })
-                      ]
-                  })
-              })
+                                              e.joinRequestId,
+                                          ),
+                                      ),
+                          }),
+                      ],
+                  }),
+              }),
           });
 }

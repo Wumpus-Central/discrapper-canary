@@ -1,4 +1,4 @@
-(A.d(t, { Z: () => p }), A(388685));
+A.d(t, { Z: () => p }), A(388685);
 var n = A(255367),
     r = A(73800),
     l = A(120356),
@@ -11,24 +11,24 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var A = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(A);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(A).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(A, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = A[t]),
+                (n = A[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -50,13 +50,13 @@ function u(e, t) {
         e
     );
 }
-let f = 'custom-image',
+let f = "custom-image",
     g = r.forwardRef(function (e, t) {
         let { selectedImageName: A, onChange: r, disabled: l = !1, name: i, alt: s, data: f } = e,
             g = i === A,
             p = (0, o.xUy)({
                 isSelected: g,
-                label: s
+                label: s,
             }),
             m = l
                 ? void 0
@@ -71,25 +71,34 @@ let f = 'custom-image',
                         ref: t,
                         className: a()(d.radioOption, {
                             [d.selected]: g,
-                            [d.disabled]: l
+                            [d.disabled]: l,
                         }),
                         onClick: m,
-                        'aria-disabled': l
+                        "aria-disabled": l,
                     },
-                    p
+                    p,
                 ),
                 {
-                    children: (0, n.jsx)('img', {
+                    children: (0, n.jsx)("img", {
                         src: f,
                         alt: s,
-                        className: d.radioOptionImage
-                    })
-                }
-            )
+                        className: d.radioOptionImage,
+                    }),
+                },
+            ),
         );
     });
 function p(e) {
-    let { presetImages: t, image: A, imageName: l, savedImageName: p, onChange: m, uploadButtonLabel: h = s.intl.string(s.t['MsUY/f']), radioGroupAriaLabel: C = s.intl.string(s.t['0Q0UJi']), disabled: q = !1 } = e,
+    let {
+            presetImages: t,
+            image: A,
+            imageName: l,
+            savedImageName: p,
+            onChange: m,
+            uploadButtonLabel: h = s.intl.string(s.t["MsUY/f"]),
+            radioGroupAriaLabel: C = s.intl.string(s.t["0Q0UJi"]),
+            disabled: q = !1,
+        } = e,
         b = l === f,
         [v, x] = r.useState(b ? A : null),
         [j, U] = r.useState(null),
@@ -98,10 +107,10 @@ function p(e) {
     r.useEffect(() => {
         p !== f && (x(null), U(null));
     }, [p]);
-    let O = null != j ? s.intl.formatToPlainString(s.t['Kw+5YW'], { filename: j }) : s.intl.string(s.t.SNPvSk),
+    let O = null != j ? s.intl.formatToPlainString(s.t["Kw+5YW"], { filename: j }) : s.intl.string(s.t.SNPvSk),
         I = (0, o.arW)({
-            orientation: 'horizontal',
-            isDisabled: q
+            orientation: "horizontal",
+            isDisabled: q,
         }),
         { ref: N } = I,
         F = (function (e, t) {
@@ -114,21 +123,23 @@ function p(e) {
                         n,
                         r = {},
                         l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) ((A = l[n]), t.indexOf(A) >= 0 || (r[A] = e[A]));
+                    for (n = 0; n < l.length; n++) (A = l[n]), t.indexOf(A) >= 0 || (r[A] = e[A]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++) ((A = l[n]), !(t.indexOf(A) >= 0) && Object.prototype.propertyIsEnumerable.call(e, A) && (r[A] = e[A]));
+                for (n = 0; n < l.length; n++)
+                    (A = l[n]),
+                        !(t.indexOf(A) >= 0) && Object.prototype.propertyIsEnumerable.call(e, A) && (r[A] = e[A]);
             }
             return r;
-        })(I, ['ref']),
+        })(I, ["ref"]),
         y = () => {
             var e;
             return null == (e = V.current) ? void 0 : e.activateUploadDialogue();
         },
         K = () => {
-            (l === f && m(t[0].data, t[0].name), x(null), U(null));
+            l === f && m(t[0].data, t[0].name), x(null), U(null);
         };
     return (
         r.useEffect(() => {
@@ -137,28 +148,28 @@ function p(e) {
                 null == (t = P.current) || null == (e = t.ref) || e.focus();
             }
         }, [b, j]),
-        (0, n.jsxs)('div', {
+        (0, n.jsxs)("div", {
             className: d.imageSelectionContainer,
             children: [
                 (0, n.jsx)(o.tEY, {
                     within: !0,
-                    children: (0, n.jsxs)('div', {
+                    children: (0, n.jsxs)("div", {
                         className: a()(d.uploadButton, {
                             [d.disabled]: q,
-                            [d.hidden]: null != v
+                            [d.hidden]: null != v,
                         }),
-                        'aria-disabled': q,
+                        "aria-disabled": q,
                         children: [
                             (0, n.jsx)(o.FmF, {
-                                size: 'xs',
-                                color: 'currentColor',
-                                'aria-hidden': !0
+                                size: "xs",
+                                color: "currentColor",
+                                "aria-hidden": !0,
                             }),
                             (0, n.jsx)(o.Text, {
-                                variant: 'text-xxs/normal',
-                                color: 'text-muted',
-                                'aria-hidden': !0,
-                                children: h
+                                variant: "text-xxs/normal",
+                                color: "text-muted",
+                                "aria-hidden": !0,
+                                children: h,
                             }),
                             (0, n.jsx)(i.ZP, {
                                 ref: V,
@@ -166,13 +177,13 @@ function p(e) {
                                 onChange: (e, t) => {
                                     null != t && (U(t.name), x(e), m(e, f));
                                 },
-                                'aria-label': h
-                            })
-                        ]
-                    })
+                                "aria-label": h,
+                            }),
+                        ],
+                    }),
                 }),
                 null != v &&
-                    (0, n.jsxs)('div', {
+                    (0, n.jsxs)("div", {
                         className: d.customImageActionContainer,
                         children: [
                             (0, n.jsx)(o.ua7, {
@@ -184,14 +195,14 @@ function p(e) {
                                         u(c({}, e), {
                                             className: d.customImageAction,
                                             onClick: y,
-                                            'aria-label': s.intl.formatToPlainString(s.t.Qc9Lg4, { filename: j }),
+                                            "aria-label": s.intl.formatToPlainString(s.t.Qc9Lg4, { filename: j }),
                                             children: (0, n.jsx)(o.vdY, {
-                                                size: 'xs',
-                                                color: 'currentColor',
-                                                className: d.editIcon
-                                            })
-                                        })
-                                    )
+                                                size: "xs",
+                                                color: "currentColor",
+                                                className: d.editIcon,
+                                            }),
+                                        }),
+                                    ),
                             }),
                             (0, n.jsx)(o.ua7, {
                                 text: s.intl.string(s.t.WxqWU1),
@@ -202,26 +213,26 @@ function p(e) {
                                         u(c({}, e), {
                                             className: d.customImageAction,
                                             onClick: K,
-                                            'aria-label': s.intl.formatToPlainString(s.t.Z43V9f, { filename: j }),
+                                            "aria-label": s.intl.formatToPlainString(s.t.Z43V9f, { filename: j }),
                                             children: (0, n.jsx)(o.XHJ, {
-                                                size: 'md',
-                                                color: 'currentColor',
-                                                className: d.deleteIcon
-                                            })
-                                        })
-                                    )
-                            })
-                        ]
+                                                size: "md",
+                                                color: "currentColor",
+                                                className: d.deleteIcon,
+                                            }),
+                                        }),
+                                    ),
+                            }),
+                        ],
                     }),
                 (0, n.jsxs)(
-                    'div',
+                    "div",
                     u(
                         c(
                             {
-                                'aria-label': C,
-                                ref: N
+                                "aria-label": C,
+                                ref: N,
                             },
-                            F
+                            F,
                         ),
                         {
                             className: d.radioGroup,
@@ -234,7 +245,7 @@ function p(e) {
                                         disabled: q,
                                         name: f,
                                         alt: O,
-                                        data: v
+                                        data: v,
                                     }),
                                 t.map((e) =>
                                     (0, n.jsx)(
@@ -243,18 +254,18 @@ function p(e) {
                                             {
                                                 selectedImageName: l,
                                                 onChange: m,
-                                                disabled: q
+                                                disabled: q,
                                             },
-                                            e
+                                            e,
                                         ),
-                                        e.name
-                                    )
-                                )
-                            ]
-                        }
-                    )
-                )
-            ]
+                                        e.name,
+                                    ),
+                                ),
+                            ],
+                        },
+                    ),
+                ),
+            ],
         })
     );
 }

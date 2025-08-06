@@ -11,12 +11,12 @@ async function a(e) {
             body: {
                 user_trial_offer: t,
                 user_discount: n,
-                user_discount_offer: a
+                user_discount_offer: a,
             },
-            rejectWithError: !0
+            rejectWithError: !0,
         });
         if (e.ok) return e.body;
-        return (i.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), []);
+        return i.Z.captureMessage("fetchPremiumMarketingContentWithUserOffer failed"), [];
     } catch (e) {
         return [];
     }

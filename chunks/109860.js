@@ -6,9 +6,9 @@ var r = n(220159),
     c = n(613694).Map;
 r(
     {
-        target: 'Map',
+        target: "Map",
         stat: !0,
-        forced: !0
+        forced: !0,
     },
     {
         keyBy: function (e, t) {
@@ -21,6 +21,6 @@ r(
                 }),
                 n
             );
-        }
-    }
+        },
+    },
 );

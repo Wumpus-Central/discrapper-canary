@@ -37,24 +37,24 @@ function X(A) {
     for (var t = 1; t < arguments.length; t++) {
         var e = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(e);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(e).filter(function (A) {
                     return Object.getOwnPropertyDescriptor(e, A).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = e[t]),
+                (r = e[t]),
                     t in A
                         ? Object.defineProperty(A, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (A[t] = r));
-            }));
+                        : (A[t] = r);
+            });
     }
     return A;
 }
@@ -70,15 +70,17 @@ let m = (A) => {
                         r,
                         g = {},
                         v = Object.keys(A);
-                    for (r = 0; r < v.length; r++) ((e = v[r]), t.indexOf(e) >= 0 || (g[e] = A[e]));
+                    for (r = 0; r < v.length; r++) (e = v[r]), t.indexOf(e) >= 0 || (g[e] = A[e]);
                     return g;
                 })(A, t);
             if (Object.getOwnPropertySymbols) {
                 var v = Object.getOwnPropertySymbols(A);
-                for (r = 0; r < v.length; r++) ((e = v[r]), !(t.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(A, e) && (g[e] = A[e]));
+                for (r = 0; r < v.length; r++)
+                    (e = v[r]),
+                        !(t.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(A, e) && (g[e] = A[e]);
             }
             return g;
-        })(A, ['badge', 'primaryTintColor', 'secondaryTintColor']);
+        })(A, ["badge", "primaryTintColor", "secondaryTintColor"]);
     switch (t) {
         case L.x_.SWORD:
             return (0, r.jsx)(
@@ -86,10 +88,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.WATER_DROP:
             return (0, r.jsx)(y.q, X({ primaryTintColor: e }, G));
@@ -101,10 +103,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.MOON:
             return (0, r.jsx)(p.$, X({ primaryTintColor: e }, G));
@@ -122,10 +124,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.CROSSHAIRS:
             return (0, r.jsx)(
@@ -133,10 +135,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.FLOWER:
             return (0, r.jsx)(
@@ -144,10 +146,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.FORCE:
             return (0, r.jsx)(
@@ -155,10 +157,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.GEM:
             return (0, r.jsx)(
@@ -166,10 +168,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.LAVA:
             return (0, r.jsx)(
@@ -177,10 +179,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.PSYCHIC:
             return (0, r.jsx)(
@@ -188,10 +190,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.SMOKE:
             return (0, r.jsx)(
@@ -199,10 +201,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.SNOW:
             return (0, r.jsx)(
@@ -210,10 +212,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.SOUND:
             return (0, r.jsx)(
@@ -221,10 +223,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.SUN:
             return (0, r.jsx)(
@@ -232,10 +234,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.WIND:
             return (0, r.jsx)(
@@ -243,10 +245,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.BUNNY:
             return (0, r.jsx)(g.K, X({ primaryTintColor: e }, G));
@@ -256,10 +258,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.FROG:
             return (0, r.jsx)(
@@ -267,10 +269,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.GOAT:
             return (0, r.jsx)(Q.V, X({ primaryTintColor: e }, G));
@@ -284,10 +286,10 @@ let m = (A) => {
                 X(
                     {
                         primaryTintColor: e,
-                        secondaryTintColor: m
+                        secondaryTintColor: m,
                     },
-                    G
-                )
+                    G,
+                ),
             );
         case L.x_.TROPHY:
             return (0, r.jsx)(O.o, X({ primaryTintColor: e }, G));

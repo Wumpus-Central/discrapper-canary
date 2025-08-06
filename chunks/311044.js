@@ -29,22 +29,22 @@ function b(e) {
                 null == O
                     ? Array.from({ length: null != x ? x : 10 }).map((e, t) =>
                           (0, r.jsxs)(
-                              'div',
+                              "div",
                               {
                                   className: g.friendsLoadingItem,
                                   children: [
                                       (0, r.jsx)(c.ZT, {
                                           width: 40,
-                                          opacity: 0.08
+                                          opacity: 0.08,
                                       }),
                                       (0, r.jsx)(c.ZT, {
                                           width: 135,
-                                          opacity: 0.08
-                                      })
-                                  ]
+                                          opacity: 0.08,
+                                      }),
+                                  ],
                               },
-                              t
-                          )
+                              t,
+                          ),
                       )
                     : 0 === O.length
                       ? (0, r.jsx)(m.s_, {})
@@ -59,38 +59,39 @@ function b(e) {
                                     channelId: b,
                                     onSelect: () => {
                                         var e, t;
-                                        (null == j || j(),
-                                            v({ action: 'PRESS_MUTUAL_FRIEND' }),
+                                        null == j || j(),
+                                            v({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
                                                             r = Object.keys(n);
-                                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                                        "function" == typeof Object.getOwnPropertySymbols &&
                                                             (r = r.concat(
                                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                                })
+                                                                    return Object.getOwnPropertyDescriptor(n, e)
+                                                                        .enumerable;
+                                                                }),
                                                             )),
                                                             r.forEach(function (t) {
                                                                 var r;
-                                                                ((r = n[t]),
+                                                                (r = n[t]),
                                                                     t in e
                                                                         ? Object.defineProperty(e, t, {
                                                                               value: r,
                                                                               enumerable: !0,
                                                                               configurable: !0,
-                                                                              writable: !0
+                                                                              writable: !0,
                                                                           })
-                                                                        : (e[t] = r));
-                                                            }));
+                                                                        : (e[t] = r);
+                                                            });
                                                     }
                                                     return e;
                                                 })({}, y)),
                                                 (t = t =
                                                     {
                                                         userId: l.id,
-                                                        sourceAnalyticsLocations: h
+                                                        sourceAnalyticsLocations: h,
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -102,15 +103,19 @@ function b(e) {
                                                           }
                                                           return n;
                                                       })(Object(t)).forEach(function (n) {
-                                                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                                          Object.defineProperty(
+                                                              e,
+                                                              n,
+                                                              Object.getOwnPropertyDescriptor(t, n),
+                                                          );
                                                       }),
-                                                e)
-                                            ));
-                                    }
+                                                e),
+                                            );
+                                    },
                                 },
-                                t
+                                t,
                             );
-                        })
+                        }),
         })
     );
 }

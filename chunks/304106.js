@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(953529));
+n.d(t, { Z: () => f }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,36 +10,36 @@ var r = n(255367),
     d = n(776761);
 let p = (e) => {
         let { IconComponent: t, className: n } = e;
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: a()(d.iconCircle, n),
             children: (0, r.jsx)(t, {
                 className: d.icon,
-                color: 'currentColor'
-            })
+                color: "currentColor",
+            }),
         });
     },
     h = (e) => {
         let { circle: t, smallHeader: n, text: i, className: l } = e;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: a()(d.recommendationReason, l),
             children: [
                 t,
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: d.description,
                     children: [
                         null != n
-                            ? (0, r.jsx)('div', {
+                            ? (0, r.jsx)("div", {
                                   className: d.smallHeader,
-                                  children: n
+                                  children: n,
                               })
                             : null,
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: d.text,
-                            children: i
-                        })
-                    ]
-                })
-            ]
+                            children: i,
+                        }),
+                    ],
+                }),
+            ],
         });
     };
 class f extends i.Component {
@@ -50,14 +50,14 @@ class f extends i.Component {
                 className: t,
                 circle: (0, r.jsx)(p, { IconComponent: o.Que }),
                 smallHeader: u.intl.string(u.t.u81aYW),
-                text: (0, s.vc)(e.releaseDate, 'LL')
+                text: (0, s.vc)(e.releaseDate, "LL"),
             });
         if (e.type === c.AzA.RELEASE_DATE)
             return (0, r.jsx)(h, {
                 className: t,
                 circle: (0, r.jsx)(p, { IconComponent: o.Que }),
                 smallHeader: u.intl.string(u.t.qpwaNT),
-                text: (0, s.vc)(e.releaseDate, 'LL')
+                text: (0, s.vc)(e.releaseDate, "LL"),
             });
         if (e.type === c.AzA.EARLY_ACCESS)
             if (null != e.releaseDate)
@@ -65,34 +65,34 @@ class f extends i.Component {
                     className: t,
                     circle: (0, r.jsx)(p, {
                         IconComponent: o.d$P,
-                        className: d.earlyAccess
+                        className: d.earlyAccess,
                     }),
                     smallHeader: u.intl.string(u.t.HYys0t),
-                    text: (0, s.vc)(e.releaseDate, 'LL')
+                    text: (0, s.vc)(e.releaseDate, "LL"),
                 });
             else
                 return (0, r.jsx)(h, {
                     className: t,
                     circle: (0, r.jsx)(p, {
                         IconComponent: o.d$P,
-                        className: d.earlyAccess
+                        className: d.earlyAccess,
                     }),
-                    text: u.intl.string(u.t.HYys0t)
+                    text: u.intl.string(u.t.HYys0t),
                 });
         return e.type === c.AzA.FLAVOR_TEXT
             ? (0, r.jsx)(h, {
                   circle: (0, r.jsx)(p, { IconComponent: o.dz2 }),
                   text: e.flavorText,
-                  className: t
+                  className: t,
               })
             : e.type === c.AzA.HAS_FREE_PREMIUM_CONTENT
               ? (0, r.jsx)(h, {
                     className: t,
                     circle: (0, r.jsx)(p, {
                         IconComponent: o.SrA,
-                        className: d.premiumCircle
+                        className: d.premiumCircle,
                     }),
-                    text: u.intl.string(u.t.R9SwVl)
+                    text: u.intl.string(u.t.R9SwVl),
                 })
               : null;
     }

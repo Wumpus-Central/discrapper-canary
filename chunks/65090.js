@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(953529));
+n.d(t, { Z: () => E }), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(588468),
@@ -10,24 +10,27 @@ var r = n(255367),
     d = n(761652),
     f = n(388032);
 function _(e, t, n) {
-    return s.ZP.hasSameRoleAsUsername(t, e) ? ''.concat(d.ME).concat(e.tag) : ''.concat(d.ME).concat(l.ZP.getUserTag(e, { identifiable: n ? 'never' : 'always' }));
+    return s.ZP.hasSameRoleAsUsername(t, e)
+        ? "".concat(d.ME).concat(e.tag)
+        : "".concat(d.ME).concat(l.ZP.getUserTag(e, { identifiable: n ? "never" : "always" }));
 }
 function p(e) {
-    return '<@'.concat(e.id, '>');
+    return "<@".concat(e.id, ">");
 }
 function h(e) {
     return e.text;
 }
 function m(e) {
-    return ''.concat(d.ME).concat(e.name);
+    return "".concat(d.ME).concat(e.name);
 }
 function g(e) {
-    return '<@&'.concat(e.id, '>');
+    return "<@&".concat(e.id, ">");
 }
 let E = {
     sentinel: d.ME,
     stores: [a.ZP],
-    matches: (e, t, n, r, i) => i.mentions.user !== u.h3.DENY || i.mentions.role !== u.Fw.DENY || i.mentions.global !== u.VV.DENY,
+    matches: (e, t, n, r, i) =>
+        i.mentions.user !== u.h3.DENY || i.mentions.role !== u.Fw.DENY || i.mentions.global !== u.VV.DENY,
     queryResults(e, t, n, r, i) {
         let o = r.mentions.global === u.VV.ALLOW_EVERYONE || r.mentions.global === u.VV.ALLOW_EVERYONE_OR_HERE,
             a = r.mentions.global === u.VV.ALLOW_EVERYONE_OR_HERE,
@@ -45,8 +48,8 @@ let E = {
                 canMentionRoles: c,
                 includeAllGuildUsers: d,
                 includeNonMentionableRoles: f,
-                request: i
-            })
+                request: i,
+            }),
         };
     },
     renderResults(e) {
@@ -59,7 +62,7 @@ let E = {
                 query: h,
                 options: m,
                 onHover: g,
-                onClick: E
+                onClick: E,
             } = e,
             b = a.map((e, t) =>
                 (0, r.jsx)(
@@ -73,10 +76,10 @@ let E = {
                         user: e.user,
                         nick: e.nick,
                         status: e.status,
-                        hidePersonalInformation: m.hidePersonalInformation
+                        hidePersonalInformation: m.hidePersonalInformation,
                     },
-                    e.user.id
-                )
+                    e.user.id,
+                ),
             ),
             y = s.map((e, t) =>
                 (0, r.jsx)(
@@ -88,10 +91,10 @@ let E = {
                         index: a.length + t,
                         text: e.text,
                         description: m.hideMentionDescription ? null : e.description,
-                        'aria-label': e.text
+                        "aria-label": e.text,
                     },
-                    e.text
-                )
+                    e.text,
+                ),
             ),
             O = l.map((e, t) =>
                 (0, r.jsx)(
@@ -103,13 +106,15 @@ let E = {
                         index: a.length + s.length + t,
                         role: e,
                         hideDescription: m.hideMentionDescription,
-                        guildId: p.guild_id
+                        guildId: p.guild_id,
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             );
         return (
-            m.mentions.user === u.h3.DENY ? ((t = f.t.MLiD1d), (n = f.intl.string(f.t.LPJmLy))) : ((t = f.t.rPNimp), (n = f.intl.string(f.t['9Oq93t']))),
+            m.mentions.user === u.h3.DENY
+                ? ((t = f.t.MLiD1d), (n = f.intl.string(f.t.LPJmLy)))
+                : ((t = f.t.rPNimp), (n = f.intl.string(f.t["9Oq93t"]))),
             (0, r.jsxs)(
                 i.Fragment,
                 {
@@ -118,16 +123,18 @@ let E = {
                             titleWithQuery: t,
                             titleWithoutQuery: n,
                             query: h,
-                            getQuery: (e) => ''.concat(d.ME).concat(e)
+                            getQuery: (e) => "".concat(d.ME).concat(e),
                         }),
                         b,
                         a.length > 0 && s.length > 0 ? (0, r.jsx)(o.ZP.Divider, {}) : null,
                         y,
-                        (a.length > 0 && l.length > 0) || (s.length > 0 && l.length > 0) ? (0, r.jsx)(o.ZP.Divider, {}) : null,
-                        O
-                    ]
+                        (a.length > 0 && l.length > 0) || (s.length > 0 && l.length > 0)
+                            ? (0, r.jsx)(o.ZP.Divider, {})
+                            : null,
+                        O,
+                    ],
                 },
-                'mentions'
+                "mentions",
             )
         );
     },
@@ -136,11 +143,20 @@ let E = {
                 results: { users: t, globals: n, roles: r },
                 index: i,
                 options: o,
-                channel: a
+                channel: a,
             } = e,
             s = t[i],
             l = n[i - t.length],
             c = r[i - t.length - n.length];
-        return (null != s ? o.insertText(_(s.user, a, o.hidePersonalInformation), p(s.user)) : null != l ? (null != l.inlineAutocompleteType ? o.insertAutocompleteInput(l.inlineAutocompleteType) : o.insertText(h(l))) : null != c && o.insertText(m(c), g(c)), { type: u.z2.MENTION });
-    }
+        return (
+            null != s
+                ? o.insertText(_(s.user, a, o.hidePersonalInformation), p(s.user))
+                : null != l
+                  ? null != l.inlineAutocompleteType
+                      ? o.insertAutocompleteInput(l.inlineAutocompleteType)
+                      : o.insertText(h(l))
+                  : null != c && o.insertText(m(c), g(c)),
+            { type: u.z2.MENTION }
+        );
+    },
 };

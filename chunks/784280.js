@@ -1,4 +1,4 @@
-(a.d(t, { default: () => _ }), a(388685));
+a.d(t, { default: () => _ }), a(388685);
 var n = a(255367),
     r = a(73800),
     o = a(442837),
@@ -18,14 +18,14 @@ function _(e) {
     let { guildId: t } = e,
         a = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
         [_, p] = r.useState(null),
-        [C, v] = r.useState(''),
+        [C, v] = r.useState(""),
         { createMultipleConfettiAt: H } = r.useContext(c.h),
         N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion, []),
         k = async (t) => {
             let { onClose: a, guildId: n } = e;
-            (t.preventDefault(), p(null));
+            t.preventDefault(), p(null);
             try {
-                (await (0, u.e)(n, { nick: C }), null == a || a());
+                await (0, u.e)(n, { nick: C }), null == a || a();
             } catch (e) {
                 p(new s.Hx(e));
             }
@@ -40,29 +40,29 @@ function _(e) {
         (0, n.jsxs)(l.Y0X, {
             className: g.__invalid_modalRoot,
             transitionState: j,
-            'aria-label': x.intl.formatToPlainString(x.t['d+6kzs'], { guildName: null == a ? void 0 : a.name }),
-            parentComponent: 'HubRealNameModal',
+            "aria-label": x.intl.formatToPlainString(x.t["d+6kzs"], { guildName: null == a ? void 0 : a.name }),
+            parentComponent: "HubRealNameModal",
             children: [
                 (0, n.jsxs)(l.xBx, {
                     separator: !1,
                     className: g.formHeaderContainer,
                     direction: m.Z.Direction.VERTICAL,
                     children: [
-                        (0, n.jsx)('div', { className: g.formImage }),
+                        (0, n.jsx)("div", { className: g.formImage }),
                         (0, n.jsx)(l.X6q, {
-                            variant: 'heading-xl/semibold',
+                            variant: "heading-xl/semibold",
                             className: g.formHeader,
-                            children: x.intl.format(x.t['d+6kzs'], { guildName: null == a ? void 0 : a.name })
+                            children: x.intl.format(x.t["d+6kzs"], { guildName: null == a ? void 0 : a.name }),
                         }),
                         (0, n.jsx)(l.Text, {
-                            color: 'header-secondary',
-                            variant: 'text-sm/normal',
+                            color: "header-secondary",
+                            variant: "text-sm/normal",
                             className: g.formSubHeader,
-                            children: x.intl.string(x.t.b3L8y8)
-                        })
-                    ]
+                            children: x.intl.string(x.t.b3L8y8),
+                        }),
+                    ],
                 }),
-                (0, n.jsxs)('form', {
+                (0, n.jsxs)("form", {
                     className: g.formContent,
                     onSubmit: k,
                     children: [
@@ -74,24 +74,24 @@ function _(e) {
                                     onChange: (e) => {
                                         v(e);
                                     },
-                                    error: null == _ ? void 0 : _.getFirstFieldErrorMessage('name'),
-                                    value: C
-                                })
-                            })
+                                    error: null == _ ? void 0 : _.getFirstFieldErrorMessage("name"),
+                                    value: C,
+                                }),
+                            }),
                         }),
                         (0, n.jsx)(l.mzw, {
                             className: g.formFooter,
                             direction: m.Z.Direction.VERTICAL,
                             children: (0, n.jsx)(i.zx, {
-                                type: 'submit',
+                                type: "submit",
                                 size: i.zx.Sizes.LARGE,
                                 color: i.zx.Colors.BRAND,
-                                children: x.intl.string(x.t.Np4yXV)
-                            })
-                        })
-                    ]
-                })
-            ]
+                                children: x.intl.string(x.t.Np4yXV),
+                            }),
+                        }),
+                    ],
+                }),
+            ],
         })
     );
 }

@@ -16,6 +16,6 @@ function o(e) {
             !e === o ? (0, s.iR)() : (0, s.e1)(!e);
         },
         note: c ? null : l.intl.formatToPlainString(l.t.aYhclZ, { username: t }),
-        children: l.intl.string(l.t['3cWDuL'])
+        children: l.intl.string(l.t["3cWDuL"]),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { u: () => D }), n(388685));
+n.d(t, { u: () => D }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(91192),
@@ -32,14 +32,14 @@ var r = n(255367),
 let A = {
     origin: {
         x: -16,
-        y: 0
+        y: 0,
     },
     targetWidth: 48,
     targetHeight: 48,
     offset: {
         x: 0,
-        y: 0
-    }
+        y: 0,
+    },
 };
 function R(e) {
     var t, n;
@@ -48,10 +48,10 @@ function R(e) {
         [y, C] = i.useState(!1),
         [v, j] = i.useState(null),
         [N, R] = i.useState(0),
-        D = (0, l.Ie)('home'),
+        D = (0, l.Ie)("home"),
         L = (0, d.oq)().activePanel === d.wh.APP_ICON,
         M = () => {
-            (j(null), R(0), clearTimeout(v));
+            j(null), R(0), clearTimeout(v);
         };
     if (null == h) return null;
     let k = Z.intl.string(Z.t.YUU0RE);
@@ -61,7 +61,7 @@ function R(e) {
         b &&
         (U = (0, r.jsx)(c.Z, {
             className: T.downloadProgress,
-            determineOwnVisibility: !1
+            determineOwnVisibility: !1,
         }));
     let G = o || O || L,
         B = (0, r.jsx)(a.aRk, {
@@ -75,24 +75,24 @@ function R(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })(
@@ -100,24 +100,27 @@ function R(e) {
                         onMouseEnter: () => _(!0),
                         onMouseLeave: () => _(!1),
                         onClick: () => {
-                            if (!__OVERLAY__ && (null != v && clearTimeout(v), j(setTimeout(M, 500)), R(N + 1), 15 === N)) {
+                            if (
+                                !__OVERLAY__ &&
+                                (null != v && clearTimeout(v), j(setTimeout(M, 500)), R(N + 1), 15 === N)
+                            ) {
                                 M();
                                 let e = !s.K.get(P.wli);
-                                (s.K.set(P.wli, e),
+                                s.K.set(P.wli, e),
                                     e && s.K.set(w.O5, !0),
-                                    e ? (0, f.GN)('discodo') : (0, f.GN)('user_leave'),
+                                    e ? (0, f.GN)("discodo") : (0, f.GN)("user_leave"),
                                     C(!0),
                                     setTimeout(() => {
                                         C(!1);
-                                    }, 1000));
+                                    }, 1000);
                             }
                         },
                         selected: G,
                         ariaLabel: Z.intl.string(Z.t.YUU0RE),
-                        'aria-owns': 'guild-list-unread-dms',
-                        'aria-selected': o
+                        "aria-owns": "guild-list-unread-dms",
+                        "aria-selected": o,
                     },
-                    D
+                    D,
                 )),
                 (n = n =
                     {
@@ -127,11 +130,11 @@ function R(e) {
                                 analyticsSource: {
                                     page: P.ZY5.GUILD_CHANNEL,
                                     section: P.jXE.NAVIGATION,
-                                    object: P.qAy.BUTTON_HOME
-                                }
-                            }
+                                    object: P.qAy.BUTTON_HOME,
+                                },
+                            },
                         },
-                        children: (0, r.jsx)(u.Z, {})
+                        children: (0, r.jsx)(u.Z, {}),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -145,32 +148,32 @@ function R(e) {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
-            )
+                t),
+            ),
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: T.tutorialContainer,
         children: (0, r.jsx)(g.Z, {
             inlineSpecs: A,
-            tutorialId: 'friends-list',
-            position: 'right',
+            tutorialId: "friends-list",
+            position: "right",
             children: (0, r.jsxs)(S.H, {
                 children: [
                     (0, r.jsx)(E.Z, {
                         selected: o,
                         hovered: O,
-                        className: T.pill
+                        className: T.pill,
                     }),
                     (0, r.jsx)(x.Z, {
                         color: a.ua7.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: k,
                         selected: o,
-                        children: B
-                    })
-                ]
-            })
-        })
+                        children: B,
+                    }),
+                ],
+            }),
+        }),
     });
 }
 function D() {
@@ -185,7 +188,7 @@ function D() {
         i = Object.keys(N.nG),
         { unviewedTrialCount: l, unviewedDiscountCount: s } = (0, o.cj)([O.Z], () => ({
             unviewedTrialCount: O.Z.getUnacknowledgedOffers(i).length,
-            unviewedDiscountCount: O.Z.getUnacknowledgedDiscountOffers().length
+            unviewedDiscountCount: O.Z.getUnacknowledgedDiscountOffers().length,
         })),
         a = l + s,
         u = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
@@ -201,7 +204,7 @@ function D() {
             selectedChannelId: m.Z.getChannelId(P.ME),
             badge: f,
             link: E,
-            showProgressBadge: t
+            showProgressBadge: t,
         })
     );
 }

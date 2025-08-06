@@ -10,14 +10,14 @@ let l = (e) => {
         l = i.default.getId(),
         c = !(0, s.G5)(l, e),
         u = (0, a.og)(),
-        d = null != u ? r.z[u] : 'None',
+        d = null != u ? r.z[u] : "None",
         f = (0, a.Do)();
     return {
         dailyCapReached: t,
         inCooldown: n,
         inAccountTenureRestriction: c,
         lastContentShown: d,
-        currentFatigableWinner: null != f ? r.z[f] : 'None',
-        lastDismissibleContentWinner: d
+        currentFatigableWinner: null != f ? r.z[f] : "None",
+        lastDismissibleContentWinner: d,
     };
 };

@@ -1,1 +1,1 @@
-e.exports = { tile: 'tile_fdc206' };
+e.exports = { tile: "tile_fdc206" };

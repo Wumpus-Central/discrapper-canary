@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => o }), r(388685));
+r.d(t, { Z: () => o }), r(388685);
 var n = r(73800),
     a = r(570140),
     i = r(4646),
@@ -11,9 +11,9 @@ let o = (e) => {
         h = n.useMemo(() => new i.ZP(), []),
         p = n.useCallback(
             (e) => {
-                ((e.assetMap = h), r(e));
+                (e.assetMap = h), r(e);
             },
-            [h, r]
+            [h, r],
         ),
         [y, w] = n.useState(!1),
         v = n.useRef(null),
@@ -32,9 +32,9 @@ let o = (e) => {
                                   id: r.id,
                                   animated: !1,
                                   size: 64,
-                                  forcePNG: !0
+                                  forcePNG: !0,
                               });
-                (await h.loadRemoteImage(i, l),
+                await h.loadRemoteImage(i, l),
                     o(i, n),
                     w(!0),
                     null != x.current && clearTimeout(x.current),
@@ -43,24 +43,28 @@ let o = (e) => {
                         let t = null == (e = s.Z.lastConfetti) ? void 0 : e.triggerTime;
                         (null == t || Date.now() - t > 2500) &&
                             a.Z.dispatch({
-                                type: 'POTIONS_SET_CONFETTI_MODE',
-                                enabled: !1
+                                type: "POTIONS_SET_CONFETTI_MODE",
+                                enabled: !1,
                             });
-                    }, 2500)));
+                    }, 2500));
             }
             let t = E.current;
-            return (null != t && ((E.current = void 0), e(t)), a.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => a.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e));
+            return (
+                null != t && ((E.current = void 0), e(t)),
+                a.Z.subscribe("POTIONS_TRIGGER_MESSAGE_CONFETTI", e),
+                () => a.Z.unsubscribe("POTIONS_TRIGGER_MESSAGE_CONFETTI", e)
+            );
         }, [h, o]),
         n.useEffect(
             () => () => {
                 null != x.current &&
                     (a.Z.dispatch({
-                        type: 'POTIONS_SET_CONFETTI_MODE',
-                        enabled: !1
+                        type: "POTIONS_SET_CONFETTI_MODE",
+                        enabled: !1,
                     }),
                     clearTimeout(x.current));
             },
-            []
+            [],
         ),
         n.useEffect(() => {
             let e = () => {
@@ -71,8 +75,8 @@ let o = (e) => {
                 () => {
                     null != v.current &&
                         (a.Z.dispatch({
-                            type: 'POTIONS_SET_CONFETTI_MODE',
-                            enabled: !1
+                            type: "POTIONS_SET_CONFETTI_MODE",
+                            enabled: !1,
                         }),
                         clearTimeout(v.current));
                 }
@@ -83,7 +87,7 @@ let o = (e) => {
             draw: p,
             tickRate: d,
             improvePerformance: f,
-            playing: y
+            playing: y,
         }
     );
 };

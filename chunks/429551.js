@@ -1,17 +1,17 @@
-(n.d(t, {
+n.d(t, {
     Z: () => l,
-    m: () => s
+    m: () => s,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(846519),
     o = n(70956);
-let a = (e) => String(e).padStart(2, '0'),
+let a = (e) => String(e).padStart(2, "0"),
     s = (e) => {
         let t = Math.floor(e) % o.Z.Seconds.MINUTE,
             n = Math.floor(e / o.Z.Seconds.MINUTE) % o.Z.Seconds.MINUTE,
             r = Math.floor(e / o.Z.Seconds.HOUR);
-        return 0 === r ? ''.concat(a(n), ':').concat(a(t)) : ''.concat(a(r), ':').concat(a(n), ':').concat(a(t));
+        return 0 === r ? "".concat(a(n), ":").concat(a(t)) : "".concat(a(r), ":").concat(a(n), ":").concat(a(t));
     };
 function l(e) {
     let { start: t, end: n } = e,
@@ -23,6 +23,6 @@ function l(e) {
     return {
         elapsed: u,
         duration: c,
-        percentage: Math.max(Math.min(u / c, 1), 0)
+        percentage: Math.max(Math.min(u / c, 1), 0),
     };
 }

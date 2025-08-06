@@ -18,24 +18,24 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -63,65 +63,65 @@ function j(e) {
         j = (0, u.VM)(),
         E = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         C = r.useCallback(() => {
-            (a()(void 0 !== E, 'User must be logged in to accept a link request'),
+            a()(void 0 !== E, "User must be logged in to accept a link request"),
                 (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e('59716').then(n.bind(n, 275370));
+                    let { default: e } = await n.e("59716").then(n.bind(n, 275370));
                     return (n) =>
                         (0, i.jsx)(
                             e,
                             _(x({}, n), {
                                 currentUser: E,
-                                otherUser: t
-                            })
+                                otherUser: t,
+                            }),
                         );
-                }));
+                });
         }, [E, t]),
         O = r.useCallback(() => {
-            (a()(void 0 !== E, 'User must be logged in to decline a link request'),
+            a()(void 0 !== E, "User must be logged in to decline a link request"),
                 (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e('958').then(n.bind(n, 4526));
+                    let { default: e } = await n.e("958").then(n.bind(n, 4526));
                     return (n) =>
                         (0, i.jsx)(
                             e,
                             _(x({}, n), {
                                 currentUser: E,
-                                otherUser: t
-                            })
+                                otherUser: t,
+                            }),
                         );
-                }));
+                });
         }, [E, t]),
         v = r.useCallback(() => {
-            (a()(void 0 !== E, 'User must be logged in to decline a link request'),
+            a()(void 0 !== E, "User must be logged in to decline a link request"),
                 (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e('69015').then(n.bind(n, 247265));
+                    let { default: e } = await n.e("69015").then(n.bind(n, 247265));
                     return (n) =>
                         (0, i.jsx)(
                             e,
                             _(x({}, n), {
                                 currentUser: E,
-                                otherUser: t
-                            })
+                                otherUser: t,
+                            }),
                         );
-                }));
+                });
         }, [E, t]);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: b.container,
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: b.details,
                 children: (0, i.jsx)(p.Z, {
                     otherUser: t,
-                    status: g.ne.PENDING
-                })
+                    status: g.ne.PENDING,
+                }),
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: b.actions,
                 children: s
                     ? (0, i.jsx)(m.Z, {
                           icon: o.Dio,
                           className: b.__invalid_actionDeny,
                           tooltip: f.intl.string(h.default.e5iHmZ),
-                          onClick: v
+                          onClick: v,
                       })
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
@@ -131,17 +131,17 @@ function j(e) {
                                         icon: o.dz2,
                                         className: b.__invalid_actionAccept,
                                         tooltip: f.intl.string(h.default.krWQZG),
-                                        onClick: C
+                                        onClick: C,
                                     }),
                               (0, i.jsx)(m.Z, {
                                   icon: o.Dio,
                                   className: b.__invalid_actionDeny,
                                   tooltip: f.intl.string(h.default.bBDeND),
-                                  onClick: O
-                              })
-                          ]
-                      })
-            })
-        ]
+                                  onClick: O,
+                              }),
+                          ],
+                      }),
+            }),
+        ],
     });
 }

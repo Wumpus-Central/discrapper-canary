@@ -10,7 +10,7 @@ function c(e) {
     let { channelId: t, blockedUserIds: c, ignoredUserIds: u } = e;
     (0, i.ZDy)(
         async () => {
-            let { default: e } = await n.e('87337').then(n.bind(n, 164375));
+            let { default: e } = await n.e("87337").then(n.bind(n, 164375));
             return (n) => {
                 let { transitionState: i, onClose: o } = n;
                 return (0, r.jsx)(e, {
@@ -18,21 +18,21 @@ function c(e) {
                     blockedUserIds: c,
                     ignoredUserIds: u,
                     transitionState: i,
-                    onClose: o
+                    onClose: o,
                 });
             };
         },
         {
             onCloseCallback: () => {
-                ((0, a.O)(t),
+                (0, a.O)(t),
                     o.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                         action: s.q.DISMISS,
                         channel_id: t,
                         warning_medium: s.WR.MODAL,
                         blocked_user_ids: c,
-                        ignored_user_ids: u
-                    }));
-            }
-        }
+                        ignored_user_ids: u,
+                    });
+            },
+        },
     );
 }

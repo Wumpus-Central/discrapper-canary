@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => S }));
+n.r(t), n.d(t, { default: () => S });
 var r = n(393655),
     i = n(465735),
     o = n(528734),
@@ -13,17 +13,19 @@ var r = n(393655),
     p = n(633605);
 function h(e) {
     return (h =
-        'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+        "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
               }
             : function (e) {
-                  return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
+                  return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
+                      ? "symbol"
+                      : typeof e;
               })(e);
 }
 function m(e, t) {
-    if ('undefined' == typeof Symbol || null == e[Symbol.iterator]) {
-        if (Array.isArray(e) || (i = g(e)) || (t && e && 'number' == typeof e.length)) {
+    if ("undefined" == typeof Symbol || null == e[Symbol.iterator]) {
+        if (Array.isArray(e) || (i = g(e)) || (t && e && "number" == typeof e.length)) {
             i && (e = i);
             var n = 0,
                 r = function () {};
@@ -34,16 +36,18 @@ function m(e, t) {
                         ? { done: !0 }
                         : {
                               done: !1,
-                              value: e[n++]
+                              value: e[n++],
                           };
                 },
                 e: function (e) {
                     throw e;
                 },
-                f: r
+                f: r,
             };
         }
-        throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+        throw TypeError(
+            "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+        );
     }
     var i,
         o,
@@ -55,10 +59,10 @@ function m(e, t) {
         },
         n: function () {
             var e = i.next();
-            return ((a = e.done), e);
+            return (a = e.done), e;
         },
         e: function (e) {
-            ((s = !0), (o = e));
+            (s = !0), (o = e);
         },
         f: function () {
             try {
@@ -66,15 +70,16 @@ function m(e, t) {
             } finally {
                 if (s) throw o;
             }
-        }
+        },
     };
 }
 function g(e, t) {
     if (e) {
-        if ('string' == typeof e) return E(e, t);
+        if ("string" == typeof e) return E(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
-        if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return E(e, t);
+        if (("Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n))
+            return Array.from(e);
+        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return E(e, t);
     }
 }
 function E(e, t) {
@@ -94,13 +99,53 @@ function S(e, t, n, g) {
         O = String(t),
         v = (0, p.j)(),
         S = null != (R = null != (P = null == g ? void 0 : g.locale) ? P : v.locale) ? R : r.Z;
-    if (!S.match) throw RangeError('locale must contain match property');
-    var N = (0, u.Z)(null != (w = null != (D = null != (L = null != (x = null == g ? void 0 : g.firstWeekContainsDate) ? x : null == g || null == (M = g.locale) || null == (k = M.options) ? void 0 : k.firstWeekContainsDate) ? L : v.firstWeekContainsDate) ? D : null == (j = v.locale) || null == (U = j.options) ? void 0 : U.firstWeekContainsDate) ? w : 1);
-    if (!(N >= 1 && N <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
-    var C = (0, u.Z)(null != (G = null != (B = null != (Z = null != (F = null == g ? void 0 : g.weekStartsOn) ? F : null == g || null == (V = g.locale) || null == (H = V.options) ? void 0 : H.weekStartsOn) ? Z : v.weekStartsOn) ? B : null == (Y = v.locale) || null == (W = Y.options) ? void 0 : W.weekStartsOn) ? G : 0);
-    if (!(C >= 0 && C <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
-    if ('' === O)
-        if ('' === E) return (0, o.default)(n);
+    if (!S.match) throw RangeError("locale must contain match property");
+    var N = (0, u.Z)(
+        null !=
+            (w =
+                null !=
+                (D =
+                    null !=
+                    (L =
+                        null != (x = null == g ? void 0 : g.firstWeekContainsDate)
+                            ? x
+                            : null == g || null == (M = g.locale) || null == (k = M.options)
+                              ? void 0
+                              : k.firstWeekContainsDate)
+                        ? L
+                        : v.firstWeekContainsDate)
+                    ? D
+                    : null == (j = v.locale) || null == (U = j.options)
+                      ? void 0
+                      : U.firstWeekContainsDate)
+            ? w
+            : 1,
+    );
+    if (!(N >= 1 && N <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+    var C = (0, u.Z)(
+        null !=
+            (G =
+                null !=
+                (B =
+                    null !=
+                    (Z =
+                        null != (F = null == g ? void 0 : g.weekStartsOn)
+                            ? F
+                            : null == g || null == (V = g.locale) || null == (H = V.options)
+                              ? void 0
+                              : H.weekStartsOn)
+                        ? Z
+                        : v.weekStartsOn)
+                    ? B
+                    : null == (Y = v.locale) || null == (W = Y.options)
+                      ? void 0
+                      : W.weekStartsOn)
+            ? G
+            : 0,
+    );
+    if (!(C >= 0 && C <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    if ("" === O)
+        if ("" === E) return (0, o.default)(n);
         else return new Date(NaN);
     var R,
         P,
@@ -124,7 +169,7 @@ function S(e, t, n, g) {
         z = {
             firstWeekContainsDate: N,
             weekStartsOn: C,
-            locale: S
+            locale: S,
         },
         q = [new f.GT()],
         X = O.match(y)
@@ -132,14 +177,15 @@ function S(e, t, n, g) {
                 var t = e[0];
                 return t in s.Z ? (0, s.Z[t])(e, S.formatLong) : e;
             })
-            .join('')
+            .join("")
             .match(b),
         Q = [],
         J = m(X);
     try {
         var $ = function () {
             var t = K.value;
-            (!(null != g && g.useAdditionalWeekYearTokens) && (0, c.Do)(t) && (0, c.qp)(t, O, e), !(null != g && g.useAdditionalDayOfYearTokens) && (0, c.Iu)(t) && (0, c.qp)(t, O, e));
+            !(null != g && g.useAdditionalWeekYearTokens) && (0, c.Do)(t) && (0, c.qp)(t, O, e),
+                !(null != g && g.useAdditionalDayOfYearTokens) && (0, c.Iu)(t) && (0, c.qp)(t, O, e);
             var n = t[0],
                 r = _.f[n];
             if (r) {
@@ -148,24 +194,33 @@ function S(e, t, n, g) {
                     var o = Q.find(function (e) {
                         return i.includes(e.token) || e.token === n;
                     });
-                    if (o) throw RangeError("The format string mustn't contain `".concat(o.fullToken, '` and `').concat(t, '` at the same time'));
-                } else if ('*' === r.incompatibleTokens && Q.length > 0) throw RangeError("The format string mustn't contain `".concat(t, '` and any other token at the same time'));
+                    if (o)
+                        throw RangeError(
+                            "The format string mustn't contain `"
+                                .concat(o.fullToken, "` and `")
+                                .concat(t, "` at the same time"),
+                        );
+                } else if ("*" === r.incompatibleTokens && Q.length > 0)
+                    throw RangeError(
+                        "The format string mustn't contain `".concat(t, "` and any other token at the same time"),
+                    );
                 Q.push({
                     token: n,
-                    fullToken: t
+                    fullToken: t,
                 });
                 var a = r.run(E, t, S.match, z);
                 if (!a) return { v: new Date(NaN) };
-                (q.push(a.setter), (E = a.rest));
+                q.push(a.setter), (E = a.rest);
             } else {
-                if (n.match(T)) throw RangeError('Format string contains an unescaped latin alphabet character `' + n + '`');
+                if (n.match(T))
+                    throw RangeError("Format string contains an unescaped latin alphabet character `" + n + "`");
                 if (("''" === t ? (t = "'") : "'" === n && (t = A(t)), 0 !== E.indexOf(t))) return { v: new Date(NaN) };
                 E = E.slice(t.length);
             }
         };
         for (J.s(); !(K = J.n()).done; ) {
             var ee = $();
-            if ('object' === h(ee)) return ee.v;
+            if ("object" === h(ee)) return ee.v;
         }
     } catch (e) {
         J.e(e);

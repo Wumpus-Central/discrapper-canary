@@ -15,33 +15,33 @@ function p(e) {
             from: {
                 x: 0,
                 y: 0,
-                opacity: 1
+                opacity: 1,
             },
             to: {
                 x: 0,
                 y: -50,
-                opacity: 0
+                opacity: 0,
             },
             config: {
                 tension: 280,
-                friction: 100
+                friction: 100,
             },
-            onRest: () => s(t)
+            onRest: () => s(t),
         });
     return (0, r.jsxs)(a.animated.div, {
         className: d.point,
         style: o,
         children: [
             (0, r.jsxs)(c.Z, {
-                variant: 'text-lg/medium',
-                color: n > 0 ? 'always-white' : 'status-danger',
-                children: [n > 0 ? '+' : '', n]
+                variant: "text-lg/medium",
+                color: n > 0 ? "always-white" : "status-danger",
+                children: [n > 0 ? "+" : "", n],
             }),
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 src: f,
-                alt: u.intl.string(l.default.BropER)
-            })
-        ]
+                alt: u.intl.string(l.default.BropER),
+            }),
+        ],
     });
 }
 function m(e) {
@@ -50,15 +50,15 @@ function m(e) {
         onRemovePoint: n,
         offset: s = {
             x: 0,
-            y: 0
+            y: 0,
         },
-        fullWidth: a = !0
+        fullWidth: a = !0,
     } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()(d.pointsAnimation, { [d.fullWidth]: a }),
         style: {
             left: s.x,
-            top: s.y
+            top: s.y,
         },
         children: Object.keys(t).map((e) =>
             (0, r.jsx)(
@@ -66,10 +66,10 @@ function m(e) {
                 {
                     id: e,
                     points: t[e],
-                    onFinished: n
+                    onFinished: n,
                 },
-                e
-            )
-        )
+                e,
+            ),
+        ),
     });
 }

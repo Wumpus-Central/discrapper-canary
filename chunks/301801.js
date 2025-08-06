@@ -1,11 +1,11 @@
-(n.d(t, { BO: () => d }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(781311));
+n.d(t, { BO: () => d }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(781311);
 var r = n(73800),
     a = n(348327),
     o = n.n(a),
     l = n(392711),
     i = n(823379),
     c = n(886118);
-let u = new Worker(new URL('/assets/' + n.u('56558'), n.b));
+let u = new Worker(new URL("/assets/" + n.u("56558"), n.b));
 function d(e, t, n, a) {
     let d = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
         s = r.useRef(null),
@@ -54,20 +54,26 @@ function d(e, t, n, a) {
         return (
             (f.current = (0, l.throttle)(
                 async (e, t, n) => {
-                    if ('' === e.trim()) return void _.current(t);
+                    if ("" === e.trim()) return void _.current(t);
                     s.current = (0, l.uniqueId)();
                     let r = await (function (e, t, n, r) {
                         var a;
                         let o = null != (a = r.promiseUuid) ? a : (0, l.uniqueId)(),
-                            { searchType: d = c.S.FUZZY, sortType: s = c.E.NONE, jaroWinklerSearchThreshold: f = 0.85 } = r;
+                            {
+                                searchType: d = c.S.FUZZY,
+                                sortType: s = c.E.NONE,
+                                jaroWinklerSearchThreshold: f = 0.85,
+                            } = r;
                         return new Promise((r) => {
                             let a = (t) => {
                                 let {
-                                    data: { id: n, foundItemIndexes: l }
+                                    data: { id: n, foundItemIndexes: l },
                                 } = t;
-                                o === n && (r(l.map((t) => e[t]).filter(i.lm)), null == u || u.removeEventListener('message', a));
+                                o === n &&
+                                    (r(l.map((t) => e[t]).filter(i.lm)),
+                                    null == u || u.removeEventListener("message", a));
                             };
-                            (null == u || u.addEventListener('message', a),
+                            null == u || u.addEventListener("message", a),
                                 null == u ||
                                     u.postMessage({
                                         id: o,
@@ -75,8 +81,8 @@ function d(e, t, n, a) {
                                         searchStrings: n,
                                         searchType: d,
                                         sortType: s,
-                                        jaroWinklerSearchThreshold: f
-                                    }));
+                                        jaroWinklerSearchThreshold: f,
+                                    });
                         });
                     })(
                         t,
@@ -86,35 +92,35 @@ function d(e, t, n, a) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
-                        })({ promiseUuid: s.current }, a)
+                        })({ promiseUuid: s.current }, a),
                     );
                     null != s.current && _.current(r);
                 },
                 e,
                 {
                     leading: t,
-                    trailing: n
-                }
+                    trailing: n,
+                },
             )),
             f.current
         );
@@ -125,9 +131,9 @@ function d(e, t, n, a) {
         }, [g, e, p, h, ...d]),
         r.useEffect(
             () => () => {
-                (null != f.current && f.current.cancel(), (f.current = null), (s.current = null));
+                null != f.current && f.current.cancel(), (f.current = null), (s.current = null);
             },
-            [h, n, a]
+            [h, n, a],
         ),
         g
     );

@@ -5,24 +5,24 @@ var r = n(208653),
     a = n(105532),
     s = n(745872),
     l = n(638934),
-    c = l(s('%Promise.all%')),
-    u = l(s('%Promise.reject%'));
+    c = l(s("%Promise.all%")),
+    u = l(s("%Promise.reject%"));
 e.exports = function (e) {
     var t = this;
-    if ('Object' !== i(t)) throw TypeError('`this` value must be an object');
+    if ("Object" !== i(t)) throw TypeError("`this` value must be an object");
     return c(
         t,
         a(o(e), function (e) {
             var n = function (e) {
                     return {
-                        status: 'fulfilled',
-                        value: e
+                        status: "fulfilled",
+                        value: e,
                     };
                 },
                 i = function (e) {
                     return {
-                        status: 'rejected',
-                        reason: e
+                        status: "rejected",
+                        reason: e,
                     };
                 },
                 o = r(t, e);
@@ -31,6 +31,6 @@ e.exports = function (e) {
             } catch (e) {
                 return u(t, e);
             }
-        })
+        }),
     );
 };

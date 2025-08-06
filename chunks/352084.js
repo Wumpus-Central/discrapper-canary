@@ -6,13 +6,13 @@ var r = n(255367),
     s = n(481060),
     l = n(34663);
 let c = (e, t) =>
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             ref: t,
             className: a()(l.nitroRewardTileAssetContainer, e.className),
             children: (0, r.jsx)(s.SrA, {
-                size: 'lg',
+                size: "lg",
                 className: l.nitroRewardTileAsset,
-                color: 'white'
-            })
+                color: "white",
+            }),
         }),
     u = i.forwardRef(c);

@@ -12,32 +12,32 @@ function u(t) {
         p = i.useMemo(
             () => [
                 {
-                    label: l.intl.string(l.t['+eJP7u']),
-                    subLabel: l.intl.string(l.t['+0VIUl']),
-                    icon: r.gj8
+                    label: l.intl.string(l.t["+eJP7u"]),
+                    subLabel: l.intl.string(l.t["+0VIUl"]),
+                    icon: r.gj8,
                 },
                 {
                     label: l.intl.string(l.t.ZH4QFR),
-                    icon: r.iWm
-                }
+                    icon: r.iWm,
+                },
             ],
-            []
+            [],
         ),
         _ = s.Z.getArticleURL(c.BhN.PS_CONNECTION),
         b = l.intl.format(l.t.kqZQNT, { helpdeskArticleUrl: _ });
     return (0, o.jsx)(a.m, {
         platformType: n,
         headerConnect: l.intl.string(l.t.xAWHOz),
-        headerReconnect: l.intl.string(l.t['ZJ/vBg']),
+        headerReconnect: l.intl.string(l.t["ZJ/vBg"]),
         body: b,
         onClose: u,
         onContinue: e,
-        img: (0, o.jsx)('img', {
+        img: (0, o.jsx)("img", {
             src: d.Z,
             width: 230,
             height: 160,
-            alt: ''
+            alt: "",
         }),
-        valueProps: p
+        valueProps: p,
     });
 }

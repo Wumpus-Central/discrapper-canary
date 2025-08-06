@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => b,
-    Z: () => X
+    Z: () => X,
 });
 var r,
     i = n(442837),
@@ -19,7 +19,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,7 +71,8 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,17 +82,17 @@ function E(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var b = (function (e) {
-    return ((e.DEFAULT = 'default'), (e.HIGH = 'high'), e);
+    return (e.DEFAULT = "default"), (e.HIGH = "high"), e;
 })({});
 let y = {
         fontSize: d.yqN.FONT_SIZE_DEFAULT,
         zoom: d.yqN.ZOOM_DEFAULT,
         keyboardModeEnabled: !1,
-        contrastMode: 'default',
+        contrastMode: "default",
         colorblindMode: !1,
         lowContrastMode: !1,
         saturation: 1,
@@ -100,27 +101,27 @@ let y = {
         forcedColorsModalSeen: !1,
         keyboardNavigationExplainerModalSeen: !1,
         messageGroupSpacing: null,
-        systemPrefersReducedMotion: 'no-preference',
+        systemPrefersReducedMotion: "no-preference",
         systemPrefersCrossfades: !1,
-        prefersReducedMotion: 'auto',
-        systemForcedColors: 'none',
+        prefersReducedMotion: "auto",
+        systemForcedColors: "none",
         syncForcedColors: !0,
-        systemPrefersContrast: 'no-preference',
+        systemPrefersContrast: "no-preference",
         alwaysShowLinkDecorations: !1,
-        roleStyle: 'username',
+        roleStyle: "username",
         displayNameStylesEnabled: !0,
         submitButtonEnabled: !1,
-        syncProfileThemeWithUserTheme: !1
+        syncProfileThemeWithUserTheme: !1,
     },
     O = y,
     v = {
-        12: 'font-size-12',
-        14: 'font-size-14',
-        15: 'font-size-15',
-        16: 'font-size-16',
-        18: 'font-size-18',
-        20: 'font-size-20',
-        24: 'font-size-24'
+        12: "font-size-12",
+        14: "font-size-14",
+        15: "font-size-15",
+        16: "font-size-16",
+        18: "font-size-18",
+        20: "font-size-20",
+        24: "font-size-24",
     };
 function I(e) {
     return d.yqN.FONT_SIZES.indexOf(e) >= 0 ? e : d.yqN.FONT_SIZE_DEFAULT;
@@ -132,13 +133,14 @@ function T(e) {
 }
 function S(e) {
     if (e.zoom < d.yqN.ZOOM_MIN || e.zoom > d.yqN.ZOOM_MAX || O.zoom === e.zoom) return !1;
-    (((O = p({}, O)).zoom = e.zoom), u.Z.setZoomFactor(O.zoom));
+    ((O = p({}, O)).zoom = e.zoom), u.Z.setZoomFactor(O.zoom);
 }
 function A() {
     let e = O.fontSize !== d.yqN.FONT_SIZE_DEFAULT,
         t = O.zoom !== d.yqN.ZOOM_DEFAULT;
     if (!e && !t) return !1;
-    ((O = p({}, O)).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (O.fontSize = d.yqN.FONT_SIZE_DEFAULT), O.zoom !== d.yqN.ZOOM_DEFAULT && ((O.zoom = d.yqN.ZOOM_DEFAULT), u.Z.setZoomFactor(O.zoom)));
+    (O = p({}, O)).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (O.fontSize = d.yqN.FONT_SIZE_DEFAULT),
+        O.zoom !== d.yqN.ZOOM_DEFAULT && ((O.zoom = d.yqN.ZOOM_DEFAULT), u.Z.setZoomFactor(O.zoom));
 }
 function N() {
     if (O.keyboardModeEnabled) return !1;
@@ -196,7 +198,7 @@ function F(e) {
 }
 function V(e) {
     var t;
-    return ((O = m(p({}, O), { systemForcedColors: null != (t = e.systemForcedColors) ? t : 'none' })), !0);
+    return (O = m(p({}, O), { systemForcedColors: null != (t = e.systemForcedColors) ? t : "none" })), !0;
 }
 function H() {
     O.forcedColorsModalSeen = !0;
@@ -218,7 +220,10 @@ function z(e) {
 }
 class q extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        (this.waitFor(c.Z), isNaN((O = p({}, y, null != e ? e : null)).fontSize) && (O.fontSize = d.yqN.FONT_SIZE_DEFAULT), 0 > f.fP.indexOf(null != O.messageGroupSpacing ? O.messageGroupSpacing : -1) && (O.messageGroupSpacing = null));
+        this.waitFor(c.Z),
+            isNaN((O = p({}, y, null != e ? e : null)).fontSize) && (O.fontSize = d.yqN.FONT_SIZE_DEFAULT),
+            0 > f.fP.indexOf(null != O.messageGroupSpacing ? O.messageGroupSpacing : -1) &&
+                (O.messageGroupSpacing = null);
     }
     get fontScale() {
         return (O.fontSize / d.yqN.FONT_SIZE_DEFAULT) * 100;
@@ -234,8 +239,12 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
     }
     get fontScaleClass() {
         var e;
-        let t = null != (e = v[this.fontSize]) ? e : '';
-        return this.isFontScaledUp ? 'a11y-font-scaled-up '.concat(t) : this.isFontScaledDown ? 'a11y-font-scaled-down '.concat(t) : ''.concat(t);
+        let t = null != (e = v[this.fontSize]) ? e : "";
+        return this.isFontScaledUp
+            ? "a11y-font-scaled-up ".concat(t)
+            : this.isFontScaledDown
+              ? "a11y-font-scaled-down ".concat(t)
+              : "".concat(t);
     }
     get zoom() {
         return O.zoom;
@@ -295,12 +304,12 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
     }
     get useReducedMotion() {
         switch (O.prefersReducedMotion) {
-            case 'no-preference':
+            case "no-preference":
                 return !1;
-            case 'reduce':
+            case "reduce":
                 return !0;
             default:
-                return 'reduce' === O.systemPrefersReducedMotion;
+                return "reduce" === O.systemPrefersReducedMotion;
         }
     }
     get systemForcedColors() {
@@ -310,7 +319,7 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
         return O.syncForcedColors;
     }
     get useForcedColors() {
-        return !!O.syncForcedColors && 'active' === O.systemForcedColors;
+        return !!O.syncForcedColors && "active" === O.systemForcedColors;
     }
     get systemPrefersContrast() {
         return O.systemPrefersContrast;
@@ -328,19 +337,19 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
         return O.displayNameStylesEnabled;
     }
     get isHighContrastModeEnabled() {
-        return 'high' === O.contrastMode;
+        return "high" === O.contrastMode;
     }
     getUserAgnosticState() {
         return O;
     }
 }
-(_(q, 'displayName', 'AccessibilityStore'),
-    _(q, 'persistKey', 'AccessibilityStore'),
-    _(q, 'migrations', [
+_(q, "displayName", "AccessibilityStore"),
+    _(q, "persistKey", "AccessibilityStore"),
+    _(q, "migrations", [
         () => {
-            let e = 'a11yFontScale',
-                t = 'a11yZoom',
-                n = 'a11yColorblindMode',
+            let e = "a11yFontScale",
+                t = "a11yZoom",
+                n = "a11yColorblindMode",
                 r = o.K.get(e) || 100,
                 i = o.K.get(t) || d.yqN.ZOOM_DEFAULT,
                 a = o.K.get(n) || !1;
@@ -352,13 +361,13 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
                     fontScale: r,
                     zoom: i,
                     colorblindMode: a,
-                    keyboardModeEnabled: !1
+                    keyboardModeEnabled: !1,
                 }
             );
         },
         (e) => {
             let { fontScale: t } = e,
-                n = g(e, ['fontScale']),
+                n = g(e, ["fontScale"]),
                 r = 16;
             switch (t) {
                 case 82:
@@ -385,8 +394,8 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
         (e) => m(p({}, e), { messageGroupSpacing: null }),
         (e) =>
             m(p({}, e), {
-                systemPrefersReducedMotion: 'no-preference',
-                prefersReducedMotion: 'auto'
+                systemPrefersReducedMotion: "no-preference",
+                prefersReducedMotion: "auto",
             }),
         (e) => m(p({}, e), { alwaysShowLinkDecorations: e.saturation <= a.AE }),
         (e) => m(p({}, e), { disableVoiceBackgrounds: !1 }),
@@ -401,8 +410,8 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
                 delete e.hideGuildTags;
             } catch (e) {}
             return e;
-        }
-    ]));
+        },
+    ]);
 let X = new q(s.Z, {
     ACCESSIBILITY_SET_FONT_SIZE: T,
     ACCESSIBILITY_SET_ZOOM: S,
@@ -428,5 +437,5 @@ let X = new q(s.Z, {
     ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: k,
     ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: j,
     ACCESSIBILITY_SET_CONTRAST: K,
-    ACCESSIBILITY_SET_CONTRAST_MODE: z
+    ACCESSIBILITY_SET_CONTRAST_MODE: z,
 });

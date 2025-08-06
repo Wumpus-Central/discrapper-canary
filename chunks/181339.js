@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => T,
-    w: () => P
+    w: () => P,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -46,98 +46,99 @@ function E(e) {
                         enabled: !b,
                         raid_alert_channel_id: n,
                         guild_id: t.id,
-                        channel_id: n
+                        channel_id: n,
                     };
                     (0, d.yw)(C.rMx.GUILD_RAID_ALERTS_SETUP, e);
                 }
             } catch (e) {
-                ((0, c.showToast)((0, c.createToast)(N.intl.string(N.t['46Rs3t']), c.ToastType.FAILURE)), v(!b));
+                (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["46Rs3t"]), c.ToastType.FAILURE)), v(!b);
             }
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(I.itemWrapper, s),
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: I.itemContent,
                 children: [
                     (0, r.jsx)(c.X6q, {
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
-                        children: N.intl.string(N.t.Qp98s7)
+                        variant: "text-md/semibold",
+                        color: "header-primary",
+                        children: N.intl.string(N.t.Qp98s7),
                     }),
                     (0, r.jsx)(c.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'header-secondary',
-                        children: N.intl.string(N.t.Mg843t)
+                        variant: "text-sm/medium",
+                        color: "header-secondary",
+                        children: N.intl.string(N.t.Mg843t),
                     }),
                     n || null == l
                         ? null
                         : (0, r.jsxs)(c.Text, {
-                              color: 'interactive-normal',
-                              variant: 'text-xs/medium',
+                              color: "interactive-normal",
+                              variant: "text-xs/medium",
                               className: I.valuePill,
                               children: [
                                   (0, r.jsx)(c.VL1, {
-                                      size: 'xxs',
-                                      color: 'currentColor'
+                                      size: "xxs",
+                                      color: "currentColor",
                                   }),
-                                  ' ',
-                                  O
-                              ]
-                          })
-                ]
+                                  " ",
+                                  O,
+                              ],
+                          }),
+                ],
             }),
             (0, r.jsx)(y.Z, {
                 checked: j,
                 onChange: E,
-                disabled: !f || null == l
-            })
-        ]
+                disabled: !f || null == l,
+            }),
+        ],
     });
 }
 function S(e) {
     var t;
     let { guild: n, selectedChannelId: i, setSelectedChannelId: l, className: m } = e,
         g = null != (t = n.safetyAlertsChannelId) ? t : null,
-        f = (0, o.Wu)(
-            [b.ZP, _.default, v.Z, j.Z],
-            () => {
-                let e = b.ZP.getChannels(n.id)
-                    [b.sH].filter((e) => {
-                        let { channel: t } = e;
-                        return t.type === s.d.GUILD_TEXT && j.Z.can(C.Plq.SEND_MESSAGES, t);
-                    })
-                    .map((e) => {
-                        let { channel: t } = e;
-                        return {
-                            value: t.id,
-                            label: (0, u.F6)(t, _.default, v.Z, !0)
-                        };
-                    });
-                return null != g ? e : [...e];
-            },
-            [n.id, g]
-        ),
+        f = (0, o.Wu)([b.ZP, _.default, v.Z, j.Z], () => {
+            let e = b.ZP.getChannels(n.id)
+                [b.sH].filter((e) => {
+                    let { channel: t } = e;
+                    return t.type === s.d.GUILD_TEXT && j.Z.can(C.Plq.SEND_MESSAGES, t);
+                })
+                .map((e) => {
+                    let { channel: t } = e;
+                    return {
+                        value: t.id,
+                        label: (0, u.F6)(t, _.default, v.Z, !0),
+                    };
+                });
+            return null != g ? e : [...e];
+        }, [n.id, g]),
         x = async (e) => {
             l(e);
             try {
-                if ((e !== g && (await O.Z.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }), O.Z.updateGuild({ safetyAlertsChannelId: e })), null != e)) {
+                if (
+                    (e !== g &&
+                        (await O.Z.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }),
+                        O.Z.updateGuild({ safetyAlertsChannelId: e })),
+                    null != e)
+                ) {
                     let t = {
                         raid_alert_type: h.wR.JOIN_RAID,
                         enabled: (0, p.Z)(n),
                         raid_alert_channel_id: e,
                         guild_id: n.id,
-                        channel_id: e
+                        channel_id: e,
                     };
                     (0, d.yw)(C.rMx.GUILD_RAID_ALERTS_SETUP, t);
                 }
             } catch (e) {
-                ((0, c.showToast)((0, c.createToast)(N.intl.string(N.t['46Rs3t']), c.ToastType.FAILURE)), l(g));
+                (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["46Rs3t"]), c.ToastType.FAILURE)), l(g);
             }
         };
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(I.itemBodyContainer, m),
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: I.itemBodyInner,
             children: [
                 (0, r.jsx)(c.vwX, { children: N.intl.string(N.t.sMkYEx) }),
@@ -146,15 +147,15 @@ function S(e) {
                     options: f,
                     onChange: x,
                     value: i,
-                    maxVisibleItems: 5
+                    maxVisibleItems: 5,
                 }),
                 (0, r.jsx)(c.Text, {
-                    variant: 'text-sm/medium',
-                    color: 'interactive-normal',
-                    children: N.intl.string(N.t['1QxN9P'])
-                })
-            ]
-        })
+                    variant: "text-sm/medium",
+                    color: "interactive-normal",
+                    children: N.intl.string(N.t["1QxN9P"]),
+                }),
+            ],
+        }),
     });
 }
 function T(e) {
@@ -167,15 +168,15 @@ function T(e) {
         renderHeader: (0, r.jsx)(E, {
             isExpanded: a,
             guild: l,
-            selectedChannelId: c
+            selectedChannelId: c,
         }),
         isExpanded: a,
         onExpand: () => s(!a),
         children: (0, r.jsx)(S, {
             guild: l,
             selectedChannelId: c,
-            setSelectedChannelId: d
-        })
+            setSelectedChannelId: d,
+        }),
     });
 }
 function P(e) {
@@ -189,14 +190,14 @@ function P(e) {
                 isExpanded: !0,
                 guild: l,
                 selectedChannelId: s,
-                className: I.noPadding
+                className: I.noPadding,
             }),
             (0, r.jsx)(S, {
                 guild: l,
                 selectedChannelId: s,
                 setSelectedChannelId: o,
-                className: I.noPadding
-            })
-        ]
+                className: I.noPadding,
+            }),
+        ],
     });
 }

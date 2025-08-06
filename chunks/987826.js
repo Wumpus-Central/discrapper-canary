@@ -8,20 +8,24 @@ var i = n(120356),
 function l(e) {
     var t;
     let { name: n, className: i, state: l, isInline: c, onClick: u } = e,
-        d = n + (c ? ':' : ''),
+        d = n + (c ? ":" : ""),
         f = null;
-    (null == l ? void 0 : l.isActive) && !c ? (f = s.active) : (null == l || null == (t = l.lastValidationResult) ? void 0 : t.success) === !1 ? (f = s.error) : (null == l ? void 0 : l.hasValue) && !c && (f = s.set);
+    (null == l ? void 0 : l.isActive) && !c
+        ? (f = s.active)
+        : (null == l || null == (t = l.lastValidationResult) ? void 0 : t.success) === !1
+          ? (f = s.error)
+          : (null == l ? void 0 : l.hasValue) && !c && (f = s.set);
     let _ = (0, r.jsx)(a.Text, {
-        variant: c ? 'text-md/normal' : 'text-sm/normal',
-        color: 'text-primary',
+        variant: c ? "text-md/normal" : "text-sm/normal",
+        color: "text-primary",
         className: o()(s.option, { [s.inline]: c }, f, i),
-        children: d
+        children: d,
     });
     return null == u
         ? _
         : (0, r.jsx)(a.P3F, {
               className: s.clickable,
               onClick: () => u(n),
-              children: _
+              children: _,
           });
 }

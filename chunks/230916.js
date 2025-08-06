@@ -1,8 +1,8 @@
-(i.d(t, {
+i.d(t, {
     A: () => d,
-    _: () => m
+    _: () => m,
 }),
-    i(388685));
+    i(388685);
 var n = i(911969),
     r = i(583046),
     l = i(74179),
@@ -15,29 +15,36 @@ let d = (e) => {
         var t, i, d, m;
         let { paymentSourceId: C } = (0, l.Z)({
                 isGift: !1,
-                activeSubscription: null
+                activeSubscription: null,
             }),
             p = (0, a.Wz)(u.GP[e].skuId),
             { priceOptions: g } = (0, r.Z)({
                 activeSubscription: null,
                 skuIDs: [p],
                 paymentSourceId: C,
-                isGift: !1
+                isGift: !1,
             }),
             x = (0, c.Ng)(),
             [f, h] = (0, o.ED)({
                 items: [
                     {
                         planId: e,
-                        quantity: 1
-                    }
+                        quantity: 1,
+                    },
                 ],
                 renewal: !0,
                 preventFetch: null == x,
                 paymentSourceId: C,
-                currency: g.currency
+                currency: g.currency,
             }),
-            v = null == f || null == (m = f.invoiceItems) || null == (d = m.find((t) => t.subscriptionPlanId === e)) || null == (i = d.discounts) || null == (t = i.find((e) => e.type === n.eW.SUBSCRIPTION_PLAN)) ? void 0 : t.amount,
+            v =
+                null == f ||
+                null == (m = f.invoiceItems) ||
+                null == (d = m.find((t) => t.subscriptionPlanId === e)) ||
+                null == (i = d.discounts) ||
+                null == (t = i.find((e) => e.type === n.eW.SUBSCRIPTION_PLAN))
+                    ? void 0
+                    : t.amount,
             I = (0, a.aS)(e, !1, !1, g);
         return (0, s.T4)(I.amount - (null != v ? v : 0), I.currency);
     },
@@ -45,14 +52,14 @@ let d = (e) => {
         var c, d, m, C;
         let { paymentSourceId: p } = (0, l.Z)({
                 isGift: !1,
-                activeSubscription: null
+                activeSubscription: null,
             }),
             g = (0, a.Wz)(u.GP[t].skuId),
             { priceOptions: x } = (0, r.Z)({
                 activeSubscription: null,
                 skuIDs: [g],
                 paymentSourceId: p,
-                isGift: !1
+                isGift: !1,
             }),
             f = null != i,
             [h, v] = (0, o.ED)({
@@ -60,16 +67,23 @@ let d = (e) => {
                 items: [
                     {
                         planId: t,
-                        quantity: 1
-                    }
+                        quantity: 1,
+                    },
                 ],
                 renewal: !0,
                 preventFetch: !f,
                 paymentSourceId: p,
                 currency: x.currency,
-                userDiscountOfferId: null == i ? void 0 : i.id
+                userDiscountOfferId: null == i ? void 0 : i.id,
             }),
-            I = null == h || null == (C = h.invoiceItems) || null == (m = C.find((e) => e.subscriptionPlanId === t)) || null == (d = m.discounts) || null == (c = d.find((e) => e.type === n.eW.SUBSCRIPTION_PLAN)) ? void 0 : c.amount,
+            I =
+                null == h ||
+                null == (C = h.invoiceItems) ||
+                null == (m = C.find((e) => e.subscriptionPlanId === t)) ||
+                null == (d = m.discounts) ||
+                null == (c = d.find((e) => e.type === n.eW.SUBSCRIPTION_PLAN))
+                    ? void 0
+                    : c.amount,
             T = (0, a.aS)(t, !1, !1, x);
         return (0, s.T4)(T.amount - (null != I ? I : 0), T.currency);
     };

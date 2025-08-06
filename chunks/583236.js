@@ -9,6 +9,6 @@ function o(n, r, t) {
             },
         function () {
             return t.reconnect();
-        }
+        },
     );
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(399606),
@@ -17,43 +17,43 @@ function g(e) {
         [h, f] = i.useState(t.features.has(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         x = i.useCallback(
             async (e) => {
-                (f(e), await (0, s.fp)(t, e));
+                f(e), await (0, s.fp)(t, e);
             },
-            [t]
+            [t],
         );
     return p
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: m.bannerContainer,
               children: [
                   (0, r.jsx)(c.Z, {
                       width: 64,
-                      height: 64
+                      height: 64,
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: m.headingContainer,
                       children: [
                           (0, r.jsx)(a.X6q, {
-                              variant: 'heading-lg/semibold',
-                              color: 'always-white',
-                              children: u.intl.string(u.t.jDarm5)
+                              variant: "heading-lg/semibold",
+                              color: "always-white",
+                              children: u.intl.string(u.t.jDarm5),
                           }),
                           (0, r.jsx)(a.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'always-white',
-                              children: u.intl.string(u.t['/ee7yM'])
-                          })
-                      ]
+                              variant: "text-sm/medium",
+                              color: "always-white",
+                              children: u.intl.string(u.t["/ee7yM"]),
+                          }),
+                      ],
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: m.buttonContainer,
                       children: (0, r.jsx)(a.rsf, {
                           id: n,
                           checked: h,
                           onChange: x,
-                          disabled: !g
-                      })
-                  })
-              ]
+                          disabled: !g,
+                      }),
+                  }),
+              ],
           });
 }

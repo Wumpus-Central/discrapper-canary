@@ -11,7 +11,7 @@ function i() {
         }).apply(this, arguments);
 }
 function o(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 var a = n(691099),
     s = n(152477),
@@ -27,7 +27,11 @@ e.exports = (function (e) {
         (n.shouldComponentUpdate = function (e) {
             var t = this.props.editorState,
                 n = e.editorState;
-            if (t.getDirectionMap() !== n.getDirectionMap() || t.getSelection().getHasFocus() !== n.getSelection().getHasFocus()) return !0;
+            if (
+                t.getDirectionMap() !== n.getDirectionMap() ||
+                t.getSelection().getHasFocus() !== n.getSelection().getHasFocus()
+            )
+                return !0;
             var r = n.getNativelyRenderedContent(),
                 i = t.isInCompositionMode(),
                 o = n.isInCompositionMode();
@@ -39,7 +43,26 @@ e.exports = (function (e) {
             return i !== o || a !== s || l !== c || n.mustForceSelection();
         }),
         (n.render = function () {
-            for (var e = this.props, t = e.blockRenderMap, n = e.blockRendererFn, r = e.blockStyleFn, o = e.customStyleMap, u = e.customStyleFn, d = e.editorState, f = e.editorKey, _ = e.textDirectionality, p = d.getCurrentContent(), h = d.getSelection(), m = d.mustForceSelection(), g = d.getDecorator(), E = c(d.getDirectionMap()), b = p.getBlocksAsArray()[0], y = [], O = b; O; ) {
+            for (
+                var e = this.props,
+                    t = e.blockRenderMap,
+                    n = e.blockRendererFn,
+                    r = e.blockStyleFn,
+                    o = e.customStyleMap,
+                    u = e.customStyleFn,
+                    d = e.editorState,
+                    f = e.editorKey,
+                    _ = e.textDirectionality,
+                    p = d.getCurrentContent(),
+                    h = d.getSelection(),
+                    m = d.mustForceSelection(),
+                    g = d.getDecorator(),
+                    E = c(d.getDirectionMap()),
+                    b = p.getBlocksAsArray()[0],
+                    y = [],
+                    O = b;
+                O;
+            ) {
                 var v = O.getKey(),
                     I = {
                         blockRenderMap: t,
@@ -55,14 +78,14 @@ e.exports = (function (e) {
                         selection: h,
                         block: O,
                         direction: _ || E.get(v),
-                        tree: d.getBlockTree(v)
+                        tree: d.getBlockTree(v),
                     },
-                    T = (t.get(O.getType()) || t.get('unstyled')).wrapper;
+                    T = (t.get(O.getType()) || t.get("unstyled")).wrapper;
                 y.push({
                     block: l.createElement(a, i({ key: v }, I)),
                     wrapperTemplate: T,
                     key: v,
-                    offsetKey: s.encode(v, 0, 0)
+                    offsetKey: s.encode(v, 0, 0),
                 });
                 var S = O.getNextSiblingKey();
                 O = S ? p.getBlockForKey(S) : null;
@@ -71,20 +94,20 @@ e.exports = (function (e) {
                 var C = y[N];
                 if (C.wrapperTemplate) {
                     var R = [];
-                    do (R.push(y[N].block), N++);
+                    do R.push(y[N].block), N++;
                     while (N < y.length && y[N].wrapperTemplate === C.wrapperTemplate);
                     var P = l.cloneElement(
                         C.wrapperTemplate,
                         {
-                            key: C.key + '-wrap',
-                            'data-offset-key': C.offsetKey
+                            key: C.key + "-wrap",
+                            "data-offset-key": C.offsetKey,
                         },
-                        R
+                        R,
                     );
                     A.push(P);
-                } else (A.push(C.block), N++);
+                } else A.push(C.block), N++;
             }
-            return l.createElement('div', { 'data-contents': 'true' }, A);
+            return l.createElement("div", { "data-contents": "true" }, A);
         }),
         t
     );

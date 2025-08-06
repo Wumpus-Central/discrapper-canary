@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685), n(49124));
+n.d(t, { Z: () => O }), n(388685), n(49124);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -22,24 +22,24 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -68,17 +68,17 @@ function O() {
                         {
                             header: j.intl.string(j.t.aqpAvr),
                             confirmText: j.intl.string(j.t.vT7ckp),
-                            cancelText: j.intl.string(j.t['ETE/oK']),
-                            onConfirm: () => p.ZP.setEnableHardwareAcceleration(e)
+                            cancelText: j.intl.string(j.t["ETE/oK"]),
+                            onConfirm: () => p.ZP.setEnableHardwareAcceleration(e),
                         },
-                        t
+                        t,
                     )),
                     (r = r =
                         {
                             children: (0, i.jsx)(a.Text, {
-                                variant: 'text-sm/normal',
-                                children: s
-                            })
+                                variant: "text-sm/normal",
+                                children: s,
+                            }),
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -92,99 +92,99 @@ function O() {
                           })(Object(r)).forEach(function (e) {
                               Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
-                    n)
+                    n),
                 );
             });
         }, []),
         {
             warpEnabled: y,
             warpConnecting: A,
-            warpLog: P
+            warpLog: P,
         } = (0, s.cj)([d.Z], () => ({
             warpEnabled: d.Z.enabled,
             warpConnecting: d.Z.connecting,
-            warpLog: d.Z.log
+            warpLog: d.Z.log,
         })),
         R = r.useCallback((e) => {
             e ? d.Z.connect() : d.Z.disconnect();
         }, []);
     return (0, i.jsxs)(a.hjN, {
         tag: a.RB0.H1,
-        title: j.intl.string(j.t['8/udY2']),
+        title: j.intl.string(j.t["8/udY2"]),
         children: [
             (0, i.jsx)(u.F, {
                 setting: x.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
                 children: (0, i.jsx)(a.j7V, {
                     value: n,
                     onChange: h.Sb.updateSetting,
-                    note: j.intl.format(j.t['CY6q/f'], { apiDocsUrl: _.EYA.API_DOCS }),
-                    children: j.intl.string(j.t.ObIb1d)
-                })
+                    note: j.intl.format(j.t["CY6q/f"], { apiDocsUrl: _.EYA.API_DOCS }),
+                    children: j.intl.string(j.t.ObIb1d),
+                }),
             }),
             (0, i.jsx)(u.F, {
                 setting: x.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                 children: (0, i.jsx)(a.j7V, {
-                    className: e ? '' : E.formSwitchExtension,
+                    className: e ? "" : E.formSwitchExtension,
                     value: e,
                     onChange: N,
                     note: j.intl.string(j.t.Afc7l5),
                     hideBorder: !e,
-                    children: j.intl.string(j.t['eOC/Fx'])
-                })
+                    children: j.intl.string(j.t["eOC/Fx"]),
+                }),
             }),
             !e &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(f.Z, {
                             look: f.z.WARNING,
-                            children: j.intl.string(j.t.j7S6IS)
+                            children: j.intl.string(j.t.j7S6IS),
                         }),
-                        (0, i.jsx)(a.$i$, { className: E.infoBoxDivider })
-                    ]
+                        (0, i.jsx)(a.$i$, { className: E.infoBoxDivider }),
+                    ],
                 }),
             (0, i.jsx)(u.F, {
                 setting: x.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                 children: (0, i.jsx)(a.j7V, {
                     value: !t,
                     onChange: S,
-                    note: j.intl.string(j.t['8mYp39']),
-                    children: j.intl.string(j.t.fi3UQE)
-                })
+                    note: j.intl.string(j.t["8mYp39"]),
+                    children: j.intl.string(j.t.fi3UQE),
+                }),
             }),
             (0, i.jsx)(u.F, {
                 setting: x.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
                 children: (0, i.jsx)(a.j7V, {
                     value: null != O,
-                    note: j.intl.string(j.t['52hMnJ']),
+                    note: j.intl.string(j.t["52hMnJ"]),
                     onChange: T,
-                    children: j.intl.string(j.t.erOqlp)
-                })
+                    children: j.intl.string(j.t.erOqlp),
+                }),
             }),
             (0, i.jsx)(u.F, {
                 setting: x.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
                 children: (0, i.jsx)(a.j7V, {
                     value: v,
-                    note: j.intl.string(j.t['B/qU4O']),
+                    note: j.intl.string(j.t["B/qU4O"]),
                     onChange: I,
-                    children: j.intl.string(j.t.qDZryM)
-                })
+                    children: j.intl.string(j.t.qDZryM),
+                }),
             }),
             (0, i.jsxs)(u.F, {
                 setting: x.s6.SETTINGS_ADVANCED_CF_WARP,
                 children: [
                     (0, i.jsx)(a.j7V, {
                         value: y,
-                        note: 'Enable WARP Proxy Connection',
+                        note: "Enable WARP Proxy Connection",
                         onChange: R,
-                        children: 'Enable WARP'
+                        children: "Enable WARP",
                     }),
                     A ? (0, i.jsx)(a.$jN, {}) : null,
                     (0, i.jsx)(a.Text, {
-                        variant: 'code',
-                        children: P.map((e, t) => (0, i.jsx)('div', { children: JSON.stringify(e) }, t))
-                    })
-                ]
-            })
-        ]
+                        variant: "code",
+                        children: P.map((e, t) => (0, i.jsx)("div", { children: JSON.stringify(e) }, t)),
+                    }),
+                ],
+            }),
+        ],
     });
 }

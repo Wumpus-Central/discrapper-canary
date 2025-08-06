@@ -1,6 +1,6 @@
 n.d(t, {
     j: () => u,
-    y: () => c
+    y: () => c,
 });
 var r = n(342905),
     i = n(594928),
@@ -9,47 +9,47 @@ var r = n(342905),
     s = n(772335);
 let l = {
         name: a.default.ZEL6m5,
-        className: ''
+        className: "",
     },
     c = {
         [r.C.DEFAULT]: l,
         [r.C.BIO_RHYME]: {
-            name: a.default['91ufEx'],
-            className: s.bioRhyme
+            name: a.default["91ufEx"],
+            className: s.bioRhyme,
         },
         [r.C.CHERRY_BOMB]: {
             name: a.default.rN7cub,
-            className: s.cherryBomb
+            className: s.cherryBomb,
         },
         [r.C.CHICLE]: {
             name: a.default.CbHHnJ,
-            className: s.chicle
+            className: s.chicle,
         },
         [r.C.MUSEO_MODERNO]: {
             name: a.default.iEcEKC,
-            className: s.museoModerno
+            className: s.museoModerno,
         },
         [r.C.NEO_CASTEL]: {
             name: a.default.DL7jLS,
-            className: s.neoCastel
+            className: s.neoCastel,
         },
         [r.C.PIXELIFY]: {
             name: a.default.jq4aRk,
-            className: s.pixelify
+            className: s.pixelify,
         },
         [r.C.SINISTRE]: {
             name: a.default.jV9DNz,
-            className: s.sinistre
+            className: s.sinistre,
         },
         [r.C.BANGERS]: l,
         [r.C.COMPAGNON]: l,
-        [r.C.RIBES]: l
+        [r.C.RIBES]: l,
     };
 function u(e) {
     var t;
     let { displayNameStyles: n, inProfile: r } = e,
-        { includeNonProfile: a } = i.f.useExperiment({ location: 'useDisplayNameStylesFont' });
-    if (!(0, o.Y)({ location: 'useDisplayNameStylesFont' }) || (!r && !a) || null == n) return '';
+        { includeNonProfile: a } = i.f.useExperiment({ location: "useDisplayNameStylesFont" });
+    if (!(0, o.Y)({ location: "useDisplayNameStylesFont" }) || (!r && !a) || null == n) return "";
     let s = c[n.fontId];
-    return null != (t = null == s ? void 0 : s.className) ? t : '';
+    return null != (t = null == s ? void 0 : s.className) ? t : "";
 }

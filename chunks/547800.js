@@ -1,8 +1,8 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         CalendarPicker: () => f,
-        default: () => _
-    }));
+        default: () => _,
+    });
 var r = n(255367),
     i = n(73800),
     o = n(913527),
@@ -14,12 +14,20 @@ var r = n(255367),
 n(212932);
 var d = n(145606);
 function f(e) {
-    let { value: t = a()().local(), minDate: n, maxDate: o, onSelect: s, calendarClassName: f, autoFocus: _, onClickOutside: p } = e,
+    let {
+            value: t = a()().local(),
+            minDate: n,
+            maxDate: o,
+            onSelect: s,
+            calendarClassName: f,
+            autoFocus: _,
+            onClickOutside: p,
+        } = e,
         h = i.useCallback(
             (e, t) => {
                 null == s || s(a()(e), t);
             },
-            [s]
+            [s],
         ),
         m = i.useMemo(() => t.toDate(), [t]),
         g = i.useMemo(() => (null == o ? void 0 : o.toDate()), [o]),
@@ -28,7 +36,7 @@ function f(e) {
         y = i.useRef(null),
         O = i.useCallback((e) => {
             let t = e.currentTarget;
-            t.classList.contains('react-datepicker__day') &&
+            t.classList.contains("react-datepicker__day") &&
                 setTimeout(() => {
                     var e, n;
                     if (null == (e = y.current) ? void 0 : e.contains(t)) return;
@@ -36,7 +44,7 @@ function f(e) {
                     null != r && r.focus();
                 }, 100);
         }, []);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         ref: y,
         className: d.calendarPicker,
         children: (0, r.jsx)(l(), {
@@ -50,8 +58,8 @@ function f(e) {
             maxDate: g,
             minDate: E,
             onKeyDown: O,
-            onClickOutside: p
-        })
+            onClickOutside: p,
+        }),
     });
 }
 let _ = f;

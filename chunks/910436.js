@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(539854), n(388685));
+n.d(t, { Z: () => E }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(287734),
@@ -42,13 +42,13 @@ function E(e) {
                             return {
                                 knownSize: n,
                                 unknownSize: 0,
-                                totalSize: n + 0
+                                totalSize: n + 0,
                             };
                         })(t),
-                        onChannelContextMenu: n
+                        onChannelContextMenu: n,
                     },
-                    'voice-'.concat(i.id)
-                )
+                    "voice-".concat(i.id),
+                ),
             );
         }),
     t.currentActivities))
@@ -73,11 +73,11 @@ function E(e) {
                             activity: a,
                             applicationStream: t,
                             onPreviewClick: () => {
-                                (i.default.selectVoiceChannel(t.channelId), (0, l.iV)(t));
-                            }
+                                i.default.selectVoiceChannel(t.channelId), (0, l.iV)(t);
+                            },
                         },
-                        'application-stream-'.concat(t.ownerId)
-                    )
+                        "application-stream-".concat(t.ownerId),
+                    ),
                 );
             }),
         I.forEach((e, t) => {
@@ -94,12 +94,14 @@ function E(e) {
                             partySize: {
                                 knownSize: x.length,
                                 unknownSize: 0,
-                                totalSize: x.length
+                                totalSize: x.length,
                             },
-                            members: x
+                            members: x,
                         },
-                        'game-'.concat(null != (n = A.session_id) ? n : t, '-').concat(null != (i = A.application_id) ? i : t)
-                    )
+                        "game-"
+                            .concat(null != (n = A.session_id) ? n : t, "-")
+                            .concat(null != (i = A.application_id) ? i : t),
+                    ),
                 );
             else if ((0, o.Z)(A)) {
                 let e = new Set(x.map((e) => e.id)),
@@ -112,10 +114,10 @@ function E(e) {
                                 activity: A,
                                 participants: e,
                                 channel: t,
-                                guildId: t.guild_id
+                                guildId: t.guild_id,
                             },
-                            'embedded-activity-'.concat(A.application_id)
-                        )
+                            "embedded-activity-".concat(A.application_id),
+                        ),
                     );
             } else if ((null != A.assets || (0, a.Z)(A)) && A.type === O.IIU.PLAYING)
                 P(
@@ -123,10 +125,10 @@ function E(e) {
                         m.Z.RichPresenceSection,
                         {
                             activity: A,
-                            getAssetImage: f.xF
+                            getAssetImage: f.xF,
                         },
-                        'rich-presence-'.concat(null != (g = A.session_id) ? g : t, '-').concat(w.id)
-                    )
+                        "rich-presence-".concat(null != (g = A.session_id) ? g : t, "-").concat(w.id),
+                    ),
                 );
             else if ((0, u.Z)(A)) {
                 let e = v.length > 0 && v[0].members.length > 1,
@@ -138,10 +140,10 @@ function E(e) {
                             guildId: null == N ? void 0 : N.id,
                             activity: A,
                             user: e || n ? w : null,
-                            getAssetImage: f.xF
+                            getAssetImage: f.xF,
                         },
-                        'streaming-'.concat(null != (b = A.session_id) ? b : t)
-                    )
+                        "streaming-".concat(null != (b = A.session_id) ? b : t),
+                    ),
                 );
             } else
                 (0, s.Z)(A)
@@ -154,13 +156,13 @@ function E(e) {
                                   partySize: {
                                       knownSize: x.length,
                                       unknownSize: 0,
-                                      totalSize: x.length
+                                      totalSize: x.length,
                                   },
                                   getAssetImage: f.xF,
-                                  members: x
+                                  members: x,
                               },
-                              'spotify-'.concat(null != (y = A.session_id) ? y : t, '-').concat(w.id)
-                          )
+                              "spotify-".concat(null != (y = A.session_id) ? y : t, "-").concat(w.id),
+                          ),
                       )
                     : (null != A.assets || (0, a.Z)(A)) && A.type === O.IIU.LISTENING
                       ? P(
@@ -168,13 +170,24 @@ function E(e) {
                                 m.Z.RichPresenceSection,
                                 {
                                     activity: A,
-                                    getAssetImage: f.xF
+                                    getAssetImage: f.xF,
                                 },
-                                'rich-presence-'.concat(null != (S = A.session_id) ? S : t, '-').concat(w.id)
-                            )
+                                "rich-presence-".concat(null != (S = A.session_id) ? S : t, "-").concat(w.id),
+                            ),
                         )
-                      : (0, c.Z)(A) && P((0, r.jsx)(m.Z.XboxSection, { title: Z.name }, 'xbox-'.concat(null != (T = A.session_id) ? T : t)));
-            null != E && null != Z && (0, d._D)(A, E) && (null == E.userStatus || !(0, d.zE)(E.userStatus, p.jn.ACTIVITY_PANEL)) && P((0, r.jsx)(h.Z, { quest: E }, 'quest-'.concat(E.id, '-').concat(null != (j = A.session_id) ? j : t)));
+                      : (0, c.Z)(A) &&
+                        P(
+                            (0, r.jsx)(
+                                m.Z.XboxSection,
+                                { title: Z.name },
+                                "xbox-".concat(null != (T = A.session_id) ? T : t),
+                            ),
+                        );
+            null != E &&
+                null != Z &&
+                (0, d._D)(A, E) &&
+                (null == E.userStatus || !(0, d.zE)(E.userStatus, p.jn.ACTIVITY_PANEL)) &&
+                P((0, r.jsx)(h.Z, { quest: E }, "quest-".concat(E.id, "-").concat(null != (j = A.session_id) ? j : t)));
         }),
         T.length > 0 ? (0, r.jsx)(m.Z.Body, { children: T }) : null
     );

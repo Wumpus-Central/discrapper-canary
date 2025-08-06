@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => D }), a(388685), a(49124));
+a.d(t, { Z: () => D }), a(388685), a(49124);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -26,27 +26,27 @@ var n = a(255367),
     T = a(616257);
 let S = [
     {
-        key: 'event',
+        key: "event",
         cellClassName: E.eventColumn,
         render(e) {
             let { event: t } = e;
             return t;
-        }
+        },
     },
     {
-        key: 'location',
+        key: "location",
         cellClassName: E.locationColumn,
         render(e) {
             let { properties: t } = e;
             return null == t.location ? null : t.location;
-        }
-    }
+        },
+    },
 ];
 function P(e) {
     let { children: t } = e;
     return (0, n.jsx)(u.zJl, {
         className: E.customPropertiesContainer,
-        children: (0, n.jsx)('dl', { children: t })
+        children: (0, n.jsx)("dl", { children: t }),
     });
 }
 function w(e) {
@@ -59,92 +59,92 @@ function w(e) {
                 return () => clearTimeout(e);
             }
         }, [i]),
-        (0, n.jsxs)('div', {
+        (0, n.jsxs)("div", {
             className: E.customProperty,
             children: [
-                (0, n.jsx)('dt', {
+                (0, n.jsx)("dt", {
                     className: E.customPropertiesName,
-                    children: t
+                    children: t,
                 }),
-                (0, n.jsx)('dd', { children: a }),
+                (0, n.jsx)("dd", { children: a }),
                 (0, n.jsx)(u.P3F, {
-                    tag: 'span',
+                    tag: "span",
                     className: E.copyPropertyButton,
                     onClick: () => (0, b.JG)(JSON.stringify(l), () => s(!0)),
                     children: i
                         ? (0, n.jsx)(u.kmB, {
-                              color: 'currentColor',
-                              size: 'sm'
+                              color: "currentColor",
+                              size: "sm",
                           })
                         : (0, n.jsx)(u.TIy, {
-                              color: 'currentColor',
-                              size: 'sm'
-                          })
-                })
-            ]
+                              color: "currentColor",
+                              size: "sm",
+                          }),
+                }),
+            ],
         })
     );
 }
-let I = new Set(['client_performance_cpu', 'client_performance_memory']),
+let I = new Set(["client_performance_cpu", "client_performance_memory"]),
     R = (e, t, a) => {
         let n = e.filter((e) => e.event === t);
         if (0 === n.length)
             return {
                 average: null,
-                count: 0
+                count: 0,
             };
         let r = null,
             l = 0;
         for (let e of n) {
             let t = e.properties[a];
-            'number' == typeof t && ((l += 1), null == r ? (r = t) : (r += t));
+            "number" == typeof t && ((l += 1), null == r ? (r = t) : (r += t));
         }
         return {
             average: null !== r ? r / n.length : null,
-            count: l
+            count: l,
         };
     },
     k = [
         {
-            id: 'details',
-            name: 'Details',
+            id: "details",
+            name: "Details",
             group: N.v0.NONE,
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: a, timestamp: r, fingerprint: l },
                         onClose: s,
-                        filteredEvents: c
+                        filteredEvents: c,
                     } = e,
                     d = f.default.getUser(l),
                     h = o()(r);
-                return (0, n.jsxs)('div', {
-                    'data-mtctest-ignore': 'true',
+                return (0, n.jsxs)("div", {
+                    "data-mtctest-ignore": "true",
                     children: [
                         (0, n.jsxs)(x.ZP, {
                             className: i()(T.headerBar, E.subPanelHeaderBar),
                             children: [
                                 (0, n.jsx)(x.ZP.Icon, {
                                     icon: u.IeX,
-                                    tooltip: t
+                                    tooltip: t,
                                 }),
                                 (0, n.jsxs)(x.ZP.Title, {
                                     wrapperClassName: E.headerTitle,
                                     children: [
                                         t,
                                         (0, n.jsx)(u.P3F, {
-                                            tag: 'span',
+                                            tag: "span",
                                             className: E.copyEventButton,
                                             onClick: () => (0, b.JG)(t),
                                             children: (0, n.jsx)(u.TIy, {
-                                                color: 'currentColor',
-                                                size: 'sm'
-                                            })
-                                        })
-                                    ]
+                                                color: "currentColor",
+                                                size: "sm",
+                                            }),
+                                        }),
+                                    ],
                                 }),
                                 (0, n.jsx)(x.ZP.Icon, {
                                     icon: u.TIy,
-                                    tooltip: 'Copy all properties',
+                                    tooltip: "Copy all properties",
                                     onClick: () => {
                                         (0, b.JG)(
                                             JSON.stringify(
@@ -152,24 +152,25 @@ let I = new Set(['client_performance_cpu', 'client_performance_memory']),
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var a = null != arguments[t] ? arguments[t] : {},
                                                             n = Object.keys(a);
-                                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                                        "function" == typeof Object.getOwnPropertySymbols &&
                                                             (n = n.concat(
                                                                 Object.getOwnPropertySymbols(a).filter(function (e) {
-                                                                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                                                                })
+                                                                    return Object.getOwnPropertyDescriptor(a, e)
+                                                                        .enumerable;
+                                                                }),
                                                             )),
                                                             n.forEach(function (t) {
                                                                 var n;
-                                                                ((n = a[t]),
+                                                                (n = a[t]),
                                                                     t in e
                                                                         ? Object.defineProperty(e, t, {
                                                                               value: n,
                                                                               enumerable: !0,
                                                                               configurable: !0,
-                                                                              writable: !0
+                                                                              writable: !0,
                                                                           })
-                                                                        : (e[t] = n));
-                                                            }));
+                                                                        : (e[t] = n);
+                                                            });
                                                     }
                                                     return e;
                                                 })(
@@ -177,122 +178,122 @@ let I = new Set(['client_performance_cpu', 'client_performance_memory']),
                                                         event: t,
                                                         timestamp: r,
                                                         fingerprint: l,
-                                                        user: null == d ? void 0 : d.id
+                                                        user: null == d ? void 0 : d.id,
                                                     },
-                                                    a
+                                                    a,
                                                 ),
                                                 (e, t) => (void 0 === t ? null : t),
-                                                2
-                                            )
+                                                2,
+                                            ),
                                         );
-                                    }
+                                    },
                                 }),
                                 (0, n.jsx)(x.ZP.Icon, {
                                     icon: u.k$p,
-                                    tooltip: 'Close',
-                                    onClick: s
-                                })
-                            ]
+                                    tooltip: "Close",
+                                    onClick: s,
+                                }),
+                            ],
                         }),
                         (0, n.jsxs)(_.E, {
                             className: E.commonProperties,
                             children: [
                                 (0, n.jsx)(_.Z9, {
-                                    name: 'Timestamp (local)',
+                                    name: "Timestamp (local)",
                                     copyValue: r.toISOString(),
-                                    children: (0, n.jsxs)('time', {
+                                    children: (0, n.jsxs)("time", {
                                         dateTime: r.toISOString(),
-                                        title: (0, v.vc)(h, 'LLLL'),
-                                        children: ['(', o().locale(), ') ', (0, v.Y4)(h)]
-                                    })
+                                        title: (0, v.vc)(h, "LLLL"),
+                                        children: ["(", o().locale(), ") ", (0, v.Y4)(h)],
+                                    }),
                                 }),
                                 null != d &&
                                     (0, n.jsx)(_.Z9, {
-                                        name: 'User',
+                                        name: "User",
                                         copyValue: d.id,
-                                        children: (0, n.jsx)(m.Z, { user: d })
+                                        children: (0, n.jsx)(m.Z, { user: d }),
                                     }),
                                 (0, n.jsx)(_.Z9, {
-                                    name: 'Fingerprint',
+                                    name: "Fingerprint",
                                     copyValue: l,
-                                    children: (0, n.jsx)('code', { children: l })
-                                })
-                            ]
+                                    children: (0, n.jsx)("code", { children: l }),
+                                }),
+                            ],
                         }),
                         (0, n.jsx)(P, {
                             children: Object.entries(a).map((e) => {
                                 let [a, r] = e,
                                     l = I.has(a) ? R(c, t, a) : null;
                                 return (0, n.jsxs)(
-                                    'div',
+                                    "div",
                                     {
                                         children: [
                                             (0, n.jsx)(
                                                 w,
                                                 {
-                                                    name: ''.concat(a, ':'),
+                                                    name: "".concat(a, ":"),
                                                     copyValue: { [a]: r || null },
                                                     children:
                                                         null != r
-                                                            ? (0, n.jsx)('code', { children: JSON.stringify(r) })
-                                                            : (0, n.jsx)('code', {
+                                                            ? (0, n.jsx)("code", { children: JSON.stringify(r) })
+                                                            : (0, n.jsx)("code", {
                                                                   className: E.emptyProperty,
-                                                                  children: 'null'
-                                                              })
+                                                                  children: "null",
+                                                              }),
                                                 },
-                                                a
+                                                a,
                                             ),
                                             null !== l &&
                                                 null !== l.average &&
                                                 (0, n.jsx)(
                                                     w,
                                                     {
-                                                        name: ''.concat(a, '_avg:'),
+                                                        name: "".concat(a, "_avg:"),
                                                         copyValue: { [a]: r || null },
-                                                        children: (0, n.jsxs)('code', {
-                                                            children: [l.average.toFixed(3), ' (', l.count, ')']
-                                                        })
+                                                        children: (0, n.jsxs)("code", {
+                                                            children: [l.average.toFixed(3), " (", l.count, ")"],
+                                                        }),
                                                     },
-                                                    ''.concat(a, '_avg')
-                                                )
-                                        ]
+                                                    "".concat(a, "_avg"),
+                                                ),
+                                        ],
                                     },
-                                    ''.concat(a, '_container')
+                                    "".concat(a, "_container"),
                                 );
-                            })
-                        })
-                    ]
+                            }),
+                        }),
+                    ],
                 });
-            }
-        }
+            },
+        },
     ],
     A = {
         events: {
-            label: 'Events',
+            label: "Events",
             filter: (e) =>
                 Object.entries(A)
                     .filter((e) => {
                         let [t] = e;
-                        return 'events' !== t;
+                        return "events" !== t;
                     })
                     .map((t) => {
                         let [a, { filter: n }] = t;
                         return !n(e);
                     })
-                    .every((e) => e)
+                    .every((e) => e),
         },
         experiments: {
-            label: 'Experiments',
-            filter: (e) => ['experiment_user_triggered', 'experiment_guild_triggered'].includes(e.event)
+            label: "Experiments",
+            filter: (e) => ["experiment_user_triggered", "experiment_guild_triggered"].includes(e.event),
         },
         impressions: {
-            label: 'Impressions',
-            filter: (e) => e.event.startsWith('impression_')
+            label: "Impressions",
+            filter: (e) => e.event.startsWith("impression_"),
         },
         networkActions: {
-            label: 'Network',
-            filter: (e) => e.event.startsWith('network_action')
-        }
+            label: "Network",
+            filter: (e) => e.event.startsWith("network_action"),
+        },
     },
     Z = {
         searchType: h.S.REGEX,
@@ -300,11 +301,11 @@ let I = new Set(['client_performance_cpu', 'client_performance_memory']),
             let { event: t, properties: a } = e;
             return null != a.location ? [t, a.location] : t;
         },
-        throttleMs: 100
+        throttleMs: 100,
     };
 function D() {
     let e = r.useRef(null),
-        [t, a] = r.useState(''),
+        [t, a] = r.useState(""),
         l = (0, c.e7)([j.Z], () => j.Z.loggedEventsVersion),
         [s, o] = r.useState(() => Object.keys(A)),
         [m, x] = r.useState(j.Z.loggedEvents),
@@ -319,11 +320,11 @@ function D() {
         [b, v] = r.useState(void 0),
         _ = f.find((e) => e.key === b),
         { TabBar: P, renderSelectedTab: w } = (0, N.ZP)({ tabs: k }, []);
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         ref: e,
         className: i()(T.panel, E.panel),
         children: [
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 className: E.toolbar,
                 children: [
                     (0, n.jsx)(d.zx, {
@@ -331,17 +332,17 @@ function D() {
                         look: d.zx.Looks.BLANK,
                         size: d.zx.Sizes.ICON,
                         onClick: g.Zw,
-                        children: (0, n.jsx)('span', {
+                        children: (0, n.jsx)("span", {
                             title: O.intl.string(O.t.VkKicX),
                             children: (0, n.jsx)(u.XHJ, {
-                                size: 'md',
-                                color: 'currentColor',
-                                'aria-label': O.intl.string(O.t.VkKicX)
-                            })
-                        })
+                                size: "md",
+                                color: "currentColor",
+                                "aria-label": O.intl.string(O.t.VkKicX),
+                            }),
+                        }),
                     }),
-                    (0, n.jsx)('div', { className: E.toolbarDivider }),
-                    (0, n.jsx)('div', {
+                    (0, n.jsx)("div", { className: E.toolbarDivider }),
+                    (0, n.jsx)("div", {
                         className: E.filters,
                         children: Object.entries(A).map((e) => {
                             let [t, a] = e;
@@ -352,30 +353,30 @@ function D() {
                                     onClick: () => {
                                         o((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
-                                    children: a.label
+                                    children: a.label,
                                 },
-                                t
+                                t,
                             );
-                        })
-                    })
-                ]
+                        }),
+                    }),
+                ],
             }),
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 className: E.toolbar,
                 children: (0, n.jsx)(u.E1j, {
-                    size: 'sm',
+                    size: "sm",
                     className: E.searchBar,
                     query: t,
                     onChange: a,
-                    onClear: () => a(''),
-                    placeholder: 'Search by event name'
-                })
+                    onClear: () => a(""),
+                    placeholder: "Search by event name",
+                }),
             }),
             (0, n.jsx)(C.Z, {
                 columns: S,
                 data: f,
                 selectedRowKey: b,
-                onClickRow: (e) => v(e.key)
+                onClickRow: (e) => v(e.key),
             }),
             null != _ &&
                 (0, n.jsxs)(y.Z, {
@@ -387,10 +388,10 @@ function D() {
                         w({
                             loggedEvent: _,
                             onClose: () => v(void 0),
-                            filteredEvents: f
-                        })
-                    ]
-                })
-        ]
+                            filteredEvents: f,
+                        }),
+                    ],
+                }),
+        ],
     });
 }

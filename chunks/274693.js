@@ -1,1 +1,1 @@
-e.exports = { interactionInfoMenuItem: 'interactionInfoMenuItem_e1195d' };
+e.exports = { interactionInfoMenuItem: "interactionInfoMenuItem_e1195d" };

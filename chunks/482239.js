@@ -10,16 +10,16 @@ function s(e) {
         _ = (0, i.Sw)(l, s),
         p = c(f),
         h = u(null != _ ? _ : void 0),
-        m = a.intl.format(a.t['32QI5+'], {
+        m = a.intl.format(a.t["32QI5+"], {
             actorName: f.nick,
             actorHook: p,
             targetName: null == _ ? void 0 : _.nick,
-            targetHook: h
+            targetHook: h,
         });
     return (0, r.jsx)(o.Z, {
         icon: n(474019),
         timestamp: t.timestamp,
         compact: d,
-        children: m
+        children: m,
     });
 }

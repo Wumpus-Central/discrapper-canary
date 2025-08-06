@@ -10,7 +10,7 @@ function i(e, t, { l: r = 2, c = 1 } = {}) {
         [, d, h] = n.Z.from(a.Z, [u, f, b]),
         [p, m, g] = a.Z.from(t),
         y = n.Z.from(a.Z, [p, m, g])[1];
-    (d < 0 && (d = 0), y < 0 && (y = 0));
+    d < 0 && (d = 0), y < 0 && (y = 0);
     let v = u - p,
         Z = d - y,
         w = f - m,
@@ -21,7 +21,14 @@ function i(e, t, { l: r = 2, c = 1 } = {}) {
     Number.isNaN(h) && (h = 0);
     let E = Math.pow(d, 4),
         C = Math.sqrt(E / (E + 1900)),
-        x = O * (C * (h >= 164 && h <= 345 ? 0.56 + Math.abs(0.2 * Math.cos((h + 168) * o)) : 0.36 + Math.abs(0.4 * Math.cos((h + 35) * o))) + 1 - C),
+        x =
+            O *
+            (C *
+                (h >= 164 && h <= 345
+                    ? 0.56 + Math.abs(0.2 * Math.cos((h + 168) * o))
+                    : 0.36 + Math.abs(0.4 * Math.cos((h + 35) * o))) +
+                1 -
+                C),
         j = (v / (r * k)) ** 2;
     return Math.sqrt((j += (Z / (c * O)) ** 2 + (w ** 2 + M ** 2 - Z ** 2) / x ** 2));
 }

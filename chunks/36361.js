@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(415506));
+n.d(t, { Z: () => m }), n(415506);
 var i = n(255367),
     o = n(73800),
     l = n(28682),
@@ -13,7 +13,7 @@ let m = o.memo(function (e) {
     let { node: t } = e;
     switch (t.type) {
         case l.J.ROOT:
-            throw Error('Root nodes should never be rendered directly');
+            throw Error("Root nodes should never be rendered directly");
         case l.J.PANEL:
             return (0, i.jsx)(f.T, { node: t });
         case l.J.PANE:

@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     $5: () => y,
     B3: () => O,
     Ee: () => p,
@@ -15,9 +15,9 @@
     sp: () => g,
     wD: () => h,
     yS: () => S,
-    z$: () => R
+    z$: () => R,
 }),
-    n(953529));
+    n(953529);
 var r = n(512722),
     i = n.n(r),
     o = n(843991),
@@ -31,7 +31,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,15 +41,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -57,11 +57,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -119,7 +119,7 @@ function p(e, t, n) {
         latestOnboardingQuestionId: null != (D = e.latest_onboarding_question_id) ? D : null,
         profile: null != (x = e.profile) ? x : null,
         premiumFeatures: null != e.premium_features ? w(e.premium_features) : null,
-        moderatorReporting: null != e.moderator_reporting ? L(e.moderator_reporting) : null
+        moderatorReporting: null != e.moderator_reporting ? L(e.moderator_reporting) : null,
     });
 }
 function h(e, t) {
@@ -127,18 +127,18 @@ function h(e, t) {
     let o = null != e.joined_at ? new Date(e.joined_at) : null != (n = null == t ? void 0 : t.joinedAt) ? n : null,
         s = null != (r = e.premium_subscription_count) ? r : 0;
     return null == e.properties
-        ? (i()(null != t, 'If guild.properties is null, existingGuild must be passed in'),
+        ? (i()(null != t, "If guild.properties is null, existingGuild must be passed in"),
           (0, a.TS)(t, {
               joinedAt: o,
-              premiumSubscriberCount: s
+              premiumSubscriberCount: s,
           }))
         : p(
               e.properties,
               {
                   joinedAt: o,
-                  premiumSubscriberCount: s
+                  premiumSubscriberCount: s,
               },
-              t
+              t,
           );
 }
 function m(e, t, n) {
@@ -150,9 +150,9 @@ function m(e, t, n) {
             null != n
                 ? {
                       userId: n.userId,
-                      roles: n.roles
+                      roles: n.roles,
                   }
-                : null
+                : null,
     });
 }
 function g(e, t) {
@@ -162,9 +162,9 @@ function g(e, t) {
               e.properties,
               {
                   joinedAt: t.joinedAt,
-                  premiumSubscriberCount: t.premiumSubscriberCount
+                  premiumSubscriberCount: t.premiumSubscriberCount,
               },
-              t
+              t,
           );
 }
 function E(e, t) {
@@ -172,10 +172,11 @@ function E(e, t) {
     return p(
         e,
         {
-            joinedAt: null != e.joined_at ? new Date(e.joined_at) : null != (n = null == t ? void 0 : t.joinedAt) ? n : null,
-            premiumSubscriberCount: e.premium_subscription_count
+            joinedAt:
+                null != e.joined_at ? new Date(e.joined_at) : null != (n = null == t ? void 0 : t.joinedAt) ? n : null,
+            premiumSubscriberCount: e.premium_subscription_count,
         },
-        t
+        t,
     );
 }
 function b(e) {
@@ -192,7 +193,7 @@ function b(e) {
         premiumSubscriberCount: e.premium_subscription_count,
         nsfwLevel: e.nsfw_level,
         premiumTier: e.premium_tier,
-        homeHeader: e.home_header
+        homeHeader: e.home_header,
     });
 }
 function y(e) {
@@ -204,7 +205,7 @@ function y(e) {
         icon: e.icon,
         premiumSubscriberCount: null != (t = e.premiumSubscriberCount) ? t : s.Cx.premiumSubscriberCount,
         premiumTier: null != (n = e.premiumTier) ? n : s.Cx.premiumTier,
-        features: (0, o.G)(e.features)
+        features: (0, o.G)(e.features),
     });
 }
 function O(e) {
@@ -212,7 +213,7 @@ function O(e) {
     return R({
         id: e.id,
         name: e.name,
-        icon: null != (t = e.icon) ? t : null
+        icon: null != (t = e.icon) ? t : null,
     });
 }
 function v(e) {
@@ -223,18 +224,18 @@ function v(e) {
         icon: null != (t = e.icon) ? t : null,
         description: null != (n = e.description) ? n : null,
         splash: null != (r = e.splash) ? r : null,
-        features: (0, o.G)(e.features)
+        features: (0, o.G)(e.features),
     });
 }
 function I(e) {
     var t, n, r, i;
     return R({
         id: e.guildId,
-        name: null != (t = e.name) ? t : '',
+        name: null != (t = e.name) ? t : "",
         icon: null != (n = e.icon) ? n : null,
         description: null != (r = e.description) ? r : null,
         splash: null != (i = e.splash) ? i : null,
-        features: (0, o.G)(e.features)
+        features: (0, o.G)(e.features),
     });
 }
 function T(e) {
@@ -246,7 +247,7 @@ function T(e) {
         description: null != (n = e.description) ? n : null,
         splash: null != (r = e.splash) ? r : null,
         features: (0, o.G)(e.features),
-        verificationLevel: null != (i = e.verification_level) ? i : s.Cx.verificationLevel
+        verificationLevel: null != (i = e.verification_level) ? i : s.Cx.verificationLevel,
     });
 }
 function S(e) {
@@ -258,14 +259,14 @@ function S(e) {
         description: null != (n = e.description) ? n : null,
         splash: null != (r = e.splash) ? r : null,
         discoverySplash: null != (i = e.discovery_splash) ? i : null,
-        features: (0, o.G)(e.features)
+        features: (0, o.G)(e.features),
     });
 }
 function A(e) {
     var t, n, r, i, a, l;
     return P({
         id: e.id,
-        name: e.name || '',
+        name: e.name || "",
         description: e.description || null,
         ownerId: e.ownerId || null,
         icon: e.icon || null,
@@ -301,7 +302,7 @@ function A(e) {
         latestOnboardingQuestionId: null != (r = e.latestOnboardingQuestionId) ? r : null,
         profile: null != (i = e.profile) ? i : null,
         premiumFeatures: null != (a = e.premiumFeatures) ? a : null,
-        moderatorReporting: null != (l = e.moderatorReporting) ? l : null
+        moderatorReporting: null != (l = e.moderatorReporting) ? l : null,
     });
 }
 function N(e) {
@@ -344,15 +345,15 @@ function N(e) {
         latest_onboarding_question_id: e.latestOnboardingQuestionId,
         profile: e.profile,
         moderator_reporting: null != e.moderatorReporting ? x(e.moderatorReporting) : null,
-        incidents_data: null
+        incidents_data: null,
     };
 }
 function C(e) {
     let t = f(u({}, e), {
         features: (0, o.G)(e.features),
-        joinedAt: null != e.joinedAt ? new Date(e.joinedAt) : null
+        joinedAt: null != e.joinedAt ? new Date(e.joinedAt) : null,
     });
-    return (delete t.roles, delete t.member, P(t));
+    return delete t.roles, delete t.member, P(t);
 }
 function R(e) {
     return P(u({}, s.Cx, e));
@@ -365,7 +366,7 @@ function w(e) {
         features: e.features,
         additionalEmojiSlots: e.additional_emoji_slots,
         additionalStickerSlots: e.additional_sticker_slots,
-        additionalSoundSlots: e.additional_sound_slots
+        additionalSoundSlots: e.additional_sound_slots,
     };
 }
 function D(e) {
@@ -373,18 +374,18 @@ function D(e) {
         features: e.features,
         additional_emoji_slots: e.additionalEmojiSlots,
         additional_sticker_slots: e.additionalStickerSlots,
-        additional_sound_slots: e.additionalSoundSlots
+        additional_sound_slots: e.additionalSoundSlots,
     };
 }
 function L(e) {
     return {
         moderatorReportingEnabled: e.moderator_reporting_enabled,
-        moderatorReportChannelId: e.moderator_report_channel_id
+        moderatorReportChannelId: e.moderator_report_channel_id,
     };
 }
 function x(e) {
     return {
         moderator_reporting_enabled: e.moderatorReportingEnabled,
-        moderator_report_channel_id: e.moderatorReportChannelId
+        moderator_report_channel_id: e.moderatorReportChannelId,
     };
 }

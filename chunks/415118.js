@@ -33,27 +33,35 @@ var i = n(481060),
 let T = (0, a.Z)(
     (0, o.Z)(
         function (e) {
-            let { user: t, guildId: n, showModalItems: o = !0, showMediaItems: a = !1, showChatItems: u = !0, context: T, onSelect: U } = e,
+            let {
+                    user: t,
+                    guildId: n,
+                    showModalItems: o = !0,
+                    showMediaItems: a = !1,
+                    showChatItems: u = !0,
+                    context: T,
+                    onSelect: U,
+                } = e,
                 D = {
                     page: _.ZY5.GUILD_CHANNEL,
                     section: _.jXE.CHAT_USERNAME,
-                    object: _.qAy.CONTEXT_MENU_ITEM
+                    object: _.qAy.CONTEXT_MENU_ITEM,
                 },
                 L = (0, M.Z)({
                     userId: t.id,
-                    guildId: n
+                    guildId: n,
                 }),
                 w = (0, P.Z)(t, n, T),
                 k = (0, p.Z)(t.id, T),
                 R = (0, N.Z)(t.id),
                 B = (0, E.Z)({
                     user: t,
-                    context: T
+                    context: T,
                 }),
                 q = (0, m.Z)({
                     user: t,
                     guildId: n,
-                    context: T
+                    context: T,
                 }),
                 V = (0, f.Z)({ user: t }),
                 G = (0, I.Z)(t.id),
@@ -62,15 +70,15 @@ let T = (0, a.Z)(
                     guildId: n,
                     userId: t.id,
                     analyticsLocation: D,
-                    context: T
+                    context: T,
                 }),
                 H = (0, g.Z)({
                     user: t,
-                    guildId: n
+                    guildId: n,
                 }),
                 Q = (0, v.Z)({
                     user: t,
-                    guildId: n
+                    guildId: n,
                 }),
                 K = (0, s.Z)(null, t),
                 W = (0, Z.Z)({ user: t }),
@@ -79,49 +87,49 @@ let T = (0, a.Z)(
                 z = (0, h.Z)({
                     user: t,
                     guildId: n,
-                    location: 'GuildUserContextMenu'
+                    location: "GuildUserContextMenu",
                 }),
                 $ = (0, j.Z)({
                     user: t,
                     guildId: n,
-                    location: 'GuildUserContextMenu'
+                    location: "GuildUserContextMenu",
                 }),
                 ee = (0, O.Z)(t, n),
                 et = (0, x.Z)(t.id, n),
                 en = (0, y.Z)(t, n),
                 el = (0, d.Z)({
                     id: t.id,
-                    label: A.intl.string(A.t['/AXYnJ'])
+                    label: A.intl.string(A.t["/AXYnJ"]),
                 }),
                 ei = t.isNonUserBot();
             return (0, l.jsxs)(i.v2r, {
-                navId: 'user-context',
+                navId: "user-context",
                 onClose: r.Zy,
-                'aria-label': A.intl.string(A.t.liqwPD),
+                "aria-label": A.intl.string(A.t.liqwPD),
                 onSelect: U,
                 children: [
                     !ei &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsxs)(i.kSQ, {
-                                    children: [o && L, u && w, k, B, o && q, o && V, R]
+                                    children: [o && L, u && w, k, B, o && q, o && V, R],
                                 }),
                                 a && (0, l.jsx)(i.kSQ, { children: G }),
                                 (0, l.jsx)(i.kSQ, { children: o && K }),
                                 (0, l.jsxs)(i.kSQ, {
-                                    children: [a && F, o && Y, o && Q, W, J, X, H, o && $, o && z]
+                                    children: [a && F, o && Y, o && Q, W, J, X, H, o && $, o && z],
                                 }),
                                 (0, l.jsx)(i.kSQ, { children: ee }),
                                 (0, l.jsxs)(i.kSQ, {
-                                    children: [et, en]
-                                })
-                            ]
+                                    children: [et, en],
+                                }),
+                            ],
                         }),
-                    (0, l.jsx)(i.kSQ, { children: el })
-                ]
+                    (0, l.jsx)(i.kSQ, { children: el }),
+                ],
             });
         },
-        { object: _.qAy.CONTEXT_MENU }
+        { object: _.qAy.CONTEXT_MENU },
     ),
-    [u.Z.CONTEXT_MENU, u.Z.GUILD_USER_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.GUILD_USER_MENU],
 );

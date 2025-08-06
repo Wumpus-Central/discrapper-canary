@@ -7,9 +7,9 @@ var i = {
     today: "'σήμερα στις' p",
     tomorrow: "'αύριο στις' p",
     nextWeek: "eeee 'στις' p",
-    other: 'P'
+    other: "P",
 };
 let n = function (e, t) {
     var a = i[e];
-    return 'function' == typeof a ? a(t) : a;
+    return "function" == typeof a ? a(t) : a;
 };

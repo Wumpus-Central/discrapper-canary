@@ -18,10 +18,17 @@ function u(e, t) {
                     guild_id: null == t ? void 0 : t.guild_id,
                     channel_id: null == t ? void 0 : t.id,
                     sound_guild_id: null == e ? void 0 : e.guildId,
-                    sound_id: null == e ? void 0 : e.soundId
+                    sound_id: null == e ? void 0 : e.soundId,
                 }),
                 !0)
             );
-        }, [null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, u, null == e ? void 0 : e.guildId, null == e ? void 0 : e.soundId, null == e ? void 0 : e.volume])
+        }, [
+            null == t ? void 0 : t.guild_id,
+            null == t ? void 0 : t.id,
+            u,
+            null == e ? void 0 : e.guildId,
+            null == e ? void 0 : e.soundId,
+            null == e ? void 0 : e.volume,
+        ]),
     };
 }

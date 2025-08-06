@@ -4,64 +4,64 @@ n.d(t, {
     nP: () => f,
     sA: () => c,
     wm: () => u,
-    zO: () => l
+    zO: () => l,
 });
 var r = n(818083),
     i = n(518929),
     o = n(987338);
 let a = (0, r.B)({
-        kind: 'user',
-        id: '2024-03_content_inventory_memberlist_and_ranker',
-        label: 'Enables the memberlist content feed',
+        kind: "user",
+        id: "2024-03_content_inventory_memberlist_and_ranker",
+        label: "Enables the memberlist content feed",
         defaultConfig: {
             enabled: !0,
-            impressionCappingEnabled: !0
+            impressionCappingEnabled: !0,
         },
         treatments: [
             {
                 id: -1,
-                label: 'Not in experiment',
-                config: { enabled: !1 }
+                label: "Not in experiment",
+                config: { enabled: !1 },
             },
             {
                 id: 0,
-                label: 'Holdout',
-                config: { enabled: !1 }
-            }
-        ]
+                label: "Holdout",
+                config: { enabled: !1 },
+            },
+        ],
     }),
     s = (0, r.B)({
-        kind: 'user',
-        id: '2025-04_hotwheels_holdout_the_sequel',
-        label: 'Tracking a holdout hashed to member list experiment for data readouts',
+        kind: "user",
+        id: "2025-04_hotwheels_holdout_the_sequel",
+        label: "Tracking a holdout hashed to member list experiment for data readouts",
         commonTriggerPoint: o.$P.CONNECTION_OPEN,
         defaultConfig: {},
         treatments: [
             {
                 id: 0,
-                label: 'Holdout',
-                config: {}
+                label: "Holdout",
+                config: {},
             },
             {
                 id: 1,
-                label: 'Shadow Treatment',
-                config: {}
-            }
-        ]
+                label: "Shadow Treatment",
+                config: {},
+            },
+        ],
     }),
     l = (0, r.B)({
-        kind: 'user',
-        id: '2025-05_hotwheels_user_affinity_v2',
-        label: 'Next iteration of the activity feed ranking model.',
+        kind: "user",
+        id: "2025-05_hotwheels_user_affinity_v2",
+        label: "Next iteration of the activity feed ranking model.",
         commonTriggerPoint: o.$P.CONNECTION_OPEN,
         defaultConfig: {},
         treatments: [
             {
                 id: 14,
-                label: 'ML model V3 - User Affinity V2',
-                config: {}
-            }
-        ]
+                label: "ML model V3 - User Affinity V2",
+                config: {},
+            },
+        ],
     });
 function c(e) {
     let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
@@ -73,17 +73,17 @@ function u(e) {
     return t && !0 === n;
 }
 let d = (0, r.B)({
-    kind: 'user',
-    id: '2024-08_content_inventory_analytics_sampling',
-    label: 'Content Inventory Analytics Sampling',
+    kind: "user",
+    id: "2024-08_content_inventory_analytics_sampling",
+    label: "Content Inventory Analytics Sampling",
     defaultConfig: { trackingEnabled: !0 },
     treatments: [
         {
             id: 1,
-            label: 'Tracking disabled',
-            config: { trackingEnabled: !1 }
-        }
-    ]
+            label: "Tracking disabled",
+            config: { trackingEnabled: !1 },
+        },
+    ],
 });
 function f(e) {
     return d.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });

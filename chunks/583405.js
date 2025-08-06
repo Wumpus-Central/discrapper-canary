@@ -12,11 +12,11 @@ let c = (e) => {
             s = o()({
                 h: n,
                 s: r * t,
-                l: i
+                l: i,
             });
         return {
             hex: s.toHexString(),
-            hsl: s.toHslString()
+            hsl: s.toHslString(),
         };
     }, [e, t]);
 };

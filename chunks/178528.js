@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => z }), n(388685));
+n.d(t, { Z: () => z }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(126663),
@@ -39,7 +39,7 @@ function A(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -49,15 +49,15 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 A(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -67,7 +67,7 @@ class M extends r.PureComponent {
         return null == t || null == t.banner
             ? {
                   renderBanner: !1,
-                  bannerVisible: !1
+                  bannerVisible: !1,
               }
             : null;
     }
@@ -90,35 +90,39 @@ class M extends r.PureComponent {
     setAnimatedValue(e) {
         let { guild: t } = this.props,
             n = null != t && (0, d.Z)(t);
-        null != t && (null != t.banner || n) && (null != t.banner ? this.setAnimatedValueForBanner(e) : this.setAnimatedValueForCommunityInfo(e));
+        null != t &&
+            (null != t.banner || n) &&
+            (null != t.banner ? this.setAnimatedValueForBanner(e) : this.setAnimatedValueForCommunityInfo(e));
     }
     setAnimatedValueForBanner(e) {
         let { renderBanner: t, communityInfoVisible: n, bannerVisible: i, controller: r } = this.state;
-        (((e >= 54 && i) || (e < 54 && !i)) && (i = !i),
+        ((e >= 54 && i) || (e < 54 && !i)) && (i = !i),
             ((e >= 78 && !t) || (e < 78 && t)) && (t = !t),
             (n = i),
-            (t !== this.state.renderBanner || i !== this.state.bannerVisible || n !== this.state.communityInfoVisible) &&
+            (t !== this.state.renderBanner ||
+                i !== this.state.bannerVisible ||
+                n !== this.state.communityInfoVisible) &&
                 this.setState({
                     renderBanner: t,
                     bannerVisible: i,
-                    communityInfoVisible: n
+                    communityInfoVisible: n,
                 }),
             r
                 .update({
                     value: Math.min(1, Math.max(0, 1 - e / 78)),
-                    immediate: !0
+                    immediate: !0,
                 })
-                .start());
+                .start();
     }
     setAnimatedValueForCommunityInfo(e) {
         let { communityInfoVisible: t, controller: n } = this.state;
-        (((e >= 20 && t) || (e < 20 && !t)) && this.setState({ communityInfoVisible: !t }),
+        ((e >= 20 && t) || (e < 20 && !t)) && this.setState({ communityInfoVisible: !t }),
             n
                 .update({
                     value: Math.min(1, Math.max(0, 1 - e / 20)),
-                    immediate: !0
+                    immediate: !0,
                 })
-                .start());
+                .start();
     }
     render() {
         var e, t;
@@ -134,15 +138,17 @@ class M extends r.PureComponent {
                             i,
                             r = {},
                             o = Object.keys(e);
-                        for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                        for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                    for (i = 0; i < o.length; i++)
+                        (n = o[i]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
-            })(n, ['onDragStart']),
+            })(n, ["onDragStart"]),
             { guild: l } = o,
             { controller: a, renderBanner: c, bannerVisible: d, communityInfoVisible: g } = this.state,
             m = (null == l ? void 0 : l.id) === D._ ? u.j : u.E;
@@ -161,7 +167,7 @@ class M extends r.PureComponent {
                           communityInfoVisible: g,
                           children: (0, i.jsx)(s.yRy, {
                               targetElementRef: this.settingsIconRef,
-                              position: 'right',
+                              position: "right",
                               renderPopout: this.renderSettings,
                               children: (e) =>
                                   (0, i.jsx)(
@@ -170,16 +176,16 @@ class M extends r.PureComponent {
                                           {
                                               ref: this.settingsIconRef,
                                               icon: s.ewm,
-                                              label: k.intl.string(k.t['3D5yo6'])
+                                              label: k.intl.string(k.t["3D5yo6"]),
                                           },
-                                          e
-                                      )
-                                  )
-                          })
+                                          e,
+                                      ),
+                                  ),
+                          }),
                       })
                     : null,
             children: [
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: R.channelList,
                     children:
                         null != l
@@ -190,7 +196,7 @@ class M extends r.PureComponent {
                                       {
                                           guild: l,
                                           disableManageChannels: !0,
-                                          onScroll: null != l && null != l.banner ? this.handleScroll : null
+                                          onScroll: null != l && null != l.banner ? this.handleScroll : null,
                                       }),
                                   Object.getOwnPropertyDescriptors
                                       ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -204,35 +210,35 @@ class M extends r.PureComponent {
                                         })(Object(t)).forEach(function (n) {
                                             Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                                         }),
-                                  e)
+                                  e),
                               )
-                            : (0, i.jsx)(p.Z, { withBannerPadding: !1 })
+                            : (0, i.jsx)(p.Z, { withBannerPadding: !1 }),
                 }),
                 null != l &&
-                    (0, i.jsx)('section', {
+                    (0, i.jsx)("section", {
                         className: R.panels,
-                        'aria-label': k.intl.string(k.t.StREWF),
-                        children: (0, i.jsx)(f.Z, { guildId: l.id })
-                    })
-            ]
+                        "aria-label": k.intl.string(k.t.StREWF),
+                        children: (0, i.jsx)(f.Z, { guildId: l.id }),
+                    }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            A(this, 'settingsIconRef', r.createRef()),
-            A(this, 'state', {
+        super(...e),
+            A(this, "settingsIconRef", r.createRef()),
+            A(this, "state", {
                 controller: new o.Controller({
                     value: 1,
-                    immediate: !0
+                    immediate: !0,
                 }),
                 renderBanner: !1,
                 bannerVisible: !1,
-                communityInfoVisible: !1
+                communityInfoVisible: !1,
             }),
-            A(this, 'handleScroll', (e) => {
+            A(this, "handleScroll", (e) => {
                 let { scrollTop: t } = e;
                 this.setAnimatedValue(t);
-            }));
+            });
     }
 }
 function z(e) {
@@ -243,7 +249,7 @@ function z(e) {
         s = (0, l.e7)([v.Z], () => v.Z.getCategories(n)),
         { mutedChannels: d, collapseMuted: u } = (0, l.cj)([Z.ZP], () => ({
             mutedChannels: Z.ZP.getMutedChannels(n),
-            collapseMuted: Z.ZP.isGuildCollapsed(n)
+            collapseMuted: Z.ZP.isGuildCollapsed(n),
         })),
         h = (0, l.e7)([I.ZP], () => I.ZP.getVoiceStates(n)),
         p = (0, l.e7)([y.Z], () => y.Z.getCollapsed()),
@@ -281,6 +287,6 @@ function z(e) {
         embeddedAppsByChannel: R,
         activeEventsByChannel: A,
         showNewUnreadsBar: L,
-        optInEnabled: !1
+        optInEnabled: !1,
     });
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     Fp: () => r,
     NM: () => o,
-    VV: () => i
+    VV: () => i,
 });
 var r = Math.max,
     i = Math.min,

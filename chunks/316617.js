@@ -23,33 +23,33 @@ let f = (e) => {
         { content: j } = (0, p.Z)(v, { hideSimpleEmbedContent: !1 }),
         y = g.jU.useSetting(),
         O = l.useCallback(() => {
-            let { leadingIcon: e, trailingIcon: n } = (0, m.f)(t, j, !1, !1, '', {
+            let { leadingIcon: e, trailingIcon: n } = (0, m.f)(t, j, !1, !1, "", {
                 leadingIconClass: h.attachmentIcon,
                 trailingIconClass: h.attachmentIcon,
-                iconSize: _.WW
+                iconSize: _.WW,
             });
-            return (0, r.jsxs)('div', {
+            return (0, r.jsxs)("div", {
                 className: h.contentContainer,
                 children: [
                     e,
                     (0, r.jsx)(d.ZP, {
                         message: t,
                         content: j,
-                        compact: y
+                        compact: y,
                     }),
-                    n
-                ]
+                    n,
+                ],
             });
         }, [t, j, y]);
     return null == f
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: h.container,
               children: [
                   (0, r.jsx)(a.X6q, {
                       className: h.header,
-                      variant: 'heading-sm/semibold',
-                      children: b.intl.string(b.t.iouM3d)
+                      variant: "heading-sm/semibold",
+                      children: b.intl.string(b.t.iouM3d),
                   }),
                   (0, r.jsx)(a.Ttm, {
                       className: h.messagePreviewContainer,
@@ -59,12 +59,12 @@ let f = (e) => {
                               message: t,
                               channel: f,
                               author: n,
-                              guildId: f.guild_id
+                              guildId: f.guild_id,
                           }),
                           disableInteraction: !0,
-                          author: n
-                      })
-                  })
-              ]
+                          author: n,
+                      }),
+                  }),
+              ],
           });
 };

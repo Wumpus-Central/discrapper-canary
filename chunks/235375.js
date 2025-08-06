@@ -1,10 +1,10 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         baseRules: () => A,
-        customRules: () => N
+        customRules: () => N,
     }),
     n(35282),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -26,7 +26,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,14 +77,14 @@ function I() {
     p.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: v });
 }
 function T(e, t) {
-    return null == t ? [] : t.split(' ').map((t) => e[t]);
+    return null == t ? [] : t.split(" ").map((t) => e[t]);
 }
 let S = (e) => {
         let { level: t, children: n, className: r = null, styleSheet: o = {} } = e,
             s = (0, c.xSt)(),
             l = parseInt(t, 10),
             u = s + (isNaN(l) ? 1 : l) - 1;
-        return i.createElement('h'.concat(u), { className: a()(...T(o, r)) }, n);
+        return i.createElement("h".concat(u), { className: a()(...T(o, r)) }, n);
     },
     A = null != f.Z ? f.Z.defaultRules : null,
     N = {
@@ -92,31 +92,44 @@ let S = (e) => {
             parse(e, t, n) {
                 let r,
                     i = e[2],
-                    o = i.startsWith('https://discordapp.com/nitro') || i.startsWith('https://discord.com/nitro'),
-                    a = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
-                    s = i.startsWith('/shop/fullscreen?source=1') || i.startsWith('/activities');
+                    o = i.startsWith("https://discordapp.com/nitro") || i.startsWith("https://discord.com/nitro"),
+                    a =
+                        i.startsWith("https://discordapp.com/hypesquad") ||
+                        i.startsWith("https://discord.com/hypesquad"),
+                    s = i.startsWith("/shop/fullscreen?source=1") || i.startsWith("/activities");
                 return (
                     (r =
                         o || a
                             ? (e) => {
-                                  (I(), o ? d.Z.open(h.oAB.PREMIUM) : a && d.Z.open(h.oAB.HYPESQUAD_ONLINE), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, c.Mr3)(m.Xd), e.preventDefault());
+                                  I(),
+                                      o ? d.Z.open(h.oAB.PREMIUM) : a && d.Z.open(h.oAB.HYPESQUAD_ONLINE),
+                                      n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
+                                      (0, c.Mr3)(m.Xd),
+                                      e.preventDefault();
                               }
                             : s
                               ? (e) => {
-                                    ((0, _.uL)(i), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, E({}, p.default.getCampaignParams(i))), (0, u.Ou)(), (0, c.Mr3)(m.Xd), e.preventDefault());
+                                    (0, _.uL)(i),
+                                        n.changeLog.track(
+                                            h.rMx.CHANGE_LOG_CTA_CLICKED,
+                                            E({}, p.default.getCampaignParams(i)),
+                                        ),
+                                        (0, u.Ou)(),
+                                        (0, c.Mr3)(m.Xd),
+                                        e.preventDefault();
                                 }
                               : () => {
-                                    (n && 'function' == typeof n.onLinkClick && n.onLinkClick(i),
+                                    n && "function" == typeof n.onLinkClick && n.onLinkClick(i),
                                         n.changeLog.track(
                                             h.rMx.CHANGE_LOG_CTA_CLICKED,
                                             E(
                                                 {
                                                     target: i,
-                                                    cta_type: 'inline_link'
+                                                    cta_type: "inline_link",
                                                 },
-                                                p.default.getCampaignParams(i)
-                                            )
-                                        ));
+                                                p.default.getCampaignParams(i),
+                                            ),
+                                        );
                                 }),
                     y(E({}, O.parse(e, t, n)), { callToAction: r })
                 );
@@ -128,12 +141,12 @@ let S = (e) => {
                         href: l().sanitizeUrl(e.target),
                         title: e.title,
                         onClick: e.callToAction,
-                        target: '_blank',
-                        className: e.callToAction ? 'cta' : void 0,
-                        children: t(e.content, n)
+                        target: "_blank",
+                        className: e.callToAction ? "cta" : void 0,
+                        children: t(e.content, n),
                     },
-                    n.key
-                )
+                    n.key,
+                ),
         },
         lheading: (e) => ({
             react: (t, n, i) =>
@@ -143,10 +156,10 @@ let S = (e) => {
                         level: t.level,
                         className: t.className,
                         styleSheet: e,
-                        children: n(t.content, i)
+                        children: n(t.content, i),
                     },
-                    i.key
-                )
+                    i.key,
+                ),
         }),
         heading: {
             react: (e, t, n) =>
@@ -154,24 +167,24 @@ let S = (e) => {
                     S,
                     {
                         level: e.level,
-                        children: t(e.content, n)
+                        children: t(e.content, n),
                     },
-                    n.key
-                )
+                    n.key,
+                ),
         },
         image: {
             react(e, t, i) {
-                let o = n(595173)('./'.concat(e.target));
+                let o = n(595173)("./".concat(e.target));
                 return (0, r.jsx)(
-                    'img',
+                    "img",
                     {
                         alt: e.alt,
-                        src: o
+                        src: o,
                     },
-                    i.key
+                    i.key,
                 );
-            }
+            },
         },
         blockQuote: { react: null == A ? void 0 : A.blockQuote.react },
-        paragraph: { react: (e, t, n) => (0, r.jsx)('p', { children: t(e.content, n) }, n.key) }
+        paragraph: { react: (e, t, n) => (0, r.jsx)("p", { children: t(e.content, n) }, n.key) },
     };

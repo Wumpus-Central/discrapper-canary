@@ -6,14 +6,14 @@ function i(n, r) {
         function () {
             return new o.e(n, r);
         },
-        [r]
+        [r],
     );
     return (
         (0, e.useEffect)(
             function () {
                 t.spec = n;
             },
-            [n]
+            [n],
         ),
         t
     );

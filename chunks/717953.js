@@ -18,39 +18,39 @@ var r = n(255367),
     b = n(388032),
     y = n(313572);
 function O() {
-    return (0, r.jsxs)('svg', {
+    return (0, r.jsxs)("svg", {
         className: y.newRing,
-        width: '68',
-        height: '68',
-        viewBox: '0 0 68 68',
-        fill: 'none',
-        xmlns: 'http://www.w3.org/2000/svg',
+        width: "68",
+        height: "68",
+        viewBox: "0 0 68 68",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg",
         children: [
-            (0, r.jsx)('circle', {
-                cx: '33.875',
-                cy: '33.875',
-                r: '32.875',
-                stroke: 'url(#paint0_linear_1368_16544)',
-                'stroke-width': '2'
+            (0, r.jsx)("circle", {
+                cx: "33.875",
+                cy: "33.875",
+                r: "32.875",
+                stroke: "url(#paint0_linear_1368_16544)",
+                "stroke-width": "2",
             }),
-            (0, r.jsx)('defs', {
-                children: (0, r.jsxs)('linearGradient', {
-                    id: 'paint0_linear_1368_16544',
-                    x1: '33.875',
-                    y1: '2',
-                    x2: '33.875',
-                    y2: '65.75',
-                    gradientUnits: 'userSpaceOnUse',
+            (0, r.jsx)("defs", {
+                children: (0, r.jsxs)("linearGradient", {
+                    id: "paint0_linear_1368_16544",
+                    x1: "33.875",
+                    y1: "2",
+                    x2: "33.875",
+                    y2: "65.75",
+                    gradientUnits: "userSpaceOnUse",
                     children: [
-                        (0, r.jsx)('stop', { 'stop-color': '#B473F5' }),
-                        (0, r.jsx)('stop', {
-                            offset: '1',
-                            'stop-color': '#E292AA'
-                        })
-                    ]
-                })
-            })
-        ]
+                        (0, r.jsx)("stop", { "stop-color": "#B473F5" }),
+                        (0, r.jsx)("stop", {
+                            offset: "1",
+                            "stop-color": "#E292AA",
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }
 function v(e) {
@@ -58,7 +58,9 @@ function v(e) {
     let { isDisabled: o, onSelect: v } = e,
         I = (0, l.e7)([p.Z], () => {
             var e, t;
-            return null == (t = p.Z.settings.appearance) || null == (e = t.clientThemeSettings) ? void 0 : e.customUserThemeSettings;
+            return null == (t = p.Z.settings.appearance) || null == (e = t.clientThemeSettings)
+                ? void 0
+                : e.customUserThemeSettings;
         }),
         { shouldShowNewBadge: T, markNewBadgeAsDismissed: S } = (0, m.w)(),
         A = (0, _.Nj)(c.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
@@ -71,17 +73,17 @@ function v(e) {
             let e = I.colors[0];
             if (P) {
                 let { colors: t, gradientAngle: n } = I;
-                e = 'linear-gradient('.concat(n, 'deg, ').concat(t.join(', '), ')');
+                e = "linear-gradient(".concat(n, "deg, ").concat(t.join(", "), ")");
             }
-            return { background: 'var(--background-gradient), '.concat(e) };
+            return { background: "var(--background-gradient), ".concat(e) };
         }, [I, P]),
         D = (0, f.Sl)(g.Il.WHITE).hex,
         L = (0, f.Sl)(g.Il.RED_430).hex,
         x = C ? D : void 0,
         M = i.useCallback(() => {
-            (T && S(), null == v || v());
+            T && S(), null == v || v();
         }, [T, S, v]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: y.badgeContainer,
         children: [
             (0, r.jsxs)(h.S4, {
@@ -95,19 +97,19 @@ function v(e) {
                 style: w,
                 children: [
                     !A && !C && (0, r.jsx)(O, {}),
-                    (0, r.jsx)('div', { className: y.borderOverlay }),
+                    (0, r.jsx)("div", { className: y.borderOverlay }),
                     (0, r.jsx)(s.V3v, {
                         color: x,
-                        className: y.paletteIcon
-                    })
-                ]
+                        className: y.paletteIcon,
+                    }),
+                ],
             }),
             T &&
                 (0, r.jsx)(u.IGR, {
                     className: y.newBadge,
                     text: b.intl.string(b.t.y2b7CA),
-                    color: L
-                })
-        ]
+                    color: L,
+                }),
+        ],
     });
 }

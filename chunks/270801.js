@@ -15,7 +15,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,7 +62,7 @@ function p(e, t) {
 }
 let h = () =>
         n
-            .e('49812')
+            .e("49812")
             .then(n.t.bind(n, 48603, 19))
             .then((e) => {
                 let { default: t } = e;
@@ -71,49 +71,49 @@ let h = () =>
     m = (e) => {
         let t = (0, l.Dt)(),
             n = () => {
-                (e.onAccept(), e.onClose());
+                e.onAccept(), e.onClose();
             };
         return (0, r.jsxs)(
             i.I,
             p(f({}, e), {
-                size: 'sm',
+                size: "sm",
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: u.animationContainer,
                         children: (0, r.jsx)(s.Fmz, {
                             importData: h,
-                            className: u.animationMiddle
-                        })
+                            className: u.animationMiddle,
+                        }),
                     }),
                     (0, r.jsx)(a.f, {
-                        children: (0, r.jsxs)('div', {
+                        children: (0, r.jsxs)("div", {
                             className: u.manaContainer,
                             children: [
                                 (0, r.jsx)(s.X6q, {
-                                    variant: 'heading-lg/semibold',
+                                    variant: "heading-lg/semibold",
                                     className: u.header,
                                     id: t,
-                                    children: c.intl.format(c.t.z9qozM, { guildName: e.guildName })
+                                    children: c.intl.format(c.t.z9qozM, { guildName: e.guildName }),
                                 }),
                                 (0, r.jsx)(s.Text, {
-                                    variant: 'text-sm/medium',
-                                    color: 'header-secondary',
-                                    children: c.intl.string(c.t.nwpqyc)
-                                })
-                            ]
-                        })
+                                    variant: "text-sm/medium",
+                                    color: "header-secondary",
+                                    children: c.intl.string(c.t.nwpqyc),
+                                }),
+                            ],
+                        }),
                     }),
                     (0, r.jsx)(o.G, {
                         actions: [
                             {
-                                variant: 'primary',
+                                variant: "primary",
                                 onClick: n,
-                                text: c.intl.string(c.t.NuzmOD)
-                            }
+                                text: c.intl.string(c.t.NuzmOD),
+                            },
                         ],
-                        actionsFullWidth: !0
-                    })
-                ]
-            })
+                        actionsFullWidth: !0,
+                    }),
+                ],
+            }),
         );
     };

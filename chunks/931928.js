@@ -19,30 +19,30 @@ let O = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
         let { isVirtualCurrencyEnabled: t, onShowCoachmarkHandler: n } = e,
             r = (0, l.TH)().pathname,
             { shouldShow: u, closeCoachmarkIfOpen: d } = (0, h.M)({
-                onboardingCoachmarkType: 'discover',
-                onShowCoachmarkHandler: n
+                onboardingCoachmarkType: "discover",
+                onShowCoachmarkHandler: n,
             }),
             b = i.useCallback(
                 function () {
-                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'CLOSE';
-                    ((0, s.Q3)(o.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
+                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "CLOSE";
+                    (0, s.Q3)(o.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
                         dismissAction: g.L.INDIRECT_ACTION,
-                        groupName: g.R.VIRTUAL_CURRENCY_ONBOARDING
+                        groupName: g.R.VIRTUAL_CURRENCY_ONBOARDING,
                     }),
-                        d(e));
+                        d(e);
                 },
-                [d]
+                [d],
             ),
             _ = i.useCallback(() => {
-                (d('CTA_CLICK'), O.includes(r) || (0, a.uL)(p.Z5c.COLLECTIBLES_SHOP_WITH_TAB(f.AW.ORBS)));
+                d("CTA_CLICK"), O.includes(r) || (0, a.uL)(p.Z5c.COLLECTIBLES_SHOP_WITH_TAB(f.AW.ORBS));
             }, [d, r]),
             y = i.useCallback(() => {
-                (b('CTA_CLICK'),
+                b("CTA_CLICK"),
                     (0, c.Y)({
                         pageType: p.ZY5.GUILD_LIST,
                         sectionType: p.jXE.ORBS_DISCOVERY_ONBOARDING_COACHMARK,
-                        ctaObject: p.qAy.DISCOVERY_BUTTON_TO_ORB_INTRO_QUEST
-                    }));
+                        ctaObject: p.qAy.DISCOVERY_BUTTON_TO_ORB_INTRO_QUEST,
+                    });
             }, [b]);
         return t
             ? {
@@ -50,50 +50,50 @@ let O = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
                   questId: m.V6,
                   onClose: b,
                   onCtaClick: _,
-                  onDiscoveryButtonClick: y
+                  onDiscoveryButtonClick: y,
               }
             : {
                   shouldShow: !1,
                   questId: void 0,
                   onClose: p.dG4,
                   onCtaClick: p.dG4,
-                  onDiscoveryButtonClick: p.dG4
+                  onDiscoveryButtonClick: p.dG4,
               };
     },
     y = (e) => {
         let { targetElementRef: t, scrollToBottom: n, renderDiscoveryButton: l, isGuildBarScrolling: o } = e,
-            { enabled: s } = (0, u.WX)({ location: 'orbs_discovery_onboarding_coachmark' }),
+            { enabled: s } = (0, u.WX)({ location: "orbs_discovery_onboarding_coachmark" }),
             {
                 shouldShow: a,
                 questId: c,
                 onClose: h,
                 onCtaClick: p,
-                onDiscoveryButtonClick: f
+                onDiscoveryButtonClick: f,
             } = _({
                 isVirtualCurrencyEnabled: s,
                 onShowCoachmarkHandler: (0, d.O5)({
                     targetElementRef: t,
-                    scrollToBottom: n
-                })
+                    scrollToBottom: n,
+                }),
             }),
             g = i.useMemo(
                 () => ({
                     onCtaClick: p,
                     onClose: h,
                     titleText: b.intl.string(b.t.KnWRQU),
-                    descriptionText: b.intl.format(b.t['xYx+WV'], { quantity: 200 }),
-                    ctaText: b.intl.string(b.t.v4HbPz)
+                    descriptionText: b.intl.format(b.t["xYx+WV"], { quantity: 200 }),
+                    ctaText: b.intl.string(b.t.v4HbPz),
                 }),
-                [p, h]
+                [p, h],
             );
         return (0, r.jsx)(d.G6, {
-            errorBoundarySource: 'ORBS_DISCOVERY_ONBOARDING_COACHMARK',
+            errorBoundarySource: "ORBS_DISCOVERY_ONBOARDING_COACHMARK",
             targetElementRef: t,
             targetQuestId: c,
             renderDiscoveryButton: l,
             showingCoachmark: a,
             isGuildBarScrolling: o,
             onDiscoveryButtonClick: f,
-            innerCoachmarkProps: g
+            innerCoachmarkProps: g,
         });
     };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -16,36 +16,36 @@ function c(e) {
             className: o.keywordTextAreaContainer,
             textAreaClassName: o.keywordTextArea,
             subtitleText: s.intl.formatToMarkdownString(s.t.qm7UZ2, {}),
-            initialValue: n
+            initialValue: n,
         }),
         className: o.collapseable,
         children: (e) => {
             let { onClick: t } = e;
             return (0, r.jsx)(l.P3F, {
                 onClick: (e) => {
-                    (m(!u), t(e));
+                    m(!u), t(e);
                 },
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: o.header,
                     children: [
                         (0, r.jsx)(l.X6q, {
-                            variant: 'text-sm/medium',
-                            children: s.intl.string(s.t.lbE2Nj)
+                            variant: "text-sm/medium",
+                            children: s.intl.string(s.t.lbE2Nj),
                         }),
                         u
                             ? (0, r.jsx)(l.u04, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: o.arrow
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: o.arrow,
                               })
                             : (0, r.jsx)(l.CJ0, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: o.arrow
-                              })
-                    ]
-                })
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: o.arrow,
+                              }),
+                    ],
+                }),
             });
-        }
+        },
     });
 }

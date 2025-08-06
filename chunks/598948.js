@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -23,54 +23,62 @@ var r = n(255367),
     H = n(420212),
     _ = n(172796);
 let w = {
-        transform: 'translate3d(15%, 0, 0)',
-        opacity: 0.3
+        transform: "translate3d(15%, 0, 0)",
+        opacity: 0.3,
     },
     N = {
-        transform: 'translate3d(5%, 0, 0)',
-        opacity: 0.5
+        transform: "translate3d(5%, 0, 0)",
+        opacity: 0.5,
     },
     S = {
-        transform: 'translate3d(0, 0, 0)',
-        opacity: 1
+        transform: "translate3d(0, 0, 0)",
+        opacity: 1,
     },
     Z = {
         mass: 1.1,
         friction: 24,
-        tension: 260
+        tension: 260,
     },
     D = (e) => e.shiftKey || e.key === H.vn.SHIFT,
-    L = (e) => e.metaKey || e.ctrlKey || ['Meta', 'Control'].includes(e.key),
+    L = (e) => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
     R = l.memo(
         function (e) {
-            let { members: t, guild: n, className: o, searchState: a, compact: s, onSelectRow: m, onResetForNewMembers: b } = e,
+            let {
+                    members: t,
+                    guild: n,
+                    className: o,
+                    searchState: a,
+                    compact: s,
+                    onSelectRow: m,
+                    onResetForNewMembers: b,
+                } = e,
                 f = (0, c.e7)([C.Z], () => C.Z.useReducedMotion),
                 H = (0, u.f9)(),
                 R = (0, p.n)(),
                 [I, P] = l.useState(!1),
                 [M, V] = l.useState(!1),
                 E = !H && I && M;
-            (l.useEffect(() => {
+            l.useEffect(() => {
                 R || (P(!1), V(!1));
             }, [R]),
                 l.useLayoutEffect(() => {
                     let e = (e) => {
-                            (D(e) && P(!0), L(e) && V(!0));
+                            D(e) && P(!0), L(e) && V(!0);
                         },
                         t = (e) => {
-                            (D(e) && P(!1), L(e) && V(!1));
+                            D(e) && P(!1), L(e) && V(!1);
                         };
                     return (
-                        window.addEventListener('keydown', e),
-                        window.addEventListener('keyup', t),
+                        window.addEventListener("keydown", e),
+                        window.addEventListener("keyup", t),
                         () => {
-                            (window.removeEventListener('keydown', e), window.removeEventListener('keyup', t));
+                            window.removeEventListener("keydown", e), window.removeEventListener("keyup", t);
                         }
                     );
                 }, []),
                 l.useEffect(() => {
                     (0, j.nb)(n.id, t);
-                }, [n.id, t]));
+                }, [n.id, t]);
             let T = t.length > 30,
                 k = (0, d.Yzy)(t, {
                     key: (e) => e,
@@ -83,24 +91,24 @@ let w = {
                         return l || !o ? S : T ? N : w;
                     },
                     enter: S,
-                    config: Z
+                    config: Z,
                 }),
                 A = !f && a === x.po.LOADING;
-            return (0, r.jsxs)('table', {
+            return (0, r.jsxs)("table", {
                 className: i()(_.table, o),
                 children: [
                     (0, r.jsx)(v.Z, {
                         guildId: n.id,
-                        currentPagedMembers: t
+                        currentPagedMembers: t,
                     }),
-                    (0, r.jsx)('tbody', {
+                    (0, r.jsx)("tbody", {
                         children:
                             a === x.po.SUCCESS_FULL || a === x.po.LOADING
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(O.Z, {
                                               guild: n,
-                                              onSubmit: b
+                                              onSubmit: b,
                                           }),
                                           k((e, t) =>
                                               (0, r.jsx)(
@@ -112,19 +120,19 @@ let w = {
                                                       onSelect: m,
                                                       isHoldingAdvancedInfoKey: E,
                                                       compact: s,
-                                                      isLoading: A
+                                                      isLoading: A,
                                                   },
-                                                  t
-                                              )
-                                          )
-                                      ]
+                                                  t,
+                                              ),
+                                          ),
+                                      ],
                                   })
-                                : (0, r.jsx)('td', {
+                                : (0, r.jsx)("td", {
                                       colSpan: 7,
-                                      children: (0, r.jsx)(g.Z, { searchState: a })
-                                  })
-                    })
-                ]
+                                      children: (0, r.jsx)(g.Z, { searchState: a }),
+                                  }),
+                    }),
+                ],
             });
         },
         function (e, t) {
@@ -133,7 +141,7 @@ let w = {
                 l = e.searchState === t.searchState,
                 o = e.compact === t.compact;
             return n && r && l && o;
-        }
+        },
     ),
     I = function (e) {
         var t, n;
@@ -157,7 +165,7 @@ let w = {
                 searchState: a,
                 compact: s,
                 onSelectRow: u,
-                onResetForNewMembers: d
+                onResetForNewMembers: d,
             })
         );
     };

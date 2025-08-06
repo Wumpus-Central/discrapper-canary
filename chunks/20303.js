@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685), n(704826), n(35282));
+n.d(t, { Z: () => O }), n(388685), n(704826), n(35282);
 var r,
     i,
     o = n(442837),
@@ -14,16 +14,16 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let f = 'MaskedLinkStore',
+let f = "MaskedLinkStore",
     _ = new Set(),
     p = new Set(),
-    h = null == (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) ? void 0 : r.replace('//', '');
+    h = null == (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) ? void 0 : r.replace("//", "");
 function m(e) {
     let t = (0, c.F)(e);
     switch (t) {
@@ -45,29 +45,29 @@ function g(e) {
 function E(e) {
     let { url: t } = e;
     if (m(t)) return !1;
-    (_.add((0, c.F)(t)),
+    _.add((0, c.F)(t)),
         a.K.set(f, {
             trustedDomains: _,
-            trustedProtocols: p
-        }));
+            trustedProtocols: p,
+        });
 }
 function b(e) {
     let { url: t } = e;
     if (g(t)) return !1;
-    (p.add((0, c.E)(t)),
+    p.add((0, c.E)(t)),
         a.K.set(f, {
             trustedDomains: _,
-            trustedProtocols: p
-        }));
+            trustedProtocols: p,
+        });
 }
 class y extends (i = o.ZP.Store) {
     initialize() {
         var e;
         let t = null != (e = a.K.get(f)) ? e : {};
-        if (Array.isArray(t)) ((_ = new Set(null != t ? Array.from(t) : null)), (p = new Set()));
+        if (Array.isArray(t)) (_ = new Set(null != t ? Array.from(t) : null)), (p = new Set());
         else {
             let { trustedDomains: e, trustedProtocols: n } = t;
-            ((_ = new Set(null != e ? Array.from(e) : null)), (p = new Set(null != n ? Array.from(n) : null)));
+            (_ = new Set(null != e ? Array.from(e) : null)), (p = new Set(null != n ? Array.from(n) : null));
         }
     }
     isTrustedDomain(e) {
@@ -77,8 +77,8 @@ class y extends (i = o.ZP.Store) {
         return g(e);
     }
 }
-d(y, 'displayName', 'MaskedLinkStore');
+d(y, "displayName", "MaskedLinkStore");
 let O = new y(s.Z, {
     MASKED_LINK_ADD_TRUSTED_DOMAIN: E,
-    MASKED_LINK_ADD_TRUSTED_PROTOCOL: b
+    MASKED_LINK_ADD_TRUSTED_PROTOCOL: b,
 });

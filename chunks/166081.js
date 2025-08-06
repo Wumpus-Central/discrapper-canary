@@ -9,6 +9,7 @@ function s(e, t) {
         l = (0, a.n)(),
         c = n && l && s;
     return r.useMemo(() => {
-        if ((null == e ? void 0 : e.image_asset) != null) return (0, o._W)(e.application_id, e.image_asset, t, c ? void 0 : 'webp');
+        if ((null == e ? void 0 : e.image_asset) != null)
+            return (0, o._W)(e.application_id, e.image_asset, t, c ? void 0 : "webp");
     }, [t, e, c]);
 }

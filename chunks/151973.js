@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800);
 function i(e, t, n) {
     return [Math.floor(e / n) - 1, Math.ceil((e + t) / n) + 1];
@@ -21,10 +21,10 @@ function a(e) {
                 let [l, c] = i(o, s, t);
                 l !== u.current[0] ? a() : 2 === e && c !== u.current[1] && a();
             },
-            [a, t, n]
+            [a, t, n],
         ),
         chunkStart: d,
         chunkEnd: f,
-        dirty: s
+        dirty: s,
     };
 }

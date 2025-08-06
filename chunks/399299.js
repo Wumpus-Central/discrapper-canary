@@ -56,7 +56,7 @@ function z(e) {
                   return t === (null == g ? void 0 : g.id);
               })
             : d,
-        v = null != t && t.id.startsWith('screen') ? c.pzj : c.GON;
+        v = null != t && t.id.startsWith("screen") ? c.pzj : c.GON;
     return (0, r.jsx)(c.xJW, {
         title: W.intl.string(W.t.TC7Ev7),
         className: H.modalContent,
@@ -67,12 +67,12 @@ function z(e) {
                     ? (0, r.jsx)(p.Z, {
                           game: _,
                           size: p.Z.Sizes.XSMALL,
-                          className: F.selectedIcon
+                          className: F.selectedIcon,
                       })
                     : (0, r.jsx)(v, { className: F.selectedIcon }),
-                (0, r.jsx)('span', {
+                (0, r.jsx)("span", {
                     className: F.ellipsisText,
-                    children: x
+                    children: x,
                 }),
                 n
                     ? (0, r.jsx)(a.zx, {
@@ -80,11 +80,11 @@ function z(e) {
                           color: a.zx.Colors.PRIMARY,
                           size: a.zx.Sizes.SMALL,
                           onClick: l,
-                          children: W.intl.string(W.t.GEgsAw)
+                          children: W.intl.string(W.t.GEgsAw),
                       })
-                    : null
-            ]
-        })
+                    : null,
+            ],
+        }),
     });
 }
 function V(e) {
@@ -101,21 +101,21 @@ function V(e) {
                       (0, r.jsx)(x.Z, {
                           guild: i,
                           size: x.Z.Sizes.SMALLER,
-                          className: F.selectedIcon
+                          className: F.selectedIcon,
                       }),
-                      (0, r.jsx)('span', {
+                      (0, r.jsx)("span", {
                           className: F.ellipsisText,
-                          children: i.name
+                          children: i.name,
                       }),
                       (0, r.jsx)(a.zx, {
                           className: F.changeButton,
                           color: a.zx.Colors.PRIMARY,
                           size: a.zx.Sizes.SMALL,
                           onClick: t,
-                          children: W.intl.string(W.t.GEgsAw)
-                      })
-                  ]
-              })
+                          children: W.intl.string(W.t.GEgsAw),
+                      }),
+                  ],
+              }),
           });
 }
 function Y(e) {
@@ -125,18 +125,18 @@ function Y(e) {
         className: F.warning,
         children: [
             (0, r.jsx)(c.Mgn, {
-                size: 'custom',
+                size: "custom",
                 width: 20,
                 height: 20,
-                color: 'currentColor',
-                className: F.warningIcon
+                color: "currentColor",
+                className: F.warningIcon,
             }),
             (0, r.jsx)(c.Text, {
-                color: 'none',
-                variant: 'text-xs/normal',
-                children: t
-            })
-        ]
+                color: "none",
+                variant: "text-xs/normal",
+                children: t,
+            }),
+        ],
     });
 }
 function J(e) {
@@ -147,7 +147,7 @@ function J(e) {
         }),
         l = g.eo.useSetting(),
         a = i.useCallback((e, t) => {
-            (g.eo.updateSetting(t), I.default.track(U.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: t }));
+            g.eo.updateSetting(t), I.default.track(U.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: t });
         }, []);
     return n >= 2 && n <= B.tB
         ? (0, r.jsx)(c.xJW, {
@@ -157,10 +157,10 @@ function J(e) {
                   type: c.XZJ.Types.INVERTED,
                   onChange: a,
                   children: (0, r.jsx)(c.Text, {
-                      variant: 'text-sm/normal',
-                      children: W.intl.string(W.t.Cef4t7)
-                  })
-              })
+                      variant: "text-sm/normal",
+                      children: W.intl.string(W.t.Cef4t7),
+                  }),
+              }),
           })
         : null;
 }
@@ -170,7 +170,7 @@ function X(e) {
             (e, t) => {
                 n(t);
             },
-            [n]
+            [n],
         ),
         d = (0, o.e7)([S.Z], () => S.Z.getUseSystemScreensharePicker() && (0, N.isLinux)());
     return (0, r.jsx)(c.xJW, {
@@ -180,10 +180,10 @@ function X(e) {
             type: c.XZJ.Types.INVERTED,
             onChange: a,
             children: (0, r.jsx)(c.Text, {
-                variant: 'text-sm/normal',
-                children: l || d ? W.intl.string(W.t['5Adrtb']) : W.intl.string(W.t.gRpbRE)
-            })
-        })
+                variant: "text-sm/normal",
+                children: l || d ? W.intl.string(W.t["5Adrtb"]) : W.intl.string(W.t.gRpbRE),
+            }),
+        }),
     });
 }
 function K(e) {
@@ -192,7 +192,7 @@ function K(e) {
             (e, t) => {
                 n(t);
             },
-            [n]
+            [n],
         );
     return (0, r.jsx)(c.xJW, {
         className: s()(H.modalContent, F.checkboxRow),
@@ -201,21 +201,44 @@ function K(e) {
             type: c.XZJ.Types.INVERTED,
             onChange: l,
             children: (0, r.jsx)(c.Text, {
-                variant: 'text-sm/normal',
-                children: W.intl.string(W.t.JE73jI)
-            })
-        })
+                variant: "text-sm/normal",
+                children: W.intl.string(W.t.JE73jI),
+            }),
+        }),
     });
 }
 function q(e) {
-    let { selectedSource: t, selectedFPS: n, selectedChannelId: l, selectedPreset: s, selectedResolution: a, sourceChanged: c, selectedGuildId: u, targetGuildPremiumTier: m, selectSource: h, selectGuild: p, sound: x, previewDisabled: g, onClose: j, onChangeSelectedFPS: b, onChangeSelectedResolution: O, onChangeSelectedPreset: I, onChangeSelectedChannelId: Z, onChangeSource: N, onChangeAudioDevice: E, onChangeGuild: k, onChangeSound: D, onChangePreviewDisabled: B } = e,
+    let {
+            selectedSource: t,
+            selectedFPS: n,
+            selectedChannelId: l,
+            selectedPreset: s,
+            selectedResolution: a,
+            sourceChanged: c,
+            selectedGuildId: u,
+            targetGuildPremiumTier: m,
+            selectSource: h,
+            selectGuild: p,
+            sound: x,
+            previewDisabled: g,
+            onClose: j,
+            onChangeSelectedFPS: b,
+            onChangeSelectedResolution: O,
+            onChangeSelectedPreset: I,
+            onChangeSelectedChannelId: Z,
+            onChangeSource: N,
+            onChangeAudioDevice: E,
+            onChangeGuild: k,
+            onChangeSound: D,
+            onChangePreviewDisabled: B,
+        } = e,
         H = (0, o.e7)([C.Z, v.Z], () => v.Z.getChannel(C.Z.getVoiceChannelId())),
         q = (0, o.e7)([T.Z], () => T.Z.GPUDriversOutdated),
         Q = (0, o.e7)([T.Z], () => T.Z.problematicGPUDriver),
         $ = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
         ee = (0, P.Z)();
-    null != t && t.id.startsWith('screen') && !S.Z.supportsScreenSoundshare() && (ee = W.intl.string(W.t['1b0Gm5']));
-    let et = !!(null == t ? void 0 : t.id.startsWith('camera')),
+    null != t && t.id.startsWith("screen") && !S.Z.supportsScreenSoundshare() && (ee = W.intl.string(W.t["1b0Gm5"]));
+    let et = !!(null == t ? void 0 : t.id.startsWith("camera")),
         en = null != $ && $.verified && !$.bot,
         er = null != H && !(0, f.Yk)(H),
         ei = !(0, o.e7)([S.Z], () => S.Z.getHardwareEncoding());
@@ -225,30 +248,30 @@ function q(e) {
                 ? (0, r.jsx)(R.Z, {
                       selectedSource: t,
                       onChangeVideoDeviceSource: N,
-                      onChangeAudioDevice: E
+                      onChangeAudioDevice: E,
                   })
-                : (0, r.jsxs)('div', {
+                : (0, r.jsxs)("div", {
                       children: [
                           (0, r.jsx)(z, {
                               selectSource: h,
                               sourceChanged: c,
                               onChangeSource: N,
-                              selectedSource: t
+                              selectedSource: t,
                           }),
                           null != ee ? (0, r.jsx)(Y, { text: ee }) : null,
                           null != t && null == ee
                               ? (0, r.jsx)(X, {
                                     enabled: x,
                                     onChange: D,
-                                    screen: t.id.startsWith('screen')
+                                    screen: t.id.startsWith("screen"),
                                 })
-                              : null
-                      ]
+                              : null,
+                      ],
                   }),
             p && null != u
                 ? (0, r.jsx)(V, {
                       guildId: u,
-                      onChange: k
+                      onChange: k,
                   })
                 : null,
             null != H
@@ -256,20 +279,29 @@ function q(e) {
                 : (0, r.jsx)(A.Z, {
                       guildId: u,
                       selectedChannelId: l,
-                      onChangeSelectedChannelId: Z
+                      onChangeSelectedChannelId: Z,
                   }),
             null != u && en && er ? (0, r.jsx)(J, { guildId: u }) : null,
             q ? (0, r.jsx)(Y, { text: W.intl.string(W.t.q65tS0) }) : null,
-            Q ? (0, r.jsx)(Y, { text: W.intl.format(W.t.RrLvub, { helpCenterLink: w.Z.getArticleURL(U.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            Q
+                ? (0, r.jsx)(Y, {
+                      text: W.intl.format(W.t.RrLvub, {
+                          helpCenterLink: w.Z.getArticleURL(U.BhN.NVIDIA_DRIVER_ISSUES),
+                      }),
+                  })
+                : null,
             ei &&
                 (0, r.jsx)(_.Z, {
                     look: _.z.WARNING,
                     className: F.hardwareWarning,
                     children: W.intl.format(W.t.zCLXws, {
                         onClick: () => {
-                            (j(), d.Z.open(U.oAB.VOICE, G.gP, { scrollPosition: G.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }));
-                        }
-                    })
+                            j(),
+                                d.Z.open(U.oAB.VOICE, G.gP, {
+                                    scrollPosition: G.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION,
+                                });
+                        },
+                    }),
                 }),
             (0, r.jsx)(L.Z, {
                 selectedPreset: s,
@@ -280,12 +312,12 @@ function q(e) {
                 onFPSChange: b,
                 onResolutionChange: O,
                 onPresetChange: I,
-                captureDeviceSelected: et
+                captureDeviceSelected: et,
             }),
             (0, r.jsx)(K, {
                 enabled: g,
-                onChange: B
-            })
-        ]
+                onChange: B,
+            }),
+        ],
     });
 }

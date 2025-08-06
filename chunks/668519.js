@@ -1,71 +1,71 @@
 n.d(t, {
     a: () => o,
-    s: () => s
+    s: () => s,
 });
 var r = n(818083),
     i = n(984134);
 let l = (0, r.B)({
-    kind: 'user',
-    id: '2025-01_go_live_modal_refresh',
-    label: 'Go Live Modal Refresh',
+    kind: "user",
+    id: "2025-01_go_live_modal_refresh",
+    label: "Go Live Modal Refresh",
     defaultConfig: {
         showRefreshedGoLiveModal: !1,
         twoClickVariant: !1,
         skipModalForGame: !1,
         twoStepModal: !1,
         showSDHDUpsell: !1,
-        footerSlideIn: !1
+        footerSlideIn: !1,
     },
     treatments: [
         {
             id: 1,
-            label: 'Show refreshed go live modal',
+            label: "Show refreshed go live modal",
             config: {
                 showRefreshedGoLiveModal: !0,
                 twoClickVariant: !1,
                 skipModalForGame: !1,
                 twoStepModal: !1,
                 showSDHDUpsell: !0,
-                footerSlideIn: !1
-            }
+                footerSlideIn: !1,
+            },
         },
         {
             id: 2,
-            label: 'Show refreshed go live modal, 2 click variant',
+            label: "Show refreshed go live modal, 2 click variant",
             config: {
                 showRefreshedGoLiveModal: !0,
                 twoClickVariant: !0,
                 skipModalForGame: !1,
                 twoStepModal: !1,
                 showSDHDUpsell: !0,
-                footerSlideIn: !0
-            }
+                footerSlideIn: !0,
+            },
         },
         {
             id: 3,
-            label: 'Show refreshed go live modal, 2 click variant, dont skip modal for game',
+            label: "Show refreshed go live modal, 2 click variant, dont skip modal for game",
             config: {
                 showRefreshedGoLiveModal: !0,
                 twoClickVariant: !0,
                 skipModalForGame: !1,
                 twoStepModal: !1,
                 showSDHDUpsell: !0,
-                footerSlideIn: !0
-            }
+                footerSlideIn: !0,
+            },
         },
         {
             id: 4,
-            label: 'Show refreshed go live modal, 2 click variant, dont skip modal for game, use two step modal',
+            label: "Show refreshed go live modal, 2 click variant, dont skip modal for game, use two step modal",
             config: {
                 showRefreshedGoLiveModal: !0,
                 twoClickVariant: !1,
                 skipModalForGame: !1,
                 twoStepModal: !0,
                 showSDHDUpsell: !1,
-                footerSlideIn: !1
-            }
-        }
-    ]
+                footerSlideIn: !1,
+            },
+        },
+    ],
 });
 function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -74,8 +74,8 @@ function o(e) {
         { location: t },
         {
             disable: r,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     );
 }
 function s(e) {

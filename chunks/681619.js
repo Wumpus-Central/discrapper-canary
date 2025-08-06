@@ -14,41 +14,41 @@ function c(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var a = null != arguments[t] ? arguments[t] : {},
                                 n = Object.keys(a);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (n = n.concat(
                                     Object.getOwnPropertySymbols(a).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 n.forEach(function (t) {
                                     var n;
-                                    ((n = a[t]),
+                                    (n = a[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: n,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = n));
-                                }));
+                                            : (e[t] = n);
+                                });
                         }
                         return e;
                     })(
                         {
                             renderHeader: () =>
                                 (0, n.jsx)(s.Text, {
-                                    variant: 'text-sm/semibold',
-                                    children: e.key
-                                })
+                                    variant: "text-sm/semibold",
+                                    children: e.key,
+                                }),
                         },
-                        e
-                    )
+                        e,
+                    ),
                 ),
-            [t]
+            [t],
         ),
         h = [a.length];
-    return (0, n.jsx)('div', {
+    return (0, n.jsx)("div", {
         className: o.tableContainer,
         children: (0, n.jsx)(s.Tvr, {
             className: l,
@@ -59,25 +59,29 @@ function c(e) {
                 let { section: t } = e,
                     r = o.tableHeader;
                 return (0, n.jsx)(
-                    'div',
+                    "div",
                     {
                         className: r,
                         children: x.map((e) => {
                             var r, l;
                             let i = e.cellClassName,
-                                s = { width: 'calc('.concat(null != (l = e.cellWidth) ? l : '1fr', ' - ').concat(16, 'px)') };
+                                s = {
+                                    width: "calc("
+                                        .concat(null != (l = e.cellWidth) ? l : "1fr", " - ")
+                                        .concat(16, "px)"),
+                                };
                             return (0, n.jsx)(
-                                'div',
+                                "div",
                                 {
                                     className: i,
                                     style: s,
-                                    children: null == (r = e.renderHeader) ? void 0 : r.call(e, e, a)
+                                    children: null == (r = e.renderHeader) ? void 0 : r.call(e, e, a),
                                 },
-                                'dev-tools-th-'.concat(t, '-').concat(e.key)
+                                "dev-tools-th-".concat(t, "-").concat(e.key),
                             );
-                        })
+                        }),
                     },
-                    'dev-tools-header-'.concat(t)
+                    "dev-tools-header-".concat(t),
                 );
             },
             rowHeight: m,
@@ -87,7 +91,7 @@ function c(e) {
                     l = r.key,
                     h = i()(o.tableRow, {
                         [o.selectedTableRow]: l === u,
-                        rowClassName: c
+                        rowClassName: c,
                     });
                 return (0, n.jsx)(
                     s.P3F,
@@ -98,23 +102,25 @@ function c(e) {
                             var a, l;
                             let i = e.cellClassName,
                                 s = {
-                                    width: 'calc('.concat(null != (l = e.cellWidth) ? l : '1fr', ' - ').concat(16, 'px)'),
-                                    height: 'calc('.concat(m, 'px - ').concat(16, 'px)')
+                                    width: "calc("
+                                        .concat(null != (l = e.cellWidth) ? l : "1fr", " - ")
+                                        .concat(16, "px)"),
+                                    height: "calc(".concat(m, "px - ").concat(16, "px)"),
                                 };
                             return (0, n.jsx)(
-                                'div',
+                                "div",
                                 {
                                     className: i,
                                     style: s,
-                                    children: null == (a = e.render) ? void 0 : a.call(e, r, void 0, t)
+                                    children: null == (a = e.render) ? void 0 : a.call(e, r, void 0, t),
                                 },
-                                'dev-tools-td-'.concat(t, '-').concat(e.key)
+                                "dev-tools-td-".concat(t, "-").concat(e.key),
                             );
-                        })
+                        }),
                     },
-                    'dev-tools-tr-'.concat(t)
+                    "dev-tools-tr-".concat(t),
                 );
-            }
-        })
+            },
+        }),
     });
 }

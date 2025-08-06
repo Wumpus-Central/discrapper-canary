@@ -4,5 +4,5 @@ var r = n(913527),
     l = n(709054);
 let a = (e) => {
     let t = l.default.extractTimestamp(e);
-    return !i()().isBefore(i()(t).add(i().duration(15, 'days')));
+    return !i()().isBefore(i()(t).add(i().duration(15, "days")));
 };

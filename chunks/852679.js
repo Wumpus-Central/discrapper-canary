@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -10,38 +10,54 @@ var i = n(481060),
     u = n(74538),
     d = n(981631),
     f = n(388032);
-let _ = 'guild-boost-purchase-modal';
+let _ = "guild-boost-purchase-modal";
 async function p(e) {
-    let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: h, guildId: m, closeLayer: g, onCloseModal: E, totalNumberOfSlotsToAssign: b = 1, disablePremiumUpsell: y, onSubscribeComplete: O, onSubscriptionConfirmation: v, inPopout: I, applicationId: T, intent: S } = e,
+    let {
+            analyticsLocations: t,
+            analyticsLocation: p,
+            analyticsSourceLocation: h,
+            guildId: m,
+            closeLayer: g,
+            onCloseModal: E,
+            totalNumberOfSlotsToAssign: b = 1,
+            disablePremiumUpsell: y,
+            onSubscribeComplete: O,
+            onSubscriptionConfirmation: v,
+            inPopout: I,
+            applicationId: T,
+            intent: S,
+        } = e,
         A = I ? i.u1M : i.z1l,
         N = l.Z.getPremiumTypeSubscription();
     if (null != N && N.isPurchasedExternally && null != N.paymentGateway) {
-        (null != g && g(),
+        null != g && g(),
             o.Z.show({
                 title: f.intl.formatToPlainString(f.t.rTk9v7, { paymentGatewayName: d.Vzj[N.paymentGateway] }),
                 body: f.intl.format(f.t.NY03WF, {
                     paymentGatewayName: d.Vzj[N.paymentGateway],
-                    subscriptionManagementLink: (0, u.JE)(N.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
-                })
-            }));
+                    subscriptionManagementLink: (0, u.JE)(N.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
+                }),
+            });
         return;
     }
     Promise.all([(0, a.tZ)(), (0, s.Y2)()]);
     let C = () => {
         c.default.track(d.rMx.MODAL_DISMISSED, {
             type: d.jXE.PREMIUM_GUILD_PURCHASE_MODAL,
-            location: p
+            location: p,
         });
     };
     await (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('8016'), n.e('22646'), n.e('24920'), n.e('72939')]).then(n.bind(n, 343649));
+            let { default: e } = await Promise.all([n.e("8016"), n.e("22646"), n.e("24920"), n.e("72939")]).then(
+                n.bind(n, 343649),
+            );
             return (n) => {
                 let { transitionState: i, onClose: o } = n;
                 return (0, r.jsx)(e, {
                     transitionState: i,
                     onClose: (e) => {
-                        (o(), null == E || E(e));
+                        o(), null == E || E(e);
                     },
                     analyticsLocations: t,
                     analyticsLocation: p,
@@ -53,7 +69,7 @@ async function p(e) {
                     onSubscriptionConfirmation: v,
                     onSubscribeComplete: O,
                     applicationId: T,
-                    intent: S
+                    intent: S,
                 });
             };
         },
@@ -61,9 +77,9 @@ async function p(e) {
             modalKey: _,
             onCloseCallback: C,
             onCloseRequest: () => {
-                ((0, i.Mr3)(_), null == E || E(!1));
+                (0, i.Mr3)(_), null == E || E(!1);
             },
-            contextKey: A
-        }
+            contextKey: A,
+        },
     );
 }

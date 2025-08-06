@@ -1,13 +1,13 @@
 function r(e, t) {
     return {
         x: e.x + t.x,
-        y: e.y + t.y
+        y: e.y + t.y,
     };
 }
 function i(e, t) {
     return {
         x: e.x - t.x,
-        y: e.y - t.y
+        y: e.y - t.y,
     };
 }
 function o(e) {
@@ -23,5 +23,5 @@ function a(e) {
 }
 n.d(t, {
     YY: () => o,
-    ar: () => a
+    ar: () => a,
 });

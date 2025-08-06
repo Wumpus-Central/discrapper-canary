@@ -1,4 +1,4 @@
-(n.d(t, { b: () => O }), n(539854), n(953529));
+n.d(t, { b: () => O }), n(539854), n(953529);
 var r = n(255367),
     i = n(442837),
     o = n(100527),
@@ -22,9 +22,9 @@ function O(e) {
     let { application: O, customId: v, customLink: I, embedUrl: T, referrerId: S } = e,
         A = null == O || null == (t = O.bot) ? void 0 : t.id,
         N = (0, c.ms)({
-            context: { type: 'contextless' },
+            context: { type: "contextless" },
             applicationId: O.id,
-            botUserId: null == O || null == (n = O.bot) ? void 0 : n.id
+            botUserId: null == O || null == (n = O.bot) ? void 0 : n.id,
         }),
         C = null != O && (0, l.ye)(O),
         R = null != A && C && N,
@@ -41,7 +41,7 @@ function O(e) {
         k = D === b.jy.CAN_LAUNCH,
         j = null != v ? v : I.customId,
         U = [];
-    (k &&
+    k &&
         U.push({
             label: null == L ? y.intl.string(y.t.RscU7O) : y.intl.string(y.t.VJlc0d),
             trackingArea: f.j_.PLAY,
@@ -53,10 +53,11 @@ function O(e) {
                     embeddedActivitiesManager: M,
                     customId: j,
                     referrerId: S,
-                    analyticsLocations: P
+                    analyticsLocations: P,
                 });
             },
-            disabledReason: null != L && (null == x ? void 0 : x.compositeInstanceId) === L ? y.intl.string(y.t.wJNK8P) : void 0
+            disabledReason:
+                null != L && (null == x ? void 0 : x.compositeInstanceId) === L ? y.intl.string(y.t.wJNK8P) : void 0,
         }),
         R &&
             !k &&
@@ -69,10 +70,10 @@ function O(e) {
                         botId: A,
                         analyticsLocations: P,
                         customId: j,
-                        referrerId: S
+                        referrerId: S,
                     });
-                }
-            }));
+                },
+            });
     let G = (0, _.G)(O);
     return (0, r.jsx)(d.W, {
         actions: U,
@@ -82,16 +83,16 @@ function O(e) {
         iconSrc: h.ZP.getApplicationIconURL({
             id: O.id,
             icon: O.icon,
-            bot: O.bot
+            bot: O.bot,
         }),
-        info: (0, r.jsx)('div', { children: I.description }),
+        info: (0, r.jsx)("div", { children: I.description }),
         staticBannerSrc: I.getAssetURL(),
         title: I.title,
         trackingConfig: {
             id: O.id,
             linkType: u.U.CUSTOM_ACTIVITY_LINK,
             referrerId: S,
-            activityCustomId: j
-        }
+            activityCustomId: j,
+        },
     });
 }

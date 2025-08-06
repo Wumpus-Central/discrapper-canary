@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,7 +61,7 @@ let _ = { lastSeenNewlyAddedEmojiIds: {} },
     p = _,
     h = {};
 function m() {
-    ((p = _), (h = {}));
+    (p = _), (h = {});
 }
 function g(e) {
     var t;
@@ -71,7 +71,7 @@ function g(e) {
         ? (h[n] = {
               id: r,
               lastSeen: Date.now(),
-              acknowledged: !0
+              acknowledged: !0,
           })
         : (h[n] = f(u({}, i), { acknowledged: !0 }));
 }
@@ -83,14 +83,14 @@ function E(e) {
         (h[n] = {
             id: r,
             lastSeen: Date.now(),
-            acknowledged: !1
+            acknowledged: !1,
         });
 }
 function b() {
     for (let e in h) p.lastSeenNewlyAddedEmojiIds[e] = h[e];
 }
 function y() {
-    ((p = _), b());
+    (p = _), b();
 }
 class O extends (r = a.ZP.PersistedStore) {
     initialize(e) {
@@ -108,13 +108,13 @@ class O extends (r = a.ZP.PersistedStore) {
         if (null == n || l.default.compare(t, n.id) > 0) return !0;
         {
             let e = o()(n.lastSeen);
-            return o()().isBefore(e.add(2, 'weeks')) && !n.acknowledged;
+            return o()().isBefore(e.add(2, "weeks")) && !n.acknowledged;
         }
     }
 }
-(c(O, 'displayName', 'NewlyAddedEmojiStore'),
-    c(O, 'persistKey', 'NewlyAddedEmojiStore'),
-    c(O, 'migrations', [
+c(O, "displayName", "NewlyAddedEmojiStore"),
+    c(O, "persistKey", "NewlyAddedEmojiStore"),
+    c(O, "migrations", [
         (e) => {
             let t = e.lastSeenNewlyAddedEmojiIds,
                 n = {};
@@ -123,17 +123,17 @@ class O extends (r = a.ZP.PersistedStore) {
                 n[e] = {
                     id: r,
                     lastSeen: Date.now(),
-                    acknowledged: !1
+                    acknowledged: !1,
                 };
             }
             return { lastSeenNewlyAddedEmojiIds: n };
-        }
-    ]));
+        },
+    ]);
 let v = new O(s.Z, {
     LOGOUT: m,
     NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: g,
     NEWLY_ADDED_EMOJI_SEEN_PENDING: E,
     NEWLY_ADDED_EMOJI_SEEN_UPDATED: b,
     CLEAR_CACHES: y,
-    CONNECTION_CLOSED: b
+    CONNECTION_CLOSED: b,
 });

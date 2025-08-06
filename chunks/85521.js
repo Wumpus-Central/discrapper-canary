@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(997841));
+n.d(t, { Z: () => f }), n(997841);
 var r = n(913527),
     i = n.n(r),
     o = n(81825),
@@ -13,13 +13,13 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let d = 'master';
+let d = "master";
 class f extends o.Z {
     static createFromServer(e) {
         return new f({
@@ -34,8 +34,9 @@ class f extends o.Z {
                 type: e.sku.type,
                 premium: e.sku.premium,
                 preorderReleaseAt: null != e.sku.preorder_release_at ? i()(e.sku.preorder_release_at) : null,
-                preorderApproximateReleaseDate: null != e.sku.preorder_approximate_release_date ? e.sku.preorder_approximate_release_date : null
-            }
+                preorderApproximateReleaseDate:
+                    null != e.sku.preorder_approximate_release_date ? e.sku.preorder_approximate_release_date : null,
+            },
         });
     }
     static createForTestMode(e) {
@@ -49,9 +50,9 @@ class f extends o.Z {
             sku: {
                 id: e.skuId,
                 type: c.epS.DURABLE_PRIMARY,
-                premium: !1
+                premium: !1,
             },
-            isTestMode: !0
+            isTestMode: !0,
         });
     }
     getFlags() {
@@ -91,7 +92,9 @@ class f extends o.Z {
         return null != this.branch ? this.branch.name : d;
     }
     getBranchedName(e) {
-        return this.isMasterBranch() || null == this.branch ? e.name : ''.concat(e.name, ' (').concat(this.branch.name, ')');
+        return this.isMasterBranch() || null == this.branch
+            ? e.name
+            : "".concat(e.name, " (").concat(this.branch.name, ")");
     }
     getSkuIdForAnalytics() {
         return this.sku.id;
@@ -102,10 +105,26 @@ class f extends o.Z {
             application_id: null != e ? e.id : null,
             application_name: null != e ? e.name : null,
             sku_id: this.getSkuIdForAnalytics(),
-            launcher_platform: this.getDistributor()
+            launcher_platform: this.getDistributor(),
         };
     }
     constructor(e) {
-        (super(), u(this, 'id', void 0), u(this, 'branchId', void 0), u(this, 'flags', void 0), u(this, 'createdAt', void 0), u(this, 'entitlements', void 0), u(this, 'branch', void 0), u(this, 'sku', void 0), u(this, 'isTestMode', void 0), (this.id = e.id), (this.createdAt = e.createdAt), (this.flags = e.flags), (this.branchId = e.branchId), (this.entitlements = e.entitlements), (this.branch = e.branch), (this.sku = e.sku), (this.isTestMode = e.isTestMode || !1));
+        super(),
+            u(this, "id", void 0),
+            u(this, "branchId", void 0),
+            u(this, "flags", void 0),
+            u(this, "createdAt", void 0),
+            u(this, "entitlements", void 0),
+            u(this, "branch", void 0),
+            u(this, "sku", void 0),
+            u(this, "isTestMode", void 0),
+            (this.id = e.id),
+            (this.createdAt = e.createdAt),
+            (this.flags = e.flags),
+            (this.branchId = e.branchId),
+            (this.entitlements = e.entitlements),
+            (this.branch = e.branch),
+            (this.sku = e.sku),
+            (this.isTestMode = e.isTestMode || !1);
     }
 }

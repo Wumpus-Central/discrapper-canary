@@ -20,7 +20,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,7 +72,8 @@ function y(e, t) {
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -82,11 +83,23 @@ function O(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function v(e) {
-    let { onClick: t, subscriptionTier: m, postSuccessGuild: E, onSubscribeModalClose: O, premiumModalAnalyticsLocation: v, applicationId: I, giftMessage: T, confirmationFooter: S, paymentModalBanner: A, isGift: N, children: C } = e,
+    let {
+            onClick: t,
+            subscriptionTier: m,
+            postSuccessGuild: E,
+            onSubscribeModalClose: O,
+            premiumModalAnalyticsLocation: v,
+            applicationId: I,
+            giftMessage: T,
+            confirmationFooter: S,
+            paymentModalBanner: A,
+            isGift: N,
+            children: C,
+        } = e,
         R = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
         P = (0, i.e7)([f.Z], () => f.Z.getPremiumTypeSubscription()),
         { analyticsLocations: w } = (0, s.ZP)(),
@@ -95,32 +108,33 @@ function v(e) {
     return C({
         onClick: (e) => {
             var i;
-            if ((e.preventDefault(), null == R)) return void (0, u.uL)(h.Z5c.LOGIN, { source: 'premium_subscribe_button' });
+            if ((e.preventDefault(), null == R))
+                return void (0, u.uL)(h.Z5c.LOGIN, { source: "premium_subscribe_button" });
             if ((null == t || t(e), (null == P ? void 0 : P.status) === h.O0b.ACCOUNT_HOLD)) {
-                ((0, l.A3)(), a.Z.open(h.oAB.PREMIUM), null == O || O(!1));
+                (0, l.A3)(), a.Z.open(h.oAB.PREMIUM), null == O || O(!1);
                 return;
             }
             if (!R.isClaimed())
                 return void (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e('69417').then(n.bind(n, 918995));
+                    let { default: e } = await n.e("69417").then(n.bind(n, 918995));
                     return (t) => {
                         var { onClose: n } = t,
-                            i = y(t, ['onClose']);
+                            i = y(t, ["onClose"]);
                         return (0, r.jsx)(e, b(g({}, i), { onClose: n }));
                     };
                 });
             if (!R.verified)
                 return void (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e('20102').then(n.bind(n, 444688));
+                    let { default: e } = await n.e("20102").then(n.bind(n, 444688));
                     return (t) => {
                         var { onClose: n } = t,
-                            i = y(t, ['onClose']);
+                            i = y(t, ["onClose"]);
                         return (0, r.jsx)(e, b(g({}, i), { onClose: n }));
                     };
                 });
             let s = L ? (null == (i = D.subscription_trial) ? void 0 : i.id) : null,
                 d = h.Qqv.BUY;
-            (null != s ? (d = h.Qqv.TRIAL) : N && (d = h.Qqv.GIFT),
+            null != s ? (d = h.Qqv.TRIAL) : N && (d = h.Qqv.GIFT),
                 (0, c.Z)({
                     isGift: N,
                     initialPlanId: null,
@@ -129,9 +143,9 @@ function v(e) {
                     analyticsObject: g(
                         {
                             object: h.qAy.BUTTON_CTA,
-                            objectType: d
+                            objectType: d,
                         },
-                        v
+                        v,
                     ),
                     trialId: s,
                     postSuccessGuild: E,
@@ -139,8 +153,8 @@ function v(e) {
                     applicationId: I,
                     giftMessage: T,
                     confirmationFooter: S,
-                    paymentModalBanner: A
-                }));
-        }
+                    paymentModalBanner: A,
+                });
+        },
     });
 }

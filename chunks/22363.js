@@ -12,7 +12,22 @@ var i = n(120356),
     f = n(185923),
     _ = n(539490);
 let p = (e) => {
-    let { channel: t, accessory: n, pickerIntention: i, headerClassName: p, emojiListRef: h, onKeyDown: m, onFocus: g, autoFocus: E, searchBarRef: b, diversitySurrogate: y, isBurstReaction: O, onBurstReactionToggle: v, renderHeader: I, showAddEmojiButton: T } = e,
+    let {
+            channel: t,
+            accessory: n,
+            pickerIntention: i,
+            headerClassName: p,
+            emojiListRef: h,
+            onKeyDown: m,
+            onFocus: g,
+            autoFocus: E,
+            searchBarRef: b,
+            diversitySurrogate: y,
+            isBurstReaction: O,
+            onBurstReactionToggle: v,
+            renderHeader: I,
+            showAddEmojiButton: T,
+        } = e,
         S = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Z, {
@@ -24,13 +39,13 @@ let p = (e) => {
                     isFullRow: !1,
                     onFocus: g,
                     autoFocus: E,
-                    defaultSearchPlaceholder: (0, s.nV)(i, O)
+                    defaultSearchPlaceholder: (0, s.nV)(i, O),
                 }),
                 T && (0, r.jsx)(l.Z, { channel: t }),
                 i === f.Hz.REACTION
                     ? (0, r.jsx)(a.Z, {
                           checked: O,
-                          onClick: v
+                          onClick: v,
                       })
                     : null,
                 null != n
@@ -38,12 +53,12 @@ let p = (e) => {
                     : (0, r.jsx)(c.Z, {
                           searchBarRef: b,
                           className: _.diversitySelector,
-                          selectedSurrogate: y
-                      })
-            ]
+                          selectedSurrogate: y,
+                      }),
+            ],
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()(_.header, p),
-        children: null != I ? I(S) : S
+        children: null != I ? I(S) : S,
     });
 };

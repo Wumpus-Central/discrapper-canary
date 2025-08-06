@@ -7,14 +7,14 @@ function a(e) {
         .get({
             url: l.ANM.GUILD_TOP_READ_CHANNELS(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
         .then((t) => {
             let { body: n } = t;
             i.Z.dispatch({
-                type: 'GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS',
+                type: "GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS",
                 guildId: e,
-                topChannelIds: n
+                topChannelIds: n,
             });
         });
 }

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     K: () => Y,
-    P: () => W
+    P: () => W,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -44,7 +44,7 @@ function j(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -54,15 +54,15 @@ function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 j(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -70,11 +70,11 @@ function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -96,7 +96,8 @@ function Z(e, t) {
         i = F(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -106,29 +107,29 @@ function F(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let V = {
     offset: {
         left: 4,
-        right: -12
-    }
+        right: -12,
+    },
 };
 function H(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)(p.VqE, {
-        'aria-label': M.intl.string(M.t['2pAkDA']),
-        children: (0, r.jsxs)('div', {
+        "aria-label": M.intl.string(M.t["2pAkDA"]),
+        children: (0, r.jsxs)("div", {
             className: k.popoutContainer,
             children: [
                 (0, r.jsx)(m.h4, {
                     icon: p.plf,
-                    title: M.intl.string(M.t['2pAkDA'])
+                    title: M.intl.string(M.t["2pAkDA"]),
                 }),
-                (0, r.jsx)(Y, { closePopout: t })
-            ]
-        })
+                (0, r.jsx)(Y, { closePopout: t }),
+            ],
+        }),
     });
 }
 function Y(e) {
@@ -140,17 +141,17 @@ function Y(e) {
             name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
             properties: {
                 total_count: n.length,
-                overdue_count: C.Z.getOverdueMessageReminderCount()
-            }
+                overdue_count: C.Z.getOverdueMessageReminderCount(),
+            },
         },
         {},
-        [n.length]
+        [n.length],
     ),
     0 === n.length)
         ? (0, r.jsx)(D.w, {})
         : (0, r.jsx)(K, {
               savedMessageKeys: n,
-              closePopout: t
+              closePopout: t,
           });
 }
 function W(e) {
@@ -158,12 +159,15 @@ function W(e) {
         [l, c] = i.useState(!1),
         u = i.useRef(null),
         d = i.useCallback(() => {
-            (c(!1), l && (null == n || n()));
+            c(!1), l && (null == n || n());
         }, [n, l]),
         f = i.useCallback(() => {
-            (c(!l), l ? null == n || n() : null == t || t());
+            c(!l), l ? null == n || n() : null == t || t();
         }, [n, t, l]);
-    i.useEffect(() => (T.S.subscribe(x.CkL.TOGGLE_FOR_LATER, f), () => void T.S.unsubscribe(x.CkL.TOGGLE_FOR_LATER, f)), [f]);
+    i.useEffect(
+        () => (T.S.subscribe(x.CkL.TOGGLE_FOR_LATER, f), () => void T.S.unsubscribe(x.CkL.TOGGLE_FOR_LATER, f)),
+        [f],
+    );
     let h = (0, _.e7)([C.Z], () => C.Z.hasOverdueReminder(), []);
     function m() {
         return (0, r.jsx)(H, { closePopout: d });
@@ -181,13 +185,13 @@ function W(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return o(f, n, e, h, u);
-        }
+        },
     });
 }
 function K(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
         o = i.useRef(null),
-        a = (0, g.Z)('for-later', o),
+        a = (0, g.Z)("for-later", o),
         [s, l] = i.useState(new Date());
     return (
         i.useEffect(() => {
@@ -201,7 +205,7 @@ function K(e) {
             children: (0, r.jsx)(f.SJ, {
                 children: (e) => {
                     var { ref: i } = e,
-                        a = Z(e, ['ref']);
+                        a = Z(e, ["ref"]);
                     return (0, r.jsx)(
                         p.h21,
                         B(
@@ -209,11 +213,13 @@ function K(e) {
                                 {
                                     ref: (e) => {
                                         var t;
-                                        ((o.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
+                                        (o.current = e),
+                                            (i.current =
+                                                null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
-                                    className: k.messagesScroller
+                                    className: k.messagesScroller,
                                 },
-                                a
+                                a,
                             ),
                             {
                                 children: t.map((e) =>
@@ -222,16 +228,16 @@ function K(e) {
                                         {
                                             savedMessageKey: e,
                                             closePopout: n,
-                                            throttledNow: s
+                                            throttledNow: s,
                                         },
-                                        e.messageId
-                                    )
-                                )
-                            }
-                        )
+                                        e.messageId,
+                                    ),
+                                ),
+                            },
+                        ),
                     );
-                }
-            })
+                },
+            }),
         })
     );
 }
@@ -241,32 +247,37 @@ function z(e) {
         l = i.useCallback(
             async (e) => {
                 var r;
-                (await (0, N.fC)(t, s),
+                await (0, N.fC)(t, s),
                     e.shiftKey || n(),
                     I.default.track(x.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null == (r = t.message) ? void 0 : r.author.id,
                         type: null != t.saveData.dueAt ? R._l.REMINDER : R._l.BOOKMARK,
-                        due_duration: null != t.saveData.dueAt ? u()().diff(t.saveData.dueAt) : void 0
-                    }));
+                        due_duration: null != t.saveData.dueAt ? u()().diff(t.saveData.dueAt) : void 0,
+                    });
             },
-            [n, t, s]
+            [n, t, s],
         ),
-        c = (0, _.e7)([v.Z], () => !!((null == s ? void 0 : s.type) === x.d4z.UNKNOWN || (null == s ? void 0 : s.isPrivate())) || v.Z.can(x.Plq.VIEW_CHANNEL, s));
+        c = (0, _.e7)(
+            [v.Z],
+            () =>
+                !!((null == s ? void 0 : s.type) === x.d4z.UNKNOWN || (null == s ? void 0 : s.isPrivate())) ||
+                v.Z.can(x.Plq.VIEW_CHANNEL, s),
+        );
     return null != s && null != t.message && c
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: k.messageContainer,
               children: [
                   (0, r.jsx)(p.P3F, {
                       className: k.clickableMessageBackground,
                       onClick: l,
-                      'aria-label': M.intl.string(M.t['+TSRGB'])
+                      "aria-label": M.intl.string(M.t["+TSRGB"]),
                   }),
                   null != t.saveData.dueAt
                       ? (0, r.jsx)(L.Z, {
                             reminder: t,
-                            throttledNow: o
+                            throttledNow: o,
                         })
                       : null,
                   (0, r.jsx)(w.Z, { channel: s }),
@@ -279,33 +290,33 @@ function z(e) {
                           compact: O.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: V,
-                          trackAnnouncementViews: !0
+                          trackAnnouncementViews: !0,
                       },
-                      t.message.id
+                      t.message.id,
                   ),
                   (0, r.jsx)(y.ZP, {
                       className: k.hoverBar,
                       children: (0, r.jsx)(X, {
                           savedMessage: t,
-                          jumpToMessage: l
-                      })
-                  })
-              ]
+                          jumpToMessage: l,
+                      }),
+                  }),
+              ],
           })
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: a()(k.messageContainer, k.deletedMessage),
               children: [
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: k.deleteIcon,
                       children: (0, r.jsx)(p.Mgn, {
-                          size: 'xxs',
-                          color: p.TVs.colors.INTERACTIVE_ACTIVE
-                      })
+                          size: "xxs",
+                          color: p.TVs.colors.INTERACTIVE_ACTIVE,
+                      }),
                   }),
                   (0, r.jsx)(p.X6q, {
-                      variant: 'text-md/semibold',
-                      color: 'header-secondary',
-                      children: null != t.saveData.dueAt ? M.intl.string(M.t['wuQm+v']) : M.intl.string(M.t.o572FR)
+                      variant: "text-md/semibold",
+                      color: "header-secondary",
+                      children: null != t.saveData.dueAt ? M.intl.string(M.t["wuQm+v"]) : M.intl.string(M.t.o572FR),
                   }),
                   (0, r.jsx)(y.ZP, {
                       className: k.hoverBar,
@@ -315,12 +326,12 @@ function z(e) {
                               label: M.intl.string(M.t.SvXS1d),
                               icon: p.XHJ,
                               dangerous: !0,
-                              onClick: () => (0, A.x)(t.saveData)
+                              onClick: () => (0, A.x)(t.saveData),
                           },
-                          'delete'
-                      )
-                  })
-              ]
+                          "delete",
+                      ),
+                  }),
+              ],
           });
 }
 function q(e) {
@@ -331,12 +342,13 @@ function q(e) {
         : (0, r.jsx)(z, {
               savedMessage: o,
               closePopout: n,
-              throttledNow: i
+              throttledNow: i,
           });
 }
 function X(e) {
     let { savedMessage: t, jumpToMessage: i } = e;
-    return (l()(null != t.message, 'Saved message must be cached for For Later action buttons'), null != t.saveData.dueAt)
+    return (l()(null != t.message, "Saved message must be cached for For Later action buttons"),
+    null != t.saveData.dueAt)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
@@ -348,10 +360,10 @@ function X(e) {
                               (0, A.z)({
                                   channelId: t.saveData.channelId,
                                   messageId: t.saveData.messageId,
-                                  dueAt: void 0
-                              })
+                                  dueAt: void 0,
+                              }),
                       },
-                      'mark-complete'
+                      "mark-complete",
                   ),
                   (0, r.jsx)(
                       y.sF,
@@ -366,33 +378,33 @@ function X(e) {
                                           e,
                                           B(U({}, n), {
                                               label: M.intl.string(M.t.roMu1N),
-                                              message: t.message
-                                          })
+                                              message: t.message,
+                                          }),
                                       );
-                              })
+                              }),
                       },
-                      'edit-reminder'
+                      "edit-reminder",
                   ),
                   (0, r.jsx)(y.fO, {}),
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: M.intl.string(M.t['+TSRGB']),
+                          label: M.intl.string(M.t["+TSRGB"]),
                           icon: p.d4D,
-                          onClick: (e) => i(e)
+                          onClick: (e) => i(e),
                       },
-                      'jump-to-message'
+                      "jump-to-message",
                   ),
                   (0, r.jsx)(
                       y.sF,
                       {
                           label: M.intl.string(M.t.SvXS1d),
                           icon: p.plf,
-                          onClick: () => (0, A.x)(t.saveData)
+                          onClick: () => (0, A.x)(t.saveData),
                       },
-                      'remove-reminder'
-                  )
-              ]
+                      "remove-reminder",
+                  ),
+              ],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -409,31 +421,31 @@ function X(e) {
                                           e,
                                           B(U({}, n), {
                                               label: M.intl.string(M.t.mJ3P0N),
-                                              message: t.message
-                                          })
+                                              message: t.message,
+                                          }),
                                       );
-                              })
+                              }),
                       },
-                      'create-reminder'
+                      "create-reminder",
                   ),
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: M.intl.string(M.t['+TSRGB']),
+                          label: M.intl.string(M.t["+TSRGB"]),
                           icon: p.d4D,
-                          onClick: (e) => i(e)
+                          onClick: (e) => i(e),
                       },
-                      'jump-to-message'
+                      "jump-to-message",
                   ),
                   (0, r.jsx)(
                       y.sF,
                       {
                           label: M.intl.string(M.t.SvXS1d),
                           icon: p.plf,
-                          onClick: () => (0, A.x)(t.saveData)
+                          onClick: () => (0, A.x)(t.saveData),
                       },
-                      'remove-bookmark'
-                  )
-              ]
+                      "remove-bookmark",
+                  ),
+              ],
           });
 }

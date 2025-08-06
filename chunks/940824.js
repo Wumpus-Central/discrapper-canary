@@ -14,39 +14,39 @@ let _ = (e) => {
     let { onClose: t } = e,
         { analyticsLocations: n } = (0, s.ZP)(),
         _ = () => {
-            (t(),
+            t(),
                 (0, l.uL)(u.Z5c.COLLECTIBLES_SHOP),
                 (0, c.mK)({
                     openInLayer: !1,
                     analyticsSource: a.Z.PREMIUM_PAYMENT_MODAL,
-                    analyticsLocations: n
+                    analyticsLocations: n,
                 }),
-                (0, o.xf)());
+                (0, o.xf)();
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: f.container,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: f.iconBackground,
                 children: (0, r.jsx)(i.EOn, {
-                    size: 'custom',
+                    size: "custom",
                     width: 20,
                     height: 20,
-                    color: i.TVs.colors.WHITE
-                })
+                    color: i.TVs.colors.WHITE,
+                }),
             }),
             (0, r.jsx)(i.Text, {
-                variant: 'text-sm/normal',
-                color: 'header-primary',
+                variant: "text-sm/normal",
+                color: "header-primary",
                 children: d.intl.format(d.t.twSHtb, {
                     checkItOut: (e) =>
                         (0, r.jsx)(i.P3F, {
                             className: f.link,
                             onClick: _,
-                            children: e
-                        })
-                })
-            })
-        ]
+                            children: e,
+                        }),
+                }),
+            }),
+        ],
     });
 };

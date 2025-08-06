@@ -10,7 +10,7 @@ var r = n(255367),
 function u(e) {
     let { mainCTADisabled: t, mainCTAOnClick: n, align: l, ctaText: u, hideOptionsButton: f } = e,
         m = i.useRef(null);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: d.root,
         children: [
             (0, r.jsx)(o.zx, {
@@ -18,18 +18,18 @@ function u(e) {
                 className: s()(d.streamButton, { [d.withOptions]: !f }),
                 disabled: t,
                 onClick: n,
-                children: u
+                children: u,
             }),
             !f &&
                 (0, r.jsx)(a.yRy, {
                     targetElementRef: m,
-                    position: 'top',
+                    position: "top",
                     align: l,
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(c.ZP, {
                             onClose: t,
-                            onSelect: t
+                            onSelect: t,
                         });
                     },
                     children: (e) => {
@@ -40,35 +40,35 @@ function u(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })(
                                 {
                                     size: o.zx.Sizes.LARGE,
                                     className: d.optionsButton,
-                                    buttonRef: m
+                                    buttonRef: m,
                                 },
-                                e
+                                e,
                             )),
-                            (n = n = { children: (0, r.jsx)(a.Huf, { color: 'currentColor' }) }),
+                            (n = n = { children: (0, r.jsx)(a.Huf, { color: "currentColor" }) }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                 : (function (e, t) {
@@ -81,10 +81,10 @@ function u(e) {
                                   })(Object(n)).forEach(function (e) {
                                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                   }),
-                            t)
+                            t),
                         );
-                    }
-                })
-        ]
+                    },
+                }),
+        ],
     });
 }

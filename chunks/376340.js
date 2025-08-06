@@ -15,46 +15,46 @@ function c(e) {
                 className: o.header,
                 separator: !1,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: o.illustration,
-                        children: t
+                        children: t,
                     }),
                     (0, r.jsx)(s.X6q, {
                         className: o.title,
-                        variant: 'heading-xl/extrabold',
-                        children: c
+                        variant: "heading-xl/extrabold",
+                        children: c,
                     }),
                     (0, r.jsx)(s.olH, {
                         className: o.closeButton,
-                        onClick: a
-                    })
-                ]
+                        onClick: a,
+                    }),
+                ],
             }),
             (0, r.jsxs)(s.hzk, {
                 className: o.body,
                 paddingFix: !1,
                 children: [
                     (0, r.jsx)(s.Text, {
-                        tag: 'p',
-                        variant: 'text-md/normal',
-                        color: 'header-secondary',
-                        children: d
+                        tag: "p",
+                        variant: "text-md/normal",
+                        color: "header-secondary",
+                        children: d,
                     }),
-                    x
-                ]
+                    x,
+                ],
             }),
             (0, r.jsx)(s.mzw, {
                 className: o.footer,
-                children: (0, r.jsx)('div', {
-                    'data-button-hoisted-classname-wrapper': !0,
+                children: (0, r.jsx)("div", {
+                    "data-button-hoisted-classname-wrapper": !0,
                     className: o.footerButton,
                     children: (0, r.jsx)(s.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: i.intl.string(i.t.i4jeWV),
-                        onClick: a
-                    })
-                })
-            })
-        ]
+                        onClick: a,
+                    }),
+                }),
+            }),
+        ],
     });
 }

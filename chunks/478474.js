@@ -1,1 +1,1 @@
-e.exports = { paymentNote: 'paymentNote__56a21' };
+e.exports = { paymentNote: "paymentNote__56a21" };

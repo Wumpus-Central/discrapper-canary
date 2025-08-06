@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var l = n(255367),
     a = n(73800),
     i = n(120356),
@@ -16,24 +16,24 @@ let h = a.memo(function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     l = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (l = l.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     l.forEach(function (t) {
                         var l;
-                        ((l = n[t]),
+                        (l = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: l,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = l));
-                    }));
+                                : (e[t] = l);
+                    });
             }
             return e;
         })({}, f.nl),
@@ -54,7 +54,7 @@ let h = a.memo(function (e) {
     a.useEffect(() => {
         if (null == y) return;
         let e = y.duration * o.Z.Millis.SECOND;
-        (N(0), S(0), E(e), R(e));
+        N(0), S(0), E(e), R(e);
     }, [y]);
     let B = a.useCallback(
             (e, t) => {
@@ -70,7 +70,7 @@ let h = a.memo(function (e) {
                             T(!0);
                     }
             },
-            [n]
+            [n],
         ),
         U = a.useCallback((e) => {
             switch (e) {
@@ -90,9 +90,9 @@ let h = a.memo(function (e) {
                 if (null == y || !P) return;
                 let t = parseInt(e.target.value),
                     n = t > O ? O : t;
-                (i((0, c.my)(n)), N(n), S(n));
+                i((0, c.my)(n)), N(n), S(n);
             },
-            [y, i, O, P]
+            [y, i, O, P],
         ),
         L = a.useCallback(
             (e) => {
@@ -100,16 +100,16 @@ let h = a.memo(function (e) {
                 let t = parseInt(e.target.value);
                 t < w ? (i((0, c.my)(w)), S(w)) : t > O ? (i((0, c.my)(O)), S(O)) : (i((0, c.my)(t)), S(t));
             },
-            [y, i, O, M, w]
+            [y, i, O, M, w],
         ),
         G = a.useCallback(
             (e) => {
                 if (null == y || !I) return;
                 let t = parseInt(e.target.value),
                     n = t > w ? t : w;
-                (i((0, c.my)(w)), S(w), E(n));
+                i((0, c.my)(w)), S(w), E(n);
             },
-            [y, i, I, w]
+            [y, i, I, w],
         );
     return (
         a.useEffect(() => {
@@ -118,7 +118,7 @@ let h = a.memo(function (e) {
                 h({
                     startPositionMs: w,
                     endPositionMs: O,
-                    playheadPositionMs: C
+                    playheadPositionMs: C,
                 });
         }, [w, O, h, b, C]),
         a.useEffect(() => {
@@ -127,7 +127,9 @@ let h = a.memo(function (e) {
                 return (
                     t &&
                         (e = setInterval(() => {
-                            y.currentTime < (0, c.my)(O) ? y.currentTime >= (0, c.my)(C) && S(y.currentTime * o.Z.Millis.SECOND) : (n((0, c.my)(w)), S(w));
+                            y.currentTime < (0, c.my)(O)
+                                ? y.currentTime >= (0, c.my)(C) && S(y.currentTime * o.Z.Millis.SECOND)
+                                : (n((0, c.my)(w)), S(w));
                         }, 16)),
                     () => {
                         clearInterval(e);
@@ -143,115 +145,115 @@ let h = a.memo(function (e) {
                 clearTimeout(e);
             };
         }, [p.fineTuningDelay, I, O, _, M, C, P, w]),
-        (0, l.jsxs)('div', {
+        (0, l.jsxs)("div", {
             className: r()(m.timeline, { [m.initialized]: b }),
             children: [
-                (0, l.jsxs)('div', {
+                (0, l.jsxs)("div", {
                     className: m.rangeHandleContainer,
                     children: [
-                        (0, l.jsxs)('div', {
+                        (0, l.jsxs)("div", {
                             className: m.rangeHandleFrame,
                             children: [
-                                (0, l.jsx)('input', {
+                                (0, l.jsx)("input", {
                                     ref: v,
                                     className: r()(m.rangeHandle, m.rangeHandleStart),
-                                    type: 'range',
+                                    type: "range",
                                     min: (0, c.ao)(_, A, D),
                                     max: (0, c.MN)(_, A, D),
                                     value: w,
                                     onChange: z,
                                     onMouseDown: (e) => B(e, 0),
                                     onMouseUp: () => U(0),
-                                    disabled: !b || g
+                                    disabled: !b || g,
                                 }),
-                                (0, l.jsx)('input', {
+                                (0, l.jsx)("input", {
                                     ref: j,
                                     className: r()(m.rangeHandle, m.rangeHandleEnd),
-                                    type: 'range',
+                                    type: "range",
                                     min: (0, c.ao)(_, A, D),
                                     max: (0, c.MN)(_, A, D),
                                     value: O,
                                     onChange: G,
                                     onMouseDown: (e) => B(e, 2),
                                     onMouseUp: () => U(2),
-                                    disabled: !b || g
-                                })
-                            ]
+                                    disabled: !b || g,
+                                }),
+                            ],
                         }),
-                        (0, l.jsx)('div', {
+                        (0, l.jsx)("div", {
                             className: m.__invalid_handlePlayheadTrack,
-                            children: (0, l.jsx)('input', {
+                            children: (0, l.jsx)("input", {
                                 ref: x,
                                 className: r()(m.rangeHandle, m.rangeHandlePlayhead),
-                                type: 'range',
+                                type: "range",
                                 min: (0, c.ao)(_, A, D),
                                 max: (0, c.MN)(_, A, D),
                                 value: C,
                                 onChange: L,
                                 onMouseDown: (e) => B(e, 1),
                                 onMouseUp: () => U(1),
-                                disabled: !b || g
-                            })
-                        })
-                    ]
+                                disabled: !b || g,
+                            }),
+                        }),
+                    ],
                 }),
-                (0, l.jsxs)('div', {
+                (0, l.jsxs)("div", {
                     className: m.handleContainer,
                     children: [
-                        (0, l.jsxs)('div', {
+                        (0, l.jsxs)("div", {
                             className: r()(m.handleFrame, {
                                 [m.startDragging]: P,
-                                [m.endDragging]: I
+                                [m.endDragging]: I,
                             }),
                             style: {
-                                left: ''.concat((0, c.pN)(w, _, A, D), '%'),
-                                right: ''.concat((0, c.kD)(O, _, A, D), '%')
+                                left: "".concat((0, c.pN)(w, _, A, D), "%"),
+                                right: "".concat((0, c.kD)(O, _, A, D), "%"),
                             },
                             children: [
-                                (0, l.jsx)('div', {
+                                (0, l.jsx)("div", {
                                     className: r()(m.handleIconFrame, m.handleIconFrameStart),
-                                    children: (0, l.jsx)('div', {
+                                    children: (0, l.jsx)("div", {
                                         className: r()(m.handleIconContainer, m.__invalid_start),
                                         children: (0, l.jsx)(s.Z, {
                                             direction: s.Z.Directions.RIGHT,
                                             className: m.handleIcon,
                                             width: 16,
-                                            height: 16
-                                        })
-                                    })
+                                            height: 16,
+                                        }),
+                                    }),
                                 }),
-                                (0, l.jsx)('div', {
+                                (0, l.jsx)("div", {
                                     className: r()(m.handleIconFrame, m.handleIconFrameEnd),
-                                    children: (0, l.jsx)('div', {
+                                    children: (0, l.jsx)("div", {
                                         className: r()(m.handleIconContainer, m.__invalid_end),
                                         children: (0, l.jsx)(s.Z, {
                                             direction: s.Z.Directions.LEFT,
                                             className: m.handleIcon,
                                             width: 16,
-                                            height: 16
-                                        })
-                                    })
-                                })
-                            ]
+                                            height: 16,
+                                        }),
+                                    }),
+                                }),
+                            ],
                         }),
-                        (0, l.jsx)('div', {
+                        (0, l.jsx)("div", {
                             className: m.playheadTrack,
-                            children: (0, l.jsx)('div', {
+                            children: (0, l.jsx)("div", {
                                 className: r()(m.playhead, { [m.dragging]: M || P || I || t }),
-                                style: { left: ''.concat((0, c.pN)(C, _, A, D), '%') }
-                            })
-                        })
-                    ]
+                                style: { left: "".concat((0, c.pN)(C, _, A, D), "%") },
+                            }),
+                        }),
+                    ],
                 }),
-                (0, l.jsx)('div', {
+                (0, l.jsx)("div", {
                     className: m.waveformContainer,
                     children: (0, l.jsx)(d.Z, {
                         fineTuning: _,
                         fineTuningResolution: A,
-                        duration: D
-                    })
-                })
-            ]
+                        duration: D,
+                    }),
+                }),
+            ],
         })
     );
 });

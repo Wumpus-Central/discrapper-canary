@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(997841));
+n.d(t, { Z: () => c }), n(997841);
 var r = n(255367);
 n(73800);
 var i = n(630388),
@@ -12,7 +12,7 @@ function c(e) {
             messagePopouts: { emojiPicker: n, emojiBurstPicker: c, moreUtilities: u },
             isFocused: d,
             buttonProps: { message: f, channel: _, groupId: p, compact: h = !1 },
-            messageWindow: m
+            messageWindow: m,
         } = e,
         g = f.state === s.yb.SENDING,
         E = f.id === p,
@@ -32,6 +32,6 @@ function c(e) {
               showEmojiPicker: n,
               showEmojiBurstPicker: c,
               showMoreUtilities: u,
-              isFocused: d
+              isFocused: d,
           });
 }

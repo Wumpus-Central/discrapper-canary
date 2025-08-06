@@ -36,24 +36,24 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -85,17 +85,28 @@ function I(e, t) {
                 r,
                 l = {},
                 a = Object.keys(e);
-            for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
             return l;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
     }
     return l;
 }
 function F(e) {
-    let { destination: t, icon: n, label: a, subLabel: s, selected: o, disabled: c, onPressDestination: f, 'aria-setsize': h, 'aria-posinset': m } = e,
+    let {
+            destination: t,
+            icon: n,
+            label: a,
+            subLabel: s,
+            selected: o,
+            disabled: c,
+            onPressDestination: f,
+            "aria-setsize": h,
+            "aria-posinset": m,
+        } = e,
         p = (0, u.JA)(t.id),
         g = l.useRef(!1),
         y = l.useCallback(() => {
@@ -108,7 +119,7 @@ function F(e) {
                 null == f ||
                     f(t, {
                         transitionToDestination: !1,
-                        closeAfterSend: !1
+                        closeAfterSend: !1,
                     }));
         }),
         (0, r.jsxs)(
@@ -118,97 +129,97 @@ function F(e) {
                     {
                         className: i()(k.destinationRow, { [k.disabled]: c }),
                         onClick: y,
-                        'aria-selected': o,
-                        'aria-setsize': h,
-                        'aria-posinset': m
+                        "aria-selected": o,
+                        "aria-setsize": h,
+                        "aria-posinset": m,
                     },
-                    p
+                    p,
                 ),
                 {
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: k.identity,
                             children: [
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: k.iconWrapper,
-                                    children: n
+                                    children: n,
                                 }),
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: k.labels,
                                     children: [
                                         (0, r.jsx)(d.Text, {
-                                            tag: 'strong',
+                                            tag: "strong",
                                             className: k.label,
-                                            variant: 'text-md/semibold',
+                                            variant: "text-md/semibold",
                                             lineClamp: 1,
-                                            children: a
+                                            children: a,
                                         }),
                                         (0, r.jsx)(d.Text, {
                                             className: k.subLabel,
-                                            variant: 'text-xs/normal',
-                                            color: 'text-muted',
-                                            children: s
-                                        })
-                                    ]
-                                })
-                            ]
+                                            variant: "text-xs/normal",
+                                            color: "text-muted",
+                                            children: s,
+                                        }),
+                                    ],
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(d.XZJ, {
                             type: d.XZJ.Types.INVERTED,
                             displayOnly: !0,
                             size: 24,
                             value: o,
-                            className: k.checkbox
-                        })
-                    ]
-                }
-            )
+                            className: k.checkbox,
+                        }),
+                    ],
+                },
+            ),
         )
     );
 }
 function q(e) {
     var { user: t, subLabel: n } = e,
-        l = I(e, ['user', 'subLabel']);
+        l = I(e, ["user", "subLabel"]);
     let a = L.ZP.useName(t),
-        i = L.ZP.useUserTag(t, { decoration: 'never' }),
+        i = L.ZP.useUserTag(t, { decoration: "never" }),
         s = (0, c.e7)([C.Z], () => C.Z.getNickname(t.id)),
         o = (0, c.e7)([P.Z], () => P.Z.getStatus(t.id));
     return (0, r.jsx)(
         F,
         R(A({}, l), {
             icon: (0, r.jsx)(f.Z, {
-                'aria-hidden': !0,
+                "aria-hidden": !0,
                 size: d.EFr.SIZE_32,
                 user: t,
-                status: o
+                status: o,
             }),
             label: null != s ? s : a,
-            subLabel: null != n ? n : i
-        })
+            subLabel: null != n ? n : i,
+        }),
     );
 }
 function U(e) {
     var { channel: t, subLabel: n } = e,
-        l = I(e, ['channel', 'subLabel']);
+        l = I(e, ["channel", "subLabel"]);
     let a = (0, p.ZP)(t),
         i = (0, v._)(t);
     return (0, r.jsx)(
         F,
         R(A({}, l), {
             icon: (0, r.jsx)(g.Z, {
-                'aria-hidden': !0,
+                "aria-hidden": !0,
                 size: d.EFr.SIZE_32,
                 channel: t,
-                experimentLocation: 'application-command-modal'
+                experimentLocation: "application-command-modal",
             }),
             label: a,
-            subLabel: null != n ? n : i
-        })
+            subLabel: null != n ? n : i,
+        }),
     );
 }
 function z(e) {
     var { channel: t, subLabel: n } = e,
-        l = I(e, ['channel', 'subLabel']);
+        l = I(e, ["channel", "subLabel"]);
     let a = (0, c.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guild_id)),
         i = (0, p.ZP)(t),
         s = (0, c.e7)([O.Z, E.default, C.Z], () => {
@@ -219,37 +230,37 @@ function z(e) {
         f = null == a ? void 0 : a.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? d.Mmi : d.VL1;
-        f = (0, r.jsxs)('div', {
+        f = (0, r.jsxs)("div", {
             className: k.threadSubLabel,
             children: [
                 (0, r.jsx)(e, {
                     color: d.TVs.colors.TEXT_SECONDARY,
-                    className: k.subLabelIcon
+                    className: k.subLabelIcon,
                 }),
                 (0, r.jsx)(d.Text, {
-                    variant: 'text-xs/medium',
-                    color: 'text-secondary',
+                    variant: "text-xs/medium",
+                    color: "text-secondary",
                     lineClamp: 1,
-                    children: s
+                    children: s,
                 }),
                 null != u
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(d.Text, {
                                   className: k.subLabelSeparator,
-                                  variant: 'text-xs/medium',
-                                  color: 'text-secondary',
-                                  children: '\u2022'
+                                  variant: "text-xs/medium",
+                                  color: "text-secondary",
+                                  children: "\u2022",
                               }),
                               (0, r.jsx)(d.Text, {
-                                  variant: 'text-xs/medium',
-                                  color: 'text-secondary',
-                                  children: (0, N.Xf)(o()(u))
-                              })
-                          ]
+                                  variant: "text-xs/medium",
+                                  color: "text-secondary",
+                                  children: (0, N.Xf)(o()(u)),
+                              }),
+                          ],
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     }
     return (0, r.jsx)(
@@ -258,16 +269,28 @@ function z(e) {
             icon: (0, r.jsx)(y.Z, {
                 size: y.E.SMALL_32,
                 guild: a,
-                channel: t
+                channel: t,
             }),
             label: i,
-            subLabel: null != n ? n : f
-        })
+            subLabel: null != n ? n : f,
+        }),
     );
 }
 function H(e) {
-    var { rowData: t, selectedDestinations: n, handleToggleDestination: a, disableSelection: i, originDestination: s } = e,
-        o = I(e, ['rowData', 'selectedDestinations', 'handleToggleDestination', 'disableSelection', 'originDestination']);
+    var {
+            rowData: t,
+            selectedDestinations: n,
+            handleToggleDestination: a,
+            disableSelection: i,
+            originDestination: s,
+        } = e,
+        o = I(e, [
+            "rowData",
+            "selectedDestinations",
+            "handleToggleDestination",
+            "disableSelection",
+            "originDestination",
+        ]);
     let c = l.useMemo(() => [t.length], [t.length]),
         f = l.useCallback(() => 48, []),
         b = l.useMemo(() => {
@@ -283,20 +306,30 @@ function H(e) {
                 let c =
                         o === m.h8.USER
                             ? {
-                                  type: 'user',
-                                  id: u.id
+                                  type: "user",
+                                  id: u.id,
                               }
                             : {
-                                  type: 'channel',
-                                  id: u.id
+                                  type: "channel",
+                                  id: u.id,
                               },
                     d = (0, x.hC)(c),
                     f =
                         null != s
                             ? (function (e, t) {
                                   if (t instanceof j.Sf && (0, j.Km)(t.type)) {
-                                      if (null != t.rateLimitPerUser && t.rateLimitPerUser > 0 && !(S.Z.can(M.Plq.MANAGE_CHANNELS, t) || S.Z.can(M.Plq.MANAGE_MESSAGES, t))) return { label: T.intl.string(T.t.Icu3bW) };
-                                      if (t.isThread() || t.isForumPost() || !S.Z.can(M.Plq.USE_APPLICATION_COMMANDS, t)) return { label: T.intl.string(T.t.v8MLq6) };
+                                      if (
+                                          null != t.rateLimitPerUser &&
+                                          t.rateLimitPerUser > 0 &&
+                                          !(S.Z.can(M.Plq.MANAGE_CHANNELS, t) || S.Z.can(M.Plq.MANAGE_MESSAGES, t))
+                                      )
+                                          return { label: T.intl.string(T.t.Icu3bW) };
+                                      if (
+                                          t.isThread() ||
+                                          t.isForumPost() ||
+                                          !S.Z.can(M.Plq.USE_APPLICATION_COMMANDS, t)
+                                      )
+                                          return { label: T.intl.string(T.t.v8MLq6) };
                                       let n = (0, x.dL)(t.id);
                                       if (e.id === n.id) return { label: T.intl.string(T.t.mD4gqa) };
                                   }
@@ -310,21 +343,27 @@ function H(e) {
                         disabled: (i && !h) || null != f,
                         selected: h,
                         onPressDestination: a,
-                        'aria-posinset': l + 1,
-                        'aria-setsize': t.length
+                        "aria-posinset": l + 1,
+                        "aria-setsize": t.length,
                     };
-                return o === m.h8.USER ? (0, r.jsx)(q, A({ user: u }, p)) : o === m.h8.GROUP_DM ? (0, r.jsx)(U, A({ channel: u }, p)) : o === m.h8.TEXT_CHANNEL || o === m.h8.VOICE_CHANNEL ? (0, r.jsx)(z, A({ channel: u }, p)) : void (0, Z.vE)(o);
+                return o === m.h8.USER
+                    ? (0, r.jsx)(q, A({ user: u }, p))
+                    : o === m.h8.GROUP_DM
+                      ? (0, r.jsx)(U, A({ channel: u }, p))
+                      : o === m.h8.TEXT_CHANNEL || o === m.h8.VOICE_CHANNEL
+                        ? (0, r.jsx)(z, A({ channel: u }, p))
+                        : void (0, Z.vE)(o);
             },
-            [i, a, s, t, b]
+            [i, a, s, t, b],
         ),
         g = l.useRef(null),
-        y = (0, h.Z)('share-command-modal', g);
+        y = (0, h.Z)("share-command-modal", g);
     return (0, r.jsx)(u.bG, {
         navigator: y,
         children: (0, r.jsx)(u.SJ, {
             children: (e) => {
                 var { ref: t } = e,
-                    n = I(e, ['ref']);
+                    n = I(e, ["ref"]);
                 return (0, r.jsx)(
                     d.YAO,
                     R(
@@ -332,21 +371,22 @@ function H(e) {
                             {
                                 scrollerRef: (e) => {
                                     var n;
-                                    ((g.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null));
-                                }
+                                    (g.current = e),
+                                        (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
+                                },
                             },
                             n,
-                            o
+                            o,
                         ),
                         {
                             sections: c,
                             sectionHeight: 0,
                             renderRow: p,
-                            rowHeight: f
-                        }
-                    )
+                            rowHeight: f,
+                        },
+                    ),
                 );
-            }
-        })
+            },
+        }),
     });
 }

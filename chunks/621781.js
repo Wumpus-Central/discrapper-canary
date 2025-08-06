@@ -10,17 +10,17 @@ function r() {
         () => [
             {
                 value: c.OT.SECONDS_30,
-                label: o.intl.formatToPlainString(o.t['bTFv//'], { count: 30 })
+                label: o.intl.formatToPlainString(o.t["bTFv//"], { count: 30 }),
             },
             {
                 value: c.OT.MINUTES_1,
-                label: o.intl.formatToPlainString(o.t.ICo9Nj, { count: 1 })
+                label: o.intl.formatToPlainString(o.t.ICo9Nj, { count: 1 }),
             },
             {
                 value: c.OT.MINUTES_2,
-                label: o.intl.formatToPlainString(o.t.ICo9Nj, { count: 2 })
-            }
+                label: o.intl.formatToPlainString(o.t.ICo9Nj, { count: 2 }),
+            },
         ],
-        [t]
+        [t],
     );
 }

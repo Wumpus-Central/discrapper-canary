@@ -16,7 +16,7 @@ function h(e) {
     let { refreshStyles: t = !1 } = e,
         { sidechainEnabled: n, sidechainStrength: r } = (0, a.cj)([u.Z], () => ({
             sidechainEnabled: u.Z.getSidechainCompression(),
-            sidechainStrength: u.Z.getSidechainCompressionStrength()
+            sidechainStrength: u.Z.getSidechainCompressionStrength(),
         })),
         { analyticsLocations: h } = (0, c.ZP)(),
         f = (0, i.jsxs)(i.Fragment, {
@@ -27,17 +27,17 @@ function h(e) {
                     onChange: (e) => o.Z.setSidechainCompression(e, { analyticsLocations: h }),
                     note: p.intl.string(p.t.zlA23N),
                     hideBorder: t,
-                    children: p.intl.string(p.t['/jwMtr'])
+                    children: p.intl.string(p.t["/jwMtr"]),
                 }),
                 (0, i.jsx)(l.xJW, {
                     title: p.intl.string(p.t.fhEzfn),
                     children: (0, i.jsx)(l.iRW, {
                         initialValue: r,
                         minValue: 1,
-                        onValueChange: (e) => o.Z.setSidechainCompressionStrength(e, { analyticsLocations: h })
-                    })
-                })
-            ]
+                        onValueChange: (e) => o.Z.setSidechainCompressionStrength(e, { analyticsLocations: h }),
+                    }),
+                }),
+            ],
         });
     return (0, i.jsx)(d.F, {
         setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
@@ -45,7 +45,7 @@ function h(e) {
             ? f
             : (0, i.jsx)(l.hjN, {
                   className: g.marginBottom20,
-                  children: f
-              })
+                  children: f,
+              }),
     });
 }

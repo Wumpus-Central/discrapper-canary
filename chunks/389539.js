@@ -1,1 +1,1 @@
-e.exports = { tooltip: 'tooltip__54b48' };
+e.exports = { tooltip: "tooltip__54b48" };

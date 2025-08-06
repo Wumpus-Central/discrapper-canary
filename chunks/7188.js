@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -79,7 +79,8 @@ function C(e, t) {
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,15 +90,15 @@ function R(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function P(e) {
     let { className: t } = e;
     return (0, r.jsx)(a.ewm, {
-        size: 'md',
-        color: 'currentColor',
-        className: t
+        size: "md",
+        color: "currentColor",
+        className: t,
     });
 }
 function w(e) {
@@ -107,15 +108,15 @@ function w(e) {
             (0, r.jsx)(u.ZP, {
                 className: t,
                 mask: u.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                children: (0, r.jsx)(P, {})
+                children: (0, r.jsx)(P, {}),
             }),
-            (0, r.jsx)(h.Z, { className: I.badgeUpgrade })
-        ]
+            (0, r.jsx)(h.Z, { className: I.badgeUpgrade }),
+        ],
     });
 }
 function D(e) {
     var { hideBadges: t = !1, stream: n, location: u } = e,
-        h = C(e, ['hideBadges', 'stream', 'location']);
+        h = C(e, ["hideBadges", "stream", "location"]);
     let I = i.useRef(null),
         { parentAnalyticsLocation: T } = (0, s.ZP)(),
         A = (0, o.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), O.p9.TIER_1)),
@@ -130,7 +131,7 @@ function D(e) {
         t || A || (x = w),
         (0, r.jsx)(a.yRy, {
             targetElementRef: I,
-            position: 'top',
+            position: "top",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(g.Z, {
@@ -141,8 +142,10 @@ function D(e) {
                         onClose: t,
                         showReportOption: !0,
                         handleGoLive: L,
-                        onInteraction: (0, c.u)('ManageStreamsButton', null != T ? T : u, { entrypoint: y.A5.OTHER_BUTTON })
-                    })
+                        onInteraction: (0, c.u)("ManageStreamsButton", null != T ? T : u, {
+                            entrypoint: y.A5.OTHER_BUTTON,
+                        }),
+                    }),
                 });
             },
             animation: a.yRy.Animation.FADE,
@@ -155,12 +158,13 @@ function D(e) {
                             label: v.intl.string(v.t.tmiYpK),
                             iconComponent: x,
                             onClick: (t) => {
-                                ((null != T || null != u) && (0, l.v)(null != T ? T : u, l.d.STREAM_SETTINGS), null == e || e.onClick(t));
-                            }
+                                (null != T || null != u) && (0, l.v)(null != T ? T : u, l.d.STREAM_SETTINGS),
+                                    null == e || e.onClick(t);
+                            },
                         }),
-                        h
-                    )
-                )
+                        h,
+                    ),
+                ),
         })
     );
 }

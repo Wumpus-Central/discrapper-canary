@@ -9,9 +9,9 @@ var n,
     l = e(556585),
     p = e(751736),
     v = e(511696),
-    h = p('iterator'),
+    h = p("iterator"),
     d = !1;
-([].keys && ('next' in (i = [].keys()) ? (o = f(f(i))) !== Object.prototype && (n = o) : (d = !0)),
+[].keys && ("next" in (i = [].keys()) ? (o = f(f(i))) !== Object.prototype && (n = o) : (d = !0)),
     !u(n) ||
     a(function () {
         var t = {};
@@ -25,5 +25,5 @@ var n,
         }),
     (t.exports = {
         IteratorPrototype: n,
-        BUGGY_SAFARI_ITERATORS: d
-    }));
+        BUGGY_SAFARI_ITERATORS: d,
+    });

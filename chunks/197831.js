@@ -20,14 +20,14 @@ let d = (e) => {
                     style: n.style,
                     loop: !1,
                     muted: !0,
-                    autoPlay: !0
+                    autoPlay: !0,
                 })
-              : (0, r.jsx)('img', {
+              : (0, r.jsx)("img", {
                     src: n.getSrc(i),
                     className: o()(u.customConfetti, t),
                     style: n.style,
-                    alt: '',
-                    'aria-hidden': 'true'
+                    alt: "",
+                    "aria-hidden": "true",
                 })
           : null;
 };

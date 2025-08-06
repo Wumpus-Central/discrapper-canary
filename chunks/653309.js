@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     U: () => p,
-    Z: () => h
+    Z: () => h,
 }),
     n(388685),
     n(361932),
     n(187205),
-    n(415506));
+    n(415506);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -21,7 +21,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -83,45 +83,49 @@ let p = {
     codeBlockText: s.codeBlockText,
     codeBlockSyntax: s.codeBlockSyntax,
     codeBlockLang: s.codeBlockLang,
-    subtext: s.subtext
+    subtext: s.subtext,
 };
 function h(e, t) {
     let n,
         { attributes: i, children: c, leaf: u, text: f } = t,
         h = !1,
         [m] = a.bN.node(e, a.C0.parent(a.bN.findPath(e, f)));
-    switch (a.bN.isEditor(m) ? 'editor' : m.type) {
-        case 'line':
-        case 'blockQuote': {
+    switch (a.bN.isEditor(m) ? "editor" : m.type) {
+        case "line":
+        case "blockQuote": {
             h = void 0;
             let e = Object.entries(u)
                 .filter((e) => {
                     let [t] = e;
-                    return 'text' !== t;
+                    return "text" !== t;
                 })
                 .flatMap((e) => {
                     let [t, n] = e;
-                    if ('hljsTypes' === t) return n;
+                    if ("hljsTypes" === t) return n;
                     if (!0 === n) {
-                        if ((('codeBlockLang' === t || 'codeBlockSyntax' === t) && (h = !1), t.startsWith('before_') || t.startsWith('after_'))) return [s[t]];
+                        if (
+                            (("codeBlockLang" === t || "codeBlockSyntax" === t) && (h = !1),
+                            t.startsWith("before_") || t.startsWith("after_"))
+                        )
+                            return [s[t]];
                         if (t in p) return [p[t]];
-                        throw Error('Slate: Unknown decoration attribute: '.concat(t));
+                        throw Error("Slate: Unknown decoration attribute: ".concat(t));
                     }
                 })
                 .filter((e) => null != e)
-                .join(' ');
-            n = o()(e, { [s.syntaxOverride]: '||' === u.text || '\\' === u.text });
+                .join(" ");
+            n = o()(e, { [s.syntaxOverride]: "||" === u.text || "\\" === u.text });
         }
     }
     return (
-        (n = o()(n, { [l.emptyText]: '' === f.text })),
+        (n = o()(n, { [l.emptyText]: "" === f.text })),
         (0, r.jsx)(
-            'span',
+            "span",
             _(d({}, i), {
                 className: n,
                 spellCheck: h,
-                children: c
-            })
+                children: c,
+            }),
         )
     );
 }

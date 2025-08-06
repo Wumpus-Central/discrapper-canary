@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685));
+n.d(t, { Z: () => R }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,7 +74,17 @@ function N(e, t) {
 }
 let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function R(e) {
-    let { user: t, displayProfile: n, guildId: o, channelId: h, themeType: T, animateOnHover: A, onOpenProfile: R, className: P, previewStatus: w } = e,
+    let {
+            user: t,
+            displayProfile: n,
+            guildId: o,
+            channelId: h,
+            themeType: T,
+            animateOnHover: A,
+            onOpenProfile: R,
+            className: P,
+            previewStatus: w,
+        } = e,
         { theme: D } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
@@ -84,7 +94,7 @@ function R(e) {
         [U] = j,
         { status: G, isMobileOnline: B } = (0, s.cj)([_.Z], () => ({
             status: (0, c.Z)(U) ? O.Skl.STREAMING : _.Z.getStatus(t.id),
-            isMobileOnline: _.Z.isMobileOnline(t.id)
+            isMobileOnline: _.Z.isMobileOnline(t.id),
         })),
         Z = void 0 !== w ? w : G,
         F = [y.lY.MODAL, y.lY.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
@@ -92,32 +102,32 @@ function R(e) {
         {
             avatarDecorationSrc: H,
             avatarSrc: Y,
-            eventHandlers: W
+            eventHandlers: W,
         } = (0, E.Z)({
             userId: t.id,
             guildId: null != n ? n.guildId : o,
             size: F,
-            animateOnHover: A
+            animateOnHover: A,
         }),
         K = (0, r.jsx)(C, {
             src: Y,
             avatarDecoration: H,
             size: F,
-            'aria-label': t.username,
+            "aria-label": t.username,
             imageClassName: null != R ? I.overlay : void 0,
             status: k ? O.Skl.UNKNOWN : Z,
             statusBackdropColor: M && !k ? (0, l.QFD)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,
-            statusTooltipDelay: y.vB
+            statusTooltipDelay: y.vB,
         });
     return null == R
         ? (0, r.jsx)(
-              'div',
+              "div",
               N(S({}, W), {
                   className: V,
-                  children: K
-              })
+                  children: K,
+              }),
           )
         : (0, r.jsx)(
               l.P3F,
@@ -125,13 +135,13 @@ function R(e) {
                   className: a()(V, I.clickable),
                   focusProps: { ringClassName: I.focusRing },
                   onClick: () => {
-                      (x({
-                          action: 'PRESS_VIEW_PROFILE',
-                          analyticsLocations: L
+                      x({
+                          action: "PRESS_VIEW_PROFILE",
+                          analyticsLocations: L,
                       }),
-                          null == R || R());
+                          null == R || R();
                   },
-                  children: K
-              })
+                  children: K,
+              }),
           );
 }

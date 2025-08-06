@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(904245),
@@ -29,36 +29,40 @@ function O(e) {
             {
                 section: g.jXE.OVERLAY,
                 object: g.qAy.ACK_INLINE_REPLY,
-                objectType: g.Qqv.ACK_SEMI_AUTOMATIC
+                objectType: g.Qqv.ACK_SEMI_AUTOMATIC,
             },
             !0,
             !0,
-            n
+            n,
         );
     });
     let P = r.useCallback((e, t, n) => {
             S({
                 textValue: t,
-                richValue: n
+                richValue: n,
             });
         }, []),
         T = r.useCallback(
             (e) => {
-                'Escape' === e.key && l.Z.updateNotificationStatus(t, g._1z.ACTIVE);
+                "Escape" === e.key && l.Z.updateNotificationStatus(t, g._1z.ACTIVE);
             },
-            [t]
+            [t],
         ),
         A = r.useCallback(
             () => (
-                I.length > v || (o.Z.sendMessage(O.id, f.ZP.parse(O, I), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == b || b(I)),
+                I.length > v ||
+                    (o.Z.sendMessage(O.id, f.ZP.parse(O, I), !1),
+                    l.Z.setInputLocked(!0, (0, m.getPID)()),
+                    l.Z.updateNotificationStatus(t, g._1z.DISMISSED),
+                    null == b || b(I)),
                 Promise.resolve({
                     shouldClear: !1,
-                    shouldRefocus: !0
+                    shouldRefocus: !0,
                 })
             ),
-            [I, v, O, t, b]
+            [I, v, O, t, b],
         );
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: y.container,
         children: (0, i.jsx)(p.ZP, {
             innerClassName: y.textArea,
@@ -75,8 +79,8 @@ function O(e) {
             focused: C,
             onSubmit: A,
             onKeyDown: T,
-            autoCompletePosition: 'bottom',
-            disableThemedBackground: !0
-        })
+            autoCompletePosition: "bottom",
+            disableThemedBackground: !0,
+        }),
     });
 }

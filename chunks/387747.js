@@ -20,27 +20,27 @@ function g() {
                 setting: m.s6.GIFT_CODE_REDEMPTION,
                 children: (0, i.jsx)(r.Z, {
                     section: p.jXE.LIBRARY_INVENTORY_CODE_REDEMPTION,
-                    children: (0, i.jsx)(d.Z, {})
-                })
+                    children: (0, i.jsx)(d.Z, {}),
+                }),
             }),
             (0, i.jsx)(c.F, {
                 setting: m.s6.GIFT_INVENTORY_QUESTS,
                 children: (0, i.jsx)(r.Z, {
                     section: p.jXE.QUESTS,
-                    children: (0, i.jsx)(o.Z, {})
-                })
+                    children: (0, i.jsx)(o.Z, {}),
+                }),
             }),
             (0, i.jsx)(c.F, {
                 setting: m.s6.GIFT_INVENTORY_LIST,
                 children: (0, i.jsx)(r.Z, {
                     section: p.jXE.LIBRARY_INVENTORY_GIFTS_LIST,
-                    children: (0, i.jsx)(u.Z, {})
-                })
+                    children: (0, i.jsx)(u.Z, {}),
+                }),
             }),
             (0, i.jsx)(c.F, {
                 setting: m.s6.GIFT_BLOCKED_PAYMENTS,
-                children: (0, i.jsx)(l.c8, {})
-            })
-        ]
+                children: (0, i.jsx)(l.c8, {}),
+            }),
+        ],
     });
 }

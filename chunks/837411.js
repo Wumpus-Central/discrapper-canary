@@ -10,5 +10,10 @@ function u(e, t) {
     let n = (0, r.e7)([s.default], () => s.default.getId() === e),
         u = (0, r.e7)([o.Z], () => null != t && o.Z.isLurking(t)),
         d = a.h2.useSetting();
-    return (0, r.e7)([c.Z, l.ZP, i.Z], () => (!n && !u && (c.Z.isFriend(e) || null != l.ZP.memberOf(e).find((e) => !d.includes(e)))) || (i.Z.getGameFriendsForUser(e).length > 0 && a._j.getSetting()));
+    return (0, r.e7)(
+        [c.Z, l.ZP, i.Z],
+        () =>
+            (!n && !u && (c.Z.isFriend(e) || null != l.ZP.memberOf(e).find((e) => !d.includes(e)))) ||
+            (i.Z.getGameFriendsForUser(e).length > 0 && a._j.getSetting()),
+    );
 }

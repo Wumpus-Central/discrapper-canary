@@ -11,7 +11,7 @@ function a(e) {
         {
             width: a,
             height: s,
-            $: u
+            $: u,
         } = (function (e) {
             let t = (0, r.Dx)(e),
                 n = parseFloat(t.width) || 0,
@@ -25,7 +25,7 @@ function a(e) {
                 {
                     width: n,
                     height: i,
-                    $: l
+                    $: l,
                 }
             );
         })(t),
@@ -36,14 +36,14 @@ function a(e) {
         (c && Number.isFinite(c)) || (c = 1),
         {
             x: l,
-            y: c
+            y: c,
         }
     );
 }
 let s = (0, o.ze)(0);
 function u(e, t, n, u) {
     var l;
-    (void 0 === t && (t = !1), void 0 === n && (n = !1));
+    void 0 === t && (t = !1), void 0 === n && (n = !1);
     let c = e.getBoundingClientRect(),
         d = i(e),
         p = (0, o.ze)(1);
@@ -54,7 +54,7 @@ function u(e, t, n, u) {
                   return (0, r.Pf)() && t.visualViewport
                       ? {
                             x: t.visualViewport.offsetLeft,
-                            y: t.visualViewport.offsetTop
+                            y: t.visualViewport.offsetTop,
                         }
                       : s;
               })(d)
@@ -74,14 +74,14 @@ function u(e, t, n, u) {
                 i = (0, r.Dx)(o),
                 s = t.left + (o.clientLeft + parseFloat(i.paddingLeft)) * e.x,
                 u = t.top + (o.clientTop + parseFloat(i.paddingTop)) * e.y;
-            ((h *= e.x), (v *= e.y), (m *= e.x), (g *= e.y), (h += s), (v += u), (n = (0, r.Jj)(o)), (o = (0, r.wK)(n)));
+            (h *= e.x), (v *= e.y), (m *= e.x), (g *= e.y), (h += s), (v += u), (n = (0, r.Jj)(o)), (o = (0, r.wK)(n));
         }
     }
     return (0, o.JB)({
         width: m,
         height: g,
         x: h,
-        y: v
+        y: v,
     });
 }
 function l(e, t) {
@@ -90,11 +90,17 @@ function l(e, t) {
 function c(e, t, n, a) {
     let s;
     void 0 === a && (a = {});
-    let { ancestorScroll: c = !0, ancestorResize: d = !0, elementResize: p = 'function' == typeof ResizeObserver, layoutShift: f = 'function' == typeof IntersectionObserver, animationFrame: h = !1 } = a,
+    let {
+            ancestorScroll: c = !0,
+            ancestorResize: d = !0,
+            elementResize: p = "function" == typeof ResizeObserver,
+            layoutShift: f = "function" == typeof IntersectionObserver,
+            animationFrame: h = !1,
+        } = a,
         v = i(e),
         m = c || d ? [...(v ? (0, r.Kx)(v) : []), ...(0, r.Kx)(t)] : [];
     m.forEach((e) => {
-        (c && e.addEventListener('scroll', n, { passive: !0 }), d && e.addEventListener('resize', n));
+        c && e.addEventListener("scroll", n, { passive: !0 }), d && e.addEventListener("resize", n);
     });
     let g =
             v && f
@@ -104,19 +110,27 @@ function c(e, t, n, a) {
                           a = (0, r.tF)(e);
                       function s() {
                           var e;
-                          (clearTimeout(n), null == (e = i) || e.disconnect(), (i = null));
+                          clearTimeout(n), null == (e = i) || e.disconnect(), (i = null);
                       }
                       return (
                           !(function r(u, c) {
-                              (void 0 === u && (u = !1), void 0 === c && (c = 1), s());
+                              void 0 === u && (u = !1), void 0 === c && (c = 1), s();
                               let d = e.getBoundingClientRect(),
                                   { left: p, top: f, width: h, height: v } = d;
                               if ((u || t(), !h || !v)) return;
                               let m = (0, o.GW)(f),
                                   g = (0, o.GW)(a.clientWidth - (p + h)),
                                   b = {
-                                      rootMargin: -m + 'px ' + -g + 'px ' + -(0, o.GW)(a.clientHeight - (f + v)) + 'px ' + -(0, o.GW)(p) + 'px',
-                                      threshold: (0, o.Fp)(0, (0, o.VV)(1, c)) || 1
+                                      rootMargin:
+                                          -m +
+                                          "px " +
+                                          -g +
+                                          "px " +
+                                          -(0, o.GW)(a.clientHeight - (f + v)) +
+                                          "px " +
+                                          -(0, o.GW)(p) +
+                                          "px",
+                                      threshold: (0, o.Fp)(0, (0, o.VV)(1, c)) || 1,
                                   },
                                   y = !0;
                               function O(t) {
@@ -129,12 +143,12 @@ function c(e, t, n, a) {
                                                 r(!1, 1e-7);
                                             }, 1000));
                                   }
-                                  (1 !== o || l(d, e.getBoundingClientRect()) || r(), (y = !1));
+                                  1 !== o || l(d, e.getBoundingClientRect()) || r(), (y = !1);
                               }
                               try {
                                   i = new IntersectionObserver(O, {
                                       ...b,
-                                      root: a.ownerDocument
+                                      root: a.ownerDocument,
                                   });
                               } catch (e) {
                                   i = new IntersectionObserver(O, b);
@@ -150,7 +164,7 @@ function c(e, t, n, a) {
     p &&
         ((y = new ResizeObserver((e) => {
             let [o] = e;
-            (o &&
+            o &&
                 o.target === v &&
                 y &&
                 (y.unobserve(t),
@@ -159,7 +173,7 @@ function c(e, t, n, a) {
                     var e;
                     null == (e = y) || e.observe(t);
                 }))),
-                n());
+                n();
         })),
         v && !h && y.observe(v),
         y.observe(t));
@@ -168,18 +182,18 @@ function c(e, t, n, a) {
         h &&
             (function t() {
                 let o = u(e);
-                (O && !l(O, o) && n(), (O = o), (s = requestAnimationFrame(t)));
+                O && !l(O, o) && n(), (O = o), (s = requestAnimationFrame(t));
             })(),
         n(),
         () => {
             var e;
-            (m.forEach((e) => {
-                (c && e.removeEventListener('scroll', n), d && e.removeEventListener('resize', n));
+            m.forEach((e) => {
+                c && e.removeEventListener("scroll", n), d && e.removeEventListener("resize", n);
             }),
                 null == g || g(),
                 null == (e = y) || e.disconnect(),
                 (y = null),
-                h && cancelAnimationFrame(s));
+                h && cancelAnimationFrame(s);
         }
     );
 }

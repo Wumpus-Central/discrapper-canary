@@ -19,7 +19,7 @@ function p(e) {
         emojiId: t.id,
         emojiName: i,
         animated: t.animated,
-        shouldAnimate: n
+        shouldAnimate: n,
     });
 }
 function h(e) {
@@ -29,51 +29,51 @@ function h(e) {
         f = !(0, s.e7)([d.Z], () => d.Z.useReducedMotion) && c;
     return null == t.label || t.label.length <= 0
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               ref: o,
               className: a()(_.trait, { [_.ellipsize]: n }),
               children: [
                   (0, r.jsx)(p, {
                       emoji: t.emoji,
-                      shouldAnimate: f
+                      shouldAnimate: f,
                   }),
                   (0, r.jsx)(l.Text, {
-                      tag: 'span',
+                      tag: "span",
                       className: n ? _.ellipsize : void 0,
-                      variant: 'text-sm/normal',
-                      color: 'text-default',
-                      children: t.label
-                  })
-              ]
+                      variant: "text-sm/normal",
+                      color: "text-default",
+                      children: t.label,
+                  }),
+              ],
           });
 }
 function m(e) {
     let { items: t } = e,
         n = i.useCallback(
             (e, t) =>
-                'string' == typeof e
+                "string" == typeof e
                     ? (0, r.jsx)(
-                          'div',
+                          "div",
                           {
                               className: a()(_.trait, { [_.ellipsize]: t.ellipsize }),
                               children: (0, r.jsx)(l.Text, {
-                                  tag: 'span',
-                                  variant: 'text-sm/normal',
-                                  color: 'text-default',
-                                  children: e
-                              })
+                                  tag: "span",
+                                  variant: "text-sm/normal",
+                                  color: "text-default",
+                                  children: e,
+                              }),
                           },
-                          'overflow'
+                          "overflow",
                       )
                     : (0, r.jsx)(
                           h,
                           {
                               trait: e,
-                              ellipsize: t.ellipsize
+                              ellipsize: t.ellipsize,
                           },
-                          e.key
+                          e.key,
                       ),
-            []
+            [],
         ),
         o = i.useCallback((e) => n(e, { ellipsize: !0 }), [n]),
         s = i.useCallback((e) => n(e, { ellipsize: !1 }), [n]),
@@ -81,9 +81,9 @@ function m(e) {
             (e) =>
                 (0, r.jsx)(l.te1, {
                     items: e,
-                    renderItem: s
+                    renderItem: s,
                 }),
-            [s]
+            [s],
         );
     return 0 === t.length
         ? null
@@ -93,6 +93,6 @@ function m(e) {
               renderItem: o,
               renderOverflow: c,
               maxLines: 2,
-              itemGapPx: 4
+              itemGapPx: 4,
           });
 }

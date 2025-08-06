@@ -1,5 +1,5 @@
 let n;
-(r.d(t, { Z: () => _ }), r(388685), r(539854));
+r.d(t, { Z: () => _ }), r(388685), r(539854);
 var i,
     a = r(442837),
     o = r(570140);
@@ -10,7 +10,7 @@ function l(e, t, r) {
                   value: r,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = r),
         e
@@ -29,7 +29,9 @@ class u extends (i = a.ZP.PersistedStore) {
     }
     shouldShowChannelNotice(e) {
         var t, r;
-        return !n.guildNoticeDismissed.includes(e) && (null != (r = null == (t = c.get(e)) ? void 0 : t.size) ? r : 0) > 0;
+        return (
+            !n.guildNoticeDismissed.includes(e) && (null != (r = null == (t = c.get(e)) ? void 0 : t.size) ? r : 0) > 0
+        );
     }
     canShowOverviewTooltip(e, t) {
         var r;
@@ -39,11 +41,11 @@ class u extends (i = a.ZP.PersistedStore) {
         return d.has(e);
     }
 }
-(l(u, 'displayName', 'CommandsMigrationStore'), l(u, 'persistKey', 'CommandsMigrationStore'));
+l(u, "displayName", "CommandsMigrationStore"), l(u, "persistKey", "CommandsMigrationStore");
 let _ = new u(o.Z, {
     COMMANDS_MIGRATION_UPDATE_SUCCESS: function (e) {
         let { guildId: t, integrationIdsWithAppCommands: r } = e;
-        return (c.set(t, new Set(r)), !0);
+        return c.set(t, new Set(r)), !0;
     },
     COMMANDS_MIGRATION_NOTICE_DISMISSED: function (e) {
         let { guildId: t } = e;
@@ -52,10 +54,10 @@ let _ = new u(o.Z, {
     COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED: function (e) {
         var t;
         let { guildId: r, integrationId: n } = e;
-        (null == (t = c.get(r)) || t.clear(), d.add(n));
+        null == (t = c.get(r)) || t.clear(), d.add(n);
     },
     COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function (e) {
         let { integrationId: t } = e;
         d.delete(t);
-    }
+    },
 });

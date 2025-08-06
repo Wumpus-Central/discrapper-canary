@@ -2,7 +2,7 @@ n.d(t, {
     AT: () => p,
     fC: () => m,
     gr: () => h,
-    hQ: () => _
+    hQ: () => _,
 });
 var r = n(73800),
     i = n(913527),
@@ -15,26 +15,26 @@ var r = n(73800),
     d = n(981631),
     f = n(388032),
     _ = (function (e) {
-        return ((e[(e.LONG = 0)] = 'LONG'), (e[(e.SHORT = 1)] = 'SHORT'), e);
+        return (e[(e.LONG = 0)] = "LONG"), (e[(e.SHORT = 1)] = "SHORT"), e;
     })({});
 function p(e) {
     let { dueAt: t, now: n, type: r } = e;
     if (null == t)
         return {
-            string: '',
-            isOverdue: !1
+            string: "",
+            isOverdue: !1,
         };
     let i = 0 === r ? f.t.TjNWND : f.t.H4gnX1,
-        a = 0 === r ? f.t.haia19 : f.t['Uq7Y+/'],
+        a = 0 === r ? f.t.haia19 : f.t["Uq7Y+/"],
         s = n > t,
         l = s ? a : i;
     return {
         dueInText: f.intl.formatToPlainString(l, {
             duration: o()
-                .duration(t.getTime() - n.getTime(), 'millisecond')
-                .humanize()
+                .duration(t.getTime() - n.getTime(), "millisecond")
+                .humanize(),
         }),
-        isOverdue: s
+        isOverdue: s,
     };
 }
 function h(e) {
@@ -48,10 +48,10 @@ function h(e) {
                         id: e.saveData.channelId,
                         guild_id: e.saveData.guildId,
                         type: d.d4z.UNKNOWN,
-                        name: f.intl.string(f.t.J90oLS)
+                        name: f.intl.string(f.t.J90oLS),
                     })
                   : void 0,
-        [t, e]
+        [t, e],
     );
 }
 async function m(e, t) {
@@ -61,5 +61,7 @@ async function m(e, t) {
             if (null == t.recipients || t.recipients.length > 1) return;
             await s.Z.ensurePrivateChannel(t.recipients.map((e) => e.id));
         } catch (e) {}
-    (0, l.Z)(d.Z5c.CHANNEL(null == t ? void 0 : t.getGuildId(), e.saveData.channelId, e.saveData.messageId), { openChannel: !0 });
+    (0, l.Z)(d.Z5c.CHANNEL(null == t ? void 0 : t.getGuildId(), e.saveData.channelId, e.saveData.messageId), {
+        openChannel: !0,
+    });
 }

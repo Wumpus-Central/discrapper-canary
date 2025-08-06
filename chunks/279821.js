@@ -5,13 +5,13 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-(n.d(t, { d: () => o }), n(415506));
+n.d(t, { d: () => o }), n(415506);
 class i {
     raise(e) {
         throw e;
@@ -26,7 +26,7 @@ class i {
             requestId: e,
             synchronous: !1,
             ok: !1,
-            data: r
+            data: r,
         });
     }
     databaseList(e, t) {
@@ -34,7 +34,7 @@ class i {
             requestId: e,
             synchronous: null == t ? void 0 : t.synchronous,
             ok: !0,
-            data: []
+            data: [],
         });
     }
     databaseDelete(e, t, n) {
@@ -42,7 +42,7 @@ class i {
             requestId: e,
             synchronous: null == n ? void 0 : n.synchronous,
             ok: !0,
-            data: void 0
+            data: void 0,
         });
     }
     databaseOptimize(e, t, n) {
@@ -50,7 +50,7 @@ class i {
             requestId: e,
             synchronous: null == n ? void 0 : n.synchronous,
             ok: !0,
-            data: void 0
+            data: void 0,
         });
     }
     reply(e) {
@@ -69,15 +69,15 @@ class i {
                             queueTimeNanoseconds: 0,
                             executionTimeNanoseconds: 0,
                             materializationTimeNanoseconds: 0,
-                            totalTimeNanoseconds: 0
-                        }
+                            totalTimeNanoseconds: 0,
+                        },
                     },
-                    r
+                    r,
                 );
         }
     }
     constructor() {
-        r(this, 'callback', null);
+        r(this, "callback", null);
     }
 }
 let o = new i();

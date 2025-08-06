@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,35 +26,50 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let h = i.memo(function (e) {
     var t, n;
-    let { message: _, channel: p, compact: h = !1, interactionUsernameProfile: m, interactionAvatarProfile: g, interactionData: E, referencedUsernameProfile: b, referencedAvatarProfile: y, setPopout: O } = e,
+    let {
+            message: _,
+            channel: p,
+            compact: h = !1,
+            interactionUsernameProfile: m,
+            interactionAvatarProfile: g,
+            interactionData: E,
+            referencedUsernameProfile: b,
+            referencedAvatarProfile: y,
+            setPopout: O,
+        } = e,
         { isInteractionUserBlocked: v, isInteractionUserIgnored: I } = (0, o.cj)(
             [c.Z],
             () => ({
                 isInteractionUserBlocked: c.Z.isBlockedForMessage(_),
-                isInteractionUserIgnored: c.Z.isIgnoredForMessage(_)
+                isInteractionUserIgnored: c.Z.isIgnoredForMessage(_),
             }),
-            [_]
+            [_],
         ),
         T = (0, o.e7)([l.Z], () => l.Z.getMessageByReference(null == _ ? void 0 : _.messageReference)),
         S = (0, d.wq)(null == (t = _.interaction) ? void 0 : t.user.id, p.id),
         A = (0, d.Nk)(_.interaction, p, m, O),
         N = (0, d.NU)(g, O),
         C = (0, s.t0)(_),
-        R = (null == C ? void 0 : C.type) === a.B8.APPLICATION_COMMAND ? (null == (n = C.target_user) ? void 0 : n.id) : void 0,
+        R =
+            (null == C ? void 0 : C.type) === a.B8.APPLICATION_COMMAND
+                ? null == (n = C.target_user)
+                    ? void 0
+                    : n.id
+                : void 0,
         P = (0, d.wq)(R, p.id),
         w = (0, d.JC)(R, p, b, O),
         D = (0, d.rY)(y, O),
@@ -65,7 +80,7 @@ let h = i.memo(function (e) {
                 interactionAvatarProfile: !1,
                 interactionData: !1,
                 referencedUsernameProfile: !1,
-                referencedAvatarProfile: !1
+                referencedAvatarProfile: !1,
             });
         }, [O]),
         M = i.useCallback(
@@ -80,9 +95,9 @@ let h = i.memo(function (e) {
                     replyReference: _.messageReference,
                     replyMessage: T,
                     isReplySpineClickable: !1,
-                    showReplySpine: !1
+                    showReplySpine: !1,
                 }),
-            [p, h, _, y, T, b, O]
+            [p, h, _, y, T, b, O],
         );
     return (0, r.jsx)(u.Z, {
         message: _,
@@ -103,12 +118,12 @@ let h = i.memo(function (e) {
         onClickTargetUsername: w,
         onTargetUserContextMenu: P,
         onPopoutRequestClose: x,
-        renderTargetMessage: M
+        renderTargetMessage: M,
     });
 });
 function m(e, t, n) {
     let { message: i, channel: o, compact: a } = e;
-    return null != i.interaction && '' !== i.interaction.displayName
+    return null != i.interaction && "" !== i.interaction.displayName
         ? (0, r.jsx)(
               h,
               p(
@@ -116,10 +131,10 @@ function m(e, t, n) {
                       message: i,
                       channel: o,
                       compact: a,
-                      setPopout: t
+                      setPopout: t,
                   },
-                  n
-              )
+                  n,
+              ),
           )
         : null;
 }

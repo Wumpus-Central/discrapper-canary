@@ -6,21 +6,21 @@ var i = n(120356),
     a = n(939350),
     s = n(906944);
 function l(e) {
-    let { contents: t, label: n, className: i, color: l = 'default' } = e;
+    let { contents: t, label: n, className: i, color: l = "default" } = e;
     return 0 === t.length
         ? null
-        : (0, r.jsxs)('div', {
-              'aria-label': n,
-              role: 'group',
+        : (0, r.jsxs)("div", {
+              "aria-label": n,
+              role: "group",
               className: i,
               children: [
                   null != n
-                      ? (0, r.jsx)('div', {
+                      ? (0, r.jsx)("div", {
                             className: o()(s.groupLabel, s.hideInteraction, a._[l]),
-                            children: n
+                            children: n,
                         })
                       : null,
-                  t
-              ]
+                  t,
+              ],
           });
 }

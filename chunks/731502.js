@@ -17,15 +17,17 @@ let s = (e) => {
                         n,
                         o = {},
                         a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) ((r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++) ((r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
+                for (n = 0; n < a.length; n++)
+                    (r = a[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, ['handleLearnMore']);
+        })(e, ["handleLearnMore"]);
     let s = (0, o.rO)() ? l.Z : i.Z;
     return (0, n.jsx)(
         a.Z,
@@ -33,36 +35,36 @@ let s = (e) => {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (t) {
                         var n;
-                        ((n = r[t]),
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = n));
-                    }));
+                                : (e[t] = n);
+                    });
             }
             return e;
         })(
             {
-                gradientColor: 'nitro-pink',
+                gradientColor: "nitro-pink",
                 title: c.intl.string(c.t.ewxv3N),
                 subtitle: c.intl.string(c.t.qlsCDA),
                 videoSrc: s,
                 loopAt: 5,
-                onSecondaryClick: t
+                onSecondaryClick: t,
             },
-            r
-        )
+            r,
+        ),
     );
 };

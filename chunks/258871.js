@@ -16,24 +16,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -57,12 +57,12 @@ function b(e, t) {
 }
 let O = [
         {
-            key: 'EVENTS',
+            key: "EVENTS",
             renderIcon: (e) =>
                 (0, r.jsx)(o.Que, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: e
+                    size: "md",
+                    color: "currentColor",
+                    className: e,
                 }),
             getName: (e) => {
                 let { numEvents: t } = e;
@@ -70,62 +70,64 @@ let O = [
             },
             handler: (e) =>
                 (0, o.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('79010')]).then(n.bind(n, 17671));
+                    let { default: t } = await Promise.all([n.e("22347"), n.e("56236"), n.e("79010")]).then(
+                        n.bind(n, 17671),
+                    );
                     return (n) => (0, r.jsx)(t, b(m({}, n), { guildId: e.id }));
-                })
+                }),
         },
         {
-            key: 'JOIN_SERVERS',
+            key: "JOIN_SERVERS",
             renderIcon: (e) =>
                 (0, r.jsx)(o.Jmo, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: e
+                    size: "md",
+                    color: "currentColor",
+                    className: e,
                 }),
             getName: () => g.intl.string(g.t.K50GHR),
-            handler: (e, t) => (0, u.XU)(e.id, t.id)
+            handler: (e, t) => (0, u.XU)(e.id, t.id),
         },
         {
-            key: 'ADD_SERVERS',
+            key: "ADD_SERVERS",
             renderIcon: (e) =>
                 (0, r.jsx)(o.qJs, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: e
+                    size: "md",
+                    color: "currentColor",
+                    className: e,
                 }),
             getName: () => g.intl.string(g.t.emRpdX),
             handler: (e, t) =>
                 (0, o.ZDy)(async () => {
-                    let { default: i } = await n.e('79764').then(n.bind(n, 533202));
+                    let { default: i } = await n.e("79764").then(n.bind(n, 533202));
                     return (n) =>
                         (0, r.jsx)(
                             i,
                             b(m({}, n), {
                                 directoryGuildName: e.name,
                                 directoryGuildId: e.id,
-                                directoryChannelId: t.id
-                            })
+                                directoryChannelId: t.id,
+                            }),
                         );
-                })
+                }),
         },
         {
-            key: 'INVITE_MEMBERS',
+            key: "INVITE_MEMBERS",
             renderIcon: (e) => (0, r.jsx)(o.ejJ, { className: e }),
             getName: () => g.intl.string(g.t.MJQOuL),
             handler: (e, t) =>
                 (0, o.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e("7654"), n.e("17439")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
                             b(m({}, n), {
                                 guild: e,
                                 channel: t,
-                                source: f.t4x.HUB_SIDEBAR
-                            })
+                                source: f.t4x.HUB_SIDEBAR,
+                            }),
                         );
-                })
-        }
+                }),
+        },
     ],
     _ = (e) => {
         let { guild: t, channel: n } = e,
@@ -133,15 +135,15 @@ let O = [
         i.useEffect(() => {
             h.Z.trackExposure({
                 guildId: t.id,
-                location: '543af8_1'
+                location: "543af8_1",
             });
         }, [t.id]);
         let { showHubEventsList: u } = h.Z.useExperiment(
                 {
                     guildId: t.id,
-                    location: '543af8_2'
+                    location: "543af8_2",
                 },
-                { autoTrackExposure: !1 }
+                { autoTrackExposure: !1 },
             ),
             f = (0, l.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
             g = i.useMemo(() => ({ numEvents: o.length }), [o.length]),
@@ -149,20 +151,20 @@ let O = [
         return (0, r.jsx)(r.Fragment, {
             children: O.map((e) => {
                 let { key: i, getName: l, handler: o, renderIcon: s } = e;
-                if (!u && 'EVENTS' === i) return null;
-                let d = ''.concat(i, '-').concat(t.id);
+                if (!u && "EVENTS" === i) return null;
+                let d = "".concat(i, "-").concat(t.id);
                 return (0, r.jsx)(
                     a.m,
                     {
                         id: d,
                         renderIcon: s,
                         text: l(g),
-                        selected: f && 'JOIN_SERVERS' === i,
+                        selected: f && "JOIN_SERVERS" === i,
                         onClick: null != n ? () => o(t, n) : void 0,
-                        trailing: 'JOIN_SERVERS' === i && m > 0 ? (0, c.N)(m) : null
+                        trailing: "JOIN_SERVERS" === i && m > 0 ? (0, c.N)(m) : null,
                     },
-                    d
+                    d,
                 );
-            })
+            }),
         });
     };

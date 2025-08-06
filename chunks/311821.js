@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => u,
-    y: () => c
+    y: () => c,
 });
 var r = n(255367);
 n(73800);
@@ -14,7 +14,7 @@ let c = (e) => {
         return (0, r.jsx)(a.eee, {
             onClick: n,
             className: o()(l.link, t),
-            children: i
+            children: i,
         });
     },
     u = (e) => {
@@ -22,6 +22,6 @@ let c = (e) => {
         return (0, r.jsx)(c, {
             className: t,
             onClick: n,
-            children: s.intl.string(s.t['13/7kZ'])
+            children: s.intl.string(s.t["13/7kZ"]),
         });
     };

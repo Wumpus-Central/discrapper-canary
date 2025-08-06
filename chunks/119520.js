@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(558381),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,29 +22,29 @@ function u(e, t, n) {
 class d extends i.PureComponent {
     render() {
         let {
-            game: { name: e }
+            game: { name: e },
         } = this.props;
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: c.matureListing,
             children: (0, r.jsx)(o.Z, {
                 modalType: a.it.NSFW_APP_LISTING,
                 onAgree: this.handleAgree,
                 onDisagree: this.handleDisagree,
                 title: s.intl.formatToPlainString(s.t.n5PGER, { name: e }),
-                description: s.intl.string(s.t['bJx/aG']),
+                description: s.intl.string(s.t["bJx/aG"]),
                 agreement: s.intl.string(s.t.odZq8f),
-                disagreement: s.intl.string(s.t.hieTsL)
-            })
+                disagreement: s.intl.string(s.t.hieTsL),
+            }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            u(this, 'handleDisagree', () => {
+        super(...e),
+            u(this, "handleDisagree", () => {
                 (0, l.M9)();
             }),
-            u(this, 'handleAgree', () => {
+            u(this, "handleAgree", () => {
                 (0, l.cj)();
-            }));
+            });
     }
 }
 let p = d;

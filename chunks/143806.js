@@ -5,13 +5,13 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-(n.d(t, { S: () => o }), n(953529), n(388685), n(583741));
+n.d(t, { S: () => o }), n(953529), n(388685), n(583741);
 let i = Symbol.iterator;
 class o {
     get length() {
@@ -48,7 +48,7 @@ class o {
         if ((this.items.delete(e), this.items.set(e, t), this.items.size > this.limit)) {
             let e = this.oldestKey(),
                 t = this.items.get(e);
-            return (this.items.delete(e), [e, t]);
+            return this.items.delete(e), [e, t];
         }
     }
     delete(e) {
@@ -58,6 +58,6 @@ class o {
         return this.items.keys().next().value;
     }
     constructor(e) {
-        (r(this, 'items', void 0), r(this, 'limit', void 0), (this.items = new Map()), (this.limit = e));
+        r(this, "items", void 0), r(this, "limit", void 0), (this.items = new Map()), (this.limit = e);
     }
 }

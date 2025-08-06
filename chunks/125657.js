@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(539854), n(388685));
+n.d(t, { Z: () => j }), n(539854), n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(149765),
@@ -42,21 +42,21 @@ function j(e) {
                       (0, i.jsxs)(p.Z, {
                           align: p.Z.Align.CENTER,
                           children: [
-                              (0, i.jsx)('img', {
-                                  alt: '',
+                              (0, i.jsx)("img", {
+                                  alt: "",
                                   src: O.getAvatarURL(n.id, 32),
-                                  className: x.iconWrapper
+                                  className: x.iconWrapper,
                               }),
                               (0, i.jsx)(a.Text, {
-                                  color: 'header-primary',
-                                  variant: 'text-sm/normal',
-                                  children: h.intl.format(h.t.GyhzGx, { user: O.toString() })
+                                  color: "header-primary",
+                                  variant: "text-sm/normal",
+                                  children: h.intl.format(h.t.GyhzGx, { user: O.toString() }),
                               }),
                               (0, i.jsx)(u.Z, {
                                   className: x.tag,
-                                  verified: O.isVerifiedBot()
-                              })
-                          ]
+                                  verified: O.isVerifiedBot(),
+                              }),
+                          ],
                       }),
                       (function (e, t, n, r) {
                           let o = [],
@@ -70,7 +70,7 @@ function j(e) {
                                             children: [
                                                 (0, i.jsx)(a.vwX, {
                                                     className: x.permissionHeader,
-                                                    children: h.intl.format(h.t.PCs0oq, { numRoles: n.length })
+                                                    children: h.intl.format(h.t.PCs0oq, { numRoles: n.length }),
                                                 }),
                                                 (0, i.jsx)(c.ZP, {
                                                     className: x.rolePills,
@@ -78,23 +78,23 @@ function j(e) {
                                                     guild: t,
                                                     userRoleIds: n,
                                                     wrap: !1,
-                                                    readOnly: !0
-                                                })
-                                            ]
+                                                    readOnly: !0,
+                                                }),
+                                            ],
                                         })
                                       : null,
                                   o.length > 0 || s.length > 0
                                       ? (0, i.jsx)(d.Z, {
                                             grantedPermissions: o,
-                                            grantedPermissionsHeader: h.intl.string(h.t['hA4+sr']),
+                                            grantedPermissionsHeader: h.intl.string(h.t["hA4+sr"]),
                                             disabledPermissions: s,
-                                            disabledPermissionsHeader: h.intl.string(h.t['/rEZ2t'])
+                                            disabledPermissionsHeader: h.intl.string(h.t["/rEZ2t"]),
                                         })
-                                      : null
-                              ]
+                                      : null,
+                              ],
                           });
-                      })(O, n, null != (t = null == y ? void 0 : y.roles) ? t : [], S)
-                  ]
-              })
+                      })(O, n, null != (t = null == y ? void 0 : y.roles) ? t : [], S),
+                  ],
+              }),
           });
 }

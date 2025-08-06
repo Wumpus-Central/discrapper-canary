@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => p,
-    i: () => _
+    i: () => _,
 }),
-    n(953529));
+    n(953529);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -15,7 +15,7 @@ var i = n(442837),
     d = n(982240),
     f = n(533854),
     _ = (function (e) {
-        return ((e[(e.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (e[(e.GIFT_MODAL = 1)] = 'GIFT_MODAL'), e);
+        return (e[(e.SHOP_PAGE = 0)] = "SHOP_PAGE"), (e[(e.GIFT_MODAL = 1)] = "GIFT_MODAL"), e;
     })({});
 let p = (e) => {
     let { onRetry: t, errorOrigin: n, errorMessage: _ } = e,
@@ -25,40 +25,40 @@ let p = (e) => {
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
         m = 1 === n ? u.giftModalContainer : u.shopPageContainer,
-        g = 1 === n ? c.intl.string(c.t['+2QBZW']) : c.intl.string(c.t.LuhKs7);
-    return (0, r.jsxs)('div', {
+        g = 1 === n ? c.intl.string(c.t["+2QBZW"]) : c.intl.string(c.t.LuhKs7);
+    return (0, r.jsxs)("div", {
         className: m,
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 className: u.__invalid_loadIssueImg,
                 src: (0, o.wj)(p) ? d : f,
-                alt: ''
+                alt: "",
             }),
             (0, r.jsx)(a.X6q, {
                 className: u.heading1,
-                variant: 'heading-xl/semibold',
-                children: c.intl.string(c.t['i5SQ7+'])
+                variant: "heading-xl/semibold",
+                children: c.intl.string(c.t["i5SQ7+"]),
             }),
             (0, r.jsx)(a.Text, {
                 className: u.description,
-                variant: 'text-md/normal',
-                children: g
+                variant: "text-md/normal",
+                children: g,
             }),
             h &&
                 null != _ &&
                 (0, r.jsx)(a.Text, {
-                    variant: 'text-md/normal',
-                    children: 'staff-only debug: ' + _
+                    variant: "text-md/normal",
+                    children: "staff-only debug: " + _,
                 }),
-            (0, r.jsx)('div', {
-                'data-button-hoisted-classname-wrapper': !0,
+            (0, r.jsx)("div", {
+                "data-button-hoisted-classname-wrapper": !0,
                 className: u.reload,
                 children: (0, r.jsx)(a.zxk, {
-                    variant: 'primary',
-                    text: c.intl.string(c.t['+hivLS']),
-                    onClick: t
-                })
-            })
-        ]
+                    variant: "primary",
+                    text: c.intl.string(c.t["+hivLS"]),
+                    onClick: t,
+                }),
+            }),
+        ],
     });
 };

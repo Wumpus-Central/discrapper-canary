@@ -1,17 +1,17 @@
 n.d(t, {
     q: () => l,
-    v: () => i
+    v: () => i,
 });
 var r = n(570140);
 let i = (e, t) => {
     r.Z.wait(() => {
         r.Z.dispatch({
-            type: 'APPLIED_GUILD_BOOST_COUNT_UPDATE',
+            type: "APPLIED_GUILD_BOOST_COUNT_UPDATE",
             guildId: e,
-            premiumCount: t
+            premiumCount: t,
         });
     });
 };
 function l() {
-    r.Z.dispatch({ type: 'APPLIED_GUILD_BOOST_COUNT_RESET' });
+    r.Z.dispatch({ type: "APPLIED_GUILD_BOOST_COUNT_RESET" });
 }

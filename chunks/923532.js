@@ -14,11 +14,11 @@ function p(e) {
         o = r.useRef(null),
         a = (0, s.e7)([u.default], () => u.default.getCurrentUser());
     return (
-        l()(null != a, 'user cannot be null'),
+        l()(null != a, "user cannot be null"),
         (0, d.Z)(o, a, t, n),
-        (0, i.jsx)('canvas', {
+        (0, i.jsx)("canvas", {
             className: h.canvas,
-            ref: o
+            ref: o,
         })
     );
 }
@@ -27,16 +27,16 @@ function f(e) {
         { isSharedCanvasEnabled: o } = a.Z.useExperiment(
             {
                 guildId: t,
-                location: 'f0d1b1_1'
+                location: "f0d1b1_1",
             },
-            { autoTrackExposure: !0 }
+            { autoTrackExposure: !0 },
         ),
         l = (0, s.e7)([c.Z], () => c.Z.visibleOverlayCanvas);
     return o && l
         ? (0, i.jsx)(p, {
               guildId: t,
               channelId: n,
-              streamerId: r
+              streamerId: r,
           })
         : null;
 }

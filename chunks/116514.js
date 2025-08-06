@@ -1,5 +1,5 @@
 function r(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 e.exports = (function (e) {
     function t() {
@@ -9,25 +9,38 @@ e.exports = (function (e) {
     var n = t.prototype;
     return (
         (n.serialize = function () {
-            return 'Anchor: ' + this.getAnchorKey() + ':' + this.getAnchorOffset() + ', Focus: ' + this.getFocusKey() + ':' + this.getFocusOffset() + ', Is Backward: ' + String(this.getIsBackward()) + ', Has Focus: ' + String(this.getHasFocus());
+            return (
+                "Anchor: " +
+                this.getAnchorKey() +
+                ":" +
+                this.getAnchorOffset() +
+                ", Focus: " +
+                this.getFocusKey() +
+                ":" +
+                this.getFocusOffset() +
+                ", Is Backward: " +
+                String(this.getIsBackward()) +
+                ", Has Focus: " +
+                String(this.getHasFocus())
+            );
         }),
         (n.getAnchorKey = function () {
-            return this.get('anchorKey');
+            return this.get("anchorKey");
         }),
         (n.getAnchorOffset = function () {
-            return this.get('anchorOffset');
+            return this.get("anchorOffset");
         }),
         (n.getFocusKey = function () {
-            return this.get('focusKey');
+            return this.get("focusKey");
         }),
         (n.getFocusOffset = function () {
-            return this.get('focusOffset');
+            return this.get("focusOffset");
         }),
         (n.getIsBackward = function () {
-            return this.get('isBackward');
+            return this.get("isBackward");
         }),
         (n.getHasFocus = function () {
-            return this.get('hasFocus');
+            return this.get("hasFocus");
         }),
         (n.hasEdgeWithin = function (e, t, n) {
             var r = this.getAnchorKey(),
@@ -63,18 +76,18 @@ e.exports = (function (e) {
                 focusKey: e,
                 focusOffset: 0,
                 isBackward: !1,
-                hasFocus: !1
+                hasFocus: !1,
             });
         }),
         t
     );
 })(
     (0, n(65183).Record)({
-        anchorKey: '',
+        anchorKey: "",
         anchorOffset: 0,
-        focusKey: '',
+        focusKey: "",
         focusOffset: 0,
         isBackward: !1,
-        hasFocus: !1
-    })
+        hasFocus: !1,
+    }),
 );

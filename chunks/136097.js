@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     h: () => d,
-    p: () => u
+    p: () => u,
 }),
     n(388685),
-    n(642613));
+    n(642613);
 var i = n(73800),
     r = n(913527),
     s = n.n(r),
@@ -25,7 +25,7 @@ function d() {
             t.sort((e, t) => t.approx_last_used_time.valueOf() - e.approx_last_used_time.valueOf()),
             {
                 currentSession: n,
-                otherSessions: t
+                otherSessions: t,
             }
         );
     }, [e]);

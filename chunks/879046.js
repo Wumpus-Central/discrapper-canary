@@ -16,13 +16,13 @@ function u(e) {
             onClick: () => {
                 r.__(i._b.TEXT, a.Ie.NORMAL, { applicationId: t.extra.application_id });
             },
-            ariaDescription: c.intl.formatToPlainString(c.t.NTHttL, { title: d })
+            ariaDescription: c.intl.formatToPlainString(c.t.NTHttL, { title: d }),
         };
     return {
         thumbnailUrl: u,
         title: d,
         titleClickable: _,
         thumbnailClickable: _,
-        userDescription: f
+        userDescription: f,
     };
 }

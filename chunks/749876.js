@@ -14,7 +14,7 @@ function o(e) {
         }, []),
         {
             showLoadingIndicator: t === l.M.FETCHING && null == n,
-            slayerSdkApplications: o
+            slayerSdkApplications: o,
         }
     );
 }

@@ -39,14 +39,14 @@ function T(e) {
         M = (0, E.Z)();
     return (
         r.useEffect(() => {
-            (L.forEach((e) => x.Z.getGuildEventUserCounts(T, e.id, [])), x.Z.getGuildEventsForCurrentUser(T));
+            L.forEach((e) => x.Z.getGuildEventUserCounts(T, e.id, [])), x.Z.getGuildEventsForCurrentUser(T);
         }, [L, T]),
         r.useEffect(() => {
             let e = v.Z.getGuild(T);
             if (!(null == e ? void 0 : e.features.has(k.oNc.HUB))) return;
             let { showHubEventsList: n } = p.Z.getCurrentConfig({
                 guildId: T,
-                location: 'd3755f_1'
+                location: "d3755f_1",
             });
             if (!n) return;
             let t = f.ZP.getDefaultChannel(T);
@@ -56,7 +56,7 @@ function T(e) {
             j.default.track(k.rMx.OPEN_MODAL, {
                 type: N.zw,
                 guild_id: T,
-                guild_events_count: L.length
+                guild_events_count: L.length,
             });
         }),
         r.useEffect(() => {
@@ -74,37 +74,45 @@ function T(e) {
         (0, i.jsxs)(c.Y0X, {
             size: c.CgR.MEDIUM,
             transitionState: n,
-            'aria-labelledby': _,
-            parentComponent: 'GuildEventsModal',
-            'data-migration-pending': !0,
+            "aria-labelledby": _,
+            parentComponent: "GuildEventsModal",
+            "data-migration-pending": !0,
             children: [
                 (0, i.jsxs)(c.xBx, {
                     className: S.header,
-                    'data-migration-pending': !0,
+                    "data-migration-pending": !0,
                     children: [
                         (0, i.jsx)(c.Que, {
-                            size: 'md',
-                            color: 'currentColor',
-                            className: S.icon
+                            size: "md",
+                            color: "currentColor",
+                            className: S.icon,
                         }),
                         (0, i.jsx)(c.X6q, {
                             id: _,
-                            variant: 'heading-md/semibold',
-                            children: L.length > 0 ? I.intl.formatToPlainString(I.t.IBdqSk, { number: L.length }) : I.intl.string(I.t.tlopTE)
+                            variant: "heading-md/semibold",
+                            children:
+                                L.length > 0
+                                    ? I.intl.formatToPlainString(I.t.IBdqSk, { number: L.length })
+                                    : I.intl.string(I.t.tlopTE),
                         }),
                         G &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)('div', {
+                                    (0, i.jsx)("div", {
                                         className: S.divider,
-                                        children: '|'
+                                        children: "|",
                                     }),
                                     (0, i.jsx)(c.zxk, {
-                                        variant: 'primary',
-                                        size: 'sm',
+                                        variant: "primary",
+                                        size: "sm",
                                         onClick: () => {
                                             (0, c.ZDy)(async () => {
-                                                let { default: e } = await Promise.all([t.e('49049'), t.e('82758'), t.e('58023'), t.e('76010')]).then(t.bind(t, 779250));
+                                                let { default: e } = await Promise.all([
+                                                    t.e("49049"),
+                                                    t.e("82758"),
+                                                    t.e("58023"),
+                                                    t.e("76010"),
+                                                ]).then(t.bind(t, 779250));
                                                 return (n) => {
                                                     var t, r;
                                                     return (0, i.jsx)(
@@ -113,30 +121,38 @@ function T(e) {
                                                             for (var n = 1; n < arguments.length; n++) {
                                                                 var t = null != arguments[n] ? arguments[n] : {},
                                                                     i = Object.keys(t);
-                                                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                                                "function" == typeof Object.getOwnPropertySymbols &&
                                                                     (i = i.concat(
-                                                                        Object.getOwnPropertySymbols(t).filter(function (e) {
-                                                                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                                                                        })
+                                                                        Object.getOwnPropertySymbols(t).filter(
+                                                                            function (e) {
+                                                                                return Object.getOwnPropertyDescriptor(
+                                                                                    t,
+                                                                                    e,
+                                                                                ).enumerable;
+                                                                            },
+                                                                        ),
                                                                     )),
                                                                     i.forEach(function (n) {
                                                                         var i;
-                                                                        ((i = t[n]),
+                                                                        (i = t[n]),
                                                                             n in e
                                                                                 ? Object.defineProperty(e, n, {
                                                                                       value: i,
                                                                                       enumerable: !0,
                                                                                       configurable: !0,
-                                                                                      writable: !0
+                                                                                      writable: !0,
                                                                                   })
-                                                                                : (e[n] = i));
-                                                                    }));
+                                                                                : (e[n] = i);
+                                                                    });
                                                             }
                                                             return e;
                                                         })({}, n)),
                                                         (r = r = { guildId: T }),
                                                         Object.getOwnPropertyDescriptors
-                                                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                                            ? Object.defineProperties(
+                                                                  t,
+                                                                  Object.getOwnPropertyDescriptors(r),
+                                                              )
                                                             : (function (e, n) {
                                                                   var t = Object.keys(e);
                                                                   if (Object.getOwnPropertySymbols) {
@@ -145,32 +161,36 @@ function T(e) {
                                                                   }
                                                                   return t;
                                                               })(Object(r)).forEach(function (e) {
-                                                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                                                  Object.defineProperty(
+                                                                      t,
+                                                                      e,
+                                                                      Object.getOwnPropertyDescriptor(r, e),
+                                                                  );
                                                               }),
-                                                        t)
+                                                        t),
                                                     );
                                                 };
                                             }, M);
                                         },
-                                        text: I.intl.string(I.t['60lJ0N'])
-                                    })
-                                ]
+                                        text: I.intl.string(I.t["60lJ0N"]),
+                                    }),
+                                ],
                             }),
                         (0, i.jsx)(c.P3F, {
                             onClick: l,
                             className: S.iconButton,
-                            'aria-label': I.intl.string(I.t.cpT0Cg),
+                            "aria-label": I.intl.string(I.t.cpT0Cg),
                             children: (0, i.jsx)(c.Dio, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: S.icon
-                            })
-                        })
-                    ]
+                                size: "md",
+                                color: "currentColor",
+                                className: S.icon,
+                            }),
+                        }),
+                    ],
                 }),
                 (0, i.jsx)(c.hzk, {
                     className: S.content,
-                    'data-migration-pending': !0,
+                    "data-migration-pending": !0,
                     children:
                         L.length > 0
                             ? L.map((e) =>
@@ -180,17 +200,17 @@ function T(e) {
                                           guildEvent: e,
                                           guildId: T,
                                           onActionTaken: l,
-                                          isNew: null != R.current && y.default.compare(e.id, R.current) > 0
+                                          isNew: null != R.current && y.default.compare(e.id, R.current) > 0,
                                       },
-                                      e.id
-                                  )
+                                      e.id,
+                                  ),
                               )
                             : (0, i.jsx)(C.Z, {
                                   guildId: T,
-                                  onClose: l
-                              })
-                })
-            ]
+                                  onClose: l,
+                              }),
+                }),
+            ],
         })
     );
 }

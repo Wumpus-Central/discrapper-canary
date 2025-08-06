@@ -5,6 +5,6 @@ var r = n(399606),
 function a(e, t) {
     return {
         customEmoji: (0, r.e7)([i.ZP], () => (null != e ? i.ZP.getCustomEmojiById(e) : null), [e]),
-        unicodeEmoji: null != t ? o.ZP.getByName(o.ZP.convertSurrogateToName(t, !1)) : null
+        unicodeEmoji: null != t ? o.ZP.getByName(o.ZP.convertSurrogateToName(t, !1)) : null,
     };
 }

@@ -1,4 +1,4 @@
-(n.d(t, { t: () => j }), n(388685), n(35282), n(413496), n(433524));
+n.d(t, { t: () => j }), n(388685), n(35282), n(413496), n(433524);
 var r = n(255367),
     i = n(73800),
     o = n(505266),
@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,11 +44,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,35 +74,35 @@ let b = [],
     N = 12,
     C = 48,
     R = 0.01,
-    P = new Set(['jack_o_lantern', 'nose']),
+    P = new Set(["jack_o_lantern", "nose"]),
     w = {
         jack_o_lantern: {
-            sprites: (0, c.Z)(['chocolate_bar', 'lollipop', 'candy'])
+            sprites: (0, c.Z)(["chocolate_bar", "lollipop", "candy"]),
         },
-        nose: { sprites: (0, c.Z)(['foot']) }
+        nose: { sprites: (0, c.Z)(["foot"]) },
     };
 function D(e) {
     if (null == e) return null;
-    for (let t of P) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
+    for (let t of P) if (null != e.match(new RegExp(":".concat(t, "(_tone[1-9])?")))) return t;
     return null;
 }
 let L = {
     enter: {
         BEG: 0,
-        END: 22
+        END: 22,
     },
     confetti: {
         BEG: 23,
-        END: 119
+        END: 119,
     },
     exit: {
         BEG: 164,
-        END: 200
-    }
+        END: 200,
+    },
 };
 function x() {
     return n
-        .e('77843')
+        .e("77843")
         .then(n.t.bind(n, 931152, 19))
         .then((e) => {
             let { default: t } = e;
@@ -110,14 +110,14 @@ function x() {
         });
 }
 function M(e) {
-    if (null == e) return 'enter';
+    if (null == e) return "enter";
     switch (e) {
-        case 'enter':
-            return 'confetti';
-        case 'confetti':
-            return 'exit';
-        case 'exit':
-            return 'enter';
+        case "enter":
+            return "confetti";
+        case "confetti":
+            return "exit";
+        case "exit":
+            return "enter";
     }
 }
 let k = i.forwardRef(function (e, t) {
@@ -133,45 +133,45 @@ let k = i.forwardRef(function (e, t) {
                     u.createMultipleConfetti(
                         E(m({}, _.We), {
                             position: {
-                                type: 'static',
+                                type: "static",
                                 value: {
                                     x: e,
-                                    y: t
-                                }
+                                    y: t,
+                                },
                             },
                             velocity: {
-                                type: 'static-random',
+                                type: "static-random",
                                 minValue: {
                                     x: y,
-                                    y: v
+                                    y: v,
                                 },
                                 maxValue: {
                                     x: O,
-                                    y: I
-                                }
+                                    y: I,
+                                },
                             },
                             size: {
-                                type: 'static-random',
+                                type: "static-random",
                                 minValue: N,
-                                maxValue: C
+                                maxValue: C,
                             },
                             dragCoefficient: {
-                                type: 'static',
-                                value: R
-                            }
+                                type: "static",
+                                value: R,
+                            },
                         }),
-                        A
+                        A,
                     );
-                }
+                },
             }),
-            [u]
+            [u],
         ),
         (0, r.jsx)(o.Ji, {
             ref: s,
             colors: b,
             sprites: n,
             spriteWidth: C,
-            spriteHeight: C
+            spriteHeight: C,
         })
     );
 });
@@ -182,7 +182,7 @@ function j(e) {
         c = M(o),
         _ = i.useRef(null),
         [h, m] = i.useState(!1),
-        g = i.useRef('jack_o_lantern'),
+        g = i.useRef("jack_o_lantern"),
         E = (0, s.bp)(),
         b = i.useCallback(
             (e) => {
@@ -191,26 +191,26 @@ function j(e) {
                     null != t && ((g.current = t), m(!0), l(null));
                 }
             },
-            [h]
+            [h],
         ),
         y = i.useMemo(
             () => ({
                 triggerAnimation: b,
-                untriggerAnimation: () => {}
+                untriggerAnimation: () => {},
             }),
-            [b]
+            [b],
         ),
         O = i.useCallback((e) => {
             l(e);
         }, []),
         v = i.useCallback((e) => {
-            'exit' === e && m(!1);
+            "exit" === e && m(!1);
         }, []),
         I = i.useCallback((e) => {
             _.current = e;
         }, []);
     return (i.useEffect(() => {
-        if ('confetti' === o) {
+        if ("confetti" === o) {
             if (null == _.current) return;
             let e = _.current.getBoundingClientRect(),
                 t = e.left - T,
@@ -233,14 +233,14 @@ function j(e) {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];
                               },
-                              sprites: t.sprites
+                              sprites: t.sprites,
                           },
-                          e
+                          e,
                       );
                   }),
                   h
                       ? (0, r.jsx)(u.ZP, {
-                            children: (0, r.jsx)('div', {
+                            children: (0, r.jsx)("div", {
                                 className: p.animationWrapper,
                                 children: (0, r.jsx)(a.kci, {
                                     animationRef: I,
@@ -250,11 +250,11 @@ function j(e) {
                                     onScenePlay: O,
                                     onSceneComplete: v,
                                     importData: x,
-                                    pauseWhileUnfocused: !1
-                                })
-                            })
+                                    pauseWhileUnfocused: !1,
+                                }),
+                            }),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           });
 }

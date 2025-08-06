@@ -13,7 +13,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,8 @@ function _(e, t) {
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,39 +76,49 @@ function p(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
-    var { focusProps: t, lineClamp: n = 1, role: i = 'button', text: c, textVariant: d = 'text-md/medium', type: p = 'button', variant: h = 'primary', className: m, style: g } = e,
-        E = _(e, ['focusProps', 'lineClamp', 'role', 'text', 'textVariant', 'type', 'variant', 'className', 'style']);
+    var {
+            focusProps: t,
+            lineClamp: n = 1,
+            role: i = "button",
+            text: c,
+            textVariant: d = "text-md/medium",
+            type: p = "button",
+            variant: h = "primary",
+            className: m,
+            style: g,
+        } = e,
+        E = _(e, ["focusProps", "lineClamp", "role", "text", "textVariant", "type", "variant", "className", "style"]);
     return (0, r.jsx)(
         a.t,
         f(u({}, t), {
             children: (0, r.jsx)(
-                'button',
+                "button",
                 f(
                     u(
                         {
                             className: o()(l.textButton, l[h]),
-                            'data-mana-component': 'text-button',
+                            "data-mana-component": "text-button",
                             role: i,
-                            type: p
+                            type: p,
                         },
-                        E
+                        E,
                     ),
                     {
                         children: (0, r.jsx)(s.x, {
-                            tag: 'span',
+                            tag: "span",
                             variant: d,
-                            color: 'none',
+                            color: "none",
                             lineClamp: n,
                             className: l.text,
-                            children: c
-                        })
-                    }
-                )
-            )
-        })
+                            children: c,
+                        }),
+                    },
+                ),
+            ),
+        }),
     );
 }

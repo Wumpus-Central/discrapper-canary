@@ -13,7 +13,7 @@ let _ = (e) => {
     let { channelId: t, messageId: n } = e,
         _ = (0, o.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
         p = i.useCallback(() => {
-            (l.Z.dismissPublishBump(n), (0, c.Z)(t, n));
+            l.Z.dismissPublishBump(n), (0, c.Z)(t, n);
         }, [t, n]),
         h = i.useCallback(() => {
             l.Z.dismissPublishBump(n);
@@ -22,21 +22,21 @@ let _ = (e) => {
             l.Z.permanentlyHidePublishBump(t);
         }, [t]);
     return _
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: f.container,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: f.bumpBox,
                       children: [
                           (0, r.jsx)(s.MqZ, {
-                              size: 'xs',
-                              color: 'currentColor',
-                              className: f.icon
+                              size: "xs",
+                              color: "currentColor",
+                              className: f.icon,
                           }),
                           (0, r.jsx)(s.X6q, {
-                              variant: 'heading-sm/normal',
+                              variant: "heading-sm/normal",
                               className: f.tagline,
-                              children: d.intl.string(d.t.hasZoa)
+                              children: d.intl.string(d.t.hasZoa),
                           }),
                           (0, r.jsx)(a.zx, {
                               color: a.zx.Colors.LINK,
@@ -44,28 +44,28 @@ let _ = (e) => {
                               size: a.zx.Sizes.MIN,
                               className: f.publish,
                               onClick: p,
-                              children: d.intl.string(d.t['MFGE5+'])
+                              children: d.intl.string(d.t["MFGE5+"]),
                           }),
                           (0, r.jsx)(s.P3F, {
                               onClick: h,
                               children: (0, r.jsx)(s.k$p, {
-                                  size: 'xs',
-                                  color: 'currentColor',
-                                  className: f.closeIcon
-                              })
-                          })
-                      ]
+                                  size: "xs",
+                                  color: "currentColor",
+                                  className: f.closeIcon,
+                              }),
+                          }),
+                      ],
                   }),
                   (0, r.jsx)(s.Text, {
-                      color: 'text-muted',
+                      color: "text-muted",
                       className: f.hidePermanently,
-                      variant: 'text-sm/normal',
+                      variant: "text-sm/normal",
                       children: (0, r.jsx)(s.P3F, {
                           onClick: m,
-                          children: d.intl.string(d.t.efSkDg)
-                      })
-                  })
-              ]
+                          children: d.intl.string(d.t.efSkDg),
+                      }),
+                  }),
+              ],
           })
         : null;
 };

@@ -23,7 +23,7 @@ function d(t, n, d) {
               action: function () {
                   null != b &&
                       (0, r.ZDy)(async () => {
-                          let { default: t } = await Promise.all([e.e('84722'), e.e('4598')]).then(e.bind(e, 296864));
+                          let { default: t } = await Promise.all([e.e("84722"), e.e("4598")]).then(e.bind(e, 296864));
                           return (n) => {
                               var e, i;
                               return (0, l.jsx)(
@@ -32,24 +32,24 @@ function d(t, n, d) {
                                       for (var n = 1; n < arguments.length; n++) {
                                           var e = null != arguments[n] ? arguments[n] : {},
                                               l = Object.keys(e);
-                                          ('function' == typeof Object.getOwnPropertySymbols &&
+                                          "function" == typeof Object.getOwnPropertySymbols &&
                                               (l = l.concat(
                                                   Object.getOwnPropertySymbols(e).filter(function (t) {
                                                       return Object.getOwnPropertyDescriptor(e, t).enumerable;
-                                                  })
+                                                  }),
                                               )),
                                               l.forEach(function (n) {
                                                   var l;
-                                                  ((l = e[n]),
+                                                  (l = e[n]),
                                                       n in t
                                                           ? Object.defineProperty(t, n, {
                                                                 value: l,
                                                                 enumerable: !0,
                                                                 configurable: !0,
-                                                                writable: !0
+                                                                writable: !0,
                                                             })
-                                                          : (t[n] = l));
-                                              }));
+                                                          : (t[n] = l);
+                                              });
                                       }
                                       return t;
                                   })({}, n)),
@@ -66,10 +66,10 @@ function d(t, n, d) {
                                         })(Object(i)).forEach(function (t) {
                                             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(i, t));
                                         }),
-                                  e)
+                                  e),
                               );
                           };
                       });
-              }
+              },
           });
 }

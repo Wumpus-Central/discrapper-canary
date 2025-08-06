@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Xv: () => O,
     mh: () => y,
-    wL: () => E
+    wL: () => E,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -21,7 +21,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,20 +53,20 @@ class m extends i.Component {
             { layerContainerElement: n } = this.state;
         return (0, r.jsx)(e.Provider, {
             value: this.getContextValue(n),
-            children: t
+            children: t,
         });
     }
     constructor(...e) {
-        (super(...e),
-            _(this, 'state', { layerContainerElement: null }),
-            _(this, 'setLayerContainerElement', (e) => {
+        super(...e),
+            _(this, "state", { layerContainerElement: null }),
+            _(this, "setLayerContainerElement", (e) => {
                 this.setState({ layerContainerElement: e });
             }),
             _(
                 this,
-                'getContextValue',
-                (0, u.oH)((e) => [e, this.setLayerContainerElement])
-            ));
+                "getContextValue",
+                (0, u.oH)((e) => [e, this.setLayerContainerElement]),
+            );
     }
 }
 let g = (e) => {
@@ -76,16 +76,16 @@ let g = (e) => {
             (e) => {
                 o(e);
             },
-            [o]
+            [o],
         );
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(h, n),
-        ref: s
+        ref: s,
     });
 };
 function E(e) {
     let t = (0, d.Z)(e, f.layerContainer);
-    return (l()(null != t, 'Unexpected missing parent container'), t);
+    return l()(null != t, "Unexpected missing parent container"), t;
 }
 function b(e, t) {
     let [n] = e;
@@ -101,7 +101,12 @@ function O(e) {
             LayerProvider: (e) => (0, r.jsx)(m, p({ layerContext: t }, e)),
             LayerContainer: (e) => (0, r.jsx)(g, p({ layerContext: t }, e)),
             Layer: (e) => (0, r.jsx)(y, p({ layerContext: t }, e)),
-            layerContext: t
+            layerContext: t,
         };
-    return ((n.LayerProvider.displayName = ''.concat(e, 'LayerProvider')), (n.LayerContainer.displayName = ''.concat(e, 'LayerContainer')), (n.Layer.displayName = ''.concat(e, 'Layer')), n);
+    return (
+        (n.LayerProvider.displayName = "".concat(e, "LayerProvider")),
+        (n.LayerContainer.displayName = "".concat(e, "LayerContainer")),
+        (n.Layer.displayName = "".concat(e, "Layer")),
+        n
+    );
 }

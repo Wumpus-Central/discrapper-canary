@@ -1,4 +1,4 @@
-(n.d(t, { W: () => c }), n(953529));
+n.d(t, { W: () => c }), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(481060),
@@ -10,34 +10,34 @@ function c(e) {
         f = i.useCallback(() => {
             null == c || c();
         }, [c]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: s.safetyBanner,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: s.shieldAndHeading,
                 children: [
-                    (0, r.jsx)('img', {
+                    (0, r.jsx)("img", {
                         className: s.safetyShieldIcon,
                         src: l,
-                        alt: ''
+                        alt: "",
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)(o.X6q, {
-                                variant: 'heading-md/semibold',
-                                color: 'text-primary',
-                                children: t
+                                variant: "heading-md/semibold",
+                                color: "text-primary",
+                                children: t,
                             }),
                             (0, r.jsx)(o.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-primary',
-                                children: n
-                            })
-                        ]
-                    })
-                ]
+                                variant: "text-sm/normal",
+                                color: "text-primary",
+                                children: n,
+                            }),
+                        ],
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: s.buttons,
                 children:
                     null == u
@@ -48,27 +48,27 @@ function c(e) {
                                   o.zxk,
                                   {
                                       text: e.text,
-                                      variant: null != (n = e.variant) ? n : 'secondary',
+                                      variant: null != (n = e.variant) ? n : "secondary",
                                       onClick: e.onClick,
-                                      size: 'sm'
+                                      size: "sm",
                                   },
-                                  t
+                                  t,
                               );
-                          })
+                          }),
             }),
             d
                 ? (0, r.jsx)(o.P3F, {
                       className: s.closeButton,
                       onClick: f,
-                      role: 'button',
-                      'aria-label': a.intl.string(a.t.WAI6xs),
+                      role: "button",
+                      "aria-label": a.intl.string(a.t.WAI6xs),
                       children: (0, r.jsx)(o.Dio, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: s.closeButton
-                      })
+                          size: "md",
+                          color: "currentColor",
+                          className: s.closeButton,
+                      }),
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685), n(642613), n(583741));
+n.d(t, { Z: () => g }), n(388685), n(642613), n(583741);
 var r = n(135273),
     i = n(586444);
 function o(e, t, n) {
@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,15 +18,15 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -34,11 +34,11 @@ function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -75,19 +75,25 @@ class f {
         return this.end_ > 0;
     }
     recordStart() {
-        (0 === this.start_ && this.recordStart_(), r.Z.mark(this.emoji, 'Start '.concat(this.name)), c());
+        0 === this.start_ && this.recordStart_(), r.Z.mark(this.emoji, "Start ".concat(this.name)), c();
     }
     recordStart_() {
-        ((this.start_ = Date.now()), (this.startNumImports = i.dp()), (this.startImportTime = u()));
+        (this.start_ = Date.now()), (this.startNumImports = i.dp()), (this.startImportTime = u());
     }
     recordEnd() {
-        (0 === this.end_ && 0 !== this.start_ ? (this.recordEnd_(), r.Z.mark(this.emoji, 'Finish '.concat(this.name), this.end_ - this.start_)) : r.Z.mark(this.emoji, 'Finish '.concat(this.name)), c());
+        0 === this.end_ && 0 !== this.start_
+            ? (this.recordEnd_(), r.Z.mark(this.emoji, "Finish ".concat(this.name), this.end_ - this.start_))
+            : r.Z.mark(this.emoji, "Finish ".concat(this.name)),
+            c();
     }
     recordEnd_() {
-        ((this.end_ = Date.now()), (this.endNumImports = i.dp()), (this.endImportTime = u()));
+        (this.end_ = Date.now()), (this.endNumImports = i.dp()), (this.endImportTime = u());
     }
     set(e, t) {
-        (0 === this.start_ && ((this.start_ = e), (this.end_ = e + t), (this.endNumImports = i.dp()), (this.endImportTime = u())), r.Z.mark(this.emoji, this.name, t), c());
+        0 === this.start_ &&
+            ((this.start_ = e), (this.end_ = e + t), (this.endNumImports = i.dp()), (this.endImportTime = u())),
+            r.Z.mark(this.emoji, this.name, t),
+            c();
     }
     serializeStart(e) {
         return d(e, this.start_);
@@ -99,24 +105,39 @@ class f {
         if (this.start_ > 0) return r.Z.time(this.emoji, this.name, e);
         this.recordStart_();
         let t = r.Z.time(this.emoji, this.name, e);
-        return (this.recordEnd_(), c(), t);
+        return this.recordEnd_(), c(), t;
     }
     async measureAsync(e) {
         if (this.start_ > 0) return r.Z.timeAsync(this.emoji, this.name, e);
         this.recordStart_();
         let t = await r.Z.timeAsync(this.emoji, this.name, e);
-        return (this.recordEnd_(), c(), t);
+        return this.recordEnd_(), c(), t;
     }
     async measureAsyncWithoutNesting(e) {
         if (this.start_ > 0) return r.Z.timeAsync(this.emoji, this.name, e);
         this.recordStart_();
         let t = Date.now();
-        r.Z.mark(this.emoji, 'Start '.concat(this.name));
+        r.Z.mark(this.emoji, "Start ".concat(this.name));
         let n = await e();
-        return (r.Z.mark(this.emoji, 'Finish '.concat(this.name), Date.now() - t), this.recordEnd_(), c(), n);
+        return r.Z.mark(this.emoji, "Finish ".concat(this.name), Date.now() - t), this.recordEnd_(), c(), n;
     }
     constructor(e, t) {
-        (o(this, 'emoji', void 0), o(this, 'name', void 0), o(this, 'start_', void 0), o(this, 'startNumImports', void 0), o(this, 'startImportTime', void 0), o(this, 'end_', void 0), o(this, 'endNumImports', void 0), o(this, 'endImportTime', void 0), (this.emoji = e), (this.name = t), (this.start_ = 0), (this.startNumImports = 0), (this.startImportTime = 0), (this.end_ = 0), (this.endNumImports = 0), (this.endImportTime = 0));
+        o(this, "emoji", void 0),
+            o(this, "name", void 0),
+            o(this, "start_", void 0),
+            o(this, "startNumImports", void 0),
+            o(this, "startImportTime", void 0),
+            o(this, "end_", void 0),
+            o(this, "endNumImports", void 0),
+            o(this, "endImportTime", void 0),
+            (this.emoji = e),
+            (this.name = t),
+            (this.start_ = 0),
+            (this.startNumImports = 0),
+            (this.startImportTime = 0),
+            (this.end_ = 0),
+            (this.endNumImports = 0),
+            (this.endImportTime = 0);
     }
 }
 class _ {
@@ -125,7 +146,10 @@ class _ {
     }
     record() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-        (0 === this.time_ ? ((this.time_ = e), (this.numImports = i.dp()), (this.importTime = u()), r.Z.mark(this.emoji, this.name)) : this.onlyOnce || r.Z.mark(this.emoji, this.name), c());
+        0 === this.time_
+            ? ((this.time_ = e), (this.numImports = i.dp()), (this.importTime = u()), r.Z.mark(this.emoji, this.name))
+            : this.onlyOnce || r.Z.mark(this.emoji, this.name),
+            c();
     }
     hasData() {
         return this.time_ > 0;
@@ -134,7 +158,18 @@ class _ {
         return d(e, this.time_);
     }
     constructor(e, t, n = !1) {
-        (o(this, 'emoji', void 0), o(this, 'name', void 0), o(this, 'onlyOnce', void 0), o(this, 'time_', void 0), o(this, 'numImports', void 0), o(this, 'importTime', void 0), (this.emoji = e), (this.name = t), (this.onlyOnce = n), (this.time_ = 0), (this.numImports = null), (this.importTime = 0));
+        o(this, "emoji", void 0),
+            o(this, "name", void 0),
+            o(this, "onlyOnce", void 0),
+            o(this, "time_", void 0),
+            o(this, "numImports", void 0),
+            o(this, "importTime", void 0),
+            (this.emoji = e),
+            (this.name = t),
+            (this.onlyOnce = n),
+            (this.time_ = 0),
+            (this.numImports = null),
+            (this.importTime = 0);
     }
 }
 class p {
@@ -145,56 +180,56 @@ class p {
         0 === this.time_ && (this.time_ = u());
     }
     constructor() {
-        o(this, 'time_', 0);
+        o(this, "time_", 0);
     }
 }
 class h {
     constructor() {
-        (o(this, 'loadIndex', new f('\u2757', 'Load index.tsx')),
-            o(this, 'loadFastConnectNativeModule', new f('\uD83D\uDCBE', 'Load fast_connect native module')),
-            o(this, 'beginFastConnect', new f('\uD83C\uDF10', 'Fast Connect IDENTIFY')),
-            o(this, 'loadImports', new f('\uD83C\uDFC3', 'Load Imports')),
-            o(this, 'init', new f('\uD83C\uDFC3', 'Initial Initialization')),
-            o(this, 'loadStorage', new f('\uD83D\uDCBE', 'Load Storage')),
-            o(this, 'parseStorage', new f('\uD83D\uDCBE', 'Parse Storage')),
-            o(this, 'loadMiniCache', new f('\uD83D\uDCBE', 'Load Mini Cache')),
-            o(this, 'fetchGuildCache', new f('\uD83D\uDCBE', 'Fetch Guild Cache')),
-            o(this, 'fetchGuildChannelsCache', new f('\uD83D\uDCBE', 'Fetch Initial Guild Channels Cache')),
-            o(this, 'loadCachedMessages', new f('\uD83D\uDCBE', 'Load Cached Messages')),
-            o(this, 'renderApp', new _('\uD83C\uDFA8', 'First React Render')),
-            o(this, 'renderAppEffect', new _('\uD83C\uDFA8', 'First React Render useEffect')),
-            o(this, 'renderMessages', new _('\uD83C\uDFA8', 'React Render Messages', !0)),
-            o(this, 'renderMessagesWithCache', new _('\uD83C\uDFA8', 'React Render Cached Messages', !0)),
-            o(this, 'firstRowGenerator', new f('\uD83C\uDFA8', 'RowGenerator.generate()')),
-            o(this, 'displayMessagesWithCache', new _('\uD83D\uDDA5️', 'Display Cached Messages')),
-            o(this, 'renderLatestMessages', new _('\uD83C\uDFA8', 'React Render Latest Messages')),
-            o(this, 'displayLatestMessages', new _('\uD83D\uDDA5️', 'Display Latest Messages')),
-            o(this, 'initialGuild', new f('\uD83C\uDF10', 'Initial Guild')),
-            o(this, 'loadLazyCache', new f('\uD83D\uDCBE', 'Load Lazy Cache')),
-            o(this, 'fetchLazyCache', new f('\uD83D\uDCBE', 'Fetch Lazy Cache')),
-            o(this, 'parseLazyCache', new f('\uD83D\uDCBE', 'Parse Lazy Cache')),
-            o(this, 'fetchStaleChannels', new f('\uD83D\uDCBE', 'Fetch Stale Channels')),
-            o(this, 'deserializeCache', new f('\uD83D\uDCBE', 'Deserialize Cache')),
-            o(this, 'dispatchLazyCache', new f('\uD83D\uDCBE', 'Dispatch Lazy Cache')),
-            o(this, 'parseReady', new f('\uD83C\uDF10', 'Parse READY')),
-            o(this, 'ready', new f('\uD83C\uDF10', 'READY')),
-            o(this, 'hydrateReady', new f('\uD83C\uDF10', 'Hydrate READY')),
-            o(this, 'dispatchReady', new f('\uD83C\uDF10', 'Dispatch READY')),
-            o(this, 'parseReadySupplemental', new f('\uD83C\uDF10', 'Parse READY Supplemental')),
-            o(this, 'readySupplemental', new f('\uD83C\uDF10', 'READY Supplemental')),
-            o(this, 'hydrateReadySupplemental', new f('\uD83C\uDF10', 'Hydrate READY Supplemental')),
-            o(this, 'dispatchReadySupplemental', new f('\uD83C\uDF10', 'Dispatch READY Supplemental')),
-            o(this, 'fetchMessages', new f('\uD83C\uDF10', 'Fetch messages')),
-            o(this, 'dispatchMessages', new f('\uD83C\uDF10', 'Dispatch messages')),
-            o(this, 'imports', {
+        o(this, "loadIndex", new f("\u2757", "Load index.tsx")),
+            o(this, "loadFastConnectNativeModule", new f("\uD83D\uDCBE", "Load fast_connect native module")),
+            o(this, "beginFastConnect", new f("\uD83C\uDF10", "Fast Connect IDENTIFY")),
+            o(this, "loadImports", new f("\uD83C\uDFC3", "Load Imports")),
+            o(this, "init", new f("\uD83C\uDFC3", "Initial Initialization")),
+            o(this, "loadStorage", new f("\uD83D\uDCBE", "Load Storage")),
+            o(this, "parseStorage", new f("\uD83D\uDCBE", "Parse Storage")),
+            o(this, "loadMiniCache", new f("\uD83D\uDCBE", "Load Mini Cache")),
+            o(this, "fetchGuildCache", new f("\uD83D\uDCBE", "Fetch Guild Cache")),
+            o(this, "fetchGuildChannelsCache", new f("\uD83D\uDCBE", "Fetch Initial Guild Channels Cache")),
+            o(this, "loadCachedMessages", new f("\uD83D\uDCBE", "Load Cached Messages")),
+            o(this, "renderApp", new _("\uD83C\uDFA8", "First React Render")),
+            o(this, "renderAppEffect", new _("\uD83C\uDFA8", "First React Render useEffect")),
+            o(this, "renderMessages", new _("\uD83C\uDFA8", "React Render Messages", !0)),
+            o(this, "renderMessagesWithCache", new _("\uD83C\uDFA8", "React Render Cached Messages", !0)),
+            o(this, "firstRowGenerator", new f("\uD83C\uDFA8", "RowGenerator.generate()")),
+            o(this, "displayMessagesWithCache", new _("\uD83D\uDDA5️", "Display Cached Messages")),
+            o(this, "renderLatestMessages", new _("\uD83C\uDFA8", "React Render Latest Messages")),
+            o(this, "displayLatestMessages", new _("\uD83D\uDDA5️", "Display Latest Messages")),
+            o(this, "initialGuild", new f("\uD83C\uDF10", "Initial Guild")),
+            o(this, "loadLazyCache", new f("\uD83D\uDCBE", "Load Lazy Cache")),
+            o(this, "fetchLazyCache", new f("\uD83D\uDCBE", "Fetch Lazy Cache")),
+            o(this, "parseLazyCache", new f("\uD83D\uDCBE", "Parse Lazy Cache")),
+            o(this, "fetchStaleChannels", new f("\uD83D\uDCBE", "Fetch Stale Channels")),
+            o(this, "deserializeCache", new f("\uD83D\uDCBE", "Deserialize Cache")),
+            o(this, "dispatchLazyCache", new f("\uD83D\uDCBE", "Dispatch Lazy Cache")),
+            o(this, "parseReady", new f("\uD83C\uDF10", "Parse READY")),
+            o(this, "ready", new f("\uD83C\uDF10", "READY")),
+            o(this, "hydrateReady", new f("\uD83C\uDF10", "Hydrate READY")),
+            o(this, "dispatchReady", new f("\uD83C\uDF10", "Dispatch READY")),
+            o(this, "parseReadySupplemental", new f("\uD83C\uDF10", "Parse READY Supplemental")),
+            o(this, "readySupplemental", new f("\uD83C\uDF10", "READY Supplemental")),
+            o(this, "hydrateReadySupplemental", new f("\uD83C\uDF10", "Hydrate READY Supplemental")),
+            o(this, "dispatchReadySupplemental", new f("\uD83C\uDF10", "Dispatch READY Supplemental")),
+            o(this, "fetchMessages", new f("\uD83C\uDF10", "Fetch messages")),
+            o(this, "dispatchMessages", new f("\uD83C\uDF10", "Dispatch messages")),
+            o(this, "imports", {
                 polyfillsEnd: new p(),
                 sentryEnd: new p(),
                 appStateChangeStart: new p(),
                 appStateChangeEnd: new p(),
                 loadMiniCacheStart: new p(),
                 loadStorageStart: new p(),
-                loadStorageEnd: new p()
-            }));
+                loadStorageEnd: new p(),
+            });
     }
 }
 class m extends h {
@@ -207,7 +242,7 @@ class m extends h {
         this.cacheInfo = e;
     }
     setInterstitial(e) {
-        ((this.interstitial = e), c());
+        (this.interstitial = e), c();
     }
     addLocalMessages(e, t) {
         for (this.cachedChannelCounts.set(e, t); this.cachedChannelCounts.size > 100; ) {
@@ -219,29 +254,34 @@ class m extends h {
         this.readyProperties = e;
     }
     appStateChanged(e) {
-        ('active' === e && (null == this.firstAppActiveTime && (this.firstAppActiveTime = Date.now()), (this.wasEverActive = !0)), null == this.readyProperties.num_guilds && (this.didBackgroundApp = this.didBackgroundApp || 'active' !== e));
+        "active" === e &&
+            (null == this.firstAppActiveTime && (this.firstAppActiveTime = Date.now()), (this.wasEverActive = !0)),
+            null == this.readyProperties.num_guilds &&
+                (this.didBackgroundApp = this.didBackgroundApp || "active" !== e);
     }
     recordRender(e, t) {
-        (this.renderMessages.record(), (t || e > 0) && this.renderMessagesWithCache.record(), t && this.renderLatestMessages.record());
+        this.renderMessages.record(),
+            (t || e > 0) && this.renderMessagesWithCache.record(),
+            t && this.renderLatestMessages.record();
     }
     recordMessageRender(e, t, r, i) {
         let { default: o } = n(709054);
         if (!this.renderLatestMessages.hasData())
             if ((this.renderMessages.record(), t.length > 0 && this.renderMessagesWithCache.record(), r)) {
                 if ((this.renderLatestMessages.record(), null == this.cachedChannelId)) {
-                    this.messageCacheMissingReason = 'no-cache';
+                    this.messageCacheMissingReason = "no-cache";
                     return;
                 }
                 if (this.cachedChannelId !== e) {
-                    this.messageCacheMissingReason = 'channel-changed';
+                    this.messageCacheMissingReason = "channel-changed";
                     return;
                 }
                 if (null == this.cachedMessageIds || 0 === this.cachedMessageIds.length) {
-                    this.messageCacheMissingReason = 'no-cache';
+                    this.messageCacheMissingReason = "no-cache";
                     return;
                 }
                 if (0 === t.length) {
-                    this.messageCacheMissingReason = 'channel-empty';
+                    this.messageCacheMissingReason = "channel-empty";
                     return;
                 }
                 if (e === this.cachedChannelId) {
@@ -253,61 +293,74 @@ class m extends h {
                         var t;
                         return null == (t = this.cachedMessageIds) ? void 0 : t.includes(e);
                     }).length;
-                    ((this.messageCacheCount = null != (a = this.cachedChannelCounts.get(e)) ? a : null), (this.messageCacheHavingCount = s), (this.messageCacheMissingCount = t.length - s), (this.messageRenderFullCount = t.length), (this.messageRenderCachedCount = this.cachedMessageIds.length), (this.messageRenderHasMoreAfter = i));
+                    (this.messageCacheCount = null != (a = this.cachedChannelCounts.get(e)) ? a : null),
+                        (this.messageCacheHavingCount = s),
+                        (this.messageCacheMissingCount = t.length - s),
+                        (this.messageRenderFullCount = t.length),
+                        (this.messageRenderCachedCount = this.cachedMessageIds.length),
+                        (this.messageRenderHasMoreAfter = i);
                 }
-            } else (null == this.cachedChannelId || e === this.cachedChannelId) && ((this.cachedChannelId = e), (this.cachedMessageIds = t), t.length > 0 && (this.messageCacheMissingReason = null));
+            } else
+                (null == this.cachedChannelId || e === this.cachedChannelId) &&
+                    ((this.cachedChannelId = e),
+                    (this.cachedMessageIds = t),
+                    t.length > 0 && (this.messageCacheMissingReason = null));
     }
     getStartTime(e) {
-        return this.extraProperties.headless_task_ran && null != this.firstAppActiveTime ? this.firstAppActiveTime : null == e || e <= 0 ? this.loadIndex.start : e;
+        return this.extraProperties.headless_task_ran && null != this.firstAppActiveTime
+            ? this.firstAppActiveTime
+            : null == e || e <= 0
+              ? this.loadIndex.start
+              : e;
     }
     processNativeLogs(e, t) {
         let n = this.getStartTime(t);
         for (let t of e)
             switch (t.label) {
-                case 'Finish MainApplication.initialize()':
+                case "Finish MainApplication.initialize()":
                     this.extraProperties.time_main_application_initialize_end = d(n, t.timestamp);
                     break;
-                case 'GET_REACT_INSTANCE_MANAGER_START':
+                case "GET_REACT_INSTANCE_MANAGER_START":
                     this.extraProperties.time_get_react_instance_manager_start = d(n, t.timestamp);
                     break;
-                case 'GET_REACT_INSTANCE_MANAGER_END':
+                case "GET_REACT_INSTANCE_MANAGER_END":
                     this.extraProperties.time_get_react_instance_manager_end = d(n, t.timestamp);
                     break;
-                case 'PROCESS_PACKAGES_START':
+                case "PROCESS_PACKAGES_START":
                     this.extraProperties.time_process_packages_start = d(n, t.timestamp);
                     break;
-                case 'PROCESS_PACKAGES_END':
+                case "PROCESS_PACKAGES_END":
                     this.extraProperties.time_process_packages_end = d(n, t.timestamp);
                     break;
-                case 'CREATE_CATALYST_INSTANCE_START':
+                case "CREATE_CATALYST_INSTANCE_START":
                     this.extraProperties.time_create_catalyst_instance_start = d(n, t.timestamp);
                     break;
-                case 'CREATE_CATALYST_INSTANCE_END':
+                case "CREATE_CATALYST_INSTANCE_END":
                     this.extraProperties.time_create_catalyst_instance_end = d(n, t.timestamp);
                     break;
-                case 'CREATE_UI_MANAGER_MODULE_START':
+                case "CREATE_UI_MANAGER_MODULE_START":
                     this.extraProperties.time_create_ui_manager_module_start = d(n, t.timestamp);
                     break;
-                case 'CREATE_UI_MANAGER_MODULE_END':
+                case "CREATE_UI_MANAGER_MODULE_END":
                     this.extraProperties.time_create_ui_manager_module_end = d(n, t.timestamp);
                     break;
-                case 'REACT_BRIDGE_LOADING_START':
+                case "REACT_BRIDGE_LOADING_START":
                     this.extraProperties.time_react_bridge_loading_start = d(n, t.timestamp);
                     break;
-                case 'REACT_BRIDGE_LOADING_END':
+                case "REACT_BRIDGE_LOADING_END":
                     this.extraProperties.time_react_bridge_loading_end = d(n, t.timestamp);
                     break;
-                case 'CacheStorage Init Start':
+                case "CacheStorage Init Start":
                     this.extraProperties.time_init_native_storage_start = d(n, t.timestamp);
                     break;
-                case 'CacheStorage Init End':
+                case "CacheStorage Init End":
                     this.extraProperties.time_init_native_storage_end = d(n, t.timestamp);
                     break;
-                case 'ChatModule.updateRows() Start':
+                case "ChatModule.updateRows() Start":
                     if (null != this.extraProperties.time_first_native_message_render_start) continue;
                     this.extraProperties.time_first_native_message_render_start = d(n, t.timestamp);
                     break;
-                case 'ChatModule.updateRows() Finish':
+                case "ChatModule.updateRows() Finish":
                     if (null != this.extraProperties.time_first_native_message_render_end) continue;
                     this.extraProperties.time_first_native_message_render_end = d(n, t.timestamp);
             }
@@ -315,8 +368,8 @@ class m extends h {
     serializeTTITracker(e) {
         var t, i, o, s, c, u;
         let d = this.getStartTime(e),
-            f = n(392711)(r.Z.logGroups['0'].logs)
-                .filter((e) => e.log.startsWith('Require '))
+            f = n(392711)(r.Z.logGroups["0"].logs)
+                .filter((e) => e.log.startsWith("Require "))
                 .map((e) => {
                     var t;
                     return null != (t = e.delta) ? t : 0;
@@ -478,11 +531,30 @@ class m extends h {
             duration_imports_at_app_state_change_end: Math.ceil(this.imports.appStateChangeEnd.time),
             duration_imports_at_load_mini_cache_start: Math.ceil(this.imports.loadMiniCacheStart.time),
             duration_imports_at_load_storage_start: Math.ceil(this.imports.loadStorageStart.time),
-            duration_imports_at_load_storage_end: Math.ceil(this.imports.loadStorageEnd.time)
+            duration_imports_at_load_storage_end: Math.ceil(this.imports.loadStorageEnd.time),
         });
     }
     constructor(...e) {
-        (super(...e), o(this, 'readyProperties', {}), o(this, 'didBackgroundApp', !1), o(this, 'wasEverActive', !1), o(this, 'wasAuthenticated', !1), o(this, 'interstitial', null), o(this, 'cachedChannelCounts', new Map()), o(this, 'cachedChannelId', null), o(this, 'cachedMessageIds', null), o(this, 'messageCacheMissingReason', 'never-loaded'), o(this, 'messageCacheAgeSeconds', null), o(this, 'messageCacheCount', null), o(this, 'messageCacheHavingCount', null), o(this, 'messageCacheMissingCount', null), o(this, 'messageRenderFullCount', null), o(this, 'messageRenderCachedCount', null), o(this, 'messageRenderHasMoreAfter', null), o(this, 'firstAppActiveTime', null), o(this, 'cacheInfo', null), o(this, 'extraProperties', {}));
+        super(...e),
+            o(this, "readyProperties", {}),
+            o(this, "didBackgroundApp", !1),
+            o(this, "wasEverActive", !1),
+            o(this, "wasAuthenticated", !1),
+            o(this, "interstitial", null),
+            o(this, "cachedChannelCounts", new Map()),
+            o(this, "cachedChannelId", null),
+            o(this, "cachedMessageIds", null),
+            o(this, "messageCacheMissingReason", "never-loaded"),
+            o(this, "messageCacheAgeSeconds", null),
+            o(this, "messageCacheCount", null),
+            o(this, "messageCacheHavingCount", null),
+            o(this, "messageCacheMissingCount", null),
+            o(this, "messageRenderFullCount", null),
+            o(this, "messageRenderCachedCount", null),
+            o(this, "messageRenderHasMoreAfter", null),
+            o(this, "firstAppActiveTime", null),
+            o(this, "cacheInfo", null),
+            o(this, "extraProperties", {});
     }
 }
 let g = new m();

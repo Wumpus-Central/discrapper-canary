@@ -16,46 +16,46 @@ function d(e) {
                       (0, l.Z8)({
                           rootCommand: e,
                           command: e,
-                          applicationId: e.application_id
-                      })
+                          applicationId: e.application_id,
+                      }),
                   )
                 : [];
         }, [t]);
     return 0 === n.length
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: c.sectionContainer,
               children: [
                   (0, r.jsx)(i.X6q, {
-                      variant: 'heading-lg/semibold',
-                      color: 'header-primary',
-                      children: o.intl.string(o.t.swIgTE)
+                      variant: "heading-lg/semibold",
+                      color: "header-primary",
+                      children: o.intl.string(o.t.swIgTE),
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: c.contentContainer,
                       children: n.map((e) =>
                           (0, r.jsxs)(
-                              'div',
+                              "div",
                               {
                                   className: c.commandContainer,
                                   children: [
                                       (0, r.jsxs)(i.Text, {
                                           className: c.commandName,
-                                          variant: 'code',
-                                          color: 'header-primary',
-                                          children: [s.GI, e.displayName]
+                                          variant: "code",
+                                          color: "header-primary",
+                                          children: [s.GI, e.displayName],
                                       }),
                                       (0, r.jsx)(i.Text, {
-                                          variant: 'text-md/normal',
-                                          color: 'text-default',
-                                          children: e.displayDescription
-                                      })
-                                  ]
+                                          variant: "text-md/normal",
+                                          color: "text-default",
+                                          children: e.displayDescription,
+                                      }),
+                                  ],
                               },
-                              e.id
-                          )
-                      )
-                  })
-              ]
+                              e.id,
+                          ),
+                      ),
+                  }),
+              ],
           });
 }

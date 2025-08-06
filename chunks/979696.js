@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,8 +36,8 @@ class d extends (r = i.ZP.PersistedStore) {
         return l;
     }
 }
-(a(d, 'displayName', 'CallChatToastsStore'), a(d, 'persistKey', 'CallChatToasts'));
+a(d, "displayName", "CallChatToastsStore"), a(d, "persistKey", "CallChatToasts");
 let f = new d(o.Z, {
     CALL_CHAT_TOASTS_SET_ENABLED: c,
-    LOGOUT: u
+    LOGOUT: u,
 });

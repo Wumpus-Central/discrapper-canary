@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685), n(953529));
+n.d(t, { Z: () => E }), n(388685), n(953529);
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -24,7 +24,7 @@ function N(e) {
             (t = f.ZP.getGuildIconURL({
                 id: i.id,
                 icon: i.icon,
-                size: 40
+                size: 40,
             }))
                 ? t
                 : void 0;
@@ -44,24 +44,24 @@ function N(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, i)),
@@ -78,24 +78,24 @@ function N(e) {
                               })(Object(l)).forEach(function (e) {
                                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        n)
+                        n),
                     ),
-                    size: h.Z.Sizes.MEDIUM
-                })
+                    size: h.Z.Sizes.MEDIUM,
+                }),
             }),
             (0, r.jsx)(c.Text, {
                 className: _.guildName,
-                variant: 'text-md/semibold',
-                children: i.name
+                variant: "text-md/semibold",
+                children: i.name,
             }),
             s
                 ? (0, r.jsx)(c.$jN, { type: c.$jN.Type.PULSING_ELLIPSIS })
-                : (0, r.jsx)('img', {
+                : (0, r.jsx)("img", {
                       className: _.__invalid_arrow,
-                      alt: '',
-                      src: v
-                  })
-        ]
+                      alt: "",
+                      src: v,
+                  }),
+        ],
     });
 }
 let E = (e) => {
@@ -104,9 +104,9 @@ let E = (e) => {
         [x, v] = l.useState(void 0),
         [E, S] = l.useState(null),
         y = (e) => async () => {
-            (f(null), s(e), S(e));
+            f(null), s(e), S(e);
             try {
-                (await d.Z.sendVerificationEmail(n, !0, e), t(p.tF.VERIFY_PIN));
+                await d.Z.sendVerificationEmail(n, !0, e), t(p.tF.VERIFY_PIN);
             } catch (e) {
                 f(new u.Hx(e));
             } finally {
@@ -116,32 +116,32 @@ let E = (e) => {
         j = () => t(p.tF.SUBMIT_SCHOOL),
         I = i;
     return (
-        null != x && '' !== x && (I = i.filter((e) => o()(x.toLowerCase(), e.name.toLowerCase()))),
-        (0, r.jsxs)('div', {
+        null != x && "" !== x && (I = i.filter((e) => o()(x.toLowerCase(), e.name.toLowerCase()))),
+        (0, r.jsxs)("div", {
             className: _.container,
             children: [
                 (0, r.jsx)(c.X6q, {
                     className: a()(_.centerText, _.header),
-                    variant: 'heading-xl/semibold',
-                    children: g.intl.string(g.t.mOMeiY)
+                    variant: "heading-xl/semibold",
+                    children: g.intl.string(g.t.mOMeiY),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: _.description,
                     children: (0, r.jsx)(c.Text, {
                         className: _.centerText,
-                        variant: 'text-sm/normal',
-                        color: 'header-secondary',
-                        children: g.intl.format(g.t.dZeiTE, { onJoinWaitlist: j })
-                    })
+                        variant: "text-sm/normal",
+                        color: "header-secondary",
+                        children: g.intl.format(g.t.dZeiTE, { onJoinWaitlist: j }),
+                    }),
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: a()(_.guildList, { [_.forcedHeight]: m }),
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: _.searchContainer,
                             children: [
                                 (0, r.jsx)(c.Rj2, {
-                                    placeholder: g.intl.string(g.t['5h0QOD']),
+                                    placeholder: g.intl.string(g.t["5h0QOD"]),
                                     className: _.searchBox,
                                     inputClassName: _.searchBoxInput,
                                     searchIconClassName: _.searchBoxIcon,
@@ -149,18 +149,18 @@ let E = (e) => {
                                     onChange: (e) => {
                                         v(e);
                                     },
-                                    label: g.intl.string(g.t['5h0QOD']),
+                                    label: g.intl.string(g.t["5h0QOD"]),
                                     searchTerm: x,
                                     onClear: () => {
                                         v(void 0);
-                                    }
+                                    },
                                 }),
                                 (0, r.jsx)(c.Text, {
-                                    color: 'text-danger',
-                                    variant: 'text-xs/normal',
-                                    children: null == h ? void 0 : h.getAnyErrorMessage()
-                                })
-                            ]
+                                    color: "text-danger",
+                                    variant: "text-xs/normal",
+                                    children: null == h ? void 0 : h.getAnyErrorMessage(),
+                                }),
+                            ],
                         }),
                         I.length > 0
                             ? (0, r.jsx)(c.zJl, {
@@ -173,34 +173,34 @@ let E = (e) => {
                                                 {
                                                     guildInfo: e,
                                                     onClick: y(e.id),
-                                                    submitting: E === e.id
+                                                    submitting: E === e.id,
                                                 },
-                                                e.id
-                                            )
-                                  )
+                                                e.id,
+                                            ),
+                                  ),
                               })
-                            : (0, r.jsx)('div', {
+                            : (0, r.jsx)("div", {
                                   className: _.noResultsContainer,
-                                  children: (0, r.jsxs)('div', {
+                                  children: (0, r.jsxs)("div", {
                                       className: _.noResultsContent,
                                       children: [
-                                          (0, r.jsx)('div', { className: _.noResultsImage }),
+                                          (0, r.jsx)("div", { className: _.noResultsImage }),
                                           (0, r.jsx)(c.X6q, {
                                               className: a()(_.centerText, _.header),
-                                              variant: 'heading-xl/semibold',
-                                              children: g.intl.string(g.t['1eUrDQ'])
+                                              variant: "heading-xl/semibold",
+                                              children: g.intl.string(g.t["1eUrDQ"]),
                                           }),
                                           (0, r.jsx)(c.Text, {
                                               className: _.centerText,
-                                              variant: 'text-md/normal',
-                                              children: g.intl.format(g.t.flgDKC, { onJoinWaitlist: j })
-                                          })
-                                      ]
-                                  })
-                              })
-                    ]
-                })
-            ]
+                                              variant: "text-md/normal",
+                                              children: g.intl.format(g.t.flgDKC, { onJoinWaitlist: j }),
+                                          }),
+                                      ],
+                                  }),
+                              }),
+                    ],
+                }),
+            ],
         })
     );
 };

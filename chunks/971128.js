@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => u }), n(388685));
+n.d(t, { ZP: () => u }), n(388685);
 var r = n(772848),
     i = n(710845),
     o = n(607802);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -37,10 +37,10 @@ function l(e, t) {
         searchLocation: null != t ? t : null,
         selectedSearchTab: null != e ? e : null,
         searchCount: 0,
-        searchWithFiltersCount: 0
+        searchWithFiltersCount: 0,
     };
 }
-new i.Z('SearchSessionAnalyticsManager');
+new i.Z("SearchSessionAnalyticsManager");
 class c {
     upsertState(e, t) {
         let n = (0, o.Tm)(e),
@@ -56,7 +56,9 @@ class c {
         var n, r;
         let i = this.getState(e),
             o = {};
-        ((o.searchCount = (null != (n = null == i ? void 0 : i.searchCount) ? n : 0) + 1), t && (o.searchWithFiltersCount = (null != (r = null == i ? void 0 : i.searchWithFiltersCount) ? r : 0) + 1), this.upsertState(e, o));
+        (o.searchCount = (null != (n = null == i ? void 0 : i.searchCount) ? n : 0) + 1),
+            t && (o.searchWithFiltersCount = (null != (r = null == i ? void 0 : i.searchWithFiltersCount) ? r : 0) + 1),
+            this.upsertState(e, o);
     }
     getSearchCount(e) {
         var t, n;
@@ -95,18 +97,19 @@ class c {
     initialize(e) {
         let { searchContext: t, initialTab: n, initializeSearchQueryId: i, searchLocation: a } = e,
             s = (0, o.Tm)(t);
-        (this.sessions.has(s) || this.sessions.set(s, l(n, a)), i && !this.searchQueryIds.has(s) && this.searchQueryIds.set(s, (0, r.Z)()));
+        this.sessions.has(s) || this.sessions.set(s, l(n, a)),
+            i && !this.searchQueryIds.has(s) && this.searchQueryIds.set(s, (0, r.Z)());
     }
     terminate(e) {
         let t = (0, o.Tm)(e);
-        (this.sessions.delete(t), this.searchQueryIds.delete(t));
+        this.sessions.delete(t), this.searchQueryIds.delete(t);
     }
     hasSession(e) {
         let t = (0, o.Tm)(e);
         return this.sessions.has(t);
     }
     constructor() {
-        (a(this, 'sessions', new Map()), a(this, 'searchQueryIds', new Map()));
+        a(this, "sessions", new Map()), a(this, "searchQueryIds", new Map());
     }
 }
 let u = new c();

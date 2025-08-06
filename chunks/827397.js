@@ -17,13 +17,18 @@ function c(e, t) {
                         l.Z.open(e, a.pNK.ROLES, a.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     case o.A$:
-                        l.Z.open(e, a.pNK.BOOST_PERKS, a.jXE.GUILD_POWERUPS_OVERVIEW_CARD, a.KsC.BOOST_PERKS_VANITY_URL);
+                        l.Z.open(
+                            e,
+                            a.pNK.BOOST_PERKS,
+                            a.jXE.GUILD_POWERUPS_OVERVIEW_CARD,
+                            a.KsC.BOOST_PERKS_VANITY_URL,
+                        );
                         return;
                     default:
                         return;
                 }
         },
-        [e, t]
+        [e, t],
     );
     return t.type === s.Us.PERK ? n : void 0;
 }

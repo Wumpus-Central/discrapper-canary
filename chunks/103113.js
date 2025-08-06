@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685));
+n.d(t, { Z: () => P }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(481060),
@@ -31,7 +31,7 @@ function C(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,29 +41,41 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 C(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function P(e) {
-    let { user: t, guildId: n, channelId: C, messageId: P, roleId: w, openedAt: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: M = __OVERLAY__, newAnalyticsLocations: k = [], disableAutoFocus: j = !1 } = e,
+    let {
+            user: t,
+            guildId: n,
+            channelId: C,
+            messageId: P,
+            roleId: w,
+            openedAt: D,
+            setPopoutRef: L,
+            closePopout: x,
+            disableUserProfileLink: M = __OVERLAY__,
+            newAnalyticsLocations: k = [],
+            disableAutoFocus: j = !1,
+        } = e,
         U = (0, h.ZP)(t.id, n),
         { analyticsLocations: G } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
         B = (0, _.ZB)({
-            layout: 'POPOUT',
+            layout: "POPOUT",
             userId: t.id,
             guildId: n,
             channelId: C,
             messageId: P,
-            roleId: w
+            roleId: w,
         }),
         Z = i.useRef(null),
         F = (0, a.Z)(Z);
@@ -71,38 +83,38 @@ function P(e) {
         null == L || L(null == Z ? void 0 : Z.current);
     }, [Z, L]);
     let V = () => {
-            (null == x || x(),
+            null == x || x(),
                 (0, m.openUserProfileModal)(
                     R(
                         {
                             sourceAnalyticsLocations: G,
-                            hideRestrictedProfile: !0
+                            hideRestrictedProfile: !0,
                         },
-                        B
-                    )
-                ));
+                        B,
+                    ),
+                );
         },
         H = !M && (0, c.Z)(t.id),
         Y = () =>
             H
                 ? (0, r.jsx)(o.sNh, {
-                      id: 'view-profile',
-                      label: A.intl.string(A.t['+Xp3ho']),
+                      id: "view-profile",
+                      label: A.intl.string(A.t["+Xp3ho"]),
                       action: () => {
-                          (V(),
+                          V(),
                               (0, p.pQ)(
                                   R(
                                       {
-                                          action: 'PRESS_VIEW_PROFILE',
-                                          analyticsLocations: G
+                                          action: "PRESS_VIEW_PROFILE",
+                                          analyticsLocations: G,
                                       },
-                                      B
-                                  )
-                              ));
-                      }
+                                      B,
+                                  ),
+                              );
+                      },
                   })
                 : null,
-        W = j ? 'div' : o.VqE,
+        W = j ? "div" : o.VqE,
         K = (0, u.Dt)(),
         z = f.ZP.useName(n, C, t);
     return (0, r.jsx)(l.Gt, {
@@ -115,13 +127,13 @@ function P(e) {
             isLoaded: null == U ? void 0 : U.isLoaded,
             children: (0, r.jsxs)(W, {
                 ref: Z,
-                'aria-labelledby': K,
+                "aria-labelledby": K,
                 children: [
                     (0, r.jsx)(o.nn4, {
                         children: (0, r.jsx)(o.H, {
                             id: K,
-                            children: A.intl.format(A.t.KRe1Fh, { name: z })
-                        })
+                            children: A.intl.format(A.t.KRe1Fh, { name: z }),
+                        }),
                     }),
                     (0, r.jsxs)(O.Z, {
                         user: t,
@@ -131,17 +143,17 @@ function P(e) {
                             (0, r.jsx)(T.Z, {
                                 children: (0, r.jsx)(I.Z, {
                                     user: t,
-                                    viewProfileItem: Y()
-                                })
+                                    viewProfileItem: Y(),
+                                }),
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: N.header,
                                 children: [
                                     (0, r.jsx)(b.Z, {
                                         user: t,
                                         displayProfile: U,
                                         guildId: n,
-                                        themeType: S.lY.POPOUT
+                                        themeType: S.lY.POPOUT,
                                     }),
                                     (0, r.jsx)(g.Z, {
                                         user: t,
@@ -149,9 +161,9 @@ function P(e) {
                                         guildId: n,
                                         channelId: C,
                                         themeType: S.lY.POPOUT,
-                                        onOpenProfile: H ? V : void 0
-                                    })
-                                ]
+                                        onOpenProfile: H ? V : void 0,
+                                    }),
+                                ],
                             }),
                             (0, r.jsxs)(o.Ttm, {
                                 fade: !0,
@@ -164,27 +176,27 @@ function P(e) {
                                         tags: (0, r.jsx)(E.Z, {
                                             displayProfile: U,
                                             themeType: S.lY.POPOUT,
-                                            onClose: x
-                                        })
+                                            onClose: x,
+                                        }),
                                     }),
                                     (0, r.jsx)(y.Z, {
                                         userId: t.id,
                                         userBio: null == U ? void 0 : U.bio,
                                         setLineClamp: !1,
-                                        textColor: 'header-primary'
-                                    })
-                                ]
+                                        textColor: "header-primary",
+                                    }),
+                                ],
                             }),
-                            (0, r.jsx)('div', { className: N.footer })
-                        ]
+                            (0, r.jsx)("div", { className: N.footer }),
+                        ],
                     }),
                     (null == U ? void 0 : U.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
                             profileEffectId: null == U ? void 0 : U.profileEffectId,
-                            isHovering: F
-                        })
-                ]
-            })
-        })
+                            isHovering: F,
+                        }),
+                ],
+            }),
+        }),
     });
 }

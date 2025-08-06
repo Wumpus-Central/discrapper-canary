@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => s }), n(415506));
+n.r(t), n.d(t, { default: () => s }), n(415506);
 var r = n(592125),
     i = n(19780),
     o = n(981631),
@@ -26,14 +26,14 @@ function s(e, t) {
                 timestamp: new Date(),
                 rtc_state: i.Z.getState(),
                 channelId: c,
-                channelType: u
+                channelType: u,
             };
         case o.rMx.GUILD_VIEWED_CLICKSTREAM:
             let d = (n = t).guildId;
             return {
                 timestamp: new Date(),
                 rtc_state: i.Z.getState(),
-                guildId: d
+                guildId: d,
             };
         case o.rMx.FRIENDS_LIST_VIEWED_CLICKSTREAM:
             return (
@@ -44,10 +44,10 @@ function s(e, t) {
                     tab_opened: n.tab_opened,
                     num_friends: n.num_friends,
                     now_playing_visible: n.now_playing_visible,
-                    now_playing_num_cards: n.now_playing_num_cards
+                    now_playing_num_cards: n.now_playing_num_cards,
                 }
             );
         default:
-            throw Error('getClickstreamTrackEvent: Unknown event: '.concat(e));
+            throw Error("getClickstreamTrackEvent: Unknown event: ".concat(e));
     }
 }

@@ -11,51 +11,51 @@ function x(t) {
     let { transitionState: i, onClose: e } = t,
         x = (0, r.Dt)();
     return (0, n.jsxs)(s.Y0X, {
-        'aria-labelledby': x,
+        "aria-labelledby": x,
         transitionState: i,
         size: s.CgR.SMALL,
-        parentComponent: 'SpotifyPremiumUpgradeModal',
+        parentComponent: "SpotifyPremiumUpgradeModal",
         children: [
             (0, n.jsx)(s.xBx, {
                 separator: !1,
                 children: (0, n.jsx)(s.X6q, {
                     id: x,
-                    variant: 'heading-lg/semibold',
-                    children: o.intl.formatToMarkdownString(o.t.DQsSGh, {})
-                })
+                    variant: "heading-lg/semibold",
+                    children: o.intl.formatToMarkdownString(o.t.DQsSGh, {}),
+                }),
             }),
             (0, n.jsxs)(s.hzk, {
                 children: [
                     (0, n.jsx)(a.Z, {
                         justify: a.Z.Justify.CENTER,
-                        children: (0, n.jsx)('div', { className: l.image })
+                        children: (0, n.jsx)("div", { className: l.image }),
                     }),
                     (0, n.jsx)(s.Text, {
                         className: l.text,
-                        variant: 'text-sm/normal',
-                        children: o.intl.string(o.t.xGMwi4)
-                    })
-                ]
+                        variant: "text-sm/normal",
+                        children: o.intl.string(o.t.xGMwi4),
+                    }),
+                ],
             }),
             (0, n.jsx)(s.mzw, {
                 children: (0, n.jsxs)(s.hE2, {
-                    direction: 'horizontal-reverse',
+                    direction: "horizontal-reverse",
                     children: [
                         (0, n.jsx)(s.zxk, {
-                            variant: 'primary',
+                            variant: "primary",
                             text: o.intl.string(o.t.n8U5jY),
                             onClick: function () {
-                                ((0, c.KK)(), e());
-                            }
+                                (0, c.KK)(), e();
+                            },
                         }),
                         (0, n.jsx)(s.zxk, {
-                            variant: 'secondary',
-                            text: o.intl.string(o.t['ETE/oK']),
-                            onClick: e
-                        })
-                    ]
-                })
-            })
-        ]
+                            variant: "secondary",
+                            text: o.intl.string(o.t["ETE/oK"]),
+                            onClick: e,
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

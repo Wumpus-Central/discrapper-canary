@@ -1,6 +1,6 @@
 n.d(t, {
     q: () => o,
-    u: () => i
+    u: () => i,
 });
 var r = n(894417);
 function i(e, t, n) {

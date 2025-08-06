@@ -15,20 +15,20 @@ function _(e) {
         p = (0, r.e7)([u.Z, d.Z], () => u.Z.getChannel(d.Z.getChannelId())),
         h = (0, i.bp)() === f.IlC.POPOUT;
     return () => {
-        (null == n || n(),
+        null == n || n(),
             null == p || (null == p ? void 0 : p.isVocal())
                 ? (0, l.Z)({
                       context:
                           null != p
                               ? {
-                                    type: 'channel',
-                                    channel: p
+                                    type: "channel",
+                                    channel: p,
                                 }
-                              : { type: 'contextless' },
+                              : { type: "contextless" },
                       analyticsLocation: _,
                       openInPopout: h,
-                      initialState: { applicationId: t }
+                      initialState: { applicationId: t },
                   })
-                : (0, a.__)(s._b.TEXT, c.Ie.NORMAL, { applicationId: t }));
+                : (0, a.__)(s._b.TEXT, c.Ie.NORMAL, { applicationId: t });
     };
 }

@@ -15,31 +15,31 @@ function d(e) {
           ? (0, r.jsx)(a.Z, {
                 rule: t,
                 isLoading: n,
-                onChangeRule: d
+                onChangeRule: d,
             })
           : (0, i.vo)(t)
             ? (0, r.jsx)(s.Z, {
                   rule: t,
                   isLoading: n,
-                  onChangeRule: d
+                  onChangeRule: d,
               })
             : (0, i.Fn)(t)
               ? (0, r.jsx)(l.Z, {
                     rule: t,
                     isLoading: n,
-                    onChangeRule: d
+                    onChangeRule: d,
                 })
               : (0, i.nC)(t)
                 ? (0, r.jsx)(o.Z, {
                       rule: t,
                       isLoading: n,
-                      onChangeRule: d
+                      onChangeRule: d,
                   })
                 : (0, i.Jq)(t)
                   ? (0, r.jsx)(c.Z, {
                         rule: t,
                         isLoading: n,
-                        onChangeRule: d
+                        onChangeRule: d,
                     })
                   : null;
 }

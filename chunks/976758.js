@@ -16,12 +16,12 @@ function h() {
     let { analyticsLocations: e } = (0, l.ZP)(),
         { inputVolume: t, outputVolume: n } = (0, r.cj)([c.Z], () => ({
             inputVolume: c.Z.getInputVolume(),
-            outputVolume: c.Z.getOutputVolume()
+            outputVolume: c.Z.getOutputVolume(),
         }));
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: m.volumes,
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: m.column,
                 children: (0, i.jsx)(s.xJW, {
                     title: u.intl.string(u.t.OX2Bnp),
@@ -29,11 +29,11 @@ function h() {
                     children: (0, i.jsx)(s.iRW, {
                         initialValue: (0, d.P)(t),
                         asValueChanges: (t) => a.Z.setInputVolume((0, d.A)(t), { analyticsLocations: e }),
-                        'aria-labelledby': p
-                    })
-                })
+                        "aria-labelledby": p,
+                    }),
+                }),
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: m.column,
                 children: (0, i.jsx)(s.xJW, {
                     title: u.intl.string(u.t.eATD2N),
@@ -41,12 +41,12 @@ function h() {
                     children: (0, i.jsx)(s.iRW, {
                         initialValue: (0, d.P)(n),
                         maxValue: 200,
-                        onValueRender: (e) => ''.concat(e.toFixed(0), '%'),
+                        onValueRender: (e) => "".concat(e.toFixed(0), "%"),
                         asValueChanges: (t) => a.Z.setOutputVolume((0, d.A)(t), { analyticsLocations: e }),
-                        'aria-labelledby': g
-                    })
-                })
-            })
-        ]
+                        "aria-labelledby": g,
+                    }),
+                }),
+            }),
+        ],
     });
 }

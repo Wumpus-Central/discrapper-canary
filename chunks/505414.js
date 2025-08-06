@@ -1,4 +1,20 @@
-for (var e = n(866686), o = n(178476), i = n(764908), u = n(839593), s = n(394370), c = o('Symbol'), f = c.isWellKnownSymbol, a = o('Object', 'getOwnPropertyNames'), p = i(c.prototype.valueOf), l = e('wks'), v = 0, y = a(c), h = y.length; v < h; v++)
+for (
+    var e = n(866686),
+        o = n(178476),
+        i = n(764908),
+        u = n(839593),
+        s = n(394370),
+        c = o("Symbol"),
+        f = c.isWellKnownSymbol,
+        a = o("Object", "getOwnPropertyNames"),
+        p = i(c.prototype.valueOf),
+        l = e("wks"),
+        v = 0,
+        y = a(c),
+        h = y.length;
+    v < h;
+    v++
+)
     try {
         var x = y[v];
         u(c[x]) && s(x);

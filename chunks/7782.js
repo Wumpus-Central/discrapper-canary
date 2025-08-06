@@ -42,19 +42,19 @@ let R = 24,
                                               ? I.ZP.getGuildIconURL({
                                                     id: n.id,
                                                     icon: n.icon,
-                                                    size: R
+                                                    size: R,
                                                 })
                                               : null;
                                   if (null == i) return null;
                                   let a = t === (o.length > P ? P : o.length) - 1,
                                       s = (0, r.jsx)(
-                                          'img',
+                                          "img",
                                           {
                                               src: i,
-                                              alt: '',
-                                              className: C.avatar
+                                              alt: "",
+                                              className: C.avatar,
                                           },
-                                          t
+                                          t,
                                       );
                                   return a
                                       ? s
@@ -65,44 +65,44 @@ let R = 24,
                                                 mask: d.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
                                                 width: R,
                                                 height: R,
-                                                children: s
+                                                children: s,
                                             },
-                                            t
+                                            t,
                                         );
                               })
                               .filter((e) => null != e)
                         : [],
-                [o]
+                [o],
             );
         if (null == o || 0 === o.length)
             return (0, r.jsx)(l.Text, {
-                color: 'header-secondary',
-                variant: 'text-sm/normal',
-                children: N.intl.string(N.t.zjVh8v)
+                color: "header-secondary",
+                variant: "text-sm/normal",
+                children: N.intl.string(N.t.zjVh8v),
             });
         let c = () => {
             (0, b.openUserProfileModal)({
                 userId: t,
                 channelId: n,
                 section: A.oh.MUTUAL_GUILDS,
-                sourceAnalyticsLocations: [u.Z.DM_CHANNEL]
+                sourceAnalyticsLocations: [u.Z.DM_CHANNEL],
             });
         };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: C.avatarContainer,
-                    children: s
+                    children: s,
                 }),
                 (0, r.jsx)(l.P3F, {
                     onClick: c,
                     children: (0, r.jsx)(l.Text, {
                         className: C.mutualGuilds,
-                        variant: 'text-sm/normal',
-                        children: N.intl.format(N.t.eE3oen, { count: o.length })
-                    })
-                })
-            ]
+                        variant: "text-sm/normal",
+                        children: N.intl.format(N.t.eE3oen, { count: o.length }),
+                    }),
+                }),
+            ],
         });
     },
     D = (e) => {
@@ -124,7 +124,7 @@ let R = 24,
             h = () => {
                 c.Z.addRelationship({
                     userId: i,
-                    context: { location: S.ZY5.DM_CHANNEL }
+                    context: { location: S.ZY5.DM_CHANNEL },
                 });
             },
             m = (0, r.jsx)(s.zx, {
@@ -132,7 +132,7 @@ let R = 24,
                 size: s.zx.Sizes.TINY,
                 color: s.zx.Colors.PRIMARY,
                 onClick: u,
-                children: N.intl.string(N.t.l4EmaW)
+                children: N.intl.string(N.t.l4EmaW),
             }),
             g = (0, f.n)({ userId: i });
         switch (n) {
@@ -145,10 +145,10 @@ let R = 24,
                                 className: C.action,
                                 size: s.zx.Sizes.TINY,
                                 onClick: h,
-                                children: g
+                                children: g,
                             }),
-                        m
-                    ]
+                        m,
+                    ],
                 });
             case S.OGo.FRIEND:
                 return (0, r.jsxs)(r.Fragment, {
@@ -158,10 +158,10 @@ let R = 24,
                             size: s.zx.Sizes.TINY,
                             onClick: d,
                             color: s.zx.Colors.PRIMARY,
-                            children: N.intl.string(N.t.cvSt1N)
+                            children: N.intl.string(N.t.cvSt1N),
                         }),
-                        m
-                    ]
+                        m,
+                    ],
                 });
             case S.OGo.BLOCKED:
                 return (0, r.jsx)(s.zx, {
@@ -169,32 +169,32 @@ let R = 24,
                     size: s.zx.Sizes.TINY,
                     onClick: _,
                     color: s.zx.Colors.PRIMARY,
-                    children: N.intl.string(N.t.XyHpKC)
+                    children: N.intl.string(N.t.XyHpKC),
                 });
             case S.OGo.PENDING_INCOMING:
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.Text, {
                             className: C.action,
-                            color: 'header-secondary',
-                            variant: 'text-sm/normal',
-                            children: N.intl.string(N.t.c2v5nJ)
+                            color: "header-secondary",
+                            variant: "text-sm/normal",
+                            children: N.intl.string(N.t.c2v5nJ),
                         }),
                         (0, r.jsx)(s.zx, {
                             className: C.action,
                             size: s.zx.Sizes.TINY,
                             onClick: h,
-                            children: N.intl.string(N.t['+WbSn5'])
+                            children: N.intl.string(N.t["+WbSn5"]),
                         }),
                         (0, r.jsx)(s.zx, {
                             className: C.action,
                             size: s.zx.Sizes.TINY,
                             color: s.zx.Colors.PRIMARY,
                             onClick: p,
-                            children: N.intl.string(N.t.rQSndn)
+                            children: N.intl.string(N.t.rQSndn),
                         }),
-                        m
-                    ]
+                        m,
+                    ],
                 });
             case S.OGo.PENDING_OUTGOING:
                 return (0, r.jsxs)(r.Fragment, {
@@ -203,10 +203,10 @@ let R = 24,
                             className: C.action,
                             size: s.zx.Sizes.TINY,
                             disabled: !0,
-                            children: N.intl.string(N.t.xMH6vL)
+                            children: N.intl.string(N.t.xMH6vL),
                         }),
-                        m
-                    ]
+                        m,
+                    ],
                 });
             default:
                 return null;
@@ -229,34 +229,34 @@ let R = 24,
                 isAcceptLoading: d,
                 isRejectLoading: f,
                 isOptimisticAccepted: _,
-                isOptimisticRejected: h
+                isOptimisticRejected: h,
             } = (0, p.m)({
                 user: v.default.getUser(n),
                 onError: o,
                 onAcceptSuccess: s,
-                onRejectSuccess: a
+                onRejectSuccess: a,
             }),
             m = _ || h,
             E = d || f || m;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.zxk, {
-                    variant: 'primary',
-                    size: 'sm',
+                    variant: "primary",
+                    size: "sm",
                     disabled: E,
                     onClick: () => c(t),
                     loading: d,
-                    text: N.intl.string(N.t.Kz8Pws)
+                    text: N.intl.string(N.t.Kz8Pws),
                 }),
                 (0, r.jsx)(l.zxk, {
-                    variant: 'secondary',
-                    size: 'sm',
+                    variant: "secondary",
+                    size: "sm",
                     disabled: E,
                     onClick: () => u(t),
                     loading: f,
-                    text: N.intl.string(N.t.B2nygY)
-                })
-            ]
+                    text: N.intl.string(N.t.B2nygY),
+                }),
+            ],
         });
     },
     x = (e) => {
@@ -273,41 +273,41 @@ let R = 24,
                           children: [
                               (0, r.jsx)(L, {
                                   channelId: n.id,
-                                  otherUserId: t
+                                  otherUserId: t,
                               }),
-                              (0, r.jsx)(m.Z, { channel: n })
-                          ]
+                              (0, r.jsx)(m.Z, { channel: n }),
+                          ],
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(D, {
                                   relationshipType: c,
                                   userId: t,
-                                  showingBanner: i
+                                  showingBanner: i,
                               }),
                               !i &&
                                   (0, r.jsx)(T.Z, {
                                       otherUserId: t,
                                       channel: n,
-                                      navigateAwayOnReportSuccess: d
-                                  })
-                          ]
+                                      navigateAwayOnReportSuccess: d,
+                                  }),
+                          ],
                       });
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: f ? C.mobileContainer : C.container,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: C.inline,
                     children: (0, r.jsx)(w, {
                         userId: t,
-                        channelId: n.id
-                    })
+                        channelId: n.id,
+                    }),
                 }),
-                !f && (0, r.jsx)('div', { className: C.divider }),
-                (0, r.jsx)('div', {
+                !f && (0, r.jsx)("div", { className: C.divider }),
+                (0, r.jsx)("div", {
                     className: C.inline,
-                    children: p
-                })
-            ]
+                    children: p,
+                }),
+            ],
         });
     };

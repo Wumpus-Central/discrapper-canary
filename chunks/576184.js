@@ -1,4 +1,4 @@
-(s.r(r), s.d(r, { default: () => g }));
+s.r(r), s.d(r, { default: () => g });
 var t = s(255367),
     o = s(73800),
     i = s(120356),
@@ -13,25 +13,25 @@ var t = s(255367),
     p = s(764406);
 let h = [
         {
-            id: 'discord',
+            id: "discord",
             getName: () => m.intl.string(m.t.uON9Ul),
-            url: (0, d.t3)()
+            url: (0, d.t3)(),
         },
         {
-            id: 'chrome',
-            getName: () => m.intl.string(m.t['80Ut6e']),
-            url: 'https://www.google.com/chrome/browser/desktop/'
+            id: "chrome",
+            getName: () => m.intl.string(m.t["80Ut6e"]),
+            url: "https://www.google.com/chrome/browser/desktop/",
         },
         {
-            id: 'firefox',
+            id: "firefox",
             getName: () => m.intl.string(m.t.LVbA5e),
-            url: 'https://www.mozilla.org/en-US/firefox/new/?scene=2'
-        }
+            url: "https://www.mozilla.org/en-US/firefox/new/?scene=2",
+        },
     ],
     _ = {
-        discord: 'browserDiscord',
-        firefox: 'browserFirefox',
-        chrome: 'browserChrome'
+        discord: "browserDiscord",
+        firefox: "browserFirefox",
+        chrome: "browserChrome",
     };
 class u extends o.Component {
     render() {
@@ -43,54 +43,54 @@ class u extends o.Component {
                     ? (0, t.jsx)(c.eee, {
                           className: p.btn,
                           href: o,
-                          children: m.intl.string(m.t['1WjMbG'])
+                          children: m.intl.string(m.t["1WjMbG"]),
                       })
                     : (0, t.jsx)(a.rU, {
                           className: p.btn,
                           to: b.Z5c.APPS,
-                          children: m.intl.string(m.t['1WjMbG'])
+                          children: m.intl.string(m.t["1WjMbG"]),
                       })),
-            (0, t.jsxs)('li', {
+            (0, t.jsxs)("li", {
                 className: p.browserItem,
                 children: [
-                    (0, t.jsx)('div', { className: n()(p.browserItemText, p.browser, p[_[r]]) }),
-                    (0, t.jsx)('div', {
+                    (0, t.jsx)("div", { className: n()(p.browserItemText, p.browser, p[_[r]]) }),
+                    (0, t.jsx)("div", {
                         className: p.browserItemText,
-                        children: s()
+                        children: s(),
                     }),
-                    e
-                ]
+                    e,
+                ],
             })
         );
     }
 }
 class x extends o.Component {
     componentDidMount() {
-        w.Z.launch('discord://' + this.props.location.pathname, (e) => {
-            new l.Z('UnsupportedBrowser').log('discord://', e);
+        w.Z.launch("discord://" + this.props.location.pathname, (e) => {
+            new l.Z("UnsupportedBrowser").log("discord://", e);
         });
     }
     render() {
         let e = h.map((e) => (0, t.jsx)(u, { browser: e }, e.id));
-        return (0, t.jsx)('div', {
+        return (0, t.jsx)("div", {
             className: p.unsupportedBrowser,
-            children: (0, t.jsxs)('div', {
+            children: (0, t.jsxs)("div", {
                 className: p.wrap,
                 children: [
                     (0, t.jsx)(c.H, {
                         className: p.title,
-                        children: m.intl.string(m.t['3h+n+/'])
+                        children: m.intl.string(m.t["3h+n+/"]),
                     }),
-                    (0, t.jsx)('p', {
+                    (0, t.jsx)("p", {
                         className: p.message,
-                        children: m.intl.string(m.t.yNDLDA)
+                        children: m.intl.string(m.t.yNDLDA),
                     }),
-                    (0, t.jsx)('ul', {
+                    (0, t.jsx)("ul", {
                         className: p.browserList,
-                        children: e
-                    })
-                ]
-            })
+                        children: e,
+                    }),
+                ],
+            }),
         });
     }
 }

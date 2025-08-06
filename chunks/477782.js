@@ -1,4 +1,4 @@
-(t.d(n, { default: () => f }), t(388685));
+t.d(n, { default: () => f }), t(388685);
 var a = t(255367),
     i = t(73800),
     o = t(755721),
@@ -10,27 +10,27 @@ var a = t(255367),
 function f(e) {
     let { onClose: n, transitionState: t } = e,
         f = (0, s.Dt)(),
-        [u, h] = i.useState('');
-    return (0, a.jsx)('form', {
+        [u, h] = i.useState("");
+    return (0, a.jsx)("form", {
         onSubmit: function (e) {
-            (e.preventDefault(), (0, l.CM)(u), n());
+            e.preventDefault(), (0, l.CM)(u), n();
         },
         children: (0, a.jsxs)(r.Y0X, {
             transitionState: t,
-            'aria-labelledby': f,
-            parentComponent: 'AddFavoriteCategoryModal',
+            "aria-labelledby": f,
+            parentComponent: "AddFavoriteCategoryModal",
             children: [
                 (0, a.jsxs)(r.hzk, {
                     children: [
                         (0, a.jsx)(r.X6q, {
                             id: f,
                             className: c.header,
-                            variant: 'heading-xl/semibold',
-                            children: d.intl.string(d.t['ISN+ND'])
+                            variant: "heading-xl/semibold",
+                            children: d.intl.string(d.t["ISN+ND"]),
                         }),
                         (0, a.jsx)(r.olH, {
                             onClick: n,
-                            className: c.closeButton
+                            className: c.closeButton,
                         }),
                         (0, a.jsx)(r.xJW, {
                             title: d.intl.string(d.t.OCAkGB),
@@ -41,30 +41,30 @@ function f(e) {
                                 maxLength: 100,
                                 placeholder: d.intl.string(d.t.eTVbt7),
                                 className: c.__invalid_inputWrapper,
-                                autoFocus: !0
-                            })
-                        })
-                    ]
+                                autoFocus: !0,
+                            }),
+                        }),
+                    ],
                 }),
                 (0, a.jsx)(r.mzw, {
                     children: (0, a.jsxs)(r.hE2, {
-                        direction: 'horizontal-reverse',
+                        direction: "horizontal-reverse",
                         children: [
                             (0, a.jsx)(r.zxk, {
-                                variant: 'primary',
-                                text: d.intl.string(d.t['ISN+ND']),
-                                type: 'submit',
-                                disabled: '' === u
+                                variant: "primary",
+                                text: d.intl.string(d.t["ISN+ND"]),
+                                type: "submit",
+                                disabled: "" === u,
                             }),
                             (0, a.jsx)(r.zxk, {
-                                variant: 'secondary',
-                                text: d.intl.string(d.t['ETE/oK']),
-                                onClick: n
-                            })
-                        ]
-                    })
-                })
-            ]
-        })
+                                variant: "secondary",
+                                text: d.intl.string(d.t["ETE/oK"]),
+                                onClick: n,
+                            }),
+                        ],
+                    }),
+                }),
+            ],
+        }),
     });
 }

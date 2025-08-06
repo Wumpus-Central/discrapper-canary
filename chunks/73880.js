@@ -1,7 +1,7 @@
 n.d(t, {
     Q8: () => d,
     jn: () => C,
-    lX: () => m
+    lX: () => m,
 });
 var r = n(255367);
 n(73800);
@@ -17,13 +17,13 @@ function d(e) {
     return (0, r.jsx)(i.iS, {
         className: o()(u.paragraphFieldBody, c),
         maxLength: s.RS,
-        value: null != t ? t : '',
-        placeholder: null != n ? n : '',
+        value: null != t ? t : "",
+        placeholder: null != n ? n : "",
         onChange: l,
         disabled: a,
         autoFocus: d,
         autosize: !0,
-        showRemainingCharacterCount: !a
+        showRemainingCharacterCount: !a,
     });
 }
 function C(e) {
@@ -33,8 +33,8 @@ function C(e) {
         children: (0, r.jsx)(d, {
             className: u.disabledFieldBackground,
             value: t.response,
-            disabled: !0
-        })
+            disabled: !0,
+        }),
     });
 }
 function m(e) {
@@ -45,7 +45,7 @@ function m(e) {
             value: t.response,
             onChange: l,
             autofocus: n,
-            placeholder: c.intl.string(c.t['Sqn+Wl'])
-        })
+            placeholder: c.intl.string(c.t["Sqn+Wl"]),
+        }),
     });
 }

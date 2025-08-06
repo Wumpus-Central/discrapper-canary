@@ -7,9 +7,9 @@ function o(e) {
         { isSharedCanvasEnabled: o } = r.Z.useExperiment(
             {
                 guildId: e.guild_id,
-                location: '6b64ff_1'
+                location: "6b64ff_1",
             },
-            { autoTrackExposure: t }
+            { autoTrackExposure: t },
         );
     return n || o;
 }

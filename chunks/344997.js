@@ -9,25 +9,27 @@ var i = n(913527),
     c = n(800530),
     u = n(388032),
     d = n(94740);
-let f = (e) => o()().diff(o().unix(e), 'days');
+let f = (e) => o()().diff(o().unix(e), "days");
 function _(e) {
     let { classificationId: t } = e,
         i = () => {
             (0, s.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('25183'), n.e('3940'), n.e('18831'), n.e('68464')]).then(n.bind(n, 41164));
+                let { default: e } = await Promise.all([n.e("25183"), n.e("3940"), n.e("18831"), n.e("68464")]).then(
+                    n.bind(n, 41164),
+                );
                 return (n) =>
                     (0, r.jsx)(e, {
                         classificationId: t,
                         source: c.s.SystemDM,
                         transitionState: n.transitionState,
-                        onClose: n.onClose
+                        onClose: n.onClose,
                     });
             });
         };
     return (0, r.jsx)(s.eee, {
         onClick: i,
         className: d.detailsButton,
-        children: u.intl.string(u.t.QsqdXF)
+        children: u.intl.string(u.t.QsqdXF),
     });
 }
 function p(e) {
@@ -35,7 +37,7 @@ function p(e) {
     return (0, r.jsx)(s.eee, {
         className: d.detailsButton,
         href: t,
-        children: u.intl.string(u.t['8/GdRE'])
+        children: u.intl.string(u.t["8/GdRE"]),
     });
 }
 function h(e) {
@@ -55,15 +57,15 @@ function m(e) {
     let { iconType: t } = e,
         n = {
             default: (0, r.jsx)(s.MqZ, {
-                size: 'xs',
-                color: a.Z.colors.TEXT_LINK.css
+                size: "xs",
+                color: a.Z.colors.TEXT_LINK.css,
             }),
-            danger: (0, r.jsx)(s.aNP, { color: a.Z.colors.STATUS_DANGER })
+            danger: (0, r.jsx)(s.aNP, { color: a.Z.colors.STATUS_DANGER }),
         };
     return null != t && t in n
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: d.icon,
-              children: n[t]
+              children: n[t],
           })
         : null;
 }
@@ -71,11 +73,11 @@ function g(e) {
     let { children: t, theme: n } = e,
         i = {
             default: d.defaultFooterContainer,
-            danger: d.dangerFooterContainer
+            danger: d.dangerFooterContainer,
         };
-    return (0, r.jsx)('div', {
-        className: i[null != n ? n : 'default'],
-        children: t
+    return (0, r.jsx)("div", {
+        className: i[null != n ? n : "default"],
+        children: t,
     });
 }
 function E(e) {
@@ -87,35 +89,37 @@ function E(e) {
         : (0, r.jsxs)(s.P3F, {
               className: d.safetyPolicyNoticeContainer,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: d.noticeContent,
                       children: [
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: d.headerRow,
                               children: [
                                   (0, r.jsx)(m, { iconType: i.icon }),
                                   (0, r.jsx)(s.Text, {
-                                      variant: 'text-md/semibold',
-                                      children: i.header
-                                  })
-                              ]
+                                      variant: "text-md/semibold",
+                                      children: i.header,
+                                  }),
+                              ],
                           }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: d.incidentTiming,
                               children: (0, r.jsx)(s.Text, {
-                                  variant: 'text-xs/medium',
-                                  children: u.intl.format(u.t.eevFb2, { daysAgo: f(null != (n = i.timestamp) ? n : 0) })
-                              })
+                                  variant: "text-xs/medium",
+                                  children: u.intl.format(u.t.eevFb2, {
+                                      daysAgo: f(null != (n = i.timestamp) ? n : 0),
+                                  }),
+                              }),
                           }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: d.noticeBody,
                               children: (0, r.jsx)(s.Text, {
-                                  variant: 'text-md/normal',
-                                  color: 'text-muted',
-                                  children: i.body
-                              })
-                          })
-                      ]
+                                  variant: "text-md/normal",
+                                  color: "text-muted",
+                                  children: i.body,
+                              }),
+                          }),
+                      ],
                   }),
                   (0, r.jsx)(g, {
                       theme: i.theme,
@@ -128,12 +132,12 @@ function E(e) {
                                         {
                                             ctaType: e,
                                             classificationId: i.classification_id,
-                                            learnMoreLink: i.learn_more_link
+                                            learnMoreLink: i.learn_more_link,
                                         },
-                                        e
-                                    )
-                                )
-                  })
-              ]
+                                        e,
+                                    ),
+                                ),
+                  }),
+              ],
           });
 }

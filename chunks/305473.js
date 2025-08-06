@@ -13,7 +13,7 @@ function a(e) {
               guild: t,
               incidentData: a,
               isUnderLockdown: s,
-              isRaidDetected: c
+              isRaidDetected: c,
           })
         : null;
 }

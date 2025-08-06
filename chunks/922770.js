@@ -1,6 +1,6 @@
 n.d(t, {
     $: () => E,
-    R: () => m
+    R: () => m,
 });
 var r = n(255367),
     i = n(73800),
@@ -16,7 +16,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,7 +68,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -78,93 +79,105 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var m = (function (e) {
-    return ((e.WANDERING_CUBES = 'wanderingCubes'), (e.CHASING_DOTS = 'chasingDots'), (e.PULSING_ELLIPSIS = 'pulsingEllipsis'), (e.SPINNING_CIRCLE = 'spinningCircle'), (e.SPINNING_CIRCLE_SIMPLE = 'spinningCircleSimple'), (e.LOW_MOTION = 'lowMotion'), e);
+    return (
+        (e.WANDERING_CUBES = "wanderingCubes"),
+        (e.CHASING_DOTS = "chasingDots"),
+        (e.PULSING_ELLIPSIS = "pulsingEllipsis"),
+        (e.SPINNING_CIRCLE = "spinningCircle"),
+        (e.SPINNING_CIRCLE_SIMPLE = "spinningCircleSimple"),
+        (e.LOW_MOTION = "lowMotion"),
+        e
+    );
 })({});
 function g(e) {
     switch (e) {
-        case 'wanderingCubes':
-        case 'chasingDots':
-            return 'lowMotion';
+        case "wanderingCubes":
+        case "chasingDots":
+            return "lowMotion";
         default:
             return e;
     }
 }
 function E(e) {
-    var { type: t = 'wanderingCubes', animated: n = !0, className: o, itemClassName: u, 'aria-label': f } = e,
-        h = p(e, ['type', 'animated', 'className', 'itemClassName', 'aria-label']);
+    var { type: t = "wanderingCubes", animated: n = !0, className: o, itemClassName: u, "aria-label": f } = e,
+        h = p(e, ["type", "animated", "className", "itemClassName", "aria-label"]);
     let { reducedMotion: m } = i.useContext(s.S),
         E = m.enabled ? g(t) : t;
-    if (((f = null != f ? f : l.intl.string(l.t.ZTNur6)), 'spinningCircle' === E || 'spinningCircleSimple' === E))
+    if (((f = null != f ? f : l.intl.string(l.t.ZTNur6)), "spinningCircle" === E || "spinningCircleSimple" === E))
         return (0, r.jsx)(
-            'div',
+            "div",
             _(
                 d(
                     {
                         className: a()(c.spinner, c[E], o, { [c.stopAnimation]: !n }),
-                        role: 'img',
-                        'aria-label': f
+                        role: "img",
+                        "aria-label": f,
                     },
-                    h
+                    h,
                 ),
                 {
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: c.spinningCircleInner,
-                        children: (0, r.jsxs)('svg', {
+                        children: (0, r.jsxs)("svg", {
                             className: c.circular,
-                            viewBox: '25 25 50 50',
+                            viewBox: "25 25 50 50",
                             children: [
-                                'spinningCircle' === E &&
+                                "spinningCircle" === E &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)('circle', {
+                                            (0, r.jsx)("circle", {
                                                 className: a()(c.path, c.path3, u),
-                                                cx: '50',
-                                                cy: '50',
-                                                r: '20'
+                                                cx: "50",
+                                                cy: "50",
+                                                r: "20",
                                             }),
-                                            (0, r.jsx)('circle', {
+                                            (0, r.jsx)("circle", {
                                                 className: a()(c.path, c.path2, u),
-                                                cx: '50',
-                                                cy: '50',
-                                                r: '20'
-                                            })
-                                        ]
+                                                cx: "50",
+                                                cy: "50",
+                                                r: "20",
+                                            }),
+                                        ],
                                     }),
-                                (0, r.jsx)('circle', {
+                                (0, r.jsx)("circle", {
                                     className: a()(c.path, u),
-                                    cx: '50',
-                                    cy: '50',
-                                    r: '20'
-                                })
-                            ]
-                        })
-                    })
-                }
-            )
+                                    cx: "50",
+                                    cy: "50",
+                                    r: "20",
+                                }),
+                            ],
+                        }),
+                    }),
+                },
+            ),
         );
     let b = a()(c.item, u);
     return (0, r.jsx)(
-        'span',
+        "span",
         _(
             d(
                 {
                     className: a()(c.spinner, o, { [c.stopAnimation]: !n }),
-                    role: 'img',
-                    'aria-label': f
+                    role: "img",
+                    "aria-label": f,
                 },
-                h
+                h,
             ),
             {
-                children: (0, r.jsxs)('span', {
+                children: (0, r.jsxs)("span", {
                     className: a()(c.inner, c[E]),
-                    children: [(0, r.jsx)('span', { className: b }), (0, r.jsx)('span', { className: b }), 'pulsingEllipsis' === E || 'lowMotion' === E ? (0, r.jsx)('span', { className: b }) : null]
-                })
-            }
-        )
+                    children: [
+                        (0, r.jsx)("span", { className: b }),
+                        (0, r.jsx)("span", { className: b }),
+                        "pulsingEllipsis" === E || "lowMotion" === E ? (0, r.jsx)("span", { className: b }) : null,
+                    ],
+                }),
+            },
+        ),
     );
 }
 E.Type = m;

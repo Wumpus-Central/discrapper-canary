@@ -3,5 +3,5 @@ var r = n(658538),
     a = String.prototype;
 e.exports = function (e) {
     var t = e.trimStart;
-    return 'string' == typeof e || e === a || (r(a, e) && t === a.trimStart) ? o : t;
+    return "string" == typeof e || e === a || (r(a, e) && t === a.trimStart) ? o : t;
 };

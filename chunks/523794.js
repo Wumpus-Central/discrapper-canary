@@ -1,4 +1,4 @@
-(e.d(i, { default: () => p }), e(539854));
+e.d(i, { default: () => p }), e(539854);
 var n = e(255367);
 e(73800);
 var r = e(667202),
@@ -23,15 +23,22 @@ function p(t) {
         L = E.intl.string(E.t.pqPQLy),
         m = f ? O < _.TU7 : (null == C ? void 0 : C.premiumTier) !== _.Eu4.TIER_3 && O <= _.eez,
         D = d.Z.can(o.yP, p);
-    e = f && (null == C ? void 0 : C.premiumTier) === _.Eu4.TIER_3 ? (O <= _.TU7 ? E.intl.string(E.t.tJmOu7) : E.intl.string(E.t['7FHbPD'])) : m ? E.intl.string(E.t['8/uDSE']) : E.intl.string(E.t['7FHbPD']);
+    e =
+        f && (null == C ? void 0 : C.premiumTier) === _.Eu4.TIER_3
+            ? O <= _.TU7
+                ? E.intl.string(E.t.tJmOu7)
+                : E.intl.string(E.t["7FHbPD"])
+            : m
+              ? E.intl.string(E.t["8/uDSE"])
+              : E.intl.string(E.t["7FHbPD"]);
     let h = () => {
-            (S(),
+            S(),
                 s.default.track(_.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: p.guild_id,
                     type: I.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: D,
-                    action: I.T7.DISMISS
-                }));
+                    action: I.T7.DISMISS,
+                });
         },
         v = u.Z.getMutableParticipants(p.id, c.pV.SPEAKER).filter((t) => t.type === c.Ui.VOICE).length,
         M = u.Z.getParticipantCount(p.id, c.pV.AUDIENCE);
@@ -39,7 +46,7 @@ function p(t) {
         guild_id: p.guild_id,
         type: I.cd.VIDEO_STAGE_LIMIT,
         is_moderator: D,
-        listener_count: v + M
+        listener_count: v + M,
     });
     let P = [];
     return (
@@ -47,31 +54,31 @@ function p(t) {
             ? P.push(
                   {
                       text: E.intl.string(E.t.f3Pet7),
-                      variant: 'secondary',
-                      onClick: h
+                      variant: "secondary",
+                      onClick: h,
                   },
                   {
                       text: E.intl.string(E.t.Uj0md3),
-                      variant: 'expressive',
+                      variant: "expressive",
                       onClick: () => {
-                          (S(),
+                          S(),
                               (0, a.f)({
                                   guildId: p.guild_id,
-                                  location: { section: _.jXE.STAGE_VIDEO_LIMIT }
+                                  location: { section: _.jXE.STAGE_VIDEO_LIMIT },
                               }),
                               s.default.track(_.rMx.BOOSTING_UPSELL_CLICKED, {
                                   guild_id: p.guild_id,
                                   type: I.cd.VIDEO_STAGE_LIMIT,
                                   is_moderator: D,
-                                  action: I.T7.BOOST
-                              }));
-                      }
-                  }
+                                  action: I.T7.BOOST,
+                              });
+                      },
+                  },
               )
             : P.push({
-                  text: E.intl.string(E.t['NX+WJC']),
-                  variant: 'primary',
-                  onClick: h
+                  text: E.intl.string(E.t["NX+WJC"]),
+                  variant: "primary",
+                  onClick: h,
               }),
         (0, n.jsx)(r.I, {
             transitionState: T,
@@ -79,10 +86,10 @@ function p(t) {
             title: L,
             subtitle: e,
             graphic: {
-                type: 'image',
-                src: g
+                type: "image",
+                src: g,
             },
-            actions: P
+            actions: P,
         })
     );
 }

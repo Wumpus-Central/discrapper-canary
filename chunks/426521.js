@@ -1,4 +1,4 @@
-(n.d(t, { U: () => G }), n(35282));
+n.d(t, { U: () => G }), n(35282);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -35,38 +35,41 @@ function D(e) {
     var t, n, i, l, s;
     let { item: c } = e,
         u = null == (t = c.message) ? void 0 : t.content;
-    if (null == u) return (0, r.jsx)('div', {});
-    let d = null != (s = b.default.getUser(null == (i = c.message) || null == (n = i.author) ? void 0 : n.id)) ? s : new m.Z(null == (l = c.message) ? void 0 : l.author),
+    if (null == u) return (0, r.jsx)("div", {});
+    let d =
+            null != (s = b.default.getUser(null == (i = c.message) || null == (n = i.author) ? void 0 : n.id))
+                ? s
+                : new m.Z(null == (l = c.message) ? void 0 : l.author),
         p = h.Z.parse(u);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: T.messagePreviewContainer,
         children: [
             (0, r.jsx)(a.Z, {
                 user: d,
-                size: o.EFr.SIZE_24
+                size: o.EFr.SIZE_24,
             }),
             (0, r.jsx)(o.Text, {
                 className: T.messagePreviewText,
-                variant: 'text-sm/normal',
+                variant: "text-sm/normal",
                 lineClamp: 2,
-                children: p
-            })
-        ]
+                children: p,
+            }),
+        ],
     });
 }
 function L(e) {
     let {
-        item: { callout: t }
+        item: { callout: t },
     } = e;
     if (null == t) return null;
     let n = h.Z.parse(t);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: T.calloutContainer,
         children: (0, r.jsx)(o.Text, {
-            variant: 'text-sm/normal',
+            variant: "text-sm/normal",
             lineClamp: 2,
-            children: n
-        })
+            children: n,
+        }),
     });
 }
 function M(e) {
@@ -75,28 +78,28 @@ function M(e) {
         i = Z.intl.string(Z.t.SJTHJS);
     return (
         t.completed && ((n = A), (i = Z.intl.string(Z.t.f6RTAA))),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: T.lifecycleContainer,
             children: [
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     className: T.checkbox,
-                    alt: '',
-                    src: n
+                    alt: "",
+                    src: n,
                 }),
                 (0, r.jsx)(o.Text, {
                     className: T.lifecycleText,
-                    variant: 'text-xs/bold',
-                    color: 'header-secondary',
-                    children: i
-                })
-            ]
+                    variant: "text-xs/bold",
+                    color: "header-secondary",
+                    children: i,
+                }),
+            ],
         })
     );
 }
 function k(e) {
     let { applicationId: t } = e,
         n = (0, l.e7)([u.Z], () => u.Z.getApplication(t));
-    return null == n ? (0, r.jsx)('div', {}) : (0, r.jsx)(p.Z, { application: n }, n.id);
+    return null == n ? (0, r.jsx)("div", {}) : (0, r.jsx)(p.Z, { application: n }, n.id);
 }
 let U = i.memo(function (e) {
         var t;
@@ -106,7 +109,7 @@ let U = i.memo(function (e) {
             g = i.useCallback(async () => {
                 if ((p || (0, C.wt)(l), null != l.item_enum && l.item_enum === v.AM.FIND_FRIENDS))
                     return void (0, o.ZDy)(async () => {
-                        let { default: e } = await n.e('6074').then(n.bind(n, 443189));
+                        let { default: e } = await n.e("6074").then(n.bind(n, 443189));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
@@ -114,27 +117,27 @@ let U = i.memo(function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                ((r = n[t]),
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = r));
-                                            }));
+                                                        : (e[t] = r);
+                                            });
                                     }
                                     return e;
-                                })({ source: 'Notification Center' }, t)
+                                })({ source: "Notification Center" }, t),
                             );
                     });
                 if (null != l.deeplink) {
@@ -144,13 +147,13 @@ let U = i.memo(function (e) {
                         r = t.path;
                     if (null == n || null == r) return;
                     if (y.Z.isDiscordHostname(n)) {
-                        let t = r.match('^/users/(\\d+)');
+                        let t = r.match("^/users/(\\d+)");
                         if (null != t && 2 === t.length) {
                             var e;
                             (0, f.openUserProfileModal)({
                                 userId: t[1],
                                 messageId: null == (e = l.message) ? void 0 : e.id,
-                                sourceAnalyticsLocations: u
+                                sourceAnalyticsLocations: u,
                             });
                         } else await (0, d.Z)(r);
                     }
@@ -158,7 +161,7 @@ let U = i.memo(function (e) {
                         action_type: v.ud.CLICKED,
                         notification_center_id: l.id,
                         item_type: l.type,
-                        acked: p
+                        acked: p,
                     });
                 }
             }, [l, p, u]),
@@ -169,12 +172,12 @@ let U = i.memo(function (e) {
               null != l.other_user &&
               (m = (0, r.jsx)(P.Z, {
                   userId: l.other_user.id,
-                  applicationId: l.applicationId
+                  applicationId: l.applicationId,
               }));
         let b = null != l.local_id,
             S = (0, E.Z)({
                 item: l,
-                renderApplication: (e) => (0, r.jsx)(k, { applicationId: e })
+                renderApplication: (e) => (0, r.jsx)(k, { applicationId: e }),
             }),
             { emoji_id: Z, emoji_name: A } = l,
             R =
@@ -182,43 +185,45 @@ let U = i.memo(function (e) {
                     ? (0, r.jsx)(s.Z, {
                           className: T.emoji,
                           emojiId: Z,
-                          emojiName: A
+                          emojiName: A,
                       })
                     : null;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: T.row,
             children: [
                 (0, r.jsxs)(o.kL8, {
                     className: T.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': S,
+                    "aria-label": S,
                     onClick: g,
                     children: [
-                        p ? null : (0, r.jsx)('div', { className: T.unread }),
+                        p ? null : (0, r.jsx)("div", { className: T.unread }),
                         (0, r.jsx)(I.U, { item: l }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: T.body,
                             children: [
-                                'lifecycle_item' === l.type && null != l.item_enum && (0, r.jsx)(M, { item: l }),
+                                "lifecycle_item" === l.type && null != l.item_enum && (0, r.jsx)(M, { item: l }),
                                 (0, r.jsxs)(o.Text, {
-                                    variant: 'text-md/normal',
-                                    color: p ? 'text-muted' : 'text-default',
-                                    children: ['string' != typeof S ? S : h.Z.parse(S), R]
+                                    variant: "text-md/normal",
+                                    color: p ? "text-muted" : "text-default",
+                                    children: ["string" != typeof S ? S : h.Z.parse(S), R],
                                 }),
-                                (null == (t = l.message) ? void 0 : t.content) != null ? (0, r.jsx)(D, { item: l }) : null,
+                                (null == (t = l.message) ? void 0 : t.content) != null
+                                    ? (0, r.jsx)(D, { item: l })
+                                    : null,
                                 null != l.callout ? (0, r.jsx)(L, { item: l }) : null,
                                 (0, r.jsx)(o.Text, {
-                                    variant: 'text-xs/medium',
-                                    color: p ? 'text-muted' : 'header-secondary',
-                                    children: (0, j.a3)(_.default.extractTimestamp(l.id))
+                                    variant: "text-xs/medium",
+                                    color: p ? "text-muted" : "header-secondary",
+                                    children: (0, j.a3)(_.default.extractTimestamp(l.id)),
                                 }),
-                                m
-                            ]
-                        })
-                    ]
+                                m,
+                            ],
+                        }),
+                    ],
                 }),
-                b ? null : (0, r.jsx)(N.z, { item: l })
-            ]
+                b ? null : (0, r.jsx)(N.z, { item: l }),
+            ],
         });
     }),
     G = i.memo(function (e) {
@@ -232,11 +237,11 @@ let U = i.memo(function (e) {
                         U,
                         {
                             item: e,
-                            ackedBeforeId: n
+                            ackedBeforeId: n,
                         },
-                        e.id
-                    )
-                )
+                        e.id,
+                    ),
+                ),
             })
         );
     });

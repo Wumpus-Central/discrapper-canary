@@ -13,24 +13,24 @@ function g(t) {
     for (var n = 1; n < arguments.length; n++) {
         var e = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(e);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(e).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(e, t).enumerable;
-                })
+                }),
             )),
             l.forEach(function (n) {
                 var l;
-                ((l = e[n]),
+                (l = e[n]),
                     n in t
                         ? Object.defineProperty(t, n, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (t[n] = l));
-            }));
+                        : (t[n] = l);
+            });
     }
     return t;
 }
@@ -65,26 +65,31 @@ function b(t) {
         x = (t) => {
             (null == p || t) && !j
                 ? (0, r.ZDy)(async () => {
-                      let { default: t } = await Promise.all([e.e('49049'), e.e('82758'), e.e('58023'), e.e('82107')]).then(e.bind(e, 779250));
+                      let { default: t } = await Promise.all([
+                          e.e("49049"),
+                          e.e("82758"),
+                          e.e("58023"),
+                          e.e("82107"),
+                      ]).then(e.bind(e, 779250));
                       return (e) =>
                           (0, l.jsx)(
                               t,
                               v(g({}, e), {
                                   guildScheduledEventId: n,
-                                  guildId: b.id
-                              })
+                                  guildId: b.id,
+                              }),
                           );
                   }, m)
                 : null != p &&
                   (0, r.ZDy)(async () => {
-                      let { default: t } = await e.e('27919').then(e.bind(e, 379038));
+                      let { default: t } = await e.e("27919").then(e.bind(e, 379038));
                       return (n) =>
                           (0, l.jsx)(
                               t,
                               v(g({}, n), {
                                   guildEvent: y,
-                                  recurrenceId: p
-                              })
+                                  recurrenceId: p,
+                              }),
                           );
                   }, m);
         };
@@ -100,15 +105,15 @@ function b(t) {
                         id: d.intl.string(d.t.wmVmXF),
                         label: d.intl.string(d.t.wmVmXF),
                         action: () => x(!1),
-                        disabled: (null == O ? void 0 : O.is_canceled) || P.startTime.getTime() < Date.now()
+                        disabled: (null == O ? void 0 : O.is_canceled) || P.startTime.getTime() < Date.now(),
                     }),
                     (0, l.jsx)(r.sNh, {
                         id: d.intl.string(d.t.BW1Qoq),
                         label: d.intl.string(d.t.BW1Qoq),
                         action: () => x(!0),
-                        disabled: new Date(y.scheduled_start_time).getTime() < Date.now()
-                    })
-                ]
-            })
+                        disabled: new Date(y.scheduled_start_time).getTime() < Date.now(),
+                    }),
+                ],
+            }),
     });
 }

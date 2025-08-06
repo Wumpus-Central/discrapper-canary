@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r,
     i = n(255367),
     o = n(73800),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,29 +25,45 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let p = 100,
-    h = 'search';
+    h = "search";
 class m extends (r = o.Component) {
     render() {
-        let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: o, className: a, onChange: f, onFocus: _, onBlur: m, onKeyPress: g, autoComplete: E, forwardedRef: b, closeIconClassName: y, searchIconClassName: O, cta: v } = this.props,
+        let {
+                autoFocus: e,
+                label: t,
+                placeholder: n,
+                searchTerm: r,
+                inputClassName: o,
+                className: a,
+                onChange: f,
+                onFocus: _,
+                onBlur: m,
+                onKeyPress: g,
+                autoComplete: E,
+                forwardedRef: b,
+                closeIconClassName: y,
+                searchIconClassName: O,
+                cta: v,
+            } = this.props,
             I = null != r && r.length > 0,
             T = null != b ? b : this._textInputRef;
         return (0, i.jsx)(c.tEY, {
             focusTarget: T,
             ringTarget: this._containerRef,
-            children: (0, i.jsxs)('div', {
+            children: (0, i.jsxs)("div", {
                 className: s()(d.searchBox, a),
                 ref: this._containerRef,
                 children: [
@@ -62,51 +78,51 @@ class m extends (r = o.Component) {
                         onFocus: _,
                         onBlur: m,
                         onKeyPress: g,
-                        value: I ? r : '',
+                        value: I ? r : "",
                         placeholder: n,
                         autoFocus: e,
-                        'aria-label': t,
-                        autoComplete: E ? 'on' : 'off'
+                        "aria-label": t,
+                        autoComplete: E ? "on" : "off",
                     }),
                     null != v
                         ? (0, i.jsx)(c.Text, {
-                              color: 'text-muted',
-                              variant: 'text-xs/normal',
+                              color: "text-muted",
+                              variant: "text-xs/normal",
                               className: d.cta,
-                              children: v
+                              children: v,
                           })
                         : null,
                     I
                         ? (0, i.jsx)(c.P3F, {
                               onClick: this.handleClear,
                               className: d.clear,
-                              'aria-label': u.intl.string(u.t['78fJND']),
+                              "aria-label": u.intl.string(u.t["78fJND"]),
                               children: (0, i.jsx)(c.k$p, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: s()(d.clearIcon, y)
-                              })
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: s()(d.clearIcon, y),
+                              }),
                           })
                         : (0, i.jsx)(c._Ve, {
-                              size: 'md',
-                              color: 'currentColor',
+                              size: "md",
+                              color: "currentColor",
                               className: s()(d.searchIcon, O),
-                              'aria-label': u.intl.string(u.t['5h0QOD'])
-                          })
-                ]
-            })
+                              "aria-label": u.intl.string(u.t["5h0QOD"]),
+                          }),
+                ],
+            }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            f(this, '_textInputRef', o.createRef()),
-            f(this, '_containerRef', o.createRef()),
-            f(this, 'handleClear', () => {
+        super(...e),
+            f(this, "_textInputRef", o.createRef()),
+            f(this, "_containerRef", o.createRef()),
+            f(this, "handleClear", () => {
                 let { onClear: e, forwardedRef: t } = this.props,
                     { current: n } = null != t ? t : this._textInputRef;
-                (null != n && n.focus(), null != e && e());
-            }));
+                null != n && n.focus(), null != e && e();
+            });
     }
 }
-f(m, 'defaultProps', { autoComplete: !1 });
+f(m, "defaultProps", { autoComplete: !1 });
 let g = o.forwardRef((e, t) => (0, i.jsx)(m, _({ forwardedRef: t }, e)));

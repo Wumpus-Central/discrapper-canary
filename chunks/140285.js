@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -10,7 +10,7 @@ var i = n(481060),
     d = n(388032),
     u = n(301849);
 function m(e) {
-    let { 'aria-labelledby': t, disabled: n = !1 } = e,
+    let { "aria-labelledby": t, disabled: n = !1 } = e,
         { editStateId: m, guildId: g } = (0, l.N)(),
         [p, h] = s.GP(m, g);
     return (0, r.jsx)(i.FXm, {
@@ -24,20 +24,20 @@ function m(e) {
         },
         options: [
             {
-                name: d.intl.string(d.t['vs2T+P']),
+                name: d.intl.string(d.t["vs2T+P"]),
                 value: a.I.SOME_CHANNELS_ACCESS,
                 icon: (0, i.GSL)(c.Z),
-                radioBarClassName: u.__invalid_channelAccessSelectRadioBar
+                radioBarClassName: u.__invalid_channelAccessSelectRadioBar,
             },
             {
                 name: d.intl.string(d.t.l4Tr7e),
                 value: a.I.ALL_CHANNELS_ACCESS,
                 icon: (0, i.GSL)(o.Z),
-                radioBarClassName: u.__invalid_channelAccessSelectRadioBar
-            }
+                radioBarClassName: u.__invalid_channelAccessSelectRadioBar,
+            },
         ],
         value: p,
-        'aria-labelledby': t,
-        disabled: n
+        "aria-labelledby": t,
+        disabled: n,
     });
 }

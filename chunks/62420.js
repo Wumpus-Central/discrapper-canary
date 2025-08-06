@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(539854), n(388685));
+n.d(t, { Z: () => s }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -10,7 +10,7 @@ function s(e) {
     let t = (0, a.Mt)(),
         n = (0, a.s4)(e.id),
         s = (0, a.zv)(),
-        { isFavoritesPerk: u } = (0, o.z)('useChannelMoveToCategory');
+        { isFavoritesPerk: u } = (0, o.z)("useChannelMoveToCategory");
     if (__OVERLAY__ || !t || null == n || !u) return null;
     let [d, f] = (function (e) {
         let t = [],
@@ -24,16 +24,16 @@ function s(e) {
     return null == d && 0 === f.length
         ? null
         : (0, r.jsxs)(i.sNh, {
-              id: 'move-to-category',
+              id: "move-to-category",
               label: c.intl.string(c.t.FAplmp),
               children: [
                   null != d &&
                       (0, r.jsx)(i.kSQ, {
                           children: (0, r.jsx)(i.sNh, {
-                              id: 'favorite-uncategorized',
+                              id: "favorite-uncategorized",
                               label: d.name,
-                              action: () => O(d.id)
-                          })
+                              action: () => O(d.id),
+                          }),
                       }),
                   f.length > 0 &&
                       (0, r.jsx)(i.kSQ, {
@@ -42,14 +42,14 @@ function s(e) {
                               return (0, r.jsx)(
                                   i.sNh,
                                   {
-                                      id: 'favorite-'.concat(t),
+                                      id: "favorite-".concat(t),
                                       label: n,
-                                      action: () => O(t)
+                                      action: () => O(t),
                                   },
-                                  t
+                                  t,
                               );
-                          })
-                      })
-              ]
+                          }),
+                      }),
+              ],
           });
 }

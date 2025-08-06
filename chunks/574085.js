@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685), n(953529), n(539854));
+n.d(t, { Z: () => p }), n(388685), n(953529), n(539854);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -13,24 +13,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -64,9 +64,9 @@ function p() {
                 emoji_id: l,
                 emoji_name: a,
                 ref_type: d.Qs.INTANGIBLE,
-                ref_id: void 0
+                ref_id: void 0,
             };
-        (null != t ? (s[t] = o) : s.push(o), p(s));
+        null != t ? (s[t] = o) : s.push(o), p(s);
     }
     let f = (0, l.mY)();
     return (0, r.jsxs)(r.Fragment, {
@@ -84,18 +84,18 @@ function p() {
                                 onDelete: () =>
                                     (function (e) {
                                         let t = [...n];
-                                        (t.splice(e, 1), p(t));
-                                    })(e)
-                            })
-                        )
+                                        t.splice(e, 1), p(t);
+                                    })(e),
+                            }),
+                        ),
                     );
                 },
                 onMove: function (e, t) {
                     let r = [...n],
                         [i] = r.splice(e, 1);
-                    (r.splice(t, 0, i), p(r));
+                    r.splice(t, 0, i), p(r);
                 },
-                guildId: t
+                guildId: t,
             }),
             n.length > 0 ? (0, r.jsx)(i.LZC, { size: 8 }) : null,
             (0, r.jsx)(c.s, {
@@ -105,14 +105,14 @@ function p() {
                             o.DI,
                             g(m({}, e), {
                                 guildId: t,
-                                onSave: (e) => h(e)
-                            })
-                        )
+                                onSave: (e) => h(e),
+                            }),
+                        ),
                     );
                 },
                 disabled: f,
-                children: u.intl.string(u.t['6dwqo6'])
-            })
-        ]
+                children: u.intl.string(u.t["6dwqo6"]),
+            }),
+        ],
     });
 }

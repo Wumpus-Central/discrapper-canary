@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     BK: () => g,
     CX: () => O,
     lD: () => y,
     mm: () => b,
     nX: () => E,
-    vV: () => m
+    vV: () => m,
 }),
     n(997841),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(271383),
     o = n(430824),
@@ -43,7 +43,10 @@ function h(e) {
 let m = (e, t) => {
     let n = (0, r.e7)([i.ZP], () => {
             var n, r;
-            return (0, l.yE)(null != (r = null == (n = i.ZP.getMember(e, t)) ? void 0 : n.flags) ? r : 0, u.q.DID_REJOIN);
+            return (0, l.yE)(
+                null != (r = null == (n = i.ZP.getMember(e, t)) ? void 0 : n.flags) ? r : 0,
+                u.q.DID_REJOIN,
+            );
         }),
         a = (0, r.e7)([o.Z], () => {
             let t = o.Z.getGuild(e);

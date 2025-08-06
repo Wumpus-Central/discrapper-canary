@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685));
+n.d(t, { Z: () => R }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,7 +72,7 @@ function g(e) {
     for (let e of t)
         p[e.id] = {
             loaded: !0,
-            firstMessage: null
+            firstMessage: null,
         };
     for (let e of n) b(e.channel_id, e);
 }
@@ -84,27 +84,29 @@ function b(e, t) {
     let n = null == t ? null : (0, a.e5)(t);
     p[e] = {
         loaded: !0,
-        firstMessage: n
+        firstMessage: n,
     };
 }
 function y(e) {
     if (e.message.id !== e.message.channel_id) return !1;
     let t = p[c.default.castMessageIdAsChannelId(e.message.id)];
     if (null == t || null == t.firstMessage) return !1;
-    p[c.default.castMessageIdAsChannelId(e.message.id)] = _(d({}, t), { firstMessage: (0, a.wi)(t.firstMessage, e.message) });
+    p[c.default.castMessageIdAsChannelId(e.message.id)] = _(d({}, t), {
+        firstMessage: (0, a.wi)(t.firstMessage, e.message),
+    });
 }
 function O(e) {
     if (e.id !== c.default.castChannelIdAsMessageId(e.channelId)) return !1;
     p[e.channelId] = {
         loaded: !0,
-        firstMessage: null
+        firstMessage: null,
     };
 }
 function v(e) {
     if (null != p[e.channel.id] || !s.Z.isSubscribedToThreads(e.channel.guild_id)) return !1;
     p[e.channel.id] = {
         loaded: !0,
-        firstMessage: null
+        firstMessage: null,
     };
 }
 function I(e) {
@@ -114,7 +116,10 @@ function I(e) {
     let u = l.default.getCurrentUser(),
         f = null != u && u.id === i;
     if (a && !f) return !1;
-    ((p[n] = d({}, c)), 'MESSAGE_REACTION_ADD' === t ? (p[n].firstMessage = c.firstMessage.addReaction(o, f, e.colors, s)) : (p[n].firstMessage = c.firstMessage.removeReaction(o, f, s)));
+    (p[n] = d({}, c)),
+        "MESSAGE_REACTION_ADD" === t
+            ? (p[n].firstMessage = c.firstMessage.addReaction(o, f, e.colors, s))
+            : (p[n].firstMessage = c.firstMessage.removeReaction(o, f, s));
 }
 function T(e) {
     let { channelId: t, messageId: n, reactions: r } = e,
@@ -128,7 +133,7 @@ function S(e) {
     let { channelId: t, messageId: n } = e,
         r = p[t];
     if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
-    p[t] = _(d({}, r), { firstMessage: r.firstMessage.set('reactions', []) });
+    p[t] = _(d({}, r), { firstMessage: r.firstMessage.set("reactions", []) });
 }
 function A(e) {
     let { channelId: t, messageId: n, emoji: r } = e,
@@ -143,7 +148,7 @@ function N(e) {
         r.id === c.default.castChannelIdAsMessageId(t) &&
         (p[t] = {
             loaded: !0,
-            firstMessage: (0, a.e5)(r)
+            firstMessage: (0, a.e5)(r),
         });
 }
 class C extends (r = i.ZP.Store) {
@@ -159,13 +164,13 @@ class C extends (r = i.ZP.Store) {
             e in p ||
                 (p[e] = {
                     loaded: !1,
-                    firstMessage: null
+                    firstMessage: null,
                 }),
             p[e]
         );
     }
 }
-u(C, 'displayName', 'ForumPostMessagesStore');
+u(C, "displayName", "ForumPostMessagesStore");
 let R = new C(o.Z, {
     CONNECTION_OPEN: h,
     MESSAGE_CREATE: E,
@@ -180,5 +185,5 @@ let R = new C(o.Z, {
     LOAD_FORUM_POSTS: m,
     LOAD_THREADS_SUCCESS: g,
     LOAD_ARCHIVED_THREADS_SUCCESS: g,
-    LOAD_MESSAGES_SUCCESS: N
+    LOAD_MESSAGES_SUCCESS: N,
 });

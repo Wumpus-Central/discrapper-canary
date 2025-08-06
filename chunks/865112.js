@@ -3,7 +3,7 @@ n.d(t, {
     VH: () => y,
     Vi: () => E,
     Vu: () => S,
-    q7: () => v
+    q7: () => v,
 });
 var r = n(692547),
     i = n(497089),
@@ -26,7 +26,7 @@ let _ = {
         FRIENDS: u,
         SHARE_SCREEN: b,
         NEW_MESSAGE: g,
-        GAME_RELATIONSHIP: h
+        GAME_RELATIONSHIP: h,
     },
     y = {
         MISSED_MESSAGES: f,
@@ -37,74 +37,74 @@ let _ = {
         UPDATE_PROFILE: O,
         FIND_FRIENDS: o,
         ADD_FRIEND: o,
-        FIRST_MESSAGE: m
+        FIRST_MESSAGE: m,
     },
     C = (e) => {
         switch (e.item_enum) {
             case i.AM.ADD_FRIEND:
-                return 'ADD_FRIEND';
+                return "ADD_FRIEND";
             case i.AM.FIND_FRIENDS:
-                return 'FIND_FRIENDS';
+                return "FIND_FRIENDS";
             case i.AM.FIRST_MESSAGE:
-                return 'FIRST_MESSAGE';
+                return "FIRST_MESSAGE";
             case i.AM.UPDATE_PROFILE:
-                return 'UPDATE_PROFILE';
+                return "UPDATE_PROFILE";
             default:
-                return 'NOTIFICATION_CENTER';
+                return "NOTIFICATION_CENTER";
         }
     },
     v = (e) => {
         switch (e.type) {
-            case 'lifecycle_item':
+            case "lifecycle_item":
                 return C(e);
-            case 'missed_messages':
-                return 'MISSED_MESSAGES';
-            case 'friend_request_reminder':
-                return 'FRIEND_REQUEST_REMINDER';
-            case 'scheduled_guild_event_started':
-                return 'SCHEDULED_GUILD_EVENT';
-            case 'top_messages':
-                return 'TOP_MESSAGES';
+            case "missed_messages":
+                return "MISSED_MESSAGES";
+            case "friend_request_reminder":
+                return "FRIEND_REQUEST_REMINDER";
+            case "scheduled_guild_event_started":
+                return "SCHEDULED_GUILD_EVENT";
+            case "top_messages":
+                return "TOP_MESSAGES";
             default:
-                return 'NOTIFICATION_CENTER';
+                return "NOTIFICATION_CENTER";
         }
     },
-    j = (e) => ('icHighlight' === e ? 'TOP_MESSAGES' : 'NOTIFICATION_CENTER'),
+    j = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
     E = (e) => {
         switch (e) {
             case i.DY.GO_LIVE_PUSH:
                 return {
                     icon: _.SHARE_SCREEN,
-                    color: r.Z.colors.BACKGROUND_ACCENT
+                    color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             case i.DY.FRIEND_REQUEST_ACCEPTED:
             case i.DY.GAME_FRIEND_REQUEST_ACCEPTED:
                 return {
                     icon: _.CHECKED,
-                    color: r.Z.colors.STATUS_POSITIVE_BACKGROUND
+                    color: r.Z.colors.STATUS_POSITIVE_BACKGROUND,
                 };
             case i.DY.FRIEND_REQUEST_PENDING:
             case i.DY.FRIEND_SUGGESTION_CREATED:
                 return {
                     icon: _.FRIENDS,
-                    color: r.Z.colors.BACKGROUND_ACCENT
+                    color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             case i.DY.DM_FRIEND_NUDGE:
                 return {
                     icon: _.NEW_MESSAGE,
-                    color: r.Z.colors.BACKGROUND_ACCENT
+                    color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             case i.O7.INCOMING_FRIEND_REQUESTS:
             case i.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
                 return {
                     icon: _.FRIENDS,
-                    color: r.Z.colors.BACKGROUND_ACCENT
+                    color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             case i.O7.INCOMING_GAME_FRIEND_REQUESTS:
             case i.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED:
                 return {
                     icon: _.GAME_RELATIONSHIP,
-                    color: r.Z.colors.BACKGROUND_ACCENT
+                    color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             default:
                 return null;

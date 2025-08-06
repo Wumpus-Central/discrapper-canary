@@ -1,4 +1,4 @@
-(r.d(t, { N: () => b }), r(388685), r(642613), r(290780));
+r.d(t, { N: () => b }), r(388685), r(642613), r(290780);
 var n = r(73800),
     l = r(392711),
     a = r.n(l),
@@ -36,7 +36,10 @@ let b = (e, t) => {
                     : m === i.m.PRICE_LOW_TO_HIGH
                       ? (e = [...S].sort((e, r) => {
                             var n, l, a, i;
-                            return (null != (a = null == (n = (0, u.Vw)(e, t, !1)) ? void 0 : n.amount) ? a : 0) - (null != (i = null == (l = (0, u.Vw)(r, t, !1)) ? void 0 : l.amount) ? i : 0);
+                            return (
+                                (null != (a = null == (n = (0, u.Vw)(e, t, !1)) ? void 0 : n.amount) ? a : 0) -
+                                (null != (i = null == (l = (0, u.Vw)(r, t, !1)) ? void 0 : l.amount) ? i : 0)
+                            );
                         }))
                       : m === i.m.RECOMMENDED
                         ? (e = E(l))
@@ -47,7 +50,7 @@ let b = (e, t) => {
             );
         }, [m, y, S, t, E, l, b, C]),
         j = n.useCallback(() => {
-            (O((e) => e + 1), v(i.m.RANDOM));
+            O((e) => e + 1), v(i.m.RANDOM);
         }, []);
     return {
         sortType: m,
@@ -57,27 +60,27 @@ let b = (e, t) => {
             let e = [
                 {
                     value: i.m.POPULAR,
-                    label: h.intl.string(h.t['1wQj4O'])
+                    label: h.intl.string(h.t["1wQj4O"]),
                 },
                 {
                     value: i.m.RECENT,
-                    label: h.intl.string(h.t['6NZpt7'])
+                    label: h.intl.string(h.t["6NZpt7"]),
                 },
                 {
                     value: i.m.PRICE_LOW_TO_HIGH,
-                    label: h.intl.string(h.t.RTG4yM)
-                }
+                    label: h.intl.string(h.t.RTG4yM),
+                },
             ];
             return (
                 _ &&
                     e.unshift({
                         value: i.m.RECOMMENDED,
-                        label: h.intl.string(h.t.JrlKlp)
+                        label: h.intl.string(h.t.JrlKlp),
                     }),
                 e
             );
         }, [_]),
         showRecommendationOption: _,
-        shuffleProducts: j
+        shuffleProducts: j,
     };
 };

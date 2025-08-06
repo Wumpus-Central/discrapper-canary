@@ -9,7 +9,19 @@ var r = n(255367),
     u = n(348238),
     d = n(981631);
 let f = i.memo(function (e) {
-        let { message: t, channel: n, compact: o = !1, groupId: a, isGroupStart: l, usernameProfile: f, avatarProfile: _, setPopout: p, author: h, repliedMessage: m, roleIcon: g } = e,
+        let {
+                message: t,
+                channel: n,
+                compact: o = !1,
+                groupId: a,
+                isGroupStart: l,
+                usernameProfile: f,
+                avatarProfile: _,
+                setPopout: p,
+                author: h,
+                repliedMessage: m,
+                roleIcon: g,
+            } = e,
             E = (0, u.wq)(t.author.id, n.id),
             b = (0, u.XO)(t, n, f, p),
             y = (0, u.R9)(_, p),
@@ -17,7 +29,7 @@ let f = i.memo(function (e) {
                 p({
                     usernameProfile: !1,
                     avatarProfile: !1,
-                    referencedUsernameProfile: !1
+                    referencedUsernameProfile: !1,
                 });
             }, [p]);
         return (0, r.jsx)(s.ZP, {
@@ -36,12 +48,20 @@ let f = i.memo(function (e) {
             onClickUsername: b,
             onContextMenu: E,
             onPopoutRequestClose: O,
-            roleIcon: g
+            roleIcon: g,
         });
     }),
     _ = i.memo(l.Z);
 function p(e) {
-    let { messageProps: t, setPopout: n, messagePopouts: i, replyReference: s, author: l, repliedMessage: c, roleIcon: u } = e,
+    let {
+            messageProps: t,
+            setPopout: n,
+            messagePopouts: i,
+            replyReference: s,
+            author: l,
+            repliedMessage: c,
+            roleIcon: u,
+        } = e,
         { message: d, compact: p, channel: h, groupId: m } = t,
         { usernameProfile: g, avatarProfile: E } = i;
     if ((0, o.Z)(d)) return null;
@@ -59,7 +79,7 @@ function p(e) {
               avatarProfile: E,
               author: l,
               repliedMessage: c,
-              roleIcon: u
+              roleIcon: u,
           })
         : (0, r.jsx)(_, {
               compact: !0,
@@ -67,6 +87,6 @@ function p(e) {
               isInline: !1,
               id: (0, a.Dv)(d),
               isVisibleOnlyOnHover: !0,
-              cozyAlt: !0
+              cozyAlt: !0,
           });
 }

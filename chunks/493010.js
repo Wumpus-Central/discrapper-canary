@@ -23,12 +23,12 @@ let O = function (e) {
         (0, f.Q3)(o.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: E.L.AUTO });
     }, []);
     let v = i.useCallback(() => {
-            (s.Z.updateChatOpen(t.id, !1), h.S.safeDispatch(g.CkL.FOCUS_CHAT_BUTTON));
+            s.Z.updateChatOpen(t.id, !1), h.S.safeDispatch(g.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
         I = (0, r.jsx)(_.ZP.Icon, {
             icon: a.Dio,
             tooltip: b.intl.string(b.t.cpT0Cg),
-            onClick: v
+            onClick: v,
         });
     return (0, r.jsxs)(u.Z, {
         sidebarType: u.y.CallChatSidebar,
@@ -37,31 +37,31 @@ let O = function (e) {
         children: [
             (0, r.jsx)(l.Z, {
                 channel: t,
-                draftType: p.d.ChannelMessage
+                draftType: p.d.ChannelMessage,
             }),
             (0, r.jsxs)(_.ZP, {
                 toolbar: I,
-                'aria-label': b.intl.string(b.t.BIYAqa),
+                "aria-label": b.intl.string(b.t.BIYAqa),
                 children: [
                     (0, r.jsx)(_.ZP.ChannelIcon, {
                         icon: a.kBi,
-                        'aria-label': b.intl.string(b.t.Kx5kCA)
+                        "aria-label": b.intl.string(b.t.Kx5kCA),
                     }),
-                    (0, r.jsx)(_.ZP.Title, { children: t.name })
-                ]
+                    (0, r.jsx)(_.ZP.Title, { children: t.name }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: y.chat,
                 children: (0, r.jsx)(
                     c.Z,
                     {
                         channel: t,
                         guild: n,
-                        chatInputType: d.Ie.SIDEBAR
+                        chatInputType: d.Ie.SIDEBAR,
                     },
-                    t.id
-                )
-            })
-        ]
+                    t.id,
+                ),
+            }),
+        ],
     });
 };

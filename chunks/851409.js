@@ -1,4 +1,4 @@
-(Object.defineProperty(t, '__esModule', { value: !0 }),
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.default = function (e, t, n) {
         let r = 0,
             i = e.length;
@@ -8,4 +8,4 @@
             0 >= n(e[a], t) ? ((r = ++a), (i -= o + 1)) : (i = o);
         }
         return r;
-    }));
+    });

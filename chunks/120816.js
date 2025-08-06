@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => v }), a(539854), a(388685));
+a.d(t, { Z: () => v }), a(539854), a(388685);
 var n,
     r,
     l,
@@ -30,15 +30,15 @@ class b extends (n = o.ZP.Store) {
         return f;
     }
 }
-((l = 'AnalyticsLogStore'),
-    (r = 'displayName') in b
+(l = "AnalyticsLogStore"),
+    (r = "displayName") in b
         ? Object.defineProperty(b, r, {
               value: l,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (b[r] = l));
+        : (b[r] = l);
 let v = new b(c.Z, {
     TRACK: function (e) {
         let { event: t, properties: a, fingerprint: n } = e;
@@ -48,7 +48,7 @@ let v = new b(c.Z, {
                 event: t,
                 properties: a,
                 fingerprint: null != n ? (0, s.s)(n) : d.default.getId(),
-                timestamp: new Date()
+                timestamp: new Date(),
             }),
             h++,
             x.length > 500 && (x = x.slice(-Math.floor(250))));
@@ -67,8 +67,8 @@ let v = new b(c.Z, {
                     excluded: r,
                     location: l,
                     previouslyTracked: s,
-                    timestamp: new Date()
-                }
+                    timestamp: new Date(),
+                },
             ]).length > 500 &&
             p.shift();
     },
@@ -77,6 +77,6 @@ let v = new b(c.Z, {
         f = t;
     },
     ANALYTICS_LOG_CLEAR: function () {
-        ((x = []), h++, (p = []));
-    }
+        (x = []), h++, (p = []);
+    },
 });

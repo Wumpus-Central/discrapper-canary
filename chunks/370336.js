@@ -1,6 +1,6 @@
 n.d(t, {
     Sh: () => l,
-    xp: () => s
+    xp: () => s,
 });
 var r = n(467510),
     i = n(176984),
@@ -11,7 +11,7 @@ function s(e, t, n) {
         Object.defineProperty(e, t, {
             value: n,
             writable: !0,
-            configurable: !0
+            configurable: !0,
         });
     } catch (n) {
         i.X && a.kg.log(`Failed to add non-enumerable property "${t}" to object`, e);
@@ -23,7 +23,7 @@ function l(e) {
             message: e.message,
             name: e.name,
             stack: e.stack,
-            ...u(e)
+            ...u(e),
         };
     if (!(0, o.cO)(e)) return e;
     {
@@ -31,20 +31,20 @@ function l(e) {
             type: e.type,
             target: c(e.target),
             currentTarget: c(e.currentTarget),
-            ...u(e)
+            ...u(e),
         };
-        return ('undefined' != typeof CustomEvent && (0, o.V9)(e, CustomEvent) && (t.detail = e.detail), t);
+        return "undefined" != typeof CustomEvent && (0, o.V9)(e, CustomEvent) && (t.detail = e.detail), t;
     }
 }
 function c(e) {
     try {
         return (0, o.kK)(e) ? (0, r.Rt)(e) : Object.prototype.toString.call(e);
     } catch (e) {
-        return '<unknown>';
+        return "<unknown>";
     }
 }
 function u(e) {
-    if ('object' != typeof e || null === e) return {};
+    if ("object" != typeof e || null === e) return {};
     {
         let t = {};
         for (let n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
@@ -55,7 +55,7 @@ function d(e) {
     if (!isPlainObject(e)) return !1;
     try {
         let t = Object.getPrototypeOf(e).constructor.name;
-        return !t || 'Object' === t;
+        return !t || "Object" === t;
     } catch (e) {
         return !0;
     }

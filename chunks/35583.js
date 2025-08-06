@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -18,7 +18,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,7 +29,7 @@ class m extends i.PureComponent {
         return e.mode !== t.memoizedMode
             ? {
                   memoizedMode: e.mode,
-                  clicked: !1
+                  clicked: !1,
               }
             : null;
     }
@@ -41,66 +41,66 @@ class m extends i.PureComponent {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 g(e, t, n[t]);
-                            }));
+                            });
                     }
                     return e;
-                })({ source: 'Links' }, e)
-            )
+                })({ source: "Links" }, e),
+            ),
         );
     }
     render() {
         switch (this.props.mode) {
-            case 'UPDATE_AVAILABLE':
+            case "UPDATE_AVAILABLE":
                 return (0, r.jsx)(p.JO, {
                     hideOnClick: !1,
-                    tooltip: h.intl.string(h.t['zp9d//']),
+                    tooltip: h.intl.string(h.t["zp9d//"]),
                     foreground: f.downloadArrow,
                     background: f.cloud,
                     icon: a._8t,
-                    className: this.props.className
+                    className: this.props.className,
                 });
-            case 'UPDATE_MANUALLY':
-            case 'UPDATE_DOWNLOADED':
+            case "UPDATE_MANUALLY":
+            case "UPDATE_DOWNLOADED":
                 return (0, r.jsx)(p.JO, {
                     tooltip: h.intl.string(h.t.u18OXF),
                     foreground: f.updateIconForeground,
                     onClick: this.handleInstallDownload,
                     icon: a._8t,
-                    className: this.props.className
+                    className: this.props.className,
                 });
             default:
                 return null;
         }
     }
     constructor(...e) {
-        (super(...e),
-            g(this, 'state', {
+        super(...e),
+            g(this, "state", {
                 memoizedMode: this.props.mode,
-                clicked: !1
+                clicked: !1,
             }),
-            g(this, 'handleInstallDownload', () => {
+            g(this, "handleInstallDownload", () => {
                 d.Z.isConnected()
                     ? o.Z.show({
                           title: h.intl.string(h.t.tiu1l5),
-                          body: h.intl.string(h.t['zK+lqa']),
+                          body: h.intl.string(h.t["zK+lqa"]),
                           onConfirm: this.doUpdate,
-                          cancelText: h.intl.string(h.t['ETE/oK']),
-                          confirmText: h.intl.string(h.t['QDX/qq']),
-                          confirmVariant: 'critical-primary'
+                          cancelText: h.intl.string(h.t["ETE/oK"]),
+                          confirmText: h.intl.string(h.t["QDX/qq"]),
+                          confirmVariant: "critical-primary",
                       })
                     : this.doUpdate();
             }),
-            g(this, 'doUpdate', () => {
+            g(this, "doUpdate", () => {
                 this.state.clicked || (this.setState({ clicked: !0 }), (0, s.Q)());
-            }));
+            });
     }
 }
 let b = l.ZP.connectStores([u.Z], () => ({ mode: u.Z.getState() }))(m);

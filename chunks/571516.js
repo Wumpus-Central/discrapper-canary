@@ -6,5 +6,5 @@ var n = r(572657),
 let l = function (e, t, r) {
     if (!(0, i.Z)(r)) return !1;
     var l = typeof t;
-    return ('number' == l ? !!((0, o.Z)(r) && (0, a.Z)(t, r.length)) : 'string' == l && t in r) && (0, n.Z)(r[t], e);
+    return ("number" == l ? !!((0, o.Z)(r) && (0, a.Z)(t, r.length)) : "string" == l && t in r) && (0, n.Z)(r[t], e);
 };

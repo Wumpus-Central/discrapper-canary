@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     M: () => f,
-    Z: () => w
+    Z: () => w,
 }),
-    n(388685));
+    n(388685);
 var r,
     i = n(512722),
     o = n.n(i),
@@ -18,41 +18,46 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 var f = (function (e) {
-    return ((e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), e);
+    return (
+        (e[(e.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+        (e[(e.FETCHING = 1)] = "FETCHING"),
+        (e[(e.FETCHED = 2)] = "FETCHED"),
+        e
+    );
 })({});
 function _(e) {
-    return 'subscription_listing:'.concat(e);
+    return "subscription_listing:".concat(e);
 }
 function p(e) {
-    return 'application:'.concat(e);
+    return "application:".concat(e);
 }
 function h(e) {
-    return 'plan:'.concat(e);
+    return "plan:".concat(e);
 }
 function m(e, t, n) {
-    return 'entitlement:'.concat(e, ':').concat(n, ':').concat(t);
+    return "entitlement:".concat(e, ":").concat(n, ":").concat(t);
 }
 function g(e, t) {
-    return 'entitlement:'.concat(t, ':').concat(e);
+    return "entitlement:".concat(t, ":").concat(e);
 }
 let E = new s.h(
         (e) => [p(e.application_id), ...e.subscription_listings_ids.map(_)],
-        (e) => e.id
+        (e) => e.id,
     ),
     b = new s.h(
         (e) => [p(e.application_id), h(e.subscription_plans[0].id)],
-        (e) => e.id
+        (e) => e.id,
     ),
     y = new s.h(
         (e) => [m(e.applicationId, e.isValid(null, u.Z), e.guildId), g(e.isValid(null, u.Z), e.guildId)],
-        (e) => e.id
+        (e) => e.id,
     ),
     O = {},
     v = {};
@@ -64,7 +69,7 @@ function T(e) {
     b.set(e.id, e);
 }
 function S() {
-    (E.clear(), b.clear(), y.clear(), (O = {}), (v = {}));
+    E.clear(), b.clear(), y.clear(), (O = {}), (v = {});
 }
 function A(e) {
     let { applicationId: t, groupListingId: n } = e;
@@ -74,7 +79,7 @@ function A(e) {
 }
 function N(e) {
     let { applicationId: t, groupListing: n } = e;
-    ((O[t] = 2), I(n));
+    (O[t] = 2), I(n);
 }
 function C(e) {
     let { applicationId: t } = e;
@@ -94,7 +99,7 @@ class P extends (r = a.yh) {
     }
     getSubscriptionGroupListingForSubscriptionListing(e) {
         let t = E.values(_(e));
-        return (o()(t.length <= 1, 'Found multiple group listings for listing'), t[0]);
+        return o()(t.length <= 1, "Found multiple group listings for listing"), t[0];
     }
     getSubscriptionListing(e) {
         return b.get(e);
@@ -108,7 +113,7 @@ class P extends (r = a.yh) {
     }
     getSubscriptionListingForPlan(e) {
         let t = b.values(h(e));
-        return (o()(t.length <= 1, 'Found multiple listings for plan'), t[0]);
+        return o()(t.length <= 1, "Found multiple listings for plan"), t[0];
     }
     getApplicationEntitlementsForGuild(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -119,7 +124,7 @@ class P extends (r = a.yh) {
         return y.values(g(t, e));
     }
 }
-d(P, 'displayName', 'ApplicationSubscriptionStore');
+d(P, "displayName", "ApplicationSubscriptionStore");
 let w = new P(l.Z, {
     LOGOUT: S,
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: A,
@@ -131,15 +136,15 @@ let w = new P(l.Z, {
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS(e) {
         let { guildId: t, entitlements: n } = e;
-        ((v[t] = 2),
+        (v[t] = 2),
             n.forEach((e) => {
                 let t = c.Z.createFromServer(e);
                 y.set(t.id, t);
-            }));
+            });
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE(e) {
         let { guildId: t } = e;
         v[t] = 0;
     },
-    APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: R
+    APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: R,
 });

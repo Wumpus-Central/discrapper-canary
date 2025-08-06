@@ -1,4 +1,4 @@
-(n.d(t, { f: () => v }), n(388685));
+n.d(t, { f: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -25,24 +25,24 @@ let O = (e) => {
             _ = i.useCallback(() => {
                 (0, h.v)({
                     type: l.Ie.FORM,
-                    content: '',
-                    channel: t
+                    content: "",
+                    channel: t,
                 }).then((e) => {
                     let { valid: r } = e;
                     r && (0, m.TZ)(t, n, f.id);
                 });
             }, [t, n, f]);
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: y.welcomeCTA,
             children: o
                 ? (0, r.jsx)(a.zx, {
-                      variant: 'secondary',
-                      size: 'md',
+                      variant: "secondary",
+                      size: "md",
                       onClick: _,
-                      text: b.intl.string(b.t['7Tj6HR'])
+                      text: b.intl.string(b.t["7Tj6HR"]),
                   })
                 : (0, r.jsxs)(s.zx, {
-                      'data-migration-pending': !0,
+                      "data-migration-pending": !0,
                       className: y.welcomeCTAButtonOuter,
                       innerClassName: y.welcomeCTAButton,
                       color: s.Tt.PRIMARY,
@@ -54,11 +54,11 @@ let O = (e) => {
                               className: y.welcomeCTASticker,
                               isInteracting: u,
                               sticker: f,
-                              size: 28
+                              size: 28,
                           }),
-                          b.intl.string(b.t['7Tj6HR'])
-                      ]
-                  })
+                          b.intl.string(b.t["7Tj6HR"]),
+                      ],
+                  }),
         });
     },
     v = (e) => {
@@ -78,7 +78,7 @@ let O = (e) => {
         return null != i && a
             ? (0, r.jsx)(O, {
                   message: t,
-                  channel: n
+                  channel: n,
               })
             : null;
     };

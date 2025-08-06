@@ -23,17 +23,17 @@ function _() {
         value: e,
         children: (0, r.jsx)(o.Z, {
             section: g.jXE.ACTIVE_NOW_COLUMN,
-            children: (0, r.jsx)('aside', {
+            children: (0, r.jsx)("aside", {
                 className: b.container,
-                'aria-labelledby': n,
+                "aria-labelledby": n,
                 children: (0, r.jsxs)(a.Ttm, {
                     className: b.scroller,
                     children: [
                         (0, r.jsx)(a.X6q, {
-                            variant: 'heading-lg/semibold',
+                            variant: "heading-lg/semibold",
                             className: b.header,
                             id: n,
-                            children: m.intl.string(m.t.F4Zgg4)
+                            children: m.intl.string(m.t.F4Zgg4),
                         }),
                         (0, r.jsx)(d.ZP, {
                             contentTypes: t,
@@ -42,14 +42,14 @@ function _() {
                                 if (t === l.z.NOW_PLAYING_CONSENT_CARD)
                                     return (0, r.jsx)(p.Z, {
                                         className: b.__invalid_consentCard,
-                                        markAsDismissed: n
+                                        markAsDismissed: n,
                                     });
-                            }
+                            },
                         }),
-                        (0, r.jsx)(f.Z, {})
-                    ]
-                })
-            })
-        })
+                        (0, r.jsx)(f.Z, {}),
+                    ],
+                }),
+            }),
+        }),
     });
 }

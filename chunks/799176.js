@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -17,24 +17,24 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -42,7 +42,7 @@ let h = {
     [g.Vx.DEFAULT]: b.cursorDefault,
     [g.Vx.CAT]: b.cursorCat,
     [g.Vx.SWORD]: b.cursorSword,
-    [g.Vx.PIZZA]: b.cursorPizza
+    [g.Vx.PIZZA]: b.cursorPizza,
 };
 function x(e) {
     var t;
@@ -56,25 +56,25 @@ function x(e) {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
-            config: i.config.gentle
+            config: i.config.gentle,
         });
     return (0, r.jsx)(u.Gt, {
         value: v,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: a()(b.container, h[j]),
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: b.background,
-                    children: (0, r.jsx)('div', { className: b.backgroundGradient })
+                    children: (0, r.jsx)("div", { className: b.backgroundGradient }),
                 }),
                 N((t, n) =>
                     (0, r.jsx)(i.animated.div, {
                         style: t,
                         className: b.animationContainer,
-                        children: n ? (0, r.jsx)(m.Z, y({}, e)) : (0, r.jsx)(p.Z, y({}, e))
-                    })
-                )
-            ]
-        })
+                        children: n ? (0, r.jsx)(m.Z, y({}, e)) : (0, r.jsx)(p.Z, y({}, e)),
+                    }),
+                ),
+            ],
+        }),
     });
 }

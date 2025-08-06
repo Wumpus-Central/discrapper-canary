@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(35282), n(388685));
+n.d(t, { Z: () => p }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -12,29 +12,29 @@ var r = n(255367),
 let p = function (e) {
     let { match: t, location: n, attemptDeepLink: l } = e,
         [p, m] = i.useState(0);
-    (i.useEffect(() => {
-        (o.default.once('connected', () => {
+    i.useEffect(() => {
+        o.default.once("connected", () => {
             m(1);
         }),
-            o.default.once('disconnected', () => {
+            o.default.once("disconnected", () => {
                 (0, u.uL)((0, a.M)());
             }),
-            o.default.connect());
+            o.default.connect();
     }, []),
         i.useEffect(() => {
             if (0 !== p) return;
             let e = setTimeout(() => (0, u.uL)((0, a.M)()), 3000);
             return () => clearTimeout(e);
-        }, [p]));
+        }, [p]);
     let f = i.useCallback(
         async (e, t) => {
             try {
-                (m(2), await l(e, t), m(3));
+                m(2), await l(e, t), m(3);
             } catch (e) {
-                console.error('Error opening deeplink', e);
+                console.error("Error opening deeplink", e);
             }
         },
-        [l]
+        [l],
     );
     if ((0, u.DB)()) return null;
     switch (p) {
@@ -43,37 +43,37 @@ let p = function (e) {
                 children: [
                     (0, r.jsx)(c.Dx, {
                         className: h.marginBottom8,
-                        children: d.intl.string(d.t.qllnGh)
+                        children: d.intl.string(d.t.qllnGh),
                     }),
                     (0, r.jsx)(c.DK, { children: d.intl.string(d.t.SXCxyc) }),
                     (0, r.jsx)(c.zx, {
                         className: h.marginTop40,
                         onClick: () => f(t, n),
-                        children: d.intl.string(d.t.UQvCf3)
+                        children: d.intl.string(d.t.UQvCf3),
                     }),
                     (0, r.jsx)(c.zx, {
                         className: s()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
                         onClick: () => (0, u.uL)((0, a.M)()),
-                        children: d.intl.string(d.t['2ixEBg'])
-                    })
-                ]
+                        children: d.intl.string(d.t["2ixEBg"]),
+                    }),
+                ],
             });
         case 0:
         case 2:
             return (0, r.jsxs)(c.ZP, {
-                children: [(0, r.jsx)(c.Dx, { children: d.intl.string(d.t['Z+hCVV']) }), (0, r.jsx)(c.Hh, {})]
+                children: [(0, r.jsx)(c.Dx, { children: d.intl.string(d.t["Z+hCVV"]) }), (0, r.jsx)(c.Hh, {})],
             });
         case 3:
             return (0, r.jsxs)(c.ZP, {
                 children: [
                     (0, r.jsx)(c.Dx, {
                         className: h.marginBottom8,
-                        children: d.intl.string(d.t.csrAMD)
+                        children: d.intl.string(d.t.csrAMD),
                     }),
-                    (0, r.jsx)(c.DK, { children: d.intl.string(d.t.ghBJz8) })
-                ]
+                    (0, r.jsx)(c.DK, { children: d.intl.string(d.t.ghBJz8) }),
+                ],
             });
     }
 };

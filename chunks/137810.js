@@ -11,11 +11,11 @@ var i = n(481060),
 function d(e) {
     let { analyticsLocations: t } = (0, s.ZP)();
     return (0, r.jsx)(i.sNh, {
-        id: 'video-settings',
+        id: "video-settings",
         label: u.intl.string(u.t.LKzQSE),
         action: () => {
-            (o.Z.open(l.oAB.VOICE, c.gP, { analyticsLocations: t }), (0, a.i)(e));
+            o.Z.open(l.oAB.VOICE, c.gP, { analyticsLocations: t }), (0, a.i)(e);
         },
-        icon: i.ewm
+        icon: i.ewm,
     });
 }

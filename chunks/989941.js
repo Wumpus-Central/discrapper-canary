@@ -18,13 +18,13 @@ function l(e, t) {
                     elevated: !1,
                     name: e.name,
                     lastFocused: 0,
-                    exePath: '',
-                    exeName: '',
-                    cmdLine: '',
-                    processName: '',
+                    exePath: "",
+                    exeName: "",
+                    cmdLine: "",
+                    processName: "",
                     distributor: null,
                     windowHandle: null,
-                    fullscreenType: 0
+                    fullscreenType: 0,
                 });
     }
     return e.getVisibleGame();

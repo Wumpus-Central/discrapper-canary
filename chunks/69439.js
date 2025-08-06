@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -23,14 +23,14 @@ let C = [
         value: j.cd.DESKTOP,
         get label() {
             return _.intl.string(_.t.QXc019);
-        }
+        },
     },
     {
         value: j.cd.CONSOLE,
         get label() {
-            return _.intl.string(_.t['8lAfuL']);
-        }
-    }
+            return _.intl.string(_.t["8lAfuL"]);
+        },
+    },
 ];
 function y(e) {
     let t,
@@ -38,39 +38,46 @@ function y(e) {
         { value: s } = e;
     switch (s) {
         case j.cd.DESKTOP:
-            ((n = (0, r.jsx)(c.pzj, {})), (t = _.intl.string(_.t.QXc019)));
+            (n = (0, r.jsx)(c.pzj, {})), (t = _.intl.string(_.t.QXc019));
             break;
         case j.cd.CONSOLE:
-            ((n = (0, r.jsx)(c.iWm, {})), (t = _.intl.string(_.t['8lAfuL'])));
+            (n = (0, r.jsx)(c.iWm, {})), (t = _.intl.string(_.t["8lAfuL"]));
             break;
         default:
             return null;
     }
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: v.platformSelectorPrimaryLabel,
-        children: [n, t]
+        children: [n, t],
     });
 }
 function O(e) {
     var t, n, o, O;
-    let { quest: E, questContent: S, onReceiveErrorHints: w, contentPosition: T, rowIndex: P, sourceQuestContent: A } = e,
+    let {
+            quest: E,
+            questContent: S,
+            onReceiveErrorHints: w,
+            contentPosition: T,
+            rowIndex: P,
+            sourceQuestContent: A,
+        } = e,
         N = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
         R = (0, h.g2)({ useReducedMotion: N }),
         B = (0, d.O5)(),
         k = (0, m._s)({ quest: E }),
         I = (0, m.z)(E),
         q = (0, m.B6)(E.config.expiresAt, {
-            month: 'numeric',
-            day: 'numeric'
+            month: "numeric",
+            day: "numeric",
         }),
         {
             isClaiming: D,
             isEnrolling: Q,
-            isQuestEnrollmentBlocked: V
+            isQuestEnrollmentBlocked: V,
         } = (0, i.cj)([f.Z], () => ({
             isClaiming: f.Z.isClaimingReward(E.id) || f.Z.isFetchingRewardCode(E.id),
             isEnrolling: f.Z.isEnrolling(E.id),
-            isQuestEnrollmentBlocked: null != f.Z.questEnrollmentBlockedUntil
+            isQuestEnrollmentBlocked: null != f.Z.questEnrollmentBlockedUntil,
         })),
         L = (null == (t = E.userStatus) ? void 0 : t.enrolledAt) != null,
         M = (null == (n = E.userStatus) ? void 0 : n.completedAt) != null,
@@ -90,9 +97,9 @@ function O(e) {
         er = et && !en && $.length > 1,
         es = s.useCallback(
             (e) => {
-                (ee(e), e === j.cd.DESKTOP && w([]));
+                ee(e), e === j.cd.DESKTOP && w([]);
             },
-            [ee, w]
+            [ee, w],
         ),
         { text: eo, onClick: ea } = (0, h.Ks)({
             progressState: H,
@@ -104,24 +111,24 @@ function O(e) {
             inGiftInventory: !0,
             isVideoQuest: F,
             inGameQuest: K,
-            sourceQuestContent: A
+            sourceQuestContent: A,
         }),
         { startingConsoleQuest: ei, startConsoleQuest: el } = (0, m.GI)({
             questId: E.id,
             beforeRequest: () => {
-                (R.startAnimation(),
+                R.startAnimation(),
                     B({
                         questId: E.id,
                         questContent: S,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
                         questContentPosition: T,
                         questContentRowIndex: P,
-                        sourceQuestContent: A
-                    }));
+                        sourceQuestContent: A,
+                    });
             },
             afterRequest: (e) => {
-                (R.stopAnimation(), w(e));
-            }
+                R.stopAnimation(), w(e);
+            },
         }),
         ec = (null == (O = E.userStatus) ? void 0 : O.claimedAt) != null,
         eu = null;
@@ -131,7 +138,7 @@ function O(e) {
               submitting: D,
               onClick: null != ea ? ea : void 0,
               className: v.button,
-              children: eo
+              children: eo,
           }))
         : M
           ? (eu = F
@@ -147,27 +154,30 @@ function O(e) {
                                       questContent: S,
                                       sourceQuestContent: A,
                                       sourceQuestContentCTA: d.jZ.WATCH_VIDEO,
-                                      skipEnrollmentCheck: !0
+                                      skipEnrollmentCheck: !0,
                                   });
                               },
-                              children: (0, r.jsxs)('div', {
+                              children: (0, r.jsxs)("div", {
                                   className: v.ctaInner,
-                                  children: [(0, r.jsx)(c.Oe7, { className: v.videoQuestPlayIcon }), (0, r.jsx)('span', { children: _.intl.string(_.t.YsCuyM) })]
-                              })
+                                  children: [
+                                      (0, r.jsx)(c.Oe7, { className: v.videoQuestPlayIcon }),
+                                      (0, r.jsx)("span", { children: _.intl.string(_.t.YsCuyM) }),
+                                  ],
+                              }),
                           }),
                           (0, r.jsx)(l.zx, {
                               color: l.Tt.BRAND,
                               className: v.button,
                               onClick: null != ea ? ea : void 0,
-                              children: eo
-                          })
-                      ]
+                              children: eo,
+                          }),
+                      ],
                   })
                 : (0, r.jsx)(l.zx, {
                       color: l.Tt.BRAND,
                       className: v.button,
                       onClick: null != ea ? ea : void 0,
-                      children: eo
+                      children: eo,
                   }))
           : U
             ? U && Z
@@ -176,14 +186,14 @@ function O(e) {
                       submitting: D,
                       onClick: null != ea ? ea : void 0,
                       className: v.button,
-                      children: eo
+                      children: eo,
                   }))
                 : X
                   ? (eu = (0, r.jsx)(l.zx, {
                         color: l.Tt.PRIMARY,
                         disabled: !0,
                         className: v.button,
-                        children: _.intl.string(_.t.BkZhUF)
+                        children: _.intl.string(_.t.BkZhUF),
                     }))
                   : U && L && !ec
                     ? (eu = en
@@ -199,9 +209,9 @@ function O(e) {
                                         case j.cd.DESKTOP:
                                             return _.intl.string(_.t.QXc019);
                                         case j.cd.CONSOLE:
-                                            return _.intl.string(_.t['8lAfuL']);
+                                            return _.intl.string(_.t["8lAfuL"]);
                                     }
-                                }
+                                },
                             })
                           : (0, p.$J)(E) && !I && J !== g.LI.DESKTOP
                             ? k
@@ -209,30 +219,30 @@ function O(e) {
                                       color: l.Tt.PRIMARY,
                                       className: v.button,
                                       onClick: null != ea ? ea : void 0,
-                                      children: eo
+                                      children: eo,
                                   })
                                 : (0, r.jsx)(l.zx, {
                                       color: l.Tt.PRIMARY,
                                       onClick: el,
                                       disabled: ei,
                                       className: v.button,
-                                      children: (0, r.jsxs)('div', {
+                                      children: (0, r.jsxs)("div", {
                                           className: v.ctaInner,
-                                          children: [R.render(), _.intl.string(_.t.nPThNT)]
-                                      })
+                                          children: [R.render(), _.intl.string(_.t.nPThNT)],
+                                      }),
                                   })
                             : F || (K && E.config.features.includes(j.S7.START_QUEST_CTA))
                               ? (0, r.jsx)(l.zx, {
                                     color: l.Tt.BRAND,
                                     onClick: null != ea ? ea : void 0,
                                     className: v.button,
-                                    children: eo
+                                    children: eo,
                                 })
                               : (0, r.jsx)(l.zx, {
                                     color: l.Tt.PRIMARY,
                                     disabled: !0,
                                     className: v.button,
-                                    children: _.intl.string(_.t['9KoPyM'])
+                                    children: _.intl.string(_.t["9KoPyM"]),
                                 }))
                     : U &&
                       !L &&
@@ -243,32 +253,32 @@ function O(e) {
                                         color: l.Tt.PRIMARY,
                                         className: v.button,
                                         disabled: !0,
-                                        children: _.intl.string(_.t.V293qq)
+                                        children: _.intl.string(_.t.V293qq),
                                     }),
                                     (0, r.jsx)(l.zx, {
                                         color: l.Tt.BRAND,
                                         className: v.button,
                                         onClick: () => (0, x.openQuestMinorEnrollmentBlockModal)(E, S, A),
-                                        children: _.intl.string(_.t.vY9GgI)
-                                    })
-                                ]
+                                        children: _.intl.string(_.t.vY9GgI),
+                                    }),
+                                ],
                             })
                           : (0, r.jsx)(l.zx, {
                                 submitting: Q,
                                 color: l.Tt.BRAND,
                                 onClick: null != ea ? ea : void 0,
                                 className: v.button,
-                                children: eo
+                                children: eo,
                             }))
             : (eu = (0, r.jsx)(l.zx, {
                   color: l.Tt.PRIMARY,
                   disabled: !0,
                   className: v.button,
-                  children: _.intl.format(_.t['14o6QU'], { expiryDate: q })
+                  children: _.intl.format(_.t["14o6QU"], { expiryDate: q }),
               })),
     null == eu)
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: v.container,
               children: [
                   eu,
@@ -286,55 +296,55 @@ function O(e) {
                                       for (var t = 1; t < arguments.length; t++) {
                                           var n = null != arguments[t] ? arguments[t] : {},
                                               r = Object.keys(n);
-                                          ('function' == typeof Object.getOwnPropertySymbols &&
+                                          "function" == typeof Object.getOwnPropertySymbols &&
                                               (r = r.concat(
                                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                  })
+                                                  }),
                                               )),
                                               r.forEach(function (t) {
                                                   var r;
-                                                  ((r = n[t]),
+                                                  (r = n[t]),
                                                       t in e
                                                           ? Object.defineProperty(e, t, {
                                                                 value: r,
                                                                 enumerable: !0,
                                                                 configurable: !0,
-                                                                writable: !0
+                                                                writable: !0,
                                                             })
-                                                          : (e[t] = r));
-                                              }));
+                                                          : (e[t] = r);
+                                              });
                                       }
                                       return e;
                                   })(
                                       {
                                           buttonRef: Y,
                                           className: a()(v.button, v.platformSelectorSecondary),
-                                          color: l.Tt.PRIMARY
+                                          color: l.Tt.PRIMARY,
                                       },
-                                      e
+                                      e,
                                   )),
                                   (n = n =
                                       {
-                                          children: (0, r.jsxs)('div', {
+                                          children: (0, r.jsxs)("div", {
                                               className: v.platformSelectorSecondaryContent,
                                               children: [
                                                   (function (e) {
                                                       switch (e) {
                                                           case g.LI.DESKTOP:
-                                                              return (0, r.jsx)(c.pzj, { color: 'currentColor' });
+                                                              return (0, r.jsx)(c.pzj, { color: "currentColor" });
                                                           case g.LI.CONSOLE:
-                                                              return (0, r.jsx)(c.iWm, { color: 'currentColor' });
+                                                              return (0, r.jsx)(c.iWm, { color: "currentColor" });
                                                           default:
                                                               return null;
                                                       }
                                                   })(J),
                                                   (0, r.jsx)(c.CJ0, {
                                                       className: v.platformSelectorSecondaryChevron,
-                                                      color: 'currentColor'
-                                                  })
-                                              ]
-                                          })
+                                                      color: "currentColor",
+                                                  }),
+                                              ],
+                                          }),
                                       }),
                                   Object.getOwnPropertyDescriptors
                                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -348,10 +358,10 @@ function O(e) {
                                         })(Object(n)).forEach(function (e) {
                                             Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                         }),
-                                  t)
+                                  t),
                               );
-                          }
-                      })
-              ]
+                          },
+                      }),
+              ],
           });
 }

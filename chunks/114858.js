@@ -9,7 +9,7 @@ n.d(t, {
     k6: () => x,
     l_: () => I,
     rs: () => w,
-    s6: () => h
+    s6: () => h,
 });
 var r = n(282253),
     i = n(73800);
@@ -26,12 +26,12 @@ var d = n(791819),
     _ = n.n(f),
     p = (function (e) {
         var t = (0, a.Z)();
-        return ((t.displayName = e), t);
-    })('Router-History'),
+        return (t.displayName = e), t;
+    })("Router-History"),
     h = (function (e) {
         var t = (0, a.Z)();
-        return ((t.displayName = e), t);
-    })('Router'),
+        return (t.displayName = e), t;
+    })("Router"),
     m = (function (e) {
         function t(t) {
             var n;
@@ -46,19 +46,19 @@ var d = n(791819),
                 n
             );
         }
-        ((0, r.Z)(t, e),
+        (0, r.Z)(t, e),
             (t.computeRootMatch = function (e) {
                 return {
-                    path: '/',
-                    url: '/',
+                    path: "/",
+                    url: "/",
                     params: {},
-                    isExact: '/' === e
+                    isExact: "/" === e,
                 };
-            }));
+            });
         var n = t.prototype;
         return (
             (n.componentDidMount = function () {
-                ((this._isMounted = !0), this._pendingLocation && this.setState({ location: this._pendingLocation }));
+                (this._isMounted = !0), this._pendingLocation && this.setState({ location: this._pendingLocation });
             }),
             (n.componentWillUnmount = function () {
                 this.unlisten && this.unlisten();
@@ -71,13 +71,13 @@ var d = n(791819),
                             history: this.props.history,
                             location: this.state.location,
                             match: t.computeRootMatch(this.state.location.pathname),
-                            staticContext: this.props.staticContext
-                        }
+                            staticContext: this.props.staticContext,
+                        },
                     },
                     i.createElement(p.Provider, {
                         children: this.props.children || null,
-                        value: this.props.history
-                    })
+                        value: this.props.history,
+                    }),
                 );
             }),
             t
@@ -112,10 +112,10 @@ var g = (function (e) {
 function O(e) {
     if (E[e]) return E[e];
     var t = u().compile(e);
-    return (y < b && ((E[e] = t), y++), t);
+    return y < b && ((E[e] = t), y++), t;
 }
 function v(e, t) {
-    return (void 0 === e && (e = '/'), void 0 === t && (t = {}), '/' === e ? e : O(e)(t, { pretty: !0 }));
+    return void 0 === e && (e = "/"), void 0 === t && (t = {}), "/" === e ? e : O(e)(t, { pretty: !0 });
 }
 function I(e) {
     var t = e.computedMatch,
@@ -127,7 +127,13 @@ function I(e) {
         var r = e.history,
             c = e.staticContext,
             u = a ? r.push : r.replace,
-            d = (0, o.ob)(t ? ('string' == typeof n ? v(n, t.params) : (0, l.Z)({}, n, { pathname: v(n.pathname, t.params) })) : n);
+            d = (0, o.ob)(
+                t
+                    ? "string" == typeof n
+                        ? v(n, t.params)
+                        : (0, l.Z)({}, n, { pathname: v(n.pathname, t.params) })
+                    : n,
+            );
         return c
             ? (u(d), null)
             : i.createElement(g, {
@@ -138,7 +144,7 @@ function I(e) {
                       var n = (0, o.ob)(t.to);
                       (0, o.Hp)(n, (0, l.Z)({}, d, { key: n.key })) || u(d);
                   },
-                  to: n
+                  to: n,
               });
     });
 }
@@ -146,18 +152,18 @@ var T = {},
     S = 10000,
     A = 0;
 function N(e, t) {
-    var n = '' + t.end + t.strict + t.sensitive,
+    var n = "" + t.end + t.strict + t.sensitive,
         r = T[n] || (T[n] = {});
     if (r[e]) return r[e];
     var i = [],
         o = {
             regexp: u()(e, i, t),
-            keys: i
+            keys: i,
         };
-    return (A < S && ((r[e] = o), A++), o);
+    return A < S && ((r[e] = o), A++), o;
 }
 function C(e, t) {
-    (void 0 === t && (t = {}), ('string' == typeof t || Array.isArray(t)) && (t = { path: t }));
+    void 0 === t && (t = {}), ("string" == typeof t || Array.isArray(t)) && (t = { path: t });
     var n = t,
         r = n.path,
         i = n.exact,
@@ -167,12 +173,12 @@ function C(e, t) {
         l = n.sensitive,
         c = void 0 !== l && l;
     return [].concat(r).reduce(function (t, n) {
-        if (!n && '' !== n) return null;
+        if (!n && "" !== n) return null;
         if (t) return t;
         var r = N(n, {
                 end: o,
                 strict: s,
-                sensitive: c
+                sensitive: c,
             }),
             i = r.regexp,
             a = r.keys,
@@ -185,11 +191,11 @@ function C(e, t) {
             ? null
             : {
                   path: n,
-                  url: '/' === n && '' === u ? '/' : u,
+                  url: "/" === n && "" === u ? "/" : u,
                   isExact: f,
                   params: a.reduce(function (e, t, n) {
-                      return ((e[t.name] = d[n]), e);
-                  }, {})
+                      return (e[t.name] = d[n]), e;
+                  }, {}),
               };
     }, null);
 }
@@ -207,20 +213,39 @@ var R = (function (e) {
                     r = e.props.computedMatch ? e.props.computedMatch : e.props.path ? C(n.pathname, e.props) : t.match,
                     o = (0, l.Z)({}, t, {
                         location: n,
-                        match: r
+                        match: r,
                     }),
                     a = e.props,
                     c = a.children,
                     u = a.component,
                     d = a.render;
-                return (Array.isArray(c) && 0 === c.length && (c = null), i.createElement(h.Provider, { value: o }, o.match ? (c ? ('function' == typeof c ? c(o) : c) : u ? i.createElement(u, o) : d ? d(o) : null) : 'function' == typeof c ? c(o) : null));
+                return (
+                    Array.isArray(c) && 0 === c.length && (c = null),
+                    i.createElement(
+                        h.Provider,
+                        { value: o },
+                        o.match
+                            ? c
+                                ? "function" == typeof c
+                                    ? c(o)
+                                    : c
+                                : u
+                                  ? i.createElement(u, o)
+                                  : d
+                                    ? d(o)
+                                    : null
+                            : "function" == typeof c
+                              ? c(o)
+                              : null,
+                    )
+                );
             });
         }),
         t
     );
 })(i.Component);
 function P(e) {
-    return '/' === e.charAt(0) ? e : '/' + e;
+    return "/" === e.charAt(0) ? e : "/" + e;
 }
 i.Component;
 var w = (function (e) {
@@ -247,7 +272,7 @@ var w = (function (e) {
                     r
                         ? i.cloneElement(n, {
                               location: o,
-                              computedMatch: r
+                              computedMatch: r,
                           })
                         : null
                 );
@@ -257,15 +282,15 @@ var w = (function (e) {
     );
 })(i.Component);
 function D(e) {
-    var t = 'withRouter(' + (e.displayName || e.name) + ')',
+    var t = "withRouter(" + (e.displayName || e.name) + ")",
         n = function (t) {
             var n = t.wrappedComponentRef,
-                r = (0, d.Z)(t, ['wrappedComponentRef']);
+                r = (0, d.Z)(t, ["wrappedComponentRef"]);
             return i.createElement(h.Consumer, null, function (t) {
-                return (t || (0, s.Z)(!1), i.createElement(e, (0, l.Z)({}, r, t, { ref: n })));
+                return t || (0, s.Z)(!1), i.createElement(e, (0, l.Z)({}, r, t, { ref: n }));
             });
         };
-    return ((n.displayName = t), (n.WrappedComponent = e), _()(n, e));
+    return (n.displayName = t), (n.WrappedComponent = e), _()(n, e);
 }
 var L = i.useContext;
 function x() {

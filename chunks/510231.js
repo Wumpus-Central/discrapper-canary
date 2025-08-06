@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     N: () => d,
-    h: () => f
+    h: () => f,
 }),
-    n(583741));
+    n(583741);
 var r = n(73800),
     i = n(392711),
     o = n.n(i),
@@ -25,7 +25,7 @@ function f() {
                     .filter((e) => !d(e))
                     .map((e) => ({
                         value: e.id,
-                        label: e.name
+                        label: e.name,
                     }))
                     .sortBy((e) => {
                         let { value: t } = e;
@@ -33,7 +33,7 @@ function f() {
                     })
                     .reverse()
                     .value(),
-            [e]
+            [e],
         ),
         n = r.useCallback((e, t) => u(t.item.value) - u(e.item.value), []);
     return {
@@ -41,9 +41,9 @@ function f() {
         matchSorterOptions: r.useMemo(
             () => ({
                 baseSort: n,
-                keys: ['label']
+                keys: ["label"],
             }),
-            [n]
-        )
+            [n],
+        ),
     };
 }

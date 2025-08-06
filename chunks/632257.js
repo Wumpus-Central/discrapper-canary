@@ -31,19 +31,19 @@ let j = l.ZP.connectStores([g.default], () => ({ user: g.default.getCurrentUser(
                         isAuthenticated: t,
                         className: s()(_.headerBar, e, {
                             [_.headerBarV2LightBackground]: !r && !(0, o.wj)(l),
-                            [_.headerBarV2DarkBackground]: !r && (0, o.wj)(l)
+                            [_.headerBarV2DarkBackground]: !r && (0, o.wj)(l),
                         }),
-                        role: 'navigation',
+                        role: "navigation",
                         children: [
                             (0, i.jsx)(p.Z.Icon, {
                                 icon: c.SrA,
-                                'aria-hidden': !0,
-                                color: r ? void 0 : a.Z.PREMIUM_TIER_2_PINK
+                                "aria-hidden": !0,
+                                color: r ? void 0 : a.Z.PREMIUM_TIER_2_PINK,
                             }),
-                            (0, i.jsx)(p.Z.Title, { children: x.intl.string(x.t.Ipxkoq) })
-                        ]
-                    })
-            })
+                            (0, i.jsx)(p.Z.Title, { children: x.intl.string(x.t.Ipxkoq) }),
+                        ],
+                    }),
+            }),
         });
-    })
+    }),
 );

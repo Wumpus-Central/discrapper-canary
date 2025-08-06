@@ -13,14 +13,14 @@ function b(e) {
         b = (0, u.Z)(t, l),
         p = (0, a.Z)();
     return (0, n.jsx)(o.v2r, {
-        navId: 'user-context',
+        navId: "user-context",
         onClose: c.Zy,
-        'aria-label': s.intl.string(s.t.liqwPD),
+        "aria-label": s.intl.string(s.t.liqwPD),
         onSelect: r,
         onInteraction: i,
         children: (0, n.jsxs)(o.kSQ, {
-            children: [p, b]
-        })
+            children: [p, b],
+        }),
     });
 }
 function p(e) {
@@ -33,27 +33,27 @@ function p(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var r = null != arguments[t] ? arguments[t] : {},
                         n = Object.keys(r);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (n = n.concat(
                             Object.getOwnPropertySymbols(r).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                            })
+                            }),
                         )),
                         n.forEach(function (t) {
                             var n;
-                            ((n = r[t]),
+                            (n = r[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: n,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = n));
-                        }));
+                                    : (e[t] = n);
+                        });
                 }
                 return e;
-            })({}, e)
-        )
+            })({}, e),
+        ),
     });
 }

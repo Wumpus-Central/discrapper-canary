@@ -4,7 +4,7 @@ var r = n(668781),
 let o = () => {
     r.Z.show({
         title: i.intl.string(i.t.otsg2d),
-        body: i.intl.string(i.t['/Yx5qa']),
-        hideActionSheet: !1
+        body: i.intl.string(i.t["/Yx5qa"]),
+        hideActionSheet: !1,
     });
 };

@@ -18,32 +18,32 @@ function g(e) {
         j = (0, c.v)(),
         v = t.isMediaChannel(),
         C = (e) => {
-            ((0, d.KR)({
+            (0, d.KR)({
                 guildId: t.guild_id,
                 channelId: t.id,
-                sortOrder: e
+                sortOrder: e,
             }),
                 j.getState().setSortOrder(t.id, e),
-                n());
+                n();
         },
         _ = (e) => {
-            ((0, d.Do)({
+            (0, d.Do)({
                 guildId: t.guild_id,
                 channelId: t.id,
-                forumLayout: e
+                forumLayout: e,
             }),
                 j.getState().setLayoutType(t.id, e),
-                n());
+                n();
         },
         y = (e) => {
-            (j.getState().setTagSetting(t.id, e), n());
+            j.getState().setTagSetting(t.id, e), n();
         },
         O = null != t.availableTags && t.availableTags.length > 0;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: h.container,
         children: (0, r.jsxs)(s.v2r, {
-            navId: 'sort-and-view',
-            'aria-label': v ? u.intl.string(u.t['kQN/bm']) : u.intl.string(u.t.DJzbkJ),
+            navId: "sort-and-view",
+            "aria-label": v ? u.intl.string(u.t["kQN/bm"]) : u.intl.string(u.t.DJzbkJ),
             hideScroller: !0,
             onClose: n,
             onSelect: n,
@@ -52,30 +52,30 @@ function g(e) {
                     label: u.intl.string(u.t.f8wNDg),
                     children: [
                         (0, r.jsx)(s.k5B, {
-                            id: 'sort-by-recent-activity',
-                            group: 'sort-by',
+                            id: "sort-by-recent-activity",
+                            group: "sort-by",
                             label: u.intl.string(u.t.jOPmcH),
                             action: () => C(a.z.LATEST_ACTIVITY),
-                            checked: g === a.z.LATEST_ACTIVITY
+                            checked: g === a.z.LATEST_ACTIVITY,
                         }),
                         (0, r.jsx)(s.k5B, {
-                            id: 'sort-by-date-posted',
-                            group: 'sort-by',
+                            id: "sort-by-date-posted",
+                            group: "sort-by",
                             label: u.intl.string(u.t.UIltXV),
                             action: () => C(a.z.CREATION_DATE),
-                            checked: g === a.z.CREATION_DATE
-                        })
-                    ]
+                            checked: g === a.z.CREATION_DATE,
+                        }),
+                    ],
                 }),
                 t.isModeratorReportChannel() &&
                     (0, r.jsx)(s.kSQ, {
                         label: u.intl.string(m.default.PsM2b2),
                         children: (0, r.jsx)(s.S89, {
-                            id: 'resolved-flags-none',
+                            id: "resolved-flags-none",
                             label: u.intl.string(u.t.XJuakJ),
                             action: () => b(!p),
-                            checked: p
-                        })
+                            checked: p,
+                        }),
                     }),
                 t.isMediaChannel() || t.isModeratorReportChannel()
                     ? null
@@ -83,57 +83,57 @@ function g(e) {
                           label: u.intl.string(u.t.mFMDSk),
                           children: [
                               (0, r.jsx)(s.k5B, {
-                                  id: 'view-as-list',
-                                  group: 'view-as',
-                                  label: u.intl.string(u.t['NJFr+v']),
+                                  id: "view-as-list",
+                                  group: "view-as",
+                                  label: u.intl.string(u.t["NJFr+v"]),
                                   action: () => _(i.X.LIST),
-                                  checked: f === i.X.LIST
+                                  checked: f === i.X.LIST,
                               }),
                               (0, r.jsx)(s.k5B, {
-                                  id: 'view-as-grid',
-                                  group: 'view-as',
+                                  id: "view-as-grid",
+                                  group: "view-as",
                                   label: u.intl.string(u.t.wKeggY),
                                   action: () => _(i.X.GRID),
-                                  checked: f === i.X.GRID
-                              })
-                          ]
+                                  checked: f === i.X.GRID,
+                              }),
+                          ],
                       }),
                 O
                     ? (0, r.jsxs)(s.kSQ, {
                           label: u.intl.string(u.t.Paxaur),
                           children: [
                               (0, r.jsx)(s.k5B, {
-                                  id: 'match-some',
-                                  group: 'tag-setting',
+                                  id: "match-some",
+                                  group: "tag-setting",
                                   label: u.intl.string(u.t.rQ0ctb),
                                   action: () => y(l.z.MATCH_SOME),
-                                  checked: x === l.z.MATCH_SOME
+                                  checked: x === l.z.MATCH_SOME,
                               }),
                               (0, r.jsx)(s.k5B, {
-                                  id: 'match-all',
-                                  group: 'tag-setting',
+                                  id: "match-all",
+                                  group: "tag-setting",
                                   label: u.intl.string(u.t.FCXUu7),
                                   action: () => y(l.z.MATCH_ALL),
-                                  checked: x === l.z.MATCH_ALL
-                              })
-                          ]
+                                  checked: x === l.z.MATCH_ALL,
+                              }),
+                          ],
                       })
                     : null,
                 (0, r.jsx)(s.kSQ, {
                     children: (0, r.jsx)(s.sNh, {
-                        id: 'reset-all',
+                        id: "reset-all",
                         className: h.clearText,
                         label: (0, r.jsx)(s.Text, {
-                            variant: 'text-sm/medium',
-                            color: 'none',
-                            children: u.intl.string(u.t['3b//lJ'])
+                            variant: "text-sm/medium",
+                            color: "none",
+                            children: u.intl.string(u.t["3b//lJ"]),
                         }),
                         action: () => {
-                            (C(t.getDefaultSortOrder()), _(t.getDefaultLayout()), y(t.getDefaultTagSetting()));
-                        }
-                    })
-                })
-            ]
-        })
+                            C(t.getDefaultSortOrder()), _(t.getDefaultLayout()), y(t.getDefaultTagSetting());
+                        },
+                    }),
+                }),
+            ],
+        }),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { U: () => u }), n(388685));
+n.d(t, { U: () => u }), n(388685);
 var r,
     i = n(255367),
     o = n(73800),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,40 +29,43 @@ class u extends (r = o.Component) {
         e ? this.startShaking() : this.stopShaking();
     }
     startShaking() {
-        ((this.shouldRenderFrame = !0), (this.animationFrame = requestAnimationFrame(this.animate)));
+        (this.shouldRenderFrame = !0), (this.animationFrame = requestAnimationFrame(this.animate));
     }
     stopShaking() {
         null != this.animationFrame && cancelAnimationFrame(this.animationFrame);
         let e = this.ref.current;
-        null != e && (e.style.transform = '');
+        null != e && (e.style.transform = "");
     }
     render() {
         let { className: e, children: t } = this.props;
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: e,
             ref: this.ref,
-            children: t
+            children: t,
         });
     }
     constructor(...e) {
-        (super(...e),
-            c(this, 'ref', o.createRef()),
-            c(this, 'animationFrame', void 0),
-            c(this, 'shouldRenderFrame', !0),
-            c(this, 'animate', () => {
+        super(...e),
+            c(this, "ref", o.createRef()),
+            c(this, "animationFrame", void 0),
+            c(this, "shouldRenderFrame", !0),
+            c(this, "animate", () => {
                 let { intensity: e, isShaking: t } = this.props;
                 if (!t) return;
                 let n = this.ref.current;
                 if (this.shouldRenderFrame && null != n) {
                     let t = s().random(-e, e, !0),
                         r = s().random(-e, e, !0);
-                    n.style.transform = l.Z.useReducedMotion ? '' : 'translate3d('.concat(t, 'px,').concat(r, 'px,0px)');
+                    n.style.transform = l.Z.useReducedMotion
+                        ? ""
+                        : "translate3d(".concat(t, "px,").concat(r, "px,0px)");
                 }
-                ((this.shouldRenderFrame = !this.shouldRenderFrame), (this.animationFrame = requestAnimationFrame(this.animate)));
-            }));
+                (this.shouldRenderFrame = !this.shouldRenderFrame),
+                    (this.animationFrame = requestAnimationFrame(this.animate));
+            });
     }
 }
-c(u, 'defaultProps', {
+c(u, "defaultProps", {
     isShaking: !0,
-    intensity: 5
+    intensity: 5,
 });

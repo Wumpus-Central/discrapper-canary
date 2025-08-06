@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,10 +25,10 @@ let c = null,
     p = new Set();
 function h(e) {
     let { sessionId: t } = e;
-    ((c = t), (u = null));
+    (c = t), (u = null);
 }
 function m() {
-    ((c = null), (u = null));
+    (c = null), (u = null);
 }
 function g(e) {
     let { sessionType: t, nonce: n, channelId: r, deviceId: i, commandId: o } = e;
@@ -38,7 +38,7 @@ function g(e) {
         channelId: r,
         startedAt: Date.now(),
         deviceId: i,
-        commandId: o
+        commandId: o,
     };
 }
 function E(e) {
@@ -50,7 +50,7 @@ function b(e) {
     p.delete(t);
     let r = (f[t] = {}),
         i = {};
-    for (let e of n) ((r[e.id] = e), _[t] === e.id && (i[t] = e.id));
+    for (let e of n) (r[e.id] = e), _[t] === e.id && (i[t] = e.id);
     _ = i;
 }
 function y(e) {
@@ -64,7 +64,7 @@ function O(e) {
 let v = Object.freeze({});
 class I extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        (null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(a.Z, s.Z));
+        null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(a.Z, s.Z);
     }
     getUserAgnosticState() {
         return { lastSelectedDeviceByPlatform: _ };
@@ -93,7 +93,7 @@ class I extends (r = i.ZP.DeviceSettingsStore) {
         return u;
     }
 }
-(l(I, 'displayName', 'GameConsoleStore'), l(I, 'persistKey', 'GameConsoleStore'));
+l(I, "displayName", "GameConsoleStore"), l(I, "persistKey", "GameConsoleStore");
 let T = new I(o.Z, {
     REMOTE_SESSION_CONNECT: h,
     REMOTE_SESSION_DISCONNECT: m,
@@ -101,5 +101,5 @@ let T = new I(o.Z, {
     GAME_CONSOLE_FETCH_DEVICES_START: E,
     GAME_CONSOLE_FETCH_DEVICES_SUCCESS: b,
     GAME_CONSOLE_FETCH_DEVICES_FAIL: y,
-    GAME_CONSOLE_SELECT_DEVICE: O
+    GAME_CONSOLE_SELECT_DEVICE: O,
 });

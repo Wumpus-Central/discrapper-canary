@@ -14,9 +14,9 @@ let h = () => ({
         title: u.intl.string(u.t.pkXAeH),
         body: null,
         hint: p,
-        notifType: d.n0.WelcomeNudge
+        notifType: d.n0.WelcomeNudge,
     }),
-    p = (e) => (0, o.QR)(e, (0, c.P)(), u.t['z8/sgI']);
+    p = (e) => (0, o.QR)(e, (0, c.P)(), u.t["z8/sgI"]);
 function f(e) {
     let { type: t } = e,
         {
@@ -24,7 +24,7 @@ function f(e) {
             title: o,
             body: p,
             hint: f,
-            notifType: g
+            notifType: g,
         } = (function (e, t) {
             if (t.type === d.nc.NEWS) {
                 var n, i, r, o, l, s, a, c;
@@ -33,7 +33,7 @@ function f(e) {
                     title: null != (s = null == (i = t.news) ? void 0 : i.title) ? s : e.title,
                     body: null != (a = null == (r = t.news) ? void 0 : r.body) ? a : e.body,
                     hint: null != (c = null == (o = t.news) ? void 0 : o.hint) ? c : e.hint,
-                    notifType: null != t.news ? d.n0.NewsNudge : e.notifType
+                    notifType: null != t.news ? d.n0.NewsNudge : e.notifType,
                 };
             }
             return e;
@@ -45,21 +45,25 @@ function f(e) {
         body: p,
         hint: f,
         renderFooter: () =>
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 style: {
-                    textAlign: 'center',
-                    padding: 2
+                    textAlign: "center",
+                    padding: 2,
                 },
-                children: u.intl.string(u.t['9MyuT0'])
+                children: u.intl.string(u.t["9MyuT0"]),
             }),
         onNotificationShow: () => {
             m();
         },
         onNotificationClick: (e, n) => {
-            (y('unlock'), t === d.nc.NEWS && r.Z.updateNotificationStatus(n), l.default.isOverlayOOPEnabledForPid((0, a.getPID)()) ? r.Z.setInputLocked(!1, (0, a.getPID)()) : s.default.isInstanceLocked() && r.Z.setInstanceLocked(!1));
+            y("unlock"),
+                t === d.nc.NEWS && r.Z.updateNotificationStatus(n),
+                l.default.isOverlayOOPEnabledForPid((0, a.getPID)())
+                    ? r.Z.setInputLocked(!1, (0, a.getPID)())
+                    : s.default.isInstanceLocked() && r.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            y('dismiss');
-        }
+            y("dismiss");
+        },
     };
 }

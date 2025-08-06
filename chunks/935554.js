@@ -17,13 +17,13 @@ function f(e) {
         i = (0, o.GG)(r)[0],
         { editStateIds: f } = l.B7(null != (t = null == i ? void 0 : i.id) ? t : null, r),
         { activeSubscription: b } = (0, s.Z)(null == i ? void 0 : i.id);
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: p.container,
         children: [
             null != i
                 ? (0, n.jsx)(c.Z, {
                       groupListingId: i.id,
-                      subscription: b
+                      subscription: b,
                   })
                 : null,
             (0, n.jsx)(a.Z, { subscription: b }),
@@ -35,15 +35,15 @@ function f(e) {
                         u.Z,
                         {
                             guildId: r,
-                            groupListingId: null != (t = null == i ? void 0 : i.id) ? t : '',
+                            groupListingId: null != (t = null == i ? void 0 : i.id) ? t : "",
                             listingId: e,
-                            analyticsLocation: C.Sbl.ROLE_SUBSCRIPTIONS_TAB
+                            analyticsLocation: C.Sbl.ROLE_SUBSCRIPTIONS_TAB,
                         },
-                        e
+                        e,
                     );
-                })
-            })
-        ]
+                }),
+            }),
+        ],
     });
 }
 function b(e) {
@@ -51,6 +51,6 @@ function b(e) {
     return (0, n.jsx)(i.l, {
         guildId: t,
         refetchOnMount: !0,
-        children: (0, n.jsx)(f, { guildId: t })
+        children: (0, n.jsx)(f, { guildId: t }),
     });
 }

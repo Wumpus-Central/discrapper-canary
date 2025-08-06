@@ -19,29 +19,31 @@ function _(e) {
     let E = (0, c.Z)({
             channel: t,
             user: m,
-            guild: g
+            guild: g,
         }),
         b = (0, d.Z)({
             channel: t,
             user: m,
-            guild: g
+            guild: g,
         }),
         y = [
             (0, u.Z)({
                 channel: t,
                 message: n,
                 user: m,
-                guild: g
+                guild: g,
             }),
             E,
             b,
             (0, f.Z)({
                 channel: t,
                 user: m,
-                guild: g
-            })
+                guild: g,
+            }),
         ].filter((e) => null != e);
-    return t.isModeratorReportChannel() && 0 !== y.length ? (0, r.jsx)(r.Fragment, { children: y.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t)) }) : null;
+    return t.isModeratorReportChannel() && 0 !== y.length
+        ? (0, r.jsx)(r.Fragment, { children: y.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t)) })
+        : null;
 }
 function p(e) {
     let { message: t, channel: n } = e;
@@ -52,10 +54,10 @@ function p(e) {
                 {
                     channel: n,
                     message: t,
-                    snapshot: e
+                    snapshot: e,
                 },
-                i
-            )
-        )
+                i,
+            ),
+        ),
     });
 }

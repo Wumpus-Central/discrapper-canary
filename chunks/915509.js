@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(953529), n(388685));
+n.d(t, { Z: () => s }), n(953529), n(388685);
 var r = n(255367),
     l = n(73800),
     a = n(82659),
@@ -25,27 +25,27 @@ function s(e) {
         subtitle: s,
         actions: [
             {
-                text: o.intl.string(o.t['ETE/oK']),
-                variant: 'secondary',
-                onClick: d
+                text: o.intl.string(o.t["ETE/oK"]),
+                variant: "secondary",
+                onClick: d,
             },
             {
                 text: o.intl.string(o.t.R3BPHx),
                 onClick: h,
-                variant: 'primary',
-                loading: m
-            }
+                variant: "primary",
+                loading: m,
+            },
         ],
         children: [
             g,
-            null != t && '' !== t
+            null != t && "" !== t
                 ? (0, r.jsx)(i.Text, {
                       className: c.errorText,
-                      variant: 'text-xs/normal',
-                      color: 'text-danger',
-                      children: t
+                      variant: "text-xs/normal",
+                      color: "text-danger",
+                      children: t,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

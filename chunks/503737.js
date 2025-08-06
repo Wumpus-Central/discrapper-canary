@@ -11,37 +11,39 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
-let d = 'ActivityInviteManager',
+let d = "ActivityInviteManager",
     h = () => {
-        o.Z.dispatch({ type: 'ACTIVITY_INVITE_MODAL_CLOSE' });
+        o.Z.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
     };
 class p extends s.Z {
     _initialize() {
-        (o.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), o.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose));
+        o.Z.subscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
+            o.Z.subscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
     }
     _terminate() {
-        (o.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), o.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose));
+        o.Z.unsubscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
+            o.Z.unsubscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
     }
     handleModalOpen(e) {
         let { activity: t, isPrivate: o, context: s } = e,
@@ -54,24 +56,24 @@ class p extends s.Z {
                           i.Modal,
                           ((n = u(
                               {
-                                  title: c.intl.formatToPlainString(c.t['2tN7io'], { name: t.name }),
+                                  title: c.intl.formatToPlainString(c.t["2tN7io"], { name: t.name }),
                                   actions: [
                                       {
-                                          variant: 'primary',
+                                          variant: "primary",
                                           text: c.intl.string(c.t.BddRzc),
                                           onClick: e.onClose,
-                                          autoFocus: !0
-                                      }
-                                  ]
+                                          autoFocus: !0,
+                                      },
+                                  ],
                               },
-                              e
+                              e,
                           )),
                           (o = o =
                               {
                                   children: (0, r.jsx)(l.Text, {
-                                      variant: 'text-md/normal',
-                                      children: c.intl.string(c.t.MAxtkp)
-                                  })
+                                      variant: "text-md/normal",
+                                      children: c.intl.string(c.t.MAxtkp),
+                                  }),
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
@@ -85,25 +87,25 @@ class p extends s.Z {
                                 })(Object(o)).forEach(function (e) {
                                     Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
                                 }),
-                          n)
+                          n),
                       );
                   },
                   {
                       onCloseCallback: h,
-                      modalKey: d
+                      modalKey: d,
                   },
-                  p
+                  p,
               )
             : (0, l.ZDy)(
                   async () => {
-                      let { default: e } = await n.e('95463').then(n.bind(n, 699099));
+                      let { default: e } = await n.e("95463").then(n.bind(n, 699099));
                       return (t) => (0, r.jsx)(e, u({}, t));
                   },
                   {
                       onCloseCallback: h,
                       modalKey: d,
-                      contextKey: p
-                  }
+                      contextKey: p,
+                  },
               );
     }
     handleModalClose(e) {

@@ -8,7 +8,7 @@ var a = n(120356),
 let o = function (e) {
     let { tabs: t, onTabSelect: n, selectedTab: a, className: o } = e;
     return (0, r.jsx)(l.njP, {
-        type: 'top-pill',
+        type: "top-pill",
         selectedItem: a,
         onItemSelect: n,
         className: o,
@@ -19,11 +19,11 @@ let o = function (e) {
                 {
                     id: n,
                     className: i()(s.tabItem, { [s.firstChildSpacingFix]: 0 === t }),
-                    'aria-label': a,
-                    children: null != o && o > 0 ? ''.concat(a, ' (').concat(o, ')') : a
+                    "aria-label": a,
+                    children: null != o && o > 0 ? "".concat(a, " (").concat(o, ")") : a,
                 },
-                n
+                n,
             );
-        })
+        }),
     });
 };

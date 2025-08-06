@@ -5,7 +5,7 @@ var r = n(481060);
 let s = (e) => {
     let { analyticsLocations: t, guildId: s, initialSelectedNameplate: a } = e;
     (0, r.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('89001'), n.e('32104'), n.e('11912')]).then(n.bind(n, 612293));
+        let { default: e } = await Promise.all([n.e("89001"), n.e("32104"), n.e("11912")]).then(n.bind(n, 612293));
         return (n) => {
             var r, l;
             return (0, i.jsx)(
@@ -14,24 +14,24 @@ let s = (e) => {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
                 })({}, n)),
@@ -39,7 +39,7 @@ let s = (e) => {
                     {
                         guildId: s,
                         analyticsLocations: t,
-                        initialSelectedNameplate: a
+                        initialSelectedNameplate: a,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
@@ -53,7 +53,7 @@ let s = (e) => {
                       })(Object(l)).forEach(function (e) {
                           Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
-                r)
+                r),
             );
         };
     });

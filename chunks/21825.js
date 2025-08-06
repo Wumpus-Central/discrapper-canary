@@ -6,50 +6,50 @@ var i = n(997638),
     a = n(482641),
     s = n(613725);
 let l = Object.freeze({
-        'voice-conversations': {
-            popoutPosition: 'right',
+        "voice-conversations": {
+            popoutPosition: "right",
             highPriority: !0,
             textAlign: i.iu.CENTER,
-            media: () => (0, r.jsx)(a.Z, {})
+            media: () => (0, r.jsx)(a.Z, {}),
         },
-        'writing-messages': {
-            popoutPosition: 'top',
+        "writing-messages": {
+            popoutPosition: "top",
             highPriority: !0,
             textAlign: i.iu.CENTER,
             spacing: 10,
-            media: () => (0, r.jsx)(s.Z, {})
+            media: () => (0, r.jsx)(s.Z, {}),
         },
-        'direct-messages': { popoutPosition: 'right' },
-        'create-first-server': {
-            popoutPosition: 'right',
-            highPriority: !0
+        "direct-messages": { popoutPosition: "right" },
+        "create-first-server": {
+            popoutPosition: "right",
+            highPriority: !0,
         },
-        'organize-by-topic': {
-            popoutPosition: 'right',
+        "organize-by-topic": {
+            popoutPosition: "right",
             textAlign: i.iu.CENTER,
             spacing: 8,
-            media: () => (0, r.jsx)(o.Z, {})
+            media: () => (0, r.jsx)(o.Z, {}),
         },
-        'instant-invite': {
-            popoutPosition: 'right',
+        "instant-invite": {
+            popoutPosition: "right",
             spacing: 24,
-            highPriority: !0
+            highPriority: !0,
         },
-        'whos-online': {
+        "whos-online": {
             spacing: 16,
-            popoutPosition: 'left'
+            popoutPosition: "left",
         },
-        'server-settings': {
-            popoutPosition: 'bottom',
-            spacing: 10
+        "server-settings": {
+            popoutPosition: "bottom",
+            spacing: 10,
         },
-        'friends-list': {
+        "friends-list": {
             spacing: 8,
-            popoutPosition: 'right'
+            popoutPosition: "right",
         },
-        'create-more-servers': {
+        "create-more-servers": {
             spacing: 8,
-            popoutPosition: 'right'
-        }
+            popoutPosition: "right",
+        },
     }),
     c = (e) => (e in l ? l[e] : null);

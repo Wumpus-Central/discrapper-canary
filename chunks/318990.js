@@ -13,13 +13,21 @@ function d() {
         { avatarSrc: i, eventHandlers: d } = (0, s.Z)({
             userId: null == t ? void 0 : t.id,
             size: a.EFr.SIZE_24,
-            animateOnHover: !0
+            animateOnHover: !0,
         }),
         m = (e) => (null != e.globalName ? e.globalName : e.username),
-        C = r.useMemo(() => (e.length >= 2 ? c.intl.formatToPlainString(c.t.c7ETJC, { username: m(e[0]) }) : 1 === e.length ? c.intl.formatToPlainString(c.t.dpjXPD, { username: m(e[0]) }) : ''), [e]);
+        C = r.useMemo(
+            () =>
+                e.length >= 2
+                    ? c.intl.formatToPlainString(c.t.c7ETJC, { username: m(e[0]) })
+                    : 1 === e.length
+                      ? c.intl.formatToPlainString(c.t.dpjXPD, { username: m(e[0]) })
+                      : "",
+            [e],
+        );
     return 0 === e.length
         ? null
-        : (0, n.jsxs)('div', {
+        : (0, n.jsxs)("div", {
               className: u.container,
               children: [
                   (0, n.jsx)(
@@ -28,42 +36,42 @@ function d() {
                           for (var t = 1; t < arguments.length; t++) {
                               var i = null != arguments[t] ? arguments[t] : {},
                                   n = Object.keys(i);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (n = n.concat(
                                       Object.getOwnPropertySymbols(i).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(i, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   n.forEach(function (t) {
                                       var n;
-                                      ((n = i[t]),
+                                      (n = i[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: n,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = n));
-                                  }));
+                                              : (e[t] = n);
+                                  });
                           }
                           return e;
                       })(
                           {
                               className: u.__invalid_icon,
                               src: i,
-                              'aria-label': t.username,
-                              size: a.EFr.SIZE_24
+                              "aria-label": t.username,
+                              size: a.EFr.SIZE_24,
                           },
-                          d
-                      )
+                          d,
+                      ),
                   ),
                   (0, n.jsx)(a.Text, {
                       className: u.text,
-                      variant: 'text-sm/normal',
-                      color: 'always-white',
-                      children: C
-                  })
-              ]
+                      variant: "text-sm/normal",
+                      color: "always-white",
+                      children: C,
+                  }),
+              ],
           });
 }

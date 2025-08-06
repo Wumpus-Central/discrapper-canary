@@ -22,10 +22,13 @@ var r = n(481060),
     C = n(726985),
     O = n(981631),
     v = n(388032);
-let S = ''.concat(a.Z.getArticleURL(O.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+let S = "".concat(
+    a.Z.getArticleURL(O.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+    "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm",
+);
 function T() {
     return (
-        (0, l.c)({ location: 'UserSettingsVoiceV2' }),
+        (0, l.c)({ location: "UserSettingsVoiceV2" }),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(o.Z, {
@@ -35,11 +38,11 @@ function T() {
                             children: [
                                 (0, i.jsx)(s.F, {
                                     setting: C.s6.VOICE_AND_VIDEO_DEVICES,
-                                    children: (0, i.jsx)(m.Z, {})
+                                    children: (0, i.jsx)(m.Z, {}),
                                 }),
                                 (0, i.jsx)(s.F, {
                                     setting: C.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-                                    children: (0, i.jsx)(E.Z, {})
+                                    children: (0, i.jsx)(E.Z, {}),
                                 }),
                                 (0, i.jsxs)(s.F, {
                                     setting: C.s6.VOICE_AND_VIDEO_MIC_TEST,
@@ -47,45 +50,51 @@ function T() {
                                         (0, i.jsx)(h.Z, {}),
                                         (0, i.jsx)(r.R94, {
                                             type: r.R94.Types.DESCRIPTION,
-                                            children: v.intl.format(v.t['V+B3FB'], { guideURL: S })
-                                        })
-                                    ]
-                                })
-                            ]
+                                            children: v.intl.format(v.t["V+B3FB"], { guideURL: S }),
+                                        }),
+                                    ],
+                                }),
+                            ],
                         }),
                         (0, i.jsx)(c.Z, {
                             children: (0, i.jsx)(s.F, {
                                 setting: C.s6.VOICE_AND_VIDEO_INPUT_PROFILE,
-                                children: (0, i.jsx)(g.Z, {})
-                            })
+                                children: (0, i.jsx)(g.Z, {}),
+                            }),
                         }),
                         (0, i.jsxs)(c.Z, {
                             children: [
                                 (0, i.jsx)(s.F, {
                                     setting: C.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                                    children: (0, i.jsx)(p.Z, {})
+                                    children: (0, i.jsx)(p.Z, {}),
                                 }),
                                 (0, i.jsx)(s.F, {
                                     setting: C.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                                    children: (0, i.jsx)(j.Z, {})
-                                })
-                            ]
-                        })
-                    ]
+                                    children: (0, i.jsx)(j.Z, {}),
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
                 (0, i.jsx)(o.Z, {
                     webSetting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                    title: v.intl.string(v.t['6I6GUl']),
-                    children: (0, i.jsx)(_.Z, { refreshStyles: !0 })
+                    title: v.intl.string(v.t["6I6GUl"]),
+                    children: (0, i.jsx)(_.Z, { refreshStyles: !0 }),
                 }),
                 (0, i.jsx)(o.Z, {
-                    title: v.intl.string(v.t['8/udY2']),
+                    title: v.intl.string(v.t["8/udY2"]),
                     webSetting: C.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
                     children: (0, i.jsxs)(c.Z, {
-                        children: [(0, i.jsx)(b.Z, { refreshStyles: !0 }), (0, i.jsx)(x.Z, { refreshStyles: !0 }), (0, i.jsx)(d.Z, { refreshStyles: !0 }), (0, i.jsx)(u.Z, { refreshStyles: !0 }), (0, i.jsx)(f.Z, { refreshStyles: !0 })]
-                    })
-                })
-            ]
+                        children: [
+                            (0, i.jsx)(b.Z, { refreshStyles: !0 }),
+                            (0, i.jsx)(x.Z, { refreshStyles: !0 }),
+                            (0, i.jsx)(d.Z, { refreshStyles: !0 }),
+                            (0, i.jsx)(u.Z, { refreshStyles: !0 }),
+                            (0, i.jsx)(f.Z, { refreshStyles: !0 }),
+                        ],
+                    }),
+                }),
+            ],
         })
     );
 }

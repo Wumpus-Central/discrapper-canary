@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => m,
-    r: () => u
+    r: () => u,
 });
 var i = n(255367);
 n(73800);
@@ -17,35 +17,35 @@ let d = a.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
             {
                 avatarSrc: u,
                 avatarDecorationSrc: m,
-                eventHandlers: p
+                eventHandlers: p,
             } = (0, s.Z)({
                 userId: null == a ? void 0 : a.id,
-                size: c
+                size: c,
             });
         return (0, i.jsx)(
-            'div',
+            "div",
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         i.forEach(function (t) {
                             var i;
-                            ((i = n[t]),
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: i,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = i));
-                        }));
+                                    : (e[t] = i);
+                        });
                 }
                 return e;
             })({}, p)),
@@ -55,8 +55,8 @@ let d = a.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
                         src: u,
                         avatarDecoration: m,
                         size: c,
-                        'aria-label': o.intl.formatToPlainString(l.default.kFj4h4, { name: a.username })
-                    })
+                        "aria-label": o.intl.formatToPlainString(l.default.kFj4h4, { name: a.username }),
+                    }),
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -70,16 +70,16 @@ let d = a.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            t)
+            t),
         );
     },
     m = (e) => {
         let { currentUser: t, otherUser: n, children: r } = e;
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: c.avatarPairContainer,
-            children: (0, i.jsxs)('div', {
+            children: (0, i.jsxs)("div", {
                 className: c.avatarPair,
-                children: [(0, i.jsx)(u, { user: t }), r, (0, i.jsx)(u, { user: n })]
-            })
+                children: [(0, i.jsx)(u, { user: t }), r, (0, i.jsx)(u, { user: n })],
+            }),
         });
     };

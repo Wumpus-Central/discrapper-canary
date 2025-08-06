@@ -11,6 +11,6 @@ function i() {
             e.current.scrollPosition.set(0);
         }, []),
         scrollPosition: e.current.scrollPosition,
-        onScroll: t
+        onScroll: t,
     };
 }

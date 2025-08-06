@@ -9,21 +9,21 @@ var i = n(481060),
 function c(e, t) {
     return a.wS
         ? (0, r.jsx)(i.sNh, {
-              id: 'copy-link',
+              id: "copy-link",
               label: l.intl.string(l.t.Xrt5Pj),
               icon: i.xPt,
               action: () => {
-                  ((0, a.JG)(
-                      ''
-                          .concat(location.protocol, '//')
+                  (0, a.JG)(
+                      ""
+                          .concat(location.protocol, "//")
                           .concat(location.host)
-                          .concat(s.Z5c.CHANNEL(t.guild_id, t.id, e.id))
+                          .concat(s.Z5c.CHANNEL(t.guild_id, t.id, e.id)),
                   ),
                       o.default.track(s.rMx.MESSAGE_LINK_COPIED, {
                           message_id: e.id,
-                          channel: e.channel_id
-                      }));
-              }
+                          channel: e.channel_id,
+                      });
+              },
           })
         : null;
 }

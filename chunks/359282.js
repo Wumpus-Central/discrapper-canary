@@ -1,5 +1,5 @@
 function r(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 var i = n(65183),
     o = i.Map,
@@ -8,7 +8,7 @@ var i = n(65183),
     l = a(),
     c = {
         style: l,
-        entity: null
+        entity: null,
     },
     u = (function (e) {
         function t() {
@@ -18,40 +18,40 @@ var i = n(65183),
         var n = t.prototype;
         return (
             (n.getStyle = function () {
-                return this.get('style');
+                return this.get("style");
             }),
             (n.getEntity = function () {
-                return this.get('entity');
+                return this.get("entity");
             }),
             (n.hasStyle = function (e) {
                 return this.getStyle().includes(e);
             }),
             (t.applyStyle = function (e, n) {
-                var r = e.set('style', e.getStyle().add(n));
+                var r = e.set("style", e.getStyle().add(n));
                 return t.create(r);
             }),
             (t.removeStyle = function (e, n) {
-                var r = e.set('style', e.getStyle().remove(n));
+                var r = e.set("style", e.getStyle().remove(n));
                 return t.create(r);
             }),
             (t.applyEntity = function (e, n) {
-                var r = e.getEntity() === n ? e : e.set('entity', n);
+                var r = e.getEntity() === n ? e : e.set("entity", n);
                 return t.create(r);
             }),
             (t.create = function (e) {
                 if (!e) return d;
                 var n = o({
                         style: l,
-                        entity: null
+                        entity: null,
                     }).merge(e),
                     r = f.get(n);
                 if (r) return r;
                 var i = new t(n);
-                return ((f = f.set(n, i)), i);
+                return (f = f.set(n, i)), i;
             }),
             t
         );
     })(s(c)),
     d = new u(),
     f = o([[o(c), d]]);
-((u.EMPTY = d), (e.exports = u));
+(u.EMPTY = d), (e.exports = u);

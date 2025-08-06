@@ -13,11 +13,16 @@ let s = {
             (function () {
                 let { goreContentGuilds: e, goreContentFriendDm: t, goreContentNonFriendDm: n } = (0, l.O6)(),
                     i = {};
-                return (e === r.Q4.SHOW && (i.goreContentGuilds = r.Q4.BLUR), t === r.Q4.SHOW && (i.goreContentFriendDm = r.Q4.BLUR), n === r.Q4.SHOW && (i.goreContentNonFriendDm = r.Q4.BLUR), i);
-            })()
+                return (
+                    e === r.Q4.SHOW && (i.goreContentGuilds = r.Q4.BLUR),
+                    t === r.Q4.SHOW && (i.goreContentFriendDm = r.Q4.BLUR),
+                    n === r.Q4.SHOW && (i.goreContentNonFriendDm = r.Q4.BLUR),
+                    i
+                );
+            })(),
         ),
     predicate: () => {
         let { goreContentGuilds: e, goreContentFriendDm: t, goreContentNonFriendDm: n } = (0, l.O6)();
         return e === r.Q4.SHOW || t === r.Q4.SHOW || n === r.Q4.SHOW;
-    }
+    },
 };

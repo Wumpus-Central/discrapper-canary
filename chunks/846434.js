@@ -3,7 +3,7 @@ function r(e) {
     return e;
 }
 function i(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 function o(e, t, n) {
     return (
@@ -12,7 +12,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,55 +22,57 @@ var a = n(73800),
     s = n(169774),
     l = n(581079),
     c = n(613078),
-    u = s.isBrowser('IE <= 11');
+    u = s.isBrowser("IE <= 11");
 function d(e) {
-    return u ? '\n' === e.textContent : 'BR' === e.tagName;
+    return u ? "\n" === e.textContent : "BR" === e.tagName;
 }
 var f = function (e) {
         return u
             ? a.createElement(
-                  'span',
+                  "span",
                   {
-                      key: 'A',
-                      'data-text': 'true',
-                      ref: e
+                      key: "A",
+                      "data-text": "true",
+                      ref: e,
                   },
-                  '\n'
+                  "\n",
               )
-            : a.createElement('br', {
-                  key: 'A',
-                  'data-text': 'true',
-                  ref: e
+            : a.createElement("br", {
+                  key: "A",
+                  "data-text": "true",
+                  ref: e,
               });
     },
     _ = function (e) {
         return u
             ? a.createElement(
-                  'span',
+                  "span",
                   {
-                      key: 'B',
-                      'data-text': 'true',
-                      ref: e
+                      key: "B",
+                      "data-text": "true",
+                      ref: e,
                   },
-                  '\n'
+                  "\n",
               )
-            : a.createElement('br', {
-                  key: 'B',
-                  'data-text': 'true',
-                  ref: e
+            : a.createElement("br", {
+                  key: "B",
+                  "data-text": "true",
+                  ref: e,
               });
     };
 e.exports = (function (e) {
     function t(t) {
         var n;
-        return (o(r((n = e.call(this, t) || this)), '_forceFlag', void 0), o(r(n), '_node', void 0), (n._forceFlag = !1), n);
+        return (
+            o(r((n = e.call(this, t) || this)), "_forceFlag", void 0), o(r(n), "_node", void 0), (n._forceFlag = !1), n
+        );
     }
     i(t, e);
     var n = t.prototype;
     return (
         (n.shouldComponentUpdate = function (e) {
             var t = this._node,
-                n = '' === e.children;
+                n = "" === e.children;
             c(t) || l(!1);
             var r = t;
             return n ? !d(r) : r.textContent !== e.children;
@@ -83,7 +85,7 @@ e.exports = (function (e) {
         }),
         (n.render = function () {
             var e = this;
-            return '' === this.props.children
+            return "" === this.props.children
                 ? this._forceFlag
                     ? f(function (t) {
                           return (e._node = t);
@@ -92,15 +94,15 @@ e.exports = (function (e) {
                           return (e._node = t);
                       })
                 : a.createElement(
-                      'span',
+                      "span",
                       {
-                          key: this._forceFlag ? 'A' : 'B',
-                          'data-text': 'true',
+                          key: this._forceFlag ? "A" : "B",
+                          "data-text": "true",
                           ref: function (t) {
                               return (e._node = t);
-                          }
+                          },
                       },
-                      this.props.children
+                      this.props.children,
                   );
         }),
         t

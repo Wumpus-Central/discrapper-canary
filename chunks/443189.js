@@ -13,43 +13,43 @@ function h(t) {
     c.useEffect(() => {
         o.default.track(i.rMx.OPEN_MODAL, {
             type: i.jXE.CONTACT_SYNC_NC_MODAL,
-            source: { location: e }
+            source: { location: e },
         });
     }, [e]);
     let u = (0, s.Dt)();
     return (0, a.jsxs)(r.Y0X, {
         className: d.contactSync,
         transitionState: h,
-        'aria-labelledby': u,
-        parentComponent: 'ContactSyncModal',
+        "aria-labelledby": u,
+        parentComponent: "ContactSyncModal",
         children: [
             (0, a.jsx)(r.olH, {
                 onClick: n,
-                className: d.modalCloseButton
+                className: d.modalCloseButton,
             }),
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 className: d.inner,
                 children: [
                     (0, a.jsx)(r.X6q, {
-                        variant: 'heading-xl/extrabold',
-                        color: 'header-primary',
+                        variant: "heading-xl/extrabold",
+                        color: "header-primary",
                         className: d.header,
-                        children: l.intl.string(l.t.fdR8HR)
+                        children: l.intl.string(l.t.fdR8HR),
                     }),
                     (0, a.jsx)(r.Text, {
-                        variant: 'text-md/normal',
-                        color: 'header-secondary',
-                        children: l.intl.string(l.t.JXyNq6)
-                    })
-                ]
+                        variant: "text-md/normal",
+                        color: "header-secondary",
+                        children: l.intl.string(l.t.JXyNq6),
+                    }),
+                ],
             }),
-            (0, a.jsx)('div', {
+            (0, a.jsx)("div", {
                 className: d.container,
-                children: (0, a.jsx)('img', {
-                    alt: '',
-                    src: b
-                })
-            })
-        ]
+                children: (0, a.jsx)("img", {
+                    alt: "",
+                    src: b,
+                }),
+            }),
+        ],
     });
 }

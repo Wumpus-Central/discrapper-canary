@@ -1,6 +1,6 @@
 n.d(t, {
     Y: () => o,
-    n: () => i
+    n: () => i,
 });
 var r = n(452896);
 let i = globalThis;

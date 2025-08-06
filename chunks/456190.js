@@ -10,12 +10,12 @@ function a(e, t, n) {
             if (e.notPlayable) return o.intl.formatToPlainString(o.t.SqJBnJ, { name: i.ai });
             return;
         case i.kG.USER_ACTIVITY_SYNC:
-            if (e.isCurrentUser) return o.intl.string(o.t['AOU/CQ']);
+            if (e.isCurrentUser) return o.intl.string(o.t["AOU/CQ"]);
             if (e.syncingWithUser || e.syncingWithParty) return o.intl.string(o.t.m8CScn);
             if (e.notPlayable) return o.intl.formatToPlainString(o.t.SqJBnJ, { name: i.ai });
             return o.intl.formatToPlainString(o.t.CT9xYG, { name: null != n ? n : r.ZP.getName(e.user) });
         case i.kG.EMBED_SYNC:
-            if (e.isCurrentUser) return o.intl.string(o.t['AOU/CQ']);
+            if (e.isCurrentUser) return o.intl.string(o.t["AOU/CQ"]);
             if (e.syncingWithUser || e.syncingWithParty) return o.intl.string(o.t.m8CScn);
             if (e.notPlayable) return o.intl.formatToPlainString(o.t.SqJBnJ, { name: i.ai });
             return;

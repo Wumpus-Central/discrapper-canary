@@ -13,11 +13,11 @@ function o(n) {
         u = (0, d.Z)(e, null);
     return s.isPlatformEmbedded
         ? (0, i.jsxs)(l.v2r, {
-              navId: 'image-context',
+              navId: "image-context",
               onClose: r.Zy,
-              'aria-label': c.intl.string(c.t.Zow2V1),
+              "aria-label": c.intl.string(c.t.Zow2V1),
               onSelect: t,
-              children: [(0, i.jsx)(l.kSQ, { children: o }), (0, i.jsx)(l.kSQ, { children: u })]
+              children: [(0, i.jsx)(l.kSQ, { children: o }), (0, i.jsx)(l.kSQ, { children: u })],
           })
         : null;
 }

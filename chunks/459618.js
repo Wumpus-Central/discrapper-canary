@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(442837),
     i = n(570140),
     o = n(710845),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,13 +61,16 @@ function m(e, t) {
         e
     );
 }
-let g = new o.Z('MessageRoundtripTrackerStore');
+let g = new o.Z("MessageRoundtripTrackerStore");
 function E(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }
 function b(e) {
     let t = l.Z.getBasicChannel(e.channelId);
-    if (null == t) return void g.warn('Ignoring a messageData for channel '.concat(e.channelId, " because we can't find that channel."));
+    if (null == t)
+        return void g.warn(
+            "Ignoring a messageData for channel ".concat(e.channelId, " because we can't find that channel."),
+        );
     if (Math.random() > 0.1) return;
     let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         r = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
@@ -83,10 +86,10 @@ function b(e) {
                 guild_id: t.guild_id,
                 guild_size: c.Z.getMemberCount(t.guild_id),
                 mobile_network_type: u.Z.getType(),
-                num_attachments: e.attachmentCount
+                num_attachments: e.attachmentCount,
             }),
-            null != i && { mobile_signal_strength_level: i }
-        )
+            null != i && { mobile_signal_strength_level: i },
+        ),
     );
 }
 function y(e) {
@@ -98,19 +101,21 @@ class O extends r.ZP.Store {
     recordMessageSendAttempt(e, t) {
         var n, r, i, o;
         let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            s = (null != (i = null == (n = a.attachments) ? void 0 : n.length) ? i : 0) + (null != (o = null == (r = a.attachmentsToUpload) ? void 0 : r.length) ? o : 0),
+            s =
+                (null != (i = null == (n = a.attachments) ? void 0 : n.length) ? i : 0) +
+                (null != (o = null == (r = a.attachmentsToUpload) ? void 0 : r.length) ? o : 0),
             l = {
                 initialSendTimestamp: Date.now(),
                 apiResponseTimestamp: null,
                 gatewaySeenTimestamp: null,
                 channelId: e,
-                attachmentCount: s
+                attachmentCount: s,
             };
-        (this.pendingMessages.set(t, l),
+        this.pendingMessages.set(t, l),
             setTimeout(() => {
                 let e = this.pendingMessages.get(t);
                 null != e && (b(e), this.pendingMessages.delete(t));
-            }, 30000));
+            }, 30000);
     }
     recordMessageSendApiResponse(e) {
         let t = this.pendingMessages.get(e);
@@ -127,7 +132,7 @@ class O extends r.ZP.Store {
         }
     }
     constructor(...e) {
-        (super(...e), _(this, 'pendingMessages', new Map()));
+        super(...e), _(this, "pendingMessages", new Map());
     }
 }
 let v = new O(i.Z, { MESSAGE_CREATE: y }),

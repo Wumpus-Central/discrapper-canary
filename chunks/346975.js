@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => eC }), n(35282), n(388685), n(781311));
+n.r(t), n.d(t, { default: () => eC }), n(35282), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -72,24 +72,24 @@ function eb(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -121,12 +121,13 @@ function ev(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < l.length; r++)
+            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -139,40 +140,40 @@ function eC(e) {
             children: (0, r.jsx)(eN, {
                 channel: t,
                 guild: n,
-                sidebarState: i
-            })
+                sidebarState: i,
+            }),
         },
-        t.id
+        t.id,
     );
 }
 let e_ = new ec.Me({
     minWidth: 320,
     maxWidth: 450,
-    gap: 16
+    gap: 16,
 });
 function ey(e) {
-    return 'forum-grid-header-section-'.concat(e);
+    return "forum-grid-header-section-".concat(e);
 }
 let eO = (e, t, n) => (0 === e ? 0 : (0, ec.KW)(n));
 function ew(e) {
     let { itemRole: t, coords: n, section: i } = e;
     return (0, r.jsx)(
-        'div',
+        "div",
         {
             className: a()(ep.card, ep.archivedDividerRow, ep.columnsSpan),
             style: n,
-            'data-item-role': t,
-            children: (0, r.jsx)('div', {
+            "data-item-role": t,
+            children: (0, r.jsx)("div", {
                 className: ep.emptyMainCard,
                 children: (0, r.jsx)(p.X6q, {
-                    variant: 'eyebrow',
+                    variant: "eyebrow",
                     className: ep.archivedDivider,
                     id: ey(i),
-                    children: ex.intl.string(ex.t['3+LO19'])
-                })
-            })
+                    children: ex.intl.string(ex.t["3+LO19"]),
+                }),
+            }),
         },
-        'section-divider'
+        "section-divider",
     );
 }
 function eP(e) {
@@ -183,18 +184,18 @@ function eP(e) {
                   ew,
                   {
                       section: t,
-                      coords: null == n ? void 0 : ej(eb({}, n), { position: 'absolute' }),
-                      itemRole: 'section'
+                      coords: null == n ? void 0 : ej(eb({}, n), { position: "absolute" }),
+                      itemRole: "section",
                   },
-                  i
+                  i,
               )
             : null;
 }
 function eS(e, t) {
-    return 'card-'.concat(e, '-').concat(t);
+    return "card-".concat(e, "-").concat(t);
 }
 function eT(e) {
-    if ('string' == typeof e) {
+    if ("string" == typeof e) {
         let t = e.match(/card-{\d+}-({\d+})$/);
         return null == t ? null : t[1];
     }
@@ -206,15 +207,21 @@ function eN(e) {
             editorHeight: l,
             editorAdditionRowHeight: s,
             listViewCardHeights: o,
-            formOpen: u
+            formOpen: u,
         } = (0, ei.xH)((e) => {
-            let { editorHeight: t, editorAdditionRowHeight: n, listViewCardHeights: r, formOpen: i, cardHeightVersion: l } = e;
+            let {
+                editorHeight: t,
+                editorAdditionRowHeight: n,
+                listViewCardHeights: r,
+                formOpen: i,
+                cardHeightVersion: l,
+            } = e;
             return {
                 editorHeight: t,
                 editorAdditionRowHeight: n,
                 listViewCardHeights: r,
                 formOpen: i,
-                cardHeightVersion: l
+                cardHeightVersion: l,
             };
         }, c.X),
         {
@@ -227,7 +234,7 @@ function eN(e) {
             archivedThreadsLoading: y,
             loading: O,
             isSearchLoading: I,
-            layoutType: A
+            layoutType: A,
         } = (function (e) {
             let { sortOrder: t, tagFilter: n, layoutType: r, tagSetting: i } = (0, K.H)(e.id),
                 l = (0, J.vP)({
@@ -235,7 +242,7 @@ function eN(e) {
                     sortOrder: t,
                     tagFilter: n,
                     tagSetting: i,
-                    shouldAutomaticallyAck: !0
+                    shouldAutomaticallyAck: !0,
                 }),
                 a = (0, g.e7)([Z.Z, w.Z], () => {
                     let t = Z.Z.hasLoaded(e.guild_id),
@@ -256,7 +263,7 @@ function eN(e) {
                     archivedThreadsLoading: d,
                     activeThreadsLoading: a,
                     isSearchLoading: m,
-                    layoutType: r
+                    layoutType: r,
                 }
             );
         })(t),
@@ -272,7 +279,7 @@ function eN(e) {
             let { guildId: t, channelId: n, scrollerRef: r } = e;
             Y.Z.useForumChannelSeenManager({
                 guildId: t,
-                channelId: n
+                channelId: n,
             });
             let l = i.useRef(null),
                 a = i.useCallback((e, t) => {
@@ -291,12 +298,12 @@ function eN(e) {
                         return (
                             (l.current = new IntersectionObserver((e) => a(n, e), {
                                 root: t,
-                                rootMargin: '0px 100000px 0px 100000px',
-                                threshold: 0.5
+                                rootMargin: "0px 100000px 0px 100000px",
+                                threshold: 0.5,
                             })),
                             () => {
                                 var e;
-                                (null == (e = l.current) || e.disconnect(), (l.current = null));
+                                null == (e = l.current) || e.disconnect(), (l.current = null);
                             }
                         );
                 }, [n, a, r]),
@@ -307,32 +314,32 @@ function eN(e) {
                             if (null == e) return void (0, Q.Ct)(n, t, Date.now());
                             null == (r = l.current) || r.observe(e);
                         },
-                        [n]
-                    )
+                        [n],
+                    ),
                 }
             );
         })({
             scrollerRef: el,
             channelId: t.id,
-            guildId: t.guild_id
+            guildId: t.guild_id,
         }),
         eo = A === h.X.GRID,
         { searchQuery: ed } = (0, J.XZ)({ channelId: t.id }),
         eC = null != x && null != ed && ed.length > 0,
         ew = i.useRef(null),
         { containerRef: eN, containerWidth: eM } = (0, eu.Z)();
-    (i.useEffect(
+    i.useEffect(
         () => () => {
             null != t.id && W.Z.clearForumSearch(t.id);
         },
-        [t.id]
+        [t.id],
     ),
         i.useEffect(() => {
             if (null == ew.current && null != t.id) {
                 let e = F.ZP.getSidebarState(t.id);
                 null != e && e.type === M.tI.VIEW_THREAD && (ew.current = e.channelId);
             }
-        }, [t.id]));
+        }, [t.id]);
     let { columns: ek } = i.useMemo(() => (eo ? e_.getRenderOptions(eM) : ec.eU), [eo, eM]),
         eA = i.useMemo(() => (O ? Math.round((window.innerHeight - 200) / 118) : 0), [O]),
         { showResolvedFlags: eL } = (0, T.N)(t.id),
@@ -362,21 +369,33 @@ function eN(e) {
             if (eF && !eL) return [1, m.length, 0, eA];
             else return [1, m.length, f.length, eA];
         }, [eo, eC, m.length, f.length, et, en, eA, x, eD, ez, eB, eL, eF]),
-        eU = i.useMemo(() => (!et && eC ? [[], []] : en ? (eC ? [[], x, [], []] : eF && !eL ? [[], m, [], []] : [[], m, f, []]) : [[], m, []]), [eC, et, en, x, m, f, eL, eF]),
+        eU = i.useMemo(
+            () =>
+                !et && eC
+                    ? [[], []]
+                    : en
+                      ? eC
+                          ? [[], x, [], []]
+                          : eF && !eL
+                            ? [[], m, [], []]
+                            : [[], m, f, []]
+                      : [[], m, []],
+            [eC, et, en, x, m, f, eL, eF],
+        ),
         eV = i.useCallback(
             (e, n) => {
-                ((0, $.B5)({
+                (0, $.B5)({
                     guildId: t.guild_id,
                     channelId: t.id,
                     postId: e.id,
                     location: {
                         page: eg.ZY5.GUILD_CHANNEL,
-                        section: eg.jXE.FORUM_CHANNEL_POST
-                    }
+                        section: eg.jXE.FORUM_CHANNEL_POST,
+                    },
                 }),
-                    n ? (0, R.ad)(e, { source: ef.on.BROWSER }) : ((ew.current = e.id), (0, L.ok)(e)));
+                    n ? (0, R.ad)(e, { source: ef.on.BROWSER }) : ((ew.current = e.id), (0, L.ok)(e));
             },
-            [t.guild_id, t.id, ew]
+            [t.guild_id, t.id, ew],
         ),
         [eG, eq] = i.useState(l + s - 24),
         eW = i.useCallback(
@@ -398,12 +417,12 @@ function eN(e) {
                                       {
                                           channel: t,
                                           hasAnyThread: U,
-                                          hasActiveThreads: B
+                                          hasActiveThreads: B,
                                       },
-                                      t.id
-                                  )
+                                      t.id,
+                                  ),
                           },
-                          'forum-channel-header'
+                          "forum-channel-header",
                       )
                     : 2 !== e || en
                       ? 1 === e && eC && !et
@@ -411,28 +430,28 @@ function eN(e) {
                                 eE,
                                 {
                                     channel: t,
-                                    coords: n
+                                    coords: n,
                                 },
-                                'archive-or-search-result'
+                                "archive-or-search-result",
                             )
                           : i()
                       : (0, r.jsx)(
                             eI,
                             {
                                 channel: t,
-                                coords: n
+                                coords: n,
                             },
-                            'archived-missing-reading-history-perm'
+                            "archived-missing-reading-history-perm",
                         ),
-            [eC, en, x, et, t, B, I, O, U]
+            [eC, en, x, et, t, B, I, O, U],
         ),
         eX = (0, g.e7)([q.Z], () => q.Z.hasHidden(t.id)),
         eK = {
             editorHeight: l,
-            isGridLayout: eo
+            isGridLayout: eo,
         },
         eJ = i.useRef(eK);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         eJ.current = eK;
     }),
         i.useEffect(() => {
@@ -441,31 +460,43 @@ function eN(e) {
                 i = r ? e6 : el,
                 l = null == (e = i.current) ? void 0 : e.getScrollerState();
             null != l && !eX && l.scrollTop > n && (null == (t = i.current) || t.scrollTo({ to: 0 }));
-        }, [eX]));
+        }, [eX]);
     let {
             updateListScrollerRef: eY,
             renderListSection: eQ,
             renderListItem: e$,
             getListSectionHeight: e0,
-            getListItemHeight: e3
+            getListItemHeight: e3,
         } = (function (e) {
-            let { listRef: t, hasActiveThreads: n, threadIdsBySection: l, listViewCardHeights: s, editorHeight: o, editorAdditionRowHeight: c, renderSectionOrItem: d, goToThread: u, observePostVisibilityAnalytics: m, isShowingSearchResult: h } = e,
+            let {
+                    listRef: t,
+                    hasActiveThreads: n,
+                    threadIdsBySection: l,
+                    listViewCardHeights: s,
+                    editorHeight: o,
+                    editorAdditionRowHeight: c,
+                    renderSectionOrItem: d,
+                    goToThread: u,
+                    observePostVisibilityAnalytics: m,
+                    isShowingSearchResult: h,
+                } = e,
                 f = (0, g.e7)([H.Z], () => H.Z.getChannelId()),
                 x = i.useCallback(
                     (e) => (n) => {
                         var r;
-                        ((t.current = n), (e.current = null != (r = null == n ? void 0 : n.getScrollerNode()) ? r : null));
+                        (t.current = n),
+                            (e.current = null != (r = null == n ? void 0 : n.getScrollerNode()) ? r : null);
                     },
-                    [t]
+                    [t],
                 ),
                 b = i.useCallback(
                     (e) =>
                         eP({
                             section: e.section,
                             isShowingSearchResult: h,
-                            hasActiveThreads: n
+                            hasActiveThreads: n,
                         })(),
-                    [n, h]
+                    [n, h],
                 ),
                 j = i.useCallback(
                     (e) =>
@@ -474,33 +505,33 @@ function eN(e) {
                                 return __OVERLAY__
                                     ? null
                                     : (0, r.jsx)(
-                                          'div',
+                                          "div",
                                           {
-                                              'data-item-role': 'item',
-                                              className: a()(ep.loadingCard, ep['loadingCard-'.concat(e.row % 3)])
+                                              "data-item-role": "item",
+                                              className: a()(ep.loadingCard, ep["loadingCard-".concat(e.row % 3)]),
                                           },
-                                          'loading-'.concat(e.row)
+                                          "loading-".concat(e.row),
                                       );
                             let t = l[e.section][e.row],
                                 n = null != f && (0, N.UD)(f) ? E.ZP : er.ZP;
                             return (0, r.jsx)(
-                                'li',
+                                "li",
                                 {
                                     className: ep.card,
-                                    'data-item-role': 'item',
+                                    "data-item-role": "item",
                                     children: (0, r.jsx)(p.y5t, {
                                         children: (0, r.jsx)(n, {
                                             className: ep.mainCard,
                                             threadId: t,
                                             goToThread: u,
-                                            observePostVisibilityAnalytics: m
-                                        })
-                                    })
+                                            observePostVisibilityAnalytics: m,
+                                        }),
+                                    }),
                                 },
-                                ''.concat(e.section, '-').concat(t)
+                                "".concat(e.section, "-").concat(t),
                             );
                         }),
-                    [d, l, f, u, m]
+                    [d, l, f, u, m],
                 ),
                 v = i.useCallback(
                     (e, t) => {
@@ -508,14 +539,14 @@ function eN(e) {
                         let n = s[l[e][t]];
                         return null == n ? 104 : n + 8;
                     },
-                    [l, s, o, c]
+                    [l, s, o, c],
                 );
             return {
                 updateListScrollerRef: x,
                 renderListSection: b,
                 renderListItem: j,
                 getListSectionHeight: i.useCallback((e) => (2 === e && n ? 40 : 0), [n]),
-                getListItemHeight: v
+                getListItemHeight: v,
             };
         })({
             listRef: el,
@@ -527,7 +558,7 @@ function eN(e) {
             renderSectionOrItem: eW,
             goToThread: eV,
             observePostVisibilityAnalytics: es,
-            isShowingSearchResult: eC
+            isShowingSearchResult: eC,
         }),
         e6 = i.useRef(null),
         {
@@ -537,15 +568,27 @@ function eN(e) {
             renderGridItem: e4,
             getGridSectionHeight: e2,
             getSectionProps: e5,
-            handleGridFocus: e7
+            handleGridFocus: e7,
         } = (function (e) {
-            let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: l, renderSectionOrItem: s, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: g } = e,
+            let {
+                    masonryListScrollerRef: t,
+                    threadIdsBySection: n,
+                    goToThread: l,
+                    renderSectionOrItem: s,
+                    hasActiveThreads: o,
+                    isShowingSearchResult: c,
+                    canSearchForumPosts: d,
+                    canViewArchivedPosts: u,
+                    observePostVisibilityAnalytics: m,
+                    focusedThreadId: h,
+                    headerHeight: g,
+                } = e,
                 f = i.useRef(null),
                 x = i.useCallback(
                     (e) => {
-                        ((t.current = e), (f.current = null == e ? void 0 : e.getScrollerNode()));
+                        (t.current = e), (f.current = null == e ? void 0 : e.getScrollerNode());
                     },
-                    [t]
+                    [t],
                 ),
                 p = i.useCallback(
                     (e, n) => {
@@ -555,7 +598,7 @@ function eN(e) {
                         if (null == i) return;
                         let l = r.getCoordsMap()[n],
                             a = null != l ? l.height + 20 : 200;
-                        (r.scrollIntoViewNode({
+                        r.scrollIntoViewNode({
                             node: i,
                             padding: a,
                             callback() {
@@ -563,11 +606,11 @@ function eN(e) {
                                     var t;
                                     null == (t = document.querySelector(e)) || t.focus({ preventScroll: !0 });
                                 });
-                            }
+                            },
                         }),
-                            (h.current = eT(n)));
+                            (h.current = eT(n));
                     },
-                    [t, h]
+                    [t, h],
                 ),
                 b = i.useCallback(
                     (e) => {
@@ -576,18 +619,18 @@ function eN(e) {
                         let n = D.Z.getChannel(t);
                         null != n && l(n, !0);
                     },
-                    [l]
+                    [l],
                 ),
                 j = i.useCallback(
                     function (e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-                        if (0 === n[e].length) return 'section-'.concat(e, '-').concat(t);
+                        if (0 === n[e].length) return "section-".concat(e, "-").concat(t);
                         {
                             let r = n[e][t];
                             return null == r ? eS(e, t) : eS(e, r);
                         }
                     },
-                    [n]
+                    [n],
                 ),
                 v = i.useCallback(
                     (e, t, n) =>
@@ -599,20 +642,20 @@ function eN(e) {
                                 coords: t,
                                 key: n,
                                 isShowingSearchResult: c,
-                                hasActiveThreads: o
-                            })
+                                hasActiveThreads: o,
+                            }),
                         ),
-                    [s, o, c]
+                    [s, o, c],
                 ),
                 C = i.useCallback(
                     (e) =>
                         0 === e
                             ? {}
                             : {
-                                  role: 'grid',
-                                  'aria-labelledby': '#'.concat(ey(e))
+                                  role: "grid",
+                                  "aria-labelledby": "#".concat(ey(e)),
                               },
-                    []
+                    [],
                 );
             return {
                 updateMasonryListScrollerRef: x,
@@ -630,33 +673,36 @@ function eN(e) {
                             ? (0, r.jsx)(
                                   ea.Z,
                                   {
-                                      id: ''.concat(s),
+                                      id: "".concat(s),
                                       threadId: c,
                                       className: a()(ep.card, ep.mainCard),
                                       goToThread: l,
                                       observePostVisibilityAnalytics: m,
                                       coords: i,
                                       gridCoords: o.coordinates[s],
-                                      gridSectionBoundaries: o.boundaries
+                                      gridSectionBoundaries: o.boundaries,
                                   },
-                                  s
+                                  s,
                               )
                             : __OVERLAY__
                               ? null
                               : (0, r.jsx)(
-                                    'div',
+                                    "div",
                                     {
                                         style: eb({}, i),
-                                        'data-item-role': 'item',
-                                        className: a()(ep.loadingCard, ep['loadingCard-'.concat(t % 3)])
+                                        "data-item-role": "item",
+                                        className: a()(ep.loadingCard, ep["loadingCard-".concat(t % 3)]),
                                     },
-                                    s
+                                    s,
                                 );
                     },
-                    [n, l, m]
+                    [n, l, m],
                 ),
                 getSectionProps: C,
-                getGridSectionHeight: i.useCallback((e) => (0 === e ? g - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0), [g, c, d, o, u])
+                getGridSectionHeight: i.useCallback(
+                    (e) => (0 === e ? g - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0),
+                    [g, c, d, o, u],
+                ),
             };
         })({
             masonryListScrollerRef: e6,
@@ -669,26 +715,33 @@ function eN(e) {
             canViewArchivedPosts: en,
             observePostVisibilityAnalytics: es,
             focusedThreadId: ew,
-            headerHeight: eG
+            headerHeight: eG,
         });
     !(function (e) {
-        let { masonryListScrollerRef: t, containerWidth: n, isGridLayout: r, threadIdsBySection: l, focusedThreadId: a, parentId: s } = e;
+        let {
+            masonryListScrollerRef: t,
+            containerWidth: n,
+            isGridLayout: r,
+            threadIdsBySection: l,
+            focusedThreadId: a,
+            parentId: s,
+        } = e;
         i.useEffect(() => {
             if (r) {
                 let e = setTimeout(() => {
                     if (null == t.current || null == a.current) return;
                     let e = a.current;
-                    if ('string' != typeof e) return;
+                    if ("string" != typeof e) return;
                     null == F.ZP.getSidebarState(s) && (a.current = null);
                     let n = l.findIndex((t) => t.find((t) => t === e)),
                         r = t.current.getCoordsMap(),
-                        i = r['__section__'.concat(n)],
+                        i = r["__section__".concat(n)],
                         o = r[eS(n, e)];
                     null != i &&
                         null != o &&
                         t.current.scrollIntoViewRect({
                             start: i.top + o.top - 100,
-                            end: i.top + o.top + o.height + 50
+                            end: i.top + o.top + o.height + 50,
                         });
                 }, 0);
                 return () => clearTimeout(e);
@@ -700,42 +753,48 @@ function eN(e) {
         isGridLayout: eo,
         threadIdsBySection: eU,
         parentId: t.id,
-        focusedThreadId: ew
+        focusedThreadId: ew,
     });
     let te = i.useCallback(() => {
             var e, n;
             if (eC) return;
-            let r = eo ? (null == (e = e6.current) ? void 0 : e.getScrollerState()) : null == (n = el.current) ? void 0 : n.getScrollerState();
+            let r = eo
+                ? null == (e = e6.current)
+                    ? void 0
+                    : e.getScrollerState()
+                : null == (n = el.current)
+                  ? void 0
+                  : n.getScrollerState();
             if (null == r) return;
             (0, $.ab)({
                 guildId: t.guild_id,
-                channelId: t.id
+                channelId: t.id,
             });
             let i = r.scrollTop + r.offsetHeight;
             r.scrollHeight - i < (eo ? Math.max(200, (0, ec.KW)(eM)) : 200) && C();
         }, [eC, eo, t.guild_id, t.id, eM, C]),
         tt = (0, g.e7)([v.Z], () => v.Z.keyboardModeEnabled),
         tn = (0, em.ZP)({
-            id: 'forum-grid-view',
+            id: "forum-grid-view",
             isEnabled: eo && tt,
-            setFocus: e7
+            setFocus: e7,
         }),
         tr = (0, eh.Z)({
             listRef: el,
             padding: 96,
             isEnabled: !eo && tt,
-            channel: t
+            channel: t,
         }),
         ti = tn.containerProps,
         { ref: tl } = ti,
-        ta = ev(ti, ['ref']),
+        ta = ev(ti, ["ref"]),
         ts = F.ZP.getSidebarState(t.id),
         to = null != ts && (0, F.D5)(ts),
         tc = (0, g.e7)([F.ZP], () => F.ZP.getSection(t.id)) === eg.ULH.MEMBERS;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: ep.container,
         ref: eN,
-        'data-member-list-open': tc,
+        "data-member-list-open": tc,
         children: (0, r.jsx)(p.Wdt, {
             children: (e) =>
                 (0, r.jsxs)(r.Fragment, {
@@ -745,14 +804,19 @@ function eN(e) {
                                 channel: t,
                                 draftType: z.d.FirstThreadMessage,
                                 className: ep.uploadArea,
-                                style: { right: to && (null == n ? void 0 : n.isThreadSidebarFloating) ? n.threadSidebarWidth : 0 }
+                                style: {
+                                    right:
+                                        to && (null == n ? void 0 : n.isThreadSidebarFloating)
+                                            ? n.threadSidebarWidth
+                                            : 0,
+                                },
                             }),
                         (0, r.jsx)(eR, { channel: t }),
                         (0, r.jsx)(p.nn4, { children: (0, r.jsx)(p.H, { children: ex.intl.string(ex.t.B2panJ) }) }),
                         V
-                            ? (0, r.jsx)('div', {
+                            ? (0, r.jsx)("div", {
                                   className: ep.optInNotice,
-                                  children: (0, r.jsx)(S.Z, { channel: t })
+                                  children: (0, r.jsx)(S.Z, { channel: t }),
                               })
                             : null,
                         eo
@@ -764,7 +828,11 @@ function eN(e) {
                                           {
                                               ref: (e) => {
                                                   var t;
-                                                  ((tl.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null), e1(e));
+                                                  (tl.current =
+                                                      null != (t = null == e ? void 0 : e.getScrollerNode())
+                                                          ? t
+                                                          : null),
+                                                      e1(e);
                                               },
                                               itemGutter: 16,
                                               padding: 24,
@@ -778,20 +846,20 @@ function eN(e) {
                                               renderItem: e4,
                                               getSectionProps: e5,
                                               onScroll: j ? te : void 0,
-                                              chunkSize: 350
+                                              chunkSize: 350,
                                           },
                                           ta,
-                                          e
+                                          e,
                                       ),
-                                      A
-                                  )
+                                      A,
+                                  ),
                               })
                             : (0, r.jsx)(d.bG, {
                                   navigator: tr,
                                   children: (0, r.jsx)(d.SJ, {
                                       children: (t) => {
                                           var { ref: n } = t,
-                                              i = ev(t, ['ref']);
+                                              i = ev(t, ["ref"]);
                                           return (0, r.jsx)(
                                               p._2F,
                                               ej(
@@ -806,47 +874,47 @@ function eN(e) {
                                                           renderSection: eQ,
                                                           chunkSize: 150,
                                                           onScroll: j ? te : void 0,
-                                                          paddingBottom: 24
+                                                          paddingBottom: 24,
                                                       },
                                                       i,
-                                                      e
+                                                      e,
                                                   ),
-                                                  { innerRole: 'list' }
+                                                  { innerRole: "list" },
                                               ),
-                                              A
+                                              A,
                                           );
-                                      }
-                                  })
-                              })
-                    ]
-                })
-        })
+                                      },
+                                  }),
+                              }),
+                    ],
+                }),
+        }),
     });
 }
 function eI(e) {
     let { channel: t, coords: n } = e,
         i = (0, C.ZP)(t);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(ep.missingReadHistoryPermission, ep.columnsSpan),
         style: n,
         children: (0, r.jsx)(p.Text, {
-            color: 'text-muted',
-            variant: 'text-md/normal',
-            children: ex.intl.format(ex.t.TycmzM, { channelName: i })
-        })
+            color: "text-muted",
+            variant: "text-md/normal",
+            children: ex.intl.format(ex.t.TycmzM, { channelName: i }),
+        }),
     });
 }
 function eE(e) {
     let { channel: t, coords: n } = e,
         i = (0, C.ZP)(t);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(ep.missingReadHistoryPermission, ep.columnsSpan),
         style: n,
         children: (0, r.jsx)(p.Text, {
-            color: 'text-muted',
-            variant: 'text-md/normal',
-            children: ex.intl.format(ex.t.OWZJdX, { channelName: i })
-        })
+            color: "text-muted",
+            variant: "text-md/normal",
+            children: ex.intl.format(ex.t.OWZJdX, { channelName: i }),
+        }),
     });
 }
 function eR(e) {
@@ -861,10 +929,10 @@ function eR(e) {
               className: ep.newPostsButton,
               onClick: n,
               children: (0, r.jsx)(p.Text, {
-                  color: 'text-brand',
-                  variant: 'text-md/medium',
-                  children: ex.intl.format(ex.t.ue1qfH, { count: l })
-              })
+                  color: "text-brand",
+                  variant: "text-md/medium",
+                  children: ex.intl.format(ex.t.ue1qfH, { count: l }),
+              }),
           });
 }
 function eM() {
@@ -880,9 +948,17 @@ function eZ(e) {
             hasClickedForm: Z,
             textAreaState: k,
             onboardingExpanded: L,
-            setEditorAdditionRowHeight: F
+            setEditorAdditionRowHeight: F,
         } = (0, ei.xH)((e) => {
-            let { name: t, formOpen: n, titleFocused: r, hasClickedForm: i, textAreaState: l, onboardingExpanded: a, setEditorAdditionRowHeight: s } = e;
+            let {
+                name: t,
+                formOpen: n,
+                titleFocused: r,
+                hasClickedForm: i,
+                textAreaState: l,
+                onboardingExpanded: a,
+                setEditorAdditionRowHeight: s,
+            } = e;
             return {
                 name: t,
                 formOpen: n,
@@ -890,7 +966,7 @@ function eZ(e) {
                 hasClickedForm: i,
                 textAreaState: l,
                 onboardingExpanded: a,
-                setEditorAdditionRowHeight: s
+                setEditorAdditionRowHeight: s,
             };
         }, c.X),
         { tagFilter: D, layoutType: H } = (0, K.H)(s.id),
@@ -916,11 +992,11 @@ function eZ(e) {
             null != eh.current && q.getState().setEditorHeight(eh.current.offsetHeight);
         });
     }, [eh, q]);
-    (i.useLayoutEffect(eC, [eC, b, eu, L]),
+    i.useLayoutEffect(eC, [eC, b, eu, L]),
         (0, G.yp)({
             event: eg.CkL.REMEASURE_TARGET,
-            handler: eC
-        }));
+            handler: eC,
+        });
     let e_ = (0, g.e7)([U.Z], () => U.Z.getUploads(s.id, z.d.FirstThreadMessage)),
         ey = (0, J.ql)(s),
         eO = i.useRef(null),
@@ -946,14 +1022,21 @@ function eZ(e) {
         }
     }, [s.availableTags, eT, eN, D]);
     let eR = E.length > 0 && !R && (C || null != w),
-        eZ = !__OVERLAY__ && !Z && !R && M && (0 === k.textValue.trim().length || k.textValue.trim() === ey) && 0 === e_.length && !ec;
+        eZ =
+            !__OVERLAY__ &&
+            !Z &&
+            !R &&
+            M &&
+            (0 === k.textValue.trim().length || k.textValue.trim() === ey) &&
+            0 === e_.length &&
+            !ec;
     i.useLayoutEffect(() => {
         let e = eR || eZ;
         if (!e) return F(0);
         null != eI.current && F(e ? eI.current.clientHeight : 0);
     }, [F, eR, eZ, eI]);
     let eA = (e) => {
-            ((0, $.e7)({
+            (0, $.e7)({
                 guildId: s.guild_id,
                 channelId: s.id,
                 tagId: e,
@@ -962,22 +1045,22 @@ function eZ(e) {
                 location: {
                     page: eg.ZY5.GUILD_CHANNEL,
                     section: eg.jXE.FORUM_CHANNEL_HEADER,
-                    object: eg.qAy.CHANNEL_TAG
-                }
+                    object: eg.qAy.CHANNEL_TAG,
+                },
             }),
-                X.getState().toggleTagFilter(s.id, e));
+                X.getState().toggleTagFilter(s.id, e);
         },
         eL = (0, u.ZP)({
-            id: ''.concat(s.id, '-tags-navigator'),
+            id: "".concat(s.id, "-tags-navigator"),
             isEnabled: !0,
             wrap: !0,
             scrollToStart: eM,
             scrollToEnd: eM,
-            orientation: m.hy.HORIZONTAL
+            orientation: m.hy.HORIZONTAL,
         }),
-        eF = (0, d.JA)('forum-channel-header'),
+        eF = (0, d.JA)("forum-channel-header"),
         { role: eD, onFocus: ez } = eF,
-        eB = ev(eF, ['role', 'onFocus']),
+        eB = ev(eF, ["role", "onFocus"]),
         eH = i.useRef(null),
         eU = (function () {
             let e = i.useRef(!1),
@@ -986,9 +1069,18 @@ function eZ(e) {
                     (t) => {
                         e.current = t.shiftKey;
                     },
-                    [e]
+                    [e],
                 );
-            return (i.useLayoutEffect(() => (t ? window.addEventListener('keydown', n) : window.removeEventListener('keydown', n), () => window.removeEventListener('keydown', n)), [t, n]), e);
+            return (
+                i.useLayoutEffect(
+                    () => (
+                        t ? window.addEventListener("keydown", n) : window.removeEventListener("keydown", n),
+                        () => window.removeEventListener("keydown", n)
+                    ),
+                    [t, n],
+                ),
+                e
+            );
         })(),
         eV = i.useCallback(
             (e) => {
@@ -997,24 +1089,24 @@ function eZ(e) {
                     null == (t = eH.current) || t.focus();
                 }
             },
-            [ez, eh, eU]
+            [ez, eh, eU],
         ),
         eG = i.useMemo(() => (ec ? (0, N.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
     return (0, r.jsx)(
-        'div',
+        "div",
         ej(
             eb(
                 {
                     className: a()(ep.card, ep.headerRow, ep.columnsSpan),
                     ref: eh,
-                    onFocus: eV
+                    onFocus: eV,
                 },
-                eB
+                eB,
             ),
             {
                 style: ej(eb({}, S), {
-                    position: H === h.X.GRID ? 'absolute' : 'static',
-                    height: 'auto'
+                    position: H === h.X.GRID ? "absolute" : "static",
+                    height: "auto",
                 }),
                 children: (0, r.jsxs)(G.I3, {
                     children: [
@@ -1022,10 +1114,10 @@ function eZ(e) {
                             ? (0, r.jsx)(O.Z, {
                                   className: a()(ep.newMemberBanner, { [ep.gridViewBanner]: H === h.X.GRID }),
                                   guildId: s.guild_id,
-                                  channel: s
+                                  channel: s,
                               })
                             : null,
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: a()(ep.mainCard, ep.header, { [ep.headerWithMatchingPosts]: eR || eZ }),
                             children: (0, r.jsx)(el.Z, {
                                 parentChannel: s,
@@ -1033,100 +1125,100 @@ function eZ(e) {
                                 isSearchLoading: C,
                                 numResults: w,
                                 canCreatePost: eu,
-                                inputRef: eH
-                            })
+                                inputRef: eH,
+                            }),
                         }),
                         (eR || eZ) &&
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: ep.matchingPostsRow,
                                 ref: eI,
                                 children: [
                                     eR &&
-                                        (0, r.jsxs)('div', {
+                                        (0, r.jsxs)("div", {
                                             className: ep.matchingPosts,
                                             children: [
                                                 (0, r.jsx)(p.X6q, {
-                                                    variant: 'text-xs/normal',
-                                                    color: 'text-default',
+                                                    variant: "text-xs/normal",
+                                                    color: "text-default",
                                                     children: C
-                                                        ? ex.intl.string(ex.t['/9i3qq'])
+                                                        ? ex.intl.string(ex.t["/9i3qq"])
                                                         : 0 === w
                                                           ? ex.intl.string(ex.t.DbgHxs)
-                                                          : ex.intl.formatToPlainString(ex.t['tBz/8f'], {
+                                                          : ex.intl.formatToPlainString(ex.t["tBz/8f"], {
                                                                 numPosts: w,
-                                                                query: E
-                                                            })
+                                                                query: E,
+                                                            }),
                                                 }),
                                                 !C &&
                                                     (0, r.jsx)(p.P3F, {
                                                         onClick: () => {
-                                                            ((0, $.zI)({
+                                                            (0, $.zI)({
                                                                 guildId: s.guild_id,
-                                                                channelId: s.id
+                                                                channelId: s.id,
                                                             }),
                                                                 W.Z.clearForumSearch(s.id),
-                                                                q.getState().setName(''));
+                                                                q.getState().setName("");
                                                         },
                                                         children: (0, r.jsx)(p.Text, {
-                                                            variant: 'text-xs/semibold',
-                                                            color: 'text-brand',
+                                                            variant: "text-xs/semibold",
+                                                            color: "text-brand",
                                                             className: ep.clear,
-                                                            children: ex.intl.string(ex.t.VkKicX)
-                                                        })
-                                                    })
-                                            ]
+                                                            children: ex.intl.string(ex.t.VkKicX),
+                                                        }),
+                                                    }),
+                                            ],
                                         }),
-                                    (0, r.jsx)('div', { className: ep.tagsSpacer }),
+                                    (0, r.jsx)("div", { className: ep.tagsSpacer }),
                                     eZ
                                         ? eu
-                                            ? (0, r.jsxs)('div', {
+                                            ? (0, r.jsxs)("div", {
                                                   className: ep.startPostHelp,
                                                   children: [
                                                       (0, r.jsx)(p.M2$, {
-                                                          shortcut: 'SHIFT',
-                                                          className: ep.keyboardShortcut
+                                                          shortcut: "SHIFT",
+                                                          className: ep.keyboardShortcut,
                                                       }),
                                                       (0, r.jsx)(p.Text, {
-                                                          variant: 'text-xs/normal',
-                                                          color: 'text-default',
-                                                          children: '+'
+                                                          variant: "text-xs/normal",
+                                                          color: "text-default",
+                                                          children: "+",
                                                       }),
                                                       (0, r.jsx)(p.M2$, {
-                                                          shortcut: 'ENTER',
-                                                          className: ep.keyboardShortcut
+                                                          shortcut: "ENTER",
+                                                          className: ep.keyboardShortcut,
                                                       }),
                                                       (0, r.jsx)(p.Text, {
-                                                          variant: 'text-xs/normal',
-                                                          color: 'text-default',
-                                                          children: ex.intl.string(ex.t.ZvJ0ys)
-                                                      })
-                                                  ]
+                                                          variant: "text-xs/normal",
+                                                          color: "text-default",
+                                                          children: ex.intl.string(ex.t.ZvJ0ys),
+                                                      }),
+                                                  ],
                                               })
-                                            : (0, r.jsxs)('div', {
+                                            : (0, r.jsxs)("div", {
                                                   className: ep.startPostHelp,
                                                   children: [
                                                       (0, r.jsx)(p.Mgn, {
-                                                          size: 'custom',
-                                                          color: 'currentColor',
+                                                          size: "custom",
+                                                          color: "currentColor",
                                                           height: 14,
                                                           width: 14,
-                                                          className: ep.warnIcon
+                                                          className: ep.warnIcon,
                                                       }),
                                                       (0, r.jsx)(p.Text, {
-                                                          variant: 'text-xs/normal',
-                                                          color: 'text-default',
-                                                          children: ex.intl.string(ex.t.iyzwnJ)
-                                                      })
-                                                  ]
+                                                          variant: "text-xs/normal",
+                                                          color: "text-default",
+                                                          children: ex.intl.string(ex.t.iyzwnJ),
+                                                      }),
+                                                  ],
                                               })
-                                        : null
-                                ]
+                                        : null,
+                                ],
                             }),
                         (0, r.jsx)(et.Z, {
                             channel: s,
-                            onChange: eC
+                            onChange: eC,
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: ep.tagsContainer,
                             ref: eO,
                             children: [
@@ -1134,8 +1226,8 @@ function eZ(e) {
                                 eG.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)('div', { className: ep.divider }),
-                                              (0, r.jsx)('div', {
+                                              (0, r.jsx)("div", { className: ep.divider }),
+                                              (0, r.jsx)("div", {
                                                   className: ep.tagList,
                                                   ref: ew,
                                                   children: (0, r.jsx)(d.bG, {
@@ -1143,16 +1235,16 @@ function eZ(e) {
                                                       children: (0, r.jsx)(d.SJ, {
                                                           children: (e) => {
                                                               var { ref: t } = e,
-                                                                  n = ev(e, ['ref']);
+                                                                  n = ev(e, ["ref"]);
                                                               return (0, r.jsx)(
-                                                                  'div',
+                                                                  "div",
                                                                   ej(
                                                                       eb(
                                                                           {
                                                                               className: ep.tagListInner,
-                                                                              ref: t
+                                                                              ref: t,
                                                                           },
-                                                                          n
+                                                                          n,
                                                                       ),
                                                                       {
                                                                           children: eG.map((e) =>
@@ -1161,17 +1253,17 @@ function eZ(e) {
                                                                                   {
                                                                                       tag: e,
                                                                                       onClick: () => eA(e.id),
-                                                                                      selected: D.has(e.id)
+                                                                                      selected: D.has(e.id),
                                                                                   },
-                                                                                  e.id
-                                                                              )
-                                                                          )
-                                                                      }
-                                                                  )
+                                                                                  e.id,
+                                                                              ),
+                                                                          ),
+                                                                      },
+                                                                  ),
                                                               );
-                                                          }
-                                                      })
-                                                  })
+                                                          },
+                                                      }),
+                                                  }),
                                               }),
                                               (0, r.jsx)(p.yRy, {
                                                   targetElementRef: eE,
@@ -1180,82 +1272,87 @@ function eZ(e) {
                                                       return (0, r.jsx)(ed.Z, {
                                                           channel: s,
                                                           closePopout: t,
-                                                          setPopoutRef: n
+                                                          setPopoutRef: n,
                                                       });
                                                   },
-                                                  position: 'bottom',
-                                                  align: 'right',
+                                                  position: "bottom",
+                                                  align: "right",
                                                   children: (e, t) => {
                                                       let { isShown: n } = t;
                                                       return (0, r.jsxs)(
                                                           x.zx,
                                                           ej(eb({}, e), {
-                                                              'data-migration-pending': !0,
+                                                              "data-migration-pending": !0,
                                                               buttonRef: eE,
                                                               size: x.zx.Sizes.MIN,
                                                               color: x.zx.Colors.CUSTOM,
-                                                              className: a()(ep.tagsButton, { [ep.tagsButtonWithCount]: D.size > 0 }),
+                                                              className: a()(ep.tagsButton, {
+                                                                  [ep.tagsButtonWithCount]: D.size > 0,
+                                                              }),
                                                               style: { left: eP },
                                                               innerClassName: ep.tagsButtonInner,
-                                                              'aria-label': D.size > 0 ? ex.intl.string(ex.t.IkpM1d) : ex.intl.string(ex.t['9vKK/P']),
+                                                              "aria-label":
+                                                                  D.size > 0
+                                                                      ? ex.intl.string(ex.t.IkpM1d)
+                                                                      : ex.intl.string(ex.t["9vKK/P"]),
                                                               children: [
                                                                   D.size > 0
-                                                                      ? (0, r.jsx)('div', {
+                                                                      ? (0, r.jsx)("div", {
                                                                             className: ep.countContainer,
                                                                             children: (0, r.jsx)(p.Text, {
                                                                                 className: ep.countText,
-                                                                                color: 'none',
-                                                                                variant: 'text-xs/medium',
-                                                                                children: D.size
-                                                                            })
+                                                                                color: "none",
+                                                                                variant: "text-xs/medium",
+                                                                                children: D.size,
+                                                                            }),
                                                                         })
                                                                       : ex.intl.string(ex.t.fZ8hzs),
                                                                   n
                                                                       ? (0, r.jsx)(p.u04, {
-                                                                            size: 'custom',
-                                                                            color: 'currentColor',
-                                                                            width: 20
+                                                                            size: "custom",
+                                                                            color: "currentColor",
+                                                                            width: 20,
                                                                         })
                                                                       : (0, r.jsx)(p.CJ0, {
-                                                                            size: 'custom',
-                                                                            color: 'currentColor',
-                                                                            width: 20
-                                                                        })
-                                                              ]
-                                                          })
+                                                                            size: "custom",
+                                                                            color: "currentColor",
+                                                                            width: 20,
+                                                                        }),
+                                                              ],
+                                                          }),
                                                       );
-                                                  }
+                                                  },
                                               }),
                                               (0, r.jsxs)(x.zx, {
-                                                  'data-migration-pending': !0,
+                                                  "data-migration-pending": !0,
                                                   size: x.zx.Sizes.MIN,
                                                   color: x.zx.Colors.CUSTOM,
                                                   className: a()(ep.tagsButton, ep.tagsButtonPlaceholder),
                                                   innerClassName: ep.tagsButtonInner,
-                                                  'aria-label': ex.intl.string(ex.t.IkpM1d),
+                                                  "aria-label": ex.intl.string(ex.t.IkpM1d),
                                                   children: [
                                                       D.size > 0
-                                                          ? (0, r.jsx)('div', {
+                                                          ? (0, r.jsx)("div", {
                                                                 className: ep.countContainer,
                                                                 children: (0, r.jsx)(p.Text, {
                                                                     className: ep.countText,
-                                                                    color: 'none',
-                                                                    variant: 'text-xs/medium',
-                                                                    children: D.size
-                                                                })
+                                                                    color: "none",
+                                                                    variant: "text-xs/medium",
+                                                                    children: D.size,
+                                                                }),
                                                             })
                                                           : null,
                                                       (0, r.jsx)(p.u04, {
-                                                          size: 'custom',
-                                                          color: 'currentColor',
-                                                          width: 24
-                                                      })
-                                                  ]
-                                              })
-                                          ]
+                                                          size: "custom",
+                                                          color: "currentColor",
+                                                          width: 24,
+                                                      }),
+                                                  ],
+                                              }),
+                                          ],
                                       })
-                                    : null
-                            ]
+                                    : null,
+                            ],
                         }),
                         P,
                         Q &&
@@ -1265,14 +1362,16 @@ function eZ(e) {
                                 contentTypes: [f.z.FORUM_CHANNEL_HELPER_CARD],
                                 children: (e) => {
                                     let { visibleContent: t, markAsDismissed: n } = e;
-                                    return t === f.z.FORUM_CHANNEL_HELPER_CARD ? (0, r.jsx)(en.Z, { onDismiss: n }) : null;
-                                }
-                            })
-                    ]
-                })
-            }
+                                    return t === f.z.FORUM_CHANNEL_HELPER_CARD
+                                        ? (0, r.jsx)(en.Z, { onDismiss: n })
+                                        : null;
+                                },
+                            }),
+                    ],
+                }),
+            },
         ),
-        'create-form'
+        "create-form",
     );
 }
 function ek(e) {
@@ -1285,48 +1384,48 @@ function ek(e) {
             let { closePopout: n } = e;
             return (0, r.jsx)(es.Z, {
                 channel: t,
-                closePopout: n
+                closePopout: n,
             });
         },
-        position: 'bottom',
-        align: 'left',
+        position: "bottom",
+        align: "left",
         children: (e, t) => {
             let { isShown: i } = t;
             return (0, r.jsxs)(
                 x.zx,
                 ej(eb({}, e), {
-                    'data-migration-pending': !0,
+                    "data-migration-pending": !0,
                     buttonRef: l,
                     size: x.zx.Sizes.MIN,
                     color: x.zx.Colors.CUSTOM,
                     className: ep.sortDropdown,
                     innerClassName: ep.sortDropdownInner,
-                    'aria-label': n ? ex.intl.string(ex.t.JxU0ws) : ex.intl.string(ex.t.xyYt8P),
+                    "aria-label": n ? ex.intl.string(ex.t.JxU0ws) : ex.intl.string(ex.t.xyYt8P),
                     children: [
                         (0, r.jsx)(p.uVW, {
-                            size: 'xs',
-                            color: 'currentColor'
+                            size: "xs",
+                            color: "currentColor",
                         }),
                         (0, r.jsx)(p.Text, {
                             className: ep.sortDropdownText,
-                            variant: 'text-sm/medium',
-                            color: 'interactive-normal',
-                            children: n ? ex.intl.string(ex.t.JxU0ws) : ex.intl.string(ex.t.xyYt8P)
+                            variant: "text-sm/medium",
+                            color: "interactive-normal",
+                            children: n ? ex.intl.string(ex.t.JxU0ws) : ex.intl.string(ex.t.xyYt8P),
                         }),
                         i
                             ? (0, r.jsx)(p.u04, {
-                                  size: 'custom',
-                                  color: 'currentColor',
-                                  width: 20
+                                  size: "custom",
+                                  color: "currentColor",
+                                  width: 20,
                               })
                             : (0, r.jsx)(p.CJ0, {
-                                  size: 'custom',
-                                  color: 'currentColor',
-                                  width: 20
-                              })
-                    ]
-                })
+                                  size: "custom",
+                                  color: "currentColor",
+                                  width: 20,
+                              }),
+                    ],
+                }),
             );
-        }
+        },
     });
 }

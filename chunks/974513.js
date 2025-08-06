@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     O4: () => x,
     OA: () => f,
-    Wu: () => b
+    Wu: () => b,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(399606),
@@ -19,24 +19,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -66,7 +66,10 @@ function x(e) {
     let t = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(e)),
         [n, r] = (function (e) {
             let t = (0, l.Wu)([o.Z], () => (0, c.kl)(e, o.Z.getDefaultChannelIds(e), o.Z.getOnboardingPrompts(e)));
-            return [(0, l.Wu)([o.Z], () => (0, c.kl)(e, o.Z.getDefaultChannelIds(e), o.Z.getOnboardingPrompts(e), c.V7)), t];
+            return [
+                (0, l.Wu)([o.Z], () => (0, c.kl)(e, o.Z.getDefaultChannelIds(e), o.Z.getOnboardingPrompts(e), c.V7)),
+                t,
+            ];
         })(e);
     return !!t && r.length >= m.md && n.length >= m.X;
 }
@@ -82,22 +85,22 @@ function b(e) {
                           h(
                               p(
                                   {
-                                      header: g.intl.string(g.t['49+ONj']),
+                                      header: g.intl.string(g.t["49+ONj"]),
                                       confirmText: g.intl.string(g.t.R9GHyc),
-                                      cancelText: g.intl.string(g.t['ETE/oK']),
+                                      cancelText: g.intl.string(g.t["ETE/oK"]),
                                       confirmButtonColor: a.zx.Colors.BRAND,
-                                      onConfirm: () => (0, d.Ts)(t, e)
+                                      onConfirm: () => (0, d.Ts)(t, e),
                                   },
-                                  n
+                                  n,
                               ),
                               {
                                   children: (0, r.jsx)(s.Text, {
-                                      variant: 'text-md/normal',
-                                      children: g.intl.string(g.t.TLkoOj)
-                                  })
-                              }
-                          )
-                      )
+                                      variant: "text-md/normal",
+                                      children: g.intl.string(g.t.TLkoOj),
+                                  }),
+                              },
+                          ),
+                      ),
                   )
                 : (0, s.h7j)((n) =>
                       (0, r.jsx)(
@@ -107,31 +110,31 @@ function b(e) {
                                   {
                                       header: g.intl.string(g.t.YB9xUF),
                                       confirmText: g.intl.string(g.t.ts6u6u),
-                                      cancelText: g.intl.string(g.t['ETE/oK']),
+                                      cancelText: g.intl.string(g.t["ETE/oK"]),
                                       confirmButtonColor: a.zx.Colors.BRAND,
-                                      onConfirm: () => (0, d.Ts)(t, e)
+                                      onConfirm: () => (0, d.Ts)(t, e),
                                   },
-                                  n
+                                  n,
                               ),
                               {
                                   children: (0, r.jsx)(s.Text, {
-                                      variant: 'text-md/normal',
-                                      children: g.intl.string(g.t.BcGGVl)
-                                  })
-                              }
-                          )
-                      )
+                                      variant: "text-md/normal",
+                                      children: g.intl.string(g.t.BcGGVl),
+                                  }),
+                              },
+                          ),
+                      ),
                   );
         }, [t, c]);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: n,
         children: (0, r.jsx)(s.eee, {
             onClick: u,
             children: (0, r.jsx)(s.Text, {
-                variant: 'text-sm/medium',
-                color: 'text-link',
-                children: c ? g.intl.string(g.t.OmpxW1) : g.intl.string(g.t.ozsQBA)
-            })
-        })
+                variant: "text-sm/medium",
+                color: "text-link",
+                children: c ? g.intl.string(g.t.OmpxW1) : g.intl.string(g.t.ozsQBA),
+            }),
+        }),
     });
 }

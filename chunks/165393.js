@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,7 +17,7 @@ function h(e) {
                 for (; n < e.length; ) t = (33 * t) ^ e.charCodeAt(n++);
                 return t >>> 0;
             })(e) % d.length
-        ]
+        ],
     );
 }
 function p(e) {
@@ -28,7 +28,7 @@ function p(e) {
         i.useEffect(() => {
             p(h(n));
         }, [n]),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: o()(u.wrapper, l),
             children: [
                 (0, r.jsx)(c.ZP, {
@@ -37,23 +37,23 @@ function p(e) {
                     height: 32,
                     children:
                         null == s || 0 === s.length
-                            ? (0, r.jsx)('div', {
+                            ? (0, r.jsx)("div", {
                                   className: u.icon,
                                   style: { backgroundColor: d },
-                                  children: null != (t = n[0]) ? t : '?'
+                                  children: null != (t = n[0]) ? t : "?",
                               })
-                            : (0, r.jsx)('img', {
-                                  alt: '',
+                            : (0, r.jsx)("img", {
+                                  alt: "",
                                   src: s,
-                                  className: u.icon
-                              })
+                                  className: u.icon,
+                              }),
                 }),
                 (0, r.jsx)(a.Odl, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: u.badge
-                })
-            ]
+                    size: "md",
+                    color: "currentColor",
+                    className: u.badge,
+                }),
+            ],
         })
     );
 }

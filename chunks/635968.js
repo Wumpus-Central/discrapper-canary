@@ -1,1 +1,1 @@
-e.exports = { videoBackgroundError: 'videoBackgroundError_afae76' };
+e.exports = { videoBackgroundError: "videoBackgroundError_afae76" };

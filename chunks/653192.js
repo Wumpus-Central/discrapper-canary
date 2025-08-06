@@ -13,9 +13,9 @@ e.exports = function (e, t) {
                 n.push({
                     offset: i(s.slice(0, o)),
                     length: i(s.slice(o, a)),
-                    key: Number(t[r.stringify(l)])
+                    key: Number(t[r.stringify(l)]),
                 });
-            }
+            },
         ),
         n
     );

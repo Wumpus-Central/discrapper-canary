@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,7 +10,13 @@ var r = n(255367),
     u = n(388032),
     m = n(448533);
 let g = function (e) {
-    let { items: t, carouselClassName: n, paginationCaretClassName: l, intervalBetweenAutomaticItemRotations: g, renderItem: p } = e,
+    let {
+            items: t,
+            carouselClassName: n,
+            paginationCaretClassName: l,
+            intervalBetweenAutomaticItemRotations: g,
+            renderItem: p,
+        } = e,
         h = i.useMemo(() => new s.Xp(), []),
         [f, x] = i.useState(d.n.LEFT),
         [b, j] = i.useState(0),
@@ -20,10 +26,10 @@ let g = function (e) {
             (e, t) => {
                 j((n) => {
                     let r = n + t;
-                    return (r < 0 ? (r = e.length - 1) : r > e.length - 1 && (r = 0), r);
+                    return r < 0 ? (r = e.length - 1) : r > e.length - 1 && (r = 0), r;
                 });
             },
-            [j]
+            [j],
         ),
         N = i.useCallback(() => {
             O || C(t, 1);
@@ -35,7 +41,7 @@ let g = function (e) {
         i.useEffect(() => {
             null != g && (v ? v && h.stop() : h.start(g, N));
         }, [v, h, g, N]),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: m.root,
             onMouseEnter: () => _(!0),
             onMouseLeave: () => _(!1),
@@ -49,8 +55,8 @@ let g = function (e) {
                         direction: c.Z.Directions.LEFT,
                         height: 48,
                         width: 48,
-                        'aria-label': u.intl.string(u.t.FAmEgo)
-                    })
+                        "aria-label": u.intl.string(u.t.FAmEgo),
+                    }),
                 }),
                 (0, r.jsx)(d.Z, {
                     step: b,
@@ -58,7 +64,7 @@ let g = function (e) {
                     onAnimationStart: () => y(!0),
                     onAnimationEnd: () => y(!1),
                     className: a()(m.carousel, n),
-                    children: p(t[b])
+                    children: p(t[b]),
                 }),
                 (0, r.jsx)(o.P3F, {
                     className: a()(m.carouselCaret, l),
@@ -69,10 +75,10 @@ let g = function (e) {
                         direction: c.Z.Directions.RIGHT,
                         height: 48,
                         width: 48,
-                        'aria-label': u.intl.string(u.t.Fa8W1d)
-                    })
-                })
-            ]
+                        "aria-label": u.intl.string(u.t.Fa8W1d),
+                    }),
+                }),
+            ],
         })
     );
 };

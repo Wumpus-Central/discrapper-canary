@@ -44,10 +44,21 @@ let W = (0, a.Z)(
     (0, l.Z)(
         function (e) {
             var n;
-            let { user: r, channel: l, context: a, showChatItems: u = !0, showMediaItems: G = !1, showChannelCallItems: W = !1, showModalItems: q = !0, onSelect: B, onHeightUpdate: F, onInteraction: J } = e,
+            let {
+                    user: r,
+                    channel: l,
+                    context: a,
+                    showChatItems: u = !0,
+                    showMediaItems: G = !1,
+                    showChannelCallItems: W = !1,
+                    showModalItems: q = !0,
+                    onSelect: B,
+                    onHeightUpdate: F,
+                    onInteraction: J,
+                } = e,
                 X = (0, R.Z)({
                     userId: r.id,
-                    guildId: null
+                    guildId: null,
                 }),
                 Y = (0, N.Z)(r, null, a),
                 H = (0, i.e7)([x.Z, j.Z], () => {
@@ -56,19 +67,19 @@ let W = (0, a.Z)(
                 }),
                 { enabled: K } = Z.Z.useExperiment({
                     guildId: null == H ? void 0 : H.guild_id,
-                    location: 'GroupDMUserContextMenu'
+                    location: "GroupDMUserContextMenu",
                 }),
                 V = K ? (null == H ? void 0 : H.id) : l.id,
                 $ = (0, D.Z)(r, V),
                 ee = (0, S.Z)(r.id, a),
                 en = (0, C.Z)({
                     user: r,
-                    context: a
+                    context: a,
                 }),
                 er = (0, I.Z)({
                     user: r,
                     channelId: l.id,
-                    context: a
+                    context: a,
                 }),
                 et = (0, _.Z)({ user: r }),
                 ei = (0, A.Z)(r.id),
@@ -77,7 +88,7 @@ let W = (0, a.Z)(
                 el = (0, g.B)({
                     userId: r.id,
                     channelId: l.id,
-                    guildId: l.getGuildId()
+                    guildId: l.getGuildId(),
                 }),
                 ea = (0, P.Z)(r.id, l.id),
                 ed = (0, M.Z)({ user: r }),
@@ -87,15 +98,15 @@ let W = (0, a.Z)(
                 eh = (0, T.Z)({ user: r }),
                 eb = (0, y.Z)({
                     user: r,
-                    location: 'GroupDMUserContextMenu'
+                    location: "GroupDMUserContextMenu",
                 }),
                 eg = (0, E.Z)({
                     user: r,
-                    location: 'GroupDMUserContextMenu'
+                    location: "GroupDMUserContextMenu",
                 }),
                 ep = (0, p.Z)({
                     id: r.id,
-                    label: L.intl.string(L.t['/AXYnJ'])
+                    label: L.intl.string(L.t["/AXYnJ"]),
                 }),
                 ef = (0, z.Z)(r.id),
                 eZ = (0, h.Z)(r.id),
@@ -107,16 +118,16 @@ let W = (0, a.Z)(
                     commandTargetId: r.id,
                     channel: l,
                     guildId: void 0,
-                    onHeightUpdate: F
+                    onHeightUpdate: F,
                 }),
                 eO = (0, k.Z)(r, l),
                 eI = r.isNonUserBot(),
                 ew = l.isManaged(),
                 ey = null == (n = l.recipients) ? void 0 : n.includes(r.id);
             return (0, t.jsxs)(s.v2r, {
-                navId: 'user-context',
+                navId: "user-context",
                 onClose: o.Zy,
-                'aria-label': L.intl.string(L.t.liqwPD),
+                "aria-label": L.intl.string(L.t.liqwPD),
                 onSelect: B,
                 onInteraction: J,
                 children: [
@@ -125,28 +136,40 @@ let W = (0, a.Z)(
                             children: [
                                 (0, t.jsx)(s.kSQ, { children: ex }),
                                 (0, t.jsxs)(s.kSQ, {
-                                    children: [q && X, u && Y, ee, en, !ew && $, q && er, q && et, ef]
+                                    children: [q && X, u && Y, ee, en, !ew && $, q && er, q && et, ef],
                                 }),
                                 G && (0, t.jsx)(s.kSQ, { children: ei }),
                                 ey &&
                                     (0, t.jsxs)(s.kSQ, {
-                                        children: [!ew && es, eO]
+                                        children: [!ew && es, eO],
                                     }),
                                 (0, t.jsx)(s.kSQ, { children: q && ec }),
                                 (0, t.jsxs)(s.kSQ, {
-                                    children: [G && eo, G && el, G && ea, e_, q && ed, eu, em, eh, q && eg, q && eb, G && ev]
+                                    children: [
+                                        G && eo,
+                                        G && el,
+                                        G && ea,
+                                        e_,
+                                        q && ed,
+                                        eu,
+                                        em,
+                                        eh,
+                                        q && eg,
+                                        q && eb,
+                                        G && ev,
+                                    ],
                                 }),
                                 W &&
                                     (0, t.jsxs)(s.kSQ, {
-                                        children: [ej, eZ]
-                                    })
-                            ]
+                                        children: [ej, eZ],
+                                    }),
+                            ],
                         }),
-                    (0, t.jsx)(s.kSQ, { children: ep })
-                ]
+                    (0, t.jsx)(s.kSQ, { children: ep }),
+                ],
             });
         },
-        { object: G.qAy.CONTEXT_MENU }
+        { object: G.qAy.CONTEXT_MENU },
     ),
-    [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_USER_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_USER_MENU],
 );

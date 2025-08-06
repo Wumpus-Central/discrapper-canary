@@ -4,7 +4,7 @@ t.a(e, async function (e, r) {
         var o = t(846953),
             i = t(270412),
             u = e([o]);
-        ((o = (u.then ? (await u)() : u)[0]), (0, i.oT)(o), r());
+        (o = (u.then ? (await u)() : u)[0]), (0, i.oT)(o), r();
     } catch (e) {
         r(e);
     }

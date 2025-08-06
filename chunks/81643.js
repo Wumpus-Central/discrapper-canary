@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     AY: () => R,
     F5: () => C,
     Jm: () => y,
@@ -10,10 +10,10 @@
     kJ: () => S,
     l6: () => A,
     pY: () => T,
-    sf: () => E
+    sf: () => E,
 }),
     n(35282),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(570140),
@@ -46,24 +46,37 @@ function O() {
     return (null == e ? void 0 : e.ageVerificationStatus) === a.F$.VERIFIED_ADULT;
 }
 var v = (function (e) {
-        return ((e.CTAS = 'ctas'), (e.CONTENT_TYPE = 'content_type'), e);
+        return (e.CTAS = "ctas"), (e.CONTENT_TYPE = "content_type"), e;
     })({}),
     I = (function (e) {
-        return ((e.VERIFIED_ADULT = 'verified_adult'), (e.VERIFIED_TEEN = 'verified_teen'), (e.ERROR = 'error'), e);
+        return (e.VERIFIED_ADULT = "verified_adult"), (e.VERIFIED_TEEN = "verified_teen"), (e.ERROR = "error"), e;
     })({});
 function T(e, t) {
     let n = d.Z.getMessage(e, t);
-    if (null == n || null == n.embeds || 0 === n.embeds.length || null == n.embeds[0].fields || n.embeds[0].type !== m.hBH.AGE_VERIFICATION_SYSTEM_NOTIFICATION) return !1;
-    let r = n.embeds[0].fields.find((e) => 'ctas' === e.rawName);
-    return null == r ? void 0 : r.rawValue.split(',').includes('retry');
+    if (
+        null == n ||
+        null == n.embeds ||
+        0 === n.embeds.length ||
+        null == n.embeds[0].fields ||
+        n.embeds[0].type !== m.hBH.AGE_VERIFICATION_SYSTEM_NOTIFICATION
+    )
+        return !1;
+    let r = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
+    return null == r ? void 0 : r.rawValue.split(",").includes("retry");
 }
 function S() {
     let e = f.default.getCurrentUser();
-    return (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.UNVERIFIED && (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.CLIENT_ONLY_PENDING;
+    return (
+        (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.UNVERIFIED &&
+        (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.CLIENT_ONLY_PENDING
+    );
 }
 function A() {
     let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
-    return (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.UNVERIFIED && (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.CLIENT_ONLY_PENDING;
+    return (
+        (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.UNVERIFIED &&
+        (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.CLIENT_ONLY_PENDING
+    );
 }
 function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -72,15 +85,15 @@ function N(e) {
         u = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
         { current: d } = r.useRef(null == u ? void 0 : u.ageVerificationStatus),
         h = r.useCallback(() => {
-            (o.Z.dispatch({
-                type: 'CLOSE_AGE_VERIFICATION_MODAL',
-                status: d
+            o.Z.dispatch({
+                type: "CLOSE_AGE_VERIFICATION_MODAL",
+                status: d,
             }),
                 t ||
                     c.Z.maybeOpenAgeVerificationUserFeedback({
-                        location: 'age_verification_intro_screen',
-                        visibleContent: n
-                    }));
+                        location: "age_verification_intro_screen",
+                        visibleContent: n,
+                    });
         }, [d, t, n]);
     return {
         loading: a,
@@ -88,23 +101,23 @@ function N(e) {
             async (t) => {
                 s(!0);
                 try {
-                    o.Z.dispatch({ type: 'INITIATE_AGE_VERIFICATION' });
+                    o.Z.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
                     let n = await (0, p.K)();
                     _.Z.showAgeVerification({
                         webviewUrl: n.verification_webview_url,
                         onComplete: e,
                         onClose: h,
                         onCancel: h,
-                        entryPoint: t
+                        entryPoint: t,
                     });
                 } catch (e) {
-                    (l.Z.showFailedToast(g.wQ.TIGGER_PAWTECT_ERROR), h());
+                    l.Z.showFailedToast(g.wQ.TIGGER_PAWTECT_ERROR), h();
                 } finally {
                     s(!1);
                 }
             },
-            [e, h]
-        )
+            [e, h],
+        ),
     };
 }
 function C(e) {

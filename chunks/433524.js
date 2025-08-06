@@ -7,12 +7,12 @@ var n = r(507604),
     s = TypeError;
 n &&
     i &&
-    a(u, 'dotAll', {
+    a(u, "dotAll", {
         configurable: !0,
         get: function () {
             if (this !== u) {
-                if ('RegExp' === o(this)) return !!c(this).dotAll;
-                throw new s('Incompatible receiver, RegExp required');
+                if ("RegExp" === o(this)) return !!c(this).dotAll;
+                throw new s("Incompatible receiver, RegExp required");
             }
-        }
+        },
     });

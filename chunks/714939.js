@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(953529));
+n.d(t, { Z: () => o }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -11,35 +11,35 @@ function o(e) {
         className: s.container,
         onClick: n,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: s.icon,
                 children: (0, r.jsx)(i.BFJ, {
-                    size: 'custom',
-                    color: 'currentColor',
+                    size: "custom",
+                    color: "currentColor",
                     width: 20,
-                    height: 20
-                })
+                    height: 20,
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: s.description,
                 children: [
                     (0, r.jsx)(i.Text, {
                         className: s.label,
-                        color: 'none',
-                        variant: 'text-md/bold',
-                        children: a.intl.string(a.t.yiaoNj)
+                        color: "none",
+                        variant: "text-md/bold",
+                        children: a.intl.string(a.t.yiaoNj),
                     }),
                     (0, r.jsxs)(i.Text, {
-                        color: 'none',
-                        variant: 'text-xs/normal',
-                        children: [t.name, ' \u2022 ', a.intl.string(a.t.JwYI3N)]
-                    })
-                ]
+                        color: "none",
+                        variant: "text-xs/normal",
+                        children: [t.name, " \u2022 ", a.intl.string(a.t.JwYI3N)],
+                    }),
+                ],
             }),
             (0, r.jsx)(l.Z, {
                 className: s.arrow,
-                direction: l.Z.Directions.RIGHT
-            })
-        ]
+                direction: l.Z.Directions.RIGHT,
+            }),
+        ],
     });
 }

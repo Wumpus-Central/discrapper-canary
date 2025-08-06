@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685));
+n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(392711),
     o = n(442837),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,26 +44,26 @@ function m() {
 }
 function g(e) {
     let { wallpapers: t } = e;
-    ((f = 2),
+    (f = 2),
         t.forEach((e) => {
             d[e.id] = e;
-        }));
+        });
 }
 function E() {
     f = 3;
 }
 function b() {
-    ((d = {}), (f = 0));
+    (d = {}), (f = 0);
 }
 function y(e) {
     let { channelId: t } = e,
         n = new Set(_);
-    (n.add(t), (_ = n));
+    n.add(t), (_ = n);
 }
 function O(e) {
     let { channelId: t } = e,
         n = new Set(_);
-    (n.delete(t), (_ = n));
+    n.delete(t), (_ = n);
 }
 function v(e) {
     var t, n;
@@ -71,7 +71,11 @@ function v(e) {
     if (null == d[r] || null == o) return void delete h[r];
     null == h[r] && (h[r] = (0, i.cloneDeep)(d[r]));
     let a = h[r];
-    ((a.default = u({}, a.default, o)), (null == a || null == (t = a.variants) ? void 0 : t.dark) != null && (a.variants.dark = u({}, a.variants.dark, o)), (null == a || null == (n = a.variants) ? void 0 : n.light) != null && (a.variants.light = u({}, a.variants.light, o)));
+    (a.default = u({}, a.default, o)),
+        (null == a || null == (t = a.variants) ? void 0 : t.dark) != null &&
+            (a.variants.dark = u({}, a.variants.dark, o)),
+        (null == a || null == (n = a.variants) ? void 0 : n.light) != null &&
+            (a.variants.light = u({}, a.variants.light, o));
 }
 function I(e) {
     let { channelId: t, message: n } = e;
@@ -111,7 +115,7 @@ class S extends (r = o.ZP.Store) {
         return p[e];
     }
 }
-c(S, 'displayName', 'ChatWallpaperStore');
+c(S, "displayName", "ChatWallpaperStore");
 let A = new S(a.Z, {
     FETCH_CHAT_WALLPAPERS_START: m,
     FETCH_CHAT_WALLPAPERS_SUCCESS: g,
@@ -121,5 +125,5 @@ let A = new S(a.Z, {
     UPDATE_CHAT_WALLPAPER_FLAG_START: y,
     UPDATE_CHAT_WALLPAPER_FLAG_COMPLETE: O,
     UPDATE_CHAT_WALLPAPER_OVERRIDES: v,
-    LOGOUT: b
+    LOGOUT: b,
 });

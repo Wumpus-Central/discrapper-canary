@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var l = n(255367),
     r = n(73800),
     a = n(120356),
@@ -20,26 +20,26 @@ var l = n(255367),
 let C = (e) => [
         {
             id: p.e.ALL_MEMBERS,
-            label: v.intl.string(v.t.NOOm1d)
+            label: v.intl.string(v.t.NOOm1d),
         },
         {
             id: p.e.PENDING,
-            label: e > 0 ? v.intl.formatToPlainString(v.t['Wo+zLy'], { count: e }) : v.intl.string(v.t['4eQVBA'])
+            label: e > 0 ? v.intl.formatToPlainString(v.t["Wo+zLy"], { count: e }) : v.intl.string(v.t["4eQVBA"]),
         },
         {
             id: p.e.REJECTED,
-            label: v.intl.string(v.t.bSZklZ)
+            label: v.intl.string(v.t.bSZklZ),
         },
         {
             id: p.e.APPROVED,
-            label: v.intl.string(v.t.aURgY2)
-        }
+            label: v.intl.string(v.t.aURgY2),
+        },
     ],
     _ = (e) => {
         let { tabs: t, selectedTab: n, onTabSelect: r, onClose: a } = e;
         return (0, l.jsx)(d.v2r, {
-            navId: 'members-tabs-overflow-menu',
-            'aria-label': v.intl.string(v.t.riPnr6),
+            navId: "members-tabs-overflow-menu",
+            "aria-label": v.intl.string(v.t.riPnr6),
             hideScroller: !0,
             onClose: a,
             onSelect: a,
@@ -54,14 +54,14 @@ let C = (e) => [
                                 id: t,
                                 label: a,
                                 icon: t === n ? d.owK : void 0,
-                                action: () => r(t)
+                                action: () => r(t),
                             },
-                            t
+                            t,
                         );
-                    })
+                    }),
                 },
-                'applications-overflow-tabs'
-            )
+                "applications-overflow-tabs",
+            ),
         });
     };
 function T(e) {
@@ -76,9 +76,9 @@ function T(e) {
                     let { id: t } = e;
                     return t === a;
                 }),
-            [a, n]
+            [a, n],
         ),
-        h = m ? 'header-primary' : u ? 'text-muted' : 'header-primary',
+        h = m ? "header-primary" : u ? "text-muted" : "header-primary",
         j = m ? d.TVs.colors.HEADER_PRIMARY : u ? d.TVs.colors.TEXT_MUTED : d.TVs.colors.HEADER_PRIMARY;
     return (0, l.jsx)(d.yRy, {
         targetElementRef: s,
@@ -88,11 +88,11 @@ function T(e) {
                 selectedTab: a,
                 onClose: r,
                 tabs: n,
-                onTabSelect: t
+                onTabSelect: t,
             });
         },
-        position: 'bottom',
-        align: 'left',
+        position: "bottom",
+        align: "left",
         children: (e, t) => {
             var n, r;
             let { isShown: a } = t;
@@ -102,50 +102,50 @@ function T(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             l = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (l = l.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             l.forEach(function (t) {
                                 var l;
-                                ((l = n[t]),
+                                (l = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: l,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = l));
-                            }));
+                                        : (e[t] = l);
+                            });
                     }
                     return e;
                 })({}, e)),
                 (r = r =
                     {
-                        id: 'more',
+                        id: "more",
                         clickableInnerRef: s,
-                        color: 'text-muted',
+                        color: "text-muted",
                         className: i()(g.more, { [g.selected]: m }),
-                        'aria-label': v.intl.string(v.t.UKOtz8),
+                        "aria-label": v.intl.string(v.t.UKOtz8),
                         children: [
                             (0, l.jsx)(d.Text, {
-                                variant: 'text-md/medium',
+                                variant: "text-md/medium",
                                 color: h,
-                                children: v.intl.string(v.t.UKOtz8)
+                                children: v.intl.string(v.t.UKOtz8),
                             }),
                             a
                                 ? (0, l.jsx)(d.u04, {
-                                      size: 'sm',
-                                      color: j
+                                      size: "sm",
+                                      color: j,
                                   })
                                 : (0, l.jsx)(d.CJ0, {
-                                      size: 'sm',
-                                      color: j
-                                  })
-                        ]
+                                      size: "sm",
+                                      color: j,
+                                  }),
+                        ],
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -159,9 +159,9 @@ function T(e) {
                       })(Object(r)).forEach(function (e) {
                           Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                       }),
-                n)
+                n),
             );
-        }
+        },
     });
 }
 function E(e) {
@@ -174,12 +174,12 @@ function E(e) {
         {
             lastVisibleIndex: S,
             onItemLayout: P,
-            overflowItemsRef: R
+            overflowItemsRef: R,
         } = (0, o.zP)({
             items: N,
             itemGapPx: 16,
             maxLines: 1,
-            containerWidth: i - 200
+            containerWidth: i - 200,
         }),
         I = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(t), [t]),
         Z = (0, h.L)({ guildId: t }),
@@ -195,11 +195,11 @@ function E(e) {
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(b.Z.Divider, { className: g.divider }),
-                (0, l.jsxs)('div', {
+                (0, l.jsxs)("div", {
                     className: g.tabsContainer,
                     ref: x,
                     children: [
-                        (0, l.jsxs)('div', {
+                        (0, l.jsxs)("div", {
                             className: g.measurements,
                             children: [
                                 N.map((e, t) =>
@@ -210,27 +210,27 @@ function E(e) {
                                             onItemLayout: P,
                                             children: (0, l.jsx)(d.njP.Item, {
                                                 id: e.id,
-                                                'aria-label': e.label,
-                                                children: e.label
-                                            })
+                                                "aria-label": e.label,
+                                                children: e.label,
+                                            }),
                                         },
-                                        e.id
-                                    )
+                                        e.id,
+                                    ),
                                 ),
-                                (0, l.jsx)('div', {
+                                (0, l.jsx)("div", {
                                     ref: R,
                                     children: (0, l.jsx)(T, {
                                         tabs: M,
                                         onTabSelect: a,
-                                        selectedTab: n
-                                    })
-                                })
-                            ]
+                                        selectedTab: n,
+                                    }),
+                                }),
+                            ],
                         }),
                         (0, l.jsxs)(d.njP, {
-                            'aria-label': v.intl.string(v.t.tcvVXF),
+                            "aria-label": v.intl.string(v.t.tcvVXF),
                             selectedItem: n,
-                            type: 'top-pill',
+                            type: "top-pill",
                             onItemSelect: a,
                             children: [
                                 y.map((e) =>
@@ -238,24 +238,24 @@ function E(e) {
                                         d.njP.Item,
                                         {
                                             id: e.id,
-                                            'aria-label': e.label,
-                                            children: e.label
+                                            "aria-label": e.label,
+                                            children: e.label,
                                         },
-                                        e.id
-                                    )
+                                        e.id,
+                                    ),
                                 ),
                                 0 !== M.length
                                     ? (0, l.jsx)(T, {
                                           tabs: M,
                                           onTabSelect: a,
-                                          selectedTab: n
+                                          selectedTab: n,
                                       })
-                                    : null
-                            ]
-                        })
-                    ]
-                })
-            ]
+                                    : null,
+                            ],
+                        }),
+                    ],
+                }),
+            ],
         })
     );
 }

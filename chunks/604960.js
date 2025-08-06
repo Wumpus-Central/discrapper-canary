@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => c }));
+n.r(t), n.d(t, { default: () => c });
 var i = n(255367);
 n(73800);
 var o = n(37234),
@@ -11,6 +11,6 @@ function c() {
         onClose: o.xf,
         root: s.Z,
         sidebarFooter: a.Z,
-        initialPanel: r.Z
+        initialPanel: r.Z,
     });
 }

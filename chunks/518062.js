@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685));
+n.d(t, { Z: () => u }), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -16,7 +16,7 @@ function u(e) {
             initialScene: c.fe.Scenes.ENTRY,
             purchaseScene: c.fe.Scenes.STARS,
             errorScene: c.fe.Scenes.ERROR,
-            successScene: c.fe.Scenes.SUCCESS
+            successScene: c.fe.Scenes.SUCCESS,
         }),
         g = (0, r.e7)([a.Z], () => a.Z.useReducedMotion);
     return (0, i.jsxs)(s.xBx, {
@@ -29,13 +29,13 @@ function u(e) {
                 nextScene: m,
                 onScenePlay: (e) => p(c.fe.getNextScene(e)),
                 pauseWhileUnfocused: !1,
-                pause: g
+                pause: g,
             }),
-            (0, i.jsx)('div', { className: d.headerTitle }),
+            (0, i.jsx)("div", { className: d.headerTitle }),
             (0, i.jsx)(s.olH, {
                 onClick: u,
-                className: d.closeButton
-            })
-        ]
+                className: d.closeButton,
+            }),
+        ],
     });
 }

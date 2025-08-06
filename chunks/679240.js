@@ -1,4 +1,4 @@
-(n.d(t, { x: () => s }), n(997841));
+n.d(t, { x: () => s }), n(997841);
 var r = n(271383),
     i = n(630388),
     o = n(549817),
@@ -8,7 +8,10 @@ function s(e) {
         r.ZP.addConditionalChangeListener(() => {
             var n;
             let s = r.ZP.getSelfMember(e);
-            return !(0, i.yE)(null != (n = null == s ? void 0 : s.flags) ? n : 0, a.q.COMPLETED_ONBOARDING) || (o.Z.finishOnboarding(e), t(), !1);
+            return (
+                !(0, i.yE)(null != (n = null == s ? void 0 : s.flags) ? n : 0, a.q.COMPLETED_ONBOARDING) ||
+                (o.Z.finishOnboarding(e), t(), !1)
+            );
         });
     });
 }

@@ -5,7 +5,7 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -15,31 +15,31 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 r(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
-(n.d(t, {
+n.d(t, {
     $E: () => u,
     Ky: () => l,
-    RF: () => c
+    RF: () => c,
 }),
     n(388685),
-    n(35282));
+    n(35282);
 let o = {};
 function a(e, t) {
-    return ''.concat(e, ':').concat(t);
+    return "".concat(e, ":").concat(t);
 }
 function s(e) {
-    let [t, n] = e.split(':');
+    let [t, n] = e.split(":");
     return [t, n];
 }
 function l(e, t) {

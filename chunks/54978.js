@@ -10,23 +10,23 @@ var e = n(220159),
     l = n(290619),
     v = n(642280),
     y = !1,
-    h = l('meta'),
+    h = l("meta"),
     x = 0,
     d = function (t) {
         c(t, h, {
             value: {
-                objectID: 'O' + x++,
-                weakData: {}
-            }
+                objectID: "O" + x++,
+                weakData: {},
+            },
         });
     },
     g = (t.exports = {
         enable: function () {
-            ((g.enable = function () {}), (y = !0));
+            (g.enable = function () {}), (y = !0);
             var t = f.f,
                 r = o([].splice),
                 n = {};
-            ((n[h] = 1),
+            (n[h] = 1),
                 t(n).length &&
                     ((f.f = function (n) {
                         for (var e = t(n), o = 0, i = e.length; o < i; o++)
@@ -38,18 +38,18 @@ var e = n(220159),
                     }),
                     e(
                         {
-                            target: 'Object',
+                            target: "Object",
                             stat: !0,
-                            forced: !0
+                            forced: !0,
                         },
-                        { getOwnPropertyNames: a.f }
-                    )));
+                        { getOwnPropertyNames: a.f },
+                    ));
         },
         fastKey: function (t, r) {
-            if (!u(t)) return 'symbol' == typeof t ? t : ('string' == typeof t ? 'S' : 'P') + t;
+            if (!u(t)) return "symbol" == typeof t ? t : ("string" == typeof t ? "S" : "P") + t;
             if (!s(t, h)) {
-                if (!p(t)) return 'F';
-                if (!r) return 'E';
+                if (!p(t)) return "F";
+                if (!r) return "E";
                 d(t);
             }
             return t[h].objectID;
@@ -63,7 +63,7 @@ var e = n(220159),
             return t[h].weakData;
         },
         onFreeze: function (t) {
-            return (v && y && p(t) && !s(t, h) && d(t), t);
-        }
+            return v && y && p(t) && !s(t, h) && d(t), t;
+        },
     });
 i[h] = !0;

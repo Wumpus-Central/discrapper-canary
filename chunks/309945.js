@@ -22,37 +22,45 @@ function g(e) {
             g -
             o.useMemo(() => {
                 var e, t, n;
-                return null != (n = null == x || null == (t = x.filter) || null == (e = t.call(x, (e) => !e.ended && null == e.endsAt)) ? void 0 : e.length) ? n : 0;
+                return null !=
+                    (n =
+                        null == x ||
+                        null == (t = x.filter) ||
+                        null == (e = t.call(x, (e) => !e.ended && null == e.endsAt))
+                            ? void 0
+                            : e.length)
+                    ? n
+                    : 0;
             }, [x]);
     if (_ <= 0) return null;
     let v = n.some((e) => e.skuId === i.A$);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: m.container,
         children: [
             (0, r.jsx)(l.Mgn, {
                 color: c.Z.colors.TEXT_FEEDBACK_WARNING,
-                className: m.icon
+                className: m.icon,
             }),
             (0, r.jsx)(s.xv, {
-                variant: 'text-md/semibold',
-                color: 'text-feedback-warning',
-                children: f.intl.string(p.default.n5hQhY)
+                variant: "text-md/semibold",
+                color: "text-feedback-warning",
+                children: f.intl.string(p.default.n5hQhY),
             }),
             (0, r.jsxs)(s.xv, {
-                variant: 'text-sm/medium',
+                variant: "text-sm/medium",
                 children: [
                     f.intl.formatToPlainString(p.default.iAaAiI, {
                         boostCount: _,
-                        perksString: n.map((e) => e.title).join(', ')
+                        perksString: n.map((e) => e.title).join(", "),
                     }),
                     v &&
                         (0, r.jsx)(s.xv, {
-                            variant: 'text-sm/medium',
-                            color: 'text-feedback-warning',
-                            children: f.intl.string(p.default.Sfr0Jy)
-                        })
-                ]
-            })
-        ]
+                            variant: "text-sm/medium",
+                            color: "text-feedback-warning",
+                            children: f.intl.string(p.default.Sfr0Jy),
+                        }),
+                ],
+            }),
+        ],
     });
 }

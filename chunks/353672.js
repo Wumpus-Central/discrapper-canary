@@ -7,41 +7,41 @@ var r = n(120356),
     a = n(469894);
 function o(t) {
     let { tips: e, className: n, headerText: r } = t;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: s()(a.tipsSection, n),
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: a.tipsHeader,
                 children: (0, i.jsx)(l.X6q, {
-                    variant: 'heading-lg/bold',
+                    variant: "heading-lg/bold",
                     className: a.headerText,
-                    children: r
-                })
+                    children: r,
+                }),
             }),
-            (0, i.jsx)('ul', {
+            (0, i.jsx)("ul", {
                 className: a.tipsList,
                 children: e.map((t, e) =>
                     (0, i.jsxs)(
-                        'li',
+                        "li",
                         {
                             className: a.tipRow,
                             children: [
                                 (0, i.jsx)(l.X6q, {
-                                    variant: 'heading-md/semibold',
-                                    color: 'text-brand',
+                                    variant: "heading-md/semibold",
+                                    color: "text-brand",
                                     className: a.tipNumber,
-                                    children: e + 1
+                                    children: e + 1,
                                 }),
                                 (0, i.jsx)(l.Text, {
-                                    variant: 'text-sm/medium',
-                                    children: t
-                                })
-                            ]
+                                    variant: "text-sm/medium",
+                                    children: t,
+                                }),
+                            ],
                         },
-                        'safety-tips-'.concat(e)
-                    )
-                )
-            })
-        ]
+                        "safety-tips-".concat(e),
+                    ),
+                ),
+            }),
+        ],
     });
 }

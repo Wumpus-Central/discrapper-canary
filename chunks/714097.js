@@ -15,17 +15,17 @@ function _() {
         t = (0, a.wjy)(e) ? u.BR.DARK : u.BR.LIGHT,
         n = [
             {
-                name: '',
+                name: "",
                 value: u.BR.DARK,
                 icon: i.Z6G,
-                className: f(t, u.BR.DARK)
+                className: f(t, u.BR.DARK),
             },
             {
-                name: '',
+                name: "",
                 value: u.BR.LIGHT,
                 icon: i.chG,
-                className: f(t, u.BR.LIGHT)
-            }
+                className: f(t, u.BR.LIGHT),
+            },
         ];
     return (0, r.jsx)(a.sY7, {
         className: d.themeSelector,
@@ -33,8 +33,8 @@ function _() {
         value: t,
         onChange: (e) => {
             let { value: t } = e;
-            ((0, c.HV)(), (0, l.Bv)(t));
+            (0, c.HV)(), (0, l.Bv)(t);
         },
-        look: 'pill'
+        look: "pill",
     });
 }

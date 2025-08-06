@@ -9,6 +9,6 @@ function i(e) {
         ? null
         : {
               activity: s,
-              application: a
+              application: a,
           };
 }

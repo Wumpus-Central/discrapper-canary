@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,62 +77,62 @@ let I = function (e) {
             null != O
                 ? (e) => {
                       (0, c.jW)(e, async () => {
-                          let { default: e } = await n.e('51064').then(n.bind(n, 631861));
+                          let { default: e } = await n.e("51064").then(n.bind(n, 631861));
                           return (t) =>
                               (0, r.jsx)(
                                   e,
                                   v(y({}, t), {
                                       game: O,
-                                      guildId: T
-                                  })
+                                      guildId: T,
+                                  }),
                               );
                       });
                   }
                 : void 0,
         A =
             null != O
-                ? (0, r.jsx)('img', {
-                      alt: '',
+                ? (0, r.jsx)("img", {
+                      alt: "",
                       className: a()(E.icon, E.imageIcon),
                       src: p.ZP.getApplicationIconURL({
                           id: O.id,
                           icon: O.icon,
-                          size: 32
-                      })
+                          size: 32,
+                      }),
                   })
                 : null,
         N = (0, d.Z)(
             {
-                location: 'ContentPopout',
+                location: "ContentPopout",
                 applicationId: null == O ? void 0 : O.id,
                 source: u.m1.ActivityCard,
                 trackEntryPointImpression: !0,
-                sourceUserId: void 0
+                sourceUserId: void 0,
             },
-            {}
+            {},
         ),
         C = i.useCallback(() => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await n.e('36427').then(n.bind(n, 196738));
+                let { default: e } = await n.e("36427").then(n.bind(n, 196738));
                 return (t) => (0, r.jsx)(e, y({}, t));
             });
         }, []),
-        R = null != O ? '@game '.concat(O.name) : void 0;
+        R = null != O ? "@game ".concat(O.name) : void 0;
     return (0, r.jsx)(l.DY3, {
-        element: 'span',
+        element: "span",
         text: R,
-        'aria-label': R,
+        "aria-label": R,
         delay: 750,
         children: (0, r.jsxs)(h.Z, {
             onClick: null != O ? N : C,
             onContextMenu: S,
             children: [
                 (0, r.jsx)(m.Z, { children: A }),
-                (0, r.jsx)('span', {
+                (0, r.jsx)("span", {
                     className: E.name,
-                    children: null != (t = null == O ? void 0 : O.name) ? t : g.intl.string(g.t['11pdXV'])
-                })
-            ]
-        })
+                    children: null != (t = null == O ? void 0 : O.name) ? t : g.intl.string(g.t["11pdXV"]),
+                }),
+            ],
+        }),
     });
 };

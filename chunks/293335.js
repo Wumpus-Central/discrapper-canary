@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => i }), n(388685), n(539854));
+n.d(t, { Z: () => i }), n(388685), n(539854);
 var r = n(73800);
 let i = (e, t) => {
     let [n, i] = r.useState(-1),
@@ -6,7 +6,7 @@ let i = (e, t) => {
     return (
         r.useEffect(() => {
             let t = e.reduce((e, t) => (e.includes(t.src) || e.push(t.src), e), []);
-            (i(t.length), (o.current = t.length));
+            i(t.length), (o.current = t.length);
         }, [e, o, i]),
         r.useEffect(() => {
             0 === n && t();
@@ -14,7 +14,7 @@ let i = (e, t) => {
         {
             pending: n,
             pendingRef: o,
-            setPending: i
+            setPending: i,
         }
     );
 };

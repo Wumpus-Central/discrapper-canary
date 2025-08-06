@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,37 +68,37 @@ function E(e) {
     if (n.loadingState === c.f.LOADED_NOT_FOUND)
         return (0, r.jsx)(l.u, {
             text: f.intl.string(f.t.UvDfMz),
-            position: 'bottom',
-            align: 'center',
+            position: "bottom",
+            align: "center",
             targetElementRef: t,
             children: (n) =>
                 (0, r.jsx)(
-                    'div',
+                    "div",
                     g(h({}, n), {
                         className: a()(e.className, _.notFoundPlaceholder, { [_.hiddenSpoilers]: e.hiddenSpoilers }),
                         style: {
                             width: e.placeholderWidth,
-                            height: e.placeholderHeight
+                            height: e.placeholderHeight,
                         },
-                        role: 'img',
+                        role: "img",
                         children: (0, r.jsx)(u.Z, {
                             ref: t,
-                            className: _.brokenImageIcon
-                        })
-                    })
-                )
+                            className: _.brokenImageIcon,
+                        }),
+                    }),
+                ),
         });
     let o = n.loadingState === c.f.LOADING ? d.zo9.LOADING : d.zo9.ERROR;
     return (0, r.jsx)(s.E, {
         className: a()(e.className, { [_.hiddenSpoilers]: e.hiddenSpoilers }),
         readyState: o,
-        src: '',
+        src: "",
         width: e.placeholderWidth,
         height: e.placeholderHeight,
         maxWidth: e.maxWidth,
         maxHeight: e.maxHeight,
         mediaLayoutType: e.mediaLayoutType,
         useFullWidth: e.useFullWidth,
-        zoomable: !1
+        zoomable: !1,
     });
 }

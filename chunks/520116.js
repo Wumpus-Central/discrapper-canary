@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(539854));
+n.d(t, { Z: () => x }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(913527),
@@ -22,62 +22,62 @@ var r = n(255367),
     j = n(563142);
 let E = {
     left: 4,
-    right: -12
+    right: -12,
 };
 function S(e) {
     var t, n, l;
     let { channel: o, message: a, compact: u, isGroupStart: d, treatSpam: h, gotoChannel: p } = e,
-        g = (0, s.JA)(null != (t = a.id) ? t : ''),
+        g = (0, s.JA)(null != (t = a.id) ? t : ""),
         m = i.useCallback(
             (e) => {
-                if ('ArrowLeft' === e.key) {
+                if ("ArrowLeft" === e.key) {
                     var t;
                     null == (t = document.querySelector('[data-recents-channel="'.concat(o.id, '"]'))) || t.focus();
                 }
             },
-            [o.id]
+            [o.id],
         );
     return (0, r.jsx)(c.tEY, {
         offset: E,
         children: (0, r.jsxs)(
-            'div',
+            "div",
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })(
                 {
                     className: j.messageContainer,
-                    onKeyDown: m
+                    onKeyDown: m,
                 },
-                g
+                g,
             )),
             (l = l =
                 {
                     children: [
                         (0, r.jsx)(_.Z, {
                             className: j.jumpButton,
-                            onJump: (e) => p(e, a.id)
+                            onJump: (e) => p(e, a.id),
                         }),
                         (0, r.jsx)(f.Z, {
                             id: a.id,
@@ -88,9 +88,9 @@ function S(e) {
                             animateAvatar: !1,
                             isGroupStart: d,
                             onKeyDown: m,
-                            treatSpam: h
-                        })
-                    ]
+                            treatSpam: h,
+                        }),
+                    ],
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -105,41 +105,41 @@ function S(e) {
                       Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                   }),
             n),
-            a.id
-        )
+            a.id,
+        ),
     });
 }
 function x(e) {
     var t, n;
     let { channel: i, channelRecord: l, gotoChannel: s } = e,
-        { enabled: f } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
+        { enabled: f } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
         _ = g.jU.useSetting(),
         E = (0, h.P1)(l),
         x = !1,
-        I = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), 'day'),
+        I = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
         P = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(C.xW$.SPAMMER)) && n,
         N = [];
     if (!i.collapsed) {
         let e = null,
             t = null,
             n = i.messages.slice(0, y.hC);
-        (n.forEach((n) => {
-            if (!I && (null == e || !e.isSame(n.timestamp, 'day'))) {
-                let t = (0, O.vc)(n.timestamp, 'LL');
-                (N.push(
+        n.forEach((n) => {
+            if (!I && (null == e || !e.isSame(n.timestamp, "day"))) {
+                let t = (0, O.vc)(n.timestamp, "LL");
+                N.push(
                     (0, r.jsx)(
                         p.Z,
                         {
                             className: j.divider,
-                            children: t
+                            children: t,
                         },
-                        t
-                    )
+                        t,
+                    ),
                 ),
-                    (e = o()(n.timestamp)));
+                    (e = o()(n.timestamp));
             }
             let i = null == t || (0, d.Z)(l, t, n);
-            ((t = n),
+            (t = n),
                 (x = x || (0, h.DQ)(n)),
                 N.push(
                     (0, r.jsx)(
@@ -150,11 +150,11 @@ function x(e) {
                             compact: _,
                             isGroupStart: i,
                             treatSpam: !P && f && (0, h.DQ)(n) && E,
-                            gotoChannel: s
+                            gotoChannel: s,
                         },
-                        n.id
-                    )
-                ));
+                        n.id,
+                    ),
+                );
         }),
             i.messages.length >= y.hC &&
                 N.push(
@@ -164,18 +164,18 @@ function x(e) {
                             color: a.zx.Colors.LINK,
                             look: a.zx.Looks.LINK,
                             onClick: (e) => s(e, n[n.length - 1].id),
-                            children: [v.intl.string(v.t['9OB9ho']), ' \u203A']
+                            children: [v.intl.string(v.t["9OB9ho"]), " \u203A"],
                         },
-                        'view-all'
-                    )
+                        "view-all",
+                    ),
                 ),
-            0 === N.length && (N = [(0, r.jsx)(c.$jN, {}, 'spinner')]));
+            0 === N.length && (N = [(0, r.jsx)(c.$jN, {}, "spinner")]);
     }
     return (
-        x && E && u.Z.trackExposure({ location: '20e3b0_2' }),
-        (0, r.jsx)('div', {
+        x && E && u.Z.trackExposure({ location: "20e3b0_2" }),
+        (0, r.jsx)("div", {
             className: j.messages,
-            children: N
+            children: N,
         })
     );
 }

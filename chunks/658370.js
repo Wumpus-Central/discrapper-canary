@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(953529));
+n.d(t, { Z: () => b }), n(953529);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -17,23 +17,35 @@ var r = n(120356),
 let b = (e) => {
     var t;
     let n,
-        { title: r, titleClassName: b = '', buttonClassName: x = '', subtitle: _ = '', description: j = '', descriptionCta: E = '', isPremiumGetCta: C, onCtaClick: O, cardVariant: v } = e,
+        {
+            title: r,
+            titleClassName: b = "",
+            buttonClassName: x = "",
+            subtitle: _ = "",
+            description: j = "",
+            descriptionCta: E = "",
+            isPremiumGetCta: C,
+            onCtaClick: O,
+            cardVariant: v,
+        } = e,
         S = (0, d.N)(),
         T = null == S ? void 0 : S.subscription_trial,
         I = (0, c.Ng)(),
         N = (0, l.Rt)({
             intervalType: null == T ? void 0 : T.interval,
-            intervalCount: null == T ? void 0 : T.interval_count
+            intervalCount: null == T ? void 0 : T.interval_count,
         }),
         y = (0, o._)({
-            defaultResponse: h.intl.string(h.t['8x0jKS']),
+            defaultResponse: h.intl.string(h.t["8x0jKS"]),
             onNonTier2Subscriber: h.intl.string(h.t.IJI7ys),
             onTier2TrialOffer: N,
             onTier0TrialOffer: N,
-            onDiscountOffer: h.intl.formatToPlainString(h.t.bkQ4bG, { percent: null == I ? void 0 : I.discount.amount })
+            onDiscountOffer: h.intl.formatToPlainString(h.t.bkQ4bG, {
+                percent: null == I ? void 0 : I.discount.amount,
+            }),
         }),
         A = (0, m._)(v);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: s()(f.cardDescription, null == A || null == (t = A.description) ? void 0 : t.className),
         children: [
             (0, i.jsx)(p.Z, {
@@ -41,7 +53,7 @@ let b = (e) => {
                 cardVariantStyleInfo: A,
                 titleClassName: b,
                 subtitle: _,
-                description: j
+                description: j,
             }),
             C &&
                 (0, i.jsx)(u.Z, {
@@ -50,7 +62,7 @@ let b = (e) => {
                     color: a.zx.Colors.CUSTOM,
                     subscriptionTier: g.Si.TIER_2,
                     textOptions: { textOverride: y },
-                    showGradient: !0
+                    showGradient: !0,
                 }),
             0 !== E.length &&
                 (null == (n = null == A ? void 0 : A.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
@@ -58,8 +70,8 @@ let b = (e) => {
                 (0, i.jsx)(a.zx, {
                     className: x,
                     onClick: O,
-                    children: E
-                })
-        ]
+                    children: E,
+                }),
+        ],
     });
 };

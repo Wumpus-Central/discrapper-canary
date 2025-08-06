@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,10 +71,10 @@ function I(e, t) {
 function T(e, t) {
     (0, a.ZDy)(
         async () => {
-            let { default: e } = await n.e('28479').then(n.bind(n, 78865));
+            let { default: e } = await n.e("28479").then(n.bind(n, 78865));
             return (n) => (0, r.jsx)(e, I(O({}, n), { analyticsSource: t }));
         },
-        { contextKey: e === m.IlC.POPOUT ? a.u1M : a.z1l }
+        { contextKey: e === m.IlC.POPOUT ? a.u1M : a.z1l },
     );
 }
 function S(e, t) {
@@ -95,32 +95,32 @@ function S(e, t) {
                             qualityOptions: {
                                 preset: g.tI.PRESET_CUSTOM,
                                 resolution: n,
-                                frameRate: r
+                                frameRate: r,
                             },
-                            context: E.Yn.STREAM
+                            context: E.Yn.STREAM,
                         };
-                        (null != S.desktopSource
+                        null != S.desktopSource
                             ? (e.desktopSettings = {
                                   sourceId: S.desktopSource.id,
-                                  sound: !0
+                                  sound: !0,
                               })
                             : null != S.cameraSource &&
                               (e.cameraSettings = {
                                   videoDeviceGuid: S.cameraSource.videoDeviceGuid,
-                                  audioDeviceGuid: S.cameraSource.audioDeviceGuid
+                                  audioDeviceGuid: S.cameraSource.audioDeviceGuid,
                               }),
-                            s.Z.setGoLiveSource(e));
+                            s.Z.setGoLiveSource(e);
                     }
                 } else
                     T(
                         t,
                         I(O({}, C), {
                             object: m.qAy.RADIO_ITEM,
-                            objectType: i
-                        })
+                            objectType: i,
+                        }),
                     );
             },
-            [t, C, S]
+            [t, C, S],
         );
     if (null == e) return null;
     let w = n === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : v,
@@ -130,13 +130,13 @@ function S(e, t) {
             return (0, r.jsx)(
                 a.k5B,
                 {
-                    group: 'stream-settings-fps',
-                    id: 'stream-settings-fps-'.concat(t),
+                    group: "stream-settings-fps",
+                    id: "stream-settings-fps-".concat(t),
                     label: n,
                     checked: t === v,
-                    action: () => P(i, y, t, m.Qqv.RESOLUTION)
+                    action: () => P(i, y, t, m.Qqv.RESOLUTION),
                 },
-                'stream-settings-fps-'.concat(t)
+                "stream-settings-fps-".concat(t),
             );
         }),
         L = g.km.map((e) => {
@@ -145,25 +145,25 @@ function S(e, t) {
             return (0, r.jsx)(
                 a.k5B,
                 {
-                    group: 'stream-settings-resolution',
-                    id: 'stream-settings-resolution-'.concat(t),
+                    group: "stream-settings-resolution",
+                    id: "stream-settings-resolution-".concat(t),
                     label: n,
                     checked: t === y,
-                    action: () => P(i, t, w, m.Qqv.RESOLUTION)
+                    action: () => P(i, t, w, m.Qqv.RESOLUTION),
                 },
-                'stream-settings-resolution-'.concat(t)
+                "stream-settings-resolution-".concat(t),
             );
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.kSQ, {
                 label: b.intl.string(b.t.SkkeIi),
-                children: D
+                children: D,
             }),
             (0, r.jsx)(a.kSQ, {
                 label: b.intl.string(b.t.rHyPXl),
-                children: L
-            })
-        ]
+                children: L,
+            }),
+        ],
     });
 }

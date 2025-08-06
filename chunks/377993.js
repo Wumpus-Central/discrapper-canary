@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(388685), n(539854));
+n.d(t, { Z: () => D }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(873546),
@@ -30,24 +30,24 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -63,7 +63,9 @@ function w(e) {
         P = i.useRef(null),
         N = (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('14126')]).then(n.bind(n, 354589));
+                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("14126")]).then(
+                    n.bind(n, 354589),
+                );
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
@@ -72,7 +74,7 @@ function w(e) {
                         (l = l =
                             {
                                 user: t,
-                                channel: s
+                                channel: s,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -86,20 +88,20 @@ function w(e) {
                               })(Object(l)).forEach(function (e) {
                                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        i)
+                        i),
                     );
                 };
             });
         },
         w = () => {
-            let e = '@'.concat(C.ZP.getUserTag(t, { decoration: 'never' })),
-                n = '<@'.concat(t.id, '>');
-            (O.S.dispatch(Z.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
+            let e = "@".concat(C.ZP.getUserTag(t, { decoration: "never" })),
+                n = "<@".concat(t.id, ">");
+            O.S.dispatch(Z.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
                 O.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, {
                     plainText: e,
-                    rawText: n
+                    rawText: n,
                 }),
-                c.Z.startTyping(s.id));
+                c.Z.startTyping(s.id);
         },
         A = (0, g.K)({ user: t }),
         [D, L] = i.useState(!1);
@@ -107,7 +109,7 @@ function w(e) {
         targetElementRef: P,
         user: t,
         channelId: s.id,
-        position: l.tq ? 'window_center' : 'left',
+        position: l.tq ? "window_center" : "left",
         spacing: 16,
         onShiftClick: w,
         shouldShow: D,
@@ -124,15 +126,19 @@ function w(e) {
                                 r,
                                 i = {},
                                 l = Object.keys(e);
-                            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var l = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                        for (r = 0; r < l.length; r++)
+                            (n = l[r]),
+                                !(t.indexOf(n) >= 0) &&
+                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                    (i[n] = e[n]);
                     }
                     return i;
-                })(e, ['onClick', 'onMouseDown']);
+                })(e, ["onClick", "onMouseDown"]);
             return (0, r.jsx)(
                 S.Z,
                 T(
@@ -141,7 +147,7 @@ function w(e) {
                         user: t,
                         currentUser: f,
                         isOwner: t.id === s.ownerId,
-                        ownerTooltipText: I.intl.string(I.t['MRXZ+/']),
+                        ownerTooltipText: I.intl.string(I.t["MRXZ+/"]),
                         shouldAnimateStatus: R,
                         isTyping: h,
                         status: u,
@@ -158,13 +164,13 @@ function w(e) {
                         },
                         onMouseDown: (e) => {
                             D ? e.stopPropagation() : null == i || i(e);
-                        }
+                        },
                     },
-                    l
+                    l,
                 ),
-                t.id
+                t.id,
             );
-        }
+        },
     });
 }
 function A(e, t) {
@@ -191,11 +197,11 @@ function D(e) {
                     y.Z.isFriend(t.id) || t.id === (null == (r = j.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
                               status: null != (i = b.Z.getStatus(t.id)) ? i : Z.Skl.OFFLINE,
-                              activities: null != (l = b.Z.getActivities(t.id)) ? l : N
+                              activities: null != (l = b.Z.getActivities(t.id)) ? l : N,
                           })
                         : (n[t.id] = {
                               status: Z.Skl.OFFLINE,
-                              activities: N
+                              activities: N,
                           });
                 }
                 let a = [];
@@ -203,28 +209,28 @@ function D(e) {
                     let e = {
                         user: t,
                         status: n[t.id].status,
-                        activities: n[t.id].activities
+                        activities: n[t.id].activities,
                     };
                     a.push(e);
                 }
                 return { listItems: a };
             },
             [t],
-            A
+            A,
         );
     i.useEffect(() => {
         _.default.track(Z.rMx.MEMBER_LIST_VIEWED, {
             channel_id: t.id,
             channel_type: t.type,
-            guild_id: t.guild_id
+            guild_id: t.guild_id,
         });
     }, [t.guild_id, t.id, t.type]);
     let p = l && c.every((e) => e.user.isStaff());
     return (0, r.jsx)(d.Gt, {
         value: o,
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: P.container,
-            children: (0, r.jsx)('aside', {
+            children: (0, r.jsx)("aside", {
                 className: P.membersWrap,
                 children: (0, r.jsxs)(s.Ttm, {
                     className: P.members,
@@ -232,7 +238,10 @@ function D(e) {
                     children: [
                         (0, r.jsxs)(f.Z, {
                             className: P.membersGroup,
-                            children: [''.concat(I.intl.string(I.t['9Oq93t']), '\u2014').concat(c.length, ' '), p && (0, r.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
+                            children: [
+                                "".concat(I.intl.string(I.t["9Oq93t"]), "\u2014").concat(c.length, " "),
+                                p && (0, r.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM }),
+                            ],
                         }),
                         c.map((e) =>
                             (0, r.jsx)(
@@ -241,14 +250,14 @@ function D(e) {
                                     user: e.user,
                                     status: e.status,
                                     activities: e.activities,
-                                    channel: t
+                                    channel: t,
                                 },
-                                e.user.id
-                            )
-                        )
-                    ]
-                })
-            })
-        })
+                                e.user.id,
+                            ),
+                        ),
+                    ],
+                }),
+            }),
+        }),
     });
 }

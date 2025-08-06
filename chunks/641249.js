@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -18,24 +18,24 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -70,7 +70,7 @@ function j() {
     }
     function E(e) {
         let t = new Set(j);
-        (t.delete(e), v(t));
+        t.delete(e), v(t);
     }
     let S = (0, s.mY)();
     return (0, r.jsxs)(l.hjN, {
@@ -81,7 +81,11 @@ function j() {
                 type: l.R94.Types.DESCRIPTION,
                 className: f.formDescription,
                 disabled: S,
-                children: [h.intl.format(h.t.zuwel5, { premiumEmojiMaximum: N }), (0, r.jsx)('br', {}), h.intl.format(h.t.sEkgBg, { handleTransitionToManageEmoji: y })]
+                children: [
+                    h.intl.format(h.t.zuwel5, { premiumEmojiMaximum: N }),
+                    (0, r.jsx)("br", {}),
+                    h.intl.format(h.t.sEkgBg, { handleTransitionToManageEmoji: y }),
+                ],
             }),
             (0, r.jsx)(g.E, {
                 tierEmojiIds: j,
@@ -90,24 +94,24 @@ function j() {
                     e.roles.filter((e) => e !== (null == _ ? void 0 : _.id)).length > 0
                         ? E(e.id)
                         : (0, l.ZDy)(async () => {
-                              let { default: t } = await n.e('59128').then(n.bind(n, 28564));
+                              let { default: t } = await n.e("59128").then(n.bind(n, 28564));
                               return (n) =>
                                   (0, r.jsx)(
                                       t,
                                       b(x({}, n), {
                                           onConfirmDelete: () => {
-                                              (E(e.id), n.onClose());
-                                          }
-                                      })
+                                              E(e.id), n.onClose();
+                                          },
+                                      }),
                                   );
                           });
-                }
+                },
             }),
             null != j && j.size > 0 ? (0, r.jsx)(l.LZC, { size: 8 }) : null,
             (0, r.jsx)(m.s, {
                 onClick: function () {
                     (0, l.ZDy)(async () => {
-                        let { EmojiAddModal: e } = await n.e('21112').then(n.bind(n, 301160));
+                        let { EmojiAddModal: e } = await n.e("21112").then(n.bind(n, 301160));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
@@ -116,15 +120,15 @@ function j() {
                                     initialTierEmojiIds: j,
                                     onSubmit: I,
                                     transitionToManageEmoji: () => {
-                                        (y(), n.onClose());
-                                    }
-                                })
+                                        y(), n.onClose();
+                                    },
+                                }),
                             );
                     });
                 },
                 disabled: S,
-                children: h.intl.string(h.t.ouOOV1)
-            })
-        ]
+                children: h.intl.string(h.t.ouOOV1),
+            }),
+        ],
     });
 }

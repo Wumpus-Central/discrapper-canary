@@ -1,4 +1,4 @@
-(n.d(t, { U: () => D }), n(388685), n(781311));
+n.d(t, { U: () => D }), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
     o = n(688619),
@@ -25,7 +25,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,11 +51,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,16 +71,16 @@ function S(e, t) {
     );
 }
 function A() {
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: O.loader,
-        children: (0, r.jsx)(p.$jN, {})
+        children: (0, r.jsx)(p.$jN, {}),
     });
 }
 let N = (0, c.Un)({
-        createPromise: () => Promise.all([n.e('21153'), n.e('24530')]).then(n.bind(n, 932329)),
+        createPromise: () => Promise.all([n.e("21153"), n.e("24530")]).then(n.bind(n, 932329)),
         webpackId: 932329,
-        name: 'CustomThemeColorPickerControl',
-        renderLoader: A
+        name: "CustomThemeColorPickerControl",
+        renderLoader: A,
     }),
     C = 5;
 function R(e, t) {
@@ -90,10 +90,10 @@ function P(e) {
     let { colors: t, selectedIndex: n, onColorSelect: o } = e,
         [a, s] = i.useMemo(() => {
             let e = t.map((e, n) => R(t, n)),
-                n = t.map((t, n) => ''.concat(t, ' ').concat(e[n], '%')).join(', ');
-            return [e, { background: 'linear-gradient(to right, '.concat(n, ')') }];
+                n = t.map((t, n) => "".concat(t, " ").concat(e[n], "%")).join(", ");
+            return [e, { background: "linear-gradient(to right, ".concat(n, ")") }];
         }, [t]);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: O.gradientBar,
         style: s,
         children: t.map((e, t) => {
@@ -106,28 +106,28 @@ function P(e) {
                         (0, r.jsx)(p.P3F, {
                             className: O.colorCircle,
                             style: {
-                                left: ''.concat(s, '%'),
-                                backgroundColor: e
+                                left: "".concat(s, "%"),
+                                backgroundColor: e,
                             },
                             onClick: () => o(t),
-                            children: (0, r.jsx)('div', { className: O.colorCircleInner })
+                            children: (0, r.jsx)("div", { className: O.colorCircleInner }),
                         }),
                         l &&
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: O.colorCircleSelectedTriangle,
-                                style: { left: ''.concat(s, '%') }
-                            })
-                    ]
+                                style: { left: "".concat(s, "%") },
+                            }),
+                    ],
                 },
-                t
+                t,
             );
-        })
+        }),
     });
 }
 function w(e) {
     if (!(0, u.FX)(e)) return e;
     let t = a()(e);
-    return t.set('hsl.h', (t.get('hsl.h') + 15) % 360).hex();
+    return t.set("hsl.h", (t.get("hsl.h") + 15) % 360).hex();
 }
 function D(e) {
     let { value: t, onChange: n, className: o, colors: a, setColors: s } = e,
@@ -143,13 +143,13 @@ function D(e) {
     }, [v, a, n]);
     let D = (e) => {
             let t = e.trim();
-            return t.startsWith('#') ? t : t.length > 0 ? '#'.concat(t) : t;
+            return t.startsWith("#") ? t : t.length > 0 ? "#".concat(t) : t;
         },
         L = (e) => {
             let t = D(e);
             if ((R(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), a.length > 0))) {
                 let e = [...a];
-                ((e[v] = t), s(e));
+                (e[v] = t), s(e);
             }
         },
         x = i.useCallback((e) => {
@@ -158,66 +158,66 @@ function D(e) {
         M = (e) => {
             if (((0, E.P0)(), n(e.hex), a.length > 0)) {
                 let t = [...a];
-                ((t[v] = e.hex), s(t));
+                (t[v] = e.hex), s(t);
             }
         },
         k = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
-                    ((0, E.J4)(), L(e));
+                    (0, E.J4)(), L(e);
                 } catch (e) {}
         },
         j = () => {
             if (a.length === C) return;
-            (0 === a.length && (0, g.ft)(), (0, E.gG)());
+            0 === a.length && (0, g.ft)(), (0, E.gG)();
             let e = a.length > 0 ? a[a.length - 1] : A,
                 t = a.length > 0 ? w(e) : e,
                 n = [...a, t];
-            (s(n), T(n.length - 1));
+            s(n), T(n.length - 1);
         },
         U = (e) => {
             if (a.length > 1) {
                 (0, E.JL)();
                 let t = a.filter((t, n) => n !== e);
-                (s(t), v >= t.length ? T(t.length - 1) : v > e && T(v - 1));
+                s(t), v >= t.length ? T(t.length - 1) : v > e && T(v - 1);
             }
         },
         G = (e) => {
-            (T(e), (0, E.w8)());
+            T(e), (0, E.w8)();
         },
         B = a.length > 1;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l()(O.container, o),
         children: [
             B &&
                 (0, r.jsx)(P, {
                     colors: a,
                     selectedIndex: v,
-                    onColorSelect: G
+                    onColorSelect: G,
                 }),
             (0, r.jsx)(N, {
                 onChange: x,
                 onChangeComplete: M,
-                color: A
+                color: A,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: O.hexInputContainer,
                 children: [
-                    (0, r.jsx)('input', {
+                    (0, r.jsx)("input", {
                         className: O.hexInput,
                         value: A.toUpperCase(),
                         onChange: (e) => L(e.target.value),
                         maxLength: 7,
                         placeholder: m.Dp,
-                        type: 'text'
+                        type: "text",
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: O.trailingIcons,
                         children: [
                             null != c &&
                                 (0, r.jsx)(p.ua7, {
-                                    text: y.intl.string(b.default['8QXO8v']),
+                                    text: y.intl.string(b.default["8QXO8v"]),
                                     tooltipClassName: O.eyeDropperTooltip,
                                     children: (e) =>
                                         (0, r.jsx)(
@@ -225,47 +225,47 @@ function D(e) {
                                             S(
                                                 I(
                                                     {
-                                                        variant: 'icon-only',
-                                                        size: 'sm'
+                                                        variant: "icon-only",
+                                                        size: "sm",
                                                     },
-                                                    e
+                                                    e,
                                                 ),
                                                 {
                                                     onClick: k,
                                                     icon: d.i,
-                                                    'aria-label': y.intl.string(b.default['8QXO8v'])
-                                                }
-                                            )
-                                        )
+                                                    "aria-label": y.intl.string(b.default["8QXO8v"]),
+                                                },
+                                            ),
+                                        ),
                                 }),
                             B &&
                                 (0, r.jsx)(p.ua7, {
-                                    text: y.intl.string(b.default['rTik5+']),
+                                    text: y.intl.string(b.default["rTik5+"]),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             _.h,
                                             S(I({}, e), {
-                                                variant: 'icon-only',
-                                                size: 'sm',
+                                                variant: "icon-only",
+                                                size: "sm",
                                                 onClick: () => U(v),
                                                 icon: p.V_R,
-                                                'aria-label': y.intl.string(b.default['rTik5+'])
-                                            })
-                                        )
-                                })
-                        ]
-                    })
-                ]
+                                                "aria-label": y.intl.string(b.default["rTik5+"]),
+                                            }),
+                                        ),
+                                }),
+                        ],
+                    }),
+                ],
             }),
             a.length < C &&
                 (0, r.jsx)(f.z, {
-                    variant: 'secondary',
-                    size: 'md',
+                    variant: "secondary",
+                    size: "md",
                     onClick: j,
                     icon: p.BRu,
                     text: y.intl.string(b.default.JUQcdX),
-                    fullWidth: !0
-                })
-        ]
+                    fullWidth: !0,
+                }),
+        ],
     });
 }

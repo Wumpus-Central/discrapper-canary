@@ -17,17 +17,25 @@ function h(e, t) {
         h = (0, c.$R)(t),
         m = (0, i.e7)([u.Z], () => u.Z.can(_.Plq.MANAGE_MESSAGES, t), [t]);
     function g(n) {
-        e.state === _.yb.SEND_FAILED ? a.Z.deleteMessage(t.id, e.id, !0) : n.shiftKey ? a.Z.deleteMessage(t.id, e.id) : s.Z.confirmDelete(t, e, !0);
+        e.state === _.yb.SEND_FAILED
+            ? a.Z.deleteMessage(t.id, e.id, !0)
+            : n.shiftKey
+              ? a.Z.deleteMessage(t.id, e.id)
+              : s.Z.confirmDelete(t, e, !0);
     }
     let { firstMessage: E } = (0, i.e7)([l.Z], () => l.Z.getMessage(t.id), [t.id]),
         b = m || (null != n && e.canDeleteOwnMessage(n.id));
-    return e.state === _.yb.SENDING || !b || _.V$x.UNDELETABLE.has(e.type) || !h || (t.isModeratorReportChannel() && (e.id === (null == E ? void 0 : E.id) || (0, f.Z)(e)))
+    return e.state === _.yb.SENDING ||
+        !b ||
+        _.V$x.UNDELETABLE.has(e.type) ||
+        !h ||
+        (t.isModeratorReportChannel() && (e.id === (null == E ? void 0 : E.id) || (0, f.Z)(e)))
         ? null
         : (0, r.jsx)(o.sNh, {
-              id: 'delete',
+              id: "delete",
               label: p.intl.string(p.t.xwMqDw),
               action: g,
-              color: 'danger',
-              icon: o.XHJ
+              color: "danger",
+              icon: o.XHJ,
           });
 }

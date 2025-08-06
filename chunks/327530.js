@@ -10,7 +10,7 @@ n.d(t, {
     VE: () => p,
     Vf: () => a,
     cx: () => u,
-    yE: () => r
+    yE: () => r,
 });
 let r = 8,
     i = 32,
@@ -26,12 +26,12 @@ let r = 8,
     f = {
         origin: {
             x: -36,
-            y: 7
+            y: 7,
         },
         targetWidth: 232,
         targetHeight: 40,
         offset: {
             x: 0,
-            y: 0
-        }
+            y: 0,
+        },
     };

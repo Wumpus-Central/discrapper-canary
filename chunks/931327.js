@@ -1,4 +1,4 @@
-(a.r(e),
+a.r(e),
     a.d(e, {
         BrowserClient: () => W.R,
         SDK_VERSION: () => r.J,
@@ -109,8 +109,8 @@
         withActiveSpan: () => u._d,
         withIsolationScope: () => T.wi,
         withScope: () => T.$e,
-        zodErrorsIntegration: () => b.i
-    }));
+        zodErrorsIntegration: () => b.i,
+    });
 var r = a(452896),
     _ = a(988097),
     n = a(307854),

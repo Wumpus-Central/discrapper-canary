@@ -10,17 +10,17 @@ let a = (e) => {
         onRequestOpen: s,
         onRequestClose: o,
         animation: i.yRy.Animation.NONE,
-        position: 'bottom',
+        position: "bottom",
         spacing: 4,
-        align: 'right',
+        align: "right",
         renderPopout: (e) => {
             let { closePopout: i } = e;
             return (0, r.jsx)(l.default, {
                 entry: t,
                 closePopout: i,
-                hideEditButton: n
+                hideEditButton: n,
             });
         },
-        children: a
+        children: a,
     });
 };

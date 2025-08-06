@@ -12,15 +12,15 @@ function s(t, n, e) {
     if (!u) return null;
     function d() {
         let l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            o = ''
-                .concat(location.protocol, '//')
+            o = ""
+                .concat(location.protocol, "//")
                 .concat(location.host)
                 .concat(a.Z5c.GUILD_EVENT_DETAILS(n, t, l ? null : e));
-        (0, r.JG)(o, () => (0, i.showToast)((0, i.createToast)(c.intl.string(c.t['L/PwZW']), i.ToastType.SUCCESS)));
+        (0, r.JG)(o, () => (0, i.showToast)((0, i.createToast)(c.intl.string(c.t["L/PwZW"]), i.ToastType.SUCCESS)));
     }
     return (0, l.jsx)(i.sNh, {
-        id: c.intl.string(c.t['9o+VKy']),
-        label: c.intl.string(c.t['9o+VKy']),
+        id: c.intl.string(c.t["9o+VKy"]),
+        label: c.intl.string(c.t["9o+VKy"]),
         action: s ? void 0 : () => d(!0),
         children:
             s &&
@@ -29,14 +29,14 @@ function s(t, n, e) {
                     (0, l.jsx)(i.sNh, {
                         id: c.intl.string(c.t.QLtDqK),
                         label: c.intl.string(c.t.QLtDqK),
-                        action: () => d(!1)
+                        action: () => d(!1),
                     }),
                     (0, l.jsx)(i.sNh, {
                         id: c.intl.string(c.t.AYnhBw),
                         label: c.intl.string(c.t.AYnhBw),
-                        action: () => d(!0)
-                    })
-                ]
-            })
+                        action: () => d(!0),
+                    }),
+                ],
+            }),
     });
 }

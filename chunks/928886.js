@@ -25,9 +25,22 @@ function I(e, t) {
 function T(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: o, handleClose: T } = e,
-        { selectedSkuId: S, step: A, selectedPlan: N, purchaseState: C, purchaseType: R, selectedSku: P, enablePremiumBrandRefresh: w } = (0, g.JL)(),
+        {
+            selectedSkuId: S,
+            step: A,
+            selectedPlan: N,
+            purchaseState: C,
+            purchaseType: R,
+            selectedSku: P,
+            enablePremiumBrandRefresh: w,
+        } = (0, g.JL)(),
         { isGift: D, selectedGiftStyle: L, giftRecipient: x } = (0, m.wD)(),
-        M = D && (0, h.pO)(x) && A === E.h8.CONFIRM && null != L && (null == P ? void 0 : P.productLine) !== b.POd.COLLECTIBLES,
+        M =
+            D &&
+            (0, h.pO)(x) &&
+            A === E.h8.CONFIRM &&
+            null != L &&
+            (null == P ? void 0 : P.productLine) !== b.POd.COLLECTIBLES,
         k = null != n && null != A,
         j = [E.h8.SKU_SELECT, E.h8.SELECT_FREE_SKU],
         U = null != A && !j.includes(A) && null != S,
@@ -36,7 +49,7 @@ function T(e) {
         Z = (0, u.Ng)(),
         F = null == Z || null == (t = Z.discount) ? void 0 : t.plan_ids.some((e) => y.GP[e].skuId === S),
         V = !D && null != Z && null != S && F,
-        { enabled: H } = c.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
+        { enabled: H } = c.ZP.useExperiment({ location: "PaymentModalHeader" }, { autoTrackExposure: !1 }),
         Y = (0, c.rK)(),
         W = H && Y;
     return i.useMemo(() => {
@@ -44,30 +57,30 @@ function T(e) {
         let e = null;
         return (
             M
-                ? (e = (0, r.jsxs)('div', {
+                ? (e = (0, r.jsxs)("div", {
                       className: v.container,
                       children: [
                           (0, r.jsx)(f.Z, {
                               defaultAnimationState: l.SR.LOOP,
                               giftStyle: L,
-                              className: v.seasonalGiftBoxHeaderIcon
+                              className: v.seasonalGiftBoxHeaderIcon,
                           }),
                           (0, r.jsx)(s.olH, {
                               onClick: T,
                               className: v.closeButton,
-                              'data-migration-pending': !0
-                          })
-                      ]
+                              "data-migration-pending": !0,
+                          }),
+                      ],
                   }))
                 : k
                   ? (e = n(null != N ? N : null, T, A))
                   : R === O.GZ.ONE_TIME
                     ? (e = (0, r.jsx)(p.t, {
                           step: A,
-                          onClose: T
+                          onClose: T,
                       }))
                     : U &&
-                      (a()(I(S, y.y7), 'invalid sku id: '.concat(S)),
+                      (a()(I(S, y.y7), "invalid sku id: ".concat(S)),
                       (e = (0, r.jsx)(_.Z, {
                           currentStep: null != A ? A : void 0,
                           purchaseState: C,
@@ -79,7 +92,7 @@ function T(e) {
                           giftRecipient: x,
                           useWinterTheme: W,
                           isEligibleForTrial: B,
-                          enablePremiumBrandRefresh: w
+                          enablePremiumBrandRefresh: w,
                       }))),
             e
         );

@@ -7,7 +7,7 @@ var l = n(120356),
     s = n(734829);
 function o(e) {
     let { steps: t, stepIndex: n, onClick: l } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: s.container,
         children: t.map((e, t) => {
             let o = n === t;
@@ -17,16 +17,16 @@ function o(e) {
                     onClick: () => l(t),
                     className: s.stepContainer,
                     children: [
-                        (0, r.jsx)('div', { className: i()(s.progressBar, { [s.selectedProgressBar]: o }) }),
+                        (0, r.jsx)("div", { className: i()(s.progressBar, { [s.selectedProgressBar]: o }) }),
                         (0, r.jsx)(a.Text, {
-                            color: o ? 'text-brand' : 'text-muted',
-                            variant: 'text-xs/normal',
-                            children: e
-                        })
-                    ]
+                            color: o ? "text-brand" : "text-muted",
+                            variant: "text-xs/normal",
+                            children: e,
+                        }),
+                    ],
                 },
-                e
+                e,
             );
-        })
+        }),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { default: () => S }), n(388685), n(781311));
+n.d(t, { default: () => S }), n(388685), n(781311);
 var l = n(255367),
     o = n(73800),
     i = n(442837),
@@ -30,13 +30,13 @@ function C(e) {
                     ? {
                           id: e.id,
                           name: e.name,
-                          animated: e.animated
+                          animated: e.animated,
                       }
                     : {
                           id: null,
-                          name: null != (t = e.optionallyDiverseSequence) ? t : '',
-                          animated: !1
-                      }
+                          name: null != (t = e.optionallyDiverseSequence) ? t : "",
+                          animated: !1,
+                      },
             );
         };
     return (0, l.jsx)(u.yRy, {
@@ -50,15 +50,15 @@ function C(e) {
                 closePopout: n,
                 onSelectEmoji: (e) => {
                     let { emoji: t, willClose: l } = e;
-                    (f(t), l && n());
+                    f(t), l && n();
                 },
                 pickerIntention: y.Hz.STATUS,
-                onNavigateAway: r
+                onNavigateAway: r,
             });
         },
-        position: 'left',
+        position: "left",
         animation: u.yRy.Animation.NONE,
-        align: 'top',
+        align: "top",
         children: (e, n) => {
             var o, i;
             let { isShown: r } = n;
@@ -68,24 +68,24 @@ function C(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             l = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (l = l.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             l.forEach(function (t) {
                                 var l;
-                                ((l = n[t]),
+                                (l = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: l,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = l));
-                            }));
+                                        : (e[t] = l);
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -103,8 +103,8 @@ function C(e) {
                                           className: h.emoji,
                                           emojiId: t.id,
                                           emojiName: t.name,
-                                          animated: !!t.animated
-                                      })
+                                          animated: !!t.animated,
+                                      }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(i))
@@ -118,32 +118,37 @@ function C(e) {
                       })(Object(i)).forEach(function (e) {
                           Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
-                o)
+                o),
             );
-        }
+        },
     });
 }
 function S(e) {
     var t, n;
     let { transitionState: i, onClose: a, startingText: s, startingEmoji: c } = e,
         m = g.Z.getCustomHangStatus(),
-        p = null != s ? s : null != (t = null == m ? void 0 : m.status) ? t : '',
+        p = null != s ? s : null != (t = null == m ? void 0 : m.status) ? t : "",
         y = null != (n = null == m ? void 0 : m.emoji) ? n : null;
-    (null == c ? void 0 : c.id) != null ? (y = f.ZP.canUseEmojisEverywhere(j.default.getCurrentUser()) && null != d.ZP.getUsableCustomEmojiById(c.id) ? c : null) : (null == c ? void 0 : c.name) != null && (y = c);
+    (null == c ? void 0 : c.id) != null
+        ? (y =
+              f.ZP.canUseEmojisEverywhere(j.default.getCurrentUser()) && null != d.ZP.getUsableCustomEmojiById(c.id)
+                  ? c
+                  : null)
+        : (null == c ? void 0 : c.name) != null && (y = c);
     let [S, x] = o.useState(p),
         [P, w] = o.useState(y),
         _ = o.useCallback(() => {
             let e = S.trim();
-            '' !== e && null != P && ((0, b._s)(e, P, !0), a());
+            "" !== e && null != P && ((0, b._s)(e, P, !0), a());
         }, [P, a, S]),
         k = o.useMemo(
             () => [
                 {
                     text: O.intl.string(O.t.S0ajKC),
-                    onClick: _
-                }
+                    onClick: _,
+                },
             ],
-            [_]
+            [_],
         );
     return (0, l.jsx)(r.Modal, {
         onClose: a,
@@ -151,30 +156,30 @@ function S(e) {
         transitionState: i,
         title: O.intl.string(O.t.DD4vJC),
         subtitle: O.intl.string(O.t.YVM22t),
-        children: (0, l.jsxs)('div', {
+        children: (0, l.jsxs)("div", {
             className: h.form,
             children: [
                 (0, l.jsx)(C, {
                     customStatusEmoji: P,
                     setCustomStatusEmoji: w,
-                    onClose: a
+                    onClose: a,
                 }),
-                (0, l.jsxs)('div', {
+                (0, l.jsxs)("div", {
                     className: h.customInputGroup,
                     children: [
                         (0, l.jsx)(u.Text, {
-                            variant: 'eyebrow',
-                            color: 'text-muted',
-                            children: O.intl.string(O.t['74vS//'])
+                            variant: "eyebrow",
+                            color: "text-muted",
+                            children: O.intl.string(O.t["74vS//"]),
                         }),
                         (0, l.jsx)(u.oil, {
                             value: S,
                             onChange: (e) => x(e.substring(0, v.s)),
-                            placeholder: O.intl.string(O.t.k6lfDg)
-                        })
-                    ]
-                })
-            ]
-        })
+                            placeholder: O.intl.string(O.t.k6lfDg),
+                        }),
+                    ],
+                }),
+            ],
+        }),
     });
 }

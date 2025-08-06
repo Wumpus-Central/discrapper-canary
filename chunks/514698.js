@@ -14,12 +14,12 @@ function c(e) {
         dismissable: !0,
         header: o.intl.string(o.t.S2eoq6),
         confirmText: o.intl.string(o.t.N86XcH),
-        cancelText: o.intl.string(o.t['ETE/oK']),
+        cancelText: o.intl.string(o.t["ETE/oK"]),
         onConfirm: t,
         onCancel: n,
         children: (0, r.jsx)(l.Text, {
-            variant: 'text-sm/normal',
-            children: null != d ? o.intl.format(o.t['1KT3Fh'], { channelName: u }) : o.intl.string(o.t.VOPUV1)
-        })
+            variant: "text-sm/normal",
+            children: null != d ? o.intl.format(o.t["1KT3Fh"], { channelName: u }) : o.intl.string(o.t.VOPUV1),
+        }),
     });
 }

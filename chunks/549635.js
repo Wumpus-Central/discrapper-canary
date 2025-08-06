@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Dt: () => T,
     ZP: () => A,
-    ze: () => I
+    ze: () => I,
 }),
-    n(997841));
+    n(997841);
 var r = n(255367),
     i = n(73800),
     o = n(768494),
@@ -25,7 +25,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,11 +51,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,7 +77,8 @@ function O(e, t) {
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -87,7 +88,7 @@ function v(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function I(e, t) {
@@ -95,22 +96,22 @@ function I(e, t) {
         type: (0, o.hg)(e),
         original: e.url,
         srcIsAnimated: (0, d.yE)(e.flags, o.hR.IS_ANIMATED),
-        sourceMetadata: { message: t }
+        sourceMetadata: { message: t },
     });
 }
 function T(e) {
     let t = _.Z.toURLSafe(e);
-    return null == t ? null : (t.searchParams.append('format', 'webp'), t.toString());
+    return null == t ? null : (t.searchParams.append("format", "webp"), t.toString());
 }
 function S(e) {
     let t,
         { media: n, obscured: i = !1, maxWidth: o, maxHeight: l, onContextMenu: u } = e,
         { width: d, height: _, url: g, proxyUrl: b, alt: v, type: I, maxWidth: S, maxHeight: A } = n,
-        C = O(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
+        C = O(n, ["width", "height", "url", "proxyUrl", "alt", "type", "maxWidth", "maxHeight"]),
         { zoomed: R } = (0, p.Y)(),
         P = N(R, g, b),
         w = null != d && 0 !== d && null != _ && 0 !== _;
-    if ('VIDEO' === I && w && null != b) {
+    if ("VIDEO" === I && w && null != b) {
         var D;
         let e = T(b);
         if (null == e) return null;
@@ -134,12 +135,12 @@ function S(e) {
                 autoPlay: !i,
                 alt: v,
                 onContextMenu: u,
-                disableArrowKeySeek: !0
-            })
+                disableArrowKeySeek: !0,
+            }),
         );
     }
     return (
-        'IMAGE' === I &&
+        "IMAGE" === I &&
             (t = w
                 ? (0, r.jsx)(
                       a.ZP,
@@ -155,18 +156,18 @@ function S(e) {
                           animated: !i && n.animated,
                           autoPlay: !i,
                           alt: v,
-                          onContextMenu: u
-                      })
+                          onContextMenu: u,
+                      }),
                   )
-                : (0, r.jsx)('img', {
+                : (0, r.jsx)("img", {
                       src: P,
                       alt: v,
                       onContextMenu: u,
                       className: m.dimensionlessImage,
                       style: {
                           maxWidth: o,
-                          maxHeight: l
-                      }
+                          maxHeight: l,
+                      },
                   })),
         null != t ? (0, r.jsx)(h.Z, { children: t }) : null
     );
@@ -177,6 +178,6 @@ function N(e, t, n) {
         ? (0, l.s$)(t)
         : (0, u.q)({
               proxyURL: n,
-              url: t
+              url: t,
           });
 }

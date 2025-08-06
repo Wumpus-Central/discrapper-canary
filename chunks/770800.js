@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => Z }), r(784620), r(973216));
+r.d(t, { Z: () => Z }), r(784620), r(973216);
 var n = r(255367),
     a = r(73800),
     i = r(392711),
@@ -31,24 +31,24 @@ class R extends a.PureComponent {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
                             n = Object.keys(r);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (n = n.concat(
                                 Object.getOwnPropertySymbols(r).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                })
+                                }),
                             )),
                             n.forEach(function (t) {
                                 var n;
-                                ((n = r[t]),
+                                (n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: n,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = n));
-                            }));
+                                        : (e[t] = n);
+                            });
                     }
                     return e;
                 })({}, r)),
@@ -67,14 +67,14 @@ class R extends a.PureComponent {
                       }),
                 e),
             u = l().map(d, (e, t) => {
-                if ('receiverReports' !== t && (!i || 'localAddress' !== t))
+                if ("receiverReports" !== t && (!i || "localAddress" !== t))
                     return (0, n.jsx)(
                         b.ck,
                         {
                             label: t,
-                            value: e
+                            value: e,
                         },
-                        t
+                        t,
                     );
             }),
             p = l().map(d.receiverReports, (e) => {
@@ -87,7 +87,7 @@ class R extends a.PureComponent {
                     {
                         displayName: a,
                         bitrate: t / 1000,
-                        lost: (100 * e.fractionLost) / 256
+                        lost: (100 * e.fractionLost) / 256,
                     }
                 );
             }),
@@ -95,41 +95,45 @@ class R extends a.PureComponent {
             g = l().map(h, (e) =>
                 (function (e, t, r) {
                     let a = (0, n.jsxs)(c.Z, {
-                            id: 'bitrate-'.concat(e),
+                            id: "bitrate-".concat(e),
                             justify: c.Z.Justify.BETWEEN,
                             children: [
-                                (0, n.jsx)('span', { children: 'Bitrate:' }),
-                                (0, n.jsxs)('span', {
-                                    children: [t.toFixed(2), ' Kbps']
-                                })
-                            ]
+                                (0, n.jsx)("span", { children: "Bitrate:" }),
+                                (0, n.jsxs)("span", {
+                                    children: [t.toFixed(2), " Kbps"],
+                                }),
+                            ],
                         }),
                         i = (0, n.jsxs)(c.Z, {
-                            id: 'lost-'.concat(e),
+                            id: "lost-".concat(e),
                             justify: c.Z.Justify.BETWEEN,
                             children: [
-                                (0, n.jsx)('span', { children: 'Packet Loss:' }),
-                                (0, n.jsxs)('span', {
-                                    children: [r.toFixed(0), '%']
-                                })
-                            ]
+                                (0, n.jsx)("span", { children: "Packet Loss:" }),
+                                (0, n.jsxs)("span", {
+                                    children: [r.toFixed(0), "%"],
+                                }),
+                            ],
                         });
                     return (0, n.jsx)(
                         D.Z,
                         {
                             label: e,
                             valueRendered: [a, i],
-                            children: e
+                            children: e,
                         },
-                        e
+                        e,
                     );
-                })(e.displayName, e.bitrate, e.lost)
+                })(e.displayName, e.bitrate, e.lost),
             );
         return (0, n.jsxs)(s.hjN, {
             tag: s.RB0.H2,
-            title: E.intl.string(E.t.wU9INz) + (null != a ? ' - ' + a : ''),
+            title: E.intl.string(E.t.wU9INz) + (null != a ? " - " + a : ""),
             className: P.allowSelection,
-            children: [(0, v.a)(u), 0 === g.length ? null : (0, n.jsx)(s.$i$, { className: j.marginBottom20 }), (0, v.a)(g)]
+            children: [
+                (0, v.a)(u),
+                0 === g.length ? null : (0, n.jsx)(s.$i$, { className: j.marginBottom20 }),
+                (0, v.a)(g),
+            ],
         });
     }
 }
@@ -137,12 +141,17 @@ let Z = o.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
     var t;
     let { context: r, index: n } = e,
         a = u.ZP.getAllStats(r)[n],
-        i = r === C.Yn.STREAM ? Object.values(p.Z.getRTCConnections()).find((e) => e.getMediaEngineConnectionId() === a.mediaEngineConnectionId) : null,
-        l = null != (t = null == i ? void 0 : i.hostname) ? t : '';
+        i =
+            r === C.Yn.STREAM
+                ? Object.values(p.Z.getRTCConnections()).find(
+                      (e) => e.getMediaEngineConnectionId() === a.mediaEngineConnectionId,
+                  )
+                : null,
+        l = null != (t = null == i ? void 0 : i.hostname) ? t : "";
     return {
         hidePersonalInformation: h.Z.hidePersonalInformation,
         transport: null != a ? a.transport : null,
         mediaSessionId: d.Z.getMediaSessionId(),
-        hostname: g.Z.getShortHostname(l)
+        hostname: g.Z.getShortHostname(l),
     };
 })(R);

@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => B }));
+n.r(t), n.d(t, { default: () => B });
 var i = n(255367),
     l = n(73800),
     r = n(442837),
@@ -37,10 +37,10 @@ function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
     h.ZP.trackWithMetadata(A.rMx.SETTINGS_PANE_VIEWED, {
-        settings_type: 'channel',
+        settings_type: "channel",
         origin_pane: t,
         destination_pane: e,
-        location: n
+        location: n,
     });
 }
 class k extends l.PureComponent {
@@ -52,11 +52,34 @@ class k extends l.PureComponent {
     }
     componentDidUpdate(e) {
         let { formState: t, section: n } = e,
-            { formState: i, section: l, canManageRoles: r, canManageChannels: s, canManageWebhooks: a, canUnlinkChannel: o } = this.props;
-        (s || r || a || o) && (i !== A.QZA.CLOSED || i === t) && (r || l !== A.CoT.PERMISSIONS) && (a || o || l !== A.CoT.INTEGRATIONS) ? l !== n && M(l, n) : (0, c.xf)();
+            {
+                formState: i,
+                section: l,
+                canManageRoles: r,
+                canManageChannels: s,
+                canManageWebhooks: a,
+                canUnlinkChannel: o,
+            } = this.props;
+        (s || r || a || o) &&
+        (i !== A.QZA.CLOSED || i === t) &&
+        (r || l !== A.CoT.PERMISSIONS) &&
+        (a || o || l !== A.CoT.INTEGRATIONS)
+            ? l !== n && M(l, n)
+            : (0, c.xf)();
     }
     render() {
-        let { theme: e, sidebarTheme: t, section: n, channel: l, category: r, canManageRoles: a, canManageChannels: h, canDeleteChannels: f, canManageWebhooks: x, canUnlinkChannel: j } = this.props;
+        let {
+            theme: e,
+            sidebarTheme: t,
+            section: n,
+            channel: l,
+            category: r,
+            canManageRoles: a,
+            canManageChannels: h,
+            canDeleteChannels: f,
+            canManageWebhooks: x,
+            canUnlinkChannel: j,
+        } = this.props;
         return null == l
             ? null
             : (0, i.jsx)(d.ZP, {
@@ -66,11 +89,26 @@ class k extends l.PureComponent {
                   onSetSection: o.zc,
                   onClose: c.xf,
                   sections: (function (e) {
-                      let { channel: t, category: n, canManageRoles: l, canManageChannels: r, canDeleteChannels: a, canManageWebhooks: d, canUnlinkChannel: h } = e,
+                      let {
+                              channel: t,
+                              category: n,
+                              canManageRoles: l,
+                              canManageChannels: r,
+                              canDeleteChannels: a,
+                              canManageWebhooks: d,
+                              canUnlinkChannel: h,
+                          } = e,
                           f = (0, m.KS)(t),
                           { GUILD_CATEGORY: x } = A.d4z,
                           j = v.Ec.has(t.type),
-                          b = t.type === x ? L.intl.string(L.t.ifbXnJ) : j ? (t.isForumPost() ? L.intl.string(L.t.nEOg1N) : L.intl.string(L.t.H7vTe3)) : L.intl.string(L.t['8D8Rsb']);
+                          b =
+                              t.type === x
+                                  ? L.intl.string(L.t.ifbXnJ)
+                                  : j
+                                    ? t.isForumPost()
+                                        ? L.intl.string(L.t.nEOg1N)
+                                        : L.intl.string(L.t.H7vTe3)
+                                    : L.intl.string(L.t["8D8Rsb"]);
                       return [
                           {
                               section: u.ID.HEADER,
@@ -80,36 +118,36 @@ class k extends l.PureComponent {
                                             children: [
                                                 null != f
                                                     ? (0, i.jsx)(f, {
-                                                          size: 'xxs',
-                                                          color: 'currentColor',
-                                                          className: D.channelIcon
+                                                          size: "xxs",
+                                                          color: "currentColor",
+                                                          className: D.channelIcon,
                                                       })
                                                     : null,
                                                 (0, g.F6)(t, Z.default, O.Z),
                                                 null != n
                                                     ? (0, i.jsx)(s.Text, {
-                                                          tag: 'span',
-                                                          variant: 'text-xs/semibold',
-                                                          color: 'header-secondary',
+                                                          tag: "span",
+                                                          variant: "text-xs/semibold",
+                                                          color: "header-secondary",
                                                           lineClamp: 1,
                                                           className: D.category,
-                                                          children: (0, g.F6)(n, Z.default, O.Z)
+                                                          children: (0, g.F6)(n, Z.default, O.Z),
                                                       })
-                                                    : null
-                                            ]
+                                                    : null,
+                                            ],
                                         })
-                                      : L.intl.string(L.t.XPDhcX)
+                                      : L.intl.string(L.t.XPDhcX),
                           },
                           {
                               section: A.CoT.OVERVIEW,
-                              label: L.intl.string(L.t['/dp6yc']),
-                              ariaLabel: L.intl.string(L.t['/dp6yc']),
+                              label: L.intl.string(L.t["/dp6yc"]),
+                              ariaLabel: L.intl.string(L.t["/dp6yc"]),
                               element: I.Z,
                               notice: {
                                   element: I.G,
-                                  stores: [N.Z]
+                                  stores: [N.Z],
                               },
-                              predicate: () => !t.isModeratorReportChannel()
+                              predicate: () => !t.isModeratorReportChannel(),
                           },
                           {
                               section: A.CoT.PERMISSIONS,
@@ -117,16 +155,16 @@ class k extends l.PureComponent {
                               element: p.Z,
                               notice: {
                                   element: P.n,
-                                  stores: [C.Z]
+                                  stores: [C.Z],
                               },
-                              predicate: () => l && !j
+                              predicate: () => l && !j,
                           },
                           {
                               section: A.CoT.INSTANT_INVITES,
-                              label: L.intl.string(L.t['9F90iY']),
+                              label: L.intl.string(L.t["9F90iY"]),
                               element: _.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => t.type !== x && r && !j && !t.isModeratorReportChannel()
+                              predicate: () => t.type !== x && r && !j && !t.isModeratorReportChannel(),
                           },
                           {
                               section: A.CoT.INTEGRATIONS,
@@ -135,30 +173,30 @@ class k extends l.PureComponent {
                               element: R.Z,
                               notice: {
                                   stores: [y.Z],
-                                  element: R.B
+                                  element: R.B,
                               },
-                              predicate: () => !((!d && !h) || t.isModeratorReportChannel()) && v.Ti.has(t.type)
+                              predicate: () => !((!d && !h) || t.isModeratorReportChannel()) && v.Ti.has(t.type),
                           },
                           { section: u.ID.DIVIDER },
                           {
                               section: A.CoT.DELETE,
                               onClick() {
                                   (0, T.w)(t, function () {
-                                      (w.S.subscribeOnce(A.CkL.LAYER_POP_COMPLETE, () => {
+                                      w.S.subscribeOnce(A.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
-                                          (0, c.xf)());
+                                          (0, c.xf)();
                                   });
                               },
                               label: b,
                               ariaLabel: b,
                               icon: (0, i.jsx)(s.XHJ, {
-                                  size: 'xs',
-                                  color: 'currentColor'
+                                  size: "xs",
+                                  color: "currentColor",
                               }),
-                              variant: 'destructive',
-                              predicate: () => a && !t.isModeratorReportChannel()
-                          }
+                              variant: "destructive",
+                              predicate: () => a && !t.isModeratorReportChannel(),
+                          },
                       ];
                   })({
                       channel: l,
@@ -167,8 +205,8 @@ class k extends l.PureComponent {
                       canManageChannels: h,
                       canDeleteChannels: f,
                       canManageWebhooks: x,
-                      canUnlinkChannel: j
-                  })
+                      canUnlinkChannel: j,
+                  }),
               });
     }
 }
@@ -184,12 +222,12 @@ function B() {
             canManageChannels: d,
             canManageRoles: u,
             canManageWebhooks: h,
-            canUnlinkChannel: g
+            canUnlinkChannel: g,
         } = (0, r.cj)([E.Z], () => ({
             canManageChannels: E.Z.can(A.Plq.MANAGE_CHANNELS, e),
             canManageRoles: null != e && E.Z.can(A.Plq.MANAGE_ROLES, e),
             canManageWebhooks: null != e && E.Z.can(A.Plq.MANAGE_WEBHOOKS, e),
-            canUnlinkChannel: (0, f.C)(e, E.Z)
+            canUnlinkChannel: (0, f.C)(e, E.Z),
         })),
         m = (0, r.e7)([S.Z], () => S.Z.getChannel(null == e ? void 0 : e.parent_id));
     return (0, i.jsx)(k, {
@@ -204,6 +242,6 @@ function B() {
         theme: s,
         sidebarTheme: a,
         section: l,
-        analyticsLocation: t
+        analyticsLocation: t,
     });
 }

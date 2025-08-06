@@ -13,16 +13,16 @@ function u(e) {
         g = i.useMemo(
             () => [
                 {
-                    name: d.intl.string(d.t['n/bTaW']),
+                    name: d.intl.string(d.t["n/bTaW"]),
                     value: c.bL.ALL_MESSAGES,
-                    desc: null != m && m >= c.qWG ? d.intl.string(d.t['L+P4t7']) : null
+                    desc: null != m && m >= c.qWG ? d.intl.string(d.t["L+P4t7"]) : null,
                 },
                 {
-                    name: d.intl.string(d.t['6fQPho']),
-                    value: c.bL.ONLY_MENTIONS
-                }
+                    name: d.intl.string(d.t["6fQPho"]),
+                    value: c.bL.ONLY_MENTIONS,
+                },
             ],
-            [m]
+            [m],
         ),
         p = i.useCallback((e) => {
             let { value: t } = e;
@@ -32,6 +32,6 @@ function u(e) {
         options: g,
         value: n,
         disabled: !u,
-        onChange: p
+        onChange: p,
     });
 }

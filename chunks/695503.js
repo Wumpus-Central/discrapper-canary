@@ -6,9 +6,9 @@ var i = n(481060),
     a = n(948858);
 let s = function () {
     return (0, r.jsx)(i.kBi, {
-        size: 'md',
-        color: 'currentColor',
+        size: "md",
+        color: "currentColor",
         className: a.icon,
-        'aria-label': o.intl.string(o.t.BAB0yM)
+        "aria-label": o.intl.string(o.t.BAB0yM),
     });
 };

@@ -5,11 +5,11 @@ function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -35,7 +35,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -44,7 +44,7 @@ function s(e, t, n) {
 var l = {
     initialSourceClientOffset: null,
     initialClientOffset: null,
-    clientOffset: null
+    clientOffset: null,
 };
 function c() {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l,
@@ -56,7 +56,7 @@ function c() {
             return {
                 initialSourceClientOffset: n.sourceClientOffset,
                 initialClientOffset: n.clientOffset,
-                clientOffset: n.clientOffset
+                clientOffset: n.clientOffset,
             };
         case r.$T:
             if ((0, i.YJ)(e.clientOffset, n.clientOffset)) return e;

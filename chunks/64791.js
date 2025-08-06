@@ -9,7 +9,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -35,11 +35,11 @@ function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -55,11 +55,11 @@ function l(e, t) {
     );
 }
 let c = {
-    title: 'Tooltips',
+    title: "Tooltips",
     stories: [
         {
-            name: 'Tooltip',
-            id: 'tooltip',
+            name: "Tooltip",
+            id: "tooltip",
             component: function (e) {
                 return (0, r.jsx)(
                     i.ua7,
@@ -69,64 +69,64 @@ let c = {
                                 i.zxk,
                                 a(
                                     {
-                                        variant: 'primary',
-                                        text: 'Tooltip Trigger'
+                                        variant: "primary",
+                                        text: "Tooltip Trigger",
                                     },
-                                    e
-                                )
-                            )
-                    })
+                                    e,
+                                ),
+                            ),
+                    }),
                 );
             },
             controls: {
                 text: {
-                    label: 'Tooltip Text',
-                    type: 'text',
-                    defaultValue: "Here's some helpful tooltip text!"
+                    label: "Tooltip Text",
+                    type: "text",
+                    defaultValue: "Here's some helpful tooltip text!",
                 },
                 position: {
-                    label: 'Position',
-                    type: 'select',
-                    defaultValue: 'top',
+                    label: "Position",
+                    type: "select",
+                    defaultValue: "top",
                     options: [
                         {
-                            label: 'Top',
-                            value: 'top'
+                            label: "Top",
+                            value: "top",
                         },
                         {
-                            label: 'Bottom',
-                            value: 'bottom'
+                            label: "Bottom",
+                            value: "bottom",
                         },
                         {
-                            label: 'Left',
-                            value: 'left'
+                            label: "Left",
+                            value: "left",
                         },
                         {
-                            label: 'Right',
-                            value: 'right'
-                        }
-                    ]
+                            label: "Right",
+                            value: "right",
+                        },
+                    ],
                 },
                 allowOverflow: {
-                    label: 'Allow Overflow',
-                    type: 'boolean',
-                    defaultValue: !1
+                    label: "Allow Overflow",
+                    type: "boolean",
+                    defaultValue: !1,
                 },
                 spacing: {
-                    label: 'Spacing',
-                    type: 'number',
-                    defaultValue: 8
+                    label: "Spacing",
+                    type: "number",
+                    defaultValue: 8,
                 },
                 color: {
-                    label: 'Color',
-                    type: 'select',
+                    label: "Color",
+                    type: "select",
                     defaultValue: i.FGA.PRIMARY,
                     options: Object.keys(i.FGA).map((e) => ({
                         label: e,
-                        value: i.FGA[e]
-                    }))
-                }
-            }
-        }
-    ]
+                        value: i.FGA[e],
+                    })),
+                },
+            },
+        },
+    ],
 };

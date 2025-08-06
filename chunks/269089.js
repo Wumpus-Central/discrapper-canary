@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(570140),
     l = n(765250),
@@ -10,31 +10,37 @@ var r = n(255367),
     d = n(757744);
 n(442122);
 let p = (0, o.Un)({
-        createPromise: () => n.e('80960').then(n.bind(n, 223455)),
+        createPromise: () => n.e("80960").then(n.bind(n, 223455)),
         webpackId: 223455,
-        name: 'PopoutWindowChannelCall'
+        name: "PopoutWindowChannelCall",
     }),
     h = (0, o.Un)({
-        createPromise: () => n.e('20176').then(n.bind(n, 432472)),
+        createPromise: () => n.e("20176").then(n.bind(n, 432472)),
         webpackId: 432472,
-        name: 'PopoutWindowStageChannelCall'
+        name: "PopoutWindowStageChannelCall",
     }),
     f = (0, o.Un)({
-        createPromise: () => n.e('80960').then(n.bind(n, 945778)),
+        createPromise: () => n.e("80960").then(n.bind(n, 945778)),
         webpackId: 945778,
-        name: 'PopoutWindowRTCDebug'
+        name: "PopoutWindowRTCDebug",
     }),
     g = (0, o.Un)({
-        createPromise: () => Promise.all([n.e('92922'), n.e('89298'), n.e('27278')]).then(n.bind(n, 748623)),
+        createPromise: () => Promise.all([n.e("92922"), n.e("89298"), n.e("27278")]).then(n.bind(n, 748623)),
         webpackId: 748623,
-        name: 'PopoutWindowActivity'
+        name: "PopoutWindowActivity",
     });
 class m extends a.Z {
     _initialize() {
-        (i.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), i.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), i.Z.subscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.initializeStyleSheetObserver());
+        i.Z.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
+            i.Z.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
+            i.Z.subscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
+            this.initializeStyleSheetObserver();
     }
     _terminate() {
-        (i.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), i.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), i.Z.unsubscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.terminateStyleSheetObserver());
+        i.Z.unsubscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
+            i.Z.unsubscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
+            i.Z.unsubscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
+            this.terminateStyleSheetObserver();
     }
     handleOpenChannelCallPopout(e) {
         let { channel: t } = e;
@@ -44,31 +50,31 @@ class m extends a.Z {
                 t.isGuildStageVoice()
                     ? (0, r.jsx)(h, {
                           windowKey: e,
-                          channelId: t.id
+                          channelId: t.id,
                       })
                     : (0, r.jsx)(p, {
                           windowKey: e,
-                          channelId: t.id
+                          channelId: t.id,
                       }),
             {
                 defaultWidth: 854,
-                defaultHeight: 480
-            }
+                defaultHeight: 480,
+            },
         );
     }
     initializeStyleSheetObserver() {
-        ((this._observer = new MutationObserver(function (e) {
+        (this._observer = new MutationObserver(function (e) {
             for (let t of e)
-                if ('childList' === t.type) {
+                if ("childList" === t.type) {
                     for (let e of t.addedNodes)
-                        if (e.nodeType === Node.ELEMENT_NODE && 'LINK' === e.tagName && 'stylesheet' === e.rel) {
+                        if (e.nodeType === Node.ELEMENT_NODE && "LINK" === e.tagName && "stylesheet" === e.rel) {
                             let t = e.href,
                                 n = e.integrity;
                             c.YS(t, n);
                         }
                 }
         })),
-            this._observer.observe(document.head, { childList: !0 }));
+            this._observer.observe(document.head, { childList: !0 });
     }
     terminateStyleSheetObserver() {
         null != this._observer && (this._observer.disconnect(), (this._observer = null));
@@ -76,27 +82,27 @@ class m extends a.Z {
     handleOpenRTCDebugPopout() {
         c.bA(u.KJ3.RTC_DEBUG_POPOUT, (e) => (0, r.jsx)(f, { windowKey: e }), {
             defaultWidth: 854,
-            defaultHeight: 480
+            defaultHeight: 480,
         });
     }
     handleOpenActivityPopout() {
-        ((0, l.te)(d.$S, s.Z.getDefaultLayout(d.$S, d.HN), d.HN),
+        (0, l.te)(d.$S, s.Z.getDefaultLayout(d.$S, d.HN), d.HN),
             c.bA(u.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(g, { windowKey: e }), {
                 defaultWidth: 854,
-                defaultHeight: 480
-            }));
+                defaultHeight: 480,
+            });
     }
     constructor(...e) {
         var t;
-        (super(...e),
-            (t = '_observer') in this
+        super(...e),
+            (t = "_observer") in this
                 ? Object.defineProperty(this, t, {
                       value: null,
                       enumerable: !0,
                       configurable: !0,
-                      writable: !0
+                      writable: !0,
                   })
-                : (this[t] = null));
+                : (this[t] = null);
     }
 }
 let b = new m();

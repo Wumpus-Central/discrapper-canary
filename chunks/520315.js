@@ -1,9 +1,16 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(607070);
 function a(e) {
-    let { key: t, isExpanded: n, durationMs: a = 100, minHeightOverride: s, maxHeightOverride: l, maxAnimationHeight: c } = e,
+    let {
+            key: t,
+            isExpanded: n,
+            durationMs: a = 100,
+            minHeightOverride: s,
+            maxHeightOverride: l,
+            maxAnimationHeight: c,
+        } = e,
         u = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         [d, f] = r.useState(null),
         _ = r.useCallback(() => {}, []),
@@ -29,7 +36,8 @@ function a(e) {
             var e, r, i;
             if (null == d) return;
             let { height: o } = d.getBoundingClientRect();
-            (!n && (null == h.current || o < h.current) && (h.current = o), n && (null == m.current || o > m.current) && (m.current = o));
+            !n && (null == h.current || o < h.current) && (h.current = o),
+                n && (null == m.current || o > m.current) && (m.current = o);
             let a = null != (e = b.current) ? e : h.current,
                 s = null != (r = y.current) ? r : m.current,
                 l = g.current !== t;
@@ -38,22 +46,24 @@ function a(e) {
                 u = n ? a : c,
                 f = n ? c : a;
             if (u === f) return;
-            (I(!0), (d.style.height = ''.concat(u, 'px')), (d.style.transition = ''));
+            I(!0), (d.style.height = "".concat(u, "px")), (d.style.transition = "");
             let _ = null;
             return (
                 (_ = requestAnimationFrame(() => {
-                    ((_ = null), (d.style.height = ''.concat(f, 'px')), (d.style.transition = 'height '.concat(E.current, 'ms ease-in-out')));
+                    (_ = null),
+                        (d.style.height = "".concat(f, "px")),
+                        (d.style.transition = "height ".concat(E.current, "ms ease-in-out"));
                 })),
                 () => (null != _ ? cancelAnimationFrame(_) : void 0)
             );
         }, [t, d, n]),
         r.useLayoutEffect(() => {
-            null == d || v || ((d.style.height = ''), (d.style.transition = ''));
+            null == d || v || ((d.style.height = ""), (d.style.transition = ""));
         }, [t, d, v]),
         {
             ref: p,
             isTransitioning: v,
-            onTransitionEnd: T
+            onTransitionEnd: T,
         }
     );
 }

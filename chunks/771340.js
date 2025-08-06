@@ -9,21 +9,21 @@ let a = {
                 url: o.ANM.REGIONS(e),
                 retries: 1,
                 oldFormErrors: !0,
-                rejectWithError: !0
+                rejectWithError: !0,
             })
             .then(
                 (t) =>
                     i.Z.dispatch({
-                        type: 'LOAD_REGIONS',
+                        type: "LOAD_REGIONS",
                         regions: t.body,
-                        guildId: e
+                        guildId: e,
                     }),
                 () =>
                     i.Z.dispatch({
-                        type: 'LOAD_REGIONS',
+                        type: "LOAD_REGIONS",
                         regions: [],
-                        guildId: e
-                    })
+                        guildId: e,
+                    }),
             );
     },
     changeCallRegion(e, t) {
@@ -31,7 +31,7 @@ let a = {
             url: o.ANM.CALL(e),
             body: { region: t },
             oldFormErrors: !0,
-            rejectWithError: !0
+            rejectWithError: !0,
         });
-    }
+    },
 };

@@ -10,7 +10,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,24 +20,33 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let l = (e) => {
-    let { product: t, analyticsLocations: a, overrideTitle: l, overrideDescription: c, shouldShowPromotionalExperience: u, onCloseCallback: d, itemConsumed: f, purchaseType: _ = o.o8.FIAT } = e;
+    let {
+        product: t,
+        analyticsLocations: a,
+        overrideTitle: l,
+        overrideDescription: c,
+        shouldShowPromotionalExperience: u,
+        onCloseCallback: d,
+        itemConsumed: f,
+        purchaseType: _ = o.o8.FIAT,
+    } = e;
     (0, i.ZDy)(
         async () => {
             if (t.skuId === o.Vt.FRACTIONAL_PREMIUM || t.skuId === o.Vt.ORB_PROFILE_BADGE) {
-                let { default: e } = await Promise.all([n.e('30141'), n.e('77198')]).then(n.bind(n, 509428));
+                let { default: e } = await Promise.all([n.e("30141"), n.e("77198")]).then(n.bind(n, 509428));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -48,13 +57,13 @@ let l = (e) => {
                                 overrideTitle: l,
                                 overrideDescription: c,
                                 itemConsumed: f,
-                                purchaseType: o.o8.ORB
+                                purchaseType: o.o8.ORB,
                             },
-                            n
-                        )
+                            n,
+                        ),
                     );
             }
-            let { default: e } = await Promise.all([n.e('30141'), n.e('87624')]).then(n.bind(n, 331042));
+            let { default: e } = await Promise.all([n.e("30141"), n.e("87624")]).then(n.bind(n, 331042));
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -65,12 +74,12 @@ let l = (e) => {
                             overrideTitle: l,
                             overrideDescription: c,
                             shouldShowPromotionalExperience: u,
-                            purchaseType: _
+                            purchaseType: _,
                         },
-                        n
-                    )
+                        n,
+                    ),
                 );
         },
-        { onCloseCallback: d }
+        { onCloseCallback: d },
     );
 };

@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => T }), a(388685), a(35282));
+a.d(t, { Z: () => T }), a(388685), a(35282);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -31,9 +31,9 @@ function O() {
                 let t = h.Z.getChannel(e.channelId);
                 return {
                     value: e.channelId,
-                    label: null != t ? (0, m.F6)(t, f.default, p.Z) : e.channelId
+                    label: null != t ? (0, m.F6)(t, f.default, p.Z) : e.channelId,
                 };
-            })
+            }),
         })),
         j = r.useCallback(() => {
             var e;
@@ -41,20 +41,23 @@ function O() {
             let t = (0, v.x9)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
             x.Z.updatePrivateChannelRecipientFlags(i.id, t);
         }, [i]),
-        g = null != i && !!i.isPrivate() && (0, v.yE)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+        g =
+            null != i &&
+            !!i.isPrivate() &&
+            (0, v.yE)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(c.Text, {
-                variant: 'text-md/semibold',
-                children: 'In-Game NUX Message for DMs'
+                variant: "text-md/semibold",
+                children: "In-Game NUX Message for DMs",
             }),
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 className: C.inGameNuxContainer,
                 children: [
                     (0, n.jsx)(c.VcW, {
                         wrapperClassName: C.search,
                         options: d,
-                        placeholder: 'Select DM',
+                        placeholder: "Select DM",
                         value: a,
                         onChange: l,
                         renderOptionPrefix: (e) => {
@@ -64,22 +67,22 @@ function O() {
                                 ? null
                                 : (0, n.jsx)(c.qEK, {
                                       src: (0, u.x)(t),
-                                      'aria-hidden': !0,
-                                      size: c.EFr.SIZE_16
+                                      "aria-hidden": !0,
+                                      size: c.EFr.SIZE_16,
                                   });
                         },
-                        popoutLayerContext: _.O$
+                        popoutLayerContext: _.O$,
                     }),
                     (0, n.jsx)(c.zxk, {
-                        variant: 'primary',
-                        size: 'sm',
-                        text: g ? 'Clear NUX Flag' : 'Set NUX Flag',
+                        variant: "primary",
+                        size: "sm",
+                        text: g ? "Clear NUX Flag" : "Set NUX Flag",
                         onClick: j,
-                        disabled: null == a
-                    })
-                ]
-            })
-        ]
+                        disabled: null == a,
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function E() {
@@ -87,10 +90,10 @@ function E() {
         d.Z.openPrivateChannel({ recipientIds: [y.I] });
     }, []);
     return (0, n.jsx)(c.zxk, {
-        variant: 'primary',
-        size: 'sm',
-        text: 'Open System DM',
-        onClick: e
+        variant: "primary",
+        size: "sm",
+        text: "Open System DM",
+        onClick: e,
     });
 }
 function T() {
@@ -103,13 +106,19 @@ function T() {
                 onChange: (e) => (0, j.Z)(t, e),
                 hideBorder: !0,
                 className: C.switch,
-                children: r
+                children: r,
             },
-            t
+            t,
         );
     });
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: i()(N.panel, C.panel),
-        children: [e, (0, n.jsx)('div', { className: C.divider }), (0, n.jsx)(O, {}), (0, n.jsx)('div', { className: C.divider }), (0, n.jsx)(E, {})]
+        children: [
+            e,
+            (0, n.jsx)("div", { className: C.divider }),
+            (0, n.jsx)(O, {}),
+            (0, n.jsx)("div", { className: C.divider }),
+            (0, n.jsx)(E, {}),
+        ],
     });
 }

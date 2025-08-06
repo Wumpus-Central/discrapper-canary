@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(472816), n(794429));
+n.d(t, { Z: () => h }), n(472816), n(794429);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -13,55 +13,63 @@ var i = n(120356),
     _ = n(965323);
 function p(e) {
     let { text: t, error: n, isFake: i } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: _.scope,
         children: [
             i
                 ? (0, r.jsx)(c.k$p, {
-                      size: 'md',
-                      color: 'currentColor',
-                      className: o()(_.icon, _.fakeScopeIcon)
+                      size: "md",
+                      color: "currentColor",
+                      className: o()(_.icon, _.fakeScopeIcon),
                   })
                 : (0, r.jsx)(c.owK, {
-                      size: 'md',
-                      color: 'currentColor',
-                      className: o()(_.icon, _.scopeIcon)
+                      size: "md",
+                      color: "currentColor",
+                      className: o()(_.icon, _.scopeIcon),
                   }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: _.scopeInner,
                 children: [
                     (0, r.jsx)(l.x, {
-                        variant: 'text-md/normal',
-                        color: i ? 'text-muted' : void 0,
-                        children: t
+                        variant: "text-md/normal",
+                        color: i ? "text-muted" : void 0,
+                        children: t,
                     }),
                     null != n
                         ? (0, r.jsx)(l.x, {
-                              variant: 'text-xs/normal',
-                              color: 'text-danger',
-                              children: n
+                              variant: "text-xs/normal",
+                              color: "text-danger",
+                              children: n,
                           })
-                        : null
-                ]
-            })
-        ]
+                        : null,
+                ],
+            }),
+        ],
     });
 }
 function h(e) {
     var t;
-    let { application: n, accountScopes: i, requestedScopes: l, integrationType: h, errors: m, isTrustedName: g = !1, noDivider: E = !1 } = e,
+    let {
+            application: n,
+            accountScopes: i,
+            requestedScopes: l,
+            integrationType: h,
+            errors: m,
+            isTrustedName: g = !1,
+            noDivider: E = !1,
+        } = e,
         b = (0, u.Z)(() => d.ZW[Math.floor(Math.random() * d.ZW.length)]);
     if (0 === i.length) return null;
     let y = b(),
-        O = g ? f.t.PZpY9f : f.t['1Hz+Sk'],
+        O = g ? f.t.PZpY9f : f.t["1Hz+Sk"],
         v = h === a.Y.USER_INSTALL && l.includes(s.x.APPLICATIONS_COMMANDS);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(_.scopes, E ? _.noDivider : void 0),
         children: [
             (0, r.jsx)(c.X6q, {
-                variant: 'heading-sm/normal',
+                variant: "heading-sm/normal",
                 className: _.sectionLabel,
-                children: f.intl.format(O, { application: null != (t = null == n ? void 0 : n.name) ? t : '' })
+                children: f.intl.format(O, { application: null != (t = null == n ? void 0 : n.name) ? t : "" }),
             }),
             i
                 .map((e) =>
@@ -71,18 +79,18 @@ function h(e) {
                             p,
                             {
                                 text: t,
-                                error: 0 === n ? (null == m || null == (i = m[e]) ? void 0 : i[0]) : void 0
+                                error: 0 === n ? (null == m || null == (i = m[e]) ? void 0 : i[0]) : void 0,
                             },
-                            ''.concat(e, '-').concat(n)
+                            "".concat(e, "-").concat(n),
                         );
-                    })
+                    }),
                 )
                 .flat(),
             v && (0, r.jsx)(p, { text: f.intl.string(f.t.Ls2XRk) }),
             (0, r.jsx)(p, {
                 text: y,
-                isFake: !0
-            })
-        ]
+                isFake: !0,
+            }),
+        ],
     });
 }

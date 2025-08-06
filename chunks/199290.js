@@ -10,8 +10,8 @@ var r = n(424353),
     p = /^[+-]?0x/i,
     h = a(p.exec);
 e.exports =
-    8 !== l(c + '08') ||
-    22 !== l(c + '0x16') ||
+    8 !== l(c + "08") ||
+    22 !== l(c + "0x16") ||
     (d &&
         !o(function () {
             l(Object(d));

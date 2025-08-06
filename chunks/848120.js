@@ -1,1 +1,1 @@
-e.exports = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView;
+e.exports = "undefined" != typeof ArrayBuffer && "undefined" != typeof DataView;

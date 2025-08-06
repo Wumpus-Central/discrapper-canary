@@ -12,7 +12,7 @@ var r = n(73800),
 function p(e) {
     var t;
     let { guildId: n, groupListingId: p, location: f, relevantSubscriptionListingIds: g } = e,
-        m = (0, c.f)('useTrackRoleSubscriptionUpsellAnalytics'),
+        m = (0, c.f)("useTrackRoleSubscriptionUpsellAnalytics"),
         { activeSubscription: b } = (0, d.Z)(p),
         y = null != b,
         x = (0, i.Wu)(
@@ -22,7 +22,7 @@ function p(e) {
                     var t;
                     return (null == (t = u.Z.getSubscriptionListing(e)) ? void 0 : t.published) === !0;
                 }),
-            [g]
+            [g],
         ),
         { analyticsLocations: j } = (0, a.ZP)(null != (t = (0, s.DR)()) ? t : []),
         _ = r.useRef(!1);
@@ -38,24 +38,24 @@ function p(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })(
@@ -64,10 +64,10 @@ function p(e) {
                         role_subscription_listing_ids: x,
                         is_premium_member: y,
                         location_stack: j,
-                        location: f
+                        location: f,
                     },
-                    (0, l.hH)(n)
-                )
+                    (0, l.hH)(n),
+                ),
             ));
     }, [n, p, m, f, x, y, j]);
 }

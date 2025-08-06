@@ -1,4 +1,4 @@
-(n.d(t, { n: () => j }), n(539854), n(583741));
+n.d(t, { n: () => j }), n(539854), n(583741);
 var i = n(255367),
     r = n(73800),
     s = n(512722),
@@ -19,30 +19,38 @@ let _ = (e) => {
         let { churnUserDiscountOffer: t } = e;
         return null == t
             ? null
-            : (0, i.jsx)('div', {
+            : (0, i.jsx)("div", {
                   className: x.previewContainer,
-                  children: (0, i.jsx)(g.o, { userDiscountOffer: t })
+                  children: (0, i.jsx)(g.o, { userDiscountOffer: t }),
               });
     },
     j = () => {
-        let { transitionState: e, onClose: t, premiumType: n, setStep: s, discountPrimary: g, churnUserDiscountOffer: x, isFetchingChurnDiscountOffer: j } = (0, f.a)(),
+        let {
+                transitionState: e,
+                onClose: t,
+                premiumType: n,
+                setStep: s,
+                discountPrimary: g,
+                churnUserDiscountOffer: x,
+                isFetchingChurnDiscountOffer: j,
+            } = (0, f.a)(),
             E = (0, l.e7)([u.default], () => {
                 let e = u.default.getCurrentUser();
-                return (a()(null != e, 'ProfileItem: currentUser cannot be undefined'), e);
+                return a()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
             });
         r.useEffect(() => {
             (0, d.Z)(E.id, E.getAvatarURL(null, 80));
         }, [E]);
         let C = (0, m.Z)(),
-            O = 'US' === C.ipCountryCode && 'CA' === C.ipSubdivisionCode;
+            O = "US" === C.ipCountryCode && "CA" === C.ipSubdivisionCode;
         if (j)
             return (0, i.jsx)(o.Modal, {
                 transitionState: e,
-                title: '',
+                title: "",
                 actions: [],
                 onClose: async () => {
                     t();
-                }
+                },
             });
         let v = [];
         return (
@@ -50,18 +58,18 @@ let _ = (e) => {
                 ? v.push({
                       text: b.intl.string(b.t.zrCzVF),
                       onClick: () => s(h.R.CONFIRM_DISCOUNT),
-                      variant: g ? 'primary' : 'secondary',
-                      icon: c.SrA
+                      variant: g ? "primary" : "secondary",
+                      icon: c.SrA,
                   })
                 : v.push({
                       text: b.intl.string(b.t.h9tkAA),
                       onClick: () => t(),
-                      variant: 'secondary'
+                      variant: "secondary",
                   }),
             v.push({
-                text: O ? b.intl.string(b.t.PfnxqK) : b.intl.string(b.t['3PatS0']),
+                text: O ? b.intl.string(b.t.PfnxqK) : b.intl.string(b.t["3PatS0"]),
                 onClick: () => s(h.R.CONFIRM),
-                variant: null !== x && g ? 'secondary' : 'primary'
+                variant: null !== x && g ? "secondary" : "primary",
             }),
             g && null !== x && v.reverse(),
             (0, i.jsx)(o.Modal, {
@@ -76,8 +84,8 @@ let _ = (e) => {
                     premiumType: n,
                     onClose: t,
                     isDowngrade: !1,
-                    isPremiumRebrand: !0
-                })
+                    isPremiumRebrand: !0,
+                }),
             })
         );
     };

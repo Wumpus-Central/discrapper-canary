@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Y: () => p,
-    Z: () => U
+    Z: () => U,
 }),
     n(388685),
-    n(539854));
+    n(539854);
 var r,
     i = n(31775),
     o = n.n(i),
@@ -21,23 +21,26 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 var p = (function (e) {
-    return ((e[(e.LOADED = 0)] = 'LOADED'), (e[(e.NOT_LOADED = 1)] = 'NOT_LOADED'), (e[(e.DELETED = 2)] = 'DELETED'), e);
+    return (e[(e.LOADED = 0)] = "LOADED"), (e[(e.NOT_LOADED = 1)] = "NOT_LOADED"), (e[(e.DELETED = 2)] = "DELETED"), e;
 })({});
 let h = Object.freeze({ state: 1 }),
     m = new Set();
 class g {
     handleCacheDisposed(e, t) {
-        this._cachedMessageIds.has(e) && ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.delete(e));
+        this._cachedMessageIds.has(e) &&
+            ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.delete(e));
     }
     set(e, t) {
-        (this._cachedMessages.set(e, t), this._cachedMessageIds.has(e) || ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.add(e)));
+        this._cachedMessages.set(e, t),
+            this._cachedMessageIds.has(e) ||
+                ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.add(e));
     }
     has(e) {
         return this._cachedMessageIds.has(e);
@@ -49,15 +52,15 @@ class g {
         return this._cachedMessageIds;
     }
     constructor() {
-        (_(
+        _(
             this,
-            '_cachedMessages',
+            "_cachedMessages",
             new (o())({
                 max: 100,
-                dispose: (e, t) => this.handleCacheDisposed(e, t)
-            })
+                dispose: (e, t) => this.handleCacheDisposed(e, t),
+            }),
         ),
-            _(this, '_cachedMessageIds', new Set()));
+            _(this, "_cachedMessageIds", new Set());
     }
 }
 class E {
@@ -71,7 +74,7 @@ class E {
     }
     set(e, t, n) {
         let r = this._channelCaches.get(e);
-        (null == r && ((r = new g()), this._channelCaches.set(e, r)), r.set(t, n));
+        null == r && ((r = new g()), this._channelCaches.set(e, r)), r.set(t, n);
     }
     updateExistingMessageIfCached(e) {
         let t = this._channelCaches.get(e.channel_id);
@@ -80,7 +83,7 @@ class E {
             !!t.has(e.id) &&
             (t.set(e.id, {
                 state: 0,
-                message: (0, c.e5)(e)
+                message: (0, c.e5)(e),
             }),
             !0)
         );
@@ -102,7 +105,7 @@ class E {
         this._channelCaches.clear();
     }
     constructor() {
-        _(this, '_channelCaches', new Map());
+        _(this, "_channelCaches", new Map());
     }
 }
 let b = new E();
@@ -113,12 +116,12 @@ function y(e) {
         if (null == n) return t;
         let r = n.message_id;
         if (null == r) return t;
-        if ('referenced_message' in e) {
+        if ("referenced_message" in e) {
             let t = e.referenced_message;
             null != t
                 ? (b.set(t.channel_id, t.id, {
                       state: 0,
-                      message: (0, c.e5)(t)
+                      message: (0, c.e5)(t),
                   }),
                   e.type === f.uaV.THREAD_STARTER_MESSAGE && y(t))
                 : b.set(e.channel_id, r, { state: 2 });
@@ -127,7 +130,7 @@ function y(e) {
             null != e
                 ? b.set(n.channel_id, r, {
                       state: 0,
-                      message: e
+                      message: e,
                   })
                 : b.set(n.channel_id, r, h);
         }
@@ -166,7 +169,7 @@ function A(e) {
     if (null == r || 0 !== r.state) return !1;
     b.set(n, t, {
         state: 0,
-        message: (0, l.Cm)(r.message)
+        message: (0, l.Cm)(r.message),
     });
 }
 function N(e) {
@@ -178,7 +181,7 @@ function N(e) {
     if (null == i || 0 !== i.state) return !1;
     b.set(r, n, {
         state: 0,
-        message: (0, c.wi)(i.message, t)
+        message: (0, c.wi)(i.message, t),
     });
 }
 function C(e) {
@@ -203,7 +206,7 @@ function L(e) {
     let { message: t } = e;
     b.set(t.channel_id, t.id, {
         state: 0,
-        message: t
+        message: t,
     });
 }
 function x() {
@@ -226,7 +229,7 @@ class j extends (r = a.ZP.Store) {
     }
     getMessageByReference(e) {
         let t;
-        return (null != e && (t = b.get(e.channel_id, e.message_id)), null != t ? t : h);
+        return null != e && (t = b.get(e.channel_id, e.message_id)), null != t ? t : h;
     }
     getMessage(e, t) {
         var n;
@@ -234,10 +237,10 @@ class j extends (r = a.ZP.Store) {
     }
     getReplyIdsForChannel(e) {
         let t;
-        return (null != e && (t = b.getCachedMessageIdsForChannel(e)), null != t ? t : m);
+        return null != e && (t = b.getCachedMessageIdsForChannel(e)), null != t ? t : m;
     }
 }
-_(j, 'displayName', 'ReferencedMessageStore');
+_(j, "displayName", "ReferencedMessageStore");
 let U = new j(s.Z, {
     CACHE_LOADED: I,
     LOCAL_MESSAGES_LOADED: v,
@@ -258,5 +261,5 @@ let U = new j(s.Z, {
     THREAD_DELETE: C,
     GUILD_DELETE: R,
     CONNECTION_OPEN: x,
-    LOGOUT: x
+    LOGOUT: x,
 });

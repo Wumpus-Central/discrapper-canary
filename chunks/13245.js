@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685), n(415506));
+n.d(t, { Z: () => I }), n(388685), n(415506);
 var r = n(772848),
     i = n(570140),
     o = n(318885),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,7 @@ function y(e, t) {
         e
     );
 }
-let O = new a.Z('OverlayActionCreators'),
+let O = new a.Z("OverlayActionCreators"),
     v = {
         track(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -74,175 +74,178 @@ let O = new a.Z('OverlayActionCreators'),
         },
         overlayReady(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_READY',
-                pid: e
+                type: "OVERLAY_READY",
+                pid: e,
             });
         },
         overlayMounted() {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
             i.Z.dispatch({
-                type: 'OVERLAY_MOUNTED',
-                nudges: t
+                type: "OVERLAY_MOUNTED",
+                nudges: t,
             });
         },
         setFocusedPID(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 n = t ? c.d5.UNTRACK_FOCUS : c.d5.TRACK_FOCUS;
             i.Z.dispatch({
-                type: 'OVERLAY_FOCUSED',
+                type: "OVERLAY_FOCUSED",
                 pid: e,
-                trackMode: n
+                trackMode: n,
             });
         },
         setInputLocked(e, t) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_INPUT_LOCKED',
+                type: "OVERLAY_SET_INPUT_LOCKED",
                 locked: e,
-                pid: t
+                pid: t,
             });
         },
         setOverlayCrashed(e, t) {
             i.Z.dispatch({
-                type: 'OVERLAY_CRASHED',
+                type: "OVERLAY_CRASHED",
                 pid: e,
-                error: t
+                error: t,
             });
         },
         setReloadOverlay(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_RELOAD',
-                pid: e
+                type: "OVERLAY_RELOAD",
+                pid: e,
             });
         },
         setRenderDebugMode(e, t) {
             i.Z.dispatch({
-                type: 'OVERLAY_RENDER_DEBUG_MODE',
+                type: "OVERLAY_RENDER_DEBUG_MODE",
                 enabled: e,
-                mode: t
+                mode: t,
             });
         },
         clearTrackedPids() {
-            i.Z.dispatch({ type: 'OVERLAY_RENDER_DEBUG_CLEAR_TRACKED_PIDS' });
+            i.Z.dispatch({ type: "OVERLAY_RENDER_DEBUG_CLEAR_TRACKED_PIDS" });
         },
         setInstanceLocked(e) {
-            if (!__OVERLAY__) return void O.error('Attempting to start an overlay session outside of the overlay context');
+            if (!__OVERLAY__)
+                return void O.error("Attempting to start an overlay session outside of the overlay context");
             v.setInputLocked(e, (0, p.getPID)());
         },
         setEnabled(e, t) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_ENABLED',
+                type: "OVERLAY_SET_ENABLED",
                 legacyEnabled: e,
-                oopEnabled: t
+                oopEnabled: t,
             });
         },
         selectCall(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SELECT_CALL',
-                callId: e
+                type: "OVERLAY_SELECT_CALL",
+                callId: e,
             });
         },
         setDisplayNameMode(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_DISPLAY_NAME_MODE',
-                mode: e
+                type: "OVERLAY_SET_DISPLAY_NAME_MODE",
+                mode: e,
             });
         },
         setDisplayUserMode(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_DISPLAY_USER_MODE',
-                mode: e
+                type: "OVERLAY_SET_DISPLAY_USER_MODE",
+                mode: e,
             });
         },
         setAvatarSizeMode(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_AVATAR_SIZE_MODE',
-                mode: e
+                type: "OVERLAY_SET_AVATAR_SIZE_MODE",
+                mode: e,
             });
         },
         setNotificationPositionMode(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_NOTIFICATION_POSITION_MODE',
-                mode: e
+                type: "OVERLAY_SET_NOTIFICATION_POSITION_MODE",
+                mode: e,
             });
         },
         setDisableClickableRegions(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_DISABLE_CLICKABLE_REGIONS',
-                disable: e
+                type: "OVERLAY_SET_DISABLE_CLICKABLE_REGIONS",
+                disable: e,
             });
         },
         setShowKeybindIndicators(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS',
-                shouldShow: e
+                type: "OVERLAY_SET_SHOW_KEYBIND_INDICATORS",
+                shouldShow: e,
             });
         },
         setNotificationDisabledSetting(e, t) {
-            (e === l.OverlayNotificationDisabledSetting.GAME_ACTIVITY && this.track(m.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
+            e === l.OverlayNotificationDisabledSetting.GAME_ACTIVITY &&
+                this.track(m.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
                 i.Z.dispatch({
-                    type: 'OVERLAY_SET_NOTIFICATION_DISABLED_SETTING',
+                    type: "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING",
                     setting: e,
-                    disabled: t
-                }));
+                    disabled: t,
+                });
         },
         setInviteMessage(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_INVITE_MESSAGE',
-                message: e
+                type: "OVERLAY_SET_INVITE_MESSAGE",
+                message: e,
             });
         },
         callPrivateChannel(e, t) {
             i.Z.dispatch({
-                type: 'OVERLAY_CALL_PRIVATE_CHANNEL',
+                type: "OVERLAY_CALL_PRIVATE_CHANNEL",
                 channelId: e,
-                ring: t
+                ring: t,
             });
         },
         setTextWidgetOpacity(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_TEXT_WIDGET_OPACITY',
-                opacity: e
+                type: "OVERLAY_SET_TEXT_WIDGET_OPACITY",
+                opacity: e,
             });
         },
         disableExternalLinkAlert() {
-            i.Z.dispatch({ type: 'OVERLAY_DISABLE_EXTERNAL_LINK_ALERT' });
+            i.Z.dispatch({ type: "OVERLAY_DISABLE_EXTERNAL_LINK_ALERT" });
         },
         startSession() {
-            if (!__OVERLAY__) return void O.error('Attempting to start an overlay session outside of the overlay context');
-            i.Z.dispatch({ type: 'OVERLAY_START_SESSION' });
+            if (!__OVERLAY__)
+                return void O.error("Attempting to start an overlay session outside of the overlay context");
+            i.Z.dispatch({ type: "OVERLAY_START_SESSION" });
         },
         activateRegion(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_ACTIVATE_REGION',
-                region: e
+                type: "OVERLAY_ACTIVATE_REGION",
+                region: e,
             });
         },
         deactivateAllRegions() {
-            i.Z.dispatch({ type: 'OVERLAY_DEACTIVATE_ALL_REGIONS' });
+            i.Z.dispatch({ type: "OVERLAY_DEACTIVATE_ALL_REGIONS" });
         },
         setPreviewInGameMode(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_PREVIEW_IN_GAME_MODE',
-                isPreviewingInGame: e
+                type: "OVERLAY_SET_PREVIEW_IN_GAME_MODE",
+                isPreviewingInGame: e,
             });
         },
         updateNotificationStatus(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m._1z.DISMISSED;
             i.Z.dispatch({
-                type: 'OVERLAY_UPDATE_NOTIFICATION_STATUS',
+                type: "OVERLAY_UPDATE_NOTIFICATION_STATUS",
                 notificationId: e,
-                status: t
+                status: t,
             });
         },
         notificationEvent(e, t) {
             var n, r;
             let o = d.Z.getGame();
             i.Z.dispatch({
-                type: 'OVERLAY_NOTIFICATION_EVENT',
+                type: "OVERLAY_NOTIFICATION_EVENT",
                 notificationType: e,
                 action: t,
                 gameName: null != (n = null == o ? void 0 : o.name) ? n : null,
-                gameId: null != (r = null == o ? void 0 : o.id) ? r : null
+                gameId: null != (r = null == o ? void 0 : o.id) ? r : null,
             });
         },
         setPinChat(e) {
@@ -254,98 +257,102 @@ let O = new a.Z('OverlayActionCreators'),
                 l = u.Z.getWidgetDefaultSettings(m.Odu.GUILDS_TEXT),
                 c = u.Z.getWidgetDefaultSettings(m.Odu.GUILDS),
                 d = u.Z.getWidgetDefaultSettings(m.Odu.TEXT);
-            if (((0, s.JS)(m.Odu.TEXT, { pinned: e }), 0 === n.length || null == i || null == o || null == a || null == l || null == c || null == d)) return;
+            if (
+                ((0, s.JS)(m.Odu.TEXT, { pinned: e }),
+                0 === n.length || null == i || null == o || null == a || null == l || null == c || null == d)
+            )
+                return;
             let g = f.Z.windowSize(),
                 b = {
                     width: 0,
-                    height: 0
+                    height: 0,
                 },
                 O = {
                     top: 0,
                     left: 0,
                     right: 0,
-                    bottom: 0
+                    bottom: 0,
                 },
                 v = {
                     width: 312,
-                    height: 0
+                    height: 0,
                 },
                 I = {
                     top: 0,
                     left: 0,
                     right: 0,
-                    bottom: 0
+                    bottom: 0,
                 },
                 T = {
                     width: 0,
-                    height: 0
+                    height: 0,
                 };
             if (
                 (n.forEach((e) => {
                     let { type: t, id: n, anchor: r, size: i } = e;
                     switch (t) {
                         case m.Odu.TEXT:
-                            ((b = (0, _.w_)(i, g)), (0, h.E9)(n));
+                            (b = (0, _.w_)(i, g)), (0, h.E9)(n);
                             break;
                         case m.Odu.GUILDS:
-                            ((O = (0, _.vS)(r, i, g)), (v = (0, _.w_)(i, g)), (0, h.E9)(n));
+                            (O = (0, _.vS)(r, i, g)), (v = (0, _.w_)(i, g)), (0, h.E9)(n);
                             break;
                         case m.Odu.GUILDS_TEXT:
-                            ((I = (0, _.vS)(r, i, g)), (T = (0, _.w_)(i, g)), (0, h.E9)(n));
+                            (I = (0, _.vS)(r, i, g)), (T = (0, _.w_)(i, g)), (0, h.E9)(n);
                     }
                 }),
                 e)
             ) {
-                let e = 'auto' === T.width ? l.minSize.width : T.width;
+                let e = "auto" === T.width ? l.minSize.width : T.width;
                 e -= c.minSize.width;
                 let [n, i] = (0, _.o4)(I, y(E({}, T), { width: c.minSize.width }), g),
                     [o, a] = (0, _.uq)(I, y(E({}, T), { width: e }), g, {
                         x: 10,
-                        y: 10
+                        y: 10,
                     }),
                     s = u.Z.getWidgetDefaultSettings(m.Odu.TEXT);
-                if (null == s) throw Error('OverlayActionCreators.setPinChat: No config for TEXT exists');
+                if (null == s) throw Error("OverlayActionCreators.setPinChat: No config for TEXT exists");
                 (0, h.A4)(
                     y(E({}, s), {
                         type: m.Odu.TEXT,
                         id: (0, r.Z)(),
                         size: a,
                         anchor: o,
-                        layoutId: t
-                    })
+                        layoutId: t,
+                    }),
                 );
                 let d = u.Z.getWidgetDefaultSettings(m.Odu.GUILDS);
-                if (null == d) throw Error('OverlayActionCreators.setPinChat: No config for GUILDS exists');
+                if (null == d) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS exists");
                 (0, h.A4)(
                     y(E({}, d), {
                         type: m.Odu.GUILDS,
                         id: (0, r.Z)(),
                         size: i,
                         anchor: n,
-                        layoutId: t
-                    })
+                        layoutId: t,
+                    }),
                 );
             } else {
-                let e = 'auto' === b.width ? d.minSize.width : b.width;
+                let e = "auto" === b.width ? d.minSize.width : b.width;
                 e += c.minSize.width;
                 let [n, i] = (0, _.o4)(
                         O,
                         {
                             height: v.height,
-                            width: e
+                            width: e,
                         },
-                        g
+                        g,
                     ),
                     o = u.Z.getWidgetDefaultSettings(m.Odu.GUILDS_TEXT);
-                if (null == o) throw Error('OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists');
+                if (null == o) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists");
                 (0, h.A4)(
                     y(E({}, o), {
                         type: m.Odu.GUILDS_TEXT,
                         id: (0, r.Z)(),
                         layoutId: t,
                         anchor: n,
-                        size: i
-                    })
+                        size: i,
+                    }),
                 );
             }
         },
@@ -354,70 +361,70 @@ let O = new a.Z('OverlayActionCreators'),
         },
         setClickZones(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_CLICK_ZONES',
-                zones: e
+                type: "OVERLAY_SET_CLICK_ZONES",
+                zones: e,
             });
         },
         relayClickZoneClicked(e, t, n) {
             i.Z.dispatch({
-                type: 'OVERLAY_RELAY_CLICK_ZONE_CLICKED',
+                type: "OVERLAY_RELAY_CLICK_ZONE_CLICKED",
                 zoneName: e,
                 normalizedMouseX: t,
-                normalizedMouseY: n
+                normalizedMouseY: n,
             });
         },
         setAssociatedGame(e, t, n) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_ASSOCIATED_GAME',
+                type: "OVERLAY_SET_ASSOCIATED_GAME",
                 previousAssociatedGamePID: e,
                 associatedGamePID: t,
-                associatedGame: n
+                associatedGame: n,
             });
         },
         forceRenderMode(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_FORCE_RENDER_MODE',
-                mode: e
+                type: "OVERLAY_FORCE_RENDER_MODE",
+                mode: e,
             });
         },
         updateOverlayMethod: (e, t) =>
             i.Z.dispatch({
-                type: 'OVERLAY_UPDATE_OVERLAY_METHOD',
+                type: "OVERLAY_UPDATE_OVERLAY_METHOD",
                 pid: e,
-                overlayMethod: t
+                overlayMethod: t,
             }),
         updateOverlayState(e, t) {
             i.Z.dispatch({
-                type: 'OVERLAY_UPDATE_OVERLAY_STATE',
+                type: "OVERLAY_UPDATE_OVERLAY_STATE",
                 pid: e,
-                overlayState: t
+                overlayState: t,
             });
         },
         setLimitedInteractionOverride(e, t) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE',
+                type: "OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE",
                 applicationId: e,
-                enabled: t
+                enabled: t,
             });
         },
         successfullyShown(e) {
             i.Z.dispatch({
-                type: 'OVERLAY_SUCCESSFULLY_SHOWN',
-                pid: e
+                type: "OVERLAY_SUCCESSFULLY_SHOWN",
+                pid: e,
             });
         },
         setGpuBoostRequested(e, t) {
             i.Z.dispatch({
-                type: 'OVERLAY_SET_GPU_BOOST_REQUESTED',
+                type: "OVERLAY_SET_GPU_BOOST_REQUESTED",
                 reason: e,
-                enabled: t
+                enabled: t,
             });
         },
         updateTrackedGame: (e, t) =>
             i.Z.dispatch({
-                type: 'OVERLAY_TRACKED_GAME_UPDATE',
+                type: "OVERLAY_TRACKED_GAME_UPDATE",
                 pid: e,
-                trackedGame: t
-            })
+                trackedGame: t,
+            }),
     },
     I = v;

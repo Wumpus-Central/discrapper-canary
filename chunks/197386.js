@@ -18,7 +18,7 @@ function h(e, t) {
         m = (0, d.p)(n.location),
         g = (0, u.ZP)({
             application: h,
-            channelId: m
+            channelId: m,
         });
     if (null != g) return void (0, a.Z)(g);
     null != m &&
@@ -28,8 +28,8 @@ function h(e, t) {
                   m,
                   (0, o.gN)({
                       applicationId: n.applicationId,
-                      instanceId: null == n ? void 0 : n.compositeInstanceId
-                  })
+                      instanceId: null == n ? void 0 : n.compositeInstanceId,
+                  }),
               ),
               r.Z.updateLayout(m, p.AEg.NO_CHAT))
             : (0, l.tg)(_.Ez.PANEL));

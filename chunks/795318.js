@@ -1,6 +1,6 @@
 n.d(t, {
     o: () => u,
-    u: () => c
+    u: () => c,
 });
 var r = n(314897),
     i = n(592125),
@@ -18,7 +18,7 @@ function c(e, t) {
             location: t,
             entrypoint: null != o ? o : s.A5.CONTEXT_MENU,
             targetUserId: r,
-            tileType: i
+            tileType: i,
         });
 }
 function u(e) {
@@ -29,7 +29,7 @@ function u(e) {
             location: c,
             entrypoint: u,
             targetUserId: d,
-            tileType: f
+            tileType: f,
         } = e,
         _ = o.Z.getChannelId(),
         p = o.Z.getGuildId(),
@@ -44,6 +44,6 @@ function u(e) {
         guild_id: p,
         channel_id: _,
         channel_type: h,
-        tile_type: f
+        tile_type: f,
     });
 }

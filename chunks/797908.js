@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(953529));
+n.d(t, { Z: () => m }), n(388685), n(953529);
 var r = n(255367),
     a = n(73800),
     i = n(622535),
@@ -28,116 +28,119 @@ let m = function (e) {
                     ? c.ZP.getApplicationIconURL({
                           id: h.id,
                           icon: h.icon,
-                          size: 48
+                          size: 48,
                       })
                     : void 0,
-            [x, h]
+            [x, h],
         ),
         O = f && null != b;
     return (0, r.jsx)(i.$, {
         innerRef: _,
         onChange: C,
         active: !x,
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             ref: _,
             className: p.container,
             children: (0, r.jsxs)(o.Z, {
                 className: p.card,
                 onClick: y,
                 onContextMenu: () => {},
-                'aria-label': u.intl.string(u.t.np1Wrq),
+                "aria-label": u.intl.string(u.t.np1Wrq),
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: p.header,
                         children: [
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 style: {
-                                    width: '100%',
-                                    display: 'block',
-                                    aspectRatio: 16 / 9
+                                    width: "100%",
+                                    display: "block",
+                                    aspectRatio: 16 / 9,
                                 },
                                 children: x
                                     ? (0, r.jsx)(d.Z, {
                                           application: h,
-                                          bannerType: 'card',
-                                          iconURL: I
+                                          bannerType: "card",
+                                          iconURL: I,
                                       })
-                                    : null
+                                    : null,
                             }),
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: p.avatarContainer,
                                 style: { height: 28 },
                                 children: x
-                                    ? (0, r.jsx)('img', {
+                                    ? (0, r.jsx)("img", {
                                           src: I,
-                                          alt: '',
+                                          alt: "",
                                           className: p.avatar,
                                           height: 48,
                                           width: 48,
                                           style: {
                                               borderWidth: 4,
-                                              marginLeft: 12
-                                          }
+                                              marginLeft: 12,
+                                          },
                                       })
-                                    : null
-                            })
-                        ]
+                                    : null,
+                            }),
+                        ],
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: p.appDetails,
                         children: [
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: p.titleContainer,
-                                children: (0, r.jsx)('div', {
+                                children: (0, r.jsx)("div", {
                                     className: p.title,
                                     children: (0, r.jsx)(l.X6q, {
-                                        variant: 'heading-md/semibold',
-                                        color: 'header-primary',
+                                        variant: "heading-md/semibold",
+                                        color: "header-primary",
                                         className: p.appName,
-                                        children: h.name
-                                    })
-                                })
+                                        children: h.name,
+                                    }),
+                                }),
                             }),
                             O || j
-                                ? (0, r.jsxs)('div', {
+                                ? (0, r.jsxs)("div", {
                                       className: p.infoContainer,
                                       children: [
                                           O
                                               ? (0, r.jsx)(l.Text, {
                                                     className: p.appCategory,
-                                                    variant: 'text-xs/medium',
-                                                    color: 'text-default',
-                                                    children: b.name
+                                                    variant: "text-xs/medium",
+                                                    color: "text-default",
+                                                    children: b.name,
                                                 })
                                               : null,
                                           O && j
                                               ? (0, r.jsx)(l.Text, {
-                                                    variant: 'text-xs/medium',
-                                                    color: 'text-secondary',
-                                                    children: '\u2022'
+                                                    variant: "text-xs/medium",
+                                                    color: "text-secondary",
+                                                    children: "\u2022",
                                                 })
                                               : null,
                                           j
                                               ? (0, r.jsx)(l.Text, {
-                                                    variant: 'text-xs/medium',
-                                                    color: 'text-secondary',
-                                                    children: u.intl.string(u.t['/eVltr'])
+                                                    variant: "text-xs/medium",
+                                                    color: "text-secondary",
+                                                    children: u.intl.string(u.t["/eVltr"]),
                                                 })
-                                              : null
-                                      ]
+                                              : null,
+                                      ],
                                   })
                                 : null,
                             (0, r.jsx)(l.Text, {
                                 className: p.description,
-                                variant: 'text-sm/medium',
-                                color: 'header-secondary',
+                                variant: "text-sm/medium",
+                                color: "header-secondary",
                                 lineClamp: O || j ? 2 : 3,
-                                children: null != (m = null == (n = h.directory_entry) ? void 0 : n.short_description) ? m : h.description
-                            })
-                        ]
-                    })
-                ]
-            })
-        })
+                                children:
+                                    null != (m = null == (n = h.directory_entry) ? void 0 : n.short_description)
+                                        ? m
+                                        : h.description,
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        }),
     });
 };

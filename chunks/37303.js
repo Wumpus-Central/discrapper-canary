@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(126663);
@@ -19,7 +19,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,7 +31,7 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e) {
@@ -45,14 +45,14 @@ function m(e) {
             expansionSpring: S,
             isAnimating: A,
             isExpanded: N,
-            toggleExpanded: C
+            toggleExpanded: C,
         } = (0, f.O)({
             initiallyExpanded:
                 p ||
                 (0, c.iM)({
                     location: n,
-                    quest: t
-                })
+                    quest: t,
+                }),
         }),
         R = null != T ? T : c.U0;
     return (0, r.jsx)(l.A, {
@@ -69,17 +69,17 @@ function m(e) {
                             ? void 0
                             : S.to({
                                   range: [0, 1],
-                                  output: [c.DJ, R]
-                              })
+                                  output: [c.DJ, R],
+                              }),
                 },
                 className: _.questsCard,
                 onFocus: b,
                 onMouseEnter: b,
                 onBlur: y,
                 onMouseLeave: y,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     ref: (t) => {
-                        ((e.current = t), (v.current = t));
+                        (e.current = t), (v.current = t);
                     },
                     children: [
                         (0, r.jsx)(d.Z, {
@@ -92,7 +92,7 @@ function m(e) {
                             isExpanded: N,
                             contentPosition: h,
                             toggleExpanded: C,
-                            sourceQuestContent: m
+                            sourceQuestContent: m,
                         }),
                         (0, r.jsx)(u.Z, {
                             quest: t,
@@ -103,10 +103,10 @@ function m(e) {
                             isExpanded: N,
                             isAnimating: A,
                             contentPosition: h,
-                            sourceQuestContent: m
-                        })
-                    ]
-                })
-            })
+                            sourceQuestContent: m,
+                        }),
+                    ],
+                }),
+            }),
     });
 }

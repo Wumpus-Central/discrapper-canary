@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     B: () => m,
-    b: () => d
+    b: () => d,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -30,7 +30,7 @@ function u() {
         if (!e) {
             t(!0);
             try {
-                (await s.Z.verifyResend(), a(!0), d(!0));
+                await s.Z.verifyResend(), a(!0), d(!0);
             } catch (e) {
             } finally {
                 t(!1);
@@ -40,16 +40,16 @@ function u() {
     return n
         ? (0, r.jsx)(l.Text, {
               className: c.verifyConfirmText,
-              variant: 'text-sm/normal',
-              color: 'text-feedback-positive',
-              children: o.intl.string(o.t.H3Q7U1)
+              variant: "text-sm/normal",
+              color: "text-feedback-positive",
+              children: o.intl.string(o.t.H3Q7U1),
           })
         : (0, r.jsx)(l.zxk, {
-              variant: 'primary',
-              size: 'sm',
-              text: u ? o.intl.string(o.t.WnX4Jy) : o.intl.string(o.t['13ofGh']),
+              variant: "primary",
+              size: "sm",
+              text: u ? o.intl.string(o.t.WnX4Jy) : o.intl.string(o.t["13ofGh"]),
               loading: e,
-              onClick: m
+              onClick: m,
           });
 }
 function d() {
@@ -57,17 +57,17 @@ function d() {
         className: c.editableRequirementContainer,
         icon: l._XJ,
         text: o.intl.string(o.t.c6EUJC),
-        footnote: o.intl.string(o.t['jMh+TU']),
+        footnote: o.intl.string(o.t["jMh+TU"]),
         meetsRequirement: !1,
         children: (0, r.jsx)(l.DY3, {
             text: o.intl.string(o.t.mGlP39),
             children: (0, r.jsx)(l.zxk, {
-                variant: 'primary',
-                size: 'sm',
+                variant: "primary",
+                size: "sm",
                 disabled: !0,
-                text: o.intl.string(o.t['13ofGh'])
-            })
-        })
+                text: o.intl.string(o.t["13ofGh"]),
+            }),
+        }),
     });
 }
 function m(e) {
@@ -77,8 +77,8 @@ function m(e) {
         className: c.editableRequirementContainer,
         icon: l._XJ,
         text: n,
-        footnote: o.intl.string(o.t['jMh+TU']),
+        footnote: o.intl.string(o.t["jMh+TU"]),
         meetsRequirement: t,
-        children: (0, r.jsx)(u, {})
+        children: (0, r.jsx)(u, {}),
     });
 }

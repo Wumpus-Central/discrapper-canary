@@ -1,4 +1,4 @@
-(n.d(t, { D: () => g }), n(388685));
+n.d(t, { D: () => g }), n(388685);
 var i = n(255367),
     r = n(73800),
     a = n(442837),
@@ -17,7 +17,14 @@ var i = n(255367),
     y = n(982404),
     h = n(299156);
 function g(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: g, confettiCanvas: C, userWasChurned: j = !1, userDiscountOffer: E } = e,
+    let {
+            premiumSubscription: t,
+            premiumType: n,
+            onClose: g,
+            confettiCanvas: C,
+            userWasChurned: j = !1,
+            userDiscountOffer: E,
+        } = e,
         O = (0, l.ZP)(),
         P = (0, s.wj)(O) ? y : h,
         v = r.useRef(null),
@@ -25,7 +32,7 @@ function g(e) {
         T = (0, p._)(t, f.Xh.PREMIUM_MONTH_TIER_2, E),
         S = (0, d.aS)(f.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
-            paymentSourceId: t.paymentSourceId
+            paymentSourceId: t.paymentSourceId,
         }),
         R = (0, m.T4)(S.amount, S.currency),
         w = (0, a.e7)([c.Z], () => c.Z.useReducedMotion);
@@ -39,63 +46,63 @@ function g(e) {
     let D = b.intl.format(b.t.gPzMHR, {
             numMonths: E.discount.user_usage_limit,
             discountedPrice: T,
-            regularPrice: R
+            regularPrice: R,
         }),
-        k = (0, i.jsx)('div', {
+        k = (0, i.jsx)("div", {
             className: x.whatYouLoseButtonContainer,
             children: (0, i.jsx)(o.zxk, {
-                variant: 'primary',
-                text: b.intl.string(b.t['/r8g/v']),
-                onClick: g
-            })
+                variant: "primary",
+                text: b.intl.string(b.t["/r8g/v"]),
+                onClick: g,
+            }),
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(_.Z, {
                 premiumType: n,
                 className: x.cancellationHeader,
-                onClose: g
+                onClose: g,
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 ref: v,
                 children: (0, i.jsx)(o.hzk, {
-                    'data-migration-pending': !0,
+                    "data-migration-pending": !0,
                     className: x.body,
                     children:
                         null != T
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsxs)('div', {
+                                      (0, i.jsxs)("div", {
                                           className: x.discountAppliedBody,
                                           children: [
-                                              (0, i.jsx)('img', {
-                                                  alt: '',
+                                              (0, i.jsx)("img", {
+                                                  alt: "",
                                                   src: P,
-                                                  className: x.nitroIcon
+                                                  className: x.nitroIcon,
                                               }),
                                               (0, i.jsx)(o.X6q, {
-                                                  variant: 'heading-xl/bold',
-                                                  children: j ? b.intl.string(b.t.gOOPaG) : b.intl.string(b.t.PZSyRk)
-                                              })
-                                          ]
+                                                  variant: "heading-xl/bold",
+                                                  children: j ? b.intl.string(b.t.gOOPaG) : b.intl.string(b.t.PZSyRk),
+                                              }),
+                                          ],
                                       }),
-                                      (0, i.jsx)('div', {
+                                      (0, i.jsx)("div", {
                                           className: x.bodyString,
-                                          children: D
+                                          children: D,
                                       }),
-                                      k
-                                  ]
+                                      k,
+                                  ],
                               })
-                            : (0, i.jsx)(o.$jN, {})
-                })
+                            : (0, i.jsx)(o.$jN, {}),
+                }),
             }),
             !w &&
                 N &&
                 (0, i.jsx)(u.Z, {
                     confettiTarget: v.current,
                     confettiCanvas: C,
-                    confettiVelocityMultiplier: 0.75
-                })
-        ]
+                    confettiVelocityMultiplier: 0.75,
+                }),
+        ],
     });
 }

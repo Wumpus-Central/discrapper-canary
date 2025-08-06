@@ -9,7 +9,7 @@ var n = r(73800),
     u = r(82892),
     d = r(981631);
 function p(e, t) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'product',
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
         p = (0, o.sp)(),
         g = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
         f = (0, u.x)(),
@@ -29,26 +29,37 @@ function p(e, t) {
                 page_category: null == p ? void 0 : p.pageCategory,
                 page_section: null == p ? void 0 : p.pageSection,
                 type: r,
-                category_position: null == p ? void 0 : p.categoryPosition
+                category_position: null == p ? void 0 : p.categoryPosition,
             });
-        }, [null == p ? void 0 : p.sessionId, null == p ? void 0 : p.categoryPosition, null == p ? void 0 : p.pageCategory, null == p ? void 0 : p.pageSection, null == p ? void 0 : p.tilePosition, h, t, g, e, r]),
+        }, [
+            null == p ? void 0 : p.sessionId,
+            null == p ? void 0 : p.categoryPosition,
+            null == p ? void 0 : p.pageCategory,
+            null == p ? void 0 : p.pageSection,
+            null == p ? void 0 : p.tilePosition,
+            h,
+            t,
+            g,
+            e,
+            r,
+        ]),
         m = n.useCallback(
             (e) => {
                 e
                     ? null === b.current &&
                       (b.current = setTimeout(() => {
-                          (_(), (b.current = null));
+                          _(), (b.current = null);
                       }, 1000))
                     : null !== b.current && (clearTimeout(b.current), (b.current = null));
             },
-            [_]
+            [_],
         );
     return (
         n.useEffect(
             () => () => {
                 null !== b.current && (clearTimeout(b.current), (b.current = null));
             },
-            []
+            [],
         ),
         { handleCardVisibilityChange: m }
     );

@@ -1,4 +1,4 @@
-(n.d(e, { Z: () => Z }), n(388685));
+n.d(e, { Z: () => Z }), n(388685);
 var l = n(255367),
     a = n(73800),
     r = n(512722),
@@ -31,7 +31,7 @@ function w(t, e, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (t[e] = n),
         t
@@ -41,15 +41,15 @@ function N(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             l = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                })
+                }),
             )),
             l.forEach(function (e) {
                 w(t, e, n[e]);
-            }));
+            });
     }
     return t;
 }
@@ -72,16 +72,16 @@ function E(t, e) {
     );
 }
 function D(t) {
-    return (0, l.jsxs)('div', {
+    return (0, l.jsxs)("div", {
         className: y.statusOptionItem,
         children: [
             (0, l.jsx)(u.qbd, {
                 status: t.value,
                 size: 10,
-                className: y.statusIcon
+                className: y.statusIcon,
             }),
-            t.label
-        ]
+            t.label,
+        ],
     });
 }
 class I extends a.PureComponent {
@@ -91,7 +91,7 @@ class I extends a.PureComponent {
             source: null == e ? void 0 : e.location,
             type: _.jXE.CUSTOM_STATUS_MODAL,
             load_id: null == e ? void 0 : e.loadId,
-            location_stack: t
+            location_stack: t,
         });
     }
     get analyticsLocation() {
@@ -106,7 +106,7 @@ class I extends a.PureComponent {
                       className: y.emoji,
                       emojiId: t.id,
                       emojiName: t.name,
-                      animated: !!t.animated
+                      animated: !!t.animated,
                   });
     }
     renderCustomStatusInput() {
@@ -114,18 +114,18 @@ class I extends a.PureComponent {
             { text: e, emojiInfo: n } = this.state;
         return (0, l.jsx)(u.hjN, {
             className: y.formGroup,
-            title: P.intl.formatToPlainString(P.t['/w9pHx'], { username: t.username }),
-            children: (0, l.jsxs)('div', {
+            title: P.intl.formatToPlainString(P.t["/w9pHx"], { username: t.username }),
+            children: (0, l.jsxs)("div", {
                 className: y.inputContainer,
                 children: [
-                    (0, l.jsx)('div', {
+                    (0, l.jsx)("div", {
                         className: y.emojiButtonContainer,
                         children: (0, l.jsx)(u.yRy, {
                             targetElementRef: this.emojiButtonRef,
                             renderPopout: this.renderEmojiPicker,
-                            position: 'left',
+                            position: "left",
                             animation: u.yRy.Animation.NONE,
-                            align: 'top',
+                            align: "top",
                             children: (t, e) => {
                                 let { isShown: n } = e;
                                 return (0, l.jsx)(
@@ -135,20 +135,20 @@ class I extends a.PureComponent {
                                         active: n,
                                         className: y.emojiButton,
                                         tabIndex: 0,
-                                        renderButtonContents: this.getEmojiButtonRenderer()
-                                    })
+                                        renderButtonContents: this.getEmojiButtonRenderer(),
+                                    }),
                                 );
-                            }
-                        })
+                            },
+                        }),
                     }),
                     (0, l.jsx)(s.Is, {
                         maxLength: C.s0,
                         value: e,
                         inputClassName: y.input,
-                        placeholder: P.intl.string(P.t['zYR38/']),
+                        placeholder: P.intl.string(P.t["zYR38/"]),
                         onChange: this.handleStatusChange,
                         onKeyPress: this.handleKeyPress,
-                        autoFocus: !0
+                        autoFocus: !0,
                     }),
                     e.length > 0 || null != n
                         ? (0, l.jsx)(u.P3F, {
@@ -157,20 +157,20 @@ class I extends a.PureComponent {
                                       top: 8,
                                       bottom: 8,
                                       left: -2,
-                                      right: -2
-                                  }
+                                      right: -2,
+                                  },
                               },
                               className: y.clearButton,
                               onClick: this.handleClearStatus,
                               children: (0, l.jsx)(u.k$p, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: y.clearIcon
-                              })
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: y.clearIcon,
+                              }),
                           })
-                        : null
-                ]
-            })
+                        : null,
+                ],
+            }),
         });
     }
     renderClearAfter() {
@@ -185,10 +185,10 @@ class I extends a.PureComponent {
                 options: C.wS.map((t) => ({
                     value: t,
                     key: t,
-                    label: (0, x.Z)(t)
+                    label: (0, x.Z)(t),
                 })),
-                onChange: this.handleChangeClearAfter
-            })
+                onChange: this.handleChangeClearAfter,
+            }),
         });
     }
     renderStatusInput() {
@@ -203,12 +203,12 @@ class I extends a.PureComponent {
                     E(N({}, t), {
                         value: t.value,
                         key: t.value,
-                        label: t.label()
-                    })
+                        label: t.label(),
+                    }),
                 ),
                 onChange: this.handleChangeStatus,
-                renderOptionLabel: D
-            })
+                renderOptionLabel: D,
+            }),
         });
     }
     render() {
@@ -219,130 +219,138 @@ class I extends a.PureComponent {
                 children: (0, l.jsxs)(u.Y0X, {
                     transitionState: t,
                     className: y.modalRoot,
-                    'aria-label': P.intl.string(P.t['/UonHB']),
-                    parentComponent: 'CustomStatusModal',
+                    "aria-label": P.intl.string(P.t["/UonHB"]),
+                    parentComponent: "CustomStatusModal",
                     children: [
                         (0, l.jsxs)(u.xBx, {
                             separator: !1,
                             className: y.headerContainer,
                             children: [
-                                (0, l.jsx)('div', { className: y.art }),
-                                (0, l.jsx)('div', {
+                                (0, l.jsx)("div", { className: y.art }),
+                                (0, l.jsx)("div", {
                                     className: y.header,
                                     children: (0, l.jsx)(u.H, {
                                         className: y.headerText,
-                                        children: P.intl.string(P.t['/UonHB'])
-                                    })
+                                        children: P.intl.string(P.t["/UonHB"]),
+                                    }),
                                 }),
                                 (0, l.jsx)(u.olH, {
                                     onClick: e,
-                                    className: y.modalCloseButton
-                                })
-                            ]
+                                    className: y.modalCloseButton,
+                                }),
+                            ],
                         }),
                         (0, l.jsxs)(u.hzk, {
-                            children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, l.jsx)(u.$i$, { className: y.formDivider }), this.renderStatusInput()]
+                            children: [
+                                this.renderCustomStatusInput(),
+                                this.renderClearAfter(),
+                                (0, l.jsx)(u.$i$, { className: y.formDivider }),
+                                this.renderStatusInput(),
+                            ],
                         }),
                         (0, l.jsxs)(u.mzw, {
                             className: y.modalFooter,
                             children: [
                                 (0, l.jsx)(u.zxk, {
-                                    variant: 'primary',
+                                    variant: "primary",
                                     text: P.intl.string(P.t.R3BPHx),
-                                    onClick: this.handleSubmit
+                                    onClick: this.handleSubmit,
                                 }),
                                 (0, l.jsx)(u.Avr, {
                                     onClick: e,
-                                    variant: 'secondary',
-                                    size: 'sm',
-                                    textVariant: 'text-md/medium',
+                                    variant: "secondary",
+                                    size: "sm",
+                                    textVariant: "text-md/medium",
                                     color: y.cancelButton,
-                                    text: P.intl.string(P.t['ETE/oK'])
-                                })
-                            ]
-                        })
-                    ]
-                })
-            })
+                                    text: P.intl.string(P.t["ETE/oK"]),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            }),
         );
     }
     constructor(...t) {
-        (super(...t),
-            w(this, 'emojiButtonRef', a.createRef()),
-            w(this, 'state', {
+        super(...t),
+            w(this, "emojiButtonRef", a.createRef()),
+            w(this, "state", {
                 emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
-                text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : '',
+                text:
+                    null != this.props.customStatus && null != this.props.customStatus.state
+                        ? this.props.customStatus.state
+                        : "",
                 clearAfter: (0, O.Z)(),
-                status: (0, v.Z)()
+                status: (0, v.Z)(),
             }),
-            w(this, 'handleClearStatus', () => {
+            w(this, "handleClearStatus", () => {
                 this.setState({
                     emojiInfo: null,
-                    text: ''
+                    text: "",
                 });
             }),
-            w(this, 'handleSubmit', (t) => {
-                (t.preventDefault(), this.handleSaveStatus());
+            w(this, "handleSubmit", (t) => {
+                t.preventDefault(), this.handleSaveStatus();
             }),
-            w(this, 'handleStatusChange', (t) => {
+            w(this, "handleStatusChange", (t) => {
                 this.setState({ text: t });
             }),
-            w(this, 'handleEmojiChange', (t) => {
+            w(this, "handleEmojiChange", (t) => {
                 if (null == t) return;
                 let e =
                     null != t.id
                         ? {
                               id: t.id,
                               name: t.name,
-                              animated: t.animated
+                              animated: t.animated,
                           }
                         : {
                               id: null,
                               name: t.optionallyDiverseSequence,
-                              animated: !1
+                              animated: !1,
                           };
                 this.setState({ emojiInfo: e });
             }),
-            w(this, 'handleChangeClearAfter', (t) => {
+            w(this, "handleChangeClearAfter", (t) => {
                 this.setState({ clearAfter: t });
             }),
-            w(this, 'handleChangeStatus', (t) => {
+            w(this, "handleChangeStatus", (t) => {
                 this.setState({ status: t });
             }),
-            w(this, 'handleSaveStatus', () => {
+            w(this, "handleSaveStatus", () => {
                 let { sourceAnalyticsContext: t, onClose: e } = this.props,
                     { emojiInfo: n, text: l, clearAfter: a, status: r } = this.state,
                     i = p.co.getSetting();
-                (i !== r &&
+                i !== r &&
                     (0, h.Z)({
                         nextStatus: r,
                         prevStatus: i,
-                        analyticsContext: t
+                        analyticsContext: t,
                     }),
                     (0, g.Z)({
                         text: l,
                         emojiInfo: n,
                         clearAfter: a,
-                        analyticsContext: t
+                        analyticsContext: t,
                     }),
-                    e());
+                    e();
             }),
-            w(this, 'handleKeyPress', (t) => {
+            w(this, "handleKeyPress", (t) => {
                 t.which === _.yXg.ENTER && this.handleSaveStatus();
             }),
-            w(this, 'renderEmojiPicker', (t) => {
+            w(this, "renderEmojiPicker", (t) => {
                 let { closePopout: e } = t,
                     { onClose: n } = this.props;
                 return (0, l.jsx)(f.Z, {
                     closePopout: e,
                     onSelectEmoji: (t) => {
                         let { emoji: n, willClose: l } = t;
-                        (this.handleEmojiChange(n), l && e());
+                        this.handleEmojiChange(n), l && e();
                     },
                     pickerIntention: T.Hz.STATUS,
-                    onNavigateAway: n
+                    onNavigateAway: n,
                 });
-            }));
+            });
     }
 }
 let Z = o.ZP.connectStores(
@@ -350,12 +358,12 @@ let Z = o.ZP.connectStores(
     () => {
         let t = S.default.getCurrentUser();
         return (
-            i()(null != t, 'CustomStatusModal: user cannot be null'),
+            i()(null != t, "CustomStatusModal: user cannot be null"),
             {
                 customStatus: b.Z.getCustomStatusActivity(),
-                user: t
+                user: t,
             }
         );
     },
-    { forwardRef: !0 }
+    { forwardRef: !0 },
 )(I);

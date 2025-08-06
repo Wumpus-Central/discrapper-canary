@@ -10,22 +10,22 @@ function c(e) {
     let { guildId: t, markAsDismissed: c } = e;
     return (0, r.jsx)(a.ZP, {
         className: s.container,
-        asset: (0, r.jsx)('img', {
+        asset: (0, r.jsx)("img", {
             className: s.image,
             src: n(297806),
-            alt: ''
+            alt: "",
         }),
-        header: o.intl.string(o.t['2l9beX']),
+        header: o.intl.string(o.t["2l9beX"]),
         headerClassName: s.header,
         content: o.intl.string(o.t.gdqdND),
         buttonCTA: o.intl.string(o.t.RzWDqa),
         buttonProps: {
             color: i.Tt.WHITE,
-            innerClassName: s.primaryButton
+            innerClassName: s.primaryButton,
         },
         onClick: () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('5863'), n.e('95626')]).then(n.bind(n, 751212));
+                let { default: e } = await Promise.all([n.e("5863"), n.e("95626")]).then(n.bind(n, 751212));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
@@ -34,24 +34,24 @@ function c(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, n)),
@@ -68,7 +68,7 @@ function c(e) {
                               })(Object(l)).forEach(function (e) {
                                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        i)
+                        i),
                     );
                 };
             });
@@ -76,8 +76,8 @@ function c(e) {
         secondaryButtonCTA: o.intl.string(o.t.TulDPj),
         secondaryButtonProps: {
             look: i.iL.LINK,
-            color: i.Tt.WHITE
+            color: i.Tt.WHITE,
         },
-        markAsDismissed: c
+        markAsDismissed: c,
     });
 }

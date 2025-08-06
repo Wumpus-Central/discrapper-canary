@@ -1,6 +1,6 @@
 n.d(t, {
     default: () => c,
-    e: () => s
+    e: () => s,
 });
 var i = n(255367);
 n(73800);
@@ -17,10 +17,10 @@ function c(e) {
     return 0 === c.length
         ? null
         : (0, i.jsx)(r.v2r, {
-              navId: 'guild-settings-role-context',
-              'aria-label': a.intl.string(a.t['337Ja2']),
+              navId: "guild-settings-role-context",
+              "aria-label": a.intl.string(a.t["337Ja2"]),
               onClose: l.Zy,
               onSelect: s,
-              children: c
+              children: c,
           });
 }

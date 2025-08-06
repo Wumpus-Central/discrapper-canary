@@ -3,7 +3,7 @@ n.d(t, {
     Pb: () => f,
     jq: () => c,
     up: () => u,
-    yF: () => _
+    yF: () => _,
 });
 var r = n(442837),
     i = n(715903),
@@ -24,28 +24,24 @@ function d(e, t) {
     let { CDN_HOST: r } = window.GLOBAL_ENV;
     if (null == r) return;
     let i = s.oC[n];
-    return 'https://'.concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
+    return "https://".concat(r, "/clan-badges/").concat(e, "/").concat(t, ".png?size=").concat(i);
 }
 function f(e) {
     return null != e && e.identityEnabled
         ? {
               guildId: e.identityGuildId,
               tag: e.tag,
-              badge: e.badge
+              badge: e.badge,
           }
         : {};
 }
 function _(e, t) {
     let n = (0, r.e7)([a.default], () => a.default.getUser(e), [e]),
-        s = (0, r.e7)(
-            [o.ZP],
-            () => {
-                if (null == t || null == e) return null;
-                let n = o.ZP.getMember(t, e);
-                return (0, i.EY)(n);
-            },
-            [t, e]
-        ),
+        s = (0, r.e7)([o.ZP], () => {
+            if (null == t || null == e) return null;
+            let n = o.ZP.getMember(t, e);
+            return (0, i.EY)(n);
+        }, [t, e]),
         { tag: l, guildId: c } = f(null == n ? void 0 : n.primaryGuild);
     return null != c && null != l && !s;
 }

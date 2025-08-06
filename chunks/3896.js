@@ -16,7 +16,7 @@ function g(e) {
     return (0, r.jsxs)(s.P3F, {
         onClick: () =>
             (0, s.ZDy)(async () => {
-                let { default: e } = await n.e('72458').then(n.bind(n, 694278));
+                let { default: e } = await n.e("72458").then(n.bind(n, 694278));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
@@ -25,31 +25,31 @@ function g(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, n)),
                         (l = l =
                             {
                                 guild: t,
-                                hideColors: !0
+                                hideColors: !0,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -63,57 +63,57 @@ function g(e) {
                               })(Object(l)).forEach(function (e) {
                                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        i)
+                        i),
                     );
                 };
             }),
         className: a()(m.simpleItemWrapper, m.clickable),
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: m.itemContent,
                 children: [
                     (0, r.jsx)(s.X6q, {
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
-                        children: u.intl.string(u.t.DpRdYG)
+                        variant: "text-md/semibold",
+                        color: "header-primary",
+                        children: u.intl.string(u.t.DpRdYG),
                     }),
                     (0, r.jsx)(s.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'header-secondary',
-                        children: u.intl.string(u.t.mA17eH)
+                        variant: "text-sm/medium",
+                        color: "header-secondary",
+                        children: u.intl.string(u.t.mA17eH),
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: m.__invalid_pillRow,
                         children: (0, r.jsxs)(s.Text, {
-                            variant: 'text-xs/medium',
-                            color: 'interactive-normal',
+                            variant: "text-xs/medium",
+                            color: "interactive-normal",
                             className: m.valuePill,
                             children: [
                                 l === d.sFg.VERY_HIGH
                                     ? (0, r.jsx)(s.AtH, {
-                                          size: 'custom',
-                                          color: 'currentColor',
+                                          size: "custom",
+                                          color: "currentColor",
                                           width: 16,
-                                          height: 16
+                                          height: 16,
                                       })
                                     : (0, r.jsx)(s._XJ, {
-                                          size: 'custom',
-                                          color: 'currentColor',
+                                          size: "custom",
+                                          color: "currentColor",
                                           width: 16,
-                                          height: 16
+                                          height: 16,
                                       }),
-                                g
-                            ]
-                        })
-                    })
-                ]
+                                g,
+                            ],
+                        }),
+                    }),
+                ],
             }),
             (0, r.jsx)(c.Z, {
                 height: 24,
                 width: 24,
                 direction: c.Z.Directions.RIGHT,
-                className: m.caret
-            })
-        ]
+                className: m.caret,
+            }),
+        ],
     });
 }

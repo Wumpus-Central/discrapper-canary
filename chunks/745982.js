@@ -12,14 +12,14 @@ function d(t) {
         e = (0, a.Nn)();
     return (0, r.jsx)(s.Z, {
         heroImageSrc: l,
-        heroImageAlt: o.intl.string(o.t['2mJo29']),
+        heroImageAlt: o.intl.string(o.t["2mJo29"]),
         header: o.intl.string(o.t.eAbVfX),
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: c.safetyTips,
             children: (0, r.jsx)(i.Z, {
                 tips: e,
-                headerText: o.intl.string(o.t['0QSL1N'])
-            })
-        })
+                headerText: o.intl.string(o.t["0QSL1N"]),
+            }),
+        }),
     });
 }

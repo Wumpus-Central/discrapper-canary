@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     W: () => O,
-    Z: () => S
+    Z: () => S,
 }),
-    n(457542));
+    n(457542);
 var r,
     i = n(255367),
     l = n(73800),
@@ -24,84 +24,92 @@ var r,
     v = n(981631),
     j = n(388032),
     I = n(576052),
-    O = (((r = {})[(r.LOGIN_REQUIRED = 0)] = 'LOGIN_REQUIRED'), (r[(r.SWITCHED = 1)] = 'SWITCHED'), (r[(r.REMOVED = 2)] = 'REMOVED'), r);
+    O =
+        (((r = {})[(r.LOGIN_REQUIRED = 0)] = "LOGIN_REQUIRED"),
+        (r[(r.SWITCHED = 1)] = "SWITCHED"),
+        (r[(r.REMOVED = 2)] = "REMOVED"),
+        r);
 function N(e) {
     let { actionText: t, user: n, onAction: r } = e,
         {
             currentUser: l,
             hidePrivateData: s,
-            isAuthenticated: E
+            isAuthenticated: E,
         } = (0, a.cj)([f.default, m.Z, p.default], () => ({
             currentUser: f.default.getCurrentUser(),
             hidePrivateData: m.Z.hidePersonalInformation,
-            isAuthenticated: p.default.isAuthenticated()
+            isAuthenticated: p.default.isAuthenticated(),
         })),
         O = new h.Z(n),
         N = E && (null == l ? void 0 : l.id) === O.id,
         S = n.tokenStatus === b.q.INVALID,
-        C = s || O.hasUniqueUsername() ? null : '#'.concat(O.discriminator),
+        C = s || O.hasUniqueUsername() ? null : "#".concat(O.discriminator),
         y = null;
     return (
         N
             ? (y = (0, i.jsx)(c.Text, {
-                  variant: 'text-sm/semibold',
+                  variant: "text-sm/semibold",
                   className: I.hintText,
-                  color: 'text-feedback-positive',
-                  children: j.intl.string(j.t.seV8ys)
+                  color: "text-feedback-positive",
+                  children: j.intl.string(j.t.seV8ys),
               }))
             : S &&
               (y = (0, i.jsx)(c.Text, {
-                  variant: 'text-sm/semibold',
+                  variant: "text-sm/semibold",
                   className: I.hintText,
-                  color: 'text-danger',
-                  children: j.intl.string(j.t.tYX2pq)
+                  color: "text-danger",
+                  children: j.intl.string(j.t.tYX2pq),
               })),
-        (0, i.jsx)('div', {
+        (0, i.jsx)("div", {
             className: I.accountCard,
-            children: (0, i.jsxs)('div', {
+            children: (0, i.jsxs)("div", {
                 className: I.userDetails,
                 children: [
                     (0, i.jsx)(c.qEK, {
                         src: O.getAvatarURL(void 0, 40),
                         size: c.EFr.SIZE_40,
-                        'aria-label': n.username
+                        "aria-label": n.username,
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: o()(I.usernameSection, { [I.hasActionMaxWidth]: !N }),
                         children: [
-                            (0, i.jsxs)('div', {
+                            (0, i.jsxs)("div", {
                                 className: I.username,
                                 children: [
                                     (0, i.jsx)(c.Text, {
-                                        variant: 'text-md/semibold',
-                                        color: 'header-primary',
+                                        variant: "text-md/semibold",
+                                        color: "header-primary",
                                         className: I.textOverflow,
                                         children: _.ZP.getUserTag(O, {
-                                            mode: 'username',
-                                            identifiable: s ? 'never' : 'always'
-                                        })
+                                            mode: "username",
+                                            identifiable: s ? "never" : "always",
+                                        }),
                                     }),
                                     (0, i.jsx)(c.Text, {
-                                        color: 'header-secondary',
-                                        variant: 'text-sm/normal',
-                                        children: C
-                                    })
-                                ]
+                                        color: "header-secondary",
+                                        variant: "text-sm/normal",
+                                        children: C,
+                                    }),
+                                ],
                             }),
-                            y
-                        ]
+                            y,
+                        ],
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: I.userActions,
                         children: [
                             !N &&
                                 (0, i.jsx)(c.zxk, {
-                                    variant: 'secondary',
-                                    text: S ? j.intl.string(j.t['DSN+h4']) : t,
+                                    variant: "secondary",
+                                    text: S ? j.intl.string(j.t["DSN+h4"]) : t,
                                     onClick: function () {
                                         if (S) return void r(0, n.id);
-                                        (g.default.track(v.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: v.jXE.MANAGE_ACCOUNTS_MODAL } }), x.yD(n.id), r(1, n.id));
-                                    }
+                                        g.default.track(v.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                            location: { section: v.jXE.MANAGE_ACCOUNTS_MODAL },
+                                        }),
+                                            x.yD(n.id),
+                                            r(1, n.id);
+                                    },
                                 }),
                             (0, i.jsx)(c.hU, {
                                 icon: c.xhG,
@@ -109,39 +117,46 @@ function N(e) {
                                     (0, d.vq)(e, (e) => {
                                         let { onSelect: t } = e;
                                         return (0, i.jsx)(c.v2r, {
-                                            'aria-label': j.intl.string(j.t['41qiDQ']),
-                                            navId: 'manage-multi-account',
+                                            "aria-label": j.intl.string(j.t["41qiDQ"]),
+                                            navId: "manage-multi-account",
                                             onClose: d.Zy,
                                             onSelect: t,
                                             children: (0, i.jsx)(c.sNh, {
-                                                id: 'remove-account',
+                                                id: "remove-account",
                                                 label: j.intl.string(j.t.lSLMaW),
                                                 action: () => {
-                                                    u.Z.logout('multi_accounts_list', null, n.id).finally(() => {
+                                                    u.Z.logout("multi_accounts_list", null, n.id).finally(() => {
                                                         x.Zd(n.id);
                                                     });
                                                     let e = {};
-                                                    (null != l ? (e.section = v.jXE.MANAGE_ACCOUNTS_MODAL) : (e.page = v.Usc.LOGIN), g.default.track(v.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, { location: e }), r(2, n.id), null != t && t());
+                                                    null != l
+                                                        ? (e.section = v.jXE.MANAGE_ACCOUNTS_MODAL)
+                                                        : (e.page = v.Usc.LOGIN),
+                                                        g.default.track(v.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
+                                                            location: e,
+                                                        }),
+                                                        r(2, n.id),
+                                                        null != t && t();
                                                 },
-                                                color: 'danger'
-                                            })
+                                                color: "danger",
+                                            }),
                                         });
                                     });
                                 },
-                                'aria-label': j.intl.string(j.t.PdRCRk),
-                                variant: 'icon-only'
-                            })
-                        ]
-                    })
-                ]
-            })
+                                "aria-label": j.intl.string(j.t.PdRCRk),
+                                variant: "icon-only",
+                            }),
+                        ],
+                    }),
+                ],
+            }),
         })
     );
 }
 function S(e) {
     let { actionText: t, onAction: n } = e,
         { isLoading: r, multiAccountUsers: s } = (0, E.L)();
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: I.list,
         children: r
             ? (0, i.jsx)(c.$jN, { className: I.spinner })
@@ -155,19 +170,19 @@ function S(e) {
                                   {
                                       user: e,
                                       actionText: t,
-                                      onAction: n
+                                      onAction: n,
                                   },
-                                  e.id
+                                  e.id,
                               ),
                               s.length - 1 !== r &&
-                                  (0, i.jsx)('div', {
-                                      role: 'separator',
-                                      className: I.separator
-                                  })
-                          ]
+                                  (0, i.jsx)("div", {
+                                      role: "separator",
+                                      className: I.separator,
+                                  }),
+                          ],
                       },
-                      e.id
-                  )
-              )
+                      e.id,
+                  ),
+              ),
     });
 }

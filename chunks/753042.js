@@ -27,112 +27,112 @@ function g(e) {
     null == n)
         ? null
         : (0, r.jsx)(i.xJW, {
-              title: m.intl.string(m.t['ldCE/v']),
+              title: m.intl.string(m.t["ldCE/v"]),
               titleClassName: I.infoTitle,
               children: (0, r.jsxs)(A.WM, {
                   children: [
                       (0, r.jsx)(A._2, {
                           icon: (0, r.jsx)(i.lZ8, {
-                              size: 'custom',
+                              size: "custom",
                               width: A.Mn,
-                              height: A.Mn
+                              height: A.Mn,
                           }),
                           name: (0, r.jsx)(i.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'text-default',
-                              children: m.intl.string(m.t.nzGai4)
+                              variant: "text-sm/medium",
+                              color: "text-default",
+                              children: m.intl.string(m.t.nzGai4),
                           }),
                           description: g
                               ? (0, r.jsx)(i.sV5, {
-                                    size: 'custom',
+                                    size: "custom",
                                     width: A.Mn,
                                     height: A.Mn,
-                                    color: i.TVs.colors.STATUS_POSITIVE
+                                    color: i.TVs.colors.STATUS_POSITIVE,
                                 })
                               : (0, r.jsx)(i.CTb, {
-                                    size: 'custom',
+                                    size: "custom",
                                     width: A.Mn,
                                     height: A.Mn,
-                                    color: i.TVs.colors.STATUS_DANGER
-                                })
+                                    color: i.TVs.colors.STATUS_DANGER,
+                                }),
                       }),
                       f !== u.qc.NO_GATE &&
                           (0, r.jsx)(A._2, {
                               icon: (0, r.jsx)(i.snC, {
-                                  size: 'custom',
+                                  size: "custom",
                                   width: A.Mn,
-                                  height: A.Mn
+                                  height: A.Mn,
                               }),
                               name: (0, r.jsx)(i.Text, {
-                                  variant: 'text-sm/medium',
-                                  color: 'text-default',
-                                  children: m.intl.string(m.t['93hqlp'])
+                                  variant: "text-sm/medium",
+                                  color: "text-default",
+                                  children: m.intl.string(m.t["93hqlp"]),
                               }),
                               description:
                                   f === u.qc.AGREED
                                       ? (0, r.jsx)(i.sV5, {
-                                            size: 'custom',
+                                            size: "custom",
                                             width: A.Mn,
                                             height: A.Mn,
-                                            color: i.TVs.colors.STATUS_POSITIVE
+                                            color: i.TVs.colors.STATUS_POSITIVE,
                                         })
                                       : (0, r.jsx)(i.CTb, {
-                                            size: 'custom',
+                                            size: "custom",
                                             width: A.Mn,
                                             height: A.Mn,
-                                            color: i.TVs.colors.STATUS_DANGER
-                                        })
+                                            color: i.TVs.colors.STATUS_DANGER,
+                                        }),
                           }),
                       (0, r.jsx)(A._2, {
                           icon: (0, r.jsx)(i.gw7, {
-                              size: 'custom',
-                              color: 'currentColor',
+                              size: "custom",
+                              color: "currentColor",
                               width: A.Mn,
-                              height: A.Mn
+                              height: A.Mn,
                           }),
                           name: (0, r.jsx)(i.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'text-default',
-                              children: m.intl.string(m.t.SaDIpK)
+                              variant: "text-sm/medium",
+                              color: "text-default",
+                              children: m.intl.string(m.t.SaDIpK),
                           }),
                           description: (0, r.jsx)(i.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'text-default',
-                              children: N
-                          })
+                              variant: "text-sm/medium",
+                              color: "text-default",
+                              children: N,
+                          }),
                       }),
                       (0, r.jsx)(A._2, {
                           icon: (0, r.jsx)(a.Vj, {
                               guild: n,
                               size: a.Vj.Sizes.SMOL,
                               animate: !1,
-                              className: I.guildIcon
+                              className: I.guildIcon,
                           }),
                           name: (0, r.jsx)(i.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'text-default',
-                              children: m.intl.string(m.t['NQJ+WF'])
+                              variant: "text-sm/medium",
+                              color: "text-default",
+                              children: m.intl.string(m.t["NQJ+WF"]),
                           }),
                           description: (0, r.jsx)(i.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'text-default',
-                              children: h
-                          })
+                              variant: "text-sm/medium",
+                              color: "text-default",
+                              children: h,
+                          }),
                       }),
                       (0, r.jsx)(A._2, {
                           icon: (0, r.jsx)(i.ejJ, {
-                              size: 'custom',
+                              size: "custom",
                               width: A.Mn,
-                              height: A.Mn
+                              height: A.Mn,
                           }),
                           name: (0, r.jsx)(i.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'text-default',
-                              children: m.intl.string(m.t['eJOq+f'])
+                              variant: "text-sm/medium",
+                              color: "text-default",
+                              children: m.intl.string(m.t["eJOq+f"]),
                           }),
                           description: (0, r.jsx)(i.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'text-default',
+                              variant: "text-sm/medium",
+                              color: "text-default",
                               children: (0, r.jsx)(c.ZP, {
                                   userId: t.userId,
                                   guildId: t.guildId,
@@ -140,11 +140,11 @@ function g(e) {
                                   onClickInviter: (e) => {
                                       let n = d.Z.getChannelId();
                                       (0, _.r)(t.guildId, e.id, null != n ? n : T.lds);
-                                  }
-                              })
-                          })
-                      })
-                  ]
-              })
+                                  },
+                              }),
+                          }),
+                      }),
+                  ],
+              }),
           });
 }

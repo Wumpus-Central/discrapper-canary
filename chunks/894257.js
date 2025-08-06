@@ -1,6 +1,6 @@
 n.d(t, {
     I: () => r,
-    _: () => i
+    _: () => i,
 });
-let r = '643945264868098049',
-    i = 'URGENT_MESSAGE_MODAL';
+let r = "643945264868098049",
+    i = "URGENT_MESSAGE_MODAL";

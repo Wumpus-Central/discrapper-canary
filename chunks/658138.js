@@ -15,39 +15,41 @@ var r = n(255367),
 function h(e) {
     let { openPickerForChannel: t } = (0, d.B)(),
         n = (0, i.useCallback)(() => {
-            (o.default.selectPrivateChannel(e.id), t(e.id), u.default.track(O.rMx.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT_CLICKED, { channel_id: e.id }));
+            o.default.selectPrivateChannel(e.id),
+                t(e.id),
+                u.default.track(O.rMx.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT_CLICKED, { channel_id: e.id });
         }, [e.id, t]),
         { canAccessPicker: h } = (0, f.m)({
-            location: 'useChannelWallpaperItem',
-            channelId: e.id
+            location: "useChannelWallpaperItem",
+            channelId: e.id,
         }),
         _ = e.isPrivate() && h;
     return ((0, c.Z)(
         {
             type: l.ImpressionTypes.MENU,
-            name: l.ImpressionNames.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT
+            name: l.ImpressionNames.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT,
         },
-        { disableTrack: !_ }
+        { disableTrack: !_ },
     ),
     _)
         ? (0, r.jsx)(a.sNh, {
-              id: 'set-wallpaper',
-              label: (0, r.jsxs)('div', {
+              id: "set-wallpaper",
+              label: (0, r.jsxs)("div", {
                   className: p.label,
                   children: [
                       b.intl.string(b.t.GixvUl),
                       (0, r.jsx)(a.IGR, {
                           text: b.intl.string(b.t.y2b7CA),
-                          color: s.Z.BG_BRAND
-                      })
-                  ]
+                          color: s.Z.BG_BRAND,
+                      }),
+                  ],
               }),
               icon: () =>
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: p.iconWrapper,
-                      children: (0, r.jsx)(a.SrA, { size: 'xs' })
+                      children: (0, r.jsx)(a.SrA, { size: "xs" }),
                   }),
-              action: n
+              action: n,
           })
         : null;
 }

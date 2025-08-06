@@ -9,7 +9,18 @@ var i = n(120356),
 function c(e) {
     var t,
         n,
-        { buttonCTA: i, onChange: c, onFileSizeError: u, 'aria-label': d, multiple: f = !1, disabled: p = !1, submitting: b = !1, maxFileSizeBytes: O, filters: h, className: m } = e,
+        {
+            buttonCTA: i,
+            onChange: c,
+            onFileSizeError: u,
+            "aria-label": d,
+            multiple: f = !1,
+            disabled: p = !1,
+            submitting: b = !1,
+            maxFileSizeBytes: O,
+            filters: h,
+            className: m,
+        } = e,
         g = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -20,49 +31,62 @@ function c(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['buttonCTA', 'onChange', 'onFileSizeError', 'aria-label', 'multiple', 'disabled', 'submitting', 'maxFileSizeBytes', 'filters', 'className']);
+        })(e, [
+            "buttonCTA",
+            "onChange",
+            "onFileSizeError",
+            "aria-label",
+            "multiple",
+            "disabled",
+            "submitting",
+            "maxFileSizeBytes",
+            "filters",
+            "className",
+        ]);
     return (0, r.jsx)(o.tEY, {
         within: !0,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: l()(
                 (0, s.nY)(
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, g)),
                     (n = n =
                         {
                             submitting: b,
-                            disabled: p
+                            disabled: p,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -76,16 +100,16 @@ function c(e) {
                           })(Object(n)).forEach(function (e) {
                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
-                    t)
+                    t),
                 ),
-                m
+                m,
             ),
-            style: { width: 'max-content' },
-            'aria-disabled': p,
+            style: { width: "max-content" },
+            "aria-disabled": p,
             children: [
-                (0, r.jsx)('span', {
-                    'aria-hidden': !0,
-                    children: i
+                (0, r.jsx)("span", {
+                    "aria-hidden": !0,
+                    children: i,
                 }),
                 (0, r.jsx)(a.ZP, {
                     tabIndex: 0,
@@ -94,10 +118,10 @@ function c(e) {
                     multiple: f,
                     maxFileSizeBytes: O,
                     filters: h,
-                    'aria-label': null != d ? d : i,
-                    disabled: p
-                })
-            ]
-        })
+                    "aria-label": null != d ? d : i,
+                    disabled: p,
+                }),
+            ],
+        }),
     });
 }

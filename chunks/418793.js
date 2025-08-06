@@ -1,4 +1,4 @@
-(n.d(t, { v: () => s }), n(388685));
+n.d(t, { v: () => s }), n(388685);
 var r = n(887003),
     i = n(497505);
 function o(e) {
@@ -20,10 +20,10 @@ let a = (e) => {
                     messages: {
                         redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
-                        nameWithArticle: e.messages.name_with_article
+                        nameWithArticle: e.messages.name_with_article,
                     },
                     approximateCount: e.approximate_count,
-                    redemptionLink: e.redemption_link
+                    redemptionLink: e.redemption_link,
                 };
             case r.w.COLLECTIBLE:
                 return {
@@ -34,11 +34,11 @@ let a = (e) => {
                     messages: {
                         redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
-                        nameWithArticle: e.messages.name_with_article
+                        nameWithArticle: e.messages.name_with_article,
                     },
                     expiresAt: e.expires_at,
                     expirationMode: e.expiration_mode,
-                    expiresAtPremium: e.expires_at_premium
+                    expiresAtPremium: e.expires_at_premium,
                 };
             case r.w.VIRTUAL_CURRENCY:
                 return {
@@ -47,9 +47,9 @@ let a = (e) => {
                     messages: {
                         redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
-                        nameWithArticle: e.messages.name_with_article
+                        nameWithArticle: e.messages.name_with_article,
                     },
-                    orbQuantity: e.orb_quantity
+                    orbQuantity: e.orb_quantity,
                 };
             case r.w.FRACTIONAL_PREMIUM:
                 return {
@@ -61,8 +61,8 @@ let a = (e) => {
                     messages: {
                         redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
-                        nameWithArticle: e.messages.name_with_article
-                    }
+                        nameWithArticle: e.messages.name_with_article,
+                    },
                 };
             case r.w.IN_GAME:
                 return {
@@ -73,8 +73,8 @@ let a = (e) => {
                     messages: {
                         redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
-                        nameWithArticle: e.messages.name_with_article
-                    }
+                        nameWithArticle: e.messages.name_with_article,
+                    },
                 };
         }
     },
@@ -82,5 +82,5 @@ let a = (e) => {
         assignmentMethod: e.assignment_method,
         rewards: e.rewards.map(a),
         rewardsExpireAt: e.rewards_expire_at,
-        platforms: e.platforms
+        platforms: e.platforms,
     });

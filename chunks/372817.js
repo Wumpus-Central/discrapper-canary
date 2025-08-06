@@ -2,13 +2,23 @@ function r(e) {
     let { getFocusableElements: t, getActiveElement: n, scrollToStart: r, scrollToEnd: i } = e;
     function o(e) {
         var n;
-        return null != (n = t().find((t) => !!(e.compareDocumentPosition(t) & (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)))) ? n : null;
+        return null !=
+            (n = t().find(
+                (t) =>
+                    !!(
+                        e.compareDocumentPosition(t) &
+                        (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)
+                    ),
+            ))
+            ? n
+            : null;
     }
     function a(e) {
         let n = t();
         for (let t = n.length - 1; t >= 0; t--) {
             let r = n[t];
-            if (e.compareDocumentPosition(r) & (Node.DOCUMENT_POSITION_PRECEDING | Node.DOCUMENT_POSITION_CONTAINED_BY)) return r;
+            if (e.compareDocumentPosition(r) & (Node.DOCUMENT_POSITION_PRECEDING | Node.DOCUMENT_POSITION_CONTAINED_BY))
+                return r;
         }
         return null;
     }
@@ -35,7 +45,7 @@ function r(e) {
             return null == r && (null == e ? void 0 : e.wrap) ? (await (null == i ? void 0 : i()), l()) : r;
         },
         getFirstFocusableElement: s,
-        getLastFocusableElement: l
+        getLastFocusableElement: l,
     };
 }
 n.d(t, { E: () => r });

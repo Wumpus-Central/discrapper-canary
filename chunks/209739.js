@@ -82,5 +82,5 @@ e.exports = {
     SEMVER_SPEC_VERSION: i.SEMVER_SPEC_VERSION,
     RELEASE_TYPES: i.RELEASE_TYPES,
     compareIdentifiers: a.compareIdentifiers,
-    rcompareIdentifiers: a.rcompareIdentifiers
+    rcompareIdentifiers: a.rcompareIdentifiers,
 };

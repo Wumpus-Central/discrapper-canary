@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(642613));
+n.d(t, { Z: () => s }), n(642613);
 var r = n(73800),
     i = n(700089),
     o = n(654455),
@@ -18,6 +18,6 @@ function s(e) {
                     return o.ZP.getScoreWithoutLoadingLatest(l, t) - n;
                 })
                 .slice(0, s),
-        [c, u, l, s]
+        [c, u, l, s],
     );
 }

@@ -1,4 +1,4 @@
-(l.d(t, { default: () => b }), l(388685), l(539854));
+l.d(t, { default: () => b }), l(388685), l(539854);
 var r = l(255367),
     n = l(73800),
     i = l(149765),
@@ -22,15 +22,15 @@ let g = (e, t, l) => {
             [i, a] = n.useState(r);
         return {
             shouldEveryonePost: i,
-            setShouldEveryonePost: a
+            setShouldEveryonePost: a,
         };
     },
     x = (e) => {
         let { rolesRow: t } = e;
-        return (0, r.jsx)('div', {
-            'aria-hidden': !0,
+        return (0, r.jsx)("div", {
+            "aria-hidden": !0,
             className: v.roleCircle,
-            style: { backgroundColor: null == t ? void 0 : t.colorString }
+            style: { backgroundColor: null == t ? void 0 : t.colorString },
         });
     },
     b = (e) => {
@@ -44,7 +44,7 @@ let g = (e, t, l) => {
             E = N.map((e) => ({
                 key: e.key,
                 label: e.name,
-                value: e.id
+                value: e.id,
             })),
             [P, _] = n.useState(S.map((e) => e.id).filter(y(t.id))),
             [R, Z] = n.useState(!1),
@@ -60,24 +60,24 @@ let g = (e, t, l) => {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var l = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(l);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(l).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(l, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = l[t]),
+                                            (r = l[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })({}, t.permissionOverwrites),
@@ -92,34 +92,42 @@ let g = (e, t, l) => {
                                     ? p.push({
                                           id: b,
                                           type: c.BN.ROLE,
-                                          allow: j ? i.IH(null != (u = null == (l = s[b]) ? void 0 : l.allow) ? u : h.Hn, r) : i.Od(null != (m = null == (n = s[b]) ? void 0 : n.allow) ? m : h.Hn, r),
-                                          deny: i.Od(null != (w = null == (a = s[b]) ? void 0 : a.deny) ? w : h.Hn, r)
+                                          allow: j
+                                              ? i.IH(null != (u = null == (l = s[b]) ? void 0 : l.allow) ? u : h.Hn, r)
+                                              : i.Od(null != (m = null == (n = s[b]) ? void 0 : n.allow) ? m : h.Hn, r),
+                                          deny: i.Od(null != (w = null == (a = s[b]) ? void 0 : a.deny) ? w : h.Hn, r),
                                       })
                                     : (0, d.pM)(e.id, b)
                                       ? p.push({
                                             id: b,
                                             type: c.BN.ROLE,
-                                            allow: i.Od(null != (g = null == (v = s[b]) ? void 0 : v.allow) ? g : h.Hn, r),
-                                            deny: i.IH(null != (x = null == (y = s[b]) ? void 0 : y.deny) ? x : h.Hn, r)
+                                            allow: i.Od(
+                                                null != (g = null == (v = s[b]) ? void 0 : v.allow) ? g : h.Hn,
+                                                r,
+                                            ),
+                                            deny: i.IH(
+                                                null != (x = null == (y = s[b]) ? void 0 : y.deny) ? x : h.Hn,
+                                                r,
+                                            ),
                                         })
                                       : b in s && f.push(b);
                             }, []),
                             (0, u.kU)(t.id, p, f)
                         );
                     },
-                    [e, l, t]
+                    [e, l, t],
                 );
             })(t, l),
             T = async () => {
                 if (!M) return;
-                (Z(!0), K(!1));
+                Z(!0), K(!1);
                 let e = [...P];
                 if (k) {
                     let l = (0, p.lV)(t);
                     e.push(l);
                 }
                 try {
-                    (await B(b, e), j());
+                    await B(b, e), j();
                 } catch (e) {
                     K(!0);
                 } finally {
@@ -132,16 +140,16 @@ let g = (e, t, l) => {
                   title: w.intl.string(w.t.TFGnmp),
                   actions: [
                       {
-                          variant: 'secondary',
-                          text: w.intl.string(w.t['ETE/oK']),
-                          onClick: j
+                          variant: "secondary",
+                          text: w.intl.string(w.t["ETE/oK"]),
+                          onClick: j,
                       },
                       {
-                          variant: 'primary',
+                          variant: "primary",
                           text: w.intl.string(w.t.R3BPHx),
                           onClick: T,
-                          disabled: !M
-                      }
+                          disabled: !M,
+                      },
                   ],
                   onClose: j,
                   transitionState: O,
@@ -150,16 +158,16 @@ let g = (e, t, l) => {
                           closeOnSelect: !1,
                           className: v.roleSelector,
                           maxVisibleItems: 5,
-                          placeholder: w.intl.string(w.t['8kKqCQ']),
+                          placeholder: w.intl.string(w.t["8kKqCQ"]),
                           multi: !0,
                           value: P,
                           options: E,
                           onChange: (e) => {
                               _(e);
                           },
-                          renderOptionPrefix: (e) => (null != e ? (0, r.jsx)(x, { rolesRow: H.get(e.value) }) : null)
+                          renderOptionPrefix: (e) => (null != e ? (0, r.jsx)(x, { rolesRow: H.get(e.value) }) : null),
                       }),
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: v.row,
                           children: [
                               (0, r.jsx)(s.j7V, {
@@ -167,24 +175,24 @@ let g = (e, t, l) => {
                                   hideBorder: !0,
                                   onChange: C,
                                   className: v.switchGroup,
-                                  children: w.intl.string(w.t.kPwwAw)
+                                  children: w.intl.string(w.t.kPwwAw),
                               }),
                               (0, r.jsx)(s.Text, {
-                                  variant: 'text-sm/normal',
-                                  children: w.intl.format(w.t.l7Ercn, {})
-                              })
-                          ]
+                                  variant: "text-sm/normal",
+                                  children: w.intl.format(w.t.l7Ercn, {}),
+                              }),
+                          ],
                       }),
                       G
-                          ? (0, r.jsx)('div', {
+                          ? (0, r.jsx)("div", {
                                 className: v.row,
                                 children: (0, r.jsx)(s.Text, {
                                     className: v.error,
-                                    variant: 'text-sm/normal',
-                                    children: w.intl.string(w.t.mgZKZG)
-                                })
+                                    variant: "text-sm/normal",
+                                    children: w.intl.string(w.t.mgZKZG),
+                                }),
                             })
-                          : null
-                  ]
+                          : null,
+                  ],
               });
     };

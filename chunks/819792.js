@@ -17,20 +17,20 @@ function f(e) {
         c = (0, p.r)(t.guild_id),
         h = (0, a.q_F)({
             maxHeight: 300 * !c,
-            overflow: 'hidden',
-            delay: 400
+            overflow: "hidden",
+            delay: 400,
         });
     return (0, r.jsx)(i.animated.div, {
         style: h,
         children: s
             ? (0, r.jsx)(u.Z, {
                   channel: t,
-                  guild: n
+                  guild: n,
               })
             : (0, r.jsx)(d.Z, {
-                  name: '\uD83D\uDCDA\u2615 '.concat(t.name),
-                  channel: t
-              })
+                  name: "\uD83D\uDCDA\u2615 ".concat(t.name),
+                  channel: t,
+              }),
     });
 }
 let g = function (e) {
@@ -40,7 +40,7 @@ let g = function (e) {
     return t.features.has(h.oNc.HUB) && null != n && i
         ? (0, r.jsx)(f, {
               channel: n.channel,
-              guild: t
+              guild: t,
           })
         : null;
 };

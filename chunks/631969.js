@@ -6,5 +6,5 @@ var i = n(120356),
     a = n(979263);
 function s(e) {
     let { className: t } = e;
-    return (0, r.jsx)('div', { className: o()(a.image, t) });
+    return (0, r.jsx)("div", { className: o()(a.image, t) });
 }

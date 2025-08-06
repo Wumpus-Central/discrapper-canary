@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Ce: () => _,
     Ji: () => d,
     _G: () => E,
@@ -7,7 +7,7 @@
     fD: () => h,
     mG: () => y,
     pU: () => f,
-    r4: () => S
+    r4: () => S,
 }),
     n(35282),
     n(853839),
@@ -15,7 +15,7 @@
     n(479048),
     n(413496),
     n(433524),
-    n(388685));
+    n(388685);
 var r = n(973361),
     i = n(729594),
     o = n(544891),
@@ -24,10 +24,10 @@ var r = n(973361),
     l = n(908442);
 n(981631);
 let c = void 0,
-    u = '/__development/build_overrides',
-    d = (0, a.isAndroid)() ? c.Version.split(' - ')[0] : (0, a.isIOS)() ? c.Version : void 0;
+    u = "/__development/build_overrides",
+    d = (0, a.isAndroid)() ? c.Version.split(" - ")[0] : (0, a.isIOS)() ? c.Version : void 0;
 function f(e) {
-    return ''.concat(location.protocol, '//').concat(location.host).concat(e);
+    return "".concat(location.protocol, "//").concat(location.host).concat(e);
 }
 function _() {
     let e = s.Z.safeParseWithQuery(f(u));
@@ -39,11 +39,11 @@ function _() {
               .get({
                   url: i.format(e),
                   oldFormErrors: !0,
-                  rejectWithError: !1
+                  rejectWithError: !1,
               })
               .then(
                   (e) => e.body || null,
-                  () => null
+                  () => null,
               ));
 }
 function p(e) {
@@ -52,38 +52,38 @@ function p(e) {
     return null == t
         ? Promise.resolve(null)
         : ((t.search = null),
-          (t.query.meta = 'true'),
+          (t.query.meta = "true"),
           d && (t.query.version = d),
           (t.host = window.location.host),
           o.tn
               .get({
                   url: i.format(t),
                   oldFormErrors: !0,
-                  rejectWithError: !1
+                  rejectWithError: !1,
               })
               .then(
                   (e) => e.body || null,
-                  () => null
+                  () => null,
               ));
 }
 function h() {
-    return -1 !== window.document.cookie.indexOf(''.concat(l.ZF, '='));
+    return -1 !== window.document.cookie.indexOf("".concat(l.ZF, "="));
 }
 function m() {
     try {
         var e;
         let t = r.parse(window.document.cookie)[l.ZF];
         if (null == t) return {};
-        return null != (e = JSON.parse(atob(t.substring(t.indexOf('.') + 1))).$meta.experiments) ? e : {};
+        return null != (e = JSON.parse(atob(t.substring(t.indexOf(".") + 1))).$meta.experiments) ? e : {};
     } catch (e) {
         return {};
     }
 }
-let g = RegExp('^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$', 'i');
+let g = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
 function E(e) {
     return null != e && g.test(e);
 }
-let b = RegExp('^dev://branch/([\\w-./]+)$', 'i');
+let b = RegExp("^dev://branch/([\\w-./]+)$", "i");
 function y(e) {
     return null != e && b.test(e);
 }
@@ -94,29 +94,36 @@ function O(e) {
         r = t[1];
     return {
         targetBuildOverride: {
-            ['discord_'.concat(n)]: {
-                type: 'branch',
-                id: r
-            }
+            ["discord_".concat(n)]: {
+                type: "branch",
+                id: r,
+            },
         },
         validForUserIds: [],
-        expiresAt: 'Mon, 1 Jan 2038 00:00:00 GMT'
+        expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT",
     };
 }
-let v = 's',
-    I = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
-    T = new Set(['/__development/link', '/__development/link/']);
+let v = "s",
+    I = new Set([
+        "canary.discord.com",
+        "ptb.discord.com",
+        "discord.com",
+        "canary.discordapp.com",
+        "ptb.discordapp.com",
+        "discordapp.com",
+    ]),
+    T = new Set(["/__development/link", "/__development/link/"]);
 function S(e) {
     if (y(e))
         return {
             payload: null,
-            url: e
+            url: e,
         };
     let t = s.Z.safeParseWithQuery(e);
     if (null == t || !I.has(t.hostname) || !(v in t.query) || !T.has(t.pathname)) return null;
     for (let e in t.query) e !== v && delete t.query[e];
     return {
         payload: t.query[v],
-        url: i.format(t)
+        url: i.format(t),
     };
 }

@@ -27,7 +27,7 @@ function C(t) {
             N ||
                 d.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: e,
-                    location_stack: h
+                    location_stack: h,
                 });
         }, [N, e, h]),
         N)
@@ -39,18 +39,18 @@ function C(t) {
         look: a.zx.Looks.LINK,
         color: a.zx.Colors.LINK,
         subscriptionTier: b.Si.TIER_2,
-        textOptions: { textOverride: g.intl.format(g.t['944tDg'], {}) },
+        textOptions: { textOverride: g.intl.format(g.t["944tDg"], {}) },
         showIcon: !1,
         premiumModalAnalyticsLocation: {
             section: e,
-            object: m.qAy.BUTTON_CTA
+            object: m.qAy.BUTTON_CTA,
         },
-        disableShine: !0
+        disableShine: !0,
     });
     return (0, o.jsx)(u.Z, {
         reducedRightPadding: !0,
         className: v.nitroPreviewUpsell,
         text: g.intl.format(g.t.Og8039, {}),
-        button: A
+        button: A,
     });
 }

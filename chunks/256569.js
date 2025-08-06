@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685), n(358797));
+n.d(t, { Z: () => f }), n(388685), n(358797);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -18,11 +18,11 @@ function p(e) {
             onElementResize: n,
             onElementResizeEnd: i,
             orientation: c.y.VERTICAL_BOTTOM,
-            throttleDuration: 16
+            throttleDuration: 16,
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         onMouseDown: l,
-        className: g.resizeHandle
+        className: g.resizeHandle,
     });
 }
 let h = i.forwardRef(function (e, t) {
@@ -42,21 +42,29 @@ let h = i.forwardRef(function (e, t) {
                 className: g.innerScroller,
                 style: { minHeight: d - 2 },
                 ref: t,
-                children: n
+                children: n,
             }),
             (0, r.jsx)(p, {
                 resizableNode: c,
                 onResize: m,
                 onResizeEnd: (e) => {
-                    (m(e), null == l || l());
-                }
-            })
-        ]
+                    m(e), null == l || l();
+                },
+            }),
+        ],
     });
 });
 function f(e) {
     var t;
-    let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: p, className: f, maxTags: x } = e,
+    let {
+            initialValue: n,
+            onChangeTags: l,
+            onChangeNewTagValue: c,
+            tagErrors: u = {},
+            placeholder: p,
+            className: f,
+            maxTags: x,
+        } = e,
         b = i.useRef(null),
         j = i.useRef(null),
         v = i.useRef(null),
@@ -71,56 +79,56 @@ function f(e) {
             handleSelectTag: S,
             handleUnselectTag: T,
             handleResetTagSelections: P,
-            handleInputBlurEvent: w
+            handleInputBlurEvent: w,
         } = (0, m.Q)(_, {
             scrollerRef: v,
             mainInputRef: b,
-            mainContainerRef: j
+            mainContainerRef: j,
         }),
         {
-            state: { value: R, tags: Z, selections: D, isSelecting: A }
+            state: { value: R, tags: Z, selections: D, isSelecting: A },
         } = _,
         k = (0, o.Z)(Z),
         [L, M] = i.useState(!1),
         G = i.useCallback(() => {
             var e;
-            (M(!1), P(), null == (e = b.current) || e.focus({ preventScroll: !0 }));
+            M(!1), P(), null == (e = b.current) || e.focus({ preventScroll: !0 });
         }, [P]);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         k !== Z && l(Z);
     }, [l, k, Z]),
         i.useEffect(() => {
             L || c(R);
-        }, [c, R, L]));
+        }, [c, R, L]);
     let U = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                (e && G(), M(!1));
+                e && G(), M(!1);
             },
-            [G]
+            [G],
         ),
         B = i.useCallback(
             (e) => (t) => {
                 if (t) {
                     var n;
                     let t = D.includes(Z[e]);
-                    (null == (n = b.current) || n.focus(),
+                    null == (n = b.current) || n.focus(),
                         t
                             ? T(e)
                             : (S(e),
                               setImmediate(() => {
                                   var e;
-                                  (null == (e = b.current) || e.blur(),
+                                  null == (e = b.current) || e.blur(),
                                       setTimeout(() => {
                                           var e;
                                           return null == (e = j.current) ? void 0 : e.focus();
-                                      }, 16));
-                              })));
-                } else (T(e, !0), M(!0));
+                                      }, 16);
+                              }));
+                } else T(e, !0), M(!0);
             },
-            [S, T, D, Z]
+            [S, T, D, Z],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(g.mainContainer, f),
         ref: j,
         tabIndex: 0,
@@ -142,12 +150,12 @@ function f(e) {
                                 isSelected: D.includes(e),
                                 isSelecting: A,
                                 error: u[e],
-                                forceShowErrorTooltip: !L && t === Z.length - 1
+                                forceShowErrorTooltip: !L && t === Z.length - 1,
                             },
-                            t
-                        )
+                            t,
+                        ),
                     ),
-                    (0, r.jsx)('input', {
+                    (0, r.jsx)("input", {
                         className: a()(g.mainTextInput, { [g.isEditingOtherNodes]: L }),
                         ref: b,
                         onChange: y,
@@ -155,17 +163,17 @@ function f(e) {
                         onPaste: O,
                         onBlur: w,
                         placeholder: 0 === Z.length ? p : void 0,
-                        value: R
-                    })
-                ]
+                        value: R,
+                    }),
+                ],
             }),
             null != x &&
                 (0, r.jsxs)(s.Text, {
-                    variant: 'text-xs/normal',
-                    color: 'text-muted',
+                    variant: "text-xs/normal",
+                    color: "text-muted",
                     className: g.maxTags,
-                    children: [null != (t = null == Z ? void 0 : Z.length) ? t : 0, '/', x]
-                })
-        ]
+                    children: [null != (t = null == Z ? void 0 : Z.length) ? t : 0, "/", x],
+                }),
+        ],
     });
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     Ho: () => _,
     ZP: () => m,
-    y9: () => p
+    y9: () => p,
 });
 var r = n(255367),
     i = n(73800),
@@ -28,21 +28,21 @@ let _ = [u.An],
                               (0, r.jsx)(d.F9, {
                                   entry: t,
                                   channelId: n.id,
-                                  guildId: n.guild_id
+                                  guildId: n.guild_id,
                               }),
                               (0, r.jsx)(d.ll, { children: t.extra.artist.name }),
                               (0, r.jsx)(u.Gk, {
                                   location: u.Gt.CARD,
-                                  children: _.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
-                              })
-                          ]
+                                  children: _.map((e, n) => (0, r.jsx)(e, { entry: t }, n)),
+                              }),
+                          ],
                       }),
                       (0, r.jsx)(l.f, {
                           src: null == o ? void 0 : o.src,
                           size: 48,
-                          className: f.thumbnail
-                      })
-                  ]
+                          className: f.thumbnail,
+                      }),
+                  ],
               })
             : null;
     },

@@ -1,4 +1,4 @@
-(n.d(t, { x: () => a }), n(388685));
+n.d(t, { x: () => a }), n(388685);
 var r = n(73800);
 function a(e, t, n) {
     let a = r.useRef(null),
@@ -15,7 +15,7 @@ function a(e, t, n) {
         }, [i, e, n]),
         {
             postTitleRef: a,
-            isNewBadgeOverflow: s
+            isNewBadgeOverflow: s,
         }
     );
 }

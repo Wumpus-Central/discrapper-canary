@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(73800),
     i = n(479531),
     l = n(53365),
@@ -8,7 +8,7 @@ function s(e) {
         [s, o] = r.useState(),
         [c, d] = r.useState(),
         u = r.useCallback(async (e) => {
-            (n(!0), o(void 0));
+            n(!0), o(void 0);
             try {
                 var t, r, s, c, u;
                 let n = await l.yk(e);
@@ -32,7 +32,7 @@ function s(e) {
                     rejection: n.rejection,
                     guildMemberCount: null == (s = n.health_score) ? void 0 : s.guild_size,
                     communicatorCount: null == (c = n.health_score) ? void 0 : c.communicators,
-                    retentionScore: null == (u = n.health_score) ? void 0 : u.perc_ret_w1
+                    retentionScore: null == (u = n.health_score) ? void 0 : u.perc_ret_w1,
                 });
             } catch (e) {
                 o(new i.Z(e));
@@ -46,6 +46,6 @@ function s(e) {
         eligibility: c,
         refresh: r.useCallback(() => {
             null != e && u(e);
-        }, [e, u])
+        }, [e, u]),
     };
 }

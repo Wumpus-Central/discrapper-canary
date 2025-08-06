@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(314940));
+n.d(t, { Z: () => d }), n(314940);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -14,16 +14,16 @@ function d(e) {
         m =
             ((t = n.type),
             d
-                ? c.intl.string(c.t['0TmQRE'])
+                ? c.intl.string(c.t["0TmQRE"])
                 : (0, l.EQ)(t)
-                      .with(o.Z.AVATAR_DECORATION, () => c.intl.string(c.t['7v0T9P']))
+                      .with(o.Z.AVATAR_DECORATION, () => c.intl.string(c.t["7v0T9P"]))
                       .with(o.Z.PROFILE_EFFECT, () => c.intl.string(c.t.wR5wOj))
                       .otherwise(() => null));
     return null === m
         ? null
         : (0, r.jsx)(s.Text, {
-              variant: 'text-xxs/normal',
+              variant: "text-xxs/normal",
               className: a()([u.container, i ? u.darkText : u.lightText]),
-              children: m
+              children: m,
           });
 }

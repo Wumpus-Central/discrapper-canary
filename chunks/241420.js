@@ -16,54 +16,56 @@ function f(e) {
         children: [
             (0, o.jsx)(l.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n
+                guildId: n,
             }),
             (0, o.jsx)(s.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n
+                guildId: n,
             }),
             (0, o.jsx)(c.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n
+                guildId: n,
             }),
             (0, o.jsx)(a.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n
+                guildId: n,
             }),
             (0, o.jsx)(r.Text, {
-                color: 'header-secondary',
-                variant: 'text-sm/normal',
-                children: _.intl.format(_.t.LNsV09, { policyLink: 'https://discord.com/safety/360043709612-our-policies' })
-            })
-        ]
+                color: "header-secondary",
+                variant: "text-sm/normal",
+                children: _.intl.format(_.t.LNsV09, {
+                    policyLink: "https://discord.com/safety/360043709612-our-policies",
+                }),
+            }),
+        ],
     });
 }
 function p(e) {
     let { guild: n, transitionState: t, onClose: i } = e,
-        a = ''.concat(_.intl.string(_.t.BayiAg), '\u2014').concat(null != n ? n.name : '??');
+        a = "".concat(_.intl.string(_.t.BayiAg), "\u2014").concat(null != n ? n.name : "??");
     return (0, o.jsxs)(r.Y0X, {
         transitionState: t,
         size: r.CgR.SMALL,
-        'aria-label': a,
-        parentComponent: 'PrivacySettings',
+        "aria-label": a,
+        parentComponent: "PrivacySettings",
         children: [
             (0, o.jsx)(r.xBx, {
                 children: (0, o.jsx)(r.X6q, {
-                    variant: 'heading-lg/semibold',
-                    children: a
-                })
+                    variant: "heading-lg/semibold",
+                    children: a,
+                }),
             }),
             (0, o.jsx)(r.hzk, {
                 className: u.content,
-                children: (0, o.jsx)(f, { guildId: n.id })
+                children: (0, o.jsx)(f, { guildId: n.id }),
             }),
             (0, o.jsx)(r.mzw, {
                 children: (0, o.jsx)(r.zxk, {
-                    variant: 'primary',
+                    variant: "primary",
                     text: _.intl.string(_.t.i4jeWV),
-                    onClick: () => i()
-                })
-            })
-        ]
+                    onClick: () => i(),
+                }),
+            }),
+        ],
     });
 }

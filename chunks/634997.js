@@ -1,4 +1,4 @@
-(r.d(t, { default: () => h }), r(388685), r(953529));
+r.d(t, { default: () => h }), r(388685), r(953529);
 var n = r(255367),
     o = r(73800),
     i = r(772848),
@@ -37,11 +37,11 @@ let h = function (e) {
                 null != e &&
                     ((I.current = !0),
                     p.Z.maybeOpenAgeVerificationUserFeedback({
-                        location: 'age_verification_get_started_modal',
-                        visibleContent: e
+                        location: "age_verification_get_started_modal",
+                        visibleContent: e,
                     }));
             },
-            []
+            [],
         ),
         o.useEffect(() => {
             (0, d.lA)(k, d.d_.PRIMARY, r);
@@ -50,30 +50,33 @@ let h = function (e) {
             transitionState: t,
             onClose: h,
             title: g.intl.string(g.t.JHNunp),
-            subtitle: g.intl.string(g.t['+BLIGh']),
+            subtitle: g.intl.string(g.t["+BLIGh"]),
             actions: [
                 {
                     text: g.intl.string(g.t.SJMnkZ),
                     loading: v,
                     icon: s.Gr1,
-                    iconPosition: 'end',
+                    iconPosition: "end",
                     onClick: async () => {
-                        ((0, d.x3)(k, d.d_.PRIMARY, d.sU.GET_STARTED), A(l.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE), await S());
-                    }
-                }
+                        (0, d.x3)(k, d.d_.PRIMARY, d.sU.GET_STARTED),
+                            A(l.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE),
+                            await S();
+                    },
+                },
             ],
             actionBarInput: (0, n.jsxs)(a.Z, {
                 onClick: () => {
-                    (O.Z.openUrl(b.Z.getArticleURL(_.BhN.TIGGER_PAWTECT_LEARN_MORE)), (0, d.x3)(k, d.d_.PRIMARY, d.sU.LEARN_MORE));
+                    O.Z.openUrl(b.Z.getArticleURL(_.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                        (0, d.x3)(k, d.d_.PRIMARY, d.sU.LEARN_MORE);
                 },
                 className: P.learnMoreButton,
                 children: [
-                    g.intl.string(g.t['aA6q//']),
+                    g.intl.string(g.t["aA6q//"]),
                     (0, n.jsx)(s.Gr1, {
-                        size: 'xs',
-                        color: 'currentColor'
-                    })
-                ]
+                        size: "xs",
+                        color: "currentColor",
+                    }),
+                ],
             }),
             children: [
                 (0, E.uH)(k).map((e, t) => {
@@ -83,23 +86,23 @@ let h = function (e) {
                         {
                             title: r,
                             description: o,
-                            listType: 'numbered',
-                            index: t
+                            listType: "numbered",
+                            index: t,
                         },
-                        t
+                        t,
                     );
                 }),
                 (0, n.jsx)(s.Text, {
-                    variant: 'text-xs/medium',
-                    color: 'text-muted',
+                    variant: "text-xs/medium",
+                    color: "text-muted",
                     className: P.requestContainer,
                     children: g.intl.format(g.t.pJAxgY, {
                         handleOnRequestHook: () => {
-                            (O.Z.openUrl(R.sQ.APPEALS_LINK), (0, d.x3)(k, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST));
-                        }
-                    })
-                })
-            ]
+                            O.Z.openUrl(R.sQ.APPEALS_LINK), (0, d.x3)(k, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST);
+                        },
+                    }),
+                }),
+            ],
         })
     );
 };

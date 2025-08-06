@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,10 +22,21 @@ class o {
             premiumType: i,
             name: a,
             skuId: s,
-            summary: l
+            summary: l,
         });
     }
     constructor(e) {
-        (i(this, 'prices', void 0), i(this, 'type', void 0), i(this, 'premiumType', void 0), i(this, 'name', void 0), i(this, 'skuId', void 0), i(this, 'summary', void 0), (this.prices = e.prices), (this.type = e.type), (this.premiumType = e.premiumType), (this.name = e.name), (this.skuId = e.skuId), (this.summary = e.summary));
+        i(this, "prices", void 0),
+            i(this, "type", void 0),
+            i(this, "premiumType", void 0),
+            i(this, "name", void 0),
+            i(this, "skuId", void 0),
+            i(this, "summary", void 0),
+            (this.prices = e.prices),
+            (this.type = e.type),
+            (this.premiumType = e.premiumType),
+            (this.name = e.name),
+            (this.skuId = e.skuId),
+            (this.summary = e.summary);
     }
 }

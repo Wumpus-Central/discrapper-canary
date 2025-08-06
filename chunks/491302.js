@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(35282), n(539854));
+n.d(t, { Z: () => h }), n(35282), n(539854);
 var i = n(255367),
     r = n(73800),
     l = n(755721),
@@ -22,7 +22,7 @@ function h(e) {
                 : (0, p.ov)({
                       id: t.id,
                       avatar: e,
-                      discriminator: b.fo$
+                      discriminator: b.fo$,
                   });
         }, [t]),
         y = r.useCallback(() => {
@@ -34,24 +34,24 @@ function h(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    ((i = n[t]),
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = i));
-                                }));
+                                            : (e[t] = i);
+                                });
                         }
                         return e;
                     })({}, e)),
@@ -59,19 +59,19 @@ function h(e) {
                         {
                             header: g.intl.formatToPlainString(g.t.gBKqZ2, { name: t.name }),
                             confirmText: g.intl.string(g.t.CMy0Cg),
-                            cancelText: g.intl.string(g.t['ETE/oK']),
+                            cancelText: g.intl.string(g.t["ETE/oK"]),
                             onConfirm: () => {
                                 c.Z.delete(t.guild_id, t.id).catch(() => {
                                     a.Z.show({
                                         title: g.intl.string(g.t.LpbaFR),
-                                        body: g.intl.string(g.t['/4TwKS'])
+                                        body: g.intl.string(g.t["/4TwKS"]),
                                     });
                                 });
                             },
                             children: (0, i.jsx)(o.Text, {
-                                variant: 'text-md/normal',
-                                children: g.intl.string(g.t.zO9jrK)
-                            })
+                                variant: "text-md/normal",
+                                children: g.intl.string(g.t.zO9jrK),
+                            }),
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -85,7 +85,7 @@ function h(e) {
                           })(Object(r)).forEach(function (e) {
                               Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
-                    n)
+                    n),
                 );
             });
         }, [t.guild_id, t.id, t.name]),
@@ -94,33 +94,33 @@ function h(e) {
         null != t.source_guild &&
         (_.push({
             icon: o.MqZ,
-            text: t.source_channel.name
+            text: t.source_channel.name,
         }),
         _.push({
             text: (0, i.jsx)(
-                'span',
+                "span",
                 {
                     className: f.guildSource,
-                    children: g.intl.format(g.t['H/jJ6e'], {
+                    children: g.intl.format(g.t["H/jJ6e"], {
                         guildHook: () =>
                             (0, i.jsx)(
-                                'span',
+                                "span",
                                 {
                                     className: f.sourceName,
-                                    children: t.source_guild.name
+                                    children: t.source_guild.name,
                                 },
-                                t.id
-                            )
-                    })
+                                t.id,
+                            ),
+                    }),
                 },
-                'guild-source'
-            )
+                "guild-source",
+            ),
         }));
     let C = null;
     return (
         x &&
             null != n &&
-            (C = (0, i.jsxs)('div', {
+            (C = (0, i.jsxs)("div", {
                 className: f.body,
                 children: [
                     (0, i.jsx)(o.$i$, { className: f.topDivider }),
@@ -131,7 +131,7 @@ function h(e) {
                                 (0, i.jsxs)(d.Z, {
                                     children: [
                                         (0, i.jsx)(d.Z.Child, {
-                                            basis: '50%',
+                                            basis: "50%",
                                             children: (0, i.jsx)(o.xJW, {
                                                 title: g.intl.string(g.t.I1o5gY),
                                                 children: (0, i.jsx)(o.oil, {
@@ -140,24 +140,24 @@ function h(e) {
                                                         s.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: j.name
-                                                })
-                                            })
+                                                    error: j.name,
+                                                }),
+                                            }),
                                         }),
                                         (0, i.jsx)(d.Z.Child, {
-                                            basis: '50%',
+                                            basis: "50%",
                                             children: (0, i.jsx)(o.xJW, {
-                                                title: g.intl.string(g.t['4TuWfX']),
+                                                title: g.intl.string(g.t["4TuWfX"]),
                                                 children: (0, i.jsx)(o.q4e, {
                                                     value: n.channel_id,
                                                     options: h,
                                                     onChange: (e) => {
                                                         s.Z.updateWebhook({ channelId: e });
-                                                    }
-                                                })
-                                            })
-                                        })
-                                    ]
+                                                    },
+                                                }),
+                                            }),
+                                        }),
+                                    ],
                                 }),
                                 (0, i.jsx)(o.$i$, { className: f.bottomDivider }),
                                 (0, i.jsx)(d.Z, {
@@ -167,13 +167,13 @@ function h(e) {
                                         color: l.zx.Colors.RED,
                                         look: l.zx.Looks.LINK,
                                         className: f.removeButton,
-                                        children: g.intl.string(g.t.CMy0Cg)
-                                    })
-                                })
-                            ]
-                        })
-                    })
-                ]
+                                        children: g.intl.string(g.t.CMy0Cg),
+                                    }),
+                                }),
+                            ],
+                        }),
+                    }),
+                ],
             })),
         (0, i.jsx)(o.Zbd, {
             editable: !0,
@@ -183,7 +183,7 @@ function h(e) {
                 children: [
                     (0, i.jsx)(o.P3F, {
                         className: f.header,
-                        'aria-expanded': x,
+                        "aria-expanded": x,
                         onClick: v,
                         children: (0, i.jsxs)(d.Z, {
                             align: d.Z.Align.CENTER,
@@ -192,19 +192,19 @@ function h(e) {
                                     name: t.name,
                                     imageSrc: O,
                                     detailsClassName: f.__invalid_description,
-                                    details: _
+                                    details: _,
                                 }),
                                 (0, i.jsx)(u.Z, {
                                     className: f.expandIcon,
                                     expanded: x,
-                                    'aria-hidden': !0
-                                })
-                            ]
-                        })
+                                    "aria-hidden": !0,
+                                }),
+                            ],
+                        }),
                     }),
-                    C
-                ]
-            })
+                    C,
+                ],
+            }),
         })
     );
 }

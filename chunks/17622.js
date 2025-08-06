@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(953529));
+n.d(t, { Z: () => u }), n(953529);
 var r = n(255367);
 n(73800);
 var o = n(120356),
@@ -10,29 +10,29 @@ var o = n(120356),
 function u(e) {
     let { powerup: t } = e,
         n = (0, c.Z)(t);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: l.levelContainer,
         children: n.map((e) => {
             let { Icon: t, className: n } = (0, s.t)(e.perkIcon, !1);
             return (0, r.jsxs)(
-                'div',
+                "div",
                 {
                     className: l.perkContainer,
                     children: [
                         (0, r.jsx)(t, {
-                            color: 'currentColor',
-                            className: i()(l.perkIcon, n)
+                            color: "currentColor",
+                            className: i()(l.perkIcon, n),
                         }),
                         (0, r.jsx)(a.xv, {
                             className: l.perkText,
-                            color: 'text-default',
-                            variant: 'text-sm/medium',
-                            children: e.description
-                        })
-                    ]
+                            color: "text-default",
+                            variant: "text-sm/medium",
+                            children: e.description,
+                        }),
+                    ],
                 },
-                'perk-'.concat(e.perkIcon)
+                "perk-".concat(e.perkIcon),
             );
-        })
+        }),
     });
 }

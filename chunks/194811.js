@@ -11,39 +11,39 @@ var i = n(120356),
 function d(e) {
     let { text: t, textId: n, tags: i, platformIcon: d, contextMenu: f } = e,
         { themeType: _ } = (0, l.z)();
-    return (null == t || '' === t) && null == f
+    return (null == t || "" === t) && null == f
         ? null
-        : null == t || '' === t
-          ? (0, r.jsx)('div', {
+        : null == t || "" === t
+          ? (0, r.jsx)("div", {
                 className: o()(u.headerContextMenu, u.absolute),
-                children: f
+                children: f,
             })
-          : (0, r.jsxs)('div', {
+          : (0, r.jsxs)("div", {
                 className: u.header,
                 children: [
                     (0, r.jsxs)(a.Text, {
                         className: u.headerText,
-                        variant: _ === c.lY.SIDEBAR ? 'text-xs/semibold' : 'text-xs/medium',
-                        color: 'header-primary',
+                        variant: _ === c.lY.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
+                        color: "header-primary",
                         id: n,
                         children: [
                             (0, r.jsx)(s.Z, { children: t }),
                             null != d &&
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: u.platformIcon,
                                     style: {
-                                        maskImage: 'url('.concat(d.whiteSVG, ')'),
-                                        WebkitMaskImage: 'url('.concat(d.whiteSVG, ')')
-                                    }
+                                        maskImage: "url(".concat(d.whiteSVG, ")"),
+                                        WebkitMaskImage: "url(".concat(d.whiteSVG, ")"),
+                                    },
                                 }),
-                            i
-                        ]
+                            i,
+                        ],
                     }),
                     null != f &&
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: u.headerContextMenu,
-                            children: f
-                        })
-                ]
+                            children: f,
+                        }),
+                ],
             });
 }

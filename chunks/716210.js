@@ -16,7 +16,7 @@ function m(e) {
             value: n,
             onChange: (e) => a.Z.setSilenceWarning(e),
             hideBorder: t,
-            children: d.intl.string(d.t.jtiiCw)
+            children: d.intl.string(d.t.jtiiCw),
         });
     return (0, i.jsx)(l.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
@@ -24,8 +24,8 @@ function m(e) {
             ? m
             : (0, i.jsx)(s.hjN, {
                   className: u.marginBottom20,
-                  title: d.intl.string(d.t['aP1N/v']),
-                  children: m
-              })
+                  title: d.intl.string(d.t["aP1N/v"]),
+                  children: m,
+              }),
     });
 }

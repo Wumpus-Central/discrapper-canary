@@ -1,8 +1,8 @@
 n(220159)(
     {
-        target: 'Object',
+        target: "Object",
         stat: !0,
-        sham: !n(181794)
+        sham: !n(181794),
     },
-    { create: n(425184) }
+    { create: n(425184) },
 );

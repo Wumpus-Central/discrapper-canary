@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     U4: () => Q,
     cG: () => el,
     kA: () => ec,
-    qR: () => eu
+    qR: () => eu,
 }),
     n(953529),
     n(997841),
     n(388685),
-    n(415506));
+    n(415506);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -55,7 +55,7 @@ function V(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -73,22 +73,22 @@ function H() {
         }).apply(this, arguments);
 }
 function Y(e) {
-    if (null == e) throw TypeError('Cannot destructure ' + e);
+    if (null == e) throw TypeError("Cannot destructure " + e);
     return e;
 }
 function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 V(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -96,11 +96,11 @@ function K(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -122,7 +122,8 @@ function q(e, t) {
         i = X(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -132,15 +133,36 @@ function X(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var Q = (function (e) {
-    return ((e.ICON = 'icon'), (e.ROW = 'row'), (e.NO_BANNER = 'no_banner'), (e.MEDIUM_BANNER = 'medium_banner'), (e.LARGE_BANNER = 'large_banner'), e);
+    return (
+        (e.ICON = "icon"),
+        (e.ROW = "row"),
+        (e.NO_BANNER = "no_banner"),
+        (e.MEDIUM_BANNER = "medium_banner"),
+        (e.LARGE_BANNER = "large_banner"),
+        e
+    );
 })({});
 function J(e) {
     var t;
-    let { application: n, look: i = 'large_banner', onClick: o, imageStyle: a, enableVideoBanner: s = !0, children: l, sectionName: c, resultsPosition: u, sectionOverallPosition: d, tracksImpression: _ = !0, disabled: p = !1, overrideImageUrl: h, showsPromoted: m } = e,
+    let {
+            application: n,
+            look: i = "large_banner",
+            onClick: o,
+            imageStyle: a,
+            enableVideoBanner: s = !0,
+            children: l,
+            sectionName: c,
+            resultsPosition: u,
+            sectionOverallPosition: d,
+            tracksImpression: _ = !0,
+            disabled: p = !1,
+            overrideImageUrl: h,
+            showsPromoted: m,
+        } = e,
         g = null != (t = (0, f.Z)(p)) ? t : p;
     return (0, r.jsx)($, {
         application: n,
@@ -152,11 +174,11 @@ function J(e) {
         look: i,
         sectionOverallPosition: d,
         children:
-            'icon' === i
+            "icon" === i
                 ? (0, r.jsx)(ee, {
                       application: n,
                       imageStyle: a,
-                      children: l
+                      children: l,
                   })
                 : (0, r.jsx)(et, {
                       application: n,
@@ -166,12 +188,23 @@ function J(e) {
                       disableBannerFadeIn: g !== p,
                       overrideImageUrl: h,
                       showsPromoted: m,
-                      children: l
-                  })
+                      children: l,
+                  }),
     });
 }
 function $(e) {
-    let { application: t, onClick: n, children: o, sectionName: s, resultsPosition: l, sectionOverallPosition: d, tracksImpression: f, disabled: _, containerStyle: p, look: h } = e,
+    let {
+            application: t,
+            onClick: n,
+            children: o,
+            sectionName: s,
+            resultsPosition: l,
+            sectionOverallPosition: d,
+            tracksImpression: f,
+            disabled: _,
+            containerStyle: p,
+            look: h,
+        } = e,
         m = i.useCallback(
             (e) => {
                 if ((0, w.BQ)(t)) {
@@ -179,7 +212,7 @@ function $(e) {
                     (0, u.vq)(e, (e) => (0, r.jsx)(M.Z, W({ application: n }, e)));
                 }
             },
-            [t]
+            [t],
         ),
         { name: g, description: E } = i.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: Z }), [t]),
         { trackItemImpressionRef: b } = (0, x.Z)({
@@ -188,36 +221,36 @@ function $(e) {
             sectionName: s,
             sectionPosition: l,
             sectionOverallPosition: d,
-            promotionalLabel: (0, w.dF)(t)
+            promotionalLabel: (0, w.dF)(t),
         }),
         y = i.useMemo(() => {
             let e = _ ? B.containerDisabled : B.container;
             return a()(
                 e,
                 {
-                    [B.containerBorderRadius]: 'row' !== h,
-                    [B.rowContainer]: 'row' === h,
-                    [B.iconCard]: 'icon' === h
+                    [B.containerBorderRadius]: "row" !== h,
+                    [B.rowContainer]: "row" === h,
+                    [B.iconCard]: "icon" === h,
                 },
-                p
+                p,
             );
         }, [p, _, h]);
     return _
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               ref: f ? b : void 0,
               className: y,
-              children: o
+              children: o,
           })
         : (0, r.jsx)(c.P3F, {
               innerRef: f ? b : void 0,
               className: y,
               onClick: n,
               onContextMenu: m,
-              'aria-label': G.intl.formatToPlainString(G.t['zLhr9/'], {
+              "aria-label": G.intl.formatToPlainString(G.t["zLhr9/"], {
                   applicationName: g,
-                  applicationDescription: E
+                  applicationDescription: E,
               }),
-              children: (0, r.jsx)(c.Rny, { children: o })
+              children: (0, r.jsx)(c.Rny, { children: o }),
           });
 }
 function ee(e) {
@@ -229,136 +262,151 @@ function ee(e) {
         children: (e) => {
             var t = H({}, Y(e));
             return (0, r.jsxs)(
-                'div',
+                "div",
                 z(W({ className: a()(B.iconContainer, n) }, t), {
                     children: [
                         (0, r.jsx)(k.Z, {
                             src: l,
                             className: B.iconCard,
-                            'aria-hidden': !0,
-                            rendersPlaceholder: !0
+                            "aria-hidden": !0,
+                            rendersPlaceholder: !0,
                         }),
-                        o
-                    ]
-                })
+                        o,
+                    ],
+                }),
             );
-        }
+        },
     });
 }
 function et(e) {
-    let { application: t, look: n, imageStyle: o, enableVideoBanner: l, disableBannerFadeIn: u, children: f, overrideImageUrl: _, showsPromoted: h } = e,
+    let {
+            application: t,
+            look: n,
+            imageStyle: o,
+            enableVideoBanner: l,
+            disableBannerFadeIn: u,
+            children: f,
+            overrideImageUrl: _,
+            showsPromoted: h,
+        } = e,
         { iconURL: m, name: g, description: E } = i.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: Z }), [t]),
         b = i.useMemo(() => (null == E ? null : (0, L.ae)(E)), [E]),
-        y = (0, I.ZP)(m, ''),
+        y = (0, I.ZP)(m, ""),
         [v, T] = i.useState(!1),
         S = i.useCallback(() => {
             !0 === l && T(!0);
         }, [l]),
         A = h || (0, w.lf)(t),
-        C = 'large_banner' === n || 'medium_banner' === n,
+        C = "large_banner" === n || "medium_banner" === n,
         R = i.useCallback(() => T(!1), []),
-        P = (0, s.e7)([p.Z, N.Z], () => p.Z.inDevModeForApplication(t.id) || N.Z.inTestModeForApplication(t.id), [t.id]),
+        P = (0, s.e7)([p.Z, N.Z], () => p.Z.inDevModeForApplication(t.id) || N.Z.inTestModeForApplication(t.id), [
+            t.id,
+        ]),
         D = (0, w.WA)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             C
-                ? (0, r.jsxs)('div', {
+                ? (0, r.jsxs)("div", {
                       onMouseEnter: S,
                       onFocus: S,
                       onMouseLeave: R,
                       onBlur: R,
                       className: a()(B.bannerImageContainer, {
-                          [B.mediumBanner]: 'medium_banner' === n,
-                          [B.largeBanner]: 'large_banner' === n
+                          [B.mediumBanner]: "medium_banner" === n,
+                          [B.largeBanner]: "large_banner" === n,
                       }),
                       children: [
-                          (0, r.jsx)('span', {
+                          (0, r.jsx)("span", {
                               className: o,
                               children: (0, r.jsx)(ei, {
                                   application: t,
                                   fallbackColor: y,
                                   showVideo: v,
                                   disableFadeIn: u,
-                                  overrideImageUrl: _
-                              })
+                                  overrideImageUrl: _,
+                              }),
                           }),
                           P || A || D !== d.ww.NONE
-                              ? (0, r.jsxs)('div', {
+                              ? (0, r.jsxs)("div", {
                                     className: B.bannerUpperRightContainer,
                                     children: [
                                         A &&
-                                            (0, r.jsx)('div', {
+                                            (0, r.jsx)("div", {
                                                 className: B.promotedLabelWrapperBanner,
                                                 children: (0, r.jsx)(c.X6q, {
-                                                    variant: 'text-xxs/medium',
-                                                    color: 'header-primary',
-                                                    children: G.intl.string(G.t['/eVltr'])
-                                                })
+                                                    variant: "text-xxs/medium",
+                                                    color: "header-primary",
+                                                    children: G.intl.string(G.t["/eVltr"]),
+                                                }),
                                             }),
                                         P && (0, r.jsx)(en, {}),
-                                        D !== d.ww.NONE && (0, r.jsx)(O.Z, { labelType: D })
-                                    ]
+                                        D !== d.ww.NONE && (0, r.jsx)(O.Z, { labelType: D }),
+                                    ],
                                 })
                               : null,
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: B.bannerImageChildContainer,
-                              children: f
-                          })
-                      ]
+                              children: f,
+                          }),
+                      ],
                   })
                 : null,
-            (0, r.jsxs)('div', {
-                className: a()(B.appDetailsContainer, { [B.appDetailsRowContainer]: 'row' === n }),
+            (0, r.jsxs)("div", {
+                className: a()(B.appDetailsContainer, { [B.appDetailsRowContainer]: "row" === n }),
                 children: [
                     (0, r.jsx)(k.Z, {
                         src: m,
-                        className: a()(B.icon, { [B.rowIcon]: 'row' === n }),
-                        'aria-hidden': !0,
-                        rendersPlaceholder: !0
+                        className: a()(B.icon, { [B.rowIcon]: "row" === n }),
+                        "aria-hidden": !0,
+                        rendersPlaceholder: !0,
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: B.appDetails,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: B.appDetailsHeaderContainer,
                                 children: [
                                     (0, r.jsx)(c.X6q, {
-                                        variant: 'heading-md/semibold',
-                                        color: 'header-primary',
+                                        variant: "heading-md/semibold",
+                                        color: "header-primary",
                                         lineClamp: 1,
-                                        children: g
+                                        children: g,
                                     }),
                                     !C && A
-                                        ? (0, r.jsx)('div', {
+                                        ? (0, r.jsx)("div", {
                                               className: B.promotedLabelWrapperNonBanner,
                                               children: (0, r.jsx)(c.Text, {
-                                                  variant: 'text-xxs/semibold',
-                                                  color: 'text-muted',
-                                                  children: G.intl.string(G.t['/eVltr'])
-                                              })
+                                                  variant: "text-xxs/semibold",
+                                                  color: "text-muted",
+                                                  children: G.intl.string(G.t["/eVltr"]),
+                                              }),
                                           })
                                         : null,
-                                    (0, r.jsx)(er, { application: t })
-                                ]
+                                    (0, r.jsx)(er, { application: t }),
+                                ],
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-secondary',
+                                variant: "text-sm/normal",
+                                color: "text-secondary",
                                 lineClamp: 1,
-                                children: b
-                            })
-                        ]
+                                children: b,
+                            }),
+                        ],
                     }),
-                    'row' === n ? (0, r.jsx)('div', { className: B.rowDivider }) : null
-                ]
-            })
-        ]
+                    "row" === n ? (0, r.jsx)("div", { className: B.rowDivider }) : null,
+                ],
+            }),
+        ],
     });
 }
 function en() {
     return (0, r.jsx)(c.ua7, {
         text: G.intl.string(G.t.CfTySU),
-        children: (e) => (0, r.jsx)('div', z(W({ className: B.devShelfBadge }, e), { children: (0, r.jsx)(C.Z, { className: B.devShelfIcon }) }))
+        children: (e) =>
+            (0, r.jsx)(
+                "div",
+                z(W({ className: B.devShelfBadge }, e), { children: (0, r.jsx)(C.Z, { className: B.devShelfIcon }) }),
+            ),
     });
 }
 function er(e) {
@@ -374,43 +422,43 @@ function er(e) {
               text: o,
               children: (e) =>
                   (0, r.jsx)(
-                      'img',
+                      "img",
                       W(
                           {
                               className: B.staffBadge,
                               alt: o,
-                              src: F
+                              src: F,
                           },
-                          e
-                      )
-                  )
+                          e,
+                      ),
+                  ),
           });
 }
 function ei(e) {
     let { application: t, fallbackColor: n, showVideo: i, disableFadeIn: o, overrideImageUrl: s } = e;
     if (null != s)
-        return (0, r.jsx)('img', {
+        return (0, r.jsx)("img", {
             src: s,
-            alt: (0, w.BQ)(t) ? t.name : '',
-            className: a()(B.bannerImage, { [B.disableFadeIn]: o })
+            alt: (0, w.BQ)(t) ? t.name : "",
+            className: a()(B.bannerImage, { [B.disableFadeIn]: o }),
         });
     if ((0, w.BQ)(t)) {
         if ((0, w.ye)(t))
             return (0, r.jsx)(eo, {
                 application: t,
                 showVideo: i,
-                disableFadeIn: o
+                disableFadeIn: o,
             });
         if (null != t.bot)
             return (0, r.jsx)(ea, {
                 bot: t.bot,
                 fallbackColor: n,
-                disableFadeIn: o
+                disableFadeIn: o,
             });
     }
     return (0, r.jsx)(es, {
         fallbackColor: n,
-        disableFadeIn: o
+        disableFadeIn: o,
     });
 }
 function eo(e) {
@@ -418,11 +466,13 @@ function eo(e) {
         s = (0, b.Z)({
             applicationId: t.id,
             size: 600,
-            names: ['embedded_cover']
+            names: ["embedded_cover"],
         }),
         l = i.useMemo(() => {
             let e = (0, w.yJ)(t);
-            return null != e && null != e.activity_preview_video_asset_id ? (0, g.Z)(t.id, e.activity_preview_video_asset_id) : null;
+            return null != e && null != e.activity_preview_video_asset_id
+                ? (0, g.Z)(t.id, e.activity_preview_video_asset_id)
+                : null;
         }, [t]),
         [c, u] = i.useState(n);
     i.useEffect(() => {
@@ -432,9 +482,9 @@ function eo(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != l && c
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: B.activityVideoContainer,
-                      children: (0, r.jsx)('div', {
+                      children: (0, r.jsx)("div", {
                           className: a()(B.activityVideo, { [B.videoFadeOut]: !n }),
                           onAnimationEnd: () => (n ? null : u(!1)),
                           children: (0, r.jsx)(T.Z, {
@@ -442,18 +492,18 @@ function eo(e) {
                               mediaLayoutType: U.hV.MOSAIC,
                               loop: !0,
                               autoPlay: !0,
-                              muted: !0
-                          })
-                      })
+                              muted: !0,
+                          }),
+                      }),
                   })
                 : null,
             (0, r.jsx)(y.Z, {
                 imageBackground: s,
                 applicationName: t.name,
                 imageClassName: d,
-                imageNotFoundClassName: d
-            })
-        ]
+                imageNotFoundClassName: d,
+            }),
+        ],
     });
 }
 function ea(e) {
@@ -463,24 +513,24 @@ function ea(e) {
             id: t.id,
             banner: t.banner,
             canAnimate: !o,
-            size: 600
+            size: 600,
         });
     return null == l
         ? (0, r.jsx)(es, {
               fallbackColor: n,
-              disableFadeIn: i
+              disableFadeIn: i,
           })
-        : (0, r.jsx)('img', {
+        : (0, r.jsx)("img", {
               src: l,
-              alt: '',
-              className: a()(B.bannerImage, { [B.disableFadeIn]: i })
+              alt: "",
+              className: a()(B.bannerImage, { [B.disableFadeIn]: i }),
           });
 }
 function es(e) {
     let { fallbackColor: t, disableFadeIn: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(B.bannerImage, { [B.disableFadeIn]: n }),
-        style: { backgroundColor: t }
+        style: { backgroundColor: t },
     });
 }
 function el(e) {
@@ -490,7 +540,7 @@ function el(e) {
     return {
         onClickAppCard: i.useCallback(
             (e) => {
-                (e.stopPropagation(),
+                e.stopPropagation(),
                     (0, v.yw)(j.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                         application_id: t.id,
                         section_name: n,
@@ -499,17 +549,17 @@ function el(e) {
                         promotional_label: (0, w.dF)(t),
                         location: s,
                         query: o,
-                        num_friends_who_play: c.length
+                        num_friends_who_play: c.length,
                     }),
                     l({
                         type: D.gc.APPLICATION,
                         application: t,
                         installOnDemand: a,
-                        sectionName: n
-                    }));
+                        sectionName: n,
+                    });
             },
-            [t, a, s, l, o, r, n, c]
-        )
+            [t, a, s, l, o, r, n, c],
+        ),
     };
 }
 function ec(e) {
@@ -518,23 +568,26 @@ function ec(e) {
 }
 function eu(e) {
     var { context: t, application: n, location: o, sectionName: a, isOneClickCTA: u, fetchesApplication: d = !0 } = e,
-        f = q(e, ['context', 'application', 'location', 'sectionName', 'isOneClickCTA', 'fetchesApplication']);
-    if (!(0, w.BQ)(n)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
+        f = q(e, ["context", "application", "location", "sectionName", "isOneClickCTA", "fetchesApplication"]);
+    if (!(0, w.BQ)(n)) throw Error("PerformActivityActionAppCard was passed the Built-in App, which is not supported.");
     let _ = i.useId(),
-        [p, m] = (0, s.Wu)([h.ZP], () => [h.ZP.isLaunchingActivity(), h.ZP.getLaunchState(n.id, 'channel' === t.type ? t.channel.id : void 0)]),
+        [p, m] = (0, s.Wu)([h.ZP], () => [
+            h.ZP.isLaunchingActivity(),
+            h.ZP.getLaunchState(n.id, "channel" === t.type ? t.channel.id : void 0),
+        ]),
         g = null != m && m.isLaunching && m.componentId === _,
         {
             onActivityItemSelected: b,
             activityAction: y,
             buttonColor: O,
-            buttonText: v
+            buttonText: v,
         } = (0, L.P7)({
             context: t,
             application: n,
             location: o,
             sectionName: a,
             launchingComponentId: _,
-            fetchesApplication: d
+            fetchesApplication: d,
         });
     return y === E.JS.START || y === E.JS.JOIN
         ? u
@@ -549,10 +602,10 @@ function eu(e) {
                       children: g
                           ? (0, r.jsx)(c.$jN, {
                                 type: c.$jN.Type.PULSING_ELLIPSIS,
-                                className: B.spinner
+                                className: B.spinner,
                             })
-                          : null
-                  })
+                          : null,
+                  }),
               )
             : (0, r.jsx)(
                   ec,
@@ -560,8 +613,8 @@ function eu(e) {
                       context: t,
                       sectionName: a,
                       application: n,
-                      location: o
-                  })
+                      location: o,
+                  }),
               )
         : (0, r.jsx)(
               J,
@@ -574,23 +627,23 @@ function eu(e) {
                   imageStyle: B.darkenImage,
                   enableVideoBanner: !1,
                   disabled: !0,
-                  children: (0, r.jsx)('div', {
+                  children: (0, r.jsx)("div", {
                       className: B.voiceLauncherAppCardContainer,
                       children: (0, r.jsx)(l.zx, {
                           className: B.voiceLauncherAppCardButton,
-                          type: 'submit',
+                          type: "submit",
                           size: l.zx.Sizes.LARGE,
                           color: O,
                           disabled: p,
                           onClick: b,
-                          'aria-label': G.intl.formatToPlainString(G.t['XjP/R0'], {
+                          "aria-label": G.intl.formatToPlainString(G.t["XjP/R0"], {
                               buttonText: v,
-                              applicationName: n.name
+                              applicationName: n.name,
                           }),
                           submitting: g,
-                          children: v
-                      })
-                  })
-              })
+                          children: v,
+                      }),
+                  }),
+              }),
           );
 }

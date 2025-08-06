@@ -13,7 +13,11 @@ var i,
     g = n(944486),
     h = n(55589),
     f = n(981631);
-let b = (null != (l = null == (a = window) || null == (s = a.location) ? void 0 : s.pathname) ? l : '').startsWith(f.Z5c.ACTIVITIES) ? f.Z5c.ACTIVITIES : null;
+let b = (null != (l = null == (a = window) || null == (s = a.location) ? void 0 : s.pathname) ? l : "").startsWith(
+    f.Z5c.ACTIVITIES,
+)
+    ? f.Z5c.ACTIVITIES
+    : null;
 function x(e) {
     let { link: t } = e;
     if (b === t) return !1;
@@ -27,15 +31,15 @@ class _ extends (o = c.ZP.Store) {
         return null != b ? b : m.Z.fallbackRoute;
     }
 }
-((r = 'AppViewStore'),
-    (i = 'displayName') in _
+(r = "AppViewStore"),
+    (i = "displayName") in _
         ? Object.defineProperty(_, i, {
               value: r,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (_[i] = r));
+        : (_[i] = r);
 let j = new _(d.Z, {
     OVERLAY_INITIALIZE: function () {
         let e = h.Z.getPrivateChannelIds(),
@@ -47,7 +51,7 @@ let j = new _(d.Z, {
         let { location: t } = e;
         x({
             link: t.pathname,
-            type: 'APP_VIEW_SET_HOME_LINK'
+            type: "APP_VIEW_SET_HOME_LINK",
         });
     },
     APPLICATION_STORE_RESET_NAVIGATION: function () {
@@ -58,12 +62,12 @@ let j = new _(d.Z, {
         let { guildId: t, channelId: n } = e;
         if (null == t && null != n) {
             let e = f.Z5c.CHANNEL(f.ME, n);
-            if (e !== b) return ((b = e), !0);
+            if (e !== b) return (b = e), !0;
         }
         return !1;
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
         null == t.guild_id && null != t.id && null != b && b === f.Z5c.CHANNEL(f.ME, t.id) && (b = null);
-    }
+    },
 });

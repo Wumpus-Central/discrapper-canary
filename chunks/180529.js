@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var i,
     r = n(255367),
     o = n(73800),
@@ -15,13 +15,13 @@ let u = null != (i = window.ResizeObserver) ? i : a.d,
                         let [t] = e;
                         return n(t.contentRect.height);
                     }),
-                []
+                [],
             );
         return (
             o.useLayoutEffect(() => (null != e.current && i.observe(e.current), () => i.disconnect()), [i]),
             {
                 ref: e,
-                height: t
+                height: t,
             }
         );
     };
@@ -31,38 +31,38 @@ function g(e) {
         g = (0, l.q_F)({
             from: {
                 height: 0,
-                paddingBottom: '0px',
-                marginTop: '0px'
+                paddingBottom: "0px",
+                marginTop: "0px",
             },
             to: {
                 height: t ? u : 0,
-                paddingBottom: t ? ''.concat(o, 'px') : '0px',
-                marginTop: t ? ''.concat(i, 'px') : '0px'
+                paddingBottom: t ? "".concat(o, "px") : "0px",
+                marginTop: t ? "".concat(i, "px") : "0px",
             },
             config: {
                 tension: 170,
-                friction: 26
-            }
+                friction: 26,
+            },
         }),
         c = (0, l.q_F)({
             from: { opacity: 0 },
             to: { opacity: +!!t },
             config: {
                 duration: 200,
-                easing: t ? (e) => e ** 4 : (e) => e * (2 - e)
-            }
+                easing: t ? (e) => e ** 4 : (e) => e * (2 - e),
+            },
         });
     return (0, r.jsx)(s.animated.div, {
         style: {
-            overflow: 'hidden',
+            overflow: "hidden",
             height: g.height,
             paddingBottom: g.paddingBottom,
-            marginTop: g.marginTop
+            marginTop: g.marginTop,
         },
         children: (0, r.jsx)(s.animated.div, {
             style: { opacity: c.opacity },
             ref: a,
-            children: n
-        })
+            children: n,
+        }),
     });
 }

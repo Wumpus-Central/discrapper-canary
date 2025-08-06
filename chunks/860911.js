@@ -5,7 +5,7 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -13,30 +13,30 @@ function r(e, t, n) {
 }
 function i(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
-        r = null != window.GLOBAL_ENV.WEBAPP_ENDPOINT ? window.GLOBAL_ENV.WEBAPP_ENDPOINT : '',
-        i = null != e ? '?redirect_to='.concat(encodeURIComponent(e)) : '';
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
+        r = null != window.GLOBAL_ENV.WEBAPP_ENDPOINT ? window.GLOBAL_ENV.WEBAPP_ENDPOINT : "",
+        i = null != e ? "?redirect_to=".concat(encodeURIComponent(e)) : "";
     return (
-        0 !== n.length && (n = 0 === i.length ? '?'.concat(n) : '&'.concat(n)),
-        ''
-            .concat(t ? r : '', '/login')
+        0 !== n.length && (n = 0 === i.length ? "?".concat(n) : "&".concat(n)),
+        ""
+            .concat(t ? r : "", "/login")
             .concat(i)
             .concat(n)
     );
 }
-(n.d(t, {
+n.d(t, {
     Ft: () => s,
     Ui: () => i,
-    Zn: () => o
+    Zn: () => o,
 }),
     n(35282),
-    n(388685));
+    n(388685);
 class o {
     toString() {
         return this.value;
     }
     constructor(e) {
-        (r(this, 'value', void 0), (this.value = e));
+        r(this, "value", void 0), (this.value = e);
     }
 }
 function a(e, t) {
@@ -48,16 +48,16 @@ function a(e, t) {
               : null == t
                 ? encodeURIComponent(e)
                 : String(e)
-                      .split('')
+                      .split("")
                       .map((e) => (null != t && t.includes(e) ? e : encodeURIComponent(e)))
-                      .join('')
+                      .join(""),
     );
 }
 function s(e, t) {
     let n = {};
     for (let r of Object.keys(e)) {
         let i = e[r];
-        if ('function' != typeof i) {
+        if ("function" != typeof i) {
             n[r] = i;
             continue;
         }

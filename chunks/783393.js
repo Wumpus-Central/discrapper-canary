@@ -1,4 +1,4 @@
-(n.d(t, { E: () => o }), n(388685));
+n.d(t, { E: () => o }), n(388685);
 var r = n(442837),
     i = n(526429),
     l = n(128449),
@@ -9,6 +9,6 @@ function o(e) {
         (function (e) {
             let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.Z];
             return e === l.Hk ? a.intl.string(a.t.Omu0fX) : t.getCategoryName(e);
-        })(t, [i.Z])
+        })(t, [i.Z]),
     );
 }

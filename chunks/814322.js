@@ -24,19 +24,19 @@ var r = n(255367),
 function _() {
     let e = Math.floor((0, i.e7)([p.Z], () => p.Z.currentPoints)),
         t = e.toString().length,
-        n = '0'.repeat(Math.max(0, j.eg - t));
-    return (0, r.jsxs)('div', {
+        n = "0".repeat(Math.max(0, j.eg - t));
+    return (0, r.jsxs)("div", {
         className: P.points,
         children: [
-            (0, r.jsx)('span', {
+            (0, r.jsx)("span", {
                 className: P.pointsPadding,
-                children: n
+                children: n,
             }),
-            (0, r.jsx)('span', {
+            (0, r.jsx)("span", {
                 className: P.pointsValue,
-                children: e
-            })
-        ]
+                children: e,
+            }),
+        ],
     });
 }
 function C(e) {
@@ -54,15 +54,15 @@ function C(e) {
                           isPaused: o,
                           width: n,
                           height: s,
-                          windowKey: a
+                          windowKey: a,
                       },
-                      e
+                      e,
                   );
-              })
+              }),
           });
 }
 function Z() {
-    return ((0, m.f)(), (0, g.Z)(), null);
+    return (0, m.f)(), (0, g.Z)(), null;
 }
 function w(e) {
     let { className: t, windowKey: n } = e,
@@ -75,36 +75,36 @@ function w(e) {
         });
     return (
         (0, s.useEffect)(() => {
-            d.default.track(N.rMx.CLICKER_GAME_LAUNCHED, { launch_type: E ? 'CONTINUE' : 'NEW' });
+            d.default.track(N.rMx.CLICKER_GAME_LAUNCHED, { launch_type: E ? "CONTINUE" : "NEW" });
         }, []),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             ref: o,
             className: a()(t, P.container),
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: P.fullscreenItems,
                     children: (0, r.jsx)(C, {
                         items: b.nw,
                         width: m,
                         height: g,
                         isPaused: S,
-                        windowKey: n
-                    })
+                        windowKey: n,
+                    }),
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: P.aboveGround,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: P.fullscreenItems,
                             children: (0, r.jsx)(C, {
                                 items: b.uK,
                                 width: m,
                                 height: g,
                                 isPaused: S,
-                                windowKey: n
-                            })
+                                windowKey: n,
+                            }),
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: P.buttonAndPoints,
                             children: [
                                 (0, r.jsx)(C, {
@@ -112,22 +112,22 @@ function w(e) {
                                     width: m,
                                     height: g,
                                     isPaused: S,
-                                    windowKey: n
+                                    windowKey: n,
                                 }),
                                 (0, r.jsx)(_, {}),
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: P.pointsItems,
                                     children: (0, r.jsx)(C, {
                                         items: b.ci,
                                         width: m,
                                         height: g,
                                         isPaused: S,
-                                        windowKey: n
-                                    })
-                                })
-                            ]
+                                        windowKey: n,
+                                    }),
+                                }),
+                            ],
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: P.fullscreenItems,
                             ref: j,
                             children: (0, r.jsx)(C, {
@@ -135,13 +135,13 @@ function w(e) {
                                 width: m,
                                 height: w,
                                 isPaused: S,
-                                windowKey: n
-                            })
-                        })
-                    ]
+                                windowKey: n,
+                            }),
+                        }),
+                    ],
                 }),
-                (0, r.jsx)('div', { className: P.groundLine }),
-                (0, r.jsxs)('div', {
+                (0, r.jsx)("div", { className: P.groundLine }),
+                (0, r.jsxs)("div", {
                     className: P.mainInteractables,
                     children: [
                         (0, r.jsx)(x.Z, { className: P.primaryShop }),
@@ -149,19 +149,19 @@ function w(e) {
                             className: P.toolbar,
                             children: [
                                 (0, r.jsx)(v.Z, {}),
-                                (0, r.jsx)('div', { className: P.toolbarSpacer }),
+                                (0, r.jsx)("div", { className: P.toolbarSpacer }),
                                 (0, r.jsx)(C, {
                                     items: b.WY,
                                     width: m,
                                     height: g,
                                     isPaused: S,
-                                    windowKey: n
-                                })
-                            ]
-                        })
-                    ]
+                                    windowKey: n,
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: P.fullscreenItems,
                     children: [
                         (0, r.jsx)(C, {
@@ -169,14 +169,14 @@ function w(e) {
                             width: m,
                             height: g,
                             isPaused: S,
-                            windowKey: n
+                            windowKey: n,
                         }),
-                        (0, r.jsx)(O.Z, {})
-                    ]
+                        (0, r.jsx)(O.Z, {}),
+                    ],
                 }),
                 (0, r.jsx)(Z, {}),
-                (0, r.jsx)(h.Z, {})
-            ]
+                (0, r.jsx)(h.Z, {}),
+            ],
         })
     );
 }

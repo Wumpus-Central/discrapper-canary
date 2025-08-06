@@ -7,19 +7,19 @@ let a = () =>
         .get({
             url: s.ANM.GUILD_AFFINITIES,
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
         .then(
             (e) => {
                 let {
-                    body: { guild_affinities: t }
+                    body: { guild_affinities: t },
                 } = e;
                 r.Z.dispatch({
-                    type: 'LOAD_GUILD_AFFINITIES_SUCCESS',
-                    guildAffinities: t
+                    type: "LOAD_GUILD_AFFINITIES_SUCCESS",
+                    guildAffinities: t,
                 });
             },
             () => {
-                r.Z.dispatch({ type: 'LOAD_GUILD_AFFINITIES_FAILURE' });
-            }
+                r.Z.dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
+            },
         );

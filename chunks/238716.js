@@ -1,4 +1,4 @@
-(t.d(n, { default: () => j }), t(388685), t(953529));
+t.d(n, { default: () => j }), t(388685), t(953529);
 var i = t(255367),
     s = t(73800),
     r = t(442837),
@@ -18,15 +18,15 @@ function j(e) {
         N = (0, r.e7)([x.Z], () => x.Z.getChannel(n)),
         g = (0, o.ZP)(N),
         C = u.Z.getNickname(n),
-        [y, E] = s.useState(null != C ? C : '');
-    return (0, i.jsx)('form', {
+        [y, E] = s.useState(null != C ? C : "");
+    return (0, i.jsx)("form", {
         onSubmit: function (e) {
-            (e.preventDefault(), (0, h.UT)(n, y), t());
+            e.preventDefault(), (0, h.UT)(n, y), t();
         },
         children: (0, i.jsxs)(l.Y0X, {
             transitionState: j,
-            'aria-labelledby': v,
-            parentComponent: 'FavoritesSetNicknameModal',
+            "aria-labelledby": v,
+            parentComponent: "FavoritesSetNicknameModal",
             children: [
                 (0, i.jsxs)(l.xBx, {
                     separator: !0,
@@ -34,11 +34,11 @@ function j(e) {
                     children: [
                         (0, i.jsx)(l.X6q, {
                             id: v,
-                            variant: 'heading-lg/semibold',
-                            children: k
+                            variant: "heading-lg/semibold",
+                            children: k,
                         }),
-                        (0, i.jsx)(l.olH, { onClick: t })
-                    ]
+                        (0, i.jsx)(l.olH, { onClick: t }),
+                    ],
                 }),
                 (0, i.jsxs)(l.hzk, {
                     children: [
@@ -50,8 +50,8 @@ function j(e) {
                                 onChange: E,
                                 placeholder: null != g ? g : void 0,
                                 maxLength: 100,
-                                autoFocus: !0
-                            })
+                                autoFocus: !0,
+                            }),
                         }),
                         z && null != C
                             ? (0, i.jsx)(a.zx, {
@@ -59,38 +59,38 @@ function j(e) {
                                   color: a.zx.Colors.LINK,
                                   size: a.zx.Sizes.NONE,
                                   onClick: function () {
-                                      ((0, h.UT)(n, null), t());
+                                      (0, h.UT)(n, null), t();
                                   },
                                   className: p.reset,
-                                  children: m.intl.string(m.t.aE02R0)
+                                  children: m.intl.string(m.t.aE02R0),
                               })
                             : null,
                         (0, i.jsx)(l.Text, {
                             className: p.description,
-                            variant: 'text-sm/normal',
-                            color: 'header-secondary',
-                            children: m.intl.string(m.t['2vyz+P'])
-                        })
-                    ]
+                            variant: "text-sm/normal",
+                            color: "header-secondary",
+                            children: m.intl.string(m.t["2vyz+P"]),
+                        }),
+                    ],
                 }),
                 (0, i.jsx)(l.mzw, {
                     children: (0, i.jsxs)(l.hE2, {
-                        direction: 'horizontal-reverse',
+                        direction: "horizontal-reverse",
                         children: [
                             (0, i.jsx)(l.zxk, {
-                                variant: 'primary',
+                                variant: "primary",
                                 text: k,
-                                type: 'submit'
+                                type: "submit",
                             }),
                             (0, i.jsx)(l.zxk, {
-                                variant: 'secondary',
-                                text: m.intl.string(m.t['ETE/oK']),
-                                onClick: t
-                            })
-                        ]
-                    })
-                })
-            ]
-        })
+                                variant: "secondary",
+                                text: m.intl.string(m.t["ETE/oK"]),
+                                onClick: t,
+                            }),
+                        ],
+                    }),
+                }),
+            ],
+        }),
     });
 }

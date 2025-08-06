@@ -4,7 +4,7 @@ function r(e) {
     return null != e
         ? {
               id: e.id,
-              name: null != (t = e.name) ? t : ''
+              name: null != (t = e.name) ? t : "",
           }
         : null;
 }

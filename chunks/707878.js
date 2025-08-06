@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -15,22 +15,23 @@ let g = Object.values(u.wF).map((e) => 100 * e),
     m = (0, a.hQ)();
 class y extends r.PureComponent {
     handleUpdateBackgroundOpacity(e) {
-        (s.Z.setTextWidgetOpacity((0, d.Z)(e / 100)), s.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e }));
+        s.Z.setTextWidgetOpacity((0, d.Z)(e / 100)),
+            s.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
     handlePreviewBackgroundOpacity(e) {
         s.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
     }
     render() {
-        return (0, i.jsxs)('div', {
+        return (0, i.jsxs)("div", {
             className: f.container,
             children: [
                 (0, i.jsx)(l.vwX, {
                     id: m,
                     tag: l.RB0.H5,
                     className: f.title,
-                    children: p.intl.string(p.t.OVovCQ)
+                    children: p.intl.string(p.t.OVovCQ),
                 }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: f.sliderContainer,
                     children: (0, i.jsx)(l.iRW, {
                         mini: !0,
@@ -45,25 +46,25 @@ class y extends r.PureComponent {
                         onMarkerRender: h.dG4,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        'aria-labelledby': m
-                    })
-                })
-            ]
+                        "aria-labelledby": m,
+                    }),
+                }),
+            ],
         });
     }
     constructor(...e) {
         var t, n;
-        (super(...e),
-            (t = 'initialValue'),
+        super(...e),
+            (t = "initialValue"),
             (n = 100 * this.props.opacity),
             t in this
                 ? Object.defineProperty(this, t, {
                       value: n,
                       enumerable: !0,
                       configurable: !0,
-                      writable: !0
+                      writable: !0,
                   })
-                : (this[t] = n));
+                : (this[t] = n);
     }
 }
 let O = o.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);

@@ -17,47 +17,47 @@ function d(e) {
     let { guild: t, onSelect: r } = e,
         d = (0, o.e7)([a.Z], () => null != t && a.Z.can(u.Plq.ADMINISTRATOR, t));
     return (0, n.jsx)(c.v2r, {
-        navId: 'guild-shop-context',
-        'aria-label': f.intl.string(f.t.g3KvYG),
+        navId: "guild-shop-context",
+        "aria-label": f.intl.string(f.t.g3KvYG),
         onClose: i.Zy,
         onSelect: r,
         children: (0, n.jsx)(c.kSQ, {
             children: (0, n.jsx)(c.sNh, {
-                id: 'role-subscription-copy-link',
+                id: "role-subscription-copy-link",
                 label: f.intl.string(f.t.WqhZsr),
                 action: () => {
                     var e, r;
-                    (s.default.track(
+                    s.default.track(
                         u.rMx.GUILD_SHOP_COPY_LINK,
                         ((e = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(r);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (n = n.concat(
                                         Object.getOwnPropertySymbols(r).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     n.forEach(function (t) {
                                         var n;
-                                        ((n = r[t]),
+                                        (n = r[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: n,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = n));
-                                    }));
+                                                : (e[t] = n);
+                                    });
                             }
                             return e;
                         })({}, (0, l.hH)(t.id))),
                         (r = r =
                             {
                                 is_admin_or_owner: d,
-                                copy_location: b.xv.CHANNEL_ROW_CONTEXT_MENU
+                                copy_location: b.xv.CHANNEL_ROW_CONTEXT_MENU,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -71,11 +71,11 @@ function d(e) {
                               })(Object(r)).forEach(function (t) {
                                   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                               }),
-                        e)
+                        e),
                     ),
-                        (0, O.JG)((0, p.wR)(t.id, y.oC.GUILD_SHOP)));
-                }
-            })
-        })
+                        (0, O.JG)((0, p.wR)(t.id, y.oC.GUILD_SHOP));
+                },
+            }),
+        }),
     });
 }

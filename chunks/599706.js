@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(539854));
+n.d(t, { Z: () => f }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -13,20 +13,20 @@ let h = (e) => {
         let { member: t, empty: n, guildId: l } = e,
             a = i.useRef(null);
         return n
-            ? (0, r.jsx)('div', { className: p.partyMemberEmpty })
+            ? (0, r.jsx)("div", { className: p.partyMemberEmpty })
             : null == t
-              ? (0, r.jsx)('div', {
+              ? (0, r.jsx)("div", {
                     className: p.partyMemberUnknown,
-                    children: (0, r.jsx)(u.Z, { className: p.partyMemberUnknownIcon })
+                    children: (0, r.jsx)(u.Z, { className: p.partyMemberUnknownIcon }),
                 })
-              : (0, r.jsx)('div', {
+              : (0, r.jsx)("div", {
                     className: p.partyMemberKnown,
                     children: (0, r.jsx)(c.Z, {
                         targetElementRef: a,
                         userId: t.id,
                         guildId: l,
                         newAnalyticsLocations: [s.Z.AVATAR],
-                        position: 'left',
+                        position: "left",
                         clickTrap: !0,
                         children: (e) => {
                             var n, i;
@@ -36,24 +36,24 @@ let h = (e) => {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                ((r = n[t]),
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = r));
-                                            }));
+                                                        : (e[t] = r);
+                                            });
                                     }
                                     return e;
                                 })({}, e)),
@@ -61,9 +61,9 @@ let h = (e) => {
                                     {
                                         ref: a,
                                         src: t.getAvatarURL(l, 24),
-                                        'aria-label': t.username,
+                                        "aria-label": t.username,
                                         size: o.EFr.SIZE_24,
-                                        className: p.partyMember
+                                        className: p.partyMember,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -77,10 +77,10 @@ let h = (e) => {
                                       })(Object(i)).forEach(function (e) {
                                           Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                       }),
-                                n)
+                                n),
                             );
-                        }
-                    })
+                        },
+                    }),
                 });
     },
     f = (e) => {
@@ -95,13 +95,13 @@ let h = (e) => {
                     h,
                     {
                         member: e,
-                        guildId: o
+                        guildId: o,
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             )
             .value();
-        for (let e = 0; e < s && f.length < l; e++) f.push((0, r.jsx)(h, { guildId: o }, 'unknown-member-'.concat(e)));
+        for (let e = 0; e < s && f.length < l; e++) f.push((0, r.jsx)(h, { guildId: o }, "unknown-member-".concat(e)));
         let g = c - u - s;
         for (let e = 0; e < g && f.length < l; e++)
             f.push(
@@ -109,10 +109,10 @@ let h = (e) => {
                     h,
                     {
                         empty: !0,
-                        guildId: o
+                        guildId: o,
                     },
-                    'empty-member-'.concat(e)
-                )
+                    "empty-member-".concat(e),
+                ),
             );
         let m = Math.max(Math.min(c - f.length, 99), 0);
         if (1 === m) {
@@ -122,25 +122,25 @@ let h = (e) => {
                     h,
                     {
                         member: e,
-                        guildId: o
+                        guildId: o,
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             );
         }
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: p.wrapper,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: p.partyMembers,
                 children: [
                     f,
                     m > 1
-                        ? (0, r.jsxs)('div', {
+                        ? (0, r.jsxs)("div", {
                               className: p.partyMemberOverflow,
-                              children: ['+', m]
+                              children: ["+", m],
                           })
-                        : null
-                ]
-            })
+                        : null,
+                ],
+            }),
         });
     };

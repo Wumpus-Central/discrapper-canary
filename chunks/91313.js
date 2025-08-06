@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     HZ: () => h,
     IB: () => E,
     cr: () => p,
@@ -6,7 +6,7 @@
     lk: () => b,
     tM: () => g,
     xi: () => y,
-    zb: () => O
+    zb: () => O,
 }),
     n(413496),
     n(433524),
@@ -14,7 +14,7 @@
     n(539854),
     n(388685),
     n(467055),
-    n(781311));
+    n(781311);
 var r = n(911969),
     i = n(555573),
     o = n(998698),
@@ -25,10 +25,10 @@ var r = n(911969),
     u = n(925994),
     d = n(887490),
     f = n(42530);
-let _ = RegExp('([\\p{L}\\p{N}\\p{sc=Deva}\\p{sc=Thai}_-]+):', 'gu');
+let _ = RegExp("([\\p{L}\\p{N}\\p{sc=Deva}\\p{sc=Thai}_-]+):", "gu");
 function p(e) {
     let t = d.bN.richValue(e)[0];
-    return null == t || 'applicationCommand' !== t.type ? null : [t, f.YD];
+    return null == t || "applicationCommand" !== t.type ? null : [t, f.YD];
 }
 function h(e) {
     var t, n;
@@ -37,7 +37,7 @@ function h(e) {
         null !=
         (t = d.bN.above(e, {
             at: e.selection.focus,
-            match: (e) => d.aj.isType(e, 'applicationCommandOption')
+            match: (e) => d.aj.isType(e, "applicationCommandOption"),
         }))
             ? t
             : null;
@@ -46,7 +46,7 @@ function h(e) {
         : null !=
             (n = d.bN.above(e, {
                 at: e.selection.anchor,
-                match: (e) => d.aj.isType(e, 'applicationCommandOption')
+                match: (e) => d.aj.isType(e, "applicationCommandOption"),
             }))
           ? n
           : null;
@@ -55,7 +55,7 @@ function m(e) {
     let t = p(e),
         n = [],
         r = null == t ? void 0 : t[0].children;
-    if (null != r) for (let e of r) d.aj.isType(e, 'applicationCommandOption') && n.push(e.optionName);
+    if (null != r) for (let e of r) d.aj.isType(e, "applicationCommandOption") && n.push(e.optionName);
     return n;
 }
 function g(e, t, n) {
@@ -66,7 +66,7 @@ function g(e, t, n) {
         a = null == i ? void 0 : i[0].children;
     if (null != a) {
         for (let t of a)
-            if (d.aj.isType(t, 'applicationCommandOption')) {
+            if (d.aj.isType(t, "applicationCommandOption")) {
                 let i = o[t.optionName];
                 null != i && (r[t.optionName] = E(e, i, t, n));
             }
@@ -80,28 +80,28 @@ function E(e, t, n, i) {
             if (null != e) {
                 var o;
                 return {
-                    type: 'text',
-                    text: null != (o = e.filename) ? o : ''
+                    type: "text",
+                    text: null != (o = e.filename) ? o : "",
                 };
             }
         }
         if (d.LC.isText(n))
             return {
-                type: 'text',
-                text: n.text
+                type: "text",
+                text: n.text,
             };
         if (d.bN.isVoid(e, n)) {
             let e = (0, c.VI)(n);
             if (null != e) return e;
         }
         return {
-            type: 'text',
-            text: (0, u.sg)(n, { mode: 'raw' })
+            type: "text",
+            text: (0, u.sg)(n, { mode: "raw" }),
         };
     });
     if (t.type !== r.jw.STRING) {
-        for (; o.length > 0 && 'text' === o[0].type && '' === o[0].text.trim(); ) o.shift();
-        for (; o.length > 0 && 'text' === o[o.length - 1].type && '' === o[o.length - 1].text.trim(); ) o.pop();
+        for (; o.length > 0 && "text" === o[0].type && "" === o[0].text.trim(); ) o.shift();
+        for (; o.length > 0 && "text" === o[o.length - 1].type && "" === o[o.length - 1].text.trim(); ) o.pop();
     }
     return o;
 }
@@ -117,12 +117,12 @@ function b(e, t, n, r, o) {
                     content: null != (i = r[e.name]) ? i : null,
                     guildId: t,
                     channelId: n,
-                    allowEmptyValues: o
-                })
+                    allowEmptyValues: o,
+                }),
             ];
-        })
+        }),
     );
-    return (i.VP(n, s), s);
+    return i.VP(n, s), s;
 }
 function y(e, t, n, r, s) {
     var l;
@@ -136,9 +136,9 @@ function y(e, t, n, r, s) {
             content: f,
             guildId: t,
             channelId: n,
-            allowEmptyValues: s
+            allowEmptyValues: s,
         });
-    return (i.g7(n, { [c.optionName]: { lastValidationResult: _ } }), _);
+    return i.g7(n, { [c.optionName]: { lastValidationResult: _ } }), _;
 }
 function O(e, t) {
     if (null == t.options || 0 === t.options.length) return [];
@@ -147,25 +147,25 @@ function O(e, t) {
         i = new Set(m(e)),
         o = {},
         a = new Set();
-    for (let e of t.options) ((o[e.displayName] = e), i.has(e.name) || a.add(e.displayName));
+    for (let e of t.options) (o[e.displayName] = e), i.has(e.name) || a.add(e.displayName);
     let s = null;
     for (let t = 0; t < n.length; t++) {
         let i = n[t];
-        if ('line' === i.type || 'applicationCommand' === i.type)
+        if ("line" === i.type || "applicationCommand" === i.type)
             for (let c = 0; c < i.children.length; c++) {
                 let f,
                     p = i.children[c],
                     h = [t, c];
-                if (d.aj.isType(p, 'applicationCommandOption')) {
+                if (d.aj.isType(p, "applicationCommandOption")) {
                     if (null != s) {
                         var l;
-                        ((s.valueRange.focus = null != (l = d.bN.before(e, h)) ? l : d.bN.start(e, [])),
+                        (s.valueRange.focus = null != (l = d.bN.before(e, h)) ? l : d.bN.start(e, [])),
                             (s.text = (0, u.sk)(n, {
-                                mode: 'raw',
-                                range: s.valueRange
+                                mode: "raw",
+                                range: s.valueRange,
                             }).trim()),
                             r.push(s),
-                            (s = null));
+                            (s = null);
                     }
                     continue;
                 }
@@ -179,15 +179,15 @@ function O(e, t) {
                         if (null == t) continue;
                         let i = {
                                 path: h,
-                                offset: f.index
+                                offset: f.index,
                             },
                             l = {
                                 path: h,
-                                offset: i.offset + f[0].length
+                                offset: i.offset + f[0].length,
                             },
                             c = {
                                 path: h,
-                                offset: l.offset
+                                offset: l.offset,
                             },
                             d = {
                                 name: t.name,
@@ -195,22 +195,22 @@ function O(e, t) {
                                 type: t.type,
                                 keyRange: {
                                     anchor: i,
-                                    focus: l
+                                    focus: l,
                                 },
                                 valueRange: {
                                     anchor: c,
-                                    focus: c
+                                    focus: c,
                                 },
-                                text: ''
+                                text: "",
                             };
-                        (null != s &&
+                        null != s &&
                             ((s.valueRange.focus = d.keyRange.anchor),
                             (s.text = (0, u.sk)(n, {
-                                mode: 'raw',
-                                range: s.valueRange
+                                mode: "raw",
+                                range: s.valueRange,
                             }).trim()),
                             r.push(s)),
-                            (s = d));
+                            (s = d);
                     }
             }
     }
@@ -218,8 +218,8 @@ function O(e, t) {
         null != s &&
             ((s.valueRange.focus = d.bN.end(e, [])),
             (s.text = (0, u.sk)(n, {
-                mode: 'raw',
-                range: s.valueRange
+                mode: "raw",
+                range: s.valueRange,
             }).trim()),
             r.push(s)),
         r

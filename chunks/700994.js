@@ -19,7 +19,7 @@ function f(e) {
     return b
         ? null
         : (0, i.jsx)(r.II_, {
-              id: 'user-volume',
+              id: "user-volume",
               label: Z ? g.intl.string(g.t.t4JBnJ) : g.intl.string(g.t.m7TNdH),
               control: (t, l) => {
                   var o, s;
@@ -29,24 +29,24 @@ function f(e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
                                   i = Object.keys(n);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (i = i.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   i.forEach(function (t) {
                                       var i;
-                                      ((i = n[t]),
+                                      (i = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: i,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = i));
-                                  }));
+                                              : (e[t] = i);
+                                  });
                           }
                           return e;
                       })({}, t)),
@@ -56,7 +56,7 @@ function f(e) {
                               value: (0, u.P)(f),
                               maxValue: d.isPlatformEmbedded ? 200 : 100,
                               onChange: (t) => a.Z.setLocalVolume(e, (0, u.A)(t), n),
-                              'aria-label': Z ? g.intl.string(g.t.t4JBnJ) : g.intl.string(g.t.m7TNdH)
+                              "aria-label": Z ? g.intl.string(g.t.t4JBnJ) : g.intl.string(g.t.m7TNdH),
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(s))
@@ -70,8 +70,8 @@ function f(e) {
                             })(Object(s)).forEach(function (e) {
                                 Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(s, e));
                             }),
-                      o)
+                      o),
                   );
-              }
+              },
           });
 }

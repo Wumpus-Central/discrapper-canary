@@ -4,7 +4,12 @@ var r = n(442837),
     o = n(351780),
     a = n(843693);
 function s(e, t) {
-    return e === t || ((null == e ? void 0 : e.channelId) === (null == t ? void 0 : t.channelId) && (null == e ? void 0 : e.value) === (null == t ? void 0 : t.value) && (null == e ? void 0 : e.multiplier) === (null == t ? void 0 : t.multiplier));
+    return (
+        e === t ||
+        ((null == e ? void 0 : e.channelId) === (null == t ? void 0 : t.channelId) &&
+            (null == e ? void 0 : e.value) === (null == t ? void 0 : t.value) &&
+            (null == e ? void 0 : e.multiplier) === (null == t ? void 0 : t.multiplier))
+    );
 }
 function l(e) {
     let t = (0, r.e7)([o.Z], () => !!o.Z.isEnabled() && o.Z.combosEnabled);

@@ -11,17 +11,17 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let c = 'GuildNSFWAgreeStore',
+let c = "GuildNSFWAgreeStore",
     u = {};
 function d(e) {
     let { guildId: t } = e;
-    ((u[t] = !0), o.K.set(c, u));
+    (u[t] = !0), o.K.set(c, u);
 }
 class f extends (r = i.ZP.Store) {
     initialize() {
@@ -32,5 +32,5 @@ class f extends (r = i.ZP.Store) {
         return !(null == e || (0, s.dl)()) && (u[e] || !1);
     }
 }
-l(f, 'displayName', 'GuildNSFWAgreeStore');
+l(f, "displayName", "GuildNSFWAgreeStore");
 let _ = new f(a.Z, { GUILD_NSFW_AGREE: d });

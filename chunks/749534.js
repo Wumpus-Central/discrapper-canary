@@ -6,18 +6,18 @@ var l = n(481060),
     a = n(72336);
 function s(e) {
     let { children: t, title: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a.container,
         children: [
             (0, r.jsx)(l.X6q, {
                 className: a.header,
-                variant: 'text-sm/semibold',
-                children: null != n ? n : i.intl.string(i.t['k+QA9P'])
+                variant: "text-sm/semibold",
+                children: null != n ? n : i.intl.string(i.t["k+QA9P"]),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a.upsellsContainer,
-                children: t
-            })
-        ]
+                children: t,
+            }),
+        ],
     });
 }

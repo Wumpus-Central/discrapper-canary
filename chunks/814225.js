@@ -1,15 +1,15 @@
-(n.d(t, {
+n.d(t, {
     P3: () => _,
     ZK: () => f,
-    en: () => h
+    en: () => h,
 }),
     n(704826),
     n(35282),
-    n(388685));
+    n(388685);
 var r = n(913527),
     i = n.n(r),
     o = n(114858);
-(n(358085), n(73346));
+n(358085), n(73346);
 var a = n(981631),
     s = n(388032);
 function l(e, t, n) {
@@ -19,7 +19,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,27 +32,27 @@ let c = {},
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         l(e, t, n[t]);
-                    }));
+                    });
             }
             return e;
-        })({ ALL: -1 }, a.EKQ)
+        })({ ALL: -1 }, a.EKQ),
     );
 function f(e) {
-    let t = (0, o.LX)(e, { path: a.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug') });
+    let t = (0, o.LX)(e, { path: a.Z5c.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug") });
     return null != t ? t.params.skuId : null;
 }
 function _(e) {
     switch (e) {
         case a.EKQ.ACTION:
-            return s.intl.string(s.t['1o2/IC']);
+            return s.intl.string(s.t["1o2/IC"]);
         case a.EKQ.ACTION_RPG:
             return s.intl.string(s.t.e9Yo4O);
         case a.EKQ.BRAWLER:
@@ -60,23 +60,23 @@ function _(e) {
         case a.EKQ.HACK_AND_SLASH:
             return s.intl.string(s.t.xQ4VmJ);
         case a.EKQ.PLATFORMER:
-            return s.intl.string(s.t['WA318/']);
+            return s.intl.string(s.t["WA318/"]);
         case a.EKQ.STEALTH:
-            return s.intl.string(s.t['6UPFd3']);
+            return s.intl.string(s.t["6UPFd3"]);
         case a.EKQ.SURVIVAL:
             return s.intl.string(s.t.SVPCt7);
         case a.EKQ.ADVENTURE:
-            return s.intl.string(s.t['15p8oq']);
+            return s.intl.string(s.t["15p8oq"]);
         case a.EKQ.ACTION_ADVENTURE:
             return s.intl.string(s.t.AxkUBg);
         case a.EKQ.METROIDVANIA:
             return s.intl.string(s.t.Iwr38v);
         case a.EKQ.OPEN_WORLD:
-            return s.intl.string(s.t['2HRHJC']);
+            return s.intl.string(s.t["2HRHJC"]);
         case a.EKQ.PSYCHOLOGICAL_HORROR:
-            return s.intl.string(s.t['/IwK3t']);
+            return s.intl.string(s.t["/IwK3t"]);
         case a.EKQ.SANDBOX:
-            return s.intl.string(s.t['2+Vu4e']);
+            return s.intl.string(s.t["2+Vu4e"]);
         case a.EKQ.SURVIVAL_HORROR:
             return s.intl.string(s.t.CCzRiI);
         case a.EKQ.VISUAL_NOVEL:
@@ -86,7 +86,7 @@ function _(e) {
         case a.EKQ.VEHICULAR_COMBAT:
             return s.intl.string(s.t.YQHhoq);
         case a.EKQ.MASSIVELY_MULTIPLAYER:
-            return s.intl.string(s.t['5CNg1t']);
+            return s.intl.string(s.t["5CNg1t"]);
         case a.EKQ.MMORPG:
             return s.intl.string(s.t.c4NuOz);
         case a.EKQ.ROLE_PLAYING:
@@ -96,15 +96,15 @@ function _(e) {
         case a.EKQ.ROGUELIKE:
             return s.intl.string(s.t.zWzaCg);
         case a.EKQ.SHOOTER:
-            return s.intl.string(s.t['+pk6sb']);
+            return s.intl.string(s.t["+pk6sb"]);
         case a.EKQ.LIGHT_GUN:
-            return s.intl.string(s.t['TDS96+']);
+            return s.intl.string(s.t["TDS96+"]);
         case a.EKQ.SHOOT_EM_UP:
             return s.intl.string(s.t.wltDUF);
         case a.EKQ.FPS:
             return s.intl.string(s.t.olTaq6);
         case a.EKQ.DUAL_JOYSTICK_SHOOTER:
-            return s.intl.string(s.t['SN+NS0']);
+            return s.intl.string(s.t["SN+NS0"]);
         case a.EKQ.SIMULATION:
             return s.intl.string(s.t.sxMPdn);
         case a.EKQ.FLIGHT_SIMULATOR:
@@ -118,13 +118,13 @@ function _(e) {
         case a.EKQ.SPORTS:
             return s.intl.string(s.t.O0B7XF);
         case a.EKQ.BASEBALL:
-            return s.intl.string(s.t['jPYb//']);
+            return s.intl.string(s.t["jPYb//"]);
         case a.EKQ.BASKETBALL:
-            return s.intl.string(s.t['o+D1Bg']);
+            return s.intl.string(s.t["o+D1Bg"]);
         case a.EKQ.BILLIARDS:
             return s.intl.string(s.t.PJ5o4O);
         case a.EKQ.BOWLING:
-            return s.intl.string(s.t['82afJy']);
+            return s.intl.string(s.t["82afJy"]);
         case a.EKQ.BOXING:
             return s.intl.string(s.t.DQvfen);
         case a.EKQ.FOOTBALL:
@@ -144,11 +144,11 @@ function _(e) {
         case a.EKQ.SURFING_WAKEBOARDING:
             return s.intl.string(s.t.PSh0CQ);
         case a.EKQ.WRESTLING:
-            return s.intl.string(s.t['3y9hAQ']);
+            return s.intl.string(s.t["3y9hAQ"]);
         case a.EKQ.STRATEGY:
             return s.intl.string(s.t.KovTDw);
         case a.EKQ.FOUR_X:
-            return s.intl.string(s.t['19h4dX']);
+            return s.intl.string(s.t["19h4dX"]);
         case a.EKQ.ARTILLERY:
             return s.intl.string(s.t.sBqLsL);
         case a.EKQ.RTS:
@@ -168,17 +168,17 @@ function _(e) {
         case a.EKQ.CARD_GAME:
             return s.intl.string(s.t.kX85v7);
         case a.EKQ.EDUCATION:
-            return s.intl.string(s.t['klIi6+']);
+            return s.intl.string(s.t["klIi6+"]);
         case a.EKQ.FITNESS:
             return s.intl.string(s.t.GOaaFR);
         case a.EKQ.GAMBLING:
-            return s.intl.string(s.t['X8/Ee3']);
+            return s.intl.string(s.t["X8/Ee3"]);
         case a.EKQ.MUSIC_RHYTHM:
             return s.intl.string(s.t.qPgrg4);
         case a.EKQ.PARTY_MINI_GAME:
             return s.intl.string(s.t.diBclJ);
         case a.EKQ.PINBALL:
-            return s.intl.string(s.t['1+ott7']);
+            return s.intl.string(s.t["1+ott7"]);
         case a.EKQ.TRIVIA_BOARD_GAME:
             return s.intl.string(s.t.aLlxjI);
         case a.EKQ.TACTICAL:
@@ -190,24 +190,24 @@ function _(e) {
         case a.EKQ.POINT_AND_CLICK:
             return s.intl.string(s.t.vcerEh);
         default:
-            return s.intl.string(s.t['9b4eUl']);
+            return s.intl.string(s.t["9b4eUl"]);
     }
 }
 Object.keys(d).forEach((e) => {
-    let t = e.toLowerCase().replace(/_/g, '-'),
+    let t = e.toLowerCase().replace(/_/g, "-"),
         n = d[e];
-    ((c[t] = n), (u[n] = t));
+    (c[t] = n), (u[n] = t);
 });
 let p = [
-    ['YYYY-MM-DD', 'MMMM DD, Y'],
-    ['YYYY-MM', 'MMMM Y'],
-    ['MM-DD', 'MMMM DD'],
-    ['MM', 'MMMM'],
-    ['YYYY', 'Y']
+    ["YYYY-MM-DD", "MMMM DD, Y"],
+    ["YYYY-MM", "MMMM Y"],
+    ["MM-DD", "MMMM DD"],
+    ["MM", "MMMM"],
+    ["YYYY", "Y"],
 ];
 function h(e) {
     let { preorderReleaseAt: t, preorderApproximateReleaseDate: n } = e;
-    if (null != t) return t.format('MMMM DD');
+    if (null != t) return t.format("MMMM DD");
     if (null == n) return null;
     for (let e = 0; e < p.length; e++) {
         let [t, r] = p[e],

@@ -12,23 +12,23 @@ var i = n(481060),
 function f(e) {
     let { channelId: t } = e,
         n = (0, a.m7)(t);
-    if (null == n) return '['.concat(s.intl.string(s.t.bz1PZW), ']');
+    if (null == n) return "[".concat(s.intl.string(s.t.bz1PZW), "]");
     let u = n.isMediaChannel() ? i.XBm : (0, o.Th)(n.type);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.nn4, { children: (0, l.ZP)({ channel: n }) }),
-            (0, r.jsxs)('div', {
-                'aria-hidden': !0,
+            (0, r.jsxs)("div", {
+                "aria-hidden": !0,
                 children: [
                     null != u &&
                         (0, r.jsx)(u, {
                             className: d.icon,
-                            'aria-hidden': !0
+                            "aria-hidden": !0,
                         }),
-                    n.name
-                ]
-            })
-        ]
+                    n.name,
+                ],
+            }),
+        ],
     });
 }
 function m(e) {

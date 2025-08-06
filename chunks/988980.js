@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => a,
-    q: () => s
+    q: () => s,
 });
 var r = n(73800),
     i = n(812206),
@@ -10,5 +10,10 @@ function a(e) {
 }
 function s(e) {
     var t, n;
-    return !(null != e && o.P9.includes(null != e ? e : '')) || (null == (n = i.Z.getApplication(e)) || null == (t = n.embeddedActivityConfig) ? void 0 : t.legacy_responsive_aspect_ratio);
+    return (
+        !(null != e && o.P9.includes(null != e ? e : "")) ||
+        (null == (n = i.Z.getApplication(e)) || null == (t = n.embeddedActivityConfig)
+            ? void 0
+            : t.legacy_responsive_aspect_ratio)
+    );
 }

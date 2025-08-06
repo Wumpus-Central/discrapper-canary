@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     Cg: () => l,
     Ro: () => c,
-    Tc: () => o
+    Tc: () => o,
 }),
     n(35282),
     n(388685),
     n(642613),
     n(539854),
-    n(583741));
+    n(583741);
 var i = n(952639),
     r = n.n(i);
 let s = /^(\d{4}-\d{1,2})/;
@@ -20,7 +20,7 @@ function l(e) {
         let [t, n] = e;
         return {
             id: t,
-            experiment: n
+            experiment: n,
         };
     });
 }
@@ -38,7 +38,7 @@ function o(e, t) {
     });
 }
 function c(e, t) {
-    let n = t.split(/\s+/g).filter((e) => '' !== e);
+    let n = t.split(/\s+/g).filter((e) => "" !== e);
     if (0 === n.length) return e;
     let i = [];
     for (let t of e) {
@@ -47,9 +47,9 @@ function c(e, t) {
             (function e(t, n) {
                 if (Array.isArray(t)) {
                     for (let i of t) if (e(i, n)) return !0;
-                } else if ('object' == typeof t && null !== t) {
+                } else if ("object" == typeof t && null !== t) {
                     for (let i of Object.values(t)) if (e(i, n)) return !0;
-                } else if ('string' == typeof t && t.toLowerCase().includes(n.toLowerCase())) return !0;
+                } else if ("string" == typeof t && t.toLowerCase().includes(n.toLowerCase())) return !0;
                 return !1;
             })(t, i) && (e += 1);
         0 !== e && (null == i[e] && (i[e] = []), i[e].push(t));

@@ -3,5 +3,5 @@ var r = n(381046),
 e.exports = {
     formats: n(72689),
     parse: i,
-    stringify: r
+    stringify: r,
 };

@@ -19,16 +19,17 @@ function p(e) {
             className: m.marginBottom20,
             note: u.intl.string(u.t.YCCMkJ),
             onChange: (e) => {
-                ((0, c.Z)('switch_channel_warning_enabled', e, !n), a.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !e }));
+                (0, c.Z)("switch_channel_warning_enabled", e, !n),
+                    a.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !e });
             },
             value: !n,
             hideBorder: t,
             children: (0, i.jsx)(s.X6q, {
-                variant: 'text-md/medium',
-                color: 'header-primary',
+                variant: "text-md/medium",
+                color: "header-primary",
                 className: m.marginBottom8,
-                children: u.intl.string(u.t.e7LIiY)
-            })
-        })
+                children: u.intl.string(u.t.e7LIiY),
+            }),
+        }),
     });
 }

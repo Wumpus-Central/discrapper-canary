@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     B: () => d,
-    J: () => u
+    J: () => u,
 }),
-    n(997841));
+    n(997841);
 var r = n(442837),
     i = n(592125),
     o = n(9156),
@@ -22,7 +22,11 @@ function u(e) {
     let d = r.getChannel(e.parent_id);
     if (null == d || n.isGuildOrCategoryOrChannelMuted(d.guild_id, d.id)) return l.iN.NO_MESSAGES;
     let f = n.resolvedMessageNotifications(d);
-    return f === c.bL.NO_MESSAGES ? l.iN.NO_MESSAGES : f === c.bL.ONLY_MENTIONS ? l.iN.ONLY_MENTIONS : l.iN.ALL_MESSAGES;
+    return f === c.bL.NO_MESSAGES
+        ? l.iN.NO_MESSAGES
+        : f === c.bL.ONLY_MENTIONS
+          ? l.iN.ONLY_MENTIONS
+          : l.iN.ALL_MESSAGES;
 }
 function d(e) {
     return (0, r.e7)([s.Z, o.ZP, i.Z], () => u(e), [e]);

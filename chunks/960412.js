@@ -1,7 +1,7 @@
 n.d(t, {
     Y7: () => c,
     oc: () => u,
-    pR: () => d
+    pR: () => d,
 });
 var i = n(990547),
     r = n(283693),
@@ -19,25 +19,25 @@ async function c() {
                     var t;
                     let n = null == e || null == (t = e.body) ? void 0 : t.initialized;
                     return (0, r.iG)({ initialized: n });
-                }
+                },
             },
-            rejectWithError: !0
+            rejectWithError: !0,
         });
         return (
             s.Z.dispatch({
-                type: 'EMAIL_SETTINGS_FETCH_SUCCESS',
-                settings: e.body
+                type: "EMAIL_SETTINGS_FETCH_SUCCESS",
+                settings: e.body,
             }),
             e.body
         );
     } catch (e) {
-        s.Z.dispatch({ type: 'EMAIL_SETTINGS_FETCH_FAILURE' });
+        s.Z.dispatch({ type: "EMAIL_SETTINGS_FETCH_FAILURE" });
     }
 }
 async function d(e, t) {
     s.Z.dispatch({
-        type: 'EMAIL_SETTINGS_UPDATE',
-        updates: { [e]: t }
+        type: "EMAIL_SETTINGS_UPDATE",
+        updates: { [e]: t },
     });
     try {
         let n = await a.Z.patch({
@@ -47,17 +47,17 @@ async function d(e, t) {
                 event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
                 properties: {
                     category: e,
-                    value: t
-                }
+                    value: t,
+                },
             },
-            rejectWithError: !0
+            rejectWithError: !0,
         });
         s.Z.dispatch({
-            type: 'EMAIL_SETTINGS_UPDATE_SUCCESS',
-            settings: n.body
+            type: "EMAIL_SETTINGS_UPDATE_SUCCESS",
+            settings: n.body,
         });
     } catch (e) {
-        s.Z.dispatch({ type: 'EMAIL_SETTINGS_UPDATE_FAILURE' });
+        s.Z.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
     }
 }
 async function u() {
@@ -68,24 +68,24 @@ async function u() {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         i.forEach(function (t) {
                             var i;
-                            ((i = n[t]),
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: i,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = i));
-                        }));
+                                    : (e[t] = i);
+                        });
                 }
                 return e;
             })({}, e)),
@@ -106,8 +106,8 @@ async function u() {
         );
     }, {});
     s.Z.dispatch({
-        type: 'EMAIL_SETTINGS_UPDATE',
-        updates: e
+        type: "EMAIL_SETTINGS_UPDATE",
+        updates: e,
     });
     try {
         let t = await a.Z.patch({
@@ -116,17 +116,17 @@ async function u() {
             trackedActionData: {
                 event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
                 properties: {
-                    category: 'marketing',
-                    value: !1
-                }
+                    category: "marketing",
+                    value: !1,
+                },
             },
-            rejectWithError: !0
+            rejectWithError: !0,
         });
         s.Z.dispatch({
-            type: 'EMAIL_SETTINGS_UPDATE_SUCCESS',
-            settings: t.body
+            type: "EMAIL_SETTINGS_UPDATE_SUCCESS",
+            settings: t.body,
         });
     } catch (e) {
-        s.Z.dispatch({ type: 'EMAIL_SETTINGS_UPDATE_FAILURE' });
+        s.Z.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
     }
 }

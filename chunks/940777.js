@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685), n(539854));
+n.d(t, { Z: () => R }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -32,24 +32,24 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -57,17 +57,17 @@ let A = {
     analyticsSource: {
         page: N.ZY5.GUILD_CHANNEL,
         section: N.jXE.CHANNEL_LIST,
-        object: N.qAy.CHANNEL
-    }
+        object: N.qAy.CHANNEL,
+    },
 };
 function R() {
     var e, t;
-    let l = (0, s.Ie)('favorites'),
+    let l = (0, s.Ie)("favorites"),
         { favoriteAdded: R, clearFavoriteAdded: D } = (0, S.up)(),
         [L, M] = i.useState(!1),
         { favoriteServerMuted: k, favoriteChannels: U } = (0, a.cj)([E.Z], () => ({
             favoriteChannels: E.Z.getFavoriteChannels(),
-            favoriteServerMuted: E.Z.favoriteServerMuted
+            favoriteServerMuted: E.Z.favoriteServerMuted,
         })),
         G = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
         B = (0, a.e7)([y.Z], () => y.Z.getChannel(G)),
@@ -83,13 +83,15 @@ function R() {
                 }),
                 i = (0, a.e7)([_.Z], () => _.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 l = (0, a.e7)([v.Z], () => n && null != t && v.Z.hasVideo(t), [n, t]),
-                o = (0, a.Wu)([h.ZP], () => j.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                o = (0, a.Wu)([h.ZP], () =>
+                    j.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
+                ),
                 s = (0, a.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
                             r = (0, p.p)(n);
                         return null != r && null != e[r];
-                    })
+                    }),
                 ),
                 c = o.length > 0,
                 u = !1,
@@ -104,7 +106,7 @@ function R() {
                     screenshare: f,
                     liveStage: !1,
                     isCurrentUserConnected: n,
-                    activity: g
+                    activity: g,
                 })
             );
         })(U),
@@ -118,7 +120,7 @@ function R() {
                 selected: V,
                 hovered: L,
                 unread: H && !k,
-                className: Z.pill
+                className: Z.pill,
             }),
             (0, r.jsx)(P.Z, {
                 onShow: K,
@@ -132,14 +134,14 @@ function R() {
                             ((e = T({}, l)),
                             (t = t =
                                 {
-                                    ariaLabel: w.intl.formatToPlainString(w.t['/uzRsr'], {
+                                    ariaLabel: w.intl.formatToPlainString(w.t["/uzRsr"], {
                                         guildName: w.intl.string(w.t.wMWycn),
-                                        mentions: F
+                                        mentions: F,
                                     }),
-                                    'aria-selected': V,
+                                    "aria-selected": V,
                                     to: {
                                         pathname: N.Z5c.CHANNEL(N.I_8, G),
-                                        state: A
+                                        state: A,
                                     },
                                     selected: V || L,
                                     onMouseEnter: () => M(!0),
@@ -149,20 +151,20 @@ function R() {
                                     },
                                     onContextMenu: function (e) {
                                         (0, d.jW)(e, async () => {
-                                            let { default: e } = await n.e('3190').then(n.bind(n, 631981));
+                                            let { default: e } = await n.e("3190").then(n.bind(n, 631981));
                                             return (t) => (0, r.jsx)(e, T({}, t));
                                         });
                                     },
-                                    children: (0, r.jsx)('div', {
+                                    children: (0, r.jsx)("div", {
                                         className: o()(Z.ring, { [Z.ringActive]: R }),
                                         children: (0, r.jsx)(c.r7p, {
-                                            size: 'custom',
-                                            color: 'currentColor',
+                                            size: "custom",
+                                            color: "currentColor",
                                             className: Z.favoriteIcon,
                                             width: 20,
-                                            height: 20
-                                        })
-                                    })
+                                            height: 20,
+                                        }),
+                                    }),
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -176,11 +178,11 @@ function R() {
                                   })(Object(t)).forEach(function (n) {
                                       Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                                   }),
-                            e)
-                        )
-                    })
-                })
-            })
-        ]
+                            e),
+                        ),
+                    }),
+                }),
+            }),
+        ],
     });
 }

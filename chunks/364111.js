@@ -1,4 +1,4 @@
-(n.d(t, { E: () => d }), n(388685));
+n.d(t, { E: () => d }), n(388685);
 var r = n(73800),
     i = n(442837),
     l = n(353926),
@@ -10,11 +10,19 @@ var r = n(73800),
 function d(e, t, n) {
     let d = (0, i.e7)([l.Z], () => l.Z.hasLoadedExperiments),
         p = (0, i.e7)([s.Z], () => s.Z.skipNumCategories),
-        h = (0, u.hv)('useMaybeFetchCollectiblesShopHome'),
+        h = (0, u.hv)("useMaybeFetchCollectiblesShopHome"),
         f = (0, a.isDesktop)() || (0, a.isWeb)(),
         [g, m, b, _, O, E, y] = (0, i.Wu)([c.Z], () => {
             var t, n;
-            return [c.Z.getShopBlocks(e), null != (t = c.Z.getLastSuccessfulFetch(e)) ? t : 0, null != (n = c.Z.getLastErrorTimestamp(e)) ? n : 0, c.Z.getLastFetchOptions(e), c.Z.getFetchShopHomeError(e), c.Z.getIsFetchingShopHome(e), c.Z.getShopHomeConfigOverride()];
+            return [
+                c.Z.getShopBlocks(e),
+                null != (t = c.Z.getLastSuccessfulFetch(e)) ? t : 0,
+                null != (n = c.Z.getLastErrorTimestamp(e)) ? n : 0,
+                c.Z.getLastFetchOptions(e),
+                c.Z.getFetchShopHomeError(e),
+                c.Z.getIsFetchingShopHome(e),
+                c.Z.getShopHomeConfigOverride(),
+            ];
         }),
         v = (0, r.useMemo)(() => {
             var e, n;
@@ -23,24 +31,24 @@ function d(e, t, n) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, t)),
@@ -51,7 +59,7 @@ function d(e, t, n) {
                         includePopularPicks: !0,
                         includeDynamicBlocks: !0,
                         shopHomeConfig: y,
-                        skipNumCategories: p
+                        skipNumCategories: p,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -82,7 +90,7 @@ function d(e, t, n) {
             shopBlocks: g,
             refreshShopHome: (0, r.useCallback)(() => {
                 (0, o.Ov)(e, v, n);
-            }, [e, v, n])
+            }, [e, v, n]),
         }
     );
 }

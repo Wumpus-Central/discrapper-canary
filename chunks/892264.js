@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(355467),
     i = n(496929),
     o = n(147913),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,35 +23,39 @@ function f(e, t, n) {
 }
 class _ extends o.Z {
     constructor(...e) {
-        (super(...e),
-            f(this, 'actions', {
+        super(...e),
+            f(this, "actions", {
                 POST_CONNECTION_OPEN: () => {
-                    (this.maybeFetchSubscriptions(), this.maybeFetchCountryCode(), this.maybeFetchMostRecentSubscription());
-                }
+                    this.maybeFetchSubscriptions(),
+                        this.maybeFetchCountryCode(),
+                        this.maybeFetchMostRecentSubscription();
+                },
             }),
-            f(this, 'maybeFetchSubscriptions', async () => {
+            f(this, "maybeFetchSubscriptions", async () => {
                 let e = a.default.getCurrentUser(),
                     t = s.Z.isSubscriptionFetching;
                 if ((0, u.I5)(e)) {
                     l.Z.hasFetchedSubscriptions() || t || (await (0, r.jg)());
                     let e = l.Z.getPremiumSubscription();
-                    (null == e ? void 0 : e.paymentSourceId) != null || c.Z.applicationIdsFetched.has(d.CL) || (await (0, i.yD)(d.CL));
+                    (null == e ? void 0 : e.paymentSourceId) != null ||
+                        c.Z.applicationIdsFetched.has(d.CL) ||
+                        (await (0, i.yD)(d.CL));
                 }
             }),
-            f(this, 'maybeFetchMostRecentSubscription', () => {
+            f(this, "maybeFetchMostRecentSubscription", () => {
                 var e;
                 let t = a.default.getCurrentUser(),
                     n = (0, u.xI)(null != (e = null == t ? void 0 : t.premiumType) ? e : null, d.p9.TIER_1),
                     i = l.Z.getIsFetchingMostRecentSubscription();
                 null != t && n && t.hasHadPremium() && !i && (0, r.ou)();
             }),
-            f(this, 'maybeFetchCountryCode', async () => {
+            f(this, "maybeFetchCountryCode", async () => {
                 let e = a.default.getCurrentUser();
                 (0, u.I5)(e) && !s.Z.ipCountryCodeLoaded && (await this.fetchCountryCode());
             }),
-            f(this, 'fetchCountryCode', async () => {
-                (await (0, r.GE)(), null != s.Z.ipCountryCode && (await (0, r.tZ)()));
-            }));
+            f(this, "fetchCountryCode", async () => {
+                await (0, r.GE)(), null != s.Z.ipCountryCode && (await (0, r.tZ)());
+            });
     }
 }
 let p = new _();

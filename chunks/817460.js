@@ -3,13 +3,15 @@ n.d(t, {
     ab: () => o,
     iG: () => a,
     lL: () => s,
-    rC: () => c
+    rC: () => c,
 });
 var r = n(293810),
     i = n(474936),
     l = n(388032);
 function o(e) {
-    return 'roles' in e ? 'emoji-'.concat(e.id) : ''.concat(e.ref_type, '-').concat(e.emoji_id, '-').concat(e.name, '-').concat(e.ref_id);
+    return "roles" in e
+        ? "emoji-".concat(e.id)
+        : "".concat(e.ref_type, "-").concat(e.emoji_id, "-").concat(e.name, "-").concat(e.ref_id);
 }
 function u(e) {
     let { interval: t, interval_count: n } = e;
@@ -17,14 +19,14 @@ function u(e) {
         (function (e) {
             switch (e) {
                 case i.rV.DAY:
-                    return l.t['3rUmPT'];
+                    return l.t["3rUmPT"];
                 case i.rV.MONTH:
-                    return l.t['zuN54+'];
+                    return l.t["zuN54+"];
                 case i.rV.YEAR:
                     return l.t.cuSp8f;
             }
         })(t),
-        { count: n }
+        { count: n },
     );
 }
 function a(e) {

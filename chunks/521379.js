@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(35282));
+n.d(t, { Z: () => h }), n(35282);
 var r,
     i = n(255367),
     l = n(73800),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,7 +23,7 @@ function d(e, t, n) {
 s.ZP.initialize();
 class h extends (r = l.PureComponent) {
     componentDidMount() {
-        (0, c.e)('account_revert');
+        (0, c.e)("account_revert");
     }
     render() {
         let { token: e } = this.props.match.params;
@@ -35,29 +35,29 @@ class h extends (r = l.PureComponent) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 d(e, t, n[t]);
-                            }));
+                            });
                     }
                     return e;
                 })(
                     {
                         width: 464,
-                        token: e
+                        token: e,
                     },
-                    this.props
-                )
-            )
+                    this.props,
+                ),
+            ),
         });
     }
 }
-d(h, 'defaultProps', {
+d(h, "defaultProps", {
     transitionTo: a.uL,
-    replaceWith: a.dL
+    replaceWith: a.dL,
 });

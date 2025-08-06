@@ -7,7 +7,13 @@ var r = a(646466),
     s = a(511010),
     o = a(590824);
 let c = () =>
-    (0, n.jsxs)('div', {
+    (0, n.jsxs)("div", {
         className: o.previewPanel,
-        children: [(0, n.jsx)(i.a, {}), (0, n.jsx)(s.Z, { className: o.divider }), (0, n.jsx)(l.Z, {}), (0, n.jsx)(s.Z, { className: o.divider }), (0, n.jsx)(r.O, {})]
+        children: [
+            (0, n.jsx)(i.a, {}),
+            (0, n.jsx)(s.Z, { className: o.divider }),
+            (0, n.jsx)(l.Z, {}),
+            (0, n.jsx)(s.Z, { className: o.divider }),
+            (0, n.jsx)(r.O, {}),
+        ],
     });

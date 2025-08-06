@@ -13,8 +13,20 @@ function l(e) {
         c = t === r.F.CHANNEL_PROMPT || t === r.F.JOIN_GUILD,
         d = l || c,
         u = a || d;
-    return (0, s.jsxs)('div', {
+    return (0, s.jsxs)("div", {
         className: i.sidebar,
-        children: [(0, s.jsx)('div', { className: o()(i.step1, { [i.show]: n }) }), (0, s.jsx)('div', { className: o()(i.step24Clouds, { [i.show]: u }) }), (0, s.jsx)('div', { className: o()(i.step34Flag, { [i.show]: d }) }), (0, s.jsx)('div', { className: o()(i.step24Base, { [i.show]: u }) }), (0, s.jsx)('div', { className: o()(i.step24Ground, { [i.show]: u }) }), (0, s.jsx)('div', { className: o()(i.step2Base, { [i.show]: a }) }), (0, s.jsx)('div', { className: o()(i.step2Character, { [i.show]: a }) }), (0, s.jsx)('div', { className: o()(i.step34Base, { [i.show]: d }) }), (0, s.jsx)('div', { className: o()(i.step3Character, { [i.show]: l }) }), (0, s.jsx)('div', { className: o()(i.step4Character, { [i.show]: c }) }), (0, s.jsx)('div', { className: o()(i.step24Foreground, { [i.show]: u }) })]
+        children: [
+            (0, s.jsx)("div", { className: o()(i.step1, { [i.show]: n }) }),
+            (0, s.jsx)("div", { className: o()(i.step24Clouds, { [i.show]: u }) }),
+            (0, s.jsx)("div", { className: o()(i.step34Flag, { [i.show]: d }) }),
+            (0, s.jsx)("div", { className: o()(i.step24Base, { [i.show]: u }) }),
+            (0, s.jsx)("div", { className: o()(i.step24Ground, { [i.show]: u }) }),
+            (0, s.jsx)("div", { className: o()(i.step2Base, { [i.show]: a }) }),
+            (0, s.jsx)("div", { className: o()(i.step2Character, { [i.show]: a }) }),
+            (0, s.jsx)("div", { className: o()(i.step34Base, { [i.show]: d }) }),
+            (0, s.jsx)("div", { className: o()(i.step3Character, { [i.show]: l }) }),
+            (0, s.jsx)("div", { className: o()(i.step4Character, { [i.show]: c }) }),
+            (0, s.jsx)("div", { className: o()(i.step24Foreground, { [i.show]: u }) }),
+        ],
     });
 }

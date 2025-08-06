@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => N,
-    _: () => S
+    _: () => S,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -25,36 +25,36 @@ var r = n(255367),
     _ = n(933897);
 let y = {
         scale: 0.95,
-        opacity: 0
+        opacity: 0,
     },
     O = {
         scale: 1,
-        opacity: 1
+        opacity: 1,
     },
     w = {
         scale: 1,
-        opacity: 1
+        opacity: 1,
     },
     P = {
         tension: 2400,
-        friction: 52
+        friction: 52,
     };
 function S(e) {
     let { channelId: t, onClick: n, onClose: l, onMouseEnter: s } = e,
         u = i.useRef(null),
         m = (0, o.e7)([f.Z], () => f.Z.getChannel(t), [t]);
     return (
-        a()(null != m, 'Forum Channel is null'),
+        a()(null != m, "Forum Channel is null"),
         (0, r.jsxs)(c.P3F, {
             className: _.uploadInput,
             onMouseEnter: s,
             onClick: () => {
-                ((0, v.N3)({ isMobile: !1 }), null == n || n());
+                (0, v.N3)({ isMobile: !1 }), null == n || n();
             },
             onKeyPress: (e) => {
-                if ('Enter' === e.key) {
+                if ("Enter" === e.key) {
                     var t;
-                    (null == (t = u.current) || t.activateUploadDialogue(), (0, v.N3)({ isMobile: !1 }));
+                    null == (t = u.current) || t.activateUploadDialogue(), (0, v.N3)({ isMobile: !1 });
                 }
             },
             children: [
@@ -62,26 +62,26 @@ function S(e) {
                     className: _.fileInput,
                     ref: u,
                     onChange: (e) => {
-                        (null == l || l(),
+                        null == l || l(),
                             (0, j.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, {
                                 requireConfirm: !0,
-                                origin: 'file_picker'
+                                origin: "file_picker",
                             }),
                             b.S.dispatch(C.CkL.TEXTAREA_FOCUS),
-                            (e.currentTarget.value = null));
+                            (e.currentTarget.value = null);
                     },
                     multiple: m.rateLimitPerUser <= 0,
                     tabIndex: -1,
-                    'aria-hidden': !0
+                    "aria-hidden": !0,
                 }),
                 (0, r.jsx)(c.FmF, {
-                    size: 'custom',
-                    color: 'currentColor',
+                    size: "custom",
+                    color: "currentColor",
                     width: 28,
                     height: 28,
-                    className: _.uploadIcon
-                })
-            ]
+                    className: _.uploadIcon,
+                }),
+            ],
         })
     );
 }
@@ -93,9 +93,9 @@ function T(e) {
             {
                 from: d.enabled ? O : y,
                 to: w,
-                config: P
+                config: P,
             },
-            'animate-always'
+            "animate-always",
         ),
         x = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
         b = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type));
@@ -106,7 +106,7 @@ function T(e) {
         },
         style: f,
         children: (0, r.jsxs)(c.zJl, {
-            orientation: 'horizontal',
+            orientation: "horizontal",
             className: _.popout,
             paddingFix: !1,
             fade: !0,
@@ -117,10 +117,10 @@ function T(e) {
                         a(!0);
                     },
                     onClose: () => {
-                        (a(!1), n());
-                    }
+                        a(!1), n();
+                    },
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: _.uploads,
                     children: b.map((e) =>
                         (0, r.jsx)(
@@ -131,14 +131,14 @@ function T(e) {
                                 upload: e,
                                 keyboardModeEnabled: x,
                                 hideFileName: !0,
-                                size: h.q.SMALL
+                                size: h.q.SMALL,
                             },
-                            e.id
-                        )
-                    )
-                })
-            ]
-        })
+                            e.id,
+                        ),
+                    ),
+                }),
+            ],
+        }),
     });
 }
 function N(e) {
@@ -153,7 +153,7 @@ function N(e) {
     let d = () => {
         c && l(!0);
     };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: _.container,
         children: [
             c
@@ -162,26 +162,26 @@ function N(e) {
                           (0, r.jsx)(g.r, {
                               upload: a[0],
                               size: h.q.SMALL,
-                              onMouseEnter: d
+                              onMouseEnter: d,
                           }),
                           !n &&
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: _.badge,
-                                  children: s
-                              })
-                      ]
+                                  children: s,
+                              }),
+                      ],
                   })
                 : (0, r.jsx)(S, {
                       onMouseEnter: d,
-                      channelId: t
+                      channelId: t,
                   }),
             n &&
                 (0, r.jsx)(T, {
                     channelId: t,
                     closePopout: () => {
                         l(!1);
-                    }
-                })
-        ]
+                    },
+                }),
+        ],
     });
 }

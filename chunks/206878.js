@@ -1,28 +1,28 @@
-(a.d(t, { g: () => O }), a(388685), a(35282));
+a.d(t, { g: () => O }), a(388685), a(35282);
 var n = a(73800),
     r = a(281598);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(a);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(a).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = a[t]),
+                (n = a[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -44,27 +44,35 @@ function i(e, t) {
         e
     );
 }
-let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO_LOGO, r.jE.PDP_BACKGROUND, r.jE.PDP_LOGO, r.jE.MOBILE_BANNER, r.jE.MOBILE_BACKGROUND]),
-    o = ['intro', 'idle', 'reduced_motion', 'static', 'thumbnail'],
+let s = new Set([
+        r.jE.SHOP_ALL_BANNER_STATIC,
+        r.jE.HERO_BANNER_STATIC,
+        r.jE.HERO_LOGO,
+        r.jE.PDP_BACKGROUND,
+        r.jE.PDP_LOGO,
+        r.jE.MOBILE_BANNER,
+        r.jE.MOBILE_BACKGROUND,
+    ]),
+    o = ["intro", "idle", "reduced_motion", "static", "thumbnail"],
     c = {
         max: 5000000,
-        warn: 2000000
+        warn: 2000000,
     },
     d = {
         max: 3000000,
-        warn: 1000000
+        warn: 1000000,
     },
     u = {
         max: 2000000,
-        warn: 1000000
+        warn: 1000000,
     },
     m = {
         max: 1000000,
-        warn: 500000
+        warn: 500000,
     },
     x = {
         max: 250000,
-        warn: 50000
+        warn: 50000,
     },
     h = {
         [r.aB.PROFILE_EFFECT]: c,
@@ -85,7 +93,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
         [r.jE.MOBILE_BACKGROUND]: x,
         [r.jE.PDP_BACKGROUND]: x,
         [r.jE.PDP_LOGO]: x,
-        [r.jE.COACHTIP_AVATAR]: x
+        [r.jE.COACHTIP_AVATAR]: x,
     },
     p = async (e) => {
         let t = Object.values(r.CM),
@@ -96,26 +104,31 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
     },
     f = (e) => {
         let { files: t, addWarning: a } = e;
-        t.ignoredFilenames.length > 0 && a('Contains unrecognized files', t.ignoredFilenames);
+        t.ignoredFilenames.length > 0 && a("Contains unrecognized files", t.ignoredFilenames);
     },
     b = (e) => {
         let { names: t, addError: a } = e,
             n = /^[a-z0-9]+(_[a-z0-9]+)*(\.[a-z0-9]+)?$/,
             r = t.filter((e) => !n.test(e));
-        r.length > 0 && a('File names must be in lowercase snake case', r);
+        r.length > 0 && a("File names must be in lowercase snake case", r);
     },
     v = (e, t, a, n) => {
         let r = t.size,
-            l = r > 1000000 ? ''.concat((r / 1000000).toFixed(2), 'MB') : ''.concat((r / 1000).toFixed(2), 'KB'),
-            i = ''.concat(t.name, ' - ').concat(l);
+            l = r > 1000000 ? "".concat((r / 1000000).toFixed(2), "MB") : "".concat((r / 1000).toFixed(2), "KB"),
+            i = "".concat(t.name, " - ").concat(l);
         if (r > e.max) {
-            let t = e.max > 1000000 ? ''.concat(Math.round(e.max / 1000000), 'MB') : ''.concat(Math.round(e.max / 1000), 'KB');
-            a('Files exceed the recommended size limit - make sure they are optimized!', [''.concat(i, ' (max: ').concat(t, ')')]);
-        } else r > e.warn && n("Files are a tad chonky - are you sure they're optimized?", [''.concat(i)]);
+            let t =
+                e.max > 1000000
+                    ? "".concat(Math.round(e.max / 1000000), "MB")
+                    : "".concat(Math.round(e.max / 1000), "KB");
+            a("Files exceed the recommended size limit - make sure they are optimized!", [
+                "".concat(i, " (max: ").concat(t, ")"),
+            ]);
+        } else r > e.warn && n("Files are a tad chonky - are you sure they're optimized?", ["".concat(i)]);
     },
     j = (e, t, a, n) => {
         let r = h[e];
-        if (null != r) for (let e of t) e.name.endsWith('.txt') || v(r, e, a, n);
+        if (null != r) for (let e of t) e.name.endsWith(".txt") || v(r, e, a, n);
     },
     g = (e, t, a) => {
         for (let n of e) {
@@ -126,71 +139,80 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
     },
     _ = (e) => {
         let { files: t, addError: a, addWarning: n } = e;
-        (g(t.collectionFiles, a, n),
+        g(t.collectionFiles, a, n),
             b({
                 names: t.collectionFiles.map((e) => e.name),
-                addError: a
-            }));
+                addError: a,
+            });
         let l = new Set(t.collectionFiles.map((e) => e.name)),
             i = Array.from(s).filter((e) => !l.has(e));
-        i.length > 0 && a('Missing required files', i);
+        i.length > 0 && a("Missing required files", i);
         let o = Object.values(r.jE)
             .filter((e) => !s.has(e))
             .filter((e) => !l.has(e));
-        o.length > 0 && n('Missing optional assets', o);
+        o.length > 0 && n("Missing optional assets", o);
     },
     y = (e) => {
         let { files: t, addError: a, addWarning: n } = e;
-        (b({
+        b({
             names: Object.keys(t.profileEffectFilesMap),
-            addError: a
+            addError: a,
         }),
             Object.entries(t.profileEffectFilesMap).forEach((e) => {
                 let [t, l] = e,
                     i = l.map((e) => e.name);
-                (b({
+                b({
                     names: i.map((e) => {
-                        let t = e.indexOf('-');
+                        let t = e.indexOf("-");
                         return e.substring(0, t > 0 ? t : e.length);
                     }),
-                    addError: a
+                    addError: a,
                 }),
-                    j(r.aB.PROFILE_EFFECT, l, a, n));
-                let s = o.filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith('.png'))).map((e) => ''.concat(t, '/').concat(e));
-                (s.length > 0 && a('Missing required PFX files with prefix', s), i.some((e) => e.endsWith('.txt')) || a('PFX configs required - please include both exports! (exception: duplicate variant configs are optional)', [t]));
-                let c = i.filter((e) => !o.some((t) => e.startsWith(t)) && !e.endsWith('.txt')).map((e) => ''.concat(t, '/').concat(e));
-                c.length > 0 && n('Contains unrecognized files', c);
-            }));
+                    j(r.aB.PROFILE_EFFECT, l, a, n);
+                let s = o
+                    .filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith(".png")))
+                    .map((e) => "".concat(t, "/").concat(e));
+                s.length > 0 && a("Missing required PFX files with prefix", s),
+                    i.some((e) => e.endsWith(".txt")) ||
+                        a(
+                            "PFX configs required - please include both exports! (exception: duplicate variant configs are optional)",
+                            [t],
+                        );
+                let c = i
+                    .filter((e) => !o.some((t) => e.startsWith(t)) && !e.endsWith(".txt"))
+                    .map((e) => "".concat(t, "/").concat(e));
+                c.length > 0 && n("Contains unrecognized files", c);
+            });
     },
     C = (e) => {
         let { files: t, addError: a, addWarning: n } = e;
-        (b({
+        b({
             names: t.avatarDecorationFiles.map((e) => e.name),
-            addError: a
+            addError: a,
         }),
-            j(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, a, n));
+            j(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, a, n);
     },
     N = (e, t, a) => {
-        (_({
+        _({
             files: e,
             addError: a,
-            addWarning: t
+            addWarning: t,
         }),
             y({
                 files: e,
                 addError: a,
-                addWarning: t
+                addWarning: t,
             }),
             C({
                 files: e,
                 addError: a,
-                addWarning: t
+                addWarning: t,
             }),
             f({
                 files: e,
                 addError: a,
-                addWarning: t
-            }));
+                addWarning: t,
+            });
     },
     O = () => {
         let [e, t] = n.useState(!1),
@@ -202,7 +224,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                     var n;
                     let r = null != (n = a[e]) ? n : [];
                     return i(l({}, a), {
-                        [e]: [...r, ...t]
+                        [e]: [...r, ...t],
                     });
                 });
             }, []),
@@ -212,12 +234,12 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                     var n;
                     let r = null != (n = a[e]) ? n : [];
                     return i(l({}, a), {
-                        [e]: [...r, ...t]
+                        [e]: [...r, ...t],
                     });
                 });
             }, []),
             m = n.useCallback(() => {
-                (t(!1), c({}), s({}));
+                t(!1), c({}), s({});
             }, []);
         return {
             validationComplete: e,
@@ -226,20 +248,20 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
             validateShopAssetPackage: n.useCallback(
                 async (e) => {
                     try {
-                        if (0 === e.length) return void d('No files found');
-                        if (e.length > 1) return void d('Uploaded multiple files. Expected 1 directory.');
+                        if (0 === e.length) return void d("No files found");
+                        if (e.length > 1) return void d("Uploaded multiple files. Expected 1 directory.");
                         let t = e[0];
-                        if (!t.isDirectory) return void d('Uploaded a file. Expected a directory.');
+                        if (!t.isDirectory) return void d("Uploaded a file. Expected a directory.");
                         let a = await p(t);
-                        if (a.length > 0) return void d('Missing required directories', a);
+                        if (a.length > 0) return void d("Missing required directories", a);
                         let n = await (0, r.LY)([t]);
                         N(n, u, d);
                     } finally {
                         t(!0);
                     }
                 },
-                [d, u]
+                [d, u],
             ),
-            reset: m
+            reset: m,
         };
     };

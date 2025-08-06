@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => $ }), n(583741), n(997841), n(388685));
+n.d(t, { Z: () => $ }), n(583741), n(997841), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -53,7 +53,7 @@ function X(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -63,25 +63,37 @@ function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 X(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 class J extends i.PureComponent {
     componentDidUpdate(e) {
         var t, n, r, i, l, s;
-        let { voiceChannelId: u, voiceChannelGuildId: p, voiceChannelType: _, voiceChannelBitrate: O, videoEnabled: y, isScreenSharing: v, runningGame: w, runningGamePid: R, selectedChannelId: M, selectedGuildId: U, connected: V } = this.props;
+        let {
+            voiceChannelId: u,
+            voiceChannelGuildId: p,
+            voiceChannelType: _,
+            voiceChannelBitrate: O,
+            videoEnabled: y,
+            isScreenSharing: v,
+            runningGame: w,
+            runningGamePid: R,
+            selectedChannelId: M,
+            selectedGuildId: U,
+            connected: V,
+        } = this.props;
         if (e.voiceChannelId !== u && null != e.voiceChannelId) {
             let t = b.ZP.getCurrentGameForAnalytics(),
-                n = null != t ? t.name : '',
+                n = null != t ? t.name : "",
                 r = j.Z.getStageInstanceByChannel(e.voiceChannelId),
                 i = E.ZP.getActiveEventByChannel(e.voiceChannelId);
             W.default.track(
@@ -99,23 +111,29 @@ class J extends i.PureComponent {
                         game_id: this.props.gameId,
                         media_session_id: k.Z.getMediaSessionId(),
                         stage_instance_id: null == r ? void 0 : r.id,
-                        guild_scheduled_event_id: null == i ? void 0 : i.id
+                        guild_scheduled_event_id: null == i ? void 0 : i.id,
                     },
                     (0, c.kO)(e.voiceChannelGuildId, e.voiceChannelId, e.videoEnabled),
                     k.Z.getVoiceStateStats(),
-                    f.Z.getSelectedParticipantStats(e.voiceChannelId)
-                )
+                    f.Z.getSelectedParticipantStats(e.voiceChannelId),
+                ),
             );
         }
         if (e.voiceChannelId !== u && null != u) {
             let e = b.ZP.getCurrentGameForAnalytics(),
-                t = null != e ? e.name : '',
+                t = null != e ? e.name : "",
                 n = j.Z.getStageInstanceByChannel(u),
                 r = E.ZP.getActiveEventByChannel(u);
-            ((0, c.yw)(q.rMx.CHANNEL_OPENED, Q({}, (0, c.$H)(u))), (0, d.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: u }));
+            (0, c.yw)(q.rMx.CHANNEL_OPENED, Q({}, (0, c.$H)(u))),
+                (0, d.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: u });
             let i = null,
                 l = z.default.getFocusedPID();
-            (null != l && N.default.getOverlayMethod(l) !== C.gl.Disabled && (z.default.isInstanceLocked() ? (i = q.ADE.OVERLAY_LOCKED_ACTIVATED) : z.default.isInstanceLocked() || (i = z.default.isPinned(q.Odu.TEXT) ? q.ADE.OVERLAY_UNLOCKED_PINNED : q.ADE.OVERLAY_UNLOCKED)),
+            null != l &&
+                N.default.getOverlayMethod(l) !== C.gl.Disabled &&
+                (z.default.isInstanceLocked()
+                    ? (i = q.ADE.OVERLAY_LOCKED_ACTIVATED)
+                    : z.default.isInstanceLocked() ||
+                      (i = z.default.isPinned(q.Odu.TEXT) ? q.ADE.OVERLAY_UNLOCKED_PINNED : q.ADE.OVERLAY_UNLOCKED)),
                 W.default.track(
                     q.rMx.JOIN_VOICE_CHANNEL,
                     Q(
@@ -130,14 +148,20 @@ class J extends i.PureComponent {
                             game_id: this.props.gameId,
                             stage_instance_id: null == n ? void 0 : n.id,
                             guild_scheduled_event_id: null == r ? void 0 : r.id,
-                            was_moved: k.Z.getWasMoved()
+                            was_moved: k.Z.getWasMoved(),
                         },
                         (0, c.oG)(p, u),
-                        (0, c.kO)(p, u, y)
-                    )
-                ));
+                        (0, c.kO)(p, u, y),
+                    ),
+                );
         }
-        let H = null != w && null != w.distributor && null != w.sku && null != e.runningGame && e.runningGame.distributor === w.distributor && w.sku === e.runningGame.sku,
+        let H =
+                null != w &&
+                null != w.distributor &&
+                null != w.sku &&
+                null != e.runningGame &&
+                e.runningGame.distributor === w.distributor &&
+                w.sku === e.runningGame.sku,
             B = null != e.runningGame && null != w && e.runningGame.isLauncher !== w.isLauncher;
         if (e.runningGame !== w && null != w && !w.isLauncher && (!H || B)) {
             let e = x.Z.getGameByName(w.name),
@@ -146,14 +170,14 @@ class J extends i.PureComponent {
                 d = A.SE.getSetting(),
                 h = c.filter((e) => !d.includes(e)).slice(0, 200),
                 f = null;
-            f = null != s ? 'custom_override' : null != e ? 'verified_game' : 'launcher';
+            f = null != s ? "custom_override" : null != e ? "verified_game" : "launcher";
             let E = N.default.getTrackedGameByPid(w.pid),
                 y = (0, b.b6)(w),
                 v = {
                     enabledOOP: null != (t = null == E ? void 0 : E.oopEnabled) ? t : y.enabledOOP,
                     enabledLegacy: null != (n = null == E ? void 0 : E.legacyEnabled) ? n : y.enabledLegacy,
                     overlayMethod: null != (r = null == E ? void 0 : E.overlayMethod) ? r : y.overlayMethod,
-                    source: null != (i = null == E ? void 0 : E.source) ? i : y.source
+                    source: null != (i = null == E ? void 0 : E.source) ? i : y.source,
                 },
                 j = null != (l = N.default.getOverlayMethod(w.pid)) ? l : v.overlayMethod;
             if (
@@ -161,11 +185,11 @@ class J extends i.PureComponent {
                     var t;
                     let n = await (0, T.hj)(w.pid),
                         { gameName: r, gameId: i, exe: l, distributor: a } = (0, m.G8)(w),
-                        s = (0, S.NW)('ChatAutoAnalytics', !1),
+                        s = (0, S.NW)("ChatAutoAnalytics", !1),
                         c = v.enabledLegacy || (s && v.enabledOOP),
                         d = I.v.legacyEnabled || (s && I.v.oopEnabled),
                         g = v.source;
-                    (W.default.track(q.rMx.LAUNCH_GAME, {
+                    W.default.track(q.rMx.LAUNCH_GAME, {
                         game: r,
                         game_id: i,
                         verified: null != e && (0, m.vp)(l, null == e ? void 0 : e.executables),
@@ -190,37 +214,37 @@ class J extends i.PureComponent {
                         voice_channel_guild_id: p,
                         distributor_game_id: w.sku,
                         hidden_by_distributor: w.hidden,
-                        game_metadata: (0, P.sD)(w)
+                        game_metadata: (0, P.sD)(w),
                     }),
-                        null != l && b.ZP.addExecutableTrackedByAnalytics(l));
+                        null != l && b.ZP.addExecutableTrackedByAnalytics(l);
                 }, 10000),
                 null != w.name && null != R && x.Z.shouldReport(w.name))
             ) {
                 let e = w.name;
                 a.Z.identifyGame(R, e)
                     .then((e) => a.Z.reportUnverifiedGame(e))
-                    .catch((e) => new g.Z('AutoAnalytics').error('Cannot identify game', e));
+                    .catch((e) => new g.Z("AutoAnalytics").error("Cannot identify game", e));
             }
         }
         if ((e.videoEnabled !== y || e.isScreenSharing !== v) && null != u) {
-            let e = 'none',
-                t = [v ? 'screen' : null, y ? 'camera' : null].filter(K.lm),
+            let e = "none",
+                t = [v ? "screen" : null, y ? "camera" : null].filter(K.lm),
                 n = null;
-            (v ? ((e = 'screen'), (n = (0, h.t)())) : y && (e = 'camera'),
+            v ? ((e = "screen"), (n = (0, h.t)())) : y && (e = "camera"),
                 W.default.track(
                     q.rMx.VIDEO_INPUT_TOGGLED,
                     Q(
                         {
                             video_input_type: e,
-                            video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
+                            video_toggle_source: __OVERLAY__ ? "overlay" : "app",
                             enabled_inputs: t,
-                            preview_enabled: A.qF.getSetting()
+                            preview_enabled: A.qF.getSetting(),
                         },
                         n,
                         this.getGameMetadata(),
-                        (0, c.AB)(u)
-                    )
-                ));
+                        (0, c.AB)(u),
+                    ),
+                );
         }
         if (V && null != M && (!e.connected || M !== e.selectedChannelId || U !== e.selectedGuildId)) {
             let t = e.selectedChannelId,
@@ -233,19 +257,23 @@ class J extends i.PureComponent {
                         .reverse()
                         .find((e) => {
                             var t;
-                            return (0, Y.yE)(e.flags, q.iLy.IS_CROSSPOST) && (null == (t = e.messageReference) ? void 0 : t.guild_id) === '667560445975986187';
+                            return (
+                                (0, Y.yE)(e.flags, q.iLy.IS_CROSSPOST) &&
+                                (null == (t = e.messageReference) ? void 0 : t.guild_id) === "667560445975986187"
+                            );
                         });
                 W.default.track(
                     q.rMx.ACK_COMMUNITY_MESSAGES,
                     Q(
                         {
                             last_message_id: null == i ? void 0 : i.id,
-                            last_message_reference_message_id: null == i || null == (s = i.messageReference) ? void 0 : s.message_id,
-                            messages_loaded: e.hasFetched
+                            last_message_reference_message_id:
+                                null == i || null == (s = i.messageReference) ? void 0 : s.message_id,
+                            messages_loaded: e.hasFetched,
                         },
                         (0, c.v_)(n),
-                        (0, c.hH)(r.id)
-                    )
+                        (0, c.hH)(r.id),
+                    ),
                 );
             }
         }
@@ -255,14 +283,14 @@ class J extends i.PureComponent {
             game_platform: this.props.gamePlatform,
             game_name: this.props.gameName,
             game_exe_name: this.props.gameExeName,
-            game_id: this.props.gameId
+            game_id: this.props.gameId,
         };
     }
     render() {
         return null;
     }
     constructor(...e) {
-        (super(...e), X(this, 'isMessageRequestsInitialized', !1));
+        super(...e), X(this, "isMessageRequestsInitialized", !1);
     }
 }
 function $() {
@@ -274,14 +302,15 @@ function $() {
         g = (0, l.e7)([U.Z], () => U.Z.getGuildId(), []),
         m = (0, l.e7)([L.Z], () => L.Z.getGuild(g), [g]),
         E = (0, l.e7)([H.default], () => H.default.getCurrentUser(), []),
-        I = (0, l.e7)(
-            [w.ZP],
-            () => {
-                var e, t;
-                return null != E && null != g && null != (t = null == (e = w.ZP.getMember(g, E.id)) ? void 0 : e.isPending) && t;
-            },
-            [E, g]
-        ),
+        I = (0, l.e7)([w.ZP], () => {
+            var e, t;
+            return (
+                null != E &&
+                null != g &&
+                null != (t = null == (e = w.ZP.getMember(g, E.id)) ? void 0 : e.isPending) &&
+                t
+            );
+        }, [E, g]),
         C = (0, l.e7)([F.ZP], () => F.ZP.getState().section, []),
         S = (0, l.e7)([B.Z], () => B.Z.getHomeLink(), []),
         N = (0, l.e7)([_.Z], () => _.Z.isConnected(), []),
@@ -313,17 +342,27 @@ function $() {
             isMemberPending: I,
             postableChannelCount: x,
             isTextInVoice: a,
-            numMessageRequests: D
+            numMessageRequests: D,
         },
         z = i.useRef(k);
     i.useEffect(() => {
         z.current = k;
     }, [k]);
-    let { connected: Y, friendsTabSection: K, homeLink: X, isMemberPending: $, selectedChannelId: ee, selectedGuildId: et } = k;
-    (i.useEffect(() => {
+    let {
+        connected: Y,
+        friendsTabSection: K,
+        homeLink: X,
+        isMemberPending: $,
+        selectedChannelId: ee,
+        selectedGuildId: et,
+    } = k;
+    i.useEffect(() => {
         if (Y && null != ee) {
             let e = (0, u.K)(Z.Z.getChannel(ee), !0);
-            ((0, c.yw)(q.rMx.CHANNEL_OPENED, Q({}, e, (0, c.$H)(ee))), (0, d.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: ee }), z.current.isTextInVoice && (0, c.yw)(q.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: z.current.isNSFWChannel }));
+            (0, c.yw)(q.rMx.CHANNEL_OPENED, Q({}, e, (0, c.$H)(ee))),
+                (0, d.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: ee }),
+                z.current.isTextInVoice &&
+                    (0, c.yw)(q.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: z.current.isNSFWChannel });
         }
     }, [Y, ee]),
         i.useEffect(() => {
@@ -338,16 +377,21 @@ function $() {
                         $
                             ? {
                                   is_pending: $,
-                                  preview_enabled: z.current.hasPreviewEnabled
+                                  preview_enabled: z.current.hasPreviewEnabled,
                               }
-                            : {}
+                            : {},
                     )),
                     (r = r =
                         {
                             postable_channels: z.current.postableChannelCount,
-                            premium_progress_bar_enabled: null != (t = null == (e = L.Z.getGuild(U.Z.getGuildId())) ? void 0 : e.premiumProgressBarEnabled) && t,
+                            premium_progress_bar_enabled:
+                                null !=
+                                    (t =
+                                        null == (e = L.Z.getGuild(U.Z.getGuildId()))
+                                            ? void 0
+                                            : e.premiumProgressBarEnabled) && t,
                             viewing_all_channels: !V.ZP.isOptInEnabled(et),
-                            num_recent_channels: y.Z.recentsChannelCount(et)
+                            num_recent_channels: y.Z.recentsChannelCount(et),
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -362,13 +406,20 @@ function $() {
                               Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
                     n);
-                ((0, c.yw)(q.rMx.GUILD_VIEWED, i), (0, d.a)(q.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: et }));
+                (0, c.yw)(q.rMx.GUILD_VIEWED, i), (0, d.a)(q.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: et });
             }
-        }, [Y, et, $]));
+        }, [Y, et, $]);
     let en = i.useRef(!1);
     return (
         i.useEffect(() => {
-            Y && null == et && X === q.Z5c.MESSAGE_REQUESTS && !en.current && ((en.current = !0), W.default.track(q.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: z.current.numMessageRequests }));
+            Y &&
+                null == et &&
+                X === q.Z5c.MESSAGE_REQUESTS &&
+                !en.current &&
+                ((en.current = !0),
+                W.default.track(q.rMx.MESSAGE_REQUESTS_INITIALIZED, {
+                    num_message_requests: z.current.numMessageRequests,
+                }));
         }, [Y, et, X]),
         (0, r.jsx)(J, Q({}, k))
     );

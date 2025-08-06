@@ -13,12 +13,12 @@ var r = n(990547),
         CURRENT_USER_UPDATE: (e) => r.AnalyticsActionHandlers.handleConnectionOpen(e),
         CONNECTION_CLOSED: () => r.AnalyticsActionHandlers.handleConnectionClosed(),
         FINGERPRINT: () => r.AnalyticsActionHandlers.handleFingerprint(),
-        TRACK: (e) => r.AnalyticsActionHandlers.handleTrack(e)
+        TRACK: (e) => r.AnalyticsActionHandlers.handleTrack(e),
     },
     TRACKING_URL: c.ANM.TRACK,
     waitFor: [l.default],
     getFingerprint: l.default.getFingerprint,
     getSessionId: () => (0, a.Gg)().then((e) => ({ sessionId: null == e ? void 0 : e.uuid })),
     getLaunchSignature: () => s.launchSignature,
-    scheduleWhenIdle: i.f
+    scheduleWhenIdle: i.f,
 });

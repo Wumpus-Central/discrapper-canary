@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(642613), n(388685));
+n.d(t, { Z: () => h }), n(642613), n(388685);
 var i = n(73800),
     r = n(884439),
     o = n(442837),
@@ -16,8 +16,14 @@ function h(e, t) {
         { treatmentType: c } = (0, a.ZB)(t);
     return i.useMemo(() => {
         if (null == c || null == n) return [];
-        let t = n.filter((t) => (0, d.dX)(t) && (0, d.m9)(t) && t.extra.application_id === e && u.default.age(t.id) < f);
-        return 'recency' === c ? t.sort((e, t) => u.default.compare(t.id, e.id)) : 'art' === c ? t.sort((e, t) => g(r, t) - g(r, e)) : t;
+        let t = n.filter(
+            (t) => (0, d.dX)(t) && (0, d.m9)(t) && t.extra.application_id === e && u.default.age(t.id) < f,
+        );
+        return "recency" === c
+            ? t.sort((e, t) => u.default.compare(t.id, e.id))
+            : "art" === c
+              ? t.sort((e, t) => g(r, t) - g(r, e))
+              : t;
     }, [n, e, c, r]);
 }
 let m = 30 * c.Z.Seconds.MINUTE;
@@ -29,7 +35,7 @@ function g(e, t) {
                 var n;
                 let i = e.get(t);
                 return (null != (n = null == i ? void 0 : i.communicationProbability) ? n : 0) + 0.0001;
-            })
+            }),
         ),
         o = Math.exp(-((u.default.age(t.id) / 1000 / m) * 0.01)),
         l = t.traits.some((e) => e.type !== r.N.DURATION_SECONDS),

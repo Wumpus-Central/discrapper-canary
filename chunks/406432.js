@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     CO: () => s,
     NU: () => b,
     X2: () => y,
     cb: () => E,
     d$: () => u,
-    tw: () => l
+    tw: () => l,
 }),
     n(388685),
-    n(35282));
+    n(35282);
 var r = n(358085);
 let i = (e, t) => {
         if (null == e) return !1;
@@ -16,12 +16,12 @@ let i = (e, t) => {
     },
     o = (e, t) => {
         if (null == e) return !1;
-        let [n, r] = e.split('/');
+        let [n, r] = e.split("/");
         return n === t;
     },
     a = /\.(png|jpe?g|webp|gif|heic|heif|dng|avif)$/i,
     s = (e) => null != e && a.test(e),
-    l = (e) => o(e, 'image'),
+    l = (e) => o(e, "image"),
     c = /\.(webp|gif|avif)$/i,
     u = (e) => i(e, c),
     d = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
@@ -33,4 +33,4 @@ let i = (e, t) => {
     g = (0, r.isIOS)() ? p : (0, r.isAndroid)() ? h : m,
     E = (e) => i(e, g),
     b = (e) => null != e && g.test(e),
-    y = (e) => o(e, 'video');
+    y = (e) => o(e, "video");

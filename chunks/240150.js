@@ -1,1 +1,1 @@
-e.exports = { primaryIcon: 'primaryIcon__962c6' };
+e.exports = { primaryIcon: "primaryIcon__962c6" };

@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,39 +74,39 @@ function h(e) {
                             p(
                                 f(
                                     {
-                                        header: u.intl.formatToPlainString(u.t['GOFk9/'], { name: _ }),
-                                        confirmText: u.intl.string(u.t['cY+Ooa']),
-                                        cancelText: u.intl.string(u.t['ETE/oK']),
+                                        header: u.intl.formatToPlainString(u.t["GOFk9/"], { name: _ }),
+                                        confirmText: u.intl.string(u.t["cY+Ooa"]),
+                                        cancelText: u.intl.string(u.t["ETE/oK"]),
                                         onConfirm: () =>
                                             s.Z.removeFriend({
                                                 userId: t.id,
                                                 applicationId: i,
-                                                location: 'Context Menu'
-                                            })
+                                                location: "Context Menu",
+                                            }),
                                     },
-                                    n
+                                    n,
                                 ),
                                 {
                                     children: (0, r.jsx)(o.Text, {
-                                        variant: 'text-md/normal',
+                                        variant: "text-md/normal",
                                         children: u.intl.format(u.t.dsU5bm, {
                                             name: _,
-                                            gameName: a
-                                        })
-                                    })
-                                }
-                            )
+                                            gameName: a,
+                                        }),
+                                    }),
+                                },
+                            ),
                         );
                 });
             },
-            [_, t]
+            [_, t],
         );
     return (0, c.Z)({
         user: t,
         gameRelationships: d,
-        menuItemId: 'remove-game-friend',
-        label: u.intl.string(u.t['RLcE6+']),
+        menuItemId: "remove-game-friend",
+        label: u.intl.string(u.t["RLcE6+"]),
         onClick: h,
-        color: 'danger'
+        color: "danger",
     });
 }

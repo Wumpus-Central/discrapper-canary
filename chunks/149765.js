@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     $e: () => T,
     Bw: () => h,
     Db: () => A,
@@ -10,9 +10,9 @@
     hX: () => b,
     r0: () => R,
     ug: () => P,
-    vB: () => g
+    vB: () => g,
 }),
-    n(368063));
+    n(368063);
 var r = n(654861),
     i = n.n(r);
 function o(e, t, n) {
@@ -22,7 +22,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -51,7 +51,7 @@ function d(e) {
     let t = [];
     for (let n = 0; n < e.length; n++) {
         let r = Number(e[n]);
-        for (let e = 0; r || e < t.length; e++) ((r += 10 * (t[e] || 0)), (t[e] = r % 16), (r = (r - t[e]) / 16));
+        for (let e = 0; r || e < t.length; e++) (r += 10 * (t[e] || 0)), (t[e] = r % 16), (r = (r - t[e]) / 16);
     }
     return t;
 }
@@ -79,7 +79,7 @@ class _ {
             let t = Math.min(e - i, s),
                 o = (1 << t) - 1,
                 a = n.length - Math.floor(i / s) - 1;
-            ((r |= (n[a] & o) << i), (i += t));
+            (r |= (n[a] & o) << i), (i += t);
         }
         return r;
     }
@@ -117,7 +117,7 @@ class _ {
         return this.toString();
     }
     constructor(e, t) {
-        (o(this, 'parts', void 0), o(this, 'str', void 0), (this.parts = e), (this.str = t));
+        o(this, "parts", void 0), o(this, "str", void 0), (this.parts = e), (this.str = t);
     }
 }
 let p = c();
@@ -128,7 +128,7 @@ p &&
     });
 let h = p
         ? function (e) {
-              return 'bigint' == typeof e;
+              return "bigint" == typeof e;
           }
         : function (e) {
               return e instanceof _;
@@ -139,7 +139,9 @@ let h = p
               return BigInt(e);
           }
         : function (e) {
-              return e instanceof _ ? e : ('number' == typeof e && (e = e.toString()), null != m[e] || (m[e] = _.fromString(e)), m[e]);
+              return e instanceof _
+                  ? e
+                  : ("number" == typeof e && (e = e.toString()), null != m[e] || (m[e] = _.fromString(e)), m[e]);
           },
     E = g(0),
     b = p

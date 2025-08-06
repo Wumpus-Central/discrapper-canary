@@ -6,8 +6,8 @@ e.exports = function (e, t) {
             var i = t[n];
             return r.create({
                 style: e,
-                entity: i
+                entity: i,
             });
-        })
+        }),
     );
 };

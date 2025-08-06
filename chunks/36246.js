@@ -10,12 +10,12 @@ var i = n(120356),
 function u(e) {
     let { guildId: t, children: n, className: i } = e,
         { horizontalScrollNotice: u, handleScroll: d, handleSetScrollerRef: h, handleSetContainerRef: p } = (0, o.Z)(t),
-        f = (0, r.jsx)('div', {
+        f = (0, r.jsx)("div", {
             className: c.tierPreviewsContainer,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: l()(c.tierPreviews, i),
-                children: n
-            })
+                children: n,
+            }),
         });
     return (
         a.tq ||
@@ -24,17 +24,17 @@ function u(e) {
                     u,
                     (0, r.jsx)(s.Den, {
                         className: c.scroller,
-                        orientation: 'horizontal',
+                        orientation: "horizontal",
                         ref: h,
                         onScroll: d,
-                        children: f
-                    })
-                ]
+                        children: f,
+                    }),
+                ],
             })),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: c.carouselMaxWidth,
             ref: p,
-            children: f
+            children: f,
         })
     );
 }

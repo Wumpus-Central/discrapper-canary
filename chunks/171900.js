@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685), n(539854));
+n.d(t, { Z: () => L }), n(388685), n(539854);
 var r,
     i = n(442837),
     o = n(570140),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,18 +22,36 @@ function d(e, t, n) {
 }
 class f {
     handleSearchStart() {
-        ((this.isFetching = !0), (this.isIndexing = !1), (this.analyticsId = null), (this.error = null));
+        (this.isFetching = !0), (this.isIndexing = !1), (this.analyticsId = null), (this.error = null);
     }
     handleSearchIndexing() {
-        ((this.isInitialFetchComplete = !0), (this.isIndexing = !0), (this.isHistoricalIndexing = !0), (this.isFetching = !1), (this.error = null));
+        (this.isInitialFetchComplete = !0),
+            (this.isIndexing = !0),
+            (this.isHistoricalIndexing = !0),
+            (this.isFetching = !1),
+            (this.error = null);
     }
     handleSearchFailure(e) {
-        ((this.isFetching = !1), (this.isIndexing = !1), (this.isInitialFetchComplete = !0), (this.isHistoricalIndexing = !1), (this.error = new a.Hx(e)), (this.analyticsId = null), (this.documentsIndexed = 0));
+        (this.isFetching = !1),
+            (this.isIndexing = !1),
+            (this.isInitialFetchComplete = !0),
+            (this.isHistoricalIndexing = !1),
+            (this.error = new a.Hx(e)),
+            (this.analyticsId = null),
+            (this.documentsIndexed = 0);
     }
     handleSearchSuccess(e, t, n) {
         var r;
         let { analyticsId: i, cursor: o, totalResults: a, doingHistoricalIndex: s, documentsIndexed: l } = e;
-        ((this.analyticsId = i), (this.isFetching = !1), (this.isIndexing = !1), (this.isInitialFetchComplete = !0), (this.isHistoricalIndexing = s), (this.error = null), (this.documentsIndexed = l), (this.cursor = o), (this.rawMessages = n));
+        (this.analyticsId = i),
+            (this.isFetching = !1),
+            (this.isIndexing = !1),
+            (this.isInitialFetchComplete = !0),
+            (this.isHistoricalIndexing = s),
+            (this.error = null),
+            (this.documentsIndexed = l),
+            (this.cursor = o),
+            (this.rawMessages = n);
         let c = [...(null != (r = this.messages) ? r : [])],
             u = [];
         return (
@@ -47,7 +65,19 @@ class f {
         );
     }
     constructor() {
-        (d(this, 'isIndexing', !1), d(this, 'isHistoricalIndexing', !1), d(this, 'isFetching', !1), d(this, 'analyticsId', null), d(this, 'error', null), d(this, 'rawMessages', null), d(this, 'messages', null), d(this, 'documentsIndexed', 0), d(this, 'totalResults', null), d(this, 'hasNextPage', !1), d(this, 'messageIds', new Set()), d(this, 'isInitialFetchComplete', !1), d(this, 'cursor', null));
+        d(this, "isIndexing", !1),
+            d(this, "isHistoricalIndexing", !1),
+            d(this, "isFetching", !1),
+            d(this, "analyticsId", null),
+            d(this, "error", null),
+            d(this, "rawMessages", null),
+            d(this, "messages", null),
+            d(this, "documentsIndexed", 0),
+            d(this, "totalResults", null),
+            d(this, "hasNextPage", !1),
+            d(this, "messageIds", new Set()),
+            d(this, "isInitialFetchComplete", !1),
+            d(this, "cursor", null);
     }
 }
 let _ = new Map(),
@@ -59,19 +89,19 @@ function m(e) {
 }
 function g(e) {
     let t = m(e);
-    return (_.set(e, t), t);
+    return _.set(e, t), t;
 }
 function E(e, t) {
     let n = p.get(e);
     if (null == n) return !1;
     let r = t(n);
-    return (p.set(e, r), !0);
+    return p.set(e, r), !0;
 }
 function b(e, t) {
     return t(m(e));
 }
 function y() {
-    ((_ = new Map()), (p = new Map()), (h = new Map()));
+    (_ = new Map()), (p = new Map()), (h = new Map());
 }
 function O(e) {
     e.ids.forEach((e) => {
@@ -107,7 +137,7 @@ function T(e) {
     let o = c.default.getId() === r;
     return E(n, (n) => {
         let { reactionType: r } = e;
-        return 'MESSAGE_REACTION_ADD' === t ? n.addReaction(i, o, e.colors, r) : n.removeReaction(i, o, r);
+        return "MESSAGE_REACTION_ADD" === t ? n.addReaction(i, o, e.colors, r) : n.removeReaction(i, o, r);
     });
 }
 function S(e) {
@@ -117,7 +147,7 @@ function S(e) {
 }
 function A(e) {
     let { messageId: t } = e;
-    return E(t, (e) => e.set('reactions', []));
+    return E(t, (e) => e.set("reactions", []));
 }
 function N(e) {
     let { messageId: t, emoji: n } = e;
@@ -136,15 +166,15 @@ function R(e) {
 function P(e) {
     let t = _.get(e.id);
     if (null == t) return !1;
-    (t.messageIds.forEach((e) => {
+    t.messageIds.forEach((e) => {
         var t;
         let n = null != (t = h.get(e)) ? t : 0;
         n <= 1 ? (p.delete(e), h.delete(e)) : h.set(e, n - 1);
     }),
-        _.delete(e.id));
+        _.delete(e.id);
 }
 function w(e) {
-    ((_ = new Map()), (p = new Map()), (h = new Map()));
+    (_ = new Map()), (p = new Map()), (h = new Map());
 }
 class D extends (r = i.ZP.Store) {
     initialize() {
@@ -193,7 +223,7 @@ class D extends (r = i.ZP.Store) {
         return _.has(e);
     }
 }
-d(D, 'displayName', 'SearchMessageStore');
+d(D, "displayName", "SearchMessageStore");
 let L = new D(o.Z, {
     SEARCH_MESSAGES_START: O,
     SEARCH_MESSAGES_SUCCESS: v,
@@ -207,5 +237,5 @@ let L = new D(o.Z, {
     MESSAGE_REACTION_REMOVE: T,
     MESSAGE_REACTION_REMOVE_ALL: A,
     MESSAGE_REACTION_REMOVE_EMOJI: N,
-    CONNECTION_OPEN: y
+    CONNECTION_OPEN: y,
 });

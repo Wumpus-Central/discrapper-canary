@@ -11,16 +11,16 @@ var r = n(255367),
     h = n(714509),
     p = n(375613);
 function f() {
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()(h.row, h.rowGuildName),
-        children: (0, r.jsx)('span', {
+        children: (0, r.jsx)("span", {
             className: o()(h.guildNameText, h.guildNameTextLimitedSize, d.tooltipText),
-            children: u.intl.string(u.t['4tSWQk'])
-        })
+            children: u.intl.string(u.t["4tSWQk"]),
+        }),
     });
 }
 let g = i.memo(function (e) {
-    let { 'aria-label': t = !1, children: n } = e,
+    let { "aria-label": t = !1, children: n } = e,
         l = (function () {
             let { favoriteAdded: e, clearFavoriteAdded: t } = (0, a.up)();
             return (
@@ -30,7 +30,7 @@ let g = i.memo(function (e) {
                             t();
                         }, 1500);
                         return () => {
-                            (t(), clearTimeout(e));
+                            t(), clearTimeout(e);
                         };
                     }
                 }, [e, t]),
@@ -42,37 +42,37 @@ let g = i.memo(function (e) {
         color: s.FGA.GREEN,
         hideOnClick: !0,
         spacing: 12,
-        position: 'right',
-        align: 'center',
+        position: "right",
+        align: "center",
         text: (0, r.jsx)(f, {}),
-        'aria-label': t,
+        "aria-label": t,
         tooltipClassName: p.listItemTooltip,
         children: (e) => {
             var t, i;
             return (0, r.jsx)(
-                'div',
+                "div",
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -80,7 +80,7 @@ let g = i.memo(function (e) {
                     {
                         onMouseEnter: c.dG4,
                         onMouseLeave: c.dG4,
-                        children: n
+                        children: n,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
@@ -94,8 +94,8 @@ let g = i.memo(function (e) {
                       })(Object(i)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
-                t)
+                t),
             );
-        }
+        },
     });
 });

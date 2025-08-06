@@ -9,7 +9,7 @@ let c = [];
 function d(e) {
     let { revision: t, emojis: n } = (0, i.cj)([s.Z], () => ({
             revision: s.Z.getEmojiRevision(e),
-            emojis: s.Z.getEmojis(e)
+            emojis: s.Z.getEmojis(e),
         })),
         d = (0, a.Z)(t);
     return (

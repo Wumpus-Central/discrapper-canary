@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     g: () => v,
-    u: () => _
+    u: () => _,
 }),
-    n(290780));
+    n(290780);
 var r = n(255367),
     i = n(73800),
     l = n(106351),
@@ -17,13 +17,13 @@ var r = n(255367),
     p = n(594174),
     h = n(434404),
     f = n(388032);
-let x = 'NO_CHANNEL';
+let x = "NO_CHANNEL";
 function b(e) {
     return {
         value: e.id,
         label: (0, c.F6)(e, p.default, g.Z),
         channel: e,
-        category: u.Z.getChannel(e.parent_id)
+        category: u.Z.getChannel(e.parent_id),
     };
 }
 function j(e) {
@@ -34,7 +34,7 @@ function j(e) {
     return (0, r.jsx)(s.ZZ$, {
         title: n,
         icon: o,
-        subtitle: null != a ? u : null
+        subtitle: null != a ? u : null,
     });
 }
 function v(e) {
@@ -53,7 +53,7 @@ function v(e) {
             return (
                 e.unshift({
                     value: x,
-                    label: f.intl.string(f.t.wGiHkJ)
+                    label: f.intl.string(f.t.wGiHkJ),
                 }),
                 e
             );
@@ -66,7 +66,7 @@ function v(e) {
         value: null != s ? s : x,
         options: d,
         canManageGuild: t,
-        onChange: u
+        onChange: u,
     });
 }
 function _(e) {
@@ -85,7 +85,7 @@ function _(e) {
             return (
                 e.unshift({
                     value: x,
-                    label: f.intl.string(f.t.ibUhoa)
+                    label: f.intl.string(f.t.ibUhoa),
                 }),
                 e
             );
@@ -98,7 +98,7 @@ function _(e) {
         value: null != s ? s : x,
         options: d,
         canManageGuild: t,
-        onChange: u
+        onChange: u,
     });
 }
 function O(e) {
@@ -113,6 +113,6 @@ function O(e) {
         isDisabled: !l,
         onChange: a,
         renderOptionLabel: o,
-        renderOptionValue: c
+        renderOptionValue: c,
     });
 }

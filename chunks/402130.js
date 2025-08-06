@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -17,24 +17,24 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -51,26 +51,26 @@ function y(e) {
         }, []),
         i.useEffect(() => {
             (0, h.Z)(null != y ? y : n, {
-                type: 'sidebar',
+                type: "sidebar",
                 withMutualFriendsCount: (null == y ? void 0 : y.bot) !== !0,
                 withMutualFriends: !1,
                 withMutualGuilds: !0,
-                channelId: t.id
+                channelId: t.id,
             });
         }, [y, n, t.id]),
         null == y || null == x || !j)
     )
         return null;
-    let v = 'user-profile-sidebar-heading-'.concat(y.id),
+    let v = "user-profile-sidebar-heading-".concat(y.id),
         C = c.ZP.getName(null, t.id, y);
-    return (0, r.jsx)('aside', {
-        'aria-labelledby': v,
+    return (0, r.jsx)("aside", {
+        "aria-labelledby": v,
         children: (0, r.jsx)(a.y5t, {
             component: (0, r.jsx)(a.nn4, {
                 children: (0, r.jsx)(a.H, {
                     id: v,
-                    children: m.intl.format(m.t.KRe1Fh, { name: C })
-                })
+                    children: m.intl.format(m.t.KRe1Fh, { name: C }),
+                }),
             }),
             children: _
                 ? (0, r.jsx)(
@@ -79,10 +79,10 @@ function y(e) {
                           {
                               user: y,
                               currentUser: x,
-                              onHide: O
+                              onHide: O,
                           },
-                          e
-                      )
+                          e,
+                      ),
                   )
                 : y.isNonUserBot()
                   ? (0, r.jsx)(
@@ -90,21 +90,21 @@ function y(e) {
                         b(
                             {
                                 user: y,
-                                currentUser: x
+                                currentUser: x,
                             },
-                            e
-                        )
+                            e,
+                        ),
                     )
                   : (0, r.jsx)(
                         g.Z,
                         b(
                             {
                                 user: y,
-                                currentUser: x
+                                currentUser: x,
                             },
-                            e
-                        )
-                    )
-        })
+                            e,
+                        ),
+                    ),
+        }),
     });
 }

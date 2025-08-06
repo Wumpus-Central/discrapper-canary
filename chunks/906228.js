@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685));
+n.d(t, { Z: () => u }), n(388685);
 var r = n(243814),
     i = n(120960),
     l = n(996106),
@@ -9,7 +9,7 @@ var r = n(243814),
 let u = {
     [s.Etm.SET_CERTIFIED_DEVICES]: {
         scope: {
-            [o.Gp.ANY]: [r.x.RPC, o.lH]
+            [o.Gp.ANY]: [r.x.RPC, o.lH],
         },
         validation: (e) =>
             (0, a.Z)(e)
@@ -23,28 +23,28 @@ let u = {
                                 .required()
                                 .keys({
                                     name: e.string().min(1),
-                                    url: e.string().min(1)
+                                    url: e.string().min(1),
                                 }),
                             model: (0, a.Z)(e)
                                 .required()
                                 .keys({
                                     name: e.string().min(1),
-                                    url: e.string().min(1)
+                                    url: e.string().min(1),
                                 }),
                             related: e.array().items(e.string().min(1)),
                             echo_cancellation: e.boolean(),
                             noise_suppression: e.boolean(),
                             automatic_gain_control: e.boolean(),
-                            hardware_mute: e.boolean()
-                        })
-                    )
+                            hardware_mute: e.boolean(),
+                        }),
+                    ),
                 }),
         handler(e) {
             let {
                 socket: t,
-                args: { devices: n }
+                args: { devices: n },
             } = e;
-            if (null == t.application.id) throw new l.Z({ errorCode: s.lTL.INVALID_COMMAND }, 'No application.');
+            if (null == t.application.id) throw new l.Z({ errorCode: s.lTL.INVALID_COMMAND }, "No application.");
             (0, i.N)(
                 t.application.id,
                 n.map((e) => ({
@@ -56,9 +56,9 @@ let u = {
                     echoCancellation: e.echo_cancellation,
                     noiseSuppression: e.noise_suppression,
                     automaticGainControl: e.automatic_gain_control,
-                    hardwareMute: e.hardware_mute
-                }))
+                    hardwareMute: e.hardware_mute,
+                })),
             );
-        }
-    }
+        },
+    },
 };

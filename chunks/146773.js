@@ -24,34 +24,38 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
-let E = 'DRAGGABLE_GUILD_CHANNEL';
+let E = "DRAGGABLE_GUILD_CHANNEL";
 function S(e, t) {
     var n, r;
     if (null == e || null == t) return null;
     if (e !== v.I_8) return f.Z.getChannel(t);
     let i = m.ZP.getChannels(e),
-        l = null != (r = null != (n = i[m.sH].find((e) => e.channel.id === t)) ? n : i[m.Zb].find((e) => e.channel.id === t)) ? r : i[v.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
+        l =
+            null !=
+            (r = null != (n = i[m.sH].find((e) => e.channel.id === t)) ? n : i[m.Zb].find((e) => e.channel.id === t))
+                ? r
+                : i[v.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
     return null == l ? void 0 : l.channel;
 }
 function x(e) {
@@ -78,16 +82,19 @@ function x(e) {
                                 n = f.Z.getChannel(t);
                             if (null == n) return !1;
                             let r = f.Z.getChannel(n.parent_id);
-                            return n.type === v.d4z.GUILD_CATEGORY || null == r ? O.Z.can(v.Plq.MANAGE_CHANNELS, p) : O.Z.can(v.Plq.MANAGE_CHANNELS, r);
+                            return n.type === v.d4z.GUILD_CATEGORY || null == r
+                                ? O.Z.can(v.Plq.MANAGE_CHANNELS, p)
+                                : O.Z.can(v.Plq.MANAGE_CHANNELS, r);
                         })),
                         d.parent_id !== c.parentId &&
                             m.find((e) => {
                                 if (e.id !== d.id) return !1;
                                 let t = f.Z.getChannel(e.parent_id);
-                                if (!(null != t && O.Z.can(v.Plq.MANAGE_ROLES, d) && O.Z.can(v.Plq.MANAGE_ROLES, t))) return !0;
+                                if (!(null != t && O.Z.can(v.Plq.MANAGE_ROLES, d) && O.Z.can(v.Plq.MANAGE_ROLES, t)))
+                                    return !0;
                                 let r = C.o4(d, t),
                                     i = C.o4(d, f.Z.getChannel(d.parent_id));
-                                return (((null != d.parent_id || r) && (!i || r)) || (n = e), !0);
+                                return ((null != d.parent_id || r) && (!i || r)) || (n = e), !0;
                             }),
                         null != n)
                     ) {
@@ -107,7 +114,7 @@ function x(e) {
                                             },
                                             onCancel: () => {
                                                 null != n && s.Z.batchChannelUpdate(i, m);
-                                            }
+                                            },
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
@@ -121,7 +128,7 @@ function x(e) {
                                           })(Object(o)).forEach(function (e) {
                                               Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                                           }),
-                                    l)
+                                    l),
                                 );
                             });
                     } else s.Z.batchChannelUpdate(i, m);
@@ -142,7 +149,7 @@ function x(e) {
                     c = null != s ? O.Z.can(v.Plq.MANAGE_CHANNELS, s) : a,
                     u = null != o ? O.Z.can(v.Plq.MANAGE_CHANNELS, o) : a;
                 return c && u;
-            }
+            },
         },
         (e, t) => {
             let n = t.getItem();
@@ -152,16 +159,16 @@ function x(e) {
                       sorting: !1,
                       sortingType: null,
                       sortingPosition: null,
-                      sortingParent: null
+                      sortingParent: null,
                   }
                 : {
                       connectChannelDropTarget: e.dropTarget(),
                       sorting: !0,
                       sortingType: n.type,
                       sortingPosition: t.isOver() && t.canDrop() ? n.position : null,
-                      sortingParent: t.isOver() && t.canDrop() ? n.parentId : null
+                      sortingParent: t.isOver() && t.canDrop() ? n.parentId : null,
                   };
-        }
+        },
     )(
         (0, l.E)(
             E,
@@ -175,19 +182,22 @@ function x(e) {
                         return (
                             (0, d.N)() &&
                                 (0, o.ZDy)(async () => {
-                                    let { default: e } = await n.e('82560').then(n.bind(n, 391312));
+                                    let { default: e } = await n.e("82560").then(n.bind(n, 391312));
                                     return (t) => (0, r.jsx)(e, j({}, t));
                                 }),
                             !1
                         );
                     if (t.type === v.d4z.GUILD_CATEGORY) return O.Z.can(v.Plq.MANAGE_CHANNELS, i) && !(0, h.r1)(i.id);
                     let l = f.Z.getChannel(t.parent_id);
-                    return (null != l && O.Z.can(v.Plq.MANAGE_CHANNELS, l)) || (null == l && O.Z.can(v.Plq.MANAGE_CHANNELS, i));
+                    return (
+                        (null != l && O.Z.can(v.Plq.MANAGE_CHANNELS, l)) ||
+                        (null == l && O.Z.can(v.Plq.MANAGE_CHANNELS, i))
+                    );
                 },
                 beginDrag(e) {
                     let {
                             channel: { id: t, parent_id: n, guild_id: r, type: i },
-                            position: l
+                            position: l,
                         } = e,
                         o = _.Z.getGuildId(),
                         s = g.Z.getCategories(o);
@@ -199,16 +209,18 @@ function x(e) {
                         type: i,
                         channelList: (0, c.Z)(s._categories, s, (e) => {
                             let { channel: t } = e;
-                            return t.type === v.d4z.GUILD_CATEGORY && null != s[t.id] && 0 === s[t.id].length ? o === v.I_8 || (O.Z.can(v.Plq.MANAGE_CHANNELS, t) && O.Z.can(v.Plq.VIEW_CHANNEL, t)) : !p.Z.isCollapsed(t.parent_id);
+                            return t.type === v.d4z.GUILD_CATEGORY && null != s[t.id] && 0 === s[t.id].length
+                                ? o === v.I_8 || (O.Z.can(v.Plq.MANAGE_CHANNELS, t) && O.Z.can(v.Plq.VIEW_CHANNEL, t))
+                                : !p.Z.isCollapsed(t.parent_id);
                         }),
-                        guildId: r
+                        guildId: r,
                     };
-                }
+                },
             },
             (e) => ({
                 connectChannelDragSource: e.dragSource(),
-                connectDragPreview: e.dragPreview()
-            })
-        )(e)
+                connectDragPreview: e.dragPreview(),
+            }),
+        )(e),
     );
 }

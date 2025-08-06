@@ -16,9 +16,9 @@ function f(e) {
     return !t || n || null == f
         ? null
         : (0, r.jsx)(l.sNh, {
-              id: 'resolve-report',
-              label: s.intl.string(u.default['8yIKen']),
+              id: "resolve-report",
+              label: s.intl.string(u.default["8yIKen"]),
               action: () => o.Z.resolveFlag(e.id),
-              className: d.menuItem
+              className: d.menuItem,
           });
 }

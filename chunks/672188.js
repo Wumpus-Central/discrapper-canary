@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     S: () => i,
-    a: () => l
+    a: () => l,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     s = n(237617),
     o = n(266338);
@@ -39,8 +39,8 @@ function l() {
         ref: i(
             (0, r.useCallback)((e) => {
                 t(e.isIntersecting);
-            }, [])
+            }, []),
         ),
-        inViewport: e
+        inViewport: e,
     };
 }

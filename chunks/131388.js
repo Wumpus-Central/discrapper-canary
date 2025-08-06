@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(388685));
+n.d(t, { Z: () => o }), n(388685);
 var r = n(73800),
     i = n(40851);
 function o(e) {
@@ -14,7 +14,7 @@ function o(e) {
                     var t;
                     o(null != (t = null == e ? void 0 : e.matches) && t);
                 };
-            return (r(n), null == n || n.addListener(r), () => (null == n ? void 0 : n.removeListener(r)));
+            return r(n), null == n || n.addListener(r), () => (null == n ? void 0 : n.removeListener(r));
         }, [e, t]),
         n
     );

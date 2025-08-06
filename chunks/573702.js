@@ -12,10 +12,12 @@ let c = (e) => {
         c = null != n && n.trial_id === a.a7,
         u = s.intl.string(s.t.IBYG5e);
     return (
-        void 0 !== t ? (u = s.intl.formatToPlainString(s.t.iiLbvr, { percent: t })) : c && (u = s.intl.string(s.t.gtNqJS)),
-        (0, r.jsx)('div', {
+        void 0 !== t
+            ? (u = s.intl.formatToPlainString(s.t.iiLbvr, { percent: t }))
+            : c && (u = s.intl.string(s.t.gtNqJS)),
+        (0, r.jsx)("div", {
             className: l.badgeContainer,
-            children: (0, r.jsx)(o.E, { text: u })
+            children: (0, r.jsx)(o.E, { text: u }),
         })
     );
 };

@@ -7,7 +7,7 @@ function s(e) {
         case i.d4z.GUILD_ANNOUNCEMENT:
             return r.intl.string(r.t.l1dkSE);
         case i.d4z.GUILD_STORE:
-            return r.intl.string(r.t['P1/Erq']);
+            return r.intl.string(r.t["P1/Erq"]);
         case i.d4z.DM:
         case i.d4z.GROUP_DM:
             return r.intl.string(r.t.jN2DfX);
@@ -15,7 +15,7 @@ function s(e) {
             return r.intl.string(r.t.F1zyvb);
         case i.d4z.ANNOUNCEMENT_THREAD:
         case i.d4z.PUBLIC_THREAD:
-            return r.intl.string(r.t['7Xm5QE']);
+            return r.intl.string(r.t["7Xm5QE"]);
         case i.d4z.GUILD_TEXT:
             return r.intl.string(r.t.Pnajj4);
         case i.d4z.GUILD_FORUM:

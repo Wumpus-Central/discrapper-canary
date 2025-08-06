@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     S: () => j,
-    Z: () => O
+    Z: () => O,
 }),
     n(35282),
-    n(388685));
+    n(388685);
 var i,
     r = n(255367),
     l = n(73800),
@@ -24,7 +24,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -69,15 +69,16 @@ function j(e) {
     return (0, r.jsx)(d.f6W, {
         theme: m.BRd.LIGHT,
         children: (e) =>
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a()(g.imageUploaderIcon, t, e),
-                children: n
-            })
+                children: n,
+            }),
     });
 }
 class v extends (i = l.PureComponent) {
     handleExternalFileChange(e) {
-        (c()(null != this.inputRef.current, 'ImageInputRef asked to handleExternalFileChange when not mounted'), this.inputRef.current.handleFileChange(e));
+        c()(null != this.inputRef.current, "ImageInputRef asked to handleExternalFileChange when not mounted"),
+            this.inputRef.current.handleFileChange(e);
     }
     render() {
         var e;
@@ -85,113 +86,134 @@ class v extends (i = l.PureComponent) {
             n,
             i,
             l,
-            { image: o, hint: s, name: c, makeURL: f, disabled: v, onChange: O, showIcon: y, showIconDisabled: _, className: C, imageClassName: N, iconClassName: S, iconWrapperClassName: I, icon: w, hideSize: Z, imageStyle: E, showRemoveButton: P, maxFileSizeBytes: T, onFileSizeError: k, onOpenImageSelectModal: A, 'aria-label': R } = this.props;
+            {
+                image: o,
+                hint: s,
+                name: c,
+                makeURL: f,
+                disabled: v,
+                onChange: O,
+                showIcon: y,
+                showIconDisabled: _,
+                className: C,
+                imageClassName: N,
+                iconClassName: S,
+                iconWrapperClassName: I,
+                icon: w,
+                hideSize: Z,
+                imageStyle: E,
+                showRemoveButton: P,
+                maxFileSizeBytes: T,
+                onFileSizeError: k,
+                onOpenImageSelectModal: A,
+                "aria-label": R,
+            } = this.props;
         if (
             (null != (t = null != o && /^data:/.test(o) ? o : f(o))
                 ? (n = 'url("'.concat(t, '")'))
                 : null != c &&
                   (i = (0, r.jsx)(d.X6q, {
-                      variant: 'heading-xxl/normal',
-                      color: 'always-white',
+                      variant: "heading-xxl/normal",
+                      color: "always-white",
                       className: g.imageUploaderAcronym,
-                      children: (0, u.Zg)(c)
+                      children: (0, u.Zg)(c),
                   })),
             v)
         )
-            return (0, r.jsx)('div', {
+            return (0, r.jsx)("div", {
                 className: a()(g.imageUploader, g.disabled, C),
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: a()(g.imageUploaderInner, N),
                     style: x(h({}, E), { backgroundImage: n }),
                     children: [
                         i,
                         _ &&
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: a()(g.imageUploaderIcon, g.imageUploaderIconDisabled, S),
-                                children: w
-                            })
-                    ]
-                })
+                                children: w,
+                            }),
+                    ],
+                }),
             });
         null != o
             ? (l = (0, r.jsx)(d.eee, {
                   className: g.removeButton,
                   onClick: this.handleRemove,
-                  children: b.intl.string(b.t.N86XcH)
+                  children: b.intl.string(b.t.N86XcH),
               }))
             : Z ||
-              (l = (0, r.jsx)('small', {
+              (l = (0, r.jsx)("small", {
                   className: g.sizeInfo,
-                  children: b.intl.format(b.t.AH4c7e, { size: m.IXf })
+                  children: b.intl.format(b.t.AH4c7e, { size: m.IXf }),
               }));
-        let D = null != (e = null != R ? R : s) ? e : b.intl.string(b.t['Ge+94+']);
-        return (0, r.jsxs)('div', {
+        let D = null != (e = null != R ? R : s) ? e : b.intl.string(b.t["Ge+94+"]);
+        return (0, r.jsxs)("div", {
             className: a()(g.imageUploader, C),
             children: [
                 (0, r.jsx)(d.tEY, {
                     within: !0,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: y ? a()(g.imageUploaderIconWrapper, I) : void 0,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: a()(g.imageUploaderInner, N),
                                 style: x(h({}, E), { backgroundImage: n }),
                                 children: [
-                                    (0, r.jsx)('span', {
-                                        'aria-hidden': !0,
-                                        children: i
+                                    (0, r.jsx)("span", {
+                                        "aria-hidden": !0,
+                                        children: i,
                                     }),
                                     null != A
                                         ? (0, r.jsx)(d.P3F, {
                                               className: g.imageUploaderFileInput,
-                                              'aria-label': D,
-                                              onClick: A
+                                              "aria-label": D,
+                                              onClick: A,
                                           })
                                         : (0, r.jsx)(p.ZP, {
                                               ref: this.inputRef,
                                               onChange: O,
                                               className: g.imageUploaderFileInput,
-                                              'aria-label': D,
+                                              "aria-label": D,
                                               tabIndex: 0,
                                               maxFileSizeBytes: T,
-                                              onFileSizeError: k
-                                          })
-                                ]
+                                              onFileSizeError: k,
+                                          }),
+                                ],
                             }),
                             null != s &&
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: g.imageUploaderHint,
-                                    'aria-hidden': 'true',
-                                    children: s
+                                    "aria-hidden": "true",
+                                    children: s,
                                 }),
                             y &&
                                 (0, r.jsx)(j, {
                                     className: S,
-                                    icon: w
-                                })
-                        ]
-                    })
+                                    icon: w,
+                                }),
+                        ],
+                    }),
                 }),
-                P ? l : null
-            ]
+                P ? l : null,
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            f(this, 'inputRef', l.createRef()),
-            f(this, 'handleRemove', () => {
+        super(...e),
+            f(this, "inputRef", l.createRef()),
+            f(this, "handleRemove", () => {
                 this.props.onChange(null);
-            }));
+            });
     }
 }
-f(v, 'defaultProps', {
-    name: '',
+f(v, "defaultProps", {
+    name: "",
     makeURL: (e) => e,
     disabled: !1,
     showIcon: !1,
     hideSize: !1,
     showRemoveButton: !0,
     maxFileSizeBytes: 1 / 0,
-    icon: null
+    icon: null,
 });
 let O = v;

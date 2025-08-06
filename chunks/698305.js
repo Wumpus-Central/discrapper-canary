@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(415506));
+n.d(t, { Z: () => u }), n(415506);
 var r = n(493683),
     i = n(904245),
     o = n(541716),
@@ -11,23 +11,23 @@ let u = async (e) => {
         { valid: p, failureReason: h } = await (0, c.v)({
             type: o.Ie.NORMAL,
             content: n,
-            channel: null
+            channel: null,
         });
     if (!p) throw Error(h);
     let m = d
             ? await r.Z.openPrivateChannel({
                   recipientIds: t,
-                  location: u
+                  location: u,
               })
             : await r.Z.getOrEnsurePrivateChannel(t),
         g = l.Z.getChannel(m);
-    if (null == g) throw Error('Failed to open private channel');
+    if (null == g) throw Error("Failed to open private channel");
     if (null != _)
         (0, a.p)({
             channel: g,
             content: n,
             entry: _,
-            whenReady: f
+            whenReady: f,
         });
     else {
         let e = s.ZP.parse(g, n);

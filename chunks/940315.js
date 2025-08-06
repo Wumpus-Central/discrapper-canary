@@ -1,4 +1,4 @@
-(n.d(t, { Y: () => a }), n(388685));
+n.d(t, { Y: () => a }), n(388685);
 var i = n(73800),
     r = n(442837),
     s = n(709706);
@@ -13,7 +13,7 @@ function a() {
             n(t);
             let i = t ? setTimeout(() => n(!1), 3000) : null;
             return () => {
-                (clearTimeout(i), n(!1));
+                clearTimeout(i), n(!1);
             };
         }, [e]),
         i.useEffect(() => {
@@ -23,13 +23,13 @@ function a() {
             return (
                 t && ((o.current = Date.now()), (n = setTimeout(() => l(!1), 4000))),
                 () => {
-                    (clearTimeout(n), l(!1));
+                    clearTimeout(n), l(!1);
                 }
             );
         }, [e]),
         {
             showSilentLagWarning: t,
-            showLagTooltip: a
+            showLagTooltip: a,
         }
     );
 }

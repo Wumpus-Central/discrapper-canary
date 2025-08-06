@@ -2,7 +2,7 @@ var r = n(154028),
     i = n(573078),
     o = n(751736),
     a = n(507604),
-    s = o('species');
+    s = o("species");
 e.exports = function (e) {
     var t = r(e);
     a &&
@@ -12,6 +12,6 @@ e.exports = function (e) {
             configurable: !0,
             get: function () {
                 return this;
-            }
+            },
         });
 };

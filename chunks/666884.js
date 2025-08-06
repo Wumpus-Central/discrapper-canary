@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(73800);
 function s(e, t) {
     let n = (0, r.useRef)(e),
@@ -9,14 +9,14 @@ function s(e, t) {
         n.current = e;
     }, [e]);
     let c = (0, r.useCallback)(() => {
-        ((i.current = (n.current - s.current) * 0.5 + 0.5 * i.current), (s.current = n.current), a(i.current));
+        (i.current = (n.current - s.current) * 0.5 + 0.5 * i.current), (s.current = n.current), a(i.current);
     }, []);
     return (
         (0, r.useEffect)(() => {
             if (!t) {
                 let e = setInterval(c, 1000);
                 return () => {
-                    (c(), clearInterval(e));
+                    c(), clearInterval(e);
                 };
             }
         }, [c, t]),

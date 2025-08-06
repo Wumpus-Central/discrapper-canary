@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => B }), n(388685));
+n.d(t, { Z: () => B }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -40,7 +40,7 @@ var r = n(255367),
 let G = R.u8.SIZE_32,
     F = {
         [k.MI.NO_CHAT]: H.noChat,
-        [k.MI.RESIZABLE]: H.resizable
+        [k.MI.RESIZABLE]: H.resizable,
     };
 function B(e) {
     var t, n, l;
@@ -64,7 +64,7 @@ function B(e) {
         el = i.useRef(null),
         [ea, es] = i.useState({
             width: 0,
-            height: 0
+            height: 0,
         });
     i.useLayoutEffect(() => {
         if (null == el.current) return;
@@ -72,10 +72,10 @@ function B(e) {
             var e, t, n, r;
             es({
                 width: null != (n = null == (e = el.current) ? void 0 : e.clientWidth) ? n : 0,
-                height: null != (r = null == (t = el.current) ? void 0 : t.clientHeight) ? r : 0
+                height: null != (r = null == (t = el.current) ? void 0 : t.clientHeight) ? r : 0,
             });
         });
-        return (e.observe(el.current), () => e.disconnect());
+        return e.observe(el.current), () => e.disconnect();
     }, []);
     let eo = ea.width / Math.max(ea.height, 1) < k.I0,
         ec = 0,
@@ -84,18 +84,20 @@ function B(e) {
     if (!ed) {
         let e = ea.width,
             t = ea.height;
-        eo ? ((t = ea.width / k.I0) > ea.height && (e = (t = ea.height) * k.I0), (eu = (ea.height - t) / 2)) : ((e = Math.min(ea.height * k.I0)) > ea.width && (t = (e = ea.width) / k.I0), (ec = (ea.width - e) / 2));
+        eo
+            ? ((t = ea.width / k.I0) > ea.height && (e = (t = ea.height) * k.I0), (eu = (ea.height - t) / 2))
+            : ((e = Math.min(ea.height * k.I0)) > ea.width && (t = (e = ea.width) / k.I0), (ec = (ea.width - e) / 2));
     }
-    let eh = X.get(null != (l = null == W ? void 0 : W.id) ? l : ''),
+    let eh = X.get(null != (l = null == W ? void 0 : W.id) ? l : ""),
         ep = (0, s.e7)([_.Z], () => _.Z.getChannelId()),
-        ef = (0, s.Wu)(
-            [j.ZP],
-            () => {
-                var e;
-                return null == K ? [] : Array.from(null != (e = null == eh ? void 0 : eh.embeddedActivity.userIds) ? e : []).map((e) => j.ZP.getMember(K.guild_id, e));
-            },
-            [eh, K]
-        ),
+        ef = (0, s.Wu)([j.ZP], () => {
+            var e;
+            return null == K
+                ? []
+                : Array.from(null != (e = null == eh ? void 0 : eh.embeddedActivity.userIds) ? e : []).map((e) =>
+                      j.ZP.getMember(K.guild_id, e),
+                  );
+        }, [eh, K]),
         eg = i.useMemo(() => {
             let e = new Map();
             return (
@@ -119,9 +121,9 @@ function B(e) {
                 var r, i;
                 let l = o
                     ? {
-                          transitionProperty: 'height, max-height',
-                          transitionDuration: ''.concat(50, 'ms'),
-                          transitionTimingFunction: 'ease-in-out'
+                          transitionProperty: "height, max-height",
+                          transitionDuration: "".concat(50, "ms"),
+                          transitionTimingFunction: "ease-in-out",
                       }
                     : void 0;
                 return e && null != t && null != n
@@ -129,24 +131,24 @@ function B(e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
                                   r = Object.keys(n);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (r = r.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   r.forEach(function (t) {
                                       var r;
-                                      ((r = n[t]),
+                                      (r = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: r,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = r));
-                                  }));
+                                              : (e[t] = r);
+                                  });
                           }
                           return e;
                       })({}, l)),
@@ -154,7 +156,7 @@ function B(e) {
                           {
                               minHeight: 200,
                               maxHeight: n,
-                              height: t
+                              height: t,
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -172,7 +174,7 @@ function B(e) {
                     : l;
             }, [o, e, n, t]);
         })(et, en, B),
-        eb = (0, D.y)({ location: 'Activity Panel' });
+        eb = (0, D.y)({ location: "Activity Panel" });
     if (null == W) return null;
     let ey = [];
     null != eh &&
@@ -188,59 +190,59 @@ function B(e) {
             c.DY3,
             {
                 text: i,
-                position: 'bottom',
+                position: "bottom",
                 children: (0, r.jsx)(
-                    'img',
+                    "img",
                     {
                         src: e.getAvatarURL(null == K ? void 0 : K.guild_id, G),
                         alt: i,
-                        className: H.avatar
+                        className: H.avatar,
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             },
-            e.id
+            e.id,
         );
     };
     return (0, r.jsx)(c.f6W, {
         theme: M.BRd.DARK,
         children: (e) =>
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a()(H.wrapper, F[ee], e),
                 ref: $,
                 style: em,
                 children: [
                     null == V ? void 0 : V(),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: H.activityPanelContainer,
                         children: [
                             et
                                 ? null
-                                : (0, r.jsx)('div', {
+                                : (0, r.jsx)("div", {
                                       className: H.header,
                                       children: (0, r.jsx)(o.x, {
-                                          color: 'header-primary',
-                                          variant: 'text-md/semibold',
+                                          color: "header-primary",
+                                          variant: "text-md/semibold",
                                           className: H.headerTitle,
-                                          children: null == W ? void 0 : W.name
-                                      })
+                                          children: null == W ? void 0 : W.name,
+                                      }),
                                   }),
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: a()(H.activityContainer, { [H.activityContainerNoMargin]: ed }),
                                 style: {
                                     paddingLeft: ec,
                                     paddingRight: ec,
                                     paddingTop: eu,
-                                    paddingBottom: eu
+                                    paddingBottom: eu,
                                 },
                                 ref: el,
                                 children: (0, r.jsx)(N.Z, {
                                     className: H.iframe,
-                                    embedId: (0, A.Z)(z.id, W.id)
-                                })
+                                    embedId: (0, A.Z)(z.id, W.id),
+                                }),
                             }),
                             null != ep
-                                ? (0, r.jsxs)('div', {
+                                ? (0, r.jsxs)("div", {
                                       className: H.footer,
                                       children: [
                                           (0, r.jsx)(R.ZP, {
@@ -248,12 +250,12 @@ function B(e) {
                                               users: ey,
                                               size: G,
                                               max: 6,
-                                              renderUser: ex
+                                              renderUser: ex,
                                           }),
-                                          (0, r.jsxs)('div', {
+                                          (0, r.jsxs)("div", {
                                               className: H.footerButtons,
                                               children: [
-                                                  (0, r.jsxs)('div', {
+                                                  (0, r.jsxs)("div", {
                                                       className: H.buttonSection,
                                                       children: [
                                                           (0, r.jsx)(L.Z, { channelId: ep }),
@@ -262,35 +264,36 @@ function B(e) {
                                                               label: U.intl.string(U.t.brPQ5e),
                                                               onClick: J,
                                                               iconComponent: c.dOc,
-                                                              themeable: !0
-                                                          })
-                                                      ]
+                                                              themeable: !0,
+                                                          }),
+                                                      ],
                                                   }),
-                                                  (0, r.jsx)('div', {
+                                                  (0, r.jsx)("div", {
                                                       className: H.leaveButtonContainer,
                                                       children: (0, r.jsx)(b.Z, {
                                                           applicationId: W.id,
                                                           location: z,
                                                           centerButton: !0,
-                                                          color: 'disconnect',
-                                                          isActivityInCall: !1
-                                                      })
-                                                  })
-                                              ]
+                                                          color: "disconnect",
+                                                          isActivityInCall: !1,
+                                                      }),
+                                                  }),
+                                              ],
                                           }),
                                           eb
                                               ? (0, r.jsx)(y.Z, {
                                                     popoutOpen: !1,
                                                     onOpenPopout: () => {
-                                                        ((0, p.yw)(M.rMx.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED), (0, w.Z)({ onConfirm: E.Gj }));
+                                                        (0, p.yw)(M.rMx.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
+                                                            (0, w.Z)({ onConfirm: E.Gj });
                                                     },
-                                                    onClosePopout: () => {}
+                                                    onClosePopout: () => {},
                                                 })
-                                              : null
-                                      ]
+                                              : null,
+                                      ],
                                   })
-                                : null
-                        ]
+                                : null,
+                        ],
                     }),
                     et && null != B
                         ? (0, r.jsx)(f.Z, {
@@ -298,14 +301,14 @@ function B(e) {
                               maxHeight: B,
                               resizableNode: $,
                               onResize: (e) => {
-                                  (v.S.dispatch(M.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), er(e));
+                                  v.S.dispatch(M.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), er(e);
                               },
                               onResizeEnd: (e) => {
-                                  (v.S.dispatch(M.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e));
-                              }
+                                  v.S.dispatch(M.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e);
+                              },
                           })
-                        : null
-                ]
-            })
+                        : null,
+                ],
+            }),
     });
 }

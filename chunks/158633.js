@@ -1,4 +1,4 @@
-(t(361932), t(187205), t(388685), t(642613), t(35282), t(781311), t(413496), t(433524), t(539854));
+t(361932), t(187205), t(388685), t(642613), t(35282), t(781311), t(413496), t(433524), t(539854);
 var n = t(658722),
     a = t.n(n),
     o = t(624138),
@@ -6,16 +6,16 @@ var n = t(658722),
     i = t(886118);
 function u(e) {
     return e
-        .split(',')
+        .split(",")
         .map((e) => e.trim())
-        .filter((e) => '' !== e);
+        .filter((e) => "" !== e);
 }
 function f(e) {
-    return 'string' == typeof e ? [e.trim()] : e.map((e) => e.trim());
+    return "string" == typeof e ? [e.trim()] : e.map((e) => e.trim());
 }
-self.addEventListener('message', (e) => {
+self.addEventListener("message", (e) => {
     let {
-            data: { id: r, searchTerm: t, searchStrings: n, searchType: c, sortType: s, jaroWinklerSearchThreshold: h }
+            data: { id: r, searchTerm: t, searchStrings: n, searchType: c, sortType: s, jaroWinklerSearchThreshold: h },
         } = e,
         p = [];
     for (let e of u(t))
@@ -23,9 +23,9 @@ self.addEventListener('message', (e) => {
             case i.S.REGEX:
                 p.push(
                     ...(function (e, r) {
-                        let t = RegExp(e, 'i');
+                        let t = RegExp(e, "i");
                         return r.reduce((e, r, n) => (f(r).some((e) => t.test(e)) ? [...e, n] : e), []);
-                    })(e, n)
+                    })(e, n),
                 );
                 break;
             case i.S.FUZZY:
@@ -38,27 +38,34 @@ self.addEventListener('message', (e) => {
                                         let t = (0, o.Fv)(e),
                                             n = (0, o.Fv)(r);
                                         return a()(e, r) || a()(t, r) || a()(t, n);
-                                    })(e, r)
+                                    })(e, r),
                                 )
                                     ? [...r, n]
                                     : r,
-                            []
+                            [],
                         );
-                    })(e, n)
+                    })(e, n),
                 );
                 break;
             case i.S.JARO_WINKLER:
                 p.push(
                     ...(function (e, r, t) {
-                        return r.reduce((r, n, a) => (Math.max(...f(n).map((r) => (0, l.H)(e, r))) >= t ? [...r, a] : r), []);
-                    })(e, n, h)
+                        return r.reduce(
+                            (r, n, a) => (Math.max(...f(n).map((r) => (0, l.H)(e, r))) >= t ? [...r, a] : r),
+                            [],
+                        );
+                    })(e, n, h),
                 );
                 break;
             case i.S.EXACT:
                 p.push(
                     ...(function (e, r) {
-                        return r.reduce((r, t, n) => (f(t).some((r) => r.toLocaleLowerCase() === e.toLocaleLowerCase()) ? [...r, n] : r), []);
-                    })(e, n)
+                        return r.reduce(
+                            (r, t, n) =>
+                                f(t).some((r) => r.toLocaleLowerCase() === e.toLocaleLowerCase()) ? [...r, n] : r,
+                            [],
+                        );
+                    })(e, n),
                 );
         }
     let d = [...new Set(p)];
@@ -70,7 +77,7 @@ self.addEventListener('message', (e) => {
                     let t = f(r[e]);
                     return {
                         index: e,
-                        rank: Math.max(...n.flatMap((e) => t.map((r) => (0, l.H)(e, r))))
+                        rank: Math.max(...n.flatMap((e) => t.map((r) => (0, l.H)(e, r)))),
                     };
                 })
                 .sort((e, r) => r.rank - e.rank)
@@ -78,7 +85,7 @@ self.addEventListener('message', (e) => {
         })(t, n, d));
     let m = {
         id: r,
-        foundItemIndexes: d
+        foundItemIndexes: d,
     };
     self.postMessage(m);
 });

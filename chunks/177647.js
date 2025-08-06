@@ -5,9 +5,9 @@ t.exports =
     o(function () {
         return (
             42 !==
-            Object.defineProperty(function () {}, 'prototype', {
+            Object.defineProperty(function () {}, "prototype", {
                 value: 42,
-                writable: !1
+                writable: !1,
             }).prototype
         );
     });

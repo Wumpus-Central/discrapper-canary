@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(388685));
+n.d(t, { Z: () => D }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -29,7 +29,7 @@ function A(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,15 +39,15 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -55,11 +55,11 @@ function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -81,7 +81,8 @@ function P(e, t) {
         i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -91,18 +92,46 @@ function w(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let D = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: o, buttonText: A, targetBoostedGuildTier: C, onClose: w = () => {}, closeLayer: D = () => {}, pauseAnimation: L = !1, applicationId: x, handleSubscribeModalClose: M, withHighlight: k = !1, icon: j, intent: U } = e,
-        G = P(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
+    let {
+            analyticsLocation: t,
+            analyticsSourceLocation: n,
+            guild: o,
+            buttonText: A,
+            targetBoostedGuildTier: C,
+            onClose: w = () => {},
+            closeLayer: D = () => {},
+            pauseAnimation: L = !1,
+            applicationId: x,
+            handleSubscribeModalClose: M,
+            withHighlight: k = !1,
+            icon: j,
+            intent: U,
+        } = e,
+        G = P(e, [
+            "analyticsLocation",
+            "analyticsSourceLocation",
+            "guild",
+            "buttonText",
+            "targetBoostedGuildTier",
+            "onClose",
+            "closeLayer",
+            "pauseAnimation",
+            "applicationId",
+            "handleSubscribeModalClose",
+            "withHighlight",
+            "icon",
+            "intent",
+        ]),
         { analyticsLocations: B } = (0, f.ZP)(),
         Z = (0, d.bp)() === v.IlC.POPOUT,
         [F, V] = i.useState(!1),
         H = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         { fractionalState: Y } = (0, _.Z)(),
-        W = (0, h.y)('guild_boosting_subscribe_button', H, Y),
+        W = (0, h.y)("guild_boosting_subscribe_button", H, Y),
         K = (0, s.e7)([E.Z], () => E.Z.hasFetched);
     i.useEffect(() => {
         K || (0, u.X8)();
@@ -111,7 +140,7 @@ let D = (e) => {
         q = null != C ? Math.max((0, y.KK)(o, C), 1) : 1,
         X = (0, y.aq)({ isBoostManagementDisabledForFractionalPremium: W }),
         Q = async () => {
-            (V(!0),
+            V(!0),
                 await (0, O.u)({
                     analyticsLocations: B,
                     analyticsLocation: t,
@@ -123,34 +152,35 @@ let D = (e) => {
                     inPopout: Z,
                     applicationId: x,
                     handleSubscribeModalClose: M,
-                    intent: U
+                    intent: U,
                 }),
-                V(!1));
+                V(!1);
         },
         J = b.Z.getPremiumTypeSubscription(),
-        $ = (0, r.jsxs)('div', {
+        $ = (0, r.jsxs)("div", {
             className: S.button,
-            children: [j, null != A ? A : T.intl.string(T.t.gKmQ1N)]
+            children: [j, null != A ? A : T.intl.string(T.t.gKmQ1N)],
         }),
-        ee = (0, m.o)('GuildBoostingSubscribeButton', H, Y),
+        ee = (0, m.o)("GuildBoostingSubscribeButton", H, Y),
         et = !1;
-    return ((et = null !== J && !(z.length > 0) && (null == J ? void 0 : J.isPausedOrPausePending) && (Y === I.a$.NONE || ee)) &&
-        (($ = (0, r.jsxs)('div', {
+    return ((et =
+        null !== J && !(z.length > 0) && (null == J ? void 0 : J.isPausedOrPausePending) && (Y === I.a$.NONE || ee)) &&
+        (($ = (0, r.jsxs)("div", {
             className: S.button,
             children: [
                 (0, r.jsx)(c.mBM, {
-                    size: 'xs',
-                    className: S.buttonIcon
+                    size: "xs",
+                    className: S.buttonIcon,
                 }),
-                ' ',
-                $
-            ]
+                " ",
+                $,
+            ],
         })),
         (G.disabled = !0)),
     null != X)
         ? (0, r.jsx)(p.Z, {
               text: X,
-              'aria-label': !1,
+              "aria-label": !1,
               children: (e) =>
                   (0, r.jsx)(
                       c.gtL,
@@ -159,13 +189,13 @@ let D = (e) => {
                               R(N({}, e), {
                                   disabled: !0,
                                   size: l.zx.Sizes.SMALL,
-                                  pauseAnimation: L
+                                  pauseAnimation: L,
                               }),
-                              G
+                              G,
                           ),
-                          { children: $ }
-                      )
-                  )
+                          { children: $ },
+                      ),
+                  ),
           })
         : (0, r.jsx)(
               c.gtL,
@@ -174,7 +204,7 @@ let D = (e) => {
                   submitting: F,
                   onClick: Q,
                   pauseAnimation: L,
-                  children: $
-              })
+                  children: $,
+              }),
           );
 };

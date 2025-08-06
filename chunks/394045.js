@@ -15,13 +15,13 @@ let f = function (t) {
         {
             submitting: m,
             errorMessage: C,
-            onSubmit: k
+            onSubmit: k,
         } = (0, s.Z)({
             onSubmit: T,
-            onClose: f
+            onClose: f,
         }),
         g = a.useCallback(() => {
-            (f(), o.Z.close(), (0, l.uL)(u.Z5c.CHANNEL(n, x.oC.MEMBER_APPLICATIONS)));
+            f(), o.Z.close(), (0, l.uL)(u.Z5c.CHANNEL(n, x.oC.MEMBER_APPLICATIONS));
         }, [n, f]);
     return (0, i.jsxs)(r.Modal, {
         transitionState: p,
@@ -29,39 +29,39 @@ let f = function (t) {
         title: d.intl.formatToPlainString(d.t.chV4JS, { count: e }),
         actions: [
             {
-                text: d.intl.string(d.t['ETE/oK']),
+                text: d.intl.string(d.t["ETE/oK"]),
                 onClick: f,
-                variant: 'secondary'
+                variant: "secondary",
             },
             {
                 text: d.intl.string(d.t.LW0aUF),
                 onClick: k,
-                variant: 'primary',
-                loading: m
-            }
+                variant: "primary",
+                loading: m,
+            },
         ],
         children: [
             (0, i.jsx)(c.Text, {
                 className: h.descriptionText,
-                color: 'header-secondary',
-                variant: 'text-sm/normal',
-                children: d.intl.string(d.t.uNQIt7)
+                color: "header-secondary",
+                variant: "text-sm/normal",
+                children: d.intl.string(d.t.uNQIt7),
             }),
             (0, i.jsx)(c.P3F, {
                 className: h.actionText,
                 onClick: g,
                 children: (0, i.jsx)(c.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-link',
-                    children: d.intl.string(d.t.szESVF)
-                })
+                    variant: "text-sm/normal",
+                    color: "text-link",
+                    children: d.intl.string(d.t.szESVF),
+                }),
             }),
             null != C &&
                 (0, i.jsx)(c.Text, {
-                    variant: 'text-xs/normal',
-                    color: 'text-danger',
-                    children: C
-                })
-        ]
+                    variant: "text-xs/normal",
+                    color: "text-danger",
+                    children: C,
+                }),
+        ],
     });
 };

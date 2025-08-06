@@ -12,7 +12,7 @@ var i = n(442837),
     h = n(981631);
 function p(e, t) {
     (0, l.jW)(e, async () => {
-        let { default: e } = await n.e('6368').then(n.bind(n, 987999));
+        let { default: e } = await n.e("6368").then(n.bind(n, 987999));
         return (n) => {
             var i, l;
             return (0, r.jsx)(
@@ -21,24 +21,24 @@ function p(e, t) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, n)),
@@ -55,7 +55,7 @@ function p(e, t) {
                       })(Object(l)).forEach(function (e) {
                           Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
-                i)
+                i),
             );
         };
     });
@@ -77,7 +77,10 @@ function f(e) {
               selected: n === m,
               preloadOnClick: !1,
               contextMenu: p,
-              lowerBadge: (null == l ? void 0 : l.applicationStatus) === o.wB.REJECTED ? (0, d.jt)({ guildJoinRequestStatus: l.applicationStatus }) : void 0,
-              route: h.Z5c.GUILD_MEMBER_VERIFICATION(n)
+              lowerBadge:
+                  (null == l ? void 0 : l.applicationStatus) === o.wB.REJECTED
+                      ? (0, d.jt)({ guildJoinRequestStatus: l.applicationStatus })
+                      : void 0,
+              route: h.Z5c.GUILD_MEMBER_VERIFICATION(n),
           });
 }

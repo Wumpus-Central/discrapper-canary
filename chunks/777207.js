@@ -1,4 +1,4 @@
-(n.d(t, { x: () => b }), n(467055));
+n.d(t, { x: () => b }), n(467055);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,7 +67,8 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,17 +78,35 @@ function g(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
     b = i.forwardRef(function (e, t) {
         let n;
         var i,
-            { variant: o, tag: s = 'div', selectable: l = !1, className: f, lineClamp: p, color: g, tabularNumbers: b = !1, scaleFontToUserSetting: y = !1 } = e,
-            O = m(e, ['variant', 'tag', 'selectable', 'className', 'lineClamp', 'color', 'tabularNumbers', 'scaleFontToUserSetting']);
+            {
+                variant: o,
+                tag: s = "div",
+                selectable: l = !1,
+                className: f,
+                lineClamp: p,
+                color: g,
+                tabularNumbers: b = !1,
+                scaleFontToUserSetting: y = !1,
+            } = e,
+            O = m(e, [
+                "variant",
+                "tag",
+                "selectable",
+                "className",
+                "lineClamp",
+                "color",
+                "tabularNumbers",
+                "scaleFontToUserSetting",
+            ]);
         let v = s,
-            I = '',
+            I = "",
             T = {};
         if (
             (null != p &&
@@ -96,19 +115,19 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                     : ((I = u.lineClamp2Plus),
                       (T = {
                           lineClamp: p,
-                          WebkitLineClamp: p
+                          WebkitLineClamp: p,
                       }))),
             void 0 !== g)
         )
             switch (g) {
-                case 'currentColor':
-                    n = 'currentColor';
+                case "currentColor":
+                    n = "currentColor";
                     break;
-                case 'none':
+                case "none":
                     n = void 0;
                     break;
-                case 'always-white':
-                    n = 'white';
+                case "always-white":
+                    n = "white";
                     break;
                 default:
                     n = null == (i = c.Z.colors[E[g]]) ? void 0 : i.css;
@@ -125,19 +144,19 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                                 [u.defaultColor]: void 0 === g,
                                 [u.selectable]: l,
                                 [u.tabularNumbers]: b,
-                                [d.fontScaling]: y
+                                [d.fontScaling]: y,
                             },
                             I,
                             d[o],
-                            f
-                        )
+                            f,
+                        ),
                     },
-                    O
+                    O,
                 ),
                 {
                     style: Object.values(S).filter(Boolean).length > 0 ? S : void 0,
-                    'data-text-variant': o
-                }
-            )
+                    "data-text-variant": o,
+                },
+            ),
         );
     });

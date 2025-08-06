@@ -7,22 +7,22 @@ function i(t) {
                 case 90:
                     return {
                         x: i,
-                        y: -n
+                        y: -n,
                     };
                 case 180:
                     return {
                         x: -n,
-                        y: -i
+                        y: -i,
                     };
                 case 270:
                     return {
                         x: -i,
-                        y: n
+                        y: n,
                     };
                 default:
                     return {
                         x: n,
-                        y: i
+                        y: i,
                     };
             }
         })(i, a),
@@ -42,22 +42,22 @@ function i(t) {
                 case 0:
                     return {
                         x: 0,
-                        y: 0
+                        y: 0,
                     };
                 case 90:
                     return {
                         x: 0,
-                        y: -t
+                        y: -t,
                     };
                 case 180:
                     return {
                         x: -t,
-                        y: -e
+                        y: -e,
                     };
                 case 270:
                     return {
                         x: -e,
-                        y: 0
+                        y: 0,
                     };
             }
         })(d, c, a);
@@ -74,7 +74,7 @@ function i(t) {
             destinationWidth: s ? _ : u,
             destinationHeight: s ? u : _,
             canvasWidth: u,
-            canvasHeight: _
+            canvasHeight: _,
         }
     );
 }
@@ -90,18 +90,20 @@ function o(t) {
             destinationWidth: h,
             destinationHeight: g,
             canvasWidth: m,
-            canvasHeight: f
+            canvasHeight: f,
         } = i({
             image: e,
             cropDimensions: n,
             cropOriginCoordinates: o,
             maxDimensions: a,
-            imageRotation: r
+            imageRotation: r,
         }),
-        x = document.createElement('canvas');
-    ((x.width = m), (x.height = f));
-    let p = x.getContext('2d');
-    return (null != p && (p.rotate((r * Math.PI) / 180), p.drawImage(e, l, s, d, c, u, _, h, g)), x.toDataURL('image/png'));
+        x = document.createElement("canvas");
+    (x.width = m), (x.height = f);
+    let p = x.getContext("2d");
+    return (
+        null != p && (p.rotate((r * Math.PI) / 180), p.drawImage(e, l, s, d, c, u, _, h, g)), x.toDataURL("image/png")
+    );
 }
 function a(t, e, n) {
     let i = t.naturalWidth / t.naturalHeight,
@@ -110,23 +112,23 @@ function a(t, e, n) {
     t.naturalWidth > t.naturalHeight ? (a /= i) : (r *= i);
     let l = {
         height: a,
-        width: r
+        width: r,
     };
     return o({
         image: t,
         cropDimensions: {
             width: t.width,
-            height: t.height
+            height: t.height,
         },
         cropOriginCoordinates: {
             x: 0,
-            y: 0
+            y: 0,
         },
-        maxDimensions: l
+        maxDimensions: l,
     });
 }
 n.d(e, {
     Ae: () => a,
     GS: () => i,
-    PT: () => o
+    PT: () => o,
 });

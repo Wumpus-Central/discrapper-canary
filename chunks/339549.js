@@ -1,1 +1,1 @@
-e.exports = { sparkles: 'sparkles__64668' };
+e.exports = { sparkles: "sparkles__64668" };

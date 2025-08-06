@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685), n(539854));
+n.d(t, { Z: () => I }), n(388685), n(539854);
 var r,
     i = n(442837),
     o = n(846519),
@@ -13,14 +13,14 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 function d(e, t) {
-    return ''.concat(e, ':').concat(t);
+    return "".concat(e, ":").concat(t);
 }
 let f = {},
     _ = {};
@@ -33,7 +33,7 @@ function p() {
 }
 function h() {
     let e = [];
-    for (let [t, n] of Object.entries(_)) (e.push(n), (f[t] = n), delete _[t]);
+    for (let [t, n] of Object.entries(_)) e.push(n), (f[t] = n), delete _[t];
     0 !== e.length && s.Z.subscribeActivities(e);
 }
 let m = 3000,
@@ -56,17 +56,17 @@ function b(e) {
             partyId: o,
             messageId: a,
             channelId: s,
-            expiresAt: f
+            expiresAt: f,
         }),
         g.delay(),
         !0
     );
 }
 function y() {
-    ((f = {}), (_ = {}));
+    (f = {}), (_ = {});
 }
 function O() {
-    ((f = {}), (_ = {}));
+    (f = {}), (_ = {});
 }
 class v extends (r = i.ZP.Store) {
     initialize() {
@@ -76,10 +76,10 @@ class v extends (r = i.ZP.Store) {
         return E(e);
     }
 }
-u(v, 'displayName', 'PresenceSubscriptionsStore');
+u(v, "displayName", "PresenceSubscriptionsStore");
 let I = new v(a.Z, {
     PRESENCE_SUBSCRIPTIONS_ADD: b,
     CONNECTION_OPEN: y,
     CONNECTION_RESUMED: y,
-    LOGOUT: O
+    LOGOUT: O,
 });

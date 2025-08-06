@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     M: () => d,
-    Z: () => K
+    Z: () => K,
 }),
-    n(388685));
+    n(388685);
 var r,
     i = n(512722),
     o = n.n(i),
@@ -17,34 +17,39 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 var d = (function (e) {
-    return ((e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), e);
+    return (
+        (e[(e.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+        (e[(e.FETCHING = 1)] = "FETCHING"),
+        (e[(e.FETCHED = 2)] = "FETCHED"),
+        e
+    );
 })({});
 function f(e) {
-    return 'guild:'.concat(e);
+    return "guild:".concat(e);
 }
 function _(e) {
-    return 'subscription_listing:'.concat(e);
+    return "subscription_listing:".concat(e);
 }
 function p(e) {
-    return 'application:'.concat(e);
+    return "application:".concat(e);
 }
 function h(e) {
-    return 'plan:'.concat(e);
+    return "plan:".concat(e);
 }
 let m = new s.h(
         (e) => [f(e.guild_id), ...e.subscription_listings_ids.map(_)],
-        (e) => e.id
+        (e) => e.id,
     ),
     g = new s.h(
         (e) => [p(e.application_id), h(e.subscription_plans[0].id)],
-        (e) => e.id
+        (e) => e.id,
     ),
     E = {},
     b = new Set(),
@@ -58,13 +63,14 @@ function S(e) {
 }
 function A(e) {
     var t;
-    for (let n of (m.set(e.id, e), T.set(e.guild_id, e.application_id), null != (t = e.subscription_listings) ? t : [])) N(n);
+    for (let n of (m.set(e.id, e), T.set(e.guild_id, e.application_id), null != (t = e.subscription_listings) ? t : []))
+        N(n);
 }
 function N(e) {
     g.set(e.id, e);
 }
 function C() {
-    (m.clear(), g.clear(), (E = {}), b.clear(), (y = {}), (O = {}), (v = {}), (I = {}), T.clear());
+    m.clear(), g.clear(), (E = {}), b.clear(), (y = {}), (O = {}), (v = {}), (I = {}), T.clear();
 }
 function R(e) {
     let { settings: t } = e;
@@ -101,7 +107,7 @@ function k(e) {
 }
 function j(e) {
     let { listing: t, groupListing: n } = e;
-    (N(t), A(n));
+    N(t), A(n);
 }
 function U(e) {
     let { listing: t } = e;
@@ -121,11 +127,11 @@ function Z(e) {
 }
 function F(e) {
     let { guildId: t, restrictions: n } = e;
-    ((v[t] = n), (I[t] = 2));
+    (v[t] = n), (I[t] = 2);
 }
 function V(e) {
     let { guildId: t } = e;
-    ((I[t] = 2), (v[t] = c.m));
+    (I[t] = 2), (v[t] = c.m);
 }
 function H(e) {
     let { guildId: t } = e;
@@ -148,7 +154,7 @@ class W extends (r = a.ZP.Store) {
     }
     getSubscriptionGroupListingForSubscriptionListing(e) {
         let t = m.values(_(e));
-        return (o()(t.length <= 1, 'Found multiple group listings for listing'), t[0]);
+        return o()(t.length <= 1, "Found multiple group listings for listing"), t[0];
     }
     getSubscriptionListing(e) {
         return g.get(e);
@@ -160,7 +166,7 @@ class W extends (r = a.ZP.Store) {
     }
     getSubscriptionListingForPlan(e) {
         let t = g.values(h(e));
-        return (o()(t.length <= 1, 'Found multiple listings for plan'), t[0]);
+        return o()(t.length <= 1, "Found multiple listings for plan"), t[0];
     }
     getSubscriptionSettings(e) {
         return y[e];
@@ -179,7 +185,7 @@ class W extends (r = a.ZP.Store) {
         return T.get(e);
     }
 }
-u(W, 'displayName', 'GuildRoleSubscriptionsStore');
+u(W, "displayName", "GuildRoleSubscriptionsStore");
 let K = new W(l.Z, {
     CONNECTION_OPEN: C,
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: R,
@@ -197,5 +203,5 @@ let K = new W(l.Z, {
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS: Z,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: F,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: V,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: H
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: H,
 });

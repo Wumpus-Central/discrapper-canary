@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(388685));
+n.d(t, { Z: () => o }), n(388685);
 var r = n(544891),
     i = n(626135),
     l = n(186901),
@@ -12,11 +12,11 @@ let o = {
                     .get({
                         url: location.protocol + window.GLOBAL_ENV.NETWORKING_ENDPOINT,
                         retries: 3,
-                        rejectWithError: !1
+                        rejectWithError: !1,
                     })
                     .then((e) => {
                         let {
-                            body: { address: t }
+                            body: { address: t },
                         } = e;
                         return t;
                     }),
@@ -25,35 +25,35 @@ let o = {
                         url: a.ANM.NETWORKING_TOKEN,
                         retries: 3,
                         oldFormErrors: !0,
-                        rejectWithError: !1
+                        rejectWithError: !1,
                     })
                     .then((e) => {
                         let {
-                            body: { token: t }
+                            body: { token: t },
                         } = e;
                         return t;
-                    })
+                    }),
             ]).then((e) => {
                 let [t, n] = e;
                 return {
                     address: t,
-                    token: n
+                    token: n,
                 };
-            })
+            }),
     },
     [a.Etm.NETWORKING_SYSTEM_METRICS]: {
         scope: l.lH,
         handler(e) {
             let { socket: t, args: n } = e;
-            ((n.application_id = t.application.id), i.default.track(a.rMx.NETWORKING_SYSTEM_METRICS, n));
-        }
+            (n.application_id = t.application.id), i.default.track(a.rMx.NETWORKING_SYSTEM_METRICS, n);
+        },
     },
     [a.Etm.NETWORKING_PEER_METRICS]: {
         scope: l.lH,
         handler(e) {
             let { socket: t, args: n } = e;
-            ((n.application_id = t.application.id), i.default.track(a.rMx.NETWORKING_PEER_METRICS, n));
-        }
+            (n.application_id = t.application.id), i.default.track(a.rMx.NETWORKING_PEER_METRICS, n);
+        },
     },
     [a.Etm.NETWORKING_CREATE_TOKEN]: {
         scope: l.lH,
@@ -63,8 +63,8 @@ let o = {
                     url: a.ANM.NETWORKING_TOKEN,
                     retries: 1,
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
-                .then((e) => e.body)
-    }
+                .then((e) => e.body),
+    },
 };

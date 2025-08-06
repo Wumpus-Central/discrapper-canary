@@ -1,4 +1,4 @@
-(n.d(t, { F: () => l }), n(388685));
+n.d(t, { F: () => l }), n(388685);
 var i = n(73800),
     r = n(295141);
 let l = () => {
@@ -8,7 +8,7 @@ let l = () => {
         loading: e,
         error: n,
         getTrialPurchaseEligibility: i.useCallback(async (e, n, i) => {
-            (t(!0), l(null));
+            t(!0), l(null);
             try {
                 return await (0, r.LB)(e, n, i);
             } catch (e) {
@@ -16,6 +16,6 @@ let l = () => {
             } finally {
                 t(!1);
             }
-        }, [])
+        }, []),
     };
 };

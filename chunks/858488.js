@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var i = n(255367);
 n(73800);
 var l = n(442837),
@@ -8,24 +8,20 @@ var l = n(442837),
 function s(e) {
     let { user: t, onAction: s, appContext: u } = e,
         d = t.id,
-        [c, g] = (0, l.Wu)(
-            [a.Z],
-            () => {
-                var e;
-                return [a.Z.isFriend(d), null != (e = a.Z.getNickname(d)) ? e : null];
-            },
-            [d]
-        );
+        [c, g] = (0, l.Wu)([a.Z], () => {
+            var e;
+            return [a.Z.isFriend(d), null != (e = a.Z.getNickname(d)) ? e : null];
+        }, [d]);
     if (!c) return null;
-    let f = null == g ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t['8pOYUF']);
+    let f = null == g ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t["8pOYUF"]);
     return (0, i.jsx)(r.sNh, {
-        id: null == g ? 'add-friend-nickname' : 'edit-friend-nickname',
+        id: null == g ? "add-friend-nickname" : "edit-friend-nickname",
         label: f,
         action: () => {
-            (null == s || s(),
+            null == s || s(),
                 (0, r.ZDy)(
                     async () => {
-                        let { default: e } = await n.e('25070').then(n.bind(n, 670794));
+                        let { default: e } = await n.e("25070").then(n.bind(n, 670794));
                         return (n) =>
                             (0, i.jsx)(
                                 e,
@@ -33,37 +29,37 @@ function s(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             i = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (i = i.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             i.forEach(function (t) {
                                                 var i;
-                                                ((i = n[t]),
+                                                (i = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: i,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = i));
-                                            }));
+                                                        : (e[t] = i);
+                                            });
                                     }
                                     return e;
                                 })(
                                     {
                                         user: t,
-                                        nickname: g
+                                        nickname: g,
                                     },
-                                    n
-                                )
+                                    n,
+                                ),
                             );
                     },
-                    { contextKey: null != u ? (0, r.VnL)(u) : void 0 }
-                ));
-        }
+                    { contextKey: null != u ? (0, r.VnL)(u) : void 0 },
+                );
+        },
     });
 }

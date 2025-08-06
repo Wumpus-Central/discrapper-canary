@@ -18,6 +18,6 @@ function l(e, t) {
               sortedGuildRoles: f,
               guildMember: c,
               channel: null != u && u.isThread() && null != d ? d : u,
-              onlyChannelConnectionRoles: l
+              onlyChannelConnectionRoles: l,
           });
 }

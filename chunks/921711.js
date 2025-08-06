@@ -1,6 +1,6 @@
 n.d(t, {
     O: () => u,
-    Z: () => d
+    Z: () => d,
 });
 var r = n(255367);
 n(73800);
@@ -15,11 +15,11 @@ function u(e) {
 }
 function d(e) {
     let { locked: t } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: l()(c.iconItem, a.premiumChannelIcon),
         children: (0, r.jsx)(s.Z, {
             className: c.actionIcon,
-            color: t ? o.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON : void 0
-        })
+            color: t ? o.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON : void 0,
+        }),
     });
 }

@@ -14,13 +14,13 @@ let p = {
     fetchGuildJoinRequest: async (e) => {
         let t = await r.tn.get({
                 url: f.ANM.GUILD_JOIN_REQUEST_BY_ID(e),
-                rejectWithError: !1
+                rejectWithError: !1,
             }),
             n = (0, d.j)(t.body);
         return (
             i.Z.dispatch({
-                type: 'GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS',
-                joinRequest: n
+                type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS",
+                joinRequest: n,
             }),
             t
         );
@@ -29,7 +29,7 @@ let p = {
         let { guildId: t, status: n = u.wB.SUBMITTED, before: o, after: a, limit: s = u.tB, force: l = !1 } = e,
             _ = l || !c.Z.hasFetched(t);
         if (!c.Z.isFetching() && _) {
-            i.Z.dispatch({ type: 'GUILD_JOIN_REQUESTS_FETCH_START' });
+            i.Z.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
             try {
                 var p;
                 let e = await r.tn.get({
@@ -38,25 +38,25 @@ let p = {
                             status: n,
                             limit: s,
                             before: o,
-                            after: a
+                            after: a,
                         },
-                        rejectWithError: !1
+                        rejectWithError: !1,
                     }),
                     l = e.body.total,
                     c = (null != (p = e.body.guild_join_requests) ? p : []).map(d.j);
                 return (
                     i.Z.dispatch({
-                        type: 'GUILD_JOIN_REQUESTS_FETCH_SUCCESS',
+                        type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
                         status: n,
                         requests: c,
                         total: l,
                         limit: s,
-                        guildId: t
+                        guildId: t,
                     }),
                     e
                 );
             } catch (e) {
-                throw (i.Z.dispatch({ type: 'GUILD_JOIN_REQUESTS_FETCH_FAILURE' }), e);
+                throw (i.Z.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE" }), e);
             }
         }
     },
@@ -64,14 +64,14 @@ let p = {
         try {
             return await r.tn.post({
                 url: f.ANM.GUILD_JOIN_REQUEST_ACK(e, t),
-                rejectWithError: !1
+                rejectWithError: !1,
             });
         } catch (e) {
         } finally {
             i.Z.dispatch({
-                type: 'ACK_APPROVED_GUILD_JOIN_REQUEST',
+                type: "ACK_APPROVED_GUILD_JOIN_REQUEST",
                 id: t,
-                guildId: e
+                guildId: e,
             });
         }
     },
@@ -79,13 +79,13 @@ let p = {
         try {
             let t = await r.tn.del({
                 url: f.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
-                rejectWithError: !1
+                rejectWithError: !1,
             });
             return (
                 i.Z.dispatch({
-                    type: 'USER_GUILD_JOIN_REQUEST_UPDATE',
+                    type: "USER_GUILD_JOIN_REQUEST_UPDATE",
                     guildId: e,
-                    request: null
+                    request: null,
                 }),
                 t
             );
@@ -99,16 +99,16 @@ let p = {
         (0, l.ID)({
             guildId: e,
             actionType: a,
-            applicationUserId: t
+            applicationUserId: t,
         });
         let c = await r.tn
             .patch({
                 url: f.ANM.GUILD_JOIN_REQUEST_ID(e, n),
                 body: {
                     action: a,
-                    rejection_reason: s
+                    rejection_reason: s,
                 },
-                rejectWithError: !1
+                rejectWithError: !1,
             })
             .catch(
                 (e) => (
@@ -117,29 +117,29 @@ let p = {
                         e.body.code === f.evJ.REQUEST_TO_JOIN_USER_INELIGIBLE &&
                         o.Z.show({
                             title: _.intl.string(_.t.DxJj4e),
-                            body: _.intl.string(_.t.rSAOk5)
+                            body: _.intl.string(_.t.rSAOk5),
                         }),
                     Promise.reject(e)
-                )
+                ),
             );
         i.Z.dispatch({
-            type: 'GUILD_JOIN_REQUEST_UPDATE',
+            type: "GUILD_JOIN_REQUEST_UPDATE",
             guildId: e,
             status: c.body.application_status,
-            request: c.body
+            request: c.body,
         });
     },
     actionAllPendingJoinRequests: async (e, t) => {
         let n = await r.tn.patch({
             url: f.ANM.GUILD_JOIN_REQUESTS(e),
             body: { action: t },
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         return (
             i.Z.dispatch({
-                type: 'GUILD_JOIN_REQUESTS_BULK_ACTION',
+                type: "GUILD_JOIN_REQUESTS_BULK_ACTION",
                 guildId: e,
-                action: t
+                action: t,
             }),
             n.body
         );
@@ -148,13 +148,13 @@ let p = {
         try {
             let { body: t } = await r.tn.post({
                 url: f.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
-                rejectWithError: !1
+                rejectWithError: !1,
             });
             return (
                 i.Z.dispatch({
-                    type: 'USER_GUILD_JOIN_REQUEST_UPDATE',
+                    type: "USER_GUILD_JOIN_REQUEST_UPDATE",
                     guildId: e,
-                    request: t
+                    request: t,
                 }),
                 t
             );
@@ -165,51 +165,51 @@ let p = {
     fetchRequestToJoinGuilds: async () => {
         let e = await r.tn.get({
             url: f.ANM.USER_JOIN_REQUEST_GUILDS,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         i.Z.dispatch({
-            type: 'USER_JOIN_REQUEST_GUILDS_FETCH',
-            guilds: e.body
+            type: "USER_JOIN_REQUEST_GUILDS_FETCH",
+            guilds: e.body,
         });
     },
     setSelectedApplicationTab: (e, t) => {
         i.Z.dispatch({
-            type: 'GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB',
+            type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB",
             guildId: e,
-            applicationTab: t
+            applicationTab: t,
         });
     },
     setSelectedSortOrder: (e, t) => {
         i.Z.dispatch({
-            type: 'GUILD_JOIN_REQUESTS_SET_SORT_ORDER',
+            type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER",
             guildId: e,
-            sortOrder: t
+            sortOrder: t,
         });
     },
     setSelectedGuildJoinRequest: (e, t) => {
-        (null != t &&
+        null != t &&
             (0, l.Dq)({
                 guildId: e,
                 applicationStatus: t.applicationStatus,
-                applicationUserId: t.userId
+                applicationUserId: t.userId,
             }),
             i.Z.dispatch({
-                type: 'GUILD_JOIN_REQUESTS_SET_SELECTED',
+                type: "GUILD_JOIN_REQUESTS_SET_SELECTED",
                 guildId: e,
-                request: t
-            }));
+                request: t,
+            });
     },
     createOrEnterJoinRequestInterview: async function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = await r.tn.post({
                 url: f.ANM.GUILD_JOIN_REQUEST_INTERVIEW(e),
-                rejectWithError: !1
+                rejectWithError: !1,
             }),
             o = (0, s.q_)(n.body);
         return (
             i.Z.dispatch({
-                type: 'CHANNEL_CREATE',
-                channel: o
+                type: "CHANNEL_CREATE",
+                channel: o,
             }),
             t && a.default.selectPrivateChannel(o.id),
             o.id
@@ -219,25 +219,25 @@ let p = {
         try {
             let t = await r.tn.get({
                 url: f.ANM.GUILD_MEMBER_JOIN_REQUEST_COOLDOWN(e),
-                rejectWithError: !1
+                rejectWithError: !1,
             });
             return (
                 i.Z.dispatch({
-                    type: 'USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH',
+                    type: "USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH",
                     guildId: e,
-                    cooldown: t.body.cooldown
+                    cooldown: t.body.cooldown,
                 }),
                 t
             );
         } catch (t) {
             throw (
-                i.Z.dispatch({
-                    type: 'USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH',
+                (i.Z.dispatch({
+                    type: "USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH",
                     guildId: e,
-                    cooldown: null
+                    cooldown: null,
                 }),
-                t
+                t)
             );
         }
-    }
+    },
 };

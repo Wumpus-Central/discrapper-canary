@@ -2,14 +2,14 @@ var r = n(98405),
     i = n(127849),
     o = n(391246),
     a = n(108015),
-    s = 'ArrayBuffer',
+    s = "ArrayBuffer",
     l = o[s];
-(r(
+r(
     {
         global: !0,
         constructor: !0,
-        forced: i[s] !== l
+        forced: i[s] !== l,
     },
-    { ArrayBuffer: l }
+    { ArrayBuffer: l },
 ),
-    a(s));
+    a(s);

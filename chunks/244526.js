@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(953529));
+n.d(t, { Z: () => _ }), n(953529);
 var i,
     r,
     s,
@@ -39,16 +39,16 @@ class _ extends (i = l.PureComponent) {
     }
     getLabel(e) {
         return e instanceof g.dm
-            ? b.intl.format(b.t['o/dsrK'], {
+            ? b.intl.format(b.t["o/dsrK"], {
                   brand: (0, f.De)(e.brand),
-                  last_4: e.last4
+                  last_4: e.last4,
               })
             : e instanceof g.qo
-              ? b.intl.string(b.t['2dgEq6'])
+              ? b.intl.string(b.t["2dgEq6"])
               : e instanceof g.Sf
-                ? b.intl.string(b.t['edKX//'])
+                ? b.intl.string(b.t["edKX//"])
                 : e instanceof g.fv
-                  ? b.intl.string(b.t['y+0MQU'])
+                  ? b.intl.string(b.t["y+0MQU"])
                   : e instanceof g.Vg
                     ? b.intl.string(b.t.u25uLy)
                     : e instanceof g.sn
@@ -64,17 +64,17 @@ class _ extends (i = l.PureComponent) {
                               : e instanceof g.Om
                                 ? b.intl.string(b.t.CSVexs)
                                 : e instanceof g.JC
-                                  ? b.intl.string(b.t['43J8JC'])
+                                  ? b.intl.string(b.t["43J8JC"])
                                   : e instanceof g.U4
-                                    ? b.intl.string(b.t['1ITkfn'])
+                                    ? b.intl.string(b.t["1ITkfn"])
                                     : e instanceof g.jc
                                       ? null == e.bank
                                           ? b.intl.string(b.t.nSbwqK)
-                                          : b.intl.format(b.t['9kUlRU'], { bank: (0, u.YE)(e.bank) })
+                                          : b.intl.format(b.t["9kUlRU"], { bank: (0, u.YE)(e.bank) })
                                       : e instanceof g.D0
                                         ? b.intl.format(b.t.hSPoZ2, { bank: (0, u.Ul)(e.bank) })
                                         : e instanceof g.u_
-                                          ? b.intl.string(b.t['+rbTmJ'])
+                                          ? b.intl.string(b.t["+rbTmJ"])
                                           : e instanceof g.$z
                                             ? b.intl.string(b.t.RFi12t)
                                             : b.intl.string(b.t.jdPblp);
@@ -83,8 +83,8 @@ class _ extends (i = l.PureComponent) {
         let { paymentSource: e, descriptionClassName: t } = this.props;
         return (0, a.jsx)(d.Text, {
             className: c()(x.description, t),
-            variant: 'text-md/semibold',
-            children: this.getLabel(e)
+            variant: "text-md/semibold",
+            children: this.getLabel(e),
         });
     }
     renderSubText() {
@@ -92,20 +92,27 @@ class _ extends (i = l.PureComponent) {
             n = null;
         return (
             e instanceof g.dm
-                ? (n = b.intl.formatToPlainString(b.t['8rTTub'], {
+                ? (n = b.intl.formatToPlainString(b.t["8rTTub"], {
                       month: (0, h.E2)(e.expiresMonth, t),
-                      year: e.expiresYear
+                      year: e.expiresYear,
                   }))
                 : e instanceof g.qo || e instanceof g.Sf || e instanceof g.Vg
                   ? (n = e.email)
                   : e instanceof g.Xc
-                    ? (n = '@' + e.username)
+                    ? (n = "@" + e.username)
                     : e instanceof g.u_ && (n = e.username),
             n
         );
     }
     render() {
-        let { isDefault: e, paymentSource: t, showSubtext: n, isForSubscription: i, showPaymentSourceIcon: r, showLabels: s } = this.props,
+        let {
+                isDefault: e,
+                paymentSource: t,
+                showSubtext: n,
+                isForSubscription: i,
+                showPaymentSourceIcon: r,
+                showLabels: s,
+            } = this.props,
             l = this.renderSubText();
         return (0, a.jsxs)(m.Z, {
             children: [
@@ -119,49 +126,49 @@ class _ extends (i = l.PureComponent) {
                             children: [
                                 this.renderDescription(),
                                 s && e
-                                    ? (0, a.jsx)('div', {
+                                    ? (0, a.jsx)("div", {
                                           className: x.defaultIndicator,
-                                          children: b.intl.string(b.t.bBvAEB)
+                                          children: b.intl.string(b.t.bBvAEB),
                                       })
                                     : null,
                                 i
-                                    ? (0, a.jsx)('div', {
+                                    ? (0, a.jsx)("div", {
                                           className: x.premiumIndicator,
-                                          children: b.intl.string(b.t.YCrcPD)
+                                          children: b.intl.string(b.t.YCrcPD),
                                       })
                                     : null,
                                 s && t.invalid
-                                    ? (0, a.jsx)('div', {
+                                    ? (0, a.jsx)("div", {
                                           className: x.invalidIndicator,
-                                          children: b.intl.string(b.t['851k9/'])
+                                          children: b.intl.string(b.t["851k9/"]),
                                       })
-                                    : null
-                            ]
+                                    : null,
+                            ],
                         }),
                         n && null != l
-                            ? (0, a.jsx)('div', {
+                            ? (0, a.jsx)("div", {
                                   className: x.subText,
-                                  children: l
+                                  children: l,
                               })
-                            : null
-                    ]
-                })
-            ]
+                            : null,
+                    ],
+                }),
+            ],
         });
     }
 }
-((s = {
+(s = {
     isForSubscription: !1,
     isDefault: !1,
     showSubtext: !1,
     showPaymentSourceIcon: !1,
-    showLabels: !1
+    showLabels: !1,
 }),
-    (r = 'defaultProps') in _
+    (r = "defaultProps") in _
         ? Object.defineProperty(_, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (_[r] = s));
+        : (_[r] = s);

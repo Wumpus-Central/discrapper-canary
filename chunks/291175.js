@@ -1,7 +1,7 @@
 n.d(t, {
     RZ: () => l,
     fv: () => a,
-    gn: () => s
+    gn: () => s,
 });
 var r = n(913527),
     i = n.n(r),
@@ -13,5 +13,5 @@ let a = (e) => o.vK[e],
         let n = a(e);
         if (null == n) return null;
         let r = i()(t);
-        return (r.add(n.tenureReqNumMonths, 'months'), r.add(1, 'days'), r.toDate());
+        return r.add(n.tenureReqNumMonths, "months"), r.add(1, "days"), r.toDate();
     };

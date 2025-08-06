@@ -14,15 +14,15 @@ function u(n) {
               children: [
                   !n.isMessageRequest &&
                       (0, i.jsx)(r.sNh, {
-                          id: 'mark-as-message-request',
+                          id: "mark-as-message-request",
                           label: a.intl.string(a.t.L6623t),
-                          action: () => (0, d.Xy)(n.id)
+                          action: () => (0, d.Xy)(n.id),
                       }),
                   (0, i.jsx)(r.sNh, {
-                      id: 'clear-message-request',
-                      label: a.intl.string(a.t['85YWlZ']),
-                      action: () => (0, d.qR)(n.id)
-                  })
-              ]
+                      id: "clear-message-request",
+                      label: a.intl.string(a.t["85YWlZ"]),
+                      action: () => (0, d.qR)(n.id),
+                  }),
+              ],
           });
 }

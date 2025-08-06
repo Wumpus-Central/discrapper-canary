@@ -1,1 +1,1 @@
-t.exports = { flagIcon: 'flagIcon_c98db5' };
+t.exports = { flagIcon: "flagIcon_c98db5" };

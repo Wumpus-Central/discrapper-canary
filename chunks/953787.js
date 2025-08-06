@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -34,60 +34,64 @@ function T(e) {
                 type: b.mFx.STREAM_REQUEST,
                 channelId: n.id,
                 activity: t,
-                content: '<@'.concat(o, '>'),
-                location: 'request to stream hover',
-                targetUserId: o
+                content: "<@".concat(o, ">"),
+                location: "request to stream hover",
+                targetUserId: o,
             });
         } finally {
             E(!1);
         }
     }
     function A() {
-        return f ? O.intl.string(y.default['8HU1Mz']) : T ? O.intl.string(y.default.qRXatr) : O.intl.string(y.default.DKHheX);
+        return f
+            ? O.intl.string(y.default["8HU1Mz"])
+            : T
+              ? O.intl.string(y.default.qRXatr)
+              : O.intl.string(y.default.DKHheX);
     }
     if (t.type === b.IIU.PLAYING) {
         let e = null == c ? void 0 : c.getIconURL(I);
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: v.activityRow,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: v.activityRowContent,
                     children: [
                         _ || null == e
                             ? (0, r.jsx)(s.IMN, {
-                                  size: 'custom',
+                                  size: "custom",
                                   width: I,
-                                  height: I
+                                  height: I,
                               })
-                            : (0, r.jsx)('img', {
+                            : (0, r.jsx)("img", {
                                   src: e,
                                   alt: t.name,
-                                  onError: () => p(!0)
+                                  onError: () => p(!0),
                               }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             children: [
                                 (0, r.jsx)(s.Text, {
-                                    variant: 'text-sm/medium',
-                                    color: 'text-tertiary',
-                                    children: (0, u.Z)(t)
+                                    variant: "text-sm/medium",
+                                    color: "text-tertiary",
+                                    children: (0, u.Z)(t),
                                 }),
                                 (0, r.jsx)(s.Text, {
-                                    variant: 'text-md/medium',
-                                    children: t.name
-                                })
-                            ]
-                        })
-                    ]
+                                    variant: "text-md/medium",
+                                    children: t.name,
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(s.zxk, {
                     loading: m,
                     disabled: f || T,
                     fullWidth: !0,
-                    size: 'sm',
+                    size: "sm",
                     text: A(),
-                    onClick: S
-                })
-            ]
+                    onClick: S,
+                }),
+            ],
         });
     }
 }
@@ -102,31 +106,31 @@ function S(e) {
             () =>
                 o.uniqBy(
                     u.filter((e) => e.type === b.IIU.PLAYING),
-                    (e) => e.application_id
+                    (e) => e.application_id,
                 ),
-            [u]
+            [u],
         );
     return null != l && g
         ? (0, r.jsx)(f.Z.Provider, {
               value: n.guild_id,
-              children: (0, r.jsxs)('div', {
+              children: (0, r.jsxs)("div", {
                   className: v.root,
                   children: [
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: v.userHeader,
                           children: [
                               (0, r.jsx)(c.Z, {
                                   user: l,
                                   status: d,
-                                  size: s.EFr.SIZE_24
+                                  size: s.EFr.SIZE_24,
                               }),
                               (0, r.jsx)(s.Text, {
-                                  variant: 'text-md/medium',
-                                  children: h
-                              })
-                          ]
+                                  variant: "text-md/medium",
+                                  children: h,
+                              }),
+                          ],
                       }),
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: v.activityList,
                           children: y.map((e) =>
                               (0, r.jsx)(
@@ -134,14 +138,14 @@ function S(e) {
                                   {
                                       activity: e,
                                       channel: n,
-                                      userId: t
+                                      userId: t,
                                   },
-                                  ''.concat(e.session_id, '-').concat(e.application_id, '-').concat(e.name)
-                              )
-                          )
-                      })
-                  ]
-              })
+                                  "".concat(e.session_id, "-").concat(e.application_id, "-").concat(e.name),
+                              ),
+                          ),
+                      }),
+                  ],
+              }),
           })
         : null;
 }

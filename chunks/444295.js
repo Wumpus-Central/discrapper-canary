@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     AE: () => c,
     JS: () => p,
     Qu: () => h,
@@ -6,9 +6,9 @@
     bk: () => m,
     ee: () => f,
     ou: () => d,
-    zi: () => _
+    zi: () => _,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(77498),
     o = n(19780),
@@ -16,17 +16,17 @@ var r = n(73800),
     s = n(837268),
     l = n(981631),
     c = (function (e) {
-        return ((e.OOP = 'oop'), (e.OOP_GAME = 'oop game'), (e.LEGACY = 'legacy'), (e.LEGACY_GAME = 'legacy game'), e);
+        return (e.OOP = "oop"), (e.OOP_GAME = "oop game"), (e.LEGACY = "legacy"), (e.LEGACY_GAME = "legacy game"), e;
     })({});
 function u(e) {
     switch (e) {
-        case 'oop':
-        case 'oop game':
+        case "oop":
+        case "oop game":
         default:
-            return 'overlay toggled - global';
-        case 'legacy':
-        case 'legacy game':
-            return 'overlay toggled - game';
+            return "overlay toggled - global";
+        case "legacy":
+        case "legacy game":
+            return "overlay toggled - game";
     }
 }
 function d(e, t, r) {
@@ -41,7 +41,7 @@ function d(e, t, r) {
         client_setting_type: t,
         application_id: null != (c = null == f ? void 0 : f.id) ? c : void 0,
         application_name: null != (d = null == f ? void 0 : f.name) ? d : void 0,
-        most_recent_overlay_render_method: h
+        most_recent_overlay_render_method: h,
     });
 }
 function f(e, t) {
@@ -66,14 +66,16 @@ function f(e, t) {
 function _(e, t) {
     var n, r, i;
     let { locked: s, shownUserIds: c, liveUserIds: u, contentInventoryIds: d } = t;
-    ((null != (n = null == c ? void 0 : c.length) ? n : 0) !== 0 || (null != (r = null == u ? void 0 : u.length) ? r : 0) !== 0 || (null != (i = null == d ? void 0 : d.length) ? i : 0) !== 0) &&
+    ((null != (n = null == c ? void 0 : c.length) ? n : 0) !== 0 ||
+        (null != (r = null == u ? void 0 : u.length) ? r : 0) !== 0 ||
+        (null != (i = null == d ? void 0 : d.length) ? i : 0) !== 0) &&
         a.default.track(l.rMx.WIDGET_CONTENT_SHOWN, {
             overlay_locked: s,
             widget_type: e,
             shown_user_ids: c,
             live_user_ids: u,
             content_inventory_ids: d,
-            media_session_id: o.Z.getMediaSessionId()
+            media_session_id: o.Z.getMediaSessionId(),
         });
 }
 function p(e, t) {
@@ -81,14 +83,45 @@ function p(e, t) {
     a.default.track(l.rMx.WIDGET_SETTING_UPDATED, {
         widget_type: e,
         pinned: n,
-        opacity: r
+        opacity: r,
     });
 }
 var h = (function (e) {
-        return ((e.SCREEN_SHARE = 'screen share'), (e.CAMERA = 'camera'), (e.MICROPHONE = 'microphone'), (e.AUDIO = 'audio'), (e.VOICE = 'voice'), (e.CALL_BUTTON = 'call button'), (e.SOUNDBOARD = 'soundboard'), (e.GO_LIVE = 'go live'), (e.INVITE = 'invite'), (e.REDIRECT = 'redirect'), (e.FRIEND_LIST = 'friend list'), (e.FRIEND_REQUEST = 'friend request'), e);
+        return (
+            (e.SCREEN_SHARE = "screen share"),
+            (e.CAMERA = "camera"),
+            (e.MICROPHONE = "microphone"),
+            (e.AUDIO = "audio"),
+            (e.VOICE = "voice"),
+            (e.CALL_BUTTON = "call button"),
+            (e.SOUNDBOARD = "soundboard"),
+            (e.GO_LIVE = "go live"),
+            (e.INVITE = "invite"),
+            (e.REDIRECT = "redirect"),
+            (e.FRIEND_LIST = "friend list"),
+            (e.FRIEND_REQUEST = "friend request"),
+            e
+        );
     })({}),
     m = (function (e) {
-        return ((e.ENABLED = 'enabled'), (e.DISABLED = 'disabled'), (e.SETTINGS_OPENED = 'settings opened'), (e.PANEL_OPENED = 'panel opened'), (e.STREAM_PREVIEWED = 'stream previewed'), (e.INVITE_SENT = 'invite sent'), (e.JOIN_REQUEST_SENT = 'join request sent'), (e.PROFILE_OPENED = 'profile opened'), (e.GUILD_PROFILE_OPENED = 'guild profile opened'), (e.CHAT = 'chat'), (e.ACCEPT_REQUEST = 'accept request'), (e.DECLINE_REQUEST = 'decline request'), (e.CANCEL_REQUEST = 'cancel request'), (e.SEND_REQUEST = 'send request'), (e.SEARCH = 'search'), e);
+        return (
+            (e.ENABLED = "enabled"),
+            (e.DISABLED = "disabled"),
+            (e.SETTINGS_OPENED = "settings opened"),
+            (e.PANEL_OPENED = "panel opened"),
+            (e.STREAM_PREVIEWED = "stream previewed"),
+            (e.INVITE_SENT = "invite sent"),
+            (e.JOIN_REQUEST_SENT = "join request sent"),
+            (e.PROFILE_OPENED = "profile opened"),
+            (e.GUILD_PROFILE_OPENED = "guild profile opened"),
+            (e.CHAT = "chat"),
+            (e.ACCEPT_REQUEST = "accept request"),
+            (e.DECLINE_REQUEST = "decline request"),
+            (e.CANCEL_REQUEST = "cancel request"),
+            (e.SEND_REQUEST = "send request"),
+            (e.SEARCH = "search"),
+            e
+        );
     })({});
 function g(e, t) {
     let { type: n, value: r, userId: i } = t;
@@ -97,6 +130,6 @@ function g(e, t) {
         interaction_type: n,
         interaction_value: r,
         target_user_id: i,
-        media_session_id: o.Z.getMediaSessionId()
+        media_session_id: o.Z.getMediaSessionId(),
     });
 }

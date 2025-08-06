@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => G }), n(388685));
+n.d(t, { Z: () => G }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -37,7 +37,7 @@ function x(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -47,15 +47,15 @@ function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 x(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -63,11 +63,11 @@ function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -101,38 +101,34 @@ function G(e) {
                         if (null == x) return !1;
                         let n = S.I0({
                             forceRoles: { [e.id]: e },
-                            context: t
+                            context: t,
                         });
                         return c.Db(n, c.$e(P.Plq.ADMINISTRATOR, P.Plq.VIEW_CHANNEL));
                     })
                     .value(),
-            [t, x, B]
+            [t, x, B],
         ),
-        F = (0, u.Wu)(
-            [T.default],
-            () => {
-                let e = {};
-                for (let n of (null != G && (e[G.id] = G), Object.values(t.permissionOverwrites))) {
-                    if (n.type !== _.BN.MEMBER || null != e[n.id]) continue;
-                    let t = T.default.getUser(n.id);
-                    null != t && (e[t.id] = t);
-                }
-                return l()(e)
-                    .filter((e) => {
-                        var n;
-                        let r = S.BT({
-                                permission: P.Plq.ADMINISTRATOR,
-                                user: e,
-                                context: t
-                            }),
-                            i = null != (n = t.permissionOverwrites[e.id]) ? n : S.Hn,
-                            o = c.e$(i.allow, P.Plq.VIEW_CHANNEL);
-                        return r || o;
-                    })
-                    .value();
-            },
-            [t, G]
-        ),
+        F = (0, u.Wu)([T.default], () => {
+            let e = {};
+            for (let n of (null != G && (e[G.id] = G), Object.values(t.permissionOverwrites))) {
+                if (n.type !== _.BN.MEMBER || null != e[n.id]) continue;
+                let t = T.default.getUser(n.id);
+                null != t && (e[t.id] = t);
+            }
+            return l()(e)
+                .filter((e) => {
+                    var n;
+                    let r = S.BT({
+                            permission: P.Plq.ADMINISTRATOR,
+                            user: e,
+                            context: t,
+                        }),
+                        i = null != (n = t.permissionOverwrites[e.id]) ? n : S.Hn,
+                        o = c.e$(i.allow, P.Plq.VIEW_CHANNEL);
+                    return r || o;
+                })
+                .value();
+        }, [t, G]),
         V = I.Z.can(P.Plq.MANAGE_CHANNELS, t) || I.Z.can(P.Plq.MANAGE_ROLES, t);
     function H() {
         if (1 !== F.length || Z.length > 0)
@@ -140,32 +136,32 @@ function G(e) {
                 guildId: t.guild_id,
                 className: D.avatars,
                 maxUsers: U,
-                users: F
+                users: F,
             });
         let e = F[0],
             n = A.ZP.getName(e);
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: D.avatars,
             children: [
                 (0, r.jsx)(d.qEK, {
                     src: e.getAvatarURL(t.guild_id, 24),
-                    'aria-label': n,
-                    size: d.EFr.SIZE_24
+                    "aria-label": n,
+                    size: d.EFr.SIZE_24,
                 }),
                 (0, r.jsx)(d.Text, {
-                    tag: 'span',
+                    tag: "span",
                     className: D.singleUserName,
-                    variant: 'text-md/normal',
-                    children: n
+                    variant: "text-md/normal",
+                    children: n,
                 }),
-                '\xA0',
+                "\xA0",
                 (0, r.jsx)(d.Text, {
-                    tag: 'span',
-                    variant: 'text-md/normal',
-                    color: 'text-muted',
-                    children: w.intl.string(w.t.rt0ERU)
-                })
-            ]
+                    tag: "span",
+                    variant: "text-md/normal",
+                    color: "text-muted",
+                    children: w.intl.string(w.t.rt0ERU),
+                }),
+            ],
         });
     }
     function Y() {
@@ -183,10 +179,10 @@ function G(e) {
                           disabled: !V,
                           verified: l,
                           onClick: () => {
-                              (E.Z.open(t.guild_id, P.pNK.MEMBERS), E.Z.selectRole(e.id));
-                          }
+                              E.Z.open(t.guild_id, P.pNK.MEMBERS), E.Z.selectRole(e.id);
+                          },
                       },
-                      e.id
+                      e.id,
                   )
                 : (0, r.jsx)(
                       g.Z,
@@ -194,9 +190,9 @@ function G(e) {
                           className: a()(D.role, { [D.last]: n === Z.length - 1 }),
                           roleName: e.name,
                           roleColor: s,
-                          verified: l
+                          verified: l,
                       },
-                      e.id
+                      e.id,
                   );
         });
     }
@@ -205,26 +201,26 @@ function G(e) {
     }
     function K() {
         return V
-            ? (0, r.jsxs)('div', {
+            ? (0, r.jsxs)("div", {
                   className: D.channelSettingButtons,
                   children: [
                       (0, r.jsx)(N.Z, {
                           label: w.intl.string(w.t.dMJ3Y2),
                           onClick: () => o(!0),
                           icon: (0, r.jsx)(d.BFJ, {
-                              size: 'xs',
-                              color: 'currentColor'
-                          })
+                              size: "xs",
+                              color: "currentColor",
+                          }),
                       }),
                       (0, r.jsx)(N.Z, {
-                          label: w.intl.string(w.t['3gUsJS']),
+                          label: w.intl.string(w.t["3gUsJS"]),
                           onClick: W,
                           icon: (0, r.jsx)(d.vdY, {
-                              size: 'xs',
-                              color: 'currentColor'
-                          })
-                      })
-                  ]
+                              size: "xs",
+                              color: "currentColor",
+                          }),
+                      }),
+                  ],
               })
             : null;
     }
@@ -237,10 +233,10 @@ function G(e) {
                           h.default,
                           j(M({}, e), {
                               onClose: () => (z(), e.onClose()),
-                              channelId: t.id
-                          })
+                              channelId: t.id,
+                          }),
                       ),
-                  onCloseRequest: () => o(!1)
+                  onCloseRequest: () => o(!1),
               })
             : null;
     }
@@ -249,22 +245,22 @@ function G(e) {
         children: [
             (0, r.jsx)(C.Kq, {
                 locked: !0,
-                channelType: t.type
+                channelType: t.type,
             }),
             (0, r.jsx)(C.Ot, { children: w.intl.format(w.t.I3R7Vl, { channelName: s }) }),
             (0, r.jsx)(C.jz, {
                 className: L.markup,
                 children: w.intl.format(w.t.QuwqjI, {
                     channelName: s,
-                    topicHook: () => b.Z.parseTopic(t.topic, !0, { channelId: t.id })
-                })
+                    topicHook: () => b.Z.parseTopic(t.topic, !0, { channelId: t.id }),
+                }),
             }),
             K(),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: D.members,
-                children: [H(), Y()]
+                children: [H(), Y()],
             }),
-            q()
-        ]
+            q(),
+        ],
     });
 }

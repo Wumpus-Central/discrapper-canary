@@ -11,23 +11,36 @@ n.d(t, {
     sN: () => d,
     tB: () => m,
     yG: () => s,
-    zj: () => f
+    zj: () => f,
 });
 var r = n(214627),
     i = (function (e) {
-        return ((e.BLACK_SCREEN = 'BLACK_SCREEN'), (e.BLURRY = 'BLURRY'), (e.LAGGING = 'LAGGING'), (e.OUT_OF_SYNC = 'OUT_OF_SYNC'), (e.AUDIO_MISSING = 'AUDIO_MISSING'), (e.AUDIO_POOR = 'AUDIO_POOR'), (e.GAME_ISSUE = 'GAME_ISSUE'), (e.STREAM_STOPPED = 'STREAM_STOPPED'), (e.NO_ISSUE = 'NO_ISSUE'), (e.OTHER = 'OTHER'), (e.VIBES_OFF = 'VIBES_OFF'), e);
+        return (
+            (e.BLACK_SCREEN = "BLACK_SCREEN"),
+            (e.BLURRY = "BLURRY"),
+            (e.LAGGING = "LAGGING"),
+            (e.OUT_OF_SYNC = "OUT_OF_SYNC"),
+            (e.AUDIO_MISSING = "AUDIO_MISSING"),
+            (e.AUDIO_POOR = "AUDIO_POOR"),
+            (e.GAME_ISSUE = "GAME_ISSUE"),
+            (e.STREAM_STOPPED = "STREAM_STOPPED"),
+            (e.NO_ISSUE = "NO_ISSUE"),
+            (e.OTHER = "OTHER"),
+            (e.VIBES_OFF = "VIBES_OFF"),
+            e
+        );
     })({});
-let o = '>=19.0.0',
-    a = '>=22.0.0',
-    s = '>=22.0.0',
-    l = '>=24.0.0',
-    c = '>=10.0.17763',
-    u = '<10.0.22000',
-    d = '>=10.0.26100',
+let o = ">=19.0.0",
+    a = ">=22.0.0",
+    s = ">=22.0.0",
+    l = ">=24.0.0",
+    c = ">=10.0.17763",
+    u = "<10.0.22000",
+    d = ">=10.0.26100",
     f = 26100,
-    _ = '>=10.0.22000',
+    _ = ">=10.0.22000",
     p = 22000;
 var h = (function (e) {
-    return ((e.GUILD = 'guild'), (e.CALL = 'call'), e);
+    return (e.GUILD = "guild"), (e.CALL = "call"), e;
 })({});
 let m = r.T.StreamNotificationsGuildMaxSize;

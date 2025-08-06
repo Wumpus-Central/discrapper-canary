@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => m,
-    p: () => h
+    p: () => h,
 });
 var l = n(442837),
     r = n(933557),
@@ -12,13 +12,13 @@ var l = n(442837),
     d = n(388032);
 function u(e, t, n) {
     return 0 === e.length
-        ? ''
+        ? ""
         : d.intl.format(n ? d.t.cJZxWV : d.t.Kj5GIS, {
               count: e.length,
               extraCount: Math.max(e.length - 2, 0),
               role1: e[0],
               role2: e[1],
-              itemHook: t
+              itemHook: t,
           });
 }
 function m(e) {
@@ -29,28 +29,28 @@ function m(e) {
             Array.from(h)
                 .map((e) => i.Z.getChannel(e))
                 .filter(c.lm)
-                .map((e) => (0, r.F6)(e, s.default, o.Z, !0))
+                .map((e) => (0, r.F6)(e, s.default, o.Z, !0)),
         ),
-        _ = g.map((e) => '@'.concat(e.name)),
-        C = (null == n ? void 0 : n.singleSelect) ? '' : d.intl.string(d.t.JshhEh),
-        b = '';
+        _ = g.map((e) => "@".concat(e.name)),
+        C = (null == n ? void 0 : n.singleSelect) ? "" : d.intl.string(d.t.JshhEh),
+        b = "";
     if (0 === x.length && _.length > 0) C = u(_, p);
     else
         x.length > 0 &&
             ((C =
                 0 === x.length
-                    ? ''
+                    ? ""
                     : d.intl.format(d.t.Rj841d, {
                           count: x.length,
                           extraCount: Math.max(x.length - 2, 0),
                           channel1: x[0],
                           channel2: x[1],
-                          itemHook: p
+                          itemHook: p,
                       })),
             _.length > 0 && (b = u(_, p, !0)));
     return {
         helpText: C,
-        helpTextAdditional: b
+        helpTextAdditional: b,
     };
 }
 function h(e) {
@@ -61,10 +61,10 @@ function h(e) {
             Array.from(m)
                 .map((e) => i.Z.getChannel(e))
                 .filter(c.lm)
-                .map((e) => (0, r.F6)(e, s.default, o.Z, !0))
+                .map((e) => (0, r.F6)(e, s.default, o.Z, !0)),
         ),
-        x = f.map((e) => '@'.concat(e.name)),
-        _ = (null == n ? void 0 : n.singleSelect) ? '' : d.intl.string(d.t.JshhEh);
+        x = f.map((e) => "@".concat(e.name)),
+        _ = (null == n ? void 0 : n.singleSelect) ? "" : d.intl.string(d.t.JshhEh);
     return (
         0 === g.length && x.length > 0
             ? (_ = d.intl.format(d.t.vdtNYW, {
@@ -72,7 +72,7 @@ function h(e) {
                   extraCount: Math.max(x.length - 2, 0),
                   role1: x[0],
                   role2: x[1],
-                  itemHook: h
+                  itemHook: h,
               }))
             : g.length > 0 && 0 === x.length
               ? (_ = d.intl.format(d.t.ZKywGR, {
@@ -80,7 +80,7 @@ function h(e) {
                     extraCount: Math.max(g.length - 2, 0),
                     channel1: g[0],
                     channel2: g[1],
-                    itemHook: h
+                    itemHook: h,
                 }))
               : g.length > 0 &&
                 x.length > 0 &&
@@ -93,11 +93,11 @@ function h(e) {
                     roleCount: x.length,
                     extraRoleCount: Math.max(x.length - 2, 0),
                     role1: x[0],
-                    role2: x[1]
+                    role2: x[1],
                 })),
         {
             helpText: _,
-            helpTextAdditional: ''
+            helpTextAdditional: "",
         }
     );
 }

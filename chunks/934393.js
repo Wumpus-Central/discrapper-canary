@@ -20,26 +20,26 @@ function h(e) {
     let E = (e) => {
         e.stopPropagation();
         let n = t === _.ABu.XBOX;
-        (null == h || h({ action: n ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
+        null == h || h({ action: n ? "PRESS_CONNECT_XBOX_BUTTON" : "PRESS_CONNECT_PLAYSTATION_BUTTON" }),
             (0, l.Z)({
                 platformType: t,
-                location: m
-            }));
+                location: m,
+            });
     };
     return g === f.lY.MODAL_V2
         ? (0, r.jsx)(d.tG, {
               icon: n,
               text: p.intl.formatToPlainString(p.t.XWSHTU, { platform: a.Z.get(t).name }),
               size: o.Ph.TINY,
-              themeColor: 'secondary',
-              onClick: E
+              themeColor: "secondary",
+              onClick: E,
           })
         : (0, r.jsx)(d.tG, {
               icon: n,
               text: p.intl.formatToPlainString(p.t.XWSHTU, { platform: a.Z.get(t).name }),
               size: o.Ph.SMALL,
-              themeColor: 'secondary',
+              themeColor: "secondary",
               fullWidth: !0,
-              onClick: E
+              onClick: E,
           });
 }

@@ -19,7 +19,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -64,21 +64,22 @@ function E(e, t) {
         e
     );
 }
-let b = 'game_console_alert_modal',
-    y = 'game_console_ptt_alert_modal',
+let b = "game_console_alert_modal",
+    y = "game_console_ptt_alert_modal",
     O = {
         maybeShowPTTAlert(e) {
-            if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.zu)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
+            if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.zu)(i.z.CONSOLE_PTT_DISABLE_ALERT))
+                return Promise.resolve();
             let t = {
                 [_.ABu.XBOX]: p.intl.string(p.t.bVZ7v7),
-                [_.ABu.PLAYSTATION]: p.intl.string(p.t['6iqUsb']),
-                [_.ABu.PLAYSTATION_STAGING]: p.intl.string(p.t['6iqUsb'])
+                [_.ABu.PLAYSTATION]: p.intl.string(p.t["6iqUsb"]),
+                [_.ABu.PLAYSTATION_STAGING]: p.intl.string(p.t["6iqUsb"]),
             }[e];
             return null == t
                 ? Promise.resolve()
                 : new Promise((e) => {
                       let n = () => {
-                              ((0, l.Q3)(i.z.CONSOLE_PTT_DISABLE_ALERT), e());
+                              (0, l.Q3)(i.z.CONSOLE_PTT_DISABLE_ALERT), e();
                           },
                           s = (e) =>
                               (0, r.jsx)(
@@ -89,10 +90,10 @@ let b = 'game_console_alert_modal',
                                       actions: [
                                           {
                                               text: p.intl.string(p.t.BddRzc),
-                                              onClick: n
-                                          }
-                                      ]
-                                  })
+                                              onClick: n,
+                                          },
+                                      ],
+                                  }),
                               );
                       (0, o.nf)(y) ? (0, o.o)(y, (e) => s(e)) : (0, o.ZD)(async () => (e) => s(e), { modalKey: y });
                   });
@@ -102,15 +103,15 @@ let b = 'game_console_alert_modal',
                 c = (0, r.jsx)(d.t, {
                     body: n,
                     errorCodeMessage: i,
-                    dismissCallback: () => (0, o.Mr)(b)
+                    dismissCallback: () => (0, o.Mr)(b),
                 });
             function h() {
                 null != l &&
                     ((0, s.Z)({ platformType: l }),
                     u.default.track(_.rMx.ACCOUNT_LINK_STEP, {
                         previous_step: f.Lw,
-                        current_step: 'desktop oauth',
-                        platform_type: l
+                        current_step: "desktop oauth",
+                        platform_type: l,
                     }));
             }
             let g = (e) =>
@@ -121,12 +122,12 @@ let b = 'game_console_alert_modal',
                         actions: [
                             {
                                 text: p.intl.string(p.t.BddRzc),
-                                onClick: h
-                            }
+                                onClick: h,
+                            },
                         ],
-                        children: c
-                    })
+                        children: c,
+                    }),
                 );
             (0, o.nf)(b) ? (0, o.o)(b, (e) => g(e)) : (0, o.ZD)(async () => (e) => g(e), { modalKey: b });
-        }
+        },
     };

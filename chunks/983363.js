@@ -8,7 +8,7 @@ r(
         global: !0,
         bind: !0,
         enumerable: !0,
-        forced: i.setImmediate !== s
+        forced: i.setImmediate !== s,
     },
-    { setImmediate: s }
+    { setImmediate: s },
 );

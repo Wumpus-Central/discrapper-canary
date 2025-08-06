@@ -24,7 +24,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -78,7 +78,7 @@ function T(e) {
         { premiumTier: l, premiumSubscriberCount: c } = t;
     if (0 === c && l === g.Eu4.NONE) return null;
     let u = (e) => {
-            (e.stopPropagation(),
+            e.stopPropagation(),
                 e.preventDefault(),
                 o &&
                     !i &&
@@ -86,26 +86,26 @@ function T(e) {
                         guildId: t.id,
                         location: {
                             section: g.jXE.GUILD_HEADER,
-                            object: g.qAy.BOOST_GEM_ICON
-                        }
-                    }));
+                            object: g.qAy.BOOST_GEM_ICON,
+                        },
+                    });
         },
         _ = l === g.Eu4.NONE ? E.intl.string(E.t.c2wsn5) : m.nW(l),
         y = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: b.tierTooltipTitle,
-                    children: _
+                    children: _,
                 }),
-                (0, r.jsx)('div', { children: E.intl.format(E.t.If4iTU, { subscriberCount: c }) })
-            ]
+                (0, r.jsx)("div", { children: E.intl.format(E.t.If4iTU, { subscriberCount: c }) }),
+            ],
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: b.guildIconContainer,
         children: (0, r.jsx)(s.ua7, {
             text: y,
-            position: 'bottom',
-            'aria-label': null != _ ? _ : '',
+            position: "bottom",
+            "aria-label": null != _ ? _ : "",
             children: (e) =>
                 (0, r.jsx)(
                     s.P3F,
@@ -116,38 +116,39 @@ function T(e) {
                             size: 18,
                             premiumTier: l,
                             iconBackgroundClassName: n ? b.boostedGuildTierIconBackgroundWithVisibleBanner : void 0,
-                            iconClassName: n && l !== g.Eu4.TIER_3 ? b.boostedGuildTierMutedIconWithVisibleBanner : null
-                        })
-                    })
-                )
-        })
+                            iconClassName:
+                                n && l !== g.Eu4.TIER_3 ? b.boostedGuildTierMutedIconWithVisibleBanner : null,
+                        }),
+                    }),
+                ),
+        }),
     });
 }
 function S(e) {
     let { guild: t, disableColor: n, disableBoostClick: i } = e,
         a = (0, l.Z)(t),
-        { entrypoints: d } = (0, _._k)({ location: 'guild_status_badge' });
+        { entrypoints: d } = (0, _._k)({ location: "guild_status_badge" });
     return a
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: o()(b.guildIconV2Container, { [b.invitesRefresh]: d }),
               children: (0, r.jsx)(u.Z, {
                   guild: t,
                   size: 18,
-                  tooltipPosition: 'bottom',
+                  tooltipPosition: "bottom",
                   tooltipColor: s.ua7.Colors.PRIMARY,
                   className: o()(b.guildBadge, { [b.disableColor]: n }),
-                  disableBoostClick: i
-              })
+                  disableBoostClick: i,
+              }),
           })
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: o()(b.guildIconContainer, { [b.invitesRefresh]: d }),
               children: (0, r.jsx)(c.Z, {
                   guild: t,
                   size: 18,
-                  tooltipPosition: 'bottom',
+                  tooltipPosition: "bottom",
                   tooltipColor: s.ua7.Colors.PRIMARY,
-                  className: o()(b.guildBadge, { [b.disableColor]: n })
-              })
+                  className: o()(b.guildBadge, { [b.disableColor]: n }),
+              }),
           });
 }
 function A(e) {
@@ -157,16 +158,16 @@ function A(e) {
         ? (0, r.jsx)(S, {
               guild: t,
               disableColor: !1,
-              disableBoostClick: n
+              disableBoostClick: n,
           })
         : t.features.has(g.oNc.VERIFIED) || t.features.has(g.oNc.PARTNERED)
           ? (0, r.jsx)(S, {
                 guild: t,
-                disableColor: !i
+                disableColor: !i,
             })
           : (0, r.jsx)(T, {
                 guild: t,
                 isBannerVisible: i,
-                disableBoostClick: n
+                disableBoostClick: n,
             });
 }

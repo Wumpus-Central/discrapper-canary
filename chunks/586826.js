@@ -13,8 +13,8 @@ let s = (0, a.F)((e) => ({
                 e({
                     file: t,
                     audio: null,
-                    loading: null != t
-                })
+                    loading: null != t,
+                }),
             ),
             null == t)
         )
@@ -24,14 +24,14 @@ let s = (0, a.F)((e) => ({
             (0, i.j)(() =>
                 e({
                     audio: n,
-                    loading: !1
-                })
+                    loading: !1,
+                }),
             );
     },
     maxVolume: 1,
     setMaxVolume: (t) => {
         (0, i.j)(() => e({ maxVolume: t }));
-    }
+    },
 }));
 function o() {
     return s(
@@ -41,8 +41,8 @@ function o() {
             loading: e.loading,
             loadAudioFromFile: e.loadAudioFromFile,
             maxVolume: e.maxVolume,
-            setMaxVolume: e.setMaxVolume
+            setMaxVolume: e.setMaxVolume,
         }),
-        l.X
+        l.X,
     );
 }

@@ -2,12 +2,12 @@ var r = n(461648),
     i = function () {
         return !!r;
     };
-((i.hasArrayLengthDefineBug = function () {
+(i.hasArrayLengthDefineBug = function () {
     if (!r) return null;
     try {
-        return 1 !== r([], 'length', { value: 1 }).length;
+        return 1 !== r([], "length", { value: 1 }).length;
     } catch (e) {
         return !0;
     }
 }),
-    (e.exports = i));
+    (e.exports = i);

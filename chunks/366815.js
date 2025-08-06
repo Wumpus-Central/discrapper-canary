@@ -12,95 +12,95 @@ let d = () =>
     (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.Text, {
-                color: 'header-primary',
-                variant: 'text-xs/normal',
+                color: "header-primary",
+                variant: "text-xs/normal",
                 className: c.inlineText,
-                children: o.intl.string(o.t.GcZzp6)
+                children: o.intl.string(o.t.GcZzp6),
             }),
             (0, r.jsx)(i.Text, {
-                color: 'header-primary',
-                variant: 'text-xs/normal',
+                color: "header-primary",
+                variant: "text-xs/normal",
                 className: c.inlineText,
-                children: o.intl.string(o.t['/NEGrK'])
+                children: o.intl.string(o.t["/NEGrK"]),
             }),
             (0, r.jsx)(i.Text, {
-                color: 'header-primary',
-                variant: 'text-xs/normal',
+                color: "header-primary",
+                variant: "text-xs/normal",
                 className: c.inlineText,
-                children: o.intl.string(o.t.eUbuHB)
+                children: o.intl.string(o.t.eUbuHB),
             }),
             (0, r.jsx)(i.Text, {
-                color: 'header-primary',
-                variant: 'text-xs/normal',
+                color: "header-primary",
+                variant: "text-xs/normal",
                 className: c.inlineText,
-                children: o.intl.string(o.t.sCAZeH)
-            })
-        ]
+                children: o.intl.string(o.t.sCAZeH),
+            }),
+        ],
     });
 function m(e) {
     let { onClick: t } = e;
     return (0, l.e7)([a.qc], () => !a.qc.hasHotspot(a.v6.STAGE_CHANNEL_UPSELL))
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: c.container,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: c.content,
                       children: [
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: c.textContainer,
                               children: [
                                   (0, r.jsx)(i.X6q, {
-                                      variant: 'heading-md/semibold',
-                                      children: o.intl.string(o.t.Sx8Ezs)
+                                      variant: "heading-md/semibold",
+                                      children: o.intl.string(o.t.Sx8Ezs),
                                   }),
                                   (0, r.jsx)(i.Text, {
-                                      color: 'header-secondary',
-                                      variant: 'text-xs/normal',
+                                      color: "header-secondary",
+                                      variant: "text-xs/normal",
                                       className: c.descriptionText,
-                                      children: o.intl.string(o.t.JUzPho)
+                                      children: o.intl.string(o.t.JUzPho),
                                   }),
                                   (0, r.jsx)(i.Text, {
-                                      color: 'header-secondary',
-                                      variant: 'text-xs/normal',
-                                      children: o.intl.format(o.t.Vh7rPz, { suggestionsHook: d })
-                                  })
-                              ]
+                                      color: "header-secondary",
+                                      variant: "text-xs/normal",
+                                      children: o.intl.format(o.t.Vh7rPz, { suggestionsHook: d }),
+                                  }),
+                              ],
                           }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: c.image,
-                              children: (0, r.jsx)('img', {
+                              children: (0, r.jsx)("img", {
                                   src: u,
-                                  alt: o.intl.string(o.t['uIm/n5'])
-                              })
-                          })
-                      ]
+                                  alt: o.intl.string(o.t["uIm/n5"]),
+                              }),
+                          }),
+                      ],
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: c.footer,
                       children: (0, r.jsxs)(i.hE2, {
-                          direction: 'horizontal',
-                          size: 'sm',
+                          direction: "horizontal",
+                          size: "sm",
                           children: [
                               (0, r.jsx)(i.zxk, {
                                   onClick: t,
-                                  variant: 'secondary',
-                                  text: o.intl.string(o.t['X/3SyM'])
+                                  variant: "secondary",
+                                  text: o.intl.string(o.t["X/3SyM"]),
                               }),
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: c.textButtonWrapper,
                                   children: (0, r.jsx)(i.Avr, {
                                       onClick: () => {
                                           s.Kw(a.v6.STAGE_CHANNEL_UPSELL);
                                       },
-                                      variant: 'secondary',
-                                      textVariant: 'text-sm/medium',
-                                      text: o.intl.string(o.t['5E9SBw'])
-                                  })
-                              })
-                          ]
-                      })
-                  })
-              ]
+                                      variant: "secondary",
+                                      textVariant: "text-sm/medium",
+                                      text: o.intl.string(o.t["5E9SBw"]),
+                                  }),
+                              }),
+                          ],
+                      }),
+                  }),
+              ],
           });
 }

@@ -1,4 +1,4 @@
-(t.d(n, { default: () => B }), t(388685));
+t.d(n, { default: () => B }), t(388685);
 var l = t(255367),
     i = t(73800),
     r = t(442837),
@@ -34,24 +34,24 @@ function R(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                })
+                }),
             )),
             l.forEach(function (n) {
                 var l;
-                ((l = t[n]),
+                (l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[n] = l));
-            }));
+                        : (e[n] = l);
+            });
     }
     return e;
 }
@@ -68,7 +68,7 @@ function L(e) {
             guildScheduledEvent: n,
             isActive: u,
             recurrenceId: a,
-            onActionTaken: o
+            onActionTaken: o,
         }),
         { entity_type: x } = n;
     return c
@@ -83,10 +83,10 @@ function L(e) {
                       isDetailsView: !0,
                       guildName: null == t ? void 0 : t.name,
                       isChannelPublic: g,
-                      canInvite: f
+                      canInvite: f,
                   },
-                  p
-              )
+                  p,
+              ),
           )
         : (0, l.jsx)(
               P.ZP,
@@ -97,10 +97,10 @@ function L(e) {
                       rsvped: _,
                       isChannelPublic: g,
                       canInvite: f,
-                      entityType: x
+                      entityType: x,
                   },
-                  p
-              )
+                  p,
+              ),
           );
 }
 let B = (e) => {
@@ -124,7 +124,7 @@ let B = (e) => {
             ? b()
             : f.default.track(k.rMx.OPEN_MODAL, {
                   type: T.zw,
-                  guild_id: R.guild_id
+                  guild_id: R.guild_id,
               });
     }, [R, b]);
     let Q = i.useRef(null),
@@ -147,14 +147,14 @@ let B = (e) => {
         children: (0, l.jsxs)(o.Y0X, {
             size: o.CgR.MEDIUM,
             transitionState: d,
-            'aria-labelledby': A,
+            "aria-labelledby": A,
             className: w.root,
-            parentComponent: 'GuildScheduledEventModal',
+            parentComponent: "GuildScheduledEventModal",
             children: [
                 (null == R ? void 0 : R.image) != null &&
                     (0, l.jsx)(C.Z, {
                         source: (0, y.Z)(R),
-                        className: w.banner
+                        className: w.banner,
                     }),
                 (0, l.jsx)(N.Z, {
                     onClose: b,
@@ -162,9 +162,9 @@ let B = (e) => {
                     onTabSelected: ee,
                     userCount: W,
                     hasBanner: (null == R ? void 0 : R.image) != null,
-                    isHub: U
+                    isHub: U,
                 }),
-                (0, l.jsx)('div', {
+                (0, l.jsx)("div", {
                     className: w.container,
                     children: (0, l.jsx)(o.hzk, {
                         className: w.contentContainer,
@@ -186,8 +186,8 @@ let B = (e) => {
                                         isHub: U,
                                         containerRef: Q,
                                         recurrenceId: en,
-                                        setRecurrenceId: S
-                                    })
+                                        setRecurrenceId: S,
+                                    }),
                                 }),
                                 (0, l.jsx)(o.Mi4, {
                                     id: T.fL.RSVP_LIST,
@@ -197,12 +197,12 @@ let B = (e) => {
                                         eventUsers: H,
                                         loading: J,
                                         containerHeight: Y,
-                                        error: K
-                                    })
-                                })
-                            ]
-                        })
-                    })
+                                        error: K,
+                                    }),
+                                }),
+                            ],
+                        }),
+                    }),
                 }),
                 (0, l.jsx)(o.mzw, {
                     className: w.footer,
@@ -213,10 +213,10 @@ let B = (e) => {
                         guild: G,
                         channel: V,
                         onActionTaken: b,
-                        recurrenceId: en
-                    })
-                })
-            ]
-        })
+                        recurrenceId: en,
+                    }),
+                }),
+            ],
+        }),
     });
 };

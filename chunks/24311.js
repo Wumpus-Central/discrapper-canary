@@ -20,23 +20,23 @@ function Z(e) {
         _ = (0, l.e7)([g.Z, d.Z], () => g.Z.getVoiceChannelId() === d.Z.getDMFromUserId(t.id));
     if (j || Z === f.IlC.POPOUT || _ || t.bot || t.isProvisional) return null;
     let y = () => {
-            (null == O || O(),
+            null == O || O(),
                 a.Z.openPrivateChannel({
                     recipientIds: t.id,
                     joinCall: !0,
-                    joinCallVideo: v
+                    joinCallVideo: v,
                 }),
                 h.dispatch(f.CkL.POPOUT_CLOSE),
-                (0, r.pTH)());
+                (0, r.pTH)();
         },
         N = !s.ZP.disableCallUserConfirmationPrompt;
     return (0, i.jsx)(r.sNh, {
-        id: null != p ? p : 'call',
+        id: null != p ? p : "call",
         label: null != m ? m : b.intl.string(b.t.JJogjo),
         action: N
             ? () => {
                   (0, r.ZDy)(async () => {
-                      let { default: e } = await n.e('27157').then(n.bind(n, 736454));
+                      let { default: e } = await n.e("27157").then(n.bind(n, 736454));
                       return (t) =>
                           (0, i.jsx)(
                               e,
@@ -44,31 +44,31 @@ function Z(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           i = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (i = i.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           i.forEach(function (t) {
                                               var i;
-                                              ((i = n[t]),
+                                              (i = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: i,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = i));
-                                          }));
+                                                      : (e[t] = i);
+                                          });
                                   }
                                   return e;
-                              })({ onSubmit: y }, t)
+                              })({ onSubmit: y }, t),
                           );
                   });
               }
             : y,
-        disabled: x
+        disabled: x,
     });
 }

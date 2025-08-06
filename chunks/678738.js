@@ -9,7 +9,17 @@ var r = n(255367),
     u = n(313201),
     d = n(729894);
 function f(e) {
-    let { children: t, heading: n, headingIcon: o, introText: f, className: _, scrollIntoView: p = !1, headingClassName: h, headingVariant: m = 'text-xs/semibold', headingColor: g = 'header-secondary' } = e,
+    let {
+            children: t,
+            heading: n,
+            headingIcon: o,
+            introText: f,
+            className: _,
+            scrollIntoView: p = !1,
+            headingClassName: h,
+            headingVariant: m = "text-xs/semibold",
+            headingColor: g = "header-secondary",
+        } = e,
         E = (0, u.Dt)(),
         b = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         y = i.useRef(null);
@@ -18,20 +28,20 @@ function f(e) {
             let e = y.current;
             if (null == e) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: b ? 'auto' : 'smooth' });
+                e.scrollIntoView({ behavior: b ? "auto" : "smooth" });
             });
             return () => cancelAnimationFrame(t);
         }, [b]),
-        (0, r.jsxs)('section', {
+        (0, r.jsxs)("section", {
             ref: p ? y : void 0,
             className: a()(d.section, _),
-            'aria-labelledby': null != n ? E : void 0,
+            "aria-labelledby": null != n ? E : void 0,
             children: [
                 null != n &&
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: d.headings,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: d.header,
                                 children: [
                                     (0, r.jsx)(l.X6q, {
@@ -39,20 +49,20 @@ function f(e) {
                                         color: g,
                                         className: h,
                                         id: E,
-                                        children: n
+                                        children: n,
                                     }),
-                                    o
-                                ]
+                                    o,
+                                ],
                             }),
                             null != f &&
                                 (0, r.jsx)(l.Text, {
-                                    variant: 'text-xs/normal',
-                                    children: f
-                                })
-                        ]
+                                    variant: "text-xs/normal",
+                                    children: f,
+                                }),
+                        ],
                     }),
-                (0, r.jsx)(l.y5t, { children: t })
-            ]
+                (0, r.jsx)(l.y5t, { children: t }),
+            ],
         })
     );
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(997841));
+n.d(t, { Z: () => E }), n(997841);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -18,22 +18,28 @@ var i = n(442837),
 function E(e) {
     let { message: t } = (0, m.CJ)(),
         n = (0, i.e7)([_.Z], () => _.Z.getChannel(null == t ? void 0 : t.channel_id)),
-        { shouldHideMediaOptions: E, enabledContentHarmTypeFlags: b, gifAutoPlay: y, getGifFavButton: O, getOnMediaItemContextMenu: v } = (0, u.c)();
+        {
+            shouldHideMediaOptions: E,
+            enabledContentHarmTypeFlags: b,
+            gifAutoPlay: y,
+            getGifFavButton: O,
+            getOnMediaItemContextMenu: v,
+        } = (0, u.c)();
     if (null == t || null == n) return null;
-    let I = e.items.map((e) => (0, a.ze)(e.media, t)).filter((e) => 'INVALID' !== e.type),
+    let I = e.items.map((e) => (0, a.ze)(e.media, t)).filter((e) => "INVALID" !== e.type),
         { srcToOnClickOverride: T, srcToHandlePreloadImage: S } =
             I.length > 1
                 ? (0, f.G)(
                       I,
                       {
                           shouldHideMediaOptions: E,
-                          enabledContentHarmTypeFlags: b
+                          enabledContentHarmTypeFlags: b,
                       },
-                      'Media Mosaic'
+                      "Media Mosaic",
                   )
                 : {
                       srcToOnClickOverride: {},
-                      srcToHandlePreloadImage: {}
+                      srcToHandlePreloadImage: {},
                   };
     function A(e, n) {
         var r;
@@ -47,7 +53,7 @@ function E(e) {
             s = {
                 message: t,
                 item: {
-                    uniqueId: ''.concat(r.proxyUrl, '--').concat(n),
+                    uniqueId: "".concat(r.proxyUrl, "--").concat(n),
                     originalItem: e,
                     type: (0, l.pU)(r),
                     downloadUrl: r.url,
@@ -55,7 +61,7 @@ function E(e) {
                     width: r.width,
                     spoiler: e.spoiler,
                     contentType: r.contentType,
-                    srcIsAnimated: (0, h.yE)(r.flags, o.hR.IS_ANIMATED)
+                    srcIsAnimated: (0, h.yE)(r.flags, o.hR.IS_ANIMATED),
                 },
                 onContextMenu: a,
                 autoPlayGif: y,
@@ -70,18 +76,18 @@ function E(e) {
                 gifFavoriteButton: O(r),
                 onPlay: i,
                 canRemoveItem: !1,
-                onRemoveItem: g.dG4
+                onRemoveItem: g.dG4,
             },
             u = (0, p.q)({
                 proxyURL: r.proxyUrl,
-                url: r.url
+                url: r.url,
             });
-        return (u in T && ((s.onClick = T[u]), (s.handlePreloadImage = S[u])), s);
+        return u in T && ((s.onClick = T[u]), (s.handlePreloadImage = S[u])), s;
     });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         children: (0, r.jsx)(d.Z, {
             items: N,
-            isInAppComponentsV2: !0
-        })
+            isInAppComponentsV2: !0,
+        }),
     });
 }

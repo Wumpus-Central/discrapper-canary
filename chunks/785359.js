@@ -9,12 +9,12 @@ function o(e) {
     (0, r.yw)(i.rMx.SEND_MESSAGE_FAILURE, {
         failure_code: l,
         error_message: s,
-        attachment_mimetypes: o
+        attachment_mimetypes: o,
     });
 }
 function a(e) {
     return e.map((e) => {
         var t;
-        return null != (t = e.mimeType) ? t : 'unknown';
+        return null != (t = e.mimeType) ? t : "unknown";
     });
 }

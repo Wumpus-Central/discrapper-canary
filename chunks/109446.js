@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685), n(642613), n(583741));
+n.d(t, { Z: () => j }), n(388685), n(642613), n(583741);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -41,14 +41,14 @@ function j(e) {
         i.useEffect(() => {
             (0, h.q)();
         }, []),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: v.popout,
             children: [
                 (0, r.jsx)(a.Text, {
                     className: v.title,
-                    variant: 'text-xs/bold',
-                    color: 'header-secondary',
-                    children: t.isForumLikeChannel() ? C.intl.string(C.t.ioVdOz) : C.intl.string(C.t.VNYs2t)
+                    variant: "text-xs/bold",
+                    color: "header-secondary",
+                    children: t.isForumLikeChannel() ? C.intl.string(C.t.ioVdOz) : C.intl.string(C.t.VNYs2t),
                 }),
                 l
                     .slice(0, t.isForumLikeChannel() ? l.length : c)
@@ -61,7 +61,7 @@ function j(e) {
                         t.isForumLikeChannel()
                             ? (0, u.Kh)(t.id)
                             : (0, a.ZDy)(async () => {
-                                  let { default: e } = await n.e('36970').then(n.bind(n, 223901));
+                                  let { default: e } = await n.e("36970").then(n.bind(n, 223901));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
@@ -69,37 +69,37 @@ function j(e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
                                                       r = Object.keys(n);
-                                                  ('function' == typeof Object.getOwnPropertySymbols &&
+                                                  "function" == typeof Object.getOwnPropertySymbols &&
                                                       (r = r.concat(
                                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                          })
+                                                          }),
                                                       )),
                                                       r.forEach(function (t) {
                                                           var r;
-                                                          ((r = n[t]),
+                                                          (r = n[t]),
                                                               t in e
                                                                   ? Object.defineProperty(e, t, {
                                                                         value: r,
                                                                         enumerable: !0,
                                                                         configurable: !0,
-                                                                        writable: !0
+                                                                        writable: !0,
                                                                     })
-                                                                  : (e[t] = r));
-                                                      }));
+                                                                  : (e[t] = r);
+                                                      });
                                               }
                                               return e;
-                                          })({ channel: t }, n)
+                                          })({ channel: t }, n),
                                       );
                               });
                     },
                     children: (0, r.jsx)(a.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'none',
-                        children: C.intl.string(C.t['4qdZ9/'])
-                    })
-                })
-            ]
+                        variant: "text-sm/normal",
+                        color: "none",
+                        children: C.intl.string(C.t["4qdZ9/"]),
+                    }),
+                }),
+            ],
         })
     );
 }
@@ -114,34 +114,34 @@ function E(e) {
         },
         children: [
             null == n
-                ? (0, r.jsx)('img', {
+                ? (0, r.jsx)("img", {
                       className: v.avatar,
                       src: b.ZP.getDefaultAvatarURL(void 0, void 0),
-                      alt: ''
+                      alt: "",
                   })
                 : (0, r.jsx)(c.Z, {
                       className: v.avatar,
                       user: n,
-                      size: a.EFr.SIZE_16
+                      size: a.EFr.SIZE_16,
                   }),
             (0, r.jsx)(a.Text, {
                 className: v.name,
-                variant: 'text-sm/normal',
-                color: 'none',
-                children: t.name
+                variant: "text-sm/normal",
+                color: "none",
+                children: t.name,
             }),
             (0, r.jsxs)(a.Text, {
                 className: v.timestamp,
-                variant: 'text-sm/normal',
-                color: 'none',
+                variant: "text-sm/normal",
+                color: "none",
                 children: [
-                    (0, r.jsx)('span', {
+                    (0, r.jsx)("span", {
                         className: v.bullet,
-                        children: '\u2022'
+                        children: "\u2022",
                     }),
-                    (0, h.Ye)(i)
-                ]
-            })
-        ]
+                    (0, h.Ye)(i),
+                ],
+            }),
+        ],
     });
 }

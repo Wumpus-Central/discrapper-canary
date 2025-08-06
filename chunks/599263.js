@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => T }), n(388685));
+n.r(t), n.d(t, { default: () => T }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -35,7 +35,7 @@ function T(e) {
             (e, n, r) => {
                 b.Z.selectOption(t, e, n, r);
             },
-            [t]
+            [t],
         ),
         R = l.useCallback(() => {
             b.Z.completeOnboarding(t, w);
@@ -47,18 +47,18 @@ function T(e) {
                     ? null
                     : j.ZP.getGuildSplashURL({
                           id: S.id,
-                          splash: S.splash
+                          splash: S.splash,
                       }),
-            [S]
+            [S],
         ),
         A = (0, f.N)(B),
         M = (0, s.e7)([C.ZP], () => C.ZP.getCurrentOnboardingStep(t)),
-        [F, L] = l.useState(null != B ? null : 'cover'),
+        [F, L] = l.useState(null != B ? null : "cover"),
         V = l.useCallback(
             (e) => {
-                (L(M), b.Z.setUserOnboardingStep(t, e));
+                L(M), b.Z.setUserOnboardingStep(t, e);
             },
-            [t, M]
+            [t, M],
         ),
         q = (0, s.e7)([h.Z], () => h.Z.isFullServerPreview(t)),
         G = (0, s.e7)([C.ZP], () => C.ZP.getOnboardingStatus(t)),
@@ -76,14 +76,14 @@ function T(e) {
                 config: a.config.default,
                 from: {
                     scale: 0.8,
-                    opacity: 0
+                    opacity: 0,
                 },
                 enter: {
                     scale: 1,
-                    opacity: 1
-                }
+                    opacity: 1,
+                },
             },
-            'cover' !== F && null !== F ? 'animate-never' : 'respect-motion-settings'
+            "cover" !== F && null !== F ? "animate-never" : "respect-motion-settings",
         ),
         z = C.ZP.shouldShowOnboarding(t),
         X = null == S;
@@ -101,21 +101,21 @@ function T(e) {
         return null;
     let J = () => {
         switch (M) {
-            case 'cover':
+            case "cover":
                 return (0, r.jsx)(y.ZP, {
                     guild: S,
                     onboardingStatus: C.uX.READY,
                     onStart: W,
-                    disableTracking: q
+                    disableTracking: q,
                 });
-            case 'rules':
+            case "rules":
                 return (0, r.jsx)(E.Z, {
                     setCurrentStep: V,
                     previousPromptIndex: w.length - 1,
                     guild: S,
                     prompts: w,
                     completeOnboarding: R,
-                    disableTracking: q
+                    disableTracking: q,
                 });
             case null:
                 return null;
@@ -127,11 +127,11 @@ function T(e) {
                     selectOption: D,
                     completeOnboarding: R,
                     setCurrentStep: V,
-                    disableTracking: q
+                    disableTracking: q,
                 });
         }
     };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(I.main, { [I.fullBorderWithGradient]: null == B }),
         ref: n,
         children: [
@@ -141,35 +141,39 @@ function T(e) {
                       src: B,
                       width: i,
                       height: T,
-                      imageClassName: I.cover
+                      imageClassName: I.cover,
                   })
                 : (0, r.jsx)(g.Z, {}),
             null != A &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: I.gradient,
-                    style: { background: 'linear-gradient(180deg, '.concat((0, _.aD)(A, 0.16), ' 0%, ').concat((0, _.aD)(A, 1), ' 100%)') }
+                    style: {
+                        background: "linear-gradient(180deg, "
+                            .concat((0, _.aD)(A, 0.16), " 0%, ")
+                            .concat((0, _.aD)(A, 1), " 100%)"),
+                    },
                 }),
-            null == B ? null : (0, r.jsx)('div', { className: I.gradient }),
+            null == B ? null : (0, r.jsx)("div", { className: I.gradient }),
             H((e, t, n) => {
                 let { key: l } = n;
                 return (0, r.jsx)(
                     a.animated.div,
                     {
                         style: e,
-                        children: J()
+                        children: J(),
                     },
-                    l
+                    l,
                 );
             }),
-            'cover' === M &&
-                (0, r.jsx)('div', {
+            "cover" === M &&
+                (0, r.jsx)("div", {
                     className: I.bottomCenterContent,
                     children: (0, r.jsx)(c.X6q, {
-                        variant: 'heading-sm/normal',
-                        color: 'header-secondary',
-                        children: Z.intl.format(Z.t.kI6UoK, { privacyLink: P.EYA.PRIVACY })
-                    })
-                })
-        ]
+                        variant: "heading-sm/normal",
+                        color: "header-secondary",
+                        children: Z.intl.format(Z.t.kI6UoK, { privacyLink: P.EYA.PRIVACY }),
+                    }),
+                }),
+        ],
     });
 }

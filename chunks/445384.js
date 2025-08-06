@@ -4,10 +4,10 @@ let i = {
     viewPrompt: function (e, t) {
         r.Z.wait(() => {
             r.Z.dispatch({
-                type: 'GUILD_PROMPT_VIEWED',
+                type: "GUILD_PROMPT_VIEWED",
                 prompt: e,
-                guildId: t
+                guildId: t,
             });
         });
-    }
+    },
 };

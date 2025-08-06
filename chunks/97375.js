@@ -17,12 +17,16 @@ let f = {
             let t,
                 {
                     socket: n,
-                    args: { user_id: a, content: o }
+                    args: { user_id: a, content: o },
                 } = e,
                 p = n.application.id;
-            if (null == p) throw new r.O({ errorCode: h.lT.INVALID_COMMAND }, 'No application.');
+            if (null == p) throw new r.O({ errorCode: h.lT.INVALID_COMMAND }, "No application.");
             let f = c.ZP.getConnectedActivityLocation();
-            if (null == f) throw new r.O({ errorCode: h.lT.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity was set using setActivity.');
+            if (null == f)
+                throw new r.O(
+                    { errorCode: h.lT.NO_ELIGIBLE_ACTIVITY },
+                    "No eligible activity for application. Ensure an activity was set using setActivity.",
+                );
             switch (f.kind) {
                 case l.E.GUILD_CHANNEL:
                 case l.E.GUILD_CHANNEL_MESSAGE:
@@ -31,12 +35,13 @@ let f = {
                 case l.E.PRIVATE_CHANNEL:
                 case l.E.PRIVATE_CHANNEL_MESSAGE:
                     let g = u.Z.getChannel(f.channel_id);
-                    if (null == g) throw new r.O({ errorCode: h.lT.INVALID_CHANNEL }, 'Invalid channel');
-                    if (g.type === i.d.DM) throw new r.O({ errorCode: h.lT.INVALID_CHANNEL }, 'Cannot send invite to a DM');
+                    if (null == g) throw new r.O({ errorCode: h.lT.INVALID_CHANNEL }, "Invalid channel");
+                    if (g.type === i.d.DM)
+                        throw new r.O({ errorCode: h.lT.INVALID_CHANNEL }, "Cannot send invite to a DM");
                     t = g;
                     break;
                 default:
-                    throw new r.O({ errorCode: h.lT.NO_ELIGIBLE_ACTIVITY }, 'Unsupported activity location');
+                    throw new r.O({ errorCode: h.lT.NO_ELIGIBLE_ACTIVITY }, "Unsupported activity location");
             }
             try {
                 await (0, s.pu)({
@@ -44,11 +49,11 @@ let f = {
                     applicationId: p,
                     userId: a,
                     prefixedContent: o,
-                    location: 'RPC_ACTIVITY_INVITE_USER'
+                    location: "RPC_ACTIVITY_INVITE_USER",
                 });
             } catch (e) {
-                throw new r.O({ errorCode: h.lT.UNKNOWN_ERROR }, 'Failed to invite user');
+                throw new r.O({ errorCode: h.lT.UNKNOWN_ERROR }, "Failed to invite user");
             }
-        }
-    })
+        },
+    }),
 };

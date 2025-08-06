@@ -1,4 +1,4 @@
-(n.d(t, { B: () => u }), n(388685));
+n.d(t, { B: () => u }), n(388685);
 var r = n(786761),
     i = n(23750),
     l = n(306680),
@@ -10,7 +10,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -56,7 +56,11 @@ class u {
     }
     messageGeneration(e, t) {
         let n = this.messages.get(e);
-        return null == n ? -1 / 0 : n.generation !== t && null != n.message && n.message.id === l.ZP.lastMessageId(e) ? (this.messages.set(e, c(s({}, n), { generation: t })), t) : n.generation;
+        return null == n
+            ? -1 / 0
+            : n.generation !== t && null != n.message && n.message.id === l.ZP.lastMessageId(e)
+              ? (this.messages.set(e, c(s({}, n), { generation: t })), t)
+              : n.generation;
     }
     messageId(e) {
         var t, n;
@@ -66,7 +70,10 @@ class u {
     messageRecord(e) {
         var t;
         let n = this.messages.get(e);
-        return (null == n || null == n.message || n.message instanceof i.ZP || (n.message = (0, r.e5)(n.message)), null != (t = null == n ? void 0 : n.message) ? t : null);
+        return (
+            null == n || null == n.message || n.message instanceof i.ZP || (n.message = (0, r.e5)(n.message)),
+            null != (t = null == n ? void 0 : n.message) ? t : null
+        );
     }
     has(e) {
         return this.messages.has(e);
@@ -74,13 +81,16 @@ class u {
     put(e, t, n) {
         this.messages.set(e, {
             message: t,
-            generation: n
+            generation: n,
         });
     }
     putNew(e, t, n) {
         var r, i, l;
         let o = this.messages.get(e);
-        null != t && ((i = t.id), null == (l = null == o || null == (r = o.message) ? void 0 : r.id) || a.default.compare(i, l) > 0) && this.put(e, t, n);
+        null != t &&
+            ((i = t.id),
+            null == (l = null == o || null == (r = o.message) ? void 0 : r.id) || a.default.compare(i, l) > 0) &&
+            this.put(e, t, n);
     }
     putMany(e, t) {
         for (let n of e) this.put(n.channel_id, n, t);
@@ -98,6 +108,6 @@ class u {
         this.messages.delete(e);
     }
     constructor() {
-        (o(this, 'localNeeded', !0), o(this, 'messages', new Map()));
+        o(this, "localNeeded", !0), o(this, "messages", new Map());
     }
 }

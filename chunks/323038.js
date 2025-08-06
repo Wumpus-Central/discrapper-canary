@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(642613));
+n.d(t, { Z: () => c }), n(642613);
 var r = n(442837),
     i = n(752048),
     o = n(480294),
@@ -13,7 +13,7 @@ function c(e) {
                     let { user: t } = e;
                     return t.id;
                 }),
-            [e.id, e.guild_id]
+            [e.id, e.guild_id],
         ),
         n = (0, r.e7)([i.Z], () => i.Z.getUserAffinitiesMap()),
         c = (0, r.e7)([o.Z], () => o.Z.hasConsented(l.pjP.PERSONALIZATION));
@@ -23,12 +23,15 @@ function c(e) {
             (c
                 ? t.sort((e, t) => {
                       var r, i, o, a;
-                      return (null != (o = null == (r = n.get(t)) ? void 0 : r.vcProbability) ? o : 0) - (null != (a = null == (i = n.get(e)) ? void 0 : i.vcProbability) ? a : 0);
+                      return (
+                          (null != (o = null == (r = n.get(t)) ? void 0 : r.vcProbability) ? o : 0) -
+                          (null != (a = null == (i = n.get(e)) ? void 0 : i.vcProbability) ? a : 0)
+                      );
                   })
                 : t
             )
                 .map((e) => a.default.getUser(e))
                 .filter((e) => null != e),
-        [c, n, t]
+        [c, n, t],
     );
 }

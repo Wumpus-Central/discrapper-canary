@@ -12,9 +12,9 @@ function o(n) {
         e = (0, s.P)(n.id);
     return (null == t ? void 0 : t.isStaff()) === !0 && n.isDM() && null == e
         ? (0, i.jsx)(r.sNh, {
-              id: 'mark-as-stranger-danger',
+              id: "mark-as-stranger-danger",
               label: u.intl.string(u.t.CgWmmZ),
-              action: () => (0, d.Dl)(n.id)
+              action: () => (0, d.Dl)(n.id),
           })
         : null;
 }

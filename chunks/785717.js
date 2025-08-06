@@ -1,7 +1,7 @@
 n.d(t, {
     KZ: () => _,
     Mt: () => d,
-    ZB: () => f
+    ZB: () => f,
 });
 var r = n(255367),
     i = n(73800),
@@ -15,7 +15,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,7 +44,7 @@ let u = i.createContext(null),
             p = i.useRef(void 0),
             h = {
                 analyticsLocations: _,
-                value: t
+                value: t,
             },
             m = i.useRef(h);
         return (
@@ -55,39 +55,48 @@ let u = i.createContext(null),
                 let e = Date.now();
                 if ((null == p.current && null != o && (p.current = e - o), !f)) return;
                 let { analyticsLocations: t, value: n } = m.current;
-                ((0, s.pQ)(
+                (0, s.pQ)(
                     c(
                         {
-                            action: 'VIEW',
-                            analyticsLocations: t
+                            action: "VIEW",
+                            analyticsLocations: t,
                         },
-                        n
-                    )
+                        n,
+                    ),
                 ),
                     (0, s.RV)(
                         c(
                             {
-                                profileUi: 'USER_PROFILE',
+                                profileUi: "USER_PROFILE",
                                 timeToInteractiveMs: p.current,
                                 timeToLoadMs: null != o ? e - o : void 0,
                                 timeToFetchMs: null != l && null != d ? d - l : void 0,
                                 viewStartedAt: o,
                                 fetchStartedAt: l,
-                                analyticsLocations: t
+                                analyticsLocations: t,
                             },
-                            n
-                        )
-                    ));
+                            n,
+                        ),
+                    );
             }, [f]),
             (0, r.jsx)(u.Provider, {
                 value: t,
-                children: n
+                children: n,
             })
         );
     },
     f = (e) => {
         var t;
-        let { layout: n, userId: r, guildId: a, channelId: s, messageId: l, roleId: c, sourceSessionId: d, showGuildProfile: f = !0 } = e,
+        let {
+                layout: n,
+                userId: r,
+                guildId: a,
+                channelId: s,
+                messageId: l,
+                roleId: c,
+                sourceSessionId: d,
+                showGuildProfile: f = !0,
+            } = e,
             _ = null == (t = i.useContext(u)) ? void 0 : t.sessionId;
         return i.useMemo(
             () => ({
@@ -99,9 +108,9 @@ let u = i.createContext(null),
                 channelId: s,
                 messageId: l,
                 roleId: c,
-                showGuildProfile: f
+                showGuildProfile: f,
             }),
-            [_, n, r, a, s, l, c, d, f]
+            [_, n, r, a, s, l, c, d, f],
         );
     },
     _ = () => {
@@ -113,7 +122,7 @@ let u = i.createContext(null),
                 (n) => {
                     null != e && (0, s.pQ)(c({ analyticsLocations: t }, e, n));
                 },
-                [e, t]
-            )
+                [e, t],
+            ),
         };
     };

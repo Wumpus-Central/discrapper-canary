@@ -24,7 +24,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -76,7 +76,8 @@ function T(e, t) {
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -86,23 +87,55 @@ function S(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function A(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: v, onSubscriptionConfirmation: S, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: M, subscriptionTier: k, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: Z, giftRecipient: F, returnRef: V, subscription: H, skipConfirm: Y } = null != e ? e : {},
+    let {
+            initialPlanId: t,
+            followupSKUInfo: i,
+            onClose: y,
+            onComplete: v,
+            onSubscriptionConfirmation: S,
+            analyticsLocations: A,
+            analyticsObject: N,
+            analyticsLocation: C,
+            analyticsSourceLocation: R,
+            confirmationFooter: P,
+            paymentModalBanner: w,
+            isGift: D = !1,
+            giftMessage: L,
+            giftStyle: x,
+            giftingOrigin: M,
+            subscriptionTier: k,
+            trialId: j,
+            postSuccessGuild: U,
+            openInvoiceId: G,
+            applicationId: B,
+            referralTrialOfferId: Z,
+            giftRecipient: F,
+            returnRef: V,
+            subscription: H,
+            skipConfirm: Y,
+        } = null != e ? e : {},
         W = !1,
         K = (0, a.Z)(),
         z = p.default.getCurrentUser(),
         q = (0, g.M5)(z, b.p9.TIER_2),
-        X = o()('payment-modal'),
+        X = o()("payment-modal"),
         Q = (0, g.Wz)(k);
     return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('8016'), n.e('17938'), n.e('94136'), n.e('84992'), n.e('24329')]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([
+                n.e("8016"),
+                n.e("17938"),
+                n.e("94136"),
+                n.e("84992"),
+                n.e("24329"),
+            ]).then(n.bind(n, 7305));
             return (n) => {
                 var { onClose: o } = n,
-                    a = T(n, ['onClose']);
+                    a = T(n, ["onClose"]);
                 return (0, r.jsx)(
                     e,
                     I(O({}, a), {
@@ -117,17 +150,21 @@ function A(e) {
                         initialPlanId: t,
                         followupSKUInfo: i,
                         onClose: (e, t) => {
-                            (m.S.dispatch(E.CkL.PREMIUM_PAYMENT_MODAL_CLOSED),
+                            m.S.dispatch(E.CkL.PREMIUM_PAYMENT_MODAL_CLOSED),
                                 o(),
                                 null == y || y(e),
-                                e && (null == S || S(), (0, _.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
+                                e &&
+                                    (null == S || S(),
+                                    (0, _.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
                                 l.Z.dispatch({
-                                    type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
-                                    didSucceed: e
-                                }));
+                                    type: "PREMIUM_PAYMENT_MODAL_CLOSE",
+                                    didSucceed: e,
+                                });
                         },
                         onComplete: (e) => {
-                            ((W = !0), null == v || v(), (0, _.I)(D, q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0));
+                            (W = !0),
+                                null == v || v(),
+                                (0, _.I)(D, q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
                         },
                         onSubscriptionConfirmation: S,
                         analyticsLocations: A,
@@ -144,18 +181,18 @@ function A(e) {
                         referralTrialOfferId: Z,
                         returnRef: V,
                         subscription: H,
-                        skipConfirm: !!Y
-                    })
+                        skipConfirm: !!Y,
+                    }),
                 );
             };
         },
         {
             onCloseRequest: () => {
-                (m.S.dispatch(E.CkL.PREMIUM_PAYMENT_MODAL_CLOSED), (0, s.Mr3)(X));
+                m.S.dispatch(E.CkL.PREMIUM_PAYMENT_MODAL_CLOSED), (0, s.Mr3)(X);
             },
             modalKey: X,
             onCloseCallback: () => {
-                (W ||
+                W ||
                     h.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: K,
                         payment_type: E.Zuq[E.GZQ.SUBSCRIPTION],
@@ -166,14 +203,14 @@ function A(e) {
                         sku_id: Q,
                         eligible_for_trial: null != j,
                         application_id: B,
-                        location_stack: A
+                        location_stack: A,
                     }),
                     (0, u.fw)(),
                     (0, c.fw)(),
                     (0, d.p)(),
                     null == y || y(W),
-                    W && (null == S || S()));
-            }
-        }
+                    W && (null == S || S());
+            },
+        },
     );
 }

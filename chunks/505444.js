@@ -39,12 +39,12 @@ var t = {
     strokeDashoffset: !0,
     strokeMiterlimit: !0,
     strokeOpacity: !0,
-    strokeWidth: !0
+    strokeWidth: !0,
 };
 function n(e, t) {
     return e + t.charAt(0).toUpperCase() + t.substring(1);
 }
-var r = ['Webkit', 'ms', 'Moz', 'O'];
+var r = ["Webkit", "ms", "Moz", "O"];
 Object.keys(t).forEach(function (e) {
     r.forEach(function (r) {
         t[n(r, e)] = t[e];
@@ -59,36 +59,36 @@ var i = {
                 backgroundImage: !0,
                 backgroundPositionX: !0,
                 backgroundPositionY: !0,
-                backgroundRepeat: !0
+                backgroundRepeat: !0,
             },
             backgroundPosition: {
                 backgroundPositionX: !0,
-                backgroundPositionY: !0
+                backgroundPositionY: !0,
             },
             border: {
                 borderWidth: !0,
                 borderStyle: !0,
-                borderColor: !0
+                borderColor: !0,
             },
             borderBottom: {
                 borderBottomWidth: !0,
                 borderBottomStyle: !0,
-                borderBottomColor: !0
+                borderBottomColor: !0,
             },
             borderLeft: {
                 borderLeftWidth: !0,
                 borderLeftStyle: !0,
-                borderLeftColor: !0
+                borderLeftColor: !0,
             },
             borderRight: {
                 borderRightWidth: !0,
                 borderRightStyle: !0,
-                borderRightColor: !0
+                borderRightColor: !0,
             },
             borderTop: {
                 borderTopWidth: !0,
                 borderTopStyle: !0,
-                borderTopColor: !0
+                borderTopColor: !0,
             },
             font: {
                 fontStyle: !0,
@@ -96,26 +96,30 @@ var i = {
                 fontWeight: !0,
                 fontSize: !0,
                 lineHeight: !0,
-                fontFamily: !0
+                fontFamily: !0,
             },
             outline: {
                 outlineWidth: !0,
                 outlineStyle: !0,
-                outlineColor: !0
-            }
-        }
+                outlineColor: !0,
+            },
+        },
     },
-    o = !!('undefined' != typeof window && window.document && window.document.createElement),
+    o = !!("undefined" != typeof window && window.document && window.document.createElement),
     a = {
         canUseDOM: o,
-        canUseWorkers: 'undefined' != typeof Worker,
+        canUseWorkers: "undefined" != typeof Worker,
         canUseEventListeners: o && !!(window.addEventListener || window.attachEvent),
         canUseViewport: o && !!window.screen,
-        isInWorker: !o
+        isInWorker: !o,
     },
     s = i.isUnitlessNumber;
 function l(e, t, n) {
-    return null == t || 'boolean' == typeof t || '' === t ? '' : n || 'number' != typeof t || 0 === t || (s.hasOwnProperty(e) && s[e]) ? ('' + t).trim() : t + 'px';
+    return null == t || "boolean" == typeof t || "" === t
+        ? ""
+        : n || "number" != typeof t || 0 === t || (s.hasOwnProperty(e) && s[e])
+          ? ("" + t).trim()
+          : t + "px";
 }
 function c(e) {
     return function () {
@@ -123,7 +127,7 @@ function c(e) {
     };
 }
 var u = function () {};
-((u.thatReturns = c),
+(u.thatReturns = c),
     (u.thatReturnsFalse = c(!1)),
     (u.thatReturnsTrue = c(!0)),
     (u.thatReturnsNull = c(null)),
@@ -132,12 +136,12 @@ var u = function () {};
     }),
     (u.thatReturnsArgument = function (e) {
         return e;
-    }));
+    });
 var d = !1;
 if (a.canUseDOM) {
-    var f = document.createElement('div').style;
+    var f = document.createElement("div").style;
     try {
-        f.font = '';
+        f.font = "";
     } catch (e) {
         d = !0;
     }
@@ -148,15 +152,15 @@ e.exports = {
         var r = e.style;
         for (var o in t)
             if (t.hasOwnProperty(o)) {
-                var a = 0 === o.indexOf('--'),
+                var a = 0 === o.indexOf("--"),
                     s = l(o, t[o], a);
-                if (('float' === o && (o = 'cssFloat'), a)) r.setProperty(o, s);
+                if (("float" === o && (o = "cssFloat"), a)) r.setProperty(o, s);
                 else if (s) r[o] = s;
                 else {
                     var c = d && i.shorthandPropertyExpansions[o];
-                    if (c) for (var u in c) r[u] = '';
-                    else r[o] = '';
+                    if (c) for (var u in c) r[u] = "";
+                    else r[o] = "";
                 }
             }
-    }
+    },
 };

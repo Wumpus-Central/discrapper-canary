@@ -9,6 +9,6 @@ function c(e) {
         report_id: a,
         rating: l,
         feedback: n,
-        dont_show_again: i
+        dont_show_again: i,
     });
 }

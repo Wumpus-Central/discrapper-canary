@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     JL: () => q,
-    PaymentContextProvider: () => Q
+    PaymentContextProvider: () => Q,
 }),
     n(388685),
-    n(997841));
+    n(997841);
 var r = n(255367),
     i = n(73800),
     o = n(245364),
@@ -52,7 +52,7 @@ function H(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -62,15 +62,15 @@ function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 H(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -78,11 +78,11 @@ function W(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -100,7 +100,21 @@ function K(e, t) {
 let [z, q, X] = (0, T.Z)();
 function Q(e) {
     var t, n, a;
-    let { loadId: T, activeSubscription: H, stepConfigs: W, breadcrumbs: q = [], skuIDs: X, isGift: Q = !1, children: J, defaultPlanId: $, purchaseType: ee = Z.GZQ.SUBSCRIPTION, applicationId: et, referralCode: en, excludeSubscriptionPlansBySKU: er = !1, excludeSKUPurchasePreviews: ei = !1 } = e,
+    let {
+            loadId: T,
+            activeSubscription: H,
+            stepConfigs: W,
+            breadcrumbs: q = [],
+            skuIDs: X,
+            isGift: Q = !1,
+            children: J,
+            defaultPlanId: $,
+            purchaseType: ee = Z.GZQ.SUBSCRIPTION,
+            applicationId: et,
+            referralCode: en,
+            excludeSubscriptionPlansBySKU: er = !1,
+            excludeSKUPurchasePreviews: ei = !1,
+        } = e,
         eo = (0, G.Z)(),
         ea = (0, h.Q)(),
         es = (0, w.Z)(),
@@ -112,11 +126,11 @@ function Q(e) {
             hasPaymentSources: ef,
             paymentSourceId: e_,
             setPaymentSourceId: ep,
-            hasFetchedPaymentSources: eh
+            hasFetchedPaymentSources: eh,
         } = (0, D.Z)({
             isGift: Q,
             activeSubscription: H,
-            eligiblePaymentGateways: eu
+            eligiblePaymentGateways: eu,
         }),
         em = i.useRef(ef),
         {
@@ -124,13 +138,13 @@ function Q(e) {
             priceOptions: eE,
             setCurrency: eb,
             currencyLoading: ey,
-            currencies: eO
+            currencies: eO,
         } = (0, P.Z)({
             activeSubscription: H,
             skuIDs: X,
             paymentSourceId: e_,
             isGift: Q,
-            excludeSubscriptionPlansBySKU: er
+            excludeSubscriptionPlansBySKU: er,
         }),
         ev = (0, k.Z)(),
         [eI, eT] = i.useState(!1),
@@ -139,10 +153,10 @@ function Q(e) {
             setStep: eA,
             steps: eN,
             breadcrumbsData: eC,
-            previousStepRef: eR
+            previousStepRef: eR,
         } = (0, U.Z)({
             stepConfigs: W,
-            breadcrumbs: q
+            breadcrumbs: q,
         }),
         [eP, ew] = (0, M.Z)(eS),
         { paymentError: eD, paymentAuthenticationState: eL } = (0, L.Z)(),
@@ -150,14 +164,21 @@ function Q(e) {
         ej = (0, u.Z)(() => {
             let e = null != T ? T : (0, l.Z)();
             return (
-                N.Z.addBreadcrumb({ message: 'Checkout session ID: '.concat(e) }),
+                N.Z.addBreadcrumb({ message: "Checkout session ID: ".concat(e) }),
                 {
                     loadId: e,
-                    startTime: Date.now()
+                    startTime: Date.now(),
                 }
             );
         }),
-        { selectedSkuId: eU, selectedPlan: eG, selectedPlanNotification: eB, setSelectedSkuId: eZ, setSelectedPlanId: eF, setSelectedPlanNotification: eV } = (0, C.Z)(),
+        {
+            selectedSkuId: eU,
+            selectedPlan: eG,
+            selectedPlanNotification: eB,
+            setSelectedSkuId: eZ,
+            setSelectedPlanId: eF,
+            setSelectedPlanNotification: eV,
+        } = (0, C.Z)(),
         [eH, eY] = (0, c.Wu)([y.Z], () => [y.Z.purchaseTokenAuthState, y.Z.purchaseTokenHash]),
         [eW, eK, ez, eq] = (0, c.Wu)([B.Z], () => [B.Z.browserCheckoutState, B.Z.loadId, B.Z.skuId, B.Z.planId]),
         [eX, eQ] = i.useState(null),
@@ -174,26 +195,26 @@ function Q(e) {
     }, [H]);
     let { endsAt: tn } = (0, m.Z)({
             forceFetch: !1,
-            excludeReverseTrial: !0
+            excludeReverseTrial: !0,
         }),
         tr = i.useRef(tn.isSame(s()(0)) ? null : tn);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         null != tr.current || tn.isSame(s()(0)) || (tr.current = tn);
     }, [tn]),
-        (0, R.m)(el, e_));
+        (0, R.m)(el, e_);
     let {
             skusById: ti,
             hasFetchedSkus: to,
             skuPricePreviewsById: ta,
-            previewErrorsById: ts
+            previewErrorsById: ts,
         } = (0, j.Z)({
             applicationId: null != et ? et : F.CL,
             skuIDs: X,
             currentPaymentSourceId: e_,
             isGift: Q,
-            excludeSKUPurchasePreviews: ei
+            excludeSKUPurchasePreviews: ei,
         }),
-        tl = ti[null != eU ? eU : ''],
+        tl = ti[null != eU ? eU : ""],
         tc = null != eU ? ts[eU] : null,
         [tu, td] = i.useState(tc),
         tf = i.useMemo(() => {
@@ -207,20 +228,22 @@ function Q(e) {
     i.useEffect(() => {
         null != t_ && (0, S.yE)(t_.flags, Z.udG.EMBEDDED) && tp && null == th && (0, f.$h)();
     }, [t_, tp, th]);
-    let tm = (0, S.yE)(null != (t = null == t_ ? void 0 : t_.flags) ? t : 0, Z.udG.EMBEDDED) && (0, S.yE)(null != (n = null == t_ ? void 0 : t_.flags) ? n : 0, Z.udG.EMBEDDED_IAP),
+    let tm =
+            (0, S.yE)(null != (t = null == t_ ? void 0 : t_.flags) ? t : 0, Z.udG.EMBEDDED) &&
+            (0, S.yE)(null != (n = null == t_ ? void 0 : t_.flags) ? n : 0, Z.udG.EMBEDDED_IAP),
         tg = (0, c.e7)([_.ZP], () =>
             Array.from(_.ZP.getSelfEmbeddedActivities().values()).find((e) => {
                 let { applicationId: t } = e;
                 return t === et;
-            })
+            }),
         ),
         tE = null == tg ? void 0 : tg.compositeInstanceId,
         tb = (0, c.e7)([I.Z], () => (null != eU ? I.Z.getForSKU(eU) : null), [eU]),
         [ty, tO] = i.useState(null),
         tv = null != (a = null == H ? void 0 : H.inReverseTrial) && a && !Q,
-        tI = (0, E.Z)({ location: 'PaymentModal' }) && te,
+        tI = (0, E.Z)({ location: "PaymentModal" }) && te,
         tT = tI ? V.premiumBrandRefreshBackground : void 0,
-        { enabled: tS } = (0, g.l)({ location: 'PaymentModal' });
+        { enabled: tS } = (0, g.l)({ location: "PaymentModal" });
     return (0, r.jsx)(z.Provider, {
         value: K(
             Y(
@@ -244,9 +267,9 @@ function Q(e) {
                     priceOptions: eE,
                     setCurrency: eb,
                     currencyLoading: ey,
-                    currencies: eO
+                    currencies: eO,
                 },
-                ev
+                ev,
             ),
             {
                 hasAcceptedTerms: eI,
@@ -309,13 +332,13 @@ function Q(e) {
                 setInvoicePreview: tO,
                 inReverseTrial: tv,
                 enablePremiumBrandRefresh: tI,
-                premiumBrandRefreshBackgroundClassName: tT
-            }
+                premiumBrandRefreshBackgroundClassName: tT,
+            },
         ),
         children: (0, r.jsx)(o.Elements, {
             options: Z.OBo,
             stripe: eo,
-            children: J
-        })
+            children: J,
+        }),
     });
 }

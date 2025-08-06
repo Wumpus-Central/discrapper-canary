@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(392711),
     i = n(106351),
     o = n(904245),
@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,7 +39,14 @@ class v extends a.Z {
             case i.d.GUILD_TEXT:
                 let n = f.Z.getGuild(t),
                     r = u.Z.getMemberCount(t);
-                return null != r && r <= y && (null == n ? void 0 : n.rulesChannelId) !== e.id && !(0, s.aC)(e) && !(0, l.Z)(e) && null == e.linkedLobby;
+                return (
+                    null != r &&
+                    r <= y &&
+                    (null == n ? void 0 : n.rulesChannelId) !== e.id &&
+                    !(0, s.aC)(e) &&
+                    !(0, l.Z)(e) &&
+                    null == e.linkedLobby
+                );
             default:
                 return !1;
         }
@@ -53,20 +60,28 @@ class v extends a.Z {
                 (o.Z.sendGiftingPromptSystemMessage(e, {
                     giftIntentType: t,
                     recipientUserId: n,
-                    giftIntentSecondaryAction: i
+                    giftIntentSecondaryAction: i,
                 }),
                 (0, m.PV)(n));
         }, O)();
     }
     handleChannelSelect(e, t) {
-        let { enabled: n } = h.w.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
+        let { enabled: n } = h.w.getCurrentConfig(
+                { location: "PremiumGiftingIntentManager handleChannelSelect" },
+                { autoTrackExposure: !1 },
+            ),
             r = c.Z.getChannel(t);
         if (n && null != r && this.isChannelEligible(r, e)) {
             let t = new Set(null != e ? d.ZP.getMemberIds(e) : r.recipients),
                 i = g.Z.getFriendAnniversaries().filter((e) => t.has(e));
             if (n && i.length > 0) {
                 let e = i[0];
-                this.maybeSendGiftingPromptSystemMessageDebounced(r.id, E.hX.FRIEND_ANNIVERSARY, e, i.length > 1 ? E.X2.VIEW_ALL : E.X2.SEND_MESSAGE);
+                this.maybeSendGiftingPromptSystemMessageDebounced(
+                    r.id,
+                    E.hX.FRIEND_ANNIVERSARY,
+                    e,
+                    i.length > 1 ? E.X2.VIEW_ALL : E.X2.SEND_MESSAGE,
+                );
             }
         }
     }
@@ -82,11 +97,11 @@ class v extends a.Z {
         }
     }
     constructor(...e) {
-        (super(...e),
-            b(this, 'actions', {
+        super(...e),
+            b(this, "actions", {
                 POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
-                CHANNEL_SELECT: (e) => this.onChannelSelect(e)
-            }));
+                CHANNEL_SELECT: (e) => this.onChannelSelect(e),
+            });
     }
 }
 let I = new v();

@@ -9,22 +9,22 @@ var r = n(255367),
 function d(e) {
     let { profile: t, canManageGuild: n } = e,
         d = t.id,
-        u = (0, l.e7)([o.Z], () => o.Z.getError('name')),
+        u = (0, l.e7)([o.Z], () => o.Z.getError("name")),
         m = i.useCallback(
             (e) => {
-                (s.Z.updateGuild({ name: e }), s.Z.updateGuildProfile(d, { name: e }));
+                s.Z.updateGuild({ name: e }), s.Z.updateGuildProfile(d, { name: e });
             },
-            [d]
+            [d],
         );
     return (0, r.jsx)(a.xJW, {
         title: c.intl.string(c.t.X56QcH),
         children: (0, r.jsx)(a.oil, {
-            type: 'text',
+            type: "text",
             disabled: !n,
             value: t.name,
             maxLength: 100,
             onChange: m,
-            error: u
-        })
+            error: u,
+        }),
     });
 }

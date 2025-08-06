@@ -14,12 +14,12 @@ function s(e) {
             actorName: f.nick,
             actorHook: p,
             targetName: null == _ ? void 0 : _.nick,
-            targetHook: h
+            targetHook: h,
         });
     return (0, r.jsx)(o.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: d,
-        children: m
+        children: m,
     });
 }

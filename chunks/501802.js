@@ -13,38 +13,38 @@ let l = function (e) {
             {
                 default: {
                     fields: {
-                        display: 'flex',
-                        paddingTop: '4px'
+                        display: "flex",
+                        paddingTop: "4px",
                     },
                     single: {
-                        flex: '1',
-                        paddingLeft: '6px'
+                        flex: "1",
+                        paddingLeft: "6px",
                     },
                     alpha: {
-                        flex: '1',
-                        paddingLeft: '6px'
+                        flex: "1",
+                        paddingLeft: "6px",
                     },
-                    double: { flex: '2' },
+                    double: { flex: "2" },
                     input: {
-                        width: '80%',
-                        padding: '4px 10% 3px',
-                        border: 'none',
-                        boxShadow: 'inset 0 0 0 1px #ccc',
-                        fontSize: '11px'
+                        width: "80%",
+                        padding: "4px 10% 3px",
+                        border: "none",
+                        boxShadow: "inset 0 0 0 1px #ccc",
+                        fontSize: "11px",
                     },
                     label: {
-                        display: 'block',
-                        textAlign: 'center',
-                        fontSize: '11px',
-                        color: '#222',
-                        paddingTop: '3px',
-                        paddingBottom: '4px',
-                        textTransform: 'capitalize'
-                    }
+                        display: "block",
+                        textAlign: "center",
+                        fontSize: "11px",
+                        color: "#222",
+                        paddingTop: "3px",
+                        paddingBottom: "4px",
+                        textTransform: "capitalize",
+                    },
                 },
-                disableAlpha: { alpha: { display: 'none' } }
+                disableAlpha: { alpha: { display: "none" } },
             },
-            { disableAlpha: u }
+            { disableAlpha: u },
         ),
         p = function (e, n) {
             e.hex
@@ -52,9 +52,9 @@ let l = function (e) {
                   t(
                       {
                           hex: e.hex,
-                          source: 'hex'
+                          source: "hex",
                       },
-                      n
+                      n,
                   )
                 : e.r || e.g || e.b
                   ? t(
@@ -63,9 +63,9 @@ let l = function (e) {
                             g: e.g || r.g,
                             b: e.b || r.b,
                             a: r.a,
-                            source: 'rgb'
+                            source: "rgb",
                         },
-                        n
+                        n,
                     )
                   : e.a &&
                     (e.a < 0 ? (e.a = 0) : e.a > 100 && (e.a = 100),
@@ -76,89 +76,89 @@ let l = function (e) {
                             s: l.s,
                             l: l.l,
                             a: e.a,
-                            source: 'rgb'
+                            source: "rgb",
                         },
-                        n
+                        n,
                     ));
         };
     return n.createElement(
-        'div',
+        "div",
         {
             style: c.fields,
-            className: 'flexbox-fix'
+            className: "flexbox-fix",
         },
         n.createElement(
-            'div',
+            "div",
             { style: c.double },
             n.createElement(i.Vm, {
                 style: {
                     input: c.input,
-                    label: c.label
+                    label: c.label,
                 },
-                label: 'hex',
-                value: s.replace('#', ''),
-                onChange: p
-            })
+                label: "hex",
+                value: s.replace("#", ""),
+                onChange: p,
+            }),
         ),
         n.createElement(
-            'div',
+            "div",
             { style: c.single },
             n.createElement(i.Vm, {
                 style: {
                     input: c.input,
-                    label: c.label
+                    label: c.label,
                 },
-                label: 'r',
+                label: "r",
                 value: r.r,
                 onChange: p,
-                dragLabel: 'true',
-                dragMax: '255'
-            })
+                dragLabel: "true",
+                dragMax: "255",
+            }),
         ),
         n.createElement(
-            'div',
+            "div",
             { style: c.single },
             n.createElement(i.Vm, {
                 style: {
                     input: c.input,
-                    label: c.label
+                    label: c.label,
                 },
-                label: 'g',
+                label: "g",
                 value: r.g,
                 onChange: p,
-                dragLabel: 'true',
-                dragMax: '255'
-            })
+                dragLabel: "true",
+                dragMax: "255",
+            }),
         ),
         n.createElement(
-            'div',
+            "div",
             { style: c.single },
             n.createElement(i.Vm, {
                 style: {
                     input: c.input,
-                    label: c.label
+                    label: c.label,
                 },
-                label: 'b',
+                label: "b",
                 value: r.b,
                 onChange: p,
-                dragLabel: 'true',
-                dragMax: '255'
-            })
+                dragLabel: "true",
+                dragMax: "255",
+            }),
         ),
         n.createElement(
-            'div',
+            "div",
             { style: c.alpha },
             n.createElement(i.Vm, {
                 style: {
                     input: c.input,
-                    label: c.label
+                    label: c.label,
                 },
-                label: 'a',
+                label: "a",
                 value: Math.round(100 * r.a),
                 onChange: p,
-                dragLabel: 'true',
-                dragMax: '100'
-            })
-        )
+                dragLabel: "true",
+                dragMax: "100",
+            }),
+        ),
     );
 };

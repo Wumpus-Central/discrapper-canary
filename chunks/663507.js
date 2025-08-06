@@ -5,27 +5,27 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-(n.d(t, {
+n.d(t, {
     DP: () => o,
     ZI: () => u,
     ZP: () => c,
-    t$: () => a
+    t$: () => a,
 }),
     n(704826),
     n(35282),
     n(388685),
     n(539854),
     n(290780),
-    n(415506));
-let i = (e) => '__section__'.concat(e),
-    o = (e) => '__section_header__'.concat(e),
-    a = (e) => parseInt(e.replace(/^__section__/, ''), 10);
+    n(415506);
+let i = (e) => "__section__".concat(e),
+    o = (e) => "__section_header__".concat(e),
+    a = (e) => parseInt(e.replace(/^__section__/, ""), 10);
 function s(e) {
     return e.reduce((e, t, n) => (t < e[0] ? [t, n] : e), [e[0], 0]);
 }
@@ -33,48 +33,106 @@ let l = () => 0;
 class c {
     getPadding(e) {
         var t;
-        return null == this.padding ? this.itemGutter : 'number' == typeof this.padding ? this.padding : null != (t = this.padding[e]) ? t : this.itemGutter;
+        return null == this.padding
+            ? this.itemGutter
+            : "number" == typeof this.padding
+              ? this.padding
+              : null != (t = this.padding[e])
+                ? t
+                : this.itemGutter;
     }
     getPaddingLeft() {
-        return null != this.paddingHorizontal ? this.paddingHorizontal : this.getPadding('left');
+        return null != this.paddingHorizontal ? this.paddingHorizontal : this.getPadding("left");
     }
     getPaddingRight() {
-        return null != this.paddingHorizontal ? this.paddingHorizontal : this.getPadding('right');
+        return null != this.paddingHorizontal ? this.paddingHorizontal : this.getPadding("right");
     }
     getPaddingTop() {
-        return null != this.paddingVertical ? this.paddingVertical : this.getPadding('top');
+        return null != this.paddingVertical ? this.paddingVertical : this.getPadding("top");
     }
     getPaddingBottom() {
-        return null != this.paddingVertical ? this.paddingVertical : this.getPadding('bottom');
+        return null != this.paddingVertical ? this.paddingVertical : this.getPadding("bottom");
     }
     getSectionGutter() {
         return null != this.sectionGutter ? this.sectionGutter : this.itemGutter;
     }
     mergeProps(e) {
-        let { sections: t = this.sections, columns: n = this.columns, itemGutter: r = this.itemGutter, removeEdgeItemGutters: i = this.removeEdgeItemGutters, getItemKey: o = this.getItemKey, getItemHeight: a = this.getItemHeight, getSectionHeight: s = this.getSectionHeight, bufferWidth: l = this.bufferWidth, padding: c = this.padding, paddingVertical: u = this.paddingVertical, paddingHorizontal: d = this.paddingHorizontal, marginLeft: f = this.marginLeft, sectionGutter: _ = this.sectionGutter, dir: p = this.dir } = e;
-        (this.sections !== t || this.columns !== n || this.itemGutter !== r || this.removeEdgeItemGutters !== i || this.getItemKey !== o || this.getSectionHeight !== s || this.getItemHeight !== a || this.bufferWidth !== l || this.padding !== c || this.paddingVertical !== u || this.paddingHorizontal !== d || this.marginLeft !== f || this.sectionGutter !== _ || this.dir !== p) && ((this.needsFullCompute = !0), (this.sections = t), (this.columns = n), (this.itemGutter = r), (this.getItemKey = o), (this.getSectionHeight = s), (this.getItemHeight = a), (this.bufferWidth = l), (this.padding = c), (this.paddingVertical = u), (this.paddingHorizontal = d), (this.marginLeft = f), (this.sectionGutter = _), (this.dir = p));
+        let {
+            sections: t = this.sections,
+            columns: n = this.columns,
+            itemGutter: r = this.itemGutter,
+            removeEdgeItemGutters: i = this.removeEdgeItemGutters,
+            getItemKey: o = this.getItemKey,
+            getItemHeight: a = this.getItemHeight,
+            getSectionHeight: s = this.getSectionHeight,
+            bufferWidth: l = this.bufferWidth,
+            padding: c = this.padding,
+            paddingVertical: u = this.paddingVertical,
+            paddingHorizontal: d = this.paddingHorizontal,
+            marginLeft: f = this.marginLeft,
+            sectionGutter: _ = this.sectionGutter,
+            dir: p = this.dir,
+        } = e;
+        (this.sections !== t ||
+            this.columns !== n ||
+            this.itemGutter !== r ||
+            this.removeEdgeItemGutters !== i ||
+            this.getItemKey !== o ||
+            this.getSectionHeight !== s ||
+            this.getItemHeight !== a ||
+            this.bufferWidth !== l ||
+            this.padding !== c ||
+            this.paddingVertical !== u ||
+            this.paddingHorizontal !== d ||
+            this.marginLeft !== f ||
+            this.sectionGutter !== _ ||
+            this.dir !== p) &&
+            ((this.needsFullCompute = !0),
+            (this.sections = t),
+            (this.columns = n),
+            (this.itemGutter = r),
+            (this.getItemKey = o),
+            (this.getSectionHeight = s),
+            (this.getItemHeight = a),
+            (this.bufferWidth = l),
+            (this.padding = c),
+            (this.paddingVertical = u),
+            (this.paddingHorizontal = d),
+            (this.marginLeft = f),
+            (this.sectionGutter = _),
+            (this.dir = p));
     }
     computeFullCoords() {
         var e, t;
         if (!this.needsFullCompute) return;
-        let { columns: n, getItemKey: r, getItemHeight: a, itemGutter: l, getSectionHeight: c, bufferWidth: u, removeEdgeItemGutters: d } = this,
-            f = 'rtl' === this.dir ? 'right' : 'left';
-        ((this.coordsMap = {}),
+        let {
+                columns: n,
+                getItemKey: r,
+                getItemHeight: a,
+                itemGutter: l,
+                getSectionHeight: c,
+                bufferWidth: u,
+                removeEdgeItemGutters: d,
+            } = this,
+            f = "rtl" === this.dir ? "right" : "left";
+        (this.coordsMap = {}),
             (this.gridData = {
                 boundaries: [],
-                coordinates: {}
+                coordinates: {},
             }),
             (this.currentRow = 0),
-            (this.lastColumnIndex = 0));
+            (this.lastColumnIndex = 0);
         let _ = this.getPaddingTop(),
             p = this.getPaddingBottom(),
             h = this.getPaddingLeft(),
             m = this.getPaddingRight(),
             g = null != (e = this.marginLeft) ? e : 0;
-        ((this.columnHeights = Array(n).fill(_)), (this.columnWidth = (u - m - h - l * (n - 1) - (d ? l : 0)) / n), (this.itemGrid = []));
+        (this.columnHeights = Array(n).fill(_)),
+            (this.columnWidth = (u - m - h - l * (n - 1) - (d ? l : 0)) / n),
+            (this.itemGrid = []);
         let E = 0;
         for (; E < this.sections.length; ) {
-            ((this.gridData.boundaries[E] = this.currentRow), (this.currentRow = 0), (this.lastColumnIndex = 0));
+            (this.gridData.boundaries[E] = this.currentRow), (this.currentRow = 0), (this.lastColumnIndex = 0);
             let e = this.sections[E],
                 u = 0,
                 d = c(E),
@@ -89,40 +147,48 @@ class c {
                     continue;
                 }
                 let [n, i] = s(this.columnHeights);
-                (i < this.lastColumnIndex && this.currentRow++, (this.lastColumnIndex = i));
+                i < this.lastColumnIndex && this.currentRow++, (this.lastColumnIndex = i);
                 let o = a(E, u, this.columnWidth),
                     c = {
-                        position: 'absolute',
+                        position: "absolute",
                         [f]: this.columnWidth * i + l * (i + 1) - l + h,
                         width: this.columnWidth,
                         top: n - _,
-                        height: o
+                        height: o,
                     },
                     d = {
                         section: E,
                         row: this.currentRow,
-                        column: i
+                        column: i,
                     };
-                ((this.coordsMap[e] = c), (this.gridData.coordinates[e] = d), (this.columnHeights[i] = n + o + l), (this.itemGrid[i] = null != (t = this.itemGrid[i]) ? t : []), this.itemGrid[i].push(e), u++);
+                (this.coordsMap[e] = c),
+                    (this.gridData.coordinates[e] = d),
+                    (this.columnHeights[i] = n + o + l),
+                    (this.itemGrid[i] = null != (t = this.itemGrid[i]) ? t : []),
+                    this.itemGrid[i].push(e),
+                    u++;
             }
-            (d > 0 &&
+            d > 0 &&
                 (this.coordsMap[o(E)] = {
-                    position: 'sticky',
+                    position: "sticky",
                     [f]: h,
                     width: this.columnWidth * n + l * n,
                     top: 0,
-                    height: d
+                    height: d,
                 }),
                 (this.coordsMap[i(E)] = {
-                    position: 'absolute',
+                    position: "absolute",
                     [f]: g,
                     width: this.columnWidth * n + l * (n - 1) + h + m,
                     top: _,
-                    height: this.getMaxColumnHeight(this.columnHeights) - _
+                    height: this.getMaxColumnHeight(this.columnHeights) - _,
                 }),
-                E++);
+                E++;
         }
-        ((this.columnHeights = this.columnHeights.map((e) => e - l + p)), (this.totalHeight = this.getMaxColumnHeight()), (this.visibleSections = {}), (this.needsFullCompute = !1));
+        (this.columnHeights = this.columnHeights.map((e) => e - l + p)),
+            (this.totalHeight = this.getMaxColumnHeight()),
+            (this.visibleSections = {}),
+            (this.needsFullCompute = !1);
     }
     computeVisibleSections(e, t) {
         this.computeFullCoords();
@@ -154,7 +220,10 @@ class c {
                     continue;
                 }
                 let { top: l, height: u } = a;
-                (l + c > e - u && l + c < t && (-1 === f ? this.visibleSections[s].unshift([i, o, d]) : this.visibleSections[s].push([i, o, d])), (d += f));
+                l + c > e - u &&
+                    l + c < t &&
+                    (-1 === f ? this.visibleSections[s].unshift([i, o, d]) : this.visibleSections[s].push([i, o, d])),
+                    (d += f);
             }
             if (c < e && u > t) break;
             o++;
@@ -169,41 +238,41 @@ class c {
             coordsMap: this.coordsMap,
             gridData: this.gridData,
             visibleSections: this.visibleSections,
-            totalHeight: this.totalHeight
+            totalHeight: this.totalHeight,
         };
     }
     constructor() {
-        (r(this, 'visibleSections', {}),
-            r(this, 'gridData', {
+        r(this, "visibleSections", {}),
+            r(this, "gridData", {
                 coordinates: {},
-                boundaries: []
+                boundaries: [],
             }),
-            r(this, 'coordsMap', {}),
-            r(this, 'columnHeights', []),
-            r(this, 'columnWidth', 0),
-            r(this, 'totalHeight', 0),
-            r(this, 'itemGrid', []),
-            r(this, 'currentRow', 0),
-            r(this, 'lastColumnIndex', 0),
-            r(this, 'needsFullCompute', !0),
-            r(this, 'bufferWidth', 0),
-            r(this, 'sections', []),
-            r(this, 'columns', 0),
-            r(this, 'itemGutter', 0),
-            r(this, 'removeEdgeItemGutters', !1),
-            r(this, 'sectionGutter', null),
-            r(this, 'padding', null),
-            r(this, 'paddingVertical', null),
-            r(this, 'paddingHorizontal', null),
-            r(this, 'marginLeft', null),
-            r(this, 'dir', 'ltr'),
-            r(this, 'getItemKey', () => {
-                throw Error('MasonryListComputer: getItemKey has not been implemented');
+            r(this, "coordsMap", {}),
+            r(this, "columnHeights", []),
+            r(this, "columnWidth", 0),
+            r(this, "totalHeight", 0),
+            r(this, "itemGrid", []),
+            r(this, "currentRow", 0),
+            r(this, "lastColumnIndex", 0),
+            r(this, "needsFullCompute", !0),
+            r(this, "bufferWidth", 0),
+            r(this, "sections", []),
+            r(this, "columns", 0),
+            r(this, "itemGutter", 0),
+            r(this, "removeEdgeItemGutters", !1),
+            r(this, "sectionGutter", null),
+            r(this, "padding", null),
+            r(this, "paddingVertical", null),
+            r(this, "paddingHorizontal", null),
+            r(this, "marginLeft", null),
+            r(this, "dir", "ltr"),
+            r(this, "getItemKey", () => {
+                throw Error("MasonryListComputer: getItemKey has not been implemented");
             }),
-            r(this, 'getItemHeight', () => {
-                throw Error('MasonryListComputer: getItemHeight has not been implemented');
+            r(this, "getItemHeight", () => {
+                throw Error("MasonryListComputer: getItemHeight has not been implemented");
             }),
-            r(this, 'getSectionHeight', l));
+            r(this, "getSectionHeight", l);
     }
 }
 function u(e, t, n) {

@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     AJ: () => et,
     Bs: () => $,
     ES: () => Y,
@@ -20,11 +20,11 @@
     ql: () => es,
     r_: () => ei,
     vP: () => em,
-    xw: () => Q
+    xw: () => Q,
 }),
     n(388685),
     n(583741),
-    n(781311));
+    n(781311);
 var r = n(73800),
     i = n(392711),
     o = n.n(i),
@@ -69,7 +69,7 @@ function B(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -79,15 +79,15 @@ function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 B(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -95,11 +95,11 @@ function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -125,14 +125,14 @@ function Y(e, t, n, i) {
                 .slice(0, H)
                 .map((e) => ({
                     threadId: e,
-                    ackMessageId: S.ZP.getTrackedAckMessageId(e)
+                    ackMessageId: S.ZP.getTrackedAckMessageId(e),
                 }));
         a.length > 0 &&
             l.Z.dispatch({
-                type: 'REQUEST_FORUM_UNREADS',
+                type: "REQUEST_FORUM_UNREADS",
                 guildId: e.guild_id,
                 channelId: e.id,
-                threads: a
+                threads: a,
             });
     }, [e.id, e.guild_id, o, n, t, i]);
 }
@@ -150,22 +150,25 @@ function W(e) {
 }
 function K(e) {
     let t = null == e ? void 0 : e.parent_id;
-    return (0, s.cj)(
-        [O.Z],
-        () => {
-            var e;
-            let n = O.Z.getChannel(t);
-            return (null != (e = null == n ? void 0 : n.availableTags) ? e : []).reduce((e, t) => V(Z({}, e), { [t.id]: t }), {});
-        },
-        [t]
-    );
+    return (0, s.cj)([O.Z], () => {
+        var e;
+        let n = O.Z.getChannel(t);
+        return (null != (e = null == n ? void 0 : n.availableTags) ? e : []).reduce(
+            (e, t) => V(Z({}, e), { [t.id]: t }),
+            {},
+        );
+    }, [t]);
 }
 let z = [];
 function q(e) {
     let t = K(e);
     return r.useMemo(() => {
         var n, r, i;
-        let o = null != (i = null == e || null == (r = e.appliedTags) || null == (n = r.map((e) => t[e])) ? void 0 : n.filter(N.lm)) ? i : z;
+        let o =
+            null !=
+            (i = null == e || null == (r = e.appliedTags) || null == (n = r.map((e) => t[e])) ? void 0 : n.filter(N.lm))
+                ? i
+                : z;
         return (null == e ? void 0 : e.isModeratorReportChannel()) ? (0, h.iq)(o) : o;
     }, [t, e]);
 }
@@ -190,25 +193,29 @@ function Q(e, t) {
 function J(e) {
     return r.useMemo(() => {
         var t;
-        return o().maxBy(null != (t = null == e ? void 0 : e.reactions) ? t : [], (e) => Math.max(e.burst_count, e.count));
+        return o().maxBy(null != (t = null == e ? void 0 : e.reactions) ? t : [], (e) =>
+            Math.max(e.burst_count, e.count),
+        );
     }, [null == e ? void 0 : e.reactions]);
 }
 function $(e) {
     let t = null == e ? void 0 : e.defaultReactionEmoji,
-        n = (0, s.e7)([d.ZP], () => ((null == t ? void 0 : t.emojiId) != null ? d.ZP.getUsableCustomEmojiById(t.emojiId) : null));
+        n = (0, s.e7)([d.ZP], () =>
+            (null == t ? void 0 : t.emojiId) != null ? d.ZP.getUsableCustomEmojiById(t.emojiId) : null,
+        );
     return null == t
         ? null
         : null != t.emojiId && null != n
           ? {
                 id: t.emojiId,
                 name: n.name,
-                animated: n.animated
+                animated: n.animated,
             }
           : null != t.emojiName
             ? {
                   id: t.emojiId,
                   name: t.emojiName,
-                  animated: !1
+                  animated: !1,
               }
             : null;
 }
@@ -222,17 +229,17 @@ function ee(e) {
         i = (0, s.e7)([L.Z], () => {
             if (!r) return null;
             let n = L.Z.getCount(e.id);
-            if (null == n || !(n > 0)) return '1+';
+            if (null == n || !(n > 0)) return "1+";
             {
                 let e = Math.min(n, t);
-                return e >= G.dg ? ''.concat(G.dg, '+') : e;
+                return e >= G.dg ? "".concat(G.dg, "+") : e;
             }
         });
     return {
         messageCount: t,
-        isMaxMessageCount: null != t && ''.concat(t) !== n,
+        isMaxMessageCount: null != t && "".concat(t) !== n,
         messageCountText: n,
-        unreadCount: i
+        unreadCount: i,
     };
 }
 function et(e) {
@@ -249,7 +256,7 @@ function et(e) {
         }, [e.guild_id, e.ownerId]),
         {
             user: n,
-            author: o
+            author: o,
         }
     );
 }
@@ -260,7 +267,7 @@ function en(e) {
         o = (0, p.ij)(null != (n = null == i ? void 0 : i.author) ? n : r, e);
     return {
         user: r,
-        author: o
+        author: o,
     };
 }
 function er(e) {
@@ -268,19 +275,19 @@ function er(e) {
         o = (0, f.p)(),
         { hasSpoilerEmbeds: a, content: s } = r.useMemo(
             () =>
-                (null == t ? void 0 : t.content) != null && '' !== t.content
+                (null == t ? void 0 : t.content) != null && "" !== t.content
                     ? (0, _.ZP)(t, {
                           formatInline: n,
                           noStyleAndInteraction: i,
                           allowHeading: !0,
                           allowList: !0,
-                          shouldFilterKeywords: o
+                          shouldFilterKeywords: o,
                       })
                     : {
                           hasSpoilerEmbeds: !1,
-                          content: null
+                          content: null,
                       },
-            [t, n, i, o]
+            [t, n, i, o],
         ),
         l = (0, w.eL)(t, a),
         c = (0, w.vg)(t, a);
@@ -288,7 +295,7 @@ function er(e) {
         hasSpoilerEmbeds: a,
         content: s,
         firstMedia: l,
-        firstMediaIsEmbed: c
+        firstMediaIsEmbed: c,
     };
 }
 function ei(e) {
@@ -296,7 +303,7 @@ function ei(e) {
 }
 let eo = {
     isNew: !1,
-    hasUnreads: !1
+    hasUnreads: !1,
 };
 function ea(e) {
     return (0, s.cj)([I.Z, S.ZP], () => {
@@ -306,14 +313,14 @@ function ea(e) {
     });
 }
 function es(e) {
-    return r.useMemo(() => (null == e || null == e.template ? '' : e.template.trim()), [e]);
+    return r.useMemo(() => (null == e || null == e.template ? "" : e.template.trim()), [e]);
 }
 function el(e) {
     let t = (0, s.e7)([T.Z], () => T.Z.can(j.Plq.MANAGE_THREADS, e));
     return r.useMemo(() => {
         var n;
         let r = [...(null != (n = null == e ? void 0 : e.availableTags) ? n : [])];
-        return (t || (r = r.filter((e) => !e.moderated)), r);
+        return t || (r = r.filter((e) => !e.moderated)), r;
     }, [t, null == e ? void 0 : e.availableTags]);
 }
 function ec(e, t) {
@@ -334,7 +341,7 @@ function ef(e) {
     return (0, s.cj)([x.Z], () => ({
         isSearchLoading: x.Z.getSearchLoading(t),
         searchQuery: x.Z.getSearchQuery(t),
-        searchResults: x.Z.getSearchResults(t)
+        searchResults: x.Z.getSearchResults(t),
     }));
 }
 let e_ = 350;
@@ -346,14 +353,14 @@ function ep(e, t, n) {
         c = r.useRef(new Set());
     r.useEffect(() => {
         if (null == a && null != l.current) {
-            (R.Z.clearForumSearch(e.id), (l.current = null));
+            R.Z.clearForumSearch(e.id), (l.current = null);
             return;
         }
         if (null == a || 0 === a.length || i) return;
         if (!s) return void R.Z.clearForumSearch(e.id);
         if ((l.current === a && c.current === t) || o) return;
         let r = setTimeout(async () => {
-            ((l.current = a), (c.current = t));
+            (l.current = a), (c.current = t);
             try {
                 await R.Z.searchForumPosts(e.guild_id, e.id, a, t, n);
             } catch (e) {}
@@ -393,7 +400,7 @@ function em(e) {
             d &&
                 (0, c.U6)(t, {
                     object: j.qAy.ACK_FORUM_ACTIVE_THREADS,
-                    objectType: j.Qqv.ACK_AUTOMATIC
+                    objectType: j.Qqv.ACK_AUTOMATIC,
                 });
         }, [t, d]),
         l

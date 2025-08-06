@@ -5,7 +5,7 @@ n.d(t, {
     Z9: () => h,
     aO: () => p,
     az: () => b,
-    i$: () => g
+    i$: () => g,
 });
 var r = n(255367),
     i = n(73800),
@@ -22,61 +22,71 @@ function p(e) {
     let { children: t, className: n, isPremiumRebrand: i = !1 } = e;
     return (0, r.jsx)(f.Provider, {
         value: { isPremiumRebrand: i },
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: a()(d.table, { [d.premiumRebrand]: i }, n),
-            children: t
-        })
+            children: t,
+        }),
     });
 }
 function h(e) {
     let { children: t } = e;
     return _()
         ? (0, r.jsx)(s.X6q, {
-              variant: 'heading-md/semibold',
-              color: 'text-primary',
+              variant: "heading-md/semibold",
+              color: "text-primary",
               className: a()(d.header, d.premiumRebrand),
-              children: t
+              children: t,
           })
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: d.header,
-              children: t
+              children: t,
           });
 }
 function m(e) {
     let { label: t, value: n, className: i } = e;
     return _()
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: a()(d.row, i),
               children: [
                   (0, r.jsx)(s.Text, {
-                      variant: 'text-sm/medium',
-                      color: 'currentColor',
-                      children: t
+                      variant: "text-sm/medium",
+                      color: "currentColor",
+                      children: t,
                   }),
                   (0, r.jsx)(s.Text, {
-                      variant: 'text-sm/medium',
-                      color: 'currentColor',
+                      variant: "text-sm/medium",
+                      color: "currentColor",
                       className: d.flex,
-                      children: n
-                  })
-              ]
+                      children: n,
+                  }),
+              ],
           })
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: a()(d.row, i),
               children: [
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: d.rowLabel,
-                      children: t
+                      children: t,
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: d.rowAmount,
-                      children: n
-                  })
-              ]
+                      children: n,
+                  }),
+              ],
           });
 }
 function g(e) {
-    let { label: t, value: n, discounts: i, originalAmount: o, interval: a, currency: f, className: _, intervalCount: p, inTrialPeriod: h } = e,
+    let {
+            label: t,
+            value: n,
+            discounts: i,
+            originalAmount: o,
+            interval: a,
+            currency: f,
+            className: _,
+            intervalCount: p,
+            inTrialPeriod: h,
+        } = e,
         g = (e) => (null != i ? i.find((t) => t.type === e) : null),
         E = g(l.eW.SUBSCRIPTION_PLAN),
         b = g(l.eW.ENTITLEMENT),
@@ -90,66 +100,66 @@ function g(e) {
                     children: [
                         h ? u.intl.formatToPlainString(u.t.hXcaLS, { price: (0, c.T4)(0, f) }) : n,
                         null != y
-                            ? (0, r.jsxs)('div', {
+                            ? (0, r.jsxs)("div", {
                                   className: d.rowPercentDiscount,
-                                  children: ['-', y, '%']
+                                  children: ["-", y, "%"],
                               })
-                            : null
-                    ]
+                            : null,
+                    ],
                 }),
-                className: _
+                className: _,
             }),
             h &&
                 (0, r.jsx)(s.Text, {
-                    variant: 'text-md/medium',
+                    variant: "text-md/medium",
                     className: d.trialEndPrice,
-                    children: u.intl.format(u.t.v9QeOD, { price: O })
+                    children: u.intl.format(u.t.v9QeOD, { price: O }),
                 }),
             null != y
-                ? (0, r.jsxs)('div', {
+                ? (0, r.jsxs)("div", {
                       className: d.rowDiscountOriginalPrice,
-                      children: ['(', null != a && null != p ? (0, c.og)(O, a, p) : O, ')']
+                      children: ["(", null != a && null != p ? (0, c.og)(O, a, p) : O, ")"],
                   })
                 : null,
             null != b
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: d.entitlementDiscountRow,
-                      children: u.intl.string(u.t.A7Hpfn)
+                      children: u.intl.string(u.t.A7Hpfn),
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 function E(e) {
     let { extended: t = !1, negativeMarginTop: n = !1, negativeMarginBottom: i = !1 } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(d.divider, {
             [d.dividerExtended]: t,
             [d.negativeMarginTop]: n,
-            [d.negativeMarginBottom]: i
-        })
+            [d.negativeMarginBottom]: i,
+        }),
     });
 }
 function b(e) {
     let { label: t, value: n, className: i } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(d.totalRow, i),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.totalLabel,
-                children: t
+                children: t,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.totalAmount,
-                children: n
-            })
-        ]
+                children: n,
+            }),
+        ],
     });
 }
 function y(e) {
     let { children: t, className: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(d.finePrint, n),
-        children: t
+        children: t,
     });
 }

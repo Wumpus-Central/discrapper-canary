@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ let f = {};
 class _ {
     static ensure(e, t, n) {
         var r, i;
-        let o = ''
-            .concat(e, ':')
-            .concat(t.name, ':')
-            .concat(null != (r = t.id) ? r : '', ':')
+        let o = ""
+            .concat(e, ":")
+            .concat(t.name, ":")
+            .concat(null != (r = t.id) ? r : "", ":")
             .concat(n);
         return (f[o] = null != (i = f[o]) ? i : new _());
     }
     constructor() {
-        (d(this, 'users', void 0), d(this, 'fetched', void 0), (this.fetched = !1), (this.users = new Map()));
+        d(this, "users", void 0), d(this, "fetched", void 0), (this.fetched = !1), (this.users = new Map());
     }
 }
 function p() {
@@ -41,7 +41,7 @@ function p() {
 function h(e) {
     let { type: t, messageId: n, userId: r, emoji: i, reactionType: o } = e,
         a = _.ensure(n, i, o);
-    if ('MESSAGE_REACTION_ADD' === t) {
+    if ("MESSAGE_REACTION_ADD" === t) {
         let e = u.default.getUser(r);
         null != e && a.users.set(r, e);
     } else a.users.delete(r);
@@ -58,22 +58,22 @@ class g extends (r = i.ZP.Store) {
             let l = c.Z.getChannel(e),
                 u = null != l ? l.getGuildId() : null;
             if (null != u && a.Z.isLurking(u)) return;
-            (s.U0({
+            s.U0({
                 channelId: e,
                 messageId: t,
                 emoji: n,
                 limit: r,
-                type: i
+                type: i,
             }),
-                (o.fetched = !0));
+                (o.fetched = !0);
         }
         return o.users;
     }
 }
-d(g, 'displayName', 'MessageReactionsStore');
+d(g, "displayName", "MessageReactionsStore");
 let E = new g(o.Z, {
     CONNECTION_OPEN: p,
     MESSAGE_REACTION_ADD: h,
     MESSAGE_REACTION_REMOVE: h,
-    MESSAGE_REACTION_ADD_USERS: m
+    MESSAGE_REACTION_ADD_USERS: m,
 });

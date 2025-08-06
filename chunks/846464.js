@@ -19,16 +19,33 @@ var i = t(120356),
     j = t(677163);
 function L(e) {
     let { handleStepChange: r, handleClose: t, referralTrialOfferId: i } = e,
-        { setSelectedSkuId: l, activeSubscription: o, startedPaymentFlowWithPaymentSourcesRef: C, setSelectedPlanId: h, priceOptions: j, defaultPlanId: L } = (0, p.JL)(),
+        {
+            setSelectedSkuId: l,
+            activeSubscription: o,
+            startedPaymentFlowWithPaymentSourcesRef: C,
+            setSelectedPlanId: h,
+            priceOptions: j,
+            defaultPlanId: L,
+        } = (0, p.JL)(),
         { isGift: g, claimableRewards: y } = (0, u.wD)(),
         S = g && null != y && y.length > 0,
         E = (0, d.N)(i),
         v = (0, a.Nx)(),
-        I = (0, s.Z)({ location: 'PremiumPaymentSelect' });
+        I = (0, s.Z)({ location: "PremiumPaymentSelect" });
     return (0, n.jsx)(b, {
         selectSku: (e) =>
             (function (e) {
-                let { activeSubscription: r, newSkuId: t, setSelectedSkuId: n, handleStepChange: i, isGift: l, userTrialOffer: o, setSelectedPlanId: a, startedPaymentFlowWithPaymentSources: s, defaultPlanId: d } = e;
+                let {
+                    activeSubscription: r,
+                    newSkuId: t,
+                    setSelectedSkuId: n,
+                    handleStepChange: i,
+                    isGift: l,
+                    userTrialOffer: o,
+                    setSelectedPlanId: a,
+                    startedPaymentFlowWithPaymentSources: s,
+                    defaultPlanId: d,
+                } = e;
                 n(t);
                 let C = _.h8.PLAN_SELECT,
                     u = (0, c.k5)(r);
@@ -36,15 +53,16 @@ function L(e) {
                 let p = (0, m.T)({
                         userTrialOffer: o,
                         isGift: l,
-                        skuId: t
+                        skuId: t,
                     }),
                     h = (0, f.Kp)({
                         isTrial: p,
                         isGift: l,
                         selectedSkuId: t,
-                        startedPaymentFlowWithPaymentSources: s
+                        startedPaymentFlowWithPaymentSources: s,
                     });
-                (C !== _.h8.WHAT_YOU_LOSE && h && ((C = _.h8.REVIEW), a((0, f.nA)(t, r, d))), i(C, { analyticsDataOverride: { sku_id: t } }));
+                C !== _.h8.WHAT_YOU_LOSE && h && ((C = _.h8.REVIEW), a((0, f.nA)(t, r, d))),
+                    i(C, { analyticsDataOverride: { sku_id: t } });
             })({
                 activeSubscription: o,
                 newSkuId: e,
@@ -54,31 +72,39 @@ function L(e) {
                 userTrialOffer: E,
                 startedPaymentFlowWithPaymentSources: C.current,
                 setSelectedPlanId: h,
-                defaultPlanId: L
+                defaultPlanId: L,
             }),
         onClose: t,
         isGift: g,
         inOfferExperience: v,
         priceOptions: j,
         showPromotionalGiftBanner: S,
-        enablePremiumBrandRefresh: I
+        enablePremiumBrandRefresh: I,
     });
 }
 function b(e) {
-    let { selectSku: r, onClose: t, isGift: i, inOfferExperience: a, priceOptions: s, showPromotionalGiftBanner: d, enablePremiumBrandRefresh: u } = e,
+    let {
+            selectSku: r,
+            onClose: t,
+            isGift: i,
+            inOfferExperience: a,
+            priceOptions: s,
+            showPromotionalGiftBanner: d,
+            enablePremiumBrandRefresh: u,
+        } = e,
         p = u
             ? (0, n.jsx)(o.X6q, {
-                  variant: 'heading-lg/bold',
-                  children: h.intl.string(h.t['r+SebW'])
+                  variant: "heading-lg/bold",
+                  children: h.intl.string(h.t["r+SebW"]),
               })
             : (0, n.jsx)(o.vwX, {
                   tag: o.RB0.H4,
-                  children: h.intl.string(h.t['r+SebW'])
+                  children: h.intl.string(h.t["r+SebW"]),
               });
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(o.xBx, {
-                'data-migration-pending': !0,
+                "data-migration-pending": !0,
                 className: l()(j.skuSelectModalHeader, { [j.premiumBrandRefreshHeader]: u }),
                 separator: !1,
                 children: [
@@ -86,25 +112,25 @@ function b(e) {
                     (0, n.jsx)(o.olH, {
                         className: j.close,
                         innerClassName: j.closeInner,
-                        onClick: t
-                    })
-                ]
+                        onClick: t,
+                    }),
+                ],
             }),
             (0, n.jsx)(o.hzk, {
-                'data-migration-pending': !0,
+                "data-migration-pending": !0,
                 className: l()(j.skuSelectModalContent, {
                     [j.modalSize]: !u,
                     [j.modalPadding]: a && !u,
-                    [j.premiumBrandRefreshContent]: u
+                    [j.premiumBrandRefreshContent]: u,
                 }),
                 children: (0, n.jsx)(C.Z, {
                     onSelectSku: (e) => r((0, c.Wz)(e)),
                     isGift: i,
                     priceOptions: s,
                     showPromotionalGiftBanner: d,
-                    enablePremiumBrandRefresh: u
-                })
-            })
-        ]
+                    enablePremiumBrandRefresh: u,
+                }),
+            }),
+        ],
     });
 }

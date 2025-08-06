@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     $Y: () => v,
     JK: () => b,
     Je: () => y,
@@ -6,9 +6,9 @@
     UE: () => T,
     Xx: () => I,
     mm: () => O,
-    qY: () => E
+    qY: () => E,
 }),
-    n(388685));
+    n(388685);
 var r = n(544891),
     i = n(570140),
     o = n(367907),
@@ -23,7 +23,7 @@ var r = n(544891),
 function p(e) {
     return {
         type: e.type,
-        metadata: (0, d.X)(e.metadata)
+        metadata: (0, d.X)(e.metadata),
     };
 }
 function h(e) {
@@ -43,14 +43,14 @@ function h(e) {
             creator_id: e.creatorId,
             position: e.position,
             exempt_channels: Array.from(null != (t = e.exemptChannels) ? t : []),
-            exempt_roles: Array.from(null != (n = e.exemptRoles) ? n : [])
+            exempt_roles: Array.from(null != (n = e.exemptRoles) ? n : []),
         }
     );
 }
 function m(e) {
     return {
         type: e.type,
-        metadata: (0, d.C)(e.metadata)
+        metadata: (0, d.C)(e.metadata),
     };
 }
 function g(e) {
@@ -67,16 +67,16 @@ function g(e) {
         creatorId: e.creator_id,
         position: e.position,
         exemptChannels: new Set(null != (n = e.exempt_channels) ? n : []),
-        exemptRoles: new Set(null != (r = e.exempt_roles) ? r : [])
+        exemptRoles: new Set(null != (r = e.exempt_roles) ? r : []),
     };
-    return (null != i.triggerMetadata && delete i.triggerMetadata.keywordLists, i);
+    return null != i.triggerMetadata && delete i.triggerMetadata.keywordLists, i;
 }
 async function E(e) {
     let t = h(e),
         n = await r.tn.post({
             url: _.ANM.GUILD_AUTOMOD_VALIDATE_RULE(e.guildId),
             body: t,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
     return (0, d.C)(n.body);
 }
@@ -89,9 +89,9 @@ async function b(e) {
                 await r.tn.post({
                     url: _.ANM.GUILD_AUTOMOD_RULES(e.guildId),
                     body: t,
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
-            ).body
+            ).body,
         )
     );
 }
@@ -102,16 +102,16 @@ async function y(e) {
             await r.tn.patch({
                 url: _.ANM.GUILD_AUTOMOD_RULE(e.guildId, e.id),
                 body: t,
-                rejectWithError: !1
+                rejectWithError: !1,
             })
-        ).body
+        ).body,
     );
 }
 async function O(e, t) {
     return (
         await r.tn.del({
             url: _.ANM.GUILD_AUTOMOD_RULE(t, e),
-            rejectWithError: !1
+            rejectWithError: !1,
         }),
         !0
     );
@@ -119,7 +119,7 @@ async function O(e, t) {
 async function v(e) {
     let t = await r.tn.get({
         url: _.ANM.GUILD_AUTOMOD_RULES(e),
-        rejectWithError: !1
+        rejectWithError: !1,
     });
     return Array.isArray(t.body) ? t.body.map(g) : [];
 }
@@ -130,30 +130,30 @@ async function I(e, t, n) {
             body: {
                 message_id: e,
                 channel_id: t.id,
-                alert_action_type: n
+                alert_action_type: n,
             },
-            rejectWithError: !1
+            rejectWithError: !1,
         }));
 }
 function T(e, t, n) {
     let i = a.Z.getGuild(e);
     if (null == i || !s.Z.can(_.Plq.MANAGE_GUILD, i)) return;
     let l = () => {
-        ((0, o.yw)(_.rMx.GUILD_AUTOMOD_FEEDBACK, {
+        (0, o.yw)(_.rMx.GUILD_AUTOMOD_FEEDBACK, {
             feedback_type: u.x2.MENTION_RAID_REMOVE_RESTRICTION,
-            decision_id: t
+            decision_id: t,
         }),
             r.tn.post({
                 url: _.ANM.GUILD_AUTOMOD_CLEAR_MENTION_RAID(e),
-                rejectWithError: !0
+                rejectWithError: !0,
             }),
-            n());
+            n();
     };
     (0, f.UV)(l);
 }
 function S(e) {
     i.Z.dispatch({
-        type: 'AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS',
-        guildId: e
+        type: "AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS",
+        guildId: e,
     });
 }

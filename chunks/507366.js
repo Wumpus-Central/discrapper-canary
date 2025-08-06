@@ -5,7 +5,7 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -15,15 +15,15 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 r(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -31,11 +31,11 @@ function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -52,7 +52,7 @@ function a(e, t) {
 }
 n.d(t, {
     Z: () => c,
-    c: () => l
+    c: () => l,
 });
 let s = (0, n(972959).H)(() => ({ channelDrafts: {} }));
 function l(e, t) {
@@ -60,9 +60,9 @@ function l(e, t) {
         let r = n.channelDrafts[e],
             o = {
                 heroFile: null,
-                title: '',
+                title: "",
                 publish: !0,
-                createThread: !0
+                createThread: !0,
             };
         return { channelDrafts: a(i({}, n.channelDrafts), { [e]: i({}, o, r, t) }) };
     });

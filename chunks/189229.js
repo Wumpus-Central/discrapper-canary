@@ -1,4 +1,4 @@
-(e.r(d), e.d(d, { default: () => r }));
+e.r(d), e.d(d, { default: () => r });
 var n = e(367907),
     a = e(592125),
     i = e(888369),
@@ -16,7 +16,7 @@ function r(t, d) {
                 e = i.default.getMentionCount(t.id),
                 n = c.ZP.isMuted(t.id),
                 a = c.ZP.resolveGuildUnreadSetting(t);
-            return ''.concat(t.id, ',').concat(d, ',').concat(e, ',').concat(n, ',').concat(a);
-        })
+            return "".concat(t.id, ",").concat(d, ",").concat(e, ",").concat(n, ",").concat(a);
+        }),
     });
 }

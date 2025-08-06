@@ -5,7 +5,7 @@ e.exports = function (e, t) {
         i(r, e, {
             value: t,
             configurable: !0,
-            writable: !0
+            writable: !0,
         });
     } catch (n) {
         r[e] = t;

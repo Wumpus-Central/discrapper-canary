@@ -1,6 +1,6 @@
 n.d(t, {
     $: () => h,
-    Z: () => f
+    Z: () => f,
 });
 var r = n(255367);
 n(73800);
@@ -27,14 +27,14 @@ function h() {
         },
         className: p.rowContainer,
         children: [
-            (0, r.jsx)('div', { children: g.intl.string(g.t['9Oq93t']) }),
+            (0, r.jsx)("div", { children: g.intl.string(g.t["9Oq93t"]) }),
             c &&
                 (0, r.jsx)(a.rgF, {
-                    size: 'xs',
-                    color: 'currentColor',
-                    className: p.linkIcon
-                })
-        ]
+                    size: "xs",
+                    color: "currentColor",
+                    className: p.linkIcon,
+                }),
+        ],
     });
 }
 function f() {

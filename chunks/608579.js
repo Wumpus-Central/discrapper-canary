@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685));
+n.d(t, { Z: () => M }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -34,7 +34,7 @@ function w(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -44,15 +44,15 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 w(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -60,11 +60,11 @@ function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -81,7 +81,20 @@ function x(e, t) {
 }
 function M(e) {
     var t;
-    let { onClose: n, onComplete: o, onStepChange: w, transitionState: L, loadId: M, skuId: k, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: Z, returnRef: F } = e,
+    let {
+            onClose: n,
+            onComplete: o,
+            onStepChange: w,
+            transitionState: L,
+            loadId: M,
+            skuId: k,
+            isGift: j = !1,
+            giftRecipient: U,
+            giftMessage: G,
+            giftingOrigin: B,
+            analyticsLocations: Z,
+            returnRef: F,
+        } = e,
         { analyticsLocations: V } = (0, d.ZP)([...Z, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
         H = i.useRef(new s.qA()),
         [Y, W] = i.useState(null),
@@ -90,38 +103,38 @@ function M(e) {
             () =>
                 (0, N.UY)({
                     purchaseType: C.o8.FIAT,
-                    skuId: k
+                    skuId: k,
                 }),
-            [k]
+            [k],
         ),
         X = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
         Q = null != k ? [k] : X,
         J = null != (t = Q[0]) ? t : null,
         $ = null != k && p.Rm.has(k),
         ee = i.useCallback(() => {
-            (z(!0), null == o || o());
+            z(!0), null == o || o();
         }, [o]),
         et = i.useCallback(
             (e) => {
-                (z(!1),
+                z(!1),
                     n(e),
                     c.Z.dispatch({
-                        type: 'SKU_PURCHASE_MODAL_CLOSE',
-                        error: null
-                    }));
+                        type: "SKU_PURCHASE_MODAL_CLOSE",
+                        error: null,
+                    });
             },
-            [n]
+            [n],
         ),
         en = (e, t, n) =>
             j
                 ? (0, r.jsx)(O.Z, {
                       step: n,
                       onClose: () => t(!1),
-                      giftingOrigin: B
+                      giftingOrigin: B,
                   })
                 : (0, r.jsx)(S.Z, {
                       step: n,
-                      onClose: () => t(!1)
+                      onClose: () => t(!1),
                   }),
         er = i.useMemo(
             () => [
@@ -138,16 +151,16 @@ function M(e) {
                             x(D({}, e), {
                                 confettiCanvas: Y,
                                 analyticsLocations: V,
-                                hideConfetti: null != q
-                            })
+                                hideConfetti: null != q,
+                            }),
                         ),
                     options: {
                         bodyClassName: P.modalOverrideBody,
-                        sliderBodyClassName: P.modalOverrideSliderBody
-                    }
-                }
+                        sliderBodyClassName: P.modalOverrideSliderBody,
+                    },
+                },
             ],
-            [V, Y, q, j]
+            [V, Y, q, j],
         );
     return (0, r.jsxs)(d.Gt, {
         value: V,
@@ -155,11 +168,11 @@ function M(e) {
             (0, r.jsx)(s.O_, {
                 ref: W,
                 className: P.confettiCanvas,
-                environment: H.current
+                environment: H.current,
             }),
             (0, r.jsx)(_.i, {
                 options: q,
-                className: a()(P.customConfetti, { [P.hidden]: !K })
+                className: a()(P.customConfetti, { [P.hidden]: !K }),
             }),
             (0, r.jsx)(m.PaymentContextProvider, {
                 loadId: M,
@@ -188,11 +201,11 @@ function M(e) {
                             returnRef: F,
                             onStepChange: w,
                             skipConfirm: $,
-                            hideShadow: !0
-                        })
-                    })
-                })
-            })
-        ]
+                            hideShadow: !0,
+                        }),
+                    }),
+                }),
+            }),
+        ],
     });
 }

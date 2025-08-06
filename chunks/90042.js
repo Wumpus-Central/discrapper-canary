@@ -14,17 +14,17 @@ function o(e) {
         },
         children: [
             (0, i.jsx)(r.X6q, {
-                color: 'always-white',
-                variant: 'heading-sm/semibold',
-                children: a.intl.string(a.t.ALB9np)
+                color: "always-white",
+                variant: "heading-sm/semibold",
+                children: a.intl.string(a.t.ALB9np),
             }),
             (0, i.jsx)(r.Text, {
-                color: 'always-white',
-                variant: 'text-xs/normal',
-                children: a.intl.string(a.t.rYAs7O)
+                color: "always-white",
+                variant: "text-xs/normal",
+                children: a.intl.string(a.t.rYAs7O),
             }),
-            (0, i.jsx)('div', { className: l.pointer })
-        ]
+            (0, i.jsx)("div", { className: l.pointer }),
+        ],
     });
 }
 function c(e) {
@@ -32,11 +32,11 @@ function c(e) {
     return (0, i.jsx)(r.yRy, {
         targetElementRef: a,
         onRequestClose: () => n(s.L.INDIRECT_ACTION),
-        position: 'top',
-        align: 'left',
+        position: "top",
+        align: "left",
         shouldShow: !0,
         animation: r.yRy.Animation.TRANSLATE,
         renderPopout: () => (0, i.jsx)(o, { markAsDismissed: n }),
-        children: t
+        children: t,
     });
 }

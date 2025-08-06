@@ -6,10 +6,10 @@ function i(e) {
         ? r.intl.formatToParts(r.t.Tes5Oj, {
               username: n,
               applicationName: t.name,
-              usernameOnClick: i
+              usernameOnClick: i,
           })
         : r.intl.formatToParts(r.t.PUJtgo, {
               username: n,
-              usernameOnClick: i
+              usernameOnClick: i,
           });
 }

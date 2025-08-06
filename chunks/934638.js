@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(953529));
+n.d(t, { Z: () => m }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(345074),
@@ -13,23 +13,23 @@ function m(e) {
         m = t.id,
         g = i.useCallback(
             (e) => {
-                (o.Z.updateGuild({ description: e }), o.Z.updateGuildProfile(m, { description: e }));
+                o.Z.updateGuild({ description: e }), o.Z.updateGuildProfile(m, { description: e });
             },
-            [m]
+            [m],
         ),
-        p = (0, a.e7)([c.Z], () => c.Z.getError('description'));
+        p = (0, a.e7)([c.Z], () => c.Z.getError("description"));
     return (0, r.jsxs)(s.hjN, {
         className: u.section,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: u.sectionHeader,
                 children: [
                     (0, r.jsx)(s.vwX, { children: d.intl.string(d.t.Z27SCQ) }),
                     (0, r.jsx)(s.R94, {
                         type: s.geA.DESCRIPTION,
-                        children: d.intl.string(d.t.pw0MIi)
-                    })
-                ]
+                        children: d.intl.string(d.t.pw0MIi),
+                    }),
+                ],
             }),
             (0, r.jsx)(s.Kx8, {
                 value: t.description,
@@ -37,8 +37,8 @@ function m(e) {
                 onChange: g,
                 maxLength: l.Us,
                 disabled: !n,
-                error: p
-            })
-        ]
+                error: p,
+            }),
+        ],
     });
 }

@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     B: () => l,
-    Z: () => y
+    Z: () => y,
 }),
     n(539854),
     n(388685),
-    n(415506));
+    n(415506);
 var r = n(536895);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -59,7 +59,7 @@ function s(e, t) {
     );
 }
 var l = (function (e) {
-    return ((e.UPDATE_ITEMS = 'UPDATE_ITEMS'), (e.SET_FOCUS_PATH = 'SET_FOCUS_PATH'), e);
+    return (e.UPDATE_ITEMS = "UPDATE_ITEMS"), (e.SET_FOCUS_PATH = "SET_FOCUS_PATH"), e;
 })({});
 function c(e, t) {
     return e.findIndex((e) => t === e.key);
@@ -87,7 +87,7 @@ function f(e, t) {
             null != e && r.push(e.key);
             break;
         }
-        (r.push(i), (n = n[o].children));
+        r.push(i), (n = n[o].children);
     }
     return r;
 }
@@ -95,7 +95,7 @@ function _(e, t) {
     let { items: n } = t,
         r = s(o({}, e), {
             items: n,
-            focusPath: f(n, e.focusPath)
+            focusPath: f(n, e.focusPath),
         });
     return s(o({}, r), { focusIndex: b(r) });
 }
@@ -111,7 +111,7 @@ function h(e, t) {
     let i = (c(r, n) - 1) % r.length;
     if ((i < 0 && (i = r.length - 1), null == r[i])) return e;
     let a = s(o({}, e), {
-        focusPath: [...e.focusPath.slice(0, -1), r[i].key]
+        focusPath: [...e.focusPath.slice(0, -1), r[i].key],
     });
     return s(o({}, a), { focusIndex: b(a) });
 }
@@ -122,7 +122,7 @@ function m(e, t) {
     let i = (c(r, n) + 1) % r.length;
     if (null == r[i]) return e;
     let a = s(o({}, e), {
-        focusPath: [...e.focusPath.slice(0, -1), r[i].key]
+        focusPath: [...e.focusPath.slice(0, -1), r[i].key],
     });
     return s(o({}, a), { focusIndex: b(a) });
 }
@@ -135,7 +135,7 @@ function g(e, t) {
         l = null == a || null == (n = a.children) ? void 0 : n[0];
     if (null == l) return e;
     let f = s(o({}, e), {
-        focusPath: [...e.focusPath, l.key]
+        focusPath: [...e.focusPath, l.key],
     });
     return s(o({}, f), { focusIndex: b(f) });
 }
@@ -159,13 +159,13 @@ function y(e, t) {
             return g(e, t);
         case r.Us.NAVIGATE_OUT:
             return E(e, t);
-        case 'UPDATE_ITEMS':
+        case "UPDATE_ITEMS":
             return _(e, t);
-        case 'SET_FOCUS_PATH':
+        case "SET_FOCUS_PATH":
             return p(e, t);
         case r.Us.SELECT_FOCUSED_ITEM:
             return e;
         default:
-            throw Error('Menu navigator was given an unhandled action '.concat(t.type));
+            throw Error("Menu navigator was given an unhandled action ".concat(t.type));
     }
 }

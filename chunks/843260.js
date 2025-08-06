@@ -1,1 +1,1 @@
-(n(2831), (e.exports = n.g.setImmediate));
+n(2831), (e.exports = n.g.setImmediate);

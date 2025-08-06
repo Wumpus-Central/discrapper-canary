@@ -1,6 +1,6 @@
 function r(e) {
-    let t = '=='.slice(0, (4 - (e.length % 4)) % 4),
-        n = atob(e.replace(/-/g, '+').replace(/_/g, '/') + t),
+    let t = "==".slice(0, (4 - (e.length % 4)) % 4),
+        n = atob(e.replace(/-/g, "+").replace(/_/g, "/") + t),
         r = new ArrayBuffer(n.length),
         i = new Uint8Array(r);
     for (let e = 0; e < n.length; e++) i[e] = n.charCodeAt(e);
@@ -8,16 +8,16 @@ function r(e) {
 }
 function i(e) {
     let t = new Uint8Array(e),
-        n = '';
+        n = "";
     for (let e of t) n += String.fromCharCode(e);
-    return btoa(n).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+    return btoa(n).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
 }
 n.d(t, {
     U2: () => _,
-    wz: () => g
+    wz: () => g,
 });
-var l = 'copy',
-    s = 'convert';
+var l = "copy",
+    s = "convert";
 function o(e, t, n) {
     if (t === l) return n;
     if (t === s) return e(n);
@@ -46,42 +46,42 @@ function a(e, t) {
     return {
         required: !0,
         schema: e,
-        derive: t
+        derive: t,
     };
 }
 function c(e) {
     return {
         required: !0,
-        schema: e
+        schema: e,
     };
 }
 function u(e) {
     return {
         required: !1,
-        schema: e
+        schema: e,
     };
 }
 var d = {
         type: c(l),
         id: c(s),
-        transports: u(l)
+        transports: u(l),
     },
     h = {
         appid: u(l),
         appidExclude: u(l),
-        credProps: u(l)
+        credProps: u(l),
     },
     p = {
         appid: u(l),
         appidExclude: u(l),
-        credProps: u(l)
+        credProps: u(l),
     };
-(c({
+c({
     rp: c(l),
     user: c({
         id: c(s),
         name: c(l),
-        displayName: c(l)
+        displayName: c(l),
     }),
     challenge: c(s),
     pubKeyCredParams: c(l),
@@ -89,7 +89,7 @@ var d = {
     excludeCredentials: u([d]),
     authenticatorSelection: u(l),
     attestation: u(l),
-    extensions: u(h)
+    extensions: u(h),
 }),
     u(l),
     c(l),
@@ -102,9 +102,9 @@ var d = {
         transports: a(l, (e) => {
             var t;
             return (null == (t = e.getTransports) ? void 0 : t.call(e)) || [];
-        })
+        }),
     }),
-    a(p, (e) => e.getClientExtensionResults()));
+    a(p, (e) => e.getClientExtensionResults());
 var m = {
         mediation: u(l),
         publicKey: c({
@@ -113,9 +113,9 @@ var m = {
             rpId: u(l),
             allowCredentials: u([d]),
             userVerification: u(l),
-            extensions: u(h)
+            extensions: u(h),
         }),
-        signal: u(l)
+        signal: u(l),
     },
     f = {
         type: c(l),
@@ -126,14 +126,14 @@ var m = {
             clientDataJSON: c(s),
             authenticatorData: c(s),
             signature: c(s),
-            userHandle: c(s)
+            userHandle: c(s),
         }),
-        clientExtensionResults: a(p, (e) => e.getClientExtensionResults())
+        clientExtensionResults: a(p, (e) => e.getClientExtensionResults()),
     };
 function g(e) {
     return o(r, m, e);
 }
 async function _(e) {
     let t = await navigator.credentials.get(e);
-    return ((t.toJSON = () => o(i, f, t)), t);
+    return (t.toJSON = () => o(i, f, t)), t;
 }

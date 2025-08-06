@@ -18,7 +18,7 @@ function p() {
             value: e,
             onChange: s.Q,
             title: m.intl.string(m.t.qFsx5u),
-            note: m.intl.format(m.t.lunaRk, { learnMoreLink: a.Z.getArticleURL(u.BhN.SAFETY_ALERTS) })
-        })
+            note: m.intl.format(m.t.lunaRk, { learnMoreLink: a.Z.getArticleURL(u.BhN.SAFETY_ALERTS) }),
+        }),
     });
 }

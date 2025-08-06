@@ -27,57 +27,57 @@ let f = [18, 18, 16, 16, 14, 12, 10],
             var E;
             j = null != (E = f[(_ = (0, a.Zg)(b)).length - 1]) ? E : f[f.length - 1];
         }
-        return (0, i.jsxs)('div', {
+        return (0, i.jsxs)("div", {
             className: h.container,
             children: [
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     style: { fontSize: j },
                     children: [
                         null != _
-                            ? (0, i.jsx)('div', {
+                            ? (0, i.jsx)("div", {
                                   className: s()(h.childWrapper, h.acronym),
-                                  'aria-hidden': !0,
-                                  children: _
+                                  "aria-hidden": !0,
+                                  children: _,
                               })
                             : null,
                         null != x
                             ? (0, i.jsx)(o.qEK, {
                                   src: x,
                                   size: o.EFr.SIZE_40,
-                                  'aria-hidden': !0
+                                  "aria-hidden": !0,
                               })
-                            : null
-                    ]
+                            : null,
+                    ],
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: h.descriptors,
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, i.jsxs)("div", {
                             className: h.header,
                             children: [
                                 r
                                     ? (0, i.jsx)(c.Z, {
                                           guild: n,
-                                          tooltipPosition: 'bottom',
+                                          tooltipPosition: "bottom",
                                           tooltipColor: o.ua7.Colors.PRIMARY,
-                                          className: h.guildBadge
+                                          className: h.guildBadge,
                                       })
                                     : null,
                                 (0, i.jsx)(o.Text, {
-                                    variant: 'text-md/semibold',
-                                    children: b
-                                })
-                            ]
+                                    variant: "text-md/semibold",
+                                    children: b,
+                                }),
+                            ],
                         }),
                         void 0 !== n.approximateMemberCount
                             ? (0, i.jsx)(o.Text, {
-                                  variant: 'text-xs/medium',
-                                  color: 'text-muted',
-                                  children: g.intl.format(p.default['5JmNgo'], { members: n.approximateMemberCount })
+                                  variant: "text-xs/medium",
+                                  color: "text-muted",
+                                  children: g.intl.format(p.default["5JmNgo"], { members: n.approximateMemberCount }),
                               })
-                            : null
-                    ]
-                })
-            ]
+                            : null,
+                    ],
+                }),
+            ],
         });
     };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var i = n(73800),
     r = n(913527),
     s = n.n(r),
@@ -25,9 +25,9 @@ function g(e) {
             ? void 0
             : (function (e) {
                   let { subscription: t } = e,
-                      n = s()(t.currentPeriodEnd).format('M/D/YY'),
-                      i = null != t.price ? (0, o.T4)(t.price, t.currency) : '',
-                      r = s()(t.createdAt).format('M/D/YY'),
+                      n = s()(t.currentPeriodEnd).format("M/D/YY"),
+                      i = null != t.price ? (0, o.T4)(t.price, t.currency) : "",
+                      r = s()(t.createdAt).format("M/D/YY"),
                       a = t.status === m.O0b.CANCELED,
                       l = t.status === m.O0b.PAST_DUE,
                       c = t.hasActiveTrial;
@@ -38,7 +38,7 @@ function g(e) {
                       subscriptionPrice: i,
                       isCancelled: a,
                       isPastDue: l,
-                      isTrial: c
+                      isTrial: c,
                   };
               })({ subscription: e });
     return {
@@ -47,6 +47,6 @@ function g(e) {
         handleToggleExpanded: () => f((e) => !e),
         listing: n,
         groupListing: r,
-        subscriptionInfo: x
+        subscriptionInfo: x,
     };
 }

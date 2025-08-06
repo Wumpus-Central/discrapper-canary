@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,16 +38,16 @@ function d(e) {
     let { application: t } = e;
     if (null == t.id) return !1;
     let n = t.id;
-    (null == u[n] &&
+    null == u[n] &&
         (u[n] = {
             count: 0,
             id: t.id,
             name: t.name,
             icon: t.icon,
             coverImage: t.coverImage,
-            authenticated: !1
+            authenticated: !1,
         }),
-        u[n].count++);
+        u[n].count++;
 }
 function f(e) {
     let { application: t } = e;
@@ -75,10 +75,10 @@ class h extends (r = a.ZP.Store) {
         return u;
     }
 }
-l(h, 'displayName', 'ConnectedAppsStore');
+l(h, "displayName", "ConnectedAppsStore");
 let m = new h(s.Z, {
     OVERLAY_INITIALIZE: p,
     RPC_APP_CONNECTED: d,
     RPC_APP_AUTHENTICATED: f,
-    RPC_APP_DISCONNECTED: _
+    RPC_APP_DISCONNECTED: _,
 });

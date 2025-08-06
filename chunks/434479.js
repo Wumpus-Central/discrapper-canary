@@ -13,24 +13,24 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -54,7 +54,18 @@ function p(e, t) {
 }
 function f(e) {
     var t,
-        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: O, background: _, showUnread: y = !1, ref: C } = e,
+        {
+            id: n,
+            className: i,
+            innerClassName: f,
+            renderIcon: g,
+            text: m,
+            selected: b,
+            trailing: O,
+            background: _,
+            showUnread: y = !1,
+            ref: C,
+        } = e,
         v = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -65,34 +76,47 @@ function f(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['id', 'className', 'innerClassName', 'renderIcon', 'text', 'selected', 'trailing', 'background', 'showUnread', 'ref']);
+        })(e, [
+            "id",
+            "className",
+            "innerClassName",
+            "renderIcon",
+            "text",
+            "selected",
+            "trailing",
+            "background",
+            "showUnread",
+            "ref",
+        ]);
     let j = (0, o.JA)(n),
-        E = null != (t = (0, s.qg)(m)) ? t : '';
-    return (0, r.jsx)('li', {
+        E = null != (t = (0, s.qg)(m)) ? t : "";
+    return (0, r.jsx)("li", {
         ref: C,
         children: (0, r.jsxs)(
             a.kL8,
             p(h({}, v), {
                 buttonProps: p(h({}, j), {
                     id: n,
-                    role: 'button'
+                    role: "button",
                 }),
-                tag: 'div',
-                'aria-label': E,
+                tag: "div",
+                "aria-label": E,
                 focusProps: {
                     offset: {
                         top: 1,
                         bottom: 1,
-                        right: 4
-                    }
+                        right: 4,
+                    },
                 },
                 onContextMenu:
                     null != v.onContextMenu
@@ -103,27 +127,27 @@ function f(e) {
                 className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
                     _,
-                    y ? (0, r.jsx)('div', { className: l()(d.unread, d.unreadImportant) }) : null,
-                    (0, r.jsx)('div', {
+                    y ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
+                    (0, r.jsx)("div", {
                         className: l()([d.link, d.basicChannelRowLink, f]),
-                        children: (0, r.jsxs)('div', {
+                        children: (0, r.jsxs)("div", {
                             className: c.content,
                             children: [
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: d.iconContainer,
-                                    children: g(d.icon)
+                                    children: g(d.icon),
                                 }),
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: d.name,
-                                    'aria-hidden': !0,
-                                    children: m
+                                    "aria-hidden": !0,
+                                    children: m,
                                 }),
-                                O
-                            ]
-                        })
-                    })
-                ]
-            })
-        )
+                                O,
+                            ],
+                        }),
+                    }),
+                ],
+            }),
+        ),
     });
 }

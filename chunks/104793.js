@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Ft: () => g,
     ML: () => O,
     ZJ: () => y,
-    mF: () => m
+    mF: () => m,
 }),
-    n(388685));
+    n(388685);
 var r = n(512722),
     i = n.n(r),
     o = n(373793),
@@ -19,41 +19,76 @@ var r = n(512722),
     p = n(689079),
     h = n(981631),
     m = (function (e) {
-        return ((e[(e.ALLOWED = 0)] = 'ALLOWED'), (e[(e.NSFW_NOT_ALLOWED = 1)] = 'NSFW_NOT_ALLOWED'), (e[(e.WRONG_COMMAND_TYPE = 2)] = 'WRONG_COMMAND_TYPE'), (e[(e.PREDICATE_FAILED = 3)] = 'PREDICATE_FAILED'), (e[(e.CONTEXT_NOT_ALLOWED = 4)] = 'CONTEXT_NOT_ALLOWED'), (e[(e.MISSING_BASE_PERMISSIONS = 5)] = 'MISSING_BASE_PERMISSIONS'), (e[(e.CHANNEL_DENIED = 6)] = 'CHANNEL_DENIED'), (e[(e.USER_DENIED = 7)] = 'USER_DENIED'), e);
+        return (
+            (e[(e.ALLOWED = 0)] = "ALLOWED"),
+            (e[(e.NSFW_NOT_ALLOWED = 1)] = "NSFW_NOT_ALLOWED"),
+            (e[(e.WRONG_COMMAND_TYPE = 2)] = "WRONG_COMMAND_TYPE"),
+            (e[(e.PREDICATE_FAILED = 3)] = "PREDICATE_FAILED"),
+            (e[(e.CONTEXT_NOT_ALLOWED = 4)] = "CONTEXT_NOT_ALLOWED"),
+            (e[(e.MISSING_BASE_PERMISSIONS = 5)] = "MISSING_BASE_PERMISSIONS"),
+            (e[(e.CHANNEL_DENIED = 6)] = "CHANNEL_DENIED"),
+            (e[(e.USER_DENIED = 7)] = "USER_DENIED"),
+            e
+        );
     })({});
 function g(e, t, n) {
     var r;
-    let { context: l, commandTypes: m, allowNsfw: g, computedPermissions: v, userId: I, roleIds: T, isImpersonating: S, hasBaseAccessPermissions: A } = t,
-        { applicationAllowedForUser: N, applicationAllowedForChannel: C, isGuildInstalled: R, isUserInstalled: P, commandBotId: w } = n;
+    let {
+            context: l,
+            commandTypes: m,
+            allowNsfw: g,
+            computedPermissions: v,
+            userId: I,
+            roleIds: T,
+            isImpersonating: S,
+            hasBaseAccessPermissions: A,
+        } = t,
+        {
+            applicationAllowedForUser: N,
+            applicationAllowedForChannel: C,
+            isGuildInstalled: R,
+            isUserInstalled: P,
+            commandBotId: w,
+        } = n;
     if (!m.includes(e.type)) return 2;
     if (e.nsfw && !g) return 1;
     let D = null != l ? (0, _.Vh)(l, w) : void 0;
     if (null != e.contexts) {
         if (null != D && !e.contexts.includes(D)) return 4;
-    } else if (e.inputType === d.iw.BOT && ((!1 === e.dmPermission && D === s.D.BOT_DM) || D === s.D.PRIVATE_CHANNEL)) return 4;
+    } else if (e.inputType === d.iw.BOT && ((!1 === e.dmPermission && D === s.D.BOT_DM) || D === s.D.PRIVATE_CHANNEL))
+        return 4;
     if (null != e.predicate && l instanceof c.Sf) {
         let t = u.Z.getGuild(l.guild_id);
         if (
             !e.predicate({
                 channel: l,
-                guild: t
+                guild: t,
             })
         )
             return 3;
     }
     if (e.applicationId === p.bi.BUILT_IN) return 0;
     let L = null != l ? (0, _.ny)(l) : void 0;
-    if (null == L || a.e$(v, h.Plq.ADMINISTRATOR) || (P && (null == (r = e.integration_types) ? void 0 : r.includes(o.Y.USER_INSTALL)))) return 0;
+    if (
+        null == L ||
+        a.e$(v, h.Plq.ADMINISTRATOR) ||
+        (P && (null == (r = e.integration_types) ? void 0 : r.includes(o.Y.USER_INSTALL)))
+    )
+        return 0;
     if (!A && R && (null == e.integration_types || e.integration_types.includes(o.Y.GUILD_INSTALL))) return 5;
     if (l instanceof c.Sf) {
-        i()(void 0 !== C, 'missing applicationAllowedForChannel');
+        i()(void 0 !== C, "missing applicationAllowedForChannel");
         let t = y(e.permissions, l, L);
         if (b(t) || (!E(t) && b(C))) return 6;
     }
     let x = O(e.permissions, L, I, T, S);
     if (E(x)) return 0;
     if (b(x) || b(N)) return 7;
-    if (null != e.defaultMemberPermissions && !(!a.fS(e.defaultMemberPermissions, f.BO) && a.e$(v, e.defaultMemberPermissions))) return 7;
+    if (
+        null != e.defaultMemberPermissions &&
+        !(!a.fS(e.defaultMemberPermissions, f.BO) && a.e$(v, e.defaultMemberPermissions))
+    )
+        return 7;
     return 0;
 }
 function E(e) {

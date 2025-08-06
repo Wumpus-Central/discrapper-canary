@@ -9,7 +9,16 @@ var i = n(255367),
 function d(e) {
     var t,
         n,
-        { children: s, onClick: d, className: u, tag: m, target: p, isGrass: g = !1, muted: h = !1, disabled: f = !1 } = e,
+        {
+            children: s,
+            onClick: d,
+            className: u,
+            tag: m,
+            target: p,
+            isGrass: g = !1,
+            muted: h = !1,
+            disabled: f = !1,
+        } = e,
         b = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -20,22 +29,24 @@ function d(e) {
                         i,
                         r = {},
                         s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (i = 0; i < s.length; i++)
+                    (n = s[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(e, ['children', 'onClick', 'className', 'tag', 'target', 'isGrass', 'muted', 'disabled']);
+        })(e, ["children", "onClick", "className", "tag", "target", "isGrass", "muted", "disabled"]);
     let x = (0, c.Z)(),
         _ = (0, o.hW)(g),
         j = (0, r.useCallback)(
             (e) => {
-                (h || _(), null == d || d(e));
+                h || _(), null == d || d(e);
             },
-            [_, d, h]
+            [_, d, h],
         );
     return (0, i.jsx)(
         l.P3F,
@@ -43,24 +54,24 @@ function d(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     i = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     i.forEach(function (t) {
                         var i;
-                        ((i = n[t]),
+                        (i = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: i,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = i));
-                    }));
+                                : (e[t] = i);
+                    });
             }
             return e;
         })({}, b)),
@@ -70,7 +81,7 @@ function d(e) {
                 className: a()(x, u),
                 tag: m,
                 target: p,
-                children: s
+                children: s,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -84,6 +95,6 @@ function d(e) {
               })(Object(n)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
-        t)
+        t),
     );
 }

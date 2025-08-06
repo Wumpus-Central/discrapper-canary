@@ -7,5 +7,5 @@ let a = {
         i.Z.whenInitialized(() => {
             null != l.Z.testModeApplicationId && (0, r.Wt)(l.Z.testModeApplicationId, l.Z.testModeOriginURL);
         });
-    }
+    },
 };

@@ -1,4 +1,4 @@
-(n.d(t, { j: () => C }), n(388685));
+n.d(t, { j: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -22,7 +22,7 @@ let C = (e) => {
         [v, j] = (0, i.useState)(!1),
         E = (function (e) {
             let { isForceShowSharingPopout: t } = e,
-                { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, m.D)('SharingPrivacyPopout'),
+                { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, m.D)("SharingPrivacyPopout"),
                 i = (0, d.Ws)({ location: y.dr.CONFLICT_CHECKS }),
                 o = h.G6.useSetting(),
                 s = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(O.S9g.USER_SETTINGS)),
@@ -38,7 +38,7 @@ let C = (e) => {
         })({ isForceShowSharingPopout: n }),
         S = (0, i.useRef)(null);
     return ((0, i.useEffect)(() => {
-        n && g.default.track(O.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
+        n && g.default.track(O.rMx.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
     }, [n]),
     null != E || v)
         ? (0, r.jsx)(c.ZP, {
@@ -47,33 +47,33 @@ let C = (e) => {
                   let { visibleContent: i } = e;
                   if (i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n) {
                       let e = () => {
-                          ((0, a.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: _.L.USER_DISMISS }), C(!1), j(!1));
+                          (0, a.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: _.L.USER_DISMISS }), C(!1), j(!1);
                       };
                       return (0, r.jsx)(s.yRy, {
                           targetElementRef: S,
                           shouldShow: !0,
                           spacing: 10,
-                          position: 'top',
-                          align: 'left',
+                          position: "top",
+                          align: "left",
                           onRequestClose: e,
                           renderPopout: (e) => {
                               let { closePopout: t } = e;
                               return (0, r.jsx)(b.I, {
                                   closePopout: t,
                                   onOpen: () => j(!0),
-                                  popoutState: E
+                                  popoutState: E,
                               });
                           },
                           children: () =>
                               (0, r.jsx)(s.P3F, {
                                   innerRef: S,
                                   onClick: e,
-                                  children: t
-                              })
+                                  children: t,
+                              }),
                       });
                   }
                   return t;
-              }
+              },
           })
         : t;
 };

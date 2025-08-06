@@ -1,4 +1,4 @@
-(r.d(t, { Db: () => s }), r(35282), r(65234), r(111804), r(490233), r(97749), r(388685));
+r.d(t, { Db: () => s }), r(35282), r(65234), r(111804), r(490233), r(97749), r(388685);
 var n = r(73800),
     l = r(114858),
     a = r(37234),
@@ -7,44 +7,44 @@ var n = r(73800),
 function s() {
     let { search: e } = (0, l.TH)(),
         t = (0, l.UO)(),
-        r = n.useMemo(() => new URLSearchParams(e), [e]).get('source'),
+        r = n.useMemo(() => new URLSearchParams(e), [e]).get("source"),
         s = null != r ? parseInt(r, 10) : null;
     return (function (e) {
         for (var t = 1; t < arguments.length; t++) {
             var r = null != arguments[t] ? arguments[t] : {},
                 n = Object.keys(r);
-            ('function' == typeof Object.getOwnPropertySymbols &&
+            "function" == typeof Object.getOwnPropertySymbols &&
                 (n = n.concat(
                     Object.getOwnPropertySymbols(r).filter(function (e) {
                         return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                    })
+                    }),
                 )),
                 n.forEach(function (t) {
                     var n;
-                    ((n = r[t]),
+                    (n = r[t]),
                         t in e
                             ? Object.defineProperty(e, t, {
                                   value: n,
                                   enumerable: !0,
                                   configurable: !0,
-                                  writable: !0
+                                  writable: !0,
                               })
-                            : (e[t] = n));
-                }));
+                            : (e[t] = n);
+                });
         }
         return e;
     })(
         {
             onClose: n.useCallback(() => {
                 if (0 === s) {
-                    ((0, i.op)(), (0, a.jN)(o.S9g.USER_SETTINGS));
+                    (0, i.op)(), (0, a.jN)(o.S9g.USER_SETTINGS);
                     return;
                 }
                 if ((0, i.uv)()) return void (0, i.op)();
                 (0, i.uL)(o.Z5c.APP);
             }, [s]),
-            source: s
+            source: s,
         },
-        t
+        t,
     );
 }

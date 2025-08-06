@@ -1,5 +1,5 @@
 let r, i, o;
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var a,
     s = n(392711),
     l = n.n(s),
@@ -13,7 +13,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,7 +41,7 @@ let p = 7,
 function g() {
     return {
         recentCustomStatuses: [],
-        currentDefaultStatus: null
+        currentDefaultStatus: null,
     };
 }
 function E() {
@@ -49,66 +49,69 @@ function E() {
 }
 function b(e) {
     let { status: t, saveAsDefault: n } = e;
-    ((r = t),
+    (r = t),
         (i = null),
         n &&
             (m.currentDefaultStatus = {
                 status: t,
                 customHangStatus: i,
-                expiresAt: Date.now() + h
+                expiresAt: Date.now() + h,
             }),
         (o = {
             type: d.IIU.HANG_STATUS,
-            name: 'Hang Status',
-            state: r
-        }));
+            name: "Hang Status",
+            state: r,
+        });
 }
 function y(e) {
     let { status: t, emoji: n, saveAsDefault: a } = e;
-    ((r = d.tNA.CUSTOM),
+    (r = d.tNA.CUSTOM),
         (i = {
             status: t,
-            emoji: n
-        }));
+            emoji: n,
+        });
     let s = [...m.recentCustomStatuses],
         c = s.findIndex((e) => e.status === t && l().isEqual(e.emoji, n));
-    (-1 !== c ? s.splice(c, 1) : s.length === p && s.splice(p - 1, 1),
+    -1 !== c ? s.splice(c, 1) : s.length === p && s.splice(p - 1, 1),
         (m.recentCustomStatuses = [i, ...s]),
         a &&
             (m.currentDefaultStatus = {
                 status: r,
                 customHangStatus: i,
-                expiresAt: Date.now() + h
+                expiresAt: Date.now() + h,
             }),
         (o = {
             type: d.IIU.HANG_STATUS,
-            name: 'Hang Status',
+            name: "Hang Status",
             state: r,
             details: t,
-            emoji: n
-        }));
+            emoji: n,
+        });
 }
 function O(e) {
     let { saveAsDefault: t } = e;
-    ((r = null),
+    (r = null),
         (i = null),
         t &&
             (m.currentDefaultStatus = {
                 status: null,
                 customHangStatus: null,
-                expiresAt: Date.now() + h
+                expiresAt: Date.now() + h,
             }),
-        (o = null));
+        (o = null);
 }
 function v(e) {
     let { statuses: t } = e,
         n = [...m.recentCustomStatuses];
-    (t.forEach((e) => {
+    t.forEach((e) => {
         let { status: t, emoji: a } = e,
             s = n.findIndex((e) => e.status === t && l().isEqual(e.emoji, a));
-        (-1 !== s && n.splice(s, 1), t === (null == i ? void 0 : i.status) && l().isEqual(a, null == i ? void 0 : i.emoji) && ((r = null), (i = null), (m.currentDefaultStatus = null), (o = null)));
+        -1 !== s && n.splice(s, 1),
+            t === (null == i ? void 0 : i.status) &&
+                l().isEqual(a, null == i ? void 0 : i.emoji) &&
+                ((r = null), (i = null), (m.currentDefaultStatus = null), (o = null));
     }),
-        (m.recentCustomStatuses = n));
+        (m.recentCustomStatuses = n);
 }
 class I extends (a = c.ZP.PersistedStore) {
     initialize(e) {
@@ -133,11 +136,11 @@ class I extends (a = c.ZP.PersistedStore) {
         return null == r ? null : o;
     }
 }
-(f(I, 'displayName', 'HangStatusStore'), f(I, 'persistKey', 'HangStatusStore'));
+f(I, "displayName", "HangStatusStore"), f(I, "persistKey", "HangStatusStore");
 let T = new I(u.Z, {
     LOGOUT: E,
     UPDATE_HANG_STATUS: b,
     UPDATE_HANG_STATUS_CUSTOM: y,
     DELETE_INVALID_HANG_STATUSES: v,
-    CLEAR_HANG_STATUS: O
+    CLEAR_HANG_STATUS: O,
 });

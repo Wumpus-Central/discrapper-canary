@@ -23,55 +23,55 @@ let E = function (e) {
         E = (0, a.e7)([h.Z], () => h.Z.getGuild(n), [n]),
         C = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
         { fractionalState: O } = (0, c.Z)(),
-        v = (0, p.y)('guild_boosting_setting_guild_info_card', C, O),
+        v = (0, p.y)("guild_boosting_setting_guild_info_card", C, O),
         S = (0, g.Z)(null == E ? void 0 : E.id).total;
     return null == E
-        ? (0, i.jsx)('div', {
+        ? (0, i.jsx)("div", {
               className: s()(t, j.guildContainer),
-              children: (0, i.jsx)('div', {
+              children: (0, i.jsx)("div", {
                   className: j.guildInfoContainer,
                   children: (0, i.jsx)(o.Text, {
-                      variant: 'text-lg/bold',
-                      children: _.intl.string(_.t['6Kwwur'])
-                  })
-              })
+                      variant: "text-lg/bold",
+                      children: _.intl.string(_.t["6Kwwur"]),
+                  }),
+              }),
           })
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               className: s()(t, j.guildContainer),
               children: [
                   (0, i.jsx)(d.Z, {
                       className: j.__invalid_guildIcon,
                       guild: E,
-                      size: d.Z.Sizes.LARGER
+                      size: d.Z.Sizes.LARGER,
                   }),
-                  (0, i.jsxs)('div', {
+                  (0, i.jsxs)("div", {
                       className: j.guildInfoContainer,
                       children: [
                           (0, i.jsx)(o.Text, {
-                              variant: 'text-lg/bold',
-                              children: E.name
+                              variant: "text-lg/bold",
+                              children: E.name,
                           }),
-                          (0, i.jsxs)('div', {
+                          (0, i.jsxs)("div", {
                               className: j.guildBoostStatsContainer,
                               children: [
                                   (0, i.jsx)(o.$Eu, {
                                       color: o.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                                      className: j.guildBoostBadge
+                                      className: j.guildBoostBadge,
                                   }),
                                   (0, i.jsx)(o.Text, {
-                                      variant: 'text-sm/bold',
-                                      color: 'text-muted',
-                                      children: _.intl.format(_.t['pob/cH'], { subscriptions: S })
+                                      variant: "text-sm/bold",
+                                      color: "text-muted",
+                                      children: _.intl.format(_.t["pob/cH"], { subscriptions: S }),
                                   }),
-                                  (0, i.jsx)('div', { className: j.separator }),
+                                  (0, i.jsx)("div", { className: j.separator }),
                                   (0, i.jsx)(o.Text, {
-                                      variant: 'text-sm/bold',
-                                      color: 'text-muted',
-                                      children: (0, b.nW)(E.premiumTier, { useLevels: !1 })
-                                  })
-                              ]
-                          })
-                      ]
+                                      variant: "text-sm/bold",
+                                      color: "text-muted",
+                                      children: (0, b.nW)(E.premiumTier, { useLevels: !1 }),
+                                  }),
+                              ],
+                          }),
+                      ],
                   }),
                   r
                       ? (0, i.jsx)(m.Z, {
@@ -80,25 +80,25 @@ let E = function (e) {
                                 page: x.ZY5.GUILD_BOOSTING_USER_SETTINGS,
                                 section: x.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
                                 object: x.qAy.BUTTON_CTA,
-                                objectType: x.Qqv.BUY
+                                objectType: x.Qqv.BUY,
                             },
                             pauseAnimation: !0,
                             size: l.zx.Sizes.MEDIUM,
                             color: l.zx.Colors.PRIMARY,
                             buttonText: _.intl.string(_.t.aBHecH),
-                            disabled: v
+                            disabled: v,
                         })
                       : (0, i.jsx)(o.zxk, {
-                            variant: 'secondary',
+                            variant: "secondary",
                             text: _.intl.string(_.t.KLOhbG),
                             onClick: () => {
                                 (0, u.f)({
                                     guildId: E.id,
-                                    location: { section: x.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA }
+                                    location: { section: x.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA },
                                 });
                             },
-                            disabled: v
-                        })
-              ]
+                            disabled: v,
+                        }),
+              ],
           });
 };

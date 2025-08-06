@@ -1,4 +1,4 @@
-(n.d(t, { t: () => w }), n(388685), n(314940));
+n.d(t, { t: () => w }), n(388685), n(314940);
 var r = n(255367),
     i = n(73800),
     l = n(278074),
@@ -34,20 +34,20 @@ function w(e) {
         Z = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         D = null != R && (0, b.eM)(R, Z),
         { loading: A } = (0, c.H)(t),
-        [k, L] = i.useState(n ? 'manage_listings' : 'payment');
+        [k, L] = i.useState(n ? "manage_listings" : "payment");
     (0, m.P)(R);
     let M = i.useCallback(() => {
         if (null == R) return;
         let e = j.Z.getEveryoneRole(R);
         p.Z.close();
         let t = { [e.id]: e };
-        ((0, h.iD)(R.id, {
+        (0, h.iD)(R.id, {
             type: f.z.SERVER_SHOP,
             roles: t,
-            initialTab: 'guild_products',
-            returnToSection: E.pNK.GUILD_PRODUCTS
+            initialTab: "guild_products",
+            returnToSection: E.pNK.GUILD_PRODUCTS,
         }),
-            (0, x.uL)(E.Z5c.CHANNEL(R.id, S.oC.GUILD_SHOP)));
+            (0, x.uL)(E.Z5c.CHANNEL(R.id, S.oC.GUILD_SHOP));
     }, [R]);
     if (!w || A) return (0, r.jsx)(o.$jN, {});
     if (null == R) return null;
@@ -55,67 +55,67 @@ function w(e) {
             children: [
                 (0, r.jsx)(o.vwX, {
                     tag: o.RB0.H1,
-                    children: T.intl.string(T.t.X6h2g4)
+                    children: T.intl.string(T.t.X6h2g4),
                 }),
                 (0, r.jsx)(o.R94, {
                     type: o.R94.Types.DESCRIPTION,
                     children: T.intl.format(T.t.xiYuDg, {
                         monetizationPolicyLink: O.Z.getArticleURL(E.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: O.Z.getCreatorSupportArticleURL(E.BhN.SERVER_PRODUCTS)
-                    })
-                })
-            ]
+                        serverProductsSupportLink: O.Z.getCreatorSupportArticleURL(E.BhN.SERVER_PRODUCTS),
+                    }),
+                }),
+            ],
         }),
         U = (0, r.jsxs)(o.njP, {
-            type: 'top',
-            look: 'brand',
+            type: "top",
+            look: "brand",
             className: P.tabBar,
-            'aria-label': T.intl.string(T.t.X6h2g4),
+            "aria-label": T.intl.string(T.t.X6h2g4),
             selectedItem: k,
             onItemSelect: L,
             children: [
                 (0, r.jsx)(u.Z, {
-                    id: 'basic_info',
+                    id: "basic_info",
                     disabledTooltip: T.intl.string(T.t.NVDuUV),
                     disabled: !n,
-                    children: T.intl.string(T.t.w27QAQ)
+                    children: T.intl.string(T.t.w27QAQ),
                 }),
                 (0, r.jsx)(u.Z, {
-                    id: 'manage_listings',
+                    id: "manage_listings",
                     disabledTooltip: T.intl.string(T.t.NVDuUV),
                     disabled: !n,
-                    children: T.intl.string(T.t.wlZ1mp)
+                    children: T.intl.string(T.t.wlZ1mp),
                 }),
                 D
                     ? (0, r.jsx)(o.njP.Item, {
-                          id: 'payment',
+                          id: "payment",
                           className: P.tabBarItem,
-                          children: T.intl.string(T.t.YBrFe3)
+                          children: T.intl.string(T.t.YBrFe3),
                       })
                     : null,
                 n
-                    ? (0, r.jsx)('div', {
+                    ? (0, r.jsx)("div", {
                           className: P.previewButton,
                           children: (0, r.jsx)(s.zx, {
                               onClick: M,
                               color: s.zx.Colors.PRIMARY,
                               size: s.zx.Sizes.SMALL,
                               look: s.zx.Looks.OUTLINED,
-                              children: T.intl.string(T.t.vM81yc)
-                          })
+                              children: T.intl.string(T.t.vM81yc),
+                          }),
                       })
-                    : null
-            ]
+                    : null,
+            ],
         }),
         B = (0, l.EQ)(k)
-            .with('basic_info', () => (0, r.jsx)(C.Z, { guildId: t }))
-            .with('manage_listings', () => (0, r.jsx)(N.Z, { guildId: t }))
-            .with('payment', () => (0, r.jsx)(I.Z, { guildId: t }))
+            .with("basic_info", () => (0, r.jsx)(C.Z, { guildId: t }))
+            .with("manage_listings", () => (0, r.jsx)(N.Z, { guildId: t }))
+            .with("payment", () => (0, r.jsx)(I.Z, { guildId: t }))
             .exhaustive(),
         F = w
             ? (0, r.jsx)(o.njP.Panel, {
                   id: k,
-                  children: B
+                  children: B,
               })
             : (0, r.jsx)(o.$jN, {});
     return (0, r.jsxs)(d.AL, {
@@ -123,11 +123,11 @@ function w(e) {
         children: [
             G,
             (0, r.jsx)(g.Z, { guild: R }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: P.tabBarContainer,
-                children: U
+                children: U,
             }),
-            F
-        ]
+            F,
+        ],
     });
 }

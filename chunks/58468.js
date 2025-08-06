@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => f }), t(388685));
+t.d(n, { Z: () => f }), t(388685);
 var l,
     i = t(442837),
     r = t(570140),
@@ -11,7 +11,7 @@ function s(e, n, t) {
                   value: t,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[n] = t),
         e
@@ -26,7 +26,7 @@ function c() {
 }
 class g extends (l = i.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(u.Z), (d = null != e ? e : o));
+        this.waitFor(u.Z), (d = null != e ? e : o);
     }
     getState() {
         return d;
@@ -38,28 +38,28 @@ class g extends (l = i.ZP.PersistedStore) {
         return d[e] || !1;
     }
 }
-(s(g, 'displayName', 'CollapsedVoiceChannelStore'), s(g, 'persistKey', 'collapsedChannels'));
+s(g, "displayName", "CollapsedVoiceChannelStore"), s(g, "persistKey", "collapsedChannels");
 let f = new g(r.Z, {
     CONNECTION_OPEN: c,
     OVERLAY_INITIALIZE: c,
     CHANNEL_COLLAPSE: function (e) {
         let { channelId: n } = e;
-        (d[n] ? delete d[n] : (d[n] = !0),
+        d[n] ? delete d[n] : (d[n] = !0),
             (d = (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},
                         l = Object.keys(t);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (l = l.concat(
                             Object.getOwnPropertySymbols(t).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                            })
+                            }),
                         )),
                         l.forEach(function (n) {
                             s(e, n, t[n]);
-                        }));
+                        });
                 }
                 return e;
-            })({}, d)));
-    }
+            })({}, d));
+    },
 });

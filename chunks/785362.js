@@ -7,17 +7,17 @@ var r = n(220159),
     l = i.set;
 r(
     {
-        target: 'Map',
+        target: "Map",
         proto: !0,
         real: !0,
-        forced: !0
+        forced: !0,
     },
     {
         getOrInsertComputed: function (e, t) {
             if ((a(this), o(t), c(this, e))) return s(this, e);
             0 === e && 1 / e == -1 / 0 && (e = 0);
             var n = t(e);
-            return (l(this, e, n), n);
-        }
-    }
+            return l(this, e, n), n;
+        },
+    },
 );

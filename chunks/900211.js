@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(347469),
@@ -17,10 +17,10 @@ function s(e) {
         resizableDomNodeRef: t,
         onElementResize: n,
         onElementResizeEnd: s,
-        orientation: o.y.VERTICAL_BOTTOM
+        orientation: o.y.VERTICAL_BOTTOM,
     });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         onMouseDown: f,
-        className: a.resizeHandle
+        className: a.resizeHandle,
     });
 }

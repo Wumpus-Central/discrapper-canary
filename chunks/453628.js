@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => f,
-    y: () => p
+    y: () => p,
 });
 var i,
     r = n(255367);
@@ -14,24 +14,24 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -53,14 +53,14 @@ function u(e, t) {
         e
     );
 }
-var p = (((i = {}).DENY = 'DENY'), (i.PASSTHROUGH = 'PASSTHROUGH'), (i.ALLOW = 'ALLOW'), i);
+var p = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
 let m = Object.keys(p);
 function b(e) {
-    let { value: t = 'PASSTHROUGH', onChange: n, labelledBy: i, disabled: l = !1 } = e,
+    let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: l = !1 } = e,
         s = (0, a.arW)({
-            orientation: 'horizontal',
+            orientation: "horizontal",
             isDisabled: l,
-            labelledBy: i
+            labelledBy: i,
         }),
         { ref: p } = s,
         b = (function (e, t) {
@@ -73,24 +73,26 @@ function b(e) {
                         i,
                         r = {},
                         l = Object.keys(e);
-                    for (i = 0; i < l.length; i++) ((n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < l.length; i++) ((n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(s, ['ref']);
+        })(s, ["ref"]);
     return (0, r.jsx)(
-        'div',
+        "div",
         u(
             d(
                 {
                     className: o()(c.group, { [c.disabled]: l }),
-                    ref: p
+                    ref: p,
                 },
-                b
+                b,
             ),
             {
                 children: m.map((e) =>
@@ -101,13 +103,13 @@ function b(e) {
                             isSelected: t === e,
                             onSelect: (e) => {
                                 t === e || l || n(e);
-                            }
+                            },
                         },
-                        e
-                    )
-                )
-            }
-        )
+                        e,
+                    ),
+                ),
+            },
+        ),
     );
 }
 function g(e) {
@@ -116,18 +118,18 @@ function g(e) {
         i,
         { type: l, onSelect: p, isSelected: m } = e;
     switch (l) {
-        case 'DENY':
-            ((i = s.intl.string(s.t['6639Oz'])), (t = a.Dio), (n = c.deny));
+        case "DENY":
+            (i = s.intl.string(s.t["6639Oz"])), (t = a.Dio), (n = c.deny);
             break;
-        case 'ALLOW':
-            ((i = s.intl.string(s.t.RzDfSk)), (t = a.dz2), (n = c.allow));
+        case "ALLOW":
+            (i = s.intl.string(s.t.RzDfSk)), (t = a.dz2), (n = c.allow);
             break;
         default:
-            ((i = s.intl.string(s.t.ujC3ZW)), (t = a.XZC), (n = c.passthrough));
+            (i = s.intl.string(s.t.ujC3ZW)), (t = a.XZC), (n = c.passthrough);
     }
     let b = (0, a.xUy)({
         isSelected: m,
-        label: i
+        label: i,
     });
     return (0, r.jsx)(
         a.P3F,
@@ -135,17 +137,17 @@ function g(e) {
             d(
                 {
                     className: o()(c.item, n, { [c.selected]: m }),
-                    onClick: () => p(l)
+                    onClick: () => p(l),
                 },
-                b
+                b,
             ),
             {
                 children: (0, r.jsx)(t, {
-                    color: 'currentColor',
-                    size: 'xs'
-                })
-            }
-        )
+                    color: "currentColor",
+                    size: "xs",
+                }),
+            },
+        ),
     );
 }
 b.Types = p;

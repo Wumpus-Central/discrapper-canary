@@ -9,7 +9,7 @@ var n = r(255367),
 function s(t) {
     let { widget: e, onSelect: r, onClose: s } = t,
         p = (0, c.Z)(e),
-        f = (0, l.Z)(e.id, 'boolean' == typeof e.meta.horizontal && e.meta.horizontal),
+        f = (0, l.Z)(e.id, "boolean" == typeof e.meta.horizontal && e.meta.horizontal),
         b = o.useRef(s);
     return (
         o.useEffect(() => {
@@ -17,11 +17,11 @@ function s(t) {
         }),
         o.useEffect(() => () => b.current(), []),
         (0, n.jsxs)(i.v2r, {
-            navId: 'overlay-go-live-widget-context-menu',
+            navId: "overlay-go-live-widget-context-menu",
             onClose: a.Zy,
-            'aria-label': u.intl.string(u.t.tPfVWl),
+            "aria-label": u.intl.string(u.t.tPfVWl),
             onSelect: r,
-            children: [f, p]
+            children: [f, p],
         })
     );
 }

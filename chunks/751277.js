@@ -14,7 +14,9 @@ var i = n(114858),
 function f(e) {
     var t;
     let { isOnHubVerificationRoute: n } = e,
-        f = (0, i.LX)(null != (t = window.location.pathname) ? t : '', { path: h.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(s.Hw.guildId(), ':inviteCode') }),
+        f = (0, i.LX)(null != (t = window.location.pathname) ? t : "", {
+            path: h.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(s.Hw.guildId(), ":inviteCode"),
+        }),
         g = (0, l.e7)([a.Z], () => {
             if (null == f) return null;
             let { inviteCode: e } = f.params;
@@ -25,12 +27,12 @@ function f(e) {
         ? null != m && null != g
             ? (0, r.jsx)(u.Z, {
                   guild: m,
-                  invite: g
+                  invite: g,
               })
             : (0, r.jsx)(d.Z, {
                   tooltip: p.intl.string(p.t.rn9HIS),
-                  id: 'guild-hub-button',
-                  icon: o.aVH
+                  id: "guild-hub-button",
+                  icon: o.aVH,
               })
         : null;
 }

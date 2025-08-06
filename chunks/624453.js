@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     M: () => E,
-    Z: () => D
+    Z: () => D,
 }),
     n(388685),
-    n(290780));
+    n(290780);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -25,14 +25,20 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 var E = (function (e) {
-    return ((e.LOADING = 'LOADING'), (e.LOADED_HAS_MORE = 'LOADED_HAS_MORE'), (e.LOADED_FINISHED = 'LOADING_FINISHED'), (e.FAILED = 'FAILED'), e);
+    return (
+        (e.LOADING = "LOADING"),
+        (e.LOADED_HAS_MORE = "LOADED_HAS_MORE"),
+        (e.LOADED_FINISHED = "LOADING_FINISHED"),
+        (e.FAILED = "FAILED"),
+        e
+    );
 })({});
 let b = {};
 function y() {
@@ -42,15 +48,15 @@ function O(e) {
     var t, n;
     let { channelId: r, reset: i } = e;
     if (!i && null != b[r]) {
-        b[r].state = 'LOADING';
+        b[r].state = "LOADING";
         return;
     }
     let o = null != (n = null == (t = d.Z.getChannel(r)) ? void 0 : t.getGuildId()) ? n : void 0;
     b[r] = {
         id: r,
         items: [],
-        state: 'LOADING',
-        guildId: o
+        state: "LOADING",
+        guildId: o,
     };
 }
 function v(e) {
@@ -61,16 +67,16 @@ function v(e) {
         let { pinned_at: t, message: n } = e;
         return {
             pinnedAt: new Date(Date.parse(t)),
-            message: (0, c.e5)(n)
+            message: (0, c.e5)(n),
         };
     });
-    ((i.items = [...i.items, ...o]), (i.state = r ? 'LOADED_HAS_MORE' : 'LOADING_FINISHED'));
+    (i.items = [...i.items, ...o]), (i.state = r ? "LOADED_HAS_MORE" : "LOADING_FINISHED");
 }
 function I(e) {
     let { channelId: t } = e,
         n = b[t];
     if (null == n) return !1;
-    n.state = 'FAILED';
+    n.state = "FAILED";
 }
 function T(e) {
     let { channel: t } = e;
@@ -80,7 +86,7 @@ function S(e) {
     let { guild: t } = e;
     b = o()(b)
         .filter((e) => e.guildId !== t.id)
-        .keyBy('id')
+        .keyBy("id")
         .value();
 }
 function A(e) {
@@ -95,7 +101,7 @@ function A(e) {
             }).length
     )
         return !1;
-    ((r.items = r.items.slice()), (b[n] = r));
+    (r.items = r.items.slice()), (b[n] = r);
 }
 function N(e) {
     let { ids: t, channelId: n } = e,
@@ -122,11 +128,11 @@ function C(e) {
             l = (0, c.wi)(s, e.message);
         if (l !== s) {
             let e = r.items.slice();
-            ((e[i] = {
+            (e[i] = {
                 pinnedAt: a,
-                message: l
+                message: l,
             }),
-                (b[n].items = e));
+                (b[n].items = e);
         }
         return;
     }
@@ -139,7 +145,7 @@ function C(e) {
         -1 === n
             ? r.items.unshift({
                   message: (0, c.e5)(e.message),
-                  pinnedAt: new Date()
+                  pinnedAt: new Date(),
               })
             : (r.items[n].message = (0, c.wi)(r.items[n].message, e.message));
         return;
@@ -149,15 +155,15 @@ function C(e) {
         return n.id === t;
     });
     if (-1 === i) return !1;
-    ((r.items = r.items.slice()), r.items.splice(i, 1));
+    (r.items = r.items.slice()), r.items.splice(i, 1);
 }
 function R() {
     o().forEach(b, (e) => {
-        (e.items.forEach((e) => {
+        e.items.forEach((e) => {
             let { message: t } = e;
-            (t.set('blocked', h.Z.isBlockedForMessage(t)), t.set('ignored', h.Z.isIgnoredForMessage(t)));
+            t.set("blocked", h.Z.isBlockedForMessage(t)), t.set("ignored", h.Z.isIgnoredForMessage(t));
         }),
-            (e.items = e.items.slice()));
+            (e.items = e.items.slice());
     });
 }
 function P(e) {
@@ -169,7 +175,7 @@ function P(e) {
         return n.id === t;
     });
     if (-1 === i) return !1;
-    ((r.items = r.items.slice()), (r.items[i].message = (0, l.Cm)(r.items[i].message)));
+    (r.items = r.items.slice()), (r.items[i].message = (0, l.Cm)(r.items[i].message));
 }
 class w extends (r = a.ZP.Store) {
     initialize() {
@@ -179,7 +185,7 @@ class w extends (r = a.ZP.Store) {
         return b[e];
     }
 }
-g(w, 'displayName', 'ChannelPinsStore');
+g(w, "displayName", "ChannelPinsStore");
 let D = new w(s.Z, {
     CONNECTION_OPEN: y,
     LOAD_PINNED_MESSAGES: O,
@@ -194,5 +200,5 @@ let D = new w(s.Z, {
     RELATIONSHIP_ADD: R,
     RELATIONSHIP_REMOVE: R,
     RELATIONSHIP_UPDATE: R,
-    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: P
+    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: P,
 });

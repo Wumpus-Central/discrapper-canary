@@ -22,7 +22,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,7 +73,7 @@ async function v(e, t, n) {
         (s.Z.trackDiscordLinkClicked({
             guildId: e,
             channelId: t,
-            messageId: n
+            messageId: n,
         }),
         null != e)
     ) {
@@ -85,8 +85,8 @@ async function v(e, t, n) {
                     {},
                     {
                         channelId: t,
-                        messageId: n
-                    }
+                        messageId: n,
+                    },
                 );
                 return;
             } catch (e) {}
@@ -102,14 +102,16 @@ function I(e) {
                 c = s.noStyleAndInteraction
                     ? void 0
                     : (n) => {
-                          (e.shouldStopPropagation && (null == n || n.stopPropagation()), v(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, i.pTH)());
+                          e.shouldStopPropagation && (null == n || n.stopPropagation()),
+                              v(t.guildId, t.channelId, t.messageId),
+                              e.shouldCloseDefaultModals && (0, i.pTH)();
                       },
                 f =
                     s.noStyleAndInteraction || null == t.channelId || (null == l && null == t.originalLink)
                         ? g.dG4
                         : (e) => {
                               (0, o.jW)(e, async () => {
-                                  let { default: e } = await n.e('9573').then(n.bind(n, 546649));
+                                  let { default: e } = await n.e("9573").then(n.bind(n, 546649));
                                   return (n) => {
                                       var i;
                                       return (0, r.jsx)(
@@ -118,8 +120,8 @@ function I(e) {
                                               channel: l,
                                               channelId: null != (i = null == l ? void 0 : l.id) ? i : t.channelId,
                                               originalLink: t.originalLink,
-                                              messageId: t.messageId
-                                          })
+                                              messageId: t.messageId,
+                                          }),
                                       );
                                   };
                               });
@@ -127,14 +129,18 @@ function I(e) {
             return (0, r.jsxs)(
                 u.Z,
                 {
-                    role: 'link',
+                    role: "link",
                     onClick: c,
                     onContextMenu: f,
-                    className: 'channelMention',
-                    children: [null != t.inContent ? a(t.inContent, s) : null, null != t.inContent ? (0, r.jsx)(d.Z, {}) : null, (0, m.S)(t, a, s)]
+                    className: "channelMention",
+                    children: [
+                        null != t.inContent ? a(t.inContent, s) : null,
+                        null != t.inContent ? (0, r.jsx)(d.Z, {}) : null,
+                        (0, m.S)(t, a, s),
+                    ],
                 },
-                s.key
+                s.key,
             );
-        }
+        },
     };
 }

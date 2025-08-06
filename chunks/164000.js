@@ -11,10 +11,13 @@ function d(e) {
             let t = s.Z.getGuild(e);
             return null != t ? a.Z.getEveryoneRole(t) : void 0;
         }),
-        n = r.useMemo(() => (null == t || (0, l.Fs)(t, c.Plq.VIEW_CHANNEL) ? o.e3.SOME_CHANNELS : o.e3.ALL_CHANNELS), [t]),
+        n = r.useMemo(
+            () => (null == t || (0, l.Fs)(t, c.Plq.VIEW_CHANNEL) ? o.e3.SOME_CHANNELS : o.e3.ALL_CHANNELS),
+            [t],
+        ),
         d = n === o.e3.ALL_CHANNELS;
     return {
         format: n,
-        isFullServerGating: d
+        isFullServerGating: d,
     };
 }

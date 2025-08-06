@@ -13,9 +13,9 @@ function d() {
         title: c.intl.string(c.t.FsQ3OT),
         children: (0, i.jsx)(a.j, {
             deviceType: o.h7.VIDEO_INPUT,
-            location: 'UserSettingsCameraSelect',
+            location: "UserSettingsCameraSelect",
             isDisabled: !e,
-            showAllDevices: !0
-        })
+            showAllDevices: !0,
+        }),
     });
 }

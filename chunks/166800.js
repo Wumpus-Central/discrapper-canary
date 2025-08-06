@@ -14,7 +14,7 @@ let n = {
     gauge: function (t, e, a) {
         r.q.gauge(_.P, t, e, a);
     },
-    timing: function (t, e, a = 'second', n) {
+    timing: function (t, e, a = "second", n) {
         return r.q.timing(_.P, t, e, a, n);
-    }
+    },
 };

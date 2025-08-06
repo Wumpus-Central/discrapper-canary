@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     CR: () => m,
     UU: () => p,
-    jE: () => _
+    jE: () => _,
 }),
     n(953529),
     n(804061),
     n(704826),
-    n(35282));
+    n(35282);
 var r = n(884439),
     i = n(55000),
     o = n(693824),
@@ -22,7 +22,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,8 +49,8 @@ let _ = (e) => {
         return [
             {
                 iconPath: c.mb,
-                text: t
-            }
+                text: t,
+            },
         ];
     },
     p = (e) => {
@@ -61,8 +61,8 @@ let _ = (e) => {
             : [
                   {
                       iconPath: c.eF,
-                      text: u.intl.formatToPlainString(u.t.HtifnJ, { count: n })
-                  }
+                      text: u.intl.formatToPlainString(u.t.HtifnJ, { count: n }),
+                  },
               ];
     },
     h = (e) => {
@@ -73,13 +73,13 @@ let _ = (e) => {
         let { user: t, channel: n, mediaImageSrc: r, artist: i, description: s, colors: u, badges: d } = e,
             f = h({
                 avatarSrc: t.getAvatarURL(n.guild_id, 128),
-                mediaImageSrc: r
+                mediaImageSrc: r,
             }),
-            _ = i.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
+            _ = i.replaceAll(/[^a-zA-Z0-9 ]/g, "").replaceAll(" ", "-");
         return await (0, a.f)({
             assetsToLoad: f,
             drawImage: (e) => {
-                (y(e, u),
+                y(e, u),
                     b(e),
                     E(e),
                     g(e, s),
@@ -87,25 +87,25 @@ let _ = (e) => {
                         canvas: e,
                         badges: d,
                         startPosition: c.Iq,
-                        maxWidth: c.kC
-                    }));
+                        maxWidth: c.kC,
+                    });
             },
             exportConfigs: {
                 format: o.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(_, '.png').toLowerCase(),
-                fileType: 'png',
-                channelId: n.id
-            }
+                fileName: "user-reacting-to-".concat(_, ".png").toLowerCase(),
+                fileType: "png",
+                channelId: n.id,
+            },
         });
     };
 function g(e, t) {
-    (e.setColor('white'),
+    e.setColor("white"),
         e.setFont({
             size: 16,
             family: c.I8,
             weight: c.Ue,
-            truncate: o.GX.Wrap
+            truncate: o.GX.Wrap,
         }),
         e.drawText(
             t,
@@ -113,77 +113,77 @@ function g(e, t) {
                 x: c.Iq,
                 y: 64,
                 h: 32,
-                w: c.kC
+                w: c.kC,
             },
-            !0
-        ));
+            !0,
+        );
 }
 function E(e) {
     e.drawRoundedImage(
-        'AvatarImage',
+        "AvatarImage",
         {
             x: c.Iq,
-            y: c.sB
+            y: c.sB,
         },
         {
             w: c.$S,
-            h: c.$S
+            h: c.$S,
         },
-        50
+        50,
     );
 }
 function b(e) {
     e.drawRoundedImage(
-        'MediaImage',
+        "MediaImage",
         {
             x: c.sB,
-            y: c.sB
+            y: c.sB,
         },
         {
             w: c.Pu,
-            h: c.Pu
+            h: c.Pu,
         },
         8,
-        { fillMode: o.JU.Contain }
+        { fillMode: o.JU.Contain },
     ) === o.vP.Failure &&
         e.drawPath(
             i.C,
             {
                 x: c.sB,
-                y: c.sB
+                y: c.sB,
             },
             !0,
-            2 + 2 / 3
+            2 + 2 / 3,
         );
 }
 function y(e, t) {
     let n = t.map((e, t) => ({
         color: e,
-        stop: t
+        stop: t,
     }));
-    (e.setSize(
+    e.setSize(
         {
             w: c.nx,
-            h: c.bg
+            h: c.bg,
         },
-        4
+        4,
     ),
         e.drawRoundedGradientRect(
             n,
             {
                 x: 0,
-                y: c.bg
+                y: c.bg,
             },
             {
                 x: c.nx,
-                y: 0
+                y: 0,
             },
             {
                 x: 0,
                 y: 0,
                 h: c.bg,
-                w: c.nx
+                w: c.nx,
             },
-            8
-        ));
+            8,
+        );
 }

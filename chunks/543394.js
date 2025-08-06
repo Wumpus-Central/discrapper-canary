@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(505266),
@@ -20,28 +20,28 @@ var r = n(255367),
 let O = n(774809),
     j = [m, g, b, y, h, x, v].map((e) => ({
         src: e,
-        colorize: !1
+        colorize: !1,
     })),
     N = new o.qA({ wind: -5 }),
     P = [],
     _ = {
         velocity: {
-            type: 'static-random',
+            type: "static-random",
             minValue: {
                 x: 0,
-                y: 1
+                y: 1,
             },
             maxValue: {
                 x: 3,
-                y: 3
-            }
+                y: 3,
+            },
         },
         size: {
-            type: 'static-random',
+            type: "static-random",
             minValue: 10,
             maxValue: 50,
-            uniformVectorValues: !0
-        }
+            uniformVectorValues: !0,
+        },
     };
 function C(e) {
     var t, n;
@@ -59,40 +59,40 @@ function C(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, _)),
                 (t = t =
                     {
                         position: {
-                            type: 'static-random',
+                            type: "static-random",
                             minValue: {
                                 x: -g / 2 + 400,
-                                y: -50
+                                y: -50,
                             },
                             maxValue: {
                                 x: g + 800,
-                                y: -50
-                            }
-                        }
+                                y: -50,
+                            },
+                        },
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -106,14 +106,14 @@ function C(e) {
                       })(Object(t)).forEach(function (n) {
                           Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                       }),
-                e)
+                e),
             );
         }, [Z, g]);
     return (
         (0, l.Z)({
             onInterval: E,
             interval: 1000 / 60,
-            isPaused: m || !Z.isReady
+            isPaused: m || !Z.isReady,
         }),
         (0, r.jsxs)(r.Fragment, {
             children: [
@@ -122,22 +122,24 @@ function C(e) {
                     sprites: j,
                     colors: P,
                     spriteWidth: 50,
-                    spriteHeight: 50
+                    spriteHeight: 50,
                 }),
                 (0, r.jsx)(o.O_, {
                     className: p.canvas,
                     environment: N,
                     ref: x,
-                    requestAnimationFrame: null != (t = null == w ? void 0 : w.requestAnimationFrame) ? t : requestAnimationFrame,
-                    cancelAnimationFrame: null != (n = null == w ? void 0 : w.cancelAnimationFrame) ? n : cancelAnimationFrame
+                    requestAnimationFrame:
+                        null != (t = null == w ? void 0 : w.requestAnimationFrame) ? t : requestAnimationFrame,
+                    cancelAnimationFrame:
+                        null != (n = null == w ? void 0 : w.cancelAnimationFrame) ? n : cancelAnimationFrame,
                 }),
                 (0, r.jsx)(d.Z, {
                     itemId: f.yN.RAIN,
                     pointsPerInterval: y.points,
                     interval: 1000,
-                    isPaused: m
-                })
-            ]
+                    isPaused: m,
+                }),
+            ],
         })
     );
 }

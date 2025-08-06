@@ -1,6 +1,6 @@
 r.d(t, {
     t7: () => M,
-    y7: () => E
+    y7: () => E,
 });
 var a = r(279965),
     n = r(565294),
@@ -15,11 +15,11 @@ function b(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (a = a.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, a));
+            r.push.apply(r, a);
     }
     return r;
 }
@@ -53,8 +53,8 @@ var h = o.default,
     g = function (e) {
         return function (t) {
             return {
-                className: [t.className, e.className].filter(Boolean).join(' '),
-                style: d(d({}, t.style || {}), e.style || {})
+                className: [t.className, e.className].filter(Boolean).join(" "),
+                style: d(d({}, t.style || {}), e.style || {}),
             };
         };
     },
@@ -64,53 +64,58 @@ var h = o.default,
         var r = (0, a.Z)(e),
             n = (0, a.Z)(t);
         switch (r) {
-            case 'string':
+            case "string":
                 switch (n) {
-                    case 'string':
-                        return [t, e].filter(Boolean).join(' ');
-                    case 'object':
+                    case "string":
+                        return [t, e].filter(Boolean).join(" ");
+                    case "object":
                         return g({
                             className: e,
-                            style: t
+                            style: t,
                         });
-                    case 'function':
+                    case "function":
                         return function (r) {
-                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
+                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
+                                n[s - 1] = arguments[s];
                             return g({ className: e })(t.apply(void 0, [r].concat(n)));
                         };
                 }
                 break;
-            case 'object':
+            case "object":
                 switch (n) {
-                    case 'string':
+                    case "string":
                         return g({
                             className: t,
-                            style: e
+                            style: e,
                         });
-                    case 'object':
+                    case "object":
                         return d(d({}, t), e);
-                    case 'function':
+                    case "function":
                         return function (r) {
-                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
+                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
+                                n[s - 1] = arguments[s];
                             return g({ style: e })(t.apply(void 0, [r].concat(n)));
                         };
                 }
                 break;
-            case 'function':
+            case "function":
                 switch (n) {
-                    case 'string':
+                    case "string":
                         return function (r) {
-                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
+                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
+                                n[s - 1] = arguments[s];
                             return e.apply(void 0, [g(r)({ className: t })].concat(n));
                         };
-                    case 'object':
+                    case "object":
                         return function (r) {
-                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
+                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
+                                n[s - 1] = arguments[s];
                             return e.apply(void 0, [g(r)({ style: t })].concat(n));
                         };
-                    case 'function':
+                    case "function":
                         return function (r) {
-                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
+                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++)
+                                n[s - 1] = arguments[s];
                             return e.apply(void 0, [t.apply(void 0, [r].concat(n))].concat(n));
                         };
                 }
@@ -120,7 +125,7 @@ var h = o.default,
         var r = Object.keys(t);
         for (var a in e) -1 === r.indexOf(a) && r.push(a);
         return r.reduce(function (r, a) {
-            return ((r[a] = y(e[a], t[a])), r);
+            return (r[a] = y(e[a], t[a])), r;
         }, {});
     },
     Z = function (e, t) {
@@ -134,18 +139,25 @@ var h = o.default,
             .filter(Boolean)
             .reduce(
                 function (e, t) {
-                    return ('string' == typeof t ? (e.className = [e.className, t].filter(Boolean).join(' ')) : 'object' === (0, a.Z)(t) ? (e.style = d(d({}, e.style), t)) : 'function' == typeof t && (e = d(d({}, e), t.apply(void 0, [e].concat(n)))), e);
+                    return (
+                        "string" == typeof t
+                            ? (e.className = [e.className, t].filter(Boolean).join(" "))
+                            : "object" === (0, a.Z)(t)
+                              ? (e.style = d(d({}, e.style), t))
+                              : "function" == typeof t && (e = d(d({}, e), t.apply(void 0, [e].concat(n)))),
+                        e
+                    );
                 },
                 {
-                    className: '',
-                    style: {}
-                }
+                    className: "",
+                    style: {},
+                },
             );
-        return (o.className || delete o.className, 0 === Object.keys(o.style).length && delete o.style, o);
+        return o.className || delete o.className, 0 === Object.keys(o.style).length && delete o.style, o;
     },
     w = function (e) {
         return Object.keys(e).reduce(function (t, r) {
-            return ((t[r] = /^base/.test(r) ? m(e[r]) : 'scheme' === r ? e[r] + ':inverted' : e[r]), t);
+            return (t[r] = /^base/.test(r) ? m(e[r]) : "scheme" === r ? e[r] + ":inverted" : e[r]), t;
         }, {});
     },
     M = u()(function (e) {
@@ -158,13 +170,13 @@ var h = o.default,
         o && (r = d(d({}, o), r));
         for (
             var i = p.reduce(function (e, t) {
-                    return ((e[t] = r[t] || n[t]), e);
+                    return (e[t] = r[t] || n[t]), e;
                 }, {}),
                 c = v(
                     Object.keys(r).reduce(function (e, t) {
-                        return (-1 === p.indexOf(t) && (e[t] = r[t]), e);
+                        return -1 === p.indexOf(t) && (e[t] = r[t]), e;
                     }, {}),
-                    e(i)
+                    e(i),
                 ),
                 l = arguments.length,
                 f = Array(l > 3 ? l - 3 : 0),
@@ -179,15 +191,23 @@ var h = o.default,
         return !!e.extend;
     },
     O = function (e, t) {
-        if ((e && k(e) && e.extend && (e = e.extend), 'string' == typeof e)) {
-            var r = e.split(':'),
+        if ((e && k(e) && e.extend && (e = e.extend), "string" == typeof e)) {
+            var r = e.split(":"),
                 a = (0, s.Z)(r, 2),
                 n = a[0],
                 i = a[1];
-            ((e = t ? t[n] : o[n]), 'inverted' === i && (e = w(e)));
+            (e = t ? t[n] : o[n]), "inverted" === i && (e = w(e));
         }
-        return e && Object.prototype.hasOwnProperty.call(e, 'base00') ? e : void 0;
+        return e && Object.prototype.hasOwnProperty.call(e, "base00") ? e : void 0;
     },
     E = function (e) {
-        return 'string' == typeof e ? ''.concat(e, ':inverted') : e && k(e) && e.extend ? ('string' == typeof e.extend ? d(d({}, e), {}, { extend: ''.concat(e.extend, ':inverted') }) : d(d({}, e), {}, { extend: w(e.extend) })) : e ? w(e) : e;
+        return "string" == typeof e
+            ? "".concat(e, ":inverted")
+            : e && k(e) && e.extend
+              ? "string" == typeof e.extend
+                  ? d(d({}, e), {}, { extend: "".concat(e.extend, ":inverted") })
+                  : d(d({}, e), {}, { extend: w(e.extend) })
+              : e
+                ? w(e)
+                : e;
     };

@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -64,7 +64,8 @@ function _(e, t) {
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,7 +75,7 @@ function p(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
@@ -84,8 +85,8 @@ function h(e) {
         b = i.useRef(null),
         y = i.useRef(null),
         { isUsingKeyboardNavigation: O, focusIndex: v } = c,
-        I = _(c, ['isUsingKeyboardNavigation', 'focusIndex']);
-    (i.useLayoutEffect(() => {
+        I = _(c, ["isUsingKeyboardNavigation", "focusIndex"]);
+    i.useLayoutEffect(() => {
         var e;
         n && ((0, a.F)(g), null == (e = b.current) || e.focus());
     }, [n]),
@@ -94,13 +95,13 @@ function h(e) {
                 var e;
                 null == (e = y.current) || e.scrollRowIntoView(v);
             }
-        }, [n, O, v]));
+        }, [n, O, v]);
     let T = i.useCallback((e) => d[e], [d]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         ref: g,
         className: l.__invalid_submenuContainer,
         children: [
-            (0, r.jsx)('div', { ref: E }),
+            (0, r.jsx)("div", { ref: E }),
             t,
             n
                 ? (0, r.jsx)(o.j, {
@@ -109,14 +110,14 @@ function h(e) {
                       nudgeAlignIntoViewport: !0,
                       fixed: !0,
                       spacing: 4,
-                      position: 'right',
-                      align: 'top',
+                      position: "right",
+                      align: "top",
                       children: () =>
                           d.length > 0 &&
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: l.submenuPaddingContainer,
                               children: (0, r.jsx)(
-                                  'div',
+                                  "div",
                                   f(u({ className: l.submenu }, I), {
                                       ref: b,
                                       children: (0, r.jsx)(s.Z, {
@@ -126,13 +127,13 @@ function h(e) {
                                           onScroll: h,
                                           renderRow: T,
                                           rowCount: d.length,
-                                          rowHeight: p
-                                      })
-                                  })
-                              )
-                          })
+                                          rowHeight: p,
+                                      }),
+                                  }),
+                              ),
+                          }),
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

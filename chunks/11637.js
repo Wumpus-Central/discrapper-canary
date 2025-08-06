@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => _,
-    hf: () => d
+    hf: () => d,
 });
 var r = n(763296),
     i = n(375954),
@@ -12,7 +12,7 @@ var r = n(763296),
     u = n(981631);
 let d = /^<sound:(\d+):(\d+)>/;
 function f(e, t, n, o, l) {
-    if (!a.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
+    if (!a.zv.getCurrentConfig({ location: "getSoundmojiASTFromString" }, { autoTrackExposure: !1 }).enabled) return;
     let d = r.Z.getSoundById(o),
         f = (0, c.Z)(d, e, t);
     if (null != n && null != t) {
@@ -33,12 +33,12 @@ function _(e, t) {
         u = f(a, s, c, i, t.soundboardSounds);
     if (null == u)
         return {
-            type: 'text',
-            content: (0, l.Z)(r, i)
+            type: "text",
+            content: (0, l.Z)(r, i),
         };
     let d = null != (n = null == u ? void 0 : u.name) ? n : i;
     return {
-        type: 'soundboard',
+        type: "soundboard",
         soundId: i,
         guildId: r,
         messageId: t.messageId,
@@ -51,8 +51,8 @@ function _(e, t) {
                 ? (0, o.gT)({
                       id: null == u ? void 0 : u.emojiId,
                       animated: !1,
-                      size: 16
+                      size: 16,
                   })
-                : void 0
+                : void 0,
     };
 }

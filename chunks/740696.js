@@ -1,4 +1,4 @@
-(n.d(e, { default: () => y }), n(388685), n(539854));
+n.d(e, { default: () => y }), n(388685), n(539854);
 var a = n(255367),
     r = n(73800),
     i = n(442837),
@@ -19,16 +19,16 @@ var a = n(255367),
 let b = () => [
     {
         id: 0,
-        name: j.intl.string(j.t.HTA519)
+        name: j.intl.string(j.t.HTA519),
     },
     {
         id: 1,
-        name: j.intl.string(j.t.IHjjY2)
+        name: j.intl.string(j.t.IHjjY2),
     },
     {
         id: 2,
-        name: j.intl.string(j.t.x3drh4)
-    }
+        name: j.intl.string(j.t.x3drh4),
+    },
 ];
 function y(t) {
     let { guildId: e, shouldUpsellCreation: y, transitionState: P, onClose: N } = t,
@@ -38,19 +38,19 @@ function y(t) {
         [w, k] = r.useState(0),
         T = [
             {
-                variant: y ? 'secondary' : 'primary',
-                text: y ? j.intl.string(j.t.TulDPj) : j.intl.string(j.t['NX+WJC']),
-                onClick: () => N(f.L.SECONDARY)
-            }
+                variant: y ? "secondary" : "primary",
+                text: y ? j.intl.string(j.t.TulDPj) : j.intl.string(j.t["NX+WJC"]),
+                onClick: () => N(f.L.SECONDARY),
+            },
         ];
     return (
         y &&
             T.push({
-                variant: 'primary',
-                text: j.intl.string(j.t['1X8SKy']),
+                variant: "primary",
+                text: j.intl.string(j.t["1X8SKy"]),
                 onClick: () => {
-                    ((0, g.ZDy)(async () => {
-                        let { default: t } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                    (0, g.ZDy)(async () => {
+                        let { default: t } = await Promise.all([n.e("45094"), n.e("45822")]).then(n.bind(n, 218613));
                         return (n) => {
                             var r, i;
                             return (0, a.jsx)(
@@ -59,24 +59,24 @@ function y(t) {
                                     for (var e = 1; e < arguments.length; e++) {
                                         var n = null != arguments[e] ? arguments[e] : {},
                                             a = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (a = a.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (t) {
                                                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                                })
+                                                }),
                                             )),
                                             a.forEach(function (e) {
                                                 var a;
-                                                ((a = n[e]),
+                                                (a = n[e]),
                                                     e in t
                                                         ? Object.defineProperty(t, e, {
                                                               value: a,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (t[e] = a));
-                                            }));
+                                                        : (t[e] = a);
+                                            });
                                     }
                                     return t;
                                 })({}, n)),
@@ -84,7 +84,7 @@ function y(t) {
                                     {
                                         channelType: h.d4z.GUILD_FORUM,
                                         guildId: e,
-                                        prefillChannelName: y ? j.intl.string(j.t['5z1Xam']) : void 0
+                                        prefillChannelName: y ? j.intl.string(j.t["5z1Xam"]) : void 0,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -98,29 +98,29 @@ function y(t) {
                                       })(Object(i)).forEach(function (t) {
                                           Object.defineProperty(r, t, Object.getOwnPropertyDescriptor(i, t));
                                       }),
-                                r)
+                                r),
                             );
                         };
                     }),
-                        N(f.L.PRIMARY));
-                }
+                        N(f.L.PRIMARY);
+                },
             }),
         (0, a.jsxs)(s.I, {
             transitionState: P,
-            size: 'xl',
+            size: "xl",
             onClose: async () => await N(),
             children: [
                 (0, a.jsx)(c.x, {
-                    title: j.intl.string(j.t['6S6WCQ']),
-                    subtitle: j.intl.string(j.t.I2BA8P)
+                    title: j.intl.string(j.t["6S6WCQ"]),
+                    subtitle: j.intl.string(j.t.I2BA8P),
                 }),
                 (0, a.jsxs)(l.f, {
                     children: [
                         (0, a.jsx)(g.njP, {
                             selectedItem: w,
-                            type: 'top',
+                            type: "top",
                             onItemSelect: (t) => {
-                                (k(t), (0, u.ws)({ forumDemoId: t }));
+                                k(t), (0, u.ws)({ forumDemoId: t });
                             },
                             className: v.tags,
                             children: C.map((t, e) =>
@@ -128,30 +128,30 @@ function y(t) {
                                     g.njP.Item,
                                     {
                                         id: e,
-                                        children: t.name
+                                        children: t.name,
                                     },
-                                    e
-                                )
-                            )
+                                    e,
+                                ),
+                            ),
                         }),
-                        (0, a.jsx)(p.Z, { id: w })
-                    ]
+                        (0, a.jsx)(p.Z, { id: w }),
+                    ],
                 }),
                 O &&
                     (0, a.jsx)(o.G, {
                         leading: (0, a.jsx)(g.zxk, {
-                            variant: 'secondary',
+                            variant: "secondary",
                             text: j.intl.string(j.t.hvVgAQ),
                             icon: g.Gr1,
-                            iconPosition: 'end',
-                            role: 'link',
+                            iconPosition: "end",
+                            role: "link",
                             onClick: () => {
                                 open(x.V8);
-                            }
+                            },
                         }),
-                        actions: T
-                    })
-            ]
+                        actions: T,
+                    }),
+            ],
         })
     );
 }

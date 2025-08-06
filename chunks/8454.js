@@ -11,7 +11,7 @@ function l(e) {
             o.Z.findActivity(e, (e) => {
                 let { type: t } = e;
                 return t === s.IIU.CUSTOM_STATUS;
-            })
+            }),
         );
     return t ? n : l;
 }

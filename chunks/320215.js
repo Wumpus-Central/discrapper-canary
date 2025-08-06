@@ -13,23 +13,23 @@ function r(e, t, n) {
             }
         } else if (((r = i[e]), (o = t), void 0 == r)) continue;
         switch ((n.repeat && (o[e].length = r.length), n.kind)) {
-            case 'scalar':
-            case 'enum':
+            case "scalar":
+            case "enum":
                 if (n.repeat) for (let t = 0; t < r.length; t++) o[e][t] = r[t];
                 else o[e] = r;
                 break;
-            case 'message':
+            case "message":
                 let a = n.T();
                 if (n.repeat) for (let t = 0; t < r.length; t++) o[e][t] = a.create(r[t]);
                 else void 0 === o[e] ? (o[e] = a.create(r)) : a.mergePartial(o[e], r);
                 break;
-            case 'map':
+            case "map":
                 switch (n.V.kind) {
-                    case 'scalar':
-                    case 'enum':
+                    case "scalar":
+                    case "enum":
                         Object.assign(o[e], r);
                         break;
-                    case 'message':
+                    case "message":
                         let s = n.V.T();
                         for (let t of Object.keys(r)) o[e][t] = s.create(r[t]);
                 }

@@ -11,9 +11,9 @@ let r = {
         return l.intl.string(l.t.ZbVwZW);
     },
     get password() {
-        return l.intl.string(l.t['8F6hKS']);
+        return l.intl.string(l.t["8F6hKS"]);
     },
     get backup() {
         return l.intl.string(l.t.vhSRKS);
-    }
+    },
 };

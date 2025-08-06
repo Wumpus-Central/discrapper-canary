@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Y: () => T,
-    c: () => I
+    c: () => I,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -26,7 +26,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -83,13 +83,13 @@ let I = (e) => {
                     c.Z,
                     v(y({}, e), {
                         emojiName: n.name,
-                        size: n.jumboable ? 'jumbo' : 'default',
+                        size: n.jumboable ? "jumbo" : "default",
                         src: n.src,
                         alt: h,
                         animated: !1,
                         channelId: u,
-                        messageId: d
-                    })
+                        messageId: d,
+                    }),
                 ),
             I = (e) =>
                 (0, r.jsx)(
@@ -98,9 +98,9 @@ let I = (e) => {
                         y(
                             {
                                 text: (0, p.Y)(n.name, s),
-                                'aria-label': m
+                                "aria-label": m,
                             },
-                            p.b_
+                            p.b_,
                         ),
                         {
                             position: o,
@@ -109,7 +109,7 @@ let I = (e) => {
                                 s &&
                                     S({
                                         emojiNode: n,
-                                        isCustomEmoji: !1
+                                        isCustomEmoji: !1,
                                     });
                             },
                             children: (t) =>
@@ -117,39 +117,46 @@ let I = (e) => {
                                     l.P3F,
                                     v(y({}, e), {
                                         innerRef: f,
-                                        tag: 'span',
+                                        tag: "span",
                                         onClick: (t) => {
                                             var n;
-                                            (b(!0), null == e || null == (n = e.onClick) || n.call(e, t));
+                                            b(!0), null == e || null == (n = e.onClick) || n.call(e, t);
                                         },
                                         className: a()(E.emojiContainer, {
                                             [E.emojiContainerClickable]: s,
-                                            [E.emojiJumbo]: n.jumboable
+                                            [E.emojiJumbo]: n.jumboable,
                                         }),
-                                        children: O(t)
-                                    })
-                                )
-                        }
-                    )
+                                        children: O(t),
+                                    }),
+                                ),
+                        },
+                    ),
                 );
         if (!s) return I();
         let T = (e) => (0, r.jsx)(_.Az, v(y({}, e), { node: n }));
         return (0, r.jsx)(l.yRy, {
             animation: l.yRy.Animation.TRANSLATE,
-            align: 'center',
+            align: "center",
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
-            position: 'right',
+            position: "right",
             onRequestClose: () => {
                 b(!1);
             },
             renderPopout: T,
             targetElementRef: f,
-            children: I
+            children: I,
         });
     },
     T = (e) => {
-        let { node: t, isInteracting: n, tooltipPosition: o = p.b_.position, enableClick: u = !0, channelId: g, messageId: b } = e,
+        let {
+                node: t,
+                isInteracting: n,
+                tooltipPosition: o = p.b_.position,
+                enableClick: u = !0,
+                channelId: g,
+                messageId: b,
+            } = e,
             [O, I] = i.useState(String(Date.now())),
             [T, A] = i.useState(!1),
             [N, C] = i.useState(!1),
@@ -160,13 +167,13 @@ let I = (e) => {
                     c.Z,
                     v(y({}, e), {
                         emojiName: t.name,
-                        size: t.jumboable ? 'jumbo' : 'default',
+                        size: t.jumboable ? "jumbo" : "default",
                         emojiId: t.emojiId,
                         animated: t.animated,
                         isInteracting: n,
                         channelId: g,
-                        messageId: b
-                    })
+                        messageId: b,
+                    }),
                 );
             },
             w = (0, s.Z)(),
@@ -177,22 +184,22 @@ let I = (e) => {
                         y(
                             {
                                 text: (0, p.Y)(t.name, u),
-                                'aria-label': t.name
+                                "aria-label": t.name,
                             },
-                            p.b_
+                            p.b_,
                         ),
                         {
                             position: o,
                             shouldShow: !N,
                             onTooltipShow: () => {
-                                (A(!0),
+                                A(!0),
                                     u &&
                                         (S({
                                             emojiNode: t,
                                             isCustomEmoji: !0,
-                                            nonce: w
+                                            nonce: w,
                                         }),
-                                        (0, d.x)(m.qR.CustomEmojiTooltipShown)));
+                                        (0, d.x)(m.qR.CustomEmojiTooltipShown));
                             },
                             children: (n) =>
                                 (0, r.jsx)(
@@ -206,22 +213,22 @@ let I = (e) => {
                                         onClick: u
                                             ? (t) => {
                                                   var n;
-                                                  (A(!1), C(!0), null == e || null == (n = e.onClick) || n.call(e, t));
+                                                  A(!1), C(!0), null == e || null == (n = e.onClick) || n.call(e, t);
                                               }
                                             : void 0,
                                         onMouseLeave: () => {
                                             T && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1));
                                         },
-                                        tag: 'span',
+                                        tag: "span",
                                         className: a()(E.emojiContainer, {
                                             [E.emojiContainerClickable]: u,
-                                            [E.emojiJumbo]: t.jumboable
+                                            [E.emojiJumbo]: t.jumboable,
                                         }),
-                                        children: P(n)
-                                    })
-                                )
-                        }
-                    )
+                                        children: P(n),
+                                    }),
+                                ),
+                        },
+                    ),
                 );
         if (!u) return D();
         let L = (e) =>
@@ -230,22 +237,22 @@ let I = (e) => {
                 v(y({}, e), {
                     node: t,
                     refreshPositionKey: () => I(String(Date.now())),
-                    nonce: w
-                })
+                    nonce: w,
+                }),
             );
         return (0, r.jsx)(l.yRy, {
             animation: l.yRy.Animation.FADE,
-            align: 'center',
+            align: "center",
             onRequestClose: () => {
-                (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), C(!1));
+                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), C(!1);
             },
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
-            position: 'right',
+            position: "right",
             renderPopout: L,
             positionKey: O,
             targetElementRef: R,
-            children: D
+            children: D,
         });
     },
     S = (e) => {
@@ -256,6 +263,6 @@ let I = (e) => {
             expression_name: t.name,
             is_animated: t.animated,
             is_custom: n,
-            nonce: r
+            nonce: r,
         });
     };

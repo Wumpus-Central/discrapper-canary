@@ -3,5 +3,5 @@ var e = n(85712),
 t.exports = e
     ? {}.toString
     : function () {
-          return '[object ' + o(this) + ']';
+          return "[object " + o(this) + "]";
       };

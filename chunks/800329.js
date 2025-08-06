@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -42,7 +42,7 @@ function E(e, t, n) {
     return {
         tileWidth: r,
         columns: Math.max(1, a),
-        rows: s
+        rows: s,
     };
 }
 function b(e, t, n) {
@@ -51,7 +51,7 @@ function b(e, t, n) {
         tileStyle: { width: o },
         tileWidth: o,
         rows: r,
-        columns: i
+        columns: i,
     };
 }
 function y(e) {
@@ -59,7 +59,7 @@ function y(e) {
     let { className: n, children: o, keyExtractor: u, paddingTop: _ = 0, paddingBottom: p = 0 } = e,
         [h, m] = i.useState({
             width: 0,
-            height: 0
+            height: 0,
         }),
         { width: g, height: E } = h,
         y = null != (t = null == o ? void 0 : o.length) ? t : 0,
@@ -74,7 +74,7 @@ function y(e) {
         var t;
         let n = e * A;
         return (0, r.jsx)(
-            'div',
+            "div",
             {
                 className: l.row,
                 children:
@@ -84,24 +84,24 @@ function y(e) {
                               var i;
                               let o = n + t;
                               return (0, r.jsx)(
-                                  'div',
+                                  "div",
                                   {
                                       style: I,
                                       className: a()(l.tile, {
                                           [l.padColumn]: C,
                                           [l.noVerticalMargin]: o >= (S - 1) * A,
-                                          [l.noHorizontalMargin]: (o + 1) % A == 0 || o === y - 1
+                                          [l.noHorizontalMargin]: (o + 1) % A == 0 || o === y - 1,
                                       }),
-                                      children: (0, r.jsx)('div', {
+                                      children: (0, r.jsx)("div", {
                                           className: l.tileSizer,
-                                          children: e(T)
-                                      })
+                                          children: e(T),
+                                      }),
                                   },
-                                  null != (i = null == u ? void 0 : u(o)) ? i : o
+                                  null != (i = null == u ? void 0 : u(o)) ? i : o,
                               );
-                          })
+                          }),
             },
-            e
+            e,
         );
     }
     return (0, r.jsx)(s.Z, {
@@ -112,6 +112,6 @@ function y(e) {
         rowCount: S,
         rowCountBySection: [S],
         rowHeight: R,
-        onResize: m
+        onResize: m,
     });
 }

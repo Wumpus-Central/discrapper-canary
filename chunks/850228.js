@@ -17,41 +17,41 @@ class _ extends i.PureComponent {
         var e, t;
         let { className: n, cashAppPayComponent: i } = this.props,
             o = this.props.adyenPaymentData,
-            l = null != (t = null == o || null == (e = o.paymentMethod) ? void 0 : e.cashtag) ? t : '',
-            c = null != o && '' !== l;
-        return (0, r.jsxs)('div', {
+            l = null != (t = null == o || null == (e = o.paymentMethod) ? void 0 : e.cashtag) ? t : "",
+            c = null != o && "" !== l;
+        return (0, r.jsxs)("div", {
             className: n,
             children: [
                 (0, r.jsx)(s.ZP, {
                     type: s.ZP.Types.CASH_APP,
                     size: s.Uy.MEDIUM,
-                    className: f.icon
+                    className: f.icon,
                 }),
                 c
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(a.X6q, {
-                                  variant: l.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
+                                  variant: l.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
                                   className: f.connectionInstructions,
-                                  children: d.intl.format(d.t['ze/1yM'], { cashtag: l })
+                                  children: d.intl.format(d.t["ze/1yM"], { cashtag: l }),
                               }),
                               (0, r.jsx)(a.Text, {
-                                  variant: 'text-md/medium',
+                                  variant: "text-md/medium",
                                   className: f.connectionInstructions,
-                                  children: d.intl.string(d.t.VPOx7O)
-                              })
-                          ]
+                                  children: d.intl.string(d.t.VPOx7O),
+                              }),
+                          ],
                       })
                     : (0, r.jsx)(a.Text, {
-                          variant: 'text-md/medium',
+                          variant: "text-md/medium",
                           className: f.connectionInstructions,
-                          children: null == i ? d.intl.string(d.t['CgVe//']) : d.intl.string(d.t['1MqcjI'])
-                      })
-            ]
+                          children: null == i ? d.intl.string(d.t["CgVe//"]) : d.intl.string(d.t["1MqcjI"]),
+                      }),
+            ],
         });
     }
 }
 let p = o.ZP.connectStores([u.Z, l.Z], () => ({
     cashAppPayComponent: u.Z.cashAppPayComponent,
-    adyenPaymentData: l.Z.adyenPaymentData
+    adyenPaymentData: l.Z.adyenPaymentData,
 }))(_);

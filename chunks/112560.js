@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     L: () => u,
-    Z: () => d
+    Z: () => d,
 }),
-    n(953529));
+    n(953529);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -12,10 +12,21 @@ var i = n(120356),
     l = n(600164),
     c = n(993135);
 function u(e) {
-    return e < 400 ? 'small' : e < 1000 ? 'medium' : 'large';
+    return e < 400 ? "small" : e < 1000 ? "medium" : "large";
 }
 function d(e) {
-    let { onCTAClick: t, callToAction: n, header: i, description: u, errorCodeMessage: d, size: f, className: _, artURL: p, noArt: h = !1, selected: m = !1 } = e;
+    let {
+        onCTAClick: t,
+        callToAction: n,
+        header: i,
+        description: u,
+        errorCodeMessage: d,
+        size: f,
+        className: _,
+        artURL: p,
+        noArt: h = !1,
+        selected: m = !1,
+    } = e;
     return (0, r.jsxs)(l.Z, {
         className: _,
         justify: l.Z.Justify.CENTER,
@@ -25,33 +36,33 @@ function d(e) {
         children: [
             !h &&
                 null != p &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: o()(c.art, c[f]),
-                    style: { backgroundImage: 'url('.concat(p, ')') }
+                    style: { backgroundImage: "url(".concat(p, ")") },
                 }),
             null != i
                 ? (0, r.jsx)(s.Text, {
-                      color: 'none',
-                      variant: 'text-md/semibold',
+                      color: "none",
+                      variant: "text-md/semibold",
                       className: c.header,
-                      children: i
+                      children: i,
                   })
                 : null,
             null != d
                 ? (0, r.jsx)(s.Text, {
                       className: c.errorCodeMessage,
-                      variant: 'text-sm/semibold',
-                      color: 'text-muted',
+                      variant: "text-sm/semibold",
+                      color: "text-muted",
                       selectable: !0,
-                      children: d
+                      children: d,
                   })
                 : null,
-            null != u && (null == d || 'small' !== f)
+            null != u && (null == d || "small" !== f)
                 ? (0, r.jsx)(s.Text, {
-                      color: 'none',
+                      color: "none",
                       className: c.description,
-                      variant: 'text-sm/medium',
-                      children: u
+                      variant: "text-sm/medium",
+                      children: u,
                   })
                 : null,
             m || null == n
@@ -63,10 +74,10 @@ function d(e) {
                       look: a.zx.Looks.BLANK,
                       innerClassName: c.button,
                       onClick: (e) => {
-                          (e.stopPropagation(), null == t || t(e));
+                          e.stopPropagation(), null == t || t(e);
                       },
-                      children: n
-                  })
-        ]
+                      children: n,
+                  }),
+        ],
     });
 }

@@ -13,45 +13,51 @@ let a = 60,
         hours: o.t.p0KedH,
         days: o.t.gjK5am,
         months: o.t.kHo4Oj,
-        years: o.t.KjKr2N
+        years: o.t.KjKr2N,
     }),
     f = (e, t) => null != t && null != t[e],
     _ = (e, t, n) => {
         var r, i, o;
-        return f(e, t) ? (null != (i = null != (r = t[e]) ? r : null == n ? void 0 : n[e]) ? i : null) : null != (o = null == n ? void 0 : n[e]) ? o : null;
+        return f(e, t)
+            ? null != (i = null != (r = t[e]) ? r : null == n ? void 0 : n[e])
+                ? i
+                : null
+            : null != (o = null == n ? void 0 : n[e])
+              ? o
+              : null;
     },
     p = function (e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            r = i()().diff(i()(e), 's'),
+            r = i()().diff(i()(e), "s"),
             f = null != t ? t() : void 0,
             p = d(),
             h = (e, t) => {
                 let r = _(e, f, n ? p : void 0);
-                return null == r ? null : 'string' == typeof r ? r : o.intl.formatToPlainString(r, { count: t });
+                return null == r ? null : "string" == typeof r ? r : o.intl.formatToPlainString(r, { count: t });
             };
         if (r < a) {
-            let e = (null == f ? void 0 : f.seconds) != null ? h('seconds', r) : h('minutes', 1);
+            let e = (null == f ? void 0 : f.seconds) != null ? h("seconds", r) : h("minutes", 1);
             if (null != e) return e;
         }
         if (r < s) {
-            let e = h('minutes', Math.floor(r / a));
+            let e = h("minutes", Math.floor(r / a));
             if (null != e) return e;
         }
         if (r < l) {
-            let e = h('hours', Math.floor(r / s));
+            let e = h("hours", Math.floor(r / s));
             if (null != e) return e;
         }
         if (r < c) {
-            let e = h('days', Math.floor(r / l));
+            let e = h("days", Math.floor(r / l));
             if (null != e) return e;
         }
         if (r < u) {
-            let e = h('months', Math.floor(r / c));
+            let e = h("months", Math.floor(r / c));
             if (null != e) return e;
         }
         if (r >= u && (null == f ? void 0 : f.years) != null) {
-            let e = h('years', Math.floor(r / u));
+            let e = h("years", Math.floor(r / u));
             if (null != e) return e;
         }
-        return i()(e).format('LL');
+        return i()(e).format("LL");
     };

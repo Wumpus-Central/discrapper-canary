@@ -10,6 +10,6 @@ e.exports = (e, t) => (
                 e(t());
             }).then(() => {
                 throw e;
-            })
+            }),
     )
 );

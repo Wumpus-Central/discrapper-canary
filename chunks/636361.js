@@ -4,9 +4,18 @@ var r = a(622916),
     n = a(886115),
     o = a(255768),
     i = a(151122);
-let c = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", 'can\'t redefine non-configurable property "solana"', "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler"],
+let c = [
+        /^Script error\.?$/,
+        /^Javascript error: Script error\.? on line 0$/,
+        /^ResizeObserver loop completed with undelivered notifications.$/,
+        /^Cannot redefine property: googletag$/,
+        "undefined is not an object (evaluating 'a.L')",
+        'can\'t redefine non-configurable property "solana"',
+        "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)",
+        "Can't find variable: _AutofillCallbackHandler",
+    ],
     E = (0, i._I)((t = {}) => ({
-        name: 'InboundFilters',
+        name: "InboundFilters",
         processEvent: (e, a, i) => {
             var E, l, u, I, R;
             return ((E = e),
@@ -14,14 +23,18 @@ let c = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /
                 return {
                     allowUrls: [...(t.allowUrls || []), ...(e.allowUrls || [])],
                     denyUrls: [...(t.denyUrls || []), ...(e.denyUrls || [])],
-                    ignoreErrors: [...(t.ignoreErrors || []), ...(e.ignoreErrors || []), ...(t.disableErrorDefaults ? [] : c)],
+                    ignoreErrors: [
+                        ...(t.ignoreErrors || []),
+                        ...(e.ignoreErrors || []),
+                        ...(t.disableErrorDefaults ? [] : c),
+                    ],
                     ignoreTransactions: [...(t.ignoreTransactions || []), ...(e.ignoreTransactions || [])],
-                    ignoreInternal: void 0 === t.ignoreInternal || t.ignoreInternal
+                    ignoreInternal: void 0 === t.ignoreInternal || t.ignoreInternal,
                 };
             })(t, i.getOptions())).ignoreInternal &&
             (function (t) {
                 try {
-                    return 'SentryError' === t.exception.values[0].type;
+                    return "SentryError" === t.exception.values[0].type;
                 } catch (t) {}
                 return !1;
             })(E)
@@ -41,15 +54,20 @@ Event: ${(0, _.jH)(E)}`),
                             try {
                                 e = t.exception.values[t.exception.values.length - 1];
                             } catch (t) {}
-                            return (e && e.value && (a.push(e.value), e.type && a.push(`${e.type}: ${e.value}`)), a);
+                            return e && e.value && (a.push(e.value), e.type && a.push(`${e.type}: ${e.value}`)), a;
                         })(u).some((t) => (0, n.U0)(t, I)))
                   ? (o.X &&
                         r.kg.warn(`Event dropped due to being matched by \`ignoreErrors\` option.
 Event: ${(0, _.jH)(E)}`),
                     0)
-                  : (R = E).type || !R.exception || !R.exception.values || 0 === R.exception.values.length || R.message || R.exception.values.some((t) => t.stacktrace || (t.type && 'Error' !== t.type) || t.value)
+                  : (R = E).type ||
+                      !R.exception ||
+                      !R.exception.values ||
+                      0 === R.exception.values.length ||
+                      R.message ||
+                      R.exception.values.some((t) => t.stacktrace || (t.type && "Error" !== t.type) || t.value)
                     ? !(function (t, e) {
-                          if ('transaction' !== t.type || !e || !e.length) return !1;
+                          if ("transaction" !== t.type || !e || !e.length) return !1;
                           let a = t.transaction;
                           return !!a && (0, n.U0)(a, e);
                       })(E, l.ignoreTransactions)
@@ -83,7 +101,7 @@ Event: ${(0, _.jH)(E)}`),
                       0))
                 ? e
                 : null;
-        }
+        },
     }));
 function s(t) {
     try {
@@ -95,12 +113,13 @@ function s(t) {
             ? (function (t = []) {
                   for (let e = t.length - 1; e >= 0; e--) {
                       let a = t[e];
-                      if (a && '<anonymous>' !== a.filename && '[native code]' !== a.filename) return a.filename || null;
+                      if (a && "<anonymous>" !== a.filename && "[native code]" !== a.filename)
+                          return a.filename || null;
                   }
                   return null;
               })(e)
             : null;
     } catch (e) {
-        return (o.X && r.kg.error(`Cannot extract url for event ${(0, _.jH)(t)}`), null);
+        return o.X && r.kg.error(`Cannot extract url for event ${(0, _.jH)(t)}`), null;
     }
 }

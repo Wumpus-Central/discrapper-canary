@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     L6: () => C,
     ZP: () => h,
-    iF: () => N
+    iF: () => N,
 }),
     n(388685),
     n(539854),
     n(35282),
-    n(704826));
+    n(704826);
 var r = n(466332),
     i = n(31775),
     o = n.n(i),
@@ -17,19 +17,19 @@ var r = n(466332),
     u = n(436660),
     d = n(887490),
     f = n(42530);
-let _ = new Set(['line']),
+let _ = new Set(["line"]),
     p = /^[a-z0-9_+\-.#]+$/i;
 function h(e) {
     let { onChange: t } = e,
         n = null;
     return (
         (e.onChange = () => {
-            (d.bN.richValue(e) !== n &&
+            d.bN.richValue(e) !== n &&
                 (l.T.withMergedEntry(e, () => {
                     d.bN.withoutNormalizing(e, () => m(e));
                 }),
                 (n = d.bN.richValue(e))),
-                t());
+                t();
         }),
         e
     );
@@ -44,9 +44,16 @@ function E(e) {
         n = null;
     for (let r of d.bN.blocks(e)) {
         let i = null != n && (n.isInCodeBlock || n.opensCodeBlock);
-        ((n = b(e, r, i, null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine), null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)), t.push(n));
+        (n = b(
+            e,
+            r,
+            i,
+            null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine),
+            null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null,
+        )),
+            t.push(n);
     }
-    return (v(t), t);
+    return v(t), t;
 }
 function b(e, t, n, r, i) {
     var o;
@@ -62,7 +69,7 @@ function b(e, t, n, r, i) {
         _ = n && 0 === a.length,
         h = r && 0 === a.length,
         m = (f ? a.slice(1) : a).length % 2 == 1,
-        g = m && (null == u || '' === u || null != u.match(p)),
+        g = m && (null == u || "" === u || null != u.match(p)),
         E = g && null != u && null != (o = s.default.resolveLanguageName(u)) ? o : null;
     return {
         blockEntry: t,
@@ -73,7 +80,7 @@ function b(e, t, n, r, i) {
         hljsTypes: null,
         closesCodeBlock: f,
         opensCodeBlock: m,
-        opensCodeBlockOnOwnLine: g
+        opensCodeBlockOnOwnLine: g,
     };
 }
 function y(e, t) {
@@ -90,7 +97,7 @@ function O(e) {
               wasInCodeBlock: e.wasInCodeBlock,
               isInCodeBlock: e.isInCodeBlock,
               isStyledCodeBlockLine: e.isStyledCodeBlockLine,
-              hljsTypes: e.hljsTypes
+              hljsTypes: e.hljsTypes,
           }
         : null;
 }
@@ -100,7 +107,7 @@ function v(e) {
     for (let i of e) {
         let o = i === e[e.length - 1];
         if ((i.closesCodeBlock || o) && (n && o && !i.closesCodeBlock && t.push(i), (n = !1), t.length > 0)) {
-            let e = t.map((e) => (0, c.sg)(e.blockEntry[0])).join('\n'),
+            let e = t.map((e) => (0, c.sg)(e.blockEntry[0])).join("\n"),
                 n = t[0].lang;
             if (null != n && null != r.Z.getLanguage(n)) {
                 let r = S(e, n);
@@ -109,9 +116,9 @@ function v(e) {
                     for (let n = 0; n < t.length; n++) {
                         let i,
                             o = r[n]
-                                .replace(/&amp;/g, '&')
-                                .replace(/&lt;/g, '<')
-                                .replace(/&gt;/g, '>')
+                                .replace(/&amp;/g, "&")
+                                .replace(/&lt;/g, "<")
+                                .replace(/&gt;/g, ">")
                                 .replace(/&quot;/g, '"')
                                 .replace(/&#x27;/g, "'"),
                             a = [],
@@ -120,23 +127,23 @@ function v(e) {
                         for (; null != (i = g.exec(o)); ) {
                             let t = i.index + i[0].length,
                                 n = i.index - l;
-                            (i.index > l &&
+                            i.index > l &&
                                 (e.length > 0 &&
                                     a.push({
                                         types: [...e],
                                         start: s,
-                                        end: s + n
+                                        end: s + n,
                                     }),
                                 (s += n)),
-                                '</span>' === i[0] ? e.pop() : e.push(i[1]),
-                                (l = t));
+                                "</span>" === i[0] ? e.pop() : e.push(i[1]),
+                                (l = t);
                         }
                         if (e.length > 0) {
                             let t = o.length - l;
                             a.push({
                                 types: [...e],
                                 start: s,
-                                end: s + t
+                                end: s + t,
                             });
                         }
                         t[n].hljsTypes = a;
@@ -145,23 +152,23 @@ function v(e) {
             }
             t = [];
         }
-        (n && t.push(i), i.opensCodeBlock && (n = !0));
+        n && t.push(i), i.opensCodeBlock && (n = !0);
     }
 }
 let I = {
         max: 1 / 0,
         maxAge: +a.Z.Millis.MINUTE,
-        updateAgeOnGet: !0
+        updateAgeOnGet: !0,
     },
     T = new (o())(I);
 function S(e, t) {
-    let n = ''.concat(e, '-').concat(t),
+    let n = "".concat(e, "-").concat(t),
         r = T.get(n);
     if (null != r) return r;
     let i = s.default.highlight(t, e, !1);
     if (null == i || i.illegal) return null;
-    let o = i.value.split('\n');
-    return (T.set(n, o), o);
+    let o = i.value.split("\n");
+    return T.set(n, o), o;
 }
 function A(e) {
     let t,
@@ -173,13 +180,13 @@ function A(e) {
         let a = n.children[e];
         if (d.LC.isText(a))
             for (o.lastIndex = 0; null != (t = o.exec(a.text)); ) {
-                if ('\\' === t[0]) {
+                if ("\\" === t[0]) {
                     o.lastIndex += 1;
                     continue;
                 }
                 i.push({
                     path: d.C0.child(r, e),
-                    offset: t.index
+                    offset: t.index,
                 });
             }
     }
@@ -191,12 +198,12 @@ function N(e, t) {
         at: {
             anchor: {
                 path: f.u9,
-                offset: 0
+                offset: 0,
             },
-            focus: t
+            focus: t,
         },
-        mode: 'lowest',
-        match: (e) => d.LC.isText(e)
+        mode: "lowest",
+        match: (e) => d.LC.isText(e),
     })) {
         var r;
         let e = i[0].text;

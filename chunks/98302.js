@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(846519),
     i = n(147913),
     o = n(603113),
@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,25 +29,32 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let E = +_.Z.Millis.MINUTE;
 class b extends i.Z {
     _initialize() {
-        __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(d.Z, () => this._handleSpeakingStoreChanged()).set(c.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
+        __OVERLAY__
+            ? (this.stores = new Map())
+            : ((this.stores = new Map()
+                  .set(d.Z, () => this._handleSpeakingStoreChanged())
+                  .set(c.Z, () => this._handleRTCConnectionStoreChanged())),
+              this._reset());
     }
     _reset() {
-        ((this._currentUserSpeaking = !1), (this._anyoneElseSpeaking = !1), null != this._reportInterval && (this._reportInterval.stop(), (this._reportInterval = null)));
+        (this._currentUserSpeaking = !1),
+            (this._anyoneElseSpeaking = !1),
+            null != this._reportInterval && (this._reportInterval.stop(), (this._reportInterval = null));
     }
     _trackStartSpeaking() {
         if (this._currentUserSpeaking) {
@@ -65,11 +72,11 @@ class b extends i.Z {
                         guild_id: t,
                         rtc_connection_id: c.Z.getRTCConnectionId(),
                         media_session_id: c.Z.getMediaSessionId(),
-                        voice_state_count: f.ZP.countVoiceStatesForChannel(this._voiceChannelId)
+                        voice_state_count: f.ZP.countVoiceStatesForChannel(this._voiceChannelId),
                     },
                     this.getGameMetadata(),
-                    c.Z.getPacketStats()
-                )
+                    c.Z.getPacketStats(),
+                ),
             );
         }
     }
@@ -89,14 +96,16 @@ class b extends i.Z {
                     guild_id: t,
                     rtc_connection_id: c.Z.getRTCConnectionId(),
                     media_session_id: c.Z.getMediaSessionId(),
-                    voice_state_count: f.ZP.countVoiceStatesForChannel(this._voiceChannelId)
+                    voice_state_count: f.ZP.countVoiceStatesForChannel(this._voiceChannelId),
                 },
-                this.getGameMetadata()
-            )
+                this.getGameMetadata(),
+            ),
         );
     }
     _terminate() {
-        (this._reset(), d.Z.removeChangeListener(this._handleSpeakingStoreChanged), c.Z.removeChangeListener(this._handleRTCConnectionStoreChanged));
+        this._reset(),
+            d.Z.removeChangeListener(this._handleSpeakingStoreChanged),
+            c.Z.removeChangeListener(this._handleRTCConnectionStoreChanged);
     }
     getGameMetadata() {
         let e = u.Z.findActivity((e) => e.type === h.IIU.PLAYING),
@@ -108,32 +117,32 @@ class b extends i.Z {
             game_id: null != e ? e.application_id : null,
             game_distributor: null != t ? t.distributor : null,
             game_distributor_game_id: null != t ? t.sku : null,
-            game_metadata: null != t ? (0, s.sD)(t) : null
+            game_metadata: null != t ? (0, s.sD)(t) : null,
         };
     }
     constructor(...e) {
-        (super(...e),
-            m(this, '_currentUserSpeaking', !1),
-            m(this, '_anyoneElseSpeaking', !1),
-            m(this, '_voiceChannelId', void 0),
-            m(this, '_reportInterval', void 0),
-            m(this, '_handleRTCConnectionStoreChanged', () => {
+        super(...e),
+            m(this, "_currentUserSpeaking", !1),
+            m(this, "_anyoneElseSpeaking", !1),
+            m(this, "_voiceChannelId", void 0),
+            m(this, "_reportInterval", void 0),
+            m(this, "_handleRTCConnectionStoreChanged", () => {
                 let e = c.Z.getChannelId();
                 if (this._voiceChannelId !== e) {
                     if (((this._voiceChannelId = e), null == e)) return void this._reset();
                     null == this._reportInterval &&
                         ((this._reportInterval = new r.Xp()),
                         this._reportInterval.start(E, () => {
-                            (this._trackStartSpeaking(), this._trackStartListening());
+                            this._trackStartSpeaking(), this._trackStartListening();
                         }));
                 }
             }),
-            m(this, '_handleSpeakingStoreChanged', () => {
+            m(this, "_handleSpeakingStoreChanged", () => {
                 let e = d.Z.isCurrentUserSpeaking();
                 this._currentUserSpeaking !== e && ((this._currentUserSpeaking = e), this._trackStartSpeaking());
                 let t = d.Z.isAnyoneElseSpeaking();
                 this._anyoneElseSpeaking !== t && ((this._anyoneElseSpeaking = t), this._trackStartListening());
-            }));
+            });
     }
 }
 let y = new b();

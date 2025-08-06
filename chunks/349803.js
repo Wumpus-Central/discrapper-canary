@@ -14,12 +14,12 @@ var r = n(120356),
 let g = function (e) {
     let { isVisible: t, subscriptionTier: n, isApplicationHome: r, isEligibleForBogoPromotion: g } = e,
         h = (0, o.q_F)({
-            transform: t ? 'translateY(-100%)' : 'translateY(0%)',
+            transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: {
                 tension: 120,
-                friction: 12
-            }
+                friction: 12,
+            },
         }),
         f = { section: m.jXE.MARKETING_FLOATING_CTA },
         b = (0, c.ZP)(),
@@ -27,10 +27,10 @@ let g = function (e) {
     return (0, i.jsx)(a.animated.div, {
         className: s()(p.wrapper, {
             [p.fullscreenWrapper]: r,
-            [p.invisible]: !t
+            [p.invisible]: !t,
         }),
         style: h,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: r ? p.innerWrapperApplicationHome : p.innerWrapper,
             children: [
                 (0, i.jsx)(u.Z, {
@@ -40,13 +40,13 @@ let g = function (e) {
                     premiumModalAnalyticsLocation: f,
                     isPersistentCTA: !0,
                     hasActivePromotion: g,
-                    shinyButtonClassName: x ? void 0 : p.tier2Gradient
+                    shinyButtonClassName: x ? void 0 : p.tier2Gradient,
                 }),
                 (0, i.jsx)(d.Z, {
                     className: p.button,
-                    premiumModalAnalyticsLocation: f
-                })
-            ]
-        })
+                    premiumModalAnalyticsLocation: f,
+                }),
+            ],
+        }),
     });
 };

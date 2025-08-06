@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(73800),
     i = n(166516),
     l = n.n(i),
@@ -16,14 +16,14 @@ var r = n(73800),
     b = n(252618),
     _ = n(981631),
     O = n(388032);
-let E = new Set(['Blink', 'Gecko', 'WebKit']),
+let E = new Set(["Blink", "Gecko", "WebKit"]),
     y = _.dG4;
 if (g.isPlatformEmbedded) y = (e) => m.ZP.setBadge(e);
 else if (E.has(o().layout)) {
-    let e = new (l())({ animation: 'none' });
+    let e = new (l())({ animation: "none" });
     y = (t) => {
         try {
-            ((0, b.PR)(t), e.badge(-1 === t ? '\u2022' : t));
+            (0, b.PR)(t), e.badge(-1 === t ? "\u2022" : t);
         } catch (e) {}
     };
 }
@@ -35,21 +35,21 @@ function v() {
                 n = d.default.hasAnyUnread(),
                 r = p.Z.getDisableUnreadBadge(),
                 i = e + t;
-            return (0 === i && n && !r && (i = -1), i);
+            return 0 === i && n && !r && (i = -1), i;
         });
-    (r.useEffect(() => {
+    r.useEffect(() => {
         if (!e) return;
-        let t = m.ZP.bounceDock('critical'),
+        let t = m.ZP.bounceDock("critical"),
             n = (0, b.EM)({
-                messages: [O.intl.string(O.t['fk1/bW'])],
-                count: 50
+                messages: [O.intl.string(O.t["fk1/bW"])],
+                count: 50,
             });
         return () => {
-            (null == t || t(), n());
+            null == t || t(), n();
         };
     }, [e]),
         r.useEffect(() => {
             y(t);
         }, [t]),
-        r.useEffect(() => () => y(0), []));
+        r.useEffect(() => () => y(0), []);
 }

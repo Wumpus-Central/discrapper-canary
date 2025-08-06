@@ -10,35 +10,35 @@ let d = () => [
     {
         icon: c.perkNewsletter,
         title: o.intl.string(o.t.vURCf3),
-        description: o.intl.string(o.t.qqp5ZW)
+        description: o.intl.string(o.t.qqp5ZW),
     },
     {
         icon: c.perkBadge,
         title: o.intl.string(o.t.j4RYIy),
-        description: o.intl.string(o.t['3N3YOD'])
+        description: o.intl.string(o.t["3N3YOD"]),
     },
     {
         icon: c.perkChallenges,
         title: o.intl.string(o.t.Yu1bAg),
-        description: o.intl.string(o.t.noChoK)
-    }
+        description: o.intl.string(o.t.noChoK),
+    },
 ];
 class u extends r.Component {
     render() {
-        return (0, i.jsxs)('div', {
+        return (0, i.jsxs)("div", {
             className: c.features,
             children: [
                 (0, i.jsx)(l.Z, {
                     className: c.video,
-                    videoID: 'SWzB1mx2o5k'
+                    videoID: "SWzB1mx2o5k",
                 }),
                 (0, i.jsx)(s.X6q, {
                     className: c.perksHeading,
-                    variant: 'heading-sm/semibold',
-                    children: o.intl.string(o.t['ITh5+/'])
+                    variant: "heading-sm/semibold",
+                    children: o.intl.string(o.t["ITh5+/"]),
                 }),
-                (0, i.jsx)(a.Z, { features: d() })
-            ]
+                (0, i.jsx)(a.Z, { features: d() }),
+            ],
         });
     }
 }

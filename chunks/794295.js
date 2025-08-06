@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,8 @@ function h(e, t) {
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,32 +77,32 @@ function m(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let g = 1,
     E = i.memo(function (e) {
         let { onClick: t, trusted: n, title: o, href: d, children: _, messageId: m, channelId: E } = e,
-            b = h(e, ['onClick', 'trusted', 'title', 'href', 'children', 'messageId', 'channelId']),
+            b = h(e, ["onClick", "trusted", "title", "href", "children", "messageId", "channelId"]),
             { analyticsLocations: y } = (0, c.ZP)(l.Z.MASKED_LINK),
             O = i.useCallback((t) => (0, u.q)(e, t, y), [y, e]),
             v = i.useCallback(
                 (e) => {
                     e.button === g && O(e);
                 },
-                [O]
+                [O],
             ),
             I = a().sanitizeUrl(d);
         return (0, r.jsx)(
             s.eee,
             p(f({}, b), {
                 title: o,
-                target: '_blank',
-                rel: 'noreferrer noopener',
+                target: "_blank",
+                rel: "noreferrer noopener",
                 href: I,
                 onClick: O,
                 onAuxClick: v,
-                children: null != _ ? _ : o
-            })
+                children: null != _ ? _ : o,
+            }),
         );
     });

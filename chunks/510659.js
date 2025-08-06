@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     $m: () => d,
     NJ: () => u,
     Xo: () => _,
-    yi: () => f
+    yi: () => f,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(512722),
@@ -16,7 +16,7 @@ function u(e) {
     let { value: t, children: n } = e;
     return (0, r.jsx)(c.Provider, {
         value: t,
-        children: n
+        children: n,
     });
 }
 function d() {
@@ -25,7 +25,7 @@ function d() {
         [o, a] = i.useState(null),
         [c, u] = i.useState(i.createRef()),
         d = i.useCallback((e) => {
-            (t(e.interactionType), r(e.interactionSource), a(e.interactionSourceId));
+            t(e.interactionType), r(e.interactionSource), a(e.interactionSourceId);
         }, []),
         f = i.useCallback((e) => {
             u(e);
@@ -34,7 +34,7 @@ function d() {
             d({
                 interactionType: null,
                 interactionSource: null,
-                interactionSourceId: null
+                interactionSourceId: null,
             });
         }, [d]),
         [p, h] = i.useState(!1),
@@ -42,9 +42,9 @@ function d() {
         [E] = i.useState(new s.V7()),
         b = i.useCallback(
             (e) => {
-                (g(e), h(!0), null === e ? E.stop() : E.start(l._1, () => h(!1)));
+                g(e), h(!0), null === e ? E.stop() : E.start(l._1, () => h(!1));
             },
-            [E]
+            [E],
         );
     return (
         i.useEffect(() => {
@@ -61,9 +61,9 @@ function d() {
                 showInteractionToast: p,
                 interactionTypeSent: m,
                 interactionPopoutTargetRef: c,
-                onInteractionPopoutTargetRefChange: f
+                onInteractionPopoutTargetRefChange: f,
             }),
-            [d, b, n, o, p, e, m, _, c, f]
+            [d, b, n, o, p, e, m, _, c, f],
         )
     );
 }
@@ -72,5 +72,7 @@ function f() {
 }
 function _() {
     let e = f();
-    return (a()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e);
+    return (
+        a()(null != e, "must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider"), e
+    );
 }

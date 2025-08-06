@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { Anchor: () => b }), n(415506));
+n.r(t), n.d(t, { Anchor: () => b }), n(415506);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,7 +68,8 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -78,12 +79,36 @@ function E(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function b(e) {
-    var { href: t, onClick: n, className: o, children: _, rel: h, target: E, useDefaultUnderlineStyles: b = !0, title: y, style: O, focusProps: v, ref: I } = e,
-        T = g(e, ['href', 'onClick', 'className', 'children', 'rel', 'target', 'useDefaultUnderlineStyles', 'title', 'style', 'focusProps', 'ref']);
+    var {
+            href: t,
+            onClick: n,
+            className: o,
+            children: _,
+            rel: h,
+            target: E,
+            useDefaultUnderlineStyles: b = !0,
+            title: y,
+            style: O,
+            focusProps: v,
+            ref: I,
+        } = e,
+        T = g(e, [
+            "href",
+            "onClick",
+            "className",
+            "children",
+            "rel",
+            "target",
+            "useDefaultUnderlineStyles",
+            "title",
+            "style",
+            "focusProps",
+            "ref",
+        ]);
     null != t && null == n && (n = u.X.getDefaultLinkInterceptor(t));
     let S = i.useContext(s.g),
         A = {
@@ -93,28 +118,30 @@ function b(e) {
             rel: null != h ? h : void 0,
             target: null != E ? E : void 0,
             title: null != y ? y : void 0,
-            style: null != O ? O : void 0
+            style: null != O ? O : void 0,
         };
-    return (null == t || (0, d.B)(t) || ((A.rel = 'noreferrer noopener'), (A.target = '_blank')), S && delete A.href, null != n)
+    return (null == t || (0, d.B)(t) || ((A.rel = "noreferrer noopener"), (A.target = "_blank")),
+    S && delete A.href,
+    null != n)
         ? (0, r.jsx)(
               l.P,
-              m(p({ tag: 'a' }, T, A), {
+              m(p({ tag: "a" }, T, A), {
                   onClick: n,
                   focusProps: v,
                   innerRef: I,
-                  children: _
-              })
+                  children: _,
+              }),
           )
         : (0, r.jsx)(
               c.t,
               m(p({}, v), {
                   children: (0, r.jsx)(
-                      'a',
+                      "a",
                       m(p({}, T, A), {
                           ref: I,
-                          children: _
-                      })
-                  )
-              })
+                          children: _,
+                      }),
+                  ),
+              }),
           );
 }

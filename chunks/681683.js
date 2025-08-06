@@ -1,35 +1,35 @@
 e.exports = function (e) {
-    let t = 'if eq ne lt lte gt gte select default math sep';
+    let t = "if eq ne lt lte gt gte select default math sep";
     return {
-        name: 'Dust',
-        aliases: ['dst'],
+        name: "Dust",
+        aliases: ["dst"],
         case_insensitive: !0,
-        subLanguage: 'xml',
+        subLanguage: "xml",
         contains: [
             {
-                className: 'template-tag',
+                className: "template-tag",
                 begin: /\{[#\/]/,
                 end: /\}/,
                 illegal: /;/,
                 contains: [
                     {
-                        className: 'name',
+                        className: "name",
                         begin: /[a-zA-Z\.-]+/,
                         starts: {
                             endsWithParent: !0,
                             relevance: 0,
-                            contains: [e.QUOTE_STRING_MODE]
-                        }
-                    }
-                ]
+                            contains: [e.QUOTE_STRING_MODE],
+                        },
+                    },
+                ],
             },
             {
-                className: 'template-variable',
+                className: "template-variable",
                 begin: /\{/,
                 end: /\}/,
                 illegal: /;/,
-                keywords: t
-            }
-        ]
+                keywords: t,
+            },
+        ],
     };
 };

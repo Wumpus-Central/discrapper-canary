@@ -21,16 +21,16 @@ function k(e, t, a) {
                   value: a,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = a),
         e
     );
 }
-let g = 'Footer Navigation',
+let g = "Footer Navigation",
     A = {
-        BLURPLE: 'Blurple',
-        PRIMARY: 'Primary'
+        BLURPLE: "Blurple",
+        PRIMARY: "Primary",
     },
     O = () => [
         {
@@ -39,20 +39,20 @@ let g = 'Footer Navigation',
                 {
                     link: m.am.DOWNLOAD,
                     title: h.Z.Messages.NAVIGATION_DOWNLOAD,
-                    tracking: 'download'
+                    tracking: "download",
                 },
                 {
                     link: m.am.BRANDING,
                     title: h.Z.Messages.NAVIGATION_BRANDING,
-                    tracking: 'branding'
+                    tracking: "branding",
                 },
                 {
                     link: m.am.NITRO,
                     title: h.Z.Messages.NAVIGATION_NITRO,
-                    tracking: 'nitro',
-                    external: !0
-                }
-            ]
+                    tracking: "nitro",
+                    external: !0,
+                },
+            ],
         },
         {
             title: h.Z.Messages.NAVIGATION_DEVELOPERS,
@@ -60,27 +60,27 @@ let g = 'Footer Navigation',
                 {
                     link: m.am.RICH_PRESENCE,
                     title: h.Z.Messages.NAVIGATION_RICH_PRESENCE,
-                    tracking: 'rich_presence'
+                    tracking: "rich_presence",
                 },
                 {
                     link: m.am.VERIFICATION,
                     title: h.Z.Messages.NAVIGATION_VERIFICATION,
-                    tracking: 'verification',
-                    external: !0
+                    tracking: "verification",
+                    external: !0,
                 },
                 {
                     link: m.yX.DEV_PORTAL_APPLICATIONS,
                     title: h.Z.Messages.NAVIGATION_APPLICATIONS,
-                    tracking: 'developers',
-                    external: !0
+                    tracking: "developers",
+                    external: !0,
                 },
                 {
                     link: m.yX.DEV_PORTAL_DOCUMENTATION,
                     title: h.Z.Messages.NAVIGATION_DOCUMENTATION,
-                    tracking: 'documentation',
-                    external: !0
-                }
-            ]
+                    tracking: "documentation",
+                    external: !0,
+                },
+            ],
         },
         {
             title: h.Z.Messages.NAVIGATION_RESOURCES,
@@ -88,51 +88,51 @@ let g = 'Footer Navigation',
                 {
                     link: m.yX.HELP_AND_SUPPORT,
                     title: h.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
-                    tracking: 'helpandsupport',
-                    external: !0
+                    tracking: "helpandsupport",
+                    external: !0,
                 },
                 {
                     link: m.am.GUIDELINES,
                     title: h.Z.Messages.NAVIGATION_GUIDELINES,
-                    tracking: 'guidelines',
-                    external: !0
+                    tracking: "guidelines",
+                    external: !0,
                 },
                 {
                     link: m.yX.FEEDBACK,
                     title: h.Z.Messages.NAVIGATION_FEEDBACK,
-                    tracking: 'feedback',
-                    external: !0
+                    tracking: "feedback",
+                    external: !0,
                 },
                 {
                     link: m.am.TERMS,
                     title: h.Z.Messages.NAVIGATION_TERMS,
-                    tracking: 'terms',
-                    external: !0
+                    tracking: "terms",
+                    external: !0,
                 },
                 {
                     link: m.am.PRIVACY,
                     title: h.Z.Messages.NAVIGATION_PRIVACY,
-                    tracking: 'privacy',
-                    external: !0
+                    tracking: "privacy",
+                    external: !0,
                 },
                 {
                     link: m.am.SECURITY,
                     title: h.Z.Messages.NAVIGATION_SECURITY,
-                    tracking: 'security'
+                    tracking: "security",
                 },
                 {
                     link: m.yX.STATUS,
                     title: h.Z.Messages.NAVIGATION_STATUS,
-                    tracking: 'status',
-                    external: !0
+                    tracking: "status",
+                    external: !0,
                 },
                 {
                     link: m.am.SAFETY_LANDING,
                     title: h.Z.Messages.NAVIGATION_SAFETY_CENTER,
-                    tracking: 'safetycenter',
-                    external: !0
-                }
-            ]
+                    tracking: "safetycenter",
+                    external: !0,
+                },
+            ],
         },
         {
             title: h.Z.Messages.NAVIGATION_COMPANY,
@@ -140,21 +140,21 @@ let g = 'Footer Navigation',
                 {
                     link: m.am.COMPANY,
                     title: h.Z.Messages.NAVIGATION_ABOUT,
-                    tracking: 'about'
+                    tracking: "about",
                 },
                 {
                     link: m.am.BLOG,
                     title: h.Z.Messages.NAVIGATION_BLOG,
-                    tracking: 'blog',
-                    external: !0
+                    tracking: "blog",
+                    external: !0,
                 },
                 {
                     link: m.am.JOBS,
                     title: h.Z.Messages.NAVIGATION_JOBS,
-                    tracking: 'join',
-                    external: !0
-                }
-            ]
+                    tracking: "join",
+                    external: !0,
+                },
+            ],
         },
         {
             title: h.Z.Messages.NAVIGATION_MORE,
@@ -162,85 +162,92 @@ let g = 'Footer Navigation',
                 {
                     link: m.am.PARTNERS,
                     title: h.Z.Messages.NAVIGATION_PARTNERS,
-                    tracking: 'partners',
-                    external: !0
+                    tracking: "partners",
+                    external: !0,
                 },
                 {
                     link: m.am.HYPESQUAD,
                     title: h.Z.Messages.NAVIGATION_HYPESQUAD,
-                    tracking: 'hypesquad',
-                    external: !0
+                    tracking: "hypesquad",
+                    external: !0,
                 },
                 {
                     link: m.yX.PRESS_INQUIRIES,
                     title: h.Z.Messages.NAVIGATION_PRESS_INQUIRIES,
-                    tracking: 'pressinquiries',
-                    external: !0
+                    tracking: "pressinquiries",
+                    external: !0,
                 },
                 {
                     link: m.am.OPEN_SOURCE,
                     title: h.Z.Messages.NAVIGATION_OPEN_SOURCE,
-                    tracking: 'open_source'
-                }
-            ]
-        }
+                    tracking: "open_source",
+                },
+            ],
+        },
     ],
     f = (e) => {
         let { colorVariant: t, animate: a } = e;
-        return (0, s.jsx)('svg', {
-            className: (0, u.l)(I, 'footerBackground', t),
-            preserveAspectRatio: 'none',
-            width: '1920',
-            height: '100%',
-            viewBox: '0 0 1920 330',
-            version: '1.1',
-            children: (0, s.jsx)('path', {
-                className: (0, u.l)(I, 'footerBackground', a ? 'Play' : 'Paused'),
-                fill: '#1a1c1e',
-                fillOpacity: '0.3',
-                d: 'M140.881198,194.260295 C257.600568,129.32862 342.939626,119.84993 418.009939,203.154617 C493.080251,286.459305 545.728689,70.9046172 636.439626,63.9593047 C727.150564,57.0139922 768.99822,139.670242 858.802907,119.431961 C948.607595,99.1936797 1071.91228,-32.9977266 1243.91228,7.75227342 C1415.91228,48.5022734 1404.10369,208.584305 1508.27166,178.709305 C1612.43963,148.834305 1633.73291,79.913472 1711.63588,98.8569055 C1776.28676,114.577866 1819.96778,221.391836 1889.37253,185.808108 C2017.32661,120.206212 2004.01952,336.769569 2004.01952,336.769569 L271.635881,337 L-149.063338,337 C-149.063338,337 -245.850307,175.637635 -58.0633382,228.867188 C33.8652851,254.92501 64.1722713,236.933925 140.881198,194.260295 Z'
-            })
+        return (0, s.jsx)("svg", {
+            className: (0, u.l)(I, "footerBackground", t),
+            preserveAspectRatio: "none",
+            width: "1920",
+            height: "100%",
+            viewBox: "0 0 1920 330",
+            version: "1.1",
+            children: (0, s.jsx)("path", {
+                className: (0, u.l)(I, "footerBackground", a ? "Play" : "Paused"),
+                fill: "#1a1c1e",
+                fillOpacity: "0.3",
+                d: "M140.881198,194.260295 C257.600568,129.32862 342.939626,119.84993 418.009939,203.154617 C493.080251,286.459305 545.728689,70.9046172 636.439626,63.9593047 C727.150564,57.0139922 768.99822,139.670242 858.802907,119.431961 C948.607595,99.1936797 1071.91228,-32.9977266 1243.91228,7.75227342 C1415.91228,48.5022734 1404.10369,208.584305 1508.27166,178.709305 C1612.43963,148.834305 1633.73291,79.913472 1711.63588,98.8569055 C1776.28676,114.577866 1819.96778,221.391836 1889.37253,185.808108 C2017.32661,120.206212 2004.01952,336.769569 2004.01952,336.769569 L271.635881,337 L-149.063338,337 C-149.063338,337 -245.850307,175.637635 -58.0633382,228.867188 C33.8652851,254.92501 64.1722713,236.933925 140.881198,194.260295 Z",
+            }),
         });
     };
 class b extends (r = l.PureComponent) {
     componentDidMount() {
         this.setState({
             token: (0, d.getToken)(),
-            isAppCompatible: p.KO
+            isAppCompatible: p.KO,
         });
     }
     renderAppButton(e) {
-        if ('STATIC_RENDERER' === this.props.platform) return null;
-        let { downloadLink: t, isMobile: a, mobileDownloadText: r, platform: l, variant: i, authRedirectTo: o } = this.props,
+        if ("STATIC_RENDERER" === this.props.platform) return null;
+        let {
+                downloadLink: t,
+                isMobile: a,
+                mobileDownloadText: r,
+                platform: l,
+                variant: i,
+                authRedirectTo: o,
+            } = this.props,
             { isAppCompatible: c } = this.state;
         if (a)
             return (0, s.jsx)(n, {
-                eventName: 'Download App',
+                eventName: "Download App",
                 data: {
                     Platform: l,
                     PTB: !1,
                     Released: !0,
-                    'Referring Location': 'Footer'
+                    "Referring Location": "Footer",
                 },
-                alt: 'Download Discord',
-                target: '_blank',
-                className: (0, u.l)(I, 'button', i),
+                alt: "Download Discord",
+                target: "_blank",
+                className: (0, u.l)(I, "button", i),
                 href: t,
-                children: r
+                children: r,
             });
         if (!c)
             return (0, s.jsx)(n, {
-                eventName: 'Download App',
+                eventName: "Download App",
                 data: {
                     Platform: l,
                     PTB: !1,
                     Released: !0,
-                    'Referring Location': 'Footer'
+                    "Referring Location": "Footer",
                 },
-                alt: 'Download Discord',
-                className: (0, u.l)(I, 'button', i),
+                alt: "Download Discord",
+                className: (0, u.l)(I, "button", i),
                 href: m.am.DOWNLOAD,
-                children: h.Z.Messages.NAVIGATION_DOWNLOAD
+                children: h.Z.Messages.NAVIGATION_DOWNLOAD,
             });
         let d = null != o ? m.$w.REGISTER_WITH_REDIRECT(o) : m.$w.REGISTER,
             _ = h.Z.Messages.COMMON_SIGN_UP_NOW;
@@ -248,13 +255,13 @@ class b extends (r = l.PureComponent) {
             e && ((d = m.$w.ME), (_ = h.Z.Messages.COMMON_OPEN_DISCORD)),
             (0, s.jsx)(n, {
                 eventName: g,
-                className: (0, u.l)(I, 'button', this.props.variant),
+                className: (0, u.l)(I, "button", this.props.variant),
                 data: {
-                    linkClicked: e ? 'open' : 'login',
-                    googleAnalytics: !0
+                    linkClicked: e ? "open" : "login",
+                    googleAnalytics: !0,
                 },
                 href: d,
-                children: _
+                children: _,
             })
         );
     }
@@ -271,114 +278,116 @@ class b extends (r = l.PureComponent) {
                                   eventName: g,
                                   data: { linkClicked: e.tracking },
                                   href: e.link,
-                                  children: e.title
+                                  children: e.title,
                               },
-                              e.link || t
+                              e.link || t,
                           )
                         : (0, s.jsx)(
                               N.Z,
                               {
                                   avoidRouter: l,
                                   to: e.link,
-                                  from: 'footer_navigation',
+                                  from: "footer_navigation",
                                   className: I.route,
                                   children: (0, s.jsx)(n, {
-                                      tag: 'span',
+                                      tag: "span",
                                       eventName: g,
                                       data: { linkClicked: e.tracking },
-                                      children: e.title
-                                  })
+                                      children: e.title,
+                                  }),
                               },
-                              e.link
-                          )
+                              e.link,
+                          ),
                 );
                 return (0, s.jsxs)(
-                    'div',
+                    "div",
                     {
                         className: I.navigationSection,
                         children: [
-                            (0, s.jsx)('h3', {
+                            (0, s.jsx)("h3", {
                                 className: I.navigationHeader,
-                                children: e.title
+                                children: e.title,
                             }),
-                            t
-                        ]
+                            t,
+                        ],
                     },
-                    e.title
+                    e.title,
                 );
             });
         return (0, s.jsx)(c.$, {
             innerRef: this.ref,
             onChange: this.handleVisibility,
-            children: (0, s.jsxs)('footer', {
+            children: (0, s.jsxs)("footer", {
                 ref: this.ref,
-                className: o()((0, u.l)(I, 'footer', e), r),
+                className: o()((0, u.l)(I, "footer", e), r),
                 style: t,
                 children: [
                     i
                         ? (0, s.jsx)(f, {
                               colorVariant: e,
-                              animate: d
+                              animate: d,
                           })
                         : null,
-                    (0, s.jsxs)('div', {
+                    (0, s.jsxs)("div", {
                         className: I.footerContent,
                         children: [
-                            (0, s.jsxs)('div', {
+                            (0, s.jsxs)("div", {
                                 className: I.navigation,
                                 children: [
-                                    (0, s.jsx)('div', {
+                                    (0, s.jsx)("div", {
                                         className: I.logoWrap,
                                         children: (0, s.jsx)(n, {
                                             className: I.logo,
                                             href: m.am.INDEX,
                                             eventName: g,
-                                            data: { linkClicked: 'logo' },
-                                            children: (0, s.jsx)('img', {
+                                            data: { linkClicked: "logo" },
+                                            children: (0, s.jsx)("img", {
                                                 alt: h.Z.Messages.NAVIGATION_HOME,
-                                                src: a(131529)
-                                            })
-                                        })
+                                                src: a(131529),
+                                            }),
+                                        }),
                                     }),
-                                    p
-                                ]
+                                    p,
+                                ],
                             }),
-                            (0, s.jsx)('div', { className: I.separator }),
-                            (0, s.jsxs)('div', {
+                            (0, s.jsx)("div", { className: I.separator }),
+                            (0, s.jsxs)("div", {
                                 className: I.joinDiscord,
                                 children: [
-                                    (0, s.jsxs)('div', {
+                                    (0, s.jsxs)("div", {
                                         className: I.stats,
                                         children: [
-                                            (0, s.jsx)('h2', {
+                                            (0, s.jsx)("h2", {
                                                 className: I.readyToJoin,
-                                                children: h.Z.Messages.FOOTER_READY_TO_TRY_DISCORD
+                                                children: h.Z.Messages.FOOTER_READY_TO_TRY_DISCORD,
                                             }),
-                                            (0, s.jsx)('h3', {
+                                            (0, s.jsx)("h3", {
                                                 className: I.joinOtherPlayers,
-                                                children: h.Z.Messages.FOOTER_JOIN_OVER_PLAYERS_TODAY.format({ num: m.vS })
-                                            })
-                                        ]
+                                                children: h.Z.Messages.FOOTER_JOIN_OVER_PLAYERS_TODAY.format({
+                                                    num: m.vS,
+                                                }),
+                                            }),
+                                        ],
                                     }),
-                                    this.renderAppButton(_)
-                                ]
-                            })
-                        ]
-                    })
-                ]
-            })
+                                    this.renderAppButton(_),
+                                ],
+                            }),
+                        ],
+                    }),
+                ],
+            }),
         });
     }
     constructor(e) {
-        (super(e),
-            k(this, 'state', {
+        super(e),
+            k(this, "state", {
                 animateBackground: !1,
                 isMobile: null,
                 token: null,
-                isAppCompatible: !0
+                isAppCompatible: !0,
             }),
-            k(this, 'ref', l.createRef()),
-            k(this, 'handleVisibility', (e) => {
+            k(this, "ref", l.createRef()),
+            k(this, "handleVisibility", (e) => {
                 this.setState({ animateBackground: e });
             }),
             null != e.locale && h.Z.setLocale(e.locale),
@@ -389,29 +398,29 @@ class b extends (r = l.PureComponent) {
                         for (var t = 1; t < arguments.length; t++) {
                             var a = null != arguments[t] ? arguments[t] : {},
                                 n = Object.keys(a);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (n = n.concat(
                                     Object.getOwnPropertySymbols(a).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 n.forEach(function (t) {
                                     k(e, t, a[t]);
-                                }));
+                                });
                         }
                         return e;
                     })(
                         {
                             track: e.track,
-                            trackOutboundLink: e.trackOutboundLink
+                            trackOutboundLink: e.trackOutboundLink,
                         },
-                        t
-                    )
-                )));
+                        t,
+                    ),
+                ));
     }
 }
-(k(b, 'Variants', A),
-    k(b, 'defaultProps', {
+k(b, "Variants", A),
+    k(b, "defaultProps", {
         variant: A.PRIMARY,
-        showWave: !0
-    }));
+        showWave: !0,
+    });

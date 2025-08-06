@@ -2,199 +2,199 @@ e.exports = function (e) {
     let t = e.regex,
         n = {
             begin: /<\/?[A-Za-z_]/,
-            end: '>',
-            subLanguage: 'xml',
-            relevance: 0
+            end: ">",
+            subLanguage: "xml",
+            relevance: 0,
         },
         r = {
-            begin: '^[-\\*]{3,}',
-            end: '$'
+            begin: "^[-\\*]{3,}",
+            end: "$",
         },
         i = {
-            className: 'code',
+            className: "code",
             variants: [
-                { begin: '(`{3,})[^`](.|\\n)*?\\1`*[ ]*' },
-                { begin: '(~{3,})[^~](.|\\n)*?\\1~*[ ]*' },
+                { begin: "(`{3,})[^`](.|\\n)*?\\1`*[ ]*" },
+                { begin: "(~{3,})[^~](.|\\n)*?\\1~*[ ]*" },
                 {
-                    begin: '```',
-                    end: '```+[ ]*$'
+                    begin: "```",
+                    end: "```+[ ]*$",
                 },
                 {
-                    begin: '~~~',
-                    end: '~~~+[ ]*$'
+                    begin: "~~~",
+                    end: "~~~+[ ]*$",
                 },
-                { begin: '`.+?`' },
+                { begin: "`.+?`" },
                 {
-                    begin: '(?=^( {4}|\\t))',
+                    begin: "(?=^( {4}|\\t))",
                     contains: [
                         {
-                            begin: '^( {4}|\\t)',
-                            end: '(\\n)$'
-                        }
+                            begin: "^( {4}|\\t)",
+                            end: "(\\n)$",
+                        },
                     ],
-                    relevance: 0
-                }
-            ]
+                    relevance: 0,
+                },
+            ],
         },
         o = {
-            className: 'bullet',
-            begin: '^[ \t]*([*+-]|(\\d+\\.))(?=\\s+)',
-            end: '\\s+',
-            excludeEnd: !0
+            className: "bullet",
+            begin: "^[ \t]*([*+-]|(\\d+\\.))(?=\\s+)",
+            end: "\\s+",
+            excludeEnd: !0,
         },
         a = {
             begin: /^\[[^\n]+\]:/,
             returnBegin: !0,
             contains: [
                 {
-                    className: 'symbol',
+                    className: "symbol",
                     begin: /\[/,
                     end: /\]/,
                     excludeBegin: !0,
-                    excludeEnd: !0
+                    excludeEnd: !0,
                 },
                 {
-                    className: 'link',
+                    className: "link",
                     begin: /:\s*/,
                     end: /$/,
-                    excludeBegin: !0
-                }
-            ]
+                    excludeBegin: !0,
+                },
+            ],
         },
         s = /[A-Za-z][A-Za-z0-9+.-]*/,
         l = {
             variants: [
                 {
                     begin: /\[.+?\]\[.*?\]/,
-                    relevance: 0
+                    relevance: 0,
                 },
                 {
                     begin: /\[.+?\]\(((data|javascript|mailto):|(?:http|ftp)s?:\/\/).*?\)/,
-                    relevance: 2
+                    relevance: 2,
                 },
                 {
                     begin: t.concat(/\[.+?\]\(/, s, /:\/\/.*?\)/),
-                    relevance: 2
+                    relevance: 2,
                 },
                 {
                     begin: /\[.+?\]\([./?&#].*?\)/,
-                    relevance: 1
+                    relevance: 1,
                 },
                 {
                     begin: /\[.*?\]\(.*?\)/,
-                    relevance: 0
-                }
+                    relevance: 0,
+                },
             ],
             returnBegin: !0,
             contains: [
                 { match: /\[(?=\])/ },
                 {
-                    className: 'string',
+                    className: "string",
                     relevance: 0,
-                    begin: '\\[',
-                    end: '\\]',
+                    begin: "\\[",
+                    end: "\\]",
                     excludeBegin: !0,
-                    returnEnd: !0
+                    returnEnd: !0,
                 },
                 {
-                    className: 'link',
+                    className: "link",
                     relevance: 0,
-                    begin: '\\]\\(',
-                    end: '\\)',
+                    begin: "\\]\\(",
+                    end: "\\)",
                     excludeBegin: !0,
-                    excludeEnd: !0
+                    excludeEnd: !0,
                 },
                 {
-                    className: 'symbol',
+                    className: "symbol",
                     relevance: 0,
-                    begin: '\\]\\[',
-                    end: '\\]',
+                    begin: "\\]\\[",
+                    end: "\\]",
                     excludeBegin: !0,
-                    excludeEnd: !0
-                }
-            ]
+                    excludeEnd: !0,
+                },
+            ],
         },
         c = {
-            className: 'strong',
+            className: "strong",
             contains: [],
             variants: [
                 {
                     begin: /_{2}(?!\s)/,
-                    end: /_{2}/
+                    end: /_{2}/,
                 },
                 {
                     begin: /\*{2}(?!\s)/,
-                    end: /\*{2}/
-                }
-            ]
+                    end: /\*{2}/,
+                },
+            ],
         },
         u = {
-            className: 'emphasis',
+            className: "emphasis",
             contains: [],
             variants: [
                 {
                     begin: /\*(?![*\s])/,
-                    end: /\*/
+                    end: /\*/,
                 },
                 {
                     begin: /_(?![_\s])/,
                     end: /_/,
-                    relevance: 0
-                }
-            ]
+                    relevance: 0,
+                },
+            ],
         },
         d = e.inherit(c, { contains: [] }),
         f = e.inherit(u, { contains: [] });
-    (c.contains.push(f), u.contains.push(d));
+    c.contains.push(f), u.contains.push(d);
     let _ = [n, l];
     return (
         [c, u, d, f].forEach((e) => {
             e.contains = e.contains.concat(_);
         }),
         {
-            name: 'Markdown',
-            aliases: ['md', 'mkdown', 'mkd'],
+            name: "Markdown",
+            aliases: ["md", "mkdown", "mkd"],
             contains: [
                 {
-                    className: 'section',
+                    className: "section",
                     variants: [
                         {
-                            begin: '^#{1,6}',
-                            end: '$',
-                            contains: (_ = _.concat(c, u))
+                            begin: "^#{1,6}",
+                            end: "$",
+                            contains: (_ = _.concat(c, u)),
                         },
                         {
-                            begin: '(?=^.+?\\n[=-]{2,}$)',
+                            begin: "(?=^.+?\\n[=-]{2,}$)",
                             contains: [
-                                { begin: '^[=-]*$' },
+                                { begin: "^[=-]*$" },
                                 {
-                                    begin: '^',
-                                    end: '\\n',
-                                    contains: _
-                                }
-                            ]
-                        }
-                    ]
+                                    begin: "^",
+                                    end: "\\n",
+                                    contains: _,
+                                },
+                            ],
+                        },
+                    ],
                 },
                 n,
                 o,
                 c,
                 u,
                 {
-                    className: 'quote',
-                    begin: '^>\\s+',
+                    className: "quote",
+                    begin: "^>\\s+",
                     contains: _,
-                    end: '$'
+                    end: "$",
                 },
                 i,
                 r,
                 l,
                 a,
                 {
-                    scope: 'literal',
-                    match: /&([a-zA-Z0-9]+|#[0-9]{1,7}|#[Xx][0-9a-fA-F]{1,6});/
-                }
-            ]
+                    scope: "literal",
+                    match: /&([a-zA-Z0-9]+|#[0-9]{1,7}|#[Xx][0-9a-fA-F]{1,6});/,
+                },
+            ],
         }
     );
 };

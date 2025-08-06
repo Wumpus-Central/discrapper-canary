@@ -4,16 +4,16 @@ var r = n(570140),
     o = n(981631);
 function a(e, t, n) {
     r.Z.dispatch({
-        type: 'MESSAGE_CREATE',
+        type: "MESSAGE_CREATE",
         channelId: e,
         message: s({
             channelId: e,
             requesterUser: t,
-            requestToSpeakTimestamp: n
+            requestToSpeakTimestamp: n,
         }),
         optimistic: !1,
         sendMessageOptions: {},
-        isPushNotification: !1
+        isPushNotification: !1,
     });
 }
 function s(e) {
@@ -22,7 +22,7 @@ function s(e) {
         id: i.default.fromTimestamp(Date.parse(r)),
         type: o.uaV.STAGE_RAISE_HAND,
         flags: o.iLy.EPHEMERAL,
-        content: '',
+        content: "",
         channel_id: t,
         author: n,
         attachments: [],
@@ -34,6 +34,6 @@ function s(e) {
         mention_everyone: !1,
         timestamp: r,
         state: o.yb.SENT,
-        tts: !1
+        tts: !1,
     };
 }

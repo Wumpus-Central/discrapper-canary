@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -78,13 +78,19 @@ function A() {
 }
 class N extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        ((null == e ? void 0 : e.theme) != null && ((y = 1), (I = e.theme), (0, u.Z)(I), null != e.preferences && (O = e.preferences), (0, o.wj)(I) && (O[p.zd.DARK] = I)), this.waitFor(f.ZP, d.Z, _.Z, s.Z));
+        (null == e ? void 0 : e.theme) != null &&
+            ((y = 1),
+            (I = e.theme),
+            (0, u.Z)(I),
+            null != e.preferences && (O = e.preferences),
+            (0, o.wj)(I) && (O[p.zd.DARK] = I)),
+            this.waitFor(f.ZP, d.Z, _.Z, s.Z);
     }
     getState() {
         return {
             theme: this.theme,
             preferences: O,
-            status: y
+            status: y,
         };
     }
     get theme() {
@@ -98,36 +104,36 @@ class N extends (r = i.ZP.PersistedStore) {
     }
 }
 function C() {
-    return (0 === y && ((O = b(g({}, O), { [p.zd.DARK]: h.BRd.DARKER })), (y = 1)), A());
+    return 0 === y && ((O = b(g({}, O), { [p.zd.DARK]: h.BRd.DARKER })), (y = 1)), A();
 }
 function R() {
     return (0, o.ap)(S());
 }
 function P(e) {
-    return ((T = null), !e.isSwitchingAccount && I !== h.BRd.DARK && ((I = h.BRd.DARK), (0, u.Z)(I), A()));
+    return (T = null), !e.isSwitchingAccount && I !== h.BRd.DARK && ((I = h.BRd.DARK), (0, u.Z)(I), A());
 }
 function w(e) {
     let { systemTheme: t } = e;
-    return ((v = t), A());
+    return (v = t), A();
 }
 function D(e) {
-    return ((O = g({}, O, e.preferences)), A());
+    return (O = g({}, O, e.preferences)), A();
 }
 function L(e) {
-    return ((T = e.theme), A());
+    return (T = e.theme), A();
 }
 function x() {
-    return ((T = null), A());
+    return (T = null), A();
 }
-(m(N, 'displayName', 'ThemeStore'),
-    m(N, 'persistKey', 'ThemeStore'),
-    m(N, 'migrations', [
+m(N, "displayName", "ThemeStore"),
+    m(N, "persistKey", "ThemeStore"),
+    m(N, "migrations", [
         (e) => {
             let t = e.theme;
-            return ('amoled' === t && (t = 'midnight'), b(g({}, e), { theme: t }));
+            return "amoled" === t && (t = "midnight"), b(g({}, e), { theme: t });
         },
-        (e) => e
-    ]));
+        (e) => e,
+    ]);
 let M = new N(a.Z, {
     CACHE_LOADED: A,
     CONNECTION_OPEN: C,
@@ -141,5 +147,5 @@ let M = new N(a.Z, {
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: R,
     UPDATE_THEME_PREFERENCES: D,
     SET_THEME_OVERRIDE: L,
-    CLEAR_THEME_OVERRIDE: x
+    CLEAR_THEME_OVERRIDE: x,
 });

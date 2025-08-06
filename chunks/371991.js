@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => b,
     tS: () => g,
-    x3: () => E
+    x3: () => E,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -35,12 +35,21 @@ function g(e) {
         }, [a]),
         {
             now: t,
-            slowTickMode: a
+            slowTickMode: a,
         }
     );
 }
 let E = (e) => {
-        let { entry: t, inline: n = !1, textColor: o, textTabularNumbers: s = !0, textFontCode: l = !0, hovered: u = !1, bold: d = !1, scaleFontToUserSetting: f = !1 } = e,
+        let {
+                entry: t,
+                inline: n = !1,
+                textColor: o,
+                textTabularNumbers: s = !0,
+                textFontCode: l = !0,
+                hovered: u = !1,
+                bold: d = !1,
+                scaleFontToUserSetting: f = !1,
+            } = e,
             { now: _ } = g(u),
             p = i.useMemo(() => (0, h.T_)(t, _), [t, _]),
             E = i.useRef(p),
@@ -56,14 +65,14 @@ let E = (e) => {
                 className: a()({
                     [m.fontCode]: l,
                     [m.bold]: d,
-                    [m.inlineTimestamp]: n
+                    [m.inlineTimestamp]: n,
                 }),
-                variant: 'text-xs/medium',
+                variant: "text-xs/medium",
                 tabularNumbers: s,
                 color: o,
                 scaleFontToUserSetting: f,
-                'aria-label': E.current,
-                children: p
+                "aria-label": E.current,
+                children: p,
             })
         );
     },
@@ -73,14 +82,19 @@ let E = (e) => {
             f = (0, h.Jg)(i),
             _ = (0, s.e7)([d.default], () => d.default.locale),
             m = (0, s.e7)([p.Z], () => p.Z.getMatchingActivity(i)),
-            g = null != (n = null == m || null == (t = m.timestamps) ? void 0 : t.start) ? n : null == m ? void 0 : m.created_at;
+            g =
+                null != (n = null == m || null == (t = m.timestamps) ? void 0 : t.start)
+                    ? n
+                    : null == m
+                      ? void 0
+                      : m.created_at;
         return null != g
             ? (0, r.jsx)(E, {
                   entry: { start: g },
                   textColor: o,
                   hovered: a,
                   bold: l,
-                  scaleFontToUserSetting: u
+                  scaleFontToUserSetting: u,
               })
             : f
               ? (0, r.jsx)(E, {
@@ -88,13 +102,13 @@ let E = (e) => {
                     textColor: o,
                     hovered: a,
                     bold: l,
-                    scaleFontToUserSetting: u
+                    scaleFontToUserSetting: u,
                 })
               : (0, r.jsx)(c.Text, {
-                    variant: 'text-xs/normal',
+                    variant: "text-xs/normal",
                     color: o,
                     lineClamp: 1,
                     scaleFontToUserSetting: u,
-                    children: (0, h.GL)(i, _)
+                    children: (0, h.GL)(i, _),
                 });
     };

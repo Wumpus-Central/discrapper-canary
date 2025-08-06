@@ -3,4 +3,4 @@ var r = n(754793).assign,
     o = n(241405),
     a = n(154470),
     s = {};
-(r(s, i, o, a), (e.exports = s));
+r(s, i, o, a), (e.exports = s);

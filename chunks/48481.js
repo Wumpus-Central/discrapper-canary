@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Uc: () => p,
     ac: () => E,
     cv: () => b,
@@ -10,12 +10,12 @@
     u0: () => I,
     uL: () => S,
     xU: () => y,
-    xt: () => A
+    xt: () => A,
 }),
     n(415506),
     n(388685),
     n(539854),
-    n(583741));
+    n(583741);
 var r = n(647943),
     i = n(581282),
     o = n(392711),
@@ -32,7 +32,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -42,22 +42,22 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
-let p = { readerFactory: (e) => new r.o(e, new TextDecoder('utf-8')) },
+let p = { readerFactory: (e) => new r.o(e, new TextDecoder("utf-8")) },
     h = {
         [u.yP.PRELOADED_USER_SETTINGS]: l.o8,
-        [u.yP.FRECENCY_AND_FAVORITES_SETTINGS]: s.ji
+        [u.yP.FRECENCY_AND_FAVORITES_SETTINGS]: s.ji,
     };
 function m(e, t) {
     return null != t && e in h ? g(h[e], t) : null;
@@ -68,7 +68,7 @@ function g(e, t) {
     try {
         return e.fromBinary(n, p);
     } catch (e) {
-        throw Error('Settings proto failed to deserialize (potentially corrupt): '.concat(e));
+        throw Error("Settings proto failed to deserialize (potentially corrupt): ".concat(e));
     }
 }
 function E(e) {
@@ -82,25 +82,25 @@ function y(e, t) {
 }
 function O(e, t, n) {
     for (let e in ((t = _({}, t)), n)) delete t[e];
-    return (e.mergePartial(t, n), t);
+    return e.mergePartial(t, n), t;
 }
 function v(e, t, n) {
-    return (null == e.guilds && (e.guilds = l.os.create()), I(e.guilds, t, n));
+    return null == e.guilds && (e.guilds = l.os.create()), I(e.guilds, t, n);
 }
 function I(e, t, n) {
-    return ((null == t || 'null' === t) && (t = d.aIL), t in e.guilds || (e.guilds[t] = l.C4.create()), n(e.guilds[t]));
+    return (null == t || "null" === t) && (t = d.aIL), t in e.guilds || (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
 }
 function T(e, t, n, r) {
     return v(e, t, (e) => S(e, n, r));
 }
 function S(e, t, n) {
-    return (t in e.channels || (e.channels[t] = l.p5.create()), n(e.channels[t]));
+    return t in e.channels || (e.channels[t] = l.p5.create()), n(e.channels[t]);
 }
 function A(e, t) {
     null == e.versions && (e.versions = c.L.create());
     let n = 0;
     for (let e of t) {
-        if (e.version <= n) throw Error('Migrations are out of order or there is a duplicate version');
+        if (e.version <= n) throw Error("Migrations are out of order or there is a duplicate version");
         n = e.version;
     }
     let r = 0.1 > Math.random(),
@@ -117,12 +117,12 @@ function A(e, t) {
             null == (s = n.cleanup) || s.call(n);
             continue;
         }
-        ((i = !0), null != n.cleanup && o.push(n.cleanup));
+        (i = !0), null != n.cleanup && o.push(n.cleanup);
     }
     return {
         proto: e,
         isDirty: i,
-        cleanupFuncs: o
+        cleanupFuncs: o,
     };
 }
 function N(e, t) {
@@ -136,13 +136,16 @@ function N(e, t) {
                 })
                 .reverse();
             n.length > t;
-
         )
             n.pop();
     let r = {};
     for (let [e, t] of n) {
         let n = s._F.create();
-        ((n.frecency = t.frecency), (n.recentUses = t.recentUses.filter((e) => null != e && e > 0).map(String)), (n.score = Math.round(t.score)), (n.totalUses = t.totalUses), (r[e] = n));
+        (n.frecency = t.frecency),
+            (n.recentUses = t.recentUses.filter((e) => null != e && e > 0).map(String)),
+            (n.score = Math.round(t.score)),
+            (n.totalUses = t.totalUses),
+            (r[e] = n);
     }
     return r;
 }

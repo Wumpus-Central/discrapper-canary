@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(642613));
+n.d(t, { Z: () => C }), n(642613);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -20,59 +20,59 @@ var r = n(255367),
     O = n(35356);
 function j(e) {
     let { children: t } = e;
-    return (0, r.jsx)('td', {
+    return (0, r.jsx)("td", {
         className: x.statColumn,
-        children: t
+        children: t,
     });
 }
 function N(e) {
     let { name: t, iconSrc: n, valueTotal: s, valuePerSecond: o } = e,
         i = o >= 0 ? y.default.QMkrPj : y.default.VN4aTU;
-    return (0, r.jsxs)('tr', {
+    return (0, r.jsxs)("tr", {
         className: x.statRow,
         children: [
             (0, r.jsx)(j, {
-                children: (0, r.jsx)('img', {
+                children: (0, r.jsx)("img", {
                     className: x.statIcon,
                     src: n,
-                    alt: ''
-                })
+                    alt: "",
+                }),
             }),
             (0, r.jsx)(j, {
                 children: (0, r.jsx)(p.Z, {
-                    variant: 'text-xs/medium',
+                    variant: "text-xs/medium",
                     className: x.statName,
-                    children: t
-                })
+                    children: t,
+                }),
             }),
             (0, r.jsx)(j, {
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: x.statValue,
                     children: [
-                        (0, r.jsx)('img', {
+                        (0, r.jsx)("img", {
                             className: x.pointsIcon,
                             src: v,
-                            alt: ''
+                            alt: "",
                         }),
                         (0, r.jsx)(c.Text, {
                             className: x.monospace,
-                            variant: 'text-xs/medium',
-                            children: (0, u.v)(Math.floor(s))
-                        })
-                    ]
-                })
+                            variant: "text-xs/medium",
+                            children: (0, u.v)(Math.floor(s)),
+                        }),
+                    ],
+                }),
             }),
             (0, r.jsx)(j, {
                 children: (0, r.jsx)(c.Text, {
                     className: a()(x.statValuePerSecond, x.monospace),
-                    variant: 'text-xs/medium',
+                    variant: "text-xs/medium",
                     children: h.intl.format(i, {
                         points: Math.abs(o),
-                        grassIconHook: (e, t, n) => (0, d.Z)(e, t, n, x.pointsIcon)
-                    })
-                })
-            })
-        ]
+                        grassIconHook: (e, t, n) => (0, d.Z)(e, t, n, x.pointsIcon),
+                    }),
+                }),
+            }),
+        ],
     });
 }
 function P(e) {
@@ -87,7 +87,7 @@ function P(e) {
         name: o.name,
         valueTotal: s,
         valuePerSecond: a,
-        iconSrc: o.purchaseIconSrc
+        iconSrc: o.purchaseIconSrc,
     });
 }
 function _(e) {
@@ -100,9 +100,12 @@ function _(e) {
             () =>
                 Object.keys(o).sort((e, t) => {
                     var n, r;
-                    return (null != (n = null == d ? void 0 : d[t]) ? n : 0) - (null != (r = null == d ? void 0 : d[e]) ? r : 0);
+                    return (
+                        (null != (n = null == d ? void 0 : d[t]) ? n : 0) -
+                        (null != (r = null == d ? void 0 : d[e]) ? r : 0)
+                    );
                 }),
-            []
+            [],
         );
     return (0, r.jsx)(c.f6W, {
         theme: b.BR.DARK,
@@ -111,50 +114,50 @@ function _(e) {
             (0, r.jsxs)(c.Y0X, {
                 className: e,
                 transitionState: t,
-                parentComponent: 'ClickerStats',
+                parentComponent: "ClickerStats",
                 children: [
                     (0, r.jsxs)(c.xBx, {
                         className: x.header,
                         separator: !1,
                         children: [
                             (0, r.jsx)(p.Z, {
-                                variant: 'heading-lg/semibold',
-                                children: h.intl.string(y.default.bS8cBA)
+                                variant: "heading-lg/semibold",
+                                children: h.intl.string(y.default.bS8cBA),
                             }),
                             (0, r.jsx)(p.Z, {
                                 className: x.subtitle,
-                                variant: 'text-xs/medium',
-                                children: h.intl.string(y.default.fdvpl5)
-                            })
-                        ]
+                                variant: "text-xs/medium",
+                                children: h.intl.string(y.default.fdvpl5),
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(c.hzk, {
-                        children: (0, r.jsx)('table', {
+                        children: (0, r.jsx)("table", {
                             className: x.statsTable,
-                            children: (0, r.jsxs)('tbody', {
+                            children: (0, r.jsxs)("tbody", {
                                 children: [
                                     (0, r.jsx)(N, {
                                         name: h.intl.string(y.default.wAfrVl),
                                         iconSrc: v,
                                         valueTotal: a,
-                                        valuePerSecond: u
+                                        valuePerSecond: u,
                                     }),
                                     m.map((e) =>
                                         (0, r.jsx)(
                                             P,
                                             {
                                                 itemId: e,
-                                                isPaused: n
+                                                isPaused: n,
                                             },
-                                            e
-                                        )
-                                    )
-                                ]
-                            })
-                        })
-                    })
-                ]
-            })
+                                            e,
+                                        ),
+                                    ),
+                                ],
+                            }),
+                        }),
+                    }),
+                ],
+            }),
     });
 }
 function C(e) {
@@ -172,24 +175,24 @@ function C(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, e)),
@@ -206,10 +209,10 @@ function C(e) {
                               })(Object(s)).forEach(function (e) {
                                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(s, e));
                               }),
-                        n)
+                        n),
                     );
-                })
+                }),
             );
-        }
+        },
     });
 }

@@ -17,7 +17,7 @@ function p(e) {
     let h = (0, c.Z)((0, b.ny)(f)),
         g = r.useMemo(() => h.map((e) => e.value), [h]);
     r.useEffect(() => {
-        _.default.track(s.rMx.OPEN_MODAL, { type: 'Age Verification User Feedback' });
+        _.default.track(s.rMx.OPEN_MODAL, { type: "Age Verification User Feedback" });
     }, []);
     let j = r.useCallback(
         (e) => {
@@ -25,10 +25,10 @@ function p(e) {
             let { rating: r, problem: c, feedback: i } = e,
                 l = null == r,
                 _ = (0, u.nH)(f);
-            ((0, u.I)(r, '' !== i ? i : null, null != (t = null == c ? void 0 : c.value) ? t : null, l, _),
+            (0, u.I)(r, "" !== i ? i : null, null != (t = null == c ? void 0 : c.value) ? t : null, l, _),
                 l ||
                     (0, a.ZDy)(async () => {
-                        let { default: e } = await o.e('14466').then(o.bind(o, 729328));
+                        let { default: e } = await o.e("14466").then(o.bind(o, 729328));
                         return (t) =>
                             (0, n.jsx)(
                                 e,
@@ -36,34 +36,34 @@ function p(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var o = null != arguments[t] ? arguments[t] : {},
                                             n = Object.keys(o);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (n = n.concat(
                                                 Object.getOwnPropertySymbols(o).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(o, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             n.forEach(function (t) {
                                                 var n;
-                                                ((n = o[t]),
+                                                (n = o[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: n,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = n));
-                                            }));
+                                                        : (e[t] = n);
+                                            });
                                     }
                                     return e;
-                                })({ body: m.intl.string(d.default['4djgOz']) }, t)
+                                })({ body: m.intl.string(d.default["4djgOz"]) }, t),
                             );
-                    }));
+                    });
         },
-        [f]
+        [f],
     );
     return (0, n.jsx)(l.Z, {
-        modalType: 'age_verification',
+        modalType: "age_verification",
         header: m.intl.string(d.default.RqoA4u),
         body: m.intl.string(d.default.RPb8Zm),
         problemTitle: m.intl.string(d.default.KZw6kp),
@@ -75,6 +75,11 @@ function p(e) {
         otherKey: b.wO.SOMETHING_ELSE,
         hideHelpDeskLink: !0,
         hideDontShowAgainCheckbox: !0,
-        freeformDescription: (e) => (null == e ? null : e.value === b.wO.SOMETHING_ELSE ? m.intl.string(d.default['Q5cQ4+']) : m.intl.string(d.default.zApKaW))
+        freeformDescription: (e) =>
+            null == e
+                ? null
+                : e.value === b.wO.SOMETHING_ELSE
+                  ? m.intl.string(d.default["Q5cQ4+"])
+                  : m.intl.string(d.default.zApKaW),
     });
 }

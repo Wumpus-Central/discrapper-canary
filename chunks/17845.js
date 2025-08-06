@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(953529));
+n.d(t, { Z: () => m }), n(953529);
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -12,9 +12,9 @@ function p(e) {
     let { title: t, betaTag: n } = e;
     return (0, r.jsxs)(o.X6q, {
         className: l()(u.title, u.uppercase),
-        variant: 'display-lg',
-        color: 'header-primary',
-        children: [t, n && (0, r.jsx)(d.Z, { className: u.betaTag })]
+        variant: "display-lg",
+        color: "header-primary",
+        children: [t, n && (0, r.jsx)(d.Z, { className: u.betaTag })],
     });
 }
 function m(e) {
@@ -29,42 +29,42 @@ function m(e) {
                               p,
                               {
                                   title: e,
-                                  betaTag: h
+                                  betaTag: h,
                               },
-                              t
-                          )
+                              t,
+                          ),
                       )
                     : (0, r.jsx)(p, {
                           title: t,
-                          betaTag: h
+                          betaTag: h,
                       }),
-            [t, h]
+            [t, h],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l()(u.container, d),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.content,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: u.textContainer,
                     children: [
                         _,
                         null != n &&
                             (0, r.jsx)(o.Text, {
                                 className: u.description,
-                                variant: 'text-md/medium',
-                                color: f ? 'text-muted' : 'header-primary',
-                                children: n
+                                variant: "text-md/medium",
+                                color: f ? "text-muted" : "header-primary",
+                                children: n,
                             }),
                         null != i &&
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: u.buttonContainer,
-                                children: i
-                            })
-                    ]
-                })
+                                children: i,
+                            }),
+                    ],
+                }),
             }),
-            m
-        ]
+            m,
+        ],
     });
 }

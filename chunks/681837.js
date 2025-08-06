@@ -11,7 +11,7 @@ var i = n(442837),
     d = n(388032),
     f = n(537987);
 function _(e) {
-    let { userId: t, size: n = 'xs' } = e,
+    let { userId: t, size: n = "xs" } = e,
         _ = (0, l.ML)(t),
         p = (0, l.vh)(t),
         h = (0, i.e7)([c.Z], () => {
@@ -26,7 +26,7 @@ function _(e) {
               delay: u.vB,
               children: (0, r.jsx)(s.Mgn, {
                   size: n,
-                  color: o.Z.colors.STATUS_WARNING.css
-              })
+                  color: o.Z.colors.STATUS_WARNING.css,
+              }),
           });
 }

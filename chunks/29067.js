@@ -13,33 +13,33 @@ let l = function (e) {
                 default: {
                     color: {
                         background: t,
-                        width: '15px',
-                        height: '15px',
-                        float: 'left',
-                        marginRight: '5px',
-                        marginBottom: '5px',
-                        position: 'relative',
-                        cursor: 'pointer'
+                        width: "15px",
+                        height: "15px",
+                        float: "left",
+                        marginRight: "5px",
+                        marginBottom: "5px",
+                        position: "relative",
+                        cursor: "pointer",
                     },
                     dot: {
-                        absolute: '5px 5px 5px 5px',
+                        absolute: "5px 5px 5px 5px",
                         background: a.Qg(t),
-                        borderRadius: '50%',
-                        opacity: '0'
-                    }
+                        borderRadius: "50%",
+                        opacity: "0",
+                    },
                 },
-                active: { dot: { opacity: '1' } },
-                'color-#FFFFFF': {
-                    color: { boxShadow: 'inset 0 0 0 1px #ddd' },
-                    dot: { background: '#000' }
+                active: { dot: { opacity: "1" } },
+                "color-#FFFFFF": {
+                    color: { boxShadow: "inset 0 0 0 1px #ddd" },
+                    dot: { background: "#000" },
                 },
-                transparent: { dot: { background: '#000' } }
+                transparent: { dot: { background: "#000" } },
             },
             {
                 active: s,
-                'color-#FFFFFF': '#FFFFFF' === t,
-                transparent: 'transparent' === t
-            }
+                "color-#FFFFFF": "#FFFFFF" === t,
+                transparent: "transparent" === t,
+            },
         );
     return n.createElement(
         i.m4,
@@ -48,8 +48,8 @@ let l = function (e) {
             color: t,
             onClick: void 0 === r ? function () {} : r,
             onHover: l,
-            focusStyle: { boxShadow: '0 0 4px ' + t }
+            focusStyle: { boxShadow: "0 0 4px " + t },
         },
-        n.createElement('div', { style: u.dot })
+        n.createElement("div", { style: u.dot }),
     );
 };

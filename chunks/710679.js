@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => C }), t(953529));
+t.d(n, { Z: () => C }), t(953529);
 var i = t(255367);
 t(73800);
 var r = t(442837),
@@ -25,7 +25,17 @@ var r = t(442837),
 function C(e) {
     var n, t, C;
     let { guildEvent: E, guildId: N, truncate: k, onActionTaken: w, className: I, isNew: S } = e,
-        { id: T, guild_id: _, channel_id: D, creator_id: G, name: L, description: R, entity_type: M, image: U, recurrence_rule: H } = E,
+        {
+            id: T,
+            guild_id: _,
+            channel_id: D,
+            creator_id: G,
+            name: L,
+            description: R,
+            entity_type: M,
+            image: U,
+            recurrence_rule: H,
+        } = E,
         A = (0, y.DK)(E),
         B = (0, r.e7)([f.ZP], () => f.ZP.isInterestedInEventRecurrence(T, A), [T, A]),
         J = (0, r.e7)([o.Z], () => o.Z.isLurking(_), [_]),
@@ -38,12 +48,12 @@ function C(e) {
                 guild: null,
                 instance: X,
                 speakers: [],
-                participantCount: 0
+                participantCount: 0,
             },
             context: {
                 guildId: _,
-                instance: X
-            }
+                instance: X,
+            },
         }),
         W = (0, r.e7)([d.Z], () => d.Z.getChannelId()),
         K = (0, f.xt)(E),
@@ -59,7 +69,7 @@ function C(e) {
             guildScheduledEvent: E,
             isActive: K,
             recurrenceId: A,
-            onActionTaken: w
+            onActionTaken: w,
         }),
         er = (0, l.Z)(N),
         el = J
@@ -68,7 +78,7 @@ function C(e) {
                   (0, p.bO)({
                       eventId: T,
                       parentGuildId: N,
-                      recurrenceId: e
+                      recurrenceId: e,
                   });
     return (0, i.jsx)(
         Z.Z,
@@ -76,24 +86,24 @@ function C(e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
                     i = Object.keys(t);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (i = i.concat(
                         Object.getOwnPropertySymbols(t).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                        })
+                        }),
                     )),
                     i.forEach(function (n) {
                         var i;
-                        ((i = t[n]),
+                        (i = t[n]),
                             n in e
                                 ? Object.defineProperty(e, n, {
                                       value: i,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[n] = i));
-                    }));
+                                : (e[n] = i);
+                    });
             }
             return e;
         })(
@@ -116,9 +126,9 @@ function C(e) {
                 canConnect: $,
                 speakerCount: Y,
                 rsvped: B,
-                canInvite: ee
+                canInvite: ee,
             },
-            ei
+            ei,
         )),
         (C = C =
             {
@@ -128,7 +138,7 @@ function C(e) {
                 isNew: S,
                 guildEvent: E,
                 recurrenceRule: (0, j.KV)(H),
-                recurrenceId: A
+                recurrenceId: A,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(C))
@@ -142,6 +152,6 @@ function C(e) {
               })(Object(C)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(C, e));
               }),
-        t)
+        t),
     );
 }

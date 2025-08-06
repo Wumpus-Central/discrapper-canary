@@ -10,8 +10,8 @@ let l = Object.freeze({}),
             let { code: t, options: n = l, onRedeemed: c, onError: u } = e,
                 { channelId: d = null, paymentSource: f = null } = n;
             i.Z.dispatch({
-                type: 'GIFT_CODE_REDEEM',
-                code: t
+                type: "GIFT_CODE_REDEEM",
+                code: t,
             });
             try {
                 let e = await r.tn.post({
@@ -19,34 +19,34 @@ let l = Object.freeze({}),
                     body: {
                         channel_id: d,
                         payment_source_id: null == f ? void 0 : f.id,
-                        gateway_checkout_context: await (0, a.cn)(f)
+                        gateway_checkout_context: await (0, a.cn)(f),
                     },
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 });
                 return (
                     i.Z.dispatch({
-                        type: 'GIFT_CODE_REDEEM_SUCCESS',
+                        type: "GIFT_CODE_REDEEM_SUCCESS",
                         code: t,
-                        entitlement: e.body
+                        entitlement: e.body,
                     }),
                     null == c || c(),
                     {
                         code: t,
-                        entitlement: e
+                        entitlement: e,
                     }
                 );
             } catch (n) {
                 let e = new o.HF(n);
                 throw (
-                    i.Z.dispatch({
-                        type: 'GIFT_CODE_REDEEM_FAILURE',
+                    (i.Z.dispatch({
+                        type: "GIFT_CODE_REDEEM_FAILURE",
                         code: t,
-                        error: e
+                        error: e,
                     }),
                     null == u || u(e),
-                    e
+                    e)
                 );
             }
-        }
+        },
     };

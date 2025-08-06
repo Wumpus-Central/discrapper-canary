@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => h,
-    Z: () => p
+    Z: () => p,
 });
 var r = n(255367);
 n(73800);
@@ -21,22 +21,22 @@ function p(e) {
     return !m || g || t.isNonUserBot()
         ? null
         : (0, r.jsx)(o.sNh, {
-              id: 'report-user',
+              id: "report-user",
               color: s,
               label: _.intl.string(_.t.A1MM3N),
-              action: () => (0, l.pX)(t, n === f.ME ? void 0 : n, d, h)
+              action: () => (0, l.pX)(t, n === f.ME ? void 0 : n, d, h),
           });
 }
 function h(e) {
     let { user: t, guildId: n, color: a, onAction: c, appContext: u } = e,
-        _ = (0, i.e7)([s.ZP], () => s.ZP.get('iar_testing')),
+        _ = (0, i.e7)([s.ZP], () => s.ZP.get("iar_testing")),
         p = (0, i.e7)([d.default], () => d.default.getCurrentUser());
     return null != p && (t.id === p.id || t.isNonUserBot() || !p.isStaff() || !_)
         ? null
         : (0, r.jsx)(o.sNh, {
-              id: 'staff-test-report-user',
+              id: "staff-test-report-user",
               color: a,
-              label: '[STAFF] Test Profile Report',
-              action: () => (0, l.I6)(t, n === f.ME ? void 0 : n, c, u)
+              label: "[STAFF] Test Profile Report",
+              action: () => (0, l.I6)(t, n === f.ME ? void 0 : n, c, u),
           });
 }

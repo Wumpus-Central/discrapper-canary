@@ -7,6 +7,9 @@ var i = n(442837),
 let o = (0, i.Kb)(s.Z, {
     queryId: (e) => l.McO.SUBSCRIPTION_PLANS(e),
     get: (e) => (null != e ? s.Z.getForSKU(e) : []),
-    load: (e, t) => (null == t && a.Z.addBreadcrumb({ message: 'Error loading subscription plans: skuId is null' }), null != t ? (0, r.GZ)(t) : Promise.reject()),
-    useStateHook: i.Wu
+    load: (e, t) => (
+        null == t && a.Z.addBreadcrumb({ message: "Error loading subscription plans: skuId is null" }),
+        null != t ? (0, r.GZ)(t) : Promise.reject()
+    ),
+    useStateHook: i.Wu,
 });

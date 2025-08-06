@@ -18,16 +18,16 @@ function c(e) {
             (0, r.jsx)(o.Z, {
                 justify: o.Z.Justify.CENTER,
                 align: o.Z.Align.CENTER,
-                children: (0, r.jsx)('div', {
-                    style: { backgroundImage: 'url('.concat(d, ')') },
-                    className: l()(a.sourceThumbnail, { [a.selected]: u })
-                })
+                children: (0, r.jsx)("div", {
+                    style: { backgroundImage: "url(".concat(d, ")") },
+                    className: l()(a.sourceThumbnail, { [a.selected]: u }),
+                }),
             }),
             (0, r.jsx)(s.Text, {
                 className: l()(a.sourceName, { [a.selected]: u }),
-                variant: 'text-sm/normal',
-                children: c
-            })
-        ]
+                variant: "text-sm/normal",
+                children: c,
+            }),
+        ],
     });
 }

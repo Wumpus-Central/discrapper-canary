@@ -8,12 +8,12 @@ var i = n(481060),
 function l(e, t) {
     return o.isPlatformEmbedded && (null == e ? void 0 : e.length) !== 0
         ? (0, r.jsx)(i.sNh, {
-              id: 'copy',
+              id: "copy",
               label: s.intl.string(s.t.OpuAlJ),
-              hint: (0, o.isMac)() ? '\u2318C' : 'Ctrl+C',
+              hint: (0, o.isMac)() ? "\u2318C" : "Ctrl+C",
               action: () => {
-                  (a.ZP.copy(e), null == t || t.focus());
-              }
+                  a.ZP.copy(e), null == t || t.focus();
+              },
           })
         : null;
 }

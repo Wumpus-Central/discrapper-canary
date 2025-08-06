@@ -1,4 +1,4 @@
-(r.d(t, { default: () => _ }), r(388685), r(539854));
+r.d(t, { default: () => _ }), r(388685), r(539854);
 var n = r(255367),
     i = r(73800),
     a = r(512722),
@@ -29,20 +29,22 @@ function _(e) {
                         n,
                         i = {},
                         a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) ((r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++) ((r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
+                for (n = 0; n < a.length; n++)
+                    (r = a[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
-        })(e, ['guildId', 'leaderboardId']);
+        })(e, ["guildId", "leaderboardId"]);
     let w = (0, f.Z)({
         guildId: a,
-        leaderboardId: _
+        leaderboardId: _,
     });
-    o()(null != w, 'Leaderboard must be loaded before opening the settings modal');
+    o()(null != w, "Leaderboard must be loaded before opening the settings modal");
     let y = w.guild_settings,
         [v, O] = i.useState(y.sort_by_statistic_id),
         [C, I] = i.useState(y.sort_desc),
@@ -53,14 +55,14 @@ function _(e) {
     }, []);
     let P = v !== y.sort_by_statistic_id || C !== y.sort_desc || S !== y.show_winner_crown,
         k = async () => {
-            (await L({
+            await L({
                 guildId: a,
                 leaderboardId: _,
                 sortByStatisticId: v,
                 sortDesc: C,
-                showWinnerCrown: S
+                showWinnerCrown: S,
             }),
-                j.onClose());
+                j.onClose();
         },
         B = i.useMemo(() => {
             let e = Object.values(w.settings.statistics).filter((e) => e.selectable_for_competition),
@@ -70,21 +72,21 @@ function _(e) {
                     t.push({
                         value: {
                             sortByStatisticId: r.id,
-                            sortDesc: e
+                            sortDesc: e,
                         },
                         label: (0, g.s)({
                             statisticId: r.id,
                             sortDesc: e,
-                            aggregationType: r.aggregation_type
-                        })
+                            aggregationType: r.aggregation_type,
+                        }),
                     });
             return t;
         }, [w]),
         E = B.find((e) =>
             (0, s.Z)(e.value, {
                 sortByStatisticId: v,
-                sortDesc: C
-            })
+                sortDesc: C,
+            }),
         );
     return (0, n.jsx)(
         x.Z,
@@ -92,24 +94,24 @@ function _(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (t) {
                         var n;
-                        ((n = r[t]),
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = n));
-                    }));
+                                : (e[t] = n);
+                    });
             }
             return e;
         })({}, j)),
@@ -118,31 +120,31 @@ function _(e) {
                 guildId: a,
                 title: b.intl.string(b.t.rv9GUV),
                 buttons: (0, n.jsx)(l.zxk, {
-                    variant: 'primary',
+                    variant: "primary",
                     text: b.intl.string(b.t.R3BPHx),
                     onClick: k,
                     loading: Z,
-                    disabled: !P
+                    disabled: !P,
                 }),
                 children: (0, n.jsxs)(l.hzk, {
                     className: p.content,
                     children: [
                         (0, n.jsx)(l.Text, {
-                            variant: 'text-md/medium',
-                            color: 'header-primary',
-                            children: b.intl.string(b.t.IQO9Fx)
+                            variant: "text-md/medium",
+                            color: "header-primary",
+                            children: b.intl.string(b.t.IQO9Fx),
                         }),
                         (0, n.jsx)(l.LZC, { size: 8 }),
                         (0, n.jsx)(l.q4e, {
-                            placeholder: b.intl.string(b.t['g/Rr2d']),
+                            placeholder: b.intl.string(b.t["g/Rr2d"]),
                             value: null == E ? void 0 : E.value,
                             options: B,
                             onChange: (e) => {
                                 let { sortByStatisticId: t, sortDesc: r } = e;
-                                (O(t), I(r));
-                            }
+                                O(t), I(r);
+                            },
                         }),
-                        (0, n.jsx)('div', { className: p.divider }),
+                        (0, n.jsx)("div", { className: p.divider }),
                         (0, n.jsx)(l.vwX, { children: b.intl.string(b.t.HU4EKC) }),
                         (0, n.jsx)(l.LZC, { size: 8 }),
                         (0, n.jsx)(l.j7V, {
@@ -150,23 +152,23 @@ function _(e) {
                             onChange: () => N((e) => !e),
                             value: S,
                             className: p.showWinnerCrownSwitch,
-                            children: (0, n.jsxs)('div', {
+                            children: (0, n.jsxs)("div", {
                                 className: p.showWinnerCrownTextContainer,
                                 children: [
                                     (0, n.jsx)(l.Text, {
-                                        variant: 'text-md/medium',
-                                        color: 'header-primary',
-                                        children: b.intl.string(b.t.cH7QEx)
+                                        variant: "text-md/medium",
+                                        color: "header-primary",
+                                        children: b.intl.string(b.t.cH7QEx),
                                     }),
                                     (0, n.jsx)(h.Z, {
                                         className: p.winnerImage,
-                                        leaderboard: w
-                                    })
-                                ]
-                            })
-                        })
-                    ]
-                })
+                                        leaderboard: w,
+                                    }),
+                                ],
+                            }),
+                        }),
+                    ],
+                }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -180,6 +182,6 @@ function _(e) {
               })(Object(r)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
-        t)
+        t),
     );
 }

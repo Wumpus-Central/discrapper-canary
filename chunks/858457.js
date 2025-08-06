@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Z: () => f,
-    r: () => m
+    r: () => m,
 }),
     n(388685),
     n(953529),
-    n(539854));
+    n(539854);
 var r = n(73800),
     i = n(392711),
     l = n(881052),
@@ -14,24 +14,24 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -55,30 +55,31 @@ function c(e, t) {
 }
 function d(e) {
     var t = (function (e, t) {
-        if ('object' !== u(e) || null === e) return e;
+        if ("object" !== u(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
-            var r = n.call(e, t || 'default');
-            if ('object' !== u(r)) return r;
-            throw TypeError('@@toPrimitive must return a primitive value.');
+            var r = n.call(e, t || "default");
+            if ("object" !== u(r)) return r;
+            throw TypeError("@@toPrimitive must return a primitive value.");
         }
-        return ('string' === t ? String : Number)(e);
-    })(e, 'string');
-    return 'symbol' === u(t) ? t : String(t);
+        return ("string" === t ? String : Number)(e);
+    })(e, "string");
+    return "symbol" === u(t) ? t : String(t);
 }
 function u(e) {
-    return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
+    return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
-let m = '_errors',
-    g = 'GENERIC_REGEX_ERROR';
+let m = "_errors",
+    g = "GENERIC_REGEX_ERROR";
 async function p(e, t) {
     if (null == e.triggerMetadata.regexPatterns || 0 === e.triggerMetadata.regexPatterns.length) return void t([]);
     try {
-        (await (0, a.qY)(e), t([]));
+        await (0, a.qY)(e), t([]);
     } catch (i) {
         var n;
         let e = new l.Hx(i).errors;
-        if ('object' != typeof e || (null == e || null == (n = e.trigger_metadata) ? void 0 : n.regex_patterns) == null) return;
+        if ("object" != typeof e || (null == e || null == (n = e.trigger_metadata) ? void 0 : n.regex_patterns) == null)
+            return;
         let r = (function (e) {
             var t;
             let n = null == e || null == (t = e.trigger_metadata) ? void 0 : t.regex_patterns;
@@ -97,15 +98,19 @@ async function p(e, t) {
                                               r,
                                               i = {},
                                               l = Object.keys(e);
-                                          for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                          for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                           return i;
                                       })(e, t);
                                   if (Object.getOwnPropertySymbols) {
                                       var l = Object.getOwnPropertySymbols(e);
-                                      for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                                      for (r = 0; r < l.length; r++)
+                                          (n = l[r]),
+                                              !(t.indexOf(n) >= 0) &&
+                                                  Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                  (i[n] = e[n]);
                                   }
                                   return i;
-                              })(e, [m].map(d))
+                              })(e, [m].map(d)),
                           ).map((e) => {
                               var t;
                               let [n, r] = e,
@@ -115,7 +120,7 @@ async function p(e, t) {
                                           ? t
                                           : {
                                                 code: g,
-                                                message: s.intl.string(s.t.hDPEu7)
+                                                message: s.intl.string(s.t.hDPEu7),
                                             };
                               return {
                                   pattern: n,
@@ -124,15 +129,16 @@ async function p(e, t) {
                                   description: null == r ? void 0 : r.description,
                                   erroringCharacterLength: null == r ? void 0 : r.erroring_character_length,
                                   erroringCharacterOffset: null == r ? void 0 : r.erroring_character_offset,
-                                  regexErrorCode: null == r ? void 0 : r.regex_error_code
+                                  regexErrorCode: null == r ? void 0 : r.regex_error_code,
                               };
                           });
                       if (t.length > 0) {
                           var r, i, l, a;
                           n.push({
                               pattern: m,
-                              message: null != (l = null == (r = t[0]) ? void 0 : r.message) ? l : s.intl.string(s.t.hDPEu7),
-                              code: null != (a = null == (i = t[0]) ? void 0 : i.code) ? a : g
+                              message:
+                                  null != (l = null == (r = t[0]) ? void 0 : r.message) ? l : s.intl.string(s.t.hDPEu7),
+                              code: null != (a = null == (i = t[0]) ? void 0 : i.code) ? a : g,
                           });
                       }
                       return n;
@@ -146,7 +152,9 @@ function f(e, t) {
     var n, l;
     let [a, s] = r.useState([]),
         [d, u] = r.useState(null),
-        [m, g] = r.useState(null != (l = null == e || null == (n = e.triggerMetadata) ? void 0 : n.regexPatterns) ? l : []),
+        [m, g] = r.useState(
+            null != (l = null == e || null == (n = e.triggerMetadata) ? void 0 : n.regexPatterns) ? l : [],
+        ),
         f = r.useCallback(
             (t) => {
                 t.length < 3 ||
@@ -155,7 +163,7 @@ function f(e, t) {
                         return u(null != (t = e[0]) ? t : null);
                     });
             },
-            [e]
+            [e],
         );
     return {
         patterns: m,
@@ -166,13 +174,13 @@ function f(e, t) {
                 (0, i.isEqual)(n, r) ||
                     (h.cancel(),
                     p(c(o({}, e), { triggerMetadata: c(o({}, e.triggerMetadata), { regexPatterns: n }) }), (e) => {
-                        (s(e), 0 === e.length && u(null));
+                        s(e), 0 === e.length && u(null);
                     }),
                     g(n),
                     null == t || t(n));
             },
-            [e, t]
+            [e, t],
         ),
-        validateEditingValueChanged: f
+        validateEditingValueChanged: f,
     };
 }

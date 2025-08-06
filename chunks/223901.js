@@ -15,14 +15,14 @@ function d(e) {
         (0, n.jsx)(o.Y0X, {
             className: i.modal,
             transitionState: d,
-            'aria-label': _.intl.string(_.t.B2panJ),
+            "aria-label": _.intl.string(_.t.B2panJ),
             size: o.CgR.DYNAMIC,
-            parentComponent: 'ThreadBrowserModal',
+            parentComponent: "ThreadBrowserModal",
             children: (0, n.jsx)(s.Z, {
                 className: i.browser,
                 channel: t,
-                onClose: a
-            })
+                onClose: a,
+            }),
         })
     );
 }

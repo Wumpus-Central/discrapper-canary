@@ -1,4 +1,4 @@
-(n.d(t, { D: () => p }), n(539854));
+n.d(t, { D: () => p }), n(539854);
 var r = n(73800),
     i = n(442837),
     l = n(941028),
@@ -16,7 +16,7 @@ function p(e, t) {
     let n = (0, i.e7)([o.Z], () => (null != t ? o.Z.getSortedRoles(t.id) : [])),
         { version: p, members: f } = (0, i.cj)([c.Z], () => ({
             version: c.Z.getMemberListVersion(e),
-            members: c.Z.getMemberListSections(e)
+            members: c.Z.getMemberListSections(e),
         })),
         g = null == t,
         m = r.useMemo(() => {
@@ -25,18 +25,18 @@ function p(e, t) {
                 .filter((e) => e.hoist)
                 .map((e) => ({
                     id: e.id,
-                    label: e.name
+                    label: e.name,
                 }));
             return (
                 e.push(
                     {
                         id: u.Sk.ONLINE,
-                        label: d.intl.string(d.t.WbGtnJ)
+                        label: d.intl.string(d.t.WbGtnJ),
                     },
                     {
                         id: u.Sk.OFFLINE,
-                        label: d.intl.string(d.t.Vv0abG)
-                    }
+                        label: d.intl.string(d.t.Vv0abG),
+                    },
                 ),
                 e.map((e) => {
                     var t, n;
@@ -45,7 +45,7 @@ function p(e, t) {
                         label: i,
                         userIds: null != (n = null == f || null == (t = f[r]) ? void 0 : t.userIds) ? n : [],
                         id: r,
-                        roleId: r
+                        roleId: r,
                     };
                 })
             );

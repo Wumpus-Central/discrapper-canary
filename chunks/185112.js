@@ -1,4 +1,4 @@
-(n.d(t, { l: () => p }), n(388685));
+n.d(t, { l: () => p }), n(388685);
 var r = n(314897),
     i = n(131951),
     o = n(19780),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,7 +48,7 @@ let f = 10,
                 (null != n && performance.now() - n < _) ||
                 Object.entries(e.getRemoteVideoSinkWants()).every((e) => {
                     let [t, n] = e;
-                    return 'any' === t || 0 === n;
+                    return "any" === t || 0 === n;
                 })
             )
                 return null;
@@ -60,12 +60,12 @@ let f = 10,
                         d(
                             {
                                 type: s.u.CAMERA_SEND_LOW_FPS,
-                                userId: r.default.getId()
+                                userId: r.default.getId(),
                             },
-                            (0, l.Y9)()
-                        )
+                            (0, l.Y9)(),
+                        ),
                     ]
                   : void 0;
         },
-        makeErrorContextKey: (e) => ''.concat(e.mediaSessionId)
+        makeErrorContextKey: (e) => "".concat(e.mediaSessionId),
     };

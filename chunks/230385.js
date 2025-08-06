@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(539854), n(388685));
+n.d(t, { Z: () => T }), n(539854), n(388685);
 var r = n(704215),
     i = n(147913),
     o = n(710845),
@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -64,11 +64,13 @@ function b(e, t) {
         e
     );
 }
-let y = new o.Z('VoiceFilterManager');
+let y = new o.Z("VoiceFilterManager");
 function O(e) {
     var t;
     let n = c.ZP.getVoiceFilters();
-    return null != n.getModelIdsForVoiceId ? n.getModelIdsForVoiceId(e.id) : Object.values(null != (t = e.modelIds) ? t : {});
+    return null != n.getModelIdsForVoiceId
+        ? n.getModelIdsForVoiceId(e.id)
+        : Object.values(null != (t = e.modelIds) ? t : {});
 }
 let v = null;
 class I extends i.Z {
@@ -79,7 +81,7 @@ class I extends i.Z {
         let r = new AbortController();
         if (((v = r), null == t)) return void (0, f.rk)(null, n);
         let i = d.Z.getVoiceFilter(t);
-        if (null == i) return void y.error('requested Voice Filter is missing in VoiceFilterStore');
+        if (null == i) return void y.error("requested Voice Filter is missing in VoiceFilterStore");
         let o = O(i);
         if (o.length > 0) {
             let e = d.Z.getVoiceFilterModels(),
@@ -88,17 +90,17 @@ class I extends i.Z {
                 var a;
                 let r = null == (a = e[n]) ? void 0 : a.url;
                 if (null == r) {
-                    y.error('Missing model url for voice filter', i.id, n);
+                    y.error("Missing model url for voice filter", i.id, n);
                     continue;
                 }
                 t.push({
                     voiceFilterId: i.id,
                     modelId: n,
                     url: r,
-                    fileName: (0, _.i)(n)
+                    fileName: (0, _.i)(n),
                 });
             }
-            y.info('Waiting for dependencies for voice filter', i.id, t);
+            y.info("Waiting for dependencies for voice filter", i.id, t);
             let r = t.map((e) => (0, f.fz)(e, n));
             await Promise.all(r);
         }
@@ -118,26 +120,26 @@ class I extends i.Z {
                             voiceFilterId: e.id,
                             modelId: t,
                             url: n[t].url,
-                            fileName: (0, _.i)(t)
+                            fileName: (0, _.i)(t),
                         },
-                        { reason: u.W.AUTO_PREFETCH }
+                        { reason: u.W.AUTO_PREFETCH },
                     ));
     }
     handleVoiceFilterDownloadFailed(e) {
         var t, n;
         let { modelId: r, voiceFilterId: i, error: o } = e,
-            a = 'USER_CANCELED_DOWNLOAD',
+            a = "USER_CANCELED_DOWNLOAD",
             c = null != o && a in o,
             u = (null != (t = null == o ? void 0 : o.message) ? t : String(o)).substring(0, 200);
-        (c && (u = a),
+        c && (u = a),
             l.default.track(p.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
                 canceled: c,
                 active_voice_filter_id: null != (n = s.Z.getActiveVoiceFilter()) ? n : null,
                 success: !1,
                 voice_filter_id: i,
                 model_id: r,
-                error_message: u
-            }));
+                error_message: u,
+            });
     }
     handleVoiceFilterApplied(e) {
         let { voiceFilterId: t, analyticsContext: n, activationDurationMs: i } = e,
@@ -147,7 +149,7 @@ class I extends i.Z {
                 t = null === e ? null : Date.now() - e;
             l.default.track(p.rMx.VOICE_FILTER_DISABLED, {
                 active_voice_filter_id: o,
-                duration_voice_filter_applied: t
+                duration_voice_filter_applied: t,
             });
         }
         null !== t &&
@@ -159,12 +161,12 @@ class I extends i.Z {
                     g(
                         {
                             active_voice_filter_id: t,
-                            previous_filter_id: o
+                            previous_filter_id: o,
                         },
-                        (0, u.w)(n)
+                        (0, u.w)(n),
                     ),
-                    { time_to_activate_native_ms: i }
-                )
+                    { time_to_activate_native_ms: i },
+                ),
             ));
     }
     handleVoiceFilterApplyFailed(e) {
@@ -175,15 +177,15 @@ class I extends i.Z {
         c.ZP.stopVoiceFilterDownloads();
     }
     constructor(...e) {
-        (super(...e),
-            m(this, 'actions', {
+        super(...e),
+            m(this, "actions", {
                 VOICE_FILTER_REQUEST_SWITCH: this.handleVoiceFilterRequestSwitch,
                 VOICE_FILTER_PREFETCH: this.handleVoiceFilterPrefetch,
                 VOICE_FILTER_DOWNLOAD_FAILED: this.handleVoiceFilterDownloadFailed,
                 VOICE_FILTER_DOWNLOAD_CANCELED: this.handleVoiceFilterDownloadCanceled,
                 VOICE_FILTER_APPLIED: this.handleVoiceFilterApplied,
-                VOICE_FILTER_APPLY_FAILED: this.handleVoiceFilterApplyFailed
-            }));
+                VOICE_FILTER_APPLY_FAILED: this.handleVoiceFilterApplyFailed,
+            });
     }
 }
 let T = new I();

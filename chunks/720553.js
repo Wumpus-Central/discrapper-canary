@@ -1,4 +1,4 @@
-(n.d(e, { default: () => p }), n(704826), n(35282));
+n.d(e, { default: () => p }), n(704826), n(35282);
 var a = n(255367);
 n(73800);
 var l = n(990547),
@@ -15,7 +15,7 @@ var l = n(990547),
 function p(t) {
     let { url: e, trustUrl: n, isProtocol: p, onConfirm: C, onCancel: k, onClose: g, transitionState: f } = t,
         _ = (0, o.Dt)(),
-        v = (0, c.q)('MaskedLinkModal'),
+        v = (0, c.q)("MaskedLinkModal"),
         {
             protocol: b,
             authorityPrefix: j,
@@ -24,75 +24,75 @@ function p(t) {
             shouldTrustUrl: y,
             setShouldTrustUrl: D,
             handleConfirm: L,
-            handleCancel: N
+            handleCancel: N,
         } = (0, x.X)({
             url: e,
             trustUrl: n,
             onConfirm: C,
             onCancel: k,
-            onClose: g
+            onClose: g,
         }),
         X = () => {
-            (L(),
+            L(),
                 d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                     is_trust_url_selected: y,
-                    action_type: 'confirm'
-                }));
+                    action_type: "confirm",
+                });
         },
         E = () => {
-            (N(),
+            N(),
                 d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                     is_trust_url_selected: y,
-                    action_type: 'cancel'
-                }));
+                    action_type: "cancel",
+                });
         };
     return (
         (0, s.Z)({
             type: l.ImpressionTypes.MODAL,
-            name: l.ImpressionNames.MASKED_LINK_MODAL
+            name: l.ImpressionNames.MASKED_LINK_MODAL,
         }),
         v
             ? (0, a.jsxs)(i.Modal, {
-                  size: 'md',
+                  size: "md",
                   transitionState: f,
                   onClose: g,
-                  title: h.intl.string(h.t['3w1QGh']),
+                  title: h.intl.string(h.t["3w1QGh"]),
                   subtitle: p ? h.intl.format(h.t.aCYv19, {}) : h.intl.string(h.t.soRxRU),
                   actions: [
                       {
-                          text: h.intl.string(h.t['/g10LC']),
+                          text: h.intl.string(h.t["/g10LC"]),
                           onClick: E,
-                          variant: 'secondary'
+                          variant: "secondary",
                       },
                       {
                           text: p ? h.intl.string(h.t.COq6kp) : h.intl.string(h.t.NcJfJC),
                           onClick: X,
-                          variant: 'primary'
-                      }
+                          variant: "primary",
+                      },
                   ],
                   children: [
                       (0, a.jsxs)(r.Ttm, {
                           className: u.linkCalloutContainer,
                           children: [
                               (0, a.jsxs)(r.Text, {
-                                  tag: 'span',
-                                  variant: p ? 'text-md/semibold' : 'text-md/normal',
-                                  color: p ? 'text-default' : 'text-muted',
-                                  children: [b, j]
+                                  tag: "span",
+                                  variant: p ? "text-md/semibold" : "text-md/normal",
+                                  color: p ? "text-default" : "text-muted",
+                                  children: [b, j],
                               }),
                               (0, a.jsx)(r.Text, {
-                                  tag: 'span',
-                                  variant: p ? 'text-md/normal' : 'text-md/semibold',
-                                  color: p ? 'text-muted' : 'text-default',
-                                  children: T
+                                  tag: "span",
+                                  variant: p ? "text-md/normal" : "text-md/semibold",
+                                  color: p ? "text-muted" : "text-default",
+                                  children: T,
                               }),
                               (0, a.jsx)(r.Text, {
-                                  tag: 'span',
-                                  variant: 'text-md/normal',
-                                  color: 'text-muted',
-                                  children: M
-                              })
-                          ]
+                                  tag: "span",
+                                  variant: "text-md/normal",
+                                  color: "text-muted",
+                                  children: M,
+                              }),
+                          ],
                       }),
                       (0, a.jsx)(r.XZJ, {
                           className: u.checkboxMana,
@@ -100,53 +100,55 @@ function p(t) {
                           value: y,
                           onChange: (t, e) => D(e),
                           children: (0, a.jsx)(r.Text, {
-                              variant: 'text-sm/normal',
-                              children: p ? h.intl.format(h.t['haA+X1'], { protocol: b.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: T })
-                          })
-                      })
-                  ]
+                              variant: "text-sm/normal",
+                              children: p
+                                  ? h.intl.format(h.t["haA+X1"], { protocol: b.replace(":", "") })
+                                  : h.intl.format(h.t.ZgXDsL, { domain: T }),
+                          }),
+                      }),
+                  ],
               })
             : (0, a.jsxs)(r.Y0X, {
                   size: r.CgR.DYNAMIC,
                   transitionState: f,
-                  'aria-labelledby': _,
-                  parentComponent: 'MaskedLinkModal',
+                  "aria-labelledby": _,
+                  parentComponent: "MaskedLinkModal",
                   children: [
                       (0, a.jsxs)(r.hzk, {
                           children: [
                               (0, a.jsx)(r.X6q, {
                                   id: _,
-                                  variant: 'heading-xl/bold',
+                                  variant: "heading-xl/bold",
                                   className: u.title,
-                                  children: h.intl.string(h.t['3w1QGh'])
+                                  children: h.intl.string(h.t["3w1QGh"]),
                               }),
                               (0, a.jsx)(r.Text, {
                                   className: u.warningText,
-                                  variant: 'text-md/normal',
-                                  children: p ? h.intl.format(h.t.aCYv19, {}) : h.intl.string(h.t.soRxRU)
+                                  variant: "text-md/normal",
+                                  children: p ? h.intl.format(h.t.aCYv19, {}) : h.intl.string(h.t.soRxRU),
                               }),
                               (0, a.jsxs)(r.Ttm, {
                                   className: u.linkCalloutContainer,
                                   children: [
                                       (0, a.jsxs)(r.Text, {
-                                          tag: 'span',
-                                          variant: p ? 'text-md/semibold' : 'text-md/normal',
-                                          color: p ? 'text-default' : 'text-muted',
-                                          children: [b, j]
+                                          tag: "span",
+                                          variant: p ? "text-md/semibold" : "text-md/normal",
+                                          color: p ? "text-default" : "text-muted",
+                                          children: [b, j],
                                       }),
                                       (0, a.jsx)(r.Text, {
-                                          tag: 'span',
-                                          variant: p ? 'text-md/normal' : 'text-md/semibold',
-                                          color: p ? 'text-muted' : 'text-default',
-                                          children: T
+                                          tag: "span",
+                                          variant: p ? "text-md/normal" : "text-md/semibold",
+                                          color: p ? "text-muted" : "text-default",
+                                          children: T,
                                       }),
                                       (0, a.jsx)(r.Text, {
-                                          tag: 'span',
-                                          variant: 'text-md/normal',
-                                          color: 'text-muted',
-                                          children: M
-                                      })
-                                  ]
+                                          tag: "span",
+                                          variant: "text-md/normal",
+                                          color: "text-muted",
+                                          children: M,
+                                      }),
+                                  ],
                               }),
                               (0, a.jsx)(r.XZJ, {
                                   className: u.checkbox,
@@ -154,32 +156,34 @@ function p(t) {
                                   value: y,
                                   onChange: (t, e) => D(e),
                                   children: (0, a.jsx)(r.Text, {
-                                      variant: 'text-sm/normal',
-                                      children: p ? h.intl.format(h.t['haA+X1'], { protocol: b.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: T })
-                                  })
-                              })
-                          ]
+                                      variant: "text-sm/normal",
+                                      children: p
+                                          ? h.intl.format(h.t["haA+X1"], { protocol: b.replace(":", "") })
+                                          : h.intl.format(h.t.ZgXDsL, { domain: T }),
+                                  }),
+                              }),
+                          ],
                       }),
                       (0, a.jsx)(r.mzw, {
                           children: (0, a.jsxs)(r.hE2, {
-                              direction: 'horizontal-reverse',
+                              direction: "horizontal-reverse",
                               children: [
                                   (0, a.jsx)(r.zxk, {
-                                      variant: 'primary',
+                                      variant: "primary",
                                       text: p ? h.intl.string(h.t.COq6kp) : h.intl.string(h.t.NcJfJC),
-                                      type: 'button',
-                                      onClick: X
+                                      type: "button",
+                                      onClick: X,
                                   }),
                                   (0, a.jsx)(r.zxk, {
-                                      variant: 'secondary',
-                                      text: h.intl.string(h.t['/g10LC']),
-                                      type: 'button',
-                                      onClick: E
-                                  })
-                              ]
-                          })
-                      })
-                  ]
+                                      variant: "secondary",
+                                      text: h.intl.string(h.t["/g10LC"]),
+                                      type: "button",
+                                      onClick: E,
+                                  }),
+                              ],
+                          }),
+                      }),
+                  ],
               })
     );
 }

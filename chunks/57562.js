@@ -1,6 +1,6 @@
 n.d(t, {
     D: () => d,
-    T: () => c
+    T: () => c,
 });
 var i = n(255367);
 n(73800);
@@ -11,8 +11,8 @@ var r = n(481060),
     o = n(388032);
 function c(e) {
     s.Z.dispatch({
-        type: 'POGGERMODE_ACHIEVEMENT_UNLOCK',
-        achievementId: e
+        type: "POGGERMODE_ACHIEVEMENT_UNLOCK",
+        achievementId: e,
     });
 }
 function d(e, t) {
@@ -23,9 +23,9 @@ function d(e, t) {
                 position: r.ToastPosition.BOTTOM,
                 component: (0, i.jsx)(l.Z, {
                     achievement: n,
-                    unlocked: t
+                    unlocked: t,
                 }),
-                duration: 6000
-            })
+                duration: 6000,
+            }),
         );
 }

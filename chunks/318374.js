@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -81,14 +81,34 @@ function O() {
     switch (e) {
         case c.EFr.SIZE_16:
         case c.EFr.SIZE_20:
-            return 'text-xxs/semibold';
+            return "text-xxs/semibold";
         case c.EFr.SIZE_24:
         default:
-            return 'text-xs/medium';
+            return "text-xs/medium";
     }
 }
 function v(e) {
-    let { users: t, maxUsers: o, guildId: s, channelId: m, className: E, size: v = c.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClickOverflow: R, onFocusOverflow: P, onUserClick: w, onUserPopoutRequestClose: D, 'aria-label': L, 'aria-labelledby': x, 'aria-hidden': M } = e,
+    let {
+            users: t,
+            maxUsers: o,
+            guildId: s,
+            channelId: m,
+            className: E,
+            size: v = c.EFr.SIZE_24,
+            overflowCountVariant: I,
+            overflowCountColor: T = "interactive-normal",
+            overflowCountClassName: S,
+            hideOverflowCount: A = !1,
+            disableUsernameTooltip: N = !1,
+            disableUserPopout: C = !1,
+            onClickOverflow: R,
+            onFocusOverflow: P,
+            onUserClick: w,
+            onUserPopoutRequestClose: D,
+            "aria-label": L,
+            "aria-labelledby": x,
+            "aria-hidden": M,
+        } = e,
         [k, j] = i.useState(!1),
         U = y(v),
         G = i.useRef(null),
@@ -98,8 +118,8 @@ function v(e) {
         V = () =>
             (0, r.jsx)(c.VqE, {
                 className: h.popoutWrapper,
-                'aria-label': L,
-                'aria-labelledby': x,
+                "aria-label": L,
+                "aria-labelledby": x,
                 children: (0, r.jsx)(c.Ttm, {
                     className: h.scroller,
                     children: t.map((e) =>
@@ -110,33 +130,35 @@ function v(e) {
                                 guildId: s,
                                 channelId: m,
                                 nick: f.ZP.getNickname(s, m, e),
-                                disablePopout: 'function' == typeof C ? C(e.id) : C,
+                                disablePopout: "function" == typeof C ? C(e.id) : C,
                                 onClick: w,
                                 onPopoutRequestClose: () => {
-                                    (j(!1), null == D || D());
+                                    j(!1), null == D || D();
                                 },
                                 onContextMenu: (t) =>
                                     (0, u.jW)(
                                         t,
                                         async () => {
-                                            let { default: t } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
+                                            let { default: t } = await Promise.all([n.e("79695"), n.e("69220")]).then(
+                                                n.bind(n, 881351),
+                                            );
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
                                                     b(g({}, n), {
                                                         user: e,
                                                         guildId: s,
-                                                        channelId: m
-                                                    })
+                                                        channelId: m,
+                                                    }),
                                                 );
                                         },
-                                        { onClose: () => j(!1) }
-                                    )
+                                        { onClose: () => j(!1) },
+                                    ),
                             },
-                            e.id
-                        )
-                    )
-                })
+                            e.id,
+                        ),
+                    ),
+                }),
             }),
         H = () => {
             let e = F ? o - 1 : Math.min(t.length, o),
@@ -151,39 +173,39 @@ function v(e) {
                             d = (0, r.jsx)(c.qEK, {
                                 src: e.getAvatarURL(s, 24),
                                 size: v,
-                                'aria-hidden': !0
+                                "aria-hidden": !0,
                             });
                         return (0, r.jsx)(
-                            'li',
+                            "li",
                             {
                                 className: u,
                                 children: N
-                                    ? (0, r.jsx)('span', {
-                                          role: 'img',
-                                          'aria-label': o,
-                                          children: d
+                                    ? (0, r.jsx)("span", {
+                                          role: "img",
+                                          "aria-label": o,
+                                          children: d,
                                       })
                                     : (0, r.jsx)(c.ua7, {
                                           text: o,
-                                          'aria-label': !1,
+                                          "aria-label": !1,
                                           children: (e) =>
                                               (0, r.jsx)(
-                                                  'span',
+                                                  "span",
                                                   b(g({}, e), {
-                                                      role: 'img',
-                                                      'aria-label': o,
-                                                      children: d
-                                                  })
-                                              )
-                                      })
+                                                      role: "img",
+                                                      "aria-label": o,
+                                                      children: d,
+                                                  }),
+                                              ),
+                                      }),
                             },
-                            e.id
+                            e.id,
                         );
                     })
                     .value();
-            return (0, r.jsx)('ul', {
+            return (0, r.jsx)("ul", {
                 className: h.avatars,
-                children: i
+                children: i,
             });
         },
         Y = () => {
@@ -195,7 +217,7 @@ function v(e) {
                     targetElementRef: G,
                     renderPopout: V,
                     shouldShow: k,
-                    position: 'bottom',
+                    position: "bottom",
                     onRequestClose: () => j(!1),
                     children: (t) =>
                         (0, r.jsx)(
@@ -205,28 +227,28 @@ function v(e) {
                                 className: a()(h.overflow, U, S),
                                 onFocus: P,
                                 onClick: (e) => {
-                                    (null == R || R(e), j(!0));
+                                    null == R || R(e), j(!0);
                                 },
-                                'aria-label': p.intl.formatToPlainString(p.t.R8Z8Qk, { count: Z }),
+                                "aria-label": p.intl.formatToPlainString(p.t.R8Z8Qk, { count: Z }),
                                 children: (0, r.jsx)(c.Text, {
                                     variant: e,
                                     color: T,
-                                    children: Z > 99 ? '>99' : '+'.concat(Z)
-                                })
-                            })
-                        )
+                                    children: Z > 99 ? ">99" : "+".concat(Z),
+                                }),
+                            }),
+                        ),
                 },
-                'overflow'
+                "overflow",
             );
         };
     return t.length <= 0
         ? null
-        : (0, r.jsxs)('div', {
-              role: 'group',
-              'aria-label': L,
-              'aria-labelledby': x,
+        : (0, r.jsxs)("div", {
+              role: "group",
+              "aria-label": L,
+              "aria-labelledby": x,
               className: a()(E, h.avatars),
-              'aria-hidden': M,
-              children: [H(), Y()]
+              "aria-hidden": M,
+              children: [H(), Y()],
           });
 }

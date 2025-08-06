@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685), n(953529));
+n.d(t, { Z: () => R }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -28,15 +28,15 @@ var r = n(255367),
     T = n(738309);
 function P(e) {
     let { onCreateTeamClick: t, isGuildOwner: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: T.selectTeamContainer,
         children: (0, r.jsx)(a.zx, {
             disabled: !n,
             onClick: t,
             className: T.enableTicketingButton,
             fullWidth: !0,
-            children: S.intl.string(S.t['5k6FfX'])
-        })
+            children: S.intl.string(S.t["5k6FfX"]),
+        }),
     });
 }
 function w(e) {
@@ -49,22 +49,22 @@ function w(e) {
             () =>
                 n.map((e) => ({
                     label: e.name,
-                    value: e.id
+                    value: e.id,
                 })),
-            [n]
+            [n],
         ),
         x = async () => {
             (await u(t, o, I.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (p(t.id),
                 (0, _.B)({
                     Icon: C.Z,
-                    title: S.intl.string(S.t['AP/2qa']),
-                    body: S.intl.string(S.t.kHMgaG)
+                    title: S.intl.string(S.t["AP/2qa"]),
+                    body: S.intl.string(S.t.kHMgaG),
                 }));
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: T.selectTeamContainer,
                 children: [
                     (0, r.jsx)(s.q4e, {
@@ -74,24 +74,24 @@ function w(e) {
                         value: o,
                         isDisabled: 0 === f.length || h || !l,
                         onChange: (e) => c(e),
-                        'aria-label': S.intl.string(S.t.QXf93N)
+                        "aria-label": S.intl.string(S.t.QXf93N),
                     }),
                     (0, r.jsx)(a.zx, {
                         onClick: x,
                         className: T.enableTicketingButton,
                         submitting: m,
                         disabled: null == o || h || !l,
-                        children: S.intl.string(S.t['9HU3ZW'])
-                    })
-                ]
+                        children: S.intl.string(S.t["9HU3ZW"]),
+                    }),
+                ],
             }),
             null != g &&
                 (0, r.jsx)(s.Text, {
                     className: T.error,
-                    variant: 'text-sm/normal',
-                    children: g.getAnyErrorMessage()
-                })
-        ]
+                    variant: "text-sm/normal",
+                    children: g.getAnyErrorMessage(),
+                }),
+        ],
     });
 }
 let R = (e) => {
@@ -105,9 +105,12 @@ let R = (e) => {
             () =>
                 v.filter((e) => {
                     var t;
-                    return e.payout_account_status !== E.C.BLOCKED && (0, g.Z)(null != (t = null == n ? void 0 : n.id) ? t : N.lds, e);
+                    return (
+                        e.payout_account_status !== E.C.BLOCKED &&
+                        (0, g.Z)(null != (t = null == n ? void 0 : n.id) ? t : N.lds, e)
+                    );
                 }),
-            [v, n]
+            [v, n],
         ),
         I = C.length > 0,
         R = i.useCallback(async () => {
@@ -115,7 +118,7 @@ let R = (e) => {
                 is_onboarding_v2: d,
                 has_eligible_team: I,
                 guild_id: t.id,
-                is_owner: a
+                is_owner: a,
             });
             let e = await (0, u.$)(N.E07.DEVELOPER_PORTAL_TEAMS);
             (0, o.Z)(e);
@@ -125,10 +128,10 @@ let R = (e) => {
                 a
                     ? (0, r.jsx)(m.Z, {
                           onClick: R,
-                          children: e
+                          children: e,
                       })
                     : e,
-            [R, a]
+            [R, a],
         );
     return _
         ? (0, r.jsx)(s.$jN, {})
@@ -137,7 +140,7 @@ let R = (e) => {
                   !a &&
                       (0, r.jsx)(O.Z, {
                           className: T.nonOwnerNotice,
-                          children: S.intl.string(S.t.t56qWF)
+                          children: S.intl.string(S.t.t56qWF),
                       }),
                   (0, r.jsxs)(s.hjN, {
                       title: S.intl.string(S.t.sYLCY2),
@@ -147,28 +150,28 @@ let R = (e) => {
                               type: s.R94.Types.DESCRIPTION,
                               className: T.description,
                               disabled: !a,
-                              children: S.intl.format(S.t['5mfqpa'], { onCreateTeamHook: Z })
+                              children: S.intl.format(S.t["5mfqpa"], { onCreateTeamHook: Z }),
                           }),
                           I
                               ? (0, r.jsx)(w, {
                                     guild: t,
                                     eligibleTeams: C,
-                                    isGuildOwner: a
+                                    isGuildOwner: a,
                                 })
                               : (0, r.jsx)(P, {
                                     onCreateTeamClick: R,
-                                    isGuildOwner: a
-                                })
-                      ]
+                                    isGuildOwner: a,
+                                }),
+                      ],
                   }),
                   (0, r.jsx)(s.hjN, {
-                      title: S.intl.string(S.t['0n7R2d']),
+                      title: S.intl.string(S.t["0n7R2d"]),
                       className: T.selfDemonetization,
                       children: (0, r.jsx)(y.Z, {
                           guildId: t.id,
-                          allPeriods: []
-                      })
-                  })
-              ]
+                          allPeriods: [],
+                      }),
+                  }),
+              ],
           });
 };

@@ -5,7 +5,7 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,11 +28,11 @@ function s(e) {
 n.d(t, {
     Cl: () => a,
     ZP: () => l,
-    m$: () => o
+    m$: () => o,
 });
 class l {
     reset() {
-        (Object.values(this.timers).forEach((e) => clearTimeout(e)), (this.timers = {}));
+        Object.values(this.timers).forEach((e) => clearTimeout(e)), (this.timers = {});
     }
     setTimer(e, t, n) {
         if (null == e || null == t) return !1;
@@ -43,6 +43,6 @@ class l {
         null != e && e in this.timers && (clearTimeout(this.timers[e]), delete this.timers[e]);
     }
     constructor() {
-        (r(this, 'timers', void 0), (this.timers = {}));
+        r(this, "timers", void 0), (this.timers = {});
     }
 }

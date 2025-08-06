@@ -7,5 +7,5 @@ var r = n(580983),
 e.exports = function (e, t) {
     var n = arguments.length < 2 ? s(e) : t;
     if (i(n)) return o(r(n, e));
-    throw new l(a(e) + ' is not iterable');
+    throw new l(a(e) + " is not iterable");
 };

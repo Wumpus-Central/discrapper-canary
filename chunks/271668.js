@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(388685));
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -58,23 +58,23 @@ let D = 512,
                 commands: J,
                 filteredSectionId: $,
                 scrollDown: ee,
-                filterSection: et
+                filterSection: et,
             } = y.wi({
                 context: {
                     channel: n,
-                    type: 'channel'
+                    type: "channel",
                 },
                 filters: {
                     commandTypes: [u.yU.CHAT],
                     builtIns: o ? O.D.ONLY_TEXT : O.D.ALLOW,
-                    applicationCommands: !o
+                    applicationCommands: !o,
                 },
                 options: {
                     placeholderCount: L,
                     limit: N.tn,
-                    includeFrecency: !0
+                    includeFrecency: !0,
                 },
-                allowFetch: !0
+                allowFetch: !0,
             }),
             en = (0, g.Qs)({
                 activeCategoryIndex: K,
@@ -88,22 +88,22 @@ let D = 512,
                     }
                 },
                 scrollOffset: j,
-                searchQuery: ''
+                searchQuery: "",
             }),
             er = (e) => {
                 let t = q.length * (k + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
-                (Q && e + U > t && ee(), en(e), B(), (l.current = e));
+                Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
-        (i.useEffect(() => {
+        i.useEffect(() => {
             ei.current = er;
         }),
             i.useEffect(() => {
                 ei.current(l.current);
-            }, [J]));
+            }, [J]);
         let eo = i.useCallback((e) => (e !== q.length - 1 || Q ? M : 0), [q.length, Q]),
             ea = X.map((e) => e.data.length);
-        (i.useEffect(() => {
+        i.useEffect(() => {
             null != H.current && Y && null != Z && H.current.scrollRowIntoView(Z);
         }, [Y, Z]),
             i.useLayoutEffect(() => {
@@ -111,15 +111,15 @@ let D = 512,
                     var e;
                     null == (e = H.current) || e.scrollToSectionTop(0);
                 }
-            }, [J, $]));
+            }, [J, $]);
         let es = i.useCallback(
                 (e) => {
                     if (e.id === $ || e.id === N.bi.FRECENCY) {
                         var t;
-                        (et(null), null == (t = H.current) || t.scrollToSectionTop(0));
+                        et(null), null == (t = H.current) || t.scrollToSectionTop(0);
                     } else et(e.id);
                 },
-                [et, $]
+                [et, $],
             ),
             el = i.useCallback(
                 (e, t, r) => {
@@ -128,10 +128,10 @@ let D = 512,
                         command: e,
                         section: t,
                         location: v.Vh.DISCOVERY,
-                        triggerSection: r
+                        triggerSection: r,
                     });
                 },
-                [n.id]
+                [n.id],
             );
         i.useImperativeHandle(
             t,
@@ -155,10 +155,10 @@ let D = 512,
                     let t = Q ? L : 0,
                         n = J.length + t,
                         r = null == Z ? 0 : Z + e;
-                    return (r >= n ? (r = n - 1) : r < 0 && (r = 0), V(r), W(!0), !0);
-                }
+                    return r >= n ? (r = n - 1) : r < 0 && (r = 0), V(r), W(!0), !0;
+                },
             }),
-            [J.length, X, Q, z, el, Z]
+            [J.length, X, Q, z, el, Z],
         );
         let ec = i.useCallback(
                 (e) => {
@@ -170,19 +170,19 @@ let D = 512,
                             section: t,
                             width: 16,
                             height: 16,
-                            padding: 0
+                            padding: 0,
                         });
                     return (0, r.jsx)(
                         E.Z,
                         {
                             className: P.categoryHeader,
                             icon: o,
-                            children: t.name
+                            children: t.name,
                         },
-                        e
+                        e,
                     );
                 },
-                [n, q]
+                [n, q],
             ),
             eu = i.useCallback(
                 (e, t) => {
@@ -190,10 +190,10 @@ let D = 512,
                         i = q[e],
                         { data: o } = X[e];
                     return (0, r.jsxs)(
-                        'ul',
+                        "ul",
                         {
-                            role: 'group',
-                            'aria-label': i.name,
+                            role: "group",
+                            "aria-label": i.name,
                             className: a()(P.categorySection, { [P.categorySectionLast]: n }),
                             children: [
                                 t,
@@ -201,22 +201,27 @@ let D = 512,
                                     (0, r.jsx)(c.Z, {
                                         message: R.intl.format(R.t.WoQXT0, { applicationName: i.name }),
                                         noResultsImageURL: w,
-                                        className: P.noSearchResults
-                                    })
-                            ]
+                                        className: P.noSearchResults,
+                                    }),
+                            ],
                         },
-                        e
+                        e,
                     );
                 },
-                [q, X]
+                [q, X],
             ),
             ed = i.useCallback(
                 (e, t) => {
                     var i;
                     let o = X[t.sectionIndex],
                         a = o.data[t.sectionRowIndex],
-                        s = ''.concat(o.section.id, ':').concat(null != (i = null == a ? void 0 : a.id) ? i : e);
-                    if (null == a || (o.section.id !== a.applicationId && o.section.id !== N.bi.FRECENCY) || a.inputType === v.iw.PLACEHOLDER) return (0, r.jsx)(S.Z, {}, s);
+                        s = "".concat(o.section.id, ":").concat(null != (i = null == a ? void 0 : a.id) ? i : e);
+                    if (
+                        null == a ||
+                        (o.section.id !== a.applicationId && o.section.id !== N.bi.FRECENCY) ||
+                        a.inputType === v.iw.PLACEHOLDER
+                    )
+                        return (0, r.jsx)(S.Z, {}, s);
                     let l = z.find((e) => e.id === a.applicationId);
                     return (0, r.jsx)(
                         f.ZP.NewCommand,
@@ -230,13 +235,13 @@ let D = 512,
                             section: l,
                             onClick: () => el(a, l, (0, I.tI)(o.section)),
                             onHover: () => {
-                                (V(null), W(!1));
-                            }
+                                V(null), W(!1);
+                            },
                         },
-                        s
+                        s,
                     );
                 },
-                [n, X, el, z, Z]
+                [n, X, el, z, Z],
             ),
             ef = (0, h.Dt)();
         return (
@@ -245,7 +250,7 @@ let D = 512,
                 () => () => {
                     (0, _.sJ)();
                 },
-                []
+                [],
             ),
             (0, r.jsxs)(f.ZP, {
                 id: ef,
@@ -260,10 +265,10 @@ let D = 512,
                         filteredSectionId: $,
                         activeCategoryIndex: K,
                         onSectionClick: es,
-                        applicationCommandListRef: H
+                        applicationCommandListRef: H,
                     }),
                     (0, r.jsx)(p.Z, {
-                        role: 'listbox',
+                        role: "listbox",
                         className: P.list,
                         listPadding: G,
                         onScroll: er,
@@ -276,9 +281,9 @@ let D = 512,
                         sectionHeaderHeight: k,
                         sectionMarginBottom: eo,
                         ref: H,
-                        stickyHeaders: !0
-                    })
-                ]
+                        stickyHeaders: !0,
+                    }),
+                ],
             })
         );
     });

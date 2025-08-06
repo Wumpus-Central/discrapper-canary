@@ -5,7 +5,7 @@ var i = {
     today: "'tänään klo' p",
     tomorrow: "'huomenna klo' p",
     nextWeek: "'ensi' eeee 'klo' p",
-    other: 'P'
+    other: "P",
 };
 let n = function (a, e, t, n) {
     return i[a];

@@ -6,11 +6,11 @@ function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -36,7 +36,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -49,7 +49,7 @@ var c = {
     targetIds: [],
     dropResult: null,
     didDrop: !1,
-    isSourcePublic: null
+    isSourcePublic: null,
 };
 function u() {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
@@ -66,8 +66,8 @@ function u() {
                     sourceId: n.sourceId,
                     isSourcePublic: n.isSourcePublic,
                     dropResult: null,
-                    didDrop: !1
-                }
+                    didDrop: !1,
+                },
             );
         case r.js:
             return s(s({}, e), {}, { isSourcePublic: !0 });
@@ -83,8 +83,8 @@ function u() {
                 {
                     dropResult: n.dropResult,
                     didDrop: !0,
-                    targetIds: []
-                }
+                    targetIds: [],
+                },
             );
         case r.Bs:
             return s(
@@ -97,8 +97,8 @@ function u() {
                     dropResult: null,
                     didDrop: !1,
                     isSourcePublic: null,
-                    targetIds: []
-                }
+                    targetIds: [],
+                },
             );
         default:
             return e;

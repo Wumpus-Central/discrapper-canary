@@ -11,5 +11,5 @@ e.exports = function (e) {
         var r = !0;
     } catch (e) {}
     var i = a.call(e);
-    return (r && (t ? (e[s] = n) : delete e[s]), i);
+    return r && (t ? (e[s] = n) : delete e[s]), i;
 };

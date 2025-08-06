@@ -21,11 +21,11 @@ function f(e) {
 function _(e, t, n) {
     if (((t = t || 0), (n = void 0 === n ? 1 / 0 : n || 0), !u(e))) return e.substr(t, n);
     var r = e.length;
-    if (r <= 0 || t > r || n <= 0) return '';
+    if (r <= 0 || t > r || n <= 0) return "";
     var i = 0;
     if (t > 0) {
         for (; t > 0 && i < r; t--) i += d(e, i);
-        if (i >= r) return '';
+        if (i >= r) return "";
     } else if (t < 0) {
         for (i = r; t < 0 && 0 < i; t++) i -= d(e, i - 1);
         i < 0 && (i = 0);
@@ -50,9 +50,9 @@ e.exports = {
     },
     strlen: f,
     substring: function (e, t, n) {
-        ((t = t || 0) < 0 && (t = 0), (n = void 0 === n ? 1 / 0 : n || 0) < 0 && (n = 0));
+        (t = t || 0) < 0 && (t = 0), (n = void 0 === n ? 1 / 0 : n || 0) < 0 && (n = 0);
         var r = Math.abs(n - t);
         return _(e, (t = t < n ? t : n), r);
     },
-    substr: _
+    substr: _,
 };

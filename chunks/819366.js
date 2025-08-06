@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,27 +70,35 @@ function v(e, t) {
 function I(e) {
     let { userId: t, className: o, children: a } = e,
         l = i.useCallback(() => {
-            (0, u.k)({ kind: 'user' });
+            (0, u.k)({ kind: "user" });
         }, []),
         c = i.useCallback(
             (e) => {
                 null != t &&
                     (0, s.jW)(e, async () => {
-                        let { default: e } = await n.e('25073').then(n.bind(n, 80742));
+                        let { default: e } = await n.e("25073").then(n.bind(n, 80742));
                         return (n) => (0, r.jsx)(e, v(y({}, n), { userId: t }));
                     });
             },
-            [t]
+            [t],
         );
     return (0, r.jsx)(d.Z, {
         className: o,
         onClick: l,
         onContextMenu: c,
-        children: a
+        children: a,
     });
 }
 function T(e) {
-    let { className: t, userId: u, channelId: b, parsedUserId: O, content: T, inlinePreview: S = !1, viewingChannelId: A } = e,
+    let {
+            className: t,
+            userId: u,
+            channelId: b,
+            parsedUserId: O,
+            content: T,
+            inlinePreview: S = !1,
+            viewingChannelId: A,
+        } = e,
         N = i.useRef(null),
         { analyticsLocations: C } = (0, c.ZP)(l.Z.USER_MENTION),
         R = (0, a.e7)([m.default], () => m.default.getUser(u)),
@@ -102,7 +110,13 @@ function T(e) {
                 : (e) => {
                       null != P &&
                           (0, s.jW)(e, async () => {
-                              let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('8982'), n.e('7717'), n.e('12658')]).then(n.bind(n, 757387));
+                              let { default: e } = await Promise.all([
+                                  n.e("79695"),
+                                  n.e("98783"),
+                                  n.e("8982"),
+                                  n.e("7717"),
+                                  n.e("12658"),
+                              ]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, r.jsx)(
                                       e,
@@ -110,8 +124,8 @@ function T(e) {
                                           viewingChannelId: A,
                                           user: R,
                                           channel: P,
-                                          guildId: w
-                                      })
+                                          guildId: w,
+                                      }),
                                   );
                           });
                   },
@@ -121,7 +135,7 @@ function T(e) {
         return (0, r.jsx)(I, {
             userId: O,
             className: t,
-            children: T
+            children: T,
         });
     let M = (e) =>
         (0, r.jsx)(
@@ -131,17 +145,17 @@ function T(e) {
                     {
                         ref: N,
                         className: t,
-                        onContextMenu: D
+                        onContextMenu: D,
                     },
-                    e
+                    e,
                 ),
-                { children: '@'.concat(null != x ? x : L) }
-            )
+                { children: "@".concat(null != x ? x : L) },
+            ),
         );
     return S
         ? (0, r.jsx)(c.Gt, {
               value: C,
-              children: M()
+              children: M(),
           })
         : (0, r.jsx)(c.Gt, {
               value: C,
@@ -150,9 +164,9 @@ function T(e) {
                   user: R,
                   guildId: null != w ? w : void 0,
                   channelId: b,
-                  position: o.tq ? 'top' : 'right',
+                  position: o.tq ? "top" : "right",
                   clickTrap: !0,
-                  children: (e) => M(e)
-              })
+                  children: (e) => M(e),
+              }),
           });
 }

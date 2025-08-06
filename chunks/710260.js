@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     C1: () => _,
     Ni: () => f,
     TC: () => u,
     TT: () => c,
-    qF: () => d
+    qF: () => d,
 }),
     n(49124),
-    n(415506));
+    n(415506);
 var r = n(255367),
     i = n(73800);
 function o(e, t, n) {
@@ -16,7 +16,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,20 +67,20 @@ function c(e) {
 }
 function u() {
     let e = i.useContext(f);
-    if (null == e) throw Error('useThemeContext must be used within a ThemeContext.Provider');
+    if (null == e) throw Error("useThemeContext must be used within a ThemeContext.Provider");
     return e;
 }
 let d = c({
-        theme: 'light',
+        theme: "light",
         primaryColor: null,
         secondaryColor: null,
         gradient: null,
         flags: 0,
         contrast: 1,
         saturation: 1,
-        density: 'compact',
+        density: "compact",
         disableAdaptiveTheme: !1,
-        reduceAdaptiveTheme: !1
+        reduceAdaptiveTheme: !1,
     }),
     f = i.createContext(d);
 function _(e) {

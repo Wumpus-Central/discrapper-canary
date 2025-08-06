@@ -19,15 +19,15 @@ function f(e) {
         b = f === h.ULH.PROFILE && m;
     return (0, r.jsx)(d.JO, {
         disabled: !m || n,
-        tooltip: !m || n ? p.intl.string(p.t.YneDgI) : b ? p.intl.string(p.t.niD64e) : p.intl.string(p.t['+FAsHh']),
+        tooltip: !m || n ? p.intl.string(p.t.YneDgI) : b ? p.intl.string(p.t.niD64e) : p.intl.string(p.t["+FAsHh"]),
         icon: l.z65,
         onClick: () => {
-            ((0, s.TY)({
+            (0, s.TY)({
                 displayProfile: g,
-                isProfileOpen: !b
+                isProfileOpen: !b,
             }),
-                a.Z.toggleUserProfileSidebarSection());
+                a.Z.toggleUserProfileSidebarSection();
         },
-        selected: b && m && !n
+        selected: b && m && !n,
     });
 }

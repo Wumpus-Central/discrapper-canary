@@ -8,8 +8,8 @@ var r = n(544891),
 function c(e) {
     let t = new a.Hx(e).getAnyErrorMessage();
     o.Z.show({
-        title: l.intl.string(l.t['328j/P']),
-        body: null != t ? t : l.intl.string(l.t.fEptJC)
+        title: l.intl.string(l.t["328j/P"]),
+        body: null != t ? t : l.intl.string(l.t.fEptJC),
     });
 }
 function u(e) {
@@ -19,7 +19,7 @@ function u(e) {
             url: s.ANM.USER_GAME_RELATIONSHIP(t, n),
             body: { type: o },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
         .then(() => {
             i();
@@ -29,12 +29,12 @@ function u(e) {
 async function d(e) {
     let { userId: t, applicationId: n, onSuccess: i } = e;
     try {
-        (await r.tn.del({
+        await r.tn.del({
             url: s.ANM.USER_GAME_RELATIONSHIP(t, n),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         }),
-            i());
+            i();
     } catch (e) {
         c(e);
     }
@@ -47,7 +47,7 @@ let f = {
             applicationId: n,
             onSuccess: () => {
                 i.uv.announce(l.intl.string(l.t.zRf8cH));
-            }
+            },
         });
     },
     acceptGameFriendRequest: function (e) {
@@ -58,7 +58,7 @@ let f = {
             type: s.OGo.FRIEND,
             onSuccess: () => {
                 i.uv.announce(l.intl.string(l.t.taJiub));
-            }
+            },
         });
     },
     cancelGameFriendRequest: async function (e) {
@@ -68,7 +68,7 @@ let f = {
             applicationId: n,
             onSuccess: () => {
                 i.uv.announce(l.intl.string(l.t.XMf21t));
-            }
+            },
         });
-    }
+    },
 };

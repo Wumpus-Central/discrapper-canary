@@ -16,7 +16,16 @@ var n = r(255367),
     j = r(152790),
     v = r(263930);
 let h = (e) => {
-    let { entry: t, onClose: r, onReaction: i, onRequestOpen: h, disableActivityProfileLinks: b, customCTA: O, popoutClassname: y, popoutPosition: _ = 'right' } = e,
+    let {
+            entry: t,
+            onClose: r,
+            onReaction: i,
+            onRequestOpen: h,
+            disableActivityProfileLinks: b,
+            customCTA: O,
+            popoutClassname: y,
+            popoutPosition: _ = "right",
+        } = e,
         w = a.useRef(null),
         I = (0, o.e7)([d.Z, c.Z], () => c.Z.getChannel(d.Z.getChannelId())),
         P = (0, o.e7)([u.default], () => u.default.getUser(t.author_id)),
@@ -24,7 +33,7 @@ let h = (e) => {
             let e = null == P ? void 0 : P.getAvatarURL(null == I ? void 0 : I.guild_id, 48, !1);
             return {
                 nick: m.ZP.getName(null == I ? void 0 : I.guild_id, null == I ? void 0 : I.id, P),
-                avatar: e
+                avatar: e,
             };
         }, [P, I]);
     return null == P
@@ -34,19 +43,19 @@ let h = (e) => {
               position: _,
               renderPopout: (e) => {
                   let { closePopout: a, updatePosition: l } = e;
-                  return (0, n.jsx)('div', {
+                  return (0, n.jsx)("div", {
                       className: y,
                       children: (0, n.jsx)(g.J, {
                           entry: t,
                           closePopout: a,
                           updatePopoutPosition: l,
                           onReaction: () => {
-                              (null == i || i(), r(), a());
+                              null == i || i(), r(), a();
                           },
                           onUserPopoutClosed: () => a(),
                           disableGameProfileLinks: !0,
-                          disableActivityProfileLinks: b
-                      })
+                          disableActivityProfileLinks: b,
+                      }),
                   });
               },
               positionKey: "'content-entry-".concat(t.id),
@@ -61,24 +70,24 @@ let h = (e) => {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
                                   n = Object.keys(r);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (n = n.concat(
                                       Object.getOwnPropertySymbols(r).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   n.forEach(function (t) {
                                       var n;
-                                      ((n = r[t]),
+                                      (n = r[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: n,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = n));
-                                  }));
+                                              : (e[t] = n);
+                                  });
                           }
                           return e;
                       })({ innerRef: w }, e)),
@@ -90,42 +99,42 @@ let h = (e) => {
                                       top: 4,
                                       bottom: 4,
                                       left: 4,
-                                      right: 4
+                                      right: 4,
                                   },
                                   children: (0, n.jsxs)(n.Fragment, {
                                       children: [
-                                          (0, n.jsx)('img', {
+                                          (0, n.jsx)("img", {
                                               className: j.avatar,
                                               src: S,
-                                              alt: x.intl.formatToPlainString(x.t.IzVXxc, { userName: E })
+                                              alt: x.intl.formatToPlainString(x.t.IzVXxc, { userName: E }),
                                           }),
-                                          (0, n.jsx)('div', {
+                                          (0, n.jsx)("div", {
                                               className: j.playerInfo,
-                                              children: (0, n.jsxs)('div', {
+                                              children: (0, n.jsxs)("div", {
                                                   className: l()(v.column, v.gapXs),
                                                   children: [
                                                       (0, n.jsx)(s.Text, {
-                                                          variant: 'text-md/medium',
-                                                          color: 'text-primary',
+                                                          variant: "text-md/medium",
+                                                          color: "text-primary",
                                                           lineClamp: 1,
-                                                          children: E
+                                                          children: E,
                                                       }),
                                                       (0, n.jsx)(f.Gk, {
                                                           location: f.Gt.APP_LAUNCHER,
-                                                          children: p.W.map((e, r) => (0, n.jsx)(e, { entry: t }, r))
-                                                      })
-                                                  ]
-                                              })
+                                                          children: p.W.map((e, r) => (0, n.jsx)(e, { entry: t }, r)),
+                                                      }),
+                                                  ],
+                                              }),
                                           }),
                                           null != O
                                               ? O
-                                              : (0, n.jsx)('div', {
+                                              : (0, n.jsx)("div", {
                                                     className: j.reactions,
-                                                    children: (0, n.jsx)(s.n$P, { size: 'sm' })
-                                                })
-                                      ]
-                                  })
-                              })
+                                                    children: (0, n.jsx)(s.n$P, { size: "sm" }),
+                                                }),
+                                      ],
+                                  }),
+                              }),
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
@@ -139,8 +148,8 @@ let h = (e) => {
                             })(Object(a)).forEach(function (e) {
                                 Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                             }),
-                      r)
+                      r),
                   );
-              }
+              },
           });
 };

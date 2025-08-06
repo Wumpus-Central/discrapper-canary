@@ -12,5 +12,5 @@ e.exports = {
             }),
             c = s(n.keySeq().zip(l));
         return null != t && o.is(t, c) ? t : c;
-    }
+    },
 };

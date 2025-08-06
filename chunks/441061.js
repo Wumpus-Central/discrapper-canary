@@ -9,9 +9,9 @@ var i = n(442837),
 function c(e) {
     let t = (0, i.e7)([s.Z], () => s.Z.getVoiceParticipantsHidden(e));
     return (0, r.jsx)(o.S89, {
-        id: 'no-video-hide',
+        id: "no-video-hide",
         label: l.intl.string(l.t.BL8ss7),
         checked: !t,
-        action: () => a.Z.toggleVoiceParticipantsHidden(e, !t)
+        action: () => a.Z.toggleVoiceParticipantsHidden(e, !t),
     });
 }

@@ -16,28 +16,28 @@ function g(e) {
     let t = (function (e) {
             var t;
             let n = null == (t = s().os) ? void 0 : t.family;
-            if ('Android' === n || 'iOS' === n) {
+            if ("Android" === n || "iOS" === n) {
                 let t = d.default.getFingerprint(),
                     n = (0, a.WS)();
                 return (
-                    i()(null != e, 'generateAppPath: guildId cannot be null'),
+                    i()(null != e, "generateAppPath: guildId cannot be null"),
                     (0, a.ZP)((0, o.z0)(e), {
-                        utmSource: 'verify_hub_email',
+                        utmSource: "verify_hub_email",
                         fingerprint: t,
-                        attemptId: n
+                        attemptId: n,
                     })
                 );
             }
-            return 'discord://';
+            return "discord://";
         })(e),
         n = (0, a.zS)(t);
-    (null != n &&
+    null != n &&
         p.default.track(f.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.K)(n.fingerprint),
             attempt_id: n.attemptId,
-            source: n.utmSource
+            source: n.utmSource,
         }),
         m.Z.launch(t, (e) => {
             e || (0, u.dL)(h.Z.fallbackRoute);
-        }));
+        });
 }

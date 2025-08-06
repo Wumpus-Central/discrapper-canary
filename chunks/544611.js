@@ -8,8 +8,8 @@ e.exports = function (e) {
             anchorOffset: 0,
             focusKey: n,
             focusOffset: 0,
-            isBackward: !1
+            isBackward: !1,
         }),
-        forceSelection: !0
+        forceSelection: !0,
     });
 };

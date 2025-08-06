@@ -1,4 +1,4 @@
-(n.d(e, { default: () => j }), n(388685));
+n.d(e, { default: () => j }), n(388685);
 var l = n(255367),
     a = n(73800),
     i = n(650557),
@@ -21,13 +21,13 @@ function j(t) {
     let { text: N, editor: v, target: A, onHeightUpdate: P, onSelect: L } = t,
         Z = a.useCallback(() => {
             (0, o.Zy)(() => {
-                (i.F3.focus(v), setTimeout(() => h.bN.focus(v), 0));
+                i.F3.focus(v), setTimeout(() => h.bN.focus(v), 0);
             });
         }, [v]),
         [w, I] = (0, d.Z)({
             text: N,
             target: A,
-            onHeightUpdate: P
+            onHeightUpdate: P,
         }),
         D = (0, y.Z)(v),
         M = (0, r.e7)([u.Z], () => u.Z.isSubmitButtonEnabled),
@@ -38,79 +38,79 @@ function j(t) {
         H = null != (k = null == (E = v.chatInputType) || null == (x = E.submit) ? void 0 : x.button) && k,
         U = R || G,
         X =
-            '' !== N
+            "" !== N
                 ? [
                       (0, l.jsx)(
                           s.sNh,
                           {
-                              id: 'copy',
+                              id: "copy",
                               label: S.intl.string(S.t.OpuAlJ),
-                              hint: (0, g.isMac)() ? '\u2318C' : 'Ctrl+C',
-                              action: () => setTimeout(() => f.ZP.copy(), 0)
+                              hint: (0, g.isMac)() ? "\u2318C" : "Ctrl+C",
+                              action: () => setTimeout(() => f.ZP.copy(), 0),
                           },
-                          'copy'
+                          "copy",
                       ),
                       (0, l.jsx)(
                           s.sNh,
                           {
-                              id: 'cut',
+                              id: "cut",
                               label: S.intl.string(S.t.pNPVhY),
-                              hint: (0, g.isMac)() ? '\u2318X' : 'Ctrl+X',
-                              action: () => setTimeout(() => f.ZP.cut(), 0)
+                              hint: (0, g.isMac)() ? "\u2318X" : "Ctrl+X",
+                              action: () => setTimeout(() => f.ZP.cut(), 0),
                           },
-                          'cut'
-                      )
+                          "cut",
+                      ),
                   ]
                 : null,
         F = (0, l.jsx)(s.S89, {
-            id: 'command-suggestions',
-            label: S.intl.string(S.t['9rJKFx']),
+            id: "command-suggestions",
+            label: S.intl.string(S.t["9rJKFx"]),
             checked: _,
             action: () => {
                 let t = !_;
-                (b.Xk.updateSetting(t),
+                b.Xk.updateSetting(t),
                     p.default.track(m.rMx.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
-                        location: { object: m.qAy.CONTEXT_MENU }
-                    }));
-            }
+                        location: { object: m.qAy.CONTEXT_MENU },
+                    });
+            },
         });
     return (0, l.jsxs)(s.v2r, {
-        navId: 'textarea-context',
+        navId: "textarea-context",
         onClose: Z,
-        'aria-label': S.intl.string(S.t.NWlDSE),
+        "aria-label": S.intl.string(S.t.NWlDSE),
         onSelect: L,
         children: [
             U &&
                 (0, l.jsx)(s.sNh, {
-                    id: 'suggestions',
+                    id: "suggestions",
                     label: S.intl.string(S.t.zgxg7u),
-                    children: R && F
+                    children: R && F,
                 }),
             H &&
                 (0, l.jsx)(s.S89, {
-                    id: 'submit-button',
+                    id: "submit-button",
                     label: S.intl.string(S.t.G8XDys),
                     checked: M,
                     action: () => {
                         (0, c.eN)();
-                    }
+                    },
                 }),
             (0, l.jsx)(s.kSQ, { children: w }),
             (0, l.jsxs)(s.kSQ, {
-                children: [I, D]
+                children: [I, D],
             }),
             (0, l.jsxs)(s.kSQ, {
                 children: [
                     X,
                     (0, l.jsx)(s.sNh, {
-                        id: 'paste',
+                        id: "paste",
                         label: S.intl.string(S.t.lMUxVl),
-                        hint: (0, g.isMac)() ? '\u2318V' : 'Ctrl+V',
-                        action: () => setTimeout(() => f.ZP.paste(), 0)
-                    })
-                ]
-            })
-        ]
+                        hint: (0, g.isMac)() ? "\u2318V" : "Ctrl+V",
+                        action: () => setTimeout(() => f.ZP.paste(), 0),
+                    }),
+                ],
+            }),
+        ],
     });
 }

@@ -11,5 +11,5 @@ let o = {
     HUB_CLASS: n(425506),
     HUB_SOCIAL: r,
     HUB_MAJOR: s,
-    HUB_DORM: i
+    HUB_DORM: i,
 };

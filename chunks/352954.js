@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(415506));
+n.d(t, { Z: () => d }), n(415506);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -11,7 +11,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -37,11 +37,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -59,17 +59,17 @@ function u(e, t) {
 let d = {
     openSecureFramesStreamVerification: function (e, t) {
         (0, i.ZDy)(async () => {
-            let i = (await n.e('94904').then(n.bind(n, 660250))).default;
+            let i = (await n.e("94904").then(n.bind(n, 660250))).default;
             return (n) =>
                 (0, r.jsx)(
                     i,
                     l(
                         {
                             streamKey: e,
-                            channelId: t
+                            channelId: t,
                         },
-                        n
-                    )
+                        n,
+                    ),
                 );
         });
     },
@@ -77,24 +77,24 @@ let d = {
         a() &&
             (0, i.ZDy)(
                 async () => {
-                    let i = (await n.e('33397').then(n.bind(n, 963410))).default;
+                    let i = (await n.e("33397").then(n.bind(n, 963410))).default;
                     return (n) =>
                         (0, r.jsx)(
                             i,
                             l(
                                 {
                                     userId: e,
-                                    channelId: t
+                                    channelId: t,
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         );
                 },
-                { contextKey: s === o.IlC.POPOUT ? i.u1M : i.z1l }
+                { contextKey: s === o.IlC.POPOUT ? i.u1M : i.z1l },
             );
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: t, subtitle: o, confirmText: s = a.intl.string(a.t['cY+Ooa']), onConfirm: c } = e;
+        let { title: t, subtitle: o, confirmText: s = a.intl.string(a.t["cY+Ooa"]), onConfirm: c } = e;
         (0, i.ZDy)(async () => {
             let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
             return (n) =>
@@ -105,23 +105,23 @@ let d = {
                             {
                                 header: t,
                                 confirmText: s,
-                                cancelText: a.intl.string(a.t['ETE/oK']),
-                                onConfirm: c
+                                cancelText: a.intl.string(a.t["ETE/oK"]),
+                                onConfirm: c,
                             },
-                            n
+                            n,
                         ),
                         {
                             children: (0, r.jsx)(i.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'header-secondary',
-                                children: o
-                            })
-                        }
-                    )
+                                variant: "text-sm/normal",
+                                color: "header-secondary",
+                                children: o,
+                            }),
+                        },
+                    ),
                 );
         });
     },
     handleSecureFramesUserVerificationLink: function (e) {
-        throw Error('handleSecureFramesUserVerificationLink not implemented');
-    }
+        throw Error("handleSecureFramesUserVerificationLink not implemented");
+    },
 };

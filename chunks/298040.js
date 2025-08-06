@@ -1,1 +1,1 @@
-e.exports = { emptyCard: 'emptyCard__0a9e8' };
+e.exports = { emptyCard: "emptyCard__0a9e8" };

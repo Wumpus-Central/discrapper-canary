@@ -24,28 +24,28 @@ function m(e) {
         a = null != (t = (0, f._d)(i)) ? t : 0,
         s = null != (n = (0, f.K3)(i)) ? n : 0;
     return a > 0 && s > 0
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: p.blocked,
-              children: (0, r.jsx)('div', {
+              children: (0, r.jsx)("div", {
                   className: o()(p.blockedText, p.noIcon),
-                  children: _.intl.string(_.t.xlJRfn)
-              })
+                  children: _.intl.string(_.t.xlJRfn),
+              }),
           })
         : a > 0
-          ? (0, r.jsx)('div', {
+          ? (0, r.jsx)("div", {
                 className: p.blocked,
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: o()(p.blockedText, p.noIcon),
-                    children: _.intl.string(_.t.WYad9f)
-                })
+                    children: _.intl.string(_.t.WYad9f),
+                }),
             })
           : s > 0
-            ? (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", {
                   className: p.blocked,
-                  children: (0, r.jsx)('div', {
+                  children: (0, r.jsx)("div", {
                       className: o()(p.blockedText, p.noIcon),
-                      children: _.intl.string(_.t.eHq2OD)
-                  })
+                      children: _.intl.string(_.t.eHq2OD),
+                  }),
               })
             : null;
 }
@@ -57,7 +57,7 @@ function g() {
               className: p.container,
               color: s.DM8.DEFAULT,
               children: [
-                  (0, r.jsx)('div', { children: _.intl.string(_.t.Ul1RJS) }),
+                  (0, r.jsx)("div", { children: _.intl.string(_.t.Ul1RJS) }),
                   (0, r.jsx)(m, { channelId: e.id }),
                   (0, r.jsx)(a.zx, {
                       className: p.acceptButton,
@@ -66,10 +66,10 @@ function g() {
                       onClick: () => h(!1),
                       children: (0, r.jsx)(s.Text, {
                           className: p.acceptText,
-                          variant: 'text-xs/normal',
-                          color: 'none',
-                          children: _.intl.string(_.t.MpO0p6)
-                      })
+                          variant: "text-xs/normal",
+                          color: "none",
+                          children: _.intl.string(_.t.MpO0p6),
+                      }),
                   }),
                   (0, r.jsx)(a.zx, {
                       className: p.declineButton,
@@ -79,11 +79,11 @@ function g() {
                       onClick: () => h(!0),
                       children: (0, r.jsx)(s.Text, {
                           className: p.declineText,
-                          variant: 'text-xs/normal',
-                          color: 'none',
-                          children: _.intl.string(_.t['1YDv7e'])
-                      })
-                  })
-              ]
+                          variant: "text-xs/normal",
+                          color: "none",
+                          children: _.intl.string(_.t["1YDv7e"]),
+                      }),
+                  }),
+              ],
           });
 }

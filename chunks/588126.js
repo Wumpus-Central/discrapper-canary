@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var i = n(73800),
     r = n(597688),
     s = n(884697),
@@ -6,7 +6,7 @@ var i = n(73800),
 let l = function (e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         [n, l] = i.useState(),
-        { categories: o, purchases: c } = (0, a.ZP)({ location: 'useTryItOutAvatarDecoration' });
+        { categories: o, purchases: c } = (0, a.ZP)({ location: "useTryItOutAvatarDecoration" });
     return (
         i.useEffect(() => {
             (null == n || 0 === n.size) && l(o);

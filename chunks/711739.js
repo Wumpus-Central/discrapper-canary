@@ -6,14 +6,14 @@ let t = 2147483647,
     a = 700,
     s = 72,
     l = 128,
-    c = '-',
+    c = "-",
     u = /^xn--/,
     d = /[^\0-\x7E]/,
     f = /[\x2E\u3002\uFF0E\uFF61]/g,
     _ = {
-        overflow: 'Overflow: input needs wider integers to process',
-        'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
-        'invalid-input': 'Invalid input'
+        overflow: "Overflow: input needs wider integers to process",
+        "not-basic": "Illegal input >= 0x80 (not a basic code point)",
+        "invalid-input": "Invalid input",
     },
     p = 35,
     h = Math.floor,
@@ -28,9 +28,9 @@ function E(e, t) {
     return n;
 }
 function b(e, t) {
-    let n = e.split('@'),
-        r = '';
-    return (n.length > 1 && ((r = n[0] + '@'), (e = n[1])), r + E((e = e.replace(f, '.')).split('.'), t).join('.'));
+    let n = e.split("@"),
+        r = "";
+    return n.length > 1 && ((r = n[0] + "@"), (e = n[1])), r + E((e = e.replace(f, ".")).split("."), t).join(".");
 }
 function y(e) {
     let t = [],
@@ -64,20 +64,24 @@ let O = function (e) {
             f = s,
             _ = e.lastIndexOf(c);
         _ < 0 && (_ = 0);
-        for (let t = 0; t < _; ++t) (e.charCodeAt(t) >= 128 && g('not-basic'), o.push(e.charCodeAt(t)));
+        for (let t = 0; t < _; ++t) e.charCodeAt(t) >= 128 && g("not-basic"), o.push(e.charCodeAt(t));
         for (let s = _ > 0 ? _ + 1 : 0; s < a; ) {
             let l = u;
             for (let o = 1, l = n; ; l += n) {
-                s >= a && g('invalid-input');
+                s >= a && g("invalid-input");
                 let c = O(e.charCodeAt(s++));
-                ((c >= n || c > h((t - u) / o)) && g('overflow'), (u += c * o));
+                (c >= n || c > h((t - u) / o)) && g("overflow"), (u += c * o);
                 let d = l <= f ? r : l >= f + i ? i : l - f;
                 if (c < d) break;
                 let _ = n - d;
-                (o > h(t / _) && g('overflow'), (o *= _));
+                o > h(t / _) && g("overflow"), (o *= _);
             }
             let c = o.length + 1;
-            ((f = I(u - l, c, 0 == l)), h(u / c) > t - d && g('overflow'), (d += h(u / c)), (u %= c), o.splice(u++, 0, d));
+            (f = I(u - l, c, 0 == l)),
+                h(u / c) > t - d && g("overflow"),
+                (d += h(u / c)),
+                (u %= c),
+                o.splice(u++, 0, d);
         }
         return String.fromCodePoint(...o);
     },
@@ -94,21 +98,21 @@ let O = function (e) {
             let a = t;
             for (let t of e) t >= u && t < a && (a = t);
             let s = p + 1;
-            for (let l of (a - u > h((t - d) / s) && g('overflow'), (d += (a - u) * s), (u = a), e))
-                if ((l < u && ++d > t && g('overflow'), l == u)) {
+            for (let l of (a - u > h((t - d) / s) && g("overflow"), (d += (a - u) * s), (u = a), e))
+                if ((l < u && ++d > t && g("overflow"), l == u)) {
                     let e = d;
                     for (let t = n; ; t += n) {
                         let a = t <= f ? r : t >= f + i ? i : t - f;
                         if (e < a) break;
                         let s = e - a,
                             l = n - a;
-                        (o.push(m(v(a + (s % l), 0))), (e = h(s / l)));
+                        o.push(m(v(a + (s % l), 0))), (e = h(s / l));
                     }
-                    (o.push(m(v(e, 0))), (f = I(d, s, p == _)), (d = 0), ++p);
+                    o.push(m(v(e, 0))), (f = I(d, s, p == _)), (d = 0), ++p;
                 }
-            (++d, ++u);
+            ++d, ++u;
         }
-        return o.join('');
+        return o.join("");
     },
     A = function (e) {
         return b(e, function (e) {
@@ -117,17 +121,17 @@ let O = function (e) {
     },
     N = function (e) {
         return b(e, function (e) {
-            return d.test(e) ? 'xn--' + S(e) : e;
+            return d.test(e) ? "xn--" + S(e) : e;
         });
     };
 e.exports = {
-    version: '2.1.0',
+    version: "2.1.0",
     ucs2: {
         decode: y,
-        encode: (e) => String.fromCodePoint(...e)
+        encode: (e) => String.fromCodePoint(...e),
     },
     decode: T,
     encode: S,
     toASCII: N,
-    toUnicode: A
+    toUnicode: A,
 };

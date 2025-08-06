@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(35282), n(388685), n(539854));
+n.d(t, { Z: () => Z }), n(35282), n(388685), n(539854);
 var i = n(255367),
     r = n(73800),
     l = n(120356),
@@ -25,24 +25,24 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -75,17 +75,26 @@ function w(e, t) {
         : (0, h.ov)({
               id: e.id,
               avatar: t,
-              discriminator: y.fo$
+              discriminator: y.fo$,
           });
 }
 function Z(e) {
-    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: v, errors: Z, onToggleExpand: E } = e,
+    let {
+            id: t,
+            webhook: n,
+            editedWebhook: l,
+            channelOptions: g,
+            isExpanded: h,
+            isNew: v,
+            errors: Z,
+            onToggleExpand: E,
+        } = e,
         [P, T] = r.useState(!1),
         [k] = r.useState(new s.V7());
     r.useEffect(() => () => k.stop(), [k]);
     let A = r.useMemo(() => w(n, n.avatar), [n]),
         R = r.useCallback(() => {
-            let e = ''.concat((0, a.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
+            let e = "".concat((0, a.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
         }, [n]),
         D = r.useCallback(() => {
@@ -94,7 +103,7 @@ function Z(e) {
                     c.ConfirmModal,
                     S(N({}, e), {
                         header: _.intl.formatToPlainString(_.t.QVFjHh, { name: n.name }),
-                        confirmText: _.intl.string(_.t['W+K1Fh']),
+                        confirmText: _.intl.string(_.t["W+K1Fh"]),
                         cancelText: _.intl.string(_.t.xNhj0N),
                         onConfirm: () => {
                             p.Z.delete(n.guild_id, n.id).catch((e) => {
@@ -102,40 +111,40 @@ function Z(e) {
                                 429 === t
                                     ? d.Z.show({
                                           title: _.intl.string(_.t.N5riYm),
-                                          body: _.intl.string(_.t.eAxcCQ)
+                                          body: _.intl.string(_.t.eAxcCQ),
                                       })
                                     : d.Z.show({
                                           title: _.intl.string(_.t.N5riYm),
-                                          body: _.intl.string(_.t['/4TwKS'])
+                                          body: _.intl.string(_.t["/4TwKS"]),
                                       });
                             });
                         },
                         children: (0, i.jsx)(c.Text, {
-                            variant: 'text-md/normal',
-                            children: _.intl.format(_.t['rIWe+/'], { name: n.name })
-                        })
-                    })
-                )
+                            variant: "text-md/normal",
+                            children: _.intl.format(_.t["rIWe+/"], { name: n.name }),
+                        }),
+                    }),
+                ),
             );
         }, [n.guild_id, n.id, n.name]),
         L = [];
     null != n.user
         ? L.push({
               icon: c.T39,
-              text: _.intl.formatToPlainString(_.t['7EcUbm'], {
+              text: _.intl.formatToPlainString(_.t["7EcUbm"], {
                   user: I(n.user),
-                  timestamp: j.default.extractTimestamp(n.id)
-              })
+                  timestamp: j.default.extractTimestamp(n.id),
+              }),
           })
         : L.push({
               icon: c.T39,
-              text: _.intl.formatToPlainString(_.t['7mv59P'], { timestamp: j.default.extractTimestamp(n.id) })
+              text: _.intl.formatToPlainString(_.t["7mv59P"], { timestamp: j.default.extractTimestamp(n.id) }),
           });
     let M = null;
     return (
         h &&
             null != l &&
-            (M = (0, i.jsxs)('div', {
+            (M = (0, i.jsxs)("div", {
                 className: C.body,
                 children: [
                     (0, i.jsx)(c.$i$, { className: C.topDivider }),
@@ -155,17 +164,17 @@ function Z(e) {
                                             },
                                             makeURL: (e) => w(n, e),
                                             imageClassName: C.avatarUploaderInner,
-                                            showIcon: !0
+                                            showIcon: !0,
                                         }),
-                                        null != Z.avatar && '' !== Z.avatar
+                                        null != Z.avatar && "" !== Z.avatar
                                             ? (0, i.jsx)(c.Text, {
-                                                  color: 'text-danger',
-                                                  variant: 'text-sm/normal',
-                                                  children: Z.avatar
+                                                  color: "text-danger",
+                                                  variant: "text-sm/normal",
+                                                  children: Z.avatar,
                                               })
-                                            : null
-                                    ]
-                                })
+                                            : null,
+                                    ],
+                                }),
                             }),
                             (0, i.jsxs)(m.Z, {
                                 direction: m.Z.Direction.VERTICAL,
@@ -173,7 +182,7 @@ function Z(e) {
                                     (0, i.jsxs)(m.Z, {
                                         children: [
                                             (0, i.jsx)(m.Z.Child, {
-                                                basis: '50%',
+                                                basis: "50%",
                                                 children: (0, i.jsx)(c.xJW, {
                                                     title: _.intl.string(_.t.ukdxur),
                                                     children: (0, i.jsx)(c.oil, {
@@ -182,12 +191,12 @@ function Z(e) {
                                                             u.Z.updateWebhook({ name: e });
                                                         },
                                                         maxLength: 80,
-                                                        error: Z.name
-                                                    })
-                                                })
+                                                        error: Z.name,
+                                                    }),
+                                                }),
                                             }),
                                             (0, i.jsx)(m.Z.Child, {
-                                                basis: '50%',
+                                                basis: "50%",
                                                 children: (0, i.jsx)(c.xJW, {
                                                     title: _.intl.string(_.t.GK18KC),
                                                     children: (0, i.jsx)(c.VcW, {
@@ -196,11 +205,11 @@ function Z(e) {
                                                         onChange: (e) => {
                                                             u.Z.updateWebhook({ channelId: e });
                                                         },
-                                                        placeholder: _.intl.string(_.t.r2pts7)
-                                                    })
-                                                })
-                                            })
-                                        ]
+                                                        placeholder: _.intl.string(_.t.r2pts7),
+                                                    }),
+                                                }),
+                                            }),
+                                        ],
                                     }),
                                     (0, i.jsx)(c.$i$, { className: C.bottomDivider }),
                                     (0, i.jsxs)(m.Z, {
@@ -211,7 +220,13 @@ function Z(e) {
                                                 color: c.FGA.GREEN,
                                                 disableTooltipPointerEvents: !0,
                                                 children: (e) => {
-                                                    var { onClick: t, onMouseEnter: r, onMouseLeave: l, onBlur: o, onFocus: a } = e,
+                                                    var {
+                                                            onClick: t,
+                                                            onMouseEnter: r,
+                                                            onMouseLeave: l,
+                                                            onBlur: o,
+                                                            onFocus: a,
+                                                        } = e,
                                                         s = (function (e, t) {
                                                             if (null == e) return {};
                                                             var n,
@@ -222,54 +237,72 @@ function Z(e) {
                                                                         i,
                                                                         r = {},
                                                                         l = Object.keys(e);
-                                                                    for (i = 0; i < l.length; i++) ((n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                                                                    for (i = 0; i < l.length; i++)
+                                                                        (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                                                                     return r;
                                                                 })(e, t);
                                                             if (Object.getOwnPropertySymbols) {
                                                                 var l = Object.getOwnPropertySymbols(e);
-                                                                for (i = 0; i < l.length; i++) ((n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                                                                for (i = 0; i < l.length; i++)
+                                                                    (n = l[i]),
+                                                                        !(t.indexOf(n) >= 0) &&
+                                                                            Object.prototype.propertyIsEnumerable.call(
+                                                                                e,
+                                                                                n,
+                                                                            ) &&
+                                                                            (r[n] = e[n]);
                                                             }
                                                             return r;
-                                                        })(e, ['onClick', 'onMouseEnter', 'onMouseLeave', 'onBlur', 'onFocus']);
-                                                    return (0, i.jsx)('div', {
-                                                        'data-button-hoisted-classname-wrapper': !0,
+                                                        })(e, [
+                                                            "onClick",
+                                                            "onMouseEnter",
+                                                            "onMouseLeave",
+                                                            "onBlur",
+                                                            "onFocus",
+                                                        ]);
+                                                    return (0, i.jsx)("div", {
+                                                        "data-button-hoisted-classname-wrapper": !0,
                                                         className: C.copyButton,
                                                         children: (0, i.jsx)(
                                                             c.zxk,
                                                             S(
                                                                 N(
                                                                     {
-                                                                        variant: 'secondary',
-                                                                        size: 'sm',
-                                                                        text: _.intl.string(_.t.Ae9rUV)
+                                                                        variant: "secondary",
+                                                                        size: "sm",
+                                                                        text: _.intl.string(_.t.Ae9rUV),
                                                                     },
-                                                                    s
+                                                                    s,
                                                                 ),
                                                                 {
-                                                                    'aria-label': '',
+                                                                    "aria-label": "",
                                                                     onClick: () => {
-                                                                        (null == t || t(), T(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), k.start(1000, () => T(!1)), R());
+                                                                        null == t || t(),
+                                                                            T(!0),
+                                                                            c.uvj.announce(_.intl.string(_.t.wwdb3t)),
+                                                                            k.start(1000, () => T(!1)),
+                                                                            R();
                                                                     },
-                                                                    disabled: null == n.token || '' === n.token
-                                                                }
-                                                            )
-                                                        )
+                                                                    disabled: null == n.token || "" === n.token,
+                                                                },
+                                                            ),
+                                                        ),
                                                     });
-                                                }
+                                                },
                                             }),
                                             (0, i.jsx)(c.zxk, {
-                                                variant: 'critical-secondary',
-                                                size: 'sm',
+                                                variant: "critical-secondary",
+                                                size: "sm",
                                                 text: _.intl.string(_.t.jVrUnJ),
-                                                onClick: D
-                                            })
-                                        ]
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                ]
+                                                onClick: D,
+                                            }),
+                                        ],
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                ],
             })),
         (0, i.jsx)(c.Zbd, {
             editable: !0,
@@ -280,7 +313,7 @@ function Z(e) {
                 children: [
                     (0, i.jsx)(c.P3F, {
                         className: C.header,
-                        'aria-expanded': h,
+                        "aria-expanded": h,
                         onClick: E,
                         children: (0, i.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
@@ -288,19 +321,19 @@ function Z(e) {
                                 (0, i.jsx)(O.Z, {
                                     name: n.name,
                                     imageSrc: A,
-                                    details: L
+                                    details: L,
                                 }),
                                 (0, i.jsx)(f.Z, {
                                     className: C.expandIcon,
                                     expanded: h,
-                                    'aria-hidden': !0
-                                })
-                            ]
-                        })
+                                    "aria-hidden": !0,
+                                }),
+                            ],
+                        }),
                     }),
-                    M
-                ]
-            })
+                    M,
+                ],
+            }),
         })
     );
 }

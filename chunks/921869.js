@@ -10,7 +10,17 @@ var r = t(255367),
     x = t(388032),
     u = t(475286);
 function h(e) {
-    let { platformType: a, onContinue: t, onClose: h, img: m, headerConnect: N, headerReconnect: C, body: j, learnMoreLink: p, valueProps: v } = e,
+    let {
+            platformType: a,
+            onContinue: t,
+            onClose: h,
+            img: m,
+            headerConnect: N,
+            headerReconnect: C,
+            body: j,
+            learnMoreLink: p,
+            valueProps: v,
+        } = e,
         k = (0, n.e7)([o.Z], () => {
             let e = o.Z.getAccount(null, a);
             return (null == e ? void 0 : e.twoWayLink) === !1;
@@ -22,31 +32,31 @@ function h(e) {
                 className: u.header,
                 separator: !1,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: u.illustration,
-                        children: [m, ' ']
+                        children: [m, " "],
                     }),
                     (0, r.jsx)(l.X6q, {
                         className: u.title,
-                        variant: 'heading-xl/extrabold',
-                        children: k && null != C ? C : N
+                        variant: "heading-xl/extrabold",
+                        children: k && null != C ? C : N,
                     }),
                     (0, r.jsx)(l.olH, {
                         className: u.closeButton,
-                        onClick: h
-                    })
-                ]
+                        onClick: h,
+                    }),
+                ],
             }),
             (0, r.jsxs)(l.hzk, {
                 className: u.body,
                 children: [
                     (0, r.jsx)(l.Text, {
-                        tag: 'p',
-                        variant: 'text-md/normal',
-                        color: 'header-secondary',
-                        children: j
+                        tag: "p",
+                        variant: "text-md/normal",
+                        color: "header-secondary",
+                        children: j,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: u.valueProps,
                         children: v.map((e, a) => {
                             let { label: t, subLabel: n, icon: l } = e;
@@ -59,39 +69,39 @@ function h(e) {
                                             {
                                                 label: t,
                                                 subLabel: n,
-                                                icon: l
+                                                icon: l,
                                             },
-                                            t
+                                            t,
                                         ),
-                                        a !== v.length - 1 && (0, r.jsx)('div', { className: u.valuePropDivider })
-                                    ]
+                                        a !== v.length - 1 && (0, r.jsx)("div", { className: u.valuePropDivider }),
+                                    ],
                                 },
-                                t
+                                t,
                             );
-                        })
+                        }),
                     }),
                     null != p
                         ? (0, r.jsx)(l.Text, {
-                              tag: 'p',
-                              variant: 'text-sm/normal',
-                              color: 'header-secondary',
-                              children: x.intl.format(x.t['/l3n+/'], { helpCenterLink: p })
+                              tag: "p",
+                              variant: "text-sm/normal",
+                              color: "header-secondary",
+                              children: x.intl.format(x.t["/l3n+/"], { helpCenterLink: p }),
                           })
-                        : null
-                ]
+                        : null,
+                ],
             }),
             (0, r.jsx)(l.mzw, {
                 className: u.footer,
-                children: (0, r.jsx)('div', {
-                    'data-button-hoisted-classname-wrapper': !0,
+                children: (0, r.jsx)("div", {
+                    "data-button-hoisted-classname-wrapper": !0,
                     className: u.footerButton,
                     children: (0, r.jsx)(l.zxk, {
-                        variant: 'primary',
-                        text: x.intl.string(x.t['3PatS0']),
-                        onClick: t
-                    })
-                })
-            })
-        ]
+                        variant: "primary",
+                        text: x.intl.string(x.t["3PatS0"]),
+                        onClick: t,
+                    }),
+                }),
+            }),
+        ],
     });
 }

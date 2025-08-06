@@ -8,14 +8,16 @@ var i = n(442837),
     l = n(354459),
     c = n(388032);
 function u(e) {
-    let { selectedParticipant: t } = (0, i.cj)([s.Z], () => ({ selectedParticipant: s.Z.getSelectedParticipant(e) }), [e]),
+    let { selectedParticipant: t } = (0, i.cj)([s.Z], () => ({ selectedParticipant: s.Z.getSelectedParticipant(e) }), [
+            e,
+        ]),
         n = () => {
             null != t ? a.Z.selectParticipant(e, null) : a.Z.selectParticipant(e, l.dF.AUTO);
         };
     return (0, r.jsx)(o.S8, {
-        id: 'call-grid-view',
-        label: c.intl.string(c.t['3jrUBg']),
+        id: "call-grid-view",
+        label: c.intl.string(c.t["3jrUBg"]),
         checked: null == t,
-        action: n
+        action: n,
     });
 }

@@ -17,12 +17,12 @@ function m(e) {
     e.key !== h.mR.Tab || t || __OVERLAY__ || (0, o.$s)() || u.Z.maybeShowKeyboardNavigationExplainerModal();
 }
 function g(e) {
-    let t = _.C$('shift'),
-        n = _.C$('tab');
+    let t = _.C$("shift"),
+        n = _.C$("tab");
     if (e.key === h.mR.Tab && e.shiftKey && null != t && null != n)
         return [
             [p.MoX.KEYBOARD_KEY, t],
-            [p.MoX.KEYBOARD_KEY, n]
+            [p.MoX.KEYBOARD_KEY, n],
         ];
     let r = h.el.get(e.key);
     if (null != r) {
@@ -36,7 +36,10 @@ function E(e, t) {
     let i = (0, f.VG)(null == (n = (0, f.uB)(e)) ? void 0 : n.activeElement);
     if ((i && e.key !== h.mR.Tab) || e.ctrlKey || e.altKey || e.metaKey || (e.key !== h.mR.Tab && e.shiftKey)) return;
     let o = g(e);
-    null == o || d.ZP.hasExactKeybind(o) || s.Z.hasBind(null != (r = _.H9(o[0])) ? r : '') || ((0, l.Qj)(), i && !t && e.preventDefault());
+    null == o ||
+        d.ZP.hasExactKeybind(o) ||
+        s.Z.hasBind(null != (r = _.H9(o[0])) ? r : "") ||
+        ((0, l.Qj)(), i && !t && e.preventDefault());
 }
 function b() {
     (0, l.rf)();
@@ -48,17 +51,21 @@ let y = function (e, t) {
         (e) => {
             E(e, t);
         },
-        [t]
+        [t],
     );
     return (
         (0, r.useLayoutEffect)(
             () => (
-                n ? (e.addEventListener('mousedown', b), e.addEventListener('keydown', m)) : e.addEventListener('keydown', o),
+                n
+                    ? (e.addEventListener("mousedown", b), e.addEventListener("keydown", m))
+                    : e.addEventListener("keydown", o),
                 () => {
-                    n ? (e.removeEventListener('mousedown', b), e.removeEventListener('keydown', m)) : e.removeEventListener('keydown', o);
+                    n
+                        ? (e.removeEventListener("mousedown", b), e.removeEventListener("keydown", m))
+                        : e.removeEventListener("keydown", o);
                 }
             ),
-            [e, o, n]
+            [e, o, n],
         ),
         n
     );

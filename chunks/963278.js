@@ -16,24 +16,24 @@ let f = (e) => {
         f = (0, i.e7)([s.default], () => s.default.getCurrentUser());
     return null == f
         ? null
-        : (0, n.jsxs)('div', {
+        : (0, n.jsxs)("div", {
               className: a()(g.shelfBlockContainer, g.centeredSection),
               children: [
-                  (0, n.jsxs)('div', {
+                  (0, n.jsxs)("div", {
                       className: g.blockHeader,
                       children: [
                           (0, n.jsx)(o.X6q, {
-                              variant: 'heading-lg/semibold',
-                              children: t.name
+                              variant: "heading-lg/semibold",
+                              children: t.name,
                           }),
                           (0, n.jsx)(o.zxk, {
-                              variant: 'secondary',
+                              variant: "secondary",
                               text: p.intl.formatToPlainString(p.t.bc9RBA, { category_name: t.name }),
-                              onClick: () => r('shelf block see all', t.categorySkuId)
-                          })
-                      ]
+                              onClick: () => r("shelf block see all", t.categorySkuId),
+                          }),
+                      ],
                   }),
-                  (0, n.jsx)('div', {
+                  (0, n.jsx)("div", {
                       className: g.feed,
                       children: (0, n.jsx)(n.Fragment, {
                           children: t.rankedSkuIds.map((e, r) => {
@@ -47,7 +47,7 @@ let f = (e) => {
                                             newValue: {
                                                 tilePosition: r,
                                                 pageSection: t.name,
-                                                categoryPosition: 2
+                                                categoryPosition: 2,
                                             },
                                             children: (0, n.jsx)(
                                                 d.Z,
@@ -55,16 +55,16 @@ let f = (e) => {
                                                     product: i,
                                                     category: a,
                                                     user: f,
-                                                    tab: l
+                                                    tab: l,
                                                 },
-                                                e
-                                            )
+                                                e,
+                                            ),
                                         },
-                                        e
+                                        e,
                                     );
-                          })
-                      })
-                  })
-              ]
+                          }),
+                      }),
+                  }),
+              ],
           });
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(539854), n(358797), n(290780));
+n.d(t, { Z: () => s }), n(539854), n(358797), n(290780);
 var r = n(427786),
     i = n.n(r);
 function o(e, t, n) {
@@ -8,21 +8,21 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let a = new (n(710845).Z)('Queue');
+let a = new (n(710845).Z)("Queue");
 class s {
     enqueue(e, t, n) {
-        (this.queue.push({
+        this.queue.push({
             message: e,
             success: t,
-            logId: n
+            logId: n,
         }),
-            this._drainIfNecessary());
+            this._drainIfNecessary();
     }
     get length() {
         return this.queue.length;
@@ -33,25 +33,48 @@ class s {
         let e = this.queue.shift(),
             { message: t, success: n, logId: r } = e,
             i = (t, i) => {
-                if ((this.logger.log('Finished draining message from queue LogId:'.concat(r, ' QueueLength: ').concat(this.queue.length)), (this.draining = !1), null == t)) {
+                if (
+                    (this.logger.log(
+                        "Finished draining message from queue LogId:"
+                            .concat(r, " QueueLength: ")
+                            .concat(this.queue.length),
+                    ),
+                    (this.draining = !1),
+                    null == t)
+                ) {
                     setImmediate(() => this._drainIfNecessary());
                     try {
                         n(i);
                     } catch (e) {
-                        this.logger.error('', e);
+                        this.logger.error("", e);
                     }
                 } else {
                     var o;
                     let n = null != (o = t.retryAfter) ? o : this.defaultRetryAfter;
-                    (this.logger.info('Rate limited. Delaying draining of queue for '.concat(n, ' ms. LogId:').concat(r, ' QueueLength: ').concat(this.queue.length)),
+                    this.logger.info(
+                        "Rate limited. Delaying draining of queue for "
+                            .concat(n, " ms. LogId:")
+                            .concat(r, " QueueLength: ")
+                            .concat(this.queue.length),
+                    ),
                         (this.timeout = setTimeout(() => {
-                            (this.queue.unshift(e), (this.timeout = null), this._drainIfNecessary());
-                        }, n)));
+                            this.queue.unshift(e), (this.timeout = null), this._drainIfNecessary();
+                        }, n));
                 }
             };
-        (this.logger.log('Draining message from queue LogId:'.concat(r, ' QueueLength: ').concat(this.queue.length)), this.drain(t, i));
+        this.logger.log("Draining message from queue LogId:".concat(r, " QueueLength: ").concat(this.queue.length)),
+            this.drain(t, i);
     }
     constructor(e = a, t = 100) {
-        (o(this, 'logger', void 0), o(this, 'defaultRetryAfter', void 0), o(this, 'queue', void 0), o(this, 'timeout', void 0), o(this, 'draining', void 0), (this.logger = e), (this.defaultRetryAfter = t), (this.queue = new (i())()), (this.timeout = null), (this.draining = !1));
+        o(this, "logger", void 0),
+            o(this, "defaultRetryAfter", void 0),
+            o(this, "queue", void 0),
+            o(this, "timeout", void 0),
+            o(this, "draining", void 0),
+            (this.logger = e),
+            (this.defaultRetryAfter = t),
+            (this.queue = new (i())()),
+            (this.timeout = null),
+            (this.draining = !1);
     }
 }

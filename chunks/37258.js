@@ -15,7 +15,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,7 +44,8 @@ function _(e, t) {
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -54,33 +55,33 @@ function p(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
     var { label: t, onAction: n, icon: d } = e,
-        p = _(e, ['label', 'onAction', 'icon']);
+        p = _(e, ["label", "onAction", "icon"]);
     let { analyticsLocations: h } = (0, a.ZP)(),
         { context: m } = (0, s.KZ)(),
         g = (0, o.Aq)(),
         E = (0, o.bp)();
     return (0, r.jsx)(i.sNh, {
-        id: 'user-profile',
+        id: "user-profile",
         label: null != t ? t : u.intl.string(u.t.LYju5O),
         action: () => {
-            (null == n || n(),
+            null == n || n(),
                 (0, l.openUserProfileModal)(
                     f(
                         {
                             sourceAnalyticsLocations: h,
-                            appContext: E
+                            appContext: E,
                         },
                         m,
-                        p
-                    )
+                        p,
+                    ),
                 ),
-                g.dispatch(c.CkL.POPOUT_CLOSE));
+                g.dispatch(c.CkL.POPOUT_CLOSE);
         },
-        icon: d
+        icon: d,
     });
 }

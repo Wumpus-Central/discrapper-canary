@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(388685));
+n.d(t, { Z: () => H }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -42,7 +42,7 @@ function G(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -52,15 +52,15 @@ function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 G(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -71,7 +71,8 @@ function Z(e, t) {
         i = F(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,7 +82,7 @@ function F(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function V(e) {
@@ -97,14 +98,14 @@ function V(e) {
             let e = O.Z.pipWindow;
             return {
                 dockedRect: null != e ? O.Z.getDockedRect(e.id) : null,
-                isHidden: O.Z.isEmbeddedActivityHidden()
+                isHidden: O.Z.isEmbeddedActivityHidden(),
             };
         }),
         K = (0, A.sU)({ channelId: null == _ ? void 0 : _.id }),
         {
             activityParticipant: z,
             selectedParticipant: q,
-            participantsOpen: X
+            participantsOpen: X,
         } = (0, s.cj)([g.Z], () => ({
             activityParticipant:
                 null != B && null != _
@@ -112,12 +113,12 @@ function V(e) {
                           _.id,
                           (0, m.gN)({
                               applicationId: B.applicationId,
-                              instanceId: B.compositeInstanceId
-                          })
+                              instanceId: B.compositeInstanceId,
+                          }),
                       )
                     : null,
             selectedParticipant: null != _ ? g.Z.getSelectedParticipant(_.id) : null,
-            participantsOpen: null != _ && g.Z.getParticipantsOpen(_.id)
+            participantsOpen: null != _ && g.Z.getParticipantsOpen(_.id),
         })),
         Q = H || null != K,
         J = (0, R.Z)(null == _ ? void 0 : _.id),
@@ -134,11 +135,11 @@ function V(e) {
                     _.id,
                     (0, m.gN)({
                         applicationId: B.applicationId,
-                        instanceId: B.compositeInstanceId
-                    })
+                        instanceId: B.compositeInstanceId,
+                    }),
                 );
             let t = null != (e = _.getGuildId()) ? e : x.ME;
-            (d.Z.channelListScrollTo(t, _.id), (0, E.XU)(t, _.id));
+            d.Z.channelListScrollTo(t, _.id), (0, E.XU)(t, _.id);
         }
         null == K && (0, f.Ou)();
     }
@@ -161,7 +162,7 @@ function V(e) {
                       onToggleHeight: eo,
                       isExpanded: N,
                       hideExpandedButton: a,
-                      embeddedActivity: B
+                      embeddedActivity: B,
                   })
                 : a
                   ? (0, r.jsx)(w.q5, {
@@ -170,23 +171,23 @@ function V(e) {
                         onMouseDown: n,
                         onMouseLeave: i,
                         onJumpToChannel: () => {
-                            (ei(), (0, T.tg)(L.Ez.PANEL));
+                            ei(), (0, T.tg)(L.Ez.PANEL);
                         },
                         channel: _,
                         applicationId: B.applicationId,
                         users: s,
-                        embeddedActivity: B
+                        embeddedActivity: B,
                     })
                   : null == z
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   onMouseMove: n,
                                   onMouseDown: n,
                                   onMouseLeave: i,
                                   className: k.clickShield,
-                                  onDoubleClick: ei
+                                  onDoubleClick: ei,
                               }),
                               (0, r.jsx)(w.YB, {
                                   idle: o,
@@ -197,9 +198,9 @@ function V(e) {
                                   channel: _,
                                   applicationId: B.applicationId,
                                   selectedParticipant: z,
-                                  embeddedActivity: B
-                              })
-                          ]
+                                  embeddedActivity: B,
+                              }),
+                          ],
                       })
             : null;
     }
@@ -208,9 +209,9 @@ function V(e) {
             if ((null == B ? void 0 : B.applicationId) != null) {
                 let e = en ? D.cE.PIP : D.cE.FOCUSED;
                 c.Z.dispatch({
-                    type: 'ACTIVITY_LAYOUT_MODE_UPDATE',
+                    type: "ACTIVITY_LAYOUT_MODE_UPDATE",
                     layoutMode: e,
-                    applicationId: B.applicationId
+                    applicationId: B.applicationId,
                 });
             }
         }, [null == B ? void 0 : B.applicationId, en]),
@@ -221,15 +222,17 @@ function V(e) {
             .map((e) => I.default.getUser(e))
             .filter((e) => null != e),
         el = {
-            instance_id: null != (o = null != (n = B.compositeInstanceId) ? n : B.launchId) ? o : '',
+            instance_id: null != (o = null != (n = B.compositeInstanceId) ? n : B.launchId) ? o : "",
             location_id: null == (t = B.location) ? void 0 : t.id,
             launch_id: B.launchId,
             referrer_id: B.referrerId,
-            custom_id: B.customId
+            custom_id: B.customId,
         };
     return (
-        (null == _ ? void 0 : _.guild_id) != null && (null == _ ? void 0 : _.guild_id) !== '' && (el.guild_id = _.guild_id),
-        (null == _ ? void 0 : _.id) != null && (null == _ ? void 0 : _.id) !== '' && (el.channel_id = _.id),
+        (null == _ ? void 0 : _.guild_id) != null &&
+            (null == _ ? void 0 : _.guild_id) !== "" &&
+            (el.guild_id = _.guild_id),
+        (null == _ ? void 0 : _.id) != null && (null == _ ? void 0 : _.id) !== "" && (el.channel_id = _.id),
         (0, r.jsx)(y.ZP, {
             timeout: 2000,
             children: (e) => {
@@ -243,55 +246,56 @@ function V(e) {
                         [k.pipModeShort]: en && !N,
                         [k.pipModeTall]: en && N,
                         [k.hidden]: W,
-                        [k.multiPIPMode]: er
+                        [k.multiPIPMode]: er,
                     }),
                     noBorder: !en,
                     children: [
-                        (0, r.jsx)('div', {
-                            className: 'theme-dark',
+                        (0, r.jsx)("div", {
+                            className: "theme-dark",
                             children: ea({
                                 onActive: o,
                                 onForceIdle: s,
                                 idle: i,
                                 isActivityInTextChannel: ee,
-                                users: es
-                            })
+                                users: es,
+                            }),
                         }),
                         p
                             ? (0, r.jsx)(l.$jN, {
                                   className: a()(k.iframe, {
                                       [k.pipModeShort]: en && !N,
-                                      [k.pipModeTall]: en && N
-                                  })
+                                      [k.pipModeTall]: en && N,
+                                  }),
                               })
                             : (0, r.jsx)(P.J, {
                                   allowPopups: (0, C.h)(F),
-                                  referrerPolicy: D.um.has(B.applicationId) ? 'no-referrer' : 'origin',
+                                  referrerPolicy: D.um.has(B.applicationId) ? "no-referrer" : "origin",
                                   url: B.url,
                                   queryParams: el,
                                   className: a()(k.iframe, {
                                       [k.pipModeShort]: en && !N,
                                       [k.pipModeTall]: en && N,
-                                      [k.pipNonInteractive]: en && !(null == (n = B.config) ? void 0 : n.useInteractivePIP)
+                                      [k.pipNonInteractive]:
+                                          en && !(null == (n = B.config) ? void 0 : n.useInteractivePIP),
                                   }),
-                                  shouldRefocus: !en && H
+                                  shouldRefocus: !en && H,
                               }),
                         !en &&
                             null != _ &&
                             (0, r.jsx)(w.Ds, {
                                 participantsOpen: X,
                                 showToggleParticipants: !1,
-                                channelId: _.id
-                            })
-                    ]
+                                channelId: _.id,
+                            }),
+                    ],
                 });
-            }
+            },
         })
     );
 }
 let H = (e) => {
     var { channel: t } = e,
-        n = Z(e, ['channel']);
+        n = Z(e, ["channel"]);
     let i = S.ZP.getCurrentEmbeddedActivity();
     (0, N.Z)({ connectedEmbeddedActivity: i });
     let { analyticsLocations: o } = (0, p.ZP)(_.Z.ACTIVITY_PIP),
@@ -303,10 +307,10 @@ let H = (e) => {
             B(
                 {
                     channel: t,
-                    isLoading: a
+                    isLoading: a,
                 },
-                n
-            )
-        )
+                n,
+            ),
+        ),
     });
 };

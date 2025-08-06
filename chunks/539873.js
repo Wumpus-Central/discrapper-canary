@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -21,7 +21,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,7 +73,8 @@ function v(e, t) {
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,7 +84,7 @@ function I(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function T(e) {
@@ -93,56 +94,56 @@ function T(e) {
     (0, u.Z)(T, p.h1.CUSTOM_APP_ICONS);
     let S = (0, l.Dt)(),
         A = (0, a.arW)({
-            orientation: 'horizontal',
-            labelledBy: S
+            orientation: "horizontal",
+            labelledBy: S,
         }),
         { ref: N } = A,
-        C = v(A, ['ref']),
+        C = v(A, ["ref"]),
         R = (e) => {
             s.Z.dispatch({
-                type: 'APP_ICON_UPDATED',
-                id: e
+                type: "APP_ICON_UPDATED",
+                id: e,
             });
         };
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         ref: T,
         children: (0, r.jsx)(
-            'div',
+            "div",
             O(b({}, C), {
                 ref: N,
                 className: m.__invalid_container,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: t,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: m.header,
                             children: [
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: m.headings,
                                     children: [
                                         !E &&
-                                            (0, r.jsxs)('div', {
+                                            (0, r.jsxs)("div", {
                                                 className: m.title,
                                                 children: [
                                                     (0, r.jsx)(a.X6q, {
                                                         className: m.titleText,
-                                                        variant: 'text-lg/medium',
-                                                        children: h.intl.string(h.t.NThqT0)
+                                                        variant: "text-lg/medium",
+                                                        children: h.intl.string(h.t.NThqT0),
                                                     }),
-                                                    (0, r.jsx)(c.Z, { className: m.premiumIcon })
-                                                ]
+                                                    (0, r.jsx)(c.Z, { className: m.premiumIcon }),
+                                                ],
                                             }),
                                         (0, r.jsx)(a.X6q, {
-                                            variant: 'text-sm/normal',
+                                            variant: "text-sm/normal",
                                             className: g.subtext,
-                                            children: h.intl.string(h.t.IgENJi)
-                                        })
-                                    ]
+                                            children: h.intl.string(h.t.IgENJi),
+                                        }),
+                                    ],
                                 }),
-                                null == y ? void 0 : y()
-                            ]
+                                null == y ? void 0 : y(),
+                            ],
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: m.presets,
                             children: (0, _.wu)()
                                 .filter((e) => {
@@ -158,15 +159,15 @@ function T(e) {
                                             onSelect: (e) => R(e),
                                             disabled: n,
                                             tabIndex: 0 !== t || n ? void 0 : 0,
-                                            locked: !1
+                                            locked: !1,
                                         },
-                                        e.id
-                                    )
-                                )
-                        })
-                    ]
-                })
-            })
-        )
+                                        e.id,
+                                    ),
+                                ),
+                        }),
+                    ],
+                }),
+            }),
+        ),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(704826), n(35282));
+n.d(t, { Z: () => l }), n(704826), n(35282);
 var r = n(388032);
 let i = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
 function l(e) {
@@ -6,8 +6,8 @@ function l(e) {
     return (
         null != e && null != e.sourceName && e.sourceName.length > 0 && (t = e.sourceName),
         {
-            sanitizedTitle: t.replace(i, ''),
-            title: t
+            sanitizedTitle: t.replace(i, ""),
+            title: t,
         }
     );
 }

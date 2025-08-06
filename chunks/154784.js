@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -23,18 +23,18 @@ function f() {
             () => () => {
                 t.current && (0, c.Up)(x.current);
             },
-            []
+            [],
         ),
         (0, i.jsx)(l.F, {
             setting: g.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
             children: (0, i.jsx)(u.Z, {
                 selectedBackgroundOption: f,
                 onSelectBackgroundOption: (n) => {
-                    ((t.current = !0), (x.current = n), b(n), (0, d.wG)(n, { location: e.location }).catch(h.dG4));
+                    (t.current = !0), (x.current = n), b(n), (0, d.wG)(n, { location: e.location }).catch(h.dG4);
                 },
                 currentDeviceId: n,
-                smallerBackgroundOptions: !1
-            })
+                smallerBackgroundOptions: !1,
+            }),
         })
     );
 }

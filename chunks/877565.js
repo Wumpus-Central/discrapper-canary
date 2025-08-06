@@ -1,6 +1,6 @@
 n.d(t, {
     HI: () => f,
-    gm: () => d
+    gm: () => d,
 });
 var r = n(255367),
     i = n(73800),
@@ -14,7 +14,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -60,20 +60,43 @@ function u(e, t) {
     );
 }
 function d(e) {
-    let { titleWithQuery: t, titleWithoutQuery: n, query: i, getQuery: s, headerClassName: l, headerTrailingContent: c } = e,
+    let {
+            titleWithQuery: t,
+            titleWithoutQuery: n,
+            query: i,
+            getQuery: s,
+            headerClassName: l,
+            headerTrailingContent: c,
+        } = e,
         u = i.length > 0 ? a.intl.formatToPlainString(t, { prefix: s(i) }) : n;
     return (0, r.jsx)(
         o.ZP.Title,
         {
             className: l,
             title: u,
-            children: c
+            children: c,
         },
-        'autocomplete-title-'.concat(u)
+        "autocomplete-title-".concat(u),
     );
 }
 function f(e) {
-    let { query: t, selectedIndex: n, autocompletes: o, onHover: a, onClick: s, titleWithQuery: c, titleWithoutQuery: f, Component: _, getProps: p, getQuery: h, key: m, indexOffset: g = 0, headerClassName: E, headerTrailingContent: b, footer: y } = e;
+    let {
+        query: t,
+        selectedIndex: n,
+        autocompletes: o,
+        onHover: a,
+        onClick: s,
+        titleWithQuery: c,
+        titleWithoutQuery: f,
+        Component: _,
+        getProps: p,
+        getQuery: h,
+        key: m,
+        indexOffset: g = 0,
+        headerClassName: E,
+        headerTrailingContent: b,
+        footer: y,
+    } = e;
     if (null == y && (null == o || 0 === o.length)) return null;
     let O =
         null == o
@@ -89,12 +112,12 @@ function f(e) {
                                   onClick: s,
                                   onHover: a,
                                   selected: n === r,
-                                  index: r
+                                  index: r,
                               },
-                              o
+                              o,
                           ),
-                          { key: o.key }
-                      )
+                          { key: o.key },
+                      ),
                   );
               });
     return (0, r.jsxs)(
@@ -108,13 +131,13 @@ function f(e) {
                           query: t,
                           getQuery: h,
                           headerClassName: E,
-                          headerTrailingContent: b
+                          headerTrailingContent: b,
                       })
                     : null,
                 O,
-                y
-            ]
+                y,
+            ],
         },
-        m
+        m,
     );
 }

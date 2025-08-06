@@ -1,8 +1,8 @@
-(a.d(t, {
+a.d(t, {
     D: () => j,
-    Z: () => _
+    Z: () => _,
 }),
-    a(388685));
+    a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -19,51 +19,51 @@ var n = a(255367),
     f = a(546147),
     b = a(616257);
 let v = {
-        [h.kNB.QUEST_REWARD]: 'Quest Reward',
-        [h.kNB.DEVELOPER_GIFT]: 'Developer Gift',
-        [h.kNB.INVOICE]: 'Invoice',
-        [h.kNB.REVERSE_TRIAL]: 'Reverse Trial',
-        [h.kNB.FRACTIONAL_PREMIUM_GIVEBACK]: 'Giveback'
+        [h.kNB.QUEST_REWARD]: "Quest Reward",
+        [h.kNB.DEVELOPER_GIFT]: "Developer Gift",
+        [h.kNB.INVOICE]: "Invoice",
+        [h.kNB.REVERSE_TRIAL]: "Reverse Trial",
+        [h.kNB.FRACTIONAL_PREMIUM_GIVEBACK]: "Giveback",
     },
     j = (e) => {
         var t;
         let { entitlement: a, active: r, onDelete: l } = e,
-            s = (e) => (null != e ? (0, u.vc)(e, 'LLL') : '---');
-        return (0, n.jsxs)('div', {
-            className: i()(p.card, r ? f.gradientWrapperTier2 : ''),
+            s = (e) => (null != e ? (0, u.vc)(e, "LLL") : "---");
+        return (0, n.jsxs)("div", {
+            className: i()(p.card, r ? f.gradientWrapperTier2 : ""),
             children: [
                 (0, n.jsxs)(c.Text, {
-                    variant: 'text-md/normal',
-                    children: ['ID: ', a.id, ' ']
+                    variant: "text-md/normal",
+                    children: ["ID: ", a.id, " "],
                 }),
                 !r &&
                     (0, n.jsxs)(c.Text, {
-                        variant: 'text-md/normal',
-                        children: ['SKU: ', null == (t = g.find((e) => e.value === a.skuId)) ? void 0 : t.label]
+                        variant: "text-md/normal",
+                        children: ["SKU: ", null == (t = g.find((e) => e.value === a.skuId)) ? void 0 : t.label],
                     }),
                 null != a.startsAt &&
                     null != a.endsAt &&
                     (0, n.jsxs)(n.Fragment, {
                         children: [
                             (0, n.jsxs)(c.Text, {
-                                variant: 'text-md/normal',
-                                children: ['Start: ', s(a.startsAt), ' ']
+                                variant: "text-md/normal",
+                                children: ["Start: ", s(a.startsAt), " "],
                             }),
                             (0, n.jsxs)(c.Text, {
-                                variant: 'text-md/normal',
-                                children: ['End: ', s(a.endsAt), ' ']
-                            })
-                        ]
+                                variant: "text-md/normal",
+                                children: ["End: ", s(a.endsAt), " "],
+                            }),
+                        ],
                     }),
                 (0, n.jsxs)(c.Text, {
-                    variant: 'text-md/normal',
+                    variant: "text-md/normal",
                     children: [
-                        'Entitlement source type: ',
+                        "Entitlement source type: ",
                         (() => {
                             let e = a.sourceType;
-                            return null != e && e in v ? v[e] : 'Unknown source type '.concat(e);
-                        })()
-                    ]
+                            return null != e && e in v ? v[e] : "Unknown source type ".concat(e);
+                        })(),
+                    ],
                 }),
                 r &&
                     null != l &&
@@ -73,31 +73,38 @@ let v = {
                         color: o.zx.Colors.RED,
                         look: o.zx.Looks.OUTLINED,
                         onClick: l,
-                        children: 'Delete'
-                    })
-            ]
+                        children: "Delete",
+                    }),
+            ],
         });
     },
     g = [
         {
-            label: '1 hour',
-            value: s.a.PREMIUM_TIER_2_1_HOUR
+            label: "1 hour",
+            value: s.a.PREMIUM_TIER_2_1_HOUR,
         },
         {
-            label: '1 day',
-            value: s.a.PREMIUM_TIER_2_1_DAY
+            label: "1 day",
+            value: s.a.PREMIUM_TIER_2_1_DAY,
         },
         {
-            label: '3 days',
-            value: s.a.PREMIUM_TIER_2_3_DAY
-        }
+            label: "3 days",
+            value: s.a.PREMIUM_TIER_2_3_DAY,
+        },
     ];
 function _() {
     let [e, t] = r.useState(!1),
         [a, l] = r.useState(s.a.PREMIUM_TIER_2_1_HOUR),
         [u, v] = r.useState([]),
         [_, y] = r.useState([]),
-        { refreshEntitlementList: C, grantFractionalPremium: N, deleteFractionalPremium: O, triggerNextEntitlementFulfillment: E, entitlements: T, loading: S } = (0, x.m)();
+        {
+            refreshEntitlementList: C,
+            grantFractionalPremium: N,
+            deleteFractionalPremium: O,
+            triggerNextEntitlementFulfillment: E,
+            entitlements: T,
+            loading: S,
+        } = (0, x.m)();
     r.useEffect(() => {
         C();
     }, [C]);
@@ -105,90 +112,92 @@ function _() {
         w = (e) => e.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt);
     return (
         r.useEffect(() => {
-            (v(P(T)), y(w(T)));
+            v(P(T)), y(w(T));
         }, [T]),
         (0, n.jsx)(c.zJl, {
             className: b.panel,
-            children: (0, n.jsxs)('div', {
+            children: (0, n.jsxs)("div", {
                 className: f.panelInner,
                 children: [
-                    (0, n.jsxs)('div', {
+                    (0, n.jsxs)("div", {
                         className: f.headerWrapper,
                         children: [
                             (0, n.jsx)(c.Text, {
-                                style: { marginBottom: '8px' },
-                                variant: 'text-lg/bold',
-                                children: 'Manage Fractional Nitro'
+                                style: { marginBottom: "8px" },
+                                variant: "text-lg/bold",
+                                children: "Manage Fractional Nitro",
                             }),
                             (0, n.jsxs)(c.P3F, {
                                 onClick: () => t(!e),
                                 className: p.clickableGroup,
                                 children: [
-                                    (0, n.jsx)('div', {
+                                    (0, n.jsx)("div", {
                                         children: (0, n.jsx)(c.Text, {
-                                            variant: 'text-md/normal',
-                                            children: 'Info'
-                                        })
+                                            variant: "text-md/normal",
+                                            children: "Info",
+                                        }),
                                     }),
-                                    (0, n.jsx)(d.Z, { direction: e ? d.Z.Directions.UP : d.Z.Directions.DOWN })
-                                ]
-                            })
-                        ]
+                                    (0, n.jsx)(d.Z, { direction: e ? d.Z.Directions.UP : d.Z.Directions.DOWN }),
+                                ],
+                            }),
+                        ],
                     }),
                     e &&
-                        (0, n.jsxs)('div', {
-                            style: { margin: '8px 0' },
+                        (0, n.jsxs)("div", {
+                            style: { margin: "8px 0" },
                             children: [
                                 (0, n.jsx)(c.Text, {
-                                    variant: 'text-md/normal',
-                                    style: { fontStyle: 'italic' },
-                                    color: 'text-muted',
-                                    children: 'Subscriptions paused by Fractional Nitro do not automatically resume in local or staging environments. Subscription has to be resumed manually via Admin.'
+                                    variant: "text-md/normal",
+                                    style: { fontStyle: "italic" },
+                                    color: "text-muted",
+                                    children:
+                                        "Subscriptions paused by Fractional Nitro do not automatically resume in local or staging environments. Subscription has to be resumed manually via Admin.",
                                 }),
-                                (0, n.jsx)('br', {}),
+                                (0, n.jsx)("br", {}),
                                 (0, n.jsx)(c.Text, {
-                                    variant: 'text-md/normal',
-                                    style: { fontStyle: 'italic' },
-                                    color: 'text-muted',
-                                    children: "Entitlement fulfillment tasks do not run automatically in local environments. This task is required to handle the scheduled unfulfillment of Fractional Nitro after it's time has elapsed."
-                                })
-                            ]
+                                    variant: "text-md/normal",
+                                    style: { fontStyle: "italic" },
+                                    color: "text-muted",
+                                    children:
+                                        "Entitlement fulfillment tasks do not run automatically in local environments. This task is required to handle the scheduled unfulfillment of Fractional Nitro after it's time has elapsed.",
+                                }),
+                            ],
                         }),
-                    (0, n.jsxs)('section', {
-                        style: { marginBottom: '8px' },
+                    (0, n.jsxs)("section", {
+                        style: { marginBottom: "8px" },
                         className: i()([p.section, f.buttons]),
                         children: [
                             (0, n.jsx)(c.Text, {
-                                variant: 'text-md/normal',
-                                children: ' Fractional Premium SKU '
+                                variant: "text-md/normal",
+                                children: " Fractional Premium SKU ",
                             }),
                             (0, n.jsx)(c.PhF, {
                                 serialize: (e) => e,
                                 isSelected: (e) => e === a,
                                 options: g,
                                 select: l,
-                                popoutLayerContext: m.O$
+                                popoutLayerContext: m.O$,
                             }),
                             (0, n.jsx)(c.zxk, {
-                                variant: 'primary',
-                                text: 'Grant Fractional Nitro',
-                                onClick: () => N(a)
-                            })
-                        ]
+                                variant: "primary",
+                                text: "Grant Fractional Nitro",
+                                onClick: () => N(a),
+                            }),
+                        ],
                     }),
-                    (0, n.jsxs)('section', {
+                    (0, n.jsxs)("section", {
                         className: p.section,
                         children: [
-                            (0, n.jsxs)('div', {
-                                style: { flexWrap: 'wrap' },
+                            (0, n.jsxs)("div", {
+                                style: { flexWrap: "wrap" },
                                 className: f.headerWrapper,
                                 children: [
                                     (0, n.jsx)(c.Text, {
-                                        style: { marginBottom: '8px' },
-                                        variant: 'text-lg/semibold',
-                                        children: 'Entitlements'
+                                        style: { marginBottom: "8px" },
+                                        variant: "text-lg/semibold",
+                                        children: "Entitlements",
                                     }),
-                                    (0, n.jsxs)('div', {
+                                    (0, n.jsxs)("div", {
                                         className: p.buttonGroup,
                                         children: [
                                             (0, n.jsx)(o.zx, {
@@ -197,7 +206,7 @@ function _() {
                                                 color: o.zx.Colors.PRIMARY,
                                                 look: o.zx.Looks.OUTLINED,
                                                 onClick: () => E(),
-                                                children: 'Run fulfillment'
+                                                children: "Run fulfillment",
                                             }),
                                             (0, n.jsx)(o.zx, {
                                                 disabled: S,
@@ -205,63 +214,65 @@ function _() {
                                                 color: o.zx.Colors.RED,
                                                 look: o.zx.Looks.OUTLINED,
                                                 onClick: () => O(),
-                                                children: 'Delete all'
+                                                children: "Delete all",
                                             }),
                                             (0, n.jsx)(o.zx, {
                                                 disabled: S,
                                                 look: o.zx.Looks.BLANK,
                                                 size: o.zx.Sizes.ICON,
                                                 onClick: C,
-                                                children: (0, n.jsx)('span', {
-                                                    title: 'Refresh',
+                                                children: (0, n.jsx)("span", {
+                                                    title: "Refresh",
                                                     children: (0, n.jsx)(c.DuK, {
-                                                        size: 'xs',
-                                                        color: 'currentColor'
-                                                    })
-                                                })
-                                            })
-                                        ]
-                                    })
-                                ]
+                                                        size: "xs",
+                                                        color: "currentColor",
+                                                    }),
+                                                }),
+                                            }),
+                                        ],
+                                    }),
+                                ],
                             }),
                             u.length > 0 &&
-                                (0, n.jsxs)('div', {
+                                (0, n.jsxs)("div", {
                                     children: [
                                         (0, n.jsx)(c.Text, {
-                                            style: { marginTop: '15px' },
-                                            variant: 'text-md/bold',
-                                            children: 'Active premium'
+                                            style: { marginTop: "15px" },
+                                            variant: "text-md/bold",
+                                            children: "Active premium",
                                         }),
-                                        (0, n.jsx)('div', {
+                                        (0, n.jsx)("div", {
                                             children: u.map((e) =>
                                                 (0, n.jsx)(
                                                     j,
                                                     {
                                                         entitlement: e,
                                                         active: !0,
-                                                        onDelete: () => O(e.id)
+                                                        onDelete: () => O(e.id),
                                                     },
-                                                    e.id
-                                                )
-                                            )
-                                        })
-                                    ]
+                                                    e.id,
+                                                ),
+                                            ),
+                                        }),
+                                    ],
                                 }),
                             _.length > 0 &&
-                                (0, n.jsxs)('div', {
+                                (0, n.jsxs)("div", {
                                     children: [
                                         (0, n.jsx)(c.Text, {
-                                            style: { marginTop: '15px' },
-                                            variant: 'text-md/bold',
-                                            children: 'Unconsumed Fractional Premium'
+                                            style: { marginTop: "15px" },
+                                            variant: "text-md/bold",
+                                            children: "Unconsumed Fractional Premium",
                                         }),
-                                        (0, n.jsx)('div', { children: _.map((e) => (0, n.jsx)(j, { entitlement: e }, e.id)) })
-                                    ]
-                                })
-                        ]
-                    })
-                ]
-            })
+                                        (0, n.jsx)("div", {
+                                            children: _.map((e) => (0, n.jsx)(j, { entitlement: e }, e.id)),
+                                        }),
+                                    ],
+                                }),
+                        ],
+                    }),
+                ],
+            }),
         })
     );
 }

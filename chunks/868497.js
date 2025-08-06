@@ -11,7 +11,7 @@ var r = a(873567),
     u = a(793373),
     I = a(152228),
     R = a(305625);
-function d(t, e, a, N, A = 'auto.http.browser') {
+function d(t, e, a, N, A = "auto.http.browser") {
     if (!t.fetchData) return;
     let f = (0, E.z)() && e(t.fetchData.url);
     if (t.endTimestamp && f) {
@@ -22,16 +22,16 @@ function d(t, e, a, N, A = 'auto.http.browser') {
             ((function (t, e) {
                 if (e.response) {
                     (0, u.Q0)(t, e.response.status);
-                    let a = e.response && e.response.headers && e.response.headers.get('content-length');
+                    let a = e.response && e.response.headers && e.response.headers.get("content-length");
                     if (a) {
                         let e = parseInt(a);
-                        e > 0 && t.setAttribute('http.response_content_length', e);
+                        e > 0 && t.setAttribute("http.response_content_length", e);
                     }
                 } else
                     e.error &&
                         t.setStatus({
                             code: u.jt,
-                            message: 'internal_error'
+                            message: "internal_error",
                         });
                 t.end();
             })(a, t),
@@ -56,13 +56,13 @@ function d(t, e, a, N, A = 'auto.http.browser') {
                       name: `${L} ${h}`,
                       attributes: {
                           url: h,
-                          type: 'fetch',
-                          'http.method': L,
-                          'http.url': O,
-                          'server.address': P,
+                          type: "fetch",
+                          "http.method": L,
+                          "http.url": O,
+                          "server.address": P,
                           [c.S3]: A,
-                          [c.$J]: 'http.client'
-                      }
+                          [c.$J]: "http.client",
+                      },
                   })
                 : new l.b();
     if (((t.fetchData.__span = D.spanContext().spanId), (N[D.spanContext().spanId] = D), a(t.fetchData.url) && p)) {
@@ -74,37 +74,37 @@ function d(t, e, a, N, A = 'auto.http.browser') {
                     traceId: E,
                     spanId: l,
                     sampled: u,
-                    dsc: I
+                    dsc: I,
                 } = {
                     ...(0, i.aF)().getPropagationContext(),
-                    ...a.getPropagationContext()
+                    ...a.getPropagationContext(),
                 },
                 d = c ? (0, s.Hb)(c) : (0, _.$p)(E, l, u),
                 N = (0, n.IQ)(I || (c ? (0, R.jC)(c) : (0, R._l)(E, e))),
-                A = r.headers || ('undefined' != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
+                A = r.headers || ("undefined" != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
             if (!A)
                 return {
-                    'sentry-trace': d,
-                    baggage: N
+                    "sentry-trace": d,
+                    baggage: N,
                 };
-            if ('undefined' != typeof Headers && (0, o.V9)(A, Headers)) {
+            if ("undefined" != typeof Headers && (0, o.V9)(A, Headers)) {
                 let t = new Headers(A);
-                return (t.append('sentry-trace', d), N && t.append(n.bU, N), t);
+                return t.append("sentry-trace", d), N && t.append(n.bU, N), t;
             }
             if (Array.isArray(A)) {
-                let t = [...A, ['sentry-trace', d]];
-                return (N && t.push([n.bU, N]), t);
+                let t = [...A, ["sentry-trace", d]];
+                return N && t.push([n.bU, N]), t;
             }
             {
-                let t = 'baggage' in A ? A.baggage : void 0,
+                let t = "baggage" in A ? A.baggage : void 0,
                     e = [];
                 return (
                     Array.isArray(t) ? e.push(...t) : t && e.push(t),
                     N && e.push(N),
                     {
                         ...A,
-                        'sentry-trace': d,
-                        baggage: e.length > 0 ? e.join(',') : void 0
+                        "sentry-trace": d,
+                        baggage: e.length > 0 ? e.join(",") : void 0,
                     }
                 );
             }

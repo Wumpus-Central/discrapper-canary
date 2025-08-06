@@ -1,28 +1,28 @@
 n.d(t, { Z: () => i });
 let i = (0, n(818083).B)({
-    kind: 'user',
-    id: '2025-03_warp_advanced_setting',
-    label: 'WARP Advanced Setting',
+    kind: "user",
+    id: "2025-03_warp_advanced_setting",
+    label: "WARP Advanced Setting",
     defaultConfig: {
         enable: !1,
-        plus: !1
+        plus: !1,
     },
     treatments: [
         {
             id: 1,
-            label: 'Enable setting',
+            label: "Enable setting",
             config: {
                 enable: !0,
-                plus: !1
-            }
+                plus: !1,
+            },
         },
         {
             id: 2,
-            label: 'Enable setting; use WARP+',
+            label: "Enable setting; use WARP+",
             config: {
                 enable: !0,
-                plus: !0
-            }
-        }
-    ]
+                plus: !0,
+            },
+        },
+    ],
 });

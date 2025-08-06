@@ -15,7 +15,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,25 +24,25 @@ function m(e, t, n) {
 class p extends r.PureComponent {
     async componentDidMount() {
         this.setState({
-            openOnStartup: await c.ZP.getSetting('OPEN_ON_STARTUP', !0),
-            startMinimized: await c.ZP.getSetting('START_MINIMIZED', !1),
-            minimizeToTray: await c.ZP.getSetting('MINIMIZE_TO_TRAY', !0)
+            openOnStartup: await c.ZP.getSetting("OPEN_ON_STARTUP", !0),
+            startMinimized: await c.ZP.getSetting("START_MINIMIZED", !1),
+            minimizeToTray: await c.ZP.getSetting("MINIMIZE_TO_TRAY", !0),
         });
     }
     render() {
         let { openOnStartup: e, startMinimized: t, minimizeToTray: n } = this.state,
-            r = (0, o.isLinux)() ? d.intl.string(d.t['7pPjTU']) : d.intl.string(d.t.ZkDZoq);
+            r = (0, o.isLinux)() ? d.intl.string(d.t["7pPjTU"]) : d.intl.string(d.t.ZkDZoq);
         return (0, i.jsxs)(l.hjN, {
             tag: l.RB0.H1,
             title: r,
             children: [
-                (0, i.jsx)(l.vwX, { children: d.intl.string(d.t['w/vU5u']) }),
+                (0, i.jsx)(l.vwX, { children: d.intl.string(d.t["w/vU5u"]) }),
                 (0, i.jsx)(l.j7V, {
                     className: u.marginBottom20,
                     value: e,
-                    note: d.intl.string(d.t['s/cQra']),
+                    note: d.intl.string(d.t["s/cQra"]),
                     onChange: this.handleToggleOpenOnStartup,
-                    children: d.intl.string(d.t.WQm4p6)
+                    children: d.intl.string(d.t.WQm4p6),
                 }),
                 (0, o.isWindows)()
                     ? (0, i.jsx)(l.j7V, {
@@ -51,42 +51,42 @@ class p extends r.PureComponent {
                           value: !!e && t,
                           note: d.intl.string(d.t.o2FSjI),
                           onChange: this.handleToggleStartMinimized,
-                          children: d.intl.string(d.t.n7Yjen)
+                          children: d.intl.string(d.t.n7Yjen),
                       })
                     : null,
                 (0, i.jsx)(l.vwX, {
                     className: a()(u.marginTop20, u.marginBottom8),
-                    children: d.intl.string(d.t.h0hFx8)
+                    children: d.intl.string(d.t.h0hFx8),
                 }),
                 (0, i.jsx)(l.j7V, {
                     className: u.marginBottom20,
                     value: n,
-                    note: d.intl.string(d.t['mVuX+v']),
+                    note: d.intl.string(d.t["mVuX+v"]),
                     onChange: this.handleToggleMinimizeToTray,
-                    children: d.intl.string(d.t.abLFen)
-                })
-            ]
+                    children: d.intl.string(d.t.abLFen),
+                }),
+            ],
         });
     }
     constructor(e) {
-        (super(e),
-            m(this, 'handleToggleOpenOnStartup', () => {
+        super(e),
+            m(this, "handleToggleOpenOnStartup", () => {
                 let e = !this.state.openOnStartup;
-                (this.setState({ openOnStartup: e }), c.ZP.send('TOGGLE_OPEN_ON_STARTUP', e));
+                this.setState({ openOnStartup: e }), c.ZP.send("TOGGLE_OPEN_ON_STARTUP", e);
             }),
-            m(this, 'handleToggleStartMinimized', () => {
+            m(this, "handleToggleStartMinimized", () => {
                 let e = !this.state.startMinimized;
-                (this.setState({ startMinimized: e }), c.ZP.send('TOGGLE_START_MINIMIZED', e));
+                this.setState({ startMinimized: e }), c.ZP.send("TOGGLE_START_MINIMIZED", e);
             }),
-            m(this, 'handleToggleMinimizeToTray', () => {
+            m(this, "handleToggleMinimizeToTray", () => {
                 let e = !this.state.minimizeToTray;
-                (this.setState({ minimizeToTray: e }), c.ZP.send('TOGGLE_MINIMIZE_TO_TRAY', e));
+                this.setState({ minimizeToTray: e }), c.ZP.send("TOGGLE_MINIMIZE_TO_TRAY", e);
             }),
             (this.state = {
                 openOnStartup: !0,
                 startMinimized: !1,
-                minimizeToTray: !0
-            }));
+                minimizeToTray: !0,
+            });
     }
 }
 let g = p;

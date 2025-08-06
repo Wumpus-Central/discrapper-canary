@@ -15,25 +15,25 @@ function u(e) {
         className: d.container,
         children: [
             (0, r.jsx)(i.Text, {
-                variant: 'text-sm/normal',
+                variant: "text-sm/normal",
                 className: d.text,
-                children: c.intl.string(c.t['IT/0AA'])
+                children: c.intl.string(c.t["IT/0AA"]),
             }),
             (0, r.jsx)(i.zxk, {
-                size: 'sm',
-                variant: 'secondary',
+                size: "sm",
+                variant: "secondary",
                 onClick: () => {
-                    (s.Z.close(),
+                    s.Z.close(),
                         (0, l.iD)(t, {
                             type: a.z.ROLES,
                             roles: { [n.id]: n },
-                            returnToSection: o.pNK.ROLES
-                        }));
+                            returnToSection: o.pNK.ROLES,
+                        });
                 },
                 text: c.intl.string(c.t.arFPfH),
                 icon: i.d4D,
-                iconPosition: 'end'
-            })
-        ]
+                iconPosition: "end",
+            }),
+        ],
     });
 }

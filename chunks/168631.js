@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     J2: () => u,
     V3: () => c,
     ZB: () => d,
-    oU: () => f
+    oU: () => f,
 }),
-    n(388685));
+    n(388685);
 var r = n(688619),
     i = n.n(r),
     o = n(392711),
@@ -23,12 +23,12 @@ function u(e, t, n) {
 let d = (0, o.memoize)(
         (e) => {
             let t = (0, s.Qg)(e, {
-                base: '#ffffff',
-                contrastRatio: s.S3.HighContrastText
+                base: "#ffffff",
+                contrastRatio: s.S3.HighContrastText,
             });
             return (0, a._i)(t);
         },
-        (e) => e
+        (e) => e,
     ),
     f = (0, o.memoize)(
         (e, t, n) => {
@@ -36,10 +36,10 @@ let d = (0, o.memoize)(
                 a = 0.5,
                 s = 0.1,
                 u = 0.8,
-                d = i().mix(i()(e), i()(t), a, 'lab'),
-                f = Math.round(100 * d.get('hsl.l')) / 100,
+                d = i().mix(i()(e), i()(t), a, "lab"),
+                f = Math.round(100 * d.get("hsl.l")) / 100,
                 _ = r ? (0, o.clamp)(f, 0, s) : (0, o.clamp)(f, u, 1);
-            return i()(d).set('hsl.l', _).num();
+            return i()(d).set("hsl.l", _).num();
         },
-        (e, t, n) => ''.concat(e, '-').concat(t, '-').concat(n)
+        (e, t, n) => "".concat(e, "-").concat(t, "-").concat(n),
     );

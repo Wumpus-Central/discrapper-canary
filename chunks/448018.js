@@ -9,14 +9,15 @@ let c = {
         component: i.Z,
         getCollapsedHeight: () => 40,
         getPreEnrollmentExpandedHeight: () => 240,
-        getPostEnrollmentBackgroundImage: (e) => 'linear-gradient(90deg, '.concat(e.config.colors.primary, ', ').concat(e.config.colors.secondary, ')'),
+        getPostEnrollmentBackgroundImage: (e) =>
+            "linear-gradient(90deg, ".concat(e.config.colors.primary, ", ").concat(e.config.colors.secondary, ")"),
         getPreEnrollmentBackgroundColor: (e) => void 0,
         canCollapseOnBlur: (e) => {
             var t;
             return (null == (t = e.userStatus) ? void 0 : t.completedAt) == null;
         },
         shouldExpandOnQuestComplete: (e) => !0,
-        getVerticalPadding: () => 8
+        getVerticalPadding: () => 8,
     },
     u = l.Li,
     d = {
@@ -26,11 +27,11 @@ let c = {
             return (null == (t = e.userStatus) ? void 0 : t.enrolledAt) != null ? 66 : 40;
         },
         getPreEnrollmentExpandedHeight: () => 270,
-        getPostEnrollmentBackgroundImage: () => 'linear-gradient(90deg, '.concat(l.aY, ', ').concat(l.v6, ')'),
-        getPreEnrollmentBackgroundColor: (e) => 'var(--home-background)',
+        getPostEnrollmentBackgroundImage: () => "linear-gradient(90deg, ".concat(l.aY, ", ").concat(l.v6, ")"),
+        getPreEnrollmentBackgroundColor: (e) => "var(--home-background)",
         canCollapseOnBlur: (e) => !0,
         shouldExpandOnQuestComplete: (e) => !1,
-        getVerticalPadding: () => u
+        getVerticalPadding: () => u,
     },
     p = (e, t, n) => {
         var o;
@@ -46,6 +47,6 @@ let c = {
             canCollapseOnBlur: u.canCollapseOnBlur(e),
             shouldExpandOnQuestComplete: u.shouldExpandOnQuestComplete(e),
             paddingVertical: u.getVerticalPadding(),
-            trackingCtx: { content: l ? r.jn.QUEST_BAR_V2 : r.jn.QUEST_BAR }
+            trackingCtx: { content: l ? r.jn.QUEST_BAR_V2 : r.jn.QUEST_BAR },
         };
     };

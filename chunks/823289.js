@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,9 +30,9 @@ class u {
             i.Z.distribution(
                 {
                     name: r.V.QUEST_BAR_RENDER_DELAY,
-                    tags: ['quest_id:'.concat(e), 'timeout:'.concat(t)]
+                    tags: ["quest_id:".concat(e), "timeout:".concat(t)],
                 },
-                n
+                n,
             );
     }
     startTracking(e) {
@@ -48,13 +48,13 @@ class u {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (!this.isEligible() || null === this.startTime || this.questId !== e) return;
         let n = t ? l : Math.round(performance.now() - this.startTime);
-        (this.clearTracking(), this.sendMetric(e, t, n));
+        this.clearTracking(), this.sendMetric(e, t, n);
     }
     clearTracking() {
-        (this.clearTimeoutTimer(), (this.startTime = null), (this.questId = null));
+        this.clearTimeoutTimer(), (this.startTime = null), (this.questId = null);
     }
     constructor() {
-        (s(this, 'startTime', null), s(this, 'questId', null), s(this, 'timeoutTimer', null));
+        s(this, "startTime", null), s(this, "questId", null), s(this, "timeoutTimer", null);
     }
 }
 let d = new u();

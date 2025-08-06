@@ -1,11 +1,11 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         hasDomParent: () => a,
         isDOMRangeCollapsed: () => s,
-        normalizeDOMPoint: () => l
+        normalizeDOMPoint: () => l,
     }),
     n(415506),
-    n(388685));
+    n(388685);
 var r = n(650557);
 function i(e) {
     return f(e)
@@ -13,13 +13,13 @@ function i(e) {
               anchorNode: e.anchorNode,
               anchorOffset: e.anchorOffset,
               focusNode: e.focusNode,
-              focusOffset: e.focusOffset
+              focusOffset: e.focusOffset,
           }
         : {
               anchorNode: e.startContainer,
               anchorOffset: e.startOffset,
               focusNode: e.endContainer,
-              focusOffset: e.endOffset
+              focusOffset: e.endOffset,
           };
 }
 let o = !1;
@@ -30,40 +30,40 @@ let o = !1;
             f = s(l, c, u, d);
         if (null == l || null == u || null == c || null == d) {
             if (a) return null;
-            throw Error('Cannot resolve a Slate range from DOM range');
+            throw Error("Cannot resolve a Slate range from DOM range");
         }
         let _ = r.F3.toSlatePoint(e, [l, c], {
                 exactMatch: o,
-                suppressThrow: a
+                suppressThrow: a,
             }),
             p = f
                 ? _
                 : r.F3.toSlatePoint(e, [u, d], {
                       exactMatch: o,
-                      suppressThrow: a
+                      suppressThrow: a,
                   });
         return null != _ && null != p
             ? {
                   anchor: _,
-                  focus: p
+                  focus: p,
               }
             : null;
     };
     let e = r.F3.toSlatePoint;
-    ((r.F3.toSlatePoint = (t, n, r) => {
-        let { exactMatch: i, suppressThrow: o, direction: a = 'forward' } = r;
+    (r.F3.toSlatePoint = (t, n, r) => {
+        let { exactMatch: i, suppressThrow: o, direction: a = "forward" } = r;
         i || (n = l(n, a));
         try {
             return e(t, n, {
                 exactMatch: !0,
-                suppressThrow: o
+                suppressThrow: o,
             });
         } catch (e) {
             if (o) return null;
             throw e;
         }
     }),
-        (o = !0));
+        (o = !0);
 }
 function a(e, t) {
     if (null == t) return !1;
@@ -80,11 +80,18 @@ function l(e, t) {
     let n,
         [r, i] = e;
     if (!d(r) || 0 === r.childNodes.length) return e;
-    for ('forward' === t && i === r.childNodes.length && (t = 'backward'), 'backward' === t && i--, [r, n] = c(r, i, t), 'forward' === t && n < i ? (t = 'backward') : 'backward' === t && n > i && (t = 'forward'), i = n; d(r) && r.childNodes.length > 0; ) {
-        let e = 'backward' === t ? r.childNodes.length - 1 : 0;
+    for (
+        "forward" === t && i === r.childNodes.length && (t = "backward"),
+            "backward" === t && i--,
+            [r, n] = c(r, i, t),
+            "forward" === t && n < i ? (t = "backward") : "backward" === t && n > i && (t = "forward"),
+            i = n;
+        d(r) && r.childNodes.length > 0;
+    ) {
+        let e = "backward" === t ? r.childNodes.length - 1 : 0;
         r = c(r, e, t)[0];
     }
-    let o = 'backward' === t && null != r.textContent ? r.textContent.length : 0;
+    let o = "backward" === t && null != r.textContent ? r.textContent.length : 0;
     return [r, o];
 }
 function c(e, t, n) {
@@ -93,16 +100,20 @@ function c(e, t, n) {
         o = t,
         a = !1,
         s = !1;
-    for (; (u(i) || (d(i) && 0 === i.childNodes.length) || (d(i) && 'false' === i.getAttribute('contenteditable'))) && (!a || !s); ) {
+    for (
+        ;
+        (u(i) || (d(i) && 0 === i.childNodes.length) || (d(i) && "false" === i.getAttribute("contenteditable"))) &&
+        (!a || !s);
+    ) {
         if (o >= r.length) {
-            ((a = !0), (o = t - 1), (n = 'backward'));
+            (a = !0), (o = t - 1), (n = "backward");
             continue;
         }
         if (o < 0) {
-            ((s = !0), (o = t + 1), (n = 'forward'));
+            (s = !0), (o = t + 1), (n = "forward");
             continue;
         }
-        ((i = r[o]), (t = o), (o += 'forward' === n ? 1 : -1));
+        (i = r[o]), (t = o), (o += "forward" === n ? 1 : -1);
     }
     return [i, t];
 }

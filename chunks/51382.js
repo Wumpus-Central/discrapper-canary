@@ -16,12 +16,13 @@ let d = (e) => {
             (0, l.Kw)(l.v6.HUB_STUDY_ROOM_NOTICE);
         },
         onClick: () => {
-            ((0, l.Kw)(l.v6.HUB_STUDY_ROOM_NOTICE), null != t && null != t.getGuildId() && ((0, o.Cq)(t), (0, a.XU)(t.getGuildId(), t.id)));
+            (0, l.Kw)(l.v6.HUB_STUDY_ROOM_NOTICE),
+                null != t && null != t.getGuildId() && ((0, o.Cq)(t), (0, a.XU)(t.getGuildId(), t.id));
         },
-        title: c.intl.string(c.t['4Y2AS0']),
+        title: c.intl.string(c.t["4Y2AS0"]),
         message: c.intl.string(c.t.wTsxTU),
         cta: c.intl.string(c.t.wBoE6O),
         image: u,
-        type: s.vID.HUB_STUDY_ROOM
+        type: s.vID.HUB_STUDY_ROOM,
     });
 };

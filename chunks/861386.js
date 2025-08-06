@@ -1,61 +1,63 @@
 e.exports = function (e) {
-    let t = 'foreach do while for if from to step else on-error and or not in',
-        n = 'global local beep delay put len typeof pick log time set find environment terminal error execute parse resolve toarray tobool toid toip toip6 tonum tostr totime',
-        r = 'add remove enable disable set get print export edit find run debug error info warning',
-        i = 'true false yes no nothing nil null',
-        o = 'traffic-flow traffic-generator firewall scheduler aaa accounting address-list address align area bandwidth-server bfd bgp bridge client clock community config connection console customer default dhcp-client dhcp-server discovery dns e-mail ethernet filter firmware gps graphing group hardware health hotspot identity igmp-proxy incoming instance interface ip ipsec ipv6 irq l2tp-server lcd ldp logging mac-server mac-winbox mangle manual mirror mme mpls nat nd neighbor network note ntp ospf ospf-v3 ovpn-server page peer pim ping policy pool port ppp pppoe-client pptp-server prefix profile proposal proxy queue radius resource rip ripng route routing screen script security-profiles server service service-port settings shares smb sms sniffer snmp snooper socks sstp-server system tool tracking type upgrade upnp user-manager users user vlan secret vrrp watchdog web-access wireless pptp pppoe lan wan layer7-protocol lease simple raw',
+    let t = "foreach do while for if from to step else on-error and or not in",
+        n =
+            "global local beep delay put len typeof pick log time set find environment terminal error execute parse resolve toarray tobool toid toip toip6 tonum tostr totime",
+        r = "add remove enable disable set get print export edit find run debug error info warning",
+        i = "true false yes no nothing nil null",
+        o =
+            "traffic-flow traffic-generator firewall scheduler aaa accounting address-list address align area bandwidth-server bfd bgp bridge client clock community config connection console customer default dhcp-client dhcp-server discovery dns e-mail ethernet filter firmware gps graphing group hardware health hotspot identity igmp-proxy incoming instance interface ip ipsec ipv6 irq l2tp-server lcd ldp logging mac-server mac-winbox mangle manual mirror mme mpls nat nd neighbor network note ntp ospf ospf-v3 ovpn-server page peer pim ping policy pool port ppp pppoe-client pptp-server prefix profile proposal proxy queue radius resource rip ripng route routing screen script security-profiles server service service-port settings shares smb sms sniffer snmp snooper socks sstp-server system tool tracking type upgrade upnp user-manager users user vlan secret vrrp watchdog web-access wireless pptp pppoe lan wan layer7-protocol lease simple raw",
         a = {
-            className: 'variable',
-            variants: [{ begin: /\$[\w\d#@][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }]
+            className: "variable",
+            variants: [{ begin: /\$[\w\d#@][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }],
         },
         s = {
-            className: 'string',
+            className: "string",
             begin: /"/,
             end: /"/,
             contains: [
                 e.BACKSLASH_ESCAPE,
                 a,
                 {
-                    className: 'variable',
+                    className: "variable",
                     begin: /\$\(/,
                     end: /\)/,
-                    contains: [e.BACKSLASH_ESCAPE]
-                }
-            ]
+                    contains: [e.BACKSLASH_ESCAPE],
+                },
+            ],
         },
         l = {
-            className: 'string',
+            className: "string",
             begin: /'/,
-            end: /'/
+            end: /'/,
         };
     return {
-        name: 'MikroTik RouterOS script',
-        aliases: ['mikrotik'],
+        name: "MikroTik RouterOS script",
+        aliases: ["mikrotik"],
         case_insensitive: !0,
         keywords: {
             $pattern: /:?[\w-]+/,
             literal: i,
-            keyword: t + ' :' + t.split(' ').join(' :') + ' :' + n.split(' ').join(' :')
+            keyword: t + " :" + t.split(" ").join(" :") + " :" + n.split(" ").join(" :"),
         },
         contains: [
             {
                 variants: [
                     {
                         begin: /\/\*/,
-                        end: /\*\//
+                        end: /\*\//,
                     },
                     {
                         begin: /\/\//,
-                        end: /$/
+                        end: /$/,
                     },
                     {
                         begin: /<\//,
-                        end: />/
-                    }
+                        end: />/,
+                    },
                 ],
-                illegal: /./
+                illegal: /./,
             },
-            e.COMMENT('^#', '$'),
+            e.COMMENT("^#", "$"),
             s,
             l,
             a,
@@ -65,8 +67,8 @@ e.exports = function (e) {
                 returnBegin: !0,
                 contains: [
                     {
-                        className: 'attribute',
-                        begin: /[^=]+/
+                        className: "attribute",
+                        begin: /[^=]+/,
                     },
                     {
                         begin: /=/,
@@ -77,38 +79,38 @@ e.exports = function (e) {
                             l,
                             a,
                             {
-                                className: 'literal',
-                                begin: '\\b(' + i.split(' ').join('|') + ')\\b'
+                                className: "literal",
+                                begin: "\\b(" + i.split(" ").join("|") + ")\\b",
                             },
-                            { begin: /("[^"]*"|[^\s{}[\]]+)/ }
-                        ]
-                    }
-                ]
+                            { begin: /("[^"]*"|[^\s{}[\]]+)/ },
+                        ],
+                    },
+                ],
             },
             {
-                className: 'number',
-                begin: /\*[0-9a-fA-F]+/
+                className: "number",
+                begin: /\*[0-9a-fA-F]+/,
             },
             {
-                begin: '\\b(' + r.split(' ').join('|') + ')([\\s[(\\]|])',
+                begin: "\\b(" + r.split(" ").join("|") + ")([\\s[(\\]|])",
                 returnBegin: !0,
                 contains: [
                     {
-                        className: 'built_in',
-                        begin: /\w+/
-                    }
-                ]
+                        className: "built_in",
+                        begin: /\w+/,
+                    },
+                ],
             },
             {
-                className: 'built_in',
+                className: "built_in",
                 variants: [
-                    { begin: '(\\.\\./|/|\\s)((' + o.split(' ').join('|') + ');?\\s)+' },
+                    { begin: "(\\.\\./|/|\\s)((" + o.split(" ").join("|") + ");?\\s)+" },
                     {
                         begin: /\.\./,
-                        relevance: 0
-                    }
-                ]
-            }
-        ]
+                        relevance: 0,
+                    },
+                ],
+            },
+        ],
     };
 };

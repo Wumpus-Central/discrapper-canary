@@ -1,17 +1,17 @@
-(n.d(t, {
+n.d(t, {
     G8: () => l,
     N6: () => s,
-    vp: () => c
+    vp: () => c,
 }),
-    n(35282));
+    n(35282);
 var r = n(509003),
     i = n(77498),
     o = n(358085);
 function a(e) {
-    return ((e = e.toLowerCase()).endsWith('/') && (e = e.slice(0, -1)), e);
+    return (e = e.toLowerCase()).endsWith("/") && (e = e.slice(0, -1)), e;
 }
 function s(e) {
-    return a(e).split('/').slice(-2).join('/');
+    return a(e).split("/").slice(-2).join("/");
 }
 function l(e) {
     var t, n, o;
@@ -22,17 +22,17 @@ function l(e) {
             exe: void 0,
             distributor: void 0,
             sku: void 0,
-            gameMetadata: void 0
+            gameMetadata: void 0,
         };
     let a = i.Z.getGameByName(e.name),
-        l = 'exePath' in e ? e.exePath : e.exe;
+        l = "exePath" in e ? e.exePath : e.exe;
     return {
         gameName: null != (t = e.name) ? t : void 0,
         gameId: null == a ? void 0 : a.id,
         exe: null != l ? s(l) : void 0,
         distributor: null != (n = e.distributor) ? n : void 0,
         sku: null != (o = e.sku) ? o : void 0,
-        gameMetadata: null != e ? (0, r.sD)(e) : void 0
+        gameMetadata: null != e ? (0, r.sD)(e) : void 0,
     };
 }
 function c(e, t) {

@@ -19,21 +19,23 @@ var i = n(481060),
     j = n(264054);
 function v(e) {
     let { payoutsByPeriod: t, team: n } = e,
-        l = (0, c.mY)() ? null : b.intl.format(b.t.d1sCiY, { url: null != n ? x.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
+        l = (0, c.mY)()
+            ? null
+            : b.intl.format(b.t.d1sCiY, { url: null != n ? x.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
     return 0 === t.length
         ? (0, r.jsxs)(i.R94, {
               type: i.R94.Types.DESCRIPTION,
-              children: [b.intl.string(b.t.RrtXu7), ' ', l]
+              children: [b.intl.string(b.t.RrtXu7), " ", l],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)(i.R94, {
                       type: i.R94.Types.DESCRIPTION,
-                      children: [b.intl.string(b.t['9Ub4KS']), ' ', l]
+                      children: [b.intl.string(b.t["9Ub4KS"]), " ", l],
                   }),
                   (0, r.jsx)(i.LZC, { size: 16 }),
-                  (0, r.jsx)(g.ZP, { payoutsByPeriod: t })
-              ]
+                  (0, r.jsx)(g.ZP, { payoutsByPeriod: t }),
+              ],
           });
 }
 function _(e) {
@@ -44,7 +46,7 @@ function _(e) {
         : (0, r.jsx)(m.Z, {
               totalPayoutsForPeriod: n,
               guildId: t,
-              className: j.currentMonthEarningsTable
+              className: j.currentMonthEarningsTable,
           });
 }
 let O = (e) => {
@@ -59,14 +61,21 @@ let O = (e) => {
               children: [
                   N &&
                       (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(l.Z, { children: b.intl.format(b.t['2raBCQ'], { insightsURL: x.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(s) }) }), (0, r.jsx)(i.LZC, { size: 32 })]
+                          children: [
+                              (0, r.jsx)(l.Z, {
+                                  children: b.intl.format(b.t["2raBCQ"], {
+                                      insightsURL: x.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(s),
+                                  }),
+                              }),
+                              (0, r.jsx)(i.LZC, { size: 32 }),
+                          ],
                       }),
                   (0, r.jsxs)(i.hjN, {
                       title: b.intl.string(b.t.ofmOzc),
                       className: j.formSection,
                       children: [
                           (0, r.jsx)(i.LZC, { size: 8 }),
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: j.metricsContainer,
                               children: [
                                   (0, r.jsx)(p.Z, {
@@ -74,40 +83,40 @@ let O = (e) => {
                                       value: (0, a.T4)(null != (t = C.revenue) ? t : 0, x.pKx.USD),
                                       additionalContent: (0, r.jsx)(p.H, {
                                           value: C.revenuePctChange,
-                                          isPercent: !0
-                                      })
+                                          isPercent: !0,
+                                      }),
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       label: b.intl.string(b.t.cXyw29),
                                       value: (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              null != (n = C.subscribers) ? n : '-',
-                                              ' ',
+                                              null != (n = C.subscribers) ? n : "-",
+                                              " ",
                                               (0, r.jsx)(i.tBG, {
-                                                  size: 'md',
-                                                  color: 'currentColor',
+                                                  size: "md",
+                                                  color: "currentColor",
                                                   className: j.totalMembersIcon,
-                                                  'aria-hidden': !0
-                                              })
-                                          ]
+                                                  "aria-hidden": !0,
+                                              }),
+                                          ],
                                       }),
-                                      additionalContent: (0, r.jsx)(p.H, { value: C.subscriberChange })
-                                  })
-                              ]
+                                      additionalContent: (0, r.jsx)(p.H, { value: C.subscriberChange }),
+                                  }),
+                              ],
                           }),
                           (0, r.jsx)(_, {
                               guildId: s,
-                              totalPayoutsForPeriod: O
-                          })
-                      ]
+                              totalPayoutsForPeriod: O,
+                          }),
+                      ],
                   }),
                   (0, r.jsx)(i.hjN, {
-                      title: b.intl.string(b.t['+5Rmho']),
+                      title: b.intl.string(b.t["+5Rmho"]),
                       className: j.formSection,
                       children: (0, r.jsx)(v, {
                           payoutsByPeriod: y,
-                          team: g
-                      })
+                          team: g,
+                      }),
                   }),
                   (0, r.jsx)(i.hjN, {
                       title: b.intl.string(b.t.O8cDAA),
@@ -115,18 +124,18 @@ let O = (e) => {
                       className: j.formSection,
                       children: (0, r.jsx)(h.Z, {
                           guildId: s,
-                          application: o
-                      })
+                          application: o,
+                      }),
                   }),
                   (0, r.jsx)(i.hjN, {
-                      title: b.intl.string(b.t['0n7R2d']),
+                      title: b.intl.string(b.t["0n7R2d"]),
                       className: j.formSection,
                       children: (0, r.jsx)(f.Z, {
                           guildId: s,
-                          allPeriods: y
-                      })
-                  })
-              ]
+                          allPeriods: y,
+                      }),
+                  }),
+              ],
           });
 };
 function y(e) {
@@ -138,27 +147,27 @@ function y(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
-            })({}, e)
-        )
+            })({}, e),
+        ),
     });
 }

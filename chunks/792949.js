@@ -9,14 +9,14 @@ var r = n(804336),
     d = n(848894),
     f = n(166691),
     _ = n(934660),
-    p = Object('a'),
-    h = 'a' !== p[0] || !(0 in p),
-    m = f('String.prototype.split');
+    p = Object("a"),
+    h = "a" !== p[0] || !(0 in p),
+    m = f("String.prototype.split");
 e.exports = function (e) {
     var t,
         n = u(this),
-        f = c((h && _(n) ? m(n, '') : n).length);
-    if (!l(e)) throw TypeError('Array.prototype.map callback must be a function');
+        f = c((h && _(n) ? m(n, "") : n).length);
+    if (!l(e)) throw TypeError("Array.prototype.map callback must be a function");
     arguments.length > 1 && (t = arguments[1]);
     for (var p = r(n, f), g = 0; g < f; ) {
         var E = d(g);

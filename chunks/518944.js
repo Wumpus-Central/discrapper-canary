@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,7 +33,7 @@ function h(e) {
                 showNoResultsAlt: !1,
                 searchResultsQueryString: null,
                 searchResultsQuery: null,
-                searchResultsOffset: null
+                searchResultsOffset: null,
             }),
         p[e]
     );
@@ -61,18 +61,22 @@ function O(e) {
 }
 function v(e) {
     if (e === E) return !1;
-    (null != e && null == p[e] && h(e), (E = e));
+    null != e && null == p[e] && h(e), (E = e);
 }
 function I() {
-    ((g = !0), null != E && (0, u.g)(E) === d.aib.CHANNEL && (0, c.a)({ location: 'SearchStore_handleConnectionOpen' }) && v(d.aib.DMS));
+    (g = !0),
+        null != E &&
+            (0, u.g)(E) === d.aib.CHANNEL &&
+            (0, c.a)({ location: "SearchStore_handleConnectionOpen" }) &&
+            v(d.aib.DMS);
 }
 function T(e) {
     let { guildId: t, channelId: n } = e;
     null != t
         ? v(t)
         : (0, c.a)({
-                location: 'SearchStore_handleChannelSelect',
-                autoTrackExposure: g
+                location: "SearchStore_handleChannelSelect",
+                autoTrackExposure: g,
             })
           ? v(d.aib.DMS)
           : v(n);
@@ -92,7 +96,7 @@ function N(e) {
 function C(e) {
     let { id: t, queryString: n, query: r, offset: i } = e,
         o = h(t);
-    ((o.searchResultsQueryString = n), (o.searchResultsQuery = r), (o.searchResultsOffset = null != i ? i : 0));
+    (o.searchResultsQueryString = n), (o.searchResultsQuery = r), (o.searchResultsOffset = null != i ? i : 0);
 }
 class R extends (r = i.ZP.Store) {
     initialize() {
@@ -125,7 +129,7 @@ class R extends (r = i.ZP.Store) {
         return null != e && null != p[e];
     }
 }
-f(R, 'displayName', 'SearchStore');
+f(R, "displayName", "SearchStore");
 let P = new R(o.Z, {
     CONNECTION_OPEN: I,
     SEARCH_RESULTS_QUERY_UPDATE: C,
@@ -135,5 +139,5 @@ let P = new R(o.Z, {
     SEARCH_SET_SHOW_BLOCKED_RESULTS: A,
     SEARCH_SET_SHOW_NO_RESULTS_ALT: N,
     SEARCH_SCREEN_OPEN: S,
-    CHANNEL_SELECT: T
+    CHANNEL_SELECT: T,
 });

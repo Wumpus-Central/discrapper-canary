@@ -8,14 +8,14 @@ var i = n(120356),
     a = n(622680);
 let c = Object.freeze({
     DEFAULT: a.default,
-    FILLED: a.filled
+    FILLED: a.filled,
 });
 function u(e) {
-    let { className: t, onClick: n, 'aria-label': i, look: u = c.DEFAULT } = e;
+    let { className: t, onClick: n, "aria-label": i, look: u = c.DEFAULT } = e;
     return (0, r.jsx)(s.P3F, {
-        'aria-label': null != i ? i : o.intl.string(o.t.N86XcH),
+        "aria-label": null != i ? i : o.intl.string(o.t.N86XcH),
         className: l()(a.button, u, t),
-        onClick: n
+        onClick: n,
     });
 }
 u.Looks = c;

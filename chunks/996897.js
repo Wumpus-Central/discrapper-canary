@@ -2,17 +2,17 @@ n.d(t, { w: () => a });
 var r = n(818083),
     i = n(984134);
 let o = (0, r.B)({
-    kind: 'user',
-    id: '2025-07_device_filtering',
-    label: 'Device filtering experiment',
+    kind: "user",
+    id: "2025-07_device_filtering",
+    label: "Device filtering experiment",
     defaultConfig: { shouldFilterDevicesByFrecency: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Filter devices by frecency',
-            config: { shouldFilterDevicesByFrecency: !0 }
-        }
-    ]
+            label: "Filter devices by frecency",
+            config: { shouldFilterDevicesByFrecency: !0 },
+        },
+    ],
 });
 function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -21,7 +21,7 @@ function a(e) {
         { location: t },
         {
             disable: r,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     );
 }

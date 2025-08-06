@@ -11,39 +11,39 @@ let c = (e) => {
         n = a.Z.getGuild(t.guild_id);
     return null == n
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: o.container,
               children: [
                   (0, r.jsx)(l.X6q, {
                       className: o.header,
-                      variant: 'heading-sm/semibold',
-                      children: s.intl.string(s.t['InbJ8/'])
+                      variant: "heading-sm/semibold",
+                      children: s.intl.string(s.t["InbJ8/"]),
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: o.guildContainer,
                       children: [
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: o.guildInfo,
                               children: [
                                   (0, r.jsx)(i.Z, {
                                       guild: n,
                                       size: i.Z.Sizes.MINI,
-                                      className: o.guildIcon
+                                      className: o.guildIcon,
                                   }),
                                   (0, r.jsx)(l.Text, {
-                                      color: 'header-secondary',
-                                      variant: 'text-sm/normal',
-                                      children: n.name
-                                  })
-                              ]
+                                      color: "header-secondary",
+                                      variant: "text-sm/normal",
+                                      children: n.name,
+                                  }),
+                              ],
                           }),
                           (0, r.jsx)(l.Text, {
-                              variant: 'text-md/semibold',
-                              color: 'header-primary',
-                              children: t.topic
-                          })
-                      ]
-                  })
-              ]
+                              variant: "text-md/semibold",
+                              color: "header-primary",
+                              children: t.topic,
+                          }),
+                      ],
+                  }),
+              ],
           });
 };

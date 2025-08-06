@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var i,
     r = n(442837),
     s = n(570140),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,7 +45,7 @@ function u(e, t, n) {
         startTime: Date.now(),
         endTime: -1,
         volume: null != e ? e : 0.25,
-        isMuted: null != t && t
+        isMuted: null != t && t,
     };
 }
 let m = u(),
@@ -99,7 +99,10 @@ class b extends (i = r.ZP.PersistedStore) {
         return null != (t = m.itemContributions[e]) ? t : 0;
     }
     get numPurchases() {
-        return Object.values(m.purchasedItems).reduce((e, t) => e + Object.values(t.upgrades).reduce((e, t) => e + t, 1), 0);
+        return Object.values(m.purchasedItems).reduce(
+            (e, t) => e + Object.values(t.upgrades).reduce((e, t) => e + t, 1),
+            0,
+        );
     }
     get purchasedItems() {
         return m.purchasedItems;
@@ -148,7 +151,7 @@ class b extends (i = r.ZP.PersistedStore) {
         return m.isMuted;
     }
 }
-(c(b, 'displayName', 'ClickerGameStore'), c(b, 'persistKey', 'ClickerGameStore'));
+c(b, "displayName", "ClickerGameStore"), c(b, "persistKey", "ClickerGameStore");
 let x = new b(s.Z, {
     CLICKER_GAME_ADD_POINTS: function (e) {
         let { numPoints: t, itemId: n } = e;
@@ -158,7 +161,10 @@ let x = new b(s.Z, {
             let e = Math.max(-i, t);
             m.pointsByItem[n] += e;
         } else m.pointsByItem[n] += t;
-        ((m.pointsByItem = d({}, m.pointsByItem)), null == m.itemContributions[n] && (m.itemContributions[n] = 0), m.itemContributions[n]++, (m.itemContributions = d({}, m.itemContributions)));
+        (m.pointsByItem = d({}, m.pointsByItem)),
+            null == m.itemContributions[n] && (m.itemContributions[n] = 0),
+            m.itemContributions[n]++,
+            (m.itemContributions = d({}, m.itemContributions));
     },
     CLICKER_GAME_PURCHASE_ITEM: function (e) {
         let { id: t } = e,
@@ -169,18 +175,18 @@ let x = new b(s.Z, {
             (m.purchasedItems[t] = { upgrades: {} }),
             (m.purchasedItems = d({}, m.purchasedItems)),
             (m.lastAction = {
-                type: 'purchase-item',
-                id: t
+                type: "purchase-item",
+                id: t,
             }),
             t === l.yN.COMPLETE_GAME)
         ) {
             var i;
-            ((m.endTime = Date.now()),
+            (m.endTime = Date.now()),
                 a.default.track(o.rMx.CLICKER_GAME_COMPLETED, {
                     duration: Math.floor((m.endTime - m.startTime) / 1000),
                     num_clicks: null != (i = m.itemContributions[l.yN.CLICKER_BUTTON]) ? i : 0,
-                    total_score: Math.floor(h())
-                }));
+                    total_score: Math.floor(h()),
+                });
         }
     },
     CLICKER_GAME_PURCHASE_ITEM_UPGRADE: function (e) {
@@ -197,7 +203,7 @@ let x = new b(s.Z, {
                 ? void 0
                 : n.call(s, {
                       numAlreadyPurchased: o,
-                      lifetimePoints: c
+                      lifetimePoints: c,
                   }))
         )
             return;
@@ -208,17 +214,17 @@ let x = new b(s.Z, {
             (m.purchasedItems[s.itemId].upgrades = d({}, a)),
             (m.purchasedItems = d({}, m.purchasedItems)),
             (m.lastAction = {
-                type: 'purchase-item-upgrade',
-                id: r
+                type: "purchase-item-upgrade",
+                id: r,
             }));
     },
     CLICKER_GAME_UNLOCK_ACHIEVEMENT: function (e) {
         let { id: t } = e;
-        (m.unlockedAchievements.add(t),
+        m.unlockedAchievements.add(t),
             (m.lastAction = {
-                type: 'unlock-achievement',
-                id: t
-            }));
+                type: "unlock-achievement",
+                id: t,
+            });
     },
     CLICKER_GAME_UPDATE_ITEM_METADATA: function (e) {
         let { itemId: t, metadata: n } = e,
@@ -243,5 +249,5 @@ let x = new b(s.Z, {
     },
     LOGOUT: function () {
         m = u();
-    }
+    },
 });

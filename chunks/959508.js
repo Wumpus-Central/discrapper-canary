@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -21,20 +21,31 @@ var r = n(255367),
 let O = { optionErrors: [] };
 function y(e) {
     var t;
-    let { guild: n, prompt: l, disableAutofocus: u, promptIndex: b, dragIndex: y, includeCount: I, singleColumn: E, onPromptDragComplete: S, onPromptDragStart: T, onPromptDragReset: P } = e,
+    let {
+            guild: n,
+            prompt: l,
+            disableAutofocus: u,
+            promptIndex: b,
+            dragIndex: y,
+            includeCount: I,
+            singleColumn: E,
+            onPromptDragComplete: S,
+            onPromptDragStart: T,
+            onPromptDragReset: P,
+        } = e,
         w = (0, s.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
         {
             drag: R,
             dragSourcePosition: Z,
             drop: D,
-            setIsDraggable: A
+            setIsDraggable: A,
         } = (0, d.Z)({
-            type: 'ONBOARDING_PROMPT_CARD',
+            type: "ONBOARDING_PROMPT_CARD",
             index: y,
             optionId: l.id,
             onDragStart: T,
             onDragComplete: S,
-            onDragReset: P
+            onDragReset: P,
         }),
         k = (0, s.cj)([x.Z], () => {
             var e;
@@ -61,7 +72,7 @@ function y(e) {
     }, [u]),
     L)
         ? (0, r.jsx)(c.tEY, {
-              children: (0, r.jsxs)('div', {
+              children: (0, r.jsxs)("div", {
                   tabIndex: 0,
                   onFocus: () => U(!0),
                   onBlur: () => U(!1),
@@ -69,32 +80,32 @@ function y(e) {
                   className: a()(_.container, {
                       [_.dropIndicatorBefore]: null != Z && b < Z,
                       [_.dropIndicatorAfter]: null != Z && b > Z,
-                      [_.containerFocused]: G
+                      [_.containerFocused]: G,
                   }),
                   ref: (e) => {
                       R(D(e));
                   },
                   children: [
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: _.dragContainer,
                           onMouseEnter: () => A(!0),
                           onMouseLeave: () => A(!1),
                           children: (0, r.jsx)(c.Vni, {
-                              size: 'xs',
-                              color: 'currentColor',
-                              className: _.dragIcon
-                          })
+                              size: "xs",
+                              color: "currentColor",
+                              className: _.dragIcon,
+                          }),
                       }),
                       (0, r.jsx)(c.Text, {
                           className: _.questionNumber,
-                          variant: 'text-xs/semibold',
-                          color: 'text-muted',
-                          children: v.intl.format(v.t.yjS3zs, { index: b + 1 })
+                          variant: "text-xs/semibold",
+                          color: "text-muted",
+                          children: v.intl.format(v.t.yjS3zs, { index: b + 1 }),
                       }),
                       (0, r.jsx)(c.Text, {
-                          variant: 'text-lg/semibold',
-                          color: 'text-default',
-                          children: l.title
+                          variant: "text-lg/semibold",
+                          color: "text-default",
+                          children: l.title,
                       }),
                       (0, r.jsx)(c.P3F, {
                           className: _.collapseButton,
@@ -102,53 +113,53 @@ function y(e) {
                           children: (0, r.jsx)(g.Z, {
                               direction: g.Z.Directions.DOWN,
                               height: 16,
-                              width: 16
-                          })
+                              width: 16,
+                          }),
                       }),
                       (0, r.jsx)(c.DY3, {
-                          text: v.intl.string(v.t['Ku+86e']),
+                          text: v.intl.string(v.t["Ku+86e"]),
                           className: _.removeButton,
                           children: (0, r.jsx)(c.P3F, {
                               className: _.closeIcon,
                               onClick: () => (0, f.fi)(n, l.id),
                               children: (0, r.jsx)(c.XHJ, {
-                                  size: 'xs',
-                                  color: 'currentColor'
-                              })
-                          })
-                      })
-                  ]
-              })
+                                  size: "xs",
+                                  color: "currentColor",
+                              }),
+                          }),
+                      }),
+                  ],
+              }),
           })
         : (0, r.jsx)(c.tEY, {
-              children: (0, r.jsxs)('div', {
+              children: (0, r.jsxs)("div", {
                   tabIndex: 0,
                   onFocus: () => U(!0),
                   onBlur: () => U(!1),
                   className: a()(_.container, {
                       [_.dropIndicatorBefore]: null != Z && b < Z,
                       [_.dropIndicatorAfter]: null != Z && b > Z,
-                      [_.containerFocused]: G
+                      [_.containerFocused]: G,
                   }),
                   ref: (e) => {
                       R(D(e));
                   },
                   children: [
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: _.dragContainer,
                           onMouseEnter: () => A(!0),
                           onMouseLeave: () => A(!1),
                           children: (0, r.jsx)(c.Vni, {
-                              size: 'xs',
-                              color: 'currentColor',
-                              className: _.dragIcon
-                          })
+                              size: "xs",
+                              color: "currentColor",
+                              className: _.dragIcon,
+                          }),
                       }),
                       (0, r.jsx)(c.Text, {
                           className: _.questionNumber,
-                          variant: 'text-xs/semibold',
-                          color: 'text-muted',
-                          children: v.intl.format(v.t.yjS3zs, { index: b + 1 })
+                          variant: "text-xs/semibold",
+                          color: "text-muted",
+                          children: v.intl.format(v.t.yjS3zs, { index: b + 1 }),
                       }),
                       (0, r.jsx)(o.Is, {
                           className: _.title,
@@ -158,38 +169,38 @@ function y(e) {
                           onChange: (e) => (0, f.Kk)(n, l.id, { title: e }),
                           placeholder: v.intl.string(v.t.QMCuCg),
                           maxLength: j.iU,
-                          error: k.title
+                          error: k.title,
                       }),
                       (0, r.jsx)(C, {
                           prompt: l,
-                          guild: n
+                          guild: n,
                       }),
                       (0, r.jsx)(c.Text, {
                           className: _.optionsHeader,
-                          variant: 'text-xs/semibold',
-                          color: 'text-muted',
+                          variant: "text-xs/semibold",
+                          color: "text-muted",
                           children: H
                               ? v.intl.formatToPlainString(v.t.AbvhZG, {
                                     count: l.options.length,
-                                    total: j.qm
+                                    total: j.qm,
                                 })
                               : v.intl.formatToPlainString(v.t.b7VxYW, {
                                     count: l.options.length,
-                                    total: j.qm
-                                })
+                                    total: j.qm,
+                                }),
                       }),
                       (0, r.jsx)(N, {
                           guild: n,
                           prompt: l,
                           promptIndex: b,
                           errors: k,
-                          singleColumn: E
+                          singleColumn: E,
                       }),
                       null != B ? (0, r.jsx)(c.pdY, { error: B }) : null,
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: _.buttons,
                           children: [
-                              (0, r.jsxs)('div', {
+                              (0, r.jsxs)("div", {
                                   className: _.checkboxes,
                                   children: [
                                       (0, r.jsx)(c.XZJ, {
@@ -198,10 +209,10 @@ function y(e) {
                                           value: !l.singleSelect,
                                           onChange: (e, t) => (0, f.Kk)(n, l.id, { singleSelect: !t }),
                                           children: (0, r.jsx)(c.Text, {
-                                              variant: 'text-sm/normal',
-                                              color: 'interactive-normal',
-                                              children: v.intl.string(v.t.uCebZW)
-                                          })
+                                              variant: "text-sm/normal",
+                                              color: "interactive-normal",
+                                              children: v.intl.string(v.t.uCebZW),
+                                          }),
                                       }),
                                       l.inOnboarding
                                           ? (0, r.jsx)(c.XZJ, {
@@ -211,13 +222,15 @@ function y(e) {
                                                 onChange: (e, t) => (0, f.Kk)(n, l.id, { required: t }),
                                                 disabled: !l.inOnboarding,
                                                 children: (0, r.jsx)(c.Text, {
-                                                    variant: 'text-sm/normal',
-                                                    color: 'interactive-normal',
-                                                    children: I ? v.intl.formatToPlainString(v.t['0re8T0'], { count: z }) : v.intl.string(v.t.Ur8Vrq)
-                                                })
+                                                    variant: "text-sm/normal",
+                                                    color: "interactive-normal",
+                                                    children: I
+                                                        ? v.intl.formatToPlainString(v.t["0re8T0"], { count: z })
+                                                        : v.intl.string(v.t.Ur8Vrq),
+                                                }),
                                             })
-                                          : null
-                                  ]
+                                          : null,
+                                  ],
                               }),
                               (0, r.jsx)(c.P3F, {
                                   className: _.collapseButton,
@@ -225,26 +238,26 @@ function y(e) {
                                   children: (0, r.jsx)(g.Z, {
                                       direction: g.Z.Directions.UP,
                                       height: 16,
-                                      width: 16
-                                  })
+                                      width: 16,
+                                  }),
                               }),
                               (0, r.jsx)(c.DY3, {
-                                  text: v.intl.string(v.t['Ku+86e']),
+                                  text: v.intl.string(v.t["Ku+86e"]),
                                   className: _.removeButton,
                                   children: (0, r.jsx)(c.P3F, {
                                       className: _.closeIcon,
                                       onClick: () => (0, f.fi)(n, l.id),
                                       children: (0, r.jsx)(c.XHJ, {
-                                          size: 'xs',
-                                          color: 'currentColor'
-                                      })
-                                  })
-                              })
-                          ]
+                                          size: "xs",
+                                          color: "currentColor",
+                                      }),
+                                  }),
+                              }),
+                          ],
                       }),
-                      null != F ? (0, r.jsx)(c.pdY, { error: F }) : null
-                  ]
-              })
+                      null != F ? (0, r.jsx)(c.pdY, { error: F }) : null,
+                  ],
+              }),
           });
 }
 function C(e) {
@@ -262,30 +275,39 @@ function C(e) {
             className: _.example,
             onClick: () => (0, f.Kk)(n, t.id, { title: e }),
             children: (0, r.jsx)(c.Text, {
-                variant: 'text-xs/normal',
-                children: e
-            })
+                variant: "text-xs/normal",
+                children: e,
+            }),
         });
     }
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: _.examplesSection,
         children: [
             (0, r.jsx)(c.Text, {
-                variant: 'text-xs/normal',
-                color: 'text-muted',
-                children: v.intl.string(v.t.ECnSLi)
+                variant: "text-xs/normal",
+                color: "text-muted",
+                children: v.intl.string(v.t.ECnSLi),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: _.examples,
-                children: [s(v.intl.string(v.t['7GZMJS'])), s(v.intl.string(v.t.nItydn)), s(v.intl.string(v.t.evuYbm)), s(v.intl.string(v.t.XWRuOj))]
-            })
-        ]
+                children: [
+                    s(v.intl.string(v.t["7GZMJS"])),
+                    s(v.intl.string(v.t.nItydn)),
+                    s(v.intl.string(v.t.evuYbm)),
+                    s(v.intl.string(v.t.XWRuOj)),
+                ],
+            }),
+        ],
     });
 }
 function N(e) {
     let { guild: t, prompt: n, promptIndex: i, singleColumn: l, errors: a } = e,
-        { handleDragStart: s, handleDragReset: o, handleDragComplete: c } = (0, u.Z)(n.options, (e) => (0, f.Kk)(t, n.id, { options: e }));
-    return (0, r.jsxs)('div', {
+        {
+            handleDragStart: s,
+            handleDragReset: o,
+            handleDragComplete: c,
+        } = (0, u.Z)(n.options, (e) => (0, f.Kk)(t, n.id, { options: e }));
+    return (0, r.jsxs)("div", {
         className: _.options,
         children: [
             n.options.map((e, d) =>
@@ -300,19 +322,19 @@ function N(e) {
                         onDragStart: s,
                         onDragComplete: c,
                         onDragReset: o,
-                        hasError: null != a.optionErrors[d]
+                        hasError: null != a.optionErrors[d],
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             ),
             n.options.length < j.qm
                 ? (0, r.jsx)(b.B, {
                       guild: t,
                       prompt: n,
                       promptIndex: i,
-                      singleColumn: l
+                      singleColumn: l,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

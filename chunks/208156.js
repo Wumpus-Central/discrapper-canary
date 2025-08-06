@@ -1,4 +1,4 @@
-(n.d(t, { J: () => I }), n(388685), n(65234), n(111804), n(490233), n(97749));
+n.d(t, { J: () => I }), n(388685), n(65234), n(111804), n(490233), n(97749);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -21,7 +21,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,24 +67,36 @@ function O(e, t) {
     );
 }
 function v(e) {
-    let { url: t, className: n, style: o, onLoad: a, shouldRefocus: g, queryParams: E, allowPopups: y = !1, referrerPolicy: v = 'origin' } = e,
+    let {
+            url: t,
+            className: n,
+            style: o,
+            onLoad: a,
+            shouldRefocus: g,
+            queryParams: E,
+            allowPopups: y = !1,
+            referrerPolicy: v = "origin",
+        } = e,
         I = (0, f.sU)({}),
         T = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
         S = i.useRef(null),
         A = (0, _.Z)(S, g, null == I ? window : I),
         N = O(b({}, E), {
             frame_id: T,
-            platform: h.S4.DESKTOP
+            platform: h.S4.DESKTOP,
         }),
         [C, R] = i.useState(!1),
         P = u.Z.theme,
         w = b({}, o);
     function D(e) {
         var n;
-        (null == a || a(e.target), (S.current = e.target), A(!0), null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, N], null != t ? t : ''));
+        null == a || a(e.target),
+            (S.current = e.target),
+            A(!0),
+            null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, N], null != t ? t : "");
     }
     return (
-        P === m.BRd.LIGHT ? (w.colorScheme = 'light') : (w.colorScheme = 'dark'),
+        P === m.BRd.LIGHT ? (w.colorScheme = "light") : (w.colorScheme = "dark"),
         i.useEffect(
             () => (
                 d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: T }),
@@ -92,7 +104,7 @@ function v(e) {
                     d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: T });
                 }
             ),
-            [T]
+            [T],
         ),
         i.useEffect(() => {
             let e = (e) => {
@@ -106,16 +118,16 @@ function v(e) {
                 }
             );
         }, []),
-        C && (w.pointerEvents = 'none'),
+        C && (w.pointerEvents = "none"),
         null != t
-            ? (0, r.jsx)('iframe', {
+            ? (0, r.jsx)("iframe", {
                   style: w,
-                  allow: 'autoplay; encrypted-media',
+                  allow: "autoplay; encrypted-media",
                   referrerPolicy: v,
                   onLoad: D,
                   sandbox: (0, p.Z)({ allowPopups: y }),
                   className: n,
-                  src: ''.concat(t, '?').concat(new URLSearchParams(N))
+                  src: "".concat(t, "?").concat(new URLSearchParams(N)),
               })
             : null
     );
@@ -125,18 +137,18 @@ function I(e) {
         [n, o] = i.useState(!1),
         s = i.useCallback(
             (e) => {
-                (o(!0), null == t || t(e));
+                o(!0), null == t || t(e);
             },
-            [t]
+            [t],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.fillParent,
         children: [
-            !n && (0, r.jsx)('div', { className: a()(g.fillParent, g.iframePlaceholder) }),
-            (0, r.jsx)('div', {
+            !n && (0, r.jsx)("div", { className: a()(g.fillParent, g.iframePlaceholder) }),
+            (0, r.jsx)("div", {
                 className: a()(g.fillParent, n ? void 0 : g.hiddenIframeContainer),
-                children: (0, r.jsx)(v, O(b({}, e), { onLoad: s }))
-            })
-        ]
+                children: (0, r.jsx)(v, O(b({}, e), { onLoad: s })),
+            }),
+        ],
     });
 }

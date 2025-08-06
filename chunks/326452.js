@@ -1,4 +1,4 @@
-(n.d(t, { E: () => b }), n(388685));
+n.d(t, { E: () => b }), n(388685);
 var r,
     i = n(255367),
     o = n(73800),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,7 +68,8 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -78,7 +79,7 @@ function E(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 class b extends (r = o.PureComponent) {
@@ -92,13 +93,45 @@ class b extends (r = o.PureComponent) {
     }
     render() {
         let e = this.props,
-            { query: t, autoFocus: n, onClear: r, className: o, placeholder: a = d.intl.string(d.t['5h0QOD']), onKeyDown: _, isLoading: h, size: E, disabled: b, onChange: y, onBlur: O, onFocus: v, autoComplete: I, inputProps: T, 'aria-label': S = d.intl.string(d.t['5h0QOD']) } = e,
-            A = g(e, ['query', 'autoFocus', 'onClear', 'className', 'placeholder', 'onKeyDown', 'isLoading', 'size', 'disabled', 'onChange', 'onBlur', 'onFocus', 'autoComplete', 'inputProps', 'aria-label']),
+            {
+                query: t,
+                autoFocus: n,
+                onClear: r,
+                className: o,
+                placeholder: a = d.intl.string(d.t["5h0QOD"]),
+                onKeyDown: _,
+                isLoading: h,
+                size: E,
+                disabled: b,
+                onChange: y,
+                onBlur: O,
+                onFocus: v,
+                autoComplete: I,
+                inputProps: T,
+                "aria-label": S = d.intl.string(d.t["5h0QOD"]),
+            } = e,
+            A = g(e, [
+                "query",
+                "autoFocus",
+                "onClear",
+                "className",
+                "placeholder",
+                "onKeyDown",
+                "isLoading",
+                "size",
+                "disabled",
+                "onChange",
+                "onBlur",
+                "onFocus",
+                "autoComplete",
+                "inputProps",
+                "aria-label",
+            ]),
             N = (0, i.jsx)(u.B, {
                 size: E,
                 hasContent: t.length > 0,
                 onClear: r,
-                isLoading: h
+                isLoading: h,
             });
         return null == o
             ? (0, i.jsx)(
@@ -113,32 +146,32 @@ class b extends (r = o.PureComponent) {
                       disabled: b,
                       autoFocus: n,
                       autoComplete: I,
-                      'aria-label': S,
+                      "aria-label": S,
                       inputRef: this.inputRef,
                       trailing: N,
                       size: E,
-                      fullWidth: !0
-                  })
+                      fullWidth: !0,
+                  }),
               )
             : (0, i.jsx)(l.t, {
                   focusTarget: this.inputRef,
                   ringTarget: this.containerRef,
                   children: (0, i.jsx)(
-                      'div',
+                      "div",
                       m(
                           p(
                               {
                                   className: s()(o, f.container, f.wrapper, f[E], { [f.disabled]: b }),
-                                  ref: this.containerRef
+                                  ref: this.containerRef,
                               },
-                              A
+                              A,
                           ),
                           {
-                              children: (0, i.jsxs)('div', {
+                              children: (0, i.jsxs)("div", {
                                   className: f.inner,
                                   children: [
                                       (0, i.jsx)(
-                                          'input',
+                                          "input",
                                           m(p({}, T), {
                                               onFocus: v,
                                               onBlur: O,
@@ -150,30 +183,30 @@ class b extends (r = o.PureComponent) {
                                               disabled: b,
                                               autoFocus: n,
                                               autoComplete: I,
-                                              'aria-label': S,
-                                              ref: this.inputRef
-                                          })
+                                              "aria-label": S,
+                                              ref: this.inputRef,
+                                          }),
                                       ),
-                                      N
-                                  ]
-                              })
-                          }
-                      )
-                  )
+                                      N,
+                                  ],
+                              }),
+                          },
+                      ),
+                  ),
               });
     }
     constructor(...e) {
-        (super(...e),
-            _(this, 'inputRef', o.createRef()),
-            _(this, 'containerRef', o.createRef()),
-            _(this, 'handleOnChange', (e) => {
+        super(...e),
+            _(this, "inputRef", o.createRef()),
+            _(this, "containerRef", o.createRef()),
+            _(this, "handleOnChange", (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e.currentTarget.value);
-            }));
+            });
     }
 }
-_(b, 'defaultProps', {
-    size: 'md',
+_(b, "defaultProps", {
+    size: "md",
     isLoading: !1,
-    disabled: !1
+    disabled: !1,
 });

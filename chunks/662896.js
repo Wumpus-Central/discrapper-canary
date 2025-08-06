@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var r = n(287328);
 function i(e, t, n) {
     return (
@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,7 +25,7 @@ class o {
     }
     handleBackgroundSync(e, t) {
         let { guilds: n } = e,
-            i = n.filter((e) => 'partial' === e.data_mode && e.unable_to_sync_deletes).map((e) => ({ id: e.id }));
+            i = n.filter((e) => "partial" === e.data_mode && e.unable_to_sync_deletes).map((e) => ({ id: e.id }));
         i.length > 0 && r.Z.guildsRequiringDeletedIdsSyncTransaction(t).putAll(i);
     }
     handleGuildCreate(e, t) {
@@ -37,11 +37,11 @@ class o {
     }
     resetInMemoryState() {}
     constructor() {
-        i(this, 'actions', {
+        i(this, "actions", {
             BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
             CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
             GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
-            DELETED_ENTITY_IDS: (e, t) => this.handleDeletedEntityIds(e, t)
+            DELETED_ENTITY_IDS: (e, t) => this.handleDeletedEntityIds(e, t),
         });
     }
 }

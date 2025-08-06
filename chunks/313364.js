@@ -45,10 +45,10 @@ function R(e) {
                     (0, h.openUserProfileModal)({
                         userId: e.userId,
                         guildId: e.guildId,
-                        sourceAnalyticsLocations: l
+                        sourceAnalyticsLocations: l,
                     });
             },
-            [l]
+            [l],
         ),
         M = i.useRef(null),
         G = i.useCallback(() => {
@@ -60,18 +60,24 @@ function R(e) {
     return (0, r.jsxs)(d.Gt, {
         value: l,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a()(w.customColumn, P.override, P.settingsColumn),
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: w.customContainer,
                     children: (0, r.jsx)(o.w0Z, {
                         className: w.customScroller,
-                        orientation: 'auto',
+                        orientation: "auto",
                         children: (0, r.jsx)(o.w0Z, {
                             className: P.settingsHorizontalScroller,
-                            orientation: 'auto',
-                            children: (0, r.jsxs)('main', {
-                                className: a()(w.customColumn, w.contentColumnDefault, P.override, P.settingsColumn, P.settingsContent),
+                            orientation: "auto",
+                            children: (0, r.jsxs)("main", {
+                                className: a()(
+                                    w.customColumn,
+                                    w.contentColumnDefault,
+                                    P.override,
+                                    P.settingsColumn,
+                                    P.settingsContent,
+                                ),
                                 children: [
                                     (0, r.jsx)(
                                         o.hjN,
@@ -79,66 +85,72 @@ function R(e) {
                                             className: P.header,
                                             children: (0, r.jsx)(o.vwX, {
                                                 tag: o.RB0.H1,
-                                                children: T.intl.string(T.t['S40K6+'])
-                                            })
+                                                children: T.intl.string(T.t["S40K6+"]),
+                                            }),
                                         },
-                                        'header'
+                                        "header",
                                     ),
                                     (0, r.jsx)(
                                         o.hjN,
                                         {
-                                            children: (0, r.jsxs)('div', {
+                                            children: (0, r.jsxs)("div", {
                                                 className: P.tableContainer,
                                                 children: [
                                                     (0, r.jsx)(_.Z, { guild: n }),
                                                     (0, r.jsx)(v.Z, { guild: n }),
                                                     A
-                                                        ? (0, r.jsxs)('div', {
+                                                        ? (0, r.jsxs)("div", {
                                                               className: P.mainTableContainer,
                                                               children: [
                                                                   (0, r.jsx)(I.Z, {
                                                                       guild: n,
-                                                                      ref: M
+                                                                      ref: M,
                                                                   }),
                                                                   (0, r.jsx)(C.Z, {
                                                                       guild: n,
                                                                       searchState: U,
                                                                       compact: !0,
                                                                       onSelectRow: L,
-                                                                      onResetForNewMembers: G
+                                                                      onResetForNewMembers: G,
                                                                   }),
-                                                                  U !== y.po.SUCCESS_STILL_INDEXING && (0, r.jsx)(N.Z, { guildId: n.id })
-                                                              ]
+                                                                  U !== y.po.SUCCESS_STILL_INDEXING &&
+                                                                      (0, r.jsx)(N.Z, { guildId: n.id }),
+                                                              ],
                                                           })
-                                                        : (0, r.jsx)('div', {
+                                                        : (0, r.jsx)("div", {
                                                               className: P.movedTable,
-                                                              children: (0, r.jsxs)('div', {
+                                                              children: (0, r.jsxs)("div", {
                                                                   className: P.noResultsContainer,
                                                                   children: [
-                                                                      (0, r.jsx)('div', { children: (0, r.jsx)(E.Z, {}) }),
+                                                                      (0, r.jsx)("div", {
+                                                                          children: (0, r.jsx)(E.Z, {}),
+                                                                      }),
                                                                       (0, r.jsx)(o.Text, {
-                                                                          variant: 'text-md/normal',
-                                                                          color: 'text-muted',
+                                                                          variant: "text-md/normal",
+                                                                          color: "text-muted",
                                                                           children: T.intl.format(T.t.Bf6yxM, {
                                                                               onClick: (e) => {
-                                                                                  null != n && (e.preventDefault(), g.Z.close(), (0, j._X)(n.id));
-                                                                              }
-                                                                          })
-                                                                      })
-                                                                  ]
-                                                              })
-                                                          })
-                                                ]
-                                            })
+                                                                                  null != n &&
+                                                                                      (e.preventDefault(),
+                                                                                      g.Z.close(),
+                                                                                      (0, j._X)(n.id));
+                                                                              },
+                                                                          }),
+                                                                      }),
+                                                                  ],
+                                                              }),
+                                                          }),
+                                                ],
+                                            }),
                                         },
-                                        'body'
+                                        "body",
                                     ),
-                                    (0, r.jsx)(O.Z, { guildId: n.id })
-                                ]
-                            })
-                        })
-                    })
-                })
+                                    (0, r.jsx)(O.Z, { guildId: n.id }),
+                                ],
+                            }),
+                        }),
+                    }),
+                }),
             }),
             R &&
                 null != Z &&
@@ -146,19 +158,19 @@ function R(e) {
                     children: [
                         (0, r.jsx)(o.ZMr, {
                             isVisible: !0,
-                            onClick: D
+                            onClick: D,
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: P.modViewSidebarContainer,
                             style: { width: S.$Y6 },
                             children: (0, r.jsx)(m.Z, {
                                 userId: Z.details.userId,
                                 guildId: Z.details.guildId,
-                                onClose: D
-                            })
-                        })
-                    ]
-                })
-        ]
+                                onClose: D,
+                            }),
+                        }),
+                    ],
+                }),
+        ],
     });
 }

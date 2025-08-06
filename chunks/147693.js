@@ -14,7 +14,7 @@ t.d(r, {
     rO: () => b,
     xO: () => q,
     yR: () => s,
-    zO: () => m
+    zO: () => m,
 });
 var a = t(652525);
 function o(e) {
@@ -25,48 +25,48 @@ function n(e) {
     return null !== e && e.nodeType === e.ELEMENT_NODE;
 }
 function l(e) {
-    return n(e) && 'caption' === o(e);
+    return n(e) && "caption" === o(e);
 }
 function i(e) {
-    return n(e) && 'input' === o(e);
+    return n(e) && "input" === o(e);
 }
 function s(e) {
-    return n(e) && 'optgroup' === o(e);
+    return n(e) && "optgroup" === o(e);
 }
 function u(e) {
-    return n(e) && 'select' === o(e);
+    return n(e) && "select" === o(e);
 }
 function d(e) {
-    return n(e) && 'table' === o(e);
+    return n(e) && "table" === o(e);
 }
 function c(e) {
-    return n(e) && 'textarea' === o(e);
+    return n(e) && "textarea" === o(e);
 }
 function p(e) {
     var r = (null === e.ownerDocument ? e : e.ownerDocument).defaultView;
-    if (null === r) throw TypeError('no window available');
+    if (null === r) throw TypeError("no window available");
     return r;
 }
 function m(e) {
-    return n(e) && 'fieldset' === o(e);
+    return n(e) && "fieldset" === o(e);
 }
 function f(e) {
-    return n(e) && 'legend' === o(e);
+    return n(e) && "legend" === o(e);
 }
 function b(e) {
-    return n(e) && 'slot' === o(e);
+    return n(e) && "slot" === o(e);
 }
 function v(e) {
-    return n(e) && 'svg' === o(e);
+    return n(e) && "svg" === o(e);
 }
 function h(e) {
-    return n(e) && void 0 !== e.ownerSVGElement && 'title' === o(e);
+    return n(e) && void 0 !== e.ownerSVGElement && "title" === o(e);
 }
 function C(e, r) {
     return n(e) && e.hasAttribute(r)
         ? e
               .getAttribute(r)
-              .split(' ')
+              .split(" ")
               .map(function (r) {
                   return e.ownerDocument.getElementById(r);
               })

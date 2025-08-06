@@ -7,6 +7,6 @@ var r = n(603963),
 function l() {
     return (0, i.jsx)(r.Z, {
         webSetting: a.s6.VOICE_AND_VIDEO_SOUNDS,
-        children: (0, i.jsx)(s.Z, { refreshStyles: !0 })
+        children: (0, i.jsx)(s.Z, { refreshStyles: !0 }),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(539854), n(953529));
+n.d(t, { Z: () => a }), n(539854), n(953529);
 var i = n(73800),
     r = n(626135),
     s = n(260539),
@@ -14,7 +14,7 @@ function a(e) {
                     guild_template_code: e.code,
                     guild_template_name: e.name,
                     guild_template_description: e.description,
-                    guild_template_guild_id: e.sourceGuildId
+                    guild_template_guild_id: e.sourceGuildId,
                 })));
     });
 }

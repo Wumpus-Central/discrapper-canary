@@ -18,7 +18,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,11 +44,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,7 +70,8 @@ function E(e, t) {
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -80,17 +81,55 @@ function b(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let y = function (e) {
-    var { subscriptionTier: t, onClick: n, size: i, className: p, textOptions: m, iconClassName: b, postSuccessGuild: y, onSubscribeModalClose: O, premiumModalAnalyticsLocation: v, showIcon: I = !0, disableShine: T, applicationId: S, shinyButtonClassName: A, showGradient: N = !1, confirmationFooter: C, paymentModalBanner: R, color: P, iconColor: w = 'currentColor' } = e,
-        D = E(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color', 'iconColor']);
+    var {
+            subscriptionTier: t,
+            onClick: n,
+            size: i,
+            className: p,
+            textOptions: m,
+            iconClassName: b,
+            postSuccessGuild: y,
+            onSubscribeModalClose: O,
+            premiumModalAnalyticsLocation: v,
+            showIcon: I = !0,
+            disableShine: T,
+            applicationId: S,
+            shinyButtonClassName: A,
+            showGradient: N = !1,
+            confirmationFooter: C,
+            paymentModalBanner: R,
+            color: P,
+            iconColor: w = "currentColor",
+        } = e,
+        D = E(e, [
+            "subscriptionTier",
+            "onClick",
+            "size",
+            "className",
+            "textOptions",
+            "iconClassName",
+            "postSuccessGuild",
+            "onSubscribeModalClose",
+            "premiumModalAnalyticsLocation",
+            "showIcon",
+            "disableShine",
+            "applicationId",
+            "shinyButtonClassName",
+            "showGradient",
+            "confirmationFooter",
+            "paymentModalBanner",
+            "color",
+            "iconColor",
+        ]);
     let L = (0, a.e7)([c.Z], () => c.Z.isFocused()),
         x = (0, d.Z)({
             subscriptionTier: t,
             buttonTextOverride: null == m ? void 0 : m.textOverride,
-            defaultTextOverride: null == m ? void 0 : m.subscribeText
+            defaultTextOverride: null == m ? void 0 : m.subscribeText,
         }),
         M = {
             onClick: n,
@@ -100,7 +139,7 @@ let y = function (e) {
             premiumModalAnalyticsLocation: v,
             applicationId: S,
             confirmationFooter: C,
-            paymentModalBanner: R
+            paymentModalBanner: R,
         };
     function k(e) {
         let n = null != P ? P : t === f.Si.TIER_1 ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN;
@@ -123,40 +162,45 @@ let y = function (e) {
                                     wrapperClassName: o()(
                                         {
                                             [_.tier2Gradient]: N && t === f.Si.TIER_2,
-                                            [_.tier1Gradient]: N && t === f.Si.TIER_1
+                                            [_.tier1Gradient]: N && t === f.Si.TIER_1,
                                         },
-                                        p
+                                        p,
                                     ),
-                                    buttonShineClassName: 'buttonShineClassName' in D ? D.buttonShineClassName : n === s.Tt.BRAND_INVERTED ? _.brandShine : void 0,
-                                    pauseAnimation: !L || T
+                                    buttonShineClassName:
+                                        "buttonShineClassName" in D
+                                            ? D.buttonShineClassName
+                                            : n === s.Tt.BRAND_INVERTED
+                                              ? _.brandShine
+                                              : void 0,
+                                    pauseAnimation: !L || T,
                                 },
                                 D,
-                                e
+                                e,
                             ),
                             {
                                 children: [
                                     I &&
                                         (0, r.jsx)(l.SrA, {
-                                            size: 'md',
+                                            size: "md",
                                             color: w,
-                                            className: o()(_.premiumIcon, b)
+                                            className: o()(_.premiumIcon, b),
                                         }),
-                                    (0, r.jsx)('span', {
+                                    (0, r.jsx)("span", {
                                         className: o()(_.buttonText, null == m ? void 0 : m.textClassName),
-                                        children: x.buttonText
-                                    })
-                                ]
-                            }
-                        )
+                                        children: x.buttonText,
+                                    }),
+                                ],
+                            },
+                        ),
                     );
-                }
-            })
+                },
+            }),
         );
     }
     return null != x.buttonTooltipText
         ? (0, r.jsx)(l.ua7, {
               text: x.buttonTooltipText,
-              children: k
+              children: k,
           })
         : k();
 };

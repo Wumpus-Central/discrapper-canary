@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,5 +42,5 @@ let u = {
             f = o.Z.getMediaSessionId();
         if (d && null != l && null != f && !u) return [c({ type: a.u.NO_INPUT_DEVICES }, (0, s.Y9)())];
     },
-    makeErrorContextKey: (e) => ''.concat(e.mediaSessionId)
+    makeErrorContextKey: (e) => "".concat(e.mediaSessionId),
 };

@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => I }), n(388685), n(539854));
+n.d(t, { Z: () => I }), n(388685), n(539854);
 var i,
     l = n(442837),
     o = n(570140),
@@ -22,7 +22,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -62,12 +62,12 @@ class x extends (i = l.ZP.Store) {
     getProps() {
         return {
             invite: E.length > 0 ? E[0][0] : null,
-            error: null != r && '' !== r ? r : null,
-            submitting: j
+            error: null != r && "" !== r ? r : null,
+            submitting: j,
         };
     }
 }
-_(x, 'displayName', 'InviteModalStore');
+_(x, "displayName", "InviteModalStore");
 let I = new x(o.Z, {
     OVERLAY_INITIALIZE: S,
     CONNECTION_OPEN: S,
@@ -81,7 +81,7 @@ let I = new x(o.Z, {
             let { channel: e, guild: n } = t;
             if (null == e) return !1;
             if ((0, c.bc)(e.type)) {
-                if (null != u.Z.getChannel(e.id)) return ((0, a.XU)(b.ME, e.id), m.ZP.focus(), !1);
+                if (null != u.Z.getChannel(e.id)) return (0, a.XU)(b.ME, e.id), m.ZP.focus(), !1;
             } else {
                 if (null == n) return !1;
                 if (null != d.Z.getGuild(n.id) && !(0, s.TY)(t)) {
@@ -94,7 +94,7 @@ let I = new x(o.Z, {
                         }
                         return null;
                     })(t);
-                    return ((0, a.XU)(n.id, e), m.ZP.focus(), !1);
+                    return (0, a.XU)(n.id, e), m.ZP.focus(), !1;
                 }
             }
         }
@@ -105,9 +105,22 @@ let I = new x(o.Z, {
             })
         )
             return !1;
-        ((C = e.context), (j = !1));
+        (C = e.context), (j = !1);
         let n = (function (e) {
-            let { approximate_member_count: t, approximate_presence_count: n, code: r, state: i, target_type: l, target_user: o, target_application: s, stage_instance: a, type: c, channel: u, guild: d, is_nickname_changeable: h } = e,
+            let {
+                    approximate_member_count: t,
+                    approximate_presence_count: n,
+                    code: r,
+                    state: i,
+                    target_type: l,
+                    target_user: o,
+                    target_application: s,
+                    stage_instance: a,
+                    type: c,
+                    channel: u,
+                    guild: d,
+                    is_nickname_changeable: h,
+                } = e,
                 p = {
                     code: r,
                     state: i,
@@ -118,9 +131,14 @@ let I = new x(o.Z, {
                     target_application: s,
                     stage_instance: a,
                     type: c,
-                    is_nickname_changeable: h
+                    is_nickname_changeable: h,
                 };
-            return (null != u && (p.channel = y({}, u)), null != d && (p.guild = (0, g.Qs)(d)), null != e.inviter && (p.inviter = y({}, e.inviter)), p);
+            return (
+                null != u && (p.channel = y({}, u)),
+                null != d && (p.guild = (0, g.Qs)(d)),
+                null != e.inviter && (p.inviter = y({}, e.inviter)),
+                p
+            );
         })(t);
         E.push([n, e.resolve]);
     },
@@ -135,6 +153,6 @@ let I = new x(o.Z, {
     },
     INVITE_MODAL_ERROR: function (e) {
         let { message: t } = e;
-        ((r = t), (j = !1));
-    }
+        (r = t), (j = !1);
+    },
 });

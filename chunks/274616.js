@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => _,
-    o: () => f
+    o: () => f,
 }),
-    n(388685));
+    n(388685);
 var r = n(392711),
     i = n.n(r),
     o = n(544891),
@@ -23,24 +23,24 @@ async function f() {
                         url: u.ANM.APPLICATION_BRANCHES,
                         body: { branch_ids: e },
                         oldFormErrors: !0,
-                        rejectWithError: !0
+                        rejectWithError: !0,
                     })
-                ).body.map(s.Z.createFromServer)
+                ).body.map(s.Z.createFromServer),
             ),
             n = await Promise.all(e),
             r = i().flatten(n);
         return (
             a.Z.dispatch({
-                type: 'APPLICATION_BRANCHES_FETCH_SUCCESS',
-                branches: r
+                type: "APPLICATION_BRANCHES_FETCH_SUCCESS",
+                branches: r,
             }),
             r
         );
     } catch (t) {
         return (
             a.Z.dispatch({
-                type: 'APPLICATION_BRANCHES_FETCH_FAIL',
-                branchIds: e
+                type: "APPLICATION_BRANCHES_FETCH_FAIL",
+                branchIds: e,
             }),
             []
         );
@@ -51,22 +51,22 @@ async function _(e) {
         let t = await o.tn.get({
                 url: u.ANM.OWNED_APPLICATION_BRANCHES(e),
                 oldFormErrors: !0,
-                rejectWithError: !0
+                rejectWithError: !0,
             }),
             n = Array.isArray(t.body) ? t.body.map(s.Z.createFromServer) : [];
         return (
             a.Z.dispatch({
-                type: 'OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS',
+                type: "OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS",
                 applicationId: e,
-                branches: n
+                branches: n,
             }),
             n
         );
     } catch (t) {
         return (
             a.Z.dispatch({
-                type: 'OWNED_APPLICATION_BRANCHES_FETCH_FAIL',
-                applicationId: e
+                type: "OWNED_APPLICATION_BRANCHES_FETCH_FAIL",
+                applicationId: e,
             }),
             []
         );

@@ -9,7 +9,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,24 +27,25 @@ class a extends (r = i.ZP.PersistedStore) {
         return s[e];
     }
 }
-(o(a, 'displayName', 'GuildBoostingProgressBarPersistedStore'), o(a, 'persistKey', 'PremiumGuildProgressBarPersistedStore'));
+o(a, "displayName", "GuildBoostingProgressBarPersistedStore"),
+    o(a, "persistKey", "PremiumGuildProgressBarPersistedStore");
 let c = new a(l.Z, {
     APPLIED_GUILD_BOOST_COUNT_UPDATE: (e) => {
         var t, n;
         let { guildId: r, premiumCount: i } = e;
-        ((t = (function (e) {
+        (t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         o(e, t, n[t]);
-                    }));
+                    });
             }
             return e;
         })({}, s)),
@@ -61,9 +62,9 @@ let c = new a(l.Z, {
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            (s = t));
+            (s = t);
     },
     APPLIED_GUILD_BOOST_COUNT_RESET: function () {
         s = {};
-    }
+    },
 });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(290780), n(49124), n(539854), n(415506), n(388685));
+n.d(t, { Z: () => b }), n(290780), n(49124), n(539854), n(415506), n(388685);
 var r = n(512722),
     i = n.n(r),
     o = n(392711),
@@ -17,13 +17,13 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let h = 'RPC_STORE_WAIT',
+let h = "RPC_STORE_WAIT",
     m = [];
 function g(e, t) {
     return a().isEqual(e, a().pick(t, Object.keys(e)));
@@ -33,55 +33,63 @@ function E(e) {
 }
 class b {
     registerTransport(e) {
-        (e.on('connect', (e) => this.handleConnect(e)), e.on('request', (e, t) => this.handleRequest(e, t)), e.on('disconnect', (e, t) => this.handleDisconnect(e, t)));
+        e.on("connect", (e) => this.handleConnect(e)),
+            e.on("request", (e, t) => this.handleRequest(e, t)),
+            e.on("disconnect", (e, t) => this.handleDisconnect(e, t));
     }
     handleConnect(e) {
-        (this.sockets.add(e), this.onConnect(e));
+        this.sockets.add(e), this.onConnect(e);
         let t = {
             v: e.version,
             config: {
                 cdn_host: window.GLOBAL_ENV.CDN_HOST,
                 api_endpoint: window.GLOBAL_ENV.API_ENDPOINT,
-                environment: 'production'
-            }
+                environment: "production",
+            },
         };
         if (e.transport === f.He.IPC) {
             let n = this.getCurrentUser();
-            if (null == n) return void e.close(_.$VG.CLOSE_NORMAL, 'User logged out');
+            if (null == n) return void e.close(_.$VG.CLOSE_NORMAL, "User logged out");
             t.user = (0, u.Z)(n);
         }
         this.dispatch(e, null, _.Etm.DISPATCH, _.zMe.READY, t);
     }
     handleDisconnect(e, t) {
-        (e.abortController.abort('DISCONNECTED'), this.removeSubscriptions(e), this.sockets.delete(e), this.onDisconnect(e, t));
+        e.abortController.abort("DISCONNECTED"),
+            this.removeSubscriptions(e),
+            this.sockets.delete(e),
+            this.onDisconnect(e, t);
     }
     handleRequest(e, t) {
         new Promise((n) => {
-            if (null == t.nonce || '' === t.nonce) throw new c.Z({ errorCode: _.lTL.INVALID_PAYLOAD }, 'Payload requires a nonce');
+            if (null == t.nonce || "" === t.nonce)
+                throw new c.Z({ errorCode: _.lTL.INVALID_PAYLOAD }, "Payload requires a nonce");
             let r = t.cmd,
                 i = this.commands[r];
-            if (null == i) throw new c.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'Invalid command: '.concat(t.cmd));
-            if (!(0, d.Z)(e.authorization.scopes, i.scope)) throw new c.Z({ errorCode: _.lTL.INVALID_PERMISSIONS }, 'Not authenticated or invalid scope');
-            (s.default.track(_.rMx.RPC_COMMAND_SENT, {
+            if (null == i) throw new c.Z({ errorCode: _.lTL.INVALID_COMMAND }, "Invalid command: ".concat(t.cmd));
+            if (!(0, d.Z)(e.authorization.scopes, i.scope))
+                throw new c.Z({ errorCode: _.lTL.INVALID_PERMISSIONS }, "Not authenticated or invalid scope");
+            s.default.track(_.rMx.RPC_COMMAND_SENT, {
                 command: r,
-                scope: 'object' == typeof i.scope ? JSON.stringify(i.scope) : i.scope,
+                scope: "object" == typeof i.scope ? JSON.stringify(i.scope) : i.scope,
                 application_id: e.application.id,
-                socket_scope: e.authorization.scopes.toString()
+                socket_scope: e.authorization.scopes.toString(),
             }),
-                n(i));
+                n(i);
         })
             .then(
                 (e) =>
                     new Promise(async (n, r) => {
                         if (null != e.validation) {
                             let o = await this.getJoi();
-                            (i()(null != e.validation, 'command.validation must not be null'),
+                            i()(null != e.validation, "command.validation must not be null"),
                                 o.validate(t.args, e.validation(o), { convert: !1 }, (t) => {
-                                    if (null != t) return void r(new c.Z({ errorCode: _.lTL.INVALID_PAYLOAD }, t.message));
+                                    if (null != t)
+                                        return void r(new c.Z({ errorCode: _.lTL.INVALID_PAYLOAD }, t.message));
                                     n(e);
-                                }));
+                                });
                         } else n(e);
-                    })
+                    }),
             )
             .then((n) => {
                 var r;
@@ -93,7 +101,7 @@ class b {
                     nonce: t.nonce,
                     args: null != (r = t.args) ? r : {},
                     isSocketConnected: () => this.sockets.has(e),
-                    signal: e.abortController.signal
+                    signal: e.abortController.signal,
                 });
             })
             .then((n) => this.dispatch(e, t.nonce, t.cmd, null, n))
@@ -117,23 +125,23 @@ class b {
             cmd: n,
             data: i,
             evt: r,
-            nonce: t
+            nonce: t,
         });
     }
     error(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.Etm.DISPATCH,
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : _.lTL.UNKNOWN_ERROR,
-            i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 'Unknown Error';
-        (s.default.track(_.rMx.RPC_SERVER_ERROR_CAUGHT, {
+            i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "Unknown Error";
+        s.default.track(_.rMx.RPC_SERVER_ERROR_CAUGHT, {
             command: n,
             code: r,
-            message: i
+            message: i,
         }),
             this.dispatch(e, t, n, _.zMe.ERROR, {
                 code: r,
-                message: i
-            }));
+                message: i,
+            });
     }
     isSubscribed(e, t) {
         return void 0 !== this.subscriptions.find((n) => n.socket.application.id === e && n.evt === t);
@@ -151,12 +159,12 @@ class b {
                 prevState: r
                     ? r({
                           prevState: null,
-                          dispatch: i
+                          dispatch: i,
                       })
                     : null,
                 socket: e,
                 evt: t,
-                args: n
+                args: n,
             });
     }
     removeSubscription(e, t, n) {
@@ -166,10 +174,13 @@ class b {
         a().remove(this.subscriptions, (t) => t.socket === e);
     }
     dispatchToSubscriptions(e, t, n, r) {
-        (null != r && '' !== r && E(r)) ||
+        (null != r && "" !== r && E(r)) ||
             this.subscriptions.forEach((r) => {
                 var i;
-                r.evt === e && ('function' != typeof t || t(r)) && ('object' != typeof t || g(t, null != (i = r.args) ? i : {})) && ('function' == typeof n && (n = n(r)), this.dispatch(r.socket, null, _.Etm.DISPATCH, r.evt, n));
+                r.evt === e &&
+                    ("function" != typeof t || t(r)) &&
+                    ("object" != typeof t || g(t, null != (i = r.args) ? i : {})) &&
+                    ("function" == typeof n && (n = n(r)), this.dispatch(r.socket, null, _.Etm.DISPATCH, r.evt, n));
             });
     }
     updateSubscriptions() {
@@ -184,7 +195,7 @@ class b {
             o = () => this.removeSubscription(e, h, { uniqueId: i });
         return new Promise((r, a) => {
             let s = setTimeout(() => {
-                (o(), a(Error('timeout')));
+                o(), a(Error("timeout"));
             }, n * l.Z.Millis.SECOND);
             this.addSubscription(e, h, { uniqueId: i }, () => {
                 let e = t();
@@ -193,6 +204,14 @@ class b {
         }).then((e) => (o(), e));
     }
     constructor(e) {
-        (p(this, 'getCurrentUser', () => null), p(this, 'onConnect', () => {}), p(this, 'onDisconnect', () => {}), p(this, 'getJoi', void 0), p(this, 'events', {}), p(this, 'commands', {}), p(this, 'sockets', new Set()), p(this, 'subscriptions', []), (this.getJoi = e));
+        p(this, "getCurrentUser", () => null),
+            p(this, "onConnect", () => {}),
+            p(this, "onDisconnect", () => {}),
+            p(this, "getJoi", void 0),
+            p(this, "events", {}),
+            p(this, "commands", {}),
+            p(this, "sockets", new Set()),
+            p(this, "subscriptions", []),
+            (this.getJoi = e);
     }
 }

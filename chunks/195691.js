@@ -6,12 +6,12 @@ function o(e) {
             a = r === e.commonAncestorContainer;
         a ? t.setStart(e.startContainer, e.startOffset) : t.setStart(t.endContainer, 0);
         var s = Array.from(t.getClientRects());
-        if ((n.push(s), a)) return (n.reverse(), (o = []).concat.apply(o, n));
+        if ((n.push(s), a)) return n.reverse(), (o = []).concat.apply(o, n);
         t.setEndBefore(r);
     }
     i(!1);
 }
-e.exports = r.isBrowser('Chrome')
+e.exports = r.isBrowser("Chrome")
     ? o
     : function (e) {
           return Array.from(e.getClientRects());

@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,10 +73,13 @@ function I(e) {
         b = (0, o.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)),
         O = (null == b ? void 0 : b.type) === m.fO.STREAM,
         I = (0, o.e7)([f.Z], () => (O ? f.Z.getActiveStreamForStreamKey(b.id) : null)),
-        { ignoreSenderPreference: T } = u.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
+        { ignoreSenderPreference: T } = u.Z.useExperiment(
+            { location: "ActionBarClipsButton" },
+            { autoTrackExposure: !1 },
+        ),
         { viewerClippingAllowed: S, isAtMaxSavingClipOperations: A } = (0, o.cj)([l.Z], () => ({
             viewerClippingAllowed: null != I && (l.Z.isViewerClippingAllowedForUser(I.ownerId) || T),
-            isAtMaxSavingClipOperations: l.Z.getIsAtMaxSaveClipOperations()
+            isAtMaxSavingClipOperations: l.Z.getIsAtMaxSaveClipOperations(),
         })),
         N = l.Z.getSettings().clipsEnabled,
         C = (null == I ? void 0 : I.ownerId) === _.default.getId(),
@@ -84,14 +87,23 @@ function I(e) {
         P = () => {
             R || ((0, h.v)(n, h.d.CLIP), C ? (0, c.C1)() : (0, c.C1)(b.id));
         },
-        w = () => (null == I ? g.intl.string(g.t.eg5qtb) : C || S ? (N ? (A ? void 0 : g.intl.string(g.t.U4URzM)) : g.intl.string(g.t.wSS1yM)) : g.intl.string(g.t.aRifJS)),
-        D = i.useCallback((e) => (0, r.jsx)(a.xmR, v(y({}, e), { color: 'currentColor' })), []);
+        w = () =>
+            null == I
+                ? g.intl.string(g.t.eg5qtb)
+                : C || S
+                  ? N
+                      ? A
+                          ? void 0
+                          : g.intl.string(g.t.U4URzM)
+                      : g.intl.string(g.t.wSS1yM)
+                  : g.intl.string(g.t.aRifJS),
+        D = i.useCallback((e) => (0, r.jsx)(a.xmR, v(y({}, e), { color: "currentColor" })), []);
     return (0, r.jsx)(d.Z, {
         className: E.actionBarButton,
         onClick: P,
         disabled: R,
         iconComponent: D,
         label: w(),
-        grow: !1
+        grow: !1,
     });
 }

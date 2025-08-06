@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => b }));
+r.r(t), r.d(t, { default: () => b });
 var n = r(255367);
 r(73800);
 var o = r(355467),
@@ -22,15 +22,17 @@ function b(e) {
                         n,
                         o = {},
                         c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) ((r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
+                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++) ((r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
+                for (n = 0; n < c.length; n++)
+                    (r = c[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, ['onClose', 'onComplete', 'forcesTransitionToGuild']);
+        })(e, ["onClose", "onComplete", "forcesTransitionToGuild"]);
     let { subscriptionMetadataRequest: y } = (0, u.JL)();
     return (0, n.jsx)(
         p.PaymentModal,
@@ -38,24 +40,24 @@ function b(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (t) {
                         var n;
-                        ((n = r[t]),
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = n));
-                    }));
+                                : (e[t] = n);
+                    });
             }
             return e;
         })({}, O)),
@@ -65,9 +67,14 @@ function b(e) {
                 onClose: (e) => {
                     b(e);
                     let t = null == y ? void 0 : y.guild_id;
-                    e && null != t && (o.jg(), (0, c.i1)(t), null == f || f(), null != t && (s || i.Z.getGuildId() !== t) && (0, l.uL)(a.Z5c.CHANNEL(t)));
+                    e &&
+                        null != t &&
+                        (o.jg(),
+                        (0, c.i1)(t),
+                        null == f || f(),
+                        null != t && (s || i.Z.getGuildId() !== t) && (0, l.uL)(a.Z5c.CHANNEL(t)));
                 },
-                forceNewPaymentModal: !0
+                forceNewPaymentModal: !0,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -81,6 +88,6 @@ function b(e) {
               })(Object(r)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
-        t)
+        t),
     );
 }

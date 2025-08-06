@@ -9,18 +9,18 @@ function a(e) {
                   days: e.days + 1,
                   hours: 0,
                   minutes: 0,
-                  seconds: 0
+                  seconds: 0,
               }
             : {
                   days: e.days,
                   hours: e.hours + 1,
                   minutes: 0,
-                  seconds: 0
+                  seconds: 0,
               }
         : e;
 }
 function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e.clone();
-    return (t && (n = n.subtract(o, 'milliseconds')), a((0, r.Z)(n.toDate(), i)));
+    return t && (n = n.subtract(o, "milliseconds")), a((0, r.Z)(n.toDate(), i));
 }

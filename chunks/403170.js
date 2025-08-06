@@ -1,4 +1,4 @@
-(n.d(t, { z: () => f }), n(388685));
+n.d(t, { z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -21,14 +21,14 @@ function f(e) {
         [f, x] = i.useState((0, o.Z)(t) && d),
         b = i.useCallback(
             async (e) => {
-                (x(e), await h(t, e));
+                x(e), await h(t, e);
             },
-            [t]
+            [t],
         );
     return d && n
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: p.setupContainer,
                       children: (0, r.jsx)(a.j7V, {
                           value: f,
@@ -36,25 +36,28 @@ function f(e) {
                           className: p.switchItem,
                           disabled: !n,
                           hideBorder: !0,
-                          children: (0, r.jsxs)('div', {
+                          children: (0, r.jsxs)("div", {
                               className: p.switchItemTextContent,
                               children: [
                                   (0, r.jsxs)(a.Text, {
-                                      color: 'header-primary',
-                                      variant: 'text-md/semibold',
-                                      children: [m.intl.string(g.default['/xIz7O']), (0, r.jsx)(s.Z, { className: p.betaTag })]
+                                      color: "header-primary",
+                                      variant: "text-md/semibold",
+                                      children: [
+                                          m.intl.string(g.default["/xIz7O"]),
+                                          (0, r.jsx)(s.Z, { className: p.betaTag }),
+                                      ],
                                   }),
                                   (0, r.jsx)(a.Text, {
-                                      color: 'header-secondary',
-                                      variant: 'text-sm/normal',
-                                      children: m.intl.string(g.default.uUMXys)
-                                  })
-                              ]
-                          })
-                      })
+                                      color: "header-secondary",
+                                      variant: "text-sm/normal",
+                                      children: m.intl.string(g.default.uUMXys),
+                                  }),
+                              ],
+                          }),
+                      }),
                   }),
-                  (0, r.jsx)(a.$i$, { className: p.divider })
-              ]
+                  (0, r.jsx)(a.$i$, { className: p.divider }),
+              ],
           })
         : null;
 }

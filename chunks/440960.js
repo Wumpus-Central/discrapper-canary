@@ -4,9 +4,9 @@ var r = n(709998),
 e.exports = r(function (e) {
     var t = [];
     return (
-        46 === e.charCodeAt(0) && t.push(''),
+        46 === e.charCodeAt(0) && t.push(""),
         e.replace(i, function (e, n, r, i) {
-            t.push(r ? i.replace(o, '$1') : n || e);
+            t.push(r ? i.replace(o, "$1") : n || e);
         }),
         t
     );

@@ -1,5 +1,19 @@
 let r;
-(n.d(t, { Z: () => B }), n(259475), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733), n(415506), n(457542));
+n.d(t, { Z: () => B }),
+    n(259475),
+    n(227481),
+    n(730884),
+    n(20464),
+    n(341884),
+    n(364341),
+    n(629680),
+    n(505025),
+    n(918970),
+    n(121784),
+    n(644351),
+    n(146733),
+    n(415506),
+    n(457542);
 var i = n(512722),
     o = n.n(i),
     a = n(392711),
@@ -25,13 +39,13 @@ let T = 300000,
     A = {},
     N = new f.V7(),
     C = !1,
-    R = window.document.createElement('canvas'),
+    R = window.document.createElement("canvas"),
     P = 512,
     w = 288;
-((R.width = 512), (R.height = w));
-let D = R.getContext('2d');
+(R.width = 512), (R.height = w);
+let D = R.getContext("2d");
 function L() {
-    (N.stop(), null != r && (u.Z.removeSink(r, A), (r = null)));
+    N.stop(), null != r && (u.Z.removeSink(r, A), (r = null));
 }
 let x = s().debounce((e, t, n, r) => {
     k(
@@ -40,23 +54,23 @@ let x = s().debounce((e, t, n, r) => {
             streamType: null != t ? O.lo.GUILD : O.lo.CALL,
             guildId: t,
             channelId: n,
-            ownerId: r
-        })
+            ownerId: r,
+        }),
     );
 }, 500);
 function M(e) {
     let t = Math.min(P / e.width, w / e.height),
         n = e.width * t,
         r = e.height * t;
-    ((R.width = n), (R.height = r));
-    let i = window.document.createElement('canvas'),
-        o = i.getContext('2d');
-    ((i.width = e.width), (i.height = e.height));
+    (R.width = n), (R.height = r);
+    let i = window.document.createElement("canvas"),
+        o = i.getContext("2d");
+    (i.width = e.width), (i.height = e.height);
     let a = new ImageData(e.data, e.width, e.height);
     return (
         null == o || o.putImageData(a, 0, 0),
         new Promise((t) => {
-            (null == D || D.drawImage(i, 0, 0, e.width, e.height, 0, 0, n, r), t());
+            null == D || D.drawImage(i, 0, 0, e.width, e.height, 0, 0, n, r), t();
         })
     );
 }
@@ -67,34 +81,35 @@ async function k(e, t) {
         try {
             let n = await j(e, 60);
             await M(n);
-            let r = R.toDataURL('image/jpeg');
+            let r = R.toDataURL("image/jpeg");
             if (
                 (_.Z.dispatch({
-                    type: 'STREAM_PREVIEW_FETCH_SUCCESS',
+                    type: "STREAM_PREVIEW_FETCH_SUCCESS",
                     streamKey: t,
-                    previewURL: r
+                    previewURL: r,
                 }),
                 E.isPlatformEmbedded)
             ) {
                 let e = g.default.getToken();
-                (o()(null != e, 'Auth token was null while sending screenshot.'),
+                o()(null != e, "Auth token was null while sending screenshot."),
                     await b.ZP.makeChunkedRequest(
                         v.ANM.STREAM_PREVIEW(t),
                         { thumbnail: r },
                         {
-                            method: 'POST',
-                            token: e
-                        }
-                    ));
+                            method: "POST",
+                            token: e,
+                        },
+                    );
             } else
                 await l.tn.post({
                     url: v.ANM.STREAM_PREVIEW(t),
                     body: { thumbnail: r },
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 });
         } catch (t) {
-            (new p.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(S, n));
+            new p.Z("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", t),
+                r === e && N.start(S, n);
             return;
         }
     r === e && (C ? N.start(S, n) : N.start(T, n));
@@ -103,7 +118,7 @@ function j(e, t) {
     let n = 0;
     return (E.isPlatformEmbedded ? G : U)(e, (e) => {
         if (new Uint32Array(e.data.buffer).some((e) => 0 !== e)) return !0;
-        if (++n > t) throw Error('Timed out awaiting non-black frame after '.concat(t, ' frames'));
+        if (++n > t) throw Error("Timed out awaiting non-black frame after ".concat(t, " frames"));
         return !1;
     });
 }
@@ -111,10 +126,10 @@ function U(e, t) {
     let n = (0, d.aG)(e);
     if (null == n) return Promise.resolve(new ImageData(0, 0));
     let { width: r, height: i } = n.getVideoTracks()[0].getSettings(),
-        o = document.createElement('video'),
-        a = document.createElement('canvas');
-    ((o.width = a.width = null != r ? r : P), (o.height = a.height = null != i ? i : w), (o.srcObject = n), o.play());
-    let s = a.getContext('2d');
+        o = document.createElement("video"),
+        a = document.createElement("canvas");
+    (o.width = a.width = null != r ? r : P), (o.height = a.height = null != i ? i : w), (o.srcObject = n), o.play();
+    let s = a.getContext("2d");
     return new Promise((e, n) => {
         o.ontimeupdate = () => {
             null == s || s.drawImage(o, 0, 0, a.width, a.height);
@@ -126,7 +141,7 @@ function U(e, t) {
             }
         };
     }).finally(() => {
-        ((o.ontimeupdate = null), o.removeAttribute('srcObject'), o.load());
+        (o.ontimeupdate = null), o.removeAttribute("srcObject"), o.load();
     });
 }
 function G(e, t) {
@@ -151,16 +166,20 @@ function G(e, t) {
 }
 let B = {
     init() {
-        (_.Z.subscribe('CONNECTION_OPEN', L),
-            _.Z.subscribe('LOGOUT', L),
-            _.Z.subscribe('STREAM_DELETE', L),
-            _.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
+        _.Z.subscribe("CONNECTION_OPEN", L),
+            _.Z.subscribe("LOGOUT", L),
+            _.Z.subscribe("STREAM_DELETE", L),
+            _.Z.subscribe("RTC_CONNECTION_VIDEO", (e) => {
                 let { guildId: t, channelId: n, userId: i, streamId: o, context: a } = e;
-                null == o || a !== I.Yn.STREAM || i !== g.default.getId() || __OVERLAY__ || (L(), (r = o), x(o, t, n, i));
+                null == o ||
+                    a !== I.Yn.STREAM ||
+                    i !== g.default.getId() ||
+                    __OVERLAY__ ||
+                    (L(), (r = o), x(o, t, n, i));
             }),
-            _.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
+            _.Z.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", (e) => {
                 let { videoState: t } = e;
                 C = t === v.FQ1.PAUSED;
-            }));
-    }
+            });
+    },
 };

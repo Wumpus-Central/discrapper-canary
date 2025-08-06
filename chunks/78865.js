@@ -16,24 +16,24 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -49,41 +49,43 @@ function y(e) {
                         n,
                         o = {},
                         a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) ((r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++) ((r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
+                for (n = 0; n < a.length; n++)
+                    (r = a[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, ['onClose', 'analyticsSource']);
-    let g = (0, n.jsx)('img', {
+        })(e, ["onClose", "analyticsSource"]);
+    let g = (0, n.jsx)("img", {
         className: p.art,
-        alt: 'HD Streaming Nitro Perk',
-        src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png'
+        alt: "HD Streaming Nitro Perk",
+        src: "https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png",
     });
     function m() {
-        ((0, a.Z)(),
+        (0, a.Z)(),
             (0, o.pT)(),
             u.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: b.jXE.STREAM_UPSELL_MODAL,
-                location_object: b.qAy.NAVIGATION_LINK
+                location_object: b.qAy.NAVIGATION_LINK,
             }),
-            (0, s.uL)(b.Z5c.APPLICATION_STORE));
+            (0, s.uL)(b.Z5c.APPLICATION_STORE);
     }
     let h = d.intl.string(d.t.ewxv3N),
         j = d.intl.string(d.t.qlsCDA);
-    return (0, c.Z)({ location: 'StreamUpsellModal' })
+    return (0, c.Z)({ location: "StreamUpsellModal" })
         ? (0, n.jsx)(
               i.Z,
               O(
                   {
                       onClose: t,
-                      handleLearnMore: m
+                      handleLearnMore: m,
                   },
-                  y
-              )
+                  y,
+              ),
           )
         : (0, n.jsx)(
               l.Z,
@@ -97,7 +99,7 @@ function y(e) {
                       type: f.cd.STREAM_QUALITY_UPSELL,
                       analyticsLocation: {
                           section: b.jXE.STREAM_UPSELL_MODAL,
-                          object: b.qAy.BUTTON_CTA
+                          object: b.qAy.BUTTON_CTA,
                       },
                       analyticsSource: r,
                       onClose: t,
@@ -106,9 +108,9 @@ function y(e) {
                       onSecondaryClick: m,
                       showEnhancedUpsell: !0,
                       enableArtBoxShadow: !1,
-                      headerClassName: p.header
+                      headerClassName: p.header,
                   },
-                  y
-              )
+                  y,
+              ),
           );
 }

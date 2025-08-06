@@ -11,17 +11,19 @@ function d(e) {
     let t = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot),
         n = t ? e.getRecipientId() : null,
         d = (0, o.P)(e.id);
-    return (0, r.e7)(
-        [a.Z, i.Z, s.Z, l.default],
-        () => {
-            if (null != d || !t || i.Z.isMessageRequest(e.id) || (null != n && s.Z.getRelationshipType(n) === c.OGo.BLOCKED)) return !1;
-            if (null != n) {
-                let e = l.default.getUser(n);
-                if (null != e && e.hasFlag(c.xW$.PROVISIONAL_ACCOUNT)) return !1;
-            }
-            let r = a.Z.getMessages(e.id);
-            return r.ready && !r.hasMoreBefore && !r.hasMoreAfter && r.length < u && !a.Z.hasCurrentUserSentMessage(e.id);
-        },
-        [d, t, e.id, n]
-    );
+    return (0, r.e7)([a.Z, i.Z, s.Z, l.default], () => {
+        if (
+            null != d ||
+            !t ||
+            i.Z.isMessageRequest(e.id) ||
+            (null != n && s.Z.getRelationshipType(n) === c.OGo.BLOCKED)
+        )
+            return !1;
+        if (null != n) {
+            let e = l.default.getUser(n);
+            if (null != e && e.hasFlag(c.xW$.PROVISIONAL_ACCOUNT)) return !1;
+        }
+        let r = a.Z.getMessages(e.id);
+        return r.ready && !r.hasMoreBefore && !r.hasMoreAfter && r.length < u && !a.Z.hasCurrentUserSentMessage(e.id);
+    }, [d, t, e.id, n]);
 }

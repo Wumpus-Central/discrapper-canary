@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => h,
-    Z: () => g
+    Z: () => g,
 });
 var r = n(255367),
     i = n(73800),
@@ -15,21 +15,26 @@ var r = n(255367),
     _ = n(981631),
     p = n(872333),
     h = (function (e) {
-        return ((e[(e.NORMAL = 20)] = 'NORMAL'), (e[(e.LARGE = 32)] = 'LARGE'), e);
+        return (e[(e.NORMAL = 20)] = "NORMAL"), (e[(e.LARGE = 32)] = "LARGE"), e;
     })({});
 let m = async (e) => {
     var t;
     let { effect: n } = e,
         r = await (0, d.T)(n.channelId, null != (t = n.messageId) ? t : _.lds, n.emoji.name),
-        i = await (0, f.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, r, n.color);
-    return ((i.assets[0].p = n.url), i);
+        i = await (0, f.aB)(
+            "".concat(n.channelId, ":").concat(n.messageId, ":").concat(n.emoji.name),
+            n.url,
+            r,
+            n.color,
+        );
+    return (i.assets[0].p = n.url), i;
 };
 function g(e) {
     let { className: t, effect: n, onComplete: o, emojiSize: s = 20 } = e,
         d = i.useRef(null),
         _ = s * f.Vz,
         h = (_ + s) / 2,
-        g = 'translateY('.concat(h, 'px)');
+        g = "translateY(".concat(h, "px)");
     return (
         i.useEffect(() => {
             let e;
@@ -38,26 +43,26 @@ function g(e) {
                     !(async function () {
                         if (null != d.current) {
                             let t = await m({ effect: n });
-                            ((e = l().loadAnimation({
+                            (e = l().loadAnimation({
                                 container: d.current,
-                                renderer: 'svg',
+                                renderer: "svg",
                                 loop: !1,
                                 autoplay: !0,
-                                animationData: t
-                            })).addEventListener('complete', () => {
-                                (null == o || o(), e.destroy());
+                                animationData: t,
+                            })).addEventListener("complete", () => {
+                                null == o || o(), e.destroy();
                             }),
                                 null != n.channelId &&
                                     null != n.messageId &&
                                     null != n.emoji &&
                                     n.key === u.I.HOVER &&
                                     c.Z.dispatch({
-                                        type: 'BURST_REACTION_ANIMATION_ADD',
+                                        type: "BURST_REACTION_ANIMATION_ADD",
                                         channelId: n.channelId,
                                         messageId: n.messageId,
                                         emoji: n.emoji,
-                                        animation: e
-                                    }));
+                                        animation: e,
+                                    });
                         }
                     })(),
                     () => {
@@ -65,17 +70,17 @@ function g(e) {
                     }
                 );
         }, [o, n, s]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: p.effectsWrapper,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: a()(p.effect, t),
                 style: {
                     transform: g,
                     height: _,
-                    width: _
+                    width: _,
                 },
-                ref: d
-            })
+                ref: d,
+            }),
         })
     );
 }

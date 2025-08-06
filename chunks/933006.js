@@ -1,4 +1,4 @@
-(n.d(e, { default: () => j }), n(388685), n(953529));
+n.d(e, { default: () => j }), n(388685), n(953529);
 var r = n(255367),
     o = n(73800),
     i = n(481060),
@@ -28,15 +28,17 @@ function j(t) {
                         r,
                         o = {},
                         i = Object.keys(t);
-                    for (r = 0; r < i.length; r++) ((n = i[r]), e.indexOf(n) >= 0 || (o[n] = t[n]));
+                    for (r = 0; r < i.length; r++) (n = i[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < i.length; r++) ((n = i[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]));
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
             }
             return o;
-        })(t, ['onClose']);
+        })(t, ["onClose"]);
     let m = (0, c.O)(),
         { analyticsLocations: S } = (0, s.ZP)(),
         [v, x] = o.useState(!1);
@@ -45,7 +47,7 @@ function j(t) {
             (p.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: b.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
                 location: m.location,
-                location_stack: S
+                location_stack: S,
             }),
             x(!0));
     }, [m.location, S, v]);
@@ -56,24 +58,24 @@ function j(t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (e) {
                         var r;
-                        ((r = n[e]),
+                        (r = n[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (t[e] = r));
-                    }));
+                                : (t[e] = r);
+                    });
             }
             return t;
         })(
@@ -90,18 +92,18 @@ function j(t) {
                 onSubscribeClick: l.Z,
                 secondaryCTA: y.intl.string(y.t.PcTCBw),
                 onSecondaryClick: () => {
-                    (_(), a.Z.open(f.oAB.PREMIUM));
+                    _(), a.Z.open(f.oAB.PREMIUM);
                 },
-                onClose: _
+                onClose: _,
             },
-            g
+            g,
         )),
         (j = j =
             {
                 children: (0, r.jsx)(i.xJW, {
-                    title: y.intl.string(y.t['K/hjQU']),
+                    title: y.intl.string(y.t["K/hjQU"]),
                     className: C.optionsContainerWrapper,
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: C.optionsContainer,
                         children: P.map((t, e) => {
                             let n = t.value;
@@ -113,13 +115,13 @@ function j(t) {
                                           label: t.label,
                                           soundpack: n,
                                           description: t.description,
-                                          location: 'upsellModal'
+                                          location: "upsellModal",
                                       },
-                                      e
+                                      e,
                                   );
-                        })
-                    })
-                })
+                        }),
+                    }),
+                }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(j))
@@ -133,6 +135,6 @@ function j(t) {
               })(Object(j)).forEach(function (t) {
                   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(j, t));
               }),
-        e)
+        e),
     );
 }

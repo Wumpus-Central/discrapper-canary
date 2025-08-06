@@ -1,4 +1,4 @@
-(r.d(t, { default: () => b }), r(388685));
+r.d(t, { default: () => b }), r(388685);
 var n = r(255367),
     s = r(73800),
     i = r(481060),
@@ -15,15 +15,15 @@ function d(e, t, r) {
                   value: r,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = r),
         e
     );
 }
 let u = (0, l.Un)({
-    createPromise: () => r.e('4848').then(r.bind(r, 797967)),
-    webpackId: 797967
+    createPromise: () => r.e("4848").then(r.bind(r, 797967)),
+    webpackId: 797967,
 });
 class m extends s.PureComponent {
     render() {
@@ -31,23 +31,23 @@ class m extends s.PureComponent {
             { name: t, color: r } = this.state;
         return (0, n.jsxs)(i.Y0X, {
             transitionState: e,
-            'aria-label': h.intl.string(h.t.Dx7im5),
+            "aria-label": h.intl.string(h.t.Dx7im5),
             size: i.CgR.DYNAMIC,
-            parentComponent: 'GuildFolderSettings',
+            parentComponent: "GuildFolderSettings",
             children: [
                 (0, n.jsxs)(i.xBx, {
                     className: p.header,
                     separator: !1,
                     children: [
                         (0, n.jsx)(i.X6q, {
-                            variant: 'heading-lg/semibold',
-                            children: h.intl.string(h.t.Dx7im5)
+                            variant: "heading-lg/semibold",
+                            children: h.intl.string(h.t.Dx7im5),
                         }),
-                        (0, n.jsx)(i.olH, { onClick: this.close })
-                    ]
+                        (0, n.jsx)(i.olH, { onClick: this.close }),
+                    ],
                 }),
                 (0, n.jsx)(i.hzk, {
-                    children: (0, n.jsxs)('form', {
+                    children: (0, n.jsxs)("form", {
                         onSubmit: this.handleSubmit,
                         children: [
                             (0, n.jsx)(i.xJW, {
@@ -58,8 +58,8 @@ class m extends s.PureComponent {
                                     value: t,
                                     onChange: this.handleNameChange,
                                     placeholder: h.intl.string(h.t.xV9hVl),
-                                    autoFocus: !0
-                                })
+                                    autoFocus: !0,
+                                }),
                             }),
                             (0, n.jsx)(i.xJW, {
                                 title: h.intl.string(h.t.xpurRE),
@@ -68,40 +68,40 @@ class m extends s.PureComponent {
                                     defaultColor: c.Wyy,
                                     colors: c.pmI,
                                     value: null != r ? r : c.Wyy,
-                                    onChange: this.handleColorChange
-                                })
-                            })
-                        ]
-                    })
+                                    onChange: this.handleColorChange,
+                                }),
+                            }),
+                        ],
+                    }),
                 }),
                 (0, n.jsx)(i.mzw, {
                     children: (0, n.jsx)(i.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: h.intl.string(h.t.i4jeWV),
-                        type: 'submit',
-                        onClick: this.handleSubmit
-                    })
-                })
-            ]
+                        type: "submit",
+                        onClick: this.handleSubmit,
+                    }),
+                }),
+            ],
         });
     }
     constructor(...e) {
         var t;
-        (super(...e),
-            d(this, 'state', {
-                name: null != (t = this.props.folderName) ? t : '',
-                color: this.props.folderColor
+        super(...e),
+            d(this, "state", {
+                name: null != (t = this.props.folderName) ? t : "",
+                color: this.props.folderColor,
             }),
-            d(this, 'close', () => {
+            d(this, "close", () => {
                 this.props.onClose();
             }),
-            d(this, 'handleNameChange', (e) => {
+            d(this, "handleNameChange", (e) => {
                 this.setState({ name: e });
             }),
-            d(this, 'handleColorChange', (e) => {
+            d(this, "handleColorChange", (e) => {
                 this.setState({ color: e });
             }),
-            d(this, 'handleSubmit', (e) => {
+            d(this, "handleSubmit", (e) => {
                 e.preventDefault();
                 let { folderId: t } = this.props,
                     { name: r, color: n } = this.state,
@@ -112,22 +112,22 @@ class m extends s.PureComponent {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
                                           n = Object.keys(r);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (n = n.concat(
                                               Object.getOwnPropertySymbols(r).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           n.forEach(function (t) {
                                               d(e, t, r[t]);
-                                          }));
+                                          });
                                   }
                                   return e;
                               })({}, e)),
                               (i = i =
                                   {
                                       folderName: r,
-                                      folderColor: n
+                                      folderColor: n,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(i))
@@ -144,8 +144,8 @@ class m extends s.PureComponent {
                               s)
                             : e;
                     });
-                ((0, o.V1)(s), this.close());
-            }));
+                (0, o.V1)(s), this.close();
+            });
     }
 }
 let b = m;

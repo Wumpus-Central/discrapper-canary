@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Gt: () => u,
     LZ: () => c,
-    ZP: () => f
+    ZP: () => f,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(348327),
@@ -15,7 +15,7 @@ function u(e) {
     let { children: t, value: n } = e;
     return (0, r.jsx)(c.Provider, {
         value: n,
-        children: t
+        children: t,
     });
 }
 function d(e, t) {
@@ -35,7 +35,7 @@ function f() {
             analyticsLocations: l,
             sourceAnalyticsLocations: u,
             parentAnalyticsLocation: u[u.length - 1],
-            newestAnalyticsLocation: l[l.length - 1]
+            newestAnalyticsLocation: l[l.length - 1],
         }
     );
 }

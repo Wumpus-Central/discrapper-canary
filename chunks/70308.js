@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,7 +62,7 @@ function p(e, t) {
 let h = {
         duration: 300,
         friction: 24,
-        tension: 280
+        tension: 280,
     },
     m = {
         [c.az.TOP]: {
@@ -70,49 +70,49 @@ let h = {
             transition: {
                 trail: 400,
                 from: {
-                    transform: 'translate3d(0, -100%, 0)',
+                    transform: "translate3d(0, -100%, 0)",
                     opacity: 0,
-                    config: h
+                    config: h,
                 },
                 enter: {
-                    transform: 'translate3d(0, -0px, 0)',
+                    transform: "translate3d(0, -0px, 0)",
                     opacity: 1,
-                    config: h
+                    config: h,
                 },
                 leave: {
-                    transform: 'translate3d(0, -100%, 0)',
+                    transform: "translate3d(0, -100%, 0)",
                     opacity: 0,
                     config: p(f({}, h), {
                         friction: 40,
-                        clamp: !0
-                    })
-                }
-            }
+                        clamp: !0,
+                    }),
+                },
+            },
         },
         [c.az.BOTTOM]: {
             styles: u.containerBottom,
             transition: {
                 trail: 400,
                 from: {
-                    transform: 'translate3d(0, 100%, 0)',
+                    transform: "translate3d(0, 100%, 0)",
                     opacity: 0,
-                    config: h
+                    config: h,
                 },
                 enter: {
-                    transform: 'translate3d(0, 0px, 0)',
+                    transform: "translate3d(0, 0px, 0)",
                     opacity: 1,
-                    config: h
+                    config: h,
                 },
                 leave: {
-                    transform: 'translate3d(0, 100%, 0)',
+                    transform: "translate3d(0, 100%, 0)",
                     opacity: 0,
                     config: p(f({}, h), {
                         friction: 40,
-                        clamp: !0
-                    })
-                }
-            }
-        }
+                        clamp: !0,
+                    }),
+                },
+            },
+        },
     };
 function g() {
     var e, t, n, u;
@@ -122,7 +122,8 @@ function g() {
     i.useEffect(() => {
         if (null != d) {
             var e, t, n, r;
-            ((_.current = null != (n = null == (e = d.options) ? void 0 : e.position) ? n : c.si.position), (p.current = null != (r = null == (t = d.options) ? void 0 : t.duration) ? r : c.si.duration));
+            (_.current = null != (n = null == (e = d.options) ? void 0 : e.position) ? n : c.si.position),
+                (p.current = null != (r = null == (t = d.options) ? void 0 : t.duration) ? r : c.si.duration);
         }
     }, [d]);
     let h = i.useMemo(() => {
@@ -135,11 +136,11 @@ function g() {
                 {
                     keys: (e) => {
                         var t;
-                        return null != (t = null == e ? void 0 : e.id) ? t : '';
-                    }
+                        return null != (t = null == e ? void 0 : e.id) ? t : "";
+                    },
                 },
-                h.transition
-            )
+                h.transition,
+            ),
         );
     return (
         i.useEffect(() => {
@@ -148,7 +149,7 @@ function g() {
                     (0, l.z5)();
                 }, p.current);
         }, [d]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: h.styles,
             children: g((e, t) =>
                 null === t
@@ -157,11 +158,11 @@ function g() {
                           o.animated.div,
                           {
                               style: e,
-                              children: (0, r.jsx)(s.F, f({}, t))
+                              children: (0, r.jsx)(s.F, f({}, t)),
                           },
-                          t.id
-                      )
-            )
+                          t.id,
+                      ),
+            ),
         })
     );
 }

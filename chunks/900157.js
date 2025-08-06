@@ -29,24 +29,24 @@ function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -69,7 +69,7 @@ function T(e, t) {
     );
 }
 function N(e) {
-    let { channelId: t, baseChannelId: l, channelViewSource: N = 'Split View' } = e,
+    let { channelId: t, baseChannelId: l, channelViewSource: N = "Split View" } = e,
         R = (0, s.e7)([j.Z], () => j.Z.getChannel(t)),
         w = (0, s.e7)([O.Z], () => O.Z.getGuild(null == R ? void 0 : R.getGuildId())),
         A = (0, f.ZP)(R);
@@ -79,8 +79,8 @@ function N(e) {
         L &&
             null != D &&
             (o.Z.dispatch({
-                type: 'SIDEBAR_CLOSE',
-                baseChannelId: D.parent_id
+                type: "SIDEBAR_CLOSE",
+                baseChannelId: D.parent_id,
             }),
             (0, x.ad)(D, { source: E.on.VOICE_AUTO_OPEN }));
     }, [L, D]);
@@ -90,24 +90,25 @@ function N(e) {
             if (null == R || k.current) return;
             k.current = !0;
             let e = (0, h.K)(j.Z.getChannel(R.id), !0);
-            ((0, d.yw)(S.rMx.CHANNEL_OPENED, T(P({}, e, (0, d.$H)(R.id)), { channel_view: N })), (0, p.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id }));
+            (0, d.yw)(S.rMx.CHANNEL_OPENED, T(P({}, e, (0, d.$H)(R.id)), { channel_view: N })),
+                (0, p.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [R, N]),
         null == R || null == w)
     )
         return null;
     let M = (0, r.jsx)(C.Z, {
         channel: R,
-        baseChannelId: l
+        baseChannelId: l,
     });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.Z, {
                 channel: R,
-                draftType: _.d.ChannelMessage
+                draftType: _.d.ChannelMessage,
             }),
             (0, r.jsx)(b.ZP, {
                 toolbar: M,
-                'aria-label': Z.intl.string(Z.t.Pwe8tL),
+                "aria-label": Z.intl.string(Z.t.Pwe8tL),
                 children: (0, y.ud)({
                     channel: R,
                     channelName: A,
@@ -115,27 +116,27 @@ function N(e) {
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, c.jW)(e, async () => {
-                            let { default: e } = await n.e('40157').then(n.bind(n, 422200));
+                            let { default: e } = await n.e("40157").then(n.bind(n, 422200));
                             return (t) => (0, r.jsx)(e, T(P({}, t), { channel: R }));
                         });
                     },
                     handleClick: function () {
                         null != R && (0, x.Kh)(R.id);
-                    }
-                })
+                    },
+                }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: I.chat,
                 children: (0, r.jsx)(
                     g.Z,
                     {
                         channel: R,
                         guild: w,
-                        chatInputType: m.Ie.SIDEBAR
+                        chatInputType: m.Ie.SIDEBAR,
                     },
-                    t
-                )
-            })
-        ]
+                    t,
+                ),
+            }),
+        ],
     });
 }

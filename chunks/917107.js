@@ -9,5 +9,9 @@ function l(e) {
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Z,
         l = t.getChannel(e),
         c = n.getVoiceChannelId();
-    return null != l && (l.type === r.d.GUILD_VOICE || (!!l.isPrivate() && (l.id === c || null != s.Z.getVoiceStatesForChannel(l.id)[i.default.getId()])));
+    return (
+        null != l &&
+        (l.type === r.d.GUILD_VOICE ||
+            (!!l.isPrivate() && (l.id === c || null != s.Z.getVoiceStatesForChannel(l.id)[i.default.getId()])))
+    );
 }

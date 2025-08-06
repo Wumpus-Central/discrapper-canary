@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(388685));
+n.d(t, { Z: () => o }), n(388685);
 var r = n(73800),
     i = n(442837),
     l = n(314897),
@@ -16,8 +16,8 @@ function o(e) {
         [
             c,
             function () {
-                (n === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, a.RK)(e, !0) : (0, a.Q1)(e, !c), u(!c));
-            }
+                n === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, a.RK)(e, !0) : (0, a.Q1)(e, !c), u(!c);
+            },
         ]
     );
 }

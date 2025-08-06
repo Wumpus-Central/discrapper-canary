@@ -9,6 +9,6 @@ function s(e) {
         animated: (0, o.xR)(t),
         is_guild_profile: s,
         recent_avatar_id: l === r.q.ARCHIVED_ASSET ? Number(n) : void 0,
-        is_edited_recent_avatar: l === r.q.EDITED_ARCHIVED_ASSET
+        is_edited_recent_avatar: l === r.q.EDITED_ARCHIVED_ASSET,
     });
 }

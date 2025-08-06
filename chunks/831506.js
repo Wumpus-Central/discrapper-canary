@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(388685));
+n.d(t, { Z: () => D }), n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,7 +47,7 @@ function g(e, t) {
     let n = m(e, t);
     if (null == n) return;
     let r = p[e];
-    (delete r[t], o().isEmpty(r) && delete p[e]);
+    delete r[t], o().isEmpty(r) && delete p[e];
     let i = h.get(n);
     null != i && (i.delete(e), 0 === i.size && h.delete(n));
 }
@@ -56,7 +56,7 @@ function E(e, t, n) {
     let i = p[e];
     if ((null == i && (i = p[e] = {}), (i[t] = n), c.Z.isBlocked(e) || c.Z.isIgnored(e))) return;
     let o = null != (r = h.get(n)) ? r : new Set();
-    (h.set(n, o), o.add(e));
+    h.set(n, o), o.add(e);
 }
 function b(e, t, n, r) {
     let i = n.find((e) => null != e.party && e.party.id),
@@ -78,7 +78,7 @@ function y(e) {
 }
 function O(e) {
     let { parties: t, userParties: n } = e;
-    ((h = new Map()), (p = _({}, n)), Object.keys(t).forEach((e) => h.set(e, new Set(t[e]))));
+    (h = new Map()), (p = _({}, n)), Object.keys(t).forEach((e) => h.set(e, new Set(t[e])));
 }
 function v(e) {
     let { guild: t } = e,
@@ -105,7 +105,7 @@ function S(e) {
     let { guildId: t, members: n } = e;
     return N(
         t,
-        n.map((e) => e.presence)
+        n.map((e) => e.presence),
     );
 }
 function A(e) {
@@ -114,7 +114,7 @@ function A(e) {
         null != n &&
         N(
             t,
-            n.map((e) => e.presence)
+            n.map((e) => e.presence),
         )
     );
 }
@@ -153,7 +153,7 @@ function P(e) {
 }
 class w extends (r = a.ZP.Store) {
     initialize() {
-        (this.syncWith([u.Z], C), this.waitFor(u.Z, c.Z));
+        this.syncWith([u.Z], C), this.waitFor(u.Z, c.Z);
     }
     getParty(e) {
         return null != e && h.has(e) ? h.get(e) : null;
@@ -165,7 +165,7 @@ class w extends (r = a.ZP.Store) {
         return h;
     }
 }
-f(w, 'displayName', 'GamePartyStore');
+f(w, "displayName", "GamePartyStore");
 let D = new w(s.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: y,
     OVERLAY_INITIALIZE: O,
@@ -176,5 +176,5 @@ let D = new w(s.Z, {
     THREAD_MEMBERS_UPDATE: A,
     RELATIONSHIP_ADD: R,
     RELATIONSHIP_UPDATE: R,
-    RELATIONSHIP_REMOVE: P
+    RELATIONSHIP_REMOVE: P,
 });

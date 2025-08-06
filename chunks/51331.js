@@ -17,9 +17,9 @@ function d(e) {
             onChange: n,
             focusProps: { enabled: !1 },
             innerRef: p,
-            disabled: m
+            disabled: m,
         });
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: a()(c.container, s, { [c.disabled]: m }),
         children: (0, i.jsx)(l.tEY, {
             within: !0,
@@ -28,21 +28,21 @@ function d(e) {
             ringTarget: g,
             children: (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: c.text,
                         children: (0, i.jsx)(o.H, {
                             header: u,
                             description: d,
                             relatedId: h,
-                            disabled: m
-                        })
+                            disabled: m,
+                        }),
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: c.control,
-                        children: f
-                    })
-                ]
-            })
-        })
+                        children: f,
+                    }),
+                ],
+            }),
+        }),
     });
 }

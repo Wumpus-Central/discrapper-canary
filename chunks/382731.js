@@ -1,7 +1,7 @@
 n.d(t, { Z: () => a });
 var r = n(73800),
     i = n(867309);
-let o = Object.freeze({ box: 'border-box' });
+let o = Object.freeze({ box: "border-box" });
 function a(e) {
     let { ref: t, onUpdate: n, resizeObserver: a, listenerMap: s, key: l } = e;
     (0, r.useLayoutEffect)(() => {

@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,10 +28,12 @@ let h = -1,
     g = null,
     E = {};
 function b() {
-    (null != m && null == f.Z.getGuild(m) && null == s.Z.getRequest(m) && (m = null), null != g && null == f.Z.getGuild(g) && null == s.Z.getRequest(g) && (g = null), O(m));
+    null != m && null == f.Z.getGuild(m) && null == s.Z.getRequest(m) && (m = null),
+        null != g && null == f.Z.getGuild(g) && null == s.Z.getRequest(g) && (g = null),
+        O(m);
 }
 function y(e) {
-    ((m = e.selectedGuildId), (g = void 0), b());
+    (m = e.selectedGuildId), (g = void 0), b();
 }
 function O(e) {
     null != e && (E[e] = Date.now());
@@ -39,15 +41,20 @@ function O(e) {
 function v(e) {
     let { guildId: t } = e;
     if (m === t) return !1;
-    (O(m), O(t), null != t && (g = t), (m = t));
+    O(m), O(t), null != t && (g = t), (m = t);
 }
 function I(e) {
     let t = !1;
-    return (delete E[e], g === e && ((g = null), (t = !0)), m === e && (f.Z.getGuildsArray().find((t) => t.id !== e), (m = null), (0, c.dL)(_.Z5c.ME), (t = !0)), t);
+    return (
+        delete E[e],
+        g === e && ((g = null), (t = !0)),
+        m === e && (f.Z.getGuildsArray().find((t) => t.id !== e), (m = null), (0, c.dL)(_.Z5c.ME), (t = !0)),
+        t
+    );
 }
 function T(e) {
     let {
-        guild: { id: t, unavailable: n }
+        guild: { id: t, unavailable: n },
     } = e;
     return !0 !== n && I(t);
 }
@@ -56,12 +63,16 @@ function S(e) {
     return n.id === u.default.getId() && I(t);
 }
 function A() {
-    ((m = null), (g = null));
+    (m = null), (g = null);
 }
 class N extends (r = o.ZP.PersistedStore) {
     initialize(e) {
         var t, n, r, o;
-        (this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(f.Z, u.default, d.Z), (E = null != (n = null == e ? void 0 : e.selectedGuildTimestampMillis) ? n : {}), (m = null != (r = null == e ? void 0 : e.selectedGuildId) ? r : null), (g = null != (o = null == e ? void 0 : e.lastSelectedGuildId) ? o : null));
+        this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type),
+            this.waitFor(f.Z, u.default, d.Z),
+            (E = null != (n = null == e ? void 0 : e.selectedGuildTimestampMillis) ? n : {}),
+            (m = null != (r = null == e ? void 0 : e.selectedGuildId) ? r : null),
+            (g = null != (o = null == e ? void 0 : e.lastSelectedGuildId) ? o : null);
         let a = d.Z.lastNonVoiceRoute,
             s = (0, i.LX)(a, { path: _.Z5c.CHANNEL(l.Hw.guildId()) });
         null == s || null == (t = s.params) || t.guildId;
@@ -70,7 +81,7 @@ class N extends (r = o.ZP.PersistedStore) {
         return {
             selectedGuildTimestampMillis: E,
             selectedGuildId: m,
-            lastSelectedGuildId: g
+            lastSelectedGuildId: g,
         };
     }
     getGuildId() {
@@ -83,12 +94,12 @@ class N extends (r = o.ZP.PersistedStore) {
         return m === e ? h : E[e];
     }
 }
-(p(N, 'displayName', 'SelectedGuildStore'), p(N, 'persistKey', 'SelectedGuildStore'));
+p(N, "displayName", "SelectedGuildStore"), p(N, "persistKey", "SelectedGuildStore");
 let C = new N(a.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: y,
     CHANNEL_SELECT: v,
     GUILD_MEMBER_REMOVE: S,
     GUILD_DELETE: T,
-    LOGOUT: A
+    LOGOUT: A,
 });

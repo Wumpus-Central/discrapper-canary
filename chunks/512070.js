@@ -13,23 +13,23 @@ var o = n(120356),
     f = n(441047);
 function m(e) {
     let { selectedFontId: t, setSelectedFontId: n, className: o } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o,
         children: [
             (0, r.jsxs)(a.X6, {
-                variant: 'heading-md/semibold',
+                variant: "heading-md/semibold",
                 className: p.selectorHeading,
                 children: [
                     u.intl.string(d.default.nP0ngY),
                     (0, r.jsx)(i.SrA, {
-                        size: 'xs',
-                        color: i.TVs.colors.TEXT_DEFAULT
-                    })
-                ]
+                        size: "xs",
+                        color: i.TVs.colors.TEXT_DEFAULT,
+                    }),
+                ],
             }),
             (0, r.jsx)(a.Kq, {
-                direction: 'horizontal',
-                align: 'center',
+                direction: "horizontal",
+                align: "center",
                 wrap: !0,
                 children: c.P$.map((e) => {
                     let o = s.y[e],
@@ -43,22 +43,22 @@ function m(e) {
                                 return (0, r.jsx)(i.P3F, {
                                     className: l()(f.fontButton, { [f.selected]: c }),
                                     onClick: () => n(e),
-                                    'aria-label': u.intl.string(o.name),
+                                    "aria-label": u.intl.string(o.name),
                                     onMouseEnter: d,
                                     onMouseLeave: p,
                                     children: (0, r.jsx)(a.xv, {
-                                        variant: 'text-lg/semibold',
-                                        color: c ? 'text-primary' : 'text-default',
+                                        variant: "text-lg/semibold",
+                                        color: c ? "text-primary" : "text-default",
                                         className: l()(f.fontText, s.y[e].className),
-                                        children: 'Gg'
-                                    })
+                                        children: "Gg",
+                                    }),
                                 });
-                            }
+                            },
                         },
-                        e
+                        e,
                     );
-                })
-            })
-        ]
+                }),
+            }),
+        ],
     });
 }

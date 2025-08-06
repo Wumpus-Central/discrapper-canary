@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     I: () => E,
-    S: () => S
+    S: () => S,
 }),
-    n(997841));
+    n(997841);
 var l = n(255367),
     i = n(73800),
     r = n(120356),
@@ -27,15 +27,31 @@ let S = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))
         let { value: t, autoFocus: n, hideValue: i, onCopy: r, disabled: s } = e;
         return (0, l.jsx)(c.Z, {
             value: t,
-            hideMessage: i ? j.intl.string(j.t['6HzNgY']) : null,
+            hideMessage: i ? j.intl.string(j.t["6HzNgY"]) : null,
             buttonColor: u.zx.Colors.BRAND,
             onCopy: r,
             autoFocus: n,
-            disabled: s
+            disabled: s,
         });
     }),
     E = (e) => {
-        let { guild: t, noInvitesAvailable: n, showFriends: r, onClose: o, modalState: u, isApplicationBypassToggleEnabled: c, setInviteFlags: h, copyValue: E, changePage: b, inviteChannel: T, source: O, code: y, guildScheduledEvent: C, disabled: P, application: Z } = e,
+        let {
+                guild: t,
+                noInvitesAvailable: n,
+                showFriends: r,
+                onClose: o,
+                modalState: u,
+                isApplicationBypassToggleEnabled: c,
+                setInviteFlags: h,
+                copyValue: E,
+                changePage: b,
+                inviteChannel: T,
+                source: O,
+                code: y,
+                guildScheduledEvent: C,
+                disabled: P,
+                application: Z,
+            } = e,
             { maxAge: w, maxUses: A, networkError: M, showVanityURL: R, flags: k } = u,
             D = i.useCallback(() => {
                 m.default.track(f.rMx.COPY_INSTANT_INVITE, {
@@ -45,7 +61,7 @@ let S = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))
                     location: O,
                     code: y,
                     guild_scheduled_event_id: null == C ? void 0 : C.id,
-                    application_id: null == Z ? void 0 : Z.id
+                    application_id: null == Z ? void 0 : Z.id,
                 });
             }, [null == Z ? void 0 : Z.id, T, O, y, C]);
         return (0, l.jsxs)(l.Fragment, {
@@ -54,27 +70,27 @@ let S = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))
                     value: E,
                     autoFocus: r,
                     onCopy: D,
-                    disabled: P
+                    disabled: P,
                 }),
                 c &&
                     (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, l.jsx)('div', { className: N.divider }),
+                            (0, l.jsx)("div", { className: N.divider }),
                             (0, l.jsx)(d.j7V, {
                                 className: N.toggle,
                                 value: (0, p.yE)(k, a.$.IS_APPLICATION_BYPASS),
                                 onChange: (e) => h((0, p.mB)(k, a.$.IS_APPLICATION_BYPASS, e)),
                                 disabled: P,
                                 hideBorder: !0,
-                                children: (0, l.jsxs)('div', {
+                                children: (0, l.jsxs)("div", {
                                     className: N.formText,
                                     children: [
                                         (0, l.jsx)(d.Text, {
-                                            variant: 'text-md/semibold',
-                                            children: j.intl.string(j.t['1i1bUl'])
+                                            variant: "text-md/semibold",
+                                            children: j.intl.string(j.t["1i1bUl"]),
                                         }),
                                         (0, l.jsx)(d.ua7, {
-                                            text: j.intl.string(j.t['jvd/LC']),
+                                            text: j.intl.string(j.t["jvd/LC"]),
                                             children: (e) =>
                                                 (0, l.jsx)(
                                                     d.d3s,
@@ -82,70 +98,73 @@ let S = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))
                                                         for (var t = 1; t < arguments.length; t++) {
                                                             var n = null != arguments[t] ? arguments[t] : {},
                                                                 l = Object.keys(n);
-                                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                                            "function" == typeof Object.getOwnPropertySymbols &&
                                                                 (l = l.concat(
-                                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                                    })
+                                                                    Object.getOwnPropertySymbols(n).filter(
+                                                                        function (e) {
+                                                                            return Object.getOwnPropertyDescriptor(n, e)
+                                                                                .enumerable;
+                                                                        },
+                                                                    ),
                                                                 )),
                                                                 l.forEach(function (t) {
                                                                     var l;
-                                                                    ((l = n[t]),
+                                                                    (l = n[t]),
                                                                         t in e
                                                                             ? Object.defineProperty(e, t, {
                                                                                   value: l,
                                                                                   enumerable: !0,
                                                                                   configurable: !0,
-                                                                                  writable: !0
+                                                                                  writable: !0,
                                                                               })
-                                                                            : (e[t] = l));
-                                                                }));
+                                                                            : (e[t] = l);
+                                                                });
                                                         }
                                                         return e;
                                                     })(
                                                         {
-                                                            size: 'xs',
-                                                            color: 'currentColor'
+                                                            size: "xs",
+                                                            color: "currentColor",
                                                         },
-                                                        e
-                                                    )
-                                                )
-                                        })
-                                    ]
-                                })
-                            })
-                        ]
+                                                        e,
+                                                    ),
+                                                ),
+                                        }),
+                                    ],
+                                }),
+                            }),
+                        ],
                     }),
                 n || R
                     ? null
                     : (0, l.jsxs)(d.Text, {
-                          variant: 'text-xs/normal',
+                          variant: "text-xs/normal",
                           className: s()(_.marginTop8, N.footerText),
                           children: [
                               (0, v.Vg)(w, A),
-                              ' ',
+                              " ",
                               r
                                   ? (0, l.jsx)(d.eee, {
                                         onClick: () => b(I.RV.SETTINGS),
-                                        children: j.intl.string(j.t.VNe8Pz)
+                                        children: j.intl.string(j.t.VNe8Pz),
                                     })
-                                  : null
-                          ]
+                                  : null,
+                          ],
                       }),
                 !n && r && R
                     ? (0, l.jsxs)(d.Text, {
-                          variant: 'text-xs/normal',
+                          variant: "text-xs/normal",
                           className: s()(_.marginTop8, N.footerText),
-                          children: [j.intl.string(j.t['0M2U9/']), ' ']
+                          children: [j.intl.string(j.t["0M2U9/"]), " "],
                       })
                     : null,
                 null != M
                     ? (0, l.jsx)(x.W, {
                           guild: t,
                           error: M,
-                          onClose: o
+                          onClose: o,
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     };

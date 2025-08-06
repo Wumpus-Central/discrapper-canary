@@ -1,6 +1,6 @@
 function r(e) {
     if (null == e) return window;
-    if ('[object Window]' !== e.toString()) {
+    if ("[object Window]" !== e.toString()) {
         var t = e.ownerDocument;
         return (t && t.defaultView) || window;
     }

@@ -2,10 +2,10 @@ n.d(t, {
     jD: () => a,
     kK: () => o,
     xj: () => i,
-    zd: () => r
+    zd: () => r,
 });
 var r = function (e) {
-        return e instanceof SVGElement && 'getBBox' in e;
+        return e instanceof SVGElement && "getBBox" in e;
     },
     i = function (e) {
         if (r(e)) {
@@ -27,15 +27,15 @@ var r = function (e) {
     },
     a = function (e) {
         switch (e.tagName) {
-            case 'INPUT':
-                if ('image' !== e.type) break;
-            case 'VIDEO':
-            case 'AUDIO':
-            case 'EMBED':
-            case 'OBJECT':
-            case 'CANVAS':
-            case 'IFRAME':
-            case 'IMG':
+            case "INPUT":
+                if ("image" !== e.type) break;
+            case "VIDEO":
+            case "AUDIO":
+            case "EMBED":
+            case "OBJECT":
+            case "CANVAS":
+            case "IFRAME":
+            case "IMG":
                 return !0;
         }
         return !1;

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -26,7 +26,7 @@ function I(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,18 +77,18 @@ function N(e) {
         P = (0, u.Ye)(h.default.extractTimestamp(t.startId)),
         w = (0, o.e7)([m.Z], () => m.Z.summaryFeedback(t)),
         D = (e, n) => {
-            (e.stopPropagation(),
+            e.stopPropagation(),
                 (0, g.Z)({
                     summary: t,
                     channel: f,
-                    rating: n
-                }));
+                    rating: n,
+                });
         },
         L = d.Z.can(y.Plq.MANAGE_MESSAGES, f),
         x = (e) => {
             L &&
                 (0, s.jW)(e, async () => {
-                    let { default: e } = await n.e('12891').then(n.bind(n, 519620));
+                    let { default: e } = await n.e("12891").then(n.bind(n, 519620));
                     return (n) => (0, r.jsx)(e, A(T({}, n), { summary: t }));
                 });
         };
@@ -102,35 +102,35 @@ function N(e) {
             (0, r.jsx)(c.Z, {
                 hovered: C,
                 unread: S,
-                className: v.unreadPill
+                className: v.unreadPill,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: v.rowHeader,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: v.rowHeaderLeft,
                     children: [
                         (0, r.jsx)(a.Text, {
                             className: v.timestamp,
-                            color: 'interactive-normal',
-                            variant: 'text-xs/normal',
-                            children: P
+                            color: "interactive-normal",
+                            variant: "text-xs/normal",
+                            children: P,
                         }),
                         (0, r.jsx)(l.Z, {
                             height: 4,
                             width: 4,
-                            'aria-hidden': 'true',
-                            className: v.dot
+                            "aria-hidden": "true",
+                            className: v.dot,
                         }),
                         (0, r.jsx)(a.kBi, {
-                            size: 'xxs',
-                            color: 'currentColor',
-                            className: v.icon
+                            size: "xxs",
+                            color: "currentColor",
+                            className: v.icon,
                         }),
                         (0, r.jsx)(a.Text, {
                             className: v.count,
-                            color: 'interactive-normal',
-                            variant: 'text-xs/normal',
-                            children: t.count
+                            color: "interactive-normal",
+                            variant: "text-xs/normal",
+                            children: t.count,
                         }),
                         b.length > 0 &&
                             (0, r.jsxs)(r.Fragment, {
@@ -138,26 +138,26 @@ function N(e) {
                                     (0, r.jsx)(l.Z, {
                                         height: 4,
                                         width: 4,
-                                        'aria-hidden': 'true',
-                                        className: v.dot
+                                        "aria-hidden": "true",
+                                        className: v.dot,
                                     }),
                                     (0, r.jsx)(E.Z, {
                                         partySize: {
                                             knownSize: b.length,
-                                            totalSize: b.length
+                                            totalSize: b.length,
                                         },
                                         maxAvatarsShown: 3,
                                         members: b,
-                                        guildId: I
-                                    })
-                                ]
-                            })
-                    ]
-                })
+                                        guildId: I,
+                                    }),
+                                ],
+                            }),
+                    ],
+                }),
             }),
             C &&
                 !w &&
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: v.feedbackContainer,
                     children: [
                         (0, r.jsx)(a.P3F, {
@@ -165,32 +165,32 @@ function N(e) {
                             children: (0, r.jsx)(p.Z, {
                                 className: v.thumbIcon,
                                 width: 12,
-                                height: 12
-                            })
+                                height: 12,
+                            }),
                         }),
                         (0, r.jsx)(a.P3F, {
                             onClick: (e) => D(e, O.aZ.BAD),
                             children: (0, r.jsx)(_.Z, {
                                 className: v.thumbIcon,
                                 width: 12,
-                                height: 12
-                            })
-                        })
-                    ]
+                                height: 12,
+                            }),
+                        }),
+                    ],
                 }),
             (0, r.jsx)(a.Text, {
-                color: 'header-primary',
-                variant: 'text-sm/semibold',
+                color: "header-primary",
+                variant: "text-sm/semibold",
                 className: v.title,
-                children: t.topic
+                children: t.topic,
             }),
             (0, r.jsx)(a.Text, {
-                color: 'header-secondary',
-                variant: 'text-sm/normal',
+                color: "header-secondary",
+                variant: "text-sm/normal",
                 className: v.subtitle,
-                children: t.summShort
-            })
-        ]
+                children: t.summShort,
+            }),
+        ],
     });
 }
 function C(e) {
@@ -198,9 +198,9 @@ function C(e) {
         c = (0, o.e7)([f.ZP], () => f.ZP.getOldestUnreadMessageId(a.id)),
         u = i.useCallback(
             (e) => {
-                (s(e), l(!1));
+                s(e), l(!1);
             },
-            [s, l]
+            [s, l],
         );
     return t.length < 1
         ? (0, r.jsx)(b.Z, {})
@@ -216,10 +216,10 @@ function C(e) {
                           members: o,
                           guildId: a.guild_id,
                           unread: null != c && h.default.compare(e.endId, c) > 0,
-                          onClick: () => u(t)
+                          onClick: () => u(t),
                       },
-                      t
+                      t,
                   );
-              })
+              }),
           });
 }

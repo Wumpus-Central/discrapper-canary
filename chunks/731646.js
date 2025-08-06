@@ -10,7 +10,7 @@ function u(t) {
     let n = (0, c.Z)({
         id: t.id,
         label: t.label,
-        shiftId: t.shiftId
+        shiftId: t.shiftId,
     });
     return (
         i.useEffect(() => {
@@ -18,10 +18,10 @@ function u(t) {
         }, [n]),
         (0, r.jsx)(l.v2r, {
             onSelect: t.onSelect,
-            navId: 'dev-context',
-            'aria-label': null != (e = t['aria-label']) ? e : o.intl.string(o.t.ogxXGh),
+            navId: "dev-context",
+            "aria-label": null != (e = t["aria-label"]) ? e : o.intl.string(o.t.ogxXGh),
             onClose: a.Zy,
-            children: n
+            children: n,
         })
     );
 }

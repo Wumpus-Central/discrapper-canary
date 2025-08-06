@@ -15,14 +15,22 @@ function g() {
         n = (0, l.e7)([d.Z], () => d.Z.getProfileError()),
         g = (0, l.e7)([d.Z], () => d.Z.getGuildProfile()),
         p = (0, l.e7)([o.Z], () => o.Z.getIsUpdating(t)),
-        h = i.useMemo(() => ((null == n ? void 0 : n.status) === 429 ? m.intl.string(u.default['bFRS/v']) : null == n ? void 0 : n.getAnyErrorMessage()), [n]),
+        h = i.useMemo(
+            () =>
+                (null == n ? void 0 : n.status) === 429
+                    ? m.intl.string(u.default["bFRS/v"])
+                    : null == n
+                      ? void 0
+                      : n.getAnyErrorMessage(),
+            [n],
+        ),
         f = i.useCallback(() => {
             if (null == e || null == g) return;
             let t = {
                 tag: g.tag,
                 badge: g.badge,
                 badgeColorPrimary: g.badgeColorPrimary,
-                badgeColorSecondary: g.badgeColorSecondary
+                badgeColorSecondary: g.badgeColorSecondary,
             };
             (0, s.pV)(e.id, t);
         }, [e, g]),
@@ -33,6 +41,6 @@ function g() {
         submitting: p,
         errorMessage: h,
         onSave: f,
-        onReset: x
+        onReset: x,
     });
 }

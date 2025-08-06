@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     $K: () => x,
     IG: () => v,
     Nb: () => _,
     Ts: () => j,
     Wy: () => b,
-    di: () => D
+    di: () => D,
 }),
-    n(388685));
+    n(388685);
 var l = n(570140),
     i = n(668781),
     r = n(479531),
@@ -29,15 +29,15 @@ var l = n(570140),
     O = n(388032);
 function x(e) {
     l.Z.dispatch({
-        type: 'GUILD_SETTINGS_ONBOARDING_STEP',
-        step: e
+        type: "GUILD_SETTINGS_ONBOARDING_STEP",
+        step: e,
     });
 }
 function _(e) {
     null != e &&
         l.Z.dispatch({
-            type: 'GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED',
-            upsellType: e
+            type: "GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED",
+            upsellType: e,
         });
 }
 async function j(e, t) {
@@ -47,7 +47,7 @@ async function j(e, t) {
     if (n && t === T.Un.ONBOARDING_DEFAULT && (d.length < T.md || o.length < T.X))
         return void i.Z.show({
             title: O.intl.string(O.t.iLdiqa),
-            body: O.intl.string(O.t.JOT74e)
+            body: O.intl.string(O.t.JOT74e),
         });
     try {
         await (0, S.n_)(e, { mode: t });
@@ -56,13 +56,13 @@ async function j(e, t) {
         let { fieldName: e, error: t } = null != (u = new r.Z(n).getAnyErrorMessageAndField()) ? u : {};
         i.Z.show({
             title: O.intl.string(O.t.iLdiqa),
-            body: [e, t].filter(g.lm).join(': ')
+            body: [e, t].filter(g.lm).join(": "),
         });
     }
     l.Z.dispatch({
-        type: 'GUILD_SETTINGS_ONBOARDING_SET_MODE',
+        type: "GUILD_SETTINGS_ONBOARDING_SET_MODE",
         guildId: e,
-        mode: t
+        mode: t,
     });
 }
 function v(e, t) {
@@ -86,14 +86,14 @@ async function D(e) {
             onboardingEnabled: !0,
             memberOptions: {
                 isPending: (0, s.Dc)(t),
-                flags: 0
-            }
+                flags: 0,
+            },
         }),
         o.ZP.resetOnboardingStatus(t.id),
         (0, d.EI)(t.id),
         await (0, d.default)({
             guildId: t.id,
             isPreview: !0,
-            returnChannelId: E.oC.GUILD_HOME
+            returnChannelId: E.oC.GUILD_HOME,
         }));
 }

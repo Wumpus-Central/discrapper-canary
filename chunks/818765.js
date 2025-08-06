@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(539854));
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r = n(570140),
     i = n(317770),
     l = n(460181),
@@ -10,7 +10,7 @@ var r = n(570140),
     d = n(351780),
     h = n(843693),
     p = n(981631);
-let f = (0, l.uk)('poggermode_applause', o.Z.getSoundpack()),
+let f = (0, l.uk)("poggermode_applause", o.Z.getSoundpack()),
     g = !1,
     m = !1,
     b = [],
@@ -19,7 +19,7 @@ let f = (0, l.uk)('poggermode_applause', o.Z.getSoundpack()),
         g || (f.loop(), (g = !0));
     },
     y = () => {
-        (f.stop(), (g = !1));
+        f.stop(), (g = !1);
     },
     C = () => {
         let e = d.Z.isEnabled(),
@@ -30,22 +30,33 @@ let f = (0, l.uk)('poggermode_applause', o.Z.getSoundpack()),
         if (0 === b.length || !C() || m) return;
         m = !0;
         let [e, t] = b[b.length - 1];
-        ((0, l.GN)(e, t), (O = setTimeout(j, 1000)));
+        (0, l.GN)(e, t), (O = setTimeout(j, 1000));
     },
     j = () => {
-        (b.pop(), (m = !1), v());
+        b.pop(), (m = !1), v();
     },
     E = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
             n = a.Z.isConnected();
-        (b.push([e, t * (n ? 0.1 : 1)]), v());
+        b.push([e, t * (n ? 0.1 : 1)]), v();
     };
 class S extends i.Z {
     _initialize() {
-        (h.ZP.addChangeListener(this.startAudio), r.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), r.Z.subscribe('TYPING_STOP', this.stopAudio), r.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), r.Z.subscribe('CHANNEL_SELECT', this.stopAudio), r.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio));
+        h.ZP.addChangeListener(this.startAudio),
+            r.Z.subscribe("RTC_CONNECTION_STATE", this.setVolume),
+            r.Z.subscribe("TYPING_STOP", this.stopAudio),
+            r.Z.subscribe("TYPING_STOP_LOCAL", this.stopAudio),
+            r.Z.subscribe("CHANNEL_SELECT", this.stopAudio),
+            r.Z.subscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio);
     }
     _terminate() {
-        (h.ZP.removeChangeListener(this.startAudio), r.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), r.Z.unsubscribe('TYPING_STOP', this.stopAudio), r.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), r.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), r.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(O));
+        h.ZP.removeChangeListener(this.startAudio),
+            r.Z.unsubscribe("RTC_CONNECTION_STATE", this.setVolume),
+            r.Z.unsubscribe("TYPING_STOP", this.stopAudio),
+            r.Z.unsubscribe("TYPING_STOP_LOCAL", this.stopAudio),
+            r.Z.unsubscribe("CHANNEL_SELECT", this.stopAudio),
+            r.Z.unsubscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio),
+            clearTimeout(O);
     }
     setVolume(e) {
         let { state: t } = e;
@@ -70,7 +81,7 @@ class S extends i.Z {
         r && l >= 7 ? _() : y();
     }
     playAchievementUnlockSound() {
-        C() && E('poggermode_achievement_unlock');
+        C() && E("poggermode_achievement_unlock");
     }
 }
 let x = new S();

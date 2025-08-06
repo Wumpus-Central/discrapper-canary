@@ -10,10 +10,10 @@ function a() {
     return e
         ? (0, r.jsx)(l.Z, {
               value: t,
-              subText: s.intl.string(s.t['0p3R09']),
+              subText: s.intl.string(s.t["0p3R09"]),
               onChange: i.ZJ,
               marginTopStyle: o.marginTop8,
-              muted: !0
+              muted: !0,
           })
         : null;
 }

@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => u,
     h9: () => c,
-    nM: () => l
+    nM: () => l,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(846519);
@@ -14,7 +14,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,7 +40,7 @@ let l = i.createContext({
         onPreventIdle: () => null,
         onAllowIdle: () => null,
         onForceIdle: () => null,
-        onActive: () => null
+        onActive: () => null,
     }),
     c = i.createContext(!1);
 function u(e) {
@@ -54,17 +54,17 @@ function u(e) {
             f.current.delay(),
             () => {
                 var e;
-                (null == (e = f.current) || e.cancel(), (f.current = null));
+                null == (e = f.current) || e.cancel(), (f.current = null);
             }
         ),
-        [n]
+        [n],
     );
     let _ = i.useCallback(
             (e) => {
                 var t;
-                (u(!1), d.current.add(e), null == (t = f.current) || t.cancel());
+                u(!1), d.current.add(e), null == (t = f.current) || t.cancel();
             },
-            [d, f, u]
+            [d, f, u],
         ),
         p = i.useCallback(
             (e) => {
@@ -73,7 +73,7 @@ function u(e) {
                     null == (t = f.current) || t.delay();
                 }
             },
-            [d, f]
+            [d, f],
         ),
         h = i.useCallback(() => {
             if ((u(!1), 0 === d.current.size)) {
@@ -90,15 +90,15 @@ function u(e) {
                 onAllowIdle: p,
                 onPreventIdle: _,
                 onActive: h,
-                onForceIdle: m
+                onForceIdle: m,
             }),
-            [p, _, h, m]
+            [p, _, h, m],
         );
     return (0, r.jsx)(c.Provider, {
         value: a,
         children: (0, r.jsx)(l.Provider, {
             value: g,
-            children: t(s({ idle: a }, g))
-        })
+            children: t(s({ idle: a }, g)),
+        }),
     });
 }

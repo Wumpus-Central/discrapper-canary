@@ -5,7 +5,19 @@ var r = n(255367),
     a = n(464891);
 let s = i.memo(a.ZP);
 function l(e) {
-    let { message: t, channel: n, author: i, compact: a, animateAvatar: l, guildId: c, isGroupStart: u = !0, roleIcon: d, hideTimestamp: f, hideGuildTag: _, preview: p } = e;
+    let {
+        message: t,
+        channel: n,
+        author: i,
+        compact: a,
+        animateAvatar: l,
+        guildId: c,
+        isGroupStart: u = !0,
+        roleIcon: d,
+        hideTimestamp: f,
+        hideGuildTag: _,
+        preview: p,
+    } = e;
     return !(0, o.Z)(t) && (u || a)
         ? (0, r.jsx)(s, {
               message: t,
@@ -17,7 +29,7 @@ function l(e) {
               roleIcon: d,
               hideTimestamp: f,
               hideGuildTag: _,
-              preview: p
+              preview: p,
           })
         : void 0;
 }

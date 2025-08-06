@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(772848),
@@ -25,24 +25,24 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -50,12 +50,14 @@ let I = function (e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             i = null;
         return (
-            null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (i = y.intl.string(y.t.xO2msb)) : (i = y.intl.formatToPlainString(y.t.nskeMz, { percentage: (0, a.o)(Math.abs(t), n) })),
+            null == t || Number.isNaN(t)
+                ? (null == t || Number.isNaN(t)) && null != e && (i = y.intl.string(y.t.xO2msb))
+                : (i = y.intl.formatToPlainString(y.t.nskeMz, { percentage: (0, a.o)(Math.abs(t), n) })),
             {
-                localizedNumber: null != e ? ''.concat((0, a.o)(e, n)).concat(r ? '%' : '') : y.intl.string(y.t.jHpxws),
+                localizedNumber: null != e ? "".concat((0, a.o)(e, n)).concat(r ? "%" : "") : y.intl.string(y.t.jHpxws),
                 subtext: i,
                 isTrendingUp: t > 0,
-                isTrendingDown: t < 0
+                isTrendingDown: t < 0,
             }
         );
     },
@@ -66,26 +68,26 @@ let I = function (e, t, n) {
                   icon: c.d3s,
                   className: C.notEnoughMembersError,
                   backgroundColor: c.mTc.BACKGROUND_ACCENT,
-                  children: y.intl.string(y.t['FsgE/P'])
+                  children: y.intl.string(y.t["FsgE/P"]),
               })
             : null == e
               ? null
               : (0, r.jsx)(c.kzN, {
                     backgroundColor: c.mTc.BACKGROUND_ACCENT,
-                    children: y.intl.string(y.t.Iju63d)
+                    children: y.intl.string(y.t.Iju63d),
                 });
     },
     S = () => {
         let [e, t] = i.useState(!1),
             n = (0, s.e7)([v.Z], () => v.Z.getGuildId());
-        return (0, r.jsx)('div', {
-            'data-button-hoisted-classname-wrapper': !0,
+        return (0, r.jsx)("div", {
+            "data-button-hoisted-classname-wrapper": !0,
             className: C.developerPortalCta,
             children: (0, r.jsx)(c.zxk, {
-                variant: 'primary',
+                variant: "primary",
                 text: y.intl.string(y.t.Uskgx8),
                 onClick: () => {
-                    (t(!0),
+                    t(!0),
                         (function (e) {
                             x.default.track(_.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
                             let t = null == e ? _.E07.DEVELOPER_PORTAL : _.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
@@ -95,7 +97,7 @@ let I = function (e, t, n) {
                                     url: _.ANM.HANDOFF,
                                     body: { key: n },
                                     oldFormErrors: !0,
-                                    rejectWithError: !0
+                                    rejectWithError: !0,
                                 })
                                 .then(
                                     (e) => {
@@ -104,14 +106,14 @@ let I = function (e, t, n) {
                                     },
                                     () => {
                                         window.open(t);
-                                    }
+                                    },
                                 );
                         })(n).then(() => {
                             t(!1);
-                        }));
+                        });
                 },
-                loading: e
-            })
+                loading: e,
+            }),
         });
     },
     T = () => {
@@ -121,21 +123,28 @@ let I = function (e, t, n) {
             l = (0, s.e7)([g.default], () => g.default.locale),
             { analytics: a, errorCode: o } = (0, s.cj)([j.Z], () => ({
                 analytics: null != e ? j.Z.getOverviewAnalytics(e) : null,
-                errorCode: j.Z.getError()
+                errorCode: j.Z.getError(),
             })),
             x = (0, s.e7)([f.Z], () => f.Z.getSettings().enabled),
-            T = null == t || null == n || (null != t && t < 500 && null != n && !n.features.has(_.oNc.PARTNERED) && !n.features.has(_.oNc.VERIFIED));
-        (i.useEffect(() => {
+            T =
+                null == t ||
+                null == n ||
+                (null != t &&
+                    t < 500 &&
+                    null != n &&
+                    !n.features.has(_.oNc.PARTNERED) &&
+                    !n.features.has(_.oNc.VERIFIED));
+        i.useEffect(() => {
             null == e || T || ((0, b.Vk)(e), (0, b.SR)(e), (0, b.xl)(e));
         }, [e, T]),
             i.useEffect(() => {
                 (0, m.Kw)(O.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
-            }, []));
+            }, []);
         let P =
             null != a
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: C.__invalid_guildAnalyticsOverviewWrapper,
-                      children: (0, r.jsxs)('div', {
+                      children: (0, r.jsxs)("div", {
                           className: C.overviewData,
                           children: [
                               (0, r.jsx)(
@@ -143,63 +152,66 @@ let I = function (e, t, n) {
                                   N(
                                       {
                                           title: y.intl.string(y.t.i0Nora),
-                                          tooltipText: y.intl.string(y.t.KiRbLC)
+                                          tooltipText: y.intl.string(y.t.KiRbLC),
                                       },
-                                      I(a.visitors, a.visitorsChange, l)
-                                  )
+                                      I(a.visitors, a.visitorsChange, l),
+                                  ),
                               ),
                               (0, r.jsx)(
                                   u.Z,
                                   N(
                                       {
                                           title: y.intl.string(y.t.DDAHdX),
-                                          tooltipText: y.intl.string(y.t.HxWUkZ)
+                                          tooltipText: y.intl.string(y.t.HxWUkZ),
                                       },
-                                      I(a.communicators, a.communicatorsChange, l)
-                                  )
+                                      I(a.communicators, a.communicatorsChange, l),
+                                  ),
                               ),
-                              (0, r.jsx)(u.Z, N({ title: y.intl.string(y.t.hYeOqK) }, I(a.newMembers, a.newMembersChange, l))),
+                              (0, r.jsx)(
+                                  u.Z,
+                                  N({ title: y.intl.string(y.t.hYeOqK) }, I(a.newMembers, a.newMembersChange, l)),
+                              ),
                               (0, r.jsx)(
                                   u.Z,
                                   N(
                                       {
                                           title: y.intl.string(y.t.jj7OPz),
-                                          tooltipText: y.intl.string(y.t.MQCsl5)
+                                          tooltipText: y.intl.string(y.t.MQCsl5),
                                       },
-                                      I(a.pctRetained, a.pctRetainedChange, l, !0)
-                                  )
-                              )
-                          ]
-                      })
+                                      I(a.pctRetained, a.pctRetainedChange, l, !0),
+                                  ),
+                              ),
+                          ],
+                      }),
                   })
                 : null;
         return (0, r.jsxs)(c.hjN, {
             tag: c.RB0.H1,
-            title: y.intl.string(y.t['0wWfUF']),
+            title: y.intl.string(y.t["0wWfUF"]),
             children: [
                 (0, r.jsx)(c.R94, {
                     type: c.geA.DESCRIPTION,
-                    children: y.intl.format(y.t.NIZ60d, {})
+                    children: y.intl.format(y.t.NIZ60d, {}),
                 }),
                 E(o, T),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: C.developerPortalCtaWrapper,
                     children: [
-                        (0, r.jsx)('div', { className: C.placeholderImage }),
+                        (0, r.jsx)("div", { className: C.placeholderImage }),
                         (0, r.jsx)(c.Text, {
                             className: C.developerPortalCtaText,
-                            variant: 'text-sm/normal',
-                            children: y.intl.string(y.t.A5vsws)
+                            variant: "text-sm/normal",
+                            children: y.intl.string(y.t.A5vsws),
                         }),
-                        (0, r.jsx)(S, {})
-                    ]
+                        (0, r.jsx)(S, {}),
+                    ],
                 }),
                 x
-                    ? (0, r.jsx)('div', {
+                    ? (0, r.jsx)("div", {
                           className: C.streamerMode,
-                          children: (0, r.jsx)(d.Z, {})
+                          children: (0, r.jsx)(d.Z, {}),
                       })
-                    : P
-            ]
+                    : P,
+            ],
         });
     };

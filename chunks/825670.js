@@ -1,7 +1,7 @@
 n(98405)(
     {
-        target: 'Object',
-        stat: !0
+        target: "Object",
+        stat: !0,
     },
-    { hasOwn: n(77025) }
+    { hasOwn: n(77025) },
 );

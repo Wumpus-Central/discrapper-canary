@@ -1,4 +1,4 @@
-(n.d(t, { S: () => p }), n(388685));
+n.d(t, { S: () => p }), n(388685);
 var r = n(73800),
     i = n(481060),
     o = n(355467),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,8 +48,8 @@ let p = (e) => {
             let n = (0, l.vP)(),
                 r = n
                     ? (0, u.Q)({
-                          ipCountryCode: null != (e = s.Z.ipCountryCode) ? e : 'ALL',
-                          location: 'stripe_payment_element_options'
+                          ipCountryCode: null != (e = s.Z.ipCountryCode) ? e : "ALL",
+                          location: "stripe_payment_element_options",
                       }).countryPaymentMethods
                     : [];
             b((0, d.lS)(r, n));
@@ -57,7 +57,7 @@ let p = (e) => {
                 let e = await (0, c.V)(r);
                 f(e);
             } catch (e) {
-                (h(e), null != t && t(e), (0, o.SQ)(e));
+                h(e), null != t && t(e), (0, o.SQ)(e);
             }
             g(!1);
         }, [t]);
@@ -77,24 +77,24 @@ let p = (e) => {
                           { clientSecret: n },
                           {
                               appearance: {
-                                  theme: 'flat',
+                                  theme: "flat",
                                   variables: {
                                       colorText: v.hex(),
-                                      colorBackground: O.hex()
+                                      colorBackground: O.hex(),
                                   },
                                   rules: {
-                                      '.Input': { backgroundColor: I.hex() },
-                                      '.Tab': { backgroundColor: I.hex() }
-                                  }
+                                      ".Input": { backgroundColor: I.hex() },
+                                      ".Tab": { backgroundColor: I.hex() },
+                                  },
                               },
                               customPaymentMethods: E,
-                              paymentMethodCreation: 'manual'
-                          }
+                              paymentMethodCreation: "manual",
+                          },
                       ),
-            [O, v, I, n, E, m]
+            [O, v, I, n, E, m],
         ),
         setupIntentSecret: n,
         customPaymentMethods: E,
-        isLoading: m
+        isLoading: m,
     };
 };

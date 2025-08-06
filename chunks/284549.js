@@ -1,4 +1,4 @@
-(i.d(t, { default: () => C }), i(388685));
+i.d(t, { default: () => C }), i(388685);
 var n = i(255367),
     s = i(73800),
     a = i(442837),
@@ -24,10 +24,10 @@ let C = (e) => {
         I = v === p.QZA.SUBMITTING;
     function b(e) {
         var t, i;
-        return null != (i = null == C || null == (t = C[e]) ? void 0 : t[0]) ? i : '';
+        return null != (i = null == C || null == (t = C[e]) ? void 0 : t[0]) ? i : "";
     }
-    let P = b('email'),
-        j = b('password');
+    let P = b("email"),
+        j = b("password");
     return (0, n.jsx)(h.Z, {
         transitionState: t,
         email: null == x ? void 0 : x.email,
@@ -40,20 +40,24 @@ let C = (e) => {
             E(!1);
         },
         onVerify: function (e, t) {
-            ((0, r.Mn)({
+            (0, r.Mn)({
                 email: e,
-                password: t
+                password: t,
             }).then((e) => {
                 if (!(null == e ? void 0 : e.ok)) {
                     var t;
-                    (null == e || null == (t = e.body) ? void 0 : t.username) != null ? (0, d.P)() : 0 === j.length && 0 === P.length && (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.R0RpRU), l.ToastType.FAILURE));
+                    (null == e || null == (t = e.body) ? void 0 : t.username) != null
+                        ? (0, d.P)()
+                        : 0 === j.length &&
+                          0 === P.length &&
+                          (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.R0RpRU), l.ToastType.FAILURE));
                 }
             }),
-                E(!0));
+                E(!0);
         },
         onResend: function () {
             o.Z.verifyResend();
         },
-        onClose: i
+        onClose: i,
     });
 };

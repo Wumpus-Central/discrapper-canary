@@ -1,4 +1,4 @@
-(n.d(t, { j: () => s }), n(388685), n(583741));
+n.d(t, { j: () => s }), n(388685), n(583741);
 var l = n(73800),
     r = n(442837),
     a = n(826581),
@@ -7,6 +7,6 @@ function s(e) {
     let { guildId: t, applicationStatus: n, sortOrder: s } = e,
         o = (0, r.e7)([a.Z], () => a.Z.getRequests(t, n), [n, t]);
     return {
-        guildJoinRequests: l.useMemo(() => (s === i.Nw.TIMESTAMP_DESC ? [...o].reverse() : o), [s, o])
+        guildJoinRequests: l.useMemo(() => (s === i.Nw.TIMESTAMP_DESC ? [...o].reverse() : o), [s, o]),
     };
 }

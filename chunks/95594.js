@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(73800),
     i = n(663507),
     o = n(924428),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,11 +61,27 @@ let d = Object.freeze({
     totalHeight: 0,
     gridData: {
         boundaries: [],
-        coordinates: {}
-    }
+        coordinates: {},
+    },
 });
 function f(e) {
-    let { sections: t, columns: n, getItemKey: s, getItemHeight: c, getSectionHeight: f, chunkSize: _ = 250, getScrollerState: p, maxBufferWidth: h, itemGutter: m, removeEdgeItemGutters: g, sectionGutter: E, padding: b, paddingVertical: y, paddingHorizontal: O, dir: v } = e,
+    let {
+            sections: t,
+            columns: n,
+            getItemKey: s,
+            getItemHeight: c,
+            getSectionHeight: f,
+            chunkSize: _ = 250,
+            getScrollerState: p,
+            maxBufferWidth: h,
+            itemGutter: m,
+            removeEdgeItemGutters: g,
+            sectionGutter: E,
+            padding: b,
+            paddingVertical: y,
+            paddingHorizontal: O,
+            dir: v,
+        } = e,
         I = (0, o.Z)(),
         T = (0, r.useRef)(d),
         [S] = (0, r.useState)(() => new i.ZP()),
@@ -76,11 +92,11 @@ function f(e) {
             dirty: R,
             chunkStart: P,
             chunkEnd: w,
-            forceUpdateOnChunkChange: D
+            forceUpdateOnChunkChange: D,
         } = (0, a.Z)({
             chunkSize: _,
             getScrollerState: p,
-            forceUpdate: I
+            forceUpdate: I,
         });
     return (
         (T.current = (0, r.useMemo)(
@@ -101,16 +117,16 @@ function f(e) {
                           paddingVertical: y,
                           paddingHorizontal: O,
                           marginLeft: C / 2,
-                          dir: v
+                          dir: v,
                       }),
                       S.computeVisibleSections(Math.max(0, P * _), w * _),
                       S.getState()),
-            [R, S, t, n, s, c, f, P, w, _, m, g, E, b, y, O, N, v]
+            [R, S, t, n, s, c, f, P, w, _, m, g, E, b, y, O, N, v],
         )),
         u(l({}, T.current), {
             masonryComputer: S,
             forceUpdateOnChunkChange: D,
-            forceUpdate: I
+            forceUpdate: I,
         })
     );
 }

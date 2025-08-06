@@ -4,7 +4,7 @@ var n = e(127849),
     a = e(366843),
     s = e(436207),
     u = e(25124),
-    c = e(751736)('iterator'),
+    c = e(751736)("iterator"),
     f = a.values,
     l = function (t, r) {
         if (t) {
@@ -26,4 +26,4 @@ var n = e(127849),
         }
     };
 for (var p in o) l(n[p] && n[p].prototype, p);
-l(i, 'DOMTokenList');
+l(i, "DOMTokenList");

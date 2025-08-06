@@ -21,18 +21,18 @@ var r = n(255367),
 let v = {
     origin: {
         x: -16,
-        y: 0
+        y: 0,
     },
     targetWidth: 48,
     targetHeight: 48,
     offset: {
         x: 0,
-        y: 0
-    }
+        y: 0,
+    },
 };
 function j(e) {
     (0, s.jW)(e, async () => {
-        let { default: e } = await n.e('9606').then(n.bind(n, 987578));
+        let { default: e } = await n.e("9606").then(n.bind(n, 987578));
         return (t) =>
             (0, r.jsx)(
                 e,
@@ -40,27 +40,27 @@ function j(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
-                })({}, t)
+                })({}, t),
             );
     });
 }
@@ -73,42 +73,42 @@ function E(e) {
         { analyticsLocations: I } = (0, a.ZP)(),
         P = (0, r.jsx)(b.Z, {
             showPill: !1,
-            id: 'create-join-button',
+            id: "create-join-button",
             onClick: () => {
                 (0, u.yU)()
                     ? (0, d.Z)({
                           analyticsSource: { page: O.Sbl.CREATE_JOIN_GUILD_MODAL },
                           analyticsLocation: {
                               page: O.Sbl.CREATE_JOIN_GUILD_MODAL,
-                              section: O.jXE.GUILD_CAP_UPSELL_MODAL
+                              section: O.jXE.GUILD_CAP_UPSELL_MODAL,
                           },
-                          analyticsLocations: I
+                          analyticsLocations: I,
                       })
-                    : c.Z.openCreateGuildModal({ location: 'Guild List' });
+                    : c.Z.openCreateGuildModal({ location: "Guild List" });
             },
             selected: x,
             onContextMenu: j,
             tooltip: y.intl.string(y.t.l5WIbW),
-            icon: o.oFk
+            icon: o.oFk,
         });
     return t
         ? P
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: C.tutorialContainer,
               children: (0, r.jsxs)(h.Z, {
-                  tutorialId: S ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: S ? "create-more-servers" : "create-first-server",
                   inlineSpecs: v,
-                  position: 'right',
+                  position: "right",
                   children: [
                       P,
                       null != n &&
                           (0, r.jsx)(m.ZP, {
-                              name: y.intl.string(y.t['45xjMz']),
+                              name: y.intl.string(y.t["45xjMz"]),
                               targetNode: n,
                               below: !0,
-                              noCombine: !0
-                          })
-                  ]
-              })
+                              noCombine: !0,
+                          }),
+                  ],
+              }),
           });
 }

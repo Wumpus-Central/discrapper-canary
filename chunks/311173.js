@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(953529));
+n.d(t, { Z: () => x }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -15,74 +15,86 @@ let h = o.Z.getArticleURL(m.BhN.GUILD_AUTOMOD_REGEX);
 function f(e) {
     let { hasErrors: t, text: n, errorText: i } = e;
     return t
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: p.subtext,
               children: (0, r.jsx)(s.Text, {
                   className: p.errorSpan,
-                  variant: 'text-xs/medium',
-                  color: 'text-danger',
-                  children: null != i ? i : g.intl.format(g.t.jKYAPj, { helpArticle: h })
-              })
+                  variant: "text-xs/medium",
+                  color: "text-danger",
+                  children: null != i ? i : g.intl.format(g.t.jKYAPj, { helpArticle: h }),
+              }),
           })
         : (0, r.jsx)(s.Text, {
               className: p.subtext,
-              variant: 'text-xs/medium',
-              color: 'text-muted',
-              children: n
+              variant: "text-xs/medium",
+              color: "text-muted",
+              children: n,
           });
 }
 function x(e) {
     var t, n;
     let { rule: l, onChangeText: s, className: o } = e,
-        { patterns: m, valueError: x, errors: b, validatePatternsChanged: j, validateEditingValueChanged: v } = (0, d.Z)(l, s),
+        {
+            patterns: m,
+            valueError: x,
+            errors: b,
+            validatePatternsChanged: j,
+            validateEditingValueChanged: v,
+        } = (0, d.Z)(l, s),
         [_] = i.useState(() => ({
             tags: m,
-            value: '',
+            value: "",
             selections: [],
-            isSelecting: !1
+            isSelecting: !1,
         })),
         O = i.useMemo(
             () =>
                 b.reduce((e, t) => {
-                    let { pattern: n, message: r, description: i, erroringCharacterLength: l = n.length, erroringCharacterOffset: a = 0 } = t;
+                    let {
+                        pattern: n,
+                        message: r,
+                        description: i,
+                        erroringCharacterLength: l = n.length,
+                        erroringCharacterOffset: a = 0,
+                    } = t;
                     return (
                         null == m.find((e) => e === n) ||
                             (e[n] = {
                                 value: n,
                                 message: null != i ? i : r,
                                 erroringCharacterLength: l,
-                                erroringCharacterOffset: a
+                                erroringCharacterOffset: a,
                             }),
                         e
                     );
                 }, {}),
-            [b, m]
+            [b, m],
         ),
         y = i.useCallback(
             (e) => {
                 j(e, m);
             },
-            [j, m]
+            [j, m],
         ),
         C = i.useCallback(
             (e) => {
                 v(e);
             },
-            [v]
+            [v],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(p.keywordsContainer, o),
         children: [
             (0, r.jsx)(c.Z, {
-                placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
+                placeholder: "^b(a|@)d$\nw(o|0)rd(s|$)",
                 initialValue: _,
                 onChangeTags: y,
                 onChangeNewTagValue: C,
                 tagErrors: O,
-                maxTags: u.VW
+                maxTags: u.VW,
             }),
             (0, r.jsx)(f, {
-                text: g.intl.format(g.t['PGC/AA'], { helpArticle: h }),
+                text: g.intl.format(g.t["PGC/AA"], { helpArticle: h }),
                 hasErrors: b.length > 0 || null != x,
                 errorText:
                     null !=
@@ -97,8 +109,8 @@ function x(e) {
                         ? n
                         : null == x
                           ? void 0
-                          : x.message
-            })
-        ]
+                          : x.message,
+            }),
+        ],
     });
 }

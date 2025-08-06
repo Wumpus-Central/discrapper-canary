@@ -1,4 +1,4 @@
-(n.d(t, { default: () => b }), n(953529));
+n.d(t, { default: () => b }), n(953529);
 var r = n(255367);
 n(73800);
 var a = n(512722),
@@ -21,25 +21,25 @@ function b(e) {
     var t, n;
     let { transitionState: a, guildProductListingId: b, analyticsLocation: v, guildId: Z, onClose: N } = e,
         C = (0, l.e7)([f.Z], () => f.Z.getGuildProduct(b));
-    (i()(null != C, 'guildProductListing cannot be null'),
+    i()(null != C, "guildProductListing cannot be null"),
         (0, d.Z)({
             type: s.ImpressionTypes.MODAL,
             name: s.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
             properties: {
                 guild_product_listing_id: b,
                 has_entitlement: !0 === C.has_entitlement,
-                location: v
-            }
-        }));
-    let I = null != (t = (0, h.C)(C)) ? t : '',
+                location: v,
+            },
+        });
+    let I = null != (t = (0, h.C)(C)) ? t : "",
         y = (0, h.k)(C),
         O = (0, l.e7)([x.Z], () => x.Z.getGuild(Z));
     return (0, r.jsxs)(o.Y0X, {
         className: g.modal,
         size: o.CgR.MEDIUM,
         transitionState: a,
-        'aria-label': C.name,
-        parentComponent: 'GuildProductInfoModal',
+        "aria-label": C.name,
+        parentComponent: "GuildProductInfoModal",
         children: [
             (0, r.jsxs)(o.xBx, {
                 separator: !1,
@@ -48,52 +48,52 @@ function b(e) {
                         height: 267,
                         listing: C,
                         className: g.headerImage,
-                        alt: ''
+                        alt: "",
                     }),
                     (0, r.jsx)(o.olH, {
                         className: g.closeButton,
                         onClick: N,
-                        withCircleBackground: !0
-                    })
-                ]
+                        withCircleBackground: !0,
+                    }),
+                ],
             }),
             (0, r.jsx)(o.hzk, {
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: g.body,
                     children: [
                         (0, r.jsx)(o.X6q, {
-                            variant: 'heading-xl/medium',
-                            color: 'header-primary',
-                            children: C.name
+                            variant: "heading-xl/medium",
+                            color: "header-primary",
+                            children: C.name,
                         }),
                         (0, r.jsx)(o.LZC, { size: 4 }),
                         (0, r.jsx)(o.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'header-secondary',
+                            variant: "text-sm/normal",
+                            color: "header-secondary",
                             children: p.intl.format(p.t.xImSen, {
                                 productType: I,
-                                personName: null != (n = null == O ? void 0 : O.name) ? n : ''
-                            })
+                                personName: null != (n = null == O ? void 0 : O.name) ? n : "",
+                            }),
                         }),
                         (0, r.jsx)(o.LZC, { size: 16 }),
                         (0, r.jsx)(j.Z, { listing: C }),
                         (0, r.jsx)(o.LZC, { size: 16 }),
-                        (0, r.jsx)('div', { className: g.seperator }),
+                        (0, r.jsx)("div", { className: g.seperator }),
                         (0, r.jsx)(o.LZC, { size: 16 }),
                         (0, r.jsx)(o.X6q, {
-                            variant: 'heading-lg/medium',
-                            color: 'header-primary',
-                            children: p.intl.string(p.t.TNnDJi)
+                            variant: "heading-lg/medium",
+                            color: "header-primary",
+                            children: p.intl.string(p.t.TNnDJi),
                         }),
                         (0, r.jsx)(o.LZC, { size: 12 }),
                         (0, r.jsx)(u.Z, {
                             className: g.description,
-                            variant: 'text-md/normal',
-                            color: 'text-muted',
-                            text: C.description
-                        })
-                    ]
-                })
+                            variant: "text-md/normal",
+                            color: "text-muted",
+                            text: C.description,
+                        }),
+                    ],
+                }),
             }),
             (0, r.jsxs)(o.mzw, {
                 className: g.footer,
@@ -101,16 +101,16 @@ function b(e) {
                     (0, r.jsx)(_.Z, {
                         guildId: Z,
                         guildProductListingId: b,
-                        sourceAnalyticsLocations: c.Z.GUILD_PRODUCT_INFO_MODAL
+                        sourceAnalyticsLocations: c.Z.GUILD_PRODUCT_INFO_MODAL,
                     }),
                     (0, r.jsx)(o.Text, {
-                        tag: 'div',
-                        variant: 'heading-xl/semibold',
-                        color: 'header-primary',
-                        children: y
-                    })
-                ]
-            })
-        ]
+                        tag: "div",
+                        variant: "heading-xl/semibold",
+                        color: "header-primary",
+                        children: y,
+                    }),
+                ],
+            }),
+        ],
     });
 }

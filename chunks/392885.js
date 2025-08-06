@@ -34,15 +34,15 @@ class p extends (l = a.ZP.Store) {
         return u;
     }
 }
-((i = 'GuildSettingsSafetyStore'),
-    (r = 'displayName') in p
+(i = "GuildSettingsSafetyStore"),
+    (r = "displayName") in p
         ? Object.defineProperty(p, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (p[r] = i));
+        : (p[r] = i);
 let h = new p(s.Z, {
     GUILD_SETTINGS_INIT: function () {
         if (o.Z.getGuildId() === m) return !1;
@@ -53,5 +53,5 @@ let h = new p(s.Z, {
     GUILD_SETTINGS_SAFETY_PAGE: function (e) {
         let { page: t } = e;
         u = t;
-    }
+    },
 });

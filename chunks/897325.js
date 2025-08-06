@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     E: () => s,
-    _: () => a
+    _: () => a,
 }),
-    n(314940));
+    n(314940);
 var r = n(278074),
     i = n(263568),
     o = n(228127);
@@ -19,8 +19,8 @@ function a(e, t) {
             voted: o.votedStyles,
             victorSelected: o.victorStyles,
             victorNotSelected: o.victorStyles,
-            normalVote: n
-        }
+            normalVote: n,
+        },
     };
 }
 function s(e, t) {

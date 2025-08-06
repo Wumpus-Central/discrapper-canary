@@ -21,7 +21,7 @@ var h = {
         fgColor: a.default.oneOfType([a.default.object, a.default.string]),
         level: a.default.string,
         size: a.default.number,
-        value: a.default.string.isRequired
+        value: a.default.string.isRequired,
     },
     g = (0, u.forwardRef)(function (t, e) {
         var r = t.bgColor,
@@ -33,9 +33,9 @@ var h = {
                 var r = {};
                 for (var o in t) !(e.indexOf(o) >= 0) && Object.prototype.hasOwnProperty.call(t, o) && (r[o] = t[o]);
                 return r;
-            })(t, ['bgColor', 'fgColor', 'level', 'size', 'value']),
+            })(t, ["bgColor", "fgColor", "level", "size", "value"]),
             c = new n.default(-1, i.default[u]);
-        (c.addData(h), c.make());
+        c.addData(h), c.make();
         var d = c.modules;
         return s.default.createElement(
             l.default,
@@ -45,33 +45,33 @@ var h = {
                     .map(function (t, e) {
                         return t
                             .map(function (t, r) {
-                                return t ? '' : 'M ' + r + ' ' + e + ' l 1 0 0 1 -1 0 Z';
+                                return t ? "" : "M " + r + " " + e + " l 1 0 0 1 -1 0 Z";
                             })
-                            .join(' ');
+                            .join(" ");
                     })
-                    .join(' '),
+                    .join(" "),
                 fgColor: a,
                 fgD: d
                     .map(function (t, e) {
                         return t
                             .map(function (t, r) {
-                                return t ? 'M ' + r + ' ' + e + ' l 1 0 0 1 -1 0 Z' : '';
+                                return t ? "M " + r + " " + e + " l 1 0 0 1 -1 0 Z" : "";
                             })
-                            .join(' ');
+                            .join(" ");
                     })
-                    .join(' '),
+                    .join(" "),
                 ref: e,
                 size: f,
-                viewBoxSize: d.length
-            })
+                viewBoxSize: d.length,
+            }),
         );
     });
-((g.displayName = 'QRCode'),
+(g.displayName = "QRCode"),
     (g.propTypes = h),
     (g.defaultProps = {
-        bgColor: '#FFFFFF',
-        fgColor: '#000000',
-        level: 'L',
-        size: 256
+        bgColor: "#FFFFFF",
+        fgColor: "#000000",
+        level: "L",
+        size: 256,
     }),
-    (e.default = g));
+    (e.default = g);

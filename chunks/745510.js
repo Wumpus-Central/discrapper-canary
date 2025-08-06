@@ -1,6 +1,6 @@
 n.d(t, {
     d: () => m,
-    h: () => h
+    h: () => h,
 });
 var r = n(255367),
     i = n(73800),
@@ -15,7 +15,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,11 +69,18 @@ let _ = 20,
         createMultipleConfetti: () => [],
         createMultipleConfettiAt: () => [],
         addClickListener: () => l.dG4,
-        removeClickListener: l.dG4
+        removeClickListener: l.dG4,
     },
     h = i.createContext(p);
 function m(e) {
-    let { children: t, confettiCanvas: n, spriteCanvas: l, baseConfig: c, addClickListener: d, removeClickListener: m } = e,
+    let {
+            children: t,
+            confettiCanvas: n,
+            spriteCanvas: l,
+            baseConfig: c,
+            addClickListener: d,
+            removeClickListener: m,
+        } = e,
         g = (0, o.uR)(n, l),
         E = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
         b = i.useMemo(
@@ -89,16 +96,16 @@ function m(e) {
                                   u(
                                       f(u({}, c), {
                                           position: {
-                                              type: 'static',
+                                              type: "static",
                                               value: {
                                                   x: e,
-                                                  y: t
-                                              }
-                                          }
+                                                  y: t,
+                                              },
+                                          },
                                       }),
-                                      n
+                                      n,
                                   ),
-                                  r
+                                  r,
                               ),
                           createMultipleConfetti: function (e) {
                               let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _,
@@ -112,26 +119,26 @@ function m(e) {
                                   u(
                                       f(u({}, c), {
                                           position: {
-                                              type: 'static',
+                                              type: "static",
                                               value: {
                                                   x: e,
-                                                  y: t
-                                              }
-                                          }
+                                                  y: t,
+                                              },
+                                          },
                                       }),
-                                      n
+                                      n,
                                   ),
                                   r,
-                                  i
+                                  i,
                               );
                           },
                           addClickListener: d,
-                          removeClickListener: m
+                          removeClickListener: m,
                       },
-            [d, c, g, n, E, m]
+            [d, c, g, n, E, m],
         );
     return (0, r.jsx)(h.Provider, {
         value: b,
-        children: t
+        children: t,
     });
 }

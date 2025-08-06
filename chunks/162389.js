@@ -19,24 +19,24 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -68,14 +68,14 @@ function y(e) {
             r &&
                 !e &&
                 (0, c.ZDy)(async () => {
-                    let { default: e } = await n.e('21971').then(n.bind(n, 201049));
+                    let { default: e } = await n.e("21971").then(n.bind(n, 201049));
                     return (n) =>
                         (0, i.jsx)(
                             e,
                             v(b({}, n), {
                                 channelId: t.id,
-                                guildId: t.guild_id
-                            })
+                                guildId: t.guild_id,
+                            }),
                         );
                 });
         }, [t, r]),
@@ -83,28 +83,28 @@ function y(e) {
             (e) => {
                 r &&
                     (0, c.ZDy)(async () => {
-                        let { default: l } = await n.e('21971').then(n.bind(n, 201049));
+                        let { default: l } = await n.e("21971").then(n.bind(n, 201049));
                         return (n) =>
                             (0, i.jsx)(
                                 l,
                                 v(b({}, n), {
                                     channelId: t.id,
                                     guildId: t.guild_id,
-                                    tag: e
-                                })
+                                    tag: e,
+                                }),
                             );
                     });
             },
-            [r, t]
+            [r, t],
         ),
         {
             handleDragStart: S,
             handleDragReset: E,
-            handleDragComplete: O
+            handleDragComplete: O,
         } = (0, h.Z)(t.availableTags, (e) => {
             (0, d.pW)({ availableTags: e });
         });
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: j.tags,
         children: [
             m
@@ -118,10 +118,10 @@ function y(e) {
                               onTagClick: N,
                               onDragComplete: O,
                               onDragReset: E,
-                              onDragStart: S
+                              onDragStart: S,
                           },
-                          e.id
-                      )
+                          e.id,
+                      ),
                   )
                 : null,
             m
@@ -129,42 +129,50 @@ function y(e) {
                       onClick: y,
                       className: s()(j.addTags, { [j.disabled]: !r || u }),
                       children: (0, i.jsx)(c.qJs, {
-                          size: 'custom',
-                          'aria-label': x.intl.string(x.t['/jubeH']),
+                          size: "custom",
+                          "aria-label": x.intl.string(x.t["/jubeH"]),
                           color: o.Z.unsafe_rawColors.WHITE_500.css,
                           width: 20,
-                          height: 20
-                      })
+                          height: 20,
+                      }),
                   })
                 : (0, i.jsx)(c.zxk, {
-                      variant: 'primary',
-                      text: x.intl.string(x.t['/jubeH']),
+                      variant: "primary",
+                      text: x.intl.string(x.t["/jubeH"]),
                       disabled: !r,
-                      onClick: y
-                  })
-        ]
+                      onClick: y,
+                  }),
+        ],
     });
 }
 function C(e) {
-    let { tag: t, availableTags: n, canManageChannels: l, onTagClick: r, onDragComplete: a, onDragStart: o, onDragReset: c } = e,
+    let {
+            tag: t,
+            availableTags: n,
+            canManageChannels: l,
+            onTagClick: r,
+            onDragComplete: a,
+            onDragStart: o,
+            onDragReset: c,
+        } = e,
         d = n.findIndex((e) => e.id === t.id),
         {
             drag: h,
             dragSourcePosition: g,
             drop: p,
-            setIsDraggable: f
+            setIsDraggable: f,
         } = (0, u.Z)({
-            type: 'CHANNEL_SETTINGS_FORUM_TAGS',
+            type: "CHANNEL_SETTINGS_FORUM_TAGS",
             index: d,
             optionId: t.id,
             onDragStart: o,
             onDragComplete: a,
-            onDragReset: c
+            onDragReset: c,
         });
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: s()(j.container, {
             [j.dropIndicatorBefore]: null != g && d < g,
-            [j.dropIndicatorAfter]: null != g && d > g
+            [j.dropIndicatorAfter]: null != g && d > g,
         }),
         ref: (e) => {
             h(p(e));
@@ -175,7 +183,7 @@ function C(e) {
             tag: t,
             disabled: !l,
             ariaLabel: x.intl.formatToPlainString(x.t.jhSvBw, { name: t.name }),
-            onClick: l ? () => r(t) : void 0
-        })
+            onClick: l ? () => r(t) : void 0,
+        }),
     });
 }

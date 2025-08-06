@@ -19,8 +19,8 @@ function m(e) {
         label: u.intl.string(u.t.kbFsAA),
         volume: n,
         onVolumeChange: function (e) {
-            ((n = (0, o.A)(e)), (0, s.xz)(n, m));
+            (n = (0, o.A)(e)), (0, s.xz)(n, m);
         },
-        refreshStyles: t
+        refreshStyles: t,
     });
 }

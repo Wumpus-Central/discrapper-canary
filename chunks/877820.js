@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,7 +28,7 @@ class s extends (r = i.ZP.Store) {
     }
     handleOrderCreateSuccess(e) {
         let { orderId: t } = e;
-        ((this._isCreatingOrder = !1), (this._orderId = t));
+        (this._isCreatingOrder = !1), (this._orderId = t);
     }
     handleOrderCreateFail(e) {
         let {} = e;
@@ -51,19 +51,19 @@ class s extends (r = i.ZP.Store) {
         this._orderId = null;
     }
     constructor() {
-        (super(o.Z, {
+        super(o.Z, {
             ORDER_CREATE_START: (e) => this.handleOrderCreateStart(e),
             ORDER_CREATE_SUCCESS: (e) => this.handleOrderCreateSuccess(e),
             ORDER_CREATE_FAIL: (e) => this.handleOrderCreateFail(e),
             ORDER_UPDATE_START: (e) => this.handleOrderUpdateStart(e),
             ORDER_UPDATE_SUCCESS: (e) => this.handleOrderUpdateSuccess(e),
             ORDER_UPDATE_FAIL: (e) => this.handleOrderUpdateFail(e),
-            PAYMENT_MODAL_OPEN: (e) => this.handlePaymentModalOpen(e)
+            PAYMENT_MODAL_OPEN: (e) => this.handlePaymentModalOpen(e),
         }),
-            a(this, '_isCreatingOrder', !1),
-            a(this, '_isUpdatingOrder', !1),
-            a(this, '_orderId', null));
+            a(this, "_isCreatingOrder", !1),
+            a(this, "_isUpdatingOrder", !1),
+            a(this, "_orderId", null);
     }
 }
-a(s, 'displayName', 'OrderStore');
+a(s, "displayName", "OrderStore");
 let l = new s();

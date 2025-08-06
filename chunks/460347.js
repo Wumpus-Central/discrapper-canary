@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => d,
-    m: () => u
+    m: () => u,
 }),
-    n(997841));
+    n(997841);
 var r = n(442837),
     i = n(160404),
     o = n(271383),
@@ -15,7 +15,10 @@ function c(e, t, n) {
     let i = t.getSelfMember(e);
     if (null == i) return !1;
     let o = t.getSelfMemberJoinedAt(e);
-    return !(null == o || (0, s.yE)(null != (r = i.flags) ? r : 0, l.q.COMPLETED_HOME_ACTIONS)) && Date.now() - o.getTime() < a.Z.Millis.WEEK;
+    return (
+        !(null == o || (0, s.yE)(null != (r = i.flags) ? r : 0, l.q.COMPLETED_HOME_ACTIONS)) &&
+        Date.now() - o.getTime() < a.Z.Millis.WEEK
+    );
 }
 function u(e) {
     return c(e, o.ZP, i.Z);

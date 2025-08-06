@@ -25,7 +25,10 @@ function y() {
     if (null == n) return !1;
     let r = n.getGuildId();
     if (!(0, m.JL)(n, u.Z, p.Z, !1)) return !1;
-    if (d.Z.getUseSystemScreensharePicker()) (0, g.isMac)() && i().satisfies(null === a.Z || void 0 === a.Z ? void 0 : a.Z.os.release, E.jR) ? (0, _.T)() : (0, _.T)('window');
+    if (d.Z.getUseSystemScreensharePicker())
+        (0, g.isMac)() && i().satisfies(null === a.Z || void 0 === a.Z ? void 0 : a.Z.os.release, E.jR)
+            ? (0, _.T)()
+            : (0, _.T)("window");
     else {
         let t = (0, O.Z)(o.ZP, f.Z);
         if (null == t || (t.isLauncher && !e)) return !1;

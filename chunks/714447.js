@@ -11,8 +11,8 @@ function s() {
     let e = (0, a.pI)(),
         { analyticsLocations: t } = (0, c.ZP)();
     return (0, n.jsx)(o.II_, {
-        id: 'user-volume',
-        'aria-haspopup': !0,
+        id: "user-volume",
+        "aria-haspopup": !0,
         label: u.intl.string(u.t.kbFsAA),
         control: (r, c) => {
             var a, s;
@@ -22,24 +22,24 @@ function s() {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
                             n = Object.keys(r);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (n = n.concat(
                                 Object.getOwnPropertySymbols(r).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                })
+                                }),
                             )),
                             n.forEach(function (t) {
                                 var n;
-                                ((n = r[t]),
+                                (n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: n,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = n));
-                            }));
+                                        : (e[t] = n);
+                            });
                     }
                     return e;
                 })({}, r)),
@@ -49,7 +49,7 @@ function s() {
                         value: (0, l.P)(e),
                         maxValue: 100,
                         onChange: (e) => (0, i.xz)((0, l.A)(e), t),
-                        'aria-label': u.intl.string(u.t.kbFsAA)
+                        "aria-label": u.intl.string(u.t.kbFsAA),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(s))
@@ -63,8 +63,8 @@ function s() {
                       })(Object(s)).forEach(function (e) {
                           Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(s, e));
                       }),
-                a)
+                a),
             );
-        }
+        },
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(388123),
     i = n(697426),
     o = n(375954),
@@ -23,5 +23,13 @@ function c(e, t, n, c) {
     let p = l(c, n);
     if (null != p) return (0, i.o3)(p, null != (d = p.guild_id) ? d : a.X8);
     let h = o.Z.getMessage(e, t);
-    if (null != h && null != (p = (null == h || null == (u = h.messageReference) ? void 0 : u.type) === r.U.FORWARD ? s(null != (f = null == h ? void 0 : h.messageSnapshots) ? f : [], n) : l(null == h ? void 0 : h.soundboardSounds, n))) return (0, i.o3)(p, null != (_ = p.guild_id) ? _ : a.X8);
+    if (
+        null != h &&
+        null !=
+            (p =
+                (null == h || null == (u = h.messageReference) ? void 0 : u.type) === r.U.FORWARD
+                    ? s(null != (f = null == h ? void 0 : h.messageSnapshots) ? f : [], n)
+                    : l(null == h ? void 0 : h.soundboardSounds, n))
+    )
+        return (0, i.o3)(p, null != (_ = p.guild_id) ? _ : a.X8);
 }

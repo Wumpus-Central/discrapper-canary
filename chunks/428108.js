@@ -22,22 +22,22 @@ let y = (0, i.Z)(
             g = (0, b.Z)(t),
             P = (0, a.Z)({
                 id: t.id,
-                label: f.intl.string(f.t.gFHI3t)
+                label: f.intl.string(f.t.gFHI3t),
             });
         return (0, r.jsxs)(c.v2r, {
-            navId: 'channel-context',
+            navId: "channel-context",
             onClose: l.Zy,
-            'aria-label': f.intl.string(f.t.Xm41aW),
+            "aria-label": f.intl.string(f.t.Xm41aW),
             onSelect: i,
             children: [
                 (0, r.jsx)(c.kSQ, { children: o }),
                 (0, r.jsxs)(c.kSQ, {
-                    children: [y, d, j]
+                    children: [y, d, j],
                 }),
                 (0, r.jsx)(c.kSQ, { children: g }),
-                (0, r.jsx)(c.kSQ, { children: P })
-            ]
+                (0, r.jsx)(c.kSQ, { children: P }),
+            ],
         });
     },
-    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_ACTIVITY_FEED_VOICE_MENU]
+    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_ACTIVITY_FEED_VOICE_MENU],
 );

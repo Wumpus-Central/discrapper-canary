@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(415506));
+n.d(t, { Z: () => u }), n(415506);
 var r = n(570140),
     i = n(710845),
     o = n(209492),
@@ -10,56 +10,56 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let l = new i.Z('CloudSync');
+let l = new i.Z("CloudSync");
 class c {
     constructor(e) {
-        (s(this, 'message', void 0), (this.message = e));
+        s(this, "message", void 0), (this.message = e);
     }
 }
 async function u(e, t) {
     let n,
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     r.Z.dispatch({
-        type: 'GAME_CLOUD_SYNC_START',
+        type: "GAME_CLOUD_SYNC_START",
         applicationId: e,
-        branchId: t
+        branchId: t,
     });
     try {
         if ((n = await o.j(e, t, i)).type === a.QCD.CONFLICT)
             throw (
-                r.Z.dispatch({
-                    type: 'GAME_CLOUD_SYNC_CONFLICT',
+                (r.Z.dispatch({
+                    type: "GAME_CLOUD_SYNC_CONFLICT",
                     applicationId: e,
                     branchId: t,
                     next: n.next,
-                    remote: n.remote
+                    remote: n.remote,
                 }),
-                new c('Conflict in cloud sync.')
+                new c("Conflict in cloud sync."))
             );
-        (n.type === a.QCD.PULL || n.type === a.QCD.PUSH) && l.info('Sync complete', n);
+        (n.type === a.QCD.PULL || n.type === a.QCD.PUSH) && l.info("Sync complete", n);
     } catch (n) {
         if (n instanceof c) throw n;
         throw (
-            r.Z.dispatch({
-                type: 'GAME_CLOUD_SYNC_ERROR',
+            (r.Z.dispatch({
+                type: "GAME_CLOUD_SYNC_ERROR",
                 applicationId: e,
-                branchId: t
+                branchId: t,
             }),
-            l.error('Failed to cloud sync:', n),
-            Error('Failed to cloud sync.')
+            l.error("Failed to cloud sync:", n),
+            Error("Failed to cloud sync."))
         );
     }
     return (
         r.Z.dispatch({
-            type: 'GAME_CLOUD_SYNC_COMPLETE',
+            type: "GAME_CLOUD_SYNC_COMPLETE",
             applicationId: e,
-            branchId: t
+            branchId: t,
         }),
         n
     );

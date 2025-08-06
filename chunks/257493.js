@@ -1,6 +1,6 @@
 r.d(t, {
     C: () => b,
-    d: () => O
+    d: () => O,
 });
 var n = r(255367),
     l = r(73800),
@@ -12,13 +12,13 @@ var n = r(255367),
     u = r(74538),
     d = r(43747);
 let p = (0, l.createContext)({
-        skuId: '123',
+        skuId: "123",
         loadId: (0, i.Z)(),
         analyticsLocations: [],
         isRedeeming: !1,
         orbRedemptionError: null,
         orbProductContext: null,
-        onRedeemVirtualCurrency: () => {}
+        onRedeemVirtualCurrency: () => {},
     }),
     O = (e) => {
         let { skuId: t, loadId: r, analyticsLocations: i, onCheckoutSuccess: O, children: b } = e,
@@ -28,27 +28,27 @@ let p = (0, l.createContext)({
                 if (null == m) return null;
                 let e = (0, s.T4)({
                         product: m,
-                        isPremiumUser: y
+                        isPremiumUser: y,
                     }),
                     t = null !== e ? e.amount : null;
                 return {
                     orbPrice: e,
                     orbPriceAmount: t,
-                    product: m
+                    product: m,
                 };
             }, [m, y]),
             { redeemVirtualCurrency: _, isSubmitting: x, error: f } = (0, d.f)(),
             j = (0, l.useCallback)(
                 (e) => {
                     _(t, r, (r) => {
-                        (O({
+                        O({
                             entitlements: r,
-                            skuId: t
+                            skuId: t,
                         }),
-                            e());
+                            e();
                     });
                 },
-                [t, r, _, O]
+                [t, r, _, O],
             );
         return (0, n.jsx)(p.Provider, {
             value: {
@@ -58,9 +58,9 @@ let p = (0, l.createContext)({
                 orbProductContext: E,
                 onRedeemVirtualCurrency: j,
                 isRedeeming: x,
-                orbRedemptionError: f
+                orbRedemptionError: f,
             },
-            children: b
+            children: b,
         });
     },
     b = () => (0, l.useContext)(p);

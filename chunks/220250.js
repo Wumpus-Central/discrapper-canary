@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     TK: () => p,
     dG: () => h,
     nv: () => _,
-    qw: () => g
+    qw: () => g,
 }),
-    n(35282));
+    n(35282);
 var r = n(73800),
     i = n(950104),
     o = n(481060),
@@ -25,19 +25,19 @@ function p(e) {
     var t;
     let n = e.customBanner;
     if (null != n && (null == (t = e.features) ? void 0 : t.includes(d.oNc.DISCOVERABLE))) {
-        if (c.ff.test(n)) return 'url('.concat(n, ') center / cover');
+        if (c.ff.test(n)) return "url(".concat(n, ") center / cover");
         let t = c.ZP.getGuildDiscoverySplashURL({
             id: e.id,
             splash: n,
-            size: f * (0, u.Z)()
+            size: f * (0, u.Z)(),
         });
-        if (null != t) return 'url('.concat(t, ') center / cover');
+        if (null != t) return "url(".concat(t, ") center / cover");
     }
     return null;
 }
 function h(e) {
     let t = (0, i.DT)(e, 1.75);
-    return 'radial-gradient(105.43% 127.05% at 50.1% 127.05%, '.concat(t, ' 20.65%, ').concat(e, ' 85.16%)');
+    return "radial-gradient(105.43% 127.05% at 50.1% 127.05%, ".concat(t, " 20.65%, ").concat(e, " 85.16%)");
 }
 function m(e) {
     return null == e.icon
@@ -47,7 +47,7 @@ function m(e) {
           : c.ZP.getGuildIconURL({
                 id: e.id,
                 icon: e.icon,
-                size: 64
+                size: 64,
             });
 }
 function g(e) {

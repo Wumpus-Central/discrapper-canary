@@ -8,19 +8,19 @@ function c() {
         children: [
             (0, r.jsx)(o.q, {
                 title: l.intl.string(l.t.fjFJFR),
-                description: l.intl.string(l.t['8SIMPz']),
-                icon: i.owK
+                description: l.intl.string(l.t["8SIMPz"]),
+                icon: i.owK,
             }),
             (0, r.jsx)(o.q, {
                 title: l.intl.string(l.t.QCrmqa),
                 description: l.intl.string(l.t.TKDMoK),
-                icon: i.owK
+                icon: i.owK,
             }),
             (0, r.jsx)(o.q, {
-                title: l.intl.string(l.t['lkm/a2']),
-                description: l.intl.string(l.t['8j3qaG']),
-                icon: i.aNP
-            })
-        ]
+                title: l.intl.string(l.t["lkm/a2"]),
+                description: l.intl.string(l.t["8j3qaG"]),
+                icon: i.aNP,
+            }),
+        ],
     });
 }

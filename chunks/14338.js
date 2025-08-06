@@ -17,24 +17,24 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -68,7 +68,13 @@ function x(e) {
             (0, o.jW)(
                 e,
                 async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('8982'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([
+                        n.e("79695"),
+                        n.e("98783"),
+                        n.e("8982"),
+                        n.e("7717"),
+                        n.e("74800"),
+                    ]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -79,11 +85,11 @@ function x(e) {
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
                                 showChatItems: !1,
-                                onInteraction: (0, h.u)('GuildChannelUserContextMenu', j)
-                            })
+                                onInteraction: (0, h.u)("GuildChannelUserContextMenu", j),
+                            }),
                         );
                 },
-                { context: _ }
+                { context: _ },
             );
         };
     return (0, r.jsx)(p.Z, {
@@ -96,26 +102,26 @@ function x(e) {
             (0, r.jsx)(s.ua7, {
                 targetElementRef: x,
                 text: l.userNick,
-                position: 'bottom',
+                position: "bottom",
                 children: (n) =>
                     (0, r.jsx)(
                         s.P3F,
                         y(b({}, n, e), {
                             innerRef: x,
                             onClick: (t) => {
-                                (t.stopPropagation(), e.onClick(t));
+                                t.stopPropagation(), e.onClick(t);
                             },
                             onContextMenu: E,
                             children: (0, r.jsx)(s.qEK, {
                                 src: null != C ? C : l.user.getAvatarURL(t.guild_id, 24),
                                 size: s.EFr.SIZE_24,
                                 className: a()(m.avatar, f),
-                                'aria-label': l.userNick,
-                                isSpeaking: v && !O.enabled
-                            })
-                        })
-                    )
-            })
+                                "aria-label": l.userNick,
+                                isSpeaking: v && !O.enabled,
+                            }),
+                        }),
+                    ),
+            }),
     });
 }
 function j(e) {
@@ -131,18 +137,18 @@ function j(e) {
                 {
                     channel: n,
                     speaker: e,
-                    className: t
+                    className: t,
                 },
-                i
+                i,
             ),
         renderMoreUsers: (e, t, n) =>
             (0, r.jsx)(
-                'div',
+                "div",
                 {
                     className: a()(m.speakers, t),
-                    children: e
+                    children: e,
                 },
-                n
-            )
+                n,
+            ),
     });
 }

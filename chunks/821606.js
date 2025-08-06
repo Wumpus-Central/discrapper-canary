@@ -13,13 +13,13 @@ function d(t) {
         { protocol: h, hostname: m, theRestOfTheUrl: b } = (0, s.h)(a);
     return (0, n.jsxs)(l.Y0X, {
         transitionState: u,
-        'aria-labelledby': x,
-        parentComponent: 'BlockedDomainModal',
+        "aria-labelledby": x,
+        parentComponent: "BlockedDomainModal",
         children: [
-            (0, n.jsx)('img', {
+            (0, n.jsx)("img", {
                 className: c.art,
                 src: e(902623),
-                alt: ''
+                alt: "",
             }),
             (0, n.jsx)(l.hzk, {
                 children: (0, n.jsxs)(i.Z, {
@@ -28,49 +28,49 @@ function d(t) {
                     children: [
                         (0, n.jsx)(l.X6q, {
                             id: x,
-                            variant: 'heading-lg/semibold',
+                            variant: "heading-lg/semibold",
                             className: c.title,
-                            children: o.intl.string(o.t['2B3wj4'])
+                            children: o.intl.string(o.t["2B3wj4"]),
                         }),
                         (0, n.jsx)(l.Text, {
-                            variant: 'text-md/normal',
+                            variant: "text-md/normal",
                             className: c.body,
-                            children: o.intl.format(o.t.jnHyYW, {})
+                            children: o.intl.format(o.t.jnHyYW, {}),
                         }),
                         (0, n.jsxs)(l.Ttm, {
                             className: c.linkCalloutContainer,
                             children: [
                                 (0, n.jsxs)(l.Text, {
-                                    tag: 'span',
-                                    variant: 'text-md/normal',
-                                    color: 'text-muted',
-                                    children: [h, '//']
+                                    tag: "span",
+                                    variant: "text-md/normal",
+                                    color: "text-muted",
+                                    children: [h, "//"],
                                 }),
                                 (0, n.jsx)(l.Text, {
-                                    tag: 'span',
-                                    variant: 'text-md/semibold',
-                                    color: 'text-default',
-                                    children: m
+                                    tag: "span",
+                                    variant: "text-md/semibold",
+                                    color: "text-default",
+                                    children: m,
                                 }),
                                 (0, n.jsx)(l.Text, {
-                                    tag: 'span',
-                                    variant: 'text-md/normal',
-                                    color: 'text-muted',
-                                    children: b
-                                })
-                            ]
-                        })
-                    ]
-                })
+                                    tag: "span",
+                                    variant: "text-md/normal",
+                                    color: "text-muted",
+                                    children: b,
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
             }),
             (0, n.jsx)(l.mzw, {
                 children: (0, n.jsx)(l.zxk, {
-                    variant: 'primary',
-                    text: o.intl.string(o.t['/g10LC']),
-                    type: 'button',
-                    onClick: d
-                })
-            })
-        ]
+                    variant: "primary",
+                    text: o.intl.string(o.t["/g10LC"]),
+                    type: "button",
+                    onClick: d,
+                }),
+            }),
+        ],
     });
 }

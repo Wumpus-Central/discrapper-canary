@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     default: () => v,
     e: () => C,
-    g: () => j
+    g: () => j,
 }),
     n(539854),
-    n(388685));
+    n(388685);
 var l = n(255367),
     r = n(73800),
     s = n(658722),
@@ -27,18 +27,18 @@ function j(e) {
         children: [
             (0, l.jsx)(o.X6q, {
                 className: f.selectHeader,
-                variant: 'heading-md/semibold',
-                children: t ? g.intl.string(g.t.IB13DQ) : g.intl.string(g.t.cQYceX)
+                variant: "heading-md/semibold",
+                children: t ? g.intl.string(g.t.IB13DQ) : g.intl.string(g.t.cQYceX),
             }),
             (0, l.jsx)(o.E1j, {
                 placeholder: g.intl.string(g.t.vf3ZTU),
-                'aria-label': g.intl.string(g.t.vf3ZTU),
+                "aria-label": g.intl.string(g.t.vf3ZTU),
                 className: f.selectSearch,
                 query: r,
                 onChange: n,
-                onClear: () => n('')
-            })
-        ]
+                onClear: () => n(""),
+            }),
+        ],
     });
 }
 function C(e) {
@@ -47,35 +47,41 @@ function C(e) {
         v = (0, a.Wu)([m.Z], () =>
             C.reduce((e, t) => {
                 let l = m.Z.getGuild(t);
-                return (null == l || (null != n && n.some((e) => e.id === t)) || ((j.length <= 0 || i()(j.toLowerCase(), null == l ? void 0 : l.name.toLowerCase())) && e.push(l)), e);
-            }, [])
+                return (
+                    null == l ||
+                        (null != n && n.some((e) => e.id === t)) ||
+                        ((j.length <= 0 || i()(j.toLowerCase(), null == l ? void 0 : l.name.toLowerCase())) &&
+                            e.push(l)),
+                    e
+                );
+            }, []),
         );
     function b() {
-        (r(), (0, c.xf)(), (0, u.uL)(p.Z5c.GUILD_DISCOVERY));
+        r(), (0, c.xf)(), (0, u.uL)(p.Z5c.GUILD_DISCOVERY);
     }
     return (0, l.jsxs)(l.Fragment, {
         children: [
             0 === v.length &&
-                (0, l.jsx)('div', {
+                (0, l.jsx)("div", {
                     className: f.emptyStateWrapper,
                     children: (0, l.jsx)(o.Text, {
-                        variant: 'text-md/normal',
+                        variant: "text-md/normal",
                         children:
                             0 === C.length
-                                ? g.intl.format(g.t['E3tB6+'], {
+                                ? g.intl.format(g.t["E3tB6+"], {
                                       publicGuildDirectoryHook: (e, t) =>
                                           (0, l.jsx)(
                                               o.P3F,
                                               {
                                                   onClick: b,
-                                                  tag: 'a',
-                                                  children: e
+                                                  tag: "a",
+                                                  children: e,
                                               },
-                                              t
-                                          )
+                                              t,
+                                          ),
                                   })
-                                : g.intl.string(g.t.w3GLl5)
-                    })
+                                : g.intl.string(g.t.w3GLl5),
+                    }),
                 }),
             v.map((e) =>
                 (0, l.jsxs)(
@@ -89,63 +95,63 @@ function C(e) {
                             (0, l.jsx)(d.Z, {
                                 className: f.selectGuildIcon,
                                 guild: e,
-                                size: d.Z.Sizes.SMALL
+                                size: d.Z.Sizes.SMALL,
                             }),
-                            (0, l.jsxs)('div', {
+                            (0, l.jsxs)("div", {
                                 className: f.selectGuildCopy,
                                 children: [
                                     (0, l.jsx)(o.Text, {
                                         className: f.selectGuildName,
-                                        variant: 'text-md/normal',
-                                        children: e.name
+                                        variant: "text-md/normal",
+                                        children: e.name,
                                     }),
                                     (0, l.jsx)(o.Text, {
                                         className: f.selectGuildLevel,
-                                        color: 'text-muted',
-                                        variant: 'text-xs/normal',
-                                        children: (0, h.nW)(e.premiumTier)
-                                    })
-                                ]
+                                        color: "text-muted",
+                                        variant: "text-xs/normal",
+                                        children: (0, h.nW)(e.premiumTier),
+                                    }),
+                                ],
                             }),
                             (0, l.jsx)(o.Text, {
                                 className: f.selectGuildPseudoCta,
-                                color: 'always-white',
-                                variant: 'text-sm/medium',
-                                children: t ? g.intl.string(g.t.dUgaFx) : g.intl.string(g.t.Uj0md3)
-                            })
-                        ]
+                                color: "always-white",
+                                variant: "text-sm/medium",
+                                children: t ? g.intl.string(g.t.dUgaFx) : g.intl.string(g.t.Uj0md3),
+                            }),
+                        ],
                     },
-                    e.id
-                )
-            )
-        ]
+                    e.id,
+                ),
+            ),
+        ],
     });
 }
 function v(e) {
     let { onClose: t, onSelectGuild: n, transitionState: s } = e,
-        [i, a] = r.useState('');
+        [i, a] = r.useState("");
     return (0, l.jsxs)(o.Y0X, {
         transitionState: s,
         className: f.modal,
         size: o.CgR.SMALL,
-        parentComponent: 'GuildSelectModal',
+        parentComponent: "GuildSelectModal",
         children: [
             (0, l.jsx)(j, {
                 query: i,
-                setQuery: a
+                setQuery: a,
             }),
             (0, l.jsx)(o.hzk, {
                 className: f.modalContent,
                 children: (0, l.jsx)(C, {
                     onClose: t,
                     onSelectGuild: n,
-                    query: i
-                })
+                    query: i,
+                }),
             }),
             (0, l.jsx)(o.olH, {
                 className: f.modalCloseButton,
-                onClick: t
-            })
-        ]
+                onClick: t,
+            }),
+        ],
     });
 }

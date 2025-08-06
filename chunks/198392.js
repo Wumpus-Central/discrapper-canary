@@ -1,18 +1,18 @@
 var r = n(8235),
     i = n(392919),
     o = n(304611),
-    a = RegExp('\r\n', 'g'),
-    s = '\n',
+    a = RegExp("\r\n", "g"),
+    s = "\n",
     l = {
-        'text/rtf': 1,
-        'text/html': 1
+        "text/rtf": 1,
+        "text/html": 1,
     };
 function c(e) {
-    if ('file' == e.kind) return e.getAsFile();
+    if ("file" == e.kind) return e.getAsFile();
 }
 e.exports = (function () {
     function e(e) {
-        ((this.data = e), (this.types = e.types ? i(e.types) : []));
+        (this.data = e), (this.types = e.types ? i(e.types) : []);
     }
     var t = e.prototype;
     return (
@@ -27,26 +27,38 @@ e.exports = (function () {
         }),
         (t.getText = function () {
             var e;
-            return (this.data.getData && (this.types.length ? -1 != this.types.indexOf('text/plain') && (e = this.data.getData('text/plain')) : (e = this.data.getData('Text'))), e ? e.replace(a, s) : null);
+            return (
+                this.data.getData &&
+                    (this.types.length
+                        ? -1 != this.types.indexOf("text/plain") && (e = this.data.getData("text/plain"))
+                        : (e = this.data.getData("Text"))),
+                e ? e.replace(a, s) : null
+            );
         }),
         (t.getHTML = function () {
             if (this.data.getData) {
-                if (!this.types.length) return this.data.getData('Text');
-                else if (-1 != this.types.indexOf('text/html')) return this.data.getData('text/html');
+                if (!this.types.length) return this.data.getData("Text");
+                else if (-1 != this.types.indexOf("text/html")) return this.data.getData("text/html");
             }
         }),
         (t.isLink = function () {
             return this.types.some(function (e) {
-                return -1 != e.indexOf('Url') || -1 != e.indexOf('text/uri-list') || e.indexOf('text/x-moz-url');
+                return -1 != e.indexOf("Url") || -1 != e.indexOf("text/uri-list") || e.indexOf("text/x-moz-url");
             });
         }),
         (t.getLink = function () {
-            return this.data.getData ? (-1 != this.types.indexOf('text/x-moz-url') ? this.data.getData('text/x-moz-url').split('\n')[0] : -1 != this.types.indexOf('text/uri-list') ? this.data.getData('text/uri-list') : this.data.getData('url')) : null;
+            return this.data.getData
+                ? -1 != this.types.indexOf("text/x-moz-url")
+                    ? this.data.getData("text/x-moz-url").split("\n")[0]
+                    : -1 != this.types.indexOf("text/uri-list")
+                      ? this.data.getData("text/uri-list")
+                      : this.data.getData("url")
+                : null;
         }),
         (t.isImage = function () {
             if (
                 this.types.some(function (e) {
-                    return -1 != e.indexOf('application/x-moz-file');
+                    return -1 != e.indexOf("application/x-moz-file");
                 })
             )
                 return !0;
@@ -57,10 +69,20 @@ e.exports = (function () {
             return !0;
         }),
         (t.getCount = function () {
-            return this.data.hasOwnProperty('items') ? this.data.items.length : this.data.hasOwnProperty('mozItemCount') ? this.data.mozItemCount : this.data.files ? this.data.files.length : null;
+            return this.data.hasOwnProperty("items")
+                ? this.data.items.length
+                : this.data.hasOwnProperty("mozItemCount")
+                  ? this.data.mozItemCount
+                  : this.data.files
+                    ? this.data.files.length
+                    : null;
         }),
         (t.getFiles = function () {
-            return this.data.items ? Array.prototype.slice.call(this.data.items).map(c).filter(o.thatReturnsArgument) : this.data.files ? Array.prototype.slice.call(this.data.files) : [];
+            return this.data.items
+                ? Array.prototype.slice.call(this.data.items).map(c).filter(o.thatReturnsArgument)
+                : this.data.files
+                  ? Array.prototype.slice.call(this.data.files)
+                  : [];
         }),
         (t.hasFiles = function () {
             return this.getFiles().length > 0;

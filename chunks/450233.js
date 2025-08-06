@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => f,
-    Z: () => m
+    Z: () => m,
 });
 var r,
     i,
@@ -13,20 +13,20 @@ var r,
     d = n(16084),
     p = n(855775),
     h = n(388032),
-    f = (((r = {}).SHORT = 'SHORT'), (r.LONG = 'LONG'), r);
+    f = (((r = {}).SHORT = "SHORT"), (r.LONG = "LONG"), r);
 class g extends (a = s.PureComponent) {
     getText(e, t) {
         if (429 === e.status)
             switch (t) {
-                case 'SHORT':
+                case "SHORT":
                     return h.intl.string(h.t.T15lqq);
-                case 'LONG':
+                case "LONG":
                     return h.intl.string(h.t.XFShdH);
             }
         switch (t) {
-            case 'SHORT':
-                return h.intl.string(h.t['+XstBw']);
-            case 'LONG':
+            case "SHORT":
+                return h.intl.string(h.t["+XstBw"]);
+            case "LONG":
                 return h.intl.string(h.t.epyCur);
         }
     }
@@ -37,19 +37,19 @@ class g extends (a = s.PureComponent) {
         let { className: e, purchaseError: t, messageStyle: n } = this.props;
         return null == t
             ? null
-            : (0, o.jsx)('div', {
+            : (0, o.jsx)("div", {
                   className: e,
-                  children: this.getText(t, n)
+                  children: this.getText(t, n),
               });
     }
 }
-((l = { messageStyle: 'LONG' }),
-    (i = 'defaultProps') in g
+(l = { messageStyle: "LONG" }),
+    (i = "defaultProps") in g
         ? Object.defineProperty(g, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (g[i] = l));
+        : (g[i] = l);
 let m = c.ZP.connectStores([p.Z], () => ({ purchaseError: p.Z.error }))(g);

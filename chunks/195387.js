@@ -24,19 +24,19 @@ function E(e) {
     return null == n || !T || I
         ? null
         : (0, r.jsx)(p.oY, {
-              action: 'PRESS_MOD_VIEW',
+              action: "PRESS_MOD_VIEW",
               icon: o.HI3,
               shouldShowTooltip: O,
               tooltipText: g.intl.string(g.t.kj3tz8),
               onClick: () => {
-                  (u.Z.close(),
+                  u.Z.close(),
                       null != S && (0, d.Kh)(S),
                       (0, a.i)(y),
                       (0, l.r)(n, t.id, null != S ? S : h.oC.MEMBER_SAFETY, {
                           modViewPanel: m.k.INFO,
-                          sourceLocation: v
+                          sourceLocation: v,
                       }),
-                      null == b || b());
-              }
+                      null == b || b();
+              },
           });
 }

@@ -9,9 +9,10 @@ function n(t) {
     return {
         $: e,
         add: function (n) {
-            if (!(void 0 === t || e.length < t)) return (0, _.$2)(new r.b('Not adding Promise because buffer limit was reached.'));
+            if (!(void 0 === t || e.length < t))
+                return (0, _.$2)(new r.b("Not adding Promise because buffer limit was reached."));
             let o = n();
-            return (-1 === e.indexOf(o) && e.push(o), o.then(() => a(o)).then(null, () => a(o).then(null, () => {})), o);
+            return -1 === e.indexOf(o) && e.push(o), o.then(() => a(o)).then(null, () => a(o).then(null, () => {})), o;
         },
         drain: function (t) {
             return new _.cW((a, r) => {
@@ -26,6 +27,6 @@ function n(t) {
                     }, r);
                 });
             });
-        }
+        },
     };
 }

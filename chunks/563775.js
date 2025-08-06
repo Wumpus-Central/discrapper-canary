@@ -11,12 +11,12 @@ r(
         enumerable: !0,
         dontCallGetSet: !0,
         forced: l(function () {
-            return c && 1 !== Object.getOwnPropertyDescriptor(i, 'queueMicrotask').value.length;
-        })
+            return c && 1 !== Object.getOwnPropertyDescriptor(i, "queueMicrotask").value.length;
+        }),
     },
     {
         queueMicrotask: function (e) {
-            (s(arguments.length, 1), o(a(e)));
-        }
-    }
+            s(arguments.length, 1), o(a(e));
+        },
+    },
 );

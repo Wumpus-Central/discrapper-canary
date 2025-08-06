@@ -19,32 +19,32 @@ let d = (e) => {
         : _
           ? (0, r.jsx)(a.lBU, {
                 className: u.newBadge,
-                text: (0, r.jsxs)('div', {
+                text: (0, r.jsxs)("div", {
                     className: u.newBadgeText,
                     children: [
                         (0, r.jsx)(a.mBM, {
-                            size: 'xxs',
-                            color: 'currentColor'
+                            size: "xxs",
+                            color: "currentColor",
                         }),
-                        c.intl.string(c.t.y2b7CA)
-                    ]
-                })
+                        c.intl.string(c.t.y2b7CA),
+                    ],
+                }),
             })
           : (0, r.jsx)(a.G2e, {
                 icon: p
                     ? () =>
                           (0, r.jsx)(a.SrA, {
-                              size: 'custom',
-                              color: 'currentColor',
+                              size: "custom",
+                              color: "currentColor",
                               width: 14,
-                              height: 14
+                              height: 14,
                           })
                     : () =>
                           (0, r.jsx)(a.mBM, {
-                              size: 'xxs',
-                              color: 'currentColor'
+                              size: "xxs",
+                              color: "currentColor",
                           }),
                 color: i.Z.BACKGROUND_ACCENT,
-                className: u.iconBadge
+                className: u.iconBadge,
             });
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(953529));
+n.d(t, { Z: () => u }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -24,7 +24,7 @@ function u() {
                 traits: u.traits,
                 visibility: u.visibility,
                 gameApplicationIds: u.gameApplicationIds,
-                customBanner: u.customBanner
+                customBanner: u.customBanner,
             };
             (0, s.pV)(e.id, t);
         }, [e, u]),
@@ -35,6 +35,6 @@ function u() {
         submitting: m,
         errorMessage: g,
         onSave: p,
-        onReset: h
+        onReset: h,
     });
 }

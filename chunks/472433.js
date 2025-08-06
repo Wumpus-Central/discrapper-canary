@@ -9,7 +9,7 @@ t.a(e, async function (e, r) {
             s = e([i]);
         function u(e) {
             let { children: n, node: t } = e,
-                r = c.useMemo(() => Array.from((0, i.h)([t])).some((e) => 'link' === e.type), [t]),
+                r = c.useMemo(() => Array.from((0, i.h)([t])).some((e) => "link" === e.type), [t]),
                 s = (0, a.d)();
             return (
                 c.useEffect(() => {
@@ -18,11 +18,11 @@ t.a(e, async function (e, r) {
                 }, [s, r]),
                 (0, l.jsx)(o.ZP, {
                     type: o.ZP.Types.TEXT,
-                    children: () => n
+                    children: () => n,
                 })
             );
         }
-        ((i = (s.then ? (await s)() : s)[0]), r());
+        (i = (s.then ? (await s)() : s)[0]), r();
     } catch (e) {
         r(e);
     }

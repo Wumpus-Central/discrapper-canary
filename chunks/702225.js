@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -16,15 +16,19 @@ function i(e, t, n) {
 function o(e) {
     return {
         channelId: e,
-        sessionId: (0, r.Z)()
+        sessionId: (0, r.Z)(),
     };
 }
 class a {
     getForumChannelSessionId(e) {
-        return (null == this.session && (this.session = o(e)), this.session.channelId !== e && (this.session = o(e)), this.session.sessionId);
+        return (
+            null == this.session && (this.session = o(e)),
+            this.session.channelId !== e && (this.session = o(e)),
+            this.session.sessionId
+        );
     }
     constructor() {
-        i(this, 'session', void 0);
+        i(this, "session", void 0);
     }
 }
 let s = new a();

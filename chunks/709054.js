@@ -1,9 +1,9 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         DISCORD_EPOCH: () => o.cj,
         SnowflakeSequence: () => o.Tk,
-        default: () => s
-    }));
+        default: () => s,
+    });
 var r = n(392711),
     i = n.n(r),
     o = n(67423);
@@ -56,5 +56,5 @@ let s = {
     castGuildIdAsEveryoneGuildRoleId: function (e) {
         return a(e);
     },
-    cast: a
+    cast: a,
 };

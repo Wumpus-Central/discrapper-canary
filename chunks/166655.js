@@ -11,7 +11,7 @@ function i(t) {
         case l.w.RECOMMEND:
             return r.intl.string(r.t.lneQf3);
         case l.w.THINK:
-            return r.intl.string(r.t['xod36+']);
+            return r.intl.string(r.t["xod36+"]);
         case l.w.LOVE:
             return r.intl.string(r.t.xaCthI);
         default:

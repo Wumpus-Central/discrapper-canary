@@ -8,6 +8,6 @@ function u() {
         function () {
             return new o.H(n);
         },
-        [n]
+        [n],
     );
 }

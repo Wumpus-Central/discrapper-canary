@@ -9,7 +9,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,7 +20,7 @@ class a extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e &&
             Object.keys(e).forEach((t) => {
-                'number' == typeof e[t] && (s[t] = e[t]);
+                "number" == typeof e[t] && (s[t] = e[t]);
             });
     }
     getState() {
@@ -30,10 +30,10 @@ class a extends (r = i.ZP.PersistedStore) {
         return null != s[e];
     }
 }
-(o(a, 'displayName', 'ViewHistoryStore'), o(a, 'persistKey', 'ViewHistoryStore'));
+o(a, "displayName", "ViewHistoryStore"), o(a, "persistKey", "ViewHistoryStore");
 let c = new a(l.Z, {
     VIEW_HISTORY_MARK_VIEW: function (e) {
         let { key: t } = e;
         s[t] = Date.now();
-    }
+    },
 });

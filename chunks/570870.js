@@ -24,24 +24,24 @@ let y = (e) => {
         A = (0, f.Z)({
             user: S,
             guildId: null == T ? void 0 : T.id,
-            context: I
+            context: I,
         }),
         N = i.useMemo(
             () => ({
                 channel: y,
-                type: 'channel'
+                type: "channel",
             }),
-            [y]
+            [y],
         ),
         {
             commands: C,
             sectionDescriptors: R,
-            loading: P
+            loading: P,
         } = c.wi({
             context: N,
             filters: { commandTypes: [n] },
             options: { limit: g.lr },
-            allowFetch: !0
+            allowFetch: !0,
         }),
         { sections: w } = i.useMemo(() => {
             let e = {};
@@ -58,7 +58,7 @@ let y = (e) => {
     }, [P, v]);
     let L = i.useCallback(
         (e) => {
-            a()(null != y, 'menu item should not show if channel is null');
+            a()(null != y, "menu item should not show if channel is null");
             let t = w[e.applicationId],
                 n = null != t ? (0, d.ky)(t) : void 0;
             return (0, r.jsx)(
@@ -73,7 +73,7 @@ let y = (e) => {
                                   section: t,
                                   width: 18,
                                   height: 18,
-                                  selectable: !1
+                                  selectable: !1,
                               })
                             : null,
                     action: () => {
@@ -82,53 +82,53 @@ let y = (e) => {
                             optionValues: {},
                             context: {
                                 channel: y,
-                                guild: T
+                                guild: T,
                             },
-                            commandTargetId: o
+                            commandTargetId: o,
                         });
-                    }
+                    },
                 },
-                e.id
+                e.id,
             );
         },
-        [y, T, o, w]
+        [y, T, o, w],
     );
     if (
         (P
             ? (t = (0, r.jsx)(
                   l.sNh,
                   {
-                      id: 'menu-commands-placeholder',
+                      id: "menu-commands-placeholder",
                       render: () => (0, r.jsx)(_.Z, {}),
-                      disabled: !0
+                      disabled: !0,
                   },
-                  'menu-commands-placeholder'
+                  "menu-commands-placeholder",
               ))
             : ((t =
                   0 === C.length
                       ? (0, r.jsx)(
                             l.sNh,
                             {
-                                id: 'menu-commands-empty',
+                                id: "menu-commands-empty",
                                 label: E.intl.string(E.t.YSNlV1),
-                                disabled: !0
+                                disabled: !0,
                             },
-                            'menu-commands-empty'
+                            "menu-commands-empty",
                         )
                       : C.map(L)),
               null != A &&
                   A.length > 0 &&
                   (t = (0, r.jsxs)(r.Fragment, {
-                      children: [t, (0, r.jsx)(l.Clw, {}, 'separator'), A]
+                      children: [t, (0, r.jsx)(l.Clw, {}, "separator"), A],
                   }))),
         !m.TPd.TEXTUAL.has(y.type))
     )
         if (null == A) return null;
         else t = A;
     return (0, r.jsx)(l.sNh, {
-        id: 'apps',
+        id: "apps",
         label: E.intl.string(E.t.PHjkRE),
         listClassName: b.list,
-        children: t
+        children: t,
     });
 };

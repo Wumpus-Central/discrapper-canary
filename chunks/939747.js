@@ -4,7 +4,7 @@ a.d(e, {
     M: () => n,
     OC: () => i,
     s3: () => c,
-    uv: () => o
+    uv: () => o,
 });
 var r = a(370336);
 function _(t, e, a, _) {
@@ -13,45 +13,45 @@ function _(t, e, a, _) {
 }
 function n(t) {
     let e = 0;
-    for (let a = 0; a < t.length; a++) ((e = (e << 5) - e + t.charCodeAt(a)), (e &= e));
+    for (let a = 0; a < t.length; a++) (e = (e << 5) - e + t.charCodeAt(a)), (e &= e);
     return e >>> 0;
 }
 function o(t) {
-    let e = '';
+    let e = "";
     for (let a of t) {
         let t = Object.entries(a.tags),
-            r = t.length > 0 ? `|#${t.map(([t, e]) => `${t}:${e}`).join(',')}` : '';
+            r = t.length > 0 ? `|#${t.map(([t, e]) => `${t}:${e}`).join(",")}` : "";
         e += `${a.name}@${a.unit}:${a.metric}|${a.metricType}${r}|T${a.timestamp}
 `;
     }
     return e;
 }
 function i(t) {
-    return t.replace(/[^\w]+/gi, '_');
+    return t.replace(/[^\w]+/gi, "_");
 }
 function c(t) {
-    return t.replace(/[^\w\-.]+/gi, '_');
+    return t.replace(/[^\w\-.]+/gi, "_");
 }
 let E = [
-    ['\n', '\\n'],
-    ['\r', '\\r'],
-    ['\t', '\\t'],
-    ['\\', '\\\\'],
-    ['|', '\\u{7c}'],
-    [',', '\\u{2c}']
+    ["\n", "\\n"],
+    ["\r", "\\r"],
+    ["\t", "\\t"],
+    ["\\", "\\\\"],
+    ["|", "\\u{7c}"],
+    [",", "\\u{2c}"],
 ];
 function s(t) {
     let e = {};
     for (let a in t)
         Object.prototype.hasOwnProperty.call(t, a) &&
-            (e[a.replace(/[^\w\-./]+/gi, '')] = [...String(t[a])].reduce(
+            (e[a.replace(/[^\w\-./]+/gi, "")] = [...String(t[a])].reduce(
                 (t, e) =>
                     t +
                     (function (t) {
                         for (let [e, a] of E) if (t === e) return a;
                         return t;
                     })(e),
-                ''
+                "",
             ));
     return e;
 }

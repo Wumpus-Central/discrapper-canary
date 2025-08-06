@@ -10,12 +10,15 @@ var r = n(442837),
 function u(e) {
     let t = (0, r.e7)([o.ZP], () => o.ZP.isMuteScheduledEventsEnabled(e), [e]);
     return (0, i.jsx)(l.S89, {
-        id: 'mute-events',
+        id: "mute-events",
         label: c.intl.string(c.t.ONG3Y2),
         action: () => {
             var n;
-            return ((n = { mute_scheduled_events: !t }), void s.Z.updateGuildNotificationSettings(e, n, a.UE.mutedEvents(n.mute_scheduled_events)));
+            return (
+                (n = { mute_scheduled_events: !t }),
+                void s.Z.updateGuildNotificationSettings(e, n, a.UE.mutedEvents(n.mute_scheduled_events))
+            );
         },
-        checked: t
+        checked: t,
     });
 }

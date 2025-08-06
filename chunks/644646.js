@@ -21,7 +21,14 @@ var r = n(255367),
     v = n(734506);
 let I = function (e) {
     let t,
-        { className: n, quest: o, autoplay: I = !0, learnMoreStyle: T = null, sourceQuestContent: S, lazyLoad: A = !1 } = e,
+        {
+            className: n,
+            quest: o,
+            autoplay: I = !0,
+            learnMoreStyle: T = null,
+            sourceQuestContent: S,
+            lazyLoad: A = !1,
+        } = e,
         N = (0, _.O5)(),
         C = (0, l.e7)([f.Z], () => f.Z.isFocused()),
         R = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -30,21 +37,21 @@ let I = function (e) {
         D = i.useCallback(
             (t) => {
                 var n;
-                ((0, s.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
+                (0, s.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
                     N({
                         questId: o.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
                         questContentCTA: _.jZ.REWARD_LEARN_MORE,
-                        sourceQuestContent: S
+                        sourceQuestContent: S,
                     }),
                     (0, b.navigateToQuestHome)({
                         fromContent: e.questContent,
-                        questId: o.id
+                        questId: o.id,
                     }),
-                    null == (n = e.onClick) || n.call(e, t));
+                    null == (n = e.onClick) || n.call(e, t);
             },
-            [N, o.id, e, S]
+            [N, o.id, e, S],
         ),
         L = i.useRef(null),
         x = i.useRef(I),
@@ -53,20 +60,23 @@ let I = function (e) {
         i.useEffect(() => {
             if (null != L.current) {
                 if (!P.isAnimated || R) {
-                    ((L.current.currentTime = 0), L.current.pause());
+                    (L.current.currentTime = 0), L.current.pause();
                     return;
                 }
-                (I && !x.current ? L.current.play() : !I && x.current && ((L.current.currentTime = 0), L.current.pause()), (x.current = I));
+                I && !x.current
+                    ? L.current.play()
+                    : !I && x.current && ((L.current.currentTime = 0), L.current.pause()),
+                    (x.current = I);
             }
         }, [I, P, R]),
         (t = M
             ? (0, r.jsx)(y.Fl, {
-                  id: 'QuestRewardTile_rewardTileNitro',
+                  id: "QuestRewardTile_rewardTileNitro",
                   children: (e) =>
                       (0, r.jsx)(E.Z, {
                           ref: e,
-                          className: v.questRewardTileAsset
-                      })
+                          className: v.questRewardTileAsset,
+                      }),
               })
             : A
               ? (0, r.jsx)(g.K, {
@@ -74,27 +84,27 @@ let I = function (e) {
                         null != w
                             ? {
                                   asset: w,
-                                  assetId: 'QuestRewardTile_rewardTileStatic',
+                                  assetId: "QuestRewardTile_rewardTileStatic",
                                   className: v.imageVideoOverlay,
-                                  alt: O.intl.string(O.t.UMclVF)
+                                  alt: O.intl.string(O.t.UMclVF),
                               }
                             : void 0,
                     videoAsset: {
                         asset: P,
-                        assetId: 'QuestRewardTile_rewardTileAnimated',
-                        className: a()(v.questRewardTileAsset, v.questRewardTileAssetLazyVideo)
+                        assetId: "QuestRewardTile_rewardTileAnimated",
+                        className: a()(v.questRewardTileAsset, v.questRewardTileAssetLazyVideo),
                     },
                     videoActive: I,
-                    onLoadComplete: e.onLoadComplete
+                    onLoadComplete: e.onLoadComplete,
                 })
               : P.isAnimated
                 ? (0, r.jsx)(y.Fl, {
-                      id: 'QuestRewardTile_rewardTileAnimated',
+                      id: "QuestRewardTile_rewardTileAnimated",
                       children: (t) => {
                           var n;
                           return (0, r.jsx)(d.Z, {
                               ref: (e) => {
-                                  ((t.current = e), (L.current = e));
+                                  (t.current = e), (L.current = e);
                               },
                               autoPlay: !R && I,
                               loop: !0,
@@ -103,28 +113,28 @@ let I = function (e) {
                               className: v.questRewardTileAsset,
                               controls: !1,
                               onProgress: e.onLoadComplete,
-                              children: (0, r.jsx)('source', {
+                              children: (0, r.jsx)("source", {
                                   src: P.url,
-                                  type: null != (n = P.mimetype) ? n : void 0
-                              })
+                                  type: null != (n = P.mimetype) ? n : void 0,
+                              }),
                           });
-                      }
+                      },
                   })
                 : (0, r.jsx)(y.Fl, {
-                      id: 'QuestRewardTile_rewardTileStatic',
+                      id: "QuestRewardTile_rewardTileStatic",
                       children: (t) =>
-                          (0, r.jsx)('img', {
+                          (0, r.jsx)("img", {
                               ref: t,
                               alt: m.r.build(o.config).defaultRewardName,
                               className: a()(v.questRewardTileAsset, v.questRewardTileAssetStatic),
                               src: P.url,
-                              onLoad: e.onLoadComplete
-                          })
+                              onLoad: e.onLoadComplete,
+                          }),
                   })),
         null == T
-            ? (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", {
                   className: a()(v.questRewardTile, n),
-                  children: t
+                  children: t,
               })
             : (0, r.jsxs)(c.P3F, {
                   className: a()(v.questRewardTileInteractive, v.questRewardTile, v.rewardHighlight, n),
@@ -134,24 +144,24 @@ let I = function (e) {
                       (0, r.jsx)(c.ZX5, {
                           className: v.shine,
                           shineSize: c.rHe.SMALL,
-                          shinePaused: !C || R
+                          shinePaused: !C || R,
                       }),
-                      'text' === T &&
+                      "text" === T &&
                           (0, r.jsx)(c.Text, {
-                              color: 'always-white',
-                              variant: 'text-xs/normal',
+                              color: "always-white",
+                              variant: "text-xs/normal",
                               className: v.questRewardTileDetailsLearnMore,
-                              children: O.intl.format(O.t.DYAleX, {})
+                              children: O.intl.format(O.t.DYAleX, {}),
                           }),
-                      'icon' === T &&
-                          (0, r.jsx)('div', {
+                      "icon" === T &&
+                          (0, r.jsx)("div", {
                               className: v.questRewardTileDetailsLearnMore,
                               children: (0, r.jsx)(c.d3s, {
-                                  size: 'xxs',
-                                  color: c.TVs.colors.WHITE.css
-                              })
-                          })
-                  ]
+                                  size: "xxs",
+                                  color: c.TVs.colors.WHITE.css,
+                              }),
+                          }),
+                  ],
               })
     );
 };

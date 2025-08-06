@@ -5,7 +5,7 @@ var t = {
         today: "'hoy a la' p",
         tomorrow: "'mañana a la' p",
         nextWeek: "eeee 'a la' p",
-        other: 'P'
+        other: "P",
     },
     o = {
         lastWeek: "'el' eeee 'pasado a las' p",
@@ -13,7 +13,7 @@ var t = {
         today: "'hoy a las' p",
         tomorrow: "'mañana a las' p",
         nextWeek: "eeee 'a las' p",
-        other: 'P'
+        other: "P",
     };
 let i = function (e, a, n, i) {
     return 1 !== a.getUTCHours() ? o[e] : t[e];

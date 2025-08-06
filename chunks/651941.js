@@ -1,4 +1,17 @@
-(n.d(t, { Z: () => h }), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733), n(388685));
+n.d(t, { Z: () => h }),
+    n(410992),
+    n(227481),
+    n(730884),
+    n(20464),
+    n(341884),
+    n(364341),
+    n(629680),
+    n(505025),
+    n(918970),
+    n(121784),
+    n(644351),
+    n(146733),
+    n(388685);
 var r,
     i = n(442837),
     o = n(974167),
@@ -11,7 +24,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,7 +34,7 @@ let c = {};
 function u(e) {
     var t;
     let n = null != (t = c[e]) ? t : {};
-    return ((c[e] = n), n);
+    return (c[e] = n), n;
 }
 function d(e) {
     let { userId: t, key: n } = e,
@@ -35,7 +48,7 @@ function f(e) {
     if (null == r) return !1;
     let i = delete r[n],
         o = !1;
-    return (0 === Object.keys(r).length && (delete c[t], (o = !0)), i || o);
+    return 0 === Object.keys(r).length && (delete c[t], (o = !0)), i || o;
 }
 function _(e) {
     let { userId: t } = e;
@@ -64,9 +77,9 @@ class p extends (r = i.ZP.PersistedStore) {
         return c[e];
     }
 }
-(l(p, 'displayName', 'VerifiedKeyStore'), l(p, 'persistKey', 'VerifiedKeyStore'));
+l(p, "displayName", "VerifiedKeyStore"), l(p, "persistKey", "VerifiedKeyStore");
 let h = new p(a.Z, {
     SECURE_FRAMES_VERIFIED_KEY_CREATE: d,
     SECURE_FRAMES_VERIFIED_KEY_DELETE: f,
-    SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: _
+    SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: _,
 });

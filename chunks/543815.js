@@ -7,14 +7,14 @@ var r = n(45792),
 let s = {
     [o.Etm.GET_USER]: (0, r.S)(o.Etm.GET_USER, {
         scope: {
-            [a.Gp.ANY]: [a.b_, a.lH]
+            [a.Gp.ANY]: [a.b_, a.lH],
         },
         handler(e) {
             let {
-                    args: { id: t }
+                    args: { id: t },
                 } = e,
                 n = i.default.getUser(t);
             return null == n ? null : (0, l.Z)(n);
-        }
-    })
+        },
+    }),
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685));
+n.d(t, { Z: () => A }), n(388685);
 var r = n(570140),
     i = n(147913),
     o = n(650774),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -43,20 +43,20 @@ function y() {
         }, p));
 }
 async function O(e, t) {
-    (null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), I(e) && (await v(e)));
+    null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), I(e) && (await v(e));
 }
 function v(e) {
     if (null == g[e]) return;
     let t = Array.from(g[e]);
-    ((g[e] = new Set()),
+    (g[e] = new Set()),
         (E[e] = Date.now()),
         requestAnimationFrame(async () => {
             await r.Z.dispatch({
-                type: 'MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH',
+                type: "MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH",
                 guildId: e,
-                userIds: t
+                userIds: t,
             });
-        }));
+        });
 }
 function I(e) {
     let t = g[e];
@@ -69,7 +69,7 @@ function I(e) {
     return null != r && i >= m(e);
 }
 function T(e) {
-    ((g[e] = new Set()), (E[e] = null));
+    (g[e] = new Set()), (E[e] = null);
 }
 class S extends i.Z {
     handleInitialize() {
@@ -90,14 +90,14 @@ class S extends i.Z {
         s.Z.isInitialized(t) && T(t);
     }
     constructor(...e) {
-        (super(...e),
-            l(this, 'actions', {
+        super(...e),
+            l(this, "actions", {
                 INITIALIZE_MEMBER_SAFETY_STORE: () => this.handleInitialize(),
                 GUILD_MEMBER_ADD: (e) => this.handleGuildMemberUpdate(e.guildId, e.user.id),
                 GUILD_MEMBER_UPDATE: (e) => this.handleGuildMemberUpdate(e.guildId, e.user.id),
                 GUILD_MEMBER_REMOVE: (e) => this.handleGuildMemberRemove(e.guildId, e.user.id),
-                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: (e) => this.handleGuildMemberSearchSuccess(e)
-            }));
+                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: (e) => this.handleGuildMemberSearchSuccess(e),
+            });
     }
 }
 let A = new S();

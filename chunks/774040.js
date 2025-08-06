@@ -23,22 +23,22 @@ let s = (0, a.I)(function (e) {
         f = e.children,
         d = e.focus,
         h = e.focusStyle,
-        b = 'transparent' === t,
+        b = "transparent" === t,
         v = (0, o.default)({
             default: {
                 swatch: l(
                     {
                         background: t,
-                        height: '100%',
-                        width: '100%',
-                        cursor: 'pointer',
-                        position: 'relative',
-                        outline: 'none'
+                        height: "100%",
+                        width: "100%",
+                        cursor: "pointer",
+                        position: "relative",
+                        outline: "none",
                     },
                     r,
-                    d ? (void 0 === h ? {} : h) : {}
-                )
-            }
+                    d ? (void 0 === h ? {} : h) : {},
+                ),
+            },
         }),
         g = {};
     return (
@@ -47,7 +47,7 @@ let s = (0, a.I)(function (e) {
                 return u(t, e);
             }),
         n.createElement(
-            'div',
+            "div",
             l(
                 {
                     style: v.swatch,
@@ -58,16 +58,16 @@ let s = (0, a.I)(function (e) {
                     tabIndex: 0,
                     onKeyDown: function (e) {
                         return 13 === e.keyCode && s(t, e);
-                    }
+                    },
                 },
-                g
+                g,
             ),
             f,
             b &&
                 n.createElement(i.Z, {
                     borderRadius: v.swatch.borderRadius,
-                    boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
-                })
+                    boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.1)",
+                }),
         )
     );
 });

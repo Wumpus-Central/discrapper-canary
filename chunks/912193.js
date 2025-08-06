@@ -12,7 +12,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,21 +22,21 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let u = null;
 function d() {
-    (null !== u && (0, i.Mr3)(u), (u = null));
+    null !== u && (0, i.Mr3)(u), (u = null);
 }
 function f() {
     o.Z.setSilenceWarning(!1);
@@ -47,15 +47,15 @@ function _() {
             a.default,
             c(
                 {
-                    title: s.intl.string(s.t['zQ1+Jy']),
+                    title: s.intl.string(s.t["zQ1+Jy"]),
                     body: s.intl.string(s.t.K1gWXl),
                     secondaryConfirmText: s.intl.string(s.t.XAiAgI),
                     onConfirmSecondary: f,
                     onConfirm: d,
-                    confirmText: s.intl.string(s.t.BddRzc)
+                    confirmText: s.intl.string(s.t.BddRzc),
                 },
-                e
-            )
-        )
+                e,
+            ),
+        ),
     );
 }

@@ -13,55 +13,65 @@ var i = n(120356),
     p = n(20493);
 function m(e) {
     let { children: t } = e;
-    return (0, r.jsx)('li', {
+    return (0, r.jsx)("li", {
         className: h.listItem,
         children: (0, r.jsx)(s.Text, {
-            variant: 'text-sm/medium',
-            color: 'text-default',
-            children: t
-        })
+            variant: "text-sm/medium",
+            color: "text-default",
+            children: t,
+        }),
     });
 }
 function f(e) {
     let { setSlide: t, transitionTo: i } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(o.Ee, {
                 src: n(26230),
-                className: l()(p.marginBottom20, p.marginTop8)
+                className: l()(p.marginBottom20, p.marginTop8),
             }),
             (0, r.jsx)(o.Dx, {
                 className: p.marginBottom8,
-                children: d.intl.string(d.t['8UcxIy'])
+                children: d.intl.string(d.t["8UcxIy"]),
             }),
             (0, r.jsx)(s.Text, {
-                variant: 'text-md/normal',
-                children: d.intl.string(d.t.O37hMj)
+                variant: "text-md/normal",
+                children: d.intl.string(d.t.O37hMj),
             }),
             (0, r.jsxs)(o.gO, {
                 className: l()(p.marginBottom20, p.marginTop20),
                 children: [
-                    (0, r.jsx)(s.Text, { variant: 'text-sm/normal' }),
-                    (0, r.jsxs)('ul', {
+                    (0, r.jsx)(s.Text, { variant: "text-sm/normal" }),
+                    (0, r.jsxs)("ul", {
                         className: h.listContainer,
-                        children: [(0, r.jsx)(m, { children: d.intl.string(d.t.Gj1Zr6) }), (0, r.jsx)(a.Z, {}), (0, r.jsx)(m, { children: d.intl.string(d.t['8C6t3N']) }), (0, r.jsx)(a.Z, {}), (0, r.jsx)(m, { children: d.intl.string(d.t.mToZMD) }), (0, r.jsx)(a.Z, {}), (0, r.jsx)(m, { children: d.intl.string(d.t.TPEvkZ) }), (0, r.jsx)(a.Z, {}), (0, r.jsx)(m, { children: d.intl.string(d.t.H8Y1Li) })]
-                    })
-                ]
+                        children: [
+                            (0, r.jsx)(m, { children: d.intl.string(d.t.Gj1Zr6) }),
+                            (0, r.jsx)(a.Z, {}),
+                            (0, r.jsx)(m, { children: d.intl.string(d.t["8C6t3N"]) }),
+                            (0, r.jsx)(a.Z, {}),
+                            (0, r.jsx)(m, { children: d.intl.string(d.t.mToZMD) }),
+                            (0, r.jsx)(a.Z, {}),
+                            (0, r.jsx)(m, { children: d.intl.string(d.t.TPEvkZ) }),
+                            (0, r.jsx)(a.Z, {}),
+                            (0, r.jsx)(m, { children: d.intl.string(d.t.H8Y1Li) }),
+                        ],
+                    }),
+                ],
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.buttonContainer,
                 children: [
                     (0, r.jsx)(o.zx, {
                         onClick: () => t(c.n.PASSWORD),
-                        children: d.intl.string(d.t.GgCRqa)
+                        children: d.intl.string(d.t.GgCRqa),
                     }),
                     (0, r.jsx)(o.zx, {
                         color: o.zx.Colors.PRIMARY,
-                        onClick: () => i(u.Z5c.LOGIN, { source: 'account_revert' }),
-                        children: d.intl.string(d.t['B/yHcX'])
-                    })
-                ]
-            })
-        ]
+                        onClick: () => i(u.Z5c.LOGIN, { source: "account_revert" }),
+                        children: d.intl.string(d.t["B/yHcX"]),
+                    }),
+                ],
+            }),
+        ],
     });
 }

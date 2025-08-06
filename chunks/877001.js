@@ -2,11 +2,11 @@ r.d(t, { T: () => n });
 var n = function (e, t, r, n, o) {
     var a = o.clientWidth,
         i = o.clientHeight,
-        l = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-        s = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
+        l = "number" == typeof e.pageX ? e.pageX : e.touches[0].pageX,
+        s = "number" == typeof e.pageY ? e.pageY : e.touches[0].pageY,
         u = l - (o.getBoundingClientRect().left + window.pageXOffset),
         c = s - (o.getBoundingClientRect().top + window.pageYOffset);
-    if ('vertical' === r) {
+    if ("vertical" === r) {
         var p = void 0;
         if (((p = c < 0 ? 0 : c > i ? 1 : Math.round((100 * c) / i) / 100), t.a !== p))
             return {
@@ -14,7 +14,7 @@ var n = function (e, t, r, n, o) {
                 s: t.s,
                 l: t.l,
                 a: p,
-                source: 'rgb'
+                source: "rgb",
             };
     } else {
         var f = void 0;
@@ -24,7 +24,7 @@ var n = function (e, t, r, n, o) {
                 s: t.s,
                 l: t.l,
                 a: f,
-                source: 'rgb'
+                source: "rgb",
             };
     }
     return null;

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i,
     l = n(748780);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,7 +43,7 @@ class o {
         this.animation.stop();
     }
     constructor(e) {
-        (a(this, 'animation', void 0), (this.animation = e));
+        a(this, "animation", void 0), (this.animation = e);
     }
 }
 class c {
@@ -57,7 +57,7 @@ class c {
         this._map((e) => e.stop());
     }
     constructor(e) {
-        (a(this, 'animations', void 0), (this.animations = e));
+        a(this, "animations", void 0), (this.animations = e);
     }
 }
 class d {
@@ -68,10 +68,10 @@ class d {
         }
     }
     stop() {
-        ((this.stopped = !0), this.animations.map((e) => e.stop()));
+        (this.stopped = !0), this.animations.map((e) => e.stop());
     }
     constructor(e) {
-        (a(this, 'animations', void 0), a(this, 'stopped', !1), (this.animations = e));
+        a(this, "animations", void 0), a(this, "stopped", !1), (this.animations = e);
     }
 }
 function u(e, t, n) {
@@ -92,7 +92,7 @@ let m =
             },
             sequence: function (e) {
                 return new d(e);
-            }
+            },
         }),
     Object.getOwnPropertyDescriptors
         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))

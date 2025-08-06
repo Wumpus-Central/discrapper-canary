@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,9 +65,9 @@ function m(e, t, n) {
         o = r.useRef(new s.Xp()),
         d = r.useCallback(
             (r) => {
-                ((r.lastUpdatedAt = Date.now()), (0, l.gr)(r, e, n), (0, l.BR)(t, n, r));
+                (r.lastUpdatedAt = Date.now()), (0, l.gr)(r, e, n), (0, l.BR)(t, n, r);
             },
-            [t, n, e]
+            [t, n, e],
         ),
         _ = r.useCallback(
             (r, s, _) => {
@@ -78,11 +78,11 @@ function m(e, t, n) {
                     y: _,
                     userId: e,
                     state: c.f.START,
-                    lastUpdatedAt: Date.now()
+                    lastUpdatedAt: Date.now(),
                 });
-                ((0, l.BR)(t, n, h), (0, l.gr)(h, e, n), o.current.start(u.FO, () => d(h)));
+                (0, l.BR)(t, n, h), (0, l.gr)(h, e, n), o.current.start(u.FO, () => d(h));
             },
-            [e, t, n, d]
+            [e, t, n, d],
         ),
         m = r.useCallback(
             (r, a, s) => {
@@ -92,15 +92,15 @@ function m(e, t, n) {
                     y: s,
                     userId: e,
                     state: c.f.START,
-                    lastUpdatedAt: Date.now()
+                    lastUpdatedAt: Date.now(),
                 });
-                (h(t, n, _), (0, l.gr)(_, e, n), o.current.start(u.FO, () => d(_)));
+                h(t, n, _), (0, l.gr)(_, e, n), o.current.start(u.FO, () => d(_));
             },
-            [e, t, n, d]
+            [e, t, n, d],
         ),
         g = r.useCallback(
             (r, a, s) => {
-                (h.cancel(),
+                h.cancel(),
                     (0, l.Df)(t, n, i.current),
                     (0, l.gr)(
                         p(f({}, r), {
@@ -109,14 +109,14 @@ function m(e, t, n) {
                             y: s,
                             userId: e,
                             state: c.f.STOP,
-                            lastUpdatedAt: Date.now()
+                            lastUpdatedAt: Date.now(),
                         }),
                         e,
-                        n
+                        n,
                     ),
-                    o.current.stop());
+                    o.current.stop();
             },
-            [t, n, e]
+            [t, n, e],
         ),
         E = r.useCallback((e, t, n) => m(e, t, n), [m]);
     return r.useMemo(
@@ -124,8 +124,8 @@ function m(e, t, n) {
             handleMouseDown: _,
             handleMouseMove: m,
             handleMouseUp: g,
-            handleMouseEnter: E
+            handleMouseEnter: E,
         }),
-        [_, E, m, g]
+        [_, E, m, g],
     );
 }

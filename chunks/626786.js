@@ -13,16 +13,16 @@ function l(e) {
             ? (0, r.jsx)(a.Z, {
                   size: 12,
                   color: c,
-                  className: s.linkedRoleColor
+                  className: s.linkedRoleColor,
               })
-            : (0, r.jsx)('div', {
+            : (0, r.jsx)("div", {
                   className: s.roleColor,
-                  style: { backgroundColor: c }
+                  style: { backgroundColor: c },
               })),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: o()(n, s.role),
-            style: { '--custom-role-label-color': c },
-            children: [t, u, i]
+            style: { "--custom-role-label-color": c },
+            children: [t, u, i],
         })
     );
 }

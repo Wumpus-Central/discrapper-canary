@@ -6,10 +6,10 @@ t.exports =
     !o(function () {
         return (
             7 !==
-            Object.defineProperty(i('div'), 'a', {
+            Object.defineProperty(i("div"), "a", {
                 get: function () {
                     return 7;
-                }
+                },
             }).a
         );
     });

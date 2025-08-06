@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(35282));
+n.d(t, { Z: () => d }), n(35282);
 var r = n(73800),
     i = n(873546),
     l = n(442837),
@@ -20,10 +20,10 @@ function d(e) {
                     ? {
                           path: i,
                           fingerprint: h,
-                          search: p
+                          search: p,
                       }
                     : d(i, h, p),
-            [i, d, h, p]
+            [i, d, h, p],
         );
     return (
         r.useEffect(() => {
@@ -31,7 +31,7 @@ function d(e) {
                 (null == f &&
                     a.Z.openNativeAppModal(i, c.Etm.DEEP_LINK, {
                         type: n,
-                        params: g
+                        params: g,
                     }));
         }, [f, i, g, n]),
         t

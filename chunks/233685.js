@@ -14,7 +14,7 @@ function p() {
     let e = (0, r.e7)([l.Z], () => l.Z.getSettings().storageLocation),
         t = async () => {
             let e = await a.Z.fileManager.showOpenDialog({
-                properties: ['openDirectory', 'createDirectory']
+                properties: ["openDirectory", "createDirectory"],
             });
             e.length > 0 && o.T1(e[0]);
         };
@@ -25,15 +25,15 @@ function p() {
             className: u.formItem,
             children: (0, i.jsx)(s.P3F, {
                 className: m.selectControl,
-                'aria-label': d.intl.formatToPlainString(d.t.iMONTk, { storageLocation: e }),
+                "aria-label": d.intl.formatToPlainString(d.t.iMONTk, { storageLocation: e }),
                 onClick: t,
                 children: (0, i.jsx)(s.oil, {
                     tabIndex: -1,
                     value: e,
                     editable: !1,
-                    'aria-hidden': !0
-                })
-            })
-        })
+                    "aria-hidden": !0,
+                }),
+            }),
+        }),
     });
 }

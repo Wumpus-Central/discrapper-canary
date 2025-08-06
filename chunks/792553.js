@@ -1,120 +1,120 @@
-(t(864733)(r, '__esModule', { value: !0 }),
+t(864733)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
         accessibleNameRequired: !0,
         baseConcepts: [],
         childrenPresentational: !0,
-        nameFrom: ['author', 'contents'],
+        nameFrom: ["author", "contents"],
         prohibitedProps: [],
         props: {
-            'aria-disabled': null,
-            'aria-expanded': null,
-            'aria-haspopup': null,
-            'aria-pressed': null
+            "aria-disabled": null,
+            "aria-expanded": null,
+            "aria-haspopup": null,
+            "aria-pressed": null,
         },
         relatedConcepts: [
             {
                 concept: {
                     attributes: [
                         {
-                            constraints: ['set'],
-                            name: 'aria-pressed'
+                            constraints: ["set"],
+                            name: "aria-pressed",
                         },
                         {
-                            name: 'type',
-                            value: 'checkbox'
-                        }
+                            name: "type",
+                            value: "checkbox",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            name: 'aria-expanded',
-                            value: 'false'
-                        }
+                            name: "aria-expanded",
+                            value: "false",
+                        },
                     ],
-                    name: 'summary'
+                    name: "summary",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            name: 'aria-expanded',
-                            value: 'true'
-                        }
+                            name: "aria-expanded",
+                            value: "true",
+                        },
                     ],
-                    constraints: ['direct descendant of details element with the open attribute defined'],
-                    name: 'summary'
+                    constraints: ["direct descendant of details element with the open attribute defined"],
+                    name: "summary",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            name: 'type',
-                            value: 'button'
-                        }
+                            name: "type",
+                            value: "button",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            name: 'type',
-                            value: 'image'
-                        }
+                            name: "type",
+                            value: "image",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            name: 'type',
-                            value: 'reset'
-                        }
+                            name: "type",
+                            value: "reset",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            name: 'type',
-                            value: 'submit'
-                        }
+                            name: "type",
+                            value: "submit",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
-                concept: { name: 'button' },
-                module: 'HTML'
+                concept: { name: "button" },
+                module: "HTML",
             },
             {
-                concept: { name: 'trigger' },
-                module: 'XForms'
-            }
+                concept: { name: "trigger" },
+                module: "XForms",
+            },
         ],
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
         requiredProps: {},
-        superClass: [['roletype', 'widget', 'command']]
-    }));
+        superClass: [["roletype", "widget", "command"]],
+    });

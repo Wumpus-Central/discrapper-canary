@@ -1,1 +1,1 @@
-e.exports = n.p + 'bd0f5c73464e9717.woff2';
+e.exports = n.p + "bd0f5c73464e9717.woff2";

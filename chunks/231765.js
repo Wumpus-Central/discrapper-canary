@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => z }), n(953529), n(388685));
+n.d(t, { Z: () => z }), n(953529), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(392711),
@@ -24,24 +24,24 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -67,7 +67,7 @@ let T = {
         enabled: !0,
         combosEnabled: !0,
         screenshakeEnabled: !1,
-        confettiEnabled: !1
+        confettiEnabled: !1,
     },
     I = (0, s.range)(0, 11),
     N = (0, s.range)(0, 2.25, 0.25),
@@ -77,40 +77,40 @@ let T = {
         {
             location: j.Hn.CHAT_INPUT,
             title: C.intl.string(C.t.elTty8),
-            description: C.intl.string(C.t.HtKfMj)
+            description: C.intl.string(C.t.HtKfMj),
         },
         {
             location: j.Hn.REACTION,
             title: C.intl.string(C.t.Ik4VIS),
-            description: C.intl.string(C.t.y4rqKy)
+            description: C.intl.string(C.t.y4rqKy),
         },
         {
             location: j.Hn.MEMBER_USER,
             title: C.intl.string(C.t.ZXBlAg),
-            description: C.intl.string(C.t['m9RD+f'])
+            description: C.intl.string(C.t["m9RD+f"]),
         },
         {
             location: j.Hn.CALL_TILE,
             title: C.intl.string(C.t.V66giY),
-            description: C.intl.string(C.t.fiHV7u)
-        }
+            description: C.intl.string(C.t.fiHV7u),
+        },
     ],
     R = () => [
         {
             location: j.oZ.CHAT_INPUT,
             title: C.intl.string(C.t.vUcvPD),
-            description: C.intl.string(C.t.y00OrK)
+            description: C.intl.string(C.t.y00OrK),
         },
         {
             location: j.oZ.VOICE_USER,
-            title: C.intl.string(C.t['TcRO5+']),
-            description: C.intl.string(C.t.YJCxVV)
+            title: C.intl.string(C.t["TcRO5+"]),
+            description: C.intl.string(C.t.YJCxVV),
         },
         {
             location: j.oZ.MENTION,
             title: C.intl.string(C.t.oW4shI),
-            description: C.intl.string(C.t['mqfw/P'])
-        }
+            description: C.intl.string(C.t["mqfw/P"]),
+        },
     ];
 function D(e) {
     let { disabled: t, locations: n, settingsLocations: r, onChange: s } = e,
@@ -122,35 +122,35 @@ function D(e) {
                     value: r[e.location],
                     note: e.description,
                     onChange: (t) => s(S(v({}, r), { [e.location]: t })),
-                    children: e.title
+                    children: e.title,
                 },
-                e.location
-            )
+                e.location,
+            ),
         );
     return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(o.vwX, { children: C.intl.string(C.t.bWVN1N) }), a]
+        children: [(0, i.jsx)(o.vwX, { children: C.intl.string(C.t.bWVN1N) }), a],
     });
 }
 function Z(e) {
     let { children: t } = e;
     return (0, i.jsx)(o.Text, {
         className: O.sliderDescription,
-        variant: 'text-sm/normal',
-        color: 'header-secondary',
-        children: t
+        variant: "text-sm/normal",
+        color: "header-secondary",
+        children: t,
     });
 }
 function w(e) {
     let {
             settings: { enabled: t, warningSeen: n },
-            updateSettings: r
+            updateSettings: r,
         } = e,
         s = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(o.j7V, {
         value: t,
         note: C.intl.string(C.t.KuYbWF),
         onChange: (e) => {
-            (e || (0, g.T)(h.hn.DISABLE_POGGERMODE),
+            e || (0, g.T)(h.hn.DISABLE_POGGERMODE),
                 e && (!n || s)
                     ? (0, o.h7j)((e) =>
                           (0, i.jsx)(
@@ -158,39 +158,45 @@ function w(e) {
                               S(
                                   v(
                                       {
-                                          header: s ? C.intl.string(C.t['FxT+p6']) : C.intl.string(C.t.TAZ4Fx),
+                                          header: s ? C.intl.string(C.t["FxT+p6"]) : C.intl.string(C.t.TAZ4Fx),
                                           confirmText: C.intl.string(C.t.JFfinp),
-                                          cancelText: C.intl.string(C.t['ETE/oK']),
+                                          cancelText: C.intl.string(C.t["ETE/oK"]),
                                           onConfirm: () =>
                                               r(
                                                   s
                                                       ? T
                                                       : {
                                                             enabled: !0,
-                                                            warningSeen: !0
-                                                        }
-                                              )
+                                                            warningSeen: !0,
+                                                        },
+                                              ),
                                       },
-                                      e
+                                      e,
                                   ),
                                   {
                                       children: (0, i.jsx)(o.Text, {
-                                          variant: 'text-md/normal',
-                                          children: s ? C.intl.string(C.t.gmixr6) : C.intl.string(C.t.jN3t3N)
-                                      })
-                                  }
-                              )
-                          )
+                                          variant: "text-md/normal",
+                                          children: s ? C.intl.string(C.t.gmixr6) : C.intl.string(C.t.jN3t3N),
+                                      }),
+                                  },
+                              ),
+                          ),
                       )
-                    : r({ enabled: e }));
+                    : r({ enabled: e });
         },
-        children: C.intl.string(C.t.vuiXm5)
+        children: C.intl.string(C.t.vuiXm5),
     });
 }
 function k(e) {
     let {
-            settings: { enabled: t, confettiEnabled: n, confettiCount: r, confettiSize: s, confettiEnabledLocations: a },
-            updateSettings: l
+            settings: {
+                enabled: t,
+                confettiEnabled: n,
+                confettiCount: r,
+                confettiSize: s,
+                confettiEnabledLocations: a,
+            },
+            updateSettings: l,
         } = e,
         c = !t || !n;
     return (0, i.jsxs)(o.hjN, {
@@ -202,11 +208,11 @@ function k(e) {
                 value: n,
                 note: C.intl.string(C.t.O1Vflp),
                 onChange: (e) => l({ confettiEnabled: e }, 0),
-                children: C.intl.string(C.t.s0KCgI)
+                children: C.intl.string(C.t.s0KCgI),
             }),
             (0, i.jsxs)(o.xJW, {
                 disabled: c,
-                title: C.intl.string(C.t['vd0D8/']),
+                title: C.intl.string(C.t["vd0D8/"]),
                 className: O.formItem,
                 children: [
                     (0, i.jsx)(Z, { children: C.intl.string(C.t.a18Sur) }),
@@ -218,9 +224,9 @@ function k(e) {
                         maxValue: y[y.length - 1],
                         initialValue: r,
                         onValueChange: (e) => l({ confettiCount: e }, 0),
-                        onValueRender: (e) => ''.concat(e)
-                    })
-                ]
+                        onValueRender: (e) => "".concat(e),
+                    }),
+                ],
             }),
             (0, i.jsxs)(o.xJW, {
                 disabled: c,
@@ -236,23 +242,23 @@ function k(e) {
                         maxValue: A[A.length - 1],
                         initialValue: s,
                         onValueChange: (e) => l({ confettiSize: e }, 0),
-                        onValueRender: (e) => ''.concat(e)
-                    })
-                ]
+                        onValueRender: (e) => "".concat(e),
+                    }),
+                ],
             }),
             (0, i.jsx)(D, {
                 disabled: c,
                 locations: P(),
                 settingsLocations: a,
-                onChange: (e) => l({ confettiEnabledLocations: e }, 0)
-            })
-        ]
+                onChange: (e) => l({ confettiEnabledLocations: e }, 0),
+            }),
+        ],
     });
 }
 function L(e) {
     let {
             settings: { enabled: t, combosEnabled: n, comboSoundsEnabled: r, combosRequiredCount: s },
-            updateSettings: a
+            updateSettings: a,
         } = e,
         l = !t || !n;
     return (0, i.jsxs)(o.hjN, {
@@ -262,23 +268,23 @@ function L(e) {
             (0, i.jsx)(o.j7V, {
                 disabled: !t,
                 value: n,
-                note: C.intl.string(C.t['31Z8ER']),
+                note: C.intl.string(C.t["31Z8ER"]),
                 onChange: (e) => a({ combosEnabled: e }),
-                children: C.intl.string(C.t.o3iV7O)
+                children: C.intl.string(C.t.o3iV7O),
             }),
             (0, i.jsx)(o.j7V, {
                 disabled: !t,
                 value: r,
-                note: C.intl.string(C.t['9rgQEh']),
+                note: C.intl.string(C.t["9rgQEh"]),
                 onChange: (e) => a({ comboSoundsEnabled: e }),
-                children: C.intl.string(C.t['Ax+Ioa'])
+                children: C.intl.string(C.t["Ax+Ioa"]),
             }),
             (0, i.jsxs)(o.xJW, {
                 disabled: l,
                 title: C.intl.string(C.t.L0oQur),
                 className: O.formItem,
                 children: [
-                    (0, i.jsx)(Z, { children: C.intl.string(C.t['/OOFpK']) }),
+                    (0, i.jsx)(Z, { children: C.intl.string(C.t["/OOFpK"]) }),
                     (0, i.jsx)(o.iRW, {
                         disabled: l,
                         markers: I,
@@ -287,23 +293,23 @@ function L(e) {
                         maxValue: I[I.length - 1],
                         initialValue: s,
                         onValueChange: (e) => a({ combosRequiredCount: e }),
-                        onValueRender: (e) => ''.concat(e)
-                    })
-                ]
+                        onValueRender: (e) => "".concat(e),
+                    }),
+                ],
             }),
-            (0, i.jsx)(o.$i$, { className: O.divider })
-        ]
+            (0, i.jsx)(o.$i$, { className: O.divider }),
+        ],
     });
 }
 function M(e) {
     let {
             settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: r, screenshakeEnabledLocations: s },
-            updateSettings: l
+            updateSettings: l,
         } = e,
         c = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         u = !t || !n || c,
         m = (e, t) => {
-            (null != e.shakeIntensity && e.shakeIntensity > r && (0, g.T)(h.hn.MORE), l(e, t));
+            null != e.shakeIntensity && e.shakeIntensity > r && (0, g.T)(h.hn.MORE), l(e, t);
         };
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
@@ -315,7 +321,7 @@ function M(e) {
                 value: n && !c,
                 note: C.intl.string(C.t.Qq5W3t),
                 onChange: (e) => l({ screenshakeEnabled: e }, 1),
-                children: C.intl.string(C.t.N004zM)
+                children: C.intl.string(C.t.N004zM),
             }),
             (0, i.jsxs)(o.xJW, {
                 disabled: u,
@@ -332,17 +338,18 @@ function M(e) {
                         maxValue: N[N.length - 1],
                         initialValue: r,
                         onValueChange: (e) => m({ shakeIntensity: e }, 1),
-                        onMarkerRender: (e) => (e === N[N.length - 1] ? C.intl.string(C.t['4rbMWV']) : ''.concat(100 * e, '%'))
-                    })
-                ]
+                        onMarkerRender: (e) =>
+                            e === N[N.length - 1] ? C.intl.string(C.t["4rbMWV"]) : "".concat(100 * e, "%"),
+                    }),
+                ],
             }),
             (0, i.jsx)(D, {
                 disabled: u,
                 locations: R(),
                 settingsLocations: s,
-                onChange: (e) => l({ screenshakeEnabledLocations: e }, 1)
-            })
-        ]
+                onChange: (e) => l({ screenshakeEnabledLocations: e }, 1),
+            }),
+        ],
     });
 }
 function B(e) {
@@ -355,26 +362,26 @@ function B(e) {
             children: [
                 (0, i.jsx)(o.R94, {
                     className: O.formItem,
-                    children: C.intl.string(C.t['1SLnkp'])
+                    children: C.intl.string(C.t["1SLnkp"]),
                 }),
-                (0, i.jsx)('div', {
-                    'data-button-hoisted-classname-wrapper': !0,
+                (0, i.jsx)("div", {
+                    "data-button-hoisted-classname-wrapper": !0,
                     className: O.hideButton,
                     children: (0, i.jsx)(o.zxk, {
-                        variant: 'primary',
-                        size: 'sm',
+                        variant: "primary",
+                        size: "sm",
                         text: C.intl.string(C.t.qz65yc),
                         onClick: () => {
-                            (t({
+                            t({
                                 enabled: !1,
-                                settingsVisible: !1
+                                settingsVisible: !1,
                             }),
-                                (0, c.xf)());
-                        }
-                    })
-                })
-            ]
-        })
+                                (0, c.xf)();
+                        },
+                    }),
+                }),
+            ],
+        }),
     });
 }
 function U(e) {
@@ -385,43 +392,43 @@ function U(e) {
                 onClick: () => t(1),
                 className: O.achievementContainer,
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: O.achievementIconContainer,
                         children: (0, i.jsx)(o.rm8, {
-                            size: 'md',
-                            color: l.Z.unsafe_rawColors.ORANGE_345.css
-                        })
+                            size: "md",
+                            color: l.Z.unsafe_rawColors.ORANGE_345.css,
+                        }),
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: O.achievementTextContainer,
                         children: [
                             (0, i.jsx)(o.X6q, {
-                                variant: 'heading-md/semibold',
-                                color: 'header-primary',
-                                children: C.intl.string(C.t['6jI0hY'])
+                                variant: "heading-md/semibold",
+                                color: "header-primary",
+                                children: C.intl.string(C.t["6jI0hY"]),
                             }),
                             (0, i.jsx)(o.Text, {
-                                variant: 'text-md/normal',
-                                color: 'header-secondary',
-                                children: C.intl.string(C.t.GuUItb)
-                            })
-                        ]
+                                variant: "text-md/normal",
+                                color: "header-secondary",
+                                children: C.intl.string(C.t.GuUItb),
+                            }),
+                        ],
                     }),
                     (0, i.jsx)(o.Fbu, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         width: 16,
-                        className: O.rightCaretIcon
-                    })
-                ]
+                        className: O.rightCaretIcon,
+                    }),
+                ],
             }),
-            (0, i.jsx)(o.$i$, { className: O.divider })
-        ]
+            (0, i.jsx)(o.$i$, { className: O.divider }),
+        ],
     });
 }
 let V = () =>
     n
-        .e('68170')
+        .e("68170")
         .then(n.t.bind(n, 205663, 19))
         .then((e) => {
             let { default: t } = e;
@@ -432,7 +439,7 @@ function G(e) {
         s = (0, a.cj)([b.Z], () => b.Z.getState()),
         [l, c] = r.useState({
             x: 0,
-            y: 0
+            y: 0,
         }),
         d = (0, _.Z)();
     function u(e, t, n, i) {
@@ -441,12 +448,12 @@ function G(e) {
     let g = (e) => {
             if (e.enabled && !1 === s.enabled) {
                 var t;
-                (n(!0),
-                    (0, m.GN)('poggermode_enabled'),
+                n(!0),
+                    (0, m.GN)("poggermode_enabled"),
                     p.S.dispatch(E.CkL.SHAKE_APP, {
                         duration: 2000,
-                        intensity: null != (t = e.shakeIntensity) ? t : s.shakeIntensity
-                    }));
+                        intensity: null != (t = e.shakeIntensity) ? t : s.shakeIntensity,
+                    });
             }
         },
         h = (e, t) => {
@@ -458,44 +465,47 @@ function G(e) {
                 var r;
                 p.S.dispatch(E.CkL.SHAKE_APP, {
                     duration: 1000,
-                    intensity: null != (r = e.shakeIntensity) ? r : s.shakeIntensity
+                    intensity: null != (r = e.shakeIntensity) ? r : s.shakeIntensity,
                 });
             }
         },
         x = (e) => {
             c({
                 x: e.clientX,
-                y: e.clientY
+                y: e.clientY,
             });
         };
     return (
-        r.useEffect(() => (window.addEventListener('mousemove', x), () => window.removeEventListener('mousemove', x)), []),
+        r.useEffect(
+            () => (window.addEventListener("mousemove", x), () => window.removeEventListener("mousemove", x)),
+            [],
+        ),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.X6q, {
-                    variant: 'heading-lg/semibold',
+                    variant: "heading-lg/semibold",
                     className: O.title,
-                    children: C.intl.string(C.t.AtCukJ)
+                    children: C.intl.string(C.t.AtCukJ),
                 }),
                 (0, i.jsx)(w, {
                     settings: s,
-                    updateSettings: h
+                    updateSettings: h,
                 }),
                 (0, i.jsx)(U, { onChangePage: t }),
                 (0, i.jsx)(L, {
                     settings: s,
-                    updateSettings: h
+                    updateSettings: h,
                 }),
                 (0, i.jsx)(M, {
                     settings: s,
-                    updateSettings: h
+                    updateSettings: h,
                 }),
                 (0, i.jsx)(k, {
                     settings: s,
-                    updateSettings: h
+                    updateSettings: h,
                 }),
-                (0, i.jsx)(B, { updateSettings: h })
-            ]
+                (0, i.jsx)(B, { updateSettings: h }),
+            ],
         })
     );
 }
@@ -507,7 +517,7 @@ let F = (e, t, n) => {
             case 0:
                 return (0, i.jsx)(G, {
                     onChangePage: r(1),
-                    setShowEnableAnimation: n
+                    setShowEnableAnimation: n,
                 });
             case 1:
                 return (0, i.jsx)(x.Z, { onBackClick: r(0) });
@@ -538,9 +548,9 @@ function z() {
                     className: O.slideAnimator,
                     step: e,
                     direction: n,
-                    children: F(e, t, c)
+                    children: F(e, t, c),
                 }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: p ? O.enableAnimationOverlayVisible : O.enableAnimationOverlayHidden,
                     children: (0, i.jsx)(o.Fmz, {
                         className: O.enableAnimation,
@@ -549,10 +559,10 @@ function z() {
                         autoplay: !1,
                         resetOnPlay: !0,
                         loop: !1,
-                        onComplete: () => c(!1)
-                    })
-                })
-            ]
+                        onComplete: () => c(!1),
+                    }),
+                }),
+            ],
         })
     );
 }

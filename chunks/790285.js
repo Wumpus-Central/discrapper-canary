@@ -1,7 +1,7 @@
 n.d(t, {
     TG: () => l,
     wB: () => s,
-    yt: () => a
+    yt: () => a,
 });
 var r = n(149765),
     i = n(345162),
@@ -13,5 +13,9 @@ function s(e, t) {
     return null != t && (!!r.e$(t.deny, o.Plq.VIEW_CHANNEL) || (e.isGuildVocal() && r.e$(t.deny, o.Plq.CONNECT)));
 }
 function l(e, t) {
-    return !(null == t || s(e, t)) && !!r.e$(t.allow, o.Plq.VIEW_CHANNEL) && (!e.isGuildVocal() || r.e$(t.allow, o.Plq.CONNECT));
+    return (
+        !(null == t || s(e, t)) &&
+        !!r.e$(t.allow, o.Plq.VIEW_CHANNEL) &&
+        (!e.isGuildVocal() || r.e$(t.allow, o.Plq.CONNECT))
+    );
 }

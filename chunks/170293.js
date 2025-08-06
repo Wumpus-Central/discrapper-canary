@@ -6,12 +6,12 @@ function a(e) {
     i.Z.show({
         title: s.intl.string(s.t.RpjdLy),
         body: s.intl.string(s.t.nOSopa),
-        confirmText: s.intl.string(s.t['sKJ7+f']),
-        confirmVariant: 'critical-primary',
-        cancelText: s.intl.string(s.t['7wZ1GR']),
+        confirmText: s.intl.string(s.t["sKJ7+f"]),
+        confirmVariant: "critical-primary",
+        cancelText: s.intl.string(s.t["7wZ1GR"]),
         onConfirm: () => {
             (0, r.v6)(null);
         },
-        onCancel: e
+        onCancel: e,
     });
 }

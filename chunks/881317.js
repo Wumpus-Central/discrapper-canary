@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(990547),
@@ -22,24 +22,24 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -65,13 +65,13 @@ s.ZP.initialize();
 let O = {
         [p.BM.MESSAGE]: b.t.fuqnBA,
         [p.BM.USER]: b.t.F4jrRU,
-        [p.BM.GUILD]: b.t.gH3aMj
+        [p.BM.GUILD]: b.t.gH3aMj,
     },
     N = (e) => {
         let { title: t, menuType: i } = e,
             s = () => {
                 (0, a.ZDy)(async () => {
-                    let { default: e } = await n.e('93288').then(n.bind(n, 396410));
+                    let { default: e } = await n.e("93288").then(n.bind(n, 396410));
                     return (t) =>
                         (0, r.jsx)(
                             e,
@@ -80,8 +80,8 @@ let O = {
                                 headerText: b.intl.string(b.t.ZLRYGR),
                                 confirmButtonText: b.intl.string(b.t.PDTjLC),
                                 confirmButtonColor: o.zx.Colors.BRAND,
-                                impressionName: l.ImpressionNames.URF_ENTER_EMAIL
-                            })
+                                impressionName: l.ImpressionNames.URF_ENTER_EMAIL,
+                            }),
                         );
                 });
             },
@@ -92,11 +92,15 @@ let O = {
                     s = async (t) => await (0, f.RV)(i, e, t),
                     c = (e) => {
                         let t = null == e ? void 0 : e.token;
-                        i === p.BM.MESSAGE ? (0, m.eE)(t) : i === p.BM.USER ? (0, m.JM)(t) : i === p.BM.GUILD && (0, m.FO)(t);
+                        i === p.BM.MESSAGE
+                            ? (0, m.eE)(t)
+                            : i === p.BM.USER
+                              ? (0, m.JM)(t)
+                              : i === p.BM.GUILD && (0, m.FO)(t);
                     };
-                (t(),
+                t(),
                     (0, a.ZDy)(async () => {
-                        let { default: e } = await n.e('94566').then(n.bind(n, 965072));
+                        let { default: e } = await n.e("94566").then(n.bind(n, 965072));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
@@ -105,26 +109,26 @@ let O = {
                                     onResend: t,
                                     onSuccess: c,
                                     headerText: b.intl.string(b.t.H3Q7U1),
-                                    confirmButtonText: b.intl.string(b.t['13ofGh']),
+                                    confirmButtonText: b.intl.string(b.t["13ofGh"]),
                                     confirmButtonColor: o.zx.Colors.BRAND,
-                                    impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
-                                })
+                                    impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE,
+                                }),
                             );
-                    }));
+                    });
             };
         return (0, r.jsxs)(a.P3F, {
             className: E.reportButton,
             onClick: () => s(),
             children: [
                 (0, r.jsx)(a.Text, {
-                    variant: 'text-md/medium',
-                    children: t
+                    variant: "text-md/medium",
+                    children: t,
                 }),
                 (0, r.jsx)(a.LJT, {
-                    size: 'sm',
-                    color: 'currentColor'
-                })
-            ]
+                    size: "sm",
+                    color: "currentColor",
+                }),
+            ],
         });
     },
     S = () => {
@@ -136,12 +140,12 @@ let O = {
                 (0, f.Jj)()
                     .then((e) => {
                         let {
-                            body: { capabilities: n }
+                            body: { capabilities: n },
                         } = e;
-                        (t(!1), l(n));
+                        t(!1), l(n);
                     })
                     .catch(() => {
-                        (t(!1), l([]));
+                        t(!1), l([]);
                     });
             };
         return (
@@ -167,13 +171,15 @@ let O = {
                       children: [
                           (0, r.jsx)(d.Dx, {
                               className: v.marginBottom8,
-                              children: b.intl.string(b.t.Z11w19)
+                              children: b.intl.string(b.t.Z11w19),
                           }),
                           (0, r.jsx)(d.DK, {
                               className: v.marginBottom8,
-                              children: b.intl.format(b.t['532l+v'], { supportURL: _.Z.getArticleURL(x.BhN.COPYRIGHT_AND_IP_POLICY) })
+                              children: b.intl.format(b.t["532l+v"], {
+                                  supportURL: _.Z.getArticleURL(x.BhN.COPYRIGHT_AND_IP_POLICY),
+                              }),
                           }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: E.container,
                               children: n.map((e) =>
                                   null == O[e]
@@ -182,13 +188,13 @@ let O = {
                                             N,
                                             {
                                                 title: b.intl.string(O[e]),
-                                                menuType: e
+                                                menuType: e,
                                             },
-                                            e
-                                        )
-                              )
-                          })
-                      ]
+                                            e,
+                                        ),
+                              ),
+                          }),
+                      ],
                   })
         );
     };

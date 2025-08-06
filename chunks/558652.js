@@ -7,6 +7,6 @@ function a() {
     let { quests: e, isFetchingCurrentQuests: t } = (0, i.bA)(i.e5.ALL);
     return (0, r.jsx)(l.Z, {
         quests: e,
-        isFetching: t
+        isFetching: t,
     });
 }

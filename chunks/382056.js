@@ -6,7 +6,7 @@ let o = {
         let { applicationId: t, channelId: n } = e;
         return (0, r.jsx)(i.Z, {
             gameId: t,
-            channelId: n
+            channelId: n,
         });
-    }
+    },
 };

@@ -10,10 +10,10 @@ function c(t) {
         (0, l.YT)(l.it.NSFW_EMBEDDED_ACTIVITY, E);
     }, [E]);
     let _ = e.useCallback(() => {
-            ((0, l.qd)(l.iP.NSFW_CHANNEL_AGREE_CTA, l.it.NSFW_EMBEDDED_ACTIVITY, E), a(), c());
+            (0, l.qd)(l.iP.NSFW_CHANNEL_AGREE_CTA, l.it.NSFW_EMBEDDED_ACTIVITY, E), a(), c();
         }, [a, c, E]),
         u = e.useCallback(() => {
-            ((0, l.qd)(l.iP.NSFW_CHANNEL_DISAGREE_CTA, l.it.NSFW_EMBEDDED_ACTIVITY, E), o(), c());
+            (0, l.qd)(l.iP.NSFW_CHANNEL_DISAGREE_CTA, l.it.NSFW_EMBEDDED_ACTIVITY, E), o(), c();
         }, [o, c, E]);
     return (0, n.jsx)(s.Modal, {
         transitionState: C,
@@ -23,14 +23,14 @@ function c(t) {
         actions: [
             {
                 onClick: u,
-                variant: 'secondary',
-                text: r.intl.string(r.t.hg1uxs)
+                variant: "secondary",
+                text: r.intl.string(r.t.hg1uxs),
             },
             {
                 onClick: _,
-                variant: 'critical-primary',
-                text: r.intl.string(r.t.wVq7ur)
-            }
-        ]
+                variant: "critical-primary",
+                text: r.intl.string(r.t.wVq7ur),
+            },
+        ],
     });
 }

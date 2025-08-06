@@ -12,39 +12,42 @@ let c = function (e) {
         i.useEffect(() => {
             null != c && (0, a.Pq)(c);
         }, [c]),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: s.confirmation,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: s.iconWrapper,
                     children: (0, r.jsx)(l.wGF, {
-                        size: 'md',
-                        color: l.TVs.colors.INTERACTIVE_ACTIVE
-                    })
+                        size: "md",
+                        color: l.TVs.colors.INTERACTIVE_ACTIVE,
+                    }),
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: s.statusTextContainer,
                     children: [
                         (0, r.jsx)(l.X6q, {
-                            variant: 'heading-lg/semibold',
-                            color: 'header-primary',
-                            children: (null == n ? void 0 : n.name) != null ? o.intl.formatToPlainString(o.t['0Qlu//'], { guildName: n.name }) : o.intl.string(o.t['5iLvS0'])
+                            variant: "heading-lg/semibold",
+                            color: "header-primary",
+                            children:
+                                (null == n ? void 0 : n.name) != null
+                                    ? o.intl.formatToPlainString(o.t["0Qlu//"], { guildName: n.name })
+                                    : o.intl.string(o.t["5iLvS0"]),
                         }),
                         (0, r.jsx)(l.Text, {
-                            variant: 'text-md/medium',
-                            color: 'header-secondary',
-                            children: o.intl.string(o.t.FdsK4u)
-                        })
-                    ]
+                            variant: "text-md/medium",
+                            color: "header-secondary",
+                            children: o.intl.string(o.t.FdsK4u),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(l.zxk, {
                     fullWidth: !0,
                     onClick: t,
-                    variant: 'critical-primary',
-                    size: 'md',
-                    text: o.intl.string(o.t.g9tK0t)
-                })
-            ]
+                    variant: "critical-primary",
+                    size: "md",
+                    text: o.intl.string(o.t.g9tK0t),
+                }),
+            ],
         })
     );
 };

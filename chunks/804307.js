@@ -13,58 +13,60 @@ function f(e) {
         n = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         { styleLarge: o, styleSmall: f } = i.useMemo(
             () => ({
-                styleLarge: { width: ''.concat(10 + 50 * Math.random(), '%') },
-                styleSmall: { width: ''.concat(30 + 60 * Math.random(), '%') }
+                styleLarge: { width: "".concat(10 + 50 * Math.random(), "%") },
+                styleSmall: { width: "".concat(30 + 60 * Math.random(), "%") },
             }),
-            []
+            [],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(d.container, d.loadingAnimation, {
             [d.noAnimation]: n,
             [d.containerBorderRadius]: t !== u.U4.ROW,
-            [d.rowContainer]: t === u.U4.ROW
+            [d.rowContainer]: t === u.U4.ROW,
         }),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a()(d.bannerImage, {
                     [d.mediumBanner]: t === u.U4.MEDIUM_BANNER,
-                    [d.largeBanner]: t === u.U4.LARGE_BANNER
-                })
+                    [d.largeBanner]: t === u.U4.LARGE_BANNER,
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a()(d.appDetailsContainer, { [d.appDetailsRowContainer]: t === u.U4.ROW }),
                 children: [
-                    (0, r.jsx)('div', { className: a()(d.iconPlaceholder, { [d.rowIconPlaceholder]: t === u.U4.ROW }) }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsx)("div", {
+                        className: a()(d.iconPlaceholder, { [d.rowIconPlaceholder]: t === u.U4.ROW }),
+                    }),
+                    (0, r.jsxs)("div", {
                         className: d.textContainer,
                         children: [
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: d.textPlaceholder,
                                 style: o,
                                 children: (0, r.jsx)(l.X6q, {
                                     className: d.hidden,
-                                    variant: 'heading-md/semibold',
-                                    color: 'header-primary',
+                                    variant: "heading-md/semibold",
+                                    color: "header-primary",
                                     lineClamp: 1,
-                                    children: '_'
-                                })
+                                    children: "_",
+                                }),
                             }),
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: d.textPlaceholder,
                                 style: f,
                                 children: (0, r.jsx)(l.Text, {
                                     className: d.hidden,
-                                    variant: 'text-sm/normal',
-                                    color: 'text-secondary',
+                                    variant: "text-sm/normal",
+                                    color: "text-secondary",
                                     lineClamp: 1,
-                                    children: '_'
-                                })
-                            })
-                        ]
+                                    children: "_",
+                                }),
+                            }),
+                        ],
                     }),
-                    t === u.U4.ROW && (0, r.jsx)('div', { className: d.rowDivider })
-                ]
-            })
-        ]
+                    t === u.U4.ROW && (0, r.jsx)("div", { className: d.rowDivider }),
+                ],
+            }),
+        ],
     });
 }

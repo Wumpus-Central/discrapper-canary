@@ -1,1 +1,1 @@
-e.exports = { toast: 'toast_cbb248' };
+e.exports = { toast: "toast_cbb248" };

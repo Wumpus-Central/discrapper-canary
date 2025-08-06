@@ -1,7 +1,7 @@
 n.d(t, {
     $Z: () => l,
     L$: () => o,
-    fw: () => a
+    fw: () => a,
 });
 var i = n(544891),
     r = n(570140),
@@ -10,22 +10,22 @@ async function a() {
     var e;
     let t = await i.tn.get({
         url: s.ANM.AUTH_SESSIONS,
-        rejectWithError: !1
+        rejectWithError: !1,
     });
     return (
         (null == t ? void 0 : t.ok) &&
             (null == (e = t.body) ? void 0 : e.user_sessions) != null &&
             r.Z.dispatch({
-                type: 'FETCH_AUTH_SESSIONS_SUCCESS',
-                sessions: t.body.user_sessions
+                type: "FETCH_AUTH_SESSIONS_SUCCESS",
+                sessions: t.body.user_sessions,
             }),
         t
     );
 }
 function l() {
     r.Z.dispatch({
-        type: 'FETCH_AUTH_SESSIONS_SUCCESS',
-        sessions: []
+        type: "FETCH_AUTH_SESSIONS_SUCCESS",
+        sessions: [],
     });
 }
 async function o(e) {
@@ -35,13 +35,13 @@ async function o(e) {
     let t = await i.tn.post({
         url: s.ANM.AUTH_SESSIONS_LOGOUT,
         body: { session_id_hashes: e },
-        rejectWithError: !1
+        rejectWithError: !1,
     });
     return (
         (null == t ? void 0 : t.ok) &&
             r.Z.dispatch({
-                type: 'LOGOUT_AUTH_SESSIONS_SUCCESS',
-                sessionIdHashes: e
+                type: "LOGOUT_AUTH_SESSIONS_SUCCESS",
+                sessionIdHashes: e,
             }),
         t
     );

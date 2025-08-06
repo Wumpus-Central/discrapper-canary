@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(290780), n(388685));
+n.d(t, { Z: () => g }), n(290780), n(388685);
 var r = n(106351),
     i = n(212819),
     o = n(588468),
@@ -22,11 +22,11 @@ function h(e) {
             return '#"'.concat((0, a.le)(e.name), '"');
         default:
             let t = l.ZP.getTextChannelNameDisambiguations(e.guild_id)[e.id];
-            return '#'.concat(null != t ? t.name : e.name);
+            return "#".concat(null != t ? t.name : e.name);
     }
 }
 function m(e) {
-    return _.EC.has(e.id) ? '<id:'.concat(e.id, '>') : '<#'.concat(e.id, '>');
+    return _.EC.has(e.id) ? "<id:".concat(e.id, ">") : "<#".concat(e.id, ">");
 }
 let g = {
     sentinel: f.zy,
@@ -41,22 +41,22 @@ let g = {
                 ? (a = c.ZP.queryApplicationCommandChannelResults({
                       query: n,
                       channel: e,
-                      channelTypes: r.allowedChannelTypes
+                      channelTypes: r.allowedChannelTypes,
                   }))
                 : ((a = c.ZP.queryChannelResults({
                       query: n,
                       channel: e,
-                      type: u
+                      type: u,
                   })),
                   null != t &&
                       ((s = c.ZP.queryStaticRouteChannels({
                           query: n,
-                          guild: t
+                          guild: t,
                       })),
                       a.channels.unshift(...s))),
             {
                 results: a,
-                staticRouteChannels: s
+                staticRouteChannels: s,
             }
         );
     },
@@ -69,11 +69,15 @@ let g = {
                 query: l,
                 options: c,
                 onHover: d,
-                onClick: _
+                onClick: _,
             } = e,
             h = l.charAt(0) === i.xQ.VOICE_CHANNEL;
         return (
-            h ? ((t = p.t.rMUL39), (n = p.intl.string(p.t.CYnO4u)), (l = l.substring(1))) : c.forNonStringCommandOption ? ((t = p.t.upNFT0), (n = p.intl.string(p.t.OGiMXF))) : ((t = p.t.UhnmJC), (n = p.intl.string(p.t.nIfr0d))),
+            h
+                ? ((t = p.t.rMUL39), (n = p.intl.string(p.t.CYnO4u)), (l = l.substring(1)))
+                : c.forNonStringCommandOption
+                  ? ((t = p.t.upNFT0), (n = p.intl.string(p.t.OGiMXF)))
+                  : ((t = p.t.UhnmJC), (n = p.intl.string(p.t.nIfr0d))),
             (0, u.HI)({
                 query: l,
                 selectedIndex: a,
@@ -86,10 +90,10 @@ let g = {
                 getProps: (e) => ({
                     channel: e,
                     key: e.id,
-                    category: s.Z.getChannel(e.parent_id)
+                    category: s.Z.getChannel(e.parent_id),
                 }),
-                getQuery: (e) => (h ? ''.concat(f.zy).concat(i.xQ.VOICE_CHANNEL).concat(e) : ''.concat(f.zy).concat(e)),
-                key: 'channels'
+                getQuery: (e) => (h ? "".concat(f.zy).concat(i.xQ.VOICE_CHANNEL).concat(e) : "".concat(f.zy).concat(e)),
+                key: "channels",
             })
         );
     },
@@ -97,9 +101,9 @@ let g = {
         let {
                 results: { channels: t },
                 index: n,
-                options: r
+                options: r,
             } = e,
             i = t[n];
-        return (r.insertText(h(i), m(i)), { type: d.z2.CHANNEL });
-    }
+        return r.insertText(h(i), m(i)), { type: d.z2.CHANNEL };
+    },
 };

@@ -10,6 +10,6 @@ async function o(e) {
         analyticsLocations: o,
         customId: a,
         referrerId: s,
-        commandOrigin: l
+        commandOrigin: l,
     });
 }

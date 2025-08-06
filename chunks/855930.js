@@ -2,22 +2,22 @@ r.d(t, { Z: () => s });
 var a = r(665352),
     n = r(216397);
 let s = new a.Z({
-    id: 'hsl',
-    name: 'HSL',
+    id: "hsl",
+    name: "HSL",
     coords: {
         h: {
             refRange: [0, 360],
-            type: 'angle',
-            name: 'Hue'
+            type: "angle",
+            name: "Hue",
         },
         s: {
             range: [0, 100],
-            name: 'Saturation'
+            name: "Saturation",
         },
         l: {
             range: [0, 100],
-            name: 'Lightness'
-        }
+            name: "Lightness",
+        },
     },
     base: n.Z,
     fromBase: (e) => {
@@ -39,7 +39,7 @@ let s = new a.Z({
             }
             o *= 60;
         }
-        return (i < 0 && ((o += 180), (i = Math.abs(i))), o >= 360 && (o -= 360), [o, 100 * i, 100 * c]);
+        return i < 0 && ((o += 180), (i = Math.abs(i))), o >= 360 && (o -= 360), [o, 100 * i, 100 * c];
     },
     toBase: (e) => {
         let [t, r, a] = e;
@@ -48,16 +48,16 @@ let s = new a.Z({
                 s = r * Math.min(a, 1 - a);
             return a - s * Math.max(-1, Math.min(n - 3, 9 - n, 1));
         }
-        return ((t %= 360) < 0 && (t += 360), (r /= 100), (a /= 100), [n(0), n(8), n(4)]);
+        return (t %= 360) < 0 && (t += 360), (r /= 100), (a /= 100), [n(0), n(8), n(4)];
     },
     formats: {
         hsl: {
-            coords: ['<number> | <angle>', '<percentage>', '<percentage>']
+            coords: ["<number> | <angle>", "<percentage>", "<percentage>"],
         },
         hsla: {
-            coords: ['<number> | <angle>', '<percentage>', '<percentage>'],
+            coords: ["<number> | <angle>", "<percentage>", "<percentage>"],
             commas: !0,
-            lastAlpha: !0
-        }
-    }
+            lastAlpha: !0,
+        },
+    },
 });

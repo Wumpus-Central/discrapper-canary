@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => P }), r(388685));
+r.d(t, { Z: () => P }), r(388685);
 var n = r(255367),
     l = r(73800),
     a = r(120356),
@@ -26,17 +26,17 @@ function y(e) {
         i = (0, O.St)(t);
     return null == a || 0 === t.length
         ? null
-        : (0, n.jsxs)('div', {
+        : (0, n.jsxs)("div", {
               children: [
                   null != r
                       ? (0, n.jsx)(s.Text, {
                             className: S.itemTypeTitle,
-                            color: 'header-secondary',
-                            variant: 'text-sm/bold',
-                            children: r
+                            color: "header-secondary",
+                            variant: "text-sm/bold",
+                            children: r,
                         })
                       : (0, n.jsx)(s.LZC, { size: 24 }),
-                  (0, n.jsx)('div', {
+                  (0, n.jsx)("div", {
                       className: S.cardsContainer,
                       children: i.map((e, t) =>
                           (0, n.jsx)(
@@ -49,16 +49,16 @@ function y(e) {
                                           category: l,
                                           product: e,
                                           user: a,
-                                          tab: E.AW.CATALOG
+                                          tab: E.AW.CATALOG,
                                       },
-                                      e.skuId
-                                  )
+                                      e.skuId,
+                                  ),
                               },
-                              e.skuId
-                          )
-                      )
-                  })
-              ]
+                              e.skuId,
+                          ),
+                      ),
+                  }),
+              ],
           });
 }
 function x(e) {
@@ -67,7 +67,7 @@ function x(e) {
         l = (0, g.a)()(r);
     return (0, n.jsx)(y, {
         products: l,
-        category: t
+        category: t,
     });
 }
 function j(e) {
@@ -77,18 +77,18 @@ function j(e) {
             (e) => {
                 i(e);
             },
-            r ? 0.13 : 0.15
+            r ? 0.13 : 0.15,
         );
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: S.categoryWrapper,
         ref: o,
         children: [
             (0, n.jsx)(b.Z, {
                 category: t,
-                hideLimitedTimeBadge: !1
+                hideLimitedTimeBadge: !1,
             }),
-            (0, n.jsx)(x, { category: t })
-        ]
+            (0, n.jsx)(x, { category: t }),
+        ],
     });
 }
 function P(e) {
@@ -96,7 +96,7 @@ function P(e) {
     let { sortedCategories: r, setCategoryRef: a, isFullScreen: o, currentPage: c, handlePageChange: u } = e,
         g = (0, d.sp)(),
         f = (0, v.R)(),
-        b = null != (t = null == g ? void 0 : g.sessionId) ? t : '',
+        b = null != (t = null == g ? void 0 : g.sessionId) ? t : "",
         { noCache: m, includeUnpublished: O } = (0, C.Z)(),
         y = l.useMemo(
             () =>
@@ -106,20 +106,20 @@ function P(e) {
                         let { products: t } = e;
                         return t.length > 0;
                     }),
-            [r]
+            [r],
         ),
         x = l.useMemo(() => {
             let e = (c - 1) * E.kN;
             return y.slice(e, e + E.kN);
         }, [y, c]);
-    (l.useEffect(() => {
+    l.useEffect(() => {
         (0, h.n)({
             sessionId: b,
             checkpoint: h.a.SHOP_MOUNTED,
             tab: E.AW.CATALOG,
             isFullScreen: o,
             unpublishedCategoriesShown: O,
-            cacheDisabled: m
+            cacheDisabled: m,
         });
     }, []),
         l.useEffect(() => {
@@ -131,41 +131,41 @@ function P(e) {
                     tab: E.AW.CATALOG,
                     isFullScreen: o,
                     unpublishedCategoriesShown: O,
-                    cacheDisabled: m
+                    cacheDisabled: m,
                 });
-        }, [b, o, O, m, f, x.length]));
-    let P = (0, p.FF)('CollectiblesBrowse');
+        }, [b, o, O, m, f, x.length]);
+    let P = (0, p.FF)("CollectiblesBrowse");
     return f
         ? (0, n.jsx)(_.Z, {})
-        : (0, n.jsxs)('div', {
+        : (0, n.jsxs)("div", {
               className: i()(S.categories, { [S.categoriesNoFilter]: !P }),
               children: [
                   x.map((e, t) =>
                       (0, n.jsx)(
-                          'div',
+                          "div",
                           {
                               ref: (t) => a(e.skuId, t),
                               children: (0, n.jsx)(d.k0, {
                                   newValue: { categoryPosition: t },
                                   children: (0, n.jsx)(j, {
                                       category: e,
-                                      isFullScreen: o
-                                  })
-                              })
+                                      isFullScreen: o,
+                                  }),
+                              }),
                           },
-                          e.skuId
-                      )
+                          e.skuId,
+                      ),
                   ),
-                  (0, n.jsx)('div', {
+                  (0, n.jsx)("div", {
                       className: S.paginationContainer,
                       children: (0, n.jsx)(s.DsT, {
                           currentPage: c,
                           totalCount: y.length,
                           pageSize: E.kN,
                           onPageChange: u,
-                          disablePaginationGap: !0
-                      })
-                  })
-              ]
+                          disablePaginationGap: !0,
+                      }),
+                  }),
+              ],
           });
 }

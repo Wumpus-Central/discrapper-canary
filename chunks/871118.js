@@ -13,23 +13,23 @@ var r = n(255367),
     p = n(269363);
 function h(e) {
     let { isLoading: t, noText: n, noImage: i, previewText: o, className: s } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(p.emptyPreviewContainer, s),
         children: t
             ? (0, r.jsx)(l.$jN, {})
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)('div', { className: a()(p.emptyPreviewImage, { [p.noImage]: i }) }),
+                      (0, r.jsx)("div", { className: a()(p.emptyPreviewImage, { [p.noImage]: i }) }),
                       n
                           ? null
                           : (0, r.jsx)(l.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'none',
+                                variant: "text-sm/normal",
+                                color: "none",
                                 className: p.emptyPreviewText,
-                                children: null != o ? o : _.intl.string(_.t.uQZTBQ)
-                            })
-                  ]
-              })
+                                children: null != o ? o : _.intl.string(_.t.uQZTBQ),
+                            }),
+                  ],
+              }),
     });
 }
 function m(e) {
@@ -48,14 +48,14 @@ function m(e) {
               isLoading: E,
               noText: o,
               noImage: a,
-              previewText: m ? void 0 : _.intl.string(_.t.pgUTZG)
+              previewText: m ? void 0 : _.intl.string(_.t.pgUTZG),
           })
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: n,
-              children: (0, r.jsx)('img', {
+              children: (0, r.jsx)("img", {
                   src: y,
-                  alt: '',
-                  className: p.image
-              })
+                  alt: "",
+                  className: p.image,
+              }),
           });
 }

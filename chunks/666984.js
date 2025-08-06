@@ -21,10 +21,10 @@ function m(e) {
         I = (0, l.Fe)(b, E);
     if (!(0, s.Z)(b) || (!(0, a.Z)(b, _.xjy.PLAY) && !(0, a.Z)(b, _.xjy.SYNC))) return null;
     let T = (e) => {
-            (null == e || e.stopPropagation(), null == y || y({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), v.onClick());
+            null == e || e.stopPropagation(), null == y || y({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), v.onClick();
         },
         S = (e) => {
-            (e.stopPropagation(), null == y || y({ action: 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON' }), I.onClick());
+            e.stopPropagation(), null == y || y({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), I.onClick();
         };
     return O === f.lY.MODAL_V2
         ? (0, r.jsxs)(r.Fragment, {
@@ -36,9 +36,9 @@ function m(e) {
                           disabled: I.disabled,
                           submitting: I.loading,
                           size: i.Ph.TINY,
-                          themeColor: 'secondary',
-                          onClick: S
-                      })
+                          themeColor: "secondary",
+                          onClick: S,
+                      }),
                   }),
                   (0, r.jsx)(o.DY3, {
                       text: v.tooltip,
@@ -47,11 +47,11 @@ function m(e) {
                           disabled: v.disabled,
                           submitting: v.loading,
                           size: i.Ph.TINY,
-                          themeColor: 'secondary',
-                          onClick: T
-                      })
-                  })
-              ]
+                          themeColor: "secondary",
+                          onClick: T,
+                      }),
+                  }),
+              ],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -64,20 +64,20 @@ function m(e) {
                           disabled: v.disabled,
                           submitting: v.loading,
                           wrapperClassName: h.primaryButton,
-                          themeColor: 'secondary',
+                          themeColor: "secondary",
                           fullWidth: !0,
-                          onClick: T
-                      })
+                          onClick: T,
+                      }),
                   }),
                   (0, r.jsx)(d.ef, {
                       icon: o.iOO,
                       tooltipText: null != (g = I.tooltip) ? g : p.intl.string(p.t.eU3inJ),
                       disabled: I.disabled,
                       submitting: I.loading,
-                      themeColor: 'secondary',
+                      themeColor: "secondary",
                       fullWidth: !0,
-                      onClick: S
-                  })
-              ]
+                      onClick: S,
+                  }),
+              ],
           });
 }

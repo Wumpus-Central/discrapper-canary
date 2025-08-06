@@ -10,18 +10,18 @@ class s extends (a = o.ZP.Store) {
         return i[e];
     }
 }
-((l = 'EULAStore'),
-    (n = 'displayName') in s
+(l = "EULAStore"),
+    (n = "displayName") in s
         ? Object.defineProperty(s, n, {
               value: l,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (s[n] = l));
+        : (s[n] = l);
 let u = new s(c.Z, {
     EULA_FETCH_SUCCESS: function (e) {
         let { eula: t } = e;
         i[t.id] = t;
-    }
+    },
 });

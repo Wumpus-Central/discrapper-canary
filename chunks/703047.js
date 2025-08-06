@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,8 +29,8 @@ class d extends (r = i.ZP.Store) {
         if (null != l[e]) return l[e][t];
     }
 }
-s(d, 'displayName', 'CustomActivityLinksStore');
+s(d, "displayName", "CustomActivityLinksStore");
 let f = new d(o.Z, {
     CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: c,
-    LOGOUT: u
+    LOGOUT: u,
 });

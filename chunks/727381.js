@@ -17,30 +17,30 @@ var l = n(120356),
     I = n(388032),
     g = n(12740);
 function f() {
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.header,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.headerTitle,
                 children: [
                     (0, r.jsx)(c.Z, {
                         width: 16,
-                        height: 16
+                        height: 16,
                     }),
                     (0, r.jsx)(a.X6q, {
-                        variant: 'heading-md/semibold',
-                        children: I.intl.string(I.t.cf5lgo)
-                    })
-                ]
+                        variant: "heading-md/semibold",
+                        children: I.intl.string(I.t.cf5lgo),
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 children: (0, r.jsx)(a.M2$, {
-                    shortcut: 'esc',
+                    shortcut: "esc",
                     keyClassName: g.keyComboInner,
-                    className: g.keyComboContainer
-                })
-            })
-        ]
+                    className: g.keyComboContainer,
+                }),
+            }),
+        ],
     });
 }
 function N(e) {
@@ -49,7 +49,7 @@ function N(e) {
         h = (0, i.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
     return null == N || null == h
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: s()(g.container, c),
               children: [
                   (0, r.jsx)(f, {}),
@@ -59,17 +59,17 @@ function N(e) {
                           (0, r.jsx)(T.Z, { member: h }),
                           (0, r.jsx)(m.Z, {
                               userId: t,
-                              guildId: n
+                              guildId: n,
                           }),
                           (0, r.jsx)(A.Z, {
                               member: h,
-                              onNavigate: I
+                              onNavigate: I,
                           }),
                           (0, r.jsx)(d.Z, { member: h }),
                           (0, r.jsx)(E.Z, { member: h }),
-                          (0, r.jsx)(_.Z, { member: h })
-                      ]
-                  })
-              ]
+                          (0, r.jsx)(_.Z, { member: h }),
+                      ],
+                  }),
+              ],
           });
 }

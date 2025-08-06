@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => ee }), n(953529), n(388685));
+n.d(t, { Z: () => ee }), n(953529), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -38,7 +38,7 @@ function M(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -48,15 +48,15 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 M(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -64,11 +64,11 @@ function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -90,7 +90,8 @@ function G(e, t) {
         i = B(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -100,7 +101,7 @@ function B(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let Z = 80,
@@ -109,17 +110,28 @@ let Z = 80,
     H = 2,
     Y = 3,
     W = 12,
-    K = (e, t) => (t ? D.intl.format(D.t.auckX1, { stickerPackName: e.name }) : D.intl.format(D.t.OzB6e3, { stickerPackName: e.name })),
+    K = (e, t) =>
+        t
+            ? D.intl.format(D.t.auckX1, { stickerPackName: e.name })
+            : D.intl.format(D.t.OzB6e3, { stickerPackName: e.name }),
     z = (e) => {
         let { sticker: t, stickerPack: n } = e;
-        return i.useMemo(() => (null == n ? [] : n.stickers.slice(0, Y + 1).reduce((e, n) => (e.length !== Y && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
+        return i.useMemo(
+            () =>
+                null == n
+                    ? []
+                    : n.stickers
+                          .slice(0, Y + 1)
+                          .reduce((e, n) => (e.length !== Y && n.id !== t.id ? e.concat(n) : e), []),
+            [t, n],
+        );
     };
 function q(e) {
-    (I.default.track(P.rMx.PREMIUM_PROMOTION_OPENED, {
+    I.default.track(P.rMx.PREMIUM_PROMOTION_OPENED, {
         location_page: null != e.guild_id ? P.ZY5.GUILD_CHANNEL : P.ZY5.DM_CHANNEL,
-        location_section: P.jXE.STICKER_POPOUT
+        location_section: P.jXE.STICKER_POPOUT,
     }),
-        (0, b.z)());
+        (0, b.z)();
 }
 function X(e) {
     let { sticker: t, description: n } = e;
@@ -128,7 +140,7 @@ function X(e) {
             (0, r.jsx)(C.Z, {
                 sticker: t,
                 size: F,
-                isInteracting: !0
+                isInteracting: !0,
             }),
             (0, r.jsxs)(_.Z, {
                 direction: _.Z.Direction.VERTICAL,
@@ -137,31 +149,35 @@ function X(e) {
                 children: [
                     (0, r.jsx)(c.Text, {
                         className: x.__invalid_emojiName,
-                        variant: 'text-md/semibold',
-                        children: (0, r.jsx)(p.Z, { children: t.name })
+                        variant: "text-md/semibold",
+                        children: (0, r.jsx)(p.Z, { children: t.name }),
                     }),
                     null != n &&
                         (0, r.jsx)(c.Text, {
-                            variant: 'text-sm/normal',
-                            children: n
-                        })
-                ]
-            })
-        ]
+                            variant: "text-sm/normal",
+                            children: n,
+                        }),
+                ],
+            }),
+        ],
     });
 }
 let Q = (e) => {
         let { closePopout: t, sticker: n, channel: o, refreshPositionKey: a } = e,
-            [l, u, d] = (0, s.Wu)([A.Z], () => [A.Z.getStickerPack(n.pack_id), !A.Z.hasLoadedStickerPacks, A.Z.isPremiumPack(n.pack_id)], [n]),
+            [l, u, d] = (0, s.Wu)(
+                [A.Z],
+                () => [A.Z.getStickerPack(n.pack_id), !A.Z.hasLoadedStickerPacks, A.Z.isPremiumPack(n.pack_id)],
+                [n],
+            ),
             _ = z({
                 sticker: n,
-                stickerPack: l
+                stickerPack: l,
             });
         (0, S.Pq)(n.pack_id);
         let p = (0, S.Sd)(o),
             h = {
                 refreshPositionKey: a,
-                channel: o
+                channel: o,
             },
             m = i.useRef(h);
         if (
@@ -180,10 +196,10 @@ let Q = (e) => {
                         {
                             type: P.jXE.STICKER_POPOUT,
                             guild_id: e.getGuildId(),
-                            sticker_pack_id: n.pack_id
+                            sticker_pack_id: n.pack_id,
                         },
-                        (0, f.v_)(e)
-                    )
+                        (0, f.v_)(e),
+                    ),
                 );
             }, [n.pack_id]),
             u || null == l)
@@ -191,25 +207,25 @@ let Q = (e) => {
             return (0, r.jsx)(E.SE, { className: L.popoutLoader });
         let g = d,
             b = () => {
-                (g &&
+                g &&
                     (0, R.m)({
                         stickerPack: l,
-                        stickerPickerCategories: p
+                        stickerPickerCategories: p,
                     }),
-                    t());
+                    t();
             };
         return (0, r.jsxs)(E.W_, {
             className: L.popoutContent,
             children: [
                 (0, r.jsx)(c.X6q, {
-                    variant: 'heading-md/semibold',
-                    children: n.name
+                    variant: "heading-md/semibold",
+                    children: n.name,
                 }),
                 (0, r.jsx)(c.Text, {
-                    variant: 'text-sm/normal',
-                    children: K(l, d)
+                    variant: "text-sm/normal",
+                    children: K(l, d),
                 }),
-                (0, r.jsx)('ul', {
+                (0, r.jsx)("ul", {
                     className: L.stickersList,
                     children: _.map((e) =>
                         (0, r.jsx)(
@@ -217,27 +233,27 @@ let Q = (e) => {
                             {
                                 isInteracting: !0,
                                 size: Z,
-                                sticker: e
+                                sticker: e,
                             },
-                            e.id
-                        )
-                    )
+                            e.id,
+                        ),
+                    ),
                 }),
                 d &&
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: L.packActions,
                         children: (0, r.jsx)(
                             c.zxk,
                             {
-                                variant: 'secondary',
-                                size: 'sm',
+                                variant: "secondary",
+                                size: "sm",
                                 text: D.intl.string(D.t.GPy3Ag),
-                                onClick: b
+                                onClick: b,
                             },
-                            'view-sticker-pack'
-                        )
-                    })
-            ]
+                            "view-sticker-pack",
+                        ),
+                    }),
+            ],
         });
     },
     J = (e) => {
@@ -254,41 +270,49 @@ let Q = (e) => {
             Q = i.useMemo(
                 () => ({
                     page: null != o.guild_id ? P.ZY5.GUILD_CHANNEL : P.ZY5.DM_CHANNEL,
-                    section: P.jXE.STICKER_POPOUT
+                    section: P.jXE.STICKER_POPOUT,
                 }),
-                [o.guild_id]
+                [o.guild_id],
             ),
             { current: J } = i.useRef(k({ guild_id: o.getGuildId() }, (0, f.v_)(o))),
             $ = {
                 stickerSourceGuild: B,
-                refreshPositionKey: b
+                refreshPositionKey: b,
             },
             ee = i.useRef($);
-        (i.useEffect(() => {
+        i.useEffect(() => {
             ee.current = $;
         }),
             i.useEffect(() => {
                 let { stickerSourceGuild: e } = ee.current;
                 (async () => {
-                    ((null == e || e.features.has(P.oNc.DISCOVERABLE)) && A(await (0, m.Z)(n.id)), R(!0));
+                    (null == e || e.features.has(P.oNc.DISCOVERABLE)) && A(await (0, m.Z)(n.id)), R(!0);
                 })();
-            }, [n.id, Z]));
+            }, [n.id, Z]);
         let et = n.guild_id === o.getGuildId(),
             en = null != S,
             er = !1,
-            ei = 'Custom Sticker Popout';
+            ei = "Custom Sticker Popout";
         j
-            ? (t = Z ? (et ? D.intl.string(D.t.fZ0DiI) : D.intl.string(D.t['1f6D9v'])) : en ? D.intl.string(D.t.yHmoR0) : D.intl.string(D.t.vZaScH))
+            ? (t = Z
+                  ? et
+                      ? D.intl.string(D.t.fZ0DiI)
+                      : D.intl.string(D.t["1f6D9v"])
+                  : en
+                    ? D.intl.string(D.t.yHmoR0)
+                    : D.intl.string(D.t.vZaScH))
             : Z
-              ? ((t = et ? D.intl.string(D.t.jNphpq) : D.intl.string(D.t.lyD5ZW)), (er = !0), (ei = 'Custom Sticker Popout (Upsell)'))
+              ? ((t = et ? D.intl.string(D.t.jNphpq) : D.intl.string(D.t.lyD5ZW)),
+                (er = !0),
+                (ei = "Custom Sticker Popout (Upsell)"))
               : en
-                ? ((t = D.intl.string(D.t.IuXYcn)), (er = !0), (ei = 'Custom Sticker Popout (Upsell)'))
+                ? ((t = D.intl.string(D.t.IuXYcn)), (er = !0), (ei = "Custom Sticker Popout (Upsell)"))
                 : ((t = D.intl.format(D.t.hGWuxc, {
                       openPremiumSettings: () => {
-                          (q(o), p());
-                      }
+                          q(o), p();
+                      },
                   })),
-                  (ei = 'Custom Sticker Popout (Soft Upsell)'));
+                  (ei = "Custom Sticker Popout (Soft Upsell)"));
         let eo = !er && !Z && en && j;
         if (
             (i.useEffect(() => {
@@ -308,15 +332,15 @@ let Q = (e) => {
                         p();
                         let e = S.id;
                         try {
-                            (await u.Z.joinGuild(e), u.Z.transitionToGuildSync(e));
+                            await u.Z.joinGuild(e), u.Z.transitionToGuildSync(e);
                         } catch (e) {}
                     };
-                    return (0, r.jsxs)('div', {
+                    return (0, r.jsxs)("div", {
                         className: x.emojiSection,
                         children: [
                             (0, r.jsx)(X, {
                                 description: t,
-                                sticker: n
+                                sticker: n,
                             }),
                             er &&
                                 (0, r.jsx)(y.Z, {
@@ -324,24 +348,24 @@ let Q = (e) => {
                                     subscriptionTier: w.Si.TIER_2,
                                     size: l.zx.Sizes.SMALL,
                                     fullWidth: !0,
-                                    textOptions: { textOverride: D.intl.string(D.t['gl/XHB']) },
+                                    textOptions: { textOverride: D.intl.string(D.t["gl/XHB"]) },
                                     onSubscribeModalClose: (t) => (t ? e() : p()),
                                     postSuccessGuild: Z || null == S ? void 0 : S,
-                                    premiumModalAnalyticsLocation: Q
+                                    premiumModalAnalyticsLocation: Q,
                                 }),
                             eo &&
-                                (0, r.jsx)('div', {
-                                    'data-button-hoisted-classname-wrapper': !0,
+                                (0, r.jsx)("div", {
+                                    "data-button-hoisted-classname-wrapper": !0,
                                     className: x.ctaButton,
                                     children: (0, r.jsx)(c.zxk, {
-                                        variant: 'primary',
-                                        size: 'sm',
+                                        variant: "primary",
+                                        size: "sm",
                                         text: D.intl.string(D.t.riu2R0),
                                         fullWidth: !0,
-                                        onClick: e
-                                    })
-                                })
-                        ]
+                                        onClick: e,
+                                    }),
+                                }),
+                        ],
                     });
                 },
                 i = () => {
@@ -352,20 +376,20 @@ let Q = (e) => {
                             .filter((e) => e.id !== n.id)
                             .slice(0, W),
                         i = () => {
-                            (b(), Y(!F));
+                            b(), Y(!F);
                         },
                         o = null != S ? h.JO.createFromDiscoverableGuild(S) : h.JO.createFromGuildRecord(B);
-                    return (0, r.jsxs)('div', {
+                    return (0, r.jsxs)("div", {
                         className: x.guildSection,
                         children: [
                             (0, r.jsx)(c.vwX, {
                                 className: x.guildTitle,
-                                children: Z ? D.intl.string(D.t.kx6pEB) : D.intl.string(D.t.pDE7GR)
+                                children: Z ? D.intl.string(D.t.kx6pEB) : D.intl.string(D.t.pDE7GR),
                             }),
                             (0, r.jsx)(g.Oe, {
                                 expressionSourceGuild: o,
                                 hasJoinedExpressionSourceGuild: Z,
-                                isDisplayingJoinGuildButtonInPopout: eo
+                                isDisplayingJoinGuildButtonInPopout: eo,
                             }),
                             !Z &&
                                 (0, r.jsxs)(r.Fragment, {
@@ -377,17 +401,19 @@ let Q = (e) => {
                                                 children: [
                                                     (0, r.jsx)(c.Text, {
                                                         className: x.__invalid_showMoreEmojisLabel,
-                                                        variant: 'text-xs/normal',
-                                                        color: 'none',
-                                                        children: D.intl.string(D.t.vtH5ho)
+                                                        variant: "text-xs/normal",
+                                                        color: "none",
+                                                        children: D.intl.string(D.t.vtH5ho),
                                                     }),
                                                     (0, r.jsx)(c.CJ0, {
-                                                        size: 'md',
-                                                        color: 'currentColor',
-                                                        className: a()(x.showMoreEmojisArrow, { [x.showMoreEmojisArrowCollapsed]: !F })
-                                                    })
-                                                ]
-                                            })
+                                                        size: "md",
+                                                        color: "currentColor",
+                                                        className: a()(x.showMoreEmojisArrow, {
+                                                            [x.showMoreEmojisArrowCollapsed]: !F,
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
                                         }),
                                         F &&
                                             (0, r.jsx)(_.Z, {
@@ -401,21 +427,24 @@ let Q = (e) => {
                                                         U(k({ text: e.name }, E.b_), {
                                                             children: (t) => {
                                                                 var { onMouseEnter: n, onMouseLeave: i } = t,
-                                                                    o = G(t, ['onMouseEnter', 'onMouseLeave']);
+                                                                    o = G(t, ["onMouseEnter", "onMouseLeave"]);
                                                                 return (0, r.jsx)(
-                                                                    'div',
+                                                                    "div",
                                                                     U(
                                                                         k(
                                                                             {
-                                                                                className: a()(x.otherEmoji, { [L.nonInteractingSticker]: null != K && K !== e.id }),
+                                                                                className: a()(x.otherEmoji, {
+                                                                                    [L.nonInteractingSticker]:
+                                                                                        null != K && K !== e.id,
+                                                                                }),
                                                                                 onMouseEnter: () => {
-                                                                                    (null == n || n(), z(e.id));
+                                                                                    null == n || n(), z(e.id);
                                                                                 },
                                                                                 onMouseLeave: () => {
-                                                                                    (null == i || i(), z(null));
-                                                                                }
+                                                                                    null == i || i(), z(null);
+                                                                                },
                                                                             },
-                                                                            o
+                                                                            o,
                                                                         ),
                                                                         {
                                                                             children: (0, r.jsx)(C.Z, {
@@ -424,26 +453,26 @@ let Q = (e) => {
                                                                                 enlargeWithName: !1,
                                                                                 enlargeScaleFactor: H,
                                                                                 isInteracting: K === e.id,
-                                                                                sticker: e
-                                                                            })
-                                                                        }
+                                                                                sticker: e,
+                                                                            }),
+                                                                        },
                                                                     ),
-                                                                    e.id
+                                                                    e.id,
                                                                 );
-                                                            }
+                                                            },
                                                         }),
-                                                        e.id
-                                                    )
-                                                )
-                                            })
-                                    ]
-                                })
-                        ]
+                                                        e.id,
+                                                    ),
+                                                ),
+                                            }),
+                                    ],
+                                }),
+                        ],
                     });
                 };
             return (0, r.jsxs)(E.W_, {
                 className: x.popoutContent,
-                children: [e(), (null != B || null != S) && i()]
+                children: [e(), (null != B || null != S) && i()],
             });
         }
     };
@@ -455,10 +484,10 @@ function $(e) {
             sticker: i,
             description: D.intl.format(D.t.hGWuxc, {
                 openPremiumSettings: () => {
-                    (n(), q(t));
-                }
-            })
-        })
+                    n(), q(t);
+                },
+            }),
+        }),
     });
 }
 let ee = (e) => {
@@ -469,21 +498,21 @@ let ee = (e) => {
               sticker: a,
               closePopout: i,
               channel: n,
-              refreshPositionKey: o
+              refreshPositionKey: o,
           })
         : null != a && (0, N.J8)(a)
           ? (0, r.jsx)(J, {
                 sticker: a,
                 channel: n,
                 closePopout: i,
-                refreshPositionKey: o
+                refreshPositionKey: o,
             })
           : s
             ? s && null == a
                 ? (0, r.jsx)($, {
                       channel: n,
                       closePopout: i,
-                      sticker: t
+                      sticker: t,
                   })
                 : (i(), null)
             : (0, r.jsx)(E.SE, {});

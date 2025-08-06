@@ -20,55 +20,57 @@ let d = r.forwardRef(function (e, t) {
                         i,
                         r = {},
                         s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (i = 0; i < s.length; i++)
+                    (n = s[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(e, ['currentPageIndex', 'numPages', 'onChangePage', 'children', 'className', 'showPageCount']);
+        })(e, ["currentPageIndex", "numPages", "onChangePage", "children", "className", "showPageCount"]);
     let f = s <= 0,
         b = s >= d - 1;
     return (0, i.jsxs)(
-        'div',
+        "div",
         ((n = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     i = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     i.forEach(function (t) {
                         var i;
-                        ((i = n[t]),
+                        (i = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: i,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = i));
-                    }));
+                                : (e[t] = i);
+                    });
             }
             return e;
         })(
             {
                 className: a()(c.__invalid_paginator, p),
-                ref: t
+                ref: t,
             },
-            h
+            h,
         )),
         (r = r =
             {
                 children: [
                     m,
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: c.pageActions,
                         children: [
                             (0, i.jsx)(l.P3F, {
@@ -76,38 +78,38 @@ let d = r.forwardRef(function (e, t) {
                                 tabIndex: f ? -1 : 0,
                                 onClick: f ? void 0 : () => u(s - 1),
                                 children: (0, i.jsx)(l.V7D, {
-                                    size: 'md',
-                                    color: 'currentColor',
+                                    size: "md",
+                                    color: "currentColor",
                                     className: c.pageButtonIcon,
-                                    'aria-label': o.intl.string(o.t.vgfxaG)
-                                })
+                                    "aria-label": o.intl.string(o.t.vgfxaG),
+                                }),
                             }),
                             g
-                                ? (0, i.jsx)('div', {
+                                ? (0, i.jsx)("div", {
                                       className: c.pageIndicator,
                                       children: o.intl.format(o.t.MtpIws, {
                                           currentPage: s + 1,
-                                          numPages: d
-                                      })
+                                          numPages: d,
+                                      }),
                                   })
-                                : (0, i.jsx)('div', {
+                                : (0, i.jsx)("div", {
                                       className: c.pageIndicator,
-                                      children: o.intl.format(o.t.bKI77e, { currentPage: s + 1 })
+                                      children: o.intl.format(o.t.bKI77e, { currentPage: s + 1 }),
                                   }),
                             (0, i.jsx)(l.P3F, {
                                 className: a()(c.pageButtonNext, { [c.disabled]: b }),
                                 tabIndex: b ? -1 : 0,
                                 onClick: b ? void 0 : () => u(s + 1),
                                 children: (0, i.jsx)(l.Fbu, {
-                                    size: 'md',
-                                    color: 'currentColor',
+                                    size: "md",
+                                    color: "currentColor",
                                     className: c.pageButtonIcon,
-                                    'aria-label': o.intl.string(o.t.XiOHRU)
-                                })
-                            })
-                        ]
-                    })
-                ]
+                                    "aria-label": o.intl.string(o.t.XiOHRU),
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -121,6 +123,6 @@ let d = r.forwardRef(function (e, t) {
               })(Object(r)).forEach(function (e) {
                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
               }),
-        n)
+        n),
     );
 });

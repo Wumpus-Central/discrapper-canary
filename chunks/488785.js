@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,14 +48,14 @@ let m = 50,
             c = i.useCallback(() => {
                 o(n.key);
             }, [n.key, o]);
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: a()(_.emoji, l),
             onAnimationEnd: c,
             children: (0, r.jsx)(d.Z, {
                 emojiId: n.id,
                 emojiName: n.name,
-                animated: null != (t = n.animated) && t
-            })
+                animated: null != (t = n.animated) && t,
+            }),
         });
     });
 function b(e) {
@@ -68,9 +68,9 @@ function b(e) {
             n !== t || o || null == r || s((e) => [...e, h({ key: (0, l.Z)() }, r)]);
         }
         return (
-            u.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
+            u.Z.subscribe("VOICE_CHANNEL_EFFECT_SEND", e),
             () => {
-                u.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
+                u.Z.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
             }
         );
     }, [t, o]);
@@ -79,22 +79,22 @@ function b(e) {
     }, []);
     return o
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: _.container,
               style: {
                   top: n - m,
-                  left: '52%'
+                  left: "52%",
               },
-              'aria-hidden': !0,
+              "aria-hidden": !0,
               children: a.map((e) =>
                   (0, r.jsx)(
                       E,
                       {
                           emoji: e,
-                          onAnimationEnd: d
+                          onAnimationEnd: d,
                       },
-                      e.key
-                  )
-              )
+                      e.key,
+                  ),
+              ),
           });
 }

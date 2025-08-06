@@ -18,44 +18,44 @@ let h = (e) => {
         (0, n.jsxs)(s.Y0X, {
             transitionState: t,
             size: s.CgR.SMALL,
-            'aria-label': '',
-            parentComponent: 'ChannelAutocompleteEmojiUpsellModal',
+            "aria-label": "",
+            parentComponent: "ChannelAutocompleteEmojiUpsellModal",
             children: [
                 (0, n.jsxs)(s.hzk, {
                     className: m.content,
                     children: [
-                        (0, n.jsx)('div', {
-                            role: 'image',
-                            className: m.image
+                        (0, n.jsx)("div", {
+                            role: "image",
+                            className: m.image,
                         }),
                         (0, n.jsx)(s.X6q, {
-                            variant: 'heading-xl/semibold',
+                            variant: "heading-xl/semibold",
                             className: m.header,
-                            children: p.intl.string(p.t.Uq1zJS)
+                            children: p.intl.string(p.t.Uq1zJS),
                         }),
                         (0, n.jsx)(s.Text, {
-                            variant: 'text-md/normal',
+                            variant: "text-md/normal",
                             children: p.intl.format(p.t.xPaO3t, {
                                 onLearnMore: () => {
-                                    (a(), o.Z.open(c.oAB.PREMIUM));
-                                }
-                            })
-                        })
-                    ]
+                                    a(), o.Z.open(c.oAB.PREMIUM);
+                                },
+                            }),
+                        }),
+                    ],
                 }),
                 (0, n.jsx)(s.mzw, {
                     children: (0, n.jsx)(l.Z, {
                         onClick: a,
                         textOptions: { textOverride: p.intl.string(p.t.pj0XBA) },
                         subscriptionTier: d.Si.TIER_2,
-                        premiumModalAnalyticsLocation: { page: c.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL }
-                    })
+                        premiumModalAnalyticsLocation: { page: c.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL },
+                    }),
                 }),
                 (0, n.jsx)(s.olH, {
                     className: m.closeButton,
-                    onClick: a
-                })
-            ]
+                    onClick: a,
+                }),
+            ],
         })
     );
 };

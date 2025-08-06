@@ -1,21 +1,21 @@
 e.exports = function (e) {
     return {
-        name: 'LDIF',
+        name: "LDIF",
         contains: [
             {
-                className: 'attribute',
-                match: '^dn(?=:)',
-                relevance: 10
+                className: "attribute",
+                match: "^dn(?=:)",
+                relevance: 10,
             },
             {
-                className: 'attribute',
-                match: '^\\w+(?=:)'
+                className: "attribute",
+                match: "^\\w+(?=:)",
             },
             {
-                className: 'literal',
-                match: '^-'
+                className: "literal",
+                match: "^-",
             },
-            e.HASH_COMMENT_MODE
-        ]
+            e.HASH_COMMENT_MODE,
+        ],
     };
 };

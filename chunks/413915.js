@@ -8,9 +8,9 @@ var i = n(255367),
     c = n(729495);
 let d = r.memo(function (e) {
     let { guildId: t, guildProfile: n } = e;
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: c.tagContainer,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: c.tag,
             children: [
                 null != n.badge &&
@@ -18,14 +18,14 @@ let d = r.memo(function (e) {
                         src: (0, a.Ic)(t, n.badge, o.Gg.SIZE_32),
                         tag: n.tag,
                         size: o.Gg.SIZE_32,
-                        className: c.badge
+                        className: c.badge,
                     }),
                 (0, i.jsx)(s.Text, {
-                    tag: 'span',
-                    variant: 'heading-xl/semibold',
-                    children: n.tag
-                })
-            ]
-        })
+                    tag: "span",
+                    variant: "heading-xl/semibold",
+                    children: n.tag,
+                }),
+            ],
+        }),
     });
 });

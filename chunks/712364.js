@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r,
     i = n(255367),
     o = n(73800),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,7 +23,18 @@ function d(e, t, n) {
 class f extends (r = o.PureComponent) {
     render() {
         var e;
-        let { title: t, actionText: n, children: r, error: a, isLoading: d, maxLength: f, transitionState: _, helpMessage: p, retryPrompt: h, retrySuccessMessage: m } = this.props,
+        let {
+                title: t,
+                actionText: n,
+                children: r,
+                error: a,
+                isLoading: d,
+                maxLength: f,
+                transitionState: _,
+                helpMessage: p,
+                retryPrompt: h,
+                retrySuccessMessage: m,
+            } = this.props,
             { code: g, errorMessage: E, retrySuccess: b } = this.state,
             y =
                 o.Children.count(r) > 0
@@ -31,24 +42,24 @@ class f extends (r = o.PureComponent) {
                           type: l.Zbd.Types.WARNING,
                           className: u.card,
                           children: (0, i.jsx)(l.Text, {
-                              variant: 'text-md/normal',
-                              children: r
-                          })
+                              variant: "text-md/normal",
+                              children: r,
+                          }),
                       })
                     : null,
             O =
                 null != h
                     ? (0, i.jsxs)(l.Text, {
                           className: s()(u.__invalid_submitText, u.spacing),
-                          variant: 'text-sm/normal',
+                          variant: "text-sm/normal",
                           children: [
-                              (0, i.jsx)('br', {}),
+                              (0, i.jsx)("br", {}),
                               (0, i.jsx)(l.P3F, {
                                   className: s()(u.spacing, u.__invalid_link),
                                   onClick: this.handleRetry,
-                                  children: (0, i.jsx)(l.eee, { children: h })
-                              })
-                          ]
+                                  children: (0, i.jsx)(l.eee, { children: h }),
+                              }),
+                          ],
                       })
                     : null,
             v = b
@@ -56,32 +67,32 @@ class f extends (r = o.PureComponent) {
                       type: l.Zbd.Types.SUCCESS,
                       className: u.card,
                       children: (0, i.jsx)(l.Text, {
-                          variant: 'text-md/normal',
-                          children: m
-                      })
+                          variant: "text-md/normal",
+                          children: m,
+                      }),
                   })
                 : null;
         return (0, i.jsx)(l.Y0X, {
             transitionState: _,
-            parentComponent: 'MFAConfirm',
-            children: (0, i.jsxs)('form', {
+            parentComponent: "MFAConfirm",
+            children: (0, i.jsxs)("form", {
                 onSubmit: this.handleSubmit,
                 children: [
                     (0, i.jsx)(l.xBx, {
                         separator: !1,
                         children: (0, i.jsx)(l.X6q, {
-                            variant: 'heading-lg/semibold',
-                            children: t
-                        })
+                            variant: "heading-lg/semibold",
+                            children: t,
+                        }),
                     }),
                     (0, i.jsxs)(l.hzk, {
                         children: [
                             null != p
                                 ? (0, i.jsx)(l.Text, {
-                                      color: 'text-default',
-                                      variant: 'text-md/normal',
+                                      color: "text-default",
+                                      variant: "text-md/normal",
                                       className: u.spacing,
-                                      children: p
+                                      children: p,
                                   })
                                 : null,
                             y,
@@ -96,91 +107,108 @@ class f extends (r = o.PureComponent) {
                                         placeholder: null != (e = this.getPlaceholder()) ? e : void 0,
                                         maxLength: null != f ? f : 10,
                                         value: g,
-                                        autoComplete: 'one-time-code',
-                                        autoFocus: !0
+                                        autoComplete: "one-time-code",
+                                        autoFocus: !0,
                                     }),
                                     this.errorPresent()
                                         ? (0, i.jsx)(l.Text, {
-                                              color: 'text-danger',
-                                              variant: 'text-xs/normal',
+                                              color: "text-danger",
+                                              variant: "text-xs/normal",
                                               className: u.error,
-                                              children: null != a ? a : E
+                                              children: null != a ? a : E,
                                           })
                                         : null,
-                                    O
-                                ]
-                            })
-                        ]
+                                    O,
+                                ],
+                            }),
+                        ],
                     }),
                     (0, i.jsx)(l.mzw, {
                         children: (0, i.jsxs)(l.hE2, {
-                            direction: 'horizontal-reverse',
+                            direction: "horizontal-reverse",
                             children: [
                                 (0, i.jsx)(l.zxk, {
-                                    variant: 'primary',
-                                    text: null != n ? n : c.intl.string(c.t['cY+Ooa']),
-                                    type: 'submit',
-                                    disabled: d || 0 === g.length
+                                    variant: "primary",
+                                    text: null != n ? n : c.intl.string(c.t["cY+Ooa"]),
+                                    type: "submit",
+                                    disabled: d || 0 === g.length,
                                 }),
                                 (0, i.jsx)(l.zxk, {
-                                    variant: 'secondary',
-                                    text: c.intl.string(c.t['ETE/oK']),
+                                    variant: "secondary",
+                                    text: c.intl.string(c.t["ETE/oK"]),
                                     onClick: this.handleCancel,
-                                    disabled: d
-                                })
-                            ]
-                        })
-                    })
-                ]
-            })
+                                    disabled: d,
+                                }),
+                            ],
+                        }),
+                    }),
+                ],
+            }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            d(this, '_input', void 0),
-            d(this, 'state', {
-                code: '',
-                errorMessage: '',
-                retrySuccess: !1
+        super(...e),
+            d(this, "_input", void 0),
+            d(this, "state", {
+                code: "",
+                errorMessage: "",
+                retrySuccess: !1,
             }),
-            d(this, 'setRef', (e) => {
+            d(this, "setRef", (e) => {
                 this._input = e;
             }),
-            d(this, 'getLabelText', () => {
+            d(this, "getLabelText", () => {
                 var e;
-                return null != (e = this.props.label) ? e : this.props.disallowBackupCodes ? c.intl.string(c.t.HZPBOT) : c.intl.string(c.t['+NQopK']);
+                return null != (e = this.props.label)
+                    ? e
+                    : this.props.disallowBackupCodes
+                      ? c.intl.string(c.t.HZPBOT)
+                      : c.intl.string(c.t["+NQopK"]);
             }),
-            d(this, 'getSupportedCodeTypes', () => (this.props.disallowBackupCodes ? c.intl.string(c.t.tARzgo) : c.intl.string(c.t.yO4lAA))),
-            d(this, 'getPlaceholder', () => {
+            d(this, "getSupportedCodeTypes", () =>
+                this.props.disallowBackupCodes ? c.intl.string(c.t.tARzgo) : c.intl.string(c.t.yO4lAA),
+            ),
+            d(this, "getPlaceholder", () => {
                 var e;
-                return this.props.forceNoPlaceholder ? null : null != (e = this.props.placeholder) ? e : this.getSupportedCodeTypes();
+                return this.props.forceNoPlaceholder
+                    ? null
+                    : null != (e = this.props.placeholder)
+                      ? e
+                      : this.getSupportedCodeTypes();
             }),
-            d(this, 'errorPresent', () => (null != this.props.error && '' !== this.props.error) || (null != this.state.errorMessage && '' !== this.state.errorMessage)),
-            d(this, 'handleRetry', () => {
+            d(
+                this,
+                "errorPresent",
+                () =>
+                    (null != this.props.error && "" !== this.props.error) ||
+                    (null != this.state.errorMessage && "" !== this.state.errorMessage),
+            ),
+            d(this, "handleRetry", () => {
                 let { onRetry: e } = this.props;
                 null == e || e().then(() => this.setState({ retrySuccess: !0 }));
             }),
-            d(this, 'handleSubmit', (e) => {
+            d(this, "handleSubmit", (e) => {
                 e.preventDefault();
                 let { handleSubmit: t, onError: n } = this.props;
                 t(this.state.code).catch((e) => {
-                    null != e.body && (null == n || n(e.body), e.body.message && this.setState({ errorMessage: e.body.message }));
+                    null != e.body &&
+                        (null == n || n(e.body), e.body.message && this.setState({ errorMessage: e.body.message }));
                 });
             }),
-            d(this, 'handleCancel', () => {
+            d(this, "handleCancel", () => {
                 let { onClose: e, handleEarlyClose: t } = this.props;
-                (e(), null == t || t());
+                e(), null == t || t();
             }),
-            d(this, 'handleCodeChange', (e) => {
+            d(this, "handleCodeChange", (e) => {
                 this.setState({ code: e });
-            }));
+            });
     }
 }
-d(f, 'defaultProps', {
-    btnClass: '',
+d(f, "defaultProps", {
+    btnClass: "",
     isLoading: !1,
     disallowBackupCodes: !1,
     error: null,
-    forceNoPlaceholder: !1
+    forceNoPlaceholder: !1,
 });
 let _ = f;

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(100527),
@@ -23,8 +23,8 @@ function d(e) {
                     application: p,
                     customId: n,
                     customLink: m,
-                    referrerId: d
-                })
+                    referrerId: d,
+                }),
             })
           : (0, r.jsx)(o.Gt, {
                 value: _,
@@ -32,7 +32,7 @@ function d(e) {
                     app: p,
                     linkType: s.U.ACTIVITY,
                     activityCustomId: n,
-                    activityReferrerId: d
-                })
+                    activityReferrerId: d,
+                }),
             });
 }

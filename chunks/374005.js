@@ -31,24 +31,24 @@ function E(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })({}, e)),
@@ -65,8 +65,8 @@ function E(e) {
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            t)
-        )
+            t),
+        ),
     });
 }
 let y = i.memo(function () {
@@ -76,14 +76,14 @@ let y = i.memo(function () {
             e,
             (e) => {
                 let { height: t } = e;
-                document.body.style.setProperty('--custom-app-panels-height', ''.concat(t, 'px'));
+                document.body.style.setProperty("--custom-app-panels-height", "".concat(t, "px"));
             },
-            []
+            [],
         ),
-        (0, r.jsx)('section', {
+        (0, r.jsx)("section", {
             ref: e,
             className: O.panels,
-            'aria-label': _.intl.string(_.t.StREWF),
+            "aria-label": _.intl.string(_.t.StREWF),
             children: (0, r.jsxs)(l.Jc, {
                 containerRef: e,
                 children: [
@@ -92,18 +92,18 @@ let y = i.memo(function () {
                     (0, r.jsx)(d.Z, {}),
                     (0, r.jsx)(m.Z, {
                         section: b.jXE.ACTIVITY_PANEL,
-                        children: (0, r.jsx)(E, { className: O.activityPanel })
+                        children: (0, r.jsx)(E, { className: O.activityPanel }),
                     }),
                     (0, r.jsx)(m.Z, {
                         section: b.jXE.RTC_CONNECTION_PANEL,
-                        children: (0, r.jsx)(p.Z, {})
+                        children: (0, r.jsx)(p.Z, {}),
                     }),
                     (0, r.jsx)(m.Z, {
                         section: b.jXE.ACCOUNT_PANEL,
-                        children: (0, r.jsx)(c.Z, {})
-                    })
-                ]
-            })
+                        children: (0, r.jsx)(c.Z, {}),
+                    }),
+                ],
+            }),
         })
     );
 });

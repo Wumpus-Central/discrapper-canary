@@ -15,7 +15,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -65,12 +65,13 @@ function g(e, t) {
                 i,
                 r = {},
                 l = Object.keys(e);
-            for (i = 0; i < l.length; i++) ((n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+            for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
             return r;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < l.length; i++) ((n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+        for (i = 0; i < l.length; i++)
+            (n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
     }
     return r;
 }
@@ -78,38 +79,38 @@ class f extends (i = o.PureComponent) {
     render() {
         let e = this.props,
             { scrollable: t } = e,
-            n = g(e, ['scrollable']);
+            n = g(e, ["scrollable"]);
         return t
-            ? (0, l.jsx)('aside', {
+            ? (0, l.jsx)("aside", {
                   className: u.sidebarScrollable,
                   children: (0, l.jsx)(c.Ttm, {
                       fade: !0,
                       className: u.scroller,
-                      children: (0, l.jsx)(d.Z.Child, b(m({}, n), { wrap: !0 }))
-                  })
+                      children: (0, l.jsx)(d.Z.Child, b(m({}, n), { wrap: !0 })),
+                  }),
               })
             : (0, l.jsx)(d.Z.Child, b(m({}, n), { wrap: !0 }));
     }
 }
-p(f, 'defaultProps', {
+p(f, "defaultProps", {
     basis: 232,
     grow: 0,
-    shrink: 0
+    shrink: 0,
 });
 class h extends o.PureComponent {
     render() {
         let e = this.props,
             { className: t } = e,
-            n = g(e, ['className']);
+            n = g(e, ["className"]);
         return (0, l.jsx)(
             d.Z.Child,
             m(
                 {
                     className: s()(u.content, t),
-                    wrap: !0
+                    wrap: !0,
                 },
-                n
-            )
+                n,
+            ),
         );
     }
 }
@@ -118,19 +119,19 @@ class x extends (r = o.PureComponent) {
         return (0, l.jsx)(d.Z, m({}, this.props));
     }
 }
-(p(x, 'defaultProps', {
+p(x, "defaultProps", {
     direction: d.Z.Direction.HORIZONTAL,
     justify: d.Z.Justify.START,
     align: d.Z.Align.START,
     wrap: d.Z.Wrap.NO_WRAP,
     shrink: 1,
     grow: 1,
-    basis: 'auto'
+    basis: "auto",
 }),
-    p(x, 'Direction', d.Z.Direction),
-    p(x, 'Justify', d.Z.Justify),
-    p(x, 'Align', d.Z.Align),
-    p(x, 'Wrap', d.Z.Wrap),
-    p(x, 'Sidebar', f),
-    p(x, 'Content', h));
+    p(x, "Direction", d.Z.Direction),
+    p(x, "Justify", d.Z.Justify),
+    p(x, "Align", d.Z.Align),
+    p(x, "Wrap", d.Z.Wrap),
+    p(x, "Sidebar", f),
+    p(x, "Content", h);
 let j = x;

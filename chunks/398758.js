@@ -1,7 +1,7 @@
 n.d(t, {
     DM: () => c,
     r1: () => u,
-    te: () => d
+    te: () => d,
 });
 var r = n(442837),
     i = n(430824),
@@ -21,7 +21,13 @@ function c(e) {
 function u(e) {
     let t = i.Z.getGuild(e),
         n = s.default.getCurrentUser();
-    return null != e && null != t && null != n && (t.features.has(l.oNc.COMMUNITY) || n.isStaff()) && a.ZP.isOptInEnabled(e);
+    return (
+        null != e &&
+        null != t &&
+        null != n &&
+        (t.features.has(l.oNc.COMMUNITY) || n.isStaff()) &&
+        a.ZP.isOptInEnabled(e)
+    );
 }
 function d(e) {
     return (0, r.e7)([i.Z, o.Z], () => {

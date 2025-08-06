@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     K_: () => d,
     P3: () => u,
-    PE: () => f
+    PE: () => f,
 }),
-    n(997841));
+    n(997841);
 var r = n(399606),
     i = n(271383),
     o = n(630388),
@@ -22,7 +22,7 @@ function u(e, t) {
         f = null != d && (null == c ? void 0 : c[d.channelId]) === !0;
     return {
         channelAction: d,
-        completed: f
+        completed: f,
     };
 }
 function d(e, t) {

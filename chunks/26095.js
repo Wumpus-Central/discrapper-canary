@@ -10,7 +10,7 @@ var r = n(165566),
         getDerivedStateFromProps: !0,
         mixins: !0,
         propTypes: !0,
-        type: !0
+        type: !0,
     },
     o = {
         name: !0,
@@ -19,14 +19,14 @@ var r = n(165566),
         caller: !0,
         callee: !0,
         arguments: !0,
-        arity: !0
+        arity: !0,
     },
     a = {
         $$typeof: !0,
         render: !0,
         defaultProps: !0,
         displayName: !0,
-        propTypes: !0
+        propTypes: !0,
     },
     s = {
         $$typeof: !0,
@@ -34,13 +34,13 @@ var r = n(165566),
         defaultProps: !0,
         displayName: !0,
         propTypes: !0,
-        type: !0
+        type: !0,
     },
     l = {};
 function c(e) {
     return r.isMemo(e) ? s : l[e.$$typeof] || i;
 }
-((l[r.ForwardRef] = a), (l[r.Memo] = s));
+(l[r.ForwardRef] = a), (l[r.Memo] = s);
 var u = Object.defineProperty,
     d = Object.getOwnPropertyNames,
     f = Object.getOwnPropertySymbols,
@@ -48,7 +48,7 @@ var u = Object.defineProperty,
     p = Object.getPrototypeOf,
     h = Object.prototype;
 function m(e, t, n) {
-    if ('string' != typeof t) {
+    if ("string" != typeof t) {
         if (h) {
             var r = p(t);
             r && r !== h && m(e, r, n);

@@ -1,6 +1,6 @@
 n.d(t, {
     MY: () => o,
-    Xr: () => a
+    Xr: () => a,
 });
 var r = n(474936);
 function i(e) {
@@ -22,7 +22,7 @@ function a(e, t, n) {
     if (null == a) {
         if (e.length > 0) {
             let i = r.GP[e[0].planId];
-            ((t = i.interval), (n = i.intervalCount));
+            (t = i.interval), (n = i.intervalCount);
         }
         return i(t, n);
     }

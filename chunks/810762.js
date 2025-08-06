@@ -14,11 +14,11 @@ let p = (e) => {
     let { onGoBack: t } = e,
         n = (0, c.Z)(),
         { loading: p } = (0, o.sp)(n);
-    return ((0, l.Z)(r.tq ? 'role-subscriptions-user-setting' : void 0), p)
+    return ((0, l.Z)(r.tq ? "role-subscriptions-user-setting" : void 0), p)
         ? (0, i.jsx)(a.$jN, {})
         : 0 === n.length
           ? null
-          : (0, i.jsxs)('div', {
+          : (0, i.jsxs)("div", {
                 className: m.__invalid_container,
                 children: [
                     (0, i.jsxs)(s.zx, {
@@ -27,27 +27,27 @@ let p = (e) => {
                         onClick: t,
                         children: [
                             (0, i.jsx)(a.ZSh, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: m.arrowIcon
+                                size: "md",
+                                color: "currentColor",
+                                className: m.arrowIcon,
                             }),
-                            u.intl.string(u.t.hqyhKS)
-                        ]
+                            u.intl.string(u.t.hqyhKS),
+                        ],
                     }),
                     (0, i.jsx)(a.LZC, { size: 10 }),
                     (0, i.jsx)(a.vwX, {
-                        tag: 'h1',
-                        children: u.intl.string(u.t['KzCF//'])
+                        tag: "h1",
+                        children: u.intl.string(u.t["KzCF//"]),
                     }),
                     (0, i.jsx)(a.Text, {
-                        variant: 'text-sm/normal',
+                        variant: "text-sm/normal",
                         className: m.pageDescription,
-                        children: u.intl.string(u.t['Y+ucR0'])
+                        children: u.intl.string(u.t["Y+ucR0"]),
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: m.subscriptionsContainer,
-                        children: n.map((e) => (0, i.jsx)(d.Z, { subscription: e }, e.id))
-                    })
-                ]
+                        children: n.map((e) => (0, i.jsx)(d.Z, { subscription: e }, e.id)),
+                    }),
+                ],
             });
 };

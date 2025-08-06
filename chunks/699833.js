@@ -9,25 +9,33 @@ var i = n(913527),
     c = n(800530),
     u = n(388032),
     d = n(524438);
-let f = (e) => o()().diff(o().unix(e), 'days');
+let f = (e) => o()().diff(o().unix(e), "days");
 function _(e) {
     var t, i, o, _, p;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
     let h = e.message.embeds[0],
-        m = null != (o = null == (t = h.fields) ? void 0 : t.find((e) => e.rawName === c.Cg.CLASSIFICATION_ID)) ? o : void 0,
+        m =
+            null != (o = null == (t = h.fields) ? void 0 : t.find((e) => e.rawName === c.Cg.CLASSIFICATION_ID))
+                ? o
+                : void 0,
         g = null != (_ = null == m ? void 0 : m.rawValue) ? _ : void 0,
-        E = null != (p = null == (i = h.fields) ? void 0 : i.find((e) => e.rawName === c.Cg.INCIDENT_TIMESTAMP)) ? p : void 0,
+        E =
+            null != (p = null == (i = h.fields) ? void 0 : i.find((e) => e.rawName === c.Cg.INCIDENT_TIMESTAMP))
+                ? p
+                : void 0,
         b = null == E || null == E.rawValue ? void 0 : parseFloat(E.rawValue);
     if (null == g || null == b) return null;
     let y = () => {
         (0, l.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('25183'), n.e('3940'), n.e('18831'), n.e('68464')]).then(n.bind(n, 41164));
+            let { default: e } = await Promise.all([n.e("25183"), n.e("3940"), n.e("18831"), n.e("68464")]).then(
+                n.bind(n, 41164),
+            );
             return (t) =>
                 (0, r.jsx)(e, {
                     classificationId: g,
                     source: c.s.SystemDM,
                     transitionState: t.transitionState,
-                    onClose: t.onClose
+                    onClose: t.onClose,
                 });
         });
     };
@@ -35,48 +43,48 @@ function _(e) {
         onClick: y,
         className: d.safetyPolicyNoticeContainer,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: d.noticeContent,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: d.headerRow,
                         children: [
                             (0, r.jsx)(l.aNP, {
                                 className: d.warningIcon,
-                                color: a.Z.colors.STATUS_DANGER
+                                color: a.Z.colors.STATUS_DANGER,
                             }),
                             (0, r.jsx)(l.Text, {
-                                variant: 'text-md/semibold',
-                                children: u.intl.string(u.t['4CxGXl'])
-                            })
-                        ]
+                                variant: "text-md/semibold",
+                                children: u.intl.string(u.t["4CxGXl"]),
+                            }),
+                        ],
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: d.incidentTiming,
                         children: (0, r.jsx)(l.Text, {
-                            variant: 'text-xs/medium',
-                            children: u.intl.format(u.t.eevFb2, { daysAgo: f(b) })
-                        })
+                            variant: "text-xs/medium",
+                            children: u.intl.format(u.t.eevFb2, { daysAgo: f(b) }),
+                        }),
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: d.noticeBody,
                         children: (0, r.jsx)(l.Text, {
-                            variant: 'text-md/normal',
-                            color: 'text-muted',
-                            children: u.intl.string(u.t['5CLb0N'])
-                        })
-                    })
-                ]
+                            variant: "text-md/normal",
+                            color: "text-muted",
+                            children: u.intl.string(u.t["5CLb0N"]),
+                        }),
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.footerContainer,
                 children: (0, r.jsx)(s.zx, {
                     look: s.zx.Looks.BLANK,
                     className: d.detailsButton,
                     color: s.zx.Colors.WHITE,
-                    children: u.intl.string(u.t.zKnzws)
-                })
-            })
-        ]
+                    children: u.intl.string(u.t.zKnzws),
+                }),
+            }),
+        ],
     });
 }

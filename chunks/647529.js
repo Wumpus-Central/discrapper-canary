@@ -15,71 +15,71 @@ function x(e) {
         f = (0, i.e7)([a.Z], () => a.Z.getGuild(t));
     if (null == f) return null;
     let b = (0, r.jsx)(o.zxk, {
-        variant: 'primary',
+        variant: "primary",
         text: c.intl.string(c.t.i4jeWV),
-        onClick: p
+        onClick: p,
     });
     return (0, r.jsxs)(o.Y0X, {
         transitionState: x,
         size: o.CgR.SMALL,
         className: u.container,
-        parentComponent: 'LeaderboardSettingsBaseModal',
+        parentComponent: "LeaderboardSettingsBaseModal",
         children: [
             (0, r.jsxs)(o.xBx, {
                 separator: !1,
                 className: u.modalHeader,
                 children: [
-                    (0, r.jsx)('div', { className: u.gradientSplash }),
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("div", { className: u.gradientSplash }),
+                    (0, r.jsx)("img", {
+                        alt: "",
                         src: m,
-                        className: u.heroImage
+                        className: u.heroImage,
                     }),
                     (0, r.jsx)(o.LZC, { size: 16 }),
                     (0, r.jsx)(o.X6q, {
-                        variant: 'heading-xl/bold',
-                        color: 'header-primary',
+                        variant: "heading-xl/bold",
+                        color: "header-primary",
                         className: u.title,
-                        children: n
+                        children: n,
                     }),
                     (0, r.jsx)(o.LZC, { size: 4 }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: u.guildContainer,
                         children: [
                             (0, r.jsx)(l.Z, {
                                 size: l.Z.Sizes.SMOL,
                                 guild: f,
-                                className: u.guildIcon
+                                className: u.guildIcon,
                             }),
                             (0, r.jsx)(o.Text, {
-                                variant: 'text-md/semibold',
-                                color: 'text-secondary',
-                                children: f.name
-                            })
-                        ]
+                                variant: "text-md/semibold",
+                                color: "text-secondary",
+                                children: f.name,
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(o.olH, {
                         onClick: p,
                         innerClassName: u.closeButton,
-                        className: u.close
-                    })
-                ]
+                        className: u.close,
+                    }),
+                ],
             }),
             g,
             (0, r.jsxs)(o.mzw, {
                 className: u.footer,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: u.footerButtons,
-                        children: null != j ? j : b
+                        children: null != j ? j : b,
                     }),
                     (0, r.jsx)(o.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-secondary',
-                        children: c.intl.format(c.t.zbMH0d, { link: s.Z.getArticleURL(d.BhN.GUILD_LEADERBOARD) })
-                    })
-                ]
-            })
-        ]
+                        variant: "text-xs/normal",
+                        color: "text-secondary",
+                        children: c.intl.format(c.t.zbMH0d, { link: s.Z.getArticleURL(d.BhN.GUILD_LEADERBOARD) }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

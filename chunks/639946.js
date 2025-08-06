@@ -1,4 +1,4 @@
-(n.d(t, { r: () => c }), n(953529));
+n.d(t, { r: () => c }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -8,43 +8,43 @@ var i = n(481060),
 function a(e) {
     let { channel: t } = e,
         n = (0, l.Th)(t.type);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o.channelInfoContainer,
         children: [
             null != n
                 ? (0, r.jsx)(n, {
-                      color: 'currentColor',
-                      size: 'custom',
+                      color: "currentColor",
+                      size: "custom",
                       width: 20,
-                      height: 20
+                      height: 20,
                   })
                 : null,
             (0, r.jsx)(i.Text, {
                 className: o.channelInfoText,
-                color: 'none',
-                variant: 'text-sm/semibold',
-                children: t.name
-            })
-        ]
+                color: "none",
+                variant: "text-sm/semibold",
+                children: t.name,
+            }),
+        ],
     });
 }
 function c(e) {
     let { channel: t, guildScheduledEvent: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o.container,
         children: [
             (0, r.jsx)(s.HZ, {
                 className: o.statusContainer,
                 guildId: n.guild_id,
                 guildEvent: n,
-                eventPreview: n
+                eventPreview: n,
             }),
             (0, r.jsx)(s.Rf, {
                 name: n.name,
                 description: n.description,
-                guildId: n.guild_id
+                guildId: n.guild_id,
             }),
-            null != t && n.channel_id === t.id ? (0, r.jsx)(a, { channel: t }) : null
-        ]
+            null != t && n.channel_id === t.id ? (0, r.jsx)(a, { channel: t }) : null,
+        ],
     });
 }

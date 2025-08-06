@@ -1,4 +1,4 @@
-(n.d(i, { default: () => v }), n(388685));
+n.d(i, { default: () => v }), n(388685);
 var t = n(255367),
     r = n(73800),
     s = n(392711),
@@ -16,10 +16,24 @@ var t = n(255367),
     f = n(665578),
     h = n(388032);
 function v(e) {
-    let { applicationIcon: i, applicationId: n, applicationName: s, command: m, guildId: v, onClose: x, transitionState: E } = e,
+    let {
+            applicationIcon: i,
+            applicationId: n,
+            applicationName: s,
+            command: m,
+            guildId: v,
+            onClose: x,
+            transitionState: E,
+        } = e,
         [w, O] = r.useState(null),
         [k, P] = r.useState(!1),
-        { originalApplicationPermissions: C, originalCommandPermissions: I, editedTargetPermissions: K, hasChanges: N, selectedPermissionCount: S } = (0, b.Z)(v, n, m.id),
+        {
+            originalApplicationPermissions: C,
+            originalCommandPermissions: I,
+            editedTargetPermissions: K,
+            hasChanges: N,
+            selectedPermissionCount: S,
+        } = (0, b.Z)(v, n, m.id),
         Z = r.useCallback(async () => {
             var e, i, t, r, s;
             if (!N) return void x();
@@ -29,28 +43,28 @@ function v(e) {
                         for (var i = 1; i < arguments.length; i++) {
                             var n = null != arguments[i] ? arguments[i] : {},
                                 t = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (t = t.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 t.forEach(function (i) {
                                     var t;
-                                    ((t = n[i]),
+                                    (t = n[i]),
                                         i in e
                                             ? Object.defineProperty(e, i, {
                                                   value: t,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[i] = t));
-                                }));
+                                            : (e[i] = t);
+                                });
                         }
                         return e;
                     })({}, K),
-                    a
+                    a,
                 ),
                 d = (0, p.bD)(v),
                 b = (0, g.rE)(v, u.Kw.ROLE),
@@ -60,20 +74,20 @@ function v(e) {
                 E = Object.values(o).map((e) => ({
                     id: e.id,
                     permission: e.permission,
-                    type: e.type
+                    type: e.type,
                 }));
-            (O(null), P(!0));
+            O(null), P(!0);
             try {
-                (await y.U3({
+                await y.U3({
                     defaultEveryoneValue: h,
                     defaultEverywhereValue: j,
                     applicationId: n,
                     commandId: m.id,
                     guildId: v,
-                    permissions: E
+                    permissions: E,
                 }),
                     P(!1),
-                    x());
+                    x();
             } catch (e) {
                 O(new c.Z(e));
             }
@@ -81,58 +95,58 @@ function v(e) {
         }, [n, C, m.id, m.permissions, v, N, x, K, O, P]);
     r.useEffect(
         () => () => {
-            (y.Ui(m.id), d.Z.stopEditingCommandPermissions(m.id));
+            y.Ui(m.id), d.Z.stopEditingCommandPermissions(m.id);
         },
-        [m.id]
+        [m.id],
     );
     let q = (0, g.gw)(m.type, m.displayName);
     return (0, t.jsx)(a.Modal, {
-        'aria-label': h.intl.string(h.t['N+InBQ']),
+        "aria-label": h.intl.string(h.t["N+InBQ"]),
         transitionState: E,
         onClose: x,
-        title: h.intl.string(h.t['N+InBQ']),
+        title: h.intl.string(h.t["N+InBQ"]),
         preview: (0, t.jsxs)(o.Kqy, {
-            direction: 'horizontal',
+            direction: "horizontal",
             gap: 16,
             children: [
                 (0, t.jsx)(j, {
                     icon: i,
                     id: n,
-                    name: s
+                    name: s,
                 }),
                 (0, t.jsxs)(o.Kqy, {
-                    direction: 'vertical',
+                    direction: "vertical",
                     gap: 4,
                     children: [
                         (0, t.jsx)(o.Text, {
-                            variant: 'text-md/semibold',
-                            children: q
+                            variant: "text-md/semibold",
+                            children: q,
                         }),
                         (0, t.jsx)(o.Text, {
-                            color: 'text-muted',
-                            variant: 'text-sm/normal',
-                            children: m.displayDescription
-                        })
-                    ]
-                })
-            ]
+                            color: "text-muted",
+                            variant: "text-sm/normal",
+                            children: m.displayDescription,
+                        }),
+                    ],
+                }),
+            ],
         }),
         actions: [
             {
-                text: h.intl.string(h.t['ETE/oK']),
+                text: h.intl.string(h.t["ETE/oK"]),
                 onClick: x,
-                variant: 'secondary'
+                variant: "secondary",
             },
             {
                 text: h.intl.string(h.t.R3BPHx),
                 onClick: Z,
-                variant: 'primary',
+                variant: "primary",
                 disabled: !N,
-                loading: k
-            }
+                loading: k,
+            },
         ],
         children: (0, t.jsxs)(o.Kqy, {
-            direction: 'vertical',
+            direction: "vertical",
             gap: 16,
             children: [
                 null == w || w.hasFieldErrors() ? null : (0, t.jsx)(o.kzN, { children: w.getAnyErrorMessage() }),
@@ -144,10 +158,10 @@ function v(e) {
                     originalApplicationPermissions: C,
                     originalCommandPermissions: I,
                     editedTargetPermissions: K,
-                    selectedPermissionCount: S
-                })
-            ]
-        })
+                    selectedPermissionCount: S,
+                }),
+            ],
+        }),
     });
 }
 function j(e) {
@@ -155,11 +169,11 @@ function j(e) {
         r = m.ZP.getApplicationIconURL({
             id: n,
             icon: i,
-            size: 40
+            size: 40,
         });
     return (0, t.jsx)(o.qEK, {
         src: r,
         size: o.EFr.SIZE_40,
-        'aria-hidden': !0
+        "aria-hidden": !0,
     });
 }

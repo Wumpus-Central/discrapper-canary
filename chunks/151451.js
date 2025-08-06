@@ -10,26 +10,34 @@ var i = n(255367),
     u = n(476921),
     m = n(266768);
 let p = (e) => {
-    let { isMotionReduced: t, containerVisibilityPercentage: n, boltTrinketClassName: r, carTrinketClassName: p, hammerTrinketClassName: g, keyTrinketClassName: h, starTrinketClassName: f } = e;
+    let {
+        isMotionReduced: t,
+        containerVisibilityPercentage: n,
+        boltTrinketClassName: r,
+        carTrinketClassName: p,
+        hammerTrinketClassName: g,
+        keyTrinketClassName: h,
+        starTrinketClassName: f,
+    } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: s()(l.boltContainer, r),
                 children: (0, i.jsx)(a.ZP, {
                     blurAnimationData: {
                         startBlurRadius: 10,
                         endBlurRadius: 0,
-                        duration: a.SR
+                        duration: a.SR,
                     },
                     scaleAnimationData: {
                         startScale: 0.85,
                         endScale: 1,
-                        duration: a.SR
+                        duration: a.SR,
                     },
                     yAxisAnimationData: {
                         range: 15,
                         duration: a.vi,
-                        path: a.js.COSINE
+                        path: a.js.COSINE,
                     },
                     parallaxAnimationData:
                         null != n
@@ -37,25 +45,25 @@ let p = (e) => {
                                   pathDirection: a.eo.UP,
                                   range: 125,
                                   containerVisibilityPercentage: n,
-                                  changeOpacity: !0
+                                  changeOpacity: !0,
                               }
                             : void 0,
                     animateXAxisWiggle: !0,
                     isMotionReduced: t,
-                    children: (0, i.jsx)('img', {
+                    children: (0, i.jsx)("img", {
                         src: o.Z,
                         className: l.boltTrinket,
-                        alt: ''
-                    })
-                })
+                        alt: "",
+                    }),
+                }),
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: s()(l.carContainer, p),
                 children: (0, i.jsx)(a.ZP, {
                     yAxisAnimationData: {
                         range: 15,
                         duration: a.vi,
-                        path: a.js.COSINE
+                        path: a.js.COSINE,
                     },
                     parallaxAnimationData:
                         null != n
@@ -63,25 +71,25 @@ let p = (e) => {
                                   pathDirection: a.eo.DOWN,
                                   range: 50,
                                   containerVisibilityPercentage: n,
-                                  changeOpacity: !0
+                                  changeOpacity: !0,
                               }
                             : void 0,
                     animateXAxisWiggle: !0,
                     isMotionReduced: t,
-                    children: (0, i.jsx)('img', {
+                    children: (0, i.jsx)("img", {
                         src: c.Z,
                         className: l.carTrinket,
-                        alt: ''
-                    })
-                })
+                        alt: "",
+                    }),
+                }),
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: s()(l.hammerContainer, g),
                 children: (0, i.jsx)(a.ZP, {
                     yAxisAnimationData: {
                         range: 15,
                         duration: a.vi,
-                        path: a.js.SINE
+                        path: a.js.SINE,
                     },
                     parallaxAnimationData:
                         null != n
@@ -89,35 +97,35 @@ let p = (e) => {
                                   pathDirection: a.eo.DOWN,
                                   range: 120,
                                   containerVisibilityPercentage: n,
-                                  changeOpacity: !0
+                                  changeOpacity: !0,
                               }
                             : void 0,
                     animateXAxisWiggle: !0,
                     isMotionReduced: t,
-                    children: (0, i.jsx)('img', {
+                    children: (0, i.jsx)("img", {
                         src: d.Z,
                         className: l.hammerTrinket,
-                        alt: ''
-                    })
-                })
+                        alt: "",
+                    }),
+                }),
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: s()(l.keyContainer, h),
                 children: (0, i.jsx)(a.ZP, {
                     blurAnimationData: {
                         startBlurRadius: 5,
                         endBlurRadius: 0,
-                        duration: a.b5
+                        duration: a.b5,
                     },
                     scaleAnimationData: {
                         startScale: 0.85,
                         endScale: 1,
-                        duration: a.b5
+                        duration: a.b5,
                     },
                     yAxisAnimationData: {
                         range: 15,
                         duration: a.vi,
-                        path: a.js.SINE
+                        path: a.js.SINE,
                     },
                     parallaxAnimationData:
                         null != n
@@ -125,35 +133,35 @@ let p = (e) => {
                                   pathDirection: a.eo.UP,
                                   range: 200,
                                   containerVisibilityPercentage: n,
-                                  changeOpacity: !0
+                                  changeOpacity: !0,
                               }
                             : void 0,
                     animateXAxisWiggle: !0,
                     isMotionReduced: t,
-                    children: (0, i.jsx)('img', {
+                    children: (0, i.jsx)("img", {
                         src: u.Z,
                         className: l.keyTrinket,
-                        alt: ''
-                    })
-                })
+                        alt: "",
+                    }),
+                }),
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: s()(l.starContainer, f),
                 children: (0, i.jsx)(a.ZP, {
                     blurAnimationData: {
                         startBlurRadius: 0,
                         endBlurRadius: 2,
-                        duration: a.SR
+                        duration: a.SR,
                     },
                     scaleAnimationData: {
                         startScale: 1,
                         endScale: 0.85,
-                        duration: a.SR
+                        duration: a.SR,
                     },
                     yAxisAnimationData: {
                         range: 20,
                         duration: a.b5,
-                        path: a.js.COSINE
+                        path: a.js.COSINE,
                     },
                     parallaxAnimationData:
                         null != n
@@ -161,18 +169,18 @@ let p = (e) => {
                                   pathDirection: a.eo.UP,
                                   range: 50,
                                   containerVisibilityPercentage: n,
-                                  changeOpacity: !0
+                                  changeOpacity: !0,
                               }
                             : void 0,
                     animateXAxisWiggle: !0,
                     isMotionReduced: t,
-                    children: (0, i.jsx)('img', {
+                    children: (0, i.jsx)("img", {
                         src: m.Z,
                         className: l.starTrinket,
-                        alt: ''
-                    })
-                })
-            })
-        ]
+                        alt: "",
+                    }),
+                }),
+            }),
+        ],
     });
 };

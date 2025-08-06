@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { Z: () => Y }), n(539854), n(388685), n(642613), n(415506));
+n.d(t, { Z: () => Y }), n(539854), n(388685), n(642613), n(415506);
 var o,
     a = n(392711),
     s = n.n(a),
@@ -19,7 +19,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -64,7 +64,7 @@ function y(e, t) {
         e
     );
 }
-let O = 'migrated',
+let O = "migrated",
     v = 0.02,
     I = 0.01,
     T = {
@@ -72,334 +72,340 @@ let O = 'migrated',
             resizeX: !1,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: 'OPTIONAL',
+            layoutPolicy: "OPTIONAL",
             defaultSettings: {
                 anchor: {
                     left: 0.175,
                     top: 0.05,
                     bottom: void 0,
-                    right: void 0
+                    right: void 0,
                 },
                 size: {
-                    width: 'auto',
-                    height: 0.65
+                    width: "auto",
+                    height: 0.65,
                 },
                 pinned: !1,
                 minSize: {
                     width: 312,
-                    height: 300
-                }
+                    height: 300,
+                },
             },
-            version: m.bv
+            version: m.bv,
         },
         [h.Odu.TEXT]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: 'OPTIONAL',
+            layoutPolicy: "OPTIONAL",
             defaultSettings: {
                 anchor: {
                     left: 0.26,
                     top: 0.05,
                     bottom: void 0,
-                    right: void 0
+                    right: void 0,
                 },
                 size: {
                     width: 0.565,
-                    height: 0.65
+                    height: 0.65,
                 },
                 pinned: !0,
                 minSize: {
                     width: 430,
-                    height: 300
-                }
+                    height: 300,
+                },
             },
-            version: m.bv
+            version: m.bv,
         },
         [h.Odu.VOICE]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: 'REQUIRED',
+            layoutPolicy: "REQUIRED",
             defaultSettings: {
                 anchor: {
                     left: 0.011,
                     top: 0.011,
                     bottom: void 0,
-                    right: void 0
+                    right: void 0,
                 },
                 size: {
-                    width: 'auto',
-                    height: 'auto'
+                    width: "auto",
+                    height: "auto",
                 },
                 pinned: !0,
                 minSize: {
                     width: 272,
-                    height: 100
-                }
+                    height: 100,
+                },
             },
-            version: m.bv
+            version: m.bv,
         },
         [h.Odu.GUILDS_TEXT]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: 'OPTIONAL_DEFAULT',
+            layoutPolicy: "OPTIONAL_DEFAULT",
             defaultSettings: {
                 anchor: {
                     left: void 0,
                     top: 0.05,
                     bottom: void 0,
-                    right: 0.25
+                    right: 0.25,
                 },
                 size: {
                     width: 0.6,
-                    height: 0.45
+                    height: 0.45,
                 },
                 pinned: !1,
                 minSize: {
                     height: 300,
-                    width: 610
-                }
+                    width: 610,
+                },
             },
-            version: m.bv
+            version: m.bv,
         },
         [h.Odu.VOICE_V3]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: 'REQUIRED',
+            layoutPolicy: "REQUIRED",
             defaultSettings: {
                 anchor: {
                     left: I,
                     top: 0.35,
                     bottom: void 0,
-                    right: void 0
+                    right: void 0,
                 },
                 size: {
-                    width: 'auto',
-                    height: 'auto'
+                    width: "auto",
+                    height: "auto",
                 },
                 pinned: !0,
                 minSize: {
                     width: 272,
-                    height: 24
-                }
+                    height: 24,
+                },
             },
-            version: m.HN
+            version: m.HN,
         },
         [h.Odu.VIDEO]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: 'OPTIONAL_DEFAULT',
+            layoutPolicy: "OPTIONAL_DEFAULT",
             defaultSettings: {
                 anchor: {
                     left: I,
                     top: void 0,
                     bottom: v,
-                    right: void 0
+                    right: void 0,
                 },
                 size: {
                     fixed: !0,
                     width: 408,
-                    height: 128
+                    height: 128,
                 },
                 pinned: !0,
                 minSize: {
                     width: 128,
-                    height: 128
-                }
+                    height: 128,
+                },
             },
-            version: m.HN
+            version: m.HN,
         },
         [h.Odu.GO_LIVE]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: 'OPTIONAL_DEFAULT',
+            layoutPolicy: "OPTIONAL_DEFAULT",
             defaultSettings: {
                 anchor: {
                     left: void 0,
                     top: void 0,
                     bottom: v,
-                    right: I
+                    right: I,
                 },
                 size: {
                     fixed: !0,
                     width: 256,
-                    height: 144
+                    height: 144,
                 },
                 pinned: !1,
                 minSize: {
                     width: 276,
-                    height: 164
-                }
+                    height: 164,
+                },
             },
-            version: m.HN
+            version: m.HN,
         },
         [h.Odu.QUICK_ACTIONS]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: 'REQUIRED',
+            layoutPolicy: "REQUIRED",
             defaultSettings: {
                 anchor: {
                     left: 0.34,
                     top: v,
                     bottom: void 0,
-                    right: void 0
+                    right: void 0,
                 },
                 size: {
-                    width: 'auto',
-                    height: 'auto'
+                    width: "auto",
+                    height: "auto",
                 },
                 pinned: !1,
                 minSize: {
                     width: 216,
-                    height: 56
-                }
+                    height: 56,
+                },
             },
-            version: m.HN
+            version: m.HN,
         },
         [h.Odu.NOTIFICATIONS]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: 'REQUIRED',
+            layoutPolicy: "REQUIRED",
             defaultSettings: {
                 anchor: {
                     left: I,
                     top: v,
                     bottom: void 0,
-                    right: void 0
+                    right: void 0,
                 },
                 size: {
-                    height: 'auto',
-                    width: 'auto'
+                    height: "auto",
+                    width: "auto",
                 },
                 pinned: !0,
                 minSize: {
                     width: 320,
-                    height: 100
-                }
+                    height: 100,
+                },
             },
-            version: m.HN
+            version: m.HN,
         },
         [h.Odu.ACTIVITY]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: 'REQUIRED',
+            layoutPolicy: "REQUIRED",
             defaultSettings: {
                 anchor: {
                     left: void 0,
                     top: 0.35,
                     bottom: void 0,
-                    right: I
+                    right: I,
                 },
                 size: {
-                    height: 'auto',
-                    width: 'auto'
+                    height: "auto",
+                    width: "auto",
                 },
                 pinned: !1,
                 minSize: {
                     width: 320,
-                    height: 100
-                }
+                    height: 100,
+                },
             },
-            version: m.HN
+            version: m.HN,
         },
         [h.Odu.FRIENDS]: {
             resizeX: !1,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: 'OPTIONAL_DEFAULT',
+            layoutPolicy: "OPTIONAL_DEFAULT",
             defaultSettings: {
                 anchor: {
                     left: void 0,
                     top: 6 * v,
                     bottom: void 0,
-                    right: I
+                    right: I,
                 },
                 size: {
                     fixed: !0,
                     height: 500,
-                    width: 350
+                    width: 350,
                 },
                 minSize: {
                     width: 350,
-                    height: 350
+                    height: 350,
                 },
-                pinned: !1
+                pinned: !1,
             },
-            version: m.HN
+            version: m.HN,
         },
         [h.Odu.CLICK_ZONE_DEBUG]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: 'DEBUG',
+            layoutPolicy: "DEBUG",
             defaultSettings: {
                 anchor: {
                     left: void 0,
                     top: 0.35,
                     bottom: void 0,
-                    right: 0.35
+                    right: 0.35,
                 },
                 size: {
-                    height: 'auto',
-                    width: 'auto'
+                    height: "auto",
+                    width: "auto",
                 },
                 pinned: !0,
                 minSize: {
                     width: 50,
-                    height: 50
-                }
+                    height: 50,
+                },
             },
-            version: m.HN
+            version: m.HN,
         },
         [h.Odu.PERFORMANCE_DEBUG]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: 'DEBUG',
+            layoutPolicy: "DEBUG",
             defaultSettings: {
                 anchor: {
                     left: void 0,
                     top: 0.1,
                     bottom: void 0,
-                    right: 0.1
+                    right: 0.1,
                 },
                 size: {
-                    height: 'auto',
-                    width: 'auto'
+                    height: "auto",
+                    width: "auto",
                 },
                 pinned: !0,
                 minSize: {
                     width: 120,
-                    height: 300
-                }
+                    height: 300,
+                },
             },
-            version: m.HN
-        }
+            version: m.HN,
+        },
     };
 function S(e) {
     let { layoutId: t, widgets: n, version: o, defaultResolution: a } = e;
     if (null != r[t] && r[t].version === o) return !1;
     let s = [];
-    (n.forEach((e, t) => {
+    n.forEach((e, t) => {
         let n = A(e.type),
             r = y(E({}, e), { zIndex: t });
-        ('' === r.id && (r.id = (0, l.Z)()), null != n && ((r.pinned = n.pinned), -1 !== n.anchor.left && (r.anchor = (0, p.jL)(n.anchor, a)), -1 !== n.size.width && (r.size = (0, p.Ox)(n.size, a))), (i = y(E({}, i), { [r.id]: new _.Z(r) })), s.push(r.id));
+        "" === r.id && (r.id = (0, l.Z)()),
+            null != n &&
+                ((r.pinned = n.pinned),
+                -1 !== n.anchor.left && (r.anchor = (0, p.jL)(n.anchor, a)),
+                -1 !== n.size.width && (r.size = (0, p.Ox)(n.size, a))),
+            (i = y(E({}, i), { [r.id]: new _.Z(r) })),
+            s.push(r.id);
     }),
         (r = y(E({}, r), {
             [t]: new f.Z({
                 id: t,
                 widgets: s,
-                version: o
-            })
-        })));
+                version: o,
+            }),
+        }));
 }
 function A(e) {
     let t = r[O];
@@ -455,48 +461,48 @@ function x(e, t, n, r, o) {
             anchor: null != t ? t : e.anchor,
             size: null != n ? n : e.size,
             opacity: null != r ? r : e.opacity,
-            minSize: null != o ? o : e.minSize
-        })
+            minSize: null != o ? o : e.minSize,
+        }),
     });
 }
 function M(e) {
     let { widgetId: t } = e;
-    ((i = E({}, i)),
+    (i = E({}, i)),
         delete i[t],
         s().forEach(r, (e, n) => {
             if (n === O) return;
             let i = e.widgets.indexOf(t);
             if (i >= 0) {
                 let t = [...e.widgets];
-                (t.splice(i, 1), (r = y(E({}, r), { [n]: e.set('widgets', t) })));
+                t.splice(i, 1), (r = y(E({}, r), { [n]: e.set("widgets", t) }));
             }
-        }));
+        });
 }
 function k(e) {
     let { layoutId: t } = e,
         n = r[t];
     if (null == n) return !1;
-    (n.widgets.forEach((e) => {
-        ((i = E({}, i)), delete i[e]);
+    n.widgets.forEach((e) => {
+        (i = E({}, i)), delete i[e];
     }),
-        (r = y(E({}, r), { [n.id]: n.set('widgets', []) })));
+        (r = y(E({}, r), { [n.id]: n.set("widgets", []) }));
 }
 function j(e) {
     let { widgetConfigs: t } = e;
     t.forEach((e) => {
         let t = new _.Z(e),
             n = r[t.layoutId];
-        if (null == n) throw Error('LayoutStore - handleAddWidget: Invalid layoutId');
-        ((t = t.set('zIndex', n.widgets.length)), (i = y(E({}, i), { [t.id]: t })));
+        if (null == n) throw Error("LayoutStore - handleAddWidget: Invalid layoutId");
+        (t = t.set("zIndex", n.widgets.length)), (i = y(E({}, i), { [t.id]: t }));
         let o = [...n.widgets, t.id];
-        r = y(E({}, r), { [n.id]: n.set('widgets', o) });
+        r = y(E({}, r), { [n.id]: n.set("widgets", o) });
     });
 }
 function U(e, t) {
-    i = y(E({}, i), { [e.id]: e.set('zIndex', t) });
+    i = y(E({}, i), { [e.id]: e.set("zIndex", t) });
 }
 function G(e) {
-    i = y(E({}, i), { [e.id]: e.set('pinned', !e.pinned) });
+    i = y(E({}, i), { [e.id]: e.set("pinned", !e.pinned) });
 }
 function B(e) {
     let t = [];
@@ -532,11 +538,13 @@ function V(e) {
 }
 class H extends (o = c.ZP.PersistedStore) {
     initialize(e) {
-        null != e && null != e.layouts && null != e.widgets ? ((r = Z(e.layouts)), (i = F(e.widgets))) : ((r = {}), (i = {}));
+        null != e && null != e.layouts && null != e.widgets
+            ? ((r = Z(e.layouts)), (i = F(e.widgets)))
+            : ((r = {}), (i = {}));
         let t = !1,
             n = [];
-        (s().forEach(T, (e, t) => {
-            'REQUIRED' === e.layoutPolicy && n.push(t);
+        s().forEach(T, (e, t) => {
+            "REQUIRED" === e.layoutPolicy && n.push(t);
         }),
             s().forEach(r, (e, o) => {
                 let a = this.getWidgetsForLayout(o),
@@ -548,24 +556,24 @@ class H extends (o = c.ZP.PersistedStore) {
                     let c = (0, l.Z)(),
                         u = V(r);
                     if (null == u) return;
-                    ((n = new _.Z(
+                    (n = new _.Z(
                         y(E({}, u), {
                             type: r,
                             id: c,
                             layoutId: o,
-                            zIndex: a.length
-                        })
+                            zIndex: a.length,
+                        }),
                     )),
                         a.push(n),
-                        (i = y(E({}, i), { [c]: n })));
+                        (i = y(E({}, i), { [c]: n }));
                 }
                 s &&
                     ((e = e.set(
-                        'widgets',
+                        "widgets",
                         a.map((e) => {
                             let { id: t } = e;
                             return t;
-                        })
+                        }),
                     )),
                     (r = y(E({}, r), { [o]: e })));
             }),
@@ -573,12 +581,12 @@ class H extends (o = c.ZP.PersistedStore) {
                 let o = r[e.layoutId];
                 (null == o || 0 > o.widgets.indexOf(n)) && ((i = E({}, i)), delete i[n], (t = !0));
             }),
-            t && (this.persist(), this.emitChange()));
+            t && (this.persist(), this.emitChange());
     }
     getState() {
         return {
             layouts: r,
-            widgets: i
+            widgets: i,
         };
     }
     getLayouts() {
@@ -599,7 +607,7 @@ class H extends (o = c.ZP.PersistedStore) {
             ? []
             : t.widgets.reduce((e, t) => {
                   let n = this.getWidget(t);
-                  return (null != n && e.push(n), e);
+                  return null != n && e.push(n), e;
               }, []);
     }
     getAllUnpinnedPinnedWidgets(e) {
@@ -612,7 +620,7 @@ class H extends (o = c.ZP.PersistedStore) {
                     e.pinned || n.push(e.type);
                     return;
                 }
-                'REQUIRED' === t.layoutPolicy || e.pinned || n.push(e.type);
+                "REQUIRED" === t.layoutPolicy || e.pinned || n.push(e.type);
             }),
             n
         );
@@ -625,7 +633,7 @@ class H extends (o = c.ZP.PersistedStore) {
     }
     getWidgetType(e) {
         let t = i[e];
-        return null != t ? t.type : '';
+        return null != t ? t.type : "";
     }
     getRegisteredWidgets() {
         return T;
@@ -636,8 +644,8 @@ class H extends (o = c.ZP.PersistedStore) {
         return (
             s().forEach(this.getRegisteredWidgets(), (r, i) => {
                 switch (r.layoutPolicy) {
-                    case 'REQUIRED':
-                    case 'OPTIONAL_DEFAULT':
+                    case "REQUIRED":
+                    case "OPTIONAL_DEFAULT":
                         var o;
                         if ((null != (o = r.version) ? o : 0) === t) {
                             let t = V(i);
@@ -646,8 +654,8 @@ class H extends (o = c.ZP.PersistedStore) {
                                 y(E({}, t), {
                                     type: i,
                                     id: (0, l.Z)(),
-                                    layoutId: e
-                                })
+                                    layoutId: e,
+                                }),
                             );
                         }
                 }
@@ -656,11 +664,11 @@ class H extends (o = c.ZP.PersistedStore) {
         );
     }
 }
-(g(H, 'displayName', 'LayoutStore'),
-    g(H, 'persistKey', 'LayoutStore'),
-    g(H, 'migrations', [
+g(H, "displayName", "LayoutStore"),
+    g(H, "persistKey", "LayoutStore"),
+    g(H, "migrations", [
         () => {
-            let { pinnedWidgets: e, positions: t, sizes: n, v: r } = E({}, u.K.get('OverlayStore'));
+            let { pinnedWidgets: e, positions: t, sizes: n, v: r } = E({}, u.K.get("OverlayStore"));
             if (5 === r && e) {
                 let r = O,
                     i = [],
@@ -675,29 +683,29 @@ class H extends (o = c.ZP.PersistedStore) {
                                     top: -1,
                                     left: -1,
                                     bottom: null,
-                                    right: null
+                                    right: null,
                                 },
                                 size: a || {
                                     width: -1,
-                                    height: -1
+                                    height: -1,
                                 },
                                 pinned: !0,
-                                zIndex: 0
+                                zIndex: 0,
                             };
-                        return (i.push([s.id, s]), s.id);
+                        return i.push([s.id, s]), s.id;
                     }),
                     a = {
                         id: r,
-                        widgets: o
+                        widgets: o,
                     };
                 return {
                     layouts: [[r, a]],
-                    widgets: i
+                    widgets: i,
                 };
             }
             return {
                 layouts: [],
-                widgets: []
+                widgets: [],
             };
         },
         (e) => {
@@ -722,7 +730,12 @@ class H extends (o = c.ZP.PersistedStore) {
                                 let [r, i] = n;
                                 return r === e && i.layoutId === t;
                             });
-                            return null != n && (null == o && n[1].type === h.Odu.VOICE && (o = n[0]), null == r && n[1].type === h.Odu.TEXT && (r = n[1].pinned), (null != r && null != o) || void 0);
+                            return (
+                                null != n &&
+                                (null == o && n[1].type === h.Odu.VOICE && (o = n[0]),
+                                null == r && n[1].type === h.Odu.TEXT && (r = n[1].pinned),
+                                (null != r && null != o) || void 0)
+                            );
                         }),
                         r || null == o)
                     )
@@ -737,13 +750,13 @@ class H extends (o = c.ZP.PersistedStore) {
                                 type: h.Odu.GUILDS_TEXT,
                                 id: a,
                                 layoutId: t,
-                                zIndex: 2
-                            })
+                                zIndex: 2,
+                            }),
                         ]);
                 }),
                 {
                     widgets: i,
-                    layouts: o
+                    layouts: o,
                 }
             );
         },
@@ -752,12 +765,12 @@ class H extends (o = c.ZP.PersistedStore) {
             return {
                 layouts: t.reduce((e, t) => {
                     let [n, r] = t;
-                    return ((e[n] = r), e);
+                    return (e[n] = r), e;
                 }, {}),
                 widgets: n.reduce((e, t) => {
                     let [n, r] = t;
-                    return ((e[n] = r), e);
-                }, {})
+                    return (e[n] = r), e;
+                }, {}),
             };
         },
         (e) => {
@@ -769,10 +782,10 @@ class H extends (o = c.ZP.PersistedStore) {
             }
             return {
                 layouts: r,
-                widgets: n
+                widgets: n,
             };
-        }
-    ]));
+        },
+    ]);
 let Y = new H(d.Z, {
     LAYOUT_CREATE: S,
     LAYOUT_SET_PINNED: L,
@@ -781,5 +794,5 @@ let Y = new H(d.Z, {
     LAYOUT_DELETE_WIDGET: M,
     LAYOUT_DELETE_ALL_WIDGETS: k,
     LAYOUT_CREATE_WIDGETS: j,
-    LAYOUT_SET_WIDGET_META: w
+    LAYOUT_SET_WIDGET_META: w,
 });

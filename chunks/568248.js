@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(953529), n(997841), n(388685));
+n.d(t, { Z: () => E }), n(953529), n(997841), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -22,7 +22,7 @@ function E(e) {
         [O, v] = i.useState(n),
         I = (e) => {
             var n, i;
-            return 'IMAGE' !== E
+            return "IMAGE" !== E
                 ? (0, r.jsx)(p.S, {
                       className: m.imgContainer,
                       media: t,
@@ -30,7 +30,7 @@ function E(e) {
                       placeholderHeight: g,
                       maxWidth: g,
                       maxHeight: g,
-                      hiddenSpoilers: e
+                      hiddenSpoilers: e,
                   })
                 : (0, r.jsx)(f.Yi, {
                       containerClassName: a()(m.imgContainer, { [m.hiddenSpoiler]: e }),
@@ -50,7 +50,7 @@ function E(e) {
                       autoPlay: y && !e,
                       mediaLayoutType: h.hV.MOSAIC,
                       reducedSizeAltTextButton: !0,
-                      srcIsAnimated: b
+                      srcIsAnimated: b,
                   });
         };
     return n
@@ -59,7 +59,7 @@ function E(e) {
               reason: l.wk.SPOILER,
               obscured: O,
               onToggleObscurity: () => v((e) => !e),
-              children: (e) => I(e)
+              children: (e) => I(e),
           })
         : I(!1);
 }

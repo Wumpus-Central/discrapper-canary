@@ -5,11 +5,11 @@ var r = n(390650),
 e.exports = r
     ? function (e, t) {
           if (r(e, t)) return e;
-          throw new a('Reflect.setPrototypeOf: failed to set [[Prototype]]');
+          throw new a("Reflect.setPrototypeOf: failed to set [[Prototype]]");
       }
     : i ||
       (o
           ? function (e, t) {
-                return (o(e, t), e);
+                return o(e, t), e;
             }
           : null);

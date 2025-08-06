@@ -1,14 +1,14 @@
-(n.d(t, {
+n.d(t, {
     Cb: () => f,
     Hv: () => y,
     JD: () => b,
     VY: () => m,
     hR: () => p,
     hg: () => g,
-    ym: () => h
+    ym: () => h,
 }),
     n(997841),
-    n(953529));
+    n(953529);
 var r = n(911969),
     i = n(406432),
     o = n(630388),
@@ -21,7 +21,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,16 +67,16 @@ function d(e, t) {
     );
 }
 var f = (function (e) {
-    return ((e[(e.EXPLICIT = 1)] = 'EXPLICIT'), (e[(e.GORE = 2)] = 'GORE'), e);
+    return (e[(e.EXPLICIT = 1)] = "EXPLICIT"), (e[(e.GORE = 2)] = "GORE"), e;
 })({});
 function _(e) {
     return {
         version: e.version,
-        flags: e.flags
+        flags: e.flags,
     };
 }
 var p = (function (e) {
-    return ((e[(e.IS_ANIMATED = 1)] = 'IS_ANIMATED'), e);
+    return (e[(e.IS_ANIMATED = 1)] = "IS_ANIMATED"), e;
 })({});
 function h(e) {
     var t;
@@ -90,7 +90,7 @@ function h(e) {
         contentType: e.content_type,
         loadingState: e.loading_state,
         contentScanMetadata: null != e.content_scan_metadata ? _(e.content_scan_metadata) : void 0,
-        flags: null != (t = e.flags) ? t : 0
+        flags: null != (t = e.flags) ? t : 0,
     };
 }
 function m(e) {
@@ -114,17 +114,21 @@ function m(e) {
                     ? void 0
                     : {
                           version: e.content_scan_version,
-                          flags: i
+                          flags: i,
                       },
-            flags: a
+            flags: a,
         }
     );
 }
 function g(e) {
-    return (0, i.tw)(e.contentType) ? 'IMAGE' : (0, i.X2)(e.contentType) && null != e.proxyUrl && null != a.Z.toURLSafe(e.proxyUrl) ? 'VIDEO' : 'INVALID';
+    return (0, i.tw)(e.contentType)
+        ? "IMAGE"
+        : (0, i.X2)(e.contentType) && null != e.proxyUrl && null != a.Z.toURLSafe(e.proxyUrl)
+          ? "VIDEO"
+          : "INVALID";
 }
 function E(e) {
-    return (0, i.CO)(e.filename) ? 'IMAGE' : (0, i.NU)(e.filename) ? 'VIDEO' : 'INVALID';
+    return (0, i.CO)(e.filename) ? "IMAGE" : (0, i.NU)(e.filename) ? "VIDEO" : "INVALID";
 }
 function b(e, t) {
     return d(c({}, m(e)), {
@@ -133,13 +137,13 @@ function b(e, t) {
         sourceMetadata: {
             message: t,
             identifier: {
-                type: 'attachment',
+                type: "attachment",
                 attachmentId: e.id,
                 filename: e.filename,
                 title: e.title,
-                size: e.size
-            }
-        }
+                size: e.size,
+            },
+        },
     });
 }
 function y(e, t, n) {
@@ -152,6 +156,6 @@ function y(e, t, n) {
         placeholder: e.placeholder,
         placeholderVersion: e.placeholderVersion,
         sourceMetadata: t,
-        contentType: e.contentType
+        contentType: e.contentType,
     };
 }

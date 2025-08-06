@@ -23,32 +23,32 @@ var r = n(620014),
     S = 1,
     A = 2,
     N = 4,
-    C = '[object Arguments]',
-    R = '[object Array]',
-    P = '[object Boolean]',
-    w = '[object Date]',
-    D = '[object Error]',
-    L = '[object Function]',
-    x = '[object GeneratorFunction]',
-    M = '[object Map]',
-    k = '[object Number]',
-    j = '[object Object]',
-    U = '[object RegExp]',
-    G = '[object Set]',
-    B = '[object String]',
-    Z = '[object Symbol]',
-    F = '[object WeakMap]',
-    V = '[object ArrayBuffer]',
-    H = '[object DataView]',
-    Y = '[object Float32Array]',
-    W = '[object Float64Array]',
-    K = '[object Int8Array]',
-    z = '[object Int16Array]',
-    q = '[object Int32Array]',
-    X = '[object Uint8Array]',
-    Q = '[object Uint8ClampedArray]',
-    J = '[object Uint16Array]',
-    $ = '[object Uint32Array]',
+    C = "[object Arguments]",
+    R = "[object Array]",
+    P = "[object Boolean]",
+    w = "[object Date]",
+    D = "[object Error]",
+    L = "[object Function]",
+    x = "[object GeneratorFunction]",
+    M = "[object Map]",
+    k = "[object Number]",
+    j = "[object Object]",
+    U = "[object RegExp]",
+    G = "[object Set]",
+    B = "[object String]",
+    Z = "[object Symbol]",
+    F = "[object WeakMap]",
+    V = "[object ArrayBuffer]",
+    H = "[object DataView]",
+    Y = "[object Float32Array]",
+    W = "[object Float64Array]",
+    K = "[object Int8Array]",
+    z = "[object Int16Array]",
+    q = "[object Int32Array]",
+    X = "[object Uint8Array]",
+    Q = "[object Uint8ClampedArray]",
+    J = "[object Uint16Array]",
+    $ = "[object Uint32Array]",
     ee = {};
 function et(e, t, n, R, P, w) {
     var D,
@@ -74,7 +74,7 @@ function et(e, t, n, R, P, w) {
     w || (w = new r());
     var F = w.get(e);
     if (F) return F;
-    (w.set(e, D),
+    w.set(e, D),
         v(e)
             ? e.forEach(function (r) {
                   D.add(et(r, t, n, r, e, w));
@@ -82,14 +82,38 @@ function et(e, t, n, R, P, w) {
             : y(e) &&
               e.forEach(function (r, i) {
                   D.set(i, et(r, t, n, i, e, w));
-              }));
+              });
     var V = U ? (k ? _ : f) : k ? T : I,
         H = G ? void 0 : V(e);
     return (
         i(H || e, function (r, i) {
-            (H && (r = e[(i = r)]), o(D, i, et(r, t, n, i, e, w)));
+            H && (r = e[(i = r)]), o(D, i, et(r, t, n, i, e, w));
         }),
         D
     );
 }
-((ee[C] = ee[R] = ee[V] = ee[H] = ee[P] = ee[w] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[j] = ee[U] = ee[G] = ee[B] = ee[Z] = ee[X] = ee[Q] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[F] = !1), (e.exports = et));
+(ee[C] =
+    ee[R] =
+    ee[V] =
+    ee[H] =
+    ee[P] =
+    ee[w] =
+    ee[Y] =
+    ee[W] =
+    ee[K] =
+    ee[z] =
+    ee[q] =
+    ee[M] =
+    ee[k] =
+    ee[j] =
+    ee[U] =
+    ee[G] =
+    ee[B] =
+    ee[Z] =
+    ee[X] =
+    ee[Q] =
+    ee[J] =
+    ee[$] =
+        !0),
+    (ee[D] = ee[L] = ee[F] = !1),
+    (e.exports = et);

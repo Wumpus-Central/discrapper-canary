@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var i = n(255367),
     s = n(73800),
     l = n(755721),
@@ -27,37 +27,37 @@ function S(e) {
                     (g.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: x.cd.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
                         location: n.location,
-                        location_stack: S
+                        location_stack: S,
                     }),
                     f(!0));
             },
-            [n.location, S, N]
+            [n.location, S, N],
         ),
         C = (0, d.O)(b, 0.8, !0);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         ref: C,
         className: j.container,
         children: [
             (0, i.jsx)(r.SrA, {
-                size: 'md',
+                size: "md",
                 color: u.JX.PREMIUM_TIER_2,
-                className: j.nitroWheel
+                className: j.nitroWheel,
             }),
             (0, i.jsxs)(r.Text, {
                 className: j.text,
-                variant: 'text-sm/normal',
+                variant: "text-sm/normal",
                 children: [
-                    v.intl.string(v.t['Pb0O6+']),
-                    ' ',
+                    v.intl.string(v.t["Pb0O6+"]),
+                    " ",
                     (0, i.jsx)(h.Z, {
                         onClick: () => {
-                            (t(), a.Z.open(p.oAB.PREMIUM));
+                            t(), a.Z.open(p.oAB.PREMIUM);
                         },
-                        children: v.intl.string(v.t.hvVgAQ)
-                    })
-                ]
+                        children: v.intl.string(v.t.hvVgAQ),
+                    }),
+                ],
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: j.nitroButton,
                 children: (0, i.jsx)(m.Z, {
                     showGradient: !0,
@@ -65,9 +65,9 @@ function S(e) {
                     size: l.zx.Sizes.SMALL,
                     shinyButtonClassName: j.nitroButton,
                     subscriptionTier: x.Si.TIER_2,
-                    premiumModalAnalyticsLocation: { section: p.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL }
-                })
-            })
-        ]
+                    premiumModalAnalyticsLocation: { section: p.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL },
+                }),
+            }),
+        ],
     });
 }

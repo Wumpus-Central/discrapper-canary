@@ -13,9 +13,9 @@ function o(e) {
                 lightSrc: n(979770),
                 darkSrc: n(138715),
                 width: 415,
-                height: 200
+                height: 200,
             }),
-            (0, r.jsx)(i.OZU, { note: a.intl.format(a.t.Pv8u2t, { onClick: t }) })
-        ]
+            (0, r.jsx)(i.OZU, { note: a.intl.format(a.t.Pv8u2t, { onClick: t }) }),
+        ],
     });
 }

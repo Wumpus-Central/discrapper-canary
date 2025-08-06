@@ -1,6 +1,6 @@
 n.d(t, {
     A: () => l,
-    h: () => o
+    h: () => o,
 });
 var i = n(544891),
     r = n(570140),
@@ -8,23 +8,23 @@ var i = n(544891),
     a = n(981631);
 function l() {
     return (
-        r.Z.dispatch({ type: 'LOAD_DATA_HARVEST_TYPE_START' }),
+        r.Z.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_START" }),
         i.tn
             .get({
                 url: a.ANM.USER_HARVEST,
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             })
             .then((e) => {
                 r.Z.dispatch({
-                    type: 'UPDATE_DATA_HARVEST_TYPE',
-                    harvestType: e.body
+                    type: "UPDATE_DATA_HARVEST_TYPE",
+                    harvestType: e.body,
                 });
             })
             .catch((e) => {
                 r.Z.dispatch({
-                    type: 'LOAD_DATA_HARVEST_TYPE_FAILURE',
-                    error: e
+                    type: "LOAD_DATA_HARVEST_TYPE_FAILURE",
+                    error: e,
                 });
             })
     );
@@ -35,10 +35,10 @@ function o(e) {
             null != e &&
                 null != e.body &&
                 r.Z.dispatch({
-                    type: 'UPDATE_DATA_HARVEST_TYPE',
-                    harvestType: e.body
+                    type: "UPDATE_DATA_HARVEST_TYPE",
+                    harvestType: e.body,
                 }),
             e
-        )
+        ),
     );
 }

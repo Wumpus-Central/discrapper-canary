@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685), n(472816), n(794429));
+n.d(t, { Z: () => y }), n(388685), n(472816), n(794429);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -28,21 +28,21 @@ function y(e) {
     }, [O]),
     null == o.guild_id)
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               children: [
                   (0, r.jsx)(u.Z, {
                       className: a()(b.mainContainer, { [b.compact]: y }),
                       icon: n(570111),
                       compact: y,
-                      children: (0, r.jsx)('div', {
+                      children: (0, r.jsx)("div", {
                           className: a()(b.__invalid_content, { [b.compact]: y }),
-                          children: (0, r.jsx)('div', {
+                          children: (0, r.jsx)("div", {
                               className: a()(b.__invalid_messageContent, { [b.compact]: y }),
-                              children: '' !== t.content ? t.content : E.intl.string(E.t.wnn1DQ)
-                          })
-                      })
+                              children: "" !== t.content ? t.content : E.intl.string(E.t.wnn1DQ),
+                          }),
+                      }),
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: b.actions,
                       children: [
                           (0, r.jsx)(c.DY3, {
@@ -50,52 +50,52 @@ function y(e) {
                               children: (0, r.jsx)(l.zx, {
                                   color: l.zx.Colors.PRIMARY,
                                   onClick: () => {
-                                      (p.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      p.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: o.id,
                                           guild_id: o.guild_id,
-                                          action_type: 'upload_file'
+                                          action_type: "upload_file",
                                       }),
                                           h.S.dispatch(g.CkL.UPLOAD_FILE),
                                           (0, d.fE)({
                                               message: t,
                                               channel: o,
-                                              shouldMention: !0
-                                          }));
+                                              shouldMention: !0,
+                                          });
                                   },
                                   children: (0, r.jsx)(c.FmF, {
-                                      size: 'md',
-                                      color: 'currentColor'
-                                  })
-                              })
+                                      size: "md",
+                                      color: "currentColor",
+                                  }),
+                              }),
                           }),
                           (0, r.jsx)(c.DY3, {
                               text: E.intl.string(E.t.gbrrAw),
                               children: (0, r.jsx)(l.zx, {
                                   color: l.zx.Colors.PRIMARY,
                                   onClick: () => {
-                                      (p.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      p.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: o.id,
                                           guild_id: o.guild_id,
-                                          action_type: 'sticker'
+                                          action_type: "sticker",
                                       }),
-                                          (0, m.O)(t.id, o));
+                                          (0, m.O)(t.id, o);
                                   },
                                   children:
                                       null != v
                                           ? (0, r.jsx)(_.Z, {
                                                 size: 32,
-                                                sticker: v
+                                                sticker: v,
                                             })
                                           : (0, r.jsx)(c.EO4, {
-                                                size: 'md',
-                                                color: 'currentColor'
-                                            })
-                              })
-                          })
-                      ]
-                  })
-              ]
+                                                size: "md",
+                                                color: "currentColor",
+                                            }),
+                              }),
+                          }),
+                      ],
+                  }),
+              ],
           });
 }

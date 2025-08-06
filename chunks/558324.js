@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(781311));
+n.d(t, { Z: () => m }), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,7 +11,18 @@ var r = n(255367),
 let m = (e) => {
     var t,
         n,
-        { className: l, tags: m, value: g, onRemoveTag: p, onAddTag: h, onAddTagError: f, maxTaxLength: x, maxTags: b, disabled: j, placeholder: v } = e,
+        {
+            className: l,
+            tags: m,
+            value: g,
+            onRemoveTag: p,
+            onAddTag: h,
+            onAddTagError: f,
+            maxTaxLength: x,
+            maxTags: b,
+            disabled: j,
+            placeholder: v,
+        } = e,
         _ = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -22,19 +33,32 @@ let m = (e) => {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['className', 'tags', 'value', 'onRemoveTag', 'onAddTag', 'onAddTagError', 'maxTaxLength', 'maxTags', 'disabled', 'placeholder']);
-    let [O, y] = i.useState(null != g ? g : ''),
+        })(e, [
+            "className",
+            "tags",
+            "value",
+            "onRemoveTag",
+            "onAddTag",
+            "onAddTagError",
+            "maxTaxLength",
+            "maxTags",
+            "disabled",
+            "placeholder",
+        ]);
+    let [O, y] = i.useState(null != g ? g : ""),
         C = m.map((e, t) =>
             (0, r.jsxs)(
-                'span',
+                "span",
                 {
                     className: u.tag,
                     children: [
@@ -44,15 +68,15 @@ let m = (e) => {
                                 className: u.closeWrapper,
                                 onClick: () => p(t),
                                 children: (0, r.jsx)(o.Dio, {
-                                    size: 'xs',
-                                    color: 'currentColor',
-                                    className: u.close
-                                })
-                            })
-                    ]
+                                    size: "xs",
+                                    color: "currentColor",
+                                    className: u.close,
+                                }),
+                            }),
+                    ],
                 },
-                t
-            )
+                t,
+            ),
         ),
         N = i.useCallback(() => {
             let e = O.trim();
@@ -61,7 +85,7 @@ let m = (e) => {
                     null == f || f(d.intl.string(d.t.Xx7XeH));
                     return;
                 }
-                (h(e), y(''));
+                h(e), y("");
             }
         }, [O, b, h, f, m.length]),
         I = i.useCallback(
@@ -73,12 +97,12 @@ let m = (e) => {
                     case c.yXg.ENTER:
                     case c.yXg.TAB:
                     case c.yXg.COMMA:
-                        (e.preventDefault(), e.stopPropagation(), N());
+                        e.preventDefault(), e.stopPropagation(), N();
                 }
             },
-            [N, O.length, p, m.length]
+            [N, O.length, p, m.length],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(l, u.inputWrapper, { [u.disabled]: j }),
         children: [
             C,
@@ -88,32 +112,32 @@ let m = (e) => {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })(
                     {
                         className: u.inputOuter,
-                        inputClassName: u.inputInner
+                        inputClassName: u.inputInner,
                     },
-                    _
+                    _,
                 )),
                 (n = n =
                     {
@@ -123,7 +147,7 @@ let m = (e) => {
                         maxLength: x,
                         disabled: j,
                         onBlur: N,
-                        placeholder: v
+                        placeholder: v,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -137,8 +161,8 @@ let m = (e) => {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
-            )
-        ]
+                t),
+            ),
+        ],
     });
 };

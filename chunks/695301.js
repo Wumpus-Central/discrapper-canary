@@ -26,11 +26,11 @@ let b = i.memo(function (e) {
         {
             badge: x,
             unread: I,
-            isMentionLowImportance: P
+            isMentionLowImportance: P,
         } = (0, l.cj)([d.default], () => ({
             badge: d.default.getMentionCount(_),
             isMentionLowImportance: d.default.getIsMentionLowImportance(_),
-            unread: d.default.hasUnread(_)
+            unread: d.default.hasUnread(_),
         })),
         N = (0, a.Ij)(y) && 0 === x,
         w = i.useMemo(
@@ -38,18 +38,18 @@ let b = i.memo(function (e) {
                 null != O
                     ? O
                     : N
-                      ? (0, r.jsx)('div', {
+                      ? (0, r.jsx)("div", {
                             className: m.pauseBackground,
                             children: (0, r.jsx)(o.fpf, {
-                                size: 'custom',
-                                color: 'currentColor',
+                                size: "custom",
+                                color: "currentColor",
                                 className: m.pause,
                                 width: 10,
-                                height: 10
-                            })
+                                height: 10,
+                            }),
                         })
                       : null,
-            [O, N]
+            [O, N],
         );
     return (0, r.jsx)(
         g.Z,
@@ -57,24 +57,24 @@ let b = i.memo(function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         var r;
-                        ((r = n[t]),
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = r));
-                    }));
+                                : (e[t] = r);
+                    });
             }
             return e;
         })({}, e)),
@@ -89,7 +89,7 @@ let b = i.memo(function (e) {
                 lowerBadge: w,
                 unread: I,
                 mediaState: S,
-                guildJoinRequestStatus: C
+                guildJoinRequestStatus: C,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -103,6 +103,6 @@ let b = i.memo(function (e) {
               })(Object(n)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
-        t)
+        t),
     );
 });

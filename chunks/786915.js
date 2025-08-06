@@ -22,7 +22,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,7 +74,8 @@ function v(e, t) {
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -84,18 +85,29 @@ function I(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function T(e, t) {
     return null != e && null != t && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, t);
 }
 function S(e) {
-    let { guild: t, channel: i, streamUserId: o, applicationId: a, appContext: l, exitFullScreen: c, analyticsLocation: u, guildScheduledEvent: d } = e;
-    (null == c || c(),
+    let {
+        guild: t,
+        channel: i,
+        streamUserId: o,
+        applicationId: a,
+        appContext: l,
+        exitFullScreen: c,
+        analyticsLocation: u,
+        guildScheduledEvent: d,
+    } = e;
+    null == c || c(),
         (0, s.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('7654'), n.e('49049'), n.e('29328')]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("29328")]).then(
+                    n.bind(n, 560114),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -106,29 +118,59 @@ function S(e) {
                             applicationId: a,
                             analyticsLocation: u,
                             source: i.isGuildStageVoice() ? m.t4x.STAGE_CHANNEL : m.t4x.STREAM_INVITE,
-                            guildScheduledEvent: d
-                        })
+                            guildScheduledEvent: d,
+                        }),
                     );
             },
             {
-                modalKey: 'stream-invite-modal',
-                contextKey: l === m.IlC.POPOUT ? s.u1M : s.z1l
-            }
-        ));
+                modalKey: "stream-invite-modal",
+                contextKey: l === m.IlC.POPOUT ? s.u1M : s.z1l,
+            },
+        );
 }
 function A(e) {
-    var { applicationId: t, stream: n, channel: i, exitFullScreen: p, appContext: m, analyticsLocation: E, guildScheduledEvent: y, shouldPrioritizeGroupPlusIcon: O = !1, isRichPresenceInvite: I = !1, iconClassName: A, look: N, size: C, buttonText: R, color: P } = e,
-        w = v(e, ['applicationId', 'stream', 'channel', 'exitFullScreen', 'appContext', 'analyticsLocation', 'guildScheduledEvent', 'shouldPrioritizeGroupPlusIcon', 'isRichPresenceInvite', 'iconClassName', 'look', 'size', 'buttonText', 'color']);
+    var {
+            applicationId: t,
+            stream: n,
+            channel: i,
+            exitFullScreen: p,
+            appContext: m,
+            analyticsLocation: E,
+            guildScheduledEvent: y,
+            shouldPrioritizeGroupPlusIcon: O = !1,
+            isRichPresenceInvite: I = !1,
+            iconClassName: A,
+            look: N,
+            size: C,
+            buttonText: R,
+            color: P,
+        } = e,
+        w = v(e, [
+            "applicationId",
+            "stream",
+            "channel",
+            "exitFullScreen",
+            "appContext",
+            "analyticsLocation",
+            "guildScheduledEvent",
+            "shouldPrioritizeGroupPlusIcon",
+            "isRichPresenceInvite",
+            "iconClassName",
+            "look",
+            "size",
+            "buttonText",
+            "color",
+        ]);
     let D = (0, c.bp)(),
         { parentAnalyticsLocation: L } = (0, u.ZP)(),
         x = null == i ? void 0 : i.getGuildId(),
         M = (0, a.e7)([f.Z], () => (null != x ? f.Z.getGuild(x) : null), [x]),
         k = (0, a.e7)([_.Z], () => (null != t ? _.Z.getApplicationActivity(t) : void 0)),
         j = null == t || O ? s.ejJ : s.gQj,
-        U = null != t ? g.intl.string(g.t['OzOM/v']) : g.intl.string(g.t['6F9ivr']);
+        U = null != t ? g.intl.string(g.t["OzOM/v"]) : g.intl.string(g.t["6F9ivr"]);
     if (null != k && I) {
         let e = () => {
-            (null != L && (0, d.v)(L, d.d.INVITE), l.h7(k, !1, D));
+            null != L && (0, d.v)(L, d.d.INVITE), l.h7(k, !1, D);
         };
         return (0, r.jsx)(h.Z, {
             onClick: e,
@@ -138,7 +180,7 @@ function A(e) {
             look: N,
             size: C,
             buttonText: R,
-            color: null != P ? P : void 0
+            color: null != P ? P : void 0,
         });
     }
     return T(M, i)
@@ -147,8 +189,8 @@ function A(e) {
               b(
                   {
                       onClick: () => {
-                          (o()(null != M, 'guild cannot be null'),
-                              o()(null != i, 'channel cannot be null'),
+                          o()(null != M, "guild cannot be null"),
+                              o()(null != i, "channel cannot be null"),
                               null != L && (0, d.v)(L, d.d.INVITE),
                               S({
                                   guild: M,
@@ -158,8 +200,8 @@ function A(e) {
                                   appContext: null != m ? m : D,
                                   exitFullScreen: p,
                                   analyticsLocation: E,
-                                  guildScheduledEvent: y
-                              }));
+                                  guildScheduledEvent: y,
+                              });
                       },
                       iconComponent: j,
                       label: U,
@@ -167,10 +209,10 @@ function A(e) {
                       look: N,
                       size: C,
                       color: P,
-                      buttonText: R
+                      buttonText: R,
                   },
-                  w
-              )
+                  w,
+              ),
           )
         : null;
 }

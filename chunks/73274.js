@@ -14,7 +14,8 @@ function d(e, t) {
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -24,12 +25,12 @@ function f(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function _(e) {
     var { scrollerRef: t } = e,
-        n = d(e, ['scrollerRef']);
+        n = d(e, ["scrollerRef"]);
     let f = (0, o.Z)(() => {
             let e = t.current;
             return null == e
@@ -57,10 +58,10 @@ function _(e) {
                         o.scrollIntoViewNode({
                             node: s,
                             padding: 4 * c.kQ,
-                            callback: () => (null == s ? void 0 : s.focus())
+                            callback: () => (null == s ? void 0 : s.focus()),
                         }));
             },
-            [n.keyboardModeEnabled, t]
+            [n.keyboardModeEnabled, t],
         ),
         h = r.useCallback(() => {
             n.hasMoreAfter || s.S.dispatchToLastSubscribed(u.CkL.TEXTAREA_FOCUS);
@@ -72,19 +73,19 @@ function _(e) {
             isEnabled: n.keyboardModeEnabled && !n.isEditing,
             scrollToStart: _,
             scrollToEnd: f,
-            onNavigateNextAtEnd: h
+            onNavigateNextAtEnd: h,
         }),
         g = r.useCallback(
             (e) => {
                 let { atEnd: t = !1 } = e;
                 t ? m.focusLastVisibleItem() : m.focusFirstVisibleItem();
             },
-            [m]
+            [m],
         );
     return (
         (0, a.yp)({
             event: u.CkL.FOCUS_MESSAGES,
-            handler: g
+            handler: g,
         }),
         m
     );

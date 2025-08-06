@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => g,
-    y: () => m
+    y: () => m,
 });
 var r,
     i = n(255367),
@@ -16,7 +16,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,13 +62,13 @@ function _(e, t) {
     );
 }
 var p = (function (e) {
-    return ((e[(e.ABOVE = 0)] = 'ABOVE'), (e[(e.VISIBLE = 1)] = 'VISIBLE'), (e[(e.BELOW = 2)] = 'BELOW'), e);
+    return (e[(e.ABOVE = 0)] = "ABOVE"), (e[(e.VISIBLE = 1)] = "VISIBLE"), (e[(e.BELOW = 2)] = "BELOW"), e;
 })(p || {});
 function h(e, t) {
     return {
         toValue: e,
         duration: null != t ? t : 300,
-        easing: l.Z.Easing.inOut(l.Z.Easing.back())
+        easing: l.Z.Easing.inOut(l.Z.Easing.back()),
     };
 }
 function m(e, t, n) {
@@ -83,7 +83,7 @@ class g extends (r = o.PureComponent) {
         return null == n && r !== e.value
             ? {
                   prevValue: c.Z.isFocused() ? r : null,
-                  currValue: e.value
+                  currValue: e.value,
               }
             : null != i && i !== e.value
               ? { nextValue: e.value }
@@ -96,7 +96,17 @@ class g extends (r = o.PureComponent) {
     animateBetween(e, t) {
         let n,
             { forcePosition: r, animationSpeed: i } = this.props;
-        (this.prevAnimate.setValue(1), null != r ? (0 === r ? (this.currAnimate.setValue(0), (n = 2)) : 2 === r && (this.currAnimate.setValue(2), (n = 0))) : e > t ? (this.currAnimate.setValue(0), (n = 2)) : (this.currAnimate.setValue(2), (n = 0)), l.Z.parallel([l.Z.timing(this.prevAnimate, h(n, i)), l.Z.timing(this.currAnimate, h(1, i))]).start(this.animateNext));
+        this.prevAnimate.setValue(1),
+            null != r
+                ? 0 === r
+                    ? (this.currAnimate.setValue(0), (n = 2))
+                    : 2 === r && (this.currAnimate.setValue(2), (n = 0))
+                : e > t
+                  ? (this.currAnimate.setValue(0), (n = 2))
+                  : (this.currAnimate.setValue(2), (n = 0)),
+            l.Z.parallel([l.Z.timing(this.prevAnimate, h(n, i)), l.Z.timing(this.currAnimate, h(1, i))]).start(
+                this.animateNext,
+            );
     }
     getAnimatedStyle(e) {
         let { animationColor: t } = this.props;
@@ -106,17 +116,17 @@ class g extends (r = o.PureComponent) {
                     {
                         translateY: e.interpolate({
                             inputRange: [0, 1, 2],
-                            outputRange: ['-100%', '0%', '100%']
-                        })
-                    }
+                            outputRange: ["-100%", "0%", "100%"],
+                        }),
+                    },
                 ],
-                position: 'absolute',
+                position: "absolute",
                 top: 0,
                 left: 0,
                 right: 0,
-                bottom: 0
+                bottom: 0,
             },
-            null != t && { color: t }
+            null != t && { color: t },
         );
     }
     getMinWidth(e) {
@@ -125,73 +135,73 @@ class g extends (r = o.PureComponent) {
     }
     padValue(e) {
         let { padStartLength: t } = this.props;
-        return null != t ? String(e).padStart(t, '0') : e;
+        return null != t ? String(e).padStart(t, "0") : e;
     }
     render() {
         let { prevValue: e, currValue: t } = this.state,
             { color: n, formatString: r } = this.props,
-            o = s().omit(this.props, ['value', 'digitWidth', 'padStartLength', 'forcePosition']);
+            o = s().omit(this.props, ["value", "digitWidth", "padStartLength", "forcePosition"]);
         if (null == e)
             return (0, i.jsx)(
-                'div',
+                "div",
                 _(d({}, o), {
                     style: {
                         color: n,
-                        minWidth: this.getMinWidth(t)
+                        minWidth: this.getMinWidth(t),
                     },
-                    children: null != r ? r(this.padValue(t)) : this.padValue(t)
-                })
+                    children: null != r ? r(this.padValue(t)) : this.padValue(t),
+                }),
             );
         let a = Math.max(e, t);
         return (0, i.jsxs)(
-            'div',
+            "div",
             _(d({}, o), {
                 style: {
                     color: n,
-                    position: 'relative',
-                    overflow: 'hidden'
+                    position: "relative",
+                    overflow: "hidden",
                 },
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         style: {
-                            visibility: 'hidden',
-                            minWidth: this.getMinWidth(a)
+                            visibility: "hidden",
+                            minWidth: this.getMinWidth(a),
                         },
-                        children: this.padValue(a)
+                        children: this.padValue(a),
                     }),
                     (0, i.jsx)(l.Z.div, {
                         style: d({ color: n }, this.getAnimatedStyle(this.prevAnimate)),
-                        children: null != r ? r(this.padValue(e)) : this.padValue(e)
+                        children: null != r ? r(this.padValue(e)) : this.padValue(e),
                     }),
                     (0, i.jsx)(l.Z.div, {
                         style: d({ color: n }, this.getAnimatedStyle(this.currAnimate)),
-                        children: null != r ? r(this.padValue(t)) : this.padValue(t)
-                    })
-                ]
-            })
+                        children: null != r ? r(this.padValue(t)) : this.padValue(t),
+                    }),
+                ],
+            }),
         );
     }
     constructor(e) {
-        (super(e),
-            u(this, 'prevAnimate', void 0),
-            u(this, 'currAnimate', void 0),
-            u(this, 'animateNext', () => {
+        super(e),
+            u(this, "prevAnimate", void 0),
+            u(this, "currAnimate", void 0),
+            u(this, "animateNext", () => {
                 let { currValue: e, nextValue: t } = this.state;
                 null != t
                     ? this.setState({
                           prevValue: c.Z.isFocused() ? e : null,
                           currValue: t,
-                          nextValue: null
+                          nextValue: null,
                       })
                     : this.setState({ prevValue: null });
             }),
             (this.state = {
                 prevValue: null,
                 currValue: e.value,
-                nextValue: null
+                nextValue: null,
             }),
             (this.prevAnimate = new l.Z.Value(0)),
-            (this.currAnimate = new l.Z.Value(1)));
+            (this.currAnimate = new l.Z.Value(1));
     }
 }
-u(g, 'Positions', p);
+u(g, "Positions", p);

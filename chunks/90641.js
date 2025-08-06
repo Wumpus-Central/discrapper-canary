@@ -14,38 +14,42 @@ var r = n(570140),
 function h() {
     let e = c.Z.getVoiceStateForUser(s.default.getId()),
         t = l.Z.getChannel(null == e ? void 0 : e.channelId);
-    return s.default.getSessionId() === (null == e ? void 0 : e.sessionId) && null != t && t.type !== _.d4z.GUILD_STAGE_VOICE ? t.id : null;
+    return s.default.getSessionId() === (null == e ? void 0 : e.sessionId) &&
+        null != t &&
+        t.type !== _.d4z.GUILD_STAGE_VOICE
+        ? t.id
+        : null;
 }
 async function m(e, t) {
     if (e) {
         r.Z.dispatch({
-            type: 'SECURE_FRAMES_SETTINGS_UPDATE',
-            persistentCodesEnabled: e
+            type: "SECURE_FRAMES_SETTINGS_UPDATE",
+            persistentCodesEnabled: e,
         });
         try {
-            (await (0, d.om)(f.GB), null == t || t());
+            await (0, d.om)(f.GB), null == t || t();
         } catch (t) {
             var n;
             let e = new a.Hx(t);
-            (r.Z.dispatch({
-                type: 'SECURE_FRAMES_SETTINGS_UPDATE',
-                persistentCodesEnabled: !1
+            r.Z.dispatch({
+                type: "SECURE_FRAMES_SETTINGS_UPDATE",
+                persistentCodesEnabled: !1,
             }),
                 i.Z.show({
                     title: p.intl.string(p.t.R0RpRU),
-                    body: null != (n = e.getAnyErrorMessage()) ? n : p.intl.string(p.t.eAn6z8)
-                }));
+                    body: null != (n = e.getAnyErrorMessage()) ? n : p.intl.string(p.t.eAn6z8),
+                });
         }
     } else
-        (r.Z.dispatch({
-            type: 'SECURE_FRAMES_SETTINGS_UPDATE',
-            persistentCodesEnabled: e
+        r.Z.dispatch({
+            type: "SECURE_FRAMES_SETTINGS_UPDATE",
+            persistentCodesEnabled: e,
         }),
-            null == t || t());
+            null == t || t();
 }
 let g = {
     clearUploadedKeyVersions: function () {
-        r.Z.dispatch({ type: 'SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR' });
+        r.Z.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR" });
     },
     updatePersistentCodesEnabled: async function (e) {
         let t = h();
@@ -56,49 +60,49 @@ let g = {
                   confirmText: p.intl.string(p.t.aTuFYW),
                   onConfirm: async () => {
                       await m(e, () => {
-                          (o.default.disconnect(), o.default.selectVoiceChannel(t));
+                          o.default.disconnect(), o.default.selectVoiceChannel(t);
                       });
-                  }
+                  },
               })
             : await m(e);
     },
     addUploadedKeyVersion: function (e) {
         r.Z.dispatch({
-            type: 'SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD',
-            keyVersion: e
+            type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD",
+            keyVersion: e,
         });
     },
     createSecureFramesVerifiedKey: function (e, t) {
         r.Z.dispatch({
-            type: 'SECURE_FRAMES_VERIFIED_KEY_CREATE',
+            type: "SECURE_FRAMES_VERIFIED_KEY_CREATE",
             userId: e,
-            key: t
+            key: t,
         });
     },
     deleteSecureFramesVerifiedKey: function (e, t) {
         r.Z.dispatch({
-            type: 'SECURE_FRAMES_VERIFIED_KEY_DELETE',
+            type: "SECURE_FRAMES_VERIFIED_KEY_DELETE",
             userId: e,
-            serializedKey: t
+            serializedKey: t,
         });
     },
     deleteSecureFramesUserVerifiedKeys: function (e) {
         r.Z.dispatch({
-            type: 'SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE',
-            userId: e
+            type: "SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE",
+            userId: e,
         });
     },
     createSecureFramesTransientKey: function (e, t) {
         r.Z.dispatch({
-            type: 'SECURE_FRAMES_TRANSIENT_KEY_CREATE',
+            type: "SECURE_FRAMES_TRANSIENT_KEY_CREATE",
             userId: e,
-            key: t
+            key: t,
         });
     },
     deleteSecureFramesTransientKey: function (e) {
         r.Z.dispatch({
-            type: 'SECURE_FRAMES_TRANSIENT_KEY_DELETE',
-            userId: e
+            type: "SECURE_FRAMES_TRANSIENT_KEY_DELETE",
+            userId: e,
         });
-    }
+    },
 };

@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     T: () => C,
-    v: () => N
+    v: () => N,
 }),
     n(361932),
     n(187205),
     n(539854),
     n(388685),
-    n(415506));
+    n(415506);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -30,7 +30,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -40,15 +40,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -56,11 +56,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,7 +80,15 @@ function I(e) {
         ? []
         : i.Children.toArray(e).flatMap((e) => {
               var t;
-              return null == e ? [] : Array.isArray(e) ? I(e) : e.type === i.Fragment ? (null != (t = I(e.props.children)) ? t : []) : [e];
+              return null == e
+                  ? []
+                  : Array.isArray(e)
+                    ? I(e)
+                    : e.type === i.Fragment
+                      ? null != (t = I(e.props.children))
+                          ? t
+                          : []
+                      : [e];
           });
 }
 function T(e) {
@@ -89,8 +97,8 @@ function T(e) {
         if (t.type === h.Cl)
             return (
                 e.push({
-                    type: 'separator',
-                    navigable: !1
+                    type: "separator",
+                    navigable: !1,
                 }),
                 e
             );
@@ -99,17 +107,17 @@ function T(e) {
             return (
                 n.length > 0 &&
                     (e.push({
-                        type: 'groupstart',
+                        type: "groupstart",
                         length: n.length,
                         navigable: !1,
-                        props: t.props
+                        props: t.props,
                     }),
                     e.push(...n),
                     e.push({
-                        type: 'groupend',
+                        type: "groupend",
                         length: n.length,
                         navigable: !1,
-                        props: t.props
+                        props: t.props,
                     })),
                 e
             );
@@ -119,14 +127,14 @@ function T(e) {
                 e.push(
                     null != t.props.render
                         ? {
-                              type: 'customitem',
+                              type: "customitem",
                               key: t.props.id,
                               navigable: null == t.props.navigable || t.props.navigable,
                               render: t.props.render,
-                              props: t.props
+                              props: t.props,
                           }
                         : {
-                              type: 'item',
+                              type: "item",
                               key: t.props.id,
                               navigable: !0,
                               label: t.props.label,
@@ -135,28 +143,28 @@ function T(e) {
                               props: t.props,
                               childRowHeight: t.props.childRowHeight,
                               listClassName: t.props.listClassName,
-                              subMenuClassName: t.props.subMenuClassName
-                          }
+                              subMenuClassName: t.props.subMenuClassName,
+                          },
                 ),
                 e
             );
         if (t.type === h.S8)
             return (
                 e.push({
-                    type: 'checkbox',
+                    type: "checkbox",
                     key: t.props.id,
                     navigable: !0,
-                    props: t.props
+                    props: t.props,
                 }),
                 e
             );
         if (t.type === h.k5)
             return (
                 e.push({
-                    type: 'radio',
+                    type: "radio",
                     key: t.props.id,
                     navigable: !0,
-                    props: t.props
+                    props: t.props,
                 }),
                 e
             );
@@ -165,22 +173,26 @@ function T(e) {
                 e.push(
                     null != t.props.control
                         ? {
-                              type: 'control',
+                              type: "control",
                               key: t.props.id,
                               navigable: !0,
-                              props: t.props
+                              props: t.props,
                           }
                         : {
-                              type: 'compositecontrol',
+                              type: "compositecontrol",
                               key: t.props.id,
                               navigable: !1 !== t.props.interactive,
                               children: t.props.children,
-                              props: t.props
-                          }
+                              props: t.props,
+                          },
                 ),
                 e
             );
-        throw Error('Menu API only allows Items and groups of Items as children. Received '.concat(null != (r = null != (n = null == t ? void 0 : t.type) ? n : t) ? r : typeof t, ' (').concat(typeof t, ') instead'));
+        throw Error(
+            "Menu API only allows Items and groups of Items as children. Received "
+                .concat(null != (r = null != (n = null == t ? void 0 : t.type) ? n : t) ? r : typeof t, " (")
+                .concat(typeof t, ") instead"),
+        );
     }, []);
 }
 function S(e) {
@@ -189,11 +201,11 @@ function S(e) {
             t.navigable &&
                 e.push({
                     key: t.key,
-                    children: 'item' === t.type && null != t.children ? S(t.children) : void 0
+                    children: "item" === t.type && null != t.children ? S(t.children) : void 0,
                 }),
             e
         ),
-        []
+        [],
     );
 }
 function A(e, t, n, i) {
@@ -202,21 +214,21 @@ function A(e, t, n, i) {
     return e.reduce((e, s, l) => {
         let c = a.length > 0 ? a[a.length - 1] : e;
         switch (s.type) {
-            case 'separator':
-                (c.push((0, r.jsx)(g.Z0, {}, 'separator-'.concat(l))), (o = 0));
+            case "separator":
+                c.push((0, r.jsx)(g.Z0, {}, "separator-".concat(l))), (o = 0);
                 break;
-            case 'groupstart':
-                (o > 0 && s.length > 0 && (c.push((0, r.jsx)(g.Z0, {}, 'separator-'.concat(l))), (o = 0)), a.push([]));
+            case "groupstart":
+                o > 0 && s.length > 0 && (c.push((0, r.jsx)(g.Z0, {}, "separator-".concat(l))), (o = 0)), a.push([]);
                 break;
-            case 'groupend':
-                a.length > 0 && e.push((0, r.jsx)(g.ZA, y({ contents: a.pop() }, s.props), 'group-'.concat(l)));
+            case "groupend":
+                a.length > 0 && e.push((0, r.jsx)(g.ZA, y({ contents: a.pop() }, s.props), "group-".concat(l)));
                 break;
-            case 'item': {
+            case "item": {
                 let { children: e, childRowHeight: a, onChildrenScroll: l, listClassName: u, subMenuClassName: d } = s,
                     f = null != e,
                     _ = [...n, s.key],
                     p = t.isFocused(_),
-                    h = null != e ? { 'aria-haspopup': !0 } : {},
+                    h = null != e ? { "aria-haspopup": !0 } : {},
                     m = (0, r.jsx)(
                         g.ck,
                         v(y({}, s.props), {
@@ -227,15 +239,15 @@ function A(e, t, n, i) {
                                 {},
                                 t.getItemProps({
                                     path: _,
-                                    hasSubmenu: f
+                                    hasSubmenu: f,
                                 }),
-                                h
+                                h,
                             ),
-                            onClose: i
+                            onClose: i,
                         }),
-                        s.key
+                        s.key,
                     );
-                (f
+                f
                     ? null != a
                         ? c.push(
                               (0, r.jsx)(
@@ -247,10 +259,10 @@ function A(e, t, n, i) {
                                       rows: A(e, t, _, i),
                                       rowHeight: a,
                                       onScroll: l,
-                                      listClassName: u
+                                      listClassName: u,
                                   }),
-                                  ''.concat(s.key, '-submenu')
-                              )
+                                  "".concat(s.key, "-submenu"),
+                              ),
                           )
                         : c.push(
                               (0, r.jsx)(
@@ -260,102 +272,102 @@ function A(e, t, n, i) {
                                       parentItem: m,
                                       isFocused: p,
                                       menuSubmenuProps: t.getSubmenuProps({ path: _ }),
-                                      renderSubmenu: () => A(e, t, _, i)
+                                      renderSubmenu: () => A(e, t, _, i),
                                   }),
-                                  ''.concat(s.key, '-submenu')
-                              )
+                                  "".concat(s.key, "-submenu"),
+                              ),
                           )
                     : c.push(m),
-                    o++);
+                    o++;
                 break;
             }
-            case 'customitem': {
+            case "customitem": {
                 let e = [...n, s.key];
-                (c.push(
+                c.push(
                     (0, r.jsx)(
                         g.kq,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({
                                 path: e,
-                                navigable: s.navigable
+                                navigable: s.navigable,
                             }),
                             onClose: i,
-                            children: s.render
+                            children: s.render,
                         }),
-                        s.key
-                    )
+                        s.key,
+                    ),
                 ),
-                    o++);
+                    o++;
                 break;
             }
-            case 'checkbox': {
+            case "checkbox": {
                 let e = [...n, s.key];
-                (c.push(
+                c.push(
                     (0, r.jsx)(
                         g.oC,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({
                                 path: e,
-                                role: 'menuitemcheckbox'
-                            })
+                                role: "menuitemcheckbox",
+                            }),
                         }),
-                        s.key
-                    )
+                        s.key,
+                    ),
                 ),
-                    o++);
+                    o++;
                 break;
             }
-            case 'radio': {
+            case "radio": {
                 let e = [...n, s.key];
-                (c.push(
+                c.push(
                     (0, r.jsx)(
                         g.Rk,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({
                                 path: e,
-                                role: 'menuitemradio'
-                            })
+                                role: "menuitemradio",
+                            }),
                         }),
-                        s.key
-                    )
+                        s.key,
+                    ),
                 ),
-                    o++);
+                    o++;
                 break;
             }
-            case 'control': {
+            case "control": {
                 let e = [...n, s.key];
-                (c.push(
+                c.push(
                     (0, r.jsx)(
                         g.lc,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({ path: e }),
-                            onClose: i
+                            onClose: i,
                         }),
-                        s.key
-                    )
+                        s.key,
+                    ),
                 ),
-                    o++);
+                    o++;
                 break;
             }
-            case 'compositecontrol': {
+            case "compositecontrol": {
                 let e = [...n, s.key];
-                (c.push(
+                c.push(
                     (0, r.jsx)(
                         g.$I,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({ path: e }),
                             onClose: i,
-                            children: s.children
+                            children: s.children,
                         }),
-                        s.key
-                    )
+                        s.key,
+                    ),
                 ),
-                    o++);
+                    o++;
             }
         }
         return e;
@@ -363,7 +375,16 @@ function A(e, t, n, i) {
 }
 function N(e) {
     var t;
-    let { navId: n, variant: o = 'flexible', hideScroller: s = !1, className: f, children: h, onClose: b, onSelect: O, onInteraction: I } = e,
+    let {
+            navId: n,
+            variant: o = "flexible",
+            hideScroller: s = !1,
+            className: f,
+            children: h,
+            onClose: b,
+            onSelect: O,
+            onInteraction: I,
+        } = e,
         N = T(h),
         C = S(N),
         P = i.useRef([]);
@@ -374,7 +395,7 @@ function N(e) {
             items: P.current,
             initialFocusPath: p.Z.keyboardModeEnabled && null != w ? [w] : [],
             closeMenu: b,
-            defaultIsUsingKeyboardNavigation: p.Z.keyboardModeEnabled
+            defaultIsUsingKeyboardNavigation: p.Z.keyboardModeEnabled,
         });
     i.useEffect(() => {
         D.isUsingKeyboardNavigation ? p.Z.keyboardModeEnabled || (0, _.Qj)() : p.Z.keyboardModeEnabled && (0, _.rf)();
@@ -385,17 +406,17 @@ function N(e) {
         M = i.useMemo(
             () => ({
                 onSelect: O,
-                onInteraction: I
+                onInteraction: I,
             }),
-            [O, I]
+            [O, I],
         );
     return (0, r.jsx)(m.p.Provider, {
         value: M,
         children: (0, r.jsx)(
-            'div',
+            "div",
             v(y({ className: a()(E.menu, E[o], f) }, D.getContainerProps()), {
                 ref: L,
-                'aria-label': e['aria-label'],
+                "aria-label": e["aria-label"],
                 children: (0, r.jsxs)(x, {
                     className: E.scroller,
                     children: [
@@ -403,27 +424,27 @@ function N(e) {
                             (0, r.jsx)(g.ck, {
                                 disabled: !0,
                                 label: () => (0, r.jsx)(R, {}),
-                                menuItemProps: D.getItemProps({ path: ['empty'] }),
+                                menuItemProps: D.getItemProps({ path: ["empty"] }),
                                 isFocused: !1,
                                 onFocus: () => {},
-                                onClose: b
+                                onClose: b,
                             }),
-                        N.length > 0 && A(N, D, [], b)
-                    ]
-                })
-            })
-        )
+                        N.length > 0 && A(N, D, [], b),
+                    ],
+                }),
+            }),
+        ),
     });
 }
 function C() {
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(E.menu, E.loader, E.flexible),
-        children: (0, r.jsx)(f.$, {})
+        children: (0, r.jsx)(f.$, {}),
     });
 }
 function R() {
-    let e = '\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A',
-        t = '\u266B \u2282(\uFF61\u25D5‿‿\u25D5\uFF61\u2282) \u266A',
+    let e = "\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A",
+        t = "\u266B \u2282(\uFF61\u25D5‿‿\u25D5\uFF61\u2282) \u266A",
         [n, o] = i.useState(e);
     return (
         i.useEffect(() => {
@@ -433,12 +454,12 @@ function R() {
             }, 700);
             return () => clearInterval(n);
         }, []),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             style: {
-                width: '100%',
-                textAlign: 'center'
+                width: "100%",
+                textAlign: "center",
             },
-            children: n
+            children: n,
         })
     );
 }

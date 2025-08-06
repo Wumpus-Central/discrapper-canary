@@ -3,6 +3,6 @@ let r = {
     getRawThermalState() {},
     useRawThermalState() {},
     addListener: (e) => ({
-        remove: () => {}
-    })
+        remove: () => {},
+    }),
 };

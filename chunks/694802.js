@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(784620), n(973216));
+n.d(t, { Z: () => c }), n(784620), n(973216);
 var r = n(255367);
 n(73800);
 var s = n(481060),
@@ -7,33 +7,33 @@ var s = n(481060),
     i = n(686166);
 function l(e) {
     let { header: t, children: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: i.card,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: i.header,
                 children: [
                     (0, r.jsx)(s.Mgn, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         className: i.icon,
                         width: 16,
-                        height: 16
+                        height: 16,
                     }),
                     (0, r.jsx)(s.X6q, {
-                        color: 'text-default',
-                        variant: 'heading-sm/medium',
-                        children: t
-                    })
-                ]
+                        color: "text-default",
+                        variant: "heading-sm/medium",
+                        children: t,
+                    }),
+                ],
             }),
             (0, r.jsx)(s.Text, {
-                color: 'text-muted',
-                variant: 'text-xs/normal',
+                color: "text-muted",
+                variant: "text-xs/normal",
                 className: i.warningBody,
-                children: n
-            })
-        ]
+                children: n,
+            }),
+        ],
     });
 }
 let c = function (e) {
@@ -44,12 +44,12 @@ let c = function (e) {
     return s === a.intl.string(a.t.BV6xDg)
         ? (0, r.jsx)(l, {
               header: a.intl.string(a.t.onh6cn),
-              children: a.intl.string(a.t.arVHRE)
+              children: a.intl.string(a.t.arVHRE),
           })
         : s === a.intl.string(a.t.MFGxFB)
           ? (0, r.jsx)(l, {
                 header: a.intl.string(a.t.JPihZG),
-                children: a.intl.string(a.t.MFGxFB)
+                children: a.intl.string(a.t.MFGxFB),
             })
           : null;
 };

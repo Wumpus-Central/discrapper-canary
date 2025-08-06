@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685));
+n.d(t, { Z: () => R }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -34,7 +34,7 @@ function N(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -44,15 +44,15 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 N(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -81,21 +81,34 @@ class k extends r.PureComponent {
     renderChannelLink(e) {
         let { guild: t } = this.props,
             n = (0, p.F6)(e, S.default, E.Z),
-            r = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
+            r = null != t ? "".concat(n, " / ").concat(t.name) : n,
             o = null != t ? t.id : Z.ME;
         return (0, i.jsx)(s.rU, {
             to: Z.Z5c.CHANNEL(o),
             onClick: (t) => {
-                (t.stopPropagation(), u.Z.channelListScrollTo(o, e.id));
+                t.stopPropagation(), u.Z.channelListScrollTo(o, e.id);
             },
             children: (0, i.jsx)(y.Z, {
                 className: w.channel,
-                children: r
-            })
+                children: r,
+            }),
         });
     }
     render() {
-        let { className: e, contentClassName: t, pinned: n, lobbyId: r, channel: o, quality: s, lastPing: a, hasVideo: d, connectionState: u, deaf: h, mute: p, changeLeaveCallAndActivityIcons: g } = this.props;
+        let {
+            className: e,
+            contentClassName: t,
+            pinned: n,
+            lobbyId: r,
+            channel: o,
+            quality: s,
+            lastPing: a,
+            hasVideo: d,
+            connectionState: u,
+            deaf: h,
+            mute: p,
+            changeLeaveCallAndActivityIcons: g,
+        } = this.props;
         return null == o
             ? null
             : (0, i.jsx)(j.ZP.Bar, {
@@ -104,12 +117,12 @@ class k extends r.PureComponent {
                       className: l()(t, P.content),
                       dynamicSize: !0,
                       children: [
-                          (0, i.jsx)('div', {
+                          (0, i.jsx)("div", {
                               className: w.inner,
                               children: (0, i.jsx)(c.yRy, {
                                   targetElementRef: this.rtcConnectionStatusRef,
                                   renderPopout: () => this.renderPopout(o.id),
-                                  position: 'top',
+                                  position: "top",
                                   children: (e) =>
                                       (0, i.jsx)(
                                           c.P3F,
@@ -121,64 +134,64 @@ class k extends r.PureComponent {
                                                   lastPing: a,
                                                   hasVideo: d,
                                                   state: u,
-                                                  children: this.renderChannelLink(o)
-                                              })
-                                          })
-                                      )
-                              })
+                                                  children: this.renderChannelLink(o),
+                                              }),
+                                          }),
+                                      ),
+                              }),
                           }),
                           (0, i.jsxs)(f.Z, {
                               grow: 0,
                               children: [
                                   (0, i.jsx)(m.Z, {
-                                      tooltipText: p ? I.intl.string(I.t.YqAjX1) : I.intl.string(I.t['w4m94+']),
+                                      tooltipText: p ? I.intl.string(I.t.YqAjX1) : I.intl.string(I.t["w4m94+"]),
                                       icon: p ? c.nRN : c.S6n,
                                       iconForeground: p ? P.strikethrough : null,
-                                      onClick: this.handleToggleSelfMute
+                                      onClick: this.handleToggleSelfMute,
                                   }),
                                   (0, i.jsx)(m.Z, {
-                                      tooltipText: h ? I.intl.string(I.t['2US87+']) : I.intl.string(I.t.wjcRFR),
+                                      tooltipText: h ? I.intl.string(I.t["2US87+"]) : I.intl.string(I.t.wjcRFR),
                                       icon: h ? c.wE8 : c.VWR,
                                       onClick: this.handleToggleSelfDeaf,
-                                      iconForeground: h ? P.strikethrough : null
+                                      iconForeground: h ? P.strikethrough : null,
                                   }),
                                   null == r &&
                                       (0, i.jsx)(m.Z, {
-                                          tooltipText: g ? I.intl.string(I.t['Hi1/aW']) : I.intl.string(I.t['6vrfgo']),
+                                          tooltipText: g ? I.intl.string(I.t["Hi1/aW"]) : I.intl.string(I.t["6vrfgo"]),
                                           onClick: this.handleDisconnect,
-                                          icon: g ? c.PBZ : c.gkL
-                                      })
-                              ]
-                          })
-                      ]
-                  })
+                                          icon: g ? c.PBZ : c.gkL,
+                                      }),
+                              ],
+                          }),
+                      ],
+                  }),
               });
     }
     constructor(...e) {
-        (super(...e),
-            N(this, 'rtcConnectionStatusRef', r.createRef()),
-            N(this, 'handleToggleSelfMute', () => {
+        super(...e),
+            N(this, "rtcConnectionStatusRef", r.createRef()),
+            N(this, "handleToggleSelfMute", () => {
                 let { context: e } = this.props;
                 d.Z.toggleSelfMute({
                     context: e,
-                    location: 'Overlay Controls'
+                    location: "Overlay Controls",
                 });
             }),
-            N(this, 'handleToggleSelfDeaf', () => {
+            N(this, "handleToggleSelfDeaf", () => {
                 let { context: e } = this.props;
                 d.Z.toggleSelfDeaf({
                     context: e,
-                    location: 'Overlay Controls'
+                    location: "Overlay Controls",
                 });
             }),
-            N(this, 'renderPopout', (e) => {
+            N(this, "renderPopout", (e) => {
                 let { lobbyId: t } = this.props;
                 return (0, i.jsx)(O.Z, {
                     channelId: e,
                     lobbyId: t,
-                    isOverlay: !0
+                    isOverlay: !0,
                 });
-            }));
+            });
     }
 }
 function R(e) {
@@ -193,20 +206,22 @@ function R(e) {
                         i,
                         r = {},
                         o = Object.keys(e);
-                    for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (i = 0; i < o.length; i++)
+                    (n = o[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(e, ['context', 'lobbyId', 'channel']);
+        })(e, ["context", "lobbyId", "channel"]);
     let l = (0, a.e7)([_.Z], () => _.Z.getGuild(null == r ? void 0 : r.getGuildId())),
         s = (0, a.e7)([x.Z], () => null != r && x.Z.hasVideo(r.id)),
         [c, d] = (0, a.Wu)([b.Z], () => [b.Z.isSelfMute(t) || b.Z.isSelfMutedTemporarily(t), b.Z.isSelfDeaf(t)]),
         [u, h, p] = (0, a.Wu)([C.Z], () => [C.Z.getConnectionState(n), C.Z.getLastPing(n), C.Z.getQuality(n)]),
-        { changeLeaveCallAndActivityIcons: f } = (0, g.A)({ location: 'Controls' });
+        { changeLeaveCallAndActivityIcons: f } = (0, g.A)({ location: "Controls" });
     return (0, i.jsx)(
         k,
         D(T({}, o), {
@@ -220,7 +235,7 @@ function R(e) {
             connectionState: u,
             lastPing: h,
             quality: p,
-            changeLeaveCallAndActivityIcons: f
-        })
+            changeLeaveCallAndActivityIcons: f,
+        }),
     );
 }

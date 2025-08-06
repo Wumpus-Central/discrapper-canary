@@ -14,7 +14,7 @@ function o(e) {
         (0, r.jsx)(l.Z, {
             users: o,
             total: a,
-            videoLimit: c
+            videoLimit: c,
         })
     );
 }

@@ -3,11 +3,11 @@ var r = n(836560);
 let i = 160,
     o = 500;
 var a = (function (e) {
-    return ((e.VERTICAL = 'vertical'), (e.HORIZONTAL = 'horizontal'), e);
+    return (e.VERTICAL = "vertical"), (e.HORIZONTAL = "horizontal"), e;
 })(a || {});
 let s = {
     open: !1,
-    orientation: null
+    orientation: null,
 };
 function l() {
     try {
@@ -33,17 +33,17 @@ class u extends r.EventEmitter {
     check() {
         let e = l() > i,
             t = c() > i,
-            n = e ? 'vertical' : 'horizontal';
+            n = e ? "vertical" : "horizontal";
         if (!(t && e) && (e || t)) {
             let e = s.open;
-            ((s = {
+            (s = {
                 open: !0,
-                orientation: n
+                orientation: n,
             }),
-                (e && s.orientation === n) || this.emit('changed', s));
-        } else s.open && ((s.open = !1), this.emit('changed', s));
+                (e && s.orientation === n) || this.emit("changed", s);
+        } else s.open && ((s.open = !1), this.emit("changed", s));
     }
     constructor() {
-        (super(), setInterval(() => this.check(), o));
+        super(), setInterval(() => this.check(), o);
     }
 }

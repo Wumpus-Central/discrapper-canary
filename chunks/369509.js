@@ -6,15 +6,15 @@ var g = e(172751),
     n = e(131085),
     f = e(668271);
 function B(A) {
-    let t = null === A.tag || 0 === A.tag.length ? 'WUMP' : A.tag;
-    return (0, r.jsx)('div', {
+    let t = null === A.tag || 0 === A.tag.length ? "WUMP" : A.tag;
+    return (0, r.jsx)("div", {
         className: f.badgeContainer,
         children: (0, r.jsx)(g.m0, {
             guildId: A.guildId,
             textClassName: f.tagText,
             guildTag: t,
             guildBadge:
-                'string' == typeof A.badge
+                "string" == typeof A.badge
                     ? A.badge
                     : (0, r.jsx)(v.v, {
                           className: f.badgePreview,
@@ -22,8 +22,8 @@ function B(A) {
                           width: n.Gg.SIZE_12,
                           height: n.Gg.SIZE_12,
                           primaryTintColor: A.primaryColor,
-                          secondaryTintColor: A.secondaryColor
-                      })
-        })
+                          secondaryTintColor: A.secondaryColor,
+                      }),
+        }),
     });
 }

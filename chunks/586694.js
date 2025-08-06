@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     E: () => b,
-    q: () => m
+    q: () => m,
 }),
-    n(415506));
+    n(415506);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,24 +17,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -57,31 +57,48 @@ function f(e, t) {
     );
 }
 function g(e) {
-    let { children: t, size: n, onClick: l, onMouseDown: s, onKeyDown: u, onContextMenu: p, onMouseEnter: f, onMouseLeave: g, className: m, ariaHidden: b, avatarDecoration: O, specs: y, cornerIconUrl: C, cornerIconOffsetX: v, cornerIconOffsetY: j, ariaLabel: E } = e,
+    let {
+            children: t,
+            size: n,
+            onClick: l,
+            onMouseDown: s,
+            onKeyDown: u,
+            onContextMenu: p,
+            onMouseEnter: f,
+            onMouseLeave: g,
+            className: m,
+            ariaHidden: b,
+            avatarDecoration: O,
+            specs: y,
+            cornerIconUrl: C,
+            cornerIconOffsetX: v,
+            cornerIconOffsetY: j,
+            ariaLabel: E,
+        } = e,
         S = {
             width: (0, a.pxk)(n),
-            height: (0, a.pxk)(n)
+            height: (0, a.pxk)(n),
         },
         x = (0, i.useId)(),
         I = y.size * d.hs,
         P =
             null != O &&
-            (0, r.jsxs)('svg', {
+            (0, r.jsxs)("svg", {
                 width: I,
                 height: I,
-                viewBox: '0 0 '.concat(I, ' ').concat(I),
+                viewBox: "0 0 ".concat(I, " ").concat(I),
                 className: h.avatarDecoration,
-                'aria-hidden': !0,
+                "aria-hidden": !0,
                 children: [
-                    (0, r.jsxs)('mask', {
+                    (0, r.jsxs)("mask", {
                         id: x,
                         children: [
-                            (0, r.jsx)('rect', {
+                            (0, r.jsx)("rect", {
                                 x: 0,
                                 y: 0,
                                 width: I,
                                 height: I,
-                                fill: 'white'
+                                fill: "white",
                             }),
                             null != C &&
                                 (function (e, t) {
@@ -91,7 +108,7 @@ function g(e) {
                                             height: l,
                                             width: o,
                                             x: s,
-                                            y: a
+                                            y: a,
                                         } = (function (e, t, n, r) {
                                             let { height: i, width: l, x: o, y: s } = _(e, n, r),
                                                 a = (t - e.size) / 2;
@@ -99,38 +116,38 @@ function g(e) {
                                                 width: l,
                                                 height: i,
                                                 x: o + a,
-                                                y: s + a
+                                                y: s + a,
                                             };
                                         })(e, t, n, i);
-                                    return (0, r.jsx)('rect', {
-                                        mask: 'url(#'.concat(c.QS.SQUIRCLE, ')'),
+                                    return (0, r.jsx)("rect", {
+                                        mask: "url(#".concat(c.QS.SQUIRCLE, ")"),
                                         height: l,
                                         width: o,
                                         x: s,
                                         y: a,
                                         rx: e.stroke,
-                                        fill: 'black'
+                                        fill: "black",
                                     });
-                                })(y, I, v, j)
-                        ]
+                                })(y, I, v, j),
+                        ],
                     }),
-                    (0, r.jsx)('foreignObject', {
+                    (0, r.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
                         width: I,
                         height: I,
-                        mask: 'url(#'.concat(x, ')'),
-                        children: (0, r.jsx)('div', {
+                        mask: "url(#".concat(x, ")"),
+                        children: (0, r.jsx)("div", {
                             className: h.avatarStack,
-                            children: (0, r.jsx)('img', {
+                            children: (0, r.jsx)("img", {
                                 className: h.avatar,
                                 src: O,
-                                alt: ' ',
-                                'aria-hidden': !0
-                            })
-                        })
-                    })
-                ]
+                                alt: " ",
+                                "aria-hidden": !0,
+                            }),
+                        }),
+                    }),
+                ],
             });
     return null != l || null != s
         ? (0, r.jsxs)(a.P3F, {
@@ -142,24 +159,33 @@ function g(e) {
               onKeyDown: u,
               onMouseEnter: null != f ? f : void 0,
               onMouseLeave: null != g ? g : void 0,
-              'aria-label': null != E ? E : void 0,
-              'aria-hidden': b,
-              children: [t, P]
+              "aria-label": null != E ? E : void 0,
+              "aria-hidden": b,
+              children: [t, P],
           })
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: o()(h.wrapper, m),
               style: S,
               onContextMenu: null != p ? p : void 0,
               onMouseEnter: null != f ? f : void 0,
               onMouseLeave: null != g ? g : void 0,
-              role: 'img',
-              'aria-label': null != E ? E : void 0,
-              'aria-hidden': b,
-              children: [t, P]
+              role: "img",
+              "aria-label": null != E ? E : void 0,
+              "aria-hidden": b,
+              children: [t, P],
           });
 }
 function m(e) {
-    let { src: t, size: n, 'aria-hidden': l = !1, 'aria-label': a, imageClassName: d, cornerIconUrl: m, cornerIconOffsetX: b = 0, cornerIconOffsetY: y = 0 } = e,
+    let {
+            src: t,
+            size: n,
+            "aria-hidden": l = !1,
+            "aria-label": a,
+            imageClassName: d,
+            cornerIconUrl: m,
+            cornerIconOffsetX: b = 0,
+            cornerIconOffsetY: y = 0,
+        } = e,
         C = (0, u.UC)(n),
         v = C.size,
         j = (0, i.useId)();
@@ -169,68 +195,76 @@ function m(e) {
             ariaLabel: a,
             ariaHidden: l,
             specs: C,
-            children: (0, r.jsxs)('svg', {
+            children: (0, r.jsxs)("svg", {
                 width: v + b,
                 height: v + y,
-                viewBox: '0 0 '.concat(v + b, ' ').concat(v + y),
+                viewBox: "0 0 ".concat(v + b, " ").concat(v + y),
                 className: o()(h.mask, h.svg),
-                'aria-hidden': !0,
+                "aria-hidden": !0,
                 children: [
-                    (0, r.jsxs)('mask', {
+                    (0, r.jsxs)("mask", {
                         id: j,
                         children: [
-                            (0, r.jsx)('circle', {
+                            (0, r.jsx)("circle", {
                                 cx: C.size / 2,
                                 cy: C.size / 2,
                                 r: C.size / 2,
-                                fill: 'white'
+                                fill: "white",
                             }),
                             null != m &&
                                 (function (e, t, n) {
                                     let { height: i, width: l, x: o, y: s } = _(e, t, n);
-                                    return (0, r.jsx)('rect', {
-                                        mask: 'url(#'.concat(c.QS.SQUIRCLE, ')'),
+                                    return (0, r.jsx)("rect", {
+                                        mask: "url(#".concat(c.QS.SQUIRCLE, ")"),
                                         height: i,
                                         width: l,
                                         x: o,
                                         y: s,
-                                        fill: 'black'
+                                        fill: "black",
                                     });
-                                })(C, b, y)
-                        ]
+                                })(C, b, y),
+                        ],
                     }),
-                    (0, r.jsx)('foreignObject', {
+                    (0, r.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
                         width: C.size,
                         height: C.size,
-                        mask: 'url(#'.concat(j, ')'),
+                        mask: "url(#".concat(j, ")"),
                         children: (0, r.jsx)(s.qe, {
                             src: t,
                             className: d,
-                            isSpeaking: !1
-                        })
+                            isSpeaking: !1,
+                        }),
                     }),
                     null != m &&
                         (0, r.jsx)(
-                            'foreignObject',
+                            "foreignObject",
                             f(p({}, O(C, b, y)), {
-                                mask: 'url(#'.concat(c.QS.SQUIRCLE, ')'),
-                                children: (0, r.jsx)('img', {
+                                mask: "url(#".concat(c.QS.SQUIRCLE, ")"),
+                                children: (0, r.jsx)("img", {
                                     src: m,
                                     height: 16,
                                     width: 16,
-                                    alt: ' '
-                                })
-                            })
-                        )
-                ]
-            })
-        })
+                                    alt: " ",
+                                }),
+                            }),
+                        ),
+                ],
+            }),
+        }),
     );
 }
 function b(e) {
-    let { src: t, size: n, 'aria-hidden': l = !1, 'aria-label': s, cornerIconUrl: a, cornerIconOffsetX: d = 0, cornerIconOffsetY: m = 0 } = e,
+    let {
+            src: t,
+            size: n,
+            "aria-hidden": l = !1,
+            "aria-label": s,
+            cornerIconUrl: a,
+            cornerIconOffsetX: d = 0,
+            cornerIconOffsetY: m = 0,
+        } = e,
         b = (0, i.useId)(),
         y = (0, i.useId)(),
         C = (0, u.UC)(n),
@@ -244,77 +278,77 @@ function b(e) {
             ariaLabel: s,
             ariaHidden: l,
             specs: C,
-            children: (0, r.jsxs)('svg', {
+            children: (0, r.jsxs)("svg", {
                 width: v,
                 height: j,
-                viewBox: '0 0 '.concat(v, ' ').concat(j),
+                viewBox: "0 0 ".concat(v, " ").concat(j),
                 className: o()(h.mask, h.svg),
-                'aria-hidden': !0,
+                "aria-hidden": !0,
                 children: [
-                    (0, r.jsxs)('mask', {
+                    (0, r.jsxs)("mask", {
                         id: b,
                         children: [
-                            (0, r.jsx)('rect', {
+                            (0, r.jsx)("rect", {
                                 x: 0,
                                 y: 0,
                                 width: C.size,
                                 height: C.size,
-                                fill: 'white',
-                                mask: 'url(#'.concat(c.QS.SQUIRCLE, ')')
+                                fill: "white",
+                                mask: "url(#".concat(c.QS.SQUIRCLE, ")"),
                             }),
-                            (0, r.jsx)('circle', {
+                            (0, r.jsx)("circle", {
                                 cx: E.x + E.width / 2,
                                 cy: E.y + E.height / 2,
                                 r: E.width / 2,
-                                fill: 'black'
-                            })
-                        ]
+                                fill: "black",
+                            }),
+                        ],
                     }),
-                    (0, r.jsx)('mask', {
+                    (0, r.jsx)("mask", {
                         id: y,
-                        children: (0, r.jsx)('circle', {
+                        children: (0, r.jsx)("circle", {
                             cx: S.x + S.width / 2,
                             cy: S.y + S.height / 2,
                             r: S.width / 2,
-                            fill: 'white'
-                        })
+                            fill: "white",
+                        }),
                     }),
-                    (0, r.jsx)('foreignObject', {
+                    (0, r.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
                         width: C.size,
                         height: C.size,
-                        mask: 'url(#'.concat(b, ')'),
+                        mask: "url(#".concat(b, ")"),
                         children: (0, r.jsx)(
-                            'div',
+                            "div",
                             {
                                 className: h.avatarStack,
-                                children: (0, r.jsx)('img', {
+                                children: (0, r.jsx)("img", {
                                     src: null != t ? t : void 0,
-                                    alt: ' ',
+                                    alt: " ",
                                     className: h.avatar,
-                                    'aria-hidden': !0
-                                })
+                                    "aria-hidden": !0,
+                                }),
                             },
-                            t
-                        )
+                            t,
+                        ),
                     }),
                     null != a &&
                         (0, r.jsx)(
-                            'foreignObject',
+                            "foreignObject",
                             f(p({}, S), {
-                                mask: 'url(#'.concat(y, ')'),
-                                children: (0, r.jsx)('img', {
+                                mask: "url(#".concat(y, ")"),
+                                children: (0, r.jsx)("img", {
                                     src: a,
                                     height: 16,
                                     width: 16,
-                                    alt: ' '
-                                })
-                            })
-                        )
-                ]
-            })
-        })
+                                    alt: " ",
+                                }),
+                            }),
+                        ),
+                ],
+            }),
+        }),
     );
 }
 function O(e, t, n) {
@@ -322,7 +356,7 @@ function O(e, t, n) {
         width: 16,
         height: 16,
         x: e.size - 16 - e.offset + t,
-        y: e.size - 16 - e.offset + n
+        y: e.size - 16 - e.offset + n,
     };
 }
 function _(e, t, n) {
@@ -333,6 +367,6 @@ function _(e, t, n) {
         width: r.height + 4,
         height: r.width + 4,
         x: i,
-        y: l
+        y: l,
     };
 }

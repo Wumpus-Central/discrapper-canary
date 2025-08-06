@@ -1,41 +1,41 @@
 n.d(t, {
     HG: () => s,
     Md: () => a,
-    Q8: () => o
+    Q8: () => o,
 });
 var r = n(373228),
     i = n(388032);
 let o = () => [i.intl.string(i.t.b6wEe3), i.intl.string(i.t.i8o9hY)],
-    a = () => [i.intl.string(i.t.vqnToa), i.intl.string(i.t['9yh+dH'])],
+    a = () => [i.intl.string(i.t.vqnToa), i.intl.string(i.t["9yh+dH"])],
     s = [
         {
-            id: '781323471249604648',
+            id: "781323471249604648",
             format_type: r.u3.APNG,
-            description: 'Cheerful Choco jumps out of gift box',
-            name: 'Surprise'
+            description: "Cheerful Choco jumps out of gift box",
+            name: "Surprise",
         },
         {
-            id: '781324642736144424',
+            id: "781324642736144424",
             format_type: r.u3.APNG,
-            description: 'Cheerful Choco preens against window',
-            name: 'Affection'
+            description: "Cheerful Choco preens against window",
+            name: "Affection",
         },
         {
-            id: '781323769960202280',
+            id: "781323769960202280",
             format_type: r.u3.APNG,
-            description: 'Cheerful Choco sparkles',
-            name: 'OMG'
+            description: "Cheerful Choco sparkles",
+            name: "OMG",
         },
         {
-            id: '781324722394103808',
+            id: "781324722394103808",
             format_type: r.u3.APNG,
-            description: 'Cheerful Choco cheers',
-            name: 'Cheer'
+            description: "Cheerful Choco cheers",
+            name: "Cheer",
         },
         {
-            id: '813951723822645278',
+            id: "813951723822645278",
             format_type: r.u3.APNG,
-            description: 'Cheerful Choco gives thumbs up',
-            name: 'Nice'
-        }
+            description: "Cheerful Choco gives thumbs up",
+            name: "Nice",
+        },
     ];

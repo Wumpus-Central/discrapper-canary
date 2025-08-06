@@ -16,13 +16,14 @@ function o(e, t, n, o) {
             .concat(i([[c, a.get(c)]]))
             .map(function (e, t) {
                 s === c ? ((i = l), (a = u)) : ((i = t === s ? l : 0), (a = t === c ? u : e.getLength()));
-                for (var i, a, d, f = e.getCharacterList(); i < a; ) ((d = f.get(i)), (f = f.set(i, o ? r.applyStyle(d, n) : r.removeStyle(d, n))), i++);
-                return e.set('characterList', f);
+                for (var i, a, d, f = e.getCharacterList(); i < a; )
+                    (d = f.get(i)), (f = f.set(i, o ? r.applyStyle(d, n) : r.removeStyle(d, n))), i++;
+                return e.set("characterList", f);
             });
     return e.merge({
         blockMap: a.merge(d),
         selectionBefore: t,
-        selectionAfter: t
+        selectionAfter: t,
     });
 }
 e.exports = {
@@ -31,5 +32,5 @@ e.exports = {
     },
     remove: function (e, t, n) {
         return o(e, t, n, !1);
-    }
+    },
 };

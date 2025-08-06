@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(236413),
@@ -24,7 +24,7 @@ let m = i.memo(function (e) {
             (e) => {
                 x || f(e, !0);
             },
-            [x, f]
+            [x, f],
         );
     i.useEffect(() => {
         m && f(t, !0);
@@ -46,7 +46,7 @@ let m = i.memo(function (e) {
             isEditMode: j,
             isDefaultRule: v,
             onChangeRule: C,
-            onSetupRule: y
+            onSetupRule: y,
         }),
         isStuck: j && g,
         isExpanded: j,
@@ -56,7 +56,7 @@ let m = i.memo(function (e) {
             (0, r.jsx)(c.Z, {
                 rule: _,
                 isLoading: x,
-                onChangeRule: C
-            })
+                onChangeRule: C,
+            }),
     });
 });

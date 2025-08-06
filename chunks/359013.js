@@ -1,49 +1,49 @@
 n.d(t, {
     Mq: () => i,
     Tw: () => c,
-    p9: () => a
+    p9: () => a,
 });
 var r = n(562858),
     s = n(477839);
 let o = {
     [s.uv.CLICKER_BUTTON_STRONGER]: {
         type: r.e.BASIC,
-        points: 1
+        points: 1,
     },
     [s.uv.WEED_KILLER]: { type: r.e.NONE },
     [s.uv.BOUNCING_LOGO_MORE_LOGOS]: {
         type: r.e.BASIC,
-        points: 15
+        points: 15,
     },
     [s.uv.BOUNCING_LOGO_CORNERS]: {
         type: r.e.MULTIPLIER,
-        multiplier: 3
+        multiplier: 3,
     },
     [s.uv.BOUNCING_LOGO_SPEED]: { type: r.e.NONE },
     [s.uv.BOUNCING_LOGO_COLORS]: {
         type: r.e.MULTIPLIER,
-        multiplier: 2
+        multiplier: 2,
     },
     [s.uv.CLICKER_BUTTON_AFFIRMATIONS]: {
         type: r.e.MULTIPLIER,
-        multiplier: 2
+        multiplier: 2,
     },
     [s.uv.SUN_RAISE]: {
         type: r.e.BASIC,
-        points: 40
+        points: 40,
     },
     [s.uv.FULLSCREEN_AT_SOMEONE]: {
         type: r.e.MULTIPLIER,
-        multiplier: 2
+        multiplier: 2,
     },
     [s.uv.CLICKER_BUTTON_RAINBOW]: {
         type: r.e.BASIC,
-        points: 1.5
+        points: 1.5,
     },
     [s.uv.MUSIC_CHANGE]: {
         type: r.e.BASIC,
-        points: 10
-    }
+        points: 10,
+    },
 };
 function a(e) {
     let t = o[e];
@@ -66,31 +66,31 @@ let i = {
                     return t + a(n) * (null != (r = e[n]) ? r : 0);
                 }, 1) *
                     (null != e[s.uv.CLICKER_BUTTON_RAINBOW] ? a(s.uv.CLICKER_BUTTON_RAINBOW) : 1) *
-                    (null != e[s.uv.CLICKER_BUTTON_AFFIRMATIONS] ? a(s.uv.CLICKER_BUTTON_AFFIRMATIONS) : 1)
-            )
+                    (null != e[s.uv.CLICKER_BUTTON_AFFIRMATIONS] ? a(s.uv.CLICKER_BUTTON_AFFIRMATIONS) : 1),
+            ),
     },
     [s.yN.RAIN]: {
         type: r.e.BASIC,
-        points: 42
+        points: 42,
     },
     [s.yN.SUN]: {
         type: r.e.SUN,
-        getPoints: (e) => 55 + e * a(s.uv.SUN_RAISE)
+        getPoints: (e) => 55 + e * a(s.uv.SUN_RAISE),
     },
     [s.yN.STATS]: { type: r.e.NONE },
     [s.yN.RATE]: { type: r.e.NONE },
     [s.yN.ACHIEVEMENTS]: { type: r.e.NONE },
     [s.yN.SNEK]: {
         type: r.e.SNEK,
-        getPoints: (e) => 1000 * e
+        getPoints: (e) => 1000 * e,
     },
     [s.yN.WEEDS]: {
         type: r.e.BASIC,
-        points: -10
+        points: -10,
     },
     [s.yN.PET_WUMPUS]: {
         type: r.e.BASIC,
-        points: 30
+        points: 30,
     },
     [s.yN.BOUNCING_LOGO]: {
         type: r.e.BOUNCING_LOGOS,
@@ -98,81 +98,81 @@ let i = {
             let r = a(s.uv.BOUNCING_LOGO_CORNERS),
                 o = a(s.uv.BOUNCING_LOGO_COLORS);
             return 15 * (n ? o : 1) * (t && e ? r : 1);
-        }
+        },
     },
     [s.yN.NAGBAR]: {
         type: r.e.NAGBAR,
-        getPoints: (e) => e
+        getPoints: (e) => e,
     },
     [s.yN.MESSAGES]: {
         type: r.e.BASIC,
-        points: 0
+        points: 0,
     },
     [s.yN.ANT]: {
         type: r.e.BASIC,
-        points: 5
+        points: 5,
     },
     [s.yN.SNAIL]: {
         type: r.e.BASIC,
-        points: 8
+        points: 8,
     },
     [s.yN.BEE]: {
         type: r.e.BASIC,
-        points: 12
+        points: 12,
     },
     [s.yN.WORM]: {
         type: r.e.BASIC,
-        points: 18
+        points: 18,
     },
     [s.yN.BUTTERFLY]: {
         type: r.e.BASIC,
-        points: 31
+        points: 31,
     },
     [s.yN.TULIP]: {
         type: r.e.BASIC,
-        points: 6
+        points: 6,
     },
     [s.yN.SUNFLOWER]: {
         type: r.e.BASIC,
-        points: 1
+        points: 1,
     },
     [s.yN.ORCHID]: {
         type: r.e.BASIC,
-        points: 22
+        points: 22,
     },
     [s.yN.LOOTBOXES]: {
         type: r.e.BASIC,
-        points: 0
+        points: 0,
     },
     [s.yN.AT_SOMEONE]: {
         type: r.e.UPGRADES,
-        getPoints: (e) => 70 * (null != e[s.uv.FULLSCREEN_AT_SOMEONE] ? a(s.uv.FULLSCREEN_AT_SOMEONE) : 1)
+        getPoints: (e) => 70 * (null != e[s.uv.FULLSCREEN_AT_SOMEONE] ? a(s.uv.FULLSCREEN_AT_SOMEONE) : 1),
     },
     [s.yN.CURSORS]: {
         type: r.e.BASIC,
-        points: 0
+        points: 0,
     },
     [s.yN.POURING_WATER]: {
         type: r.e.BASIC,
-        points: 90
+        points: 90,
     },
     [s.yN.WATERING_CAN]: {
         type: r.e.BASIC,
-        points: 15
+        points: 15,
     },
     [s.yN.LEVELING]: {
         type: r.e.BASIC,
-        points: 0
+        points: 0,
     },
     [s.yN.MUSIC]: {
         type: r.e.UPGRADES,
-        getPoints: (e) => (null != e[s.uv.MUSIC_CHANGE] ? 5 + a(s.uv.MUSIC_CHANGE) : 5)
+        getPoints: (e) => (null != e[s.uv.MUSIC_CHANGE] ? 5 + a(s.uv.MUSIC_CHANGE) : 5),
     },
     [s.yN.LAWNMOWER]: {
         type: r.e.BASIC,
-        points: -200
+        points: -200,
     },
-    [s.yN.COMPLETE_GAME]: { type: r.e.NONE }
+    [s.yN.COMPLETE_GAME]: { type: r.e.NONE },
 };
 function c(e) {
     let t = i[e];

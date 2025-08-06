@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => N }), t(388685));
+t.d(n, { Z: () => N }), t(388685);
 var i = t(255367),
     s = t(73800),
     a = t(120356),
@@ -18,27 +18,27 @@ function N(e) {
     let { className: n, isDsaEligible: t = !1, onClose: a, onNext: N, onBack: g } = e,
         j = (0, u.U0)(),
         I = (0, r.e7)([x.Z], () => x.Z.getFreeTextAppealReason()),
-        [E, T] = s.useState(''),
+        [E, T] = s.useState(""),
         [v, f] = s.useState(!1);
     s.useEffect(() => {
-        (T(null != I ? I : ''), f(j === _.bK.SOMETHING_ELSE));
+        T(null != I ? I : ""), f(j === _.bK.SOMETHING_ELSE);
     }, [I, j, t]);
     let S = (e) => {
-            (f(e === _.bK.SOMETHING_ELSE),
+            f(e === _.bK.SOMETHING_ELSE),
                 e !== _.bK.SOMETHING_ELSE &&
-                    (T(''),
+                    (T(""),
                     c.Z.dispatch({
-                        type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
-                        userInput: ''
+                        type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
+                        userInput: "",
                     })),
                 c.Z.dispatch({
-                    type: 'SAFETY_HUB_APPEAL_SIGNAL_SELECT',
-                    signal: e
-                }));
+                    type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT",
+                    signal: e,
+                });
         },
         k = _.RY.map((e) => ({
             value: e,
-            name: (0, m.ox)(e)
+            name: (0, m.ox)(e),
         }));
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -49,28 +49,28 @@ function N(e) {
                 children: [
                     (0, i.jsx)(o.X6q, {
                         className: C.title,
-                        variant: 'heading-xl/semibold',
-                        children: h.intl.string(h.t['C5q+pa'])
+                        variant: "heading-xl/semibold",
+                        children: h.intl.string(h.t["C5q+pa"]),
                     }),
                     (0, i.jsx)(o.Text, {
                         className: C.subtitle,
-                        color: 'header-secondary',
-                        variant: 'text-md/normal',
-                        children: h.intl.string(h.t.VEcRh4)
+                        color: "header-secondary",
+                        variant: "text-md/normal",
+                        children: h.intl.string(h.t.VEcRh4),
                     }),
                     null != a &&
                         (0, i.jsx)(o.olH, {
                             className: C.closeButton,
-                            onClick: a
-                        })
-                ]
+                            onClick: a,
+                        }),
+                ],
             }),
             (0, i.jsxs)(o.hzk, {
                 className: l()(p.modalContent, n),
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)(o.FXm, {
-                        radioPosition: 'right',
+                        radioPosition: "right",
                         radioItemClassName: C.radioItem,
                         size: o.FXm.Sizes.NOT_SET,
                         value: j,
@@ -78,7 +78,7 @@ function N(e) {
                         onChange: (e) => {
                             let { value: n } = e;
                             return S(n);
-                        }
+                        },
                     }),
                     t &&
                         v &&
@@ -90,51 +90,51 @@ function N(e) {
                                     placeholder: h.intl.string(h.t.bQrZIC),
                                     value: E,
                                     onChange: T,
-                                    autoFocus: !0
+                                    autoFocus: !0,
                                 }),
                                 (0, i.jsx)(o.Text, {
-                                    variant: 'text-sm/normal',
-                                    color: 'header-muted',
-                                    children: h.intl.string(h.t.xfNY3N)
-                                })
-                            ]
+                                    variant: "text-sm/normal",
+                                    color: "header-muted",
+                                    children: h.intl.string(h.t.xfNY3N),
+                                }),
+                            ],
                         }),
                     (0, i.jsx)(o.Text, {
-                        variant: 'text-sm/normal',
+                        variant: "text-sm/normal",
                         className: p.disclaimer,
-                        children: h.intl.format(h.t['8k9GCQ'], {})
-                    })
-                ]
+                        children: h.intl.format(h.t["8k9GCQ"], {}),
+                    }),
+                ],
             }),
             (0, i.jsx)(o.mzw, {
                 children: (0, i.jsxs)(o.hE2, {
-                    direction: 'horizontal-reverse',
+                    direction: "horizontal-reverse",
                     children: [
                         (0, i.jsx)(o.zxk, {
-                            variant: 'primary',
+                            variant: "primary",
                             text: h.intl.string(h.t.PDTjLC),
                             onClick: () => {
-                                (c.Z.dispatch({
-                                    type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
-                                    userInput: E
+                                c.Z.dispatch({
+                                    type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
+                                    userInput: E,
                                 }),
-                                    null == N || N());
-                            }
+                                    null == N || N();
+                            },
                         }),
                         (0, i.jsx)(o.zxk, {
-                            variant: 'secondary',
-                            text: h.intl.string(h.t['13/7kZ']),
+                            variant: "secondary",
+                            text: h.intl.string(h.t["13/7kZ"]),
                             onClick: () => {
-                                (c.Z.dispatch({
-                                    type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
-                                    userInput: E
+                                c.Z.dispatch({
+                                    type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
+                                    userInput: E,
                                 }),
-                                    null == g || g());
-                            }
-                        })
-                    ]
-                })
-            })
-        ]
+                                    null == g || g();
+                            },
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

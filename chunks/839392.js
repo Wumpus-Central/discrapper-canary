@@ -14,15 +14,15 @@ class d extends (i = l.ZP.Store) {
         return c[e];
     }
 }
-((a = 'GameProfileStore'),
-    (n = 'displayName') in d
+(a = "GameProfileStore"),
+    (n = "displayName") in d
         ? Object.defineProperty(d, n, {
               value: a,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (d[n] = a));
+        : (d[n] = a);
 let u = new d(o.Z, {
     GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
         let { applicationId: t, games: r } = e;
@@ -31,5 +31,5 @@ let u = new d(o.Z, {
     GAME_PROFILE_GET_SIMILAR_GAMES_ERROR: function (e) {
         let { applicationId: t, error: r } = e;
         c[t] = r;
-    }
+    },
 });

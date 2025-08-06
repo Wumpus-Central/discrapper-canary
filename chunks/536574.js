@@ -7,9 +7,9 @@ e.exports = function (e) {
         if (e._blockSelectEvents) {
             var t = e.props.editorState.getSelection();
             r.logBlockedSelectionEvent({
-                anonymizedDom: 'N/A',
+                anonymizedDom: "N/A",
                 extraParams: JSON.stringify({ stacktrace: Error().stack }),
-                selectionState: JSON.stringify(t.toJS())
+                selectionState: JSON.stringify(t.toJS()),
             });
         }
         return;

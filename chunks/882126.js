@@ -12,7 +12,7 @@ let s = a.memo(function (e) {
         waveformSettings: {
             fineTuning: t,
             fineTuningResolution: n,
-            duration: a
-        }
+            duration: a,
+        },
     });
 });

@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => S }), n(388685), n(539854), n(781311), n(35282));
+n.d(t, { Z: () => S }), n(388685), n(539854), n(781311), n(35282);
 var l,
     i = n(442837),
     s = n(570140),
@@ -21,7 +21,7 @@ function x(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,7 +33,7 @@ let y = [o.h8.TEXT_CHANNEL, o.h8.GROUP_DM, o.h8.USER],
     m = [],
     C = [];
 function T(e) {
-    ((m = [...m, e]),
+    (m = [...m, e]),
         (C = C.map((e) => {
             var t, n;
             return (
@@ -41,15 +41,15 @@ function T(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 x(e, t, n[t]);
-                            }));
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -69,10 +69,10 @@ function T(e) {
                 t
             );
         })),
-        _.emitChange());
+        _.emitChange();
 }
 function I() {
-    ((b = null), null != r && (r.destroy(), (r = null)), null != E && E());
+    (b = null), null != r && (r.destroy(), (r = null)), null != E && E();
 }
 function v() {
     let e = null != b && null != b.application_id ? h.Z.getApplicationActivity(b.application_id) : null;
@@ -87,23 +87,23 @@ class j extends (l = i.ZP.Store) {
     }
     getQuery() {
         var e;
-        return null != (e = null == r ? void 0 : r.query) ? e : '';
+        return null != (e = null == r ? void 0 : r.query) ? e : "";
     }
     getResults() {
         return C;
     }
 }
-x(j, 'displayName', 'ActivityInviteModalStore');
+x(j, "displayName", "ActivityInviteModalStore");
 let _ = new j(s.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            ((b = e.activity),
+            (b = e.activity),
                 (E = e.resolve),
                 (m = []),
                 null == r &&
                     (r = new o.ZP(
                         (e, t) => {
-                            ((C = (
-                                '' === t.trim()
+                            (C = (
+                                "" === t.trim()
                                     ? (function () {
                                           let e = [];
                                           return (
@@ -117,14 +117,14 @@ let _ = new j(s.Z, {
                                                               e.push({
                                                                   type: o.h8.USER,
                                                                   record: r,
-                                                                  score: 0
+                                                                  score: 0,
                                                               });
                                                       } else
                                                           n.isMultiUserDM() &&
                                                               e.push({
                                                                   type: o.h8.GROUP_DM,
                                                                   record: n,
-                                                                  score: 0
+                                                                  score: 0,
                                                               });
                                               }),
                                               e
@@ -140,7 +140,7 @@ let _ = new j(s.Z, {
                                                 type: o.h8.USER,
                                                 sent: m.includes(t.id),
                                                 status: f.Z.getStatus(t.id),
-                                                data: e
+                                                data: e,
                                             };
                                         }
                                         case o.h8.TEXT_CHANNEL: {
@@ -151,9 +151,9 @@ let _ = new j(s.Z, {
                                             return {
                                                 type: o.h8.TEXT_CHANNEL,
                                                 sent: m.includes(n.id),
-                                                categoryName: null != r ? (0, c.F6)(r, p.default, g.Z) : '',
-                                                guildName: null != (t = null == l ? void 0 : l.name) ? t : '',
-                                                data: e
+                                                categoryName: null != r ? (0, c.F6)(r, p.default, g.Z) : "",
+                                                guildName: null != (t = null == l ? void 0 : l.name) ? t : "",
+                                                data: e,
                                             };
                                         }
                                         case o.h8.GROUP_DM: {
@@ -161,7 +161,7 @@ let _ = new j(s.Z, {
                                             return {
                                                 type: o.h8.GROUP_DM,
                                                 sent: m.includes(t.id),
-                                                data: e
+                                                data: e,
                                             };
                                         }
                                         default:
@@ -169,12 +169,12 @@ let _ = new j(s.Z, {
                                     }
                                 })
                                 .filter((e) => null != e)),
-                                _.emitChange());
+                                _.emitChange();
                         },
                         y,
-                        100
+                        100,
                     )),
-                r.search(''));
+                r.search("");
         },
         ACTIVITY_INVITE_MODAL_QUERY: function (e) {
             let { query: t } = e;
@@ -189,14 +189,14 @@ let _ = new j(s.Z, {
                       channelId: t,
                       type: O.mFx.JOIN,
                       activity: b,
-                      location: 'Channel Text Area - Invite to Join Modal'
+                      location: "Channel Text Area - Invite to Join Modal",
                   }).then(() => T(t))
                 : null != n &&
                   a.Z.sendActivityInviteUser({
                       userId: n,
                       type: O.mFx.JOIN,
                       activity: b,
-                      location: 'Channel Text Area - Invite to Join Modal'
+                      location: "Channel Text Area - Invite to Join Modal",
                   }).then(() => T(n));
         },
         ACTIVITY_INVITE_MODAL_CLOSE: I,
@@ -205,6 +205,6 @@ let _ = new j(s.Z, {
             return !!t && null != b && (I(), !0);
         },
         LOCAL_ACTIVITY_UPDATE: v,
-        RPC_APP_DISCONNECTED: v
+        RPC_APP_DISCONNECTED: v,
     }),
     S = 12633 == n.j ? _ : null;

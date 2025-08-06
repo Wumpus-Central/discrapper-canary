@@ -19,19 +19,22 @@ function _(e, t) {
                   title: f.intl.string(f.t.iz3vYW),
                   body: f.intl.string(f.t.VpjOCg),
                   confirmText: f.intl.string(f.t.p89ACg),
-                  confirmVariant: 'critical-primary',
+                  confirmVariant: "critical-primary",
                   cancelText: f.intl.string(f.t.gm1Ven),
                   onConfirm: () => {
                       (0, l.wX)(t.id, e.id);
-                  }
+                  },
               });
     }
-    return !(0, i.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_MESSAGES, t) && n, [t, n]) || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, s.eQ)(e))
+    return !(0, i.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_MESSAGES, t) && n, [t, n]) ||
+        null == e.reactions ||
+        0 === e.reactions.length ||
+        (e.isPoll() && !(0, s.eQ)(e))
         ? null
         : (0, r.jsx)(o.sNh, {
-              id: 'remove-reactions',
+              id: "remove-reactions",
               label: f.intl.string(f.t.ZbtGBg),
               action: _,
-              color: 'danger'
+              color: "danger",
           });
 }

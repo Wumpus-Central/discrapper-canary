@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => J }), a(388685), a(583741), a(539854));
+a.d(t, { Z: () => J }), a(388685), a(583741), a(539854);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -32,24 +32,24 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(a);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(a).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = a[t]),
+                (n = a[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -81,16 +81,16 @@ let A = {
                         layoutId: e,
                         anchor: {
                             top: 0.35,
-                            right: 0.35
+                            right: 0.35,
                         },
                         size: {
                             width: 100,
-                            height: 100
-                        }
+                            height: 100,
+                        },
                     },
-                    g.Z.getWidgetDefaultSettings(T.Odu.CLICK_ZONE_DEBUG)
+                    g.Z.getWidgetDefaultSettings(T.Odu.CLICK_ZONE_DEBUG),
                 ),
-                { pinned: !0 }
+                { pinned: !0 },
             ),
         [T.Odu.PERFORMANCE_DEBUG]: (e) =>
             k(
@@ -101,18 +101,18 @@ let A = {
                         layoutId: e,
                         anchor: {
                             top: 0.1,
-                            right: 0.1
+                            right: 0.1,
                         },
                         size: {
                             fixed: !1,
-                            width: 'auto',
-                            height: 'auto'
-                        }
+                            width: "auto",
+                            height: "auto",
+                        },
                     },
-                    g.Z.getWidgetDefaultSettings(T.Odu.PERFORMANCE_DEBUG)
+                    g.Z.getWidgetDefaultSettings(T.Odu.PERFORMANCE_DEBUG),
                 ),
-                { pinned: !0 }
-            )
+                { pinned: !0 },
+            ),
     },
     Z = {},
     D = (e, t) => e.find((e) => e.type === t);
@@ -140,7 +140,7 @@ function L(e) {
                 (0, C.JG)(t, () => l(!0));
             },
             className: w.copyId,
-            children: ['Application Id: ', t, ' ', a ? P.intl.string(P.t['t5VZ8/']) : null]
+            children: ["Application Id: ", t, " ", a ? P.intl.string(P.t["t5VZ8/"]) : null],
         })
     );
 }
@@ -149,127 +149,133 @@ let M = r.memo(function (e) {
             a = (0, o.e7)([h.ZP], () => h.ZP.getGameForPID(t.pid)),
             r = (0, o.e7)([_.Z], () => _.Z.getGameForPID(t.pid)),
             l = (0, o.e7)([h.ZP], () => (null == a ? null : h.ZP.getGameOverlayStatus(a)));
-        return (0, n.jsxs)('div', {
+        return (0, n.jsxs)("div", {
             className: w.panelGroup,
             children: [
                 (0, n.jsx)(d.Text, {
-                    variant: 'text-md/bold',
-                    color: 'text-primary',
-                    children: t.gameName
+                    variant: "text-md/bold",
+                    color: "text-primary",
+                    children: t.gameName,
                 }),
                 (0, n.jsx)(d.Text, {
-                    variant: 'text-sm/bold',
-                    color: 'text-secondary',
-                    children: t.pid
+                    variant: "text-sm/bold",
+                    color: "text-secondary",
+                    children: t.pid,
                 }),
                 (0, n.jsx)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-secondary',
-                    children: null == a ? void 0 : a.exeName
+                    variant: "text-sm/normal",
+                    color: "text-secondary",
+                    children: null == a ? void 0 : a.exeName,
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['isLauncher: ', (null == a ? void 0 : a.isLauncher) ? 'Yes' : 'No']
+                    variant: "text-sm/normal",
+                    color: "text-default",
+                    children: ["isLauncher: ", (null == a ? void 0 : a.isLauncher) ? "Yes" : "No"],
                 }),
                 null != t.applicationId &&
                     (0, n.jsx)(d.Text, {
-                        variant: 'text-md/bold',
-                        color: 'text-primary',
-                        children: (0, n.jsx)(L, { id: t.applicationId })
+                        variant: "text-md/bold",
+                        color: "text-primary",
+                        children: (0, n.jsx)(L, { id: t.applicationId }),
                     }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['fullscreenType: ', (0, b.sS)(t.fullscreenType)]
+                    variant: "text-sm/normal",
+                    color: "text-default",
+                    children: ["fullscreenType: ", (0, b.sS)(t.fullscreenType)],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['state: ', t.state]
+                    variant: "text-sm/normal",
+                    color: "text-default",
+                    children: ["state: ", t.state],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['successfullyShown: ', t.successfullyShown ? 'Yes' : 'No']
+                    variant: "text-sm/normal",
+                    color: "text-default",
+                    children: ["successfullyShown: ", t.successfullyShown ? "Yes" : "No"],
                 }),
-                (0, n.jsxs)('div', {
+                (0, n.jsxs)("div", {
                     className: w.panelGroup,
                     children: [
                         (0, n.jsxs)(d.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-default',
-                            children: ['source: ', t.source]
+                            variant: "text-sm/normal",
+                            color: "text-default",
+                            children: ["source: ", t.source],
                         }),
                         (0, n.jsxs)(d.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-default',
-                            children: ['legacyEnabled: ', t.legacyEnabled ? 'Yes' : 'No']
+                            variant: "text-sm/normal",
+                            color: "text-default",
+                            children: ["legacyEnabled: ", t.legacyEnabled ? "Yes" : "No"],
                         }),
                         (0, n.jsxs)(d.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-default',
-                            children: ['oopEnabled: ', t.oopEnabled ? 'Yes' : 'No']
+                            variant: "text-sm/normal",
+                            color: "text-default",
+                            children: ["oopEnabled: ", t.oopEnabled ? "Yes" : "No"],
                         }),
                         (0, n.jsxs)(d.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-default',
-                            children: ['overlayMethod: ', (0, b.P_)(t.overlayMethod)]
-                        })
-                    ]
+                            variant: "text-sm/normal",
+                            color: "text-default",
+                            children: ["overlayMethod: ", (0, b.P_)(t.overlayMethod)],
+                        }),
+                    ],
                 }),
                 null != l &&
-                    (0, n.jsxs)('div', {
+                    (0, n.jsxs)("div", {
                         className: w.panelGroup,
                         children: [
                             (0, n.jsxs)(d.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-default',
-                                children: ['raw source: ', l.source]
+                                variant: "text-sm/normal",
+                                color: "text-default",
+                                children: ["raw source: ", l.source],
                             }),
                             (0, n.jsxs)(d.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-default',
-                                children: ['raw enabledLegacy: ', l.enabledLegacy ? 'Yes' : 'No']
+                                variant: "text-sm/normal",
+                                color: "text-default",
+                                children: ["raw enabledLegacy: ", l.enabledLegacy ? "Yes" : "No"],
                             }),
                             (0, n.jsxs)(d.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-default',
-                                children: ['raw enabledOOP: ', l.enabledOOP ? 'Yes' : 'No']
+                                variant: "text-sm/normal",
+                                color: "text-default",
+                                children: ["raw enabledOOP: ", l.enabledOOP ? "Yes" : "No"],
                             }),
                             (0, n.jsxs)(d.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-default',
-                                children: ['raw overlayMethod: ', (0, b.P_)(l.overlayMethod)]
-                            })
-                        ]
+                                variant: "text-sm/normal",
+                                color: "text-default",
+                                children: ["raw overlayMethod: ", (0, b.P_)(l.overlayMethod)],
+                            }),
+                        ],
                     }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['hidden: ', (null == a ? void 0 : a.hidden) ? 'Yes' : 'No']
+                    variant: "text-sm/normal",
+                    color: "text-default",
+                    children: ["hidden: ", (null == a ? void 0 : a.hidden) ? "Yes" : "No"],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['hook: ', (null == r ? void 0 : r.hook) ? 'Yes' : 'No']
+                    variant: "text-sm/normal",
+                    color: "text-default",
+                    children: ["hook: ", (null == r ? void 0 : r.hook) ? "Yes" : "No"],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['overlay: ', (null == r ? void 0 : r.overlay) ? 'Yes' : 'No']
+                    variant: "text-sm/normal",
+                    color: "text-default",
+                    children: ["overlay: ", (null == r ? void 0 : r.overlay) ? "Yes" : "No"],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['overlayCompatibilityHook: ', (null == r ? void 0 : r.overlayCompatibilityHook) ? 'Yes' : 'No']
+                    variant: "text-sm/normal",
+                    color: "text-default",
+                    children: [
+                        "overlayCompatibilityHook: ",
+                        (null == r ? void 0 : r.overlayCompatibilityHook) ? "Yes" : "No",
+                    ],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: ['supportsOutOfProcessOverlay: ', (null == r ? void 0 : r.supportsOutOfProcessOverlay) ? 'Yes' : 'No']
-                })
-            ]
+                    variant: "text-sm/normal",
+                    color: "text-default",
+                    children: [
+                        "supportsOutOfProcessOverlay: ",
+                        (null == r ? void 0 : r.supportsOutOfProcessOverlay) ? "Yes" : "No",
+                    ],
+                }),
+            ],
         });
     }),
     B = r.memo(function (e) {
@@ -280,82 +286,88 @@ let M = r.memo(function (e) {
             i = (0, o.e7)([y.default], () => y.default.DEV_isInputLockedV3(t), [t]),
             s = (0, o.e7)([y.default], () => y.default.DEV_isInputLocked(t), [t]),
             c = (0, o.e7)([y.default], () => y.default.isReady(t), [t]);
-        return (0, n.jsxs)('div', {
+        return (0, n.jsxs)("div", {
             className: w.panelGroup,
             children: [
                 (0, n.jsx)(d.Text, {
-                    variant: 'text-md/semibold',
-                    color: 'text-primary',
-                    children: ''.concat(t)
+                    variant: "text-md/semibold",
+                    color: "text-primary",
+                    children: "".concat(t),
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-secondary',
+                    variant: "text-sm/normal",
+                    color: "text-secondary",
                     children: [
-                        'Screen Type Resolution: ',
+                        "Screen Type Resolution: ",
                         ((e) => {
                             var t;
                             let a = null == (t = r[e]) ? void 0 : t.timer;
-                            if (null == a || null == a.screenTypeResolutionTimestamp) return '...';
+                            if (null == a || null == a.screenTypeResolutionTimestamp) return "...";
                             let n = a.screenTypeResolutionTimestamp - a.startTrackingTimestamp;
-                            return ''.concat(n.toFixed(2), 'ms');
-                        })(t)
-                    ]
+                            return "".concat(n.toFixed(2), "ms");
+                        })(t),
+                    ],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-secondary',
+                    variant: "text-sm/normal",
+                    color: "text-secondary",
                     children: [
-                        'Window Creation: ',
+                        "Window Creation: ",
                         ((e) => {
                             var t;
                             let a = null == (t = r[e]) ? void 0 : t.timer;
-                            if (null == a || null == a.moduleTrackingTimestamp || null == a.screenTypeResolutionTimestamp) return '...';
+                            if (
+                                null == a ||
+                                null == a.moduleTrackingTimestamp ||
+                                null == a.screenTypeResolutionTimestamp
+                            )
+                                return "...";
                             let n = a.moduleTrackingTimestamp - a.screenTypeResolutionTimestamp;
-                            return ''.concat(n.toFixed(2), 'ms');
-                        })(t)
-                    ]
+                            return "".concat(n.toFixed(2), "ms");
+                        })(t),
+                    ],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-secondary',
+                    variant: "text-sm/normal",
+                    color: "text-secondary",
                     children: [
-                        'Rendering: ',
+                        "Rendering: ",
                         ((e) => {
                             var t;
                             let a = null == (t = r[e]) ? void 0 : t.timer;
-                            if (null == a || null == a.overlayRenderingTimestamp || null == a.moduleTrackingTimestamp) return '...';
+                            if (null == a || null == a.overlayRenderingTimestamp || null == a.moduleTrackingTimestamp)
+                                return "...";
                             let n = a.overlayRenderingTimestamp - a.moduleTrackingTimestamp;
-                            return ''.concat(n.toFixed(2), 'ms');
-                        })(t)
-                    ]
+                            return "".concat(n.toFixed(2), "ms");
+                        })(t),
+                    ],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-primary',
-                    children: ['Bridge Status: ', a.get(Number(t))]
+                    variant: "text-sm/normal",
+                    color: "text-primary",
+                    children: ["Bridge Status: ", a.get(Number(t))],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-primary',
-                    children: ['isInputLocked: ', l]
+                    variant: "text-sm/normal",
+                    color: "text-primary",
+                    children: ["isInputLocked: ", l],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-primary',
-                    children: ['isInputLockedV3: ', i]
+                    variant: "text-sm/normal",
+                    color: "text-primary",
+                    children: ["isInputLockedV3: ", i],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-primary',
-                    children: ['isInputLockedV2: ', s]
+                    variant: "text-sm/normal",
+                    color: "text-primary",
+                    children: ["isInputLockedV2: ", s],
                 }),
                 (0, n.jsxs)(d.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-primary',
-                    children: ['isReady: ', c]
-                })
-            ]
+                    variant: "text-sm/normal",
+                    color: "text-primary",
+                    children: ["isReady: ", c],
+                }),
+            ],
         });
     });
 function U(e) {
@@ -370,12 +382,12 @@ function U(e) {
                 let a = t(S.$S);
                 (0, u.A4)(a);
             }
-        }
+        },
     ];
 }
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return t ? ''.concat(e.toFixed(2), 'ms') : new Date(e).toLocaleTimeString();
+    return t ? "".concat(e.toFixed(2), "ms") : new Date(e).toLocaleTimeString();
 }
 let z = r.memo(function (e) {
     var { pid: t } = e,
@@ -389,32 +401,30 @@ let z = r.memo(function (e) {
                         n,
                         r = {},
                         l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) ((a = l[n]), t.indexOf(a) >= 0 || (r[a] = e[a]));
+                    for (n = 0; n < l.length; n++) (a = l[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++) ((a = l[n]), !(t.indexOf(a) >= 0) && Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]));
+                for (n = 0; n < l.length; n++)
+                    (a = l[n]),
+                        !(t.indexOf(a) >= 0) && Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]);
             }
             return r;
-        })(e, ['pid']);
-    let r = (0, o.e7)(
-        [f.default],
-        () => {
-            var e, a;
-            if (null == t) return 'Unknown';
-            let n = null == (e = f.default.getTrackedGameByPid(t)) ? void 0 : e.gameName;
-            return null != n ? ((Z[t] = n), n) : null != (a = Z[t]) ? a : 'Unknown';
-        },
-        [t]
-    );
+        })(e, ["pid"]);
+    let r = (0, o.e7)([f.default], () => {
+        var e, a;
+        if (null == t) return "Unknown";
+        let n = null == (e = f.default.getTrackedGameByPid(t)) ? void 0 : e.gameName;
+        return null != n ? ((Z[t] = n), n) : null != (a = Z[t]) ? a : "Unknown";
+    }, [t]);
     return (0, n.jsx)(
         d.Text,
         k(R({}, a), {
-            variant: 'text-md/semibold',
-            color: 'text-primary',
-            children: r
-        })
+            variant: "text-md/semibold",
+            color: "text-primary",
+            children: r,
+        }),
     );
 });
 function G() {
@@ -423,10 +433,10 @@ function G() {
         a = () => {
             m.Z.setRenderDebugMode(!v.ZP.hasRenderDebugMode(p.GO.TrackFocusPIDs), p.GO.TrackFocusPIDs);
         };
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: w.panelGroup,
         children: [
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 className: w.panelHeader,
                 children: [
                     (0, n.jsx)(d.XZJ, {
@@ -436,30 +446,30 @@ function G() {
                         type: d.XZJ.Types.INVERTED,
                         shape: d.XZJ.Shapes.BOX,
                         children: (0, n.jsx)(d.Text, {
-                            tag: 'span',
-                            variant: 'text-md/normal',
-                            color: 'text-muted',
-                            children: 'Track Focus Pids'
-                        })
+                            tag: "span",
+                            variant: "text-md/normal",
+                            color: "text-muted",
+                            children: "Track Focus Pids",
+                        }),
                     }),
                     (0, n.jsx)(d.P3F, {
                         className: w.panelButton,
                         onClick: () => m.Z.clearTrackedPids(),
                         children: (0, n.jsx)(d.XHJ, {
-                            size: 'md',
-                            color: 'currentColor'
-                        })
-                    })
-                ]
+                            size: "md",
+                            color: "currentColor",
+                        }),
+                    }),
+                ],
             }),
             (0, n.jsxs)(d.zJl, {
                 className: i()(w.panelGroup, w.scroller),
                 children: [
                     0 === t.length &&
                         (0, n.jsx)(d.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-default',
-                            children: 'No recent focused pids'
+                            variant: "text-sm/normal",
+                            color: "text-default",
+                            children: "No recent focused pids",
                         }),
                     [...t].reverse().map((e) => {
                         let [t, a, l] = e;
@@ -467,57 +477,57 @@ function G() {
                             r.Fragment,
                             {
                                 children: (0, n.jsx)(d.ua7, {
-                                    position: 'left',
-                                    text: l === p.d5.TRACK_FOCUS ? 'Tracked Focus Event' : 'Clear Focus Event',
+                                    position: "left",
+                                    text: l === p.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
                                     children: (e) => {
                                         var r;
                                         return (0, n.jsx)(
-                                            'div',
+                                            "div",
                                             k(R({}, e), {
                                                 children: (0, n.jsxs)(d.Text, {
-                                                    variant: 'text-sm/medium',
-                                                    color: l === p.d5.TRACK_FOCUS ? 'text-default' : 'text-danger',
+                                                    variant: "text-sm/medium",
+                                                    color: l === p.d5.TRACK_FOCUS ? "text-default" : "text-danger",
                                                     children: [
                                                         (0, n.jsx)(z, {
                                                             pid: a,
-                                                            tag: 'span'
+                                                            tag: "span",
                                                         }),
-                                                        ' - ',
-                                                        null != (r = null == a ? void 0 : a.toString()) ? r : 'null',
-                                                        ' @ ',
-                                                        F(t, !0)
-                                                    ]
-                                                })
-                                            })
+                                                        " - ",
+                                                        null != (r = null == a ? void 0 : a.toString()) ? r : "null",
+                                                        " @ ",
+                                                        F(t, !0),
+                                                    ],
+                                                }),
+                                            }),
                                         );
-                                    }
-                                })
+                                    },
+                                }),
                             },
-                            ''.concat(a, '-').concat(t)
+                            "".concat(a, "-").concat(t),
                         );
-                    })
-                ]
-            })
-        ]
+                    }),
+                ],
+            }),
+        ],
     });
 }
 let V = r.memo(function (e) {
         let { pid: t } = e,
-            a = (0, o.e7)(
-                [f.default, h.ZP],
-                () => {
-                    var e, a, n;
-                    if (null == t) return null;
-                    let r = null == (e = f.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
-                    return null != r ? r : null != (n = null == (a = h.ZP.getGameForPID(t)) ? void 0 : a.fullscreenType) ? n : x.Jx.UNKNOWN;
-                },
-                [t]
-            );
+            a = (0, o.e7)([f.default, h.ZP], () => {
+                var e, a, n;
+                if (null == t) return null;
+                let r = null == (e = f.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
+                return null != r
+                    ? r
+                    : null != (n = null == (a = h.ZP.getGameForPID(t)) ? void 0 : a.fullscreenType)
+                      ? n
+                      : x.Jx.UNKNOWN;
+            }, [t]);
         return (0, n.jsxs)(d.Text, {
-            variant: 'text-sm/normal',
-            color: 'text-secondary',
-            tag: 'span',
-            children: ['Original Screen Type: ', null != a ? (0, b.sS)(a) : 'Unknown']
+            variant: "text-sm/normal",
+            color: "text-secondary",
+            tag: "span",
+            children: ["Original Screen Type: ", null != a ? (0, b.sS)(a) : "Unknown"],
         });
     }),
     H = r.memo(function () {
@@ -548,44 +558,44 @@ let V = r.memo(function (e) {
                                                 {
                                                     pid: r,
                                                     screenType: l,
-                                                    timestamp: i
-                                                }
+                                                    timestamp: i,
+                                                },
                                             ]),
                                         e
                                     );
                                 },
-                                R({}, e)
-                            )
+                                R({}, e),
+                            ),
                         );
                     }, +N.Z.Millis.SECOND)),
                     () => clearInterval(l.current)
                 ),
-                []
+                [],
             ),
             (0, n.jsx)(d.ua7, {
-                position: 'left',
+                position: "left",
                 text: "The most recent screen types we've logged, indexed by pid",
                 children: (a) =>
                     (0, n.jsx)(
-                        'div',
+                        "div",
                         k(R({}, a), {
                             children: (0, n.jsxs)(d.zJl, {
                                 className: i()(w.panelGroup, w.scroller),
                                 children: [
                                     0 === Object.keys(e).length &&
                                         (0, n.jsx)(d.Text, {
-                                            variant: 'text-sm/normal',
-                                            color: 'text-default',
-                                            children: 'No recent screen types'
+                                            variant: "text-sm/normal",
+                                            color: "text-default",
+                                            children: "No recent screen types",
                                         }),
                                     Object.values(e).map((e) =>
                                         (0, n.jsxs)(
-                                            'div',
+                                            "div",
                                             {
                                                 children: [
                                                     (0, n.jsx)(z, {
-                                                        tag: 'div',
-                                                        pid: e.pid
+                                                        tag: "div",
+                                                        pid: e.pid,
                                                     }),
                                                     (0, n.jsx)(V, { pid: e.pid }),
                                                     null != t[e.pid] &&
@@ -594,25 +604,25 @@ let V = r.memo(function (e) {
                                                             return (0, n.jsx)(
                                                                 d.Text,
                                                                 {
-                                                                    variant: 'text-xs/normal',
-                                                                    color: 'text-default',
-                                                                    children: ''
-                                                                        .concat(a, ':')
-                                                                        .concat((0, b.sS)(a), ' @ ')
-                                                                        .concat(F(r))
+                                                                    variant: "text-xs/normal",
+                                                                    color: "text-default",
+                                                                    children: ""
+                                                                        .concat(a, ":")
+                                                                        .concat((0, b.sS)(a), " @ ")
+                                                                        .concat(F(r)),
                                                                 },
-                                                                ''.concat(e.pid, '-').concat(a, '-').concat(r)
+                                                                "".concat(e.pid, "-").concat(a, "-").concat(r),
                                                             );
-                                                        })
-                                                ]
+                                                        }),
+                                                ],
                                             },
-                                            e.pid
-                                        )
-                                    )
-                                ]
-                            })
-                        })
-                    )
+                                            e.pid,
+                                        ),
+                                    ),
+                                ],
+                            }),
+                        }),
+                    ),
             })
         );
     }),
@@ -624,51 +634,51 @@ let V = r.memo(function (e) {
             [i, s] = (0, o.Wu)([j.Z], () => [j.Z.enabled, j.Z.keepOpen]),
             c = (0, o.e7)([y.default], () => y.default.getFocusedPID()),
             u = (0, o.e7)([y.default], () => y.default.isFocusedPidOutOfProcess());
-        return (0, n.jsxs)('div', {
+        return (0, n.jsxs)("div", {
             className: w.panelGroup,
             children: [
                 0 === Object.keys(a).length &&
                     (0, n.jsx)(d.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'text-default',
-                        children: 'No tracked game times'
+                        variant: "text-sm/normal",
+                        color: "text-default",
+                        children: "No tracked game times",
                     }),
                 Object.values(a).map((e) => (0, n.jsx)(B, { pid: e.pid }, e.pid)),
-                (0, n.jsxs)('div', {
+                (0, n.jsxs)("div", {
                     children: [
                         (0, n.jsxs)(d.Text, {
-                            variant: 'text-sm/medium',
-                            color: 'text-primary',
-                            children: ['focusedPID: ', null != (e = null == c ? void 0 : c.toString()) ? e : 'null']
+                            variant: "text-sm/medium",
+                            color: "text-primary",
+                            children: ["focusedPID: ", null != (e = null == c ? void 0 : c.toString()) ? e : "null"],
                         }),
                         (0, n.jsxs)(d.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-secondary',
-                            children: ['isFocusedPidOutOfProcess: ', u ? 'Yes' : 'No']
+                            variant: "text-sm/normal",
+                            color: "text-secondary",
+                            children: ["isFocusedPidOutOfProcess: ", u ? "Yes" : "No"],
                         }),
                         (0, n.jsxs)(d.Text, {
-                            variant: 'text-sm/medium',
-                            color: 'text-primary',
-                            children: ['processPid: ', null != (t = null == r ? void 0 : r.toString()) ? t : 'unknown']
+                            variant: "text-sm/medium",
+                            color: "text-primary",
+                            children: ["processPid: ", null != (t = null == r ? void 0 : r.toString()) ? t : "unknown"],
                         }),
                         (0, n.jsxs)(d.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-secondary',
-                            children: ['isOOPEnabledForPid: ', l ? 'Yes' : 'No']
+                            variant: "text-sm/normal",
+                            color: "text-secondary",
+                            children: ["isOOPEnabledForPid: ", l ? "Yes" : "No"],
                         }),
                         (0, n.jsxs)(d.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-secondary',
-                            children: ['SoundboardOverlay.enabled: ', i ? 'Yes' : 'No']
+                            variant: "text-sm/normal",
+                            color: "text-secondary",
+                            children: ["SoundboardOverlay.enabled: ", i ? "Yes" : "No"],
                         }),
                         (0, n.jsxs)(d.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-secondary',
-                            children: ['SoundboardOverlay.keepOpen: ', s ? 'Yes' : 'No']
-                        })
-                    ]
-                })
-            ]
+                            variant: "text-sm/normal",
+                            color: "text-secondary",
+                            children: ["SoundboardOverlay.keepOpen: ", s ? "Yes" : "No"],
+                        }),
+                    ],
+                }),
+            ],
         });
     }),
     K = r.memo(function () {
@@ -693,15 +703,15 @@ let V = r.memo(function (e) {
             b = () => {
                 u(p.GO.ForceGPUBoost);
             };
-        return (0, n.jsxs)('div', {
+        return (0, n.jsxs)("div", {
             className: w.panelGroup,
             children: [
                 (0, n.jsx)(d.ua7, {
-                    position: 'left',
-                    text: 'Enables a red border around click zones to help with debugging.',
+                    position: "left",
+                    text: "Enables a red border around click zones to help with debugging.",
                     children: (e) =>
                         (0, n.jsx)(
-                            'div',
+                            "div",
                             k(R({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: l,
@@ -710,21 +720,21 @@ let V = r.memo(function (e) {
                                     type: d.XZJ.Types.INVERTED,
                                     shape: d.XZJ.Shapes.BOX,
                                     children: (0, n.jsx)(d.Text, {
-                                        tag: 'span',
-                                        variant: 'text-md/normal',
-                                        color: 'text-muted',
-                                        children: 'Enable Click Zone Debug Mode'
-                                    })
-                                })
-                            })
-                        )
+                                        tag: "span",
+                                        variant: "text-md/normal",
+                                        color: "text-muted",
+                                        children: "Enable Click Zone Debug Mode",
+                                    }),
+                                }),
+                            }),
+                        ),
                 }),
                 (0, n.jsx)(d.ua7, {
-                    position: 'left',
-                    text: 'Enables a border around any widgets that are rendered on screen that are pinned (even if they are hidden). Blue = pinned widgets, Gray = unpinned widgets',
+                    position: "left",
+                    text: "Enables a border around any widgets that are rendered on screen that are pinned (even if they are hidden). Blue = pinned widgets, Gray = unpinned widgets",
                     children: (e) =>
                         (0, n.jsx)(
-                            'div',
+                            "div",
                             k(R({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: i,
@@ -733,21 +743,21 @@ let V = r.memo(function (e) {
                                     type: d.XZJ.Types.INVERTED,
                                     shape: d.XZJ.Shapes.BOX,
                                     children: (0, n.jsx)(d.Text, {
-                                        tag: 'span',
-                                        variant: 'text-md/normal',
-                                        color: 'text-muted',
-                                        children: 'Enable Render Debug Mode'
-                                    })
-                                })
-                            })
-                        )
+                                        tag: "span",
+                                        variant: "text-md/normal",
+                                        color: "text-muted",
+                                        children: "Enable Render Debug Mode",
+                                    }),
+                                }),
+                            }),
+                        ),
                 }),
                 (0, n.jsx)(d.ua7, {
-                    position: 'left',
-                    text: 'Disables GPU Boost, which can help with performance when games compete for GPU resources.',
+                    position: "left",
+                    text: "Disables GPU Boost, which can help with performance when games compete for GPU resources.",
                     children: (e) =>
                         (0, n.jsx)(
-                            'div',
+                            "div",
                             k(R({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: s,
@@ -756,21 +766,21 @@ let V = r.memo(function (e) {
                                     type: d.XZJ.Types.INVERTED,
                                     shape: d.XZJ.Shapes.BOX,
                                     children: (0, n.jsx)(d.Text, {
-                                        tag: 'span',
-                                        variant: 'text-md/normal',
-                                        color: 'text-muted',
-                                        children: 'Disable GPU Boost'
-                                    })
-                                })
-                            })
-                        )
+                                        tag: "span",
+                                        variant: "text-md/normal",
+                                        color: "text-muted",
+                                        children: "Disable GPU Boost",
+                                    }),
+                                }),
+                            }),
+                        ),
                 }),
                 (0, n.jsx)(d.ua7, {
-                    position: 'left',
-                    text: 'Forces GPU Boost, which can help with performance when games compete for GPU resources.',
+                    position: "left",
+                    text: "Forces GPU Boost, which can help with performance when games compete for GPU resources.",
                     children: (e) =>
                         (0, n.jsx)(
-                            'div',
+                            "div",
                             k(R({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: c,
@@ -780,21 +790,21 @@ let V = r.memo(function (e) {
                                     type: d.XZJ.Types.INVERTED,
                                     shape: d.XZJ.Shapes.BOX,
                                     children: (0, n.jsx)(d.Text, {
-                                        tag: 'span',
-                                        variant: 'text-md/normal',
-                                        color: 'text-muted',
-                                        children: 'Force GPU Boost'
-                                    })
-                                })
-                            })
-                        )
+                                        tag: "span",
+                                        variant: "text-md/normal",
+                                        color: "text-muted",
+                                        children: "Force GPU Boost",
+                                    }),
+                                }),
+                            }),
+                        ),
                 }),
                 (0, n.jsx)(d.ua7, {
-                    position: 'left',
-                    text: 'Creates a widget that has a clickzone inside of it, which will show/hide every few seconds.',
+                    position: "left",
+                    text: "Creates a widget that has a clickzone inside of it, which will show/hide every few seconds.",
                     children: (a) =>
                         (0, n.jsx)(
-                            'div',
+                            "div",
                             k(R({}, a), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: null != e,
@@ -803,21 +813,21 @@ let V = r.memo(function (e) {
                                     type: d.XZJ.Types.INVERTED,
                                     shape: d.XZJ.Shapes.BOX,
                                     children: (0, n.jsx)(d.Text, {
-                                        tag: 'span',
-                                        variant: 'text-md/normal',
-                                        color: 'text-muted',
-                                        children: 'Click Zone Debug Widget'
-                                    })
-                                })
-                            })
-                        )
+                                        tag: "span",
+                                        variant: "text-md/normal",
+                                        color: "text-muted",
+                                        children: "Click Zone Debug Widget",
+                                    }),
+                                }),
+                            }),
+                        ),
                 }),
                 (0, n.jsx)(d.ua7, {
-                    position: 'left',
+                    position: "left",
                     text: "Creates a widget that shows the overlay's window performance metrics.",
                     children: (e) =>
                         (0, n.jsx)(
-                            'div',
+                            "div",
                             k(R({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: null != a,
@@ -826,16 +836,16 @@ let V = r.memo(function (e) {
                                     type: d.XZJ.Types.INVERTED,
                                     shape: d.XZJ.Shapes.BOX,
                                     children: (0, n.jsx)(d.Text, {
-                                        tag: 'span',
-                                        variant: 'text-md/normal',
-                                        color: 'text-muted',
-                                        children: 'Overlay Performance Debug Widget'
-                                    })
-                                })
-                            })
-                        )
-                })
-            ]
+                                        tag: "span",
+                                        variant: "text-md/normal",
+                                        color: "text-muted",
+                                        children: "Overlay Performance Debug Widget",
+                                    }),
+                                }),
+                            }),
+                        ),
+                }),
+            ],
         });
     }),
     X = r.memo(function () {
@@ -845,19 +855,19 @@ let V = r.memo(function (e) {
             children: [
                 t.length > 0 &&
                     (0, n.jsx)(d.ua7, {
-                        position: 'left',
-                        text: 'Games that are running but not tracked by the overlay',
+                        position: "left",
+                        text: "Games that are running but not tracked by the overlay",
                         children: (e) =>
                             (0, n.jsx)(
-                                'div',
+                                "div",
                                 k(R({}, e), {
-                                    children: (0, n.jsxs)('div', {
+                                    children: (0, n.jsxs)("div", {
                                         className: w.panelGroup,
                                         children: [
                                             (0, n.jsx)(d.Text, {
-                                                variant: 'text-md/bold',
-                                                color: 'text-danger',
-                                                children: 'Untracked Running Games'
+                                                variant: "text-md/bold",
+                                                color: "text-danger",
+                                                children: "Untracked Running Games",
                                             }),
                                             t.map((e) =>
                                                 (0, n.jsxs)(n.Fragment, {
@@ -865,76 +875,79 @@ let V = r.memo(function (e) {
                                                         (0, n.jsx)(
                                                             d.Text,
                                                             {
-                                                                variant: 'text-sm/normal',
-                                                                color: 'text-danger',
-                                                                children: ''.concat(e.pid, ' - ').concat(e.name, ' (').concat(e.exeName, ')')
+                                                                variant: "text-sm/normal",
+                                                                color: "text-danger",
+                                                                children: ""
+                                                                    .concat(e.pid, " - ")
+                                                                    .concat(e.name, " (")
+                                                                    .concat(e.exeName, ")"),
                                                             },
-                                                            e.pid
+                                                            e.pid,
                                                         ),
-                                                        (0, n.jsx)(V, { pid: e.pid })
-                                                    ]
-                                                })
-                                            )
-                                        ]
-                                    })
-                                })
-                            )
+                                                        (0, n.jsx)(V, { pid: e.pid }),
+                                                    ],
+                                                }),
+                                            ),
+                                        ],
+                                    }),
+                                }),
+                            ),
                     }),
                 (0, n.jsx)(d.ua7, {
-                    position: 'left',
-                    text: 'The current running games process information',
+                    position: "left",
+                    text: "The current running games process information",
                     children: (t) =>
                         (0, n.jsx)(
-                            'div',
+                            "div",
                             k(R({}, t), {
-                                children: (0, n.jsxs)('div', {
+                                children: (0, n.jsxs)("div", {
                                     className: w.panelGroup,
                                     children: [
                                         0 === Object.keys(e).length &&
                                             (0, n.jsx)(d.Text, {
-                                                variant: 'text-sm/normal',
-                                                color: 'text-default',
-                                                children: 'No running games'
+                                                variant: "text-sm/normal",
+                                                color: "text-default",
+                                                children: "No running games",
                                             }),
-                                        Object.values(e).map((e) => (0, n.jsx)(M, { trackedGame: e }, e.pid))
-                                    ]
-                                })
-                            })
-                        )
-                })
-            ]
+                                        Object.values(e).map((e) => (0, n.jsx)(M, { trackedGame: e }, e.pid)),
+                                    ],
+                                }),
+                            }),
+                        ),
+                }),
+            ],
         });
     }),
     Y = r.memo(function () {
         let e = (0, o.e7)([f.default], () => f.default.getForcedRenderMode()),
             [t, a] = r.useState(e),
             l = (e) => {
-                (a(e), m.Z.forceRenderMode(e));
+                a(e), m.Z.forceRenderMode(e);
             },
             i = [
                 {
                     label: p.R5.UNSET,
-                    value: p.R5.UNSET
+                    value: p.R5.UNSET,
                 },
                 {
                     label: p.R5.IN_PROCESS_V2,
-                    value: p.R5.IN_PROCESS_V2
+                    value: p.R5.IN_PROCESS_V2,
                 },
                 {
                     label: p.R5.OUT_OF_PROCESS_V3,
-                    value: p.R5.OUT_OF_PROCESS_V3
+                    value: p.R5.OUT_OF_PROCESS_V3,
                 },
                 {
                     label: p.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
-                    value: p.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
-                }
-            ].map((t) => k(R({}, t), { label: ''.concat(t.label, ' ').concat(e === t.value ? '(current)' : '') }));
+                    value: p.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                },
+            ].map((t) => k(R({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
         return (0, n.jsx)(d.ua7, {
-            position: 'left',
-            text: 'Override the overlay render mode',
+            position: "left",
+            text: "Override the overlay render mode",
             children: (e) =>
                 (0, n.jsx)(
-                    'div',
+                    "div",
                     k(R({}, e), {
                         className: w.panelGroup,
                         children: (0, n.jsx)(d.PhF, {
@@ -942,17 +955,24 @@ let V = r.memo(function (e) {
                             isSelected: (e) => e === t,
                             options: i,
                             select: l,
-                            popoutLayerContext: E.O$
-                        })
-                    })
-                )
+                            popoutLayerContext: E.O$,
+                        }),
+                    }),
+                ),
         });
     });
 function J() {
     return (0, n.jsx)(d.w0Z, {
-        children: (0, n.jsxs)('div', {
+        children: (0, n.jsxs)("div", {
             className: i()(I.panel, w.panel),
-            children: [(0, n.jsx)(K, {}), (0, n.jsx)(Y, {}), (0, n.jsx)(X, {}), (0, n.jsx)(W, {}), (0, n.jsx)(G, {}), (0, n.jsx)(H, {})]
-        })
+            children: [
+                (0, n.jsx)(K, {}),
+                (0, n.jsx)(Y, {}),
+                (0, n.jsx)(X, {}),
+                (0, n.jsx)(W, {}),
+                (0, n.jsx)(G, {}),
+                (0, n.jsx)(H, {}),
+            ],
+        }),
     });
 }

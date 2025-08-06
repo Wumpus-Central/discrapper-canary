@@ -25,108 +25,117 @@ var n = r(73800),
                         default: {
                             picker: {
                                 width: t,
-                                background: '#fff',
-                                borderRadius: '2px',
-                                boxShadow: '0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3)',
-                                boxSizing: 'initial',
-                                fontFamily: 'Menlo'
+                                background: "#fff",
+                                borderRadius: "2px",
+                                boxShadow: "0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3)",
+                                boxSizing: "initial",
+                                fontFamily: "Menlo",
                             },
                             saturation: {
-                                width: '100%',
-                                paddingBottom: '55%',
-                                position: 'relative',
-                                borderRadius: '2px 2px 0 0',
-                                overflow: 'hidden'
+                                width: "100%",
+                                paddingBottom: "55%",
+                                position: "relative",
+                                borderRadius: "2px 2px 0 0",
+                                overflow: "hidden",
                             },
-                            Saturation: { radius: '2px 2px 0 0' },
-                            body: { padding: '16px 16px 12px' },
-                            controls: { display: 'flex' },
-                            color: { width: '32px' },
+                            Saturation: { radius: "2px 2px 0 0" },
+                            body: { padding: "16px 16px 12px" },
+                            controls: { display: "flex" },
+                            color: { width: "32px" },
                             swatch: {
-                                marginTop: '6px',
-                                width: '16px',
-                                height: '16px',
-                                borderRadius: '8px',
-                                position: 'relative',
-                                overflow: 'hidden'
+                                marginTop: "6px",
+                                width: "16px",
+                                height: "16px",
+                                borderRadius: "8px",
+                                position: "relative",
+                                overflow: "hidden",
                             },
                             active: {
-                                absolute: '0px 0px 0px 0px',
-                                borderRadius: '8px',
-                                boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.1)',
-                                background: 'rgba(' + a.r + ', ' + a.g + ', ' + a.b + ', ' + a.a + ')',
-                                zIndex: '2'
+                                absolute: "0px 0px 0px 0px",
+                                borderRadius: "8px",
+                                boxShadow: "inset 0 0 0 1px rgba(0,0,0,.1)",
+                                background: "rgba(" + a.r + ", " + a.g + ", " + a.b + ", " + a.a + ")",
+                                zIndex: "2",
                             },
-                            toggles: { flex: '1' },
+                            toggles: { flex: "1" },
                             hue: {
-                                height: '10px',
-                                position: 'relative',
-                                marginBottom: '8px'
+                                height: "10px",
+                                position: "relative",
+                                marginBottom: "8px",
                             },
-                            Hue: { radius: '2px' },
+                            Hue: { radius: "2px" },
                             alpha: {
-                                height: '10px',
-                                position: 'relative'
+                                height: "10px",
+                                position: "relative",
                             },
-                            Alpha: { radius: '2px' }
+                            Alpha: { radius: "2px" },
                         },
                         disableAlpha: {
-                            color: { width: '22px' },
-                            alpha: { display: 'none' },
-                            hue: { marginBottom: '0px' },
+                            color: { width: "22px" },
+                            alpha: { display: "none" },
+                            hue: { marginBottom: "0px" },
                             swatch: {
-                                width: '10px',
-                                height: '10px',
-                                marginTop: '0px'
-                            }
-                        }
+                                width: "10px",
+                                height: "10px",
+                                marginTop: "0px",
+                            },
+                        },
                     },
-                    void 0 === v ? {} : v
+                    void 0 === v ? {} : v,
                 ),
-                { disableAlpha: o }
+                { disableAlpha: o },
             );
         return n.createElement(
-            'div',
+            "div",
             {
                 style: y.picker,
-                className: 'chrome-picker ' + (void 0 === g ? '' : g)
+                className: "chrome-picker " + (void 0 === g ? "" : g),
             },
             n.createElement(
-                'div',
+                "div",
                 { style: y.saturation },
                 n.createElement(s.OQ, {
                     style: y.Saturation,
                     hsl: f,
                     hsv: d,
                     pointer: p.Z,
-                    onChange: r
-                })
+                    onChange: r,
+                }),
             ),
             n.createElement(
-                'div',
+                "div",
                 { style: y.body },
                 n.createElement(
-                    'div',
+                    "div",
                     {
                         style: y.controls,
-                        className: 'flexbox-fix'
+                        className: "flexbox-fix",
                     },
-                    n.createElement('div', { style: y.color }, n.createElement('div', { style: y.swatch }, n.createElement('div', { style: y.active }), n.createElement(s.QN, { renderers: b }))),
                     n.createElement(
-                        'div',
+                        "div",
+                        { style: y.color },
+                        n.createElement(
+                            "div",
+                            { style: y.swatch },
+                            n.createElement("div", { style: y.active }),
+                            n.createElement(s.QN, { renderers: b }),
+                        ),
+                    ),
+                    n.createElement(
+                        "div",
                         { style: y.toggles },
                         n.createElement(
-                            'div',
+                            "div",
                             { style: y.hue },
                             n.createElement(s.PS, {
                                 style: y.Hue,
                                 hsl: f,
                                 pointer: c.Z,
-                                onChange: r
-                            })
+                                onChange: r,
+                            }),
                         ),
                         n.createElement(
-                            'div',
+                            "div",
                             { style: y.alpha },
                             n.createElement(s.xV, {
                                 style: y.Alpha,
@@ -134,10 +143,10 @@ var n = r(73800),
                                 hsl: f,
                                 pointer: c.Z,
                                 renderers: b,
-                                onChange: r
-                            })
-                        )
-                    )
+                                onChange: r,
+                            }),
+                        ),
+                    ),
                 ),
                 n.createElement(u.Z, {
                     rgb: a,
@@ -145,20 +154,20 @@ var n = r(73800),
                     hex: h,
                     view: x,
                     onChange: r,
-                    disableAlpha: o
-                })
-            )
+                    disableAlpha: o,
+                }),
+            ),
         );
     };
-((f.propTypes = {
+(f.propTypes = {
     width: a().oneOfType([a().string, a().number]),
     disableAlpha: a().bool,
     styles: a().object,
-    defaultView: a().oneOf(['hex', 'rgb', 'hsl'])
+    defaultView: a().oneOf(["hex", "rgb", "hsl"]),
 }),
     (f.defaultProps = {
         width: 225,
         disableAlpha: !1,
-        styles: {}
+        styles: {},
     }),
-    (0, s.t1)(f));
+    (0, s.t1)(f);

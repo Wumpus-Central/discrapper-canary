@@ -13,20 +13,20 @@ function u(e) {
     if (!(null != n && (n.value > 0 || (null == n ? void 0 : n.multiplier) > 1))) return null;
     let { multiplier: u } = n,
         { color: d } = (0, a.yz)(u);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: c.container,
         children: [
             (0, r.jsx)(i.Text, {
-                variant: 'text-xs/normal',
-                children: l.intl.string(l.t.Jr2519)
+                variant: "text-xs/normal",
+                children: l.intl.string(l.t.Jr2519),
             }),
             (0, r.jsx)(i.Exd, {
                 foregroundColor: (0, o.Lq)(d),
                 className: c.progress,
                 size: i.Exd.Sizes.LARGE,
                 percent: 100 * (0, a.nc)(n),
-                animate: !0
-            })
-        ]
+                animate: !0,
+            }),
+        ],
     });
 }

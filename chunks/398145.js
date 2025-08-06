@@ -9,15 +9,15 @@ function a(e) {
     return [
         {
             section: o.oh.BOT_INFO,
-            text: i.intl.string(i.t.jGoPJS)
+            text: i.intl.string(i.t.jGoPJS),
         },
         {
             section: o.oh.MUTUAL_GUILDS,
-            text: (0, l.Z)(n)
+            text: (0, l.Z)(n),
         },
         {
             section: o.oh.BOT_DATA_ACCESS,
-            text: i.intl.string(i.t.WstFb2)
-        }
+            text: i.intl.string(i.t.WstFb2),
+        },
     ];
 }

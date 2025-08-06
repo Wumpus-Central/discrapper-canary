@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => c }), t(388685), t(539854));
+t.d(n, { Z: () => c }), t(388685), t(539854);
 var l = t(73800),
     i = t(442837),
     r = t(924301),
@@ -18,6 +18,6 @@ function c(e, n) {
             s = (e) => {
                 i.has(e.user_id) || (r.push(e), i.add(e.user_id));
             };
-        return (n.forEach(s), l.forEach(s), r);
+        return n.forEach(s), l.forEach(s), r;
     }, [t, c]);
 }

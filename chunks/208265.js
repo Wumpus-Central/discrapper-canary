@@ -1,4 +1,4 @@
-(t.d(n, { default: () => p }), t(388685));
+t.d(n, { default: () => p }), t(388685);
 var i = t(255367),
     s = t(73800),
     a = t(990547),
@@ -23,7 +23,7 @@ function p(e) {
         g(p);
     }, [g, p]);
     let f = s.useCallback(() => {
-            (d.Z.close(), C());
+            d.Z.close(), C();
         }, [C]),
         S = s.useCallback(() => {
             var e;
@@ -39,8 +39,8 @@ function p(e) {
         transitionState: t,
         disableTrack: !0,
         size: l.CgR.DYNAMIC,
-        parentComponent: 'AppealIngestionModal',
-        children: (0, i.jsx)('div', {
+        parentComponent: "AppealIngestionModal",
+        children: (0, i.jsx)("div", {
             className: h.container,
             children: (0, i.jsxs)(l.MyZ, {
                 activeSlide: N,
@@ -57,8 +57,8 @@ function p(e) {
                             isSpam: E,
                             isCoppa: T,
                             appealIngestionType: v,
-                            isDsaEligible: I
-                        })
+                            isDsaEligible: I,
+                        }),
                     }),
                     (0, i.jsx)(l.Mi4, {
                         id: u.Cs.COLLECT_SIGNAL,
@@ -68,8 +68,8 @@ function p(e) {
                             isDsaEligible: I,
                             onClose: f,
                             onNext: S,
-                            onBack: k
-                        })
+                            onBack: k,
+                        }),
                     }),
                     (0, i.jsx)(l.Mi4, {
                         id: u.Cs.CONFIRM_SUBMISSION,
@@ -79,17 +79,17 @@ function p(e) {
                             isDsaEligible: I,
                             onClose: f,
                             onNext: S,
-                            onBack: k
-                        })
+                            onBack: k,
+                        }),
                     }),
                     (0, i.jsx)(l.Mi4, {
                         id: u.Cs.REQUEST_SENT,
                         impressionName: a.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
                         impressionProperties: u.ZW,
-                        children: (0, i.jsx)(x.Z, { onNext: S })
-                    })
-                ]
-            })
-        })
+                        children: (0, i.jsx)(x.Z, { onNext: S }),
+                    }),
+                ],
+            }),
+        }),
     });
 }

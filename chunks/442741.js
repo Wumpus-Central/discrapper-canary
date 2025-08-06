@@ -1,6 +1,6 @@
 n.d(t, {
     Y9: () => d,
-    rT: () => f
+    rT: () => f,
 });
 var r = n(46973),
     i = n(569545),
@@ -15,7 +15,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,9 +45,9 @@ function d() {
             channelId: null != t ? t : void 0,
             mediaSessionId: null != (e = a.Z.getMediaSessionId()) ? e : void 0,
             rtcConnectionId: a.Z.getRTCConnectionId(),
-            mediaContext: r.Yn.DEFAULT
+            mediaContext: r.Yn.DEFAULT,
         },
-        _()
+        _(),
     );
 }
 function f(e) {
@@ -61,9 +61,9 @@ function f(e) {
             rtcConnectionId: null == a ? void 0 : a.getRTCConnectionId(),
             mediaContext: r.Yn.STREAM,
             streamKey: e,
-            userId: o
+            userId: o,
         },
-        _()
+        _(),
     );
 }
 function _() {
@@ -71,6 +71,6 @@ function _() {
     return {
         videoDeviceName: null == (e = o.Z.getVideoDevices()[o.Z.getVideoDeviceId()]) ? void 0 : e.name,
         audioInputDeviceName: null == (t = o.Z.getInputDevices()[o.Z.getInputDeviceId()]) ? void 0 : t.name,
-        audioOutputDeviceName: null == (n = o.Z.getOutputDevices()[o.Z.getOutputDeviceId()]) ? void 0 : n.name
+        audioOutputDeviceName: null == (n = o.Z.getOutputDevices()[o.Z.getOutputDeviceId()]) ? void 0 : n.name,
     };
 }

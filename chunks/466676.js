@@ -29,40 +29,40 @@ let Z = (0, o.Z)(
                 Z = (0, f.ZP)(e),
                 v = (0, O.Z)({
                     id: e.id,
-                    label: P.intl.string(P.t.gFHI3t)
+                    label: P.intl.string(P.t.gFHI3t),
                 }),
                 E = (0, u.Z)(e),
                 _ = (0, b.Z)(e),
                 N = (0, h.ZP)(e),
-                C = (0, j.Mn)('ReportToModChannelContextMenu');
+                C = (0, j.Mn)("ReportToModChannelContextMenu");
             return (0, r.jsxs)(i.v2r, {
-                navId: 'report-to-mod-channel-context',
+                navId: "report-to-mod-channel-context",
                 onClose: l.Zy,
-                'aria-label': P.intl.string(g.default['zp+z/P']),
+                "aria-label": P.intl.string(g.default["zp+z/P"]),
                 onSelect: t,
                 children: [
                     (0, r.jsxs)(
                         i.kSQ,
                         {
-                            children: [c, a]
+                            children: [c, a],
                         },
-                        'mark-as-read-or-favorite'
+                        "mark-as-read-or-favorite",
                     ),
-                    (0, r.jsx)(i.kSQ, { children: o }, 'channel-actions'),
+                    (0, r.jsx)(i.kSQ, { children: o }, "channel-actions"),
                     (0, r.jsxs)(
                         i.kSQ,
                         {
-                            children: [Z, C ? N : _]
+                            children: [Z, C ? N : _],
                         },
-                        'notifications'
+                        "notifications",
                     ),
                     (0, r.jsx)(i.kSQ, { children: E }),
                     (0, r.jsx)(i.kSQ, { children: y }),
-                    (0, r.jsx)(i.kSQ, { children: v }, 'developer-actions')
-                ]
+                    (0, r.jsx)(i.kSQ, { children: v }, "developer-actions"),
+                ],
             });
         },
-        { object: y.qAy.CONTEXT_MENU }
+        { object: y.qAy.CONTEXT_MENU },
     ),
-    [a.Z.CONTEXT_MENU, a.Z.REPORT_TO_MOD_CHANNEL_CONTEXT_MENU]
+    [a.Z.CONTEXT_MENU, a.Z.REPORT_TO_MOD_CHANNEL_CONTEXT_MENU],
 );

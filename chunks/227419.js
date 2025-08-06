@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(392711),
@@ -21,7 +21,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,9 +70,9 @@ function O(e) {
     switch (e) {
         case h.nkL.GIF.title:
         case h.nkL.TENOR.title:
-            return m.intl.string(m.t['0vrCgI']);
+            return m.intl.string(m.t["0vrCgI"]);
         default:
-            return '';
+            return "";
     }
 }
 let v = [
@@ -95,40 +95,40 @@ let v = [
                 e.type === h.q9n.GIF
                     ? [
                           {
-                              name: 'query',
-                              displayName: 'query',
+                              name: "query",
+                              displayName: "query",
                               type: c.jw.STRING,
                               get description() {
-                                  return m.intl.string(m.t['+9g3Dg']);
+                                  return m.intl.string(m.t["+9g3Dg"]);
                               },
                               get displayDescription() {
-                                  return m.intl.string(m.t['+9g3Dg']);
+                                  return m.intl.string(m.t["+9g3Dg"]);
                               },
-                              required: !0
-                          }
+                              required: !0,
+                          },
                       ]
                     : [],
             integrationType: e.type,
-            integrationTitle: e.title
+            integrationTitle: e.title,
         }))
         .value(),
     {
-        id: '-15',
-        untranslatedName: 'leave',
-        displayName: 'leave',
+        id: "-15",
+        untranslatedName: "leave",
+        displayName: "leave",
         type: c.yU.CHAT,
         inputType: _.iw.BUILT_IN,
         applicationId: p.bi.BUILT_IN,
         get untranslatedDescription() {
-            return m.intl.string(m.t['26C4oq']);
+            return m.intl.string(m.t["26C4oq"]);
         },
         get displayDescription() {
-            return m.intl.string(m.t['26C4oq']);
+            return m.intl.string(m.t["26C4oq"]);
         },
         options: [
             {
-                name: 'silent',
-                displayName: 'silent',
+                name: "silent",
+                displayName: "silent",
                 type: c.jw.BOOLEAN,
                 get description() {
                     return m.intl.string(m.t.YH7PkJ);
@@ -136,8 +136,8 @@ let v = [
                 get displayDescription() {
                     return m.intl.string(m.t.bq3JXl);
                 },
-                required: !1
-            }
+                required: !1,
+            },
         ],
         predicate: (e) => {
             let { channel: t } = e;
@@ -150,7 +150,7 @@ let v = [
             let c = (0, u.F6)(o, f.default, d.Z),
                 _ = m.intl.formatToPlainString(m.t.hJ5Ap6, { name: c }),
                 p = m.intl.format(m.t.SSIVOj, { name: c }),
-                h = null != (i = null == (n = e.find((e) => 'silent' === e.name)) ? void 0 : n.value) && i;
+                h = null != (i = null == (n = e.find((e) => "silent" === e.name)) ? void 0 : n.value) && i;
             async function g() {
                 if (null != o)
                     try {
@@ -159,7 +159,9 @@ let v = [
                         l.Z.sendBotMessage(o.id, m.intl.string(m.t.YOsuT0));
                     }
             }
-            (o.isManaged() && ((_ = m.intl.formatToPlainString(m.t.hVGjER, { name: c })), (p = m.intl.format(m.t.IK1Qvr, { name: c }))),
+            o.isManaged() &&
+                ((_ = m.intl.formatToPlainString(m.t.hVGjER, { name: c })),
+                (p = m.intl.format(m.t.IK1Qvr, { name: c }))),
                 (0, a.h7j)((e) =>
                     (0, r.jsx)(
                         a.ConfirmModal,
@@ -167,27 +169,27 @@ let v = [
                             E(
                                 {
                                     header: _,
-                                    confirmText: m.intl.string(m.t['26C4oq']),
-                                    cancelText: m.intl.string(m.t['ETE/oK']),
-                                    onConfirm: g
+                                    confirmText: m.intl.string(m.t["26C4oq"]),
+                                    cancelText: m.intl.string(m.t["ETE/oK"]),
+                                    onConfirm: g,
                                 },
-                                e
+                                e,
                             ),
                             {
                                 children: (0, r.jsx)(a.Text, {
-                                    variant: 'text-md/normal',
-                                    children: p
-                                })
-                            }
-                        )
-                    )
-                ));
-        }
+                                    variant: "text-md/normal",
+                                    children: p,
+                                }),
+                            },
+                        ),
+                    ),
+                );
+        },
     },
     {
-        id: '-17',
-        untranslatedName: 'sticker',
-        displayName: 'sticker',
+        id: "-17",
+        untranslatedName: "sticker",
+        displayName: "sticker",
         type: c.yU.CHAT,
         inputType: _.iw.BUILT_IN_INTEGRATION,
         applicationId: p.bi.BUILT_IN,
@@ -199,8 +201,8 @@ let v = [
         },
         options: [
             {
-                name: 'query',
-                displayName: 'query',
+                name: "query",
+                displayName: "query",
                 type: c.jw.STRING,
                 get description() {
                     return m.intl.string(m.t.hIbHm5);
@@ -208,10 +210,10 @@ let v = [
                 get displayDescription() {
                     return m.intl.string(m.t.hIbHm5);
                 },
-                required: !0
-            }
+                required: !0,
+            },
         ],
         integrationType: h.q9n.STICKER,
-        integrationTitle: 'sticker'
-    }
+        integrationTitle: "sticker",
+    },
 ];

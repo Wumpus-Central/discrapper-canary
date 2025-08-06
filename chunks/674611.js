@@ -13,9 +13,9 @@ function u(e) {
             (0, s.e)(n, t);
         }, [n, t]);
     return (0, r.jsx)(a.zxk, {
-        variant: 'secondary',
-        text: c.intl.string(c.t['4q1ElZ']),
+        variant: "secondary",
+        text: c.intl.string(c.t["4q1ElZ"]),
         onClick: d,
-        disabled: !u
+        disabled: !u,
     });
 }

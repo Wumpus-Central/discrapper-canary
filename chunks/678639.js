@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => _ }), a(388685), a(642613));
+a.d(t, { Z: () => _ }), a(388685), a(642613);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -31,50 +31,54 @@ function b(e) {
         }, [t, a]),
         (0, n.jsx)(o.zJl, {
             className: p.inspectorContainer,
-            children: (0, n.jsx)(d.Z, { data: l })
+            children: (0, n.jsx)(d.Z, { data: l }),
         })
     );
 }
 let v = [
         {
-            key: 'name',
+            key: "name",
             cellClassName: p.__invalid_eventColumn,
             render(e) {
                 let { store: t } = e;
                 return t.getName();
-            }
-        }
+            },
+        },
     ],
     j = [
         {
-            id: 'local',
-            name: 'Local Variables',
+            id: "local",
+            name: "Local Variables",
             group: x.v0.NONE,
             render(e) {
                 let { store: t } = e;
                 return null == t.__getLocalVars
-                    ? (0, n.jsxs)('div', {
+                    ? (0, n.jsxs)("div", {
                           className: p.inspectorContainer,
-                          children: ['Store is missing ', (0, n.jsx)('code', { children: '__getLocalVars' }), ' method.']
+                          children: [
+                              "Store is missing ",
+                              (0, n.jsx)("code", { children: "__getLocalVars" }),
+                              " method.",
+                          ],
                       })
                     : (0, n.jsx)(b, {
                           store: t,
-                          dataGetter: (e) => e.__getLocalVars()
+                          dataGetter: (e) => e.__getLocalVars(),
                       });
-            }
+            },
         },
         {
-            id: 'instance',
-            name: 'Store Instance',
+            id: "instance",
+            name: "Store Instance",
             group: x.v0.NONE,
             render(e) {
                 let { store: t } = e;
                 return (0, n.jsx)(b, {
                     store: t,
-                    dataGetter: (e) => e
+                    dataGetter: (e) => e,
                 });
-            }
-        }
+            },
+        },
     ];
 function g(e) {
     let { store: t, initialHeight: a } = e,
@@ -90,18 +94,18 @@ function g(e) {
                 children: [
                     (0, n.jsx)(c.ZP.Icon, {
                         icon: o.lO_,
-                        tooltip: t.getName()
+                        tooltip: t.getName(),
                     }),
-                    (0, n.jsx)(c.ZP.Title, { children: t.getName() })
-                ]
+                    (0, n.jsx)(c.ZP.Title, { children: t.getName() }),
+                ],
             }),
-            l({ store: t })
-        ]
+            l({ store: t }),
+        ],
     });
 }
 function _() {
     let e = r.useRef(null),
-        [t, a] = r.useState(''),
+        [t, a] = r.useState(""),
         l = s.yh.getAll(),
         c = r
             .useMemo(
@@ -109,46 +113,46 @@ function _() {
                     l
                         .map((e) => ({
                             key: e._dispatchToken,
-                            store: e
+                            store: e,
                         }))
                         .sort(f),
-                [l]
+                [l],
             )
             .filter((e) =>
                 (function (e, t) {
                     let { store: a } = e;
                     return a.getName().toLowerCase().includes(t.toLowerCase());
-                })(e, t)
+                })(e, t),
             ),
         [d, u] = r.useState(),
         x = l.find((e) => e._dispatchToken === d);
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         ref: e,
         className: i()(h.panel, p.panel),
         children: [
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 className: p.toolbar,
                 children: (0, n.jsx)(o.E1j, {
                     className: p.searchBar,
-                    size: 'sm',
+                    size: "sm",
                     query: t,
                     onChange: a,
-                    onClear: () => a(''),
-                    placeholder: 'Search stores',
-                    'aria-label': 'Search stores'
-                })
+                    onClear: () => a(""),
+                    placeholder: "Search stores",
+                    "aria-label": "Search stores",
+                }),
             }),
             (0, n.jsx)(m.Z, {
                 columns: v,
                 data: c,
                 selectedRowKey: d,
-                onClickRow: (e) => u(e.key)
+                onClickRow: (e) => u(e.key),
             }),
             null != x &&
                 (0, n.jsx)(g, {
                     store: x,
-                    initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
-                })
-        ]
+                    initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
+                }),
+        ],
     });
 }

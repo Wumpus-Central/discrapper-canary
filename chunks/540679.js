@@ -18,39 +18,39 @@ let g = (t) => {
     return (0, i.jsxs)(a.Y0X, {
         transitionState: p,
         size: a.CgR.SMALL,
-        'aria-label': r.intl.string(r.t.uAmAiI),
-        parentComponent: 'MuteAppNotificationsModalV2',
+        "aria-label": r.intl.string(r.t.uAmAiI),
+        parentComponent: "MuteAppNotificationsModalV2",
         children: [
             (0, i.jsx)(a.hzk, {
                 className: o.content,
                 children: (0, i.jsx)(a.xJW, {
                     title: r.intl.string(r.t.NkwaBg),
-                    tag: 'h1',
+                    tag: "h1",
                     children: (0, i.jsx)(a.FXm, {
                         options: (0, u.k)().map((t) => {
                             let { label: n, value: e } = t;
                             return {
                                 name: n,
-                                value: e
+                                value: e,
                             };
                         }),
                         onChange: (t) => h(t.value),
-                        value: null == _ ? void 0 : _.selected_time_window
-                    })
-                })
+                        value: null == _ ? void 0 : _.selected_time_window,
+                    }),
+                }),
             }),
             (0, i.jsx)(a.olH, {
                 className: o.closeButton,
-                onClick: n
+                onClick: n,
             }),
             (0, i.jsx)(a.mzw, {
                 children: (0, i.jsx)(a.zxk, {
-                    variant: 'secondary',
+                    variant: "secondary",
                     text: r.intl.string(r.t.cpT0Cg),
-                    type: 'button',
-                    onClick: n
-                })
-            })
-        ]
+                    type: "button",
+                    onClick: n,
+                }),
+            }),
+        ],
     });
 };

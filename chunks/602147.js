@@ -16,41 +16,41 @@ let m = i.forwardRef(function (e, t) {
     let { selected: n, onClick: m, questId: b, className: O } = e,
         _ = i.useCallback(() => {
             (0, s.k5)({ source: h.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
-            let e = void 0 !== b ? h.GlobalDiscoveryTab.QUESTS : a.Z.getField('selectedTab');
+            let e = void 0 !== b ? h.GlobalDiscoveryTab.QUESTS : a.Z.getField("selectedTab");
             switch (e) {
                 case h.GlobalDiscoveryTab.QUESTS:
                     return (0, c.transitionToGlobalDiscovery)({
                         tab: h.GlobalDiscoveryTab.QUESTS,
                         location: f.dr.DISCOVERY_COMPASS,
                         questContent: l.j.DISCOVERY_COMPASS,
-                        questId: b
+                        questId: b,
                     });
                 case h.GlobalDiscoveryTab.SERVERS:
                     return (0, c.transitionToGlobalDiscovery)({
                         tab: h.GlobalDiscoveryTab.SERVERS,
-                        entrypoint: p.Qq.GUILDS_BAR
+                        entrypoint: p.Qq.GUILDS_BAR,
                     });
                 case h.GlobalDiscoveryTab.APPS:
                     return (0, c.transitionToGlobalDiscovery)({
                         tab: h.GlobalDiscoveryTab.APPS,
                         newSessionState: {
                             entrypoint: { name: u.xF.GLOBAL_DISCOVERY_BUTTON },
-                            restorePreviousView: !0
-                        }
+                            restorePreviousView: !0,
+                        },
                     });
                 default:
                     return (0, c.transitionToGlobalDiscovery)({ tab: e });
             }
         }, [b]);
     return (0, r.jsx)(d.Z, {
-        id: 'guild-discover-button',
+        id: "guild-discover-button",
         ref: t,
         className: O,
         onClick: () => {
-            (_(), void 0 !== m && m());
+            _(), void 0 !== m && m();
         },
         selected: n,
-        tooltip: g.intl.string(g.t['4nEZLi']),
-        icon: o.Jmo
+        tooltip: g.intl.string(g.t["4nEZLi"]),
+        icon: o.Jmo,
     });
 });

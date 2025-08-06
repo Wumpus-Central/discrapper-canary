@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => b }));
+n.r(t), n.d(t, { default: () => b });
 var r = n(570140),
     i = n(622822),
     o = n(254238),
@@ -18,16 +18,24 @@ var s = n(788983),
     E = n(981631);
 let b = {
     selectChannel(e) {
-        let { guildId: t, channelId: n, messageId: i, jumpType: o, preserveDrawerState: a, source: s, isInitialSetup: l } = e;
+        let {
+            guildId: t,
+            channelId: n,
+            messageId: i,
+            jumpType: o,
+            preserveDrawerState: a,
+            source: s,
+            isInitialSetup: l,
+        } = e;
         r.Z.dispatch({
-            type: 'CHANNEL_SELECT',
+            type: "CHANNEL_SELECT",
             guildId: t === E.ME ? null : t,
             channelId: n,
             messageId: i,
             jumpType: o,
             preserveDrawerState: a,
             source: s,
-            isInitialSetup: l
+            isInitialSetup: l,
         });
     },
     selectPrivateChannel(e) {
@@ -40,7 +48,12 @@ let b = {
             o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
             a = u.Z.getChannel(e),
             s = null == a ? void 0 : a.getGuildId();
-        if ((null == a ? void 0 : a.isGuildVocal()) && (0, i.aC)(a) && (!(null == (t = h.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) || !d.Z.didAgree(s))) return void (0, l.uL)(E.Z5c.CHANNEL(s, e));
+        if (
+            (null == a ? void 0 : a.isGuildVocal()) &&
+            (0, i.aC)(a) &&
+            (!(null == (t = h.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) || !d.Z.didAgree(s))
+        )
+            return void (0, l.uL)(E.Z5c.CHANNEL(s, e));
         f.Z.isSupported() && (null != e && f.Z.getMediaEngine().interact(), (0, g.h)(e, s, n, r, o));
     },
     disconnect() {
@@ -54,5 +67,5 @@ let b = {
                 null != e && (0, l.uL)((0, m.LY)(e));
             }
         }
-    }
+    },
 };

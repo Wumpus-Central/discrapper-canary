@@ -6,10 +6,10 @@ function o(e) {
         let t = Math.floor(e / r.Z.Seconds.HOUR),
             n = Math.floor((e - t * r.Z.Seconds.HOUR) / r.Z.Seconds.MINUTE),
             o = e - t * r.Z.Seconds.HOUR - n * r.Z.Seconds.MINUTE;
-        return i.intl.formatToPlainString(i.t['3hz51N'], {
+        return i.intl.formatToPlainString(i.t["3hz51N"], {
             hours: t,
             minutes: n,
-            seconds: o
+            seconds: o,
         });
     }
     if (!(e >= 60)) return i.intl.formatToPlainString(i.t.IWntYm, { seconds: e });
@@ -18,7 +18,7 @@ function o(e) {
             n = e - 60 * t;
         return i.intl.formatToPlainString(i.t.sY3wlJ, {
             minutes: t,
-            seconds: n
+            seconds: n,
         });
     }
 }

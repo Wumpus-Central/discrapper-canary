@@ -11,22 +11,22 @@ function c(e) {
     return n
         ? c
             ? null
-            : (0, r.jsx)('div', {
+            : (0, r.jsx)("div", {
                   className: l.footer,
                   children: (0, r.jsx)(o.O1, {
-                      variant: 'primary',
-                      text: s.intl.string(s.t['+Xp3ho']),
+                      variant: "primary",
+                      text: s.intl.string(s.t["+Xp3ho"]),
                       onClick: () =>
                           (0, i.openUserProfileModal)({
                               userId: t.id,
-                              disableActionsForPreview: !0
+                              disableActionsForPreview: !0,
                           }),
-                      fullWidth: !0
-                  })
+                      fullWidth: !0,
+                  }),
               })
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: l.footer,
               inert: !0,
-              children: (0, r.jsx)(a.Z, { user: t })
+              children: (0, r.jsx)(a.Z, { user: t }),
           });
 }

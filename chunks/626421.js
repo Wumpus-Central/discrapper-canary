@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -15,16 +15,16 @@ let h = i.memo(function (e) {
         c = i.useMemo(() => null, [l, o, n]);
     return null == c
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: a()(p.upsell, (null == s || s.y < 0) && p.hidden),
               style:
                   null == s
                       ? {}
                       : {
                             top: s.top,
-                            left: s.right - s.x
+                            left: s.right - s.x,
                         },
-              children: c
+              children: c,
           });
 });
 function f() {
@@ -40,17 +40,17 @@ function f() {
                     let { name: t } = e;
                     return t;
                 }),
-            d.R.SIDEBAR
+            d.R.SIDEBAR,
         );
     if (null == n) return null;
     let l = t[n];
     return null == l
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: p.container,
               children: (0, r.jsx)(h, {
                   state: l,
-                  markAsDismissed: i
-              })
+                  markAsDismissed: i,
+              }),
           });
 }

@@ -1,6 +1,6 @@
 e.d(n, { Z: () => o });
 var t = e(757490),
-    a = ['воскресенье', 'понедельник', 'вторник', 'среду', 'четверг', 'пятницу', 'субботу'];
+    a = ["воскресенье", "понедельник", "вторник", "среду", "четверг", "пятницу", "субботу"];
 function r(i) {
     var n = a[i];
     return 2 === i ? "'во " + n + " в' p" : "'в " + n + " в' p";
@@ -43,9 +43,9 @@ var u = {
                 return "'в следующую " + o + " в' p";
         }
     },
-    other: 'P'
+    other: "P",
 };
 let o = function (i, n, e, t) {
     var a = u[i];
-    return 'function' == typeof a ? a(n, e, t) : a;
+    return "function" == typeof a ? a(n, e, t) : a;
 };

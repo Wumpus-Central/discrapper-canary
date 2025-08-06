@@ -1,7 +1,7 @@
 n.d(t, {
     EH: () => c,
     Mf: () => o,
-    t4: () => s
+    t4: () => s,
 });
 var l = n(442837),
     r = n(9156),
@@ -10,7 +10,10 @@ var l = n(442837),
 function o(e, t, n) {
     return (0, l.e7)([r.ZP], () => {
         var l;
-        return t === n ? r.ZP.isChannelOptedIn(e, t, !0) : ((l = r.ZP), !!(0, i.hi)(e) || l.isChannelOptedIn(e, t, !0) || (null != n && r.ZP.isChannelOptedIn(e, n, !0)));
+        return t === n
+            ? r.ZP.isChannelOptedIn(e, t, !0)
+            : ((l = r.ZP),
+              !!(0, i.hi)(e) || l.isChannelOptedIn(e, t, !0) || (null != n && r.ZP.isChannelOptedIn(e, n, !0)));
     });
 }
 function s(e, t, n) {

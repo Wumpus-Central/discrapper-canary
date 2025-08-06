@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { SubscriptionDetailsModal: () => g }), n(953529));
+n.r(t), n.d(t, { SubscriptionDetailsModal: () => g }), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(269210),
@@ -15,13 +15,24 @@ var r = n(255367),
     m = n(938337);
 function g(e) {
     var t, n;
-    let { appId: g, subscriptionType: E, onClose: b, skuId: y, guildId: O, transitionState: v, onHeaderTitleClick: I } = e,
+    let {
+            appId: g,
+            subscriptionType: E,
+            onClose: b,
+            skuId: y,
+            guildId: O,
+            transitionState: v,
+            onHeaderTitleClick: I,
+        } = e,
         { data: T } = (0, c.H)(y),
         S = T[0],
         { data: A } = (0, l.Z)(y),
         N = i.useMemo(() => {
             var e;
-            return (null == A ? void 0 : A.thumbnail) != null && null != (e = _.Z.toURLSafe((0, f._W)(g, A.thumbnail, 256))) ? e : void 0;
+            return (null == A ? void 0 : A.thumbnail) != null &&
+                null != (e = _.Z.toURLSafe((0, f._W)(g, A.thumbnail, 256)))
+                ? e
+                : void 0;
         }, [g, null == A ? void 0 : A.thumbnail]),
         C = i.useMemo(() => {
             let e = null == A ? void 0 : A.benefits;
@@ -30,12 +41,12 @@ function g(e) {
                     id: e.id,
                     title: e.name,
                     description: e.description,
-                    icon: (0, u.n)(g, e.icon)
+                    icon: (0, u.n)(g, e.icon),
                 }));
         }, [g, null == A ? void 0 : A.benefits]),
         { openModal: R, subscriptionPurchaseButtonState: P } = (0, d.Z)({
             skuId: y,
-            initialSubscribeForGuild: null != O ? O : void 0
+            initialSubscribeForGuild: null != O ? O : void 0,
         });
     return null == A
         ? null
@@ -51,7 +62,7 @@ function g(e) {
                   subscriptionType: E,
                   skuId: y,
                   subscriptionPlan: S,
-                  state: P
+                  state: P,
               }),
               children: (0, r.jsx)(m.i, {
                   appId: g,
@@ -64,17 +75,17 @@ function g(e) {
                                     {
                                         header: e.title,
                                         icon: e.icon,
-                                        description: e.description
+                                        description: e.description,
                                     },
-                                    e.id
-                                )
+                                    e.id,
+                                ),
                             )
                           : void 0,
                   description: null != (t = A.description) ? t : void 0,
                   imgSrc: N,
                   title: null != (n = null == S ? void 0 : S.name) ? n : A.summary,
                   tag: (0, r.jsx)(a.Z, { type: E }),
-                  FallbackIcon: s.Vh5
-              })
+                  FallbackIcon: s.Vh5,
+              }),
           });
 }

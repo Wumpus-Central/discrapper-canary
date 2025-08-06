@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(772848),
@@ -19,7 +19,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,7 +71,8 @@ function b(e, t) {
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,15 +82,26 @@ function y(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let O = 'payment-modal',
-    v = 'gift-payment-modal',
+let O = "payment-modal",
+    v = "gift-payment-modal",
     I = new Set([f.h8.REVIEW, f.h8.CONFIRM, f.h8.GIFT_CUSTOMIZATION]);
 function T(e) {
     let t,
-        { skuId: f, isGift: h = !1, giftMessage: g, giftingOrigin: y, onClose: T, onComplete: S, analyticsLocations: A, analyticsObject: N, giftRecipient: C, variantsReturnStyle: R } = e,
+        {
+            skuId: f,
+            isGift: h = !1,
+            giftMessage: g,
+            giftingOrigin: y,
+            onClose: T,
+            onComplete: S,
+            analyticsLocations: A,
+            analyticsObject: N,
+            giftRecipient: C,
+            variantsReturnStyle: R,
+        } = e,
         P = !1,
         w = (0, i.Z)(),
         D = (e) => {
@@ -99,27 +111,27 @@ function T(e) {
         x = u.default.getCurrentUser();
     if (!(null == x ? void 0 : x.verified))
         return void (0, o.ZDy)(async () => {
-            let { default: e } = await n.e('20102').then(n.bind(n, 444688));
+            let { default: e } = await n.e("20102").then(n.bind(n, 444688));
             return (t) => {
                 var { onClose: n } = t,
-                    i = b(t, ['onClose']);
+                    i = b(t, ["onClose"]);
                 return (0, r.jsx)(
                     e,
                     E(m({}, i), {
                         onClose: () => {
-                            (n(), null == T || T(!1));
-                        }
-                    })
+                            n(), null == T || T(!1);
+                        },
+                    }),
                 );
             };
         });
-    (a.Z.wait(() => {
-        a.Z.dispatch({ type: 'PAYMENT_MODAL_OPEN' });
+    a.Z.wait(() => {
+        a.Z.dispatch({ type: "PAYMENT_MODAL_OPEN" });
     }),
         (0, o.ZDy)(
             async () => (e) => {
                 var { onClose: t, returnRef: n } = e,
-                    i = b(e, ['onClose', 'returnRef']);
+                    i = b(e, ["onClose", "returnRef"]);
                 return (0, r.jsx)(
                     _.Z,
                     E(m({}, i), {
@@ -131,27 +143,27 @@ function T(e) {
                         analyticsLocations: A,
                         giftRecipient: C,
                         onClose: (e) => {
-                            (t(), null == T || T(e));
+                            t(), null == T || T(e);
                         },
                         onComplete: () => {
-                            ((P = !0), null == S || S());
+                            (P = !0), null == S || S();
                         },
                         returnRef: n,
-                        onStepChange: D
-                    })
+                        onStepChange: D,
+                    }),
                 );
             },
             {
                 modalKey: L,
                 onCloseCallback: () => {
-                    (P ||
+                    P ||
                         d.default.track(p.rMx.PAYMENT_FLOW_CANCELED, {
                             load_id: w,
                             payment_type: p.Zuq[p.GZQ.ONE_TIME],
                             location: N,
                             is_gift: h,
                             sku_id: f,
-                            location_stack: A
+                            location_stack: A,
                         }),
                         (0, s.fw)(),
                         (0, l.p)(),
@@ -159,12 +171,12 @@ function T(e) {
                         P &&
                             (0, c.qg)({
                                 variantsReturnStyle: R,
-                                location: 'openCollectiblesPaymentModal'
-                            }));
+                                location: "openCollectiblesPaymentModal",
+                            });
                 },
                 onCloseRequest: () => {
                     null != t && I.has(t) && (0, o.Mr3)(L);
-                }
-            }
-        ));
+                },
+            },
+        );
 }

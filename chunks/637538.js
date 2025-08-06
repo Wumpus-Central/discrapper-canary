@@ -5,7 +5,7 @@ var r = n(73800),
     o = n(353250),
     c = n(981631);
 function s(e) {
-    let { onReject: t, analyticsType: n = 'Guild Join Captcha' } = e,
+    let { onReject: t, analyticsType: n = "Guild Join Captcha" } = e,
         s = r.useRef(!0);
     return (
         (0, a.ZP)(() => () => {
@@ -18,7 +18,7 @@ function s(e) {
                     s.current && i.default.track(c.rMx.MODAL_DISMISSED, { type: n });
                 }
             ),
-            [n]
+            [n],
         ),
         () => {
             s.current = !1;

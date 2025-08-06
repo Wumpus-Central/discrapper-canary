@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => g,
-    c: () => m
+    c: () => m,
 }),
-    n(539854));
+    n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -20,7 +20,7 @@ function m(e) {
     let { channel: t, type: n, activeCommand: m, pendingReply: g, pendingScheduledMessage: E } = e,
         { activeCommandOption: b, activeCommandOptionStates: y } = (0, o.cj)([a.Z], () => ({
             activeCommandOption: a.Z.getActiveOption(t.id),
-            activeCommandOptionStates: a.Z.getOptionStates(t.id)
+            activeCommandOptionStates: a.Z.getOptionStates(t.id),
         })),
         O = (0, l.e)(t),
         v = (0, u.LN)(t.id);
@@ -34,8 +34,8 @@ function m(e) {
                     (0, r.jsx)(c.Z, {
                         guildId: t.guild_id,
                         channel: t,
-                        className: h.newMemberActionBar
-                    })
+                        className: h.newMemberActionBar,
+                    }),
                 ),
             null != m &&
                 e.push(
@@ -43,44 +43,44 @@ function m(e) {
                         activeCommand: m,
                         activeOption: null != b ? b : null,
                         optionStates: y,
-                        channelId: t.id
-                    })
+                        channelId: t.id,
+                    }),
                 ),
             null != g &&
                 e.push(
                     (0, r.jsx)(p.Z, {
                         reply: g,
-                        chatInputType: n
-                    })
+                        chatInputType: n,
+                    }),
                 ),
             O && e.push((0, r.jsx)(l.V, {})),
             v && e.push((0, r.jsx)(d.Z, { channel: t })),
             null != E && e.push((0, r.jsx)(f.y, { pendingScheduledMessage: E })),
             {
                 stacked: e,
-                floating: i
+                floating: i,
             }
         );
     }, [m, b, y, t, g, O, n, v, E]);
 }
 function g(e) {
     let { bars: t } = e,
-        n = t.stacked.map((e, t) => (0, r.jsx)('div', { children: e }, t)),
+        n = t.stacked.map((e, t) => (0, r.jsx)("div", { children: e }, t)),
         o = t.floating.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t));
     return 0 === n.length && 0 === o.length
         ? null
         : (0, r.jsxs)(i.Fragment, {
               children: [
                   o.length > 0 &&
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: h.floatingBars,
-                          children: o
+                          children: o,
                       }),
                   n.length > 0 &&
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: h.stackedBars,
-                          children: n
-                      })
-              ]
+                          children: n,
+                      }),
+              ],
           });
 }

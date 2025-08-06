@@ -16,14 +16,14 @@ function d(e) {
                 interval: 1000,
                 pointsPerInterval: n.points,
                 isPaused: t,
-                itemId: i.yN.TULIP
+                itemId: i.yN.TULIP,
             }),
             (0, r.jsx)(o.Z, {
                 className: c.tulip,
                 isPaused: t,
                 interval: 1000,
-                sources: [l, u]
-            })
-        ]
+                sources: [l, u],
+            }),
+        ],
     });
 }

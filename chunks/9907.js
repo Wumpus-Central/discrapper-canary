@@ -1,1 +1,1 @@
-e.exports = n.p + '31d2551c00b7c91e.mp3';
+e.exports = n.p + "31d2551c00b7c91e.mp3";

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(82659),
@@ -24,7 +24,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,10 +50,14 @@ let v = !1,
     I = !1;
 class T extends f.Z {
     _initialize() {
-        (super._initialize(), s.Z.addChangeListener(this.handlePopoutWindowUpdate), a.Z.subscribe('POPOUT_WINDOW_OPEN', this.handlePopoutWindowOpen));
+        super._initialize(),
+            s.Z.addChangeListener(this.handlePopoutWindowUpdate),
+            a.Z.subscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
     }
     _terminate() {
-        (super._terminate(), s.Z.removeChangeListener(this.handlePopoutWindowUpdate), a.Z.unsubscribe('POPOUT_WINDOW_OPEN', this.handlePopoutWindowOpen));
+        super._terminate(),
+            s.Z.removeChangeListener(this.handlePopoutWindowUpdate),
+            a.Z.unsubscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
     }
     showErrorModal(e) {
         let { code: t, message: n } = e;
@@ -69,13 +73,13 @@ class T extends f.Z {
                                 {
                                     text: b.intl.string(b.t.BddRzc),
                                     onClick: e.onClose,
-                                    variant: 'primary'
-                                }
-                            ]
+                                    variant: "primary",
+                                },
+                            ],
                         },
-                        e
-                    )
-                )
+                        e,
+                    ),
+                ),
         );
     }
     showLaunchErrorModal(e) {
@@ -91,13 +95,13 @@ class T extends f.Z {
                                 {
                                     text: b.intl.string(b.t.BddRzc),
                                     onClick: t.onClose,
-                                    variant: 'primary'
-                                }
-                            ]
+                                    variant: "primary",
+                                },
+                            ],
                         },
-                        t
-                    )
-                )
+                        t,
+                    ),
+                ),
         );
     }
     showDevShelfOverrideEnabled() {
@@ -105,14 +109,14 @@ class T extends f.Z {
     }
     leaveActivity(e) {
         let { location: t, applicationId: n, showFeedback: r, shouldClosePopout: i = !0 } = e;
-        (a.Z.wait(() => {
+        a.Z.wait(() => {
             (0, d.mW)({
                 location: t,
                 applicationId: n,
-                showFeedback: r
+                showFeedback: r,
             });
         }),
-            (0, u.R)() && i && (0, l.xv)(E.KJ3.ACTIVITY_POPOUT));
+            (0, u.R)() && i && (0, l.xv)(E.KJ3.ACTIVITY_POPOUT);
     }
     hidePIPEmbed(e) {
         let { location: t, applicationId: n } = e,
@@ -121,27 +125,27 @@ class T extends f.Z {
     }
     releaseWebView() {}
     constructor(...e) {
-        (super(...e),
-            y(this, 'handleRPCDisconnect', (e) => {
+        super(...e),
+            y(this, "handleRPCDisconnect", (e) => {
                 let { reason: t, application: n } = e;
                 this.superHandleRPCDisconnect({
                     reason: t,
-                    application: n
+                    application: n,
                 });
             }),
-            y(this, 'handlePopoutWindowOpen', (e) => {
+            y(this, "handlePopoutWindowOpen", (e) => {
                 let { key: t } = e;
                 t === E.KJ3.ACTIVITY_POPOUT && (I = !1);
             }),
-            y(this, 'popInActivity', () => {
-                ((I = !0), l.xv(E.KJ3.ACTIVITY_POPOUT));
+            y(this, "popInActivity", () => {
+                (I = !0), l.xv(E.KJ3.ACTIVITY_POPOUT);
                 let e = _.ZP.getCurrentEmbeddedActivity();
                 if (null != e) {
                     let t = (0, p.p)(e.location);
-                    (null != t && (0, c.Kh)(t), (0, d.tg)(g.Ez.PANEL));
+                    null != t && (0, c.Kh)(t), (0, d.tg)(g.Ez.PANEL);
                 }
             }),
-            y(this, 'handlePopoutWindowUpdate', () => {
+            y(this, "handlePopoutWindowUpdate", () => {
                 let e = v,
                     t = s.Z.getWindowOpen(E.KJ3.ACTIVITY_POPOUT);
                 if (e && !t && !I) {
@@ -149,11 +153,11 @@ class T extends f.Z {
                     null != e &&
                         this.leaveActivity({
                             location: e.location,
-                            applicationId: e.applicationId
+                            applicationId: e.applicationId,
                         });
                 }
                 v = t;
-            }));
+            });
     }
 }
 let S = new T();

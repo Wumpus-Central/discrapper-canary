@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(415506));
+n.d(t, { Z: () => g }), n(415506);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -12,7 +12,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -64,7 +64,8 @@ function f(e, t) {
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,50 +75,66 @@ function _(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var p = (function (e) {
-    return ((e.LEFT = 'LEFT'), (e.RIGHT = 'RIGHT'), (e.UP = 'UP'), (e.DOWN = 'DOWN'), (e.UP_LEFT = 'UP_LEFT'), (e.DOWN_RIGHT = 'DOWN_RIGHT'), e);
+    return (
+        (e.LEFT = "LEFT"),
+        (e.RIGHT = "RIGHT"),
+        (e.UP = "UP"),
+        (e.DOWN = "DOWN"),
+        (e.UP_LEFT = "UP_LEFT"),
+        (e.DOWN_RIGHT = "DOWN_RIGHT"),
+        e
+    );
 })({});
 function h(e) {
     switch (e) {
-        case 'LEFT':
+        case "LEFT":
             return s.left;
-        case 'RIGHT':
+        case "RIGHT":
             return s.right;
-        case 'UP':
+        case "UP":
             return null;
-        case 'DOWN':
+        case "DOWN":
             return s.down;
-        case 'UP_LEFT':
+        case "UP_LEFT":
             return s.upLeft;
-        case 'DOWN_RIGHT':
+        case "DOWN_RIGHT":
             return s.downRight;
         default:
-            throw Error('Invalid Direction '.concat(e));
+            throw Error("Invalid Direction ".concat(e));
     }
 }
 let m = (e) => {
-    var { width: t = 24, height: n = 24, color: i = 'currentColor', direction: s, foreground: l, className: u, title: _ } = e,
-        p = f(e, ['width', 'height', 'color', 'direction', 'foreground', 'className', 'title']);
+    var {
+            width: t = 24,
+            height: n = 24,
+            color: i = "currentColor",
+            direction: s,
+            foreground: l,
+            className: u,
+            title: _,
+        } = e,
+        p = f(e, ["width", "height", "color", "direction", "foreground", "className", "title"]);
     return (0, r.jsxs)(
-        'svg',
+        "svg",
         d(c({}, (0, a.Z)(p)), {
             width: t,
             height: n,
             className: o()(u, h(s)),
-            viewBox: '0 0 24 24',
+            viewBox: "0 0 24 24",
             children: [
-                null != _ ? (0, r.jsx)('title', { children: _ }) : null,
-                (0, r.jsx)('polygon', {
+                null != _ ? (0, r.jsx)("title", { children: _ }) : null,
+                (0, r.jsx)("polygon", {
                     className: l,
                     fill: i,
-                    fillRule: 'nonzero',
-                    points: '13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8'
-                })
-            ]
-        })
+                    fillRule: "nonzero",
+                    points: "13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8",
+                }),
+            ],
+        }),
     );
 };
 m.Directions = p;

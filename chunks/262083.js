@@ -1,7 +1,7 @@
 n.d(t, {
     NI: () => s,
     bE: () => o,
-    vY: () => a
+    vY: () => a,
 });
 var r = n(893346),
     i = n(109683);
@@ -11,7 +11,7 @@ function o(e, t) {
     let n = t;
     for (; null !== n; ) {
         if (n === e) return !0;
-        n = 'SLOT' === n.tagName && n.assignedSlot ? n.assignedSlot.parentNode : (0, r.Zq)(n) ? n.host : n.parentNode;
+        n = "SLOT" === n.tagName && n.assignedSlot ? n.assignedSlot.parentNode : (0, r.Zq)(n) ? n.host : n.parentNode;
     }
     return !1;
 }
@@ -19,7 +19,8 @@ let a = (e = document) => {
     var t;
     if (!(0, i.Wr)()) return e.activeElement;
     let n = e.activeElement;
-    for (; n && 'shadowRoot' in n && (null == (t = n.shadowRoot) ? void 0 : t.activeElement); ) n = n.shadowRoot.activeElement;
+    for (; n && "shadowRoot" in n && (null == (t = n.shadowRoot) ? void 0 : t.activeElement); )
+        n = n.shadowRoot.activeElement;
     return n;
 };
 function s(e) {

@@ -5,7 +5,7 @@ function r(e) {
         flags: e.flags,
         muted: e.muted,
         muteConfig: e.mute_config,
-        joinTimestamp: e.join_timestamp
+        joinTimestamp: e.join_timestamp,
     };
 }
-(n.d(t, { Z: () => r }), n(997841));
+n.d(t, { Z: () => r }), n(997841);

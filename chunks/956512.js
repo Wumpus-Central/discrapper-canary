@@ -21,7 +21,7 @@ function E(e) {
         { staticBannerSrc: v, videoBannerSrc: I, bannerAspectRatio: T } = (0, l.E)(b),
         S = _.ZP.getApplicationIconURL({
             id: b.id,
-            icon: b.icon
+            icon: b.icon,
         }),
         A = (0, i.e7)([c.ZP], () =>
             null != E.application
@@ -29,14 +29,20 @@ function E(e) {
                       let { id: t } = e;
                       return null != E.application && t === E.application.id;
                   })
-                : null
+                : null,
         ),
         N = (0, i.e7)([d.Z], () => d.Z.getCurrentUserActiveStream()),
         C = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
         R = p.default.extractTimestamp(E.id) + h.e < Date.now(),
         P = (0, r.jsx)(r.Fragment, { children: (0, o._0)(E, b, y, n, !1) });
     return (
-        R ? (t = g.intl.string(m.default.u4QmWl)) : null != N ? (t = g.intl.string(m.default.P0wwmJ)) : C !== y.id ? (t = g.intl.string(m.default.qRXatr)) : null == A && (t = g.intl.string(m.default['43zohI'])),
+        R
+            ? (t = g.intl.string(m.default.u4QmWl))
+            : null != N
+              ? (t = g.intl.string(m.default.P0wwmJ))
+              : C !== y.id
+                ? (t = g.intl.string(m.default.qRXatr))
+                : null == A && (t = g.intl.string(m.default["43zohI"])),
         (0, r.jsx)(a.W, {
             header: g.intl.string(m.default.DKHheX),
             title: b.name,
@@ -50,19 +56,19 @@ function E(e) {
                     ? []
                     : [
                           {
-                              label: g.intl.string(m.default['5+172d']),
+                              label: g.intl.string(m.default["5+172d"]),
                               trackingArea: s.j_.STREAM,
                               disabledReason: t,
                               onClick: () => {
                                   null != A && (0, u.Z)(A.pid);
-                              }
-                          }
+                              },
+                          },
                       ],
             trackingConfig: {
                 id: b.id,
                 linkType: s.Un.REQUEST_TO_STREAM,
-                onView: O
-            }
+                onView: O,
+            },
         })
     );
 }

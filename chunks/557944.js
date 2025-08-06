@@ -1,4 +1,4 @@
-(n.d(t, { default: () => y }), n(35282), n(388685));
+n.d(t, { default: () => y }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,9 +17,20 @@ var r = n(255367),
     g = n(388032),
     j = n(969957);
 function y(e) {
-    let { editPermissions: t, guildId: n, hasMemberSearch: l, headerText: s, onClose: y, overwrittenKeys: k, search: C, searchPlaceholderText: _, selectedPermissionCount: v, transitionState: E } = e,
+    let {
+            editPermissions: t,
+            guildId: n,
+            hasMemberSearch: l,
+            headerText: s,
+            onClose: y,
+            overwrittenKeys: k,
+            search: C,
+            searchPlaceholderText: _,
+            selectedPermissionCount: v,
+            transitionState: E,
+        } = e,
         w = (0, c.e7)([b.Z], () => b.Z.getGuild(n), [n]);
-    o()(null != w, '');
+    o()(null != w, "");
     let [O, Z] = i.useState(null),
         { query: N, results: T, setQuery: B } = C(n),
         [D, I] = i.useState({}),
@@ -31,7 +42,7 @@ function y(e) {
                     let t = (0, p.rE)(e.id, e.type);
                     return !k.includes(t);
                 }),
-            [k, T]
+            [k, T],
         ),
         z = i.useCallback(
             (e, t) => {
@@ -41,24 +52,24 @@ function y(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, n);
@@ -69,31 +80,31 @@ function y(e) {
                               (i[r] = {
                                   id: e,
                                   permission: !0,
-                                  type: t
+                                  type: t,
                               }),
                         i
                     );
                 });
             },
-            [X, I]
+            [X, I],
         ),
         M = i.useCallback(() => {
-            (t(D, []), y());
+            t(D, []), y();
         }, [t, y, D]);
     i.useEffect(() => () => clearTimeout(O), [O]);
     let P = i.useCallback(
             (e) => {
-                (B(e),
+                B(e),
                     l &&
                         Z((t) =>
                             (clearTimeout(t), 0 === e.length)
                                 ? null
                                 : setTimeout(() => {
                                       u.Z.requestMembers(n, e, 200, !1);
-                                  }, 500)
-                        ));
+                                  }, 500),
+                        );
             },
-            [n, l, B, Z]
+            [n, l, B, Z],
         ),
         R = i.useCallback(
             (e) => {
@@ -102,7 +113,7 @@ function y(e) {
                     i = n in D,
                     l = X && !i;
                 return (0, r.jsx)(
-                    'div',
+                    "div",
                     {
                         className: j.item,
                         children: (0, r.jsx)(d.XZJ, {
@@ -115,41 +126,41 @@ function y(e) {
                                 guild: w,
                                 id: t.id,
                                 type: t.type,
-                                isLocked: !1
-                            })
-                        })
+                                isLocked: !1,
+                            }),
+                        }),
                     },
-                    n
+                    n,
                 );
             },
-            [q, w, X, z, D]
+            [q, w, X, z, D],
         );
     return (
         i.useEffect(() => {
             u.Z.requestMembers(n, void 0, 200, !1);
         }, [n]),
         (0, r.jsxs)(d.Y0X, {
-            'aria-label': g.intl.string(g.t['N+InBQ']),
+            "aria-label": g.intl.string(g.t["N+InBQ"]),
             transitionState: E,
-            parentComponent: 'AddPermissionsModal',
+            parentComponent: "AddPermissionsModal",
             children: [
                 (0, r.jsxs)(d.xBx, {
                     separator: !1,
                     direction: h.Z.Direction.VERTICAL,
                     children: [
                         (0, r.jsx)(d.X6q, {
-                            variant: 'heading-xl/semibold',
+                            variant: "heading-xl/semibold",
                             className: j.header,
-                            children: s
+                            children: s,
                         }),
                         X
                             ? (0, r.jsx)(d.X6q, {
-                                  variant: 'heading-sm/medium',
-                                  color: 'text-danger',
-                                  children: g.intl.string(g.t.XTwtW1)
+                                  variant: "heading-sm/medium",
+                                  color: "text-danger",
+                                  children: g.intl.string(g.t.XTwtW1),
                               })
-                            : null
-                    ]
+                            : null,
+                    ],
                 }),
                 (0, r.jsxs)(d.hzk, {
                     className: j.modalContent,
@@ -158,40 +169,40 @@ function y(e) {
                             className: j.searchBar,
                             query: N,
                             placeholder: _,
-                            'aria-label': _,
+                            "aria-label": _,
                             onChange: P,
-                            onClear: () => B('')
+                            onClear: () => B(""),
                         }),
                         (0, r.jsx)(m.Z, {
-                            role: 'listbox',
+                            role: "listbox",
                             renderRow: R,
                             rowCount: q.length,
                             rowCountBySection: [q.length],
                             rowHeight: 36,
-                            className: j.__invalid_list
-                        })
-                    ]
+                            className: j.__invalid_list,
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(d.mzw, {
                     children: (0, r.jsxs)(d.hE2, {
-                        direction: 'horizontal-reverse',
+                        direction: "horizontal-reverse",
                         children: [
                             (0, r.jsx)(d.zxk, {
-                                variant: 'primary',
+                                variant: "primary",
                                 text: g.intl.string(g.t.OYkgVl),
-                                type: 'submit',
+                                type: "submit",
                                 onClick: M,
-                                disabled: 0 === S
+                                disabled: 0 === S,
                             }),
                             (0, r.jsx)(d.zxk, {
-                                variant: 'secondary',
-                                text: g.intl.string(g.t['ETE/oK']),
-                                onClick: y
-                            })
-                        ]
-                    })
-                })
-            ]
+                                variant: "secondary",
+                                text: g.intl.string(g.t["ETE/oK"]),
+                                onClick: y,
+                            }),
+                        ],
+                    }),
+                }),
+            ],
         })
     );
 }

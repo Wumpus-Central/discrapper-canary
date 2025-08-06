@@ -11,13 +11,13 @@ function s(t) {
     if (!(!n || t.isModeratorReportChannel()))
         return e
             ? (0, i.jsx)(a.sNh, {
-                  id: 'unlock-thread',
-                  label: t.isForumPost() ? o.intl.string(o.t['/OKSxs']) : o.intl.string(o.t['jeyb/f']),
-                  action: () => l.Z.unlockThread(t)
+                  id: "unlock-thread",
+                  label: t.isForumPost() ? o.intl.string(o.t["/OKSxs"]) : o.intl.string(o.t["jeyb/f"]),
+                  action: () => l.Z.unlockThread(t),
               })
             : (0, i.jsx)(a.sNh, {
-                  id: 'lock-thread',
-                  label: t.isForumPost() ? o.intl.string(o.t['Ur/0NT']) : o.intl.string(o.t.HoCqm5),
-                  action: () => l.Z.lockThread(t)
+                  id: "lock-thread",
+                  label: t.isForumPost() ? o.intl.string(o.t["Ur/0NT"]) : o.intl.string(o.t.HoCqm5),
+                  action: () => l.Z.lockThread(t),
               });
 }

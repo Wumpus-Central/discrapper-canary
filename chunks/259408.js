@@ -20,12 +20,12 @@ function f(e, t) {
             guildName: null != (r = null == x ? void 0 : x.name) ? r : u.intl.string(u.t.LJpTRE),
             muted: a.Z.isSelfMute(),
             deafened: a.Z.isSelfDeaf(),
-            nonce: f
+            nonce: f,
         });
     return m
-        ? ''
+        ? ""
               .concat((0, n.K0)())
-              .concat(d.ANM.XBOX_HANDOFF, '?')
+              .concat(d.ANM.XBOX_HANDOFF, "?")
               .concat(b.toString())
-        : ''.concat(l.bJ, '?').concat(b.toString());
+        : "".concat(l.bJ, "?").concat(b.toString());
 }

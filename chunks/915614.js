@@ -9,28 +9,28 @@ var r = n(120356),
 function c(e) {
     let { onClick: t, keybind: n, className: r, IconComponent: c } = e,
         u = (0, a.o)();
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: o()(s.buttonContainer, r),
         children: [
             (0, i.jsx)(l.P3F, {
                 className: s.button,
                 onClick: t,
-                'aria-hidden': !0,
+                "aria-hidden": !0,
                 children: (0, i.jsx)(c, {
-                    size: 'md',
-                    color: 'currentColor',
-                    'aria-hidden': !0
-                })
+                    size: "md",
+                    color: "currentColor",
+                    "aria-hidden": !0,
+                }),
             }),
             null != n && u
                 ? (0, i.jsx)(l.Text, {
                       className: s.keybind,
-                      'aria-hidden': !0,
-                      variant: 'text-xxs/bold',
-                      color: 'interactive-normal',
-                      children: n
+                      "aria-hidden": !0,
+                      variant: "text-xxs/bold",
+                      color: "interactive-normal",
+                      children: n,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

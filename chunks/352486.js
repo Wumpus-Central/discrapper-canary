@@ -13,6 +13,6 @@ let s = (e) => {
             useTitle: e.label,
             useSubtitle: e.subLabel,
             useValue: () => s(e.category),
-            setValue: (t) => (0, l.pR)(e.category, t)
-        })
+            setValue: (t) => (0, l.pR)(e.category, t),
+        }),
     );

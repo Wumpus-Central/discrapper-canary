@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     Bg: () => Z,
     Ni: () => V,
     YH: () => B,
     ld: () => U,
-    rf: () => F
+    rf: () => F,
 }),
     n(388685),
-    n(539854));
+    n(539854);
 var r = n(73800),
     i = n(392711),
     o = n.n(i),
@@ -45,7 +45,7 @@ function x(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -55,15 +55,15 @@ function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 x(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -71,11 +71,11 @@ function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -91,11 +91,28 @@ function j(e, t) {
     );
 }
 var U = (function (e) {
-    return ((e[(e.EMOJI = 0)] = 'EMOJI'), (e[(e.CREATE_EMOJI = 1)] = 'CREATE_EMOJI'), (e[(e.EXPAND_OR_COLLAPSE_EMOJIS = 2)] = 'EXPAND_OR_COLLAPSE_EMOJIS'), (e[(e.SOUNDMOJI = 3)] = 'SOUNDMOJI'), e);
+    return (
+        (e[(e.EMOJI = 0)] = "EMOJI"),
+        (e[(e.CREATE_EMOJI = 1)] = "CREATE_EMOJI"),
+        (e[(e.EXPAND_OR_COLLAPSE_EMOJIS = 2)] = "EXPAND_OR_COLLAPSE_EMOJIS"),
+        (e[(e.SOUNDMOJI = 3)] = "SOUNDMOJI"),
+        e
+    );
 })({});
 let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
     B = (e) => {
-        let { channel: t, collapsedSections: n, includeCreateEmojiButton: i = !0, pickerIntention: l, emojiSearchResults: p, gridWidth: h, emojiPaddingHorizontal: x, emojiSpriteSize: k, shouldShowSoundmojiInEmojiPicker: U, showOnlyUnicode: B } = e,
+        let {
+                channel: t,
+                collapsedSections: n,
+                includeCreateEmojiButton: i = !0,
+                pickerIntention: l,
+                emojiSearchResults: p,
+                gridWidth: h,
+                emojiPaddingHorizontal: x,
+                emojiSpriteSize: k,
+                shouldShowSoundmojiInEmojiPicker: U,
+                showOnlyUnicode: B,
+            } = e,
             Z = (0, s.e7)([c.ZP], () => c.ZP.categories),
             F = r.useMemo(() => (B ? _.ZP.getCategories() : Z), [Z, B]),
             V = (0, s.e7)([y.Z], () => y.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]),
@@ -105,14 +122,14 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
             K = (0, C.wC)(H),
             z = (0, C.q5)(H),
             { canSplitFrecencyList: q } = (0, d.S)({
-                location: 'useEmojiGrid',
-                autoTrackExposure: !0
+                location: "useEmojiGrid",
+                autoTrackExposure: !0,
             }),
             X = (0, f.p3)({
-                location: 'useEmojiGrid',
-                autoTrackExposure: !0
+                location: "useEmojiGrid",
+                autoTrackExposure: !0,
             });
-        f.Xb.useExperiment({ location: 'useEmojiGrid' }, { autoTrackExposure: !0 });
+        f.Xb.useExperiment({ location: "useEmojiGrid" }, { autoTrackExposure: !0 });
         let { topEmojis: Q, newlyAddedEmojis: J } = (0, P.Z)(H, l),
             $ = (0, s.Wu)([v.ZP], () => v.ZP.getFlattenedGuildIds(), []),
             ee = (0, s.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
@@ -126,13 +143,13 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
             },
             es = r.useMemo(() => o().groupBy(eo, ea), [eo]),
             { enabled: el, treatment: ec } = N.Z.useExperiment(
-                { location: 'EmojiPicker' },
+                { location: "EmojiPicker" },
                 {
                     autoTrackExposure: !0,
-                    disable: !et
-                }
+                    disable: !et,
+                },
             ),
-            eu = (0, E.g2)({ location: 'useEmojiGrid' });
+            eu = (0, E.g2)({ location: "useEmojiGrid" });
         return r.useMemo(() => {
             let e = [],
                 r = [],
@@ -150,9 +167,9 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                 let n = T.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,
-                                    intention: l
+                                    intention: l,
                                 });
-                                return (p.set(e, n), !n);
+                                return p.set(e, n), !n;
                             }),
                             b = g.concat(E),
                             y = _.guild,
@@ -187,7 +204,14 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                         columnIndex: G && t ? n + 1 : n,
                                         visibleRowIndex: u,
                                         category: _.type,
-                                        subCategory: _.sectionId === w.En.TOP_GUILD_EMOJI ? (0, C.IP)(Q, J, null != (i = null != (r = e.id) ? r : e.uniqueName) ? i : e.name) : w.t0.NONE
+                                        subCategory:
+                                            _.sectionId === w.En.TOP_GUILD_EMOJI
+                                                ? (0, C.IP)(
+                                                      Q,
+                                                      J,
+                                                      null != (i = null != (r = e.id) ? r : e.uniqueName) ? i : e.name,
+                                                  )
+                                                : w.t0.NONE,
                                     };
                                 });
                             if (
@@ -198,13 +222,13 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                         {
                                             type: 1,
                                             guildId: y.id,
-                                            name: L.intl.string(L.t['Z/r7IS']),
+                                            name: L.intl.string(L.t["Z/r7IS"]),
                                             size: k,
                                             rowIndex: d,
                                             columnIndex: 0,
-                                            visibleRowIndex: u
+                                            visibleRowIndex: u,
                                         },
-                                        ...i
+                                        ...i,
                                     ]),
                                 Z.push(i),
                                 !h)
@@ -214,11 +238,11 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                     t.push({
                                         type: 1,
                                         guildId: y.id,
-                                        name: L.intl.string(L.t['Z/r7IS']),
+                                        name: L.intl.string(L.t["Z/r7IS"]),
                                         size: k,
                                         rowIndex: e,
                                         columnIndex: t.length,
-                                        visibleRowIndex: u
+                                        visibleRowIndex: u,
                                     });
                                 }
                                 if (x && e === B - 1) {
@@ -231,24 +255,24 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                         rowIndex: e,
                                         columnIndex: t.length,
                                         visibleRowIndex: u,
-                                        sectionCollapsedToThreeRows: U
+                                        sectionCollapsedToThreeRows: U,
                                     });
                                 }
-                                (c.push(i.length), s.push(i), u++);
+                                c.push(i.length), s.push(i), u++;
                             }
                             d++;
                         }
                         let F = h ? 0 : B,
                             V = j(M({}, _), { count: a.length });
-                        (r.push(V), e.push(F));
+                        r.push(V), e.push(F);
                     };
                 if (null != p)
-                    (0 !== p.unlocked.length &&
+                    0 !== p.unlocked.length &&
                         g(p.unlocked, {
                             type: w.En.SEARCH_RESULTS,
                             sectionId: w.En.SEARCH_RESULTS,
                             count: p.unlocked.length,
-                            isNitroLocked: !1
+                            isNitroLocked: !1,
                         }),
                         0 !== p.locked.length &&
                             g(p.locked, {
@@ -256,8 +280,8 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                 categoryId: w.UX.PREMIUM_UPSELL,
                                 sectionId: w.En.PREMIUM_UPSELL,
                                 count: p.locked.length,
-                                isNitroLocked: !er
-                            }));
+                                isNitroLocked: !er,
+                            });
                 else {
                     if (eu && U) {
                         let t = [
@@ -265,18 +289,18 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                 type: 3,
                                 rowIndex: d,
                                 columnIndex: 0,
-                                visibleRowIndex: u
-                            }
+                                visibleRowIndex: u,
+                            },
                         ];
                         r.push({
                             type: w.En.SOUNDMOJI,
                             categoryId: w.UX.SOUNDMOJI,
-                            sectionId: 'soundmoji',
+                            sectionId: "soundmoji",
                             count: t.length,
-                            isNitroLocked: !1
+                            isNitroLocked: !1,
                         });
                         let i = n.has(w.UX.SOUNDMOJI);
-                        (!i && (c.push(t.length), s.push(t), u++), e.push(+!i), d++);
+                        !i && (c.push(t.length), s.push(t), u++), e.push(+!i), d++;
                     }
                     for (let e of F)
                         if (e === w.UX.CUSTOM) {
@@ -289,9 +313,9 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                             T.ZP.getEmojiUnavailableReason({
                                                 emoji: e,
                                                 channel: null != t ? t : b.ZP.getDefaultChannel(n),
-                                                intention: l
-                                            })
-                                        )
+                                                intention: l,
+                                            }),
+                                        ),
                                 );
                                 if (0 === i.length) return;
                                 let o = y.Z.getGuild(n),
@@ -301,7 +325,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                             T.ZP.isEmojiCategoryNitroLocked({
                                                 categoryEmojis: i,
                                                 channel: t,
-                                                intention: l
+                                                intention: l,
                                             }));
                                 g(i, {
                                     categoryId: e,
@@ -309,15 +333,16 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                     type: w.En.GUILD,
                                     sectionId: null != o ? o.id : (0, a.Z)(),
                                     count: i.length,
-                                    isNitroLocked: s
+                                    isNitroLocked: s,
                                 });
                             };
-                            if ((null != V && n(V.id), (0, D.Gt)(l))) for (let e of $) (null == V || V.id !== e) && n(e);
+                            if ((null != V && n(V.id), (0, D.Gt)(l)))
+                                for (let e of $) (null == V || V.id !== e) && n(e);
                         } else if (e === w.UX.TOP_GUILD_EMOJI) {
                             if (null != V) {
                                 let { allEmojis: t } = (0, R.J)({
                                     topEmojis: Q,
-                                    newlyAddedEmojis: J
+                                    newlyAddedEmojis: J,
                                 });
                                 t.length > 0 &&
                                     g(t, {
@@ -326,7 +351,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                         type: w.En.TOP_GUILD_EMOJI,
                                         sectionId: w.En.TOP_GUILD_EMOJI,
                                         count: t.length,
-                                        isNitroLocked: !1
+                                        isNitroLocked: !1,
                                     });
                             }
                         } else if (e === w.UX.RECENT) {
@@ -335,15 +360,15 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                     !T.ZP.isEmojiFiltered({
                                         emoji: e,
                                         channel: t,
-                                        intention: l
-                                    })
+                                        intention: l,
+                                    }),
                             );
                             g(n, {
                                 categoryId: e,
                                 type: w.En.RECENT,
                                 sectionId: w.En.RECENT,
                                 count: n.length,
-                                isNitroLocked: !1
+                                isNitroLocked: !1,
                             });
                         } else if (e === w.UX.FAVORITES) {
                             let n = W.filter(
@@ -351,8 +376,8 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                     !T.ZP.isEmojiFiltered({
                                         emoji: e,
                                         channel: t,
-                                        intention: l
-                                    })
+                                        intention: l,
+                                    }),
                             );
                             0 !== n.length &&
                                 g(n, {
@@ -360,7 +385,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                     type: w.En.FAVORITES,
                                     sectionId: w.En.FAVORITES,
                                     count: n.length,
-                                    isNitroLocked: !1
+                                    isNitroLocked: !1,
                                 });
                         } else {
                             let t = _.ZP.getByCategory(e);
@@ -370,7 +395,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                                     type: w.En.UNICODE,
                                     sectionId: e,
                                     count: t.length,
-                                    isNitroLocked: !1
+                                    isNitroLocked: !1,
                                 });
                         }
                 }
@@ -379,15 +404,22 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                 columnCounts: c,
                 emojiGrid: s,
                 rowCountBySection: e,
-                sectionDescriptors: r
+                sectionDescriptors: r,
             };
         }, [Y, h, k, x, p, n, el, ec, es, i, et, ee, t, l, Q, J, er, F, V, $, q, X, z, K, W, ei, eu, U]);
     };
 var Z = (function (e) {
-    return ((e[(e.PREMIUM = 0)] = 'PREMIUM'), (e[(e.ROLE_SUBSCRIPTION = 1)] = 'ROLE_SUBSCRIPTION'), e);
+    return (e[(e.PREMIUM = 0)] = "PREMIUM"), (e[(e.ROLE_SUBSCRIPTION = 1)] = "ROLE_SUBSCRIPTION"), e;
 })({});
 let F = (e) => {
-        let { pickerIntention: t, selectedChannel: n, onSelectEmoji: i, setUpsellConfigs: o, emojiSelectAnalytics: a, trackEmojiFavorited: d } = e,
+        let {
+                pickerIntention: t,
+                selectedChannel: n,
+                onSelectEmoji: i,
+                setUpsellConfigs: o,
+                emojiSelectAnalytics: a,
+                trackEmojiFavorited: d,
+            } = e,
             f = (0, s.e7)([c.ZP], () => c.ZP.getDisambiguatedEmojiContext(null == n ? void 0 : n.getGuildId()), [n]);
         return r.useCallback(
             (e, r) => {
@@ -396,7 +428,7 @@ let F = (e) => {
                         return void i({
                             emoji: void 0,
                             willClose: r.isFinalSelection,
-                            isBurst: r.isBurst
+                            isBurst: r.isBurst,
                         });
                     case 0: {
                         let { emoji: s } = e;
@@ -404,32 +436,35 @@ let F = (e) => {
                         let c = T.ZP.getEmojiUnavailableReason({
                             emoji: s,
                             channel: n,
-                            intention: t
+                            intention: t,
                         });
-                        if (r.toggleFavorite) return void (f.isFavoriteEmojiWithoutFetchingLatest(s) || null != c ? (0, l.Xe)(s) : (null == d || d(e), (0, l.$K)(s)));
+                        if (r.toggleFavorite)
+                            return void (f.isFavoriteEmojiWithoutFetchingLatest(s) || null != c
+                                ? (0, l.Xe)(s)
+                                : (null == d || d(e), (0, l.$K)(s)));
                         if (c === D.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE) return;
                         if (c === D.Z5.PREMIUM_LOCKED)
                             return void o({
                                 type: 0,
-                                emojiDescriptor: e
+                                emojiDescriptor: e,
                             });
                         if (c === D.Z5.ROLE_SUBSCRIPTION_LOCKED && s.type === u.B.GUILD)
                             return void o({
                                 type: 1,
                                 guildId: s.guildId,
-                                emojiId: s.id
+                                emojiId: s.id,
                             });
                         if (c === D.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE) return;
-                        (null == a || a(e),
+                        null == a || a(e),
                             i({
                                 emoji: s,
                                 willClose: r.isFinalSelection,
-                                isBurst: r.isBurst
-                            }));
+                                isBurst: r.isBurst,
+                            });
                     }
                 }
             },
-            [n, t, i, o, f, a, d]
+            [n, t, i, o, f, a, d],
         );
     },
     V = (e) => {
@@ -440,12 +475,12 @@ let F = (e) => {
                     var n;
                     return null == (n = t.current) ? void 0 : n.scrollToSectionTop(e);
                 },
-                [t]
+                [t],
             );
         return r.useCallback(
             (e) => {
-                '' !== n ? ((0, h.ql)(''), p.kJ.setActiveCategoryIndex(e)) : i(e);
+                "" !== n ? ((0, h.ql)(""), p.kJ.setActiveCategoryIndex(e)) : i(e);
             },
-            [i, n]
+            [i, n],
         );
     };

@@ -1,4 +1,4 @@
-(n(42547),
+n(42547),
     (e.exports = function (e, t) {
         var n,
             r = e.getSelection(),
@@ -10,7 +10,7 @@
             t > a.getBlockForKey(i).getText().length - o ? ((s = a.getKeyAfter(i)), (n = 0)) : (n = o + t),
             r.merge({
                 focusKey: s,
-                focusOffset: n
+                focusOffset: n,
             })
         );
-    }));
+    });

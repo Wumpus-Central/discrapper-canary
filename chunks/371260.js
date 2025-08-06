@@ -10,7 +10,7 @@ let u = {
         mass: 1,
         tension: 600,
         friction: 60,
-        clamp: !0
+        clamp: !0,
     },
     d = function (e) {
         let { animate: t, state: n, cleanUp: d, children: p } = e,
@@ -23,7 +23,7 @@ let u = {
                           ? {
                                 from: { opacity: 0 },
                                 to: { opacity: 1 },
-                                config: u
+                                config: u,
                             }
                           : {
                                 from: { opacity: 1 },
@@ -31,14 +31,14 @@ let u = {
                                 config: u,
                                 onRest: () => {
                                     d();
-                                }
+                                },
                             },
-                [t, d, h, n]
+                [t, d, h, n],
             ),
             g = (0, o.q_F)(f);
         return (0, r.jsx)(l.animated.div, {
             style: g,
             className: c.transitionItem,
-            children: p
+            children: p,
         });
     };

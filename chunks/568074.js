@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => i }), n(388685), n(361932), n(187205));
+n.d(t, { Z: () => i }), n(388685), n(361932), n(187205);
 var r = n(944537);
 function i(e) {
     let t = (0, r.n)((t) => t.editStateIdsForGroup[e]),
@@ -11,6 +11,6 @@ function i(e) {
                 let [n] = e;
                 return null == t ? void 0 : t.includes(n);
             })
-            .flatMap((e) => null == e[1] || Object.values(e[1]).every((e) => null == e || '' === e));
+            .flatMap((e) => null == e[1] || Object.values(e[1]).every((e) => null == e || "" === e));
     return !l || a.includes(!0);
 }

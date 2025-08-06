@@ -8,12 +8,16 @@ var i = n(114858),
     l = n(981631);
 let c = (e) => {
         let { hasLoadedExperiments: t, token: n } = e;
-        return null != n ? (0, r.jsx)(i.l_, { to: l.Z5c.APP }) : t ? (0, r.jsx)(i.l_, { to: l.Z5c.DEFAULT_LOGGED_OUT }) : null;
+        return null != n
+            ? (0, r.jsx)(i.l_, { to: l.Z5c.APP })
+            : t
+              ? (0, r.jsx)(i.l_, { to: l.Z5c.DEFAULT_LOGGED_OUT })
+              : null;
     },
     u = o.ZP.connectStores([a.Z, s.default], () => {
         let e = s.default.getToken();
         return {
             token: e,
-            hasLoadedExperiments: null != e || a.Z.hasLoadedExperiments
+            hasLoadedExperiments: null != e || a.Z.hasLoadedExperiments,
         };
     })(c);

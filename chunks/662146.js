@@ -9,38 +9,50 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
 function u(e) {
-    let { children: t, text: n, color: l, disableWrapper: u = !1, disabled: d = !1, hideOnClick: h = !0, shouldShow: p, forceOpen: f, selected: g = !1, tooltipClass: m, tooltipContentClass: b } = e;
+    let {
+        children: t,
+        text: n,
+        color: l,
+        disableWrapper: u = !1,
+        disabled: d = !1,
+        hideOnClick: h = !0,
+        shouldShow: p,
+        forceOpen: f,
+        selected: g = !1,
+        tooltipClass: m,
+        tooltipContentClass: b,
+    } = e;
     return (0, r.jsx)(s.ua7, {
         shouldShow: p,
         forceOpen: f,
         spacing: 12,
         hideOnClick: h,
         text: d ? null : n,
-        position: 'right',
+        position: "right",
         color: l,
-        'aria-label': !1,
+        "aria-label": !1,
         tooltipClassName: o()(a.listItemTooltip, m),
         tooltipContentClassName: b,
         children: (e) => {
@@ -48,7 +60,7 @@ function u(e) {
             return u
                 ? i.cloneElement(i.Children.only(t), c({}, e))
                 : (0, r.jsx)(
-                      'div',
+                      "div",
                       ((n = c({ className: o()(a.listItemWrapper, { [a.selected]: g }) }, e)),
                       (l = l = { children: t }),
                       Object.getOwnPropertyDescriptors
@@ -63,8 +75,8 @@ function u(e) {
                             })(Object(l)).forEach(function (e) {
                                 Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                             }),
-                      n)
+                      n),
                   );
-        }
+        },
     });
 }

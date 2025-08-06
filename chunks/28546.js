@@ -6,7 +6,7 @@ n.d(t, {
     _Q: () => p,
     hr: () => g,
     j9: () => h,
-    ql: () => E
+    ql: () => E,
 });
 var i = n(97613),
     o = n.n(i),
@@ -19,35 +19,35 @@ let d = Object.freeze({
         activeView: null,
         lastActiveView: null,
         activeViewType: null,
-        searchQuery: '',
+        searchQuery: "",
         isSearchSuggestion: !1,
         pickerId: (function () {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'uid_';
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
             return o()(e);
         })(),
         isNitroLockedSectionVisible: !1,
-        areOnlyNitroLockedSectionsVisible: !1
+        areOnlyNitroLockedSectionsVisible: !1,
     }),
     f = (0, s.F)()(
         (0, a.tJ)((e, t) => d, {
-            name: 'expression-picker-last-active-view',
-            partialize: (e) => ({ lastActiveView: e.lastActiveView })
-        })
+            name: "expression-picker-last-active-view",
+            partialize: (e) => ({ lastActiveView: e.lastActiveView }),
+        }),
     ),
     _ = (e, t) => {
         if (e === u.X1.GIF) {
             if (null != r) return;
-            let { enabled: n, delayMs: i } = (0, c.Kr)('gif-picker');
+            let { enabled: n, delayMs: i } = (0, c.Kr)("gif-picker");
             if (n) {
                 r = setTimeout(() => {
-                    ((r = null),
+                    (r = null),
                         (0, l.j)(() =>
                             f.setState({
                                 activeView: e,
                                 activeViewType: t,
-                                lastActiveView: f.getState().activeView
-                            })
-                        ));
+                                lastActiveView: f.getState().activeView,
+                            }),
+                        );
                 }, i);
                 return;
             }
@@ -56,8 +56,8 @@ let d = Object.freeze({
             f.setState({
                 activeView: e,
                 activeViewType: t,
-                lastActiveView: f.getState().activeView
-            })
+                lastActiveView: f.getState().activeView,
+            }),
         );
     },
     p = (e) => {
@@ -68,8 +68,8 @@ let d = Object.freeze({
                 f.setState({
                     activeView: null,
                     activeViewType: null,
-                    lastActiveView: t.activeView
-                })
+                    lastActiveView: t.activeView,
+                }),
             );
     },
     h = (e) => {
@@ -86,8 +86,8 @@ let d = Object.freeze({
         (0, l.j)(() =>
             f.setState({
                 activeView: e,
-                lastActiveView: f.getState().activeView
-            })
+                lastActiveView: f.getState().activeView,
+            }),
         );
     },
     E = function (e) {
@@ -95,8 +95,8 @@ let d = Object.freeze({
         (0, l.j)(() =>
             f.setState({
                 searchQuery: e,
-                isSearchSuggestion: t
-            })
+                isSearchSuggestion: t,
+            }),
         );
     },
     b = f;

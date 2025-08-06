@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,10 +21,10 @@ function c(e, t, n) {
 let u = Object.freeze([]),
     d = {};
 function f(e) {
-    ((d = {}),
+    (d = {}),
         e.sessions.forEach((e) => {
             d[e.sessionId] = e;
-        }));
+        });
 }
 class _ extends (r = a.ZP.Store) {
     initialize() {
@@ -57,8 +57,8 @@ class _ extends (r = a.ZP.Store) {
         });
     }
 }
-c(_, 'displayName', 'SessionsStore');
+c(_, "displayName", "SessionsStore");
 let p = new _(s.Z, {
     CONNECTION_OPEN: f,
-    SESSIONS_REPLACE: f
+    SESSIONS_REPLACE: f,
 });

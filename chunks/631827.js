@@ -3,7 +3,16 @@ function r(e, t) {
     let d,
         f = null != (n = t.limit) ? n : 1 / 0,
         _ = i(e, null != (r = t.filterPredicates) ? r : []);
-    return s((d = null != t.bucketPredicates && t.bucketPredicates.length > 0 ? (f >= _.length ? a(_, null != (l = t.bucketPredicates) ? l : []) : o(_, null != (c = t.bucketPredicates) ? c : [], f)) : [_]), null != (u = t.sortComparers) ? u : [], f).slice(0, f);
+    return s(
+        (d =
+            null != t.bucketPredicates && t.bucketPredicates.length > 0
+                ? f >= _.length
+                    ? a(_, null != (l = t.bucketPredicates) ? l : [])
+                    : o(_, null != (c = t.bucketPredicates) ? c : [], f)
+                : [_]),
+        null != (u = t.sortComparers) ? u : [],
+        f,
+    ).slice(0, f);
 }
 function i(e, t) {
     return e.filter((e) => t.every((t) => t(e)));
@@ -48,4 +57,4 @@ function l(e, t) {
         return 0;
     });
 }
-(n.d(t, { N: () => r }), n(539854), n(388685), n(642613));
+n.d(t, { N: () => r }), n(539854), n(388685), n(642613);

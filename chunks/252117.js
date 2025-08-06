@@ -1,7 +1,7 @@
 n.d(t, {
     Jt: () => l,
     o2: () => r,
-    wE: () => c
+    wE: () => c,
 });
 let r = (e) => new Promise((t) => setTimeout(t, e)),
     i = 50,
@@ -19,8 +19,14 @@ async function c(e) {
         try {
             return await t();
         } catch (e) {
-            if ((console.log(e), l in n.c)) throw (console.log('Module was found in webpack cache so it has loaded from the network and webpack will not retry'), e);
+            if ((console.log(e), l in n.c))
+                throw (
+                    (console.log(
+                        "Module was found in webpack cache so it has loaded from the network and webpack will not retry",
+                    ),
+                    e)
+                );
             if (u >= i) throw e;
-            (await r(c), await s(), (c = Math.min(a, 2 * c)), u++);
+            await r(c), await s(), (c = Math.min(a, 2 * c)), u++;
         }
 }

@@ -1,3 +1,3 @@
 e.exports = function (e) {
-    return '+' === e ? ['+'] : e.split('+');
+    return "+" === e ? ["+"] : e.split("+");
 };

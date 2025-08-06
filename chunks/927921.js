@@ -20,7 +20,7 @@ function f(e) {
             itemId: d.yN.MUSIC,
             isPaused: t,
             interval: 1000,
-            pointsPerInterval: p
+            pointsPerInterval: p,
         })
     );
 }

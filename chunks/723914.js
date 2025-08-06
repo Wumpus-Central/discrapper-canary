@@ -1,4 +1,4 @@
-(n.d(t, { q: () => d }), n(388685), n(953529));
+n.d(t, { q: () => d }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -11,18 +11,21 @@ function d(e) {
         u = i.useCallback(
             (e) => {
                 let t = new Set(d);
-                (e ? (t.add(s.oNc.ACTIVITY_FEED_ENABLED_BY_USER), t.delete(s.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (t.add(s.oNc.ACTIVITY_FEED_DISABLED_BY_USER), t.delete(s.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), a.Z.updateGuild({ features: t }));
+                e
+                    ? (t.add(s.oNc.ACTIVITY_FEED_ENABLED_BY_USER), t.delete(s.oNc.ACTIVITY_FEED_DISABLED_BY_USER))
+                    : (t.add(s.oNc.ACTIVITY_FEED_DISABLED_BY_USER), t.delete(s.oNc.ACTIVITY_FEED_ENABLED_BY_USER)),
+                    a.Z.updateGuild({ features: t });
             },
-            [d]
+            [d],
         );
     return (0, r.jsxs)(l.hjN, {
-        title: o.intl.string(o.t['oQ/7BQ']),
+        title: o.intl.string(o.t["oQ/7BQ"]),
         children: [
             (0, r.jsx)(l.Text, {
-                variant: 'text-sm/medium',
-                color: 'text-secondary',
+                variant: "text-sm/medium",
+                color: "text-secondary",
                 className: c.description,
-                children: o.intl.string(o.t.fZ0qZW)
+                children: o.intl.string(o.t.fZ0qZW),
             }),
             (0, r.jsx)(l.j7V, {
                 value: t,
@@ -30,8 +33,8 @@ function d(e) {
                 hideBorder: !0,
                 disabled: !n,
                 onChange: u,
-                children: o.intl.string(o.t.WompT0)
-            })
-        ]
+                children: o.intl.string(o.t.WompT0),
+            }),
+        ],
     });
 }

@@ -10,17 +10,17 @@ var i = n(481060),
 function u(e) {
     let { guild: t, selected: n } = e;
     return (0, r.jsx)(o.m, {
-        id: 'home-tab-'.concat(t.id),
+        id: "home-tab-".concat(t.id),
         renderIcon: (e) =>
             (0, r.jsx)(i.Vy8, {
-                size: 'md',
-                color: 'currentColor',
-                className: e
+                size: "md",
+                color: "currentColor",
+                className: e,
             }),
         text: c.intl.string(c.t.VbpLyc),
         selected: n,
         onClick: function () {
             (0, l.uL)(s.Z5c.CHANNEL(t.id, a.oC.GUILD_HOME));
-        }
+        },
     });
 }

@@ -4,8 +4,8 @@ function r(e, t) {
         r = e[0];
     for (let i = 1; i < e.length; i++) {
         let o = e[i];
-        (n.push(t(r, o)), (r = o));
+        n.push(t(r, o)), (r = o);
     }
     return n;
 }
-(n.d(t, { Z: () => r }), n(539854));
+n.d(t, { Z: () => r }), n(539854);

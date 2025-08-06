@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Y: () => c,
-    m: () => u
+    m: () => u,
 }),
-    n(388685));
+    n(388685);
 var r = n(149765),
     i = n(442837),
     o = n(430824),
@@ -20,9 +20,9 @@ let c = function (e) {
         s.uB({
             user: u,
             context: c,
-            checkElevated: !1
+            checkElevated: !1,
         }),
-        l.N
+        l.N,
     );
 };
 function u(e) {

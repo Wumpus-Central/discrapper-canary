@@ -1,7 +1,7 @@
 n.d(t, {
     JE: () => u,
     ct: () => c,
-    dc: () => l
+    dc: () => l,
 });
 var r = n(255367);
 n(73800);
@@ -24,12 +24,12 @@ function c(e) {
     if ((null == i ? void 0 : i.body) != null && (null == (t = i.shouldShow) ? void 0 : t.call(i, e)) !== !1) {
         let t = i.body;
         return (0, r.jsx)(
-            'section',
+            "section",
             {
                 className: a.section,
-                children: (0, r.jsx)(t, { activity: e })
+                children: (0, r.jsx)(t, { activity: e }),
             },
-            'delegate-'.concat(n)
+            "delegate-".concat(n),
         );
     }
 }

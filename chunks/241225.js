@@ -1,6 +1,6 @@
 a.d(e, {
     l: () => o,
-    o: () => n
+    o: () => n,
 });
 var r = a(988097),
     _ = a(696486);
@@ -10,7 +10,7 @@ function n(t, e, a) {
     o &&
         o.addEvent(t, {
             [r.Wb]: e,
-            [r.E1]: a
+            [r.E1]: a,
         });
 }
 function o(t) {
@@ -21,11 +21,11 @@ function o(t) {
             let a = t.attributes || {},
                 _ = a[r.E1],
                 n = a[r.Wb];
-            'string' == typeof _ &&
-                'number' == typeof n &&
+            "string" == typeof _ &&
+                "number" == typeof n &&
                 (e[t.name] = {
                     value: n,
-                    unit: _
+                    unit: _,
                 });
         }),
         e

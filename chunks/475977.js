@@ -20,51 +20,51 @@ let h = () => {
             o.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: m.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                 location_stack: e,
-                version: x
+                version: x,
             });
         }, [e, x]),
-        (0, i.jsxs)('div', {
+        (0, i.jsxs)("div", {
             ref: t,
             className: g.container,
-            style: { backgroundImage: 'url('.concat(n, ')') },
+            style: { backgroundImage: "url(".concat(n, ")") },
             children: [
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: g.artContainer,
-                    'aria-hidden': !0,
-                    role: 'presentation',
-                    children: (0, i.jsx)('img', {
+                    "aria-hidden": !0,
+                    role: "presentation",
+                    children: (0, i.jsx)("img", {
                         src: h,
                         className: g.art,
-                        alt: ''
-                    })
+                        alt: "",
+                    }),
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: g.mainColumn,
                     children: [
                         (0, i.jsx)(s.X6q, {
-                            variant: 'heading-lg/extrabold',
-                            color: _ ? 'redesign-button-overlay-text' : 'currentColor',
+                            variant: "heading-lg/extrabold",
+                            color: _ ? "redesign-button-overlay-text" : "currentColor",
                             className: g.title,
-                            children: f
+                            children: f,
                         }),
                         (0, i.jsx)(s.Text, {
-                            variant: 'text-sm/normal',
-                            color: _ ? 'redesign-button-overlay-text' : 'currentColor',
-                            children: b
-                        })
-                    ]
+                            variant: "text-sm/normal",
+                            color: _ ? "redesign-button-overlay-text" : "currentColor",
+                            children: b,
+                        }),
+                    ],
                 }),
                 (0, i.jsx)(s.zxk, {
                     onClick: () => {
                         (0, c.mK)({
                             analyticsLocations: e,
-                            analyticsSource: a.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
+                            analyticsSource: a.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                         });
                     },
-                    variant: 'overlay-primary',
-                    text: p.intl.string(p.t.fYfGgI)
-                })
-            ]
+                    variant: "overlay-primary",
+                    text: p.intl.string(p.t.fYfGgI),
+                }),
+            ],
         })
     );
 };

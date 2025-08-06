@@ -1,6 +1,6 @@
 n.d(t, {
     B: () => h,
-    Z: () => u
+    Z: () => u,
 });
 var i = n(255367);
 n(73800);
@@ -15,7 +15,14 @@ function u(e) {
     let { refToScroller: t } = e,
         n = (0, l.e7)([c.Z], () => c.Z.getChannel(), []),
         r = (0, l.e7)([d.Z], () => (null != n ? d.Z.getGuild(n.getGuildId()) : null), [n]),
-        { section: s, sectionId: u, webhooks: h, editedWebhook: g, isFetching: m, errors: p } = (0, l.cj)([o.Z], () => o.Z.getProps(), []);
+        {
+            section: s,
+            sectionId: u,
+            webhooks: h,
+            editedWebhook: g,
+            isFetching: m,
+            errors: p,
+        } = (0, l.cj)([o.Z], () => o.Z.getProps(), []);
     return null == r || null == n
         ? null
         : (0, i.jsx)(a.Z, {
@@ -28,7 +35,7 @@ function u(e) {
               isFetchingWebhooks: m,
               hasChanges: o.Z.hasChanges,
               errors: p,
-              refToScroller: t
+              refToScroller: t,
           });
 }
 function h() {
@@ -42,6 +49,6 @@ function h() {
         },
         onSave: () => {
             null != a && null != n && r.Z.saveWebhook(a.id, n);
-        }
+        },
     });
 }

@@ -14,8 +14,8 @@ function c() {
             description: o.intl.format(o.t.R5N31N, {
                 onClick: () => {
                     r.Z.setSection(l.oAB.ACCOUNT);
-                }
-            })
-        })
+                },
+            }),
+        }),
     });
 }

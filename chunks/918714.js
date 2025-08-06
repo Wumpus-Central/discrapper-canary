@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(481060),
@@ -15,7 +15,7 @@ let p = () => {
         [m, g] = i.useState(null),
         [y, h] = i.useState(!1),
         b = i.useCallback(async () => {
-            (p(!0), g(null));
+            p(!0), g(null);
             try {
                 var e;
                 let n = await (0, o.PA)();
@@ -28,15 +28,15 @@ let p = () => {
                           assignment_id: n.assignment_id,
                           ui_component: {
                               type: c.NS.REFRESH_APP,
-                              data: {}
+                              data: {},
                           },
                           flow_context: {
                               tasks: [],
-                              flow_id: n.flow_context.flow_id
-                          }
+                              flow_id: n.flow_context.flow_id,
+                          },
                       });
             } catch (e) {
-                g(d.intl.string(u.default['/f++3t']));
+                g(d.intl.string(u.default["/f++3t"]));
             } finally {
                 p(!1);
             }
@@ -50,52 +50,52 @@ let p = () => {
                         let r = {
                             task_id: e.task_id,
                             flow_id: null == (n = e.flow_context) ? void 0 : n.flow_id,
-                            data: t
+                            data: t,
                         };
-                        (await (0, o.Wl)(r), b());
+                        await (0, o.Wl)(r), b();
                     } catch (e) {
-                        g(d.intl.string(u.default['+QRSxc']));
+                        g(d.intl.string(u.default["+QRSxc"]));
                     } finally {
                         h(!1);
                     }
                 }
             },
-            [e, b]
+            [e, b],
         );
     return (
         i.useEffect(() => {
             b();
         }, [b]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: f.safetyFlow,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: f.container,
                 children: [
                     (0, r.jsx)(a.xBx, {
-                        'data-migration-pending': !0,
+                        "data-migration-pending": !0,
                         separator: !1,
                         className: f.header,
                         children: (0, r.jsx)(a.X6q, {
-                            variant: 'heading-xl/bold',
-                            children: d.intl.string(u.default.gqwhj4)
-                        })
+                            variant: "heading-xl/bold",
+                            children: d.intl.string(u.default.gqwhj4),
+                        }),
                     }),
                     (0, r.jsxs)(a.hzk, {
-                        'data-migration-pending': !0,
+                        "data-migration-pending": !0,
                         className: f.body,
                         children: [
                             n &&
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'text-muted',
-                                    children: d.intl.string(u.default.v0H5Tk)
+                                    variant: "text-md/normal",
+                                    color: "text-muted",
+                                    children: d.intl.string(u.default.v0H5Tk),
                                 }),
                             null !== m &&
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'text-danger',
+                                    variant: "text-md/normal",
+                                    color: "text-danger",
                                     className: f.error,
-                                    children: m
+                                    children: m,
                                 }),
                             !n &&
                                 null === m &&
@@ -103,12 +103,12 @@ let p = () => {
                                 (0, r.jsx)(s.Z, {
                                     task: e,
                                     onSubmit: E,
-                                    disabled: y
-                                })
-                        ]
-                    })
-                ]
-            })
+                                    disabled: y,
+                                }),
+                        ],
+                    }),
+                ],
+            }),
         })
     );
 };

@@ -29,21 +29,21 @@ function h(e) {
             new ResizeObserver(() => {
                 g();
             }),
-        [g]
+        [g],
     );
     return (
         i.useLayoutEffect(() => {
             let e = f.current;
-            if (null != e) return (m.observe(e), () => m.unobserve(e));
+            if (null != e) return m.observe(e), () => m.unobserve(e);
         }, [m]),
         i.useLayoutEffect(() => {
             let e = () => g(),
                 t = () => g();
             return (
-                h.addEventListener('scroll', e, !0),
-                h.addEventListener('resize', t),
+                h.addEventListener("scroll", e, !0),
+                h.addEventListener("resize", t),
                 () => {
-                    (h.removeEventListener('scroll', e, !0), h.removeEventListener('resize', t));
+                    h.removeEventListener("scroll", e, !0), h.removeEventListener("resize", t);
                 }
             );
         }, [g, h]),
@@ -54,18 +54,18 @@ function h(e) {
                     s.S.unsubscribe(d.CkL.MANUAL_IFRAME_RESIZING, g);
                 }
             ),
-            [g]
+            [g],
         ),
         i.useLayoutEffect(
             () => () => {
                 p(t, null);
             },
-            [t]
+            [t],
         ),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             ref: f,
             className: n,
-            style: a
+            style: a,
         })
     );
 }

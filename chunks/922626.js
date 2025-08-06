@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var i = n(73800),
     r = n(809206);
 function s(e) {
@@ -9,15 +9,15 @@ function s(e) {
             async (e) => {
                 a(!0);
                 try {
-                    (await (0, r.Mn)({ displayNameStyles: e }), null == t || t());
+                    await (0, r.Mn)({ displayNameStyles: e }), null == t || t();
                 } catch (e) {
                     null == n || n(e);
                 } finally {
                     a(!1);
                 }
             },
-            [t, n]
+            [t, n],
         ),
-        isApplying: s
+        isApplying: s,
     };
 }

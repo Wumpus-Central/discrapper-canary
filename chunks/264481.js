@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     P9: () => _,
     Uf: () => P,
     b0: () => x,
-    s_: () => O
+    s_: () => O,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(392711),
@@ -18,32 +18,75 @@ var r = n(255367),
     p = n(981631),
     m = n(388032),
     g = n(771627);
-let b = [() => m.intl.string(m.t.madJdH), () => m.intl.string(m.t.NYmfoK), () => m.intl.string(m.t.R2PaCg), () => m.intl.string(m.t.laSR8v), () => m.intl.string(m.t.DnsJEx)],
-    j = [() => m.intl.string(m.t.nFSbeH), () => m.intl.string(m.t.gTcxOz), () => m.intl.string(m.t['8T0wYm']), () => m.intl.string(m.t.BIHl1t), () => m.intl.string(m.t.jhBm09)],
-    h = [() => m.intl.string(m.t.AyMGXF), () => m.intl.string(m.t.aAFW7e), (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }), () => m.intl.string(m.t['rrYh5+']), () => m.intl.string(m.t['HX3K+P']), () => m.intl.string(m.t['/yW3aW']), () => m.intl.string(m.t['PmL/v7']), () => m.intl.string(m.t.IALa3t), () => m.intl.string(m.t.HRcTFB), () => m.intl.string(m.t.NuCqPj), () => m.intl.string(m.t['M1tw+/']), () => m.intl.string(m.t.UBm1y8), () => m.intl.string(m.t.Cu95PT), () => m.intl.string(m.t['R/wFur']), () => m.intl.string(m.t.HQPAVV), () => m.intl.string(m.t.YolGh4)],
-    y = [p.ABu.STEAM, p.ABu.PLAYSTATION, p.ABu.XBOX, p.ABu.TWITCH, p.ABu.BATTLENET, p.ABu.LEAGUE_OF_LEGENDS, p.ABu.EPIC_GAMES, p.ABu.RIOT_GAMES, p.ABu.ROBLOX, p.ABu.SPOTIFY, p.ABu.YOUTUBE, p.ABu.CRUNCHYROLL, p.ABu.BUNGIE];
+let b = [
+        () => m.intl.string(m.t.madJdH),
+        () => m.intl.string(m.t.NYmfoK),
+        () => m.intl.string(m.t.R2PaCg),
+        () => m.intl.string(m.t.laSR8v),
+        () => m.intl.string(m.t.DnsJEx),
+    ],
+    j = [
+        () => m.intl.string(m.t.nFSbeH),
+        () => m.intl.string(m.t.gTcxOz),
+        () => m.intl.string(m.t["8T0wYm"]),
+        () => m.intl.string(m.t.BIHl1t),
+        () => m.intl.string(m.t.jhBm09),
+    ],
+    h = [
+        () => m.intl.string(m.t.AyMGXF),
+        () => m.intl.string(m.t.aAFW7e),
+        (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }),
+        () => m.intl.string(m.t["rrYh5+"]),
+        () => m.intl.string(m.t["HX3K+P"]),
+        () => m.intl.string(m.t["/yW3aW"]),
+        () => m.intl.string(m.t["PmL/v7"]),
+        () => m.intl.string(m.t.IALa3t),
+        () => m.intl.string(m.t.HRcTFB),
+        () => m.intl.string(m.t.NuCqPj),
+        () => m.intl.string(m.t["M1tw+/"]),
+        () => m.intl.string(m.t.UBm1y8),
+        () => m.intl.string(m.t.Cu95PT),
+        () => m.intl.string(m.t["R/wFur"]),
+        () => m.intl.string(m.t.HQPAVV),
+        () => m.intl.string(m.t.YolGh4),
+    ],
+    y = [
+        p.ABu.STEAM,
+        p.ABu.PLAYSTATION,
+        p.ABu.XBOX,
+        p.ABu.TWITCH,
+        p.ABu.BATTLENET,
+        p.ABu.LEAGUE_OF_LEGENDS,
+        p.ABu.EPIC_GAMES,
+        p.ABu.RIOT_GAMES,
+        p.ABu.ROBLOX,
+        p.ABu.SPOTIFY,
+        p.ABu.YOUTUBE,
+        p.ABu.CRUNCHYROLL,
+        p.ABu.BUNGIE,
+    ];
 function v(e) {
     let { heading: t, bodyText: n, children: l } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.empty,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.textContainer,
                 children: [
                     (0, r.jsx)(i.X6q, {
-                        variant: 'heading-md/medium',
-                        color: 'header-primary',
-                        children: t
+                        variant: "heading-md/medium",
+                        color: "header-primary",
+                        children: t,
                     }),
                     (0, r.jsx)(i.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'header-secondary',
-                        children: n
-                    })
-                ]
+                        variant: "text-sm/normal",
+                        color: "header-secondary",
+                        children: n,
+                    }),
+                ],
             }),
-            l
-        ]
+            l,
+        ],
     });
 }
 function O() {
@@ -54,7 +97,7 @@ function O() {
         });
     return (0, r.jsx)(v, {
         heading: e,
-        bodyText: t
+        bodyText: t,
     });
 }
 function x() {
@@ -65,7 +108,7 @@ function x() {
         });
     return (0, r.jsx)(v, {
         heading: e,
-        bodyText: t
+        bodyText: t,
     });
 }
 function _(e) {
@@ -77,70 +120,70 @@ function _(e) {
             return (null != (e = (0, o.sample)(h)) ? e : h[0])(d);
         }),
         j = l.useCallback(() => {
-            (a.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s());
+            a.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
         }, [t.id, s]);
     return (0, r.jsx)(v, {
         heading: p,
         bodyText: b,
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: g.buttonRow,
             children: (0, r.jsx)(f.tG, {
                 icon: i.kBi,
-                text: m.intl.string(m.t['g33r/P']),
+                text: m.intl.string(m.t["g33r/P"]),
                 onClick: j,
-                themeColor: 'secondary'
-            })
-        })
+                themeColor: "secondary",
+            }),
+        }),
     });
 }
 function I() {
     let e = (0, s.ZP)();
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: g.connectionPlatforms,
         children: y.map((t, n) => {
             let l = d.Z.get(t);
             if (null == l) return null;
             let o = (0, i.wjy)(e) ? l.icon.darkPNG : l.icon.lightPNG;
             return (0, r.jsx)(
-                'img',
+                "img",
                 {
                     src: o,
                     alt: l.name,
-                    className: g.connectionIcon
+                    className: g.connectionIcon,
                 },
-                n
+                n,
             );
-        })
+        }),
     });
 }
 function P(e) {
     let { onClose: t } = e,
         n = l.useCallback(() => {
-            (null == t || t(), c.Z.open(p.oAB.CONNECTIONS));
+            null == t || t(), c.Z.open(p.oAB.CONNECTIONS);
         }, [t]),
         o = l.useCallback(() => {
-            (null == t || t(), c.Z.open(p.oAB.CONTENT_AND_SOCIAL, 'CONNECTED_GAMES'));
+            null == t || t(), c.Z.open(p.oAB.CONTENT_AND_SOCIAL, "CONNECTED_GAMES");
         }, [t]);
     return (0, r.jsxs)(v, {
         heading: m.intl.string(m.t.VB6LWV),
         bodyText: m.intl.string(m.t.KpjsU1),
         children: [
             (0, r.jsx)(I, {}),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.buttonRow,
                 children: [
                     (0, r.jsx)(f.tG, {
-                        text: m.intl.string(m.t['/Hl24e']),
+                        text: m.intl.string(m.t["/Hl24e"]),
                         onClick: n,
-                        themeColor: 'secondary'
+                        themeColor: "secondary",
                     }),
                     (0, r.jsx)(f.tG, {
                         text: m.intl.string(m.t.GTCx0t),
                         onClick: o,
-                        themeColor: 'secondary'
-                    })
-                ]
-            })
-        ]
+                        themeColor: "secondary",
+                    }),
+                ],
+            }),
+        ],
     });
 }

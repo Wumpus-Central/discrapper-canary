@@ -6,7 +6,7 @@ e.exports = function (e) {
     return function (t) {
         var n = i((t = a(t))) ? o(t) : void 0,
             s = n ? n[0] : t.charAt(0),
-            l = n ? r(n, 1).join('') : t.slice(1);
+            l = n ? r(n, 1).join("") : t.slice(1);
         return s[e]() + l;
     };
 };

@@ -14,7 +14,7 @@ e.exports = function (e, t, n, a, s, l) {
         h = l.get(t);
     if (p && h) return p == t && h == e;
     var m = !0;
-    (l.set(e, t), l.set(t, e));
+    l.set(e, t), l.set(t, e);
     for (var g = c; ++f < d; ) {
         var E = e[(_ = u[f])],
             b = t[_];
@@ -23,12 +23,16 @@ e.exports = function (e, t, n, a, s, l) {
             m = !1;
             break;
         }
-        g || (g = 'constructor' == _);
+        g || (g = "constructor" == _);
     }
     if (m && !g) {
         var O = e.constructor,
             v = t.constructor;
-        O != v && 'constructor' in e && 'constructor' in t && !('function' == typeof O && O instanceof O && 'function' == typeof v && v instanceof v) && (m = !1);
+        O != v &&
+            "constructor" in e &&
+            "constructor" in t &&
+            !("function" == typeof O && O instanceof O && "function" == typeof v && v instanceof v) &&
+            (m = !1);
     }
-    return (l.delete(e), l.delete(t), m);
+    return l.delete(e), l.delete(t), m;
 };

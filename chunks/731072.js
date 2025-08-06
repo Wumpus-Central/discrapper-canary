@@ -9,25 +9,37 @@ var i = n(255367),
     d = n(13051),
     u = n(621057);
 function p(e) {
-    let { integrations: t, editedIntegration: n, guild: p, platformType: m, labelText: b, descriptionText: g, helpText: f, canNavigate: h } = e,
+    let {
+            integrations: t,
+            editedIntegration: n,
+            guild: p,
+            platformType: m,
+            labelText: b,
+            descriptionText: g,
+            helpText: f,
+            canNavigate: h,
+        } = e,
         x = a.Z.get(m),
         j = r.useCallback(
             async (e) => {
                 h() && (await s.Z.enableIntegration(p.id, e.type, e.id), o.Z.startEditingIntegration(e.id));
             },
-            [h, p.id]
+            [h, p.id],
         ),
         v = r.useCallback(
             (e) => {
-                h() && (e.id === (null == n ? void 0 : n.id) && o.Z.stopEditingIntegration(), s.Z.disableIntegration(p.id, e.id));
+                h() &&
+                    (e.id === (null == n ? void 0 : n.id) && o.Z.stopEditingIntegration(),
+                    s.Z.disableIntegration(p.id, e.id));
             },
-            [h, n, p.id]
+            [h, n, p.id],
         ),
         O = r.useCallback(
             (e) => {
-                h() && (e === (null == n ? void 0 : n.id) ? o.Z.stopEditingIntegration() : o.Z.startEditingIntegration(e));
+                h() &&
+                    (e === (null == n ? void 0 : n.id) ? o.Z.stopEditingIntegration() : o.Z.startEditingIntegration(e));
             },
-            [h, n]
+            [h, n],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -37,7 +49,7 @@ function p(e) {
                 iconBackgroundColor: null == x ? void 0 : x.color,
                 iconClassName: u.platformIcon,
                 description: g,
-                isHeader: !0
+                isHeader: !0,
             }),
             (0, i.jsx)(l.$i$, { className: u.headerDivider }),
             t.map((e) =>
@@ -50,17 +62,17 @@ function p(e) {
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
                         onEnable: j,
                         onDisable: v,
-                        onToggleExpand: () => O(e.id)
+                        onToggleExpand: () => O(e.id),
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             ),
             (0, i.jsx)(l.Text, {
                 className: u.helpText,
-                color: 'text-muted',
-                variant: 'text-sm/normal',
-                children: f
-            })
-        ]
+                color: "text-muted",
+                variant: "text-sm/normal",
+                children: f,
+            }),
+        ],
     });
 }

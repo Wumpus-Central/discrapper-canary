@@ -9,18 +9,18 @@ function s(e, t) {
             i.BT({
                 permission: r.Plq.ADMINISTRATOR,
                 context: e,
-                user: t
+                user: t,
             })
         ) ||
         (i.BT({
             permission: r.Plq.MANAGE_GUILD,
             context: e,
-            user: t
+            user: t,
         }) &&
             i.BT({
                 permission: r.Plq.MANAGE_ROLES,
                 context: e,
-                user: t
+                user: t,
             }))
     );
 }

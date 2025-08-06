@@ -1,4 +1,4 @@
-(t.d(e, { default: () => M }), t(539854), t(642613), t(388685));
+t.d(e, { default: () => M }), t(539854), t(642613), t(388685);
 var i = t(255367),
     l = t(73800),
     r = t(120356),
@@ -41,15 +41,15 @@ function v(n) {
             l ? (0, i.jsx)(f.Z, { className: Z.radioIcon }) : (0, i.jsx)(R.Z, { className: Z.radioIcon }),
             (0, i.jsx)(t, {
                 className: Z.icon,
-                size: 'xs',
-                color: 'currentColor'
+                size: "xs",
+                color: "currentColor",
             }),
             (0, i.jsx)(_.Text, {
-                variant: 'text-md/medium',
-                color: 'interactive-active',
-                children: a
-            })
-        ]
+                variant: "text-md/medium",
+                color: "interactive-active",
+                children: a,
+            }),
+        ],
     });
 }
 function b(n) {
@@ -69,12 +69,12 @@ function b(n) {
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)('div', { className: a()(Z.divider, Z.bottomDivider) }),
+                  (0, i.jsx)("div", { className: a()(Z.divider, Z.bottomDivider) }),
                   (0, i.jsx)(_.Text, {
-                      variant: 'eyebrow',
-                      color: 'interactive-normal',
+                      variant: "eyebrow",
+                      color: "interactive-normal",
                       className: Z.contentPadding,
-                      children: p.intl.string(p.t.SOtDeX)
+                      children: p.intl.string(p.t.SOtDeX),
                   }),
                   (0, i.jsx)(_.aVo, {
                       sections: [u.length],
@@ -92,22 +92,25 @@ function b(n) {
                                         channel: a,
                                         ChannelIcon: E,
                                         selected: t === a.id,
-                                        onClick: r
+                                        onClick: r,
                                     },
-                                    a.id
+                                    a.id,
                                 );
                       },
                       rowHeight: (n, e) => (n > 0 ? 0 : 56 * (null != u[e])),
                       renderSection: () => null,
                       className: a()(Z.channelList, Z.contentPadding),
-                      fade: !0
-                  })
-              ]
+                      fade: !0,
+                  }),
+              ],
           });
 }
 function j(n) {
     let { friends: e, searchQuery: t, disabled: r, onShareClip: d } = n,
-        u = l.useMemo(() => (0 === t.length ? e : e.filter((n) => n.username.toLowerCase().includes(t.toLowerCase()))), [e, t]),
+        u = l.useMemo(
+            () => (0 === t.length ? e : e.filter((n) => n.username.toLowerCase().includes(t.toLowerCase()))),
+            [e, t],
+        ),
         c = (0, E.e7)([D.Z], () => D.Z.theme);
     return 0 === u.length
         ? (0, i.jsxs)(_.ubH, {
@@ -118,10 +121,10 @@ function j(n) {
                       width: 415,
                       height: 75,
                       lightSrc: H,
-                      darkSrc: x
+                      darkSrc: x,
                   }),
-                  (0, i.jsx)(_.OZU, { note: p.intl.string(p.t['+Zg0lZ']) })
-              ]
+                  (0, i.jsx)(_.OZU, { note: p.intl.string(p.t["+Zg0lZ"]) }),
+              ],
           })
         : (0, i.jsx)(_.aVo, {
               sections: [u.length],
@@ -132,15 +135,15 @@ function j(n) {
                   let l = u[t],
                       a = u[t].username;
                   return (0, i.jsxs)(
-                      'div',
+                      "div",
                       {
                           className: Z.userRow,
                           children: [
                               (0, i.jsx)(s.Z, { user: l }),
                               (0, i.jsx)(_.Text, {
                                   className: Z.username,
-                                  variant: 'text-md/normal',
-                                  children: a
+                                  variant: "text-md/normal",
+                                  children: a,
                               }),
                               (0, i.jsx)(o.zx, {
                                   disabled: r,
@@ -150,24 +153,24 @@ function j(n) {
                                   size: o.Ph.SMALL,
                                   color: o.Tt.BRAND,
                                   children: (0, i.jsx)(_.Text, {
-                                      variant: 'text-sm/medium',
-                                      children: p.intl.string(p.t.RDE0SU)
-                                  })
-                              })
-                          ]
+                                      variant: "text-sm/medium",
+                                      children: p.intl.string(p.t.RDE0SU),
+                                  }),
+                              }),
+                          ],
                       },
-                      l.id
+                      l.id,
                   );
               },
               rowHeight: (n, e) => (n > 0 ? 0 : 52 * (null != u[e])),
               renderSection: () => null,
               className: a()(Z.friendsList, Z.contentPadding),
-              fade: !0
+              fade: !0,
           });
 }
 function M(n) {
     let { clip: e, editMetadata: t, transitionState: r, onClose: o } = n,
-        [s, A] = l.useState(''),
+        [s, A] = l.useState(""),
         [T, S] = l.useState(!1),
         [D, N] = l.useState(null),
         U = (0, E.Wu)([h.Z], () => h.Z.getFriendIDs()),
@@ -178,9 +181,16 @@ function M(n) {
                     .filter(G.lm)
                     .sort((n, e) => {
                         var t, i, l, r;
-                        return (null != (l = null == (t = L.Z.getUserAffinity(e.id)) ? void 0 : t.communicationProbability) ? l : 0) - (null != (r = null == (i = L.Z.getUserAffinity(n.id)) ? void 0 : i.communicationProbability) ? r : 0);
+                        return (
+                            (null != (l = null == (t = L.Z.getUserAffinity(e.id)) ? void 0 : t.communicationProbability)
+                                ? l
+                                : 0) -
+                            (null != (r = null == (i = L.Z.getUserAffinity(n.id)) ? void 0 : i.communicationProbability)
+                                ? r
+                                : 0)
+                        );
                     }),
-            [U]
+            [U],
         ),
         f = (0, E.e7)([P.Z], () => P.Z.getGuildId()),
         { analyticsLocations: O } = (0, C.ZP)(c.Z.CLIPS_SHARE_MODAL);
@@ -189,13 +199,13 @@ function M(n) {
         if (null != i) {
             S(!0);
             try {
-                (await (0, m.e)(e, {
+                await (0, m.e)(e, {
                     channelId: i,
                     editMetadata: t,
-                    analyticsLocations: O
+                    analyticsLocations: O,
                 }),
                     null == n && (0, I.Kh)(i),
-                    d.pT());
+                    d.pT();
             } catch (n) {
             } finally {
                 S(!1);
@@ -209,62 +219,62 @@ function M(n) {
     return (0, i.jsxs)(_.Y0X, {
         size: _.CgR.SMALL,
         transitionState: r,
-        parentComponent: 'ClipsShareModal',
+        parentComponent: "ClipsShareModal",
         children: [
             (0, i.jsx)(_.X6q, {
                 className: a()(Z.title, Z.contentPadding),
-                variant: 'heading-lg/semibold',
-                color: 'interactive-active',
-                children: p.intl.string(p.t['6EcIlJ'])
+                variant: "heading-lg/semibold",
+                color: "interactive-active",
+                children: p.intl.string(p.t["6EcIlJ"]),
             }),
             (0, i.jsx)(_.Text, {
-                variant: 'text-md/normal',
-                color: 'text-default',
+                variant: "text-md/normal",
+                color: "text-default",
                 className: a()(Z.subtitle, Z.contentPadding),
-                children: p.intl.string(p.t.Ey7mOT)
+                children: p.intl.string(p.t.Ey7mOT),
             }),
             (0, i.jsx)(_.E1j, {
                 className: Z.searchBar,
                 query: s,
                 onChange: A,
                 onClear: function () {
-                    A('');
+                    A("");
                 },
-                placeholder: p.intl.string(p.t.CmSHY2)
+                placeholder: p.intl.string(p.t.CmSHY2),
             }),
-            (0, i.jsx)('div', { className: a()(Z.divider, Z.topDivider) }),
+            (0, i.jsx)("div", { className: a()(Z.divider, Z.topDivider) }),
             (0, i.jsx)(j, {
                 searchQuery: s,
                 friends: R,
                 onShareClip: H,
-                disabled: T
+                disabled: T,
             }),
             null != f &&
                 (0, i.jsx)(b, {
                     guildId: f,
                     selectedChannelId: D,
-                    onSelectChannelId: N
+                    onSelectChannelId: N,
                 }),
             (0, i.jsx)(_.mzw, {
                 children: (0, i.jsxs)(_.hE2, {
-                    direction: 'horizontal-reverse',
+                    direction: "horizontal-reverse",
                     children: [
                         (0, i.jsx)(_.zxk, {
-                            variant: 'primary',
+                            variant: "primary",
                             text: p.intl.string(p.t.I8lglZ),
                             disabled: null == D,
                             loading: T,
-                            onClick: () => x()
+                            onClick: () => x(),
                         }),
                         (0, i.jsx)(_.zxk, {
-                            variant: 'secondary',
-                            text: p.intl.string(p.t['13/7kZ']),
+                            variant: "secondary",
+                            text: p.intl.string(p.t["13/7kZ"]),
                             loading: T,
-                            onClick: o
-                        })
-                    ]
-                })
-            })
-        ]
+                            onClick: o,
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

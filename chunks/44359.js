@@ -9,13 +9,13 @@ function a(e) {
     return (0, i.jsx)(i.Fragment, {
         children: t.map((e, t) =>
             (0, i.jsx)(
-                'span',
+                "span",
                 {
                     className: o()(l.key, n),
-                    children: e
+                    children: e,
                 },
-                t
-            )
-        )
+                t,
+            ),
+        ),
     });
 }

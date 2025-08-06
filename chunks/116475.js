@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(126663),
@@ -16,11 +16,17 @@ function u(e) {
         u = (window.innerHeight + n) / 2 + r.y,
         { x: d, y: f } = r;
     return (
-        o && ((d += i.x), s + i.x > 0 && (d = (t - window.innerWidth) / 2), c + i.x < window.innerWidth && (d = (window.innerWidth - t) / 2)),
-        a && ((f += i.y), l + i.y > 0 && (f = (n - window.innerHeight) / 2), u + i.y < window.innerHeight && (f = (window.innerHeight - n) / 2)),
+        o &&
+            ((d += i.x),
+            s + i.x > 0 && (d = (t - window.innerWidth) / 2),
+            c + i.x < window.innerWidth && (d = (window.innerWidth - t) / 2)),
+        a &&
+            ((f += i.y),
+            l + i.y > 0 && (f = (n - window.innerHeight) / 2),
+            u + i.y < window.innerHeight && (f = (window.innerHeight - n) / 2)),
         {
             x: d,
-            y: f
+            y: f,
         }
     );
 }
@@ -32,7 +38,7 @@ function d(e) {
         O = i.useRef(!1),
         [v, I] = i.useState({
             x: 0,
-            y: 0
+            y: 0,
         }),
         T = (e, t) => {
             let r = u({
@@ -40,12 +46,12 @@ function d(e) {
                 height: y * n.goal,
                 offset: {
                     x: d.goal,
-                    y: f.goal
+                    y: f.goal,
                 },
                 delta: {
                     x: e,
-                    y: t
-                }
+                    y: t,
+                },
             });
             _(r.x, r.y, { immediate: !0 });
         },
@@ -56,13 +62,13 @@ function d(e) {
                 (O.current = !0),
                 I({
                     x: e.clientX,
-                    y: e.clientY
+                    y: e.clientY,
                 }));
         },
         A = (e) => {
             if (!p) {
                 if (0 === e.button) {
-                    ((0, s.yg)(s.uG.ZOOM_IN_IMAGE_PRESSED), h(!0));
+                    (0, s.yg)(s.uG.ZOOM_IN_IMAGE_PRESSED), h(!0);
                     let t = e.clientX - window.innerWidth / 2,
                         r = e.clientY - window.innerHeight / 2,
                         i = u({
@@ -70,18 +76,19 @@ function d(e) {
                             height: y * n.goal,
                             offset: {
                                 x: 0,
-                                y: 0
+                                y: 0,
                             },
                             delta: {
                                 x: -t * (n.goal - 1),
-                                y: -r * (n.goal - 1)
-                            }
+                                y: -r * (n.goal - 1),
+                            },
                         });
                     _(i.x, i.y);
                 }
                 return;
             }
-            ((e.clientX - v.x) ** 2 + (e.clientY - v.y) ** 2 < c && ((0, s.yg)(s.uG.ZOOM_OUT_IMAGE_PRESSED), h(!1)), (O.current = !1));
+            (e.clientX - v.x) ** 2 + (e.clientY - v.y) ** 2 < c && ((0, s.yg)(s.uG.ZOOM_OUT_IMAGE_PRESSED), h(!1)),
+                (O.current = !1);
         };
     return (0, r.jsx)(o.animated.div, {
         ref: m,
@@ -95,9 +102,9 @@ function d(e) {
             scale: n,
             x: d,
             y: f,
-            cursor: p ? 'zoom-out' : 'zoom-in'
+            cursor: p ? "zoom-out" : "zoom-in",
         },
-        children: t
+        children: t,
     });
 }
 let f = i.memo(d);

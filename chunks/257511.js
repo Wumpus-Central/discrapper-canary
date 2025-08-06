@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -13,7 +13,7 @@ function l(e) {
                       t.has(e) && (t.delete(e), n(new Set(t)));
                   }
                 : void 0;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()(s.tags, { [s.wrap]: i }),
         children: Array.from(t).map((e) =>
             (0, r.jsx)(
@@ -21,10 +21,10 @@ function l(e) {
                 {
                     tag: e,
                     onRemove: l,
-                    size: null == l ? a.Z.Sizes.SMALL : a.Z.Sizes.MEDIUM
+                    size: null == l ? a.Z.Sizes.SMALL : a.Z.Sizes.MEDIUM,
                 },
-                e.id
-            )
-        )
+                e.id,
+            ),
+        ),
     });
 }

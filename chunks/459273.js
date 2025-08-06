@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     I3: () => f,
     d9: () => p,
     oo: () => d,
-    yp: () => _
+    yp: () => _,
 }),
     n(388685),
-    n(415506));
+    n(415506);
 var r = n(255367),
     i = n(73800),
     o = n(836560),
@@ -18,7 +18,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,16 +26,16 @@ function l(e, t, n) {
 }
 class c {
     subscribe(e, t) {
-        (s.S.subscribe(e, t), this.emitter.on(e, t));
+        s.S.subscribe(e, t), this.emitter.on(e, t);
     }
     unsubscribe(e, t) {
-        (s.S.unsubscribe(e, t), this.emitter.off(e, t));
+        s.S.unsubscribe(e, t), this.emitter.off(e, t);
     }
     bumpDispatchPriority() {
         for (let e of this.emitter.eventNames()) for (let t of this.emitter.listeners(e)) s.S.resubscribe(e, t);
     }
     constructor() {
-        l(this, 'emitter', new o.EventEmitter());
+        l(this, "emitter", new o.EventEmitter());
     }
 }
 class u {
@@ -55,7 +55,7 @@ let d = i.createContext(new u()),
             i.useImperativeHandle(t, () => o, [o]),
             (0, r.jsx)(d.Provider, {
                 value: o,
-                children: n
+                children: n,
             })
         );
     });
@@ -85,5 +85,5 @@ function _(e) {
     );
 }
 function p(e) {
-    return (_(e), null);
+    return _(e), null;
 }

@@ -1,5 +1,5 @@
 function r(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 var i = n(359282),
     o = n(720379),
@@ -11,18 +11,18 @@ var i = n(359282),
     d = a.Repeat,
     f = c(),
     _ = u({
-        key: '',
-        type: 'unstyled',
-        text: '',
+        key: "",
+        type: "unstyled",
+        text: "",
         characterList: s(),
         depth: 0,
-        data: l()
+        data: l(),
     }),
     p = function (e) {
         if (!e) return e;
         var t = e.characterList,
             n = e.text;
-        return (n && !t && (e.characterList = s(d(i.EMPTY, n.length))), e);
+        return n && !t && (e.characterList = s(d(i.EMPTY, n.length))), e;
     };
 function h(e, t) {
     return e.getStyle() === t.getStyle();
@@ -38,25 +38,25 @@ e.exports = (function (e) {
     var n = t.prototype;
     return (
         (n.getKey = function () {
-            return this.get('key');
+            return this.get("key");
         }),
         (n.getType = function () {
-            return this.get('type');
+            return this.get("type");
         }),
         (n.getText = function () {
-            return this.get('text');
+            return this.get("text");
         }),
         (n.getCharacterList = function () {
-            return this.get('characterList');
+            return this.get("characterList");
         }),
         (n.getLength = function () {
             return this.getText().length;
         }),
         (n.getDepth = function () {
-            return this.get('depth');
+            return this.get("depth");
         }),
         (n.getData = function () {
-            return this.get('data');
+            return this.get("data");
         }),
         (n.getInlineStyleAt = function (e) {
             var t = this.getCharacterList().get(e);

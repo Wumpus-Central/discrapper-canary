@@ -6,6 +6,6 @@ let a = () => {
     (0, i.B)({
         title: s.intl.string(s.t.oPV2c3),
         body: s.intl.string(s.t.DdRizc),
-        Icon: r.Z
+        Icon: r.Z,
     });
 };

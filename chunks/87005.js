@@ -1,4 +1,4 @@
-(n.d(t, { f: () => g }), n(388685), n(539854));
+n.d(t, { f: () => g }), n(388685), n(539854);
 var r = n(73800),
     i = n(243814),
     o = n(442837),
@@ -13,12 +13,12 @@ var f = n(783097),
     _ = n(701488),
     p = n(689079);
 let h = {
-        commandTypes: [s.yU.CHAT, s.yU.PRIMARY_ENTRY_POINT]
+        commandTypes: [s.yU.CHAT, s.yU.PRIMARY_ENTRY_POINT],
     },
     m = {
         placeholderCount: 0,
         limit: p.tn,
-        includeFrecency: !0
+        includeFrecency: !0,
     };
 function g(e) {
     let { context: t, onlyActivityApps: n, allowCommandFetch: r, includeAuthorizedAppsAndFetch: i } = e,
@@ -26,7 +26,7 @@ function g(e) {
             context: t,
             filters: h,
             options: m,
-            allowFetch: r
+            allowFetch: r,
         });
     return {
         loading: a,
@@ -34,8 +34,8 @@ function g(e) {
             sectionDescriptors: o,
             context: t,
             onlyActivityApps: n,
-            includeAuthorizedAppsAndFetch: i
-        })
+            includeAuthorizedAppsAndFetch: i,
+        }),
     };
 }
 function E(e) {
@@ -44,13 +44,23 @@ function E(e) {
     r.useEffect(() => {
         l && h === d.M.NOT_FETCHED && a.Z.fetch();
     }, [l, h]);
-    let m = (0, o.Wu)([d.Z], () => (l ? d.Z.getNewestTokens().filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS)) : [])),
+    let m = (0, o.Wu)([d.Z], () =>
+            l ? d.Z.getNewestTokens().filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS)) : [],
+        ),
         g = t.filter((e) => e.id !== p.bi.FRECENCY && e.id !== p.bi.BUILT_IN),
-        E = 'contextless' === n.type,
+        E = "contextless" === n.type,
         b = r.useMemo(() => {
             let e = [];
-            return (E && e.push(_.jT), e);
+            return E && e.push(_.jT), e;
         }, [E]),
         y = (0, u.h)(g, m);
-    return r.useMemo(() => (s ? y.filter((e) => null != e.application && (0, f.ye)(e.application) && null != (0, c.Xu)(n, e.id)).filter((e) => !b.includes(e.id)) : y.filter((e) => !b.includes(e.id))), [s, y, n, b]);
+    return r.useMemo(
+        () =>
+            s
+                ? y
+                      .filter((e) => null != e.application && (0, f.ye)(e.application) && null != (0, c.Xu)(n, e.id))
+                      .filter((e) => !b.includes(e.id))
+                : y.filter((e) => !b.includes(e.id)),
+        [s, y, n, b],
+    );
 }

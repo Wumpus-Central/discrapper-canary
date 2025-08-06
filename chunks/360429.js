@@ -36,24 +36,24 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -88,15 +88,18 @@ function T(e) {
                 n = (0, O.Z)(C.Z),
                 o = p.Z.getSettings().clipsEnabled,
                 a = e.ownerId === Z.default.getId(),
-                { enableViewerClipping: c, ignoreSenderPreference: s } = S.Z.useExperiment({ location: 'StreamContextMenu' }, { autoTrackExposure: !1 }),
+                { enableViewerClipping: c, ignoreSenderPreference: s } = S.Z.useExperiment(
+                    { location: "StreamContextMenu" },
+                    { autoTrackExposure: !1 },
+                ),
                 u = (0, i.e7)([p.Z], () => p.Z.getIsAtMaxSaveClipOperations()),
                 d = (0, i.e7)([p.Z], () => p.Z.isViewerClippingAllowedForUser(e.ownerId)) || s;
             return n && c && t
                 ? (0, r.jsx)(l.sNh, {
-                      id: 'clip-stream',
+                      id: "clip-stream",
                       disabled: !o || !(a || d) || u,
                       label: N.intl.string(N.t.U4URzM),
-                      action: () => (a ? (0, h.C1)() : (0, h.C1)((0, m.V9)(e)))
+                      action: () => (a ? (0, h.C1)() : (0, h.C1)((0, m.V9)(e))),
                   })
                 : null;
         })(t),
@@ -113,29 +116,30 @@ function T(e) {
                 a = M(e),
                 u = E.default.getCurrentUser(),
                 d = null != u && e.ownerId === u.id;
-            return ((t = d ? N.intl.string(N.t.S5anIS) : a ? N.intl.string(N.t.q3O3Jy) : N.intl.string(N.t['7Xq/nZ'])), n || (!d && a && (null == o ? void 0 : o.isGuildStageVoice())))
+            return ((t = d ? N.intl.string(N.t.S5anIS) : a ? N.intl.string(N.t.q3O3Jy) : N.intl.string(N.t["7Xq/nZ"])),
+            n || (!d && a && (null == o ? void 0 : o.isGuildStageVoice())))
                 ? null
                 : (0, r.jsx)(l.sNh, {
-                      id: 'watch',
+                      id: "watch",
                       label: t,
                       action: a
                           ? function () {
-                                ((0, s.g)((0, m.V9)(e)),
+                                (0, s.g)((0, m.V9)(e)),
                                     (0, k.Ws)(A.Odu.GO_LIVE, {
                                         type: k.Qu.GO_LIVE,
                                         value: k.bk.DISABLED,
-                                        userId: e.ownerId
-                                    }));
+                                        userId: e.ownerId,
+                                    });
                             }
                           : function () {
-                                (c.default.selectVoiceChannel(e.channelId),
+                                c.default.selectVoiceChannel(e.channelId),
                                     (0, s.rn)(e),
                                     (0, k.Ws)(A.Odu.GO_LIVE, {
                                         type: k.Qu.GO_LIVE,
                                         value: k.bk.ENABLED,
-                                        userId: e.ownerId
-                                    }));
-                            }
+                                        userId: e.ownerId,
+                                    });
+                            },
                   });
         })(t),
         R = (function (e) {
@@ -146,18 +150,18 @@ function T(e) {
             return !t || c
                 ? null
                 : (0, r.jsx)(l.S89, {
-                      id: 'mute',
+                      id: "mute",
                       label: N.intl.string(N.t.sWmtIy),
                       action: function () {
                           o.Z.toggleLocalMute(e.ownerId, L.Yn.STREAM);
                       },
-                      checked: n
+                      checked: n,
                   });
         })(t),
         F = (function (e) {
             let t = M(e),
                 n = e.ownerId === Z.default.getId(),
-                { sidechainAvailable: a } = I.Z.getCurrentConfig({ location: 'StreamContextMenu' }),
+                { sidechainAvailable: a } = I.Z.getCurrentConfig({ location: "StreamContextMenu" }),
                 c = (0, i.e7)([C.Z], () => C.Z.getSidechainCompression()),
                 s = (0, i.e7)([C.Z], () => C.Z.getSidechainCompressionStrength()),
                 { analyticsLocations: u } = (0, d.ZP)();
@@ -166,13 +170,13 @@ function T(e) {
                 : (0, r.jsxs)(l.kSQ, {
                       children: [
                           (0, r.jsx)(l.S89, {
-                              id: 'sidechain-compression',
-                              label: N.intl.string(N.t['/jwMtr']),
+                              id: "sidechain-compression",
+                              label: N.intl.string(N.t["/jwMtr"]),
                               action: () => o.Z.setSidechainCompression(!c, { analyticsLocations: u }),
-                              checked: c
+                              checked: c,
                           }),
                           (0, r.jsx)(l.II_, {
-                              id: 'sidechain-parameters',
+                              id: "sidechain-parameters",
                               label: N.intl.string(N.t.fhEzfn),
                               control: (e, t) =>
                                   (0, r.jsx)(
@@ -181,23 +185,24 @@ function T(e) {
                                           ref: t,
                                           value: s,
                                           maxValue: 100,
-                                          onChange: (e) => o.Z.setSidechainCompressionStrength(e, { analyticsLocations: u }),
-                                          'aria-label': N.intl.string(N.t.fhEzfn)
-                                      })
-                                  )
-                          })
-                      ]
+                                          onChange: (e) =>
+                                              o.Z.setSidechainCompressionStrength(e, { analyticsLocations: u }),
+                                          "aria-label": N.intl.string(N.t.fhEzfn),
+                                      }),
+                                  ),
+                          }),
+                      ],
                   });
         })(t),
         Y = (0, f.Z)(t, w, T),
         z = (0, b.G)({
             stream: t,
-            channelId: t.channelId
+            channelId: t.channelId,
         }),
         W = (0, g.B)({
             userId: t.ownerId,
             channelId: t.channelId,
-            guildId: t.guildId
+            guildId: t.guildId,
         }),
         q = (function (e) {
             let t = (t) => {
@@ -205,7 +210,7 @@ function T(e) {
                 },
                 n = (0, V.BO)(e);
             return (0, r.jsx)(l.II_, {
-                id: 'stream-zoom',
+                id: "stream-zoom",
                 label: N.intl.string(N.t.B3kEDg),
                 control: (e, i) =>
                     (0, r.jsx)(
@@ -216,41 +221,41 @@ function T(e) {
                             maxValue: 300,
                             onChange: t,
                             minValue: 100,
-                            'aria-label': N.intl.string(N.t.B3kEDg)
-                        })
-                    )
+                            "aria-label": N.intl.string(N.t.B3kEDg),
+                        }),
+                    ),
             });
         })(t),
         H = (function (e) {
             let t = (0, V.xN)(e);
             return (0, r.jsx)(l.S89, {
-                id: 'fit',
+                id: "fit",
                 label: N.intl.string(N.t.mpnvra),
                 action: () => {
                     (0, V.gI)(e, t === y.L.CONTAIN ? y.L.COVER : y.L.CONTAIN);
                 },
-                checked: t === y.L.COVER
+                checked: t === y.L.COVER,
             });
         })(t);
     return (0, r.jsx)(u.Z, {
         context: n,
         object: A.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(l.v2r, {
-            navId: 'stream-context',
+            navId: "stream-context",
             onClose: a.Zy,
-            'aria-label': N.intl.string(N.t.Gl3Q39),
+            "aria-label": N.intl.string(N.t.Gl3Q39),
             onSelect: B,
             children: [
                 (0, r.jsxs)(l.kSQ, {
-                    children: [Q, U, R, z, W]
+                    children: [Q, U, R, z, W],
                 }),
                 (0, r.jsx)(l.kSQ, { children: J }),
                 (0, r.jsxs)(l.kSQ, {
-                    children: [q, H]
+                    children: [q, H],
                 }),
                 F,
-                (0, r.jsx)(l.kSQ, { children: G && Y })
-            ]
-        })
+                (0, r.jsx)(l.kSQ, { children: G && Y }),
+            ],
+        }),
     });
 }

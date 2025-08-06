@@ -16,14 +16,14 @@ let p = (e) => {
             quest: n,
             isExpanded: m,
             activeScreen: g,
-            sourceQuestContent: a.jn.QUEST_BAR_V2
+            sourceQuestContent: a.jn.QUEST_BAR_V2,
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: d.questProgressWrapper,
         children: [
             (0, r.jsx)(l.l7, {
                 inState: t,
-                id: 'progress-bar',
+                id: "progress-bar",
                 ref: p,
                 children: (e) =>
                     (0, r.jsx)(c.Z, {
@@ -38,40 +38,40 @@ let p = (e) => {
                             questContent: a.jn.QUEST_BAR_V2,
                             autoplay: !1,
                             location: u.dr.QUESTS_BAR,
-                            sourceQuestContent: a.jn.QUEST_BAR_V2
-                        })
-                    })
+                            sourceQuestContent: a.jn.QUEST_BAR_V2,
+                        }),
+                    }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: d.questProgressCopy,
                 children: [
                     (0, r.jsx)(l.l7, {
                         inState: t,
-                        id: 'progress-title',
+                        id: "progress-title",
                         children: (e) =>
                             (0, r.jsx)(s.Text, {
                                 ref: e,
                                 className: d.questProgressHint,
-                                color: 'header-primary',
-                                variant: 'text-sm/semibold',
-                                children: x
-                            })
+                                color: "header-primary",
+                                variant: "text-sm/semibold",
+                                children: x,
+                            }),
                     }),
                     (0, r.jsx)(l.l7, {
                         inState: t,
-                        id: 'progress-subtitle',
+                        id: "progress-subtitle",
                         isTextTransition: !0,
                         children: (e) =>
                             (0, r.jsx)(s.Text, {
                                 ref: e,
                                 className: d.questProgressHint,
-                                color: 'text-muted',
-                                variant: 'text-xs/normal',
-                                children: h
-                            })
-                    })
-                ]
-            })
-        ]
+                                color: "text-muted",
+                                variant: "text-xs/normal",
+                                children: h,
+                            }),
+                    }),
+                ],
+            }),
+        ],
     });
 };

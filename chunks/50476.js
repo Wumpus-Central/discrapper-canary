@@ -10,23 +10,23 @@ function l(e) {
         onClick: t,
         className: i.button,
         innerClassName: i.buttonInner,
-        look: 'blank',
-        children: n
+        look: "blank",
+        children: n,
     });
 }
 let c = function (e) {
     let { onDesktop: t, onConsole: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: i.buttons,
         children: [
             (0, r.jsxs)(l, {
                 onClick: t,
-                children: [a.intl.string(a.t.QXc019), (0, r.jsx)(o.pzj, { size: 'sm' })]
+                children: [a.intl.string(a.t.QXc019), (0, r.jsx)(o.pzj, { size: "sm" })],
             }),
             (0, r.jsxs)(l, {
                 onClick: n,
-                children: [a.intl.string(a.t['8lAfuL']), (0, r.jsx)(o.iWm, { size: 'sm' })]
-            })
-        ]
+                children: [a.intl.string(a.t["8lAfuL"]), (0, r.jsx)(o.iWm, { size: "sm" })],
+            }),
+        ],
     });
 };

@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => j }), r(388685));
+r.d(t, { Z: () => j }), r(388685);
 var n = r(255367),
     a = r(73800),
     i = r(120356),
@@ -26,45 +26,47 @@ function j(e) {
     }, [y, _, w, v]),
     null == t.summary)
         ? null
-        : (0, n.jsxs)('div', {
+        : (0, n.jsxs)("div", {
               className: l()(f.column, f.gapMd),
               children: [
                   null != t.summaryLocalized &&
-                      (0, n.jsxs)('div', {
+                      (0, n.jsxs)("div", {
                           className: l()(f.row, f.gapSm),
                           children: [
                               (0, n.jsx)(o.SxY, {
                                   color: c.Z.colors.HEADER_SECONDARY,
-                                  size: 'xs'
+                                  size: "xs",
                               }),
                               (0, n.jsx)(s.xv, {
-                                  variant: 'text-xs/medium',
-                                  color: 'header-secondary',
-                                  children: i ? p.intl.format(p.t.aZ2iIi, { onShowOriginal: () => j(!1) }) : p.intl.format(p.t['/2ylFx'], { onShowTranslated: () => j(!0) })
-                              })
-                          ]
+                                  variant: "text-xs/medium",
+                                  color: "header-secondary",
+                                  children: i
+                                      ? p.intl.format(p.t.aZ2iIi, { onShowOriginal: () => j(!1) })
+                                      : p.intl.format(p.t["/2ylFx"], { onShowTranslated: () => j(!0) }),
+                              }),
+                          ],
                       }),
                   (0, n.jsx)(s.xv, {
                       ref: y,
                       lineClamp: v ? 8 : void 0,
-                      variant: 'text-sm/normal',
-                      children: i ? t.summaryLocalized : t.summary
+                      variant: "text-sm/normal",
+                      children: i ? t.summaryLocalized : t.summary,
                   }),
                   b &&
                       (0, n.jsx)(d.P3F, {
                           className: f.clickable,
                           onClick: () => {
-                              (r(v ? m.as.ShowMore : m.as.ShowLess), h(!v));
+                              r(v ? m.as.ShowMore : m.as.ShowLess), h(!v);
                           },
                           children: (0, n.jsx)(s.xv, {
-                              variant: 'text-sm/semibold',
-                              children: v ? p.intl.string(p.t.lBeKY2) : p.intl.string(p.t['6MwJo6'])
-                          })
+                              variant: "text-sm/semibold",
+                              children: v ? p.intl.string(p.t.lBeKY2) : p.intl.string(p.t["6MwJo6"]),
+                          }),
                       }),
                   (0, n.jsx)(g.Z, {
                       className: x.platforms,
-                      detectedGame: t
-                  })
-              ]
+                      detectedGame: t,
+                  }),
+              ],
           });
 }

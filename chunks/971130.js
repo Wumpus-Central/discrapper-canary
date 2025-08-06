@@ -1,14 +1,14 @@
 let I;
-(n.d(e, {
+n.d(e, {
     Sz: () => R,
     Vg: () => v,
     ZP: () => C,
     an: () => U,
     bm: () => f,
-    rh: () => y
+    rh: () => y,
 }),
     n(539854),
-    n(388685));
+    n(388685);
 var i,
     r = n(317381),
     l = n(592125),
@@ -25,24 +25,24 @@ function o(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             I = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (I = I.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                })
+                }),
             )),
             I.forEach(function (e) {
                 var I;
-                ((I = n[e]),
+                (I = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: I,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (t[e] = I));
-            }));
+                        : (t[e] = I);
+            });
     }
     return t;
 }
@@ -65,10 +65,18 @@ function P(t, e) {
     );
 }
 I = n(603617);
-var f = (((i = {}).GROUP_DM = 'GROUP_DM'), (i.DM = 'DM'), (i.FRIEND = 'FRIEND'), (i.CHANNEL = 'CHANNEL'), i);
+var f = (((i = {}).GROUP_DM = "GROUP_DM"), (i.DM = "DM"), (i.FRIEND = "FRIEND"), (i.CHANNEL = "CHANNEL"), i);
 let g = (t, e) => null != t && O.ZP.isMember(t, e),
     m = (t) => {
-        let { omitUserIds: e, suggestedUserIds: n, maxRowsWithoutQuery: I, omitGuildId: i, shownUserIds: r, rows: l, counts: O } = t;
+        let {
+            omitUserIds: e,
+            suggestedUserIds: n,
+            maxRowsWithoutQuery: I,
+            omitGuildId: i,
+            shownUserIds: r,
+            rows: l,
+            counts: O,
+        } = t;
         if (null != n)
             for (let t of n) {
                 if (null != I && I > 0 && l.length >= I) break;
@@ -77,9 +85,9 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
                 !(null == n || g(i, n.id)) &&
                     (r.add(n.id),
                     l.push({
-                        type: 'FRIEND',
+                        type: "FRIEND",
                         item: n,
-                        isSuggested: !0
+                        isSuggested: !0,
                     }),
                     O.numFriends++);
             }
@@ -92,28 +100,37 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
                 let e = l.Z.getChannel(t);
                 null != e &&
                     (I.push({
-                        type: 'CHANNEL',
+                        type: "CHANNEL",
                         item: e,
-                        isSuggested: !0
+                        isSuggested: !0,
                     }),
                     i.numChannels++);
             }
     },
     c = (t) => {
-        let { omitUserIds: e, maxRowsWithoutQuery: n, omitGuildId: I, shownUserIds: i, rows: r, counts: O, includeGroupDms: _, limit: s } = t,
+        let {
+                omitUserIds: e,
+                maxRowsWithoutQuery: n,
+                omitGuildId: I,
+                shownUserIds: i,
+                rows: r,
+                counts: O,
+                includeGroupDms: _,
+                limit: s,
+            } = t,
             S = 0;
         for (let t of a.Z.getPrivateChannelIds()) {
             if ((null != n && n > 0 && r.length >= n) || (null != s && S >= s)) break;
             let a = l.Z.getChannel(t);
             if (null == a || !a.isPrivate()) continue;
             if (_ && a.type === N.d4z.GROUP_DM) {
-                (r.push({
-                    type: 'GROUP_DM',
+                r.push({
+                    type: "GROUP_DM",
                     item: a,
-                    isSuggested: !1
+                    isSuggested: !1,
                 }),
                     O.numGroupDms++,
-                    S++);
+                    S++;
                 continue;
             }
             if (null == u.ZP.lastMessageId(a.id)) continue;
@@ -121,14 +138,14 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
             if (null != E && !e.has(E) && !i.has(E)) {
                 let t = T.default.getUser(E);
                 if (null == t || t.bot || g(I, t.id)) continue;
-                (i.add(t.id),
+                i.add(t.id),
                     r.push({
-                        type: 'DM',
+                        type: "DM",
                         item: t,
-                        isSuggested: !1
+                        isSuggested: !1,
                     }),
                     O.numDms++,
-                    S++);
+                    S++;
             }
         }
     },
@@ -140,9 +157,9 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
             let O = T.default.getUser(t);
             !(null == O || g(I, O.id)) &&
                 (r.push({
-                    type: 'FRIEND',
+                    type: "FRIEND",
                     item: O,
-                    isSuggested: !1
+                    isSuggested: !1,
                 }),
                 l.numFriends++);
         }
@@ -153,23 +170,23 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
             s.ZP.queryChannels({
                 query: e,
                 limit: 3,
-                guildId: void 0
+                guildId: void 0,
             }).forEach((t) => {
                 let { record: e, score: i } = t;
-                (n.push({
-                    type: 'CHANNEL',
+                n.push({
+                    type: "CHANNEL",
                     item: e,
                     isSuggested: !1,
-                    score: i
+                    score: i,
                 }),
-                    I.numChannels++);
+                    I.numChannels++;
             });
     },
     V = (t) => {
         let { query: e, omitUserIds: n, shownUserIds: I, rows: i, counts: r } = t;
         s.ZP.queryDMUsers({
             query: e,
-            limit: 50
+            limit: 50,
         }).forEach((t) => {
             let { record: e, score: O } = t;
             if (n.has(e.id)) return;
@@ -178,10 +195,10 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
                 null != u.ZP.lastMessageId(_) &&
                 (I.add(e.id),
                 i.push({
-                    type: 'DM',
+                    type: "DM",
                     item: e,
                     isSuggested: !1,
-                    score: O
+                    score: O,
                 }),
                 r.numDms++);
         });
@@ -191,16 +208,16 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
         s.ZP.queryGroupDMs({
             query: e,
             limit: 50,
-            fuzzy: !1
+            fuzzy: !1,
         }).forEach((t) => {
             let { record: e, score: i } = t;
-            (n.push({
-                type: 'GROUP_DM',
+            n.push({
+                type: "GROUP_DM",
                 item: e,
                 isSuggested: !1,
-                score: i
+                score: i,
             }),
-                I.numGroupDms++);
+                I.numGroupDms++;
         });
     },
     h = (t) => {
@@ -208,22 +225,30 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
         s.ZP.queryFriends({
             query: e,
             limit: 500,
-            _fuzzy: !1
+            _fuzzy: !1,
         }).forEach((t) => {
             let { record: e, score: l } = t;
             !(i.has(e.id) || r.has(e.id)) &&
                 (r.add(e.id),
                 n.push({
-                    type: 'FRIEND',
+                    type: "FRIEND",
                     item: e,
                     isSuggested: !1,
-                    score: l
+                    score: l,
                 }),
                 I.numFriends++);
         });
     };
 function U(t) {
-    let { query: e, inviteTargetType: n, omitUserIds: I, suggestedUserIds: i, suggestedChannelIds: r, maxRowsWithoutQuery: l, omitGuildId: O } = t,
+    let {
+            query: e,
+            inviteTargetType: n,
+            omitUserIds: I,
+            suggestedUserIds: i,
+            suggestedChannelIds: r,
+            maxRowsWithoutQuery: l,
+            omitGuildId: O,
+        } = t,
         u = new Set(),
         _ = [],
         T = {
@@ -231,52 +256,52 @@ function U(t) {
             numDms: 0,
             numGroupDms: 0,
             numGuildMembers: 0,
-            numChannels: 0
+            numChannels: 0,
         };
-    if ('' === e) {
+    if ("" === e) {
         let t = {
             omitUserIds: I,
             maxRowsWithoutQuery: l,
             omitGuildId: O,
             shownUserIds: u,
             rows: _,
-            counts: T
+            counts: T,
         };
-        (n === S.Iq.EMBEDDED_APPLICATION &&
+        n === S.Iq.EMBEDDED_APPLICATION &&
             (c(
                 P(o({}, t), {
                     includeGroupDms: !1,
-                    limit: 1
-                })
+                    limit: 1,
+                }),
             ),
             d(P(o({}, t), { suggestedChannelIds: r }))),
             m(P(o({}, t), { suggestedUserIds: i })),
             c(P(o({}, t), { includeGroupDms: !0 })),
-            p(t));
+            p(t);
     } else {
         let t = {
             query: e,
             rows: _,
-            counts: T
+            counts: T,
         };
-        (n === S.Iq.EMBEDDED_APPLICATION && D(P(o({}, t), { inviteTargetType: n })),
+        n === S.Iq.EMBEDDED_APPLICATION && D(P(o({}, t), { inviteTargetType: n })),
             V(
                 P(o({}, t), {
                     omitUserIds: I,
-                    shownUserIds: u
-                })
+                    shownUserIds: u,
+                }),
             ),
             M(t),
             h(
                 P(o({}, t), {
                     omitUserIds: I,
-                    shownUserIds: u
-                })
-            ));
+                    shownUserIds: u,
+                }),
+            );
     }
     return {
         rows: _,
-        counts: T
+        counts: T,
     };
 }
 function y(t, e) {
@@ -300,40 +325,40 @@ function R(t) {
     return new Set();
 }
 let b = {
-        MINUTES: 'minutes',
-        HOURS: 'hours',
-        DAYS: 'days',
-        NEVER: 'never'
+        MINUTES: "minutes",
+        HOURS: "hours",
+        DAYS: "days",
+        NEVER: "never",
     },
     A = {
         [I.INVITE_OPTIONS_30_MINUTES.value]: {
             value: 30,
-            type: b.MINUTES
+            type: b.MINUTES,
         },
         [I.INVITE_OPTIONS_1_HOUR.value]: {
             value: 1,
-            type: b.HOURS
+            type: b.HOURS,
         },
         [I.INVITE_OPTIONS_6_HOURS.value]: {
             value: 6,
-            type: b.HOURS
+            type: b.HOURS,
         },
         [I.INVITE_OPTIONS_12_HOURS.value]: {
             value: 12,
-            type: b.HOURS
+            type: b.HOURS,
         },
         [I.INVITE_OPTIONS_1_DAY.value]: {
             value: 1,
-            type: b.DAYS
+            type: b.DAYS,
         },
         [I.INVITE_OPTIONS_7_DAYS.value]: {
             value: 7,
-            type: b.DAYS
+            type: b.DAYS,
         },
         [I.INVITE_OPTIONS_FOREVER.value]: {
             value: 0,
-            type: b.NEVER
-        }
+            type: b.NEVER,
+        },
     };
 function v(t, e) {
     let n = parseInt(e, 10),
@@ -341,25 +366,25 @@ function v(t, e) {
         i = A[t].value;
     switch (A[t].type) {
         case b.MINUTES:
-            if (I) return E.intl.string(E.t['/WbTXF']);
+            if (I) return E.intl.string(E.t["/WbTXF"]);
             return E.intl.formatToPlainString(E.t.eDRWJC, { numUses: n });
         case b.HOURS:
             if (I) return E.intl.formatToPlainString(E.t.ZVdJMz, { numHours: i });
             return E.intl.formatToPlainString(E.t.NgZgAA, {
                 numHours: i,
-                numUses: n
+                numUses: n,
             });
         case b.DAYS:
             if (I) return E.intl.formatToPlainString(E.t.T96qsr, { numDays: i });
             return E.intl.formatToPlainString(E.t.TfuB9P, {
                 numDays: i,
-                numUses: n
+                numUses: n,
             });
         case b.NEVER:
             if (I) return E.intl.string(E.t.QrHBnJ);
             return E.intl.formatToPlainString(E.t.yJnTxM, { numUses: n });
         default:
-            return '';
+            return "";
     }
 }
 let C = {
@@ -379,5 +404,5 @@ let C = {
     INVITE_OPTIONS_10_TIMES: I.INVITE_OPTIONS_10_TIMES,
     INVITE_OPTIONS_25_TIMES: I.INVITE_OPTIONS_25_TIMES,
     INVITE_OPTIONS_50_TIMES: I.INVITE_OPTIONS_50_TIMES,
-    INVITE_OPTIONS_100_TIMES: I.INVITE_OPTIONS_100_TIMES
+    INVITE_OPTIONS_100_TIMES: I.INVITE_OPTIONS_100_TIMES,
 };

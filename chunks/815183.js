@@ -12,26 +12,26 @@ let c = function () {
         children: [
             (0, r.jsx)(s.vwX, {
                 tag: s.RB0.H5,
-                children: 'Theme'
+                children: "Theme",
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 style: {
-                    display: 'flex',
-                    justifyContent: 'space-between'
+                    display: "flex",
+                    justifyContent: "space-between",
                 },
                 children: [
                     (0, r.jsx)(i.bD, {
                         theme: l.BR.LIGHT,
                         isSelected: e === l.BR.LIGHT,
-                        onSelect: () => (0, o.ZI)({ theme: l.BR.LIGHT })
+                        onSelect: () => (0, o.ZI)({ theme: l.BR.LIGHT }),
                     }),
                     (0, r.jsx)(i.bD, {
                         theme: l.BR.DARK,
                         isSelected: e === l.BR.DARK,
-                        onSelect: () => (0, o.ZI)({ theme: l.BR.DARK })
-                    })
-                ]
-            })
-        ]
+                        onSelect: () => (0, o.ZI)({ theme: l.BR.DARK }),
+                    }),
+                ],
+            }),
+        ],
     });
 };

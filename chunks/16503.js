@@ -6,10 +6,10 @@ var r = n(309805),
     s = n(444653),
     c = n(146640);
 function l(e) {
-    var t = 'function' == typeof r ? new r() : void 0;
+    var t = "function" == typeof r ? new r() : void 0;
     return (l = function (e) {
         if (null === e || !(0, s.Z)(e)) return e;
-        if ('function' != typeof e) throw TypeError('Super expression must either be null or a function');
+        if ("function" != typeof e) throw TypeError("Super expression must either be null or a function");
         if (void 0 !== t) {
             if (t.has(e)) return t.get(e);
             t.set(e, n);
@@ -23,8 +23,8 @@ function l(e) {
                     value: n,
                     enumerable: !1,
                     writable: !0,
-                    configurable: !0
-                }
+                    configurable: !0,
+                },
             })),
             (0, i.Z)(n, e)
         );

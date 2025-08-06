@@ -10,30 +10,40 @@ var r = n(255367),
     d = n(750883);
 let f = Object.assign(
     i.forwardRef(function (e, t) {
-        let { user: n, displayProfile: i, themeType: o, className: f, pendingThemeColors: _, themeOverride: p, children: h, forceShowPremium: m = !1, forceUserTheme: g = !1 } = e,
+        let {
+                user: n,
+                displayProfile: i,
+                themeType: o,
+                className: f,
+                pendingThemeColors: _,
+                themeOverride: p,
+                children: h,
+                forceShowPremium: m = !1,
+                forceUserTheme: g = !1,
+            } = e,
             {
                 theme: E,
                 primaryColor: b,
-                secondaryColor: y
+                secondaryColor: y,
             } = (0, l.Z)({
                 user: n,
                 displayProfile: i,
                 pendingThemeColors: _,
                 isPreview: m,
-                forceUserTheme: g
+                forceUserTheme: g,
             }),
             { profileThemeStyle: O, profileThemeClassName: v } = (0, c.Z)({
                 theme: null != p ? p : E,
                 themeType: o,
                 primaryColor: b,
                 secondaryColor: y,
-                forceUserTheme: g
+                forceUserTheme: g,
             });
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: a()(d.outer, v, f),
             style: O,
             ref: t,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: d.inner,
                 children: (0, r.jsx)(s.ze6, {
                     theme: null != p ? p : E,
@@ -42,20 +52,20 @@ let f = Object.assign(
                         theme: null != p ? p : E,
                         primaryColor: b,
                         secondaryColor: y,
-                        children: h
-                    })
-                })
-            })
+                        children: h,
+                    }),
+                }),
+            }),
         });
     }),
     {
         Overlay: i.forwardRef(function (e, t) {
             let { children: n, className: i } = e;
-            return (0, r.jsx)('div', {
+            return (0, r.jsx)("div", {
                 ref: t,
                 className: a()(d.overlay, i),
-                children: n
+                children: n,
             });
-        })
-    }
+        }),
+    },
 );

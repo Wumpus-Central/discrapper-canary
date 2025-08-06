@@ -33,30 +33,30 @@ function E(e) {
             {
                 icon: (0, h.r)([t], null == O ? void 0 : O.guild_id),
                 text: (0, h.a)([t], 1, null == O ? void 0 : O.guild_id, n),
-                className: j.row
+                className: j.row,
             },
             {
-                icon: (0, r.jsx)('div', {
+                icon: (0, r.jsx)("div", {
                     className: j.icon,
-                    children: (0, r.jsx)(o.aNP, {})
+                    children: (0, r.jsx)(o.aNP, {}),
                 }),
-                text: p.intl.string(p.t['+4O9nZ']),
-                className: j.row
-            }
+                text: p.intl.string(p.t["+4O9nZ"]),
+                className: j.row,
+            },
         ],
         b = v
             ? (0, r.jsxs)(r.Fragment, {
-                  children: [p.intl.string(p.t.cpgfFh), (0, r.jsx)('br', {}), p.intl.string(p.t.UKQ4Cg)]
+                  children: [p.intl.string(p.t.cpgfFh), (0, r.jsx)("br", {}), p.intl.string(p.t.UKQ4Cg)],
               })
             : (0, r.jsxs)(r.Fragment, {
-                  children: [p.intl.string(p.t['xj3j4+']), (0, r.jsx)('br', {}), p.intl.string(p.t.wWueRU)]
+                  children: [p.intl.string(p.t["xj3j4+"]), (0, r.jsx)("br", {}), p.intl.string(p.t.wWueRU)],
               });
     return (0, r.jsx)(f.Z, {
-        headerText: p.intl.string(p.t['1/gpFh']),
+        headerText: p.intl.string(p.t["1/gpFh"]),
         descriptionText: b,
         infoRows: I,
         onDismissAndStay: () => {
-            ((k.current = !0),
+            (k.current = !0),
                 C(),
                 (0, x.nC)(t),
                 m.default.track(N.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
@@ -64,11 +64,11 @@ function E(e) {
                     channel_id: n,
                     blocked_user_ids: v ? [t] : [],
                     ignored_user_ids: v ? [] : [t],
-                    warning_surface: g.fz.POST_JOIN_MODAL
-                }));
+                    warning_surface: g.fz.POST_JOIN_MODAL,
+                });
         },
         onDismissAndLeave: () => {
-            ((k.current = !0),
+            (k.current = !0),
                 C(),
                 l.default.disconnect(),
                 m.default.track(N.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
@@ -76,11 +76,11 @@ function E(e) {
                     channel_id: n,
                     blocked_user_ids: v ? [t] : [],
                     ignored_user_ids: v ? [] : [t],
-                    warning_surface: g.fz.POST_JOIN_MODAL
-                }));
+                    warning_surface: g.fz.POST_JOIN_MODAL,
+                });
         },
-        leaveButtonText: p.intl.string(p.t['Y56/oK']),
-        stayButtonText: p.intl.string(p.t['Z+/hfX']),
+        leaveButtonText: p.intl.string(p.t["Y56/oK"]),
+        stayButtonText: p.intl.string(p.t["Z+/hfX"]),
         transitionState: E,
         onClose: C,
         impression: {
@@ -89,8 +89,8 @@ function E(e) {
                 channel_id: n,
                 blocked_user_ids: v ? [t] : [],
                 ignored_user_ids: v ? [] : [t],
-                warning_surface: g.fz.POST_JOIN_MODAL
-            }
-        }
+                warning_surface: g.fz.POST_JOIN_MODAL,
+            },
+        },
     });
 }

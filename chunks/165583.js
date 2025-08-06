@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => F,
-    dz: () => U
+    dz: () => U,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -38,14 +38,14 @@ var r = n(255367),
 function M(e) {
     if (null == e) return null;
     let t = u()(e),
-        n = t.diff(u()(), 'h');
+        n = t.diff(u()(), "h");
     if (n > 24) {
-        let e = t.diff(u()(), 'd');
+        let e = t.diff(u()(), "d");
         return D.intl.formatToPlainString(D.t.xs9VPj, { numDays: e });
     }
-    if (n > 1) return D.intl.formatToPlainString(D.t['p7KX5+'], { numHours: n });
-    let r = t.diff(u()(), 'minutes');
-    return D.intl.formatToPlainString(D.t['XtQ+Ag'], { numMinutes: r });
+    if (n > 1) return D.intl.formatToPlainString(D.t["p7KX5+"], { numHours: n });
+    let r = t.diff(u()(), "minutes");
+    return D.intl.formatToPlainString(D.t["XtQ+Ag"], { numMinutes: r });
 }
 function k(e) {
     var t, n, i;
@@ -53,53 +53,63 @@ function k(e) {
         d = null != (t = null == u ? void 0 : u.expires_at) ? t : null == c ? void 0 : c.expires_at,
         f = null == u ? void 0 : u.subscription_trial,
         _ = null != (i = null != (n = e.subscriptionTier) ? n : null == f ? void 0 : f.sku_id) ? i : P.Si.TIER_2;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(o, L.gradientUpsellWrapper, {
             [L.gradientUpsellWrapperTier0]: _ === P.Si.TIER_0,
             [L.gradientUpsellWrapperTier2]: _ === P.Si.TIER_2,
-            [L.gradientUpsellWrapperWithBottomMargin]: l
+            [L.gradientUpsellWrapperWithBottomMargin]: l,
         }),
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: L.logo,
                 children: [
                     (0, r.jsx)(h.SrA, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: L.logoIcon
+                        size: "md",
+                        color: "currentColor",
+                        className: L.logoIcon,
                     }),
                     _ === P.Si.TIER_0 && (0, r.jsx)(O.Z, { className: L.logoWordmark }),
-                    _ === P.Si.TIER_2 && (0, r.jsx)(y.Z, { className: L.logoWordmark })
-                ]
+                    _ === P.Si.TIER_2 && (0, r.jsx)(y.Z, { className: L.logoWordmark }),
+                ],
             }),
             (0, r.jsx)(h.Text, {
-                variant: 'text-md/medium',
+                variant: "text-md/medium",
                 className: L.copy,
-                color: 'none',
-                children: s
+                color: "none",
+                children: s,
             }),
             (0, r.jsx)(R.Cy, {
-                text: null != c ? D.intl.formatToPlainString(D.t.iiLbvr, { percent: c.discount.amount }) : D.intl.string(D.t.IBYG5e),
-                colorOptions: _ === P.Si.TIER_0 ? R.VE.PREMIUM_TIER_0_WHITE_FILL : R.VE.PREMIUM_TIER_2_WHITE_FILL
+                text:
+                    null != c
+                        ? D.intl.formatToPlainString(D.t.iiLbvr, { percent: c.discount.amount })
+                        : D.intl.string(D.t.IBYG5e),
+                colorOptions: _ === P.Si.TIER_0 ? R.VE.PREMIUM_TIER_0_WHITE_FILL : R.VE.PREMIUM_TIER_2_WHITE_FILL,
             }),
             (0, r.jsx)(h.Text, {
-                variant: 'eyebrow',
+                variant: "eyebrow",
                 className: L.countdownText,
-                children: M(d)
-            })
-        ]
+                children: M(d),
+            }),
+        ],
     });
 }
 function j(e) {
     var t, n;
-    let { className: o, onClose: a, subscriptionTier: s, analyticsLocationObject: l, trialOffer: c, discountOffer: u } = e,
+    let {
+            className: o,
+            onClose: a,
+            subscriptionTier: s,
+            analyticsLocationObject: l,
+            trialOffer: c,
+            discountOffer: u,
+        } = e,
         [d, f] = i.useState(!1),
         _ =
             null != u
                 ? D.intl.formatToPlainString(D.t.bkQ4bG, { percent: u.discount.amount })
                 : (0, I.Rt)({
                       intervalType: null == c || null == (t = c.subscription_trial) ? void 0 : t.interval,
-                      intervalCount: null == c || null == (n = c.subscription_trial) ? void 0 : n.interval_count
+                      intervalCount: null == c || null == (n = c.subscription_trial) ? void 0 : n.interval_count,
                   });
     return (0, r.jsx)(C.Z, {
         className: o,
@@ -112,9 +122,9 @@ function j(e) {
             f(!0);
         },
         onSubscribeModalClose: (e) => {
-            (f(!1), e && (null == a || a()));
+            f(!1), e && (null == a || a());
         },
-        textOptions: { textOverride: _ }
+        textOptions: { textOverride: _ },
     });
 }
 function U(e) {
@@ -122,21 +132,21 @@ function U(e) {
     let i = null == (t = (0, N.N)()) ? void 0 : t.subscription_trial,
         o = null != (n = null == i ? void 0 : i.sku_id) ? n : P.Si.TIER_2;
     return (0, r.jsx)(h.Text, {
-        variant: 'text-xs/bold',
+        variant: "text-xs/bold",
         className: a()(L.trialBadge, e.className, {
             [L.trialBadgeGradientTier0]: o === P.Si.TIER_0,
-            [L.trialBadgeGradientTier2]: o === P.Si.TIER_2
+            [L.trialBadgeGradientTier2]: o === P.Si.TIER_2,
         }),
-        color: 'none',
+        color: "none",
         children: (0, I.a5)({
             intervalType: null == i ? void 0 : i.interval,
-            intervalCount: null == i ? void 0 : i.interval_count
-        })
+            intervalCount: null == i ? void 0 : i.interval_count,
+        }),
     });
 }
 function G(e) {
     let { subscriptionTier: t, onClose: n, analyticsLocationObject: i, trialOffer: o, discountOffer: a } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: L.footer,
         children: [
             (0, r.jsx)(p.zx, {
@@ -144,7 +154,7 @@ function G(e) {
                 size: p.zx.Sizes.SMALL,
                 look: p.iL.BLANK,
                 className: L.cancelButton,
-                children: D.intl.string(D.t.cpT0Cg)
+                children: D.intl.string(D.t.cpT0Cg),
             }),
             (0, r.jsx)(j, {
                 className: L.subscribeButton,
@@ -152,67 +162,77 @@ function G(e) {
                 analyticsLocationObject: i,
                 onClose: n,
                 discountOffer: a,
-                trialOffer: o
-            })
-        ]
+                trialOffer: o,
+            }),
+        ],
     });
 }
 function B(e) {
     let { onClose: t, analyticsLocationObject: n } = e,
         i = (0, N.N)();
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: L.tryOutUpsellContainer,
         children: [
             (0, r.jsx)(R.Cy, {
                 className: L.topRimPill,
-                text: D.intl.string(D.t['8CVUra']),
-                colorOptions: R.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+                text: D.intl.string(D.t["8CVUra"]),
+                colorOptions: R.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL,
             }),
             (0, r.jsx)(h.X6q, {
-                variant: 'heading-md/semibold',
-                color: 'text-default',
-                children: D.intl.format(D.t['fF+cgY'], { onClick: () => (0, A.z)() })
+                variant: "heading-md/semibold",
+                color: "text-default",
+                children: D.intl.format(D.t["fF+cgY"], { onClick: () => (0, A.z)() }),
             }),
             (0, r.jsx)(j, {
                 trialOffer: i,
                 className: L.subscribeButtonWide,
                 subscriptionTier: P.Si.TIER_2,
                 analyticsLocationObject: n,
-                onClose: t
+                onClose: t,
             }),
             (0, r.jsx)(h.Text, {
-                variant: 'eyebrow',
+                variant: "eyebrow",
                 className: L.countdownTextInSetting,
-                children: M(null == i ? void 0 : i.expires_at)
-            })
-        ]
+                children: M(null == i ? void 0 : i.expires_at),
+            }),
+        ],
     });
 }
 function Z(e) {
     let { headingText: t, context: n, children: i, trialOffer: o, discountOffer: a } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: L.contentContainer,
         children: [
             (0, r.jsx)(h.X6q, {
-                variant: 'heading-xl/semibold',
-                children: t
+                variant: "heading-xl/semibold",
+                children: t,
             }),
             null != n &&
                 (0, r.jsx)(h.Text, {
                     className: L.context,
-                    variant: 'text-md/normal',
-                    children: n
+                    variant: "text-md/normal",
+                    children: n,
                 }),
             (0, r.jsx)(k, {
                 trialOffer: o,
                 discountOffer: a,
-                children: i
-            })
-        ]
+                children: i,
+            }),
+        ],
     });
 }
 function F(e) {
-    let { headingText: t, context: i, children: o, onClose: s, type: c, subscriptionTier: u, analyticsLocationObject: p, trialOffer: y, discountOffer: O } = e,
+    let {
+            headingText: t,
+            context: i,
+            children: o,
+            onClose: s,
+            type: c,
+            subscriptionTier: u,
+            analyticsLocationObject: p,
+            trialOffer: y,
+            discountOffer: O,
+        } = e,
         A = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
         N = (0, m.ZP)(),
         C = (0, v.BU)(S.zz / v.XD, { useKibibytes: !0 });
@@ -224,125 +244,125 @@ function F(e) {
                         className: L.upsellClose,
                         onClick: s,
                         children: (0, r.jsx)(h.Dio, {
-                            size: 'md',
-                            color: 'currentColor'
-                        })
+                            size: "md",
+                            color: "currentColor",
+                        }),
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: L.contentContainer,
                         children: [
-                            (0, r.jsx)('img', {
+                            (0, r.jsx)("img", {
                                 className: L.upsellImage,
                                 src: x,
-                                alt: D.intl.string(D.t.do7AoK)
+                                alt: D.intl.string(D.t.do7AoK),
                             }),
                             (0, r.jsx)(h.X6q, {
-                                variant: 'heading-xl/bold',
-                                color: 'header-primary',
-                                children: D.intl.string(D.t.HEm04O)
+                                variant: "heading-xl/bold",
+                                color: "header-primary",
+                                children: D.intl.string(D.t.HEm04O),
                             }),
                             (0, r.jsx)(k, {
                                 trialOffer: y,
                                 discountOffer: O,
-                                children: D.intl.format(D.t['2HoFKC'], {
+                                children: D.intl.format(D.t["2HoFKC"], {
                                     planName: (0, I.jP)(u),
-                                    onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE)
-                                })
-                            })
-                        ]
+                                    onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE),
+                                }),
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(G, {
                         subscriptionTier: u,
                         onClose: s,
                         analyticsLocationObject: {
                             section: w.jXE.EXPRESSION_PICKER,
-                            object: w.qAy.BUTTON_CTA
+                            object: w.qAy.BUTTON_CTA,
                         },
                         trialOffer: y,
-                        discountOffer: O
-                    })
-                ]
+                        discountOffer: O,
+                    }),
+                ],
             });
         case P.cd.STICKER_PICKER_UPSELL:
             return (
-                l()(null != o, 'You must specify children for this upsell type'),
+                l()(null != o, "You must specify children for this upsell type"),
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: L.contentContainer,
                             children: [
-                                (0, r.jsx)('img', {
+                                (0, r.jsx)("img", {
                                     className: L.upsellImage,
                                     src: x,
-                                    alt: D.intl.string(D.t.do7AoK)
+                                    alt: D.intl.string(D.t.do7AoK),
                                 }),
                                 (0, r.jsx)(h.X6q, {
-                                    variant: 'heading-xl/bold',
-                                    color: 'header-primary',
-                                    children: D.intl.string(D.t.jJG1pq)
+                                    variant: "heading-xl/bold",
+                                    color: "header-primary",
+                                    children: D.intl.string(D.t.jJG1pq),
                                 }),
                                 (0, r.jsx)(k, {
                                     trialOffer: y,
                                     discountOffer: O,
-                                    children: D.intl.format(D.t['2HoFKC'], {
+                                    children: D.intl.format(D.t["2HoFKC"], {
                                         planName: (0, I.jP)(u),
-                                        onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE)
-                                    })
-                                })
-                            ]
+                                        onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE),
+                                    }),
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(G, {
                             subscriptionTier: u,
                             onClose: s,
                             analyticsLocationObject: {
                                 section: w.jXE.EXPRESSION_PICKER,
-                                object: w.qAy.BUTTON_CTA
+                                object: w.qAy.BUTTON_CTA,
                             },
                             trialOffer: y,
-                            discountOffer: O
-                        })
-                    ]
+                            discountOffer: O,
+                        }),
+                    ],
                 })
             );
         case P.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
-            l()(null != o, 'You must specify children for this upsell type');
+            l()(null != o, "You must specify children for this upsell type");
             let R = (0, _.ap)(N) ? n(537381) : n(341048);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: L.contentContainer,
                         children: [
-                            (0, r.jsx)('img', {
-                                alt: '',
+                            (0, r.jsx)("img", {
+                                alt: "",
                                 className: L.upsellImage,
-                                src: R
+                                src: R,
                             }),
                             (0, r.jsx)(h.X6q, {
-                                variant: 'heading-xl/bold',
-                                color: 'header-primary',
-                                children: D.intl.string(D.t['1SsvhY'])
+                                variant: "heading-xl/bold",
+                                color: "header-primary",
+                                children: D.intl.string(D.t["1SsvhY"]),
                             }),
                             (0, r.jsx)(k, {
                                 trialOffer: y,
                                 discountOffer: O,
                                 children: D.intl.format(D.t.md4nPz, {
                                     planName: (0, I.jP)(u),
-                                    onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE)
-                                })
-                            })
-                        ]
+                                    onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE),
+                                }),
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(G, {
                         subscriptionTier: u,
                         onClose: s,
                         analyticsLocationObject: {
                             section: w.jXE.EMOJI_PICKER_POPOUT,
-                            object: w.qAy.BUTTON_CTA
+                            object: w.qAy.BUTTON_CTA,
                         },
                         trialOffer: y,
-                        discountOffer: O
-                    })
-                ]
+                        discountOffer: O,
+                    }),
+                ],
             });
         case P.cd.UPLOAD_ERROR_UPSELL:
         case P.cd.BURST_REACTION_UPSELL:
@@ -353,77 +373,77 @@ function F(e) {
                 case P.cd.UPLOAD_ERROR_UPSELL:
                     M = D.intl.format(D.t.F4qoDw, {
                         planName: (0, I.jP)(u),
-                        premiumMaxSize: u === P.Si.TIER_0 ? D.intl.string(D.t['C/Rhb2']) : C,
+                        premiumMaxSize: u === P.Si.TIER_0 ? D.intl.string(D.t["C/Rhb2"]) : C,
                         onClick: () => {
-                            ((0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s());
-                        }
+                            (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s();
+                        },
                     });
                     break;
                 case P.cd.BURST_REACTION_UPSELL:
                     M = D.intl.format(D.t.poib9P, {
                         planName: (0, I.jP)(u),
                         onClick: () => {
-                            ((0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s());
-                        }
+                            (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s();
+                        },
                     });
                     break;
                 case P.cd.STREAM_QUALITY_UPSELL:
                     M = D.intl.format(D.t.WspKp6, {
                         onClick: () => {
-                            ((0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s(), (0, f.pT)());
-                        }
+                            (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s(), (0, f.pT)();
+                        },
                     });
                     break;
                 case P.cd.MESSAGE_LENGTH_UPSELL:
                     M = D.intl.format(D.t.GUHtEx, {
                         premiumMaxMessageLength: w.en1,
                         onClick: () => {
-                            ((0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s());
-                        }
+                            (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s();
+                        },
                     });
             }
             return (
-                l()(null != M, 'There must be some upsell context'),
-                (0, r.jsxs)('div', {
+                l()(null != M, "There must be some upsell context"),
+                (0, r.jsxs)("div", {
                     className: L.contentContainer,
                     children: [
                         (0, r.jsx)(h.X6q, {
-                            variant: 'heading-xl/bold',
-                            color: 'header-primary',
-                            children: t
+                            variant: "heading-xl/bold",
+                            color: "header-primary",
+                            children: t,
                         }),
                         (0, r.jsx)(h.Text, {
-                            variant: 'text-md/normal',
-                            children: i
+                            variant: "text-md/normal",
+                            children: i,
                         }),
                         (0, r.jsx)(k, {
                             trialOffer: y,
                             discountOffer: O,
-                            children: M
-                        })
-                    ]
+                            children: M,
+                        }),
+                    ],
                 })
             );
         case P.cd.BURST_REACTION_QUICK_ACTION_UPSELL:
-            return (0, r.jsxs)('div', {
+            return (0, r.jsxs)("div", {
                 className: L.contentContainer,
                 children: [
                     (0, r.jsx)(h.X6q, {
-                        variant: 'heading-xl/bold',
-                        color: 'header-primary',
-                        children: t
+                        variant: "heading-xl/bold",
+                        color: "header-primary",
+                        children: t,
                     }),
                     (0, r.jsx)(h.Text, {
-                        variant: 'text-md/normal',
-                        children: i
+                        variant: "text-md/normal",
+                        children: i,
                     }),
                     (0, r.jsx)(k, {
                         trialOffer: y,
                         discountOffer: O,
                         children: D.intl.format(D.t.poib9P, {
                             planName: (0, I.jP)(u),
-                            onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE)
-                        })
+                            onClick: () => (0, b.uL)(w.Z5c.APPLICATION_STORE),
+                        }),
                     }),
                     (0, r.jsx)(j, {
                         className: L.upsellButton,
@@ -431,39 +451,39 @@ function F(e) {
                         analyticsLocationObject: p,
                         onClose: s,
                         trialOffer: y,
-                        discountOffer: O
-                    })
-                ]
+                        discountOffer: O,
+                    }),
+                ],
             });
         case P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
             return (
-                l()(null != o, 'You must specify children for this upsell type'),
+                l()(null != o, "You must specify children for this upsell type"),
                 (0, r.jsx)(k, {
                     trialOffer: y,
                     discountOffer: O,
-                    children: D.intl.format(D.t['5KMAnJ'], {
+                    children: D.intl.format(D.t["5KMAnJ"], {
                         onClick: () => {
-                            ((0, b.uL)(w.Z5c.APPLICATION_STORE), (0, E.C)());
-                        }
-                    })
+                            (0, b.uL)(w.Z5c.APPLICATION_STORE), (0, E.C)();
+                        },
+                    }),
                 })
             );
         case P.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
-            return (0, r.jsxs)('div', {
+            return (0, r.jsxs)("div", {
                 className: a()(L.messageLengthUpsellContainer, { [L.messageLengthUpsellAppearAnimation]: !A }),
                 children: [
                     (0, r.jsx)(h.Text, {
-                        variant: 'text-lg/bold',
-                        color: 'status-danger',
-                        children: i
+                        variant: "text-lg/bold",
+                        color: "status-danger",
+                        children: i,
                     }),
                     (0, r.jsx)(h.X6q, {
-                        variant: 'heading-lg/extrabold',
-                        color: 'header-primary',
+                        variant: "heading-lg/extrabold",
+                        color: "header-primary",
                         className: L.messageLengthUpsellHeader,
-                        children: D.intl.string(D.t.ZvHg3N)
+                        children: D.intl.string(D.t.ZvHg3N),
                     }),
-                    (0, r.jsx)('div', { className: L.divider }),
+                    (0, r.jsx)("div", { className: L.divider }),
                     (0, r.jsx)(k, {
                         trialOffer: y,
                         discountOffer: O,
@@ -472,18 +492,18 @@ function F(e) {
                         children: D.intl.format(D.t.GUHtEx, {
                             premiumMaxMessageLength: w.en1,
                             onClick: () => {
-                                ((0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s());
-                            }
-                        })
+                                (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s();
+                            },
+                        }),
                     }),
                     (0, r.jsx)(j, {
                         subscriptionTier: u,
                         analyticsLocationObject: p,
                         onClose: s,
                         trialOffer: y,
-                        discountOffer: O
-                    })
-                ]
+                        discountOffer: O,
+                    }),
+                ],
             });
         case P.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL:
         case P.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
@@ -505,17 +525,17 @@ function F(e) {
                 discountOffer: O,
                 headingText: t,
                 context: i,
-                children: o
+                children: o,
             });
         default:
             return (
-                T.Z.captureMessage('Possible mishandling of a PremiumUpsellType: '.concat(c)),
+                T.Z.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(c)),
                 (0, r.jsx)(Z, {
                     headingText: t,
                     context: i,
                     children: o,
                     trialOffer: y,
-                    discountOffer: O
+                    discountOffer: O,
                 })
             );
     }

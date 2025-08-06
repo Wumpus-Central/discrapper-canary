@@ -15,26 +15,29 @@ let p = function (e) {
             var e;
             return null == (e = p.find((e) => e.id === t)) ? void 0 : e.name;
         }, [p, t]),
-        h = t === o.MU || null == m ? c.intl.string(c.t['FVJt+/']) : c.intl.formatToPlainString(c.t.FjCaND, { categoryName: m }),
+        h =
+            t === o.MU || null == m
+                ? c.intl.string(c.t["FVJt+/"])
+                : c.intl.formatToPlainString(c.t.FjCaND, { categoryName: m }),
         g = t === o.MU ? c.intl.string(c.t.GXiMtb) : c.intl.format(c.t.JaLoFB, { onClick: n });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: d.container,
         children: [
-            (0, r.jsx)('img', {
-                alt: '',
+            (0, r.jsx)("img", {
+                alt: "",
                 src: u,
-                className: d.image
+                className: d.image,
             }),
             (0, r.jsx)(l.X6q, {
-                variant: 'heading-xl/semibold',
+                variant: "heading-xl/semibold",
                 className: d.header,
-                children: h
+                children: h,
             }),
             (0, r.jsx)(l.Text, {
-                variant: 'text-md/normal',
-                color: 'header-secondary',
-                children: g
-            })
-        ]
+                variant: "text-md/normal",
+                color: "header-secondary",
+                children: g,
+            }),
+        ],
     });
 };

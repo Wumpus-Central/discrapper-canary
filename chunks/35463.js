@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
+n.d(t, { Z: () => s }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(73800),
     a = n(442837),
     l = n(703558),
@@ -11,7 +11,7 @@ function s(e) {
         f = (null == u || null == (t = u.mediaAttachmentState) ? void 0 : t.status) === o._.PREPARING,
         m = (0, a.e7)([i.Z], () => i.Z.getUpload(s, c, l.d.Poll)),
         [p, b] = r.useState(),
-        [g, h] = r.useState('');
+        [g, h] = r.useState("");
     return (
         r.useEffect(() => {
             var e;
@@ -31,7 +31,7 @@ function s(e) {
             hasUpload: null != m,
             upload: m,
             mediaUrl: p,
-            mediaFilename: g
+            mediaFilename: g,
         }
     );
 }

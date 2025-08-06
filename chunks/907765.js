@@ -6,7 +6,7 @@ var r = a(622916),
 let i = (0, n._I)(() => {
     let t;
     return {
-        name: 'Dedupe',
+        name: "Dedupe",
         processEvent(e) {
             if (e.type) return e;
             try {
@@ -17,7 +17,9 @@ let i = (0, n._I)(() => {
                         ((function (t, e) {
                             let a = t.message,
                                 r = e.message;
-                            return (!!a || !!r) && (!a || !!r) && (!!a || !r) && a === r && !!E(t, e) && !!c(t, e) && !0;
+                            return (
+                                (!!a || !!r) && (!a || !!r) && (!!a || !r) && a === r && !!E(t, e) && !!c(t, e) && !0
+                            );
                         })(a, _) ||
                             (function (t, e) {
                                 let a = s(e),
@@ -25,10 +27,12 @@ let i = (0, n._I)(() => {
                                 return !!a && !!r && a.type === r.type && a.value === r.value && !!E(t, e) && !!c(t, e);
                             })(a, _)))
                 )
-                    return (o.X && r.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null);
+                    return (
+                        o.X && r.kg.warn("Event dropped due to being a duplicate of previously captured event."), null
+                    );
             } catch (t) {}
             return (t = e);
-        }
+        },
     };
 });
 function c(t, e) {
@@ -39,7 +43,8 @@ function c(t, e) {
     for (let t = 0; t < r.length; t++) {
         let e = r[t],
             _ = a[t];
-        if (e.filename !== _.filename || e.lineno !== _.lineno || e.colno !== _.colno || e.function !== _.function) return !1;
+        if (e.filename !== _.filename || e.lineno !== _.lineno || e.colno !== _.colno || e.function !== _.function)
+            return !1;
     }
     return !0;
 }
@@ -49,7 +54,7 @@ function E(t, e) {
     if (!a && !r) return !0;
     if ((a && !r) || (!a && r)) return !1;
     try {
-        return a.join('') === r.join('');
+        return a.join("") === r.join("");
     } catch (t) {
         return !1;
     }

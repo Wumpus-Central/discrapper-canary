@@ -13,5 +13,5 @@ let o = {
     getTermsForEmoji: function (e) {
         let t = r.get();
         return void 0 !== t ? t[e] : [];
-    }
+    },
 };

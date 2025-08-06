@@ -1,27 +1,27 @@
-(n.d(t, { Z: () => i }), n(388685));
+n.d(t, { Z: () => i }), n(388685);
 var r = n(73800);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -44,7 +44,15 @@ function o(e, t) {
     );
 }
 function i(e) {
-    let { getCurrentVideoTime: t, isPlaying: n, isMetadataLoaded: i, isInitialSeekComplete: a, onAnalytics: s, emitIntervalMs: c, minSegmentDurationMs: u } = e,
+    let {
+            getCurrentVideoTime: t,
+            isPlaying: n,
+            isMetadataLoaded: i,
+            isInitialSeekComplete: a,
+            onAnalytics: s,
+            emitIntervalMs: c,
+            minSegmentDurationMs: u,
+        } = e,
         [d, m] = r.useState(null),
         f = (0, r.useRef)(null),
         p = (0, r.useRef)(Date.now()),
@@ -58,22 +66,22 @@ function i(e) {
                         duration: e.endTime - e.startTime,
                         segment_start_sec: e.segmentStartSec,
                         segment_end_sec: e.segmentEndSec,
-                        segment_duration_sec: e.segmentEndSec - e.segmentStartSec
+                        segment_duration_sec: e.segmentEndSec - e.segmentStartSec,
                     });
             },
-            [s]
+            [s],
         ),
         g = (0, r.useCallback)(() => {
             let e = t();
             if (null != e && i && a) {
                 let t = Date.now();
-                (m({
+                m({
                     startTime: t,
                     endTime: t,
                     segmentStartSec: e,
-                    segmentEndSec: e
+                    segmentEndSec: e,
                 }),
-                    (v.current = !0));
+                    (v.current = !0);
             }
         }, [t, i, a]),
         O = (0, r.useCallback)(() => {
@@ -85,14 +93,14 @@ function i(e) {
                     (E(
                         o(l({}, d), {
                             endTime: n,
-                            segmentEndSec: e
-                        })
+                            segmentEndSec: e,
+                        }),
                     ),
                     m({
                         startTime: n,
                         endTime: n,
                         segmentStartSec: e,
-                        segmentEndSec: e
+                        segmentEndSec: e,
                     }),
                     (p.current = n)));
         }, [d, E, c, u, t]);
@@ -102,10 +110,10 @@ function i(e) {
         }, [i, a]),
         (0, r.useEffect)(() => {
             if (n && i && a)
-                (v.current || g(),
+                v.current || g(),
                     (f.current = window.setInterval(() => {
                         O();
-                    }, 200)));
+                    }, 200));
             else {
                 let e = t();
                 if (null != d && null != e) {
@@ -114,11 +122,11 @@ function i(e) {
                         E(
                             o(l({}, d), {
                                 endTime: t,
-                                segmentEndSec: e
-                            })
+                                segmentEndSec: e,
+                            }),
                         );
                 }
-                (m(null), (v.current = !1), null != f.current && (clearInterval(f.current), (f.current = null)));
+                m(null), (v.current = !1), null != f.current && (clearInterval(f.current), (f.current = null));
             }
             return () => {
                 null != f.current && (clearInterval(f.current), (f.current = null));
@@ -129,18 +137,18 @@ function i(e) {
                 let e = t();
                 if (null != d && null != e) {
                     let t = Date.now();
-                    (e - d.segmentStartSec > 0.2 &&
+                    e - d.segmentStartSec > 0.2 &&
                         E(
                             o(l({}, d), {
                                 endTime: t,
-                                segmentEndSec: e
-                            })
+                                segmentEndSec: e,
+                            }),
                         ),
                         m(null),
-                        (v.current = !1));
+                        (v.current = !1);
                 }
             }, [d, E, t]),
-            isInitialized: v.current
+            isInitialized: v.current,
         }
     );
 }

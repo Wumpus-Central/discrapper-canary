@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     BU: () => v,
     CM: () => h,
     Eo: () => m,
@@ -8,13 +8,13 @@
     XA: () => g,
     aB: () => f,
     hm: () => P,
-    jE: () => d
+    jE: () => d,
 }),
     n(388685),
     n(539854),
     n(472816),
     n(794429),
-    n(642613));
+    n(642613);
 var r = n(73800),
     i = n(481060),
     o = n(406432),
@@ -26,7 +26,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,35 +72,61 @@ function u(e, t) {
     );
 }
 var d = (function (e) {
-        return ((e.SHOP_ALL_BANNER_STATIC = 'shop_all_banner.jpg'), (e.SHOP_ALL_BANNER_ANIMATED = 'shop_all_banner_animated.webm'), (e.HERO_BANNER_STATIC = 'hero_banner.jpg'), (e.HERO_BANNER_ANIMATED = 'hero_banner_animated.webm'), (e.HERO_LOGO = 'hero_logo.png'), (e.FEATURED_BLOCK = 'featured_block.png'), (e.UPSELL_BANNER = 'upsell_banner.jpg'), (e.UPSELL_BANNER_POPOUT = 'upsell_banner_popout.png'), (e.PDP_BACKGROUND = 'pdp_bg.jpg'), (e.PDP_LOGO = 'pdp_logo.png'), (e.SHOP_BUTTON_BG_HOVER = 'shop_button_bg_hover.png'), (e.SHOP_BUTTON_BG_HOVER_DARK = 'shop_button_bg_hover_dark.png'), (e.SHOP_BUTTON_BG_HOVER_LIGHT = 'shop_button_bg_hover_light.png'), (e.SHOP_BUTTON_BG_RESTING = 'shop_button_bg_resting.png'), (e.SHOP_BUTTON_BG_RESTING_DARK = 'shop_button_bg_resting_dark.png'), (e.SHOP_BUTTON_BG_RESTING_LIGHT = 'shop_button_bg_resting_light.png'), (e.COACHTIP_AVATAR = 'coachtip_avatar.png'), (e.MOBILE_BANNER = 'mobile_banner.jpg'), (e.MOBILE_BACKGROUND = 'mobile_bg.jpg'), e);
+        return (
+            (e.SHOP_ALL_BANNER_STATIC = "shop_all_banner.jpg"),
+            (e.SHOP_ALL_BANNER_ANIMATED = "shop_all_banner_animated.webm"),
+            (e.HERO_BANNER_STATIC = "hero_banner.jpg"),
+            (e.HERO_BANNER_ANIMATED = "hero_banner_animated.webm"),
+            (e.HERO_LOGO = "hero_logo.png"),
+            (e.FEATURED_BLOCK = "featured_block.png"),
+            (e.UPSELL_BANNER = "upsell_banner.jpg"),
+            (e.UPSELL_BANNER_POPOUT = "upsell_banner_popout.png"),
+            (e.PDP_BACKGROUND = "pdp_bg.jpg"),
+            (e.PDP_LOGO = "pdp_logo.png"),
+            (e.SHOP_BUTTON_BG_HOVER = "shop_button_bg_hover.png"),
+            (e.SHOP_BUTTON_BG_HOVER_DARK = "shop_button_bg_hover_dark.png"),
+            (e.SHOP_BUTTON_BG_HOVER_LIGHT = "shop_button_bg_hover_light.png"),
+            (e.SHOP_BUTTON_BG_RESTING = "shop_button_bg_resting.png"),
+            (e.SHOP_BUTTON_BG_RESTING_DARK = "shop_button_bg_resting_dark.png"),
+            (e.SHOP_BUTTON_BG_RESTING_LIGHT = "shop_button_bg_resting_light.png"),
+            (e.COACHTIP_AVATAR = "coachtip_avatar.png"),
+            (e.MOBILE_BANNER = "mobile_banner.jpg"),
+            (e.MOBILE_BACKGROUND = "mobile_bg.jpg"),
+            e
+        );
     })({}),
     f = (function (e) {
-        return ((e.PROFILE_EFFECT = 'profile_effect'), (e.AVATAR_DECORATION = 'avatar_decoration'), e);
+        return (e.PROFILE_EFFECT = "profile_effect"), (e.AVATAR_DECORATION = "avatar_decoration"), e;
     })({});
 let _ = {
-        'shop_all_banner.jpg': 'shop_all_banner.jpg',
-        'shop_all_banner_animated.webm': 'shop_all_banner_animated.webm',
-        'hero_banner.jpg': 'hero_banner.jpg',
-        'hero_banner_animated.webm': 'hero_banner_animated.webm',
-        'hero_logo.png': 'hero_logo.png',
-        'featured_block.png': 'featured_block.png',
-        'upsell_banner.jpg': 'upsell_banner.jpg',
-        'upsell_banner_popout.png': 'upsell_banner_popout.png',
-        'pdp_bg.jpg': 'pdp_bg.jpg',
-        'pdp_logo.png': 'pdp_logo.png',
-        'shop_button_bg_hover.png': 'shop_button_bg_hover.png',
-        'shop_button_bg_hover_dark.png': 'shop_button_bg_hover_dark.png',
-        'shop_button_bg_hover_light.png': 'shop_button_bg_hover_light.png',
-        'shop_button_bg_resting.png': 'shop_button_bg_resting.png',
-        'shop_button_bg_resting_dark.png': 'shop_button_bg_resting_dark.png',
-        'shop_button_bg_resting_light.png': 'shop_button_bg_resting_light.png',
-        'coachtip_avatar.png': 'coachtip_avatar.png',
-        'mobile_banner.jpg': 'mobile_banner.jpg',
-        'mobile_bg.jpg': 'mobile_bg.jpg'
+        "shop_all_banner.jpg": "shop_all_banner.jpg",
+        "shop_all_banner_animated.webm": "shop_all_banner_animated.webm",
+        "hero_banner.jpg": "hero_banner.jpg",
+        "hero_banner_animated.webm": "hero_banner_animated.webm",
+        "hero_logo.png": "hero_logo.png",
+        "featured_block.png": "featured_block.png",
+        "upsell_banner.jpg": "upsell_banner.jpg",
+        "upsell_banner_popout.png": "upsell_banner_popout.png",
+        "pdp_bg.jpg": "pdp_bg.jpg",
+        "pdp_logo.png": "pdp_logo.png",
+        "shop_button_bg_hover.png": "shop_button_bg_hover.png",
+        "shop_button_bg_hover_dark.png": "shop_button_bg_hover_dark.png",
+        "shop_button_bg_hover_light.png": "shop_button_bg_hover_light.png",
+        "shop_button_bg_resting.png": "shop_button_bg_resting.png",
+        "shop_button_bg_resting_dark.png": "shop_button_bg_resting_dark.png",
+        "shop_button_bg_resting_light.png": "shop_button_bg_resting_light.png",
+        "coachtip_avatar.png": "coachtip_avatar.png",
+        "mobile_banner.jpg": "mobile_banner.jpg",
+        "mobile_bg.jpg": "mobile_bg.jpg",
     },
-    p = '.DS_Store';
+    p = ".DS_Store";
 var h = (function (e) {
-    return ((e.COLLECTION = 'collection'), (e.AVATAR_DECORATIONS = 'avatar_decorations'), (e.PROFILE_EFFECTS = 'profile_effects'), e);
+    return (
+        (e.COLLECTION = "collection"),
+        (e.AVATAR_DECORATIONS = "avatar_decorations"),
+        (e.PROFILE_EFFECTS = "profile_effects"),
+        e
+    );
 })({});
 let m = (e) => {
         (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));
@@ -110,20 +136,21 @@ let m = (e) => {
     },
     E = (e, t) => {
         let n = new FileReader();
-        ((n.onload = (n) => {
-            if (null == n.target || 'string' != typeof n.target.result) return void m('Error uploading file. Try again!');
+        (n.onload = (n) => {
+            if (null == n.target || "string" != typeof n.target.result)
+                return void m("Error uploading file. Try again!");
             t(e, n.target.result);
         }),
-            n.readAsDataURL(e));
+            n.readAsDataURL(e);
     },
     b = (e, t, n) => {
         if (0 === e.length) {
-            null == n || n('No files found!');
+            null == n || n("No files found!");
             return;
         }
         for (let n of e) E(n, t);
     },
-    y = (e, t) => ''.concat(e, '/').concat(t),
+    y = (e, t) => "".concat(e, "/").concat(t),
     O = (e) => (0, o.tw)(e.type) || (0, o.X2)(e.type),
     v = (e) => {
         var t;
@@ -144,13 +171,23 @@ let m = (e) => {
         return t;
     },
     T = (e, t, n) => {
-        if (!O(t) && !t.name.endsWith('.txt')) return void n.ignoredFilenames.push(y(e, t.name));
-        (e in n.profileEffectFilesMap || (n.profileEffectFilesMap[e] = []), n.profileEffectFilesMap[e].push(t));
+        if (!O(t) && !t.name.endsWith(".txt")) return void n.ignoredFilenames.push(y(e, t.name));
+        e in n.profileEffectFilesMap || (n.profileEffectFilesMap[e] = []), n.profileEffectFilesMap[e].push(t);
     },
     S = (e, t, n, r) => {
         if (t.name === p) return;
         let i = y(e, t.name);
-        'profile_effects' === n ? T(e, t, r) : O(t) ? ('collection' === n || null === n ? (t.name in _ ? r.collectionFiles.push(t) : r.ignoredFilenames.push(i)) : 'avatar_decorations' === n ? r.avatarDecorationFiles.push(t) : r.ignoredFilenames.push(i)) : r.ignoredFilenames.push(i);
+        "profile_effects" === n
+            ? T(e, t, r)
+            : O(t)
+              ? "collection" === n || null === n
+                  ? t.name in _
+                      ? r.collectionFiles.push(t)
+                      : r.ignoredFilenames.push(i)
+                  : "avatar_decorations" === n
+                    ? r.avatarDecorationFiles.push(t)
+                    : r.ignoredFilenames.push(i)
+              : r.ignoredFilenames.push(i);
     },
     A = async (e, t, n) => {
         let r = e.createReader();
@@ -169,7 +206,7 @@ let m = (e) => {
         for (let r of await new Promise((e) => n.readEntries(e)))
             if (r.isDirectory) {
                 let e = r;
-                await A(e, 'profile_effects', t);
+                await A(e, "profile_effects", t);
             } else r.isFile && r.name !== p && t.ignoredFilenames.push(y(e.name, r.name));
     },
     C = async (e, t) => {
@@ -177,9 +214,9 @@ let m = (e) => {
         for (let e of await new Promise((e) => n.readEntries(e)))
             if (e.isDirectory) {
                 let n = e;
-                if ('collection' === n.name) await A(n, 'collection', t);
-                else if ('avatar_decorations' === n.name) await A(n, 'avatar_decorations', t);
-                else if ('profile_effects' === n.name) await N(n, t);
+                if ("collection" === n.name) await A(n, "collection", t);
+                else if ("avatar_decorations" === n.name) await A(n, "avatar_decorations", t);
+                else if ("profile_effects" === n.name) await N(n, t);
                 else {
                     let e = await I(n);
                     t.ignoredFilenames.push(...e.map((e) => y(n.name, e.name)));
@@ -191,31 +228,40 @@ let m = (e) => {
             collectionFiles: [],
             avatarDecorationFiles: [],
             profileEffectFilesMap: {},
-            ignoredFilenames: []
+            ignoredFilenames: [],
         };
         for (let n of e)
             if (n.isDirectory) {
                 let e = n,
                     r = e.name;
-                'collection' === r || 'avatar_decorations' === r ? await A(e, r, t) : 'profile_effects' === r ? await N(e, t) : await C(e, t);
+                "collection" === r || "avatar_decorations" === r
+                    ? await A(e, r, t)
+                    : "profile_effects" === r
+                      ? await N(e, t)
+                      : await C(e, t);
             } else if (n.isFile) {
                 let e = n;
-                S('', await new Promise((t) => e.file(t)), null, t);
+                S("", await new Promise((t) => e.file(t)), null, t);
             }
-        return (t.collectionFiles.sort((e, t) => e.name.localeCompare(t.name)), t.avatarDecorationFiles.sort((e, t) => e.name.localeCompare(t.name)), t.ignoredFilenames.sort((e, t) => e.localeCompare(t)), t);
+        return (
+            t.collectionFiles.sort((e, t) => e.name.localeCompare(t.name)),
+            t.avatarDecorationFiles.sort((e, t) => e.name.localeCompare(t.name)),
+            t.ignoredFilenames.sort((e, t) => e.localeCompare(t)),
+            t
+        );
     },
     P = () => {
         let [e, t] = r.useState(() => ({
                 collectionFiles: [],
                 avatarDecorationFiles: [],
                 profileEffectFilesMap: {},
-                ignoredFilenames: []
+                ignoredFilenames: [],
             })),
             { upsertCollectionAsset: n, upsertAvatarDecorationAsset: i } = (0, a.N9)(),
             o = r.useCallback(
                 async (e) => {
                     let r = await R(e);
-                    (t(r),
+                    t(r),
                         (0 !== r.collectionFiles.length || 0 !== r.avatarDecorationFiles.length) &&
                             (r.collectionFiles.forEach((e) => {
                                 E(e, (e) => {
@@ -227,17 +273,17 @@ let m = (e) => {
                                 E(e, (e) => {
                                     i(e);
                                 });
-                            })));
+                            }));
                 },
-                [n, i]
+                [n, i],
             ),
             s = r.useCallback(() => {
                 t((e) =>
                     u(l({}, e), {
                         collectionFiles: [],
                         avatarDecorationFiles: [],
-                        profileEffectFilesMap: {}
-                    })
+                        profileEffectFilesMap: {},
+                    }),
                 );
             }, []),
             c = r.useCallback(() => {
@@ -247,6 +293,6 @@ let m = (e) => {
             ignoredFilenames: e.ignoredFilenames,
             clearAssets: s,
             clearIgnoredFilenames: c,
-            processAndUpsertAssets: o
+            processAndUpsertAssets: o,
         };
     };

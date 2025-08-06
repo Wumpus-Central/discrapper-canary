@@ -16,24 +16,24 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -57,28 +57,28 @@ function _(e, t) {
 }
 function v(e) {
     let { powerup: t, isActive: n, compact: o, iconSize: i } = e,
-        l = null != i ? i : 'sm',
+        l = null != i ? i : "sm",
         s = n
             ? (0, r.jsx)(a.mTd, {
                   size: l,
-                  color: 'currentColor'
+                  color: "currentColor",
               })
             : (0, r.jsx)(a.$Eu, {
                   size: l,
-                  color: 'currentColor'
+                  color: "currentColor",
               }),
         c = m.intl.string(n ? f.default.TZsu1d : f.default.gSxlHR);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !o && c,
             !o &&
-                (0, r.jsx)('span', {
+                (0, r.jsx)("span", {
                     className: g.dot,
-                    children: '\u2022'
+                    children: "\u2022",
                 }),
             s,
-            (0, r.jsx)('span', { children: t.cost })
-        ]
+            (0, r.jsx)("span", { children: t.cost }),
+        ],
     });
 }
 function b(e) {
@@ -86,33 +86,38 @@ function b(e) {
         o = (0, u.Z)(t, n);
     if (o.type === p.A3.LEVEL_ACTIVATED) {
         var i, l;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: g.tooltipContainer,
             children: [
                 (0, r.jsx)(a.Text, {
-                    variant: 'text-xs/semibold',
-                    children: m.intl.string(f.default['9oYuvb'])
+                    variant: "text-xs/semibold",
+                    children: m.intl.string(f.default["9oYuvb"]),
                 }),
                 (0, r.jsx)(a.Text, {
-                    variant: 'text-xs/medium',
-                    children: m.intl.formatToPlainString(f.default.WRRYUV, { perkName: null != (l = null == (i = o.sourcePowerup) ? void 0 : i.title) ? l : m.intl.string(m.t.BfF6EB) })
-                })
-            ]
+                    variant: "text-xs/medium",
+                    children: m.intl.formatToPlainString(f.default.WRRYUV, {
+                        perkName:
+                            null != (l = null == (i = o.sourcePowerup) ? void 0 : i.title)
+                                ? l
+                                : m.intl.string(m.t.BfF6EB),
+                    }),
+                }),
+            ],
         });
     }
     if (o.type === p.A3.POWERUP_ACTIVATED)
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: g.tooltipContainer,
             children: [
                 (0, r.jsx)(a.Text, {
-                    variant: 'text-xs/semibold',
-                    children: m.intl.string(f.default.TZsu1d)
+                    variant: "text-xs/semibold",
+                    children: m.intl.string(f.default.TZsu1d),
                 }),
                 (0, r.jsx)(a.Text, {
-                    variant: 'text-xs/medium',
-                    children: m.intl.formatToPlainString(f.default['5HQUzM'], { boostCount: n.cost })
-                })
-            ]
+                    variant: "text-xs/medium",
+                    children: m.intl.formatToPlainString(f.default["5HQUzM"], { boostCount: n.cost }),
+                }),
+            ],
         });
 }
 function j(e) {
@@ -127,15 +132,17 @@ function j(e) {
                         r,
                         o = {},
                         i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
-        })(e, ['guildId', 'powerup', 'compact', 'iconSize', 'onError']);
+        })(e, ["guildId", "powerup", "compact", "iconSize", "onError"]);
     let { onActivate: C, isLoading: O, error: I, onShowDeactivate: y } = (0, d.ZP)(t, n),
         P = (0, u.Z)(t, n).type !== p.A3.INACTIVE,
         { disabled: w, reason: N } = (0, c.Z)(t, n, P);
@@ -145,14 +152,14 @@ function j(e) {
         }, [I, h]),
         (0, r.jsx)(a.ua7, {
             delay: 100,
-            'aria-label': null != N ? N : P ? m.intl.string(f.default.TZsu1d) : void 0,
+            "aria-label": null != N ? N : P ? m.intl.string(f.default.TZsu1d) : void 0,
             text:
                 null != N
                     ? N
                     : P
                       ? (0, r.jsx)(b, {
                             guildId: t,
-                            powerup: n
+                            powerup: n,
                         })
                       : void 0,
             children: (e) =>
@@ -165,23 +172,23 @@ function j(e) {
                                 innerClassName: g.buttonInner,
                                 wrapperClassName: l()(g.secondaryButton, { [g.buttonWrapper]: !0 === E.grow }),
                                 color: P ? s.Tt.PRIMARY : s.Tt.BRAND,
-                                'aria-label': m.intl.string(P ? f.default.TZsu1d : f.default.gSxlHR),
+                                "aria-label": m.intl.string(P ? f.default.TZsu1d : f.default.gSxlHR),
                                 disabled: w,
                                 onClick: P ? y : C,
-                                submitting: O
+                                submitting: O,
                             }),
-                            E
+                            E,
                         ),
                         {
                             children: (0, r.jsx)(v, {
                                 powerup: n,
                                 isActive: P,
                                 compact: i,
-                                iconSize: j
-                            })
-                        }
-                    )
-                )
+                                iconSize: j,
+                            }),
+                        },
+                    ),
+                ),
         })
     );
 }

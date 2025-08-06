@@ -6,16 +6,18 @@ var r = n(599582),
     s = n(217224);
 function l(e) {
     return (l =
-        'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+        "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
               }
             : function (e) {
-                  return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
+                  return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
+                      ? "symbol"
+                      : typeof e;
               })(e);
 }
 function c(e, t) {
-    if (((0, a.Z)(2, arguments), !t || 'object' !== l(t))) return new Date(NaN);
+    if (((0, a.Z)(2, arguments), !t || "object" !== l(t))) return new Date(NaN);
     var n = t.years ? (0, s.Z)(t.years) : 0,
         c = t.months ? (0, s.Z)(t.months) : 0,
         u = t.weeks ? (0, s.Z)(t.weeks) : 0,

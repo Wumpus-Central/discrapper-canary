@@ -8,33 +8,33 @@ var r,
     s = n(481060),
     d = n(974393);
 let u = {
-        UP: 'up',
-        RIGHT: 'right',
-        DOWN: 'down',
-        LEFT: 'left'
+        UP: "up",
+        RIGHT: "right",
+        DOWN: "down",
+        LEFT: "left",
     },
     f = {
-        [u.UP]: '',
+        [u.UP]: "",
         [u.RIGHT]: d.right,
         [u.DOWN]: d.down,
-        [u.LEFT]: d.left
+        [u.LEFT]: d.left,
     };
 class p extends (l = i.PureComponent) {
     render() {
         let { direction: e, className: t } = this.props;
         return (0, o.jsx)(s.wj7, {
-            size: 'md',
-            color: 'currentColor',
-            className: c()(t, { [f[e]]: !0 })
+            size: "md",
+            color: "currentColor",
+            className: c()(t, { [f[e]]: !0 }),
         });
     }
 }
-(r = 'Directions') in p
+(r = "Directions") in p
     ? Object.defineProperty(p, r, {
           value: u,
           enumerable: !0,
           configurable: !0,
-          writable: !0
+          writable: !0,
       })
     : (p[r] = u);
 let m = p;

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685));
+n.d(t, { Z: () => L }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -48,27 +48,29 @@ let L = function (e) {
         [z, W] = r.useState(!0),
         Y = r.useRef(0),
         K = (0, T.M5)(U, Z.p9.TIER_2),
-        q = (0, y.Z)({ location: 'PremiumMarketingPage' }),
+        q = (0, y.Z)({ location: "PremiumMarketingPage" }),
         X = (0, l.e7)([I.Z], () => I.Z.hasFetched);
-    (r.useEffect(() => {
+    r.useEffect(() => {
         X || d.MH();
     }, [X]),
         r.useEffect(() => {
             c.Z.wait(async () => {
                 let e = Date.now();
-                (await Promise.all([d.jg(), d.tZ(), (0, u.Y2)(null, null, w.JjL.DISCOVERY)]), (Y.current = Date.now() - e), W(!1));
+                await Promise.all([d.jg(), d.tZ(), (0, u.Y2)(null, null, w.JjL.DISCOVERY)]),
+                    (Y.current = Date.now() - e),
+                    W(!1);
             });
         }, []),
         r.useEffect(() => {
             z ||
                 S.default.track(w.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                     location_stack: s,
-                    load_duration_ms: Y.current
+                    load_duration_ms: Y.current,
                 });
         }, [s, z]),
         r.useEffect(() => {
             n && (null != G || null != F) && (0, N.a)(G, F);
-        }, [n, G, F]));
+        }, [n, G, F]);
     let J = (0, l.e7)([E.Z], () => E.Z.enabled),
         Q = t === Z.EZ.ApplicationStoreHome,
         $ = J
@@ -78,20 +80,20 @@ let L = function (e) {
               : Q && K
                 ? (0, i.jsx)(h.Gt, {
                       value: L,
-                      children: (0, i.jsx)(D.Z, { userId: V })
+                      children: (0, i.jsx)(D.Z, { userId: V }),
                   })
                 : M && H && B
                   ? null
-                  : (0, i.jsx)('div', {
+                  : (0, i.jsx)("div", {
                         className: a()(k.container, k.loading),
-                        children: (0, i.jsx)(o.$jN, {})
+                        children: (0, i.jsx)(o.$jN, {}),
                     });
     return null != $
         ? (0, i.jsxs)(i.Fragment, {
-              children: [Q && (0, i.jsx)(p.Z, {}), $]
+              children: [Q && (0, i.jsx)(p.Z, {}), $],
           })
         : (0, i.jsxs)(h.Gt, {
               value: L,
-              children: [Q && !q && (0, i.jsx)(p.Z, {}), (0, i.jsx)(R.Z, { entrypoint: t })]
+              children: [Q && !q && (0, i.jsx)(p.Z, {}), (0, i.jsx)(R.Z, { entrypoint: t })],
           });
 };

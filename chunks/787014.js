@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     S1: () => u,
     ZP: () => g,
     pW: () => p,
     wk: () => h,
     xv: () => f,
     zc: () => _,
-    zz: () => m
+    zz: () => m,
 }),
-    n(997841));
+    n(997841);
 var r = n(544891),
     i = n(570140),
     o = n(408987);
@@ -19,28 +19,52 @@ var s = n(592125),
     c = n(981631);
 function u(e, t, n) {
     i.Z.dispatch({
-        type: 'CHANNEL_SETTINGS_INIT',
+        type: "CHANNEL_SETTINGS_INIT",
         channelId: e,
         location: t,
-        subsection: n
+        subsection: n,
     });
 }
 function d(e, t, n) {
-    (u(e, t, n), (0, l.jN)(c.S9g.CHANNEL_SETTINGS));
+    u(e, t, n), (0, l.jN)(c.S9g.CHANNEL_SETTINGS);
 }
 function f() {
-    i.Z.dispatch({ type: 'CHANNEL_SETTINGS_CLOSE' });
+    i.Z.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
 }
 function _(e) {
     i.Z.dispatch({
-        type: 'CHANNEL_SETTINGS_SET_SECTION',
-        section: e
+        type: "CHANNEL_SETTINGS_SET_SECTION",
+        section: e,
     });
 }
 function p(e) {
-    let { name: t, type: n, topic: r, bitrate: o, userLimit: a, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: f, defaultReactionEmoji: _, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: O, defaultTagSetting: v, iconEmoji: I, themeColor: T } = e;
+    let {
+        name: t,
+        type: n,
+        topic: r,
+        bitrate: o,
+        userLimit: a,
+        nsfw: s,
+        flags: l,
+        rateLimitPerUser: c,
+        defaultThreadRateLimitPerUser: u,
+        defaultAutoArchiveDuration: d,
+        template: f,
+        defaultReactionEmoji: _,
+        rtcRegion: p,
+        videoQualityMode: h,
+        autoArchiveDuration: m,
+        locked: g,
+        invitable: E,
+        availableTags: b,
+        defaultSortOrder: y,
+        defaultForumLayout: O,
+        defaultTagSetting: v,
+        iconEmoji: I,
+        themeColor: T,
+    } = e;
     i.Z.dispatch({
-        type: 'CHANNEL_SETTINGS_UPDATE',
+        type: "CHANNEL_SETTINGS_UPDATE",
         name: t,
         channelType: n,
         topic: r,
@@ -63,14 +87,40 @@ function p(e) {
         defaultForumLayout: O,
         defaultTagSetting: v,
         iconEmoji: I,
-        themeColor: T
+        themeColor: T,
     });
 }
 async function h(e, t) {
-    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: O, rtcRegion: v, videoQualityMode: I, autoArchiveDuration: T, locked: S, invitable: A, availableTags: N, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
+    let {
+            name: n,
+            type: l,
+            position: u,
+            topic: d,
+            bitrate: f,
+            userLimit: _,
+            nsfw: p,
+            flags: h,
+            permissionOverwrites: m,
+            rateLimitPerUser: g,
+            defaultThreadRateLimitPerUser: E,
+            defaultAutoArchiveDuration: b,
+            template: y,
+            defaultReactionEmoji: O,
+            rtcRegion: v,
+            videoQualityMode: I,
+            autoArchiveDuration: T,
+            locked: S,
+            invitable: A,
+            availableTags: N,
+            defaultSortOrder: C,
+            defaultForumLayout: R,
+            defaultTagSetting: P,
+            iconEmoji: w,
+            themeColor: D,
+        } = t,
         L = s.Z.getChannel(e);
     return (
-        i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),
+        i.Z.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
         await a.Z.unarchiveThreadIfNecessary(e),
         r.tn
             .patch({
@@ -98,7 +148,7 @@ async function h(e, t) {
                         null != O
                             ? {
                                   emoji_id: null == O ? void 0 : O.emojiId,
-                                  emoji_name: null == O ? void 0 : O.emojiName
+                                  emoji_name: null == O ? void 0 : O.emojiName,
                               }
                             : null === O
                               ? null
@@ -111,7 +161,7 @@ async function h(e, t) {
                                   name: e.name,
                                   emoji_id: e.emojiId,
                                   emoji_name: e.emojiName,
-                                  moderated: e.moderated
+                                  moderated: e.moderated,
                               })),
                     default_sort_order: C,
                     default_forum_layout: R,
@@ -120,32 +170,32 @@ async function h(e, t) {
                         null != w
                             ? {
                                   id: w.id,
-                                  name: w.name
+                                  name: w.name,
                               }
                             : null === w
                               ? null
                               : void 0,
-                    theme_color: D
+                    theme_color: D,
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             })
             .then(
                 (t) => {
                     i.Z.dispatch({
-                        type: 'CHANNEL_SETTINGS_SUBMIT_SUCCESS',
-                        channelId: e
+                        type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
+                        channelId: e,
                     });
                     let n = null == L ? void 0 : L.getGuildId();
-                    return (null == n || (null == L ? void 0 : L.isThread()) || o.Z.checkGuildTemplateDirty(n), t);
+                    return null == n || (null == L ? void 0 : L.isThread()) || o.Z.checkGuildTemplateDirty(n), t;
                 },
                 (e) => (
                     i.Z.dispatch({
-                        type: 'CHANNEL_SETTINGS_SUBMIT_FAILURE',
-                        errors: e.body
+                        type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
+                        errors: e.body,
                     }),
                     e
-                )
+                ),
             )
     );
 }
@@ -154,10 +204,10 @@ async function m(e) {
     await r.tn.del({
         url: c.ANM.CHANNEL(e),
         oldFormErrors: !0,
-        rejectWithError: !0
+        rejectWithError: !0,
     });
     let n = null == t ? void 0 : t.getGuildId();
-    (null == n || (null == t ? void 0 : t.isThread()) || o.Z.checkGuildTemplateDirty(n), f());
+    null == n || (null == t ? void 0 : t.isThread()) || o.Z.checkGuildTemplateDirty(n), f();
 }
 let g = {
     init: u,
@@ -166,8 +216,8 @@ let g = {
     setSection: _,
     selectPermissionOverwrite: function (e) {
         i.Z.dispatch({
-            type: 'CHANNEL_SETTINGS_OVERWRITE_SELECT',
-            overwriteId: e
+            type: "CHANNEL_SETTINGS_OVERWRITE_SELECT",
+            overwriteId: e,
         });
     },
     updateChannel: p,
@@ -177,13 +227,13 @@ let g = {
         return r.tn.put({
             url: c.ANM.UPDATE_VOICE_CHANNEL_STATUS(e),
             body: { status: t },
-            rejectWithError: !1
+            rejectWithError: !1,
         });
     },
     removeLinkedLobby: function (e) {
         return r.tn.del({
             url: c.ANM.CHANNEL_LINKED_LOBBY(e),
-            rejectWithError: !0
+            rejectWithError: !0,
         });
-    }
+    },
 };

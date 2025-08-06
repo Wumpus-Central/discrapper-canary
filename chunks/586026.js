@@ -12,7 +12,7 @@ var r = n(214788),
     },
     u = function (e, t, n, r, i) {
         if (!i) return e;
-        var o = 'after' === r,
+        var o = "after" === r,
             a = t.getKey(),
             s = n.getKey(),
             u = t.getParentKey(),
@@ -22,7 +22,7 @@ var r = n(214788),
             p = o ? n.getNextSiblingKey() : s,
             h = o ? s : n.getPrevSiblingKey();
         return e.withMutations(function (e) {
-            (c(u, e, function (e) {
+            c(u, e, function (e) {
                 var t = e.getChildKeys();
                 return e.merge({ children: t.delete(t.indexOf(a)) });
             }),
@@ -43,19 +43,19 @@ var r = n(214788),
                         n = t.indexOf(s),
                         r = o ? n + 1 : 0 !== n ? n - 1 : 0,
                         i = t.toArray();
-                    return (i.splice(r, 0, a), e.merge({ children: l(i) }));
+                    return i.splice(r, 0, a), e.merge({ children: l(i) });
                 }),
                 c(a, e, function (e) {
                     return e.merge({
                         nextSibling: p,
                         prevSibling: h,
-                        parent: _
+                        parent: _,
                     });
-                }));
+                });
         });
     };
 e.exports = function (e, t, n, o) {
-    'replace' === o && a(!1);
+    "replace" === o && a(!1);
     var l = n.getKey(),
         c = t.getKey();
     c === l && a(!1);
@@ -80,7 +80,7 @@ e.exports = function (e, t, n, o) {
                     return !!(i || o || a);
                 })
                 .forEach(function (t) {
-                    (_.push(t), e.delete(t.getKey()));
+                    _.push(t), e.delete(t.getKey());
                 });
         })));
     var h = p.toSeq().takeUntil(function (e) {
@@ -96,19 +96,19 @@ e.exports = function (e, t, n, o) {
             return [e.getKey(), e];
         }),
         E = s();
-    if ('before' === o) {
+    if ("before" === o) {
         var b = e.getBlockBefore(l);
-        (b && b.getKey() === t.getKey() && a(!1), (E = h.concat([].concat(g, [[l, n]]), m).toOrderedMap()));
-    } else if ('after' === o) {
+        b && b.getKey() === t.getKey() && a(!1), (E = h.concat([].concat(g, [[l, n]]), m).toOrderedMap());
+    } else if ("after" === o) {
         var y = e.getBlockAfter(l);
-        (y && y.getKey() === c && a(!1), (E = h.concat([[l, n]].concat(g), m).toOrderedMap()));
+        y && y.getKey() === c && a(!1), (E = h.concat([[l, n]].concat(g), m).toOrderedMap());
     }
     return e.merge({
         blockMap: u(E, t, n, o, f),
         selectionBefore: e.getSelectionAfter(),
         selectionAfter: e.getSelectionAfter().merge({
             anchorKey: c,
-            focusKey: c
-        })
+            focusKey: c,
+        }),
     });
 };

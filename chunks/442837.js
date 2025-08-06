@@ -7,7 +7,7 @@ n.d(t, {
     cj: () => u.cj,
     e7: () => u.e7,
     pF: () => u.pF,
-    yh: () => s.y
+    yh: () => s.y,
 });
 var r = n(250919),
     i = n(613568),
@@ -30,5 +30,5 @@ let f = {
     initialize: d,
     get initialized() {
         return s.y.initialized;
-    }
+    },
 };

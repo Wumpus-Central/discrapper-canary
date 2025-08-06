@@ -19,19 +19,19 @@ let p = (0, a.Z)(
                 l = (0, s.Z)(t, r),
                 f = (0, u.Z)(t, r);
             return (0, n.jsxs)(o.v2r, {
-                navId: 'moderation-raid-context',
+                navId: "moderation-raid-context",
                 onClose: c.Zy,
-                'aria-label': O.intl.string(O.t.liqwPD),
+                "aria-label": O.intl.string(O.t.liqwPD),
                 onSelect: i,
                 children: [
                     (0, n.jsx)(o.kSQ, { children: l }),
                     (0, n.jsxs)(o.kSQ, {
-                        children: [f, a]
-                    })
-                ]
+                        children: [f, a],
+                    }),
+                ],
             });
         },
-        { object: f.qAy.CONTEXT_MENU }
+        { object: f.qAy.CONTEXT_MENU },
     ),
-    [l.Z.CONTEXT_MENU, l.Z.GUILD_MODERATION_RAID_MENU]
+    [l.Z.CONTEXT_MENU, l.Z.GUILD_MODERATION_RAID_MENU],
 );

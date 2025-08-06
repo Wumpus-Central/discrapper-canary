@@ -1,1 +1,1 @@
-e.exports = n(680506)(n(325237), 'DataView');
+e.exports = n(680506)(n(325237), "DataView");

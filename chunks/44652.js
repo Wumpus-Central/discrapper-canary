@@ -12,16 +12,16 @@ function l(e) {
                 o.Z.acceptFriendRequest({
                     userId: t.id,
                     applicationId: e.id,
-                    location: 'Context Menu'
+                    location: "Context Menu",
                 });
             },
-            [t.id]
+            [t.id],
         );
     return (0, a.Z)({
         user: t,
         gameRelationships: n,
-        menuItemId: 'add-game-friend',
+        menuItemId: "add-game-friend",
         label: s.intl.string(s.t.X76oLC),
-        onClick: l
+        onClick: l,
     });
 }

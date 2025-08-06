@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,24 +33,24 @@ let h = {},
                 id: n,
                 isBlockedEdit: (0, a.Bz)(e),
                 messageData: e,
-                errorMessage: (0, d.uF)(e, t)
+                errorMessage: (0, d.uF)(e, t),
             };
-        ((h[n] = r), m++);
+        (h[n] = r), m++;
     },
     y = (e) => h[e],
     O = (e) => {
-        (null != h[e] && delete h[e], m++);
+        null != h[e] && delete h[e], m++;
     };
 function v(e) {
     return 0 !== Object.keys(h).length && ((h = {}), m++, !0);
 }
 function I(e) {
     let { messageData: t, errorResponseBody: n } = e;
-    return (b(t, n), !0);
+    return b(t, n), !0;
 }
 function T(e) {
     let { messageId: t } = e;
-    return (O(t), !0);
+    return O(t), !0;
 }
 function S(e) {
     let { response: t } = e;
@@ -65,14 +65,14 @@ function A(e) {
         (g[t] = {
             guildId: t,
             decisionId: n,
-            suspiciousMentionActivityUntil: r
+            suspiciousMentionActivityUntil: r,
         }),
         !0
     );
 }
 function N(e) {
     let { guildId: t } = e;
-    return (delete g[t], !0);
+    return delete g[t], !0;
 }
 function C(e) {
     let { guildId: t, message: n } = e;
@@ -104,13 +104,13 @@ function R(e) {
 }
 class P extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(c.Z), null != e && ((h = e.automodFailedMessages), (g = e.mentionRaidDetectionByGuild)));
+        this.waitFor(c.Z), null != e && ((h = e.automodFailedMessages), (g = e.mentionRaidDetectionByGuild));
     }
     getState() {
         return {
             automodFailedMessages: h,
             mentionRaidDetectionByGuild: g,
-            lastIncidentAlertMessage: E
+            lastIncidentAlertMessage: E,
         };
     }
     getMessage(e) {
@@ -129,7 +129,7 @@ class P extends (r = i.ZP.PersistedStore) {
         return null != (t = E[e]) ? t : null;
     }
 }
-(p(P, 'displayName', 'GuildAutomodMessageStore'), p(P, 'persistKey', 'GuildAutomodMessages'));
+p(P, "displayName", "GuildAutomodMessageStore"), p(P, "persistKey", "GuildAutomodMessages");
 let w = new P(o.Z, {
     CONNECTION_OPEN: v,
     LOAD_MESSAGES_SUCCESS: R,
@@ -140,5 +140,5 @@ let w = new P(o.Z, {
     REMOVE_AUTOMOD_MESSAGE_NOTICE: T,
     MESSAGE_END_EDIT: S,
     AUTO_MODERATION_MENTION_RAID_DETECTION: A,
-    AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: N
+    AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: N,
 });

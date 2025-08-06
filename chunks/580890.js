@@ -5,7 +5,7 @@ var a = {
     today: "'오늘' p",
     tomorrow: "'내일' p",
     nextWeek: "'다음' eeee p",
-    other: 'P'
+    other: "P",
 };
 let i = function (e, t, n, i) {
     return a[e];

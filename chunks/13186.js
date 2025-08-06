@@ -1,6 +1,6 @@
 n.d(t, {
     U: () => p,
-    Z: () => f
+    Z: () => f,
 });
 var r,
     i = n(255367),
@@ -12,58 +12,58 @@ var r,
     u = n(481060),
     d = n(213609),
     h = n(341402),
-    p = (((r = {}).TOP = 'top'), (r.BOTTOM = 'bottom'), r);
+    p = (((r = {}).TOP = "top"), (r.BOTTOM = "bottom"), r);
 let f = l.forwardRef(function (e, t) {
     let { body: n, header: r, artClassName: l, buttonText: o, onClose: p, art: f, align: g } = e;
     return (
         (0, d.Z)({
             type: a.ImpressionTypes.POPOUT,
-            name: a.ImpressionNames.CHAT_WALLPAPER_DM_LIST_COACHMARK
+            name: a.ImpressionNames.CHAT_WALLPAPER_DM_LIST_COACHMARK,
         }),
-        (0, i.jsx)('div', {
+        (0, i.jsx)("div", {
             className: h.tooltip,
             ref: t,
-            children: (0, i.jsxs)('div', {
+            children: (0, i.jsxs)("div", {
                 className: h.content,
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: l,
-                        children: f
+                        children: f,
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: h.body,
                         children: [
                             (0, i.jsx)(u.X6q, {
                                 className: h.header,
-                                variant: 'heading-md/bold',
-                                color: 'always-white',
-                                children: r
+                                variant: "heading-md/bold",
+                                color: "always-white",
+                                children: r,
                             }),
                             null == n
                                 ? null
-                                : 'string' == typeof n
+                                : "string" == typeof n
                                   ? (0, i.jsx)(u.Text, {
-                                        variant: 'text-sm/normal',
-                                        color: 'always-white',
-                                        children: n
+                                        variant: "text-sm/normal",
+                                        color: "always-white",
+                                        children: n,
                                     })
-                                  : n
-                        ]
+                                  : n,
+                        ],
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: h.buttonContainer,
                         children: (0, i.jsx)(c.z, {
-                            variant: 'primary',
+                            variant: "primary",
                             text: o,
                             fullWidth: !0,
                             onClick: (e) => {
                                 null == p || p(e);
-                            }
-                        })
+                            },
+                        }),
                     }),
-                    (0, i.jsx)('div', { className: s()(h.pointer, { [h.pointerBottom]: 'bottom' === g }) })
-                ]
-            })
+                    (0, i.jsx)("div", { className: s()(h.pointer, { [h.pointerBottom]: "bottom" === g }) }),
+                ],
+            }),
         })
     );
 });

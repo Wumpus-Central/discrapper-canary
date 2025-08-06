@@ -14,17 +14,17 @@ let c = (t) => {
         onClose: c,
         actions: [
             {
-                text: l.intl.string(l.t['ETE/oK']),
+                text: l.intl.string(l.t["ETE/oK"]),
                 onClick: c,
-                variant: 'secondary'
+                variant: "secondary",
             },
             {
                 text: l.intl.string(l.t.saZaRU),
                 onClick: () => {
-                    ((0, e.NZ)(i), s.default.disconnect(), c());
+                    (0, e.NZ)(i), s.default.disconnect(), c();
                 },
-                variant: 'critical-primary'
-            }
-        ]
+                variant: "critical-primary",
+            },
+        ],
     });
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(539854), n(388685));
+n.d(t, { Z: () => E }), n(539854), n(388685);
 var r = n(255367),
     o = n(793030),
     i = n(442837),
@@ -18,12 +18,12 @@ var r = n(255367),
     b = n(388032),
     j = n(106180);
 function h() {
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: j.staffContainer,
         children: (0, r.jsx)(o.xv, {
-            variant: 'text-sm/medium',
-            children: b.intl.string(v.default.l9n4QU)
-        })
+            variant: "text-sm/medium",
+            children: b.intl.string(v.default.l9n4QU),
+        }),
     });
 }
 function E(e) {
@@ -34,14 +34,17 @@ function E(e) {
         }),
         E = (0, u.Z)(t),
         C = E.length > 0,
-        { shouldShow: O, notificationConfig: I } = (0, g._)(t, 'GuildPowerupNotificationContainer'),
+        { shouldShow: O, notificationConfig: I } = (0, g._)(t, "GuildPowerupNotificationContainer"),
         y = [];
     O && y.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
     let [P, w] = (0, s.ZT)(y, t),
         N = null != P && null != I,
-        Z = (0, c.W)(t, 'GuildPowerupNotificationContainer'),
+        Z = (0, c.W)(t, "GuildPowerupNotificationContainer"),
         S = [];
-    N || C || (S.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), Z && S.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
+    N ||
+        C ||
+        (S.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK),
+        Z && S.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
     let [T, A] = (0, s.US)(S),
         R = ((e) => {
             let n = [];
@@ -52,10 +55,10 @@ function E(e) {
                             m.Z,
                             {
                                 guildId: t,
-                                powerups: E
+                                powerups: E,
                             },
-                            'expiring-powerups'
-                        )
+                            "expiring-powerups",
+                        ),
                     ),
                 N &&
                     n.push(
@@ -65,14 +68,14 @@ function E(e) {
                                 notificationConfig: I,
                                 markAsDismissed: (e) => {
                                     w(e);
-                                }
+                                },
                             },
-                            'rollback-notification'
-                        )
+                            "rollback-notification",
+                        ),
                     ),
                 null != e &&
                     (e === l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK
-                        ? n.push((0, r.jsx)(p.Z, { markAsDismissed: A }, 'info-card'))
+                        ? n.push((0, r.jsx)(p.Z, { markAsDismissed: A }, "info-card"))
                         : e === l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL &&
                           n.push(
                               (0, r.jsx)(
@@ -80,26 +83,26 @@ function E(e) {
                                   {
                                       guildId: t,
                                       perk: x.rm.ENHANCED_ROLE_COLORS,
-                                      markAsDismissed: A
+                                      markAsDismissed: A,
                                   },
-                                  'enhanced-role-colors-upsell'
-                              )
+                                  "enhanced-role-colors-upsell",
+                              ),
                           )),
                 n
             );
         })(T);
     return 0 !== R.length || n
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: j.container,
               children: [
                   (0, r.jsx)(o.xv, {
-                      variant: 'eyebrow',
-                      color: 'text-secondary',
-                      children: b.intl.string(v.default['3FRira'])
+                      variant: "eyebrow",
+                      color: "text-secondary",
+                      children: b.intl.string(v.default["3FRira"]),
                   }),
                   n && (0, r.jsx)(h, {}),
-                  R.map((e) => e)
-              ]
+                  R.map((e) => e),
+              ],
           })
         : null;
 }

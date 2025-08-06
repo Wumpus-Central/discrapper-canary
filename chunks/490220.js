@@ -22,37 +22,37 @@ function m(e) {
             tryItOutAvatar: C,
             tryItOutBanner: O,
             tryItOutAvatarDecoration: v,
-            tryItOutProfileEffectId: S
+            tryItOutProfileEffectId: S,
         } = (0, s.cj)([c.Z], () =>
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         i.forEach(function (t) {
                             var i;
-                            ((i = n[t]),
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: i,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = i));
-                        }));
+                                    : (e[t] = i);
+                        });
                 }
                 return e;
-            })({}, c.Z.getAllPending(), c.Z.getAllTryItOut())
+            })({}, c.Z.getAllPending(), c.Z.getAllTryItOut()),
         ),
         T = (0, o.SD)({
             userId: m.id,
-            image: null != C ? C : f
+            image: null != C ? C : f,
         }),
         I = (0, l.Z)(v, !1);
     return (0, i.jsx)(d.Z, {
@@ -69,6 +69,6 @@ function m(e) {
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         disabledInputs: p,
-        hideViewFullProfileButton: !0
+        hideViewFullProfileButton: !0,
     });
 }

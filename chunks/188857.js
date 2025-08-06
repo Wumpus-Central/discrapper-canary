@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var i = n(73800),
     l = n(790333),
     r = n.n(l),
@@ -18,9 +18,9 @@ function h(e, t) {
                         : Object.values(t)
                               .filter((e) => e.type === o.BN.MEMBER)
                               .map((e) => e.id),
-                    (e) => n.includes(e)
+                    (e) => n.includes(e),
                 ),
-            [t, n]
+            [t, n],
         );
     return (
         i.useEffect(() => {

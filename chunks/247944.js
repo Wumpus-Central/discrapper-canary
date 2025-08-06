@@ -1,6 +1,6 @@
 n.d(t, {
     S: () => o.Z,
-    Z: () => c
+    Z: () => c,
 });
 var r = n(255367);
 n(73800);
@@ -13,5 +13,5 @@ let l = n(848304),
         (0, r.jsx)(i.i, {
             bannerIcon: l,
             bannerHeader: s.intl.string(s.t.EouHws),
-            bannerSubtext: s.intl.format(s.t.PThBen, { appealLink: a.Z })
+            bannerSubtext: s.intl.format(s.t.PThBen, { appealLink: a.Z }),
         });

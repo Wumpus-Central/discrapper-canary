@@ -2,7 +2,7 @@ t.a(e, async function (e, r) {
     try {
         t.d(n, {
             Kq: () => _,
-            ZP: () => a
+            ZP: () => a,
         });
         var o = t(255367),
             i = t(31675),
@@ -13,7 +13,23 @@ t.a(e, async function (e, r) {
         function _() {
             return (0, u.useContext)(d);
         }
-        let s = new Set(['bold', 'italic', 'underline', 'strikethrough', 'spoiler', 'emoji', 'timestamp', 'mention', 'link', 'code', 'code_block', 'heading', 'list', 'quote', 'small']);
+        let s = new Set([
+            "bold",
+            "italic",
+            "underline",
+            "strikethrough",
+            "spoiler",
+            "emoji",
+            "timestamp",
+            "mention",
+            "link",
+            "code",
+            "code_block",
+            "heading",
+            "list",
+            "quote",
+            "small",
+        ]);
         function l({ node: e, renderers: n, ...t }) {
             let r = n[e.type];
             if (
@@ -27,30 +43,30 @@ t.a(e, async function (e, r) {
                     ...t,
                     children: (0, o.jsx)(f, {
                         nodes: e.value,
-                        renderers: n
-                    })
+                        renderers: n,
+                    }),
                 });
             switch (e.type) {
-                case 'mention':
-                case 'timestamp':
-                case 'emoji':
-                case 'code_block':
+                case "mention":
+                case "timestamp":
+                case "emoji":
+                case "code_block":
                     return (0, o.jsx)(r, {
                         node: e,
                         ...e.value,
-                        ...t
+                        ...t,
                     });
-                case 'link': {
+                case "link": {
                     let i = e.value,
                         u = null;
-                    if ('normal' === i.type) {
+                    if ("normal" === i.type) {
                         let {
-                            value: { text: e, url: t }
+                            value: { text: e, url: t },
                         } = i;
                         u = e
                             ? (0, o.jsx)(f, {
                                   nodes: e,
-                                  renderers: n
+                                  renderers: n,
                               })
                             : t;
                     }
@@ -58,28 +74,28 @@ t.a(e, async function (e, r) {
                         node: e,
                         ...e.value,
                         ...t,
-                        children: u
+                        children: u,
                     });
                 }
-                case 'text':
-                case 'code':
+                case "text":
+                case "code":
                     return (0, o.jsx)(r, {
                         node: e,
                         ...t,
-                        children: e.value
+                        children: e.value,
                     });
-                case 'heading':
+                case "heading":
                     return (0, o.jsx)(r, {
                         node: e,
                         level: e.value.level,
                         ...t,
                         children: (0, o.jsx)(f, {
                             nodes: e.value.content,
-                            renderers: n
-                        })
+                            renderers: n,
+                        }),
                     });
-                case 'list': {
-                    let i = n.listItem ?? 'li';
+                case "list": {
+                    let i = n.listItem ?? "li";
                     return (0, o.jsx)(r, {
                         node: e,
                         ...e.value,
@@ -93,24 +109,24 @@ t.a(e, async function (e, r) {
                                     index: r,
                                     children: (0, o.jsx)(f, {
                                         nodes: t.content,
-                                        renderers: n
-                                    })
+                                        renderers: n,
+                                    }),
                                 },
-                                r
-                            )
-                        )
+                                r,
+                            ),
+                        ),
                     });
                 }
-                case 'empty':
+                case "empty":
                     return (0, o.jsx)(r, { ...t });
-                case 'small':
+                case "small":
                     return (0, o.jsx)(r, {
                         node: e,
                         ...t,
                         children: (0, o.jsx)(f, {
                             nodes: e.value.content,
-                            renderers: n
-                        })
+                            renderers: n,
+                        }),
                     });
                 default:
                     throw TypeError(`Unknown node type "${e.type}"`);
@@ -125,11 +141,11 @@ t.a(e, async function (e, r) {
                             node: t,
                             renderers: n,
                             siblings: e,
-                            index: r
+                            index: r,
                         },
-                        r
-                    )
-                )
+                        r,
+                    ),
+                ),
             });
         }
         function a({ content: e, renderers: n }) {
@@ -142,8 +158,8 @@ t.a(e, async function (e, r) {
                 value: r,
                 children: (0, o.jsx)(f, {
                     nodes: r,
-                    renderers: n
-                })
+                    renderers: n,
+                }),
             });
         }
         r();

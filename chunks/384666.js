@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685), n(35282));
+n.d(t, { Z: () => d }), n(388685), n(35282);
 var r = n(255367),
     o = n(73800),
     i = n(593473),
@@ -18,7 +18,7 @@ function d() {
                 let e = (0, i.parse)(t.search);
                 try {
                     var n;
-                    (await (0, c.g)(null != (n = e.token) ? n : ''), d(!0));
+                    await (0, c.g)(null != (n = e.token) ? n : ""), d(!0);
                 } catch (e) {
                     p(!0);
                 }
@@ -27,16 +27,16 @@ function d() {
         (e = n
             ? (0, r.jsx)(a.c7, {
                   message: u.intl.string(u.t.Tqu3OT),
-                  showsCloseWindowText: !0
+                  showsCloseWindowText: !0,
               })
             : h
               ? (0, r.jsx)(a.Lk, {
                     message: u.intl.string(u.t.J8LsCg),
-                    showsCloseWindowText: !0
+                    showsCloseWindowText: !0,
                 })
               : (0, r.jsx)(a.ZP, {
                     message: u.intl.string(u.t.BAcf6e),
-                    spinner: !0
+                    spinner: !0,
                 })),
         (0, r.jsx)(s.G, { children: e })
     );

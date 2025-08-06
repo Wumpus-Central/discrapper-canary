@@ -1,1 +1,1 @@
-e.exports = { orbPriceTag: 'orbPriceTag__5dbac' };
+e.exports = { orbPriceTag: "orbPriceTag__5dbac" };

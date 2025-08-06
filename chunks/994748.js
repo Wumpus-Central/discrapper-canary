@@ -1,66 +1,83 @@
 e.exports = function (e) {
     let t = {
-            className: 'number',
-            begin: /[$%]\d+/
+            className: "number",
+            begin: /[$%]\d+/,
         },
         n = {
-            className: 'number',
-            begin: /\b\d+/
+            className: "number",
+            begin: /\b\d+/,
         },
         r = {
-            className: 'number',
-            begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/
+            className: "number",
+            begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/,
         },
         i = {
-            className: 'number',
-            begin: /:\d{1,5}/
+            className: "number",
+            begin: /:\d{1,5}/,
         };
     return {
-        name: 'Apache config',
-        aliases: ['apacheconf'],
+        name: "Apache config",
+        aliases: ["apacheconf"],
         case_insensitive: !0,
         contains: [
             e.HASH_COMMENT_MODE,
             {
-                className: 'section',
+                className: "section",
                 begin: /<\/?/,
                 end: />/,
-                contains: [r, i, e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })]
+                contains: [r, i, e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })],
             },
             {
-                className: 'attribute',
+                className: "attribute",
                 begin: /\w+/,
                 relevance: 0,
                 keywords: {
-                    _: ['order', 'deny', 'allow', 'setenv', 'rewriterule', 'rewriteengine', 'rewritecond', 'documentroot', 'sethandler', 'errordocument', 'loadmodule', 'options', 'header', 'listen', 'serverroot', 'servername']
+                    _: [
+                        "order",
+                        "deny",
+                        "allow",
+                        "setenv",
+                        "rewriterule",
+                        "rewriteengine",
+                        "rewritecond",
+                        "documentroot",
+                        "sethandler",
+                        "errordocument",
+                        "loadmodule",
+                        "options",
+                        "header",
+                        "listen",
+                        "serverroot",
+                        "servername",
+                    ],
                 },
                 starts: {
                     end: /$/,
                     relevance: 0,
-                    keywords: { literal: 'on off all deny allow' },
+                    keywords: { literal: "on off all deny allow" },
                     contains: [
                         {
-                            scope: 'punctuation',
-                            match: /\\\n/
+                            scope: "punctuation",
+                            match: /\\\n/,
                         },
                         {
-                            className: 'meta',
+                            className: "meta",
                             begin: /\s\[/,
-                            end: /\]$/
+                            end: /\]$/,
                         },
                         {
-                            className: 'variable',
+                            className: "variable",
                             begin: /[\$%]\{/,
                             end: /\}/,
-                            contains: ['self', t]
+                            contains: ["self", t],
                         },
                         r,
                         n,
-                        e.QUOTE_STRING_MODE
-                    ]
-                }
-            }
+                        e.QUOTE_STRING_MODE,
+                    ],
+                },
+            },
         ],
-        illegal: /\S/
+        illegal: /\S/,
     };
 };

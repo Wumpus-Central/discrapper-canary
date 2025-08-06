@@ -1,1 +1,1 @@
-e.exports = '#violation-overlay';
+e.exports = "#violation-overlay";

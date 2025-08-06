@@ -1,4 +1,4 @@
-(t.d(n, { default: () => j }), t(388685), t(953529));
+t.d(n, { default: () => j }), t(388685), t(953529);
 var i = t(255367),
     l = t(73800),
     r = t(442837),
@@ -30,7 +30,7 @@ function j(e) {
     if (!I) return null;
     let A = k === x.j8.PUBLIC ? p.intl.string(p.t.HhlaLC) : p.intl.string(p.t.GI3xXV),
         L = () => {
-            (null == N || N(), f(), (0, u.Ku)(!1));
+            null == N || N(), f(), (0, u.Ku)(!1);
         },
         X = async () => {
             await _(j, T, { onSuccess: L });
@@ -45,38 +45,38 @@ function j(e) {
                 k !== x.j8.PUBLIC
                     ? null
                     : (0, i.jsxs)(
-                          'div',
+                          "div",
                           {
                               className: C.privacyLevel,
                               children: [
                                   (0, i.jsx)(s.enf, {
-                                      size: 'xs',
-                                      color: 'currentColor',
-                                      className: C.publicIcon
+                                      size: "xs",
+                                      color: "currentColor",
+                                      className: C.publicIcon,
                                   }),
                                   (0, i.jsx)(s.Text, {
-                                      variant: 'text-md/normal',
-                                      children: e
-                                  })
-                              ]
+                                      variant: "text-md/normal",
+                                      children: e,
+                                  }),
+                              ],
                           },
-                          n
-                      )
+                          n,
+                      ),
         }),
         actions: [
             {
-                variant: 'secondary',
+                variant: "secondary",
                 text: p.intl.string(p.t.CZGqeX),
                 onClick: () => {
                     f();
-                }
+                },
             },
             {
-                variant: 'active',
+                variant: "active",
                 text: p.intl.string(p.t.cK1GGR),
                 onClick: X,
-                loading: P
-            }
+                loading: P,
+            },
         ],
         children: [
             (0, i.jsx)(g.Z, {
@@ -90,7 +90,7 @@ function j(e) {
                 speakers: [],
                 speakerCount: 0,
                 rsvped: !0,
-                guildEvent: j
+                guildEvent: j,
             }),
             S &&
                 (0, i.jsx)(s.XZJ, {
@@ -102,18 +102,18 @@ function j(e) {
                         return O(n.checked);
                     },
                     children: (0, i.jsx)(s.Text, {
-                        variant: 'text-sm/normal',
-                        children: p.intl.string(p.t.dGNtgI)
-                    })
+                        variant: "text-sm/normal",
+                        children: p.intl.string(p.t.dGNtgI),
+                    }),
                 }),
             null != G && null != G.getAnyErrorMessage()
                 ? (0, i.jsx)(s.Text, {
-                      color: 'text-danger',
-                      variant: 'text-sm/normal',
+                      color: "text-danger",
+                      variant: "text-sm/normal",
                       className: C.errorMessage,
-                      children: G.getAnyErrorMessage()
+                      children: G.getAnyErrorMessage(),
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

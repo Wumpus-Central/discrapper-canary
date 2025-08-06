@@ -1,4 +1,4 @@
-(n.d(t, { default: () => j }), n(415506));
+n.d(t, { default: () => j }), n(415506);
 var r = n(255367),
     o = n(73800),
     i = n(817080),
@@ -23,11 +23,17 @@ let j = (0, d.Z)(
         function (e) {
             let { soundGuild: t, sound: s, activeCallGuildId: d, onSelect: f } = e,
                 h = (function (e, t) {
-                    let { canManageGuildExpressions: i } = (0, a.cj)([p.Z], () => (null == t ? { canManageGuildExpressions: !1 } : p.Z.getGuildPermissionProps(t)), [t]),
+                    let { canManageGuildExpressions: i } = (0, a.cj)(
+                            [p.Z],
+                            () => (null == t ? { canManageGuildExpressions: !1 } : p.Z.getGuildPermissionProps(t)),
+                            [t],
+                        ),
                         u = o.useCallback(() => {
                             if ((null == t ? void 0 : t.id) == null) return null;
                             (0, c.ZDy)(async () => {
-                                let { default: o } = await Promise.all([n.e('56035'), n.e('34057')]).then(n.bind(n, 758961));
+                                let { default: o } = await Promise.all([n.e("56035"), n.e("34057")]).then(
+                                    n.bind(n, 758961),
+                                );
                                 return (n) => {
                                     var i, a;
                                     return (0, r.jsx)(
@@ -36,31 +42,31 @@ let j = (0, d.Z)(
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     r = Object.keys(n);
-                                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                                "function" == typeof Object.getOwnPropertySymbols &&
                                                     (r = r.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        })
+                                                        }),
                                                     )),
                                                     r.forEach(function (t) {
                                                         var r;
-                                                        ((r = n[t]),
+                                                        (r = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: r,
                                                                       enumerable: !0,
                                                                       configurable: !0,
-                                                                      writable: !0
+                                                                      writable: !0,
                                                                   })
-                                                                : (e[t] = r));
-                                                    }));
+                                                                : (e[t] = r);
+                                                    });
                                             }
                                             return e;
                                         })({}, n)),
                                         (a = a =
                                             {
                                                 existingSound: e,
-                                                guildId: t.id
+                                                guildId: t.id,
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
@@ -74,7 +80,7 @@ let j = (0, d.Z)(
                                               })(Object(a)).forEach(function (e) {
                                                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                               }),
-                                        i)
+                                        i),
                                     );
                                 };
                             });
@@ -83,11 +89,11 @@ let j = (0, d.Z)(
                         ? (0, r.jsx)(
                               c.sNh,
                               {
-                                  id: 'edit-soundboard-sound',
+                                  id: "edit-soundboard-sound",
                                   label: m.intl.string(m.t.ponZcH),
-                                  action: u
+                                  action: u,
                               },
-                              'edit-soundboard-sound'
+                              "edit-soundboard-sound",
                           )
                         : null;
                 })(s, t),
@@ -100,22 +106,22 @@ let j = (0, d.Z)(
                                     r = await n.blob(),
                                     o = (function (e) {
                                         switch (e.type) {
-                                            case 'audio/mpeg':
-                                            case 'audio/mpeg3':
-                                                return 'mp3';
-                                            case 'audio/ogg':
-                                                return 'ogg';
+                                            case "audio/mpeg":
+                                            case "audio/mpeg3":
+                                                return "mp3";
+                                            case "audio/ogg":
+                                                return "ogg";
                                             default:
-                                                throw Error('unable to determine file type');
+                                                throw Error("unable to determine file type");
                                         }
                                     })(r),
-                                    a = ''.concat(t, '.').concat(o);
+                                    a = "".concat(t, ".").concat(o);
                                 y.isPlatformEmbedded ? await w.ZP.saveFile(e, a) : (0, i.saveAs)(r, a);
                             } catch (e) {
                                 u.Z.show({
                                     title: m.intl.string(m.t.mK3tDA),
                                     body: m.intl.string(m.t.jLlfDA),
-                                    confirmText: m.intl.string(m.t.BddRzc)
+                                    confirmText: m.intl.string(m.t.BddRzc),
                                 });
                             }
                         }, [t]);
@@ -124,29 +130,29 @@ let j = (0, d.Z)(
                         : (0, r.jsx)(
                               c.sNh,
                               {
-                                  id: 'download-soundboard-sound',
-                                  label: m.intl.string(m.t['/fzLLC']),
-                                  action: n
+                                  id: "download-soundboard-sound",
+                                  label: m.intl.string(m.t["/fzLLC"]),
+                                  action: n,
                               },
-                              'download-soundboard-sound'
+                              "download-soundboard-sound",
                           );
                 })(s),
                 S = (0, g.Z)(s, d),
                 P = (0, b.Z)({
                     id: s.soundId,
-                    label: m.intl.string(m.t.HJikXl)
+                    label: m.intl.string(m.t.HJikXl),
                 });
             return (0, r.jsx)(c.v2r, {
-                navId: 'sound-button-context',
+                navId: "sound-button-context",
                 onClose: l.Zy,
-                'aria-label': m.intl.string(m.t.liqwPD),
+                "aria-label": m.intl.string(m.t.liqwPD),
                 onSelect: f,
                 children: (0, r.jsxs)(c.kSQ, {
-                    children: [h, S, j, P]
-                })
+                    children: [h, S, j, P],
+                }),
             });
         },
-        { object: h.qAy.CONTEXT_MENU }
+        { object: h.qAy.CONTEXT_MENU },
     ),
-    [f.Z.CONTEXT_MENU, f.Z.SOUNDBOARD_BUTTON]
+    [f.Z.CONTEXT_MENU, f.Z.SOUNDBOARD_BUTTON],
 );

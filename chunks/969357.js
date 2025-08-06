@@ -1,16 +1,19 @@
 n.d(t, { p: () => u });
 var r = n(573654);
 function i(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
 function o(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
-        ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
+        (r.enumerable = r.enumerable || !1),
+            (r.configurable = !0),
+            "value" in r && (r.writable = !0),
+            Object.defineProperty(e, r.key, r);
     }
 }
 function a(e, t, n) {
-    return (t && o(e.prototype, t), n && o(e, n), e);
+    return t && o(e.prototype, t), n && o(e, n), e;
 }
 function s(e, t, n) {
     return (
@@ -19,7 +22,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,153 +32,162 @@ var l = !1,
     c = !1,
     u = (function () {
         function e(t) {
-            (i(this, e), s(this, 'internalMonitor', void 0), s(this, 'sourceId', null), (this.internalMonitor = t.getMonitor()));
+            i(this, e),
+                s(this, "internalMonitor", void 0),
+                s(this, "sourceId", null),
+                (this.internalMonitor = t.getMonitor());
         }
         return (
             a(e, [
                 {
-                    key: 'receiveHandlerId',
+                    key: "receiveHandlerId",
                     value: function (e) {
                         this.sourceId = e;
-                    }
+                    },
                 },
                 {
-                    key: 'getHandlerId',
+                    key: "getHandlerId",
                     value: function () {
                         return this.sourceId;
-                    }
+                    },
                 },
                 {
-                    key: 'canDrag',
+                    key: "canDrag",
                     value: function () {
-                        (0, r.k)(!l, 'You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor');
+                        (0, r.k)(
+                            !l,
+                            "You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
+                        );
                         try {
-                            return ((l = !0), this.internalMonitor.canDragSource(this.sourceId));
+                            return (l = !0), this.internalMonitor.canDragSource(this.sourceId);
                         } finally {
                             l = !1;
                         }
-                    }
+                    },
                 },
                 {
-                    key: 'isDragging',
+                    key: "isDragging",
                     value: function () {
                         if (!this.sourceId) return !1;
-                        (0, r.k)(!c, 'You may not call monitor.isDragging() inside your isDragging() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor');
+                        (0, r.k)(
+                            !c,
+                            "You may not call monitor.isDragging() inside your isDragging() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
+                        );
                         try {
-                            return ((c = !0), this.internalMonitor.isDraggingSource(this.sourceId));
+                            return (c = !0), this.internalMonitor.isDraggingSource(this.sourceId);
                         } finally {
                             c = !1;
                         }
-                    }
+                    },
                 },
                 {
-                    key: 'subscribeToStateChange',
+                    key: "subscribeToStateChange",
                     value: function (e, t) {
                         return this.internalMonitor.subscribeToStateChange(e, t);
-                    }
+                    },
                 },
                 {
-                    key: 'isDraggingSource',
+                    key: "isDraggingSource",
                     value: function (e) {
                         return this.internalMonitor.isDraggingSource(e);
-                    }
+                    },
                 },
                 {
-                    key: 'isOverTarget',
+                    key: "isOverTarget",
                     value: function (e, t) {
                         return this.internalMonitor.isOverTarget(e, t);
-                    }
+                    },
                 },
                 {
-                    key: 'getTargetIds',
+                    key: "getTargetIds",
                     value: function () {
                         return this.internalMonitor.getTargetIds();
-                    }
+                    },
                 },
                 {
-                    key: 'isSourcePublic',
+                    key: "isSourcePublic",
                     value: function () {
                         return this.internalMonitor.isSourcePublic();
-                    }
+                    },
                 },
                 {
-                    key: 'getSourceId',
+                    key: "getSourceId",
                     value: function () {
                         return this.internalMonitor.getSourceId();
-                    }
+                    },
                 },
                 {
-                    key: 'subscribeToOffsetChange',
+                    key: "subscribeToOffsetChange",
                     value: function (e) {
                         return this.internalMonitor.subscribeToOffsetChange(e);
-                    }
+                    },
                 },
                 {
-                    key: 'canDragSource',
+                    key: "canDragSource",
                     value: function (e) {
                         return this.internalMonitor.canDragSource(e);
-                    }
+                    },
                 },
                 {
-                    key: 'canDropOnTarget',
+                    key: "canDropOnTarget",
                     value: function (e) {
                         return this.internalMonitor.canDropOnTarget(e);
-                    }
+                    },
                 },
                 {
-                    key: 'getItemType',
+                    key: "getItemType",
                     value: function () {
                         return this.internalMonitor.getItemType();
-                    }
+                    },
                 },
                 {
-                    key: 'getItem',
+                    key: "getItem",
                     value: function () {
                         return this.internalMonitor.getItem();
-                    }
+                    },
                 },
                 {
-                    key: 'getDropResult',
+                    key: "getDropResult",
                     value: function () {
                         return this.internalMonitor.getDropResult();
-                    }
+                    },
                 },
                 {
-                    key: 'didDrop',
+                    key: "didDrop",
                     value: function () {
                         return this.internalMonitor.didDrop();
-                    }
+                    },
                 },
                 {
-                    key: 'getInitialClientOffset',
+                    key: "getInitialClientOffset",
                     value: function () {
                         return this.internalMonitor.getInitialClientOffset();
-                    }
+                    },
                 },
                 {
-                    key: 'getInitialSourceClientOffset',
+                    key: "getInitialSourceClientOffset",
                     value: function () {
                         return this.internalMonitor.getInitialSourceClientOffset();
-                    }
+                    },
                 },
                 {
-                    key: 'getSourceClientOffset',
+                    key: "getSourceClientOffset",
                     value: function () {
                         return this.internalMonitor.getSourceClientOffset();
-                    }
+                    },
                 },
                 {
-                    key: 'getClientOffset',
+                    key: "getClientOffset",
                     value: function () {
                         return this.internalMonitor.getClientOffset();
-                    }
+                    },
                 },
                 {
-                    key: 'getDifferenceFromInitialOffset',
+                    key: "getDifferenceFromInitialOffset",
                     value: function () {
                         return this.internalMonitor.getDifferenceFromInitialOffset();
-                    }
-                }
+                    },
+                },
             ]),
             e
         );

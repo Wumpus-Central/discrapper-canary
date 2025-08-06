@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => d,
     cs: () => f,
-    pe: () => u
+    pe: () => u,
 }),
     n(997841),
-    n(539854));
+    n(539854);
 var r = n(512722),
     i = n.n(r),
     o = n(869765),
@@ -20,20 +20,34 @@ function u(e) {
         avatar: r,
         discriminator: i,
         bot: o,
-        global_name: a
+        global_name: a,
     };
 }
 function d(e) {
-    let { channelId: t, content: n, tts: r = !1, type: d = c.uaV.DEFAULT, messageReference: f, allowedMentions: _, author: p, flags: h, nonce: m, poll: g, changelogId: E, giftingPrompt: b, state: y } = e,
+    let {
+            channelId: t,
+            content: n,
+            tts: r = !1,
+            type: d = c.uaV.DEFAULT,
+            messageReference: f,
+            allowedMentions: _,
+            author: p,
+            flags: h,
+            nonce: m,
+            poll: g,
+            changelogId: E,
+            giftingPrompt: b,
+            state: y,
+        } = e,
         O = [];
-    if (d === c.uaV.REPLY && (i()(null != f, 'Replies must have a message reference'), null == _ || _.replied_user)) {
+    if (d === c.uaV.REPLY && (i()(null != f, "Replies must have a message reference"), null == _ || _.replied_user)) {
         let e = o.Z.getMessageByReference(f);
         (null == e ? void 0 : e.state) === o.Y.LOADED && O.push(u(e.message.author));
     }
     return (
         null == p && (p = s.default.getCurrentUser()),
         p instanceof a.Z && (p = u(p)),
-        i()(null != p, 'createMessage: author cannot be undefined'),
+        i()(null != p, "createMessage: author cannot be undefined"),
         {
             id: null != m ? m : (0, l.r)(),
             type: d,
@@ -56,7 +70,7 @@ function d(e) {
             nonce: m,
             poll: g,
             changelog_id: E,
-            gifting_prompt: b
+            gifting_prompt: b,
         }
     );
 }
@@ -70,10 +84,10 @@ function f(e) {
         channel_id: n,
         author: {
             id: c.LAt,
-            username: 'Clyde',
+            username: "Clyde",
             discriminator: c.fo$,
-            avatar: 'clyde',
-            bot: !0
+            avatar: "clyde",
+            bot: !0,
         },
         attachments: [],
         embeds: null != i ? i : [],
@@ -85,6 +99,6 @@ function f(e) {
         timestamp: new Date().toISOString(),
         state: c.yb.SENT,
         tts: !1,
-        loggingName: o
+        loggingName: o,
     };
 }

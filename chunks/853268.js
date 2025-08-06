@@ -20,8 +20,8 @@ function d(e) {
             className: c.checkbox,
             children: (0, r.jsx)(a.i_, {
                 className: l()(p, { [c.subText]: !d }),
-                children: i
-            })
-        })
+                children: i,
+            }),
+        }),
     });
 }

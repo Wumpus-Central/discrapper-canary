@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { Z: () => b }), n(415506));
+n.d(t, { Z: () => b }), n(415506);
 var o = n(594174),
     a = n(195270);
 function s(e, t, n) {
@@ -9,7 +9,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -35,11 +35,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,7 +61,8 @@ function d(e, t) {
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -71,15 +72,15 @@ function f(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let _ = () => {
-    throw Error('updateModal has not been implemented.');
+    throw Error("updateModal has not been implemented.");
 };
 {
     let e = n(169480);
-    ((r = e.showModal), (_ = e.updateModalProps), (i = n(952265).Mr));
+    (r = e.showModal), (_ = e.updateModalProps), (i = n(952265).Mr);
 }
 let p = 60008;
 function h() {
@@ -100,10 +101,10 @@ function g(e) {
         null == s || s();
     }
     function f(e) {
-        (i(c), n(e));
+        i(c), n(e);
     }
     function p(e) {
-        (i(c), o(e));
+        i(c), o(e);
     }
     function h(e) {
         return (
@@ -114,7 +115,7 @@ function g(e) {
                 reject: p,
                 code: e,
                 mfaCodeHandler: m,
-                isModalOpen: !0
+                isModalOpen: !0,
             })
         );
     }
@@ -125,7 +126,7 @@ function g(e) {
 }
 function E(e) {
     var { promiseFn: t, resolve: n, reject: r, code: i, mfaCodeHandler: o = g, isModalOpen: a = !1 } = e,
-        s = d(e, ['promiseFn', 'resolve', 'reject', 'code', 'mfaCodeHandler', 'isModalOpen']);
+        s = d(e, ["promiseFn", "resolve", "reject", "code", "mfaCodeHandler", "isModalOpen"]);
     return t(null != i ? { code: i } : {}).then(n, (e) => {
         if (m(e, a))
             return o(
@@ -134,10 +135,10 @@ function E(e) {
                         promiseFn: t,
                         resolve: n,
                         reject: r,
-                        res: e
+                        res: e,
                     },
-                    s
-                )
+                    s,
+                ),
             );
         r(e);
     });
@@ -145,17 +146,17 @@ function E(e) {
 function b(e, t) {
     let n = null != t ? t : {},
         { checkEnabled: r = h() } = n,
-        i = d(n, ['checkEnabled']);
+        i = d(n, ["checkEnabled"]);
     return new Promise((t, n) => {
         ((0, a.d)(r) ? g : E)(
             l(
                 {
                     promiseFn: e,
                     resolve: t,
-                    reject: n
+                    reject: n,
                 },
-                i
-            )
+                i,
+            ),
         );
     });
 }

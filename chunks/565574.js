@@ -7,22 +7,22 @@ var r = n(255367),
     a = n(388032),
     c = n(79309);
 function d(e) {
-    let { align: t = 'left', useSimplifiedMenu: n = !1 } = e,
+    let { align: t = "left", useSimplifiedMenu: n = !1 } = e,
         d = i.useRef(null);
     return (0, r.jsx)(s.yRy, {
         targetElementRef: d,
-        position: 'top',
+        position: "top",
         align: t,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return n
                 ? (0, r.jsx)(o.l9, {
                       onClose: t,
-                      onSelect: void 0
+                      onSelect: void 0,
                   })
                 : (0, r.jsx)(o.ZP, {
                       onClose: t,
-                      onSelect: void 0
+                      onSelect: void 0,
                   });
         },
         children: (e) => {
@@ -33,43 +33,43 @@ function d(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })(
                     {
                         size: l.zx.Sizes.ICON,
-                        'aria-label': a.intl.string(a.t['+1H47u']),
+                        "aria-label": a.intl.string(a.t["+1H47u"]),
                         color: l.zx.Colors.PRIMARY,
                         className: c.streamOptionsButton,
-                        buttonRef: d
+                        buttonRef: d,
                     },
-                    e
+                    e,
                 )),
                 (n = n =
                     {
                         children: (0, r.jsx)(s.ewm, {
                             className: c.settingsIcon,
-                            size: 'refresh_sm',
-                            color: 'currentColor'
-                        })
+                            size: "refresh_sm",
+                            color: "currentColor",
+                        }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -83,8 +83,8 @@ function d(e) {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
+                t),
             );
-        }
+        },
     });
 }

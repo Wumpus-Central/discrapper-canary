@@ -8,7 +8,7 @@ function s(e) {
         try {
             let t = r.Z.colors.BACKGROUND_BASE_LOWEST.resolve({
                 theme: e,
-                saturation: i.Z.saturation
+                saturation: i.Z.saturation,
             }).hex();
             o.Z.setApplicationBackgroundColor(t);
         } catch (e) {}

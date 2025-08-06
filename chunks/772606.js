@@ -16,10 +16,10 @@ function d(e) {
     return (0, r.jsx)(s.P3F, {
         onClick: o,
         className: a()(u.clickable, t),
-        'aria-label': c.intl.string(c.t.ybUZqq),
+        "aria-label": c.intl.string(c.t.ybUZqq),
         children: (0, r.jsx)(s.j9r, {
-            size: 'sm',
-            color: s.TVs.colors.INTERACTIVE_ACTIVE
-        })
+            size: "sm",
+            color: s.TVs.colors.INTERACTIVE_ACTIVE,
+        }),
     });
 }

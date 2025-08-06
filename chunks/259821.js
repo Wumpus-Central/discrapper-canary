@@ -29,5 +29,5 @@ t.exports = {
     StyleSheetList: 0,
     TextTrackCueList: 0,
     TextTrackList: 0,
-    TouchList: 0
+    TouchList: 0,
 };

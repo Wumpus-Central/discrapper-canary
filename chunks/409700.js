@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Dp: () => N,
     Hh: () => C,
     ZP: () => R,
-    hq: () => S
+    hq: () => S,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -30,7 +30,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -40,15 +40,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -56,11 +56,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -82,90 +82,90 @@ function S() {
         onClick: (e) => e.stopPropagation(),
         children: [
             (0, r.jsx)(c.Text, {
-                variant: 'text-sm/normal',
-                children: E.intl.string(E.t['2JbvKy'])
+                variant: "text-sm/normal",
+                children: E.intl.string(E.t["2JbvKy"]),
             }),
             (0, r.jsx)(c.iRW, {
                 onValueChange: t,
                 className: b.slider,
                 initialValue: (0, f.P)(e),
-                maxValue: 100
-            })
-        ]
+                maxValue: 100,
+            }),
+        ],
     });
 }
 function A(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, p.V2)({ location: 'SoundmojiBanner' }),
+        i = (0, p.V2)({ location: "SoundmojiBanner" }),
         o = (0, l.e7)([d.default], () => _.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
         a = (0, l.e7)([u.Z], () => u.Z.getGuildId());
     return n || o || t.guildId === g.X8 || t.guildId === a || !i
         ? (0, r.jsx)(c.IGR, {
-              text: 'BETA',
+              text: "BETA",
               color: s.Z.BG_BRAND,
-              className: b.betaBadge
+              className: b.betaBadge,
           })
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: b.infoNitroContainer,
               children: [
-                  (0, r.jsx)('div', { className: b.infoNitroBackground }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsx)("div", { className: b.infoNitroBackground }),
+                  (0, r.jsxs)("div", {
                       className: b.infoNitroTextContainer,
                       children: [
                           (0, r.jsx)(c.SrA, {
-                              size: 'xxs',
-                              color: 'white',
-                              className: b.infoNitroIcon
+                              size: "xxs",
+                              color: "white",
+                              className: b.infoNitroIcon,
                           }),
                           (0, r.jsx)(c.Text, {
-                              variant: 'text-xs/medium',
-                              color: 'always-white',
+                              variant: "text-xs/medium",
+                              color: "always-white",
                               className: b.infoNitroText,
-                              children: E.intl.string(E.t['BMw+7O'])
+                              children: E.intl.string(E.t["BMw+7O"]),
                           }),
                           (0, r.jsx)(c.IGR, {
-                              text: 'BETA',
+                              text: "BETA",
                               color: s.Z.BG_BRAND,
-                              className: b.infoNitroBadge
-                          })
-                      ]
-                  })
-              ]
+                              className: b.infoNitroBadge,
+                          }),
+                      ],
+                  }),
+              ],
           });
 }
 function N(e) {
     let { sound: t } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(b.infoContainer, b.infoTooltip),
         children: [
             (0, r.jsx)(A, { sound: t }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: b.infoSoundContainer,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: b.infoSoundInnerContainer,
                         children: [
                             (0, r.jsx)(c.KY1, {
-                                size: 'sm',
-                                className: b.infoSoundIcon
+                                size: "sm",
+                                className: b.infoSoundIcon,
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: 'text-md/semibold',
-                                color: 'header-primary',
-                                children: t.name
-                            })
-                        ]
+                                variant: "text-md/semibold",
+                                color: "header-primary",
+                                children: t.name,
+                            }),
+                        ],
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: b.infoSoundInnerContainer,
                         children: (0, r.jsx)(c.Text, {
-                            variant: 'text-sm/normal',
-                            children: E.intl.string(E.t.D6eYmZ)
-                        })
-                    })
-                ]
-            })
-        ]
+                            variant: "text-sm/normal",
+                            children: E.intl.string(E.t.D6eYmZ),
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function C(e) {
@@ -174,9 +174,9 @@ function C(e) {
         [f, _] = i.useState(String(Date.now())),
         p = i.useCallback(
             (e) => {
-                (e.stopPropagation(), d(!u));
+                e.stopPropagation(), d(!u);
             },
-            [u]
+            [u],
         ),
         h = i.useCallback(() => {
             _(String(Date.now()));
@@ -184,7 +184,7 @@ function C(e) {
         m = i.useRef(null);
     i.useEffect(() => {
         var e, t;
-        (u ? null == (e = m.current) || e.focus() : null == (t = m.current) || t.blur(), null == s || s(u));
+        u ? null == (e = m.current) || e.focus() : null == (t = m.current) || t.blur(), null == s || s(u);
     }, [u, s]);
     let g = !u;
     return (0, r.jsx)(c.yRy, {
@@ -193,14 +193,14 @@ function C(e) {
             (0, r.jsx)(c.P3F, {
                 onClick: (e) => e.stopPropagation(),
                 onMouseOver: (e) => e.stopPropagation(),
-                children: t(T(v({}, e), { refreshPosition: h }))
+                children: t(T(v({}, e), { refreshPosition: h })),
             }),
-        align: 'center',
+        align: "center",
         nudgeAlignIntoViewport: !0,
         position: n,
         shouldShow: u,
         onRequestClose: () => d(!1),
-        animationPosition: 'bottom',
+        animationPosition: "bottom",
         positionKey: f,
         closeOnScroll: !0,
         children: (e) =>
@@ -212,19 +212,19 @@ function C(e) {
                     g && (null == s || s(!0));
                 },
                 text: o,
-                position: 'top',
+                position: "top",
                 shouldShow: g,
                 children: (t) =>
                     (0, r.jsx)(
                         c.P3F,
                         T(v({ innerRef: m }, t, e), {
-                            'aria-label': o,
+                            "aria-label": o,
                             onClick: p,
                             className: l,
-                            children: a
-                        })
-                    )
-            })
+                            children: a,
+                        }),
+                    ),
+            }),
     });
 }
 function R(e) {
@@ -234,13 +234,13 @@ function R(e) {
             (0, r.jsx)(C, {
                 setTooltipShowing: i,
                 renderPopout: () => (0, r.jsx)(S, {}),
-                tooltipText: E.intl.string(E.t['19lt29']),
-                position: 'top',
+                tooltipText: E.intl.string(E.t["19lt29"]),
+                position: "top",
                 children: (0, r.jsx)(c.gj8, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: y.secondaryIcon
-                })
+                    size: "md",
+                    color: "currentColor",
+                    className: y.secondaryIcon,
+                }),
             }),
             (0, r.jsx)(C, {
                 setTooltipShowing: i,
@@ -250,19 +250,19 @@ function R(e) {
                         v(
                             {
                                 sound: t,
-                                channel: n
+                                channel: n,
                             },
-                            e
-                        )
+                            e,
+                        ),
                     ),
                 tooltipText: E.intl.string(E.t.KVbJU1),
-                position: 'right',
+                position: "right",
                 children: (0, r.jsx)(c.d3s, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: y.secondaryIcon
-                })
-            })
-        ]
+                    size: "md",
+                    color: "currentColor",
+                    className: y.secondaryIcon,
+                }),
+            }),
+        ],
     });
 }

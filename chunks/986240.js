@@ -23,24 +23,24 @@ function h(e, t) {
                     (0, o.showToast)((0, o.createToast)(p.intl.string(p.t.xsfC2d), o.ToastType.FAILURE));
                 }
             },
-            [t.id, e.id]
+            [t.id, e.id],
         ),
         E = i.useCallback(() => {
-            (f.default.track(_.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: l.MG.MessageContextMenu }),
+            f.default.track(_.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: l.MG.MessageContextMenu }),
                 (0, c.s)({
                     channelId: t.id,
                     message: e,
                     onRedeem: g,
                     onClose: s.Qy,
-                    source: l.YD.MessageContextMenu
-                }));
+                    source: l.YD.MessageContextMenu,
+                });
         }, [t.id, e, g]);
     return n && !h && m
         ? (0, r.jsx)(o.sNh, {
-              id: 'add-confetti-potion',
+              id: "add-confetti-potion",
               label: p.intl.string(p.t.icaJW1),
               icon: o.l22,
-              action: E
+              action: E,
           })
         : null;
 }

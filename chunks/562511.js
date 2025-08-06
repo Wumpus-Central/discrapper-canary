@@ -1,6 +1,6 @@
 n.d(t, {
     A2: () => g,
-    S3: () => f
+    S3: () => f,
 });
 var r = n(73800),
     i = n(442837),
@@ -17,20 +17,21 @@ function f(e) {
     let t = (function (e) {
         let t = (0, s.FT)(l.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : p.lds);
         return (
-            (0, i.e7)(
-                [c.Z, u.default, a.ZP],
-                () => {
-                    var t, n;
-                    if (null === e) return !1;
-                    let r = c.Z.getGuild(e);
-                    if (void 0 === r || !(0, d.up)(r) || null == r.profile || null === r.profile.tag) return !1;
-                    let i = u.default.getCurrentUser();
-                    if (void 0 === i || ((null == (t = i.primaryGuild) ? void 0 : t.identityGuildId) === r.id && (null == (n = i.primaryGuild) ? void 0 : n.tag) === r.profile.tag)) return !1;
-                    let l = a.ZP.getMember(e, i.id);
-                    return null != l && !l.isPending;
-                },
-                [e]
-            ) && !t
+            (0, i.e7)([c.Z, u.default, a.ZP], () => {
+                var t, n;
+                if (null === e) return !1;
+                let r = c.Z.getGuild(e);
+                if (void 0 === r || !(0, d.up)(r) || null == r.profile || null === r.profile.tag) return !1;
+                let i = u.default.getCurrentUser();
+                if (
+                    void 0 === i ||
+                    ((null == (t = i.primaryGuild) ? void 0 : t.identityGuildId) === r.id &&
+                        (null == (n = i.primaryGuild) ? void 0 : n.tag) === r.profile.tag)
+                )
+                    return !1;
+                let l = a.ZP.getMember(e, i.id);
+                return null != l && !l.isPending;
+            }, [e]) && !t
         );
     })(e);
     return !(function (e) {
@@ -51,9 +52,9 @@ function f(e) {
                     null != e &&
                     null != d &&
                     o.Z.dispatch({
-                        type: 'GUILD_TAG_CHANGED_COACHMARK_SEEN',
+                        type: "GUILD_TAG_CHANGED_COACHMARK_SEEN",
                         guildId: e,
-                        lastSeenInfo: { tag: d }
+                        lastSeenInfo: { tag: d },
                     });
             }, [e, d, t, n]),
             null == d || ((null == a ? void 0 : a.identityGuildId) === e && (null == a ? void 0 : a.tag) === d))
@@ -64,9 +65,9 @@ function f(e) {
         return f && !g && t;
     })(e)
         ? t
-            ? 'available'
+            ? "available"
             : null
-        : 'changed';
+        : "changed";
 }
 function g(e) {
     return null !== f(e);

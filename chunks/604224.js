@@ -20,31 +20,31 @@ var r = n(442837),
 function j() {
     let { analyticsLocations: e } = (0, a.ZP)([s.Z.USER_SETTINGS_VOICE_AND_VIDEO]),
         t = (0, r.e7)([l.Z], () => l.Z.getSubsection()),
-        { showRefreshedSettings: n } = (0, d.F)({ location: 'UserSettingsVoiceAndVideo' });
+        { showRefreshedSettings: n } = (0, d.F)({ location: "UserSettingsVoiceAndVideo" });
     if (!n) return (0, i.jsx)(p.Z, {});
     let j = [
             {
                 title: _.intl.string(_.t.K3lovL),
                 component: h.Z,
-                setting: b.s6.VOICE_AND_VIDEO_VOICE_TAB
+                setting: b.s6.VOICE_AND_VIDEO_VOICE_TAB,
             },
             {
                 title: _.intl.string(_.t.FlNoSU),
                 component: m.Z,
                 setting: b.s6.VOICE_AND_VIDEO_VIDEO_TAB,
-                subsection: f.gP
+                subsection: f.gP,
             },
             {
                 title: _.intl.string(_.t.ABjMWF),
                 component: u.Z,
                 setting: b.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB,
-                subsection: f.GA
+                subsection: f.GA,
             },
             {
                 title: _.intl.string(_.t.OFpL3d),
                 component: g.Z,
-                setting: b.s6.VOICE_AND_VIDEO_DEBUG_TAB
-            }
+                setting: b.s6.VOICE_AND_VIDEO_DEBUG_TAB,
+            },
         ],
         E = j.findIndex((e) => null != e.subsection && e.subsection === t);
     return (0, i.jsx)(a.Gt, {
@@ -55,8 +55,8 @@ function j() {
                 parentSetting: b.s6.VOICE_AND_VIDEO,
                 settingsSection: x.oAB.VOICE,
                 tabs: j,
-                defaultTabIndex: E > -1 ? E : void 0
-            })
-        })
+                defaultTabIndex: E > -1 ? E : void 0,
+            }),
+        }),
     });
 }

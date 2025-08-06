@@ -13,9 +13,9 @@ function f(e) {
         n = (0, s.Sl)(d).hex;
     return (0, r.jsx)(a.qDn, {
         className: o()(c.questsIcon, t),
-        size: 'custom',
+        size: "custom",
         height: u,
         width: u,
-        color: n
+        color: n,
     });
 }

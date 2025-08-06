@@ -10,7 +10,7 @@ function a(e, t) {
         !i.ZP.isEmojiDisabled({
             emoji: n,
             channel: t,
-            intention: o.Hz.STATUS
+            intention: o.Hz.STATUS,
         })
     );
 }

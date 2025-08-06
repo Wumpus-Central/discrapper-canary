@@ -15,7 +15,15 @@ var r = n(120356),
     h = n(281817),
     f = n(893354);
 function b(e) {
-    let { transitionState: t, analyticsLocation: n, onClose: r, onAddPaymentSource: a, toastContent: u, initialStep: b = m.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: x = !1 } = e,
+    let {
+            transitionState: t,
+            analyticsLocation: n,
+            onClose: r,
+            onAddPaymentSource: a,
+            toastContent: u,
+            initialStep: b = m.h8.PAYMENT_TYPE,
+            overwriteSubscriptionPaymentSource: x = !1,
+        } = e,
         _ = (0, p.fL)(),
         j = (0, p.vP)({
             paymentModalArgs: _,
@@ -26,36 +34,36 @@ function b(e) {
                 r();
             },
             onComplete: (e, t) => {
-                (l()(null != t, 'paymentSource missing'), null == a || a(t), r());
+                l()(null != t, "paymentSource missing"), null == a || a(t), r();
             },
             onStepChange: () => {},
-            header: (0, i.jsxs)('div', {
+            header: (0, i.jsxs)("div", {
                 className: s()(h.modalTitle, f.flex, f.justifyBetween, f.alignCenter),
                 children: [
                     (0, i.jsx)(d.vwX, {
                         tag: d.RB0.H4,
-                        children: g.intl.string(g.t.eQ2bLi)
+                        children: g.intl.string(g.t.eQ2bLi),
                     }),
-                    (0, i.jsx)(c.o, {})
-                ]
+                    (0, i.jsx)(c.o, {}),
+                ],
             }),
             analyticsLocation: n,
             hideBreadcrumbs: !0,
             toastContent: u,
-            overwriteSubscriptionPaymentSource: x
+            overwriteSubscriptionPaymentSource: x,
         });
     return (0, i.jsx)(o.I, {
         transitionState: t,
         onClose: r,
-        size: 'sm',
-        'aria-label': g.intl.string(g.t.eQ2bLi),
-        children: (0, i.jsx)('form', {
+        size: "sm",
+        "aria-label": g.intl.string(g.t.eQ2bLi),
+        children: (0, i.jsx)("form", {
             className: h.form,
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: j
-        })
+            children: j,
+        }),
     });
 }
 function x(e) {
@@ -69,27 +77,27 @@ function x(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         i.forEach(function (t) {
                             var i;
-                            ((i = n[t]),
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: i,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = i));
-                        }));
+                                    : (e[t] = i);
+                        });
                 }
                 return e;
-            })({}, e)
-        )
+            })({}, e),
+        ),
     });
 }

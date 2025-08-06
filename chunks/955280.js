@@ -16,36 +16,36 @@ var n = a(255367),
 let f = () => [
         {
             value: m.ipw.LARGE,
-            name: y.intl.string(y.t.YcOxtr)
+            name: y.intl.string(y.t.YcOxtr),
         },
         {
             value: m.ipw.SMALL,
-            name: y.intl.string(y.t.BKIKq6)
-        }
+            name: y.intl.string(y.t.BKIKq6),
+        },
     ],
     b = () => [
         {
             value: m.wC$.ALWAYS,
-            name: y.intl.string(y.t.nBmDra)
+            name: y.intl.string(y.t.nBmDra),
         },
         {
             value: m.wC$.ONLY_WHILE_SPEAKING,
-            name: y.intl.string(y.t['2OvIZW'])
+            name: y.intl.string(y.t["2OvIZW"]),
         },
         {
             value: m.wC$.NEVER,
-            name: y.intl.string(y.t.ekjlPD)
-        }
+            name: y.intl.string(y.t.ekjlPD),
+        },
     ],
     O = () => [
         {
             value: m.OYC.ALWAYS,
-            name: y.intl.string(y.t.nBmDra)
+            name: y.intl.string(y.t.nBmDra),
         },
         {
             value: m.OYC.ONLY_WHILE_SPEAKING,
-            name: y.intl.string(y.t['2OvIZW'])
-        }
+            name: y.intl.string(y.t["2OvIZW"]),
+        },
     ];
 function j(e) {
     var t, a;
@@ -53,17 +53,17 @@ function j(e) {
         {
             avatarSizeMode: S,
             displayNameMode: h,
-            displayUserMode: k
+            displayUserMode: k,
         } = (0, r.cj)([d.default], () => ({
             avatarSizeMode: d.default.getAvatarSizeMode(),
             displayNameMode: d.default.getDisplayNameMode(),
-            displayUserMode: d.default.getDisplayUserMode()
+            displayUserMode: d.default.getDisplayUserMode(),
         })),
         x = l.useRef(w);
-    (l.useEffect(() => {
+    l.useEffect(() => {
         x.current = w;
     }),
-        l.useEffect(() => () => x.current(), []));
+        l.useEffect(() => () => x.current(), []);
     let P = (0, r.e7)([p.ZP, u.Z], () => {
             let e = p.ZP.getWidgetByType(m.Odu.VOICE_V3);
             if (null == e) return null;
@@ -72,12 +72,15 @@ function j(e) {
         }),
         M = null != (a = null == P || null == (t = P.meta) ? void 0 : t.voiceStatesMaxShown) ? a : g.At;
     function A(e) {
-        null != P && (e < 1 ? (0, s.zG)(P.id, { voiceStatesMaxShown: g.Og }) : (0, s.zG)(P.id, { voiceStatesMaxShown: Math.floor(e) }));
+        null != P &&
+            (e < 1
+                ? (0, s.zG)(P.id, { voiceStatesMaxShown: g.Og })
+                : (0, s.zG)(P.id, { voiceStatesMaxShown: Math.floor(e) }));
     }
     return (0, n.jsxs)(i.v2r, {
-        navId: 'overlay-voice-widget-context-menu',
+        navId: "overlay-voice-widget-context-menu",
         onClose: o.Zy,
-        'aria-label': y.intl.string(y.t.tPfVWl),
+        "aria-label": y.intl.string(y.t.tPfVWl),
         onSelect: j,
         children: [
             (0, n.jsx)(i.kSQ, {
@@ -88,13 +91,13 @@ function j(e) {
                         {
                             label: e.name,
                             checked: S === e.value,
-                            id: 'avatar-size-mode-'.concat(e.value),
-                            group: 'avatar-size-mode',
-                            action: () => c.Z.setAvatarSizeMode(e.value)
+                            id: "avatar-size-mode-".concat(e.value),
+                            group: "avatar-size-mode",
+                            action: () => c.Z.setAvatarSizeMode(e.value),
                         },
-                        e.value
-                    )
-                )
+                        e.value,
+                    ),
+                ),
             }),
             (0, n.jsx)(i.kSQ, {
                 label: y.intl.string(y.t.J0dpcH),
@@ -104,13 +107,13 @@ function j(e) {
                         {
                             label: e.name,
                             checked: h === e.value,
-                            id: 'display-name-mode-'.concat(e.value),
-                            group: 'display-name-mode',
-                            action: () => c.Z.setDisplayNameMode(e.value)
+                            id: "display-name-mode-".concat(e.value),
+                            group: "display-name-mode",
+                            action: () => c.Z.setDisplayNameMode(e.value),
                         },
-                        e.value
-                    )
-                )
+                        e.value,
+                    ),
+                ),
             }),
             (0, n.jsx)(i.kSQ, {
                 label: y.intl.string(y.t.swsWWF),
@@ -120,18 +123,18 @@ function j(e) {
                         {
                             label: e.name,
                             checked: k === e.value,
-                            id: 'display-user-mode-'.concat(e.value),
-                            group: 'display-user-mode',
-                            action: () => c.Z.setDisplayUserMode(e.value)
+                            id: "display-user-mode-".concat(e.value),
+                            group: "display-user-mode",
+                            action: () => c.Z.setDisplayUserMode(e.value),
                         },
-                        e.value
-                    )
-                )
+                        e.value,
+                    ),
+                ),
             }),
             (0, n.jsx)(i.kSQ, {
                 children: (0, n.jsx)(i.II_, {
-                    id: 'voice-widget-max-users-displayed',
-                    label: y.intl.string(y.t['X/Uyzc']),
+                    id: "voice-widget-max-users-displayed",
+                    label: y.intl.string(y.t["X/Uyzc"]),
                     control: (e, t) => {
                         var a, l;
                         return (0, n.jsx)(
@@ -140,24 +143,24 @@ function j(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var a = null != arguments[t] ? arguments[t] : {},
                                         n = Object.keys(a);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (n = n.concat(
                                             Object.getOwnPropertySymbols(a).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         n.forEach(function (t) {
                                             var n;
-                                            ((n = a[t]),
+                                            (n = a[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: n,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = n));
-                                        }));
+                                                    : (e[t] = n);
+                                        });
                                 }
                                 return e;
                             })({}, e)),
@@ -168,8 +171,8 @@ function j(e) {
                                     minValue: 0,
                                     maxValue: g.yC,
                                     onChange: A,
-                                    renderValue: (e) => (e < 1 ? y.intl.string(y.t.nrUzFB) : ''.concat(Math.floor(e))),
-                                    'aria-label': y.intl.string(y.t['X/Uyzc'])
+                                    renderValue: (e) => (e < 1 ? y.intl.string(y.t.nrUzFB) : "".concat(Math.floor(e))),
+                                    "aria-label": y.intl.string(y.t["X/Uyzc"]),
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
@@ -183,11 +186,11 @@ function j(e) {
                                   })(Object(l)).forEach(function (e) {
                                       Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
-                            a)
+                            a),
                         );
-                    }
-                })
-            })
-        ]
+                    },
+                }),
+            }),
+        ],
     });
 }

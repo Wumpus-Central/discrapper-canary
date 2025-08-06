@@ -45,9 +45,10 @@ function h(e, t) {
                 ) {
                     let e = f.application.id,
                         t = f.name;
-                    [l.b.TWITCH, l.b.YOUTUBE].includes(f.type) && (t = ''.concat(o.Z.get(f.type).name, ' - ').concat(t));
+                    [l.b.TWITCH, l.b.YOUTUBE].includes(f.type) &&
+                        (t = "".concat(o.Z.get(f.type).name, " - ").concat(t));
                     let n = () => {
-                        (u.Z.setSection(g.pNK.INTEGRATIONS), s.Z.setSection(g.b4C.APPLICATION, e));
+                        u.Z.setSection(g.pNK.INTEGRATIONS), s.Z.setSection(g.b4C.APPLICATION, e);
                     };
                     return p.intl.format(p.t.FuXsWl, {
                         name: t,
@@ -56,14 +57,20 @@ function h(e, t) {
                                 c.Z,
                                 {
                                     onClick: n,
-                                    children: e
+                                    children: e,
                                 },
-                                t
-                            )
+                                t,
+                            ),
                     });
                 }
-                return j ? ((0, d.Tq)(e, 'useManagedRoleWarningText') ? p.intl.string(p.t.NqRten) : p.intl.string(p.t.oF6FYW)) : v ? p.intl.string(p.t.ZQ37tL) : p.intl.string(p.t.k5d7DA);
+                return j
+                    ? (0, d.Tq)(e, "useManagedRoleWarningText")
+                        ? p.intl.string(p.t.NqRten)
+                        : p.intl.string(p.t.oF6FYW)
+                    : v
+                      ? p.intl.string(p.t.ZQ37tL)
+                      : p.intl.string(p.t.k5d7DA);
             })(e, t, n),
-        [e, t, n]
+        [e, t, n],
     );
 }

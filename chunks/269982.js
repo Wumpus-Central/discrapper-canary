@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,7 +43,7 @@ function p(e) {
         h = i.useCallback(() => {
             null != t &&
                 (0, a.ZDy)(async () => {
-                    let { default: e } = await n.e('43360').then(n.bind(n, 73415));
+                    let { default: e } = await n.e("43360").then(n.bind(n, 73415));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -53,36 +53,36 @@ function p(e) {
                                     analyticsSource: p,
                                     analyticsLocation: {
                                         section: c.jXE.USER_PROFILE,
-                                        object: c.qAy.BUTTON_CTA
+                                        object: c.qAy.BUTTON_CTA,
                                     },
-                                    onSecondaryClick: f
+                                    onSecondaryClick: f,
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         );
                 });
         }, [t, p, f]),
         m = i.useMemo(() => {
             switch (null == t ? void 0 : t.type) {
                 case o.Z.AVATAR_DECORATION:
-                    return u.intl.format(u.t['aFR/EB'], { onClick: h });
+                    return u.intl.format(u.t["aFR/EB"], { onClick: h });
                 case o.Z.PROFILE_EFFECT:
                     return u.intl.format(u.t.eWNOND, { onClick: h });
             }
         }, [null == t ? void 0 : t.type, h]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: d.nitroUpsellContainer,
         children: [
             (0, r.jsx)(a.SrA, {
                 className: d.nitroWheel,
-                size: 'md',
-                color: l.JX.PREMIUM_TIER_2
+                size: "md",
+                color: l.JX.PREMIUM_TIER_2,
             }),
             (0, r.jsx)(a.Text, {
                 className: d.nitroText,
-                variant: 'text-md/medium',
-                children: m
-            })
-        ]
+                variant: "text-md/medium",
+                children: m,
+            }),
+        ],
     });
 }

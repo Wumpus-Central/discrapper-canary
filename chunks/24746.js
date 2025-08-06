@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(953529), n(388685));
+n.d(t, { Z: () => b }), n(953529), n(388685);
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(388032),
     m = n(582735);
 let h = o().parserFor(u.Z),
-    g = o().reactFor(o().ruleOutput(u.Z, 'react'));
+    g = o().reactFor(o().ruleOutput(u.Z, "react"));
 function f(e) {
     let { description: t, supportsMarkdown: n } = e,
         [i, s] = a.useState(!1),
@@ -20,9 +20,13 @@ function f(e) {
         if (null == o.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
-            s((null != (n = null == (e = o.current) ? void 0 : e.scrollHeight) ? n : 0) - (null != (r = null == (t = o.current) ? void 0 : t.clientHeight) ? r : 0) > 1);
+            s(
+                (null != (n = null == (e = o.current) ? void 0 : e.scrollHeight) ? n : 0) -
+                    (null != (r = null == (t = o.current) ? void 0 : t.clientHeight) ? r : 0) >
+                    1,
+            );
         });
-        return (e.observe(o.current), () => e.disconnect());
+        return e.observe(o.current), () => e.disconnect();
     }, []);
     let [u, p] = a.useState(!1),
         f = a.useCallback(() => {
@@ -30,11 +34,11 @@ function f(e) {
         }, []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 ref: o,
                 className: l()({
                     [m.descriptionClamp]: !u,
-                    [m.descriptionClampSafari]: !u && 'Safari' === platform.name
+                    [m.descriptionClampSafari]: !u && "Safari" === platform.name,
                 }),
                 children: n
                     ? (0, r.jsx)(d.Z, {
@@ -42,54 +46,54 @@ function f(e) {
                           parser: h,
                           output: g,
                           state: { allowLinks: !0 },
-                          children: t
+                          children: t,
                       })
                     : (0, r.jsx)(c.Text, {
-                          variant: 'text-md/normal',
-                          color: 'text-default',
-                          children: t
-                      })
+                          variant: "text-md/normal",
+                          color: "text-default",
+                          children: t,
+                      }),
             }),
             i || u
                 ? (0, r.jsx)(_, {
                       isShowingMore: u,
-                      onToggle: f
+                      onToggle: f,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 function _(e) {
     let { onToggle: t, isShowingMore: n } = e,
         i = a.useMemo(
             () =>
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: m.showMoreContent,
                     children: [
                         (0, r.jsx)(c.Text, {
-                            variant: 'text-md/semibold',
-                            color: 'interactive-normal',
-                            children: n ? p.intl.string(p.t['vtfc4+']) : p.intl.string(p.t.ZDRyur)
+                            variant: "text-md/semibold",
+                            color: "interactive-normal",
+                            children: n ? p.intl.string(p.t["vtfc4+"]) : p.intl.string(p.t.ZDRyur),
                         }),
                         n
                             ? (0, r.jsx)(c.u04, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: m.showMoreButtonIcon
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: m.showMoreButtonIcon,
                               })
                             : (0, r.jsx)(c.CJ0, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: m.showMoreButtonIcon
-                              })
-                    ]
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: m.showMoreButtonIcon,
+                              }),
+                    ],
                 }),
-            [n]
+            [n],
         );
     return (0, r.jsxs)(c.P3F, {
         className: m.showMoreButton,
         onClick: t,
-        children: [(0, r.jsx)('div', { className: m.divider }), i, (0, r.jsx)('div', { className: m.divider })]
+        children: [(0, r.jsx)("div", { className: m.divider }), i, (0, r.jsx)("div", { className: m.divider })],
     });
 }
 let b = function (e) {
@@ -102,27 +106,27 @@ let b = function (e) {
                 null != l && l.length > 0
                     ? (0, r.jsx)(f, {
                           description: l,
-                          supportsMarkdown: !0
+                          supportsMarkdown: !0,
                       })
                     : null != s && s.length > 0
                       ? (0, r.jsx)(f, {
                             description: s,
-                            supportsMarkdown: !1
+                            supportsMarkdown: !1,
                         })
                       : null,
-            [l, s]
+            [l, s],
         );
     return null == o
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: m.overviewContainer,
               children: [
                   (0, r.jsx)(c.X6q, {
-                      variant: 'heading-lg/semibold',
-                      color: 'header-primary',
-                      children: p.intl.string(p.t.txraKS)
+                      variant: "heading-lg/semibold",
+                      color: "header-primary",
+                      children: p.intl.string(p.t.txraKS),
                   }),
-                  o
-              ]
+                  o,
+              ],
           });
 };

@@ -10,52 +10,52 @@ var n = r(481060),
 function c(t) {
     var e;
     let { onClose: r, transitionState: c } = t,
-        { avErrorUIEnabled: u } = (0, l.JN)({ location: 'StreamWarning' }),
+        { avErrorUIEnabled: u } = (0, l.JN)({ location: "StreamWarning" }),
         x = null == (e = (0, i.hp)(i.u.STREAM_FULL)) ? void 0 : e.errorCode,
-        m = o.intl.formatToPlainString(o.t['ejOT9/'], { errorCode: x });
+        m = o.intl.formatToPlainString(o.t["ejOT9/"], { errorCode: x });
     return (0, s.jsxs)(n.Y0X, {
         size: n.CgR.SMALL,
         transitionState: c,
-        parentComponent: 'StreamFullModal',
+        parentComponent: "StreamFullModal",
         children: [
             (0, s.jsxs)(n.xBx, {
                 justify: a.Z.Justify.BETWEEN,
                 children: [
                     (0, s.jsx)(n.vwX, {
-                        tag: 'h2',
+                        tag: "h2",
                         className: d.header,
-                        children: o.intl.string(o.t.GzjdOz)
+                        children: o.intl.string(o.t.GzjdOz),
                     }),
                     (0, s.jsx)(n.olH, {
                         onClick: r,
-                        className: d.modalCloseButton
-                    })
-                ]
+                        className: d.modalCloseButton,
+                    }),
+                ],
             }),
             (0, s.jsxs)(n.hzk, {
                 children: [
                     (0, s.jsx)(n.Text, {
-                        variant: 'text-md/medium',
-                        children: o.intl.string(o.t.VVZDBA)
+                        variant: "text-md/medium",
+                        children: o.intl.string(o.t.VVZDBA),
                     }),
                     u &&
                         (0, s.jsx)(n.Text, {
-                            variant: 'text-md/medium',
+                            variant: "text-md/medium",
                             selectable: !0,
-                            color: 'text-muted',
+                            color: "text-muted",
                             className: d.errorCode,
-                            children: m
+                            children: m,
                         }),
-                    (0, s.jsx)('div', { className: d.fullArt })
-                ]
+                    (0, s.jsx)("div", { className: d.fullArt }),
+                ],
             }),
             (0, s.jsx)(n.mzw, {
                 children: (0, s.jsx)(n.zxk, {
-                    variant: 'primary',
+                    variant: "primary",
                     text: o.intl.string(o.t.BddRzc),
-                    onClick: r
-                })
-            })
-        ]
+                    onClick: r,
+                }),
+            }),
+        ],
     });
 }

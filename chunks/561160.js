@@ -8,13 +8,13 @@ function s(e) {
     let { searchQuery: t, textContent: n, type: s } = e;
     return (
         (0, o.Bm)(s, t),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: a.emptyStateContainer,
             children: (0, r.jsx)(i.Text, {
-                variant: 'text-md/medium',
-                color: 'text-muted',
-                children: n
-            })
+                variant: "text-md/medium",
+                color: "text-muted",
+                children: n,
+            }),
         })
     );
 }

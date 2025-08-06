@@ -14,7 +14,7 @@ function b(n) {
         canManageRoles: t,
         canManageWebhooks: b,
         canAccessChannel: d,
-        canUnlinkChannel: f
+        canUnlinkChannel: f,
     } = (0, l.cj)(
         [a.Z],
         () => ({
@@ -22,15 +22,15 @@ function b(n) {
             canManageRoles: a.Z.can(u.Plq.MANAGE_ROLES, n),
             canManageWebhooks: a.Z.can(u.Plq.MANAGE_WEBHOOKS, n),
             canAccessChannel: a.Z.can(n.accessPermissions, n),
-            canUnlinkChannel: (0, o.C)(n, a.Z)
+            canUnlinkChannel: (0, o.C)(n, a.Z),
         }),
-        [n]
+        [n],
     );
     return !__OVERLAY__ && d && (e || t || b || f)
         ? (0, r.jsx)(i.sNh, {
-              id: 'edit-channel',
-              label: n.type === u.d4z.GUILD_CATEGORY ? s.intl.string(s.t.zdPFs7) : s.intl.string(s.t['3gUsJS']),
-              action: () => c.ZP.open(n.id)
+              id: "edit-channel",
+              label: n.type === u.d4z.GUILD_CATEGORY ? s.intl.string(s.t.zdPFs7) : s.intl.string(s.t["3gUsJS"]),
+              action: () => c.ZP.open(n.id),
           })
         : null;
 }

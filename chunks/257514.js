@@ -1,4 +1,4 @@
-(i.d(t, { default: () => T }), i(388685));
+i.d(t, { default: () => T }), i(388685);
 var n = i(255367),
     a = i(73800),
     s = i(755721),
@@ -21,7 +21,7 @@ let h = (e) => {
     return {
         cancelSubscription: async (t) => {
             try {
-                return (i(!0), await r.EO(t, e), !0);
+                return i(!0), await r.EO(t, e), !0;
             } catch (e) {
                 s(e);
             } finally {
@@ -29,7 +29,7 @@ let h = (e) => {
             }
         },
         error: n,
-        submitting: t
+        submitting: t,
     };
 };
 function T(e) {
@@ -48,15 +48,15 @@ function T(e) {
     return (0, n.jsx)(l.Y0X, {
         transitionState: t,
         className: S.modal,
-        'aria-labelledby': p,
-        parentComponent: 'CancelSubscriptionModal',
+        "aria-labelledby": p,
+        parentComponent: "CancelSubscriptionModal",
         children: (0, n.jsxs)(l.MyZ, {
             activeSlide: L,
             width: 440,
             children: [
                 (0, n.jsx)(l.Mi4, {
                     id: 0,
-                    children: (0, n.jsxs)('div', {
+                    children: (0, n.jsxs)("div", {
                         className: S.slideContainer,
                         children: [
                             null != j ? (0, n.jsx)(l.kzN, { children: j.message }) : null,
@@ -69,59 +69,61 @@ function T(e) {
                                             (0, n.jsx)(N.CW, { application: i }),
                                             (0, n.jsx)(N.r0, {
                                                 id: p,
-                                                children: I.intl.format(I.t.irka9v, { tier: r.summary })
+                                                children: I.intl.format(I.t.irka9v, { tier: r.summary }),
                                             }),
                                             (0, n.jsx)(N.s$, {}),
                                             (0, n.jsx)(N.K9, {
                                                 title: I.intl.string(I.t.LZunzc),
                                                 description: b
-                                                    ? I.intl.formatToPlainString(I.t['+HdfBw'], { timestamp: T.currentPeriodEnd.getTime() })
+                                                    ? I.intl.formatToPlainString(I.t["+HdfBw"], {
+                                                          timestamp: T.currentPeriodEnd.getTime(),
+                                                      })
                                                     : I.intl.formatToPlainString(I.t.qxiBnZ, {
                                                           timestamp: T.currentPeriodEnd.getTime(),
-                                                          guildName: null == A ? void 0 : A.name
-                                                      })
+                                                          guildName: null == A ? void 0 : A.name,
+                                                      }),
                                             }),
                                             (0, n.jsx)(N.G9, {
                                                 applicationId: r.applicationId,
-                                                storeListingBenefits: r.benefits
-                                            })
-                                        ]
-                                    })
-                                ]
+                                                storeListingBenefits: r.benefits,
+                                            }),
+                                        ],
+                                    }),
+                                ],
                             }),
                             (0, n.jsxs)(l.mzw, {
                                 className: S.footer,
                                 children: [
                                     (0, n.jsx)(l.zxk, {
-                                        variant: 'critical-primary',
+                                        variant: "critical-primary",
                                         text: I.intl.string(I.t.KSqyfX),
                                         onClick: R,
-                                        loading: P
+                                        loading: P,
                                     }),
                                     (0, n.jsx)(s.zx, {
                                         look: s.zx.Looks.LINK,
                                         color: s.zx.Colors.PRIMARY,
                                         className: S.goBackButton,
                                         onClick: E,
-                                        children: I.intl.string(I.t['05jDxs'])
-                                    })
-                                ]
-                            })
-                        ]
-                    })
+                                        children: I.intl.string(I.t["05jDxs"]),
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
                 }),
                 (0, n.jsx)(l.Mi4, {
                     id: 1,
-                    children: (0, n.jsx)('div', {
+                    children: (0, n.jsx)("div", {
                         className: S.slideContainer,
                         children: (0, n.jsx)(m.Z, {
                             application: i,
                             subscriptionId: T.id,
-                            onClose: E
-                        })
-                    })
-                })
-            ]
-        })
+                            onClose: E,
+                        }),
+                    }),
+                }),
+            ],
+        }),
     });
 }

@@ -6,7 +6,7 @@ n.d(t, {
     hz: () => j,
     mz: () => U,
     ol: () => G,
-    xB: () => M
+    xB: () => M,
 });
 var r = n(255367),
     i = n(73800),
@@ -37,7 +37,7 @@ function S(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -47,15 +47,15 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 S(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -63,11 +63,11 @@ function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -89,7 +89,8 @@ function R(e, t) {
         i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -99,56 +100,80 @@ function P(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var w = (function (e) {
-    return ((e.SMALL = 'small'), (e.MEDIUM = 'medium'), (e.LARGE = 'large'), (e.DYNAMIC = 'dynamic'), e);
+    return (e.SMALL = "small"), (e.MEDIUM = "medium"), (e.LARGE = "large"), (e.DYNAMIC = "dynamic"), e;
 })({});
 let D = Object.freeze({
     small: T.small,
     medium: T.medium,
     large: T.large,
-    dynamic: null
+    dynamic: null,
 });
 var L = (function (e) {
-    return ((e.DEFAULT = 'default'), (e.SUBTLE = 'subtle'), e);
+    return (e.DEFAULT = "default"), (e.SUBTLE = "subtle"), e;
 })({});
 function x(e) {
     var t,
-        { transitionState: n, children: o, size: u = 'small', role: _ = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: y = v.dG, returnRef: I, animation: S = 'default', parentComponent: N } = e,
-        P = R(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation', 'parentComponent']);
+        {
+            transitionState: n,
+            children: o,
+            size: u = "small",
+            role: _ = "dialog",
+            className: m,
+            fullscreenOnMobile: g = !0,
+            hideShadow: E = !1,
+            onAnimationEnd: y = v.dG,
+            returnRef: I,
+            animation: S = "default",
+            parentComponent: N,
+        } = e,
+        P = R(e, [
+            "transitionState",
+            "children",
+            "size",
+            "role",
+            "className",
+            "fullscreenOnMobile",
+            "hideShadow",
+            "onAnimationEnd",
+            "returnRef",
+            "animation",
+            "parentComponent",
+        ]);
     let w = n === O.Dv.ENTERING || n === O.Dv.ENTERED;
     i.useContext(b.Z)({
         type: l.ImpressionTypes.PAGE,
         name: l.ImpressionNames.MODAL_ROOT_LEGACY,
-        properties: { variant: N }
+        properties: { variant: N },
     });
     let { reducedMotion: L } = i.useContext(f.S),
         x = (0, d.q)(
             {
                 opacity: +!!w,
-                transform: w || L.enabled || 'subtle' === S ? 'scale(1)' : 'scale(0.7)',
+                transform: w || L.enabled || "subtle" === S ? "scale(1)" : "scale(0.7)",
                 config: {
                     duration: 200,
                     easing: c.Z.Easing.out(c.Z.Easing.quad),
-                    clamp: !0
+                    clamp: !0,
                 },
-                onRest: y
+                onRest: y,
             },
-            'animate-always'
+            "animate-always",
         ),
         M = i.useRef(null),
-        k = null != P['aria-label'],
-        j = null != P['aria-labelledby'],
+        k = null != P["aria-label"],
+        j = null != P["aria-labelledby"],
         U = i.useId(),
-        G = null != (t = P['aria-labelledby']) ? t : U,
+        G = null != (t = P["aria-labelledby"]) ? t : U,
         B = i.useMemo(
             () => ({
                 headerId: G,
-                headerIdIsManaged: j
+                headerIdIsManaged: j,
             }),
-            [G, j]
+            [G, j],
         );
     return (0, r.jsx)(O.zM.Provider, {
         value: B,
@@ -161,26 +186,26 @@ function x(e) {
                         role: _,
                         returnRef: I,
                         impressionType: l.ImpressionTypes.MODAL,
-                        'aria-labelledby': k ? void 0 : B.headerId
+                        "aria-labelledby": k ? void 0 : B.headerId,
                     },
-                    P
+                    P,
                 ),
                 {
                     children: (0, r.jsx)(s.animated.div, {
                         className: a()(m, T.root, D[u], {
                             [T.fullscreenOnMobile]: g,
-                            [T.rootWithShadow]: !E
+                            [T.rootWithShadow]: !E,
                         }),
                         ref: M,
                         style: x,
                         children: (0, r.jsx)(h.J, {
                             containerRef: M,
-                            children: o
-                        })
-                    })
-                }
-            )
-        )
+                            children: o,
+                        }),
+                    }),
+                },
+            ),
+        ),
     });
 }
 function M(e) {
@@ -195,14 +220,14 @@ function M(e) {
         wrap: null != (s = e.wrap) ? s : y.Z.Wrap.NO_WRAP,
         className: a()(T.header, e.className, { [T.separator]: null == (l = e.separator) || l }),
         id: u ? void 0 : c,
-        children: e.children
+        children: e.children,
     });
 }
 function k(e) {
-    switch (null != e ? e : 'thin') {
-        case 'auto':
+    switch (null != e ? e : "thin") {
+        case "auto":
             return g.yW;
-        case 'none':
+        case "none":
             return g.xV;
         default:
             return g.h2;
@@ -210,7 +235,7 @@ function k(e) {
 }
 function j(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: o } = e,
-        s = R(e, ['className', 'children', 'scrollerRef', 'scrollbarType']),
+        s = R(e, ["className", "children", "scrollerRef", "scrollbarType"]),
         l = k(o);
     return (0, r.jsx)(
         l,
@@ -218,12 +243,12 @@ function j(e) {
             A(
                 {
                     className: a()(T.content, t),
-                    ref: i
+                    ref: i,
                 },
-                s
+                s,
             ),
-            { children: (0, r.jsx)(E.y5t, { children: n }) }
-        )
+            { children: (0, r.jsx)(E.y5t, { children: n }) },
+        ),
     );
 }
 function U(e) {
@@ -236,39 +261,39 @@ function U(e) {
         align: null != (i = e.align) ? i : y.Z.Align.STRETCH,
         wrap: null != (o = e.wrap) ? o : y.Z.Wrap.NO_WRAP,
         className: a()(T.footer, e.className, { [T.footerSeparator]: null == (s = e.separator) || s }),
-        children: (0, r.jsx)(E.y5t, { children: e.children })
+        children: (0, r.jsx)(E.y5t, { children: e.children }),
     });
 }
 function G(e) {
     return (0, r.jsx)(_.zx, {
         focusProps: e.focusProps,
-        'aria-label': I.intl.string(I.t.cpT0Cg),
+        "aria-label": I.intl.string(I.t.cpT0Cg),
         look: _.zx.Looks.BLANK,
         size: _.zx.Sizes.NONE,
         onClick: e.onClick,
         innerClassName: a()(e.innerClassName, { [T.closeWithCircleBackground]: e.withCircleBackground }),
         className: a()(e.className, {
             [T.hideOnFullscreen]: e.hideOnFullscreen,
-            [T.close]: !e.withCircleBackground
+            [T.close]: !e.withCircleBackground,
         }),
         children: (0, r.jsx)(u.D, {
-            size: 'md',
-            color: 'currentColor',
-            className: a()(e.innerClassName, T.closeIcon)
-        })
+            size: "md",
+            color: "currentColor",
+            className: a()(e.innerClassName, T.closeIcon),
+        }),
     });
 }
 function B(e) {
     var { className: t, scrollerRef: n } = e,
-        i = R(e, ['className', 'scrollerRef']);
+        i = R(e, ["className", "scrollerRef"]);
     return (0, r.jsx)(
         m.Tv,
         A(
             {
                 className: t,
-                ref: n
+                ref: n,
             },
-            i
-        )
+            i,
+        ),
     );
 }

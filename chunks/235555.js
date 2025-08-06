@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -21,7 +21,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -43,15 +43,15 @@ class O extends i.PureComponent {
                   party: n,
                   renderOverflowPopout: this.renderOverflowPopout,
                   onStopListening: this.handleStopListening,
-                  onUserContextMenu: this.handleUserContextMenu
+                  onUserContextMenu: this.handleUserContextMenu,
               })
             : null;
     }
     constructor(...e) {
-        (super(...e),
-            _(this, 'handleUserContextMenu', (e, t) => {
+        super(...e),
+            _(this, "handleUserContextMenu", (e, t) => {
                 (0, s.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
+                    let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
                     return (n) => {
                         var i, l;
                         return (0, r.jsx)(
@@ -60,15 +60,15 @@ class O extends i.PureComponent {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             _(e, t, n[t]);
-                                        }));
+                                        });
                                 }
                                 return e;
                             })({}, n)),
@@ -85,18 +85,18 @@ class O extends i.PureComponent {
                                   })(Object(l)).forEach(function (e) {
                                       Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
-                            i)
+                            i),
                         );
                     };
                 });
             }),
-            _(this, 'renderOverflowPopout', () => {
+            _(this, "renderOverflowPopout", () => {
                 let { party: e } = this.props;
                 return (0, r.jsx)(c.Z, {
                     party: e,
-                    header: b.intl.formatToPlainString(b.t.I9et19, { count: e.length })
+                    header: b.intl.formatToPlainString(b.t.I9et19, { count: e.length }),
                 });
-            }));
+            });
     }
 }
 let E = o.ZP.connectStores([d.Z, f.default, h.Z, p.Z], () => {
@@ -106,17 +106,22 @@ let E = o.ZP.connectStores([d.Z, f.default, h.Z, p.Z], () => {
         r = d.Z.getActivity(),
         i = f.default.getCurrentUser(),
         l = [];
-    if ((null != n ? ((e = f.default.getUser(n.userId)), (t = n.partyId)) : null != r && null != r.party && null != r.party.id && ((e = i), (t = r.party.id)), null != t)) {
+    if (
+        (null != n
+            ? ((e = f.default.getUser(n.userId)), (t = n.partyId))
+            : null != r && null != r.party && null != r.party.id && ((e = i), (t = r.party.id)),
+        null != t)
+    ) {
         var o;
         l = a()(Array.from(null != (o = p.Z.getParty(t)) ? o : []))
             .map((e) => f.default.getUser(e))
             .filter(g.lm)
-            .orderBy([(t) => null == e || e.id === t.id, (e) => h.Z.isFriend(e.id)], ['desc', 'desc'])
+            .orderBy([(t) => null == e || e.id === t.id, (e) => h.Z.isFriend(e.id)], ["desc", "desc"])
             .value();
     }
     return {
         currentUser: i,
         host: e,
-        party: l
+        party: l,
     };
 })(O);

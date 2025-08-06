@@ -19,7 +19,7 @@ let d = function () {
             showChannel: !0,
             hide: e,
             withV2Actions: !0,
-            canCreateInvites: !0
-        })
+            canCreateInvites: !0,
+        }),
     });
 };

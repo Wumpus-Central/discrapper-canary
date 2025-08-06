@@ -1,4 +1,4 @@
-var t = '-';
+var t = "-";
 e.exports = {
     encode: function (e, n, r) {
         return e + t + n + t + r;
@@ -10,7 +10,7 @@ e.exports = {
         return {
             blockKey: n.slice(2).reverse().join(t),
             decoratorKey: parseInt(i, 10),
-            leafKey: parseInt(r, 10)
+            leafKey: parseInt(r, 10),
         };
-    }
+    },
 };

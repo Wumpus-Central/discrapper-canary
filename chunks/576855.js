@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,30 +22,30 @@ function d(e, t, n) {
 }
 let f = {
     BLOCK: u.block,
-    INLINE: u.inline
+    INLINE: u.inline,
 };
 class _ extends (r = o.PureComponent) {
     render() {
         let { children: e, className: t, textClassName: n, type: r = f.BLOCK, style: o } = this.props;
-        return (0, i.jsxs)('div', {
+        return (0, i.jsxs)("div", {
             className: s()(t, r),
             style: o,
             children: [
                 (0, i.jsxs)(l.Text, {
-                    variant: 'text-sm/bold',
-                    tag: 'div',
-                    color: 'text-feedback-positive',
+                    variant: "text-sm/bold",
+                    tag: "div",
+                    color: "text-feedback-positive",
                     className: u.pro,
-                    children: [c.intl.string(c.t['8tvIiI']), ':']
+                    children: [c.intl.string(c.t["8tvIiI"]), ":"],
                 }),
                 (0, i.jsx)(l.Text, {
                     className: s()(u.tip, n),
-                    variant: 'text-sm/normal',
-                    children: e
-                })
-            ]
+                    variant: "text-sm/normal",
+                    children: e,
+                }),
+            ],
         });
     }
 }
-d(_, 'Types', f);
+d(_, "Types", f);
 let p = _;

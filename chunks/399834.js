@@ -45,5 +45,5 @@ e.exports = {
     convertToRaw: O,
     genKey: I,
     getDefaultKeyBinding: T,
-    getVisibleSelectionRect: S
+    getVisibleSelectionRect: S,
 };

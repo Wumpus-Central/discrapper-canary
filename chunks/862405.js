@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(126663),
@@ -24,63 +24,63 @@ function N(e) {
 }
 function P(e) {
     let { fill: t = !1, stroke: n = !1 } = e;
-    return (0, r.jsx)('path', {
-        stroke: n ? '#fff' : void 0,
-        fill: t ? '#fff' : void 0,
-        strokeLinecap: 'round',
-        strokeWidth: '3',
-        d: 'M30.646 2.801c-6.131-.346-12.605-1.232-18.75-.55-.78.087-1.366.094-2.084.434-.68.323-2.099.535-2.488 1.158C6.3 5.48 4.381 6.596 3.157 8.125 2.592 8.833 2 12.716 2 13.74c0 2.983.639 2.47 3.24 3.24 8.881 2.632 18.235.926 27.373.926 7.838 0 15.634.27 23.438.521 25.652.828 51.238 2.084 76.968 2.084 13.726 0 27.377.52 41.087.52h41.436c9.814 0 19.365-1.041 29.166-1.041 10.655 0 21.458-.521 32.176-.521 19.826 0 39.571.626 59.317 2.199 5.641.45 13.403 1.38 19.04-.232 3.723-1.063 8.121-1.111 11.342-3.124.519-.325 3.618-3.579 3.646-4.052.151-2.564-.235-3.14-1.562-5.092-1.862-2.738-3.122-4.467-6.25-5.585-3.823-1.365-8.212-.78-12.24-.78h-15.625c-14.383 0-28.609 1.04-42.969 1.04h-48.958c-9.341 0-18.557-1.04-27.865-1.04-5.905 0-11.915.52-17.708.52-8.783 0-17.725.52-26.591.52-8.649 0-17.122-1.562-25.724-1.562-16.453 0-32.844.521-49.247.521H32.208'
+    return (0, r.jsx)("path", {
+        stroke: n ? "#fff" : void 0,
+        fill: t ? "#fff" : void 0,
+        strokeLinecap: "round",
+        strokeWidth: "3",
+        d: "M30.646 2.801c-6.131-.346-12.605-1.232-18.75-.55-.78.087-1.366.094-2.084.434-.68.323-2.099.535-2.488 1.158C6.3 5.48 4.381 6.596 3.157 8.125 2.592 8.833 2 12.716 2 13.74c0 2.983.639 2.47 3.24 3.24 8.881 2.632 18.235.926 27.373.926 7.838 0 15.634.27 23.438.521 25.652.828 51.238 2.084 76.968 2.084 13.726 0 27.377.52 41.087.52h41.436c9.814 0 19.365-1.041 29.166-1.041 10.655 0 21.458-.521 32.176-.521 19.826 0 39.571.626 59.317 2.199 5.641.45 13.403 1.38 19.04-.232 3.723-1.063 8.121-1.111 11.342-3.124.519-.325 3.618-3.579 3.646-4.052.151-2.564-.235-3.14-1.562-5.092-1.862-2.738-3.122-4.467-6.25-5.585-3.823-1.365-8.212-.78-12.24-.78h-15.625c-14.383 0-28.609 1.04-42.969 1.04h-48.958c-9.341 0-18.557-1.04-27.865-1.04-5.905 0-11.915.52-17.708.52-8.783 0-17.725.52-26.591.52-8.649 0-17.122-1.562-25.724-1.562-16.453 0-32.844.521-49.247.521H32.208",
     });
 }
 function _(e) {
     let { percent: t } = e,
         n = (0, c.Dt)(),
         s = (0, i.q_F)({ width: (t / 100) * 372 });
-    return (0, r.jsxs)('svg', {
-        xmlns: 'http://www.w3.org/2000/svg',
-        width: '372',
-        height: '24',
-        fill: 'none',
+    return (0, r.jsxs)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        width: "372",
+        height: "24",
+        fill: "none",
         children: [
-            (0, r.jsx)('defs', {
-                children: (0, r.jsx)('mask', {
+            (0, r.jsx)("defs", {
+                children: (0, r.jsx)("mask", {
                     id: n,
-                    children: (0, r.jsx)(P, { fill: !0 })
-                })
+                    children: (0, r.jsx)(P, { fill: !0 }),
+                }),
             }),
             (0, r.jsx)(o.animated.rect, {
                 style: (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
-                })({ mask: 'url(#'.concat(n, ')') }, s),
-                fill: '#BB45FF',
-                x: '0',
-                y: '0',
-                height: '24'
+                })({ mask: "url(#".concat(n, ")") }, s),
+                fill: "#BB45FF",
+                x: "0",
+                y: "0",
+                height: "24",
             }),
-            (0, r.jsx)(P, { stroke: !0 })
-        ]
+            (0, r.jsx)(P, { stroke: !0 }),
+        ],
     });
 }
 function C() {
@@ -102,43 +102,43 @@ function C() {
         R = (0, g.eR)(O);
     (0, p.Z)(j, Z);
     let A = (0, s.useCallback)(() => {
-        (i({ lastLevelClaimed: k }), (0, l.KH)(y.yN.LEVELING, M), R());
+        i({ lastLevelClaimed: k }), (0, l.KH)(y.yN.LEVELING, M), R();
     }, [k, M, R, i]);
     return (
         (0, s.useEffect)(() => {
             (null == o ? void 0 : o.pointsWhenUnlocked) == null && i({ pointsWhenUnlocked: n });
         }, []),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: v.leveling,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: v.levelInfo,
                     children: [
                         (0, r.jsx)(b.Z, {
-                            variant: 'text-lg/bold',
-                            color: 'clicker-game-brand',
-                            children: x.intl.format(h.default.IG6UGB, { level: Z })
+                            variant: "text-lg/bold",
+                            color: "clicker-game-brand",
+                            children: x.intl.format(h.default.IG6UGB, { level: Z }),
                         }),
                         (0, r.jsx)(b.Z, {
                             className: v.experience,
-                            variant: 'text-sm/medium',
-                            color: 'clicker-game-brand',
+                            variant: "text-sm/medium",
+                            color: "clicker-game-brand",
                             children: x.intl.format(h.default.Rfy3Cg, {
                                 currentExperience: Math.floor(S),
                                 requiredExperience: I,
                                 experienceHook: (e, t) =>
                                     (0, r.jsx)(
-                                        'span',
+                                        "span",
                                         {
                                             className: v.monospace,
-                                            children: e
+                                            children: e,
                                         },
-                                        t
+                                        t,
                                     ),
-                                grassIconHook: (e, t, n) => (0, d.Z)(e, t, n, v.experienceIcon)
-                            })
-                        })
-                    ]
+                                grassIconHook: (e, t, n) => (0, d.Z)(e, t, n, v.experienceIcon),
+                            }),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(_, { percent: (S / I) * 100 }),
                 k < Z
@@ -147,11 +147,11 @@ function C() {
                           onClick: A,
                           children: x.intl.format(h.default.IUF6np, {
                               points: M,
-                              grassIconHook: d.Z
-                          })
+                              grassIconHook: d.Z,
+                          }),
                       })
-                    : null
-            ]
+                    : null,
+            ],
         })
     );
 }

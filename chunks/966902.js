@@ -15,16 +15,16 @@ function u(e) {
     let { caretConfig: t, className: n } = e,
         { position: i, align: l, customOffset: u } = t,
         d =
-            'custom' === l && void 0 !== u
+            "custom" === l && void 0 !== u
                 ? {
-                      '--custom-caret-offset-x': ['top', 'bottom'].includes(i) ? ''.concat(c(u), 'px') : '0px',
-                      '--custom-caret-offset-y': ['left', 'right'].includes(i) ? ''.concat(c(u), 'px') : '0px'
+                      "--custom-caret-offset-x": ["top", "bottom"].includes(i) ? "".concat(c(u), "px") : "0px",
+                      "--custom-caret-offset-y": ["left", "right"].includes(i) ? "".concat(c(u), "px") : "0px",
                   }
                 : void 0,
-        f = o()(s.caret, s['caret--'.concat(i)], s['caret--'.concat(l)], n);
-    return (0, r.jsx)('div', {
+        f = o()(s.caret, s["caret--".concat(i)], s["caret--".concat(l)], n);
+    return (0, r.jsx)("div", {
         className: f,
         style: d,
-        children: (0, r.jsx)(a.v, {})
+        children: (0, r.jsx)(a.v, {}),
     });
 }

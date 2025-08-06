@@ -9,11 +9,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -39,7 +39,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -51,11 +51,11 @@ function f() {
     return {
         dirtyHandlerIds: (0, a.u)(e.dirtyHandlerIds, {
             type: t.type,
-            payload: u(u({}, t.payload), {}, { prevTargetIds: (0, l.U2)(e, 'dragOperation.targetIds', []) })
+            payload: u(u({}, t.payload), {}, { prevTargetIds: (0, l.U2)(e, "dragOperation.targetIds", []) }),
         }),
         dragOffset: (0, r.u)(e.dragOffset, t),
         refCount: (0, o.u)(e.refCount, t),
         dragOperation: (0, i.u)(e.dragOperation, t),
-        stateId: (0, s.u)(e.stateId)
+        stateId: (0, s.u)(e.stateId),
     };
 }

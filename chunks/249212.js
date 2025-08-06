@@ -13,24 +13,24 @@ let _ = n(66737);
 function p(e) {
     var t;
     let { userId: n, width: p, avError: h, selected: m = !1, noArt: g = !1 } = e,
-        { avErrorUIEnabled: E } = (0, l.JN)({ location: 'UserVideoFailed' }),
+        { avErrorUIEnabled: E } = (0, l.JN)({ location: "UserVideoFailed" }),
         b = null == (t = (0, s.hp)(h)) ? void 0 : t.errorCode;
     function y() {
-        ((0, a.w)(i.Yn.DEFAULT, n),
+        (0, a.w)(i.Yn.DEFAULT, n),
             o.Z.setDisableLocalVideo(n, d.ZUi.DISABLED, i.Yn.DEFAULT, !1),
             setTimeout(() => {
                 o.Z.setDisableLocalVideo(n, d.ZUi.MANUAL_ENABLED, i.Yn.DEFAULT, !1);
-            }, 1000));
+            }, 1000);
     }
     return (0, r.jsx)(u.Z, {
         artURL: _,
-        header: f.intl.string(f.t['z+mxvr']),
+        header: f.intl.string(f.t["z+mxvr"]),
         size: (0, u.L)(p),
         noArt: g,
         selected: m,
         description: f.intl.format(f.t.d486Wl, { helpUrl: c.Z.getArticleURL(d.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
-        errorCodeMessage: E ? f.intl.formatToPlainString(f.t['ejOT9/'], { errorCode: b }) : void 0,
+        errorCodeMessage: E ? f.intl.formatToPlainString(f.t["ejOT9/"], { errorCode: b }) : void 0,
         onCTAClick: y,
-        callToAction: f.intl.string(f.t['hxmQ/f'])
+        callToAction: f.intl.string(f.t["hxmQ/f"]),
     });
 }

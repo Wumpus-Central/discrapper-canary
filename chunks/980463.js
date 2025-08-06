@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     Gq: () => _,
     SN: () => g,
     gA: () => p,
     qc: () => h,
-    zI: () => m
+    zI: () => m,
 }),
-    n(415506));
+    n(415506);
 var r = n(544891),
     i = n(343817),
     o = n(570140),
@@ -17,115 +17,115 @@ var r = n(544891),
     d = n(981631);
 let f = {
         [l.D1]: d.ANM.FETCH_MESSAGE_CONFETTI_ENTITLEMENT,
-        [l.FX]: d.ANM.FETCH_HD_STREAMING_ENTITLEMENT
+        [l.FX]: d.ANM.FETCH_HD_STREAMING_ENTITLEMENT,
     },
     _ = async (e) => {
         o.Z.dispatch({
-            type: 'CONSUMABLES_PRICE_FETCH_STARTED',
-            skuId: e
+            type: "CONSUMABLES_PRICE_FETCH_STARTED",
+            skuId: e,
         });
         try {
             let t = await r.tn.get({
                 url: d.ANM.CONSUMABLE_FETCH_PRICE(e),
-                rejectWithError: !1
+                rejectWithError: !1,
             });
             if (null == t.body.price)
                 throw (
-                    o.Z.dispatch({
-                        type: 'CONSUMABLES_PRICE_FETCH_FAILED',
-                        skuId: e
+                    (o.Z.dispatch({
+                        type: "CONSUMABLES_PRICE_FETCH_FAILED",
+                        skuId: e,
                     }),
-                    Error('price not found')
+                    Error("price not found"))
                 );
             let n = t.body.price;
             return (
                 o.Z.dispatch({
-                    type: 'CONSUMABLES_PRICE_FETCH_SUCCEEDED',
+                    type: "CONSUMABLES_PRICE_FETCH_SUCCEEDED",
                     skuId: e,
-                    price: n
+                    price: n,
                 }),
                 {
                     amount: n.amount,
                     currency: n.currency,
-                    exponent: n.currency_exponent
+                    exponent: n.currency_exponent,
                 }
             );
         } catch (t) {
             throw (
-                o.Z.dispatch({
-                    type: 'CONSUMABLES_PRICE_FETCH_FAILED',
-                    skuId: e
+                (o.Z.dispatch({
+                    type: "CONSUMABLES_PRICE_FETCH_FAILED",
+                    skuId: e,
                 }),
-                new i.Hx(t)
+                new i.Hx(t))
             );
         }
     },
     p = async (e) => {
         if (
             (o.Z.dispatch({
-                type: 'CONSUMABLES_ENTITLEMENT_FETCH_STARTED',
-                skuId: e
+                type: "CONSUMABLES_ENTITLEMENT_FETCH_STARTED",
+                skuId: e,
             }),
             null == f[e])
         )
             throw (
-                o.Z.dispatch({
-                    type: 'CONSUMABLES_ENTITLEMENT_FETCH_FAILED',
-                    skuId: e
+                (o.Z.dispatch({
+                    type: "CONSUMABLES_ENTITLEMENT_FETCH_FAILED",
+                    skuId: e,
                 }),
-                Error('Invalid consumable skuId: '.concat(e))
+                Error("Invalid consumable skuId: ".concat(e)))
             );
         try {
             let t = await r.tn.get({
                     url: f[e],
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 }),
                 n = null != t.body.entitlement ? a.Z.createFromServer(t.body.entitlement) : null,
                 i = t.body.num_potions;
             return (
                 o.Z.dispatch({
-                    type: 'CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED',
+                    type: "CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED",
                     skuId: e,
                     entitlement: n,
-                    numPotions: i
+                    numPotions: i,
                 }),
                 t.body.entitlement
             );
         } catch (t) {
             throw (
-                o.Z.dispatch({
-                    type: 'CONSUMABLES_ENTITLEMENT_FETCH_FAILED',
-                    skuId: e
+                (o.Z.dispatch({
+                    type: "CONSUMABLES_ENTITLEMENT_FETCH_FAILED",
+                    skuId: e,
                 }),
-                new i.Hx(t)
+                new i.Hx(t))
             );
         }
     },
     h = async (e, t, n) => {
         try {
-            (await r.tn.post({
+            await r.tn.post({
                 url: d.ANM.CONSUME_MESSAGE_CONFETTI_POTION,
                 body: {
                     channel_id: e,
                     message_id: t,
-                    emoji_name: m(n)
+                    emoji_name: m(n),
                 },
-                rejectWithError: !1
+                rejectWithError: !1,
             }),
                 o.Z.dispatch({
-                    type: 'CLEAR_CONSUMED_ENTITLEMENT',
-                    skuId: l.D1
-                }));
+                    type: "CLEAR_CONSUMED_ENTITLEMENT",
+                    skuId: l.D1,
+                });
         } catch (e) {
             throw new i.Hx(e);
         }
         let a = (0, u.NV)(n);
         (0, c.I)(a, void 0, !0, s.LL.MessageSent);
     },
-    m = (e) => (null != e.id ? ''.concat(e.name, ':').concat(e.id) : e.optionallyDiverseSequence),
+    m = (e) => (null != e.id ? "".concat(e.name, ":").concat(e.id) : e.optionallyDiverseSequence),
     g = (e) => {
         o.Z.dispatch({
-            type: 'CONSUMABLES_CLEAR_ERROR',
-            skuId: e
+            type: "CONSUMABLES_CLEAR_ERROR",
+            skuId: e,
         });
     };

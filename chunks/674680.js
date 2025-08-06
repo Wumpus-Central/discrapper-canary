@@ -13,36 +13,36 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
 let p = {
         trophy: u.Il.PRIMARY_400,
         locked: u.Il.PRIMARY_400,
-        unlocked: u.Il.GREEN_330
+        unlocked: u.Il.GREEN_330,
     },
     f = {
         trophy: u.Il.PRIMARY_400,
         locked: u.Il.PRIMARY_400,
-        unlocked: u.Il.GREEN_330
+        unlocked: u.Il.GREEN_330,
     };
 function g(e) {
     var t;
@@ -58,56 +58,56 @@ function g(e) {
         E = O.size - O.stroke,
         S = {
             width: 0.4 * j,
-            height: 0.4 * j
+            height: 0.4 * j,
         },
         x = {
             width: S.width + 1,
             height: S.height + 1,
             right: O.stroke + 1,
             bottom: O.stroke + 1,
-            padding: 0
+            padding: 0,
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: d.container,
         style: {
             width: E,
             height: E,
-            padding: O.stroke
+            padding: O.stroke,
         },
-        'aria-label': ''.concat(null != (t = _()) ? t : ''),
+        "aria-label": "".concat(null != (t = _()) ? t : ""),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.trophyIconContainer,
                 children: (0, r.jsx)(l.rm8, {
-                    size: 'custom',
+                    size: "custom",
                     color: u ? C : (0, s.Lq)(v.trophy),
                     width: j,
-                    height: j
-                })
+                    height: j,
+                }),
             }),
             !u &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: d.lockContainer,
                     style: x,
                     children: (0, r.jsx)(
                         l.mBM,
                         h(
                             {
-                                size: 'custom',
-                                color: (0, s.Lq)(v.locked)
+                                size: "custom",
+                                color: (0, s.Lq)(v.locked),
                             },
-                            S
-                        )
-                    )
+                            S,
+                        ),
+                    ),
                 }),
             u &&
                 y === c.EP.LEGENDARY &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: d.lockContainer,
                     style: x,
-                    children: (0, r.jsx)(a.Z, h({ className: d.confettiIcon }, S))
-                })
-        ]
+                    children: (0, r.jsx)(a.Z, h({ className: d.confettiIcon }, S)),
+                }),
+        ],
     });
 }
 g.Sizes = l.EFr;

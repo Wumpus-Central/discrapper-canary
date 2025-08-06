@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(147913),
     i = n(282397),
     o = n(626135),
@@ -12,27 +12,27 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let u = 'interaction_iframe_modal';
+let u = "interaction_iframe_modal";
 async function d(e) {
-    let { openInteractionModal: t } = await n.e('31453').then(n.bind(n, 440934));
-    (t(e),
+    let { openInteractionModal: t } = await n.e("31453").then(n.bind(n, 440934));
+    t(e),
         o.default.track(l.rMx.OPEN_MODAL, {
-            type: 'interaction_modal',
-            application_id: e.application.id
-        }));
+            type: "interaction_modal",
+            application_id: e.application.id,
+        });
 }
 function f(e) {
-    ((0, s.Z)(e),
+    (0, s.Z)(e),
         o.default.track(l.rMx.OPEN_MODAL, {
             type: u,
-            application_id: e.application.id
-        }));
+            application_id: e.application.id,
+        });
 }
 function _(e) {
     let { application: t } = e,
@@ -45,27 +45,27 @@ function p(e, t) {
     o.default.track(l.rMx.MODAL_DISMISSED, {
         type: u,
         application_id: e.applicationId,
-        duration_open_ms: n
+        duration_open_ms: n,
     });
 }
 class h extends r.Z {
     constructor(...e) {
-        (super(...e),
-            c(this, 'iframeModalOpenTimeMs', void 0),
-            c(this, 'actions', {
+        super(...e),
+            c(this, "iframeModalOpenTimeMs", void 0),
+            c(this, "actions", {
                 INTERACTION_MODAL_CREATE: (e) => {
                     d(e);
                 },
                 INTERACTION_IFRAME_MODAL_CREATE: (e) => {
-                    ((this.iframeModalOpenTimeMs = Date.now()), f(e));
+                    (this.iframeModalOpenTimeMs = Date.now()), f(e);
                 },
                 INTERACTION_IFRAME_MODAL_CLOSE: (e) => {
-                    (p(e, this.iframeModalOpenTimeMs), (this.iframeModalOpenTimeMs = void 0));
+                    p(e, this.iframeModalOpenTimeMs), (this.iframeModalOpenTimeMs = void 0);
                 },
                 RPC_APP_DISCONNECTED: (e) => {
                     _(e);
-                }
-            }));
+                },
+            });
     }
 }
 let m = new h();

@@ -11,20 +11,20 @@ function u(e) {
     let { message: t, compact: n, usernameHook: u } = e,
         d = (0, a.ZP)(t),
         f = u(d),
-        _ = l.intl.format(l.t['Rv+TSE'], {
+        _ = l.intl.format(l.t["Rv+TSE"], {
             username: d.nick,
             usernameHook: f,
-            topic: t.content
+            topic: t.content,
         });
     return (0, r.jsx)(s.Z, {
         className: c.stageSystemMessage,
         iconNode: (0, r.jsx)(o.ewx, {
-            size: 'md',
-            color: i.Z.unsafe_rawColors.GREEN_360.css
+            size: "md",
+            color: i.Z.unsafe_rawColors.GREEN_360.css,
         }),
         iconContainerClassName: c.iconContainer,
         timestamp: t.timestamp,
         compact: n,
-        children: _
+        children: _,
     });
 }

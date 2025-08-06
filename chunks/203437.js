@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var l = n(255367),
     a = n(73800),
     i = n(120356),
@@ -23,16 +23,16 @@ function N(e) {
     let { availableSlots: t, className: n } = e;
     return (0, l.jsxs)(o.Text, {
         className: r()(w.suffixNode, n),
-        variant: 'text-sm/medium',
-        color: 'text-primary',
+        variant: "text-sm/medium",
+        color: "text-primary",
         children: [
             (0, l.jsx)(o.gj8, {
-                size: 'md',
-                color: 'currentColor',
-                className: w.speakerIcon
+                size: "md",
+                color: "currentColor",
+                className: w.speakerIcon,
             }),
-            j.intl.format(j.t['8Dyg1N'], { slots: t })
-        ]
+            j.intl.format(j.t["8Dyg1N"], { slots: t }),
+        ],
     });
 }
 function C(e) {
@@ -45,19 +45,15 @@ function C(e) {
             }
             return e;
         }),
-        S = (0, s.cj)(
-            [b.Z],
-            () => {
-                let e = {};
-                for (let [n, l] of p.default.entries(C)) {
-                    var t;
-                    let a = (0, g.yw)(l, null != (t = b.Z.getSoundsForGuild(n)) ? t : v.Hy, l.premiumTier);
-                    e[n] = a;
-                }
-                return e;
-            },
-            [C]
-        );
+        S = (0, s.cj)([b.Z], () => {
+            let e = {};
+            for (let [n, l] of p.default.entries(C)) {
+                var t;
+                let a = (0, g.yw)(l, null != (t = b.Z.getSoundsForGuild(n)) ? t : v.Hy, l.premiumTier);
+                e[n] = a;
+            }
+            return e;
+        }, [C]);
     a.useEffect(() => {
         (0, y.w)();
     }, []);
@@ -68,48 +64,48 @@ function C(e) {
                     return {
                         label: t,
                         value: n,
-                        disabled: S[n] <= 0
+                        disabled: S[n] <= 0,
                     };
                 }),
-            [C, S]
+            [C, S],
         ),
         E = a.useCallback(
             (e) =>
-                null == e || '' === e.value
+                null == e || "" === e.value
                     ? null
                     : (0, l.jsx)(u.Z, {
                           className: r()(w.guildSelectOptionIcon, { [w.disabledOption]: e.disabled }),
                           guild: C[e.value],
                           size: u.Z.Sizes.SMOL,
-                          active: !0
+                          active: !0,
                       }),
-            [C]
+            [C],
         ),
         P = a.useCallback(
             (e) => {
                 let t = null == e ? void 0 : e.value;
-                return null == t || '' === t
+                return null == t || "" === t
                     ? null
                     : (0, l.jsx)(N, {
                           className: r()({ [w.disabledOption]: null == e ? void 0 : e.disabled }),
-                          availableSlots: S[t]
+                          availableSlots: S[t],
                       });
             },
-            [S]
+            [S],
         ),
         Z = a.useCallback(
             (e) =>
-                (0, l.jsx)('div', {
+                (0, l.jsx)("div", {
                     className: r()({ [w.disabledOption]: e.disabled }),
-                    children: e.label
+                    children: e.label,
                 }),
-            []
+            [],
         ),
         M = a.useCallback(
             (e) => {
                 S[e] <= 0 || i(e);
             },
-            [S, i]
+            [S, i],
         ),
         k = (() => {
             let e = S[null != t ? t : x.lds];
@@ -124,6 +120,6 @@ function C(e) {
         renderOptionPrefix: E,
         renderOptionSuffix: P,
         renderOptionLabel: Z,
-        placeholder: 0 === O.length ? j.intl.string(j.t.O3i2gY) : j.intl.string(j.t.CunCMD)
+        placeholder: 0 === O.length ? j.intl.string(j.t.O3i2gY) : j.intl.string(j.t.CunCMD),
     });
 }

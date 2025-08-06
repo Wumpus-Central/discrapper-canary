@@ -9,29 +9,29 @@ let l = (e) => {
         let { data: t, disabled: n } = e,
             { content: i, className: l, onClick: c, disabled: u } = t;
         return (0, r.jsx)(a.tEY, {
-            children: (0, r.jsx)('button', {
-                type: 'button',
+            children: (0, r.jsx)("button", {
+                type: "button",
                 className: o()(s.item, l),
                 onClick: c,
                 disabled: n || u,
-                children: i
-            })
+                children: i,
+            }),
         });
     },
     c = (e) => {
         let { buttons: t, disabled: n, className: i } = e;
-        return (0, r.jsx)('div', {
-            role: 'group',
+        return (0, r.jsx)("div", {
+            role: "group",
             className: o()(s.group, i),
             children: t.map((e, t) =>
                 (0, r.jsx)(
                     l,
                     {
                         data: e,
-                        disabled: n
+                        disabled: n,
                     },
-                    t
-                )
-            )
+                    t,
+                ),
+            ),
         });
     };

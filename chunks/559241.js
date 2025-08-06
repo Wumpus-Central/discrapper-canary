@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -15,35 +15,43 @@ function i(e, t, n) {
 }
 class o {
     constructor() {
-        (i(this, 'filterTagIds', void 0),
-            i(this, 'sortOrder', void 0),
-            i(this, 'layout', void 0),
-            i(this, 'tagSetting', void 0),
-            i(this, 'setFilterTagIds', (e) => {
+        i(this, "filterTagIds", void 0),
+            i(this, "sortOrder", void 0),
+            i(this, "layout", void 0),
+            i(this, "tagSetting", void 0),
+            i(this, "setFilterTagIds", (e) => {
                 this.filterTagIds = e;
             }),
-            i(this, 'setSortOrder', (e) => {
+            i(this, "setSortOrder", (e) => {
                 this.sortOrder = e;
             }),
-            i(this, 'setLayout', (e) => {
+            i(this, "setLayout", (e) => {
                 this.layout = e;
             }),
-            i(this, 'setTagSetting', (e) => {
+            i(this, "setTagSetting", (e) => {
                 this.tagSetting = e;
             }),
-            i(this, 'getFilterTagIdsAnalytics', () => (null != this.filterTagIds ? Array.from(this.filterTagIds) : [])),
-            i(this, 'getSortOrderAnalytics', (e) => {
+            i(this, "getFilterTagIdsAnalytics", () => (null != this.filterTagIds ? Array.from(this.filterTagIds) : [])),
+            i(this, "getSortOrderAnalytics", (e) => {
                 var t, n;
-                return null != (n = this.sortOrder) ? n : null == (t = r.Z.getChannel(e)) ? void 0 : t.getDefaultSortOrder();
+                return null != (n = this.sortOrder)
+                    ? n
+                    : null == (t = r.Z.getChannel(e))
+                      ? void 0
+                      : t.getDefaultSortOrder();
             }),
-            i(this, 'getLayoutAnalytics', (e) => {
+            i(this, "getLayoutAnalytics", (e) => {
                 var t, n;
                 return null != (n = this.layout) ? n : null == (t = r.Z.getChannel(e)) ? void 0 : t.getDefaultLayout();
             }),
-            i(this, 'getTagSettingAnalytics', (e) => {
+            i(this, "getTagSettingAnalytics", (e) => {
                 var t, n;
-                return null != (n = this.tagSetting) ? n : null == (t = r.Z.getChannel(e)) ? void 0 : t.getDefaultTagSetting();
-            }));
+                return null != (n = this.tagSetting)
+                    ? n
+                    : null == (t = r.Z.getChannel(e))
+                      ? void 0
+                      : t.getDefaultTagSetting();
+            });
     }
 }
 let a = new o();

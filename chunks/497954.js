@@ -16,18 +16,18 @@ let g = (e) => {
             [d.Z],
             () => ({
                 isIgnored: d.Z.isIgnored(t.id),
-                isBlocked: d.Z.isBlocked(t.id)
+                isBlocked: d.Z.isBlocked(t.id),
             }),
-            [t]
+            [t],
         ),
         b = (0, i.e7)([c.Z], () => c.Z.getChannel(n), [n]),
         h = l.useMemo(() => u.ZP.getName(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, t), [b, t]),
         f = l.useCallback(() => {
-            (s.ZP.trackWithMetadata(m.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
+            s.ZP.trackWithMetadata(m.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
-                report_id: g
+                report_id: g,
             }),
-                a.Z.ignoreUser(t.id, 'web_iar_ignore_user_element', n));
+                a.Z.ignoreUser(t.id, "web_iar_ignore_user_element", n);
         }, [t, g, n]),
         v = l.useMemo(() => x || _, [x, _]);
     return (0, r.jsx)(o.ZP, {
@@ -35,6 +35,6 @@ let g = (e) => {
         description: p.intl.string(p.t.naWE6e),
         buttonText: v ? p.intl.string(p.t.nDdxOD) : p.intl.string(p.t.ICYEfX),
         buttonDisabled: v,
-        onButtonPress: f
+        onButtonPress: f,
     });
 };

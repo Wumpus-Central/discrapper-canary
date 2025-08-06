@@ -1,1 +1,1 @@
-e.exports = { defaultColor: 'defaultColor__5345c' };
+e.exports = { defaultColor: "defaultColor__5345c" };

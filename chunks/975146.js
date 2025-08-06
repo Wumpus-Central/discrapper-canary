@@ -14,7 +14,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,7 +43,8 @@ function f(e, t) {
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -53,32 +54,32 @@ function _(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function p(e) {
     let { className: t, count: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(c.root, c.comboIcon, t),
         children: [
             (0, r.jsx)(a.BFJ, {
-                size: 'md',
-                color: 'currentColor',
-                className: c.icon
+                size: "md",
+                color: "currentColor",
+                className: c.icon,
             }),
             null != n &&
                 (0, r.jsx)(a.Text, {
-                    color: 'none',
+                    color: "none",
                     className: c.count,
-                    variant: 'text-md/normal',
-                    children: n
-                })
-        ]
+                    variant: "text-md/normal",
+                    children: n,
+                }),
+        ],
     });
 }
 function h(e) {
     var { count: t } = e,
-        n = f(e, ['count']);
+        n = f(e, ["count"]);
     return (0, r.jsx)(
         s.Z,
         d(
@@ -88,12 +89,12 @@ function h(e) {
                     let { className: n } = e;
                     return (0, r.jsx)(p, {
                         className: n,
-                        count: t
+                        count: t,
                     });
                 },
-                tooltipPosition: 'bottom'
+                tooltipPosition: "bottom",
             },
-            n
-        )
+            n,
+        ),
     );
 }

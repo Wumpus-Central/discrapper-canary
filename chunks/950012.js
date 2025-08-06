@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685));
+n.d(t, { Z: () => u }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(994640),
@@ -10,8 +10,8 @@ var r = n(255367),
 let u = (e) => {
     let { onClose: t, invite: n, forceGuildScrollHeight: u = !0, isNUXFlow: m } = e,
         [h, f] = l.useState([d.tF.VERIFY_EMAIL]),
-        [x, p] = l.useState(''),
-        [g, _] = l.useState(''),
+        [x, p] = l.useState(""),
+        [g, _] = l.useState(""),
         [v, N] = l.useState(void 0),
         [E, S] = l.useState([]),
         y = (e) => {
@@ -27,7 +27,7 @@ let u = (e) => {
                 setGuildId: N,
                 invite: n,
                 onClose: t,
-                isNUXFlow: m
+                isNUXFlow: m,
             });
         case d.tF.SELECT_SCHOOL:
             return (0, r.jsx)(a.Z, {
@@ -35,7 +35,7 @@ let u = (e) => {
                 setStep: y,
                 email: x,
                 setGuildId: N,
-                forceGuildScrollHeight: u
+                forceGuildScrollHeight: u,
             });
         case d.tF.SUBMIT_SCHOOL:
             return (0, r.jsx)(s.Z, {
@@ -45,18 +45,18 @@ let u = (e) => {
                 setStep: y,
                 email: x,
                 school: g,
-                setSchool: _
+                setSchool: _,
             });
         case d.tF.VERIFY_PIN:
             return (0, r.jsx)(o.Z, {
                 email: x,
                 onClose: t,
-                guildId: v
+                guildId: v,
             });
         case d.tF.EMAIL_WAITLIST:
             return (0, r.jsx)(c.Z, {
                 setStep: y,
-                school: g
+                school: g,
             });
         default:
             return null;

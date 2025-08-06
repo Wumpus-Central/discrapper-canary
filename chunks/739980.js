@@ -12,7 +12,7 @@ function d(e) {
         n = u.jU.useSetting(),
         { content: d } = (0, i.ZP)(t, {
             allowHeading: !0,
-            allowLinks: !0
+            allowLinks: !0,
         }),
         f = t.attachments.map((e, t) => {
             let n = (0, o.Yi)({
@@ -23,31 +23,31 @@ function d(e) {
                 width: void 0 !== e.width ? e.width : 225,
                 maxHeight: 225,
                 maxWidth: 225,
-                analyticsSource: 'ApplicationCommandSharePreview'
+                analyticsSource: "ApplicationCommandSharePreview",
             });
             return (0, r.jsx)(l.Fragment, { children: n }, t);
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: c.previewContainer,
         children: [
-            (0, r.jsx)('div', { className: c.quote }),
-            (0, r.jsxs)('div', {
+            (0, r.jsx)("div", { className: c.quote }),
+            (0, r.jsxs)("div", {
                 className: c.content,
                 children: [
                     (0, r.jsx)(s.ZP, {
                         message: t,
                         content: d,
-                        compact: n
+                        compact: n,
                     }),
                     f,
                     t.components.length > 0
                         ? (0, r.jsx)(a.ZP, {
                               message: t,
-                              shouldDisableInteractiveComponents: !0
+                              shouldDisableInteractiveComponents: !0,
                           })
-                        : null
-                ]
-            })
-        ]
+                        : null,
+                ],
+            }),
+        ],
     });
 }

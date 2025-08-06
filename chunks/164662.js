@@ -1,4 +1,4 @@
-(n.d(t, { E: () => s }), n(388685));
+n.d(t, { E: () => s }), n(388685);
 var i = n(73800),
     r = n(434650);
 let s = function () {
@@ -11,8 +11,8 @@ let s = function () {
                 n(e.intersectionRatio);
             },
             s,
-            e
+            e,
         ),
-        visibilityPercentage: t
+        visibilityPercentage: t,
     };
 };

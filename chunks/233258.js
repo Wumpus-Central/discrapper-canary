@@ -35,9 +35,9 @@ var e = n(220159),
     N = n(770050),
     _ = n(89416),
     z = n(958288).forEach,
-    G = I('hidden'),
-    U = 'Symbol',
-    B = 'prototype',
+    G = I("hidden"),
+    U = "Symbol",
+    B = "prototype",
     W = _.set,
     J = _.getterFor(U),
     V = Object[B],
@@ -51,13 +51,13 @@ var e = n(220159),
     Q = S.f,
     tt = E.f,
     tr = u([].push),
-    tn = k('symbols'),
-    te = k('op-symbols'),
-    to = k('wks'),
+    tn = k("symbols"),
+    te = k("op-symbols"),
+    to = k("wks"),
     ti = !X || !X[B] || !X[B].findChild,
     tu = function (t, r, n) {
         var e = Z(V, r);
-        (e && delete V[r], $(t, r, n), e && t !== V && $(V, r, e));
+        e && delete V[r], $(t, r, n), e && t !== V && $(V, r, e);
     },
     ts =
         c &&
@@ -65,11 +65,11 @@ var e = n(220159),
             return (
                 7 !==
                 g(
-                    $({}, 'a', {
+                    $({}, "a", {
                         get: function () {
-                            return $(this, 'a', { value: 7 }).a;
-                        }
-                    })
+                            return $(this, "a", { value: 7 }).a;
+                        },
+                    }),
                 ).a
             );
         })
@@ -81,16 +81,21 @@ var e = n(220159),
             W(n, {
                 type: U,
                 tag: t,
-                description: r
+                description: r,
             }),
             c || (n.description = r),
             n
         );
     },
     tf = function (t, r, n) {
-        (t === V && tf(te, r, n), v(t));
+        t === V && tf(te, r, n), v(t);
         var e = h(r);
-        return (v(n), p(tn, e)) ? (n.enumerable ? (p(t, G) && t[G][e] && (t[G][e] = !1), (n = g(n, { enumerable: d(0, !1) }))) : (p(t, G) || $(t, G, d(1, g(null))), (t[G][e] = !0)), ts(t, e, n)) : $(t, e, n);
+        return (v(n), p(tn, e))
+            ? (n.enumerable
+                  ? (p(t, G) && t[G][e] && (t[G][e] = !1), (n = g(n, { enumerable: d(0, !1) })))
+                  : (p(t, G) || $(t, G, d(1, g(null))), (t[G][e] = !0)),
+              ts(t, e, n))
+            : $(t, e, n);
     },
     ta = function (t, r) {
         v(t);
@@ -105,14 +110,17 @@ var e = n(220159),
     tp = function (t) {
         var r = h(t),
             n = i(tt, this, r);
-        return (!(this === V && p(tn, r)) || !!p(te, r)) && (!(n || !p(this, r) || !p(tn, r) || (p(this, G) && this[G][r])) || n);
+        return (
+            (!(this === V && p(tn, r)) || !!p(te, r)) &&
+            (!(n || !p(this, r) || !p(tn, r) || (p(this, G) && this[G][r])) || n)
+        );
     },
     tl = function (t, r) {
         var n = y(t),
             e = h(r);
         if (!(n === V && p(tn, e)) || p(te, e)) {
             var o = Z(n, e);
-            return (o && p(tn, e) && !(p(n, G) && n[G][e]) && (o.enumerable = !0), o);
+            return o && p(tn, e) && !(p(n, G) && n[G][e]) && (o.enumerable = !0), o;
         }
     },
     tv = function (t) {
@@ -136,15 +144,15 @@ var e = n(220159),
             e
         );
     };
-(!f &&
+!f &&
     (T(
         (H = (K = function () {
-            if (l(H, this)) throw new q('Symbol is not a constructor');
+            if (l(H, this)) throw new q("Symbol is not a constructor");
             var t = arguments.length && void 0 !== arguments[0] ? x(arguments[0]) : void 0,
                 r = D(t),
                 n = function (t) {
                     var e = void 0 === this ? o : this;
-                    (e === V && i(n, te, t), p(e, G) && p(e[G], r) && (e[G][r] = !1));
+                    e === V && i(n, te, t), p(e, G) && p(e[G], r) && (e[G][r] = !1);
                     var u = d(1, t);
                     try {
                         ts(e, r, u);
@@ -158,17 +166,17 @@ var e = n(220159),
                     ti &&
                     ts(V, r, {
                         configurable: !0,
-                        set: n
+                        set: n,
                     }),
                 tc(r, t)
             );
         })[B]),
-        'toString',
+        "toString",
         function () {
             return J(this).tag;
-        }
+        },
     ),
-    T(K, 'withoutSetter', function (t) {
+    T(K, "withoutSetter", function (t) {
         return tc(D(t), t);
     }),
     (E.f = tp),
@@ -181,22 +189,22 @@ var e = n(220159),
         return tc(M(t), t);
     }),
     c &&
-        (P(H, 'description', {
+        (P(H, "description", {
             configurable: !0,
             get: function () {
                 return J(this).description;
-            }
+            },
         }),
-        s || T(V, 'propertyIsEnumerable', tp, { unsafe: !0 }))),
+        s || T(V, "propertyIsEnumerable", tp, { unsafe: !0 }))),
     e(
         {
             global: !0,
             constructor: !0,
             wrap: !0,
             forced: !f,
-            sham: !f
+            sham: !f,
         },
-        { Symbol: K }
+        { Symbol: K },
     ),
     z(b(to), function (t) {
         R(t);
@@ -205,7 +213,7 @@ var e = n(220159),
         {
             target: U,
             stat: !0,
-            forced: !f
+            forced: !f,
         },
         {
             useSetter: function () {
@@ -213,15 +221,15 @@ var e = n(220159),
             },
             useSimple: function () {
                 ti = !1;
-            }
-        }
+            },
+        },
     ),
     e(
         {
-            target: 'Object',
+            target: "Object",
             stat: !0,
             forced: !f,
-            sham: !c
+            sham: !c,
         },
         {
             create: function (t, r) {
@@ -229,17 +237,17 @@ var e = n(220159),
             },
             defineProperty: tf,
             defineProperties: ta,
-            getOwnPropertyDescriptor: tl
-        }
+            getOwnPropertyDescriptor: tl,
+        },
     ),
     e(
         {
-            target: 'Object',
+            target: "Object",
             stat: !0,
-            forced: !f
+            forced: !f,
         },
-        { getOwnPropertyNames: tv }
+        { getOwnPropertyNames: tv },
     ),
     C(),
     N(K, U),
-    (F[G] = !0));
+    (F[G] = !0);

@@ -21,7 +21,7 @@ function h(e) {
     function O() {
         d.Z.open({
             guildId: m,
-            productId: g
+            productId: g,
         });
     }
     return b
@@ -29,34 +29,34 @@ function h(e) {
               onClick: O,
               innerClassName: p.textWithIcon,
               children: [
-                  (0, r.jsx)('div', { children: _.intl.string(_.t.UyuiUF) }),
+                  (0, r.jsx)("div", { children: _.intl.string(_.t.UyuiUF) }),
                   (0, r.jsx)(l.LZC, {
                       size: 8,
-                      horizontal: !0
+                      horizontal: !0,
                   }),
                   (0, r.jsx)(c.Z, {
                       width: 16,
                       height: 16,
-                      direction: c.Z.Directions.RIGHT
-                  })
-              ]
+                      direction: c.Z.Directions.RIGHT,
+                  }),
+              ],
           })
-        : (o()(null != y, 'No attachment'),
+        : (o()(null != y, "No attachment"),
           (0, r.jsxs)(f.Z, {
               guildId: m,
               productId: g,
               attachmentId: y,
               innerClassName: p.textWithIcon,
               children: [
-                  (0, r.jsx)('div', { children: _.intl.string(_.t.t9bE9f) }),
+                  (0, r.jsx)("div", { children: _.intl.string(_.t.t9bE9f) }),
                   (0, r.jsx)(l.LZC, {
                       size: 8,
-                      horizontal: !0
+                      horizontal: !0,
                   }),
                   (0, r.jsx)(l._8t, {
-                      size: 'xs',
-                      color: 'currentColor'
-                  })
-              ]
+                      size: "xs",
+                      color: "currentColor",
+                  }),
+              ],
           }));
 }

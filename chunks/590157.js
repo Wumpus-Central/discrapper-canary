@@ -16,7 +16,7 @@ function g(e) {
         p = (0, l.e7)([c.Z], () => c.Z.isUnavailable());
     return (r.useEffect(() => (s.I4(t.id), s.kZ), [t.id]),
     r.useEffect(() => {
-        (s.gq(t.id, d, t.id), s.Sn(d, t.id));
+        s.gq(t.id, d, t.id), s.Sn(d, t.id);
     }, [t.id, d]),
     p)
         ? null
@@ -24,33 +24,33 @@ function g(e) {
               children: [
                   (0, i.jsx)(a.Z, {
                       icon: (0, i.jsx)(o.SsZ, {
-                          size: 'md',
-                          color: 'currentColor'
+                          size: "md",
+                          color: "currentColor",
                       }),
-                      title: m.intl.string(m.t.RGoJND)
+                      title: m.intl.string(m.t.RGoJND),
                   }),
                   (0, i.jsx)(o.Text, {
-                      color: 'text-muted',
-                      variant: 'text-sm/normal',
-                      children: m.intl.string(m.t.sCkD3d)
+                      color: "text-muted",
+                      variant: "text-sm/normal",
+                      children: m.intl.string(m.t.sCkD3d),
                   }),
                   (0, i.jsx)(f, {
                       guildId: d,
-                      applicationId: t.id
+                      applicationId: t.id,
                   }),
                   (0, i.jsx)(u.Z, {
                       applicationIcon: t.icon,
                       applicationName: t.name,
                       canNavigate: n,
-                      guildId: d
-                  })
-              ]
+                      guildId: d,
+                  }),
+              ],
           });
 }
 function f(e) {
     let { applicationId: t, guildId: n } = e,
         { originalApplicationPermissions: r, editedTargetPermissions: l, selectedPermissionCount: o } = (0, d.Z)(n, t);
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: b.applicationPermissions,
         children: (0, i.jsx)(p.Z, {
             applicationId: t,
@@ -58,7 +58,7 @@ function f(e) {
             inModal: !1,
             editedTargetPermissions: l,
             originalApplicationPermissions: r,
-            selectedPermissionCount: o
-        })
+            selectedPermissionCount: o,
+        }),
     });
 }

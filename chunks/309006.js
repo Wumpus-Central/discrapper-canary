@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => m,
-    a: () => h
+    a: () => h,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -21,11 +21,11 @@ function h(e) {
     return null == n
         ? {
               width: 0,
-              height: 0
+              height: 0,
           }
         : {
               width: n.width,
-              height: n.height
+              height: n.height,
           };
 }
 let m = i.forwardRef(function (e, t) {
@@ -40,8 +40,8 @@ let m = i.forwardRef(function (e, t) {
                 var e;
                 let t = (0, c._r)({
                         id: n.emojiId,
-                        name: null != (e = n.emojiName) ? e : '',
-                        animated: !1
+                        name: null != (e = n.emojiName) ? e : "",
+                        animated: !1,
                     }),
                     r = null != n.emojiId,
                     i = f.q.PREMIUM,
@@ -52,7 +52,7 @@ let m = i.forwardRef(function (e, t) {
                         animationType: i,
                         shouldResize: r,
                         url: t,
-                        userId: m.id
+                        userId: m.id,
                     };
                 b((e) => [...e, l]);
             }
@@ -62,16 +62,16 @@ let m = i.forwardRef(function (e, t) {
         b((t) => {
             let n = [...t],
                 r = n.findIndex((t) => t.id === e);
-            return (n.splice(r, 1), n);
+            return n.splice(r, 1), n;
         });
     }, []);
     return g || !O
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: _.effects,
               style: {
                   width: h.width,
-                  height: h.height
+                  height: h.height,
               },
               children: E.map((e) =>
                   (0, r.jsx)(
@@ -79,10 +79,10 @@ let m = i.forwardRef(function (e, t) {
                       {
                           containerDimensions: h,
                           effect: e,
-                          onComplete: I
+                          onComplete: I,
                       },
-                      e.id
-                  )
-              )
+                      e.id,
+                  ),
+              ),
           });
 });

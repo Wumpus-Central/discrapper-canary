@@ -18,9 +18,9 @@ function y(t, n) {
         {
             text: t,
             className: p.newBadge,
-            color: o.Z.unsafe_rawColors.BRAND_500.css
+            color: o.Z.unsafe_rawColors.BRAND_500.css,
         },
-        n
+        n,
     );
 }
 function O(t) {
@@ -35,27 +35,29 @@ function O(t) {
                         r,
                         o = {},
                         a = Object.keys(t);
-                    for (r = 0; r < a.length; r++) ((e = a[r]), n.indexOf(e) >= 0 || (o[e] = t[e]));
+                    for (r = 0; r < a.length; r++) (e = a[r]), n.indexOf(e) >= 0 || (o[e] = t[e]);
                     return o;
                 })(t, n);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < a.length; r++) ((e = a[r]), !(n.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(t, e) && (o[e] = t[e]));
+                for (r = 0; r < a.length; r++)
+                    (e = a[r]),
+                        !(n.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(t, e) && (o[e] = t[e]);
             }
             return o;
-        })(t, ['guildCount', 'onClose', 'analyticsLocations']);
+        })(t, ["guildCount", "onClose", "analyticsLocations"]);
     let O = function (t, n) {
             return (0, r.jsx)(
                 a.P3F,
                 {
                     className: d.learnMoreLink,
-                    tag: 'span',
+                    tag: "span",
                     onClick: () => {
-                        (e(), (0, i.z)());
+                        e(), (0, i.z)();
                     },
-                    children: t
+                    children: t,
                 },
-                n
+                n,
             );
         },
         { analyticsLocations: g } = (0, c.ZP)(o);
@@ -67,24 +69,24 @@ function O(t) {
                 for (var n = 1; n < arguments.length; n++) {
                     var e = null != arguments[n] ? arguments[n] : {},
                         r = Object.keys(e);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(e).filter(function (t) {
                                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (n) {
                             var r;
-                            ((r = e[n]),
+                            (r = e[n]),
                                 n in t
                                     ? Object.defineProperty(t, n, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (t[n] = r));
-                        }));
+                                    : (t[n] = r);
+                        });
                 }
                 return t;
             })(
@@ -95,20 +97,23 @@ function O(t) {
                     title: f.intl.string(f.t.CoNXBw),
                     body:
                         n < u.DZw
-                            ? f.intl.format(f.t['5qLH7O'], {
+                            ? f.intl.format(f.t["5qLH7O"], {
                                   guildCount: n,
                                   onAndMore: O,
-                                  newBadgeHook: y
+                                  newBadgeHook: y,
                               })
                             : f.intl.format(f.t.mk9CS0, {
                                   onAndMore: O,
-                                  newBadgeHook: y
+                                  newBadgeHook: y,
                               }),
-                    context: n < u.DZw ? f.intl.formatToPlainString(f.t['C+Hqzs'], { guildCount: n }) : f.intl.string(f.t.m0xavb),
-                    glowUp: f.intl.format(f.t['6Dl5X1'], { onAndMore: O })
+                    context:
+                        n < u.DZw
+                            ? f.intl.formatToPlainString(f.t["C+Hqzs"], { guildCount: n })
+                            : f.intl.string(f.t.m0xavb),
+                    glowUp: f.intl.format(f.t["6Dl5X1"], { onAndMore: O }),
                 },
-                p
-            )
-        )
+                p,
+            ),
+        ),
     });
 }

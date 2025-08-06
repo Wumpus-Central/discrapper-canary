@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,41 +65,41 @@ function p(e) {
         ? (0, r.jsx)(o.yRy, {
               targetElementRef: u,
               animation: o.yRy.Animation.TRANSLATE,
-              align: 'center',
+              align: "center",
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
-              position: 'right',
+              position: "right",
               renderPopout: (e) => {
                   let { closePopout: i } = e;
                   return (0, r.jsx)(s.Z, {
                       guild: t,
                       message: n,
-                      onClose: i
+                      onClose: i,
                   });
               },
               children: (e) => {
                   let { onClick: t } = e;
                   return (0, r.jsx)(o.P3F, {
                       onClick: t,
-                      tag: 'span',
+                      tag: "span",
                       innerRef: u,
                       children: (0, r.jsx)(o.ua7, {
-                          text: l.intl.string(l.t['v/OYd3']),
+                          text: l.intl.string(l.t["v/OYd3"]),
                           children: (e) =>
                               (0, r.jsx)(
-                                  'div',
+                                  "div",
                                   _(d({ className: c.newMemberBadge }, e), {
                                       children: (0, r.jsx)(o.hg2, {
-                                          size: 'custom',
-                                          color: 'currentColor',
+                                          size: "custom",
+                                          color: "currentColor",
                                           width: 20,
-                                          height: 20
-                                      })
-                                  })
-                              )
-                      })
+                                          height: 20,
+                                      }),
+                                  }),
+                              ),
+                      }),
                   });
-              }
+              },
           })
         : null;
 }

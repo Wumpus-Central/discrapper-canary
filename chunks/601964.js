@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Cx: () => c,
     EB: () => u,
     VI: () => l,
@@ -8,18 +8,18 @@
     kH: () => m,
     lV: () => h,
     yn: () => _,
-    zN: () => p
+    zN: () => p,
 }),
-    n(388685));
+    n(388685);
 var r = n(311929),
     i = n(768581),
     o = n(709054),
     a = n(624138),
     s = n(981631);
-let l = 'Guild',
+let l = "Guild",
     c = Object.freeze({
         mfaLevel: s.BpS.NONE,
-        preferredLocale: 'en-US',
+        preferredLocale: "en-US",
         afkTimeout: 0,
         defaultMessageNotifications: s.bL.ALL_MESSAGES,
         verificationLevel: s.sFg.NONE,
@@ -53,7 +53,7 @@ let l = 'Guild',
         latestOnboardingQuestionId: null,
         profile: null,
         premiumFeatures: null,
-        moderatorReporting: null
+        moderatorReporting: null,
     });
 function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -63,14 +63,14 @@ function u(e, t) {
         size: t,
         icon: e.icon,
         canAnimate: n,
-        lossless: r
+        lossless: r,
     });
 }
 function d(e) {
     return (0, a.Zg)(e.name);
 }
 function f(e, t) {
-    let n = 'string' == typeof t ? t : null != t ? t.id : null;
+    let n = "string" == typeof t ? t : null != t ? t.id : null;
     return e.ownerId === n;
 }
 function _(e, t) {
@@ -83,8 +83,11 @@ function h(e) {
     return o.default.castGuildIdAsEveryoneGuildRoleId(e.id);
 }
 function m(e, t) {
-    return (0, r.t8)(e, 'joinedAt', 'string' == typeof t ? new Date(t) : t);
+    return (0, r.t8)(e, "joinedAt", "string" == typeof t ? new Date(t) : t);
 }
 function g(e) {
-    return null != e && (e.ownerConfiguredContentLevel === s.V_K.EXPLICIT || e.ownerConfiguredContentLevel === s.V_K.AGE_RESTRICTED);
+    return (
+        null != e &&
+        (e.ownerConfiguredContentLevel === s.V_K.EXPLICIT || e.ownerConfiguredContentLevel === s.V_K.AGE_RESTRICTED)
+    );
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Y: () => o,
-    a: () => i
+    a: () => i,
 });
 let r = !1;
 function i() {

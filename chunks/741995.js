@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(781311), n(290780));
+n.d(t, { Z: () => b }), n(781311), n(290780);
 var r,
     i = n(442837),
     o = n(433517),
@@ -11,27 +11,33 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 let c = s.OA,
-    u = 'tokenized',
+    u = "tokenized",
     d = !1,
     f = {};
 function _(e) {
     var t;
     let { id: n, query: r } = e;
-    if ('string' != typeof r || '' === (r = r.trim())) return;
+    if ("string" != typeof r || "" === (r = r.trim())) return;
     let i = (f[n] = null != (t = f[n]) ? t : []),
         a = i.indexOf(r);
-    (-1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), o.K.set(s.OA, { history: f }));
+    -1 !== a
+        ? (i.splice(a, 1), i.unshift(r))
+        : null != i[0] && "" !== i[0] && r.startsWith(i[0])
+          ? (i[0] = r)
+          : a < 0 && i.unshift(r),
+        i.length > 5 && i.splice(5, i.length),
+        o.K.set(s.OA, { history: f });
 }
 function p(e) {
     let { id: t } = e;
-    (delete f[t], o.K.set(s.OA, { history: f }));
+    delete f[t], o.K.set(s.OA, { history: f });
 }
 function h(e) {
     let { id: t, query: n } = e;
@@ -40,18 +46,19 @@ function h(e) {
 function m(e) {
     return (
         Object.keys(e).forEach((t) => {
-            (Array.isArray(e[t]) && (e[t] = e[t].filter((e) => 'string' == typeof e && e.trim())), (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t]);
+            Array.isArray(e[t]) && (e[t] = e[t].filter((e) => "string" == typeof e && e.trim())),
+                (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t];
         }),
         e
     );
 }
 function g() {
-    (o.K.remove(s.OA), (f = {}));
+    o.K.remove(s.OA), (f = {});
 }
 class E extends (r = i.ZP.Store) {
     initialize() {
         let e = o.K.get(c);
-        ((null == e ? void 0 : e.history) != null && (f = m(e.history)), (d = !!o.K.get(u)));
+        (null == e ? void 0 : e.history) != null && (f = m(e.history)), (d = !!o.K.get(u));
     }
     isTokenized() {
         return d;
@@ -60,10 +67,10 @@ class E extends (r = i.ZP.Store) {
         return f[e];
     }
 }
-l(E, 'displayName', s.zn);
+l(E, "displayName", s.zn);
 let b = new E(a.Z, {
     SEARCH_HISTORY_WEB_CLEAR_ITEMS: p,
     SEARCH_HISTORY_WEB_REMOVE_ITEM: h,
     SEARCH_HISTORY_WEB_ADD_ITEM: _,
-    LOGOUT: g
+    LOGOUT: g,
 });

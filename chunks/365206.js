@@ -16,7 +16,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,7 +45,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -55,28 +56,28 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let m = 40,
     g = 18;
 function E(e) {
     let { didSelfVote: t, label: n, percentage: i } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: d.votesData,
         children: [
-            t && (0, r.jsx)(a.T, { children: u.intl.string(u.t['8DAM+/']) }),
+            t && (0, r.jsx)(a.T, { children: u.intl.string(u.t["8DAM+/"]) }),
             (0, r.jsxs)(s.Text, {
-                variant: 'text-md/semibold',
-                color: 'none',
-                children: [i, '%']
+                variant: "text-md/semibold",
+                color: "none",
+                children: [i, "%"],
             }),
             (0, r.jsx)(s.Text, {
-                variant: 'text-xs/semibold',
-                color: 'none',
-                children: n
-            })
-        ]
+                variant: "text-xs/semibold",
+                color: "none",
+                children: n,
+            }),
+        ],
     });
 }
 function b(e) {
@@ -90,14 +91,14 @@ function b(e) {
                 attachmentClassName: o()(d.attachment, { [d.attachmentWithResults]: a }),
                 emojiClassName: d.emoji,
                 media: t.pollMedia,
-                fallback: (0, r.jsx)('div', { className: o()(d.attachment, d.mediaMissing) })
+                fallback: (0, r.jsx)("div", { className: o()(d.attachment, d.mediaMissing) }),
             }),
             s &&
                 (0, r.jsx)(c.ZY, {
                     size: m,
                     isVictor: u,
                     isExpired: n,
-                    className: d.selectedIcon
+                    className: d.selectedIcon,
                 }),
             a &&
                 (0, r.jsxs)(r.Fragment, {
@@ -106,23 +107,23 @@ function b(e) {
                             didSelfVote: l,
                             percentage: t.votesPercentage,
                             label: t.votes,
-                            myAvatarUrl: l ? i : void 0
+                            myAvatarUrl: l ? i : void 0,
                         }),
                         ((!n && l) || u) &&
                             (0, r.jsx)(c.ZY, {
                                 size: g,
                                 isVictor: u,
                                 isExpired: n,
-                                className: d.pollAnswerIcon
-                            })
-                    ]
-                })
-        ]
+                                className: d.pollAnswerIcon,
+                            }),
+                    ],
+                }),
+        ],
     });
 }
 function y(e) {
     var { isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: a } = e,
-        s = p(e, ['isExpired', 'myAvatarUrl', 'answersInteraction', 'canShowVoteCounts']);
+        s = p(e, ["isExpired", "myAvatarUrl", "answersInteraction", "canShowVoteCounts"]);
     return (0, r.jsx)(
         c.$e,
         _(
@@ -137,10 +138,10 @@ function y(e) {
                         isExpired: t,
                         myAvatarUrl: n,
                         answersInteraction: i,
-                        canShowVoteCounts: a
-                    })
+                        canShowVoteCounts: a,
+                    }),
             },
-            s
-        )
+            s,
+        ),
     );
 }

@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     KB: () => O,
     b6: () => I,
-    wD: () => b
+    wD: () => b,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -33,7 +33,9 @@ function O(e) {
     let [w, D] = i.useState(P),
         L = (0, c.iE)(),
         [x, M] = i.useState(),
-        [k, j] = i.useState(t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u),
+        [k, j] = i.useState(
+            t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u,
+        ),
         [U, G] = i.useState(void 0),
         [B, Z] = i.useState(void 0),
         F = (0, d.E5)(O, t),
@@ -47,14 +49,14 @@ function O(e) {
                     W(!0),
                     (0, s.YD)(v, F)
                         .then(() => {
-                            (W(!1), null == t || t(), H(!0));
+                            W(!1), null == t || t(), H(!0);
                         })
                         .catch((e) => {
-                            (W(!1), z(e), H(!0));
+                            W(!1), z(e), H(!0);
                         })
                 );
             },
-            [v, F, W, H, z]
+            [v, F, W, H, z],
         ),
         X = (0, o.Wu)([a.Z], () => a.Z.recommendedGiftSkuIds);
     return (0, r.jsx)(E.Provider, {
@@ -84,9 +86,9 @@ function O(e) {
             giftingOrigin: b,
             claimableRewards: L,
             selectedGiftingPromotionReward: x,
-            setSelectedGiftingPromotionReward: M
+            setSelectedGiftingPromotionReward: M,
         },
-        children: y
+        children: y,
     });
 }
 let v = {
@@ -103,12 +105,12 @@ let v = {
         giftMessageError: void 0,
         recommendedGiftSkuIds: [],
         claimableRewards: void 0,
-        setSelectedGiftingPromotionReward: _.dG4
+        setSelectedGiftingPromotionReward: _.dG4,
     },
     I = (e) => {
         let { children: t } = e;
         return (0, r.jsx)(E.Provider, {
             value: v,
-            children: t
+            children: t,
         });
     };

@@ -6,19 +6,28 @@ n.d(t, {
     Yn: () => o.Yn,
     aB: () => i.a,
     jj: () => u,
-    zZ: () => s
+    zZ: () => s,
 });
 var r = n(839548),
     i = n(946695),
     o = n(65154),
     a = (function (e) {
-        return ((e.INPUT_DEVICE = 'input_device'), (e.STREAM = 'stream'), e);
+        return (e.INPUT_DEVICE = "input_device"), (e.STREAM = "stream"), e;
     })({}),
     s = (function (e) {
-        return ((e.NONE = ''), (e.BACKGROUND_BLUR = 'background_blur'), (e.BACKGROUND_REPLACEMENT = 'background_replacement'), e);
+        return (
+            (e.NONE = ""),
+            (e.BACKGROUND_BLUR = "background_blur"),
+            (e.BACKGROUND_REPLACEMENT = "background_replacement"),
+            e
+        );
     })({}),
     l = (function (e) {
-        return ((e.CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (e.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive'), e);
+        return (
+            (e.CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview"),
+            (e.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"),
+            e
+        );
     })({});
 function c(e) {
     switch (e) {

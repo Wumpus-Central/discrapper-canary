@@ -1,1 +1,1 @@
-n(882674)('hasInstance');
+n(882674)("hasInstance");

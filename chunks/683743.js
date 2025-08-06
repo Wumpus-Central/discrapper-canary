@@ -11,19 +11,19 @@ function u() {
 }
 class d extends (l = a.ZP.Store) {
     initialize() {
-        (this.waitFor(s.Z), this.syncWith([s.Z], u));
+        this.waitFor(s.Z), this.syncWith([s.Z], u);
     }
     channelNoticePredicate(e, t) {
         return Date.now() - t >= c.Hqc && s.Z.can(c.Plq.ADMINISTRATOR, e);
     }
 }
-((i = 'InviteNoticeStore'),
-    (r = 'displayName') in d
+(i = "InviteNoticeStore"),
+    (r = "displayName") in d
         ? Object.defineProperty(d, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (d[r] = i));
+        : (d[r] = i);
 let p = new d(o.Z);

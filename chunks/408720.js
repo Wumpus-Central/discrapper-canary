@@ -23,34 +23,36 @@ let T = (0, o._I)((t = {}) => {
         history: !0,
         sentry: !0,
         xhr: !0,
-        ...t
+        ...t,
     };
     return {
-        name: 'Breadcrumbs',
+        name: "Breadcrumbs",
         setup(t) {
             var a, o, T, p, L, h, O;
-            (e.console &&
+            e.console &&
                 (0, E.e)(
                     ((a = t),
                     function (t) {
                         if ((0, i.s3)() !== a) return;
                         let e = {
-                            category: 'console',
+                            category: "console",
                             data: {
                                 arguments: t.args,
-                                logger: 'console'
+                                logger: "console",
                             },
                             level: (0, R.V)(t.level),
-                            message: (0, d.nK)(t.args, ' ')
+                            message: (0, d.nK)(t.args, " "),
                         };
-                        if ('assert' === t.level)
+                        if ("assert" === t.level)
                             if (!1 !== t.args[0]) return;
-                            else ((e.message = `Assertion failed: ${(0, d.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1)));
+                            else
+                                (e.message = `Assertion failed: ${((0, d.nK))(t.args.slice(1), " ") || "console.assert"}`),
+                                    (e.data.arguments = t.args.slice(1));
                         (0, c.n)(e, {
                             input: t.args,
-                            level: t.level
+                            level: t.level,
                         });
-                    })
+                    }),
                 ),
                 e.dom &&
                     (0, r.O)(
@@ -59,33 +61,43 @@ let T = (0, o._I)((t = {}) => {
                         function (t) {
                             let e, a;
                             if ((0, i.s3)() !== o) return;
-                            let r = 'object' == typeof T ? T.serializeAttribute : void 0,
-                                _ = 'object' == typeof T && 'number' == typeof T.maxStringLength ? T.maxStringLength : void 0;
-                            (_ && _ > 1024 && (A.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${_} was configured. Sentry will use 1024 instead.`), (_ = 1024)), 'string' == typeof r && (r = [r]));
+                            let r = "object" == typeof T ? T.serializeAttribute : void 0,
+                                _ =
+                                    "object" == typeof T && "number" == typeof T.maxStringLength
+                                        ? T.maxStringLength
+                                        : void 0;
+                            _ &&
+                                _ > 1024 &&
+                                (A.X &&
+                                    u.kg.warn(
+                                        `\`dom.maxStringLength\` cannot exceed 1024, but a value of ${_} was configured. Sentry will use 1024 instead.`,
+                                    ),
+                                (_ = 1024)),
+                                "string" == typeof r && (r = [r]);
                             try {
                                 var n;
                                 let o = t.event,
                                     i = (n = o) && n.target ? o.target : o;
-                                ((e = (0, I.Rt)(i, {
+                                (e = (0, I.Rt)(i, {
                                     keyAttrs: r,
-                                    maxStringLength: _
+                                    maxStringLength: _,
                                 })),
-                                    (a = (0, I.iY)(i)));
+                                    (a = (0, I.iY)(i));
                             } catch (t) {
-                                e = '<unknown>';
+                                e = "<unknown>";
                             }
                             if (0 === e.length) return;
                             let E = {
                                 category: `ui.${t.name}`,
-                                message: e
+                                message: e,
                             };
-                            (a && (E.data = { 'ui.component_name': a }),
+                            a && (E.data = { "ui.component_name": a }),
                                 (0, c.n)(E, {
                                     event: t.event,
                                     name: t.name,
-                                    global: t.global
-                                }));
-                        })
+                                    global: t.global,
+                                });
+                        }),
                     ),
                 e.xhr &&
                     (0, _.UK)(
@@ -100,21 +112,21 @@ let T = (0, o._I)((t = {}) => {
                                     xhr: t.xhr,
                                     input: s,
                                     startTimestamp: e,
-                                    endTimestamp: a
+                                    endTimestamp: a,
                                 };
                             (0, c.n)(
                                 {
-                                    category: 'xhr',
+                                    category: "xhr",
                                     data: {
                                         method: n,
                                         url: o,
-                                        status_code: E
+                                        status_code: E,
                                     },
-                                    type: 'http'
+                                    type: "http",
                                 },
-                                l
+                                l,
                             );
-                        })
+                        }),
                     ),
                 e.fetch &&
                     (0, s.Uf)(
@@ -122,46 +134,46 @@ let T = (0, o._I)((t = {}) => {
                         function (t) {
                             if ((0, i.s3)() !== L) return;
                             let { startTimestamp: e, endTimestamp: a } = t;
-                            if (a && (!t.fetchData.url.match(/sentry_key/) || 'POST' !== t.fetchData.method))
+                            if (a && (!t.fetchData.url.match(/sentry_key/) || "POST" !== t.fetchData.method))
                                 if (t.error) {
                                     let r = t.fetchData,
                                         _ = {
                                             data: t.error,
                                             input: t.args,
                                             startTimestamp: e,
-                                            endTimestamp: a
+                                            endTimestamp: a,
                                         };
                                     (0, c.n)(
                                         {
-                                            category: 'fetch',
+                                            category: "fetch",
                                             data: r,
-                                            level: 'error',
-                                            type: 'http'
+                                            level: "error",
+                                            type: "http",
                                         },
-                                        _
+                                        _,
                                     );
                                 } else {
                                     let r = t.response,
                                         _ = {
                                             ...t.fetchData,
-                                            status_code: r && r.status
+                                            status_code: r && r.status,
                                         },
                                         n = {
                                             input: t.args,
                                             response: r,
                                             startTimestamp: e,
-                                            endTimestamp: a
+                                            endTimestamp: a,
                                         };
                                     (0, c.n)(
                                         {
-                                            category: 'fetch',
+                                            category: "fetch",
                                             data: _,
-                                            type: 'http'
+                                            type: "http",
                                         },
-                                        n
+                                        n,
                                     );
                                 }
-                        })
+                        }),
                     ),
                 e.history &&
                     (0, n.a)(
@@ -173,35 +185,35 @@ let T = (0, o._I)((t = {}) => {
                                 r = (0, N.en)(f.m9.location.href),
                                 _ = e ? (0, N.en)(e) : void 0,
                                 n = (0, N.en)(a);
-                            ((_ && _.path) || (_ = r),
+                            (_ && _.path) || (_ = r),
                                 r.protocol === n.protocol && r.host === n.host && (a = n.relative),
                                 r.protocol === _.protocol && r.host === _.host && (e = _.relative),
                                 (0, c.n)({
-                                    category: 'navigation',
+                                    category: "navigation",
                                     data: {
                                         from: e,
-                                        to: a
-                                    }
-                                }));
-                        })
+                                        to: a,
+                                    },
+                                });
+                        }),
                     ),
                 e.sentry &&
                     t.on(
-                        'beforeSendEvent',
+                        "beforeSendEvent",
                         ((O = t),
                         function (t) {
                             (0, i.s3)() === O &&
                                 (0, c.n)(
                                     {
-                                        category: `sentry.${'transaction' === t.type ? 'transaction' : 'event'}`,
+                                        category: `sentry.${"transaction" === t.type ? "transaction" : "event"}`,
                                         event_id: t.event_id,
                                         level: t.level,
-                                        message: (0, l.jH)(t)
+                                        message: (0, l.jH)(t),
                                     },
-                                    { event: t }
+                                    { event: t },
                                 );
-                        })
-                    ));
-        }
+                        }),
+                    );
+        },
     };
 });

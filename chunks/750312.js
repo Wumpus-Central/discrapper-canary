@@ -8,16 +8,16 @@ var l = n(793030),
 function c(e) {
     let { title: t, subtitle: n, children: c } = e,
         s = (0, o.Dt)();
-    return (0, r.jsx)('section', {
+    return (0, r.jsx)("section", {
         className: a.container,
-        'aria-labelledby': s,
+        "aria-labelledby": s,
         children: (0, r.jsx)(l.y5, {
             component: (0, r.jsx)(i.Z, {
                 title: t,
                 subtitle: n,
-                headingId: s
+                headingId: s,
             }),
-            children: c
-        })
+            children: c,
+        }),
     });
 }

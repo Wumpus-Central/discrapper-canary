@@ -11,9 +11,9 @@ function o() {
             {
                 id: e.id,
                 label: e.title,
-                action: () => (0, l.Z)(e.id)
+                action: () => (0, l.Z)(e.id),
             },
-            e.id
-        )
+            e.id,
+        ),
     );
 }

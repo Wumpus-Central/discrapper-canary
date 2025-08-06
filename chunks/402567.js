@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var i = n(73800),
     r = n(442837),
     s = n(607070),
@@ -18,13 +18,13 @@ function p() {
         {
             banner: u,
             themeColors: p,
-            avatarDecorationSkuId: g
+            avatarDecorationSkuId: g,
         } = (0, i.useMemo)(() => {
             let n = (0, c.Ib)(t);
             return {
                 banner: n.getBannerSrc(e),
                 themeColors: n.themeColors,
-                avatarDecorationSkuId: n.avatarDecorationSkuId
+                avatarDecorationSkuId: n.avatarDecorationSkuId,
             };
         }, [t, e]),
         h = (0, r.e7)([a.Z], () => {
@@ -36,15 +36,15 @@ function p() {
         (0, l.x3)({
             banner: u,
             themeColors: p,
-            avatarDecoration: h
+            avatarDecoration: h,
         });
     }, [u, p, h]);
     let f = (0, i.useCallback)(() => {
         let e = m(t);
-        (n(e), o.default.track(d.rMx.TRY_IT_OUT_PRESET_SHUFFLED, { preset: e }));
+        n(e), o.default.track(d.rMx.TRY_IT_OUT_PRESET_SHUFFLED, { preset: e });
     }, [t]);
     return {
         preset: t,
-        onShuffle: f
+        onShuffle: f,
     };
 }

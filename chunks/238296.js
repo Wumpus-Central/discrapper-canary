@@ -1,7 +1,7 @@
 n.d(t, {
     E: () => S,
     Y: () => x,
-    default: () => D
+    default: () => D,
 });
 var i = n(255367);
 n(73800);
@@ -31,8 +31,8 @@ function x(e) {
             guildId: o,
             channelId: l,
             showGuildProfile: !0,
-            icon: (0, i.jsx)(r.tBG, { size: 'sm' }),
-            label: h.intl.string(h.t.iXAna2)
+            icon: (0, i.jsx)(r.tBG, { size: "sm" }),
+            label: h.intl.string(h.t.iXAna2),
         }),
         d = (0, p.Z)(n, c, r.kBi),
         f = (0, Z.Z)(n),
@@ -42,11 +42,11 @@ function x(e) {
         y = (0, b.Z)();
     return [
         (0, i.jsxs)(r.kSQ, {
-            children: [s, d]
+            children: [s, d],
         }),
         (0, i.jsxs)(r.kSQ, {
-            children: [f, g, j, m, t && y]
-        })
+            children: [f, g, j, m, t && y],
+        }),
     ];
 }
 function S(e, t, n) {
@@ -54,32 +54,32 @@ function S(e, t, n) {
             userId: e.id,
             channelId: t,
             guildId: n,
-            minimal: !0
+            minimal: !0,
         }),
         o = (0, f.Z)({
             id: e.id,
-            label: h.intl.string(h.t['/AXYnJ'])
+            label: h.intl.string(h.t["/AXYnJ"]),
         }),
         c = (0, m.Z)({
             user: e,
             guildId: n,
             channelId: t,
-            location: 'GuildVoiceUserContextMenu'
+            location: "GuildVoiceUserContextMenu",
         }),
         s = (0, j.Z)({
             user: e,
             guildId: n,
             channelId: t,
-            location: 'GuildVoiceUserContextMenu'
+            location: "GuildVoiceUserContextMenu",
         }),
         a = (0, i.jsxs)(r.kSQ, {
-            children: [l, o]
+            children: [l, o],
         });
     return [
         (0, i.jsxs)(r.kSQ, {
-            children: [c, s]
+            children: [c, s],
         }),
-        a
+        a,
     ];
 }
 let D = (0, c.Z)(
@@ -93,20 +93,20 @@ let D = (0, c.Z)(
                     isOwnSettings: d,
                     userId: t.id,
                     channelId: a,
-                    context: s
+                    context: s,
                 }),
                 j = S(t, a),
                 m = (0, f.Z)({
                     id: t.id,
-                    label: h.intl.string(h.t['/AXYnJ'])
+                    label: h.intl.string(h.t["/AXYnJ"]),
                 });
             return (0, i.jsx)(r.v2r, {
-                navId: 'user-context',
+                navId: "user-context",
                 onClose: l.Zy,
-                'aria-label': h.intl.string(h.t.liqwPD),
+                "aria-label": h.intl.string(h.t.liqwPD),
                 onSelect: o,
                 onInteraction: c,
-                variant: 'fixed',
+                variant: "fixed",
                 children:
                     !u &&
                     (0, i.jsxs)(i.Fragment, {
@@ -115,17 +115,17 @@ let D = (0, c.Z)(
                             !d &&
                                 (0, i.jsx)(r.kSQ, {
                                     children: (0, i.jsx)(r.sNh, {
-                                        id: 'more-options',
+                                        id: "more-options",
                                         label: h.intl.string(h.t.PdRCRk),
-                                        children: j
-                                    })
+                                        children: j,
+                                    }),
                                 }),
-                            d && (0, i.jsx)(r.kSQ, { children: m })
-                        ]
-                    })
+                            d && (0, i.jsx)(r.kSQ, { children: m }),
+                        ],
+                    }),
             });
         },
-        { object: y.qAy.CONTEXT_MENU }
+        { object: y.qAy.CONTEXT_MENU },
     ),
-    [s.Z.VOICE_USER]
+    [s.Z.VOICE_USER],
 );

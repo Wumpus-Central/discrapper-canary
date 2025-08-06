@@ -14,22 +14,22 @@ let a = new Map(),
                 onInitialDraw: () => {
                     self.postMessage({
                         type: n.u.FIRST_DRAW,
-                        canvasId: i
+                        canvasId: i,
                     });
                 },
                 onError: () => {
                     self.postMessage({
                         type: n.u.ERROR,
-                        canvasId: i
+                        canvasId: i,
                     });
-                }
+                },
             });
         a.set(i, c);
     },
     o = (e) => {
         var t;
         let { canvasId: i } = e;
-        (null == (t = a.get(i)) || t.drop(), a.delete(i));
+        null == (t = a.get(i)) || t.drop(), a.delete(i);
     },
     h = (e) => {
         var t;
@@ -41,7 +41,7 @@ let a = new Map(),
         let { canvasId: i, shouldAnimate: r, nextFrame: n } = e;
         null == (t = a.get(i)) || t.setState(r, n);
     };
-self.addEventListener('message', (e) => {
+self.addEventListener("message", (e) => {
     let { data: t } = e;
     switch (t.type) {
         case n.u.INITIALIZE:

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => D,
-    xX: () => P
+    xX: () => P,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -34,7 +34,7 @@ function A(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -44,15 +44,15 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -60,11 +60,11 @@ function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -82,8 +82,8 @@ function R(e, t) {
 function P(e) {
     return e.map((e, t) =>
         (0, r.jsxs)(r.Fragment, {
-            children: [w(e, t.toString()), (0, r.jsx)(a.nn4, { children: ',' })]
-        })
+            children: [w(e, t.toString()), (0, r.jsx)(a.nn4, { children: "," })],
+        }),
     );
 }
 function w(e, t) {
@@ -131,18 +131,18 @@ function D(e) {
               shouldDisableInteractiveComponents: n,
               children: (0, r.jsx)(u.am.Root, {
                   containerInnerWidth: s,
-                  children: (0, r.jsx)('div', {
-                      style: { width: '100%' },
+                  children: (0, r.jsx)("div", {
+                      style: { width: "100%" },
                       ref: a,
                       children: (0, r.jsx)(u.am.AutoMeasuredNestedContainer, {
                           children: (e) =>
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   ref: e,
                                   className: o()([S.container, { [S.isComponentsV2]: (0, l.hv)(t) }]),
-                                  children: P(i)
-                              })
-                      })
-                  })
-              })
+                                  children: P(i),
+                              }),
+                      }),
+                  }),
+              }),
           });
 }

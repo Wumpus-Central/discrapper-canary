@@ -1,7 +1,7 @@
 n.d(t, {
     ZX: () => v,
     gt: () => I,
-    rH: () => b
+    rH: () => b,
 });
 var r,
     i = n(255367),
@@ -20,7 +20,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,7 +72,8 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -82,25 +83,25 @@ function E(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var b = (function (e) {
-    return ((e.DEFAULT = 'default'), (e.SMALL = 'small'), e);
+    return (e.DEFAULT = "default"), (e.SMALL = "small"), e;
 })({});
 let y = {
         default: f.shineDefault,
-        small: f.shineSmall
+        small: f.shineSmall,
     },
     O = {
         default: f.shineInnerDefault,
-        small: f.shineInnerSmall
+        small: f.shineInnerSmall,
     };
 class v extends (r = o.PureComponent) {
     render() {
         let e = this.props,
             { className: t, shineSize: n, shinePaused: r } = e,
-            o = g(e, ['className', 'shineSize', 'shinePaused']);
+            o = g(e, ["className", "shineSize", "shinePaused"]);
         return (0, i.jsx)(
             l.Z.div,
             m(p({}, o), {
@@ -109,16 +110,36 @@ class v extends (r = o.PureComponent) {
                     align: d.Z.Align.CENTER,
                     justify: d.Z.Justify.CENTER,
                     className: y[n],
-                    children: (0, i.jsx)('div', { className: O[n] })
-                })
-            })
+                    children: (0, i.jsx)("div", { className: O[n] }),
+                }),
+            }),
         );
     }
 }
-_(v, 'defaultProps', { shineSize: 'default' });
+_(v, "defaultProps", { shineSize: "default" });
 let I = (e) => {
-    var { children: t, className: n, disabled: r, submitting: a, pauseAnimation: l, shineSize: d = 'default', shinePaused: _, buttonShineClassName: h, onlyShineOnHover: E } = e,
-        b = g(e, ['children', 'className', 'disabled', 'submitting', 'pauseAnimation', 'shineSize', 'shinePaused', 'buttonShineClassName', 'onlyShineOnHover']);
+    var {
+            children: t,
+            className: n,
+            disabled: r,
+            submitting: a,
+            pauseAnimation: l,
+            shineSize: d = "default",
+            shinePaused: _,
+            buttonShineClassName: h,
+            onlyShineOnHover: E,
+        } = e,
+        b = g(e, [
+            "children",
+            "className",
+            "disabled",
+            "submitting",
+            "pauseAnimation",
+            "shineSize",
+            "shinePaused",
+            "buttonShineClassName",
+            "onlyShineOnHover",
+        ]);
     let y = o.useRef(null),
         O = (0, u.Z)(y),
         I = !r && !a && !0 !== l && (!E || O);
@@ -134,11 +155,11 @@ let I = (e) => {
                     ? (0, i.jsx)(v, {
                           shinePaused: _,
                           className: s()(f.buttonShine, E ? f.onlyShineOnHover : void 0, h),
-                          shineSize: d
+                          shineSize: d,
                       })
-                    : null
-            ]
-        })
+                    : null,
+            ],
+        }),
     );
 };
 I.ShineSizes = b;

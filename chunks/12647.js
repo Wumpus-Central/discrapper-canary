@@ -17,5 +17,5 @@ let i = {
     getPidFromDesktopSource: (e) => r.ZP.getPidFromDesktopSource(e),
     getAudioPid: (e) => r.ZP.getAudioPid(e),
     generateSessionFromPid: (e) => r.ZP.generateSessionFromPid(e),
-    getAppHardwareAccelerationEnabled: () => r.ZP.getEnableHardwareAcceleration()
+    getAppHardwareAccelerationEnabled: () => r.ZP.getEnableHardwareAcceleration(),
 };

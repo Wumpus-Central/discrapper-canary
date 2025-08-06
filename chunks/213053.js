@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(73800),
     i = n(120356),
     o = n.n(i),
@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,31 +28,31 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let g = {
-        [p.lY.POPOUT]: 'user-profile-popout',
-        [p.lY.MODAL]: 'user-profile-modal',
-        [p.lY.MODAL_V2]: 'user-profile-modal-v2',
-        [p.lY.SIDEBAR]: 'user-profile-sidebar'
+        [p.lY.POPOUT]: "user-profile-popout",
+        [p.lY.MODAL]: "user-profile-modal",
+        [p.lY.MODAL_V2]: "user-profile-modal-v2",
+        [p.lY.SIDEBAR]: "user-profile-sidebar",
     },
-    E = 'custom-user-profile-theme',
+    E = "custom-user-profile-theme",
     b = Object.freeze({
-        '--profile-gradient-primary-color': 'var(--background-surface-high)',
-        '--profile-gradient-secondary-color': 'var(--background-surface-high)',
-        '--profile-gradient-overlay-color': 'rgba(0, 0, 0, 0)',
-        '--profile-gradient-button-color': 'var(--background-mod-subtle)',
-        '--profile-gradient-modal-background-color': 'var(--background-base-lower)'
+        "--profile-gradient-primary-color": "var(--background-surface-high)",
+        "--profile-gradient-secondary-color": "var(--background-surface-high)",
+        "--profile-gradient-overlay-color": "rgba(0, 0, 0, 0)",
+        "--profile-gradient-button-color": "var(--background-mod-subtle)",
+        "--profile-gradient-modal-background-color": "var(--background-base-lower)",
     });
 function y(e) {
     let { theme: t, themeType: n, primaryColor: i, secondaryColor: p, forceUserTheme: h = !1 } = e,
@@ -65,24 +65,24 @@ function y(e) {
             let e = (e, t) => (0, a.ho)(e, y, null, t);
             return m(
                 {
-                    '--profile-gradient-primary-color': e(i),
-                    '--profile-gradient-secondary-color': e(p),
-                    '--profile-gradient-overlay-color': I,
-                    '--profile-gradient-button-color': e((0, f.ZB)(i)),
-                    '--profile-gradient-modal-background-color': e((0, f.oU)(i, p, O || h ? t : void 0))
+                    "--profile-gradient-primary-color": e(i),
+                    "--profile-gradient-secondary-color": e(p),
+                    "--profile-gradient-overlay-color": I,
+                    "--profile-gradient-button-color": e((0, f.ZB)(i)),
+                    "--profile-gradient-modal-background-color": e((0, f.oU)(i, p, O || h ? t : void 0)),
                 },
                 (0, u.W4)({
                     enabled: !0,
                     primaryColor: i,
                     secondaryColor: p,
                     isDarkTheme: (0, l.wjy)(t),
-                    textMixAmount: 25
-                })
+                    textMixAmount: 25,
+                }),
             );
         }, [i, p, v, I, O, h, t, y]),
         profileThemeClassName: o()((0, l.QeD)(t), null != n ? { [g[n]]: !0 } : void 0, {
             [d.e3]: null != i,
-            [E]: null != i
-        })
+            [E]: null != i,
+        }),
     };
 }

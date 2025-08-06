@@ -13,10 +13,10 @@ function b(e) {
         f = i.useCallback(() => {
             let t = {
                 source: c.Zu.CONTEXT_MENU,
-                alertType: (0, a.T1)(O)
+                alertType: (0, a.T1)(O),
             };
             (0, l.ZDy)(async () => {
-                let { default: i } = await Promise.all([r.e('58175'), r.e('17667')]).then(r.bind(r, 664452));
+                let { default: i } = await Promise.all([r.e("58175"), r.e("17667")]).then(r.bind(r, 664452));
                 return (r) => {
                     var l, o;
                     return (0, n.jsx)(
@@ -25,31 +25,31 @@ function b(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(r);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (n = n.concat(
                                         Object.getOwnPropertySymbols(r).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     n.forEach(function (t) {
                                         var n;
-                                        ((n = r[t]),
+                                        (n = r[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: n,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = n));
-                                    }));
+                                                : (e[t] = n);
+                                    });
                             }
                             return e;
                         })({}, r)),
                         (o = o =
                             {
                                 guildId: e.id,
-                                analyticsData: t
+                                analyticsData: t,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
@@ -63,18 +63,18 @@ function b(e) {
                               })(Object(o)).forEach(function (e) {
                                   Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                               }),
-                        l)
+                        l),
                     );
                 };
             });
         }, [e.id, O]);
     return e.features.has(u.oNc.COMMUNITY) && b
         ? (0, n.jsx)(l.sNh, {
-              id: 'server-lockdown',
-              label: p ? s.intl.string(s.t['+tSVi4']) : s.intl.string(s.t.EPlEdn),
+              id: "server-lockdown",
+              label: p ? s.intl.string(s.t["+tSVi4"]) : s.intl.string(s.t.EPlEdn),
               icon: t ? (p ? l.d$P : l.mBM) : void 0,
               action: f,
-              color: 'danger'
+              color: "danger",
           })
         : null;
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -29,48 +29,54 @@ let b = 1000,
             R = i.useMemo(() => !n && !v && !I, [v, n, I]);
         if (
             (i.useEffect(() => {
-                (n || C(!1), n && v && C(!0));
+                n || C(!1), n && v && C(!0);
             }, [n, v]),
             i.useEffect(() => {
                 !I &&
                     (N ||
-                        (!1 === n && ((T.current = 0), null != S.current && (clearTimeout(S.current), (S.current = null))),
+                        (!1 === n &&
+                            ((T.current = 0), null != S.current && (clearTimeout(S.current), (S.current = null))),
                         (T.current = Date.now()),
                         (S.current = setTimeout(() => {
                             let e = T.current;
                             if (0 !== e && !1 !== n && !(Date.now() - e < b) && !v) {
                                 if (null != A.current) {
                                     var r;
-                                    let { x: e, y: n, width: i, height: o } = null == (r = A.current) ? void 0 : r.getBoundingClientRect();
+                                    let {
+                                        x: e,
+                                        y: n,
+                                        width: i,
+                                        height: o,
+                                    } = null == (r = A.current) ? void 0 : r.getBoundingClientRect();
                                     (0, m.Z)(
                                         t,
                                         {
                                             x: e,
                                             y: n - 20,
                                             w: i,
-                                            h: o
+                                            h: o,
                                         },
                                         !0,
-                                        p.LL.UserTriggered
+                                        p.LL.UserTriggered,
                                     );
                                 } else (0, m.Z)(t, void 0, !0, p.LL.UserTriggered);
-                                (C(!0),
+                                C(!0),
                                     c.Z.dispatch({
-                                        type: 'POTIONS_SET_CONFETTI_MODE',
-                                        enabled: !0
-                                    }));
+                                        type: "POTIONS_SET_CONFETTI_MODE",
+                                        enabled: !0,
+                                    });
                             }
                         }, b + 100))));
             }, [v, N, n, t, I]),
-            !(0, h.p7)('Message Confetti Peak') || !(0, g.Uw)(t))
+            !(0, h.p7)("Message Confetti Peak") || !(0, g.Uw)(t))
         )
             return null;
         let P = (0, g.Eq)(t);
         if (null == P) return null;
         if (o)
-            return (0, r.jsx)('span', {
+            return (0, r.jsx)("span", {
                 className: E.hidden,
-                'aria-hidden': 'true'
+                "aria-hidden": "true",
             });
         let w = P.emoji[0],
             D =
@@ -80,31 +86,31 @@ let b = 1000,
                           id: w.id,
                           animated: !1,
                           size: 32,
-                          forcePNG: !0
+                          forcePNG: !0,
                       });
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             ref: A,
             className: E.emojiWrapper,
-            style: { right: ''.concat(y + O, 'px') },
+            style: { right: "".concat(y + O, "px") },
             children: [
-                (0, r.jsx)('img', {
-                    alt: '',
+                (0, r.jsx)("img", {
+                    alt: "",
                     src: D,
                     className: a()([E.emoji, E.left, R && E.shy, v && E.confettiMode]),
-                    width: 28
+                    width: 28,
                 }),
-                (0, r.jsx)('img', {
-                    alt: '',
+                (0, r.jsx)("img", {
+                    alt: "",
                     src: D,
                     className: a()([E.emoji, E.right, R && E.shy, v && E.confettiMode]),
-                    width: 26
+                    width: 26,
                 }),
-                (0, r.jsx)('img', {
-                    alt: '',
+                (0, r.jsx)("img", {
+                    alt: "",
                     src: D,
                     className: a()([E.emoji, E.center, R && E.shy, v && E.confettiMode]),
-                    width: 32
-                })
-            ]
+                    width: 32,
+                }),
+            ],
         });
     };

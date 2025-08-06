@@ -7,7 +7,7 @@ var r = n(780384),
 function l(e) {
     let t = (0, r.wj)((0, i.ZP)()),
         n = (0, s.Z)(e);
-    if (!a.qM.useExperiment({ location: 'chat_wallpaper_color_mix' }).enabled || null == n) return;
+    if (!a.qM.useExperiment({ location: "chat_wallpaper_color_mix" }).enabled || null == n) return;
     let l = {},
         c = n.primary_color;
     if (null != c) {
@@ -19,15 +19,15 @@ function l(e) {
             secondaryColor: null != (d = n.secondary_color) ? d : c,
             isDarkTheme: t,
             baseMixAmount: e,
-            textMixAmount: e
+            textMixAmount: e,
         });
     }
     return (
         null != n.link_color &&
             Object.assign(l, {
-                '--mention-foreground': n.link_color,
-                '--text-link': n.link_color,
-                '--text-link-low-saturation': n.link_color
+                "--mention-foreground": n.link_color,
+                "--text-link": n.link_color,
+                "--text-link-low-saturation": n.link_color,
             }),
         l
     );

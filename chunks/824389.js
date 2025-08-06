@@ -3,7 +3,7 @@ n.d(t, {
     gs: () => g,
     mh: () => p,
     p9: () => m,
-    uV: () => h
+    uV: () => h,
 });
 var r = n(544891),
     i = n(881052),
@@ -16,7 +16,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,7 +68,8 @@ function d(e, t) {
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -78,12 +79,12 @@ function f(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let _ = async (e, t, n) => {
         var { priceTier: o, imageName: s, createNewRole: c, unlinkRole: f } = n,
-            _ = d(n, ['priceTier', 'imageName', 'createNewRole', 'unlinkRole']);
+            _ = d(n, ["priceTier", "imageName", "createNewRole", "unlinkRole"]);
         try {
             return (
                 await r.tn.patch({
@@ -92,9 +93,9 @@ let _ = async (e, t, n) => {
                         image_name: s,
                         price_tier: o,
                         create_new_role: c,
-                        unlink_role: f
+                        unlink_role: f,
                     }),
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
             ).body;
         } catch (e) {
@@ -105,7 +106,7 @@ let _ = async (e, t, n) => {
         try {
             await r.tn.del({
                 url: a.ANM.GUILD_PRODUCT_LISTINGS(e, t),
-                rejectWithError: !1
+                rejectWithError: !1,
             });
         } catch (e) {
             throw new i.Hx(e);
@@ -116,7 +117,7 @@ let _ = async (e, t, n) => {
             return (
                 await (0, o.Kb)({
                     url: a.ANM.GUILD_PRODUCT_LISTINGS(e),
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
             ).body.listings;
         } catch (e) {
@@ -128,7 +129,7 @@ let _ = async (e, t, n) => {
             return (
                 await (0, o.Kb)({
                     url: a.ANM.GUILD_PRODUCT_LISTINGS(e, t),
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
             ).body;
         } catch (e) {
@@ -141,7 +142,7 @@ let _ = async (e, t, n) => {
             return (
                 await r.tn.post({
                     url: a.ANM.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(t, n, o),
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
             ).body;
         } catch (e) {

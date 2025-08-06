@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(35282), n(388685));
+n.d(t, { Z: () => C }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -25,7 +25,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,11 +51,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,16 +73,23 @@ function S(e, t) {
 let A = (e) => e.stopPropagation();
 class N extends i.PureComponent {
     componentDidMount() {
-        (d.gK(), document.addEventListener('keydown', this.backToFrontPage), '' !== this.props.query && this.search(this.props.query, E.wI2.SEARCH));
+        d.gK(),
+            document.addEventListener("keydown", this.backToFrontPage),
+            "" !== this.props.query && this.search(this.props.query, E.wI2.SEARCH);
     }
     componentWillUnmount() {
-        (u.Z.wait(() => d.v2()), document.removeEventListener('keydown', this.backToFrontPage));
+        u.Z.wait(() => d.v2()), document.removeEventListener("keydown", this.backToFrontPage);
     }
     componentDidUpdate() {
-        this.state.resultType !== E.wI2.SEARCH && '' !== this.props.query && this.search(this.props.query, E.wI2.SEARCH);
+        this.state.resultType !== E.wI2.SEARCH &&
+            "" !== this.props.query &&
+            this.search(this.props.query, E.wI2.SEARCH);
     }
     search(e, t, n) {
-        (d.yC(e, t, n), '' === e ? this.setState({ resultType: null }) : this.state.resultType !== E.wI2.SEARCH && this.setState({ resultType: E.wI2.SEARCH }));
+        d.yC(e, t, n),
+            "" === e
+                ? this.setState({ resultType: null })
+                : this.state.resultType !== E.wI2.SEARCH && this.setState({ resultType: E.wI2.SEARCH });
     }
     renderHeaderContent() {
         let { query: e } = this.props,
@@ -90,15 +97,15 @@ class N extends i.PureComponent {
         switch (t) {
             case E.wI2.FAVORITES:
                 return (0, r.jsx)(c.vwX, {
-                    tag: 'h5',
+                    tag: "h5",
                     className: O.searchHeader,
-                    children: y.intl.string(y.t.y3LQCA)
+                    children: y.intl.string(y.t.y3LQCA),
                 });
             case E.wI2.TRENDING_GIFS:
                 return (0, r.jsx)(c.vwX, {
-                    tag: 'h5',
+                    tag: "h5",
                     className: O.searchHeader,
-                    children: y.intl.string(y.t.H6zNFx)
+                    children: y.intl.string(y.t.H6zNFx),
                 });
             default:
                 return (0, r.jsx)(c.E1j, {
@@ -107,9 +114,9 @@ class N extends i.PureComponent {
                     onChange: this.handleChangeQuery,
                     onClear: this.handleClearQuery,
                     placeholder: y.intl.string(y.t.TnYqkZ),
-                    'aria-label': y.intl.string(y.t.TnYqkZ),
+                    "aria-label": y.intl.string(y.t.TnYqkZ),
                     ref: this.props.searchBarRef,
-                    autoFocus: !0
+                    autoFocus: !0,
                 });
         }
     }
@@ -121,26 +128,37 @@ class N extends i.PureComponent {
                 (t = (0, r.jsx)(c.P3F, {
                     onClick: this.handleClearQuery,
                     className: O.backButton,
-                    'aria-label': y.intl.string(y.t['13/7kZ']),
+                    "aria-label": y.intl.string(y.t["13/7kZ"]),
                     children: (0, r.jsx)(c.whL, {
-                        size: 'md',
-                        color: 'currentColor'
-                    })
+                        size: "md",
+                        color: "currentColor",
+                    }),
                 })),
             (0, r.jsxs)(f.Z, {
                 align: f.Z.Align.CENTER,
-                children: [t, this.renderHeaderContent()]
+                children: [t, this.renderHeaderContent()],
             })
         );
     }
     renderContent() {
-        let { contentClassName: e, resultItems: t, resultQuery: n, query: i, favorites: o, searchOffset: a, searchLimit: s, searchTotalResults: l, suggestions: c, hideFavorites: u } = this.props,
+        let {
+                contentClassName: e,
+                resultItems: t,
+                resultQuery: n,
+                query: i,
+                favorites: o,
+                searchOffset: a,
+                searchLimit: s,
+                searchTotalResults: l,
+                suggestions: c,
+                hideFavorites: u,
+            } = this.props,
             { resultType: d } = this.state;
         return null == d
             ? (0, r.jsx)(m.Z, {
                   className: e,
                   hideFavoritesTile: u,
-                  onSelectItem: this.handleSelectItem
+                  onSelectItem: this.handleSelectItem,
               })
             : (0, r.jsx)(g.ZP, {
                   className: e,
@@ -153,85 +171,87 @@ class N extends i.PureComponent {
                   searchLimit: s,
                   searchTotalResults: l,
                   suggestions: c,
-                  onSelectSuggestion: this.handleSelectSuggestion
+                  onSelectSuggestion: this.handleSelectSuggestion,
               });
     }
     render() {
         let { className: e, forwardedRef: t } = this.props;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             id: b.vO,
-            role: 'tabpanel',
-            'aria-labelledby': b._3,
+            role: "tabpanel",
+            "aria-labelledby": b._3,
             className: a()(O.container, e),
             onClick: A,
             ref: t,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: O.header,
-                    children: this.renderHeader()
+                    children: this.renderHeader(),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: O.content,
-                    children: this.renderContent()
-                })
-            ]
+                    children: this.renderContent(),
+                }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            v(this, 'state', { resultType: null }),
-            v(this, 'backToFrontPage', (e) => {
+        super(...e),
+            v(this, "state", { resultType: null }),
+            v(this, "backToFrontPage", (e) => {
                 let { resultType: t } = this.state;
-                e.keyCode === E.yXg.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
+                e.keyCode === E.yXg.ESCAPE &&
+                    null != t &&
+                    (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
             }),
-            v(this, 'handleChangeQuery', (e) => {
-                ((0, _.ql)(e), this.search(e, E.wI2.SEARCH));
+            v(this, "handleChangeQuery", (e) => {
+                (0, _.ql)(e), this.search(e, E.wI2.SEARCH);
             }),
-            v(this, 'handleSelectSuggestion', (e) => {
-                ((0, _.ql)(''), d.v2(), this.search(e, E.wI2.SEARCH_SUGGESTION, !0));
+            v(this, "handleSelectSuggestion", (e) => {
+                (0, _.ql)(""), d.v2(), this.search(e, E.wI2.SEARCH_SUGGESTION, !0);
             }),
-            v(this, 'handleClearQuery', () => {
+            v(this, "handleClearQuery", () => {
                 let { current: e } = this.props.searchBarRef;
-                ((0, _.ql)(''), d.v2(), this.setState({ resultType: null }), null != e && e.focus());
+                (0, _.ql)(""), d.v2(), this.setState({ resultType: null }), null != e && e.focus();
             }),
-            v(this, 'handleSelectGIF', (e) => {
+            v(this, "handleSelectGIF", (e) => {
                 let { onSelectGIF: t } = this.props;
                 null != t && t(e);
             }),
-            v(this, 'handleSelectItem', (e, t) => {
+            v(this, "handleSelectItem", (e, t) => {
                 let { current: n } = this.props.searchBarRef;
                 switch (e) {
                     case E.wI2.TRENDING_CATEGORY:
-                        (d.yC(t, E.wI2.TRENDING_CATEGORY, !0), null != n && n.focus());
+                        d.yC(t, E.wI2.TRENDING_CATEGORY, !0), null != n && n.focus();
                         break;
                     case E.wI2.TRENDING_GIFS:
                         d.UU();
                 }
                 this.setState({ resultType: e });
-            }));
+            });
     }
 }
 let C = i.forwardRef((e, t) => {
-    e.persistSearch || (0, _.ql)('');
+    e.persistSearch || (0, _.ql)("");
     let {
             query: n,
             resultQuery: o,
             resultItems: a,
-            suggestions: c
+            suggestions: c,
         } = (0, l.cj)([p.Z], () => ({
             query: p.Z.getQuery(),
             resultQuery: p.Z.getResultQuery(),
             resultItems: p.Z.getResultItems(),
-            suggestions: p.Z.getSuggestions()
+            suggestions: p.Z.getSuggestions(),
         })),
         { expressionPickerQuery: u, isSearchSuggestion: d } = (0, _.Iu)(
             (e) => ({
                 expressionPickerQuery: e.searchQuery,
-                isSearchSuggestion: e.isSearchSuggestion
+                isSearchSuggestion: e.isSearchSuggestion,
             }),
-            s.X
+            s.X,
         ),
-        f = null != u && '' !== u ? u : n,
+        f = null != u && "" !== u ? u : n,
         m = (0, h.HI)(),
         g = i.useRef(null);
     return (
@@ -253,8 +273,8 @@ let C = i.forwardRef((e, t) => {
                 searchOffset: 0,
                 searchTotalResults: p.Z.getResultItems().length,
                 searchLimit: null,
-                searchBarRef: g
-            })
+                searchBarRef: g,
+            }),
         )
     );
 });

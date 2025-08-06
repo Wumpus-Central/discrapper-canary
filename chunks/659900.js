@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685), n(583741));
+n.d(t, { Z: () => M }), n(388685), n(583741);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -26,96 +26,96 @@ var i = n(255367),
     _ = n(697698);
 function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        [n, s] = r.useState(''),
+        [n, s] = r.useState(""),
         [l, a] = r.useState(null),
         [c, d] = r.useState(null),
         u = (0, N.Z)(e.code);
-    (r.useEffect(() => {
+    r.useEffect(() => {
         !(async function () {
             let e = g.default.getCurrentUser();
             if (null == e)
                 try {
                     e = await (0, L.k)();
                 } catch (e) {
-                    C.Z.verifySSOToken('accept_guild_template', null);
+                    C.Z.verifySSOToken("accept_guild_template", null);
                 }
             null != e && s(T.intl.formatToPlainString(u.defaultName, { username: e.username }));
         })();
     }, [u.defaultName]),
-        (0, H.Z)(e));
+        (0, H.Z)(e);
     let x = (0, i.jsxs)(i.Fragment, {
             children: [
                 t ? (0, i.jsx)(E.Z, { guildTemplate: e }) : null,
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: _.icon,
                     children: (0, i.jsx)(h.Z, {
                         icon: l,
-                        onChange: a
-                    })
+                        onChange: a,
+                    }),
                 }),
                 (0, i.jsx)(o.xJW, {
                     title: u.nameLabel,
                     children: (0, i.jsx)(o.oil, {
-                        type: 'text',
+                        type: "text",
                         value: n,
                         maxLength: 100,
                         onChange: s,
-                        error: null == c ? void 0 : c.name
-                    })
+                        error: null == c ? void 0 : c.name,
+                    }),
                 }),
                 (0, i.jsx)(o.Text, {
-                    variant: 'text-xs/normal',
-                    color: 'text-muted',
+                    variant: "text-xs/normal",
+                    color: "text-muted",
                     className: _.guidelines,
-                    children: T.intl.format(u.terms, { guidelinesURL: Z.EYA.GUIDELINES })
-                })
-            ]
+                    children: T.intl.format(u.terms, { guidelinesURL: Z.EYA.GUIDELINES }),
+                }),
+            ],
         }),
         p = e.serializedSourceGuild.roles.map((t) => v.wD(e.serializedSourceGuild.id, t)).filter((e) => !(0, f.fI)(e));
     return {
         form: x,
         preview: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)('div', { className: _.divider }),
+                (0, i.jsx)("div", { className: _.divider }),
                 (0, i.jsxs)(o.xJW, {
                     className: _.previewSection,
                     title: T.intl.string(T.t.Zxk1OD),
                     children: [
                         (0, i.jsx)(b, { channels: e.serializedSourceGuild.channels }),
                         (0, i.jsxs)(o.Text, {
-                            variant: 'text-xs/normal',
-                            color: 'header-secondary',
+                            variant: "text-xs/normal",
+                            color: "header-secondary",
                             className: _.protip,
                             children: [
-                                (0, i.jsxs)('span', {
+                                (0, i.jsxs)("span", {
                                     className: _.protipText,
-                                    children: [T.intl.string(T.t['8tvIiI']), ':']
+                                    children: [T.intl.string(T.t["8tvIiI"]), ":"],
                                 }),
-                                ' ',
-                                T.intl.string(T.t.de7DpK)
-                            ]
-                        })
-                    ]
+                                " ",
+                                T.intl.string(T.t.de7DpK),
+                            ],
+                        }),
+                    ],
                 }),
                 p.length > 0
                     ? (0, i.jsx)(o.xJW, {
                           className: _.previewSection,
-                          title: T.intl.string(T.t['RJ1e/v']),
+                          title: T.intl.string(T.t["RJ1e/v"]),
                           children: (0, i.jsx)(S, {
                               guildId: e.serializedSourceGuild.id,
-                              roles: p
-                          })
+                              roles: p,
+                          }),
                       })
-                    : null
-            ]
+                    : null,
+            ],
         }),
         handleSubmit: () => {
             j.Z.acceptGuildTemplate(e.code, n, l)
                 .then(() => {
-                    ((0, o.pTH)(), (0, m.Ou)());
+                    (0, o.pTH)(), (0, m.Ou)();
                 })
                 .catch((e) => d(e));
-        }
+        },
     };
 }
 function b(e) {
@@ -128,25 +128,25 @@ function b(e) {
                     return t === Z.d4z.GUILD_VOICE ? o.gj8 : t === Z.d4z.GUILD_CATEGORY ? p.Z : o.VL1;
                 })(e);
                 return (0, i.jsxs)(
-                    'div',
+                    "div",
                     {
                         className: l()(_.channel, { [_.category]: e.type === Z.d4z.GUILD_CATEGORY }),
                         children: [
                             (0, i.jsx)(t, { className: _.channelIcon }),
                             (0, i.jsx)(o.Text, {
                                 className: _.channelText,
-                                variant: 'text-sm/normal',
-                                children: e.name
-                            })
-                        ]
+                                variant: "text-sm/normal",
+                                children: e.name,
+                            }),
+                        ],
                     },
-                    e.id
+                    e.id,
                 );
             })
             .value();
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: _.channelsWrapper,
-        children: n
+        children: n,
     });
 }
 function S(e) {
@@ -159,14 +159,14 @@ function S(e) {
                     G,
                     {
                         guildId: t,
-                        role: e
+                        role: e,
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             );
-    return (0, i.jsx)('ul', {
+    return (0, i.jsx)("ul", {
         className: _.rolesWrapper,
-        children: r
+        children: r,
     });
 }
 function G(e) {
@@ -175,23 +175,23 @@ function G(e) {
         l = (0, o.dQu)(u.Z.colors.BORDER_SUBTLE).hex(),
         a = null == s.color ? l : (0, d.Rf)(s.color),
         c = (0, x._f)(r, s, s.colorStrings);
-    return (0, i.jsxs)('li', {
+    return (0, i.jsxs)("li", {
         className: _.role,
         style: {
             borderColor: null != (t = (0, d.wK)(a, 0.6)) ? t : void 0,
-            backgroundColor: null != (n = (0, d.wK)(a, 0.075)) ? n : void 0
+            backgroundColor: null != (n = (0, d.wK)(a, 0.075)) ? n : void 0,
         },
         children: [
             (0, i.jsx)(o.xko, {
                 className: _.roleCircle,
                 color: a,
-                colors: c
+                colors: c,
             }),
             (0, i.jsx)(o.Text, {
-                variant: 'text-xs/medium',
-                children: s.name
-            })
-        ]
+                variant: "text-xs/medium",
+                children: s.name,
+            }),
+        ],
     });
 }
 n(418757);

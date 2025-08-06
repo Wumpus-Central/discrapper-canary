@@ -1,4 +1,4 @@
-(t.d(i, { EmojiAddModal: () => j }), t(388685));
+t.d(i, { EmojiAddModal: () => j }), t(388685);
 var a = t(255367),
     n = t(73800),
     o = t(82659),
@@ -12,7 +12,7 @@ function c(e) {
         o = l.ZP.getEmojiURL({
             id: i.id,
             animated: i.animated,
-            size: 24
+            size: 24,
         });
     return (0, a.jsx)(s.XZJ, {
         size: 20,
@@ -21,28 +21,35 @@ function c(e) {
         type: s.XZJ.Types.INVERTED,
         value: n,
         reverse: !0,
-        children: (0, a.jsxs)('div', {
+        children: (0, a.jsxs)("div", {
             className: d.emojiLabel,
             children: [
-                (0, a.jsx)('img', {
+                (0, a.jsx)("img", {
                     className: d.emojiImage,
                     src: o,
                     width: 24,
                     height: 24,
-                    alt: ''
+                    alt: "",
                 }),
                 (0, a.jsx)(s.Text, {
-                    color: 'header-primary',
-                    variant: 'text-md/medium',
+                    color: "header-primary",
+                    variant: "text-md/medium",
                     className: d.emojiAlias,
-                    children: i.name
-                })
-            ]
-        })
+                    children: i.name,
+                }),
+            ],
+        }),
     });
 }
 function j(e) {
-    let { guildId: i, initialTierEmojiIds: t, onSubmit: l, transitionToManageEmoji: j, transitionState: h, onClose: u } = e,
+    let {
+            guildId: i,
+            initialTierEmojiIds: t,
+            onSubmit: l,
+            transitionToManageEmoji: j,
+            transitionState: h,
+            onClose: u,
+        } = e,
         x = (0, r.Z)(i),
         [p, f] = n.useState(new Set()),
         g = p.size > 0;
@@ -52,29 +59,29 @@ function j(e) {
         title: m.intl.string(m.t.xC6tUl),
         actions: [
             {
-                text: m.intl.string(m.t['ETE/oK']),
-                variant: 'secondary',
-                onClick: u
+                text: m.intl.string(m.t["ETE/oK"]),
+                variant: "secondary",
+                onClick: u,
             },
             {
                 text: m.intl.format(m.t.pX74jo, { totalEmoji: p.size }),
-                variant: 'primary',
+                variant: "primary",
                 onClick: function () {
-                    (l(p), u());
+                    l(p), u();
                 },
-                disabled: !g
-            }
+                disabled: !g,
+            },
         ],
         children: (0, a.jsxs)(s.Kqy, {
-            gap: 'md',
+            gap: "md",
             children: [
                 (0, a.jsx)(s.Text, {
-                    variant: 'text-md/normal',
-                    children: m.intl.format(m.t['OnK+Cw'], { transitionToManageEmoji: j })
+                    variant: "text-md/normal",
+                    children: m.intl.format(m.t["OnK+Cw"], { transitionToManageEmoji: j }),
                 }),
                 null != x &&
                     x.length > 0 &&
-                    (0, a.jsx)('div', {
+                    (0, a.jsx)("div", {
                         className: d.emojiContainer,
                         children: x.map((e) =>
                             null != t && t.has(e.id)
@@ -89,17 +96,17 @@ function j(e) {
                                                   (i = e.id),
                                                   void f((e) => {
                                                       let t = new Set(e);
-                                                      return (p.has(i) ? t.delete(i) : t.add(i), t);
+                                                      return p.has(i) ? t.delete(i) : t.add(i), t;
                                                   })
                                               );
                                           },
-                                          value: p.has(e.id)
+                                          value: p.has(e.id),
                                       },
-                                      e.id
-                                  )
-                        )
-                    })
-            ]
-        })
+                                      e.id,
+                                  ),
+                        ),
+                    }),
+            ],
+        }),
     });
 }

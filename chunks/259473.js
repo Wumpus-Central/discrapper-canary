@@ -8,7 +8,7 @@ function o(e) {
     let { guildId: t } = e,
         n = s.h.useExperiment({
             guildId: null != t ? t : a.lds,
-            location: '6798be_2'
+            location: "6798be_2",
         }),
         o = (0, l.e7)([i.Z], () => i.Z.getGuild(t));
     return (
@@ -21,12 +21,16 @@ function o(e) {
                         ? l
                         : s.h.getCurrentConfig({
                               guildId: null != (t = null == n ? void 0 : n.id) ? t : a.lds,
-                              location: '6798be_1'
+                              location: "6798be_1",
                           });
-            if ((null == n ? void 0 : n.features.has(a.oNc.HUB)) || ((null == n ? void 0 : n.features.has(a.oNc.COMMUNITY)) && i)) return r.ZP.INVITE_OPTIONS_FOREVER.value;
+            if (
+                (null == n ? void 0 : n.features.has(a.oNc.HUB)) ||
+                ((null == n ? void 0 : n.features.has(a.oNc.COMMUNITY)) && i)
+            )
+                return r.ZP.INVITE_OPTIONS_FOREVER.value;
         })({
             guild: o,
-            experimentConfig: n
+            experimentConfig: n,
         })
     );
 }

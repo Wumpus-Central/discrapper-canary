@@ -5,28 +5,28 @@ var r = n(544891),
 function a(e) {
     return (
         i.Z.dispatch({
-            type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING',
-            applicationId: e
+            type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING",
+            applicationId: e,
         }),
         r.tn
             .get({
                 url: o.ANM.STORE_LAYOUT(e),
-                rejectWithError: !0
+                rejectWithError: !0,
             })
             .then(
                 (t) => (
                     i.Z.dispatch({
-                        type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS',
+                        type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS",
                         applicationId: e,
-                        layout: t.body
+                        layout: t.body,
                     }),
                     t.body
-                )
+                ),
             )
             .catch(() => {
                 i.Z.dispatch({
-                    type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED',
-                    applicationId: e
+                    type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED",
+                    applicationId: e,
                 });
             })
     );

@@ -1,1 +1,1 @@
-e.exports = { blockedIgnoredSettingsNotice: 'blockedIgnoredSettingsNotice__6811a' };
+e.exports = { blockedIgnoredSettingsNotice: "blockedIgnoredSettingsNotice__6811a" };

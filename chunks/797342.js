@@ -16,11 +16,15 @@ function s(e) {
             embeddedActivity: void 0,
             state: void 0,
             details: void 0,
-            party: void 0
+            party: void 0,
         };
-    let _ = (null == (t = d.assets) ? void 0 : t.large_image) != null || (null == (n = d.assets) ? void 0 : n.small_image) != null,
-        p = (null == (s = d.assets) ? void 0 : s.large_text) != null || (null == (l = d.assets) ? void 0 : l.small_text) != null,
-        h = null != (c = d.name) ? c : 'game_name' in e.extra ? e.extra.game_name : void 0,
+    let _ =
+            (null == (t = d.assets) ? void 0 : t.large_image) != null ||
+            (null == (n = d.assets) ? void 0 : n.small_image) != null,
+        p =
+            (null == (s = d.assets) ? void 0 : s.large_text) != null ||
+            (null == (l = d.assets) ? void 0 : l.small_text) != null,
+        h = null != (c = d.name) ? c : "game_name" in e.extra ? e.extra.game_name : void 0,
         m = d.details,
         g = d.state,
         E = d.party;
@@ -32,6 +36,6 @@ function s(e) {
         details: m,
         party: E,
         appName: h,
-        embeddedActivity: f
+        embeddedActivity: f,
     };
 }

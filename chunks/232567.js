@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     $k: () => b,
     In: () => y,
     Lr: () => m,
     PR: () => E,
     Sr: () => O,
     k: () => h,
-    mB: () => g
+    mB: () => g,
 }),
-    n(997841));
+    n(997841);
 var r = n(512722),
     i = n.n(r),
     o = n(525769),
@@ -19,7 +19,7 @@ var r = n(512722),
     d = n(594174),
     f = n(573261),
     _ = n(981631);
-let p = new c.Z('UserProfileModalActionCreators');
+let p = new c.Z("UserProfileModalActionCreators");
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { withAnalyticsToken: t = !1 } = e;
@@ -28,17 +28,17 @@ function h() {
             url: _.ANM.ME,
             query: { with_analytics_token: t },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
         .then(
             (e) => (
                 s.Z.dispatch({
-                    type: 'CURRENT_USER_UPDATE',
+                    type: "CURRENT_USER_UPDATE",
                     user: e.body,
-                    analyticsToken: t ? e.body.analytics_token : void 0
+                    analyticsToken: t ? e.body.analytics_token : void 0,
                 }),
                 new u.Z(e.body)
-            )
+            ),
         );
 }
 function m() {
@@ -49,24 +49,24 @@ function m() {
         trackedActionData: { event: o.a.USER_ACCEPT_AGREEMENTS },
         body: {
             terms: e,
-            privacy: t
+            privacy: t,
         },
         oldFormErrors: !0,
-        rejectWithError: !1
+        rejectWithError: !1,
     }).then(
         () => !0,
-        () => !1
+        () => !1,
     );
 }
 function g(e, t) {
     let n = d.default.getCurrentUser();
-    i()(null != n, 'setFlag: user cannot be undefined');
+    i()(null != n, "setFlag: user cannot be undefined");
     let r = t ? n.flags | e : n.flags & ~e;
     return a.tn.patch({
         url: _.ANM.ME,
         oldFormErrors: !0,
         body: { flags: r },
-        rejectWithError: !1
+        rejectWithError: !1,
     });
 }
 function E(e) {
@@ -77,36 +77,45 @@ function E(e) {
               .get({
                   url: _.ANM.USER(e),
                   oldFormErrors: !0,
-                  rejectWithError: !1
+                  rejectWithError: !1,
               })
               .then(
                   (t) => (
                       s.Z.dispatch({
-                          type: 'USER_UPDATE',
-                          user: t.body
+                          type: "USER_UPDATE",
+                          user: t.body,
                       }),
                       d.default.getUser(e)
-                  )
+                  ),
               );
 }
 function b(e) {
     return (
         s.Z.dispatch({
-            type: 'USER_UPDATE',
-            user: e
+            type: "USER_UPDATE",
+            user: e,
         }),
         d.default.getUser(e.id)
     );
 }
 async function y(e) {
-    let { type: t, withMutualGuilds: n, withMutualFriendsCount: r, withMutualFriends: i, guildId: o, connectionsRoleId: c, joinRequestId: u, abortSignal: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+    let {
+            type: t,
+            withMutualGuilds: n,
+            withMutualFriendsCount: r,
+            withMutualFriends: i,
+            guildId: o,
+            connectionsRoleId: c,
+            joinRequestId: u,
+            abortSignal: d,
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         f = arguments.length > 2 ? arguments[2] : void 0,
         h = Date.now();
     s.Z.dispatch({
-        type: 'USER_PROFILE_FETCH_START',
+        type: "USER_PROFILE_FETCH_START",
         userId: e,
         guildId: o,
-        withMutualFriends: i
+        withMutualFriends: i,
     });
     try {
         let l = await a.tn.get({
@@ -118,67 +127,70 @@ async function y(e) {
                 with_mutual_friends_count: r && (null == i || !i),
                 guild_id: o,
                 connections_role_id: c,
-                join_request_id: u
+                join_request_id: u,
             },
             signal: d,
-            rejectWithError: !0
+            rejectWithError: !0,
         });
-        (null == f || f(l.body, o),
+        null == f || f(l.body, o),
             s.Z.dispatch({
-                type: 'USER_UPDATE',
-                user: l.body.user
+                type: "USER_UPDATE",
+                user: l.body.user,
             }),
             s.Z.dispatch({
-                type: 'USER_PROFILE_FETCH_SUCCESS',
+                type: "USER_PROFILE_FETCH_SUCCESS",
                 userProfile: l.body,
-                fetchStartedAt: h
+                fetchStartedAt: h,
             }),
             null != o &&
                 null != l.body.guild_member &&
                 s.Z.dispatch({
-                    type: 'GUILD_MEMBER_PROFILE_UPDATE',
+                    type: "GUILD_MEMBER_PROFILE_UPDATE",
                     guildId: o,
-                    guildMember: l.body.guild_member
-                }));
+                    guildMember: l.body.guild_member,
+                });
     } catch (t) {
         throw (
-            null != t && (null == t ? void 0 : t.body) != null && p.warn('fetchProfile error: '.concat(t.body.code, ' - ').concat(t.body.message)),
+            (null != t &&
+                (null == t ? void 0 : t.body) != null &&
+                p.warn("fetchProfile error: ".concat(t.body.code, " - ").concat(t.body.message)),
             s.Z.dispatch({
-                type: 'USER_PROFILE_FETCH_FAILURE',
+                type: "USER_PROFILE_FETCH_FAILURE",
                 apiError: new l.Hx(t),
                 fetchStartedAt: h,
                 userId: e,
-                guildId: o
+                guildId: o,
             }),
-            t
+            t)
         );
     }
 }
 async function O(e, t) {
     s.Z.dispatch({
-        type: 'MUTUAL_FRIENDS_FETCH_START',
-        userId: e
+        type: "MUTUAL_FRIENDS_FETCH_START",
+        userId: e,
     });
     try {
         let n = await a.tn.get({
             url: _.ANM.USER_RELATIONSHIPS(e),
             oldFormErrors: !0,
             signal: t,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         s.Z.dispatch({
-            type: 'MUTUAL_FRIENDS_FETCH_SUCCESS',
+            type: "MUTUAL_FRIENDS_FETCH_SUCCESS",
             userId: e,
-            mutualFriends: n.body
+            mutualFriends: n.body,
         });
     } catch (t) {
         throw (
-            (null == t ? void 0 : t.body) != null && p.warn('fetchMutualFriends error: '.concat(t.body.code, ' - ').concat(t.body.message)),
+            ((null == t ? void 0 : t.body) != null &&
+                p.warn("fetchMutualFriends error: ".concat(t.body.code, " - ").concat(t.body.message)),
             s.Z.dispatch({
-                type: 'MUTUAL_FRIENDS_FETCH_FAILURE',
-                userId: e
+                type: "MUTUAL_FRIENDS_FETCH_FAILURE",
+                userId: e,
             }),
-            t
+            t)
         );
     }
 }

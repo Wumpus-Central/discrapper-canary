@@ -1,4 +1,4 @@
-(a.d(t, { w6: () => x }), a(388685), a(642613), a(539854));
+a.d(t, { w6: () => x }), a(388685), a(642613), a(539854);
 var n = a(296009),
     r = a(224706),
     l = a(187162),
@@ -9,24 +9,24 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(a);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(a).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = a[t]),
+                (n = a[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -58,7 +58,12 @@ function m() {
     return {
         applicationId: u(n.length > 0 ? n : s.J6),
         comment: Math.random() > 0.5 ? u(i.x) : void 0,
-        tags: Math.random() > 0.3 ? ((e = i.T), (t = Math.floor(3 * Math.random()) + 1), [...e].sort(() => 0.5 - Math.random()).slice(0, t)) : void 0
+        tags:
+            Math.random() > 0.3
+                ? ((e = i.T),
+                  (t = Math.floor(3 * Math.random()) + 1),
+                  [...e].sort(() => 0.5 - Math.random()).slice(0, t))
+                : void 0,
     };
 }
 function x(e) {
@@ -73,7 +78,7 @@ function x(e) {
                       n = new Set();
                   return Array.from({ length: a }, () => {
                       let e = m(n);
-                      return (n.add(e.applicationId), e);
+                      return n.add(e.applicationId), e;
                   });
               })(o.Xe[e]);
     let s = (function (e, t) {
@@ -86,20 +91,20 @@ function x(e) {
             return e === n.l.FAVORITE_GAMES
                 ? d(c({}, a), {
                       type: n.l.FAVORITE_GAMES,
-                      game: t
+                      game: t,
                   })
                 : d(c({}, a), {
                       type: e,
-                      games: t
+                      games: t,
                   });
-        })(e, a)
+        })(e, a),
     );
     l.Z.setOverrideWidgets(s);
     let u = [];
-    (e === n.l.FAVORITE_GAMES
+    e === n.l.FAVORITE_GAMES
         ? u.push(a.applicationId)
         : a.forEach((e) => {
               u.push(e.applicationId);
           }),
-        r.Z.getDetectableGamesSupplemental(u));
+        r.Z.getDetectableGamesSupplemental(u);
 }

@@ -1,4 +1,4 @@
-(n.d(t, { k: () => S }), n(388685));
+n.d(t, { k: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -24,24 +24,24 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -63,9 +63,23 @@ function N(e, t) {
         e
     );
 }
-let I = 'RULE';
+let I = "RULE";
 function E(e) {
-    let { rule: t, rulesChannel: n, index: l, onChange: s, onKeyDown: o, onClear: u, onRuleReorder: f, isDropHovered: x, focused: b, onFocus: j, previewEnabled: _, isDragEnabled: C, disabled: N } = e,
+    let {
+            rule: t,
+            rulesChannel: n,
+            index: l,
+            onChange: s,
+            onKeyDown: o,
+            onClear: u,
+            onRuleReorder: f,
+            isDropHovered: x,
+            focused: b,
+            onFocus: j,
+            previewEnabled: _,
+            isDragEnabled: C,
+            disabled: N,
+        } = e,
         E = i.useRef(null),
         S = i.useRef(null),
         [{ textValue: T, richValue: P }, w] = i.useState((0, p.eK)(t.value)),
@@ -73,11 +87,11 @@ function E(e) {
             type: I,
             item: {
                 rule: t,
-                index: l
+                index: l,
             },
             end: (e, t) => {
                 null == e || t.didDrop() || f(e.rule, null, !0);
-            }
+            },
         }),
         [, D] = (0, d.L)({
             accept: I,
@@ -93,7 +107,7 @@ function E(e) {
             },
             drop: (e) => {
                 f(e.rule, l, !0);
-            }
+            },
         });
     if (
         (i.useLayoutEffect(
@@ -101,23 +115,23 @@ function E(e) {
                 R(S),
                 Z(D(E)),
                 () => {
-                    (R(null), D(null));
+                    R(null), D(null);
                 }
             ),
-            [R, D, Z]
+            [R, D, Z],
         ),
         i.useEffect(() => {
-            '' !== t.value && '' === T && w((0, p.eK)(t.value));
+            "" !== t.value && "" === T && w((0, p.eK)(t.value));
         }, [t.value, T]),
         null == n)
     )
         return null;
-    let A = '' !== t.value ? t.value : t.id;
-    return (0, r.jsx)('div', {
+    let A = "" !== t.value ? t.value : t.id;
+    return (0, r.jsx)("div", {
         ref: E,
         className: a()(y.draggableInputContainer, { [y.dragging]: x }),
-        'data-dnd-name': A,
-        children: (0, r.jsxs)('div', {
+        "data-dnd-name": A,
+        children: (0, r.jsxs)("div", {
             className: y.inputWrapper,
             children: [
                 (0, r.jsx)(m.P3F, {
@@ -128,17 +142,17 @@ function E(e) {
                         textValue: T,
                         richValue: P,
                         channel: n,
-                        placeholder: O.intl.string(O.t['BRkD4+']),
+                        placeholder: O.intl.string(O.t["BRkD4+"]),
                         focused: b,
                         onChange: (e, n, r) => {
                             let i = N ? t.value : n;
-                            (i.length > v.fn && (i = i.slice(0, v.fn)),
+                            i.length > v.fn && (i = i.slice(0, v.fn)),
                                 n !== i && ((n = i), (r = (0, p.JM)(i))),
                                 s(n),
                                 w({
                                     textValue: n,
-                                    richValue: r
-                                }));
+                                    richValue: r,
+                                });
                         },
                         onKeyDown: o,
                         canMentionChannels: _,
@@ -147,34 +161,34 @@ function E(e) {
                         onSubmit: () =>
                             Promise.resolve({
                                 shouldClear: !1,
-                                shouldRefocus: !0
-                            })
-                    })
+                                shouldRefocus: !0,
+                            }),
+                    }),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: y.clearButton,
                     children: (0, r.jsx)(m.hU, {
-                        size: 'sm',
-                        variant: 'icon-only',
+                        size: "sm",
+                        variant: "icon-only",
                         icon: m.k$p,
-                        'aria-label': O.intl.string(O.t.VkKicX),
-                        onClick: u
-                    })
+                        "aria-label": O.intl.string(O.t.VkKicX),
+                        onClick: u,
+                    }),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     ref: S,
                     className: y.dragContainer,
-                    'data-dnd-name': A,
+                    "data-dnd-name": A,
                     children:
                         C &&
                         (0, r.jsx)(m.Vni, {
-                            size: 'xs',
-                            color: 'currentColor',
-                            className: y.dragIcon
-                        })
-                })
-            ]
-        })
+                            size: "xs",
+                            color: "currentColor",
+                            className: y.dragIcon,
+                        }),
+                }),
+            ],
+        }),
     });
 }
 function S(e) {
@@ -188,20 +202,20 @@ function S(e) {
         T = i.useCallback(
             (e) => {
                 if (!a && t.length !== v.X2)
-                    if (null != e && '' === t[t.length - 1].value) {
+                    if (null != e && "" === t[t.length - 1].value) {
                         let r = [...t];
-                        ((r[t.length - 1] = N(C({}, r[t.length - 1]), { value: e })), n(r), S(r.length - 1));
+                        (r[t.length - 1] = N(C({}, r[t.length - 1]), { value: e })), n(r), S(r.length - 1);
                     } else
-                        (n([
+                        n([
                             ...t,
                             {
                                 id: o()(),
-                                value: null != e ? e : ''
-                            }
+                                value: null != e ? e : "",
+                            },
                         ]),
-                            S(t.length));
+                            S(t.length);
             },
-            [a, t, n]
+            [a, t, n],
         ),
         P = i.useCallback(() => {
             a || T(void 0);
@@ -210,9 +224,9 @@ function S(e) {
             (e, r) => {
                 if (a) return;
                 let i = [...t];
-                ((i[r] = N(C({}, i[r]), { value: e })), n(i));
+                (i[r] = N(C({}, i[r]), { value: e })), n(i);
             },
-            [a, t, n]
+            [a, t, n],
         ),
         R = (e) => {
             if (a) return;
@@ -222,10 +236,10 @@ function S(e) {
                     ? [
                           {
                               id: o()(),
-                              value: ''
-                          }
+                              value: "",
+                          },
                       ]
-                    : r
+                    : r,
             );
         },
         Z = i.useCallback(
@@ -234,11 +248,11 @@ function S(e) {
                 let l = t.indexOf(e);
                 if (null != r && r !== l) {
                     let i = [...t];
-                    (i.splice(l, 1), i.splice(r, 0, e), n(i));
+                    i.splice(l, 1), i.splice(r, 0, e), n(i);
                 }
                 i ? null !== p && h(null) : r !== p && h(r);
             },
-            [a, p, t, n]
+            [a, p, t, n],
         ),
         D = t.length === v.X2,
         A = i.useMemo(() => {
@@ -248,31 +262,31 @@ function S(e) {
                     text: O.intl.string(O.t.DXq2oa),
                     onClick: () => T(O.intl.string(O.t.XudkSk)),
                     disabled: D || a,
-                    tooltipText: e
+                    tooltipText: e,
                 },
                 {
                     text: O.intl.string(O.t.nSqTjI),
                     onClick: () => T(O.intl.string(O.t.np91jI)),
                     disabled: D || a,
-                    tooltipText: e
+                    tooltipText: e,
                 },
                 {
                     text: O.intl.string(O.t.AtRxsL),
                     onClick: () => T(O.intl.string(O.t.PNIDDA)),
                     disabled: D || a,
-                    tooltipText: e
+                    tooltipText: e,
                 },
                 {
-                    text: O.intl.string(O.t['0K5NJi']),
+                    text: O.intl.string(O.t["0K5NJi"]),
                     onClick: () => T(O.intl.string(O.t.HolIDw)),
                     disabled: D || a,
-                    tooltipText: e
-                }
+                    tooltipText: e,
+                },
             ];
         }, [T, a, D]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: y.rulesContainer,
                 children: t.map((e, n) =>
                     (0, r.jsx)(
@@ -289,28 +303,28 @@ function S(e) {
                             onFocus: S,
                             previewEnabled: null == c || c,
                             isDragEnabled: !a && t.length > 1,
-                            disabled: a
+                            disabled: a,
                         },
-                        e.id
-                    )
-                )
+                        e.id,
+                    ),
+                ),
             }),
             !D &&
                 (0, r.jsx)(b.A, {
                     text: O.intl.string(O.t.Cq5Jub),
                     onClick: P,
-                    disabled: a
+                    disabled: a,
                 }),
             (0, r.jsx)(m.X6q, {
-                variant: 'text-xs/bold',
-                color: 'text-muted',
+                variant: "text-xs/bold",
+                color: "text-muted",
                 className: y.exampleRulesTitle,
-                children: O.intl.string(O.t.XHWj8f)
+                children: O.intl.string(O.t.XHWj8f),
             }),
             (0, r.jsx)(j.j, {
                 pills: A,
-                pillClassName: y.pill
-            })
-        ]
+                pillClassName: y.pill,
+            }),
+        ],
     });
 }

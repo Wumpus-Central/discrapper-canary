@@ -4,6 +4,6 @@ var i = n(750832),
 let s = () => {
     let e = r.iG.useSetting(),
         t = r.gR.useSetting(),
-        n = (0, i.nS)('useDefaultGuildsRestricted');
+        n = (0, i.nS)("useDefaultGuildsRestricted");
     return null != t ? t : !!e || !!n || e;
 };

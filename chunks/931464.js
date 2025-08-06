@@ -1,1 +1,1 @@
-e.exports = { breadcrumb: 'breadcrumb__67607' };
+e.exports = { breadcrumb: "breadcrumb__67607" };

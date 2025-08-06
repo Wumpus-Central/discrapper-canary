@@ -29,5 +29,5 @@ let a = {
     },
     showFailedToast(e) {
         (0, r.showToast)((0, r.createToast)((0, i.o)(null != e ? e : o.wQ.GENERIC_ERROR), r.ToastType.FAILURE));
-    }
+    },
 };

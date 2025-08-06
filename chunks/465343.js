@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     K: () => g,
-    i: () => m
+    i: () => m,
 }),
     n(388685),
-    n(35282));
+    n(35282);
 var r = n(933557),
     i = n(339085),
     o = n(633302),
@@ -20,11 +20,11 @@ var r = n(933557),
 function m(e, t, n, r) {
     let { allowUsers: i = !0, allowRoles: o = !0 } = null != r ? r : {};
     switch (e[0]) {
-        case '@':
+        case "@":
             return E(e, t, n, i, o);
-        case ':':
+        case ":":
             return O(e, t);
-        case '#':
+        case "#":
             return y(e, t);
     }
     return null;
@@ -34,15 +34,15 @@ function g(e, t, n, r) {
     return null == i ? null : (0, h.VI)(i);
 }
 function E(e, t, n, r, i) {
-    let [o, a] = e.slice(1).split('#', 2),
+    let [o, a] = e.slice(1).split("#", 2),
         l = null != t ? d.Z.getGuild(t) : null;
     if (i && null == a && null != l) {
         for (let e of u.Z.getSortedRoles(l.id))
             if (o === e.name)
                 return {
-                    type: 'roleMention',
+                    type: "roleMention",
                     roleId: e.id,
-                    children: [{ text: '' }]
+                    children: [{ text: "" }],
                 };
     }
     if (r) {
@@ -62,9 +62,9 @@ function E(e, t, n, r, i) {
             let e = r[0];
             if (b(o, a, e, { requireExact: !0 }))
                 return {
-                    type: 'userMention',
+                    type: "userMention",
                     userId: e.id,
-                    children: [{ text: '' }]
+                    children: [{ text: "" }],
                 };
         }
     }
@@ -72,7 +72,7 @@ function E(e, t, n, r, i) {
 }
 function b(e, t, n) {
     let { requireExact: r = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    return null != n && (r ? n.username === e : n.username.startsWith(e)) && n.discriminator === (null != t ? t : '0');
+    return null != n && (r ? n.username === e : n.username.startsWith(e)) && n.discriminator === (null != t ? t : "0");
 }
 function y(e, t) {
     let n;
@@ -82,18 +82,18 @@ function y(e, t) {
     for (let e of p.default.keys(i))
         if (i[e].name === n)
             return {
-                type: 'channelMention',
+                type: "channelMention",
                 channelId: e,
-                children: [{ text: '' }]
+                children: [{ text: "" }],
             };
     for (let e of _.k1)
         if (e !== l.sH) {
             for (let { channel: r } of l.ZP.getChannels(t)[e])
                 if (r.name === n)
                     return {
-                        type: 'channelMention',
+                        type: "channelMention",
                         channelId: r.id,
-                        children: [{ text: '' }]
+                        children: [{ text: "" }],
                     };
         }
     let o = a.Z.getActiveJoinedThreadsForGuild(t);
@@ -102,9 +102,9 @@ function y(e, t) {
             let { channel: r } = o[e][t];
             if (r.name === n)
                 return {
-                    type: 'channelMention',
+                    type: "channelMention",
                     channelId: r.id,
-                    children: [{ text: '' }]
+                    children: [{ text: "" }],
                 };
         }
     return null;
@@ -117,14 +117,14 @@ function O(e, t) {
     if (null != a && r in a) {
         let e = a[r];
         return {
-            type: 'customEmoji',
+            type: "customEmoji",
             emoji: {
                 emojiId: e.id,
-                name: 'require_colons' in e && e.require_colons ? ':'.concat(e.name, ':') : e.name,
+                name: "require_colons" in e && e.require_colons ? ":".concat(e.name, ":") : e.name,
                 animated: !0 === e.animated,
-                jumboable: !1
+                jumboable: !1,
             },
-            children: [{ text: '' }]
+            children: [{ text: "" }],
         };
     }
     return null;

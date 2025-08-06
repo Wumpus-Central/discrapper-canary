@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     $R: () => D,
     C7: () => N,
     Ek: () => T,
@@ -15,9 +15,9 @@
     tM: () => E,
     tc: () => P,
     xl: () => x,
-    yw: () => U
+    yw: () => U,
 }),
-    n(388685));
+    n(388685);
 var r = n(392711),
     i = n.n(r),
     o = n(149765),
@@ -34,34 +34,34 @@ var r = n(392711),
     m = n(601070),
     g = n(981631);
 let E = (0, l.Z)({
-    id: '2022-07_voice_in_threads',
-    label: 'Voice in Threads',
-    kind: 'guild',
+    id: "2022-07_voice_in_threads",
+    label: "Voice in Threads",
+    kind: "guild",
     defaultConfig: { enabled: !1 },
     treatments: [
         {
             id: 1,
-            label: 'On',
-            config: { enabled: !0 }
-        }
-    ]
+            label: "On",
+            config: { enabled: !0 },
+        },
+    ],
 });
 function b(e, t) {
     return I(
-        (0, a.e7)(
-            [p.Z],
-            () => {
-                let t = e.isForumLikeChannel() ? g.Plq.SEND_MESSAGES : o.$e(g.Plq.CREATE_PUBLIC_THREADS, g.Plq.READ_MESSAGE_HISTORY);
-                return p.Z.can(t, e);
-            },
-            [e]
-        ),
+        (0, a.e7)([p.Z], () => {
+            let t = e.isForumLikeChannel()
+                ? g.Plq.SEND_MESSAGES
+                : o.$e(g.Plq.CREATE_PUBLIC_THREADS, g.Plq.READ_MESSAGE_HISTORY);
+            return p.Z.can(t, e);
+        }, [e]),
         e,
-        t
+        t,
     );
 }
 function y(e, t) {
-    let n = e.isForumLikeChannel() ? g.Plq.SEND_MESSAGES : o.$e(g.Plq.CREATE_PUBLIC_THREADS, g.Plq.READ_MESSAGE_HISTORY);
+    let n = e.isForumLikeChannel()
+        ? g.Plq.SEND_MESSAGES
+        : o.$e(g.Plq.CREATE_PUBLIC_THREADS, g.Plq.READ_MESSAGE_HISTORY);
     return I(p.Z.can(n, e), e, t);
 }
 function O(e) {
@@ -74,14 +74,16 @@ function v(e) {
     return t || n;
 }
 function I(e, t, n) {
-    return !(__OVERLAY__ || !e || !d.uC.has(t.type) || (null != n && (n.hasFlag(g.iLy.HAS_THREAD) || (0, u.Z)(n)))) && !0;
+    return (
+        !(__OVERLAY__ || !e || !d.uC.has(t.type) || (null != n && (n.hasFlag(g.iLy.HAS_THREAD) || (0, u.Z)(n)))) && !0
+    );
 }
 function T(e) {
     let t = (0, a.e7)([_.Z], () => _.Z.getChannel(h.default.castMessageIdAsChannelId(e.id)), [e]);
     return S(
         (0, a.e7)([p.Z], () => p.Z.can(g.Plq.VIEW_CHANNEL, t), [t]),
         e,
-        t
+        t,
     );
 }
 function S(e, t, n) {
@@ -97,7 +99,7 @@ function A(e) {
             s = i()(r).some((e) => p.Z.can(g.Plq.VIEW_CHANNEL, e));
         return {
             hasActiveThreads: o || a || s,
-            hasMoreActiveThreads: s || a
+            hasMoreActiveThreads: s || a,
         };
     });
 }
@@ -127,11 +129,23 @@ function w(e) {
 function D(e) {
     var t;
     let n = (0, a.e7)([p.Z], () => null != e && p.Z.can(g.Plq.SEND_MESSAGES_IN_THREADS, e));
-    return null != e && (!e.isThread() || e.isActiveThread() || (e.isArchivedThread() && (null == (t = e.threadMetadata) ? void 0 : t.locked) !== !0 && n));
+    return (
+        null != e &&
+        (!e.isThread() ||
+            e.isActiveThread() ||
+            (e.isArchivedThread() && (null == (t = e.threadMetadata) ? void 0 : t.locked) !== !0 && n))
+    );
 }
 function L(e) {
     var t;
-    return null != e && (!e.isThread() || e.isActiveThread() || (e.isArchivedThread() && (null == (t = e.threadMetadata) ? void 0 : t.locked) !== !0 && p.Z.can(g.Plq.SEND_MESSAGES_IN_THREADS, e)));
+    return (
+        null != e &&
+        (!e.isThread() ||
+            e.isActiveThread() ||
+            (e.isArchivedThread() &&
+                (null == (t = e.threadMetadata) ? void 0 : t.locked) !== !0 &&
+                p.Z.can(g.Plq.SEND_MESSAGES_IN_THREADS, e)))
+    );
 }
 function x(e) {
     let t = p.Z.can(g.Plq.MANAGE_THREADS, e);
@@ -163,9 +177,9 @@ function G(e) {
         i = E.useExperiment(
             {
                 guildId: e.guild_id,
-                location: 'e791ea_1'
+                location: "e791ea_1",
             },
-            { autoTrackExposure: !1 }
+            { autoTrackExposure: !1 },
         ).enabled,
         o = (0, s.Kt)() && (0, s.zd)(e.id);
     return !t && e.isVocalThread() && i && n && r && !o;

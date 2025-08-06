@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     CR: () => v,
     E8: () => C,
     Ev: () => T,
@@ -7,12 +7,12 @@
     ec: () => I,
     h6: () => y,
     jd: () => E,
-    qz: () => O
+    qz: () => O,
 }),
     n(539854),
     n(388685),
     n(457542),
-    n(997841));
+    n(997841);
 var r = n(73800),
     i = n(442837),
     o = n(496929),
@@ -29,7 +29,13 @@ var r = n(73800),
     m = n(981631);
 let g = 2592000000;
 var E = (function (e) {
-    return ((e[(e.NOT_LOADED = 0)] = 'NOT_LOADED'), (e[(e.LOADING = 1)] = 'LOADING'), (e[(e.LOADED = 2)] = 'LOADED'), (e[(e.ERROR = 3)] = 'ERROR'), e);
+    return (
+        (e[(e.NOT_LOADED = 0)] = "NOT_LOADED"),
+        (e[(e.LOADING = 1)] = "LOADING"),
+        (e[(e.LOADED = 2)] = "LOADED"),
+        (e[(e.ERROR = 3)] = "ERROR"),
+        e
+    );
 })({});
 let b = (e) => {
     let { guildId: t, canFetch: n = !0, forceRefetch: o = !1 } = e,
@@ -48,7 +54,7 @@ function y(e) {
     let n = null != (t = null == e ? void 0 : e.id) ? t : m.lds,
         { entitlementsLoaded: o } = b({
             guildId: n,
-            canFetch: (0, i.e7)([s.Z], () => s.Z.can(m.Plq.ADMINISTRATOR, e))
+            canFetch: (0, i.e7)([s.Z], () => s.Z.can(m.Plq.ADMINISTRATOR, e)),
         }),
         a = (0, i.e7)([d.Z], () => d.Z.getLastGuildDismissedTime(n)),
         l = (0, i.Wu)([p.Z], () => {
@@ -64,33 +70,35 @@ function y(e) {
                     let t = c[e.skuId];
                     return null != t && t.available;
                 }),
-            [l, c]
+            [l, c],
         );
-    return o ? f.filter((e) => null != e.endsAt && e.endsAt.getTime() > Math.max(null != a ? a : 0, Date.now() - g)) : [];
+    return o
+        ? f.filter((e) => null != e.endsAt && e.endsAt.getTime() > Math.max(null != a ? a : 0, Date.now() - g))
+        : [];
 }
 let O = () => {
     let [e, t] = r.useState(0);
     return (
         r.useEffect(() => {
-            (t(1),
+            t(1),
                 Promise.all([
                     (0, o.p0)({
                         withSku: !0,
                         withApplication: !0,
-                        entitlementType: m.qc2.APPLICATION_SUBSCRIPTION
+                        entitlementType: m.qc2.APPLICATION_SUBSCRIPTION,
                     }),
                     (0, o.p0)({
                         withSku: !0,
                         withApplication: !0,
-                        entitlementType: m.qc2.PURCHASE
-                    })
+                        entitlementType: m.qc2.PURCHASE,
+                    }),
                 ])
                     .catch(() => {
                         t(3);
                     })
                     .then(() => {
                         t(2);
-                    }));
+                    });
         }, []),
         { loadState: e }
     );
@@ -112,7 +120,7 @@ function v(e, t) {
         }, [e, t, n]),
         {
             guilds: (0, i.Wu)([a.Z], () => o.map((e) => a.Z.getGuild(e)).filter((e) => null != e), [o]),
-            isFetching: l
+            isFetching: l,
         }
     );
 }
@@ -138,15 +146,15 @@ function N(e, t, n) {
                       SubscriptionStore: c.Z,
                       SubscriptionPlanStore: l.Z,
                       mapSubscriptionItems: n,
-                      guildId: t
+                      guildId: t,
                   }),
-        [e, n, t]
+        [e, n, t],
     );
     return r.useMemo(() => {
         if (null != o && null != a)
             return {
                 subscription: o,
-                subscriptionPlan: a
+                subscriptionPlan: a,
             };
     }, [o, a]);
 }
@@ -155,7 +163,12 @@ function C(e) {
     let { groupSku: r, SubscriptionStore: i, SubscriptionPlanStore: o, mapSubscriptionItems: a, guildId: s } = e,
         { bundledSkuIds: l, flags: c } = r;
     for (let e of null != (t = i.getActiveApplicationSubscriptions()) ? t : []) {
-        if ((0, h.KK)(c) && null != s && (null == (n = e.metadata) ? void 0 : n.application_subscription_guild_id) !== s) continue;
+        if (
+            (0, h.KK)(c) &&
+            null != s &&
+            (null == (n = e.metadata) ? void 0 : n.application_subscription_guild_id) !== s
+        )
+            continue;
         let t = a(e)
             .map((e) => o.get(e.planId))
             .find((e) => null != e && l.includes(e.skuId));

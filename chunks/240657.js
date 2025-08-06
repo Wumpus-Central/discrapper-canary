@@ -17,18 +17,18 @@ function d(e) {
                     : (0, l.Z)(d, !0, {
                           allowHeading: null == f,
                           allowList: null == f,
-                          initialHeaderLevel: _
+                          initialHeaderLevel: _,
                       }),
-            [d, f, _]
+            [d, f, _],
         );
     return (0, r.jsx)(s.Text, {
         className: a()(n, u.markup, {
             [c.lineClamp2Plus]: null != f && f > 1,
-            [c.lineClamp1]: 1 === f
+            [c.lineClamp1]: 1 === f,
         }),
         color: t,
         variant: o,
         lineClamp: f,
-        children: p
+        children: p,
     });
 }

@@ -22,9 +22,9 @@ function g(e) {
         O = g(y),
         {
             avatarSrc: v,
-            eventHandlers: { onMouseEnter: I, onMouseLeave: T }
+            eventHandlers: { onMouseEnter: I, onMouseLeave: T },
         } = (0, f.m)(!0);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         onMouseEnter: I,
         onMouseLeave: T,
         children: (0, r.jsx)(_.Z, {
@@ -32,42 +32,42 @@ function g(e) {
             iconNode: i ? null : (0, r.jsx)(f.S, { src: v }),
             iconContainerClassName: m.iconContainer,
             compact: i,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: o()(m.content, { [m.compact]: i }),
                 children: [
                     (0, r.jsx)(d.nD, {
                         message: n,
                         messageClassname: m.spanCorrection,
                         className: o()(m.usernameContainer, m.spanCorrection, { [m.compact]: i }),
-                        username: (0, r.jsxs)('div', {
+                        username: (0, r.jsxs)("div", {
                             className: m.spanCorrection,
                             children: [
                                 (0, r.jsx)(s.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'text-brand',
-                                    tag: 'span',
+                                    variant: "text-md/normal",
+                                    color: "text-brand",
+                                    tag: "span",
                                     className: m.username,
-                                    children: h.intl.string(h.t.hG1StL)
+                                    children: h.intl.string(h.t.hG1StL),
                                 }),
                                 (0, r.jsx)(l.Z, {
                                     type: p.Hb.SYSTEM_DM,
-                                    className: m.systemTag
-                                })
-                            ]
+                                    className: m.systemTag,
+                                }),
+                            ],
                         }),
                         compact: i,
-                        showTimestamp: !0
+                        showTimestamp: !0,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: o()(m.__invalid_messageContent, { [m.compact]: i }),
                         children: h.intl.format(h.t.W0UBIy, {
                             username: y.nick,
                             usernameHook: O,
-                            guildName: null != (t = null == b ? void 0 : b.name) ? t : ''
-                        })
-                    })
-                ]
-            })
-        })
+                            guildName: null != (t = null == b ? void 0 : b.name) ? t : "",
+                        }),
+                    }),
+                ],
+            }),
+        }),
     });
 }

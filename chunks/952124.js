@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,7 +50,7 @@ function v(e) {
         I = i.useRef(null),
         { trackUserProfileAction: T } = (0, m.KZ)(),
         { analyticsLocations: S, newestAnalyticsLocation: A } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
-        N = c.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
+        N = c.J.useExperiment({ location: "UserSettingsAuthedApps" }, { autoTrackExposure: !0 }).enabled,
         C = (0, o.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
         R = null == C ? void 0 : C.application,
         P = (0, f.Z)({
@@ -58,28 +58,28 @@ function v(e) {
             application: null != R ? R : void 0,
             guildId: n,
             onItemClick: () => {
-                (T({
-                    action: 'MANAGE_APP',
-                    analyticsLocations: S
+                T({
+                    action: "MANAGE_APP",
+                    analyticsLocations: S,
                 }),
-                    null == v || v());
-            }
+                    null == v || v();
+            },
         }),
         w = (0, _.Z)({
             user: t,
             guildId: n,
             location: A,
-            color: 'danger',
+            color: "danger",
             onBlock: () =>
                 T({
-                    action: 'BLOCK',
-                    analyticsLocations: S
+                    action: "BLOCK",
+                    analyticsLocations: S,
                 }),
             onUnblock: () =>
                 T({
-                    action: 'UNBLOCK',
-                    analyticsLocations: S
-                })
+                    action: "UNBLOCK",
+                    analyticsLocations: S,
+                }),
         }),
         D = (0, p.Z)({
             user: t,
@@ -87,34 +87,34 @@ function v(e) {
             location: A,
             onIgnore: () =>
                 T({
-                    action: 'IGNORE',
-                    analyticsLocations: S
+                    action: "IGNORE",
+                    analyticsLocations: S,
                 }),
             onUnignore: () =>
                 T({
-                    action: 'UNIGNORE',
-                    analyticsLocations: S
-                })
+                    action: "UNIGNORE",
+                    analyticsLocations: S,
+                }),
         }),
         L = (0, h.Z)({
             user: t,
             guildId: n,
             location: A,
-            color: 'danger',
+            color: "danger",
             onAction: () =>
                 T({
-                    action: 'REPORT',
-                    analyticsLocations: S
-                })
+                    action: "REPORT",
+                    analyticsLocations: S,
+                }),
         }),
         x = (0, d.Z)({
             id: null == R ? void 0 : R.id,
-            label: b.intl.string(b.t['+NP/b2']),
+            label: b.intl.string(b.t["+NP/b2"]),
             onSuccess: () =>
                 T({
-                    action: 'COPY_APP_ID',
-                    analyticsLocations: S
-                })
+                    action: "COPY_APP_ID",
+                    analyticsLocations: S,
+                }),
         }),
         M = [
             [y],
@@ -126,12 +126,12 @@ function v(e) {
                     label: b.intl.string(b.t.WqhZsr),
                     onSuccess: () =>
                         T({
-                            action: 'COPY_APP_LINK',
-                            analyticsLocations: S
-                        })
+                            action: "COPY_APP_LINK",
+                            analyticsLocations: S,
+                        }),
                 }),
-                x
-            ]
+                x,
+            ],
         ];
     return M.every((e) => e.every((e) => null == e))
         ? null
@@ -140,11 +140,11 @@ function v(e) {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(a.v2r, {
-                      navId: 'user-bot-profile-overflow-menu',
+                      navId: "user-bot-profile-overflow-menu",
                       onSelect: void 0,
                       onClose: t,
-                      'aria-label': b.intl.string(b.t.AXIHpa),
-                      children: M.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t))
+                      "aria-label": b.intl.string(b.t.AXIHpa),
+                      children: M.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t)),
                   });
               },
               children: (e) =>
@@ -153,12 +153,12 @@ function v(e) {
                       O(
                           {
                               ref: I,
-                              action: 'PRESS_OPTIONS',
+                              action: "PRESS_OPTIONS",
                               icon: a.xhG,
-                              tooltipText: b.intl.string(b.t.UKOtz8)
+                              tooltipText: b.intl.string(b.t.UKOtz8),
                           },
-                          e
-                      )
-                  )
+                          e,
+                      ),
+                  ),
           });
 }

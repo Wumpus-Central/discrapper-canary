@@ -13,12 +13,12 @@ function s(e, t) {
     return null == d || null == s || e.id === d.ownerId || e.bot || !(0, a.yn)(d, s)
         ? null
         : (0, l.jsx)(i.sNh, {
-              id: 'transfer-ownership',
-              color: 'danger',
+              id: "transfer-ownership",
+              color: "danger",
               label: c.intl.string(c.t.Z5s7PD),
               action: () =>
                   (0, i.ZDy)(async () => {
-                      let { default: t } = await n.e('8653').then(n.bind(n, 928090));
+                      let { default: t } = await n.e("8653").then(n.bind(n, 928090));
                       return (n) => {
                           var r, i;
                           return (0, l.jsx)(
@@ -27,24 +27,24 @@ function s(e, t) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           l = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (l = l.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           l.forEach(function (t) {
                                               var l;
-                                              ((l = n[t]),
+                                              (l = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: l,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = l));
-                                          }));
+                                                      : (e[t] = l);
+                                          });
                                   }
                                   return e;
                               })({}, n)),
@@ -52,7 +52,7 @@ function s(e, t) {
                                   {
                                       guild: d,
                                       fromUser: s,
-                                      toUser: e
+                                      toUser: e,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -66,9 +66,9 @@ function s(e, t) {
                                     })(Object(i)).forEach(function (e) {
                                         Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                                     }),
-                              r)
+                              r),
                           );
                       };
-                  })
+                  }),
           });
 }

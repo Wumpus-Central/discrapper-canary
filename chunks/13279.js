@@ -9,5 +9,15 @@ function l(e, t) {
         l = (0, s.c)(),
         c = (0, a.h)(e),
         u = (0, i.S)(e, r.pj.INAPPROPRIATE_CONVERSATION_TIER_2);
-    if (n && l && 0 !== c.length && !c.some((e) => e.type === r.pj.INAPPROPRIATE_CONVERSATION_TIER_1 || (e.type === r.pj.INAPPROPRIATE_CONVERSATION_TIER_2 && null != e.dismiss_timestamp))) return u;
+    if (
+        n &&
+        l &&
+        0 !== c.length &&
+        !c.some(
+            (e) =>
+                e.type === r.pj.INAPPROPRIATE_CONVERSATION_TIER_1 ||
+                (e.type === r.pj.INAPPROPRIATE_CONVERSATION_TIER_2 && null != e.dismiss_timestamp),
+        )
+    )
+        return u;
 }

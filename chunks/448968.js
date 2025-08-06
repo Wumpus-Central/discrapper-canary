@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container__12191',
-    overflowButton: 'overflowButton__12191'
+    container: "container__12191",
+    overflowButton: "overflowButton__12191",
 };

@@ -25,51 +25,51 @@ function v(e) {
     return (0, r.jsx)(d.Z, {
         iconContainerClassName: a()({ [O.continueIconContainer]: !1 }),
         icon: (0, r.jsx)(i, {
-            size: 'custom',
-            color: 'currentColor',
+            size: "custom",
+            color: "currentColor",
             className: O.continueIcon,
             height: 20,
-            width: 20
+            width: 20,
         }),
         color: o.Z.unsafe_rawColors.PRIMARY_700.css,
         title: _.intl.string(_.t.jMLfp6),
-        description: _.intl.string(_.t['Vd/rER']),
+        description: _.intl.string(_.t["Vd/rER"]),
         onClick: t,
-        className: n
+        className: n,
     });
 }
 function C(e) {
     let { channel: t } = e,
         { participants: n, usersInSummary: i } = (0, x.Z)(t.id);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: O.audienceSummary,
         children: [
             (0, r.jsx)(u.ZP, {
                 className: O.summaryItem,
                 guildId: t.guild_id,
                 users: i,
-                size: u.u8.SIZE_16
+                size: u.u8.SIZE_16,
             }),
             (0, r.jsx)(c.Text, {
-                variant: 'text-sm/normal',
-                color: 'header-secondary',
+                variant: "text-sm/normal",
+                color: "header-secondary",
                 children: (function (e) {
-                    if (0 === e.length) return '';
-                    if (1 === e.length) return _.intl.formatToPlainString(_.t['5ULgaW'], { first: e[0].userNick });
+                    if (0 === e.length) return "";
+                    if (1 === e.length) return _.intl.formatToPlainString(_.t["5ULgaW"], { first: e[0].userNick });
                     if (2 === e.length)
                         return _.intl.formatToPlainString(_.t.BHK0Oj, {
                             first: e[0].userNick,
-                            second: e[1].userNick
+                            second: e[1].userNick,
                         });
                     let t = e.length - 2;
                     return _.intl.formatToPlainString(_.t.T3MT4u, {
                         first: e[0].userNick,
                         second: e[1].userNick,
-                        numOthers: t
+                        numOthers: t,
                     });
-                })(n)
-            })
-        ]
+                })(n),
+            }),
+        ],
     });
 }
 function E(e) {
@@ -79,52 +79,52 @@ function E(e) {
         { canCreateGuildEvent: u } = (0, g.XJ)(t),
         d = (0, j.Z)(t.id),
         x = i.useRef(null);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: O.container,
         ref: x,
         children: [
             (0, r.jsx)(m.Z, { eventTargetRef: x }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: O.content,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: O.headerContainer,
                         children: [
                             (0, r.jsx)(c.X6q, {
                                 className: O.__invalid_title,
-                                variant: 'heading-xxl/normal',
-                                children: _.intl.string(_.t.QGnDLi)
+                                variant: "heading-xxl/normal",
+                                children: _.intl.string(_.t.QGnDLi),
                             }),
                             (0, r.jsx)(c.Text, {
-                                tag: 'div',
+                                tag: "div",
                                 className: O.subtitle,
-                                variant: 'heading-lg/normal',
-                                children: _.intl.string(_.t.djfK39)
-                            })
-                        ]
+                                variant: "heading-lg/normal",
+                                children: _.intl.string(_.t.djfK39),
+                            }),
+                        ],
                     }),
                     d ? null : (0, r.jsx)(p.Z, { channelId: t.id }),
                     l
                         ? (0, r.jsx)(f.Z, {
                               className: O.eventPrompt,
-                              channel: t
+                              channel: t,
                           })
                         : null,
                     u
                         ? (0, r.jsx)(h.Z, {
                               className: O.eventPrompt,
-                              guildId: o
+                              guildId: o,
                           })
                         : null,
                     l
                         ? (0, r.jsx)(v, {
                               className: a()({ [O.eventPrompt]: !0 }),
-                              onClick: n
+                              onClick: n,
                           })
                         : null,
-                    (0, r.jsx)(C, { channel: t })
-                ]
-            })
-        ]
+                    (0, r.jsx)(C, { channel: t }),
+                ],
+            }),
+        ],
     });
 }

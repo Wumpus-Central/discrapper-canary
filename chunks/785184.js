@@ -7,9 +7,9 @@ var i = n(255367),
     o = n(40347),
     c = n(388032),
     d = n(757020);
-let u = r.lazy(() => n.e('22274').then(n.bind(n, 269792)));
+let u = r.lazy(() => n.e("22274").then(n.bind(n, 269792)));
 function m() {
-    let e = (0, l.Z)({ location: 'TenureLevelUpAnimationLazyWrapper' }),
+    let e = (0, l.Z)({ location: "TenureLevelUpAnimationLazyWrapper" }),
         t = (0, a.Z)((e) => e.shouldRenderTenureLevelUp),
         n = (0, o.Z)();
     return e && t && null != n ? (0, i.jsx)(p, { levelUpData: n }) : null;
@@ -24,7 +24,7 @@ function p(e) {
         r.useEffect(() => l, [l]),
         (0, i.jsx)(s.EqS, {
             containerRef: n,
-            children: (0, i.jsxs)('div', {
+            children: (0, i.jsxs)("div", {
                 className: d.wrapper,
                 children: [
                     (0, i.jsx)(s.M0o, {
@@ -33,17 +33,17 @@ function p(e) {
                         color: s.YX$.SECONDARY,
                         size: s.tT7.SIZE_24,
                         icon: (0, i.jsx)(s.Dio, {
-                            size: 'xs',
-                            color: 'currentColor'
+                            size: "xs",
+                            color: "currentColor",
                         }),
-                        onClick: l
+                        onClick: l,
                     }),
                     (0, i.jsx)(r.Suspense, {
                         fallback: null,
-                        children: (0, i.jsx)(u, { levelUpData: t })
-                    })
-                ]
-            })
+                        children: (0, i.jsx)(u, { levelUpData: t }),
+                    }),
+                ],
+            }),
         })
     );
 }

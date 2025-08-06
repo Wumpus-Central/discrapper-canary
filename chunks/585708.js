@@ -28,7 +28,7 @@ function E(e, t, n, E) {
             message_type: t.type,
             guild_id: e.guild_id,
             channel_id: e.id,
-            channel_type: e.type
+            channel_type: e.type,
         });
     return {
         icon: x,
@@ -38,7 +38,7 @@ function E(e, t, n, E) {
                 ? (0, l.ZP)(t, {
                       noStyleAndInteraction: !0,
                       formatInline: !0,
-                      hideSimpleEmbedContent: !1
+                      hideSimpleEmbedContent: !1,
                   }).content
                 : I,
         hint: (e, t) => (e && !t ? null : (0, g.Q)((0, y.P)(), v.t.ykjOAA, v.intl.string(v.t.jZkzVF))),
@@ -49,29 +49,33 @@ function E(e, t, n, E) {
                       id: r,
                       replyToMessageId: t.id,
                       channel: e,
-                      onSend: () => C('send')
+                      onSend: () => C("send"),
                   })
                 : null,
         onNotificationShow: () => {
-            (E && (0, c.GN)(u.Ay, u.yk), j());
+            E && (0, c.GN)(u.Ay, u.yk), j();
         },
         onNotificationClick: () => {
             let n = (0, f.getPID)();
-            ((0, o.In)(
+            (0, o.In)(
                 e.id,
                 {
                     section: b.jXE.OVERLAY,
                     object: b.qAy.ACK_TEXT_CHAT_NOTIFICATION,
-                    objectType: b.Qqv.ACK_SEMI_AUTOMATIC
+                    objectType: b.Qqv.ACK_SEMI_AUTOMATIC,
                 },
                 !0,
                 !0,
-                t.id
+                t.id,
             ),
-                h.ZP.isInputLocked(n) ? (C('unlock'), r.Z.setInputLocked(!1, n)) : (C('jump'), (0, s.uL)(b.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && p.ZP.focus()));
+                h.ZP.isInputLocked(n)
+                    ? (C("unlock"), r.Z.setInputLocked(!1, n))
+                    : (C("jump"),
+                      (0, s.uL)(b.Z5c.CHANNEL(e.guild_id, e.id, t.id)),
+                      d.isPlatformEmbedded && p.ZP.focus());
         },
         onDismissClick: () => {
-            C('dismiss');
-        }
+            C("dismiss");
+        },
     };
 }

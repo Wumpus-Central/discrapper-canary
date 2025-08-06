@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => d }));
+n.r(t), n.d(t, { default: () => d });
 var r = n(255367);
 n(73800);
 var o = n(765717),
@@ -14,20 +14,20 @@ function d() {
         children: [
             (0, r.jsx)(o.Z, {
                 path: u.Z5c.OAUTH2_AUTHORIZED,
-                component: c.Xg
+                component: c.Xg,
             }),
             (0, r.jsx)(o.Z, {
                 path: u.Z5c.OAUTH2_AUTHORIZE,
-                component: l.OAuth2AuthorizePage
+                component: l.OAuth2AuthorizePage,
             }),
             (0, r.jsx)(o.Z, {
                 path: u.Z5c.OAUTH2_ERROR,
-                component: c.j3
+                component: c.j3,
             }),
             (0, r.jsx)(o.Z, {
-                path: [u.Z5c.OAUTH2_WHITELIST_ACCEPT, '/oauth2/whitelist/accept'],
-                component: i.Z
-            })
-        ]
+                path: [u.Z5c.OAUTH2_WHITELIST_ACCEPT, "/oauth2/whitelist/accept"],
+                component: i.Z,
+            }),
+        ],
     });
 }

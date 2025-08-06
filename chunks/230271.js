@@ -3,10 +3,10 @@ var r = n(220159),
     a = n(717853);
 r(
     {
-        target: 'Map',
+        target: "Map",
         proto: !0,
         real: !0,
-        forced: !0
+        forced: !0,
     },
     {
         keyOf: function (e) {
@@ -15,9 +15,9 @@ r(
                 function (t, n) {
                     if (t === e) return { key: n };
                 },
-                !0
+                !0,
             );
             return t && t.key;
-        }
-    }
+        },
+    },
 );

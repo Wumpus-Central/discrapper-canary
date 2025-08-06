@@ -21,7 +21,7 @@ let h = function (e) {
                       (0, l.jsx)(o.Ih, {
                           icon: a.b7C,
                           text: x.intl.string(x.t.v2z4c3),
-                          meetsRequirement: !0
+                          meetsRequirement: !0,
                       }),
                   n.map((e, t) =>
                       (function (e, t) {
@@ -35,8 +35,8 @@ let h = function (e) {
                               case s.QJ.MULTIPLE_CHOICE:
                                   return (0, l.jsx)(c.QH, { formField: e }, t);
                           }
-                      })(e, t)
-                  )
-              ]
+                      })(e, t),
+                  ),
+              ],
           });
 };

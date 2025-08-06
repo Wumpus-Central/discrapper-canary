@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(781311));
+n.d(t, { Z: () => A }), n(781311);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -24,7 +24,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,7 +69,7 @@ function I(e, t) {
         e
     );
 }
-let T = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
+let T = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 function S(e) {
     var t;
     let { emoji: n, isFocused: i } = e,
@@ -79,7 +79,7 @@ function S(e) {
             ? (l = p.ZP.getEmojiURL({
                   id: n.id,
                   animated: !!a,
-                  size: 20
+                  size: 20,
               }))
             : null == l && (l = h.ZP.getURL(c)),
         (0, r.jsx)(
@@ -91,29 +91,34 @@ function S(e) {
                 forceOpen: i,
                 children: (e) =>
                     (0, r.jsx)(
-                        'div',
+                        "div",
                         I(
                             O(
                                 {
-                                    'aria-label': E.intl.formatToPlainString(E.t['/iYSo6'], { emojiName: n.name }),
-                                    className: o()(b.button, { [b.focused]: i })
+                                    "aria-label": E.intl.formatToPlainString(E.t["/iYSo6"], { emojiName: n.name }),
+                                    className: o()(b.button, { [b.focused]: i }),
                                 },
-                                e
+                                e,
                             ),
                             {
                                 children:
-                                    null == l || '' === l.trim()
-                                        ? (0, r.jsx)('span', I(O({ className: o()('emoji', 'emoji-text', b.icon) }, e), { children: c }))
-                                        : (0, r.jsx)('img', {
+                                    null == l || "" === l.trim()
+                                        ? (0, r.jsx)(
+                                              "span",
+                                              I(O({ className: o()("emoji", "emoji-text", b.icon) }, e), {
+                                                  children: c,
+                                              }),
+                                          )
+                                        : (0, r.jsx)("img", {
                                               className: b.icon,
                                               src: l,
-                                              alt: ''
-                                          })
-                            }
-                        )
-                    )
+                                              alt: "",
+                                          }),
+                            },
+                        ),
+                    ),
             },
-            null != (t = n.id) ? t : n.name
+            null != (t = n.id) ? t : n.name,
         )
     );
 }
@@ -121,11 +126,11 @@ function A(e, t) {
     let n = (0, l.MZ)(t.guild_id).filter((e) => {
         var n;
         return (
-            !(e.useSpriteSheet && T.indexOf(null != (n = e.uniqueName) ? n : '') >= 0) &&
+            !(e.useSpriteSheet && T.indexOf(null != (n = e.uniqueName) ? n : "") >= 0) &&
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
-                intention: g.Hz.REACTION
+                intention: g.Hz.REACTION,
             })
         );
     });
@@ -144,20 +149,20 @@ function A(e, t) {
                   return (0, r.jsx)(
                       s.sNh,
                       {
-                          id: 'quickreact-'.concat(null != (n = e.id) ? n : t),
+                          id: "quickreact-".concat(null != (n = e.id) ? n : t),
                           render: (t) => {
                               let { isFocused: n } = t;
                               return (0, r.jsx)(S, {
                                   emoji: e,
-                                  isFocused: n
+                                  isFocused: n,
                               });
                           },
                           action: () => E(e),
-                          dontCloseOnActionIfHoldingShiftKey: !0
+                          dontCloseOnActionIfHoldingShiftKey: !0,
                       },
-                      t
+                      t,
                   );
-              })
+              }),
           })
         : null;
 }

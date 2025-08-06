@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685), n(290780), n(539854));
+n.d(t, { Z: () => h }), n(388685), n(290780), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -23,11 +23,11 @@ function h(e) {
     i.useEffect(() => {
         for (let e of t)
             if (e.id === l) {
-                let e = document.getElementById('quest-tile-'.concat(l));
+                let e = document.getElementById("quest-tile-".concat(l));
                 null == e ||
                     e.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
+                        behavior: "smooth",
+                        block: "center",
                     });
                 break;
             }
@@ -39,9 +39,9 @@ function h(e) {
             g(window.innerWidth);
         };
         return (
-            window.addEventListener('resize', e),
+            window.addEventListener("resize", e),
             () => {
-                window.removeEventListener('resize', e);
+                window.removeEventListener("resize", e);
             }
         );
     }, []);
@@ -57,22 +57,22 @@ function h(e) {
     return n && 0 === t.length
         ? (0, r.jsx)(o.$jN, { className: p.spinner })
         : 0 === t.length
-          ? (0, r.jsxs)('div', {
+          ? (0, r.jsxs)("div", {
                 className: p.emptyStateContainer,
                 children: [
                     (0, r.jsx)(o.X6q, {
-                        variant: 'heading-xl/semibold',
-                        children: d.intl.string(d.t['NqFP6+'])
+                        variant: "heading-xl/semibold",
+                        children: d.intl.string(d.t["NqFP6+"]),
                     }),
                     (0, r.jsx)(o.Text, {
-                        variant: 'text-md/normal',
-                        color: 'text-secondary',
-                        children: d.intl.string(d.t.LhD4yM)
-                    })
-                ]
+                        variant: "text-md/normal",
+                        color: "text-secondary",
+                        children: d.intl.string(d.t.LhD4yM),
+                    }),
+                ],
             })
           : (0, r.jsx)(
-                'div',
+                "div",
                 {
                     className: p.container,
                     children: b.map((e, t) => {
@@ -86,14 +86,14 @@ function h(e) {
                                 rowIndex: n,
                                 className: a()(p.questTile, {
                                     [p.selected]: h && e.id === l,
-                                    [p.unselected]: h && e.id !== l
+                                    [p.unselected]: h && e.id !== l,
                                 }),
-                                sourceQuestContent: s.jn.QUEST_HOME_DESKTOP
+                                sourceQuestContent: s.jn.QUEST_HOME_DESKTOP,
                             },
-                            e.id
+                            e.id,
                         );
-                    })
+                    }),
                 },
-                l
+                l,
             );
 }

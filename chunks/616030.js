@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Bk: () => l,
     tK: () => s,
-    zC: () => a
+    zC: () => a,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367);
 n(73800);
 var i = n(122890),
@@ -16,14 +16,14 @@ function a(e) {
             initialScene: o.NQ.Scenes.NORMAL,
             purchaseScene: o.NQ.Scenes.SPEED_START,
             errorScene: o.NQ.Scenes.NORMAL,
-            successScene: o.NQ.Scenes.FINISH
+            successScene: o.NQ.Scenes.FINISH,
         });
     return (0, r.jsx)(o.NQ, {
         className: a,
         nextScene: l,
         onScenePlay: (e) => c(o.NQ.getNextScene(e)),
         pauseWhileUnfocused: !1,
-        pause: s
+        pause: s,
     });
 }
 function s(e) {
@@ -34,14 +34,14 @@ function s(e) {
             initialScene: o.HC.Scenes.NORMAL,
             purchaseScene: o.HC.Scenes.SPEED_START,
             errorScene: o.HC.Scenes.NORMAL,
-            successScene: o.HC.Scenes.FINISH
+            successScene: o.HC.Scenes.FINISH,
         });
     return (0, r.jsx)(o.HC, {
         className: a,
         nextScene: l,
         onScenePlay: (e) => c(o.HC.getNextScene(e)),
         pauseWhileUnfocused: !1,
-        pause: s
+        pause: s,
     });
 }
 function l(e) {
@@ -52,13 +52,13 @@ function l(e) {
             initialScene: o.Db.Scenes.IDLE_ENTRY,
             purchaseScene: o.Db.Scenes.BOOST_START,
             errorScene: o.Db.Scenes.ERROR,
-            successScene: o.Db.Scenes.BOOST_END
+            successScene: o.Db.Scenes.BOOST_END,
         });
     return (0, r.jsx)(o.Db, {
         className: a,
         nextScene: l,
         onScenePlay: (e) => c(o.Db.getNextScene(e)),
         pauseWhileUnfocused: !1,
-        pause: s
+        pause: s,
     });
 }

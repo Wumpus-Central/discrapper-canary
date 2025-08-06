@@ -1,4 +1,4 @@
-(e.d(n, { Z: () => h }), e(388685));
+e.d(n, { Z: () => h }), e(388685);
 var i = e(255367);
 e(73800);
 var a = e(913527),
@@ -19,41 +19,41 @@ function h(t) {
     return a
         ? n
             ? (0, i.jsx)(o.sNh, {
-                  id: 'unmute-channel',
-                  label: t.isForumPost() ? f.intl.string(f.t['0JQfsL']) : f.intl.string(f.t['Cq/TzM']),
+                  id: "unmute-channel",
+                  label: t.isForumPost() ? f.intl.string(f.t["0JQfsL"]) : f.intl.string(f.t["Cq/TzM"]),
                   subtext: h,
-                  action: () => v(!1)
+                  action: () => v(!1),
               })
             : (0, i.jsx)(o.sNh, {
-                  id: 'mute-channel',
-                  label: t.isForumPost() ? f.intl.string(f.t['nP+YkZ']) : f.intl.string(f.t.bUUd8v),
+                  id: "mute-channel",
+                  label: t.isForumPost() ? f.intl.string(f.t["nP+YkZ"]) : f.intl.string(f.t.bUUd8v),
                   action: () => v(!0),
                   children: (0, c.k)().map((n) => {
                       let { value: e, label: a } = n;
                       return (0, i.jsx)(
                           o.sNh,
                           {
-                              id: ''.concat(e),
+                              id: "".concat(e),
                               label: a,
                               action: () =>
                                   (function (n) {
-                                      let e = n > 0 ? l()().add(n, 'second').toISOString() : null;
+                                      let e = n > 0 ? l()().add(n, "second").toISOString() : null;
                                       u.Z.setNotificationSettings(t, {
                                           muted: !0,
                                           mute_config: {
                                               selected_time_window: n,
-                                              end_time: e
-                                          }
+                                              end_time: e,
+                                          },
                                       });
-                                  })(e)
+                                  })(e),
                           },
-                          e
+                          e,
                       );
-                  })
+                  }),
               })
         : (0, i.jsx)(o.sNh, {
-              id: 'mute-disabled',
-              label: t.isForumPost() ? f.intl.string(f.t['nP+YkZ']) : f.intl.string(f.t.bUUd8v),
-              disabled: !0
+              id: "mute-disabled",
+              label: t.isForumPost() ? f.intl.string(f.t["nP+YkZ"]) : f.intl.string(f.t.bUUd8v),
+              disabled: !0,
           });
 }

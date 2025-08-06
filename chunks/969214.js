@@ -10,36 +10,36 @@ function o(t) {
         className: r.modal,
         transitionState: a,
         size: s.CgR.SMALL,
-        parentComponent: 'AutomodRaidFalseAlarmConfirmationModal',
+        parentComponent: "AutomodRaidFalseAlarmConfirmationModal",
         children: [
-            (0, n.jsx)('img', {
-                'aria-hidden': !0,
-                alt: '',
+            (0, n.jsx)("img", {
+                "aria-hidden": !0,
+                alt: "",
                 src: e(762528),
-                className: r.image
+                className: r.image,
             }),
             (0, n.jsxs)(s.hzk, {
                 className: r.content,
                 children: [
                     (0, n.jsx)(s.X6q, {
-                        variant: 'heading-xl/bold',
-                        color: 'header-primary',
+                        variant: "heading-xl/bold",
+                        color: "header-primary",
                         className: r.text,
-                        children: i.intl.string(i.t.pAzfrq)
+                        children: i.intl.string(i.t.pAzfrq),
                     }),
                     (0, n.jsx)(s.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'header-secondary',
+                        variant: "text-sm/normal",
+                        color: "header-secondary",
                         className: r.text,
-                        children: i.intl.string(i.t.oxowND)
+                        children: i.intl.string(i.t.oxowND),
                     }),
                     (0, n.jsx)(s.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: i.intl.string(i.t.o3ZlOD),
-                        onClick: o
-                    })
-                ]
-            })
-        ]
+                        onClick: o,
+                    }),
+                ],
+            }),
+        ],
     });
 }

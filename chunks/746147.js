@@ -14,16 +14,16 @@ function m(e) {
         d = (0, a.Z)(s.Me),
         p = r.useMemo(() => d.map((e) => e.value), [d]);
     r.useEffect(() => {
-        _.default.track(b.rMx.OPEN_MODAL, { type: 'Ignore User Feedback' });
+        _.default.track(b.rMx.OPEN_MODAL, { type: "Ignore User Feedback" });
     }, []);
     let f = r.useCallback((e) => {
         var t;
         let { rating: r, problem: a, feedback: i } = e,
             _ = null == r;
-        ((0, l.wT)(r, i, null != (t = null == a ? void 0 : a.value) ? t : null, _),
+        (0, l.wT)(r, i, null != (t = null == a ? void 0 : a.value) ? t : null, _),
             _ ||
                 (0, c.ZDy)(async () => {
-                    let { default: e } = await o.e('14466').then(o.bind(o, 729328));
+                    let { default: e } = await o.e("14466").then(o.bind(o, 729328));
                     return (t) =>
                         (0, n.jsx)(
                             e,
@@ -31,34 +31,34 @@ function m(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var o = null != arguments[t] ? arguments[t] : {},
                                         n = Object.keys(o);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (n = n.concat(
                                             Object.getOwnPropertySymbols(o).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(o, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         n.forEach(function (t) {
                                             var n;
-                                            ((n = o[t]),
+                                            (n = o[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: n,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = n));
-                                        }));
+                                                    : (e[t] = n);
+                                        });
                                 }
                                 return e;
-                            })({ body: u.intl.string(u.t['d9+vQ0']) }, t)
+                            })({ body: u.intl.string(u.t["d9+vQ0"]) }, t),
                         );
-                }));
+                });
     }, []);
     return (0, n.jsx)(i.Z, {
-        modalType: 'ignore_user',
+        modalType: "ignore_user",
         header: u.intl.string(u.t.Ib6biY),
-        body: u.intl.string(u.t['uW0/nZ']),
+        body: u.intl.string(u.t["uW0/nZ"]),
         problemTitle: u.intl.string(u.t.avs5Vl),
         problems: d,
         freeformNeededProblems: p,
@@ -68,6 +68,7 @@ function m(e) {
         otherKey: s.XL.SOMETHING_ELSE,
         hideHelpDeskLink: !0,
         hideDontShowAgainCheckbox: !0,
-        freeformDescription: (e) => (null == e ? null : e.value === s.XL.SOMETHING_ELSE ? u.intl.string(u.t.h95hcn) : u.intl.string(u.t.wRGel5))
+        freeformDescription: (e) =>
+            null == e ? null : e.value === s.XL.SOMETHING_ELSE ? u.intl.string(u.t.h95hcn) : u.intl.string(u.t.wRGel5),
     });
 }

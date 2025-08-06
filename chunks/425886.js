@@ -5,7 +5,22 @@ var r = n(255367),
     a = n(640108);
 class s extends i.PureComponent {
     render() {
-        let { src: e, fileSize: t, fileName: n, className: i, playable: s, volume: l, renderLinkComponent: c, onVolumeChange: u, onVolumeShow: d, onVolumeHide: f, autoMute: _, onMute: p, mimeType: h, onPlay: m } = this.props;
+        let {
+            src: e,
+            fileSize: t,
+            fileName: n,
+            className: i,
+            playable: s,
+            volume: l,
+            renderLinkComponent: c,
+            onVolumeChange: u,
+            onVolumeShow: d,
+            onVolumeHide: f,
+            autoMute: _,
+            onMute: p,
+            mimeType: h,
+            onPlay: m,
+        } = this.props;
         return (0, r.jsx)(a.ZP, {
             src: e,
             fileName: n,
@@ -22,7 +37,7 @@ class s extends i.PureComponent {
             onVolumeHide: f,
             renderLinkComponent: c,
             mimeType: h,
-            onPlay: m
+            onPlay: m,
         });
     }
 }

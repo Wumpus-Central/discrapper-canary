@@ -7,7 +7,7 @@ e.exports = r
       }
     : i
       ? function (e) {
-            if (!e || ('object' != typeof e && 'function' != typeof e)) throw TypeError('getProto: not an object');
+            if (!e || ("object" != typeof e && "function" != typeof e)) throw TypeError("getProto: not an object");
             return i(e);
         }
       : o

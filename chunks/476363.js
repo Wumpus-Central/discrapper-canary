@@ -12,7 +12,7 @@ e.exports = function (e, t) {
             var r = t.currentTarget.ownerDocument.defaultView.getSelection().getRangeAt(0);
             return o(e, null, (r = i(r)).endContainer, r.endOffset, r.startContainer, r.startOffset).selectionState;
         },
-        'backward'
+        "backward",
     );
-    return n === e.getCurrentContent() ? e : r.push(e, n, 'remove-range');
+    return n === e.getCurrentContent() ? e : r.push(e, n, "remove-range");
 };

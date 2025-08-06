@@ -1,4 +1,4 @@
-(n.d(t, { B: () => d }), n(388685));
+n.d(t, { B: () => d }), n(388685);
 var l = n(73800),
     i = n(442837),
     r = n(247272),
@@ -8,7 +8,16 @@ var l = n(73800),
     u = n(981631);
 function d(e) {
     let { guild: t, inviteChannel: n, inviteTargetType: d, applicationId: c } = e,
-        [g, h, m, p] = (0, i.Wu)([s.Z, a.ZP], () => [s.Z.getInviteSuggestionRows(), s.Z.getTotalSuggestionsCount() >= 1, s.Z.getInitialCounts(), null == n ? null : a.ZP.getVoiceStatesForChannel(n)], [n]),
+        [g, h, m, p] = (0, i.Wu)(
+            [s.Z, a.ZP],
+            () => [
+                s.Z.getInviteSuggestionRows(),
+                s.Z.getTotalSuggestionsCount() >= 1,
+                s.Z.getInitialCounts(),
+                null == n ? null : a.ZP.getVoiceStatesForChannel(n),
+            ],
+            [n],
+        ),
         v = l.useMemo(() => {
             let e = new Set();
             return (
@@ -28,13 +37,13 @@ function d(e) {
                 guild: t,
                 channel: n,
                 applicationId: c,
-                inviteTargetType: d
+                inviteTargetType: d,
             }).catch(u.VqG);
         }, [v, t, n, c, d]),
         {
             rows: g,
             showFriends: h,
-            initialCounts: m
+            initialCounts: m,
         }
     );
 }

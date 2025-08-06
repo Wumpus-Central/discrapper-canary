@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     l = n(73800),
     s = n(120356),
@@ -31,7 +31,7 @@ function C(e) {
         [M, P] = l.useState(null != (t = null == x ? void 0 : x.details.additionalSearchQuery) ? t : {}),
         j = (0, N.z0)(s, C, {
             addtionalQuery: M,
-            shouldDispatch: !0
+            shouldDispatch: !0,
         }),
         y = (0, o.e7)([g.default], () => g.default.getUser(s), [s]),
         w = (0, o.e7)([I.ZP], () => I.ZP.getMember(C, s), [C, s]);
@@ -42,7 +42,7 @@ function C(e) {
             null == (t = L.current) ||
                 t.scrollTo({
                     to: e,
-                    animate: !1
+                    animate: !1,
                 });
         }
     });
@@ -53,10 +53,10 @@ function C(e) {
                     (0, f.r)(C, s, x.baseChannelId, {
                         modViewPanel: O.k.MESSAGE_HISTORY,
                         additionalSearchQuery: M,
-                        scrollOffset: U.current
+                        scrollOffset: U.current,
                     }));
             },
-            [C, s, x, M]
+            [C, s, x, M],
         ),
         k = (0, a.throttle)(G, 300),
         F = l.useCallback(
@@ -68,24 +68,24 @@ function C(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, M)),
@@ -103,48 +103,44 @@ function C(e) {
                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
                     t);
-                (P(r),
+                P(r),
                     (0, f.r)(C, s, x.baseChannelId, {
                         modViewPanel: O.k.MESSAGE_HISTORY,
                         additionalSearchQuery: r,
-                        scrollOffset: U.current
-                    }));
+                        scrollOffset: U.current,
+                    });
             },
-            [C, s, x, M]
+            [C, s, x, M],
         ),
         z = null != (n = null == M ? void 0 : M.offset) ? n : 0,
-        Z = (0, o.e7)(
-            [d.Z],
-            () => {
-                if (null == j.result) return [];
-                let e = j.result.messages,
-                    t = (0, E.nC)('');
-                return e.map((e) =>
-                    e.map((e) => {
-                        let n = d.Z.getMessage(e.id, e.channel_id),
-                            r = (0, _.e5)(e);
-                        return (
-                            null != n &&
-                                (r = r.merge({
-                                    attachments: n.attachments,
-                                    embeds: n.embeds
-                                })),
-                            r.isSearchHit
-                                ? r.set(
-                                      'customRenderedContent',
-                                      (0, A.ZP)(r, {
-                                          postProcessor: t,
-                                          allowHeading: !0,
-                                          allowList: !0
-                                      })
-                                  )
-                                : r
-                        );
-                    })
-                );
-            },
-            [j.result]
-        ),
+        Z = (0, o.e7)([d.Z], () => {
+            if (null == j.result) return [];
+            let e = j.result.messages,
+                t = (0, E.nC)("");
+            return e.map((e) =>
+                e.map((e) => {
+                    let n = d.Z.getMessage(e.id, e.channel_id),
+                        r = (0, _.e5)(e);
+                    return (
+                        null != n &&
+                            (r = r.merge({
+                                attachments: n.attachments,
+                                embeds: n.embeds,
+                            })),
+                        r.isSearchHit
+                            ? r.set(
+                                  "customRenderedContent",
+                                  (0, A.ZP)(r, {
+                                      postProcessor: t,
+                                      allowHeading: !0,
+                                      allowList: !0,
+                                  }),
+                              )
+                            : r
+                    );
+                }),
+            );
+        }, [j.result]),
         B = l.useMemo(() => {
             var e, t, n, r;
             return null == j.result
@@ -157,7 +153,7 @@ function C(e) {
                       totalResults: 0,
                       hasError: !1,
                       showBlockedResults: !1,
-                      showNoResultsAlt: !1
+                      showNoResultsAlt: !1,
                   }
                 : {
                       documentsIndexed: null != (e = j.result.documents_indexed) ? e : 0,
@@ -168,18 +164,18 @@ function C(e) {
                       totalResults: null != (r = j.result.total_results) ? r : 0,
                       hasError: !1,
                       showBlockedResults: !1,
-                      showNoResultsAlt: !1
+                      showNoResultsAlt: !1,
                   };
         }, [j.result, z]);
     return null == y || null == w || null == B
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: i()(R.container, D),
               children: [
                   (0, r.jsx)(h.Z, {
                       guildId: C,
                       userId: s,
-                      onNavigate: b
+                      onNavigate: b,
                   }),
                   (0, r.jsx)(u.Den, {
                       className: S.innerContainer,
@@ -193,9 +189,9 @@ function C(e) {
                           ignoreCount: 0,
                           scrollTo: p.dG4,
                           onPageChange: F,
-                          onBlockedResultsClick: p.dG4
-                      })
-                  })
-              ]
+                          onBlockedResultsClick: p.dG4,
+                      }),
+                  }),
+              ],
           });
 }

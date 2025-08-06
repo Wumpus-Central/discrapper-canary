@@ -9,9 +9,9 @@ let a = async (e, t) => {
                 url: o.ANM.PRICE_TIERS,
                 query: {
                     price_tier_type: t,
-                    guild_id: e
+                    guild_id: e,
                 },
-                rejectWithError: !1
+                rejectWithError: !1,
             })
         ).body;
     } catch (e) {

@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     M: () => D,
-    h: () => R
+    h: () => R,
 }),
     n(467055),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(245364),
@@ -27,7 +27,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -79,7 +79,8 @@ function I(e, t) {
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,13 +90,13 @@ function T(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let S = [d.h8.PAYMENT_ELEMENT],
     A = i.memo(function (e) {
         var { originalPaymentType: t, wallets: n = [], analyticsContext: a, options: s, onChange: l, step: c } = e,
-            u = I(e, ['originalPaymentType', 'wallets', 'analyticsContext', 'options', 'onChange', 'step']);
+            u = I(e, ["originalPaymentType", "wallets", "analyticsContext", "options", "onChange", "step"]);
         let p = i.useMemo(() => {
                 if (null == t || !(0, h.qH)(t)) return;
                 let e = (0, _.rI)();
@@ -118,41 +119,41 @@ let S = [d.h8.PAYMENT_ELEMENT],
                             payment_element_selected_method: o,
                             payment_source_type: i,
                             complete: e.complete,
-                            empty: e.empty
+                            empty: e.empty,
                         });
                     }
                 },
-                [l, a, c]
+                [l, a, c],
             ),
             E = i.useMemo(
                 () => ({
-                    applePay: n.includes('applePay') ? 'auto' : 'never',
-                    googlePay: n.includes('googlePay') ? 'auto' : 'never',
-                    link: n.includes('link') ? 'auto' : 'never'
+                    applePay: n.includes("applePay") ? "auto" : "never",
+                    googlePay: n.includes("googlePay") ? "auto" : "never",
+                    link: n.includes("link") ? "auto" : "never",
                 }),
-                [n]
+                [n],
             );
         return (0, r.jsx)(
             o.PaymentElement,
             y(
                 {
-                    id: 'stripe-payment-element',
+                    id: "stripe-payment-element",
                     options: y(
                         v(y({}, null != p && { paymentMethodOrder: p }), {
-                            layout: { type: 'tabs' },
-                            wallets: E
+                            layout: { type: "tabs" },
+                            wallets: E,
                         }),
-                        s
+                        s,
                     ),
-                    onChange: g
+                    onChange: g,
                 },
-                u
-            )
+                u,
+            ),
         );
     }),
     N = i.memo(function (e) {
         var { options: t, renderWithoutElement: n, billingAddressInfo: a } = e,
-            s = I(e, ['options', 'renderWithoutElement', 'billingAddressInfo']);
+            s = I(e, ["options", "renderWithoutElement", "billingAddressInfo"]);
         let l = i.useMemo(() => {
                 let { name: e, address: t } = (0, _.XZ)(a);
                 return y(
@@ -162,9 +163,9 @@ let S = [d.h8.PAYMENT_ELEMENT],
                             Object.entries(t).filter((e) => {
                                 let [t, n] = e;
                                 return void 0 !== n;
-                            })
-                        )
-                    }
+                            }),
+                        ),
+                    },
                 );
             }, [a]),
             { stripe: c } = (0, u.JL)(),
@@ -176,82 +177,99 @@ let S = [d.h8.PAYMENT_ELEMENT],
                             {
                                 options: y(
                                     {
-                                        mode: 'billing',
-                                        defaultValues: l
+                                        mode: "billing",
+                                        defaultValues: l,
                                     },
-                                    t
-                                )
+                                    t,
+                                ),
                             },
-                            s
-                        )
+                            s,
+                        ),
                     ),
-                [l, t, s]
+                [l, t, s],
             );
         return n
             ? d
             : (0, r.jsx)(o.Elements, {
                   stripe: c,
-                  children: d
+                  children: d,
               });
     }),
     C = (e) => {
-        let { step: t, billingAddressInfo: n, stripePaymentElementProps: a, stripeAddressElementProps: l, elementsRef: c, originalPaymentType: u, paymentElementSelectedType: f, analyticsContext: _ } = e,
+        let {
+                step: t,
+                billingAddressInfo: n,
+                stripePaymentElementProps: a,
+                stripeAddressElementProps: l,
+                elementsRef: c,
+                originalPaymentType: u,
+                paymentElementSelectedType: f,
+                analyticsContext: _,
+            } = e,
             p = (0, o.useElements)();
         i.useEffect(() => {
             c.current = p;
         }, [p, c]);
         let h = S.includes(t) && null != f,
             m = t === d.h8.ADDRESS;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: E.body,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: s()(h ? E.visible : E.hidden, {
                         [E.cardElementContainer]: f === g.He.CARD,
-                        [E.customPaymentElementContainer]: f === g.He.PAYPAL
+                        [E.customPaymentElementContainer]: f === g.He.PAYPAL,
                     }),
                     children: (0, r.jsx)(
                         A,
                         v(y({}, a), {
                             step: t,
                             originalPaymentType: u,
-                            analyticsContext: _
-                        })
-                    )
+                            analyticsContext: _,
+                        }),
+                    ),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: s()(E.addressElementContainer, m ? E.visible : E.hidden),
                     children: (0, r.jsx)(
                         N,
                         v(y({}, l), {
                             renderWithoutElement: !0,
-                            billingAddressInfo: n
-                        })
-                    )
-                })
-            ]
+                            billingAddressInfo: n,
+                        }),
+                    ),
+                }),
+            ],
         });
     },
     R = (e) => {
         var { onSetupError: t } = e,
-            n = I(e, ['onSetupError']);
+            n = I(e, ["onSetupError"]);
         let { elementsOptions: i, isLoading: a, setupError: s } = (0, p.S)({ onSetupError: t }),
             { stripe: c } = (0, u.JL)();
         return a || null != s || null == c
-            ? (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", {
                   className: E.loadingContainer,
-                  children: (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE_SIMPLE })
+                  children: (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE_SIMPLE }),
               })
             : (0, r.jsx)(o.Elements, {
                   stripe: c,
                   options: y({}, i),
-                  children: (0, r.jsx)(C, y({}, n))
+                  children: (0, r.jsx)(C, y({}, n)),
               });
     },
-    P = ['city', 'country', 'line1'],
-    w = ['link'],
+    P = ["city", "country", "line1"],
+    w = ["link"],
     D = (e) => {
-        let { step: t, handleStepChange: n, paymentElementsEnabled: r, logger: o, onBillingAddressChange: a, shouldLogOnChangeEvents: s, continueSessionToInitialStep: l } = e,
+        let {
+                step: t,
+                handleStepChange: n,
+                paymentElementsEnabled: r,
+                logger: o,
+                onBillingAddressChange: a,
+                shouldLogOnChangeEvents: s,
+                continueSessionToInitialStep: l,
+            } = e,
             u = i.useRef(null),
             [f, _] = i.useState(!1),
             [p, m] = i.useState(l === d.h8.CREDIT_CARD_INFORMATION ? g.He.CARD : null),
@@ -259,11 +277,13 @@ let S = [d.h8.PAYMENT_ELEMENT],
             b = i.useMemo(
                 () => ({
                     onChange: (e) => {
-                        (s && null != o && o.log('PaymentElements onChange event:', e), _(e.complete), m((0, h.hR)(e.value.type)));
+                        s && null != o && o.log("PaymentElements onChange event:", e),
+                            _(e.complete),
+                            m((0, h.hR)(e.value.type));
                     },
-                    wallets: w
+                    wallets: w,
                 }),
-                [o, s]
+                [o, s],
             ),
             y = i.useMemo(
                 () => ({
@@ -271,33 +291,33 @@ let S = [d.h8.PAYMENT_ELEMENT],
                         var t;
                         let {
                                 complete: n,
-                                value: { address: r, name: i }
+                                value: { address: r, name: i },
                             } = e,
                             o = {
                                 name: i,
                                 country: r.country,
                                 city: r.city,
                                 line1: r.line1,
-                                line2: null != (t = r.line2) ? t : '',
+                                line2: null != (t = r.line2) ? t : "",
                                 state: r.state,
-                                postalCode: r.postal_code
+                                postalCode: r.postal_code,
                             },
                             s =
                                 P.every((e) => {
                                     let t = o[e];
-                                    return null != t && '' !== t;
+                                    return null != t && "" !== t;
                                 }) && n;
                         a(o, s);
-                    }
+                    },
                 }),
-                [a]
+                [a],
             ),
             O = i.useCallback(
                 function (e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                    (void 0 !== e && m(e), n(d.h8.PAYMENT_ELEMENT, t));
+                    void 0 !== e && m(e), n(d.h8.PAYMENT_ELEMENT, t);
                 },
-                [n]
+                [n],
             );
         i.useEffect(() => {
             if (!r) return;
@@ -305,14 +325,14 @@ let S = [d.h8.PAYMENT_ELEMENT],
                 O(void 0);
             };
             return (
-                c.Z.subscribe('BRAINTREE_TOKENIZE_PAYPAL_FAIL_WINDOW_CLOSED', e),
+                c.Z.subscribe("BRAINTREE_TOKENIZE_PAYPAL_FAIL_WINDOW_CLOSED", e),
                 () => {
-                    c.Z.unsubscribe('BRAINTREE_TOKENIZE_PAYPAL_FAIL_WINDOW_CLOSED', e);
+                    c.Z.unsubscribe("BRAINTREE_TOKENIZE_PAYPAL_FAIL_WINDOW_CLOSED", e);
                 }
             );
         }, [O, r]);
         let v = i.useCallback(() => {
-            (m(null), n(d.h8.PAYMENT_TYPE));
+            m(null), n(d.h8.PAYMENT_TYPE);
         }, [n]);
         return {
             shouldRenderPaymentElement: E,
@@ -323,6 +343,6 @@ let S = [d.h8.PAYMENT_ELEMENT],
             paymentElementSelectedType: p,
             setPaymentElementSelectedType: m,
             handlePaymentElementStep: O,
-            onBackPaymentElement: v
+            onBackPaymentElement: v,
         };
     };

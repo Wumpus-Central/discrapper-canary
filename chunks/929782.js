@@ -1,10 +1,10 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         enable: () => N,
         isNotSupported: () => S,
         trackToggleSelfDeaf: () => R,
-        trackToggleSelfMute: () => C
-    }));
+        trackToggleSelfMute: () => C,
+    });
 var r = n(255367);
 n(73800);
 var i = n(755721),
@@ -29,7 +29,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,15 +39,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -55,11 +55,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,11 +74,11 @@ function v(e, t) {
         e
     );
 }
-let I = new s.Z('AudioActionCreators');
+let I = new s.Z("AudioActionCreators");
 function T() {
     (0, o.ZDy)(async () => {
-        let { default: e } = await n.e('74023').then(n.bind(n, 431583));
-        return (t) => (0, r.jsx)(e, y({ source: 'Unsupported Browser' }, t));
+        let { default: e } = await n.e("74023").then(n.bind(n, 431583));
+        return (t) => (0, r.jsx)(e, y({ source: "Unsupported Browser" }, t));
     });
 }
 function S() {
@@ -92,45 +92,45 @@ function S() {
                         {
                             header: E.intl.string(E.t.ilMTy8),
                             confirmText: E.intl.string(E.t.BK8LKy),
-                            cancelText: E.intl.string(E.t['ETE/oK']),
+                            cancelText: E.intl.string(E.t["ETE/oK"]),
                             onConfirm: T,
-                            confirmButtonColor: i.zx.Colors.BRAND
+                            confirmButtonColor: i.zx.Colors.BRAND,
                         },
-                        e
+                        e,
                     ),
                     {
                         children: (0, r.jsx)(o.Text, {
-                            variant: 'text-md/normal',
-                            children: E.intl.string(E.t.h66vlJ)
-                        })
-                    }
-                )
-            )
+                            variant: "text-md/normal",
+                            children: E.intl.string(E.t.h66vlJ),
+                        }),
+                    },
+                ),
+            ),
         ),
         !0)
     );
 }
 function A(e) {
     _.default.track(m.rMx.PERMISSIONS_ACKED, {
-        type: 'audio',
-        action: e
+        type: "audio",
+        action: e,
     });
 }
 function N() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return S()
         ? Promise.resolve(!1)
-        : (_.default.track(m.rMx.PERMISSIONS_REQUESTED, { type: 'audio' }),
+        : (_.default.track(m.rMx.PERMISSIONS_REQUESTED, { type: "audio" }),
           c.Z.getMediaEngine()
               .enable()
               .then(
                   () => {
-                      (a.Z.dispatch({
-                          type: 'MEDIA_ENGINE_SET_AUDIO_ENABLED',
+                      a.Z.dispatch({
+                          type: "MEDIA_ENGINE_SET_AUDIO_ENABLED",
                           enabled: !0,
-                          unmute: e
+                          unmute: e,
                       }),
-                          A(g.PQ.ACCEPTED));
+                          A(g.PQ.ACCEPTED);
                   },
                   (e) => {
                       switch (e) {
@@ -144,9 +144,9 @@ function N() {
                               A(g.PQ.DISMISSED);
                               break;
                           default:
-                              (A(g.PQ.ERROR), I.warn('unknown getUserMedia error: '.concat(e)));
+                              A(g.PQ.ERROR), I.warn("unknown getUserMedia error: ".concat(e));
                       }
-                  }
+                  },
               )
               .then(() => !0));
 }
@@ -162,7 +162,7 @@ function C(e) {
         app_in_focus: f.Z.isAppFocused(),
         overlay_activated: null != (0, h.Z)(),
         voice_channel_type: null != o ? o.type : null,
-        location: n
+        location: n,
     });
 }
 function R(e) {
@@ -177,6 +177,6 @@ function R(e) {
         app_in_focus: f.Z.isAppFocused(),
         overlay_activated: null != (0, h.Z)(),
         voice_channel_type: null != o ? o.type : null,
-        location: n
+        location: n,
     });
 }

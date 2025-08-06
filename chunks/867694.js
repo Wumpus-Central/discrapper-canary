@@ -14,6 +14,6 @@ function a(e) {
         className: l.toggle,
         note: u,
         hideBorder: !0,
-        children: c
+        children: c,
     });
 }

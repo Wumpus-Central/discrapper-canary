@@ -1,4 +1,4 @@
-(n.d(t, { x: () => h }), n(388685));
+n.d(t, { x: () => h }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(100527),
@@ -12,7 +12,20 @@ var i = n(255367),
     p = n(407965),
     g = n(981631);
 let h = (e) => {
-        let { transitionState: t, onClose: n, premiumSubscription: l, premiumType: o, churnDiscount: c, planId: d, renewalInvoice: m, renewalInvoiceDetails: p, errorOnCancel: h, errorOnRedeem: b, setActiveStep: x, activeStep: _ } = e,
+        let {
+                transitionState: t,
+                onClose: n,
+                premiumSubscription: l,
+                premiumType: o,
+                churnDiscount: c,
+                planId: d,
+                renewalInvoice: m,
+                renewalInvoiceDetails: p,
+                errorOnCancel: h,
+                errorOnRedeem: b,
+                setActiveStep: x,
+                activeStep: _,
+            } = e,
             { analyticsLocations: j } = (0, a.ZP)(s.Z.USER_SETTINGS),
             [E, C] = r.useState(f(_));
         return (
@@ -32,8 +45,8 @@ let h = (e) => {
                     discountPrimary: !1,
                     churnUserDiscountOffer: c,
                     isFetchingChurnDiscountOffer: !1,
-                    fullPrice: '$9.99',
-                    discountedPrice: '$4.99',
+                    fullPrice: "$9.99",
+                    discountedPrice: "$4.99",
                     planId: d,
                     paymentsBlocked: !1,
                     renewalInvoice: m,
@@ -51,9 +64,9 @@ let h = (e) => {
                                 if (b) return void t();
                                 e();
                             }, 1000);
-                        })
+                        }),
                 },
-                children: E
+                children: E,
             })
         );
     },

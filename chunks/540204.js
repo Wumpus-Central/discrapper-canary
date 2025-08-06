@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(290780));
+n.d(t, { Z: () => f }), n(290780);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -12,8 +12,8 @@ var i = n(255367),
     p = n(388032),
     g = n(867198);
 let h = {
-    label: () => p.intl.string(p.t['32u1Dw']),
-    value: u.Th
+    label: () => p.intl.string(p.t["32u1Dw"]),
+    value: u.Th,
 };
 function f() {
     let { selectedGuildId: e, setSelectedGuildId: t } = (0, u.xu)(),
@@ -35,7 +35,7 @@ function f() {
                               ? null
                               : {
                                     label: t.name,
-                                    value: t.id
+                                    value: t.id,
                                 };
                       })
                       .filter(d.lm);
@@ -46,24 +46,24 @@ function f() {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        ((i = n[t]),
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = i));
-                                    }));
+                                                : (e[t] = i);
+                                    });
                             }
                             return e;
                         })({}, h)),
@@ -80,7 +80,7 @@ function f() {
                               })(Object(t)).forEach(function (n) {
                                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                               }),
-                        e)
+                        e),
                     ),
                 i
             );
@@ -88,24 +88,24 @@ function f() {
         j = r.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === h.label() && (null == e ? void 0 : e.value) === h.value;
-                return null == e || '' === e.value || t
-                    ? (0, i.jsx)('div', {
+                return null == e || "" === e.value || t
+                    ? (0, i.jsx)("div", {
                           className: g.clydeIconContainer,
                           children: (0, i.jsx)(a.gw7, {
-                              size: 'sm',
-                              color: 'white',
-                              'aria-hidden': !0,
-                              className: g.guildSelectOptionIcon
-                          })
+                              size: "sm",
+                              color: "white",
+                              "aria-hidden": !0,
+                              className: g.guildSelectOptionIcon,
+                          }),
                       })
                     : (0, i.jsx)(l.Z, {
                           className: g.guildSelectOptionIcon,
                           guild: p[e.value],
                           size: l.Z.Sizes.SMALLER,
-                          active: !0
+                          active: !0,
                       });
             },
-            [p]
+            [p],
         );
     return (0, i.jsx)(a.VcW, {
         wrapperClassName: g.searchableSelect,
@@ -114,6 +114,6 @@ function f() {
         },
         value: e,
         options: _,
-        renderOptionPrefix: j
+        renderOptionPrefix: j,
     });
 }

@@ -7,5 +7,5 @@ e.exports = function (e) {
         o = e === t ? e.ownerDocument.documentElement : e,
         a = e.scrollWidth - o.clientWidth,
         s = e.scrollHeight - o.clientHeight;
-    return ((n.x = Math.max(0, Math.min(n.x, a))), (n.y = Math.max(0, Math.min(n.y, s))), n);
+    return (n.x = Math.max(0, Math.min(n.x, a))), (n.y = Math.max(0, Math.min(n.y, s))), n;
 };

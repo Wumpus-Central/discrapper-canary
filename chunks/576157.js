@@ -21,7 +21,7 @@ function c() {
             shouldShowNewBadge: !e,
             markNewBadgeAsDismissed: r.useCallback(() => {
                 (0, a.Q3)(i.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE, { dismissAction: l.L.TAKE_ACTION });
-            }, [])
+            }, []),
         }
     );
 }

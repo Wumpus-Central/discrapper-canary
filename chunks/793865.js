@@ -19,13 +19,13 @@ function g(e) {
         { analyticsLocations: b } = (0, c.ZP)(),
         y = (0, a.e7)([d.default], () => {
             let e = d.default.getCurrentUser();
-            return (o()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e);
+            return o()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
         }),
         O = (0, u.M)({
             deviceType: h.h7.VIDEO_INPUT,
             analyticsLocations: b,
             showAllDevices: !0,
-            asSubmenu: i
+            asSubmenu: i,
         }),
         v = (0, f.Z)(y.id, g),
         I = (0, _.Z)(g);
@@ -33,16 +33,16 @@ function g(e) {
         object: p.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(s.v2r, {
             onClose: t,
-            navId: 'video-device-context',
-            'aria-label': m.intl.string(m.t.F122Gx),
+            navId: "video-device-context",
+            "aria-label": m.intl.string(m.t.F122Gx),
             onSelect: n,
             onInteraction: E,
             children: [
                 O,
                 (0, r.jsxs)(s.kSQ, {
-                    children: [v, i ? I : null]
-                })
-            ]
-        })
+                    children: [v, i ? I : null],
+                }),
+            ],
+        }),
     });
 }

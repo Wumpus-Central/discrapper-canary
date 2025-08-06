@@ -25,35 +25,35 @@ function g(e) {
                     let r, n;
                     switch (t) {
                         case f.zJ.NAME:
-                            ((r = (e) => e.name.toLowerCase()), (n = 'asc'));
+                            (r = (e) => e.name.toLowerCase()), (n = "asc");
                             break;
                         case f.zJ.PRICE_ASC:
-                            ((r = 'price_tier'), (n = 'asc'));
+                            (r = "price_tier"), (n = "asc");
                             break;
                         case f.zJ.PRICE_DESC:
-                            ((r = 'price_tier'), (n = 'desc'));
+                            (r = "price_tier"), (n = "desc");
                             break;
                         case f.zJ.NEWEST_ARRIVALS:
-                            ((r = 'published_at'), (n = 'desc'));
+                            (r = "published_at"), (n = "desc");
                             break;
                         default:
                             return e;
                     }
                     return c().orderBy(e, [r], [n]);
                 })(s, h),
-            [s, h]
+            [s, h],
         );
     return o
-        ? (0, n.jsx)('ul', {
+        ? (0, n.jsx)("ul", {
               className: j.cardContainer,
-              'aria-label': b.intl.string(b.t.qe4kTU),
+              "aria-label": b.intl.string(b.t.qe4kTU),
               children: m.map((e) =>
                   (0, n.jsx)(
-                      'li',
+                      "li",
                       {
                           className: j.card,
                           children: (0, n.jsx)(
-                              'div',
+                              "div",
                               {
                                   className: l()(j.cardContent, { [j.selectedCard]: e.id === r }),
                                   ref: e.id === r ? g : void 0,
@@ -62,8 +62,8 @@ function g(e) {
                                       null != t &&
                                           e.id === r &&
                                           (t.scrollIntoView({
-                                              behavior: 'smooth',
-                                              block: 'center'
+                                              behavior: "smooth",
+                                              block: "center",
                                           }),
                                           setTimeout(() => {
                                               t.classList.remove(j.selectedCard);
@@ -81,18 +81,18 @@ function g(e) {
                                           cardWidth: 332,
                                           cardHeight: 347,
                                           thumbnailHeight: 187,
-                                          descriptionTextVariant: 'text-xs/normal',
-                                          showOpaqueBackground: !0
+                                          descriptionTextVariant: "text-xs/normal",
+                                          showOpaqueBackground: !0,
                                       },
-                                      e.id
-                                  )
+                                      e.id,
+                                  ),
                               },
-                              e.id
-                          )
+                              e.id,
+                          ),
                       },
-                      e.id
-                  )
-              )
+                      e.id,
+                  ),
+              ),
           })
         : (0, n.jsx)(a.$jN, {});
 }

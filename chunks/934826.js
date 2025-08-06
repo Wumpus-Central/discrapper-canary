@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685));
+n.d(t, { Z: () => u }), n(388685);
 var i = n(73800),
     r = n(442837),
     l = n(821849),
@@ -26,13 +26,13 @@ function u(e) {
                 if (null == l) continue;
                 let a = n[l];
                 if (null != a) {
-                    ((r = a), (i = t));
+                    (r = a), (i = t);
                     break;
                 }
             }
             return {
                 activeSubscription: r,
-                activeSubscriptionListing: i
+                activeSubscriptionListing: i,
             };
         }),
         f = null == m ? void 0 : m.subscription_plans[0],
@@ -47,7 +47,7 @@ function u(e) {
         {
             activeSubscription: u,
             activeSubscriptionListing: m,
-            activeSubscriptionPlanFromStore: v
+            activeSubscriptionPlanFromStore: v,
         }
     );
 }

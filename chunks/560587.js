@@ -11,15 +11,15 @@ class d extends (r = l.ZP.Store) {
         return null != (t = o[e]) ? t : [];
     }
 }
-((s = 'ApplicationBranchStore'),
-    (i = 'displayName') in d
+(s = "ApplicationBranchStore"),
+    (i = "displayName") in d
         ? Object.defineProperty(d, i, {
               value: s,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (d[i] = s));
+        : (d[i] = s);
 let c = new d(a.Z, {
     OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS: function (e) {
         let { applicationId: t, branches: n } = e;
@@ -27,5 +27,5 @@ let c = new d(a.Z, {
     },
     LOGOUT: function () {
         o = {};
-    }
+    },
 });

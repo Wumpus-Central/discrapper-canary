@@ -1,7 +1,7 @@
 n.d(t, {
     Hl: () => c,
     Sz: () => u,
-    ZP: () => l
+    ZP: () => l,
 });
 var r = n(592125),
     i = n(271383),
@@ -19,7 +19,7 @@ function l(e) {
         mentionRoles: r.mentionRoles,
         mentionGames: null != (n = null == (t = r.mentionGames) ? void 0 : t.map((e) => e.id)) ? n : [],
         suppressEveryone: o,
-        suppressRoles: a
+        suppressRoles: a,
     });
 }
 function c(e) {
@@ -33,11 +33,20 @@ function c(e) {
         mentionRoles: null != (o = s.mention_roles) ? o : [],
         mentionGames: null != (a = null == (n = s.mention_games) ? void 0 : n.map((e) => e.id)) ? a : [],
         suppressEveryone: c,
-        suppressRoles: d
+        suppressRoles: d,
     });
 }
 function u(e) {
-    let { userId: t, channelId: n, mentionEveryone: l, mentionUsers: c, mentionRoles: u, mentionGames: d, suppressEveryone: f = !1, suppressRoles: _ = !1 } = e;
+    let {
+        userId: t,
+        channelId: n,
+        mentionEveryone: l,
+        mentionUsers: c,
+        mentionRoles: u,
+        mentionGames: d,
+        suppressEveryone: f = !1,
+        suppressRoles: _ = !1,
+    } = e;
     if (
         (l && !f) ||
         c.includes(t) ||

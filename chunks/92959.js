@@ -7,8 +7,8 @@ var i = n(657707),
     s = n(499356),
     c = n(523197),
     u = n(388032);
-let d = (0, o.wf)('Notifications', {
+let d = (0, o.wf)("Notifications", {
     icon: i.Dkj,
     useTitle: () => u.intl.string(u.t.HcoRu7),
-    layout: [s.Z, c.Z, a.Z, r.Z, l.Z]
+    layout: [s.Z, c.Z, a.Z, r.Z, l.Z],
 });

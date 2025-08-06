@@ -5,7 +5,7 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -14,7 +14,7 @@ function r(e, t, n) {
 n(388685);
 class i {
     getConsoleArgs(e, t) {
-        return [''.concat(i.getDateTimeString(), ' ').concat(this.name, ': ').concat(e), ...t];
+        return ["".concat(i.getDateTimeString(), " ").concat(this.name, ": ").concat(e), ...t];
     }
     log(e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
@@ -36,6 +36,6 @@ class i {
         return new Date().toISOString();
     }
     constructor(e) {
-        (r(this, 'name', void 0), (this.name = e));
+        r(this, "name", void 0), (this.name = e);
     }
 }

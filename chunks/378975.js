@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(953529), n(388685));
+n.d(t, { Z: () => v }), n(953529), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,11 +44,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,9 +67,9 @@ function b(e) {
     let { emoji: t, label: n, description: i, isDisabled: o, isOffset: s } = e,
         c = a()(p.labelContainer, {
             [p.disabled]: o,
-            [p.offset]: null == t && s
+            [p.offset]: null == t && s,
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: p.option,
         children: [
             null != t
@@ -77,32 +77,32 @@ function b(e) {
                       className: p.emoji,
                       emojiId: t.id,
                       emojiName: t.name,
-                      animated: t.animated
+                      animated: t.animated,
                   })
                 : null,
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: c,
                 children: [
-                    (0, r.jsx)('strong', {
+                    (0, r.jsx)("strong", {
                         className: p.label,
-                        children: n
+                        children: n,
                     }),
                     null != i
-                        ? (0, r.jsx)('span', {
+                        ? (0, r.jsx)("span", {
                               className: p.description,
-                              children: i
+                              children: i,
                           })
-                        : null
-                ]
-            })
-        ]
+                        : null,
+                ],
+            }),
+        ],
     });
 }
 function y(e) {
     let { emoji: t, label: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: p.option,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: a()(p.value, p.singleValue),
             children: [
                 null != t
@@ -111,26 +111,26 @@ function y(e) {
                           src: t.src,
                           emojiId: t.id,
                           emojiName: t.name,
-                          animated: t.animated
+                          animated: t.animated,
                       })
                     : null,
-                (0, r.jsx)('span', {
+                (0, r.jsx)("span", {
                     className: p.singleValueLabel,
-                    children: n
-                })
-            ]
-        })
+                    children: n,
+                }),
+            ],
+        }),
     });
 }
 function O(e) {
     let { options: t } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: p.option,
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: p.value,
             children: t.map((e, t) =>
                 (0, r.jsxs)(
-                    'div',
+                    "div",
                     {
                         className: p.optionTag,
                         children: [
@@ -140,23 +140,23 @@ function O(e) {
                                       src: e.emoji.src,
                                       emojiId: e.emoji.id,
                                       emojiName: e.emoji.name,
-                                      animated: e.emoji.animated
+                                      animated: e.emoji.animated,
                                   })
                                 : null,
                             (0, r.jsx)(
-                                'span',
+                                "span",
                                 {
                                     className: p.tag,
-                                    children: e.label
+                                    children: e.label,
                                 },
-                                e.value
-                            )
-                        ]
+                                e.value,
+                            ),
+                        ],
                     },
-                    t
-                )
-            )
-        })
+                    t,
+                ),
+            ),
+        }),
     });
 }
 function v(e) {
@@ -167,10 +167,10 @@ function v(e) {
             executeStateUpdate: T,
             visualState: S,
             isDisabled: A,
-            error: N
+            error: N,
         } = (0, d.Ee)(e, {
             type: t,
-            values: v
+            values: v,
         }),
         C = l > 1,
         R = S === f.gH.LOADING,
@@ -181,17 +181,17 @@ function v(e) {
     i.useEffect(() => {
         if ((null == I ? void 0 : I.type) === c.re.STRING_SELECT) {
             let e = new Set(I.values);
-            (L(e), M(e));
+            L(e), M(e);
         } else {
             let e = new Set(v);
-            (L(e), M(e));
+            L(e), M(e);
         }
     }, [o, v, I]);
     let j = i.useCallback(() => {
         x !== D &&
             T({
                 type: c.re.STRING_SELECT,
-                values: Array.from(D)
+                values: Array.from(D),
             }) &&
             M(D);
     }, [D, x, M, T]);
@@ -203,11 +203,11 @@ function v(e) {
     let G = (0, s.cYr)({
         value: D,
         onChange: (e) => L(e),
-        onSelectInteraction: U
+        onSelectInteraction: U,
     });
     return (0, r.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: p.container,
                 children: (0, r.jsx)(
                     s.PhF,
@@ -228,16 +228,16 @@ function v(e) {
                                     b,
                                     E(m({}, e), {
                                         isDisabled: C && !D.has(e.value) && D.size === l,
-                                        isOffset: k
-                                    })
+                                        isOffset: k,
+                                    }),
                                 ),
-                            renderOptionValue: (e) => (C ? (0, r.jsx)(O, { options: e }) : (0, r.jsx)(y, m({}, e[0])))
+                            renderOptionValue: (e) => (C ? (0, r.jsx)(O, { options: e }) : (0, r.jsx)(y, m({}, e[0]))),
                         },
-                        G
-                    )
-                )
+                        G,
+                    ),
+                ),
             }),
-            null != N ? (0, r.jsx)(u.st, E(m({}, (0, u.c4)(N)), { className: p.error })) : null
-        ]
+            null != N ? (0, r.jsx)(u.st, E(m({}, (0, u.c4)(N)), { className: p.error })) : null,
+        ],
     });
 }

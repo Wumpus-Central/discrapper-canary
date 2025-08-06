@@ -8,8 +8,8 @@ function o(e, t, { inGamut: r } = {}) {
         c = {
             space: t,
             coords: i,
-            alpha: e.alpha
+            alpha: e.alpha,
         };
-    return (r && (c = (0, s.Z)(c, !0 === r ? void 0 : r)), c);
+    return r && (c = (0, s.Z)(c, !0 === r ? void 0 : r)), c;
 }
-o.returns = 'color';
+o.returns = "color";

@@ -3,10 +3,10 @@ var e = n(220159),
     i = n(85328).f;
 e(
     {
-        target: 'Object',
+        target: "Object",
         stat: !0,
         forced: Object.defineProperty !== i,
-        sham: !o
+        sham: !o,
     },
-    { defineProperty: i }
+    { defineProperty: i },
 );

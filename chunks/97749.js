@@ -4,8 +4,8 @@ var n = r(507604),
     a = URLSearchParams.prototype,
     o = i(a.forEach);
 !n ||
-    'size' in a ||
-    s(a, 'size', {
+    "size" in a ||
+    s(a, "size", {
         get: function () {
             var t = 0;
             return (
@@ -16,5 +16,5 @@ var n = r(507604),
             );
         },
         configurable: !0,
-        enumerable: !0
+        enumerable: !0,
     });

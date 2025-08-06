@@ -11,8 +11,8 @@ e.exports = function () {
             {
                 allSettled: function () {
                     return Promise.allSettled !== e;
-                }
-            }
+                },
+            },
         ),
         e
     );

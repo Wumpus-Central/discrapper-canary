@@ -22,7 +22,7 @@ let v = l.memo(function (e) {
         onClick: (e) => l(c, e.shiftKey),
         onContextMenu: (e) =>
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('46154'), n.e('48334')]).then(n.bind(n, 422200));
+                let { default: e } = await Promise.all([n.e("46154"), n.e("48334")]).then(n.bind(n, 422200));
                 return (t) => {
                     var n, l;
                     return (0, r.jsx)(
@@ -31,24 +31,24 @@ let v = l.memo(function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, t)),
@@ -65,35 +65,35 @@ let v = l.memo(function (e) {
                               })(Object(l)).forEach(function (e) {
                                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        n)
+                        n),
                     );
                 };
             }),
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: j.left,
                 children: [
                     (0, r.jsxs)(s.X6q, {
                         className: j.threadNameLine,
-                        variant: 'heading-md/semibold',
+                        variant: "heading-md/semibold",
                         children: [
-                            (0, r.jsx)('span', {
+                            (0, r.jsx)("span", {
                                 className: j.threadName,
-                                children: c.name
+                                children: c.name,
                             }),
                             i && null != u
-                                ? (0, r.jsx)('span', {
+                                ? (0, r.jsx)("span", {
                                       className: j.parentName,
-                                      children: '#'.concat(u.name)
+                                      children: "#".concat(u.name),
                                   })
-                                : null
-                        ]
+                                : null,
+                        ],
                     }),
-                    (0, m.Z)(c)
-                ]
+                    (0, m.Z)(c),
+                ],
             }),
-            (0, r.jsx)(x, { channel: c })
-        ]
+            (0, r.jsx)(x, { channel: c }),
+        ],
     });
 });
 function x(e) {
@@ -120,6 +120,6 @@ function x(e) {
               guildId: t.guild_id,
               users: s,
               count: l,
-              max: f.yX
+              max: f.yX,
           });
 }

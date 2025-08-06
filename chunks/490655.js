@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(388685), n(539854));
+n.d(t, { Z: () => Z }), n(388685), n(539854);
 var i = n(255367),
     r = n(73800),
     l = n(392711),
@@ -28,7 +28,7 @@ function w(e, t) {
     switch (e) {
         case N.b4C.APPLICATION:
             var n;
-            return null != (n = null == t ? void 0 : t.application.name) ? n : '';
+            return null != (n = null == t ? void 0 : t.application.name) ? n : "";
         case N.b4C.OVERVIEW:
             return S.intl.string(S.t.s69NLC);
         case N.b4C.CHANNEL_FOLLOWING:
@@ -42,24 +42,37 @@ function w(e, t) {
         case N.b4C.LOBBIES_LINKED:
             return S.intl.string(S.t.tqtDXF);
         default:
-            return '';
+            return "";
     }
 }
 let Z = r.memo(function (e) {
-    let { section: t, sectionId: n, guild: l, channel: Z, integrations: E, editedIntegration: P, webhooks: T, editedWebhook: k, isFetchingWebhooks: A, refToScroller: R, errors: D, hasChanges: L } = e,
+    let {
+            section: t,
+            sectionId: n,
+            guild: l,
+            channel: Z,
+            integrations: E,
+            editedIntegration: P,
+            webhooks: T,
+            editedWebhook: k,
+            isFetchingWebhooks: A,
+            refToScroller: R,
+            errors: D,
+            hasChanges: L,
+        } = e,
         M = (0, a.e7)([g.ZP], () => (null != l ? g.ZP.getDefaultChannel(l.id) : null)),
         B = (0, a.cj)([g.ZP], () => g.ZP.getChannels(null == l ? void 0 : l.id)),
         U = (0, a.cj)([f.Z], () =>
             o().keyBy(
                 B.SELECTABLE.map((e) => e.channel).filter((e) => f.Z.can(N.Plq.MANAGE_WEBHOOKS, e)),
-                'id'
-            )
+                "id",
+            ),
         ),
         W = (0, a.cj)([f.Z], () =>
             o().keyBy(
                 B.VOCAL.map((e) => e.channel).filter((e) => e.isGuildVocal() && f.Z.can(N.Plq.MANAGE_WEBHOOKS, e)),
-                'id'
-            )
+                "id",
+            ),
         ),
         H = null != Z ? Z : M,
         G = t === N.b4C.APPLICATION ? n : null,
@@ -69,13 +82,13 @@ let Z = r.memo(function (e) {
                 L()
                     ? (h.S.dispatch(N.CkL.SHAKE_APP, {
                           duration: 300,
-                          intensity: z
+                          intensity: z,
                       }),
                       F(Math.min(z + d.d7, d.w6)),
                       h.S.dispatch(N.CkL.EMPHASIZE_NOTICE),
                       !1)
                     : (F(d.$x), !0),
-            [L, z]
+            [L, z],
         ),
         K = r.useCallback((e) => !!V() && (c.Z.setSection(e), !0), [V]),
         {
@@ -83,7 +96,7 @@ let Z = r.memo(function (e) {
             applicationBotIds: Y,
             builtInIntegrations: X,
             customWebhooks: $,
-            followedChannelWebhooks: J
+            followedChannelWebhooks: J,
         } = r.useMemo(() => {
             let e = {},
                 t = {},
@@ -92,27 +105,34 @@ let Z = r.memo(function (e) {
                 r = [];
             if (null != E)
                 for (let i of E)
-                    if ('discord' === i.type) {
+                    if ("discord" === i.type) {
                         if (null != i.application) {
                             var l;
-                            ((e[i.application.id] = {
+                            (e[i.application.id] = {
                                 application: i.application,
                                 integration: i,
-                                webhooks: []
+                                webhooks: [],
                             }),
-                                (null == (l = i.application.bot) ? void 0 : l.id) !== void 0 && (t[i.application.bot.id] = i.application.id));
+                                (null == (l = i.application.bot) ? void 0 : l.id) !== void 0 &&
+                                    (t[i.application.bot.id] = i.application.id);
                         }
-                    } else (i.type in n || (n[i.type] = []), n[i.type].push(i));
-            for (let t of T) (t.channel_id in U || t.channel_id in W) && (null != t.application_id && t.application_id in e ? e[t.application_id].webhooks.push(t) : t.type === N.ylB.CHANNEL_FOLLOWER ? r.push(t) : i.push(t));
+                    } else i.type in n || (n[i.type] = []), n[i.type].push(i);
+            for (let t of T)
+                (t.channel_id in U || t.channel_id in W) &&
+                    (null != t.application_id && t.application_id in e
+                        ? e[t.application_id].webhooks.push(t)
+                        : t.type === N.ylB.CHANNEL_FOLLOWER
+                          ? r.push(t)
+                          : i.push(t));
             return {
                 applicationIntegrations: e,
                 applicationBotIds: t,
                 builtInIntegrations: n,
                 customWebhooks: i,
-                followedChannelWebhooks: r
+                followedChannelWebhooks: r,
             };
         }, [E, U, W, T]);
-    (r.useEffect(() => {
+    r.useEffect(() => {
         if (!A)
             switch (t) {
                 case N.b4C.TWITCH:
@@ -126,14 +146,16 @@ let Z = r.memo(function (e) {
             }
     }, [q, Y, X, G, t, A]),
         r.useEffect(() => {
-            (null == l ? void 0 : l.id) != null && b.Z.getEntitlementsForGuildFetchState(l.id) === b.M.NOT_FETCHED && m.i1(l.id);
+            (null == l ? void 0 : l.id) != null &&
+                b.Z.getEntitlementsForGuildFetchState(l.id) === b.M.NOT_FETCHED &&
+                m.i1(l.id);
         }, [null == l ? void 0 : l.id]),
         r.useEffect(
             () => () => {
                 c.Z.setSection(N.b4C.OVERVIEW, null);
             },
-            []
-        ));
+            [],
+        );
     let Q = null;
     switch (t) {
         case N.b4C.TWITCH:
@@ -149,11 +171,11 @@ let Z = r.memo(function (e) {
                         connectAction: () =>
                             (0, u.Z)({
                                 platformType: N.ABu.TWITCH,
-                                location: 'Integration Settings'
+                                location: "Integration Settings",
                             }),
-                        helpdeskArticle: x.Z.getArticleURL(N.BhN.TWITCH_INTEGRATION)
+                        helpdeskArticle: x.Z.getArticleURL(N.BhN.TWITCH_INTEGRATION),
                     }),
-                    canNavigate: V
+                    canNavigate: V,
                 }));
             break;
         case N.b4C.YOUTUBE:
@@ -164,12 +186,12 @@ let Z = r.memo(function (e) {
                     editedIntegration: P,
                     labelText: S.intl.string(S.t.aS6cKy),
                     platformType: N.ABu.YOUTUBE,
-                    descriptionText: S.intl.string(S.t['7Tv7JC']),
-                    helpText: S.intl.format(S.t['4OSAQ0'], {
+                    descriptionText: S.intl.string(S.t["7Tv7JC"]),
+                    helpText: S.intl.format(S.t["4OSAQ0"], {
                         connectAction: () => (0, u.Z)({ platformType: N.ABu.YOUTUBE }),
-                        helpdeskArticle: x.Z.getArticleURL(N.BhN.YOUTUBE_INTEGRATION)
+                        helpdeskArticle: x.Z.getArticleURL(N.BhN.YOUTUBE_INTEGRATION),
                     }),
-                    canNavigate: V
+                    canNavigate: V,
                 }));
             break;
         case N.b4C.APPLICATION:
@@ -182,7 +204,7 @@ let Z = r.memo(function (e) {
                     editedWebhook: k,
                     selectableWebhookChannels: U,
                     errors: D,
-                    canNavigate: V
+                    canNavigate: V,
                 }));
             break;
         case N.b4C.CHANNEL_FOLLOWING:
@@ -191,7 +213,7 @@ let Z = r.memo(function (e) {
                 editedWebhook: k,
                 selectableWebhookChannels: U,
                 canNavigate: V,
-                errors: D
+                errors: D,
             });
             break;
         case N.b4C.WEBHOOKS:
@@ -204,30 +226,30 @@ let Z = r.memo(function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
                 })({}, U, W),
                 canNavigate: V,
                 refToScroller: R,
-                errors: D
+                errors: D,
             });
             break;
         case N.b4C.LOBBIES_LINKED:
@@ -263,7 +285,7 @@ let Z = r.memo(function (e) {
                 },
                 onManageLobbiesLinked: () => {
                     c.Z.setSection(N.b4C.LOBBIES_LINKED);
-                }
+                },
             });
     }
     return (0, i.jsxs)(i.Fragment, {
@@ -274,27 +296,27 @@ let Z = r.memo(function (e) {
                 children:
                     t === N.b4C.OVERVIEW
                         ? (0, i.jsx)(s.vwX, {
-                              tag: 'h1',
-                              children: w(N.b4C.OVERVIEW)
+                              tag: "h1",
+                              children: w(N.b4C.OVERVIEW),
                           })
                         : (0, i.jsx)(s.OoM, {
                               activeId: t.toString(),
                               breadcrumbs: [N.b4C.OVERVIEW, t].map((e) => ({
                                   id: e.toString(),
-                                  label: w(e, q[G])
+                                  label: w(e, q[G]),
                               })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && K(parseInt(e.id));
                               },
                               renderCustomBreadcrumb: (e, t) =>
                                   (0, i.jsx)(s.vwX, {
-                                      tag: 'h1',
+                                      tag: "h1",
                                       className: t ? I.breadcrumbActive : I.breadcrumbInactive,
-                                      children: e.label
-                                  })
-                          })
+                                      children: e.label,
+                                  }),
+                          }),
             }),
-            Q
-        ]
+            Q,
+        ],
     });
 });

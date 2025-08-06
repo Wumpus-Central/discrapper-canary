@@ -1,7 +1,7 @@
 r.d(t, {
     D2: () => h,
     ZP: () => C,
-    eg: () => O
+    eg: () => O,
 });
 var n = r(255367),
     a = r(73800),
@@ -14,24 +14,24 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -63,66 +63,67 @@ function b(e, t) {
                 n,
                 a = {},
                 l = Object.keys(e);
-            for (n = 0; n < l.length; n++) ((r = l[n]), t.indexOf(r) >= 0 || (a[r] = e[r]));
+            for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
             return a;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < l.length; n++) ((r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
+        for (n = 0; n < l.length; n++)
+            (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     }
     return a;
 }
 let f = {
         width: 60,
-        height: 60
+        height: 60,
     },
     h = 3000,
     O = {
         EARN: 0.25,
-        SPEND: 0.3
+        SPEND: 0.3,
     },
     y = (e) => {
         let { currentAnimationType: t, animationTypeRef: r, onSetAnimationDurationMS: n, play: l, getDuration: i } = e,
             o = i(),
             u = null != o ? 1000 * o : h;
-        ((0, a.useEffect)(() => {
+        (0, a.useEffect)(() => {
             null !== t && t !== r.current && ((r.current = t), l());
         }, [t, l, r]),
             (0, a.useEffect)(() => {
                 n(u);
-            }, [n, u]));
+            }, [n, u]);
     },
     p = (e) => {
         var { currentAnimationType: t } = e,
-            r = b(e, ['currentAnimationType']);
-        let a = (0, i.D)(null != t ? t : 'earn'),
+            r = b(e, ["currentAnimationType"]);
+        let a = (0, i.D)(null != t ? t : "earn"),
             { Component: l } = a;
         return (
-            y(s({ currentAnimationType: t }, r, b(a, ['Component']))),
+            y(s({ currentAnimationType: t }, r, b(a, ["Component"]))),
             (0, n.jsx)(
                 l,
                 d(s({}, f), {
-                    size: 'custom',
+                    size: "custom",
                     className: c.orbsLottie,
-                    useLottieDefaultColors: !0
-                })
+                    useLottieDefaultColors: !0,
+                }),
             )
         );
     },
     m = (e) => {
         var { currentAnimationType: t } = e,
-            r = b(e, ['currentAnimationType']);
-        let a = (0, l.v)(null != t ? t : 'earn'),
+            r = b(e, ["currentAnimationType"]);
+        let a = (0, l.v)(null != t ? t : "earn"),
             { Component: i } = a;
         return (
-            y(s({ currentAnimationType: t }, r, b(a, ['Component']))),
+            y(s({ currentAnimationType: t }, r, b(a, ["Component"]))),
             (0, n.jsx)(
                 i,
                 d(s({}, f), {
-                    size: 'custom',
+                    size: "custom",
                     className: c.orbsLottie,
-                    useLottieDefaultColors: !0
-                })
+                    useLottieDefaultColors: !0,
+                }),
             )
         );
     },

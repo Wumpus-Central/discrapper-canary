@@ -1,4 +1,4 @@
-(n.d(t, { v: () => a }), n(388685), n(539854));
+n.d(t, { v: () => a }), n(388685), n(539854);
 var r = n(975984),
     i = n(75666),
     l = n(388032);
@@ -7,8 +7,8 @@ function a(e, t) {
         return [
             {
                 entries: (0, r.TR)(e),
-                appendEndCard: !0
-            }
+                appendEndCard: !0,
+            },
         ];
     let n = [],
         a = (0, r.Lz)(e),
@@ -17,7 +17,7 @@ function a(e, t) {
         n.push({
             header: l.intl.string(l.t.CbaapK),
             entries: a,
-            appendEndCard: !1
+            appendEndCard: !1,
         });
     let o = e.filter((e) => !s.has(e.guildId));
     return (
@@ -25,7 +25,7 @@ function a(e, t) {
             n.push({
                 header: l.intl.string(l.t.wxbhER),
                 entries: o,
-                appendEndCard: !0
+                appendEndCard: !0,
             }),
         n
     );

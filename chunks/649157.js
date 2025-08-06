@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -16,7 +16,7 @@ function m() {
                 var t, r;
                 let s;
                 try {
-                    s = n(621287)('./'.concat(e.value, '.png'));
+                    s = n(621287)("./".concat(e.value, ".png"));
                 } catch (e) {
                     s = n(1474);
                 }
@@ -25,51 +25,51 @@ function m() {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    ((i = n[t]),
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = i));
-                                }));
+                                            : (e[t] = i);
+                                });
                         }
                         return e;
                     })({}, e)),
                     (r = r =
                         {
-                            name: (0, i.jsxs)('div', {
+                            name: (0, i.jsxs)("div", {
                                 className: d.option,
                                 children: [
-                                    (0, i.jsx)('span', {
+                                    (0, i.jsx)("span", {
                                         className: d.localeName,
-                                        children: e.name
+                                        children: e.name,
                                     }),
-                                    (0, i.jsx)('span', {
+                                    (0, i.jsx)("span", {
                                         className: d.localizedName,
-                                        children: c.intl.string(e.localizedName)
+                                        children: c.intl.string(e.localizedName),
                                     }),
-                                    (0, i.jsx)('div', {
+                                    (0, i.jsx)("div", {
                                         className: d.flag,
-                                        'aria-hidden': !0,
-                                        children: (0, i.jsx)('img', {
-                                            alt: '',
+                                        "aria-hidden": !0,
+                                        children: (0, i.jsx)("img", {
+                                            alt: "",
                                             src: s,
-                                            className: d.flagImage
-                                        })
-                                    })
-                                ]
-                            })
+                                            className: d.flagImage,
+                                        }),
+                                    }),
+                                ],
+                            }),
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -85,24 +85,24 @@ function m() {
                           }),
                     t
                 );
-            })
+            }),
         ),
         g = r.useCallback((e) => {
             let { value: t } = e;
-            (m(t), u.nextTick(() => l.ZP.updateLocale(t)));
+            m(t), u.nextTick(() => l.ZP.updateLocale(t));
         }, []);
     return (0, i.jsx)(a.hjN, {
         tag: a.RB0.H1,
         title: c.intl.string(c.t.IHMsPj),
         children: (0, i.jsx)(a.hjN, {
             children: (0, i.jsx)(a.xJW, {
-                title: c.intl.string(c.t['mx+sp6']),
+                title: c.intl.string(c.t["mx+sp6"]),
                 children: (0, i.jsx)(a.FXm, {
                     onChange: g,
                     options: p,
-                    value: t
-                })
-            })
-        })
+                    value: t,
+                }),
+            }),
+        }),
     });
 }

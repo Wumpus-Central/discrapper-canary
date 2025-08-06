@@ -1,7 +1,7 @@
 n.d(t, {
     JO: () => v,
     ZP: () => N,
-    iz: () => T
+    iz: () => T,
 });
 var r = n(255367),
     i = n(73800),
@@ -21,7 +21,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,7 +73,8 @@ function E(e, t) {
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,21 +84,32 @@ function b(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let y = 24,
     O = (e) => {
-        let { className: t, wrapperClassName: n, children: i, onContextMenu: o, onClick: s, onKeyDown: l, id: u, muted: d = !1, level: f = 1, ref: p } = e,
+        let {
+                className: t,
+                wrapperClassName: n,
+                children: i,
+                onContextMenu: o,
+                onClick: s,
+                onKeyDown: l,
+                id: u,
+                muted: d = !1,
+                level: f = 1,
+                ref: p,
+            } = e,
             h = (0, r.jsx)(c.y5t, {
                 forceLevel: f,
                 children: (0, r.jsx)(c.X6q, {
-                    variant: 'text-md/medium',
-                    color: d ? 'header-secondary' : void 0,
+                    variant: "text-md/medium",
+                    color: d ? "header-secondary" : void 0,
                     className: a()(t, _.title, { [_.titleClickable]: null != s }),
                     id: u,
-                    children: i
-                })
+                    children: i,
+                }),
             });
         return null != s
             ? (0, r.jsx)(c.P3F, {
@@ -106,18 +118,47 @@ let y = 24,
                   onContextMenu: o,
                   onKeyDown: l,
                   className: a()(n, _.titleWrapper),
-                  children: h
+                  children: h,
               })
-            : (0, r.jsx)('div', {
+            : (0, r.jsx)("div", {
                   ref: p,
                   className: a()(n, _.titleWrapper),
                   onContextMenu: o,
                   onKeyDown: l,
-                  children: h
+                  children: h,
               });
     },
     v = i.forwardRef(function (e, t) {
-        let { className: n, iconClassName: i, children: o, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: f = 'bottom', color: p, foreground: m, background: g, icon: E, iconSize: b = y, onClick: O, onContextMenu: v, tooltip: I = null, tooltipColor: T, tooltipPosition: S = 'bottom', tooltipAlign: A, tooltipDisabled: N, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': M, 'data-jump-section': k } = e,
+        let {
+                className: n,
+                iconClassName: i,
+                children: o,
+                selected: s = !1,
+                disabled: l = !1,
+                showBadge: u = !1,
+                badgePosition: f = "bottom",
+                color: p,
+                foreground: m,
+                background: g,
+                icon: E,
+                iconSize: b = y,
+                onClick: O,
+                onContextMenu: v,
+                tooltip: I = null,
+                tooltipColor: T,
+                tooltipPosition: S = "bottom",
+                tooltipAlign: A,
+                tooltipDisabled: N,
+                tooltipSpacing: C,
+                hideOnClick: R = !0,
+                role: P,
+                "aria-label": w,
+                "aria-hidden": D,
+                "aria-checked": L,
+                "aria-expanded": x,
+                "aria-haspopup": M,
+                "data-jump-section": k,
+            } = e,
             j = null != g ? { secondaryColorClass: g } : {},
             U = (0, r.jsx)(
                 E,
@@ -127,17 +168,17 @@ let y = 24,
                         y: 0,
                         width: b,
                         height: b,
-                        size: 'custom',
+                        size: "custom",
                         className: a()(i, _.icon),
                         colorClass: null != m ? m : void 0,
-                        color: null != p ? p : 'currentColor'
+                        color: null != p ? p : "currentColor",
                     },
-                    j
-                )
+                    j,
+                ),
             ),
             G = w;
         return (
-            null == G && 'string' == typeof I && (G = I),
+            null == G && "string" == typeof I && (G = I),
             (0, r.jsx)(c.ua7, {
                 text: I,
                 color: T,
@@ -149,7 +190,7 @@ let y = 24,
                 children: (e) => {
                     let { onMouseEnter: g, onMouseLeave: y, onFocus: I, onBlur: T } = e;
                     return null == O
-                        ? (0, r.jsx)('div', {
+                        ? (0, r.jsx)("div", {
                               ref: t,
                               className: a()(n, _.iconWrapper, { [_.iconDisabled]: l }),
                               children: (0, r.jsx)(
@@ -160,23 +201,23 @@ let y = 24,
                                           y: 0,
                                           width: b,
                                           height: b,
-                                          size: 'custom',
+                                          size: "custom",
                                           className: a()(i, _.icon),
                                           colorClass: null != m ? m : void 0,
-                                          color: null != p ? p : 'currentColor',
-                                          'aria-hidden': D,
+                                          color: null != p ? p : "currentColor",
+                                          "aria-hidden": D,
                                           onMouseEnter: g,
                                           onMouseLeave: y,
                                           onFocus: I,
-                                          onBlur: T
+                                          onBlur: T,
                                       },
-                                      j
-                                  )
-                              )
+                                      j,
+                                  ),
+                              ),
                           })
                         : (0, r.jsxs)(c.P3F, {
                               innerRef: t,
-                              tag: 'div',
+                              tag: "div",
                               onClick: l ? void 0 : O,
                               onContextMenu: l ? void 0 : v,
                               onMouseEnter: g,
@@ -187,42 +228,52 @@ let y = 24,
                                   [_.iconWrapper]: !0,
                                   [_.clickable]: !l && null != O,
                                   [_.selected]: s,
-                                  [_.iconDisabled]: l
+                                  [_.iconDisabled]: l,
                               }),
                               role: P,
-                              'aria-label': G,
-                              'aria-hidden': D,
-                              'aria-checked': L,
-                              'aria-haspopup': M,
-                              'aria-expanded': x,
+                              "aria-label": G,
+                              "aria-hidden": D,
+                              "aria-checked": L,
+                              "aria-haspopup": M,
+                              "aria-expanded": x,
                               tabIndex: l || null == O ? -1 : 0,
-                              'data-jump-section': k,
+                              "data-jump-section": k,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {
-                                            mask: 'top' === f ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
+                                            mask:
+                                                "top" === f
+                                                    ? d.ZP.Masks.HEADER_BAR_BADGE_TOP
+                                                    : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
                                             height: b,
                                             width: b,
-                                            children: U
+                                            children: U,
                                         })
                                       : U,
-                                  u ? (0, r.jsx)('span', { className: a()(_.iconBadge, 'top' === f ? _.iconBadgeTop : _.iconBadgeBottom) }) : null,
-                                  o
-                              ]
+                                  u
+                                      ? (0, r.jsx)("span", {
+                                            className: a()(
+                                                _.iconBadge,
+                                                "top" === f ? _.iconBadgeTop : _.iconBadgeBottom,
+                                            ),
+                                        })
+                                      : null,
+                                  o,
+                              ],
                           });
-                }
+                },
             })
         );
     }),
     I = i.forwardRef(function (e, t) {
         var { className: n } = e,
-            i = E(e, ['className']);
+            i = E(e, ["className"]);
         return (0, r.jsx)(
             v,
             g(h({}, i), {
                 className: a()(_.channelIcon, n),
-                ref: t
-            })
+                ref: t,
+            }),
         );
     }),
     T = (e) => {
@@ -230,68 +281,82 @@ let y = 24,
         return (0, r.jsx)(f.Z, { className: a()(_.dot, t) });
     };
 function S(e) {
-    let { direction: t = 'right', className: n } = e;
-    return 'right' === t
+    let { direction: t = "right", className: n } = e;
+    return "right" === t
         ? (0, r.jsx)(c.Fbu, {
-              size: 'md',
-              color: 'currentColor',
-              className: a()(_.caret, n)
+              size: "md",
+              color: "currentColor",
+              className: a()(_.caret, n),
           })
         : (0, r.jsx)(c.V7D, {
-              size: 'md',
-              color: 'currentColor',
-              className: a()(_.caret, n)
+              size: "md",
+              color: "currentColor",
+              className: a()(_.caret, n),
           });
 }
 let A = (e) => {
-    let { className: t, innerClassName: n, toolbarClassName: o, children: d, childrenBottom: f, toolbar: p, onDoubleClick: h, 'aria-label': m, 'aria-labelledby': g, role: E, scrollable: b, transparent: y = !1, showToolbar: O = !0 } = e,
+    let {
+            className: t,
+            innerClassName: n,
+            toolbarClassName: o,
+            children: d,
+            childrenBottom: f,
+            toolbar: p,
+            onDoubleClick: h,
+            "aria-label": m,
+            "aria-labelledby": g,
+            role: E,
+            scrollable: b,
+            transparent: y = !1,
+            showToolbar: O = !0,
+        } = e,
         v = i.useRef(null),
         I = i.useContext(u.Z);
-    return (0, r.jsx)('section', {
+    return (0, r.jsx)("section", {
         className: a()(t, _.container, {
             [_.themed]: !y,
             [_.transparent]: y,
             [_.themedMobile]: l.tq,
-            [_.showToolbar]: O
+            [_.showToolbar]: O,
         }),
-        'aria-label': m,
-        'aria-labelledby': g,
+        "aria-label": m,
+        "aria-labelledby": g,
         role: E,
         ref: v,
         children: (0, r.jsxs)(c.JcV, {
             containerRef: v,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: a()(_.upperContainer, { [_.showToolbar]: O }),
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: a()(_.children, n, {
                                 [_.scrollable]: b,
-                                [_.showToolbar]: O
+                                [_.showToolbar]: O,
                             }),
                             onDoubleClick: h,
                             children: [
                                 l.tq && null != I
                                     ? (0, r.jsx)(s.r, {
                                           onClick: I,
-                                          className: _.hamburger
+                                          className: _.hamburger,
                                       })
                                     : null,
-                                d
-                            ]
+                                d,
+                            ],
                         }),
                         null != p
-                            ? (0, r.jsx)('div', {
+                            ? (0, r.jsx)("div", {
                                   className: a()(_.toolbar, o, { [_.showToolbar]: O }),
-                                  children: p
+                                  children: p,
                               })
-                            : null
-                    ]
+                            : null,
+                    ],
                 }),
-                f
-            ]
-        })
+                f,
+            ],
+        }),
     });
 };
-((A.Icon = v), (A.ChannelIcon = I), (A.Title = O), (A.Divider = T), (A.Caret = S));
+(A.Icon = v), (A.ChannelIcon = I), (A.Title = O), (A.Divider = T), (A.Caret = S);
 let N = A;

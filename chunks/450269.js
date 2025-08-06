@@ -1,4 +1,4 @@
-(n.d(t, { V: () => o }), n(388685));
+n.d(t, { V: () => o }), n(388685);
 var c = n(73800),
     i = n(259674),
     r = n(981631),
@@ -14,39 +14,39 @@ function o(e) {
                     (0, i.lW)({
                         articleId: r.BhN.PUBLIC_GUILD_GUILDLINES,
                         guildId: e,
-                        modalStep: i.tK.AGREE_TO_RULES
+                        modalStep: i.tK.AGREE_TO_RULES,
                     }),
                 onDiscoveryGuidelinesClick: () =>
                     (0, i.lW)({
                         articleId: r.BhN.SERVER_DISCOVERY_GUIDELINES,
                         guildId: e,
-                        modalStep: i.tK.AGREE_TO_RULES
-                    })
+                        modalStep: i.tK.AGREE_TO_RULES,
+                    }),
             });
             return [
                 {
-                    key: 'healthy',
+                    key: "healthy",
                     title: l.intl.string(l.t.jIi9go),
-                    body: l.intl.string(l.t['4uUAXl']),
+                    body: l.intl.string(l.t["4uUAXl"]),
                     onCheck: () => n(!t),
-                    checked: t
+                    checked: t,
                 },
                 {
-                    key: 'nonNSFW',
+                    key: "nonNSFW",
                     title: l.intl.string(l.t.iwnCh4),
                     body: l.intl.string(l.t.UKFzER),
                     onCheck: () => s(!o),
-                    checked: o
+                    checked: o,
                 },
                 {
-                    key: 'guidelines',
+                    key: "guidelines",
                     title: c,
                     body: l.intl.string(l.t.u0Go2t),
                     onCheck: () => d(!a),
-                    checked: a
-                }
+                    checked: a,
+                },
             ];
         }, [a, e, t, o]),
-        rulesAccepted: t && o && a
+        rulesAccepted: t && o && a,
     };
 }

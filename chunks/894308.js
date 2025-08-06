@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => f }));
+n.r(t), n.d(t, { default: () => f });
 var r = n(255367),
     s = n(73800),
     o = n(481060),
@@ -18,21 +18,21 @@ function f(e) {
                     i.Z.terminate();
                 }
             ),
-            []
+            [],
         ),
         (0, r.jsx)(a.Z, {
             withTitleBar: !0,
             windowKey: t,
-            title: d.intl.string(u.default['7qZdOz']),
+            title: d.intl.string(u.default["7qZdOz"]),
             children: (0, r.jsx)(o.f6W, {
                 theme: l.BR.DARK,
                 disableAdaptiveTheme: !0,
                 children: (e) =>
                     (0, r.jsx)(c.Z, {
                         className: e,
-                        windowKey: t
-                    })
-            })
+                        windowKey: t,
+                    }),
+            }),
         })
     );
 }

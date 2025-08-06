@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,30 +28,30 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let g = 3000,
     E = 0.1,
-    b = { visibility: 'hidden' },
+    b = { visibility: "hidden" },
     y = {
         precision: 0.0001,
-        duration: 300
+        duration: 300,
     },
     O = {
         tension: 150,
         friction: 20,
         precision: 0.0001,
-        bounce: 0
+        bounce: 0,
     },
     v = { duration: 1000 };
 function I(e) {
@@ -67,7 +67,7 @@ function I(e) {
         () => () => {
             (0, u.Gh)(S);
         },
-        [S]
+        [S],
     );
     let R = () => {
             var e;
@@ -78,7 +78,7 @@ function I(e) {
                       width: t.width,
                       height: t.height,
                       top: t.top,
-                      left: t.left
+                      left: t.left,
                   };
         },
         P = (e) => {
@@ -89,14 +89,14 @@ function I(e) {
                 top: r + 36,
                 left: i - 216,
                 height: 151,
-                width: 268
+                width: 268,
             };
         },
         w = () => {
             if (null != C.current)
                 return {
                     top: C.current.top + 12,
-                    left: C.current.left + 12
+                    left: C.current.left + 12,
                 };
         },
         D = (0, i.useRef)(null),
@@ -107,9 +107,9 @@ function I(e) {
                 ref: D,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: y
+                config: y,
             },
-            'animate-always'
+            "animate-always",
         ),
         x = (0, i.useRef)(null),
         M = (0, l.Yzy)(
@@ -120,20 +120,20 @@ function I(e) {
                 from: (e) =>
                     m(
                         {
-                            position: 'fixed',
-                            visibility: 'hidden',
-                            opacity: 1
+                            position: "fixed",
+                            visibility: "hidden",
+                            opacity: 1,
                         },
-                        h.enabled ? P(e) : R()
+                        h.enabled ? P(e) : R(),
                     ),
                 enter: (e) => [
                     m(
                         {
                             opacity: 1,
-                            visibility: 'visible'
+                            visibility: "visible",
                         },
-                        P(e)
-                    )
+                        P(e),
+                    ),
                 ],
                 leave: m(
                     { opacity: 0 },
@@ -141,36 +141,38 @@ function I(e) {
                         m(
                             {
                                 height: 0,
-                                width: 0
+                                width: 0,
                             },
-                            w()
-                        )
+                            w(),
+                        ),
                 ),
                 config: h.enabled ? v : O,
                 onRest: (e, t) => {
-                    null != t.item && null != N.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(S, t.item.timestamp);
-                }
+                    null != t.item &&
+                        null != N.find((e) => e.timestamp === t.item.timestamp) &&
+                        (0, u.Gh)(S, t.item.timestamp);
+                },
             },
-            'animate-always'
+            "animate-always",
         );
     return (
         (0, o.useChain)([D, x], [0, E], g),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: p.hidden,
-                    ref: I
+                    ref: I,
                 }),
                 L(
                     (e, t) =>
                         null != t &&
                         (0, r.jsx)(o.animated.div, {
                             className: p.whiteFlash,
-                            style: e
-                        })
+                            style: e,
+                        }),
                 ),
                 (0, r.jsx)(_.ZP, {
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: p.hidden,
                         children: M(
                             (e, t, n, i) =>
@@ -178,12 +180,12 @@ function I(e) {
                                 (0, r.jsx)(o.animated.img, {
                                     src: t.thumbnail,
                                     className: p.movingImage,
-                                    style: e
-                                })
-                        )
-                    })
-                })
-            ]
+                                    style: e,
+                                }),
+                        ),
+                    }),
+                }),
+            ],
         })
     );
 }

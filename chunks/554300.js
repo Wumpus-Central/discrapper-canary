@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,7 +67,8 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,22 +78,60 @@ function g(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = function (e) {
     var t,
-        { ref: n, avatar: o, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: T, avatarClassName: S, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: R, focusProps: P } = e,
-        w = m(e, ['ref', 'avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
-    ((w.className = a()(w.className, d.container, {
+        {
+            ref: n,
+            avatar: o,
+            name: f,
+            nameplate: p,
+            children: g,
+            subText: E,
+            decorators: b,
+            onClick: y,
+            hovered: O,
+            selected: v,
+            muted: I,
+            to: T,
+            avatarClassName: S,
+            selectedClassName: A,
+            innerClassName: N,
+            wrapContent: C,
+            highlighted: R,
+            focusProps: P,
+        } = e,
+        w = m(e, [
+            "ref",
+            "avatar",
+            "name",
+            "nameplate",
+            "children",
+            "subText",
+            "decorators",
+            "onClick",
+            "hovered",
+            "selected",
+            "muted",
+            "to",
+            "avatarClassName",
+            "selectedClassName",
+            "innerClassName",
+            "wrapContent",
+            "highlighted",
+            "focusProps",
+        ]);
+    (w.className = a()(w.className, d.container, {
         [d.selected]: v,
         [d.highlighted]: R,
-        [null != A ? A : '']: v,
-        [d.clickable]: !v && (null != T || null != y)
+        [null != A ? A : ""]: v,
+        [d.clickable]: !v && (null != T || null != y),
     })),
-        (w['aria-selected'] = null != (t = w['aria-selected']) ? t : v));
+        (w["aria-selected"] = null != (t = w["aria-selected"]) ? t : v);
     let D = i.useRef(null),
-        L = (0, r.jsxs)('div', {
+        L = (0, r.jsxs)("div", {
             className: a()(d.childContainer, { [d.nameplated]: null != p }),
             children: [
                 (0, r.jsx)(u.Z, {
@@ -100,49 +139,49 @@ let E = function (e) {
                     hovered: O,
                     selected: v,
                     content: D,
-                    placement: c.i.MEMBER_LIST
+                    placement: c.i.MEMBER_LIST,
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     ref: D,
                     className: a()(N, d.layout, {
                         [d.muted]: !v && I,
-                        [d.wrappedLayout]: C
+                        [d.wrappedLayout]: C,
                     }),
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: a()(d.avatar, S),
-                            children: o
+                            children: o,
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: d.content,
                             children: [
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: d.nameAndDecorators,
                                     children: [
-                                        (0, r.jsx)('div', {
+                                        (0, r.jsx)("div", {
                                             className: a()(d.name, { [d.wrappedName]: C }),
-                                            children: f
+                                            children: f,
                                         }),
-                                        b
-                                    ]
+                                        b,
+                                    ],
                                 }),
                                 null != E
-                                    ? (0, r.jsx)('div', {
+                                    ? (0, r.jsx)("div", {
                                           className: d.subText,
-                                          children: E
+                                          children: E,
                                       })
-                                    : null
-                            ]
+                                    : null,
+                            ],
                         }),
                         null != g
-                            ? (0, r.jsx)('div', {
+                            ? (0, r.jsx)("div", {
                                   className: d.children,
-                                  children: g
+                                  children: g,
                               })
-                            : null
-                    ]
-                })
-            ]
+                            : null,
+                    ],
+                }),
+            ],
         });
     return null != T
         ? (0, r.jsx)(
@@ -154,18 +193,18 @@ let E = function (e) {
                           _(
                               {
                                   to: T,
-                                  onClick: y
+                                  onClick: y,
                               },
-                              w
+                              w,
                           ),
                           {
-                              role: 'listitem',
+                              role: "listitem",
                               ref: n,
-                              children: L
-                          }
-                      )
-                  )
-              })
+                              children: L,
+                          },
+                      ),
+                  ),
+              }),
           )
         : null != y
           ? (0, r.jsx)(
@@ -174,28 +213,28 @@ let E = function (e) {
                     _(
                         {
                             onClick: y,
-                            focusProps: P
+                            focusProps: P,
                         },
-                        w
+                        w,
                     ),
                     {
-                        role: 'listitem',
+                        role: "listitem",
                         innerRef: n,
-                        children: L
-                    }
-                )
+                        children: L,
+                    },
+                ),
             )
           : (0, r.jsx)(
                 l.tEY,
                 h(_({}, P), {
                     children: (0, r.jsx)(
-                        'div',
+                        "div",
                         h(_({}, w), {
-                            role: 'listitem',
+                            role: "listitem",
                             ref: n,
-                            children: L
-                        })
-                    )
-                })
+                            children: L,
+                        }),
+                    ),
+                }),
             );
 };

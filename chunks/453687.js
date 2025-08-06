@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Dv: () => c,
     Gq: () => s,
     Gx: () => _,
@@ -6,30 +6,30 @@
     bX: () => d,
     bY: () => u,
     iG: () => f,
-    ut: () => a
+    ut: () => a,
 }),
-    n(781311));
+    n(781311);
 var r = n(446108),
     i = n(901461),
     o = n(981631);
 function a(e) {
-    return 'message-content-'.concat(e.id);
+    return "message-content-".concat(e.id);
 }
 function s(e) {
-    return 'message-reply-context-'.concat(e.id);
+    return "message-reply-context-".concat(e.id);
 }
 function l(e, t) {
     let n = null != t ? t : e.id;
-    return 'message-username-'.concat(n);
+    return "message-username-".concat(n);
 }
 function c(e) {
-    return 'message-timestamp-'.concat(e.id);
+    return "message-timestamp-".concat(e.id);
 }
 function u(e) {
-    return 'message-reactions-'.concat(e.id);
+    return "message-reactions-".concat(e.id);
 }
 function d(e) {
-    return 'message-accessories-'.concat(e.id);
+    return "message-accessories-".concat(e.id);
 }
 function f(e, t, n) {
     let u = e.type === o.uaV.REPLY && null != e.messageReference,
@@ -41,30 +41,30 @@ function f(e, t, n) {
         g = e.hasFlag(o.iLy.HAS_THREAD),
         E = f || _ || p || h || g || m || e.type === o.uaV.THREAD_CREATED,
         b = f && e.content === e.embeds[0].url && e.embeds[0].type === o.hBH.GIFV,
-        y = e.type !== o.uaV.DEFAULT || (!b && '' !== e.content),
+        y = e.type !== o.uaV.DEFAULT || (!b && "" !== e.content),
         O = (0, i.Z)(e),
         v = !O && (null == n ? void 0 : n.hasTimestamp) !== !1,
         I = !O,
         T = l(e, t),
         S = s(e),
         A = u ? S : T,
-        N = I ? ''.concat(A, ' ').concat(r.Z0) : '';
+        N = I ? "".concat(A, " ").concat(r.Z0) : "";
     if (y) {
         let t = a(e);
-        N += ' '.concat(t);
+        N += " ".concat(t);
     }
     if (E) {
         let t = d(e);
-        N += ' '.concat(t);
+        N += " ".concat(t);
     }
     if (v) {
         let t = c(e);
-        N += ' '.concat(r.fy, ' ').concat(t);
+        N += " ".concat(r.fy, " ").concat(t);
     }
     return N.trim();
 }
 function _(e) {
     if (0 === e.reactions.length) return;
     let t = u(e);
-    return ''.concat(r.Mb, ' ').concat(t);
+    return "".concat(r.Mb, " ").concat(t);
 }

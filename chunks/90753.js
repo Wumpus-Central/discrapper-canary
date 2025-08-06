@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(539854));
+n.d(t, { Z: () => b }), n(539854);
 var r = n(73800),
     i = n(846519),
     o = n(692547),
@@ -14,7 +14,18 @@ var r = n(73800),
     h = n(813900);
 let m = 1000 / 60;
 function g(e) {
-    let { drawable: t, context: n, canvasWidth: r, canvasHeight: i, fallbackColor: o, outlineColorDark: a, outlineColorLight: s, linesDrawnAt: l, streamerId: c, deadDrawables: u } = e;
+    let {
+        drawable: t,
+        context: n,
+        canvasWidth: r,
+        canvasHeight: i,
+        fallbackColor: o,
+        outlineColorDark: a,
+        outlineColorLight: s,
+        linesDrawnAt: l,
+        streamerId: c,
+        deadDrawables: u,
+    } = e;
     switch (t.type) {
         case d.W.LINE:
             return (0, p.Z)({
@@ -26,7 +37,7 @@ function g(e) {
                 outlineColorDark: a,
                 outlineColorLight: s,
                 linesDrawnAt: l,
-                deadDrawables: u
+                deadDrawables: u,
             });
         case d.W.EMOJI_HOSE:
             return (0, _.Z)({
@@ -38,20 +49,29 @@ function g(e) {
                 outlineColorDark: a,
                 outlineColorLight: s,
                 streamerId: c,
-                deadDrawables: u
+                deadDrawables: u,
             });
     }
 }
 function E(e) {
-    let { canvasRef: t, drawables: n, fallbackColor: r, linesDrawnAt: i, streamerId: o, channelId: a, outlineColorDark: s, outlineColorLight: u } = e;
+    let {
+        canvasRef: t,
+        drawables: n,
+        fallbackColor: r,
+        linesDrawnAt: i,
+        streamerId: o,
+        channelId: a,
+        outlineColorDark: s,
+        outlineColorLight: u,
+    } = e;
     if (0 === n.length) return;
     let d = t.current;
     if (null == d) return;
-    let f = d.getContext('2d');
+    let f = d.getContext("2d");
     if (null == f) return;
     let { width: _, height: p } = d.getBoundingClientRect(),
         h = [];
-    (n.forEach((e) => {
+    n.forEach((e) => {
         if (null == l.Z.getVoiceStateForChannel(a, e.userId)) return void h.push(e);
         g({
             drawable: e,
@@ -63,10 +83,10 @@ function E(e) {
             outlineColorLight: u,
             linesDrawnAt: i,
             deadDrawables: h,
-            streamerId: o
+            streamerId: o,
         });
     }),
-        h.length > 0 && (0, c.fW)(h, o));
+        h.length > 0 && (0, c.fW)(h, o);
 }
 function b(e, t, n, l) {
     let c = (0, a.dQu)(o.Z.unsafe_rawColors.BRAND_500).hex(),
@@ -77,7 +97,7 @@ function b(e, t, n, l) {
         y = r.useCallback(
             (t) => {
                 let n = u.Z.getDrawables(t);
-                ((0, f.UN)(e),
+                (0, f.UN)(e),
                     E({
                         canvasRef: e,
                         drawables: n,
@@ -86,25 +106,29 @@ function b(e, t, n, l) {
                         streamerId: t,
                         outlineColorDark: d,
                         outlineColorLight: p,
-                        channelId: l
-                    }));
+                        channelId: l,
+                    });
             },
-            [e, l, c, d, p]
+            [e, l, c, d, p],
         );
     r.useEffect(() => {
         let t = new ResizeObserver(() => {
             let t = e.current;
             if (null == t) return;
             let { width: r, height: i } = t.getBoundingClientRect();
-            ((t.width = r * window.devicePixelRatio), (t.height = i * window.devicePixelRatio), y(n));
+            (t.width = r * window.devicePixelRatio), (t.height = i * window.devicePixelRatio), y(n);
         });
-        return (null != e.current && t.observe(e.current), () => t.disconnect());
+        return null != e.current && t.observe(e.current), () => t.disconnect();
     }, [e, y, n]);
     let O = r.useCallback(() => {
         let t = u.Z.getDrawables(n),
             r = _.U.getState().particles,
             i = t.length > 0 || Object.keys(r).length > 0;
-        i && null == b.current._ref && (null == b.current._ref ? (y(n), b.current.start(m, () => y(n))) : i || null == b.current._ref || (b.current.stop(), (0, f.UN)(e)));
+        i &&
+            null == b.current._ref &&
+            (null == b.current._ref
+                ? (y(n), b.current.start(m, () => y(n)))
+                : i || null == b.current._ref || (b.current.stop(), (0, f.UN)(e)));
     }, [e, y, n]);
     r.useEffect(() => {
         let e = b.current;
@@ -113,7 +137,7 @@ function b(e, t, n, l) {
             O(),
             (0, s.vM)(t.getAvatarURL(null, h.Ks)),
             () => {
-                (u.Z.removeChangeListener(O), e.stop());
+                u.Z.removeChangeListener(O), e.stop();
             }
         );
     });

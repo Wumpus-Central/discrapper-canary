@@ -27,80 +27,87 @@ let I = i.memo(function (e) {
             [m.Z],
             () => ({
                 isBlocked: null != I && m.Z.isBlockedForMessage(I),
-                isIgnored: null != I && m.Z.isIgnoredForMessage(I)
+                isIgnored: null != I && m.Z.isIgnoredForMessage(I),
             }),
-            [I]
+            [I],
         ),
         T = (0, o.e7)([g.Z], () => g.Z.can(_.Plq.MANAGE_MESSAGES, t)),
         P = f.cC.useSetting(),
         { content: j } = i.useMemo(
             () =>
-                (null == I ? void 0 : I.content) != null && '' !== I.content
+                (null == I ? void 0 : I.content) != null && "" !== I.content
                     ? (0, p.ZP)(I, {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
-                          shouldFilterKeywords: C
+                          shouldFilterKeywords: C,
                       })
                     : { content: null },
-            [I, C]
+            [I, C],
         ),
         A = null;
     if (l)
         A = (0, r.jsx)(s.Text, {
             className: y.messageReplacement,
-            variant: 'text-sm/normal',
-            color: 'text-muted',
-            children: E.intl.string(E.t.BZHld3)
+            variant: "text-sm/normal",
+            color: "text-muted",
+            children: E.intl.string(E.t.BZHld3),
         });
     else if (n)
         if (null != I && S)
             A = (0, r.jsx)(s.Text, {
                 className: y.messageReplacement,
-                variant: 'text-sm/normal',
-                color: 'text-muted',
-                children: E.intl.string(E.t['WPe+xM'])
+                variant: "text-sm/normal",
+                color: "text-muted",
+                children: E.intl.string(E.t["WPe+xM"]),
             });
         else if (null != I && N)
             A = (0, r.jsx)(s.Text, {
                 className: y.messageReplacement,
-                variant: 'text-sm/normal',
-                color: 'text-muted',
-                children: E.intl.string(E.t.uxrh1N)
+                variant: "text-sm/normal",
+                color: "text-muted",
+                children: E.intl.string(E.t.uxrh1N),
             });
         else if (null != I) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(I, j, S, N, a()(y.messageContent, v.inlineFormat), {
-                leadingIconClass: y.messageContentIcon,
-                trailingIconClass: y.messageContentIcon,
-                iconSize: O.WW
-            });
+            let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(
+                I,
+                j,
+                S,
+                N,
+                a()(y.messageContent, v.inlineFormat),
+                {
+                    leadingIconClass: y.messageContentIcon,
+                    trailingIconClass: y.messageContentIcon,
+                    iconSize: O.WW,
+                },
+            );
             A =
                 null != t
                     ? (0, r.jsx)(s.Text, {
-                          variant: 'text-sm/normal',
-                          color: 'text-muted',
+                          variant: "text-sm/normal",
+                          color: "text-muted",
                           className: y.messageContent,
-                          children: t
+                          children: t,
                       })
                     : (0, r.jsx)(s.Text, {
-                          tag: 'span',
-                          variant: 'text-sm/normal',
-                          color: 'text-muted',
+                          tag: "span",
+                          variant: "text-sm/normal",
+                          color: "text-muted",
                           className: y.messageReplacement,
-                          children: e
+                          children: e,
                       });
         } else
             A = (0, r.jsx)(s.Text, {
                 className: y.messageReplacement,
-                variant: 'text-sm/normal',
-                color: 'text-muted',
-                children: E.intl.string(E.t['0KfDxM'])
+                variant: "text-sm/normal",
+                color: "text-muted",
+                children: E.intl.string(E.t["0KfDxM"]),
             });
     else A = null;
     return (0, r.jsx)(c.aQ.Provider, {
         value: (0, d.Z)(P, T),
         children: (0, r.jsx)(s.Rny, {
             className: y.messageFocusBlock,
-            children: A
-        })
+            children: A,
+        }),
     });
 });

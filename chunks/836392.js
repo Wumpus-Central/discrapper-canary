@@ -23,6 +23,6 @@ e.exports = function (e, t, n) {
     return e.merge({
         blockMap: o.merge(u),
         selectionBefore: t,
-        selectionAfter: t
+        selectionAfter: t,
     });
 };

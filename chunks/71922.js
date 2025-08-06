@@ -1,1 +1,1 @@
-e.exports = { badgeUpgrade: 'badgeUpgrade_fbcaba' };
+e.exports = { badgeUpgrade: "badgeUpgrade_fbcaba" };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(413496), n(433524), n(35282), n(539854), n(388685));
+n.d(t, { Z: () => k }), n(413496), n(433524), n(35282), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(831209),
@@ -33,7 +33,7 @@ function P(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -43,15 +43,15 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 P(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -59,11 +59,11 @@ function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -78,7 +78,7 @@ function L(e, t) {
         e
     );
 }
-let x = RegExp('(.*)```(\\w+)\\n(.*)```(.*)', 's');
+let x = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
 function M() {
     let e = (0, a.e7)([E.Z], () => E.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
@@ -87,9 +87,10 @@ function M() {
     return (
         i.useEffect(
             () => () => {
-                n === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, _.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: A.L.TAKE_ACTION });
+                n === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE &&
+                    (0, _.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: A.L.TAKE_ACTION });
             },
-            [n]
+            [n],
         ),
         (0, r.jsx)(h.ZP, {
             contentTypes: t,
@@ -98,15 +99,25 @@ function M() {
                 return t === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, r.jsx)(l.IGR, {
                           text: C.intl.string(C.t.y2b7CA),
-                          color: o.Z.BUTTON_DANGER_BACKGROUND
+                          color: o.Z.BUTTON_DANGER_BACKGROUND,
                       })
                     : null;
-            }
+            },
         })
     );
 }
 function k(e) {
-    let { channel: t, options: a, onFileUpload: p, onClose: h, onSelect: E, draftType: P, editorTextContent: D, setValue: k, openClips: j } = e,
+    let {
+            channel: t,
+            options: a,
+            onFileUpload: p,
+            onClose: h,
+            onSelect: E,
+            draftType: P,
+            editorTextContent: D,
+            setValue: k,
+            openClips: j,
+        } = e,
         { analyticsLocations: U, newestAnalyticsLocation: G } = (0, d.ZP)(),
         B = (0, m.Dt)({ channel: t });
     function Z(e) {
@@ -114,7 +125,7 @@ function k(e) {
             channelId: t.id,
             type: S.mFx.JOIN,
             activity: e,
-            location: U[U.length - 1]
+            location: U[U.length - 1],
         });
     }
     function F(e) {
@@ -122,7 +133,7 @@ function k(e) {
             channelId: t.id,
             type: S.mFx.LISTEN,
             activity: e,
-            location: U[U.length - 1]
+            location: U[U.length - 1],
         });
     }
     function V(e) {
@@ -130,189 +141,192 @@ function k(e) {
             channelId: t.id,
             type: S.mFx.WATCH,
             activity: e,
-            location: U[U.length - 1]
+            location: U[U.length - 1],
         });
     }
     function H() {
-        (0, g.R6)(t, void 0, 'Plus Button');
+        (0, g.R6)(t, void 0, "Plus Button");
     }
     function Y() {
-        (b.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), k('/', (0, I.JM)('/')));
+        b.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), k("/", (0, I.JM)("/"));
     }
     function W() {
         j();
     }
     function K() {
-        ((0, _.Q3)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: A.L.TAKE_ACTION }),
+        (0, _.Q3)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: A.L.TAKE_ACTION }),
             (0, l.ZDy)(
                 async () => {
-                    let { default: e } = await n.e('68784').then(n.bind(n, 611611));
+                    let { default: e } = await n.e("68784").then(n.bind(n, 611611));
                     return (n) => (0, r.jsx)(e, L(w({}, n), { channel: t }));
                 },
-                { modalKey: N.$z }
-            ));
+                { modalKey: N.$z },
+            );
     }
     function z() {
-        (b.default.track(S.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        b.default.track(S.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
-            guild_id: t.guild_id
+            guild_id: t.guild_id,
         }),
             (0, f.Z)({
                 context:
                     null != t
                         ? {
-                              type: 'channel',
-                              channel: t
+                              type: "channel",
+                              channel: t,
                           }
-                        : { type: 'contextless' },
+                        : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: G
+                analyticsLocation: G,
             }),
-            (0, u.w1)({ guildId: t.guild_id }));
+            (0, u.w1)({ guildId: t.guild_id });
     }
     function q() {
         let e = D,
-            n = 'txt',
-            r = '',
+            n = "txt",
+            r = "",
             i = D.match(x);
-        (null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, O.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, P), y.S.dispatchToLastSubscribed(S.CkL.CLEAR_TEXT), '' !== r && y.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, { plainText: r }));
+        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])),
+            (0, v.d)([(0, O.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, P),
+            y.S.dispatchToLastSubscribed(S.CkL.CLEAR_TEXT),
+            "" !== r && y.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, { plainText: r });
     }
     function X(e) {
         var n;
-        let i = (0, r.jsxs)('div', {
+        let i = (0, r.jsxs)("div", {
             className: R.optionLabel,
             children: [
                 (0, r.jsx)(e.icon, {
                     className: R.optionIcon,
-                    color: 'currentColor'
+                    color: "currentColor",
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: R.optionName,
-                    children: e.display
+                    children: e.display,
                 }),
                 null != e.badgeVal &&
                     e.badgeVal > 0 &&
                     (0, r.jsx)(l.mAB, {
                         className: R.badge,
                         color: null != (n = e.badgeColor) ? n : o.Z.STATUS_DANGER,
-                        count: e.badgeVal
-                    })
-            ]
+                        count: e.badgeVal,
+                    }),
+            ],
         });
         switch (e.type) {
             case T.r.UPLOAD_A_FILE:
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'upload-file',
+                        id: "upload-file",
                         label: i,
-                        action: p
+                        action: p,
                     },
-                    'upload-file'
+                    "upload-file",
                 );
             case T.r.UPLOAD_TEXT_AS_FILE:
-                if ('' === D) return null;
+                if ("" === D) return null;
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'upload-text-as-file',
+                        id: "upload-text-as-file",
                         label: i,
-                        action: q
+                        action: q,
                     },
-                    'upload-text-as-file'
+                    "upload-text-as-file",
                 );
             case T.r.CLIPS:
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'clips',
+                        id: "clips",
                         label: i,
-                        action: W
+                        action: W,
                     },
-                    'clips'
+                    "clips",
                 );
             case T.r.POLL:
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'poll',
+                        id: "poll",
                         label: i,
-                        action: K
+                        action: K,
                     },
-                    'poll'
+                    "poll",
                 );
             case T.r.INVITE_TO_PLAY_GAME:
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'play',
+                        id: "play",
                         label: i,
-                        action: () => Z(e.activity)
+                        action: () => Z(e.activity),
                     },
-                    'play'
+                    "play",
                 );
             case T.r.INVITE_TO_LISTEN:
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'listen',
+                        id: "listen",
                         label: i,
-                        action: () => F(e.activity)
+                        action: () => F(e.activity),
                     },
-                    'listen'
+                    "listen",
                 );
             case T.r.INVITE_TO_WATCH:
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'watch',
+                        id: "watch",
                         label: i,
-                        action: () => V(e.activity)
+                        action: () => V(e.activity),
                     },
-                    'watch'
+                    "watch",
                 );
             case T.r.CREATE_THREAD:
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'THREAD',
+                        id: "THREAD",
                         label: i,
-                        action: H
+                        action: H,
                     },
-                    'THREAD'
+                    "THREAD",
                 );
             case T.r.SLASH_COMMAND:
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'SLASH_COMMAND',
+                        id: "SLASH_COMMAND",
                         label: i,
-                        action: Y
+                        action: Y,
                     },
-                    'SLASH_COMMAND'
+                    "SLASH_COMMAND",
                 );
             case T.r.ACTIVITY:
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'activity',
+                        id: "activity",
                         label: i,
                         action: z,
-                        hint: (0, r.jsx)(M, {})
+                        hint: (0, r.jsx)(M, {}),
                     },
-                    'activity'
+                    "activity",
                 );
             case T.r.SCHEDULED_MESSAGE:
                 return (0, r.jsx)(
                     l.sNh,
                     {
-                        id: 'scheduled_message',
+                        id: "scheduled_message",
                         label: i,
                         action: () => (0, m.$f)({ channel: t }),
-                        children: B
+                        children: B,
                     },
-                    'scheduled_message'
+                    "scheduled_message",
                 );
             default:
                 return null;
@@ -321,18 +335,18 @@ function k(e) {
     return (
         i.useEffect(() => {
             b.default.track(S.rMx.OPEN_POPOUT, {
-                type: 'Send Attachment',
+                type: "Send Attachment",
                 channel_id: t.id,
-                guild_id: t.guild_id
+                guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id]),
         (0, r.jsx)(l.v2r, {
             onSelect: E,
-            navId: 'channel-attach',
+            navId: "channel-attach",
             onClose: h,
-            'aria-label': C.intl.string(C.t.Xm41aW),
+            "aria-label": C.intl.string(C.t.Xm41aW),
             className: R.menu,
-            children: a.map(X)
+            children: a.map(X),
         })
     );
 }

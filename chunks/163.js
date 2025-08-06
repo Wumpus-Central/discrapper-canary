@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var l = n(73800),
     r = n(442837),
     i = n(570140),
@@ -10,8 +10,8 @@ var l = n(73800),
     u = n(981631);
 function m(e) {
     i.Z.dispatch({
-        type: 'CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES',
-        guildId: e
+        type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES",
+        guildId: e,
     });
 }
 function h(e) {
@@ -25,8 +25,13 @@ function h(e) {
             onChannelClick: l.useCallback((e, t, n) => {
                 let l = s.ZP.isChannelOptedIn(e, t),
                     r = t === n;
-                (!l && o.Z.isCollapsed(n) && null != n && (0, a.mJ)(n), (0, d.hi)(e) ? (r ? (0, d.rz)(e, { include: new Set([t]) }) : (0, d.rz)(e, { exclude: new Set([t]) })) : (0, c.k$)(e, t, !l, { section: u.jXE.CHANNEL_BROWSER }));
-            }, [])
+                !l && o.Z.isCollapsed(n) && null != n && (0, a.mJ)(n),
+                    (0, d.hi)(e)
+                        ? r
+                            ? (0, d.rz)(e, { include: new Set([t]) })
+                            : (0, d.rz)(e, { exclude: new Set([t]) })
+                        : (0, c.k$)(e, t, !l, { section: u.jXE.CHANNEL_BROWSER });
+            }, []),
         }
     );
 }

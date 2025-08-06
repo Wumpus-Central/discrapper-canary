@@ -1,6 +1,6 @@
 var r = t(270412);
-e.exports = t.v(n, e.id, 'c8b50773f7c24d43', {
-    './discord_markdown_wasm_bg.js': {
+e.exports = t.v(n, e.id, "c8b50773f7c24d43", {
+    "./discord_markdown_wasm_bg.js": {
         __wbindgen_object_drop_ref: r.ug,
         __wbindgen_error_new: r.hd,
         __wbindgen_string_get: r.qt,
@@ -32,6 +32,6 @@ e.exports = t.v(n, e.id, 'c8b50773f7c24d43', {
         __wbg_instanceof_Uint8Array_2b3bbecd033d19f6: r.zk,
         __wbindgen_debug_string: r.fY,
         __wbindgen_throw: r.Or,
-        __wbindgen_memory: r.oH
-    }
+        __wbindgen_memory: r.oH,
+    },
 });

@@ -12,7 +12,7 @@ n.d(t, {
     tb: () => p,
     to: () => f,
     uO: () => d,
-    vp: () => a
+    vp: () => a,
 });
 var o = Math.abs,
     r = String.fromCharCode,
@@ -45,8 +45,8 @@ function h(e) {
     return e.length;
 }
 function v(e, t) {
-    return (t.push(e), e);
+    return t.push(e), e;
 }
 function m(e, t) {
-    return e.map(t).join('');
+    return e.map(t).join("");
 }

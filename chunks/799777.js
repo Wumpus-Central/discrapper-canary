@@ -14,32 +14,32 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let f = 'GameLibraryViewStore',
+let f = "GameLibraryViewStore",
     _ = 200,
     p = u.sHY.ASCENDING,
     h = u.iEv.LAST_PLAYED,
     m = !1,
     g = a().debounce(() => {
-        ((m = !1), O.emitChange());
+        (m = !1), O.emitChange();
     }, _);
 function E(e) {
     let { key: t, isKeyboardEvent: n } = e;
-    (n && ((m = !0), g()), (r = t));
+    n && ((m = !0), g()), (r = t);
 }
 function b(e) {
     let { direction: t, key: n } = e;
-    ((p = t),
+    (p = t),
         (h = n),
         l.K.set(f, {
             sortDirection: p,
-            sortKey: h
-        }));
+            sortKey: h,
+        });
 }
 class y extends (i = s.ZP.Store) {
     initialize() {
@@ -60,9 +60,9 @@ class y extends (i = s.ZP.Store) {
         return m;
     }
 }
-d(y, 'displayName', 'GameLibraryViewStore');
+d(y, "displayName", "GameLibraryViewStore");
 let O = new y(c.Z, {
         LIBRARY_TABLE_SORT_UPDATE: b,
-        LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: E
+        LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: E,
     }),
     v = O;

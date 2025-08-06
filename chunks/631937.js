@@ -12,12 +12,12 @@ var r = n(73800),
 function _(e) {
     let t = (0, u.Z)(e),
         n = (0, i.e7)([a.default], () => a.default.locale),
-        _ = (0, i.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
+        _ = (0, i.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : "", n), [t, n]),
         p = (0, d.Z)(e),
         h = r.useRef(p ? Date.now() : null),
         m = (0, i.e7)([s.ZP], () => s.ZP.getUnreadCount(e), [e]),
         g = r.useRef(m);
-    (r.useEffect(() => {
+    r.useEffect(() => {
         g.current = m;
     }),
         r.useEffect(() => {
@@ -30,8 +30,8 @@ function _(e) {
             p &&
                 null != _ &&
                 l.default.track(f.rMx.CHANGE_LOG_OPENED, {
-                    change_log_id: ''.concat(_.date, ':').concat(_.revision),
-                    unread_count: g.current
+                    change_log_id: "".concat(_.date, ":").concat(_.revision),
+                    unread_count: g.current,
                 });
         }, [p, _]),
         r.useEffect(() => {
@@ -42,10 +42,10 @@ function _(e) {
                     null != e &&
                     (l.default.track(f.rMx.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        change_log_id: ''.concat(_.date, ':').concat(_.revision),
-                        unread_count: g.current
+                        change_log_id: "".concat(_.date, ":").concat(_.revision),
+                        unread_count: g.current,
                     }),
                     (h.current = 0));
             };
-        }, [p, _]));
+        }, [p, _]);
 }

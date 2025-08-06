@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(997841));
+n.d(t, { Z: () => N }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(997841);
 var r = n(45792),
     i = n(230711),
     l = n(782568),
@@ -20,40 +20,40 @@ var r = n(45792),
     y = n(701488),
     v = n(674563);
 let I = new Set([y.Fu, y.JT]),
-    C = new Set(['www.nytimes.com', 'apps.apple.com', 'play.google.com']),
+    C = new Set(["www.nytimes.com", "apps.apple.com", "play.google.com"]),
     S = new Map([
         [
             v.Vt,
             {
                 trustedHosts: C,
-                trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
-            }
+                trustedUntilEpochMs: new Date("2027-01-15T00:00:00").valueOf(),
+            },
         ],
         [
             v.fd,
             {
                 trustedHosts: C,
-                trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
-            }
+                trustedUntilEpochMs: new Date("2027-01-15T00:00:00").valueOf(),
+            },
         ],
         [
             v.He,
             {
                 trustedHosts: C,
-                trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
-            }
-        ]
+                trustedUntilEpochMs: new Date("2027-01-15T00:00:00").valueOf(),
+            },
+        ],
     ]),
     N = {
         [E.Etm.OPEN_EXTERNAL_LINK]: {
             scope: {
-                [O.Gp.ANY]: [O.wE, O.b_]
+                [O.Gp.ANY]: [O.wE, O.b_],
             },
             validation: (e) => (0, _.Z)(e).required().keys({ url: e.string().required() }),
             handler(e) {
                 let {
                     socket: t,
-                    args: { url: n }
+                    args: { url: n },
                 } = e;
                 (0, b.bu)(t.transport);
                 let r = o.ZP.getCurrentEmbeddedActivity();
@@ -68,31 +68,32 @@ let I = new Set([y.Fu, y.JT]),
                     let c = d.Z.getApplication(null == (i = t.application) ? void 0 : i.id),
                         h = (0, u.p)(null == r ? void 0 : r.location),
                         m = (null == c ? void 0 : c.id) !== void 0 ? S.get(c.id) : void 0;
-                    if (void 0 !== m && m.trustedUntilEpochMs >= Date.now() && m.trustedHosts.has(e.host)) return ((0, l.Z)(o), Promise.resolve({ opened: !0 }));
+                    if (void 0 !== m && m.trustedUntilEpochMs >= Date.now() && m.trustedHosts.has(e.host))
+                        return (0, l.Z)(o), Promise.resolve({ opened: !0 });
                     return new Promise((e) =>
                         (0, f.q)(
                             {
                                 href: o,
                                 shouldConfirm: !0,
                                 onConfirm: () => {
-                                    ((0, l.Z)(o), e({ opened: !0 }));
+                                    (0, l.Z)(o), e({ opened: !0 });
                                 },
                                 onCancel: () => {
                                     e({ opened: !1 });
-                                }
+                                },
                             },
                             void 0,
                             void 0,
                             (0, s.z)({
                                 application: c,
-                                channelId: h
-                            })
-                        )
+                                channelId: h,
+                            }),
+                        ),
                     );
                 } catch (e) {
-                    throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
+                    throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, "Invalid URL: ".concat(n));
                 }
-            }
+            },
         },
         [E.Etm.NAVIGATE_TO_CONNECTIONS]: {
             validation: (e) => (0, _.Z)(e),
@@ -101,9 +102,13 @@ let I = new Set([y.Fu, y.JT]),
                 let { socket: t } = e;
                 (0, b.bu)(t.transport);
                 let n = (0, b._f)(t.application);
-                if (!I.has(n)) throw new m.Z({ errorCode: E.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+                if (!I.has(n))
+                    throw new m.Z(
+                        { errorCode: E.lTL.UNAUTHORIZED_FOR_APPLICATION },
+                        "Command not available for this application",
+                    );
                 i.Z.open(E.oAB.CONNECTIONS);
-            }
+            },
         },
         [E.Etm.SHARE_LINK]: (0, r.S)(E.Etm.SHARE_LINK, {
             scope: { [O.Gp.ANY]: [O.wE] },
@@ -111,12 +116,13 @@ let I = new Set([y.Fu, y.JT]),
                 var t;
                 let {
                     socket: n,
-                    args: { custom_id: r, message: i, link_id: l }
+                    args: { custom_id: r, message: i, link_id: l },
                 } = e;
                 (0, b.bu)(n.transport);
                 let a = (0, b._f)(n.application);
-                if (null == a) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
-                if (!(0, h.yE)(null != (t = n.application.flags) ? t : 0, E.udG.EMBEDDED)) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+                if (null == a) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, "No application.");
+                if (!(0, h.yE)(null != (t = n.application.flags) ? t : 0, E.udG.EMBEDDED))
+                    throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, "This application cannot access this API");
                 return new Promise((e) => {
                     (0, c._)({
                         applicationId: a,
@@ -127,11 +133,11 @@ let I = new Set([y.Fu, y.JT]),
                             e({
                                 success: n || t,
                                 didCopyLink: n,
-                                didSendMessage: t
+                                didSendMessage: t,
                             });
-                        }
+                        },
                     });
                 });
-            }
-        })
+            },
+        }),
     };

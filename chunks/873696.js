@@ -3,10 +3,10 @@ var r = n(388032);
 function i(e) {
     if (null == e) return null;
     switch (e.type) {
-        case 'embedded-activities':
-        case 'event':
+        case "embedded-activities":
+        case "event":
             return { subtitle: e.name };
-        case 'go-live':
+        case "go-live":
             return { subtitle: r.intl.string(r.t.Pa817u) };
     }
     return null;

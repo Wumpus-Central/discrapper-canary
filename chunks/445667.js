@@ -19,34 +19,36 @@ t.exports =
                 l(
                     { b: 1 },
                     l(
-                        p({}, 'a', {
+                        p({}, "a", {
                             enumerable: !0,
                             get: function () {
-                                p(this, 'b', {
+                                p(this, "b", {
                                     value: 3,
-                                    enumerable: !1
+                                    enumerable: !1,
                                 });
-                            }
+                            },
                         }),
-                        { b: 2 }
-                    )
+                        { b: 2 },
+                    ),
                 ).b
         )
             return !0;
         var t = {},
             e = {},
-            r = Symbol('assign detection'),
-            i = 'abcdefghijklmnopqrst';
+            r = Symbol("assign detection"),
+            i = "abcdefghijklmnopqrst";
         return (
             (t[r] = 7),
-            i.split('').forEach(function (t) {
+            i.split("").forEach(function (t) {
                 e[t] = t;
             }),
-            7 !== l({}, t)[r] || o(l({}, e)).join('') !== i
+            7 !== l({}, t)[r] || o(l({}, e)).join("") !== i
         );
     })
         ? function (t, e) {
-              for (var r = c(t), i = arguments.length, a = 1, l = u.f, p = h.f; i > a; ) for (var g, d = f(arguments[a++]), m = l ? v(o(d), l(d)) : o(d), y = m.length, b = 0; y > b; ) ((g = m[b++]), (!n || s(p, d, g)) && (r[g] = d[g]));
+              for (var r = c(t), i = arguments.length, a = 1, l = u.f, p = h.f; i > a; )
+                  for (var g, d = f(arguments[a++]), m = l ? v(o(d), l(d)) : o(d), y = m.length, b = 0; y > b; )
+                      (g = m[b++]), (!n || s(p, d, g)) && (r[g] = d[g]);
               return r;
           }
         : l;

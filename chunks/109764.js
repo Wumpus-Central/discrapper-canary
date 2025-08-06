@@ -14,15 +14,15 @@ function f(t, n, e) {
     return null == t
         ? null
         : (0, i.jsx)(l.sNh, {
-              id: 'channel-copy-link',
+              id: "channel-copy-link",
               label: c.intl.string(c.t.WqhZsr),
               action: () => {
-                  (t.isForumPost() &&
+                  t.isForumPost() &&
                       (0, r.B)({
                           postId: t.id,
-                          location: { section: u.jXE.CONTEXT_MENU }
+                          location: { section: u.jXE.CONTEXT_MENU },
                       }),
-                      (0, d.JG)((0, s.EO)(t, f, n, e)));
-              }
+                      (0, d.JG)((0, s.EO)(t, f, n, e));
+              },
           });
 }

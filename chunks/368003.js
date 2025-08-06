@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => h }), r(388685));
+r.d(t, { Z: () => h }), r(388685);
 var n = r(255367),
     s = r(73800),
     i = r(404759),
@@ -15,7 +15,7 @@ function d(e, t, r) {
                   value: r,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = r),
         e
@@ -28,41 +28,41 @@ class h extends s.Component {
             children: [
                 (0, n.jsx)(u.X6q, {
                     className: c.prompt,
-                    variant: 'heading-md/semibold',
-                    children: this.props.prompt
+                    variant: "heading-md/semibold",
+                    children: this.props.prompt,
                 }),
-                (0, n.jsx)('hr', { className: c.separator }),
+                (0, n.jsx)("hr", { className: c.separator }),
                 (0, n.jsx)(u.Text, {
                     className: c.selectYourAnswer,
-                    variant: 'text-xs/normal',
-                    children: p.intl.string(p.t.YeiLeH)
+                    variant: "text-xs/normal",
+                    children: p.intl.string(p.t.YeiLeH),
                 }),
                 (0, n.jsx)(u.FXm, {
                     options: this.getQuestionOptions(),
                     onChange: this.handleOptionChange,
-                    value: e
-                })
-            ]
+                    value: e,
+                }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            d(this, 'state', { selectedValue: null }),
+        super(...e),
+            d(this, "state", { selectedValue: null }),
             d(
                 this,
-                'getQuestionOptions',
+                "getQuestionOptions",
                 o()(() =>
                     l()(
                         this.props.options.map((e) => ({
                             name: e.copy,
-                            value: e.house
-                        }))
-                    )
-                )
+                            value: e.house,
+                        })),
+                    ),
+                ),
             ),
-            d(this, 'handleOptionChange', (e) => {
+            d(this, "handleOptionChange", (e) => {
                 let { onSelect: t } = this.props;
-                (this.setState({ selectedValue: e.value }), t(e.value));
-            }));
+                this.setState({ selectedValue: e.value }), t(e.value);
+            });
     }
 }

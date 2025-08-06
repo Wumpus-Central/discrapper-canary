@@ -6,9 +6,9 @@ var n = a(255367),
 function s() {
     return (0, n.jsx)(r.zJl, {
         className: i.panel,
-        children: (0, n.jsx)('div', {
-            style: { padding: 'var(--space-8)' },
-            children: (0, n.jsx)(l.Z, {})
-        })
+        children: (0, n.jsx)("div", {
+            style: { padding: "var(--space-8)" },
+            children: (0, n.jsx)(l.Z, {}),
+        }),
     });
 }

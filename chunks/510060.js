@@ -4,7 +4,7 @@ n.d(t, {
     LT: () => u,
     Me: () => o,
     eU: () => c,
-    rI: () => d
+    rI: () => d,
 });
 var r = n(512722),
     i = n.n(r);
@@ -15,7 +15,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,23 +31,29 @@ class o {
         if (e <= this.minWidth)
             return {
                 columns: 1,
-                columnWidth: this.minWidth
+                columnWidth: this.minWidth,
             };
         let t = e / this.maxWidth,
             n = Math.max(Math.floor(t + (e / this.minWidth - t) / 2), 1),
             r = this.gap * (n - 1);
         return {
             columns: n,
-            columnWidth: (e - r) / n
+            columnWidth: (e - r) / n,
         };
     }
     constructor({ minWidth: e, maxWidth: t, gap: n }) {
-        (l(this, 'minWidth', void 0), l(this, 'maxWidth', void 0), l(this, 'gap', void 0), i()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n));
+        l(this, "minWidth", void 0),
+            l(this, "maxWidth", void 0),
+            l(this, "gap", void 0),
+            i()(e < t, "minWidth needs to be smaller than maxWidth"),
+            (this.minWidth = e),
+            (this.maxWidth = t),
+            (this.gap = n);
     }
 }
 let c = {
         columns: 1,
-        columnWidth: 450
+        columnWidth: 450,
     },
     d = (e) => {
         let t = e - 2,

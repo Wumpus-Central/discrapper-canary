@@ -11,14 +11,14 @@ var r = n(481060),
     f = n(39604),
     _ = n(356659),
     p = n(388032);
-let h = 'CLIPS_IN_CALL_WARNING';
+let h = "CLIPS_IN_CALL_WARNING";
 class m extends c.Z {
     showClipsToast() {
         (0, r.showToast)({
             id: h,
-            message: p.intl.string(p.t['d+41qK']),
+            message: p.intl.string(p.t["d+41qK"]),
             type: r.ToastType.CLIP,
-            options: { duration: _.G$ }
+            options: { duration: _.G$ },
         });
     }
     applyNativeClipsSettings(e) {
@@ -27,7 +27,11 @@ class m extends c.Z {
             n = u.Z.getSettings(),
             r = (n.clipsEnabled || n.decoupledClipsEnabled) && t,
             i = s.Z.getMediaEngine();
-        if ((i.setClipBufferLength(r ? n.clipsLength / 1000 : 0), (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(), null == e || (null == e ? void 0 : e.settings.clipsQuality) != null)) {
+        if (
+            (i.setClipBufferLength(r ? n.clipsLength / 1000 : 0),
+            (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(),
+            null == e || (null == e ? void 0 : e.settings.clipsQuality) != null)
+        ) {
             let { frameRate: t, resolution: r } = n.clipsQuality,
                 o = r <= 480 ? (r / 3) * 4 : (r / 9) * 16,
                 a = r;
@@ -40,7 +44,10 @@ class m extends c.Z {
     }
     handleClipsInitOnGamesChange(e) {
         let t = o.ZP.getVisibleGame();
-        null != t && (e.added.find((e) => e.pid === t.pid) ? setTimeout(() => this.fireClipsInitEvent(), _.jp) : this.fireClipsInitEvent());
+        null != t &&
+            (e.added.find((e) => e.pid === t.pid)
+                ? setTimeout(() => this.fireClipsInitEvent(), _.jp)
+                : this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
         if (!(0, d.Z)(s.Z)) return;
@@ -51,12 +58,12 @@ class m extends c.Z {
         (null == n ? void 0 : n.pid) != null &&
             (null == n ? void 0 : n.windowHandle) != null &&
             null != n.name &&
-            '' !== n.name &&
+            "" !== n.name &&
             i.Z.dispatch({
-                type: 'CLIPS_INIT',
-                sourceId: 'window:'.concat(null == n ? void 0 : n.windowHandle),
+                type: "CLIPS_INIT",
+                sourceId: "window:".concat(null == n ? void 0 : n.windowHandle),
                 applicationName: n.name,
-                quality: t.clipsQuality
+                quality: t.clipsQuality,
             });
     }
     handleMediaEngineSetHardwareEncoding(e) {
@@ -69,7 +76,7 @@ class m extends c.Z {
     disableClips() {
         f.em({
             clipsEnabled: !1,
-            trackAnalytics: !1
+            trackAnalytics: !1,
         });
     }
 }

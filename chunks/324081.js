@@ -28,60 +28,63 @@ let I = {
     top: 8,
     bottom: 8,
     left: -4,
-    right: -4
+    right: -4,
 };
 function P(e) {
     var t, n;
     let { channel: i, children: l, gotoChannel: s, mentionCount: c, channelState: u, toggleCollapsed: d } = e,
-        h = (0, o.JA)('recents-header-'.concat(i.id, '-').concat((0, b.Dt)()));
+        h = (0, o.JA)("recents-header-".concat(i.id, "-").concat((0, b.Dt)()));
     return (0, r.jsx)(a.tEY, {
         offset: I,
         children: (0, r.jsxs)(
-            'div',
+            "div",
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })({ className: x.channelHeader }, h)),
             (n = n =
                 {
                     tabIndex: 0,
-                    'data-recents-channel': i.id,
+                    "data-recents-channel": i.id,
                     onKeyDown: function (e) {
-                        null != d && null != u && (('ArrowRight' === e.key && u.collapsed) || ('ArrowLeft' === e.key && !u.collapsed)) && (null == d || d(u));
+                        null != d &&
+                            null != u &&
+                            (("ArrowRight" === e.key && u.collapsed) || ("ArrowLeft" === e.key && !u.collapsed)) &&
+                            (null == d || d(u));
                     },
                     children: [
                         (0, r.jsx)(N, {
                             channel: i,
-                            gotoChannel: s
+                            gotoChannel: s,
                         }),
                         (0, r.jsx)(T, {
                             channel: i,
                             gotoChannel: s,
-                            mentionCount: c
+                            mentionCount: c,
                         }),
-                        l
-                    ]
+                        l,
+                    ],
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -95,8 +98,8 @@ function P(e) {
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            t)
-        )
+            t),
+        ),
     });
 }
 function N(e) {
@@ -104,11 +107,11 @@ function N(e) {
     return t.isPrivate()
         ? (0, r.jsx)(w, {
               channel: t,
-              gotoChannel: n
+              gotoChannel: n,
           })
         : (0, r.jsx)(Z, {
               channel: t,
-              gotoChannel: n
+              gotoChannel: n,
           });
 }
 function w(e) {
@@ -118,12 +121,12 @@ function w(e) {
     return (0, r.jsx)(a.P3F, {
         onClick: n,
         tabIndex: -1,
-        children: (0, r.jsx)('img', {
+        children: (0, r.jsx)("img", {
             className: x.dmIcon,
             src: l,
-            alt: '',
-            'aria-hidden': !0
-        })
+            alt: "",
+            "aria-hidden": !0,
+        }),
     });
 }
 function Z(e) {
@@ -132,13 +135,13 @@ function Z(e) {
     return null == i
         ? null
         : (0, r.jsx)(O.Z, {
-              'aria-hidden': !0,
+              "aria-hidden": !0,
               className: x.guildIcon,
               guild: i,
               size: O.Z.Sizes.MEDIUM,
               active: !0,
               onClick: n,
-              tabIndex: -1
+              tabIndex: -1,
           });
 }
 function T(e) {
@@ -148,7 +151,12 @@ function T(e) {
         u = (0, s.e7)([j.ZP], () => j.ZP.getIsMentionLowImportance(t.id)),
         d = (0, g.KS)(t, o),
         h = (0, f.ZP)(t, !1),
-        p = null == c ? (null == o ? void 0 : o.name) : ''.concat(null == o ? void 0 : o.name, ' \u203A ').concat(c.name),
+        p =
+            null == c
+                ? null == o
+                    ? void 0
+                    : o.name
+                : "".concat(null == o ? void 0 : o.name, " \u203A ").concat(c.name),
         b = t.isMultiUserDM()
             ? S.intl.formatToPlainString(S.t.CxSA5O, { members: t.recipients.length + 1 })
             : t.isPrivate()
@@ -156,13 +164,13 @@ function T(e) {
               : (0, r.jsx)(a.P3F, {
                     className: l()(x.subtext, x.guildName),
                     onClick: n,
-                    children: p
+                    children: p,
                 });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: x.channelNameSection,
         children: [
             (0, r.jsx)(a.X6q, {
-                variant: 'heading-md/semibold',
+                variant: "heading-md/semibold",
                 className: x.channelNameHeader,
                 children: (0, r.jsxs)(a.P3F, {
                     className: x.channelName,
@@ -174,32 +182,32 @@ function T(e) {
                                   className: t.isForumLikeChannel() ? x.forumIcon : void 0,
                                   width: 18,
                                   height: 18,
-                                  size: 'custom',
-                                  color: 'currentColor'
+                                  size: "custom",
+                                  color: "currentColor",
                               }),
-                        (0, r.jsx)('span', {
+                        (0, r.jsx)("span", {
                             className: x.channelNameSpan,
-                            children: h
+                            children: h,
                         }),
                         null != i && i > 0
-                            ? (0, r.jsx)('div', {
+                            ? (0, r.jsx)("div", {
                                   className: x.badge,
                                   children: (0, r.jsx)(a.mAB, {
                                       count: i,
-                                      color: u ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER
-                                  })
+                                      color: u ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER,
+                                  }),
                               })
-                            : null
-                    ]
-                })
+                            : null,
+                    ],
+                }),
             }),
             (0, r.jsx)(a.Text, {
-                color: 'header-secondary',
-                variant: 'text-xs/normal',
+                color: "header-secondary",
+                variant: "text-xs/normal",
                 className: x.subtextContainer,
-                children: b
-            })
-        ]
+                children: b,
+            }),
+        ],
     });
 }
 function A(e) {
@@ -208,32 +216,32 @@ function A(e) {
             user: n,
             status: i,
             activities: l,
-            applicationStream: o
+            applicationStream: o,
         } = (0, s.cj)([E.default, v.Z, _.Z], () => {
             let e = E.default.getUser(t.getRecipientId());
             return {
                 user: e,
                 status: null != e ? v.Z.getStatus(e.id) : null,
                 activities: null != e ? v.Z.getActivities(e.id) : null,
-                applicationStream: null != e ? _.Z.getAnyStreamForUser(e.id) : null
+                applicationStream: null != e ? _.Z.getAnyStreamForUser(e.id) : null,
             };
         }),
-        { voiceActivityStatusEnabled: a } = (0, c.U)({ location: 'RecentsChannelHeader' }),
+        { voiceActivityStatusEnabled: a } = (0, c.U)({ location: "RecentsChannelHeader" }),
         { voiceChannel: p } = (0, d.Z)({ userId: null == n ? void 0 : n.id }),
         f = a ? p : void 0;
     return (0, u.Z)({
         activities: l,
         status: i,
         applicationStream: o,
-        voiceChannel: f
+        voiceChannel: f,
     })
         ? (0, r.jsx)(h.Z, {
-              location: 'RecentsChannelHeader',
+              location: "RecentsChannelHeader",
               user: n,
               activities: l,
               applicationStream: o,
               voiceChannel: f,
-              hideTooltip: !0
+              hideTooltip: !0,
           })
         : null;
 }

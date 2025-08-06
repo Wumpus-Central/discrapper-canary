@@ -8,7 +8,11 @@ var r = n(255367),
     c = n(789407),
     u = n(616922);
 function d(e) {
-    return null != e.application ? l.ZP.createFromServer(e.application) : null != e.activity && null != e.activity.party_id && (0, u.Ps)(e.activity.party_id) ? c.r9 : void 0;
+    return null != e.application
+        ? l.ZP.createFromServer(e.application)
+        : null != e.activity && null != e.activity.party_id && (0, u.Ps)(e.activity.party_id)
+          ? c.r9
+          : void 0;
 }
 let f = (e) => {
     var t;
@@ -24,6 +28,6 @@ let f = (e) => {
               channel: n,
               message: l,
               hideParty: c,
-              analyticsLocations: u
+              analyticsLocations: u,
           });
 };

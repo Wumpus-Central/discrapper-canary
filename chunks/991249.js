@@ -11,11 +11,11 @@ function l(t, e) {
         {
             label: c.intl.string(c.t.XQQQFB),
             checked: e,
-            id: 'widget-layout-type',
+            id: "widget-layout-type",
             action: () => {
-                ((0, a.zG)(t, { horizontal: !e }), (0, i.Zy)());
-            }
+                (0, a.zG)(t, { horizontal: !e }), (0, i.Zy)();
+            },
         },
-        'widget-layout-type'
+        "widget-layout-type",
     );
 }

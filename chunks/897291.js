@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,13 +69,13 @@ function y(e) {
         { analyticsLocations: m } = (0, l.ZP)(s.Z.GIFT_BUTTON),
         E = (0, d.Ft)(i),
         { Component: y, events: O, play: v } = (0, o.$)(),
-        { enabled: I } = u.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        { enabled: I } = u.G.useExperiment({ location: "gift-button" }, { autoTrackExposure: !1 }),
         T = i.type === _.d4z.DM;
     if (t) return null;
     let S = () => {
         I && T && null != E
             ? (0, a.ZDy)(async () => {
-                  let { default: e } = await n.e('59207').then(n.bind(n, 435626));
+                  let { default: e } = await n.e("59207").then(n.bind(n, 435626));
                   return (t) =>
                       (0, r.jsx)(
                           e,
@@ -85,13 +85,13 @@ function y(e) {
                                       page: _.ZY5.DM_CHANNEL,
                                       section: _.jXE.CHANNEL_TEXT_AREA,
                                       object: _.qAy.BUTTON_ICON,
-                                      objectType: _.Qqv.GIFT
+                                      objectType: _.Qqv.GIFT,
                                   },
                                   analyticsLocations: m,
-                                  giftRecipient: E
+                                  giftRecipient: E,
                               },
-                              t
-                          )
+                              t,
+                          ),
                       );
               })
             : (0, c.Z)({
@@ -103,8 +103,8 @@ function y(e) {
                       page: i.isPrivate() ? _.ZY5.DM_CHANNEL : _.ZY5.GUILD_CHANNEL,
                       section: _.jXE.CHANNEL_TEXT_AREA,
                       object: _.qAy.BUTTON_ICON,
-                      objectType: _.Qqv.GIFT
-                  }
+                      objectType: _.Qqv.GIFT,
+                  },
               });
     };
     return (0, r.jsx)(a.ua7, {
@@ -117,22 +117,22 @@ function y(e) {
                         b(g({}, e), {
                             className: h.button,
                             isActive: !1,
-                            'aria-label': p.intl.string(p.t.Z1RnTk),
-                            'aria-haspopup': 'dialog',
+                            "aria-label": p.intl.string(p.t.Z1RnTk),
+                            "aria-haspopup": "dialog",
                             onClick: () => {
-                                (S(), v());
-                            }
+                                S(), v();
+                            },
                         }),
-                        O
+                        O,
                     ),
                     {
                         children: (0, r.jsx)(y, {
-                            size: 'refresh_sm',
-                            color: 'currentColor'
-                        })
-                    }
-                )
-            )
+                            size: "refresh_sm",
+                            color: "currentColor",
+                        }),
+                    },
+                ),
+            ),
     });
 }
 let O = i.memo(y);

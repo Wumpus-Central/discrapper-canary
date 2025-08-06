@@ -7,14 +7,14 @@ let l = {
         handler(e) {
             let {
                 socket: t,
-                args: { suppress_notifications: n, target_user_id: i }
+                args: { suppress_notifications: n, target_user_id: i },
             } = e;
             r.Z.dispatch({
-                type: 'SET_RPC_NOTIFICATION_SETTINGS',
+                type: "SET_RPC_NOTIFICATION_SETTINGS",
                 socketId: t.id,
                 suppressNotifications: n,
-                targetUserId: i
+                targetUserId: i,
             });
-        }
-    }
+        },
+    },
 };

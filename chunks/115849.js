@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685), n(781311), n(35282));
+n.d(t, { Z: () => T }), n(388685), n(781311), n(35282);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -19,24 +19,24 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -63,97 +63,100 @@ let y = n(349181),
         canSend: !1,
         hint: null,
         success: null,
-        error: null
+        error: null,
     },
     I = (0, p.hQ)(),
-    C = ''.concat(I, '-decription'),
-    S = ''.concat(I, '-error');
+    C = "".concat(I, "-decription"),
+    S = "".concat(I, "-error");
 function N(e, t) {
     switch (t.type) {
-        case 'RESET':
+        case "RESET":
             return v;
-        case 'SUCCESS':
+        case "SUCCESS":
             return E(O({}, v), { success: t.text });
-        case 'HINT':
+        case "HINT":
             return E(O({}, v), {
                 canSend: !0,
-                hint: t.text
+                hint: t.text,
             });
-        case 'ERROR':
+        case "ERROR":
             return E(O({}, e), {
                 canSend: !0,
-                error: t.text
+                error: t.text,
             });
     }
 }
 function T(e) {
-    let { placeholder: t = m.intl.string(m.t['Rn/sLi']) } = e,
+    let { placeholder: t = m.intl.string(m.t["Rn/sLi"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
         [o, p] = i.useReducer(N, v),
         { canSend: O, hint: E, success: T, error: P } = o;
     return (
         i.useEffect(() => {
-            null != T && (s()(null != n.current, 'Input is submitting when not mounted'), (n.current.value = ''), n.current.focus());
+            null != T &&
+                (s()(null != n.current, "Input is submitting when not mounted"),
+                (n.current.value = ""),
+                n.current.focus());
         }, [T, n]),
-        (0, r.jsxs)('form', {
+        (0, r.jsxs)("form", {
             onSubmit: (e) => {
-                (e.preventDefault(), s()(null != n.current, 'Input is submitted when not mounted'));
+                e.preventDefault(), s()(null != n.current, "Input is submitted when not mounted");
                 let t = n.current.value.trim();
-                !t.includes('#') && t.startsWith('@') && (t = t.substring(1));
+                !t.includes("#") && t.startsWith("@") && (t = t.substring(1));
                 let r = (0, h.Zy)(t);
                 if (null != r)
                     return void p({
-                        type: 'ERROR',
-                        text: r
+                        type: "ERROR",
+                        text: r,
                     });
                 d.Z.sendRequest({
                     discordTag: t,
-                    context: { location: 'Add Friend' }
+                    context: { location: "Add Friend" },
                 }).then(
                     () =>
                         p({
-                            type: 'SUCCESS',
-                            text: m.intl.format(m.t.Rtl1Eh, { discordTag: t })
+                            type: "SUCCESS",
+                            text: m.intl.format(m.t.Rtl1Eh, { discordTag: t }),
                         }),
                     (e) => {
                         var n;
                         return p({
-                            type: 'ERROR',
-                            text: (0, h.NF)(null == (n = e.body) ? void 0 : n.code, t)
+                            type: "ERROR",
+                            text: (0, h.NF)(null == (n = e.body) ? void 0 : n.code, t),
                         });
-                    }
+                    },
                 );
             },
-            autoComplete: 'off',
+            autoComplete: "off",
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: b.addFriendWumpusWrapper,
                     children: [
                         (0, r.jsx)(u.R94, {
                             id: C,
                             type: u.R94.Types.DESCRIPTION,
                             children: (0, r.jsx)(u.Text, {
-                                tag: 'div',
-                                variant: 'heading-md/normal',
-                                children: m.intl.string(m.t['Rn/sLi'])
-                            })
+                                tag: "div",
+                                variant: "heading-md/normal",
+                                children: m.intl.string(m.t["Rn/sLi"]),
+                            }),
                         }),
-                        (0, r.jsx)('img', {
+                        (0, r.jsx)("img", {
                             src: y,
-                            alt: 'Wumpus Waving'
-                        })
-                    ]
+                            alt: "Wumpus Waving",
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(u.tEY, {
                     focusTarget: n,
                     ringTarget: l,
                     ringClassName: b.ring,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         ref: l,
                         className: a()(b.addFriendInputWrapper, {
                             [b.success]: T,
-                            [b.error]: P
+                            [b.error]: P,
                         }),
                         children: [
                             (0, r.jsx)(c.Is, {
@@ -163,69 +166,74 @@ function T(e) {
                                 inputClassName: b.input,
                                 onKeyPress: (e) => {
                                     let t = e.currentTarget.value;
-                                    if (e.key !== g.mR.Enter && t.includes('#')) {
-                                        s()(null != n.current, 'Input is handling keypress when not mounted');
-                                        let r = t.indexOf('#'),
+                                    if (e.key !== g.mR.Enter && t.includes("#")) {
+                                        s()(null != n.current, "Input is handling keypress when not mounted");
+                                        let r = t.indexOf("#"),
                                             i = n.current.selectionStart,
-                                            l = e.key === g.mR.Backspace || e.key === g.mR.ArrowRight || e.key === g.mR.ArrowLeft,
+                                            l =
+                                                e.key === g.mR.Backspace ||
+                                                e.key === g.mR.ArrowRight ||
+                                                e.key === g.mR.ArrowLeft,
                                             a = e.which >= 48 && e.which <= 57;
-                                        null != i && i > r && /^(.+?#\d{4})$/.test(t) && !l ? e.preventDefault() : null == i || !(i > r) || a || l || e.preventDefault();
+                                        null != i && i > r && /^(.+?#\d{4})$/.test(t) && !l
+                                            ? e.preventDefault()
+                                            : null == i || !(i > r) || a || l || e.preventDefault();
                                     }
                                 },
                                 onChange: (e) => {
-                                    if (e.length <= 0) return void p({ type: 'RESET' });
-                                    let t = '',
-                                        [, n] = e.split('#');
-                                    (null != n && (t = e + f.LYt.slice(null != n ? n.length + 1 : 0)),
+                                    if (e.length <= 0) return void p({ type: "RESET" });
+                                    let t = "",
+                                        [, n] = e.split("#");
+                                    null != n && (t = e + f.LYt.slice(null != n ? n.length + 1 : 0)),
                                         p({
-                                            type: 'HINT',
-                                            text: t
-                                        }));
+                                            type: "HINT",
+                                            text: t,
+                                        });
                                 },
                                 maxLength: 37,
                                 autoFocus: !0,
-                                autoComplete: 'off',
-                                name: 'add-friend',
-                                'data-form-type': 'other',
-                                'data-lpignore': !0,
-                                'data-1p-ignore': !0,
+                                autoComplete: "off",
+                                name: "add-friend",
+                                "data-form-type": "other",
+                                "data-lpignore": !0,
+                                "data-1p-ignore": !0,
                                 placeholder: t,
-                                'aria-label': t,
-                                'aria-invalid': null != P || void 0,
-                                'aria-describedby': null != P ? S : C
+                                "aria-label": t,
+                                "aria-invalid": null != P || void 0,
+                                "aria-describedby": null != P ? S : C,
                             }),
                             null != E &&
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: b.addFriendHint,
-                                    'aria-hidden': !0,
-                                    children: E
+                                    "aria-hidden": !0,
+                                    children: E,
                                 }),
                             (0, r.jsx)(u.zxk, {
-                                variant: 'primary',
-                                size: 'sm',
-                                text: m.intl.string(m.t['PMsq/f']),
+                                variant: "primary",
+                                size: "sm",
+                                text: m.intl.string(m.t["PMsq/f"]),
                                 disabled: !O,
-                                type: 'submit'
-                            })
-                        ]
-                    })
+                                type: "submit",
+                            }),
+                        ],
+                    }),
                 }),
                 null != P &&
                     (0, r.jsx)(u.R94, {
-                        role: 'alert',
+                        role: "alert",
                         id: S,
                         type: u.R94.Types.ERROR,
                         className: _.marginTop8,
-                        children: P
+                        children: P,
                     }),
                 null != T &&
                     (0, r.jsx)(u.R94, {
-                        role: 'status',
+                        role: "status",
                         type: u.R94.Types.SUCCESS,
                         className: _.marginTop8,
-                        children: T
-                    })
-            ]
+                        children: T,
+                    }),
+            ],
         })
     );
 }

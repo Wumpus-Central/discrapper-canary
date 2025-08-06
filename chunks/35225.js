@@ -13,9 +13,13 @@ function u(e) {
         { enabled: d } = r.Z.getCurrentConfig(
             {
                 guildId: e,
-                location: 'getChannelIdForGuildTransition'
+                location: "getChannelIdForGuildTransition",
             },
-            { autoTrackExposure: !1 }
+            { autoTrackExposure: !1 },
         );
-    return (n !== c.oC.GUILD_ONBOARDING || i.ZP.shouldShowOnboarding(e)) && (n !== c.oC.GUILD_HOME || (0, o.s)(e)) ? (null == a.Z.getChannel(n) ? u : n) : u;
+    return (n !== c.oC.GUILD_ONBOARDING || i.ZP.shouldShowOnboarding(e)) && (n !== c.oC.GUILD_HOME || (0, o.s)(e))
+        ? null == a.Z.getChannel(n)
+            ? u
+            : n
+        : u;
 }

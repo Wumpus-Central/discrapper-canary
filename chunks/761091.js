@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(539854));
+n.d(t, { Z: () => O }), n(539854);
 var r = n(399606),
     i = n(897345);
 n(265153);
@@ -31,5 +31,19 @@ function O(e) {
         P = (0, g.lN)(!(0, p.r1)(e.id)),
         N = e.features.has(b.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         w = (0, f.Z)(e.id);
-    return (x && S.push(m.z.GUILD_HUB_HEADER_OPTIONS), !j && y && v && null != C && C.length > 0 ? S.push(m.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && S.push(m.z.GUILD_PREMIUM_PROGRESS_BAR), !x && y && S.push(m.z.GUILD_HOME), t && S.push(m.z.GUILD_SCHEDULED_EVENTS), !x && I && P && S.push(m.z.CHANNELS_AND_ROLES), O && S.push(m.z.GUILD_ROLE_SUBSCRIPTIONS), _ && S.push(m.z.GUILD_SHOP), ((E && (I || N)) || (n && e.features.has(b.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) && S.push(m.z.GUILD_MOD_DASH_MEMBER_SAFETY), w && S.push(m.z.GUILD_BOOSTS), S);
+    return (
+        x && S.push(m.z.GUILD_HUB_HEADER_OPTIONS),
+        !j && y && v && null != C && C.length > 0
+            ? S.push(m.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR)
+            : e.premiumProgressBarEnabled && S.push(m.z.GUILD_PREMIUM_PROGRESS_BAR),
+        !x && y && S.push(m.z.GUILD_HOME),
+        t && S.push(m.z.GUILD_SCHEDULED_EVENTS),
+        !x && I && P && S.push(m.z.CHANNELS_AND_ROLES),
+        O && S.push(m.z.GUILD_ROLE_SUBSCRIPTIONS),
+        _ && S.push(m.z.GUILD_SHOP),
+        ((E && (I || N)) || (n && e.features.has(b.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) &&
+            S.push(m.z.GUILD_MOD_DASH_MEMBER_SAFETY),
+        w && S.push(m.z.GUILD_BOOSTS),
+        S
+    );
 }

@@ -14,7 +14,7 @@ var i = n(755721),
     p = n(391181),
     h = n(388032),
     f = n(520880);
-let x = 'guild-product-listings-header';
+let x = "guild-product-listings-header";
 function b(e) {
     let { guildId: t, handleCreateOrEditProduct: i } = e,
         m = (0, d.ue)(t, { publishedOnly: !1 }),
@@ -24,7 +24,7 @@ function b(e) {
         },
         v = (e, i) => {
             (0, l.ZDy)(async () => {
-                let { default: l } = await n.e('95925').then(n.bind(n, 673078));
+                let { default: l } = await n.e("95925").then(n.bind(n, 673078));
                 return (n) =>
                     (0, r.jsx)(
                         l,
@@ -32,34 +32,34 @@ function b(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })(
                             {
                                 guildId: t,
                                 productId: e,
-                                productName: i
+                                productName: i,
                             },
-                            n
-                        )
+                            n,
+                        ),
                     );
             });
         },
@@ -72,15 +72,15 @@ function b(e) {
             (0, r.jsx)(l.vwX, {
                 className: f.productListingsHeader,
                 id: x,
-                children: O ? h.intl.string(h.t.RwuStb) : h.intl.string(h.t.WKMcMT)
+                children: O ? h.intl.string(h.t.RwuStb) : h.intl.string(h.t.WKMcMT),
             }),
             O
-                ? (0, r.jsx)('ul', {
+                ? (0, r.jsx)("ul", {
                       className: f.productListings,
-                      'aria-labelledby': x,
+                      "aria-labelledby": x,
                       children: m.map((e) =>
                           (0, r.jsx)(
-                              'li',
+                              "li",
                               {
                                   children: (0, r.jsx)(p.Z, {
                                       guildId: t,
@@ -92,22 +92,22 @@ function b(e) {
                                       onTestDownload: () =>
                                           g.Z.open({
                                               guildId: t,
-                                              productId: e.id
+                                              productId: e.id,
                                           }),
                                       onReportProduct: () => {},
-                                      disabled: b
-                                  })
+                                      disabled: b,
+                                  }),
                               },
-                              e.id
-                          )
-                      )
+                              e.id,
+                          ),
+                      ),
                   })
                 : (0, r.jsx)(a.Z, {
                       guildId: t,
                       showCTA: !1,
-                      responsive: !1
-                  })
-        ]
+                      responsive: !1,
+                  }),
+        ],
     });
 }
 function j(e) {
@@ -125,24 +125,24 @@ function j(e) {
                 disabled: n,
                 children: [
                     (0, r.jsx)(l.qJs, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         width: 20,
                         height: 20,
-                        'aria-hidden': !0
+                        "aria-hidden": !0,
                     }),
                     (0, r.jsx)(l.LZC, {
                         size: 6,
-                        horizontal: !0
+                        horizontal: !0,
                     }),
-                    h.intl.string(h.t.riG6DQ)
-                ]
+                    h.intl.string(h.t.riG6DQ),
+                ],
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(b, {
                 guildId: t,
-                handleCreateOrEditProduct: a
-            })
-        ]
+                handleCreateOrEditProduct: a,
+            }),
+        ],
     });
 }

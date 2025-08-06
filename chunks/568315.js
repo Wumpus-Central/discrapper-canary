@@ -7,9 +7,9 @@ var r = n(106351),
 let o = {
     getTitle: () => s.intl.string(s.t.vJOqMD),
     getDisabledTitle: () => s.intl.string(s.t.B5ZvY2),
-    getDescription: () => s.intl.string(s.t['43UEUl']),
+    getDescription: () => s.intl.string(s.t["43UEUl"]),
     eligibleReportSubtypes: [a.i5.SUB_SPAM],
     eligibleChannelTypes: [r.d.DM, r.d.GROUP_DM],
     onApply: () => i.Xr.updateSetting(l.Xr.NON_FRIENDS),
-    predicate: () => i.Xr.getSetting() === l.Xr.DISABLED
+    predicate: () => i.Xr.getSetting() === l.Xr.DISABLED,
 };

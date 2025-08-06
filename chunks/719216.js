@@ -13,12 +13,12 @@ function l(e) {
             let r = await (0, i.sd)(e, t);
             if (r.button_urls.length <= n) return;
             let s = r.button_urls[n];
-            if ('string' != typeof s) return;
+            if ("string" != typeof s) return;
             let l = a.Z.safeParseWithQuery(s);
             if (null == l || null == l.protocol || null == l.hostname) return;
             (0, o.q)({
                 href: a.Z.format(l),
-                trusted: !1
+                trusted: !1,
             });
         } catch (e) {}
     }
@@ -30,12 +30,12 @@ function l(e) {
                     color: n,
                     look: c,
                     onClick: () => {
-                        (null == u || u(), d(t, l.id, i));
+                        null == u || u(), d(t, l.id, i);
                     },
-                    children: e
+                    children: e,
                 },
-                'customButton-'.concat(i)
-            )
-        )
+                "customButton-".concat(i),
+            ),
+        ),
     });
 }

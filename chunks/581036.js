@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r,
     i = n(512722),
     o = n.n(i),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,7 +23,7 @@ function d(e, t, n) {
 let f = {},
     _ = new Set();
 function p() {
-    ((f = {}), (_ = new Set()));
+    (f = {}), (_ = new Set());
 }
 function h(e) {
     let { channel: t, isNewlyCreated: n } = e;
@@ -65,15 +65,18 @@ class y extends (r = a.ZP.Store) {
         return f[e];
     }
     getThreadIdsMissingCounts(e, t) {
-        return (o()(l.Z.hasLoaded(e), 'must wait for THREAD_LIST_SYNC before calling this'), t.filter((e) => !(e in f) && !_.has(e)));
+        return (
+            o()(l.Z.hasLoaded(e), "must wait for THREAD_LIST_SYNC before calling this"),
+            t.filter((e) => !(e in f) && !_.has(e))
+        );
     }
 }
-d(y, 'displayName', 'ForumPostUnreadCountStore');
+d(y, "displayName", "ForumPostUnreadCountStore");
 let O = new y(s.Z, {
     CONNECTION_OPEN: p,
     THREAD_CREATE: h,
     MESSAGE_CREATE: m,
     FORUM_UNREADS: g,
     MESSAGE_ACK: E,
-    REQUEST_FORUM_UNREADS: b
+    REQUEST_FORUM_UNREADS: b,
 });

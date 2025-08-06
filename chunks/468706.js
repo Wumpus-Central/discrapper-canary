@@ -14,7 +14,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,16 +41,16 @@ function f(e, t) {
         ((0, s.aP)({
             action: s.Yy.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED,
             messageId: t,
-            channelId: e
+            channelId: e,
         }),
         !l.Z.canSubmitFpReport(t))
     ) {
-        (o.Z.show({
-            title: c.intl.string(c.t['iS/eFB']),
+        o.Z.show({
+            title: c.intl.string(c.t["iS/eFB"]),
             body: c.intl.string(c.t.YrjcgY),
-            confirmText: c.intl.string(c.t.BddRzc)
+            confirmText: c.intl.string(c.t.BddRzc),
         }),
-            a.Z.disableFalsePositiveButton(e, t));
+            a.Z.disableFalsePositiveButton(e, t);
         return;
     }
     (0, i.ZDy)(async () => {
@@ -61,10 +61,10 @@ function f(e, t) {
                 d(
                     {
                         channelId: e,
-                        messageId: t
+                        messageId: t,
                     },
-                    n
-                )
+                    n,
+                ),
             );
     });
 }

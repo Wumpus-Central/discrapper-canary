@@ -9,7 +9,7 @@ function l(e) {
     let { hasMentions: t, truncatedCount: n, className: i } = e;
     return (0, r.jsx)(a.Text, {
         className: o()(s.unreadCount, i, { [s.mention]: t }),
-        variant: 'text-xs/normal',
-        children: n
+        variant: "text-xs/normal",
+        children: n,
     });
 }

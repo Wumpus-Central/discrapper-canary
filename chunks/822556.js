@@ -10,15 +10,15 @@ var i = n(481060),
 function u(e) {
     let { analyticsLocations: t } = (0, s.ZP)();
     return (0, r.jsx)(i.sNh, {
-        id: 'voice-settings',
+        id: "voice-settings",
         label: c.intl.string(c.t.NiTd0d),
         action: () => {
-            (o.Z.open(l.oAB.VOICE, null, {
+            o.Z.open(l.oAB.VOICE, null, {
                 analyticsLocations: t,
-                appContext: e
+                appContext: e,
             }),
-                (0, a.i)(e));
+                (0, a.i)(e);
         },
-        icon: i.ewm
+        icon: i.ewm,
     });
 }

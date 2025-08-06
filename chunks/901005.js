@@ -3,17 +3,17 @@ var r = e(818083),
     g = e(981631),
     v = e(647086);
 let n = (0, r.B)({
-    kind: 'guild',
-    id: '2025-07_guild_tag_badge_packs_wave_1',
-    label: 'Guild Tag Badge Packs Wave 1',
+    kind: "guild",
+    id: "2025-07_guild_tag_badge_packs_wave_1",
+    label: "Guild Tag Badge Packs Wave 1",
     defaultConfig: { enabled: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Enable Guild Tag Badge Packs Wave 1',
-            config: { enabled: !0 }
-        }
-    ]
+            label: "Enable Guild Tag Badge Packs Wave 1",
+            config: { enabled: !0 },
+        },
+    ],
 });
 function f(A, t) {
     let e = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -21,11 +21,11 @@ function f(A, t) {
     return n.useExperiment(
         {
             guildId: A,
-            location: t
+            location: t,
         },
         {
             disable: !r,
-            autoTrackExposure: e
-        }
+            autoTrackExposure: e,
+        },
     ).enabled;
 }

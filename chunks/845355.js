@@ -14,7 +14,14 @@ e.exports = function (e, t, n, s) {
             E = h == h,
             b = r(h);
         if (u) var y = s || E;
-        else y = _ ? E && (s || m) : d ? E && m && (s || !g) : f ? E && m && !g && (s || !b) : !g && !b && (s ? h <= t : h < t);
+        else
+            y = _
+                ? E && (s || m)
+                : d
+                  ? E && m && (s || !g)
+                  : f
+                    ? E && m && !g && (s || !b)
+                    : !g && !b && (s ? h <= t : h < t);
         y ? (l = p + 1) : (c = p);
     }
     return a(c, i);

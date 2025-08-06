@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -23,24 +23,24 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -62,27 +62,32 @@ function C(e, t) {
         e
     );
 }
-let N = 'guild-role-subscription-tier-template-selector',
+let N = "guild-role-subscription-tier-template-selector",
     I = (e) => {
         let [t, n] = i.useState(!0),
             [r, l] = i.useState();
         return (
             i.useEffect(() => {
-                (n(!0),
+                n(!0),
                     (0, f.X)(e).then((e) => {
-                        (l(e), n(!1));
-                    }));
+                        l(e), n(!1);
+                    });
             }, [e]),
             {
                 loading: t,
-                priceTiers: r
+                priceTiers: r,
             }
         );
     };
 function E(e) {
     let { guildId: t, priceTiers: l, groupListingId: f } = e,
         I = (0, h._k)(f),
-        { editStateIds: E, addNewEditStateId: S, addNewEditStateFromTemplate: T, removeEditStateId: P } = b.B7(f, t, { includeSoftDeleted: !0 }),
+        {
+            editStateIds: E,
+            addNewEditStateId: S,
+            addNewEditStateFromTemplate: T,
+            removeEditStateId: P,
+        } = b.B7(f, t, { includeSoftDeleted: !0 }),
         [w, R] = i.useState({}),
         Z = i.useMemo(() => {
             let e = E.map((e) => {
@@ -97,15 +102,15 @@ function E(e) {
         A = (0, p.ss)(t),
         k = (0, p.Gp)(),
         L = i.useCallback(() => {
-            (k &&
+            k &&
                 g.jJ.trackExposure({
                     guildId: t,
-                    location: 'b2d9de_1'
+                    location: "b2d9de_1",
                 }),
                 k && A
                     ? (0, d.ZDy)(
                           async () => {
-                              let { default: e } = await n.e('9558').then(n.bind(n, 34460));
+                              let { default: e } = await n.e("9558").then(n.bind(n, 34460));
                               return (n) =>
                                   (0, r.jsx)(
                                       e,
@@ -113,13 +118,13 @@ function E(e) {
                                           guildId: t,
                                           addNewEditStateFromTemplate: T,
                                           addNewEditStateFromScratch: S,
-                                          priceTiers: l
-                                      })
+                                          priceTiers: l,
+                                      }),
                                   );
                           },
-                          { modalKey: N }
+                          { modalKey: N },
                       )
-                    : S());
+                    : S();
         }, [t, T, S, l, k, A]),
         M = b.Lo(Z),
         G = i.useCallback(() => Z.forEach(b.GM), [Z]),
@@ -133,11 +138,11 @@ function E(e) {
                     (0, d.Mr3)(N);
                 }
             ),
-            [B, L]
+            [B, L],
         ),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: O.groupListings,
                     children: [
                         Z.map((e) =>
@@ -151,36 +156,36 @@ function E(e) {
                                     groupListingId: f,
                                     onDeleteEditState: () => P(e),
                                     onBeforeDispatchNewListing: (t) => D(t.id, e),
-                                    onAfterDispatchNewListing: () => P(e)
+                                    onAfterDispatchNewListing: () => P(e),
                                 },
-                                e
-                            )
+                                e,
+                            ),
                         ),
                         (0, r.jsxs)(d.P3F, {
                             onClick: U ? void 0 : L,
                             className: a()(O.createTierButton, { [O.disabled]: U }),
-                            'aria-disabled': U,
+                            "aria-disabled": U,
                             children: [
                                 (0, r.jsx)(d.oFk, {
-                                    size: 'xs',
-                                    color: 'currentColor',
-                                    className: O.createTierIcon
+                                    size: "xs",
+                                    color: "currentColor",
+                                    className: O.createTierIcon,
                                 }),
                                 (0, r.jsx)(d.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'interactive-active',
-                                    children: _.intl.string(_.t.PiFnn5)
-                                })
-                            ]
-                        })
-                    ]
+                                    variant: "text-md/normal",
+                                    color: "interactive-active",
+                                    children: _.intl.string(_.t.PiFnn5),
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(c.W, {
-                    component: 'div',
+                    component: "div",
                     className: O.contentRegion,
-                    children: M && (0, r.jsx)(d.oXn, { children: (0, r.jsx)(u.Z, { onReset: G }) })
-                })
-            ]
+                    children: M && (0, r.jsx)(d.oXn, { children: (0, r.jsx)(u.Z, { onReset: G }) }),
+                }),
+            ],
         })
     );
 }
@@ -191,19 +196,19 @@ function S(e) {
         { maxTiers: l } = (0, p.s1)(t),
         a = i.map((e) => e.id);
     return (0, r.jsxs)(d.hjN, {
-        title: _.intl.string(_.t['72+Soq']),
+        title: _.intl.string(_.t["72+Soq"]),
         className: O.container,
         children: [
             (0, r.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
-                children: _.intl.format(_.t.nHRSvL, { maxTiers: l })
+                children: _.intl.format(_.t.nHRSvL, { maxTiers: l }),
             }),
             (0, r.jsx)(d.LZC, { size: 16 }),
             (0, r.jsx)(E, {
                 priceTiers: n,
                 guildId: t,
-                groupListingId: a[0]
-            })
-        ]
+                groupListingId: a[0],
+            }),
+        ],
     });
 }

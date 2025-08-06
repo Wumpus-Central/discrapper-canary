@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(147913),
     i = n(710845),
     o = n(522474),
@@ -15,36 +15,38 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let _ = new i.Z('OverlayWindowRAFManager'),
+let _ = new i.Z("OverlayWindowRAFManager"),
     p = window.requestAnimationFrame.bind(window),
     h = (e) => {
         try {
             let t = o.Z.getWindow(d.$J);
-            if (null == t || 'function' != typeof t.requestAnimationFrame || !c.default.isAnyOverlayRendering()) return p(e);
+            if (null == t || "function" != typeof t.requestAnimationFrame || !c.default.isAnyOverlayRendering())
+                return p(e);
             let n = null !== u.ZP.getFocusedRunningGame(),
                 r = null != t && t.document.hasFocus();
             if (n || r) return t.requestAnimationFrame(e);
         } catch (e) {
-            (_.error('RAF redirect failed, falling back to original', e), (0, s.D1)(e, u.ZP.getOverlayMethod((0, a.getPID)())));
+            _.error("RAF redirect failed, falling back to original", e),
+                (0, s.D1)(e, u.ZP.getOverlayMethod((0, a.getPID)()));
         }
         return p(e);
     };
 class m extends r.Z {
     handlePatchOverlayWindowRaf() {
-        let { enabled: e } = (0, l.td)('OverlayWindowRAFManager');
+        let { enabled: e } = (0, l.td)("OverlayWindowRAFManager");
         !e || __OVERLAY__ || (window.requestAnimationFrame = h);
     }
     _terminate() {
         window.requestAnimationFrame = p;
     }
     constructor(...e) {
-        (super(...e), f(this, 'actions', { OVERLAY_UPDATE_OVERLAY_STATE: this.handlePatchOverlayWindowRaf }));
+        super(...e), f(this, "actions", { OVERLAY_UPDATE_OVERLAY_STATE: this.handlePatchOverlayWindowRaf });
     }
 }
 let g = new m();

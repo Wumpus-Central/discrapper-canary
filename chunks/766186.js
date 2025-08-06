@@ -1,4 +1,4 @@
-(n.d(t, { s: () => l }), n(35282));
+n.d(t, { s: () => l }), n(35282);
 var r = n(280551),
     i = n(706454),
     o = n(388032);
@@ -13,7 +13,10 @@ function s(e, t) {
     if (null == r.s) return null;
     try {
         let n = e === o.initialLocale,
-            i = null != e && e.split('-')[0] === (null === o.systemLocale || void 0 === o.systemLocale ? void 0 : o.systemLocale.split('-')[0]),
+            i =
+                null != e &&
+                e.split("-")[0] ===
+                    (null === o.systemLocale || void 0 === o.systemLocale ? void 0 : o.systemLocale.split("-")[0]),
             s = (0, r.s)(n && i ? void 0 : e, t);
         if (null == s) return null;
         let l = null;
@@ -21,7 +24,7 @@ function s(e, t) {
             try {
                 return s(n);
             } catch (e) {}
-            return (null == l && (l = a(e, t)), l(n));
+            return null == l && (l = a(e, t)), l(n);
         };
     } catch (e) {
         return null;

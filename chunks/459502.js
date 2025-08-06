@@ -20,7 +20,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,12 +77,14 @@ function O(e) {
     function T(e) {
         v(e)
             ? (0, a.ZDy)(async () => {
-                  let { default: t } = await Promise.all([n.e('22347'), n.e('84722'), n.e('30057')]).then(n.bind(n, 296864));
+                  let { default: t } = await Promise.all([n.e("22347"), n.e("84722"), n.e("30057")]).then(
+                      n.bind(n, 296864),
+                  );
                   return (n) => (0, r.jsx)(t, b(g({}, n), { event: e }));
               })
             : (0, c.bO)({
                   eventId: e.id,
-                  parentGuildId: e.guild_id
+                  parentGuildId: e.guild_id,
               });
     }
     return (0, r.jsx)(r.Fragment, {
@@ -91,20 +93,22 @@ function O(e) {
                 _.Z,
                 {
                     icon: (0, r.jsx)(a.Que, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         height: y,
-                        width: y
+                        width: y,
                     }),
                     color: o.Z.unsafe_rawColors.GREEN_360.css,
-                    title: p.intl.formatToPlainString(v(e) ? p.t['1vGXqK'] : p.t.xMJylZ, { eventName: e.name }),
-                    description: p.intl.formatToPlainString(p.t.PTebCQ, { startTime: (0, f.ub)(e.scheduled_start_time).startDateTimeString }),
+                    title: p.intl.formatToPlainString(v(e) ? p.t["1vGXqK"] : p.t.xMJylZ, { eventName: e.name }),
+                    description: p.intl.formatToPlainString(p.t.PTebCQ, {
+                        startTime: (0, f.ub)(e.scheduled_start_time).startDateTimeString,
+                    }),
                     onClick: () => T(e),
                     userCount: I[e.id],
-                    className: h.eventPrompt
+                    className: h.eventPrompt,
                 },
-                e.id
-            )
-        )
+                e.id,
+            ),
+        ),
     });
 }

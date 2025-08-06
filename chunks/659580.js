@@ -23,23 +23,36 @@ var i = n(990547),
     I = n(388032),
     T = n(292538);
 function S(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: S = !1, renderInputProfiles: A = !1, renderInputModes: N = !1, renderInputVolume: C = !1, renderOutputVolume: R = !1, renderDeafen: P = !1, minimal: w = !1, onSelect: D, appContext: L, onInteraction: x } = e,
+    let {
+            onClose: t,
+            renderOutputDevices: n = !1,
+            renderInputDevices: S = !1,
+            renderInputProfiles: A = !1,
+            renderInputModes: N = !1,
+            renderInputVolume: C = !1,
+            renderOutputVolume: R = !1,
+            renderDeafen: P = !1,
+            minimal: w = !1,
+            onSelect: D,
+            appContext: L,
+            onInteraction: x,
+        } = e,
         { analyticsLocations: M } = (0, u.ZP)();
     (0, d.Z)({
         type: i.ImpressionTypes.MENU,
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: M }
+        properties: { location_stack: M },
     });
     let k = (0, b.Z)(L),
         j = (0, f.M)({
             deviceType: v.h7.AUDIO_INPUT,
             analyticsLocations: M,
-            asSubmenu: w
+            asSubmenu: w,
         }),
         U = (0, f.M)({
             deviceType: v.h7.AUDIO_OUTPUT,
             analyticsLocations: M,
-            asSubmenu: w
+            asSubmenu: w,
         }),
         G = (0, o.e7)([g.Z], () => g.Z.getActiveInputProfile()),
         B = (0, h.Z)(M),
@@ -57,16 +70,16 @@ function S(e) {
             onInteraction: x,
             className: T.menu,
             onClose: t,
-            navId: 'audio-device-context',
-            'aria-label': I.intl.string(I.t.ZR1Ss7),
+            navId: "audio-device-context",
+            "aria-label": I.intl.string(I.t.ZR1Ss7),
             children: [
                 S && j,
                 n && U,
                 A && B,
                 !w && N && G !== O._.STUDIO
                     ? (0, r.jsx)(s.kSQ, {
-                          label: I.intl.string(I.t['pS+K2N']),
-                          children: Z
+                          label: I.intl.string(I.t["pS+K2N"]),
+                          children: Z,
                       })
                     : null,
                 (0, r.jsxs)(s.kSQ, {
@@ -78,31 +91,31 @@ function S(e) {
                             ? (0, r.jsx)(
                                   s.S89,
                                   {
-                                      id: 'deafen',
+                                      id: "deafen",
                                       label: I.intl.string(I.t.wjcRFR),
                                       action: () =>
                                           l.Z.toggleSelfDeaf({
                                               context: H,
-                                              location: 'AudioDeviceMenu'
+                                              location: "AudioDeviceMenu",
                                           }),
-                                      checked: Y
+                                      checked: Y,
                                   },
-                                  'self-deafen'
+                                  "self-deafen",
                               )
                             : null,
                         w && S && E.isPlatformEmbedded
                             ? (0, r.jsx)(s.S89, {
                                   checked: W === y.pM4.PUSH_TO_TALK,
-                                  id: 'input-mode',
+                                  id: "input-mode",
                                   label: I.intl.string(I.t.Q8gkVF),
                                   action: () => l.Z.setMode(K, void 0, void 0, { analyticsLocations: M }),
-                                  disabled: G === O._.STUDIO
+                                  disabled: G === O._.STUDIO,
                               })
                             : null,
-                        k
-                    ]
-                })
-            ]
-        })
+                        k,
+                    ],
+                }),
+            ],
+        }),
     });
 }

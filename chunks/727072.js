@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     I2: () => v,
     RD: () => I,
     mY: () => O,
-    pH: () => T
+    pH: () => T,
 }),
     n(539854),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(94171),
     o = n(362383),
@@ -22,7 +22,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,7 +80,7 @@ let b = (e) => {
             [u.fX.DEFAULT_KEYWORD_LIST]: [],
             [u.fX.MENTION_SPAM]: [],
             [u.fX.USER_PROFILE]: [],
-            [u.fX.SERVER_POLICY]: []
+            [u.fX.SERVER_POLICY]: [],
         };
         return (
             e.forEach((e) => {
@@ -107,7 +107,7 @@ let b = (e) => {
             (0, a.j)(() => {
                 e({
                     rules: h(_({}, u), { [o]: h(_({}, d), { [l]: g }) }),
-                    error: null
+                    error: null,
                 });
             });
         },
@@ -118,12 +118,12 @@ let b = (e) => {
                     var r;
                     let i = Number(t),
                         a = null != (r = o[i]) ? r : [];
-                    return ((e[i] = a.filter((e) => e.id !== n)), e);
+                    return (e[i] = a.filter((e) => e.id !== n)), e;
                 }, {});
             (0, a.j)(() => {
                 e({
                     rules: h(_({}, i), { [r]: s }),
-                    error: null
+                    error: null,
                 });
             });
         },
@@ -137,7 +137,7 @@ let b = (e) => {
                     (0, a.j)(() => {
                         e({
                             rules: h(_({}, o), { [n]: i }),
-                            error: null
+                            error: null,
                         });
                     });
                 } catch (n) {
@@ -147,7 +147,7 @@ let b = (e) => {
                     });
                 }
             }
-        }
+        },
     })),
     O = (e, t) => {
         var n, r;
@@ -161,11 +161,11 @@ function v(e) {
         r.useCallback(async () => {
             if (!a && null != e)
                 try {
-                    (n(!0), await o(e));
+                    n(!0), await o(e);
                 } finally {
                     n(!1);
                 }
-        }, [e, a, o])
+        }, [e, a, o]),
     ];
 }
 function I(e) {
@@ -185,7 +185,7 @@ function T(e) {
         return {
             rulesByTriggerType: null != (n = t.rules[null != e ? e : d.lds]) ? n : {},
             updateRule: t.updateRule,
-            removeRule: t.removeRule
+            removeRule: t.removeRule,
         };
     }, i.X);
 }

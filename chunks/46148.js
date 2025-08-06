@@ -1,4 +1,4 @@
-(n.d(t, { W: () => I }), n(388685));
+n.d(t, { W: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -23,39 +23,39 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
 let E = (e, t) => {
         let n = null != t && !t.isPreview;
-        return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
+        return e ? (e && !n ? "no-wallpaper-nitro" : "has-wallpaper-nitro") : "non-nitro";
     },
-    S = (e) => ('has-wallpaper-nitro' === e ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0)),
+    S = (e) => ("has-wallpaper-nitro" === e ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0)),
     x = (e) => {
         switch (e) {
-            case 'non-nitro':
+            case "non-nitro":
                 return y.intl.string(y.t.VU8fxM);
-            case 'no-wallpaper-nitro':
+            case "no-wallpaper-nitro":
                 return y.intl.string(y.t.BQBNjY);
-            case 'has-wallpaper-nitro':
+            case "has-wallpaper-nitro":
                 return y.intl.string(y.t.eZMxlZ);
         }
     },
@@ -65,8 +65,8 @@ let E = (e, t) => {
             I = (0, c.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
             P = (0, l.e7)([h.Z], () => h.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
             { canAccessPicker: N, entryPoint: w } = (0, f.m)({
-                location: 'ChatWallpaperDMListCoachmark',
-                channelId: t
+                location: "ChatWallpaperDMListCoachmark",
+                channelId: t,
             }),
             Z = w === p.FN.CONTEXT_MENU,
             [T, A] = (0, u.US)(I && Z && n && N && !P ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
@@ -87,7 +87,7 @@ let E = (e, t) => {
                     let i = null != (n = null == (t = U.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
                     window.innerHeight - r.bottom < i ? B(m.U.BOTTOM) : B(m.U.TOP);
                 };
-                return (e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
+                return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
             }, [L]),
             !L)
         )
@@ -98,27 +98,27 @@ let E = (e, t) => {
             F = E(R, null != D ? D : null),
             H = S(F),
             z = x(F);
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             ref: M,
             children: (0, r.jsx)(s.yRy, {
                 targetElementRef: k,
                 align: G,
-                position: 'right',
+                position: "right",
                 shouldShow: L,
                 onRequestClose: V,
                 renderPopout: () =>
                     (0, r.jsx)(m.Z, {
                         ref: U,
                         onClose: V,
-                        buttonText: y.intl.string(y.t['+IrDzM']),
+                        buttonText: y.intl.string(y.t["+IrDzM"]),
                         header: H,
-                        art: (0, r.jsx)('img', {
+                        art: (0, r.jsx)("img", {
                             src: v.Z,
-                            alt: '',
-                            className: C.chatWallpaperDMListCoachmarkArt
+                            alt: "",
+                            className: C.chatWallpaperDMListCoachmarkArt,
                         }),
                         body: z,
-                        align: G
+                        align: G,
                     }),
                 children: (t) => {
                     var n, i;
@@ -138,9 +138,9 @@ let E = (e, t) => {
                               })(Object(i)).forEach(function (e) {
                                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                               }),
-                        n)
+                        n),
                     );
-                }
-            })
+                },
+            }),
         });
     });

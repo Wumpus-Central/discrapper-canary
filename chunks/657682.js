@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     NF: () => d,
-    Zy: () => u
+    Zy: () => u,
 }),
     n(35282),
     n(388685),
-    n(512722));
+    n(512722);
 var r = n(626135),
     i = n(777754),
     o = n(981631),
@@ -13,7 +13,7 @@ let s = /^\d+$/,
     l = /^(.+?@.+?\..+?|.+?#\d{4})$/,
     c = /^[a-zA-Z0-9_\\.]+$/;
 function u(e) {
-    return c.test(e) || (e.includes('#') && l.test(e)) ? null : (f(e), a.intl.string(a.t.paDJBA));
+    return c.test(e) || (e.includes("#") && l.test(e)) ? null : (f(e), a.intl.string(a.t.paDJBA));
 }
 function d(e, t) {
     switch (e) {
@@ -39,14 +39,14 @@ function d(e, t) {
     }
 }
 function f(e) {
-    let [t, n] = e.split('#');
+    let [t, n] = e.split("#");
     r.default.track(o.rMx.FRIEND_REQUEST_FAILED, {
-        reason: 'Invalid Username',
+        reason: "Invalid Username",
         query: e,
-        discrim_len: (null != n ? n : '').length,
+        discrim_len: (null != n ? n : "").length,
         username_len: t.length,
         is_email_like: i.Z.isEmail(e),
         is_invite_like: i.Z.isInvite(e),
-        is_num_only: s.test(e)
+        is_num_only: s.test(e),
     });
 }

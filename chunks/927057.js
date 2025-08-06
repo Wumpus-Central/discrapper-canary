@@ -24,17 +24,17 @@ function p(e) {
             let i = n.type === f.d4z.GUILD_CATEGORY ? o.ROc : (0, a.KS)(n);
             return null != i
                 ? (0, r.jsx)(i, {
-                      size: 'custom',
-                      color: 'currentColor',
+                      size: "custom",
+                      color: "currentColor",
                       width: t,
-                      height: t
+                      height: t,
                   })
                 : null;
         },
         y = (e) =>
-            (0, r.jsx)('span', {
+            (0, r.jsx)("span", {
                 className: _.label,
-                children: e.label
+                children: e.label,
             }),
         O = i.useMemo(() => (0, u.tx)(e.defaultValues, null == g ? void 0 : g.id, n), [e.defaultValues, g, n]);
     return (0, r.jsx)(d.ZP, {
@@ -42,6 +42,6 @@ function p(e) {
         queryOptions: E,
         renderIcon: b,
         renderOptionLabel: y,
-        defaultValues: O
+        defaultValues: O,
     });
 }

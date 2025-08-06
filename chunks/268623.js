@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => m,
-    x: () => g
+    x: () => g,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -17,34 +17,34 @@ var r = n(255367),
     p = n(70956),
     h = n(388032);
 function m(e) {
-    let { enabled: t } = l.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
+    let { enabled: t } = l.Z.useExperiment({ location: "LongPressMessageActionSheet" }),
         n = (0, o.e7)([d.Z], () => d.Z.getSavedMessage(e.channel_id, e.id)),
         i = g({
             message: e,
-            savedMessage: n
+            savedMessage: n,
         });
     return t
         ? null != n || (0, f.Z)()
             ? (0, r.jsxs)(a.sNh, {
-                  id: 'save-for-later',
+                  id: "save-for-later",
                   label: h.intl.string(h.t.tpxJtr),
                   action: () =>
                       null == n
                           ? (0, c.z)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
-                                displayToast: !0
+                                displayToast: !0,
                             })
                           : (0, c.x)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
                                 dueAt: n.saveData.dueAt,
-                                displayToast: !0
+                                displayToast: !0,
                             }),
                   children: [
                       null != n
                           ? (0, r.jsx)(a.sNh, {
-                                id: 'remove-from-for-later',
+                                id: "remove-from-for-later",
                                 label: h.intl.string(h.t.SvXS1d),
                                 icon: a.plf,
                                 action: () =>
@@ -52,26 +52,26 @@ function m(e) {
                                         channelId: e.channel_id,
                                         messageId: e.id,
                                         dueAt: n.saveData.dueAt,
-                                        displayToast: !0
-                                    })
+                                        displayToast: !0,
+                                    }),
                             })
                           : (0, r.jsx)(a.sNh, {
-                                id: 'create-bookmark',
-                                label: h.intl.string(h.t['9p3D9v']),
+                                id: "create-bookmark",
+                                label: h.intl.string(h.t["9p3D9v"]),
                                 icon: a.gt9,
                                 action: () =>
                                     (0, c.z)({
                                         channelId: e.channel_id,
                                         messageId: e.id,
-                                        displayToast: !0
-                                    })
+                                        displayToast: !0,
+                                    }),
                             }),
                       (0, r.jsx)(a.Clw, {}),
-                      i
-                  ]
+                      i,
+                  ],
               })
             : (0, r.jsx)(a.sNh, {
-                  id: 'save-for-later-upsell',
+                  id: "save-for-later-upsell",
                   label: h.intl.string(h.t.tpxJtr),
                   icon: a.SrA,
                   iconProps: { color: s.JX.PREMIUM_TIER_2 },
@@ -79,8 +79,8 @@ function m(e) {
                       (0, c.z)({
                           channelId: e.channel_id,
                           messageId: e.id,
-                          displayToast: !0
-                      })
+                          displayToast: !0,
+                      }),
               })
         : null;
 }
@@ -99,40 +99,40 @@ function g(e) {
                     channelId: t.channel_id,
                     messageId: t.id,
                     dueAt: e,
-                    displayToast: !0
+                    displayToast: !0,
                 }),
-            [t.channel_id, t.id]
+            [t.channel_id, t.id],
         ),
         d = (0, _.r)({ createReminder: l }),
         { dueInText: f } = (0, u.AT)({
             dueAt: null == n ? void 0 : n.saveData.dueAt,
             now: o,
-            type: u.hQ.LONG
+            type: u.hQ.LONG,
         });
     return (null == n ? void 0 : n.saveData.dueAt) == null
         ? (0, r.jsx)(a.kSQ, {
               label: h.intl.string(h.t.roMu1N),
-              children: d
+              children: d,
           })
         : (0, r.jsxs)(a.kSQ, {
               label: f,
               children: [
                   (0, r.jsx)(a.sNh, {
-                      id: 'mark-complete',
+                      id: "mark-complete",
                       label: h.intl.string(h.t.yjGtdH),
                       icon: a.kmB,
                       action: () =>
                           (0, c.z)({
                               channelId: t.channel_id,
                               messageId: t.id,
-                              dueAt: void 0
-                          })
+                              dueAt: void 0,
+                          }),
                   }),
                   (0, r.jsx)(a.sNh, {
-                      id: 'edit-reminder',
+                      id: "edit-reminder",
                       label: h.intl.string(h.t.vrbqs7),
-                      children: d
-                  })
-              ]
+                      children: d,
+                  }),
+              ],
           });
 }

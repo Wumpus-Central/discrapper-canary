@@ -12,33 +12,45 @@ var r = n(255367),
     _ = n(388032),
     p = n(73433);
 function h(e) {
-    let { userBio: t, className: n, animateOnHover: o = !1, isHovering: h = !1, lineClamp: m = 6, setLineClamp: g = !0, textColor: E, userId: b } = e,
+    let {
+            userBio: t,
+            className: n,
+            animateOnHover: o = !1,
+            isHovering: h = !1,
+            lineClamp: m = 6,
+            setLineClamp: g = !0,
+            textColor: E,
+            userId: b,
+        } = e,
         y = (0, d.Dt)(),
-        O = i.useMemo(() => ((0, c.Z)(b) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, f.parseBioReact)(t)), [b, t]);
+        O = i.useMemo(
+            () => ((0, c.Z)(b) ? (0, r.jsx)(l.Z, {}) : null == t || "" === t ? null : (0, f.parseBioReact)(t)),
+            [b, t],
+        );
     return null == O
         ? null
-        : (0, r.jsxs)('section', {
+        : (0, r.jsxs)("section", {
               className: a()(n, p.markup),
-              'aria-labelledby': y,
+              "aria-labelledby": y,
               children: [
                   (0, r.jsx)(s.nn4, {
                       children: (0, r.jsx)(s.H, {
                           id: y,
-                          children: _.intl.string(_.t.jGoPJS)
-                      })
+                          children: _.intl.string(_.t.jGoPJS),
+                      }),
                   }),
                   (0, r.jsx)(s.Text, {
-                      variant: 'text-sm/normal',
+                      variant: "text-sm/normal",
                       lineClamp: g ? m : void 0,
                       color: void 0 !== E ? E : void 0,
                       children: (0, r.jsx)(u.G.Provider, {
                           value: {
                               disableAnimations: o && !h,
-                              disableInteractions: !1
+                              disableInteractions: !1,
                           },
-                          children: O
-                      })
-                  })
-              ]
+                          children: O,
+                      }),
+                  }),
+              ],
           });
 }

@@ -9,18 +9,18 @@ function s(e) {
         { selectedPlanNotification: n } = (0, o.JL)();
     return null == n
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: a.notification,
               ref: t,
               children: [
                   (0, r.jsx)(i.owK, {
                       className: a.icon,
-                      color: 'currentColor'
+                      color: "currentColor",
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: a.text,
-                      children: n
-                  })
-              ]
+                      children: n,
+                  }),
+              ],
           });
 }

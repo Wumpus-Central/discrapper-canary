@@ -15,33 +15,33 @@ let d = function (e) {
         x = (0, n.wj)(p) ? u : m;
     return null == s
         ? null
-        : (0, t.jsxs)('div', {
+        : (0, t.jsxs)("div", {
               className: c.churnFooterContainer,
               children: [
-                  (0, t.jsx)('div', { className: c.churnFooterGlow }),
-                  (0, t.jsx)('div', { className: c.churnFooterTopBorder }),
-                  (0, t.jsx)('div', {
+                  (0, t.jsx)("div", { className: c.churnFooterGlow }),
+                  (0, t.jsx)("div", { className: c.churnFooterTopBorder }),
+                  (0, t.jsx)("div", {
                       className: c.churnFooterContent,
-                      children: (0, t.jsxs)('div', {
+                      children: (0, t.jsxs)("div", {
                           className: c.churnFooterContentBody,
                           children: [
-                              (0, t.jsx)('img', {
-                                  alt: '',
+                              (0, t.jsx)("img", {
+                                  alt: "",
                                   src: x,
-                                  className: c.churnFooterIcon
+                                  className: c.churnFooterIcon,
                               }),
-                              (0, t.jsxs)('div', {
+                              (0, t.jsxs)("div", {
                                   className: c.churnFooterContentBodyInner,
                                   children: [
                                       (0, t.jsx)(i.Text, {
-                                          variant: 'text-md/medium',
+                                          variant: "text-md/medium",
                                           className: c.churnFooterCopy,
-                                          children: l.intl.format(l.t['2gem09'], {
+                                          children: l.intl.format(l.t["2gem09"], {
                                               percent: s.discount.amount,
-                                              numMonths: s.discount.user_usage_limit
-                                          })
+                                              numMonths: s.discount.user_usage_limit,
+                                          }),
                                       }),
-                                      (0, t.jsxs)('div', {
+                                      (0, t.jsxs)("div", {
                                           className: c.churnFooterCTAs,
                                           children: [
                                               (0, t.jsxs)(i.gtL, {
@@ -52,29 +52,29 @@ let d = function (e) {
                                                   onClick: () => (null == r ? void 0 : r()),
                                                   children: [
                                                       (0, t.jsx)(i.SrA, {
-                                                          size: 'xs',
-                                                          color: 'currentColor',
-                                                          className: c.churnFooterClaimIcon
+                                                          size: "xs",
+                                                          color: "currentColor",
+                                                          className: c.churnFooterClaimIcon,
                                                       }),
                                                       (0, t.jsx)(i.Text, {
-                                                          variant: 'text-sm/semibold',
+                                                          variant: "text-sm/semibold",
                                                           className: c.churnFooterClaimCopy,
-                                                          children: l.intl.string(l.t.zrCzVF)
-                                                      })
-                                                  ]
+                                                          children: l.intl.string(l.t.zrCzVF),
+                                                      }),
+                                                  ],
                                               }),
                                               (0, t.jsx)(i.zxk, {
-                                                  variant: 'primary',
-                                                  text: l.intl.string(l.t['3PatS0']),
-                                                  onClick: () => (null == d ? void 0 : d())
-                                              })
-                                          ]
-                                      })
-                                  ]
-                              })
-                          ]
-                      })
-                  })
-              ]
+                                                  variant: "primary",
+                                                  text: l.intl.string(l.t["3PatS0"]),
+                                                  onClick: () => (null == d ? void 0 : d()),
+                                              }),
+                                          ],
+                                      }),
+                                  ],
+                              }),
+                          ],
+                      }),
+                  }),
+              ],
           });
 };

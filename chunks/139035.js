@@ -26,24 +26,24 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -59,28 +59,28 @@ function E(e) {
         w = (0, _.Z)(t),
         E = (0, a.Z)({
             id: t.id,
-            label: m.intl.string(m.t['2visCw'])
+            label: m.intl.string(m.t["2visCw"]),
         }),
-        C = (0, b.Mn)('ChannelCategoryFavoritesMenu'),
+        C = (0, b.Mn)("ChannelCategoryFavoritesMenu"),
         S = (0, P.ZP)(t);
     return (0, r.jsxs)(i.v2r, {
-        navId: 'channel-context',
+        navId: "channel-context",
         onClose: l.Zy,
-        'aria-label': m.intl.string(m.t.Xm41aW),
+        "aria-label": m.intl.string(m.t.Xm41aW),
         onSelect: n,
         children: [
             (0, r.jsxs)(i.kSQ, {
-                children: [o, v, y]
+                children: [o, v, y],
             }),
             (0, r.jsxs)(i.kSQ, {
-                children: [c, C ? S : s]
+                children: [c, C ? S : s],
             }),
             (0, r.jsxs)(i.kSQ, {
-                children: [p, g]
+                children: [p, g],
             }),
             (0, r.jsx)(i.kSQ, { children: w }),
-            (0, r.jsx)(i.kSQ, { children: E })
-        ]
+            (0, r.jsx)(i.kSQ, { children: E }),
+        ],
     });
 }
 function C(e) {
@@ -96,46 +96,46 @@ function C(e) {
         N = (0, g.Z)(t),
         x = (0, a.Z)({
             id: t.id,
-            label: m.intl.string(m.t['2visCw'])
+            label: m.intl.string(m.t["2visCw"]),
         }),
         k = (0, v.Z)(t),
-        A = (0, b.Mn)('ChannelCategoryNormalMenu'),
+        A = (0, b.Mn)("ChannelCategoryNormalMenu"),
         D = (0, P.ZP)(t);
     return (0, r.jsxs)(i.v2r, {
-        navId: 'channel-context',
+        navId: "channel-context",
         onClose: l.Zy,
-        'aria-label': m.intl.string(m.t.Xm41aW),
+        "aria-label": m.intl.string(m.t.Xm41aW),
         onSelect: o,
         children: [
-            (0, r.jsx)(i.kSQ, { children: c }, 'mark-as-read'),
+            (0, r.jsx)(i.kSQ, { children: c }, "mark-as-read"),
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [k, _, w]
+                    children: [k, _, w],
                 },
-                'channel-actions'
+                "channel-actions",
             ),
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [s, A ? D : u]
+                    children: [s, A ? D : u],
                 },
-                'notifications'
+                "notifications",
             ),
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [E, C, S, N]
+                    children: [E, C, S, N],
                 },
-                'admin-actions'
+                "admin-actions",
             ),
-            (0, r.jsx)(i.kSQ, { children: x }, 'developer-actions')
-        ]
+            (0, r.jsx)(i.kSQ, { children: x }, "developer-actions"),
+        ],
     });
 }
 let S = (0, o.Z)(
     function (e) {
         return (0, s.Z)() ? (0, r.jsx)(E, w({}, e)) : (0, r.jsx)(C, w({}, e));
     },
-    [c.Z.CONTEXT_MENU, c.Z.CHANNEL_CATEGORY_MENU]
+    [c.Z.CONTEXT_MENU, c.Z.CHANNEL_CATEGORY_MENU],
 );

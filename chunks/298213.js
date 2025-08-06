@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,39 +63,39 @@ function p(e) {
     return null != n
         ? o.Z.acceptGameFriendRequest({
               userId: t,
-              applicationId: n
+              applicationId: n,
           })
         : i.Z.acceptFriendRequest({
               userId: t,
               confirmStrangerRequest: a,
-              context: { location: r }
+              context: { location: r },
           });
 }
 function h(e) {
     let { userId: t, applicationId: n, location: r, onConfirm: i, onCancel: o } = e,
-        c = (0, a.pB)('useFriendRequestActions'),
+        c = (0, a.pB)("useFriendRequestActions"),
         u = s.Z.isStranger(t);
     return null == n && c && !1 !== u
         ? u && c
             ? void (0, l.c)({
                   onConfirm: () => {
-                      (p({
+                      p({
                           userId: t,
                           applicationId: n,
                           location: r,
-                          confirmStrangerRequest: !0
+                          confirmStrangerRequest: !0,
                       }),
-                          null == i || i());
+                          null == i || i();
                   },
                   onCancel: () => {
                       null == o || o();
-                  }
+                  },
               })
             : c
               ? void p({
                     userId: t,
                     applicationId: n,
-                    location: r
+                    location: r,
                 })
                     .then((e) => {
                         m(e, {
@@ -103,7 +103,7 @@ function h(e) {
                             applicationId: n,
                             location: r,
                             onConfirm: i,
-                            onCancel: o
+                            onCancel: o,
                         }) ||
                             null == i ||
                             i();
@@ -114,7 +114,7 @@ function h(e) {
                             applicationId: n,
                             location: r,
                             onConfirm: i,
-                            onCancel: o
+                            onCancel: o,
                         });
                     })
               : void 0
@@ -122,7 +122,7 @@ function h(e) {
               userId: t,
               applicationId: n,
               location: r,
-              confirmStrangerRequest: !0
+              confirmStrangerRequest: !0,
           }).then(() => {
               null == i || i();
           });
@@ -131,26 +131,26 @@ function m(e, t) {
     var n;
     return (null == (n = e.body) ? void 0 : n.code) === c.evJ.RELATIONSHIP_INVALID_NO_CONFIRMATION
         ? (r.Z.dispatch({
-              type: 'UPDATE_STRANGER_STATUS',
+              type: "UPDATE_STRANGER_STATUS",
               userId: t.userId,
-              isStranger: !0
+              isStranger: !0,
           }),
           (0, l.c)({
               onConfirm: () => {
                   var e;
-                  (p(_(d({}, t), { confirmStrangerRequest: !0 })), null == (e = t.onConfirm) || e.call(t));
+                  p(_(d({}, t), { confirmStrangerRequest: !0 })), null == (e = t.onConfirm) || e.call(t);
               },
               onCancel: () => {
                   var e;
                   null == (e = t.onCancel) || e.call(t);
-              }
+              },
           }),
           !0)
         : (e.ok &&
               r.Z.dispatch({
-                  type: 'UPDATE_STRANGER_STATUS',
+                  type: "UPDATE_STRANGER_STATUS",
                   userId: t.userId,
-                  isStranger: !1
+                  isStranger: !1,
               }),
           !1);
 }
@@ -160,7 +160,7 @@ let g = {
         null != n
             ? o.Z.removeGameFriend({
                   userId: t,
-                  applicationId: n
+                  applicationId: n,
               })
             : i.Z.removeFriend(t, { location: r });
     },
@@ -169,10 +169,10 @@ let g = {
         return null != n
             ? o.Z.cancelGameFriendRequest({
                   userId: t,
-                  applicationId: n
+                  applicationId: n,
               })
             : i.Z.cancelFriendRequest(t, { location: r });
     },
     acceptFriendRequest: p,
-    maybeConfirmFriendRequestAccept: h
+    maybeConfirmFriendRequestAccept: h,
 };

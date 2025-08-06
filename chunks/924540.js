@@ -1,7 +1,7 @@
 n.d(t, {
     $H: () => O,
     GN: () => h,
-    _y: () => m
+    _y: () => m,
 });
 var r = n(255367),
     i = n(73800),
@@ -24,53 +24,55 @@ function b(e) {
               text: (0, c.QX)(b, {
                   days: f.t.qVGNkZ,
                   hours: f.t.wyg9a2,
-                  minutes: f.t.IzmIlZ
+                  minutes: f.t.IzmIlZ,
               }),
               children: (e) => {
                   var n, i;
                   return (0, r.jsxs)(
-                      'div',
+                      "div",
                       ((n = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
                                   r = Object.keys(n);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (r = r.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   r.forEach(function (t) {
                                       var r;
-                                      ((r = n[t]),
+                                      (r = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: r,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = r));
-                                  }));
+                                              : (e[t] = r);
+                                  });
                           }
                           return e;
                       })({}, e)),
                       (i = i =
                           {
-                              className: s()(p.premiumTrialBadge, p.premiumTrialAcknowledgedBadge, u, { [p.premiumTrialBadgeSelected]: t }),
+                              className: s()(p.premiumTrialBadge, p.premiumTrialAcknowledgedBadge, u, {
+                                  [p.premiumTrialBadgeSelected]: t,
+                              }),
                               children: [
                                   (0, r.jsx)(o.T39, {
-                                      size: 'custom',
+                                      size: "custom",
                                       width: 20,
                                       height: 20,
-                                      color: 'currentColor',
-                                      className: p.premiumTrialBadgeIcon
+                                      color: "currentColor",
+                                      className: p.premiumTrialBadgeIcon,
                                   }),
                                   (0, r.jsxs)(o.Text, {
-                                      variant: 'eyebrow',
-                                      children: [' ', l, ' ']
-                                  })
-                              ]
+                                      variant: "eyebrow",
+                                      children: [" ", l, " "],
+                                  }),
+                              ],
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -84,9 +86,9 @@ function b(e) {
                             })(Object(i)).forEach(function (e) {
                                 Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                             }),
-                      n)
+                      n),
                   );
-              }
+              },
           });
 }
 function O(e) {
@@ -95,12 +97,12 @@ function O(e) {
         l = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
         s = (0, u.a5)({
             intervalType: null == l ? void 0 : l.interval,
-            intervalCount: null == l ? void 0 : l.interval_count
+            intervalCount: null == l ? void 0 : l.interval_count,
         });
     return (0, r.jsx)(m, {
         isTabSelected: n,
         badgeCopy: s,
-        offerExpiresAt: i.expires_at
+        offerExpiresAt: i.expires_at,
     });
 }
 function h(e) {
@@ -108,8 +110,8 @@ function h(e) {
         l = f.intl.formatToPlainString(f.t.iiLbvr, { percent: n.discount.amount });
     return (0, r.jsx)(m, {
         isTabSelected: t,
-        badgeCopy: i ? l : f.intl.string(f.t['/DTtr6']),
-        offerExpiresAt: n.expires_at
+        badgeCopy: i ? l : f.intl.string(f.t["/DTtr6"]),
+        offerExpiresAt: n.expires_at,
     });
 }
 function m(e) {
@@ -118,14 +120,14 @@ function m(e) {
         ? (0, r.jsx)(b, {
               expiresAt: i,
               isTabSelected: t,
-              trialDuration: n
+              trialDuration: n,
           })
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: s()(p.premiumTrialBadge, p.premiumOfferUnackedBadge),
               children: (0, r.jsx)(o.Text, {
-                  variant: 'eyebrow',
+                  variant: "eyebrow",
                   className: p.premiumOfferBadgeCopy,
-                  children: n
-              })
+                  children: n,
+              }),
           });
 }

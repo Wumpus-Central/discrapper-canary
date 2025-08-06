@@ -9,9 +9,9 @@ function a(e) {
         className: o.closeButton,
         onClick: t,
         children: (0, r.jsx)(i.k$p, {
-            size: 'md',
-            color: 'currentColor',
-            className: o.closeIcon
-        })
+            size: "md",
+            color: "currentColor",
+            className: o.closeIcon,
+        }),
     });
 }

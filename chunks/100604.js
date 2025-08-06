@@ -17,7 +17,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,13 +31,13 @@ function h(e, t) {
             id: e.id,
             size: p,
             icon: e.icon,
-            canAnimate: !1
+            canAnimate: !1,
         }),
         timestampLabel: t,
-        accessibilityLabel: f.intl.formatToPlainString(f.t['+l04BA'], {
+        accessibilityLabel: f.intl.formatToPlainString(f.t["+l04BA"], {
             origin: e.name,
-            timestamp: t
-        })
+            timestamp: t,
+        }),
     };
 }
 class m {
@@ -60,7 +60,7 @@ class m {
                     ? { snapshotIndex: y }
                     : {
                           snapshotIndex: y,
-                          footerInfo: h(e, I)
+                          footerInfo: h(e, I),
                       };
             }
             if (!g.can(e.accessPermissions, e)) return { snapshotIndex: y };
@@ -70,11 +70,11 @@ class m {
                 footerInfo: {
                     originLabel: t,
                     timestampLabel: I,
-                    accessibilityLabel: f.intl.formatToPlainString(f.t['+l04BA'], {
+                    accessibilityLabel: f.intl.formatToPlainString(f.t["+l04BA"], {
                         origin: t,
-                        timestamp: I
-                    })
-                }
+                        timestamp: I,
+                    }),
+                },
             };
         }
         let S = null == (t = O.messageReference) ? void 0 : t.guild_id;
@@ -84,10 +84,15 @@ class m {
             ? { snapshotIndex: y }
             : {
                   snapshotIndex: y,
-                  footerInfo: h(A, I)
+                  footerInfo: h(A, I),
               };
     }
     constructor(e, t, n) {
-        (_(this, 'parentMessage', void 0), _(this, 'messageSnapshot', void 0), _(this, 'snapshotIndex', void 0), (this.parentMessage = e), (this.messageSnapshot = t), (this.snapshotIndex = n));
+        _(this, "parentMessage", void 0),
+            _(this, "messageSnapshot", void 0),
+            _(this, "snapshotIndex", void 0),
+            (this.parentMessage = e),
+            (this.messageSnapshot = t),
+            (this.snapshotIndex = n);
     }
 }

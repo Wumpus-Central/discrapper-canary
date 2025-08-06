@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,13 +34,13 @@ function h(e) {
             optionNameToNonce: new Map(),
             optionNameToLastQuery: new Map(),
             lastErrored: !1,
-            lastResponseNonce: void 0
+            lastResponseNonce: void 0,
         });
     }
     return _.get(e);
 }
 function m() {
-    return (f.clear(), _.clear(), !0);
+    return f.clear(), _.clear(), !0;
 }
 function g(e) {
     var t;
@@ -49,20 +49,20 @@ function g(e) {
     if (a.optionNameToLastQuery.get(o) === i) return !1;
     a.optionNameToLastQuery.set(o, i);
     let s = null == (t = a.optionNameToAutocompleteQueries.get(o)) ? void 0 : t.get(i);
-    if (null != s) return ((a.lastErrored = !1), a.optionNameToLastResults.set(o, s), !0);
+    if (null != s) return (a.lastErrored = !1), a.optionNameToLastResults.set(o, s), !0;
     let l = a.optionNameToNonce.get(o);
     if (
         (null != l && f.delete(l),
         f.set(n, {
             channelId: r,
             query: i,
-            name: o
+            name: o,
         }),
         p.set(n, new Date()),
         a.optionNameToNonce.set(o, n),
         a.lastErrored)
     )
-        return ((a.lastErrored = !1), !0);
+        return (a.lastErrored = !1), !0;
 }
 let E = (0, l.isDesktop)();
 function b(e) {
@@ -84,7 +84,7 @@ function b(e) {
                           return {
                               displayName: null != n ? n : r,
                               name: r,
-                              value: (t = _ ? Number(t) : t)
+                              value: (t = _ ? Number(t) : t),
                           };
                       }))
                 ? r
@@ -95,11 +95,12 @@ function b(e) {
         (0, s.yw)(u.rMx.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
             duration_ms: b,
             error: !1,
-            num_options: m.length
+            num_options: m.length,
         }),
         p.delete(o),
         null == (n = d.optionNameToAutocompleteQueries.get(l.name)) || n.set(l.query, m),
-        d.optionNameToLastQuery.get(l.name) === l.query && ((d.lastErrored = !1), d.optionNameToLastResults.set(l.name, m)),
+        d.optionNameToLastQuery.get(l.name) === l.query &&
+            ((d.lastErrored = !1), d.optionNameToLastResults.set(l.name, m)),
         (d.lastResponseNonce = o),
         !0
     );
@@ -115,7 +116,7 @@ function y(e) {
     return (
         (0, s.yw)(u.rMx.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
             duration_ms: i,
-            error: !0
+            error: !0,
         }),
         p.delete(t),
         (h(n.channelId).lastErrored = !0),
@@ -133,7 +134,20 @@ function v(e) {
 function I(e, t) {
     let n = c.Z.getActiveOptionName(e),
         r = _.get(e);
-    return null != r && (t !== r.commandId || n !== r.optionName) && (null != t && t !== r.commandId && (r.optionNameToLastResults.clear(), r.optionNameToNonce.clear(), r.optionNameToLastQuery.clear(), r.optionNameToAutocompleteQueries.clear()), (r.lastErrored = !1), (r.commandId = t), (r.optionName = n), !0);
+    return (
+        null != r &&
+        (t !== r.commandId || n !== r.optionName) &&
+        (null != t &&
+            t !== r.commandId &&
+            (r.optionNameToLastResults.clear(),
+            r.optionNameToNonce.clear(),
+            r.optionNameToLastQuery.clear(),
+            r.optionNameToAutocompleteQueries.clear()),
+        (r.lastErrored = !1),
+        (r.commandId = t),
+        (r.optionName = n),
+        !0)
+    );
 }
 class T extends (r = i.ZP.Store) {
     initialize() {
@@ -153,7 +167,7 @@ class T extends (r = i.ZP.Store) {
         return h(e).lastResponseNonce;
     }
 }
-d(T, 'displayName', 'ApplicationCommandAutocompleteStore');
+d(T, "displayName", "ApplicationCommandAutocompleteStore");
 let S = new T(o.Z, {
     CONNECTION_OPEN: m,
     LOGOUT: m,
@@ -163,5 +177,5 @@ let S = new T(o.Z, {
     INTERACTION_FAILURE: y,
     APPLICATION_COMMAND_SET_ACTIVE_COMMAND: O,
     APP_LAUNCHER_SET_ACTIVE_COMMAND: O,
-    APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: v
+    APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: v,
 });

@@ -10,7 +10,12 @@ var r = n(255367),
     d = n(527379),
     C = n(981631),
     m = n(388032);
-let b = [c.d$.ORDER_BY_GUILD_JOINED_AT_DESC, c.d$.ORDER_BY_GUILD_JOINED_AT_ASC, c.d$.ORDER_BY_USER_ID_DESC, c.d$.ORDER_BY_USER_ID_ASC];
+let b = [
+    c.d$.ORDER_BY_GUILD_JOINED_AT_DESC,
+    c.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+    c.d$.ORDER_BY_USER_ID_DESC,
+    c.d$.ORDER_BY_USER_ID_ASC,
+];
 function p(e) {
     let { guildId: t, onClose: n } = e,
         o = (0, a.e7)([u.Z], () => u.Z.getSearchStateByGuildId(t), [t], i()),
@@ -23,24 +28,24 @@ function p(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, o)),
@@ -57,17 +62,17 @@ function p(e) {
                           })(Object(r)).forEach(function (e) {
                               Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
-                    n)
+                    n),
                 );
             },
-            [t, o]
+            [t, o],
         );
     return (0, r.jsx)(s.v2r, {
-        navId: 'members-table-sort-menu',
+        navId: "members-table-sort-menu",
         onClose: () => {
             null == n || n();
         },
-        'aria-label': m.intl.string(m.t['u/7RdX']),
+        "aria-label": m.intl.string(m.t["u/7RdX"]),
         onSelect: C.dG4,
         children: (0, r.jsx)(s.kSQ, {
             children: b.map((e) => {
@@ -75,7 +80,7 @@ function p(e) {
                 return (0, r.jsx)(
                     s.k5B,
                     {
-                        id: 'members-table-sort-'.concat(e),
+                        id: "members-table-sort-".concat(e),
                         label: (function (e) {
                             switch (e) {
                                 case c.d$.ORDER_BY_GUILD_JOINED_AT_DESC:
@@ -90,14 +95,17 @@ function p(e) {
                                     return null;
                             }
                         })(e),
-                        checked: (t = o.selectedSort) === c.d$.ORDER_BY_UNSPECIFIED || null == t ? e === c.d$.ORDER_BY_GUILD_JOINED_AT_DESC : e === t,
+                        checked:
+                            (t = o.selectedSort) === c.d$.ORDER_BY_UNSPECIFIED || null == t
+                                ? e === c.d$.ORDER_BY_GUILD_JOINED_AT_DESC
+                                : e === t,
                         disabled: !1,
                         action: () => p(e),
-                        group: 'members-table-sort'
+                        group: "members-table-sort",
                     },
-                    'members-table-sort-'.concat(e)
+                    "members-table-sort-".concat(e),
                 );
-            })
-        })
+            }),
+        }),
     });
 }

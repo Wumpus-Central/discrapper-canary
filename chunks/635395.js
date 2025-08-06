@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(73800),
     i = n(442837),
     l = n(846027),
@@ -14,7 +14,7 @@ var r = n(73800),
     g = n(358085),
     m = n(998502),
     b = n(981631);
-let _ = (0, g.isMac)() ? null : 'DEFAULT';
+let _ = (0, g.isMac)() ? null : "DEFAULT";
 class O extends r.PureComponent {
     componentDidMount() {
         m.ZP.setSystemTrayIcon(this.getIcon());
@@ -30,28 +30,32 @@ class O extends r.PureComponent {
     }
     constructor(...e) {
         var t, n;
-        (super(...e),
-            (t = 'getIcon'),
+        super(...e),
+            (t = "getIcon"),
             (n = () => {
                 let { deafened: e, muted: t, speaking: n, connected: r, unread: i } = this.props,
                     l = _;
-                return (0, g.isMac)() && !r ? l : (0, g.isLinux)() || !r ? (i && (l = 'UNREAD'), l) : (l = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED');
+                return (0, g.isMac)() && !r
+                    ? l
+                    : (0, g.isLinux)() || !r
+                      ? (i && (l = "UNREAD"), l)
+                      : (l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED");
             }),
             t in this
                 ? Object.defineProperty(this, t, {
                       value: n,
                       enumerable: !0,
                       configurable: !0,
-                      writable: !0
+                      writable: !0,
                   })
-                : (this[t] = n));
+                : (this[t] = n);
     }
 }
 let E = () => null;
 g.isPlatformEmbedded &&
-    (m.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelfMute({ location: 'System Tray' })),
-    m.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => l.Z.toggleSelfDeaf()),
-    m.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
+    (m.ZP.on("SYSTEM_TRAY_TOGGLE_MUTE", () => l.Z.toggleSelfMute({ location: "System Tray" })),
+    m.ZP.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => l.Z.toggleSelfDeaf()),
+    m.ZP.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
         a.Z.open(b.oAB.VOICE);
     }),
     (E = i.ZP.connectStores([p.Z, u.Z, f.Z, c.default, h.Z, d.Z, o.Z], () => {
@@ -64,7 +68,7 @@ g.isPlatformEmbedded &&
             speaking: f.Z.isCurrentUserSpeaking(),
             muted: u.Z.isSelfMute() || u.Z.isSelfMutedTemporarily(),
             deafened: u.Z.isSelfDeaf(),
-            unread: r
+            unread: r,
         };
     })(O)));
 let y = E;

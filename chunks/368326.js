@@ -1,16 +1,16 @@
 n.d(t, { p: () => i });
 let r = (0, n(818083).B)({
-    kind: 'user',
-    id: '2025-03_custom_status_prompts',
-    label: 'Custom Status Prompts Experiment',
+    kind: "user",
+    id: "2025-03_custom_status_prompts",
+    label: "Custom Status Prompts Experiment",
     defaultConfig: { enabled: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Enable custom status prompts',
-            config: { enabled: !0 }
-        }
-    ]
+            label: "Enable custom status prompts",
+            config: { enabled: !0 },
+        },
+    ],
 });
 function i(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,

@@ -1,7 +1,7 @@
 n.d(t, {
     SR: () => o,
     Vk: () => s,
-    xl: () => c
+    xl: () => c,
 });
 var r = n(544891),
     i = n(570140),
@@ -14,10 +14,10 @@ function a(e, t) {
         query: {
             start: i.toISOString(),
             end: n.toISOString(),
-            interval: 2
+            interval: 2,
         },
         oldFormErrors: !0,
-        rejectWithError: !1
+        rejectWithError: !1,
     });
 }
 function s(e) {
@@ -25,17 +25,17 @@ function s(e) {
         (t) => {
             let { body: n } = t;
             i.Z.dispatch({
-                type: 'GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS',
+                type: "GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS",
                 guildId: e,
-                stats: n.slice(0, 2)
+                stats: n.slice(0, 2),
             });
         },
         (e) => {
             i.Z.dispatch({
-                type: 'GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE',
-                error: e.body
+                type: "GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE",
+                error: e.body,
             });
-        }
+        },
     );
 }
 function o(e) {
@@ -43,17 +43,17 @@ function o(e) {
         (t) => {
             let { body: n } = t;
             i.Z.dispatch({
-                type: 'GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS',
+                type: "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS",
                 guildId: e,
-                stats: n.slice(0, 2)
+                stats: n.slice(0, 2),
             });
         },
         (e) => {
             i.Z.dispatch({
-                type: 'GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE',
-                error: e.body
+                type: "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE",
+                error: e.body,
             });
-        }
+        },
     );
 }
 function c(e) {
@@ -61,7 +61,7 @@ function c(e) {
         (t) => {
             let { body: n } = t,
                 r = n
-                    .filter((e) => e.hasOwnProperty('pct_retained'))
+                    .filter((e) => e.hasOwnProperty("pct_retained"))
                     .map((e) => {
                         let { interval_start_timestamp: t, pct_retained: n } = e;
                         return (
@@ -75,32 +75,37 @@ function c(e) {
                                                 r,
                                                 i = {},
                                                 l = Object.keys(e);
-                                            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                            for (r = 0; r < l.length; r++)
+                                                (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                             return i;
                                         })(e, t);
                                     if (Object.getOwnPropertySymbols) {
                                         var l = Object.getOwnPropertySymbols(e);
-                                        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                                        for (r = 0; r < l.length; r++)
+                                            (n = l[r]),
+                                                !(t.indexOf(n) >= 0) &&
+                                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                    (i[n] = e[n]);
                                     }
                                 }
-                            })(e, ['interval_start_timestamp', 'pct_retained']),
+                            })(e, ["interval_start_timestamp", "pct_retained"]),
                             {
                                 interval_start_timestamp: t,
-                                pct_retained: n
+                                pct_retained: n,
                             }
                         );
                     });
             i.Z.dispatch({
-                type: 'GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS',
+                type: "GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS",
                 guildId: e,
-                stats: r.slice(0, 2)
+                stats: r.slice(0, 2),
             });
         },
         (e) => {
             i.Z.dispatch({
-                type: 'GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE',
-                error: e.body
+                type: "GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE",
+                error: e.body,
             });
-        }
+        },
     );
 }

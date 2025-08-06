@@ -10,24 +10,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -54,9 +54,9 @@ function f(e) {
         f = (function () {
             let e = u.ZP.useState((e) => e.timeToLiveMs, o.X);
             return (0, n.jsx)(c.II_, {
-                id: 'opacity',
-                'aria-haspopup': !0,
-                label: 'Time To Live',
+                id: "opacity",
+                "aria-haspopup": !0,
+                label: "Time To Live",
                 control: (t, r) =>
                     (0, n.jsx)(
                         c._wy,
@@ -65,19 +65,19 @@ function f(e) {
                             value: e,
                             maxValue: u.VX,
                             minValue: u.ih,
-                            renderValue: (e) => ''.concat(e, 'ms'),
+                            renderValue: (e) => "".concat(e, "ms"),
                             onChange: (e) => (0, u.S_)(e),
-                            'aria-label': 'Time To Live'
-                        })
-                    )
+                            "aria-label": "Time To Live",
+                        }),
+                    ),
             });
         })(),
         b = (function () {
             let e = u.ZP.useState((e) => e.reappearTimeMs, o.X);
             return (0, n.jsx)(c.II_, {
-                id: 'opacity',
-                'aria-haspopup': !0,
-                label: 'Time To Reappear',
+                id: "opacity",
+                "aria-haspopup": !0,
+                label: "Time To Reappear",
                 control: (t, r) =>
                     (0, n.jsx)(
                         c._wy,
@@ -86,11 +86,11 @@ function f(e) {
                             value: e,
                             maxValue: u.V5,
                             minValue: u.xc,
-                            renderValue: (e) => ''.concat(e, 'ms'),
+                            renderValue: (e) => "".concat(e, "ms"),
                             onChange: (e) => (0, u.Df)(e),
-                            'aria-label': 'Time To Reappear'
-                        })
-                    )
+                            "aria-label": "Time To Reappear",
+                        }),
+                    ),
             });
         })(),
         y = a.useRef(r);
@@ -100,11 +100,11 @@ function f(e) {
         }),
         a.useEffect(() => () => y.current(), []),
         (0, n.jsxs)(c.v2r, {
-            navId: 'overlay-click-zone-debug-context-menu',
+            navId: "overlay-click-zone-debug-context-menu",
             onClose: i.Zy,
-            'aria-label': l.intl.string(l.t.tPfVWl),
+            "aria-label": l.intl.string(l.t.tPfVWl),
             onSelect: t,
-            children: [f, b]
+            children: [f, b],
         })
     );
 }

@@ -7,10 +7,10 @@ var r = n(120356),
 function l(e) {
     let { children: t, tag: n, className: r } = e;
     return (
-        (n = null != n ? n : 'h3'),
+        (n = null != n ? n : "h3"),
         (0, i.jsx)(n, {
             className: s()(a.title, r),
-            children: t
+            children: t,
         })
     );
 }

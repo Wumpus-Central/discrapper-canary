@@ -23,18 +23,18 @@ function _(e) {
         n &&
             u.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
                 location_stack: E,
-                type: g.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
+                type: g.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE,
             });
     }, [n, E]),
     n)
-        ? (0, i.jsxs)('div', {
+        ? (0, i.jsxs)("div", {
               className: f.upsellOverlayContainer,
               children: [
-                  (0, i.jsx)('div', { children: _ }),
-                  (0, i.jsxs)('div', {
+                  (0, i.jsx)("div", { children: _ }),
+                  (0, i.jsxs)("div", {
                       className: f.upsellOverlay,
                       children: [
-                          (0, i.jsx)('img', {
+                          (0, i.jsx)("img", {
                               className: f.upsellImage,
                               alt: h.intl.string(h.t.LHFZQ0),
                               src: (function (e) {
@@ -44,32 +44,36 @@ function _(e) {
                                       case p.BRd.LIGHT:
                                           return x;
                                   }
-                              })(j)
+                              })(j),
                           }),
-                          (0, i.jsxs)('div', {
+                          (0, i.jsxs)("div", {
                               className: f.upsellTextContainer,
                               children: [
                                   (0, i.jsx)(a.Text, {
-                                      variant: 'text-lg/semibold',
-                                      color: 'always-white',
-                                      children: h.intl.string(h.t.dMaDFR)
+                                      variant: "text-lg/semibold",
+                                      color: "always-white",
+                                      children: h.intl.string(h.t.dMaDFR),
                                   }),
                                   (0, i.jsx)(a.Text, {
-                                      variant: 'text-sm/normal',
-                                      color: 'always-white',
-                                      children: h.intl.string(h.t.F7sgFB)
-                                  })
-                              ]
+                                      variant: "text-sm/normal",
+                                      color: "always-white",
+                                      children: h.intl.string(h.t.F7sgFB),
+                                  }),
+                              ],
                           }),
                           (0, i.jsx)(d.Z, {
                               size: s.zx.Sizes.LARGE,
                               color: s.zx.Colors.GREEN,
-                              textOptions: { textOverride: m.ZP.isPremium(t) ? h.intl.string(h.t.AfRWIy) : h.intl.string(h.t.nkdUys) },
-                              subscriptionTier: g.Si.TIER_2
-                          })
-                      ]
-                  })
-              ]
+                              textOptions: {
+                                  textOverride: m.ZP.isPremium(t)
+                                      ? h.intl.string(h.t.AfRWIy)
+                                      : h.intl.string(h.t.nkdUys),
+                              },
+                              subscriptionTier: g.Si.TIER_2,
+                          }),
+                      ],
+                  }),
+              ],
           })
         : _;
 }

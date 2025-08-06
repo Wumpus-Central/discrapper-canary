@@ -17,48 +17,48 @@ function _(e) {
             user: n.author,
             channelId: n.channel_id,
             guildId: _.guild_id,
-            messageId: n.id
+            messageId: n.id,
         })(p),
         m = a.Z.getArticleURL(u.BhN.HD_STREAMING_POTION);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: f.parentContainer,
                 children: (0, r.jsx)(c.Z, {
-                    iconNode: (0, r.jsx)(i.hh5, { size: 'sm' }),
+                    iconNode: (0, r.jsx)(i.hh5, { size: "sm" }),
                     timestamp: n.timestamp,
                     compact: t,
-                    children: d.intl.format(d.t['u0qJ4+'], {
+                    children: d.intl.format(d.t["u0qJ4+"], {
                         actorName: p.nick,
-                        actorHook: h
-                    })
-                })
+                        actorHook: h,
+                    }),
+                }),
             }),
             (0, r.jsxs)(i.P3F, {
                 onClick: () => {
-                    window.open(a.Z.getArticleURL(u.BhN.HD_STREAMING_POTION), '_blank');
+                    window.open(a.Z.getArticleURL(u.BhN.HD_STREAMING_POTION), "_blank");
                 },
                 className: f.embed,
                 children: [
                     (0, r.jsx)(o.Z, {}),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: f.text,
                         children: [
                             (0, r.jsx)(i.Text, {
-                                color: 'text-default',
-                                variant: 'text-sm/semibold',
+                                color: "text-default",
+                                variant: "text-sm/semibold",
                                 className: f.title,
-                                children: d.intl.string(d.t['Fh/mk5'])
+                                children: d.intl.string(d.t["Fh/mk5"]),
                             }),
                             (0, r.jsx)(i.Text, {
-                                color: 'text-primary',
-                                variant: 'text-xs/normal',
-                                children: d.intl.format(d.t['bmGF+f'], { helpCenterLink: m })
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
+                                color: "text-primary",
+                                variant: "text-xs/normal",
+                                children: d.intl.format(d.t["bmGF+f"], { helpCenterLink: m }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 }

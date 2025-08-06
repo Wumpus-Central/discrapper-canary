@@ -9,7 +9,7 @@ function r(e, t) {
         count: e.count,
         channelId: t,
         source: e.source,
-        type: e.type
+        type: e.type,
     };
 }
-(n.d(t, { b: () => r }), n(388685));
+n.d(t, { b: () => r }), n(388685);

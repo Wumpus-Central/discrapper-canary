@@ -2,15 +2,15 @@ function r(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -21,7 +21,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,7 +41,7 @@ var u = n(116514),
     h = n(223138),
     m = n(65183),
     g = n(581079),
-    E = h('draft_tree_data_support'),
+    E = h("draft_tree_data_support"),
     b = m.List,
     y = m.Map,
     O = m.OrderedMap,
@@ -52,10 +52,10 @@ var u = n(116514),
         return {
             text: e.text,
             depth: e.depth || 0,
-            type: r || 'unstyled',
+            type: r || "unstyled",
             key: n || p(),
             data: y(i),
-            characterList: I(e, t)
+            characterList: I(e, t),
         };
     },
     I = function (e, t) {
@@ -73,8 +73,8 @@ var u = n(116514),
                     })
                     .map(function (e) {
                         return r({}, e, { key: t[e.key] });
-                    })
-            )
+                    }),
+            ),
         );
     },
     T = function (e) {
@@ -97,9 +97,9 @@ var u = n(116514),
                         children: b(
                             s.map(function (e) {
                                 return e.key;
-                            })
-                        )
-                    })
+                            }),
+                        ),
+                    }),
                 );
             n = n.set(l.getKey(), l);
             for (var c = S([], s, l); c.length > 0; ) {
@@ -119,13 +119,13 @@ var u = n(116514),
                             children: b(
                                 h.map(function (e) {
                                     return e.key;
-                                })
+                                }),
                             ),
                             prevSibling: 0 === _ ? null : f.get(_ - 1),
-                            nextSibling: _ === f.size - 1 ? null : f.get(_ + 1)
-                        })
+                            nextSibling: _ === f.size - 1 ? null : f.get(_ + 1),
+                        }),
                     );
-                ((n = n.set(m.getKey(), m)), (c = S(c, h, m)));
+                (n = n.set(m.getKey(), m)), (c = S(c, h, m));
             }
             return n;
         }, O());
@@ -135,7 +135,7 @@ var u = n(116514),
             e.map(function (e) {
                 var n = new o(v(e, t));
                 return [n.getKey(), n];
-            })
+            }),
         );
     },
     C = function (e, t) {
@@ -168,6 +168,6 @@ e.exports = function (e) {
         blockMap: n,
         entityMap: t,
         selectionBefore: r,
-        selectionAfter: r
+        selectionAfter: r,
     });
 };

@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     M8: () => g,
     Rd: () => h,
     VM: () => m,
     gU: () => p,
     j_: () => f,
     mq: () => d,
-    rW: () => u
+    rW: () => u,
 }),
-    n(642613));
+    n(642613);
 var i = n(399606),
     r = n(594174),
     s = n(914788),
@@ -40,7 +40,9 @@ function m() {
 function p() {
     let e = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
         t = (0, i.e7)([s.Z], () => s.Z.getLinkedUsers());
-    return null == e ? 0 : Object.values(t).filter((t) => null != t && t.link_status === c.ne.PENDING && e.id !== t.requestor_id).length;
+    return null == e
+        ? 0
+        : Object.values(t).filter((t) => null != t && t.link_status === c.ne.PENDING && e.id !== t.requestor_id).length;
 }
 function g() {
     let e = (0, i.e7)([r.default], () => r.default.getCurrentUser()),

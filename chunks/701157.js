@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(539854));
+n.d(t, { Z: () => p }), n(539854);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -23,14 +23,14 @@ let p = function (e) {
         }, [p, g]);
     return 0 === h.length
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               className: m.wrapper,
               children: [
                   t &&
                       (0, i.jsx)(a.X6q, {
-                          variant: 'heading-lg/semibold',
+                          variant: "heading-lg/semibold",
                           className: m.header,
-                          children: u.intl.string(u.t.r90Wgo)
+                          children: u.intl.string(u.t.r90Wgo),
                       }),
                   h.map((e) =>
                       (0, i.jsx)(
@@ -38,12 +38,12 @@ let p = function (e) {
                           {
                               className: m.recommendedServerCard,
                               guildId: e,
-                              boostingVariant: !0
+                              boostingVariant: !0,
                           },
-                          e
-                      )
+                          e,
+                      ),
                   ),
-                  g.length > 3 && n && (0, i.jsx)(c.Z, {})
-              ]
+                  g.length > 3 && n && (0, i.jsx)(c.Z, {}),
+              ],
           });
 };

@@ -1,7 +1,7 @@
 n.d(t, {
     Gc: () => c,
     ol: () => u,
-    q3: () => l
+    q3: () => l,
 });
 var r = n(255367),
     i = n(73800),
@@ -13,7 +13,8 @@ function a(e, t) {
         i = s(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -23,7 +24,7 @@ function s(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let l = i.createContext({
@@ -33,16 +34,16 @@ let l = i.createContext({
     isFocused: void 0,
     setIsFocused: o.dG4,
     hasValue: void 0,
-    setHasValue: o.dG4
+    setHasValue: o.dG4,
 });
 function c() {
     return i.useContext(l);
 }
 function u(e) {
     var { children: t } = e,
-        n = a(e, ['children']);
+        n = a(e, ["children"]);
     return (0, r.jsx)(l.Provider, {
         value: n,
-        children: t
+        children: t,
     });
 }

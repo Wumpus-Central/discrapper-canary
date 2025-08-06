@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(388685));
+n.d(t, { Z: () => D }), n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,7 +53,7 @@ function m(e) {
             guildId: e.guild_id,
             parentId: e.parent_id,
             memberCount: null != (t = e.memberCount) ? t : 0,
-            memberIdsPreview: null != (n = e.memberIdsPreview) ? n : []
+            memberIdsPreview: null != (n = e.memberIdsPreview) ? n : [],
         };
     }
     return f[e.id];
@@ -61,10 +61,11 @@ function m(e) {
 function g(e) {
     if (!l.AW.has(e.type)) return !1;
     let t = m(e);
-    (null != e.memberCount && (t.memberCount = e.memberCount), null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview));
+    null != e.memberCount && (t.memberCount = e.memberCount),
+        null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview);
 }
 function E(e) {
-    ((f = {}), e.guilds.forEach(h));
+    (f = {}), e.guilds.forEach(h);
 }
 function b(e) {
     let { threadMembers: t } = e;
@@ -109,14 +110,14 @@ function C(e) {
     return (
         t.forEach((e) => {
             let { threads: t, messages: r } = e;
-            (r.forEach((e) => {
+            r.forEach((e) => {
                 e.forEach((e) => {
                     n = R(e.thread) || n;
                 });
             }),
                 t.forEach((e) => {
                     n = R(e) || n;
-                }));
+                });
         }),
         n
     );
@@ -124,14 +125,14 @@ function C(e) {
 function R(e) {
     if (null != e && !(e.id in f)) {
         let t = c.Z.getChannel(e.id);
-        if (null != t) return (g(t), !0);
+        if (null != t) return g(t), !0;
     }
     return !1;
 }
 function P(e) {
     let t = f[e.id];
     if (null == t) return !1;
-    (null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount));
+    null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount);
 }
 class w extends (r = a.ZP.Store) {
     initialize() {
@@ -149,7 +150,7 @@ class w extends (r = a.ZP.Store) {
         return f;
     }
 }
-u(w, 'displayName', 'ThreadMembersStore');
+u(w, "displayName", "ThreadMembersStore");
 let D = new w(s.Z, {
     CONNECTION_OPEN: E,
     OVERLAY_INITIALIZE: b,
@@ -165,5 +166,5 @@ let D = new w(s.Z, {
     LOAD_THREADS_SUCCESS: T,
     LOAD_ARCHIVED_THREADS_SUCCESS: T,
     THREAD_DELETE: A,
-    LOAD_MESSAGES_SUCCESS: N
+    LOAD_MESSAGES_SUCCESS: N,
 });

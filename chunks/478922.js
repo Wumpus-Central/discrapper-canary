@@ -1,4 +1,4 @@
-(n.d(t, { z: () => g }), n(388685));
+n.d(t, { z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,8 @@ function h(e, t) {
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,7 +77,7 @@ function m(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function g(e, t, n) {
@@ -91,8 +92,56 @@ function g(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, m) {
         var g,
-            { onScroll: E, dir: b = 'ltr', sections: y, columns: O, getItemKey: v, getItemHeight: I, getSectionHeight: T, chunkSize: S, renderSection: A, renderItem: N, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: M = !1, className: k, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
-            Z = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
+            {
+                onScroll: E,
+                dir: b = "ltr",
+                sections: y,
+                columns: O,
+                getItemKey: v,
+                getItemHeight: I,
+                getSectionHeight: T,
+                chunkSize: S,
+                renderSection: A,
+                renderItem: N,
+                getSectionProps: C,
+                itemGutter: R,
+                removeEdgeItemGutters: P,
+                sectionGutter: w,
+                padding: D,
+                paddingVertical: L,
+                paddingHorizontal: x,
+                fade: M = !1,
+                className: k,
+                style: j,
+                maxContentWidth: U,
+                renderAccessory: G,
+                onItemVisibilityChange: B,
+            } = n,
+            Z = h(n, [
+                "onScroll",
+                "dir",
+                "sections",
+                "columns",
+                "getItemKey",
+                "getItemHeight",
+                "getSectionHeight",
+                "chunkSize",
+                "renderSection",
+                "renderItem",
+                "getSectionProps",
+                "itemGutter",
+                "removeEdgeItemGutters",
+                "sectionGutter",
+                "padding",
+                "paddingVertical",
+                "paddingHorizontal",
+                "fade",
+                "className",
+                "style",
+                "maxContentWidth",
+                "renderAccessory",
+                "onItemVisibilityChange",
+            ]);
         let F = i.useRef(null),
             V = i.useRef(null),
             H = i.useRef({}),
@@ -102,8 +151,8 @@ function g(e, t, n) {
             scrollerRef: K,
             className: k,
             specs: o,
-            orientation: 'vertical',
-            dir: b
+            orientation: "vertical",
+            dir: b,
         });
         let {
             forceUpdateOnChunkChange: X,
@@ -112,7 +161,7 @@ function g(e, t, n) {
             visibleSections: $,
             totalHeight: ee,
             forceUpdate: et,
-            masonryComputer: en
+            masonryComputer: en,
         } = (0, c.QB)({
             sections: y,
             columns: O,
@@ -128,28 +177,28 @@ function g(e, t, n) {
             paddingHorizontal: x,
             getScrollerState: q,
             dir: b,
-            maxBufferWidth: U
+            maxBufferWidth: U,
         });
         i.useEffect(() => {
-            (null != B && (0, s.ZI)($, H.current, B), (H.current = $));
+            null != B && (0, s.ZI)($, H.current, B), (H.current = $);
         }, [$, B]);
         let er = (0, i.useCallback)(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    (e > z.current.dirty && (z.current.dirty = e), 2 === e ? et() : X(1));
+                    e > z.current.dirty && (z.current.dirty = e), 2 === e ? et() : X(1);
                 },
-                [X, z, et]
+                [X, z, et],
             ),
             ei = (0, c.t2)(K),
             eo = (0, i.useCallback)(() => en.itemGrid, [en]),
             ea = (0, i.useCallback)(() => en.coordsMap, [en]),
             es = i.useCallback(() => er(), [er]);
-        ((0, c.zn)({
+        (0, c.zn)({
             ref: K,
-            key: 'container',
+            key: "container",
             onUpdate: es,
             resizeObserver: _,
-            listenerMap: d
+            listenerMap: d,
         }),
             (0, i.useImperativeHandle)(
                 m,
@@ -159,29 +208,29 @@ function g(e, t, n) {
                             getScrollerNode: () => K.current,
                             getItemGrid: eo,
                             getCoordsMap: ea,
-                            getScrollerState: q
+                            getScrollerState: q,
                         },
-                        (0, c.Ue)(K, q, ei)
+                        (0, c.Ue)(K, q, ei),
                     ),
-                [K, q, eo, ei, ea]
-            ));
+                [K, q, eo, ei, ea],
+            );
         let el = (0, i.useCallback)(
             (e) => {
-                (er(1),
+                er(1),
                     null == F.current ? W(!0) : clearTimeout(F.current),
                     (F.current = setTimeout(() => {
-                        ((F.current = null), W(!1));
+                        (F.current = null), W(!1);
                     }, 200)),
-                    null != E && E(e));
+                    null != E && E(e);
             },
-            [E, er]
+            [E, er],
         );
         return (
             i.useLayoutEffect(() => {
                 2 !== z.current.dirty && (z.current.dirty = 2);
             }, [ee, z]),
             (0, r.jsxs)(
-                'div',
+                "div",
                 p(
                     f(
                         {
@@ -190,11 +239,11 @@ function g(e, t, n) {
                             className: a()(k, {
                                 [e]: !0,
                                 [t]: M,
-                                [u.scrolling]: Y
+                                [u.scrolling]: Y,
                             }),
-                            style: (0, c.uT)(j)
+                            style: (0, c.uT)(j),
                         },
-                        Z
+                        Z,
                     ),
                     {
                         children: [
@@ -203,7 +252,7 @@ function g(e, t, n) {
                                 () =>
                                     (0, r.jsx)(l.J, {
                                         containerRef: V,
-                                        children: (0, r.jsx)('div', {
+                                        children: (0, r.jsx)("div", {
                                             style: { height: ee },
                                             className: u.content,
                                             ref: V,
@@ -216,29 +265,33 @@ function g(e, t, n) {
                                                     s = null == C ? void 0 : C(n);
                                                 return null != i && null != o
                                                     ? (0, r.jsxs)(
-                                                          'div',
+                                                          "div",
                                                           p(f({}, s), {
-                                                              style: f({}, i, null != (t = null == s ? void 0 : s.style) ? t : {}),
+                                                              style: f(
+                                                                  {},
+                                                                  i,
+                                                                  null != (t = null == s ? void 0 : s.style) ? t : {},
+                                                              ),
                                                               children: [
                                                                   null != A && null != a && A(n, a, e),
                                                                   o.map((e) => {
                                                                       let [t, n, r] = e,
                                                                           i = Q[t];
                                                                       return null != i ? N(n, r, i, t, J) : null;
-                                                                  })
-                                                              ]
+                                                                  }),
+                                                              ],
                                                           }),
-                                                          e
+                                                          e,
                                                       )
                                                     : null;
-                                            })
-                                        })
+                                            }),
+                                        }),
                                     }),
-                                [$, N, A, Q, ee, C, J]
-                            )
-                        ]
-                    }
-                )
+                                [$, N, A, Q, ee, C, J],
+                            ),
+                        ],
+                    },
+                ),
             )
         );
     });

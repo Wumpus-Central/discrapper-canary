@@ -1,6 +1,6 @@
 n.d(t, {
     $: () => u,
-    Z: () => c
+    Z: () => c,
 });
 var r = n(442837),
     i = n(430198),
@@ -9,7 +9,7 @@ var r = n(442837),
     s = n(981631);
 let l = {
     needSubscriptionToAccess: !1,
-    isSubscriptionGated: !1
+    isSubscriptionGated: !1,
 };
 function c(e) {
     return (0, r.cj)([o.Z, i.Z, a.Z], () => u(e, o.Z, i.Z, a.Z), [e]);
@@ -22,12 +22,12 @@ function u(e) {
     return (null == c ? void 0 : c.isRoleSubscriptionTemplatePreviewChannel())
         ? {
               isSubscriptionGated: !0,
-              needSubscriptionToAccess: !0
+              needSubscriptionToAccess: !0,
           }
         : null != c && n.isChannelGated(c.guild_id, c.id)
           ? {
                 isSubscriptionGated: !0,
-                needSubscriptionToAccess: c.isGuildVocal() ? !r.can(s.Plq.CONNECT, c) : !r.can(s.Plq.VIEW_CHANNEL, c)
+                needSubscriptionToAccess: c.isGuildVocal() ? !r.can(s.Plq.CONNECT, c) : !r.can(s.Plq.VIEW_CHANNEL, c),
             }
           : l;
 }

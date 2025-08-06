@@ -13,12 +13,20 @@ var r = n(481060),
     f = n(475286);
 function b(e) {
     let { transitionState: t, onClose: n, analyticsLocation: b } = e,
-        { slide: x, gotoNext: g, gotoError: C, handleWaitingForConnection: h, handleAuthToken: _, expectedCallbackState: m, callbackData: j } = (0, i.k)(b, p.ABu.XBOX);
+        {
+            slide: x,
+            gotoNext: g,
+            gotoError: C,
+            handleWaitingForConnection: h,
+            handleAuthToken: _,
+            expectedCallbackState: m,
+            callbackData: j,
+        } = (0, i.k)(b, p.ABu.XBOX);
     return (0, o.jsx)(r.Y0X, {
         className: f.modal,
         transitionState: t,
         disableTrack: !0,
-        parentComponent: 'XboxLinkModal',
+        parentComponent: "XboxLinkModal",
         children: (0, o.jsxs)(r.MyZ, {
             activeSlide: x,
             width: 408,
@@ -27,8 +35,8 @@ function b(e) {
                     id: u.O.LANDING,
                     children: (0, o.jsx)(l.Z, {
                         onContinue: g,
-                        onClose: n
-                    })
+                        onClose: n,
+                    }),
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.PRE_CONNECT,
@@ -37,8 +45,8 @@ function b(e) {
                         onWaitingForConnection: h,
                         onAuthToken: _,
                         onError: C,
-                        onClose: n
-                    })
+                        onClose: n,
+                    }),
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.PRE_CONNECT_WAITING,
@@ -47,8 +55,8 @@ function b(e) {
                         expectedCallbackState: m,
                         onAuthToken: _,
                         onError: C,
-                        onClose: n
-                    })
+                        onClose: n,
+                    }),
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.DISCORD_CONSENT,
@@ -56,21 +64,21 @@ function b(e) {
                         authToken: j,
                         onContinue: g,
                         onError: C,
-                        onClose: n
-                    })
+                        onClose: n,
+                    }),
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.ERROR,
                     children: (0, o.jsx)(a.Z, {
                         onContinue: g,
-                        onClose: n
-                    })
+                        onClose: n,
+                    }),
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.SUCCESS,
-                    children: (0, o.jsx)(d.Z, { onClose: n })
-                })
-            ]
-        })
+                    children: (0, o.jsx)(d.Z, { onClose: n }),
+                }),
+            ],
+        }),
     });
 }

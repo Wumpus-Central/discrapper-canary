@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(467055), n(388685));
+n.d(t, { Z: () => d }), n(467055), n(388685);
 var r = n(255367);
 n(73800);
 var s = n(754700),
@@ -9,24 +9,24 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -51,28 +51,28 @@ function c(e, t) {
 let u = [
         {
             value: 1,
-            label: 'Stream Desktop'
+            label: "Stream Desktop",
         },
         {
             value: 0,
-            label: 'Play Desktop'
+            label: "Play Desktop",
         },
         {
             value: 3,
-            label: 'Play Console'
+            label: "Play Console",
         },
         {
             value: 4,
-            label: 'Play Desktop & Console'
+            label: "Play Desktop & Console",
         },
         {
             value: 2,
-            label: 'Watch Video'
+            label: "Watch Video",
         },
         {
             value: 5,
-            label: 'Play Activity'
-        }
+            label: "Play Activity",
+        },
     ],
     d = function (e) {
         let { onSelect: t, taskDuration: n = 10, taskConfigV2: d } = e;
@@ -82,15 +82,16 @@ let u = [
                     children: [
                         (0, r.jsx)(o.vwX, {
                             tag: o.RB0.H5,
-                            children: 'Task Type(s)'
+                            children: "Task Type(s)",
                         }),
                         (0, r.jsx)(o.R94, {
                             children: (0, r.jsx)(o.PhF, {
                                 className: i.taskPresetSelect,
-                                placeholder: 'Select Task Preset',
+                                placeholder: "Select Task Preset",
                                 options: u,
-                                renderOptionValue: (e) => e.map((e) => (0, r.jsx)('div', { children: e.label }, e.value)),
-                                renderOptionLabel: (e) => (0, r.jsx)('div', { children: e.label }),
+                                renderOptionValue: (e) =>
+                                    e.map((e) => (0, r.jsx)("div", { children: e.label }, e.value)),
+                                renderOptionLabel: (e) => (0, r.jsx)("div", { children: e.label }),
                                 isSelected: (e) =>
                                     e ===
                                     (function (e) {
@@ -110,72 +111,72 @@ let u = [
                                                     case 1:
                                                         n[s.X.STREAM_ON_DESKTOP] = {
                                                             type: s.X.STREAM_ON_DESKTOP,
-                                                            target: t
+                                                            target: t,
                                                         };
                                                         break;
                                                     case 0:
                                                         n[s.X.PLAY_ON_DESKTOP] = {
                                                             type: s.X.PLAY_ON_DESKTOP,
-                                                            target: t
+                                                            target: t,
                                                         };
                                                         break;
                                                     case 3:
-                                                        ((n[s.X.PLAY_ON_PLAYSTATION] = {
+                                                        (n[s.X.PLAY_ON_PLAYSTATION] = {
                                                             type: s.X.PLAY_ON_PLAYSTATION,
                                                             target: t,
-                                                            externalIds: []
+                                                            externalIds: [],
                                                         }),
                                                             (n[s.X.PLAY_ON_XBOX] = {
                                                                 type: s.X.PLAY_ON_XBOX,
                                                                 target: t,
-                                                                externalIds: []
-                                                            }));
+                                                                externalIds: [],
+                                                            });
                                                         break;
                                                     case 4:
-                                                        ((n[s.X.PLAY_ON_DESKTOP] = {
+                                                        (n[s.X.PLAY_ON_DESKTOP] = {
                                                             type: s.X.PLAY_ON_DESKTOP,
-                                                            target: t
+                                                            target: t,
                                                         }),
                                                             (n[s.X.PLAY_ON_PLAYSTATION] = {
                                                                 type: s.X.PLAY_ON_PLAYSTATION,
                                                                 target: t,
-                                                                externalIds: []
+                                                                externalIds: [],
                                                             }),
                                                             (n[s.X.PLAY_ON_XBOX] = {
                                                                 type: s.X.PLAY_ON_XBOX,
                                                                 target: t,
-                                                                externalIds: []
-                                                            }));
+                                                                externalIds: [],
+                                                            });
                                                         break;
                                                     case 2:
                                                         n[s.X.WATCH_VIDEO] = {
                                                             type: s.X.WATCH_VIDEO,
                                                             target: t,
-                                                            assets: { video: { url: '' } },
-                                                            messages: { videoTitle: '' }
+                                                            assets: { video: { url: "" } },
+                                                            messages: { videoTitle: "" },
                                                         };
                                                         break;
                                                     case 5:
                                                         n[s.X.PLAY_ACTIVITY] = {
                                                             type: s.X.PLAY_ACTIVITY,
-                                                            target: t
+                                                            target: t,
                                                         };
                                                 }
                                                 return n;
-                                            })(e, n)
-                                        })
+                                            })(e, n),
+                                        }),
                                     );
                                 },
-                                serialize: String
-                            })
-                        })
-                    ]
+                                serialize: String,
+                            }),
+                        }),
+                    ],
                 }),
                 (0, r.jsxs)(o.xJW, {
                     children: [
                         (0, r.jsx)(o.vwX, {
                             tag: o.RB0.H5,
-                            children: 'Task Duration'
+                            children: "Task Duration",
                         }),
                         (0, r.jsx)(o.R94, {
                             children: (0, r.jsx)(o.oil, {
@@ -188,14 +189,14 @@ let u = [
                                         Object.entries(d.tasks).map((e) => {
                                             let [t, r] = e;
                                             return [t, c(l({}, r), { target: n })];
-                                        })
+                                        }),
                                     );
                                     t(c(l({}, d), { tasks: r }));
-                                }
-                            })
-                        })
-                    ]
-                })
-            ]
+                                },
+                            }),
+                        }),
+                    ],
+                }),
+            ],
         });
     };

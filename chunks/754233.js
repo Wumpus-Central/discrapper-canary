@@ -13,7 +13,7 @@ let r = (t) => {
         null != d &&
             (r = c.intl.format(c.t.jn0Xy8, {
                 guildName: d.name,
-                helpdeskArticle: a.z
+                helpdeskArticle: a.z,
             })),
         (0, s.jsx)(n.Modal, {
             transitionState: t.transitionState,
@@ -23,9 +23,9 @@ let r = (t) => {
             actions: [
                 {
                     text: c.intl.string(c.t.BddRzc),
-                    onClick: i
-                }
-            ]
+                    onClick: i,
+                },
+            ],
         })
     );
 };

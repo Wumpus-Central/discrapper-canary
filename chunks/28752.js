@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(953529), n(388685));
+n.d(t, { Z: () => b }), n(953529), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(373793),
@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,9 +49,9 @@ function b(e) {
             () =>
                 (0, s.sl)(t, {
                     fakeAppIconURL: h,
-                    size: E
+                    size: E,
                 }),
-            [t]
+            [t],
         ),
         m = i.useMemo(
             () =>
@@ -61,85 +61,89 @@ function b(e) {
                         icon: a.oLu,
                         title: f.intl.string(f.t.aCg60N),
                         subtitle: f.intl.string(f.t.YeiIUV),
-                        beta: !1
+                        beta: !1,
                     },
                     {
                         type: o.Y.GUILD_INSTALL,
                         icon: a.QTo,
                         title: f.intl.string(f.t.E64YCw),
                         subtitle: f.intl.string(f.t.bbtoKi),
-                        beta: !1
-                    }
+                        beta: !1,
+                    },
                 ].filter((e) => {
                     var n, r;
-                    return (null == (r = t.integrationTypesConfig) || null == (n = r[e.type]) ? void 0 : n.oauth2InstallParams) != null;
+                    return (
+                        (null == (r = t.integrationTypesConfig) || null == (n = r[e.type])
+                            ? void 0
+                            : n.oauth2InstallParams) != null
+                    );
                 }),
-            [t.integrationTypesConfig]
+            [t.integrationTypesConfig],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: _.container,
         children: [
-            (0, r.jsxs)('header', {
+            (0, r.jsxs)("header", {
                 id: c,
                 className: _.header,
                 children: [
                     (0, r.jsx)(l.Z, {
                         src: p,
                         className: _.appIcon,
-                        rendersPlaceholder: !0
+                        rendersPlaceholder: !0,
                     }),
                     (0, r.jsx)(O, { application: t }),
-                    (0, r.jsx)(y, { application: t })
-                ]
+                    (0, r.jsx)(y, { application: t }),
+                ],
             }),
-            (0, r.jsx)('ul', {
+            (0, r.jsx)("ul", {
                 className: _.rows,
                 children: m.map((e) =>
                     (0, r.jsxs)(
                         a.P3F,
                         {
-                            tag: 'li',
+                            tag: "li",
                             className: _.row,
                             onClick: () => n(e.type),
                             children: [
                                 (0, r.jsx)(e.icon, {
-                                    size: 'md',
-                                    color: 'currentColor',
-                                    className: _.leftIcon
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: _.leftIcon,
                                 }),
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: _.rowInner,
                                     children: [
-                                        (0, r.jsxs)('div', {
+                                        (0, r.jsxs)("div", {
                                             className: _.rowDetails,
                                             children: [
                                                 (0, r.jsx)(a.Text, {
-                                                    variant: 'text-md/medium',
-                                                    color: 'interactive-active',
-                                                    children: e.title
+                                                    variant: "text-md/medium",
+                                                    color: "interactive-active",
+                                                    children: e.title,
                                                 }),
                                                 (0, r.jsx)(a.Text, {
-                                                    variant: 'text-xs/medium',
-                                                    color: 'text-muted',
-                                                    children: e.subtitle
-                                                })
-                                            ]
+                                                    variant: "text-xs/medium",
+                                                    color: "text-muted",
+                                                    children: e.subtitle,
+                                                }),
+                                            ],
                                         }),
                                         e.beta && (0, r.jsx)(u.Z, {}),
                                         (0, r.jsx)(a.Fbu, {
-                                            size: 'md',
-                                            color: 'currentColor',
-                                            className: _.rightIcon
-                                        })
-                                    ]
-                                })
-                            ]
+                                            size: "md",
+                                            color: "currentColor",
+                                            className: _.rightIcon,
+                                        }),
+                                    ],
+                                }),
+                            ],
                         },
-                        e.type
-                    )
-                )
-            })
-        ]
+                        e.type,
+                    ),
+                ),
+            }),
+        ],
     });
 }
 function y(e) {
@@ -147,37 +151,37 @@ function y(e) {
         n = t.description;
     return null == n || 0 === n.length
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: _.detailsContainer,
-              children: (0, r.jsx)('div', {
+              children: (0, r.jsx)("div", {
                   className: _.overviewContainerNoVideo,
-                  children: null != n && n.length > 0 ? (0, r.jsx)(I, { description: n }) : null
-              })
+                  children: null != n && n.length > 0 ? (0, r.jsx)(I, { description: n }) : null,
+              }),
           });
 }
 function O(e) {
     let { application: t } = e,
         n = t.name,
         i = (0, s.vJ)(t);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: _.titleContainer,
         children: [
             (0, r.jsx)(a.X6q, {
-                variant: 'heading-xl/extrabold',
+                variant: "heading-xl/extrabold",
                 lineClamp: 1,
-                children: n
+                children: n,
             }),
             i
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: _.partnerLabelContainer,
                       children: (0, r.jsx)(a.Text, {
-                          variant: 'text-xs/medium',
-                          color: 'text-default',
-                          children: f.intl.string(f.t.LO4f0N)
-                      })
+                          variant: "text-xs/medium",
+                          color: "text-default",
+                          children: f.intl.string(f.t.LO4f0N),
+                      }),
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 let v = 3;
@@ -196,26 +200,26 @@ function I(e) {
             return {
                 key: 1,
                 minHeightOverride: Math.min(e, v * d),
-                maxHeightOverride: e
+                maxHeightOverride: e,
             };
         }, [h, d]),
         { ref: E, isTransitioning: b, onTransitionEnd: y } = (0, c.Z)(g({ isExpanded: o }, m)),
         O = o || b;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: _.descriptionContainer,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 ref: E,
                 className: _.overflowHidden,
                 onTransitionEnd: y,
                 children: (0, r.jsx)(a.Text, {
                     ref: u,
                     className: p.markup,
-                    variant: 'text-sm/medium',
+                    variant: "text-sm/medium",
                     lineClamp: O ? void 0 : v,
                     style: { maxHeight: O ? void 0 : m.minHeightOverride },
-                    children: l
-                })
+                    children: l,
+                }),
             }),
             null != h && h > v
                 ? (0, r.jsxs)(a.P3F, {
@@ -223,23 +227,23 @@ function I(e) {
                       onClick: () => s((e) => !e),
                       children: [
                           (0, r.jsx)(a.Text, {
-                              variant: 'text-sm/semibold',
-                              color: 'text-brand',
-                              children: O ? f.intl.string(f.t.u4YJ8v) : f.intl.string(f.t['N/tajI'])
+                              variant: "text-sm/semibold",
+                              color: "text-brand",
+                              children: O ? f.intl.string(f.t.u4YJ8v) : f.intl.string(f.t["N/tajI"]),
                           }),
                           O
                               ? (0, r.jsx)(a.u04, {
-                                    size: 'sm',
-                                    color: a.TVs.colors.TEXT_BRAND
+                                    size: "sm",
+                                    color: a.TVs.colors.TEXT_BRAND,
                                 })
                               : (0, r.jsx)(a.CJ0, {
-                                    size: 'sm',
-                                    color: a.TVs.colors.TEXT_BRAND
-                                })
-                      ]
+                                    size: "sm",
+                                    color: a.TVs.colors.TEXT_BRAND,
+                                }),
+                      ],
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 function T() {
@@ -256,7 +260,7 @@ function T() {
         {
             ref: e,
             lineHeight: t,
-            lineCount: r
+            lineCount: r,
         }
     );
 }

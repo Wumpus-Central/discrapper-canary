@@ -13,7 +13,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,7 +69,7 @@ function _(e) {
             o.Z.jumpToMessage({
                 channelId: e,
                 messageId: n,
-                flash: !0
+                flash: !0,
             });
         },
         g = () =>
@@ -78,36 +78,36 @@ function _(e) {
                     ? l.intl.format(l.t.lD5tur, {
                           usernameHook: h,
                           username: p,
-                          messageOnClick: m
+                          messageOnClick: m,
                       })
                     : l.intl.format(l.t.yIDvPD, {
                           usernameHook: h,
                           username: p,
                           pinsActionOnClick: c,
-                          messageOnClick: m
+                          messageOnClick: m,
                       })
                 : null == c
                   ? l.intl.format(l.t.vfkjq6, {
                         usernameHook: h,
-                        username: p
+                        username: p,
                     })
                   : l.intl.format(l.t.R7vZGR, {
                         usernameHook: h,
                         username: p,
-                        pinsActionOnClick: c
+                        pinsActionOnClick: c,
                     }),
         E = {
             iconNode: (0, r.jsx)(i.qQX, {
-                size: 'sm',
-                color: 'currentColor'
-            })
+                size: "sm",
+                color: "currentColor",
+            }),
         };
     return (0, r.jsx)(
         s.Z,
         f(u({}, E), {
             timestamp: t.timestamp,
             compact: d,
-            children: g()
-        })
+            children: g(),
+        }),
     );
 }

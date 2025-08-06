@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685), n(539854), n(953529));
+n.d(t, { Z: () => S }), n(388685), n(539854), n(953529);
 var i = n(255367),
     r = n(73800),
     l = n(243814),
@@ -24,24 +24,24 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -59,35 +59,37 @@ function N(e) {
                         i,
                         r = {},
                         l = Object.keys(e);
-                    for (i = 0; i < l.length; i++) ((n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < l.length; i++) ((n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(e, ['application', 'guild', 'integration']);
+        })(e, ["application", "guild", "integration"]);
     return (0, i.jsx)(
         a.ConfirmModal,
         ((t = C({}, c)),
         (n = n =
             {
-                header: y.intl.formatToPlainString(y.t['rL9d//'], { applicationName: r.name }),
+                header: y.intl.formatToPlainString(y.t["rL9d//"], { applicationName: r.name }),
                 confirmText: y.intl.string(y.t.ebGf4u),
-                cancelText: y.intl.string(y.t['ETE/oK']),
+                cancelText: y.intl.string(y.t["ETE/oK"]),
                 onConfirm: () => {
                     d.Z.disableIntegration(l.id, o.id).catch(() => {
                         s.Z.show({
                             title: y.intl.string(y.t.wYqMmJ),
-                            body: y.intl.string(y.t.A4Mnsr)
+                            body: y.intl.string(y.t.A4Mnsr),
                         });
                     });
                 },
                 children: (0, i.jsx)(a.Text, {
-                    variant: 'text-md/normal',
-                    children: y.intl.format(y.t.FGE8yc, { applicationName: r.name })
-                })
+                    variant: "text-md/normal",
+                    children: y.intl.format(y.t.FGE8yc, { applicationName: r.name }),
+                }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -101,14 +103,25 @@ function N(e) {
               })(Object(n)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
-        t)
+        t),
     );
 }
 function S(e) {
     var t;
-    let { guild: n, applicationIntegration: s, selectableWebhookChannels: d, editedWebhook: S, errors: I, canNavigate: w } = e,
+    let {
+            guild: n,
+            applicationIntegration: s,
+            selectableWebhookChannels: d,
+            editedWebhook: S,
+            errors: I,
+            canNavigate: w,
+        } = e,
         { application: Z, integration: E, webhooks: P } = s,
-        [T, k] = (0, o.Wu)([m.Z], () => [m.Z.can(O.Plq.MANAGE_ROLES, n), null == Z.bot || m.Z.canManageUser(O.Plq.MANAGE_GUILD, Z.bot.id, n)], [Z.bot, n]),
+        [T, k] = (0, o.Wu)(
+            [m.Z],
+            () => [m.Z.can(O.Plq.MANAGE_ROLES, n), null == Z.bot || m.Z.canManageUser(O.Plq.MANAGE_GUILD, Z.bot.id, n)],
+            [Z.bot, n],
+        ),
         A = (0, o.e7)([m.Z], () => m.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
         R = r.useCallback(() => {
             w() &&
@@ -119,25 +132,25 @@ function S(e) {
                             {
                                 guild: n,
                                 application: Z,
-                                integration: E
+                                integration: E,
                             },
-                            e
-                        )
-                    )
+                            e,
+                        ),
+                    ),
                 );
         }, [Z, w, n, E]),
         D = r.useMemo(() => {
             let e = [
                 {
                     icon: a.T39,
-                    text: y.intl.formatToPlainString(y.t.gcdJ8P, { timestamp: g.default.extractTimestamp(E.id) })
-                }
+                    text: y.intl.formatToPlainString(y.t.gcdJ8P, { timestamp: g.default.extractTimestamp(E.id) }),
+                },
             ];
             return (
                 null != E.user &&
                     e.push({
                         icon: a.tBG,
-                        text: y.intl.formatToPlainString(y.t.qE7oqq, { user: f.ZP.getUserTag(E.user) })
+                        text: y.intl.formatToPlainString(y.t.qE7oqq, { user: f.ZP.getUserTag(E.user) }),
                     }),
                 e
             );
@@ -147,64 +160,64 @@ function S(e) {
             return null != Z.bot && (null == (e = E.scopes) ? void 0 : e.includes(l.x.BOT))
                 ? (0, i.jsx)(j.Z, {
                       guild: n,
-                      applicationIntegration: s
+                      applicationIntegration: s,
                   })
                 : (0, i.jsx)(a.Zbd, {
                       className: _.emptyCard,
                       editable: !0,
                       children: (0, i.jsx)(a.Text, {
-                          color: 'text-muted',
-                          variant: 'text-sm/normal',
-                          children: y.intl.string(y.t.pfLnzc)
-                      })
+                          color: "text-muted",
+                          variant: "text-sm/normal",
+                          children: y.intl.string(y.t.pfLnzc),
+                      }),
                   });
         }, [Z.bot, s, n, E.scopes]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(h.Z, {
                 name: Z.name,
-                imageSrc: null != (t = Z.getIconURL(32)) ? t : b.pK['0'],
+                imageSrc: null != (t = Z.getIconURL(32)) ? t : b.pK["0"],
                 details: D,
-                isHeader: !0
+                isHeader: !0,
             }),
             (null == Z ? void 0 : Z.description) != null
                 ? (0, i.jsx)(p.Z, {
                       userBio: Z.description,
-                      className: _.headerDescription
+                      className: _.headerDescription,
                   })
                 : null,
             T
                 ? (0, i.jsx)(u.Z, {
                       application: Z,
                       canNavigate: w,
-                      guildId: n.id
+                      guildId: n.id,
                   })
                 : null,
             (0, i.jsx)(a.$i$, { className: _.headerDivider }),
             null != Z.bot
-                ? (0, i.jsxs)('div', {
+                ? (0, i.jsxs)("div", {
                       className: _.section,
                       children: [
                           (0, i.jsx)(x.Z, {
                               icon: (0, i.jsx)(a.wGt, {
-                                  size: 'xs',
-                                  color: 'currentColor'
+                                  size: "xs",
+                                  color: "currentColor",
                               }),
-                              title: y.intl.string(y.t.AOdOYm)
+                              title: y.intl.string(y.t.AOdOYm),
                           }),
-                          L
-                      ]
+                          L,
+                      ],
                   })
                 : null,
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: _.section,
                 children: [
                     (0, i.jsx)(x.Z, {
                         icon: (0, i.jsx)(a.tYf, {
-                            size: 'md',
-                            color: 'currentColor'
+                            size: "md",
+                            color: "currentColor",
                         }),
-                        title: y.intl.string(y.t['t9ZX/P'])
+                        title: y.intl.string(y.t["t9ZX/P"]),
                     }),
                     P.length > 0
                         ? (0, i.jsx)(v.Z, {
@@ -212,18 +225,18 @@ function S(e) {
                               editedWebhook: S,
                               selectableWebhookChannels: d,
                               errors: I,
-                              canNavigate: w
+                              canNavigate: w,
                           })
                         : (0, i.jsx)(a.Zbd, {
                               className: _.emptyCard,
                               editable: !0,
                               children: (0, i.jsx)(a.Text, {
-                                  color: 'text-muted',
-                                  variant: 'text-sm/normal',
-                                  children: A ? y.intl.string(y.t.ahPd2d) : y.intl.string(y.t.axqYMj)
-                              })
-                          })
-                ]
+                                  color: "text-muted",
+                                  variant: "text-sm/normal",
+                                  children: A ? y.intl.string(y.t.ahPd2d) : y.intl.string(y.t.axqYMj),
+                              }),
+                          }),
+                ],
             }),
             (0, i.jsx)(a.$i$, { className: _.headerDivider }),
             (0, i.jsxs)(c.Z, {
@@ -232,23 +245,23 @@ function S(e) {
                 align: c.Z.Align.CENTER,
                 children: [
                     (0, i.jsx)(a.Text, {
-                        color: 'header-secondary',
-                        variant: 'text-sm/normal',
-                        children: k ? y.intl.string(y.t.hdneLy) : y.intl.string(y.t.xRCMq6)
+                        color: "header-secondary",
+                        variant: "text-sm/normal",
+                        children: k ? y.intl.string(y.t.hdneLy) : y.intl.string(y.t.xRCMq6),
                     }),
                     (0, i.jsx)(c.Z.Child, {
                         grow: 0,
                         shrink: 0,
                         children: (0, i.jsx)(a.zxk, {
-                            variant: 'critical-primary',
-                            size: 'sm',
+                            variant: "critical-primary",
+                            size: "sm",
                             text: y.intl.string(y.t.ebGf4u),
                             disabled: !k,
-                            onClick: R
-                        })
-                    })
-                ]
-            })
-        ]
+                            onClick: R,
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

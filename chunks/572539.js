@@ -8,7 +8,7 @@ var l = n(120356),
     d = n(474000);
 function u(e) {
     let { options: t, onClick: n, className: l, hideCaret: u } = e;
-    return (0, a.jsx)('div', {
+    return (0, a.jsx)("div", {
         className: i()(d.root, l),
         children: t.map((e, t) =>
             (0, a.jsxs)(
@@ -19,19 +19,19 @@ function u(e) {
                     children: [
                         (0, a.jsx)(r.Text, {
                             className: d.text,
-                            color: 'none',
-                            variant: 'text-md/normal',
-                            children: e.label
+                            color: "none",
+                            variant: "text-md/normal",
+                            children: e.label,
                         }),
                         !(null == u ? void 0 : u(e)) &&
                             (0, a.jsx)(s.Z, {
                                 className: d.caret,
-                                direction: s.Z.Directions.RIGHT
-                            })
-                    ]
+                                direction: s.Z.Directions.RIGHT,
+                            }),
+                    ],
                 },
-                t
-            )
-        )
+                t,
+            ),
+        ),
     });
 }

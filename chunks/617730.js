@@ -15,24 +15,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -71,29 +71,35 @@ function _(e) {
         b = null != t.channel ? (0, s.jD)(t.channel) : null,
         E = null != t.target_application ? new l.ZP(t.target_application) : null,
         v = _ || null == t.inviter ? null : new o.Z(t.inviter),
-        j = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != x && x.features.has(d.oNc.COMMUNITY))) && null != v && (0, c.WT)(t),
+        j =
+            !(
+                (null != t.approximate_member_count && t.approximate_member_count > c.mx) ||
+                (null != x && x.features.has(d.oNc.COMMUNITY))
+            ) &&
+            null != v &&
+            (0, c.WT)(t),
         I = g(t),
         O = {
             invite: t,
             user: v,
             guild: x,
             channel: b,
-            application: E
+            application: E,
         };
     return (0, c.JI)(t)
         ? (0, r.jsx)(u.Z, {
               invite: t,
               channel: b,
               isSubmitting: I,
-              onAcceptInvite: n
+              onAcceptInvite: n,
           })
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: p.container,
               children: [
                   (0, r.jsx)(c.GB, {
                       application: E,
                       guild: x,
-                      user: j || (0, c.X7)(t) ? v : null
+                      user: j || (0, c.X7)(t) ? v : null,
                   }),
                   (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, f(m({}, O), { showBigUserIcon: j })),
                   (0, r.jsx)(c.UM, f(m({}, O), { showBigUserIcon: j })),
@@ -102,8 +108,8 @@ function _(e) {
                       onClick: n,
                       submitting: I,
                       className: p.acceptButton,
-                      children: h.intl.string(h.t.ohMvm5)
-                  })
-              ]
+                      children: h.intl.string(h.t.ohMvm5),
+                  }),
+              ],
           });
 }

@@ -1,1 +1,1 @@
-e.exports = { textWithIcon: 'textWithIcon__6e421' };
+e.exports = { textWithIcon: "textWithIcon__6e421" };

@@ -10,7 +10,7 @@ let l = [c.FK.CLICKS_1, c.FK.CLICKS_2, c.FK.CLICKS_3],
 function d() {
     let e = (0, s.e7)([a.Z], () => a.Z.purchasedItems),
         t = (0, s.e7)([a.Z], () => a.Z.getContributionsForItem(c.yN.CLICKER_BUTTON));
-    ((0, r.useEffect)(() => {
+    (0, r.useEffect)(() => {
         if (!a.Z.hasUnlockedAchievement(c.FK.PURCHASE_5)) {
             let t = Object.keys((0, c.w2)()).every((t) => {
                     let n = Number(t);
@@ -25,5 +25,5 @@ function d() {
         }
     }, [e]),
         (0, i.Z)(u, Object.keys(e).length),
-        (0, i.Z)(l, t));
+        (0, i.Z)(l, t);
 }

@@ -1,27 +1,27 @@
 n.d(t, {
     $: () => r,
-    D: () => a
+    D: () => a,
 });
 var l = n(818083);
 let a = (0, n(427164).le)({
-        name: '2025-06-apex-aa-evolving-tenure-badge-web',
-        kind: 'user',
-        defaultConfig: { value: 'blue' },
+        name: "2025-06-apex-aa-evolving-tenure-badge-web",
+        kind: "user",
+        defaultConfig: { value: "blue" },
         variations: {
-            0: { value: 'blue' },
-            1: { value: 'green' }
-        }
+            0: { value: "blue" },
+            1: { value: "green" },
+        },
     }),
     r = (0, l.B)({
-        id: '2025-06_apex_client_aa_rollout',
-        kind: 'user',
-        label: 'Apex Client SDK AA Test Rollout',
+        id: "2025-06_apex_client_aa_rollout",
+        kind: "user",
+        label: "Apex Client SDK AA Test Rollout",
         defaultConfig: { enabled: !1 },
         treatments: [
             {
                 id: 1,
-                label: 'Enabled',
-                config: { enabled: !0 }
-            }
-        ]
+                label: "Enabled",
+                config: { enabled: !0 },
+            },
+        ],
     });

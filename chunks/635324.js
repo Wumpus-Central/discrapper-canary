@@ -5,10 +5,10 @@ var i = n(255367),
     l = n(570140),
     s = n(700785);
 __OVERLAY__ &&
-    l.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
+    l.Z.subscribe("OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN", function (e) {
         var {
                 clientId: t,
-                authorizeProps: { authorizations: a, permissions: c }
+                authorizeProps: { authorizations: a, permissions: c },
             } = e,
             d = (function (e, t) {
                 if (null == e) return {};
@@ -20,22 +20,24 @@ __OVERLAY__ &&
                             i,
                             r = {},
                             o = Object.keys(e);
-                        for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                        for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                    for (i = 0; i < o.length; i++)
+                        (n = o[i]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
-            })(e.authorizeProps, ['authorizations', 'permissions']);
-        let u = 'OAuth2Authorize_'.concat(t, '_').concat(d.guildId, '_').concat(d.channelId);
+            })(e.authorizeProps, ["authorizations", "permissions"]);
+        let u = "OAuth2Authorize_".concat(t, "_").concat(d.guildId, "_").concat(d.channelId);
         function h(e) {
             let { location: n } = e;
             l.Z.dispatch({
-                type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE',
+                type: "OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE",
                 clientId: t,
-                location: n
+                location: n,
             });
         }
         let p = s.Hn;
@@ -53,24 +55,24 @@ __OVERLAY__ &&
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        ((i = n[t]),
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = i));
-                                    }));
+                                                : (e[t] = i);
+                                    });
                             }
                             return e;
                         })({}, t, d)),
@@ -78,7 +80,7 @@ __OVERLAY__ &&
                             {
                                 authorizations: new Map(a),
                                 permissions: p,
-                                callback: h
+                                callback: h,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -92,15 +94,15 @@ __OVERLAY__ &&
                               })(Object(r)).forEach(function (e) {
                                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                               }),
-                        n)
+                        n),
                     );
                 };
             },
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    ((0, o.Mr3)(u), h({}));
-                }
-            }
+                    (0, o.Mr3)(u), h({});
+                },
+            },
         );
     });

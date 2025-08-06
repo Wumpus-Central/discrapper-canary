@@ -12,21 +12,21 @@ n.d(t, {
     qq: () => p,
     rx: () => c,
     w6: () => l,
-    xs: () => a
+    xs: () => a,
 });
 var r = n(713267),
     i = function (e) {
         return null != e;
     },
     o = function (e) {
-        return 'number' == typeof e;
+        return "number" == typeof e;
     },
     a = function (e) {
-        return 'string' == typeof e && r.Z.includes(e);
+        return "string" == typeof e && r.Z.includes(e);
     },
     s = Array.isArray,
     l = function (e, t) {
-        (void 0 === t && (t = e), 1 == arguments.length && ((t = e), (e = 0)));
+        void 0 === t && (t = e), 1 == arguments.length && ((t = e), (e = 0));
         for (var n = [], r = e; r < t; r++) n.push(r);
         return n;
     },
@@ -41,9 +41,11 @@ var r = n(713267),
         return s(e) ? e : [e];
     };
 function d(e, t, n) {
-    void 0 === n && (n = ' ');
+    void 0 === n && (n = " ");
     var r = String(e);
-    return ((t >>= 0), r.length > t) ? String(r) : ((t -= r.length) > n.length && (n += c(n, t / n.length)), n.slice(0, t) + String(r));
+    return ((t >>= 0), r.length > t)
+        ? String(r)
+        : ((t -= r.length) > n.length && (n += c(n, t / n.length)), n.slice(0, t) + String(r));
 }
 var f = function (e, t, n) {
         var r = e.split(t);
@@ -56,7 +58,7 @@ var f = function (e, t, n) {
     p = function (e, t) {
         return {
             div: Math.floor(e / t),
-            mod: _(e, t)
+            mod: _(e, t),
         };
     },
     h = function (e) {

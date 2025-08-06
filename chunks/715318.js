@@ -11,31 +11,31 @@ function d(e) {
         u = a.useRef(null),
         m = (0, o.Z)({
             id: t,
-            label: c.intl.string(c.t['FfCL+/'])
+            label: c.intl.string(c.t["FfCL+/"]),
         }),
         g = (0, s.M)({
             applicationId: t,
-            viewId: d
+            viewId: d,
         });
     return null == m && null == g
         ? null
         : (0, n.jsx)(i.yRy, {
               targetElementRef: u,
-              align: 'top',
-              position: 'right',
+              align: "top",
+              position: "right",
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, n.jsx)(i.v2r, {
-                      navId: 'game-profile-context',
+                      navId: "game-profile-context",
                       onClose: () => {
-                          ((0, l.Zy)(), t());
+                          (0, l.Zy)(), t();
                       },
-                      'aria-label': c.intl.string(c.t.PNeFgY),
+                      "aria-label": c.intl.string(c.t.PNeFgY),
                       onSelect: () => {},
                       children: (0, n.jsxs)(n.Fragment, {
-                          children: [(0, n.jsx)(i.kSQ, { children: m }), (0, n.jsx)(i.kSQ, { children: g })]
-                      })
+                          children: [(0, n.jsx)(i.kSQ, { children: m }), (0, n.jsx)(i.kSQ, { children: g })],
+                      }),
                   });
               },
               children: (e) =>
@@ -49,40 +49,40 @@ function d(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
                                           n = Object.keys(r);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (n = n.concat(
                                               Object.getOwnPropertySymbols(r).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           n.forEach(function (t) {
                                               var n;
-                                              ((n = r[t]),
+                                              (n = r[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: n,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = n));
-                                          }));
+                                                      : (e[t] = n);
+                                          });
                                   }
                                   return e;
                               })(
                                   {
                                       innerRef: u,
-                                      className: r
+                                      className: r,
                                   },
                                   t,
-                                  e
+                                  e,
                               )),
                               (l = l =
                                   {
                                       children: (0, n.jsx)(i.xhG, {
-                                          size: 'xs',
-                                          color: i.TVs.colors.WHITE
-                                      })
+                                          size: "xs",
+                                          color: i.TVs.colors.WHITE,
+                                      }),
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
@@ -96,9 +96,9 @@ function d(e) {
                                     })(Object(l)).forEach(function (e) {
                                         Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
-                              a)
+                              a),
                           );
-                      }
-                  })
+                      },
+                  }),
           });
 }

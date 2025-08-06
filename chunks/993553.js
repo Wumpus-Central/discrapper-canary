@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(692547),
@@ -19,39 +19,41 @@ function c(e) {
                         i,
                         r = {},
                         s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (i = 0; i < s.length; i++)
+                    (n = s[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(e, ['children', 'lineClamp']);
+        })(e, ["children", "lineClamp"]);
     let [m, p] = r.useState(!1),
         [g, h] = r.useState(null),
         f =
             null != g &&
-            (0, i.jsx)('button', {
+            (0, i.jsx)("button", {
                 className: o.button,
                 onClick: () => p((e) => !e),
                 children: (0, i.jsxs)(a.Text, {
                     className: o.seeMore,
-                    variant: 'text-sm/medium',
-                    color: 'text-brand',
+                    variant: "text-sm/medium",
+                    color: "text-brand",
                     children: [
-                        m ? l.intl.string(l.t['JQX/PT']) : l.intl.string(l.t.Fbrd8P),
+                        m ? l.intl.string(l.t["JQX/PT"]) : l.intl.string(l.t.Fbrd8P),
                         m
                             ? (0, i.jsx)(a.u04, {
                                   color: s.Z.colors.TEXT_BRAND,
-                                  size: 'xs'
+                                  size: "xs",
                               })
                             : (0, i.jsx)(a.CJ0, {
                                   color: s.Z.colors.TEXT_BRAND,
-                                  size: 'xs'
-                              })
-                    ]
-                })
+                                  size: "xs",
+                              }),
+                    ],
+                }),
             }),
         [b, x] = r.useState(null),
         _ = r.useCallback(() => {
@@ -60,16 +62,16 @@ function c(e) {
             e > t &&
                 h({
                     truncatedHeight: t,
-                    expandedHeight: e
+                    expandedHeight: e,
                 });
         }, [b]);
     r.useEffect(() => {
         requestAnimationFrame(_);
     }, [_, c, d]);
-    let j = 'auto';
+    let j = "auto";
     return (
-        null != g && (j = m ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),
-        (0, i.jsxs)('div', {
+        null != g && (j = m ? "".concat(g.expandedHeight, "px") : "".concat(g.truncatedHeight, "px")),
+        (0, i.jsxs)("div", {
             children: [
                 (0, i.jsx)(
                     a.Text,
@@ -77,24 +79,24 @@ function c(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    ((i = n[t]),
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = i));
-                                }));
+                                            : (e[t] = i);
+                                });
                         }
                         return e;
                     })({}, u)),
@@ -104,7 +106,7 @@ function c(e) {
                             lineClamp: m ? void 0 : d,
                             ref: x,
                             style: { height: j },
-                            children: c
+                            children: c,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -118,10 +120,10 @@ function c(e) {
                           })(Object(n)).forEach(function (e) {
                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
-                    t)
+                    t),
                 ),
-                f
-            ]
+                f,
+            ],
         })
     );
 }

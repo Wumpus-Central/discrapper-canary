@@ -1,10 +1,10 @@
 e.exports = {
-    BOLD: { fontWeight: 'bold' },
+    BOLD: { fontWeight: "bold" },
     CODE: {
-        fontFamily: 'monospace',
-        wordWrap: 'break-word'
+        fontFamily: "monospace",
+        wordWrap: "break-word",
     },
-    ITALIC: { fontStyle: 'italic' },
-    STRIKETHROUGH: { textDecoration: 'line-through' },
-    UNDERLINE: { textDecoration: 'underline' }
+    ITALIC: { fontStyle: "italic" },
+    STRIKETHROUGH: { textDecoration: "line-through" },
+    UNDERLINE: { textDecoration: "underline" },
 };

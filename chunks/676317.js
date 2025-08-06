@@ -2,7 +2,7 @@ n.d(t, {
     Nb: () => c,
     oA: () => d,
     pr: () => u,
-    ze: () => l
+    ze: () => l,
 });
 var r = n(442837),
     i = n(430824),
@@ -24,12 +24,8 @@ function u(e) {
     return (0, r.e7)([i.Z, o.Z], () => s(e, i.Z, o.Z), [e]);
 }
 function d(e) {
-    return (0, r.e7)(
-        [i.Z],
-        () => {
-            let t = i.Z.getGuild(e);
-            return (null == t ? void 0 : t.features.has(a.oNc.COMMUNITY)) || !1;
-        },
-        [e]
-    );
+    return (0, r.e7)([i.Z], () => {
+        let t = i.Z.getGuild(e);
+        return (null == t ? void 0 : t.features.has(a.oNc.COMMUNITY)) || !1;
+    }, [e]);
 }

@@ -7,11 +7,16 @@ function i(e, t, n, i) {
         u = e.getTrack(),
         d = e.getSyncingWith(),
         f = e.getActivity(),
-        _ = null != (s = null != (a = null == u ? void 0 : u.id) ? a : null == f ? void 0 : f.sync_id) ? s : e.getLastPlayedTrackId(),
+        _ =
+            null != (s = null != (a = null == u ? void 0 : u.id) ? a : null == f ? void 0 : f.sync_id)
+                ? s
+                : e.getLastPlayedTrackId(),
         p = n.id === t.getId(),
         h = l && !c,
         m = null != _ && _ === (null == i ? void 0 : i.sync_id),
-        g = (null == f ? void 0 : f.party) != null && (null == i || null == (o = i.party) ? void 0 : o.id) === f.party.id,
+        g =
+            (null == f ? void 0 : f.party) != null &&
+            (null == i || null == (o = i.party) ? void 0 : o.id) === f.party.id,
         E = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id,
         b = p || h || m,
         y = p || E || g;
@@ -27,6 +32,6 @@ function i(e, t, n, i) {
         currentUserTrackId: _,
         playingSameTrack: m,
         playDisabled: b,
-        syncDisabled: y
+        syncDisabled: y,
     };
 }

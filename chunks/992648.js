@@ -1,1 +1,1 @@
-e.exports = { fixClipping: 'fixClipping_efbae7' };
+e.exports = { fixClipping: "fixClipping_efbae7" };

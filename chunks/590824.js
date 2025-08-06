@@ -1,4 +1,4 @@
 e.exports = {
-    previewPanel: 'previewPanel__6dc2e',
-    divider: 'divider__6dc2e'
+    previewPanel: "previewPanel__6dc2e",
+    divider: "divider__6dc2e",
 };

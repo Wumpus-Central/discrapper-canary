@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => K }), n(358797), n(388685));
+n.r(t), n.d(t, { default: () => K }), n(358797), n(388685);
 var a = n(392711),
     l = n.n(a),
     r = n(261470),
@@ -65,8 +65,8 @@ async function K(e, t) {
                 properties: (0, x.dS)(e),
                 additionalFields: {
                     joinedAt: null != (n = null == (t = e.joinedAt) ? void 0 : t.toISOString()) ? n : null,
-                    premiumSubscriberCount: e.premiumSubscriberCount
-                }
+                    premiumSubscriberCount: e.premiumSubscriberCount,
+                },
             };
         }),
         ee = R.Z.serializeAllGuildRoles(),
@@ -108,8 +108,8 @@ async function K(e, t) {
                 pings: D.Z.getPings(),
                 quality: D.Z.getQuality(),
                 hostname: D.Z.getHostname(),
-                lossRate: D.Z.getOutboundLossRate()
-            }
+                lossRate: D.Z.getOutboundLossRate(),
+            },
         },
         eV = Array.from(c.Z.getState().hiddenHotspots),
         eD = o.Z.getSerializedState(),
@@ -123,7 +123,7 @@ async function K(e, t) {
         eH = Object.values(B.default.getTrackedGames()),
         eW = Q.v.serialize();
     return {
-        type: 'OVERLAY_INITIALIZE',
+        type: "OVERLAY_INITIALIZE",
         version: J.OVERLAY_VERSION,
         users: X,
         guilds: $,
@@ -173,6 +173,6 @@ async function K(e, t) {
         detectableApplications: ej,
         consents: eF,
         trackedGames: eH,
-        overlayStoredSettings: eW
+        overlayStoredSettings: eW,
     };
 }

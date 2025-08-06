@@ -1,14 +1,14 @@
-(n.d(t, {
+n.d(t, {
     Ao: () => g,
     Jv: () => p,
     M0: () => h,
     Qj: () => m,
     VO: () => b,
-    YO: () => E
+    YO: () => E,
 }),
     n(413496),
     n(433524),
-    n(35282));
+    n(35282);
 var r = n(592125),
     i = n(430824),
     o = n(496675),
@@ -16,14 +16,21 @@ var r = n(592125),
     s = n(981631);
 let l = Array.from(n(176505).Vg)
         .map((e) => a.Z.escape(e))
-        .join('|'),
-    c = new RegExp('^/channels/(\\d+|'.concat(s.ME, ')(?:/)?(\\d+|').concat(l, ')?')),
-    u = new RegExp('^/channels/(\\d+|'.concat(s.ME, ')(?:/)(\\d+|').concat(l, ')(?:/)(\\d+)')),
-    d = RegExp('^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)'),
-    f = RegExp('^/guild-stages/(\\d+)(?:/)?(\\d+)?'),
-    _ = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
-    p = new RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|'.concat(s.ME, ')(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?')),
-    h = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)');
+        .join("|"),
+    c = new RegExp("^/channels/(\\d+|".concat(s.ME, ")(?:/)?(\\d+|").concat(l, ")?")),
+    u = new RegExp("^/channels/(\\d+|".concat(s.ME, ")(?:/)(\\d+|").concat(l, ")(?:/)(\\d+)")),
+    d = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
+    f = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
+    _ = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+    p = new RegExp(
+        "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|".concat(
+            s.ME,
+            ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?",
+        ),
+    ),
+    h = RegExp(
+        "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)",
+    );
 function m(e) {
     if (null == e) return null;
     let t = e.match(u);
@@ -31,7 +38,7 @@ function m(e) {
         return {
             guildId: t[1],
             channelId: t[2],
-            messageId: t[3]
+            messageId: t[3],
         };
     let n = e.match(d);
     if (null != n && n.length > 4)
@@ -39,14 +46,14 @@ function m(e) {
             guildId: n[1],
             channelId: n[2],
             threadId: n[3],
-            messageId: n[4]
+            messageId: n[4],
         };
     let r = e.match(c);
     if (null != r && r.length > 1) {
         var i;
         return {
             guildId: r[1],
-            channelId: null != (i = r[2]) ? i : void 0
+            channelId: null != (i = r[2]) ? i : void 0,
         };
     }
     let o = e.match(f);
@@ -59,7 +66,7 @@ function g(e) {
         ? {
               guildId: t[1],
               guildEventId: t[2],
-              recurrenceId: t[3]
+              recurrenceId: t[3],
           }
         : null;
 }

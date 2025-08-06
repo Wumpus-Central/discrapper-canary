@@ -1,12 +1,12 @@
-(Object.defineProperty(t, '__esModule', { value: !0 }),
+Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.calculateChange = function (e, t, r, n) {
         var o = n.clientWidth,
             a = n.clientHeight,
-            i = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-            l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
+            i = "number" == typeof e.pageX ? e.pageX : e.touches[0].pageX,
+            l = "number" == typeof e.pageY ? e.pageY : e.touches[0].pageY,
             s = i - (n.getBoundingClientRect().left + window.pageXOffset),
             u = l - (n.getBoundingClientRect().top + window.pageYOffset);
-        if ('vertical' === t) {
+        if ("vertical" === t) {
             var c = void 0;
             if (((c = u < 0 ? 359 : u > a ? 0 : (360 * (-((100 * u) / a) + 100)) / 100), r.h !== c))
                 return {
@@ -14,7 +14,7 @@
                     s: r.s,
                     l: r.l,
                     a: r.a,
-                    source: 'hsl'
+                    source: "hsl",
                 };
         } else {
             var p = void 0;
@@ -24,8 +24,8 @@
                     s: r.s,
                     l: r.l,
                     a: r.a,
-                    source: 'hsl'
+                    source: "hsl",
                 };
         }
         return null;
-    }));
+    });

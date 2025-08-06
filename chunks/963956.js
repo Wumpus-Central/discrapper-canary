@@ -4,7 +4,7 @@ function i(e) {
     return e;
 }
 function o(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 function a(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,7 +27,7 @@ var s = n(846434),
 e.exports = (function (e) {
     function t() {
         for (var t, n = arguments.length, r = Array(n), o = 0; o < n; o++) r[o] = arguments[o];
-        return (a(i((t = e.call.apply(e, [this].concat(r)) || this)), 'leaf', void 0), t);
+        return a(i((t = e.call.apply(e, [this].concat(r)) || this)), "leaf", void 0), t;
     }
     o(t, e);
     var n = t.prototype;
@@ -46,13 +46,15 @@ e.exports = (function (e) {
                     var l = this.leaf;
                     l || c(!1);
                     var f = l.firstChild;
-                    (f || c(!1), f.nodeType === Node.TEXT_NODE ? (e = f) : u(f) ? (e = l) : (e = f.firstChild) || c(!1), d(t, e, a, i, s));
+                    f || c(!1),
+                        f.nodeType === Node.TEXT_NODE ? (e = f) : u(f) ? (e = l) : (e = f.firstChild) || c(!1),
+                        d(t, e, a, i, s);
                 }
             }
         }),
         (n.shouldComponentUpdate = function (e) {
             var t = this.leaf;
-            return (t || c(!1), t.textContent !== e.text || e.styleSet !== this.props.styleSet || e.forceSelection);
+            return t || c(!1), t.textContent !== e.text || e.styleSet !== this.props.styleSet || e.forceSelection;
         }),
         (n.componentDidUpdate = function () {
             this._setSelection();
@@ -64,7 +66,7 @@ e.exports = (function (e) {
             var e = this,
                 t = this.props.block,
                 n = this.props.text;
-            n.endsWith('\n') && this.props.isLast && (n += '\n');
+            n.endsWith("\n") && this.props.isLast && (n += "\n");
             var i = this.props,
                 o = i.customStyleMap,
                 a = i.customStyleFn,
@@ -73,20 +75,25 @@ e.exports = (function (e) {
                 d = u.reduce(function (e, t) {
                     var n = {},
                         i = o[t];
-                    return (void 0 !== i && e.textDecoration !== i.textDecoration && (n.textDecoration = [e.textDecoration, i.textDecoration].join(' ').trim()), r(e, i, n));
+                    return (
+                        void 0 !== i &&
+                            e.textDecoration !== i.textDecoration &&
+                            (n.textDecoration = [e.textDecoration, i.textDecoration].join(" ").trim()),
+                        r(e, i, n)
+                    );
                 }, {});
             return (
                 a && (d = r(d, a(u, t))),
                 l.createElement(
-                    'span',
+                    "span",
                     {
-                        'data-offset-key': c,
+                        "data-offset-key": c,
                         ref: function (t) {
                             return (e.leaf = t);
                         },
-                        style: d
+                        style: d,
                     },
-                    l.createElement(s, null, n)
+                    l.createElement(s, null, n),
                 )
             );
         }),

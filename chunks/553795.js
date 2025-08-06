@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685));
+n.d(t, { Z: () => P }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,32 +67,47 @@ let p = new Set([n(981631).ABu.CONTACTS]),
     y = {},
     O = {},
     v = (e) => {
-        ((m = e.filter((e) => !p.has(e.type) && s.Z.isSupported(e.type))), (g = e.filter((e) => p.has(e.type))), (h = !1));
+        (m = e.filter((e) => !p.has(e.type) && s.Z.isSupported(e.type))),
+            (g = e.filter((e) => p.has(e.type))),
+            (h = !1);
     };
 function I(e) {
     v(e.connectedAccounts.map((e) => new l.Z(e)));
 }
 function T(e) {
-    e.local && null != e.accounts ? v(e.accounts.map((e) => new l.Z(_(d({}, e), { integrations: e.integrations.map((e) => _(d({}, e), { guild: (0, c.yS)(_(d({}, e.guild), { features: [] })) })) })))) : a.Z.fetch();
+    e.local && null != e.accounts
+        ? v(
+              e.accounts.map(
+                  (e) =>
+                      new l.Z(
+                          _(d({}, e), {
+                              integrations: e.integrations.map((e) =>
+                                  _(d({}, e), { guild: (0, c.yS)(_(d({}, e.guild), { features: [] })) }),
+                              ),
+                          }),
+                      ),
+              ),
+          )
+        : a.Z.fetch();
 }
 function S(e) {
     E[e.integrationId] = e.joining;
 }
 function A(e) {
-    O[e.integrationId] = void 0 !== e.error ? e.error : '';
+    O[e.integrationId] = void 0 !== e.error ? e.error : "";
 }
 function N(e) {
     let { platformType: t, id: n, revoked: r, accessToken: i } = e,
         o = m.find((e) => e.id === n && e.type === t);
     if (null == o) return !1;
-    (null != r && (o.revoked = r), null != i && (o.accessToken = i));
+    null != r && (o.revoked = r), null != i && (o.accessToken = i);
 }
 function C(e) {
     let { code: t, state: n, openid_params: r, provider: i } = e;
     a.Z.callback(i, {
         code: t,
         state: n,
-        openid_params: r
+        openid_params: r,
     });
 }
 class R extends (r = i.ZP.Store) {
@@ -130,12 +145,12 @@ class R extends (r = i.ZP.Store) {
         return b.has(e);
     }
 }
-u(R, 'displayName', 'ConnectedAccountsStore');
+u(R, "displayName", "ConnectedAccountsStore");
 let P = new R(o.Z, {
     CONNECTION_OPEN: I,
     USER_CONNECTIONS_UPDATE: T,
     USER_CONNECTIONS_INTEGRATION_JOINING: S,
     USER_CONNECTION_UPDATE: N,
     USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: A,
-    USER_CONNECTIONS_CALLBACK: C
+    USER_CONNECTIONS_CALLBACK: C,
 });

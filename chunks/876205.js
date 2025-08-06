@@ -10,8 +10,8 @@ var r = n(442837),
 let d = {
     [a.kg4.TOGGLE_MUTE]: {
         slash: o.nRN,
-        default: o.S6n
-    }
+        default: o.S6n,
+    },
 };
 function u(e) {
     let { value: t, action: n, shouldShow: a } = e,
@@ -20,19 +20,19 @@ function u(e) {
     let h = s.BB(u.shortcut),
         p = d[n],
         f = t ? p.slash : p.default;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: c.keybindIndicator,
         children: [
             (0, i.jsx)(f, {
                 className: c.keybindIcon,
-                size: 'xs',
-                color: 'currentColor'
+                size: "xs",
+                color: "currentColor",
             }),
             (0, i.jsx)(o.Text, {
-                variant: 'text-xxs/semibold',
+                variant: "text-xxs/semibold",
                 className: c.keybindIndicatorText,
-                children: h
-            })
-        ]
+                children: h,
+            }),
+        ],
     });
 }

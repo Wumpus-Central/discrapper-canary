@@ -18,14 +18,14 @@ function u(e) {
                     avatarId: t,
                     storageHash: n,
                     canAnimate: p,
-                    size: (0, l.pxk)(null != u ? u : c.m)
+                    size: (0, l.pxk)(null != u ? u : c.m),
                 }),
-            [g, t, n, p, u]
+            [g, t, n, p, u],
         ),
         isAvatarAnimating: p,
         eventHandlers: {
             onMouseEnter: d,
-            onMouseLeave: f
-        }
+            onMouseLeave: f,
+        },
     };
 }

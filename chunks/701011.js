@@ -18,7 +18,7 @@ function O() {
     let {
             embeddedActivity: e,
             channelId: n,
-            guildId: t
+            guildId: t,
         } = (0, i.cj)([d.ZP], () => {
             let e = d.ZP.getCurrentEmbeddedActivity(),
                 n = (0, f.p)(null == e ? void 0 : e.location),
@@ -26,7 +26,7 @@ function O() {
             return {
                 embeddedActivity: e,
                 channelId: n,
-                guildId: t
+                guildId: t,
             };
         }),
         O = o.useRef(null),
@@ -45,35 +45,35 @@ function O() {
             return null == n ? void 0 : c.Z.getApplication(n);
         }),
         x = (0, p.P)();
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: h.container,
         children:
             null == e || null == P
                 ? (0, r.jsx)(l.$jN, { className: h.iframe })
-                : (0, r.jsx)('div', {
+                : (0, r.jsx)("div", {
                       className: h.loadedContentContainer,
-                      children: (0, r.jsxs)('div', {
+                      children: (0, r.jsxs)("div", {
                           className: h.iframeAndHeaderContainer,
                           children: [
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: h.headerContainer,
                                   children: (0, r.jsx)(v.Z, {
                                       applicationId: P.id,
-                                      channelId: n
-                                  })
+                                      channelId: n,
+                                  }),
                               }),
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: h.iframeContainer,
                                   children: (0, r.jsx)(m.Z, {
                                       channelId: n,
                                       guildId: t,
                                       embeddedActivity: e,
-                                      application: P
-                                  })
+                                      application: P,
+                                  }),
                               }),
-                              x ? (0, r.jsx)(u.Z, { isEmbeddedActivity: !0 }) : null
-                          ]
-                      })
-                  })
+                              x ? (0, r.jsx)(u.Z, { isEmbeddedActivity: !0 }) : null,
+                          ],
+                      }),
+                  }),
     });
 }

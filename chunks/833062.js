@@ -4,15 +4,15 @@ var r = n(255367),
     o = n(238454);
 function a(e) {
     let { application: t, useComma: n = !1 } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o.applicationNameWrapper,
         children: [
             (0, r.jsx)(i.Z, {
                 className: o.applicationIcon,
                 game: t,
-                size: i.Z.Sizes.XSMALL
+                size: i.Z.Sizes.XSMALL,
             }),
-            (0, r.jsx)('strong', { children: ''.concat(t.name).concat(n ? ', ' : '') })
-        ]
+            (0, r.jsx)("strong", { children: "".concat(t.name).concat(n ? ", " : "") }),
+        ],
     });
 }

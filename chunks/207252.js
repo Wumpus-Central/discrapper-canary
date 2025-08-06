@@ -19,44 +19,44 @@ function b(e) {
         p = (0, l.wj)(C) ? m : _,
         { rules: y, rulesAccepted: E } = (0, u.V)(t),
         f = i.useCallback(() => {
-            (b(), g());
+            b(), g();
         }, [b, g]);
     return (0, c.jsxs)(s.Y0X, {
         transitionState: n,
-        'aria-labelledby': k,
+        "aria-labelledby": k,
         className: x.modal,
-        parentComponent: 'GuildSettingsJoinRulesDiscoveryModal',
+        parentComponent: "GuildSettingsJoinRulesDiscoveryModal",
         children: [
             (0, c.jsx)(s.olH, {
                 onClick: b,
-                className: x.close
+                className: x.close,
             }),
             (0, c.jsxs)(s.hzk, {
                 className: x.content,
                 children: [
-                    (0, c.jsxs)('div', {
+                    (0, c.jsxs)("div", {
                         className: x.header,
                         children: [
-                            (0, c.jsx)('img', {
-                                alt: '',
+                            (0, c.jsx)("img", {
+                                alt: "",
                                 src: p,
-                                width: 80
+                                width: 80,
                             }),
                             (0, c.jsx)(s.X6q, {
-                                variant: 'heading-xxl/semibold',
-                                color: 'header-primary',
+                                variant: "heading-xxl/semibold",
+                                color: "header-primary",
                                 id: k,
-                                children: h.intl.string(h.t.Q8OFNz)
-                            })
-                        ]
+                                children: h.intl.string(h.t.Q8OFNz),
+                            }),
+                        ],
                     }),
                     (0, c.jsx)(s.Text, {
-                        variant: 'text-md/medium',
-                        color: 'header-secondary',
+                        variant: "text-md/medium",
+                        color: "header-secondary",
                         className: x.centeredText,
-                        children: h.intl.string(h.t['WT+829'])
+                        children: h.intl.string(h.t["WT+829"]),
                     }),
-                    (0, c.jsx)('div', {
+                    (0, c.jsx)("div", {
                         className: x.checkboxContainer,
                         children: y.map((e) =>
                             (0, c.jsxs)(
@@ -69,22 +69,22 @@ function b(e) {
                                     onChange: e.onCheck,
                                     children: [
                                         (0, c.jsx)(s.Text, {
-                                            variant: 'text-md/semibold',
-                                            color: 'header-primary',
-                                            children: e.title
+                                            variant: "text-md/semibold",
+                                            color: "header-primary",
+                                            children: e.title,
                                         }),
                                         (0, c.jsx)(s.Text, {
-                                            variant: 'text-sm/medium',
-                                            color: 'text-secondary',
-                                            children: e.body
-                                        })
-                                    ]
+                                            variant: "text-sm/medium",
+                                            color: "text-secondary",
+                                            children: e.body,
+                                        }),
+                                    ],
                                 },
-                                e.key
-                            )
-                        )
-                    })
-                ]
+                                e.key,
+                            ),
+                        ),
+                    }),
+                ],
             }),
             (0, c.jsx)(s.mzw, {
                 children: (0, c.jsx)(o.zx, {
@@ -94,12 +94,12 @@ function b(e) {
                     onClick: f,
                     size: o.zx.Sizes.LARGE,
                     children: (0, c.jsx)(s.Text, {
-                        variant: 'text-sm/semibold',
-                        color: 'currentColor',
-                        children: h.intl.string(h.t['qjtt/v'])
-                    })
-                })
-            })
-        ]
+                        variant: "text-sm/semibold",
+                        color: "currentColor",
+                        children: h.intl.string(h.t["qjtt/v"]),
+                    }),
+                }),
+            }),
+        ],
     });
 }

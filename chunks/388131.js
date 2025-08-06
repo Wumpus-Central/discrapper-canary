@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     A: () => y,
-    default: () => C
+    default: () => C,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     l = n(73800),
     a = n(442837),
@@ -25,7 +25,7 @@ function y(e, t) {
         id: e,
         type: t,
         deny: m.Hn,
-        allow: p.yP
+        allow: p.yP,
     };
 }
 function C(e) {
@@ -40,7 +40,7 @@ function C(e) {
     let N = async () => {
         R(!0);
         try {
-            (await (function (e, t) {
+            await (function (e, t) {
                 let n = Object.values(t)
                     .filter((e) => {
                         let { row: t } = e;
@@ -52,18 +52,18 @@ function C(e) {
                     });
                 return (0, d.hw)(e.id, n, !0);
             })(E, k),
-                n());
+                n();
         } catch (t) {
             let e = new o.Hx(t);
-            (R(!1), A(e));
+            R(!1), A(e);
         }
     };
     return (0, r.jsxs)(i.Y0X, {
         transitionState: t,
-        'aria-labelledby': C,
+        "aria-labelledby": C,
         size: i.CgR.SMALL,
         className: _.modalRoot,
-        parentComponent: 'AddModeratorsModal',
+        parentComponent: "AddModeratorsModal",
         children: [
             (0, r.jsxs)(i.xBx, {
                 separator: !1,
@@ -72,57 +72,57 @@ function C(e) {
                 className: _.header,
                 children: [
                     (0, r.jsx)(i.X6q, {
-                        variant: 'heading-xl/semibold',
-                        children: j.intl.string(j.t.dMJ3Y2)
+                        variant: "heading-xl/semibold",
+                        children: j.intl.string(j.t.dMJ3Y2),
                     }),
                     (0, r.jsxs)(i.Text, {
-                        variant: 'text-md/normal',
-                        color: 'header-secondary',
+                        variant: "text-md/normal",
+                        color: "header-secondary",
                         className: _.headerSubtitle,
                         children: [
                             (0, r.jsx)(i.ewx, {
-                                size: 'xs',
-                                color: 'currentColor',
-                                className: _.headerSubtitleIcon
+                                size: "xs",
+                                color: "currentColor",
+                                className: _.headerSubtitleIcon,
                             }),
-                            E.name
-                        ]
-                    })
-                ]
+                            E.name,
+                        ],
+                    }),
+                ],
             }),
             (0, r.jsx)(c.U, {
                 guild: S,
                 channel: E,
                 permission: p.yP,
                 pendingAdditions: k,
-                setPendingAdditions: v
+                setPendingAdditions: v,
             }),
             null != f
                 ? (0, r.jsx)(i.Text, {
                       className: _.error,
-                      variant: 'text-xs/normal',
-                      color: 'text-danger',
-                      children: f.getAnyErrorMessage()
+                      variant: "text-xs/normal",
+                      color: "text-danger",
+                      children: f.getAnyErrorMessage(),
                   })
                 : null,
             (0, r.jsx)(i.mzw, {
                 children: (0, r.jsxs)(i.hE2, {
-                    direction: 'horizontal-reverse',
+                    direction: "horizontal-reverse",
                     children: [
                         (0, r.jsx)(i.zxk, {
-                            variant: 'primary',
+                            variant: "primary",
                             text: j.intl.string(j.t.OYkgVl),
                             onClick: N,
-                            loading: w
+                            loading: w,
                         }),
                         (0, r.jsx)(i.zxk, {
-                            variant: 'secondary',
-                            text: j.intl.string(j.t['ETE/oK']),
-                            onClick: n
-                        })
-                    ]
-                })
-            })
-        ]
+                            variant: "secondary",
+                            text: j.intl.string(j.t["ETE/oK"]),
+                            onClick: n,
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

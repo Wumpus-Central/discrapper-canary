@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     N: () => f,
-    Z: () => E
+    Z: () => E,
 }),
-    n(388685));
+    n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -16,7 +16,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,21 @@ function c(e, t, n) {
 let u = new Map(),
     d = new Map();
 var f = (function (e) {
-    return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.FAILED = 3)] = 'FAILED'), e);
+    return (
+        (e[(e.NONE = 0)] = "NONE"),
+        (e[(e.FETCHING = 1)] = "FETCHING"),
+        (e[(e.FETCHED = 2)] = "FETCHED"),
+        (e[(e.FAILED = 3)] = "FAILED"),
+        e
+    );
 })({});
 let _ = new a.Z({
     subscriptions: [],
-    otps: []
+    otps: [],
 });
 function p(e) {
     let { applicationId: t, layout: n } = e;
-    (u.set(t, a.Z.createFromServer(n)), d.delete(t));
+    u.set(t, a.Z.createFromServer(n)), d.delete(t);
 }
 function h(e) {
     let { applicationId: t } = e;
@@ -59,9 +65,9 @@ class g extends (r = i.ZP.Store) {
         return u.has(e) ? 2 : null != (t = d.get(e)) ? t : 0;
     }
 }
-c(g, 'displayName', 'ApplicationStoreDirectoryStore');
+c(g, "displayName", "ApplicationStoreDirectoryStore");
 let E = new g(o.Z, {
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: p,
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: h,
-    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: m
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: m,
 });

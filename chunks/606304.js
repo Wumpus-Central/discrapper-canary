@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685), n(997841));
+n.d(t, { Z: () => N }), n(388685), n(997841);
 var r,
     i = n(442837),
     o = n(570140),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,17 +29,19 @@ let p = new Map(),
 function E() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT,
         t = p.get(e);
-    return (null == t && ((t = new Map()), p.set(e, t)), t);
+    return null == t && ((t = new Map()), p.set(e, t)), t;
 }
 function b(e, t) {
     let n = p.get(e);
     if (null == n) return !1;
     let r = n.delete(t);
-    return (0 === n.size && p.delete(e), r);
+    return 0 === n.size && p.delete(e), r;
 }
 function y(e, t, n) {
     var r, i, o;
-    return ((null != (o = null == (i = p.get(e)) || null == (r = i.get(t)) ? void 0 : r.flags) ? o : f.Dg.NONE) & n) === n;
+    return (
+        ((null != (o = null == (i = p.get(e)) || null == (r = i.get(t)) ? void 0 : r.flags) ? o : f.Dg.NONE) & n) === n
+    );
 }
 function O(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -54,22 +56,22 @@ function v(e, t, n) {
         a = o.get(t),
         s = null != (r = null == a ? void 0 : a.flags) ? r : 0;
     if (0 === s && 0 === n) return !1;
-    if (0 === n) (o.delete(t), 0 === o.size && p.delete(e));
+    if (0 === n) o.delete(t), 0 === o.size && p.delete(e);
     else {
         let e = null != (i = null == a ? void 0 : a.since) ? i : null,
             r = (s & f.Dg.VOICE) === f.Dg.VOICE,
             l = (n & f.Dg.VOICE) === f.Dg.VOICE;
-        (r !== l && (e = l ? Date.now() : null),
+        r !== l && (e = l ? Date.now() : null),
             o.set(t, {
                 flags: n,
-                since: e
-            }));
+                since: e,
+            });
     }
     return !0;
 }
 function I(e) {
     let { user: t, sessionId: n } = e;
-    ((h = t.id), (m = n), (g = null));
+    (h = t.id), (m = n), (g = null);
 }
 function T(e) {
     let { context: t, userId: n, speakingFlags: r } = e;
@@ -79,12 +81,12 @@ function T(e) {
         a.BT({
             permission: d.Plq.PRIORITY_SPEAKER,
             user: n,
-            context: e
+            context: e,
         })
             ? l.Z.setCanHavePriority(n, !0)
             : (l.Z.setCanHavePriority(n, !1), (r &= ~f.Dg.PRIORITY));
     }
-    return ((r & f.Dg.HIDDEN) === f.Dg.HIDDEN && (r = 0), v(t, n, r));
+    return (r & f.Dg.HIDDEN) === f.Dg.HIDDEN && (r = 0), v(t, n, r);
 }
 function S(e) {
     let { voiceStates: t } = e;
@@ -92,12 +94,22 @@ function S(e) {
         let { userId: n, channelId: r, sessionId: i } = t,
             o = !1,
             a = g;
-        return (n === h && i === m && (g = null != r ? r : null), a !== g && (o = p.delete(f.Yn.DEFAULT) || o), null == r ? (o = n === h && i === m ? p.delete(f.Yn.DEFAULT) || o : b(f.Yn.DEFAULT, n) || o) : n === h && i !== m ? (o = p.delete(f.Yn.DEFAULT) || o) : n !== h && r !== c.Z.getChannelId() && (o = b(f.Yn.DEFAULT, n) || o), o || e);
+        return (
+            n === h && i === m && (g = null != r ? r : null),
+            a !== g && (o = p.delete(f.Yn.DEFAULT) || o),
+            null == r
+                ? (o = n === h && i === m ? p.delete(f.Yn.DEFAULT) || o : b(f.Yn.DEFAULT, n) || o)
+                : n === h && i !== m
+                  ? (o = p.delete(f.Yn.DEFAULT) || o)
+                  : n !== h && r !== c.Z.getChannelId() && (o = b(f.Yn.DEFAULT, n) || o),
+            o || e
+        );
     }, !1);
 }
 class A extends (r = i.ZP.Store) {
     initialize() {
-        (this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(c.Z));
+        this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
+            this.waitFor(c.Z);
     }
     getSpeakingDuration(e, t) {
         var n, r;
@@ -108,7 +120,9 @@ class A extends (r = i.ZP.Store) {
     getSpeakers() {
         var e, t;
         let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT;
-        return Array.from(null != (t = null == (e = p.get(n)) ? void 0 : e.keys()) ? t : []).filter((e) => y(n, e, f.Dg.VOICE));
+        return Array.from(null != (t = null == (e = p.get(n)) ? void 0 : e.keys()) ? t : []).filter((e) =>
+            y(n, e, f.Dg.VOICE),
+        );
     }
     isSpeaking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.Yn.DEFAULT;
@@ -143,10 +157,10 @@ class A extends (r = i.ZP.Store) {
         return null != h && this.isPrioritySpeaker(h, e) && this.isSpeaking(h, e);
     }
 }
-_(A, 'displayName', 'SpeakingStore');
+_(A, "displayName", "SpeakingStore");
 let N = new A(o.Z, {
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: I,
     SPEAKING: T,
-    VOICE_STATE_UPDATES: S
+    VOICE_STATE_UPDATES: S,
 });

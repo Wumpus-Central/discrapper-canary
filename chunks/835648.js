@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -79,7 +79,8 @@ function C(e, t) {
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,14 +90,14 @@ function R(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let P = [8, 8, 8, 8],
     w = 40;
 function D(e) {
     var { icon: t, isSelected: n, onClick: i, listItemProps: o } = e,
-        s = C(e, ['icon', 'isSelected', 'onClick', 'listItemProps']);
+        s = C(e, ["icon", "isSelected", "onClick", "listItemProps"]);
     return (0, r.jsx)(
         c.P3F,
         N(S({}, o, s), {
@@ -104,9 +105,9 @@ function D(e) {
             className: a()(I.categoryIcon, { [I.selected]: n }),
             children: (0, r.jsx)(t, {
                 className: I.categoryIconIcon,
-                color: 'currentColor'
-            })
-        })
+                color: "currentColor",
+            }),
+        }),
     );
 }
 function L(e, t, n, i, o, a) {
@@ -118,9 +119,9 @@ function L(e, t, n, i, o, a) {
                     icon: c.r7p,
                     onClick: t,
                     isSelected: n,
-                    listItemProps: o
+                    listItemProps: o,
                 }),
-                e.key
+                e.key,
             );
         case g.bg.RECENTLY_HEARD:
             return (0, r.jsx)(
@@ -129,9 +130,9 @@ function L(e, t, n, i, o, a) {
                     icon: c.T39,
                     onClick: t,
                     isSelected: n,
-                    listItemProps: o
+                    listItemProps: o,
                 }),
-                e.key
+                e.key,
             );
         case g.bg.FREQUENTLY_USED:
             return (0, r.jsx)(
@@ -140,9 +141,9 @@ function L(e, t, n, i, o, a) {
                     icon: c.IeX,
                     onClick: t,
                     isSelected: n,
-                    listItemProps: o
+                    listItemProps: o,
                 }),
-                e.key
+                e.key,
             );
         case g.bg.GUILD:
             return (0, r.jsx)(
@@ -153,10 +154,10 @@ function L(e, t, n, i, o, a) {
                     children: (0, r.jsx)(u.Z, {
                         guild: e.categoryInfo.guild,
                         isSelected: n,
-                        isLocked: a
-                    })
+                        isLocked: a,
+                    }),
                 }),
-                e.key
+                e.key,
             );
         case g.bg.DEFAULTS:
             return (0, r.jsx)(
@@ -165,9 +166,9 @@ function L(e, t, n, i, o, a) {
                     icon: c.gw7,
                     onClick: t,
                     isSelected: n,
-                    listItemProps: o
+                    listItemProps: o,
                 }),
-                e.key
+                e.key,
             );
         default:
             return null;
@@ -178,13 +179,13 @@ function x(e) {
         case g.bg.FAVORITES:
             return v.intl.string(v.t.k8fFjo);
         case g.bg.RECENTLY_HEARD:
-            return v.intl.string(v.t['8i/+SE']);
+            return v.intl.string(v.t["8i/+SE"]);
         case g.bg.FREQUENTLY_USED:
-            return v.intl.string(v.t['+cGVV1']);
+            return v.intl.string(v.t["+cGVV1"]);
         case g.bg.GUILD:
             return (0, r.jsx)(_.K, {
                 guild: e.categoryInfo.guild,
-                includeActivity: !1
+                includeActivity: !1,
             });
         case g.bg.DEFAULTS:
             return v.intl.string(v.t.Rtvk9f);
@@ -195,9 +196,9 @@ function M(e) {
         case g.bg.FAVORITES:
             return v.intl.string(v.t.k8fFjo);
         case g.bg.RECENTLY_HEARD:
-            return v.intl.string(v.t['8i/+SE']);
+            return v.intl.string(v.t["8i/+SE"]);
         case g.bg.FREQUENTLY_USED:
-            return v.intl.string(v.t['+cGVV1']);
+            return v.intl.string(v.t["+cGVV1"]);
         case g.bg.GUILD:
             return e.categoryInfo.guild.name;
         case g.bg.DEFAULTS:
@@ -206,16 +207,23 @@ function M(e) {
 }
 function k(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: o, isNitroLocked: a } = e,
-        l = (0, s.JA)('soundboard_guild_'.concat(n));
+        l = (0, s.JA)("soundboard_guild_".concat(n));
     return (0, r.jsx)(c.ua7, {
         text: x(t),
-        'aria-label': M(t),
-        position: 'right',
-        children: (e) => L(t, i, o, e, l, a)
+        "aria-label": M(t),
+        position: "right",
+        children: (e) => L(t, i, o, e, l, a),
     });
 }
 function j(e) {
-    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: o, listPadding: a = P, guildId: s, inExpressionPicker: c } = e,
+    let {
+            soundboardListRef: t,
+            categories: n,
+            shouldUpsellLockedCategories: o,
+            listPadding: a = P,
+            guildId: s,
+            inExpressionPicker: c,
+        } = e,
         u = i.useRef(null),
         _ = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         g = (0, m.I5)(_, O.p9.TIER_2),
@@ -223,25 +231,25 @@ function j(e) {
             (e, t, n, i) => {
                 let a = o && (0, E.O)(e.categoryInfo, g, s),
                     l = () => {
-                        (h.default.track(b.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                        h.default.track(b.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: { page: b.ZY5.SOUNDBOARD_POPOUT },
                             guild_id: null != s ? s : null,
                             num_expressions: e.items.length,
                             tab: y.X1.SOUNDBOARD,
                             sticker_pack_id: null,
-                            pack_id: null
+                            pack_id: null,
                         }),
-                            n());
+                            n();
                     };
                 return (0, r.jsx)(k, {
                     category: e,
                     categoryIndex: t,
                     onClick: l,
                     isSelected: i,
-                    isNitroLocked: a
+                    isNitroLocked: a,
                 });
             },
-            [s, o, g]
+            [s, o, g],
         );
     return (0, r.jsx)(f.Z, {
         className: c ? I.expressionPickerCategoryList : I.categoryList,
@@ -252,6 +260,6 @@ function j(e) {
         listPadding: a,
         renderCategoryListItem: v,
         rowCount: n.length,
-        categoryHeight: w
+        categoryHeight: w,
     });
 }

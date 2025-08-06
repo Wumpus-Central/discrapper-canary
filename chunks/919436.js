@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(415506), n(388685));
+n.d(t, { Z: () => D }), n(415506), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
@@ -32,7 +32,7 @@ function N(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -42,15 +42,15 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -74,33 +74,33 @@ function Z(e, t) {
 }
 let T = {
     friction: 28,
-    tension: 600
+    tension: 600,
 };
 function A(e) {
     switch (e) {
-        case 'height':
-        case 'opacity':
+        case "height":
+        case "opacity":
             return w({ duration: 150 }, T);
-        case 'scale':
+        case "scale":
             return w({}, T);
         default:
-            throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
+            throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)));
     }
 }
 class R extends (r = l.PureComponent) {
     componentWillEnter(e) {
         let { controller: t } = this.state;
-        (e(),
+        e(),
             t
                 .update({
                     immediate: !C.Z.isFocused(),
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: A
+                    config: A,
                 })
                 .start()
-                .then(() => this.setState({ animating: !1 })));
+                .then(() => this.setState({ animating: !1 }));
     }
     componentWillAppear(e) {
         let { controller: t } = this.state;
@@ -109,7 +109,7 @@ class R extends (r = l.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: A
+            config: A,
         })
             .start()
             .then(e);
@@ -123,10 +123,10 @@ class R extends (r = l.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: A
+                    config: A,
                 })
                 .start()
-                .then(e)
+                .then(e),
         );
     }
     componentWillUnmount() {
@@ -139,7 +139,7 @@ class R extends (r = l.PureComponent) {
         return {
             opacity: n,
             height: r.to([0, 1], [0, e]),
-            transform: i.to([0, 1], [0.5, 1]).to((e) => 'scale('.concat(e, ')'))
+            transform: i.to([0, 1], [0.5, 1]).to((e) => "scale(".concat(e, ")")),
         };
     }
     getChannelIcon() {
@@ -148,7 +148,19 @@ class R extends (r = l.PureComponent) {
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
-        let { channel: e, channelName: t, selected: n, badge: r, audio: l, video: s, stream: a, isCurrentUserInThisDMCall: u, unread: d, isGDMFacepileEnabled: h, treeItemProps: p } = this.props,
+        let {
+                channel: e,
+                channelName: t,
+                selected: n,
+                badge: r,
+                audio: l,
+                video: s,
+                stream: a,
+                isCurrentUserInThisDMCall: u,
+                unread: d,
+                isGDMFacepileEnabled: h,
+                treeItemProps: p,
+            } = this.props,
             { hovered: f, animating: m } = this.state,
             b = e.isMultiUserDM() && null == e.icon && h;
         return (0, i.jsx)(o.animated.div, {
@@ -159,10 +171,10 @@ class R extends (r = l.PureComponent) {
                         hovered: !m && f,
                         selected: !m && n,
                         unread: !m && d,
-                        className: P.pill
+                        className: P.pill,
                     }),
                     (0, i.jsx)(E.Z, {
-                        text: null != t ? t : '',
+                        text: null != t ? t : "",
                         selected: n,
                         children: (0, i.jsx)(c.aRk, {
                             rounded: !0,
@@ -172,7 +184,7 @@ class R extends (r = l.PureComponent) {
                                 audio: l,
                                 video: s,
                                 screenshare: a,
-                                isCurrentUserConnected: u
+                                isCurrentUserConnected: u,
                             }),
                             lowerBadgeSize: { width: (0, c.OVM)(r) },
                             children: (0, i.jsx)(
@@ -187,77 +199,85 @@ class R extends (r = l.PureComponent) {
                                             null != t
                                                 ? I.intl.formatToPlainString(I.t.hKarnZ, {
                                                       mentions: r,
-                                                      name: t
+                                                      name: t,
                                                   })
-                                                : '',
+                                                : "",
                                         onContextMenu: this.handleContextMenu,
                                         icon: b ? void 0 : this.getChannelIcon(),
-                                        backgroundStyle: b ? 'on-hover' : 'always',
+                                        backgroundStyle: b ? "on-hover" : "always",
                                         children: b
                                             ? (0, i.jsx)(g.Z, {
                                                   channel: e,
                                                   size: c.EFr.SIZE_40,
                                                   facepileSizeOverride: c.EFr.SIZE_32,
-                                                  experimentLocation: 'unread_gdm',
-                                                  'aria-hidden': !0
+                                                  experimentLocation: "unread_gdm",
+                                                  "aria-hidden": !0,
                                               })
-                                            : void 0
+                                            : void 0,
                                     },
-                                    p
-                                )
-                            )
-                        })
-                    })
-                ]
-            })
+                                    p,
+                                ),
+                            ),
+                        }),
+                    }),
+                ],
+            }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            N(this, 'state', {
+        super(...e),
+            N(this, "state", {
                 hovered: !1,
                 animating: !0,
                 controller: new o.Controller({
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: A
-                })
+                    config: A,
+                }),
             }),
-            N(this, 'handleContextMenu', (e) => {
+            N(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
                     r = t.type === x.d4z.DM ? y.default.getUser(t.getRecipientId()) : null;
                 null != r
                     ? (0, u.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('53912'), n.e('98783'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
+                          let { default: e } = await Promise.all([
+                              n.e("79695"),
+                              n.e("53912"),
+                              n.e("98783"),
+                              n.e("56826"),
+                              n.e("45903"),
+                          ]).then(n.bind(n, 131404));
                           return (n) =>
                               (0, i.jsx)(
                                   e,
                                   Z(w({}, n), {
                                       channel: t,
-                                      user: r
-                                  })
+                                      user: r,
+                                  }),
                               );
                       })
                     : (0, u.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('53912'), n.e('2016')]).then(n.bind(n, 354741));
+                          let { default: e } = await Promise.all([n.e("79695"), n.e("53912"), n.e("2016")]).then(
+                              n.bind(n, 354741),
+                          );
                           return (n) =>
                               (0, i.jsx)(
                                   e,
                                   Z(w({}, n), {
                                       channel: t,
-                                      selected: !1
-                                  })
+                                      selected: !1,
+                                  }),
                               );
                       });
-            }));
+            });
     }
 }
-N(R, 'defaultProps', {
+N(R, "defaultProps", {
     badge: 0,
     audio: !1,
     video: !1,
-    isCurrentUserInThisDMCall: !1
+    isCurrentUserInThisDMCall: !1,
 });
 let D = l.forwardRef(function (e, t) {
     let n = e.channel.id,
@@ -268,7 +288,7 @@ let D = l.forwardRef(function (e, t) {
         h = (0, a.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
         g = (0, a.e7)([_.Z], () => _.Z.getChannelId(), []),
         y = (0, a.e7)([O.ZP], () => O.ZP.getMentionCount(n), [n]),
-        { isFacepileEnabled: C } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
+        { isFacepileEnabled: C } = f.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
         v = o === n,
         j = !1,
         E = !1;
@@ -288,7 +308,7 @@ let D = l.forwardRef(function (e, t) {
             isCurrentUserInThisDMCall: v,
             isGDMFacepileEnabled: C,
             size: S,
-            treeItemProps: l
-        })
+            treeItemProps: l,
+        }),
     );
 });

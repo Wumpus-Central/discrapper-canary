@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => d,
-    Z: () => p
+    Z: () => p,
 });
 var r = n(570140),
     i = n(447543),
@@ -12,20 +12,20 @@ var r = n(570140),
     u = n(981631);
 async function d(e, t) {
     let { invite: n } = await i.ZP.resolveInvite(e, t);
-    if (null == n) throw new s.Z({ errorCode: u.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(e));
+    if (null == n) throw new s.Z({ errorCode: u.lTL.INVALID_INVITE }, "Invalid invite id: ".concat(e));
     return (
         a.default.isAuthenticated()
             ? r.Z.dispatch({
-                  type: 'INVITE_MODAL_OPEN',
+                  type: "INVITE_MODAL_OPEN",
                   invite: n,
                   code: e,
-                  context: u.IlC.APP
+                  context: u.IlC.APP,
               })
             : (0, l.dL)(u.Z5c.INVITE(e)),
         o.ZP.focus(),
         {
             invite: n,
-            code: e
+            code: e,
         }
     );
 }
@@ -34,9 +34,9 @@ let p = {
         scope: c.lH,
         async handler(e) {
             let {
-                args: { code: t }
+                args: { code: t },
             } = e;
-            await d(t, 'RPC OPEN_INVITE Handler');
-        }
-    }
+            await d(t, "RPC OPEN_INVITE Handler");
+        },
+    },
 };

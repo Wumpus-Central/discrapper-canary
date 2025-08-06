@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     HH: () => O,
     O9: () => f,
     Vu: () => h,
@@ -19,10 +19,10 @@
     tB: () => y,
     uo: () => S,
     vD: () => b,
-    x3: () => m
+    x3: () => m,
 }),
     n(953529),
-    n(388685));
+    n(388685);
 var r = n(592125),
     i = n(823379),
     o = n(700785),
@@ -38,7 +38,7 @@ let s = 7,
     h = 200,
     m = 7;
 var g = (function (e) {
-    return ((e[(e.VIEW = 0)] = 'VIEW'), (e[(e.CHAT = 1)] = 'CHAT'), e);
+    return (e[(e.VIEW = 0)] = "VIEW"), (e[(e.CHAT = 1)] = "CHAT"), e;
 })({});
 function E(e) {
     var t;
@@ -53,9 +53,9 @@ function E(e) {
                 : {
                       id: e.emoji.id,
                       name: e.emoji.name,
-                      animated: e.emoji.animated
+                      animated: e.emoji.animated,
                   },
-        icon: null != (t = e.icon) ? t : null
+        icon: null != (t = e.icon) ? t : null,
     };
 }
 function b(e) {
@@ -63,16 +63,16 @@ function b(e) {
     return {
         channelId: e.channel_id,
         title: e.title,
-        description: null != (t = e.description) ? t : '',
+        description: null != (t = e.description) ? t : "",
         emoji:
             null == e.emoji
                 ? null
                 : {
                       id: e.emoji.id,
                       name: e.emoji.name,
-                      animated: e.emoji.animated
+                      animated: e.emoji.animated,
                   },
-        icon: null != (n = e.icon) ? n : null
+        icon: null != (n = e.icon) ? n : null,
     };
 }
 function y(e) {
@@ -80,13 +80,13 @@ function y(e) {
     let { welcome_message: t, new_member_actions: n, resource_channels: o, enabled: a } = e,
         s = {
             authorIds: t.author_ids,
-            message: t.message
+            message: t.message,
         };
     return {
         welcomeMessage: s,
         newMemberActions: n.filter((e) => (0, i.lm)(r.Z.getChannel(e.channel_id))).map(E),
         resourceChannels: o.filter((e) => (0, i.lm)(r.Z.getChannel(e.channel_id))).map(b),
-        enabled: a
+        enabled: a,
     };
 }
 function O(e, t) {
@@ -95,7 +95,7 @@ function O(e, t) {
     let { welcomeMessage: a, newMemberActions: s, resourceChannels: l, enabled: c } = t,
         u = {
             author_ids: null != (n = null == a ? void 0 : a.authorIds) ? n : [],
-            message: null != (o = null == a ? void 0 : a.message) ? o : ''
+            message: null != (o = null == a ? void 0 : a.message) ? o : "",
         };
     return {
         guild_id: e,
@@ -112,9 +112,9 @@ function O(e, t) {
                     emoji: {
                         id: null != (i = null == (t = e.emoji) ? void 0 : t.id) ? i : void 0,
                         name: null != (o = null == (n = e.emoji) ? void 0 : n.name) ? o : void 0,
-                        animated: null != (a = null == (r = e.emoji) ? void 0 : r.animated) ? a : void 0
+                        animated: null != (a = null == (r = e.emoji) ? void 0 : r.animated) ? a : void 0,
                     },
-                    icon: null != (s = e.icon) ? s : void 0
+                    icon: null != (s = e.icon) ? s : void 0,
                 };
             }),
         resource_channels: (null != l ? l : [])
@@ -128,12 +128,12 @@ function O(e, t) {
                     emoji: {
                         id: null != (i = null == (t = e.emoji) ? void 0 : t.id) ? i : void 0,
                         name: null != (o = null == (n = e.emoji) ? void 0 : n.name) ? o : void 0,
-                        animated: null != (a = null == (r = e.emoji) ? void 0 : r.animated) ? a : void 0
+                        animated: null != (a = null == (r = e.emoji) ? void 0 : r.animated) ? a : void 0,
                     },
-                    icon: null != (s = e.icon) ? s : void 0
+                    icon: null != (s = e.icon) ? s : void 0,
                 };
             }),
-        enabled: c
+        enabled: c,
     };
 }
 let v = (e) => {
@@ -143,16 +143,32 @@ let v = (e) => {
     return t;
 };
 function I(e) {
-    return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)));
+    return (
+        null == e ||
+        ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)))
+    );
 }
 function T(e) {
-    return null == e || (!!I(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)));
+    return (
+        null == e ||
+        (!!I(e.welcomeMessage) &&
+            (null == e.newMemberActions || !(e.newMemberActions.length > 0)) &&
+            (null == e.resourceChannels || !(e.resourceChannels.length > 0)))
+    );
 }
 function S(e) {
     var t, n;
     if (null == e) return !1;
     if (T(e)) return !0;
-    if ((null == (t = e.welcomeMessage) ? void 0 : t.message) == null || e.welcomeMessage.message.length < s || (null == (n = e.welcomeMessage) ? void 0 : n.authorIds) == null || 0 === e.welcomeMessage.authorIds.length || null == e.newMemberActions || e.newMemberActions.length < d) return !1;
+    if (
+        (null == (t = e.welcomeMessage) ? void 0 : t.message) == null ||
+        e.welcomeMessage.message.length < s ||
+        (null == (n = e.welcomeMessage) ? void 0 : n.authorIds) == null ||
+        0 === e.welcomeMessage.authorIds.length ||
+        null == e.newMemberActions ||
+        e.newMemberActions.length < d
+    )
+        return !1;
     if (null != e.newMemberActions)
         for (let t of e.newMemberActions) {
             let e = r.Z.getChannel(t.channelId);
@@ -175,5 +191,12 @@ function N(e) {
     }
 }
 var C = (function (e) {
-    return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.TODO = 1)] = 'TODO'), (e[(e.RESOURCE = 2)] = 'RESOURCE'), (e[(e.RULES = 3)] = 'RULES'), (e[(e.UPDATES = 4)] = 'UPDATES'), e);
+    return (
+        (e[(e.DEFAULT = 0)] = "DEFAULT"),
+        (e[(e.TODO = 1)] = "TODO"),
+        (e[(e.RESOURCE = 2)] = "RESOURCE"),
+        (e[(e.RULES = 3)] = "RULES"),
+        (e[(e.UPDATES = 4)] = "UPDATES"),
+        e
+    );
 })({});

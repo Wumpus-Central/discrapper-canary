@@ -1,4 +1,4 @@
-(n.d(t, { ApplicationCommandShareModal: () => C }), n(388685), n(35282));
+n.d(t, { ApplicationCommandShareModal: () => C }), n(388685), n(35282);
 var r = n(255367),
     l = n(73800),
     a = n(755721),
@@ -22,24 +22,24 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -72,21 +72,29 @@ function w(e) {
         }, [o]);
     return (0, r.jsx)(i.mzw, {
         className: x.footerWithMessage,
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: x.footerButtons,
             children: (0, r.jsx)(a.zx, {
                 className: x.sendWithMessage,
                 submitting: s,
                 disabled: !n,
                 onClick: u,
-                children: t
-            })
-        })
+                children: t,
+            }),
+        }),
     });
 }
 function C(e) {
     var t,
-        { applicationId: n, channel: a, command: s, onClose: y, requireLaunchChannel: C, onShareResult: E, previewMessage: N } = e,
+        {
+            applicationId: n,
+            channel: a,
+            command: s,
+            onClose: y,
+            requireLaunchChannel: C,
+            onShareResult: E,
+            previewMessage: N,
+        } = e,
         Z = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -97,27 +105,37 @@ function C(e) {
                         r,
                         l = {},
                         a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ['applicationId', 'channel', 'command', 'onClose', 'requireLaunchChannel', 'onShareResult', 'previewMessage']);
+        })(e, [
+            "applicationId",
+            "channel",
+            "command",
+            "onClose",
+            "requireLaunchChannel",
+            "onShareResult",
+            "previewMessage",
+        ]);
     let L = l.useMemo(() => (null == a ? null : (0, u.dL)(a.id)), [a]),
         [M, D] = l.useState(!1),
         { commands: T, loading: k } =
             ((t = l.useMemo(
                 () =>
                     null == a
-                        ? { type: 'contextless' }
+                        ? { type: "contextless" }
                         : {
-                              type: 'channel',
-                              channel: a
+                              type: "channel",
+                              channel: a,
                           },
-                [a]
+                [a],
             )),
             (0, h.v1)(
                 t,
@@ -125,35 +143,35 @@ function C(e) {
                 {
                     applicationId: n,
                     allowFetch: !0,
-                    allowApplicationState: !0
-                }
+                    allowApplicationState: !0,
+                },
             )),
         A = l.useRef(0),
         [R, I] = l.useState(C && null != L ? [L] : []),
         F = R.length,
         q = F >= 5,
-        [U, z] = l.useState(''),
+        [U, z] = l.useState(""),
         { results: H, updateSearchText: W } = (0, c.s)({
             selectedDestinations: R,
             originDestination: null != L ? L : void 0,
-            includeMissingDMs: !0
+            includeMissingDMs: !0,
         }),
         G = l.useCallback(
             (e) => {
-                (z(e), W(e));
+                z(e), W(e);
             },
-            [W]
+            [W],
         ),
         X = l.useCallback(() => {
-            (E(!1), y());
+            E(!1), y();
         }, [E, y]),
         [B] = (0, o.Z)([n]),
         V = l.useCallback(() => {
-            z('');
+            z("");
         }, [z]),
         Y = l.useRef(null);
     l.useEffect(() => {
-        if ('' === U) {
+        if ("" === U) {
             var e;
             null == (e = Y.current) || e.focus();
         }
@@ -165,12 +183,12 @@ function C(e) {
                         let { type: n, id: r } = t;
                         return n === e.type && r === e.id;
                     });
-                    if (-1 === n) return q ? t : (z(''), W(''), (A.current += 1), [e, ...t]);
+                    if (-1 === n) return q ? t : (z(""), W(""), (A.current += 1), [e, ...t]);
                     let r = [...t];
-                    return (r.splice(n, 1), (A.current += 1), r);
+                    return r.splice(n, 1), (A.current += 1), r;
                 });
             },
-            [q, W]
+            [q, W],
         ),
         [Q, K] = l.useMemo(() => {
             if (k) return [null, !1];
@@ -183,7 +201,7 @@ function C(e) {
                 if (null === Q) return;
                 D(!0);
                 let n = (await Promise.all(e.map(u.qx))).filter(b.lm);
-                (t && (E(!0), P()),
+                t && (E(!0), P()),
                     n.forEach(async (e) => {
                         var t, n;
                         let r = d.Z.getChannel(e);
@@ -197,13 +215,13 @@ function C(e) {
                                               (e, t) => (
                                                   (e[t.name] = [
                                                       {
-                                                          type: 'text',
-                                                          text: t.value
-                                                      }
+                                                          type: "text",
+                                                          text: t.value,
+                                                      },
                                                   ]),
                                                   e
                                               ),
-                                              {}
+                                              {},
                                           ))
                                     ? n
                                     : {},
@@ -214,14 +232,15 @@ function C(e) {
                                 optionValues: l,
                                 context: {
                                     channel: r,
-                                    guild: a
-                                }
-                            })) && (0, i.showToast)((0, i.createToast)(v.intl.string(v.t['5WjJcn']), i.ToastType.MESSAGE));
+                                    guild: a,
+                                },
+                            })) &&
+                            (0, i.showToast)((0, i.createToast)(v.intl.string(v.t["5WjJcn"]), i.ToastType.MESSAGE));
                     }),
                     E(!0),
-                    P());
+                    P();
             },
-            [E, Q, s.options]
+            [E, Q, s.options],
         ),
         ee = l.useCallback(() => {
             $(R, { closeAfterSend: !0 });
@@ -233,15 +252,15 @@ function C(e) {
                 O(
                     {
                         className: x.modal,
-                        'aria-label': v.intl.string(v.t.fuFvw8)
+                        "aria-label": v.intl.string(v.t.fuFvw8),
                     },
-                    Z
+                    Z,
                 ),
                 {
-                    parentComponent: 'ApplicationCommandShareModal',
-                    children: (0, r.jsx)(i.$jN, { className: x.spinnerContainer })
-                }
-            )
+                    parentComponent: "ApplicationCommandShareModal",
+                    children: (0, r.jsx)(i.$jN, { className: x.spinnerContainer }),
+                },
+            ),
         );
     if (K)
         return (0, r.jsx)(
@@ -250,15 +269,15 @@ function C(e) {
                 O(
                     {
                         className: x.modal,
-                        'aria-label': v.intl.string(v.t.fuFvw8)
+                        "aria-label": v.intl.string(v.t.fuFvw8),
                     },
-                    Z
+                    Z,
                 ),
                 {
-                    parentComponent: 'ApplicationCommandShareModal',
-                    children: (0, r.jsx)(i.hzk, { children: v.intl.string(v.t.yAk8ZW) })
-                }
-            )
+                    parentComponent: "ApplicationCommandShareModal",
+                    children: (0, r.jsx)(i.hzk, { children: v.intl.string(v.t.yAk8ZW) }),
+                },
+            ),
         );
     let et =
         H.length > 0
@@ -269,22 +288,22 @@ function C(e) {
                   handleToggleDestination: J,
                   selectedDestinations: R,
                   disableSelection: q,
-                  originDestination: L
+                  originDestination: L,
               })
             : (0, r.jsxs)(i.hzk, {
                   className: x.noResults,
                   children: [
-                      (0, r.jsx)('img', {
+                      (0, r.jsx)("img", {
                           className: x.noResultsImg,
                           src: j,
-                          alt: ''
+                          alt: "",
                       }),
                       (0, r.jsx)(i.Text, {
-                          variant: 'text-md/normal',
-                          color: 'text-muted',
-                          children: v.intl.string(v.t.V6nAfH)
-                      })
-                  ]
+                          variant: "text-md/normal",
+                          color: "text-muted",
+                          children: v.intl.string(v.t.V6nAfH),
+                      }),
+                  ],
               });
     return (0, r.jsxs)(
         i.Y0X,
@@ -292,47 +311,47 @@ function C(e) {
             O(
                 {
                     className: x.modal,
-                    'aria-label': v.intl.string(v.t.fuFvw8)
+                    "aria-label": v.intl.string(v.t.fuFvw8),
                 },
-                Z
+                Z,
             ),
             {
-                parentComponent: 'ApplicationCommandShareModal',
+                parentComponent: "ApplicationCommandShareModal",
                 children: [
                     (0, r.jsxs)(i.xBx, {
                         className: x.header,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: x.titleLine,
                                 children: [
-                                    (0, r.jsx)('div', {
+                                    (0, r.jsx)("div", {
                                         className: x.title,
                                         children: (0, r.jsxs)(i.y5t, {
                                             component: (0, r.jsxs)(i.X6q, {
-                                                variant: 'heading-lg/semibold',
-                                                children: ['Share from ', null == B ? void 0 : B.name, '?']
+                                                variant: "heading-lg/semibold",
+                                                children: ["Share from ", null == B ? void 0 : B.name, "?"],
                                             }),
                                             children: [
                                                 q
                                                     ? (0, r.jsx)(i.Text, {
-                                                          variant: 'text-sm/normal',
-                                                          color: 'text-feedback-warning',
-                                                          children: v.intl.format(v.t['/KhyPT'], { count: 5 })
+                                                          variant: "text-sm/normal",
+                                                          color: "text-feedback-warning",
+                                                          children: v.intl.format(v.t["/KhyPT"], { count: 5 }),
                                                       })
                                                     : null,
                                                 (0, r.jsx)(i.X6q, {
-                                                    variant: 'heading-sm/normal',
-                                                    color: 'header-muted',
-                                                    children: v.intl.string(v.t['DF+q2t'])
-                                                })
-                                            ]
-                                        })
+                                                    variant: "heading-sm/normal",
+                                                    color: "header-muted",
+                                                    children: v.intl.string(v.t["DF+q2t"]),
+                                                }),
+                                            ],
+                                        }),
                                     }),
                                     (0, r.jsx)(i.olH, {
                                         className: x.closeButton,
-                                        onClick: X
-                                    })
-                                ]
+                                        onClick: X,
+                                    }),
+                                ],
                             }),
                             void 0 !== N ? (0, r.jsx)(p.z, { previewMessage: N }) : null,
                             (0, r.jsx)(i.E1j, {
@@ -341,21 +360,21 @@ function C(e) {
                                 query: U,
                                 onChange: G,
                                 onClear: V,
-                                placeholder: v.intl.string(v.t['5h0QOD']),
-                                'aria-label': v.intl.string(v.t['5h0QOD']),
-                                autoFocus: !0
-                            })
-                        ]
+                                placeholder: v.intl.string(v.t["5h0QOD"]),
+                                "aria-label": v.intl.string(v.t["5h0QOD"]),
+                                autoFocus: !0,
+                            }),
+                        ],
                     }),
                     et,
                     (0, r.jsx)(w, {
                         sendLabel: v.intl.string(v.t.TXNS7e),
                         canSend: F > 0,
                         isSending: M,
-                        onSend: ee
-                    })
-                ]
-            }
-        )
+                        onSend: ee,
+                    }),
+                ],
+            },
+        ),
     );
 }

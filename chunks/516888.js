@@ -1,4 +1,4 @@
-(n.d(t, { fE: () => y }), n(953529), n(415506));
+n.d(t, { fE: () => y }), n(953529), n(415506);
 var r = n(512722),
     i = n.n(r),
     o = n(442837),
@@ -15,17 +15,17 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let _ = new a.Yd('KvStore'),
-    p = Symbol('setKv'),
-    h = Symbol('setMetadata'),
+let _ = new a.Yd("KvStore"),
+    p = Symbol("setKv"),
+    h = Symbol("setMetadata"),
     m = Object.prototype.hasOwnProperty,
-    g = Symbol('version'),
+    g = Symbol("version"),
     E = h,
     b = p;
 class y extends o.yh {
@@ -37,54 +37,62 @@ class y extends o.yh {
         return () => {
             let { memoized: n } = this.derived,
                 r = n[t];
-            return (m.call(n, t) || ((r = e(this.root)), (n[t] = r)), r);
+            return m.call(n, t) || ((r = e(this.root)), (n[t] = r)), r;
         };
     }
     version() {
         let e = this.derived.memoized[g];
-        return (null == e && (this.derived.memoized[g] = e = ++this.nextVersion), e);
+        return null == e && (this.derived.memoized[g] = e = ++this.nextVersion), e;
     }
     get(e) {
         return this.root[e];
     }
     setKvRoot(e, t) {
-        ((this.root = e), (this.derived = t));
+        (this.root = e), (this.derived = t);
     }
     length() {
         return this.derived.length;
     }
-    constructor(e, t = 'typescript') {
-        'typescript' === t || (0, u.F)() || (_.warn('Attempted to create a KvStore in mode '.concat(t, ', but libdiscore is not available. Falling back to typescript mode.')), (t = 'typescript'));
+    constructor(e, t = "typescript") {
+        "typescript" === t ||
+            (0, u.F)() ||
+            (_.warn(
+                "Attempted to create a KvStore in mode ".concat(
+                    t,
+                    ", but libdiscore is not available. Falling back to typescript mode.",
+                ),
+            ),
+            (t = "typescript"));
         let n = {};
-        if ('typescript' === t || 'typescript-libdiscore-dual-read' === t) {
+        if ("typescript" === t || "typescript-libdiscore-dual-read" === t) {
             let t = !1,
                 r = {
                     reset: (e) => {
                         let n = {};
-                        ('function' == typeof e ? e((n = {}), this.root) : null != e && (n = e),
+                        "function" == typeof e ? e((n = {}), this.root) : null != e && (n = e),
                             this.setKvRoot(n, {
                                 length: Object.keys(n).length,
-                                memoized: {}
+                                memoized: {},
                             }),
-                            (t = !0));
+                            (t = !0);
                     },
                     get: (e) => this.root[e],
                     set: (e, n) => {
                         let r = this.root[e];
-                        if (('function' == typeof n && (n = n(r)), void 0 !== r && (0, l.$E)(r, n))) return !1;
+                        if (("function" == typeof n && (n = n(r)), void 0 !== r && (0, l.$E)(r, n))) return !1;
                         this.root[e] = n;
                         let { derived: i } = this;
-                        return (void 0 === r && i.length++, (i.memoized = {}), (t = !0), !0);
+                        return void 0 === r && i.length++, (i.memoized = {}), (t = !0), !0;
                     },
                     remove: (e) => {
                         let n = m.call(this.root, e);
                         if (n) {
                             delete this.root[e];
                             let { derived: n } = this;
-                            (n.length--, (n.memoized = {}), (t = !0));
+                            n.length--, (n.memoized = {}), (t = !0);
                         }
                         return n;
-                    }
+                    },
                 };
             for (let i in e) {
                 let o = e[i],
@@ -96,65 +104,75 @@ class y extends o.yh {
         }
         switch (
             (super(s.Z, n),
-            f(this, 'mode', void 0),
-            f(this, 'shadowState', void 0),
+            f(this, "mode", void 0),
+            f(this, "shadowState", void 0),
             f(this, E, void 0),
             f(this, b, void 0),
-            f(this, 'root', void 0),
-            f(this, 'derived', void 0),
-            f(this, 'nextVersion', void 0),
+            f(this, "root", void 0),
+            f(this, "derived", void 0),
+            f(this, "nextVersion", void 0),
             (this.mode = t),
             (this.shadowState = null),
             (this.root = {}),
             (this.derived = {
                 length: 0,
-                memoized: {}
+                memoized: {},
             }),
             (this.nextVersion = 0),
-            _.info(''.concat(this.getName(), ' initialized in mode: ').concat(this.mode)),
+            _.info("".concat(this.getName(), " initialized in mode: ").concat(this.mode)),
             t)
         ) {
-            case 'typescript-libdiscore-dual-read':
-                ((this.shadowState = {
+            case "typescript-libdiscore-dual-read":
+                (this.shadowState = {
                     root: {},
                     derived: {
                         length: 0,
-                        memoized: {}
-                    }
+                        memoized: {},
+                    },
                 }),
                     (this[h] = (e) => {
-                        (i()(null != this.shadowState, 'Shadow state must be set in dual-read mode before setting derived data.'), (this.shadowState.derived = e));
+                        i()(
+                            null != this.shadowState,
+                            "Shadow state must be set in dual-read mode before setting derived data.",
+                        ),
+                            (this.shadowState.derived = e);
                     }),
                     (this[p] = (e, t) => {
-                        (i()(null != this.shadowState, 'Shadow state must be set in dual-read mode before setting derived data.'),
+                        i()(
+                            null != this.shadowState,
+                            "Shadow state must be set in dual-read mode before setting derived data.",
+                        ),
                             (this.shadowState = {
                                 root: e,
-                                derived: t
-                            }));
+                                derived: t,
+                            });
                     }),
                     this.addChangeListener(() => {
-                        (i()(null != this.shadowState, 'Shadow state must be set in dual-read mode before running validation.'),
+                        i()(
+                            null != this.shadowState,
+                            "Shadow state must be set in dual-read mode before running validation.",
+                        ),
                             (0, d.t)(
                                 this.getName(),
                                 {
                                     root: this.root,
-                                    derived: this.derived
+                                    derived: this.derived,
                                 },
-                                this.shadowState
-                            ));
-                    }));
+                                this.shadowState,
+                            );
+                    });
                 break;
-            case 'libdiscore':
-                ((this[h] = (e) => {
+            case "libdiscore":
+                (this[h] = (e) => {
                     this.derived = e;
                 }),
                     (this[p] = (e, t) => {
                         this.setKvRoot(e, t);
-                    }));
+                    });
                 break;
-            case 'typescript':
+            case "typescript":
                 this[h] = this[p] = () => {
-                    throw Error('This method should not be called in TypeScript mode.');
+                    throw Error("This method should not be called in TypeScript mode.");
                 };
                 break;
             default:

@@ -1,6 +1,6 @@
 n.d(t, {
     A: () => v,
-    openUploadError: () => I
+    openUploadError: () => I,
 });
 var r = n(255367);
 n(73800);
@@ -26,7 +26,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,55 +52,55 @@ function O(e) {
     let { title: t, help: n, showPremiumUpsell: i, transitionState: a, icons: b, fileSize: y, onClose: O } = e,
         v = (0, l.Dt)(),
         I = null != b ? b : m.J6,
-        T = (0, u.Z)({ location: 'UploadError' }),
+        T = (0, u.Z)({ location: "UploadError" }),
         S = () => {
-            ((0, c.Z)(),
+            (0, c.Z)(),
                 O(),
                 p.default.track(g.rMx.PREMIUM_PROMOTION_OPENED, {
                     location_section: g.jXE.FILE_UPLOAD_UPSELL_MODAL,
-                    location_object: g.qAy.NAVIGATION_LINK
+                    location_object: g.qAy.NAVIGATION_LINK,
                 }),
-                (0, _.uL)(g.Z5c.APPLICATION_STORE));
+                (0, _.uL)(g.Z5c.APPLICATION_STORE);
         };
     return i
         ? T
             ? (0, r.jsx)(f.Z, {
                   transitionState: a,
                   onClose: O,
-                  handleLearnMore: S
+                  handleLearnMore: S,
               })
             : (0, r.jsx)(d.Z, {
                   transitionState: a,
                   onClose: O,
                   handleLearnMore: S,
-                  fileSize: y
+                  fileSize: y,
               })
         : (0, r.jsx)(s.Y0, {
               size: s.Cg.DYNAMIC,
-              'aria-labelledby': v,
+              "aria-labelledby": v,
               transitionState: a,
-              parentComponent: 'UploadError',
-              children: (0, r.jsx)('div', {
+              parentComponent: "UploadError",
+              children: (0, r.jsx)("div", {
                   className: o()(E.uploadDropModal, E.error),
-                  children: (0, r.jsxs)('div', {
+                  children: (0, r.jsxs)("div", {
                       className: E.inner,
                       children: [
                           (0, r.jsx)(h.Z, { icons: I }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               id: v,
                               className: E.title,
-                              children: t
+                              children: t,
                           }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: E.instructions,
-                              children: n
-                          })
-                      ]
-                  })
-              })
+                              children: n,
+                          }),
+                      ],
+                  }),
+              }),
           });
 }
-let v = 'UPLOAD_ERROR_MODAL_KEY';
+let v = "UPLOAD_ERROR_MODAL_KEY";
 function I(e) {
     (0, a.h7)((t) => (0, r.jsx)(O, y({}, t, e)), { modalKey: v });
 }

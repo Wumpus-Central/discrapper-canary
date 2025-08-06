@@ -31,19 +31,19 @@ function T(e) {
         S = T && null != h.Z.pipVideoWindow && null != h.Z.pipFrameWindow;
     if (null == n || null == u) return null;
     let A = {
-        instance_id: 'example-cl-instance',
-        platform: y.S4.DESKTOP
+        instance_id: "example-cl-instance",
+        platform: y.S4.DESKTOP,
     };
     function N(e) {
         let { onActive: t, onForceIdle: i, idle: o } = e;
         return T && null != n
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           onMouseMove: t,
                           onMouseDown: t,
                           onMouseLeave: i,
-                          className: O.clickShield
+                          className: O.clickShield,
                       }),
                       (0, r.jsx)(E.F, {
                           idle: o,
@@ -53,12 +53,12 @@ function T(e) {
                           onFocus: () => {
                               (0, m.eU)({
                                   applicationId: n.applicationId,
-                                  layoutMode: b.U.FOCUSED
+                                  layoutMode: b.U.FOCUSED,
                               });
                           },
-                          applicationId: n.applicationId
-                      })
-                  ]
+                          applicationId: n.applicationId,
+                      }),
+                  ],
               })
             : null;
     }
@@ -73,34 +73,34 @@ function T(e) {
                     [v.idle]: i,
                     [O.pipModeShort]: T,
                     [O.hidden]: d,
-                    [O.multiPIPMode]: S
+                    [O.multiPIPMode]: S,
                 }),
                 noBorder: !T,
                 children: [
-                    (0, r.jsx)('div', {
-                        className: 'theme-dark',
+                    (0, r.jsx)("div", {
+                        className: "theme-dark",
                         children: N({
                             onActive: a,
                             onForceIdle: f,
-                            idle: i
-                        })
+                            idle: i,
+                        }),
                     }),
                     t
                         ? (0, r.jsx)(s.$jN, { className: o()(O.iframe, { [O.pipModeShort]: T }) })
                         : (0, r.jsx)(c.J, {
                               allowPopups: (0, l.h)(u),
-                              referrerPolicy: 'origin',
+                              referrerPolicy: "origin",
                               url: n.url,
                               queryParams: A,
                               className: o()(O.iframe, {
                                   [O.pipModeShort]: T,
-                                  [O.pipNonInteractive]: T
+                                  [O.pipNonInteractive]: T,
                               }),
-                              shouldRefocus: !T
-                          })
-                ]
+                              shouldRefocus: !T,
+                          }),
+                ],
             });
-        }
+        },
     });
 }
 let S = () => {
@@ -108,6 +108,6 @@ let S = () => {
         t = (0, a.e7)([g.Z], () => g.Z.isFrameActive());
     return (0, r.jsx)(d.Gt, {
         value: e,
-        children: (0, r.jsx)(T, { isLoading: !t })
+        children: (0, r.jsx)(T, { isLoading: !t }),
     });
 };

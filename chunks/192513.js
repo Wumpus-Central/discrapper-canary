@@ -15,24 +15,24 @@ function p() {
 }
 class h extends (l = a.ZP.Store) {
     initialize() {
-        (this.waitFor(c.default, s.ZP), this.syncWith([c.default, s.ZP], p));
+        this.waitFor(c.default, s.ZP), this.syncWith([c.default, s.ZP], p);
     }
     isVisible(e) {
         return null != e && e.mfaLevel === u.BpS.ELEVATED && !1 === d && s.ZP.hasElevatedPermissions(e.id);
     }
 }
-((i = 'GuildMFAWarningStore'),
-    (r = 'displayName') in h
+(i = "GuildMFAWarningStore"),
+    (r = "displayName") in h
         ? Object.defineProperty(h, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (h[r] = i));
+        : (h[r] = i);
 let f = new h(o.Z, {
     CONNECTION_OPEN: p,
     GUILD_UPDATE: function () {
         return !0;
-    }
+    },
 });

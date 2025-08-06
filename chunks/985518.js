@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     Ct: () => u,
     UP: () => l,
     ZP: () => f,
-    rj: () => c
+    rj: () => c,
 }),
     n(539854),
-    n(388685));
+    n(388685);
 var r = n(929991),
     i = n(480739),
     o = n(228392),
@@ -17,14 +17,14 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 function l(e) {
-    return ''.concat(i.AT.FORUM_CHANNEL, '_').concat(e);
+    return "".concat(i.AT.FORUM_CHANNEL, "_").concat(e);
 }
 function c(e, t, n) {
     (0, r.a8)(l(e), t, n);
@@ -46,20 +46,20 @@ function d(e) {
             channelId: n,
             sessionId: r,
             postIds: s,
-            additionalTimes: l
+            additionalTimes: l,
         });
 }
 class f extends i.zQ {
     constructor({ guildId: e, channelId: t, windowId: n, isPaused: r }) {
-        (super({
+        super({
             windowId: n,
             isPaused: r,
-            id: l(t)
+            id: l(t),
         }),
-            s(this, 'guildId', void 0),
-            s(this, 'channelId', void 0),
-            s(this, 'sessionId', void 0),
-            s(this, 'createFlushSeenItemsFunction', (e) => {
+            s(this, "guildId", void 0),
+            s(this, "channelId", void 0),
+            s(this, "sessionId", void 0),
+            s(this, "createFlushSeenItemsFunction", (e) => {
                 let t = this.trackedFeedItems,
                     n = this.channelId,
                     r = {
@@ -67,12 +67,12 @@ class f extends i.zQ {
                         channelId: n,
                         sessionId: this.sessionId,
                         trackedFeedItems: t,
-                        isForcedFlush: null != e
+                        isForcedFlush: null != e,
                     };
                 return () => d(r);
             }),
             (this.guildId = e),
             (this.channelId = t),
-            (this.sessionId = (0, a.WW)(t)));
+            (this.sessionId = (0, a.WW)(t));
     }
 }

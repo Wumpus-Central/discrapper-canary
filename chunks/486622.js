@@ -1,4 +1,4 @@
-(n.d(t, { m: () => g }), n(388685));
+n.d(t, { m: () => g }), n(388685);
 var r = n(73800),
     i = n(707019),
     o = n.n(i),
@@ -27,7 +27,7 @@ function g(e) {
                 if (!R) {
                     y(!0);
                     try {
-                        (await (0, f.e4)(e), A(!0), null == n || n());
+                        await (0, f.e4)(e), A(!0), null == n || n();
                     } catch (t) {
                         let e = new a.Hx(t);
                         null == g || g(e);
@@ -36,14 +36,14 @@ function g(e) {
                     }
                 }
             },
-            [R, n, g]
+            [R, n, g],
         ),
         w = r.useCallback(
             async (e) => {
                 if (!R) {
                     v(!0);
                     try {
-                        (await (0, f.gN)(e), C(!0), null == i || i());
+                        await (0, f.gN)(e), C(!0), null == i || i();
                     } catch (t) {
                         let e = new a.Hx(t);
                         null == g || g(e);
@@ -52,7 +52,7 @@ function g(e) {
                     }
                 }
             },
-            [R, i, g]
+            [R, i, g],
         ),
         D = r.useCallback(
             async (e) => {
@@ -61,7 +61,7 @@ function g(e) {
                 let t = o()(e, h.t$);
                 try {
                     for (let e of t) await (0, f.r_)(e);
-                    (C(!0), null == i || i());
+                    C(!0), null == i || i();
                 } catch (t) {
                     let e = new a.Hx(t);
                     null == g || g(e);
@@ -69,7 +69,7 @@ function g(e) {
                     v(!1);
                 }
             },
-            [R, i, g]
+            [R, i, g],
         ),
         L = r.useCallback(
             async (e) => {
@@ -79,7 +79,7 @@ function g(e) {
                     try {
                         await (0, c.Z)(t.id, t.getAvatarURL(void 0, 80), {
                             withMutualGuilds: !0,
-                            withMutualFriendsCount: !0
+                            withMutualFriendsCount: !0,
                         });
                     } catch (e) {
                     } finally {
@@ -88,51 +88,61 @@ function g(e) {
                 }
                 let n = () => {
                         var n;
-                        let r = null != t ? (null == (n = l.Z.getMutualGuilds(t.id)) ? void 0 : n.map((e) => e.guild.id)) : [];
+                        let r =
+                            null != t
+                                ? null == (n = l.Z.getMutualGuilds(t.id))
+                                    ? void 0
+                                    : n.map((e) => e.guild.id)
+                                : [];
                         d.default.track(m.rMx.MESSAGE_REQUEST_ACTION, {
                             action: h.cl.DISMISS_CONFIRMATION_PROMPT,
                             channel_id: e,
                             mutual_guild_ids: null != r ? r : [],
-                            other_user_id: null == t ? void 0 : t.id
+                            other_user_id: null == t ? void 0 : t.id,
                         });
                     },
                     r = async () => {
                         var n;
-                        let r = null != t ? (null == (n = l.Z.getMutualGuilds(t.id)) ? void 0 : n.map((e) => e.guild.id)) : [];
-                        (d.default.track(m.rMx.MESSAGE_REQUEST_ACTION, {
+                        let r =
+                            null != t
+                                ? null == (n = l.Z.getMutualGuilds(t.id))
+                                    ? void 0
+                                    : n.map((e) => e.guild.id)
+                                : [];
+                        d.default.track(m.rMx.MESSAGE_REQUEST_ACTION, {
                             action: h.cl.ACCEPT_CONFIRMATION_PROMPT,
                             channel_id: e,
                             mutual_guild_ids: null != r ? r : [],
-                            other_user_id: null == t ? void 0 : t.id
+                            other_user_id: null == t ? void 0 : t.id,
                         }),
-                            await P(e));
+                            await P(e);
                     };
                 (0, _.H)({
                     channelId: e,
                     onConfirm: r,
-                    onCancel: n
+                    onCancel: n,
                 });
             },
-            [P, R, t]
+            [P, R, t],
         ),
         x = r.useCallback(
             (e, t, n) => {
                 let r = (r, i) => {
-                        (i && u.kJ.updateSetting(r),
+                        i && u.kJ.updateSetting(r),
                             r && null != t && (0, s.zd)(t),
                             P(e.id),
                             d.default.track(m.rMx.MESSAGE_REQUEST_ACTION, {
                                 action: h.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,
                                 channel_id: e.id,
                                 is_dont_show_again_checked: i,
-                                non_spam_retraining_opt_in: r
+                                non_spam_retraining_opt_in: r,
                             }),
-                            null != n && n());
+                            null != n && n();
                     },
                     i = () => {
                         d.default.track(m.rMx.MESSAGE_REQUEST_ACTION, {
                             action: h.cl.DISMISS_HAM_CONFIRMATION_PROMPT,
-                            channel_id: e.id
+                            channel_id: e.id,
                         });
                     },
                     o = u.kJ.getSetting();
@@ -140,11 +150,11 @@ function g(e) {
                     ? (0, _.V)({
                           channel: e,
                           onConfirm: r,
-                          onCancel: i
+                          onCancel: i,
                       })
                     : r(o);
             },
-            [P]
+            [P],
         );
     return {
         acceptMessageRequest: E ? L : P,
@@ -155,6 +165,6 @@ function g(e) {
         isRejectLoading: O,
         isUserProfileLoading: I,
         isOptimisticAccepted: S,
-        isOptimisticRejected: N
+        isOptimisticRejected: N,
     };
 }

@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,11 +44,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,14 +69,14 @@ function b(e) {
         h = (null == n ? void 0 : n.type) === c.W.EMOJI_HOSE,
         g = i.useRef(null),
         b = (e, t) => {
-            (null != e
+            null != e
                 ? (0, s.Bo)({
                       type: c.W.EMOJI_HOSE,
                       emojiName: e.name,
-                      emojiId: e.id
+                      emojiId: e.id,
                   })
                 : h && (0, s.Bo)(null),
-                null == t || t());
+                null == t || t();
         };
     return (0, r.jsx)(_.Z, {
         renderPopout: (e) => {
@@ -87,8 +87,8 @@ function b(e) {
                     channel: t,
                     closePopout: n,
                     onFocus: i,
-                    onSelectEmoji: (e) => b(e, n)
-                })
+                    onSelectEmoji: (e) => b(e, n),
+                }),
             });
         },
         popoutTargetRef: g,
@@ -100,9 +100,9 @@ function b(e) {
                     iconComponent: a.j9u,
                     isActive: h || e.isActive,
                     onClick: (t) => {
-                        (b(null), e.onClick(t));
-                    }
-                })
-            )
+                        b(null), e.onClick(t);
+                    },
+                }),
+            ),
     });
 }

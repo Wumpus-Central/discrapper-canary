@@ -1,4 +1,4 @@
-(n.d(t, { d: () => p }), n(953529), n(388685), n(539854));
+n.d(t, { d: () => p }), n(953529), n(388685), n(539854);
 var r = n(442837),
     i = n(570140),
     o = n(311929);
@@ -9,20 +9,20 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let s = Symbol('version'),
-    l = Symbol.for('Kkv.PartitionDerivedData'),
-    c = Symbol('boxedPartition'),
+let s = Symbol("version"),
+    l = Symbol.for("Kkv.PartitionDerivedData"),
+    c = Symbol("boxedPartition"),
     u = Object.freeze({}),
     d = Object.freeze({
         current: u,
         length: 0,
-        version: -1
+        version: -1,
     }),
     f = Object.hasOwnProperty;
 function _(e, t) {
@@ -39,14 +39,14 @@ function _(e, t) {
 class p extends r.yh {
     _derivedVersion(e) {
         let t = e[s];
-        return (null == t && (e[s] = t = this.nextVersion++), t);
+        return null == t && (e[s] = t = this.nextVersion++), t;
     }
     mapPartitions(e) {
         let t = [];
         for (let n in this.root)
             t.push({
                 partitionKey: n,
-                values: e(this.root[n].root, n)
+                values: e(this.root[n].root, n),
             });
         return t;
     }
@@ -83,7 +83,7 @@ class p extends r.yh {
         if (null == t) return d;
         let {
                 root: n,
-                [l]: { memoized: r, length: i }
+                [l]: { memoized: r, length: i },
             } = t,
             o = r[c];
         return (
@@ -92,7 +92,7 @@ class p extends r.yh {
                     {
                         current: n,
                         version: this._derivedVersion(r),
-                        length: i
+                        length: i,
                     }),
             o
         );
@@ -119,10 +119,10 @@ class p extends r.yh {
             if (null == i) return n;
             let {
                     root: o,
-                    [l]: { memoized: a }
+                    [l]: { memoized: a },
                 } = i,
                 s = a[t];
-            return (f.call(a, t) || ((s = e(o)), (a[t] = s)), s);
+            return f.call(a, t) || ((s = e(o)), (a[t] = s)), s;
         };
     }
     memoized(e) {
@@ -130,54 +130,54 @@ class p extends r.yh {
         return () => {
             let { memoized: n } = this.derived,
                 r = n[t];
-            return (f.call(n, t) || ((r = e(this.root)), (n[t] = r)), r);
+            return f.call(n, t) || ((r = e(this.root)), (n[t] = r)), r;
         };
     }
     setKkvRoot(e, t) {
-        ((this.root = e), (this.derived = t));
+        (this.root = e), (this.derived = t);
     }
-    constructor(e, t = 'typescript') {
+    constructor(e, t = "typescript") {
         let n = {};
-        if ('typescript' === t) {
+        if ("typescript" === t) {
             let t = !1,
                 r = {
                     reset: (e) => {
                         let n = {};
-                        'function' == typeof e ? e(n, this.root) : null != e && (n = e);
+                        "function" == typeof e ? e(n, this.root) : null != e && (n = e);
                         let r = {},
                             i = 0,
                             o = 0;
                         for (let e in n) {
                             let t = Object.keys(n[e]).length;
-                            (i++,
+                            i++,
                                 (o += t),
                                 (r[e] = {
                                     root: n[e],
                                     [l]: {
                                         length: t,
-                                        memoized: {}
-                                    }
-                                }));
+                                        memoized: {},
+                                    },
+                                });
                         }
                         (0 !== o || 0 !== this.derived.length) &&
                             ((t = !0),
                             this.setKkvRoot(r, {
                                 memoized: {},
                                 numPartitions: i,
-                                length: o
+                                length: o,
                             }));
                     },
                     set: (e, n, r) => {
                         let i = this.root[e];
                         if (null == i)
                             return (
-                                (r = 'function' == typeof r ? r(void 0) : r),
+                                (r = "function" == typeof r ? r(void 0) : r),
                                 (this.root[e] = {
                                     root: { [n]: r },
                                     [l]: {
                                         length: 1,
-                                        memoized: {}
-                                    }
+                                        memoized: {},
+                                    },
                                 }),
                                 this.derived.numPartitions++,
                                 this.derived.length++,
@@ -185,12 +185,20 @@ class p extends r.yh {
                                 !0
                             );
                         let a = i.root[n];
-                        return ('function' == typeof r && (r = r(a)), !(void 0 !== a && (0, o.$E)(a, r)) && ((i.root[n] = r), void 0 === a && (i[l].length++, this.derived.length++), (i[l].memoized = {}), (t = !0), !0));
+                        return (
+                            "function" == typeof r && (r = r(a)),
+                            !(void 0 !== a && (0, o.$E)(a, r)) &&
+                                ((i.root[n] = r),
+                                void 0 === a && (i[l].length++, this.derived.length++),
+                                (i[l].memoized = {}),
+                                (t = !0),
+                                !0)
+                        );
                     },
                     setPartition: (e, n) => {
                         let r = this.root[e];
                         if (null == r) {
-                            'function' == typeof n && (n = n(void 0));
+                            "function" == typeof n && (n = n(void 0));
                             let r = Object.keys(n).length;
                             return (
                                 0 !== r &&
@@ -198,8 +206,8 @@ class p extends r.yh {
                                     root: n,
                                     [l]: {
                                         length: r,
-                                        memoized: {}
-                                    }
+                                        memoized: {},
+                                    },
                                 }),
                                 this.derived.numPartitions++,
                                 (this.derived.length += r),
@@ -207,7 +215,7 @@ class p extends r.yh {
                                 !0)
                             );
                         }
-                        if (('function' == typeof n && (n = n(r.root)), _(r.root, n))) return !1;
+                        if (("function" == typeof n && (n = n(r.root)), _(r.root, n))) return !1;
                         let i = Object.keys(n).length,
                             o = r[l].length;
                         return (
@@ -218,8 +226,8 @@ class p extends r.yh {
                                       root: n,
                                       [l]: {
                                           length: i,
-                                          memoized: {}
-                                      }
+                                          memoized: {},
+                                      },
                                   }),
                                   (this.derived.length += i)),
                             (t = !0),
@@ -236,14 +244,27 @@ class p extends r.yh {
                     },
                     remove: (e, n) => {
                         let r = this.root[e];
-                        return null != r && void 0 !== r.root[n] && (delete r.root[n], r[l].length--, 0 === r[l].length ? (delete this.root[e], this.derived.numPartitions--) : (r[l].memoized = {}), this.derived.length--, (t = !0), !0);
+                        return (
+                            null != r &&
+                            void 0 !== r.root[n] &&
+                            (delete r.root[n],
+                            r[l].length--,
+                            0 === r[l].length
+                                ? (delete this.root[e], this.derived.numPartitions--)
+                                : (r[l].memoized = {}),
+                            this.derived.length--,
+                            (t = !0),
+                            !0)
+                        );
                     },
                     removePartition: (e) => {
                         let n = this.root[e];
                         if (null == n) return !1;
                         let r = n[l].length;
-                        return (delete this.root[e], this.derived.numPartitions--, (this.derived.length -= r), (t = !0), !0);
-                    }
+                        return (
+                            delete this.root[e], this.derived.numPartitions--, (this.derived.length -= r), (t = !0), !0
+                        );
+                    },
                 };
             for (let i in e) {
                 let o = e[i],
@@ -254,18 +275,18 @@ class p extends r.yh {
                 n[i] = a;
             }
         }
-        (super(i.Z, n),
-            a(this, 'mode', void 0),
-            a(this, 'root', void 0),
-            a(this, 'derived', void 0),
-            a(this, 'nextVersion', void 0),
+        super(i.Z, n),
+            a(this, "mode", void 0),
+            a(this, "root", void 0),
+            a(this, "derived", void 0),
+            a(this, "nextVersion", void 0),
             (this.mode = t),
             (this.root = {}),
             (this.derived = {
                 numPartitions: 0,
                 memoized: {},
-                length: 0
+                length: 0,
             }),
-            (this.nextVersion = 0));
+            (this.nextVersion = 0);
     }
 }

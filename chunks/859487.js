@@ -7,9 +7,9 @@ var r = n(873546),
 function l(e, t) {
     a.default.track(s.rMx.APP_DIRECTORY_PROFILE_EMBED_SENT, {
         application_id: e,
-        device_platform: r.tq ? 'mobile_web' : 'desktop_web',
+        device_platform: r.tq ? "mobile_web" : "desktop_web",
         guild_id: o.Z.getGuildId(),
         channel_id: i.Z.getChannelId(),
-        section: t
+        section: t,
     });
 }

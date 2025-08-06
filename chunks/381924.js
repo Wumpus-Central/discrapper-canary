@@ -17,11 +17,11 @@ function f(e, t) {
         h = f === e.id;
     return e.isGuildVocal() && n && null != g && !h
         ? (0, i.jsx)(l.sN, {
-              id: 'join-muted-custom-join-sound',
+              id: "join-muted-custom-join-sound",
               label: Z.intl.string(Z.t.saLMWV),
               action: () => {
-                  ((0, o.Db)(e.id), a.default.selectVoiceChannel(e.id));
-              }
+                  (0, o.Db)(e.id), a.default.selectVoiceChannel(e.id);
+              },
           })
         : null;
 }

@@ -11,10 +11,10 @@ let c = n(17702),
         let { customSize: t, shouldUseThemeColor: n = !1, loading: i, className: d } = e,
             h = (0, s.ZP)(),
             p = n && (0, o.ap)(h) ? u : c;
-        return (0, r.jsx)('img', {
+        return (0, r.jsx)("img", {
             className: l()(a.orbIconSVG, d, { [a.loading]: i }),
             src: p,
-            alt: '',
-            style: void 0 !== t ? { height: t } : void 0
+            alt: "",
+            style: void 0 !== t ? { height: t } : void 0,
         });
     };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -20,7 +20,7 @@ var r = n(255367),
     y = n(574682);
 let v = {
     [O.MI.NO_CHAT]: y.noChat,
-    [O.MI.RESIZABLE]: y.resizable
+    [O.MI.RESIZABLE]: y.resizable,
 };
 function I(e) {
     let { frame: t } = e,
@@ -30,27 +30,27 @@ function I(e) {
         C = i.useRef(null),
         [S, N] = i.useState({
             width: 0,
-            height: 0
+            height: 0,
         }),
         T = i.useCallback(() => {
             (0, f.eU)({
                 applicationId: t.applicationId,
-                layoutMode: b.U.PIP
+                layoutMode: b.U.PIP,
             });
         }, [t.applicationId]),
         P = i.useCallback(() => {
             (0, f.xT)({ applicationId: t.applicationId });
         }, [t.applicationId]);
-    (i.useLayoutEffect(() => {
+    i.useLayoutEffect(() => {
         if (null == C.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
             N({
                 width: null != (n = null == (e = C.current) ? void 0 : e.clientWidth) ? n : 0,
-                height: null != (r = null == (t = C.current) ? void 0 : t.clientHeight) ? r : 0
+                height: null != (r = null == (t = C.current) ? void 0 : t.clientHeight) ? r : 0,
             });
         });
-        return (e.observe(C.current), () => e.disconnect());
+        return e.observe(C.current), () => e.disconnect();
     }, []),
         i.useEffect(() => {
             let e = (e) => {
@@ -59,16 +59,16 @@ function I(e) {
                     l ||
                     (0, f.eU)({
                         applicationId: t.applicationId,
-                        layoutMode: b.U.PIP
+                        layoutMode: b.U.PIP,
                     });
             };
             return (
-                document.addEventListener('mousedown', e),
+                document.addEventListener("mousedown", e),
                 () => {
-                    document.removeEventListener('mousedown', e);
+                    document.removeEventListener("mousedown", e);
                 }
             );
-        }, [t.applicationId, l]));
+        }, [t.applicationId, l]);
     let j = S.width / Math.max(S.height, 1) < O.I0,
         A = 0,
         Z = 0,
@@ -76,7 +76,9 @@ function I(e) {
     if (!x) {
         let e = S.width,
             t = S.height;
-        j ? ((t = S.width / O.I0) > S.height && (e = (t = S.height) * O.I0), (Z = (S.height - t) / 2)) : ((e = Math.min(S.height * O.I0)) > S.width && (t = (e = S.width) / O.I0), (A = (S.width - e) / 2));
+        j
+            ? ((t = S.width / O.I0) > S.height && (e = (t = S.height) * O.I0), (Z = (S.height - t) / 2))
+            : ((e = Math.min(S.height * O.I0)) > S.width && (t = (e = S.width) / O.I0), (A = (S.width - e) / 2));
     }
     let w = O.MI.NO_CHAT;
     if (null == n) return null;
@@ -84,14 +86,14 @@ function I(e) {
     return (0, r.jsx)(s.f6W, {
         theme: _.BRd.DARK,
         children: (e) =>
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a()(y.wrapper, v[w], e),
                 ref: I,
                 style: {},
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: y.contextlessHeader,
-                        children: (0, r.jsxs)('div', {
+                        children: (0, r.jsxs)("div", {
                             className: y.buttonSection,
                             children: [
                                 (0, r.jsx)(p.d, {
@@ -99,7 +101,7 @@ function I(e) {
                                     label: E.intl.string(E.t.brPQ5e),
                                     onClick: T,
                                     iconComponent: s.dOc,
-                                    themeable: !0
+                                    themeable: !0,
                                 }),
                                 (0, r.jsx)(h.Z, {
                                     appContext: _.IlC.APP,
@@ -109,37 +111,37 @@ function I(e) {
                                     isRichPresenceInvite: !0,
                                     size: o.zx.Sizes.SMALL,
                                     look: o.zx.Looks.FILLED,
-                                    buttonText: E.intl.string(E.t['6F9ivr']),
-                                    color: o.zx.Colors.PRIMARY
+                                    buttonText: E.intl.string(E.t["6F9ivr"]),
+                                    color: o.zx.Colors.PRIMARY,
                                 }),
                                 (0, r.jsx)(p.d, {
                                     isTrayButton: !0,
                                     label: E.intl.string(E.t.cpT0Cg),
                                     onClick: P,
                                     iconComponent: s.Dio,
-                                    themeable: !0
-                                })
-                            ]
-                        })
+                                    themeable: !0,
+                                }),
+                            ],
+                        }),
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: y.activityPanelContainer,
-                        children: (0, r.jsx)('div', {
+                        children: (0, r.jsx)("div", {
                             className: a()(y.activityContainer, { [y.activityContainerNoMargin]: x }),
                             style: {
                                 paddingLeft: A,
                                 paddingRight: A,
                                 paddingTop: Z,
-                                paddingBottom: Z
+                                paddingBottom: Z,
                             },
                             ref: C,
                             children: (0, r.jsx)(g.Z, {
                                 className: y.iframe,
-                                embedId: L
-                            })
-                        })
-                    })
-                ]
-            })
+                                embedId: L,
+                            }),
+                        }),
+                    }),
+                ],
+            }),
     });
 }

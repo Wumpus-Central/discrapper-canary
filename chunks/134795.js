@@ -12,7 +12,18 @@ var r = n(120356),
     m = n(388032),
     p = n(771066);
 function g(e) {
-    let { showRemoveBannerButton: t, errors: n, onBannerChange: r, guildId: g, className: h, disabled: f = !1, showPremiumIcon: b = !0, isTryItOutFlow: x = !1, forcedDivider: _, withHighlight: j = !1 } = e,
+    let {
+            showRemoveBannerButton: t,
+            errors: n,
+            onBannerChange: r,
+            guildId: g,
+            className: h,
+            disabled: f = !1,
+            showPremiumIcon: b = !0,
+            isTryItOutFlow: x = !1,
+            forcedDivider: _,
+            withHighlight: j = !1,
+        } = e,
         { newestAnalyticsLocation: E } = (0, o.ZP)(),
         C = j ? l.gtL : a.zx;
     return (0, i.jsx)(d.Z, {
@@ -22,7 +33,7 @@ function g(e) {
         errors: n,
         disabled: f,
         forcedDivider: _,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: p.buttonsContainer,
             children: [
                 (0, i.jsx)(C, {
@@ -33,22 +44,22 @@ function g(e) {
                             uploadType: u.pC.BANNER,
                             analyticsSource: E,
                             guildId: g,
-                            isTryItOutFlow: x
+                            isTryItOutFlow: x,
                         }),
-                    children: m.intl.string(m.t.N0bC3N)
+                    children: m.intl.string(m.t.N0bC3N),
                 }),
                 t &&
-                    (0, i.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
+                    (0, i.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
                         className: p.removeButton,
                         children: (0, i.jsx)(l.zxk, {
-                            variant: 'secondary',
-                            size: 'sm',
+                            variant: "secondary",
+                            size: "sm",
                             text: null != g ? m.intl.string(m.t.jHlJNT) : m.intl.string(m.t.tT9n7O),
-                            onClick: () => r(null)
-                        })
-                    })
-            ]
-        })
+                            onClick: () => r(null),
+                        }),
+                    }),
+            ],
+        }),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -15,40 +15,40 @@ function d(e) {
     if (null != f)
         t = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     alt: c.intl.string(c.t.W6HwU1),
                     src: (0, s._r)({
                         name: f[0],
                         id: null,
-                        animated: !1
+                        animated: !1,
                     }),
-                    className: o()(u.completeLeft, u.highFive)
+                    className: o()(u.completeLeft, u.highFive),
                 }),
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     alt: c.intl.string(c.t.W6HwU1),
                     src: (0, s._r)({
                         name: f[1],
                         id: null,
-                        animated: !1
+                        animated: !1,
                     }),
-                    className: o()(u.completeRight, u.highFive)
-                })
-            ]
+                    className: o()(u.completeRight, u.highFive),
+                }),
+            ],
         });
     else {
         if (null == d) return null;
-        t = (0, r.jsx)('img', {
+        t = (0, r.jsx)("img", {
             alt: c.intl.string(c.t.W6HwU1),
             src: (0, s._r)({
                 name: d,
                 id: null,
-                animated: !1
+                animated: !1,
             }),
-            className: o()(u.waiting, u.highFive)
+            className: o()(u.waiting, u.highFive),
         });
     }
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: u.root,
-        children: t
+        children: t,
     });
 }

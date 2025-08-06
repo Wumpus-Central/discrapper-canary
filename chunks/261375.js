@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685), n(539854));
+n.d(t, { Z: () => _ }), n(388685), n(539854);
 var i = n(149765),
     r = n(768433),
     s = n(710845),
@@ -19,20 +19,28 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let b = new s.Z('GuildBasicChannels');
+let b = new s.Z("GuildBasicChannels");
 function x(e, t) {
-    return null == e || e.type !== t.type || e.parent_id !== t.parent_id || m.Z.computeBasicPermissions(e) !== m.Z.computeBasicPermissions(t);
+    return (
+        null == e ||
+        e.type !== t.type ||
+        e.parent_id !== t.parent_id ||
+        m.Z.computeBasicPermissions(e) !== m.Z.computeBasicPermissions(t)
+    );
 }
 let _ = new (class {
     async getAsync(e) {
         let t = performance.now(),
-            [n, i] = await Promise.all([g.Z.basicChannels(e).getKvEntries(), g.Z.syncedBasicChannels(e).getKvEntries()]),
+            [n, i] = await Promise.all([
+                g.Z.basicChannels(e).getKvEntries(),
+                g.Z.syncedBasicChannels(e).getKvEntries(),
+            ]),
             r = performance.now() - t,
             [s, a] = (function (e) {
                 let t = [],
@@ -43,14 +51,20 @@ let _ = new (class {
             l = new Set(s);
         return (
             (this.synced = l),
-            b.verbose('loaded in '.concat(r, 'ms (guilds: ').concat(n.length, ', synced: ').concat(l.size, ' unsynced: ').concat(a.length, ')')),
+            b.verbose(
+                "loaded in "
+                    .concat(r, "ms (guilds: ")
+                    .concat(n.length, ", synced: ")
+                    .concat(l.size, " unsynced: ")
+                    .concat(a.length, ")"),
+            ),
             {
                 all: n,
                 stale: a,
                 channels: n.filter((e) => {
                     let [t, n] = e;
                     return l.has(t);
-                })
+                }),
             }
         );
     }
@@ -61,17 +75,23 @@ let _ = new (class {
         null != e.channel.guild_id && this.unsync(e.channel.guild_id, t);
     }
     handleChannelUpdates(e, t) {
-        for (let n of e.channels.filter((e) => null != e.guild_id)) x(c.Z.getBasicChannel(n.id), n) && this.unsync(n.guild_id, t);
+        for (let n of e.channels.filter((e) => null != e.guild_id))
+            x(c.Z.getBasicChannel(n.id), n) && this.unsync(n.guild_id, t);
     }
     handleBackgroundSync(e, t) {
         for (let s of e.guilds)
             switch (s.data_mode) {
-                case 'unavailable':
+                case "unavailable":
                     break;
-                case 'partial':
+                case "partial":
                     var n, i, r;
                     let e = (e) => (0, l.q_)(e, s.id);
-                    this.onGuildUpdate(s.id, null != (i = null == (n = s.partial_updates.channels) ? void 0 : n.map(e)) ? i : [], null != (r = s.partial_updates.deleted_channel_ids) ? r : [], t);
+                    this.onGuildUpdate(
+                        s.id,
+                        null != (i = null == (n = s.partial_updates.channels) ? void 0 : n.map(e)) ? i : [],
+                        null != (r = s.partial_updates.deleted_channel_ids) ? r : [],
+                        t,
+                    );
                     break;
                 default:
                     this.onGuildSync(s.id, t);
@@ -86,12 +106,13 @@ let _ = new (class {
         if (null == this.synced || null == t || !(0, r.O)()) return;
         let n = u.Z.getGuildIds(),
             i = n.filter((e) => !this.synced.has(e));
-        for (let r of (b.verbose('scheduling basic_channel optimstic writes (guilds: '.concat(i.length, ')')), n)) {
+        for (let r of (b.verbose("scheduling basic_channel optimstic writes (guilds: ".concat(i.length, ")")), n)) {
             if (null == this.synced || t !== g.Z.database() || e !== a.Z.lastTimeConnectedChanged()) break;
             if (!this.synced.has(r)) {
-                b.verbose('optimstically writing basic_channels (guild: '.concat(r, ')'));
+                b.verbose("optimstically writing basic_channels (guild: ".concat(r, ")"));
                 try {
-                    (await c.o.loadGuildIds([r]), await t.transaction((e) => this.syncOne(r, e), 'handlePostConnectionOpen'));
+                    await c.o.loadGuildIds([r]),
+                        await t.transaction((e) => this.syncOne(r, e), "handlePostConnectionOpen");
                 } catch (e) {
                     b.warn("couldn't optimstically write basic_channel:", e);
                     return;
@@ -106,10 +127,10 @@ let _ = new (class {
     handleOneGuildCreate(e, t) {
         let { id: n, channels: i } = e;
         switch (i.op) {
-            case 'full_sync':
+            case "full_sync":
                 this.onGuildSync(n, t);
                 break;
-            case 'update':
+            case "update":
                 this.onGuildUpdate(n, i.writes, i.deletes, t);
         }
     }
@@ -140,22 +161,30 @@ let _ = new (class {
         this.unsync(e, t);
     }
     delete(e, t) {
-        (this.unsync(e, t), g.Z.basicChannelsTransaction(t).delete(e), g.Z.syncedBasicChannelsTransaction(t).delete(e));
+        this.unsync(e, t), g.Z.basicChannelsTransaction(t).delete(e), g.Z.syncedBasicChannelsTransaction(t).delete(e);
     }
     unsync(e, t) {
         var n;
-        (null == (n = this.synced) || n.delete(e), g.Z.basicChannelsTransaction(t).delete(e), g.Z.syncedBasicChannelsTransaction(t).put(e, !1), h.Z.invalidate(e));
+        null == (n = this.synced) || n.delete(e),
+            g.Z.basicChannelsTransaction(t).delete(e),
+            g.Z.syncedBasicChannelsTransaction(t).put(e, !1),
+            h.Z.invalidate(e);
     }
     sync(e) {
-        b.verbose('Starting to write all basic channels');
+        b.verbose("Starting to write all basic channels");
         let t = performance.now(),
             n = {
                 written: 0,
-                skipped: 0
+                skipped: 0,
             };
         for (let t of u.Z.getGuildIds()) this.syncOne(t, e) ? n.written++ : n.skipped++;
         let i = performance.now() - t;
-        b.verbose(''.concat(n.written, ' basic_channel guilds submitted (took: ').concat(i, 'ms, skipped: ').concat(n.skipped, ' guilds)'));
+        b.verbose(
+            ""
+                .concat(n.written, " basic_channel guilds submitted (took: ")
+                .concat(i, "ms, skipped: ")
+                .concat(n.skipped, " guilds)"),
+        );
     }
     syncOne(e, t) {
         var n, i, r;
@@ -170,16 +199,16 @@ let _ = new (class {
                     type: e.type,
                     guild_id: e.guild_id,
                     parent_id: e.parent_id,
-                    basicPermissions: p.Z.asBasicFlag(m.Z.computePermissions(e))
-                })))
+                    basicPermissions: p.Z.asBasicFlag(m.Z.computePermissions(e)),
+                }))),
             ),
             g.Z.syncedBasicChannelsTransaction(t).put(e, !0),
             !0)
         );
     }
     constructor() {
-        (f(this, 'synced', null),
-            f(this, 'actions', {
+        f(this, "synced", null),
+            f(this, "actions", {
                 BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
                 CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
                 CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
@@ -191,7 +220,7 @@ let _ = new (class {
                 GUILD_ROLE_UPDATE: (e, t) => this.handleGuildRoleUpdate(e, t),
                 GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t),
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
-                WRITE_CACHES: (e, t) => this.handleWriteCaches(e, t)
-            }));
+                WRITE_CACHES: (e, t) => this.handleWriteCaches(e, t),
+            });
     }
 })();

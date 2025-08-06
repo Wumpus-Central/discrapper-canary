@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     W: () => R,
-    Z: () => M
+    Z: () => M,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -34,24 +34,24 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -76,62 +76,71 @@ function E(e, t) {
 function P(e) {
     let { analyticsLocation: t } = e;
     (0, u.ZDy)(async () => {
-        let { default: e } = await n.e('28479').then(n.bind(n, 78865));
+        let { default: e } = await n.e("28479").then(n.bind(n, 78865));
         return (n) => (0, r.jsx)(e, E(T({}, n), { analyticsSource: t }));
     });
 }
 function R() {
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: w.toolTipTextContainer,
         children: [
             (0, r.jsx)(u.SrA, {
-                size: 'md',
+                size: "md",
                 color: x.JX.PREMIUM_TIER_2,
-                className: w.premiumIcon
+                className: w.premiumIcon,
             }),
             (0, r.jsx)(u.Text, {
                 className: w.upsellText,
-                variant: 'text-sm/medium',
-                children: I.intl.string(I.t.sEAnVF)
-            })
-        ]
+                variant: "text-sm/medium",
+                children: I.intl.string(I.t.sEAnVF),
+            }),
+        ],
     });
 }
 function A(e) {
     let t,
         n,
-        { type: i, selected: l, needsPremium: o, needsDemo: a, analyticsLocation: c, onClick: d, onClose: f, setIsHovering: m } = e,
+        {
+            type: i,
+            selected: l,
+            needsPremium: o,
+            needsDemo: a,
+            analyticsLocation: c,
+            onClick: d,
+            onClose: f,
+            setIsHovering: m,
+        } = e,
         { value: h, label: p } = i;
     return (
         o
             ? ((t = (0, r.jsx)(u.DY3, {
                   tooltipClassName: w.tooltip,
                   spacing: 6,
-                  'aria-label': I.intl.string(I.t.sEAnVF),
+                  "aria-label": I.intl.string(I.t.sEAnVF),
                   text: (0, r.jsx)(R, {}),
-                  children: (0, r.jsx)('div', {
+                  children: (0, r.jsx)("div", {
                       className: w.textContainer,
                       onMouseEnter: () => m(!0),
                       onMouseLeave: () => m(!1),
                       children: (0, r.jsx)(u.Text, {
-                          variant: 'text-xs/bold',
+                          variant: "text-xs/bold",
                           className: s()(w.selectorNitroText, w.enhancedSelectorNitroText),
-                          children: p
-                      })
-                  })
+                          children: p,
+                      }),
+                  }),
               })),
               (n = () =>
                   P({
                       analyticsLocation: c,
-                      onClose: f
+                      onClose: f,
                   })))
-            : ((t = (0, r.jsx)('div', {
+            : ((t = (0, r.jsx)("div", {
                   className: w.textContainer,
                   children: (0, r.jsx)(u.Text, {
-                      variant: 'text-xs/normal',
+                      variant: "text-xs/normal",
                       className: s()(w.selectorText, { [w.enhancedSelectorNitroText]: a }),
-                      children: p
-                  })
+                      children: p,
+                  }),
               })),
               (n = () => d(h))),
         {
@@ -139,17 +148,27 @@ function A(e) {
             className: s()(w.selectorButton, {
                 [w.selectorButtonSelected]: l,
                 [w.perksDemo]: a,
-                [w.premiumUpsell]: o
+                [w.premiumUpsell]: o,
             }),
-            onClick: n
+            onClick: n,
         }
     );
 }
 function M(e) {
-    let { onClose: t, selectedPreset: n, selectedResolution: l, selectedFPS: s, onResolutionChange: o, onFPSChange: x, onPresetChange: R, targetGuildPremiumTier: M, captureDeviceSelected: k } = e,
+    let {
+            onClose: t,
+            selectedPreset: n,
+            selectedResolution: l,
+            selectedFPS: s,
+            onResolutionChange: o,
+            onFPSChange: x,
+            onPresetChange: R,
+            targetGuildPremiumTier: M,
+            captureDeviceSelected: k,
+        } = e,
         L = (0, c.e7)([j.default], () => {
             let e = j.default.getCurrentUser();
-            return (a()(null != e, 'StreamSettings: user cannot be undefined'), e);
+            return a()(null != e, "StreamSettings: user cannot be undefined"), e;
         }),
         D = (0, c.e7)([v.Z, _.Z], () => _.Z.getChannel(v.Z.getVoiceChannelId())),
         B = b.ZP.canStreamQuality(b.U2.MID, L),
@@ -170,9 +189,9 @@ function M(e) {
                     analyticsLocation: Y,
                     onClick: () => o(e.value),
                     onClose: t,
-                    setIsHovering: z
-                })
-            )
+                    setIsHovering: z,
+                }),
+            ),
         }),
         X = (0, r.jsx)(d.hE, {
             buttons: y.k0.map((e) =>
@@ -184,27 +203,27 @@ function M(e) {
                     analyticsLocation: Y,
                     onClick: () => x(e.value),
                     onClose: t,
-                    setIsHovering: z
-                })
-            )
+                    setIsHovering: z,
+                }),
+            ),
         }),
         K = [
             {
                 value: y.tI.PRESET_VIDEO,
-                label: I.intl.string(I.t.HcwHc3)
+                label: I.intl.string(I.t.HcwHc3),
             },
             ...(k
                 ? []
                 : [
                       {
                           value: y.tI.PRESET_DOCUMENTS,
-                          label: I.intl.string(I.t['/RfohI'])
-                      }
+                          label: I.intl.string(I.t["/RfohI"]),
+                      },
                   ]),
             {
                 value: y.tI.PRESET_CUSTOM,
-                label: I.intl.string(I.t['+eOtrK'])
-            }
+                label: I.intl.string(I.t["+eOtrK"]),
+            },
         ],
         q =
             n === y.tI.PRESET_DOCUMENTS
@@ -216,20 +235,20 @@ function M(e) {
                                   titleClassName: Z.formItemTitleSlim,
                                   className: w.documentModeGroup,
                                   children: (0, r.jsx)(u.Text, {
-                                      variant: 'text-xs/normal',
-                                      children: I.intl.format(I.t['U+hmam'], { fps: s })
-                                  })
-                              })
+                                      variant: "text-xs/normal",
+                                      children: I.intl.format(I.t["U+hmam"], { fps: s }),
+                                  }),
+                              }),
                           }),
                           F
                               ? (0, r.jsx)(C.Z, {
                                     message: I.intl.string(I.t.deDogI),
                                     onClose: t,
-                                    openStreamUpsellModal: P
+                                    openStreamUpsellModal: P,
                                 })
                               : null,
-                          W && (0, r.jsx)(C.c, {})
-                      ]
+                          W && (0, r.jsx)(C.c, {}),
+                      ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -239,25 +258,25 @@ function M(e) {
                                       title: I.intl.string(I.t.rHyPXl),
                                       className: w.settingsGroup,
                                       titleClassName: Z.formItemTitleSlim,
-                                      children: J
+                                      children: J,
                                   }),
                                   (0, r.jsx)(u.xJW, {
                                       title: I.intl.string(I.t.SkkeIi),
                                       className: w.settingsGroup,
                                       titleClassName: Z.formItemTitleSlim,
-                                      children: X
-                                  })
-                              ]
+                                      children: X,
+                                  }),
+                              ],
                           }),
                           F
                               ? (0, r.jsx)(C.Z, {
                                     onClose: t,
                                     openStreamUpsellModal: P,
-                                    glow: H
+                                    glow: H,
                                 })
                               : null,
-                          W && (0, r.jsx)(C.c, {})
-                      ]
+                          W && (0, r.jsx)(C.c, {}),
+                      ],
                   });
     return (0, r.jsx)(
         f.Z,
@@ -266,19 +285,19 @@ function M(e) {
                 title: I.intl.string(I.t.ax4FnZ),
                 titleClassName: Z.formItemTitle,
                 className: Z.modalContent,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: w.qualitySettingsContainer,
                     children: [
                         (0, r.jsx)(u.q4e, {
                             value: n,
                             className: N.marginTop8,
                             options: K,
-                            onChange: (e) => R(e)
+                            onChange: (e) => R(e),
                         }),
-                        q
-                    ]
-                })
-            })
-        })
+                        q,
+                    ],
+                }),
+            }),
+        }),
     );
 }

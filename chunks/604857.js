@@ -15,7 +15,7 @@ function f(e) {
         O = m.type === u.A3.TIER_OVERRIDE_ACTIVATED,
         j = (0, s.Z)(n),
         x = null == m.sourceEntitlement || !j;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: i()(p.container, { [p.disabled]: x }, t),
         children: [
             !O &&
@@ -25,13 +25,13 @@ function f(e) {
                     powerup: o,
                     onError: f,
                     grow: !1,
-                    compact: !x
+                    compact: !x,
                 }),
             (0, r.jsx)(a.zx, {
                 color: x ? a.Tt.PRIMARY : a.Tt.BRAND,
                 onClick: b,
-                children: d.intl.string(d.t.cpT0Cg)
-            })
-        ]
+                children: d.intl.string(d.t.cpT0Cg),
+            }),
+        ],
     });
 }

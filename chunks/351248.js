@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(539854), n(388685));
+n.d(t, { Z: () => N }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,7 +32,7 @@ let y = 8,
     O = {
         STEPS: 23,
         FRAME_DURATION: 17,
-        FRAME_SIZE: 26
+        FRAME_SIZE: 26,
     },
     v = {
         SCALE_MIN: 0.7,
@@ -40,7 +40,7 @@ let y = 8,
         DURATION_IN: 300,
         DURATION_OUT: 170,
         EASING_IN: s.Z.Easing.inOut(s.Z.Easing.back()),
-        EASING_OUT: s.Z.Easing.quad
+        EASING_OUT: s.Z.Easing.quad,
     },
     I = 200,
     T = 125;
@@ -50,46 +50,46 @@ class S extends i.PureComponent {
     }
     componentDidAppear() {
         let { scaleAnimation: e, widthAnimation: t } = this;
-        (e.setValue(1), t.setValue(1));
+        e.setValue(1), t.setValue(1);
     }
     componentWillEnter(e) {
         let { scaleAnimation: t, widthAnimation: n } = this;
-        (t.setValue(0),
+        t.setValue(0),
             n.setValue(0),
             s.Z.parallel([
                 s.Z.timing(t, {
                     toValue: 1,
                     duration: v.DURATION_IN,
-                    easing: v.EASING_IN
+                    easing: v.EASING_IN,
                 }),
                 s.Z.timing(n, {
                     toValue: 1,
-                    duration: I
-                })
-            ]).start(e));
+                    duration: I,
+                }),
+            ]).start(e);
     }
     componentWillLeave(e) {
         let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: r, widthAnimation: i } = this;
-        (r.setValue(1), n.setValue(0));
+        r.setValue(1), n.setValue(0);
         let o = [];
         for (let e = 0; e < O.STEPS; e++)
             o.push(
                 s.Z.timing(n, {
                     toValue: -O.FRAME_SIZE * e,
-                    duration: O.FRAME_DURATION
-                })
+                    duration: O.FRAME_DURATION,
+                }),
             );
         s.Z.sequence([
             s.Z.timing(t, {
                 toValue: 0,
                 duration: v.DURATION_OUT,
-                easing: v.EASING_OUT
+                easing: v.EASING_OUT,
             }),
             s.Z.sequence(o),
             s.Z.timing(i, {
                 toValue: 0,
-                duration: T
-            })
+                duration: T,
+            }),
         ]).start(e);
     }
     getScaleStyle() {
@@ -99,26 +99,26 @@ class S extends i.PureComponent {
                 {
                     scale: e.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [v.SCALE_MIN, v.SCALE_MAX]
-                    })
-                }
+                        outputRange: [v.SCALE_MIN, v.SCALE_MAX],
+                    }),
+                },
             ],
-            opacity: e
+            opacity: e,
         });
     }
     getSpriteStyle() {
         let { spriteAnimation: e, spriteOpacity: t } = this;
         return {
             backgroundPosition: e,
-            opacity: t
+            opacity: t,
         };
     }
     getWidthStyle() {
         return {
             width: this.widthAnimation.interpolate({
                 inputRange: [0, 1],
-                outputRange: ['0px', ''.concat(this.props.width, 'px')]
-            })
+                outputRange: ["0px", "".concat(this.props.width, "px")],
+            }),
         };
     }
     render() {
@@ -126,28 +126,32 @@ class S extends i.PureComponent {
             i = (0, u.wj)(e),
             o = a()(m.sprite, {
                 [E.crossWhite]: i,
-                [E.crossGrey]: !i
+                [E.crossGrey]: !i,
             });
         return (0, r.jsxs)(s.Z.div, {
             className: a()(m.transition, n),
             style: this.getWidthStyle(),
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: a()(m.spriteWrapper, g.horizontal, g.justifyCenter, g.alignCenter),
                     children: (0, r.jsx)(s.Z.div, {
                         className: o,
-                        style: this.getSpriteStyle()
-                    })
+                        style: this.getSpriteStyle(),
+                    }),
                 }),
                 (0, r.jsx)(s.Z.div, {
                     style: this.getScaleStyle(),
-                    children: t
-                })
-            ]
+                    children: t,
+                }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e), b(this, 'scaleAnimation', new s.Z.Value(0)), b(this, 'spriteAnimation', new s.Z.Value(0)), b(this, 'spriteOpacity', new s.Z.Value(0)), b(this, 'widthAnimation', new s.Z.Value(0)));
+        super(...e),
+            b(this, "scaleAnimation", new s.Z.Value(0)),
+            b(this, "spriteAnimation", new s.Z.Value(0)),
+            b(this, "spriteOpacity", new s.Z.Value(0)),
+            b(this, "widthAnimation", new s.Z.Value(0));
     }
 }
 function A(e, t) {
@@ -179,17 +183,17 @@ function N(e) {
                             speaking: l,
                             ringing: c,
                             onClick: (t) => (null == o ? void 0 : o(e, t)),
-                            onContextMenu: (t) => (null == n ? void 0 : n(e, t))
+                            onContextMenu: (t) => (null == n ? void 0 : n(e, t)),
                         },
-                        e.id
-                    )
+                        e.id,
+                    ),
                 },
-                a.id
+                a.id,
             );
         });
     return (0, r.jsx)(c.W, {
-        component: 'div',
+        component: "div",
         className: a()(m.root, i),
-        children: y
+        children: y,
     });
 }

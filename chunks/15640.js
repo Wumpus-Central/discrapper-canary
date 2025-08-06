@@ -1,15 +1,15 @@
-(n.d(t, {
+n.d(t, {
     V: () => u,
-    a: () => d
+    a: () => d,
 }),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(710845),
     o = n(853872),
     a = n(509545),
     s = n(78839),
     l = n(474936);
-new i.Z('useSubscriptionPlansLoaded');
+new i.Z("useSubscriptionPlansLoaded");
 let c = (e) => {};
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [...l.YQ];
@@ -23,8 +23,11 @@ function d() {
         d = n.defaultPaymentSourceId,
         f = r.isLoadedForSKUs(t),
         _ = null == (e = i.getPremiumTypeSubscription()) ? void 0 : e.paymentSourceId;
-    if (null != _ && !r.hasPaymentSourceForSKUIds(_, t)) return (c('subscription payment source '.concat(_, ' not loaded for ').concat(t)), !1);
-    if (null != d && !r.hasPaymentSourceForSKUIds(d, t)) return (c('default payment source '.concat(d, ' not loaded for ').concat(t)), !1);
-    for (let e of u) if (!r.hasPaymentSourceForSKUIds(e, t)) return (c('payment source '.concat(e, ' not loaded for ').concat(t)), !1);
+    if (null != _ && !r.hasPaymentSourceForSKUIds(_, t))
+        return c("subscription payment source ".concat(_, " not loaded for ").concat(t)), !1;
+    if (null != d && !r.hasPaymentSourceForSKUIds(d, t))
+        return c("default payment source ".concat(d, " not loaded for ").concat(t)), !1;
+    for (let e of u)
+        if (!r.hasPaymentSourceForSKUIds(e, t)) return c("payment source ".concat(e, " not loaded for ").concat(t)), !1;
     return f;
 }

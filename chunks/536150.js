@@ -7,7 +7,7 @@ async function a(e, t) {
         await r.tn.patch({
             url: o.ANM.MY_CONTENT_INVENTORY_APPLICATION(e),
             body: t,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
     } catch (e) {
         throw new i.Hx(e);

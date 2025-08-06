@@ -22,17 +22,17 @@ function f(e) {
         }, []),
         _ = i.useCallback(
             (e) => {
-                (e.preventDefault(),
+                e.preventDefault(),
                     e.stopPropagation(),
                     (0, u.E6)({
                         guild: t,
                         analyticsLocations: x,
                         analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,
                         analyticsObject: m.qAy.BUTTON_CTA,
-                        perks: (0, g.o9)()
-                    }));
+                        perks: (0, g.o9)(),
+                    });
             },
-            [x, t]
+            [x, t],
         );
     return b
         ? (0, r.jsxs)(l.zx, {
@@ -45,12 +45,12 @@ function f(e) {
                       disabled: !j,
                       onChange: v,
                       maxFileSizeBytes: p.B,
-                      onFileSizeError: () => (0, s.Z)(p.B)
-                  })
-              ]
+                      onFileSizeError: () => (0, s.Z)(p.B),
+                  }),
+              ],
           })
         : (0, r.jsx)(d.P, {
               className: f,
-              onClick: _
+              onClick: _,
           });
 }

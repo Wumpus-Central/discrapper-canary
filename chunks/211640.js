@@ -27,12 +27,12 @@ function h(e) {
                 null != b &&
                 s.Z.confirmDelete(y, b, !1, {
                     isFlagResolved: O,
-                    moderatorReportChannelId: m.id
+                    moderatorReportChannelId: m.id,
                 });
         },
-        I = null == b ? p.intl.string(_.default['0IZbwM']) : p.intl.string(_.default.Uj6oDw),
+        I = null == b ? p.intl.string(_.default["0IZbwM"]) : p.intl.string(_.default.Uj6oDw),
         T = null == b,
-        S = 'delete-message-'.concat(t.id);
+        S = "delete-message-".concat(t.id);
     return (0, r.jsx)(
         f.Z,
         {
@@ -40,8 +40,8 @@ function h(e) {
             icon: a.XHJ,
             onClick: v,
             disabled: T,
-            color: o.zx.Colors.RED
+            color: o.zx.Colors.RED,
         },
-        S
+        S,
     );
 }

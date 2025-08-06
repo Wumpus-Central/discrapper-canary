@@ -1,11 +1,11 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         WebAudioSound: () => b,
         playGiftSound: () => g,
-        voiceSinkId: () => h
+        voiceSinkId: () => h,
     }),
     n(35282),
-    n(415506));
+    n(415506);
 var r = n(392711),
     i = n.n(r),
     o = n(856901),
@@ -21,13 +21,13 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let f = 'default',
+let f = "default",
     _ = 0.6,
     p = /^( Device)?( \([^()]+\))+$/,
     h = f;
@@ -36,7 +36,7 @@ function m(e, t) {
 }
 function g(e, t) {
     let n = new Audio((0, a.Z)(e));
-    ((n.volume = (0, s.Z)(t)), n.play());
+    (n.volume = (0, s.Z)(t)), n.play();
 }
 async function E() {
     if (null != window.navigator.mediaDevices)
@@ -52,13 +52,16 @@ async function E() {
                 h = f;
                 return;
             }
-            let s = t.filter((e) => 'audiooutput' === e.kind && 'communications' !== e.deviceId),
+            let s = t.filter((e) => "audiooutput" === e.kind && "communications" !== e.deviceId),
                 c = s[r];
-            if (m(a.name, null != (e = null == c ? void 0 : c.label) ? e : '')) {
+            if (m(a.name, null != (e = null == c ? void 0 : c.label) ? e : "")) {
                 h = c.deviceId;
                 return;
             }
-            if (((c = i()(s).maxBy((e) => (0, o.stringSimilarity)(e.label, a.name))), null == c || (0, o.stringSimilarity)(c.label, a.name) < _)) {
+            if (
+                ((c = i()(s).maxBy((e) => (0, o.stringSimilarity)(e.label, a.name))),
+                null == c || (0, o.stringSimilarity)(c.label, a.name) < _)
+            ) {
                 h = f;
                 return;
             }
@@ -73,16 +76,16 @@ let b = class {
         return this._volume;
     }
     set volume(e) {
-        ((this._volume = e), this.ensureAudio().then((t) => (t.volume = e)));
+        (this._volume = e), this.ensureAudio().then((t) => (t.volume = e));
     }
     loop() {
         this.ensureAudio().then((e) => {
-            ((e.loop = !0), e.play());
+            (e.loop = !0), e.play();
         });
     }
     play() {
         this.ensureAudio().then((e) => {
-            ((e.loop = !1), e.play());
+            (e.loop = !1), e.play();
         });
     }
     pause() {
@@ -95,18 +98,18 @@ let b = class {
     playWithListener() {
         return new Promise((e, t) => {
             this.ensureAudio().then((n) => {
-                ((null == n.duration || 0 === n.duration) && t('sound has no duration'),
+                (null == n.duration || 0 === n.duration) && t("sound has no duration"),
                     n.play(),
                     setTimeout(() => {
                         e(!0);
-                    }, n.duration));
+                    }, n.duration);
             });
         });
     }
     destroyAudio() {
         null != this._audio &&
             (this._audio.then((e) => {
-                (e.pause(), (e.src = ''));
+                e.pause(), (e.src = "");
             }),
             (this._audio = null));
     }
@@ -118,18 +121,26 @@ let b = class {
                     ? e
                     : new Promise((e, t) => {
                           let r = new Audio();
-                          ((r.src = n(451343)('./'.concat(this.name, '.mp3'))),
+                          (r.src = n(451343)("./".concat(this.name, ".mp3"))),
                               (r.onloadeddata = () => {
-                                  ((r.volume = Math.min((l.Z.getOutputVolume() / 100) * this._volume, 1)), c.isPlatformEmbedded && r.setSinkId(this.outputChannel === u.w.DEFAULT ? f : h), e(r));
+                                  (r.volume = Math.min((l.Z.getOutputVolume() / 100) * this._volume, 1)),
+                                      c.isPlatformEmbedded && r.setSinkId(this.outputChannel === u.w.DEFAULT ? f : h),
+                                      e(r);
                               }),
-                              (r.onerror = () => t(Error('could not play audio'))),
+                              (r.onerror = () => t(Error("could not play audio"))),
                               (r.onended = () => this.destroyAudio()),
-                              r.load());
+                              r.load();
                       })),
             this._audio
         );
     }
     constructor(e, t, n, r) {
-        (d(this, 'name', void 0), d(this, '_volume', void 0), d(this, '_audio', void 0), d(this, 'outputChannel', void 0), (this.name = e), (this._volume = n), (this.outputChannel = r));
+        d(this, "name", void 0),
+            d(this, "_volume", void 0),
+            d(this, "_audio", void 0),
+            d(this, "outputChannel", void 0),
+            (this.name = e),
+            (this._volume = n),
+            (this.outputChannel = r);
     }
 };

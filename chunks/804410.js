@@ -15,16 +15,16 @@ let d = (0, r._I)((t = {}) => {
     let e = {
         onerror: !0,
         onunhandledrejection: !0,
-        ...t
+        ...t,
     };
     return {
-        name: 'GlobalHandlers',
+        name: "GlobalHandlers",
         setupOnce() {
             Error.stackTraceLimit = 50;
         },
         setup(t) {
             var a, r;
-            (e.onerror &&
+            e.onerror &&
                 ((a = t),
                 (0, o.V)((t) => {
                     let { stackParser: e, attachStacktrace: r } = A();
@@ -46,21 +46,21 @@ let d = (0, r._I)((t = {}) => {
                                         filename: R,
                                         function: s.Fi,
                                         in_app: !0,
-                                        lineno: I
+                                        lineno: I,
                                     }),
                                 t
                             );
                         })((0, I.ME)(e, d || o, void 0, r, !1), i, l, u);
-                    ((N.level = 'error'),
+                    (N.level = "error"),
                         (0, n.eN)(N, {
                             originalException: d,
                             mechanism: {
                                 handled: !1,
-                                type: 'onerror'
-                            }
-                        }));
+                                type: "onerror",
+                            },
+                        });
                 }),
-                N('onerror')),
+                N("onerror")),
                 e.onunhandledrejection &&
                     ((r = t),
                     (0, i.h)((t) => {
@@ -70,8 +70,8 @@ let d = (0, r._I)((t = {}) => {
                         let i = (function (t) {
                                 if ((0, c.pt)(t)) return t;
                                 try {
-                                    if ('reason' in t) return t.reason;
-                                    if ('detail' in t && 'reason' in t.detail) return t.detail.reason;
+                                    if ("reason" in t) return t.reason;
+                                    if ("detail" in t && "reason" in t.detail) return t.detail.reason;
                                 } catch (t) {}
                                 return t;
                             })(t),
@@ -81,24 +81,24 @@ let d = (0, r._I)((t = {}) => {
                                       exception: {
                                           values: [
                                               {
-                                                  type: 'UnhandledRejection',
-                                                  value: `Non-Error promise rejection captured with value: ${String(e)}`
-                                              }
-                                          ]
-                                      }
+                                                  type: "UnhandledRejection",
+                                                  value: `Non-Error promise rejection captured with value: ${String(e)}`,
+                                              },
+                                          ],
+                                      },
                                   })
                                 : (0, I.ME)(a, i, void 0, o, !0);
-                        ((E.level = 'error'),
+                        (E.level = "error"),
                             (0, n.eN)(E, {
                                 originalException: i,
                                 mechanism: {
                                     handled: !1,
-                                    type: 'onunhandledrejection'
-                                }
-                            }));
+                                    type: "onunhandledrejection",
+                                },
+                            });
                     }),
-                    N('onunhandledrejection')));
-        }
+                    N("onunhandledrejection"));
+        },
     };
 });
 function N(t) {
@@ -109,7 +109,7 @@ function A() {
     return (
         (t && t.getOptions()) || {
             stackParser: () => [],
-            attachStacktrace: !1
+            attachStacktrace: !1,
         }
     );
 }

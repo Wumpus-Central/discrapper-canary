@@ -1,5 +1,5 @@
 e.exports = {
-    picker: 'picker__09f65',
-    inExpressionPicker: 'inExpressionPicker__09f65',
-    fetching: 'fetching__09f65'
+    picker: "picker__09f65",
+    inExpressionPicker: "inExpressionPicker__09f65",
+    fetching: "fetching__09f65",
 };

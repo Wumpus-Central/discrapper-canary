@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => ee }), n(388685));
+n.d(t, { ZP: () => ee }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -43,8 +43,8 @@ var r = n(255367),
     z = n(179517),
     W = n(79829);
 let V = (0, b.Un)({
-        createPromise: () => n.e('4848').then(n.bind(n, 797967)),
-        webpackId: 797967
+        createPromise: () => n.e("4848").then(n.bind(n, 797967)),
+        webpackId: 797967,
     }),
     Y = o().debounce((e, t) => (0, S.Uv)(e, t), 200);
 function K(e) {
@@ -58,14 +58,14 @@ function K(e) {
             title: U.intl.string(U.t.dLbkBg),
             required: !0,
             children: (0, r.jsx)(g.oil, {
-                type: 'text',
+                type: "text",
                 value: l,
                 maxLength: M.VKK,
                 onChange: function (e) {
-                    (a(e), Y(t.id, e));
+                    a(e), Y(t.id, e);
                 },
-                disabled: n
-            })
+                disabled: n,
+            }),
         })
     );
 }
@@ -78,19 +78,19 @@ function q(e) {
         y = {
             dark: {
                 src: z,
-                name: t.name
+                name: t.name,
             },
             light: {
                 src: W,
-                name: t.name
-            }
+                name: t.name,
+            },
         };
     return (0, r.jsxs)(g.xJW, {
         children: [
             (0, r.jsxs)(g.vwX, {
                 className: F.roleStyleFormTitle,
                 children: [
-                    (0, r.jsx)('div', { children: U.intl.string(U.t['9wVJRE']) }),
+                    (0, r.jsx)("div", { children: U.intl.string(U.t["9wVJRE"]) }),
                     (0, r.jsx)(j.ZP, {
                         contentTypes: [u.z.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE],
                         children: (e) => {
@@ -98,30 +98,30 @@ function q(e) {
                             return t === u.z.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE
                                 ? (0, r.jsx)(g.IGR, {
                                       text: U.intl.string(U.t.y2b7CA),
-                                      className: F.newBadge
+                                      className: F.newBadge,
                                   })
                                 : null;
-                        }
-                    })
-                ]
+                        },
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: F.roleStyleContainer,
                 children: L.pM.map((e) => {
                     let { id: l, colors: s, labelString: u } = e;
                     return (0, r.jsxs)(
-                        'button',
+                        "button",
                         {
                             className: a()(F.roleStylePreviewContainer, {
                                 [F.selected]: i === l,
-                                [F.disabled]: o(l)
+                                [F.disabled]: o(l),
                             }),
                             onClick: () => {
                                 (0, S.Jf)(t.id, l);
                             },
                             children: [
                                 (0, r.jsx)(g.Rny, {
-                                    children: (0, r.jsx)('div', {
+                                    children: (0, r.jsx)("div", {
                                         className: F.roleStyleMessageContainer,
                                         children: (0, r.jsx)(_.Z, {
                                             author: {
@@ -130,57 +130,57 @@ function q(e) {
                                                 authorId: d.author.id,
                                                 colorRoleId: t.id,
                                                 colorStrings: (0, O.DX)(s),
-                                                colorString: (0, c.Rf)(s.primary_color)
+                                                colorString: (0, c.Rf)(s.primary_color),
                                             },
                                             message: d,
                                             preview: !0,
                                             roleIcon: null != b ? b : (0, m.ap)(f) ? y.light : y.dark,
                                             isGroupStart: !0,
                                             disableInteraction: !0,
-                                            previewGuildId: n
-                                        })
-                                    })
+                                            previewGuildId: n,
+                                        }),
+                                    }),
                                 }),
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: F.roleStyleLabel,
-                                    children: U.intl.string(u)
-                                })
-                            ]
+                                    children: U.intl.string(u),
+                                }),
+                            ],
                         },
-                        l
+                        l,
                     );
-                })
+                }),
             }),
             s &&
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: F.roleStyleUpsell,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: F.roleStyleUpsellMesssages,
                             children: [
                                 (0, r.jsx)(g.Text, {
-                                    variant: 'text-sm/semibold',
-                                    color: 'button-outline-primary-text',
-                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(X, {}) })
+                                    variant: "text-sm/semibold",
+                                    color: "button-outline-primary-text",
+                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(X, {}) }),
                                 }),
                                 (0, r.jsx)(g.Text, {
-                                    variant: 'text-xs/medium',
-                                    color: 'button-outline-primary-text',
-                                    children: U.intl.string(B.default.FJZeZG)
-                                })
-                            ]
+                                    variant: "text-xs/medium",
+                                    color: "button-outline-primary-text",
+                                    children: U.intl.string(B.default.FJZeZG),
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(g.zxk, {
                             onClick: function () {
-                                ((0, C.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)());
+                                (0, C.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
                             },
-                            variant: 'expressive',
+                            variant: "expressive",
                             icon: g.$Eu,
-                            text: U.intl.string(U.t['+7XY39'])
-                        })
-                    ]
-                })
-        ]
+                            text: U.intl.string(U.t["+7XY39"]),
+                        }),
+                    ],
+                }),
+        ],
     });
 }
 function X() {
@@ -188,39 +188,39 @@ function X() {
         { gradientStyle: t, gradientClassname: n } = (0, g.JUn)({
             colorStrings: (0, O.DX)(G.SK),
             useReducedMotion: e,
-            roleStyle: 'username',
+            roleStyle: "username",
             includeConvenienceGlow: !0,
-            animateGradient: !0
+            animateGradient: !0,
         });
-    return (0, r.jsx)('span', {
+    return (0, r.jsx)("span", {
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         var r;
-                        ((r = n[t]),
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = r));
-                    }));
+                                : (e[t] = r);
+                    });
             }
             return e;
         })({}, t),
         className: n,
-        'data-text': U.intl.string(B.default['+/IHLi']),
-        children: U.intl.string(B.default['+/IHLi'])
+        "data-text": U.intl.string(B.default["+/IHLi"]),
+        children: U.intl.string(B.default["+/IHLi"]),
     });
 }
 function J(e) {
@@ -228,12 +228,12 @@ function J(e) {
     let { role: i, disabled: l, currentStyle: a, hasEnhancedRoleColors: s } = e;
     return (0, r.jsxs)(g.xJW, {
         className: F.colorPicker,
-        title: U.intl.string(U.t['1F6FzM']),
+        title: U.intl.string(U.t["1F6FzM"]),
         required: !0,
         children: [
             (0, r.jsx)(g.R94, {
                 className: F.colorDescription,
-                children: U.intl.string(U.t['9UCxlZ'])
+                children: U.intl.string(U.t["9UCxlZ"]),
             }),
             (0, r.jsx)(V, {
                 defaultColor: M.p6O,
@@ -242,24 +242,36 @@ function J(e) {
                 disabled: l,
                 onChange: (e) => {
                     var t;
-                    return ((t = e), void (i.color !== t && (t !== M.p6O || 0 !== i.color) && (t === M.p6O && (t = 0), (0, S.OW)(i.id, t))));
+                    return (
+                        (t = e),
+                        void (
+                            i.color !== t &&
+                            (t !== M.p6O || 0 !== i.color) &&
+                            (t === M.p6O && (t = 0), (0, S.OW)(i.id, t))
+                        )
+                    );
                 },
-                secondaryValue: a === T.g.GRADIENT && s && (null == (t = i.colors) ? void 0 : t.secondary_color) != null ? (null == (n = i.colors) ? void 0 : n.secondary_color) : void 0,
+                secondaryValue:
+                    a === T.g.GRADIENT && s && (null == (t = i.colors) ? void 0 : t.secondary_color) != null
+                        ? null == (n = i.colors)
+                            ? void 0
+                            : n.secondary_color
+                        : void 0,
                 onChangeGradientColors: (e) => {
                     (0, S.TW)(
                         i.id,
                         {
                             primary_color: e[0],
                             secondary_color: e[1],
-                            tertiary_color: null
+                            tertiary_color: null,
                         },
-                        T.g.GRADIENT
+                        T.g.GRADIENT,
                     );
                 },
                 isGradient: a === T.g.GRADIENT,
-                customPickerPosition: 'right'
-            })
-        ]
+                customPickerPosition: "right",
+            }),
+        ],
     });
 }
 function Q(e) {
@@ -271,22 +283,22 @@ function Q(e) {
             authorId: s.author.id,
             colorRoleId: t.id,
             colorStrings: t.colorStrings,
-            colorString: t.colorString
+            colorString: t.colorString,
         },
         c = {
             src: z,
-            name: t.name
+            name: t.name,
         },
         d = {
             src: W,
-            name: t.name
+            name: t.name,
         },
         u = (0, v.oC)(n, t),
         p = [M.BRd.DARK, M.BRd.DARKER, M.BRd.MIDNIGHT, M.BRd.LIGHT];
     return (0, r.jsx)(g.Rny, {
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: a()(F.previewContainer, { [F.disableInteraction]: l }),
-            'aria-hidden': !0,
+            "aria-hidden": !0,
             children: p.map((e) =>
                 (0, r.jsx)(
                     g.f6W,
@@ -294,34 +306,34 @@ function Q(e) {
                         theme: e,
                         disableAdaptiveTheme: !0,
                         children: (t) =>
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: a()(t, F.messageWrapper),
                                 children: [
-                                    (0, r.jsx)('div', {
+                                    (0, r.jsx)("div", {
                                         className: F.messageContainer,
                                         children: (0, r.jsx)(_.Z, {
                                             author: o,
                                             message: s,
                                             roleIcon: null != u ? u : (0, m.ap)(e) ? d : c,
                                             previewGuildId: n,
-                                            isGroupStart: !0
-                                        })
+                                            isGroupStart: !0,
+                                        }),
                                     }),
                                     e === M.BRd.LIGHT &&
                                         i !== T.g.SOLID &&
                                         (0, r.jsx)(g.Text, {
-                                            variant: 'text-xs/medium',
-                                            color: 'text-secondary',
+                                            variant: "text-xs/medium",
+                                            color: "text-secondary",
                                             className: F.lightThemeNotice,
-                                            children: U.intl.string(U.t.nxwm3N)
-                                        })
-                                ]
-                            })
+                                            children: U.intl.string(U.t.nxwm3N),
+                                        }),
+                                ],
+                            }),
                     },
-                    e
-                )
-            )
-        })
+                    e,
+                ),
+            ),
+        }),
     });
 }
 function $(e) {
@@ -333,7 +345,7 @@ function $(e) {
                 value: t.hoist,
                 onChange: (e) => (0, S.we)(t.id, e, t.mentionable),
                 hideBorder: !0,
-                children: U.intl.string(U.t.vceJPj)
+                children: U.intl.string(U.t.vceJPj),
             }),
             (0, r.jsx)(g.$i$, { className: F.divider }),
             (0, r.jsx)(g.j7V, {
@@ -342,9 +354,9 @@ function $(e) {
                 onChange: (e) => (0, S.we)(t.id, t.hoist, e),
                 note: U.intl.string(U.t.kRg5W1),
                 hideBorder: !0,
-                children: U.intl.format(U.t.DTXoJS, {})
-            })
-        ]
+                children: U.intl.format(U.t.DTXoJS, {}),
+            }),
+        ],
     });
 }
 function ee(e) {
@@ -362,26 +374,26 @@ function ee(e) {
         className: F.scroller,
         style: { scrollPaddingTop: f },
         onScroll: j,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: H.contentWidth,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: a()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !b }),
                     ref: x,
                     children: (0, r.jsx)(Z.Z, {
                         guild: t,
                         role: n,
                         selectedSection: k.ZI.DISPLAY,
-                        setSelectedSection: l
-                    })
+                        setSelectedSection: l,
+                    }),
                 }),
                 (0, r.jsx)(K, {
                     role: n,
-                    disabled: p
+                    disabled: p,
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: F.noticeContainer,
-                    children: (0, r.jsx)(A.Z, { role: n })
+                    children: (0, r.jsx)(A.Z, { role: n }),
                 }),
                 (0, r.jsx)(g.$i$, { className: F.divider }),
                 (s || c) &&
@@ -391,7 +403,7 @@ function ee(e) {
                         guildId: t.id,
                         selectedStyle: u,
                         disabled: p,
-                        shouldShowUpsell: c
+                        shouldShowUpsell: c,
                     }),
                 u !== T.g.HOLOGRAPHIC &&
                     null != u &&
@@ -399,31 +411,31 @@ function ee(e) {
                         role: n,
                         disabled: p,
                         currentStyle: u,
-                        hasEnhancedRoleColors: s
+                        hasEnhancedRoleColors: s,
                     }),
                 u === T.g.HOLOGRAPHIC &&
                     (0, r.jsx)(N.Z, {
                         className: F.holographicInfoBox,
                         children: (0, r.jsx)(g.Text, {
-                            variant: 'text-xs/medium',
-                            children: U.intl.string(B.default.tBhCys)
-                        })
+                            variant: "text-xs/medium",
+                            children: U.intl.string(B.default.tBhCys),
+                        }),
                     }),
                 (0, r.jsx)(R.Z, {
                     guild: t,
                     disabled: p,
-                    role: n
+                    role: n,
                 }),
                 (0, r.jsx)(Q, {
                     role: n,
                     guildId: t.id,
                     selectedStyle: u,
-                    disableInteraction: !s
+                    disableInteraction: !s,
                 }),
                 (0, r.jsx)(g.$i$, { className: F.divider }),
                 (0, r.jsx)($, {
                     role: n,
-                    disabled: p
+                    disabled: p,
                 }),
                 h
                     ? (0, r.jsxs)(r.Fragment, {
@@ -431,12 +443,12 @@ function ee(e) {
                               (0, r.jsx)(g.$i$, { className: F.divider }),
                               (0, r.jsx)(D.L, {
                                   guildId: t.id,
-                                  role: n
-                              })
-                          ]
+                                  role: n,
+                              }),
+                          ],
                       })
-                    : null
-            ]
-        })
+                    : null,
+            ],
+        }),
     });
 }

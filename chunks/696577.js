@@ -26,45 +26,45 @@ function v(e) {
             userId: n.id,
             applicationId: l,
             isGameRelationship: s,
-            location: 'Friends'
+            location: "Friends",
         }),
         f = i.useCallback(
             (e) => {
-                (e.stopPropagation(), d());
+                e.stopPropagation(), d();
             },
-            [d]
+            [d],
         ),
         b = i.useCallback(
             (e) => {
-                (e.stopPropagation(), p());
+                e.stopPropagation(), p();
             },
-            [p]
+            [p],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             u &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: y.staffIndicator,
                     children: (0, r.jsx)(o.IGR, {
                         color: a.Z.unsafe_rawColors.BRAND_500.css,
-                        text: E.intl.string(E.t.oMx98P)
-                    })
+                        text: E.intl.string(E.t.oMx98P),
+                    }),
                 }),
             (0, r.jsx)(m.Z, {
                 icon: o.dz2,
                 actionType: m.Z.ActionTypes.ACCEPT,
                 tooltip: E.intl.string(E.t.ZcibdX),
                 onClick: f,
-                shouldHighlight: c
+                shouldHighlight: c,
             }),
             (0, r.jsx)(m.Z, {
                 icon: o.Dio,
                 actionType: m.Z.ActionTypes.DENY,
                 tooltip: E.intl.string(E.t.xuio0N),
                 onClick: b,
-                shouldHighlight: c
-            })
-        ]
+                shouldHighlight: c,
+            }),
+        ],
     });
 }
 function I(e) {
@@ -73,34 +73,34 @@ function I(e) {
             userId: t,
             applicationId: n,
             isGameRelationship: l,
-            location: 'Friends'
+            location: "Friends",
         }),
         c = i.useCallback(
             (e) => {
-                (e.stopPropagation(), s());
+                e.stopPropagation(), s();
             },
-            [s]
+            [s],
         );
     return (0, r.jsx)(m.Z, {
         icon: o.Dio,
         actionType: m.Z.ActionTypes.DENY,
         tooltip: E.intl.string(E.t.eaq81d),
         onClick: c,
-        shouldHighlight: a
+        shouldHighlight: a,
     });
 }
 function C(e) {
     let { isGameRelationship: t, applicationId: n, userTag: a, isProvisional: s } = e,
-        p = i.useMemo(() => (t ? E.intl.string(E.t['Uv/eT0']) : a), [t, a]),
+        p = i.useMemo(() => (t ? E.intl.string(E.t["Uv/eT0"]) : a), [t, a]),
         h = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: y.applicationSublabel,
         children: [
             !s &&
                 (0, r.jsx)(o.Text, {
-                    variant: 'text-sm/medium',
-                    color: 'text-secondary',
-                    children: p
+                    variant: "text-sm/medium",
+                    color: "text-secondary",
+                    children: p,
                 }),
             null != h &&
                 (0, r.jsxs)(r.Fragment, {
@@ -108,20 +108,20 @@ function C(e) {
                         !s &&
                             (0, r.jsx)(d.Z, {
                                 height: 2,
-                                width: 2
+                                width: 2,
                             }),
                         (0, r.jsx)(u.Z, {
                             game: h,
-                            size: u.Z.Sizes.XXSMALL
+                            size: u.Z.Sizes.XXSMALL,
                         }),
                         (0, r.jsx)(o.Text, {
-                            variant: 'text-sm/medium',
-                            color: 'text-secondary',
-                            children: h.name
-                        })
-                    ]
-                })
-        ]
+                            variant: "text-sm/medium",
+                            color: "text-secondary",
+                            children: h.name,
+                        }),
+                    ],
+                }),
+        ],
     });
 }
 function S(e) {
@@ -136,8 +136,8 @@ function S(e) {
             isGameRelationship: l,
             isProvisional: t.isProvisional,
             applicationId: a,
-            userTag: o
-        })
+            userTag: o,
+        }),
     });
 }
 function N(e) {
@@ -148,16 +148,16 @@ function N(e) {
             () =>
                 (0, p.openUserProfileModal)({
                     userId: t.id,
-                    sourceAnalyticsLocations: u
+                    sourceAnalyticsLocations: u,
                 }),
-            [u, t.id]
+            [u, t.id],
         );
     return (0, r.jsx)(b.Z, {
         isFocused: a,
         user: t,
         onClick: h,
         children: (e) =>
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: y.listItemContents,
                 children: [
                     (0, r.jsx)(S, {
@@ -165,9 +165,9 @@ function N(e) {
                         hovered: e,
                         status: d,
                         isGameRelationship: c,
-                        applicationId: o
+                        applicationId: o,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: y.actions,
                         children:
                             n === O.OGo.PENDING_INCOMING
@@ -175,16 +175,16 @@ function N(e) {
                                       user: t,
                                       applicationId: o,
                                       isGameRelationship: c,
-                                      active: e
+                                      active: e,
                                   })
                                 : (0, r.jsx)(I, {
                                       userId: t.id,
                                       applicationId: o,
                                       isGameRelationship: c,
-                                      active: e
-                                  })
-                    })
-                ]
-            })
+                                      active: e,
+                                  }),
+                    }),
+                ],
+            }),
     });
 }

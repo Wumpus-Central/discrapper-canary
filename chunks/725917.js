@@ -5,14 +5,17 @@ function o(e, t) {
     return u(e) || c(e, t) || s(e, t) || a();
 }
 function a() {
-    throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+    throw TypeError(
+        "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+    );
 }
 function s(e, t) {
     if (e) {
-        if ('string' == typeof e) return l(e, t);
+        if ("string" == typeof e) return l(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
-        if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return l(e, t);
+        if (("Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n))
+            return Array.from(e);
+        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return l(e, t);
     }
 }
 function l(e, t) {
@@ -21,15 +24,19 @@ function l(e, t) {
     return r;
 }
 function c(e, t) {
-    if ('undefined' != typeof Symbol && Symbol.iterator in Object(e)) {
+    if ("undefined" != typeof Symbol && Symbol.iterator in Object(e)) {
         var n = [],
             r = !0,
             i = !1,
             o = void 0;
         try {
-            for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0);
+            for (
+                var a, s = e[Symbol.iterator]();
+                !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t);
+                r = !0
+            );
         } catch (e) {
-            ((i = !0), (o = e));
+            (i = !0), (o = e);
         } finally {
             try {
                 r || null == s.return || s.return();
@@ -56,7 +63,7 @@ var d = function () {
                     r = {
                         backendChanged: function (e) {
                             n(e.previewEnabled());
-                        }
+                        },
                     };
                 return (
                     n(t.previewEnabled()),
@@ -66,7 +73,7 @@ var d = function () {
                     }
                 );
             },
-            [a, a.dragDropManager]
+            [a, a.dragDropManager],
         ),
         t
     );

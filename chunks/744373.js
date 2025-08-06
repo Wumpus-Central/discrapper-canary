@@ -14,9 +14,9 @@ function s(e) {
             transitionState: n,
             user: l,
             onBlock: () => {
-                (f(), c.default.track(u.rMx.BLOCK_USER_CONFIRMED));
+                f(), c.default.track(u.rMx.BLOCK_USER_CONFIRMED);
             },
             onClose: t,
-            onCancel: d
+            onCancel: d,
         });
 }

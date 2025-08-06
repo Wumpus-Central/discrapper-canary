@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -64,8 +64,8 @@ class p extends (r = a.ZP.Store) {
         return null != e ? d[e] : u;
     }
 }
-c(p, 'displayName', 'RegionStore');
+c(p, "displayName", "RegionStore");
 let h = new p(s.Z, {
     LOAD_REGIONS: f,
-    GUILD_DELETE: _
+    GUILD_DELETE: _,
 });

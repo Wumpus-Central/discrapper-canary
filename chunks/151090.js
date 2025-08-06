@@ -16,35 +16,35 @@ function h(t) {
             c.ZP.getFlattenedGuildIds().some((t) => {
                 let e = r.Z.getGuild(t);
                 return null != e && (0, a.Gw)(e, d.Z, p.default).canCreateExpressions;
-            })
+            }),
         );
     return (0, l.jsxs)(s.v2r, {
-        navId: 'clips-more-options',
-        'aria-label': u.intl.string(u.t.PdRCRk),
+        navId: "clips-more-options",
+        "aria-label": u.intl.string(u.t.PdRCRk),
         onClose: o.Zy,
         onSelect: o.Zy,
         children: [
             Z
                 ? (0, l.jsx)(s.sNh, {
                       icon: s.KY1,
-                      id: 'clips-export-soundboard',
+                      id: "clips-export-soundboard",
                       label: u.intl.string(u.t.HH4Tjo),
-                      action: i
+                      action: i,
                   })
                 : null,
             (0, l.jsx)(s.sNh, {
                 icon: s._8t,
-                id: 'clips-export-file',
+                id: "clips-export-file",
                 label: u.intl.string(u.t.l9qpzs),
-                action: e
+                action: e,
             }),
             (0, l.jsx)(s.sNh, {
                 icon: s.XHJ,
-                id: 'clips-delete',
+                id: "clips-delete",
                 label: u.intl.string(u.t.oyYWHB),
-                color: 'danger',
-                action: h
-            })
-        ]
+                color: "danger",
+                action: h,
+            }),
+        ],
     });
 }

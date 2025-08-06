@@ -1,4 +1,4 @@
 A.exports = {
-    firstPromotionalAvatar: 'firstPromotionalAvatar__55414',
-    container: 'container__55414'
+    firstPromotionalAvatar: "firstPromotionalAvatar__55414",
+    container: "container__55414",
 };

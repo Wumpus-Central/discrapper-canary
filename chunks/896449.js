@@ -1,6 +1,6 @@
 n.d(t, {
     N: () => b,
-    Z: () => y
+    Z: () => y,
 });
 var r = n(255367),
     i = n(73800),
@@ -21,7 +21,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,7 @@ function E(e, t) {
         e
     );
 }
-let b = 'content-inventory-context';
+let b = "content-inventory-context";
 function y(e) {
     var t;
     let { user: n, guildId: h, channel: g, entry: y, onSelect: O, disableGameProfileLinks: v } = e,
@@ -76,38 +76,38 @@ function y(e) {
             userId: n.id,
             guildId: h,
             channelId: null == g ? void 0 : g.id,
-            onAction: T
+            onAction: T,
         }),
         A = (0, s.Z)({
             id: n.id,
-            label: _.intl.string(_.t['/AXYnJ'])
+            label: _.intl.string(_.t["/AXYnJ"]),
         }),
-        N = 'application_id' in y.extra ? y.extra.application_id : null,
+        N = "application_id" in y.extra ? y.extra.application_id : null,
         C = (0, s.Z)({
             id: N,
-            label: _.intl.string(_.t['FfCL+/'])
+            label: _.intl.string(_.t["FfCL+/"]),
         }),
         R = (0, d.dX)(y),
         P = (0, c.Z)({
-            location: 'ContentPopoutContextMenu',
+            location: "ContentPopoutContextMenu",
             applicationId: R && !0 !== v ? (null == (t = y.extra) ? void 0 : t.application_id) : void 0,
             source: l.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
-            sourceUserId: y.author_id
+            sourceUserId: y.author_id,
         });
     return (0, r.jsx)(o.yRy, {
         targetElementRef: I,
-        align: 'top',
-        position: 'right',
+        align: "top",
+        position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(o.v2r, {
                 navId: b,
                 onClose: () => {
-                    ((0, a.Zy)(), t());
+                    (0, a.Zy)(), t();
                 },
-                'aria-label': _.intl.string(_.t.liqwPD),
+                "aria-label": _.intl.string(_.t.liqwPD),
                 onSelect: O,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -116,19 +116,19 @@ function y(e) {
                                 S,
                                 null != P &&
                                     (0, r.jsx)(o.sNh, {
-                                        id: 'game-profile',
+                                        id: "game-profile",
                                         label: _.intl.string(_.t.f7aVGh),
                                         action: (e) => {
-                                            (P(e), null == T || T());
-                                        }
-                                    })
-                            ]
+                                            P(e), null == T || T();
+                                        },
+                                    }),
+                            ],
                         }),
                         (0, r.jsxs)(o.kSQ, {
-                            children: [A, C]
-                        })
-                    ]
-                })
+                            children: [A, C],
+                        }),
+                    ],
+                }),
             });
         },
         children: (e) =>
@@ -139,13 +139,13 @@ function y(e) {
                         o.P3F,
                         E(m(E(m({ innerRef: I }, t), { className: p.menuIcon }), e), {
                             children: (0, r.jsx)(o.xhG, {
-                                color: 'currentColor',
-                                size: 'custom',
+                                color: "currentColor",
+                                size: "custom",
                                 width: 16,
-                                height: 16
-                            })
-                        })
-                    )
-            })
+                                height: 16,
+                            }),
+                        }),
+                    ),
+            }),
     });
 }

@@ -1,5 +1,5 @@
 let r, i, l;
-(n.d(t, { Z: () => T }), n(388685), n(539854));
+n.d(t, { Z: () => T }), n(388685), n(539854);
 var s,
     o,
     a,
@@ -21,12 +21,12 @@ var s,
 let x = new f.h(
     (e) => {
         let { isRequest: t, isFavorite: n } = e;
-        return t ? [] : [n ? 'FAVORITE' : 'DEFAULT'];
+        return t ? [] : [n ? "FAVORITE" : "DEFAULT"];
     },
     (e) => {
         let { lastMessageId: t } = e;
         return -E.default.extractTimestamp(t);
-    }
+    },
 );
 function P(e) {
     let t =
@@ -47,14 +47,14 @@ function P(e) {
         channelId: e.id,
         lastMessageId: t,
         isFavorite: !1,
-        isRequest: O.Z.isMessageRequest(e.id) || h.Z.isSpam(e.id)
+        isRequest: O.Z.isMessageRequest(e.id) || h.Z.isSpam(e.id),
     };
 }
 function C() {
-    (x.clear(),
+    x.clear(),
         Object.values(g.Z.getMutablePrivateChannels()).forEach((e) => {
             x.set(e.id, P(e));
-        }));
+        });
 }
 function w() {
     let e = g.Z.getMutablePrivateChannels();
@@ -65,8 +65,8 @@ let N =
     (i = []),
     (l = []),
     () => {
-        let e = x.values('FAVORITE'),
-            t = x.values('DEFAULT');
+        let e = x.values("FAVORITE"),
+            t = x.values("DEFAULT");
         return (
             (r !== e || i !== t) &&
                 ((l = []),
@@ -85,13 +85,13 @@ let N =
     });
 class _ extends (s = d.ZP.Store) {
     initialize() {
-        (this.waitFor(g.Z, j.Z, S.default, O.Z, v.ZP), this.syncWith([v.ZP, O.Z], C));
+        this.waitFor(g.Z, j.Z, S.default, O.Z, v.ZP), this.syncWith([v.ZP, O.Z], C);
     }
     getPrivateChannelIds() {
         return N();
     }
     getSortedChannels() {
-        return [x.values('FAVORITE'), x.values('DEFAULT')];
+        return [x.values("FAVORITE"), x.values("DEFAULT")];
     }
     serializeForOverlay() {
         let e = {};
@@ -104,15 +104,15 @@ class _ extends (s = d.ZP.Store) {
         );
     }
 }
-((a = 'PrivateChannelSortStore'),
-    (o = 'displayName') in _
+(a = "PrivateChannelSortStore"),
+    (o = "displayName") in _
         ? Object.defineProperty(_, o, {
               value: a,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (_[o] = a));
+        : (_[o] = a);
 let T = new _(p.Z, {
     CONNECTION_OPEN: C,
     CONNECTION_OPEN_SUPPLEMENTAL: C,
@@ -146,5 +146,5 @@ let T = new _(p.Z, {
     },
     LOGOUT: function () {
         x.clear();
-    }
+    },
 });

@@ -19,10 +19,10 @@ function _(e) {
     }, [t]),
     null == t)
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: a()(f.container, { [f.fadeIn]: m.current }),
               style: { background: _.background },
-              'aria-hidden': !0,
+              "aria-hidden": !0,
               children: (0, r.jsx)(p, {
                   nameplate: t,
                   className: a()(f.img, {
@@ -31,25 +31,25 @@ function _(e) {
                       [f.account]: c === d.i.ACCOUNT,
                       [f.preview]: c === d.i.PREVIEW,
                       [f.mini_preview]: c === d.i.MINI_PREVIEW,
-                      [f.channel]: c === d.i.CHANNEL
+                      [f.channel]: c === d.i.CHANNEL,
                   }),
                   style: { maskImage: _.maskImage },
                   animate: h,
-                  loop: !0 === h && !0 === n
-              })
+                  loop: !0 === h && !0 === n,
+              }),
           });
 }
 function p(e) {
     let { nameplate: t, className: n, style: i, animate: o, loop: a } = e,
         { staticAsset: s, animatedAsset: l } = (0, c._)(t),
-        u = !(null == l ? void 0 : l.endsWith('.webm'));
+        u = !(null == l ? void 0 : l.endsWith(".webm"));
     return null == s || null == l
         ? null
         : u
           ? (0, r.jsx)(m, {
                 asset: o ? l : s,
                 className: n,
-                style: i
+                style: i,
             })
           : (0, r.jsx)(h, {
                 animatedAsset: l,
@@ -57,7 +57,7 @@ function p(e) {
                 animate: o,
                 loop: a,
                 style: i,
-                className: n
+                className: n,
             });
 }
 function h(e) {
@@ -67,7 +67,7 @@ function h(e) {
         i.useEffect(() => {
             null != u.current && (o || a ? u.current.play() : u.current.pause());
         }, [o, a]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: f.videoContainer,
             style: c,
             children: (0, r.jsx)(s.Z, {
@@ -78,17 +78,17 @@ function h(e) {
                 loop: a,
                 controls: !1,
                 className: l,
-                tabIndex: -1
-            })
+                tabIndex: -1,
+            }),
         })
     );
 }
 function m(e) {
     let { asset: t, className: n, style: i } = e;
-    return (0, r.jsx)('img', {
+    return (0, r.jsx)("img", {
         src: t,
         className: n,
         style: i,
-        alt: ''
+        alt: "",
     });
 }

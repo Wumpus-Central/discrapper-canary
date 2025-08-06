@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,7 +39,9 @@ function g(e) {
     return h(t);
 }
 function E(e) {
-    for (let t of (e.userGuildSettings.partial || (f = {}), e.userGuildSettings.entries)) if (null != t.channel_overrides) for (let e of t.channel_overrides) e.collapsed ? (f[e.channel_id] = !0) : delete f[e.channel_id];
+    for (let t of (e.userGuildSettings.partial || (f = {}), e.userGuildSettings.entries))
+        if (null != t.channel_overrides)
+            for (let e of t.channel_overrides) e.collapsed ? (f[e.channel_id] = !0) : delete f[e.channel_id];
 }
 function b(e) {
     let { userGuildSettings: t } = e,
@@ -52,7 +54,7 @@ function b(e) {
 }
 function y(e) {
     let {
-        channel: { id: t }
+        channel: { id: t },
     } = e;
     return h(t);
 }
@@ -60,7 +62,7 @@ function O(e) {
     let { guildId: t } = e;
     c.ZP.getChannels(t)[u.d4z.GUILD_CATEGORY].forEach((e) => {
         let { channel: t } = e;
-        'null' !== t.id && (f[t.id] = !0);
+        "null" !== t.id && (f[t.id] = !0);
     });
 }
 function v(e) {
@@ -72,13 +74,13 @@ function v(e) {
 }
 class I extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(s.Z, l.Z), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {}));
+        this.waitFor(s.Z, l.Z), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {});
     }
     getState() {
         return f;
     }
     isCollapsed(e) {
-        return null != e && 'null' !== e && !!f[e] && f[e];
+        return null != e && "null" !== e && !!f[e] && f[e];
     }
     getCollapsedCategories() {
         return f;
@@ -87,7 +89,7 @@ class I extends (r = i.ZP.PersistedStore) {
         return _;
     }
 }
-(d(I, 'displayName', 'CategoryCollapseStore'), d(I, 'persistKey', 'collapsedCategories'));
+d(I, "displayName", "CategoryCollapseStore"), d(I, "persistKey", "collapsedCategories");
 let T = new I(o.Z, {
     CONNECTION_OPEN: E,
     USER_GUILD_SETTINGS_FULL_UPDATE: b,
@@ -95,5 +97,5 @@ let T = new I(o.Z, {
     CATEGORY_EXPAND: g,
     CATEGORY_COLLAPSE_ALL: O,
     CATEGORY_EXPAND_ALL: v,
-    CHANNEL_DELETE: y
+    CHANNEL_DELETE: y,
 });

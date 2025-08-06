@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(642613));
+n.d(t, { Z: () => m }), n(388685), n(642613);
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -22,40 +22,40 @@ function m(e) {
                     n && r.sort((e, t) => (e.value === i ? -1 : +(t.value === i))),
                     {
                         supportedLanguages: r.map((e) => d.intl.string(e.localizedName)),
-                        usersLanguageIsFirst: n
+                        usersLanguageIsFirst: n,
                     }
                 );
             }
             return {
                 supportedLanguages: [],
-                usersLanguageIsFirst: !1
+                usersLanguageIsFirst: !1,
             };
         }, [t.directory_entry, i]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: n,
         children: [
             (0, r.jsx)(o.X6q, {
-                variant: 'heading-sm/semibold',
-                color: 'header-primary',
-                children: d.intl.string(d.t.Fbjlu7)
+                variant: "heading-sm/semibold",
+                color: "header-primary",
+                children: d.intl.string(d.t.Fbjlu7),
             }),
-            (0, r.jsx)('ul', {
+            (0, r.jsx)("ul", {
                 className: u.outerContainer,
                 children: m.map((e, t) =>
                     (0, r.jsx)(
-                        'li',
+                        "li",
                         {
                             className: l()(u.innerContainer, u.languageItem),
                             children: (0, r.jsx)(o.Text, {
-                                variant: 0 === t && h ? 'text-sm/bold' : 'text-sm/normal',
-                                children: e
-                            })
+                                variant: 0 === t && h ? "text-sm/bold" : "text-sm/normal",
+                                children: e,
+                            }),
                         },
-                        e
-                    )
-                )
+                        e,
+                    ),
+                ),
             }),
-            ' '
-        ]
+            " ",
+        ],
     });
 }

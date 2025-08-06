@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => eo }), n(388685));
+n.d(t, { Z: () => eo }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -55,24 +55,24 @@ function et(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -104,7 +104,7 @@ function er() {
             (0, p.showToast)((0, p.createToast)(J.intl.string(J.t.EDYbS0), p.ToastType.FAILURE));
         }, []),
         { rejectAll: d } = (0, G.m)({ onError: u }),
-        h = (0, _.Z)('message-requests-list'),
+        h = (0, _.Z)("message-requests-list"),
         { channelId: f } = (0, V._)(),
         g = i.useCallback(() => {
             d(n.map((e) => e.channel.id));
@@ -122,16 +122,16 @@ function er() {
                         index: o,
                         className: a()({
                             [$.selected]: null != f && f === u,
-                            [$.siblingSelected]: null != f && f === c
+                            [$.siblingSelected]: null != f && f === c,
                         }),
                         channel: s.channel,
                         user: s.user,
-                        hasSingleMessageRequest: l
+                        hasSingleMessageRequest: l,
                     },
-                    u
+                    u,
                 );
             },
-            [l, n, f]
+            [l, n, f],
         ),
         O = i.useCallback(
             () =>
@@ -146,25 +146,25 @@ function er() {
                                       children: [
                                           (0, r.jsx)(p.Text, {
                                               className: $.titleDivider,
-                                              variant: 'eyebrow',
-                                              color: 'header-secondary',
-                                              tag: 'span',
-                                              children: '\u2022'
+                                              variant: "eyebrow",
+                                              color: "header-secondary",
+                                              tag: "span",
+                                              children: "\u2022",
                                           }),
                                           (0, r.jsx)(p.Avr, {
                                               onClick: g,
-                                              textVariant: 'text-sm/normal',
+                                              textVariant: "text-sm/normal",
                                               text: J.intl.string(J.t.p6t7RE),
-                                              'aria-label': J.intl.string(J.t.p6t7RE)
-                                          })
-                                      ]
+                                              "aria-label": J.intl.string(J.t.p6t7RE),
+                                          }),
+                                      ],
                                   })
-                                : null
-                        ]
+                                : null,
+                        ],
                     },
-                    'title'
+                    "title",
                 ),
-            [t, g, c]
+            [t, g, c],
         );
     return (n.length !== t && N.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, r.jsx)(z.Z, { section: K.pS.REQUESTS })
@@ -183,15 +183,19 @@ function er() {
                                           r,
                                           i = {},
                                           l = Object.keys(e);
-                                      for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                      for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                       return i;
                                   })(e, t);
                               if (Object.getOwnPropertySymbols) {
                                   var l = Object.getOwnPropertySymbols(e);
-                                  for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                                  for (r = 0; r < l.length; r++)
+                                      (n = l[r]),
+                                          !(t.indexOf(n) >= 0) &&
+                                              Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                              (i[n] = e[n]);
                               }
                               return i;
-                          })(t, ['ref', 'role']);
+                          })(t, ["ref", "role"]);
                       return (0, r.jsx)(
                           p.aVo,
                           et(
@@ -201,7 +205,9 @@ function er() {
                                   innerAriaLabel: J.intl.string(J.t.e7GWjY),
                                   ref: (t) => {
                                       var n;
-                                      ((e.current = t), (i.current = null != (n = null == t ? void 0 : t.getScrollerNode()) ? n : null));
+                                      (e.current = t),
+                                          (i.current =
+                                              null != (n = null == t ? void 0 : t.getScrollerNode()) ? n : null);
                                   },
                                   paddingTop: 24,
                                   paddingBottom: 24,
@@ -211,14 +217,14 @@ function er() {
                                   renderRow: b,
                                   sections: [n.length],
                                   chunkSize: 30,
-                                  fade: !0
+                                  fade: !0,
                               },
-                              a
+                              a,
                           ),
-                          'message-requests-list'
+                          "message-requests-list",
                       );
-                  }
-              })
+                  },
+              }),
           });
 }
 function ei(e) {
@@ -233,8 +239,8 @@ function ei(e) {
         onWidthChange: n,
         children: (0, r.jsx)(E.Z, {
             channel: l,
-            baseChannelId: x.uZ
-        })
+            baseChannelId: x.uZ,
+        }),
     });
 }
 let el = (e) => {
@@ -249,14 +255,14 @@ let el = (e) => {
               children: (n) => {
                   let { visibleContent: i, markAsDismissed: l } = n,
                       a = {
-                          position: 'bottom',
+                          position: "bottom",
                           caretConfig: {
-                              position: 'top',
-                              align: 'center'
+                              position: "top",
+                              align: "center",
                           },
                           shouldShow: !0,
                           onRequestClose: () => l(X.L.USER_DISMISS),
-                          targetElementRef: e.targetElementRef
+                          targetElementRef: e.targetElementRef,
                       };
                   return i === u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK
                       ? (0, r.jsxs)(r.Fragment, {
@@ -271,35 +277,39 @@ let el = (e) => {
                                               actions: [
                                                   {
                                                       text: J.intl.string(J.t.LNoAQU),
-                                                      onClick: () => l(X.L.TAKE_ACTION)
-                                                  }
-                                              ]
-                                          })
+                                                      onClick: () => l(X.L.TAKE_ACTION),
+                                                  },
+                                              ],
+                                          }),
                                       )
                                     : (0, r.jsx)(
                                           d.J2,
                                           en(et({}, a), {
                                               title: J.intl.string(J.t.hRT8tb),
-                                              body: J.intl.string(J.t['8JWodn']),
+                                              body: J.intl.string(J.t["8JWodn"]),
                                               actions: [
                                                   {
                                                       text: J.intl.string(J.t.JN6EOD),
                                                       onClick: (e) => {
-                                                          (e.stopPropagation(), f.Z.open(q.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: Q.FY.MESSAGE_REQUESTS_V2 }), l(X.L.TAKE_ACTION));
-                                                      }
+                                                          e.stopPropagation(),
+                                                              f.Z.open(q.oAB.CONTENT_AND_SOCIAL, null, {
+                                                                  scrollPosition: Q.FY.MESSAGE_REQUESTS_V2,
+                                                              }),
+                                                              l(X.L.TAKE_ACTION);
+                                                      },
                                                   },
                                                   {
                                                       text: J.intl.string(J.t.LNoAQU),
                                                       onClick: () => l(X.L.USER_DISMISS),
-                                                      variant: 'secondary'
-                                                  }
-                                              ]
-                                          })
-                                      )
-                            ]
+                                                      variant: "secondary",
+                                                  },
+                                              ],
+                                          }),
+                                      ),
+                            ],
                         })
                       : e.children;
-              }
+              },
           });
 };
 function ea(e) {
@@ -310,7 +320,10 @@ let eo = (0, g.Z)(function (e) {
     let { width: t } = e,
         n = (0, H.q)();
     (0, b.ZP)(() => {
-        (h.Y(q.Z5c.MESSAGE_REQUESTS), (0, A.e)('message-requests'), R.default.track(q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), N.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW }));
+        h.Y(q.Z5c.MESSAGE_REQUESTS),
+            (0, A.e)("message-requests"),
+            R.default.track(q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
+            N.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
     });
     let l = (0, c.e7)([Z.Z], () => Z.Z.theme),
         o = (0, F.w)(),
@@ -335,10 +348,10 @@ let eo = (0, g.Z)(function (e) {
         (0, v.Tt)({ location: J.intl.string(J.t.e7GWjY) }),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: a()(ee.chat, $.container, {
                         [ee.threadSidebarOpen]: m,
-                        [ee.threadSidebarFloating]: m && u
+                        [ee.threadSidebarFloating]: m && u,
                     }),
                     children: [
                         (0, r.jsx)(p.f6W, {
@@ -350,51 +363,54 @@ let eo = (0, g.Z)(function (e) {
                                     children: [
                                         (0, r.jsx)(S.Z.Icon, {
                                             icon: p._XJ,
-                                            'aria-hidden': !0
+                                            "aria-hidden": !0,
                                         }),
                                         (0, r.jsx)(el, {
                                             targetElementRef: E,
                                             children: (0, r.jsx)(S.Z.Title, {
                                                 ref: E,
-                                                children: J.intl.string(J.t.e7GWjY)
-                                            })
+                                                children: J.intl.string(J.t.e7GWjY),
+                                            }),
                                         }),
                                         (0, r.jsx)(S.Z.Divider, {}),
                                         (0, r.jsxs)(p.njP, {
-                                            'aria-label': J.intl.string(J.t.e7GWjY),
+                                            "aria-label": J.intl.string(J.t.e7GWjY),
                                             selectedItem: y,
-                                            type: 'top-pill',
+                                            type: "top-pill",
                                             onItemSelect: C,
                                             children: [
                                                 (0, r.jsx)(p.njP.Item, {
                                                     id: K.pS.REQUESTS,
                                                     className: $.item,
-                                                    children: J.intl.string(J.t['7RFcXV'])
+                                                    children: J.intl.string(J.t["7RFcXV"]),
                                                 }),
                                                 (0, r.jsx)(p.njP.Item, {
                                                     id: K.pS.SPAM,
                                                     className: $.item,
-                                                    children: 0 === o ? J.intl.string(J.t.ulKXHh) : J.intl.formatToPlainString(J.t['5jtrlZ'], { count: o })
-                                                })
-                                            ]
-                                        })
-                                    ]
-                                })
+                                                    children:
+                                                        0 === o
+                                                            ? J.intl.string(J.t.ulKXHh)
+                                                            : J.intl.formatToPlainString(J.t["5jtrlZ"], { count: o }),
+                                                }),
+                                            ],
+                                        }),
+                                    ],
+                                }),
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: ee.content,
-                            children: (0, r.jsx)(ea, { section: y })
-                        })
-                    ]
+                            children: (0, r.jsx)(ea, { section: y }),
+                        }),
+                    ],
                 }),
                 m &&
                     (0, r.jsx)(ei, {
                         pageWidth: t,
                         onSidebarResize: (e, t) => {
                             d(t);
-                        }
-                    })
-            ]
+                        },
+                    }),
+            ],
         })
     );
 });

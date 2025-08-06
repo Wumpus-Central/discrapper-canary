@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(539854), n(388685), n(953529));
+n.d(t, { Z: () => O }), n(539854), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,7 +16,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,134 +24,134 @@ function p(e, t, n) {
 }
 let f = {
         PRIMARY: () => !0,
-        SECONDARY: () => !0
+        SECONDARY: () => !0,
     },
     g = () =>
         (0, r.jsxs)(
-            'div',
+            "div",
             {
                 className: h.symbol,
                 children: [
-                    (0, r.jsx)('div', { className: h.symbolBackground }),
-                    (0, r.jsx)('img', {
-                        alt: '',
-                        src: n(977706)
-                    })
-                ]
+                    (0, r.jsx)("div", { className: h.symbolBackground }),
+                    (0, r.jsx)("img", {
+                        alt: "",
+                        src: n(977706),
+                    }),
+                ],
             },
-            'symbol'
+            "symbol",
         );
 class m extends i.PureComponent {
     componentDidMount() {
-        (this.setState({ animating: !0 }),
+        this.setState({ animating: !0 }),
             (this._renderSecondaryTimeout = setTimeout(() => {
                 this.setState({ renderSecondary: !0 });
             }, 120)),
             (this._doneTimeout = setTimeout(this.done, 1000)),
-            f.PRIMARY());
+            f.PRIMARY();
     }
     componentDidUpdate(e, t) {
         this.state.renderSecondary && !t.renderSecondary && f.SECONDARY();
     }
     componentWillUnmount() {
-        (clearTimeout(this._renderSecondaryTimeout), clearTimeout(this._doneTimeout));
+        clearTimeout(this._renderSecondaryTimeout), clearTimeout(this._doneTimeout);
     }
     renderPrimary() {
         return (0, r.jsxs)(
-            'div',
+            "div",
             {
                 className: h.primaryExplosion,
                 children: [
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("img", {
+                        alt: "",
                         className: h.circleInner,
                         src: n(273226),
                         width: 70,
-                        height: 69
+                        height: 69,
                     }),
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("img", {
+                        alt: "",
                         className: h.circleOuter,
                         src: n(922026),
                         width: 96,
-                        height: 95
+                        height: 95,
                     }),
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("img", {
+                        alt: "",
                         className: h.linesSecondary,
                         src: n(827926),
                         width: 183,
-                        height: 104
+                        height: 104,
                     }),
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("img", {
+                        alt: "",
                         className: h.linesMain,
                         src: n(873180),
                         width: 69,
-                        height: 180
-                    })
-                ]
+                        height: 180,
+                    }),
+                ],
             },
-            'primary-explosion'
+            "primary-explosion",
         );
     }
     renderSecondary(e, t) {
         return (0, r.jsxs)(
-            'div',
+            "div",
             {
                 className: h.secondaryExplosion,
                 style: {
                     top: t,
-                    left: e
+                    left: e,
                 },
                 children: [
                     (0, r.jsx)(
-                        'img',
+                        "img",
                         {
-                            alt: '',
+                            alt: "",
                             className: h.circleInner,
                             src: n(272162),
                             width: 61,
-                            height: 58
+                            height: 58,
                         },
-                        'circle-inner'
+                        "circle-inner",
                     ),
                     (0, r.jsx)(
-                        'img',
+                        "img",
                         {
-                            alt: '',
+                            alt: "",
                             className: h.circleOuter,
                             src: n(632989),
                             width: 85,
-                            height: 85
+                            height: 85,
                         },
-                        'circle-outer'
+                        "circle-outer",
                     ),
                     (0, r.jsx)(
-                        'img',
+                        "img",
                         {
-                            alt: '',
+                            alt: "",
                             className: h.linesSecondary,
                             src: n(376252),
                             width: 162,
-                            height: 173
+                            height: 173,
                         },
-                        'lines-secondary'
+                        "lines-secondary",
                     ),
                     (0, r.jsx)(
-                        'img',
+                        "img",
                         {
-                            alt: '',
+                            alt: "",
                             className: h.linesMain,
                             src: n(720617),
                             width: 156,
-                            height: 306
+                            height: 306,
                         },
-                        'lines-main'
-                    )
-                ]
+                        "lines-main",
+                    ),
+                ],
             },
-            'secondary-explosion'
+            "secondary-explosion",
         );
     }
     render() {
@@ -159,98 +159,100 @@ class m extends i.PureComponent {
             s = [this.renderPrimary()];
         return (
             e && s.push(this.renderSecondary(t, n)),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: o()(h.container, { [h.animate]: i }),
                 style: {
                     top: this.props.top,
                     left: this.props.left,
-                    transform: 'scale('.concat(l, ')')
+                    transform: "scale(".concat(l, ")"),
                 },
-                children: s
+                children: s,
             })
         );
     }
     constructor(...e) {
-        (super(...e),
-            p(this, '_renderSecondaryTimeout', null),
-            p(this, '_doneTimeout', null),
-            p(this, 'state', {
+        super(...e),
+            p(this, "_renderSecondaryTimeout", null),
+            p(this, "_doneTimeout", null),
+            p(this, "state", {
                 animating: !1,
                 renderSecondary: !1,
                 scale: a().random(0.6, 1, !0),
                 offsetX: a().random(0, 140, !1) - 70,
-                offsetY: a().random(0, 140, !1) - 70
+                offsetY: a().random(0, 140, !1) - 70,
             }),
-            p(this, 'done', () => {
+            p(this, "done", () => {
                 this.props.onAnimationComplete(this.props.componentId);
-            }));
+            });
     }
 }
 class b extends i.PureComponent {
     componentDidMount() {
-        (this.setTimeout(() => {
-            (this.setState({ visible: !0 }), u.S.dispatch(d.CkL.SHAKE_APP, { duration: 2400 }));
+        this.setTimeout(() => {
+            this.setState({ visible: !0 }), u.S.dispatch(d.CkL.SHAKE_APP, { duration: 2400 });
         }, 1800),
-            this.setTimeout(this.createExplosion, 1800));
+            this.setTimeout(this.createExplosion, 1800);
     }
     componentWillUnmount() {
         for (let e of (c.Z.enable(), (this.children.length = 0), this._timeouts)) clearTimeout(e);
     }
     render() {
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: o()(h.ragingDemon, { [h.visible]: this.state.visible }),
-            children: this.children
+            children: this.children,
         });
     }
     constructor(...e) {
-        (super(...e),
-            p(this, '_timeouts', []),
-            p(this, 'children', []),
-            p(this, 'state', {
+        super(...e),
+            p(this, "_timeouts", []),
+            p(this, "children", []),
+            p(this, "state", {
                 explosions: 0,
-                visible: !1
+                visible: !1,
             }),
-            p(this, 'setTimeout', (e, t) => {
+            p(this, "setTimeout", (e, t) => {
                 let n = setTimeout(e, t);
-                return (this._timeouts.push(n), n);
+                return this._timeouts.push(n), n;
             }),
-            p(this, 'removeExplosion', (e) => {
+            p(this, "removeExplosion", (e) => {
                 let t = this.children,
                     n = t.findIndex((t) => {
                         if (t.type !== m) return !1;
                         let n = t.props;
                         return null != n.componentId && n.componentId === e;
                     });
-                (n >= 0 && t.splice(n, 1), this.forceUpdate());
+                n >= 0 && t.splice(n, 1), this.forceUpdate();
             }),
-            p(this, 'createExplosion', () => {
+            p(this, "createExplosion", () => {
                 let e = this.children,
                     t = (window.innerWidth / 2) >> 0,
                     n = (window.innerHeight / 2) >> 0;
                 if (this.state.explosions < 8) {
-                    let i = 'expl-'.concat(this.state.explosions);
-                    (e.push(
+                    let i = "expl-".concat(this.state.explosions);
+                    e.push(
                         (0, r.jsx)(
                             m,
                             {
                                 componentId: i,
                                 top: a().random(n - 100, n + 100, !1),
                                 left: a().random(t - 200, t + 200, !1),
-                                onAnimationComplete: this.removeExplosion
+                                onAnimationComplete: this.removeExplosion,
                             },
-                            i
-                        )
+                            i,
+                        ),
                     ),
                         this.setTimeout(this.createExplosion, 240),
-                        this.setState({ explosions: this.state.explosions + 1 }));
+                        this.setState({ explosions: this.state.explosions + 1 });
                 } else this.setTimeout(this.addSymbol, 750);
             }),
-            p(this, 'addSymbol', () => {
-                ((this.children = [(0, r.jsx)(g, {}, 'symbol')]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3000));
+            p(this, "addSymbol", () => {
+                (this.children = [(0, r.jsx)(g, {}, "symbol")]),
+                    this.forceUpdate(),
+                    this.setTimeout(this.delayedClose, 3000);
             }),
-            p(this, 'delayedClose', () => {
+            p(this, "delayedClose", () => {
                 this.props.handleDemonClose();
-            }));
+            });
     }
 }
 let O = b;

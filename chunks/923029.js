@@ -22,16 +22,16 @@ function g(e) {
     return (
         (t = m
             ? (0, r.jsx)(s.OZU, {
-                  note: p.intl.string(p.t['D5SN5+']),
-                  children: p.intl.string(p.t.xVTAdX)
+                  note: p.intl.string(p.t["D5SN5+"]),
+                  children: p.intl.string(p.t.xVTAdX),
               })
             : null != g
               ? (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE })
               : (0, r.jsx)(s.OZU, {
-                    note: p.intl.string(p.t['LTr+x8']),
-                    children: p.intl.string(p.t.ai6Lbm)
+                    note: p.intl.string(p.t["LTr+x8"]),
+                    children: p.intl.string(p.t.ai6Lbm),
                 })),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: f.noChannel,
             children: [
                 l.tq && (0, r.jsx)(o.ZP, { children: null }),
@@ -42,12 +42,12 @@ function g(e) {
                             darkSrc: m ? n(691270) : n(625065),
                             lightSrc: m ? n(704139) : n(875184),
                             width: 272,
-                            height: 222
+                            height: 222,
                         }),
-                        t
-                    ]
-                })
-            ]
+                        t,
+                    ],
+                }),
+            ],
         })
     );
 }

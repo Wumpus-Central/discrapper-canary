@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => X }), n(388685), n(583741));
+n.d(t, { Z: () => X }), n(388685), n(583741);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -45,24 +45,24 @@ function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -73,14 +73,14 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             o = i.useRef(null),
             u = (0, h.e7)([R.Z], () => R.Z.isTyping(t.id, a)),
             p = (0, h.e7)([I.ZP], () => I.ZP.getMember(t.guild_id, a)),
-            m = (0, h.e7)(
-                [P.Z],
-                () => {
-                    var e;
-                    return (null == p ? void 0 : p.colorRoleId) != null ? (null == (e = P.Z.getRole(t.guild_id, p.colorRoleId)) ? void 0 : e.name) : void 0;
-                },
-                [t.guild_id, p]
-            ),
+            m = (0, h.e7)([P.Z], () => {
+                var e;
+                return (null == p ? void 0 : p.colorRoleId) != null
+                    ? null == (e = P.Z.getRole(t.guild_id, p.colorRoleId))
+                        ? void 0
+                        : e.name
+                    : void 0;
+            }, [t.guild_id, p]),
             b = (0, h.e7)([w.default], () => w.default.getUser(a)),
             y = (0, h.e7)([w.default], () => w.default.getCurrentUser()),
             x = (null == b ? void 0 : b.id) === (null == y ? void 0 : y.id),
@@ -95,7 +95,9 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != b &&
                         (0, f.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('70675'), n.e('70920')]).then(n.bind(n, 654663));
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("70920")]).then(
+                                n.bind(n, 654663),
+                            );
                             return (n) => {
                                 var i, l;
                                 return (0, r.jsx)(
@@ -105,7 +107,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                                         {
                                             user: b,
                                             guildId: t.guild_id,
-                                            channel: t
+                                            channel: t,
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -119,41 +121,41 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                                           })(Object(l)).forEach(function (e) {
                                               Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                           }),
-                                    i)
+                                    i),
                                 );
                             };
                         });
                 },
-                [b, t]
+                [b, t],
             ),
             z = i.useCallback(() => {
                 if (null == b) return;
-                let e = '@'.concat(M.ZP.getUserTag(b, { decoration: 'never' })),
-                    n = '<@'.concat(b.id, '>');
-                (L.S.dispatch(G.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
+                let e = "@".concat(M.ZP.getUserTag(b, { decoration: "never" })),
+                    n = "<@".concat(b.id, ">");
+                L.S.dispatch(G.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
                     L.S.dispatchToLastSubscribed(G.CkL.INSERT_TEXT, {
                         plainText: e,
-                        rawText: n
+                        rawText: n,
                     }),
-                    g.Z.startTyping(t.id));
+                    g.Z.startTyping(t.id);
             }, [b, t]),
             Y = i.useCallback(
                 (e) => {
-                    (e.stopPropagation(),
+                    e.stopPropagation(),
                         (0, _.f)({
                             guildId: t.guild_id,
                             location: {
                                 section: G.jXE.THREAD_MEMBER_LIST,
-                                object: G.qAy.BOOST_GEM_ICON
-                            }
-                        }));
+                                object: G.qAy.BOOST_GEM_ICON,
+                            },
+                        });
                 },
-                [t.guild_id]
+                [t.guild_id],
             ),
             q = (0, v.K)({
                 user: b,
                 guildId: t.guild_id,
-                location: 'ThreadMembers'
+                location: "ThreadMembers",
             }),
             [K, Q] = i.useState(!1);
         if (null == b) return null;
@@ -163,7 +165,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             user: b,
             guildId: t.guild_id,
             channelId: t.id,
-            position: d.tq ? 'window_center' : 'left',
+            position: d.tq ? "window_center" : "left",
             spacing: 16,
             onShiftClick: z,
             shouldShow: K,
@@ -180,15 +182,19 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                                     r,
                                     i = {},
                                     l = Object.keys(e);
-                                for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                 return i;
                             })(e, t);
                         if (Object.getOwnPropertySymbols) {
                             var l = Object.getOwnPropertySymbols(e);
-                            for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                            for (r = 0; r < l.length; r++)
+                                (n = l[r]),
+                                    !(t.indexOf(n) >= 0) &&
+                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                        (i[n] = e[n]);
                         }
                         return i;
-                    })(e, ['onClick', 'onMouseDown']);
+                    })(e, ["onClick", "onMouseDown"]);
                 return (0, r.jsx)(
                     H.Z,
                     V(
@@ -213,7 +219,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             premiumSince: null == X ? null : new Date(X),
                             onClickPremiumGuildIcon: Y,
                             itemProps: D,
-                            lostPermissionTooltipText: k ? void 0 : F.intl.string(F.t['/QcoT0']),
+                            lostPermissionTooltipText: k ? void 0 : F.intl.string(F.t["/QcoT0"]),
                             isOwner: U,
                             nameplate: q,
                             onClick: (e) => {
@@ -221,12 +227,12 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             },
                             onMouseDown: (e) => {
                                 K ? e.stopPropagation() : null == i || i(e);
-                            }
+                            },
                         },
-                        l
-                    )
+                        l,
+                    ),
                 );
-            }
+            },
         });
     }),
     K = i.memo(function (e) {
@@ -234,26 +240,26 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             a = (0, O.p9)({
                 roleId: t,
                 guildId: l,
-                size: 16
+                size: 16,
             });
         return t === G.Skl.UNKNOWN
-            ? (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", {
                   className: z.membersGroup,
-                  children: (0, r.jsx)('div', { className: z.memberGroupsPlaceholder })
+                  children: (0, r.jsx)("div", { className: z.memberGroupsPlaceholder }),
               })
             : (0, r.jsxs)(x.Z, {
                   className: z.membersGroup,
-                  'aria-label': F.intl.formatToPlainString(F.t.UaqbkZ, {
+                  "aria-label": F.intl.formatToPlainString(F.t.UaqbkZ, {
                       title: n,
-                      count: i
+                      count: i,
                   }),
                   children: [
                       null != a ? (0, r.jsx)(j.Z, V({ className: z.roleIcon }, a)) : null,
-                      (0, r.jsxs)('span', {
-                          'aria-hidden': !0,
-                          children: [n, ' \u2014 ', i]
-                      })
-                  ]
+                      (0, r.jsxs)("span", {
+                          "aria-hidden": !0,
+                          children: [n, " \u2014 ", i],
+                      }),
+                  ],
               });
     }),
     Q = i.memo(function (e) {
@@ -261,33 +267,33 @@ let W = U.ZP.getEnableHardwareAcceleration(),
         return t.type === G.d4z.PRIVATE_THREAD
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)('div', { className: B.divider }),
+                      (0, r.jsx)("div", { className: B.divider }),
                       (0, r.jsxs)(p.Text, {
-                          variant: 'text-xs/bold',
-                          color: 'header-secondary',
+                          variant: "text-xs/bold",
+                          color: "header-secondary",
                           className: B.private,
                           children: [
                               (0, r.jsx)(p.mBM, {
-                                  size: 'xxs',
-                                  color: 'currentColor'
+                                  size: "xxs",
+                                  color: "currentColor",
                               }),
-                              '\xA0',
-                              F.intl.string(F.t.BTLTAg)
-                          ]
+                              "\xA0",
+                              F.intl.string(F.t.BTLTAg),
+                          ],
                       }),
                       (0, r.jsx)(p.Text, {
-                          variant: 'text-sm/normal',
-                          color: 'header-secondary',
+                          variant: "text-sm/normal",
+                          color: "header-secondary",
                           className: B.instructions,
-                          children: F.intl.string(F.t.Hsd8hI)
-                      })
-                  ]
+                          children: F.intl.string(F.t.Hsd8hI),
+                      }),
+                  ],
               })
             : null;
     });
 function X(e) {
     let { channel: t, guild: n } = e,
-        l = 'members-'.concat(t.id),
+        l = "members-".concat(t.id),
         { analyticsLocations: s } = (0, y.ZP)(b.Z.MEMBER_LIST),
         d = (0, C.D)(t.id, n),
         f = d.filter((e) => e.userIds.length > 0).reverse()[0],
@@ -308,12 +314,14 @@ function X(e) {
                             callback: () => {
                                 requestAnimationFrame(() => {
                                     var t;
-                                    return null == (t = document.querySelector(e)) ? void 0 : t.focus({ preventScroll: !0 });
+                                    return null == (t = document.querySelector(e))
+                                        ? void 0
+                                        : t.focus({ preventScroll: !0 });
                                 });
-                            }
+                            },
                         });
                     },
-                    [t]
+                    [t],
                 ),
                 a = i.useCallback(
                     () =>
@@ -322,7 +330,7 @@ function X(e) {
                             if (null == t) return e();
                             t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                         }),
-                    []
+                    [],
                 ),
                 s = i.useCallback(
                     () =>
@@ -332,10 +340,10 @@ function X(e) {
                             t.scrollToBottom({
                                 callback() {
                                     requestAnimationFrame(() => setTimeout(e, 100));
-                                }
+                                },
                             });
                         }),
-                    []
+                    [],
                 );
             return {
                 navigator: (0, u.ZP)({
@@ -343,9 +351,9 @@ function X(e) {
                     setFocus: l,
                     isEnabled: n,
                     scrollToStart: a,
-                    scrollToEnd: s
+                    scrollToEnd: s,
                 }),
-                listRef: r
+                listRef: r,
             };
         })(l, Y),
         j = 0 === d.length || d.every((e) => 0 === e.userIds.length);
@@ -354,13 +362,13 @@ function X(e) {
             D.default.track(G.rMx.MEMBER_LIST_VIEWED, {
                 channel_id: t.id,
                 channel_type: t.type,
-                guild_id: t.guild_id
+                guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id, t.type]),
         j)
     )
         return (0, r.jsx)(J, { channel: t });
-    let _ = o().omit(g.containerProps, ['ref']),
+    let _ = o().omit(g.containerProps, ["ref"]),
         O = k.iJ(n);
     return (0, r.jsx)(y.Gt, {
         value: s,
@@ -368,7 +376,7 @@ function X(e) {
             navigator: g,
             children: (0, r.jsx)(p.Wdt, {
                 children: (e) =>
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: a()(z.membersWrap, z.hiddenMembers, B.container),
                         children: (0, r.jsx)(
                             p.aVo,
@@ -387,9 +395,9 @@ function X(e) {
                                                 id: i.id,
                                                 label: i.label,
                                                 count: i.userIds.length,
-                                                guildId: n.id
+                                                guildId: n.id,
                                             },
-                                            i.id
+                                            i.id,
                                         );
                                     },
                                     rowHeight: Y,
@@ -402,62 +410,63 @@ function X(e) {
                                                 channel: t,
                                                 sectionId: a,
                                                 userId: l[i],
-                                                guildOwnerId: O
+                                                guildOwnerId: O,
                                             },
-                                            l[i]
+                                            l[i],
                                         );
                                     },
                                     footerHeight: (e) => 80 * (d[e] === f && t.type === G.d4z.PRIVATE_THREAD),
-                                    renderFooter: (e) => (d[e.section] === f ? (0, r.jsx)(Q, { channel: t }, 'footer') : null),
-                                    innerAriaLabel: F.intl.string(F.t['9Oq93t']),
-                                    innerTag: 'ul',
+                                    renderFooter: (e) =>
+                                        d[e.section] === f ? (0, r.jsx)(Q, { channel: t }, "footer") : null,
+                                    innerAriaLabel: F.intl.string(F.t["9Oq93t"]),
+                                    innerTag: "ul",
                                     sections: d.map((e) => e.userIds.length),
-                                    fade: !0
+                                    fade: !0,
                                 },
                                 _,
-                                e
+                                e,
                             ),
-                            l
-                        )
-                    })
-            })
-        })
+                            l,
+                        ),
+                    }),
+            }),
+        }),
     });
 }
 function J(e) {
     let { channel: t } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(z.membersWrap, z.hiddenMembers, z.members, B.emptyState),
         children: [
             (0, r.jsx)(p.Text, {
                 className: B.emptyStateHeader,
-                variant: 'text-xs/bold',
-                color: 'interactive-normal',
-                children: F.intl.string(F.t['9Oq93t'])
+                variant: "text-xs/bold",
+                color: "interactive-normal",
+                children: F.intl.string(F.t["9Oq93t"]),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: B.emptyStateIconContainer,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: B.emptyStateIcon,
                         children: (0, r.jsx)(p.BFJ, {
-                            size: 'lg',
-                            color: 'currentColor'
-                        })
+                            size: "lg",
+                            color: "currentColor",
+                        }),
                     }),
-                    (0, r.jsx)(A.Z, { className: B.emptyStateStars })
-                ]
+                    (0, r.jsx)(A.Z, { className: B.emptyStateStars }),
+                ],
             }),
             (0, r.jsx)(p.X6q, {
-                variant: 'heading-md/semibold',
-                children: t.isForumPost() ? F.intl.string(F.t.p0UgNT) : F.intl.string(F.t['9/n5v7'])
+                variant: "heading-md/semibold",
+                children: t.isForumPost() ? F.intl.string(F.t.p0UgNT) : F.intl.string(F.t["9/n5v7"]),
             }),
             (0, r.jsx)(p.Text, {
                 className: B.emptyStateSubtext,
-                variant: 'text-sm/normal',
-                color: 'header-secondary',
-                children: F.intl.string(F.t.emw8UF)
-            })
-        ]
+                variant: "text-sm/normal",
+                color: "header-secondary",
+                children: F.intl.string(F.t.emw8UF),
+            }),
+        ],
     });
 }

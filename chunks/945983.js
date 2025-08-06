@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(467055));
+n.d(t, { Z: () => g }), n(467055);
 var r = n(255367),
     l = n(73800),
     i = n(913527),
@@ -12,20 +12,20 @@ var r = n(255367),
     f = n(621600),
     p = n(388032);
 let j = (0, u.B)({
-    kind: 'user',
-    id: '2022-02_guild_folder_mute',
-    label: 'Guild Folder Mute',
+    kind: "user",
+    id: "2022-02_guild_folder_mute",
+    label: "Guild Folder Mute",
     defaultConfig: { enabled: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Enabled',
-            config: { enabled: !0 }
-        }
-    ]
+            label: "Enabled",
+            config: { enabled: !0 },
+        },
+    ],
 });
 function g(e, t) {
-    let { enabled: n } = j.useExperiment({ location: '74d87e_1' }, { autoTrackExposure: !1 }),
+    let { enabled: n } = j.useExperiment({ location: "74d87e_1" }, { autoTrackExposure: !1 }),
         i = (0, a.cj)([b.ZP], () => Object.fromEntries(e.map((e) => [e, b.ZP.isMuted(e)])), [e]),
         u = l.useCallback(
             (n) => {
@@ -40,24 +40,28 @@ function g(e, t) {
                                     null != n
                                         ? {
                                               selected_time_window: n,
-                                              end_time: n > 0 ? o()().add(n, 'second').toISOString() : null
+                                              end_time: n > 0 ? o()().add(n, "second").toISOString() : null,
                                           }
-                                        : void 0
-                            }
-                        ])
+                                        : void 0,
+                            },
+                        ]),
                 );
                 s.Z.updateGuildNotificationSettingsBulk(r, f.ZB.Muted, t);
             },
-            [e, t, i]
+            [e, t, i],
         ),
         g = l.useCallback(() => {
-            s.Z.updateGuildNotificationSettingsBulk(Object.fromEntries(e.filter((e) => i[e]).map((e) => [e, { muted: !1 }])), f.ZB.Unmuted, t);
+            s.Z.updateGuildNotificationSettingsBulk(
+                Object.fromEntries(e.filter((e) => i[e]).map((e) => [e, { muted: !1 }])),
+                f.ZB.Unmuted,
+                t,
+            );
         }, [e, t, i]);
     return n
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(d.sNh, {
-                      id: 'mute-folder',
+                      id: "mute-folder",
                       label: p.intl.string(p.t.vBTk2N),
                       action: () => u(),
                       children: (0, c.k)().map((e) => {
@@ -65,20 +69,20 @@ function g(e, t) {
                           return (0, r.jsx)(
                               d.sNh,
                               {
-                                  id: ''.concat(t),
+                                  id: "".concat(t),
                                   label: n,
-                                  action: () => u(t)
+                                  action: () => u(t),
                               },
-                              t
+                              t,
                           );
-                      })
+                      }),
                   }),
                   (0, r.jsx)(d.sNh, {
-                      id: 'unmute-folder',
+                      id: "unmute-folder",
                       label: p.intl.string(p.t.VFDdkZ),
-                      action: g
-                  })
-              ]
+                      action: g,
+                  }),
+              ],
           })
         : null;
 }

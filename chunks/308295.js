@@ -5,10 +5,10 @@ var r = n(220159),
     s = TypeError;
 r(
     {
-        target: 'Map',
+        target: "Map",
         proto: !0,
         real: !0,
-        forced: !0
+        forced: !0,
     },
     {
         reduce: function (e) {
@@ -22,8 +22,8 @@ r(
                 }),
                 n)
             )
-                throw new s('Reduce of empty map with no initial value');
+                throw new s("Reduce of empty map with no initial value");
             return r;
-        }
-    }
+        },
+    },
 );

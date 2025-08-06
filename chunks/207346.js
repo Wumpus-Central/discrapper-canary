@@ -15,43 +15,43 @@ function d(e) {
         separator: !1,
         children: [
             (0, r.jsx)(a.AlX, {
-                size: 'xs',
-                color: 'currentColor',
-                className: u.icon
+                size: "xs",
+                color: "currentColor",
+                className: u.icon,
             }),
             (0, r.jsx)(a.X6q, {
                 className: u.title,
-                variant: 'heading-xxl/bold',
-                children: c.intl.string(c.t.z2jK6e)
+                variant: "heading-xxl/bold",
+                children: c.intl.string(c.t.z2jK6e),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.betaTag,
-                children: (0, r.jsx)(o.Z, {})
+                children: (0, r.jsx)(o.Z, {}),
             }),
             (0, r.jsx)(a.E1j, {
                 autoFocus: !0,
-                placeholder: c.intl.string(c.t['5h0QOD']),
+                placeholder: c.intl.string(c.t["5h0QOD"]),
                 className: u.queryInput,
                 query: t,
                 onChange: n,
-                onClear: () => n('')
+                onClear: () => n(""),
             }),
             (0, r.jsx)(a.PhF, {
-                placeholder: c.intl.string(c.t['0XtAW1']),
+                placeholder: c.intl.string(c.t["0XtAW1"]),
                 className: u.sortInput,
                 options: [
                     {
-                        value: 'descending',
-                        label: c.intl.string(c.t.SCsC5u)
+                        value: "descending",
+                        label: c.intl.string(c.t.SCsC5u),
                     },
                     {
-                        value: 'ascending',
-                        label: c.intl.string(c.t.fdx7aG)
-                    }
+                        value: "ascending",
+                        label: c.intl.string(c.t.fdx7aG),
+                    },
                 ],
                 isSelected: (e) => e === p,
                 select: m,
-                serialize: (e) => e
+                serialize: (e) => e,
             }),
             (0, r.jsx)(l.zx, {
                 color: l.Tt.TRANSPARENT,
@@ -59,17 +59,17 @@ function d(e) {
                 className: u.settingsButton,
                 look: l.zx.Looks.FILLED,
                 onClick: () => {
-                    ((0, i.Z)(s.Z.CLIPS), d());
+                    (0, i.Z)(s.Z.CLIPS), d();
                 },
                 children: (0, r.jsx)(a.ewm, {
-                    size: 'md',
-                    color: 'currentColor'
-                })
+                    size: "md",
+                    color: "currentColor",
+                }),
             }),
             (0, r.jsx)(a.olH, {
                 className: u.button,
-                onClick: d
-            })
-        ]
+                onClick: d,
+            }),
+        ],
     });
 }

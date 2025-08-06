@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(509545);
@@ -12,6 +12,6 @@ function a() {
         setSelectedSkuId: t,
         setSelectedPlanId: a,
         selectedPlanNotification: s,
-        setSelectedPlanNotification: l
+        setSelectedPlanNotification: l,
     };
 }

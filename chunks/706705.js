@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -7,7 +7,7 @@ function l() {
     let [e, t] = r.useState(!1),
         [l, o] = r.useState(20),
         [c, d] = r.useState(80);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         children: [
             (0, i.jsxs)(s.Kqy, {
                 gap: 8,
@@ -15,48 +15,48 @@ function l() {
                     (0, i.jsx)(s.j7V, {
                         value: e,
                         onChange: () => t(!e),
-                        children: 'Enable Rive'
+                        children: "Enable Rive",
                     }),
                     (0, i.jsxs)(s.Kqy, {
                         gap: 8,
                         children: [
-                            (0, i.jsx)(s.R94, { children: 'Number of animations' }),
+                            (0, i.jsx)(s.R94, { children: "Number of animations" }),
                             (0, i.jsx)(s.iRW, {
                                 initialValue: l,
                                 defaultValue: 20,
-                                onValueRender: (e) => ''.concat(Math.round(e), ' animations'),
+                                onValueRender: (e) => "".concat(Math.round(e), " animations"),
                                 asValueChanges: (e) => o(Math.round(e)),
                                 minValue: 1,
                                 maxValue: 500,
                                 markers: [1, ...Array.from({ length: 25 }, (e, t) => (t + 1) * 20)],
-                                stickToMarkers: !0
-                            })
-                        ]
+                                stickToMarkers: !0,
+                            }),
+                        ],
                     }),
                     (0, i.jsxs)(s.Kqy, {
                         gap: 8,
                         children: [
-                            (0, i.jsx)(s.R94, { children: 'Animation size' }),
+                            (0, i.jsx)(s.R94, { children: "Animation size" }),
                             (0, i.jsx)(s.iRW, {
                                 initialValue: c,
                                 defaultValue: 80,
-                                onValueRender: (e) => ''.concat(Math.round(e), 'px'),
+                                onValueRender: (e) => "".concat(Math.round(e), "px"),
                                 onValueChange: (e) => d(Math.round(e)),
                                 minValue: 10,
                                 maxValue: 300,
-                                markers: [10, 50, 100, 200, 300]
-                            })
-                        ]
-                    })
-                ]
+                                markers: [10, 50, 100, 200, 300],
+                            }),
+                        ],
+                    }),
+                ],
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 style: {
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    rowGap: '10px',
-                    columnGap: '10px',
-                    '--animation-size': ''.concat(c, 'px')
+                    display: "flex",
+                    flexWrap: "wrap",
+                    rowGap: "10px",
+                    columnGap: "10px",
+                    "--animation-size": "".concat(c, "px"),
                 },
                 children: Array.from({ length: l }).map((t, r) =>
                     e
@@ -64,20 +64,20 @@ function l() {
                               s.t7u,
                               {
                                   eventTargetRef: { current: document.body },
-                                  className: a.animationObj
+                                  className: a.animationObj,
                               },
-                              r
+                              r,
                           )
                         : (0, i.jsx)(
                               s.Fmz,
                               {
-                                  importData: () => n.e('37372').then(n.t.bind(n, 459274, 19)),
-                                  className: a.animationObj
+                                  importData: () => n.e("37372").then(n.t.bind(n, 459274, 19)),
+                                  className: a.animationObj,
                               },
-                              r
-                          )
-                )
-            })
-        ]
+                              r,
+                          ),
+                ),
+            }),
+        ],
     });
 }

@@ -16,32 +16,32 @@ function f(e) {
         contentClassName: d.messageContentContainer,
         iconContainerClassName: d.iconContainer,
         iconNode: (0, r.jsx)(o.Dkj, { colorClass: d.icon }),
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: d.container,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(o.Text, {
-                            variant: 'text-sm/medium',
-                            children: t.content
+                            variant: "text-sm/medium",
+                            children: t.content,
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: d.nitroBadge,
                             children: [
                                 (0, r.jsx)(o.SrA, {
-                                    size: 'xs',
-                                    colorClass: d.nitroBadgeIcon
+                                    size: "xs",
+                                    colorClass: d.nitroBadgeIcon,
                                 }),
                                 (0, r.jsx)(o.Text, {
-                                    variant: 'text-xs/medium',
+                                    variant: "text-xs/medium",
                                     className: d.nitroBadgeText,
-                                    children: u.intl.string(u.t['BMw+7O'])
-                                })
-                            ]
-                        })
-                    ]
+                                    children: u.intl.string(u.t["BMw+7O"]),
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: d.buttonContainer,
                     children: (0, r.jsx)(a.Z, {
                         showGradient: !0,
@@ -51,11 +51,11 @@ function f(e) {
                         size: i.zx.Sizes.SMALL,
                         premiumModalAnalyticsLocation: {
                             section: f,
-                            object: l.qAy.MESSAGE
-                        }
-                    })
-                })
-            ]
-        })
+                            object: l.qAy.MESSAGE,
+                        },
+                    }),
+                }),
+            ],
+        }),
     });
 }

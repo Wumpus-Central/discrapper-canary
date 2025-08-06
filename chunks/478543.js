@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685), n(539854));
+n.d(t, { Z: () => C }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -27,7 +27,7 @@ function v(e) {
         l = i.useCallback(() => {
             n ||
                 (0, p.JG)(t, () => {
-                    (o(!0), (s.current = setTimeout(() => o(!1), 2000)));
+                    o(!0), (s.current = setTimeout(() => o(!1), 2000));
                 });
         }, [t, n]);
     return (
@@ -38,12 +38,12 @@ function v(e) {
                   onClick: l,
                   children: [
                       (0, r.jsx)(u.xPt, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: y.copyLinkIcon
+                          size: "md",
+                          color: "currentColor",
+                          className: y.copyLinkIcon,
                       }),
-                      n ? b.intl.string(b.t.GmrIJS) : b.intl.string(b.t.iVzBOj)
-                  ]
+                      n ? b.intl.string(b.t.GmrIJS) : b.intl.string(b.t.iVzBOj),
+                  ],
               })
             : null
     );
@@ -51,31 +51,42 @@ function v(e) {
 function I() {
     return (0, r.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: y.buildInfo,
-                children: [(0, r.jsx)('div', { className: a()(y.barLoader, y.barTitle) }), (0, r.jsx)('div', { className: y.barLoader })]
+                children: [
+                    (0, r.jsx)("div", { className: a()(y.barLoader, y.barTitle) }),
+                    (0, r.jsx)("div", { className: y.barLoader }),
+                ],
             }),
-            (0, r.jsx)('div', { className: y.buttonLoader })
-        ]
+            (0, r.jsx)("div", { className: y.buttonLoader }),
+        ],
     });
 }
 function T(e) {
-    let { subHead: t, buildDetails: n, buttonColor: o, buttonClick: s, buttonText: l, disabled: d = !1, submitting: f = !1 } = e;
+    let {
+        subHead: t,
+        buildDetails: n,
+        buttonColor: o,
+        buttonClick: s,
+        buttonText: l,
+        disabled: d = !1,
+        submitting: f = !1,
+    } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: y.buildInfo,
                 children: [
                     (0, r.jsx)(u.Text, {
-                        variant: 'text-sm/medium',
+                        variant: "text-sm/medium",
                         className: y.subHead,
-                        children: t
+                        children: t,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: y.buildDetails,
-                        children: n
-                    })
-                ]
+                        children: n,
+                    }),
+                ],
             }),
             (0, r.jsx)(c.zx, {
                 submitting: f,
@@ -84,9 +95,9 @@ function T(e) {
                 className: a()(y.button, d ? y.disabledButtonOverride : null),
                 size: y.buttonSize,
                 disabled: d,
-                children: l
-            })
-        ]
+                children: l,
+            }),
+        ],
     });
 }
 function S(e) {
@@ -94,23 +105,29 @@ function S(e) {
         n,
         r,
         { currentOverrides: i, linkMeta: o, applyBuildOverride: a, clearBuildOverride: s, submitting: u } = e,
-        _ = ['discord_web'];
-    m.isPlatformEmbedded || _.push('discord_marketing', 'discord_developers');
+        _ = ["discord_web"];
+    m.isPlatformEmbedded || _.push("discord_marketing", "discord_developers");
     let p = (0, g.Z)(o, _);
     if (!p.valid) return A(p.reason);
-    l()(null != o, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
+    l()(null != o, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
     let { discord_web: h, discord_developers: E } = o.targetBuildOverride,
         y = null != h ? h : E;
-    (l()(null != y, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), O(y, i) ? ((n = b.intl.string(b.t.tX4xrq)), (t = s), (r = c.zx.Colors.RED)) : ((n = b.intl.string(b.t.nOunHB)), (t = a), (r = c.zx.Colors.GREEN)));
+    l()(
+        null != y,
+        "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved",
+    ),
+        O(y, i)
+            ? ((n = b.intl.string(b.t.tX4xrq)), (t = s), (r = c.zx.Colors.RED))
+            : ((n = b.intl.string(b.t.nOunHB)), (t = a), (r = c.zx.Colors.GREEN));
     let v = () => {
         f.Z.isConnected()
             ? d.Z.show({
                   title: b.intl.string(b.t.tiu1l5),
-                  body: b.intl.string(b.t['zK+lqa']),
+                  body: b.intl.string(b.t["zK+lqa"]),
                   onConfirm: t,
-                  cancelText: b.intl.string(b.t['ETE/oK']),
-                  confirmText: b.intl.string(b.t['QDX/qq']),
-                  confirmVariant: 'critical-primary'
+                  cancelText: b.intl.string(b.t["ETE/oK"]),
+                  confirmText: b.intl.string(b.t["QDX/qq"]),
+                  confirmVariant: "critical-primary",
               })
             : t();
     };
@@ -120,39 +137,42 @@ function S(e) {
         buttonClick: v,
         buttonText: n,
         buttonColor: r,
-        submitting: u
+        submitting: u,
     });
 }
 function A(e) {
     return T({
         subHead: b.intl.string(b.t.ODXApK),
         buttonColor: c.zx.Colors.TRANSPARENT,
-        buttonText: 'Invalid',
+        buttonText: "Invalid",
         buildDetails: e,
-        disabled: !0
+        disabled: !0,
     });
 }
 function N(e, t, n) {
     return (0, r.jsxs)(u.Text, {
-        variant: 'text-xs/normal',
+        variant: "text-xs/normal",
         className: y.titleRegion,
         children: [
-            (0, r.jsx)('strong', {
+            (0, r.jsx)("strong", {
                 className: y.title,
-                children: null != e && null != e.releaseChannel ? b.intl.formatToPlainString(b.t.bFj63d, { releaseChannel: e.releaseChannel }) : b.intl.string(b.t.Wj3LW1)
+                children:
+                    null != e && null != e.releaseChannel
+                        ? b.intl.formatToPlainString(b.t.bFj63d, { releaseChannel: e.releaseChannel })
+                        : b.intl.string(b.t.Wj3LW1),
             }),
             (0, r.jsx)(u.eee, {
                 className: y.infoLink,
                 href: h.Z.getArticleURL(E.BhN.BUILD_OVERRIDE_EMBED),
-                target: '_blank',
+                target: "_blank",
                 children: (0, r.jsx)(u.d3s, {
-                    size: 'xs',
-                    color: 'currentColor',
-                    className: y.infoIcon
-                })
+                    size: "xs",
+                    color: "currentColor",
+                    className: y.infoIcon,
+                }),
             }),
-            n ? null : (0, r.jsx)(v, { url: t })
-        ]
+            n ? null : (0, r.jsx)(v, { url: t }),
+        ],
     });
 }
 let C = (e) => {
@@ -164,11 +184,11 @@ let C = (e) => {
         f = i.useCallback(() => {
             c || (u(!0), l().catch(() => u(!1)));
         }, [l, c]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: y.wrapper,
         children: [
             N(o, a, t),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: y.content,
                 children: [
                     (0, r.jsx)(_.Z, { className: y.icon }),
@@ -179,10 +199,10 @@ let C = (e) => {
                               linkMeta: o,
                               applyBuildOverride: d,
                               clearBuildOverride: f,
-                              submitting: c
-                          })
-                ]
-            })
-        ]
+                              submitting: c,
+                          }),
+                ],
+            }),
+        ],
     });
 };

@@ -2,7 +2,7 @@ n.d(e, {
     OR: () => r,
     _c: () => u,
     bb: () => s,
-    iD: () => o
+    iD: () => o,
 });
 var i = n(442837),
     l = n(581883),
@@ -14,7 +14,7 @@ function r(t) {
         (0, i.e7)([l.Z], () => {
             var t;
             return null == (t = l.Z.settings.guilds) ? void 0 : t.guilds;
-        })
+        }),
     );
 }
 function o(t) {
@@ -38,5 +38,7 @@ function d(t, e, n) {
     if (null == n) return;
     let o = null != e ? (null == (i = n[t]) ? void 0 : i.channels[e]) : n[t],
         u = null == o ? void 0 : o.customNotificationSoundConfig;
-    return null != u && null != (r = null == u || null == (l = u.notificationSoundPackId) ? void 0 : l.value) ? Object.values(a.YC).find((t) => t === r) : void 0;
+    return null != u && null != (r = null == u || null == (l = u.notificationSoundPackId) ? void 0 : l.value)
+        ? Object.values(a.YC).find((t) => t === r)
+        : void 0;
 }

@@ -9,12 +9,12 @@ function l(e) {
     let { message: t, compact: n } = e;
     return (0, r.jsx)(o.Z, {
         iconNode: (0, r.jsx)(i.or_, {
-            size: 'md',
-            color: 'currentColor',
-            className: s.icon
+            size: "md",
+            color: "currentColor",
+            className: s.icon,
         }),
         timestamp: t.timestamp,
         compact: n,
-        children: a.intl.string(a.t.OCs36O)
+        children: a.intl.string(a.t.OCs36O),
     });
 }

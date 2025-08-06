@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     B: () => y,
-    r: () => v
+    r: () => v,
 }),
-    n(415506));
+    n(415506);
 var r = n(255367),
     i = n(73800),
     o = n(512722),
@@ -22,7 +22,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,7 +51,8 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -61,25 +62,25 @@ function E(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let b = i.createContext(void 0);
 function y() {
     let e = i.useContext(b);
-    return (a()(null != e, 'useEntryDataContext must be used within a EntryDataContextProvider'), e);
+    return a()(null != e, "useEntryDataContext must be used within a EntryDataContextProvider"), e;
 }
 function O(e) {
     var { entry: t } = e,
-        n = g(e, ['entry']);
+        n = g(e, ["entry"]);
     let i = m(
         {
             baseEntryData: (0, u.Z)({
                 entry: t,
-                channel: n.channel
-            })
+                channel: n.channel,
+            }),
         },
-        n
+        n,
     );
     switch (t.content_type) {
         case s.s.TOP_ARTIST:
@@ -95,68 +96,68 @@ function O(e) {
         case s.s.LAUNCHED_ACTIVITY:
             return (0, r.jsx)(I, m({ entry: t }, i));
         default:
-            throw Error('Unsupported content type: '.concat(t.content_type));
+            throw Error("Unsupported content type: ".concat(t.content_type));
     }
 }
 function v(e) {
     var { errorFallback: t } = e,
-        n = g(e, ['errorFallback']);
+        n = g(e, ["errorFallback"]);
     return (0, r.jsx)(l.S, {
         fallback: t,
-        children: (0, r.jsx)(O, m({}, n))
+        children: (0, r.jsx)(O, m({}, n)),
     });
 }
 function I(e) {
     var { entry: t, children: n } = e,
-        i = g(e, ['entry', 'children']);
+        i = g(e, ["entry", "children"]);
     let o = (0, c.Z)(m({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
         value: m({ parsedEntry: o }, i),
-        children: n
+        children: n,
     });
 }
 function T(e) {
     var { entry: t, children: n } = e,
-        i = g(e, ['entry', 'children']);
+        i = g(e, ["entry", "children"]);
     let o = (0, _.Z)(m({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
         value: m({ parsedEntry: o }, i),
-        children: n
+        children: n,
     });
 }
 function S(e) {
     var { entry: t, children: n } = e,
-        i = g(e, ['entry', 'children']);
+        i = g(e, ["entry", "children"]);
     let o = (0, d.Z)(m({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
         value: m({ parsedEntry: o }, i),
-        children: n
+        children: n,
     });
 }
 function A(e) {
     var { entry: t, children: n } = e,
-        i = g(e, ['entry', 'children']);
+        i = g(e, ["entry", "children"]);
     let o = (0, d.Z)(m({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
         value: m({ parsedEntry: o }, i),
-        children: n
+        children: n,
     });
 }
 function N(e) {
     var { entry: t, children: n } = e,
-        i = g(e, ['entry', 'children']);
+        i = g(e, ["entry", "children"]);
     let o = (0, p.Z)(m({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
         value: m({ parsedEntry: o }, i),
-        children: n
+        children: n,
     });
 }
 function C(e) {
     var { entry: t, children: n } = e,
-        i = g(e, ['entry', 'children']);
+        i = g(e, ["entry", "children"]);
     let o = (0, f.Z)(m({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
         value: m({ parsedEntry: o }, i),
-        children: n
+        children: n,
     });
 }

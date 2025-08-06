@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     KE: () => O,
     KT: () => b,
     ZP: () => C,
-    _C: () => _
+    _C: () => _,
 }),
     n(388685),
-    n(457542));
+    n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -23,24 +23,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -54,35 +54,35 @@ function O(e, t) {
         async () => {
             switch (t.type) {
                 case f.Us.LEVEL:
-                    let { default: i } = await n.e('99014').then(n.bind(n, 271224));
+                    let { default: i } = await n.e("99014").then(n.bind(n, 271224));
                     return (n) =>
                         (0, r.jsx)(
                             i,
                             m(
                                 {
                                     guildId: e,
-                                    powerup: t
+                                    powerup: t,
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         );
                 case f.Us.PERK: {
-                    let { default: i } = await n.e('59256').then(n.bind(n, 326055));
+                    let { default: i } = await n.e("59256").then(n.bind(n, 326055));
                     return (n) =>
                         (0, r.jsx)(
                             i,
                             m(
                                 {
                                     guildId: e,
-                                    powerup: t
+                                    powerup: t,
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         );
                 }
             }
         },
-        { modalKey: f.H2 }
+        { modalKey: f.H2 },
     );
 }
 function _(e, t) {
@@ -114,7 +114,7 @@ function _(e, t) {
                                     .filter(d.lm);
                       })(t, v)
                     : [],
-            [t, v]
+            [t, v],
         ),
         E = null == j ? void 0 : j.reduce((e, t) => e + t.cost, 0),
         S = Math.max((null != (h = null == C ? void 0 : C.premiumSubscriberCount) ? h : 0) - _ + E, 0);
@@ -130,7 +130,7 @@ function _(e, t) {
                         ? void (0, a.u)({
                               analyticsLocation: {
                                   page: g.ZY5.GUILD_POWERUPS_OVERVIEW,
-                                  section: g.jXE.GUILD_POWERUPS_OVERVIEW_CARD
+                                  section: g.jXE.GUILD_POWERUPS_OVERVIEW_CARD,
                               },
                               numberOfBoostsToAdd: t.cost - S,
                               analyticsLocations: b,
@@ -141,46 +141,46 @@ function _(e, t) {
                                   return null == (e = O(!0))
                                       ? void 0
                                       : e.then(() => {
-                                            (s && (0, o.pTH)(),
+                                            s && (0, o.pTH)(),
                                                 (0, o.ZDy)(async () => {
-                                                    let { default: e } = await n.e('13965').then(n.bind(n, 666083));
+                                                    let { default: e } = await n.e("13965").then(n.bind(n, 666083));
                                                     return (n) =>
                                                         (0, r.jsx)(
                                                             e,
                                                             m(
                                                                 {
                                                                     guildId: C.id,
-                                                                    powerup: t
+                                                                    powerup: t,
                                                                 },
-                                                                n
-                                                            )
+                                                                n,
+                                                            ),
                                                         );
-                                                }));
+                                                });
                                         });
-                              }
+                              },
                           })
                         : null == (i = O(!0))
                           ? void 0
                           : i.then(() => {
-                                (s && (0, o.pTH)(),
+                                s && (0, o.pTH)(),
                                     (0, o.ZDy)(async () => {
-                                        let { default: e } = await n.e('13965').then(n.bind(n, 666083));
+                                        let { default: e } = await n.e("13965").then(n.bind(n, 666083));
                                         return (n) =>
                                             (0, r.jsx)(
                                                 e,
                                                 m(
                                                     {
                                                         guildId: C.id,
-                                                        powerup: t
+                                                        powerup: t,
                                                     },
-                                                    n
-                                                )
+                                                    n,
+                                                ),
                                             );
-                                    }));
+                                    });
                             });
             },
-            [O, t, S, b, C]
-        )
+            [O, t, S, b, C],
+        ),
     };
 }
 function y(e, t) {
@@ -206,8 +206,8 @@ function y(e, t) {
                         })
                 );
             },
-            [e, t]
-        )
+            [e, t],
+        ),
     };
 }
 function C(e, t) {
@@ -221,26 +221,26 @@ function C(e, t) {
         onDeactivate: u,
         onShowDeactivate: i.useCallback(
             (i) => {
-                (i.stopPropagation(),
+                i.stopPropagation(),
                     (0, o.ZDy)(async () => {
-                        let { default: i } = await n.e('31924').then(n.bind(n, 625651));
+                        let { default: i } = await n.e("31924").then(n.bind(n, 625651));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
                                 m(
                                     {
                                         guildId: e,
-                                        powerup: t
+                                        powerup: t,
                                     },
-                                    n
-                                )
+                                    n,
+                                ),
                             );
-                    }));
+                    });
             },
-            [e, t]
+            [e, t],
         ),
         onShowMore: i.useCallback(() => {
             O(e, t);
-        }, [e, t])
+        }, [e, t]),
     };
 }

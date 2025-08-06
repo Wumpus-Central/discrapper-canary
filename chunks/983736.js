@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Dc: () => c,
     OA: () => s,
-    _C: () => l
+    _C: () => l,
 }),
-    n(781311));
+    n(781311);
 var r = n(823379),
     i = n(246364),
     o = n(592286),
@@ -18,9 +18,9 @@ let s = (e) => {
             return !!n;
         case i.QJ.TEXT_INPUT:
         case i.QJ.PARAGRAPH:
-            return 'string' == typeof n && '' !== n.trim();
+            return "string" == typeof n && "" !== n.trim();
         case i.QJ.MULTIPLE_CHOICE:
-            return 'number' == typeof n;
+            return "number" == typeof n;
         default:
             return (0, r.vE)(o);
     }

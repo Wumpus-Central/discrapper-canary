@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     GE: () => A,
     GL: () => h,
     Jd: () => R,
@@ -18,9 +18,9 @@
     vU: () => P,
     yA: () => v,
     yh: () => m,
-    zo: () => D
+    zo: () => D,
 }),
-    n(35282));
+    n(35282);
 var r = n(164369),
     i = n(913527),
     o = n.n(i),
@@ -38,23 +38,23 @@ let d = (e) => {
             seconds: i,
             minutes: o,
             hours: Math.floor(r / l.Z.Seconds.HOUR),
-            days: Math.floor(r / l.Z.Seconds.DAY)
+            days: Math.floor(r / l.Z.Seconds.DAY),
         };
     },
     f = (e, t) =>
         d({
-            start: 'id' in e ? c.default.extractTimestamp(e.id) : e.start,
-            now: 'end' in e && null != e.end ? Math.min(e.end, t) : t
+            start: "id" in e ? c.default.extractTimestamp(e.id) : e.start,
+            now: "end" in e && null != e.end ? Math.min(e.end, t) : t,
         }),
     _ = (e, t) => {
         let { seconds: n, minutes: r, hours: i } = f(e, t);
         function o(e) {
-            return String(e).padStart(2, '0');
+            return String(e).padStart(2, "0");
         }
-        return u.intl.formatToPlainString(u.t['l5PP//'], {
+        return u.intl.formatToPlainString(u.t["l5PP//"], {
             hours: i,
             minutes: i > 0 ? o(r) : r,
-            seconds: o(n)
+            seconds: o(n),
         });
     },
     p = {
@@ -63,13 +63,13 @@ let d = (e) => {
         hoursAgo: (e) => u.intl.formatToPlainString(u.t.raJpz8, { count: e }),
         daysAgo: (e) => u.intl.formatToPlainString(u.t.KkvKho, { count: e }),
         weeksAgo: (e) => u.intl.formatToPlainString(u.t.sDtO6O, { count: e }),
-        monthsAgo: (e) => u.intl.formatToPlainString(u.t.ITymoq, { count: e })
+        monthsAgo: (e) => u.intl.formatToPlainString(u.t.ITymoq, { count: e }),
     },
     h = function (e, t, n) {
         let { formatSet: r = p } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
             i = o()(n),
             a = o()(c.default.extractTimestamp(e.id)),
-            s = i.diff(a, 's'),
+            s = i.diff(a, "s"),
             u = Math.abs(s);
         if (u < l.Z.Seconds.MINUTE) return r.secondsAgo(s);
         if (u < l.Z.Seconds.HOUR) {
@@ -133,25 +133,25 @@ function A(e) {
     let {
         months: t = 0,
         weeks: n = 0,
-        days: i = 0
+        days: i = 0,
     } = (0, r.Z)({
         start: e,
-        end: new Date()
+        end: new Date(),
     });
     return u.intl.formatToPlainString(u.t.NXBtjI, {
         months: t,
         weeks: t > 0 ? 0 : n,
-        days: t > 0 || n > 0 ? 0 : i
+        days: t > 0 || n > 0 ? 0 : i,
     });
 }
 function N(e) {
-    if (null == e || '' === e) return null;
+    if (null == e || "" === e) return null;
     let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
     return null == t
         ? null
-        : u.intl.formatToPlainString(u.t['ijVm6+'], {
+        : u.intl.formatToPlainString(u.t["ijVm6+"], {
               seasonNum: t[1],
-              episodeNum: t[2]
+              episodeNum: t[2],
           });
 }
 function C(e, t) {
@@ -163,10 +163,10 @@ function C(e, t) {
         null != s && null != l && s > 0 && l > 0
             ? (a = u.intl.formatToPlainString(u.t.wmUSi4, {
                   count: s,
-                  max: l
+                  max: l,
               }))
             : null != s && s > 0 && (a = u.intl.formatToPlainString(u.t.UTYMsb, { count: s })),
-        null != a && null != e ? ''.concat(e, ' (').concat(a, ')') : null != e ? e : a
+        null != a && null != e ? "".concat(e, " (").concat(a, ")") : null != e ? e : a
     );
 }
 function R(e) {
@@ -187,17 +187,17 @@ function D(e) {
     if (null == t)
         return {
             text: null,
-            tooltipText: null
+            tooltipText: null,
         };
     let n = Math.round(t / l.Z.Seconds.HOUR);
     return n <= 0
         ? {
               text: null,
-              tooltipText: null
+              tooltipText: null,
           }
         : {
               text: u.intl.formatToPlainString(u.t.vZaMen, { hours: n }),
-              tooltipText: u.intl.formatToPlainString(u.t['S5F48/'], { hours: n })
+              tooltipText: u.intl.formatToPlainString(u.t["S5F48/"], { hours: n }),
           };
 }
 function L(e) {

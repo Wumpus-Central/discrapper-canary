@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     $f: () => b,
     C$: () => m,
     Dt: () => E,
     Hw: () => h,
-    wW: () => g
+    wW: () => g,
 }),
-    n(539854));
+    n(539854);
 var r = n(255367),
     i = n(913527),
     o = n.n(i),
@@ -21,7 +21,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,33 +67,33 @@ function p(e, t) {
     );
 }
 function h(e) {
-    let t = u.intl.formatToPlainString(u.t['CvHu/v'], { timestamp: new Date(e).valueOf() });
+    let t = u.intl.formatToPlainString(u.t["CvHu/v"], { timestamp: new Date(e).valueOf() });
     (0, a.showToast)((0, a.createToast)(t, a.ToastType.SUCCESS));
 }
 function m() {
-    (0, a.showToast)((0, a.createToast)(u.intl.string(u.t['JF/LWl']), a.ToastType.SUCCESS));
+    (0, a.showToast)((0, a.createToast)(u.intl.string(u.t["JF/LWl"]), a.ToastType.SUCCESS));
 }
 function g(e) {
     (0, a.showToast)((0, a.createToast)(u.intl.formatToPlainString(u.t.sUvyW1, { error: e }), a.ToastType.FAILURE));
 }
 function E(e) {
     let { channel: t } = e,
-        n = o()().add(1, 'day').startOf('day').set('hours', 9),
-        i = o()().add(1, 'day').startOf('day').set('hours', 13),
-        s = o()().startOf('isoWeek').add(1, 'week').set('hours', 9),
+        n = o()().add(1, "day").startOf("day").set("hours", 9),
+        i = o()().add(1, "day").startOf("day").set("hours", 13),
+        s = o()().startOf("isoWeek").add(1, "week").set("hours", 9),
         c = [
             {
                 display: u.intl.string(u.t.tjIn9v),
-                value: n
+                value: n,
             },
             {
                 display: u.intl.string(u.t.EMRZyc),
-                value: i
+                value: i,
             },
             {
-                display: u.intl.string(u.t['+P5MmJ']),
-                value: s
-            }
+                display: u.intl.string(u.t["+P5MmJ"]),
+                value: s,
+            },
         ].map((e) =>
             (0, r.jsx)(
                 a.sNh,
@@ -103,11 +103,11 @@ function E(e) {
                     action: () =>
                         (0, l._e)({
                             channelId: t.id,
-                            scheduledTimestamp: e.value.toISOString()
-                        })
+                            scheduledTimestamp: e.value.toISOString(),
+                        }),
                 },
-                e.display
-            )
+                e.display,
+            ),
         );
     return (
         c.push(
@@ -117,14 +117,14 @@ function E(e) {
                     (0, r.jsx)(
                         a.sNh,
                         {
-                            id: 'custom-time',
+                            id: "custom-time",
                             label: u.intl.string(u.t.stHooK),
-                            action: () => b({ channel: t })
+                            action: () => b({ channel: t }),
                         },
-                        'custom-time'
-                    )
-                ]
-            })
+                        "custom-time",
+                    ),
+                ],
+            }),
         ),
         c
     );
@@ -139,11 +139,11 @@ function b(e) {
                     e,
                     p(f({}, n), {
                         channel: t,
-                        prefilledTime: null != i ? i : o()().startOf('hour').add(1, 'hour').toISOString()
-                    })
+                        prefilledTime: null != i ? i : o()().startOf("hour").add(1, "hour").toISOString(),
+                    }),
                 );
         },
-        { modalKey: c.k }
+        { modalKey: c.k },
     );
 }
-new s.Z('Scheduled Messages');
+new s.Z("Scheduled Messages");

@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,5 +25,5 @@ class c extends (r = i.ZP.Store) {
         return s;
     }
 }
-a(c, 'displayName', 'CreatorMonetizationMarketingStore');
+a(c, "displayName", "CreatorMonetizationMarketingStore");
 let u = new c(o.Z, { CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: l });

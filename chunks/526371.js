@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -25,7 +25,7 @@ function C() {
         h = (e) => {
             (0, p.Q3)(o.z.CLICKER_COACHMARK, {
                 dismissAction: e,
-                forceTrack: !0
+                forceTrack: !0,
             });
         };
     return (
@@ -39,77 +39,80 @@ function C() {
                 onMouseEnter: () => n(!0),
                 onMouseLeave: () => n(!1),
                 onClick: () => {
-                    (h(b.L.PRIMARY), d.Z.open(f.oAB.CLICKER_GAME, null, { analyticsLocations: s }));
+                    h(b.L.PRIMARY), d.Z.open(f.oAB.CLICKER_GAME, null, { analyticsLocations: s });
                 },
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: j.hiddenWhileNotHovered,
                         children: [
                             (0, i.jsxs)(c.P3F, {
                                 className: j.dismiss,
                                 onClick: (e) => {
-                                    (e.stopPropagation(), h(b.L.USER_DISMISS));
+                                    e.stopPropagation(), h(b.L.USER_DISMISS);
                                 },
                                 children: [
                                     (0, i.jsx)(c.P$X, {
                                         className: j.dismissIcon,
-                                        color: 'currentColor'
+                                        color: "currentColor",
                                     }),
                                     (0, i.jsx)(l.xv, {
-                                        color: 'currentColor',
-                                        variant: 'text-xs/bold',
-                                        children: _.intl.string(x.default.AsH93d)
-                                    })
-                                ]
+                                        color: "currentColor",
+                                        variant: "text-xs/bold",
+                                        children: _.intl.string(x.default.AsH93d),
+                                    }),
+                                ],
                             }),
-                            (0, i.jsx)('iframe', {
+                            (0, i.jsx)("iframe", {
                                 className: j.video,
-                                src: 'https://www.youtube.com/embed/'.concat('h-9SUgIeJnY', '?rel=0&showinfo=0&controls=1&origin=https://').concat(f.$R1),
+                                src: "https://www.youtube.com/embed/"
+                                    .concat("h-9SUgIeJnY", "?rel=0&showinfo=0&controls=1&origin=https://")
+                                    .concat(f.$R1),
                                 allowFullScreen: !0,
-                                sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
-                            })
-                        ]
+                                sandbox:
+                                    "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
+                            }),
+                        ],
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: j.background,
-                        children: (0, i.jsx)('div', { className: j.backgroundGradient })
+                        children: (0, i.jsx)("div", { className: j.backgroundGradient }),
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: j.foreground,
                         children: [
-                            (0, i.jsx)('img', {
+                            (0, i.jsx)("img", {
                                 className: j.icon,
                                 src: E,
-                                alt: ''
+                                alt: "",
                             }),
-                            (0, i.jsxs)('div', {
+                            (0, i.jsxs)("div", {
                                 className: j.text,
                                 children: [
                                     (0, i.jsx)(l.xv, {
-                                        variant: 'text-md/bold',
-                                        color: 'always-white',
-                                        children: _.intl.string(x.default['7qZdOz'])
+                                        variant: "text-md/bold",
+                                        color: "always-white",
+                                        children: _.intl.string(x.default["7qZdOz"]),
                                     }),
                                     (0, i.jsx)(l.xv, {
-                                        variant: 'text-sm/medium',
-                                        color: 'always-white',
-                                        children: _.intl.string(x.default.orfMLS)
-                                    })
-                                ]
+                                        variant: "text-sm/medium",
+                                        color: "always-white",
+                                        children: _.intl.string(x.default.orfMLS),
+                                    }),
+                                ],
                             }),
                             (0, i.jsx)(c.d4D, {
                                 className: j.arrow,
-                                color: 'black'
-                            })
-                        ]
-                    })
-                ]
-            })
+                                color: "black",
+                            }),
+                        ],
+                    }),
+                ],
+            }),
         })
     );
 }
 function O() {
     let e = (0, p.Nj)(o.z.CLICKER_COACHMARK),
-        { enableGame: t } = h.C.getCurrentConfig({ location: 'Coachmark' });
+        { enableGame: t } = h.C.getCurrentConfig({ location: "Coachmark" });
     return e || !t ? null : (0, i.jsx)(C, {});
 }

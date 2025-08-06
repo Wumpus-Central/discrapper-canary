@@ -2,7 +2,7 @@ n.d(t, {
     Nv: () => _,
     pd: () => f,
     uX: () => j,
-    wk: () => b
+    wk: () => b,
 });
 var i = n(350483),
     r = n(220444),
@@ -16,15 +16,25 @@ var i = n(350483),
     m = n(490897);
 let p = (e, t) => {
         let n = l.Z.getChannel(t);
-        return null != n && ((0, a.hv)(n.type) || u.TPd.GUILD_VOCAL.has(n.type) ? o.ZP.getMentionCount(t) > 0 || c.Z.getVoiceChannelId() === t : (!d.ZP.isChannelMuted(e, t) || o.ZP.getMentionCount(t) > 0) && (0, r.d)(n));
+        return (
+            null != n &&
+            ((0, a.hv)(n.type) || u.TPd.GUILD_VOCAL.has(n.type)
+                ? o.ZP.getMentionCount(t) > 0 || c.Z.getVoiceChannelId() === t
+                : (!d.ZP.isChannelMuted(e, t) || o.ZP.getMentionCount(t) > 0) && (0, r.d)(n))
+        );
     },
-    g = (e, t) => (t === m.W.GUILD_EVENT ? !d.ZP.isMuteScheduledEventsEnabled(e) && o.ZP.hasUnread(e, t) : o.ZP.hasUnread(e, t)),
+    g = (e, t) =>
+        t === m.W.GUILD_EVENT ? !d.ZP.isMuteScheduledEventsEnabled(e) && o.ZP.hasUnread(e, t) : o.ZP.hasUnread(e, t),
     h = (e, t) => {
         let n = l.Z.getChannel(t);
-        return null != n && !!u.TPd.GUILD_VOCAL.has(n.type) && (o.ZP.getMentionCount(t) > 0 || (c.Z.getVoiceChannelId() === t && o.ZP.getUnreadCount(t) > 0));
+        return (
+            null != n &&
+            !!u.TPd.GUILD_VOCAL.has(n.type) &&
+            (o.ZP.getMentionCount(t) > 0 || (c.Z.getVoiceChannelId() === t && o.ZP.getUnreadCount(t) > 0))
+        );
     },
     f = {
-        binds: ['alt+shift+down'],
+        binds: ["alt+shift+down"],
         comboKeysBindGlobal: !0,
         action() {
             var e;
@@ -35,14 +45,14 @@ let p = (e, t) => {
                     guildPredicate: (e) => e === t || !d.ZP.isMuted(e),
                     guildFeaturePredicate: g,
                     ensureChatIsVisible: h,
-                    withVoiceChannels: !0
+                    withVoiceChannels: !0,
                 }),
                 !1
             );
-        }
+        },
     },
     b = {
-        binds: ['alt+shift+up'],
+        binds: ["alt+shift+up"],
         comboKeysBindGlobal: !0,
         action() {
             var e;
@@ -53,34 +63,34 @@ let p = (e, t) => {
                     guildPredicate: (e) => e === t || !d.ZP.isMuted(e),
                     guildFeaturePredicate: g,
                     ensureChatIsVisible: h,
-                    withVoiceChannels: !0
+                    withVoiceChannels: !0,
                 }),
                 !1
             );
-        }
+        },
     },
     x = (e, t) => o.ZP.getMentionCount(t) > 0,
     _ = {
-        binds: ['mod+shift+alt+down'],
+        binds: ["mod+shift+alt+down"],
         comboKeysBindGlobal: !0,
         action: () => (
             (0, i.Z)(1, {
                 channelPredicate: x,
                 ensureChatIsVisible: h,
-                withVoiceChannels: !0
+                withVoiceChannels: !0,
             }),
             !1
-        )
+        ),
     },
     j = {
-        binds: ['mod+shift+alt+up'],
+        binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
         action: () => (
             (0, i.Z)(-1, {
                 channelPredicate: x,
                 ensureChatIsVisible: h,
-                withVoiceChannels: !0
+                withVoiceChannels: !0,
             }),
             !1
-        )
+        ),
     };

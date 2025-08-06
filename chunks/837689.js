@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685));
+n.d(t, { Z: () => P }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(873546),
@@ -29,30 +29,34 @@ function S(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let N = 'PremiumServerDriveAnnouncementModal';
+let N = "PremiumServerDriveAnnouncementModal";
 class T extends s.Z {
     _initialize() {
-        (o.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), o.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview));
+        o.Z.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal),
+            o.Z.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview);
     }
     _terminate() {
-        (o.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), o.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview));
+        o.Z.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal),
+            o.Z.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview);
     }
     constructor(...e) {
-        (super(...e),
-            S(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
+        super(...e),
+            S(this, "maybeOpenServerDriveAnnouncementModal", async (e, t) => {
                 let i = (0, I.r)({
                     content: e,
-                    isPreview: t
+                    isPreview: t,
                 });
                 if (null != i)
                     return (
-                        (!1 !== t || (null == i ? void 0 : i.contentIdentifier) !== 'summer_bogo_content' || !!(await (0, y.k)())) &&
+                        (!1 !== t ||
+                            (null == i ? void 0 : i.contentIdentifier) !== "summer_bogo_content" ||
+                            !!(await (0, y.k)())) &&
                         ((0, a.Mr3)(N),
                         (0, a.ZDy)(
                             async () => {
@@ -60,20 +64,20 @@ class T extends s.Z {
                                 return (t) =>
                                     (0, r.jsx)(e, {
                                         renderModalProps: t,
-                                        properties: i
+                                        properties: i,
                                     });
                             },
-                            { modalKey: N }
+                            { modalKey: N },
                         ),
                         !0)
                     );
                 return !1;
             }),
-            S(this, 'handlePreview', (e) => {
+            S(this, "handlePreview", (e) => {
                 let { properties: t } = e;
                 this.maybeOpenServerDriveAnnouncementModal(t, !0);
             }),
-            S(this, 'getOfferFromStore', () => {
+            S(this, "getOfferFromStore", () => {
                 let e = u.default.getCurrentUser();
                 if ((0, p.I5)(e)) return {};
                 let t = [C.hs, C.RU, C.rB, C.ih]
@@ -84,16 +88,28 @@ class T extends s.Z {
                 let n = (0, g.J0)();
                 return null != n ? { userTrialOffer: n } : {};
             }),
-            S(this, 'mayShowAnnouncementModal', async () => {
+            S(this, "mayShowAnnouncementModal", async () => {
                 if ((await (0, f.l2)(), h.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
-                    t = _.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).enabled,
+                    t = _.Z.getCurrentConfig({ location: "announcementManager" }, { autoTrackExposure: !1 }).enabled,
                     n = (0, c.zu)(l.z.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL),
                     r = u.default.getCurrentUser();
-                if ((!t || n || (0, a.$sL)() || (0, p.I5)(r) || ((await (0, m.G)(e.userTrialOffer)) && (0, v.Z)({ upsellType: C.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })), (null == r || r.verified) && !(0, a.$sL)() && b.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !i.tq)) {
-                    for (let t of await (0, E.He)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
+                if (
+                    (!t ||
+                        n ||
+                        (0, a.$sL)() ||
+                        (0, p.I5)(r) ||
+                        ((await (0, m.G)(e.userTrialOffer)) &&
+                            (0, v.Z)({ upsellType: C.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })),
+                    (null == r || r.verified) &&
+                        !(0, a.$sL)() &&
+                        b.Z.getCurrentConfig({ location: "OfferAnnouncementManager" }).enabled &&
+                        !i.tq)
+                ) {
+                    for (let t of await (0, E.He)(e))
+                        if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                 }
-            }));
+            });
     }
 }
 let P = new T();

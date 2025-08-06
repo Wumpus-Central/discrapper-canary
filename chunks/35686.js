@@ -5,9 +5,9 @@ var a = r(44837),
     o = r(639519),
     i = r.n(o),
     c = r(357308),
-    l = ['data'];
+    l = ["data"];
 function u(e) {
-    return ''.concat(e.length, ' ').concat(1 !== e.length ? 'items' : 'item');
+    return "".concat(e.length, " ").concat(1 !== e.length ? "items" : "item");
 }
 var f = function (e) {
     var t = e.data,
@@ -16,11 +16,11 @@ var f = function (e) {
         c.Z,
         (0, a.Z)({}, r, {
             data: t,
-            nodeType: 'Array',
-            nodeTypeIndicator: '[]',
+            nodeType: "Array",
+            nodeTypeIndicator: "[]",
             createItemString: u,
-            expandable: t.length > 0
-        })
+            expandable: t.length > 0,
+        }),
     );
 };
 f.propTypes = { data: i().array };

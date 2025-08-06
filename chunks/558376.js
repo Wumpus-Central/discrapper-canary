@@ -14,12 +14,12 @@ function l(e) {
         f = -l.scrollLeft + (0, o.Z)(e),
         _ = -l.scrollTop;
     return (
-        'rtl' === (0, i.Z)(c || n).direction && (f += (0, s.Fp)(n.clientWidth, c ? c.clientWidth : 0) - u),
+        "rtl" === (0, i.Z)(c || n).direction && (f += (0, s.Fp)(n.clientWidth, c ? c.clientWidth : 0) - u),
         {
             width: u,
             height: d,
             x: f,
-            y: _
+            y: _,
         }
     );
 }

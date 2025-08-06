@@ -2,7 +2,7 @@ var r = n(613078);
 function i(e) {
     if (r(e)) {
         var t = e,
-            n = t.getAttribute('data-offset-key');
+            n = t.getAttribute("data-offset-key");
         if (n) return n;
         for (var o = 0; o < t.childNodes.length; o++) {
             var a = i(t.childNodes[o]);

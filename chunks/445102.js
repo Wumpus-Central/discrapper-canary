@@ -21,29 +21,29 @@ async function l(e, t) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     o = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (o = o.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     o.forEach(function (t) {
                         var o;
-                        ((o = n[t]),
+                        (o = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: o,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = o));
-                    }));
+                                : (e[t] = o);
+                    });
             }
             return e;
         })(
             {
-                rating: null != n ? n : 'no response',
+                rating: null != n ? n : "no response",
                 category: l,
                 reason_code: a,
                 reason_description: s,
@@ -64,9 +64,9 @@ async function l(e, t) {
                 audio_subsystem: v,
                 audio_layer: y,
                 automatic_audio_subsystem: b.automaticAudioSubsystem,
-                krisp_nc_model: j
+                krisp_nc_model: j,
             },
-            d
-        )
+            d,
+        ),
     );
 }

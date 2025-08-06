@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(413496), n(433524), n(35282), n(388685));
+n.d(t, { Z: () => _ }), n(413496), n(433524), n(35282), n(388685);
 var r = n(512722),
     i = n.n(r),
     o = n(957730),
@@ -15,15 +15,15 @@ function d(e, t) {
     }
     return (
         a.ZP.getProps(t.getGuildId(), t.id).groups.forEach((t) => {
-            ('@everyone' === e || t.id !== l.Skl.OFFLINE) && (n += t.count);
+            ("@everyone" === e || t.id !== l.Skl.OFFLINE) && (n += t.count);
         }),
         n
     );
 }
 function f(e) {
-    if ('string' == typeof e.content) {
+    if ("string" == typeof e.content) {
         var t;
-        if ('inlineCode' === e.type || 'codeBlock' === e.type) return null;
+        if ("inlineCode" === e.type || "codeBlock" === e.type) return null;
         let n = null == (t = e.content) ? void 0 : t.match(c);
         if (null != n) {
             let [e] = n;
@@ -39,7 +39,7 @@ function f(e) {
 let _ = {
     shouldShowEveryoneGuard: function (e, t) {
         let n = t.getGuildId();
-        return (i()(n, 'isGuildChannel with null guildId'), d(e, t) > u && s.Z.can(l.Plq.MENTION_EVERYONE, t));
+        return i()(n, "isGuildChannel with null guildId"), d(e, t) > u && s.Z.can(l.Plq.MENTION_EVERYONE, t);
     },
     everyoneMemberCount: d,
     extractEveryoneRole: function (e, t) {
@@ -48,5 +48,5 @@ let _ = {
             if (null != e) return e;
         }
         return null;
-    }
+    },
 };

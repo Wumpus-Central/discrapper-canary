@@ -15,21 +15,21 @@ let _ = i.memo(function (e) {
         h = (0, a.p)(),
         m = i.useMemo(
             () =>
-                (null == p ? void 0 : p.content) != null && '' !== p.content
+                (null == p ? void 0 : p.content) != null && "" !== p.content
                     ? (0, c.ZP)(p, {
                           formatInline: !0,
-                          shouldFilterKeywords: h
+                          shouldFilterKeywords: h,
                       }).content
                     : null,
-            [p, h]
+            [p, h],
         ),
         { isReplyAuthorBlocked: g, isReplyAuthorIgnored: E } = (0, o.cj)(
             [l.Z],
             () => ({
                 isReplyAuthorBlocked: null != p && l.Z.isBlockedForMessage(p),
-                isReplyAuthorIgnored: null != p && l.Z.isIgnoredForMessage(p)
+                isReplyAuthorIgnored: null != p && l.Z.isIgnoredForMessage(p),
             }),
-            [p]
+            [p],
         ),
         b = (0, u.Uj)(p),
         y = (0, u.Uj)(t);
@@ -44,7 +44,7 @@ let _ = i.memo(function (e) {
         isReplyAuthorBlocked: g,
         isReplyAuthorIgnored: E,
         isReplySpineClickable: !1,
-        showReplySpine: !0
+        showReplySpine: !0,
     });
 });
 function p(e, t, n, i, o) {
@@ -54,6 +54,6 @@ function p(e, t, n, i, o) {
               baseMessage: e,
               channel: t,
               referencedMessage: i,
-              compact: o
+              compact: o,
           });
 }

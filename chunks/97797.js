@@ -6,6 +6,6 @@ function o(e) {
     return i.intl.formatToParts(i.t.w4iXs7, {
         username: t,
         usernameHook: n,
-        productName: o
+        productName: o,
     });
 }

@@ -17,6 +17,6 @@ function s(e) {
 }
 function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { shouldMergeGameSettings: n } = i.b.getCurrentConfig({ location: 'navigator' }, { autoTrackExposure: !1 });
+        { shouldMergeGameSettings: n } = i.b.getCurrentConfig({ location: "navigator" }, { autoTrackExposure: !1 });
     n ? r.Z.open(a.oAB.GAMES, e, t) : r.Z.open(s(e), null, t);
 }

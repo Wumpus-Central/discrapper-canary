@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685));
+n.d(t, { Z: () => R }), n(388685);
 var r = n(152057),
     i = n(570140),
     o = n(147913),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,7 +30,7 @@ let p = r.v.LEAGUE_OF_LEGENDS_WEEKLY,
     b = new Set(),
     y = new Map();
 function O(e, t) {
-    return ''.concat(e, ':').concat(t);
+    return "".concat(e, ":").concat(t);
 }
 function v(e, t) {
     var n;
@@ -40,7 +40,7 @@ function v(e, t) {
     if (
         !(0, f.NM)({
             guildId: e,
-            location: 'GuildLeaderboardManager'
+            location: "GuildLeaderboardManager",
         }) ||
         !c.Z.isFocused() ||
         !a.Z.isConnected()
@@ -50,7 +50,7 @@ function v(e, t) {
     return !(null != i && Date.now() - i > g) && !0;
 }
 function I() {
-    for (let e in E) (clearTimeout(E.get(e)), E.delete(e));
+    for (let e in E) clearTimeout(E.get(e)), E.delete(e);
 }
 function T() {
     var e;
@@ -62,9 +62,9 @@ function T() {
             () =>
                 S({
                     guildId: t,
-                    leaderboardId: p
+                    leaderboardId: p,
                 }),
-            Math.max(0, (null != (e = null == n ? void 0 : n.expires_at) ? e : Date.now()) - Date.now())
+            Math.max(0, (null != (e = null == n ? void 0 : n.expires_at) ? e : Date.now()) - Date.now()),
         ),
         i = O(t, p);
     E.set(i, r);
@@ -80,7 +80,7 @@ async function S(e) {
                     guildId: t,
                     leaderboardId: n,
                     intervalOffset: 0,
-                    force: r
+                    force: r,
                 }),
                 a = d.Z.get(t, n);
             if ((null == a ? void 0 : a.interval_start) !== e.leaderboard.interval_start) {
@@ -88,22 +88,22 @@ async function S(e) {
                     guildId: t,
                     leaderboardId: n,
                     intervalOffset: -1,
-                    force: r
+                    force: r,
                 });
                 i.Z.dispatch({
-                    type: 'SET_GUILD_LEADERBOARD',
+                    type: "SET_GUILD_LEADERBOARD",
                     leaderboardResponse: e,
-                    intervalOffset: -1
+                    intervalOffset: -1,
                 });
             }
-            (i.Z.dispatch({
-                type: 'SET_GUILD_LEADERBOARD',
+            i.Z.dispatch({
+                type: "SET_GUILD_LEADERBOARD",
                 leaderboardResponse: e,
-                intervalOffset: 0
+                intervalOffset: 0,
             }),
                 y.delete(o),
                 b.delete(o),
-                T());
+                T();
         } catch (i) {
             var a;
             let e = (null != (a = y.get(o)) ? a : 0) + 1;
@@ -116,10 +116,10 @@ async function S(e) {
                         S({
                             guildId: t,
                             leaderboardId: n,
-                            force: !0
+                            force: !0,
                         }),
-                    r
-                )
+                    r,
+                ),
             );
         }
 }
@@ -127,21 +127,21 @@ function A() {
     T();
 }
 function N() {
-    (I(), (E = new Map()), (b = new Set()), (y = new Map()), A());
+    I(), (E = new Map()), (b = new Set()), (y = new Map()), A();
 }
 class C extends o.Z {
     fetchLeaderboard(e) {
         return S(e);
     }
     constructor(...e) {
-        (super(...e),
-            _(this, 'actions', {
+        super(...e),
+            _(this, "actions", {
                 POST_CONNECTION_OPEN: N,
                 CONNECTION_CLOSED: A,
                 WINDOW_FOCUS: A,
                 IDLE: A,
-                CHANNEL_SELECT: A
-            }));
+                CHANNEL_SELECT: A,
+            });
     }
 }
 let R = new C();

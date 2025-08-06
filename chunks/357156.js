@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Gw: () => h,
     Ob: () => _,
-    XJ: () => p
+    XJ: () => p,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(149765),
     o = n(442837),
@@ -18,14 +18,14 @@ let d = {
         canManageAllExpressions: !1,
         canManageAllEvents: !1,
         canManageGuildExpression: () => !1,
-        canManageGuildEvent: () => !1
+        canManageGuildEvent: () => !1,
     },
     f = (e, t, n, r) => {
         if (null == e) return !1;
         if (n) return !0;
-        if ('creator_id' in e) return r && null != t && e.creator_id === t.id;
-        if ('userId' in e) return r && null != t && e.userId === t.id;
-        if ('user' in e) {
+        if ("creator_id" in e) return r && null != t && e.creator_id === t.id;
+        if ("userId" in e) return r && null != t && e.userId === t.id;
+        if ("user" in e) {
             var i;
             return r && null != t && (null == (i = e.user) ? void 0 : i.id) === t.id;
         }
@@ -34,11 +34,19 @@ let d = {
     _ = (e) => {
         if (null == e) return [u.Pl.CREATE_EVENTS, u.Pl.MANAGE_EVENTS];
         let t = c.TT;
-        return (e.isGuildStageVoice() ? (t = c.LK) : e.isGuildVoice() && (t = c.AN), [i.$e(t, u.Pl.CREATE_EVENTS), i.$e(t, u.Pl.MANAGE_EVENTS)]);
+        return (
+            e.isGuildStageVoice() ? (t = c.LK) : e.isGuildVoice() && (t = c.AN),
+            [i.$e(t, u.Pl.CREATE_EVENTS), i.$e(t, u.Pl.MANAGE_EVENTS)]
+        );
     },
     p = (e) => {
         let [t, n] = (0, l.lM)(e) ? [u.Pl.CREATE_EVENTS, u.Pl.MANAGE_EVENTS] : _(e),
-            [i, c, p, h] = (0, o.Wu)([a.Z], () => [a.Z.can(u.Pl.CREATE_GUILD_EXPRESSIONS, e), a.Z.can(u.Pl.MANAGE_GUILD_EXPRESSIONS, e), a.Z.can(t, e), a.Z.can(n, e)]),
+            [i, c, p, h] = (0, o.Wu)([a.Z], () => [
+                a.Z.can(u.Pl.CREATE_GUILD_EXPRESSIONS, e),
+                a.Z.can(u.Pl.MANAGE_GUILD_EXPRESSIONS, e),
+                a.Z.can(t, e),
+                a.Z.can(n, e),
+            ]),
             m = (0, o.e7)([s.default], () => s.default.getCurrentUser()),
             g = r.useCallback((e) => f(e, m, c, i), [i, c, m]),
             E = r.useCallback((e) => f(e, m, h, p), [h, p, m]);
@@ -50,7 +58,7 @@ let d = {
                   canManageAllExpressions: c,
                   canManageAllEvents: h,
                   canManageGuildExpression: g,
-                  canManageGuildEvent: E
+                  canManageGuildEvent: E,
               };
     },
     h = function (e) {
@@ -70,6 +78,6 @@ let d = {
                   canManageAllExpressions: c,
                   canManageAllEvents: h,
                   canManageGuildExpression: (e) => f(e, m, c, o),
-                  canManageGuildEvent: (e) => f(e, m, h, p)
+                  canManageGuildEvent: (e) => f(e, m, h, p),
               };
     };

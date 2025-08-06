@@ -1,4 +1,4 @@
-(n.d(t, { default: () => P }), n(388685));
+n.d(t, { default: () => P }), n(388685);
 var i = n(255367),
     a = n(73800),
     o = n(120356),
@@ -30,10 +30,10 @@ function P(e) {
         let a = (0, m.Q)(t),
             r = await fetch(a),
             c = await r.blob();
-        (o(),
+        o(),
             (0, l.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('59732'), n.e('93157')]).then(n.bind(n, 712451));
+                    let { default: e } = await Promise.all([n.e("59732"), n.e("93157")]).then(n.bind(n, 712451));
                     return (t) =>
                         (0, i.jsx)(
                             e,
@@ -41,46 +41,46 @@ function P(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         i.forEach(function (t) {
                                             var i;
-                                            ((i = n[t]),
+                                            (i = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: i,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = i));
-                                        }));
+                                                    : (e[t] = i);
+                                        });
                                 }
                                 return e;
                             })(
                                 {
                                     imageUri: a,
-                                    file: new File([c], 'tenor.gif', { type: 'image/gif' }),
+                                    file: new File([c], "tenor.gif", { type: "image/gif" }),
                                     onCrop: P,
                                     uploadType: b,
-                                    showUpsellHeader: E
+                                    showUpsellHeader: E,
                                 },
-                                t
-                            )
+                                t,
+                            ),
                         );
                 },
-                { contextKey: y }
-            ));
+                { contextKey: y },
+            );
     }
     a.useEffect(() => {
         g.default.track(N.rMx.OPEN_MODAL, {
             type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
             location_stack: I,
-            location: { page: R }
+            location: { page: R },
         });
     }, [I, R]);
     let B = b === x.pC.AVATAR || b === x.pC.BANNER,
@@ -88,10 +88,10 @@ function P(e) {
     return (0, i.jsx)(s.Gt, {
         value: I,
         children: (0, i.jsxs)(l.Y0X, {
-            'aria-labelledby': C,
+            "aria-labelledby": C,
             transitionState: t,
             size: l.CgR.SMALL,
-            parentComponent: 'GIFPickerCroppingModal',
+            parentComponent: "GIFPickerCroppingModal",
             children: [
                 E &&
                     !w &&
@@ -99,7 +99,7 @@ function P(e) {
                         type: b,
                         analyticsPage: R,
                         analyticsSection: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-                        isGIF: !0
+                        isGIF: !0,
                     }),
                 (0, i.jsxs)(l.xBx, {
                     className: A.modalHeader,
@@ -108,24 +108,24 @@ function P(e) {
                         (0, i.jsx)(l.vwX, {
                             className: A.titleCase,
                             tag: l.RB0.H1,
-                            children: h.intl.string(h.t['xsC+//'])
+                            children: h.intl.string(h.t["xsC+//"]),
                         }),
                         (0, i.jsx)(l.olH, {
                             onClick: o,
-                            className: A.modalCloseButton
-                        })
-                    ]
+                            className: A.modalCloseButton,
+                        }),
+                    ],
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     children: [
                         (0, i.jsx)(u.Z, {
                             contentClassName: r()({ [A.gifPickerContent]: E && w }),
                             className: r()(A.gifPicker, { [A.loadingOverlay]: j }),
                             onSelectGIF: Z,
-                            hideFavorites: !0
+                            hideFavorites: !0,
                         }),
-                        j && (0, i.jsx)(l.$jN, { className: A.spinner })
-                    ]
+                        j && (0, i.jsx)(l.$jN, { className: A.spinner }),
+                    ],
                 }),
                 E &&
                     w &&
@@ -133,9 +133,9 @@ function P(e) {
                         uploadType: b,
                         analyticsSource: L,
                         showUpsell: !0,
-                        className: A.nitroUpsell
-                    })
-            ]
-        })
+                        className: A.nitroUpsell,
+                    }),
+            ],
+        }),
     });
 }

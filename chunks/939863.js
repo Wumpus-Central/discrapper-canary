@@ -9,20 +9,20 @@ var i = n(120356),
     c = n(866402);
 function u(e) {
     let { className: t, children: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l()(s.container, t),
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 alt: a.intl.string(a.t.VoB8OT),
                 src: c,
-                className: l()(s.sparkleIcon, s.sparkleBottom)
+                className: l()(s.sparkleIcon, s.sparkleBottom),
             }),
             n,
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 alt: a.intl.string(a.t.VoB8OT),
                 src: o,
-                className: l()(s.sparkleIcon, s.sparkleTop)
-            })
-        ]
+                className: l()(s.sparkleIcon, s.sparkleTop),
+            }),
+        ],
     });
 }

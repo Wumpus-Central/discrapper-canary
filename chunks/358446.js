@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     K: () => f,
-    Z: () => g
+    Z: () => g,
 }),
-    n(388685));
+    n(388685);
 var i = n(255367);
 n(73800);
 var r = n(704215),
@@ -17,43 +17,45 @@ var r = n(704215),
     p = n(204283);
 function f() {
     let e = (0, c.Z)({
-            location: 'Overlay',
-            options: { autoTrackExposure: !1 }
+            location: "Overlay",
+            options: { autoTrackExposure: !1 },
         }),
         [t, n] = (0, a.cv)(e ? [r.z.OVERLAY_KEYBIND_NOTIFICATION] : []);
     return {
         showKeybindIndicators: null != t && e,
-        dismissKeybindNotification: n
+        dismissKeybindNotification: n,
     };
 }
 function g(e) {
     let { markAsDismissed: t } = e,
-        { trackView: n, trackClick: r } = (0, s.R)(d.n0.KeybindIndicatorsNotification, { notif_type: d.n0.KeybindIndicatorsNotification });
+        { trackView: n, trackClick: r } = (0, s.R)(d.n0.KeybindIndicatorsNotification, {
+            notif_type: d.n0.KeybindIndicatorsNotification,
+        });
     return {
         icon: null,
-        body: (0, i.jsxs)('div', {
+        body: (0, i.jsxs)("div", {
             className: p.notificationBody,
             children: [
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: p.iconContainer,
                     children: (0, i.jsx)(o.S6n, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         height: 28,
-                        width: 28
-                    })
+                        width: 28,
+                    }),
                 }),
                 (0, i.jsx)(o.Text, {
-                    variant: 'text-sm/normal',
-                    children: h.intl.string(h.t.EFRNtL)
-                })
-            ]
+                    variant: "text-sm/normal",
+                    children: h.intl.string(h.t.EFRNtL),
+                }),
+            ],
         }),
         onDismissClick: (e, n) => {
-            (r('dismiss'), t(u.L.DISMISS), l.Z.updateNotificationStatus(n));
+            r("dismiss"), t(u.L.DISMISS), l.Z.updateNotificationStatus(n);
         },
         onNotificationShow: () => {
-            (t(u.L.AUTO_DISMISS), n());
-        }
+            t(u.L.AUTO_DISMISS), n();
+        },
     };
 }

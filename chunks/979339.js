@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685), n(539854));
+n.d(t, { Z: () => s }), n(388685), n(539854);
 var r = n(442837),
     i = n(136015),
     l = n(565799),
@@ -17,13 +17,13 @@ function s(e) {
                 return [
                     {
                         participants: n,
-                        usersInSummary: r
+                        usersInSummary: r,
                     },
-                    l.Z.getParticipantsVersion(e)
+                    l.Z.getParticipantsVersion(e),
                 ];
             },
             [e, t],
-            i.Q
+            i.Q,
         );
     return n;
 }

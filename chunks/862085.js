@@ -11,55 +11,55 @@ function o(e) {
         u = (0, l.c)(t.type, t, n);
     if (null == u) return null;
     let { headerText: m, descriptionText: g, icon: p } = u;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: s.actionContainer,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: s.actionIconContainer,
                 children: (0, r.jsx)(p, {
-                    size: 'custom',
-                    color: 'currentColor',
-                    className: s.actionIcon
-                })
+                    size: "custom",
+                    color: "currentColor",
+                    className: s.actionIcon,
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: s.actionTextContainer,
                 children: [
                     (0, r.jsx)(i.X6q, {
-                        variant: 'heading-sm/semibold',
-                        children: m
+                        variant: "heading-sm/semibold",
+                        children: m,
                     }),
                     (0, r.jsx)(i.Text, {
-                        color: 'interactive-normal',
-                        variant: 'text-xs/medium',
-                        children: g
+                        color: "interactive-normal",
+                        variant: "text-xs/medium",
+                        children: g,
                     }),
                     o
                         ? (0, r.jsxs)(i.Text, {
-                              color: 'text-muted',
-                              variant: 'text-xs/medium',
+                              color: "text-muted",
+                              variant: "text-xs/medium",
                               children: [
                                   a.intl.string(a.t.Oa9oWF),
                                   (0, r.jsx)(i.P3F, {
                                       onClick: d(!0),
                                       className: s.editChannel,
-                                      tag: 'span',
-                                      role: 'link',
-                                      children: a.intl.string(a.t.QupmYW)
-                                  })
-                              ]
+                                      tag: "span",
+                                      role: "link",
+                                      children: a.intl.string(a.t.QupmYW),
+                                  }),
+                              ],
                           })
-                        : null
-                ]
+                        : null,
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 children: (0, r.jsx)(i.XZJ, {
                     type: i.XZJ.Types.INVERTED,
                     value: o,
                     onChange: d(!1),
-                    className: s.__invalid_actionCheckbox
-                })
-            })
-        ]
+                    className: s.__invalid_actionCheckbox,
+                }),
+            }),
+        ],
     });
 }

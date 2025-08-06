@@ -1,1 +1,1 @@
-e.exports = { menu: 'menu_e1bef1' };
+e.exports = { menu: "menu_e1bef1" };

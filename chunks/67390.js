@@ -7,17 +7,19 @@ var i = n(120356),
     s = n(231338),
     l = n(388032),
     c = n(150481);
-let u = 'https://cdn.discordapp.com/assets/content/f814e4be3c27004f4e60c1bdad648ee24acfa9716c0be8048cc63b5b869e56a4.png',
-    d = 'https://cdn.discordapp.com/assets/content/e4ec02f7af5d01c8c168eb814823a94a6bf1ce440e70e35e5a6f18b0fdad3321.png';
+let u =
+        "https://cdn.discordapp.com/assets/content/f814e4be3c27004f4e60c1bdad648ee24acfa9716c0be8048cc63b5b869e56a4.png",
+    d =
+        "https://cdn.discordapp.com/assets/content/e4ec02f7af5d01c8c168eb814823a94a6bf1ce440e70e35e5a6f18b0fdad3321.png";
 function f(e) {
-    let { className: t, size: n = 'md' } = e,
+    let { className: t, size: n = "md" } = e,
         i = (0, a.ZP)() === s.BR.LIGHT ? d : u;
-    return (0, r.jsx)('img', {
+    return (0, r.jsx)("img", {
         className: o()(t, {
-            [c.sm]: 'sm' === n,
-            [c.md]: 'md' === n
+            [c.sm]: "sm" === n,
+            [c.md]: "md" === n,
         }),
         src: i,
-        alt: l.intl.string(l.t.htEhYm)
+        alt: l.intl.string(l.t.htEhYm),
     });
 }

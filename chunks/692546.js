@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var i,
     r = n(73800),
     o = n(392711),
@@ -18,7 +18,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,20 +26,20 @@ function g(e, t, n) {
 }
 let m = {
         x: 0,
-        y: 0
+        y: 0,
     },
     y = !1;
 function O(e) {
     let { clientX: t, clientY: n } = e;
-    ((y = !0), (m.x = t), (m.y = n));
+    (y = !0), (m.x = t), (m.y = n);
 }
 let v = new Map();
 function _(e, t) {
-    if (null == t) (v.delete(e), 0 === v.size && (window.removeEventListener('mousemove', O), (y = !1)));
+    if (null == t) v.delete(e), 0 === v.size && (window.removeEventListener("mousemove", O), (y = !1));
     else {
         let n = v.get(e);
         if (null != n && (0, a.Z)(n.zone, t.zone)) return;
-        (0 === v.size && window.addEventListener('mousemove', O), v.set(e, t));
+        0 === v.size && window.addEventListener("mousemove", O), v.set(e, t);
     }
     if (f.isPlatformEmbedded)
         if (u.default.isCurrentPidOutOfProcess()) {
@@ -50,7 +50,7 @@ function _(e, t) {
                     left: t.left / window.innerWidth,
                     top: t.top / window.innerHeight,
                     right: t.right / window.innerWidth,
-                    bottom: (t.bottom / window.innerHeight) * 1.5
+                    bottom: (t.bottom / window.innerHeight) * 1.5,
                 };
             });
             d.Z.setClickZones(e);
@@ -58,12 +58,12 @@ function _(e, t) {
             var n;
             let e = (0, h.M)();
             if (null == e) return;
-            (e.broadcastCommand({
-                message: 'set_click_zones',
+            e.broadcastCommand({
+                message: "set_click_zones",
                 zones: Array.from(v.values()).map((e) => {
                     let { zone: t } = e;
                     return t;
-                })
+                }),
             }),
                 (n = e),
                 b ||
@@ -71,7 +71,7 @@ function _(e, t) {
                         let i = v.get(e);
                         null != i && (y || ((m.x = t), (m.y = n)), i.instance.click());
                     }),
-                    (b = !0)));
+                    (b = !0));
         }
 }
 let b = !1;
@@ -80,7 +80,7 @@ class E extends (i = r.PureComponent) {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
     componentWillUnmount() {
-        (this.interval.stop(), _(this.zone, null));
+        this.interval.stop(), _(this.zone, null);
     }
     componentDidUpdate(e) {
         let { observe: t } = this.props;
@@ -90,17 +90,17 @@ class E extends (i = r.PureComponent) {
         return r.Children.only(this.props.children);
     }
     observeZone() {
-        (this.updateZone(), this.interval.start(this.props.observeInterval, this.updateZone));
+        this.updateZone(), this.interval.start(this.props.observeInterval, this.updateZone);
     }
     click() {
-        let e = (0, p.B)('click', m.x, m.y);
+        let e = (0, p.B)("click", m.x, m.y);
         (0, p.J)(e, m.x, m.y);
     }
     constructor(...e) {
-        (super(...e),
-            g(this, 'zone', l().uniqueId('ClickArea')),
-            g(this, 'interval', new c.Xp()),
-            g(this, 'updateZone', () => {
+        super(...e),
+            g(this, "zone", l().uniqueId("ClickArea")),
+            g(this, "interval", new c.Xp()),
+            g(this, "updateZone", () => {
                 let e = this.props.contentDomRef.current;
                 if ((0, s.k)(e)) {
                     let { left: t, top: n, right: i, bottom: r } = e.getBoundingClientRect();
@@ -111,14 +111,14 @@ class E extends (i = r.PureComponent) {
                             left: Math.floor(t),
                             top: Math.floor(n),
                             right: Math.ceil(i),
-                            bottom: Math.ceil(r)
-                        }
+                            bottom: Math.ceil(r),
+                        },
                     });
                 }
-            }));
+            });
     }
 }
-g(E, 'defaultProps', {
+g(E, "defaultProps", {
     observe: !0,
-    observeInterval: 1000
+    observeInterval: 1000,
 });

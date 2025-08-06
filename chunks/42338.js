@@ -6,11 +6,11 @@ var i = e(859097),
     s = e(388032);
 function a(t) {
     let { onContinue: n, onClose: e, errorCode: a } = t,
-        c = a === r.evJ.UNDER_MINIMUM_AGE ? s.intl.string(s.t['3dIn2N']) : s.intl.string(s.t.qE9nqK);
+        c = a === r.evJ.UNDER_MINIMUM_AGE ? s.intl.string(s.t["3dIn2N"]) : s.intl.string(s.t.qE9nqK);
     return (0, o.jsx)(i.C, {
         title: s.intl.string(s.t.eY3qHR),
         body: c,
         onClose: e,
-        onContinue: n
+        onContinue: n,
     });
 }

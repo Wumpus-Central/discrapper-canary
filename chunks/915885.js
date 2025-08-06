@@ -26,27 +26,27 @@ function O(e) {
             c.Z.fetchGuildJoinRequests({
                 guildId: t.id,
                 status: d.wB.SUBMITTED,
-                limit: h.p
+                limit: h.p,
             });
     }, [O, t]);
     let C = i.useCallback(() => {
             (0, g._X)(t.id);
         }, [t.id]),
         v = (0, a.XL)(t.id, o.z.MEMBERS_LAUNCH_UPSELL);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         ref: v,
         children: (0, r.jsx)(p.m, {
-            id: 'members-'.concat(t.id),
+            id: "members-".concat(t.id),
             renderIcon: (e) =>
                 (0, r.jsx)(s.BFJ, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: e
+                    size: "md",
+                    color: "currentColor",
+                    className: e,
                 }),
             text: b.intl.string(b.t.oclz3d),
             selected: n,
             onClick: C,
-            trailing: y > 0 ? (0, r.jsx)(s.mAB, { count: y }) : null
-        })
+            trailing: y > 0 ? (0, r.jsx)(s.mAB, { count: y }) : null,
+        }),
     });
 }

@@ -20,6 +20,6 @@ function c(e) {
                       let { applicationId: t } = e;
                       return t;
                   }),
-        [c, r]
+        [c, r],
     );
 }

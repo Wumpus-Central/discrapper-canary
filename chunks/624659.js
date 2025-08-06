@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var l = n(255367),
     a = n(73800),
     i = n(120356),
@@ -23,19 +23,31 @@ var l = n(255367),
 function C() {
     return (0, l.jsx)(s.Text, {
         className: N.helpdeskLink,
-        variant: 'text-xs/normal',
-        color: 'text-muted',
-        children: m.intl.format(m.t.ybi2tL, { helpdeskURL: h.Z.getSubmitRequestURL() })
+        variant: "text-xs/normal",
+        color: "text-muted",
+        children: m.intl.format(m.t.ybi2tL, { helpdeskURL: h.Z.getSubmitRequestURL() }),
     });
 }
 function x(e) {
     var t, n;
-    let { header: i, body: o, problems: h, transitionState: x, feedbackProblems: T = {}, otherKey: y, hasCloseButton: L, onSubmit: D, onClose: I, canDismissForever: M = !0, showHelpdeskLink: R = !0 } = e,
+    let {
+            header: i,
+            body: o,
+            problems: h,
+            transitionState: x,
+            feedbackProblems: T = {},
+            otherKey: y,
+            hasCloseButton: L,
+            onSubmit: D,
+            onClose: I,
+            canDismissForever: M = !0,
+            showHelpdeskLink: R = !0,
+        } = e,
         k = (0, b.Z)(h),
         [j, A] = a.useState(!1),
         [P, B] = a.useState(null),
         [U, $] = a.useState(u().shuffle(h)),
-        [F, Z] = a.useState(''),
+        [F, Z] = a.useState(""),
         [w, H] = a.useState(!1),
         J = (0, O.Dt)(),
         G = (0, f.Z)(j),
@@ -54,13 +66,13 @@ function x(e) {
                 problem: z.current,
                 dontShowAgain: G.current,
                 feedback: K.current,
-                closeClicked: X.current
+                closeClicked: X.current,
             });
         }),
         (0, l.jsxs)(s.Y0X, {
             transitionState: x,
-            'aria-labelledby': J,
-            parentComponent: 'SimpleFeedbackModal',
+            "aria-labelledby": J,
+            parentComponent: "SimpleFeedbackModal",
             children: [
                 (0, l.jsx)(_.Z, {}),
                 (0, l.jsxs)(s.xBx, {
@@ -69,26 +81,26 @@ function x(e) {
                     children: [
                         (0, l.jsx)(s.X6q, {
                             id: J,
-                            variant: 'heading-xl/bold',
-                            color: 'header-primary',
+                            variant: "heading-xl/bold",
+                            color: "header-primary",
                             className: N.header,
-                            children: i
+                            children: i,
                         }),
                         (0, l.jsx)(s.Text, {
-                            variant: 'text-sm/medium',
-                            color: 'header-secondary',
+                            variant: "text-sm/medium",
+                            color: "header-secondary",
                             className: r()(N.ratingBody, p.headerBody),
-                            children: null != (t = null == Q ? void 0 : Q.subheader) ? t : o
+                            children: null != (t = null == Q ? void 0 : Q.subheader) ? t : o,
                         }),
                         L
                             ? (0, l.jsx)(s.olH, {
                                   className: N.modalCloseButton,
                                   onClick: function () {
-                                      (H(!0), I());
-                                  }
+                                      H(!0), I();
+                                  },
                               })
-                            : null
-                    ]
+                            : null,
+                    ],
                 }),
                 (0, l.jsxs)(s.hzk, {
                     className: p.modalContent,
@@ -101,9 +113,9 @@ function x(e) {
                                       options: U,
                                       onClick: function (e) {
                                           let { value: t } = e;
-                                          (B(t), Object.keys(T).includes(t) || I());
-                                      }
-                                  })
+                                          B(t), Object.keys(T).includes(t) || I();
+                                      },
+                                  }),
                               }),
                         V
                             ? (0, l.jsxs)(s.xJW, {
@@ -114,13 +126,13 @@ function x(e) {
                                           maxLength: S.iF,
                                           onChange: Z,
                                           className: p.textArea,
-                                          placeholder: null != (n = Q.hint) ? n : m.intl.string(m.t.h95hcn)
+                                          placeholder: null != (n = Q.hint) ? n : m.intl.string(m.t.h95hcn),
                                       }),
-                                      R ? (0, l.jsx)(C, {}) : null
-                                  ]
+                                      R ? (0, l.jsx)(C, {}) : null,
+                                  ],
                               })
-                            : null
-                    ]
+                            : null,
+                    ],
                 }),
                 M || V
                     ? (0, l.jsx)(s.mzw, {
@@ -135,17 +147,17 @@ function x(e) {
                                             look: d.zx.Looks.LINK,
                                             color: d.zx.Colors.PRIMARY,
                                             onClick: () => {
-                                                (B(null), Z(''));
+                                                B(null), Z("");
                                             },
-                                            children: m.intl.string(m.t['13/7kZ'])
+                                            children: m.intl.string(m.t["13/7kZ"]),
                                         }),
                                         (0, l.jsx)(s.zxk, {
-                                            variant: 'primary',
-                                            size: 'sm',
+                                            variant: "primary",
+                                            size: "sm",
                                             text: m.intl.string(m.t.geKm7u),
-                                            onClick: I
-                                        })
-                                    ]
+                                            onClick: I,
+                                        }),
+                                    ],
                                 })
                               : M
                                 ? (0, l.jsx)(s.XZJ, {
@@ -154,14 +166,14 @@ function x(e) {
                                       value: j,
                                       onChange: () => A(!j),
                                       children: (0, l.jsx)(s.Text, {
-                                          variant: 'text-md/normal',
-                                          children: m.intl.string(m.t.lkWab2)
-                                      })
+                                          variant: "text-md/normal",
+                                          children: m.intl.string(m.t.lkWab2),
+                                      }),
                                   })
-                                : null
+                                : null,
                       })
-                    : null
-            ]
+                    : null,
+            ],
         })
     );
 }

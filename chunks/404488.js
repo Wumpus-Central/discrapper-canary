@@ -1,6 +1,6 @@
 t.d(n, {
     Z: () => u,
-    q: () => d
+    q: () => d,
 });
 var l = t(255367);
 t(73800);
@@ -23,8 +23,8 @@ function u(e) {
         children: (0, l.jsx)(i.Z, {
             channelId: u.channelId,
             baseChannelId: o.oC.GUILD_HOME,
-            channelViewSource: 'Home View',
-            isResourceChannelView: !0
-        })
+            channelViewSource: "Home View",
+            isResourceChannelView: !0,
+        }),
     });
 }

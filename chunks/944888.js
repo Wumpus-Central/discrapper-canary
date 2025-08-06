@@ -1,6 +1,6 @@
 n.d(t, {
     YB: () => c,
-    ZP: () => l
+    ZP: () => l,
 });
 var r = n(442837),
     i = n(271383),
@@ -12,7 +12,7 @@ function l(e, t) {
         let n = u(e, t);
         return null != n && c(n);
     });
-    return (0, s.W)(e, 'useIsUserServerBoosterForGuild') && n;
+    return (0, s.W)(e, "useIsUserServerBoosterForGuild") && n;
 }
 function c(e) {
     return null != e.tags && void 0 !== e.tags.premium_subscriber;

@@ -1,4 +1,4 @@
-(n.d(t, { H: () => s }), n(388685), n(415506));
+n.d(t, { H: () => s }), n(388685), n(415506);
 var r = n(73800),
     i = n(442837),
     o = n(821849),
@@ -22,7 +22,7 @@ function s(e) {
         {
             data: s,
             isLoading: l,
-            error: t ? Error('SubscriptionPlans failed to fetch') : void 0
+            error: t ? Error("SubscriptionPlans failed to fetch") : void 0,
         }
     );
 }

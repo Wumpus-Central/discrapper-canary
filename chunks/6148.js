@@ -14,10 +14,10 @@ function d(e, t) {
         f = (0, s.Gu)(t);
     return (0, c.Z)(e, n) && d && !f
         ? (0, r.jsx)(o.sNh, {
-              id: 'edit',
+              id: "edit",
               label: u.intl.string(u.t.fsBWmZ),
               action: () => a.Z.startEditMessageRecord(t.id, e),
-              icon: o.vdY
+              icon: o.vdY,
           })
         : null;
 }

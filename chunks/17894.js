@@ -14,31 +14,31 @@ var i = n(525654),
 async function g(e) {
     var t, n;
     let i = null == (t = r().os) ? void 0 : t.family;
-    if ('Android' === i || 'iOS' === i) {
+    if ("Android" === i || "iOS" === i) {
         let t = null != (n = d.default.getFingerprint()) ? n : d.default.getId(),
             i = (0, a.WS)();
         if (null == t && d.default.isAuthenticated())
             try {
-                (await (0, o.k)(), (t = d.default.getId()));
+                await (0, o.k)(), (t = d.default.getId());
             } catch (e) {}
         return (0, a.ZP)((0, l.Gk)(), {
             utmSource: e,
             fingerprint: t,
-            attemptId: i
+            attemptId: i,
         });
     }
-    return 'discord://';
+    return "discord://";
 }
 async function v(e) {
     let t = await g(e),
         n = (0, a.zS)(t);
-    (null != n &&
+    null != n &&
         m.default.track(h.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, s.K)(n.fingerprint),
             attempt_id: n.attemptId,
-            source: n.utmSource
+            source: n.utmSource,
         }),
         f.Z.launch(t, (e) => {
             e || (0, c.dL)(u.Z.fallbackRoute);
-        }));
+        });
 }

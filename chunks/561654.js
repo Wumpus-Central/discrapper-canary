@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,5 +29,5 @@ class u extends (r = i.ZP.Store) {
         return l.get(e);
     }
 }
-s(u, 'displayName', 'GuildRoleConnectionsConfigurationStore');
+s(u, "displayName", "GuildRoleConnectionsConfigurationStore");
 let d = new u(o.Z, { GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: c });

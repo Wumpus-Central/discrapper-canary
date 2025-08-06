@@ -14,6 +14,15 @@ let c = function (e, t) {
         d = r || c || p || f,
         h = d ? (0, n.Z)(e.length, String) : [],
         b = h.length;
-    for (var v in e) (t || u.call(e, v)) && !(d && ('length' == v || (p && ('offset' == v || 'parent' == v)) || (f && ('buffer' == v || 'byteLength' == v || 'byteOffset' == v)) || (0, l.Z)(v, b))) && h.push(v);
+    for (var v in e)
+        (t || u.call(e, v)) &&
+            !(
+                d &&
+                ("length" == v ||
+                    (p && ("offset" == v || "parent" == v)) ||
+                    (f && ("buffer" == v || "byteLength" == v || "byteOffset" == v)) ||
+                    (0, l.Z)(v, b))
+            ) &&
+            h.push(v);
     return h;
 };

@@ -7,29 +7,38 @@ var r = n(255367),
     o = n(49898),
     c = n(109188);
 function d(e) {
-    let { state: t, query: n, placeholder: i, onTextChange: d, onCollapsedClick: u, onClear: p, onBlur: m, onSubmit: h } = e,
+    let {
+            state: t,
+            query: n,
+            placeholder: i,
+            onTextChange: d,
+            onCollapsedClick: u,
+            onClear: p,
+            onBlur: m,
+            onSubmit: h,
+        } = e,
         g = a.useRef(null),
         f = a.useCallback(
             (e) => {
-                'Enter' === e.key && h();
+                "Enter" === e.key && h();
             },
-            [h]
+            [h],
         ),
         _ = a.useCallback(() => {
-            (u(),
+            u(),
                 setTimeout(() => {
                     var e;
                     return null == (e = g.current) ? void 0 : e.focus();
-                }));
+                });
         }, [u]);
     return t === o.GlobalDiscoverySearchBarState.COLLAPSED
         ? (0, r.jsx)(s.P3F, {
               className: c.searchIcon,
               onClick: _,
               children: (0, r.jsx)(s._Ve, {
-                  size: 'md',
-                  color: s.TVs.colors.INTERACTIVE_NORMAL
-              })
+                  size: "md",
+                  color: s.TVs.colors.INTERACTIVE_NORMAL,
+              }),
           })
         : (0, r.jsx)(s.E1j, {
               ref: g,
@@ -39,6 +48,6 @@ function d(e) {
               onChange: d,
               onClear: p,
               onKeyDown: f,
-              onBlur: m
+              onBlur: m,
           });
 }

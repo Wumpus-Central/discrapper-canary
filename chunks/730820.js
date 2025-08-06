@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685));
+n.d(t, { Z: () => M }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(512722),
@@ -36,7 +36,7 @@ function D(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -46,15 +46,15 @@ function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 D(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -78,20 +78,23 @@ function w(e, t) {
 }
 function k(e) {
     let {
-            code: { code: t, consumed: n }
+            code: { code: t, consumed: n },
         } = e,
-        s = ''.concat(t.substr(0, 4), '-').concat(t.substr(4)),
+        s = "".concat(t.substr(0, 4), "-").concat(t.substr(4)),
         a = r.useRef(null),
         l = r.useCallback(
             (e) => {
-                if ('c' === e.key && e.metaKey && O.wS) {
+                if ("c" === e.key && e.metaKey && O.wS) {
                     var t;
-                    (e.preventDefault(), e.stopPropagation(), (0, O.JG)(s), null == a || null == (t = a.current) || t.focus());
+                    e.preventDefault(),
+                        e.stopPropagation(),
+                        (0, O.JG)(s),
+                        null == a || null == (t = a.current) || t.focus();
                 }
             },
-            [s]
+            [s],
         );
-    return (0, i.jsx)('li', {
+    return (0, i.jsx)("li", {
         className: R.marginBottom20,
         children: (0, i.jsx)(c.P3F, {
             innerRef: a,
@@ -102,17 +105,17 @@ function k(e) {
                 readOnly: !0,
                 className: P.codeCheckbox,
                 value: n,
-                children: (0, i.jsx)('span', {
+                children: (0, i.jsx)("span", {
                     className: P.code,
-                    children: s
-                })
-            })
-        })
+                    children: s,
+                }),
+            }),
+        }),
     });
 }
 class L extends r.PureComponent {
     maskPhoneNumber(e) {
-        return null == e ? '' : ''.concat('*'.repeat(e.length - 4)).concat(e.slice(-4));
+        return null == e ? "" : "".concat("*".repeat(e.length - 4)).concat(e.slice(-4));
     }
     renderMFASMS() {
         let e,
@@ -132,45 +135,45 @@ class L extends r.PureComponent {
                         (0, i.jsx)(c.eee, {
                             onClick: this.togglePhoneNumberVisibility,
                             className: P.phoneRevealer,
-                            children: n ? A.intl.string(A.t.FfltIC) : A.intl.string(A.t.llArAg)
-                        })
-                    ]
+                            children: n ? A.intl.string(A.t.FfltIC) : A.intl.string(A.t.llArAg),
+                        }),
+                    ],
                 });
             }
             if (o)
                 e = (0, i.jsx)(h.Z, {
-                    className: l ? '' : R.marginTop8,
+                    className: l ? "" : R.marginTop8,
                     children: (0, i.jsx)(c.zxk, {
-                        variant: 'critical-secondary',
-                        size: 'sm',
+                        variant: "critical-secondary",
+                        size: "sm",
                         text: A.intl.string(A.t.KLWnio),
                         loading: s,
-                        onClick: this.handleDisableSMS
-                    })
+                        onClick: this.handleDisableSMS,
+                    }),
                 });
             else {
                 let t = (0, S.c)(r);
                 e = (0, i.jsxs)(c.hE2, {
-                    size: 'sm',
-                    className: l ? '' : R.marginTop8,
+                    size: "sm",
+                    className: l ? "" : R.marginTop8,
                     children: [
                         (0, i.jsx)(c.zxk, {
-                            variant: 'primary',
-                            size: 'sm',
+                            variant: "primary",
+                            size: "sm",
                             text: null != t ? t : A.intl.string(A.t.DZQe29),
                             onClick: this.handleEnableSMS,
                             loading: s,
-                            disabled: null != t
+                            disabled: null != t,
                         }),
                         l
                             ? (0, i.jsx)(c.zxk, {
-                                  variant: 'secondary',
-                                  size: 'sm',
+                                  variant: "secondary",
+                                  size: "sm",
                                   text: A.intl.string(A.t.Ulqq6O),
-                                  onClick: this.handleChangePhoneNumber
+                                  onClick: this.handleChangePhoneNumber,
                               })
-                            : null
-                    ]
+                            : null,
+                    ],
                 });
             }
             return (0, i.jsx)(b.F, {
@@ -181,12 +184,12 @@ class L extends r.PureComponent {
                     children: [
                         (0, i.jsx)(c.R94, {
                             type: c.R94.Types.DESCRIPTION,
-                            children: A.intl.string(A.t.fspJ4O)
+                            children: A.intl.string(A.t.fspJ4O),
                         }),
                         t,
-                        e
-                    ]
-                })
+                        e,
+                    ],
+                }),
             });
         }
     }
@@ -196,22 +199,22 @@ class L extends r.PureComponent {
             n = (0, i.jsx)(b.F, {
                 setting: I.s6.ACCOUNT_VIEW_BACKUP_CODES,
                 children: (0, i.jsx)(c.zxk, {
-                    variant: 'primary',
-                    size: 'sm',
+                    variant: "primary",
+                    size: "sm",
                     text: A.intl.string(A.t.xZEzbm),
-                    onClick: this.sendMFABackupCodesVerificationKeyEmail
-                })
+                    onClick: this.sendMFABackupCodesVerificationKeyEmail,
+                }),
             });
         if (t.length > 0) {
             n = (0, i.jsx)(m.Z, {
                 fileContents: this.getDownloadFileContents,
-                contentType: 'text/plain',
-                fileName: 'discord_backup_codes.txt',
+                contentType: "text/plain",
+                fileName: "discord_backup_codes.txt",
                 children: (0, i.jsx)(c.zxk, {
-                    variant: 'primary',
-                    size: 'sm',
-                    text: A.intl.string(A.t.qZZUy8)
-                })
+                    variant: "primary",
+                    size: "sm",
+                    text: A.intl.string(A.t.qZZUy8),
+                }),
             });
             let r = (e) => e.map((e) => (0, i.jsx)(k, { code: e }, e.code));
             e = (0, i.jsxs)(c.hjN, {
@@ -220,34 +223,34 @@ class L extends r.PureComponent {
                     (0, i.jsx)(c.R94, {
                         type: c.R94.Types.DESCRIPTION,
                         className: R.marginBottom20,
-                        children: A.intl.format(A.t.OhmvYm, {})
+                        children: A.intl.format(A.t.OhmvYm, {}),
                     }),
                     (0, i.jsxs)(h.Z, {
                         children: [
                             (0, i.jsx)(h.Z.Child, {
-                                children: (0, i.jsx)('ul', {
+                                children: (0, i.jsx)("ul", {
                                     className: P.checkboxGroup,
-                                    children: r(t.slice(0, t.length / 2))
-                                })
+                                    children: r(t.slice(0, t.length / 2)),
+                                }),
                             }),
                             (0, i.jsx)(h.Z.Child, {
-                                children: (0, i.jsx)('ul', {
+                                children: (0, i.jsx)("ul", {
                                     className: P.checkboxGroup,
-                                    children: r(t.slice(t.length / 2))
-                                })
-                            })
-                        ]
+                                    children: r(t.slice(t.length / 2)),
+                                }),
+                            }),
+                        ],
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         children: (0, i.jsx)(o.zx, {
                             onClick: this.generateBackupCodes,
                             look: o.iL.LINK,
                             size: o.Ph.MIN,
-                            children: A.intl.string(A.t.RIThUl)
-                        })
+                            children: A.intl.string(A.t.RIThUl),
+                        }),
                     }),
-                    (0, i.jsx)(c.$i$, { className: R.marginTop20 })
-                ]
+                    (0, i.jsx)(c.$i$, { className: R.marginTop20 }),
+                ],
             });
         }
         return (0, i.jsxs)(c.hjN, {
@@ -256,40 +259,40 @@ class L extends r.PureComponent {
                 (0, i.jsx)(c.R94, {
                     type: c.R94.Types.DESCRIPTION,
                     className: R.marginBottom20,
-                    children: A.intl.string(A.t.bQwxiY)
+                    children: A.intl.string(A.t.bQwxiY),
                 }),
                 (0, i.jsxs)(c.hE2, {
-                    size: 'sm',
+                    size: "sm",
                     className: R.marginBottom20,
                     children: [
                         n,
                         (0, i.jsx)(b.F, {
                             setting: I.s6.ACCOUNT_REMOVE_2FA,
                             children: (0, i.jsx)(c.zxk, {
-                                variant: 'critical-secondary',
-                                size: 'sm',
-                                text: A.intl.string(A.t['D+aE7u']),
-                                onClick: this.handleDisableMFA
-                            })
+                                variant: "critical-secondary",
+                                size: "sm",
+                                text: A.intl.string(A.t["D+aE7u"]),
+                                onClick: this.handleDisableMFA,
+                            }),
                         }),
                         (0, i.jsx)(b.F, {
                             setting: I.s6.ACCOUNT_ENABLE_2FA,
                             children: (0, i.jsx)(c.zxk, {
-                                variant: 'primary',
-                                size: 'sm',
+                                variant: "primary",
+                                size: "sm",
                                 text: A.intl.string(A.t.cDgKtb),
-                                onClick: T.ZP.enableMFA
-                            })
-                        })
-                    ]
+                                onClick: T.ZP.enableMFA,
+                            }),
+                        }),
+                    ],
                 }),
                 e,
                 this.renderMFASMS(),
                 (0, i.jsx)(b.F, {
                     setting: I.s6.ACCOUNT_SECURITY_KEYS,
-                    children: (0, i.jsx)(_.Z, {})
-                })
-            ]
+                    children: (0, i.jsx)(_.Z, {}),
+                }),
+            ],
         });
     }
     renderDisabled() {
@@ -299,18 +302,18 @@ class L extends r.PureComponent {
                 (0, i.jsx)(c.R94, {
                     type: c.R94.Types.DESCRIPTION,
                     className: R.marginBottom20,
-                    children: A.intl.string(A.t['8aDa1t'])
+                    children: A.intl.string(A.t["8aDa1t"]),
                 }),
                 (0, i.jsx)(c.xJW, {
                     children: (0, i.jsx)(c.zxk, {
-                        variant: 'primary',
-                        size: 'sm',
+                        variant: "primary",
+                        size: "sm",
                         text: A.intl.string(A.t.cDgKtb),
-                        onClick: T.ZP.enableMFA
-                    })
+                        onClick: T.ZP.enableMFA,
+                    }),
                 }),
-                (0, i.jsx)(_.Z, {})
-            ]
+                (0, i.jsx)(_.Z, {}),
+            ],
         });
     }
     render() {
@@ -324,15 +327,15 @@ class L extends r.PureComponent {
                       title: A.intl.string(A.t.EPVq09),
                       children: (0, i.jsx)(c.R94, {
                           type: c.R94.Types.DESCRIPTION,
-                          children: A.intl.string(A.t.uggF7u)
-                      })
+                          children: A.intl.string(A.t.uggF7u),
+                      }),
                   })
             : (0, i.jsx)(c.hjN, {
                   title: A.intl.string(A.t.EPVq09),
                   children: (0, i.jsx)(c.R94, {
                       type: c.R94.Types.DESCRIPTION,
-                      children: A.intl.string(A.t.PhHhsr)
-                  })
+                      children: A.intl.string(A.t.PhHhsr),
+                  }),
               });
     }
     openPhoneVerificationModal() {
@@ -340,27 +343,27 @@ class L extends r.PureComponent {
         (0, c.h7j)((t) => (0, i.jsx)(x.default, Z({ reason: f.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: y.M });
     }
     constructor(...e) {
-        (super(...e),
-            D(this, 'state', {
+        super(...e),
+            D(this, "state", {
                 revealed: !1,
-                password: ''
+                password: "",
             }),
-            D(this, 'togglePhoneNumberVisibility', (e) => {
-                (e.preventDefault(), this.setState({ revealed: !this.state.revealed }));
+            D(this, "togglePhoneNumberVisibility", (e) => {
+                e.preventDefault(), this.setState({ revealed: !this.state.revealed });
             }),
-            D(this, 'handleDisableMFA', () => {
+            D(this, "handleDisableMFA", () => {
                 u.Z.show({
-                    title: A.intl.string(A.t['D+aE7u']),
+                    title: A.intl.string(A.t["D+aE7u"]),
                     body: A.intl.string(A.t.EA4ZEh),
-                    cancelText: A.intl.string(A.t['ETE/oK']),
-                    onConfirm: () => d.Z.disable()
+                    cancelText: A.intl.string(A.t["ETE/oK"]),
+                    onConfirm: () => d.Z.disable(),
                 });
             }),
-            D(this, 'generateBackupCodes', async () => {
+            D(this, "generateBackupCodes", async () => {
                 let e = E.Z.getVerificationKey();
                 await d.Z.confirmViewBackupCodes(e, !0);
             }),
-            D(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
+            D(this, "sendMFABackupCodesVerificationKeyEmail", () => {
                 (0, c.h7j)((e) =>
                     (0, i.jsx)(
                         g.Z,
@@ -370,12 +373,12 @@ class L extends r.PureComponent {
                                     this.viewBackupCodes(e);
                                 }),
                             title: A.intl.string(A.t.PsQmzc),
-                            actionText: A.intl.string(A.t.ajkYcH)
-                        })
-                    )
+                            actionText: A.intl.string(A.t.ajkYcH),
+                        }),
+                    ),
                 );
             }),
-            D(this, 'viewBackupCodes', (e) => {
+            D(this, "viewBackupCodes", (e) => {
                 (0, c.h7j)((t) =>
                     (0, i.jsx)(
                         p.Z,
@@ -389,51 +392,51 @@ class L extends r.PureComponent {
                             retrySuccessMessage: A.intl.string(A.t.j4qu8v),
                             onRetry: () => d.Z.sendMFABackupCodesVerificationKeyEmail(e),
                             actionText: A.intl.string(A.t.piW6YW),
-                            helpMessage: A.intl.string(A.t['37S9yc'])
-                        })
-                    )
+                            helpMessage: A.intl.string(A.t["37S9yc"]),
+                        }),
+                    ),
                 );
             }),
-            D(this, 'getDownloadFileContents', () => {
+            D(this, "getDownloadFileContents", () => {
                 let e = this.props.backupCodes
                         .map((e) => {
                             let { consumed: t, code: n } = e;
-                            return '* '
-                                .concat(n.substr(0, 4), '-')
-                                .concat(n.substr(4), ' ')
-                                .concat(t ? '(used)' : '');
+                            return "* "
+                                .concat(n.substr(0, 4), "-")
+                                .concat(n.substr(4), " ")
+                                .concat(t ? "(used)" : "");
                         })
-                        .join('\r\n'),
+                        .join("\r\n"),
                     t = A.intl.formatToPlainString(A.t.uYWwh4, { email: this.props.currentUser.email });
-                return ''.concat(t, '\r\n\r\n').concat(e);
+                return "".concat(t, "\r\n\r\n").concat(e);
             }),
-            D(this, 'handleChangePhoneNumber', () => {
+            D(this, "handleChangePhoneNumber", () => {
                 this.openPhoneVerificationModal();
             }),
-            D(this, 'handleEnableSMS', () => {
+            D(this, "handleEnableSMS", () => {
                 let { currentUser: e } = this.props;
                 null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: d.Z.enableSMS }) : d.Z.enableSMS();
             }),
-            D(this, 'handleDisableSMS', () => {
+            D(this, "handleDisableSMS", () => {
                 (0, c.h7j)((e) =>
                     (0, i.jsx)(
                         g.Z,
                         w(Z({}, e), {
                             handleSubmit: d.Z.disableSMS,
                             title: A.intl.string(A.t.KLWnio),
-                            children: A.intl.string(A.t['W0/Dub'])
-                        })
-                    )
+                            children: A.intl.string(A.t["W0/Dub"]),
+                        }),
+                    ),
                 );
-            }));
+            });
     }
 }
 function M(e) {
     let t = (0, l.e7)([C.default], () => C.default.getCurrentUser());
-    a()(null != t, 'TwoFactorAuth: currentUser cannot be undefined');
+    a()(null != t, "TwoFactorAuth: currentUser cannot be undefined");
     let n = (0, l.cj)([E.Z, j.default], () => ({
         togglingSMS: E.Z.togglingSMS,
-        hasTOTPEnabled: j.default.hasTOTPEnabled()
+        hasTOTPEnabled: j.default.hasTOTPEnabled(),
     }));
     return (0, i.jsx)(L, Z({ currentUser: t }, n, e));
 }

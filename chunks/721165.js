@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(997841));
+n.d(t, { Z: () => g }), n(997841);
 var i = n(255367),
     r = n(73800),
     l = n(442837),
@@ -29,9 +29,11 @@ function g(e) {
                           confirmCta: h.intl.string(h.t.PBHFSk),
                           onConfirm: O,
                           onCancel: n,
-                          title: h.intl.format(h.t['6n6oXF'], { tier: x.name }),
-                          subtitle: S ? h.intl.string(h.t.lzAoKC) : h.intl.formatToPlainString(h.t['GqaY/v'], { guildName: null == C ? void 0 : C.name }),
-                          showOpenDiscord: !1
+                          title: h.intl.format(h.t["6n6oXF"], { tier: x.name }),
+                          subtitle: S
+                              ? h.intl.string(h.t.lzAoKC)
+                              : h.intl.formatToPlainString(h.t["GqaY/v"], { guildName: null == C ? void 0 : C.name }),
+                          showOpenDiscord: !1,
                       })
                     : (0, i.jsx)(s.Oc, {
                           icon: null == v ? void 0 : v.thumbnail,
@@ -39,8 +41,10 @@ function g(e) {
                           application: null != j ? j : void 0,
                           title: h.intl.format(h.t.haiCxc, { tier: x.name }),
                           subtitle: S ? h.intl.string(h.t.RvtbPz) : h.intl.string(h.t.zY39Zm),
-                          description: S ? h.intl.formatToPlainString(h.t.QCe4ra, { applicationName: null == j ? void 0 : j.name }) : h.intl.string(h.t.n1Pu8P)
-                      })
+                          description: S
+                              ? h.intl.formatToPlainString(h.t.QCe4ra, { applicationName: null == j ? void 0 : j.name })
+                              : h.intl.string(h.t.n1Pu8P),
+                      }),
             }),
             !y &&
                 (0, i.jsx)(p.O3, {
@@ -49,9 +53,9 @@ function g(e) {
                         backText: h.intl.string(h.t.TQBY1N),
                         onPrimary: O,
                         primaryCTA: f.g.CONTINUE,
-                        primaryText: h.intl.string(h.t['gZhF+/'])
-                    })
-                })
-        ]
+                        primaryText: h.intl.string(h.t["gZhF+/"]),
+                    }),
+                }),
+        ],
     });
 }

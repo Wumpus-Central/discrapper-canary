@@ -33,7 +33,7 @@ var r = n(127849),
                 t,
                 n = new h(516),
                 r = Array(516);
-            for (e = 0; e < 516; e++) ((t = e % 4), (n[e] = 515 - e), (r[e] = e - 2 * t + 3));
+            for (e = 0; e < 516; e++) (t = e % 4), (n[e] = 515 - e), (r[e] = e - 2 * t + 3);
             for (
                 m(n, function (e, t) {
                     return ((e / 4) | 0) - ((t / 4) | 0);
@@ -46,13 +46,23 @@ var r = n(127849),
         }),
     b = function (e) {
         return function (t, n) {
-            return void 0 !== e ? +e(t, n) || 0 : n != n ? -1 : t != t ? 1 : 0 === t && 0 === n ? (1 / t > 0 && 1 / n < 0 ? 1 : -1) : t > n;
+            return void 0 !== e
+                ? +e(t, n) || 0
+                : n != n
+                  ? -1
+                  : t != t
+                    ? 1
+                    : 0 === t && 0 === n
+                      ? 1 / t > 0 && 1 / n < 0
+                          ? 1
+                          : -1
+                      : t > n;
         };
     };
 p(
-    'sort',
+    "sort",
     function (e) {
         return (void 0 !== e && a(e), E) ? m(this, e) : s(_(this), b(e));
     },
-    !E || g
+    !E || g,
 );

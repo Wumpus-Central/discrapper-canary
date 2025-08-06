@@ -5,13 +5,13 @@ var r = n(255367),
     a = n(121541);
 let s = (e) => {
     switch (e) {
-        case 'new':
+        case "new":
             return o.intl.string(o.t.y2b7CA);
-        case 'beta':
+        case "beta":
             return o.intl.string(o.t.oW0eUV);
-        case 'early_access':
+        case "early_access":
             return o.intl.string(o.t.EYxi0t);
-        case 'free_trial':
+        case "free_trial":
             return o.intl.string(o.t.IBYG5e);
         default:
             return e.text;
@@ -20,8 +20,8 @@ let s = (e) => {
 function l(e) {
     let { badge: t } = e;
     return (0, r.jsx)(i.Text, {
-        variant: 'eyebrow',
+        variant: "eyebrow",
         className: a.badge,
-        children: s(t)
+        children: s(t),
     });
 }

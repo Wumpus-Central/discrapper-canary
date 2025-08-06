@@ -9,13 +9,13 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let s = new r.Z('KvCacheVersion');
+let s = new r.Z("KvCacheVersion");
 class l {
     async okAsync(e) {
         let t = await i.Z.cache(e).get(o.aQ);
@@ -29,7 +29,7 @@ class l {
         if (null == e) return !1;
         let t = await e.get(o.LH),
             n = null == t ? void 0 : t.version;
-        return n === o.pL || (s.info('KVStore version mismatch: '.concat(n, ' vs ').concat(o.pL)), !1);
+        return n === o.pL || (s.info("KVStore version mismatch: ".concat(n, " vs ").concat(o.pL)), !1);
     }
     handleClear() {
         this.hasSuccessfullyConnected = !1;
@@ -38,18 +38,21 @@ class l {
         this.hasSuccessfullyConnected = !0;
     }
     handleWrite(e) {
-        ((this.hasSuccessfullyConnected = !0), i.Z.cacheTransaction(e).put(o.DQ, '\uD83D\uDC4B'), i.Z.cacheTransaction(e).put(o.aQ, o.Wj), i.Z.forceResyncVersionTransaction(e).put(o.LH, { version: o.pL }));
+        (this.hasSuccessfullyConnected = !0),
+            i.Z.cacheTransaction(e).put(o.DQ, "\uD83D\uDC4B"),
+            i.Z.cacheTransaction(e).put(o.aQ, o.Wj),
+            i.Z.forceResyncVersionTransaction(e).put(o.LH, { version: o.pL });
     }
     resetInMemoryState() {
         this.hasSuccessfullyConnected = !1;
     }
     constructor() {
-        (a(this, 'hasSuccessfullyConnected', !1),
-            a(this, 'actions', {
+        a(this, "hasSuccessfullyConnected", !1),
+            a(this, "actions", {
                 BACKGROUND_SYNC: (e, t) => this.handleWrite(t),
                 CONNECTION_OPEN: () => this.handleConnectionOpen(),
-                WRITE_CACHES: (e, t) => this.handleWrite(t)
-            }));
+                WRITE_CACHES: (e, t) => this.handleWrite(t),
+            });
     }
 }
 let c = new l();

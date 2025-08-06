@@ -1,4 +1,4 @@
-(n.d(t, { E: () => f }), n(388685));
+n.d(t, { E: () => f }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(835473),
@@ -22,11 +22,11 @@ function f(e) {
                     ? [
                           {
                               activity: m[0].embeddedActivityConfig,
-                              application: m[0]
-                          }
+                              application: m[0],
+                          },
                       ]
                     : [],
-            [m, f]
+            [m, f],
         ),
         E = r.useMemo(
             () =>
@@ -37,11 +37,11 @@ function f(e) {
                             ? null
                             : {
                                   activity: e,
-                                  application: t
+                                  application: t,
                               };
                     })
                     .filter(l.lm),
-            [n, m]
+            [n, m],
         );
     return r.useMemo(
         () =>
@@ -53,8 +53,12 @@ function f(e) {
                 })
                 .filter((e) => {
                     let { activity: n } = e;
-                    return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null;
+                    return (
+                        !n.requires_age_gate ||
+                        (null == t ? void 0 : t.nsfwAllowed) === !0 ||
+                        (null == t ? void 0 : t.nsfwAllowed) == null
+                    );
                 }),
-        [null == t ? void 0 : t.nsfwAllowed, E, g]
+        [null == t ? void 0 : t.nsfwAllowed, E, g],
     );
 }

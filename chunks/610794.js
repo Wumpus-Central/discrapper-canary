@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685), n(457542));
+n.d(t, { Z: () => v }), n(388685), n(457542);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -61,15 +61,15 @@ function C(e) {
             ((S = (0, i.jsx)(
                 o.Text,
                 {
-                    variant: 'text-xs/normal',
-                    color: 'header-secondary',
-                    children: j.intl.format(j.t.Up2ni4, { helpdeskUrl: b.Z.getArticleURL(x.BhN.CONNECTION_DETAILS) })
+                    variant: "text-xs/normal",
+                    color: "header-secondary",
+                    children: j.intl.format(j.t.Up2ni4, { helpdeskUrl: b.Z.getArticleURL(x.BhN.CONNECTION_DETAILS) }),
                 },
-                'label'
+                "label",
             )),
-            (T = j.intl.string(j.t['LVh3//']))),
+            (T = j.intl.string(j.t["LVh3//"]))),
         a && (T = j.intl.string(j.t.i4jeWV)),
-        (0, i.jsxs)('div', {
+        (0, i.jsxs)("div", {
             className: E.metadataContainer,
             children: [
                 S,
@@ -77,19 +77,19 @@ function C(e) {
                     ? void 0
                     : O.map((e, t) =>
                           (0, i.jsxs)(i.Fragment, {
-                              children: [e, t < O.length - 1 ? (0, i.jsx)('span', { className: E.dot }) : null]
-                          })
+                              children: [e, t < O.length - 1 ? (0, i.jsx)("span", { className: E.dot }) : null],
+                          }),
                       ),
-                null != O && O.length > 0 && null != v ? (0, i.jsx)('div', { className: E.dot }) : null,
+                null != O && O.length > 0 && null != v ? (0, i.jsx)("div", { className: E.dot }) : null,
                 null != v
                     ? (0, i.jsx)(
                           o.Text,
                           {
-                              variant: 'text-xs/normal',
-                              color: 'header-secondary',
-                              children: j.intl.format(j.t['9rfonp'], { date: v })
+                              variant: "text-xs/normal",
+                              color: "header-secondary",
+                              children: j.intl.format(j.t["9rfonp"], { date: v }),
                           },
-                          'member-since'
+                          "member-since",
                       )
                     : null,
                 (0, i.jsx)(
@@ -101,13 +101,13 @@ function C(e) {
                         size: l.zx.Sizes.MIN,
                         submitting: d,
                         disabled: a,
-                        'aria-label': j.intl.string(j.t.sCkLYG),
+                        "aria-label": j.intl.string(j.t.sCkLYG),
                         onClick: a ? void 0 : C,
-                        children: T
+                        children: T,
                     },
-                    'refresh-button'
-                )
-            ]
+                    "refresh-button",
+                ),
+            ],
         })
     );
 }
@@ -117,21 +117,21 @@ function O(e) {
         [g, h] = r.useState(t.metadataVisibility),
         f = (0, d.ZP)();
     r.useEffect(() => {
-        (m(t.visibility), h(t.metadataVisibility));
+        m(t.visibility), h(t.metadataVisibility);
     }, [t]);
     let b = u.Z.get(t.type),
         x = !0 === b.hasMetadata;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: E.activityRow,
                 children: [
-                    (0, i.jsx)('img', {
+                    (0, i.jsx)("img", {
                         alt: b.name,
                         className: E.connectionIcon,
-                        src: (0, a.wj)(f) ? b.icon.darkSVG : b.icon.lightSVG
+                        src: (0, a.wj)(f) ? b.icon.darkSVG : b.icon.lightSVG,
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: E.activitySettings,
                         children: [
                             (0, i.jsxs)(o.j7V, {
@@ -142,28 +142,28 @@ function O(e) {
                                     let { verified: n } = t,
                                         i = +!!e;
                                     if (e && !n) {
-                                        (m(i),
+                                        m(i),
                                             (0, p.Z)({
                                                 platformType: t.type,
-                                                location: 'User Settings'
-                                            }));
+                                                location: "User Settings",
+                                            });
                                         return;
                                     }
-                                    (m(i), c.Z.setVisibility(t.type, t.id, i));
+                                    m(i), c.Z.setVisibility(t.type, t.id, i);
                                 },
                                 children: [
                                     (0, i.jsx)(o.Text, {
-                                        variant: 'text-md/semibold',
-                                        color: 'header-primary',
-                                        children: b.name
+                                        variant: "text-md/semibold",
+                                        color: "header-primary",
+                                        children: b.name,
                                     }),
                                     x &&
                                         (0, i.jsx)(C, {
                                             account: t,
                                             refreshed: s.includes(t.id),
-                                            handleRefresh: n
-                                        })
-                                ]
+                                            handleRefresh: n,
+                                        }),
+                                ],
                             }),
                             x &&
                                 (0, i.jsx)(o.j7V, {
@@ -175,27 +175,27 @@ function O(e) {
                                         let { verified: n } = t,
                                             i = +!!e;
                                         if (e && !n) {
-                                            (h(i),
+                                            h(i),
                                                 (0, p.Z)({
                                                     platformType: t.type,
-                                                    location: 'User Settings'
-                                                }));
+                                                    location: "User Settings",
+                                                });
                                             return;
                                         }
-                                        (h(i), c.Z.setMetadataVisibility(t.type, t.id, i));
+                                        h(i), c.Z.setMetadataVisibility(t.type, t.id, i);
                                     },
                                     children: (0, i.jsx)(o.Text, {
-                                        variant: 'text-md/normal',
-                                        color: 'header-secondary',
-                                        children: j.intl.string(j.t['3l78ws'])
-                                    })
-                                })
-                        ]
-                    })
-                ]
+                                        variant: "text-md/normal",
+                                        color: "header-secondary",
+                                        children: j.intl.string(j.t["3l78ws"]),
+                                    }),
+                                }),
+                        ],
+                    }),
+                ],
             }),
-            (0, i.jsx)('div', { className: E.divider })
-        ]
+            (0, i.jsx)("div", { className: E.divider }),
+        ],
     });
 }
 function v() {
@@ -207,7 +207,7 @@ function v() {
                 c.Z.refresh(e.type, e.id).finally(() => {
                     a((t) => [...t, e.id]);
                 }),
-            []
+            [],
         );
     return 0 === t.length
         ? null
@@ -217,7 +217,7 @@ function v() {
                   (0, i.jsx)(o.vwX, {
                       tag: o.RB0.H5,
                       className: E.title,
-                      children: j.intl.string(j.t.aw0GVV)
+                      children: j.intl.string(j.t.aw0GVV),
                   }),
                   t.map((e) =>
                       (0, i.jsx)(
@@ -225,11 +225,11 @@ function v() {
                           {
                               account: e,
                               handleRefresh: l,
-                              refreshedAccountIds: n
+                              refreshedAccountIds: n,
                           },
-                          e.id
-                      )
-                  )
-              ]
+                          e.id,
+                      ),
+                  ),
+              ],
           });
 }

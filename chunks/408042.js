@@ -1,4 +1,4 @@
-(n(388685), n(539854), n(953529));
+n(388685), n(539854), n(953529);
 var r,
     i = n(442837),
     l = n(570140),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,13 +27,13 @@ function h(e, t) {
 }
 class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(a.default, s.Z),
+        this.waitFor(a.default, s.Z),
             (p = {}),
             null != e &&
                 c.default.keys(e).forEach((t) => {
                     let n = e[t];
-                    null != n && 'function' == typeof n[Symbol.iterator] && (p[t] = new Set(n));
-                }));
+                    null != n && "function" == typeof n[Symbol.iterator] && (p[t] = new Set(n));
+                });
     }
     getProgress(e) {
         return p[e];
@@ -46,19 +46,19 @@ class f extends (r = i.ZP.PersistedStore) {
         return p;
     }
 }
-(d(f, 'displayName', 'GuildProgressStore'),
-    d(f, 'persistKey', 'GuildProgressStore'),
+d(f, "displayName", "GuildProgressStore"),
+    d(f, "persistKey", "GuildProgressStore"),
     new f(l.Z, {
         CONNECTION_OPEN: function () {
             let e = [];
-            (c.default.keys(p).forEach((t) => {
+            c.default.keys(p).forEach((t) => {
                 p[t].has(u.Rg.COMPLETED) && e.push(t);
             }),
-                e.forEach((e) => h(e, u.Rg.DISMISSED)));
+                e.forEach((e) => h(e, u.Rg.DISMISSED));
         },
         GUILD_PROGRESS_INITIALIZE: function (e) {
             let { guildId: t } = e;
-            (null == p[t] && (p[t] = new Set()), p[t].has(u.Rg.COMPLETED) || p[t].delete(u.Rg.DISMISSED));
+            null == p[t] && (p[t] = new Set()), p[t].has(u.Rg.COMPLETED) || p[t].delete(u.Rg.DISMISSED);
         },
         GUILD_PROGRESS_COMPLETED_SEEN: function (e) {
             let { guildId: t } = e;
@@ -71,11 +71,13 @@ class f extends (r = i.ZP.PersistedStore) {
         },
         GUILD_CREATE: function (e) {
             let {
-                    guild: { id: t, member_count: n }
+                    guild: { id: t, member_count: n },
                 } = e,
                 r = s.Z.getGuild(t);
             if (null == r) return !1;
-            r.ownerId === a.default.getId() && null != p[r.id] && (null != r.icon && p[r.id].add(u.Rg.AVATAR), n > 1 && p[r.id].add(u.Rg.INVITE));
+            r.ownerId === a.default.getId() &&
+                null != p[r.id] &&
+                (null != r.icon && p[r.id].add(u.Rg.AVATAR), n > 1 && p[r.id].add(u.Rg.INVITE));
         },
         CHANNEL_CREATE: function (e) {
             let { channel: t } = e;
@@ -84,7 +86,12 @@ class f extends (r = i.ZP.PersistedStore) {
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e,
                 n = !1;
-            for (let e of t) null != e && null != e.guild_id && null != p[e.guild_id] && !1 !== h(e.guild_id, u.Rg.CHANNEL) && (n = !0);
+            for (let e of t)
+                null != e &&
+                    null != e.guild_id &&
+                    null != p[e.guild_id] &&
+                    !1 !== h(e.guild_id, u.Rg.CHANNEL) &&
+                    (n = !0);
             return n;
         },
         GUILD_SETTINGS_SUBMIT_SUCCESS: function (e) {
@@ -95,10 +102,15 @@ class f extends (r = i.ZP.PersistedStore) {
             var t;
             let { channelId: n, message: r } = e,
                 i = o.Z.getChannel(n);
-            return (null == (t = r.author) ? void 0 : t.id) === a.default.getId() && null != i && null != p[i.guild_id] && h(i.guild_id, u.Rg.MESSAGE);
+            return (
+                (null == (t = r.author) ? void 0 : t.id) === a.default.getId() &&
+                null != i &&
+                null != p[i.guild_id] &&
+                h(i.guild_id, u.Rg.MESSAGE)
+            );
         },
         GUILD_MEMBER_LIST_UPDATE: function (e) {
             let { guildId: t, memberCount: n } = e;
             return null != p[t] && n > 1 && h(t, u.Rg.INVITE);
-        }
-    }));
+        },
+    });

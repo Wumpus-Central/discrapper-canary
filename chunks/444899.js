@@ -1,4 +1,4 @@
-(n.d(t, { f: () => N }), n(388685));
+n.d(t, { f: () => N }), n(388685);
 var i = n(255367),
     s = n(73800),
     l = n(481060),
@@ -22,7 +22,7 @@ function S(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,7 +31,7 @@ function S(e, t, n) {
 class N extends s.PureComponent {
     highlight() {
         this.setState({ highlight: !0 }, () => {
-            (null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1000)));
+            null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1000));
         });
     }
     componentWillUnmount() {
@@ -46,16 +46,22 @@ class N extends s.PureComponent {
                 i.id,
                 {
                     message_notifications: e,
-                    muted: null != t && t
+                    muted: null != t && t,
                 },
-                n
+                n,
             );
     }
     handleRadioChange(e) {
         this.setMessageNotification(e, void 0, x.UE.notifications(e));
     }
     renderMessageNotificationsRadioOption(e) {
-        let { messageNotifications: t, guildMuted: n, muted: s, guildMessageNotifications: r, checkboxColor: a } = this.props,
+        let {
+                messageNotifications: t,
+                guildMuted: n,
+                muted: s,
+                guildMessageNotifications: r,
+                checkboxColor: a,
+            } = this.props,
             o = t === e;
         (null == t || t === p.bL.NULL) && e === r && (o = !0);
         let d = l.XZJ.Types.INVERTED;
@@ -67,7 +73,7 @@ class N extends s.PureComponent {
                 shape: l.XZJ.Shapes.ROUND,
                 color: a,
                 type: d,
-                onChange: this.handleRadioChange.bind(this, e)
+                onChange: this.handleRadioChange.bind(this, e),
             })
         );
     }
@@ -77,31 +83,35 @@ class N extends s.PureComponent {
             { channel: n } = this.props;
         null != n.parent_id && (e = u.Z.getChannel(n.parent_id));
         let s = (0, d.KS)(n);
-        if (n.type === p.d4z.GUILD_CATEGORY && null != n.guild_id && '' !== n.guild_id) {
+        if (n.type === p.d4z.GUILD_CATEGORY && null != n.guild_id && "" !== n.guild_id) {
             let e = h.Z.getCategories(n.guild_id);
-            t = v.intl.formatToPlainString(v.t['2KzH8/'], { num: null != e[n.id] ? e[n.id].length : 0 });
-        } else t = null != e ? v.intl.formatToPlainString(v.t.L1zJgY, { categoryName: (0, o.F6)(e, m.default, g.Z) }) : v.intl.string(v.t.uIzfCA);
+            t = v.intl.formatToPlainString(v.t["2KzH8/"], { num: null != e[n.id] ? e[n.id].length : 0 });
+        } else
+            t =
+                null != e
+                    ? v.intl.formatToPlainString(v.t.L1zJgY, { categoryName: (0, o.F6)(e, m.default, g.Z) })
+                    : v.intl.string(v.t.uIzfCA);
         return (0, i.jsxs)(c.Z, {
             grow: 1,
             className: j.nameContainer,
             children: [
                 null != s ? (0, i.jsx)(s, { className: j.icon }) : null,
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: j.channelNameContainer,
                     children: [
                         (0, i.jsx)(l.Text, {
-                            variant: 'text-md/semibold',
+                            variant: "text-md/semibold",
                             className: j.channelName,
-                            children: (0, o.F6)(n, m.default, g.Z)
+                            children: (0, o.F6)(n, m.default, g.Z),
                         }),
                         (0, i.jsx)(l.Text, {
-                            variant: 'text-xs/normal',
+                            variant: "text-xs/normal",
                             className: j.channelNameByline,
-                            children: t
-                        })
-                    ]
-                })
-            ]
+                            children: t,
+                        }),
+                    ],
+                }),
+            ],
         });
     }
     renderOptions() {
@@ -118,21 +128,21 @@ class N extends s.PureComponent {
                     grow: 0,
                     shrink: 0,
                     className: t ? j.checkboxContainerMuted : j.checkboxContainer,
-                    children: this.renderMessageNotificationsRadioOption(p.bL.ALL_MESSAGES)
+                    children: this.renderMessageNotificationsRadioOption(p.bL.ALL_MESSAGES),
                 }),
                 (0, i.jsx)(c.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
                     className: t ? j.checkboxContainerMuted : j.checkboxContainer,
-                    children: this.renderMessageNotificationsRadioOption(p.bL.ONLY_MENTIONS)
+                    children: this.renderMessageNotificationsRadioOption(p.bL.ONLY_MENTIONS),
                 }),
                 (0, i.jsx)(c.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
                     className: t ? j.checkboxContainerMuted : j.checkboxContainer,
-                    children: this.renderMessageNotificationsRadioOption(p.bL.NO_MESSAGES)
+                    children: this.renderMessageNotificationsRadioOption(p.bL.NO_MESSAGES),
                 }),
                 (0, i.jsx)(c.Z.Child, {
                     wrap: !0,
@@ -143,10 +153,10 @@ class N extends s.PureComponent {
                         value: e,
                         shape: l.XZJ.Shapes.BOX,
                         type: l.XZJ.Types.INVERTED,
-                        onChange: this.handleMute
-                    })
-                })
-            ]
+                        onChange: this.handleMute,
+                    }),
+                }),
+            ],
         });
     }
     render() {
@@ -161,26 +171,26 @@ class N extends s.PureComponent {
                 this.renderOptions(),
                 (0, i.jsx)(a.Z, {
                     className: j.removeOverride,
-                    onClick: this.handleDelete
-                })
-            ]
+                    onClick: this.handleDelete,
+                }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            S(this, '_timeout', void 0),
-            S(this, 'contentDomRef', s.createRef()),
-            S(this, 'state', { highlight: !1 }),
-            S(this, 'unhighlight', () => {
+        super(...e),
+            S(this, "_timeout", void 0),
+            S(this, "contentDomRef", s.createRef()),
+            S(this, "state", { highlight: !1 }),
+            S(this, "unhighlight", () => {
                 this.setState({ highlight: !1 });
             }),
-            S(this, 'handleMute', (e, t) => {
+            S(this, "handleMute", (e, t) => {
                 let { messageNotifications: n } = this.props;
                 this.setMessageNotification(null != n ? n : p.bL.NULL, t, x.UE.muted(t));
             }),
-            S(this, 'handleDelete', () => {
+            S(this, "handleDelete", () => {
                 let { onDelete: e, channel: t } = this.props;
-                (this.setMessageNotification(p.bL.NULL, !1, x.ZB.OverrideDeleted), null != e && e(t.id));
-            }));
+                this.setMessageNotification(p.bL.NULL, !1, x.ZB.OverrideDeleted), null != e && e(t.id);
+            });
     }
 }

@@ -8,13 +8,13 @@ var o = n(481060),
     c = n(981631);
 let u = null;
 function d(e) {
-    (null != r && e ? r() : null != i && i(), (r = null), (i = null));
+    null != r && e ? r() : null != i && i(), (r = null), (i = null);
 }
 let h = {
     init() {
-        (s.Z.subscribe('PREMIUM_REQUIRED_MODAL_OPEN', (e) => {
+        s.Z.subscribe("PREMIUM_REQUIRED_MODAL_OPEN", (e) => {
             let t;
-            (d(!1),
+            d(!1),
                 (u = e.context),
                 (r = e.resolve),
                 (i = e.reject),
@@ -22,7 +22,7 @@ let h = {
                     ((t = !1),
                     (0, o.ZDy)(
                         async () => {
-                            let { default: e } = await n.e('29393').then(n.bind(n, 134817));
+                            let { default: e } = await n.e("29393").then(n.bind(n, 134817));
                             return (n) => {
                                 var r,
                                     i,
@@ -37,47 +37,52 @@ let h = {
                                                     r,
                                                     i = {},
                                                     l = Object.keys(e);
-                                                for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                                for (r = 0; r < l.length; r++)
+                                                    (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                                 return i;
                                             })(e, t);
                                         if (Object.getOwnPropertySymbols) {
                                             var l = Object.getOwnPropertySymbols(e);
-                                            for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                                            for (r = 0; r < l.length; r++)
+                                                (n = l[r]),
+                                                    !(t.indexOf(n) >= 0) &&
+                                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                        (i[n] = e[n]);
                                         }
                                         return i;
-                                    })(n, ['onClose']);
+                                    })(n, ["onClose"]);
                                 return (0, l.jsx)(
                                     e,
                                     ((r = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
-                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                            "function" == typeof Object.getOwnPropertySymbols &&
                                                 (r = r.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
+                                                    }),
                                                 )),
                                                 r.forEach(function (t) {
                                                     var r;
-                                                    ((r = n[t]),
+                                                    (r = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: r,
                                                                   enumerable: !0,
                                                                   configurable: !0,
-                                                                  writable: !0
+                                                                  writable: !0,
                                                               })
-                                                            : (e[t] = r));
-                                                }));
+                                                            : (e[t] = r);
+                                                });
                                         }
                                         return e;
                                     })({}, s)),
                                     (i = i =
                                         {
                                             onClose: (e) => {
-                                                ((t = e), o());
-                                            }
+                                                (t = e), o();
+                                            },
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -91,24 +96,24 @@ let h = {
                                           })(Object(i)).forEach(function (e) {
                                               Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                                           }),
-                                    r)
+                                    r),
                                 );
                             };
                         },
                         {
                             onCloseCallback: () => {
                                 (0, a.M)(t);
-                            }
-                        }
-                    )));
+                            },
+                        },
+                    ));
         }),
-            s.Z.subscribe('PREMIUM_REQUIRED_MODAL_CLOSE', (e) => {
+            s.Z.subscribe("PREMIUM_REQUIRED_MODAL_CLOSE", (e) => {
                 let { shouldContinue: t } = e;
-                ((u = null), d(t));
+                (u = null), d(t);
             }),
-            s.Z.subscribe('OVERLAY_SET_INPUT_LOCKED', (e) => {
+            s.Z.subscribe("OVERLAY_SET_INPUT_LOCKED", (e) => {
                 let { locked: t } = e;
                 t && null != u && ((u = null), d(!1));
-            }));
-    }
+            });
+    },
 };

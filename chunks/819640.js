@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r,
     i = n(442837),
     o = n(570140);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,11 +36,11 @@ class d extends (r = i.ZP.Store) {
         return s;
     }
 }
-a(d, 'displayName', 'LayerStore');
+a(d, "displayName", "LayerStore");
 let f = new d(o.Z, {
     LAYER_PUSH: l,
     LAYER_POP: c,
     LAYER_POP_ALL: u,
     LOGOUT: u,
-    NOTIFICATION_CLICK: u
+    NOTIFICATION_CLICK: u,
 });

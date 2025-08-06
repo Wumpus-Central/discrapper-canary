@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -37,15 +37,15 @@ function v(e) {
                         type: l.R94.Types.DESCRIPTION,
                         className: j.formDescription,
                         disabled: S,
-                        children: b.intl.string(b.t.kHalVF)
+                        children: b.intl.string(b.t.kHalVF),
                     }),
                     (0, r.jsx)(m.Z, {
                         channelBenefits: _,
                         intangibleBenefits: y,
                         subscriptionListings: N,
                         onImport: function (e, t) {
-                            (O((t) => t.concat(e)), C((e) => e.concat(t)));
-                        }
+                            O((t) => t.concat(e)), C((e) => e.concat(t));
+                        },
                     }),
                     (0, r.jsx)(l.LZC, { size: 8 }),
                     (0, r.jsx)(m.w, {
@@ -56,7 +56,7 @@ function v(e) {
                                     t.map((e) => {
                                         let { ref_id: t } = e;
                                         return t;
-                                    })
+                                    }),
                                 );
                                 return [
                                     ...t,
@@ -64,14 +64,14 @@ function v(e) {
                                         .filter((e) => !n.has(e))
                                         .map((e) => ({
                                             ref_id: e,
-                                            ref_type: x.Qs.CHANNEL
-                                        }))
+                                            ref_type: x.Qs.CHANNEL,
+                                        })),
                                 ];
                             });
                         },
-                        disabled: S
-                    })
-                ]
+                        disabled: S,
+                    }),
+                ],
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsxs)(l.hjN, {
@@ -83,20 +83,20 @@ function v(e) {
                         type: l.R94.Types.DESCRIPTION,
                         className: j.formDescription,
                         disabled: S,
-                        children: b.intl.string(b.t['5a4Axc'])
+                        children: b.intl.string(b.t["5a4Axc"]),
                     }),
                     I &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(g.Z, {
-                                    'aria-labelledby': E,
-                                    disabled: S
+                                    "aria-labelledby": E,
+                                    disabled: S,
                                 }),
-                                (0, r.jsx)(l.LZC, { size: 8 })
-                            ]
+                                (0, r.jsx)(l.LZC, { size: 8 }),
+                            ],
                         }),
-                    (0, r.jsx)(p.Z, {})
-                ]
+                    (0, r.jsx)(p.Z, {}),
+                ],
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsxs)(l.hjN, {
@@ -107,13 +107,13 @@ function v(e) {
                         type: l.R94.Types.DESCRIPTION,
                         className: j.formDescription,
                         disabled: S,
-                        children: b.intl.string(b.t.zAww7e)
+                        children: b.intl.string(b.t.zAww7e),
                     }),
-                    (0, r.jsx)(f.Z, {})
-                ]
+                    (0, r.jsx)(f.Z, {}),
+                ],
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
-            (0, r.jsx)(h.Z, {})
-        ]
+            (0, r.jsx)(h.Z, {}),
+        ],
     });
 }

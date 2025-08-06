@@ -7,5 +7,5 @@ var i = n(120356),
     s = n(287170);
 function a(e) {
     let { fullWidth: t } = e;
-    return (0, r.jsx)(o.H, { children: (0, r.jsx)('div', { className: l()(s.guildSeparator, { [s.fullWidth]: t }) }) });
+    return (0, r.jsx)(o.H, { children: (0, r.jsx)("div", { className: l()(s.guildSeparator, { [s.fullWidth]: t }) }) });
 }

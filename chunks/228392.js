@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     B: () => D,
     B5: () => R,
     Do: () => w,
@@ -23,9 +23,9 @@
     qz: () => Z,
     ws: () => x,
     xI: () => M,
-    zI: () => y
+    zI: () => y,
 }),
-    n(781311));
+    n(781311);
 var r = n(367907),
     i = n(731429),
     o = n(188471),
@@ -44,7 +44,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -54,15 +54,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -70,11 +70,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -98,16 +98,16 @@ function E(e) {
                 {},
                 (0, f.xl)({
                     channelId: n,
-                    sessionId: i
-                })
+                    sessionId: i,
+                }),
             ),
             {
                 guild_id: t,
                 channel_id: n,
                 post_ids: o,
-                additional_seen_time_millis: a
-            }
-        )
+                additional_seen_time_millis: a,
+            },
+        ),
     );
 }
 function b(e) {
@@ -117,8 +117,8 @@ function b(e) {
         g(h({}, (0, f.xl)({ channelId: n })), {
             guild_id: t,
             channel_id: n,
-            num_search_results: i
-        })
+            num_search_results: i,
+        }),
     );
 }
 function y(e) {
@@ -127,8 +127,8 @@ function y(e) {
         _.rMx.FORUM_CHANNEL_SEARCH_CLEARED,
         g(h({}, (0, f.xl)({ channelId: n })), {
             guild_id: t,
-            channel_id: n
-        })
+            channel_id: n,
+        }),
     );
 }
 function O(e) {
@@ -141,8 +141,8 @@ function O(e) {
             tag_id: i,
             filter_tag_ids: o,
             added: a,
-            location: s
-        })
+            location: s,
+        }),
     );
 }
 function v(e) {
@@ -151,8 +151,8 @@ function v(e) {
         _.rMx.FORUM_CHANNEL_CREATE_NEW_POST_CLICKED,
         g(h({}, (0, f.xl)({ channelId: n })), {
             guild_id: t,
-            channel_id: n
-        })
+            channel_id: n,
+        }),
     );
 }
 function I(e) {
@@ -161,8 +161,8 @@ function I(e) {
         _.rMx.FORUM_CHANNEL_CREATE_NEW_POST_KEYBIND_USED,
         g(h({}, (0, f.xl)({ channelId: n })), {
             guild_id: t,
-            channel_id: n
-        })
+            channel_id: n,
+        }),
     );
 }
 function T(e) {
@@ -174,8 +174,12 @@ function T(e) {
         p = null == (t = u.template) ? void 0 : t.trim(),
         m = s.Z.getDraft(c, s.d.FirstThreadMessage),
         E = null == m || 0 === m.length || (null == m ? void 0 : m.trim()) === p,
-        b = (null == d ? void 0 : d.appliedTags) == null || (null == d || null == (n = d.appliedTags) ? void 0 : n.size) === 0,
-        y = (null == d ? void 0 : d.name) == null || (null == d || null == (o = d.name) || null == (i = o.trim()) ? void 0 : i.length) === 0;
+        b =
+            (null == d ? void 0 : d.appliedTags) == null ||
+            (null == d || null == (n = d.appliedTags) ? void 0 : n.size) === 0,
+        y =
+            (null == d ? void 0 : d.name) == null ||
+            (null == d || null == (o = d.name) || null == (i = o.trim()) ? void 0 : i.length) === 0;
     (E && b && y) ||
         r.ZP.trackWithMetadata(
             _.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED,
@@ -183,8 +187,8 @@ function T(e) {
                 guild_id: l,
                 channel_id: c,
                 applied_tag_ids: (0, f.q8)(c),
-                num_attachments: (0, f.RR)(c)
-            })
+                num_attachments: (0, f.RR)(c),
+            }),
         );
 }
 function S(e) {
@@ -193,8 +197,8 @@ function S(e) {
         _.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CLEARED,
         g(h({}, (0, f.xl)({ channelId: n })), {
             guild_id: t,
-            channel_id: n
-        })
+            channel_id: n,
+        }),
     );
 }
 function A(e) {
@@ -204,8 +208,8 @@ function A(e) {
             _.rMx.FORUM_CHANNEL_POST_CREATED,
             g(h({}, (0, f.n4)({ channelId: i })), {
                 guild_id: t,
-                channel_id: n
-            })
+                channel_id: n,
+            }),
         );
     }
     u.Z.isLoading(i) ? u.Z.addConditionalChangeListener(() => !!u.Z.isLoading(i) || (o(), !1)) : o();
@@ -216,8 +220,8 @@ function N(e) {
         _.rMx.FORUM_CHANNEL_SCROLLED,
         g(h({}, (0, f.xl)({ channelId: n })), {
             guild_id: t,
-            channel_id: n
-        })
+            channel_id: n,
+        }),
     );
 }
 function C(e) {
@@ -231,8 +235,8 @@ function C(e) {
             num_active_threads: (0, f.bE)(t, n),
             has_more_threads: o,
             filter_tag_ids: s,
-            sort_order: c
-        })
+            sort_order: c,
+        }),
     );
 }
 function R(e) {
@@ -243,8 +247,8 @@ function R(e) {
             guild_id: t,
             channel_id: n,
             is_search_result: null != d.Z.getSearchResults(n),
-            location: o
-        })
+            location: o,
+        }),
     );
 }
 function P(e) {
@@ -256,8 +260,8 @@ function P(e) {
             channel_id: n,
             sort_type: (0, f.t$)(i),
             sort_order: i,
-            forum_channel_sort_order: i
-        })
+            forum_channel_sort_order: i,
+        }),
     );
 }
 function w(e) {
@@ -267,15 +271,15 @@ function w(e) {
         g(h({}, (0, f.xl)({ channelId: n })), {
             guild_id: t,
             channel_id: n,
-            forum_channel_layout: i
-        })
+            forum_channel_layout: i,
+        }),
     );
 }
 function D(e) {
     let { postId: t, location: n } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_POST_LINK_COPIED, {
         forum_post_id: t,
-        location: n
+        location: n,
     });
 }
 function L(e) {
@@ -305,19 +309,19 @@ function G() {
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED);
 }
 function B(e) {
-    (r.ZP.trackWithMetadata(
+    r.ZP.trackWithMetadata(
         _.rMx.CHANNEL_OPENED,
         g(h({}, (0, r.hH)(e.guild_id), (0, r.v_)(e), (0, i.K)(e, !0), (0, r.$H)(e.id)), {
-            channel_view: 'Split View',
-            platform: (0, c.getPlatform)()
-        })
+            channel_view: "Split View",
+            platform: (0, c.getPlatform)(),
+        }),
     ),
-        (0, o.a)(_.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e.id }));
+        (0, o.a)(_.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e.id });
 }
 function Z() {
     r.ZP.trackWithMetadata(_.rMx.OPEN_MODAL, {
-        type: 'Forum Channel Upsell Modal',
-        location: { section: _.jXE.CHANNEL_WELCOME_CTA }
+        type: "Forum Channel Upsell Modal",
+        location: { section: _.jXE.CHANNEL_WELCOME_CTA },
     });
 }
 function F(e) {
@@ -326,7 +330,7 @@ function F(e) {
         _.rMx.THREAD_CREATION_STARTED,
         g(h({}, (0, i.K)(a.Z.getChannel(n))), {
             channel_id: n,
-            guild_id: t
-        })
+            guild_id: t,
+        }),
     );
 }

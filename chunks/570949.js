@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     P: () => p,
-    Z: () => h
+    Z: () => h,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(481060),
     o = n(239091),
@@ -19,12 +19,12 @@ function p(e) {
     let { application: n } = e,
         r = null != (t = c.Z.getGuildId()) ? t : void 0,
         o = () => {
-            ((0, i.Mr3)(f.e9), (0, u.yT)(d.ti.DISMISSED));
+            (0, i.Mr3)(f.e9), (0, u.yT)(d.ti.DISMISSED);
         };
     return (0, s.Z)({
         application: n,
         guildId: r,
-        onItemClick: o
+        onItemClick: o,
     });
 }
 function h(e) {
@@ -32,14 +32,17 @@ function h(e) {
         s = l.Sb.useSetting(),
         c = (0, a.Z)({
             id: t.id,
-            label: _.intl.string(_.t['+NP/b2'])
+            label: _.intl.string(_.t["+NP/b2"]),
         }),
         u = p({ application: t });
     return (0, r.jsxs)(i.v2r, {
-        navId: 'activity-shelf-item-context',
+        navId: "activity-shelf-item-context",
         onClose: o.Zy,
-        'aria-label': _.intl.string(_.t.WkcHT0),
+        "aria-label": _.intl.string(_.t.WkcHT0),
         onSelect: n,
-        children: [null != u && (0, r.jsxs)(i.kSQ, { children: [...u] }, 'manage-app-actions'), s && (0, r.jsx)(i.kSQ, { children: c }, 'developer-actions')]
+        children: [
+            null != u && (0, r.jsxs)(i.kSQ, { children: [...u] }, "manage-app-actions"),
+            s && (0, r.jsx)(i.kSQ, { children: c }, "developer-actions"),
+        ],
     });
 }

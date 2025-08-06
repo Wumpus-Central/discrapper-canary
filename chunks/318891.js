@@ -2,7 +2,7 @@ let r;
 n.d(t, {
     RI: () => I,
     ZP: () => C,
-    jy: () => T
+    jy: () => T,
 });
 var i = n(570140),
     o = n(519938),
@@ -27,7 +27,7 @@ function O(e, t) {
         let e = r;
         i.Z.wait(() => o.xv(e));
     }
-    (i.Z.wait(() => o.bA(t, y.NYg.ACTIVITY, { channel: e })), (r = t));
+    i.Z.wait(() => o.bA(t, y.NYg.ACTIVITY, { channel: e })), (r = t);
 }
 function v() {
     let e = r;
@@ -51,17 +51,29 @@ function S() {
 function A() {
     return (0, b.Z)({
         LayerStore: c.Z,
-        PopoutWindowStore: s.Z
+        PopoutWindowStore: s.Z,
     })
         ? I()
         : T();
 }
 class N extends a.Z {
     _initialize() {
-        (f.Z.addChangeListener(S), _.Z.addChangeListener(S), d.Z.addChangeListener(S), p.Z.addChangeListener(S), s.Z.addChangeListener(S), m.ZP.addChangeListener(S), c.Z.addChangeListener(A));
+        f.Z.addChangeListener(S),
+            _.Z.addChangeListener(S),
+            d.Z.addChangeListener(S),
+            p.Z.addChangeListener(S),
+            s.Z.addChangeListener(S),
+            m.ZP.addChangeListener(S),
+            c.Z.addChangeListener(A);
     }
     _terminate() {
-        (f.Z.removeChangeListener(S), _.Z.removeChangeListener(S), d.Z.removeChangeListener(S), p.Z.removeChangeListener(S), s.Z.removeChangeListener(S), m.ZP.removeChangeListener(S), c.Z.removeChangeListener(A));
+        f.Z.removeChangeListener(S),
+            _.Z.removeChangeListener(S),
+            d.Z.removeChangeListener(S),
+            p.Z.removeChangeListener(S),
+            s.Z.removeChangeListener(S),
+            m.ZP.removeChangeListener(S),
+            c.Z.removeChangeListener(A);
     }
 }
 let C = new N();

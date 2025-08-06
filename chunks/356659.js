@@ -24,26 +24,31 @@ n.d(t, {
     mg: () => m,
     nU: () => h,
     wD: () => T,
-    yl: () => A
+    yl: () => A,
 });
 var r = n(710845),
     i = n(70956),
     o = (function (e) {
-        return ((e[(e.SECONDS_30 = 30 * i.Z.Millis.SECOND)] = 'SECONDS_30'), (e[(e.MINUTES_1 = i.Z.Millis.MINUTE)] = 'MINUTES_1'), (e[(e.MINUTES_2 = 2 * i.Z.Millis.MINUTE)] = 'MINUTES_2'), e);
+        return (
+            (e[(e.SECONDS_30 = 30 * i.Z.Millis.SECOND)] = "SECONDS_30"),
+            (e[(e.MINUTES_1 = i.Z.Millis.MINUTE)] = "MINUTES_1"),
+            (e[(e.MINUTES_2 = 2 * i.Z.Millis.MINUTE)] = "MINUTES_2"),
+            e
+        );
     })({}),
     a = (function (e) {
-        return ((e[(e.ALL = 0)] = 'ALL'), (e[(e.FRIENDS = 1)] = 'FRIENDS'), e);
+        return (e[(e.ALL = 0)] = "ALL"), (e[(e.FRIENDS = 1)] = "FRIENDS"), e;
     })({}),
     s = (function (e) {
-        return ((e.DECOUPLED = 'decoupled'), (e.VIEWER = 'viewer'), (e.STREAMER = 'streamer'), e);
+        return (e.DECOUPLED = "decoupled"), (e.VIEWER = "viewer"), (e.STREAMER = "streamer"), e;
     })({}),
     l = (function (e) {
-        return ((e[(e.Error = 0)] = 'Error'), (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled'), e);
+        return (e[(e.Error = 0)] = "Error"), (e[(e.Disabled = 1)] = "Disabled"), (e[(e.Enabled = 2)] = "Enabled"), e;
     })({});
-let c = 'alt+c',
+let c = "alt+c",
     u = 6 * i.Z.Millis.SECOND,
-    d = new r.Z('Clips'),
-    f = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
+    d = new r.Z("Clips"),
+    f = (e) => "Discord_Clip_".concat(e, ".mp4"),
     _ = 3,
     p = 2,
     h = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
@@ -52,12 +57,12 @@ let c = 'alt+c',
     E = 25,
     b = 0,
     y = 200,
-    O = 'clips-edit',
-    v = 'clips-gallery',
+    O = "clips-edit",
+    v = "clips-gallery",
     I = 640,
     T = 360,
     S = 100,
-    A = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
+    A = (e) => "Clip - ".concat(new Date(e).toLocaleString()),
     N = 15,
     C = 30000,
     R = 30,

@@ -9,8 +9,8 @@ e.exports = function (e) {
             anchorOffset: i,
             focusKey: n,
             focusOffset: i,
-            isBackward: !1
+            isBackward: !1,
         }),
-        forceSelection: !0
+        forceSelection: !0,
     });
 };

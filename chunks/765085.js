@@ -41,11 +41,12 @@ var p = n(363545),
                 start: function (e) {
                     var r = t,
                         i = n;
-                    (r.stopTracking(), n.toValue instanceof o ? r.track(new f(r, n.toValue, p, i, e)) : r.animate(new p(i), e));
+                    r.stopTracking(),
+                        n.toValue instanceof o ? r.track(new f(r, n.toValue, p, i, e)) : r.animate(new p(i), e);
                 },
                 stop: function () {
                     t.stopAnimation();
-                }
+                },
             }
         );
     },
@@ -64,7 +65,7 @@ var p = n(363545),
             },
             stop: function () {
                 t < e.length && e[t].stop();
-            }
+            },
         };
     },
     y = function (e, t) {
@@ -80,7 +81,7 @@ var p = n(363545),
                     e.forEach(function (a, s) {
                         var l = function (a) {
                             if (((r[s] = !0), ++n === e.length)) {
-                                ((n = 0), t && t(a));
+                                (n = 0), t && t(a);
                                 return;
                             }
                             !a.finished && i && o.stop();
@@ -90,9 +91,9 @@ var p = n(363545),
                 },
                 stop: function () {
                     e.forEach(function (e, t) {
-                        (r[t] || e.stop(), (r[t] = !0));
+                        r[t] || e.stop(), (r[t] = !0);
                     });
-                }
+                },
             };
         return o;
     },
@@ -100,30 +101,37 @@ var p = n(363545),
         return E(new a(0), {
             toValue: 0,
             delay: e,
-            duration: 0
+            duration: 0,
         });
     },
     v = function (e, t) {
         return y(
             t.map(function (t, n) {
                 return b([O(e * n), t]);
-            })
+            }),
         );
     },
     I = function (e, t) {
         return function () {
             for (var n = arguments.length, r = Array(n), o = 0; o < n; o++) r[o] = arguments[o];
             var s = function e(t, n, r) {
-                if ('number' == typeof n) {
-                    (i(t instanceof a, 'Bad mapping of type ' + typeof t + ' for key ' + r + ', event value must map to AnimatedValue'), t.setValue(n));
+                if ("number" == typeof n) {
+                    i(
+                        t instanceof a,
+                        "Bad mapping of type " + typeof t + " for key " + r + ", event value must map to AnimatedValue",
+                    ),
+                        t.setValue(n);
                     return;
                 }
-                for (var r in (i('object' == typeof t, 'Bad mapping of type ' + typeof t + ' for key ' + r), i('object' == typeof n, 'Bad event of type ' + typeof n + ' for key ' + r), t)) e(t[r], n[r], r);
+                for (var r in (i("object" == typeof t, "Bad mapping of type " + typeof t + " for key " + r),
+                i("object" == typeof n, "Bad event of type " + typeof n + " for key " + r),
+                t))
+                    e(t[r], n[r], r);
             };
-            (e.forEach(function (e, t) {
-                s(e, r[t], 'arg' + t);
+            e.forEach(function (e, t) {
+                s(e, r[t], "arg" + t);
             }),
-                t && t.listener && t.listener.apply(null, r));
+                t && t.listener && t.listener.apply(null, r);
         };
     };
 e.exports = {
@@ -135,11 +143,11 @@ e.exports = {
                 start: function (e) {
                     var r = t,
                         i = n;
-                    (r.stopTracking(), r.animate(new h(i), e));
+                    r.stopTracking(), r.animate(new h(i), e);
                 },
                 stop: function () {
                     t.stopAnimation();
-                }
+                },
             }
         );
     },
@@ -150,11 +158,12 @@ e.exports = {
                 start: function (e) {
                     var r = t,
                         i = n;
-                    (r.stopTracking(), n.toValue instanceof o ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e));
+                    r.stopTracking(),
+                        n.toValue instanceof o ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e);
                 },
                 stop: function () {
                     t.stopAnimation();
-                }
+                },
             }
         );
     },
@@ -183,7 +192,7 @@ e.exports = {
         InteractionManager: n(703931).inject,
         FlattenStyle: n(56316).inject,
         RequestAnimationFrame: n(653960).inject,
-        CancelAnimationFrame: n(614272).inject
+        CancelAnimationFrame: n(614272).inject,
     },
-    __PropsOnlyForTests: n(222142)
+    __PropsOnlyForTests: n(222142),
 };

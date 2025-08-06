@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     B4: () => O,
     Nx: () => h,
     UV: () => y,
     WR: () => b,
     lr: () => g,
-    t7: () => m
+    t7: () => m,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(913527),
     o = n.n(i),
@@ -40,29 +40,29 @@ let m = () => {
             case _.rB:
                 return {
                     duration: 1,
-                    percentage: 30
+                    percentage: 30,
                 };
             case _.dB:
             case _.hs:
             case _.RU:
                 return {
                     duration: 3,
-                    percentage: 30
+                    percentage: 30,
                 };
             case _.ih:
                 return {
                     duration: 1,
-                    percentage: 40
+                    percentage: 40,
                 };
             case _.gW:
                 return {
                     duration: 1,
-                    percentage: 20
+                    percentage: 20,
                 };
             case _.Nl:
                 return {
                     duration: 1,
-                    percentage: 25
+                    percentage: 25,
                 };
             default:
                 return;
@@ -77,7 +77,7 @@ let m = () => {
                 (t = (
                     await s.tn.post({
                         url: p.ANM.CHURN_USER_OFFER,
-                        rejectWithError: !0
+                        rejectWithError: !0,
                     })
                 ).body.offer)
                     ? t
@@ -92,10 +92,10 @@ let m = () => {
         if (e)
             return {
                 churnUserDiscountOffer: a,
-                isFetchingChurnDiscountOffer: i
+                isFetchingChurnDiscountOffer: i,
             };
         let l = () => {
-            (n(!0), o(!1));
+            n(!0), o(!1);
         };
         return (
             i ||
@@ -103,14 +103,14 @@ let m = () => {
                 (o(!0),
                 E()
                     .then((e) => {
-                        (s(e), l());
+                        s(e), l();
                     })
                     .catch((e) => {
                         l();
                     })),
             {
                 churnUserDiscountOffer: a,
-                isFetchingChurnDiscountOffer: i
+                isFetchingChurnDiscountOffer: i,
             }
         );
     },

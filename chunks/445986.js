@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Q: () => f,
-    Z: () => x
+    Z: () => x,
 }),
     n(35282),
     n(539854),
-    n(388685));
+    n(388685);
 var r = n(255367),
     a = n(73800),
     i = n(481060),
@@ -21,7 +21,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -71,53 +71,54 @@ function g(e, t) {
                 r,
                 a = {},
                 i = Object.keys(e);
-            for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]));
+            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
             return a;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]));
+        for (r = 0; r < i.length; r++)
+            (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
     }
     return a;
 }
 function f(e) {
-    return ''.concat(e.split('?')[0], '?size=').concat(2048);
+    return "".concat(e.split("?")[0], "?size=").concat(2048);
 }
 let _ = (e) => {
     var { index: t, items: n } = e,
-        a = g(e, ['index', 'items']);
+        a = g(e, ["index", "items"]);
     let i = n[t],
         l = 0,
         o = [];
     for (let e of n)
         if (e.type === d.s9s.IMG) {
             let { width: t, height: n, src: r } = e;
-            (e === i && (l = o.length),
+            e === i && (l = o.length),
                 o.push({
                     src: f(r),
                     width: t,
-                    height: n
-                }));
+                    height: n,
+                });
         }
     return (0, r.jsx)(
         s.Z,
         h(m({}, a), {
             items: o,
-            startWith: l
-        })
+            startWith: l,
+        }),
     );
 };
 class b extends a.Component {
     render() {
         let e = this.props,
             { pageSize: t } = e,
-            n = g(e, ['pageSize']),
+            n = g(e, ["pageSize"]),
             a = t === c.b.SMALL ? o.Z : l.Z;
         return (0, r.jsx)(a, h(m({}, n), { onCurrentItemClick: this.handleCurrentItemClick }));
     }
     constructor(...e) {
-        (super(...e),
-            p(this, 'handleCurrentItemClick', (e, t) => {
+        super(...e),
+            p(this, "handleCurrentItemClick", (e, t) => {
                 e.type !== d.s9s.IMG ||
                     (0, i.$sL)() ||
                     (0, i.h7j)((e) =>
@@ -127,24 +128,24 @@ class b extends a.Component {
                                 m(
                                     {
                                         size: i.CgR.DYNAMIC,
-                                        'aria-label': u.intl.string(u.t.X4IxWF)
+                                        "aria-label": u.intl.string(u.t.X4IxWF),
                                     },
-                                    e
+                                    e,
                                 ),
                                 {
-                                    parentComponent: 'ApplicationStoreListingCarousel',
+                                    parentComponent: "ApplicationStoreListingCarousel",
                                     children: (0, r.jsx)(
                                         _,
                                         h(m({}, e), {
                                             index: t,
-                                            items: this.props.items
-                                        })
-                                    )
-                                }
-                            )
-                        )
+                                            items: this.props.items,
+                                        }),
+                                    ),
+                                },
+                            ),
+                        ),
                     );
-            }));
+            });
     }
 }
 let x = b;

@@ -13,12 +13,12 @@ function l() {
     let t = (0, i.HN)(),
         e = t && (0, i.Gx)(t);
     if (e) {
-        let t = 'internal_error';
-        (o.X && n.kg.log(`[Tracing] Root span: ${t} -> Global error occured`),
+        let t = "internal_error";
+        o.X && n.kg.log(`[Tracing] Root span: ${t} -> Global error occured`),
             e.setStatus({
                 code: c.jt,
-                message: t
-            }));
+                message: t,
+            });
     }
 }
-l.tag = 'sentry_tracingErrorCallback';
+l.tag = "sentry_tracingErrorCallback";

@@ -3,31 +3,31 @@ var r = n(818083),
     i = n(427164),
     o = n(480218);
 let a = (0, r.B)({
-        kind: 'user',
-        id: '2025-07_resumable_attachment_uploads',
-        label: 'Resumable attachment uploads',
+        kind: "user",
+        id: "2025-07_resumable_attachment_uploads",
+        label: "Resumable attachment uploads",
         defaultConfig: { enableResumableUploads: !1 },
         treatments: [
             {
                 id: 0,
-                label: 'Control',
-                config: { enableResumableUploads: !1 }
+                label: "Control",
+                config: { enableResumableUploads: !1 },
             },
             {
                 id: 1,
-                label: 'Resumable Uploads Enabled',
-                config: { enableResumableUploads: !0 }
-            }
-        ]
+                label: "Resumable Uploads Enabled",
+                config: { enableResumableUploads: !0 },
+            },
+        ],
     }),
     s = (0, i.le)({
-        name: '2025-07-resumable-attachment-uploads',
-        kind: 'user',
+        name: "2025-07-resumable-attachment-uploads",
+        kind: "user",
         defaultConfig: { enableResumableUploads: !1 },
         variations: {
             0: { enableResumableUploads: !1 },
-            1: { enableResumableUploads: !0 }
-        }
+            1: { enableResumableUploads: !0 },
+        },
     });
 function l(e) {
     let { location: t } = e,
@@ -38,8 +38,8 @@ function l(e) {
             { location: t },
             {
                 disable: n,
-                autoTrackExposure: !0
-            }
+                autoTrackExposure: !0,
+            },
         )
     );
 }

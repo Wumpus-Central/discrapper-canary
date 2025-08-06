@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { y: () => s }), n(49124));
+n.d(t, { y: () => s }), n(49124);
 var i = n(37082);
 try {
     r = window.sessionStorage;
@@ -8,9 +8,9 @@ try {
     delete window.sessionStorage;
 } catch (e) {}
 function o() {
-    let e = 'test';
+    let e = "test";
     try {
-        return (r.setItem(e, e), r.removeItem(e), !0);
+        return r.setItem(e, e), r.removeItem(e), !0;
     } catch (e) {
         return !1;
     }

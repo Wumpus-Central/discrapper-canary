@@ -6,5 +6,5 @@ var r = n(442837),
     s = n(37113);
 function a() {
     let { resolution: e, fps: t } = (0, r.cj)([i.Z], () => i.Z.getState());
-    if (!(0, o.m)(e, t)) return ''.concat((0, s.o6)(e), ' ').concat((0, l.bp)(t));
+    if (!(0, o.m)(e, t)) return "".concat((0, s.o6)(e), " ").concat((0, l.bp)(t));
 }

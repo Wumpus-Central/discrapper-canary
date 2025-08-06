@@ -23,17 +23,17 @@ function h(e) {
         C = (0, d.m)(n);
     return null != n && null != S && C
         ? (0, l.jsx)(o.sNh, {
-              id: 'mod-view',
+              id: "mod-view",
               label: O.intl.string(O.t.kj3tz8),
               action: () => {
-                  (null == j || j(),
+                  null == j || j(),
                       (0, s.i)(v),
                       (0, u.r)(n, t, null != y ? y : b.oC.MEMBER_SAFETY, {
                           modViewPanel: m.k.INFO,
-                          sourceLocation: null != E ? E : P.location
+                          sourceLocation: null != E ? E : P.location,
                       }),
-                      p.dispatch(f.CkL.POPOUT_CLOSE));
-              }
+                      p.dispatch(f.CkL.POPOUT_CLOSE);
+              },
           })
         : null;
 }

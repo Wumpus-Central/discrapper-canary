@@ -3,7 +3,7 @@ n.d(t, {
     H2: () => g,
     MO: () => h,
     X$: () => p,
-    d5: () => d
+    d5: () => d,
 });
 var r = n(442837),
     i = n(223892),
@@ -14,16 +14,42 @@ var r = n(442837),
     c = n(923726),
     u = n(981631),
     d = (function (e) {
-        return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.WAITLIST_ONLY = 1)] = 'WAITLIST_ONLY'), (e[(e.NEEDS_COMMUNITY = 2)] = 'NEEDS_COMMUNITY'), (e[(e.VISIBLE = 3)] = 'VISIBLE'), e);
+        return (
+            (e[(e.NONE = 0)] = "NONE"),
+            (e[(e.WAITLIST_ONLY = 1)] = "WAITLIST_ONLY"),
+            (e[(e.NEEDS_COMMUNITY = 2)] = "NEEDS_COMMUNITY"),
+            (e[(e.VISIBLE = 3)] = "VISIBLE"),
+            e
+        );
     })({});
 function f(e) {
-    let { guild: t, isOwner: n, canManageGuildRoleSubscriptions: r, isGuildEligibleForRoleSubscriptions: i, isExpeditedMonetizationOnboardingGuild: o, isUserInCreatorMonetizationEligibleCountry: a, shouldRestrictUpdatingRoleSubscriptionSettings: s } = e;
-    return !!r && (!s || !!n) && (!!(t.features.has(u.oNc.CREATOR_MONETIZABLE) || t.features.has(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!t.features.has(u.oNc.COMMUNITY) && (!!i || !!o) && n && a));
+    let {
+        guild: t,
+        isOwner: n,
+        canManageGuildRoleSubscriptions: r,
+        isGuildEligibleForRoleSubscriptions: i,
+        isExpeditedMonetizationOnboardingGuild: o,
+        isUserInCreatorMonetizationEligibleCountry: a,
+        shouldRestrictUpdatingRoleSubscriptionSettings: s,
+    } = e;
+    return (
+        !!r &&
+        (!s || !!n) &&
+        (!!(t.features.has(u.oNc.CREATOR_MONETIZABLE) || t.features.has(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) ||
+            (!!t.features.has(u.oNc.COMMUNITY) && (!!i || !!o) && n && a))
+    );
 }
 function _(e) {
     if (e.guild.features.has(u.oNc.CREATOR_MONETIZABLE_DISABLED)) return 0;
     if (f(e)) return 3;
-    let { guild: t, isOwner: n, isUserInCreatorMonetizationEligibleCountry: r, isMonetizationWaitlistEnabledForGuild: i, isGuildEligibleForRoleSubscriptions: o, isExpeditedMonetizationOnboardingGuild: a } = e;
+    let {
+        guild: t,
+        isOwner: n,
+        isUserInCreatorMonetizationEligibleCountry: r,
+        isMonetizationWaitlistEnabledForGuild: i,
+        isGuildEligibleForRoleSubscriptions: o,
+        isExpeditedMonetizationOnboardingGuild: a,
+    } = e;
     return n && !r && i ? 1 : n && i && (o || a) && !t.features.has(u.oNc.COMMUNITY) ? 2 : 0;
 }
 function p(e) {
@@ -50,7 +76,7 @@ function h(e) {
               isMonetizationWaitlistEnabledForGuild: s,
               isExpeditedMonetizationOnboardingGuild: n,
               isUserInCreatorMonetizationEligibleCountry: f,
-              shouldRestrictUpdatingRoleSubscriptionSettings: p
+              shouldRestrictUpdatingRoleSubscriptionSettings: p,
           });
 }
 function m(e) {

@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -75,7 +75,8 @@ function T(e, t) {
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,18 +86,18 @@ function S(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let A = {
-        SMOL: 'Smol',
-        MINI: 'Mini',
-        SMALLER: 'Smaller',
-        SMALL: 'Small',
-        MEDIUM: 'Medium',
-        LARGE: 'Large',
-        LARGER: 'Larger',
-        XLARGE: 'XLarge'
+        SMOL: "Smol",
+        MINI: "Mini",
+        SMALLER: "Smaller",
+        SMALL: "Small",
+        MEDIUM: "Medium",
+        LARGE: "Large",
+        LARGER: "Larger",
+        XLARGE: "XLarge",
     },
     N = {
         [A.SMOL]: 16,
@@ -106,7 +107,7 @@ let A = {
         [A.MEDIUM]: 40,
         [A.LARGE]: 50,
         [A.LARGER]: 64,
-        [A.XLARGE]: 100
+        [A.XLARGE]: 100,
     },
     C = {
         [A.SMOL]: [10, 10, 8, 6, 6, 4],
@@ -116,16 +117,16 @@ let A = {
         [A.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
         [A.LARGE]: [18, 18, 16, 16, 14, 12, 10],
         [A.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-        [A.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+        [A.XLARGE]: [20, 20, 18, 18, 16, 14, 12],
     };
 class R extends o.PureComponent {
     renderAcronym() {
         let { guild: e, iconSrc: t } = this.props;
         return null != e.icon || null != t
             ? null
-            : (0, i.jsx)('div', {
+            : (0, i.jsx)("div", {
                   className: b.acronym,
-                  children: (0, h.gM)(e)
+                  children: (0, h.gM)(e),
               });
     }
     renderBadge() {
@@ -136,39 +137,80 @@ class R extends o.PureComponent {
                   guild: t,
                   badgeStrokeColor: n,
                   tooltipColor: r,
-                  tooltipDelay: o
+                  tooltipDelay: o,
               })
             : null;
     }
     renderIcon() {
         var e, t;
         let n = this.props,
-            { guild: r, className: o, showBadge: a, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: m, to: g, badgeStrokeColor: y, animate: v, tabIndex: S, iconSrc: A, 'aria-hidden': N, lossless: R, iconSize: P } = n,
-            w = T(n, ['guild', 'className', 'showBadge', 'active', 'size', 'style', 'textScale', 'showTooltip', 'tooltipPosition', 'onClick', 'to', 'badgeStrokeColor', 'animate', 'tabIndex', 'iconSrc', 'aria-hidden', 'lossless', 'iconSize']),
+            {
+                guild: r,
+                className: o,
+                showBadge: a,
+                active: l,
+                size: c,
+                style: u = {},
+                textScale: f,
+                showTooltip: _,
+                tooltipPosition: p,
+                onClick: m,
+                to: g,
+                badgeStrokeColor: y,
+                animate: v,
+                tabIndex: S,
+                iconSrc: A,
+                "aria-hidden": N,
+                lossless: R,
+                iconSize: P,
+            } = n,
+            w = T(n, [
+                "guild",
+                "className",
+                "showBadge",
+                "active",
+                "size",
+                "style",
+                "textScale",
+                "showTooltip",
+                "tooltipPosition",
+                "onClick",
+                "to",
+                "badgeStrokeColor",
+                "animate",
+                "tabIndex",
+                "iconSrc",
+                "aria-hidden",
+                "lossless",
+                "iconSize",
+            ]),
             D = C[c],
-            L = null != m ? d.P3F : 'div',
+            L = null != m ? d.P3F : "div",
             x = (0, h.gM)(r);
         return (0, i.jsxs)(
             L,
             I(
                 O(
                     {
-                        className: s()(b.icon, o, (0, E.l)(b, 'iconSize', c), {
-                            [null != (e = (0, E.l)(b, 'iconActive', c)) ? e : '']: l,
+                        className: s()(b.icon, o, (0, E.l)(b, "iconSize", c), {
+                            [null != (e = (0, E.l)(b, "iconActive", c)) ? e : ""]: l,
                             [b.iconInactive]: !l,
-                            [b.noIcon]: null == r.icon
+                            [b.noIcon]: null == r.icon,
                         }),
-                        'aria-hidden': N,
-                        style: null == r.icon ? O({ fontSize: (null != (t = D[x.length]) ? t : D[D.length - 1]) * f }, u) : u,
+                        "aria-hidden": N,
+                        style:
+                            null == r.icon
+                                ? O({ fontSize: (null != (t = D[x.length]) ? t : D[D.length - 1]) * f }, u)
+                                : u,
                         onClick: null != g || null == m ? void 0 : m,
-                        tabIndex: S
+                        tabIndex: S,
                     },
-                    w
+                    w,
                 ),
                 {
-                    children: [this.renderAcronym(), this.renderBadge()]
-                }
-            )
+                    children: [this.renderAcronym(), this.renderBadge()],
+                },
+            ),
         );
     }
     renderTooltip() {
@@ -177,45 +219,52 @@ class R extends o.PureComponent {
             ? (0, i.jsx)(d.ua7, {
                   text: e.name,
                   position: n,
-                  'aria-label': !1,
-                  children: (e) => o.cloneElement(o.Children.only(this.renderIcon()), O({}, e))
+                  "aria-label": !1,
+                  children: (e) => o.cloneElement(o.Children.only(this.renderIcon()), O({}, e)),
               })
             : this.renderIcon();
     }
     render() {
-        let { to: e, guild: t, source: n, tabIndex: r, 'aria-hidden': o } = this.props;
+        let { to: e, guild: t, source: n, tabIndex: r, "aria-hidden": o } = this.props;
         return null != e
             ? (0, i.jsx)(l.rU, {
-                  'aria-hidden': o,
+                  "aria-hidden": o,
                   to: {
                       pathname: e,
-                      state: null != n ? { analyticsSource: n } : null
+                      state: null != n ? { analyticsSource: n } : null,
                   },
-                  'aria-label': t.name,
+                  "aria-label": t.name,
                   tabIndex: r,
-                  children: this.renderTooltip()
+                  children: this.renderTooltip(),
               })
             : this.renderTooltip();
     }
 }
 let P = c.ZP.connectStores([m.Z], (e) => {
     let { guild: t, animate: n, iconSrc: r, style: i, size: o, iconSize: a, lossless: s } = e;
-    return (null == r && (r = t instanceof _.JO ? t.getIconURL(null != a ? a : N[o], n && m.Z.isFocused()) : (0, h.EB)(t, null != a ? a : N[o], n && m.Z.isFocused(), s)), { style: I(O({}, i), { backgroundImage: (0, g.rv)(r) }) });
+    return (
+        null == r &&
+            (r =
+                t instanceof _.JO
+                    ? t.getIconURL(null != a ? a : N[o], n && m.Z.isFocused())
+                    : (0, h.EB)(t, null != a ? a : N[o], n && m.Z.isFocused(), s)),
+        { style: I(O({}, i), { backgroundImage: (0, g.rv)(r) }) }
+    );
 })((0, f.N)((e) => (0, i.jsx)(R, O({}, e))));
 class w extends (r = o.PureComponent) {
     render() {
         return (0, i.jsx)(P, O({}, this.props));
     }
 }
-(y(w, 'Sizes', A),
-    y(w, 'defaultProps', {
+y(w, "Sizes", A),
+    y(w, "defaultProps", {
         size: A.LARGE,
         textScale: 1,
         showBadge: !1,
         showTooltip: !1,
         active: !1,
-        tooltipPosition: 'top',
+        tooltipPosition: "top",
         badgeStrokeColor: u.Z.unsafe_rawColors.WHITE_500.css,
-        animate: !1
-    }));
+        animate: !1,
+    });
 let D = w;

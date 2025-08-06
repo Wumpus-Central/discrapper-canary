@@ -6,7 +6,7 @@ function o(e) {
         !!e ||
         ((0, r.Z)({
             platformType: i.ABu.SPOTIFY,
-            location: 'Spotify Button'
+            location: "Spotify Button",
         }),
         !1)
     );

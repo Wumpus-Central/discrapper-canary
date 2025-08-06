@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(481060),
@@ -22,28 +22,28 @@ function y(e) {
         theme: g.BR.DARK,
         disableAdaptiveTheme: !0,
         children: (e) =>
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: e,
-                children: t
-            })
+                children: t,
+            }),
     });
 }
 function O(e) {
     let { guildId: t, leaderboardId: n, source: r } = e,
         o = {
             leaderboard: (0, u.Z)({
-                guildId: null != t ? t : '',
+                guildId: null != t ? t : "",
                 leaderboardId: n,
-                intervalOffset: 0
+                intervalOffset: 0,
             }),
             prevLeaderboard: (0, u.Z)({
-                guildId: null != t ? t : '',
+                guildId: null != t ? t : "",
                 leaderboardId: n,
-                intervalOffset: -1
-            })
+                intervalOffset: -1,
+            }),
         },
         a = i.useRef(o);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         a.current = o;
     }),
         i.useEffect(() => {
@@ -56,7 +56,8 @@ function O(e) {
                 var c, u;
                 let t = o.guild_settings.sort_by_statistic_id,
                     r = o.users[0];
-                ((e = null == r ? void 0 : r.user_id), (n = null == r || null == (u = r.statistics) || null == (c = u[t]) ? void 0 : c.value));
+                (e = null == r ? void 0 : r.user_id),
+                    (n = null == r || null == (u = r.statistics) || null == (c = u[t]) ? void 0 : c.value);
             }
             s.default.track(h.rMx.LEADERBOARD_POPOUT_VIEWED, {
                 guild_id: t,
@@ -72,9 +73,9 @@ function O(e) {
                 }),
                 opened_from_source: r,
                 last_interval_champion_id: e,
-                last_interval_champion_value: n
+                last_interval_champion_value: n,
             });
-        }, [t, n, r]));
+        }, [t, n, r]);
 }
 function v(e) {
     let { leaderboard: t, application: n } = e,
@@ -83,43 +84,43 @@ function v(e) {
         u =
             null == s
                 ? null
-                : (0, r.jsx)('img', {
+                : (0, r.jsx)("img", {
                       className: b.gameIcon,
                       src: s,
-                      'aria-hidden': !0,
-                      alt: ''
+                      "aria-hidden": !0,
+                      alt: "",
                   });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: b.header,
         children: [
             u,
             (0, r.jsx)(o.LZC, {
                 size: 8,
-                horizontal: !0
+                horizontal: !0,
             }),
             (0, r.jsx)(o.X6q, {
-                variant: 'text-xs/normal',
+                variant: "text-xs/normal",
                 className: b.leaderboardTitle,
-                children: E.intl.format(E.t['MlT4+P'], {
+                children: E.intl.format(E.t["MlT4+P"], {
                     leaderboardName: n.name,
                     timeLeft: a,
                     leaderboardNameHook: (e, t) =>
                         (0, r.jsx)(
                             o.Text,
                             {
-                                variant: 'text-sm/medium',
+                                variant: "text-sm/medium",
                                 className: b.leaderboardName,
-                                children: e
+                                children: e,
                             },
-                            t
-                        )
-                })
+                            t,
+                        ),
+                }),
             }),
             (0, r.jsx)(f.Z, {
                 guildId: t.guild_id,
-                leaderboardId: t.leaderboard_id
-            })
-        ]
+                leaderboardId: t.leaderboard_id,
+            }),
+        ],
     });
 }
 let I = (e) => {
@@ -130,38 +131,38 @@ let I = (e) => {
         I = (0, u.Z)({
             guildId: n,
             leaderboardId: s,
-            intervalOffset: 0
+            intervalOffset: 0,
         }),
         T = (0, u.Z)({
             guildId: n,
             leaderboardId: s,
-            intervalOffset: -1
+            intervalOffset: -1,
         });
-    ((0, o.Tbt)(g),
+    (0, o.Tbt)(g),
         O({
             guildId: n,
             leaderboardId: s,
-            source: c
-        }));
+            source: c,
+        });
     let S = (0, a.q)(null == I || null == (t = I.settings) ? void 0 : t.application_id);
     return null == I || null == S
         ? null
         : (0, r.jsx)(y, {
-              children: (0, r.jsxs)('div', {
+              children: (0, r.jsxs)("div", {
                   className: b.popout,
                   ref: g,
                   children: [
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: b.content,
                           children: [
                               (0, r.jsx)(v, {
                                   leaderboard: I,
-                                  application: S
+                                  application: S,
                               }),
                               (0, r.jsx)(p.Z, {
                                   leaderboard: I,
                                   previewMode: h,
-                                  trackRankingItemInteraction: f
+                                  trackRankingItemInteraction: f,
                               }),
                               h
                                   ? null
@@ -171,30 +172,30 @@ let I = (e) => {
                                                 (0, r.jsx)(_.Z, {
                                                     className: b.previousChampion,
                                                     guildId: n,
-                                                    leaderboard: T
+                                                    leaderboard: T,
                                                 }),
                                             (0, r.jsx)(d.Z, {
                                                 guildId: n,
-                                                leaderboardId: s
-                                            })
-                                        ]
-                                    })
-                          ]
+                                                leaderboardId: s,
+                                            }),
+                                        ],
+                                    }),
+                          ],
                       }),
                       h
                           ? (0, r.jsx)(o.P3F, {
                                 onClick: () => m(!1),
-                                children: (0, r.jsx)('div', {
+                                children: (0, r.jsx)("div", {
                                     className: b.exitPreviewModeButton,
                                     children: (0, r.jsx)(o.Text, {
-                                        variant: 'text-sm/medium',
+                                        variant: "text-sm/medium",
                                         className: b.exitPreviewModeText,
-                                        children: E.intl.string(E.t.GLeQe3)
-                                    })
-                                })
+                                        children: E.intl.string(E.t.GLeQe3),
+                                    }),
+                                }),
                             })
-                          : null
-                  ]
-              })
+                          : null,
+                  ],
+              }),
           });
 };

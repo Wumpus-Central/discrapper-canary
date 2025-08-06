@@ -5,10 +5,10 @@ var a = r(44837),
     o = r(639519),
     i = r.n(o),
     c = r(357308),
-    l = ['data'];
+    l = ["data"];
 function u(e) {
     var t = Object.getOwnPropertyNames(e).length;
-    return ''.concat(t, ' ').concat(1 !== t ? 'keys' : 'key');
+    return "".concat(t, " ").concat(1 !== t ? "keys" : "key");
 }
 var f = function (e) {
     var t = e.data,
@@ -17,15 +17,15 @@ var f = function (e) {
         c.Z,
         (0, a.Z)({}, r, {
             data: t,
-            nodeType: 'Object',
-            nodeTypeIndicator: 'Error' === r.nodeType ? 'Error()' : '{}',
+            nodeType: "Object",
+            nodeTypeIndicator: "Error" === r.nodeType ? "Error()" : "{}",
             createItemString: u,
-            expandable: Object.getOwnPropertyNames(t).length > 0
-        })
+            expandable: Object.getOwnPropertyNames(t).length > 0,
+        }),
     );
 };
 f.propTypes = {
     data: i().object,
-    nodeType: i().string.isRequired
+    nodeType: i().string.isRequired,
 };
 let b = f;

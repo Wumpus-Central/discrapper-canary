@@ -14,7 +14,7 @@ let c = (e) => {
         : null != n
           ? (0, r.jsx)(a.Z, {
                 guildId: t.id,
-                application: n
+                application: n,
             })
           : (0, r.jsx)(s.Z, { guild: t });
 };

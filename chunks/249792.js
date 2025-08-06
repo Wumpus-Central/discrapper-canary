@@ -12,7 +12,8 @@ function d(e) {
     let { guild: t, show: n, active: i, onAnimationStart: d, onAnimationRest: h } = e,
         p = {},
         f = {};
-    ((p.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (f.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)'));
+    (p.transform = "translate3d(10px, 10px, 0) scale3d(3, 3, 1)"),
+        (f.transform = "translate3d(0, 0, 0) scale3d(1, 1, 1)");
     let g = (0, a.dQu)(s.Z.unsafe_rawColors.BRAND_500).hex(),
         m = (0, a.dQu)(s.Z.unsafe_rawColors.PRIMARY_630).hex();
     i && null == t.icon && ((p.backgroundColor = g), (f.backgroundColor = m));
@@ -22,38 +23,38 @@ function d(e) {
         leave: p,
         config: { duration: 100 },
         onStart: d,
-        onRest: h
+        onRest: h,
     });
     return (0, r.jsx)(r.Fragment, {
         children: b(
             (e, n, i) =>
                 n &&
                 (0, r.jsx)(
-                    'div',
+                    "div",
                     {
                         className: u.folderGroup,
-                        children: (0, r.jsx)('div', {
+                        children: (0, r.jsx)("div", {
                             className: l()(u.folderHeader, u.folderHeaderSmall),
                             style: { margin: 0 },
                             children: (0, r.jsx)(o.animated.div, {
                                 className: u.folderDragPreview,
                                 style: e,
-                                children: (0, r.jsx)('div', {
+                                children: (0, r.jsx)("div", {
                                     className: u.folderPreviewWrapper,
-                                    children: (0, r.jsx)('div', {
+                                    children: (0, r.jsx)("div", {
                                         className: u.folderPreview,
                                         children: (0, r.jsx)(c.Z, {
                                             guild: t,
                                             size: c.Z.Sizes.SMOL,
-                                            className: u.folderPreviewGuildIcon
-                                        })
-                                    })
-                                })
-                            })
-                        })
+                                            className: u.folderPreviewGuildIcon,
+                                        }),
+                                    }),
+                                }),
+                            }),
+                        }),
                     },
-                    i.key
-                )
-        )
+                    i.key,
+                ),
+        ),
     });
 }

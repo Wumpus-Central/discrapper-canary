@@ -21,24 +21,24 @@ function b(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                })
+                }),
             )),
             l.forEach(function (n) {
                 var l;
-                ((l = t[n]),
+                (l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[n] = l));
-            }));
+                        : (e[n] = l);
+            });
     }
     return e;
 }
@@ -62,80 +62,84 @@ function Z(e, n) {
 }
 function y(e) {
     let { children: n } = e;
-    return (0, l.jsxs)('div', {
+    return (0, l.jsxs)("div", {
         className: j.emptyContainer,
         children: [
             (0, l.jsx)(d.Z, {
-                children: (0, l.jsx)('div', {
+                children: (0, l.jsx)("div", {
                     className: j.circle,
                     children: (0, l.jsx)(s.BFJ, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         height: 40,
                         width: 40,
-                        className: j.icon
-                    })
-                })
+                        className: j.icon,
+                    }),
+                }),
             }),
-            n
-        ]
+            n,
+        ],
     });
 }
 function P() {
     return (0, l.jsx)(y, {
         children: (0, l.jsx)(s.X6q, {
-            color: 'header-primary',
-            variant: 'heading-xl/semibold',
+            color: "header-primary",
+            variant: "heading-xl/semibold",
             className: j.title,
-            children: x.intl.string(x.t.hW0mBQ)
-        })
+            children: x.intl.string(x.t.hW0mBQ),
+        }),
     });
 }
 function C() {
     return (0, l.jsx)(y, {
         children: (0, l.jsx)(s.X6q, {
-            color: 'header-secondary',
-            variant: 'heading-md/semibold',
+            color: "header-secondary",
+            variant: "heading-md/semibold",
             className: j.errorTitle,
-            children: x.intl.string(x.t.obChXl)
-        })
+            children: x.intl.string(x.t.obChXl),
+        }),
     });
 }
 function I(e) {
     let { count: n } = e;
-    return (0, l.jsxs)('div', {
+    return (0, l.jsxs)("div", {
         className: j.listRow,
         children: [
-            (0, l.jsx)('div', {
+            (0, l.jsx)("div", {
                 className: o()(j.listRowCircle, j.listAvatar),
                 children: (0, l.jsx)(s.BFJ, {
-                    size: 'custom',
-                    color: 'currentColor',
+                    size: "custom",
+                    color: "currentColor",
                     height: 14,
                     width: 14,
-                    className: j.icon
-                })
+                    className: j.icon,
+                }),
             }),
             (0, l.jsx)(s.Text, {
-                color: 'text-default',
-                variant: 'text-md/normal',
-                children: x.intl.format(x.t.BdQTfX, { userRemainCount: n })
-            })
-        ]
+                color: "text-default",
+                variant: "text-md/normal",
+                children: x.intl.format(x.t.BdQTfX, { userRemainCount: n }),
+            }),
+        ],
     });
 }
 function N(e) {
     let { eventUser: n, guildId: t, onContextMenu: r } = e,
         a = i.useRef(null),
         d = (0, c.e7)([m.default], () => m.default.getUser(n.user_id)),
-        v = (0, c.e7)([g.Z, h.Z, f.default], () => (n.user_id === f.default.getId() ? g.Z.getStatus() : h.Z.getStatus(n.user_id, t)), [n.user_id, t]);
+        v = (0, c.e7)(
+            [g.Z, h.Z, f.default],
+            () => (n.user_id === f.default.getId() ? g.Z.getStatus() : h.Z.getStatus(n.user_id, t)),
+            [n.user_id, t],
+        );
     return null == d
         ? null
         : (0, l.jsx)(_.Z, {
               targetElementRef: a,
               userId: n.user_id,
               guildId: t,
-              position: 'left',
+              position: "left",
               spacing: 16,
               children: (e, i) => {
                   var c;
@@ -147,30 +151,30 @@ function N(e) {
                               {
                                   innerRef: a,
                                   className: o()(j.listRow, j.interactiveRow, { [j.selected]: _ }),
-                                  onContextMenu: (e) => r(e, d)
+                                  onContextMenu: (e) => r(e, d),
                               },
-                              e
+                              e,
                           ),
                           {
                               children: [
                                   (0, l.jsx)(s.qEK, {
                                       src: d.getAvatarURL(t, 24),
-                                      'aria-label': d.username,
+                                      "aria-label": d.username,
                                       size: s.EFr.SIZE_24,
                                       className: j.listAvatar,
-                                      status: v
+                                      status: v,
                                   }),
                                   (0, l.jsx)(u.Z, {
                                       user: d,
                                       className: j.listName,
                                       discriminatorClass: j.listDiscriminator,
-                                      nick: null == (c = n.member) ? void 0 : c.nick
-                                  })
-                              ]
-                          }
-                      )
+                                      nick: null == (c = n.member) ? void 0 : c.nick,
+                                  }),
+                              ],
+                          },
+                      ),
                   );
-              }
+              },
           });
 }
 function E(e) {
@@ -184,28 +188,28 @@ function E(e) {
                     {
                         guildId: t,
                         eventUser: e,
-                        onContextMenu: r
+                        onContextMenu: r,
                     },
-                    e.user_id
-                )
+                    e.user_id,
+                ),
             ),
-            i > 0 && (0, l.jsx)(I, { count: i })
-        ]
+            i > 0 && (0, l.jsx)(I, { count: i }),
+        ],
     });
 }
 function O(e) {
     let { children: n, style: t } = e;
-    return (0, l.jsx)('div', {
+    return (0, l.jsx)("div", {
         className: j.container,
         style: null != t ? t : {},
-        children: n
+        children: n,
     });
 }
 function S(e) {
     let { children: n, height: t } = e;
     return (0, l.jsx)(O, {
         style: { height: t },
-        children: n
+        children: n,
     });
 }
 function T(e) {
@@ -216,13 +220,13 @@ function T(e) {
             height: u,
             children: (0, l.jsx)(s.$jN, {
                 type: s.$jN.Type.SPINNING_CIRCLE,
-                className: j.spinner
-            })
+                className: j.spinner,
+            }),
         });
     if (null != c && 0 === r.length)
         return (0, l.jsx)(S, {
             height: u,
-            children: (0, l.jsx)(C, {})
+            children: (0, l.jsx)(C, {}),
         });
     let _ = 0;
     return (
@@ -230,7 +234,7 @@ function T(e) {
         0 === r.length
             ? (0, l.jsx)(S, {
                   height: u,
-                  children: (0, l.jsx)(P, {})
+                  children: (0, l.jsx)(P, {}),
               })
             : (0, l.jsx)(O, {
                   children: (0, l.jsx)(E, {
@@ -238,12 +242,14 @@ function T(e) {
                       guildId: n.guild_id,
                       onContextMenu: function (e, n) {
                           (0, a.jW)(e, async () => {
-                              let { default: e } = await Promise.all([t.e('79695'), t.e('69220')]).then(t.bind(t, 881351));
+                              let { default: e } = await Promise.all([t.e("79695"), t.e("69220")]).then(
+                                  t.bind(t, 881351),
+                              );
                               return (t) => (0, l.jsx)(e, Z(b({}, t), { user: n }));
                           });
                       },
-                      usersNotShownCount: _
-                  })
+                      usersNotShownCount: _,
+                  }),
               })
     );
 }

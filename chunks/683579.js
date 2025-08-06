@@ -13,41 +13,41 @@ function u(e) {
         o = (0, l.c)(t.type, t, n);
     if (null == o) return null;
     let { headerText: c, descriptionText: u, icon: m } = o;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: d.actionContainer,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.actionIconContainer,
                 children: (0, r.jsx)(m, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: d.actionIcon
-                })
+                    size: "md",
+                    color: "currentColor",
+                    className: d.actionIcon,
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: d.actionTextContainer,
                 children: [
                     (0, r.jsx)(i.X6q, {
-                        variant: 'heading-sm/semibold',
-                        children: c
+                        variant: "heading-sm/semibold",
+                        children: c,
                     }),
                     (0, r.jsx)(i.Text, {
-                        color: 'interactive-normal',
-                        variant: 'text-xs/medium',
-                        children: u
-                    })
-                ]
+                        color: "interactive-normal",
+                        variant: "text-xs/medium",
+                        children: u,
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 children: (0, r.jsx)(i.XZJ, {
                     disabled: !o.isEditable,
                     type: i.XZJ.Types.INVERTED,
                     value: a,
                     onChange: () => s(!1),
-                    className: d.__invalid_actionCheckbox
-                })
-            })
-        ]
+                    className: d.__invalid_actionCheckbox,
+                }),
+            }),
+        ],
     });
 }
 function m(e) {
@@ -58,7 +58,7 @@ function m(e) {
                 action: t,
                 triggerType: i,
                 toggled: l,
-                onToggleAction: d
+                onToggleAction: d,
             });
         case c.jj.USER_COMMUNICATION_DISABLED:
             return (0, r.jsx)(s.Z, {
@@ -66,14 +66,14 @@ function m(e) {
                 guildId: n,
                 triggerType: i,
                 toggled: l,
-                onToggleAction: d
+                onToggleAction: d,
             });
         case c.jj.BLOCK_MESSAGE:
             return (0, r.jsx)(a.Z, {
                 action: t,
                 triggerType: i,
                 toggled: l,
-                onToggleAction: d
+                onToggleAction: d,
             });
         default:
             return (0, r.jsx)(u, {
@@ -81,7 +81,7 @@ function m(e) {
                 guildId: n,
                 toggled: l,
                 triggerType: i,
-                onToggleAction: d
+                onToggleAction: d,
             });
     }
 }

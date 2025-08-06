@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -13,19 +13,32 @@ var r = n(255367),
     p = n(388032),
     h = n(539490);
 let m = i.forwardRef(function (e, t) {
-        let { emojiListRef: n, gridNavigatorId: o, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: b, className: y, defaultSearchPlaceholder: O } = e,
+        let {
+                emojiListRef: n,
+                gridNavigatorId: o,
+                isFullRow: m,
+                onKeyDown: g,
+                onFocus: E,
+                autoFocus: b,
+                className: y,
+                defaultSearchPlaceholder: O,
+            } = e,
             v = i.useRef(null),
             I = (0, d.Iu)((e) => e.searchQuery),
             [T, S] = u.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], s.X),
             A = i.useCallback(
                 (e) => {
                     var t;
-                    (u.kJ.setActiveCategoryIndex('' === e ? 0 : f.c), u.kJ.setInspectedExpressionPosition(0, 0), u.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null == (t = n.current) || t.scrollTo(0));
+                    u.kJ.setActiveCategoryIndex("" === e ? 0 : f.c),
+                        u.kJ.setInspectedExpressionPosition(0, 0),
+                        u.kJ.setSearchPlaceholder(null),
+                        (0, d.ql)(e),
+                        null == (t = n.current) || t.scrollTo(0);
                 },
-                [n]
+                [n],
             ),
             N = i.useCallback(() => {
-                (0, d.ql)('');
+                (0, d.ql)("");
             }, []),
             C = (e) => {
                 switch (e.keyCode) {
@@ -42,7 +55,7 @@ let m = i.forwardRef(function (e, t) {
                 focus: () => {
                     var e;
                     return null == (e = v.current) ? void 0 : e.focus();
-                }
+                },
             })),
             (0, r.jsx)(c.E1j, {
                 autoFocus: b,
@@ -55,12 +68,12 @@ let m = i.forwardRef(function (e, t) {
                 onChange: A,
                 className: a()(y, { [h.searchBarFullRow]: m }),
                 inputProps: {
-                    'aria-label': p.intl.string(p.t.tCauZW),
-                    'aria-haspopup': 'grid',
-                    'aria-controls': o,
-                    'aria-expanded': !0,
-                    'aria-activedescendant': (0, l.NE)(o, T.columnIndex, T.rowIndex)
-                }
+                    "aria-label": p.intl.string(p.t.tCauZW),
+                    "aria-haspopup": "grid",
+                    "aria-controls": o,
+                    "aria-expanded": !0,
+                    "aria-activedescendant": (0, l.NE)(o, T.columnIndex, T.rowIndex),
+                },
             })
         );
     }),

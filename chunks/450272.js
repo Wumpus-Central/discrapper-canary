@@ -4,7 +4,7 @@ n.d(t, {
     DS: () => a.D,
     E_: () => s.E_,
     lD: () => l,
-    pg: () => s.pg
+    pg: () => s.pg,
 });
 var i = n(255367),
     r = n(481060),
@@ -15,6 +15,6 @@ let l = (e) => {
     let { href: t } = e;
     return (0, i.jsx)(r.eee, {
         href: t,
-        children: t
+        children: t,
     });
 };

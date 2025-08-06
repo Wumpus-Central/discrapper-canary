@@ -16,10 +16,10 @@ var n = e(98405),
     L = a.CONFIGURABLE,
     m = y.IteratorPrototype,
     x = y.BUGGY_SAFARI_ITERATORS,
-    S = h('iterator'),
-    b = 'keys',
-    k = 'values',
-    M = 'entries',
+    S = h("iterator"),
+    b = "keys",
+    k = "values",
+    M = "entries",
     T = function () {
         return this;
     };
@@ -43,20 +43,23 @@ t.exports = function (t, r, e, a, h, y, A) {
                 return new e(this);
             };
         },
-        P = r + ' Iterator',
+        P = r + " Iterator",
         R = !1,
         G = t.prototype,
-        j = G[S] || G['@@iterator'] || (h && G[h]),
+        j = G[S] || G["@@iterator"] || (h && G[h]),
         E = (!x && j) || I(h),
-        D = ('Array' === r && G.entries) || j;
+        D = ("Array" === r && G.entries) || j;
     if (
-        (D && (O = c(D.call(new t()))) !== Object.prototype && O.next && (!i && c(O) !== m && (f ? f(O, m) : s(O[S]) || v(O, S, T)), l(O, P, !0, !0), i && (d[P] = T)),
+        (D &&
+            (O = c(D.call(new t()))) !== Object.prototype &&
+            O.next &&
+            (!i && c(O) !== m && (f ? f(O, m) : s(O[S]) || v(O, S, T)), l(O, P, !0, !0), i && (d[P] = T)),
         g &&
             h === k &&
             j &&
             j.name !== k &&
             (!i && L
-                ? p(G, 'name', k)
+                ? p(G, "name", k)
                 : ((R = !0),
                   (E = function () {
                       return o(j, this);
@@ -67,7 +70,7 @@ t.exports = function (t, r, e, a, h, y, A) {
             ((w = {
                 values: I(k),
                 keys: y ? E : I(b),
-                entries: I(M)
+                entries: I(M),
             }),
             A)
         )
@@ -77,9 +80,9 @@ t.exports = function (t, r, e, a, h, y, A) {
                 {
                     target: r,
                     proto: !0,
-                    forced: x || R
+                    forced: x || R,
                 },
-                w
+                w,
             );
-    return ((!i || A) && G[S] !== E && v(G, S, E, { name: h }), (d[r] = E), w);
+    return (!i || A) && G[S] !== E && v(G, S, E, { name: h }), (d[r] = E), w;
 };

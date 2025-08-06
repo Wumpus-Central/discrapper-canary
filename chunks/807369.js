@@ -1,4 +1,4 @@
-(n.d(t, { a: () => o }), n(388685));
+n.d(t, { a: () => o }), n(388685);
 var i = n(73800),
     r = n(363577);
 let o = function (e) {
@@ -9,7 +9,7 @@ let o = function (e) {
         [s, l] = i.useState(void 0);
     return (
         i.useEffect(() => {
-            '' === e || e === o ? l(void 0) : null != a && l(a);
+            "" === e || e === o ? l(void 0) : null != a && l(a);
         }, [a, e, o]),
         s
     );

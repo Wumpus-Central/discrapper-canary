@@ -21,7 +21,7 @@ function s(e) {
                       () => {
                           null != u.current && (clearTimeout(u.current), (u.current = null));
                       }),
-            [s, n, c, t, e]
+            [s, n, c, t, e],
         ),
         l
     );

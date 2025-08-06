@@ -1,7 +1,7 @@
 n.d(t, {
     D6: () => p,
     bp: () => f,
-    wr: () => d
+    wr: () => d,
 });
 var r = n(73800),
     i = n(442837),
@@ -12,13 +12,19 @@ var r = n(73800),
     c = n(45572),
     u = n(505649),
     d = (function (e) {
-        return ((e[(e.PENDING = 1)] = 'PENDING'), (e[(e.ERROR = 2)] = 'ERROR'), (e[(e.NONE = 3)] = 'NONE'), e);
+        return (e[(e.PENDING = 1)] = "PENDING"), (e[(e.ERROR = 2)] = "ERROR"), (e[(e.NONE = 3)] = "NONE"), e;
     })({});
 function f(e, t, n, i) {
     let o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         a = arguments.length > 5 ? arguments[5] : void 0;
     r.useEffect(() => {
-        null != e && (1 === t && e !== l.h8.AWAITING_AUTHENTICATION ? n(l.h8.AWAITING_AUTHENTICATION) : e === l.h8.AWAITING_AUTHENTICATION && (2 === t ? n(l.h8.REVIEW) : 3 === t && (o ? (null != a ? a() : n(l.h8.REVIEW)) : (i(c.A.COMPLETED), n(l.h8.CONFIRM)))));
+        null != e &&
+            (1 === t && e !== l.h8.AWAITING_AUTHENTICATION
+                ? n(l.h8.AWAITING_AUTHENTICATION)
+                : e === l.h8.AWAITING_AUTHENTICATION &&
+                  (2 === t
+                      ? n(l.h8.REVIEW)
+                      : 3 === t && (o ? (null != a ? a() : n(l.h8.REVIEW)) : (i(c.A.COMPLETED), n(l.h8.CONFIRM)))));
     }, [e, t, n, i, o, a]);
 }
 let _ = 5000;

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => W }), n(388685));
+n.d(t, { Z: () => W }), n(388685);
 var i,
     r,
     s,
@@ -32,17 +32,17 @@ let A = null,
 function D() {
     let e = v.Z.getChannelId(),
         t = v.Z.getVoiceChannelId();
-    return ((A = e), (P = t), R.clear());
+    return (A = e), (P = t), R.clear();
 }
 function Z(e) {
     let {
-        guild: { id: t }
+        guild: { id: t },
     } = e;
     return R.clearGuildId(t);
 }
 function w(e) {
     let {
-        channel: { guild_id: t }
+        channel: { guild_id: t },
     } = e;
     return R.clearGuildId(t);
 }
@@ -100,17 +100,21 @@ class z extends (i = o.ZP.Store) {
     }
     getGuild(e, t) {
         var n, i;
-        let r = R.getGuild(e, null != (n = null == t ? void 0 : t.guildActionRows) ? n : [], null != (i = null == t ? void 0 : t.channelNoticeRows) ? i : []);
+        let r = R.getGuild(
+            e,
+            null != (n = null == t ? void 0 : t.guildActionRows) ? n : [],
+            null != (i = null == t ? void 0 : t.channelNoticeRows) ? i : [],
+        );
         return {
             guildChannelsVersion: r.version,
-            guildChannels: r
+            guildChannels: r,
         };
     }
     getGuildWithoutChangingGuildActionRows(e) {
         let t = R.getGuildChannelRowsOnly(e);
         return {
             guildChannelsVersion: t.version,
-            guildChannels: t
+            guildChannels: t,
         };
     }
     recentsChannelCount(e) {
@@ -119,15 +123,15 @@ class z extends (i = o.ZP.Store) {
         return t.getCategoryFromSection(t.recentsSectionNumber).getShownChannelIds().length;
     }
 }
-((s = 'ChannelListStore'),
-    (r = 'displayName') in z
+(s = "ChannelListStore"),
+    (r = "displayName") in z
         ? Object.defineProperty(z, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (z[r] = s));
+        : (z[r] = s);
 let W = new z(c.Z, {
     APPLICATION_FETCH_FAIL: F,
     APPLICATION_FETCH_SUCCESS: F,
@@ -305,10 +309,12 @@ let W = new z(c.Z, {
         let { voiceStates: t } = e,
             n = U(),
             i = new Set();
-        for (let { channelId: e, oldChannelId: r } of t) (null == r || i.has(r) || (R.nonPositionalChannelIdUpdate(r) && (n = !0), i.add(r)), null == e || i.has(e) || (R.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e)));
+        for (let { channelId: e, oldChannelId: r } of t)
+            null == r || i.has(r) || (R.nonPositionalChannelIdUpdate(r) && (n = !0), i.add(r)),
+                null == e || i.has(e) || (R.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
         return n;
     },
     WINDOW_FOCUS: function () {
         return null != A && R.nonPositionalChannelIdUpdate(A);
-    }
+    },
 });

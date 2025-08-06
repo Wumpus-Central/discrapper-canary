@@ -18,20 +18,23 @@ function g() {
     let e = a.QK.useSetting(),
         t = (0, u.n)(),
         r = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
-        o = t && e && !r ? (0, s.b)('server_products/storefront/question-mark.gif') : (0, s.b)('server_products/storefront/question-mark.png');
-    return (0, n.jsxs)('div', {
+        o =
+            t && e && !r
+                ? (0, s.b)("server_products/storefront/question-mark.gif")
+                : (0, s.b)("server_products/storefront/question-mark.png");
+    return (0, n.jsxs)("div", {
         className: j.previewListingCard,
         children: [
             (0, n.jsx)(c.Z, {
                 role: void 0,
                 ctaComponent: null,
-                imageUrl: (0, s.b)('server_products/storefront/preview-thumbnail.png'),
+                imageUrl: (0, s.b)("server_products/storefront/preview-thumbnail.png"),
                 name: b.intl.string(b.t.U2hvDg),
-                description: b.intl.string(b.t['w/TNGR']),
+                description: b.intl.string(b.t["w/TNGR"]),
                 formattedPrice: (0, d.T4)(0, f.pKx.USD, {
-                    localeMatcher: 'best fit',
-                    style: 'currency',
-                    maximumSignificantDigits: 1
+                    localeMatcher: "best fit",
+                    style: "currency",
+                    maximumSignificantDigits: 1,
                 }),
                 shouldShowFullDescriptionButton: !1,
                 productType: b.intl.string(b.t.ih4QMT),
@@ -40,49 +43,49 @@ function g() {
                 lineClamp: 3,
                 thumbnailHeight: 197,
                 cardWidth: 332,
-                descriptionTextVariant: 'text-xs/normal'
+                descriptionTextVariant: "text-xs/normal",
             }),
-            (0, n.jsx)('img', {
+            (0, n.jsx)("img", {
                 className: j.questionMark,
-                alt: '',
-                src: o
-            })
-        ]
+                alt: "",
+                src: o,
+            }),
+        ],
     });
 }
 function h() {
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: j.learnMoreTipContainer,
         children: [
             (0, n.jsx)(o.d3s, {
-                size: 'md',
-                color: 'currentColor',
-                className: j.infoCircle
+                size: "md",
+                color: "currentColor",
+                className: j.infoCircle,
             }),
             (0, n.jsx)(o.Text, {
-                variant: 'text-sm/normal',
-                color: 'text-muted',
-                children: b.intl.format(b.t.umfZ8v, { learnMoreLink: p.P4 })
-            })
-        ]
+                variant: "text-sm/normal",
+                color: "text-muted",
+                children: b.intl.format(b.t.umfZ8v, { learnMoreLink: p.P4 }),
+            }),
+        ],
     });
 }
 function m(e) {
     let { guildId: t } = e;
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: j.previewContentContainer,
         children: [
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 className: j.previewContent,
                 children: [
                     (0, n.jsx)(g, {}),
                     (0, n.jsx)(C.Z, {
                         guildId: t,
-                        showCTA: !0
-                    })
-                ]
+                        showCTA: !0,
+                    }),
+                ],
             }),
-            (0, n.jsx)(h, {})
-        ]
+            (0, n.jsx)(h, {}),
+        ],
     });
 }

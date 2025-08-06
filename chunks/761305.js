@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(35282), n(388685));
+n.d(t, { Z: () => b }), n(35282), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
@@ -20,7 +20,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,36 +31,36 @@ class x extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, h.Z)(this.props.location),
             t = (0, s.parse)(this.props.location.search);
-        (a.tn
+        a.tn
             .post({
                 url: m.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
-                    guild_id: t.guild_id
+                    guild_id: t.guild_id,
                 },
                 oldFormErrors: !0,
-                rejectWithError: !0
+                rejectWithError: !0,
             })
             .then(
                 (e) => {
                     let {
-                            body: { guild: t }
+                            body: { guild: t },
                         } = e,
                         n = (0, d.Jh)(t);
                     this.setState({
                         success: !0,
                         busy: !1,
-                        guild: n
+                        guild: n,
                     });
                 },
                 () =>
                     this.setState({
                         success: !1,
-                        busy: !1
-                    })
+                        busy: !1,
+                    }),
             ),
-            (0, c.e)('disable_server_highlight_notifications'));
+            (0, c.e)("disable_server_highlight_notifications");
     }
     renderBusy() {
         return (0, i.jsx)(p.ZP, { children: (0, i.jsx)(p.Hh, {}) });
@@ -72,13 +72,13 @@ class x extends (r = l.PureComponent) {
             children: [
                 (0, i.jsx)(p.Dx, {
                     className: g.marginBottom8,
-                    children: f.intl.string(f.t.Z33eiI)
+                    children: f.intl.string(f.t.Z33eiI),
                 }),
                 (0, i.jsx)(p.DK, { children: f.intl.format(f.t.NRWtfH, { guildName: n.name }) }),
                 (0, i.jsx)(p.zx, {
                     className: g.marginTop40,
                     onClick: () => t(e),
-                    children: f.intl.string(f.t.fIv16O)
+                    children: f.intl.string(f.t.fIv16O),
                 }),
                 (0, i.jsx)(p.zx, {
                     className: g.marginTop8,
@@ -87,9 +87,9 @@ class x extends (r = l.PureComponent) {
                     onClick: () => {
                         t(m.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
-                    children: f.intl.string(f.t['cGmT/P'])
-                })
-            ]
+                    children: f.intl.string(f.t["cGmT/P"]),
+                }),
+            ],
         });
     }
     renderError() {
@@ -98,19 +98,19 @@ class x extends (r = l.PureComponent) {
             children: [
                 (0, i.jsx)(p.Ee, {
                     src: n(105020),
-                    className: g.marginBottom20
+                    className: g.marginBottom20,
                 }),
                 (0, i.jsx)(p.Dx, {
                     className: g.marginBottom8,
-                    children: f.intl.string(f.t.ox9hIS)
+                    children: f.intl.string(f.t.ox9hIS),
                 }),
-                (0, i.jsx)(p.DK, { children: f.intl.string(f.t['/dcuR0']) }),
+                (0, i.jsx)(p.DK, { children: f.intl.string(f.t["/dcuR0"]) }),
                 (0, i.jsx)(p.zx, {
                     className: g.marginTop40,
                     onClick: () => t(e),
-                    children: f.intl.string(f.t.fIv16O)
-                })
-            ]
+                    children: f.intl.string(f.t.fIv16O),
+                }),
+            ],
         });
     }
     render() {
@@ -118,13 +118,13 @@ class x extends (r = l.PureComponent) {
         return e ? this.renderBusy() : t ? this.renderSuccess() : this.renderError();
     }
     constructor(...e) {
-        (super(...e),
-            _(this, 'state', {
+        super(...e),
+            _(this, "state", {
                 busy: !0,
                 success: !1,
-                guild: null
-            }));
+                guild: null,
+            });
     }
 }
-_(x, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
+_(x, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
 let b = o.ZP.connectStores([u.Z], () => ({ defaultRoute: u.Z.defaultRoute }))(x);

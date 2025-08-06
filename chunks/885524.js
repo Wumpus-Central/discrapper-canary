@@ -26,8 +26,8 @@ function d(e) {
         }, [_, t, f, h, d, n]),
         {
             onReady: r.useCallback(() => {
-                (p.current.stop(), (0, c.w)(h, n));
-            }, [n, h])
+                p.current.stop(), (0, c.w)(h, n);
+            }, [n, h]),
         }
     );
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     EM: () => m,
     WW: () => b,
-    ZP: () => O
+    ZP: () => O,
 });
 var r = n(255367),
     i = n(73800),
@@ -17,7 +17,7 @@ var r = n(255367),
     f = n(388032),
     g = n(789123);
 function m(e, t, n, r) {
-    let i = 'compact' === r ? 8 : h.$k;
+    let i = "compact" === r ? 8 : h.$k;
     if (e === u.wZ) return i;
     if (e === u.wd) return t.features.has(p.oNc.HUB) ? 0 : i;
     if (e === n.voiceChannelsSectionNumber) {
@@ -28,51 +28,58 @@ function m(e, t, n, r) {
         let r = null == (l = n.getChannelFromSectionRow(e, 0)) ? void 0 : l.channel;
         return null == r || r.record.type === p.d4z.GUILD_CATEGORY ? 9 : 25;
     }
-    return 'compact' === r ? 32 : h.Pw;
+    return "compact" === r ? 32 : h.Pw;
 }
 function b(e, t) {
     switch (e) {
         case u.wZ:
-            return 'hoisted-spacer';
+            return "hoisted-spacer";
         case u.wd:
-            return 'uncategorized-spacer';
+            return "uncategorized-spacer";
         case u.p2:
-            return 'favorites';
+            return "favorites";
         case t.recentsSectionNumber:
-            return 'recents-header';
+            return "recents-header";
         case t.voiceChannelsSectionNumber:
-            return 'voice-channels-header';
+            return "voice-channels-header";
         default: {
             let n = t.getNamedCategoryFromSection(e);
-            if (null != n) return 'category-'.concat(n.id);
-            return 'section-'.concat(e);
+            if (null != n) return "category-".concat(n.id);
+            return "section-".concat(e);
         }
     }
 }
 let O = i.memo(function (e) {
-    let { sectionIndex: t, guild: n, guildChannels: m, guildChannelsVersion: b, selectedChannelId: O, disableManageChannels: _ } = e,
-        { isFavoritesPerk: y } = (0, s.z)('ChannelListSection'),
+    let {
+            sectionIndex: t,
+            guild: n,
+            guildChannels: m,
+            guildChannelsVersion: b,
+            selectedChannelId: O,
+            disableManageChannels: _,
+        } = e,
+        { isFavoritesPerk: y } = (0, s.z)("ChannelListSection"),
         C = i.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 r = e.getShownChannelAndThreadIds();
-            (null != O && r.includes(O) && (t = (0, a.KY)(m)), (0, a.Uo)(n.id, r, t));
+            null != O && r.includes(O) && (t = (0, a.KY)(m)), (0, a.Uo)(n.id, r, t);
         }, [n.id, O, m, b]),
         { density: v } = (0, l.TCT)(),
-        j = 'compact' === v ? 8 : h.$k;
+        j = "compact" === v ? 8 : h.$k;
     switch (t) {
         case u.wZ:
-            return (0, r.jsx)('div', { style: { height: j } });
+            return (0, r.jsx)("div", { style: { height: j } });
         case u.wd:
             if (n.features.has(p.oNc.HUB)) return null;
-            return (0, r.jsx)('div', { style: { height: j } });
+            return (0, r.jsx)("div", { style: { height: j } });
         case u.p2:
             return (0, r.jsx)(d.P, { name: y ? f.intl.string(f.t.mlPMCw) : f.intl.string(f.t.k8fFjo) });
         case m.recentsSectionNumber:
             return (0, r.jsx)(d.P, {
                 name: f.intl.string(f.t.gKcrqK),
-                onDismiss: C
+                onDismiss: C,
             });
         case m.voiceChannelsSectionNumber: {
             var E;
@@ -81,12 +88,12 @@ let O = i.memo(function (e) {
             let n = null == (E = m.getChannelFromSectionRow(t, 0)) ? void 0 : E.channel;
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)('div', { className: g.sectionDivider }),
+                    (0, r.jsx)("div", { className: g.sectionDivider }),
                     (0, r.jsx)(d.rj, {
                         category: e,
-                        channel: n
-                    })
-                ]
+                        channel: n,
+                    }),
+                ],
             });
         }
         case u.wF: {
@@ -99,9 +106,9 @@ let O = i.memo(function (e) {
                 children: (0, r.jsx)(c.Z, {
                     inlineSpecs: h.MF,
                     arrowAlignment: o.cy.TOP,
-                    tutorialId: 'organize-by-topic',
-                    position: 'right'
-                })
+                    tutorialId: "organize-by-topic",
+                    position: "right",
+                }),
             });
         }
         default: {
@@ -110,7 +117,7 @@ let O = i.memo(function (e) {
             return (0, r.jsx)(d.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: _
+                disableManageChannels: _,
             });
         }
     }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(539854), n(388685));
+n.d(t, { Z: () => k }), n(539854), n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -21,7 +21,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,11 +72,14 @@ let v = [],
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
-            return (e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t);
+            return (
+                e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10),
+                t
+            );
         },
         lookupKey: (e) => p.Z.getSoundById(e),
         afterCompute: () => {},
-        numFrequentlyItems: m.O6
+        numFrequentlyItems: m.O6,
     });
 function S(e) {
     let { sound: t, trigger: n } = e;
@@ -95,12 +98,12 @@ function N(e) {
     I.set(e, e);
 }
 function C(e) {
-    (T.track(e),
+    T.track(e),
         v.push({
             key: e,
-            timestamp: Date.now()
+            timestamp: Date.now(),
         }),
-        T.compute());
+        T.compute();
 }
 function R(e) {
     for (let t of p.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
@@ -118,30 +121,33 @@ function w() {
 function D(e) {
     let {
         settings: { type: t },
-        wasSaved: n
+        wasSaved: n,
     } = e;
     x() && t === g.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (v = []);
 }
 function L() {
     return (0, _.v)({
-        location: 'soundboard_event_store',
-        autoTrackExposure: !1
+        location: "soundboard_event_store",
+        autoTrackExposure: !1,
     }).canSeeRecentlyHeard;
 }
 function x() {
     return (0, _.v)({
-        location: 'soundboard_event_store',
-        autoTrackExposure: !1
+        location: "soundboard_event_store",
+        autoTrackExposure: !1,
     }).canSeeFrequentlyPlayed;
 }
 class M extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], w));
+        this.waitFor(f.default, p.Z),
+            (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache),
+            (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush),
+            this.syncWith([d.Z], w);
     }
     getState() {
         return {
             recentlyHeardCache: I.dump(),
-            playedEventsPendingFlush: v
+            playedEventsPendingFlush: v,
         };
     }
     hasPendingUsage() {
@@ -157,9 +163,9 @@ class M extends (r = l.ZP.PersistedStore) {
         return T.frequently;
     }
 }
-(E(M, 'displayName', 'SoundboardEventStore'), E(M, 'persistKey', 'SoundboardEventStore'));
+E(M, "displayName", "SoundboardEventStore"), E(M, "persistKey", "SoundboardEventStore");
 let k = new M(c.Z, {
     GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: S,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: A,
-    USER_SETTINGS_PROTO_UPDATE: D
+    USER_SETTINGS_PROTO_UPDATE: D,
 });

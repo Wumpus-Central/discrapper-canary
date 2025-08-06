@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(692547),
@@ -13,36 +13,36 @@ function f(e) {
         [f, _] = i.useState(!1),
         p = i.useRef(null);
     function h(e) {
-        (_(!1), null == t || t(e));
+        _(!1), null == t || t(e);
     }
     let m = (e) =>
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: u.customGiftHeader,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: u.__invalid_customGiftHeaderText,
                     children: [
                         (0, r.jsx)(a.Text, {
-                            variant: 'text-md/bold',
-                            children: c.intl.string(c.t.aThJz8)
+                            variant: "text-md/bold",
+                            children: c.intl.string(c.t.aThJz8),
                         }),
                         (0, r.jsx)(a.Text, {
-                            variant: 'text-sm/normal',
-                            children: c.intl.string(c.t.stGFAw)
-                        })
-                    ]
+                            variant: "text-sm/normal",
+                            children: c.intl.string(c.t.stGFAw),
+                        }),
+                    ],
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: u.searchAndSound,
-                    children: e
-                })
-            ]
+                    children: e,
+                }),
+            ],
         });
     return (0, r.jsx)(a.yRy, {
         targetElementRef: p,
         shouldShow: f,
-        position: 'bottom',
-        align: 'left',
+        position: "bottom",
+        align: "left",
         onRequestClose: () => _(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -54,12 +54,12 @@ function f(e) {
                     channel: null,
                     onClose: t,
                     onSelect: h,
-                    analyticsSource: 'gift soundboard',
+                    analyticsSource: "gift soundboard",
                     soundButtonOverlay: s.Pb.ADD,
                     listPadding: d,
                     renderHeader: m,
-                    defaultSoundsOnly: !0
-                })
+                    defaultSoundsOnly: !0,
+                }),
             });
         },
         children: () =>
@@ -69,40 +69,40 @@ function f(e) {
                 innerRef: p,
                 children:
                     null == n
-                        ? (0, r.jsxs)('div', {
+                        ? (0, r.jsxs)("div", {
                               className: u.contentContainer,
                               children: [
                                   (0, r.jsx)(a.KY1, {
-                                      size: 'custom',
+                                      size: "custom",
                                       color: o.Z.colors.WHITE,
                                       className: u.soundIcon,
                                       width: 14,
-                                      height: 14
+                                      height: 14,
                                   }),
                                   (0, r.jsx)(a.Text, {
                                       className: u.text,
-                                      variant: 'text-sm/semibold',
+                                      variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: c.intl.string(c.t.aThJz8)
-                                  })
-                              ]
+                                      children: c.intl.string(c.t.aThJz8),
+                                  }),
+                              ],
                           })
-                        : (0, r.jsxs)('div', {
+                        : (0, r.jsxs)("div", {
                               className: u.contentContainer,
                               children: [
                                   (0, r.jsx)(a.Text, {
                                       className: u.textSelected,
-                                      variant: 'text-sm/semibold',
-                                      children: n.emojiName
+                                      variant: "text-sm/semibold",
+                                      children: n.emojiName,
                                   }),
                                   (0, r.jsx)(a.Text, {
                                       className: u.text,
-                                      variant: 'text-sm/semibold',
+                                      variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: n.name
-                                  })
-                              ]
-                          })
-            })
+                                      children: n.name,
+                                  }),
+                              ],
+                          }),
+            }),
     });
 }

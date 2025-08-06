@@ -9,8 +9,8 @@ function s(e) {
         let e = (0, i.dg)(t);
         return (
             r.Z.show({
-                title: a.intl.string(a.t['/tGlcn']),
-                body: a.intl.formatToPlainString(a.t.fxEKdX, { maxSize: (0, i.Ng)(e) })
+                title: a.intl.string(a.t["/tGlcn"]),
+                body: a.intl.formatToPlainString(a.t.fxEKdX, { maxSize: (0, i.Ng)(e) }),
             }),
             !0
         );
@@ -18,13 +18,13 @@ function s(e) {
     return n === o.evJ.TOO_MANY_ATTACHMENTS
         ? (r.Z.show({
               title: a.intl.string(a.t.wOr6hI),
-              body: a.intl.formatToPlainString(a.t['qqyp/f'], { limit: o.dN1 })
+              body: a.intl.formatToPlainString(a.t["qqyp/f"], { limit: o.dN1 }),
           }),
           !0)
         : (n === o.evJ.ENTITY_EMPTY &&
               r.Z.show({
                   title: a.intl.string(a.t.B3vFdX),
-                  body: a.intl.string(a.t['9ZpT2N'])
+                  body: a.intl.string(a.t["9ZpT2N"]),
               }),
           !1);
 }

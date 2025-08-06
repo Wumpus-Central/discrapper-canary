@@ -1,4 +1,4 @@
-(n.d(t, { T: () => d }), n(388685));
+n.d(t, { T: () => d }), n(388685);
 var r = n(255367),
     i = n(94171),
     o = n(442837),
@@ -13,13 +13,13 @@ function d(e) {
         [d, f] = (0, a.R_)((e) => [e.isLoading, e.error], i.X);
     return null != f
         ? (0, r.jsx)(s.Z, {
-              title: c.intl.formatToPlainString(c.t['7basa2'], { locale: n }),
-              note: (0, r.jsx)('span', { children: f.message })
+              title: c.intl.formatToPlainString(c.t["7basa2"], { locale: n }),
+              note: (0, r.jsx)("span", { children: f.message }),
           })
         : d
           ? __OVERLAY__
               ? null
-              : (0, r.jsx)('div', { className: u.loading })
+              : (0, r.jsx)("div", { className: u.loading })
           : null != t
             ? t
             : null;

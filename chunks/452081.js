@@ -5,25 +5,25 @@ var r = n(73800),
     a = n(220068),
     o = n(388032);
 function s() {
-    let e = a.Z.useField('tab'),
+    let e = a.Z.useField("tab"),
         t = r.useCallback((e) => {
-            ((0, i.dL)('#'), a.Z.setState({ tab: e }));
+            (0, i.dL)("#"), a.Z.setState({ tab: e });
         }, []);
     return {
         tabs: r.useMemo(
             () => [
                 {
                     id: l.e5.ALL,
-                    label: o.intl.string(o.t['0SzXmp'])
+                    label: o.intl.string(o.t["0SzXmp"]),
                 },
                 {
                     id: l.e5.CLAIMED,
-                    label: o.intl.string(o.t.zyNYND)
-                }
+                    label: o.intl.string(o.t.zyNYND),
+                },
             ],
-            []
+            [],
         ),
         selectedTab: e,
-        onSelectTab: t
+        onSelectTab: t,
     };
 }

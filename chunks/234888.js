@@ -1,6 +1,6 @@
 n.d(t, {
     A: () => i,
-    i: () => r
+    i: () => r,
 });
 let r = 30000,
-    i = 'Captcha';
+    i = "Captcha";

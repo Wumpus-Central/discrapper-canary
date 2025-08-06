@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(539854), n(388685));
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -16,24 +16,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -67,15 +67,17 @@ let O = i.memo(function (e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['folderNode']);
+        })(e, ["folderNode"]);
     let { id: _, name: y, color: C, children: v } = t,
         j = v.map((e) => e.id),
         E = (0, a.Z)((e) => e.guildId),
@@ -91,17 +93,17 @@ let O = i.memo(function (e) {
                 n = 2 * g.dYL,
                 r = [];
             for (let e of t) (e.length < n || 0 === r.length) && (r.push(e), (n -= e.length));
-            return ''.concat(r.join(', ')).concat(r.length < t.length ? ', ...' : '');
+            return "".concat(r.join(", ")).concat(r.length < t.length ? ", ..." : "");
         })(t),
         I = (0, f.Z)(t),
         {
             mentionCount: P,
             isMentionLowImportance: N,
-            unread: w
+            unread: w,
         } = (0, l.cj)([u.default], () => ({
             mentionCount: j.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
             isMentionLowImportance: j.every((e) => u.default.getIsMentionLowImportance(e)),
-            unread: j.some((e) => u.default.hasUnread(e))
+            unread: j.some((e) => u.default.hasUnread(e)),
         })),
         Z = i.useCallback(() => {
             s.Z.toggleGuildFolderExpand(_);
@@ -109,7 +111,7 @@ let O = i.memo(function (e) {
         T = i.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
-                    let { default: e } = await n.e('52590').then(n.bind(n, 205784));
+                    let { default: e } = await n.e("52590").then(n.bind(n, 205784));
                     return (t) =>
                         (0, r.jsx)(
                             e,
@@ -117,12 +119,12 @@ let O = i.memo(function (e) {
                                 folderId: _,
                                 folderName: y,
                                 folderColor: C,
-                                unread: w || P > 0
-                            })
+                                unread: w || P > 0,
+                            }),
                         );
                 });
             },
-            [_, y, C, w, P]
+            [_, y, C, w, P],
         );
     return (0, r.jsx)(
         p.Z,
@@ -136,7 +138,7 @@ let O = i.memo(function (e) {
             mediaState: I,
             defaultFolderName: x,
             onExpandCollapse: Z,
-            onContextMenu: T
-        })
+            onContextMenu: T,
+        }),
     );
 });

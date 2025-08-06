@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(539854), n(388685));
+n.d(t, { Z: () => C }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -20,41 +20,41 @@ function j(e) {
 }
 function v(e) {
     let { icon: t, title: n, subtitle: i, className: l } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(b.label, l),
         children: [
             t,
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: b.labelText,
                 children: [
                     (0, r.jsx)(o.Text, {
-                        variant: 'text-md/normal',
-                        color: 'none',
+                        variant: "text-md/normal",
+                        color: "none",
                         className: b.labelTitle,
-                        children: n
+                        children: n,
                     }),
-                    null != i && '' !== i
+                    null != i && "" !== i
                         ? (0, r.jsx)(o.Text, {
-                              variant: 'text-xs/semibold',
-                              color: 'text-muted',
+                              variant: "text-xs/semibold",
+                              color: "text-muted",
                               className: b.labelSubtitle,
-                              children: i
+                              children: i,
                           })
-                        : null
-                ]
-            })
-        ]
+                        : null,
+                ],
+            }),
+        ],
     });
 }
 function _() {
     return (0, r.jsx)(v, {
         icon: (0, r.jsx)(o.qJs, {
-            size: 'md',
-            color: 'currentColor',
-            className: b.labelIcon
+            size: "md",
+            color: "currentColor",
+            className: b.labelIcon,
         }),
         title: x.intl.string(x.t.d7YJMD),
-        className: b.createLabel
+        className: b.createLabel,
     });
 }
 function O(e) {
@@ -69,7 +69,7 @@ function O(e) {
     return (0, r.jsx)(v, {
         icon: null != a && (0, r.jsx)(a, { className: b.labelIcon }),
         title: s,
-        subtitle: o
+        subtitle: o,
     });
 }
 function y(e) {
@@ -77,7 +77,7 @@ function y(e) {
     return null != t ? (0, r.jsx)(O, { channelId: t }) : (0, r.jsx)(_, {});
 }
 function C(e) {
-    let { guildId: t, value: l, initialChannelId: a, omitChannelIds: d, 'aria-labelledby': b, onChange: v } = e,
+    let { guildId: t, value: l, initialChannelId: a, omitChannelIds: d, "aria-labelledby": b, onChange: v } = e,
         _ = x.intl.string(x.t.d7YJMD),
         O = (0, s.e7)([m.Z], () => m.Z.getCategories(t), [t]),
         C = (0, h.m7)(null != l ? l : f.lds),
@@ -85,8 +85,8 @@ function C(e) {
             let e = [
                     {
                         value: null,
-                        label: _
-                    }
+                        label: _,
+                    },
                 ],
                 t = !1;
             for (let n of O._categories)
@@ -96,7 +96,7 @@ function C(e) {
                             (l === r.id && (t = !0),
                             e.push({
                                 value: r.id,
-                                label: (0, c.F6)(r, p.default, g.Z)
+                                label: (0, c.F6)(r, p.default, g.Z),
                             })));
             return (
                 null == l ||
@@ -104,7 +104,7 @@ function C(e) {
                     null == C ||
                     e.push({
                         value: l,
-                        label: C.name
+                        label: C.name,
                     }),
                 e
             );
@@ -115,7 +115,7 @@ function C(e) {
         select: function (e) {
             null == e
                 ? (0, o.ZDy)(async () => {
-                      let { default: e } = await Promise.all([n.e('45094'), n.e('18494')]).then(n.bind(n, 797671));
+                      let { default: e } = await Promise.all([n.e("45094"), n.e("18494")]).then(n.bind(n, 797671));
                       return (n) => {
                           var i, l;
                           return (0, r.jsx)(
@@ -124,31 +124,31 @@ function C(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           r.forEach(function (t) {
                                               var r;
-                                              ((r = n[t]),
+                                              (r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: r,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = r));
-                                          }));
+                                                      : (e[t] = r);
+                                          });
                                   }
                                   return e;
                               })({}, n)),
                               (l = l =
                                   {
                                       guildId: t,
-                                      onSubmit: v
+                                      onSubmit: v,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -162,7 +162,7 @@ function C(e) {
                                     })(Object(l)).forEach(function (e) {
                                         Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
-                              i)
+                              i),
                           );
                       };
                   })
@@ -175,6 +175,6 @@ function C(e) {
             let [t] = e;
             return y(t);
         },
-        'aria-labelledby': b
+        "aria-labelledby": b,
     });
 }

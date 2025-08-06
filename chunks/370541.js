@@ -1,10 +1,10 @@
 a.d(e, {
     $p: () => i,
-    pT: () => o
+    pT: () => o,
 });
 var r = a(285883),
     _ = a(394798);
-let n = RegExp('^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$');
+let n = RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
 function o(t, e) {
     let a = (function (t) {
             let e;
@@ -12,11 +12,11 @@ function o(t, e) {
             let a = t.match(n);
             if (a)
                 return (
-                    '1' === a[3] ? (e = !0) : '0' === a[3] && (e = !1),
+                    "1" === a[3] ? (e = !0) : "0" === a[3] && (e = !1),
                     {
                         traceId: a[1],
                         parentSampled: e,
-                        parentSpanId: a[2]
+                        parentSpanId: a[2],
                     }
                 );
         })(t),
@@ -28,14 +28,14 @@ function o(t, e) {
               parentSpanId: c || (0, _.DM)().substring(16),
               spanId: (0, _.DM)().substring(16),
               sampled: E,
-              dsc: o || {}
+              dsc: o || {},
           }
         : {
               traceId: i || (0, _.DM)(),
-              spanId: (0, _.DM)().substring(16)
+              spanId: (0, _.DM)().substring(16),
           };
 }
 function i(t = (0, _.DM)(), e = (0, _.DM)().substring(16), a) {
-    let r = '';
-    return (void 0 !== a && (r = a ? '-1' : '-0'), `${t}-${e}${r}`);
+    let r = "";
+    return void 0 !== a && (r = a ? "-1" : "-0"), `${t}-${e}${r}`;
 }

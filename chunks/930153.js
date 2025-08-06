@@ -2,7 +2,7 @@ n.d(t, {
     $U: () => l,
     Bs: () => c,
     Lk: () => u,
-    T3: () => d
+    T3: () => d,
 });
 var r = n(388032);
 function i(e, t, n) {
@@ -12,7 +12,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,7 +43,7 @@ function l(e) {
 }
 function c(e, t) {
     if (e < s) return r.intl.formatToPlainString(r.t.OiHat7, { value: Math.floor(e) });
-    if (e < a) return r.intl.formatToPlainString(r.t['84R4TU'], { value: Math.floor(e / s) });
+    if (e < a) return r.intl.formatToPlainString(r.t["84R4TU"], { value: Math.floor(e / s) });
     let n = Math.floor((10 * e) / a) / 10,
         i = new Intl.NumberFormat(t, { maximumFractionDigits: 1 }).format(n);
     return r.intl.formatToPlainString(r.t.Iku48P, { value: i });
@@ -60,10 +60,10 @@ function d(e, t) {
         e,
         o(
             {
-                style: 'percent',
-                minimumFractionDigits: 0
+                style: "percent",
+                minimumFractionDigits: 0,
             },
-            n
-        )
+            n,
+        ),
     ).format(t);
 }

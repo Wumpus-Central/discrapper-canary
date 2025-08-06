@@ -3,7 +3,7 @@ var r = n(442837),
     i = n(570140);
 let o = {
     fetched: !1,
-    affinities: []
+    affinities: [],
 };
 function a(e) {
     let {} = e;
@@ -14,7 +14,7 @@ function s(e) {
     o.affinities = t;
 }
 function l() {
-    ((o.fetched = !1), (o.affinities = []));
+    (o.fetched = !1), (o.affinities = []);
 }
 class c extends r.ZP.Store {
     get hasFetched() {
@@ -27,5 +27,5 @@ class c extends r.ZP.Store {
 let u = new c(i.Z, {
     BILLING_NITRO_AFFINITY_FETCHED: a,
     BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED: s,
-    LOGOUT: l
+    LOGOUT: l,
 });

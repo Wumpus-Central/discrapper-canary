@@ -8,7 +8,7 @@ n.d(t, {
     aC: () => C,
     bN: () => g,
     dl: () => b,
-    zd: () => T
+    zd: () => T,
 });
 var r = n(81643),
     i = n(974814),
@@ -22,7 +22,7 @@ var r = n(81643),
     f = n(723359),
     _ = n(981631),
     p = n(388032);
-let h = new Date('06/16/2020'),
+let h = new Date("06/16/2020"),
     m = [_.V_K.AGE_RESTRICTED, _.V_K.EXPLICIT];
 function g() {
     let e = c.default.getCurrentUser();
@@ -32,12 +32,12 @@ function E(e) {
     return m.includes(e.nsfwLevel);
 }
 function b() {
-    let e = (0, i.H1)({ location: 'age-gate-utils' }),
+    let e = (0, i.H1)({ location: "age-gate-utils" }),
         t = (0, r.sf)();
     return e && t;
 }
 function y() {
-    let e = (0, i.s8)({ location: 'age-gate-utils' }),
+    let e = (0, i.s8)({ location: "age-gate-utils" }),
         t = (0, r.L5)();
     return e && t;
 }
@@ -47,11 +47,11 @@ function O(e) {
     return t
         ? {
               verifyAgreementButtonText: p.intl.string(p.t.PBG51t),
-              verifyGateDescription: n ? p.intl.format(p.t['7uIWQE'], {}) : p.intl.format(p.t.x1coPj, {})
+              verifyGateDescription: n ? p.intl.format(p.t["7uIWQE"], {}) : p.intl.format(p.t.x1coPj, {}),
           }
         : {
-              verifyAgreementButtonText: p.intl.string(p.t['5B+npK']),
-              verifyGateDescription: n ? p.intl.string(p.t.akjk0d) : p.intl.string(p.t['u/xqhY'])
+              verifyAgreementButtonText: p.intl.string(p.t["5B+npK"]),
+              verifyGateDescription: n ? p.intl.string(p.t.akjk0d) : p.intl.string(p.t["u/xqhY"]),
           };
 }
 let v = () => {
@@ -68,7 +68,7 @@ let v = () => {
             (0, a.Y2)(t) &&
             (0, o.Tz)({
                 guildId: e,
-                location: 'age-gate-utils'
+                location: "age-gate-utils",
             })
         );
     },
@@ -76,7 +76,11 @@ let v = () => {
     S = (e) => b() && T(e),
     A = (e) => !!S(e) && ((0, d.mN)(f.L0.NSFW_VOICE_CHANNEL), !0);
 function N(e, t, n) {
-    return I(e) ? void (0, d.mN)(null != n ? n : f.L0.NSFW_SERVER) : T(t) ? void (0, d.mN)(null != n ? n : f.L0.NSFW_CHANNEL) : void 0;
+    return I(e)
+        ? void (0, d.mN)(null != n ? n : f.L0.NSFW_SERVER)
+        : T(t)
+          ? void (0, d.mN)(null != n ? n : f.L0.NSFW_CHANNEL)
+          : void 0;
 }
 function C(e) {
     if (null == e) return !1;

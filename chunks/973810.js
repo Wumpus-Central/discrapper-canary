@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(49124));
+n.d(t, { Z: () => m }), n(388685), n(49124);
 var l = n(255367),
     r = n(73800),
     i = n(849055),
@@ -14,15 +14,18 @@ function m(e) {
     let { mfaChallenge: t, finish: n, setSlide: m, onClose: g, headerAlignStart: x } = e,
         [p, S] = r.useState(!1),
         [j, b] = r.useState(null),
-        { challenge: y } = t.methods.find((e) => 'webauthn' === e.type),
+        { challenge: y } = t.methods.find((e) => "webauthn" === e.type),
         v = async () => {
-            (S(!0), b(null));
-            let e = o.isPlatformEmbedded && c.ZP.supportsFeature(h.eRX.WEBAUTHN) ? c.ZP.webAuthnAuthenticate(y) : i.U2(JSON.parse(y)).then((e) => JSON.stringify(e)),
+            S(!0), b(null);
+            let e =
+                    o.isPlatformEmbedded && c.ZP.supportsFeature(h.eRX.WEBAUTHN)
+                        ? c.ZP.webAuthnAuthenticate(y)
+                        : i.U2(JSON.parse(y)).then((e) => JSON.stringify(e)),
                 t = async (e) => {
                     try {
                         await n({
-                            mfaType: 'webauthn',
-                            data: e
+                            mfaType: "webauthn",
+                            data: e,
                         });
                     } catch (e) {
                         e instanceof s.Pd ? b(f.intl.string(f.t.xSCvBQ)) : b(e.message);
@@ -32,7 +35,7 @@ function m(e) {
                 let n = await e;
                 await t(n);
             } catch (e) {
-                (d.Z.captureException(e), b(f.intl.string(f.t.xSCvBQ)));
+                d.Z.captureException(e), b(f.intl.string(f.t.xSCvBQ));
             } finally {
                 S(!1);
             }
@@ -41,20 +44,20 @@ function m(e) {
         children: [
             (0, l.jsx)(u.Z.SlideHeader, {
                 onClose: g,
-                headerAlignStart: x
+                headerAlignStart: x,
             }),
             null != j && (0, l.jsx)(u.Z.SlideContent, { children: (0, l.jsx)(u.Z.SlideError, { error: j }) }),
             (0, l.jsx)(u.Z.SlideFooter, {
                 mfaChallenge: t,
                 setSlide: m,
                 leadingButton: (0, l.jsx)(a.zxk, {
-                    variant: 'primary',
+                    variant: "primary",
                     text: f.intl.string(f.t.Xr3Ekp),
                     loading: p,
                     onClick: v,
-                    fullWidth: !0
-                })
-            })
-        ]
+                    fullWidth: !0,
+                }),
+            }),
+        ],
     });
 }

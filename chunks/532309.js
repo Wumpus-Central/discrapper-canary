@@ -16,15 +16,15 @@ function l(e) {
                     command_id: n,
                     search_results_position: l,
                     query: c,
-                    source: u
-                }
+                    source: u,
+                },
             });
         },
         f = 1;
     return {
         trackSearchResultsItemImpressionRef: (0, s.Z)({
             onVisible: d,
-            threshold: f
-        })
+            threshold: f,
+        }),
     };
 }

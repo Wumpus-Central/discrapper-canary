@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => h }), r(642613));
+r.d(t, { Z: () => h }), r(642613);
 var n = r(255367),
     l = r(73800),
     a = r(497598),
@@ -20,27 +20,27 @@ let h = () => {
             let { sortType: t, sortDirection: r } = e;
             return t === i.E.RECENCY
                 ? {
-                      label: g.intl.string(g.t['51Bhi4']),
-                      value: 'recent'
+                      label: g.intl.string(g.t["51Bhi4"]),
+                      value: "recent",
                   }
                 : t === i.E.PRICE
                   ? r === a.F.ASC
                       ? {
                             label: g.intl.string(g.t.m8RVU1),
-                            value: 'price-asc'
+                            value: "price-asc",
                         }
                       : {
                             label: g.intl.string(g.t.zBwQJC),
-                            value: 'price-desc'
+                            value: "price-desc",
                         }
                   : t === i.E.RELEVANCE
                     ? {
-                          label: g.intl.string(g.t['XoeT//']),
-                          value: 'relevance'
+                          label: g.intl.string(g.t["XoeT//"]),
+                          value: "relevance",
                       }
                     : {
                           label: g.intl.string(g.t.Y68e5u),
-                          value: 'popularity'
+                          value: "popularity",
                       };
         }, []),
         v = l.useCallback(
@@ -48,42 +48,42 @@ let h = () => {
                 ({
                     recent: {
                         sortType: i.E.RECENCY,
-                        sortDirection: a.F.DESC
+                        sortDirection: a.F.DESC,
                     },
-                    'price-asc': {
+                    "price-asc": {
                         sortType: i.E.PRICE,
-                        sortDirection: a.F.ASC
+                        sortDirection: a.F.ASC,
                     },
-                    'price-desc': {
+                    "price-desc": {
                         sortType: i.E.PRICE,
-                        sortDirection: a.F.DESC
+                        sortDirection: a.F.DESC,
                     },
                     popularity: {
                         sortType: i.E.POPULARITY,
-                        sortDirection: a.F.DESC
+                        sortDirection: a.F.DESC,
                     },
                     relevance: {
                         sortType: i.E.RELEVANCE,
-                        sortDirection: a.F.DESC
-                    }
+                        sortDirection: a.F.DESC,
+                    },
                 })[e],
-            []
+            [],
         ),
         C = l.useCallback(
             (e) => {
                 let r = m(v(e));
-                (s.default.track(p.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                s.default.track(p.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == h ? void 0 : h.sessionId,
                     page_section: null == h ? void 0 : h.pageSection,
                     page_category: null == h ? void 0 : h.pageCategory,
                     page_index: null == h ? void 0 : h.pageIndex,
                     page_size: null == h ? void 0 : h.pageSize,
-                    cta_name: 'sort by '.concat(r.label.toLowerCase()),
-                    page_type: 'catalog'
+                    cta_name: "sort by ".concat(r.label.toLowerCase()),
+                    page_type: "catalog",
                 }),
-                    t(v(e)));
+                    t(v(e));
             },
-            [h, m, v, t]
+            [h, m, v, t],
         ),
         O = m(e);
     return (0, n.jsx)(o.PhF, {
@@ -93,6 +93,6 @@ let h = () => {
         select: C,
         isSelected: (e) => e === O.value,
         serialize: (e) => e,
-        popoutWidth: 224
+        popoutWidth: 224,
     });
 };

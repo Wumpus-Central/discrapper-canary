@@ -19,24 +19,24 @@ function v(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                })
+                }),
             )),
             r.forEach(function (e) {
                 var r;
-                ((r = n[e]),
+                (r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (t[e] = r));
-            }));
+                        : (t[e] = r);
+            });
     }
     return t;
 }
@@ -48,16 +48,24 @@ function O(t) {
         w = (0, s.e7)([a.Z], () => a.Z.getChannel(null == x ? void 0 : x.channel_id));
     if (null == x) return null;
     let { is_canceled: C = !1 } = null != P ? P : {},
-        S = (null == P ? void 0 : P.scheduled_start_time) != null ? new Date(null == P ? void 0 : P.scheduled_start_time) : l,
+        S =
+            (null == P ? void 0 : P.scheduled_start_time) != null
+                ? new Date(null == P ? void 0 : P.scheduled_start_time)
+                : l,
         E = (0, g.DK)(x),
         D = C ? f.p1.CANCELED : f.p1.SCHEDULED;
     E === e && (D = x.status);
-    let z = (null == x ? void 0 : x.scheduled_start_time) != null ? (0, g.lh)(P, S, new Date(null == x ? void 0 : x.scheduled_start_time)) : null,
+    let z =
+            (null == x ? void 0 : x.scheduled_start_time) != null
+                ? (0, g.lh)(P, S, new Date(null == x ? void 0 : x.scheduled_start_time))
+                : null,
         Z = (t) => {
-            (t.stopPropagation(),
+            t.stopPropagation(),
                 null != k &&
                     (0, o.jW)(t, async () => {
-                        let { default: t } = await Promise.all([n.e('34261'), n.e('27434'), n.e('62318')]).then(n.bind(n, 215269));
+                        let { default: t } = await Promise.all([n.e("34261"), n.e("27434"), n.e("62318")]).then(
+                            n.bind(n, 215269),
+                        );
                         return (n) =>
                             (0, r.jsx)(
                                 t,
@@ -67,24 +75,24 @@ function O(t) {
                                         recurrenceId: e,
                                         channel: w,
                                         guild: k,
-                                        isRecurrenceItem: !0
+                                        isRecurrenceItem: !0,
                                     },
-                                    n
-                                )
+                                    n,
+                                ),
                             );
-                    }));
+                    });
         };
     return (0, r.jsxs)(c.kL8, {
         className: i()(j.container, {
             [j.canceled]: C,
             [j.clickable]: null != h,
-            [j.active]: y
+            [j.active]: y,
         }),
         onClick: (t) => {
-            (t.stopPropagation(), C || null == h || h(e));
+            t.stopPropagation(), C || null == h || h(e);
         },
         onContextMenu: Z,
-        'aria-label': '',
+        "aria-label": "",
         children: [
             (0, r.jsx)(b.z, {
                 startTime: S.toISOString(),
@@ -92,19 +100,19 @@ function O(t) {
                 eventType: x.entity_type,
                 guildEventId: x.id,
                 recurrenceId: e,
-                className: j.timeStatus
+                className: j.timeStatus,
             }),
             C &&
                 (0, r.jsx)(c.Text, {
-                    variant: 'text-sm/semibold',
-                    color: 'text-danger',
+                    variant: "text-sm/semibold",
+                    color: "text-danger",
                     className: j.canceledStatus,
-                    children: m.intl.string(m.t.fyBVRk)
+                    children: m.intl.string(m.t.fyBVRk),
                 }),
             (0, r.jsx)(c.ua7, {
                 text: m.intl.string(m.t.UKOtz8),
-                position: 'top',
-                'aria-label': m.intl.string(m.t.bt75u7),
+                position: "top",
+                "aria-label": m.intl.string(m.t.bt75u7),
                 children: (t) => {
                     var e, n;
                     return (0, r.jsx)(
@@ -115,12 +123,12 @@ function O(t) {
                                 onClick: Z,
                                 className: j.iconButton,
                                 children: (0, r.jsx)(c.xhG, {
-                                    size: 'custom',
-                                    color: 'currentColor',
+                                    size: "custom",
+                                    color: "currentColor",
                                     width: 20,
                                     height: 20,
-                                    className: j.icon
-                                })
+                                    className: j.icon,
+                                }),
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -134,10 +142,10 @@ function O(t) {
                               })(Object(n)).forEach(function (t) {
                                   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                               }),
-                        e)
+                        e),
                     );
-                }
-            })
-        ]
+                },
+            }),
+        ],
     });
 }

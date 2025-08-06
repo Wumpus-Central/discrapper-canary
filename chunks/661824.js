@@ -7,36 +7,36 @@ var r = n(255367),
     l = n(388032),
     c = n(735167);
 let u = i.forwardRef(function (e, t) {
-    let { className: n, contentClassName: i, isUnread: o, children: u, id: d, role: f, 'aria-label': _ } = e;
-    return (0, r.jsxs)('div', {
+    let { className: n, contentClassName: i, isUnread: o, children: u, id: d, role: f, "aria-label": _ } = e;
+    return (0, r.jsxs)("div", {
         className: a()(n, {
             [c.divider]: !0,
             [c.isUnread]: o,
-            [c.hasContent]: null != u
+            [c.hasContent]: null != u,
         }),
         ref: t,
         id: d,
         role: f,
-        'aria-label': _,
+        "aria-label": _,
         children: [
             null != u
-                ? (0, r.jsx)('span', {
+                ? (0, r.jsx)("span", {
                       className: a()(c.content, i),
-                      children: u
+                      children: u,
                   })
                 : null,
             o
-                ? (0, r.jsxs)('span', {
+                ? (0, r.jsxs)("span", {
                       className: c.unreadPill,
                       children: [
                           (0, r.jsx)(s.Z, {
                               foreground: c.unreadPillCapStroke,
-                              className: c.unreadPillCap
+                              className: c.unreadPillCap,
                           }),
-                          l.intl.string(l.t.y2b7CA)
-                      ]
+                          l.intl.string(l.t.y2b7CA),
+                      ],
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 });

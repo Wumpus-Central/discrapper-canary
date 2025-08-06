@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => U }), n(539854), n(388685), n(997841));
+n.d(t, { Z: () => U }), n(539854), n(388685), n(997841);
 var r,
     i = n(348327),
     o = n.n(i),
@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,7 +77,9 @@ let C = [],
 function P() {
     let e = [],
         t = E.Ok.getSetting();
-    null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, f.I)(t));
+    null != t &&
+        ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) &&
+        e.push((0, f.I)(t));
     let n = h.Z.getActivities();
     e.push(...n);
     let r = O.Z.getStream();
@@ -101,10 +103,10 @@ function P() {
                     name: a.name,
                     application_id: null != (T = a.id) ? T : null == (b = v.Z.getGameByName(a.name)) ? void 0 : b.id,
                     metadata: { distributor: null != (A = a.distributor) ? A : void 0 },
-                    timestamps: { start: a.start }
+                    timestamps: { start: a.start },
                 },
-                (0, m.LK)(a)
-            )
+                (0, m.LK)(a),
+            ),
         );
     }
     let N = g.Z.getActivity();
@@ -114,29 +116,29 @@ function P() {
         let t = p.Z.getCustomHangStatus();
         e.push({
             type: I.IIU.HANG_STATUS,
-            name: 'Hang Status',
+            name: "Hang Status",
             state: P,
             details: null == t ? void 0 : t.status,
-            emoji: null == t ? void 0 : t.emoji
+            emoji: null == t ? void 0 : t.emoji,
         });
     }
     o()(C, e) || (C = e);
 }
 function w() {
-    ((R = {}), P());
+    (R = {}), P();
 }
 function D(e) {
     let { socketId: t, pid: n, activity: r } = e;
     if (o()(R[t], [n, r])) return !1;
-    (null != r ? (R[t] = [n, r]) : delete R[t], P());
+    null != r ? (R[t] = [n, r]) : delete R[t], P();
 }
 function L(e) {
     let { socketId: t } = e;
-    (delete R[t], P());
+    delete R[t], P();
 }
 function x(e) {
     let { localActivities: t } = e;
-    ((R = S({}, t)), P());
+    (R = S({}, t)), P();
 }
 function M() {
     let e = {},
@@ -147,14 +149,14 @@ function M() {
             s = (0, d.Ix)(a);
         s !== a ? ((e[r] = [i, N(S({}, o), { flags: s })]), (t = !0)) : (e[r] = [i, o]);
     }
-    return t ? ((R = e), 'APPLICATION_ACTIVITIES_CHANGED') : 'NO_CHANGES';
+    return t ? ((R = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
 }
 function k() {
-    (M(), P());
+    M(), P();
 }
 class j extends (r = l.ZP.Store) {
     initialize() {
-        (this.waitFor(_.ZP, u.ZP, O.Z, y.Z, g.Z, b.Z, v.Z, p.Z), this.syncWith([h.Z, p.Z], () => P()));
+        this.waitFor(_.ZP, u.ZP, O.Z, y.Z, g.Z, b.Z, v.Z, p.Z), this.syncWith([h.Z, p.Z], () => P());
     }
     getActivities() {
         return C;
@@ -179,7 +181,7 @@ class j extends (r = l.ZP.Store) {
         return null;
     }
 }
-T(j, 'displayName', 'LocalActivityStore');
+T(j, "displayName", "LocalActivityStore");
 let U = new j(c.Z, {
     ROBLOX_SUBGAME_UPDATE: P,
     ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: P,
@@ -198,5 +200,5 @@ let U = new j(c.Z, {
     USER_SETTINGS_PROTO_UPDATE: k,
     EMBEDDED_ACTIVITY_CLOSE: P,
     UPDATE_HANG_STATUS: P,
-    RUNNING_GAME_TOGGLE_DETECTION: P
+    RUNNING_GAME_TOGGLE_DETECTION: P,
 });

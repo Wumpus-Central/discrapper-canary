@@ -19,26 +19,26 @@ function p(e) {
         channel: p,
         user: h,
         onClick: (e) => {
-            (e.stopPropagation(),
+            e.stopPropagation(),
                 i.Z.openPrivateChannelAsSidebar({
                     channelId: p.id,
                     baseChannelId: l.uZ,
-                    hasSingleMessageRequest: f
+                    hasSingleMessageRequest: f,
                 }),
                 a.default.track(d.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
                     channel_id: p.id,
-                    other_user_id: h.id
+                    other_user_id: h.id,
                 }),
                 setTimeout(() => {
                     o.S.dispatch(d.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: p.id });
-                }, 0));
+                }, 0);
         },
         children: (e) =>
             (0, r.jsx)(u.C, {
                 active: e,
                 user: h,
-                channel: p
-            })
+                channel: p,
+            }),
     });
 }

@@ -12,7 +12,7 @@ var r = n(255367),
     _ = n(465762);
 let p = () =>
     n
-        .e('43841')
+        .e("43841")
         .then(n.t.bind(n, 737848, 19))
         .then((e) => {
             let { default: t } = e;
@@ -26,31 +26,31 @@ function h(e) {
         g = (0, o.e7)([c.default], () => c.default.getId());
     return n
         ? h && !m && t.ownerId !== g
-            ? (0, r.jsxs)('div', {
+            ? (0, r.jsxs)("div", {
                   className: _.box,
                   children: [
                       (0, r.jsx)(a.Fmz, {
                           importData: p,
                           shouldAnimate: !i,
-                          className: _.animation
+                          className: _.animation,
                       }),
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: _.textContainer,
                           children: [
                               (0, r.jsx)(a.X6q, {
-                                  variant: 'heading-md/semibold',
-                                  children: f.intl.string(f.t.OmBThI)
+                                  variant: "heading-md/semibold",
+                                  children: f.intl.string(f.t.OmBThI),
                               }),
                               (0, r.jsx)(a.Text, {
-                                  variant: 'text-sm/normal',
-                                  color: 'header-secondary',
-                                  children: f.intl.string(f.t.zcs5kp)
-                              })
-                          ]
-                      })
-                  ]
+                                  variant: "text-sm/normal",
+                                  color: "header-secondary",
+                                  children: f.intl.string(f.t.zcs5kp),
+                              }),
+                          ],
+                      }),
+                  ],
               })
             : null
-        : (0, r.jsx)('div', { className: _.divider });
+        : (0, r.jsx)("div", { className: _.divider });
 }
 let m = i.memo(h);

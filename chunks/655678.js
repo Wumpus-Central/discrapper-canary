@@ -18,7 +18,7 @@ function p(e, t) {
         }, [o.id]);
     return n
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: a()(d.CT, _.buttonContainer),
               ref: t,
               children: (0, r.jsx)(u.Z, {
@@ -26,13 +26,13 @@ function p(e, t) {
                   childClassName: a()(_.messageConfettiIcon, { [_.active]: p }),
                   onClick: h,
                   isActive: p,
-                  'aria-label': f.intl.string(f.t.yvN8bG),
-                  'aria-haspopup': 'false',
+                  "aria-label": f.intl.string(f.t.yvN8bG),
+                  "aria-haspopup": "false",
                   children: (0, r.jsx)(s.l22, {
-                      size: 'refresh_sm',
-                      color: 'currentColor'
-                  })
-              })
+                      size: "refresh_sm",
+                      color: "currentColor",
+                  }),
+              }),
           });
 }
 let h = i.memo(i.forwardRef(p));

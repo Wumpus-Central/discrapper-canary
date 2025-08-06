@@ -1,1 +1,1 @@
-e.exports = { clickable: 'clickable_faf576' };
+e.exports = { clickable: "clickable_faf576" };

@@ -11,14 +11,14 @@ let o = (e) => {
         size: l.CgR.DYNAMIC,
         fullscreenOnMobile: !1,
         className: a.modalRoot,
-        parentComponent: 'Modal',
+        parentComponent: "Modal",
         children: (0, r.jsx)(l.hzk, {
-            scrollbarType: 'none',
+            scrollbarType: "none",
             className: a.modalContent,
             children: (0, r.jsx)(i.I, {
                 userImage: n,
-                guildId: o
-            })
-        })
+                guildId: o,
+            }),
+        }),
     });
 };

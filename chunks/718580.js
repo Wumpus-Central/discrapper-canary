@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => S,
-    M: () => T
+    M: () => T,
 });
 var r = n(255367),
     i = n(73800),
@@ -21,7 +21,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,7 +73,8 @@ function b(e, t) {
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,25 +84,31 @@ function y(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let O = {
     mass: 1,
     tension: 300,
     friction: 28,
-    clamp: !0
+    clamp: !0,
 };
 function v(e, t) {
-    return null == e ? null : e.index > t.index ? 'backwards' : e.index < t.index ? 'forwards' : null;
+    return null == e ? null : e.index > t.index ? "backwards" : e.index < t.index ? "forwards" : null;
 }
 function I(e, t) {
     return (n) => {
-        if (0 === n) return 'auto';
-        let r = 'forwards' === t.current,
+        if (0 === n) return "auto";
+        let r = "forwards" === t.current,
             i = n > 0,
             o = !1;
-        return (i && r && 'left' === e && (o = !0), i && !r && 'right' === e && (o = !0), !i && r && 'right' === e && (o = !0), i || r || 'left' !== e || (o = !0), o ? ''.concat(100 * Math.abs(n), '%') : 'auto');
+        return (
+            i && r && "left" === e && (o = !0),
+            i && !r && "right" === e && (o = !0),
+            !i && r && "right" === e && (o = !0),
+            i || r || "left" !== e || (o = !0),
+            o ? "".concat(100 * Math.abs(n), "%") : "auto"
+        );
     };
 }
 function T(e) {
@@ -112,7 +119,7 @@ function S(e) {
         n,
         h,
         { contentDisplay: g, fadeInOut: y = !1 } = e,
-        T = b(e, ['contentDisplay', 'fadeInOut']);
+        T = b(e, ["contentDisplay", "fadeInOut"]);
     let S = {},
         { analyticsLocations: A } = (0, _.ZP)();
     i.Children.forEach(T.children, (e, t) => {
@@ -120,7 +127,7 @@ function S(e) {
             children: e.props.children,
             impressionName: e.props.impressionName,
             impressionProperties: e.props.impressionProperties,
-            index: t
+            index: t,
         };
     });
     let N = T.activeSlide,
@@ -134,7 +141,7 @@ function S(e) {
         type: a.ImpressionTypes.MODAL,
         name: D,
         properties: L,
-        _stackContext: { isSlide: !0 }
+        _stackContext: { isSlide: !0 },
     });
     let { ref: x, width: M = 0, height: k = 0 } = (0, u.ZP)(N),
         j = m({}, O, T.springConfig, P.enabled ? { clamp: !0 } : null),
@@ -142,9 +149,9 @@ function S(e) {
             {
                 width: null != (n = T.width) ? n : M,
                 height: k,
-                config: j
+                config: j,
             },
-            null == C ? 'animate-never' : 'respect-motion-settings'
+            null == C ? "animate-never" : "respect-motion-settings",
         ),
         G = (0, c.Yzy)(
             N,
@@ -157,31 +164,31 @@ function S(e) {
                 onRest: (e, t) => {
                     let { item: n } = t;
                     n === N && null != T.onSlideReady && T.onSlideReady(n);
-                }
+                },
             },
-            null == C ? 'animate-never' : 'respect-motion-settings'
+            null == C ? "animate-never" : "respect-motion-settings",
         ),
         B = (0, p.Z)(R),
         { width: Z, centered: F = !0 } = T,
-        V = s.tq ? '100%' : U.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
-        H = s.tq ? '100%' : U.height.to((e) => Math.round(e)),
+        V = s.tq ? "100%" : U.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
+        H = s.tq ? "100%" : U.height.to((e) => Math.round(e)),
         Y = s.tq
             ? {}
             : F
               ? {
-                    transform: 'translate3d(0, -50%, 0) scale(1.0, 1.0)',
-                    top: '50%'
+                    transform: "translate3d(0, -50%, 0) scale(1.0, 1.0)",
+                    top: "50%",
                 }
-              : { transform: 'scale(1.0, 1.0)' },
-        W = s.tq ? {} : { overflow: null != (h = T.overflow) ? h : 'hidden' };
+              : { transform: "scale(1.0, 1.0)" },
+        W = s.tq ? {} : { overflow: null != (h = T.overflow) ? h : "hidden" };
     return (0, r.jsx)(o.animated.div, {
         style: m(
             {
-                position: 'relative',
+                position: "relative",
                 minWidth: V,
-                minHeight: H
+                minHeight: H,
             },
-            W
+            W,
         ),
         children: G((e, t, n) => {
             let { key: i } = n,
@@ -192,27 +199,27 @@ function S(e) {
                     ref: t === N ? x : null,
                     style: m(
                         {
-                            position: 'absolute',
+                            position: "absolute",
                             display: g,
-                            flexDirection: 'column',
-                            backfaceVisibility: 'hidden',
-                            width: s.tq ? '100%' : Z
+                            flexDirection: "column",
+                            backfaceVisibility: "hidden",
+                            width: s.tq ? "100%" : Z,
                         },
                         Y,
                         P.enabled
                             ? a
                             : m(
                                   {
-                                      left: e.value.to(I('left', B)),
-                                      right: e.value.to(I('right', B))
+                                      left: e.value.to(I("left", B)),
+                                      right: e.value.to(I("right", B)),
                                   },
-                                  y && a
-                              )
+                                  y && a,
+                              ),
                     ),
-                    children: S[t].children
+                    children: S[t].children,
                 },
-                i
+                i,
             );
-        })
+        }),
     });
 }

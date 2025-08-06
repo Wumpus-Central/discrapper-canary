@@ -20,9 +20,9 @@ function g(e) {
         }, [n, p]);
     return g && b && !h
         ? (0, r.jsx)(o.sNh, {
-              id: 'secure-frames-stream-verification',
+              id: "secure-frames-stream-verification",
               label: f.intl.string(f.t.tjbJbW),
-              action: j
+              action: j,
           })
         : null;
 }

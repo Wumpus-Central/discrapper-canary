@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -28,7 +28,7 @@ let x = (e) => {
                 (_(!1),
                 d.ZP.trackWithMetadata(p.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
                     application_id: t.id,
-                    report_id: n
+                    report_id: n,
                 }),
                 null == b)
             )
@@ -39,7 +39,7 @@ let x = (e) => {
                 c.Z.leaveActivity({
                     location: e.location,
                     applicationId: t.id,
-                    showFeedback: !1
+                    showFeedback: !1,
                 });
         }, [t.id, b, f, n]);
     return null == t
@@ -51,6 +51,6 @@ let x = (e) => {
               buttonDisabled: !x,
               buttonColor: x ? a.zx.Colors.RED : a.zx.Colors.WHITE,
               buttonLook: x ? a.zx.Looks.FILLED : a.zx.Looks.LINK,
-              onButtonPress: v
+              onButtonPress: v,
           });
 };

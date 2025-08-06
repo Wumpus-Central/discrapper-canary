@@ -9,11 +9,12 @@ var r = n(992774),
             if (__OVERLAY__);
             else if (o.isPlatformEmbedded) {
                 let e = (0, r.zS)();
-                if (null == e.VoiceConnection || (null == e.setVideoOutputSink && null == e.addVideoOutputSink)) throw Error('voe function missing');
+                if (null == e.VoiceConnection || (null == e.setVideoOutputSink && null == e.addVideoOutputSink))
+                    throw Error("voe function missing");
                 return !0;
             }
         } catch (e) {
-            new i.Z('injectMediaEngine').error('Potentially corrupt installation:', e.message);
+            new i.Z("injectMediaEngine").error("Potentially corrupt installation:", e.message);
         }
         return !1;
     },
@@ -22,5 +23,5 @@ var r = n(992774),
         a.ZP.getDiscordUtils().setProcessPriority(e);
     },
     getVoiceEngine: () => a.ZP.getVoiceEngine(),
-    getVoiceFilters: () => a.ZP.getVoiceFilters()
+    getVoiceFilters: () => a.ZP.getVoiceFilters(),
 });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,38 +11,46 @@ var r = n(255367),
     p = n(820254),
     h = n(388032),
     f = n(545549);
-let g = 'isHideDevBanner',
+let g = "isHideDevBanner",
     m = () => {
         var e;
-        let [t, n] = (0, i.useState)((null == (e = s.K.get(g, 'false')) ? void 0 : e.toString()) === 'true'),
+        let [t, n] = (0, i.useState)((null == (e = s.K.get(g, "false")) ? void 0 : e.toString()) === "true"),
             l = (0, o.e7)([u.C], () => {
                 var e;
-                return (0, d.fD)() ? (null == (e = u.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web) : null;
+                return (0, d.fD)()
+                    ? null == (e = u.C.getCurrentBuildOverride().overrides)
+                        ? void 0
+                        : e.discord_web
+                    : null;
             });
         if (t) return null;
         let m = () => {
-                (s.K.set(g, !0), n(!0));
+                s.K.set(g, !0), n(!0);
             },
             b = () =>
                 (0, r.jsx)(c.P3F, {
                     onClick: m,
                     className: f.closeButton,
-                    'aria-label': h.intl.string(h.t.WAI6xs),
+                    "aria-label": h.intl.string(h.t.WAI6xs),
                     children: (0, r.jsx)(c.Dio, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: f.closeIcon
-                    })
+                        size: "md",
+                        color: "currentColor",
+                        className: f.closeIcon,
+                    }),
                 });
         return null != l
-            ? (0, r.jsxs)('div', {
+            ? (0, r.jsxs)("div", {
                   className: a()(f.devBanner, f.buildOverride),
-                  children: [(0, r.jsx)(p.Z, { className: f.icon }), h.intl.string(h.t.Wj3LW1), (0, r.jsx)(b, {})]
+                  children: [(0, r.jsx)(p.Z, { className: f.icon }), h.intl.string(h.t.Wj3LW1), (0, r.jsx)(b, {})],
               })
-            : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
-              ? (0, r.jsxs)('div', {
+            : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL
+              ? (0, r.jsxs)("div", {
                     className: a()(f.devBanner, f.staging),
-                    children: [(0, r.jsx)(p.Z, { className: f.icon }), h.intl.format(h.t.uyrfYG, { buildNumber: '427754' }), (0, r.jsx)(b, {})]
+                    children: [
+                        (0, r.jsx)(p.Z, { className: f.icon }),
+                        h.intl.format(h.t.uyrfYG, { buildNumber: "427754" }),
+                        (0, r.jsx)(b, {}),
+                    ],
                 })
               : null;
     };

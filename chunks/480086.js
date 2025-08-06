@@ -1,4 +1,4 @@
-(n.d(t, { u: () => g }), n(388685));
+n.d(t, { u: () => g }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(481060),
@@ -11,21 +11,21 @@ var r = n(73800),
     f = n(981631),
     _ = n(388032);
 let p = {
-        '356875762940379136': 'https://worldofwarcraft.blizzard.com',
-        '615752773690064908': 'https://worldofwarcraft.blizzard.com',
-        '424719708785344525': 'https://warcraft3.blizzard.com',
-        '363409793119158272': 'https://starcraft.blizzard.com',
-        '358425800766128128': 'https://starcraft2.blizzard.com',
-        '356875221078245376': 'https://overwatch.blizzard.com',
-        '496572658255790080': 'https://diablo2.blizzard.com',
-        '358425751197974528': 'https://diablo3.blizzard.com',
-        '1113966530531704943': 'https://diablo4.blizzard.com'
+        "356875762940379136": "https://worldofwarcraft.blizzard.com",
+        "615752773690064908": "https://worldofwarcraft.blizzard.com",
+        "424719708785344525": "https://warcraft3.blizzard.com",
+        "363409793119158272": "https://starcraft.blizzard.com",
+        "358425800766128128": "https://starcraft2.blizzard.com",
+        "356875221078245376": "https://overwatch.blizzard.com",
+        "496572658255790080": "https://diablo2.blizzard.com",
+        "358425751197974528": "https://diablo3.blizzard.com",
+        "1113966530531704943": "https://diablo4.blizzard.com",
     },
     h = {
-        356869127241072640: 'https://www.leagueoflegends.com',
-        401518684763586560: 'https://www.leagueoflegends.com',
-        '700136079562375258': 'https://playvalorant.com',
-        '633832498614370323': 'https://playruneterra.com'
+        356869127241072640: "https://www.leagueoflegends.com",
+        401518684763586560: "https://www.leagueoflegends.com",
+        "700136079562375258": "https://playvalorant.com",
+        "633832498614370323": "https://playruneterra.com",
     };
 function m(e) {
     return {
@@ -33,23 +33,23 @@ function m(e) {
         labelKey: e.labelKey,
         icon: e.icon,
         openLink: (t) => {
-            (null == t || t.stopPropagation(),
+            null == t || t.stopPropagation(),
                 l.default.track(f.rMx.GAME_STORE_BUTTON_CLICKED, {
                     application_id: e.applicationId,
                     application_name: e.applicationName,
                     platform: e.platform,
-                    location: e.location
+                    location: e.location,
                 }),
-                window.open(e.url));
-        }
+                window.open(e.url);
+        },
     };
 }
 function g(e, t) {
     var n;
-    let { enabled: l } = d.m.useExperiment({ location: 'useGameStoreLink' }, { autoTrackExposure: !1 }),
+    let { enabled: l } = d.m.useExperiment({ location: "useGameStoreLink" }, { autoTrackExposure: !1 }),
         [g, E] = (0, r.useState)(!1);
     (0, r.useEffect)(() => {
-        c.Z.isProtocolRegistered('steam').then(E);
+        c.Z.isProtocolRegistered("steam").then(E);
     }, []);
     let b = (0, a.q)(e),
         y = (0, i.e7)([s.Z], () => (null != b ? s.Z.getGameByName(b.name) : null)),
@@ -58,52 +58,62 @@ function g(e, t) {
         I = (0, r.useMemo)(() => {
             var e, t, n;
             if (null == O) return null;
-            let r = null != (n = null != (t = null == (e = O.thirdPartySkus.find((e) => e.distributor === f.GQo.STEAM)) ? void 0 : e.id) ? t : null == v ? void 0 : v.steam_id) ? n : null;
+            let r =
+                null !=
+                (n =
+                    null !=
+                    (t = null == (e = O.thirdPartySkus.find((e) => e.distributor === f.GQo.STEAM)) ? void 0 : e.id)
+                        ? t
+                        : null == v
+                          ? void 0
+                          : v.steam_id)
+                    ? n
+                    : null;
             return {
                 app: O,
-                steamSku: r
+                steamSku: r,
             };
         }, [O, v]),
         T = (0, r.useMemo)(() => {
             if (null == I) return null;
             let { app: n, steamSku: r } = I,
                 i = p[n.id];
-            if (null != i && '' !== i)
+            if (null != i && "" !== i)
                 return m({
                     url: i,
-                    platform: 'battlenet',
+                    platform: "battlenet",
                     icon: o.DvD,
-                    labelKey: _.t['ZGax9/'],
+                    labelKey: _.t["ZGax9/"],
                     applicationId: e,
                     applicationName: n.name,
-                    location: t
+                    location: t,
                 });
             let a = h[n.id];
-            return null != a && '' !== a
+            return null != a && "" !== a
                 ? m({
                       url: a,
-                      platform: 'riot',
+                      platform: "riot",
                       icon: o.mVV,
-                      labelKey: _.t['+KXANz'],
+                      labelKey: _.t["+KXANz"],
                       applicationId: e,
                       applicationName: n.name,
-                      location: t
+                      location: t,
                   })
-                : null != r && '' !== r
+                : null != r && "" !== r
                   ? m({
-                        url: g ? 'steam://advertise/'.concat(r) : 'https://store.steampowered.com/app/'.concat(r),
-                        platform: 'steam',
+                        url: g ? "steam://advertise/".concat(r) : "https://store.steampowered.com/app/".concat(r),
+                        platform: "steam",
                         icon: o.xCj,
                         labelKey: _.t.OlubCw,
                         applicationId: e,
                         applicationName: n.name,
-                        location: t
+                        location: t,
                     })
                   : null;
         }, [I, e, g, t]);
     return (
         (0, r.useEffect)(() => {
-            null != T && d.m.trackExposure({ location: 'GameStoreLink' });
+            null != T && d.m.trackExposure({ location: "GameStoreLink" });
         }, [T]),
         l ? T : null
     );

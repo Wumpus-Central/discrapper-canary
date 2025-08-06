@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Ox: () => N,
     QP: () => I,
     ob: () => R,
-    q4: () => C
+    q4: () => C,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(97613),
@@ -27,7 +27,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,10 +80,10 @@ let v = (0, p.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
                 e((e) => {
                     let { fullScreenLayers: n } = e;
                     return {
-                        fullScreenLayers: [...n, t]
+                        fullScreenLayers: [...n, t],
                     };
                 });
-            })
+            }),
     }));
 function T(e) {
     let { item: t, containerRef: n } = e;
@@ -97,20 +97,20 @@ function T(e) {
                     _.Z.disableTemp();
                 }
             ),
-            [t.key]
+            [t.key],
         ),
         (0, r.jsx)(t.LayerComponent, {
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: g.root,
                 ref: n,
                 children: [
-                    (0, r.jsx)('div', { className: g.drag }),
+                    (0, r.jsx)("div", { className: g.drag }),
                     t.render({
                         transitionState: null != t ? t.transitionState : 3,
-                        closeLayer: () => R(t.key)
-                    })
-                ]
-            })
+                        closeLayer: () => R(t.key),
+                    }),
+                ],
+            }),
         })
     );
 }
@@ -120,7 +120,7 @@ let S = {
         enterDone: g.enterDone,
         exit: g.exit,
         exitActive: g.exitActive,
-        exitDone: g.exitDone
+        exitDone: g.exitDone,
     },
     A = {
         enter: g.enterReducedMotion,
@@ -128,7 +128,7 @@ let S = {
         enterDone: g.enterDoneReducedMotion,
         exit: g.exitReducedMotion,
         exitActive: g.exitActiveReducedMotion,
-        exitDone: g.exitDoneReducedMotion
+        exitDone: g.exitDoneReducedMotion,
     };
 function N() {
     let { reducedMotion: e } = i.useContext(f.Sfi),
@@ -136,7 +136,7 @@ function N() {
         n = I((e) => e.fullScreenLayers),
         o = n.map((e) => ({
             item: e,
-            nodeRef: i.createRef()
+            nodeRef: i.createRef(),
         }));
     return (0, r.jsx)(s.Z, {
         children: o.map((e) => {
@@ -149,18 +149,22 @@ function N() {
                     timeout: v,
                     onEntered: () => {
                         (0, u.j)(() => {
-                            I.setState({ fullScreenLayers: n.map((e) => (e.key === i.key ? O(b({}, e), { transitionState: 2 }) : e)) });
+                            I.setState({
+                                fullScreenLayers: n.map((e) =>
+                                    e.key === i.key ? O(b({}, e), { transitionState: 2 }) : e,
+                                ),
+                            });
                         });
                     },
                     unmountOnExit: !0,
                     children: (0, r.jsx)(T, {
                         containerRef: o,
-                        item: i
-                    })
+                        item: i,
+                    }),
                 },
-                i.key
+                i.key,
             );
-        })
+        }),
     });
 }
 function C(e) {
@@ -176,9 +180,9 @@ function C(e) {
                         key: i,
                         transitionState: 1,
                         LayerComponent: null != r ? r : h.ZP,
-                        render: e
-                    }
-                ]
+                        render: e,
+                    },
+                ],
             }));
         }),
         i
@@ -192,11 +196,11 @@ function R(e) {
 function P(e) {
     return {
         POP_LAYER: {
-            binds: ['esc'],
+            binds: ["esc"],
             comboKeysBindGlobal: !0,
             action() {
                 R(e);
-            }
-        }
+            },
+        },
     };
 }

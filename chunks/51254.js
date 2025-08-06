@@ -7,14 +7,14 @@ n.d(t, {
     MS: () => o,
     h5: () => u,
     lK: () => c,
-    uj: () => r
+    uj: () => r,
 });
-var o = '-ms-',
-    r = '-moz-',
-    i = '-webkit-',
-    a = 'comm',
-    s = 'rule',
-    u = 'decl',
-    l = '@import',
-    c = '@keyframes',
-    d = '@layer';
+var o = "-ms-",
+    r = "-moz-",
+    i = "-webkit-",
+    a = "comm",
+    s = "rule",
+    u = "decl",
+    l = "@import",
+    c = "@keyframes",
+    d = "@layer";

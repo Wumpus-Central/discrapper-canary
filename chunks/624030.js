@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -17,7 +17,7 @@ function a(e, t, n) {
 }
 let s = {};
 function l(e) {
-    return ((s[e.key] = e.value), !0);
+    return (s[e.key] = e.value), !0;
 }
 class c extends (r = i.ZP.PersistedStore) {
     initialize(e) {
@@ -30,5 +30,5 @@ class c extends (r = i.ZP.PersistedStore) {
         return !0 !== s[e];
     }
 }
-(a(c, 'displayName', 'ActivityInviteEducationStore'), a(c, 'persistKey', 'ActivityInviteEducationExperimentStore'));
+a(c, "displayName", "ActivityInviteEducationStore"), a(c, "persistKey", "ActivityInviteEducationExperimentStore");
 let u = new c(o.Z, { ACTIVITY_INVITE_EDUCATION_DISMISS: l });

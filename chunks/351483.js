@@ -9,7 +9,7 @@ var i = n(120356),
 let c = n(978538);
 function u(e) {
     let { width: t, noArt: n = !1, selected: i = !1 } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()(l.content, l.streamHidden),
         children: (0, r.jsx)(a.Z, {
             className: l.streamHiddenEmptyState,
@@ -18,7 +18,7 @@ function u(e) {
             selected: i,
             size: (0, a.L)(t),
             header: s.intl.string(s.t.wxbmeH),
-            description: s.intl.string(s.t.odF9WF)
-        })
+            description: s.intl.string(s.t.odF9WF),
+        }),
     });
 }

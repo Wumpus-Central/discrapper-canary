@@ -22,13 +22,13 @@ let g = l.EFr.SIZE_152,
             {
                 avatarDecorationSrc: c,
                 avatarPlaceholderSrc: u,
-                eventHandlers: d
+                eventHandlers: d,
             } = (0, o.Z)({
                 user: a,
                 avatarDecorationOverride: r,
-                size: y
+                size: y,
             });
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: m.avatarDecorationPreview,
             children: (0, i.jsx)(
                 l.qEK,
@@ -36,33 +36,33 @@ let g = l.EFr.SIZE_152,
                     for (var e = 1; e < arguments.length; e++) {
                         var n = null != arguments[e] ? arguments[e] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (t) {
                                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (e) {
                                 var i;
-                                ((i = n[e]),
+                                (i = n[e]),
                                     e in t
                                         ? Object.defineProperty(t, e, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (t[e] = i));
-                            }));
+                                        : (t[e] = i);
+                            });
                     }
                     return t;
                 })({}, d)),
                 (n = n =
                     {
-                        'aria-label': r.label,
+                        "aria-label": r.label,
                         src: u,
                         avatarDecoration: c,
-                        size: g
+                        size: g,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -76,31 +76,31 @@ let g = l.EFr.SIZE_152,
                       })(Object(n)).forEach(function (t) {
                           Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                       }),
-                e)
-            )
+                e),
+            ),
         });
     },
     b = (t) => {
         let { item: e } = t;
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: m.profileEffectPreview,
             children: (0, i.jsx)(d.Z, {
                 isHovering: !0,
-                profileEffectId: null == e ? void 0 : e.id
-            })
+                profileEffectId: null == e ? void 0 : e.id,
+            }),
         });
     },
     j = (t) => {
         let { item: e } = t;
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: m.nameplatePreview,
             children: (0, i.jsx)(h.Z, {
                 nameplate: e,
                 className: m.nameplate,
-                nameplatePreviewSize: 'xlarge',
+                nameplatePreviewSize: "xlarge",
                 isHighlighted: !0,
-                showPlaceholderUser: !0
-            })
+                showPlaceholderUser: !0,
+            }),
         });
     },
     S = (t) => {
@@ -120,7 +120,7 @@ let g = l.EFr.SIZE_152,
                           defaultAnimationState: c.SR.ACTION,
                           idleAnimationState: c.SR.LOOP,
                           className: m.giftAnimation,
-                          giftStyle: e.giftStyle
+                          giftStyle: e.giftStyle,
                       })
                     : null;
         }

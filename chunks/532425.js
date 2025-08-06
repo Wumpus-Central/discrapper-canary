@@ -9,39 +9,39 @@ var i = n(120356),
     c = n(388032),
     u = n(159529);
 let d = (e) => {
-    let { hasContent: t, onClear: n, className: i, isLoading: d, size: f = 'sm' } = e;
+    let { hasContent: t, onClear: n, className: i, isLoading: d, size: f = "sm" } = e;
     return (0, r.jsx)(a.P, {
         className: o()(i, u.iconLayout, { [u.pointer]: t }),
-        'data-size': f,
+        "data-size": f,
         onClick: (e) => {
-            (e.stopPropagation(), null != n && n(e));
+            e.stopPropagation(), null != n && n(e);
         },
         tabIndex: t ? 0 : -1,
-        'aria-hidden': !t,
+        "aria-hidden": !t,
         onMouseDown: (e) => {
-            (e.preventDefault(), e.stopPropagation());
+            e.preventDefault(), e.stopPropagation();
         },
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: u.iconContainer,
             children: d
                 ? (0, r.jsx)(s.$, {
                       type: s.$.Type.SPINNING_CIRCLE,
-                      className: o()(u.icon, u.visible)
+                      className: o()(u.icon, u.visible),
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l._Ve, {
-                              color: 'currentColor',
+                              color: "currentColor",
                               className: o()(u.icon, { [u.visible]: !t }),
-                              'aria-label': c.intl.string(c.t['5h0QOD'])
+                              "aria-label": c.intl.string(c.t["5h0QOD"]),
                           }),
                           (0, r.jsx)(l.Dio, {
-                              color: 'currentColor',
+                              color: "currentColor",
                               className: o()(u.clear, { [u.visible]: t }),
-                              'aria-label': c.intl.string(c.t.VkKicX)
-                          })
-                      ]
-                  })
-        })
+                              "aria-label": c.intl.string(c.t.VkKicX),
+                          }),
+                      ],
+                  }),
+        }),
     });
 };

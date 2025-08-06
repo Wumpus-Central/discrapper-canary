@@ -7,11 +7,11 @@ function o() {
     let {
         balance: e,
         isFetching: t,
-        error: r
+        error: r,
     } = (0, a.cj)([i.Z], () => ({
         balance: i.Z.balance,
         isFetching: i.Z.isFetchingBalance,
-        error: i.Z.fetchBalanceError
+        error: i.Z.fetchBalanceError,
     }));
     return (
         (0, n.useEffect)(() => {
@@ -20,7 +20,7 @@ function o() {
         {
             balance: e,
             isFetching: t,
-            error: r
+            error: r,
         }
     );
 }

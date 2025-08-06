@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     $s: () => C,
     A0: () => R,
     Sg: () => S,
     ow: () => y,
     rQ: () => A,
     t$: () => N,
-    tM: () => v
+    tM: () => v,
 }),
-    n(388685));
+    n(388685);
 var r = n(544891),
     i = n(570140),
     o = n(904245),
@@ -30,7 +30,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -40,40 +40,50 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function y(e) {
-    return null == e || '' === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 900000;
+    return null == e || "" === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 900000;
 }
 function O(e) {
-    return null == e || '' === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 3000;
+    return null == e || "" === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 3000;
 }
 let v = async (e) => {
-    let { componentType: t, messageId: n, messageFlags: i, customId: o, componentId: s, applicationId: l, channelId: p, guildId: h, localState: g } = e,
+    let {
+            componentType: t,
+            messageId: n,
+            messageFlags: i,
+            customId: o,
+            componentId: s,
+            applicationId: l,
+            channelId: p,
+            guildId: h,
+            localState: g,
+        } = e,
         E = d.default.fromTimestamp(Date.now());
     if (!_.ZP.canQueueInteraction(n, E)) return;
-    (await c.Z.unarchiveThreadIfNecessary(p),
+    await c.Z.unarchiveThreadIfNecessary(p),
         (0, f.kz)(E, {
             messageId: n,
             data: {
                 interactionType: a.B8.MESSAGE_COMPONENT,
                 applicationId: l,
                 customId: o,
-                componentId: s
+                componentId: s,
             },
-            onFailure: (e, t) => T(p, e, t)
+            onFailure: (e, t) => T(p, e, t),
         }),
-        null != g && (0, f.B0)(n, E, g, s));
+        null != g && (0, f.B0)(n, E, g, s);
     let y = {
         type: a.B8.MESSAGE_COMPONENT,
         nonce: E,
@@ -86,21 +96,21 @@ let v = async (e) => {
         data: b(
             {
                 component_type: t,
-                custom_id: o
+                custom_id: o,
             },
-            I(g)
-        )
+            I(g),
+        ),
     };
     await r.tn.post(
         {
             url: m.ANM.INTERACTIONS,
             body: y,
             timeout: 3000,
-            rejectWithError: !1
+            rejectWithError: !1,
         },
         (e) => {
             S(E, e, l, p, h);
-        }
+        },
     );
 };
 function I(e) {
@@ -109,7 +119,7 @@ function I(e) {
     let t = e.selectedOptions.map((e) => e.value);
     return {
         type: e.type,
-        values: t
+        values: t,
     };
 }
 let T = (e, t, n) => {
@@ -119,18 +129,20 @@ let T = (e, t, n) => {
         if (!t.ok) {
             if (!t.hasErr)
                 if (t.status >= 400 && t.status < 500 && t.body)
-                    if (t.body.code !== m.evJ.INVALID_FORM_BODY || !t.body.errors) return void (0, f.yr)(e, t.body.code, t.body.message, t.status);
+                    if (t.body.code !== m.evJ.INVALID_FORM_BODY || !t.body.errors)
+                        return void (0, f.yr)(e, t.body.code, t.body.message, t.status);
                     else {
                         let a = (0, h.e)(t.body.errors);
-                        (null != a &&
-                            ('INTERACTION_APPLICATION_COMMAND_INVALID_VERSION' === a.code || 'INTERACTION_APPLICATION_COMMAND_INVALID' === a.code) &&
+                        null != a &&
+                            ("INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" === a.code ||
+                                "INTERACTION_APPLICATION_COMMAND_INVALID" === a.code) &&
                             i.Z.dispatch({
-                                type: 'APPLICATION_COMMAND_EXECUTE_BAD_VERSION',
+                                type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION",
                                 applicationId: n,
                                 channelId: r,
-                                guildId: null != o ? o : null
+                                guildId: null != o ? o : null,
                             }),
-                            (0, f.yr)(e, void 0, null == a ? void 0 : a.message));
+                            (0, f.yr)(e, void 0, null == a ? void 0 : a.message);
                         return;
                     }
                 else {
@@ -142,7 +154,14 @@ let T = (e, t, n) => {
         }
     };
 var A = (function (e) {
-    return ((e[(e.SENDING = 0)] = 'SENDING'), (e[(e.CREATED = 1)] = 'CREATED'), (e[(e.FAILED = 2)] = 'FAILED'), (e[(e.TIMED_OUT = 3)] = 'TIMED_OUT'), (e[(e.EPHEMERAL_SUCCESS = 4)] = 'EPHEMERAL_SUCCESS'), e);
+    return (
+        (e[(e.SENDING = 0)] = "SENDING"),
+        (e[(e.CREATED = 1)] = "CREATED"),
+        (e[(e.FAILED = 2)] = "FAILED"),
+        (e[(e.TIMED_OUT = 3)] = "TIMED_OUT"),
+        (e[(e.EPHEMERAL_SUCCESS = 4)] = "EPHEMERAL_SUCCESS"),
+        e
+    );
 })({});
 let N = (e, t) => {
     let n = null == t ? void 0 : t.state,
@@ -159,7 +178,12 @@ let N = (e, t) => {
 };
 function C(e) {
     let t = e.options;
-    for (; (null == t ? void 0 : t.length) === 1 && (t[0].type === a.jw.SUB_COMMAND_GROUP || t[0].type === a.jw.SUB_COMMAND); ) t = t[0].options;
+    for (
+        ;
+        (null == t ? void 0 : t.length) === 1 &&
+        (t[0].type === a.jw.SUB_COMMAND_GROUP || t[0].type === a.jw.SUB_COMMAND);
+    )
+        t = t[0].options;
     for (let e of null != t ? t : []) if (e.type === a.jw.ATTACHMENT) return !1;
     return !0;
 }
@@ -168,7 +192,7 @@ function R(e, t) {
         case l.Z.ReasonCodes.TIMEOUT:
             let n = s.Z.getApplication(t);
             if (null != n) return g.intl.formatToPlainString(g.t.u2D2Ul, { applicationName: n.name });
-            return g.intl.string(g.t['vGU8+v']);
+            return g.intl.string(g.t["vGU8+v"]);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_NOT_IN_EXPERIMENT:
             return g.intl.string(g.t.Gyzcra);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_VERIFICATION_LEVEL:
@@ -180,7 +204,7 @@ function R(e, t) {
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CHANNEL_NO_AFK:
             return g.intl.string(g.t.j29zCg);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_AGE_GATE:
-            return g.intl.string(g.t['4WuFRE']);
+            return g.intl.string(g.t["4WuFRE"]);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_DEV_PREVIEW_GUILD_SIZE:
             return g.intl.string(g.t.RvkXdX);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CONFIGURATION_PLATFORM_NOT_SUPPORTED:

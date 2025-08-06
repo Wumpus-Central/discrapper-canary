@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(388685));
+n.d(t, { Z: () => H }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -63,7 +63,7 @@ let H = () => {
         ec = (0, j.Vi)(),
         ed = null != ec && ec,
         { analyticsLocations: eu } = (0, g.ZP)(p.Z.PREMIUM_MARKETING),
-        em = (0, E.Z)({ location: 'PremiumMarketing' }),
+        em = (0, E.Z)({ location: "PremiumMarketing" }),
         ep = !q && !$ && (em || !J);
     r.useEffect(() => {
         er(!0);
@@ -72,12 +72,12 @@ let H = () => {
         { navBarSections: eh, activeSectionId: ef } = (0, w.O)(eg),
         { home: eb, whatsNew: ex, bestOfNitro: e_, plans: ej, compare: eE } = eh,
         eC = em ? V : G,
-        eO = (0, i.jsxs)('div', {
+        eO = (0, i.jsxs)("div", {
             className: a()(eC.container, eC.responsiveContainer, {
                 [eC.containerBackground]: em || K,
-                [V.fadeInFromTop]: !W && em
+                [V.fadeInFromTop]: !W && em,
             }),
-            'data-cy': 'tier-0-marketing-page',
+            "data-cy": "tier-0-marketing-page",
             children: [
                 em &&
                     (0, i.jsxs)(i.Fragment, {
@@ -85,25 +85,25 @@ let H = () => {
                             (0, i.jsx)(T.Z, { className: V.topOfPageGradient }),
                             (0, i.jsx)(L.Z, {
                                 navBarSections: eh,
-                                activeSectionId: ef
-                            })
-                        ]
+                                activeSectionId: ef,
+                            }),
+                        ],
                     }),
                 !em &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)('div', { className: G.heroHeaderSideGradient }),
-                            (0, i.jsx)('img', {
+                            (0, i.jsx)("div", { className: G.heroHeaderSideGradient }),
+                            (0, i.jsx)("img", {
                                 src: F,
                                 className: G.heroHeaderBackgroundStars,
-                                alt: ''
-                            })
-                        ]
+                                alt: "",
+                            }),
+                        ],
                     }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: eC.sectionsContainer,
                     children: [
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: eC.heroHeadingContainer,
                             ref: eb.ref,
                             children: (0, i.jsx)(o.$, {
@@ -115,41 +115,41 @@ let H = () => {
                                     ? (0, i.jsx)(A.Z, {
                                           ref: s,
                                           subscriptionTier: eo,
-                                          isEligibleForBogoPromotion: ec
+                                          isEligibleForBogoPromotion: ec,
                                       })
                                     : (0, i.jsx)(Z.Z, {
                                           ref: s,
                                           subscriptionTier: eo,
                                           isDarkMode: K,
                                           isEligibleForBogoPromotion: ec,
-                                          videoRef: t
-                                      })
-                            })
+                                          videoRef: t,
+                                      }),
+                            }),
                         }),
                         ec &&
-                            (0, i.jsx)('div', {
+                            (0, i.jsx)("div", {
                                 className: eC.promoBannerContainer,
-                                children: (0, i.jsx)(C.Z, { variant: C.C.APPLICATION_NITRO_HOME })
+                                children: (0, i.jsx)(C.Z, { variant: C.C.APPLICATION_NITRO_HOME }),
                             }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: eC.whatsNewSectionContainer,
                             ref: ex.ref,
                             children: (0, i.jsx)(S.g, {
                                 shouldLoadVideo: ei,
                                 isReducedMotion: W,
-                                enablePremiumBrandRefreshDesign: em
-                            })
+                                enablePremiumBrandRefreshDesign: em,
+                            }),
                         }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: eC.bestOfNitroSectionContainer,
                             ref: e_.ref,
                             children: (0, i.jsx)(S.G_, {
                                 shouldLoadVideo: ei,
                                 isReducedMotion: W,
-                                enablePremiumBrandRefreshDesign: em
-                            })
+                                enablePremiumBrandRefreshDesign: em,
+                            }),
                         }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: eC.premiumTierCardsContainer,
                             ref: ej.ref,
                             children: (0, i.jsx)(o.$, {
@@ -161,33 +161,36 @@ let H = () => {
                                     ? (0, i.jsx)(O.rz, { innerRef: n })
                                     : (0, i.jsx)(v.Ub, {
                                           innerRef: n,
-                                          hasActiveTier2PremiumPromotion: ed
-                                      })
-                            })
+                                          hasActiveTier2PremiumPromotion: ed,
+                                      }),
+                            }),
                         }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: eC.planComparisonTableContainer,
                             ref: eE.ref,
-                            children: em ? (0, i.jsx)(R.Z, {}) : (0, i.jsx)(N.Z, {})
-                        })
-                    ]
+                            children: em ? (0, i.jsx)(R.Z, {}) : (0, i.jsx)(N.Z, {}),
+                        }),
+                    ],
                 }),
                 !em &&
                     (0, i.jsx)(I.Z, {
                         isVisible: ep && ei,
                         subscriptionTier: eo,
                         isApplicationHome: !0,
-                        isEligibleForBogoPromotion: ec
+                        isEligibleForBogoPromotion: ec,
                     }),
                 (0, i.jsx)(o.$, {
                     innerRef: H,
                     onChange: (e) => {
-                        e && !et && (x.default.track(B.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }), en(!0));
+                        e &&
+                            !et &&
+                            (x.default.track(B.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }),
+                            en(!0));
                     },
-                    children: (0, i.jsx)('div', {
+                    children: (0, i.jsx)("div", {
                         ref: H,
-                        className: eC.bottomOfPageVisibilitySensor
-                    })
+                        className: eC.bottomOfPageVisibilitySensor,
+                    }),
                 }),
                 (0, i.jsx)(o.$, {
                     innerRef: z,
@@ -201,8 +204,8 @@ let H = () => {
                               isFooterVisible: J,
                               isDarkMode: K,
                               isReducedMotion: W,
-                              subscriptionTier: eo
-                          })
+                              subscriptionTier: eo,
+                          }),
                 }),
                 em &&
                     (0, i.jsxs)(i.Fragment, {
@@ -210,12 +213,12 @@ let H = () => {
                             (0, i.jsx)(P.Z, {
                                 isVisible: ep && ei,
                                 subscriptionTier: eo,
-                                isEligibleForBogoPromotion: ec
+                                isEligibleForBogoPromotion: ec,
                             }),
-                            (0, i.jsx)(T.Z, { className: V.bottomOfPageGradient })
-                        ]
-                    })
-            ]
+                            (0, i.jsx)(T.Z, { className: V.bottomOfPageGradient }),
+                        ],
+                    }),
+            ],
         });
     return (0, i.jsx)(d.f6W, {
         theme: em ? U.BR.DARKER : Y,
@@ -223,7 +226,7 @@ let H = () => {
             (0, i.jsx)(d.yWw, {
                 className: a()(eC.scroller, t),
                 ref: e,
-                children: eO
-            })
+                children: eO,
+            }),
     });
 };

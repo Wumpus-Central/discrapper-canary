@@ -28,47 +28,54 @@ function f(e) {
                 (await u.Z.updateMFALevel({
                     guildId: n.id,
                     level: e ? g.BpS.ELEVATED : g.BpS.NONE,
-                    isEnabled: !e
+                    isEnabled: !e,
                 }));
         }, 1000);
     if (!x) return null;
-    O || (t = j ? p.intl.format(p.t.nFwNyc, { settingsHook: () => s.Z.open(g.oAB.ACCOUNT) }) : p.intl.string(p.t['9Ghu4+']));
+    O ||
+        (t = j
+            ? p.intl.format(p.t.nFwNyc, { settingsHook: () => s.Z.open(g.oAB.ACCOUNT) })
+            : p.intl.string(p.t["9Ghu4+"]));
     let C = n.features.has(g.oNc.DISCOVERABLE);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: h.simpleItemWrapper,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.itemContent,
                 children: [
                     (0, r.jsx)(a.X6q, {
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
-                        children: p.intl.string(p.t.lbBfER)
+                        variant: "text-md/semibold",
+                        color: "header-primary",
+                        children: p.intl.string(p.t.lbBfER),
                     }),
                     (0, r.jsxs)(a.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'header-secondary',
-                        children: [p.intl.string(p.t['a/93Jy']), ' ', t]
-                    })
-                ]
+                        variant: "text-sm/medium",
+                        color: "header-secondary",
+                        children: [p.intl.string(p.t["a/93Jy"]), " ", t],
+                    }),
+                ],
             }),
             !O || (_ && C)
                 ? (0, r.jsx)(a.ua7, {
-                      text: C ? p.intl.string(p.t['KG1V/P']) : j ? p.intl.string(p.t.NmsheX) : p.intl.string(p.t.LieBtb),
+                      text: C
+                          ? p.intl.string(p.t["KG1V/P"])
+                          : j
+                            ? p.intl.string(p.t.NmsheX)
+                            : p.intl.string(p.t.LieBtb),
                       children: (e) =>
                           (0, r.jsx)(m.Z, {
                               checked: _,
                               disabled: !0,
                               onChange: y,
                               className: h.bringToFront,
-                              tooltipProps: e
-                          })
+                              tooltipProps: e,
+                          }),
                   })
                 : (0, r.jsx)(m.Z, {
                       checked: _,
                       onChange: y,
-                      className: h.bringToFront
-                  })
-        ]
+                      className: h.bringToFront,
+                  }),
+        ],
     });
 }

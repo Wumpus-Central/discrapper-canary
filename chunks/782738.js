@@ -6,5 +6,5 @@ var r = n(255367),
     o = n(66418);
 let s = i.memo(function (e) {
     let { className: t } = e;
-    return (0, r.jsx)('div', { className: a()(t, o.cardPlaceholder) });
+    return (0, r.jsx)("div", { className: a()(t, o.cardPlaceholder) });
 });

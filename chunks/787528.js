@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => I,
-    u: () => v
+    u: () => v,
 });
 var r = n(586502),
     i = n(474936),
@@ -23,36 +23,36 @@ var r = n(586502),
 let O = {
         [i.VU.PREMIUM_TENURE_1_MONTH]: {
             standard: o,
-            ambient: _.Z
+            ambient: _.Z,
         },
         [i.VU.PREMIUM_TENURE_3_MONTH]: {
             standard: f,
-            ambient: p.Z
+            ambient: p.Z,
         },
         [i.VU.PREMIUM_TENURE_6_MONTH]: {
             standard: l,
-            ambient: h.Z
+            ambient: h.Z,
         },
         [i.VU.PREMIUM_TENURE_12_MONTH]: {
             standard: u,
-            ambient: m.Z
+            ambient: m.Z,
         },
         [i.VU.PREMIUM_TENURE_24_MONTH]: {
             standard: a,
-            ambient: g.Z
+            ambient: g.Z,
         },
         [i.VU.PREMIUM_TENURE_36_MONTH]: {
             standard: s,
-            ambient: E.Z
+            ambient: E.Z,
         },
         [i.VU.PREMIUM_TENURE_60_MONTH]: {
             standard: d,
-            ambient: b.Z
+            ambient: b.Z,
         },
         [i.VU.PREMIUM_TENURE_72_MONTH]: {
             standard: c,
-            ambient: y.Z
-        }
+            ambient: y.Z,
+        },
     },
     v = (e) => {
         let t = (0, r.Z)();

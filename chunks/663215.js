@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     FS: () => N,
-    ZP: () => A
+    ZP: () => A,
 }),
     n(642613),
     n(388685),
-    n(539854));
+    n(539854);
 var r = n(73800),
     i = n(442837),
     o = n(357156),
@@ -28,7 +28,7 @@ function O(e) {
         n = e.map((e, t) => ({
             type: g.vB.SOUND,
             sound: e,
-            index: t
+            index: t,
         }));
     return t ? n.sort((e, t) => f.default.compare(e.sound.soundId, t.sound.soundId)) : n;
 }
@@ -49,7 +49,7 @@ function v(e) {
         t.push({
             key: o,
             categoryInfo: { type: o },
-            items: u
+            items: u,
         });
 }
 function I(e) {
@@ -63,10 +63,10 @@ function I(e) {
                 categoryInfo: {
                     type: g.bg.GUILD,
                     guild: e,
-                    isNitroLocked: !o
+                    isNitroLocked: !o,
                 },
                 key: e.id,
-                items: n
+                items: n,
             });
     }
 }
@@ -77,22 +77,22 @@ function T(e, t, n) {
         l = O(s),
         c = s.length < (0, u.nL)(t) && i,
         d = 0 === l.length;
-    ((c || d) &&
+    (c || d) &&
         !a &&
         l.push({
             type: g.vB.ADD_SOUND,
-            guild: t
+            guild: t,
         }),
         (a && d) ||
             e.push({
                 categoryInfo: {
                     type: g.bg.GUILD,
                     guild: t,
-                    isNitroLocked: !1
+                    isNitroLocked: !1,
                 },
                 key: t.id,
-                items: l
-            }));
+                items: l,
+            });
 }
 function S(e, t) {
     var n;
@@ -100,7 +100,7 @@ function S(e, t) {
     e.push({
         key: g.bg.DEFAULTS,
         categoryInfo: { type: g.bg.DEFAULTS },
-        items: O(r)
+        items: O(r),
     });
 }
 function A(e) {
@@ -122,21 +122,17 @@ function A(e) {
         }),
         R = d.ZP.canUseSoundboardEverywhere(a),
         P = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        w = (0, i.e7)(
-            [l.Z],
-            () => {
-                let { canCreateExpressions: e } = (0, o.Gw)(P);
-                return e;
-            },
-            [P]
-        ),
+        w = (0, i.e7)([l.Z], () => {
+            let { canCreateExpressions: e } = (0, o.Gw)(P);
+            return e;
+        }, [P]),
         { canSeeRecentlyHeard: D, canSeeFrequentlyPlayed: L } = (0, _.k)({
-            location: 'soundboard-useSoundGrid',
-            autoTrackExposure: !0
+            location: "soundboard-useSoundGrid",
+            autoTrackExposure: !0,
         }),
         x = C(),
         M = (0, i.Wu)([h.Z], () => h.Z.recentlyHeardSoundIds),
-        k = p.C.useExperiment({ location: 'useSoundGrid' });
+        k = p.C.useExperiment({ location: "useSoundGrid" });
     return r.useMemo(() => {
         let e = 0,
             r = 0,
@@ -151,17 +147,17 @@ function A(e) {
                     soundCounts: {
                         favoriteSoundCount: 0,
                         unlockedCustomSoundCount: 0,
-                        lockedCustomSoundCount: 0
-                    }
+                        lockedCustomSoundCount: 0,
+                    },
                 }
             );
-        (v({
+        v({
             sections: i,
             guildIds: A,
             allSounds: f,
             potentialSoundIdsForSection: Array.from(b),
             sectionType: g.bg.FAVORITES,
-            sortById: !0
+            sortById: !0,
         }),
             D &&
                 v({
@@ -170,7 +166,7 @@ function A(e) {
                     allSounds: f,
                     potentialSoundIdsForSection: M,
                     sectionType: g.bg.RECENTLY_HEARD,
-                    sortById: !1
+                    sortById: !1,
                 }),
             L &&
                 v({
@@ -179,14 +175,14 @@ function A(e) {
                     allSounds: f,
                     potentialSoundIdsForSection: x.map((e) => e.soundId),
                     sectionType: g.bg.FREQUENTLY_USED,
-                    sortById: !1
+                    sortById: !1,
                 }),
             void 0 !== P &&
                 T(i, P, {
                     currentGuildHasAddPermissions: w,
                     allSounds: f,
-                    filterOutEmptyCurrentGuild: t
-                }));
+                    filterOutEmptyCurrentGuild: t,
+                });
         let o = R || k.moveDefaultToBottom;
         return (
             o || S(i, f),
@@ -195,11 +191,12 @@ function A(e) {
                 guilds: N,
                 currentGuildId: null == P ? void 0 : P.id,
                 allSounds: f,
-                hasNitro: u
+                hasNitro: u,
             }),
             o && S(i, f),
             i.forEach((t) => {
-                t.categoryInfo.type === g.bg.GUILD && (t.categoryInfo.isNitroLocked ? (r += t.items.length) : (e += t.items.length));
+                t.categoryInfo.type === g.bg.GUILD &&
+                    (t.categoryInfo.isNitroLocked ? (r += t.items.length) : (e += t.items.length));
             }),
             {
                 categories: i,
@@ -208,8 +205,8 @@ function A(e) {
                 soundCounts: {
                     favoriteSoundCount: b.size,
                     unlockedCustomSoundCount: e,
-                    lockedCustomSoundCount: r
-                }
+                    lockedCustomSoundCount: r,
+                },
             }
         );
     }, [A, f, b, M, x, L, D, P, w, t, R, N, n, O, u, k.moveDefaultToBottom]);
@@ -222,11 +219,11 @@ function N(e, t, n) {
                       {
                           key: g.bg.SEARCH,
                           categoryInfo: { type: g.bg.SEARCH },
-                          items: O(t, !1)
-                      }
+                          items: O(t, !1),
+                      },
                   ]
                 : e,
-        [e, n.length, t]
+        [e, n.length, t],
     );
 }
 function C() {

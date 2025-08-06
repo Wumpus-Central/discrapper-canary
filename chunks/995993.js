@@ -24,7 +24,9 @@ function E(e) {
     let { guild: t, selected: E } = e,
         S = (0, h.Z)(t),
         x = (0, u.Nj)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        I = (0, l.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
+        I = (0, l.Wu)([p.Z], () =>
+            Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e)),
+        ),
         P = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, C.W.GUILD_ONBOARDING_QUESTION)),
         N = I.length > b.Cb,
         w = (0, l.e7)([d.Z, g.ZP], () => {
@@ -40,7 +42,7 @@ function E(e) {
         T = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
-                    let { default: e } = await n.e('8926').then(n.bind(n, 156673));
+                    let { default: e } = await n.e("8926").then(n.bind(n, 156673));
                     return (n) => {
                         var i, l;
                         return (0, r.jsx)(
@@ -49,24 +51,24 @@ function E(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })({}, n)),
@@ -83,12 +85,12 @@ function E(e) {
                                   })(Object(l)).forEach(function (e) {
                                       Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
-                            i)
+                            i),
                         );
                     };
                 });
             },
-            [t]
+            [t],
         ),
         A = null;
     return (
@@ -98,21 +100,21 @@ function E(e) {
             (A = (0, r.jsx)(a.IGR, {
                 color: s.Z.colors.BADGE_BRAND_BG.css,
                 text: v.intl.string(v.t.y2b7CA),
-                className: j.newChannel
+                className: j.newChannel,
             })),
         (0, r.jsx)(O.m, {
-            id: 'channels-'.concat(t.id),
+            id: "channels-".concat(t.id),
             renderIcon: (e) =>
                 (0, r.jsx)(a.H$4, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: e
+                    size: "md",
+                    color: "currentColor",
+                    className: e,
                 }),
             text: S ? v.intl.string(v.t.h9mGOD) : v.intl.string(v.t.et6wam),
             selected: E,
             onClick: Z,
             onContextMenu: T,
-            trailing: A
+            trailing: A,
         })
     );
 }

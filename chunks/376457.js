@@ -2,7 +2,7 @@ a.d(e, { s: () => n });
 var r = a(151122),
     _ = a(163162);
 let n = (0, r._I)(() => ({
-    name: 'HttpContext',
+    name: "HttpContext",
     preprocessEvent(t) {
         if (!_.m9.navigator && !_.m9.location && !_.m9.document) return;
         let e = (t.request && t.request.url) || (_.m9.location && _.m9.location.href),
@@ -11,13 +11,13 @@ let n = (0, r._I)(() => ({
             n = {
                 ...(t.request && t.request.headers),
                 ...(a && { Referer: a }),
-                ...(r && { 'User-Agent': r })
+                ...(r && { "User-Agent": r }),
             },
             o = {
                 ...t.request,
                 ...(e && { url: e }),
-                headers: n
+                headers: n,
             };
         t.request = o;
-    }
+    },
 }));

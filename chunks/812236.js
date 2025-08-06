@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     Fs: () => p,
     Xu: () => _,
     ZP: () => f,
     ms: () => m,
-    sV: () => u
+    sV: () => u,
 }),
-    n(415506));
+    n(415506);
 var r = n(73800),
     i = n(373793),
     o = n(911969),
@@ -13,7 +13,7 @@ var r = n(73800),
     s = n(963456),
     l = n(213459),
     c = n(367790);
-let u = 'no primary app command for application',
+let u = "no primary app command for application",
     d = [o.yU.PRIMARY_ENTRY_POINT];
 async function f(e, t) {
     let n,
@@ -24,20 +24,20 @@ async function f(e, t) {
                 (n = _(
                     {
                         channel: r,
-                        type: 'channel'
+                        type: "channel",
                     },
-                    t
+                    t,
                 )) &&
             (await (0, l.FN)({
-                type: 'application',
-                applicationId: t
+                type: "application",
+                applicationId: t,
             }),
             (n = _(
                 {
                     channel: r,
-                    type: 'channel'
+                    type: "channel",
                 },
-                t
+                t,
             ))),
         null != n)
     )
@@ -53,8 +53,8 @@ function _(e, t) {
             scoreMethod: c.p.COMMAND_ONLY,
             applicationId: t,
             allowFetch: !1,
-            allowApplicationState: !0
-        }
+            allowApplicationState: !0,
+        },
     ).commands[0];
 }
 function p(e, t) {
@@ -66,8 +66,8 @@ function p(e, t) {
             a ||
                 i ||
                 (0, s.j)({
-                    type: 'application',
-                    applicationId: t
+                    type: "application",
+                    applicationId: t,
                 });
         }, [t, a, i]),
         o
@@ -82,8 +82,8 @@ function h(e, t) {
             scoreMethod: c.p.COMMAND_ONLY,
             applicationId: t,
             allowFetch: !1,
-            allowApplicationState: !0
-        }
+            allowApplicationState: !0,
+        },
     );
 }
 function m(e) {

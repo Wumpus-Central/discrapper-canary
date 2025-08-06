@@ -10,7 +10,9 @@ function s(e, t) {
         let t = (null == e ? void 0 : e.features.has(o.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : o.oCV[o.Eu4.TIER_3];
         return (
             Object.keys(l.Hk)
-                .filter((e) => !!n || (e !== o.oNc.GUILD_TAGS_BADGE_PACK_PETS && e !== o.oNc.GUILD_TAGS_BADGE_PACK_FLEX))
+                .filter(
+                    (e) => !!n || (e !== o.oNc.GUILD_TAGS_BADGE_PACK_PETS && e !== o.oNc.GUILD_TAGS_BADGE_PACK_FLEX),
+                )
                 .forEach((e) => {
                     let n = l.Hk[e];
                     null != n && null == n.includedInLevel && (t += n.boostPrice);

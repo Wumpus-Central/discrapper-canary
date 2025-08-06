@@ -17,7 +17,14 @@ var r = n(255367),
     b = n(948695);
 function j(e) {
     var t, n;
-    let { allSubscriptionListings: j, priceTiers: v, loading: _, error: O, handlePublishTier: y, onDeleteEditState: C } = e,
+    let {
+            allSubscriptionListings: j,
+            priceTiers: v,
+            loading: _,
+            error: O,
+            handlePublishTier: y,
+            onDeleteEditState: C,
+        } = e,
         { editStateId: N } = (0, c.N)(),
         I = (0, l.e7)([s.Z], () => s.Z.getSubscriptionListing(N)),
         E = (0, o.mY)(),
@@ -33,28 +40,28 @@ function j(e) {
         T = null == I,
         P = null != (t = null == I ? void 0 : I.published) && t,
         w = null != (n = null == I ? void 0 : I.archived) && n;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: b.body,
         children: [
             null != O && (0, r.jsx)(d.Z, { children: O.getAnyErrorMessage() }),
             !P &&
                 !E &&
                 !w &&
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: b.publishListing,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             children: [
                                 (0, r.jsx)(a.X6q, {
-                                    variant: 'heading-md/semibold',
+                                    variant: "heading-md/semibold",
                                     className: b.publishListingInfoHeader,
-                                    children: f.intl.string(f.t.WOlcS0)
+                                    children: f.intl.string(f.t.WOlcS0),
                                 }),
                                 (0, r.jsx)(a.R94, {
                                     type: a.R94.Types.DESCRIPTION,
-                                    children: f.intl.string(f.t.rMulDQ)
-                                })
-                            ]
+                                    children: f.intl.string(f.t.rMulDQ),
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(a.ua7, {
                             shouldShow: T,
@@ -63,29 +70,29 @@ function j(e) {
                             children: (e) => {
                                 var t, n;
                                 return (0, r.jsx)(
-                                    'div',
+                                    "div",
                                     ((t = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
-                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                            "function" == typeof Object.getOwnPropertySymbols &&
                                                 (r = r.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
+                                                    }),
                                                 )),
                                                 r.forEach(function (t) {
                                                     var r;
-                                                    ((r = n[t]),
+                                                    (r = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: r,
                                                                   enumerable: !0,
                                                                   configurable: !0,
-                                                                  writable: !0
+                                                                  writable: !0,
                                                               })
-                                                            : (e[t] = r));
-                                                }));
+                                                            : (e[t] = r);
+                                                });
                                         }
                                         return e;
                                     })({}, e)),
@@ -93,11 +100,11 @@ function j(e) {
                                         {
                                             children: (0, r.jsx)(a.zxk, {
                                                 disabled: T,
-                                                variant: 'secondary',
+                                                variant: "secondary",
                                                 onClick: y,
                                                 loading: _,
-                                                text: f.intl.string(f.t.Lj6R5u)
-                                            })
+                                                text: f.intl.string(f.t.Lj6R5u),
+                                            }),
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -111,17 +118,17 @@ function j(e) {
                                           })(Object(n)).forEach(function (e) {
                                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                           }),
-                                    t)
+                                    t),
                                 );
-                            }
-                        })
-                    ]
+                            },
+                        }),
+                    ],
                 }),
             (0, r.jsx)(m.Z, { priceTiers: S }),
             (0, r.jsx)(g.Z, { allSubscriptionListings: j }),
             (0, r.jsx)(p.Z, {}),
             (0, r.jsx)(h.Z, {}),
-            (0, r.jsx)(u.Z, { onDeleteEditState: C })
-        ]
+            (0, r.jsx)(u.Z, { onDeleteEditState: C }),
+        ],
     });
 }

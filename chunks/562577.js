@@ -16,21 +16,23 @@ function f(t) {
         text: c,
         children: (0, l.jsx)(o.P3F, {
             onClick: a,
-            'aria-pressed': n,
+            "aria-pressed": n,
             className: r()(m.customStatusLabelSelectorItem, n && m.customStatusLabelSelectorItemSelected),
-            'aria-label': n ? d.intl.formatToPlainString(d.t['+KXSFh'], { label: c }) : d.intl.formatToPlainString(d.t.mDVlTk, { label: c }),
+            "aria-label": n
+                ? d.intl.formatToPlainString(d.t["+KXSFh"], { label: c })
+                : d.intl.formatToPlainString(d.t.mDVlTk, { label: c }),
             children: (0, l.jsx)(u.Z, {
                 label: e.value,
-                size: 'xs',
+                size: "xs",
                 color: n ? i.Z.colors.INTERACTIVE_ACTIVE : i.Z.colors.INTERACTIVE_NORMAL,
-                className: m.customStatusLabelSelectorItemIcon
-            })
-        })
+                className: m.customStatusLabelSelectorItemIcon,
+            }),
+        }),
     });
 }
 function h(t) {
     let { currentValue: e, onChange: n } = t;
-    return (0, l.jsx)('div', {
+    return (0, l.jsx)("div", {
         className: m.customStatusLabelSelector,
         children: c.Ub.map((t) =>
             (0, l.jsx)(
@@ -38,10 +40,10 @@ function h(t) {
                 {
                     option: t,
                     isSelected: e === t.value,
-                    onClick: () => n(t.value)
+                    onClick: () => n(t.value),
                 },
-                t.value
-            )
-        )
+                t.value,
+            ),
+        ),
     });
 }

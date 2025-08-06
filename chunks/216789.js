@@ -1,17 +1,17 @@
-(n.d(t, {
+n.d(t, {
     GO: () => l,
     IR: () => d,
     Uo: () => c,
-    Us: () => u
+    Us: () => u,
 }),
     n(997841),
-    n(388685));
+    n(388685);
 var r = n(710845),
     i = n(467798),
     o = n(630388),
     a = n(215644),
     s = n(981631);
-let l = new r.Z('Scheduled Messages');
+let l = new r.Z("Scheduled Messages");
 function c(e) {
     let { content: t, flags: n } = e,
         [r, a] = (0, i.Z)(t);
@@ -27,7 +27,7 @@ function d(e) {
         scheduledMessageId: e.scheduled_message_id,
         sendAtTimestamp: e.send_at_timestamp,
         scheduledMessage: f(e.scheduled_message),
-        state: e.state
+        state: e.state,
     };
 }
 function f(e) {
@@ -36,6 +36,6 @@ function f(e) {
         content: e.content,
         type: e.type,
         flags: e.flags,
-        messageReference: e.message_reference
+        messageReference: e.message_reference,
     };
 }

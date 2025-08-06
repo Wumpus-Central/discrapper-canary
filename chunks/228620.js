@@ -16,12 +16,12 @@ let b = (0, c.Z)(
             c = (0, d.Z)(e),
             s = (0, o.Z)({
                 id: e.id,
-                label: h.intl.string(h.t.gFHI3t)
+                label: h.intl.string(h.t.gFHI3t),
             });
         return (0, a.jsxs)(r.v2r, {
-            navId: 'channel-context',
+            navId: "channel-context",
             onClose: i.Zy,
-            'aria-label': h.intl.string(h.t.Xm41aW),
+            "aria-label": h.intl.string(h.t.Xm41aW),
             onSelect: t,
             children: [
                 (0, a.jsxs)(r.kSQ, {
@@ -30,17 +30,17 @@ let b = (0, c.Z)(
                         e.isCategory()
                             ? null
                             : (0, a.jsx)(r.sNh, {
-                                  id: 'jump-to-channel',
-                                  label: h.intl.string(h.t['bQIM4+']),
+                                  id: "jump-to-channel",
+                                  label: h.intl.string(h.t["bQIM4+"]),
                                   action: () => {
-                                      ((0, u.XU)(e.guild_id, e.id), (0, l.xf)());
-                                  }
-                              })
-                    ]
+                                      (0, u.XU)(e.guild_id, e.id), (0, l.xf)();
+                                  },
+                              }),
+                    ],
                 }),
-                (0, a.jsx)(r.kSQ, { children: s })
-            ]
+                (0, a.jsx)(r.kSQ, { children: s }),
+            ],
         });
     },
-    [s.Z.CONTEXT_MENU, s.Z.CHANNEL_AUDIT_LOG_MENU]
+    [s.Z.CONTEXT_MENU, s.Z.CHANNEL_AUDIT_LOG_MENU],
 );

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var l = n(255367),
     a = n(73800),
     i = n(120356),
@@ -16,7 +16,7 @@ let p = a.memo(function (e) {
     let { file: t, audio: n, className: i, waveformSettings: p } = e,
         [y, b] = a.useState({
             width: 0,
-            height: 0
+            height: 0,
         }),
         v = a.useRef(null),
         x = a.useMemo(() => {
@@ -26,33 +26,33 @@ let p = a.memo(function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         l = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (l = l.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         l.forEach(function (t) {
                             var l;
-                            ((l = n[t]),
+                            (l = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: l,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = l));
-                        }));
+                                    : (e[t] = l);
+                        });
                 }
                 return e;
             })(
                 {
                     fineTuning: -1,
                     fineTuningResolution: t / m.nl.fineTuningScale,
-                    duration: t
+                    duration: t,
                 },
-                null != p ? p : {}
+                null != p ? p : {},
             );
         }, [n, p]),
         j = (0, f.b1)(t),
@@ -65,7 +65,7 @@ let p = a.memo(function (e) {
             null != v.current &&
                 b({
                     width: v.current.offsetWidth,
-                    height: v.current.offsetHeight
+                    height: v.current.offsetHeight,
                 });
         }, []);
     return (
@@ -83,13 +83,13 @@ let p = a.memo(function (e) {
         a.useEffect(() => {
             if (null == v.current) return;
             let e = v.current,
-                t = e.getContext('2d');
+                t = e.getContext("2d");
             if (null == t) return;
             let { width: n, height: l } = e;
             if (0 !== y.width && 0 !== y.height && null != w && w.length > 0) {
                 let e = n / w.length,
                     a = -(e * (m.nl.waveformBarWidth - 1));
-                (t.clearRect(0, 0, n, l), (t.fillStyle = C.hex));
+                t.clearRect(0, 0, n, l), (t.fillStyle = C.hex);
                 for (let n = 0; n < w.length; n++) {
                     let i = w[n] * l,
                         r = n * e + a,
@@ -98,21 +98,21 @@ let p = a.memo(function (e) {
                 }
             }
         }, [C, y, N, w]),
-        (0, l.jsxs)('div', {
+        (0, l.jsxs)("div", {
             className: r()(g.container, i),
             children: [
-                (0, l.jsx)('canvas', {
+                (0, l.jsx)("canvas", {
                     className: g.waveformCanvas,
                     ref: v,
                     width: 4 * y.width,
-                    height: 4 * y.height
+                    height: 4 * y.height,
                 }),
                 O &&
-                    (0, l.jsx)('div', {
+                    (0, l.jsx)("div", {
                         className: g.loading,
-                        children: (0, l.jsx)(u.$jN, { type: u.RAz.SPINNING_CIRCLE })
-                    })
-            ]
+                        children: (0, l.jsx)(u.$jN, { type: u.RAz.SPINNING_CIRCLE }),
+                    }),
+            ],
         })
     );
 });

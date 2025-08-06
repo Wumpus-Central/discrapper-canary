@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(997841), n(388685));
+n.d(t, { Z: () => k }), n(997841), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -30,7 +30,7 @@ function N(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -40,15 +40,15 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -56,11 +56,11 @@ function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -82,7 +82,8 @@ function w(e, t) {
         i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -92,7 +93,7 @@ function D(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function L(e, t) {
@@ -100,7 +101,9 @@ function L(e, t) {
         let i,
             o = (0, f.F6)(e, y.default, b.Z);
         return (
-            (i = e.isPrivate() ? T.intl.string(T.t.hMRngI) : T.intl.formatToPlainString(T.t['3IRluL'], { channelName: o })),
+            (i = e.isPrivate()
+                ? T.intl.string(T.t.hMRngI)
+                : T.intl.formatToPlainString(T.t["3IRluL"], { channelName: o })),
             (0, r.jsx)(h.Z.Provider, {
                 value: e.guild_id,
                 children: (0, r.jsxs)(
@@ -110,32 +113,32 @@ function L(e, t) {
                             {
                                 header: T.intl.string(T.t.bKMaZW),
                                 confirmText: T.intl.string(T.t.rOQ5BQ),
-                                cancelText: T.intl.string(T.t['ETE/oK']),
+                                cancelText: T.intl.string(T.t["ETE/oK"]),
                                 confirmButtonColor: l.zx.Colors.BRAND,
-                                onConfirm: () => u.Z.pinMessage(e, t.id)
+                                onConfirm: () => u.Z.pinMessage(e, t.id),
                             },
-                            n
+                            n,
                         ),
                         {
                             children: [
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-md/normal',
+                                    variant: "text-md/normal",
                                     className: A.spacing,
-                                    children: i
+                                    children: i,
                                 }),
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: A.message,
                                     children: (0, r.jsx)(g.Z, {
                                         channel: e,
                                         message: t,
                                         animateAvatar: !1,
-                                        disableInteraction: !0
-                                    })
-                                })
-                            ]
-                        }
-                    )
-                )
+                                        disableInteraction: !0,
+                                    }),
+                                }),
+                            ],
+                        },
+                    ),
+                ),
             })
         );
     });
@@ -151,48 +154,48 @@ function x(e, t) {
                         {
                             header: T.intl.string(T.t.CFF2vL),
                             confirmText: T.intl.string(T.t.lAU5jI),
-                            cancelText: T.intl.string(T.t['ETE/oK']),
-                            onConfirm: () => u.Z.unpinMessage(e, t.id)
+                            cancelText: T.intl.string(T.t["ETE/oK"]),
+                            onConfirm: () => u.Z.unpinMessage(e, t.id),
                         },
-                        n
+                        n,
                     ),
                     {
                         children: [
                             (0, r.jsx)(c.Text, {
-                                variant: 'text-md/normal',
+                                variant: "text-md/normal",
                                 className: A.spacing,
-                                children: T.intl.string(T.t.NjEPp6)
+                                children: T.intl.string(T.t.NjEPp6),
                             }),
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: a()(A.message, A.spacing),
                                 children: (0, r.jsx)(g.Z, {
                                     channel: e,
                                     message: t,
-                                    disableInteraction: !0
-                                })
+                                    disableInteraction: !0,
+                                }),
                             }),
-                            (0, r.jsx)(_.Z, { children: T.intl.format(T.t.oCVB3d, {}) })
-                        ]
-                    }
-                )
-            )
-        })
+                            (0, r.jsx)(_.Z, { children: T.intl.format(T.t.oCVB3d, {}) }),
+                        ],
+                    },
+                ),
+            ),
+        }),
     );
 }
 class M extends i.PureComponent {
     render() {
         let e,
             t,
-            n = p.Z.getCurrentConfig({ location: 'DeleteModal' }).enabled,
+            n = p.Z.getCurrentConfig({ location: "DeleteModal" }).enabled,
             { report: i, resolveFlag: o } = this.state,
             a = this.props,
             { channel: l, message: u, showContextMenuHint: d, moderatorReportData: f } = a,
-            m = w(a, ['channel', 'message', 'showContextMenuHint', 'moderatorReportData']),
+            m = w(a, ["channel", "message", "showContextMenuHint", "moderatorReportData"]),
             E = l.type === I.d4z.GUILD_ANNOUNCEMENT && (0, O.yE)(u.flags, I.iLy.CROSSPOSTED);
-        (d &&
+        d &&
             (e = (0, r.jsx)(_.Z, {
                 className: A.spacingTop,
-                children: T.intl.format(T.t.IxY7Ex, {})
+                children: T.intl.format(T.t.IxY7Ex, {}),
             })),
             (0, v.vc)(u) &&
                 (t = (0, r.jsx)(c.j7V, {
@@ -200,32 +203,32 @@ class M extends i.PureComponent {
                     onChange: this.handleToggleReport,
                     hideBorder: !0,
                     className: A.spacingTop,
-                    children: T.intl.string(T.t.x0jzo6)
-                })));
-        let b = E ? T.intl.string(T.t['2kHABQ']) : T.intl.string(T.t.AMvpS0),
+                    children: T.intl.string(T.t.x0jzo6),
+                }));
+        let b = E ? T.intl.string(T.t["2kHABQ"]) : T.intl.string(T.t.AMvpS0),
             y = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: A.message,
                         children: (0, r.jsx)(g.Z, {
                             channel: l,
                             message: u,
-                            disableInteraction: !0
-                        })
+                            disableInteraction: !0,
+                        }),
                     }),
                     t,
-                    e
-                ]
+                    e,
+                ],
             }),
             N = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.X6q, {
-                        variant: 'heading-md/medium',
+                        variant: "heading-md/medium",
                         className: A.spacing,
-                        children: b
+                        children: b,
                     }),
-                    y
-                ]
+                    y,
+                ],
             });
         if ((null == f ? void 0 : f.moderatorReportChannelId) != null) {
             let { isFlagResolved: e } = f;
@@ -233,46 +236,46 @@ class M extends i.PureComponent {
                 value: l.guild_id,
                 children: (0, r.jsxs)(
                     c.Y0X,
-                    P(C({ parentComponent: 'DeleteModal' }, m), {
+                    P(C({ parentComponent: "DeleteModal" }, m), {
                         children: [
                             (0, r.jsx)(c.xBx, {
                                 separator: !1,
                                 children: (0, r.jsxs)(c.Kqy, {
-                                    direction: 'vertical',
-                                    justify: 'space-between',
+                                    direction: "vertical",
+                                    justify: "space-between",
                                     children: [
                                         (0, r.jsx)(c.olH, {
                                             className: A.closeButton,
-                                            onClick: m.onClose
+                                            onClick: m.onClose,
                                         }),
                                         (0, r.jsx)(c.X6q, {
-                                            variant: 'heading-xl/bold',
-                                            children: T.intl.string(T.t.MWMcg4)
-                                        })
-                                    ]
-                                })
+                                            variant: "heading-xl/bold",
+                                            children: T.intl.string(T.t.MWMcg4),
+                                        }),
+                                    ],
+                                }),
                             }),
                             (0, r.jsx)(c.hzk, { children: N }),
                             (0, r.jsxs)(c.mzw, {
                                 children: [
                                     (0, r.jsx)(c.zxk, {
-                                        variant: 'critical-primary',
-                                        size: 'sm',
+                                        variant: "critical-primary",
+                                        size: "sm",
                                         text: T.intl.string(T.t.oyYWHB),
-                                        type: 'submit',
-                                        onClick: this.handleDelete
+                                        type: "submit",
+                                        onClick: this.handleDelete,
                                     }),
                                     !e &&
                                         (0, r.jsx)(c.XZJ, {
                                             value: o,
                                             onChange: (e, t) => this.handleToggleResolveFlag(t),
-                                            children: T.intl.string(S.default['8yIKen'])
-                                        })
-                                ]
-                            })
-                        ]
-                    })
-                )
+                                            children: T.intl.string(S.default["8yIKen"]),
+                                        }),
+                                ],
+                            }),
+                        ],
+                    }),
+                ),
             });
         }
         return (0, r.jsx)(h.Z.Provider, {
@@ -283,19 +286,19 @@ class M extends i.PureComponent {
                       subtitle: b,
                       actions: [
                           {
-                              text: T.intl.string(T.t['ETE/oK']),
+                              text: T.intl.string(T.t["ETE/oK"]),
                               onClick: m.onClose,
-                              variant: 'secondary'
+                              variant: "secondary",
                           },
                           {
                               text: T.intl.string(T.t.oyYWHB),
                               onClick: this.handleDeleteMana,
-                              variant: 'critical-primary'
-                          }
+                              variant: "critical-primary",
+                          },
                       ],
                       onClose: m.onClose,
                       transitionState: m.transitionState,
-                      children: y
+                      children: y,
                   })
                 : (0, r.jsx)(
                       c.ConfirmModal,
@@ -304,52 +307,52 @@ class M extends i.PureComponent {
                               {
                                   header: E ? T.intl.string(T.t.aIz1oa) : T.intl.string(T.t.MWMcg4),
                                   confirmText: T.intl.string(T.t.oyYWHB),
-                                  cancelText: T.intl.string(T.t['ETE/oK']),
-                                  onConfirm: this.handleDelete
+                                  cancelText: T.intl.string(T.t["ETE/oK"]),
+                                  onConfirm: this.handleDelete,
                               },
-                              m
+                              m,
                           ),
-                          { children: N }
-                      )
-                  )
+                          { children: N },
+                      ),
+                  ),
         });
     }
     constructor(...e) {
-        (super(...e),
-            N(this, 'state', {
+        super(...e),
+            N(this, "state", {
                 report: !1,
-                resolveFlag: !1
+                resolveFlag: !1,
             }),
-            N(this, 'handleDelete', () => {
+            N(this, "handleDelete", () => {
                 let { report: e, resolveFlag: t } = this.state,
                     { channel: n, message: r, moderatorReportData: i } = this.props,
                     { moderatorReportChannelId: o, isFlagResolved: a } = null != i ? i : {};
                 e
-                    ? (0, m.ak)(r, 'message_delete_alert', () =>
+                    ? (0, m.ak)(r, "message_delete_alert", () =>
                           d.Z.deleteMessage(n.id, r.id).then(() => {
                               if (null != o) {
                                   var e, n;
-                                  (t && !a && E.Z.resolveFlag(o), null == (e = (n = this.props).onClose) || e.call(n));
+                                  t && !a && E.Z.resolveFlag(o), null == (e = (n = this.props).onClose) || e.call(n);
                               }
-                          })
+                          }),
                       )
                     : d.Z.deleteMessage(n.id, r.id).then(() => {
                           if (null != o) {
                               var e, n;
-                              (t && !a && E.Z.resolveFlag(o), null == (e = (n = this.props).onClose) || e.call(n));
+                              t && !a && E.Z.resolveFlag(o), null == (e = (n = this.props).onClose) || e.call(n);
                           }
                       });
             }),
-            N(this, 'handleDeleteMana', () => {
+            N(this, "handleDeleteMana", () => {
                 var e, t;
-                (this.handleDelete(), null == (e = (t = this.props).onClose) || e.call(t));
+                this.handleDelete(), null == (e = (t = this.props).onClose) || e.call(t);
             }),
-            N(this, 'handleToggleReport', (e) => {
+            N(this, "handleToggleReport", (e) => {
                 this.setState({ report: e });
             }),
-            N(this, 'handleToggleResolveFlag', (e) => {
+            N(this, "handleToggleResolveFlag", (e) => {
                 this.setState({ resolveFlag: e });
-            }));
+            });
     }
 }
 let k = {
@@ -366,11 +369,11 @@ let k = {
                         channel: e,
                         message: t,
                         showContextMenuHint: n,
-                        moderatorReportData: i
+                        moderatorReportData: i,
                     },
-                    o
-                )
-            )
+                    o,
+                ),
+            ),
         );
     },
     confirmEdit: function (e, t, n) {
@@ -381,22 +384,22 @@ let k = {
                     C(
                         {
                             header: T.intl.string(T.t.aIz1oa),
-                            confirmText: T.intl.string(T.t['cY+Ooa']),
-                            cancelText: T.intl.string(T.t['ETE/oK']),
+                            confirmText: T.intl.string(T.t["cY+Ooa"]),
+                            cancelText: T.intl.string(T.t["ETE/oK"]),
                             confirmButtonColor: l.zx.Colors.BRAND,
-                            onConfirm: () => d.Z.editMessage(e, t, n)
+                            onConfirm: () => d.Z.editMessage(e, t, n),
                         },
-                        i
+                        i,
                     ),
                     {
                         children: (0, r.jsx)(c.Text, {
-                            variant: 'text-md/normal',
+                            variant: "text-md/normal",
                             className: A.spacing,
-                            children: T.intl.string(T.t.grBcMz)
-                        })
-                    }
-                )
-            )
+                            children: T.intl.string(T.t.grBcMz),
+                        }),
+                    },
+                ),
+            ),
         );
-    }
+    },
 };

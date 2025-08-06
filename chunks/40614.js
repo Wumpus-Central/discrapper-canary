@@ -1,4 +1,4 @@
-(n.d(t, { V: () => _ }), n(388685));
+n.d(t, { V: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -20,10 +20,10 @@ function b(e) {
         onClick: t,
         children: (0, r.jsx)(o.Text, {
             className: m.textContent,
-            variant: 'text-xs/medium',
-            color: 'text-secondary',
-            children: g.intl.string(g.t.jfrLLS)
-        })
+            variant: "text-xs/medium",
+            color: "text-secondary",
+            children: g.intl.string(g.t.jfrLLS),
+        }),
     });
 }
 function O(e) {
@@ -42,17 +42,23 @@ function O(e) {
         onClick: n,
         children: (0, r.jsx)(o.Text, {
             className: m.textContent,
-            variant: 'text-xs/medium',
-            color: 'text-feedback-positive',
+            variant: "text-xs/medium",
+            color: "text-feedback-positive",
             lineClamp: 1,
-            children: C.join(' \xB7 ')
-        })
+            children: C.join(" \xB7 "),
+        }),
     });
 }
 function _(e) {
     let { onClick: t } = e,
-        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, p.D)('not sharing link'),
+        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, p.D)("not sharing link"),
         s = d.G6.useSetting(),
         a = (0, l.e7)([h.Z], () => h.Z.getStatus());
-    return !n || __OVERLAY__ ? null : s && a !== o.Skl.INVISIBLE ? (i ? (0, r.jsx)(O, { onClick: t }) : null) : (0, r.jsx)(b, { onClick: t });
+    return !n || __OVERLAY__
+        ? null
+        : s && a !== o.Skl.INVISIBLE
+          ? i
+              ? (0, r.jsx)(O, { onClick: t })
+              : null
+          : (0, r.jsx)(b, { onClick: t });
 }

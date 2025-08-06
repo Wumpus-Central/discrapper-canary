@@ -1,4 +1,4 @@
-(n.d(t, { P: () => l }), n(388685), n(35282), n(539854));
+n.d(t, { P: () => l }), n(388685), n(35282), n(539854);
 let r = 0,
     a = null;
 function l(e) {
@@ -11,8 +11,8 @@ function l(e) {
                     let t = e;
                     for (; null != t && t !== document.body; ) {
                         for (let t of Object.keys(e))
-                            if (t.startsWith('__reactFiber$')) {
-                                ((a = t), (r = 1));
+                            if (t.startsWith("__reactFiber$")) {
+                                (a = t), (r = 1);
                                 return;
                             }
                         t = t.parentElement;
@@ -36,9 +36,9 @@ function l(e) {
                     let e = null == r || null == (a = r._debugSource) ? void 0 : a.fileName,
                         i = null == r || null == (l = r._debugSource) ? void 0 : l.lineNumber;
                     if (null != e && null != i) {
-                        let r = ''.concat(e, ':').concat(i);
+                        let r = "".concat(e, ":").concat(i);
                         if (t) {
-                            let e = r.split('/discord/');
+                            let e = r.split("/discord/");
                             0 !== e.length && n.push(e[e.length - 1]);
                         } else n.push(r);
                     }

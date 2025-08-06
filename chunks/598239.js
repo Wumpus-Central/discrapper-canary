@@ -5,7 +5,7 @@ var t = {
     today: "'vandaag om' p",
     tomorrow: "'morgen om' p",
     nextWeek: "eeee 'om' p",
-    other: 'P'
+    other: "P",
 };
 let r = function (e, a, n, r) {
     return t[e];

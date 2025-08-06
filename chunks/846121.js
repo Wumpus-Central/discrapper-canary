@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r,
     i = n(442837),
     o = n(570140);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -35,11 +35,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,7 +67,7 @@ function p(e) {
         d[n] = u;
         return;
     }
-    ((d[n] = t), f.delete(n));
+    (d[n] = t), f.delete(n);
 }
 function h(e) {
     let { guildId: t } = e;
@@ -100,16 +100,16 @@ class b extends (r = i.ZP.Store) {
             ? {}
             : {
                   completedActions: d[e],
-                  loading: f.has(e)
+                  loading: f.has(e),
               };
     }
 }
-a(b, 'displayName', 'GuildOnboardingMemberActionStore');
+a(b, "displayName", "GuildOnboardingMemberActionStore");
 let y = new b(o.Z, {
     GUILD_NEW_MEMBER_ACTIONS_FETCH_START: h,
     GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: p,
     GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: m,
     GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: E,
     COMPLETE_NEW_MEMBER_ACTION: _,
-    GUILD_DELETE: g
+    GUILD_DELETE: g,
 });

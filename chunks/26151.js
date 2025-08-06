@@ -14,7 +14,7 @@ var r = n(544891),
 let h = {
     call(e, t, n, i, o) {
         let a = (n) => {
-            (f.default.selectVoiceChannel(e, t), n && this.ring(e), null == o || o(e));
+            f.default.selectVoiceChannel(e, t), n && this.ring(e), null == o || o(e);
         };
         if (null != i) {
             if (s.Z.isBlocked(i)) return;
@@ -23,30 +23,30 @@ let h = {
                 .get({
                     url: _.ANM.CALL(e),
                     oldFormErrors: !0,
-                    rejectWithError: !0
+                    rejectWithError: !0,
                 })
                 .then(
                     (e) => {
                         a(n && e.body.ringable);
                     },
                     () => {
-                        (c.default.track(_.rMx.OPEN_POPOUT, {
-                            type: 'Not Friend',
-                            source: 'Call'
+                        c.default.track(_.rMx.OPEN_POPOUT, {
+                            type: "Not Friend",
+                            source: "Call",
                         }),
                             u.Z.show({
                                 title: p.intl.string(p.t.My50nZ),
-                                body: p.intl.format(p.t.IdKo29, { username: null != t ? t.username : '' }),
-                                confirmText: p.intl.string(p.t['PMsq/f']),
+                                body: p.intl.format(p.t.IdKo29, { username: null != t ? t.username : "" }),
+                                confirmText: p.intl.string(p.t["PMsq/f"]),
                                 cancelText: p.intl.string(p.t.BddRzc),
                                 onConfirm() {
                                     d.Z.addRelationship({
                                         userId: i,
-                                        context: { location: 'Call' }
+                                        context: { location: "Call" },
                                     });
-                                }
-                            }));
-                    }
+                                },
+                            });
+                    },
                 );
         } else a(n);
     },
@@ -56,29 +56,29 @@ let h = {
         let l = (0, o.V)(s),
             c = _.TPd.CALLABLE.has(s.type);
         if (l) {
-            (r.tn.post({
+            r.tn.post({
                 url: _.ANM.CALL_RING(e),
                 body: {
                     recipients: t,
-                    analytics_location: n
+                    analytics_location: n,
                 },
                 oldFormErrors: !0,
-                rejectWithError: !0
+                rejectWithError: !0,
             }),
                 s.type === _.d4z.GUILD_VOICE &&
                     null != t &&
                     i.Z.dispatch({
-                        type: 'GUILD_LOCAL_RING_START',
+                        type: "GUILD_LOCAL_RING_START",
                         ringing: t,
-                        guildId: s.guild_id
-                    }));
+                        guildId: s.guild_id,
+                    });
             return;
         }
         c &&
             i.Z.dispatch({
-                type: 'CALL_ENQUEUE_RING',
+                type: "CALL_ENQUEUE_RING",
                 channelId: e,
-                recipients: t
+                recipients: t,
             });
     },
     stopRinging: (e, t) =>
@@ -86,6 +86,6 @@ let h = {
             url: _.ANM.CALL_STOP_RINGING(e),
             body: { recipients: t },
             oldFormErrors: !0,
-            rejectWithError: !0
-        })
+            rejectWithError: !0,
+        }),
 };

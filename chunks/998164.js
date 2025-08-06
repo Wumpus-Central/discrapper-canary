@@ -14,24 +14,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -55,30 +55,30 @@ function h(e, t) {
 }
 let f = [];
 function x() {
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: g.actionItemContainer,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: g.actionItem,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: g.actionItemEmojiWrapper,
                     children: (0, r.jsx)(a.snC, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         height: 20,
-                        width: 22
-                    })
+                        width: 22,
+                    }),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: g.actionItemText,
                     children: (0, r.jsx)(a.Text, {
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
-                        children: m.intl.string(m.t['K/i3iY'])
-                    })
-                })
-            ]
-        })
+                        variant: "text-md/semibold",
+                        color: "header-primary",
+                        children: m.intl.string(m.t["K/i3iY"]),
+                    }),
+                }),
+            ],
+        }),
     });
 }
 function b(e) {
@@ -86,14 +86,14 @@ function b(e) {
         s = i.useCallback(() => {
             if (null != t)
                 return (0, a.ZDy)(async () => {
-                    let { default: e } = await n.e('7590').then(n.bind(n, 380716));
+                    let { default: e } = await n.e("7590").then(n.bind(n, 380716));
                     return (n) =>
                         (0, r.jsx)(
                             e,
                             h(p({}, n), {
                                 guildId: t,
-                                onSave: l
-                            })
+                                onSave: l,
+                            }),
                         );
                 });
         }, [t, l]);
@@ -102,15 +102,15 @@ function b(e) {
         onClick: s,
         children: [
             (0, r.jsx)(a.oFk, {
-                size: 'xs',
-                color: 'currentColor'
+                size: "xs",
+                color: "currentColor",
             }),
             (0, r.jsx)(a.Text, {
-                variant: 'text-md/normal',
-                color: 'none',
-                children: m.intl.string(m.t.qce3EB)
-            })
-        ]
+                variant: "text-md/normal",
+                color: "none",
+                children: m.intl.string(m.t.qce3EB),
+            }),
+        ],
     });
 }
 let j = function (e) {
@@ -129,7 +129,7 @@ let j = function (e) {
                     null != n && (0, c.ad)(t, i, n, !0);
                 });
             },
-            [t]
+            [t],
         ),
         m = i.useCallback(
             (e, r, i, l) => {
@@ -143,7 +143,7 @@ let j = function (e) {
                         (0, c.ad)(t, s, i, l);
                     }));
             },
-            [n, t]
+            [n, t],
         ),
         j = i.useCallback(
             (e) => {
@@ -154,7 +154,7 @@ let j = function (e) {
                 let l = d.Z.getSettings();
                 (0, c.oo)(t, l, !0);
             },
-            [n, t]
+            [n, t],
         ),
         v = n.map((e) => h(p({}, e), { id: e.channelId })),
         _ = i.useCallback(
@@ -163,10 +163,10 @@ let j = function (e) {
                 let n = d.Z.getSettings();
                 null != n && (0, c.oo)(t, n, !0);
             },
-            [t]
+            [t],
         ),
         { handleDragStart: O, handleDragReset: y, handleDragComplete: C } = (0, s.Z)(v, _);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.section,
         children: [
             n.map((e, n) =>
@@ -180,17 +180,17 @@ let j = function (e) {
                         onDelete: j,
                         onDragStart: O,
                         onDragReset: y,
-                        onDragComplete: C
+                        onDragComplete: C,
                     },
-                    e.channelId
-                )
+                    e.channelId,
+                ),
             ),
             (0, r.jsx)(x, {}),
             n.length < o.O9 &&
                 (0, r.jsx)(b, {
                     guildId: t,
-                    onAddAction: a
-                })
-        ]
+                    onAddAction: a,
+                }),
+        ],
     });
 };

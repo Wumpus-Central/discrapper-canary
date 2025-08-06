@@ -9,7 +9,7 @@ let r = (e, t) =>
                 properties: r,
                 flush: null != (a = null == i ? void 0 : i.flush) && a,
                 fingerprint: null == i ? void 0 : i.fingerprint,
-                resolve: o
+                resolve: o,
             });
         });
     };

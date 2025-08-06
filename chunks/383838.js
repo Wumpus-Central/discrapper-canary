@@ -1,7 +1,7 @@
 n.d(t, {
     Dd: () => h,
     Sw: () => m,
-    To: () => g
+    To: () => g,
 });
 var r = n(255367);
 n(73800);
@@ -19,7 +19,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,7 +48,8 @@ function _(e, t) {
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -58,37 +59,47 @@ function p(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let h = a.Z.Types,
     m = {
-        LEFT: 'left',
-        RIGHT: 'right'
+        LEFT: "left",
+        RIGHT: "right",
     };
 function g(e) {
     let t,
         n,
-        { type: i = a.Z.Types.DANGER, imageData: d, button: p, className: h, iconClassName: g, title: E, body: b, style: y, align: O = s.Z.Align.START } = e,
+        {
+            type: i = a.Z.Types.DANGER,
+            imageData: d,
+            button: p,
+            className: h,
+            iconClassName: g,
+            title: E,
+            body: b,
+            style: y,
+            align: O = s.Z.Align.START,
+        } = e,
         v = s.Z.Direction.HORIZONTAL;
     if (null != d) {
         let { position: e } = d,
-            n = _(d, ['position']);
-        ((t = (0, r.jsx)(s.Z.Child, {
+            n = _(d, ["position"]);
+        (t = (0, r.jsx)(s.Z.Child, {
             grow: 0,
             shrink: 0,
             children: (0, r.jsx)(
-                'img',
+                "img",
                 f(
                     {
-                        alt: '',
-                        className: o()(u.icon, g)
+                        alt: "",
+                        className: o()(u.icon, g),
                     },
-                    n
-                )
-            )
+                    n,
+                ),
+            ),
         })),
-            e === m.RIGHT && (v = s.Z.Direction.HORIZONTAL_REVERSE));
+            e === m.RIGHT && (v = s.Z.Direction.HORIZONTAL_REVERSE);
     } else null != p && (n = p);
     let I = !0;
     return (
@@ -104,23 +115,23 @@ function g(e) {
                     t,
                     (0, r.jsxs)(s.Z.Child, {
                         children: [
-                            null != E && '' !== E
+                            null != E && "" !== E
                                 ? (0, r.jsx)(c.v, {
                                       tag: c.R.H5,
                                       className: o()(u.formNoticeTitle, { [u.whiteText]: I }),
                                       faded: !0,
-                                      children: E
+                                      children: E,
                                   })
                                 : null,
                             (0, r.jsx)(l.R, {
                                 className: o()(u.formNoticeBody, { [u.whiteText]: I }),
-                                children: b
+                                children: b,
                             }),
-                            n
-                        ]
-                    })
-                ]
-            })
+                            n,
+                        ],
+                    }),
+                ],
+            }),
         })
     );
 }

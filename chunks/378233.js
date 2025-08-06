@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     B0: () => C,
     Hc: () => w,
     J8: () => D,
@@ -11,13 +11,13 @@
     cv: () => x,
     gM: () => U,
     jl: () => L,
-    z: () => R
+    z: () => R,
 }),
     n(413496),
     n(433524),
     n(35282),
     n(415506),
-    n(781311));
+    n(781311);
 var r = n(134432),
     i = n(581883),
     o = n(430824),
@@ -31,9 +31,12 @@ var r = n(134432),
     _ = n(981631);
 let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: g, CDN_HOST: E } = window.GLOBAL_ENV,
     b = Object.values(d.og),
-    y = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(b.join('|'), ')'))),
-    O = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(y, ')'), 'ig'),
-    v = RegExp(''.concat(location.protocol).concat(p, '(').concat(y, ')'), 'ig'),
+    y = decodeURIComponent(_.ANM.STICKER_ASSET("[\\d]+", "(".concat(b.join("|"), ")"))),
+    O = RegExp(
+        "(".concat(location.protocol).concat(g, "|").concat(location.protocol).concat(h, ")(").concat(y, ")"),
+        "ig",
+    ),
+    v = RegExp("".concat(location.protocol).concat(p, "(").concat(y, ")"), "ig"),
     I = (e) => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
@@ -52,25 +55,25 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
             case d.u3.GIF:
                 return d.og.GIF;
             default:
-                throw Error('Unexpected format type: '.concat(e));
+                throw Error("Unexpected format type: ".concat(e));
         }
     },
     S = (e) => {
         switch (e) {
-            case 'application/json':
+            case "application/json":
                 return d.u3.LOTTIE;
-            case 'image/apng':
+            case "image/apng":
                 return d.u3.APNG;
-            case 'image/png':
-            case 'image/webp':
+            case "image/png":
+            case "image/webp":
                 return d.u3.PNG;
-            case 'image/gif':
+            case "image/gif":
                 return d.u3.GIF;
             default:
-                throw Error('Unexpected file type: '.concat(e));
+                throw Error("Unexpected file type: ".concat(e));
         }
     },
-    A = (e) => (null == e ? null : ''.concat(e.name, '.').concat(T(e.format_type))),
+    A = (e) => (null == e ? null : "".concat(e.name, ".").concat(T(e.format_type))),
     N = function (e) {
         let { isPreview: t = !1, size: n = f.lE } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (null == e.format_type) return null;
@@ -78,28 +81,28 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         e.format_type === d.u3.GIF && t && (i = d.u3.PNG);
         let o = T(i),
             a = _.ANM.STICKER_ASSET(e.id, o),
-            s = o === d.og.WEBP ? '&quality=lossless' : '';
-        if ('development' !== m) {
-            if (e.format_type === d.u3.LOTTIE) return ''.concat(location.protocol).concat(g).concat(a);
-            let i = e.format_type === d.u3.APNG && t && !(0, l.isAndroid)() ? '&passthrough=false' : '',
+            s = o === d.og.WEBP ? "&quality=lossless" : "";
+        if ("development" !== m) {
+            if (e.format_type === d.u3.LOTTIE) return "".concat(location.protocol).concat(g).concat(a);
+            let i = e.format_type === d.u3.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
                 o = Math.min(2, (0, r.x_)());
-            return ''
+            return ""
                 .concat(location.protocol)
                 .concat(h)
-                .concat(a, '?size=')
+                .concat(a, "?size=")
                 .concat((0, r.oO)(n * o))
                 .concat(i)
                 .concat(s);
         }
-        return ''.concat(location.protocol).concat(p).concat(a);
+        return "".concat(location.protocol).concat(p).concat(a);
     },
-    C = (e) => null != e.match('development' !== m ? O : v),
+    C = (e) => null != e.match("development" !== m ? O : v),
     R = (e) => ({
         type: d.Ih.PACK,
         id: e.id,
         name: e.name,
         stickers: e.stickers,
-        previewSticker: I(e)
+        previewSticker: I(e),
     }),
     P = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
     w = (e, t, n, r) => {
@@ -108,7 +111,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         if (null != i && i.length > 0) return !0;
         switch (e) {
             case d.V0.STICKER_PICKER:
-                return '' !== t.trim();
+                return "" !== t.trim();
             case d.V0.AUTOCOMPLETE:
                 return (0, u.w)(t).length > 1;
             case d.V0.BUILT_IN_INTEGRATION:
@@ -127,7 +130,9 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     k = [];
 function j() {
     var e, t;
-    return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds) ? t : k;
+    return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds)
+        ? t
+        : k;
 }
 function U(e) {
     return j().includes(e);

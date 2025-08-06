@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(35282));
+n.d(t, { Z: () => g }), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(481060),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,7 +76,7 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e) {
@@ -90,16 +91,16 @@ function m(e) {
               name: s,
               targetElementRef: l,
               children: (e) => {
-                  let { 'aria-controls': n, 'aria-expanded': i } = e,
-                      a = p(e, ['aria-controls', 'aria-expanded']);
+                  let { "aria-controls": n, "aria-expanded": i } = e,
+                      a = p(e, ["aria-controls", "aria-expanded"]);
                   return (0, r.jsx)(
                       o.eee,
                       _(d({}, a), {
                           ref: l,
-                          children: t
-                      })
+                          children: t,
+                      }),
                   );
-              }
+              },
           });
 }
 function g(e) {
@@ -107,8 +108,8 @@ function g(e) {
         { content: a, timestamp: u, messageReference: d } = i,
         f = (0, s.ZP)(i),
         _ = t(f),
-        p = (null != a ? a : '').split(' ').slice(0, -1).join(' '),
-        h = c.intl.format(c.t['47CZc3'], {
+        p = (null != a ? a : "").split(" ").slice(0, -1).join(" "),
+        h = c.intl.format(c.t["47CZc3"], {
             username: f.nick,
             usernameHook: _,
             webhookName: a,
@@ -118,15 +119,15 @@ function g(e) {
                     {
                         messageReference: d,
                         guildName: p,
-                        children: e
+                        children: e,
                     },
-                    t
-                )
+                    t,
+                ),
         });
     return (0, r.jsx)(l.Z, {
         icon: n(570111),
         timestamp: u,
         compact: o,
-        children: h
+        children: h,
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685), n(704826), n(35282), n(539854), n(804061));
+n.d(t, { Z: () => l }), n(388685), n(704826), n(35282), n(539854), n(804061);
 var r = n(710845),
     i = n(287328);
 function o(e, t, n) {
@@ -8,19 +8,19 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let a = new r.Z('GuildStickers');
+let a = new r.Z("GuildStickers");
 class s {
     async getAsync(e) {
         let t = performance.now(),
             n = await i.Z.stickers(e).getMapEntries(),
             r = performance.now();
-        return (a.log('asynchronously loaded in '.concat(r - t, 'ms (guilds: ').concat(n.length, ')')), n);
+        return a.log("asynchronously loaded in ".concat(r - t, "ms (guilds: ").concat(n.length, ")")), n;
     }
     handleConnectionOpen(e, t) {
         for (let n of e.guilds) this.handleOneGuildCreate(n, t);
@@ -41,19 +41,29 @@ class s {
         e.promisesForBackgroundSyncToWaitOn.push(
             Promise.all(
                 e.stickers.map((e) => {
-                    if ('unavailable' === e.dataMode) return Promise.resolve();
-                    'full' === e.dataMode ? (a.verbose('Replacing '.concat(e.entities.length, ' stickers for ').concat(e.guildId)), this.replace(e.guildId, e.entities, t)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (a.verbose('Updating '.concat(e.updatedEntities.length, ' and deleting ').concat(e.deletedEntityIds.length, ' stickers for ').concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
-                })
-            )
+                    if ("unavailable" === e.dataMode) return Promise.resolve();
+                    "full" === e.dataMode
+                        ? (a.verbose("Replacing ".concat(e.entities.length, " stickers for ").concat(e.guildId)),
+                          this.replace(e.guildId, e.entities, t))
+                        : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) &&
+                          (a.verbose(
+                              "Updating "
+                                  .concat(e.updatedEntities.length, " and deleting ")
+                                  .concat(e.deletedEntityIds.length, " stickers for ")
+                                  .concat(e.guildId),
+                          ),
+                          this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
+                }),
+            ),
         );
     }
     handleOneGuildCreate(e, t) {
         let { id: n, stickers: r } = e;
         switch (r.op) {
-            case 'full_sync':
+            case "full_sync":
                 this.replace(n, r.items, t);
                 break;
-            case 'update':
+            case "update":
                 this.update(n, r.writes, r.deletes, t);
         }
     }
@@ -69,13 +79,13 @@ class s {
         for (let r of (o.putAll(e, t), n)) o.delete(e, r);
     }
     constructor() {
-        o(this, 'actions', {
+        o(this, "actions", {
             BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
             CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
             GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
             GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
             GUILD_STICKERS_UPDATE: (e, t) => this.handleGuildStickersUpdate(e, t),
-            GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t)
+            GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t),
         });
     }
 }

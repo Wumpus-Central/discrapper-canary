@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,8 +27,8 @@ let h = 2,
     m = {
         client: {
             desktop: u.aH.DEFAULT,
-            coachmarkImpressions: 0
-        }
+            coachmarkImpressions: 0,
+        },
     },
     g = !0,
     E = () => {
@@ -40,7 +40,7 @@ let h = 2,
             l.default.track(d.rMx.APP_ICON_UPDATED, {
                 icon_id: e,
                 user_premium_tier: null == (t = s.default.getCurrentUser()) ? void 0 : t.premiumType,
-                icon_premium_tier: e !== u.aH.DEFAULT ? _.p9.TIER_2 : null
+                icon_premium_tier: e !== u.aH.DEFAULT ? _.p9.TIER_2 : null,
             });
         }
     };
@@ -52,16 +52,17 @@ function O() {
     g &&
         (m.client = {
             desktop: u.aH.DEFAULT,
-            coachmarkImpressions: h
+            coachmarkImpressions: h,
         });
 }
 function v(e) {
     let { markAsDismissed: t } = e;
-    ((m.client.coachmarkImpressions += 1), m.client.coachmarkImpressions >= h && (null == t || t(f.L.UNKNOWN), O(), (0, a.Ll)()));
+    (m.client.coachmarkImpressions += 1),
+        m.client.coachmarkImpressions >= h && (null == t || t(f.L.UNKNOWN), O(), (0, a.Ll)());
 }
 class I extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (null != e && (m = e), this.waitFor(s.default), this.syncWith([s.default], E));
+        null != e && (m = e), this.waitFor(s.default), this.syncWith([s.default], E);
     }
     get isUpsellPreview() {
         return g;
@@ -74,10 +75,10 @@ class I extends (r = i.ZP.PersistedStore) {
         return null == m || null == (e = m.client) ? void 0 : e.desktop;
     }
 }
-(p(I, 'displayName', 'AppIconPersistedStoreState'), p(I, 'persistKey', 'AppIconPersistedStoreState'));
+p(I, "displayName", "AppIconPersistedStoreState"), p(I, "persistKey", "AppIconPersistedStoreState");
 let T = new I(o.Z, {
     APP_ICON_UPDATED: y,
     APP_ICON_EDITOR_RESET: O,
     APP_ICON_TRACK_IMPRESSION: v,
-    LOGOUT: O
+    LOGOUT: O,
 });

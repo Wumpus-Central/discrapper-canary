@@ -7,8 +7,8 @@ var r = n(573654),
         type: a.TL,
         payload: {
             clientOffset: null,
-            sourceClientOffset: null
-        }
+            sourceClientOffset: null,
+        },
     };
 function l(e) {
     return function () {
@@ -20,18 +20,18 @@ function l(e) {
             _ = n.getSourceClientOffset,
             p = e.getMonitor(),
             h = e.getRegistry();
-        (e.dispatch((0, i.T)(l)), c(t, p, h));
+        e.dispatch((0, i.T)(l)), c(t, p, h);
         var m = f(t, p);
         if (null === m) return void e.dispatch(s);
         var g = null;
         if (l) {
-            if (!_) throw Error('getSourceClientOffset must be defined');
-            (u(_), (g = _(m)));
+            if (!_) throw Error("getSourceClientOffset must be defined");
+            u(_), (g = _(m));
         }
         e.dispatch((0, i.T)(l, g));
         var E = h.getSource(m).beginDrag(p, m);
         if (null != E) {
-            (d(E), h.pinSource(m));
+            d(E), h.pinSource(m);
             var b = h.getSourceType(m);
             return {
                 type: a.qu,
@@ -41,23 +41,23 @@ function l(e) {
                     sourceId: m,
                     clientOffset: l || null,
                     sourceClientOffset: g || null,
-                    isSourcePublic: !!o
-                }
+                    isSourcePublic: !!o,
+                },
             };
         }
     };
 }
 function c(e, t, n) {
-    ((0, r.k)(!t.isDragging(), 'Cannot call beginDrag while dragging.'),
+    (0, r.k)(!t.isDragging(), "Cannot call beginDrag while dragging."),
         e.forEach(function (e) {
-            (0, r.k)(n.getSource(e), 'Expected sourceIds to be registered.');
-        }));
+            (0, r.k)(n.getSource(e), "Expected sourceIds to be registered.");
+        });
 }
 function u(e) {
-    (0, r.k)('function' == typeof e, 'When clientOffset is provided, getSourceClientOffset must be a function.');
+    (0, r.k)("function" == typeof e, "When clientOffset is provided, getSourceClientOffset must be a function.");
 }
 function d(e) {
-    (0, r.k)((0, o.Kn)(e), 'Item must be an object.');
+    (0, r.k)((0, o.Kn)(e), "Item must be an object.");
 }
 function f(e, t) {
     for (var n = null, r = e.length - 1; r >= 0; r--)

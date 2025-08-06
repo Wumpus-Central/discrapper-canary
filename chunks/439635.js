@@ -37,30 +37,30 @@ let v = (0, c.Z)(
             I = (0, f.Z)(t),
             k = (0, a.Z)({
                 id: t.id,
-                label: Z.intl.string(Z.t.gFHI3t)
+                label: Z.intl.string(Z.t.gFHI3t),
             }),
-            L = (0, P.Z)(t, 'title_context_menu'),
-            M = (0, u.Mn)('ChannelTitleContextMenu'),
+            L = (0, P.Z)(t, "title_context_menu"),
+            M = (0, u.Mn)("ChannelTitleContextMenu"),
             U = (0, h.ZP)(t);
         return (0, r.jsxs)(i.v2r, {
-            navId: 'channel-context',
+            navId: "channel-context",
             onClose: l.Zy,
-            'aria-label': Z.intl.string(Z.t.Xm41aW),
+            "aria-label": Z.intl.string(Z.t.Xm41aW),
             onSelect: o,
             children: [
                 (0, r.jsx)(i.kSQ, { children: v }),
                 (0, r.jsx)(i.kSQ, { children: N }),
                 (0, r.jsxs)(i.kSQ, {
-                    children: [c ? C : M ? U : w, m]
+                    children: [c ? C : M ? U : w, m],
                 }),
                 (0, r.jsxs)(i.kSQ, {
-                    children: [S, x, T, A, D]
+                    children: [S, x, T, A, D],
                 }),
                 (0, r.jsx)(i.kSQ, { children: L }),
                 (0, r.jsx)(i.kSQ, { children: I }),
-                (0, r.jsx)(i.kSQ, { children: k })
-            ]
+                (0, r.jsx)(i.kSQ, { children: k }),
+            ],
         });
     },
-    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_TITLE_MENU]
+    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_TITLE_MENU],
 );

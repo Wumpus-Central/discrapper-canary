@@ -1,1 +1,1 @@
-e.exports = { freeTrialText: 'freeTrialText__1995d' };
+e.exports = { freeTrialText: "freeTrialText__1995d" };

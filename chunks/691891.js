@@ -7,19 +7,19 @@ var i = n(120356),
     s = n(481060),
     l = n(702107);
 let c = (e) => {
-    let { className: t, onDismiss: n, 'aria-label': i } = e;
+    let { className: t, onDismiss: n, "aria-label": i } = e;
     return (0, r.jsx)(a.zx, {
         look: a.zx.Looks.BLANK,
         size: a.zx.Sizes.NONE,
         onClick: n,
         className: o()(l.dismissButton, t),
-        'aria-label': i,
+        "aria-label": i,
         children: (0, r.jsx)(s.Dio, {
-            size: 'xs',
-            color: 'currentColor',
-            colorClass: l.dismissIcon
-        })
+            size: "xs",
+            color: "currentColor",
+            colorClass: l.dismissIcon,
+        }),
     });
 };
-c.displayName = 'DismissButton';
+c.displayName = "DismissButton";
 let u = c;

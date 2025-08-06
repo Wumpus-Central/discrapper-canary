@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     FJ: () => en,
     RE: () => G,
     T5: () => H,
@@ -15,7 +15,7 @@
     tr: () => et,
     vv: () => $,
     zM: () => K,
-    zy: () => q
+    zy: () => q,
 }),
     n(35282),
     n(413496),
@@ -26,7 +26,7 @@
     n(704826),
     n(997841),
     n(642613),
-    n(392711));
+    n(392711);
 var r,
     i,
     l = n(729594),
@@ -60,24 +60,24 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -99,27 +99,34 @@ function w(e, t) {
         e
     );
 }
-let L = null != (i = null == (r = T.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) ? void 0 : r.host) ? i : 'localhost',
+let L = null != (i = null == (r = T.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) ? void 0 : r.host) ? i : "localhost",
     R = (function () {
-        let e = L.split(':')[0];
-        if (!e.includes('.')) return e;
-        let t = e.split('.'),
+        let e = L.split(":")[0];
+        if (!e.includes(".")) return e;
+        let t = e.split("."),
             n = t[t.length - 1];
-        return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
+        return /^\d+$/.test(n) ? e : t.slice(-2).join(".");
     })(),
-    D = new RegExp('^'.concat(N.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(N.Z.escape(R), '|discordapp.com|discord.com)$')),
+    D = new RegExp(
+        "^".concat(N.Z.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.Z.escape(R), "|discordapp.com|discord.com)$"),
+    ),
     k = +C.Z.Millis.MINUTE,
     M = {};
 function U(e) {
-    return ('customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = G(e.src)), Array.isArray(e.content) && (e.content = e.content.map(U)), e);
+    return (
+        "customEmoji" === e.type && (e.type = "emoji"),
+        "emoji" === e.type && e.src && (e.src = G(e.src)),
+        Array.isArray(e.content) && (e.content = e.content.map(U)),
+        e
+    );
 }
 function G(e) {
     return /^http/.test(e)
         ? e
-        : ''
-              .concat(location.protocol, '//')
+        : ""
+              .concat(location.protocol, "//")
               .concat(location.host)
-              .concat('/' === e.charAt(0) ? '' : '/')
+              .concat("/" === e.charAt(0) ? "" : "/")
               .concat(e);
 }
 function V(e) {
@@ -133,16 +140,19 @@ function H(e, t) {
         [Z.d4z.GUILD_CATEGORY, ...g.tx].includes(e.type) ||
             n.push(
                 new Promise((t) => {
-                    (E.Z.whenReady(e.id, () => t()),
+                    E.Z.whenReady(e.id, () => t()),
                         c.Z.fetchMessages({
                             channelId: e.id,
-                            limit: Z.AQB
-                        }));
-                })
+                            limit: Z.AQB,
+                        });
+                }),
             ),
         Promise.all(n).then(() => {
             var n;
-            let i = (!e.isNSFW() || (null == (n = v.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) === !0) && t ? E.Z.getMessages(e.id).toArray().map(B) : [],
+            let i =
+                    (!e.isNSFW() || (null == (n = v.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) === !0) && t
+                        ? E.Z.getMessages(e.id).toArray().map(B)
+                        : [],
                 l = Object.values(I.Z.getVoiceStatesForChannel(e.id)).map((t) => F(r, e.id, t));
             return {
                 id: e.id,
@@ -154,7 +164,7 @@ function H(e, t) {
                 guild_id: r,
                 position: e.position,
                 messages: i,
-                voice_states: l
+                voice_states: l,
             };
         })
     );
@@ -182,13 +192,13 @@ function B(e) {
         attachments: e.attachments,
         author: null != r ? (0, j.Z)(r) : void 0,
         pinned: e.pinned,
-        type: e.type
+        type: e.type,
     };
 }
 function F(e, t, n) {
     let { mute: r, deaf: i, selfMute: l, selfDeaf: a, suppress: o, userId: s } = n,
         c = v.default.getUser(s);
-    if (null == c) throw Error('Invalid user id: '.concat(s));
+    if (null == c) throw Error("Invalid user id: ".concat(s));
     return {
         nick: S.ZP.getName(e, t, c),
         mute: O.Z.isLocalMute(c.id),
@@ -199,9 +209,9 @@ function F(e, t, n) {
             deaf: i,
             self_mute: l,
             self_deaf: a,
-            suppress: o
+            suppress: o,
         },
-        user: (0, j.Z)(c)
+        user: (0, j.Z)(c),
     };
 }
 function z(e, t) {
@@ -210,13 +220,19 @@ function z(e, t) {
         user: (0, j.Z)(t),
         presence: {
             status: y.Z.getStatus(t.id, null),
-            activity: null
-        }
+            activity: null,
+        },
     };
 }
 function W(e, t) {
     var n;
-    return null == t ? e : w(x({}, e), { presence: w(x({}, e.presence), { activity: null != (n = y.Z.getApplicationActivity(e.user.id, t)) ? n : null }) });
+    return null == t
+        ? e
+        : w(x({}, e), {
+              presence: w(x({}, e.presence), {
+                  activity: null != (n = y.Z.getApplicationActivity(e.user.id, t)) ? n : null,
+              }),
+          });
 }
 function Y(e) {
     let t;
@@ -228,7 +244,10 @@ function Y(e) {
     } catch (e) {
         return !1;
     }
-    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && !!(D.test(e) && D.test(n)));
+    return (
+        (window.location.hostname === t && "localhost" === t) ||
+        (null == e.match("staging") && !!(D.test(e) && D.test(n)))
+    );
 }
 function K(e, t, n) {
     let r = _.Z.getGuild(e.getGuildId());
@@ -239,7 +258,7 @@ function q(e) {
         case Z.hes.RTC_CONNECTED:
         case Z.hes.RTC_CONNECTING:
         case Z.hes.RTC_DISCONNECTED:
-            return e.replace(/^RTC_/, 'VOICE_');
+            return e.replace(/^RTC_/, "VOICE_");
         default:
             return e;
     }
@@ -253,7 +272,7 @@ function Q(e) {
             url: Z.ANM.APPLICATION_RPC(e),
             oldFormErrors: !0,
             retries: 3,
-            rejectWithError: !0
+            rejectWithError: !0,
         })
         .then(
             (e) => {
@@ -261,19 +280,20 @@ function Q(e) {
                 return t;
             },
             () => {
-                throw new P.Z({ closeCode: Z.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
-            }
+                throw new P.Z({ closeCode: Z.$VG.INVALID_CLIENTID }, "Invalid Client ID");
+            },
         );
 }
 async function J(e, t, n) {
     let r = d.Z.getApplication(t);
-    if ('string' == typeof n)
+    if ("string" == typeof n)
         if (e.transport === A.He.POST_MESSAGE) {
             let e = (0, u.ZP)(t);
-            if (null == e || !V(n, [e])) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+            if (null == e || !V(n, [e])) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, "Invalid Origin");
         } else {
             let e = await Q(t);
-            if (((r = f.ZP.createFromServer(e)), !V(n, e.rpc_origins))) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+            if (((r = f.ZP.createFromServer(e)), !V(n, e.rpc_origins)))
+                throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, "Invalid Origin");
         }
     null == r && (r = f.ZP.createFromServer(await Q(t)));
     let { id: i, name: l, icon: a, coverImage: o, flags: s } = r;
@@ -282,12 +302,12 @@ async function J(e, t, n) {
         name: l,
         icon: a,
         coverImage: o,
-        flags: s
+        flags: s,
     };
 }
 async function $(e, t) {
     let n = M[e];
-    (null == n && ((n = new s.Z(t ? 2 : 60, k)), (M[e] = n)), await n.process());
+    null == n && ((n = new s.Z(t ? 2 : 60, k)), (M[e] = n)), await n.process();
 }
 function ee(e, t) {
     null == t && (e.authorization.scopes = [A.lH]);
@@ -299,26 +319,26 @@ function et(e) {
                 .sort((e, t) => e.index - t.index)
                 .map((e) => ({
                     id: e.id,
-                    name: e.name
+                    name: e.name,
                 })),
         r = e(t);
     return {
         input: {
             available_devices: n(O.Z.getInputDevices()),
             device_id: t.inputDeviceId,
-            volume: t.inputVolume
+            volume: t.inputVolume,
         },
         output: {
             available_devices: n(O.Z.getOutputDevices()),
             device_id: t.outputDeviceId,
-            volume: t.outputVolume
+            volume: t.outputVolume,
         },
         mode: {
             type: t.mode,
             auto_threshold: t.modeOptions.autoThreshold,
             threshold: t.modeOptions.threshold,
             shortcut: r,
-            delay: t.modeOptions.delay
+            delay: t.modeOptions.delay,
         },
         automatic_gain_control: t.automaticGainControl,
         echo_cancellation: t.echoCancellation,
@@ -326,7 +346,7 @@ function et(e) {
         qos: t.qos,
         silence_warning: t.silenceWarning,
         deaf: t.deaf,
-        mute: t.mute
+        mute: t.mute,
     };
 }
 function en(e, t) {
@@ -335,18 +355,19 @@ function en(e, t) {
     return {
         input_mode: {
             type: n.mode,
-            shortcut: r
+            shortcut: r,
         },
         local_mutes: Object.keys(n.localMutes),
         local_volumes: n.localVolumes,
         self_mute: n.mute,
-        self_deaf: n.deaf
+        self_deaf: n.deaf,
     };
 }
 function er(e) {
-    if (e !== A.He.POST_MESSAGE) throw new P.Z({ errorCode: Z.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== A.He.POST_MESSAGE)
+        throw new P.Z({ errorCode: Z.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, " transport"));
 }
 function ei(e) {
-    if (null == e.id) throw new P.Z({ errorCode: Z.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new P.Z({ errorCode: Z.lTL.INVALID_COMMAND }, "Invalid application");
     return e.id;
 }

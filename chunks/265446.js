@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => s }), n(35282), n(388685));
+n.d(t, { Z: () => s }), n(35282), n(388685);
 var r = n(53529),
     i = n(436660),
     o = n(887490);
-let a = ['applicationCommand'];
+let a = ["applicationCommand"];
 function s(e) {
     let { insertBreak: t, insertText: n } = e;
     return (
@@ -13,12 +13,12 @@ function s(e) {
             e.insertBreak();
         }),
         (e.insertText = (t) => {
-            if (0 > t.indexOf('\r') && 0 > t.indexOf('\n')) return void n(t);
+            if (0 > t.indexOf("\r") && 0 > t.indexOf("\n")) return void n(t);
             let o = t.split(/\r\n|\r|\n/);
-            if (!l(e)) return void n(o.join(' '));
+            if (!l(e)) return void n(o.join(" "));
             r.T.withSingleEntry(e, () => {
                 let t = !1;
-                for (let r of o) (t && i.Q.splitNodes(e, { always: !0 }), n(r), (t = !0));
+                for (let r of o) t && i.Q.splitNodes(e, { always: !0 }), n(r), (t = !0);
             });
         }),
         e

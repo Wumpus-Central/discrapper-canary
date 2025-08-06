@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(539854));
+n.d(t, { Z: () => C }), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(873546),
@@ -28,11 +28,11 @@ function S(e) {
         ? (0, r.jsx)(O.Z, {
               giftingPromotionConfig: i,
               disabled: t,
-              channel: n
+              channel: n,
           })
         : (0, r.jsx)(y.Z, {
               disabled: t,
-              channel: n
+              channel: n,
           });
 }
 function A(e) {
@@ -42,9 +42,9 @@ function A(e) {
         x = N(C.id, O, P),
         { activeCommand: M, activeCommandOption: k } = (0, a.cj)([c.Z], () => ({
             activeCommand: c.Z.getActiveCommand(C.id),
-            activeCommandOption: c.Z.getActiveOption(C.id)
+            activeCommandOption: c.Z.getActiveOption(C.id),
         })),
-        { paymentsBlocked: j } = u.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
+        { paymentsBlocked: j } = u.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
         U = [],
         G = !C.isDM() || void 0 === C.recipients || C.recipients.length > 1,
         B = (0, a.e7)([h.default], () => (G ? null : h.default.getUser(C.recipients[0]))),
@@ -59,10 +59,10 @@ function A(e) {
                     S,
                     {
                         disabled: A,
-                        channel: C
+                        channel: C,
                     },
-                    'gift'
-                )
+                    "gift",
+                ),
             ),
         (null == (p = O.gifs) ? void 0 : p.button) != null &&
             null == M &&
@@ -72,10 +72,10 @@ function A(e) {
                     E.Z,
                     {
                         disabled: A,
-                        type: O
+                        type: O,
                     },
-                    'gif'
-                )
+                    "gif",
+                ),
             ),
         Z &&
             null == M &&
@@ -84,10 +84,10 @@ function A(e) {
                     b.Z,
                     {
                         disabled: A,
-                        channel: C
+                        channel: C,
                     },
-                    'confetti'
-                )
+                    "confetti",
+                ),
             ),
         !Z &&
             (null == (y = O.stickers) ? void 0 : y.button) != null &&
@@ -98,10 +98,10 @@ function A(e) {
                     I.Z,
                     {
                         disabled: A,
-                        type: O
+                        type: O,
                     },
-                    'sticker'
-                )
+                    "sticker",
+                ),
             )),
     (null == (n = O.emojis) ? void 0 : n.button) != null &&
         (null == M || (null != k && k.type !== s.jw.ATTACHMENT)) &&
@@ -110,10 +110,10 @@ function A(e) {
                 g.Z,
                 {
                     disabled: A,
-                    type: O
+                    type: O,
                 },
-                'emoji'
-            )
+                "emoji",
+            ),
         ),
     null != D && U.push(D),
     (null == (i = O.submit) ? void 0 : i.button) != null &&
@@ -123,16 +123,16 @@ function A(e) {
                 v.Z,
                 {
                     onClick: R,
-                    disabled: A || x
+                    disabled: A || x,
                 },
-                'submit'
-            )
+                "submit",
+            ),
         ),
     0 === U.length)
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: T.buttons,
-              children: U
+              children: U,
           });
 }
 function N(e, t, n) {

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     m: () => _,
-    o: () => g
+    o: () => g,
 }),
-    n(388685));
+    n(388685);
 var r = n(379649),
     i = n(710845),
     o = n(314897),
@@ -19,27 +19,35 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 var _ = (function (e) {
-    return ((e.SELF_VIDEO = 'self_video'), (e.SELF_STREAM = 'self_stream'), (e.REMOTE_VIDEO = 'remote_video'), (e.REMOTE_STREAM = 'remote_stream'), (e.CHANGE_VIDEO_BACKGROUND = 'change_video_background'), (e.REPLAY_VIDEO_STREAM = 'replay_video_stream'), e);
+    return (
+        (e.SELF_VIDEO = "self_video"),
+        (e.SELF_STREAM = "self_stream"),
+        (e.REMOTE_VIDEO = "remote_video"),
+        (e.REMOTE_STREAM = "remote_stream"),
+        (e.CHANGE_VIDEO_BACKGROUND = "change_video_background"),
+        (e.REPLAY_VIDEO_STREAM = "replay_video_stream"),
+        e
+    );
 })({});
 let p = new Map();
 function h(e) {
     var t;
     let n = (null != (t = p.get(e)) ? t : 0) + 1;
-    return (p.set(e, n), n);
+    return p.set(e, n), n;
 }
 function m(e) {
     if (null != e) {
-        if (e.isGuildVoice()) return 'guild_voice';
-        if (e.isGuildStageVoice()) return 'is_stage_channel';
-        if (e.isDM()) return 'dm';
-        if (e.isGroupDM()) return 'group_dm';
+        if (e.isGuildVoice()) return "guild_voice";
+        if (e.isGuildStageVoice()) return "is_stage_channel";
+        if (e.isDM()) return "dm";
+        if (e.isGroupDM()) return "group_dm";
     }
     return null;
 }
@@ -51,8 +59,16 @@ class g {
         if (null == this.spinnerVisibleStart) return;
         let i = h(n),
             f = (0, r.zO)() - this.spinnerVisibleStart;
-        if (((this.spinnerVisibleStart = null), f < 0)) return void this.logger.warn('spinner duration is negative: '.concat(f, ' ms\n        [').concat(e, ', count for stream: ').concat(i, ']'));
-        this.logger.info('spinner visible for '.concat(f, ' ms\n      [').concat(e, ', count for stream: ').concat(i, ']'));
+        if (((this.spinnerVisibleStart = null), f < 0))
+            return void this.logger.warn(
+                "spinner duration is negative: "
+                    .concat(f, " ms\n        [")
+                    .concat(e, ", count for stream: ")
+                    .concat(i, "]"),
+            );
+        this.logger.info(
+            "spinner visible for ".concat(f, " ms\n      [").concat(e, ", count for stream: ").concat(i, "]"),
+        );
         let _ = l.Z.getGuildId(),
             p = c.Z.getUserVoiceChannelId(_, o.default.getId()),
             g = m(a.Z.getChannel(p));
@@ -68,10 +84,10 @@ class g {
             spinning_user_id: t,
             connection_type: s.Z.getType(),
             effective_connection_speed: s.Z.getEffectiveConnectionSpeed(),
-            service_provider: s.Z.getServiceProvider()
+            service_provider: s.Z.getServiceProvider(),
         });
     }
     constructor(e) {
-        (f(this, 'logger', void 0), f(this, 'spinnerVisibleStart', null), (this.logger = new i.Z(e)));
+        f(this, "logger", void 0), f(this, "spinnerVisibleStart", null), (this.logger = new i.Z(e));
     }
 }

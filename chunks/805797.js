@@ -14,16 +14,16 @@ e.exports = {
             if (u === n.getAnchorOffset()) {
                 var d = t.getKeyAfter(c);
                 if (null == d) return e;
-                l = n.set('focusKey', d).set('focusOffset', 0);
-            } else l = n.set('focusOffset', u);
+                l = n.set("focusKey", d).set("focusOffset", 0);
+            } else l = n.set("focusOffset", u);
         } else l = n;
         s = o(t, (l = a(l)));
-        var f = r.removeRange(t, l, 'forward');
-        return f === t ? e : i.push(e, f, 'remove-range');
+        var f = r.removeRange(t, l, "forward");
+        return f === t ? e : i.push(e, f, "remove-range");
     },
     paste: function (e) {
         if (!s) return e;
         var t = r.replaceWithFragment(e.getCurrentContent(), e.getSelection(), s);
-        return i.push(e, t, 'insert-fragment');
-    }
+        return i.push(e, t, "insert-fragment");
+    },
 };

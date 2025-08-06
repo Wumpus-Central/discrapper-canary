@@ -7,9 +7,9 @@ var n = r(465407),
 let s = (0, n.Z)(
     (function () {
         return arguments;
-    })()
+    })(),
 )
     ? n.Z
     : function (e) {
-          return (0, o.Z)(e) && i.call(e, 'callee') && !l.call(e, 'callee');
+          return (0, o.Z)(e) && i.call(e, "callee") && !l.call(e, "callee");
       };

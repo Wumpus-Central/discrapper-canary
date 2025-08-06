@@ -12,14 +12,14 @@ function o(e) {
     (null != c ? l.Z.isLaunchable(c) : l.Z.isGameLaunchable(o)).then((e) => {
         e !== s &&
             r.Z.dispatch({
-                type: 'GAME_LAUNCHABLE_UPDATE',
+                type: "GAME_LAUNCHABLE_UPDATE",
                 gameId: o,
-                isLaunchable: e
+                isLaunchable: e,
             });
     });
 }
 let s = {
     initialize() {
-        r.Z.subscribe('CHECK_LAUNCHABLE_GAME', o);
-    }
+        r.Z.subscribe("CHECK_LAUNCHABLE_GAME", o);
+    },
 };

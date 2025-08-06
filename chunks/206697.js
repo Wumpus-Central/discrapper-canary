@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,70 +33,70 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function v() {
     return (0, _.Z)()
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: g.emptyContainer,
-              children: (0, r.jsxs)('div', {
+              children: (0, r.jsxs)("div", {
                   className: g.emptyInner,
                   children: [
-                      (0, r.jsx)('img', {
+                      (0, r.jsx)("img", {
                           src: E,
                           className: g.image,
-                          alt: ''
+                          alt: "",
                       }),
                       (0, r.jsx)(l.X6q, {
                           className: g.header,
-                          variant: 'heading-xl/semibold',
-                          color: 'text-default',
-                          children: m.intl.string(m.t.erEf2t)
+                          variant: "heading-xl/semibold",
+                          color: "text-default",
+                          children: m.intl.string(m.t.erEf2t),
                       }),
                       (0, r.jsx)(a.xv, {
-                          variant: 'text-md/medium',
-                          color: 'text-muted',
-                          children: m.intl.string(m.t.NaRCXV)
-                      })
-                  ]
-              })
+                          variant: "text-md/medium",
+                          color: "text-muted",
+                          children: m.intl.string(m.t.NaRCXV),
+                      }),
+                  ],
+              }),
           })
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: g.emptyContainer,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: g.emptyInner,
                       children: [
-                          (0, r.jsx)('img', {
+                          (0, r.jsx)("img", {
                               src: b,
                               className: g.image,
-                              alt: ''
+                              alt: "",
                           }),
                           (0, r.jsx)(l.X6q, {
                               className: g.header,
-                              variant: 'heading-xl/semibold',
-                              color: 'text-default',
-                              children: m.intl.string(m.t.w4DRbW)
+                              variant: "heading-xl/semibold",
+                              color: "text-default",
+                              children: m.intl.string(m.t.w4DRbW),
                           }),
                           (0, r.jsx)(a.xv, {
-                              variant: 'text-md/medium',
-                              color: 'text-muted',
-                              children: m.intl.string(m.t.F6u3Ex)
-                          })
-                      ]
+                              variant: "text-md/medium",
+                              color: "text-muted",
+                              children: m.intl.string(m.t.F6u3Ex),
+                          }),
+                      ],
                   }),
-                  (0, r.jsx)(I, {})
-              ]
+                  (0, r.jsx)(I, {}),
+              ],
           });
 }
 function I() {
@@ -104,35 +104,35 @@ function I() {
         t = i.useCallback(
             () =>
                 (0, l.ZDy)(async () => {
-                    let { default: e } = await n.e('34906').then(n.bind(n, 639565));
+                    let { default: e } = await n.e("34906").then(n.bind(n, 639565));
                     return (t) => (0, r.jsx)(e, O({ source: c.Z.FOR_LATER_POPOUT }, t));
                 }),
-            []
+            [],
         ),
         _ = m.intl.format(m.t.qXh3fn, {
             nitroTierName: e,
-            onClick: t
+            onClick: t,
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.upsellContainer,
         children: [
             (0, r.jsx)(o.SrA, {
-                size: 'md',
-                color: u.JX.PREMIUM_TIER_2
+                size: "md",
+                color: u.JX.PREMIUM_TIER_2,
             }),
             (0, r.jsx)(a.xv, {
-                variant: 'text-xs/medium',
-                color: 'header-primary',
+                variant: "text-xs/medium",
+                color: "header-primary",
                 className: g.upsellText,
-                children: _
+                children: _,
             }),
             (0, r.jsx)(d.Z, {
                 className: g.upsellButton,
                 size: s.Ph.TINY,
                 shinyButtonClassName: g.upsellButton,
                 subscriptionTier: h.Si.TIER_2,
-                premiumModalAnalyticsLocation: { section: p.jXE.FOR_LATER_POPOUT_UPSELL }
-            })
-        ]
+                premiumModalAnalyticsLocation: { section: p.jXE.FOR_LATER_POPOUT_UPSELL },
+            }),
+        ],
     });
 }

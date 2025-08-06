@@ -12,52 +12,52 @@ function d(t) {
         x = (0, l.Dt)();
     return (0, i.jsxs)(a.Y0X, {
         transitionState: b,
-        'aria-labelledby': x,
-        parentComponent: 'SuspiciousDownloadModal',
+        "aria-labelledby": x,
+        parentComponent: "SuspiciousDownloadModal",
         children: [
-            (0, i.jsx)('img', {
+            (0, i.jsx)("img", {
                 className: c.art,
                 src: e(902623),
-                alt: ''
+                alt: "",
             }),
             (0, i.jsx)(a.hzk, {
-                children: (0, i.jsxs)('div', {
+                children: (0, i.jsxs)("div", {
                     className: c.modalContent,
                     children: [
                         (0, i.jsx)(a.X6q, {
                             id: x,
-                            variant: 'heading-lg/semibold',
+                            variant: "heading-lg/semibold",
                             className: c.title,
-                            children: r.intl.string(r.t.XtDo9f)
+                            children: r.intl.string(r.t.XtDo9f),
                         }),
                         (0, i.jsx)(a.Text, {
-                            variant: 'text-md/normal',
+                            variant: "text-md/normal",
                             className: c.body,
-                            children: r.intl.string(r.t.L9yFkp)
-                        })
-                    ]
-                })
+                            children: r.intl.string(r.t.L9yFkp),
+                        }),
+                    ],
+                }),
             }),
             (0, i.jsxs)(a.mzw, {
                 children: [
                     (0, i.jsx)(a.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: r.intl.string(r.t.j7Vi2t),
-                        type: 'button',
-                        onClick: d
+                        type: "button",
+                        onClick: d,
                     }),
                     (0, i.jsx)(s.zx, {
-                        type: 'button',
+                        type: "button",
                         size: s.zx.Sizes.MEDIUM,
                         color: s.zx.Colors.TRANSPARENT,
                         look: s.zx.Looks.LINK,
                         onClick: () => {
-                            (d(), (0, o.Z)(n, !0));
+                            d(), (0, o.Z)(n, !0);
                         },
-                        children: r.intl.string(r.t['/bHu8/'])
-                    })
-                ]
-            })
-        ]
+                        children: r.intl.string(r.t["/bHu8/"]),
+                    }),
+                ],
+            }),
+        ],
     });
 }

@@ -18,16 +18,16 @@ function u(t) {
         }),
         a.useEffect(() => () => b.current(), []),
         (0, n.jsx)(o.v2r, {
-            navId: 'overlay-notifications-widget-context-menu',
+            navId: "overlay-notifications-widget-context-menu",
             onClose: s.Zy,
-            'aria-label': f.intl.string(f.t.tPfVWl),
+            "aria-label": f.intl.string(f.t.tPfVWl),
             onSelect: i,
             children: (0, n.jsx)(o.S89, {
                 label: f.intl.string(f.t.Fy5kPj),
                 checked: u,
-                id: 'overlay-text-chat-notifications',
-                action: () => l.Z.setNotificationDisabledSetting(r.OverlayNotificationDisabledSetting.TEXT_CHAT, !u)
-            })
+                id: "overlay-text-chat-notifications",
+                action: () => l.Z.setNotificationDisabledSetting(r.OverlayNotificationDisabledSetting.TEXT_CHAT, !u),
+            }),
         })
     );
 }

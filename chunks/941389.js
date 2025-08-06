@@ -10,10 +10,10 @@ function c(e, t) {
     let n = t.getGuildId();
     return null != n && e.type === s.uaV.USER_JOIN && o.Z.canWithPartialContext(s.Plq.MANAGE_GUILD, { guildId: n })
         ? (0, r.jsx)(i.sNh, {
-              id: 'configure',
+              id: "configure",
               label: l.intl.string(l.t.NpHUi4),
               icon: i.idN,
-              action: () => (0, a.zW)(t)
+              action: () => (0, a.zW)(t),
           })
         : null;
 }

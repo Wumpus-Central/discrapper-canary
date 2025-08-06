@@ -1,6 +1,6 @@
-(n.d(t, {
+n.d(t, {
     G: () => s,
-    H: () => l
+    H: () => l,
 }),
     n(368063),
     n(410992),
@@ -14,7 +14,7 @@
     n(918970),
     n(121784),
     n(644351),
-    n(146733));
+    n(146733);
 var r = n(392711),
     i = n.n(r),
     o = n(149765),
@@ -23,17 +23,23 @@ function s(e) {
     return i().cloneDeepWith(e, (e) =>
         (0, o.Bw)(e)
             ? {
-                  __tag__: 'bigflag',
-                  data: e.toJSON()
+                  __tag__: "bigflag",
+                  data: e.toJSON(),
               }
             : (0, a.lq)(e)
               ? {
-                    __tag__: 'uint8array',
-                    data: Array.from(e)
+                    __tag__: "uint8array",
+                    data: Array.from(e),
                 }
-              : void 0
+              : void 0,
     );
 }
 function l(e) {
-    return i().cloneDeepWith(e, (e) => (null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__ ? o.vB(e.data) : (0, a.Bx)(e) ? new Uint8Array(e.data) : void 0));
+    return i().cloneDeepWith(e, (e) =>
+        null != e && "object" == typeof e && "__tag__" in e && "bigflag" === e.__tag__
+            ? o.vB(e.data)
+            : (0, a.Bx)(e)
+              ? new Uint8Array(e.data)
+              : void 0,
+    );
 }

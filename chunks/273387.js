@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var r,
     i = n(442837),
     l = n(570140),
@@ -11,7 +11,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -86,7 +86,7 @@ class y extends (r = i.ZP.Store) {
         return b[e];
     }
 }
-o(y, 'displayName', 'GuildDirectoryStore');
+o(y, "displayName", "GuildDirectoryStore");
 let x = new y(l.Z, {
     GUILD_DIRECTORY_FETCH_START: function () {
         h = !0;
@@ -96,12 +96,15 @@ let x = new y(l.Z, {
         h = !1;
         let r = {},
             i = {};
-        (n.forEach((e) => {
+        n.forEach((e) => {
             let t = (0, a.MQ)(e);
-            ((r[t.guildId] = t), null != i[t.primaryCategoryId] ? (i[t.primaryCategoryId][t.guildId] = t) : (i[t.primaryCategoryId] = { [t.guildId]: t }));
+            (r[t.guildId] = t),
+                null != i[t.primaryCategoryId]
+                    ? (i[t.primaryCategoryId][t.guildId] = t)
+                    : (i[t.primaryCategoryId] = { [t.guildId]: t });
         }),
             (p[t] = r),
-            (g[t] = i));
+            (g[t] = i);
     },
     GUILD_DIRECTORY_FETCH_FAILURE: function () {
         h = !1;
@@ -113,7 +116,10 @@ let x = new y(l.Z, {
         if (null == h || (null == (t = p[o]) ? void 0 : t[h.guildId]) != null) return;
         p[o] = u(c({}, p[o]), { [h.guildId]: h });
         let f = null != (r = h.primaryCategoryId) ? r : s.AR.UNCATEGORIZED;
-        if (((g[o] = u(c({}, g[o]), { [f]: u(c({}, null == (n = g[o]) ? void 0 : n[f]), { [h.guildId]: h }) })), null != m[o])) {
+        if (
+            ((g[o] = u(c({}, g[o]), { [f]: u(c({}, null == (n = g[o]) ? void 0 : n[f]), { [h.guildId]: h }) })),
+            null != m[o])
+        ) {
             let e = null != (l = null == (i = m[o]) ? void 0 : i[f]) ? l : 0;
             m[o] = u(c({}, m[o]), { [f]: e + 1 });
         }
@@ -125,7 +131,7 @@ let x = new y(l.Z, {
         if (null == l) return;
         let a = l.primaryCategoryId,
             s = Object.assign({}, p[r]);
-        (delete s[i], null == (n = b[r]) || n.delete(i), (b[r] = new Set(b[r])), (p[r] = s));
+        delete s[i], null == (n = b[r]) || n.delete(i), (b[r] = new Set(b[r])), (p[r] = s);
         let o = Object.assign({}, g[r][a]);
         if ((delete o[i], (g[r] = u(c({}, g[r]), { [a]: o })), null != m[r])) {
             let e = m[r][a] - 1;
@@ -141,17 +147,17 @@ let x = new y(l.Z, {
         let _ = null != (i = null == j ? void 0 : j.primaryCategoryId) ? i : s.AR.UNCATEGORIZED,
             O = null != (l = x.primaryCategoryId) ? l : s.AR.UNCATEGORIZED,
             v = Object.assign({}, null == (n = g[b]) ? void 0 : n[_]);
-        (null != j && _ !== O && delete v[x.guildId],
+        null != j && _ !== O && delete v[x.guildId],
             (g[b] = u(c({}, g[b]), {
                 [_]: v,
-                [O]: u(c({}, null == (r = g[b]) ? void 0 : r[O]), { [x.guildId]: c({}, j, x) })
+                [O]: u(c({}, null == (r = g[b]) ? void 0 : r[O]), { [x.guildId]: c({}, j, x) }),
             })),
             O !== _ &&
                 null != m[b] &&
                 (m[b] = u(c({}, m[b]), {
                     [_]: (null == (o = m[b]) ? void 0 : o[_]) > 0 ? (null == (d = m[b]) ? void 0 : d[_]) - 1 : 0,
-                    [O]: (null != (f = null == (h = m[b]) ? void 0 : h[O]) ? f : 0) + 1
-                })));
+                    [O]: (null != (f = null == (h = m[b]) ? void 0 : h[O]) ? f : 0) + 1,
+                }));
     },
     GUILD_DIRECTORY_CATEGORY_SELECT: function (e) {
         let { channelId: t, categoryId: n } = e;
@@ -164,10 +170,10 @@ let x = new y(l.Z, {
     GUILD_DIRECTORY_ADMIN_ENTRIES_FETCH_SUCCESS: function (e) {
         let { channelId: t, entries: n } = e,
             r = new Set();
-        (n.forEach((e) => {
+        n.forEach((e) => {
             let t = (0, a.MQ)(e);
             r.add(t.guildId);
         }),
-            (b[t] = r));
-    }
+            (b[t] = r);
+    },
 });

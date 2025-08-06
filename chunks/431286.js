@@ -1,4 +1,4 @@
-(n.d(t, { t: () => x }), n(388685));
+n.d(t, { t: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(636977),
@@ -21,60 +21,63 @@ var r = n(255367),
     v = n(981631),
     j = n(921944),
     E = n(46140);
-let S = 'orb-announcement-modal-key';
+let S = "orb-announcement-modal-key";
 function x() {
-    let { enabled: e } = (0, O.hl)({ location: 'virtual_currency_announcement_modal' }),
+    let { enabled: e } = (0, O.hl)({ location: "virtual_currency_announcement_modal" }),
         t = (0, o.e7)([_.Z], () => _.Z.onboardingModalOpenedPrior),
         { user: x } = (0, o.cj)([g.default], () => ({ user: g.default.getCurrentUser() })),
         I = (0, o.e7)([f.Z], () => f.Z.hasLayers()),
         P = (0, y.GE)(S),
         N = (0, m.EO)(x) || I || P,
-        [w, Z] = (0, h.US)(e && !N ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...C.b.useSelectedDismissibleContent);
+        [w, Z] = (0, h.US)(
+            e && !N ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [],
+            ...C.b.useSelectedDismissibleContent,
+        );
     i.useEffect(() => {
         w !== s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL ||
             t ||
-            (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
+            (u.Z.dispatch({ type: "VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN" }),
             (0, a.ZD)(
                 async () => {
-                    let { WrappedAnnouncementModal: e } = await n.e('86653').then(n.bind(n, 993318));
+                    let { WrappedAnnouncementModal: e } = await n.e("86653").then(n.bind(n, 993318));
                     return function (t) {
                         let { onClose: n, transitionState: i } = t,
                             o = async () => {
-                                (await n(), Z(j.L.USER_DISMISS));
+                                await n(), Z(j.L.USER_DISMISS);
                             };
                         return (0, r.jsx)(e, {
                             transitionState: i,
                             onClose: o,
                             ctaOnClick: () => {
-                                (Z(j.L.TAKE_ACTION),
+                                Z(j.L.TAKE_ACTION),
                                     (0, d.Q3)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
                                         dismissAction: j.L.INDIRECT_ACTION,
-                                        groupName: j.R.VIRTUAL_CURRENCY_ONBOARDING
+                                        groupName: j.R.VIRTUAL_CURRENCY_ONBOARDING,
                                     }),
                                     (0, d.Q3)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
                                         dismissAction: j.L.INDIRECT_ACTION,
-                                        groupName: j.R.VIRTUAL_CURRENCY_ONBOARDING
+                                        groupName: j.R.VIRTUAL_CURRENCY_ONBOARDING,
                                     }),
                                     (0, b.Y)({
                                         pageType: v.ZY5.ORBS_ANNOUNCEMENT_MODAL,
                                         sectionType: v.jXE.ORBS_ANNOUNCEMENT_MODAL,
-                                        ctaObject: v.qAy.CTA_TO_ORB_INTRO_QUEST
+                                        ctaObject: v.qAy.CTA_TO_ORB_INTRO_QUEST,
                                     }),
                                     (0, p.navigateToQuestHome)({
                                         questId: E.V6,
-                                        fromContent: l.j.ORBS_ANNOUNCEMENT_MODAL
+                                        fromContent: l.j.ORBS_ANNOUNCEMENT_MODAL,
                                     }),
-                                    n());
-                            }
+                                    n();
+                            },
                         });
                     };
                 },
                 {
                     modalKey: S,
                     onCloseRequest: () => {
-                        (Z(j.L.USER_DISMISS), (0, c.Mr3)(S));
-                    }
-                }
+                        Z(j.L.USER_DISMISS), (0, c.Mr3)(S);
+                    },
+                },
             ));
     }, [w, e, t, Z, I]);
 }

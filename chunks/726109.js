@@ -1,46 +1,49 @@
 e.exports = function (e) {
-    let t = '\\[',
-        n = '\\]';
+    let t = "\\[",
+        n = "\\]";
     return {
-        name: 'Inform 7',
-        aliases: ['i7'],
+        name: "Inform 7",
+        aliases: ["i7"],
         case_insensitive: !0,
-        keywords: { keyword: 'thing room person man woman animal container supporter backdrop door scenery open closed locked inside gender is are say understand kind of rule' },
+        keywords: {
+            keyword:
+                "thing room person man woman animal container supporter backdrop door scenery open closed locked inside gender is are say understand kind of rule",
+        },
         contains: [
             {
-                className: 'string',
+                className: "string",
                 begin: '"',
                 end: '"',
                 relevance: 0,
                 contains: [
                     {
-                        className: 'subst',
+                        className: "subst",
                         begin: t,
-                        end: n
-                    }
-                ]
+                        end: n,
+                    },
+                ],
             },
             {
-                className: 'section',
+                className: "section",
                 begin: /^(Volume|Book|Part|Chapter|Section|Table)\b/,
-                end: '$'
+                end: "$",
             },
             {
                 begin: /^(Check|Carry out|Report|Instead of|To|Rule|When|Before|After)\b/,
-                end: ':',
+                end: ":",
                 contains: [
                     {
-                        begin: '\\(This',
-                        end: '\\)'
-                    }
-                ]
+                        begin: "\\(This",
+                        end: "\\)",
+                    },
+                ],
             },
             {
-                className: 'comment',
+                className: "comment",
                 begin: t,
                 end: n,
-                contains: ['self']
-            }
-        ]
+                contains: ["self"],
+            },
+        ],
     };
 };

@@ -24,17 +24,19 @@ var n = r(73800),
                     grid: {
                         borderRadius: u,
                         boxShadow: c,
-                        absolute: '0px 0px 0px 0px',
-                        background: 'url(' + a.U(t, r, l, s.canvas) + ') center left'
-                    }
-                }
+                        absolute: "0px 0px 0px 0px",
+                        background: "url(" + a.U(t, r, l, s.canvas) + ") center left",
+                    },
+                },
             });
-        return (0, n.isValidElement)(p) ? n.cloneElement(p, i({}, p.props, { style: i({}, p.props.style, f.grid) })) : n.createElement('div', { style: f.grid });
+        return (0, n.isValidElement)(p)
+            ? n.cloneElement(p, i({}, p.props, { style: i({}, p.props.style, f.grid) }))
+            : n.createElement("div", { style: f.grid });
     };
 l.defaultProps = {
     size: 8,
-    white: 'transparent',
-    grey: 'rgba(0,0,0,.08)',
-    renderers: {}
+    white: "transparent",
+    grey: "rgba(0,0,0,.08)",
+    renderers: {},
 };
 let s = l;

@@ -1,14 +1,14 @@
-(n.d(t, {
+n.d(t, {
     I: () => s,
-    N: () => a
+    N: () => a,
 }),
-    n(415506));
+    n(415506);
 var r = n(255367),
     i = n(73800);
 let l = i.createContext(void 0);
 function a() {
     let e = i.useContext(l);
-    if (null == e) throw Error('No edit state; are you missing an <EditStateContextProvider />?');
+    if (null == e) throw Error("No edit state; are you missing an <EditStateContextProvider />?");
     return e;
 }
 function s(e) {
@@ -23,17 +23,19 @@ function s(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['children']);
+        })(e, ["children"]);
     return (0, r.jsx)(l.Provider, {
         value: n,
-        children: t
+        children: t,
     });
 }

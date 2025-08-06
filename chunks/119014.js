@@ -1,4 +1,4 @@
-(n.d(t, { i: () => u }), n(388685));
+n.d(t, { i: () => u }), n(388685);
 var r = n(73800),
     a = n(442837),
     i = n(493646),
@@ -14,14 +14,14 @@ function u(e) {
             () => [
                 {
                     id: n.id.toString(),
-                    label: n.name
+                    label: n.name,
                 },
                 ...t.map((e) => ({
                     id: e.id.toString(),
-                    label: e.name
-                }))
+                    label: e.name,
+                })),
             ],
-            [t, n]
+            [t, n],
         ),
         p = (0, o.Xh)(),
         m = r.useCallback(
@@ -31,16 +31,16 @@ function u(e) {
                     ((0, s.zZ)(d.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                         category: t.label,
                         category_id: Number(t.id),
-                        current_page: null == p ? void 0 : p.type
+                        current_page: null == p ? void 0 : p.type,
                     }),
                     (0, c.O4)({ categoryId: e }));
             },
-            [null == p ? void 0 : p.type, u]
+            [null == p ? void 0 : p.type, u],
         ),
         h = null != e && u.some((t) => t.id === e) ? e : u[0].id;
     return {
         tabs: u,
         selectedTab: h,
-        onSelectTab: m
+        onSelectTab: m,
     };
 }

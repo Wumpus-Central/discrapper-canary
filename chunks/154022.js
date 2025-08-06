@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => J }), n(388685));
+n.d(t, { Z: () => J }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -44,24 +44,24 @@ function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -93,60 +93,60 @@ let W = (0, x.hQ)(),
         (0, I.Ct)(e);
     }, 250);
 function J(e) {
-    let t = h.U.useExperiment({ location: 'useAccessibilityItems' }, { autoTrackExposure: !0 }).enabled,
-        n = _.f.useExperiment({ location: 'UserSettingsAccessibility' }).enabled;
+    let t = h.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled,
+        n = _.f.useExperiment({ location: "UserSettingsAccessibility" }).enabled;
     return (0, i.jsxs)(d.hjN, {
         tag: d.RB0.H1,
         title: B.intl.string(B.t.G0neg4),
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: G.marginBottom20,
-                children: (0, i.jsx)(Q, {})
+                children: (0, i.jsx)(Q, {}),
             }),
             t
                 ? (0, i.jsx)(T.F, {
                       setting: w.s6.ACCESSIBILITY_HIGH_CONTRAST,
-                      children: (0, i.jsx)($, {})
+                      children: (0, i.jsx)($, {}),
                   })
                 : null,
             (0, i.jsxs)(T.F, {
                 setting: w.s6.ACCESSIBILITY_SATURATION,
-                children: [(0, i.jsx)(ee, {}), (0, i.jsx)(d.$i$, {})]
+                children: [(0, i.jsx)(ee, {}), (0, i.jsx)(d.$i$, {})],
             }),
             (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_LINK_DECORATIONS,
-                children: (0, i.jsx)(et, {})
+                children: (0, i.jsx)(et, {}),
             }),
             (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_ROLE_STYLE,
-                children: (0, i.jsx)(en, {})
+                children: (0, i.jsx)(en, {}),
             }),
             n &&
                 (0, i.jsx)(T.F, {
                     setting: w.s6.ACCESSIBILITY_DISPLAY_NAME_STYLES,
-                    children: (0, i.jsx)(ei, {})
+                    children: (0, i.jsx)(ei, {}),
                 }),
             (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_PROFILE_COLORS,
-                children: (0, i.jsx)(er, {})
+                children: (0, i.jsx)(er, {}),
             }),
             (0, f.b)()
                 ? (0, i.jsxs)(T.F, {
                       setting: w.s6.ACCESSIBILITY_CONTRAST,
-                      children: [(0, i.jsx)(es, {}), ' ']
+                      children: [(0, i.jsx)(es, {}), " "],
                   })
                 : null,
             (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_REDUCED_MOTION,
-                children: (0, i.jsx)(ea, {})
+                children: (0, i.jsx)(ea, {}),
             }),
             (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_STICKERS,
-                children: (0, i.jsx)(el, {})
+                children: (0, i.jsx)(el, {}),
             }),
             (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_MESSAGES,
-                children: (0, i.jsx)(eo, {})
+                children: (0, i.jsx)(eo, {}),
             }),
             (0, i.jsx)(ec, {}),
             (0, i.jsxs)(T.F, {
@@ -155,16 +155,16 @@ function J(e) {
                     (0, i.jsx)(d.$i$, { className: G.marginTop20 }),
                     (0, i.jsx)(d.Text, {
                         className: G.marginTop20,
-                        variant: 'text-md/normal',
+                        variant: "text-md/normal",
                         children: B.intl.format(B.t.DHpTjY, {
                             onAppearanceClick() {
                                 u.Z.open(k.oAB.APPEARANCE);
-                            }
-                        })
-                    })
-                ]
-            })
-        ]
+                            },
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function Q() {
@@ -175,58 +175,60 @@ function Q() {
                     H(
                         {},
                         (0, C.ZP)({
-                            channelId: '1337',
-                            content: B.intl.formatToPlainString(B.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
-                        })
+                            channelId: "1337",
+                            content: B.intl.formatToPlainString(B.t.bB80LC, {
+                                previewLink: "https://discord.com/accessibility",
+                            }),
+                        }),
                     ),
                     {
                         state: k.yb.SENT,
-                        id: ''.concat(0)
-                    }
-                )
+                        id: "".concat(0),
+                    },
+                ),
             );
-            return ((e.colorString = 'green'), e);
+            return (e.colorString = "green"), e;
         });
     return (0, i.jsx)(d.Rny, {
         children: (0, i.jsxs)(d.Zbd, {
             className: V.preview,
-            'aria-hidden': !0,
+            "aria-hidden": !0,
             children: [
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: V.previewHeader,
                     children: [
                         (0, i.jsx)(d.zxk, {
-                            variant: 'primary',
-                            size: 'sm',
-                            text: B.intl.string(B.t['2RHHg4'])
+                            variant: "primary",
+                            size: "sm",
+                            text: B.intl.string(B.t["2RHHg4"]),
                         }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: V.previewAvatars,
                             children: [k.Skl.ONLINE, k.Skl.DND, k.Skl.IDLE].map((e) =>
                                 (0, i.jsx)(
                                     d.Xo$,
                                     {
-                                        'aria-label': B.intl.string(B.t.lqaIxM),
+                                        "aria-label": B.intl.string(B.t.lqaIxM),
                                         src: F,
                                         size: d.EFr.SIZE_32,
-                                        status: e
+                                        status: e,
                                     },
-                                    e
-                                )
-                            )
-                        })
-                    ]
+                                    e,
+                                ),
+                            ),
+                        }),
+                    ],
                 }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: V.previewMessage,
                     children: (0, i.jsx)(v.Z, {
                         compact: e,
-                        author: z(H({}, (0, O.ZH)(t)), { colorString: '#DD80F4' }),
-                        message: t
-                    })
-                })
-            ]
-        })
+                        author: z(H({}, (0, O.ZH)(t)), { colorString: "#DD80F4" }),
+                        message: t,
+                    }),
+                }),
+            ],
+        }),
     });
 }
 function $() {
@@ -237,15 +239,15 @@ function $() {
             onChange: function (e) {
                 (0, p.vW)(e ? g.X.HIGH : g.X.DEFAULT);
             },
-            note: 'Enhance visibility with bold colors and sharp contrast.',
-            children: 'High Contrast Mode'
-        })
+            note: "Enhance visibility with bold colors and sharp contrast.",
+            children: "High Contrast Mode",
+        }),
     });
 }
 function ee() {
     let { saturation: e, desaturateUserColors: t } = (0, c.cj)([g.Z], () => ({
         saturation: g.Z.saturation,
-        desaturateUserColors: g.Z.desaturateUserColors
+        desaturateUserColors: g.Z.desaturateUserColors,
     }));
     return (0, i.jsxs)(d.hjN, {
         className: G.marginTop20,
@@ -253,17 +255,17 @@ function ee() {
             (0, i.jsx)(d.vwX, {
                 id: W,
                 className: G.marginBottom8,
-                children: B.intl.string(B.t['5PWWCQ'])
+                children: B.intl.string(B.t["5PWWCQ"]),
             }),
             (0, i.jsx)(d.R94, {
                 id: Y,
                 type: d.R94.Types.DESCRIPTION,
                 className: G.marginBottom20,
-                children: B.intl.string(B.t['0PbE/P'])
+                children: B.intl.string(B.t["0PbE/P"]),
             }),
             (0, i.jsx)(d.iRW, {
-                'aria-labelledby': W,
-                'aria-describedby': Y,
+                "aria-labelledby": W,
+                "aria-describedby": Y,
                 markers: k.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,
                 stickToMarkers: !0,
@@ -271,7 +273,7 @@ function ee() {
                 minValue: 0,
                 initialValue: e,
                 onValueChange: q,
-                onMarkerRender: (e) => ((100 * e) % 2 == 0 ? ''.concat(100 * e, '%') : void 0)
+                onMarkerRender: (e) => ((100 * e) % 2 == 0 ? "".concat(100 * e, "%") : void 0),
             }),
             (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR,
@@ -281,10 +283,10 @@ function ee() {
                     value: t,
                     onChange: p.f1,
                     note: B.intl.string(B.t.nlAOER),
-                    children: B.intl.string(B.t.bQCodH)
-                })
-            })
-        ]
+                    children: B.intl.string(B.t.bQCodH),
+                }),
+            }),
+        ],
     });
 }
 function et() {
@@ -292,13 +294,13 @@ function et() {
     return (0, i.jsx)(d.xJW, {
         className: G.marginTop20,
         children: (0, i.jsx)(d.j7V, {
-            note: B.intl.string(B.t['72i5GB']),
+            note: B.intl.string(B.t["72i5GB"]),
             value: e,
             onChange: function () {
                 (0, p.gs)(!e);
             },
-            children: B.intl.string(B.t.OLZFBw)
-        })
+            children: B.intl.string(B.t.OLZFBw),
+        }),
     });
 }
 function en() {
@@ -312,32 +314,32 @@ function en() {
                     (0, i.jsx)(d.R94, {
                         type: d.R94.Types.DESCRIPTION,
                         className: G.marginBottom8,
-                        children: B.intl.string(B.t['86hjzc'])
+                        children: B.intl.string(B.t["86hjzc"]),
                     }),
                     (0, i.jsx)(d.FXm, {
                         options: [
                             {
                                 name: B.intl.string(B.t.YEOEi4),
-                                value: 'username'
+                                value: "username",
                             },
                             {
                                 name: B.intl.string(B.t.mQaro6),
-                                value: 'dot'
+                                value: "dot",
                             },
                             {
                                 name: B.intl.string(B.t.Ji2EVF),
-                                value: 'hidden'
-                            }
+                                value: "hidden",
+                            },
                         ],
                         onChange: function (e) {
                             (0, p.u1)(e.value);
                         },
-                        value: e
-                    })
-                ]
+                        value: e,
+                    }),
+                ],
             }),
-            (0, i.jsx)(d.$i$, { className: G.marginTop20 })
-        ]
+            (0, i.jsx)(d.$i$, { className: G.marginTop20 }),
+        ],
     });
 }
 function ei() {
@@ -348,15 +350,15 @@ function ei() {
         children: (0, i.jsx)(d.j7V, {
             value: e,
             onChange: function (e) {
-                ((0, p.X2)(e), y.default.track(k.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e }));
+                (0, p.X2)(e), y.default.track(k.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e });
             },
             note: B.intl.format(U.default.L8U56u, {
                 onClickOpenModal() {
                     (0, j.I)({ analyticsLocations: t });
-                }
+                },
             }),
-            children: B.intl.string(U.default['2gFUEx'])
-        })
+            children: B.intl.string(U.default["2gFUEx"]),
+        }),
     });
 }
 function er() {
@@ -374,14 +376,14 @@ function er() {
                     note: B.intl.format(B.t.u6UjrK, {
                         onThemeClick() {
                             u.Z.open(k.oAB.APPEARANCE);
-                        }
+                        },
                     }),
                     className: G.marginTop20,
                     value: e,
                     onChange: p.Uv,
-                    children: B.intl.string(B.t['sSY+mJ'])
-                })
-            })
+                    children: B.intl.string(B.t["sSY+mJ"]),
+                }),
+            }),
         })
     );
 }
@@ -393,7 +395,8 @@ function es() {
     }, [e]);
     let s = r.useRef(null);
     r.useEffect(() => {
-        (null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, p.qz)(t), 150)));
+        null != s.current && (clearTimeout(s.current), (s.current = null)),
+            t !== e && (s.current = setTimeout(() => (0, p.qz)(t), 150));
     }, [t, e]);
     let a = B.intl.format(B.t.GwEVEx, { learnMoreLink: A.Z.getArticleURL(k.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.xJW, {
@@ -405,9 +408,9 @@ function es() {
                 value: t,
                 note: a,
                 onChange: n,
-                children: B.intl.string(B.t.cguieX)
-            })
-        })
+                children: B.intl.string(B.t.cguieX),
+            }),
+        }),
     });
 }
 function ea() {
@@ -418,24 +421,24 @@ function ea() {
             rawPrefersReducedMotion: s,
             systemPrefersReducedMotion: l,
             gifAutoPlayOverrideReason: o,
-            animateEmojiOverrideReason: u
+            animateEmojiOverrideReason: u,
         } = (0, c.cj)([g.Z, R.Z], () => ({
             systemPrefersReducedMotion: g.Z.systemPrefersReducedMotion,
             rawPrefersReducedMotion: g.Z.rawPrefersReducedMotion,
             useReducedMotion: g.Z.useReducedMotion,
-            gifAutoPlayOverrideReason: R.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
-            animateEmojiOverrideReason: R.Z.getAppliedOverrideReasonKey('animateEmoji')
+            gifAutoPlayOverrideReason: R.Z.getAppliedOverrideReasonKey("gifAutoPlay"),
+            animateEmojiOverrideReason: R.Z.getAppliedOverrideReasonKey("animateEmoji"),
         })),
         m = r.useRef(null);
     (0, D.Z)(m, Z.rP.REDUCED_MOTION);
     let h = r.useCallback(
             (e, t) => {
-                (0, p.Zt)(t ? 'auto' : l);
+                (0, p.Zt)(t ? "auto" : l);
             },
-            [l]
+            [l],
         ),
         f = r.useCallback((e) => {
-            (0, p.Zt)(e ? 'reduce' : 'no-preference');
+            (0, p.Zt)(e ? "reduce" : "no-preference");
         }, []);
     return (0, i.jsxs)(d.xJW, {
         ref: m,
@@ -445,26 +448,26 @@ function ea() {
             (0, i.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
                 className: G.marginBottom8,
-                children: B.intl.format(B.t['2l9U2t'], { helpdeskArticle: A.Z.getArticleURL(k.BhN.REDUCED_MOTION) })
+                children: B.intl.format(B.t["2l9U2t"], { helpdeskArticle: A.Z.getArticleURL(k.BhN.REDUCED_MOTION) }),
             }),
             (0, i.jsx)(d.XZJ, {
                 className: a()(G.marginTop20, G.marginBottom20),
-                value: 'auto' === s,
+                value: "auto" === s,
                 shape: d.XZJ.Shapes.BOX,
                 type: d.XZJ.Types.INVERTED,
                 onChange: h,
                 children: (0, i.jsx)(d.Text, {
-                    variant: 'text-sm/normal',
-                    children: B.intl.string(B.t['+Dx+HB'])
-                })
+                    variant: "text-sm/normal",
+                    children: B.intl.string(B.t["+Dx+HB"]),
+                }),
             }),
             (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,
                 children: (0, i.jsx)(d.j7V, {
                     value: n,
                     onChange: f,
-                    children: B.intl.string(B.t.b3XBzs)
-                })
+                    children: B.intl.string(B.t.b3XBzs),
+                }),
             }),
             (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS,
@@ -473,8 +476,8 @@ function ea() {
                     value: e,
                     note: null != o ? (0, S.Z)(o) : void 0,
                     onChange: P.QK.updateSetting,
-                    children: B.intl.string(B.t.Iayoh4)
-                })
+                    children: B.intl.string(B.t.Iayoh4),
+                }),
             }),
             (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI,
@@ -483,47 +486,47 @@ function ea() {
                     value: t,
                     note: null != u ? (0, S.Z)(u) : void 0,
                     onChange: P.Yk.updateSetting,
-                    children: B.intl.string(B.t.iIaOlZ)
-                })
-            })
-        ]
+                    children: B.intl.string(B.t.iIaOlZ),
+                }),
+            }),
+        ],
     });
 }
 function el() {
     let e = P.Wp.useSetting(),
-        t = (0, c.e7)([R.Z], () => R.Z.getAppliedOverrideReasonKey('animateStickers')),
+        t = (0, c.e7)([R.Z], () => R.Z.getAppliedOverrideReasonKey("animateStickers")),
         n = r.useCallback((e) => {
             P.Wp.updateSetting(e.value);
         }, []);
     return (0, i.jsxs)(d.xJW, {
         className: G.marginTop20,
-        title: B.intl.string(B.t['6NtAuL']),
+        title: B.intl.string(B.t["6NtAuL"]),
         children: [
             (0, i.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
                 className: G.marginBottom8,
-                children: null != t ? (0, S.Z)(t) : B.intl.string(B.t.GRa6U1)
+                children: null != t ? (0, S.Z)(t) : B.intl.string(B.t.GRa6U1),
             }),
             (0, i.jsx)(d.FXm, {
                 options: [
                     {
-                        name: B.intl.string(B.t['Xp+X2d']),
-                        value: L.yr.ALWAYS_ANIMATE
+                        name: B.intl.string(B.t["Xp+X2d"]),
+                        value: L.yr.ALWAYS_ANIMATE,
                     },
                     {
                         name: B.intl.string(B.t.IlLT7e),
                         desc: B.intl.string(B.t.bIW9Tk),
-                        value: L.yr.ANIMATE_ON_INTERACTION
+                        value: L.yr.ANIMATE_ON_INTERACTION,
                     },
                     {
                         name: B.intl.string(B.t.IGu8x8),
-                        value: L.yr.NEVER_ANIMATE
-                    }
+                        value: L.yr.NEVER_ANIMATE,
+                    },
                 ],
                 onChange: n,
-                value: e
-            })
-        ]
+                value: e,
+            }),
+        ],
     });
 }
 function eo() {
@@ -538,7 +541,7 @@ function eo() {
             children: [
                 (0, i.jsx)(d.vwX, {
                     className: G.marginBottom8,
-                    children: B.intl.string(B.t.onqU6u)
+                    children: B.intl.string(B.t.onqU6u),
                 }),
                 (0, i.jsx)(T.F, {
                     setting: w.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
@@ -546,8 +549,8 @@ function eo() {
                         className: G.marginTop20,
                         value: e,
                         onChange: p.eN,
-                        children: B.intl.string(B.t['3Fztn5'])
-                    })
+                        children: B.intl.string(B.t["3Fztn5"]),
+                    }),
                 }),
                 (0, i.jsx)(T.F, {
                     setting: w.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT,
@@ -556,16 +559,16 @@ function eo() {
                         value: t,
                         note: B.intl.string(B.t.Q7wgHR),
                         onChange: (e) => {
-                            (y.default.track(k.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                            y.default.track(k.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: e,
-                                location: { section: k.jXE.SETTINGS_ACCESSIBILITY }
+                                location: { section: k.jXE.SETTINGS_ACCESSIBILITY },
                             }),
-                                P.dN.updateSetting(e));
+                                P.dN.updateSetting(e);
                         },
-                        children: B.intl.string(B.t.TZ2hZG)
-                    })
-                })
-            ]
+                        children: B.intl.string(B.t.TZ2hZG),
+                    }),
+                }),
+            ],
         })
     );
 }
@@ -583,7 +586,7 @@ function ec() {
                           children: [
                               (0, i.jsx)(d.vwX, {
                                   className: G.marginBottom8,
-                                  children: B.intl.string(B.t.VpSKeH)
+                                  children: B.intl.string(B.t.VpSKeH),
                               }),
                               (0, i.jsx)(T.F, {
                                   setting: w.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
@@ -591,11 +594,11 @@ function ec() {
                                       className: G.marginTop20,
                                       value: e,
                                       onChange: P.OW.updateSetting,
-                                      children: B.intl.string(B.t.qvTIwc)
-                                  })
-                              })
-                          ]
-                      })
+                                      children: B.intl.string(B.t.qvTIwc),
+                                  }),
+                              }),
+                          ],
+                      }),
                   }),
                   (0, i.jsx)(T.F, {
                       setting: w.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE,
@@ -605,29 +608,31 @@ function ec() {
                               (0, i.jsx)(d.vwX, {
                                   id: K,
                                   className: G.marginBottom20,
-                                  children: B.intl.string(B.t.lsW5Eh)
+                                  children: B.intl.string(B.t.lsW5Eh),
                               }),
-                              (0, i.jsx)('div', {
+                              (0, i.jsx)("div", {
                                   className: V.ttsPreviewWrapper,
                                   children: (0, i.jsx)(d.zxk, {
                                       icon: n ? d.fpf : d.o1U,
                                       text: B.intl.string(B.t.hymc8v),
                                       onClick: () => {
                                           if (n) {
-                                              ((0, I.NB)(), s(!1));
+                                              (0, I.NB)(), s(!1);
                                               return;
                                           }
-                                          ((0, I.cP)(
+                                          (0, I.cP)(
                                               B.intl.string(B.t.PKaNJC),
                                               !0,
                                               void 0,
                                               () => s(!0),
-                                              () => s(!1)
+                                              () => s(!1),
                                           ),
-                                              s(!0));
+                                              s(!0);
                                       },
-                                      'aria-label': ''.concat(B.intl.string(B.t.hymc8v), ' ').concat(B.intl.string(B.t.lsW5Eh))
-                                  })
+                                      "aria-label": ""
+                                          .concat(B.intl.string(B.t.hymc8v), " ")
+                                          .concat(B.intl.string(B.t.lsW5Eh)),
+                                  }),
                               }),
                               (0, i.jsx)(d.iRW, {
                                   markers: M.q,
@@ -635,29 +640,29 @@ function ec() {
                                   defaultValue: 1,
                                   stickToMarkers: !0,
                                   onValueChange: X,
-                                  onValueRender: (e) => 'x'.concat(e.toFixed(2)),
+                                  onValueRender: (e) => "x".concat(e.toFixed(2)),
                                   onMarkerRender: (e) =>
                                       0 === e
-                                          ? (0, i.jsx)('span', {
+                                          ? (0, i.jsx)("span", {
                                                 className: V.ttsSliderMarker,
-                                                children: B.intl.string(B.t['493lwc'])
+                                                children: B.intl.string(B.t["493lwc"]),
                                             })
                                           : 10 === e
-                                            ? (0, i.jsx)('span', {
+                                            ? (0, i.jsx)("span", {
                                                   className: V.ttsSliderMarker,
-                                                  children: B.intl.string(B.t.ZSZEdX)
+                                                  children: B.intl.string(B.t.ZSZEdX),
                                               })
                                             : 1 === e
-                                              ? (0, i.jsx)('span', { children: 'x1.0' })
+                                              ? (0, i.jsx)("span", { children: "x1.0" })
                                               : e % 1 == 0
-                                                ? ''
+                                                ? ""
                                                 : void 0,
-                                  'aria-labelledby': K
-                              })
-                          ]
-                      })
-                  })
-              ]
+                                  "aria-labelledby": K,
+                              }),
+                          ],
+                      }),
+                  }),
+              ],
           })
         : null;
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -23,12 +23,12 @@ function c(e) {
             },
             children: [
                 (0, i.jsx)(s.Text, {
-                    variant: 'text-sm/medium',
-                    color: 'always-white',
-                    children: l.intl.string(l.t.fJNqJi)
+                    variant: "text-sm/medium",
+                    color: "always-white",
+                    children: l.intl.string(l.t.fJNqJi),
                 }),
-                (0, i.jsx)('div', { className: o.pointer })
-            ]
+                (0, i.jsx)("div", { className: o.pointer }),
+            ],
         })
     );
 }
@@ -46,11 +46,11 @@ function d(e) {
         }, [o]),
         (0, i.jsx)(s.yRy, {
             targetElementRef: a,
-            position: 'top',
-            align: 'left',
+            position: "top",
+            align: "left",
             shouldShow: l,
             renderPopout: () => (0, i.jsx)(c, { markAsDismissed: n }),
-            children: t
+            children: t,
         })
     );
 }

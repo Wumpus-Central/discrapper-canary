@@ -1,32 +1,42 @@
 function r(e) {
-    return 'Minified Redux error #' + e + '; visit https://redux.js.org/Errors?code=' + e + ' for the full message or use the non-minified dev environment for full errors. ';
+    return (
+        "Minified Redux error #" +
+        e +
+        "; visit https://redux.js.org/Errors?code=" +
+        e +
+        " for the full message or use the non-minified dev environment for full errors. "
+    );
 }
-(n.d(t, { MT: () => l }), n(183759));
+n.d(t, { MT: () => l }), n(183759);
 var i = (function () {
-        return ('function' == typeof Symbol && Symbol.observable) || '@@observable';
+        return ("function" == typeof Symbol && Symbol.observable) || "@@observable";
     })(),
     o = function () {
-        return Math.random().toString(36).substring(7).split('').join('.');
+        return Math.random().toString(36).substring(7).split("").join(".");
     },
     a = {
-        INIT: '@@redux/INIT' + o(),
-        REPLACE: '@@redux/REPLACE' + o(),
+        INIT: "@@redux/INIT" + o(),
+        REPLACE: "@@redux/REPLACE" + o(),
         PROBE_UNKNOWN_ACTION: function () {
-            return '@@redux/PROBE_UNKNOWN_ACTION' + o();
-        }
+            return "@@redux/PROBE_UNKNOWN_ACTION" + o();
+        },
     };
 function s(e) {
-    if ('object' != typeof e || null === e) return !1;
+    if ("object" != typeof e || null === e) return !1;
     for (var t = e; null !== Object.getPrototypeOf(t); ) t = Object.getPrototypeOf(t);
     return Object.getPrototypeOf(e) === t;
 }
 function l(e, t, n) {
-    if (('function' == typeof t && 'function' == typeof n) || ('function' == typeof n && 'function' == typeof arguments[3])) throw Error(r(0));
-    if (('function' == typeof t && void 0 === n && ((n = t), (t = void 0)), void 0 !== n)) {
-        if ('function' != typeof n) throw Error(r(1));
+    if (
+        ("function" == typeof t && "function" == typeof n) ||
+        ("function" == typeof n && "function" == typeof arguments[3])
+    )
+        throw Error(r(0));
+    if (("function" == typeof t && void 0 === n && ((n = t), (t = void 0)), void 0 !== n)) {
+        if ("function" != typeof n) throw Error(r(1));
         return n(l)(e, t);
     }
-    if ('function' != typeof e) throw Error(r(2));
+    if ("function" != typeof e) throw Error(r(2));
     var o,
         c = e,
         u = t,
@@ -41,7 +51,7 @@ function l(e, t, n) {
         return u;
     }
     function m(e) {
-        if ('function' != typeof e) throw Error(r(4));
+        if ("function" != typeof e) throw Error(r(4));
         if (_) throw Error(r(5));
         var t = !0;
         return (
@@ -50,9 +60,9 @@ function l(e, t, n) {
             function () {
                 if (t) {
                     if (_) throw Error(r(6));
-                    ((t = !1), p());
+                    (t = !1), p();
                     var n = f.indexOf(e);
-                    (f.splice(n, 1), (d = null));
+                    f.splice(n, 1), (d = null);
                 }
             }
         );
@@ -62,7 +72,7 @@ function l(e, t, n) {
         if (void 0 === e.type) throw Error(r(8));
         if (_) throw Error(r(9));
         try {
-            ((_ = !0), (u = c(u, e)));
+            (_ = !0), (u = c(u, e));
         } finally {
             _ = !1;
         }
@@ -70,8 +80,8 @@ function l(e, t, n) {
         return e;
     }
     function E(e) {
-        if ('function' != typeof e) throw Error(r(10));
-        ((c = e), g({ type: a.REPLACE }));
+        if ("function" != typeof e) throw Error(r(10));
+        (c = e), g({ type: a.REPLACE });
     }
     function b() {
         var e,
@@ -79,12 +89,12 @@ function l(e, t, n) {
         return (
             ((e = {
                 subscribe: function (e) {
-                    if ('object' != typeof e || null === e) throw Error(r(11));
+                    if ("object" != typeof e || null === e) throw Error(r(11));
                     function n() {
                         e.next && e.next(h());
                     }
-                    return (n(), { unsubscribe: t(n) });
-                }
+                    return n(), { unsubscribe: t(n) };
+                },
             })[i] = function () {
                 return this;
             }),
@@ -97,7 +107,7 @@ function l(e, t, n) {
             dispatch: g,
             subscribe: m,
             getState: h,
-            replaceReducer: E
+            replaceReducer: E,
         })[i] = b),
         o
     );

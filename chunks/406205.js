@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685), n(997841));
+n.d(t, { Z: () => E }), n(388685), n(997841);
 var i = n(255367),
     s = n(73800),
     l = n(120356),
@@ -22,24 +22,24 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -64,20 +64,20 @@ function C(e, t) {
 let O = () => [
     {
         value: x.s8.ALL_MESSAGES,
-        name: S.intl.string(S.t.hZrr6u)
+        name: S.intl.string(S.t.hZrr6u),
     },
     {
         value: x.s8.MENTIONS,
-        name: S.intl.string(S.t.y59NJi)
+        name: S.intl.string(S.t.y59NJi),
     },
     {
         value: x.s8.NOTHING,
-        name: S.intl.string(S.t['pGn/bG'])
+        name: S.intl.string(S.t["pGn/bG"]),
     },
     {
         value: x.s8.CUSTOM,
-        name: S.intl.string(S.t['32yow8'])
-    }
+        name: S.intl.string(S.t["32yow8"]),
+    },
 ];
 function E(e) {
     let { guildId: t } = e,
@@ -92,11 +92,11 @@ function E(e) {
         L = f ? x.s8.CUSTOM : (0, x.gs)(l, r),
         T = (e) => {
             if (e === x.s8.CUSTOM) return void E(!0);
-            (E(!1), (0, g.V)(t, e));
+            E(!1), (0, g.V)(t, e);
         };
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: N.segmentedControlsContainer,
                 children: (0, i.jsx)(o.sY7, {
                     value: L,
@@ -106,70 +106,82 @@ function E(e) {
                         return T(t);
                     },
                     className: N.segmentedControl,
-                    look: 'pill'
-                })
+                    look: "pill",
+                }),
             }),
-            (0, i.jsx)('div', { className: N.presetSeparator }),
-            (0, i.jsxs)('div', {
+            (0, i.jsx)("div", { className: N.presetSeparator }),
+            (0, i.jsxs)("div", {
                 className: N.customPresetsContainer,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: N.grid,
-                        children: [(0, i.jsx)(Z, { unreadSetting: l }), (0, i.jsx)(_, { notificationSetting: r })]
+                        children: [(0, i.jsx)(Z, { unreadSetting: l }), (0, i.jsx)(_, { notificationSetting: r })],
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: N.grid,
                         children: [
-                            (0, i.jsxs)('div', {
+                            (0, i.jsxs)("div", {
                                 children: [
                                     (0, i.jsx)(o.Text, {
-                                        variant: 'text-sm/semibold',
-                                        color: 'header-primary',
-                                        children: S.intl.string(S.t.Tqd1AQ)
+                                        variant: "text-sm/semibold",
+                                        color: "header-primary",
+                                        children: S.intl.string(S.t.Tqd1AQ),
                                     }),
                                     (0, i.jsx)(o.Text, {
-                                        variant: 'text-xs/medium',
-                                        color: 'text-muted',
-                                        children: S.intl.string(S.t.RpQgm5)
-                                    })
-                                ]
+                                        variant: "text-xs/medium",
+                                        color: "text-muted",
+                                        children: S.intl.string(S.t.RpQgm5),
+                                    }),
+                                ],
                             }),
-                            (0, i.jsxs)('div', {
+                            (0, i.jsxs)("div", {
                                 children: [
                                     (0, i.jsx)(o.Text, {
-                                        variant: 'text-sm/semibold',
-                                        color: 'header-primary',
-                                        children: S.intl.string(S.t['1m22ZG'])
+                                        variant: "text-sm/semibold",
+                                        color: "header-primary",
+                                        children: S.intl.string(S.t["1m22ZG"]),
                                     }),
                                     (0, i.jsx)(o.Text, {
-                                        variant: 'text-xs/medium',
-                                        color: 'text-muted',
-                                        children: S.intl.string(S.t['4bP2ZW'])
-                                    })
-                                ]
-                            })
-                        ]
+                                        variant: "text-xs/medium",
+                                        color: "text-muted",
+                                        children: S.intl.string(S.t["4bP2ZW"]),
+                                    }),
+                                ],
+                            }),
+                        ],
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: N.grid,
                         children: [
                             (0, i.jsx)(o.q4e, {
                                 value: l,
                                 className: N.input,
                                 onChange: (e) => {
-                                    (E(!1), d.Z.updateGuildNotificationSettings(t, { flags: (0, h.Q4)(n, e === v.i.ALL_MESSAGES ? j.vc.UNREADS_ALL_MESSAGES : j.vc.UNREADS_ONLY_MENTIONS) }, u.UE.unreads(e)));
+                                    E(!1),
+                                        d.Z.updateGuildNotificationSettings(
+                                            t,
+                                            {
+                                                flags: (0, h.Q4)(
+                                                    n,
+                                                    e === v.i.ALL_MESSAGES
+                                                        ? j.vc.UNREADS_ALL_MESSAGES
+                                                        : j.vc.UNREADS_ONLY_MENTIONS,
+                                                ),
+                                            },
+                                            u.UE.unreads(e),
+                                        );
                                 },
                                 options: (0, m.y)({ notificationSetting: r }),
                                 renderOptionLabel: (e) => {
                                     let t = e.disabled && e.value === v.i.ONLY_MENTIONS && l !== v.i.ONLY_MENTIONS;
                                     return (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)('div', {
+                                            (0, i.jsx)("div", {
                                                 children: (0, i.jsx)(o.Text, {
-                                                    variant: 'text-md/normal',
-                                                    color: e.disabled ? 'text-muted' : void 0,
-                                                    children: e.label
-                                                })
+                                                    variant: "text-md/normal",
+                                                    color: e.disabled ? "text-muted" : void 0,
+                                                    children: e.label,
+                                                }),
                                             }),
                                             t &&
                                                 (0, i.jsx)(o.ua7, {
@@ -177,16 +189,16 @@ function E(e) {
                                                     children: (e) =>
                                                         (0, i.jsx)(
                                                             o.t6m,
-                                                            C(b({ size: 'custom' }, e), {
+                                                            C(b({ size: "custom" }, e), {
                                                                 width: 20,
                                                                 height: 20,
-                                                                className: N.muted
-                                                            })
-                                                        )
-                                                })
-                                        ]
+                                                                className: N.muted,
+                                                            }),
+                                                        ),
+                                                }),
+                                        ],
                                     });
-                                }
+                                },
                             }),
                             (0, i.jsx)(o.q4e, {
                                 className: N.input,
@@ -194,16 +206,22 @@ function E(e) {
                                 onChange: (e) => {
                                     E(!1);
                                     let n = { message_notifications: e };
-                                    (e === p.bL.ALL_MESSAGES && l !== v.i.ALL_MESSAGES && (n.flags = (0, h.Q4)(c.ZP.getGuildFlags(t), j.vc.UNREADS_ALL_MESSAGES)), d.Z.updateGuildNotificationSettings(t, n, u.UE.notifications(e)));
+                                    e === p.bL.ALL_MESSAGES &&
+                                        l !== v.i.ALL_MESSAGES &&
+                                        (n.flags = (0, h.Q4)(c.ZP.getGuildFlags(t), j.vc.UNREADS_ALL_MESSAGES)),
+                                        d.Z.updateGuildNotificationSettings(t, n, u.UE.notifications(e));
                                 },
                                 options: (0, m.d)({ notificationSetting: r }),
                                 renderOptionLabel: (e) => {
-                                    let t = e.value === p.bL.ALL_MESSAGES && l !== v.i.ALL_MESSAGES && r !== p.bL.ALL_MESSAGES;
+                                    let t =
+                                        e.value === p.bL.ALL_MESSAGES &&
+                                        l !== v.i.ALL_MESSAGES &&
+                                        r !== p.bL.ALL_MESSAGES;
                                     return (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(o.Text, {
-                                                variant: 'text-md/normal',
-                                                children: e.label
+                                                variant: "text-md/normal",
+                                                children: e.label,
                                             }),
                                             t &&
                                                 (0, i.jsx)(o.ua7, {
@@ -211,22 +229,22 @@ function E(e) {
                                                     children: (e) =>
                                                         (0, i.jsx)(
                                                             o.d3s,
-                                                            C(b({ size: 'custom' }, e), {
+                                                            C(b({ size: "custom" }, e), {
                                                                 width: 20,
                                                                 height: 20,
-                                                                className: N.muted
-                                                            })
-                                                        )
-                                                })
-                                        ]
+                                                                className: N.muted,
+                                                            }),
+                                                        ),
+                                                }),
+                                        ],
                                     });
-                                }
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
+                                },
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function Z(e) {
@@ -236,107 +254,107 @@ function Z(e) {
                 badged: !0,
                 unread: !0,
                 muted: !1,
-                name: S.intl.string(S.t.EjLobG)
+                name: S.intl.string(S.t.EjLobG),
             },
             {
                 badged: !1,
                 unread: !0,
                 muted: !0,
-                name: S.intl.string(S.t.Wgpwpq)
+                name: S.intl.string(S.t.Wgpwpq),
             },
             {
                 badged: !1,
                 unread: !1,
                 muted: !0,
-                name: S.intl.string(S.t.g9VImp)
-            }
+                name: S.intl.string(S.t.g9VImp),
+            },
         ];
     return (
         t === v.i.ALL_MESSAGES && (n[1].muted = !1),
-        (0, i.jsx)('div', {
+        (0, i.jsx)("div", {
             className: N.channeList,
             children: n.map((e) =>
                 (0, i.jsxs)(
-                    'div',
+                    "div",
                     {
                         className: N.channelListChannel,
                         children: [
-                            (0, i.jsxs)('div', {
+                            (0, i.jsxs)("div", {
                                 className: N.channelListChannelName,
                                 children: [
-                                    (0, i.jsx)('div', {
+                                    (0, i.jsx)("div", {
                                         className: r()(N.unread, {
                                             [N.hidden]: !e.unread,
-                                            [N.unreadMuted]: e.muted
-                                        })
+                                            [N.unreadMuted]: e.muted,
+                                        }),
                                     }),
                                     (0, i.jsx)(o.VL1, {
-                                        size: 'xxs',
-                                        color: 'currentColor',
-                                        className: r()(N.channelListChannelIcon, { [N.muted]: e.muted })
+                                        size: "xxs",
+                                        color: "currentColor",
+                                        className: r()(N.channelListChannelIcon, { [N.muted]: e.muted }),
                                     }),
                                     (0, i.jsx)(o.Text, {
-                                        variant: 'text-xs/normal',
-                                        color: e.muted ? 'text-muted' : void 0,
-                                        children: e.name
-                                    })
-                                ]
+                                        variant: "text-xs/normal",
+                                        color: e.muted ? "text-muted" : void 0,
+                                        children: e.name,
+                                    }),
+                                ],
                             }),
-                            (0, i.jsx)('div', {
+                            (0, i.jsx)("div", {
                                 className: r()(N.badge, { [N.hidden]: !e.badged }),
-                                children: (0, i.jsx)(o.mAB, { count: 1 })
-                            })
-                        ]
+                                children: (0, i.jsx)(o.mAB, { count: 1 }),
+                            }),
+                        ],
                     },
-                    e.name
-                )
-            )
+                    e.name,
+                ),
+            ),
         })
     );
 }
 function _(e) {
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: N.mockMessage,
         children: [
-            e.notificationSetting === p.bL.NO_MESSAGES && (0, i.jsx)('div', { className: N.mockMessageDisabled }),
-            (0, i.jsx)('div', {
-                children: (0, i.jsx)('img', {
+            e.notificationSetting === p.bL.NO_MESSAGES && (0, i.jsx)("div", { className: N.mockMessageDisabled }),
+            (0, i.jsx)("div", {
+                children: (0, i.jsx)("img", {
                     className: N.mockMessageAvatar,
                     src: f,
-                    alt: ''
-                })
+                    alt: "",
+                }),
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 children: [
                     (0, i.jsx)(o.Text, {
-                        variant: 'text-xs/medium',
-                        children: S.intl.string(S.t.qSq0tL)
+                        variant: "text-xs/medium",
+                        children: S.intl.string(S.t.qSq0tL),
                     }),
                     e.notificationSetting === p.bL.ALL_MESSAGES &&
                         (0, i.jsx)(o.Text, {
-                            variant: 'text-xs/normal',
-                            color: 'text-muted',
-                            children: S.intl.string(S.t.WYyzIy)
+                            variant: "text-xs/normal",
+                            color: "text-muted",
+                            children: S.intl.string(S.t.WYyzIy),
                         }),
                     e.notificationSetting !== p.bL.ALL_MESSAGES &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsxs)(o.Text, {
-                                    variant: 'text-xs/normal',
-                                    color: 'text-link',
-                                    tag: 'span',
-                                    children: ['@Roka', ' ']
+                                    variant: "text-xs/normal",
+                                    color: "text-link",
+                                    tag: "span",
+                                    children: ["@Roka", " "],
                                 }),
                                 (0, i.jsx)(o.Text, {
-                                    variant: 'text-xs/normal',
-                                    color: 'text-muted',
-                                    tag: 'span',
-                                    children: S.intl.string(S.t.WYyzIy)
-                                })
-                            ]
-                        })
-                ]
-            })
-        ]
+                                    variant: "text-xs/normal",
+                                    color: "text-muted",
+                                    tag: "span",
+                                    children: S.intl.string(S.t.WYyzIy),
+                                }),
+                            ],
+                        }),
+                ],
+            }),
+        ],
     });
 }

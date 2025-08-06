@@ -1,51 +1,51 @@
 e.exports = function (e) {
     return {
-        keywords: 'dsconfig',
+        keywords: "dsconfig",
         contains: [
             {
-                className: 'keyword',
-                begin: '^dsconfig',
+                className: "keyword",
+                begin: "^dsconfig",
                 end: /\s/,
                 excludeEnd: !0,
-                relevance: 10
+                relevance: 10,
             },
             {
-                className: 'built_in',
+                className: "built_in",
                 begin: /(list|create|get|set|delete)-(\w+)/,
                 end: /\s/,
                 excludeEnd: !0,
-                illegal: '!@#$%^&*()',
-                relevance: 10
+                illegal: "!@#$%^&*()",
+                relevance: 10,
             },
             {
-                className: 'built_in',
+                className: "built_in",
                 begin: /--(\w+)/,
                 end: /\s/,
-                excludeEnd: !0
+                excludeEnd: !0,
             },
             {
-                className: 'string',
+                className: "string",
                 begin: /"/,
-                end: /"/
+                end: /"/,
             },
             {
-                className: 'string',
+                className: "string",
                 begin: /'/,
-                end: /'/
+                end: /'/,
             },
             {
-                className: 'string',
+                className: "string",
                 begin: /[\w\-?]+:\w+/,
                 end: /\W/,
-                relevance: 0
+                relevance: 0,
             },
             {
-                className: 'string',
+                className: "string",
                 begin: /\w+(\-\w+)*/,
                 end: /(?=\W)/,
-                relevance: 0
+                relevance: 0,
             },
-            e.HASH_COMMENT_MODE
-        ]
+            e.HASH_COMMENT_MODE,
+        ],
     };
 };

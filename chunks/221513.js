@@ -1,4 +1,4 @@
-(n.d(t, { T4: () => u }), n(415506));
+n.d(t, { T4: () => u }), n(415506);
 var r = n(567198),
     i = n.n(r),
     o = n(231338);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,7 +38,8 @@ function l(e, t) {
         i = c(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -48,23 +49,23 @@ function c(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let u = function (e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
         if (t === o.pK.DISCORD_ORB) return e.toString();
         let { convertToMajorUnits: i = !0 } = r,
-            a = l(r, ['convertToMajorUnits']);
+            a = l(r, ["convertToMajorUnits"]);
         return Intl.NumberFormat(
             n,
             s(
                 {
-                    style: 'currency',
-                    currency: t
+                    style: "currency",
+                    currency: t,
                 },
-                a
-            )
+                a,
+            ),
         ).format(i ? f(e, t) : e);
     },
     d = {
@@ -250,10 +251,10 @@ let u = function (e, t, n) {
         [o.pK.ZAR]: 2,
         [o.pK.ZMW]: 2,
         [o.pK.ZWL]: 2,
-        [o.pK.DISCORD_ORB]: 0
+        [o.pK.DISCORD_ORB]: 0,
     },
     f = (e, t) => {
         let n = d[t];
-        if (null == n) throw Error('Unexpected currency '.concat(t));
+        if (null == n) throw Error("Unexpected currency ".concat(t));
         return new (i())(e).dividedBy(10 ** n).toNumber();
     };

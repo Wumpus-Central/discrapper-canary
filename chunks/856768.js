@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => b,
-    q: () => x
+    q: () => x,
 }),
-    n(290780));
+    n(290780);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -28,8 +28,8 @@ function b(e) {
             guildId: t,
             onChange: l,
             renderOptionSuffix: o,
-            globalOption: r
-        })
+            globalOption: r,
+        }),
     });
 }
 function x(e) {
@@ -45,30 +45,32 @@ function x(e) {
                         ? null
                         : {
                               label: t.name,
-                              value: t.id
+                              value: t.id,
                           };
                 })
                 .filter(p.lm);
-            return (null != n && e.unshift(n), e);
+            return null != n && e.unshift(n), e;
         }, [b, x, n]),
         j = r.useCallback(
             (e) => {
-                let t = (null == e ? void 0 : e.label) === (null == n ? void 0 : n.label) && (null == e ? void 0 : e.value) === (null == n ? void 0 : n.value);
-                return null == e || '' === e.value || t
+                let t =
+                    (null == e ? void 0 : e.label) === (null == n ? void 0 : n.label) &&
+                    (null == e ? void 0 : e.value) === (null == n ? void 0 : n.value);
+                return null == e || "" === e.value || t
                     ? null
                     : (0, i.jsx)(c.Z, {
                           className: f.guildSelectOptionIcon,
                           guild: x[e.value],
                           size: c.Z.Sizes.SMOL,
-                          active: !0
+                          active: !0,
                       });
             },
-            [x, n]
+            [x, n],
         );
     return (0, i.jsx)(o.VcW, {
         isDisabled: d,
         onChange: (e) => {
-            if ('' === e || e === (null == n ? void 0 : n.value)) return void s(null);
+            if ("" === e || e === (null == n ? void 0 : n.value)) return void s(null);
             let t = x[e];
             null != t && s(t);
         },
@@ -76,6 +78,6 @@ function x(e) {
         options: _,
         renderOptionPrefix: j,
         renderOptionSuffix: a,
-        placeholder: h.intl.string(h.t['kMgj+f'])
+        placeholder: h.intl.string(h.t["kMgj+f"]),
     });
 }

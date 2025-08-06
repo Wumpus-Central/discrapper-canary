@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(35282), n(388685), n(539854));
+n.d(t, { Z: () => u }), n(35282), n(388685), n(539854);
 var r = n(878604);
 function i(e, t, n) {
     return (
@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -17,15 +17,15 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -33,11 +33,11 @@ function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -55,7 +55,7 @@ function s(e, t) {
 function l(e) {
     return {
         id: e.payloadType,
-        name: e.mimeType.split('/').slice(1)[0]
+        name: e.mimeType.split("/").slice(1)[0],
     };
 }
 function c(e) {
@@ -69,19 +69,19 @@ function u(e, t, n, i, a) {
         h = [];
     for (let t of e.values())
         switch (t.type) {
-            case 'candidate-pair':
+            case "candidate-pair":
                 f[t.id] = t;
                 break;
-            case 'codec':
+            case "codec":
                 _[t.id] = t;
                 break;
-            case 'inbound-rtp':
+            case "inbound-rtp":
                 p.push(t);
                 break;
-            case 'outbound-rtp':
+            case "outbound-rtp":
                 h.push(t);
         }
-    let m = Object.values(f).find((e) => 'succeeded' === e.state);
+    let m = Object.values(f).find((e) => "succeeded" === e.state);
     if (void 0 === m) return null;
     let g = [];
     for (let e of h) {
@@ -91,20 +91,20 @@ function u(e, t, n, i, a) {
             type: e.kind,
             ssrc: e.ssrc,
             timestamp: e.timestamp,
-            sinkWant: (0, r.f)(n, e.ssrc, 'video' === e.kind),
+            sinkWant: (0, r.f)(n, e.ssrc, "video" === e.kind),
             sinkWantAsInt: (0, r.F)(n, e.ssrc),
             codec: l(t),
             bytesSent: e.bytesSent,
             packetsSent: e.packetsSent,
-            bitrateTarget: e.targetBitrate
+            bitrateTarget: e.targetBitrate,
         };
-        if ('audio' === e.kind) g.push(s(o({}, i), { type: 'audio' }));
-        else if ('video' === e.kind && a) {
+        if ("audio" === e.kind) g.push(s(o({}, i), { type: "audio" }));
+        else if ("video" === e.kind && a) {
             let t =
                 null !== e.frameWidth
                     ? {
                           width: e.frameWidth,
-                          height: e.frameHeight
+                          height: e.frameHeight,
                       }
                     : void 0;
             g.push(
@@ -115,12 +115,15 @@ function u(e, t, n, i, a) {
                     nackCount: e.nackCount,
                     pliCount: e.pliCount,
                     qpSum: e.qpSum,
-                    averageEncodeTime: null == e.framesEncoded || c(e.totalEncodeTime) ? void 0 : ((1000 * e.totalEncodeTime) / e.framesEncoded).toFixed(1),
+                    averageEncodeTime:
+                        null == e.framesEncoded || c(e.totalEncodeTime)
+                            ? void 0
+                            : ((1000 * e.totalEncodeTime) / e.framesEncoded).toFixed(1),
                     resolution: t,
                     framesSent: e.framesSent,
                     frameRateInput: e.framesPerSecond,
-                    type: 'video'
-                })
+                    type: "video",
+                }),
             );
         }
     }
@@ -134,33 +137,36 @@ function u(e, t, n, i, a) {
             type: e.kind,
             ssrc: e.ssrc,
             timestamp: e.timestamp,
-            sinkWant: (0, r.f)(n, e.ssrc, 'video' === e.kind),
+            sinkWant: (0, r.f)(n, e.ssrc, "video" === e.kind),
             sinkWantAsInt: (0, r.F)(n, e.ssrc),
-            sinkWantLocal: (0, r.f)(i, e.ssrc, 'video' === e.kind),
+            sinkWantLocal: (0, r.f)(i, e.ssrc, "video" === e.kind),
             sinkWantLocalAsInt: (0, r.F)(i, e.ssrc),
             codec: l(a),
             bytesReceived: e.bytesReceived,
             packetsReceived: e.packetsReceived,
             packetsLost: e.packetsLost,
-            nackCount: e.nackCount
+            nackCount: e.nackCount,
         };
-        if ('audio' === e.kind) {
-            let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round((1000 * e.jitterBufferDelay) / e.jitterBufferEmittedCount) : 0;
-            (null == E[c] && (E[c] = []),
+        if ("audio" === e.kind) {
+            let t =
+                void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount
+                    ? Math.round((1000 * e.jitterBufferDelay) / e.jitterBufferEmittedCount)
+                    : 0;
+            null == E[c] && (E[c] = []),
                 E[c].push(
                     s(o({}, u), {
                         audioLevel: e.audioLevel,
                         jitter: 1000 * e.jitter,
-                        jitterBuffer: t
-                    })
-                ));
-        } else if ('video' === e.kind) {
+                        jitterBuffer: t,
+                    }),
+                );
+        } else if ("video" === e.kind) {
             null == E[c] && (E[c] = []);
             let t =
                 null !== e.frameWidth
                     ? {
                           width: e.frameWidth,
-                          height: e.frameHeight
+                          height: e.frameHeight,
                       }
                     : void 0;
             E[c].push(
@@ -171,7 +177,10 @@ function u(e, t, n, i, a) {
                     framesDropped: e.framesDropped,
                     framesReceived: e.framesReceived,
                     frameRateDecode: e.framesPerSecond,
-                    averageDecodeTime: null == e.framesDecoded || null == e.totalDecodeTime ? void 0 : ((1000 * e.totalDecodeTime) / e.framesDecoded).toFixed(1),
+                    averageDecodeTime:
+                        null == e.framesDecoded || null == e.totalDecodeTime
+                            ? void 0
+                            : ((1000 * e.totalDecodeTime) / e.framesDecoded).toFixed(1),
                     firCount: e.firCount,
                     pliCount: e.pliCount,
                     freezeCount: e.freezeCount,
@@ -179,8 +188,8 @@ function u(e, t, n, i, a) {
                     totalFreezesDuration: e.totalFreezesDuration,
                     totalPausesDuration: e.totalPausesDuration,
                     qpSum: e.qpSum,
-                    decoderImplementationName: 'WebRTC'
-                })
+                    decoderImplementationName: "WebRTC",
+                }),
             );
         }
     }
@@ -190,11 +199,11 @@ function u(e, t, n, i, a) {
             availableOutgoingBitrate: null != (d = m.availableOutgoingBitrate) ? d : 0,
             bytesReceived: m.bytesReceived,
             bytesSent: m.bytesSent,
-            ping: b
+            ping: b,
         },
         rtp: {
             inbound: E,
-            outbound: g
-        }
+            outbound: g,
+        },
     };
 }

@@ -1,4 +1,4 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         FluidValue: () => d.B0,
         FrameLoop: () => c.V,
@@ -19,13 +19,13 @@
         toArray: () => l.qo,
         useForceUpdate: () => s.NW,
         useOnce: () => s.tf,
-        usePrev: () => s.zH
-    }));
+        usePrev: () => s.zH,
+    });
 var r = n(239189),
     i = n(300121),
     o = {};
 for (var a in i)
-    0 > ['Globals', 'default'].indexOf(a) &&
+    0 > ["Globals", "default"].indexOf(a) &&
         (o[a] = function (e) {
             return i[e];
         }.bind(0, a));

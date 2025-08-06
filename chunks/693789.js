@@ -3,7 +3,7 @@ n.d(t, {
     Tt: () => y,
     iL: () => b,
     nY: () => I,
-    zx: () => T
+    zx: () => T,
 });
 var r = n(255367),
     i = n(73800),
@@ -22,7 +22,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,7 +74,8 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -84,14 +85,14 @@ function E(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let b = {
         FILLED: f.lookFilled,
         OUTLINED: f.lookOutlined,
         LINK: f.lookLink,
-        BLANK: f.lookBlank
+        BLANK: f.lookBlank,
     },
     y = {
         BRAND: f.colorBrand,
@@ -102,17 +103,17 @@ let b = {
         LINK: f.colorLink,
         WHITE: f.colorWhite,
         TRANSPARENT: f.colorTransparent,
-        CUSTOM: ''
+        CUSTOM: "",
     },
     O = {
-        NONE: '',
+        NONE: "",
         TINY: f.sizeTiny,
         SMALL: f.sizeSmall,
         MEDIUM: f.sizeMedium,
         LARGE: f.sizeLarge,
         MIN: f.sizeMin,
         MAX: f.sizeMax,
-        ICON: f.sizeIcon
+        ICON: f.sizeIcon,
     };
 function v(e, t) {
     var n, r, i, o;
@@ -121,43 +122,106 @@ function v(e, t) {
         ? a
         : null == a
           ? -2
-          : 'number' == typeof a
+          : "number" == typeof a
             ? a + 2
             : {
                   top: (null != (n = a.top) ? n : 0) - 2,
                   right: (null != (r = a.right) ? r : 0) - 2,
                   bottom: (null != (i = a.bottom) ? i : 0) - 2,
-                  left: (null != (o = a.left) ? o : 0) - 2
+                  left: (null != (o = a.left) ? o : 0) - 2,
               };
 }
 function I() {
-    let { look: e = b.FILLED, color: t = y.BRAND, size: n = O.MEDIUM, fullWidth: r = !1, grow: i = !0, submitting: o = !1, disabled: s = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    let {
+        look: e = b.FILLED,
+        color: t = y.BRAND,
+        size: n = O.MEDIUM,
+        fullWidth: r = !1,
+        grow: i = !0,
+        submitting: o = !1,
+        disabled: s = !1,
+    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return a()(f.button, e, t, n, {
         [f.fullWidth]: r,
         [f.grow]: i,
-        [f.submitting]: o && !s
+        [f.submitting]: o && !s,
     });
 }
 function T(e) {
-    var { look: t = b.FILLED, color: n = y.BRAND, size: o = O.MEDIUM, fullWidth: s = !1, grow: _ = !0, disabled: h = !1, submitting: E = !1, type: T = 'button', style: S, wrapperClassName: A, className: N, innerClassName: C, onClick: R, onDoubleClick: P, onMouseDown: w, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: M, children: k, rel: j, buttonRef: U, focusProps: G, 'aria-label': B, submittingStartedLabel: Z, submittingFinishedLabel: F } = e,
-        V = g(e, ['look', 'color', 'size', 'fullWidth', 'grow', 'disabled', 'submitting', 'type', 'style', 'wrapperClassName', 'className', 'innerClassName', 'onClick', 'onDoubleClick', 'onMouseDown', 'onMouseUp', 'onMouseEnter', 'onMouseLeave', 'onKeyDown', 'children', 'rel', 'buttonRef', 'focusProps', 'aria-label', 'submittingStartedLabel', 'submittingFinishedLabel']);
+    var {
+            look: t = b.FILLED,
+            color: n = y.BRAND,
+            size: o = O.MEDIUM,
+            fullWidth: s = !1,
+            grow: _ = !0,
+            disabled: h = !1,
+            submitting: E = !1,
+            type: T = "button",
+            style: S,
+            wrapperClassName: A,
+            className: N,
+            innerClassName: C,
+            onClick: R,
+            onDoubleClick: P,
+            onMouseDown: w,
+            onMouseUp: D,
+            onMouseEnter: L,
+            onMouseLeave: x,
+            onKeyDown: M,
+            children: k,
+            rel: j,
+            buttonRef: U,
+            focusProps: G,
+            "aria-label": B,
+            submittingStartedLabel: Z,
+            submittingFinishedLabel: F,
+        } = e,
+        V = g(e, [
+            "look",
+            "color",
+            "size",
+            "fullWidth",
+            "grow",
+            "disabled",
+            "submitting",
+            "type",
+            "style",
+            "wrapperClassName",
+            "className",
+            "innerClassName",
+            "onClick",
+            "onDoubleClick",
+            "onMouseDown",
+            "onMouseUp",
+            "onMouseEnter",
+            "onMouseLeave",
+            "onKeyDown",
+            "children",
+            "rel",
+            "buttonRef",
+            "focusProps",
+            "aria-label",
+            "submittingStartedLabel",
+            "submittingFinishedLabel",
+        ]);
     let H = h || E,
         Y = H && (null != L || null != x),
         W = Y ? null : A,
         K = v(G, t),
         z = i.useRef(!1);
     i.useEffect(() => {
-        (!0 === E && ((z.current = !0), l.u.announce(null != Z ? Z : d.intl.string(d.t.pfChQk))), !1 === E && !0 === z.current && l.u.announce(null != F ? F : d.intl.string(d.t.SVPara)));
+        !0 === E && ((z.current = !0), l.u.announce(null != Z ? Z : d.intl.string(d.t.pfChQk))),
+            !1 === E && !0 === z.current && l.u.announce(null != F ? F : d.intl.string(d.t.SVPara));
     }, [E, Z, F]);
     let q = (0, r.jsx)(
         c.t,
         m(p({}, G), {
             offset: K,
             children: (0, r.jsxs)(
-                'button',
+                "button",
                 m(p({}, H ? null : V), {
-                    'aria-label': B,
-                    'aria-busy': !!E || void 0,
+                    "aria-label": B,
+                    "aria-busy": !!E || void 0,
                     ref: U,
                     onClick: H ? (e) => e.preventDefault() : R,
                     onDoubleClick: H ? (e) => e.preventDefault() : P,
@@ -179,50 +243,80 @@ function T(e) {
                             fullWidth: s,
                             grow: _,
                             submitting: E,
-                            disabled: h
+                            disabled: h,
                         }),
-                        W
+                        W,
                     ),
                     children: [
                         E && !h
                             ? (0, r.jsx)(u.$, {
                                   type: u.$.Type.PULSING_ELLIPSIS,
                                   className: f.spinner,
-                                  itemClassName: f.spinnerItem
+                                  itemClassName: f.spinnerItem,
                               })
                             : null,
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: a()(f.contents, C),
-                            children: k
-                        })
-                    ]
-                })
-            )
-        })
+                            children: k,
+                        }),
+                    ],
+                }),
+            ),
+        }),
     );
     return Y
-        ? (0, r.jsxs)('span', {
+        ? (0, r.jsxs)("span", {
               className: a()(f.disabledButtonWrapper, A, o, {
                   [f.grow]: _,
-                  [f.fullWidth]: s
+                  [f.fullWidth]: s,
               }),
               children: [
                   q,
-                  (0, r.jsx)('span', {
+                  (0, r.jsx)("span", {
                       onMouseEnter: L,
                       onMouseLeave: x,
-                      className: f.disabledButtonOverlay
-                  })
-              ]
+                      className: f.disabledButtonOverlay,
+                  }),
+              ],
           })
         : q;
 }
-((T.Looks = b),
+(T.Looks = b),
     (T.Colors = y),
     (T.Sizes = O),
     (T.Link = function (e) {
-        var { look: t = b.FILLED, color: n = y.BRAND, size: i = O.MEDIUM, fullWidth: o = !1, grow: l = !0, style: c, className: u, innerClassName: d, to: _, onClick: h, onMouseDown: E, onMouseUp: v, children: I, rel: T } = e,
-            S = g(e, ['look', 'color', 'size', 'fullWidth', 'grow', 'style', 'className', 'innerClassName', 'to', 'onClick', 'onMouseDown', 'onMouseUp', 'children', 'rel']);
+        var {
+                look: t = b.FILLED,
+                color: n = y.BRAND,
+                size: i = O.MEDIUM,
+                fullWidth: o = !1,
+                grow: l = !0,
+                style: c,
+                className: u,
+                innerClassName: d,
+                to: _,
+                onClick: h,
+                onMouseDown: E,
+                onMouseUp: v,
+                children: I,
+                rel: T,
+            } = e,
+            S = g(e, [
+                "look",
+                "color",
+                "size",
+                "fullWidth",
+                "grow",
+                "style",
+                "className",
+                "innerClassName",
+                "to",
+                "onClick",
+                "onMouseDown",
+                "onMouseUp",
+                "children",
+                "rel",
+            ]);
         return (0, r.jsx)(
             s.rU,
             m(p({}, S), {
@@ -234,12 +328,12 @@ function T(e) {
                 rel: T,
                 className: a()(u, f.button, t, n, i, {
                     [f.fullWidth]: o,
-                    [f.grow]: l
+                    [f.grow]: l,
                 }),
-                children: (0, r.jsx)('span', {
+                children: (0, r.jsx)("span", {
                     className: a()(f.contents, d),
-                    children: I
-                })
-            })
+                    children: I,
+                }),
+            }),
         );
-    }));
+    });

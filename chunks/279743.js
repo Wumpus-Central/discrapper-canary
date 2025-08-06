@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -21,10 +21,10 @@ function f(e) {
             () => ({
                 from: {
                     backgroundColor: f,
-                    borderColor: f
-                }
+                    borderColor: f,
+                },
             }),
-            'animate-never'
+            "animate-never",
         ),
         y = {
             startColor: f,
@@ -34,7 +34,7 @@ function f(e) {
             endColor: m,
             targetBorderColor: b,
             targetColor: g,
-            animationDelay: u
+            animationDelay: u,
         },
         C = i.useRef(y);
     return (
@@ -42,20 +42,27 @@ function f(e) {
             C.current = y;
         }),
         i.useEffect(() => {
-            let { startColor: e, handleRest: t, endColor: n, targetBorderColor: r, targetColor: i, animationDelay: l } = C.current,
+            let {
+                    startColor: e,
+                    handleRest: t,
+                    endColor: n,
+                    targetBorderColor: r,
+                    targetColor: i,
+                    animationDelay: l,
+                } = C.current,
                 { useReducedMotion: o } = d.Z,
                 s = 200 * !o;
-            (_({
+            _({
                 reset: !0,
                 immediate: !1,
                 to: {
                     backgroundColor: e,
-                    borderColor: e
+                    borderColor: e,
                 },
                 config: {
                     duration: s,
-                    easing: a.Z.Easing.ease
-                }
+                    easing: a.Z.Easing.ease,
+                },
             }),
                 _({
                     delay: l,
@@ -63,13 +70,13 @@ function f(e) {
                     to: [
                         {
                             backgroundColor: i,
-                            borderColor: r
-                        }
+                            borderColor: r,
+                        },
                     ],
                     config: {
                         duration: s,
-                        easing: a.Z.Easing.ease
-                    }
+                        easing: a.Z.Easing.ease,
+                    },
                 }),
                 _({
                     delay: l + 200 + 200,
@@ -77,20 +84,20 @@ function f(e) {
                     to: [
                         {
                             backgroundColor: n,
-                            borderColor: n
-                        }
+                            borderColor: n,
+                        },
                     ],
                     config: {
                         duration: s,
-                        easing: a.Z.Easing.ease
+                        easing: a.Z.Easing.ease,
                     },
-                    onRest: t
-                }));
+                    onRest: t,
+                });
         }, [_]),
         (0, r.jsx)(s.animated.div, {
             style: O,
             className: o()(p.settingsItemHighlight, n),
-            children: t
+            children: t,
         })
     );
 }
@@ -105,7 +112,7 @@ function g(e) {
         ? (0, r.jsx)(f, {
               animationDelay: l,
               onFlashEnd: () => a(!1),
-              children: t
+              children: t,
           })
         : t;
 }

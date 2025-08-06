@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(415506));
+n.d(t, { Z: () => g }), n(415506);
 var r = n(255367),
     i = n(442837),
     o = n(481060),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,14 +74,16 @@ function m(e) {
                     nick: u.ZP.getNickname(null == i ? void 0 : i.guild_id, null == i ? void 0 : i.id, e),
                     onContextMenu: (t) => {
                         (0, a.jW)(t, async () => {
-                            let { default: t } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
+                            let { default: t } = await Promise.all([n.e("79695"), n.e("69220")]).then(
+                                n.bind(n, 881351),
+                            );
                             return (n) => (0, r.jsx)(t, h(_({}, n), { user: e }));
                         });
-                    }
+                    },
                 },
-                e.id
-            )
-        )
+                e.id,
+            ),
+        ),
     });
 }
 function g(e) {
@@ -97,8 +99,8 @@ function g(e) {
                   guildId: null == a ? void 0 : a.guild_id,
                   channelId: null == a ? void 0 : a.id,
                   onClosePopout: s,
-                  children: t
-              })
+                  children: t,
+              }),
           })
         : (0, r.jsx)(o.ze6, {
               theme: d,
@@ -108,11 +110,11 @@ function g(e) {
                       if (null != n)
                           return (0, r.jsx)(m, {
                               participants: n,
-                              channel: a
+                              channel: a,
                           });
-                      throw Error('One of participant or participants is required');
+                      throw Error("One of participant or participants is required");
                   },
-                  children: t
-              })
+                  children: t,
+              }),
           });
 }

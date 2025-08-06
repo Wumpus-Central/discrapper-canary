@@ -6,17 +6,19 @@ var r = n(220159),
     c = a.set;
 r(
     {
-        target: 'Map',
+        target: "Map",
         proto: !0,
         real: !0,
-        forced: !0
+        forced: !0,
     },
     {
         emplace: function (e, t) {
             var n,
                 r,
                 a = o(this);
-            return s(a, e) ? ((n = i(a, e)), 'update' in t && ((n = t.update(n, e, a)), c(a, e, n)), n) : ((r = t.insert(e, a)), c(a, e, r), r);
-        }
-    }
+            return s(a, e)
+                ? ((n = i(a, e)), "update" in t && ((n = t.update(n, e, a)), c(a, e, n)), n)
+                : ((r = t.insert(e, a)), c(a, e, r), r);
+        },
+    },
 );

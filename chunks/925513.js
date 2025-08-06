@@ -2,7 +2,7 @@ n.d(t, {
     Jr: () => m,
     O6: () => h,
     _i: () => d,
-    v6: () => g
+    v6: () => g,
 });
 var r = n(73800),
     i = n(524437),
@@ -17,7 +17,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,21 +43,21 @@ let d = (e) => {
         let { setting: t, isDm: n = !1, isFriend: r = !1 } = e;
         if (null != t && t !== i.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
         let o = a.default.getCurrentUser();
-        return (0, s.bc)('resolveSettingWithDefaults')
+        return (0, s.bc)("resolveSettingWithDefaults")
             ? f({
                   isDm: n,
-                  isFriend: r
+                  isFriend: r,
               })
-            : (0, s.g2)('resolveSettingWithDefaults')
+            : (0, s.g2)("resolveSettingWithDefaults")
               ? i.Q4.BLUR
               : (null == o ? void 0 : o.nsfwAllowed) === !1
                 ? p({
                       isDm: n,
-                      isFriend: r
+                      isFriend: r,
                   })
                 : _({
                       isDm: n,
-                      isFriend: r
+                      isFriend: r,
                   });
     },
     f = (e) => {
@@ -78,13 +78,13 @@ let d = (e) => {
             goreContentGuilds: d({ setting: null == t ? void 0 : t.goreContentGuilds }),
             goreContentNonFriendDm: d({
                 setting: null == t ? void 0 : t.goreContentNonFriendDm,
-                isDm: !0
+                isDm: !0,
             }),
             goreContentFriendDm: d({
                 setting: null == t ? void 0 : t.goreContentFriendDm,
                 isDm: !0,
-                isFriend: !0
-            })
+                isFriend: !0,
+            }),
         };
     },
     m = (e) => {

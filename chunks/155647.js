@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     fW: () => u,
-    jc: () => m
+    jc: () => m,
 }),
     n(388685),
-    n(539854));
+    n(539854);
 var r = n(73800),
     l = n(823379),
     i = n(568315),
@@ -15,7 +15,7 @@ let d = {
     [c.zR.SAFETY_DM_SPAM_FILTER]: i.Z,
     [c.zR.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: o.Z,
     [c.zR.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: s.Z,
-    [c.zR.SAFETY_LANGUAGE_FILTER]: a.Z
+    [c.zR.SAFETY_LANGUAGE_FILTER]: a.Z,
 };
 function u(e) {
     return r.useMemo(
@@ -32,7 +32,7 @@ function u(e) {
                       );
                   })(e)
                 : null,
-        [e]
+        [e],
     );
 }
 function m(e, t) {
@@ -50,9 +50,9 @@ function m(e, t) {
                         })(n, t)
                             ? null
                             : n;
-                    })(e, t)
+                    })(e, t),
                 )
                 .filter(l.lm),
-        [e, t]
+        [e, t],
     );
 }

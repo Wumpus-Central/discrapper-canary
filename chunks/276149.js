@@ -12,13 +12,13 @@ function d(e) {
     let { className: t, color: n, look: d, hangStatusChannel: f, onAction: _ } = e,
         p = (0, i.e7)([a.Z], () => a.Z.getChannelId() === f.id),
         h = () => {
-            (null == _ || _(),
+            null == _ || _(),
                 o.default.selectVoiceChannel(f.id),
                 s.default.track(c.rMx.HANG_STATUS_CTA_CLICKED, {
-                    source: 'UserProfilePopout',
+                    source: "UserProfilePopout",
                     guild_id: f.guild_id,
-                    channel_id: f.id
-                }));
+                    channel_id: f.id,
+                });
         };
     return (0, r.jsx)(
         l.Z,
@@ -29,8 +29,8 @@ function d(e) {
             color: n,
             look: d,
             fullWidth: !0,
-            children: u.intl.string(u.t['9C444u'])
+            children: u.intl.string(u.t["9C444u"]),
         },
-        'join-hang'
+        "join-hang",
     );
 }

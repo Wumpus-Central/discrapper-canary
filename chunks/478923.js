@@ -22,24 +22,24 @@ function E(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                })
+                }),
             )),
             r.forEach(function (e) {
                 var r;
-                ((r = n[e]),
+                (r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (t[e] = r));
-            }));
+                        : (t[e] = r);
+            });
     }
     return t;
 }
@@ -64,61 +64,61 @@ function y(t, e) {
 function N(t) {
     let { user: e, onBlock: n, onIgnore: i, location: o, disallowIgnore: a, guildId: u, channelId: N } = t,
         v = (0, l.e7)([O.Z], () => O.Z.isIgnored(e.id));
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: h.container,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.confirmationHeader,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: h.iconContainer,
                         children: [
                             (0, r.jsx)(s.qEK, {
                                 size: s.EFr.SIZE_56,
                                 src: e.getAvatarURL(void 0, 64),
-                                'aria-hidden': !0
+                                "aria-hidden": !0,
                             }),
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: h.icon,
-                                children: (0, r.jsx)(s.t6m, {})
-                            })
-                        ]
+                                children: (0, r.jsx)(s.t6m, {}),
+                            }),
+                        ],
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)(s.X6q, {
-                                variant: 'heading-xl/bold',
-                                color: 'header-primary',
-                                children: I.intl.format(I.t.CIbzHR, { username: p.ZP.getName(u, N, e) })
+                                variant: "heading-xl/bold",
+                                color: "header-primary",
+                                children: I.intl.format(I.t.CIbzHR, { username: p.ZP.getName(u, N, e) }),
                             }),
                             (0, r.jsx)(s.Text, {
-                                variant: 'text-md/medium',
-                                color: 'header-secondary',
-                                children: I.intl.string(I.t.S70joq)
-                            })
-                        ]
-                    })
-                ]
+                                variant: "text-md/medium",
+                                color: "header-secondary",
+                                children: I.intl.string(I.t.S70joq),
+                            }),
+                        ],
+                    }),
+                ],
             }),
             (0, r.jsx)(d.Z, {}),
             a || v
                 ? null
-                : (0, r.jsxs)('div', {
+                : (0, r.jsxs)("div", {
                       className: h.otherOptions,
                       children: [
                           (0, r.jsx)(f.rT, {
-                              title: I.intl.string(I.t['+BJTcH']),
+                              title: I.intl.string(I.t["+BJTcH"]),
                               children: (0, r.jsx)(f.ZP, {
                                   title: I.intl.string(I.t.hC8tcX),
                                   description: I.intl.string(I.t.If89rK),
-                                  titleVariant: 'text-md/medium',
-                                  descriptionVariant: 'text-xs/medium',
+                                  titleVariant: "text-md/medium",
+                                  descriptionVariant: "text-xs/medium",
                                   buttonText: I.intl.string(I.t.mxJOd3),
                                   buttonColor: c.Tt.PRIMARY,
                                   onButtonPress: () => {
-                                      (m.default.track(b.rMx.USER_REMEDIATION_ACTION, {
+                                      m.default.track(b.rMx.USER_REMEDIATION_ACTION, {
                                           action: g.l.GOTO_IGNORE,
-                                          location: o
+                                          location: o,
                                       }),
                                           (0, s.pTH)(),
                                           (0, s.h7j)((t) =>
@@ -130,25 +130,36 @@ function N(t) {
                                                       channelId: N,
                                                       onIgnore: i,
                                                       onBlock: n,
-                                                      location: o
-                                                  })
-                                              )
-                                          ));
-                                  }
-                              })
+                                                      location: o,
+                                                  }),
+                                              ),
+                                          );
+                                  },
+                              }),
                           }),
                           (0, r.jsx)(s.Text, {
-                              variant: 'text-sm/medium',
+                              variant: "text-sm/medium",
                               className: h.featureGuide,
-                              children: I.intl.format(I.t.DJN6eX, { articleLink: j.Z.getArticleURL(b.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
-                          })
-                      ]
-                  })
-        ]
+                              children: I.intl.format(I.t.DJN6eX, {
+                                  articleLink: j.Z.getArticleURL(b.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
+                              }),
+                          }),
+                      ],
+                  }),
+        ],
     });
 }
 function v(t) {
-    var { user: e, onBlock: n, onCancel: l, onIgnore: c, location: d = 'ContextMenu', disallowIgnore: f, guildId: O, channelId: j } = t,
+    var {
+            user: e,
+            onBlock: n,
+            onCancel: l,
+            onIgnore: c,
+            location: d = "ContextMenu",
+            disallowIgnore: f,
+            guildId: O,
+            channelId: j,
+        } = t,
         p = (function (t, e) {
             if (null == t) return {};
             var n,
@@ -159,24 +170,26 @@ function v(t) {
                         r,
                         i = {},
                         o = Object.keys(t);
-                    for (r = 0; r < o.length; r++) ((n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]));
+                    for (r = 0; r < o.length; r++) (n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
                     return i;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < o.length; r++) ((n = o[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]));
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
             }
             return i;
-        })(t, ['user', 'onBlock', 'onCancel', 'onIgnore', 'location', 'disallowIgnore', 'guildId', 'channelId']);
+        })(t, ["user", "onBlock", "onCancel", "onIgnore", "location", "disallowIgnore", "guildId", "channelId"]);
     return (
         i.useLayoutEffect(
             () => () => {
                 m.default.track(b.rMx.USER_REMEDIATION_ACTION, {
                     action: g.l.DISMISS_BLOCK,
-                    location: d
+                    location: d,
                 });
             },
-            [d]
+            [d],
         ),
         (0, r.jsx)(
             s.ConfirmModal,
@@ -184,23 +197,24 @@ function v(t) {
                 E(
                     {
                         confirmText: I.intl.string(I.t.l4EmaW),
-                        cancelText: I.intl.string(I.t['ETE/oK']),
+                        cancelText: I.intl.string(I.t["ETE/oK"]),
                         onCancel: () => {
-                            (m.default.track(b.rMx.USER_REMEDIATION_ACTION, {
+                            m.default.track(b.rMx.USER_REMEDIATION_ACTION, {
                                 action: g.l.CANCEL_BLOCK,
-                                location: d
+                                location: d,
                             }),
-                                null == l || l());
+                                null == l || l();
                         },
                         onConfirm: () => {
-                            (null == n || n(),
+                            null == n || n(),
                                 a.Z.blockUser(e.id, { location: d }).then(() => {
-                                    (m.default.track(b.rMx.BLOCK_USER_CONFIRMED), u.Z.showBlockSuccessToast(e.id, null != j ? j : void 0));
-                                }));
+                                    m.default.track(b.rMx.BLOCK_USER_CONFIRMED),
+                                        u.Z.showBlockSuccessToast(e.id, null != j ? j : void 0);
+                                });
                         },
-                        impression: { impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION }
+                        impression: { impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION },
                     },
-                    p
+                    p,
                 ),
                 {
                     children: (0, r.jsx)(N, {
@@ -209,10 +223,10 @@ function v(t) {
                         channelId: j,
                         onBlock: n,
                         onIgnore: c,
-                        disallowIgnore: f
-                    })
-                }
-            )
+                        disallowIgnore: f,
+                    }),
+                },
+            ),
         )
     );
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(953529));
+n.d(t, { Z: () => d }), n(953529);
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -13,40 +13,40 @@ function d(e) {
         m = (0, i.jsx)(a.Z, {
             guildId: n,
             emojiId: t.emoji_id,
-            emojiName: t.emoji_name
+            emojiName: t.emoji_name,
         });
     return (0, i.jsxs)(r.P3F, {
         className: c.container,
         onClick: () => {
-            (null == u || u.navigateToChannel(), d());
+            null == u || u.navigateToChannel(), d();
         },
-        'aria-label': null == u ? void 0 : u.ariaLabel,
-        role: 'link',
+        "aria-label": null == u ? void 0 : u.ariaLabel,
+        role: "link",
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: c.emojiContainer,
-                children: m
+                children: m,
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: c.infoContainer,
                 children: [
                     (0, i.jsx)(r.Text, {
-                        variant: 'text-md/medium',
-                        color: 'header-primary',
+                        variant: "text-md/medium",
+                        color: "header-primary",
                         className: c.name,
-                        children: (0, s.Z)(t)
+                        children: (0, s.Z)(t),
                     }),
                     (0, i.jsx)(r.Text, {
-                        color: 'interactive-normal',
-                        variant: 'text-sm/normal',
-                        children: t.description
-                    })
-                ]
+                        color: "interactive-normal",
+                        variant: "text-sm/normal",
+                        children: t.description,
+                    }),
+                ],
             }),
             (0, i.jsx)(l.Z, {
                 direction: l.Z.Directions.RIGHT,
-                className: c.caret
-            })
-        ]
+                className: c.caret,
+            }),
+        ],
     });
 }

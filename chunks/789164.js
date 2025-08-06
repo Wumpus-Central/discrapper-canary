@@ -12,7 +12,8 @@ function c(e, t) {
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -22,22 +23,22 @@ function u(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let d = i.forwardRef(function (e, t) {
     var n,
-        { children: u, className: d, titleClassName: f, title: _, icon: p, disabled: h, htmlFor: m, tag: g = 'h5' } = e,
-        E = c(e, ['children', 'className', 'titleClassName', 'title', 'icon', 'disabled', 'htmlFor', 'tag']);
+        { children: u, className: d, titleClassName: f, title: _, icon: p, disabled: h, htmlFor: m, tag: g = "h5" } = e,
+        E = c(e, ["children", "className", "titleClassName", "title", "icon", "disabled", "htmlFor", "tag"]);
     let b = i.useId(),
         y = null != (n = E.titleId) ? n : b;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         ref: t,
         className: d,
         children:
             null != _
                 ? (0, r.jsx)(o.y5t, {
-                      component: (0, r.jsxs)('div', {
+                      component: (0, r.jsxs)("div", {
                           className: l.sectionTitle,
                           children: [
                               p,
@@ -48,19 +49,19 @@ let d = i.forwardRef(function (e, t) {
                                         htmlFor: m,
                                         disabled: h,
                                         className: f,
-                                        children: _
+                                        children: _,
                                     })
-                                  : null
-                          ]
+                                  : null,
+                          ],
                       }),
-                      children: (0, r.jsx)('div', {
+                      children: (0, r.jsx)("div", {
                           className: l.children,
                           children: (0, r.jsx)(a.ol, {
                               titleId: y,
-                              children: u
-                          })
-                      })
+                              children: u,
+                          }),
+                      }),
                   })
-                : u
+                : u,
     });
 });

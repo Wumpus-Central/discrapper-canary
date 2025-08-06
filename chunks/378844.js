@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => _,
-    Z: () => y
+    Z: () => y,
 });
 var r,
     i = n(255367);
@@ -22,79 +22,104 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
-var _ = (((r = {})[(r.VOICE = 0)] = 'VOICE'), r);
+var _ = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
 let y = (e) => {
     let { type: t, guildId: r, closePopout: _ } = e,
         y = (0, u.Dt)(),
-        { notClaimed: C, notEmailVerified: v, notPhoneVerified: j, newAccount: E, newMember: S } = (0, l.e7)([h.Z], () => h.Z.getCheck(r), [r]),
-        x = 0 === t ? m.intl.string(m.t['6zY8BA']) : null,
+        {
+            notClaimed: C,
+            notEmailVerified: v,
+            notPhoneVerified: j,
+            newAccount: E,
+            newMember: S,
+        } = (0, l.e7)([h.Z], () => h.Z.getCheck(r), [r]),
+        x = 0 === t ? m.intl.string(m.t["6zY8BA"]) : null,
         I = null,
         P = null;
-    return (0 === t && (C ? ((I = m.intl.string(m.t.IRxUlJ)), (P = m.intl.string(m.t.fiNVio))) : j ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t['50gfOj']))) : v ? ((I = m.intl.string(m.t.vdSOp6)), (P = m.intl.string(m.t.lm1UKi))) : S ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: f.YeM.MEMBER_AGE })), (P = m.intl.string(m.t.BddRzc))) : E && ((I = m.intl.formatToPlainString(m.t['sncw4+'], { min: f.YeM.ACCOUNT_AGE })), (P = m.intl.string(m.t.BddRzc)))), null == x || null == I)
+    return (0 === t &&
+        (C
+            ? ((I = m.intl.string(m.t.IRxUlJ)), (P = m.intl.string(m.t.fiNVio)))
+            : j
+              ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOj"])))
+              : v
+                ? ((I = m.intl.string(m.t.vdSOp6)), (P = m.intl.string(m.t.lm1UKi)))
+                : S
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: f.YeM.MEMBER_AGE })),
+                    (P = m.intl.string(m.t.BddRzc)))
+                  : E &&
+                    ((I = m.intl.formatToPlainString(m.t["sncw4+"], { min: f.YeM.ACCOUNT_AGE })),
+                    (P = m.intl.string(m.t.BddRzc)))),
+    null == x || null == I)
         ? null
         : (0, i.jsxs)(s.VqE, {
               className: b.container,
-              'aria-labelledby': y,
+              "aria-labelledby": y,
               children: [
-                  (0, i.jsx)('img', {
-                      alt: '',
+                  (0, i.jsx)("img", {
+                      alt: "",
                       className: b.image,
-                      src: n(64395)
+                      src: n(64395),
                   }),
-                  (0, i.jsxs)('div', {
+                  (0, i.jsxs)("div", {
                       className: b.content,
                       children: [
                           (0, i.jsx)(s.X6q, {
-                              variant: 'heading-md/semibold',
+                              variant: "heading-md/semibold",
                               id: y,
-                              children: x
+                              children: x,
                           }),
                           (0, i.jsx)(s.Text, {
-                              color: 'header-secondary',
-                              variant: 'text-sm/normal',
-                              children: I
+                              color: "header-secondary",
+                              variant: "text-sm/normal",
+                              children: I,
                           }),
-                          (0, i.jsxs)('div', {
+                          (0, i.jsxs)("div", {
                               className: b.buttonContainer,
                               children: [
                                   null != P
-                                      ? (0, i.jsx)('div', {
-                                            'data-button-hoisted-classname-wrapper': !0,
+                                      ? (0, i.jsx)("div", {
+                                            "data-button-hoisted-classname-wrapper": !0,
                                             className: b.primaryButton,
                                             children: (0, i.jsx)(s.zxk, {
-                                                variant: 'primary',
+                                                variant: "primary",
                                                 text: P,
                                                 onClick: () => {
-                                                    (C
+                                                    C
                                                         ? c.j()
                                                         : j
                                                           ? (0, s.ZDy)(
                                                                 async () => {
-                                                                    let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                                                                    return (t) => (0, i.jsx)(e, O({ reason: d.L.GUILD_PHONE_REQUIRED }, t));
+                                                                    let { default: e } = await Promise.resolve().then(
+                                                                        n.bind(n, 607018),
+                                                                    );
+                                                                    return (t) =>
+                                                                        (0, i.jsx)(
+                                                                            e,
+                                                                            O({ reason: d.L.GUILD_PHONE_REQUIRED }, t),
+                                                                        );
                                                                 },
-                                                                { modalKey: g.M }
+                                                                { modalKey: g.M },
                                                             )
                                                           : v &&
                                                             (a.Z.verifyResend(),
@@ -106,35 +131,49 @@ let y = (e) => {
                                                                         {
                                                                             header: m.intl.string(m.t.LykQYm),
                                                                             confirmText: m.intl.string(m.t.BddRzc),
-                                                                            confirmButtonColor: o.zx.Colors.BRAND
+                                                                            confirmButtonColor: o.zx.Colors.BRAND,
                                                                         },
-                                                                        e
+                                                                        e,
                                                                     )),
                                                                     (r = r =
                                                                         {
                                                                             children: (0, i.jsx)(s.Text, {
-                                                                                variant: 'text-md/normal',
-                                                                                children: m.intl.format(m.t.azKEPz, { email: null == (t = p.default.getCurrentUser()) ? void 0 : t.email })
-                                                                            })
+                                                                                variant: "text-md/normal",
+                                                                                children: m.intl.format(m.t.azKEPz, {
+                                                                                    email:
+                                                                                        null ==
+                                                                                        (t = p.default.getCurrentUser())
+                                                                                            ? void 0
+                                                                                            : t.email,
+                                                                                }),
+                                                                            }),
                                                                         }),
                                                                     Object.getOwnPropertyDescriptors
-                                                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                                                        ? Object.defineProperties(
+                                                                              n,
+                                                                              Object.getOwnPropertyDescriptors(r),
+                                                                          )
                                                                         : (function (e, t) {
                                                                               var n = Object.keys(e);
                                                                               if (Object.getOwnPropertySymbols) {
-                                                                                  var r = Object.getOwnPropertySymbols(e);
+                                                                                  var r =
+                                                                                      Object.getOwnPropertySymbols(e);
                                                                                   n.push.apply(n, r);
                                                                               }
                                                                               return n;
                                                                           })(Object(r)).forEach(function (e) {
-                                                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                                                              Object.defineProperty(
+                                                                                  n,
+                                                                                  e,
+                                                                                  Object.getOwnPropertyDescriptor(r, e),
+                                                                              );
                                                                           }),
-                                                                    n)
+                                                                    n),
                                                                 );
                                                             })),
-                                                        _());
-                                                }
-                                            })
+                                                        _();
+                                                },
+                                            }),
                                         })
                                       : null,
                                   C || j || v
@@ -142,13 +181,13 @@ let y = (e) => {
                                             onClick: _,
                                             look: o.zx.Looks.BLANK,
                                             className: b.cancel,
-                                            children: m.intl.string(m.t.oEAioK)
+                                            children: m.intl.string(m.t.oEAioK),
                                         })
-                                      : null
-                              ]
-                          })
-                      ]
-                  })
-              ]
+                                      : null,
+                              ],
+                          }),
+                      ],
+                  }),
+              ],
           });
 };

@@ -1,7 +1,7 @@
 var r = n(371542);
 if (r)
     try {
-        r([], 'length');
+        r([], "length");
     } catch (e) {
         r = null;
     }

@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     Z: () => C,
-    p: () => E
+    p: () => E,
 }),
     n(539854),
     n(388685),
     n(361932),
-    n(187205));
+    n(187205);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -23,24 +23,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -72,12 +72,13 @@ function O(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < l.length; r++)
+            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,14 +86,14 @@ let _ = () => {
         let e = (0, h.ux)();
         return (0, i.useMemo)(() => {
             let t = [p.V5.ALL, p.V5.MENTIONS];
-            return (e && t.push(p.V5.BOOKMARKS), t.push(p.V5.ANNOUNCEMENTS), t);
+            return e && t.push(p.V5.BOOKMARKS), t.push(p.V5.ANNOUNCEMENTS), t;
         }, [e]);
     },
     y = {
         [p.V5.ALL]: !1,
         [p.V5.BOOKMARKS]: !1,
         [p.V5.MENTIONS]: !1,
-        [p.V5.ANNOUNCEMENTS]: !1
+        [p.V5.ANNOUNCEMENTS]: !1,
     };
 function C() {
     let e = p.by,
@@ -100,12 +101,12 @@ function C() {
         [n, l] = (0, i.useState)(y),
         a = t.filter((e) => !n[e]),
         { selectedFilter: c, setSelectedFilter: u } = (0, d.Z)();
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.filters,
         children: [
             (0, r.jsx)(s.njP, {
-                look: 'grey',
-                orientation: 'horizontal',
+                look: "grey",
+                orientation: "horizontal",
                 onItemSelect: u,
                 selectedItem: c,
                 className: g.tabBar,
@@ -114,30 +115,30 @@ function C() {
                         s.njP.Item,
                         {
                             id: t,
-                            'aria-label': t,
+                            "aria-label": t,
                             className: o()(g.filterButton, { [g.selected]: c === t }),
                             disableItemStyles: !0,
                             children: (0, r.jsx)(v, {
                                 setIsVisible: (e) => {
                                     l((n) => b(m({}, n), { [t]: e }));
                                 },
-                                children: e[t]
-                            })
+                                children: e[t],
+                            }),
                         },
-                        t
-                    )
-                )
+                        t,
+                    ),
+                ),
             }),
-            (0, r.jsx)(j, { hiddenFilters: a })
-        ]
+            (0, r.jsx)(j, { hiddenFilters: a }),
+        ],
     });
 }
 function v(e) {
     let { children: t, setIsVisible: n } = e,
         i = (0, a.O)(n);
-    return (0, r.jsx)('span', {
+    return (0, r.jsx)("span", {
         ref: i,
-        children: t
+        children: t,
     });
 }
 function j(e) {
@@ -151,25 +152,25 @@ function j(e) {
     return 0 === t.length
         ? null
         : (0, r.jsx)(s.yRy, {
-              position: 'bottom',
-              align: 'left',
+              position: "bottom",
+              align: "left",
               shouldShow: o,
               targetElementRef: l,
               onRequestClose: () => a(!1),
               onRequestOpen: () => a(!0),
               renderPopout: (e) => {
                   var { closePopout: i } = e,
-                      l = O(e, ['closePopout']);
+                      l = O(e, ["closePopout"]);
                   return (0, r.jsx)(
                       s.v2r,
                       b(
                           m(
                               {
                                   onSelect: () => {},
-                                  navId: 'notifications-sidebar-filters',
-                                  'aria-label': 'Notifications Sidebar Filters'
+                                  navId: "notifications-sidebar-filters",
+                                  "aria-label": "Notifications Sidebar Filters",
                               },
-                              l
+                              l,
                           ),
                           {
                               onClose: () => i(),
@@ -179,23 +180,23 @@ function j(e) {
                                       {
                                           id: e,
                                           action: () => {
-                                              (C(y === e ? p.V5.ALL : e),
+                                              C(y === e ? p.V5.ALL : e),
                                                   (0, u.RZ)({
                                                       section: e,
                                                       enabled: !0,
-                                                      viewId: n
-                                                  }));
+                                                      viewId: n,
+                                                  });
                                           },
                                           label: _[e],
                                           dontCloseOnAction: !0,
                                           className: g.filterMenuItem,
-                                          icon: e === y ? (0, r.jsx)(S, {}) : void 0
+                                          icon: e === y ? (0, r.jsx)(S, {}) : void 0,
                                       },
-                                      e
-                                  )
-                              )
-                          }
-                      )
+                                      e,
+                                  ),
+                              ),
+                          },
+                      ),
                   );
               },
               children: (e) =>
@@ -208,11 +209,11 @@ function j(e) {
                           onMouseLeave: () => f(!1),
                           children: (0, r.jsx)(s.xhG, {
                               className: g.moreButtonIcon,
-                              size: 'xxs',
-                              color: h || o ? c.Z.INTERACTIVE_HOVER : c.Z.INTERACTIVE_NORMAL
-                          })
-                      })
-                  )
+                              size: "xxs",
+                              color: h || o ? c.Z.INTERACTIVE_HOVER : c.Z.INTERACTIVE_NORMAL,
+                          }),
+                      }),
+                  ),
           });
 }
 function E(e) {
@@ -227,8 +228,8 @@ function E(e) {
     return 0 === l.length
         ? null
         : (0, r.jsx)(s.yRy, {
-              position: 'bottom',
-              align: 'left',
+              position: "bottom",
+              align: "left",
               shouldShow: h,
               targetElementRef: a,
               onRequestClose: () => y(!1),
@@ -236,17 +237,17 @@ function E(e) {
               autoInvert: !1,
               renderPopout: (e) => {
                   var { closePopout: t } = e,
-                      i = O(e, ['closePopout']);
+                      i = O(e, ["closePopout"]);
                   return (0, r.jsx)(
                       s.v2r,
                       b(
                           m(
                               {
                                   onSelect: () => {},
-                                  navId: 'notifications-sidebar-filters',
-                                  'aria-label': f.intl.string(f.t.UdhTtr)
+                                  navId: "notifications-sidebar-filters",
+                                  "aria-label": f.intl.string(f.t.UdhTtr),
                               },
-                              i
+                              i,
                           ),
                           {
                               onClose: () => t(),
@@ -256,28 +257,28 @@ function E(e) {
                                       {
                                           id: e,
                                           action: () => {
-                                              (x(E === e ? p.V5.ALL : e),
+                                              x(E === e ? p.V5.ALL : e),
                                                   (0, u.RZ)({
                                                       section: e,
                                                       enabled: E !== e,
-                                                      viewId: n
-                                                  }));
+                                                      viewId: n,
+                                                  });
                                           },
                                           label: j[e],
                                           dontCloseOnAction: !0,
                                           className: g.filterMenuItem,
-                                          icon: e === E ? (0, r.jsx)(S, {}) : void 0
+                                          icon: e === E ? (0, r.jsx)(S, {}) : void 0,
                                       },
-                                      e
-                                  )
-                              )
-                          }
-                      )
+                                      e,
+                                  ),
+                              ),
+                          },
+                      ),
                   );
               },
               children: (e) =>
                   (0, r.jsx)(s.ua7, {
-                      position: 'bottom',
+                      position: "bottom",
                       forceOpen: C,
                       shouldShow: C && !h,
                       text: f.intl.string(f.t.UdhTtr),
@@ -287,29 +288,29 @@ function E(e) {
                               b(m({}, e), {
                                   className: o()(t, g.headerButton),
                                   innerRef: a,
-                                  'aria-label': f.intl.string(f.t.UdhTtr),
+                                  "aria-label": f.intl.string(f.t.UdhTtr),
                                   onClick: (t) => {
                                       e.onClick(t);
                                   },
                                   onMouseEnter: () => {
                                       var t;
-                                      (v(!0), null == (t = e.onMouseEnter) || t.call(e));
+                                      v(!0), null == (t = e.onMouseEnter) || t.call(e);
                                   },
                                   onMouseLeave: () => {
                                       v(!1);
                                   },
                                   children: (0, r.jsx)(s.gXV, {
-                                      size: 'xs',
-                                      color: C || h ? c.Z.INTERACTIVE_HOVER : c.Z.INTERACTIVE_NORMAL
-                                  })
-                              })
-                          )
-                  })
+                                      size: "xs",
+                                      color: C || h ? c.Z.INTERACTIVE_HOVER : c.Z.INTERACTIVE_NORMAL,
+                                  }),
+                              }),
+                          ),
+                  }),
           });
 }
 let S = () =>
     (0, r.jsx)(s.owK, {
-        size: 'refresh_sm',
-        color: ''.concat(c.Z.BG_BRAND, ' !important'),
-        secondaryColor: c.Z.WHITE
+        size: "refresh_sm",
+        color: "".concat(c.Z.BG_BRAND, " !important"),
+        secondaryColor: c.Z.WHITE,
     });

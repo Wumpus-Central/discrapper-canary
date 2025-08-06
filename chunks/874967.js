@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,7 +49,8 @@ function b(e, t) {
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -59,7 +60,7 @@ function y(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let O = l().memoize((e) => {
@@ -79,7 +80,7 @@ class v extends i.PureComponent {
             t
                 ? (e = {
                       color: s,
-                      background: null != n ? n : u.Z.unsafe_rawColors.BRAND_500.css
+                      background: null != n ? n : u.Z.unsafe_rawColors.BRAND_500.css,
                   })
                 : null != n && (e = { color: n }),
             (0, r.jsx)(d.t, {
@@ -90,14 +91,14 @@ class v extends i.PureComponent {
                     onKeyUp: this.handleKeyUp,
                     align: _.Z.Align.CENTER,
                     style: E({}, e, this.props.style),
-                    role: 'button',
+                    role: "button",
                     tabIndex: 0,
                     children: [
                         (0, r.jsx)(_.Z, {
                             align: _.Z.Align.CENTER,
                             className: h.selectableItemLabel,
                             shrink: 1,
-                            children: o
+                            children: o,
                         }),
                         t &&
                             (0, r.jsx)(_.Z, {
@@ -106,30 +107,30 @@ class v extends i.PureComponent {
                                 grow: 0,
                                 shrink: 0,
                                 children: (0, r.jsx)(f.dz2, {
-                                    size: 'md',
-                                    color: s
-                                })
-                            })
-                    ]
-                })
+                                    size: "md",
+                                    color: s,
+                                }),
+                            }),
+                    ],
+                }),
             })
         );
     }
     constructor(...e) {
-        (super(...e),
-            g(this, 'state', { color: O(this.props.color) }),
-            g(this, 'handleKeyUp', (e) => {
+        super(...e),
+            g(this, "state", { color: O(this.props.color) }),
+            g(this, "handleKeyUp", (e) => {
                 if (e.which === p.yXg.ENTER || e.which === p.yXg.SPACE) {
                     let e = this.props,
                         { onClick: t } = e;
-                    t(b(e, ['onClick']));
+                    t(b(e, ["onClick"]));
                 }
             }),
-            g(this, 'handleClick', () => {
+            g(this, "handleClick", () => {
                 let e = this.props,
                     { onClick: t } = e;
-                t(b(e, ['onClick']));
-            }));
+                t(b(e, ["onClick"]));
+            });
     }
 }
 let I = v;

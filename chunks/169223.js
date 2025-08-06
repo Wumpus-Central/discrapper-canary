@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(392711),
@@ -23,7 +23,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,8 +70,8 @@ function v(e, t) {
 }
 class I extends m.Z {
     constructor(...e) {
-        (super(...e),
-            b(this, 'actions', {
+        super(...e),
+            b(this, "actions", {
                 VOICE_CHANNEL_SHOW_FEEDBACK: (e) => this.handleVoiceChannelFeedback(e),
                 STREAM_CLOSE: (e) => this.handleStreamClose(e),
                 VIDEO_BACKGROUND_SHOW_FEEDBACK: (e) => this.handleVideoBackgroundShowFeedback(e),
@@ -79,25 +79,29 @@ class I extends m.Z {
                 IN_APP_REPORTS_SHOW_FEEDBACK: (e) => this.handleInAppReportsFeedback(e),
                 USER_DM_MUTE_SHOW_FEEDBACK: (e) => this.handleUserDmMuteFeedback(e),
                 BLOCK_USER_SHOW_FEEDBACK: () => this.handleBlockUserFeedback(),
-                AGE_VERIFICATION_SHOW_FEEDBACK: (e) => this.handleAgeVerificationFeedback(e)
+                AGE_VERIFICATION_SHOW_FEEDBACK: (e) => this.handleAgeVerificationFeedback(e),
             }),
-            b(this, 'handleVoiceChannelFeedback', (e) => {
+            b(this, "handleVoiceChannelFeedback", (e) => {
                 let { analyticsData: t } = e;
-                ((0, i.sum)(t.duration_speaking_voice_filter_ms) >= 5000 &&
+                (0, i.sum)(t.duration_speaking_voice_filter_ms) >= 5000 &&
                     this.possiblyShowFeedbackModal(g.nw.VOICE_FILTER, () => {
                         (0, o.ZDy)(async () => {
-                            let { VoiceFilterFeedbackModal: e } = await Promise.all([n.e('60137'), n.e('7287')]).then(n.bind(n, 193543));
+                            let { VoiceFilterFeedbackModal: e } = await Promise.all([n.e("60137"), n.e("7287")]).then(
+                                n.bind(n, 193543),
+                            );
                             return (n) => (0, r.jsx)(e, v(y({}, n), { analyticsData: t }));
                         });
                     }),
                     this.possiblyShowFeedbackModal(g.nw.VOICE, () => {
                         (0, o.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e('60137'), n.e('58703')]).then(n.bind(n, 988645));
+                            let { default: e } = await Promise.all([n.e("60137"), n.e("58703")]).then(
+                                n.bind(n, 988645),
+                            );
                             return (n) => (0, r.jsx)(e, v(y({}, n), { analyticsData: t }));
                         });
-                    }));
+                    });
             }),
-            b(this, 'handleStreamClose', (e) => {
+            b(this, "handleStreamClose", (e) => {
                 var t, i;
                 let { streamKey: a, canShowFeedback: s } = e,
                     u = (0, l.my)(a),
@@ -109,14 +113,17 @@ class I extends m.Z {
                             rtc_connection_id: h.Z.getRtcConnectionId(a),
                             stream_region: h.Z.getRegion(a),
                             max_viewers: h.Z.getMaxViewers(a),
-                            parent_media_session_id: null == (t = h.Z.getRTCConnection(a)) ? void 0 : t.parentMediaSessionId
+                            parent_media_session_id:
+                                null == (t = h.Z.getRTCConnection(a)) ? void 0 : t.parentMediaSessionId,
                         },
-                        p
+                        p,
                     );
                 s &&
                     this.possiblyShowFeedbackModal(g.nw.STREAM, () => {
                         (0, o.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e('60137'), n.e('50461')]).then(n.bind(n, 142402));
+                            let { default: e } = await Promise.all([n.e("60137"), n.e("50461")]).then(
+                                n.bind(n, 142402),
+                            );
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
@@ -125,33 +132,33 @@ class I extends m.Z {
                                             {
                                                 stream: u,
                                                 streamApplication: f,
-                                                isStreamer: u.ownerId === d.default.getId()
+                                                isStreamer: u.ownerId === d.default.getId(),
                                             },
-                                            t
+                                            t,
                                         ),
-                                        { analyticsData: m }
-                                    )
+                                        { analyticsData: m },
+                                    ),
                                 );
                         });
                     });
             }),
-            b(this, 'handleVideoBackgroundShowFeedback', (e) => {
+            b(this, "handleVideoBackgroundShowFeedback", (e) => {
                 let { analyticsData: t } = e;
                 this.possiblyShowFeedbackModal(g.nw.VIDEO_BACKGROUND, () => {
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('60137'), n.e('92806')]).then(n.bind(n, 801320));
+                        let { default: e } = await Promise.all([n.e("60137"), n.e("92806")]).then(n.bind(n, 801320));
                         return (n) => (0, r.jsx)(e, v(y({}, n), { analyticsData: t }));
                     });
                 });
             }),
-            b(this, 'handleActivityClose', (e) => {
+            b(this, "handleActivityClose", (e) => {
                 let { applicationId: t, location: i, showFeedback: l } = e,
                     c = s.Z.getApplication(t),
                     d = (0, a.p)(i),
                     _ = f.Z.getChannel(d),
                     h = {
                         rtc_connection_id: p.Z.getRTCConnectionId(),
-                        media_session_id: p.Z.getMediaSessionId()
+                        media_session_id: p.Z.getMediaSessionId(),
                     },
                     m = u.Z.getWindowOpen(E.KJ3.CHANNEL_CALL_POPOUT) ? o.u1M : o.z1l;
                 null != c &&
@@ -159,7 +166,9 @@ class I extends m.Z {
                     this.possiblyShowFeedbackModal(g.nw.ACTIVITY, () => {
                         (0, o.ZDy)(
                             async () => {
-                                let { default: e } = await Promise.all([n.e('60137'), n.e('89')]).then(n.bind(n, 450634));
+                                let { default: e } = await Promise.all([n.e("60137"), n.e("89")]).then(
+                                    n.bind(n, 450634),
+                                );
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
@@ -167,56 +176,56 @@ class I extends m.Z {
                                             activityApplication: c,
                                             channel: _,
                                             embeddedActivityLocation: i,
-                                            analyticsData: h
-                                        })
+                                            analyticsData: h,
+                                        }),
                                     );
                             },
-                            { contextKey: m }
+                            { contextKey: m },
                         );
                     });
             }),
-            b(this, 'handleInAppReportsFeedback', (e) => {
+            b(this, "handleInAppReportsFeedback", (e) => {
                 let { reportId: t, reportType: i } = e;
                 this.possiblyShowFeedbackModal(g.nw.IN_APP_REPORTS, () => {
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('60137'), n.e('37886')]).then(n.bind(n, 442173));
+                        let { default: e } = await Promise.all([n.e("60137"), n.e("37886")]).then(n.bind(n, 442173));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
                                 v(y({}, n), {
                                     reportId: t,
-                                    reportType: i
-                                })
+                                    reportType: i,
+                                }),
                             );
                     });
                 });
             }),
-            b(this, 'handleUserDmMuteFeedback', (e) => {
+            b(this, "handleUserDmMuteFeedback", (e) => {
                 let { channel: t } = e;
                 this.possiblyShowFeedbackModal(g.nw.USER_DM_MUTE, () => {
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await n.e('10620').then(n.bind(n, 408561));
+                        let { default: e } = await n.e("10620").then(n.bind(n, 408561));
                         return (n) => (0, r.jsx)(e, v(y({}, n), { channel: t }));
                     });
                 });
             }),
-            b(this, 'handleBlockUserFeedback', () => {
+            b(this, "handleBlockUserFeedback", () => {
                 this.possiblyShowFeedbackModal(g.nw.BLOCK_USER, () => {
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('60137'), n.e('37332')]).then(n.bind(n, 180970));
+                        let { default: e } = await Promise.all([n.e("60137"), n.e("37332")]).then(n.bind(n, 180970));
                         return (t) => (0, r.jsx)(e, y({}, t));
                     });
                 });
             }),
-            b(this, 'handleAgeVerificationFeedback', (e) => {
+            b(this, "handleAgeVerificationFeedback", (e) => {
                 let { dismissibleContent: t } = e;
                 this.possiblyShowFeedbackModal(g.nw.AGE_VERIFICATION, () => {
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('60137'), n.e('39139')]).then(n.bind(n, 110927));
+                        let { default: e } = await Promise.all([n.e("60137"), n.e("39139")]).then(n.bind(n, 110927));
                         return (n) => (0, r.jsx)(e, y({ dismissibleContent: t }, n));
                     });
                 });
-            }));
+            });
     }
 }
 let T = new I();

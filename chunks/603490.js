@@ -17,8 +17,8 @@ function c(e) {
         },
         shouldShow: d,
         onRequestClose: c,
-        position: o.tq ? 'top' : 'left',
-        align: o.tq ? 'center' : 'top',
+        position: o.tq ? "top" : "left",
+        align: o.tq ? "center" : "top",
         clickTrap: !0,
         children: () =>
             (0, r.jsx)(
@@ -27,9 +27,9 @@ function c(e) {
                     ref: f,
                     label: l.intl.string(l.t.lfIHs7),
                     icon: a.EO4,
-                    onClick: c
+                    onClick: c,
                 },
-                'add-reaction'
-            )
+                "add-reaction",
+            ),
     });
 }

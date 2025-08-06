@@ -1,1 +1,1 @@
-p.exports = { '5+172d': 'Stream' };
+p.exports = { "5+172d": "Stream" };

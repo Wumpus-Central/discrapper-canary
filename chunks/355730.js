@@ -1,1 +1,1 @@
-e.exports = { panel: 'panel__578a4' };
+e.exports = { panel: "panel__578a4" };

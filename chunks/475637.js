@@ -19,7 +19,7 @@ function r(e) {
             (n = e.valueCallback ? e.valueCallback(d) : d),
             {
                 value: (n = r.valueCallback ? r.valueCallback(n) : n),
-                rest: t.slice(c.length)
+                rest: t.slice(c.length),
             }
         );
     };

@@ -9,7 +9,15 @@ var i = n(120356),
     c = n(815756);
 let u = 6;
 function d(e) {
-    let { className: t, roleColor: n, roleName: i, hasRemoveIcon: d = !1, onClick: f, disabled: _ = !1, verified: p = !1 } = e;
+    let {
+        className: t,
+        roleColor: n,
+        roleName: i,
+        hasRemoveIcon: d = !1,
+        onClick: f,
+        disabled: _ = !1,
+        verified: p = !1,
+    } = e;
     return (0, r.jsx)(a.zx, {
         className: o()(t, c.button),
         look: a.zx.Looks.BLANK,
@@ -24,13 +32,13 @@ function d(e) {
             children:
                 d &&
                 (0, r.jsx)(s.Dio, {
-                    size: 'custom',
-                    color: 'currentColor',
+                    size: "custom",
+                    color: "currentColor",
                     height: u,
                     width: u,
                     className: c.removeRole,
-                    colorClass: c.removeRoleIcon
-                })
-        })
+                    colorClass: c.removeRoleIcon,
+                }),
+        }),
     });
 }

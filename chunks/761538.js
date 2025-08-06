@@ -11,7 +11,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -37,17 +37,17 @@ function c(e) {
     let { message: t } = e,
         s = () => {
             (0, i.ZDy)(async () => {
-                let { default: e } = await n.e('14021').then(n.bind(n, 910673));
+                let { default: e } = await n.e("14021").then(n.bind(n, 910673));
                 return (n) =>
                     (0, r.jsx)(
                         e,
                         l(
                             {
                                 channelId: t.channel_id,
-                                messageId: t.id
+                                messageId: t.id,
                             },
-                            n
-                        )
+                            n,
+                        ),
                     );
             });
         };
@@ -56,14 +56,14 @@ function c(e) {
         className: a.accessory,
         children: [
             (0, r.jsx)(i.d3s, {
-                size: 'xs',
-                color: 'currentColor'
+                size: "xs",
+                color: "currentColor",
             }),
             (0, r.jsx)(i.Text, {
-                variant: 'text-xs/normal',
+                variant: "text-xs/normal",
                 className: a.accessoryText,
-                children: o.intl.string(o.t['2aXnfX'])
-            })
-        ]
+                children: o.intl.string(o.t["2aXnfX"]),
+            }),
+        ],
     });
 }

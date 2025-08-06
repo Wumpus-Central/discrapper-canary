@@ -6,30 +6,30 @@ var l = n(481060),
     a = n(570467);
 let s = (e) => {
     let { errorMessage: t, onClose: n } = e;
-    return null == t || '' === t
+    return null == t || "" === t
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: a.errorContainer,
               children: [
                   (0, r.jsx)(l.Mgn, {
-                      size: 'custom',
-                      color: 'currentColor',
+                      size: "custom",
+                      color: "currentColor",
                       width: 20,
                       height: 20,
-                      className: a.errorIcon
+                      className: a.errorIcon,
                   }),
                   (0, r.jsx)(l.Text, {
                       className: a.errorText,
-                      variant: 'text-sm/normal',
-                      children: t
+                      variant: "text-sm/normal",
+                      children: t,
                   }),
                   (0, r.jsx)(l.P3F, {
                       onClick: () => {
                           n();
                       },
-                      'aria-label': i.intl.string(i.t.WAI6xs),
-                      className: a.closeIcon
-                  })
-              ]
+                      "aria-label": i.intl.string(i.t.WAI6xs),
+                      className: a.closeIcon,
+                  }),
+              ],
           });
 };

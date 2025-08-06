@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(388685));
+n.d(t, { Z: () => D }), n(388685);
 var r,
     i = n(442837),
     o = n(46973),
@@ -21,7 +21,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,7 +33,7 @@ let b = new s.Z(),
 function v(e, t, n) {
     let r = new c.Z({
             userId: e.id,
-            channelId: n
+            channelId: n,
         }),
         i = (0, h.PH)(r, null != t ? t : m.ME, e.id);
     b.set(e.id, i);
@@ -50,7 +50,7 @@ function v(e, t, n) {
         ringing: !1,
         userNick: u.ZP.getName(t, n, e),
         userAvatarDecoration: (0, l.o)(e, t),
-        localVideoDisabled: !1
+        localVideoDisabled: !1,
     };
     y.set(e.id, o);
 }
@@ -76,7 +76,7 @@ function T() {
     );
 }
 function S() {
-    (b.clear(), y.clear(), O.clear());
+    b.clear(), y.clear(), O.clear();
 }
 function A() {
     S();
@@ -114,7 +114,7 @@ function P(e) {
 }
 class w extends (r = i.ZP.Store) {
     initialize() {
-        (this.waitFor(p.Z, _.default, d.Z, f.Z), this.syncWith([_.default], T));
+        this.waitFor(p.Z, _.default, d.Z, f.Z), this.syncWith([_.default], T);
     }
     get desyncedVoiceStatesCount() {
         return b.size();
@@ -129,12 +129,12 @@ class w extends (r = i.ZP.Store) {
         return y.values();
     }
 }
-E(w, 'displayName', 'RTCConnectionDesyncStore');
+E(w, "displayName", "RTCConnectionDesyncStore");
 let D = new w(a.Z, {
     CONNECTION_OPEN: A,
     VOICE_CHANNEL_SELECT: S,
     RTC_CONNECTION_STATE: N,
     VOICE_STATE_UPDATES: C,
     RTC_CONNECTION_CLIENT_CONNECT: R,
-    RTC_CONNECTION_CLIENT_DISCONNECT: P
+    RTC_CONNECTION_CLIENT_DISCONNECT: P,
 });

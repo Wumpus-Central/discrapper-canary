@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     a: () => C,
-    default: () => P
+    default: () => P,
 }),
     n(388685),
     n(704826),
-    n(35282));
+    n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -30,23 +30,23 @@ var r = n(255367),
     S = n(388032),
     A = n(823150),
     N = n(740353);
-let C = 'VoiceChannelStatusModal',
+let C = "VoiceChannelStatusModal",
     R = 500;
 function P(e) {
     let { channel: t, transitionState: n, sourceAnalyticsLocations: o, onClose: P } = e,
-        w = b.Z.getCurrentConfig({ location: 'VoiceChannelStatusModal' }, { autoTrackExposure: !0 }).enabled,
+        w = b.Z.getCurrentConfig({ location: "VoiceChannelStatusModal" }, { autoTrackExposure: !0 }).enabled,
         D = (0, s.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         L = (0, s.e7)([O.Z], () => O.Z.getMediaSessionId()),
-        [x, M] = i.useState(null != D ? D : ''),
+        [x, M] = i.useState(null != D ? D : ""),
         [k, j] = i.useState(!1),
         [U, G] = i.useState(null),
         B = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         Z = x.length > R;
     i.useEffect(() => {
         I.default.track(T.rMx.OPEN_MODAL, {
-            type: 'Voice Channel Topic Modal',
+            type: "Voice Channel Topic Modal",
             guild_id: t.guild_id,
-            location_stack: o
+            location_stack: o,
         });
     }, [t.guild_id, o]);
     let F = (e) => {
@@ -56,14 +56,14 @@ function P(e) {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = _.Z.validateMessage(n, B, t.id);
-                return (G(e), j(!1), { hasErrors: !0 });
+                return G(e), j(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         H = async (e) => {
-            (x === D && P(), null == e || e.preventDefault(), G(null), j(!0));
+            x === D && P(), null == e || e.preventDefault(), G(null), j(!0);
             let n = x.length,
-                r = x.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
+                r = x.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = y.ZP.parse(t, x),
                 { hasErrors: a } = V(i);
             if (!a) {
@@ -76,7 +76,7 @@ function P(e) {
                               media_session_id: L,
                               raw_length: n,
                               text_length: r,
-                              location_stack: o
+                              location_stack: o,
                           }),
                           P())
                         : F(e);
@@ -88,13 +88,13 @@ function P(e) {
         },
         [Y, W] = i.useState((0, m.JM)(x)),
         K = (e, t, n) => {
-            (M(t), W(n));
+            M(t), W(n);
         },
         z = async () => (
             Z || k || (await H()),
             Promise.resolve({
                 shouldClear: !1,
-                shouldRefocus: !0
+                shouldRefocus: !0,
             })
         ),
         q = (0, r.jsxs)(d.hjN, {
@@ -117,50 +117,50 @@ function P(e) {
                     parentModalKey: C,
                     maxCharacterCount: R,
                     showRemainingCharsAfterCount: R / 2,
-                    emojiPickerCloseOnModalOuterClick: !0
+                    emojiPickerCloseOnModalOuterClick: !0,
                 }),
                 null != U
                     ? (0, r.jsx)(d.kzN, {
                           className: A.error,
-                          children: U
+                          children: U,
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     return w
         ? (0, r.jsx)(c.I, {
               transitionState: n,
               onClose: P,
               graphic: {
-                  type: 'image',
-                  src: N
+                  type: "image",
+                  src: N,
               },
-              title: S.intl.string(S.t['5CyJBQ']),
+              title: S.intl.string(S.t["5CyJBQ"]),
               subtitle: S.intl.string(S.t.NRBYjo),
               actions: [
                   {
-                      variant: 'secondary',
-                      text: S.intl.string(S.t['ETE/oK']),
-                      onClick: P
+                      variant: "secondary",
+                      text: S.intl.string(S.t["ETE/oK"]),
+                      onClick: P,
                   },
                   {
-                      variant: 'primary',
+                      variant: "primary",
                       loading: k,
                       disabled: Z,
                       text: S.intl.string(S.t.XqK2Iy),
-                      onClick: H
-                  }
+                      onClick: H,
+                  },
               ],
-              children: q
+              children: q,
           })
-        : (0, r.jsx)('form', {
+        : (0, r.jsx)("form", {
               onSubmit: H,
               className: A.form,
               children: (0, r.jsxs)(d.Y0X, {
                   transitionState: n,
                   size: d.CgR.SMALL,
                   className: a()(A.modal, A.gradientBorder),
-                  parentComponent: 'VoiceChannelStatusModal',
+                  parentComponent: "VoiceChannelStatusModal",
                   children: [
                       (0, r.jsxs)(d.hzk, {
                           className: A.container,
@@ -172,48 +172,48 @@ function P(e) {
                                   children: [
                                       (0, r.jsx)(d.olH, {
                                           className: A.closeButton,
-                                          onClick: P
+                                          onClick: P,
                                       }),
-                                      (0, r.jsx)('div', { className: A.headerImage }),
+                                      (0, r.jsx)("div", { className: A.headerImage }),
                                       (0, r.jsx)(d.vwX, {
-                                          tag: 'h1',
+                                          tag: "h1",
                                           className: A.title,
-                                          children: S.intl.string(S.t['5CyJBQ'])
+                                          children: S.intl.string(S.t["5CyJBQ"]),
                                       }),
                                       (0, r.jsx)(d.Text, {
-                                          color: 'header-secondary',
-                                          variant: 'text-sm/normal',
-                                          children: S.intl.string(S.t.NRBYjo)
-                                      })
-                                  ]
+                                          color: "header-secondary",
+                                          variant: "text-sm/normal",
+                                          children: S.intl.string(S.t.NRBYjo),
+                                      }),
+                                  ],
                               }),
-                              q
-                          ]
+                              q,
+                          ],
                       }),
                       (0, r.jsxs)(d.mzw, {
                           justify: E.Z.Justify.END,
                           direction: E.Z.Direction.HORIZONTAL,
                           className: A.modalFooter,
                           children: [
-                              (0, r.jsx)('div', {
-                                  'data-button-hoisted-classname-wrapper': !0,
+                              (0, r.jsx)("div", {
+                                  "data-button-hoisted-classname-wrapper": !0,
                                   className: A.cancelButton,
                                   children: (0, r.jsx)(d.zxk, {
-                                      variant: 'secondary',
-                                      text: S.intl.string(S.t['ETE/oK']),
-                                      onClick: P
-                                  })
+                                      variant: "secondary",
+                                      text: S.intl.string(S.t["ETE/oK"]),
+                                      onClick: P,
+                                  }),
                               }),
                               (0, r.jsx)(u.zx, {
                                   onClick: H,
                                   submitting: k,
                                   className: A.button,
                                   disabled: Z,
-                                  children: S.intl.string(S.t.XqK2Iy)
-                              })
-                          ]
-                      })
-                  ]
-              })
+                                  children: S.intl.string(S.t.XqK2Iy),
+                              }),
+                          ],
+                      }),
+                  ],
+              }),
           });
 }

@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     CR: () => L,
-    DD: () => P
+    DD: () => P,
 }),
     n(953529),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(594174),
@@ -22,7 +22,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,15 +80,15 @@ function y(e) {
         f = (0, s.f$)(n.config),
         p = (0, s._p)(n.config);
     return b(
-        (t = o && f ? (p ? _.t['eb/SnZ'] : _.t.ziB0HB) : f || null != a ? _.t.AwuMRU : _.t.NIimTk),
+        (t = o && f ? (p ? _.t["eb/SnZ"] : _.t.ziB0HB) : f || null != a ? _.t.AwuMRU : _.t.NIimTk),
         {
             gameTitle: d,
             streamingDurationRequirement: c,
             rewardNameWithArticle: l,
             duration: a,
-            targetMinutes: c
+            targetMinutes: c,
         },
-        i
+        i,
     );
 }
 function O(e) {
@@ -100,15 +100,15 @@ function O(e) {
         f = (0, s.f$)(n.config),
         p = (0, s._p)(n.config);
     return b(
-        (t = o && f ? (p ? _.t['eb/SnZ'] : _.t.ziB0HB) : f || null != a ? _.t.AwuMRU : _.t.NIimTk),
+        (t = o && f ? (p ? _.t["eb/SnZ"] : _.t.ziB0HB) : f || null != a ? _.t.AwuMRU : _.t.NIimTk),
         {
             gameTitle: d,
             targetMinutes: c,
             rewardNameWithArticle: l,
             duration: a,
-            streamingDurationRequirement: c
+            streamingDurationRequirement: c,
         },
-        i
+        i,
     );
 }
 function v(e) {
@@ -120,15 +120,15 @@ function v(e) {
         f = (0, s.f$)(n.config),
         p = (0, s._p)(n.config);
     return b(
-        (t = o && f ? (p ? _.t['eb/SnZ'] : _.t.ziB0HB) : f || null != a ? _.t.AwuMRU : _.t.FZL5Q0),
+        (t = o && f ? (p ? _.t["eb/SnZ"] : _.t.ziB0HB) : f || null != a ? _.t.AwuMRU : _.t.FZL5Q0),
         {
             gameTitle: d,
             streamingDurationRequirement: c,
             rewardNameWithArticle: l,
             duration: a,
-            questReward: l
+            questReward: l,
         },
-        i
+        i,
     );
 }
 function I(e) {
@@ -136,30 +136,39 @@ function I(e) {
         { targetMinutes: i } = n,
         o = t.config.messages.gameTitle;
     return b(
-        _.t['a/ia7O'],
+        _.t["a/ia7O"],
         {
             gameTitle: o,
-            streamingDurationRequirement: i
+            streamingDurationRequirement: i,
         },
-        r
+        r,
     );
 }
 function T(e, t, n, r) {
     var i;
     let o,
         a = u.r.build(e.config).defaultWatchVideoTask,
-        l = null != (i = null == a ? void 0 : a.messages.videoTitle) ? i : 'video',
+        l = null != (i = null == a ? void 0 : a.messages.videoTitle) ? i : "video",
         c = u.r.build(e.config).defaultRewardNameWithArticle,
         f = (0, s.f$)(e.config),
         p = (0, s._p)(e.config);
     return b(
-        (o = f && n ? (p ? _.t['xqX+r6'] : _.t['vs/xBg']) : f || null != t ? _.t['W/HkLC'] : e.id === d.V6 ? _.t.Rsd5bG : _.t['g+InPD']),
+        (o =
+            f && n
+                ? p
+                    ? _.t["xqX+r6"]
+                    : _.t["vs/xBg"]
+                : f || null != t
+                  ? _.t["W/HkLC"]
+                  : e.id === d.V6
+                    ? _.t.Rsd5bG
+                    : _.t["g+InPD"]),
         {
             videoTitle: l,
             rewardNameWithArticle: c,
-            duration: t
+            duration: t,
         },
-        r
+        r,
     );
 }
 function S(e) {
@@ -170,9 +179,9 @@ function S(e) {
         _.t.VYwSSk,
         {
             streamingDurationRequirement: i,
-            questReward: o
+            questReward: o,
         },
-        r
+        r,
     );
 }
 function A(e) {
@@ -184,14 +193,14 @@ function A(e) {
         f = (0, s.f$)(n.config),
         p = (0, s._p)(n.config);
     return b(
-        (t = o && f ? (p ? _.t['X8Yt//'] : _.t.smG9qq) : f || null != a ? _.t.BLyDvL : _.t['hkJ+Gh']),
+        (t = o && f ? (p ? _.t["X8Yt//"] : _.t.smG9qq) : f || null != a ? _.t.BLyDvL : _.t["hkJ+Gh"]),
         {
             gameTitle: d,
             streamingDurationRequirement: c,
             duration: a,
-            questReward: l
+            questReward: l,
         },
-        i
+        i,
     );
 }
 function N(e) {
@@ -204,7 +213,7 @@ function N(e) {
             taskDetails: n,
             withoutMarkdown: i,
             hasNitro: l,
-            collectibleRewardDuration: c
+            collectibleRewardDuration: c,
         });
     if ((0, s.$J)(t))
         return O({
@@ -212,7 +221,7 @@ function N(e) {
             taskDetails: n,
             withoutMarkdown: i,
             hasNitro: l,
-            collectibleRewardDuration: c
+            collectibleRewardDuration: c,
         });
     if ((0, s.$H)(t))
         return v({
@@ -220,20 +229,20 @@ function N(e) {
             taskDetails: n,
             withoutMarkdown: i,
             hasNitro: l,
-            collectibleRewardDuration: c
+            collectibleRewardDuration: c,
         });
     if ((0, s.oo)({ quest: t }))
         return I({
             quest: t,
             taskDetails: n,
-            withoutMarkdown: i
+            withoutMarkdown: i,
         });
     if ((0, s.q8)(t)) return T(t, c, l, i);
     else if ((0, s.pO)(t))
         return S({
             quest: t,
             taskDetails: n,
-            withoutMarkdown: i
+            withoutMarkdown: i,
         });
     return null != r
         ? r.description
@@ -242,20 +251,20 @@ function N(e) {
               taskDetails: n,
               withoutMarkdown: i,
               hasNitro: l,
-              collectibleRewardDuration: c
+              collectibleRewardDuration: c,
           });
 }
 let C = (e) => {
     try {
-        let t = '';
-        if ('string' == typeof e) return e;
+        let t = "";
+        if ("string" == typeof e) return e;
         if (Array.isArray(e)) {
             for (let n of e) t += C(n.content);
             return t;
         }
         return C(e.content);
     } catch (e) {
-        return (E.error('Failed to convert ASTNode to string', e), '');
+        return E.error("Failed to convert ASTNode to string", e), "";
     }
 };
 function R(e) {
@@ -268,7 +277,7 @@ function P(e) {
         a = (0, l.uA)({
             quest: t,
             questContent: n,
-            sourceQuestContent: r
+            sourceQuestContent: r,
         }),
         s = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
         c = (0, l.Jf)(t);
@@ -277,8 +286,8 @@ function P(e) {
             connectedConsoleLinkOnClick: a,
             withoutMarkdown: !1,
             currentUser: s,
-            thirdPartyTaskDetails: null != c ? c : void 0
-        })
+            thirdPartyTaskDetails: null != c ? c : void 0,
+        }),
     );
 }
 function w(e) {
@@ -296,6 +305,8 @@ function L(e) {
         case 2:
             return _.intl.string(_.t.umdNio);
         case 3:
-            return t.config.features.includes(d.S7.START_QUEST_CTA) ? _.intl.string(_.t.ToGcxM) : _.intl.string(_.t.l7E81t);
+            return t.config.features.includes(d.S7.START_QUEST_CTA)
+                ? _.intl.string(_.t.ToGcxM)
+                : _.intl.string(_.t.l7E81t);
     }
 }

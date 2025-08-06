@@ -9,33 +9,33 @@ var i = t(481060),
     c = t(28901),
     d = t(38920);
 function u() {
-    return (0, o.jsx)('div', {
+    return (0, o.jsx)("div", {
         className: c.__invalid_getCrunchyrollApp,
-        children: (0, o.jsx)('div', {
+        children: (0, o.jsx)("div", {
             className: c.__invalid_getCrunchyrollAppBody,
             children: (0, o.jsx)(i.Text, {
-                variant: 'text-sm/medium',
-                color: 'header-secondary',
+                variant: "text-sm/medium",
+                color: "header-secondary",
                 children: (0, o.jsx)(i.eee, {
                     href: r.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION),
-                    children: a.intl.string(a.t.hvVgAQ)
-                })
-            })
-        })
+                    children: a.intl.string(a.t.hvVgAQ),
+                }),
+            }),
+        }),
     });
 }
 function C(n) {
     let { onClose: e } = n;
     return (0, o.jsx)(s.L, {
-        img: (0, o.jsx)('img', {
+        img: (0, o.jsx)("img", {
             src: d,
-            width: '224',
-            height: '104',
-            alt: ''
+            width: "224",
+            height: "104",
+            alt: "",
         }),
         title: a.intl.string(a.t.Fnvxvr),
         body: a.intl.string(a.t.YwXcen),
         content: (0, o.jsx)(u, {}),
-        onClose: e
+        onClose: e,
     });
 }

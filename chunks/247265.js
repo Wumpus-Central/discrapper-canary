@@ -1,4 +1,4 @@
-(t.d(r, { default: () => p }), t(388685));
+t.d(r, { default: () => p }), t(388685);
 var n = t(255367),
     o = t(73800),
     i = t(512722),
@@ -25,62 +25,62 @@ let p = (e) => {
         g = (0, l.Z)(),
         { cancelLinkRequest: O, isCancelLoading: v } = (0, a.G)({
             onError: m,
-            onSuccess: x
+            onSuccess: x,
         });
     return (
-        s()(g, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'),
+        s()(g, "FamilyCenterDeclineLinkModal should only be rendered for parents."),
         (0, n.jsx)(d.Z, {
             transitionState: i,
-            children: (0, n.jsxs)('form', {
+            children: (0, n.jsxs)("form", {
                 onSubmit: (e) => {
-                    (e.preventDefault(), O(t));
+                    e.preventDefault(), O(t);
                 },
                 children: [
                     (0, n.jsx)(d.Z.Error, {
-                        error: h ? b.intl.string(u.default['6gyAQU']) : void 0,
-                        onDismiss: y
+                        error: h ? b.intl.string(u.default["6gyAQU"]) : void 0,
+                        onDismiss: y,
                     }),
                     (0, n.jsx)(c.hzk, {
-                        'data-migration-pending': !0,
+                        "data-migration-pending": !0,
                         children: (0, n.jsx)(d.Z.Header, {
                             currentUser: r,
                             otherUser: t,
                             header: b.intl.string(u.default.HynllZ),
                             icon: (0, n.jsx)(c.Dio, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: f.closeIcon
-                            })
-                        })
+                                size: "md",
+                                color: "currentColor",
+                                className: f.closeIcon,
+                            }),
+                        }),
                     }),
                     (0, n.jsx)(c.mzw, {
-                        'data-migration-pending': !0,
+                        "data-migration-pending": !0,
                         children: (0, n.jsx)(d.Z.ButtonFooter, {
                             children: (0, n.jsxs)(c.hE2, {
-                                direction: 'horizontal-reverse',
+                                direction: "horizontal-reverse",
                                 children: [
                                     (0, n.jsx)(c.zxk, {
-                                        variant: 'secondary',
-                                        size: 'sm',
+                                        variant: "secondary",
+                                        size: "sm",
                                         text: b.intl.string(u.default.czincX),
-                                        type: 'button',
+                                        type: "button",
                                         disabled: v,
-                                        onClick: p
+                                        onClick: p,
                                     }),
                                     (0, n.jsx)(c.zxk, {
-                                        variant: 'critical-primary',
-                                        size: 'sm',
+                                        variant: "critical-primary",
+                                        size: "sm",
                                         text: b.intl.string(u.default.mK40bm),
-                                        type: 'submit',
+                                        type: "submit",
                                         disabled: v || h,
-                                        loading: v
-                                    })
-                                ]
-                            })
-                        })
-                    })
-                ]
-            })
+                                        loading: v,
+                                    }),
+                                ],
+                            }),
+                        }),
+                    }),
+                ],
+            }),
         })
     );
 };

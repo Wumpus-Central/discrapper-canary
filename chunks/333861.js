@@ -1,16 +1,24 @@
 n.d(t, {
     M: () => a,
-    s: () => l
+    s: () => l,
 });
 var r = n(255367);
 n(73800);
 var i = n(481060);
-let l = 'command-share-modal';
+let l = "command-share-modal";
 function a(e) {
-    let { applicationId: t, channel: a, command: o, previewMessage: s, requireLaunchChannel: c, contextKey: u, onShareResult: d } = e;
+    let {
+        applicationId: t,
+        channel: a,
+        command: o,
+        previewMessage: s,
+        requireLaunchChannel: c,
+        contextKey: u,
+        onShareResult: d,
+    } = e;
     (0, i.ZDy)(
         async () => {
-            let { ApplicationCommandShareModal: e } = await n.e('53682').then(n.bind(n, 683958));
+            let { ApplicationCommandShareModal: e } = await n.e("53682").then(n.bind(n, 683958));
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -18,24 +26,24 @@ function a(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })(
@@ -45,10 +53,10 @@ function a(e) {
                             command: o,
                             previewMessage: s,
                             onShareResult: d,
-                            requireLaunchChannel: c
+                            requireLaunchChannel: c,
                         },
-                        n
-                    )
+                        n,
+                    ),
                 );
         },
         {
@@ -56,7 +64,7 @@ function a(e) {
             contextKey: u,
             onCloseCallback: () => {
                 d(!1);
-            }
-        }
+            },
+        },
     );
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     GG: () => u,
-    Gy: () => c
+    Gy: () => c,
 });
 var r = n(772848),
     i = n(70956),
@@ -16,7 +16,7 @@ function c() {
               uuid: (0, r.Z)(),
               createdAtTimestamp: t,
               lastUsedTimestamp: t,
-              version: a.EI
+              version: a.EI,
           })
         : (e && (l.lastUsedTimestamp = t), l);
 }
@@ -28,8 +28,10 @@ function d(e) {
     if (t < e.createdAtTimestamp)
         return (
             o.Z.addBreadcrumb({
-                category: 'ad',
-                message: 'future facing timestamp Date.now(): '.concat(t, ', initialized timestamp: ').concat(e.createdAtTimestamp)
+                category: "ad",
+                message: "future facing timestamp Date.now(): "
+                    .concat(t, ", initialized timestamp: ")
+                    .concat(e.createdAtTimestamp),
             }),
             !0
         );

@@ -19,14 +19,14 @@ function o(e) {
         currentUser: n,
         activities: [],
         applicationStream: void 0,
-        userTag: '',
+        userTag: "",
         hidePrivateData: !1,
         premiumSubscription: void 0,
         speakingWhileMuted: !1,
         occluded: !1,
         dismissibleContents: {
             avatar: [],
-            settings: []
+            settings: [],
         },
         awaitingRemote: !1,
         isEligibleForPomelo: !1,
@@ -34,6 +34,6 @@ function o(e) {
         voiceChannel: null,
         voiceActivityStatusEnabled: !1,
         isQuestBarEmpty: !0,
-        isListenAlongVisible: !1
+        isListenAlongVisible: !1,
     });
 }

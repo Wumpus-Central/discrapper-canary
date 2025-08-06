@@ -1,6 +1,6 @@
 s.d(e, {
     ph: () => r,
-    yW: () => n
+    yW: () => n,
 });
 var i = s(899517);
 function n() {
@@ -20,6 +20,6 @@ let r = (function () {
         s = Date.now(),
         n = t.timeOrigin ? Math.abs(t.timeOrigin + e - s) : 3600000,
         r = t.timing && t.timing.navigationStart,
-        o = 'number' == typeof r ? Math.abs(r + e - s) : 3600000;
+        o = "number" == typeof r ? Math.abs(r + e - s) : 3600000;
     if ((n < 3600000 || o < 3600000) && n <= o) return t.timeOrigin;
 })();

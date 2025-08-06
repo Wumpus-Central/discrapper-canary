@@ -1,97 +1,97 @@
 e.exports = function (e) {
     return {
-        name: 'HAML',
+        name: "HAML",
         case_insensitive: !0,
         contains: [
             {
-                className: 'meta',
-                begin: '^!!!( (5|1\\.1|Strict|Frameset|Basic|Mobile|RDFa|XML\\b.*))?$',
-                relevance: 10
+                className: "meta",
+                begin: "^!!!( (5|1\\.1|Strict|Frameset|Basic|Mobile|RDFa|XML\\b.*))?$",
+                relevance: 10,
             },
-            e.COMMENT('^\\s*(!=#|=#|-#|/).*$', null, { relevance: 0 }),
+            e.COMMENT("^\\s*(!=#|=#|-#|/).*$", null, { relevance: 0 }),
             {
-                begin: '^\\s*(-|=|!=)(?!#)',
+                begin: "^\\s*(-|=|!=)(?!#)",
                 end: /$/,
-                subLanguage: 'ruby',
+                subLanguage: "ruby",
                 excludeBegin: !0,
-                excludeEnd: !0
+                excludeEnd: !0,
             },
             {
-                className: 'tag',
-                begin: '^\\s*%',
+                className: "tag",
+                begin: "^\\s*%",
                 contains: [
                     {
-                        className: 'selector-tag',
-                        begin: '\\w+'
+                        className: "selector-tag",
+                        begin: "\\w+",
                     },
                     {
-                        className: 'selector-id',
-                        begin: '#[\\w-]+'
+                        className: "selector-id",
+                        begin: "#[\\w-]+",
                     },
                     {
-                        className: 'selector-class',
-                        begin: '\\.[\\w-]+'
+                        className: "selector-class",
+                        begin: "\\.[\\w-]+",
                     },
                     {
                         begin: /\{\s*/,
                         end: /\s*\}/,
                         contains: [
                             {
-                                begin: ':\\w+\\s*=>',
-                                end: ',\\s+',
+                                begin: ":\\w+\\s*=>",
+                                end: ",\\s+",
                                 returnBegin: !0,
                                 endsWithParent: !0,
                                 contains: [
                                     {
-                                        className: 'attr',
-                                        begin: ':\\w+'
+                                        className: "attr",
+                                        begin: ":\\w+",
                                     },
                                     e.APOS_STRING_MODE,
                                     e.QUOTE_STRING_MODE,
                                     {
-                                        begin: '\\w+',
-                                        relevance: 0
-                                    }
-                                ]
-                            }
-                        ]
+                                        begin: "\\w+",
+                                        relevance: 0,
+                                    },
+                                ],
+                            },
+                        ],
                     },
                     {
-                        begin: '\\(\\s*',
-                        end: '\\s*\\)',
+                        begin: "\\(\\s*",
+                        end: "\\s*\\)",
                         excludeEnd: !0,
                         contains: [
                             {
-                                begin: '\\w+\\s*=',
-                                end: '\\s+',
+                                begin: "\\w+\\s*=",
+                                end: "\\s+",
                                 returnBegin: !0,
                                 endsWithParent: !0,
                                 contains: [
                                     {
-                                        className: 'attr',
-                                        begin: '\\w+',
-                                        relevance: 0
+                                        className: "attr",
+                                        begin: "\\w+",
+                                        relevance: 0,
                                     },
                                     e.APOS_STRING_MODE,
                                     e.QUOTE_STRING_MODE,
                                     {
-                                        begin: '\\w+',
-                                        relevance: 0
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
+                                        begin: "\\w+",
+                                        relevance: 0,
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                ],
             },
-            { begin: '^\\s*[=~]\\s*' },
+            { begin: "^\\s*[=~]\\s*" },
             {
                 begin: /#\{/,
                 end: /\}/,
-                subLanguage: 'ruby',
+                subLanguage: "ruby",
                 excludeBegin: !0,
-                excludeEnd: !0
-            }
-        ]
+                excludeEnd: !0,
+            },
+        ],
     };
 };

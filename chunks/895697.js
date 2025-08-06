@@ -27,7 +27,16 @@ var i = n(442837),
     N = n(773714),
     C = n(200669);
 function R(e) {
-    let { user: t, currentUser: n, displayProfile: R, guild: P, isHovering: w, onOpenProfile: D, channelId: L, onClose: x } = e,
+    let {
+            user: t,
+            currentUser: n,
+            displayProfile: R,
+            guild: P,
+            isHovering: w,
+            onOpenProfile: D,
+            channelId: L,
+            onClose: x,
+        } = e,
         M = c.ZP.getName(null == P ? void 0 : P.id, L, t),
         k = (0, i.e7)([u.Z], () => {
             var e;
@@ -35,7 +44,7 @@ function R(e) {
         }),
         j = (0, i.e7)([a.Z, s.Z], () => a.Z.getChannel(s.Z.getChannelId())),
         U = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
-        G = (0, d.b)({ location: 'BotUserProfilePopoutBody' });
+        G = (0, d.b)({ location: "BotUserProfilePopoutBody" });
     return (0, r.jsxs)(o.Ttm, {
         fade: !0,
         className: C.body,
@@ -48,7 +57,7 @@ function R(e) {
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: R,
                     themeType: S.lY.POPOUT,
-                    onClose: x
+                    onClose: x,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -57,35 +66,35 @@ function R(e) {
                             (0, r.jsx)(O.Z, {
                                 userId: t.id,
                                 isHovering: w,
-                                onOpenProfile: D
-                            })
-                    ]
-                })
+                                onOpenProfile: D,
+                            }),
+                    ],
+                }),
             }),
             (0, r.jsx)(T.Z, {
                 user: t,
-                onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
+                onOpenProfile: (e) => (null == D ? void 0 : D({ section: e })),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: N.buttons,
                 children: [
                     (0, r.jsx)(b.Z, {
                         user: t,
                         className: N.button,
-                        closePopout: x
+                        closePopout: x,
                     }),
                     (0, r.jsx)(y.Z, {
                         user: t,
                         guildId: null == P ? void 0 : P.id,
-                        className: N.button
-                    })
-                ]
+                        className: N.button,
+                    }),
+                ],
             }),
             (0, r.jsx)(v.Z, {
                 user: t,
                 bio: null == R ? void 0 : R.bio,
                 hidePersonalInformation: U,
-                onClose: x
+                onClose: x,
             }),
             G
                 ? (0, r.jsx)(g.Z, {
@@ -94,14 +103,14 @@ function R(e) {
                       displayProfile: R,
                       guildId: null == P ? void 0 : P.id,
                       onOpenUserProfileModal: D,
-                      onClose: x
+                      onClose: x,
                   })
                 : (0, r.jsx)(p.Z, {
                       user: t,
                       currentUser: n,
                       displayProfile: R,
                       guildId: null == P ? void 0 : P.id,
-                      onClose: x
+                      onClose: x,
                   }),
             (null == k ? void 0 : k.popularApplicationCommandIds) != null &&
                 null != j &&
@@ -110,7 +119,7 @@ function R(e) {
                     commandIds: k.popularApplicationCommandIds,
                     channel: j,
                     guildId: null == P ? void 0 : P.id,
-                    onClick: x
+                    onClick: x,
                 }),
             null != P &&
                 (0, r.jsx)(m.Z, {
@@ -118,9 +127,9 @@ function R(e) {
                     children: (0, r.jsx)(I.Z, {
                         user: t,
                         currentUser: n,
-                        guild: P
-                    })
-                })
-        ]
+                        guild: P,
+                    }),
+                }),
+        ],
     });
 }

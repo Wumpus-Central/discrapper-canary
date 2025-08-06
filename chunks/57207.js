@@ -1,7 +1,7 @@
 n.d(t, {
     Bh: () => f,
     G5: () => _,
-    ig: () => d
+    ig: () => d,
 });
 var r = n(399606),
     i = n(704215),
@@ -39,13 +39,13 @@ let c = {
         [i.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2]: 0,
         [i.z.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL]: 0,
         [i.z.Q2_2025_MARKETING_MOMENT_FIRST_IMPRESSION_MODAL]: 0,
-        [i.z.BOGO_2025_ANNOUNCEMENT_MODAL]: 0
+        [i.z.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
     },
     u = a.Z.Millis.DAY;
 function d(e) {
     let { userId: t, newUserMinAgeRequiredOverridden: n } = (0, r.cj)([o.default, l.Z], () => ({
         userId: o.default.getId(),
-        newUserMinAgeRequiredOverridden: l.Z.newUserMinAgeRequiredOverridden
+        newUserMinAgeRequiredOverridden: l.Z.newUserMinAgeRequiredOverridden,
     }));
     return n ? e : e.filter((e) => _(t, e));
 }

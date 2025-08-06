@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,10 +21,12 @@ let l = [],
     u = null,
     d = (e) => {
         var t, n;
-        ((c = null != (t = e.analyticsLocations) ? t : l), (u = null != (n = e.analyticsSource) ? n : null), (r = e.initialProductSkuId));
+        (c = null != (t = e.analyticsLocations) ? t : l),
+            (u = null != (n = e.analyticsSource) ? n : null),
+            (r = e.initialProductSkuId);
     },
     f = (e) => {
-        ((c = l), (u = null));
+        (c = l), (u = null);
     },
     _ = (e) => {
         e.item.skuId === r && (r = void 0);
@@ -42,14 +44,14 @@ class p extends (i = o.ZP.Store) {
     getAnalytics() {
         return {
             analyticsLocations: c,
-            analyticsSource: u
+            analyticsSource: u,
         };
     }
 }
-s(p, 'displayName', 'CollectiblesShopStore');
+s(p, "displayName", "CollectiblesShopStore");
 let h = new p(a.Z, {
     COLLECTIBLES_SHOP_OPEN: d,
     COLLECTIBLES_SHOP_CLOSE: f,
     COLLECTIBLES_PRODUCT_DETAILS_OPEN: _,
-    LOGOUT: f
+    LOGOUT: f,
 });

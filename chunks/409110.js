@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     a = n(73800),
     i = n(442837),
@@ -11,7 +11,7 @@ var r = n(255367),
     m = n(981631),
     x = n(388032),
     f = n(721692);
-let h = 'expanded-area';
+let h = "expanded-area";
 function j(e) {
     let { attachments: t, role: n, roleLocked: i } = e,
         [l, m] = a.useState(!1);
@@ -22,50 +22,50 @@ function j(e) {
                 onClick: () => {
                     m((e) => !e);
                 },
-                'aria-expanded': l,
-                'aria-controls': h,
+                "aria-expanded": l,
+                "aria-controls": h,
                 children: [
                     (0, r.jsx)(s.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'text-default',
-                        children: l ? x.intl.string(x.t.DKNxgI) : x.intl.string(x.t.ESEKub)
+                        variant: "text-sm/medium",
+                        color: "text-default",
+                        children: l ? x.intl.string(x.t.DKNxgI) : x.intl.string(x.t.ESEKub),
                     }),
                     (0, r.jsx)(o.Z, {
                         className: f.caretIcon,
-                        direction: l ? o.Z.Directions.UP : o.Z.Directions.DOWN
-                    })
-                ]
+                        direction: l ? o.Z.Directions.UP : o.Z.Directions.DOWN,
+                    }),
+                ],
             }),
             (0, r.jsx)(s.LZC, { size: 12 }),
             l &&
-                (0, r.jsxs)('ul', {
+                (0, r.jsxs)("ul", {
                     className: f.contentsContainer,
                     id: h,
                     children: [
                         (0, r.jsx)(d.Z, {
                             label: x.intl.string(x.t.DWYJub),
-                            children: (0, r.jsx)('ul', {
+                            children: (0, r.jsx)("ul", {
                                 className: f.attachmentGrid,
-                                children: t.map((e) => (0, r.jsx)(c.Z, { attachment: e }, e.id))
-                            })
+                                children: t.map((e) => (0, r.jsx)(c.Z, { attachment: e }, e.id)),
+                            }),
                         }),
                         null != n &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)('div', { className: f.separator }),
+                                    (0, r.jsx)("div", { className: f.separator }),
                                     (0, r.jsx)(d.Z, {
                                         label: x.intl.string(x.t.o9xphY),
                                         children: (0, r.jsx)(u.Z, {
                                             role: n,
-                                            textVariant: 'text-md/medium',
-                                            locked: i
-                                        })
-                                    })
-                                ]
-                            })
-                    ]
-                })
-        ]
+                                            textVariant: "text-md/medium",
+                                            locked: i,
+                                        }),
+                                    }),
+                                ],
+                            }),
+                    ],
+                }),
+        ],
     });
 }
 function _(e) {
@@ -82,12 +82,12 @@ function _(e) {
         : 0 === a.length && null != s
           ? (0, r.jsx)(u.Z, {
                 role: s,
-                textVariant: 'text-md/medium',
-                locked: o
+                textVariant: "text-md/medium",
+                locked: o,
             })
           : (0, r.jsx)(j, {
                 attachments: a,
                 role: s,
-                roleLocked: o
+                roleLocked: o,
             });
 }

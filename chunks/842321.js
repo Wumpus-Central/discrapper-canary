@@ -1,6 +1,6 @@
 var r = n(970711);
-e.exports = n.v(t, e.id, '8b4aa48d095fa081', {
-    './libdiscore_wasm_bg.js': {
+e.exports = n.v(t, e.id, "8b4aa48d095fa081", {
+    "./libdiscore_wasm_bg.js": {
         __wbindgen_string_new: r.h4,
         __wbindgen_is_undefined: r.XP,
         __wbindgen_is_null: r.zr,
@@ -80,6 +80,6 @@ e.exports = n.v(t, e.id, '8b4aa48d095fa081', {
         __wbindgen_closure_wrapper628: r.ok,
         __wbindgen_closure_wrapper682: r.gL,
         __wbindgen_closure_wrapper1319: r.bu,
-        __wbindgen_init_externref_table: r.xQ
-    }
+        __wbindgen_init_externref_table: r.xQ,
+    },
 });

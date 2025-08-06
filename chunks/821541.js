@@ -1,4 +1,4 @@
-(n.d(t, { K: () => m }), n(388685));
+n.d(t, { K: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,36 +76,58 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let m = i.forwardRef(function (e, t) {
-        var { as: n = 'div', gap: i = 8, direction: o = 'vertical', align: s = 'stretch', justify: l = 'start', wrap: u = !1, padding: f = 0, style: h, className: m, children: b } = e,
-            y = p(e, ['as', 'gap', 'direction', 'align', 'justify', 'wrap', 'padding', 'style', 'className', 'children']);
+        var {
+                as: n = "div",
+                gap: i = 8,
+                direction: o = "vertical",
+                align: s = "stretch",
+                justify: l = "start",
+                wrap: u = !1,
+                padding: f = 0,
+                style: h,
+                className: m,
+                children: b,
+            } = e,
+            y = p(e, [
+                "as",
+                "gap",
+                "direction",
+                "align",
+                "justify",
+                "wrap",
+                "padding",
+                "style",
+                "className",
+                "children",
+            ]);
         return (0, r.jsx)(
             n,
             _(
                 d(
                     {
                         ref: t,
-                        'data-align': s,
-                        'data-justify': l,
-                        'data-direction': o,
-                        'data-wrap': u,
+                        "data-align": s,
+                        "data-justify": l,
+                        "data-direction": o,
+                        "data-wrap": u,
                         className: a()(c.stack, m),
-                        style: d(_(d({}, h), { gap: g(i) }), E(f))
+                        style: d(_(d({}, h), { gap: g(i) }), E(f)),
                     },
-                    y
+                    y,
                 ),
-                { children: b }
-            )
+                { children: b },
+            ),
         );
     }),
-    g = (e) => 'var(--space-'.concat(e, ')'),
+    g = (e) => "var(--space-".concat(e, ")"),
     E = (e) =>
-        'number' == typeof e || 'string' == typeof e
+        "number" == typeof e || "string" == typeof e
             ? { padding: g(e) }
             : Object.entries(e).reduce((e, t) => {
                   let [n, r] = t;
-                  return ((e['padding'.concat(l()(n))] = g(r)), e);
+                  return (e["padding".concat(l()(n))] = g(r)), e;
               }, {});

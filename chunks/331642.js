@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -26,7 +26,7 @@ function x(e) {
     return (0, i.jsx)(l.yRy, {
         targetElementRef: m,
         shouldShow: n,
-        position: 'left',
+        position: "left",
         onRequestClose: () => a(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -39,8 +39,8 @@ function x(e) {
                     onClose: t,
                     onSelect: x,
                     gridNotice: u ? null : (0, i.jsx)(p.o, {}),
-                    analyticsSource: 'call sounds edit setting'
-                })
+                    analyticsSource: "call sounds edit setting",
+                }),
             });
         },
         children: (e) => {
@@ -51,24 +51,24 @@ function x(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -80,10 +80,10 @@ function x(e) {
                         },
                         text: f.intl.string(f.t.uOe0Aw),
                         children: (0, i.jsx)(l.vdY, {
-                            size: 'md',
-                            color: 'currentColor',
-                            className: b.secondaryIcon
-                        })
+                            size: "md",
+                            color: "currentColor",
+                            className: b.secondaryIcon,
+                        }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -97,9 +97,9 @@ function x(e) {
                       })(Object(r)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                       }),
-                t)
+                t),
             );
-        }
+        },
     });
 }
 function _(e) {
@@ -108,18 +108,18 @@ function _(e) {
         r =
             0 === (0, u.pI)()
                 ? f.intl.string(f.t.OASXjo)
-                : f.intl.formatToPlainString(f.t['/8fYOz'], {
+                : f.intl.formatToPlainString(f.t["/8fYOz"], {
                       emojiName: t.emojiName,
-                      soundName: t.name
+                      soundName: t.name,
                   });
     return (0, i.jsx)(h.hU, {
         onClick: n,
         text: r,
         children: (0, i.jsx)(l.gj8, {
-            size: 'md',
-            color: 'currentColor',
-            className: b.secondaryIconActive
-        })
+            size: "md",
+            color: "currentColor",
+            className: b.secondaryIconActive,
+        }),
     });
 }
 function j(e) {
@@ -128,21 +128,21 @@ function j(e) {
         c = null == t ? void 0 : t.emojiId,
         d = null == t ? void 0 : t.emojiName,
         u = s && (null != d || null != c);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: b.soundButtonSettingContainer,
         children: [
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: b.container,
                 children: [
                     u &&
                         (0, i.jsx)(o.Z, {
                             emojiId: c,
                             emojiName: d,
-                            className: b.emoji
+                            className: b.emoji,
                         }),
                     (0, i.jsx)(l.Text, {
-                        variant: 'text-xs/medium',
-                        color: 'header-primary',
+                        variant: "text-xs/medium",
+                        color: "header-primary",
                         className: b.soundText,
                         children:
                             null == t
@@ -152,24 +152,24 @@ function j(e) {
                                         soundName: t.name,
                                         subtextHook: (e) =>
                                             (0, i.jsx)(l.Text, {
-                                                variant: 'text-xs/medium',
-                                                color: 'header-secondary',
-                                                tag: 'span',
-                                                children: e
-                                            })
+                                                variant: "text-xs/medium",
+                                                color: "header-secondary",
+                                                tag: "span",
+                                                children: e,
+                                            }),
                                     })
-                                  : t.name
+                                  : t.name,
                     }),
                     s
                         ? (0, i.jsx)(_, { sound: t })
                         : (0, i.jsx)(l.gj8, {
-                              size: 'md',
-                              color: 'currentColor',
-                              className: b.secondaryIconDisabled
-                          })
-                ]
+                              size: "md",
+                              color: "currentColor",
+                              className: b.secondaryIconDisabled,
+                          }),
+                ],
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: b.container,
                 children: [
                     (0, i.jsx)(x, { onSelect: r }),
@@ -179,13 +179,13 @@ function j(e) {
                             onClick: () => r(null),
                             text: f.intl.string(f.t.jmtcGB),
                             children: (0, i.jsx)(l.XHJ, {
-                                size: 'md',
+                                size: "md",
                                 color: a.Z.unsafe_rawColors.RED_400.css,
-                                className: b.secondaryIcon
-                            })
-                        })
-                ]
-            })
-        ]
+                                className: b.secondaryIcon,
+                            }),
+                        }),
+                ],
+            }),
+        ],
     });
 }

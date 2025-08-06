@@ -2,9 +2,9 @@ n.d(t, {
     GR: () => o,
     HQ: () => s,
     gK: () => a,
-    wu: () => r
+    wu: () => r,
 });
-let r = ['click', 'mousedown', 'mouseup', 'keydown', 'keyup', 'keypress', 'contextmenu'],
+let r = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"],
     i = null;
 function o() {
     return i;

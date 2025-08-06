@@ -14,20 +14,20 @@ class d extends (l = i.ZP.Store) {
         return o;
     }
 }
-((r = 'SoundboardOverlayStore'),
-    (n = 'displayName') in d
+(r = "SoundboardOverlayStore"),
+    (n = "displayName") in d
         ? Object.defineProperty(d, n, {
               value: r,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (d[n] = r));
+        : (d[n] = r);
 let u = new d(s.Z, {
     SOUNDBOARD_SET_OVERLAY_ENABLED: function (e) {
         if (((o = e.enabled), e.enabled)) {
             var t;
             c = null != (t = e.keepOpen) && t;
         }
-    }
+    },
 });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var i = n(255367),
     l = n(73800),
     r = n(120356),
@@ -14,24 +14,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -41,7 +41,7 @@ function p(e) {
     return (0, d.e)(r, t)
         ? (0, i.jsx)(o.P3F, {
               onClick: (e) => {
-                  (u(!0),
+                  u(!0),
                       (0, c.jW)(
                           e,
                           async () => {
@@ -54,7 +54,7 @@ function p(e) {
                                       (s = s =
                                           {
                                               role: t,
-                                              guild: r
+                                              guild: r,
                                           }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
@@ -68,51 +68,68 @@ function p(e) {
                                             })(Object(s)).forEach(function (e) {
                                                 Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
                                             }),
-                                      l)
+                                      l),
                                   );
                               };
                           },
-                          { onClose: () => u(!1) }
-                      ));
+                          { onClose: () => u(!1) },
+                      );
               },
               className: s()(g.roleOverflow, { [g.open]: a }),
               children: (0, i.jsx)(o.xhG, {
-                  size: 'custom',
-                  color: 'currentColor',
+                  size: "custom",
+                  color: "currentColor",
                   width: 20,
-                  height: 20
-              })
+                  height: 20,
+              }),
           })
         : null;
 }
 function f(e) {
-    let { color: t, id: l, role: r, guild: s, children: c, isDragging: d, selectedItem: f, onItemSelect: x, itemType: j, locked: b, lockTooltip: v, showContextMenu: y, theme: C, roleStyle: N, onContextMenu: S, 'aria-label': E } = e,
+    let {
+            color: t,
+            id: l,
+            role: r,
+            guild: s,
+            children: c,
+            isDragging: d,
+            selectedItem: f,
+            onItemSelect: x,
+            itemType: j,
+            locked: b,
+            lockTooltip: v,
+            showContextMenu: y,
+            theme: C,
+            roleStyle: N,
+            onContextMenu: S,
+            "aria-label": E,
+        } = e,
         O = (0, h._f)(s.id, r, null == r ? void 0 : r.colorStrings);
     return d
-        ? (0, i.jsx)('div', { className: g.dragged })
+        ? (0, i.jsx)("div", { className: g.dragged })
         : (0, i.jsx)(o.njP.Item, {
               className: g.role,
               id: l,
               selectedItem: f,
               onItemSelect: x,
               itemType: j,
-              'aria-label': null != v ? ''.concat(E, ', ').concat(v) : E,
+              "aria-label": null != v ? "".concat(E, ", ").concat(v) : E,
               onContextMenu: S,
-              children: (0, i.jsxs)('div', {
+              children: (0, i.jsxs)("div", {
                   className: g.roleContent,
                   children: [
-                      'dot' === N
+                      "dot" === N
                           ? (0, i.jsx)(o.FhE, {
                                 color: null != t ? t : void 0,
                                 colors: O,
                                 className: g.roleDot,
                                 background: !1,
-                                tooltip: !1
+                                tooltip: !1,
                             })
                           : (0, i.jsx)(o.xko, {
                                 color: null != t ? t : null,
                                 colors: O,
-                                className: g.roleCircle
+                                className: g.roleCircle,
                             }),
                       (function () {
                           if (!b) return null;
@@ -126,24 +143,24 @@ function f(e) {
                                       m(
                                           {
                                               className: g.lock,
-                                              src: e
+                                              src: e,
                                           },
-                                          t
-                                      )
-                                  )
+                                          t,
+                                      ),
+                                  ),
                           });
                       })(),
-                      (0, i.jsx)('div', {
+                      (0, i.jsx)("div", {
                           className: g.roleInner,
-                          children: c
+                          children: c,
                       }),
                       y && null != r
                           ? (0, i.jsx)(p, {
                                 guild: s,
-                                role: r
+                                role: r,
                             })
-                          : null
-                  ]
-              })
+                          : null,
+                  ],
+              }),
           });
 }

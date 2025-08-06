@@ -10,11 +10,11 @@ function a(e) {
         ? {
               events: c,
               play: u,
-              Component: l
+              Component: l,
           }
         : {
               events: a,
               play: s,
-              Component: n
+              Component: n,
           };
 }

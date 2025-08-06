@@ -18,15 +18,15 @@ class p extends (l = a.ZP.Store) {
         return u;
     }
 }
-((i = 'GlobalDiscoveryServersSearchLayoutStore'),
-    (r = 'displayName') in p
+(i = "GlobalDiscoveryServersSearchLayoutStore"),
+    (r = "displayName") in p
         ? Object.defineProperty(p, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (p[r] = i));
+        : (p[r] = i);
 let h = new p(o.Z, {
     CONNECTION_OPEN: d,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: d,
@@ -35,5 +35,5 @@ let h = new p(o.Z, {
             n = s.Z.getCounts(t);
         if (null == n) return !1;
         u = n;
-    }
+    },
 });

@@ -19,7 +19,7 @@ function g(e) {
         children: [
             (0, i.jsx)(l.R94, {
                 type: l.geA.DESCRIPTION,
-                children: u.intl.format(u.t['5u+aV1'], { helpdeskArticle: s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING) })
+                children: u.intl.format(u.t["5u+aV1"], { helpdeskArticle: s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING) }),
             }),
             (0, i.jsx)(l.$i$, { className: p.headerDivider }),
             t.length > 0
@@ -28,7 +28,7 @@ function g(e) {
                       editedWebhook: n,
                       selectableWebhookChannels: g,
                       errors: f,
-                      canNavigate: h
+                      canNavigate: h,
                   })
                 : (function (e, t) {
                       let n = (0, r.wj)(e) ? m : b;
@@ -36,27 +36,27 @@ function g(e) {
                           direction: a.Z.Direction.VERTICAL,
                           align: a.Z.Align.CENTER,
                           children: [
-                              (0, i.jsx)('img', {
-                                  alt: '',
+                              (0, i.jsx)("img", {
+                                  alt: "",
                                   src: n,
-                                  className: p.emptyStateImage
+                                  className: p.emptyStateImage,
                               }),
                               (0, i.jsx)(l.X6q, {
-                                  variant: 'heading-md/semibold',
-                                  children: u.intl.string(u.t.gzuVHx)
+                                  variant: "heading-md/semibold",
+                                  children: u.intl.string(u.t.gzuVHx),
                               }),
-                              (0, i.jsx)('div', {
-                                  'data-button-hoisted-classname-wrapper': !0,
+                              (0, i.jsx)("div", {
+                                  "data-button-hoisted-classname-wrapper": !0,
                                   className: p.emptyStateButton,
                                   children: (0, i.jsx)(l.zxk, {
-                                      variant: 'primary',
-                                      text: u.intl.string(u.t['ZwSt+f']),
-                                      onClick: t
-                                  })
-                              })
-                          ]
+                                      variant: "primary",
+                                      text: u.intl.string(u.t["ZwSt+f"]),
+                                      onClick: t,
+                                  }),
+                              }),
+                          ],
                       });
-                  })(x, () => open(s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING)))
-        ]
+                  })(x, () => open(s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING))),
+        ],
     });
 }

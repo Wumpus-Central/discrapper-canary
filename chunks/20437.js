@@ -1,6 +1,6 @@
 n.d(t, {
     Q: () => r,
-    S: () => l
+    S: () => l,
 });
 var a = n(73800);
 let r = a.createContext({
@@ -11,9 +11,9 @@ let r = a.createContext({
     setVoiceAudioEnabled: () => {},
     cropData: {
         start: 0,
-        end: 0
+        end: 0,
     },
-    setCropData: () => {}
+    setCropData: () => {},
 });
 function l() {
     return a.useContext(r);

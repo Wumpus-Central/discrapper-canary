@@ -16,9 +16,9 @@ let f = (e) => {
         { giftRecipient: h, setGiftRecipient: m } = (0, s.wD)();
     if (null == t) return null;
     let g = (e) => {
-        (n(e, t), m(e));
+        n(e, t), m(e);
     };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: f,
         children: [
             (0, r.jsx)(o.vwX, { children: d.intl.string(d.t.xFn72t) }),
@@ -29,15 +29,15 @@ let f = (e) => {
                         ? null
                         : (0, r.jsx)(a.Z, {
                               user: e.value,
-                              size: o.EFr.SIZE_20
+                              size: o.EFr.SIZE_20,
                           }),
                 value: h,
                 onChange: g,
                 options: p.map((e) => ({
                     value: e,
-                    label: ''.concat(u.ZP.getUserTag(e))
-                }))
-            })
-        ]
+                    label: "".concat(u.ZP.getUserTag(e)),
+                })),
+            }),
+        ],
     });
 };

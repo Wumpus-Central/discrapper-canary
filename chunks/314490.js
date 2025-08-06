@@ -17,9 +17,9 @@ let l = 43200000,
                 () =>
                     (0, o.O)({
                         storeState: l,
-                        surface: t
+                        surface: t,
                     }),
-                [l, t]
+                [l, t],
             )
         );
     };

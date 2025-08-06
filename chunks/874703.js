@@ -9,22 +9,22 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 let s = {},
-    l = 'NOT_FETCHED',
+    l = "NOT_FETCHED",
     c = () => {
-        l = 'FETCHING';
+        l = "FETCHING";
     },
     u = (e) => {
-        ((s = e.marketings.marketingsBySurfaces), (l = 'FETCHED'));
+        (s = e.marketings.marketingsBySurfaces), (l = "FETCHED");
     },
     d = () => {
-        ((s = {}), (l = 'NOT_FETCHED'));
+        (s = {}), (l = "NOT_FETCHED");
     };
 class f extends (r = i.ZP.Store) {
     getMarketingBySurface(e) {
@@ -34,9 +34,9 @@ class f extends (r = i.ZP.Store) {
         return l;
     }
 }
-a(f, 'displayName', 'CollectiblesMarketingsStore');
+a(f, "displayName", "CollectiblesMarketingsStore");
 let _ = new f(o.Z, {
     COLLECTIBLES_MARKETING_FETCH: c,
     COLLECTIBLES_MARKETING_FETCH_SUCCESS: u,
-    LOGOUT: d
+    LOGOUT: d,
 });

@@ -7,6 +7,6 @@ let l = function (e) {
     if (!(0, n.Z)(e)) return (0, a.Z)(e);
     var t = (0, o.Z)(e),
         r = [];
-    for (var l in e) ('constructor' == l && (t || !i.call(e, l))) || r.push(l);
+    for (var l in e) ("constructor" == l && (t || !i.call(e, l))) || r.push(l);
     return r;
 };

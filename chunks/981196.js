@@ -5,31 +5,31 @@ var r = n(812975),
     a = n(695170),
     s = n(829105);
 function l(e) {
-    for (var t = [], n = '', s = Object.keys(e), l = Object.keys(r.WN), u = 0; u < s.length; u++)
-        if ('tzid' !== s[u] && (0, i.q9)(l, s[u])) {
+    for (var t = [], n = "", s = Object.keys(e), l = Object.keys(r.WN), u = 0; u < s.length; u++)
+        if ("tzid" !== s[u] && (0, i.q9)(l, s[u])) {
             var d = s[u].toUpperCase(),
                 f = e[s[u]],
-                _ = '';
+                _ = "";
             if (!(!(0, i.EN)(f) || ((0, i.kJ)(f) && !f.length))) {
                 switch (d) {
-                    case 'FREQ':
+                    case "FREQ":
                         _ = r.Ci.FREQUENCIES[e.freq];
                         break;
-                    case 'WKST':
+                    case "WKST":
                         _ = (0, i.hj)(f) ? new o.O(f).toString() : f.toString();
                         break;
-                    case 'BYWEEKDAY':
-                        ((d = 'BYDAY'),
+                    case "BYWEEKDAY":
+                        (d = "BYDAY"),
                             (_ = (0, i.qo)(f)
                                 .map(function (e) {
                                     return e instanceof o.O ? e : (0, i.kJ)(e) ? new o.O(e[0], e[1]) : new o.O(e);
                                 })
-                                .toString()));
+                                .toString());
                         break;
-                    case 'DTSTART':
+                    case "DTSTART":
                         n = c(f, e.tzid);
                         break;
-                    case 'UNTIL':
+                    case "UNTIL":
                         _ = (0, a.Od)(f, !e.tzid);
                         break;
                     default:
@@ -45,19 +45,19 @@ function l(e) {
             .map(function (e) {
                 var t = e[0],
                     n = e[1];
-                return ''.concat(t, '=').concat(n.toString());
+                return "".concat(t, "=").concat(n.toString());
             })
-            .join(';'),
-        g = '';
+            .join(";"),
+        g = "";
     return (
-        '' !== m && (g = 'RRULE:'.concat(m)),
+        "" !== m && (g = "RRULE:".concat(m)),
         [n, g]
             .filter(function (e) {
                 return !!e;
             })
-            .join('\n')
+            .join("\n")
     );
 }
 function c(e, t) {
-    return e ? 'DTSTART' + new s.M(new Date(e), t).toString() : '';
+    return e ? "DTSTART" + new s.M(new Date(e), t).toString() : "";
 }

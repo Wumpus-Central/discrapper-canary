@@ -7,7 +7,7 @@ var r = n(255367),
     l = n(951394),
     c = n(684314);
 function u(e) {
-    let { onClick: t, children: n, tooltip: o, dangerous: u = !1, className: d, 'aria-label': f } = e;
+    let { onClick: t, children: n, tooltip: o, dangerous: u = !1, className: d, "aria-label": f } = e;
     return (0, r.jsx)(s.ua7, {
         text: o,
         hideOnClick: !0,
@@ -17,13 +17,15 @@ function u(e) {
                 onMouseEnter: s,
                 onMouseLeave: _,
                 onClick: (e) => {
-                    (e.stopPropagation(), null == p || p(), t(e));
+                    e.stopPropagation(), null == p || p(), t(e);
                 },
                 dangerous: u,
-                'aria-label': null != f ? f : o,
+                "aria-label": null != f ? f : o,
                 className: d,
-                children: i.Children.map(n, (e) => (i.isValidElement(e) ? i.cloneElement(e, { className: a()(e.props.className, c.actionBarIcon) }) : e))
+                children: i.Children.map(n, (e) =>
+                    i.isValidElement(e) ? i.cloneElement(e, { className: a()(e.props.className, c.actionBarIcon) }) : e,
+                ),
             });
-        }
+        },
     });
 }

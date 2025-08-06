@@ -19,9 +19,12 @@ function m(e) {
         E = null != (0, s.Z)(),
         { isSharedCanvasEnabled: b } = c.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
-            location: 'b7309a_1'
+            location: "b7309a_1",
         }),
-        { enableViewerClipping: y } = l.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
+        { enableViewerClipping: y } = l.Z.useExperiment(
+            { location: "VoiceEffectsActionBar" },
+            { autoTrackExposure: !1 },
+        ),
         O = (0, a.Z)(u.Z);
     if (null == t || E) return null;
     let v = y && O,
@@ -29,11 +32,16 @@ function m(e) {
     return (0, r.jsxs)(o.Gt, {
         value: g,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.voiceEffectsActionBar,
-                children: [v && (0, r.jsx)(d.Z, { channel: t }), I && (0, r.jsx)(f.Z, {}), I && (0, r.jsx)(_.Z, { channel: t }), I && (0, r.jsx)(p.Z, {})]
+                children: [
+                    v && (0, r.jsx)(d.Z, { channel: t }),
+                    I && (0, r.jsx)(f.Z, {}),
+                    I && (0, r.jsx)(_.Z, { channel: t }),
+                    I && (0, r.jsx)(p.Z, {}),
+                ],
             }),
-            m && (v || I) && (0, r.jsx)('div', { className: h.divider })
-        ]
+            m && (v || I) && (0, r.jsx)("div", { className: h.divider }),
+        ],
     });
 }

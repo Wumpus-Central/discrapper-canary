@@ -1,4 +1,4 @@
-(n.d(e, { default: () => d }), n(388685));
+n.d(e, { default: () => d }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(82659),
@@ -11,13 +11,13 @@ function d(t) {
     let { guildId: e, transitionState: n, onClose: d } = t,
         [_, b] = i.useState([]),
         S = i.useCallback(() => {
-            ((0, o.KK)(e, _), (0, o.C4)(e), d());
+            (0, o.KK)(e, _), (0, o.C4)(e), d();
         }, [e, d, _]),
         p = i.useCallback(
             (t) => () => {
                 b((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
             },
-            []
+            [],
         ),
         f = i.useCallback(() => {
             open(a.RI);
@@ -28,14 +28,14 @@ function d(t) {
         subtitle: s.intl.format(s.t.Hg8Ee3, { onClick: f }),
         actions: [
             {
-                text: s.intl.string(s.t['ETE/oK']),
+                text: s.intl.string(s.t["ETE/oK"]),
                 onClick: d,
-                variant: 'secondary'
+                variant: "secondary",
             },
             {
                 text: s.intl.string(s.t.geKm7u),
-                onClick: S
-            }
+                onClick: S,
+            },
         ],
         onClose: d,
         children: (0, r.jsx)(c.Kqy, {
@@ -52,17 +52,17 @@ function d(t) {
                                 type: c.XZJ.Types.INVERTED,
                                 className: u.checkbox,
                                 value: _.includes(t),
-                                displayOnly: !0
+                                displayOnly: !0,
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: 'text-sm/normal',
-                                children: (0, a.$l)(t)
-                            })
-                        ]
+                                variant: "text-sm/normal",
+                                children: (0, a.$l)(t),
+                            }),
+                        ],
                     },
-                    t
-                )
-            )
-        })
+                    t,
+                ),
+            ),
+        }),
     });
 }

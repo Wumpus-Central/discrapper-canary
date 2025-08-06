@@ -1,7 +1,7 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => K,
     dy: () => A,
-    gw: () => d
+    gw: () => d,
 }),
     n(388685),
     n(415506),
@@ -10,7 +10,7 @@
     n(704826),
     n(413496),
     n(433524),
-    n(539854));
+    n(539854);
 var r = n(392711),
     i = n.n(r),
     o = n(336317),
@@ -23,7 +23,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,14 +31,24 @@ function l(e, t, n) {
 }
 let c = null,
     u = new WeakMap(),
-    d = ['\uD83C\uDFFB', '\uD83C\uDFFC', '\uD83C\uDFFD', '\uD83C\uDFFE', '\uD83C\uDFFF'],
+    d = ["\uD83C\uDFFB", "\uD83C\uDFFC", "\uD83C\uDFFD", "\uD83C\uDFFE", "\uD83C\uDFFF"],
     f = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
     _ = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
     p = n(523558),
-    h = /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
-    m = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
-    g = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g,
-    { emojis: E, emojisByCategory: b, nameToEmoji: y, surrogateToEmoji: O, numDiversitySprites: v, numNonDiversitySprites: I } = n(382342);
+    h =
+        /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
+    m =
+        /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
+    g =
+        /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g,
+    {
+        emojis: E,
+        emojisByCategory: b,
+        nameToEmoji: y,
+        surrogateToEmoji: O,
+        numDiversitySprites: v,
+        numNonDiversitySprites: I,
+    } = n(382342);
 function T(e) {
     let t = y[e];
     return null == t ? null : E[t];
@@ -52,7 +62,7 @@ class A {
         return this.emojiObject.names;
     }
     get allNamesString() {
-        return this.names.length > 1 ? ':'.concat(this.names.join(': :'), ':') : ':'.concat(this.uniqueName, ':');
+        return this.names.length > 1 ? ":".concat(this.names.join(": :"), ":") : ":".concat(this.uniqueName, ":");
     }
     get unicodeVersion() {
         var e;
@@ -90,7 +100,7 @@ class A {
     get name() {
         if (this.hasDiversity && null != c) {
             var e;
-            return ''.concat(this.uniqueName, '::').concat(null == (e = S(c)) ? void 0 : e.names[0]);
+            return "".concat(this.uniqueName, "::").concat(null == (e = S(c)) ? void 0 : e.names[0]);
         }
         return this.uniqueName;
     }
@@ -105,11 +115,30 @@ class A {
         i().each(this.names, e);
     }
     constructor(e) {
-        if ((l(this, 'emojiObject', void 0), l(this, 'type', void 0), l(this, 'uniqueName', void 0), l(this, 'surrogates', void 0), l(this, 'diversityChildren', void 0), l(this, 'originalName', void 0), l(this, 'id', void 0), l(this, 'guildId', void 0), l(this, 'index', void 0), l(this, 'useSpriteSheet', void 0), (this.emojiObject = e), (this.type = s.B.UNICODE), (this.uniqueName = e.names[0]), (this.surrogates = e.surrogates), (this.useSpriteSheet = null != e.spriteIndex), (this.index = e.spriteIndex), (this.diversityChildren = {}), null != e.diversityChildren))
+        if (
+            (l(this, "emojiObject", void 0),
+            l(this, "type", void 0),
+            l(this, "uniqueName", void 0),
+            l(this, "surrogates", void 0),
+            l(this, "diversityChildren", void 0),
+            l(this, "originalName", void 0),
+            l(this, "id", void 0),
+            l(this, "guildId", void 0),
+            l(this, "index", void 0),
+            l(this, "useSpriteSheet", void 0),
+            (this.emojiObject = e),
+            (this.type = s.B.UNICODE),
+            (this.uniqueName = e.names[0]),
+            (this.surrogates = e.surrogates),
+            (this.useSpriteSheet = null != e.spriteIndex),
+            (this.index = e.spriteIndex),
+            (this.diversityChildren = {}),
+            null != e.diversityChildren)
+        )
             for (let t of e.diversityChildren) {
                 let e = E[t];
                 if (null != e.diversity) {
-                    let t = e.diversity.join('-');
+                    let t = e.diversity.join("-");
                     this.diversityChildren[t] = new A(e);
                 }
             }
@@ -119,14 +148,14 @@ function N(e) {
     let t = u.get(e);
     if (null != t) return t;
     let n = new A(e);
-    return (u.set(e, n), n);
+    return u.set(e, n), n;
 }
 function C(e) {
     let t = o.Z.convert.toCodePoint(e);
-    return null != t ? t : '';
+    return null != t ? t : "";
 }
 function R(e) {
-    c = null != e && '' !== e ? e : null;
+    c = null != e && "" !== e ? e : null;
 }
 function P() {
     return c;
@@ -143,7 +172,7 @@ function x(e) {
     let t = L.get(e);
     if (null == t) {
         let n = b[e];
-        ((t = a.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(N)), L.set(e, t));
+        (t = a.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(N)), L.set(e, t);
     }
     return t;
 }
@@ -158,38 +187,38 @@ function j(e) {
     let n = null == (t = S(e)) ? void 0 : t.names[0];
     return null != n
         ? {
-              type: 'emoji',
+              type: "emoji",
               surrogate: e,
-              emojiName: ':'.concat(n, ':')
+              emojiName: ":".concat(n, ":"),
           }
         : {
-              type: 'text',
-              text: e
+              type: "text",
+              text: e,
           };
 }
 let U = String.fromCodePoint(917631),
     G = String.fromCodePoint(127988),
-    B = RegExp('^[\\u{E0061}-\\u{E007A}]$', 'u');
+    B = RegExp("^[\\u{E0061}-\\u{E007A}]$", "u");
 function Z(e, t) {
     var n;
     if (!0 !== t && !M(e))
         return [
             {
-                type: 'text',
-                text: e
-            }
+                type: "text",
+                text: e,
+            },
         ];
-    let r = '',
+    let r = "",
         i = [],
         o = null != (n = e.match(g)) ? n : [];
     for (let e = 0; e < o.length; e++) {
         let t = o[e];
-        if (null != r && '' !== r)
-            if (t === U) ((t = r + t), (r = ''));
+        if (null != r && "" !== r)
+            if (t === U) (t = r + t), (r = "");
             else if (B.test(t)) {
                 r += t;
                 continue;
-            } else (i.push(j(r)), (r = ''));
+            } else i.push(j(r)), (r = "");
         else if (t === G) {
             r = t;
             continue;
@@ -197,45 +226,45 @@ function Z(e, t) {
         let n = j(t);
         if (i.length > 0) {
             let e = i[i.length - 1];
-            if ('text' === n.type && 'text' === e.type) {
+            if ("text" === n.type && "text" === e.type) {
                 e.text += n.text;
                 continue;
             }
         }
         i.push(n);
     }
-    return (null != r && '' !== r && i.push(j(r)), i);
+    return null != r && "" !== r && i.push(j(r)), i;
 }
 function F(e) {
     return Z(e)
-        .map((e) => ('text' === e.type ? e.text : e.emojiName))
-        .join('');
+        .map((e) => ("text" === e.type ? e.text : e.emojiName))
+        .join("");
 }
 function V(e) {
     if (!M(e)) return null;
     let t = Z(e, !0)
-        .map((e) => ('text' === e.type ? e.text : e.emojiName))
-        .join('');
+        .map((e) => ("text" === e.type ? e.text : e.emojiName))
+        .join("");
     return t === e ? null : t;
 }
 function H(e) {
     var t, n;
-    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
+    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
     return null != (n = null == (t = T(e)) ? void 0 : t.surrogates) ? n : r;
 }
 function Y(e) {
     var t, n;
     let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
+        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
         o = null != (n = null == (t = S(e)) ? void 0 : t.names[0]) ? n : i;
-    return r ? ':'.concat(o, ':') : o;
+    return r ? ":".concat(o, ":") : o;
 }
 function W(e) {
     return D(
         Y(
-            d.reduce((e, t) => e.replace(t, ''), e),
-            !1
-        )
+            d.reduce((e, t) => e.replace(t, ""), e),
+            !1,
+        ),
     );
 }
 let K = {
@@ -253,9 +282,9 @@ let K = {
     convertSurrogateToName: Y,
     convertShortcutToName: function e(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
             r = n;
-        return (Object.prototype.hasOwnProperty.call(p, e) && (r = p[e]), t ? ':'.concat(r, ':') : r);
+        return Object.prototype.hasOwnProperty.call(p, e) && (r = p[e]), t ? ":".concat(r, ":") : r;
     },
     convertSurrogateToBase: W,
     forEach: (e) => {
@@ -270,5 +299,5 @@ let K = {
         return i()
             .toArray(e)
             .some((e) => null != O[e]);
-    }
+    },
 };

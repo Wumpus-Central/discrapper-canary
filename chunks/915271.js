@@ -18,40 +18,40 @@ class _ extends i.PureComponent {
     }
     render() {
         let { venmoUsername: e, className: t, venmoClient: n } = this.props,
-            i = null != e && '' !== e;
-        return (0, r.jsxs)('div', {
+            i = null != e && "" !== e;
+        return (0, r.jsxs)("div", {
             className: t,
             children: [
                 (0, r.jsx)(l.ZP, {
                     type: l.ZP.Types.VENMO,
                     size: l.Uy.MEDIUM,
-                    className: f.venmoIcon
+                    className: f.venmoIcon,
                 }),
                 i
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(a.X6q, {
-                                  variant: e.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
+                                  variant: e.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
                                   className: f.connectionInstructions,
-                                  children: d.intl.format(d.t.DowIra, { venmoUsername: e })
+                                  children: d.intl.format(d.t.DowIra, { venmoUsername: e }),
                               }),
                               (0, r.jsx)(a.Text, {
-                                  variant: 'text-md/medium',
+                                  variant: "text-md/medium",
                                   className: f.connectionInstructions,
-                                  children: d.intl.string(d.t.kmEvnZ)
-                              })
-                          ]
+                                  children: d.intl.string(d.t.kmEvnZ),
+                              }),
+                          ],
                       })
                     : (0, r.jsx)(a.Text, {
-                          variant: 'text-md/medium',
+                          variant: "text-md/medium",
                           className: f.connectionInstructions,
-                          children: null == n ? d.intl.string(d.t['2ouZDQ']) : d.intl.string(d.t.mIL6JS)
-                      })
-            ]
+                          children: null == n ? d.intl.string(d.t["2ouZDQ"]) : d.intl.string(d.t.mIL6JS),
+                      }),
+            ],
         });
     }
 }
 let p = o.ZP.connectStores([c.Z, u.Z], () => ({
     venmoUsername: u.Z.venmoUsername,
-    venmoClient: c.Z.getVenmoClient()
+    venmoClient: c.Z.getVenmoClient(),
 }))(_);

@@ -23,7 +23,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -85,17 +85,17 @@ function T(e) {
     let { url: t, onSelect: n } = e;
     return _.wS && null != t
         ? (0, r.jsx)(l.v2r, {
-              navId: 'component-button',
+              navId: "component-button",
               onClose: c.Zy,
-              'aria-label': g.intl.string(g.t.tvTXy8),
+              "aria-label": g.intl.string(g.t.tvTXy8),
               onSelect: n,
               children: (0, r.jsx)(l.kSQ, {
                   children: (0, r.jsx)(l.sNh, {
-                      id: 'copy',
+                      id: "copy",
                       label: g.intl.string(g.t.uHhnfX),
-                      action: () => (0, _.JG)(t)
-                  })
-              })
+                      action: () => (0, _.JG)(t),
+                  }),
+              }),
           })
         : null;
 }
@@ -115,8 +115,8 @@ function S(e) {
         (t = x
             ? () => {
                   (0, p.q)({
-                      href: null != b ? b : '',
-                      shouldConfirm: !0
+                      href: null != b ? b : "",
+                      shouldConfirm: !0,
                   });
               }
             : R
@@ -125,7 +125,7 @@ function S(e) {
                   : a.noop
               : () => S()),
         (0, r.jsxs)(s.zx, {
-            'data-migration-pending': !0,
+            "data-migration-pending": !0,
             color: I(i),
             size: s.zx.Sizes.SMALL,
             disabled: _ || A === m.gH.DISABLED || N || P,
@@ -133,22 +133,22 @@ function S(e) {
             onContextMenu: (e) => {
                 x && (0, c.vq)(e, (e) => (0, r.jsx)(T, v(y({}, e), { url: b })));
             },
-            role: x ? 'link' : 'button',
+            role: x ? "link" : "button",
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: o()(E.content, {
                         [E.hidden]: M,
-                        [E.premium]: R
+                        [E.premium]: R,
                     }),
-                    'aria-hidden': M,
+                    "aria-hidden": M,
                     children: [
                         R
-                            ? (0, r.jsx)('div', {
+                            ? (0, r.jsx)("div", {
                                   className: E.shopIcon,
                                   children: (0, r.jsx)(l.EOn, {
-                                      size: 'xs',
-                                      color: 'white'
-                                  })
+                                      size: "xs",
+                                      color: "white",
+                                  }),
                               })
                             : null,
                         D
@@ -157,34 +157,34 @@ function S(e) {
                                   src: g.src,
                                   emojiId: g.id,
                                   emojiName: g.name,
-                                  animated: g.animated
+                                  animated: g.animated,
                               })
                             : null,
                         L
-                            ? (0, r.jsx)('div', {
+                            ? (0, r.jsx)("div", {
                                   className: E.label,
-                                  children: w
+                                  children: w,
                               })
                             : null,
                         x
                             ? (0, r.jsx)(l.rgF, {
-                                  size: 'xs',
-                                  color: 'currentColor',
-                                  className: E.launchIcon
+                                  size: "xs",
+                                  color: "currentColor",
+                                  className: E.launchIcon,
                               })
-                            : null
-                    ]
+                            : null,
+                    ],
                 }),
                 M
-                    ? (0, r.jsx)('div', {
+                    ? (0, r.jsx)("div", {
                           className: E.loading,
                           children: (0, r.jsx)(l.bbz, {
                               dotRadius: 3.5,
-                              themed: !0
-                          })
+                              themed: !0,
+                          }),
                       })
-                    : null
-            ]
+                    : null,
+            ],
         })
     );
 }

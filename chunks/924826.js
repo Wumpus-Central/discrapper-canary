@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => u }), n(388685));
+n.d(t, { ZP: () => u }), n(388685);
 var r = n(73800),
     i = n(372817),
     o = n(25441),
@@ -7,10 +7,27 @@ var r = n(73800),
     l = n(260866);
 function c(e, t) {
     var n;
-    return Array.from((null != (n = t.current) ? n : document).querySelectorAll('['.concat(l.ie, '^="').concat(e, '"]')));
+    return Array.from(
+        (null != (n = t.current) ? n : document).querySelectorAll("[".concat(l.ie, '^="').concat(e, '"]')),
+    );
 }
 function u(e) {
-    let { id: t, defaultFocused: n, isEnabled: u, scrollToStart: d, scrollToEnd: f, onNavigatePreviousAtStart: _, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: b = !1, orientation: y = s.hy.VERTICAL, disableClickOnSpace: O = !1 } = e,
+    let {
+            id: t,
+            defaultFocused: n,
+            isEnabled: u,
+            scrollToStart: d,
+            scrollToEnd: f,
+            onNavigatePreviousAtStart: _,
+            onNavigateNextAtEnd: p,
+            setFocus: h,
+            setFocusOnList: m,
+            preserveFocusPosition: g = !0,
+            useVirtualFocus: E = !1,
+            wrap: b = !1,
+            orientation: y = s.hy.VERTICAL,
+            disableClickOnSpace: O = !1,
+        } = e,
         v = r.useRef(n ? (0, l.jb)(t, n) : null),
         I = r.useRef(!1),
         T = r.useRef(null),
@@ -30,22 +47,22 @@ function u(e) {
             (e, t) => {
                 S.current && (null != h ? h : N)(e, t);
             },
-            [h]
+            [h],
         ),
         R = r.useCallback(
             (e) => {
                 S.current && (null != m ? m : N)(e);
             },
-            [m]
+            [m],
         ),
         P = r.useCallback(
             (e) => {
                 if (((v.current = e), null == e)) return void (0, o.h)(t, null, g);
                 let n = (0, l.P1)(e),
                     r = (0, l.x3)(e);
-                (C(n, r), (0, o.h)(t, r, g));
+                C(n, r), (0, o.h)(t, r, g);
             },
-            [t, g, C]
+            [t, g, C],
         ),
         w = r.useMemo(
             () =>
@@ -56,25 +73,28 @@ function u(e) {
                         return null == (e = T.current) ? void 0 : e.ownerDocument.activeElement;
                     },
                     scrollToStart: d,
-                    scrollToEnd: f
+                    scrollToEnd: f,
                 }),
-            [t, d, f]
+            [t, d, f],
         ),
         [D, L] = r.useState(!1),
         x = r.useRef(D);
-    (r.useLayoutEffect(() => {
+    r.useLayoutEffect(() => {
         x.current = D;
     }, [D]),
         r.useLayoutEffect(() => {
             let e = T.current;
             if (null != e && u)
                 return (
-                    e.addEventListener('focusin', n),
-                    e.addEventListener('focusout', r),
-                    e.addEventListener('focus', i),
-                    e.addEventListener('scroll', o, { passive: !0 }),
+                    e.addEventListener("focusin", n),
+                    e.addEventListener("focusout", r),
+                    e.addEventListener("focus", i),
+                    e.addEventListener("scroll", o, { passive: !0 }),
                     () => {
-                        (e.removeEventListener('focusin', n), e.removeEventListener('focusout', r), e.removeEventListener('focus', i), e.removeEventListener('scroll', o));
+                        e.removeEventListener("focusin", n),
+                            e.removeEventListener("focusout", r),
+                            e.removeEventListener("focus", i),
+                            e.removeEventListener("scroll", o);
                     }
                 );
             function n() {
@@ -106,7 +126,7 @@ function u(e) {
             function o() {
                 I.current = !0;
             }
-        }, [u, t, g, C, m, R, P]));
+        }, [u, t, g, C, m, R, P]);
     let M = r.useMemo(
             () => ({
                 wrap: b,
@@ -118,9 +138,9 @@ function u(e) {
                         return null != (e = A((0, l.P1)(t))) ? e : void 0;
                     }
                     return;
-                }
+                },
             }),
-            [E, b]
+            [E, b],
         ),
         k = r.useCallback(async () => {
             let e = await w.getNextFocusableElement(M),
@@ -139,29 +159,29 @@ function u(e) {
                     r = y === s.hy.HORIZONTAL ? s.R8.LEFT : s.R8.UP;
                 switch (e.key) {
                     case n:
-                        (e.stopPropagation(), e.preventDefault(), k());
+                        e.stopPropagation(), e.preventDefault(), k();
                         return;
                     case r:
-                        (e.stopPropagation(), e.preventDefault(), j());
+                        e.stopPropagation(), e.preventDefault(), j();
                         return;
                     case s.R8.HOME:
-                        (e.stopPropagation(),
+                        e.stopPropagation(),
                             e.preventDefault(),
                             d().then(() => {
                                 var e;
                                 let n = null == (e = c(t, T)[0]) ? void 0 : e.getAttribute(l.ie);
                                 null != n && P(n);
-                            }));
+                            });
                         return;
                     case s.R8.END:
-                        (e.stopPropagation(),
+                        e.stopPropagation(),
                             e.preventDefault(),
                             f().then(() => {
                                 var e;
                                 let n = c(t, T),
                                     r = null == (e = n[n.length - 1]) ? void 0 : e.getAttribute(l.ie);
                                 null != r && P(r);
-                            }));
+                            });
                         return;
                     case s.R8.SPACE:
                     case s.R8.ENTER: {
@@ -177,13 +197,13 @@ function u(e) {
                     }
                 }
             },
-            [k, j, t, y, f, d, P, E]
+            [k, j, t, y, f, d, P, E],
         ),
         G = r.useCallback(
             (e) => {
-                ((v.current = null != e ? (0, l.jb)(t, e) : null), (0, o.h)(t, e, g));
+                (v.current = null != e ? (0, l.jb)(t, e) : null), (0, o.h)(t, e, g);
             },
-            [t, g]
+            [t, g],
         );
     return r.useMemo(
         () => ({
@@ -191,7 +211,7 @@ function u(e) {
             containerProps: {
                 onKeyDown: U,
                 ref: T,
-                tabIndex: D && g ? -1 : 0
+                tabIndex: D && g ? -1 : 0,
             },
             orientation: y,
             setFocus: G,
@@ -210,8 +230,8 @@ function u(e) {
             focusedItemId() {
                 let e = v.current;
                 return e ? (0, l.x3)(e) : null;
-            }
+            },
         }),
-        [t, U, y, D, g, G, j, k, P]
+        [t, U, y, D, g, G, j, k, P],
     );
 }

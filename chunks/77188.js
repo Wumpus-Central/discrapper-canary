@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685));
+n.d(t, { Z: () => R }), n(388685);
 var r = n(73800),
     i = n(836560),
     o = n(327432),
@@ -29,7 +29,7 @@ function S(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,15 +39,15 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 S(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -55,11 +55,11 @@ function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,17 +80,17 @@ function R(e) {
         [i] = r.useState(() => {
             let r = (0, o.Jh)();
             return (
-                (r.children = (0, u.JM)('')),
+                (r.children = (0, u.JM)("")),
                 (r.selection = {
                     anchor: T.nO,
-                    focus: T.nO
+                    focus: T.nO,
                 }),
                 P(
                     C(A({}, e), {
                         editor: r,
                         windowContext: t,
-                        previewMarkdown: n
-                    })
+                        previewMarkdown: n,
+                    }),
                 ),
                 r
             );
@@ -102,7 +102,7 @@ function R(e) {
                 l.Z.addChangeListener(e),
                 s.ZP.addChangeListener(e),
                 () => {
-                    (l.Z.removeChangeListener(e), s.ZP.removeChangeListener(e));
+                    l.Z.removeChangeListener(e), s.ZP.removeChangeListener(e);
                 }
             );
         }, [i]),
@@ -114,17 +114,29 @@ function R(e) {
 }
 function P(e) {
     var t, n, r;
-    let { editor: o, chatInputType: a, channel: s, canUseCommands: l, canOnlyUseTextCommands: c, windowContext: u, previewMarkdown: T, forTests: S, onChangeStart: A, onChangeEnd: N, updateState: C } = e,
+    let {
+            editor: o,
+            chatInputType: a,
+            channel: s,
+            canUseCommands: l,
+            canOnlyUseTextCommands: c,
+            windowContext: u,
+            previewMarkdown: T,
+            forTests: S,
+            onChangeStart: A,
+            onChangeEnd: N,
+            updateState: C,
+        } = e,
         R = o,
         { onChange: P } = R;
-    ((R.chatInputType = a),
+    (R.chatInputType = a),
         (R.windowContext = u),
         (R.previewMarkdown = T),
         (R.composition = null),
         (R.events = new i.EventEmitter()),
-        (R.isMac = 'MacIntel' === navigator.platform),
+        (R.isMac = "MacIntel" === navigator.platform),
         (R.onChange = () => {
-            (R.events.emit('onChange'), P());
+            R.events.emit("onChange"), P();
         }),
         (R = (0, y.B)(R, !0 === S)),
         (R = (0, b.Z)(R)),
@@ -140,9 +152,9 @@ function P(e) {
         (R = (0, I.Z)(R, A, N)),
         (R = (0, h.Z)(R, (e) => {
             let { newValue: t, newSelection: n } = e;
-            return C(R, 'undo', {
+            return C(R, "undo", {
                 value: t,
-                selection: n
+                selection: n,
             });
-        })));
+        }));
 }

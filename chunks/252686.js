@@ -14,6 +14,6 @@ function c(e) {
         className: l()(t, a.placeholderMask, { [a.isFolder]: n }),
         width: i,
         height: i,
-        children: (0, r.jsx)('div', { className: a.dragInner })
+        children: (0, r.jsx)("div", { className: a.dragInner }),
     });
 }

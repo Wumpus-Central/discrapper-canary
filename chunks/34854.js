@@ -7,7 +7,7 @@ let o = {
             url: l.ANM.NOTE(e),
             body: { note: t },
             oldFormErrors: !0,
-            rejectWithError: !0
+            rejectWithError: !0,
         });
-    }
+    },
 };

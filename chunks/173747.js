@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => z }), n(388685), n(539854));
+n.d(t, { Z: () => z }), n(388685), n(539854);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -24,7 +24,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -87,19 +87,19 @@ function U(e) {
             return t;
         }),
         a = i.id;
-    (T.delete(n),
+    T.delete(n),
         (I[n] = {
             id: a,
             applicationId: t,
             branchId: n,
             locale: r,
-            manifestIds: o
+            manifestIds: o,
         }),
-        k(t, n));
+        k(t, n);
 }
 function G(e) {
     let { branchId: t } = e;
-    (v.delete(t), T.add(t));
+    v.delete(t), T.add(t);
 }
 function B(e) {
     let { buildId: t } = e;
@@ -148,7 +148,7 @@ function W(e) {
 }
 class K extends (r = a.ZP.Store) {
     initialize() {
-        (this.syncWith([h.Z], x), this.waitFor(m.Z, h.Z, f.Z, p.Z));
+        this.syncWith([h.Z], x), this.waitFor(m.Z, h.Z, f.Z, p.Z);
     }
     getTargetBuildId(e, t) {
         return null == I[t] ? null : I[t].id;
@@ -169,7 +169,7 @@ class K extends (r = a.ZP.Store) {
         return S[e];
     }
 }
-O(K, 'displayName', 'ApplicationBuildStore');
+O(K, "displayName", "ApplicationBuildStore");
 let z = new K(l.Z, {
     CONNECTION_OPEN: L,
     GAMES_DATABASE_UPDATE: M,
@@ -183,5 +183,5 @@ let z = new K(l.Z, {
     APPLICATION_BRANCHES_FETCH_FAIL: H,
     CONNECTION_CLOSED: Y,
     LOGOUT: Y,
-    SKU_PURCHASE_SUCCESS: W
+    SKU_PURCHASE_SUCCESS: W,
 });

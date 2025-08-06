@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,23 +76,43 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let m = (e) => {
-    var { href: t, className: n, iconClassName: u, rel: f, target: h, mimeType: m, fileName: g, focusProps: E, onClick: b } = e,
-        y = p(e, ['href', 'className', 'iconClassName', 'rel', 'target', 'mimeType', 'fileName', 'focusProps', 'onClick']);
+    var {
+            href: t,
+            className: n,
+            iconClassName: u,
+            rel: f,
+            target: h,
+            mimeType: m,
+            fileName: g,
+            focusProps: E,
+            onClick: b,
+        } = e,
+        y = p(e, [
+            "href",
+            "className",
+            "iconClassName",
+            "rel",
+            "target",
+            "mimeType",
+            "fileName",
+            "focusProps",
+            "onClick",
+        ]);
     let O = i.useMemo(() => o.X.getDefaultLinkInterceptor(t), [t]),
         v = i.useCallback(
             (e) => {
-                (s.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+                s.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                     attachment_type: null == m ? void 0 : m[0],
-                    attachment_subtype: null == m ? void 0 : m[1]
+                    attachment_subtype: null == m ? void 0 : m[1],
                 }),
                     null == b || b(),
-                    null == O || O(e));
+                    null == O || O(e);
             },
-            [O, m, b]
+            [O, m, b],
         );
     return null != g
         ? (0, r.jsx)(
@@ -104,13 +125,13 @@ let m = (e) => {
                           target: h,
                           rel: f,
                           className: n,
-                          'aria-label': c.intl.string(c.t['1WjMbG']),
-                          focusProps: E
+                          "aria-label": c.intl.string(c.t["1WjMbG"]),
+                          focusProps: E,
                       },
-                      y
+                      y,
                   ),
-                  { children: g }
-              )
+                  { children: g },
+              ),
           )
         : (0, r.jsx)(
               a.eee,
@@ -122,18 +143,18 @@ let m = (e) => {
                           target: h,
                           rel: f,
                           className: n,
-                          'aria-label': c.intl.string(c.t['1WjMbG']),
-                          focusProps: E
+                          "aria-label": c.intl.string(c.t["1WjMbG"]),
+                          focusProps: E,
                       },
-                      y
+                      y,
                   ),
                   {
                       children: (0, r.jsx)(a._8t, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: u
-                      })
-                  }
-              )
+                          size: "md",
+                          color: "currentColor",
+                          className: u,
+                      }),
+                  },
+              ),
           );
 };

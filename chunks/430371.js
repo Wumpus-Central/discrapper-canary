@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -81,7 +81,23 @@ let C = 16 / 9,
 function x(e) {
     var t;
     let n,
-        { onSelectParticipant: o, onContextMenuParticipant: T, onFullscreenParticipant: A, participants: x, filteredParticipants: M, popoutWindow: k, inCall: j, channel: U, selectedParticipant: G, showParticipants: B = !0, className: Z, width: F, height: V, layout: H, idle: Y } = e,
+        {
+            onSelectParticipant: o,
+            onContextMenuParticipant: T,
+            onFullscreenParticipant: A,
+            participants: x,
+            filteredParticipants: M,
+            popoutWindow: k,
+            inCall: j,
+            channel: U,
+            selectedParticipant: G,
+            showParticipants: B = !0,
+            className: Z,
+            width: F,
+            height: V,
+            layout: H,
+            idle: Y,
+        } = e,
         W = null != k,
         K = _.Z.getVideoComponent(),
         z = f.default.getId(),
@@ -100,13 +116,17 @@ function x(e) {
         eu = (0, h.Z)(ec, L),
         ed = (null != (t = (0, c.Z)(G.id)) ? t : G.id) !== G.id,
         ef = 0;
-    ((en || ea) && (ef += w), en && !ea && (ec ? (ef += D + 2 * R) : (ef += R)), ea && (ef += 0.5 * P + R));
-    let e_ = i.useMemo(() => (en && er ? F / (V - 2 * ef) : ei && null != q && q.width > 0 && q.height > 0 ? q.width / q.height : C), [ei, q, en, F, V, ef, er]),
+    (en || ea) && (ef += w), en && !ea && (ec ? (ef += D + 2 * R) : (ef += R)), ea && (ef += 0.5 * P + R);
+    let e_ = i.useMemo(
+            () =>
+                en && er ? F / (V - 2 * ef) : ei && null != q && q.width > 0 && q.height > 0 ? q.width / q.height : C,
+            [ei, q, en, F, V, ef, er],
+        ),
         ep = V - 2 * ef,
         eh = en && er ? F : ep * e_,
         em = Math.floor(Math.min(F, eh) / e_),
         eg = V > F / e_ + w + P + R;
-    ((n = ea || en ? (ea ? -16 : -R) : D + R + Math.max(0, w - (V - em) / 2)),
+    (n = ea || en ? (ea ? -16 : -R) : D + R + Math.max(0, w - (V - em) / 2)),
         i.useEffect(() => {
             let e = setTimeout(() => {
                 $(!1);
@@ -114,9 +134,9 @@ function x(e) {
             return () => {
                 clearTimeout(e);
             };
-        }, []));
+        }, []);
     let eE = J || null == Q,
-        eb = eE ? 'animate-never' : 'animate-always',
+        eb = eE ? "animate-never" : "animate-always",
         ey = (0, l.q_F)(
             {
                 value: +!!ea,
@@ -125,31 +145,31 @@ function x(e) {
                 onStart: () => et(!0),
                 onChange: () => p.S.dispatch(y.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    (et(!1), p.S.dispatch(y.CkL.REMEASURE_TARGET));
-                }
+                    et(!1), p.S.dispatch(y.CkL.REMEASURE_TARGET);
+                },
             },
-            eb
+            eb,
         ),
         eO = (0, l.q_F)(
             {
                 value: +!!ea,
-                config: N(S({}, s.config.stiff), { clamp: !0 })
+                config: N(S({}, s.config.stiff), { clamp: !0 }),
             },
-            eb
+            eb,
         ),
         ev = (0, l.q_F)(
             {
                 value: eh,
-                config: N(S({}, s.config.stiff), { clamp: !0 })
+                config: N(S({}, s.config.stiff), { clamp: !0 }),
             },
-            (es === ea && eO.value.idle && !eu) || ed || eE ? 'animate-never' : 'animate-always'
+            (es === ea && eO.value.idle && !eu) || ed || eE ? "animate-never" : "animate-always",
         ),
         eI = (0, l.q_F)(
             {
                 value: n,
-                config: N(S({}, s.config.stiff), { clamp: !0 })
+                config: N(S({}, s.config.stiff), { clamp: !0 }),
             },
-            eb
+            eb,
         ),
         eT = (0, l.Yzy)(
             G,
@@ -159,19 +179,19 @@ function x(e) {
                 initial: null,
                 from: { opacity: 0 },
                 enter: { opacity: 1 },
-                leave: { opacity: 0 }
+                leave: { opacity: 0 },
             },
-            eb
+            eb,
         ),
         eS = i.useCallback((e) => {
-            (X(e), $(!1));
+            X(e), $(!1);
         }, []),
         eA = ea ? [] : (0, E.n3)(x, G, z),
         { visibleParticipants: eN, participantTileWidth: eC } = (0, b.ZB)(F, M);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(I.root, v.flexCenter, Z),
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: I.tileWrapper,
                 style: { opacity: ei && J ? 0 : 1 },
                 children: [
@@ -182,7 +202,7 @@ function x(e) {
                             (0, r.jsx)(s.animated.div, {
                                 style: { width: ev.value },
                                 className: I.videoWrapper,
-                                children: (0, r.jsx)('div', {
+                                children: (0, r.jsx)("div", {
                                     className: v.videoSizer,
                                     style: { aspectRatio: e_ },
                                     children: eT((e, t, n) => {
@@ -206,14 +226,14 @@ function x(e) {
                                                           onContextMenu: T,
                                                           onVideoResize: eS,
                                                           inCall: j,
-                                                          inPopout: W
-                                                      })
+                                                          inPopout: W,
+                                                      }),
                                                   },
-                                                  i
+                                                  i,
                                               )
                                             : null;
-                                    })
-                                })
+                                    }),
+                                }),
                             }),
                             ec
                                 ? (0, r.jsx)(s.animated.div, {
@@ -222,18 +242,18 @@ function x(e) {
                                       children: (0, r.jsx)(d.Z, {
                                           channelId: U.id,
                                           isParticipantsOpen: B,
-                                          isVertical: !0
-                                      })
+                                          isVertical: !0,
+                                      }),
                                   })
-                                : null
-                        ]
+                                : null,
+                        ],
                     }),
                     (0, r.jsx)(s.animated.div, {
                         className: I.participantsWrapperAnimated,
                         style: {
                             translateY: ey.value.to((e) => (e * P) / 2),
                             opacity: ey.value,
-                            visibility: ey.value.to((e) => (0 === e ? 'hidden' : 'visible'))
+                            visibility: ey.value.to((e) => (0 === e ? "hidden" : "visible")),
                         },
                         children: (0, r.jsx)(b.ZP, {
                             channel: U,
@@ -245,10 +265,10 @@ function x(e) {
                             selectedParticipantId: G.id,
                             inCall: j,
                             popoutWindow: k,
-                            paused: ee || !B
-                        })
-                    })
-                ]
+                            paused: ee || !B,
+                        }),
+                    }),
+                ],
             }),
             eA.length > 0
                 ? (0, r.jsx)(g.Z, {
@@ -257,9 +277,9 @@ function x(e) {
                       height: V,
                       channel: U,
                       participants: eA,
-                      onSelectParticipant: o
+                      onSelectParticipant: o,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

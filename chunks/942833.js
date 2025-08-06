@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => a,
-    k: () => s
+    k: () => s,
 });
 var r = n(73800),
     i = n(937615),
@@ -10,7 +10,13 @@ function a(e) {
         if (null == e) return;
         let t = null != e.role_id,
             n = e.attachments_count > 0;
-        return t && n ? o.intl.string(o.t.ih4QMT) : t ? o.intl.string(o.t.o9xphY) : n ? o.intl.string(o.t.DWYJub) : void 0;
+        return t && n
+            ? o.intl.string(o.t.ih4QMT)
+            : t
+              ? o.intl.string(o.t.o9xphY)
+              : n
+                ? o.intl.string(o.t.DWYJub)
+                : void 0;
     }, [e]);
 }
 function s(e) {

@@ -1,12 +1,12 @@
 n.d(t, {
     f: () => o,
-    w: () => a
+    w: () => a,
 });
 var r = n(515652),
     i = n(926028);
 function o(e, t) {
     var n = new i.p(r.s[e]);
-    return (n.loadDataTransfer(t), n);
+    return n.loadDataTransfer(t), n;
 }
 function a(e) {
     if (!e) return null;

@@ -4,5 +4,5 @@ var r = n(592204),
 let o = () => {
     var e;
     let { profanity: t, sexualContent: n, slurs: o } = (0, i.g)();
-    return !!(0, r.Xo)({ location: 'use-should-filter-keywords' }) && null != (e = t || n || o) && e;
+    return !!(0, r.Xo)({ location: "use-should-filter-keywords" }) && null != (e = t || n || o) && e;
 };

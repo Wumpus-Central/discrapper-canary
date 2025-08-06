@@ -10,15 +10,15 @@ class c extends (l = a.ZP.Store) {
         return s[e];
     }
 }
-((i = 'ChannelSKUStore'),
-    (r = 'displayName') in c
+(i = "ChannelSKUStore"),
+    (r = "displayName") in c
         ? Object.defineProperty(c, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (c[r] = i));
+        : (c[r] = i);
 let u = new c(o.Z, {
     CONNECTION_OPEN: function () {
         s = {};
@@ -26,5 +26,5 @@ let u = new c(o.Z, {
     STORE_LISTING_FETCH_SUCCESS: function (e) {
         let { channelId: t, storeListing: n } = e;
         null != t && (s[t] = n.sku.id);
-    }
+    },
 });

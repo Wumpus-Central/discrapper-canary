@@ -22,7 +22,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,30 +72,30 @@ function v(e) {
         { fractionalState: E, endsAt: y } = (0, c.Z)(),
         v = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         I = (0, l.ZP)(y, l.aj.LONG_TIME_LEFT);
-    if (!0 === t || !(0, d.y)('guild_boosting_fractional_premium_pill', v, E)) return null;
-    let T = m.intl.format(m.t['4RgA6O'], { helpCenterLink: p.Z.getArticleURL(h.BhN.FRACTIONAL_PREMIUM_ABOUT) });
+    if (!0 === t || !(0, d.y)("guild_boosting_fractional_premium_pill", v, E)) return null;
+    let T = m.intl.format(m.t["4RgA6O"], { helpCenterLink: p.Z.getArticleURL(h.BhN.FRACTIONAL_PREMIUM_ABOUT) });
     return (0, r.jsx)(u.Z, {
         text: T,
-        'aria-label': null == T ? void 0 : T.toString(),
+        "aria-label": null == T ? void 0 : T.toString(),
         tooltipClassName: g.tooltip,
         className: o()(g.unavailableCounterContainer, i),
         children: (e) =>
             (0, r.jsxs)(
-                'div',
+                "div",
                 O(b({}, e), {
                     className: o()(g.unavailableCounterPill, n),
                     children: [
                         (0, r.jsx)(s.Text, {
-                            variant: 'text-sm/bold',
+                            variant: "text-sm/bold",
                             className: g.unavailableCounterPillText,
-                            children: m.intl.string(m.t['5nrJDA']).toUpperCase()
+                            children: m.intl.string(m.t["5nrJDA"]).toUpperCase(),
                         }),
                         (0, r.jsx)(f.Z, {
                             countdownText: I,
-                            className: g.countDownText
-                        })
-                    ]
-                })
-            )
+                            className: g.countDownText,
+                        }),
+                    ],
+                }),
+            ),
     });
 }

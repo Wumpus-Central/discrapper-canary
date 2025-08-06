@@ -12,11 +12,11 @@ function m(e) {
     let { applicationId: t, selected: n, onClick: l, disabled: m } = e,
         { isFetching: g, coverImageUrl: p } = (0, c.$)(t, {
             coverImageHeight: 336,
-            coverImageWidth: 252
+            coverImageWidth: 252,
         }),
         h = (0, o.e7)([d.Z], () => {
             var e, n;
-            return null != (n = null == (e = d.Z.getDetectableGame(t)) ? void 0 : e.name) ? n : '';
+            return null != (n = null == (e = d.Z.getDetectableGame(t)) ? void 0 : e.name) ? n : "";
         }),
         f = i.useCallback(() => {
             null == l || l(t);
@@ -26,49 +26,49 @@ function m(e) {
                 g
                     ? null
                     : null == p
-                      ? (0, r.jsx)('div', {
+                      ? (0, r.jsx)("div", {
                             className: u.gameUnknownImage,
-                            children: (0, r.jsx)(s.IMN, { size: 'lg' })
+                            children: (0, r.jsx)(s.IMN, { size: "lg" }),
                         })
-                      : (0, r.jsx)('img', {
+                      : (0, r.jsx)("img", {
                             className: u.gameImage,
                             alt: h,
-                            src: p
+                            src: p,
                         }),
-            [p, g, h]
+            [p, g, h],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(u.selectedGame, {
             [u.dimmed]: !n,
-            [u.disabled]: m
+            [u.disabled]: m,
         }),
         children: [
             (0, r.jsxs)(s.P3F, {
-                'aria-disabled': m,
+                "aria-disabled": m,
                 tabIndex: m ? -1 : 0,
                 onClick: m ? void 0 : f,
                 className: a()(u.gameImageBackground, {
                     [u.gameImageLoading]: g,
-                    [u.disabled]: m
+                    [u.disabled]: m,
                 }),
                 children: [
                     n &&
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: u.checkBackground,
                             children: (0, r.jsx)(s.XZJ, {
                                 displayOnly: !0,
-                                value: n
-                            })
+                                value: n,
+                            }),
                         }),
-                    x
-                ]
+                    x,
+                ],
             }),
             (0, r.jsx)(s.Text, {
                 className: u.gameName,
-                variant: 'text-xs/medium',
-                color: 'header-primary',
-                children: h
-            })
-        ]
+                variant: "text-xs/medium",
+                color: "header-primary",
+                children: h,
+            }),
+        ],
     });
 }

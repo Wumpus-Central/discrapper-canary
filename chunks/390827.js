@@ -23,14 +23,14 @@ var r,
     S = s.String,
     A = 0,
     N = {},
-    C = 'onreadystatechange';
+    C = "onreadystatechange";
 f(function () {
     r = s.location;
 });
 var R = function (e) {
         if (d(N, e)) {
             var t = N[e];
-            (delete N[e], t());
+            delete N[e], t();
         }
     },
     P = function (e) {
@@ -42,9 +42,9 @@ var R = function (e) {
         R(e.data);
     },
     D = function (e) {
-        s.postMessage(S(e), r.protocol + '//' + r.host);
+        s.postMessage(S(e), r.protocol + "//" + r.host);
     };
-((b && y) ||
+(b && y) ||
     ((b = function (e) {
         m(arguments.length, 1);
         var t = u(e) ? e : I(e),
@@ -70,13 +70,13 @@ var R = function (e) {
             })
           : T && !g
             ? ((a = (o = new T()).port2), (o.port1.onmessage = w), (i = c(a.postMessage, a)))
-            : s.addEventListener && u(s.postMessage) && !s.importScripts && r && 'file:' !== r.protocol && !f(D)
-              ? ((i = D), s.addEventListener('message', w, !1))
+            : s.addEventListener && u(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !f(D)
+              ? ((i = D), s.addEventListener("message", w, !1))
               : (i =
-                    C in h('script')
+                    C in h("script")
                         ? function (e) {
-                              _.appendChild(h('script'))[C] = function () {
-                                  (_.removeChild(this), R(e));
+                              _.appendChild(h("script"))[C] = function () {
+                                  _.removeChild(this), R(e);
                               };
                           }
                         : function (e) {
@@ -84,5 +84,5 @@ var R = function (e) {
                           })),
     (e.exports = {
         set: b,
-        clear: y
-    }));
+        clear: y,
+    });

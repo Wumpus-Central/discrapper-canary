@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -17,15 +17,15 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -33,11 +33,11 @@ function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -58,11 +58,23 @@ class l {
             s(o({}, e), {
                 assetDark: e.asset_dark,
                 assetLight: e.asset_light,
-                refTargetBackground: e.ref_target_background
-            })
+                refTargetBackground: e.ref_target_background,
+            }),
         );
     }
     constructor(e) {
-        (i(this, 'title', void 0), i(this, 'body', void 0), i(this, 'assetDark', void 0), i(this, 'assetLight', void 0), i(this, 'version', void 0), i(this, 'refTargetBackground', void 0), (this.type = r.Z.COACHMARK), (this.title = e.title), (this.body = e.body), (this.assetDark = e.assetDark), (this.assetLight = e.assetLight), (this.version = e.version), (this.refTargetBackground = e.refTargetBackground));
+        i(this, "title", void 0),
+            i(this, "body", void 0),
+            i(this, "assetDark", void 0),
+            i(this, "assetLight", void 0),
+            i(this, "version", void 0),
+            i(this, "refTargetBackground", void 0),
+            (this.type = r.Z.COACHMARK),
+            (this.title = e.title),
+            (this.body = e.body),
+            (this.assetDark = e.assetDark),
+            (this.assetLight = e.assetLight),
+            (this.version = e.version),
+            (this.refTargetBackground = e.refTargetBackground);
     }
 }

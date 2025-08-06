@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(388685));
+n.d(t, { Z: () => o }), n(388685);
 var r = n(73800),
     i = n(439849);
 function o(e, t) {
@@ -9,7 +9,12 @@ function o(e, t) {
             (0, i.Z)().then((t) => {
                 null != t &&
                     t.identifyGame(e, (e, t) => {
-                        0 === e && null != t.icon && '' !== t.icon && null != t.name && '' !== t.name && o('data:image/png;base64,'.concat(t.icon));
+                        0 === e &&
+                            null != t.icon &&
+                            "" !== t.icon &&
+                            null != t.name &&
+                            "" !== t.name &&
+                            o("data:image/png;base64,".concat(t.icon));
                     });
             });
         }, [e, t]),

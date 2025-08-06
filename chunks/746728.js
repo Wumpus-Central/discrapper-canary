@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     I: () => f,
-    Z: () => m
+    Z: () => m,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,23 +16,23 @@ var r = n(255367),
     h = n(384506);
 function f(e) {
     let { categoryId: t, loadId: n } = e;
-    (u.Z.setState({ categoryId: t }),
+    u.Z.setState({ categoryId: t }),
         c.Z.loadCategoryResults({
             loadId: n,
             categoryId: t,
-            query: u.Z.getField('fetchedQuery'),
-            languageCode: u.Z.getField('languageCode')
-        }));
+            query: u.Z.getField("fetchedQuery"),
+            languageCode: u.Z.getField("languageCode"),
+        });
 }
 function g(e) {
     let { loadId: t, categoryId: n, count: l } = e,
         c = i.useCallback(() => {
             f({
                 categoryId: n,
-                loadId: t
+                loadId: t,
             });
         }, [n, t]),
-        p = u.Z.useField('categoryId') === n,
+        p = u.Z.useField("categoryId") === n,
         g = l.toLocaleString(s.default.locale),
         m = (0, d.E)({ categoryId: n });
     return (0, r.jsxs)(o.P3F, {
@@ -41,17 +41,17 @@ function g(e) {
         children: [
             (0, r.jsx)(o.Text, {
                 className: h.name,
-                variant: 'text-sm/medium',
-                color: 'header-primary',
-                children: m
+                variant: "text-sm/medium",
+                color: "header-primary",
+                children: m,
             }),
             (0, r.jsx)(o.Text, {
                 className: h.count,
-                variant: 'text-sm/normal',
-                color: 'text-muted',
-                children: g
-            })
-        ]
+                variant: "text-sm/normal",
+                color: "text-muted",
+                children: g,
+            }),
+        ],
     });
 }
 let m = function (e) {
@@ -59,7 +59,7 @@ let m = function (e) {
         n = (0, p.q)();
     return null == n
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: h.categories,
               children: n.map((e) => {
                   let [n, i] = e;
@@ -68,10 +68,10 @@ let m = function (e) {
                       {
                           loadId: t,
                           categoryId: n,
-                          count: i
+                          count: i,
                       },
-                      n
+                      n,
                   );
-              })
+              }),
           });
 };

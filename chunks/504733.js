@@ -15,20 +15,20 @@ function u(e) {
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
-            messageId: t.id
+            messageId: t.id,
         });
     return (0, r.jsx)(s.Z, {
         iconNode: (0, r.jsx)(i.Prq, {
-            size: 'md',
-            color: 'currentColor',
-            className: c.ticketIcon
+            size: "md",
+            color: "currentColor",
+            className: c.ticketIcon,
         }),
         timestamp: t.timestamp,
         compact: u,
         children: (0, l.A)({
             application: f,
             username: d.nick,
-            usernameHook: _(d)
-        })
+            usernameHook: _(d),
+        }),
     });
 }

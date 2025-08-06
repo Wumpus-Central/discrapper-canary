@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(388685));
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(793030),
@@ -23,174 +23,174 @@ let N = n(974138),
     P = () => [
         {
             content: b.intl.string(g.default.CKPQ6O),
-            username: 'BurgerBoi',
+            username: "BurgerBoi",
             avatar: h,
             responses: [
                 {
                     content: b.intl.string(g.default.t8Kroq),
                     responsePoints: 500,
-                    responseMessage: b.intl.string(g.default.o7Gqi4)
+                    responseMessage: b.intl.string(g.default.o7Gqi4),
                 },
                 {
                     content: b.intl.string(g.default.I105xs),
                     responsePoints: -1000,
-                    responseMessage: b.intl.string(g.default['+IxWjI'])
-                }
-            ]
+                    responseMessage: b.intl.string(g.default["+IxWjI"]),
+                },
+            ],
         },
         {
             content: b.intl.string(g.default.o9Mmio),
-            username: 'gaminggamer',
+            username: "gaminggamer",
             avatar: x,
             responses: [
                 {
                     content: b.intl.string(g.default.eH2eAQ),
                     responsePoints: 1000,
-                    responseMessage: b.intl.string(g.default.NX5Sy8)
+                    responseMessage: b.intl.string(g.default.NX5Sy8),
                 },
                 {
-                    content: b.intl.string(g.default['U/lIpa']),
+                    content: b.intl.string(g.default["U/lIpa"]),
                     responsePoints: 100,
-                    responseMessage: b.intl.string(g.default['3V3mBQ'])
-                }
-            ]
+                    responseMessage: b.intl.string(g.default["3V3mBQ"]),
+                },
+            ],
         },
         {
-            content: b.intl.string(g.default['tHj27+']),
-            username: 'SELLINGEVERYTHING2000',
+            content: b.intl.string(g.default["tHj27+"]),
+            username: "SELLINGEVERYTHING2000",
             avatar: v,
             responses: [
                 {
                     content: b.intl.string(g.default.amDxf3),
                     responsePoints: -1000,
-                    responseMessage: b.intl.string(g.default.FmFP3N)
+                    responseMessage: b.intl.string(g.default.FmFP3N),
                 },
                 {
                     content: b.intl.string(g.default.nCOznZ),
                     responsePoints: 1000,
-                    responseMessage: b.intl.string(g.default.E5wiAw)
-                }
-            ]
+                    responseMessage: b.intl.string(g.default.E5wiAw),
+                },
+            ],
         },
         {
             content: b.intl.string(g.default.Nlecqq),
-            username: 'BurgerBoi',
+            username: "BurgerBoi",
             avatar: h,
             responses: [
                 {
                     content: b.intl.string(g.default.WGrc6u),
                     responsePoints: -100,
-                    responseMessage: b.intl.string(g.default.nUajIy)
+                    responseMessage: b.intl.string(g.default.nUajIy),
                 },
                 {
                     content: b.intl.string(g.default.mBzqND),
                     responsePoints: -500,
-                    responseMessage: b.intl.string(g.default.facznJ)
-                }
-            ]
+                    responseMessage: b.intl.string(g.default.facznJ),
+                },
+            ],
         },
         {
             content: b.intl.string(g.default.tWaTS0),
-            username: 'gaminggamer',
+            username: "gaminggamer",
             avatar: x,
             responses: [
                 {
                     content: b.intl.string(g.default.ht6xPD),
                     responsePoints: 2000,
-                    responseMessage: b.intl.string(g.default['5Gd+Iy'])
+                    responseMessage: b.intl.string(g.default["5Gd+Iy"]),
                 },
                 {
-                    content: b.intl.string(g.default['DFw+2t']),
+                    content: b.intl.string(g.default["DFw+2t"]),
                     responsePoints: 100,
-                    responseMessage: b.intl.string(g.default.VF0jT0)
-                }
-            ]
+                    responseMessage: b.intl.string(g.default.VF0jT0),
+                },
+            ],
         },
         {
             content: b.intl.string(g.default.WRv94u),
-            username: 'SELLINGEVERYTHING2000',
+            username: "SELLINGEVERYTHING2000",
             avatar: v,
             responses: [
                 {
                     content: b.intl.string(g.default.DEmfX1),
                     responsePoints: -1000,
-                    responseMessage: b.intl.string(g.default.ThkBDQ)
+                    responseMessage: b.intl.string(g.default.ThkBDQ),
                 },
                 {
                     content: b.intl.string(g.default.vUgNQU),
                     responsePoints: 1000,
-                    responseMessage: b.intl.string(g.default['/axEMz'])
-                }
-            ]
+                    responseMessage: b.intl.string(g.default["/axEMz"]),
+                },
+            ],
         },
         {
             content: b.intl.string(g.default.TTqFZm),
-            username: 'lonelyboi',
+            username: "lonelyboi",
             avatar: O,
             responses: [
                 {
                     content: b.intl.string(g.default.ysPB4u),
                     responsePoints: 2000,
-                    responseMessage: b.intl.string(g.default.osxWvb)
+                    responseMessage: b.intl.string(g.default.osxWvb),
                 },
                 {
                     content: b.intl.string(g.default.oeBsZG),
                     responsePoints: -2000,
-                    responseMessage: b.intl.string(g.default.VjMyu7)
-                }
-            ]
+                    responseMessage: b.intl.string(g.default.VjMyu7),
+                },
+            ],
         },
         {
-            content: b.intl.string(g.default['ux+uTk']),
-            username: 'BurgerBoi',
+            content: b.intl.string(g.default["ux+uTk"]),
+            username: "BurgerBoi",
             avatar: h,
             responses: [
                 {
-                    content: b.intl.string(g.default['+1Q+Aw']),
+                    content: b.intl.string(g.default["+1Q+Aw"]),
                     responsePoints: -1000,
-                    responseMessage: b.intl.string(g.default.r60B29)
+                    responseMessage: b.intl.string(g.default.r60B29),
                 },
                 {
-                    content: b.intl.string(g.default['6tqGtb']),
+                    content: b.intl.string(g.default["6tqGtb"]),
                     responsePoints: 1000,
-                    responseMessage: b.intl.string(g.default.K8IDXl)
-                }
-            ]
+                    responseMessage: b.intl.string(g.default.K8IDXl),
+                },
+            ],
         },
         {
-            content: b.intl.string(g.default['/drFws']),
-            username: 'lonelyboi',
+            content: b.intl.string(g.default["/drFws"]),
+            username: "lonelyboi",
             avatar: O,
             responses: [
                 {
                     content: b.intl.string(g.default.ETmJEx),
                     responsePoints: -500,
-                    responseMessage: b.intl.string(g.default.bITxrq)
+                    responseMessage: b.intl.string(g.default.bITxrq),
                 },
                 {
                     content: b.intl.string(g.default.XDDUXl),
                     responsePoints: 1000,
-                    responseMessage: b.intl.string(g.default['dl/VYm'])
-                }
-            ]
+                    responseMessage: b.intl.string(g.default["dl/VYm"]),
+                },
+            ],
         },
         {
-            content: b.intl.string(g.default['Mw+9pa']),
-            username: 'SELLINGEVERYTHING2000',
+            content: b.intl.string(g.default["Mw+9pa"]),
+            username: "SELLINGEVERYTHING2000",
             avatar: v,
             responses: [
                 {
-                    content: b.intl.string(g.default['AW5f+v']),
+                    content: b.intl.string(g.default["AW5f+v"]),
                     responsePoints: 10000,
-                    responseMessage: b.intl.string(g.default.dbAznJ)
+                    responseMessage: b.intl.string(g.default.dbAznJ),
                 },
                 {
-                    content: b.intl.string(g.default['LsWI+v']),
+                    content: b.intl.string(g.default["LsWI+v"]),
                     responsePoints: -1000,
-                    responseMessage: b.intl.string(g.default['7zD1nZ'])
-                }
-            ]
-        }
+                    responseMessage: b.intl.string(g.default["7zD1nZ"]),
+                },
+            ],
+        },
     ];
 function _(e) {
     let { currentMessage: t, response: n, handleResponse: i, index: c, onMount: l } = e;
@@ -198,64 +198,64 @@ function _(e) {
         (0, s.useEffect)(() => {
             l();
         }, []),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: y.container,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: y.message,
                     children: [
-                        (0, r.jsx)('img', {
+                        (0, r.jsx)("img", {
                             src: null == t ? void 0 : t.avatar,
-                            alt: '',
-                            className: y.avatar
+                            alt: "",
+                            className: y.avatar,
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: y.messageContent,
                             children: [
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: y.authorName,
                                     children: [
                                         (0, r.jsx)(o.xv, {
-                                            variant: 'text-md/medium',
-                                            color: 'text-primary',
-                                            children: null == t ? void 0 : t.username
+                                            variant: "text-md/medium",
+                                            color: "text-primary",
+                                            children: null == t ? void 0 : t.username,
                                         }),
                                         (0, r.jsx)(o.xv, {
-                                            variant: 'text-sm/normal',
-                                            color: 'text-muted',
-                                            children: (0, a.Y4)(new Date())
-                                        })
-                                    ]
+                                            variant: "text-sm/normal",
+                                            color: "text-muted",
+                                            children: (0, a.Y4)(new Date()),
+                                        }),
+                                    ],
                                 }),
                                 (0, r.jsx)(o.xv, {
-                                    variant: 'text-md/normal',
-                                    color: 'text-secondary',
-                                    children: null == t ? void 0 : t.content
-                                })
-                            ]
-                        })
-                    ]
+                                    variant: "text-md/normal",
+                                    color: "text-secondary",
+                                    children: null == t ? void 0 : t.content,
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: y.input,
                     children:
                         null != n
                             ? (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsxs)(f.Z, {
-                                          variant: 'text-md/normal',
-                                          color: 'text-muted',
-                                          children: [n.responseMessage, ' ']
+                                          variant: "text-md/normal",
+                                          color: "text-muted",
+                                          children: [n.responseMessage, " "],
                                       }),
                                       (0, r.jsxs)(f.Z, {
-                                          variant: 'text-md/normal',
-                                          children: [n.points > 0 && '+', n.points]
+                                          variant: "text-md/normal",
+                                          children: [n.points > 0 && "+", n.points],
                                       }),
-                                      (0, r.jsx)('img', {
+                                      (0, r.jsx)("img", {
                                           src: j,
-                                          alt: b.intl.string(g.default.BropER)
-                                      })
-                                  ]
+                                          alt: b.intl.string(g.default.BropER),
+                                      }),
+                                  ],
                               })
                             : null == t
                               ? void 0
@@ -266,15 +266,15 @@ function _(e) {
                                             className: y.response,
                                             onClick: () => i(c, e.responsePoints, e.responseMessage),
                                             children: (0, r.jsx)(f.Z, {
-                                                variant: 'text-md/normal',
-                                                children: e.content
-                                            })
+                                                variant: "text-md/normal",
+                                                children: e.content,
+                                            }),
                                         },
-                                        t
-                                    )
-                                )
-                })
-            ]
+                                        t,
+                                    ),
+                                ),
+                }),
+            ],
         })
     );
 }
@@ -292,16 +292,16 @@ function Z(e) {
     (0, l.Z)(C, v);
     let O = (0, d.eR)(N),
         j = (e, t, n) => {
-            (b({
+            b({
                 points: t,
-                responseMessage: n
+                responseMessage: n,
             }),
                 (0, i.KH)(m.yN.MESSAGES, t),
                 x({ count: v + 1 }),
                 (a.current = setTimeout(() => {
                     var t;
-                    (null == (t = o.current) || t.removeDrop(e), f(u + 1), b(null));
-                }, 3000)));
+                    null == (t = o.current) || t.removeDrop(e), f(u + 1), b(null);
+                }, 3000));
         };
     return ((0, s.useEffect)(() => () => clearTimeout(a.current), []), u >= P().length)
         ? null
@@ -322,9 +322,9 @@ function Z(e) {
                           response: g,
                           handleResponse: j,
                           index: e,
-                          onMount: O
+                          onMount: O,
                       },
-                      e
-                  )
+                      e,
+                  ),
           });
 }

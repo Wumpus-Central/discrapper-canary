@@ -14,23 +14,23 @@ var o = n(120356),
     m = n(395921);
 function g(e) {
     let { selectedEffectId: t, setSelectedEffectId: n, configs: o, className: g } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g,
         children: [
             (0, r.jsxs)(a.X6, {
-                variant: 'heading-md/semibold',
+                variant: "heading-md/semibold",
                 className: f.selectorHeading,
                 children: [
-                    p.intl.string(u.default['1wilMz']),
+                    p.intl.string(u.default["1wilMz"]),
                     (0, r.jsx)(i.SrA, {
-                        size: 'xs',
-                        color: i.TVs.colors.TEXT_DEFAULT
-                    })
-                ]
+                        size: "xs",
+                        color: i.TVs.colors.TEXT_DEFAULT,
+                    }),
+                ],
             }),
             (0, r.jsx)(a.Kq, {
-                direction: 'horizontal',
-                align: 'center',
+                direction: "horizontal",
+                align: "center",
                 wrap: !0,
                 gap: 8,
                 children: d.mH.map((e) => {
@@ -46,13 +46,13 @@ function g(e) {
                                 userName: a.name,
                                 effectDisplayType: s.F.STATIC,
                                 displayNameStyles: u,
-                                textClassName: m.effectText
-                            })
+                                textClassName: m.effectText,
+                            }),
                         },
-                        e
+                        e,
                     );
-                })
-            })
-        ]
+                }),
+            }),
+        ],
     });
 }

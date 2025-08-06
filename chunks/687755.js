@@ -7,11 +7,11 @@ var i = n(120356),
     s = n(554116);
 let l = (e) => {
     let { className: t } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()(s.tag, t),
-        children: (0, r.jsx)('span', {
+        children: (0, r.jsx)("span", {
             className: s.text,
-            children: a.intl.string(a.t['14lP0d'])
-        })
+            children: a.intl.string(a.t["14lP0d"]),
+        }),
     });
 };

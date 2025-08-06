@@ -10,6 +10,6 @@ function a(e) {
         src: t.getAvatarURL(void 0, a ? 16 : 24),
         size: a ? i.EFr.SIZE_16 : i.EFr.SIZE_24,
         className: a ? o.miniAvatar : o.largeAvatar,
-        'aria-hidden': !0
+        "aria-hidden": !0,
     });
 }

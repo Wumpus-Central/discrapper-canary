@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685), n(539854));
+n.d(t, { Z: () => s }), n(388685), n(539854);
 var r = n(73800),
     i = n(768943),
     o = n(429828);
@@ -15,7 +15,7 @@ function s() {
                 let r = i.Z.getLastChanged();
                 if (e !== r) {
                     if (((e = r), n.current && !i.Z.getIsStale())) {
-                        ((n.current = !1), t(a()));
+                        (n.current = !1), t(a());
                         return;
                     }
                     t((e) => {

@@ -5,12 +5,12 @@ n.d(t, {
     VX: () => l,
     ZP: () => p,
     ih: () => s,
-    xc: () => c
+    xc: () => c,
 });
 var i = n(972959);
 let r = {
         timeToLiveMs: 5000,
-        reappearTimeMs: 10000
+        reappearTimeMs: 10000,
     },
     o = (0, i.H)(() => r),
     l = 10000,

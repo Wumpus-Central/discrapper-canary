@@ -17,35 +17,35 @@ var r = n(359282),
             var a = p(_(e, t), t),
                 s = r.create({
                     style: i || m(),
-                    entity: o || null
+                    entity: o || null,
                 });
             return u(a, a.getSelectionAfter(), n, s);
         },
         insertText: function (e, t, n, r, i) {
-            return (t.isCollapsed() || d(!1), g.replaceText(e, t, n, r, i));
+            return t.isCollapsed() || d(!1), g.replaceText(e, t, n, r, i);
         },
         moveText: function (e, t, n) {
             var r = s(e, t),
-                i = g.removeRange(e, t, 'backward');
+                i = g.removeRange(e, t, "backward");
             return g.replaceWithFragment(i, n, r);
         },
         replaceWithFragment: function (e, t, n) {
-            var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'REPLACE_WITH_NEW_DATA',
+            var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "REPLACE_WITH_NEW_DATA",
                 i = p(_(e, t), t);
             return c(i, i.getSelectionAfter(), n, r);
         },
         removeRange: function (e, t, n) {
-            (t.getIsBackward() &&
+            t.getIsBackward() &&
                 (t = t.merge({
                     anchorKey: t.getFocusKey(),
                     anchorOffset: t.getFocusOffset(),
                     focusKey: t.getAnchorKey(),
                     focusOffset: t.getAnchorOffset(),
-                    isBackward: !1
+                    isBackward: !1,
                 })),
                 (r = t.getAnchorKey()),
                 (i = t.getFocusKey()),
-                (o = e.getBlockForKey(r)));
+                (o = e.getBlockForKey(r));
             var r,
                 i,
                 o,
@@ -74,7 +74,7 @@ var r = n(359282),
             return f(e, t, function (e) {
                 return e.merge({
                     type: n,
-                    depth: 0
+                    depth: 0,
                 });
             });
         },
@@ -90,6 +90,6 @@ var r = n(359282),
         },
         applyEntity: function (e, t, n) {
             return o(_(e, t), t, n);
-        }
+        },
     };
 e.exports = g;

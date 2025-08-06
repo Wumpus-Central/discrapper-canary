@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(388685));
+n.d(t, { Z: () => D }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(126663),
@@ -32,24 +32,24 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -83,11 +83,11 @@ function A(e) {
         {
             hasChanges: k,
             hasConfiguredAnythingForCurrentStep: L,
-            hasErrors: M
+            hasErrors: M,
         } = (0, a.cj)([O.Z], () => ({
             hasChanges: O.Z.hasChanges(),
             hasConfiguredAnythingForCurrentStep: O.Z.hasConfiguredAnythingForCurrentStep(),
-            hasErrors: O.Z.hasErrors()
+            hasErrors: O.Z.hasErrors(),
         })),
         G = (0, a.e7)([O.Z], () => {
             let e = (0, y.lg)(D);
@@ -95,18 +95,18 @@ function A(e) {
         }),
         U = (0, u.ZP)(),
         B = i.useRef(null),
-        [{ spring: F }, H] = (0, d.q_F)(() => ({ spring: 0 }), 'animate-always');
+        [{ spring: F }, H] = (0, d.q_F)(() => ({ spring: 0 }), "animate-always");
     i.useEffect(() => {
         function e() {
-            (H({
+            H({
                 spring: 1,
-                config: l.config.gentle
+                config: l.config.gentle,
             }),
                 H({
                     spring: 0,
                     config: l.config.gentle,
-                    delay: 1000
-                }));
+                    delay: 1000,
+                });
         }
         return (
             p.S.subscribe(T.CkL.EMPHASIZE_NOTICE, e),
@@ -120,7 +120,7 @@ function A(e) {
         V = (0, c.wj)(U) ? z : W,
         Y = F.to({
             range: [0, 1],
-            output: [V, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()]
+            output: [V, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],
         });
     if (A) {
         if (D === y.PG.DEFAULT_CHANNELS) return (0, r.jsx)(I.j, {});
@@ -132,7 +132,10 @@ function A(e) {
             let e = _.Z.advancedMode;
             if (k)
                 try {
-                    if (D === y.PG.DEFAULT_CHANNELS) await (0, f.DO)(t).then(() => (e ? (0, v.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+                    if (D === y.PG.DEFAULT_CHANNELS)
+                        await (0, f.DO)(t).then(() =>
+                            e ? (0, v.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
+                        );
                     else if (D === y.PG.CUSTOMIZATION_QUESTIONS) await (0, v.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (D === y.PG.HOME_SETTINGS) {
                         let e = j.Z.getSettings();
@@ -144,103 +147,110 @@ function A(e) {
             return !0;
         },
         X = async () => {
-            (g.default.track(
+            g.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 Z(R({}, (0, m.hH)(h)), {
                     step: y.PG[D],
                     back: !1,
-                    skip: !k
-                })
+                    skip: !k,
+                }),
             ),
                 (0, x.Nb)((0, y.lg)(D)),
-                (await q()) && (0, x.IG)(h, D));
+                (await q()) && (0, x.IG)(h, D);
         },
         J = async () => {
-            (g.default.track(
+            g.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 Z(R({}, (0, m.hH)(h)), {
                     step: y.PG[D],
                     back: !0,
-                    skip: !1
-                })
+                    skip: !1,
+                }),
             ),
-                (await q()) && (0, x.Wy)(h, D));
+                (await q()) && (0, x.Wy)(h, D);
         },
         Q = null;
-    G && (D === y.PG.SAFETY_CHECK ? (Q = (0, r.jsx)(N.j7, {})) : D === y.PG.DEFAULT_CHANNELS ? (Q = (0, r.jsx)(N.Io, {})) : D === y.PG.CUSTOMIZATION_QUESTIONS ? (Q = (0, r.jsx)(N.cZ, {})) : D === y.PG.HOME_SETTINGS && (Q = (0, r.jsx)(N.g6, {})));
-    let $ = (0, r.jsx)('div', {
+    G &&
+        (D === y.PG.SAFETY_CHECK
+            ? (Q = (0, r.jsx)(N.j7, {}))
+            : D === y.PG.DEFAULT_CHANNELS
+              ? (Q = (0, r.jsx)(N.Io, {}))
+              : D === y.PG.CUSTOMIZATION_QUESTIONS
+                ? (Q = (0, r.jsx)(N.cZ, {}))
+                : D === y.PG.HOME_SETTINGS && (Q = (0, r.jsx)(N.g6, {})));
+    let $ = (0, r.jsx)("div", {
             className: G ? w.hidden : void 0,
             children: (0, r.jsx)(d.zxk, {
-                size: 'sm',
-                variant: 'secondary',
-                text: P.intl.string(P.t['13/7kZ']),
+                size: "sm",
+                variant: "secondary",
+                text: P.intl.string(P.t["13/7kZ"]),
                 icon: d.whL,
-                iconPosition: 'start',
+                iconPosition: "start",
                 onClick: J,
-                disabled: G || M
-            })
+                disabled: G || M,
+            }),
         }),
         ee = (0, r.jsx)(d.zxk, {
-            size: 'sm',
-            variant: L ? 'primary' : 'secondary',
-            text: L ? P.intl.string(P.t.PDTjLC) : P.intl.string(P.t['5WxrcX']),
+            size: "sm",
+            variant: L ? "primary" : "secondary",
+            text: L ? P.intl.string(P.t.PDTjLC) : P.intl.string(P.t["5WxrcX"]),
             icon: d.ZSh,
-            iconPosition: 'end',
+            iconPosition: "end",
             onClick: X,
-            disabled: G || M
+            disabled: G || M,
         });
     return (0, r.jsx)(o.W, {
-        component: 'div',
+        component: "div",
         children: (0, r.jsx)(d.oXn, {
             className: w.noticeRegion,
             children: (0, r.jsx)(l.animated.div, {
                 className: w.container,
                 style: { backgroundColor: Y },
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: w.flexContainer,
                     ref: B,
                     children: [
                         G
-                            ? (0, r.jsxs)('div', {
+                            ? (0, r.jsxs)("div", {
                                   className: w.educationUpsellRoot,
                                   children: [
-                                      (0, r.jsx)('img', {
+                                      (0, r.jsx)("img", {
                                           className: w.wumpus,
                                           src: n(33631),
-                                          alt: 'wumpus'
+                                          alt: "wumpus",
                                       }),
-                                      (0, r.jsxs)('div', {
+                                      (0, r.jsxs)("div", {
                                           className: w.educationUpsell,
-                                          children: [Q, (0, r.jsx)('div', { className: w.educationUpsellArrow })]
-                                      })
-                                  ]
+                                          children: [Q, (0, r.jsx)("div", { className: w.educationUpsellArrow })],
+                                      }),
+                                  ],
                               })
                             : null,
                         (0, r.jsx)(d.JcV, {
                             containerRef: B,
-                            children: (0, r.jsxs)('div', {
+                            children: (0, r.jsxs)("div", {
                                 className: w.actions,
                                 children: [
                                     $,
-                                    (0, r.jsxs)('div', {
+                                    (0, r.jsxs)("div", {
                                         className: w.next,
                                         children: [
                                             M
                                                 ? (0, r.jsx)(d.Text, {
-                                                      variant: 'text-sm/normal',
-                                                      color: 'status-warning',
-                                                      children: P.intl.string(P.t.DhYsPD)
+                                                      variant: "text-sm/normal",
+                                                      color: "status-warning",
+                                                      children: P.intl.string(P.t.DhYsPD),
                                                   })
                                                 : null,
-                                            K ? null : ee
-                                        ]
-                                    })
-                                ]
-                            })
-                        })
-                    ]
-                })
-            })
-        })
+                                            K ? null : ee,
+                                        ],
+                                    }),
+                                ],
+                            }),
+                        }),
+                    ],
+                }),
+            }),
+        }),
     });
 }

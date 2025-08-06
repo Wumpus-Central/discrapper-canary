@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     M: () => h,
-    V: () => m
+    V: () => m,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(597442),
@@ -16,7 +16,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,7 +68,8 @@ function _(e, t) {
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -78,53 +79,53 @@ function p(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let h = i.createContext({ inDialog: void 0 }),
     m = i.forwardRef(function (e, t) {
         let { children: n, impressionType: c, impression: d, disableTrack: p, returnRef: m } = e,
-            g = _(e, ['children', 'impressionType', 'impression', 'disableTrack', 'returnRef']),
+            g = _(e, ["children", "impressionType", "impression", "disableTrack", "returnRef"]),
             E = i.useRef(null),
             b = i.useRef(null),
             [y, O] = i.useState(!1),
             v = y ? b : E;
-        ((0, o.T)(v, { returnRef: m }),
+        (0, o.T)(v, { returnRef: m }),
             i.useContext(l.Z)(
                 {
                     type: c,
                     name: null == d ? void 0 : d.impressionName,
-                    properties: null == d ? void 0 : d.impressionProperties
+                    properties: null == d ? void 0 : d.impressionProperties,
                 },
-                { disableTrack: p }
+                { disableTrack: p },
             ),
-            i.useImperativeHandle(t, () => E.current));
+            i.useImperativeHandle(t, () => E.current);
         let I = i.useCallback(
             (e) => {
                 y !== e && O(e);
             },
-            [y]
+            [y],
         );
         return (0, r.jsx)(h.Provider, {
             value: {
                 inDialog: !0,
-                setFocusLockDisabled: I
+                setFocusLockDisabled: I,
             },
             children: (0, r.jsx)(
-                'div',
+                "div",
                 f(u({}, g), {
                     ref: E,
-                    role: 'dialog',
+                    role: "dialog",
                     tabIndex: -1,
-                    'aria-modal': !0,
+                    "aria-modal": !0,
                     children: (0, r.jsx)(s.y5t, {
                         forceLevel: 1,
                         children: (0, r.jsx)(a.J, {
                             containerRef: E,
-                            children: n
-                        })
-                    })
-                })
-            )
+                            children: n,
+                        }),
+                    }),
+                }),
+            ),
         });
     });

@@ -11,13 +11,13 @@ function n(t, e = {}, a = (0, _.nZ)()) {
                     message: o,
                     url: E,
                     source: s,
-                    associated_event_id: l
-                })
+                    associated_event_id: l,
+                }),
             },
-            type: 'feedback',
-            level: 'info',
-            tags: u
+            type: "feedback",
+            level: "info",
+            tags: u,
         },
         R = (a && a.getClient()) || (0, _.s3)();
-    return (R && R.emit('beforeSendFeedback', I, e), a.captureEvent(I, e));
+    return R && R.emit("beforeSendFeedback", I, e), a.captureEvent(I, e);
 }

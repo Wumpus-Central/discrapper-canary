@@ -1,1 +1,1 @@
-e.exports = { embedIFrame: 'embedIFrame__49997' };
+e.exports = { embedIFrame: "embedIFrame__49997" };

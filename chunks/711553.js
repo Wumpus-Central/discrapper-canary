@@ -22,12 +22,12 @@ let h = function (e) {
                           (0, i.jsx)(a.ZP.Content, {
                               className: l()(u.headerTitle, u.draggableStartArea),
                               dynamicSize: !0,
-                              children: n
+                              children: n,
                           }),
                           (0, i.jsx)(a.ZP.Content, {
                               children: (0, i.jsx)(s.yRy, {
                                   targetElementRef: g,
-                                  position: 'right',
+                                  position: "right",
                                   renderPopout: null != p ? p : c.dG4,
                                   autoInvert: !1,
                                   children: (e) => {
@@ -38,32 +38,32 @@ let h = function (e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
                                                       i = Object.keys(n);
-                                                  ('function' == typeof Object.getOwnPropertySymbols &&
+                                                  "function" == typeof Object.getOwnPropertySymbols &&
                                                       (i = i.concat(
                                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                          })
+                                                          }),
                                                       )),
                                                       i.forEach(function (t) {
                                                           var i;
-                                                          ((i = n[t]),
+                                                          (i = n[t]),
                                                               t in e
                                                                   ? Object.defineProperty(e, t, {
                                                                         value: i,
                                                                         enumerable: !0,
                                                                         configurable: !0,
-                                                                        writable: !0
+                                                                        writable: !0,
                                                                     })
-                                                                  : (e[t] = i));
-                                                      }));
+                                                                  : (e[t] = i);
+                                                      });
                                               }
                                               return e;
                                           })({}, e)),
                                           (n = n =
                                               {
                                                   icon: s.ewm,
-                                                  label: d.intl.string(d.t['3D5yo6']),
-                                                  ref: g
+                                                  label: d.intl.string(d.t["3D5yo6"]),
+                                                  ref: g,
                                               }),
                                           Object.getOwnPropertyDescriptors
                                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -77,23 +77,23 @@ let h = function (e) {
                                                 })(Object(n)).forEach(function (e) {
                                                     Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                                 }),
-                                          t)
+                                          t),
                                       );
-                                  }
-                              })
-                          })
-                      ]
+                                  },
+                              }),
+                          }),
+                      ],
                   })
                 : o),
-        (0, i.jsxs)('div', {
+        (0, i.jsxs)("div", {
             className: u.sidebar,
             children: [
                 t,
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: u.children,
-                    children: h
-                })
-            ]
+                    children: h,
+                }),
+            ],
         })
     );
 };

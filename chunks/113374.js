@@ -12,5 +12,7 @@ let u = function (e, t, r) {
         if (!(p = null != e && r(e, f))) break;
         e = e[f];
     }
-    return p || ++u != c ? p : !!(c = null == e ? 0 : e.length) && (0, l.Z)(c) && (0, i.Z)(f, c) && ((0, a.Z)(e) || (0, o.Z)(e));
+    return p || ++u != c
+        ? p
+        : !!(c = null == e ? 0 : e.length) && (0, l.Z)(c) && (0, i.Z)(f, c) && ((0, a.Z)(e) || (0, o.Z)(e));
 };

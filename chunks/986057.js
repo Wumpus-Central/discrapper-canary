@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(846027),
     i = n(147913),
     o = n(353926),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,12 +23,13 @@ function f(e, t, n) {
 }
 function _() {
     return (0, d.wt)({
-        location: 'VoiceFilterLoopbackManager',
-        autoTrackExposure: !1
+        location: "VoiceFilterLoopbackManager",
+        autoTrackExposure: !1,
     });
 }
 function p() {
-    if (!_() || !l.Z.getVoiceFilterPlaybackEnabled() || !c.Z.isConnected() || null == l.Z.getActiveVoiceFilter()) return !1;
+    if (!_() || !l.Z.getVoiceFilterPlaybackEnabled() || !c.Z.isConnected() || null == l.Z.getActiveVoiceFilter())
+        return !1;
     let e = c.Z.getChannelId(),
         t = null != e ? s.Z.getChannel(e) : null,
         { mute: n, selfMute: r, suppress: i } = (0, a.b)({ channel: t });
@@ -40,19 +41,19 @@ class h extends i.Z {
     }
     updateLoopbackState() {
         let e = p();
-        e !== l.Z.getLoopbackReasons().has('voice_filter') && r.Z.setLoopback('voice_filter', e);
+        e !== l.Z.getLoopbackReasons().has("voice_filter") && r.Z.setLoopback("voice_filter", e);
     }
     constructor(...e) {
-        (super(...e),
-            f(this, 'actions', {
+        super(...e),
+            f(this, "actions", {
                 VOICE_FILTER_LOOPBACK_TOGGLE: this.updateLoopbackState,
                 RTC_CONNECTION_STATE: this.updateLoopbackState,
                 VOICE_FILTER_APPLIED: this.updateLoopbackState,
                 AUDIO_TOGGLE_SELF_MUTE: this.updateLoopbackState,
                 AUDIO_SET_TEMPORARY_SELF_MUTE: this.updateLoopbackState,
-                AUDIO_SET_SELF_MUTE: this.updateLoopbackState
+                AUDIO_SET_SELF_MUTE: this.updateLoopbackState,
             }),
-            f(this, 'stores', new Map().set(o.Z, this.handleExperimentStateChange)));
+            f(this, "stores", new Map().set(o.Z, this.handleExperimentStateChange));
     }
 }
 let m = new h();

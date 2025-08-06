@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685));
+n.d(t, { Z: () => u }), n(388685);
 var r = n(442837),
     i = n(592125),
     l = n(496675),
@@ -12,12 +12,21 @@ function u(e) {
             (e, t) => {
                 let n = i.Z.getChannel(t),
                     r = null == n ? void 0 : n.isGuildVocal();
-                return ((e.badge = e.badge + o.ZP.getMentionCount(t)), (e.unread = e.unread || (!r && l.Z.can(c.Pl.VIEW_CHANNEL, n) && o.ZP.hasUnread(t) && !s.ZP.isChannelMuted(null == n ? void 0 : n.getGuildId(), t))), e);
+                return (
+                    (e.badge = e.badge + o.ZP.getMentionCount(t)),
+                    (e.unread =
+                        e.unread ||
+                        (!r &&
+                            l.Z.can(c.Pl.VIEW_CHANNEL, n) &&
+                            o.ZP.hasUnread(t) &&
+                            !s.ZP.isChannelMuted(null == n ? void 0 : n.getGuildId(), t))),
+                    e
+                );
             },
             {
                 badge: 0,
-                unread: !1
-            }
-        )
+                unread: !1,
+            },
+        ),
     );
 }

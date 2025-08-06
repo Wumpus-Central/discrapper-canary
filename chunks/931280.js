@@ -5,8 +5,8 @@ var r = n(621796),
     s = n(685536),
     l = n(302354);
 function c(e) {
-    var t = r.removeRange(e.getCurrentContent(), e.getSelection(), 'forward');
-    return i.push(e, t, 'remove-range');
+    var t = r.removeRange(e.getCurrentContent(), e.getSelection(), "forward");
+    return i.push(e, t, "remove-range");
 }
 e.exports = function (e, t) {
     var n,
@@ -19,9 +19,9 @@ e.exports = function (e, t) {
         n = s(o.getScrollParent(d));
     }
     var f = a(r);
-    (e.setClipboard(f),
-        e.setMode('cut'),
+    e.setClipboard(f),
+        e.setMode("cut"),
         setTimeout(function () {
-            (e.restoreEditorDOM(n), e.exitCurrentMode(), e.update(c(r)));
-        }, 0));
+            e.restoreEditorDOM(n), e.exitCurrentMode(), e.update(c(r));
+        }, 0);
 };

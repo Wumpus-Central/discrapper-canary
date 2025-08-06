@@ -1,4 +1,4 @@
 e.exports = {
-    header: 'header__61e0e',
-    responsive: 'responsive__61e0e'
+    header: "header__61e0e",
+    responsive: "responsive__61e0e",
 };

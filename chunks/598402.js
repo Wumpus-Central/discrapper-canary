@@ -10,7 +10,7 @@ function l(t) {
     return (0, a.jsxs)(s.Y0X, {
         transitionState: e,
         className: o.root,
-        parentComponent: 'InsufficientInvitePermission',
+        parentComponent: "InsufficientInvitePermission",
         children: [
             (0, a.jsxs)(s.xBx, {
                 separator: !1,
@@ -18,43 +18,43 @@ function l(t) {
                 children: [
                     (0, a.jsx)(s.olH, {
                         className: o.closeButton,
-                        onClick: n
+                        onClick: n,
                     }),
-                    (0, a.jsx)('div', {
+                    (0, a.jsx)("div", {
                         className: o.imageContainer,
-                        children: (0, a.jsx)('img', {
+                        children: (0, a.jsx)("img", {
                             src: r,
                             className: o.image,
-                            alt: ''
-                        })
-                    })
-                ]
+                            alt: "",
+                        }),
+                    }),
+                ],
             }),
             (0, a.jsx)(s.hzk, {
-                children: (0, a.jsxs)('div', {
+                children: (0, a.jsxs)("div", {
                     className: o.content,
                     children: [
                         (0, a.jsx)(s.X6q, {
-                            variant: 'heading-xl/semibold',
+                            variant: "heading-xl/semibold",
                             className: o.title,
-                            children: i.intl.string(i.t.xSV3nZ)
+                            children: i.intl.string(i.t.xSV3nZ),
                         }),
                         (0, a.jsx)(s.Text, {
-                            variant: 'text-md/normal',
+                            variant: "text-md/normal",
                             className: o.text,
-                            children: i.intl.string(i.t.jPMGbG)
+                            children: i.intl.string(i.t.jPMGbG),
                         }),
-                        (0, a.jsx)('div', {
+                        (0, a.jsx)("div", {
                             className: o.buttonContainer,
                             children: (0, a.jsx)(s.zxk, {
-                                variant: 'primary',
-                                text: i.intl.string(i.t['NX+WJC']),
-                                onClick: n
-                            })
-                        })
-                    ]
-                })
-            })
-        ]
+                                variant: "primary",
+                                text: i.intl.string(i.t["NX+WJC"]),
+                                onClick: n,
+                            }),
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

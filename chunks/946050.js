@@ -10,18 +10,18 @@ var i = n(755721),
     u = n(900907);
 function d(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: u.notice,
         children: [
             (0, r.jsx)(a.Z, { id: t.id }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.info,
                 children: (0, r.jsx)(o.Text, {
-                    variant: 'text-sm/medium',
-                    children: c.intl.format(c.t.P6Y2Nz, {})
-                })
+                    variant: "text-sm/medium",
+                    children: c.intl.format(c.t.P6Y2Nz, {}),
+                }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.buttons,
                 children: (0, r.jsxs)(i.zx, {
                     size: i.zx.Sizes.TINY,
@@ -30,18 +30,18 @@ function d(e) {
                     className: u.button,
                     innerClassName: u.buttonInner,
                     onClick: () => {
-                        ((0, s.Z)(t.guild_id, t.id, l.ic.UNREADS_ONLY_MENTIONS), n());
+                        (0, s.Z)(t.guild_id, t.id, l.ic.UNREADS_ONLY_MENTIONS), n();
                     },
                     children: [
                         c.intl.string(c.t.KyUKhY),
                         (0, r.jsx)(o.UEU, {
-                            size: 'xs',
-                            color: 'currentColor',
-                            style: { marginLeft: 4 }
-                        })
-                    ]
-                })
-            })
-        ]
+                            size: "xs",
+                            color: "currentColor",
+                            style: { marginLeft: 4 },
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

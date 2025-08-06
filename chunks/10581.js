@@ -3,7 +3,7 @@ var r = n(220159),
 r(
     {
         global: !0,
-        forced: o.globalThis !== o
+        forced: o.globalThis !== o,
     },
-    { globalThis: o }
+    { globalThis: o },
 );

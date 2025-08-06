@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(772848),
@@ -22,24 +22,24 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -58,10 +58,10 @@ function _(e) {
     let T = (0, p.eR)(N),
         L = (e) => {
             var t;
-            (null == (t = S.current) || t.removeDrop(e), T(), R({ count: A + 1 }));
+            null == (t = S.current) || t.removeDrop(e), T(), R({ count: A + 1 });
         },
         B = (e) => {
-            (delete w[e], E(j({}, w)));
+            delete w[e], E(j({}, w));
         };
     return I
         ? null
@@ -91,7 +91,7 @@ function _(e) {
                             })(Object(n)).forEach(function (e) {
                                 Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                             }),
-                      t)
+                      t),
                   );
               },
               children: (e) =>
@@ -99,7 +99,7 @@ function _(e) {
                       children: [
                           (0, r.jsx)(m.Z, {
                               renderedPoints: w,
-                              onRemovePoint: B
+                              onRemovePoint: B,
                           }),
                           (0, r.jsx)(i.P3F, {
                               onClick: () => L(e),
@@ -107,12 +107,12 @@ function _(e) {
                               children: (0, r.jsx)(f.Z, {
                                   sources: [v, O],
                                   className: x.weed,
-                                  'aria-label': h.intl.string(y.default.QBujOj),
+                                  "aria-label": h.intl.string(y.default.QBujOj),
                                   isPaused: Z,
-                                  interval: 1000
-                              })
-                          })
-                      ]
-                  })
+                                  interval: 1000,
+                              }),
+                          }),
+                      ],
+                  }),
           });
 }

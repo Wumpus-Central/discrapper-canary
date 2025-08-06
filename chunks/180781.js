@@ -20,17 +20,17 @@ function b(t) {
         { analyticsLocations: x } = (0, l.ZP)();
     return null == C || C.features.has(d.oNc.ANIMATED_BANNER) || (!b && C.features.has(d.oNc.BANNER))
         ? null
-        : (0, o.jsxs)('div', {
+        : (0, o.jsxs)("div", {
               className: p.container,
               children: [
                   (0, o.jsx)(a.$Eu, {
                       color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                      className: p.guildBoostingIcon
+                      className: p.guildBoostingIcon,
                   }),
                   (0, o.jsx)(a.Text, {
-                      color: 'header-primary',
-                      variant: 'text-sm/semibold',
-                      children: m.intl.string(m.t['56M7xc'])
+                      color: "header-primary",
+                      variant: "text-sm/semibold",
+                      children: m.intl.string(m.t["56M7xc"]),
                   }),
                   (0, o.jsx)(i.zx, {
                       look: i.zx.Looks.LINK,
@@ -41,7 +41,7 @@ function b(t) {
                           let t = {
                               section: e,
                               page: n,
-                              object: d.qAy.UPSELL_HEADER
+                              object: d.qAy.UPSELL_HEADER,
                           };
                           null != g
                               ? (0, c.c)({
@@ -49,17 +49,17 @@ function b(t) {
                                     analyticsLocation: t,
                                     guild: C,
                                     isGIF: b,
-                                    banner: g
+                                    banner: g,
                                 })
                               : (0, s.Z)({
                                     analyticsLocations: x,
                                     analyticsSourceLocation: t,
                                     guild: C,
-                                    perks: b ? (0, f.zC)() : (0, f.XO)()
+                                    perks: b ? (0, f.zC)() : (0, f.XO)(),
                                 });
                       },
-                      children: m.intl.string(m.t.WUHdZW)
-                  })
-              ]
+                      children: m.intl.string(m.t.WUHdZW),
+                  }),
+              ],
           });
 }

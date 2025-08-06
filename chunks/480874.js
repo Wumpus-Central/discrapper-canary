@@ -29,7 +29,7 @@ function T() {
         n = (0, E.w)(),
         l = (0, m.V)(),
         T = (0, u.N)(),
-        P = (0, p.Z)('message-requests-spam-list'),
+        P = (0, p.Z)("message-requests-spam-list"),
         { channelId: j } = (0, _._)(),
         A = i.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(S.intl.string(S.t.EDYbS0), c.ToastType.FAILURE));
@@ -39,7 +39,8 @@ function T() {
             Z(t.map((e) => e.channel.id));
         }, [t, Z]);
     (0, d.ZP)(() => {
-        (g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), f.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW }));
+        g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
+            f.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let w = i.useCallback(
             (e) => {
@@ -54,16 +55,16 @@ function T() {
                         index: o,
                         className: a()({
                             [N.selected]: null != j && j === u,
-                            [N.siblingSelected]: null != j && j === c
+                            [N.siblingSelected]: null != j && j === c,
                         }),
                         channel: s.channel,
                         user: s.user,
-                        hasSingleMessageRequest: l
+                        hasSingleMessageRequest: l,
                     },
-                    u
+                    u,
                 );
             },
-            [t, l, j]
+            [t, l, j],
         ),
         L = i.useCallback(
             () =>
@@ -78,25 +79,25 @@ function T() {
                                       children: [
                                           (0, r.jsx)(c.Text, {
                                               className: N.titleDivider,
-                                              variant: 'eyebrow',
-                                              color: 'header-secondary',
-                                              tag: 'span',
-                                              children: '\u2022'
+                                              variant: "eyebrow",
+                                              color: "header-secondary",
+                                              tag: "span",
+                                              children: "\u2022",
                                           }),
                                           (0, r.jsx)(c.Avr, {
-                                              textVariant: 'text-sm/normal',
+                                              textVariant: "text-sm/normal",
                                               text: S.intl.string(S.t.p6t7RE),
                                               onClick: x,
-                                              'aria-label': S.intl.string(S.t.p6t7RE)
-                                          })
-                                      ]
+                                              "aria-label": S.intl.string(S.t.p6t7RE),
+                                          }),
+                                      ],
                                   })
-                                : null
-                        ]
+                                : null,
+                        ],
                     },
-                    'message-requests-spam-title'
+                    "message-requests-spam-title",
                 ),
-            [n, x, T]
+            [n, x, T],
         );
     return 0 === t.length
         ? (0, r.jsx)(y.Z, { section: I.pS.SPAM })
@@ -115,39 +116,43 @@ function T() {
                                           r,
                                           i = {},
                                           l = Object.keys(e);
-                                      for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                      for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                       return i;
                                   })(e, t);
                               if (Object.getOwnPropertySymbols) {
                                   var l = Object.getOwnPropertySymbols(e);
-                                  for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                                  for (r = 0; r < l.length; r++)
+                                      (n = l[r]),
+                                          !(t.indexOf(n) >= 0) &&
+                                              Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                              (i[n] = e[n]);
                               }
                               return i;
-                          })(n, ['ref', 'role']);
+                          })(n, ["ref", "role"]);
                       return (0, r.jsx)(
                           c.aVo,
                           (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
                                       r = Object.keys(n);
-                                  ('function' == typeof Object.getOwnPropertySymbols &&
+                                  "function" == typeof Object.getOwnPropertySymbols &&
                                       (r = r.concat(
                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                          })
+                                          }),
                                       )),
                                       r.forEach(function (t) {
                                           var r;
-                                          ((r = n[t]),
+                                          (r = n[t]),
                                               t in e
                                                   ? Object.defineProperty(e, t, {
                                                         value: r,
                                                         enumerable: !0,
                                                         configurable: !0,
-                                                        writable: !0
+                                                        writable: !0,
                                                     })
-                                                  : (e[t] = r));
-                                      }));
+                                                  : (e[t] = r);
+                                      });
                               }
                               return e;
                           })(
@@ -157,7 +162,9 @@ function T() {
                                   innerAriaLabel: S.intl.string(S.t.e7GWjY),
                                   ref: (t) => {
                                       var n;
-                                      ((e.current = t), (i.current = null != (n = null == t ? void 0 : t.getScrollerNode()) ? n : null));
+                                      (e.current = t),
+                                          (i.current =
+                                              null != (n = null == t ? void 0 : t.getScrollerNode()) ? n : null);
                                   },
                                   paddingTop: 24,
                                   paddingBottom: 24,
@@ -167,13 +174,13 @@ function T() {
                                   renderRow: w,
                                   sections: [t.length],
                                   chunkSize: 30,
-                                  fade: !0
+                                  fade: !0,
                               },
-                              a
+                              a,
                           ),
-                          'message-requests-spam-list'
+                          "message-requests-spam-list",
                       );
-                  }
-              })
+                  },
+              }),
           });
 }

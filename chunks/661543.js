@@ -3,12 +3,12 @@ var r = n(570140);
 function i(e) {
     let { image: t, file: n, uploadType: i, guildId: o, analyticsSource: a, isTryItOutFlow: s = !1 } = e;
     r.Z.dispatch({
-        type: 'PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL',
+        type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
         image: t,
         file: n,
         uploadType: i,
         guildId: o,
         analyticsSource: a,
-        isTryItOutFlow: s
+        isTryItOutFlow: s,
     });
 }

@@ -12,9 +12,11 @@ function l(e) {
             null != l
                 ? s.intl.format(s.t.rSUACQ, {
                       helpdeskArticle: i.Z.getArticleURL(a.BhN.SLAYER_PROVISIONAL_ACCOUNTS),
-                      applicationName: () => n(l)
+                      applicationName: () => n(l),
                   })
-                : s.intl.format(s.t['q+N8Ly'], { helpdeskArticle: i.Z.getArticleURL(a.BhN.SLAYER_PROVISIONAL_ACCOUNTS) }),
-        [l, n]
+                : s.intl.format(s.t["q+N8Ly"], {
+                      helpdeskArticle: i.Z.getArticleURL(a.BhN.SLAYER_PROVISIONAL_ACCOUNTS),
+                  }),
+        [l, n],
     );
 }

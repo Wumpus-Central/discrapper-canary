@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(539854), n(388685));
+n.d(t, { Z: () => x }), n(539854), n(388685);
 var r = n(255367),
     o = n(73800),
     i = n(494497),
@@ -21,7 +21,7 @@ function x(e) {
                 ? {
                       title: g.intl.string(m.default.YWo6VF),
                       body: g.intl.string(m.default.gXVvKS),
-                      dismissibleContentType: s.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER
+                      dismissibleContentType: s.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
                   }
                 : null,
         j = [];
@@ -33,24 +33,24 @@ function x(e) {
     return ((0, p.Z)({
         targetRef: n,
         onShouldClose: C,
-        enabled: null != h
+        enabled: null != h,
     }),
     null == b || null == h)
         ? null
         : (0, r.jsx)(c.J2, {
               targetElementRef: n,
               shouldShow: !0,
-              position: 'right',
-              align: 'top',
-              size: 'sm',
+              position: "right",
+              align: "top",
+              size: "sm",
               caretConfig: {
-                  position: 'left',
-                  align: 'start'
+                  position: "left",
+                  align: "start",
               },
               title: b.title,
               body: b.body,
               onRequestClose: () => {
                   E(f.L.USER_DISMISS);
-              }
+              },
           });
 }

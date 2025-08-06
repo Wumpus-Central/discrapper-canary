@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r,
     i = n(442837),
     l = n(570140);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,7 +31,7 @@ class o extends (r = i.ZP.PersistedStore) {
         return s;
     }
 }
-(a(o, 'displayName', 'GuildPromptsStore'), a(o, 'persistKey', 'GuildPromptsStore'));
+a(o, "displayName", "GuildPromptsStore"), a(o, "persistKey", "GuildPromptsStore");
 let c = new o(l.Z, {
     GUILD_PROMPT_VIEWED: function (e) {
         let { prompt: t, guildId: n } = e,
@@ -41,5 +41,5 @@ let c = new o(l.Z, {
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         return null != s[t.id] && !t.unavailable && (delete s[t.id], !0);
-    }
+    },
 });

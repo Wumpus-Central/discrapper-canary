@@ -2,7 +2,7 @@ n.d(t, {
     GY: () => m,
     PI: () => p,
     RT: () => O,
-    ls: () => g
+    ls: () => g,
 });
 var r = n(255367);
 n(73800);
@@ -17,24 +17,24 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -58,21 +58,21 @@ function f(e, t) {
 }
 function p(e) {
     let { children: t } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: u.titleWrapper,
         children: (0, r.jsx)(a.Text, {
-            variant: 'text-xs/semibold',
-            color: 'header-primary',
-            children: t
-        })
+            variant: "text-xs/semibold",
+            color: "header-primary",
+            children: t,
+        }),
     });
 }
 function g(e) {
     let { onClick: t } = e,
-        n = c.intl.string(c.t['3D5yo6']);
+        n = c.intl.string(c.t["3D5yo6"]);
     return (0, r.jsx)(a.ua7, {
         text: n,
-        'aria-label': n,
+        "aria-label": n,
         children: (e) =>
             (0, r.jsx)(
                 a.P3F,
@@ -80,11 +80,11 @@ function g(e) {
                     className: u.button,
                     onClick: t,
                     children: (0, r.jsx)(a.ewm, {
-                        size: 'xxs',
-                        color: o.Z.colors.INTERACTIVE_ACTIVE
-                    })
-                })
-            )
+                        size: "xxs",
+                        color: o.Z.colors.INTERACTIVE_ACTIVE,
+                    }),
+                }),
+            ),
     });
 }
 function m(e) {
@@ -95,7 +95,7 @@ function m(e) {
         };
     return (0, r.jsx)(a.ua7, {
         text: i,
-        'aria-label': i,
+        "aria-label": i,
         children: (e) =>
             (0, r.jsx)(
                 a.P3F,
@@ -103,11 +103,11 @@ function m(e) {
                     className: l()(u.button, n && u.active),
                     onClick: p,
                     children: (0, r.jsx)(a.pzj, {
-                        size: 'xxs',
-                        color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
-                    })
-                })
-            )
+                        size: "xxs",
+                        color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE,
+                    }),
+                }),
+            ),
     });
 }
 function O(e) {
@@ -115,7 +115,7 @@ function O(e) {
         i = n ? c.intl.string(c.t.cSu80t) : c.intl.string(c.t.cM8Vnp);
     return (0, r.jsx)(a.ua7, {
         text: i,
-        'aria-label': i,
+        "aria-label": i,
         children: (e) =>
             (0, r.jsx)(
                 a.P3F,
@@ -123,10 +123,10 @@ function O(e) {
                     className: l()(u.button, n && u.active),
                     onClick: () => (0, s.xh)(t),
                     children: (0, r.jsx)(a.k5M, {
-                        size: 'xxs',
-                        color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
-                    })
-                })
-            )
+                        size: "xxs",
+                        color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE,
+                    }),
+                }),
+            ),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => G }), n(388685));
+n.d(t, { Z: () => G }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -38,7 +38,7 @@ function M(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -48,15 +48,15 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 M(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -64,11 +64,11 @@ function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -95,19 +95,32 @@ function G(e) {
         K = (0, N.n)(),
         [z, q] = i.useState(!1),
         [X, Q] = i.useState((null == V ? void 0 : V.coverImage) == null),
-        J = (0, c.e7)(
-            [I.ZP, T.default],
-            () => {
-                var e;
-                return I.ZP.isMember(null == V ? void 0 : V.guildId, null == (e = T.default.getCurrentUser()) ? void 0 : e.id);
-            },
-            [V]
+        J = (0, c.e7)([I.ZP, T.default], () => {
+            var e;
+            return I.ZP.isMember(
+                null == V ? void 0 : V.guildId,
+                null == (e = T.default.getCurrentUser()) ? void 0 : e.id,
+            );
+        }, [V]),
+        $ = (0, c.e7)([I.ZP], () =>
+            (null == V ? void 0 : V.authorId) != null ? I.ZP.getMember(V.guildId, V.authorId) : null,
         ),
-        $ = (0, c.e7)([I.ZP], () => ((null == V ? void 0 : V.authorId) != null ? I.ZP.getMember(V.guildId, V.authorId) : null)),
-        ee = (0, _.Z)((null == $ ? void 0 : $.avatarDecoration) != null ? (null == $ ? void 0 : $.avatarDecoration) : null == V || null == (t = V.user) ? void 0 : t.avatarDecoration),
+        ee = (0, _.Z)(
+            (null == $ ? void 0 : $.avatarDecoration) != null
+                ? null == $
+                    ? void 0
+                    : $.avatarDecoration
+                : null == V || null == (t = V.user)
+                  ? void 0
+                  : t.avatarDecoration,
+        ),
         [et, en, er] = i.useMemo(() => {
             var e, t;
-            return [null != (e = null == $ ? void 0 : $.colorString) ? e : 'inherit', null != (t = null == $ ? void 0 : $.colorStrings) ? t : null, null == $ ? void 0 : $.colorRoleId];
+            return [
+                null != (e = null == $ ? void 0 : $.colorString) ? e : "inherit",
+                null != (t = null == $ ? void 0 : $.colorStrings) ? t : null,
+                null == $ ? void 0 : $.colorRoleId,
+            ];
         }, [$]),
         ei = (0, y.X7)(null == $ ? void 0 : $.guildId, null != (o = null == V ? void 0 : V.authorId) ? o : void 0, en),
         { reducedMotion: eo } = i.useContext(u.Sfi),
@@ -124,15 +137,19 @@ function G(e) {
                     media_post_id: V.threadId,
                     channel_id: B.id,
                     can_access: V.canAccess,
-                    is_member: J
+                    is_member: J,
                 }),
-                V.canAccess ? (0, m.Z)(P.Z5c.CHANNEL(V.guildId, V.threadId, V.messageId)) : J ? (0, m.Z)(P.Z5c.CHANNEL(V.guildId, V.parentChannelId)) : await A.Ub(V.guildId, {}, { channelId: V.parentChannelId }));
+                V.canAccess
+                    ? (0, m.Z)(P.Z5c.CHANNEL(V.guildId, V.threadId, V.messageId))
+                    : J
+                      ? (0, m.Z)(P.Z5c.CHANNEL(V.guildId, V.parentChannelId))
+                      : await A.Ub(V.guildId, {}, { channelId: V.parentChannelId }));
         }, [V, B, J]);
     if (null == V) return null;
     let ed = (0, S.NZ)({
             avatarDecoration: ee,
             size: (0, p.y9)(u.EFr.SIZE_40),
-            canAnimate: ea
+            canAnimate: ea,
         }),
         ef = null == (n = V.user) ? void 0 : n.getAvatarURL(V.guildId, 40, ea),
         e_ = () => {
@@ -144,7 +161,7 @@ function G(e) {
                       name: V.authorName,
                       colorString: et,
                       colorStrings: ei,
-                      className: L.authorName
+                      className: L.authorName,
                   })
                 : (0, r.jsx)(
                       O.Z,
@@ -165,83 +182,83 @@ function G(e) {
                                       name: V.authorName,
                                       colorString: et,
                                       colorStrings: ei,
-                                      className: L.authorName
-                                  })
-                              )
+                                      className: L.authorName,
+                                  }),
+                              ),
                       },
-                      (0, s.Z)()
+                      (0, s.Z)(),
                   ),
         eh = V.coverImage,
         em = null != eh && (0, g.d$)(eh),
         eg = K && (W || z);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: L.postPreviewContainer,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: L.thumbnailContainer,
                 onMouseEnter: el,
                 onMouseLeave: ec,
                 children: [
                     !X &&
                         (!0 === V.shouldShowBlurredThumbnailImage
-                            ? (0, r.jsx)('img', {
+                            ? (0, r.jsx)("img", {
                                   src: x,
                                   alt: D.intl.string(D.t.rIbh8P),
                                   className: a()(L.thumbnail, { [L.spoiler]: V.shouldSpoiler }),
                                   onContextMenu: Y,
-                                  onError: () => Q(!0)
+                                  onError: () => Q(!0),
                               })
                             : (0, r.jsx)(h.Z, {
-                                  src: !eg && em ? ''.concat(eh, '?format=png') : eh,
-                                  backgroundSrc: ''.concat(eh, '?format=png'),
+                                  src: !eg && em ? "".concat(eh, "?format=png") : eh,
+                                  backgroundSrc: "".concat(eh, "?format=png"),
                                   alt: D.intl.string(D.t.rIbh8P),
                                   aspectRatio: 16 / 9,
                                   className: a()(L.thumbnail, { [L.spoiler]: V.shouldSpoiler }),
                                   imageChildClassName: L.thumbnailImage,
                                   onContextMenu: Y,
-                                  onError: () => Q(!0)
+                                  onError: () => Q(!0),
                               })),
                     null != V.coverImageOverlayText &&
                         (0, r.jsx)(u.P3F, {
                             onClick: eu,
-                            children: (0, r.jsx)('div', {
+                            children: (0, r.jsx)("div", {
                                 className: L.thumbnailOverlay,
-                                children: (0, r.jsxs)('div', {
+                                children: (0, r.jsxs)("div", {
                                     className: L.thumbnailOverlayCta,
                                     children: [
                                         (0, r.jsx)(C.Z, { color: l.Z.WHITE }),
                                         (0, r.jsx)(u.Text, {
-                                            variant: 'text-sm/semibold',
-                                            color: 'always-white',
-                                            children: V.coverImageOverlayText
-                                        })
-                                    ]
-                                })
-                            })
-                        })
-                ]
+                                            variant: "text-sm/semibold",
+                                            color: "always-white",
+                                            children: V.coverImageOverlayText,
+                                        }),
+                                    ],
+                                }),
+                            }),
+                        }),
+                ],
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: L.descriptionContainer,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: L.descriptionHeader,
                         children: [
                             (0, r.jsx)(u.Text, {
-                                variant: 'text-md/semibold',
-                                color: 'text-default',
+                                variant: "text-md/semibold",
+                                color: "text-default",
                                 className: L.descriptionHeaderText,
-                                children: V.title
+                                children: V.title,
                             }),
                             (0, r.jsx)(u.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-muted',
+                                variant: "text-sm/normal",
+                                color: "text-muted",
                                 className: a()(L.descriptionHeaderText, L.descriptionSubtitle),
-                                children: V.subtitle
-                            })
-                        ]
+                                children: V.subtitle,
+                            }),
+                        ],
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: L.descriptionFooter,
                         children: [
                             null != V.authorId &&
@@ -257,7 +274,7 @@ function G(e) {
                                     newAnalyticsLocations: [d.Z.AVATAR],
                                     spacing: 12,
                                     children: (e) =>
-                                        (0, r.jsx)('div', {
+                                        (0, r.jsx)("div", {
                                             onMouseEnter: e_,
                                             onMouseLeave: e_,
                                             children: (0, r.jsx)(
@@ -266,62 +283,62 @@ function G(e) {
                                                     ref: F,
                                                     size: u.EFr.SIZE_40,
                                                     src: ef,
-                                                    'aria-label': D.intl.string(D.t.KXz3XF),
-                                                    avatarDecoration: ed
-                                                })
-                                            )
-                                        })
+                                                    "aria-label": D.intl.string(D.t.KXz3XF),
+                                                    avatarDecoration: ed,
+                                                }),
+                                            ),
+                                        }),
                                 }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: L.descriptionFooterContainer,
                                 children: [
-                                    (0, r.jsxs)('div', {
+                                    (0, r.jsxs)("div", {
                                         className: L.descriptionFooterChannelName,
                                         children: [
                                             null != V.channelName &&
                                                 (0, r.jsx)(u.EAQ, {
-                                                    size: 'md',
-                                                    color: 'currentColor',
-                                                    className: L.mediaChannelIcon
+                                                    size: "md",
+                                                    color: "currentColor",
+                                                    className: L.mediaChannelIcon,
                                                 }),
                                             (0, r.jsx)(u.P3F, {
                                                 onClick: eu,
                                                 className: L.channelName,
                                                 children: (0, r.jsx)(u.X6q, {
-                                                    variant: 'heading-md/semibold',
-                                                    color: 'header-primary',
-                                                    children: null != (M = V.channelName) ? M : V.guildName
-                                                })
-                                            })
-                                        ]
+                                                    variant: "heading-md/semibold",
+                                                    color: "header-primary",
+                                                    children: null != (M = V.channelName) ? M : V.guildName,
+                                                }),
+                                            }),
+                                        ],
                                     }),
                                     null != V.authorName &&
                                         (0, r.jsx)(u.Text, {
-                                            variant: 'text-sm/medium',
-                                            color: 'text-muted',
+                                            variant: "text-sm/medium",
+                                            color: "text-muted",
                                             className: L.descriptionFooterAuthorContainer,
                                             children: D.intl.format(D.t.voIDKS, {
                                                 authorName: V.authorName,
-                                                authorNameHook: ep
-                                            })
-                                        })
-                                ]
+                                                authorNameHook: ep,
+                                            }),
+                                        }),
+                                ],
                             }),
                             V.canAccess
                                 ? (0, r.jsx)(u.zxk, {
-                                      variant: 'primary',
+                                      variant: "primary",
                                       onClick: eu,
-                                      text: V.ctaText
+                                      text: V.ctaText,
                                   })
                                 : (0, r.jsx)(u.zxk, {
                                       onClick: eu,
-                                      variant: 'primary',
-                                      text: V.ctaText
-                                  })
-                        ]
-                    })
-                ]
-            })
-        ]
+                                      variant: "primary",
+                                      text: V.ctaText,
+                                  }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 }

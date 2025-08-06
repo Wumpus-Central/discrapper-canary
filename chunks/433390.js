@@ -16,25 +16,26 @@ function p(e) {
         g = (0, r.e7)([s.Z], () => s.Z.getPremiumTypeSubscription()),
         { fractionalState: E } = (0, i.Z)({ forceFetch: !1 }),
         b = (0, r.e7)([c.Z], () => c.Z.getPremiumTypeOverride()),
-        y = null != p ? p : _.intl.string(_.t['2pG5GR']),
+        y = null != p ? p : _.intl.string(_.t["2pG5GR"]),
         O = null != g ? (0, l.Af)(g) : null,
         v = void 0 !== b ? b : null != O ? (0, l.Rd)(O.planId) : null == m ? void 0 : m.premiumType,
         I = t === d.Si.TIER_2 && null != v && [d.p9.TIER_0, d.p9.TIER_1].includes(v);
     I && (y = _.intl.string(_.t.IJI7ys));
-    let T = (null != g && (0, l.m3)(g)) || (null != g && (0, u.o)('PremiumSubscribeButton', m, E));
-    if (!((null != g && g.status !== f.O0b.ACCOUNT_HOLD && !(0, o.Q0)(g.planId) && !I && void 0 === b) || T)) return { buttonText: null != n ? n : y };
+    let T = (null != g && (0, l.m3)(g)) || (null != g && (0, u.o)("PremiumSubscribeButton", m, E));
+    if (!((null != g && g.status !== f.O0b.ACCOUNT_HOLD && !(0, o.Q0)(g.planId) && !I && void 0 === b) || T))
+        return { buttonText: null != n ? n : y };
     {
         var S, A;
         let e = h({
             ctaSubscriptionSkuId: t,
             currentPremiumType: v,
             isSwitchingDisabled: T,
-            subscription: g
+            subscription: g,
         });
         return {
             buttonText: null != (A = null != (S = e.disabledButtonText) ? S : n) ? A : y,
             buttonTooltipText: e.disabledButtonTooltipText,
-            disabled: !0
+            disabled: !0,
         };
     }
 }
@@ -45,7 +46,7 @@ function h(e) {
     if (null != r && r !== d.Si.LEGACY && r !== d.Si.TIER_0 && r !== d.Si.TIER_1 && r !== d.Si.TIER_2)
         return {
             disabledButtonText: t,
-            disabledButtonTooltipText: n
+            disabledButtonTooltipText: n,
         };
     let s = null != r ? d.y7[(0, l.Wz)(r)] : null,
         c = null != s ? d.$e[s] : null,
@@ -53,9 +54,14 @@ function h(e) {
     if (o) {
         var f;
         n = null != (f = (0, l.nd)(a)) ? f : void 0;
-    } else null != u && null != c && c < u ? ((t = _.intl.string(_.t['2pG5GR'])), (n = _.intl.string(_.t.jXaaRk))) : null != s && null != i && s === i ? ((t = _.intl.string(_.t.ymSxh4)), (n = _.intl.string(_.t.jXaaRk))) : null == s && null != i && i === d.p9.TIER_2 && (n = _.intl.string(_.t.jXaaRk));
+    } else
+        null != u && null != c && c < u
+            ? ((t = _.intl.string(_.t["2pG5GR"])), (n = _.intl.string(_.t.jXaaRk)))
+            : null != s && null != i && s === i
+              ? ((t = _.intl.string(_.t.ymSxh4)), (n = _.intl.string(_.t.jXaaRk)))
+              : null == s && null != i && i === d.p9.TIER_2 && (n = _.intl.string(_.t.jXaaRk));
     return {
         disabledButtonText: t,
-        disabledButtonTooltipText: n
+        disabledButtonTooltipText: n,
     };
 }

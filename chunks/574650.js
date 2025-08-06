@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(539854), n(388685));
+n.d(t, { Z: () => A }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -26,7 +26,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,7 +77,10 @@ let A = () => {
         v = (0, s.e7)([u.Z], () => u.Z.getGuild(i), [i]),
         T = (0, s.e7)([m.Z], () => (null != i ? m.Z.getRequest(i) : null), [i]),
         A = (0, a.TH)(),
-        N = (null == (e = (0, a.LX)(A.pathname, g.Z5c.CHANNEL(null == v ? void 0 : v.id, E.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+        N =
+            (null == (e = (0, a.LX)(A.pathname, g.Z5c.CHANNEL(null == v ? void 0 : v.id, E.oC.GUILD_ONBOARDING)))
+                ? void 0
+                : e.isExact) === !0;
     if (null == v || !(0, h.Dc)(v) || N) return null;
     let C = () => {
             (0, _.hk)(v.id);
@@ -90,26 +93,26 @@ let A = () => {
                         I(
                             {
                                 header: b.intl.string(b.t.aIz1oa),
-                                confirmText: b.intl.string(b.t['cY+Ooa']),
-                                cancelText: b.intl.string(b.t['ETE/oK']),
+                                confirmText: b.intl.string(b.t["cY+Ooa"]),
+                                cancelText: b.intl.string(b.t["ETE/oK"]),
                                 onConfirm: () => f.Z.removeGuildJoinRequest(v.id),
-                                confirmButtonColor: l.zx.Colors.BRAND
+                                confirmButtonColor: l.zx.Colors.BRAND,
                             },
-                            e
+                            e,
                         ),
                         {
                             children: (0, r.jsx)(c.Text, {
-                                variant: 'text-md/normal',
-                                children: b.intl.string(b.t['13tjTU'])
-                            })
-                        }
-                    )
-                )
+                                variant: "text-md/normal",
+                                children: b.intl.string(b.t["13tjTU"]),
+                            }),
+                        },
+                    ),
+                ),
             );
         },
         P = () => {
             (0, c.ZDy)(async () => {
-                let { default: e } = await n.e('3378').then(n.bind(n, 76075));
+                let { default: e } = await n.e("3378").then(n.bind(n, 76075));
                 return (t) => (0, r.jsx)(e, I({ guildId: v.id }, t));
             });
         },
@@ -120,28 +123,28 @@ let A = () => {
         M = [y.notice, O.notice];
     switch (w) {
         case p.wB.SUBMITTED:
-            ((D = b.intl.string(b.t['5iLvS0'])), (L = b.intl.string(b.t.mqtdmZ)), (x = R));
+            (D = b.intl.string(b.t["5iLvS0"])), (L = b.intl.string(b.t.mqtdmZ)), (x = R);
             break;
         case p.wB.REJECTED:
-            ((D = b.intl.string(b.t.lk30cX)), (L = b.intl.string(b.t['8RrsHh'])), (x = P), M.push(y.error));
+            (D = b.intl.string(b.t.lk30cX)), (L = b.intl.string(b.t["8RrsHh"])), (x = P), M.push(y.error);
             break;
         default:
-            ((D = b.intl.string(b.t.G5YKXF)), (L = b.intl.string(b.t['r8/DT0'])), (x = C));
+            (D = b.intl.string(b.t.G5YKXF)), (L = b.intl.string(b.t["r8/DT0"])), (x = C);
     }
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(...M),
         children: [
             (0, r.jsx)(c.Text, {
                 className: y.header,
-                variant: 'text-sm/normal',
-                children: D
+                variant: "text-sm/normal",
+                children: D,
             }),
             (0, r.jsx)(c.zxk, {
-                variant: 'overlay-primary',
-                size: 'sm',
+                variant: "overlay-primary",
+                size: "sm",
                 onClick: x,
-                text: L
-            })
-        ]
+                text: L,
+            }),
+        ],
     });
 };

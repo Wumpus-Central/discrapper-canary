@@ -11,36 +11,36 @@ class l extends r.W {
     constructor(t) {
         let e = {
                 parentSpanIsAlwaysRootSpan: !0,
-                ...t
+                ...t,
             },
             a = E.m9.SENTRY_SDK_SOURCE || (0, n.S)();
-        ((0, _.V)(e, 'browser', ['browser'], a),
+        (0, _.V)(e, "browser", ["browser"], a),
             super(e),
             e.sendClientReports &&
                 E.m9.document &&
-                E.m9.document.addEventListener('visibilitychange', () => {
-                    'hidden' === E.m9.document.visibilityState && this._flushOutcomes();
-                }));
+                E.m9.document.addEventListener("visibilitychange", () => {
+                    "hidden" === E.m9.document.visibilityState && this._flushOutcomes();
+                });
     }
     eventFromException(t, e) {
         return (0, c.dr)(this._options.stackParser, t, e, this._options.attachStacktrace);
     }
-    eventFromMessage(t, e = 'info', a) {
+    eventFromMessage(t, e = "info", a) {
         return (0, c.aB)(this._options.stackParser, t, e, a, this._options.attachStacktrace);
     }
     captureUserFeedback(t) {
         if (!this._isEnabled()) {
-            i.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
+            i.X && o.kg.warn("SDK not enabled, will not capture user feedback.");
             return;
         }
         let e = (0, s.r)(t, {
             metadata: this.getSdkMetadata(),
             dsn: this.getDsn(),
-            tunnel: this.getOptions().tunnel
+            tunnel: this.getOptions().tunnel,
         });
         this.sendEnvelope(e);
     }
     _prepareEvent(t, e, a) {
-        return ((t.platform = t.platform || 'javascript'), super._prepareEvent(t, e, a));
+        return (t.platform = t.platform || "javascript"), super._prepareEvent(t, e, a);
     }
 }

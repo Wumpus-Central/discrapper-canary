@@ -16,16 +16,16 @@ function g(e) {
     let { user: t, nickname: n, status: g, isFocused: m } = e,
         { analyticsLocations: b } = (0, a.ZP)(),
         _ = (e) => {
-            (null == e || e.stopPropagation(),
+            null == e || e.stopPropagation(),
                 l.Z.addRelationship({
                     userId: t.id,
-                    context: { location: 'Friends' },
+                    context: { location: "Friends" },
                     type: void 0,
-                    fromFriendSuggestion: !0
-                }));
+                    fromFriendSuggestion: !0,
+                });
         },
         O = (e) => {
-            (null == e || e.stopPropagation(), o.Z.ignore(t.id));
+            null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
         E = g === p.Skl.OFFLINE ? p.Skl.UNKNOWN : g;
     return (0, r.jsx)(u.Z, {
@@ -34,7 +34,7 @@ function g(e) {
         onClick: () =>
             (0, s.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: b
+                sourceAnalyticsLocations: b,
             }),
         children: (e) => {
             let l = (0, r.jsxs)(r.Fragment, {
@@ -44,18 +44,18 @@ function g(e) {
                         actionType: c.Z.ActionTypes.ACCEPT,
                         tooltip: h.intl.string(h.t.ZcibdX),
                         onClick: _,
-                        shouldHighlight: e
+                        shouldHighlight: e,
                     }),
                     (0, r.jsx)(c.Z, {
                         icon: i.Dio,
                         actionType: c.Z.ActionTypes.DENY,
                         tooltip: h.intl.string(h.t.xuio0N),
                         onClick: O,
-                        shouldHighlight: e
-                    })
-                ]
+                        shouldHighlight: e,
+                    }),
+                ],
             });
-            return (0, r.jsxs)('div', {
+            return (0, r.jsxs)("div", {
                 className: f.listItemContents,
                 children: [
                     (0, r.jsx)(d.Z, {
@@ -63,14 +63,14 @@ function g(e) {
                         hovered: e,
                         status: E,
                         subText: n,
-                        className: f.__invalid_userInfo
+                        className: f.__invalid_userInfo,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: f.actions,
-                        children: l
-                    })
-                ]
+                        children: l,
+                    }),
+                ],
             });
-        }
+        },
     });
 }

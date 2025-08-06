@@ -1,7 +1,7 @@
 n.d(t, {
     KW: () => h,
     dO: () => p,
-    gQ: () => f
+    gQ: () => f,
 });
 var r = n(392711),
     i = n.n(r),
@@ -28,24 +28,24 @@ function p() {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, (0, u.Z)(l))),
@@ -64,7 +64,7 @@ function p() {
                       }),
                 r
             );
-        }).filter(s.lm)
+        }).filter(s.lm),
     };
 }
 let h = { [d.Gp.ANY]: [d.wE] },
@@ -73,6 +73,6 @@ let h = { [d.Gp.ANY]: [d.wE] },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 r = p();
-            return (i().isEqual(r, t) || n(r), r);
-        }
+            return i().isEqual(r, t) || n(r), r;
+        },
     };

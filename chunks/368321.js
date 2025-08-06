@@ -11,41 +11,49 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let c = new o.Z('FileSystemStore'),
+let c = new o.Z("FileSystemStore"),
     u = 1048576,
     d = 10 * a.Z.Millis.MINUTE;
 class f extends r.ZP.Store {
     handlePostConnectionOpen() {
-        return (this.refresh(), !1);
+        return this.refresh(), !1;
     }
     handleAppStateUpdate(e) {
-        return ('active' !== e.state && this.refresh(), !1);
+        return "active" !== e.state && this.refresh(), !1;
     }
     async refresh() {
         var e, t;
-        let n = await (null == (t = s.Z.database()) || null == (e = t.fsInfo()) ? void 0 : e.catch((e) => c.warn("couldn't get fs info", e)));
+        let n = await (null == (t = s.Z.database()) || null == (e = t.fsInfo())
+            ? void 0
+            : e.catch((e) => c.warn("couldn't get fs info", e)));
         if (null != n) {
-            let e = n.fs.available < 256 * u || n.fs.available < 3 * n.database.used || n.fs.available < 2 * n.database.total,
-                t = n.fs.available > 768 * u && n.fs.available > 4 * n.database.used && n.fs.available > 4 * n.database.total,
+            let e =
+                    n.fs.available < 256 * u ||
+                    n.fs.available < 3 * n.database.used ||
+                    n.fs.available < 2 * n.database.total,
+                t =
+                    n.fs.available > 768 * u &&
+                    n.fs.available > 4 * n.database.used &&
+                    n.fs.available > 4 * n.database.total,
                 r = !!e || (!t && null);
             null != r && this.isLowDisk !== r && ((this.isLowDisk = r), this.emitChange());
         }
     }
     constructor() {
-        (super(i.Z, {
+        super(i.Z, {
             APP_STATE_UPDATE: (e) => this.handleAppStateUpdate(e),
-            POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
+            POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
         }),
-            l(this, 'isLowDisk', !1),
+            l(this, "isLowDisk", !1),
             this.refresh(),
             this.waitFor(s.Z),
-            setInterval(() => this.refresh(), d));
+            setInterval(() => this.refresh(), d);
     }
 }
 let _ = new f();

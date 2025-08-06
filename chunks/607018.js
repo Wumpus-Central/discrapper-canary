@@ -1,4 +1,4 @@
-(n.d(t, { default: () => p }), n(388685));
+n.d(t, { default: () => p }), n(388685);
 var s = n(255367),
     i = n(73800),
     r = n(442837),
@@ -22,13 +22,17 @@ let p = i.forwardRef(function (e, t) {
             async (e) => {
                 j(!0);
                 try {
-                    (d.Z.isPhoneReverification(I, f) ? await a.Z.beginReverifyPhone(e, m) : await a.Z.beginAddPhone(e, m), b(null), g(e));
+                    d.Z.isPhoneReverification(I, f)
+                        ? await a.Z.beginReverifyPhone(e, m)
+                        : await a.Z.beginAddPhone(e, m),
+                        b(null),
+                        g(e);
                 } catch (e) {
                     b(new o.Z(e));
                 }
                 j(!1);
             },
-            [I, m, f]
+            [I, m, f],
         ),
         N = i.useCallback(
             async (e) => {
@@ -36,27 +40,30 @@ let p = i.forwardRef(function (e, t) {
                     j(!0);
                     try {
                         let { token: t } = await a.Z.verifyPhone(C, e);
-                        (b(null), _(t));
+                        b(null), _(t);
                     } catch (e) {
                         b(new o.Z(e));
                     }
                     j(!1);
                 }
             },
-            [I, C]
+            [I, C],
         ),
         O = i.useCallback(
             async (e) => {
-                null != y && (d.Z.isPhoneReverification(I, f) ? await a.Z.reverifyPhone(y, e, m) : await a.Z.addPhone(y, e, m), null == n || n(), p());
+                null != y &&
+                    (d.Z.isPhoneReverification(I, f) ? await a.Z.reverifyPhone(y, e, m) : await a.Z.addPhone(y, e, m),
+                    null == n || n(),
+                    p());
             },
-            [n, p, y, m, I, f]
+            [n, p, y, m, I, f],
         );
     return null != y
         ? (0, s.jsx)(l.Z, {
               onClose: p,
               transitionState: R,
               title: E.intl.string(E.t.ZtCDc3),
-              handleSubmit: O
+              handleSubmit: O,
           })
         : (0, s.jsx)(c.Z, {
               onClose: p,
@@ -65,6 +72,6 @@ let p = i.forwardRef(function (e, t) {
               working: x,
               validPhone: null != C,
               onAddPhone: v,
-              onVerifyPhone: N
+              onVerifyPhone: N,
           });
 });

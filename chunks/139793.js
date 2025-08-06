@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(434650),
@@ -9,9 +9,9 @@ function s(e) {
         c = (0, i.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t)),
         u = (0, r.useCallback)(
             (e) => {
-                e && (n({ action: 'VIEW_ACTIVITY_CARD' }), l(!0));
+                e && (n({ action: "VIEW_ACTIVITY_CARD" }), l(!0));
             },
-            [n]
+            [n],
         );
     return (0, o.O)(u, void 0, !c && !s);
 }

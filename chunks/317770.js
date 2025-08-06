@@ -5,13 +5,13 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-(n.d(t, { Z: () => i }), n(388685), n(17089));
+n.d(t, { Z: () => i }), n(388685), n(17089);
 class i {
     initialize() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -21,6 +21,6 @@ class i {
         this.isInitialized && ((this.isInitialized = !1), this._terminate());
     }
     constructor() {
-        r(this, 'isInitialized', !1);
+        r(this, "isInitialized", !1);
     }
 }

@@ -6,7 +6,7 @@ e.exports = function (e, t) {
     for (t = void 0 === t ? i : t; ++n < t; ) {
         var a = r(n, o),
             s = e[a];
-        ((e[a] = e[n]), (e[n] = s));
+        (e[a] = e[n]), (e[n] = s);
     }
-    return ((e.length = t), e);
+    return (e.length = t), e;
 };

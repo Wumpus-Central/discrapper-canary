@@ -24,21 +24,21 @@ let E = () => {
         r.useEffect(() => {
             null == n && (0, m.Y7)();
         }, [n]),
-        (0, i.jsxs)('div', {
+        (0, i.jsxs)("div", {
             className: _.container,
             children: [
                 (0, i.jsx)(d.Text, {
-                    variant: 'eyebrow',
-                    color: 'text-muted',
-                    children: x.intl.string(b.default.USIXU1)
+                    variant: "eyebrow",
+                    color: "text-muted",
+                    children: x.intl.string(b.default.USIXU1),
                 }),
                 (0, i.jsx)(d.j7V, {
                     className: a()(j.marginTop8, j.marginBottom20),
                     value: e,
-                    note: x.intl.string(b.default['5MdB3t']),
+                    note: x.intl.string(b.default["5MdB3t"]),
                     hideBorder: !0,
                     onChange: g.Ex.updateSetting,
-                    children: x.intl.string(b.default.zkEceX)
+                    children: x.intl.string(b.default.zkEceX),
                 }),
                 e
                     ? (0, i.jsx)(d.Zbd, {
@@ -50,41 +50,41 @@ let E = () => {
                               children: [
                                   (0, i.jsx)(o.k.Child, {
                                       children: (0, i.jsx)(d.Text, {
-                                          variant: 'text-sm/semibold',
-                                          color: 'text-default',
-                                          children: x.intl.string(b.default.xAVm7O)
-                                      })
+                                          variant: "text-sm/semibold",
+                                          color: "text-default",
+                                          children: x.intl.string(b.default.xAVm7O),
+                                      }),
                                   }),
                                   (0, i.jsx)(d.P3F, {
                                       children: (0, i.jsx)(l.rU, {
                                           onClick: u.xf,
                                           to: {
                                               pathname: h.Z5c.FAMILY_CENTER,
-                                              state: { scrollRestoration: !1 }
+                                              state: { scrollRestoration: !1 },
                                           },
-                                          children: x.intl.string(b.default.cUIXFR)
-                                      })
+                                          children: x.intl.string(b.default.cUIXFR),
+                                      }),
                                   }),
                                   (0, i.jsx)(d.G2e, {
                                       icon: d.ZSh,
                                       className: _.arrow,
-                                      disableColor: !0
-                                  })
-                              ]
-                          })
+                                      disableColor: !0,
+                                  }),
+                              ],
+                          }),
                       })
                     : null,
                 (0, i.jsx)(d.j7V, {
                     className: a()(j.marginTop20, j.marginBottom20),
                     value: !!t[f.$Z.FAMILY_CENTER_DIGEST],
-                    note: x.intl.string(b.default['y34S4+']),
+                    note: x.intl.string(b.default["y34S4+"]),
                     hideBorder: !0,
                     onChange: function (e) {
                         (0, m.pR)(f.$Z.FAMILY_CENTER_DIGEST, e);
                     },
-                    children: x.intl.string(b.default.irvJKS)
-                })
-            ]
+                    children: x.intl.string(b.default.irvJKS),
+                }),
+            ],
         })
     );
 };

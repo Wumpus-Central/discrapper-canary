@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => m }), r(35282));
+r.d(t, { Z: () => m }), r(35282);
 var n = r(990547),
     i = r(544891),
     a = r(570140),
@@ -10,10 +10,10 @@ var n = r(990547),
 r(135200);
 var d = r(388032);
 let m = {
-    resetSuggestions: () => a.Z.dispatch({ type: 'POMELO_SUGGESTIONS_RESET' }),
+    resetSuggestions: () => a.Z.dispatch({ type: "POMELO_SUGGESTIONS_RESET" }),
     async fetchSuggestionsRegistration(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1500;
-        a.Z.dispatch({ type: 'POMELO_SUGGESTIONS_RESET' });
+        a.Z.dispatch({ type: "POMELO_SUGGESTIONS_RESET" });
         try {
             var r;
             let n = await i.tn.get({
@@ -21,13 +21,13 @@ let m = {
                 query: null == e ? void 0 : { global_name: e },
                 timeout: t,
                 rejectWithError: !0,
-                failImmediatelyWhenRateLimited: !0
+                failImmediatelyWhenRateLimited: !0,
             });
             if (n.ok && (null == (r = n.body) ? void 0 : r.username) != null)
                 return a.Z.dispatch({
-                    type: 'POMELO_REGISTRATION_SUGGESTIONS_SUCCESS',
+                    type: "POMELO_REGISTRATION_SUGGESTIONS_SUCCESS",
                     suggestion: n.body,
-                    source: e
+                    source: e,
                 });
         } catch (e) {
             return;
@@ -38,18 +38,18 @@ let m = {
             try {
                 var t;
                 a.Z.dispatch({
-                    type: 'POMELO_SUGGESTIONS_FETCH',
-                    usernameSuggestionLoading: !0
+                    type: "POMELO_SUGGESTIONS_FETCH",
+                    usernameSuggestionLoading: !0,
                 });
                 let r = await i.tn.get({
                     url: u.ANM.POMELO_SUGGESTIONS,
                     timeout: e,
-                    rejectWithError: !0
+                    rejectWithError: !0,
                 });
                 if (r.ok && (null == (t = r.body) ? void 0 : t.username) != null)
                     return a.Z.dispatch({
-                        type: 'POMELO_SUGGESTIONS_SUCCESS',
-                        suggestion: r.body
+                        type: "POMELO_SUGGESTIONS_SUCCESS",
+                        suggestion: r.body,
                     });
             } catch (e) {
                 return;
@@ -57,18 +57,18 @@ let m = {
     },
     async attemptPomelo(e) {
         var t;
-        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'modal',
+        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             c = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             m =
                 !1 === /^[A-Za-z0-9_.]*$/.test(e)
                     ? d.intl.string(d.t.z7c4bG)
-                    : e.includes('..')
-                      ? d.intl.string(d.t['C7G+go'])
+                    : e.includes("..")
+                      ? d.intl.string(d.t["C7G+go"])
                       : e.length < 2 || e.length > 32
                         ? d.intl.formatToPlainString(d.t.IpijXF, {
                               maxNum: 32,
-                              minNum: 2
+                              minNum: 2,
                           })
                         : void 0;
         if (null != m)
@@ -77,12 +77,12 @@ let m = {
                     reason: m,
                     username_error: !0,
                     location: r,
-                    one_click_flow: c
+                    one_click_flow: c,
                 }),
                 a.Z.dispatch({
-                    type: 'POMELO_ATTEMPT_FAILURE',
+                    type: "POMELO_ATTEMPT_FAILURE",
                     username: e,
-                    error: m
+                    error: m,
                 })
             );
         try {
@@ -91,38 +91,38 @@ let m = {
                 body: { username: e },
                 trackedActionData: {
                     event: n.NetworkActionNames.POMELO_ATTEMPT,
-                    properties: { requested_username: e }
+                    properties: { requested_username: e },
                 },
-                rejectWithError: !1
+                rejectWithError: !1,
             });
-            (t.body.taken &&
+            t.body.taken &&
                 s.default.track(u.rMx.POMELO_ERRORS, {
-                    reason: 'already_taken',
+                    reason: "already_taken",
                     username_error: !0,
                     location: r,
-                    one_click_flow: c
+                    one_click_flow: c,
                 }),
                 a.Z.dispatch({
-                    type: 'POMELO_ATTEMPT_SUCCESS',
+                    type: "POMELO_ATTEMPT_SUCCESS",
                     username: e,
-                    taken: t.body.taken
-                }));
+                    taken: t.body.taken,
+                });
         } catch (l) {
             let n = new o.Hx(l),
                 i = null != (t = n.getAnyErrorMessage()) ? t : void 0;
-            (s.default.track(u.rMx.POMELO_ERRORS, {
+            s.default.track(u.rMx.POMELO_ERRORS, {
                 reason: i,
                 username_error: !0,
                 location: r,
-                one_click_flow: c
+                one_click_flow: c,
             }),
                 a.Z.dispatch({
                     username: e,
-                    type: 'POMELO_ATTEMPT_FAILURE',
+                    type: "POMELO_ATTEMPT_FAILURE",
                     error: null != n.status && n.status < 500 && 401 !== n.status ? i : void 0,
                     statusCode: n.status,
-                    retryAfter: n.retryAfter
-                }));
+                    retryAfter: n.retryAfter,
+                });
         }
     },
     async createPomelo(e) {
@@ -132,16 +132,16 @@ let m = {
                 url: u.ANM.POMELO_CREATE,
                 trackedActionData: {
                     event: n.NetworkActionNames.POMELO_CREATE,
-                    properties: { one_click_flow: t }
+                    properties: { one_click_flow: t },
                 },
-                rejectWithError: !1
+                rejectWithError: !1,
             });
         return (
             a.Z.dispatch({
-                type: 'CURRENT_USER_UPDATE',
-                user: r.body
+                type: "CURRENT_USER_UPDATE",
+                user: r.body,
             }),
             r.body
         );
-    }
+    },
 };

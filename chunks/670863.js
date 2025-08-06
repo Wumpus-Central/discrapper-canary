@@ -1,4 +1,4 @@
-(n.d(t, { j: () => T }), n(388685));
+n.d(t, { j: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -21,7 +21,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,7 +50,8 @@ function y(e, t) {
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -60,39 +61,56 @@ function O(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let v = 'SHOW_MORE';
+let v = "SHOW_MORE";
 function I(e) {
     return {
         [p.h7.AUDIO_INPUT]: {
             setDevice: s.Z.setInputDevice,
             Icon: a.S6n,
             getCanSetDevice: (e) => e.supports(p.AN.AUDIO_INPUT_DEVICE),
-            getWarningMessage: () => h.intl.format(h.t['1iK6UV'], { onDownloadClick: () => (0, c.y)('Help Text Input Devices') }),
-            getLocation: (e) => ''.concat(e, '.SingleSelectInputDevices')
+            getWarningMessage: () =>
+                h.intl.format(h.t["1iK6UV"], { onDownloadClick: () => (0, c.y)("Help Text Input Devices") }),
+            getLocation: (e) => "".concat(e, ".SingleSelectInputDevices"),
         },
         [p.h7.AUDIO_OUTPUT]: {
             setDevice: s.Z.setOutputDevice,
             Icon: a.VWR,
             getCanSetDevice: (e) => e.supports(p.AN.AUDIO_OUTPUT_DEVICE),
-            getWarningMessage: () => h.intl.format(h.t.Ow0dbG, { onDownloadClick: () => (0, c.y)('Help Text Output Devices') }),
-            getLocation: (e) => ''.concat(e, '.SingleSelectOutputDevices')
+            getWarningMessage: () =>
+                h.intl.format(h.t.Ow0dbG, { onDownloadClick: () => (0, c.y)("Help Text Output Devices") }),
+            getLocation: (e) => "".concat(e, ".SingleSelectOutputDevices"),
         },
         [p.h7.VIDEO_INPUT]: {
             setDevice: s.Z.setVideoDevice,
             Icon: a.xmR,
             getCanSetDevice: (e) => e.isVideoAvailable(),
-            getWarningMessage: () => h.intl.format(h.t['1iK6UV'], { onDownloadClick: () => (0, c.y)('Help Text Video Devices') }),
-            getLocation: (e) => ''.concat(e, '.SingleSelectVideoDevices')
-        }
+            getWarningMessage: () =>
+                h.intl.format(h.t["1iK6UV"], { onDownloadClick: () => (0, c.y)("Help Text Video Devices") }),
+            getLocation: (e) => "".concat(e, ".SingleSelectVideoDevices"),
+        },
     }[e];
 }
 function T(e) {
     var t,
-        { deviceType: n, location: s, showAllDevices: c = !1, selectedDeviceId: p, onSelectDevice: E, hideDeviceTypeIcon: O = !1 } = e,
-        T = y(e, ['deviceType', 'location', 'showAllDevices', 'selectedDeviceId', 'onSelectDevice', 'hideDeviceTypeIcon']);
+        {
+            deviceType: n,
+            location: s,
+            showAllDevices: c = !1,
+            selectedDeviceId: p,
+            onSelectDevice: E,
+            hideDeviceTypeIcon: O = !1,
+        } = e,
+        T = y(e, [
+            "deviceType",
+            "location",
+            "showAllDevices",
+            "selectedDeviceId",
+            "onSelectDevice",
+            "hideDeviceTypeIcon",
+        ]);
     let { setDevice: S, Icon: A, getCanSetDevice: N, getWarningMessage: C, getLocation: R } = I(n),
         { analyticsLocations: P } = (0, l.ZP)(),
         [w, D] = i.useState(c),
@@ -104,49 +122,49 @@ function T(e) {
         G = (0, r.jsx)(a.R94, {
             type: a.R94.Types.DESCRIPTION,
             className: g.marginTop8,
-            children: C()
+            children: C(),
         }),
         B = i.useCallback(
             (e) => {
                 if (e === v)
-                    (D(!0),
+                    D(!0),
                         d.default.track(_.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
                             device_type: n,
                             location: L,
                             location_stack: P,
                             shown_device_count: x.length,
-                            hidden_device_count: M.length
-                        }));
+                            hidden_device_count: M.length,
+                        });
                 else {
                     var t;
                     (null == (t = null == E ? void 0 : E(e)) || t) &&
                         S(e, {
                             location: L,
-                            analyticsLocations: P
+                            analyticsLocations: P,
                         });
                 }
             },
-            [n, L, x.length, M.length, P, E, S]
+            [n, L, x.length, M.length, P, E, S],
         );
     function Z(e) {
         let { label: t } = e;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: m.selectedDevice,
             children: [
                 !O &&
                     (0, r.jsx)(A, {
-                        size: 'custom',
+                        size: "custom",
                         width: 20,
                         height: 20,
-                        color: a.TVs.colors.INTERACTIVE_MUTED
+                        color: a.TVs.colors.INTERACTIVE_MUTED,
                     }),
                 (0, r.jsx)(a.Text, {
                     lineClamp: 1,
-                    variant: 'text-md/normal',
-                    color: 'text-secondary',
-                    children: t
-                })
-            ]
+                    variant: "text-md/normal",
+                    color: "text-secondary",
+                    children: t,
+                }),
+            ],
         });
     }
     let F = null != (t = T.renderOptionLabel) ? t : Z;
@@ -155,7 +173,7 @@ function T(e) {
                 let { id: t, name: n } = e;
                 return {
                     value: t,
-                    label: n
+                    label: n,
                 };
             },
             t = x.map(e);
@@ -167,7 +185,7 @@ function T(e) {
             let e = {
                 value: v,
                 label: h.intl.string(h.t.E99UMj),
-                preventCloseOnSelect: !0
+                preventCloseOnSelect: !0,
             };
             return t.concat(e);
         }
@@ -183,17 +201,17 @@ function T(e) {
                         options: V(),
                         isDisabled: !U,
                         className: m.selector,
-                        popoutPosition: 'bottom',
+                        popoutPosition: "bottom",
                         renderOptionLabel: F,
                         renderOptionValue: (e) => {
                             let [t] = e;
                             return F(t);
-                        }
+                        },
                     },
-                    T
-                )
+                    T,
+                ),
             ),
-            !U && G
-        ]
+            !U && G,
+        ],
     });
 }

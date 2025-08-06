@@ -12,18 +12,18 @@ function p(t) {
         f = (0, c.Z)(),
         b = (0, l.Z)(p),
         y = o.useRef(r),
-        d = (0, u.Z)(p.id, 'boolean' != typeof p.meta.horizontal || p.meta.horizontal);
+        d = (0, u.Z)(p.id, "boolean" != typeof p.meta.horizontal || p.meta.horizontal);
     return (
         o.useEffect(() => {
             y.current = r;
         }),
         o.useEffect(() => () => y.current(), []),
         (0, n.jsxs)(i.v2r, {
-            navId: 'overlay-video-widget-context-menu',
+            navId: "overlay-video-widget-context-menu",
             onClose: a.Zy,
-            'aria-label': s.intl.string(s.t.tPfVWl),
+            "aria-label": s.intl.string(s.t.tPfVWl),
             onSelect: e,
-            children: [f, d, b]
+            children: [f, d, b],
         })
     );
 }

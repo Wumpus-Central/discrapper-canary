@@ -1,40 +1,41 @@
 e.exports = function (e) {
     return {
-        name: 'Gherkin',
-        aliases: ['feature'],
-        keywords: 'Feature Background Ability Business Need Scenario Scenarios Scenario Outline Scenario Template Examples Given And Then But When',
+        name: "Gherkin",
+        aliases: ["feature"],
+        keywords:
+            "Feature Background Ability Business Need Scenario Scenarios Scenario Outline Scenario Template Examples Given And Then But When",
         contains: [
             {
-                className: 'symbol',
-                begin: '\\*',
-                relevance: 0
+                className: "symbol",
+                begin: "\\*",
+                relevance: 0,
             },
             {
-                className: 'meta',
-                begin: '@[^@\\s]+'
+                className: "meta",
+                begin: "@[^@\\s]+",
             },
             {
-                begin: '\\|',
-                end: '\\|\\w*$',
+                begin: "\\|",
+                end: "\\|\\w*$",
                 contains: [
                     {
-                        className: 'string',
-                        begin: '[^|]+'
-                    }
-                ]
+                        className: "string",
+                        begin: "[^|]+",
+                    },
+                ],
             },
             {
-                className: 'variable',
-                begin: '<',
-                end: '>'
+                className: "variable",
+                begin: "<",
+                end: ">",
             },
             e.HASH_COMMENT_MODE,
             {
-                className: 'string',
+                className: "string",
                 begin: '"""',
-                end: '"""'
+                end: '"""',
             },
-            e.QUOTE_STRING_MODE
-        ]
+            e.QUOTE_STRING_MODE,
+        ],
     };
 };

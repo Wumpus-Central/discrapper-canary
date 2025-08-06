@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800),
     i = n(393903),
     l = n(448986);
@@ -9,6 +9,6 @@ let a = () => {
         });
     return {
         containerRef: (0, i.y)(n),
-        containerWidth: e
+        containerWidth: e,
     };
 };

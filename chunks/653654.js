@@ -9,7 +9,7 @@ let o = async (e) => {
             await n.tn.get({
                 url: i.ANM.COLLECTIBLES_SEARCH,
                 query: e,
-                rejectWithError: !0
+                rejectWithError: !0,
             })
         ).body;
     } catch (t) {

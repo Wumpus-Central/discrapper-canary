@@ -1,4 +1,4 @@
-(n.d(e, { default: () => u }), n(953529));
+n.d(e, { default: () => u }), n(953529);
 var r = n(255367);
 n(73800);
 var a = n(120356),
@@ -15,46 +15,46 @@ let u = (t) => {
     return (0, r.jsx)(o.Y0X, {
         transitionState: n,
         className: d.container,
-        'aria-label': m.intl.string(m.t['4Y2AS0']),
-        parentComponent: 'HubStudyRoomSuppressModal',
-        children: (0, r.jsxs)('form', {
+        "aria-label": m.intl.string(m.t["4Y2AS0"]),
+        parentComponent: "HubStudyRoomSuppressModal",
+        children: (0, r.jsxs)("form", {
             onSubmit: (t) => {
-                (null == t || t.preventDefault(), l.Z.clearSuppressWarning(), null == e || e());
+                null == t || t.preventDefault(), l.Z.clearSuppressWarning(), null == e || e();
             },
             className: d.form,
             children: [
                 (0, r.jsxs)(o.hzk, {
                     className: d.modalContent,
                     children: [
-                        (0, r.jsx)('img', {
+                        (0, r.jsx)("img", {
                             src: p,
-                            alt: '',
-                            className: d.hero
+                            alt: "",
+                            className: d.hero,
                         }),
                         (0, r.jsx)(o.Text, {
                             className: d.title,
-                            color: 'header-primary',
-                            variant: 'text-md/semibold',
-                            children: m.intl.string(m.t.sDvH0d)
+                            color: "header-primary",
+                            variant: "text-md/semibold",
+                            children: m.intl.string(m.t.sDvH0d),
                         }),
                         (0, r.jsx)(o.Text, {
                             className: d.description,
-                            color: 'header-secondary',
-                            variant: 'text-sm/normal',
-                            children: m.intl.string(m.t['CLpr//'])
-                        })
-                    ]
+                            color: "header-secondary",
+                            variant: "text-sm/normal",
+                            children: m.intl.string(m.t["CLpr//"]),
+                        }),
+                    ],
                 }),
                 (0, r.jsxs)(o.mzw, {
                     justify: c.Z.Justify.BETWEEN,
                     wrap: c.Z.Wrap.WRAP,
                     children: [
                         (0, r.jsx)(s.zx, {
-                            type: 'submit',
+                            type: "submit",
                             size: s.zx.Sizes.LARGE,
                             className: i()(d.primaryButton, d.gutter),
                             autoFocus: !0,
-                            children: m.intl.string(m.t['NX+WJC'])
+                            children: m.intl.string(m.t["NX+WJC"]),
                         }),
                         a &&
                             (0, r.jsx)(o.P3F, {
@@ -62,13 +62,13 @@ let u = (t) => {
                                 className: d.minorContainer,
                                 children: (0, r.jsx)(o.Text, {
                                     className: d.minorAction,
-                                    variant: 'text-xs/normal',
-                                    children: m.intl.string(m.t['5E9SBw'])
-                                })
-                            })
-                    ]
-                })
-            ]
-        })
+                                    variant: "text-xs/normal",
+                                    children: m.intl.string(m.t["5E9SBw"]),
+                                }),
+                            }),
+                    ],
+                }),
+            ],
+        }),
     });
 };

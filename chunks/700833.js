@@ -1,6 +1,6 @@
 n.d(t, {
     Md: () => h,
-    a0: () => p
+    a0: () => p,
 });
 var r = n(255367);
 n(73800);
@@ -16,24 +16,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -56,7 +56,20 @@ function g(e, t) {
     );
 }
 function p(e) {
-    let { dropHoveredIndex: t, formField: p, guild: h, index: x, isDragEnabled: b, submittedGuildJoinRequestsCount: j, removeFormField: v, updateFormField: _, updateFormFieldOrder: O, canRemove: y, actionsLocation: C, fieldStyle: N } = e,
+    let {
+            dropHoveredIndex: t,
+            formField: p,
+            guild: h,
+            index: x,
+            isDragEnabled: b,
+            submittedGuildJoinRequestsCount: j,
+            removeFormField: v,
+            updateFormField: _,
+            updateFormFieldOrder: O,
+            canRemove: y,
+            actionsLocation: C,
+            fieldStyle: N,
+        } = e,
         I = async () => {
             await v(x);
         },
@@ -77,15 +90,15 @@ function p(e) {
                 0 === j
                     ? f(p, E, h)
                     : (0, l.ZDy)(async () => {
-                          let { default: e } = await n.e('74673').then(n.bind(n, 394045));
+                          let { default: e } = await n.e("74673").then(n.bind(n, 394045));
                           return (t) =>
                               (0, r.jsx)(
                                   e,
                                   g(m({}, t), {
                                       guildId: h.id,
                                       submittedGuildJoinRequestsCount: j,
-                                      onConfirm: () => f(p, E, h)
-                                  })
+                                      onConfirm: () => f(p, E, h),
+                                  }),
                               );
                       });
             },
@@ -93,7 +106,7 @@ function p(e) {
             onDrop: S,
             canRemove: y,
             actionsLocation: C,
-            fieldStyle: N
+            fieldStyle: N,
         };
     switch (p.field_type) {
         case a.QJ.TERMS:
@@ -102,11 +115,11 @@ function p(e) {
                 m(
                     {
                         channelId: h.rulesChannelId,
-                        title: N === a.it.COMPACT ? u.intl.string(u.t['55+giY']) : u.intl.string(u.t['53vNcH']),
-                        formField: p
+                        title: N === a.it.COMPACT ? u.intl.string(u.t["55+giY"]) : u.intl.string(u.t["53vNcH"]),
+                        formField: p,
                     },
-                    w
-                )
+                    w,
+                ),
             );
         case a.QJ.PARAGRAPH:
             return (0, r.jsx)(o.Z, m({ formField: p }, w));
@@ -122,51 +135,51 @@ function h(e, t, i) {
     switch (e) {
         case a.QJ.TERMS:
             return (0, l.ZDy)(async () => {
-                let { default: e } = await n.e('5945').then(n.bind(n, 92451));
+                let { default: e } = await n.e("5945").then(n.bind(n, 92451));
                 return (n) =>
                     (0, r.jsx)(
                         e,
                         g(m({}, n), {
                             field: void 0,
                             onSave: t,
-                            guild: i
-                        })
+                            guild: i,
+                        }),
                     );
             });
         case a.QJ.PARAGRAPH:
             return (0, l.ZDy)(async () => {
-                let { ParagraphFormFieldModal: e } = await n.e('6595').then(n.bind(n, 457042));
+                let { ParagraphFormFieldModal: e } = await n.e("6595").then(n.bind(n, 457042));
                 return (n) =>
                     (0, r.jsx)(
                         e,
                         g(m({}, n), {
                             field: void 0,
-                            onSave: t
-                        })
+                            onSave: t,
+                        }),
                     );
             });
         case a.QJ.TEXT_INPUT:
             return (0, l.ZDy)(async () => {
-                let { TextInputFormFieldModal: e } = await n.e('6595').then(n.bind(n, 457042));
+                let { TextInputFormFieldModal: e } = await n.e("6595").then(n.bind(n, 457042));
                 return (n) =>
                     (0, r.jsx)(
                         e,
                         g(m({}, n), {
                             field: void 0,
-                            onSave: t
-                        })
+                            onSave: t,
+                        }),
                     );
             });
         case a.QJ.MULTIPLE_CHOICE:
             return (0, l.ZDy)(async () => {
-                let { default: e } = await n.e('94064').then(n.bind(n, 607569));
+                let { default: e } = await n.e("94064").then(n.bind(n, 607569));
                 return (n) =>
                     (0, r.jsx)(
                         e,
                         g(m({}, n), {
                             field: void 0,
-                            onSave: t
-                        })
+                            onSave: t,
+                        }),
                     );
             });
     }
@@ -175,51 +188,51 @@ function f(e, t, i) {
     switch (e.field_type) {
         case a.QJ.TERMS:
             return (0, l.ZDy)(async () => {
-                let { default: l } = await n.e('5945').then(n.bind(n, 92451));
+                let { default: l } = await n.e("5945").then(n.bind(n, 92451));
                 return (n) =>
                     (0, r.jsx)(
                         l,
                         g(m({}, n), {
                             field: e,
                             onSave: t,
-                            guild: i
-                        })
+                            guild: i,
+                        }),
                     );
             });
         case a.QJ.PARAGRAPH:
             return (0, l.ZDy)(async () => {
-                let { ParagraphFormFieldModal: i } = await n.e('6595').then(n.bind(n, 457042));
+                let { ParagraphFormFieldModal: i } = await n.e("6595").then(n.bind(n, 457042));
                 return (n) =>
                     (0, r.jsx)(
                         i,
                         g(m({}, n), {
                             field: e,
-                            onSave: t
-                        })
+                            onSave: t,
+                        }),
                     );
             });
         case a.QJ.TEXT_INPUT:
             return (0, l.ZDy)(async () => {
-                let { TextInputFormFieldModal: i } = await n.e('6595').then(n.bind(n, 457042));
+                let { TextInputFormFieldModal: i } = await n.e("6595").then(n.bind(n, 457042));
                 return (n) =>
                     (0, r.jsx)(
                         i,
                         g(m({}, n), {
                             field: e,
-                            onSave: t
-                        })
+                            onSave: t,
+                        }),
                     );
             });
         case a.QJ.MULTIPLE_CHOICE:
             return (0, l.ZDy)(async () => {
-                let { default: i } = await n.e('94064').then(n.bind(n, 607569));
+                let { default: i } = await n.e("94064").then(n.bind(n, 607569));
                 return (n) =>
                     (0, r.jsx)(
                         i,
                         g(m({}, n), {
                             field: e,
-                            onSave: t
-                        })
+                            onSave: t,
+                        }),
                     );
             });
     }

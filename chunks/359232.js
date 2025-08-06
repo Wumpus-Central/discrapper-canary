@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(512722),
     i = n.n(r),
     o = n(911969),
@@ -19,18 +19,18 @@ let s = (e, t) => {
             ? i
                 ? a.intl.formatToPlainString(a.t.ONSqYW, {
                       min: n,
-                      max: r
+                      max: r,
                   })
                 : null
             : t.value.length < n || t.value.length > r
               ? a.intl.formatToPlainString(a.t.ONSqYW, {
                     min: n,
-                    max: r
+                    max: r,
                 })
               : null;
     };
 function c(e, t) {
-    switch ((null != t && i()(t.type === e.type, 'component type matches state'), e.type)) {
+    switch ((null != t && i()(t.type === e.type, "component type matches state"), e.type)) {
         case o.re.BUTTON:
             return null;
         case o.re.STRING_SELECT:
@@ -42,6 +42,6 @@ function c(e, t) {
         case o.re.TEXT_INPUT:
             return l(e, t);
         default:
-            i()(!1, 'missing validator for this component');
+            i()(!1, "missing validator for this component");
     }
 }

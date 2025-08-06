@@ -23,20 +23,22 @@ let d = (e) => {
                         r,
                         i = {},
                         a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(f, ['pendingAvatar']),
+        })(f, ["pendingAvatar"]),
         h = (0, l.SD)({
             userId: d.id,
-            image: p
+            image: p,
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: u.container,
         children: (0, r.jsx)(
             a.Z,
@@ -44,24 +46,24 @@ let d = (e) => {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })({}, v)),
@@ -72,7 +74,7 @@ let d = (e) => {
                     pendingBadges: [(0, c.X)()],
                     canUsePremiumCustomization: m,
                     disabledInputs: !0,
-                    hideViewFullProfileButton: !0
+                    hideViewFullProfileButton: !0,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -86,7 +88,7 @@ let d = (e) => {
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            t)
-        )
+            t),
+        ),
     });
 };

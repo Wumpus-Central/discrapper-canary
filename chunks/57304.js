@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -17,24 +17,24 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -58,14 +58,10 @@ function y(e, t) {
 }
 let x = function (e) {
     let { channel: t } = e,
-        n = (0, l.e7)(
-            [u.Z, h.default],
-            () => {
-                let e = h.default.getCurrentUser();
-                return null == e || ((0, c.aC)(t) && (!e.nsfwAllowed || !u.Z.didAgree(t.getGuildId())));
-            },
-            [t]
-        ),
+        n = (0, l.e7)([u.Z, h.default], () => {
+            let e = h.default.getCurrentUser();
+            return null == e || ((0, c.aC)(t) && (!e.nsfwAllowed || !u.Z.didAgree(t.getGuildId())));
+        }, [t]),
         [x, j] = i.useState(!1),
         _ = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         O = (0, o.Aq)(),
@@ -84,14 +80,14 @@ let x = function (e) {
                     p.S.unsubscribe(g.CkL.TOGGLE_CHANNEL_PINS, C);
                 }
             ),
-            [C]
+            [C],
         ),
         (0, r.jsx)(a.yRy, {
             targetElementRef: v,
             shouldShow: x,
             animation: a.yRy.Animation.NONE,
-            position: 'bottom',
-            align: 'right',
+            position: "bottom",
+            align: "right",
             autoInvert: !1,
             ignoreModalClicks: !0,
             onRequestClose: () => j(!1),
@@ -100,8 +96,8 @@ let x = function (e) {
                     s.Z,
                     y(b({}, e), {
                         onJump: E,
-                        channel: t
-                    })
+                        channel: t,
+                    }),
                 );
             },
             clickTrap: !0,
@@ -112,16 +108,16 @@ let x = function (e) {
                     y(b({}, e), {
                         ref: v,
                         onClick: C,
-                        tooltip: i ? null : m.intl.string(m.t['mp1N//']),
+                        tooltip: i ? null : m.intl.string(m.t["mp1N//"]),
                         icon: a.qQX,
                         iconSize: 20,
-                        'aria-label': m.intl.string(m.t['mp1N//']),
+                        "aria-label": m.intl.string(m.t["mp1N//"]),
                         disabled: n,
                         showBadge: _,
-                        selected: i
-                    })
+                        selected: i,
+                    }),
                 );
-            }
+            },
         })
     );
 };

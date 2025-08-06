@@ -1,9 +1,9 @@
-(n.d(t, { l: () => o }), n(388685));
+n.d(t, { l: () => o }), n(388685);
 var i = n(255367),
     r = n(481060),
     s = n(692114);
 let a = 5 * n(70956).Z.Millis.DAY,
-    l = new s.Z('overlay_survey_timestamps');
+    l = new s.Z("overlay_survey_timestamps");
 function o(e, t) {
     (function () {
         let e = Date.now(),
@@ -15,7 +15,7 @@ function o(e, t) {
             return t.getMonth() === new Date().getMonth() && t.getFullYear() === new Date().getFullYear();
         }).length >= 3 ||
         (0, r.ZDy)(async () => {
-            let { default: r } = await n.e('20114').then(n.bind(n, 536920)),
+            let { default: r } = await n.e("20114").then(n.bind(n, 536920)),
                 s = Date.now();
             return (
                 l.add(s),
@@ -27,31 +27,31 @@ function o(e, t) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        ((i = n[t]),
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = i));
-                                    }));
+                                                : (e[t] = i);
+                                    });
                             }
                             return e;
                         })({}, n)),
                         (a = a =
                             {
                                 clientSettingType: e,
-                                gameId: t
+                                gameId: t,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(a))
@@ -65,7 +65,7 @@ function o(e, t) {
                               })(Object(a)).forEach(function (e) {
                                   Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
-                        s)
+                        s),
                     );
                 }
             );

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -16,7 +16,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -65,12 +65,16 @@ class f extends r.PureComponent {
             ? (0, i.jsxs)(s.qXd, {
                   color: s.DM8.DANGER,
                   style: { borderRadius: 0 },
-                  children: [m.intl.format(m.t.IIHUUF, { subscriptionId: this.props.subscription.id }), ' ', m.intl.format(m.t.fh65ER, { helpLink: 'https://support.discord.com/hc/en-us' })]
+                  children: [
+                      m.intl.format(m.t.IIHUUF, { subscriptionId: this.props.subscription.id }),
+                      " ",
+                      m.intl.format(m.t.fh65ER, { helpLink: "https://support.discord.com/hc/en-us" }),
+                  ],
               })
             : this.props.children;
     }
     constructor(...e) {
-        (super(...e), p(this, 'state', { hasError: !1 }));
+        super(...e), p(this, "state", { hasError: !1 });
     }
 }
 function b(e) {
@@ -81,7 +85,7 @@ function b(e) {
             p({ route: d.j.HOME });
         },
         _ = (e) => {
-            (p(g({ route: d.j.SWITCH_APP_PLANS }, e)), n(m.intl.string(m.t.VFqtkJ), x));
+            p(g({ route: d.j.SWITCH_APP_PLANS }, e)), n(m.intl.string(m.t.VFqtkJ), x);
         },
         [j, E] = r.useState({});
     r.useEffect(() => {
@@ -113,12 +117,12 @@ function b(e) {
                             children: (0, i.jsx)(c.Z, {
                                 subscription: e,
                                 navigateToSwitchPlan: _,
-                                loadingState: O ? c.G.LOADING : null != (t = j[e.id]) ? t : c.G.LOADING
-                            })
+                                loadingState: O ? c.G.LOADING : null != (t = j[e.id]) ? t : c.G.LOADING,
+                            }),
                         },
-                        e.id
+                        e.id,
                     );
-                })
+                }),
             });
         case d.j.SWITCH_APP_PLANS:
             let { route: v } = s,
@@ -132,15 +136,19 @@ function b(e) {
                                 i,
                                 r = {},
                                 s = Object.keys(e);
-                            for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                            for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                             return r;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var s = Object.getOwnPropertySymbols(e);
-                        for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                        for (i = 0; i < s.length; i++)
+                            (n = s[i]),
+                                !(t.indexOf(n) >= 0) &&
+                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                    (r[n] = e[n]);
                     }
                     return r;
-                })(s, ['route']);
+                })(s, ["route"]);
             return (0, i.jsx)(u.Z, h(g({}, S), { navigateToHome: x }));
         default:
             (0, a.vE)(b);

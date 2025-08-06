@@ -10,33 +10,33 @@ var r = n(126663),
 let d = function (e) {
     let { isVisible: t, subscriptionTier: n, isEligibleForBogoPromotion: d } = e,
         u = (0, s.q_F)({
-            transform: t ? 'translateY(-100%)' : 'translateY(0%)',
+            transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: {
                 tension: 120,
-                friction: 12
-            }
+                friction: 12,
+            },
         }),
         m = { section: o.jXE.MARKETING_FLOATING_CTA };
     return (0, i.jsx)(r.animated.div, {
         className: c.wrapper,
         style: u,
-        'data-mtctest-ignore': 'true',
-        children: (0, i.jsxs)('div', {
+        "data-mtctest-ignore": "true",
+        children: (0, i.jsxs)("div", {
             className: c.buttonContainer,
             children: [
                 (0, i.jsx)(l.Z, {
-                    size: 'md',
+                    size: "md",
                     subscriptionTier: n,
                     hasActivePromotion: !!d,
                     isPersistentCTA: !0,
-                    premiumModalAnalyticsLocation: m
+                    premiumModalAnalyticsLocation: m,
                 }),
                 (0, i.jsx)(a.Z, {
-                    variant: 'secondary',
-                    size: 'md'
-                })
-            ]
-        })
+                    variant: "secondary",
+                    size: "md",
+                }),
+            ],
+        }),
     });
 };

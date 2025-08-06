@@ -1,1 +1,1 @@
-e.exports = { placeholderFill: 'placeholderFill__7ffbc' };
+e.exports = { placeholderFill: "placeholderFill__7ffbc" };

@@ -1,6 +1,6 @@
 r.d(t, {
     i: () => A,
-    y: () => w
+    y: () => w,
 });
 var n = r(255367),
     s = r(73800),
@@ -26,24 +26,24 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -60,11 +60,11 @@ function v(e) {
                 quest: t,
                 questContent: j.jn.QUEST_BAR_V2,
                 sourceQuestContent: r,
-                sourceQuestContentCTA: n
+                sourceQuestContentCTA: n,
             });
         },
         size: c.zx.Sizes.SMALL,
-        children: (0, p.F9)(s)
+        children: (0, p.F9)(s),
     });
 }
 let S = (e) => {
@@ -78,9 +78,9 @@ let S = (e) => {
                     content: j.jn.QUEST_BAR_V2,
                     ctaContent: d.jZ.OPEN_GAME_LINK,
                     impressionId: s,
-                    sourceQuestContent: r
+                    sourceQuestContent: r,
                 }),
-            children: (0, p.pO)(t) ? C.intl.string(C.t.hvVgAQ) : C.intl.string(C.t.lwQdjI)
+            children: (0, p.pO)(t) ? C.intl.string(C.t.hvVgAQ) : C.intl.string(C.t.lwQdjI),
         });
     },
     N = (e) => {
@@ -97,11 +97,11 @@ let S = (e) => {
                         content: j.jn.QUEST_BAR_V2,
                         ctaContent: d.jZ.CONNECT_CONSOLE,
                         impressionId: o,
-                        sourceQuestContent: s
-                    }
+                        sourceQuestContent: s,
+                    },
                 ),
             size: c.zx.Sizes.SMALL,
-            children: C.intl.string(C.t.csptqa)
+            children: C.intl.string(C.t.csptqa),
         });
     },
     E = (e) => {
@@ -117,7 +117,7 @@ let S = (e) => {
                   fullWidth: !0,
                   onClick: l,
                   size: c.zx.Sizes.SMALL,
-                  children: o
+                  children: o,
               })
             : null;
     },
@@ -125,7 +125,16 @@ let S = (e) => {
         var t,
             r,
             o,
-            { quest: d, useReducedMotion: f, isExpanded: x, className: g, ctaLabel: h, onClick: m, questContent: v = j.jn.QUEST_BAR_V2, sourceQuestContent: S } = e,
+            {
+                quest: d,
+                useReducedMotion: f,
+                isExpanded: x,
+                className: g,
+                ctaLabel: h,
+                onClick: m,
+                questContent: v = j.jn.QUEST_BAR_V2,
+                sourceQuestContent: S,
+            } = e,
             N = (function (e, t) {
                 if (null == e) return {};
                 var r,
@@ -136,34 +145,45 @@ let S = (e) => {
                             n,
                             s = {},
                             o = Object.keys(e);
-                        for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (s[r] = e[r]));
+                        for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (s[r] = e[r]);
                         return s;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]));
+                    for (n = 0; n < o.length; n++)
+                        (r = o[n]),
+                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]);
                 }
                 return s;
-            })(e, ['quest', 'useReducedMotion', 'isExpanded', 'className', 'ctaLabel', 'onClick', 'questContent', 'sourceQuestContent']);
+            })(e, [
+                "quest",
+                "useReducedMotion",
+                "isExpanded",
+                "className",
+                "ctaLabel",
+                "onClick",
+                "questContent",
+                "sourceQuestContent",
+            ]);
         let E = (0, b.hf)({
                 quest: d,
                 questContent: v,
-                sourceQuestContent: S
+                sourceQuestContent: S,
             }),
             A = s.useCallback(
                 (e) => {
                     var t;
-                    (null == m || m(e),
+                    null == m || m(e),
                         (0, p.xN)(d.config) && (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, u.mK)({
                                   openInLayer: !1,
                                   tab: y.AW.ORBS,
                                   analyticsLocations: [],
-                                  analyticsSource: a.Z.QUEST_HOME_PAGE
+                                  analyticsSource: a.Z.QUEST_HOME_PAGE,
                               })
-                            : E());
+                            : E();
                 },
-                [m, d.config, null == (o = d.userStatus) ? void 0 : o.claimedAt, E]
+                [m, d.config, null == (o = d.userStatus) ? void 0 : o.claimedAt, E],
             );
         return (0, n.jsx)(
             i.gtL,
@@ -174,9 +194,9 @@ let S = (e) => {
                     onClick: A,
                     pauseAnimation: f || !x,
                     className: l()(O.cta, g),
-                    buttonShineClassName: O.shine
+                    buttonShineClassName: O.shine,
                 },
-                N
+                N,
             )),
             (r = r = { children: null != h ? h : C.intl.string(C.t.cfY4PD) }),
             Object.getOwnPropertyDescriptors
@@ -191,12 +211,22 @@ let S = (e) => {
                   })(Object(r)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                   }),
-            t)
+            t),
         );
     },
     z = (e) => {
         var t;
-        let { quest: r, sourceQuestContent: s, useReducedMotion: o, isExpanded: l, awaitingConsoleConnections: c, hasMadeProgress: i, isProgressing: a, activeScreen: u, taskDetails: d } = e,
+        let {
+                quest: r,
+                sourceQuestContent: s,
+                useReducedMotion: o,
+                isExpanded: l,
+                awaitingConsoleConnections: c,
+                hasMadeProgress: i,
+                isProgressing: a,
+                activeScreen: u,
+                taskDetails: d,
+            } = e,
             f = (null == (t = r.userStatus) ? void 0 : t.completedAt) != null,
             x = (0, p.q8)(r),
             g = (0, p.Vl)(r);
@@ -205,43 +235,43 @@ let S = (e) => {
                 quest: r,
                 sourceQuestContent: s,
                 useReducedMotion: o,
-                isExpanded: l
+                isExpanded: l,
             });
         if (x)
             return (0, n.jsx)(v, {
                 quest: r,
                 sourceQuestContent: s,
-                taskDetails: d
+                taskDetails: d,
             });
         if (g) return (0, n.jsx)(E, { quest: r });
         if (u === j.LI.CONSOLE && c)
             return (0, n.jsx)(N, {
                 quest: r,
-                sourceQuestContent: s
+                sourceQuestContent: s,
             });
         if (u !== j.LI.SELECT && !i && !a)
             return (0, n.jsx)(S, {
                 quest: r,
-                sourceQuestContent: s
+                sourceQuestContent: s,
             });
         return null;
     };
 function w(e) {
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: O.ctaButtons,
         children: [
             e.showBackButton &&
                 (0, n.jsx)(c.zx, {
                     className: O.backButton,
                     innerClassName: O.backButtonInner,
-                    look: 'blank',
+                    look: "blank",
                     grow: !1,
                     fullWidth: !1,
-                    size: 'none',
+                    size: "none",
                     onClick: e.onBack,
-                    children: (0, n.jsx)(i.V7D, { className: O.backIcon })
+                    children: (0, n.jsx)(i.V7D, { className: O.backIcon }),
                 }),
-            (0, n.jsx)(z, k({}, e))
-        ]
+            (0, n.jsx)(z, k({}, e)),
+        ],
     });
 }

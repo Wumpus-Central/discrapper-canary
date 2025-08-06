@@ -10,13 +10,13 @@ var i = n(481060),
 function u(e) {
     let { userId: t, isHovering: n, onOpenProfile: u } = e,
         { note: d } = (0, o.Z)(t),
-        f = null != d && '' !== d;
+        f = null != d && "" !== d;
     return (0, r.jsx)(a.y, {
-        action: 'PRESS_ADD_NOTE',
+        action: "PRESS_ADD_NOTE",
         icon: f ? i.hH0 : i.Wos,
-        tooltipText: f ? d : l.intl.string(l.t['1ZZttr']),
+        tooltipText: f ? d : l.intl.string(l.t["1ZZttr"]),
         tooltipClassName: f ? c.tooltip : void 0,
         isHovering: n,
-        onClick: () => (null == u ? void 0 : u({ subsection: s.Tb.NOTE }))
+        onClick: () => (null == u ? void 0 : u({ subsection: s.Tb.NOTE })),
     });
 }

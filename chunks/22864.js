@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var l = n(348327),
     a = n.n(l),
     s = n(442837),
@@ -16,10 +16,10 @@ function c(e) {
                 return Array.from(null != (e = null == t ? void 0 : t.values()) ? e : []);
             },
             [l, c, d.emoji],
-            a()
+            a(),
         );
     return {
         reactors: u,
-        hasMore: (null != (n = null == (t = d.count_details) ? void 0 : t.vote) ? n : 0) > u.length
+        hasMore: (null != (n = null == (t = d.count_details) ? void 0 : t.vote) ? n : 0) > u.length,
     };
 }

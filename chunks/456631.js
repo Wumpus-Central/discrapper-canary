@@ -1,10 +1,10 @@
 let r;
-(n.d(t, {
+n.d(t, {
     H: () => m,
-    Z: () => N
+    Z: () => N,
 }),
     n(388685),
-    n(290780));
+    n(290780);
 var i,
     o = n(392711),
     a = n(442837),
@@ -20,7 +20,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,8 +32,8 @@ let _ = [],
     m = (e) => {
         null != e &&
             l.Z.dispatch({
-                type: 'VOICE_CHANNEL_EFFECT_CLEAR',
-                userId: e
+                type: "VOICE_CHANNEL_EFFECT_CLEAR",
+                userId: e,
             });
     },
     g = [],
@@ -53,7 +53,7 @@ let _ = [],
     },
     v = (0, o.debounce)(() => {
         let e = (0, u.cX)(h);
-        (s.uv.announce(e, 'polite'), (h = []));
+        s.uv.announce(e, "polite"), (h = []);
     }, 500),
     I = (e) => {
         let { emoji: t, userId: n, animationType: r } = e;
@@ -62,20 +62,20 @@ let _ = [],
             ((p[n] = {
                 emoji: t,
                 sentAt: Date.now(),
-                animationType: r
+                animationType: r,
             }),
             (h = [
                 ...h,
                 {
                     emojiName: t.name,
-                    userId: n
-                }
+                    userId: n,
+                },
             ]),
             v());
     },
     T = (e) => {
         let { emoji: t } = e;
-        null != t && (_.unshift(t), (_ = (0, o.uniqBy)(_, 'name')).length > d.e5 + 1 && _.pop());
+        null != t && (_.unshift(t), (_ = (0, o.uniqBy)(_, "name")).length > d.e5 + 1 && _.pop());
     },
     S = (e) => {
         let { userId: t } = e;
@@ -95,11 +95,11 @@ class A extends (i = a.ZP.Store) {
         return p[e];
     }
 }
-f(A, 'displayName', 'VoiceChannelEffectsStore');
+f(A, "displayName", "VoiceChannelEffectsStore");
 let N = new A(l.Z, {
     VOICE_CHANNEL_EFFECT_CLEAR: S,
     VOICE_CHANNEL_EFFECT_RECENT_EMOJI: T,
     VOICE_CHANNEL_EFFECT_SEND: I,
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: y,
-    VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: O
+    VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: O,
 });

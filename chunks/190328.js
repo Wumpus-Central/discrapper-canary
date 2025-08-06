@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(953529));
+n.d(t, { Z: () => x }), n(953529);
 var r = n(255367),
     s = n(120356),
     o = n.n(s),
@@ -15,10 +15,21 @@ var r = n(255367),
     b = n(67190),
     y = n(225893);
 function h(e) {
-    let { name: t, description: n, pointsDescription: s, points: o, cost: f, iconSrc: m, currentPoints: h, onPurchase: x, itemId: v, upgradeId: O } = e,
+    let {
+            name: t,
+            description: n,
+            pointsDescription: s,
+            points: o,
+            cost: f,
+            iconSrc: m,
+            currentPoints: h,
+            onPurchase: x,
+            itemId: v,
+            upgradeId: O,
+        } = e,
         j = (0, a.e7)([i.Z], () => (null != O ? i.Z.getNumPurchasesForItemUpgrade(v, O) : 0)) + 1,
-        N = 'string' == typeof t ? t : g.intl.format(t, { numPurchasing: j }),
-        P = 'string' == typeof t ? t : g.intl.formatToPlainString(t, { numPurchasing: j });
+        N = "string" == typeof t ? t : g.intl.format(t, { numPurchasing: j }),
+        P = "string" == typeof t ? t : g.intl.formatToPlainString(t, { numPurchasing: j });
     return (0, r.jsx)(d.Z, {
         text: (0, r.jsx)(p.Z, {
             name: N,
@@ -27,12 +38,12 @@ function h(e) {
                 0 !== o
                     ? g.intl.format(s, {
                           points: o,
-                          grassIconHook: c.Z
+                          grassIconHook: c.Z,
                       })
-                    : null
+                    : null,
         }),
-        borderColor: 'green',
-        'aria-label': P,
+        borderColor: "green",
+        "aria-label": P,
         children: (e) => {
             var t, n;
             return (0, r.jsxs)(
@@ -41,24 +52,24 @@ function h(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -68,22 +79,22 @@ function h(e) {
                         disabled: h < f,
                         className: b.upgrade,
                         children: [
-                            (0, r.jsx)('img', {
+                            (0, r.jsx)("img", {
                                 className: b.upgradeIcon,
                                 src: m,
-                                alt: ''
+                                alt: "",
                             }),
-                            (0, r.jsx)('img', {
+                            (0, r.jsx)("img", {
                                 className: b.pointsIcon,
                                 src: y,
-                                alt: ''
+                                alt: "",
                             }),
                             (0, r.jsx)(u.Z, {
-                                variant: 'text-md/medium',
-                                color: 'currentColor',
-                                children: f
-                            })
-                        ]
+                                variant: "text-md/medium",
+                                color: "currentColor",
+                                children: f,
+                            }),
+                        ],
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -97,9 +108,9 @@ function h(e) {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
+                t),
             );
-        }
+        },
     });
 }
 function x(e) {
@@ -107,6 +118,6 @@ function x(e) {
     return (0, r.jsx)(f.Z, {
         className: o()(t, b.shop),
         purchasePriority: m.h0,
-        PurchasableComponent: h
+        PurchasableComponent: h,
     });
 }

@@ -1,19 +1,19 @@
 n.d(t, {
     C3: () => o,
-    GW: () => i
+    GW: () => i,
 });
 let r = (0, n(818083).B)({
-    kind: 'user',
-    id: '2024-08_keyword_filter_upsells',
-    label: 'Language Filter Upsells',
+    kind: "user",
+    id: "2024-08_keyword_filter_upsells",
+    label: "Language Filter Upsells",
     defaultConfig: { enabled: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Enable Upsell for Keyword Language Filters',
-            config: { enabled: !0 }
-        }
-    ]
+            label: "Enable Upsell for Keyword Language Filters",
+            config: { enabled: !0 },
+        },
+    ],
 });
 function i(e) {
     let { location: t } = e,

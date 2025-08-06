@@ -1,4 +1,4 @@
-(n.d(t, { o: () => m }), n(388685));
+n.d(t, { o: () => m }), n(388685);
 var r,
     i = n(255367),
     o = n(73800),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,7 +61,7 @@ function p(e, t) {
 }
 let h = {
     friction: 7,
-    tension: 60
+    tension: 60,
 };
 class m extends (r = o.Component) {
     componentWillAppear(e) {
@@ -87,10 +87,10 @@ class m extends (r = o.Component) {
                       {
                           translateY: this.animation.interpolate({
                               inputRange: [0, 1],
-                              outputRange: ['150%', '0%']
-                          })
-                      }
-                  ]
+                              outputRange: ["150%", "0%"],
+                          }),
+                      },
+                  ],
         });
     }
     render() {
@@ -98,11 +98,11 @@ class m extends (r = o.Component) {
         return (0, i.jsx)(l.Z.div, {
             className: s()(e, u.slider),
             style: this.getAnimatedStyle(),
-            children: t
+            children: t,
         });
     }
     constructor(...e) {
-        (super(...e), d(this, 'animation', new l.Z.Value(0)));
+        super(...e), d(this, "animation", new l.Z.Value(0));
     }
 }
-d(m, 'contextType', c.Sfi);
+d(m, "contextType", c.Sfi);

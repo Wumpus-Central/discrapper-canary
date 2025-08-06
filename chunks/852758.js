@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685));
+n.d(t, { Z: () => P }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(990547),
@@ -25,24 +25,24 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -67,7 +67,7 @@ function _(e, t) {
 function P() {
     let { action: e, theme: t } = (0, l.cj)([b.Z, h.Z], () => ({
             action: b.Z.getAction(),
-            theme: h.Z.theme
+            theme: h.Z.theme,
         })),
         P = E.Z.getVerificationTypes(e),
         [N, R] = i.useState(0),
@@ -78,24 +78,24 @@ function P() {
             name: a.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
                 verification_type: P[0],
-                verification_types: P
-            }
+                verification_types: P,
+            },
         },
         {},
-        [P.toString()]
+        [P.toString()],
     );
     let C = () => {
-            ((0, d.FD)(),
+            (0, d.FD)(),
                 (0, c.ZDy)(
                     async () => {
-                        let { default: e } = await n.e('35401').then(n.bind(n, 284549));
+                        let { default: e } = await n.e("35401").then(n.bind(n, 284549));
                         return (t) => (0, r.jsx)(e, A({}, t));
                     },
                     {
                         modalKey: j.F0,
-                        Layer: g.ZP
-                    }
-                ));
+                        Layer: g.ZP,
+                    },
+                );
         },
         I = () => {
             (0, c.ZDy)(
@@ -105,8 +105,8 @@ function P() {
                 },
                 {
                     modalKey: w.M,
-                    Layer: g.ZP
-                }
+                    Layer: g.ZP,
+                },
             );
         };
     return (
@@ -117,7 +117,7 @@ function P() {
                     p.Z.enable();
                 }
             ),
-            []
+            [],
         ),
         i.useEffect(() => {
             (null == S ? void 0 : S[0]) === O.PUi.PHONE &&
@@ -131,15 +131,15 @@ function P() {
                                 _(A({}, t), {
                                     title: x.intl.string(x.t.KLnLIC),
                                     body: x.intl.string(x.t.XGbCq6),
-                                    confirmText: x.intl.string(x.t['3oK4q6'])
-                                })
+                                    confirmText: x.intl.string(x.t["3oK4q6"]),
+                                }),
                             );
                     },
                     {
                         modalKey: j.HR,
                         Layer: g.ZP,
-                        onCloseCallback: C
-                    }
+                        onCloseCallback: C,
+                    },
                 );
         }, [P, S]),
         (0, r.jsx)(v.Z, {
@@ -151,7 +151,7 @@ function P() {
                         url: O.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
-                        rejectWithError: !0
+                        rejectWithError: !0,
                     })
                     .then(u.xf, () => {
                         R((e) => e + 1);
@@ -171,25 +171,25 @@ function P() {
                                 _(
                                     A(
                                         {
-                                            header: x.intl.string(x.t['2jxGen']),
-                                            confirmText: x.intl.string(x.t['2jxGen']),
-                                            cancelText: x.intl.string(x.t['ETE/oK']),
-                                            onConfirm: () => s.Z.logout('verification')
+                                            header: x.intl.string(x.t["2jxGen"]),
+                                            confirmText: x.intl.string(x.t["2jxGen"]),
+                                            cancelText: x.intl.string(x.t["ETE/oK"]),
+                                            onConfirm: () => s.Z.logout("verification"),
                                         },
-                                        n
+                                        n,
                                     ),
                                     {
                                         children: (0, r.jsx)(t, {
-                                            variant: 'text-md/normal',
-                                            children: x.intl.string(x.t.SUnWBA)
-                                        })
-                                    }
-                                )
+                                            variant: "text-md/normal",
+                                            children: x.intl.string(x.t.SUnWBA),
+                                        }),
+                                    },
+                                ),
                             );
                     },
-                    { Layer: g.ZP }
+                    { Layer: g.ZP },
                 );
-            }
+            },
         })
     );
 }

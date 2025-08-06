@@ -6,7 +6,7 @@ var r = n(442837),
 function s(e, t) {
     let { enableHangStatus: n } = o.n.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
-            location: e
+            location: e,
         }),
         s = (0, r.e7)([i.Z], () => i.Z.can(a.Pl.CONNECT, t));
     return n && s;

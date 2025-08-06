@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,7 +39,8 @@ function c(e, t) {
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -49,15 +50,15 @@ function u(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function d(e, t, n, r) {
     return e.getAvatarURL(r, t, n);
 }
 let f = i.memo(function (e) {
-    var { user: t, size: n = o.EFr.SIZE_32, animate: s = !1, 'aria-hidden': u = !1 } = e,
-        f = c(e, ['user', 'size', 'animate', 'aria-hidden']);
+    var { user: t, size: n = o.EFr.SIZE_32, animate: s = !1, "aria-hidden": u = !1 } = e,
+        f = c(e, ["user", "size", "animate", "aria-hidden"]);
     let _ = i.useContext(a.Z);
     return (0, r.jsx)(
         o.qEK,
@@ -65,10 +66,10 @@ let f = i.memo(function (e) {
             {
                 src: d(t, (0, o.pxk)(n), s, _),
                 size: n,
-                'aria-label': u ? void 0 : t.username,
-                'aria-hidden': u
+                "aria-label": u ? void 0 : t.username,
+                "aria-hidden": u,
             },
-            f
-        )
+            f,
+        ),
     );
 });

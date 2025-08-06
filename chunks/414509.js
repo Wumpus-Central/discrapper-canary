@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Fd: () => E,
-    ZP: () => v
+    ZP: () => v,
 }),
-    n(388685));
+    n(388685);
 var r = n(147913),
     i = n(592125),
     o = n(19780),
@@ -19,7 +19,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -42,7 +42,7 @@ function h(e) {
             (0, c.O)({
                 channelId: t,
                 blockedUserIds: e,
-                ignoredUserIds: r
+                ignoredUserIds: r,
             });
     }
 }
@@ -71,11 +71,11 @@ class O extends r.Z {
         e === n && null != i.Z.getChannel(e) && (b(t) || (0, u.H)(n, t));
     }
     constructor(...e) {
-        (super(...e),
-            d(this, 'actions', {
+        super(...e),
+            d(this, "actions", {
                 CHANNEL_SELECT: h,
-                APP_STATE_UPDATE: m
-            }));
+                APP_STATE_UPDATE: m,
+            });
     }
 }
 let v = new O();

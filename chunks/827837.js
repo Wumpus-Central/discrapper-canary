@@ -12,11 +12,11 @@ async function c() {
             let e = await r.tn.get({
                 url: s.ANM.USER_ACTIVITY_STATISTICS,
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             });
             i.Z.dispatch({
-                type: 'USER_ACTIVITY_STATISTICS_FETCH_SUCCESS',
-                statistics: e.body
+                type: "USER_ACTIVITY_STATISTICS_FETCH_SUCCESS",
+                statistics: e.body,
             });
         } catch (e) {
             return e;

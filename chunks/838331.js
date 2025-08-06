@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     A7: () => A,
     hQ: () => R,
-    lo: () => w
+    lo: () => w,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -25,7 +25,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,11 +51,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,7 +77,8 @@ function O(e, t) {
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -87,14 +88,14 @@ function v(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let I = 'data-listbox-item-id',
+let I = "data-listbox-item-id",
     T = 40,
     S = Object.freeze({
         STANDARD: m.selected,
-        BRAND: m.selectedBrand
+        BRAND: m.selectedBrand,
     });
 function A(e) {
     let [t, n] = i.useState(() => new Set(e));
@@ -103,9 +104,9 @@ function A(e) {
         i.useCallback((e) => {
             n((t) => {
                 let n = new Set(t);
-                return (n.has(e) ? n.delete(e) : n.add(e), n);
+                return n.has(e) ? n.delete(e) : n.add(e), n;
             });
-        }, [])
+        }, []),
     ];
 }
 function N(e) {
@@ -115,23 +116,36 @@ let C = i.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
-    itemToString: N
+    itemToString: N,
 });
 function R(e) {
-    let { placeholder: t, children: n, value: o, onChange: c, className: u, listClassName: g, 'aria-label': b, multiSelect: v = !1, autoFocus: S = !1, maxVisibleItems: A = 5, itemToString: R = N, showScrollbar: P = !1 } = e,
-        [w, D] = i.useState(''),
+    let {
+            placeholder: t,
+            children: n,
+            value: o,
+            onChange: c,
+            className: u,
+            listClassName: g,
+            "aria-label": b,
+            multiSelect: v = !1,
+            autoFocus: S = !1,
+            maxVisibleItems: A = 5,
+            itemToString: R = N,
+            showScrollbar: P = !1,
+        } = e,
+        [w, D] = i.useState(""),
         [L] = i.useState(!0),
         [x, M] = i.useState(null),
         k = i.useId(),
         j = i.useRef(null);
     i.useLayoutEffect(() => {
-        let e = document.querySelector('['.concat(I, '="').concat(x, '"]')),
+        let e = document.querySelector("[".concat(I, '="').concat(x, '"]')),
             t = j.current;
         null != t &&
             null != e &&
             t.scrollIntoViewNode({
                 node: e,
-                padding: 12
+                padding: 12,
             });
     }, [x]);
     let U = n(w),
@@ -144,7 +158,7 @@ function R(e) {
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            []
+            [],
         ),
         F = i.useCallback(
             () =>
@@ -153,7 +167,7 @@ function R(e) {
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            []
+            [],
         ),
         V = i.useCallback((e, t) => {
             M(t);
@@ -167,7 +181,7 @@ function R(e) {
             useVirtualFocus: !0,
             scrollToStart: Z,
             scrollToEnd: F,
-            setFocus: V
+            setFocus: V,
         }),
         Y = P ? d.Tv : d.lW;
     return (0, r.jsx)(l.bG, {
@@ -175,15 +189,15 @@ function R(e) {
         children: (0, r.jsx)(l.SJ, {
             children: (e) => {
                 var { ref: n, onKeyDown: i } = e,
-                    s = O(e, ['ref', 'onKeyDown']);
-                return (0, r.jsxs)('div', {
+                    s = O(e, ["ref", "onKeyDown"]);
+                return (0, r.jsxs)("div", {
                     ref: n,
-                    role: 'combobox',
-                    'aria-label': b,
-                    'aria-expanded': L,
-                    'aria-controls': L ? k : void 0,
-                    'aria-owns': k,
-                    'aria-haspopup': 'listbox',
+                    role: "combobox",
+                    "aria-label": b,
+                    "aria-expanded": L,
+                    "aria-controls": L ? k : void 0,
+                    "aria-owns": k,
+                    "aria-haspopup": "listbox",
                     className: a()(m.combobox, u),
                     children: [
                         (0, r.jsx)(f.E, {
@@ -193,43 +207,43 @@ function R(e) {
                             onChange: D,
                             onKeyDown: i,
                             onBlur: () => M(null),
-                            onClear: () => D(''),
+                            onClear: () => D(""),
                             className: a()({ [m.searchWithScrollbar]: P }),
                             inputProps: {
-                                'aria-multiline': !1,
-                                'aria-activedescendant': null != x ? x : void 0
-                            }
+                                "aria-multiline": !1,
+                                "aria-activedescendant": null != x ? x : void 0,
+                            },
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             children:
                                 L &&
                                 (G
-                                    ? (0, r.jsxs)('div', {
+                                    ? (0, r.jsxs)("div", {
                                           className: m.empty,
                                           children: [
                                               (0, r.jsx)(p.X6q, {
-                                                  variant: 'heading-md/semibold',
-                                                  children: h.intl.string(h.t['4o4z3d'])
+                                                  variant: "heading-md/semibold",
+                                                  children: h.intl.string(h.t["4o4z3d"]),
                                               }),
                                               (0, r.jsx)(_.x, {
-                                                  color: 'text-muted',
-                                                  variant: 'text-md/normal',
-                                                  children: h.intl.string(h.t.QwSXv7)
-                                              })
-                                          ]
+                                                  color: "text-muted",
+                                                  variant: "text-md/normal",
+                                                  children: h.intl.string(h.t.QwSXv7),
+                                              }),
+                                          ],
                                       })
                                     : (0, r.jsx)(C.Provider, {
                                           value: {
                                               activeDescendant: x,
                                               selected: o,
                                               setSelected: c,
-                                              itemToString: R
+                                              itemToString: R,
                                           },
                                           children: (0, r.jsx)(
                                               Y,
                                               y(E({}, s), {
                                                   style: { maxHeight: A * (T + 6) },
-                                                  'aria-multiselectable': v,
+                                                  "aria-multiselectable": v,
                                                   id: k,
                                                   ref: j,
                                                   className: a()(m.list, g, { [m.scroller]: P }),
@@ -240,22 +254,22 @@ function R(e) {
                                                       let { row: t } = e;
                                                       return U[t];
                                                   },
-                                                  renderSection: () => null
-                                              })
-                                          )
-                                      }))
-                        })
-                    ]
+                                                  renderSection: () => null,
+                                              }),
+                                          ),
+                                      })),
+                        }),
+                    ],
                 });
-            }
-        })
+            },
+        }),
     });
 }
 let P = i.createContext(null);
 function w(e) {
     var t,
         { value: n, children: o, disabled: s = !1, selectedColor: c = S.STANDARD } = e,
-        d = O(e, ['value', 'children', 'disabled', 'selectedColor']);
+        d = O(e, ["value", "children", "disabled", "selectedColor"]);
     let { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(C),
         g = h(n),
         b = f === g,
@@ -266,71 +280,71 @@ function w(e) {
         y(
             E(
                 {
-                    tag: 'li',
+                    tag: "li",
                     id: g,
                     onClick: () => (s ? null : p(n)),
                     [I]: n,
                     className: a()(m.item, {
                         [m.focused]: b,
                         [c]: v,
-                        [m.disabled]: s
-                    })
+                        [m.disabled]: s,
+                    }),
                 },
-                T
+                T,
             ),
             {
-                role: 'option',
-                'aria-selected': v,
-                'aria-disabled': s,
+                role: "option",
+                "aria-selected": v,
+                "aria-disabled": s,
                 children: (0, r.jsx)(P.Provider, {
                     value: n,
-                    children: o
-                })
-            }
-        )
+                    children: o,
+                }),
+            },
+        ),
     );
 }
-((w.Colors = S),
+(w.Colors = S),
     (w.Label = function (e) {
         let { children: t } = e;
-        return (0, r.jsx)('span', {
+        return (0, r.jsx)("span", {
             className: m.itemLabel,
-            children: t
+            children: t,
         });
     }),
     (w.Icon = function (e) {
         let { children: t } = e;
-        return (0, r.jsx)('span', {
+        return (0, r.jsx)("span", {
             className: m.itemCheckbox,
-            children: t
+            children: t,
         });
     }),
     (w.Checkbox = function (e) {
         let { checked: t } = e,
             { selected: n } = i.useContext(C),
             o = i.useContext(P);
-        return (0, r.jsx)('span', {
+        return (0, r.jsx)("span", {
             className: m.itemCheckbox,
             children: (0, r.jsx)(c.X, {
                 displayOnly: !0,
                 value: null != t ? t : null != o && n.has(o),
                 type: c.X.Types.INVERTED,
-                size: 20
-            })
+                size: 20,
+            }),
         });
     }),
     (w.Checkmark = function () {
         let { selected: e } = i.useContext(C),
             t = i.useContext(P);
         return e.has(t)
-            ? (0, r.jsx)('span', {
+            ? (0, r.jsx)("span", {
                   className: m.itemCheckbox,
                   children: (0, r.jsx)(p.owK, {
-                      size: 'custom',
-                      color: 'currentColor',
+                      size: "custom",
+                      color: "currentColor",
                       width: 20,
-                      height: 20
-                  })
+                      height: 20,
+                  }),
               })
             : null;
-    }));
+    });

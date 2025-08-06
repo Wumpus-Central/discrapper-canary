@@ -1,1 +1,1 @@
-e.exports = { canvasWrapper: 'canvasWrapper_f7aebd' };
+e.exports = { canvasWrapper: "canvasWrapper_f7aebd" };

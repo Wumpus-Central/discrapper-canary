@@ -1,7 +1,7 @@
 n.d(t, {
     K5: () => s,
     g2: () => a,
-    rK: () => u
+    rK: () => u,
 });
 var r = n(868635),
     i = n(816383),
@@ -13,18 +13,18 @@ function a(e) {
         r = n.top;
     return {
         x: n.left,
-        y: r
+        y: r,
     };
 }
 function s(e) {
     return {
         x: e.clientX,
-        y: e.clientY
+        y: e.clientY,
     };
 }
 function l(e) {
     var t;
-    return 'IMG' === e.nodeName && ((0, r.v)() || !(null != (t = document.documentElement) && t.contains(e)));
+    return "IMG" === e.nodeName && ((0, r.v)() || !(null != (t = document.documentElement) && t.contains(e)));
 }
 function c(e, t, n, i) {
     var o = e ? t.width : n,
@@ -33,7 +33,7 @@ function c(e, t, n, i) {
         (0, r.G)() && e && ((a /= window.devicePixelRatio), (o /= window.devicePixelRatio)),
         {
             dragPreviewWidth: o,
-            dragPreviewHeight: a
+            dragPreviewHeight: a,
         }
     );
 }
@@ -42,7 +42,7 @@ function u(e, t, n, o, s) {
         d = a(u ? e : t),
         f = {
             x: n.x - d.x,
-            y: n.y - d.y
+            y: n.y - d.y,
         },
         _ = e.offsetWidth,
         p = e.offsetHeight,
@@ -53,7 +53,7 @@ function u(e, t, n, o, s) {
         b = g.dragPreviewHeight,
         y = function () {
             var e = new i.I([0, 0.5, 1], [f.y, (f.y / p) * b, f.y + b - p]).interpolate(m);
-            return ((0, r.G)() && u && (e += (window.devicePixelRatio - 1) * b), e);
+            return (0, r.G)() && u && (e += (window.devicePixelRatio - 1) * b), e;
         },
         O = function () {
             return new i.I([0, 0.5, 1], [f.x, (f.x / _) * E, f.x + E - _]).interpolate(h);
@@ -63,6 +63,6 @@ function u(e, t, n, o, s) {
         T = 0 === I || I;
     return {
         x: 0 === v || v ? v : O(),
-        y: T ? I : y()
+        y: T ? I : y(),
     };
 }

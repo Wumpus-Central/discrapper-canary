@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => v }), r(314940));
+r.d(t, { Z: () => v }), r(314940);
 var n = r(255367),
     i = r(73800),
     l = r(120356),
@@ -16,24 +16,24 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -65,65 +65,70 @@ function j(e, t) {
                 n,
                 i = {},
                 l = Object.keys(e);
-            for (n = 0; n < l.length; n++) ((r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
+            for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < l.length; n++) ((r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
+        for (n = 0; n < l.length; n++)
+            (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     }
     return i;
 }
 let y = () => 80,
     x = (e) => {
         var { children: t, className: r, isSelected: i = !1 } = e,
-            l = j(e, ['children', 'className', 'isSelected']);
+            l = j(e, ["children", "className", "isSelected"]);
         return (0, n.jsx)(
             c.P3F,
             b(h({ className: o()(m.effectGridItem, r, { [m.selected]: i }) }, l), {
                 onClick: l.onSelect,
-                children: t
-            })
+                children: t,
+            }),
         );
     },
     O = (e) => {
         var t,
             { profileEffect: r, innerRef: l, section: o, isSelected: s, canUsePremiumCollectibles: c } = e,
-            u = j(e, ['profileEffect', 'innerRef', 'section', 'isSelected', 'canUsePremiumCollectibles']);
+            u = j(e, ["profileEffect", "innerRef", "section", "isSelected", "canUsePremiumCollectibles"]);
         let p = (0, d.V)(r.id),
             y = i.useRef(null),
-            { accessibilityLabel: O, thumbnailPreviewSrc: v, title: P } = null != (t = null == p ? void 0 : p.config) ? t : {};
+            {
+                accessibilityLabel: O,
+                thumbnailPreviewSrc: v,
+                title: P,
+            } = null != (t = null == p ? void 0 : p.config) ? t : {};
         return (0, n.jsxs)(
             x,
             b(
                 h(
                     {
                         innerRef: null != l ? l : y,
-                        isSelected: s
+                        isSelected: s,
                     },
-                    u
+                    u,
                 ),
                 {
                     children: [
-                        (0, n.jsx)('img', {
+                        (0, n.jsx)("img", {
                             src: g,
                             alt: O,
-                            className: m.presetEffectBackground
+                            className: m.presetEffectBackground,
                         }),
-                        (0, n.jsx)('img', {
+                        (0, n.jsx)("img", {
                             className: m.presetEffectImg,
                             src: v,
-                            alt: P
+                            alt: P,
                         }),
                         (0, n.jsx)(a.Z, {
                             isPurchaseSection: o === f.$0.PURCHASE,
                             isPremiumSection: o === f.$0.PREMIUM_PURCHASE,
                             canUsePremiumCollectibles: c,
-                            skuId: r.skuId
-                        })
-                    ]
-                }
-            )
+                            skuId: r.skuId,
+                        }),
+                    ],
+                },
+            ),
         );
     },
     v = (e) => {
@@ -131,7 +136,7 @@ let y = () => 80,
             d = (0, f.ZP)(),
             g = null != i,
             j = u.ZP.canUseCollectibles(t);
-        return (0, n.jsx)('section', {
+        return (0, n.jsx)("section", {
             className: m.section,
             children: (0, n.jsx)(c.GMG, {
                 fade: !0,
@@ -157,19 +162,19 @@ let y = () => 80,
                                     onSelect: () => o(null),
                                     children: [
                                         (0, n.jsx)(c.t6m, {
-                                            size: 'md',
-                                            color: 'currentColor',
-                                            className: m.notAllowedIcon
+                                            size: "md",
+                                            color: "currentColor",
+                                            className: m.notAllowedIcon,
                                         }),
                                         (0, n.jsx)(c.Text, {
-                                            variant: 'text-xs/normal',
-                                            color: 'header-primary',
-                                            children: null != r ? p.intl.string(p.t.CHf9iI) : p.intl.string(p.t.PoWNfX)
-                                        })
-                                    ]
+                                            variant: "text-xs/normal",
+                                            color: "header-primary",
+                                            children: null != r ? p.intl.string(p.t.CHf9iI) : p.intl.string(p.t.PoWNfX),
+                                        }),
+                                    ],
                                 },
-                                b
-                            )
+                                b,
+                            ),
                         )
                         .with(f.oT, () =>
                             (0, n.jsxs)(
@@ -179,21 +184,21 @@ let y = () => 80,
                                     onSelect: a,
                                     children: [
                                         (0, n.jsx)(c.EOn, {
-                                            size: 'custom',
+                                            size: "custom",
                                             width: 23,
                                             height: 23,
-                                            color: 'currentColor',
-                                            className: m.shopIcon
+                                            color: "currentColor",
+                                            className: m.shopIcon,
                                         }),
                                         (0, n.jsx)(c.Text, {
-                                            variant: 'text-xs/normal',
-                                            color: 'header-primary',
-                                            children: p.intl.string(p.t.pWG4zc)
-                                        })
-                                    ]
+                                            variant: "text-xs/normal",
+                                            color: "header-primary",
+                                            children: p.intl.string(p.t.pWG4zc),
+                                        }),
+                                    ],
                                 },
-                                b
-                            )
+                                b,
+                            ),
                         )
                         .otherwise((e) => {
                             let t = i === e.id;
@@ -206,20 +211,20 @@ let y = () => 80,
                                     innerRef: t ? l : void 0,
                                     isSelected: t,
                                     onSelect: () => o(e.id),
-                                    canUsePremiumCollectibles: j
+                                    canUsePremiumCollectibles: j,
                                 },
-                                b
+                                b,
                             );
                         });
                 },
                 renderSection: (e, t) => {
                     let { header: r } = d[e];
-                    return (0, n.jsx)('div', {
+                    return (0, n.jsx)("div", {
                         style: b(h({}, t), {
-                            height: ''.concat(16, 'px'),
-                            position: 'absolute'
+                            height: "".concat(16, "px"),
+                            position: "absolute",
                         }),
-                        children: (0, n.jsx)(c.vwX, { children: r })
+                        children: (0, n.jsx)(c.vwX, { children: r }),
                     });
                 },
                 getSectionHeight: () => 16,
@@ -228,7 +233,7 @@ let y = () => 80,
                     return null != (n = null == (r = d[e].items[t]) ? void 0 : r.id) ? n : null;
                 },
                 getItemHeight: y,
-                removeEdgeItemGutters: !0
-            })
+                removeEdgeItemGutters: !0,
+            }),
         });
     };

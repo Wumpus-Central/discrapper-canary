@@ -17,7 +17,7 @@ let d = () => {
         : (0, r.jsx)(s.Z, {
               copy: c.intl.string(c.t.OejPtr),
               bannerImage: u,
-              textColor: 'text-invert',
-              hideGiftIcon: !0
+              textColor: "text-invert",
+              hideGiftIcon: !0,
           });
 };

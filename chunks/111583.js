@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -55,7 +55,7 @@ function O(e) {
     let i = Date.now(),
         o = 0.8 * m;
     if (null != r && (null != r.timeout || r.prevSend + o > i)) return !1;
-    let { delayMs: u } = (0, c.M1)('typing_store'),
+    let { delayMs: u } = (0, c.M1)("typing_store"),
         p = setTimeout(
             () => {
                 null != r &&
@@ -68,47 +68,47 @@ function O(e) {
                             .post({
                                 url: _.ANM.TYPING(t),
                                 oldFormErrors: !0,
-                                rejectWithError: !0
+                                rejectWithError: !0,
                             })
                             .then((e) => {
                                 if (200 === e.status) {
                                     var n, r;
                                     let i = null != (n = e.body.message_send_cooldown_ms) ? n : 0,
                                         o = null != (r = e.body.thread_create_cooldown_ms) ? r : 0;
-                                    (i > 0 &&
+                                    i > 0 &&
                                         s.Z.dispatch({
-                                            type: 'SLOWMODE_SET_COOLDOWN',
+                                            type: "SLOWMODE_SET_COOLDOWN",
                                             channelId: t,
                                             slowmodeType: f.S.SendMessage,
-                                            cooldownMs: i
+                                            cooldownMs: i,
                                         }),
                                         o > 0 &&
                                             s.Z.dispatch({
-                                                type: 'SLOWMODE_SET_COOLDOWN',
+                                                type: "SLOWMODE_SET_COOLDOWN",
                                                 channelId: t,
                                                 slowmodeType: f.S.CreateThread,
-                                                cooldownMs: o
-                                            }));
+                                                cooldownMs: o,
+                                            });
                                 }
                             }));
             },
-            null == r || r.prevSend > i - 2 * o ? u : 0
+            null == r || r.prevSend > i - 2 * o ? u : 0,
         );
     return (
         (r = {
             channelId: t,
             timeout: p,
-            prevSend: i
+            prevSend: i,
         }),
         S({
             channelId: t,
-            userId: n
+            userId: n,
         })
     );
 }
 function v(e) {
     if (null == r || r.channelId !== e) return !1;
-    (null != r.timeout && clearTimeout(r.timeout), (r = null));
+    null != r.timeout && clearTimeout(r.timeout), (r = null);
 }
 function I(e) {
     let { channelId: t } = e,
@@ -122,43 +122,43 @@ function I(e) {
         (r = null),
         A({
             channelId: t,
-            userId: n
+            userId: n,
         }))
     );
 }
 function T(e, t) {
     return setTimeout(() => {
         s.Z.dispatch({
-            type: 'TYPING_STOP',
+            type: "TYPING_STOP",
             channelId: e,
-            userId: t
+            userId: t,
         });
     }, m);
 }
 function S(e) {
     let { channelId: t, userId: n } = e,
         r = h({}, y(t));
-    (clearTimeout(r[n]), (r[n] = T(t, n)), (E[t] = r));
+    clearTimeout(r[n]), (r[n] = T(t, n)), (E[t] = r);
 }
 function A(e) {
     let { channelId: t, userId: n } = e,
         r = E[t];
     if (null == r || null == r[n]) return !1;
     let i = h({}, r);
-    (clearTimeout(i[n]), delete i[n], (E[t] = i));
+    clearTimeout(i[n]), delete i[n], (E[t] = i);
 }
 function N(e) {
     let {
         channelId: t,
         message: { author: n },
-        optimistic: r
+        optimistic: r,
     } = e;
     return (
         r && v(t),
         null != n &&
             A({
                 channelId: t,
-                userId: n.id
+                userId: n.id,
             })
     );
 }
@@ -177,7 +177,7 @@ class P extends (i = o.ZP.Store) {
         return null != y(e)[t];
     }
 }
-p(P, 'displayName', 'TypingStore');
+p(P, "displayName", "TypingStore");
 let w = new P(s.Z, {
     TYPING_START: S,
     TYPING_STOP: A,
@@ -185,5 +185,5 @@ let w = new P(s.Z, {
     TYPING_STOP_LOCAL: I,
     CONNECTION_OPEN: C,
     OVERLAY_INITIALIZE: C,
-    MESSAGE_CREATE: N
+    MESSAGE_CREATE: N,
 });

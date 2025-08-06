@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(953529));
+n.d(t, { Z: () => c }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -7,8 +7,18 @@ var i = n(120356),
     s = n(2150),
     o = n(727001);
 function c(e) {
-    let { title: t, description: n, action: i, highlightColor: c = s.q.NONE, selected: d = !1, subsection: u = null, onClick: m, className: g, disabled: p } = e;
-    return (0, r.jsxs)('div', {
+    let {
+        title: t,
+        description: n,
+        action: i,
+        highlightColor: c = s.q.NONE,
+        selected: d = !1,
+        subsection: u = null,
+        onClick: m,
+        className: g,
+        disabled: p,
+    } = e;
+    return (0, r.jsxs)("div", {
         className: l()(o.container, g),
         children: [
             (0, r.jsx)(a.P3F, {
@@ -16,46 +26,46 @@ function c(e) {
                     o.clickableContainer,
                     {
                         [o.noAction]: null == m,
-                        [o.disabled]: p
+                        [o.disabled]: p,
                     },
-                    g
+                    g,
                 ),
                 onClick: p ? void 0 : m,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: l()(o.backgroundModifierContainer, o[c], {
                         [o.selected]: d,
                         [o.disabled]: p,
-                        [o.noAction]: null == m
+                        [o.noAction]: null == m,
                     }),
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: o.settingsDescriptionContainer,
                             children: [
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-sm/medium',
-                                    color: 'interactive-active',
-                                    children: t
+                                    variant: "text-sm/medium",
+                                    color: "interactive-active",
+                                    children: t,
                                 }),
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-sm/normal',
-                                    color: 'interactive-normal',
+                                    variant: "text-sm/normal",
+                                    color: "interactive-normal",
                                     className: o.description,
-                                    children: n
-                                })
-                            ]
+                                    children: n,
+                                }),
+                            ],
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: o.__invalid_action,
-                            children: i
-                        })
-                    ]
-                })
+                            children: i,
+                        }),
+                    ],
+                }),
             }),
             null != u &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: o.subsectionContainer,
-                    children: u
-                })
-        ]
+                    children: u,
+                }),
+        ],
     });
 }

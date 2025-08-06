@@ -26,12 +26,12 @@ function m(e) {
                     i = e.getAvatarURL(t.guild_id, 24);
                 return (0, r.jsx)(s.DY3, {
                     text: n,
-                    children: (0, r.jsx)('img', {
+                    children: (0, r.jsx)("img", {
                         src: null != i ? i : void 0,
-                        'aria-label': e.username,
-                        alt: '',
-                        className: f.avatar
-                    })
+                        "aria-label": e.username,
+                        alt: "",
+                        className: f.avatar,
+                    }),
                 });
             },
             renderMoreUsers: (e) => {
@@ -43,43 +43,43 @@ function m(e) {
                         : 2 === e.length
                           ? u.intl.formatToPlainString(u.t.MlgLFx, {
                                 nickname0: d.ZP.getName(r, n, e[0]),
-                                nickname1: d.ZP.getName(r, n, e[1])
+                                nickname1: d.ZP.getName(r, n, e[1]),
                             })
                           : 3 === e.length
                             ? u.intl.formatToPlainString(u.t.sihix8, {
                                   nickname0: d.ZP.getName(r, n, e[0]),
                                   nickname1: d.ZP.getName(r, n, e[1]),
-                                  nickname2: d.ZP.getName(r, n, e[2])
+                                  nickname2: d.ZP.getName(r, n, e[2]),
                               })
-                            : u.intl.formatToPlainString(u.t['824IXV'], {
+                            : u.intl.formatToPlainString(u.t["824IXV"], {
                                   nickname0: d.ZP.getName(r, n, e[0]),
                                   nickname1: d.ZP.getName(r, n, e[1]),
-                                  remainingCount: e.length - 2
+                                  remainingCount: e.length - 2,
                               });
                 })(n.slice(4), t);
-                return (0, r.jsx)('div', {
+                return (0, r.jsx)("div", {
                     children: (0, r.jsx)(s.DY3, {
                         text: i,
-                        children: (0, r.jsx)('div', {
+                        children: (0, r.jsx)("div", {
                             className: f.userListOverflow,
-                            children: e
-                        })
-                    })
+                            children: e,
+                        }),
+                    }),
                 });
             },
             max: 5,
-            showUserPopout: !1
+            showUserPopout: !1,
         }));
     let p = (0, c.KS)(t);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l()(f.channelInfo, { [f.selected]: i }),
         children: [
             (0, r.jsx)(p, { className: f.channelIcon }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: f.channelName,
-                children: m
+                children: m,
             }),
-            h
-        ]
+            h,
+        ],
     });
 }

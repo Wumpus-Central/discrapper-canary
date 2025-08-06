@@ -5,7 +5,7 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -15,15 +15,15 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 r(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -31,11 +31,11 @@ function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -50,22 +50,40 @@ function a(e, t) {
         e
     );
 }
-(n.d(t, {
+n.d(t, {
     Hn: () => s,
     JR: () => d,
     oZ: () => l,
     qi: () => c,
-    u4: () => f
+    u4: () => f,
 }),
-    n(388685));
+    n(388685);
 var s = (function (e) {
-        return ((e[(e.CHAT_INPUT = 0)] = 'CHAT_INPUT'), (e[(e.REACTION = 1)] = 'REACTION'), (e[(e.MEMBER_USER = 2)] = 'MEMBER_USER'), (e[(e.CALL_TILE = 3)] = 'CALL_TILE'), e);
+        return (
+            (e[(e.CHAT_INPUT = 0)] = "CHAT_INPUT"),
+            (e[(e.REACTION = 1)] = "REACTION"),
+            (e[(e.MEMBER_USER = 2)] = "MEMBER_USER"),
+            (e[(e.CALL_TILE = 3)] = "CALL_TILE"),
+            e
+        );
     })({}),
     l = (function (e) {
-        return ((e[(e.CHAT_INPUT = 0)] = 'CHAT_INPUT'), (e[(e.VOICE_USER = 1)] = 'VOICE_USER'), (e[(e.MENTION = 2)] = 'MENTION'), e);
+        return (
+            (e[(e.CHAT_INPUT = 0)] = "CHAT_INPUT"),
+            (e[(e.VOICE_USER = 1)] = "VOICE_USER"),
+            (e[(e.MENTION = 2)] = "MENTION"),
+            e
+        );
     })({}),
     c = (function (e) {
-        return ((e[(e.LEVEL_1 = 0)] = 'LEVEL_1'), (e[(e.LEVEL_2 = 1)] = 'LEVEL_2'), (e[(e.LEVEL_3 = 2)] = 'LEVEL_3'), (e[(e.LEVEL_4 = 3)] = 'LEVEL_4'), (e[(e.LEVEL_5 = 4)] = 'LEVEL_5'), e);
+        return (
+            (e[(e.LEVEL_1 = 0)] = "LEVEL_1"),
+            (e[(e.LEVEL_2 = 1)] = "LEVEL_2"),
+            (e[(e.LEVEL_3 = 2)] = "LEVEL_3"),
+            (e[(e.LEVEL_4 = 3)] = "LEVEL_4"),
+            (e[(e.LEVEL_5 = 4)] = "LEVEL_5"),
+            e
+        );
     })({});
 let u = {
         0: [
@@ -76,7 +94,7 @@ let u = {
             [250, 1],
             [500, 2],
             [1000, 3],
-            [9001, 4]
+            [9001, 4],
         ],
         1: [
             [1, 0.0001],
@@ -86,7 +104,7 @@ let u = {
             [250, 2.5],
             [500, 5],
             [1000, 7.5],
-            [9001, 10]
+            [9001, 10],
         ],
         2: [
             [1, 0.001],
@@ -96,7 +114,7 @@ let u = {
             [250, 4],
             [500, 8],
             [1000, 12],
-            [9001, 16]
+            [9001, 16],
         ],
         3: [
             [1, 0.25],
@@ -106,7 +124,7 @@ let u = {
             [250, 4],
             [500, 8],
             [1000, 20],
-            [9001, 50]
+            [9001, 50],
         ],
         4: [
             [1, 0.001],
@@ -116,8 +134,8 @@ let u = {
             [250, 5],
             [500, 10],
             [1000, 100],
-            [9001, 10000]
-        ]
+            [9001, 10000],
+        ],
     },
     d = Object.keys(u).reduce(
         (e, t) =>
@@ -125,15 +143,15 @@ let u = {
                 [t]: u[t].map((e) => {
                     let [t] = e;
                     return t;
-                })
+                }),
             }),
         {
             0: [],
             1: [],
             2: [],
             3: [],
-            4: []
-        }
+            4: [],
+        },
     ),
     f = Object.keys(u).reduce(
         (e, t) =>
@@ -141,13 +159,13 @@ let u = {
                 [t]: u[t].map((e) => {
                     let [t, n] = e;
                     return n;
-                })
+                }),
             }),
         {
             0: [],
             1: [],
             2: [],
             3: [],
-            4: []
-        }
+            4: [],
+        },
     );

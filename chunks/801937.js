@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(388685), n(539854));
+n.d(t, { Z: () => D }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -26,7 +26,7 @@ function I(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-let N = new p.Z('ChoosePaymentSourceType'),
+let N = new p.Z("ChoosePaymentSourceType"),
     C = {
         [b.HeQ.CARD]: h.ZP.Types.UNKNOWN,
         [b.HeQ.PAYPAL]: h.ZP.Types.PAYPAL,
@@ -88,25 +88,29 @@ let N = new p.Z('ChoosePaymentSourceType'),
         [b.HeQ.BANCONTACT]: h.ZP.Types.BANCONTACT,
         [b.HeQ.EPS]: h.ZP.Types.EPS,
         [b.HeQ.IDEAL]: h.ZP.Types.IDEAL,
-        [b.HeQ.CASH_APP]: h.ZP.Types.CASH_APP
+        [b.HeQ.CASH_APP]: h.ZP.Types.CASH_APP,
     },
     R = 1000,
-    P = '40c266_1';
+    P = "40c266_1";
 class w extends i.PureComponent {
     componentDidMount() {
         var e;
-        ((0, u.GE)(),
+        (0, u.GE)(),
             (null != (e = this.props.paymentRequestWallets) ? e : []).length > 0 &&
                 setTimeout(() => {
                     this.considerPaymentRequestWalletsLoaded();
-                }, R));
+                }, R);
     }
     considerPaymentRequestWalletsLoaded() {
         var e;
         let t = null != (e = this.props.paymentRequestWallets) ? e : [];
         if (0 === t.length || !this.arePaymentRequestWalletsLoading()) return;
-        N.warn('Payment request wallets failed to load in time: '.concat(t.join(', '), '. Max time allowed: ').concat(R, ' ms'));
-        let n = t.reduce((e, t) => A(T({}, e), { [''.concat(t, 'Loaded')]: !0 }), {});
+        N.warn(
+            "Payment request wallets failed to load in time: "
+                .concat(t.join(", "), ". Max time allowed: ")
+                .concat(R, " ms"),
+        );
+        let n = t.reduce((e, t) => A(T({}, e), { ["".concat(t, "Loaded")]: !0 }), {});
         this.setState(n);
     }
     arePaymentRequestWalletsLoading() {
@@ -114,7 +118,7 @@ class w extends i.PureComponent {
         if ((0, E.isDesktop)()) return !1;
         let t = null != (e = this.props.paymentRequestWallets) ? e : [];
         if (0 === t.length) return !1;
-        for (let e of t) if (!this.state[''.concat(e, 'Loaded')]) return !0;
+        for (let e of t) if (!this.state["".concat(e, "Loaded")]) return !0;
         return !1;
     }
     toggleAllPayments() {
@@ -126,7 +130,9 @@ class w extends i.PureComponent {
             var t;
             let n = C[e],
                 i = m.W[e](),
-                o = null == this.props.paymentSourceTypeRestrictions || (null == (t = this.props.paymentSourceTypeRestrictions) ? void 0 : t.includes(e));
+                o =
+                    null == this.props.paymentSourceTypeRestrictions ||
+                    (null == (t = this.props.paymentSourceTypeRestrictions) ? void 0 : t.includes(e));
             return (0, r.jsx)(
                 l.z,
                 {
@@ -137,33 +143,41 @@ class w extends i.PureComponent {
                     icon: () =>
                         (0, r.jsx)(h.ZP, {
                             className: O.buttonIcon,
-                            type: n
-                        })
+                            type: n,
+                        }),
                 },
-                e
+                e,
             );
         });
     }
     render() {
         var e;
         let { showAllPaymentMethods: t } = this.state,
-            { onChooseType: n, className: i, onStripePaymentMethodReceived: o, ipCountryCode: s, ipCountryCodeHasError: l, paymentRequestPaymentContext: u, isEligibleForTrial: p = !1 } = this.props,
+            {
+                onChooseType: n,
+                className: i,
+                onStripePaymentMethodReceived: o,
+                ipCountryCode: s,
+                ipCountryCodeHasError: l,
+                paymentRequestPaymentContext: u,
+                isEligibleForTrial: p = !1,
+            } = this.props,
             h = null != (e = this.props.paymentRequestWallets) ? e : [],
             m = {
                 iconClassName: O.buttonIcon,
                 paymentLabel: y.intl.string(y.t.ZURqX1),
                 onStripePaymentMethodReceived: o,
                 onChooseType: n,
-                paymentRequestPaymentContext: u
+                paymentRequestPaymentContext: u,
             },
             g = h.map((e, t) => {
-                let n = () => this.setState({ [''.concat(e, 'Loaded')]: !0 }),
+                let n = () => this.setState({ ["".concat(e, "Loaded")]: !0 }),
                     i = {
                         onValidPaymentRequest: n,
-                        onPaymentRequestFailure: n
+                        onPaymentRequestFailure: n,
                     },
-                    o = ''.concat(e, '-').concat(t);
-                return 'applePay' === e ? (0, r.jsx)(_.Ch, T({}, m, i), o) : (0, r.jsx)(_.Tr, T({}, m, i), o);
+                    o = "".concat(e, "-").concat(t);
+                return "applePay" === e ? (0, r.jsx)(_.Ch, T({}, m, i), o) : (0, r.jsx)(_.Tr, T({}, m, i), o);
             }),
             E = [],
             b = [],
@@ -172,74 +186,74 @@ class w extends i.PureComponent {
             E.push(
                 ...this.createPaymentButtons(
                     (0, f.Q)({
-                        ipCountryCode: 'ALL',
-                        location: P
-                    }).countryPaymentMethods
-                )
+                        ipCountryCode: "ALL",
+                        location: P,
+                    }).countryPaymentMethods,
+                ),
             );
         else {
             let { countryPaymentMethods: e, remainingPaymentMethods: t } = (0, f.Q)({
                 ipCountryCode: s,
-                location: P
+                location: P,
             });
-            (E.push(...this.createPaymentButtons(e)), b.push(...this.createPaymentButtons(t)));
+            E.push(...this.createPaymentButtons(e)), b.push(...this.createPaymentButtons(t));
         }
-        let S = (0, r.jsxs)('div', {
+        let S = (0, r.jsxs)("div", {
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: a()(v.wrap, v.horizontal, O.container),
-                    children: [E, g]
+                    children: [E, g],
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: b.length > 0 ? v.flex : O.hidden,
                     children: (0, r.jsxs)(c.P3F, {
                         onClick: () => this.toggleAllPayments(),
                         className: a()(v.flex, O.allPaymentsToggleButton),
-                        children: [y.intl.string(y.t['4uiQm5']), (0, r.jsx)(d.Z, { open: t })]
-                    })
+                        children: [y.intl.string(y.t["4uiQm5"]), (0, r.jsx)(d.Z, { open: t })],
+                    }),
                 }),
                 t &&
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: a()(v.wrap, v.horizontal, O.allPaymentsSection, O.container, { [v.flex]: t }),
-                        children: b
-                    })
-            ]
+                        children: b,
+                    }),
+            ],
         });
         return (
             I &&
                 !l &&
-                (S = (0, r.jsxs)('div', {
+                (S = (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: O.hidden,
-                            children: g
+                            children: g,
                         }),
-                        (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
-                    ]
+                        (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE }),
+                    ],
                 })),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 children: [
-                    p && (0, r.jsx)('hr', { className: O.SeparatorUpper }),
+                    p && (0, r.jsx)("hr", { className: O.SeparatorUpper }),
                     (0, r.jsx)(c.hjN, {
-                        title: p ? y.intl.string(y.t.tywMsb) : y.intl.string(y.t['8lqkf3']),
+                        title: p ? y.intl.string(y.t.tywMsb) : y.intl.string(y.t["8lqkf3"]),
                         className: i,
-                        children: S
+                        children: S,
                     }),
-                    p && (0, r.jsx)('hr', { className: O.SeparatorLower })
-                ]
+                    p && (0, r.jsx)("hr", { className: O.SeparatorLower }),
+                ],
             })
         );
     }
     constructor(e) {
-        (super(e),
+        super(e),
             (this.state = {
                 showAllPaymentMethods: !1,
                 applePayLoaded: !1,
-                googlePayLoaded: !1
-            }));
+                googlePayLoaded: !1,
+            });
     }
 }
 let D = s.ZP.connectStores([g.Z], () => ({
     ipCountryCode: g.Z.ipCountryCode,
-    ipCountryCodeHasError: g.Z.ipCountryCodeHasError
+    ipCountryCodeHasError: g.Z.ipCountryCodeHasError,
 }))(w);

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -11,16 +11,22 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let c = new a.Z('GuildAvailabilityStore'),
+let c = new a.Z("GuildAvailabilityStore"),
     u = new Set();
 function d(e) {
-    ((u = new Set(e.unavailableGuilds)), e.unavailableGuilds.length > 0 && c.warn(''.concat(e.unavailableGuilds.length, ' guilds are unavailable on connection open: ').concat(e.unavailableGuilds)));
+    (u = new Set(e.unavailableGuilds)),
+        e.unavailableGuilds.length > 0 &&
+            c.warn(
+                ""
+                    .concat(e.unavailableGuilds.length, " guilds are unavailable on connection open: ")
+                    .concat(e.unavailableGuilds),
+            );
 }
 function f(e) {
     if (!u.has(e.guildId)) return !1;
@@ -29,12 +35,14 @@ function f(e) {
 function _(e) {
     if (u.has(e.guildId)) return !1;
     let t = s.Z.getGuild(e.guildId),
-        n = '???';
-    (null != t && null != t.name && (n = t.name), c.warn('Guild has gone unavailable: '.concat(e.guildId, ' (').concat(n, ')')), u.add(e.guildId));
+        n = "???";
+    null != t && null != t.name && (n = t.name),
+        c.warn("Guild has gone unavailable: ".concat(e.guildId, " (").concat(n, ")")),
+        u.add(e.guildId);
 }
 function p(e) {
     if (!u.has(e.guild.id)) return !1;
-    (u.delete(e.guild.id), c.info('Guild has become available: '.concat(e.guild.id)));
+    u.delete(e.guild.id), c.info("Guild has become available: ".concat(e.guild.id));
 }
 function h(e) {
     !0 !== e.guild.unavailable && u.delete(e.guild.id);
@@ -56,7 +64,7 @@ class m extends (r = i.ZP.Store) {
         return Array.from(u);
     }
 }
-l(m, 'displayName', 'GuildAvailabilityStore');
+l(m, "displayName", "GuildAvailabilityStore");
 let g = new m(o.Z, {
     CONNECTION_OPEN: d,
     OVERLAY_INITIALIZE: d,
@@ -64,5 +72,5 @@ let g = new m(o.Z, {
     GUILD_DELETE: h,
     GUILD_CREATE: p,
     GUILD_UPDATE: p,
-    GUILD_GEO_RESTRICTED: f
+    GUILD_GEO_RESTRICTED: f,
 });

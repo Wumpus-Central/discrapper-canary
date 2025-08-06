@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Vh: () => S,
     f: () => I,
     hR: () => R,
-    xF: () => T
+    xF: () => T,
 }),
     n(35282),
     n(190126),
@@ -11,7 +11,7 @@
     n(111804),
     n(490233),
     n(97749),
-    n(388685));
+    n(388685);
 var r = n(512722),
     i = n.n(r),
     o = n(544891),
@@ -20,43 +20,48 @@ var r = n(512722),
     l = n(710845),
     c = n(134432),
     u = n(981631);
-let d = 'mp',
+let d = "mp",
     f = 3600000,
-    _ = 'https://i.scdn.co/image/',
-    p = (e, t, n) => 'https://static-cdn.jtvnw.net/previews-ttv/live_user_'.concat(e, '-').concat(t, 'x').concat(n, '.jpg'),
+    _ = "https://i.scdn.co/image/",
+    p = (e, t, n) =>
+        "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
     h = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
-    m = (e) => 'https://i.ytimg.com/vi/'.concat(e, '/hqdefault_live.jpg'),
+    m = (e) => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
     g = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
     E = {
         [u.ABu.SPOTIFY]: {
-            deserialize: (e) => ''.concat(_).concat(encodeURIComponent(e)),
-            serialize: (e) => e.split(_)[1]
+            deserialize: (e) => "".concat(_).concat(encodeURIComponent(e)),
+            serialize: (e) => e.split(_)[1],
         },
         [u.ABu.TWITCH]: {
             deserialize: (e, t) => p(encodeURIComponent(e), t[0], t[1]),
             serialize: (e) => {
                 let t = e.match(h);
                 return null != t ? t[1] : null;
-            }
+            },
         },
         [u.ABu.YOUTUBE]: {
             deserialize: (e) => m(encodeURIComponent(e)),
             serialize: (e) => {
                 let t = e.match(g);
                 return null != t ? t[1] : null;
-            }
+            },
         },
         [d]: {
             deserialize: (e) => {
-                i()(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, 'MEDIA_PROXY_ENDPOINT not configured');
+                i()(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured");
                 let t = new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT),
-                    n = e.toLowerCase().endsWith('.gif'),
-                    r = e.toLowerCase().endsWith('.webp'),
-                    o = e.toLowerCase().endsWith('.avif');
-                return (n && t.searchParams.set('format', 'webp'), (n || r || o) && t.searchParams.set('animated', 'true'), t.toString());
+                    n = e.toLowerCase().endsWith(".gif"),
+                    r = e.toLowerCase().endsWith(".webp"),
+                    o = e.toLowerCase().endsWith(".avif");
+                return (
+                    n && t.searchParams.set("format", "webp"),
+                    (n || r || o) && t.searchParams.set("animated", "true"),
+                    t.toString()
+                );
             },
-            serialize: (e) => e
-        }
+            serialize: (e) => e,
+        },
     },
     b = {};
 function y(e) {
@@ -66,13 +71,13 @@ async function O(e) {
     let { body: t } = await o.tn.get({
         url: u.ANM.APPLICATION_ASSETS(e),
         oldFormErrors: !0,
-        rejectWithError: !1
+        rejectWithError: !1,
     });
     return (
         a.Z.dispatch({
-            type: 'APPLICATION_ASSETS_UPDATE',
+            type: "APPLICATION_ASSETS_UPDATE",
             applicationId: e,
-            assets: t
+            assets: t,
         }),
         s.Z.getApplicationAssets(e)
     );
@@ -83,22 +88,33 @@ function v(e) {
 }
 function I(e, t) {
     let n = E[e].serialize(t);
-    return n ? ''.concat(e, ':').concat(n.toString()) : null;
+    return n ? "".concat(e, ":").concat(n.toString()) : null;
 }
 function T(e, t, n) {
-    if (null != t && t.includes(':')) {
-        let [e, r] = t.split(':');
-        return e === u.ABu.TWITCH ? (null == n || 'number' == typeof n ? void new l.Z('ApplicationAssetUtils').warn('getAssetImage: size must === [number, number] for Twitch') : E[u.ABu.TWITCH].deserialize(r, n)) : Object.prototype.hasOwnProperty.call(E, e) ? E[e].deserialize(r) : void 0;
+    if (null != t && t.includes(":")) {
+        let [e, r] = t.split(":");
+        return e === u.ABu.TWITCH
+            ? null == n || "number" == typeof n
+                ? void new l.Z("ApplicationAssetUtils").warn("getAssetImage: size must === [number, number] for Twitch")
+                : E[u.ABu.TWITCH].deserialize(r, n)
+            : Object.prototype.hasOwnProperty.call(E, e)
+              ? E[e].deserialize(r)
+              : void 0;
     }
     if (null == e || null == t) return;
     let r = Array.isArray(n) ? Math.max(...n) : n,
-        i = 'number' == typeof r ? '?size='.concat((0, c.oO)(r)) : '';
+        i = "number" == typeof r ? "?size=".concat((0, c.oO)(r)) : "";
     return null != window.GLOBAL_ENV.CDN_HOST
-        ? ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/app-assets/').concat(e, '/').concat(t, '.png').concat(i)
-        : ''
-              .concat((0, o.K0)(), '/applications/')
-              .concat(e, '/app-assets/')
-              .concat(t, '.png')
+        ? ""
+              .concat(location.protocol, "//")
+              .concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/")
+              .concat(e, "/")
+              .concat(t, ".png")
+              .concat(i)
+        : ""
+              .concat((0, o.K0)(), "/applications/")
+              .concat(e, "/app-assets/")
+              .concat(t, ".png")
               .concat(i);
 }
 async function S(e) {
@@ -112,13 +128,16 @@ async function A(e, t) {
         url: u.ANM.APPLICATION_EXTERNAL_ASSETS(e),
         body: { urls: n },
         oldFormErrors: !0,
-        rejectWithError: !1
+        rejectWithError: !1,
     });
     for (let { url: e, external_asset_path: t } of r) b[e] = t;
 }
 function N(e, t) {
     let n = 0;
-    if (e.filter((e) => (null == e ? void 0 : e.startsWith('http:')) || (null == e ? void 0 : e.startsWith('https:'))).length > 0)
+    if (
+        e.filter((e) => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")))
+            .length > 0
+    )
         for (let r = 0; r < e.length; r++) {
             let i = e[r];
             if (null == i) continue;
@@ -147,30 +166,32 @@ function C(e, t, n, r) {
 async function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
     a.Z.dispatch({
-        type: 'APPLICATION_ASSETS_FETCH',
-        applicationId: e
+        type: "APPLICATION_ASSETS_FETCH",
+        applicationId: e,
     });
     let r = [],
-        i = t.filter((e) => (null == e ? void 0 : e.startsWith('http:')) || (null == e ? void 0 : e.startsWith('https:')));
+        i = t.filter(
+            (e) => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")),
+        );
     if ((i.length > 0 && (await A(e, i)), N(t, r)))
         return (
             a.Z.dispatch({
-                type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
-                applicationId: e
+                type: "APPLICATION_ASSETS_FETCH_SUCCESS",
+                applicationId: e,
             }),
             r
         );
     let o = await S(e);
     return (a.Z.dispatch({
-        type: 'APPLICATION_ASSETS_UPDATE',
+        type: "APPLICATION_ASSETS_UPDATE",
         applicationId: e,
-        assets: o
+        assets: o,
     }),
     C(t, r, o, n))
         ? O(e).then(() => R(e, t, n - 1))
         : (a.Z.dispatch({
-              type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
-              applicationId: e
+              type: "APPLICATION_ASSETS_FETCH_SUCCESS",
+              applicationId: e,
           }),
           r);
 }

@@ -1,10 +1,10 @@
-(a.d(t, {
+a.d(t, {
     ZP: () => g,
-    v0: () => f
+    v0: () => f,
 }),
     a(388685),
     a(539854),
-    a(642613));
+    a(642613);
 var n,
     r = a(255367),
     l = a(73800),
@@ -18,16 +18,39 @@ var n,
     x = a(823379),
     h = a(246992),
     p = a(616257),
-    f = (((n = {}).NONE = ''), (n.EXPERIMENTS = 'Experiments'), (n.EVENTS = 'Events'), (n.PREMIUM = 'Premium'), (n.BILLING = 'Billing'), (n.USERS = 'Users'), (n.GUILDS = 'Guilds'), (n.UI = 'UI'), (n.GAMES = 'Games'), (n.AUDIO_VIDEO = 'Audio / Video'), (n.DEVELOPMENT = 'Development'), n);
-let b = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI', 'Games', 'Audio / Video', 'Development'],
+    f =
+        (((n = {}).NONE = ""),
+        (n.EXPERIMENTS = "Experiments"),
+        (n.EVENTS = "Events"),
+        (n.PREMIUM = "Premium"),
+        (n.BILLING = "Billing"),
+        (n.USERS = "Users"),
+        (n.GUILDS = "Guilds"),
+        (n.UI = "UI"),
+        (n.GAMES = "Games"),
+        (n.AUDIO_VIDEO = "Audio / Video"),
+        (n.DEVELOPMENT = "Development"),
+        n);
+let b = [
+        "Experiments",
+        "Events",
+        "Premium",
+        "Billing",
+        "Users",
+        "Guilds",
+        "UI",
+        "Games",
+        "Audio / Video",
+        "Development",
+    ],
     v = l.forwardRef(function (e, t) {
         let { id: a, selected: n, onClick: l, children: i } = e;
         return (0, r.jsx)(d.P3F, {
             className: s()(p.tabItem, { [p.selected]: n }),
-            'data-tab-id': a,
+            "data-tab-id": a,
             innerRef: t,
             onClick: l,
-            children: i
+            children: i,
         });
     });
 function j(e) {
@@ -41,7 +64,15 @@ function j(e) {
         if (null == g) return;
         let s = new Set(),
             o = null != g ? g : 0;
-        for (let c of ((o -= null != (n = null == (e = i.current.get(a)) ? void 0 : e.getBoundingClientRect().width) ? n : 0), t)) c.id !== a && (o -= null != (l = null == (r = i.current.get(c.id)) ? void 0 : r.getBoundingClientRect().width) ? l : 0) < 0 && s.add(c.id);
+        for (let c of ((o -=
+            null != (n = null == (e = i.current.get(a)) ? void 0 : e.getBoundingClientRect().width) ? n : 0),
+        t))
+            c.id !== a &&
+                (o -=
+                    null != (l = null == (r = i.current.get(c.id)) ? void 0 : r.getBoundingClientRect().width)
+                        ? l
+                        : 0) < 0 &&
+                s.add(c.id);
         f(s);
     }, [t, g, j, a]);
     let y = l.useCallback(
@@ -55,13 +86,15 @@ function j(e) {
                 null == (i = u[e]) ||
                     i.sort((e, t) => {
                         var a, n;
-                        return (null != (a = (0, o.q)(e.name)) ? a : '').localeCompare(null != (n = (0, o.q)(t.name)) ? n : '');
+                        return (null != (a = (0, o.q)(e.name)) ? a : "").localeCompare(
+                            null != (n = (0, o.q)(t.name)) ? n : "",
+                        );
                     });
             return (0, r.jsxs)(d.v2r, {
-                navId: 'devtools-overflow',
-                variant: 'fixed',
+                navId: "devtools-overflow",
+                variant: "fixed",
                 onClose: s,
-                'aria-label': 'Overflowed DevTools Tabs',
+                "aria-label": "Overflowed DevTools Tabs",
                 onSelect: s,
                 children: [
                     c.map((e) => {
@@ -71,9 +104,9 @@ function j(e) {
                             {
                                 id: t,
                                 label: a,
-                                action: () => n(t)
+                                action: () => n(t),
                             },
-                            t
+                            t,
                         );
                     }),
                     b.map((e) =>
@@ -88,24 +121,24 @@ function j(e) {
                                         {
                                             id: t,
                                             label: a,
-                                            action: () => n(t)
+                                            action: () => n(t),
                                         },
-                                        t
+                                        t,
                                     );
-                                })
+                                }),
                             },
-                            e
-                        )
-                    )
-                ]
+                            e,
+                        ),
+                    ),
+                ],
             });
         },
-        [t, n]
+        [t, n],
     );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: p.tabBarContainer,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: p.tabBar,
                 ref: j,
                 children: [
@@ -119,13 +152,13 @@ function j(e) {
                                         id: t,
                                         selected: a === t,
                                         onClick: a !== t ? () => n(t) : void 0,
-                                        children: l
+                                        children: l,
                                     },
-                                    t
+                                    t,
                                 );
                         })
                         .filter(x.lm),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: p.tabMeasurer,
                         children: t.map((e) => {
                             let { id: t, name: l } = e;
@@ -138,15 +171,15 @@ function j(e) {
                                         i.current.set(t, e);
                                     },
                                     onClick: a !== t ? () => n(t) : void 0,
-                                    children: l
+                                    children: l,
                                 },
-                                t
+                                t,
                             );
-                        })
-                    })
-                ]
+                        }),
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: p.menu,
                 children:
                     s.size > 0 &&
@@ -154,8 +187,8 @@ function j(e) {
                         targetElementRef: _,
                         layerContext: h.O$,
                         renderPopout: y,
-                        position: 'bottom',
-                        align: 'right',
+                        position: "bottom",
+                        align: "right",
                         spacing: 0,
                         children: (e) => {
                             var t, a;
@@ -165,24 +198,24 @@ function j(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var a = null != arguments[t] ? arguments[t] : {},
                                             n = Object.keys(a);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (n = n.concat(
                                                 Object.getOwnPropertySymbols(a).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             n.forEach(function (t) {
                                                 var n;
-                                                ((n = a[t]),
+                                                (n = a[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: n,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = n));
-                                            }));
+                                                        : (e[t] = n);
+                                            });
                                     }
                                     return e;
                                 })({}, e)),
@@ -195,8 +228,8 @@ function j(e) {
                                         children: (0, r.jsx)(m.Z, {
                                             className: p.__invalid_overflowIcon,
                                             width: 16,
-                                            height: 16
-                                        })
+                                            height: 16,
+                                        }),
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
@@ -210,12 +243,12 @@ function j(e) {
                                       })(Object(a)).forEach(function (e) {
                                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
-                                t)
+                                t),
                             );
-                        }
-                    })
-            })
-        ]
+                        },
+                    }),
+            }),
+        ],
     });
 }
 function g(e, t) {
@@ -229,12 +262,12 @@ function g(e, t) {
                     tabs: s,
                     selectedTabId: d,
                     onSelectTab: (e) => {
-                        (u(e), null == c || c(e));
-                    }
+                        u(e), null == c || c(e);
+                    },
                 }),
-            [d, u, c, ...t]
+            [d, u, c, ...t],
         ),
         renderSelectedTab: null != (i = null == (n = s.find((e) => e.id === d)) ? void 0 : n.render) ? i : () => null,
-        selectedTabId: d
+        selectedTabId: d,
     };
 }

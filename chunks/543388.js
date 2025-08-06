@@ -14,7 +14,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,40 +65,40 @@ function p(e) {
         children: [
             (0, r.jsx)(s.Z, {
                 size: s.Z.Sizes.LARGE,
-                game: t
+                game: t,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: c.textContainer,
                 children: [
                     (0, r.jsx)(a.Text, {
                         className: c.timestamp,
-                        variant: 'text-xs/medium',
-                        color: 'text-muted',
-                        children: o()(n).format('LLLL')
+                        variant: "text-xs/medium",
+                        color: "text-muted",
+                        children: o()(n).format("LLLL"),
                     }),
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-md/normal',
-                        color: 'interactive-active',
-                        children: l.intl.format(l.t.J3s8JC, { applicationName: t.name })
-                    })
-                ]
-            })
-        ]
+                        variant: "text-md/normal",
+                        color: "interactive-active",
+                        children: l.intl.format(l.t.J3s8JC, { applicationName: t.name }),
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function h(e) {
     let { application: t, timestamp: n, children: i } = e;
     return (0, r.jsx)(a.ua7, {
         hideOnClick: !0,
-        position: 'top',
-        'aria-label': l.intl.string(l.t['5nMcv7']),
+        position: "top",
+        "aria-label": l.intl.string(l.t["5nMcv7"]),
         tooltipClassName: c.gameMessageTooltip,
         tooltipContentClassName: c.gameMessageTooltipContent,
         text: (0, r.jsx)(p, {
             application: t,
-            timestamp: n
+            timestamp: n,
         }),
-        children: (e) => (0, r.jsx)(a.P3F, _(d({ tag: 'span' }, e), { children: i }))
+        children: (e) => (0, r.jsx)(a.P3F, _(d({ tag: "span" }, e), { children: i })),
     });
 }
 function m(e) {
@@ -111,11 +111,11 @@ function m(e) {
                 ? null
                 : (0, r.jsx)(a.iWm, {
                       className: c.gameIcon,
-                      size: 'custom',
+                      size: "custom",
                       width: 14,
-                      height: 14
+                      height: 14,
                   }),
-            o
-        ]
+            o,
+        ],
     });
 }

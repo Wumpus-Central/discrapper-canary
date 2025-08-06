@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -21,7 +21,7 @@ function m(e) {
         [b, v] = r.useState(new Set()),
         [E, _] = r.useState(new Set()),
         x = r.useCallback((e, t, n) => {
-            (v((n) => {
+            v((n) => {
                 if (t) {
                     if (n.has(e)) return n;
                     n.add(e);
@@ -40,7 +40,7 @@ function m(e) {
                         i.delete(e);
                     }
                     return new Set(i);
-                }));
+                });
         }, []),
         S = (0, u.ee)(() => b, [b]),
         I = (0, u.ee)(() => E, [E]),
@@ -52,7 +52,7 @@ function m(e) {
                 locked: t,
                 shownUserIds: Array.from(S),
                 liveUserIds: Array.from(I),
-                contentInventoryIds: []
+                contentInventoryIds: [],
             });
     }, [S, I, t, j]);
     let C = (0, o.e7)([s.Z], () => (null == O ? null : s.Z.getApplicationActivity(O)), [O]),
@@ -62,57 +62,57 @@ function m(e) {
                     case a.sG.OPEN_DIRECT_MESSAGE:
                         return {
                             type: u.Qu.FRIEND_LIST,
-                            value: u.bk.CHAT
+                            value: u.bk.CHAT,
                         };
                     case a.sG.ACCEPT_FRIEND_REQUEST:
                         return {
                             type: u.Qu.FRIEND_REQUEST,
-                            value: u.bk.ACCEPT_REQUEST
+                            value: u.bk.ACCEPT_REQUEST,
                         };
                     case a.sG.DECLINE_FRIEND_REQUEST:
                         return {
                             type: u.Qu.FRIEND_REQUEST,
-                            value: u.bk.DECLINE_REQUEST
+                            value: u.bk.DECLINE_REQUEST,
                         };
                     case a.sG.CANCEL_FRIEND_REQUEST:
                         return {
                             type: u.Qu.FRIEND_REQUEST,
-                            value: u.bk.CANCEL_REQUEST
+                            value: u.bk.CANCEL_REQUEST,
                         };
                     case a.sG.SEND_FRIEND_REQUEST:
                         return {
                             type: u.Qu.FRIEND_REQUEST,
-                            value: u.bk.SEND_REQUEST
+                            value: u.bk.SEND_REQUEST,
                         };
                     case a.sG.SEND_ACTIVITY_INVITE:
                         return {
                             type: u.Qu.INVITE,
-                            value: u.bk.INVITE_SENT
+                            value: u.bk.INVITE_SENT,
                         };
                     case a.sG.ASK_TO_JOIN:
                         return {
                             type: u.Qu.INVITE,
-                            value: u.bk.JOIN_REQUEST_SENT
+                            value: u.bk.JOIN_REQUEST_SENT,
                         };
                     case a.sG.USER_CONTEXT_MENU:
                         return {
                             type: u.Qu.FRIEND_LIST,
-                            value: u.bk.SETTINGS_OPENED
+                            value: u.bk.SETTINGS_OPENED,
                         };
                     case a.sG.OPEN_FRIEND_MODAL:
                         return {
                             type: u.Qu.FRIEND_LIST,
-                            value: u.bk.PROFILE_OPENED
+                            value: u.bk.PROFILE_OPENED,
                         };
                     case a.sG.OPEN_SETTINGS_MODAL:
                         return {
                             type: u.Qu.FRIEND_LIST,
-                            value: u.bk.SETTINGS_OPENED
+                            value: u.bk.SETTINGS_OPENED,
                         };
                     case a.sG.SEARCH_FRIENDS:
                         return {
                             type: u.Qu.FRIEND_LIST,
-                            value: u.bk.SEARCH
+                            value: u.bk.SEARCH,
                         };
                     default:
                         return null;
@@ -126,24 +126,24 @@ function m(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    ((i = n[t]),
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = i));
-                                }));
+                                            : (e[t] = i);
+                                });
                         }
                         return e;
                     })({}, n)),
@@ -160,7 +160,7 @@ function m(e) {
                           })(Object(r)).forEach(function (e) {
                               Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
-                    i)
+                    i),
                 );
             }
         }, []),
@@ -170,9 +170,9 @@ function m(e) {
                 (0, i.jsx)(d.lE, {
                     activity: C,
                     currentUser: y,
-                    showInviteButton: !1
+                    showInviteButton: !1,
                 }),
-            [C, y]
+            [C, y],
         );
     return t
         ? null
@@ -183,6 +183,6 @@ function m(e) {
               renderHeader: Z,
               appContext: f.IlC.OVERLAY,
               onAction: N,
-              onFriendVisible: x
+              onFriendVisible: x,
           });
 }

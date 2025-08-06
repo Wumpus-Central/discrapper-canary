@@ -14,7 +14,7 @@ function l(e) {
         f = a.BT({
             permission: s.Plq.USE_EXTERNAL_EMOJIS,
             user: n,
-            context: l
+            context: l,
         });
     return !d || f;
 }

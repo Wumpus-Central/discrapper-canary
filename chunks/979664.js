@@ -17,7 +17,9 @@ function g(e) {
         g = i.useCallback(
             (e, t) => {
                 (0, a.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('77942')]).then(n.bind(n, 712451));
+                    let { default: i } = await Promise.all([n.e("91689"), n.e("59732"), n.e("77942")]).then(
+                        n.bind(n, 712451),
+                    );
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -25,24 +27,24 @@ function g(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })(
@@ -53,82 +55,82 @@ function g(e) {
                                     onCrop: (e) => {
                                         let { imageUri: t } = e;
                                         return l(t);
-                                    }
+                                    },
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         );
                 }, {});
             },
-            [l]
+            [l],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: u.buttons,
         children: [
             (0, r.jsx)(a.tEY, {
                 within: !0,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: u.iconInput,
                     children: [
                         (0, r.jsx)(a.zxk, {
                             tabIndex: -1,
-                            size: 'sm',
-                            variant: 'primary',
+                            size: "sm",
+                            variant: "primary",
                             disabled: !o,
-                            text: d.intl.string(d.t.r3Jdsb)
+                            text: d.intl.string(d.t.r3Jdsb),
                         }),
                         (0, r.jsx)(s.ZP, {
                             tabIndex: 0,
                             onChange: g,
-                            disabled: !o
-                        })
-                    ]
-                })
+                            disabled: !o,
+                        }),
+                    ],
+                }),
             }),
             null != t.icon
                 ? (0, r.jsx)(a.zxk, {
-                      variant: 'critical-secondary',
-                      size: 'sm',
+                      variant: "critical-secondary",
+                      size: "sm",
                       text: d.intl.string(d.t.x8AlTk),
                       onClick: m,
-                      disabled: !o
+                      disabled: !o,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 function p(e) {
     let { profile: t, canManageGuild: n, onIconChange: i } = e,
-        s = (0, l.e7)([o.Z], () => o.Z.getError('icon'));
-    return (0, r.jsxs)('section', {
+        s = (0, l.e7)([o.Z], () => o.Z.getError("icon"));
+    return (0, r.jsxs)("section", {
         className: u.container,
         children: [
             (0, r.jsxs)(a.hjN, {
                 className: m.section,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: m.sectionHeader,
                         children: [
                             (0, r.jsx)(a.vwX, { children: d.intl.string(d.t.FkQnxM) }),
                             (0, r.jsx)(a.R94, {
-                                type: 'description',
-                                children: d.intl.string(d.t.KjkA0d)
-                            })
-                        ]
+                                type: "description",
+                                children: d.intl.string(d.t.KjkA0d),
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(g, {
                         profile: t,
                         canManageGuild: n,
-                        handleIconChange: i
-                    })
-                ]
+                        handleIconChange: i,
+                    }),
+                ],
             }),
             null != s
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: u.iconError,
-                      children: s
+                      children: s,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

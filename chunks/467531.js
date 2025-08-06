@@ -1,6 +1,6 @@
 n.d(t, {
     B: () => a,
-    W: () => s
+    W: () => s,
 });
 var r = n(544891),
     i = n(881052),
@@ -12,7 +12,7 @@ async function a(e) {
         await r.tn.put({
             url: o.ANM.POLL_ANSWERS(t, n),
             body: e,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
     } catch (e) {
         throw new i.Hx(e);
@@ -23,7 +23,7 @@ async function s(e) {
     try {
         await r.tn.post({
             url: o.ANM.POLL_EXPIRE(t, n),
-            rejectWithError: !1
+            rejectWithError: !1,
         });
     } catch (e) {
         throw new i.Hx(e);

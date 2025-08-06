@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => c,
-    Q: () => o
+    Q: () => o,
 });
 var i = n(73800),
     r = n(442837),
@@ -20,7 +20,7 @@ function c() {
         {
             referralSentUsers: t,
             hasSentAllReferrals: e.length === o,
-            refreshAt: (0, r.e7)([l.Z], () => l.Z.getRefreshAt())
+            refreshAt: (0, r.e7)([l.Z], () => l.Z.getRefreshAt()),
         }
     );
 }

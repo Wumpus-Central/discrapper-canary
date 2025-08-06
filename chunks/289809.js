@@ -7,28 +7,28 @@ var r = n(255367),
 function o(e) {
     let {
             element: {
-                data: { header: t, body: n, is_localized: o }
-            }
+                data: { header: t, body: n, is_localized: o },
+            },
         } = e,
         c = l.useRef(a.Z.reactParserFor(a.Z.defaultRules));
     return o && (null != t || null != n)
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: s.container,
               children: [
                   null != t &&
                       (0, r.jsx)(i.X6q, {
-                          variant: 'heading-sm/semibold',
-                          color: 'header-secondary',
+                          variant: "heading-sm/semibold",
+                          color: "header-secondary",
                           className: s.header,
-                          children: t
+                          children: t,
                       }),
                   null != n &&
                       (0, r.jsx)(i.Text, {
-                          variant: 'text-sm/normal',
+                          variant: "text-sm/normal",
                           className: s.bodyText,
-                          children: c.current(n)
-                      })
-              ]
+                          children: c.current(n),
+                      }),
+              ],
           })
         : null;
 }

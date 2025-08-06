@@ -20,11 +20,11 @@ var r = n(255367),
 let O = (e) => {
     let { className: t, style: n } = e;
     return (0, l.e7)([d.Z], () => d.Z.useReducedMotion)
-        ? (0, r.jsx)('img', {
+        ? (0, r.jsx)("img", {
               src: b.Z,
               className: t,
               style: n,
-              alt: ''
+              alt: "",
           })
         : (0, r.jsxs)(f.Z, {
               tabIndex: -1,
@@ -33,17 +33,17 @@ let O = (e) => {
               autoPlay: !0,
               loop: !0,
               children: [
-                  (0, r.jsx)('source', {
+                  (0, r.jsx)("source", {
                       src: y.Z,
-                      type: 'video/webm'
+                      type: "video/webm",
                   }),
-                  (0, r.jsx)('img', {
+                  (0, r.jsx)("img", {
                       src: b.Z,
                       className: t,
                       style: n,
-                      alt: ''
-                  })
-              ]
+                      alt: "",
+                  }),
+              ],
           });
 };
 function v(e) {
@@ -56,29 +56,29 @@ function v(e) {
     if (t === h.h8.BENEFITS || t === h.h8.CONFIRM) return null;
     let v = null != y ? { width: y + 2 } : void 0,
         I = null != y ? { width: y + 3 } : void 0;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.headerContainer,
         style: v,
         children: [
             !l &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: g.headerImageContainer,
-                    'aria-hidden': 'true',
-                    'data-accessibility': 'desaturate',
+                    "aria-hidden": "true",
+                    "data-accessibility": "desaturate",
                     style: I,
                     children: o
                         ? (0, r.jsx)(O, { className: a()(g.headerImage, g.orbCheckoutHeaderVideo) })
-                        : (0, r.jsx)('img', {
+                        : (0, r.jsx)("img", {
                               src: E,
-                              alt: '',
-                              className: g.headerImage
-                          })
+                              alt: "",
+                              className: g.headerImage,
+                          }),
                 }),
             (0, r.jsx)(c.olH, {
                 withCircleBackground: !0,
                 className: g.closeButton,
-                onClick: n
-            })
-        ]
+                onClick: n,
+            }),
+        ],
     });
 }

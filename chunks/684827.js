@@ -6,5 +6,5 @@ function n(t, e, i, s) {
 }
 i.d(e, {
     B: () => n,
-    M: () => s
+    M: () => s,
 });

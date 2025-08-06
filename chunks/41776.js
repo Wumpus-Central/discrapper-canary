@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685));
+n.d(t, { Z: () => N }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,7 +31,7 @@ function m(e) {
     let t = f.indexOf(e);
     if (t > -1) {
         let n = [...f];
-        return (n.splice(t, 1), (f = n), delete _[e], !0);
+        return n.splice(t, 1), (f = n), delete _[e], !0;
     }
     return !1;
 }
@@ -51,7 +51,7 @@ function b(e) {
             case u.vtS.DIRECTORY_ENTRY:
                 p = {
                     type: u.vtS.DIRECTORY_ENTRY,
-                    directoryChannelId: i
+                    directoryChannelId: i,
                 };
                 break;
             default:
@@ -79,11 +79,11 @@ function v(e) {
 function I(e) {
     let { ignoredGuildIds: t } = e,
         n = h(t);
-    return (n && (p = null), n);
+    return n && (p = null), n;
 }
 function T(e) {
     let { lurkingGuildId: t, lurkingSource: n } = e;
-    return (g(t), (p = n), !0);
+    return g(t), (p = n), !0;
 }
 function S() {
     f = l.Z.getGuildsArray()
@@ -114,7 +114,7 @@ class A extends (r = i.ZP.Store) {
         return null != e ? _[e] : null;
     }
 }
-d(A, 'displayName', 'LurkingStore');
+d(A, "displayName", "LurkingStore");
 let N = new A(o.Z, {
     CONNECTION_OPEN: S,
     GUILD_JOIN: b,
@@ -122,5 +122,5 @@ let N = new A(o.Z, {
     GUILD_STOP_LURKING_FAILURE: T,
     GUILD_CREATE: y,
     GUILD_DELETE: v,
-    GUILD_MEMBER_ADD: O
+    GUILD_MEMBER_ADD: O,
 });

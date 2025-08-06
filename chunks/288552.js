@@ -12,12 +12,12 @@ let s = (e) => {
         onClick: s,
         buttonRef: a,
         children: [
-            (0, r.jsx)(n, { color: 'currentColor' }),
+            (0, r.jsx)(n, { color: "currentColor" }),
             (0, r.jsx)(l.Text, {
-                variant: 'text-md/semibold',
-                color: 'none',
-                children: t
-            })
-        ]
+                variant: "text-md/semibold",
+                color: "none",
+                children: t,
+            }),
+        ],
     });
 };

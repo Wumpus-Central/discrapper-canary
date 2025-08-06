@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => b,
-    Z: () => j
+    Z: () => j,
 });
 var r = n(255367);
 n(73800);
@@ -23,14 +23,14 @@ function b(e) {
         i = (e) => {
             let { children: t } = e;
             return (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(l.$i$, { className: x.sectionDivider }), t]
+                children: [(0, r.jsx)(l.$i$, { className: x.sectionDivider }), t],
             });
         },
         a = (0, r.jsx)(i, { children: (0, r.jsx)(p.Z, {}) }, f.q.HOW_IT_WORKS),
         s = (0, r.jsx)(i, { children: (0, r.jsx)(m.Z, {}) }, f.q.BENEFITS);
     return null != n || (null == t ? void 0 : t.sections) == null
         ? (0, r.jsxs)(r.Fragment, {
-              children: [a, s]
+              children: [a, s],
           })
         : (0, r.jsx)(r.Fragment, {
               children: t.sections.map((e) => {
@@ -40,9 +40,13 @@ function b(e) {
                       case f.q.BENEFITS:
                           return s;
                       case f.q.OTHER_CREATORS:
-                          return (0, r.jsx)(i, { children: (0, r.jsx)(g.Z, { highlightedCreators: e.creators }) }, f.q.OTHER_CREATORS);
+                          return (0, r.jsx)(
+                              i,
+                              { children: (0, r.jsx)(g.Z, { highlightedCreators: e.creators }) },
+                              f.q.OTHER_CREATORS,
+                          );
                   }
-              })
+              }),
           });
 }
 function j(e) {
@@ -59,10 +63,10 @@ function j(e) {
                 guild_id: t.id,
                 is_owner: n.isGuildOwner,
                 is_eligible: n.eligibleForMonetization,
-                ineligible_reasons: f
-            }
+                ineligible_reasons: f,
+            },
         },
-        { disableTrack: null == t.id || null == p }
+        { disableTrack: null == t.id || null == p },
     ),
     m || null == p || j)
         ? (0, r.jsx)(l.$jN, {})
@@ -70,17 +74,17 @@ function j(e) {
           ? (0, r.jsx)(h.Z, { guild: t })
           : null != g
             ? (0, r.jsx)(d.Z, { children: g.message })
-            : (0, r.jsxs)('div', {
+            : (0, r.jsxs)("div", {
                   className: x.container,
                   children: [
                       (0, r.jsx)(u.Z, {
                           guild: t,
-                          monetizationEligibility: n
+                          monetizationEligibility: n,
                       }),
                       (0, r.jsx)(b, {
                           onboardingMarketing: _,
-                          onboardingMarketingError: v
-                      })
-                  ]
+                          onboardingMarketingError: v,
+                      }),
+                  ],
               });
 }

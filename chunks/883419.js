@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685), n(997841));
+n.d(t, { Z: () => S }), n(388685), n(997841);
 var i = n(255367),
     r = n(73800),
     l = n(512722),
@@ -22,9 +22,39 @@ var i = n(255367),
     O = n(856461);
 function S(e) {
     var t, n;
-    let { backButtonEligible: l, prevStep: S, handleStepChange: P, trialFooterMessageOverride: N, reviewWarningMessage: k, planGroup: _, openInvoiceId: E, analyticsData: T, analyticsLocation: w, handleClose: Z } = e,
-        { activeSubscription: I, application: A, setUpdatedSubscription: D, contextMetadata: L, currencies: B, paymentSources: F, priceOptions: R, purchaseError: H, purchaseTokenAuthState: M, selectedPlan: W, selectedSku: G, setCurrency: z, setPaymentSourceId: K, setPurchaseState: V, setPurchaseError: q, purchaseState: Q, subscriptionMetadataRequest: Y, setHasAcceptedTerms: J } = (0, p.JL)();
-    a()(null != W, 'Expected plan to be selected');
+    let {
+            backButtonEligible: l,
+            prevStep: S,
+            handleStepChange: P,
+            trialFooterMessageOverride: N,
+            reviewWarningMessage: k,
+            planGroup: _,
+            openInvoiceId: E,
+            analyticsData: T,
+            analyticsLocation: w,
+            handleClose: Z,
+        } = e,
+        {
+            activeSubscription: I,
+            application: A,
+            setUpdatedSubscription: D,
+            contextMetadata: L,
+            currencies: B,
+            paymentSources: F,
+            priceOptions: R,
+            purchaseError: H,
+            purchaseTokenAuthState: M,
+            selectedPlan: W,
+            selectedSku: G,
+            setCurrency: z,
+            setPaymentSourceId: K,
+            setPurchaseState: V,
+            setPurchaseError: q,
+            purchaseState: Q,
+            subscriptionMetadataRequest: Y,
+            setHasAcceptedTerms: J,
+        } = (0, p.JL)();
+    a()(null != W, "Expected plan to be selected");
     let X = r.useRef(null),
         [U, $] = (0, c.Z)(!1, 500),
         ee = null == Y ? void 0 : Y.guild_id,
@@ -32,13 +62,13 @@ function S(e) {
         [en, ei] = r.useState(null),
         er = (0, m.KW)(null != (t = null == G ? void 0 : G.flags) ? t : 0);
     r.useEffect(() => {
-        null != H && null != X.current && X.current.scrollIntoView({ behavior: 'smooth' });
+        null != H && null != X.current && X.current.scrollIntoView({ behavior: "smooth" });
     }, [H]);
     let el = r.useCallback(
             (e) => {
-                (D(e), P(b.h8.CONFIRM));
+                D(e), P(b.h8.CONFIRM);
             },
-            [P, D]
+            [P, D],
         ),
         ea = r.useRef(null);
     if (Q === h.A.PURCHASING) return (0, i.jsx)(v.Z, {});
@@ -52,44 +82,49 @@ function S(e) {
                 children: [
                     (0, i.jsx)(y.Z, {}),
                     er &&
-                        (0, i.jsxs)('div', {
+                        (0, i.jsxs)("div", {
                             className: O.userSubscriptionDetailsContainer,
                             children: [
                                 (0, i.jsx)(s.Text, {
-                                    variant: 'eyebrow',
-                                    color: 'header-secondary',
-                                    children: C.intl.string(C.t.nf5LOT)
+                                    variant: "eyebrow",
+                                    color: "header-secondary",
+                                    children: C.intl.string(C.t.nf5LOT),
                                 }),
                                 (0, i.jsx)(s.Text, {
-                                    variant: 'text-xs/medium',
-                                    color: 'interactive-normal',
-                                    children: C.intl.format(C.t.y4n0GR, { applicationName: null == A ? void 0 : A.name })
-                                })
-                            ]
+                                    variant: "text-xs/medium",
+                                    color: "interactive-normal",
+                                    children: C.intl.format(C.t.y4n0GR, {
+                                        applicationName: null == A ? void 0 : A.name,
+                                    }),
+                                }),
+                            ],
                         }),
                     !er &&
-                        (0, i.jsxs)('div', {
+                        (0, i.jsxs)("div", {
                             className: O.guildPickerContainer,
                             children: [
                                 (0, i.jsx)(s.vwX, {
                                     tag: s.RB0.H5,
-                                    children: C.intl.string(C.t['5qyruL'])
+                                    children: C.intl.string(C.t["5qyruL"]),
                                 }),
-                                (0, i.jsxs)('div', {
+                                (0, i.jsxs)("div", {
                                     className: O.guildNameContainer,
                                     children: [
                                         (0, i.jsx)(s.Text, {
-                                            variant: 'text-md/normal',
-                                            children: C.intl.string(C.t.dBih7e)
+                                            variant: "text-md/normal",
+                                            children: C.intl.string(C.t.dBih7e),
                                         }),
                                         (0, i.jsx)(s.Text, {
-                                            variant: 'text-md/normal',
+                                            variant: "text-md/normal",
                                             lineClamp: 1,
-                                            children: null != (n = null == et ? void 0 : et.name) ? n : C.intl.string(C.t.dtwqPT)
-                                        })
-                                    ]
-                                })
-                            ]
+                                            children:
+                                                null != (n = null == et ? void 0 : et.name)
+                                                    ? n
+                                                    : C.intl.string(C.t.dtwqPT),
+                                        }),
+                                    ],
+                                }),
+                            ],
                         }),
                     null == I
                         ? (0, i.jsx)(u.Z, {
@@ -109,7 +144,7 @@ function S(e) {
                               metadata: er ? void 0 : Y,
                               purchaseState: Q,
                               hideSubscriptionDetails: !0,
-                              handleClose: Z
+                              handleClose: Z,
                           })
                         : (0, i.jsx)(d.Z, {
                               premiumSubscription: I,
@@ -129,9 +164,9 @@ function S(e) {
                               onCurrencyChange: (e) => z(e),
                               hasOpenInvoice: null != E,
                               purchaseState: Q,
-                              handleClose: Z
-                          })
-                ]
+                              handleClose: Z,
+                          }),
+                ],
             }),
             (0, i.jsx)(j.O3, {
                 children: (0, i.jsx)(x.Z, {
@@ -152,9 +187,9 @@ function S(e) {
                     backButtonEligible: l,
                     invoiceError: en,
                     disablePurchase: (null == Y ? void 0 : Y.guild_id) == null && !er,
-                    onPaymentSourceAdd: eo
-                })
-            })
-        ]
+                    onPaymentSourceAdd: eo,
+                }),
+            }),
+        ],
     });
 }

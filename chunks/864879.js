@@ -11,21 +11,21 @@ let u = r.forwardRef((e, t) => {
     let { analyticsLocations: n } = (0, a.ZP)(s.Z.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, i.jsx)(a.Gt, {
         value: n,
-        children: (0, i.jsx)('div', {
+        children: (0, i.jsx)("div", {
             ref: t,
             className: d.container,
-            children: (0, i.jsxs)('div', {
+            children: (0, i.jsxs)("div", {
                 className: d.contentContainer,
                 children: [
                     (0, i.jsx)(o.Z, {}),
                     (0, i.jsx)(l.Z, {
                         responsive: !1,
-                        children: c.intl.string(c.t.lEw32t)
-                    })
-                ]
-            })
-        })
+                        children: c.intl.string(c.t.lEw32t),
+                    }),
+                ],
+            }),
+        }),
     });
 });
-u.displayName = 'PremiumMarketingFooter';
+u.displayName = "PremiumMarketingFooter";
 let m = u;

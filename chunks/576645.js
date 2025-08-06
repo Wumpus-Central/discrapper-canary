@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     Nt: () => g,
     R2: () => f,
     ZC: () => m,
     t6: () => _,
     tv: () => p,
-    vY: () => h
+    vY: () => h,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800);
 n(525654);
 var i = n(442837);
@@ -28,13 +28,19 @@ function f(e) {
         {
             price: n,
             fetchingPrice: t,
-            error: o
+            error: o,
         }
     );
 }
 function _(e) {
-    let t = (0, c.V1)('Utils.tsx'),
-        [n, o, l, u, d] = (0, i.Wu)([s.Z], () => [s.Z.isEntitlementFetched(e), s.Z.fetchPotionCount(e), s.Z.isEntitlementFetching(e), s.Z.getEntitlement(e), s.Z.getErrored(e)]);
+    let t = (0, c.V1)("Utils.tsx"),
+        [n, o, l, u, d] = (0, i.Wu)([s.Z], () => [
+            s.Z.isEntitlementFetched(e),
+            s.Z.fetchPotionCount(e),
+            s.Z.isEntitlementFetching(e),
+            s.Z.getEntitlement(e),
+            s.Z.getErrored(e),
+        ]);
     return (
         (0, r.useEffect)(() => {
             null != d || n || l || !t || (0, a.gA)(e);
@@ -43,27 +49,32 @@ function _(e) {
             entitlement: u,
             numPotions: o,
             fetchedEntitlement: n,
-            error: d
+            error: d,
         }
     );
 }
 function p(e, t, n, r) {
-    return !t && null == n && ('' !== e || (null != r && r.length > 0));
+    return !t && null == n && ("" !== e || (null != r && r.length > 0));
 }
 function h(e) {
     if (null != e)
         return {
             message_emoji: {
                 id: e.emoji.id,
-                name: (0, a.zI)(e.emoji)
-            }
+                name: (0, a.zI)(e.emoji),
+            },
         };
 }
 function m(e) {
     if (null == e || null == e.potions || 0 === e.potions.length) return null;
     for (let r of e.potions) {
         var t, n;
-        if (r.type === u.B.CONFETTI && r.used_by === (null == (t = o.default.getCurrentUser()) ? void 0 : t.id) && (null == (n = r.emoji) ? void 0 : n.length) > 0) return r.emoji[0];
+        if (
+            r.type === u.B.CONFETTI &&
+            r.used_by === (null == (t = o.default.getCurrentUser()) ? void 0 : t.id) &&
+            (null == (n = r.emoji) ? void 0 : n.length) > 0
+        )
+            return r.emoji[0];
     }
     return null;
 }

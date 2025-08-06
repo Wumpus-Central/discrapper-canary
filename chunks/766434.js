@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Br: () => l,
     Uj: () => a,
-    j0: () => i
+    j0: () => i,
 }),
-    n(388685));
+    n(388685);
 var r = n(198139);
 let i = (e) => {
     var t, n;
@@ -14,7 +14,7 @@ let i = (e) => {
         ppgStatus: i,
         payoutStatus: l,
         ppgDeferralReasons: null == r ? void 0 : r.deferral_reasons,
-        periodEndDate: null == r ? void 0 : r.period_ending_at
+        periodEndDate: null == r ? void 0 : r.period_ending_at,
     };
 };
 function l(e) {
@@ -25,19 +25,22 @@ function l(e) {
         l === r.x_.OPEN ? ([t, ...n] = e) : (n = e),
         {
             currentPeriod: t,
-            previousPeriods: n
+            previousPeriods: n,
         }
     );
 }
 function a(e, t) {
     let n, r, i, l;
     return (
-        null != e && ((n = e.amount), (i = e.paymentsCount), null != t && ((r = e.amount / t.amount - 1), (l = e.paymentsCount - t.paymentsCount))),
+        null != e &&
+            ((n = e.amount),
+            (i = e.paymentsCount),
+            null != t && ((r = e.amount / t.amount - 1), (l = e.paymentsCount - t.paymentsCount))),
         {
             revenue: n,
             revenuePctChange: r,
             paymentsCount: i,
-            paymentsCountChange: l
+            paymentsCountChange: l,
         }
     );
 }

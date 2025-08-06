@@ -1,4 +1,4 @@
-(n.d(t, { x: () => s }), n(388685));
+n.d(t, { x: () => s }), n(388685);
 var r = n(594174),
     i = n(768581),
     o = n(823379),
@@ -16,7 +16,7 @@ function s(e) {
                 id: e.id,
                 icon: e.icon,
                 applicationId: e.getApplicationId(),
-                size: t
+                size: t,
             });
     }
 }

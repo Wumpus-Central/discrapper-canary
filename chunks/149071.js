@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(544891),
     i = n(147913),
     o = n(680089),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,7 +71,7 @@ async function E(e, t) {
         ? await r.tn.patch({
               url: l.ANM.USER_GUILD_SETTINGS(l.ME),
               body: t,
-              rejectWithError: !1
+              rejectWithError: !1,
           })
         : await b(null != t ? { [null != e ? e : l.ME]: t } : {});
 }
@@ -82,7 +82,14 @@ async function b(e) {
         i = y();
     for (let r in i) {
         let i = a.Z.getChannel(r);
-        null != i && null != i.guild_id && (i.guild_id in e || (e[i.guild_id] = {}), null == e[i.guild_id].channel_overrides && (e[i.guild_id].channel_overrides = {}), (e[i.guild_id].channel_overrides[i.id] = f(u({}, e[i.guild_id].channel_overrides[i.id]), { collapsed: i.id in n })), (t = !0));
+        null != i &&
+            null != i.guild_id &&
+            (i.guild_id in e || (e[i.guild_id] = {}),
+            null == e[i.guild_id].channel_overrides && (e[i.guild_id].channel_overrides = {}),
+            (e[i.guild_id].channel_overrides[i.id] = f(u({}, e[i.guild_id].channel_overrides[i.id]), {
+                collapsed: i.id in n,
+            })),
+            (t = !0));
     }
     return t
         ? ((_ = u({}, n)),
@@ -91,7 +98,7 @@ async function b(e) {
               await r.tn.patch({
                   url: l.ANM.USER_GUILD_SETTINGS_BULK,
                   body: { guilds: e },
-                  rejectWithError: !1
+                  rejectWithError: !1,
               })
           ).body)
         : [];
@@ -108,17 +115,17 @@ function O() {
 }
 class v extends i.Z {
     constructor(...e) {
-        (super(...e),
-            c(this, 'actions', {
+        super(...e),
+            c(this, "actions", {
                 CATEGORY_COLLAPSE: g,
                 CATEGORY_EXPAND: g,
                 CATEGORY_COLLAPSE_ALL: g,
                 CATEGORY_EXPAND_ALL: g,
                 POST_CONNECTION_OPEN: m,
-                USER_GUILD_SETTINGS_FULL_UPDATE: O
+                USER_GUILD_SETTINGS_FULL_UPDATE: O,
             }),
-            c(this, 'saveUserGuildSettings', E),
-            c(this, 'saveUserGuildSettingsBulk', b));
+            c(this, "saveUserGuildSettings", E),
+            c(this, "saveUserGuildSettingsBulk", b);
     }
 }
 let I = new v();

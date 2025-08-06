@@ -15,10 +15,10 @@ function l(e) {
                             callback: () => {
                                 var t;
                                 null == (t = document.querySelector(e)) || t.focus({ preventScroll: !0 });
-                            }
+                            },
                         }));
             },
-            [n, t]
+            [n, t],
         ),
         o = r.useCallback(
             () =>
@@ -26,7 +26,7 @@ function l(e) {
                     let n = t.current;
                     null == n || n.scrollToTop({ callback: () => requestAnimationFrame(e) });
                 }),
-            [t]
+            [t],
         ),
         c = r.useCallback(
             () =>
@@ -34,13 +34,13 @@ function l(e) {
                     let n = t.current;
                     null == n || n.scrollToBottom({ callback: () => requestAnimationFrame(e) });
                 }),
-            [t]
+            [t],
         );
     return (0, i.ZP)({
-        id: 'forum-channel-list-'.concat(l.id),
+        id: "forum-channel-list-".concat(l.id),
         isEnabled: a,
         scrollToStart: o,
         scrollToEnd: c,
-        setFocus: s
+        setFocus: s,
     });
 }

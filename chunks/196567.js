@@ -6,40 +6,47 @@ var i = n(120356),
     a = n(481060),
     s = n(314943);
 function l(e) {
-    let { className: t, copy: n, bannerImage: i, textColor: l = 'always-white', hideGiftIcon: c = !1, hideNitroIcon: u = !1 } = e;
-    return (0, r.jsxs)('div', {
+    let {
+        className: t,
+        copy: n,
+        bannerImage: i,
+        textColor: l = "always-white",
+        hideGiftIcon: c = !1,
+        hideNitroIcon: u = !1,
+    } = e;
+    return (0, r.jsxs)("div", {
         className: o()(s.bannerContainer, t),
         children: [
             null == i
                 ? null
-                : (0, r.jsx)('img', {
-                      alt: '',
+                : (0, r.jsx)("img", {
+                      alt: "",
                       className: s.banner,
-                      src: i
+                      src: i,
                   }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: s.textContainer,
                 children: [
                     !1 === c &&
                         (0, r.jsx)(a.OgN, {
-                            size: 'md',
-                            color: 'currentColor',
-                            className: s.giftIcon
+                            size: "md",
+                            color: "currentColor",
+                            className: s.giftIcon,
                         }),
                     !1 === u &&
                         (0, r.jsx)(a.SrA, {
-                            size: 'md',
+                            size: "md",
                             color: a.TVs.colors.TEXT_INVERT,
-                            className: s.nitroIcon
+                            className: s.nitroIcon,
                         }),
                     (0, r.jsx)(a.X6q, {
                         className: o()(s.textHeader, { [s.textHeaderWithIcon]: !c }),
                         color: l,
-                        variant: 'heading-md/bold',
-                        children: n
-                    })
-                ]
-            })
-        ]
+                        variant: "heading-md/bold",
+                        children: n,
+                    }),
+                ],
+            }),
+        ],
     });
 }

@@ -1,1 +1,1 @@
-e.exports = { warning: 'warning__490eb' };
+e.exports = { warning: "warning__490eb" };

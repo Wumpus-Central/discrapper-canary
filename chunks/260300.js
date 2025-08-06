@@ -6,39 +6,39 @@ let a = {
     show(e, t) {
         i.Z.wait(() =>
             i.Z.dispatch({
-                type: 'TUTORIAL_INDICATOR_SHOW',
+                type: "TUTORIAL_INDICATOR_SHOW",
                 tutorialId: e,
-                renderData: t
-            })
+                renderData: t,
+            }),
         );
     },
     hide(e) {
         i.Z.wait(() =>
             i.Z.dispatch({
-                type: 'TUTORIAL_INDICATOR_HIDE',
-                tutorialId: e
-            })
+                type: "TUTORIAL_INDICATOR_HIDE",
+                tutorialId: e,
+            }),
         );
     },
     dismiss(e) {
-        (i.Z.wait(() =>
+        i.Z.wait(() =>
             i.Z.dispatch({
-                type: 'TUTORIAL_INDICATOR_DISMISS',
-                tutorialId: e
-            })
+                type: "TUTORIAL_INDICATOR_DISMISS",
+                tutorialId: e,
+            }),
         ),
             r.tn.put({
                 url: o.ANM.TUTORIAL_INDICATOR(e),
                 oldFormErrors: !0,
-                rejectWithError: !0
-            }));
+                rejectWithError: !0,
+            });
     },
     suppressAll() {
-        (i.Z.dispatch({ type: 'TUTORIAL_INDICATOR_SUPPRESS_ALL' }),
+        i.Z.dispatch({ type: "TUTORIAL_INDICATOR_SUPPRESS_ALL" }),
             r.tn.post({
                 url: o.ANM.TUTORIAL_INDICATORS_SUPPRESS,
                 oldFormErrors: !0,
-                rejectWithError: !0
-            }));
-    }
+                rejectWithError: !0,
+            });
+    },
 };

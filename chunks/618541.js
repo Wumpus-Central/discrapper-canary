@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { Z: () => T }), n(415506));
+n.d(t, { Z: () => T }), n(415506);
 var o,
     a = n(442837),
     s = n(544891),
@@ -13,7 +13,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -38,10 +38,10 @@ function E(e) {
     let { paymentSourceType: t, state: n, path: i, query: o } = e;
     if (t !== u.HeQ.PAYPAL || n !== r) return;
     let a = window.popupBridge.onComplete;
-    'function' == typeof a &&
+    "function" == typeof a &&
         a(null, {
             path: i,
-            queryItems: o
+            queryItems: o,
         });
 }
 function b(e) {
@@ -57,12 +57,12 @@ function O() {
 (0, c.isDesktop)() &&
     (window.popupBridge = {
         getReturnUrlPrefix: () => {
-            if (null == r) throw Error('popupBridgeState is unset');
+            if (null == r) throw Error("popupBridgeState is unset");
             return (0, s.K0)() + u.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.gg$.BRAINTREE, r);
         },
         open: (e) => {
-            ((i = e), window.open(e), I.emitChange());
-        }
+            (i = e), window.open(e), I.emitChange();
+        },
     });
 class v extends (o = a.ZP.Store) {
     getClient() {
@@ -78,7 +78,7 @@ class v extends (o = a.ZP.Store) {
         return i;
     }
 }
-d(v, 'displayName', 'BraintreeStore');
+d(v, "displayName", "BraintreeStore");
 let I = new v(l.Z, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: h,
         BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS: m,
@@ -86,6 +86,6 @@ let I = new v(l.Z, {
         BILLING_POPUP_BRIDGE_STATE_UPDATE: b,
         BRAINTREE_TEARDOWN_PAYPAL_CLIENT: y,
         BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: g,
-        BRAINTREE_TEARDOWN_VENMO_CLIENT: O
+        BRAINTREE_TEARDOWN_VENMO_CLIENT: O,
     }),
     T = I;

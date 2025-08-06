@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     G6: () => d,
     JC: () => c,
     qP: () => m,
-    yv: () => u
+    yv: () => u,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     l = n(447543),
     o = n(960904),
@@ -15,7 +15,7 @@ let c = (e) => null != e.text;
 function u(e) {
     let t = 0 | Math.round(e),
         n = t % 60;
-    return ''.concat((t - n) / 60, ':').concat(String(n).padStart(2, '0'));
+    return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"));
 }
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2000,
@@ -26,17 +26,17 @@ function d(e, t) {
             () => () => {
                 null != i.current && clearTimeout(i.current);
             },
-            [e]
+            [e],
         ),
         [
             l,
             () => {
-                (o(t),
+                o(t),
                     null != i.current && clearTimeout(i.current),
                     (i.current = setTimeout(() => {
                         o(e);
-                    }, n)));
-            }
+                    }, n));
+            },
         ]
     );
 }
@@ -47,7 +47,7 @@ async function m(e) {
         if (null == n || n.type !== o.g.INVITE) return !1;
         let r = a.Z.getInvite(n.code);
         if (null == r) {
-            let { invite: e } = await l.ZP.resolveInvite(n.code, 'Markdown Link');
+            let { invite: e } = await l.ZP.resolveInvite(n.code, "Markdown Link");
             r = e;
         }
         if (null == r) return !1;

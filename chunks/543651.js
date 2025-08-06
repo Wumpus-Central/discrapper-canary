@@ -25,30 +25,30 @@ let g = function (e) {
         v = s()(t).fromNow();
     return null == t
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: o()(E, m.container),
               children: [
                   (0, r.jsx)(f.Z, { game: b }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: m.textSection,
                       children: [
-                          null != a && '' !== a
+                          null != a && "" !== a
                               ? (0, r.jsx)(c.Text, {
-                                    variant: 'text-md/semibold',
-                                    color: 'interactive-active',
-                                    children: a
+                                    variant: "text-md/semibold",
+                                    color: "interactive-active",
+                                    children: a,
                                 })
                               : (0, r.jsx)(c.Text, {
-                                    variant: 'text-md/semibold',
-                                    color: 'text-muted',
-                                    children: h.intl.string(h.t.Cyxddn)
+                                    variant: "text-md/semibold",
+                                    color: "text-muted",
+                                    children: h.intl.string(h.t.Cyxddn),
                                 }),
                           (0, r.jsxs)(c.Text, {
-                              variant: 'text-xs/medium',
-                              color: 'text-muted',
-                              children: [null != O ? ''.concat(O, ' \u2022 ') : null, v]
-                          })
-                      ]
+                              variant: "text-xs/medium",
+                              color: "text-muted",
+                              children: [null != O ? "".concat(O, " \u2022 ") : null, v],
+                          }),
+                      ],
                   }),
                   null != y &&
                       y.length > 0 &&
@@ -56,8 +56,8 @@ let g = function (e) {
                           maxUsers: 4,
                           users: y,
                           guildId: g,
-                          'aria-label': h.intl.string(h.t.WTozwc)
-                      })
-              ]
+                          "aria-label": h.intl.string(h.t.WTozwc),
+                      }),
+              ],
           });
 };

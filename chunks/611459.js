@@ -20,9 +20,9 @@ function c(e) {
                   activity: t,
                   user: n,
                   source: c,
-                  onAction: f
+                  onAction: f,
               },
-              'play'
+              "play",
           )
         : null;
 }

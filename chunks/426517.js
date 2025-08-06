@@ -4,7 +4,7 @@ n.d(t, {
     JB: () => u,
     NM: () => i,
     VV: () => o,
-    ze: () => s
+    ze: () => s,
 });
 let o = Math.min,
     r = Math.max,
@@ -12,7 +12,7 @@ let o = Math.min,
     a = Math.floor,
     s = (e) => ({
         x: e,
-        y: e
+        y: e,
     });
 function u(e) {
     let { x: t, y: n, width: o, height: r } = e;
@@ -24,6 +24,6 @@ function u(e) {
         right: t + o,
         bottom: n + r,
         x: t,
-        y: n
+        y: n,
     };
 }

@@ -21,9 +21,9 @@ function _(e) {
             let e = null != O && null != v ? (0, u.nK)(O, v) : null;
             return null != b
                 ? (0, u.sN)(b, {
-                      format: 'webp',
+                      format: "webp",
                       width: null == e ? void 0 : e.width,
-                      height: null == e ? void 0 : e.height
+                      height: null == e ? void 0 : e.height,
                   })
                 : null != y
                   ? (0, u.f0)(y, null != e ? e : void 0)
@@ -33,11 +33,11 @@ function _(e) {
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)('img', {
+                  (0, r.jsx)("img", {
                       alt: null != (t = null == p ? void 0 : p.alt) ? t : d.intl.string(d.t.P84bAA),
                       className: null != (n = null == p ? void 0 : p.className) ? n : f.image,
                       src: I,
-                      onLoad: g
+                      onLoad: g,
                   }),
                   !E &&
                       null != h &&
@@ -47,17 +47,17 @@ function _(e) {
                           autoPlay: !0,
                           loop: !0,
                           muted: !0,
-                          preload: 'auto',
+                          preload: "auto",
                           poster: I,
                           playsInline: !0,
                           className: a()(h.className, f.video, { [f.hidden]: !_ }),
                           controls: !1,
                           onProgress: g,
-                          children: (0, r.jsx)('source', {
+                          children: (0, r.jsx)("source", {
                               src: h.asset.url,
-                              type: null != (o = h.asset.mimetype) ? o : void 0
-                          })
-                      })
-              ]
+                              type: null != (o = h.asset.mimetype) ? o : void 0,
+                          }),
+                      }),
+              ],
           });
 }

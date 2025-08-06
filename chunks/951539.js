@@ -1,9 +1,9 @@
-(t.d(n, {
+t.d(n, {
     ZP: () => h,
     so: () => f,
-    wg: () => b
+    wg: () => b,
 }),
-    t(388685));
+    t(388685);
 var r = t(442837),
     a = t(159300),
     i = t(427679),
@@ -18,10 +18,10 @@ var r = t(442837),
 function b(e) {
     let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.Z],
         { entityType: t, channelId: r } =
-            'entity_type' in e
+            "entity_type" in e
                 ? {
                       entityType: e.entity_type,
-                      channelId: e.channel_id
+                      channelId: e.channel_id,
                   }
                 : e;
     if (t === _.WX.EXTERNAL) return !0;

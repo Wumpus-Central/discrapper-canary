@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => j }));
+r.r(t), r.d(t, { default: () => j });
 var n = r(255367),
     o = r(73800),
     i = r(120356),
@@ -10,24 +10,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -50,30 +50,30 @@ function f(e, t) {
     );
 }
 function l() {
-    return (0, n.jsx)('div', { className: u.customPointer });
+    return (0, n.jsx)("div", { className: u.customPointer });
 }
 function b() {
-    return (0, n.jsx)('div', { className: c()(u.customPointer, u.huePointer) });
+    return (0, n.jsx)("div", { className: c()(u.customPointer, u.huePointer) });
 }
 let O = (0, a.iS)((e) =>
-        (0, n.jsxs)('div', {
+        (0, n.jsxs)("div", {
             className: u.pickerWrapper,
             children: [
-                (0, n.jsx)('div', {
+                (0, n.jsx)("div", {
                     className: u.saturation,
-                    children: (0, n.jsx)(s.Saturation, f(p({}, e), { pointer: l }))
+                    children: (0, n.jsx)(s.Saturation, f(p({}, e), { pointer: l })),
                 }),
-                (0, n.jsx)('div', {
+                (0, n.jsx)("div", {
                     className: u.hue,
                     children: (0, n.jsx)(
                         s.Hue,
                         f(p({}, e), {
-                            direction: 'vertical',
-                            pointer: b
-                        })
-                    )
-                })
-            ]
-        })
+                            direction: "vertical",
+                            pointer: b,
+                        }),
+                    ),
+                }),
+            ],
+        }),
     ),
     j = o.memo(O);

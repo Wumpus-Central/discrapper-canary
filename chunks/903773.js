@@ -9,6 +9,6 @@ function s(e) {
         className: n,
         color: s,
         icon: i.Mgn,
-        children: t
+        children: t,
     });
 }

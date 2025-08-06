@@ -21,15 +21,15 @@ function d(e) {
                 icon: p.icon,
                 text: u.intl.string(p.labelKey),
                 size: i.Ph.TINY,
-                themeColor: 'secondary',
-                onClick: p.openLink
+                themeColor: "secondary",
+                onClick: p.openLink,
             })
           : (0, r.jsx)(l.tG, {
                 icon: p.icon,
                 text: u.intl.string(p.labelKey),
                 size: i.Ph.SMALL,
                 fullWidth: !0,
-                themeColor: 'secondary',
-                onClick: p.openLink
+                themeColor: "secondary",
+                onClick: p.openLink,
             });
 }

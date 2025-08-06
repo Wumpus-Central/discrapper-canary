@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,9 +46,9 @@ function h() {
         p[e.id] = f(
             {
                 guildId: e.id,
-                guildName: e.name
+                guildName: e.name,
             },
-            t[e.id]
+            t[e.id],
         );
 }
 function m(e) {
@@ -57,7 +57,7 @@ function m(e) {
               raidDetectedAt: e.raid_detected_at,
               dmSpamDetectedAt: e.dm_spam_detected_at,
               dmsDisabledUntil: e.dms_disabled_until,
-              invitesDisabledUntil: e.invites_disabled_until
+              invitesDisabledUntil: e.invites_disabled_until,
           }
         : null;
 }
@@ -88,7 +88,7 @@ function O(e) {
 }
 class v extends (r = i.ZP.Store) {
     initialize() {
-        (this.waitFor(s.Z, l.Z, c.Z, a.Z), this.syncWith([s.Z, l.Z, c.Z, a.Z], h));
+        this.waitFor(s.Z, l.Z, c.Z, a.Z), this.syncWith([s.Z, l.Z, c.Z, a.Z], h);
     }
     getGuildIncident(e) {
         return _[e];
@@ -100,11 +100,11 @@ class v extends (r = i.ZP.Store) {
         return p;
     }
 }
-d(v, 'displayName', 'GuildIncidentsStore');
+d(v, "displayName", "GuildIncidentsStore");
 let I = new v(o.Z, {
     CONNECTION_OPEN: g,
     GUILD_CREATE: E,
     GUILD_UPDATE: b,
     GUILD_DELETE: y,
-    LOGOUT: O
+    LOGOUT: O,
 });

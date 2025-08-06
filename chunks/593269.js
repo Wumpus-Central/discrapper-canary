@@ -1,28 +1,34 @@
-(Object.defineProperty(t, '__esModule', { value: !0 }), (t.FormatBuilder = void 0), (t.bindFormatValuesWithBuilder = l), (t.bindFormatValues = c));
+Object.defineProperty(t, "__esModule", { value: !0 }),
+    (t.FormatBuilder = void 0),
+    (t.bindFormatValuesWithBuilder = l),
+    (t.bindFormatValues = c);
 let r = n(927882),
     i = n(628184);
 function o(e) {
-    return '$' === e[0];
+    return "$" === e[0];
 }
 class a {}
 t.FormatBuilder = a;
 class s extends Error {
     constructor(e, t, n) {
-        (super(`No value for variable '${e}' was provided for the localized message '${t}'`), (this.variableName = e), (this.originalMessage = t), (this.nodeType = n));
+        super(`No value for variable '${e}' was provided for the localized message '${t}'`),
+            (this.variableName = e),
+            (this.originalMessage = t),
+            (this.nodeType = n);
     }
 }
 function l(e, t, n, a, u, d = {}, f, _) {
     var p;
-    if (1 === t.length && 'string' == typeof t[0]) return void e.pushLiteralText(t[0]);
+    if (1 === t.length && "string" == typeof t[0]) return void e.pushLiteralText(t[0]);
     let h = 0;
     for (let m of t) {
-        if ('string' == typeof m) {
+        if ("string" == typeof m) {
             e.pushLiteralText(m);
             continue;
         }
         let t = m[0];
         if (t === i.FormatJsNodeType.Pound) {
-            if ('number' == typeof f) {
+            if ("number" == typeof f) {
                 let t = a.formatNumber(f);
                 e.pushLiteralText(t);
             }
@@ -33,7 +39,7 @@ function l(e, t, n, a, u, d = {}, f, _) {
         let E = d[g];
         switch (t) {
             case i.FormatJsNodeType.Argument:
-                'object' == typeof E || 'function' == typeof E ? e.pushObject(E) : e.pushLiteralText(String(E));
+                "object" == typeof E || "function" == typeof E ? e.pushObject(E) : e.pushLiteralText(String(E));
                 break;
             case i.FormatJsNodeType.Date: {
                 let t = m[2],
@@ -49,8 +55,13 @@ function l(e, t, n, a, u, d = {}, f, _) {
             }
             case i.FormatJsNodeType.Number: {
                 let t = m[2],
-                    n = t in u.number ? u.number[t] : null != t ? (0, r.parseNumberSkeleton)((0, r.parseNumberSkeletonFromString)(t)) : void 0,
-                    i = 'number' != typeof E ? E : E * (null != (p = null == n ? void 0 : n.scale) ? p : 1);
+                    n =
+                        t in u.number
+                            ? u.number[t]
+                            : null != t
+                              ? (0, r.parseNumberSkeleton)((0, r.parseNumberSkeletonFromString)(t))
+                              : void 0,
+                    i = "number" != typeof E ? E : E * (null != (p = null == n ? void 0 : n.scale) ? p : 1);
                 e.pushLiteralText(a.formatNumber(i, n));
                 break;
             }
@@ -61,9 +72,11 @@ function l(e, t, n, a, u, d = {}, f, _) {
                     s = null != r ? c(e.constructor, r, n, a, u, d, f) : [];
                 if (o(g)) e.pushRichTextTag(g, i, s);
                 else {
-                    if ('function' != typeof E) throw `expected a function type for a Tag formatting value, ${g}. got ${typeof E}: ${E}`;
+                    if ("function" != typeof E)
+                        throw `expected a function type for a Tag formatting value, ${g}. got ${typeof E}: ${E}`;
                     let t = E(i, `${h++}`);
-                    for (let n of (t = Array.isArray(t) ? t : [t])) 'string' == typeof n ? e.pushLiteralText(n) : e.pushObject(n);
+                    for (let n of (t = Array.isArray(t) ? t : [t]))
+                        "string" == typeof n ? e.pushLiteralText(n) : e.pushObject(n);
                 }
                 break;
             }
@@ -71,7 +84,8 @@ function l(e, t, n, a, u, d = {}, f, _) {
                 let t = E,
                     r = m[2],
                     i = t in r ? r[t] : r.other;
-                if (null == i) throw `${t} is not a known option for select value ${g}. Valid options are ${Object.keys(r).join(', ')}`;
+                if (null == i)
+                    throw `${t} is not a known option for select value ${g}. Valid options are ${Object.keys(r).join(", ")}`;
                 l(e, i, n, a, u, d);
                 break;
             }
@@ -82,9 +96,14 @@ function l(e, t, n, a, u, d = {}, f, _) {
                     o = (() => {
                         var e;
                         let n = `=${E}`;
-                        return n in t ? t[n] : null != (e = t[a.getPluralRules({ type: i }).select(E - (null != r ? r : 0))]) ? e : t.other;
+                        return n in t
+                            ? t[n]
+                            : null != (e = t[a.getPluralRules({ type: i }).select(E - (null != r ? r : 0))])
+                              ? e
+                              : t.other;
                     })();
-                if (null == o) throw `${E} is not a known option for plural value ${g}. Valid options are ${Object.keys(t).join(', ')}`;
+                if (null == o)
+                    throw `${E} is not a known option for plural value ${g}. Valid options are ${Object.keys(t).join(", ")}`;
                 l(e, o, n, a, u, d, E - (null != r ? r : 0));
             }
         }
@@ -92,5 +111,5 @@ function l(e, t, n, a, u, d = {}, f, _) {
 }
 function c(e, t, n, r, i, o = {}, a) {
     let s = new e();
-    return ('string' == typeof t ? s.pushLiteralText(t) : l(s, t, n, r, i, o, a), s.finish());
+    return "string" == typeof t ? s.pushLiteralText(t) : l(s, t, n, r, i, o, a), s.finish();
 }

@@ -1,5 +1,5 @@
 function r(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 var i = n(749791),
     o = n(963956),
@@ -7,7 +7,7 @@ var i = n(749791),
     s = n(65183),
     l = n(73800),
     c = n(606166);
-(s.List,
+s.List,
     (e.exports = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
@@ -33,14 +33,14 @@ var i = n(749791),
                         this.props.children ||
                         h
                             .map(function (e, c) {
-                                var h = e.get('decoratorKey'),
-                                    b = e.get('leaves'),
+                                var h = e.get("decoratorKey"),
+                                    b = e.get("leaves"),
                                     y = b.size - 1,
                                     O = b
                                         .map(function (e, n) {
                                             var i = a.encode(m, c, n),
-                                                u = e.get('start'),
-                                                d = e.get('end');
+                                                u = e.get("start"),
+                                                d = e.get("end");
                                             return l.createElement(o, {
                                                 key: i,
                                                 offsetKey: i,
@@ -52,7 +52,7 @@ var i = n(749791),
                                                 styleSet: t.getInlineStyleAt(u),
                                                 customStyleMap: s,
                                                 customStyleFn: r,
-                                                isLast: h === E && n === y
+                                                isLast: h === E && n === y,
                                             });
                                         })
                                         .toArray();
@@ -66,24 +66,24 @@ var i = n(749791),
                                           direction: d,
                                           leafSet: e,
                                           text: g,
-                                          key: c
+                                          key: c,
                                       })
                                     : O;
                             })
                             .toArray();
                 return l.createElement(
-                    'div',
+                    "div",
                     {
-                        'data-offset-key': a.encode(m, 0, 0),
+                        "data-offset-key": a.encode(m, 0, 0),
                         className: c({
-                            'public/DraftStyleDefault/block': !0,
-                            'public/DraftStyleDefault/ltr': 'LTR' === d,
-                            'public/DraftStyleDefault/rtl': 'RTL' === d
-                        })
+                            "public/DraftStyleDefault/block": !0,
+                            "public/DraftStyleDefault/ltr": "LTR" === d,
+                            "public/DraftStyleDefault/rtl": "RTL" === d,
+                        }),
                     },
-                    b
+                    b,
                 );
             }),
             t
         );
-    })(l.Component)));
+    })(l.Component));

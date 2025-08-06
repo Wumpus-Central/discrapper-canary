@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685));
+n.d(t, { Z: () => R }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -40,30 +40,32 @@ function O(e) {
         var p;
         let a = l.ZP.getMember(e, t.id),
             u = new Set(null != (p = null == a ? void 0 : a.roles) ? p : []);
-        for (let t of c.Z.getSortedRoles(n.id)) ((0, f.Z)(t) && (r.add(t.id), (0, f.h)(t) && (i.add(t.id), u.has(t.id) && o.add(t.id))), u.has(t.id) && (0, s.Fs)(t, _.Plq.ADMINISTRATOR) && b.set(e, !0));
+        for (let t of c.Z.getSortedRoles(n.id))
+            (0, f.Z)(t) && (r.add(t.id), (0, f.h)(t) && (i.add(t.id), u.has(t.id) && o.add(t.id))),
+                u.has(t.id) && (0, s.Fs)(t, _.Plq.ADMINISTRATOR) && b.set(e, !0);
     }
-    return (m.set(e, r), E.set(e, o), g.set(e, i), !0);
+    return m.set(e, r), E.set(e, o), g.set(e, i), !0;
 }
 function v() {
     let e = u.Z.getGuildsArray(),
         t = new Set();
     for (let n of e) n.features.has(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n.id);
-    return ((y = t), t);
+    return (y = t), t;
 }
 function I() {
-    (m.clear(), E.clear(), g.clear(), b.clear(), (y = null));
+    m.clear(), E.clear(), g.clear(), b.clear(), (y = null);
 }
 function T(e) {
     let {
-        guild: { id: t }
+        guild: { id: t },
     } = e;
     if ((null == y ? void 0 : y.has(t)) !== !0) return !1;
     let n = new Set(y);
-    (n.delete(t), (y = n));
+    n.delete(t), (y = n);
 }
 function S(e) {
     let {
-        guild: { id: t }
+        guild: { id: t },
     } = e;
     if (null == y) return !1;
     let n = u.Z.getGuild(t);
@@ -71,11 +73,11 @@ function S(e) {
     let r = n.features.has(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
     if (r && !y.has(t)) {
         let e = new Set(y);
-        return (e.add(t), (y = e), !0);
+        return e.add(t), (y = e), !0;
     }
     if (!r && y.has(t)) {
         let e = new Set(y);
-        return (e.delete(t), (y = e), !0);
+        return e.delete(t), (y = e), !0;
     }
     return !1;
 }
@@ -100,22 +102,22 @@ class C extends (r = i.ZP.Store) {
     }
     getSubscriptionRoles(e) {
         var t;
-        return (this.buildRoles(e), null != (t = m.get(e)) ? t : h);
+        return this.buildRoles(e), null != (t = m.get(e)) ? t : h;
     }
     getPurchasableSubscriptionRoles(e) {
         var t;
-        return (this.buildRoles(e), null != (t = g.get(e)) ? t : h);
+        return this.buildRoles(e), null != (t = g.get(e)) ? t : h;
     }
     getUserSubscriptionRoles(e) {
         var t;
-        return (this.buildRoles(e), null != (t = E.get(e)) ? t : h);
+        return this.buildRoles(e), null != (t = E.get(e)) ? t : h;
     }
     getUserIsAdmin(e) {
         var t;
-        return (this.buildRoles(e), null != (t = b.get(e)) && t);
+        return this.buildRoles(e), null != (t = b.get(e)) && t;
     }
 }
-p(C, 'displayName', 'SubscriptionRoleStore');
+p(C, "displayName", "SubscriptionRoleStore");
 let R = new C(o.Z, {
     CONNECTION_OPEN: I,
     LOGOUT: I,
@@ -125,5 +127,5 @@ let R = new C(o.Z, {
     GUILD_ROLE_CREATE: A,
     GUILD_ROLE_UPDATE: A,
     GUILD_ROLE_DELETE: A,
-    GUILD_MEMBER_UPDATE: N
+    GUILD_MEMBER_UPDATE: N,
 });

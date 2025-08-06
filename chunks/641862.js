@@ -1,6 +1,6 @@
 n.d(t, {
     Y: () => g,
-    u: () => m
+    u: () => m,
 });
 var r = n(175730),
     i = n(878369),
@@ -13,26 +13,31 @@ var r = n(175730),
     d = /^tb|vertical/,
     f = /msie|trident/i.test(l.C.navigator && l.C.navigator.userAgent),
     _ = function (e) {
-        return parseFloat(e || '0');
+        return parseFloat(e || "0");
     },
     p = function (e, t, n) {
-        return (void 0 === e && (e = 0), void 0 === t && (t = 0), void 0 === n && (n = !1), new i.D((n ? t : e) || 0, (n ? e : t) || 0));
+        return (
+            void 0 === e && (e = 0),
+            void 0 === t && (t = 0),
+            void 0 === n && (n = !1),
+            new i.D((n ? t : e) || 0, (n ? e : t) || 0)
+        );
     },
     h = (0, s.v)({
         devicePixelContentBoxSize: p(),
         borderBoxSize: p(),
         contentBoxSize: p(),
-        contentRect: new o.N(0, 0, 0, 0)
+        contentRect: new o.N(0, 0, 0, 0),
     }),
     m = function (e, t) {
         if ((void 0 === t && (t = !1), c.has(e) && !t)) return c.get(e);
-        if ((0, a.xj)(e)) return (c.set(e, h), h);
+        if ((0, a.xj)(e)) return c.set(e, h), h;
         var n = getComputedStyle(e),
             r = (0, a.zd)(e) && e.ownerSVGElement && e.getBBox(),
-            i = !f && 'border-box' === n.boxSizing,
-            l = d.test(n.writingMode || ''),
-            m = !r && u.test(n.overflowY || ''),
-            g = !r && u.test(n.overflowX || ''),
+            i = !f && "border-box" === n.boxSizing,
+            l = d.test(n.writingMode || ""),
+            m = !r && u.test(n.overflowY || ""),
+            g = !r && u.test(n.overflowX || ""),
             E = r ? 0 : _(n.paddingTop),
             b = r ? 0 : _(n.paddingRight),
             y = r ? 0 : _(n.paddingBottom),
@@ -57,9 +62,9 @@ var r = n(175730),
                 devicePixelContentBoxSize: p(Math.round(x * devicePixelRatio), Math.round(M * devicePixelRatio), l),
                 borderBoxSize: p(k, j, l),
                 contentBoxSize: p(x, M, l),
-                contentRect: new o.N(O, E, x, M)
+                contentRect: new o.N(O, E, x, M),
             });
-        return (c.set(e, U), U);
+        return c.set(e, U), U;
     },
     g = function (e, t, n) {
         var i = m(e, n),

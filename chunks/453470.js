@@ -1,4 +1,4 @@
-(n.d(t, { M: () => v }), n(953529));
+n.d(t, { M: () => v }), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(286379),
@@ -26,30 +26,30 @@ function v(e) {
         }, [t, v]),
         A = (0, g.t)({ location: y.zr }),
         N = () => {
-            (R(),
+            R(),
                 (0, p.qc)({
                     channelId: t,
                     warningId: v,
                     senderId: I,
                     warningType: _.pj.LIKELY_ATO,
-                    cta: p.NM.OPEN_MORE_TIPS
-                }));
+                    cta: p.NM.OPEN_MORE_TIPS,
+                });
         },
         C = (e) => {
-            (s.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, m.ZB.Muted),
+            s.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, m.ZB.Muted),
                 c.Z.showMuteSuccessToast(I, t),
                 (0, p.qc)({
                     channelId: t,
                     warningId: v,
                     senderId: I,
                     warningType: _.pj.LIKELY_ATO,
-                    cta: e
+                    cta: e,
                 }),
-                S());
+                S();
         },
         R = () => {
             (0, a.ZDy)(async () => {
-                let { default: e } = await n.e('59385').then(n.bind(n, 480884));
+                let { default: e } = await n.e("59385").then(n.bind(n, 480884));
                 return (n) => {
                     let { transitionState: i, onClose: o } = n;
                     return (0, r.jsx)(e, {
@@ -58,18 +58,18 @@ function v(e) {
                         channelId: t,
                         warningId: v,
                         senderId: I,
-                        description: O.intl.string(O.t['/uid3t']),
+                        description: O.intl.string(O.t["/uid3t"]),
                         safetyTipRows: T.map((e, t) =>
                             (0, r.jsx)(
                                 u.q,
                                 {
-                                    listType: 'numbered',
+                                    listType: "numbered",
                                     index: t,
                                     title: e.title,
-                                    description: e.description
+                                    description: e.description,
                                 },
-                                t
-                            )
+                                t,
+                            ),
                         ),
                         actionRows: [
                             (0, r.jsx)(
@@ -79,11 +79,11 @@ function v(e) {
                                     description: O.intl.string(O.t.w2ve0t),
                                     buttonText: O.intl.string(O.t.ftIK2N),
                                     onButtonPress: () => {
-                                        (C(p.NM.USER_MODAL_MUTE), o());
-                                    }
+                                        C(p.NM.USER_MODAL_MUTE), o();
+                                    },
                                 },
-                                'likely-ato-mute'
-                            )
+                                "likely-ato-mute",
+                            ),
                         ],
                         learnMore: (0, r.jsx)(a.P3F, {
                             onClick: () =>
@@ -92,14 +92,14 @@ function v(e) {
                                     warningId: v,
                                     senderId: I,
                                     warningType: _.pj.LIKELY_ATO,
-                                    cta: p.NM.USER_MODAL_LEARN_MORE
+                                    cta: p.NM.USER_MODAL_LEARN_MORE,
                                 }),
                             children: (0, r.jsx)(a.X6q, {
-                                variant: 'heading-sm/medium',
-                                color: 'text-link',
-                                children: O.intl.format(O.t.UkH129, { learnMoreLink: E.D8 })
-                            })
-                        })
+                                variant: "heading-sm/medium",
+                                color: "text-link",
+                                children: O.intl.format(O.t.UkH129, { learnMoreLink: E.D8 }),
+                            }),
+                        }),
                     });
                 };
             });
@@ -110,7 +110,7 @@ function v(e) {
                 channelId: t,
                 warningId: v,
                 senderId: I,
-                warningType: _.pj.LIKELY_ATO
+                warningType: _.pj.LIKELY_ATO,
             }),
             l.Z.increment({ name: o.V.SAFETY_WARNING_VIEW }));
     }, [t, v, I, A]),
@@ -126,14 +126,14 @@ function v(e) {
               buttons: [
                   {
                       text: O.intl.string(O.t.tC1pvL),
-                      variant: 'primary',
-                      onClick: N
+                      variant: "primary",
+                      onClick: N,
                   },
                   {
                       text: O.intl.string(O.t.ftIK2N),
-                      onClick: () => C(p.NM.USER_BANNER_MUTE)
-                  }
-              ]
+                      onClick: () => C(p.NM.USER_BANNER_MUTE),
+                  },
+              ],
           })
         : null;
 }

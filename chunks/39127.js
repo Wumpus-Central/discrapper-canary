@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(49124));
+n.d(t, { Z: () => f }), n(49124);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -12,7 +12,7 @@ let d = async (e) => {
     let { animationType: n, animationId: r, url: i, shouldResize: a } = e,
         s = null != (t = l.Jw[n]) ? t : l.Jw[c.q.BASIC],
         u = JSON.parse(JSON.stringify(null != r && r < s.length ? s[r] : (0, o.sample)(s)));
-    return ((u.assets[0].p = a ? await (0, l.lv)(i) : i), u);
+    return (u.assets[0].p = a ? await (0, l.lv)(i) : i), u;
 };
 function f(e) {
     let { containerDimensions: t, effect: n, onComplete: o } = e,
@@ -24,16 +24,16 @@ function f(e) {
                 !(async function () {
                     if (null != a.current) {
                         let t = await d(n);
-                        ((e = s().loadAnimation({
+                        (e = s().loadAnimation({
                             container: a.current,
-                            renderer: 'svg',
+                            renderer: "svg",
                             loop: !1,
                             autoplay: !0,
                             animationData: t,
-                            rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
+                            rendererSettings: { preserveAspectRatio: "xMidYMax slice" },
                         })),
                             n.animationType === c.q.PREMIUM && e.setSpeed(0.8),
-                            e.addEventListener('complete', () => (null == o ? void 0 : o(n.id))));
+                            e.addEventListener("complete", () => (null == o ? void 0 : o(n.id)));
                     }
                 })(),
                 () => {
@@ -41,13 +41,13 @@ function f(e) {
                 }
             );
         }, [o, n]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: u.effect,
             style: {
                 height: t.height,
-                width: t.width
+                width: t.width,
             },
-            ref: a
+            ref: a,
         })
     );
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     L: () => g,
-    Z: () => h
+    Z: () => h,
 });
 var i = n(255367);
 n(73800);
@@ -16,7 +16,17 @@ var r = n(120356),
     p = n(638068);
 let g = (e) => (e === u.Si.TIER_0 ? m.intl.string(m.t.rk4Uu7) : m.intl.string(m.t.Ve9Ge3)),
     h = (e) => {
-        let { className: t, textOptions: n, color: r, look: u, hideIcon: m, subscriptionTier: h, premiumModalAnalyticsLocation: f, giftMessage: b, onClick: x } = e,
+        let {
+                className: t,
+                textOptions: n,
+                color: r,
+                look: u,
+                hideIcon: m,
+                subscriptionTier: h,
+                premiumModalAnalyticsLocation: f,
+                giftMessage: b,
+                onClick: x,
+            } = e,
             _ = (0, c.ZP)(),
             j = g(h);
         return (0, i.jsx)(d.Z, {
@@ -37,16 +47,16 @@ let g = (e) => (e === u.Si.TIER_0 ? m.intl.string(m.t.rk4Uu7) : m.intl.string(m.
                     children: [
                         !m &&
                             (0, i.jsx)(o.OgN, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: p.giftIcon
+                                size: "md",
+                                color: "currentColor",
+                                className: p.giftIcon,
                             }),
-                        (0, i.jsx)('span', {
+                        (0, i.jsx)("span", {
                             className: s()(p.buttonText, null == n ? void 0 : n.textClassName),
-                            children: null != (c = null == n ? void 0 : n.textOverride) ? c : j
-                        })
-                    ]
+                            children: null != (c = null == n ? void 0 : n.textOverride) ? c : j,
+                        }),
+                    ],
                 });
-            }
+            },
         });
     };

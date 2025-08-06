@@ -1,4 +1,4 @@
-(n.d(t, { p: () => y }), n(997841));
+n.d(t, { p: () => y }), n(997841);
 var r = n(252258),
     i = n(570140),
     o = n(881052),
@@ -19,18 +19,22 @@ async function m(e) {
     } catch (s) {
         let e = null != a ? r.E.GUILD_CHANNEL : r.E.PRIVATE_CHANNEL;
         i.Z.dispatch({
-            type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
-            nonce: '',
+            type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
+            nonce: "",
             applicationId: t,
             channelId: null != n ? n : null,
             guildId: null != a ? a : null,
             error: new o.Hx(s),
-            locationKind: e
+            locationKind: e,
         });
     }
 }
 async function g(e) {
-    let { currentEmbeddedApplication: t, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: n, onConfirmActivityLaunchChecksAlertOpen: r } = e;
+    let {
+        currentEmbeddedApplication: t,
+        shouldClosePopoutOnLeaveCurrentEmbeddedApplication: n,
+        onConfirmActivityLaunchChecksAlertOpen: r,
+    } = e;
     return (
         (null == t ||
             !!(await new Promise((e) => {
@@ -38,20 +42,20 @@ async function g(e) {
                     o = (0, f.p)(null == i ? void 0 : i.location),
                     s = a.Z.getChannel(o);
                 if (null == i || null == s) return void e(!0);
-                (null == r || r(),
+                null == r || r(),
                     (0, u.Z)(
                         t,
                         s,
                         () => {
-                            ((0, p.Z)().leaveActivity({
+                            (0, p.Z)().leaveActivity({
                                 location: i.location,
                                 applicationId: t.id,
-                                shouldClosePopout: n
+                                shouldClosePopout: n,
                             }),
-                                e(!0));
+                                e(!0);
                         },
-                        () => e(!1)
-                    ));
+                        () => e(!1),
+                    );
             }))) &&
         !0
     );
@@ -66,20 +70,20 @@ async function E(e) {
                 : await m({
                       applicationId: n,
                       channelId: null == r ? void 0 : r.id,
-                      guildId: null != (s = null == r ? void 0 : r.getGuildId()) ? s : void 0
+                      guildId: null != (s = null == r ? void 0 : r.getGuildId()) ? s : void 0,
                   });
         if (
             null == e ||
             (null != (l = null == (a = e.embeddedActivityConfig) ? void 0 : a.requires_age_gate) &&
                 l &&
                 !(await new Promise((t) => {
-                    (null == o || o(),
+                    null == o || o(),
                         (0, c.V)({
                             application: e,
                             channelId: null == r ? void 0 : r.id,
                             onAgree: () => t(!0),
-                            onDisagree: () => t(!1)
-                        }));
+                            onDisagree: () => t(!1),
+                        });
                 })))
         )
             return !1;
@@ -95,18 +99,18 @@ async function b(e) {
                 : await m({
                       applicationId: r,
                       channelId: null == i ? void 0 : i.id,
-                      guildId: null != (t = null == i ? void 0 : i.getGuildId()) ? t : void 0
+                      guildId: null != (t = null == i ? void 0 : i.getGuildId()) ? t : void 0,
                   });
     return (
         null != a &&
         (!!((0, s.yE)(a.flags, h.udG.EMBEDDED_RELEASED) || a.isVerified || l.ZP.hasActivityEverBeenLaunched(r)) ||
             new Promise((e) => {
-                (null == o || o(),
+                null == o || o(),
                     (0, d.j)({
                         application: a,
                         onConfirm: () => e(!0),
-                        onCancel: () => e(!1)
-                    }));
+                        onCancel: () => e(!1),
+                    });
             }))
     );
 }
@@ -115,7 +119,7 @@ async function y(e) {
         !!(await g({
             currentEmbeddedApplication: e.currentEmbeddedApplication,
             shouldClosePopoutOnLeaveCurrentEmbeddedApplication: e.shouldClosePopoutOnLeaveCurrentEmbeddedApplication,
-            onConfirmActivityLaunchChecksAlertOpen: e.onConfirmActivityLaunchChecksAlertOpen
+            onConfirmActivityLaunchChecksAlertOpen: e.onConfirmActivityLaunchChecksAlertOpen,
         })) &&
         !!(await E(e)) &&
         !!(await b(e))

@@ -6,8 +6,8 @@ var a = n(481060),
 function l(e) {
     let { tabs: t, selectedTab: n, onTabSelect: l, onClose: s } = e;
     return (0, r.jsx)(a.v2r, {
-        navId: 'global-discovery-tabs-overflow-menu',
-        'aria-label': i.intl.string(i.t.riPnr6),
+        navId: "global-discovery-tabs-overflow-menu",
+        "aria-label": i.intl.string(i.t.riPnr6),
         hideScroller: !0,
         onClose: s,
         onSelect: s,
@@ -22,13 +22,13 @@ function l(e) {
                             id: t,
                             label: i,
                             icon: t === n ? a.owK : void 0,
-                            action: () => l(t)
+                            action: () => l(t),
                         },
-                        t
+                        t,
                     );
-                })
+                }),
             },
-            'overflow-tabs'
-        )
+            "overflow-tabs",
+        ),
     });
 }

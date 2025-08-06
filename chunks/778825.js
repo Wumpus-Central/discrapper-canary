@@ -11,7 +11,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,24 +20,24 @@ function E(e, t, n) {
 let b = g.QZA.CLOSED,
     y = {};
 function O(e) {
-    ((f = e.guild), (b = g.QZA.OPEN), (y = {}), (_ = e.source));
+    (f = e.guild), (b = g.QZA.OPEN), (y = {}), (_ = e.source);
 }
 function v() {
-    ((b = g.QZA.CLOSED), (y = {}), (_ = void 0));
+    (b = g.QZA.CLOSED), (y = {}), (_ = void 0);
 }
 function I() {
-    ((b = g.QZA.SUBMITTING), (y = {}));
+    (b = g.QZA.SUBMITTING), (y = {});
 }
 function T(e) {
-    ((f = e.guild), (y = {}));
+    (f = e.guild), (y = {});
 }
 function S(e) {
     var t;
     if (b !== g.QZA.SUBMITTING) return !1;
-    ((b = g.QZA.OPEN), (y = null != (t = e.errors) ? t : {}));
+    (b = g.QZA.OPEN), (y = null != (t = e.errors) ? t : {});
 }
 function A(e) {
-    ((b = g.QZA.OPEN), (y = e.errors));
+    (b = g.QZA.OPEN), (y = e.errors);
 }
 function N(e) {
     let { avatar: t } = e;
@@ -76,19 +76,19 @@ function M(e) {
     o = t;
 }
 function k() {
-    (j(), U(), (y = {}), (b = g.QZA.OPEN));
+    j(), U(), (y = {}), (b = g.QZA.OPEN);
 }
 function j() {
-    ((r = void 0), (u = void 0), (i = void 0), (o = void 0));
+    (r = void 0), (u = void 0), (i = void 0), (o = void 0);
 }
 function U() {
-    ((s = void 0), (l = void 0), (c = void 0), (d = void 0), (a = void 0));
+    (s = void 0), (l = void 0), (c = void 0), (d = void 0), (a = void 0);
 }
 function G() {
     y = {};
 }
 function B() {
-    (k(), v());
+    k(), v();
 }
 class Z extends (p = h.ZP.Store) {
     getFormState() {
@@ -98,7 +98,17 @@ class Z extends (p = h.ZP.Store) {
         return y;
     }
     showNotice() {
-        return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== s || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== o;
+        return (
+            void 0 !== r ||
+            void 0 !== i ||
+            void 0 !== a ||
+            void 0 !== s ||
+            void 0 !== l ||
+            void 0 !== c ||
+            void 0 !== u ||
+            void 0 !== d ||
+            void 0 !== o
+        );
     }
     getIsSubmitDisabled() {
         return void 0 !== l && l.length > g.tPV;
@@ -143,7 +153,7 @@ class Z extends (p = h.ZP.Store) {
             pendingPronouns: c,
             pendingNickname: u,
             pendingThemeColors: d,
-            pendingNameplate: o
+            pendingNameplate: o,
         };
     }
     getGuild() {
@@ -153,7 +163,7 @@ class Z extends (p = h.ZP.Store) {
         return _;
     }
 }
-E(Z, 'displayName', 'GuildIdentitySettingsStore');
+E(Z, "displayName", "GuildIdentitySettingsStore");
 let F = new Z(m.Z, {
     GUILD_IDENTITY_SETTINGS_INIT: O,
     GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: B,
@@ -174,5 +184,5 @@ let F = new Z(m.Z, {
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: U,
     GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: k,
     GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: k,
-    GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: G
+    GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: G,
 });

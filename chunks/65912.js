@@ -1,6 +1,6 @@
 n.d(t, {
     V: () => A,
-    w: () => S
+    w: () => S,
 });
 var r = n(392711),
     i = n.n(r),
@@ -24,7 +24,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,7 +72,8 @@ function O(e, t) {
 function v(e) {
     if (e.code === m.evJ.INVALID_FORM_BODY) {
         var t, n;
-        if ((null == (n = e.errors) || null == (t = n.trigger_metadata) ? void 0 : t.regex_patterns) != null) return g.intl.string(g.t.hDPEu7);
+        if ((null == (n = e.errors) || null == (t = n.trigger_metadata) ? void 0 : t.regex_patterns) != null)
+            return g.intl.string(g.t.hDPEu7);
     }
     return e.getAnyErrorMessage();
 }
@@ -80,7 +81,7 @@ let I = Object.freeze({
         editingRule: null,
         hasChanges: !1,
         isLoading: !1,
-        errorMessage: null
+        errorMessage: null,
     }),
     T = (0, a.F)((e, t) => ({
         editingRule: null,
@@ -89,14 +90,14 @@ let I = Object.freeze({
             let r = t().editingRule,
                 o = null != n && null != r && n.id === r.id,
                 a = i().cloneDeep(n);
-            (null != a && (a = O(b({}, a), { actions: a.actions.filter(c.lm) })),
+            null != a && (a = O(b({}, a), { actions: a.actions.filter(c.lm) })),
                 (0, s.j)(() =>
                     e({
                         editingRule: a,
                         hasChanges: o,
-                        errorMessage: null
-                    })
-                ));
+                        errorMessage: null,
+                    }),
+                );
         },
         createNewEditingRule: (t, n, r) => {
             let i = b({}, (0, d.ep)(t, n), null != r ? r : {});
@@ -104,8 +105,8 @@ let I = Object.freeze({
                 (0, s.j)(() =>
                     e({
                         editingRule: i,
-                        hasChanges: !1
-                    })
+                        hasChanges: !1,
+                    }),
                 ),
                 i
             );
@@ -116,30 +117,42 @@ let I = Object.freeze({
             (0, s.j)(() => e(b({}, I)));
         },
         saveRule: async (t, n) => {
-            if (null == t) return ((0, s.j)(() => e(b({}, I))), null);
+            if (null == t) return (0, s.j)(() => e(b({}, I))), null;
             try {
                 var r, i, o;
-                ((0, d.DO)(t) && ((t.triggerMetadata.keywordFilter = (0, p.cb)((0, p.Ze)(null != (r = t.triggerMetadata.keywordFilter) ? r : []))), (t.triggerMetadata.allowList = (0, p.cb)((0, p.Ze)(null != (i = t.triggerMetadata.allowList) ? i : [])))), (0, d.Fn)(t) && (t.triggerMetadata.allowList = (0, p.cb)((0, p.Ze)(null != (o = t.triggerMetadata.allowList) ? o : []))), (0, f.yU)(t, n), (0, d.QO)(t));
+                (0, d.DO)(t) &&
+                    ((t.triggerMetadata.keywordFilter = (0, p.cb)(
+                        (0, p.Ze)(null != (r = t.triggerMetadata.keywordFilter) ? r : []),
+                    )),
+                    (t.triggerMetadata.allowList = (0, p.cb)(
+                        (0, p.Ze)(null != (i = t.triggerMetadata.allowList) ? i : []),
+                    ))),
+                    (0, d.Fn)(t) &&
+                        (t.triggerMetadata.allowList = (0, p.cb)(
+                            (0, p.Ze)(null != (o = t.triggerMetadata.allowList) ? o : []),
+                        )),
+                    (0, f.yU)(t, n),
+                    (0, d.QO)(t);
             } catch (t) {
                 return (
                     t instanceof u.V6
                         ? (0, s.j)(() => {
                               e({
-                                  errorMessage: g.intl.string(g.t['4Dxaur']),
-                                  isLoading: !1
+                                  errorMessage: g.intl.string(g.t["4Dxaur"]),
+                                  isLoading: !1,
                               });
                           })
                         : t instanceof u.uS
                           ? (0, s.j)(() => {
                                 e({
                                     errorMessage: g.intl.string(g.t.hDPEu7),
-                                    isLoading: !1
+                                    isLoading: !1,
                                 });
                             })
                           : (0, s.j)(() => {
                                 e({
                                     errorMessage: t.message,
-                                    isLoading: !1
+                                    isLoading: !1,
                                 });
                             }),
                     null
@@ -150,13 +163,17 @@ let I = Object.freeze({
                     e({ isLoading: !0 });
                 });
                 let n = null;
-                return ((n = (0, d.Vb)(t) && !(0, h.U)(t.id) ? await (0, _.Je)(t) : await (0, _.JK)(t)), (0, s.j)(() => e(b({}, I))), n);
+                return (
+                    (n = (0, d.Vb)(t) && !(0, h.U)(t.id) ? await (0, _.Je)(t) : await (0, _.JK)(t)),
+                    (0, s.j)(() => e(b({}, I))),
+                    n
+                );
             } catch (n) {
                 let t = new l.Hx(n);
                 (0, s.j)(() => {
                     e({
                         isLoading: !1,
-                        errorMessage: v(t)
+                        errorMessage: v(t),
                     });
                 });
             }
@@ -165,7 +182,7 @@ let I = Object.freeze({
         saveEditingRule: (e) => {
             let { editingRule: n, saveRule: r } = t();
             return r(n, e);
-        }
+        },
     }));
 function S() {
     return T(
@@ -176,9 +193,9 @@ function S() {
             errorMessage: e.errorMessage,
             saveRule: e.saveRule,
             saveEditingRule: e.saveEditingRule,
-            cancelEditingRule: e.cancelEditingRule
+            cancelEditingRule: e.cancelEditingRule,
         }),
-        o.X
+        o.X,
     );
 }
 function A() {
@@ -188,9 +205,9 @@ function A() {
                 hasChanges: e.hasChanges,
                 editingRule: e.editingRule,
                 setEditingRule: e.setEditingRule,
-                createNewEditingRule: e.createNewEditingRule
+                createNewEditingRule: e.createNewEditingRule,
             }),
-            o.X
+            o.X,
         );
-    return (null != e && t.setEditingRule(e), t);
+    return null != e && t.setEditingRule(e), t;
 }

@@ -1,4 +1,4 @@
-(n.d(r, { default: () => T }), n(388685));
+n.d(r, { default: () => T }), n(388685);
 var e = n(255367),
     i = n(73800),
     a = n(755721),
@@ -14,49 +14,49 @@ function T(t) {
         u = async () => {
             A(!0);
             try {
-                (await (0, c.zo)(r), T());
+                await (0, c.zo)(r), T();
             } finally {
                 A(!1);
             }
         },
-        I = l.intl.string(l.t['22itmp']);
+        I = l.intl.string(l.t["22itmp"]);
     return (0, e.jsxs)(o.Y0X, {
         className: E.__invalid_container,
         size: o.CgR.DYNAMIC,
         transitionState: n,
-        'aria-label': I,
-        parentComponent: 'TermsNotAcceptedErrorModal',
+        "aria-label": I,
+        parentComponent: "TermsNotAcceptedErrorModal",
         children: [
             (0, e.jsxs)(o.hzk, {
                 className: E.content,
                 children: [
-                    (0, e.jsxs)('div', {
+                    (0, e.jsxs)("div", {
                         className: E.header,
                         children: [
                             (0, e.jsx)(o.Mgn, {
-                                size: 'custom',
-                                color: 'currentColor',
+                                size: "custom",
+                                color: "currentColor",
                                 width: 20,
                                 height: 20,
-                                className: E.warningIcon
+                                className: E.warningIcon,
                             }),
                             (0, e.jsx)(o.LZC, {
                                 size: 8,
-                                horizontal: !0
+                                horizontal: !0,
                             }),
                             (0, e.jsx)(o.X6q, {
-                                variant: 'heading-xl/semibold',
-                                color: 'header-primary',
-                                children: I
-                            })
-                        ]
+                                variant: "heading-xl/semibold",
+                                color: "header-primary",
+                                children: I,
+                            }),
+                        ],
                     }),
                     (0, e.jsx)(o.LZC, { size: 12 }),
                     (0, e.jsx)(o.Text, {
-                        variant: 'text-md/normal',
-                        color: 'text-muted',
+                        variant: "text-md/normal",
+                        color: "text-muted",
                         className: E.__invalid_body,
-                        children: l.intl.string(l.t.kdbm9P)
+                        children: l.intl.string(l.t.kdbm9P),
                     }),
                     (0, e.jsx)(o.LZC, { size: 28 }),
                     (0, e.jsx)(o.XZJ, {
@@ -67,34 +67,34 @@ function T(t) {
                         type: o.XZJ.Types.INVERTED,
                         value: N,
                         children: (0, e.jsx)(o.Text, {
-                            variant: 'text-md/normal',
-                            color: 'header-secondary',
-                            children: (0, s.f)()
-                        })
-                    })
-                ]
+                            variant: "text-md/normal",
+                            color: "header-secondary",
+                            children: (0, s.f)(),
+                        }),
+                    }),
+                ],
             }),
             (0, e.jsxs)(o.mzw, {
                 children: [
                     (0, e.jsx)(o.zxk, {
-                        variant: 'primary',
-                        text: l.intl.string(l.t['cY+Ooa']),
+                        variant: "primary",
+                        text: l.intl.string(l.t["cY+Ooa"]),
                         disabled: !N,
                         onClick: u,
-                        loading: _
+                        loading: _,
                     }),
                     (0, e.jsx)(o.LZC, {
                         size: 12,
-                        horizontal: !0
+                        horizontal: !0,
                     }),
                     (0, e.jsx)(a.zx, {
                         color: a.zx.Colors.PRIMARY,
                         look: a.zx.Looks.OUTLINED,
                         onClick: T,
-                        children: l.intl.string(l.t['ETE/oK'])
-                    })
-                ]
-            })
-        ]
+                        children: l.intl.string(l.t["ETE/oK"]),
+                    }),
+                ],
+            }),
+        ],
     });
 }

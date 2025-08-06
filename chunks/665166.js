@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(515149),
@@ -20,75 +20,75 @@ function d() {
                 (0, i.jsx)(a.PhF, {
                     options: [
                         {
-                            value: 'en-US',
-                            label: 'English'
+                            value: "en-US",
+                            label: "English",
                         },
                         {
-                            value: 'fr',
-                            label: 'French'
-                        }
+                            value: "fr",
+                            label: "French",
+                        },
                     ],
                     isSelected: (e) => e === c.intl.currentLocale,
                     select: (e) => c.intl.setLocale(e),
-                    serialize: (e) => e
+                    serialize: (e) => e,
                 }),
                 (0, i.jsx)(a.LZC, { size: 32 }),
                 (0, i.jsxs)(a.hjN, {
                     tag: a.RB0.H1,
                     children: [
                         (0, i.jsx)(a.Text, {
-                            tag: 'div',
-                            variant: 'heading-lg/bold',
-                            children: c.intl.format(o.Z.JJ0wpK, {})
+                            tag: "div",
+                            variant: "heading-lg/bold",
+                            children: c.intl.format(o.Z.JJ0wpK, {}),
                         }),
                         (0, i.jsx)(a.Text, {
-                            tag: 'div',
-                            variant: 'text-md/normal',
-                            children: c.intl.format(l.Z.swfLzc, {})
+                            tag: "div",
+                            variant: "text-md/normal",
+                            children: c.intl.format(l.Z.swfLzc, {}),
                         }),
                         (0, i.jsx)(a.Text, {
-                            tag: 'div',
-                            variant: 'text-md/normal',
-                            children: c.intl.format(o.Z['rmps8/'], {})
+                            tag: "div",
+                            variant: "text-md/normal",
+                            children: c.intl.format(o.Z["rmps8/"], {}),
                         }),
                         (0, i.jsx)(a.Text, {
-                            tag: 'div',
-                            variant: 'text-md/normal',
-                            children: c.intl.format(o.Z.uczI4u, { linkTarget: console.log })
+                            tag: "div",
+                            variant: "text-md/normal",
+                            children: c.intl.format(o.Z.uczI4u, { linkTarget: console.log }),
                         }),
                         (0, i.jsx)(a.Text, {
-                            tag: 'div',
-                            variant: 'text-md/normal',
-                            children: c.intl.format(o.Z.rdfRys, {})
+                            tag: "div",
+                            variant: "text-md/normal",
+                            children: c.intl.format(o.Z.rdfRys, {}),
                         }),
                         (0, i.jsx)(a.Text, {
-                            tag: 'div',
-                            variant: 'text-md/normal',
-                            children: c.intl.format(o.Z['Q+eyqq'], { count: 1 })
+                            tag: "div",
+                            variant: "text-md/normal",
+                            children: c.intl.format(o.Z["Q+eyqq"], { count: 1 }),
                         }),
                         (0, i.jsx)(a.Text, {
-                            tag: 'div',
-                            variant: 'text-md/normal',
+                            tag: "div",
+                            variant: "text-md/normal",
                             children: c.intl.format(o.Z.XOdbAw, {
-                                username: 'some user',
+                                username: "some user",
                                 usernameHook: (e) =>
-                                    (0, i.jsx)('span', {
+                                    (0, i.jsx)("span", {
                                         style: {
-                                            backgroundColor: 'green',
-                                            color: 'white',
+                                            backgroundColor: "green",
+                                            color: "white",
                                             borderRadius: 4,
                                             paddingInline: 6,
                                             paddingBlock: 0,
                                             lineHeight: 1,
-                                            fontSize: '0.85em'
+                                            fontSize: "0.85em",
                                         },
-                                        children: e
-                                    })
-                            })
-                        })
-                    ]
-                })
-            ]
+                                        children: e,
+                                    }),
+                            }),
+                        }),
+                    ],
+                }),
+            ],
         })
     );
 }

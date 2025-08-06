@@ -22,14 +22,14 @@ function m(e) {
             notif_user_id: y,
             guild_id: e.guild_id,
             channel_id: e.id,
-            channel_type: e.type
+            channel_type: e.type,
         });
     return {
         icon: m,
         title: t,
         body: n,
-        hint: (e) => (0, a.QR)(e, (0, h.P)(), g.t['Odi54+']),
-        confirmText: g.intl.string(g.t['0D/6R0']),
+        hint: (e) => (0, a.QR)(e, (0, h.P)(), g.t["Odi54+"]),
+        confirmText: g.intl.string(g.t["0D/6R0"]),
         cancelText: g.intl.string(g.t.BVN4pK),
         onNotificationShow: () => {
             O();
@@ -40,19 +40,19 @@ function m(e) {
                 if (e.type !== p.d4z.GUILD_VOICE) return;
                 o.default.selectVoiceChannel(e.id);
             }
-            (v('join'),
+            v("join"),
                 r.Z.track(p.rMx.VOICE_CHANNEL_SELECTED, {
-                    location: 'Overlay Notificaiton',
+                    location: "Overlay Notificaiton",
                     guild_id: e.guild_id,
                     channel_id: e.id,
-                    video_enabled: !1
-                }));
+                    video_enabled: !1,
+                });
         },
         onCancelClick: () => {
-            (i.Z.stopRinging(e.id), v('decline'));
+            i.Z.stopRinging(e.id), v("decline");
         },
         onDismissClick: () => {
-            v('dismiss');
-        }
+            v("dismiss");
+        },
     };
 }

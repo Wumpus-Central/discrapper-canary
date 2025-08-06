@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685), n(539854));
+n.d(t, { Z: () => g }), n(388685), n(539854);
 var r = n(750041),
     i = n(594174),
     o = n(131681),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,7 +30,7 @@ function d() {
 }
 function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    (null == u && (u = new s.B()), u.addWords(e));
+    null == u && (u = new s.B()), u.addWords(e);
 }
 function _() {
     d();
@@ -41,7 +41,7 @@ function p() {
 function h(e) {
     let { local: t, settings: n } = e;
     if (!t || n.type !== l.yP.PRELOADED_USER_SETTINGS) return !1;
-    (null != u && u.clear(), d());
+    null != u && u.clear(), d();
 }
 class m extends r.Z {
     loadCache() {
@@ -51,7 +51,7 @@ class m extends r.Z {
     takeSnapshot() {
         return {
             version: m.LATEST_SNAPSHOT_VERSION,
-            data: { keywordTrie: u }
+            data: { keywordTrie: u },
         };
     }
     getKeywordTrie() {
@@ -67,9 +67,9 @@ class m extends r.Z {
             CONNECTION_OPEN_SUPPLEMENTAL: _,
             CACHE_LOADED: () => this.loadCache(),
             OVERLAY_INITIALIZE: p,
-            USER_SETTINGS_PROTO_UPDATE: h
+            USER_SETTINGS_PROTO_UPDATE: h,
         });
     }
 }
-(c(m, 'displayName', 'KeywordFilterStore'), c(m, 'LATEST_SNAPSHOT_VERSION', 2));
+c(m, "displayName", "KeywordFilterStore"), c(m, "LATEST_SNAPSHOT_VERSION", 2);
 let g = new m();

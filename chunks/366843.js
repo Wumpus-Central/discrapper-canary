@@ -7,37 +7,37 @@ var n = e(146063),
     c = e(682564),
     f = e(511696),
     l = e(507604),
-    p = 'Array Iterator',
+    p = "Array Iterator",
     v = a.set,
     h = a.getterFor(p);
 t.exports = u(
     Array,
-    'Array',
+    "Array",
     function (t, r) {
         v(this, {
             type: p,
             target: n(t),
             index: 0,
-            kind: r
+            kind: r,
         });
     },
     function () {
         var t = h(this),
             r = t.target,
             e = t.index++;
-        if (!r || e >= r.length) return ((t.target = null), c(void 0, !0));
+        if (!r || e >= r.length) return (t.target = null), c(void 0, !0);
         switch (t.kind) {
-            case 'keys':
+            case "keys":
                 return c(e, !1);
-            case 'values':
+            case "values":
                 return c(r[e], !1);
         }
         return c([e, r[e]], !1);
     },
-    'values'
+    "values",
 );
 var d = (i.Arguments = i.Array);
-if ((o('keys'), o('values'), o('entries'), !f && l && 'values' !== d.name))
+if ((o("keys"), o("values"), o("entries"), !f && l && "values" !== d.name))
     try {
-        s(d, 'name', { value: 'values' });
+        s(d, "name", { value: "values" });
     } catch (t) {}

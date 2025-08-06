@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var i = n(442837),
     r = n(687476),
     s = n(293810);
@@ -16,6 +16,6 @@ function a() {
                 : 0 === t.size
                   ? s.PY.NONE
                   : s.PY.IN_SUBSCRIPTION_SERVER;
-        })([r.Z])
+        })([r.Z]),
     );
 }

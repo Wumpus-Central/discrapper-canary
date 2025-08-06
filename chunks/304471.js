@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -15,11 +15,11 @@ function c(e) {
         : (0, r.jsxs)(i.Ttm, {
               className: a.container,
               children: [
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: a.popoutHeaderContainer,
-                      children: (0, r.jsx)(s.Z, { channel: t })
+                      children: (0, r.jsx)(s.Z, { channel: t }),
                   }),
-                  (0, r.jsx)('div', { className: a.headerDivider }),
+                  (0, r.jsx)("div", { className: a.headerDivider }),
                   u.map((e, i) => {
                       var l;
                       return (0, r.jsx)(
@@ -28,11 +28,11 @@ function c(e) {
                               embeddedApp: e,
                               presenceActivity: null != (l = e.presenceActivity) ? l : void 0,
                               channel: t,
-                              onAction: n
+                              onAction: n,
                           },
-                          i
+                          i,
                       );
-                  })
-              ]
+                  }),
+              ],
           });
 }

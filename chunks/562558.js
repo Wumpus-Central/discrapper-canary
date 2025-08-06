@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(642613));
+n.d(t, { Z: () => c }), n(642613);
 var r = n(73800),
     i = n(835473),
     o = n(823379);
@@ -20,7 +20,7 @@ function c(e) {
         n = l(e),
         i = r.useMemo(() => {
             let e = s(t);
-            return (n.sort(e), n);
+            return n.sort(e), n;
         }, [n, t]),
         o = r.useMemo(() => i.slice(0, a), [i]);
     return {
@@ -29,6 +29,6 @@ function c(e) {
             var e;
             return null != (e = i[a]) ? e : null;
         }, [i]),
-        remainingGames: r.useMemo(() => i.slice(a), [i])
+        remainingGames: r.useMemo(() => i.slice(a), [i]),
     };
 }

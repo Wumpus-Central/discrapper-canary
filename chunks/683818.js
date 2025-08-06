@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => c,
-    Z: () => o
+    Z: () => o,
 });
 var r = n(442837),
     i = n(592125),
@@ -15,7 +15,7 @@ function o(e) {
     return {
         isEntryAdmin: o,
         canEdit: o || c,
-        canRemove: o || c
+        canRemove: o || c,
     };
 }
 function c(e) {

@@ -16,24 +16,24 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -42,21 +42,21 @@ function f(e) {
         {
             isClaimed: f,
             isVerified: b,
-            hasEmail: x
+            hasEmail: x,
         } = (0, o.cj)([u.default], () => {
             let e = u.default.getCurrentUser();
             return (
-                l()(null != e, 'EmailNotice: currentUser cannot be undefined'),
+                l()(null != e, "EmailNotice: currentUser cannot be undefined"),
                 {
                     isClaimed: e.isClaimed(),
                     isVerified: e.verified,
-                    hasEmail: null != e.email
+                    hasEmail: null != e.email,
                 }
             );
         });
     function _() {
         (0, c.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('9343'), n.e('39809')]).then(n.bind(n, 642298));
+            let { default: e } = await Promise.all([n.e("9343"), n.e("39809")]).then(n.bind(n, 642298));
             return (t) => (0, i.jsx)(e, h({}, t));
         });
     }
@@ -70,13 +70,19 @@ function f(e) {
                       (0, i.jsx)(d.Z.Child, {
                           className: g.image,
                           grow: 0,
-                          shrink: 0
+                          shrink: 0,
                       }),
                       (0, i.jsxs)(d.Z.Child, {
                           children: [
                               (0, i.jsx)(c.Text, {
-                                  variant: 'text-sm/normal',
-                                  children: f ? (null != r ? r : p.intl.string(p.t.WuyBbG)) : null != t ? t : p.intl.string(p.t['f+Zaoq'])
+                                  variant: "text-sm/normal",
+                                  children: f
+                                      ? null != r
+                                          ? r
+                                          : p.intl.string(p.t.WuyBbG)
+                                      : null != t
+                                        ? t
+                                        : p.intl.string(p.t["f+Zaoq"]),
                               }),
                               (0, i.jsxs)(d.Z, {
                                   justify: d.Z.Justify.CENTER,
@@ -87,43 +93,45 @@ function f(e) {
                                               ? (0, i.jsx)(d.Z.Child, {
                                                     grow: 0,
                                                     shrink: 0,
-                                                    children: (0, i.jsx)(m.Z, {})
+                                                    children: (0, i.jsx)(m.Z, {}),
                                                 })
                                               : (0, i.jsx)(c.zxk, {
-                                                    variant: 'primary',
+                                                    variant: "primary",
                                                     text: p.intl.string(p.t.ydw5nZ),
-                                                    onClick: _
+                                                    onClick: _,
                                                 })
                                           : (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,
                                                 children: (0, i.jsx)(c.zxk, {
-                                                    variant: 'primary',
+                                                    variant: "primary",
                                                     text: p.intl.string(p.t.fiNVio),
                                                     onClick: function () {
                                                         (0, c.ZDy)(async () => {
-                                                            let { default: e } = await n.e('60827').then(n.bind(n, 324239));
+                                                            let { default: e } = await n
+                                                                .e("60827")
+                                                                .then(n.bind(n, 324239));
                                                             return (t) => (0, i.jsx)(e, h({}, t));
                                                         });
-                                                    }
-                                                })
+                                                    },
+                                                }),
                                             }),
                                       f && x
                                           ? (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,
                                                 children: (0, i.jsx)(c.zxk, {
-                                                    variant: 'secondary',
+                                                    variant: "secondary",
                                                     text: p.intl.string(p.t.Vm8akJ),
-                                                    onClick: _
-                                                })
+                                                    onClick: _,
+                                                }),
                                             })
-                                          : null
-                                  ]
-                              })
-                          ]
-                      })
-                  ]
-              })
+                                          : null,
+                                  ],
+                              }),
+                          ],
+                      }),
+                  ],
+              }),
           });
 }

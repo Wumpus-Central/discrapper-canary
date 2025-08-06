@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(415506), n(35282));
+n.d(t, { Z: () => g }), n(415506), n(35282);
 var r = n(570140),
     i = n(846027),
     o = n(872810),
@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,61 +26,61 @@ function h(e, t, n) {
 }
 class m {
     _onGameDetectionUpdate(e) {
-        ((this.applications = e.map((e) => {
+        (this.applications = e.map((e) => {
             var t, n;
             return {
                 applicationId: null != (t = e.id) ? t : null,
                 processId: e.pid,
                 processPath: e.pidPath,
                 windowHandle: null != (n = e.windowHandle) ? n : null,
-                executableName: e.exeName
+                executableName: e.exeName,
             };
         })),
-            'verbatim-source' !== this.mode && this.director.onDetectionUpdate(this.applications));
+            "verbatim-source" !== this.mode && this.director.onDetectionUpdate(this.applications);
     }
     _onStreamApplication(e, t, n) {
-        ((this.mode = 'application'), (this.streamKey = e), this.director.onStreamBegin(this.applications, t, n));
+        (this.mode = "application"), (this.streamKey = e), this.director.onStreamBegin(this.applications, t, n);
     }
     _onStreamDirectSource(e, t, n, r) {
-        ((this.mode = 'verbatim-source'),
+        (this.mode = "verbatim-source"),
             (this.streamKey = e),
             (this.director.sound = null == r || r),
             this._onDirectorAction({
                 type: s.A.STREAM,
                 sourceId: t,
                 audioSourceId: n,
-                sound: r
-            }));
+                sound: r,
+            });
     }
     _onStreamEnd(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         if (this.streamKey === e)
             switch (((this.streamKey = null), this.mode)) {
-                case 'application':
+                case "application":
                     this.director.onStreamEnd();
                     break;
-                case 'verbatim-source':
+                case "verbatim-source":
                     this._onDirectorAction({
                         type: s.A.STOP,
-                        alsoClose: t
+                        alsoClose: t,
                     });
                     break;
                 default:
                     var n;
-                    throw Error('unknown streaming mode: '.concat(null != (n = this.mode) ? n : '(none)'));
+                    throw Error("unknown streaming mode: ".concat(null != (n = this.mode) ? n : "(none)"));
             }
     }
     _onStreamKilled(e) {
         if (this.streamKey === e)
             switch (((this.streamKey = null), this.mode)) {
-                case 'application':
+                case "application":
                     this.director.onStreamKilled();
                     break;
-                case 'verbatim-source':
+                case "verbatim-source":
                     break;
                 default:
                     var t;
-                    throw Error('unknown streaming mode: '.concat(null != (t = this.mode) ? t : '(none)'));
+                    throw Error("unknown streaming mode: ".concat(null != (t = this.mode) ? t : "(none)"));
             }
     }
     _onDirectorAction(e) {
@@ -89,32 +89,32 @@ class m {
             a = l.Z.getState();
         switch (e.type) {
             case s.A.STREAM:
-                if ((null != r && (0, o.tK)(r, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
-                    let t = e.sourceId.split(':')[1];
+                if ((null != r && (0, o.tK)(r, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId)) {
+                    let t = e.sourceId.split(":")[1];
                     i.Z.setGoLiveSource({
                         cameraSettings: {
                             videoDeviceGuid: t,
-                            audioDeviceGuid: e.audioSourceId
+                            audioDeviceGuid: e.audioSourceId,
                         },
                         qualityOptions: {
                             preset: a.preset,
                             resolution: a.resolution,
-                            frameRate: a.fps
+                            frameRate: a.fps,
                         },
-                        context: p.Yn.STREAM
+                        context: p.Yn.STREAM,
                     });
                 } else
                     i.Z.setGoLiveSource({
                         desktopSettings: {
                             sourceId: e.sourceId,
-                            sound: null == (t = e.sound) || t
+                            sound: null == (t = e.sound) || t,
                         },
                         qualityOptions: {
                             preset: a.preset,
                             resolution: a.resolution,
-                            frameRate: a.fps
+                            frameRate: a.fps,
                         },
-                        context: p.Yn.STREAM
+                        context: p.Yn.STREAM,
                     });
                 break;
             case s.A.PAUSE:
@@ -124,7 +124,7 @@ class m {
                 null != r && (0, f.Z)(r, !0, null == (n = e.alsoClose) || n);
                 break;
             default:
-                throw Error('unhandled stream action: '.concat(e.type));
+                throw Error("unhandled stream action: ".concat(e.type));
         }
     }
     _onCapturePaused(e) {
@@ -134,62 +134,74 @@ class m {
     _onCaptureEnded() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
         switch (this.mode) {
-            case 'application':
+            case "application":
                 this._onCapturePaused(!0);
                 break;
-            case 'verbatim-source':
+            case "verbatim-source":
                 null != this.streamKey && this._onStreamEnd(this.streamKey, e);
                 break;
             default:
                 var t;
-                throw Error('unknown streaming mode: '.concat(null != (t = this.mode) ? t : '(none)'));
+                throw Error("unknown streaming mode: ".concat(null != (t = this.mode) ? t : "(none)"));
         }
     }
     constructor() {
-        (h(this, 'director', void 0),
-            h(this, 'applications', void 0),
-            h(this, 'streamKey', void 0),
-            h(this, 'mode', void 0),
+        h(this, "director", void 0),
+            h(this, "applications", void 0),
+            h(this, "streamKey", void 0),
+            h(this, "mode", void 0),
             (this.mode = null),
             (this.applications = []),
             (this.director = new s.a((e) => this._onDirectorAction(e))),
-            r.Z.subscribe('STREAM_START', (e) => {
+            r.Z.subscribe("STREAM_START", (e) => {
                 let { streamType: t, guildId: n, channelId: r, pid: i, sourceId: o, audioSourceId: s, sound: l } = e,
                     c = u.default.getId(),
                     f = (0, d.V9)({
                         streamType: t,
                         guildId: n,
                         channelId: r,
-                        ownerId: c
+                        ownerId: c,
                     });
-                (null == i) != (null == o) ? (null != i && this._onStreamApplication(f, i, null == l || l), null != o && this._onStreamDirectSource(f, o, s, l)) : new a.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(o, ')'));
+                (null == i) != (null == o)
+                    ? (null != i && this._onStreamApplication(f, i, null == l || l),
+                      null != o && this._onStreamDirectSource(f, o, s, l))
+                    : new a.Z("ApplicationSwitchingManager").warn(
+                          "invalid start_stream: both application + display modes were specified (pid: "
+                              .concat(i, ", source-id: ")
+                              .concat(o, ")"),
+                      );
             }),
-            r.Z.subscribe('STREAM_DELETE', (e) => {
+            r.Z.subscribe("STREAM_DELETE", (e) => {
                 let { streamKey: t } = e;
                 this._onStreamKilled(t);
             }),
-            r.Z.subscribe('STREAM_STOP', (e) => {
+            r.Z.subscribe("STREAM_STOP", (e) => {
                 let { streamKey: t } = e;
                 this._onStreamEnd(t);
             }),
-            r.Z.subscribe('RUNNING_GAMES_CHANGE', (e) => {
+            r.Z.subscribe("RUNNING_GAMES_CHANGE", (e) => {
                 let { games: t } = e;
                 this._onGameDetectionUpdate(t);
             }),
-            r.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
+            r.Z.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", (e) => {
                 let { videoState: t, context: n } = e;
                 n === p.Yn.STREAM && this._onCapturePaused(t === _.FQ1.PAUSED);
             }),
-            r.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
+            r.Z.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", (e) => {
                 var t;
                 let { settings: n, errorCode: r } = e;
-                ((null == n ? void 0 : n.context) === p.Yn.STREAM && (null == n ? void 0 : n.desktopSettings) == null && (null == n ? void 0 : n.cameraSettings) == null && this._onCaptureEnded(null == r), (null == n || null == (t = n.desktopSettings) ? void 0 : t.sound) != null && (this.director.sound = n.desktopSettings.sound));
-            }));
+                (null == n ? void 0 : n.context) === p.Yn.STREAM &&
+                    (null == n ? void 0 : n.desktopSettings) == null &&
+                    (null == n ? void 0 : n.cameraSettings) == null &&
+                    this._onCaptureEnded(null == r),
+                    (null == n || null == (t = n.desktopSettings) ? void 0 : t.sound) != null &&
+                        (this.director.sound = n.desktopSettings.sound);
+            });
     }
 }
 let g = {
     instance: null,
     init() {
         null == this.instance && (this.instance = new m());
-    }
+    },
 };

@@ -2,7 +2,7 @@ n.d(t, {
     FJ: () => l,
     HL: () => u,
     Yc: () => d,
-    xe: () => c
+    xe: () => c,
 });
 var r = n(255367);
 n(73800);
@@ -17,7 +17,7 @@ function l(e) {
         timestamp: t.timestamp,
         compact: i,
         contentClassName: s.messageContent,
-        children: a.intl.format(a.t.bYdG3d, { onClick: l })
+        children: a.intl.format(a.t.bYdG3d, { onClick: l }),
     });
 }
 function c(e) {
@@ -27,38 +27,38 @@ function c(e) {
         timestamp: t.timestamp,
         compact: i,
         contentClassName: s.messageContent,
-        children: a.intl.string(a.t.tu6tOT)
+        children: a.intl.string(a.t.tu6tOT),
     });
 }
 function u(e) {
     let { message: t, compact: n } = e;
     return (0, r.jsx)(o.Z, {
         iconNode: (0, r.jsx)(i.Mgn, {
-            size: 'custom',
+            size: "custom",
             width: 20,
             height: 20,
-            color: 'currentColor',
-            className: s.alertIcon
+            color: "currentColor",
+            className: s.alertIcon,
         }),
         timestamp: t.timestamp,
         compact: n,
         contentClassName: s.messageContent,
-        children: a.intl.string(a.t.vzfXqq)
+        children: a.intl.string(a.t.vzfXqq),
     });
 }
 function d(e) {
     let { message: t, compact: n } = e;
     return (0, r.jsx)(o.Z, {
         iconNode: (0, r.jsx)(i.Mgn, {
-            size: 'custom',
+            size: "custom",
             width: 20,
             height: 20,
-            color: 'currentColor',
-            className: s.alertIcon
+            color: "currentColor",
+            className: s.alertIcon,
         }),
         timestamp: t.timestamp,
         compact: n,
         contentClassName: s.messageContent,
-        children: a.intl.string(a.t['/Tfvyc'])
+        children: a.intl.string(a.t["/Tfvyc"]),
     });
 }

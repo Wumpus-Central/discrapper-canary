@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,18 +18,18 @@ function a(e, t, n) {
 let s = 0,
     l = {};
 function c(e) {
-    return ((l[e.guildId] = { type: 'loading' }), !1);
+    return (l[e.guildId] = { type: "loading" }), !1;
 }
 function u(e) {
-    ((l[e.guildId] = e.guildInfo), s++);
+    (l[e.guildId] = e.guildInfo), s++;
 }
 function d(e) {
-    return ((l[e.guildId] = { type: 'failed' }), !1);
+    return (l[e.guildId] = { type: "failed" }), !1;
 }
 class f extends (r = i.ZP.Store) {
     getGuild(e) {
         let t = l[e];
-        if (null != t && !('type' in t)) return t;
+        if (null != t && !("type" in t)) return t;
     }
     getGuildOrStatus(e) {
         return l[e];
@@ -38,9 +38,9 @@ class f extends (r = i.ZP.Store) {
         return s;
     }
 }
-a(f, 'displayName', 'BasicGuildStore');
+a(f, "displayName", "BasicGuildStore");
 let _ = new f(o.Z, {
     BASIC_GUILD_FETCH: c,
     BASIC_GUILD_FETCH_SUCCESS: u,
-    BASIC_GUILD_FETCH_FAILURE: d
+    BASIC_GUILD_FETCH_FAILURE: d,
 });

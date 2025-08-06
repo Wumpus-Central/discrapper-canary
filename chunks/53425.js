@@ -21,15 +21,15 @@ let g = i.memo(function (e) {
             let t = u.ZP.getVoiceStates(e.guild_id)[e.id];
             return null == t || 0 === t.length ? 0 : i !== e.id ? 40 : 32 * t.length + 8;
         });
-    return (0, r.jsx)('li', {
+    return (0, r.jsx)("li", {
         className: f.container,
-        children: (0, r.jsxs)('ul', {
-            role: 'group',
-            'aria-label': p.intl.formatToPlainString(p.t.EiyIi4, { channelName: t.name }),
+        children: (0, r.jsxs)("ul", {
+            role: "group",
+            "aria-label": p.intl.formatToPlainString(p.t.EiyIi4, { channelName: t.name }),
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: o()(f.spineBorder, { [f.spineBorderWithGuildIcon]: g }),
-                    style: { bottom: ('cozy' === m ? 28 : 24) + O }
+                    style: { bottom: ("cozy" === m ? 28 : 24) + O },
                 }),
                 b.map((e, t) =>
                     (0, r.jsx)(
@@ -39,12 +39,12 @@ let g = i.memo(function (e) {
                             isSelectedChannel: (null == n ? void 0 : n.id) === e.id,
                             isSelectedVoice: i === e.id,
                             isLast: t === b.length - 1,
-                            withGuildIcon: g
+                            withGuildIcon: g,
                         },
-                        e.id
-                    )
-                )
-            ]
-        })
+                        e.id,
+                    ),
+                ),
+            ],
+        }),
     });
 });

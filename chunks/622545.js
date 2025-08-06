@@ -1,6 +1,6 @@
 n.d(t, { Z: () => s });
 var i = n(388032);
-let r = ['a', 'b', 'c', 'd'],
+let r = ["a", "b", "c", "d"],
     l = (e) => e;
 function a(e, t) {
     let n = {},
@@ -18,9 +18,9 @@ class s {
     transformed(e) {
         switch (this.items.length) {
             case 0:
-                return '';
+                return "";
             case 1:
-                return e(this.items[0], '');
+                return e(this.items[0], "");
             case 2:
                 return i.intl.format(i.t.GENERIC_FORMATTED_LIST_TWO, a(this.items, e));
             case 3:
@@ -31,15 +31,15 @@ class s {
     }
     constructor(e) {
         var t, n;
-        ((n = void 0),
-            (t = 'items') in this
+        (n = void 0),
+            (t = "items") in this
                 ? Object.defineProperty(this, t, {
                       value: n,
                       enumerable: !0,
                       configurable: !0,
-                      writable: !0
+                      writable: !0,
                   })
                 : (this[t] = n),
-            (this.items = e));
+            (this.items = e);
     }
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685), n(539854));
+n.d(t, { Z: () => c }), n(388685), n(539854);
 var a = n(255367),
     r = n(73800),
     l = n(392711),
@@ -11,7 +11,7 @@ function u(e) {
             (e) => {
                 t(e, n);
             },
-            [t, n]
+            [t, n],
         ),
         u = r.useCallback(
             (e) => {
@@ -19,20 +19,29 @@ function u(e) {
                     e.enabled = n === e.label;
                 });
             },
-            [n]
+            [n],
         );
-    return (0, a.jsx)('audio', {
-        id: 'ClipsPlayerAudioTrack:'.concat(n),
+    return (0, a.jsx)("audio", {
+        id: "ClipsPlayerAudioTrack:".concat(n),
         className: s.hidden,
         ref: o,
         src: l,
         muted: i,
-        preload: 'auto',
-        onLoadedMetadata: u
+        preload: "auto",
+        onLoadedMetadata: u,
     });
 }
 let c = r.forwardRef(function (e, t) {
-    let { src: n, audioSrc: c, applicationAudioEnabled: d, voiceAudioEnabled: m, isLoading: p, onDoneLoading: f, startTime: v = 0, endTime: h } = e,
+    let {
+            src: n,
+            audioSrc: c,
+            applicationAudioEnabled: d,
+            voiceAudioEnabled: m,
+            isLoading: p,
+            onDoneLoading: f,
+            startTime: v = 0,
+            endTime: h,
+        } = e,
         g = r.useRef({}),
         [x, b] = r.useState([]),
         j = r.useRef(!1),
@@ -57,7 +66,9 @@ let c = r.forwardRef(function (e, t) {
         }, []),
         C = r.useCallback((e) => {
             var t;
-            for (let n of ((null == (t = g.current.main) ? void 0 : t.paused) && (j.current = !1), Object.values(g.current))) null != n && (n.currentTime = e);
+            for (let n of ((null == (t = g.current.main) ? void 0 : t.paused) && (j.current = !1),
+            Object.values(g.current)))
+                null != n && (n.currentTime = e);
         }, []),
         P = r.useCallback(() => {
             var e;
@@ -68,7 +79,12 @@ let c = r.forwardRef(function (e, t) {
         }, []),
         O = r.useCallback((e) => {
             let t = [];
-            for (let n of Object.values(e.currentTarget.audioTracks)) n.label.includes(':application') ? (n.enabled = !0) : n.label.includes(':voice') ? ((n.enabled = !1), t.includes(n.label) || t.push(n.label)) : (n.enabled = !1);
+            for (let n of Object.values(e.currentTarget.audioTracks))
+                n.label.includes(":application")
+                    ? (n.enabled = !0)
+                    : n.label.includes(":voice")
+                      ? ((n.enabled = !1), t.includes(n.label) || t.push(n.label))
+                      : (n.enabled = !1);
             b(t);
         }, []),
         S = r.useCallback((e, t) => {
@@ -78,7 +94,7 @@ let c = r.forwardRef(function (e, t) {
         play: _,
         seek: C,
         pause: w,
-        videoElement: g.current.main
+        videoElement: g.current.main,
     })),
     null == n)
         ? null
@@ -91,16 +107,16 @@ let c = r.forwardRef(function (e, t) {
                       src: n,
                       muted: !0,
                       onLoadedData: f,
-                      preload: 'auto'
+                      preload: "auto",
                   }),
-                  (0, a.jsx)('audio', {
-                      id: 'ClipsPlayerAudioTrack:application',
+                  (0, a.jsx)("audio", {
+                      id: "ClipsPlayerAudioTrack:application",
                       src: c,
                       muted: !d,
-                      preload: 'auto',
+                      preload: "auto",
                       className: s.hidden,
-                      ref: (e) => S(e, 'application'),
-                      onLoadedMetadata: O
+                      ref: (e) => S(e, "application"),
+                      onLoadedMetadata: O,
                   }),
                   x.map((e) =>
                       (0, a.jsx)(
@@ -109,11 +125,11 @@ let c = r.forwardRef(function (e, t) {
                               audioTrackLabel: e,
                               setRef: S,
                               src: c,
-                              muted: !m
+                              muted: !m,
                           },
-                          e
-                      )
-                  )
-              ]
+                          e,
+                      ),
+                  ),
+              ],
           });
 });

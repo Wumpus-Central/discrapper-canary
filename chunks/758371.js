@@ -3,7 +3,7 @@ n.d(t, {
     _0: () => c,
     dQ: () => l,
     wR: () => d,
-    yy: () => f
+    yy: () => f,
 });
 var r = n(594174),
     i = n(5192),
@@ -13,7 +13,7 @@ var r = n(594174),
 function l(e, t) {
     switch (t) {
         case o.mFx.LISTEN:
-            return a.intl.formatToPlainString(a.t['/8czHx'], { name: e });
+            return a.intl.formatToPlainString(a.t["/8czHx"], { name: e });
         case o.mFx.WATCH:
             return a.intl.formatToPlainString(a.t.BBJXVl, { name: e });
         case o.mFx.JOIN:
@@ -25,10 +25,10 @@ function l(e, t) {
 }
 function c(e, t, n, r, o) {
     return e.author.id === r
-        ? a.intl.formatToPlainString(s.default['7pndSk'], { applicationName: t.name })
-        : a.intl.formatToPlainString(o ? s.default['o/An3t'] : s.default.s7bMT0, {
+        ? a.intl.formatToPlainString(s.default["7pndSk"], { applicationName: t.name })
+        : a.intl.formatToPlainString(o ? s.default["o/An3t"] : s.default.s7bMT0, {
               username: (0, i.oY)(n.guild_id, n.id, e.author),
-              applicationName: t.name
+              applicationName: t.name,
           });
 }
 function u(e, t, n, i, o) {
@@ -39,23 +39,25 @@ function u(e, t, n, i, o) {
                 return o
                     ? a.intl.formatToPlainString(a.t.JddpNz, {
                           username: e.globalName,
-                          appName: t.name
+                          appName: t.name,
                       })
                     : a.intl.formatToPlainString(a.t.gYVkSU, {
                           username: e.globalName,
-                          appName: t.name
+                          appName: t.name,
                       });
         }
-        return o ? a.intl.formatToPlainString(a.t['2N1kNT'], { appName: t.name }) : a.intl.formatToPlainString(a.t.IA6uDQ, { appName: t.name });
+        return o
+            ? a.intl.formatToPlainString(a.t["2N1kNT"], { appName: t.name })
+            : a.intl.formatToPlainString(a.t.IA6uDQ, { appName: t.name });
     }
     return o
         ? a.intl.formatToPlainString(a.t.XE8axM, {
               username: e.author.globalName,
-              appName: t.name
+              appName: t.name,
           })
         : a.intl.formatToPlainString(a.t.hgcjOj, {
               username: e.author.globalName,
-              appName: t.name
+              appName: t.name,
           });
 }
 function d(e, t, n, r) {
@@ -79,13 +81,13 @@ function f(e) {
         ? r > 0
             ? a.intl.formatToPlainString(a.t.Zogooq, {
                   partySize: i,
-                  maxPartySize: r
+                  maxPartySize: r,
               })
             : a.intl.formatToPlainString(a.t.UGei0t, { partySize: i })
         : r > 0
           ? a.intl.formatToPlainString(a.t.gLu7NT, {
                 partySize: i,
-                maxPartySize: r
+                maxPartySize: r,
             })
-          : a.intl.formatToPlainString(a.t['65JnWF'], { partySize: i });
+          : a.intl.formatToPlainString(a.t["65JnWF"], { partySize: i });
 }

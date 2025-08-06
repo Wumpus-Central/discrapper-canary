@@ -1,4 +1,4 @@
-(n.d(t, { s: () => f }), n(388685));
+n.d(t, { s: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -47,18 +47,18 @@ function f(e, t, f, _) {
                 null != t &&
                 null != f &&
                 (0, a.ZDy)(async () => {
-                    let { default: i } = await n.e('56496').then(n.bind(n, 113886));
+                    let { default: i } = await n.e("56496").then(n.bind(n, 113886));
                     return (n) =>
                         (0, r.jsx)(i, {
                             modalProps: n,
                             guildId: e,
                             userId: t,
                             guildJoinRequestId: f,
-                            onError: g
+                            onError: g,
                         });
                 });
         },
         submitting: p,
-        handleOpenInterview: E
+        handleOpenInterview: E,
     };
 }

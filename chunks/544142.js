@@ -25,7 +25,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,11 +51,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -81,24 +81,24 @@ function A(e) {
     function C(e) {
         if (null == T) return null;
         (0, c.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e('79695'), n.e('70675'), n.e('69526')]).then(n.bind(n, 654663));
+            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("69526")]).then(n.bind(n, 654663));
             return (t) =>
                 (0, r.jsx)(
                     e,
                     S(I({}, t), {
                         user: T,
                         guildId: b.guild_id,
-                        channel: b
-                    })
+                        channel: b,
+                    }),
                 );
         });
     }
-    let R = null != (f = null != (o = null == A ? void 0 : A.nick) ? o : g.ZP.getName(T)) ? f : '???',
+    let R = null != (f = null != (o = null == A ? void 0 : A.nick) ? o : g.ZP.getName(T)) ? f : "???",
         P = null == A ? void 0 : A.colorString;
     return null == T
-        ? (0, r.jsx)('span', {
+        ? (0, r.jsx)("span", {
               className: a()(O.threadCreatorName, O.unknownCreatorName),
-              children: R
+              children: R,
           })
         : (0, r.jsx)(d.Gt, {
               value: v,
@@ -114,30 +114,30 @@ function A(e) {
                           l.P3F,
                           S(I({}, e), {
                               innerRef: y,
-                              tag: 'span',
+                              tag: "span",
                               className: O.threadCreatorName,
                               onContextMenu: C,
                               children: (0, r.jsx)(l.PUh, {
                                   name: R,
                                   colorString: null != P ? P : null,
-                                  colorStrings: N
-                              })
-                          })
-                      )
-              })
+                                  colorStrings: N,
+                              }),
+                          }),
+                      ),
+              }),
           });
 }
 function N(e) {
     let { channel: t } = e,
         { threadMetadata: n } = t;
     return null == n
-        ? (0, r.jsx)('div', { style: { marginTop: -8 } })
+        ? (0, r.jsx)("div", { style: { marginTop: -8 } })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(l.Text, {
-                      variant: 'text-md/normal',
-                      color: 'header-secondary',
-                      children: (0, r.jsx)('div', {
+                      variant: "text-md/normal",
+                      color: "header-secondary",
+                      children: (0, r.jsx)("div", {
                           className: O.subtitle,
                           children: y.intl.format(y.t.imPXd3, {
                               usernameHook: (e, n) =>
@@ -145,21 +145,21 @@ function N(e) {
                                       A,
                                       {
                                           userId: t.ownerId,
-                                          channel: t
+                                          channel: t,
                                       },
-                                      n
-                                  )
-                          })
-                      })
+                                      n,
+                                  ),
+                          }),
+                      }),
                   }),
                   t.type === b.d4z.PRIVATE_THREAD
                       ? (0, r.jsx)(l.Text, {
-                            variant: 'text-md/normal',
-                            color: 'header-secondary',
-                            children: y.intl.string(y.t['1awbZG'])
+                            variant: "text-md/normal",
+                            color: "header-secondary",
+                            children: y.intl.string(y.t["1awbZG"]),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           });
 }
 function C(e) {
@@ -169,12 +169,12 @@ function C(e) {
     return (0, r.jsxs)(E.ZP, {
         channelId: n.id,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: O.iconWrapper,
-                children: (0, r.jsx)(i, { className: O.icon })
+                children: (0, r.jsx)(i, { className: O.icon }),
             }),
             (0, r.jsx)(E.Ot, { children: n.name }),
-            (0, r.jsx)(N, { channel: n })
-        ]
+            (0, r.jsx)(N, { channel: n }),
+        ],
     });
 }

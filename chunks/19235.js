@@ -5,8 +5,8 @@ e.exports = function (e) {
             return t.call(e);
         } catch (e) {}
         try {
-            return e + '';
+            return e + "";
         } catch (e) {}
     }
-    return '';
+    return "";
 };

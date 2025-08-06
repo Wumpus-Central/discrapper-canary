@@ -1,19 +1,37 @@
-(n.d(t, {
+n.d(t, {
     Z: () => l,
-    y: () => a
+    y: () => a,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(392711);
 let o = 300;
 var a = (function (e) {
-    return ((e[(e.VERTICAL_TOP = 0)] = 'VERTICAL_TOP'), (e[(e.VERTICAL_BOTTOM = 1)] = 'VERTICAL_BOTTOM'), (e[(e.HORIZONTAL_LEFT = 2)] = 'HORIZONTAL_LEFT'), (e[(e.HORIZONTAL_RIGHT = 3)] = 'HORIZONTAL_RIGHT'), e);
+    return (
+        (e[(e.VERTICAL_TOP = 0)] = "VERTICAL_TOP"),
+        (e[(e.VERTICAL_BOTTOM = 1)] = "VERTICAL_BOTTOM"),
+        (e[(e.HORIZONTAL_LEFT = 2)] = "HORIZONTAL_LEFT"),
+        (e[(e.HORIZONTAL_RIGHT = 3)] = "HORIZONTAL_RIGHT"),
+        e
+    );
 })({});
 function s(e) {
     return +(2 === e || 3 === e);
 }
 let l = (e) => {
-    let { initialElementDimension: t, resizableDomNodeRef: n, maxDimension: a, minDimension: l, onElementResize: c, onElementResizeStart: u, onElementResizeEnd: d, throttleDuration: f = o, orientation: _, usePointerEvents: p = !1, getClampedValue: h = i.clamp } = e,
+    let {
+            initialElementDimension: t,
+            resizableDomNodeRef: n,
+            maxDimension: a,
+            minDimension: l,
+            onElementResize: c,
+            onElementResizeStart: u,
+            onElementResizeEnd: d,
+            throttleDuration: f = o,
+            orientation: _,
+            usePointerEvents: p = !1,
+            getClampedValue: h = i.clamp,
+        } = e,
         [m, g] = r.useState(!1),
         E = r.useRef(0),
         b = r.useRef(!1),
@@ -35,32 +53,36 @@ let l = (e) => {
                     if (null == n.current) return null;
                     let o = e(i),
                         a = t(o),
-                        l = 1 === s(_) ? 'width' : 'height';
-                    ((n.current.style[l] = ''.concat(a, 'px')), b.current || ((b.current = !0), null == u || u(a)), r(a, o));
+                        l = 1 === s(_) ? "width" : "height";
+                    (n.current.style[l] = "".concat(a, "px")),
+                        b.current || ((b.current = !0), null == u || u(a)),
+                        r(a, o);
                 },
                 O = (n) => {
                     g(!1);
                     let r = e(n),
                         i = t(r);
-                    (c(i, r), null == d || d(i), (b.current = !1));
+                    c(i, r), null == d || d(i), (b.current = !1);
                 },
-                v = p ? 'pointerup' : 'mouseup',
-                I = p ? 'pointermove' : 'mousemove',
+                v = p ? "pointerup" : "mouseup",
+                I = p ? "pointermove" : "mousemove",
                 T = n.current.ownerDocument;
             return (
                 T.addEventListener(v, O),
                 T.addEventListener(I, o),
                 () => {
-                    (T.removeEventListener(v, O), T.removeEventListener(I, o), r.cancel());
+                    T.removeEventListener(v, O), T.removeEventListener(I, o), r.cancel();
                 }
             );
         }, [m, c, l, a, _, n, f, d, p, h, u]),
         r.useCallback(
             (e) => {
                 let t = 1 === s(_);
-                (null != n.current && (y.current = t ? n.current.offsetWidth : n.current.offsetHeight), (E.current = t ? e.screenX : e.screenY), g(!0));
+                null != n.current && (y.current = t ? n.current.offsetWidth : n.current.offsetHeight),
+                    (E.current = t ? e.screenX : e.screenY),
+                    g(!0);
             },
-            [_, n]
+            [_, n],
         )
     );
 };

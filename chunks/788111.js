@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(695346),
@@ -7,7 +7,7 @@ function s(e) {
     let t = o.Rt.useSetting(),
         { isBlocked: n, isIgnored: s } = (0, i.cj)([a.Z], () => ({
             isBlocked: a.Z.isBlocked(e),
-            isIgnored: a.Z.isIgnored(e)
+            isIgnored: a.Z.isIgnored(e),
         })),
         [l, c] = (0, r.useState)(n || s);
     return (
@@ -16,7 +16,7 @@ function s(e) {
             l && !(s && t),
             (0, r.useCallback)(() => {
                 c(!1);
-            }, [])
+            }, []),
         ]
     );
 }

@@ -1,4 +1,4 @@
-(n.d(t, { GuildSubscriptionSelectionModal: () => m }), n(388685), n(290780), n(539854));
+n.d(t, { GuildSubscriptionSelectionModal: () => m }), n(388685), n(290780), n(539854);
 var i = n(255367),
     s = n(73800),
     l = n(755721),
@@ -30,7 +30,7 @@ function m(e) {
         for (let t of b) {
             let n = {
                 value: t.id,
-                label: t.name
+                label: t.name,
             };
             f && t.id === h ? e.unshift(n) : e.push(n);
         }
@@ -40,32 +40,32 @@ function m(e) {
         transitionState: t,
         size: r.CgR.SMALL,
         className: x.modal,
-        parentComponent: 'GuildSubscriptionSelectionModal',
+        parentComponent: "GuildSubscriptionSelectionModal",
         children: [
             (0, i.jsx)(c.t, { onClose: n }),
             (0, i.jsxs)(r.hzk, {
                 className: x.content,
                 children: [
                     (0, i.jsx)(r.Text, {
-                        variant: 'text-sm/medium',
+                        variant: "text-sm/medium",
                         className: x.breadCrumb,
-                        children: u.intl.string(u.t['xgtI/P'])
+                        children: u.intl.string(u.t["xgtI/P"]),
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: x.selectionBody,
                         children: [
                             (0, i.jsx)(r.Text, {
-                                variant: 'text-md/medium',
-                                children: u.intl.string(u.t.rAXXxM)
+                                variant: "text-md/medium",
+                                children: u.intl.string(u.t.rAXXxM),
                             }),
                             (0, i.jsx)(r.Text, {
-                                variant: 'eyebrow',
-                                children: u.intl.string(u.t['5qyruL'])
+                                variant: "eyebrow",
+                                children: u.intl.string(u.t["5qyruL"]),
                             }),
                             g
                                 ? (0, i.jsx)(r.$jN, {
                                       type: r.$jN.Type.PULSING_ELLIPSIS,
-                                      className: x.spinner
+                                      className: x.spinner,
                                   })
                                 : v.length > 0
                                   ? (0, i.jsx)(r.VcW, {
@@ -79,37 +79,37 @@ function m(e) {
                                                 ? null
                                                 : (0, i.jsx)(a.Z, {
                                                       guild: n,
-                                                      size: a.Z.Sizes.MINI
+                                                      size: a.Z.Sizes.MINI,
                                                   });
                                         },
                                         renderOptionLabel: (e) => {
                                             let { label: t, value: n } = e;
-                                            return (0, i.jsxs)('div', {
+                                            return (0, i.jsxs)("div", {
                                                 children: [
                                                     (0, i.jsx)(r.Text, {
-                                                        variant: 'text-md/normal',
-                                                        children: t
+                                                        variant: "text-md/normal",
+                                                        children: t,
                                                     }),
                                                     n === h &&
                                                         (0, i.jsx)(r.Text, {
-                                                            variant: 'text-xs/normal',
-                                                            color: 'header-secondary',
-                                                            children: u.intl.string(u.t.RjtuAA)
-                                                        })
-                                                ]
+                                                            variant: "text-xs/normal",
+                                                            color: "header-secondary",
+                                                            children: u.intl.string(u.t.RjtuAA),
+                                                        }),
+                                                ],
                                             });
-                                        }
+                                        },
                                     })
                                   : (0, i.jsx)(r.Wn, {
                                         messageType: r.QYI.WARNING,
                                         children: (0, i.jsx)(r.Text, {
-                                            variant: 'text-sm/normal',
-                                            children: u.intl.string(u.t.M2TbbG)
-                                        })
-                                    })
-                        ]
-                    })
-                ]
+                                            variant: "text-sm/normal",
+                                            children: u.intl.string(u.t.M2TbbG),
+                                        }),
+                                    }),
+                        ],
+                    }),
+                ],
             }),
             (0, i.jsxs)(r.mzw, {
                 className: x.footer,
@@ -119,19 +119,19 @@ function m(e) {
                         size: l.zx.Sizes.MIN,
                         className: x.closeBtn,
                         onClick: n,
-                        children: u.intl.string(u.t.cpT0Cg)
+                        children: u.intl.string(u.t.cpT0Cg),
                     }),
                     (0, i.jsx)(r.zxk, {
-                        variant: 'primary',
-                        size: 'sm',
-                        text: u.intl.string(u.t['cY+Ooa']),
+                        variant: "primary",
+                        size: "sm",
+                        text: u.intl.string(u.t["cY+Ooa"]),
                         disabled: null == j,
                         onClick: function () {
                             null != j && p(j);
-                        }
-                    })
-                ]
-            })
-        ]
+                        },
+                    }),
+                ],
+            }),
+        ],
     });
 }

@@ -14,7 +14,7 @@ function c(e) {
             u &&
                 (0, r.jsx)(o.RyX, {
                     onClick: c,
-                    noticeType: s.kVF.BACK_TO_PREVIOUS_SCREEN
+                    noticeType: s.kVF.BACK_TO_PREVIOUS_SCREEN,
                 }),
             (0, r.jsxs)(i.zx, {
                 className: l.backButton,
@@ -28,11 +28,11 @@ function c(e) {
                         width: 16,
                         height: 16,
                         direction: a.Z.Directions.LEFT,
-                        className: l.__invalid_backArrow
+                        className: l.__invalid_backArrow,
                     }),
-                    t
-                ]
-            })
-        ]
+                    t,
+                ],
+            }),
+        ],
     });
 }

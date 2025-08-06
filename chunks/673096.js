@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var i,
     r = n(442837),
     s = n(570140);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,7 +24,7 @@ class c extends (i = r.ZP.Store) {
         return l;
     }
 }
-a(c, 'displayName', 'AuthSessionsStore');
+a(c, "displayName", "AuthSessionsStore");
 let d = new c(s.Z, {
     LOGOUT: o,
     LOGIN_SUCCESS: o,
@@ -37,15 +37,15 @@ let d = new c(s.Z, {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 a(e, t, n[t]);
-                            }));
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -76,5 +76,5 @@ let d = new c(s.Z, {
         }
         if (!i) return !1;
         l = n;
-    }
+    },
 });

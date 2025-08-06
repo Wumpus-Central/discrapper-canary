@@ -29,10 +29,10 @@ function y(e) {
         className: h.scroller,
         children: [
             (null == y ? void 0 : y.bio) != null &&
-                (null == y ? void 0 : y.bio) !== '' &&
+                (null == y ? void 0 : y.bio) !== "" &&
                 (0, r.jsx)(f.Z, {
                     userBio: y.bio,
-                    setLineClamp: !1
+                    setLineClamp: !1,
                 }),
             (null == I ? void 0 : I.popularApplicationCommandIds) != null &&
                 null != P &&
@@ -41,33 +41,33 @@ function y(e) {
                     commandIds: I.popularApplicationCommandIds,
                     channel: P,
                     guildId: v,
-                    onClick: x
+                    onClick: x,
                 }),
             (null == y ? void 0 : y.guildId) != null &&
                 (0, r.jsx)(g.Z, {
                     user: t,
                     currentUser: n,
                     guildId: y.guildId,
-                    scrollIntoView: O === b.Tb.ROLES
+                    scrollIntoView: O === b.Tb.ROLES,
                 }),
             (0, r.jsx)(m.Z, {
-                heading: j.intl.string(j.t['A//N4u']),
+                heading: j.intl.string(j.t["A//N4u"]),
                 children: (0, r.jsx)(p.Z, {
                     userId: t.id,
                     guildId: v,
-                    tooltipDelay: b.vB
-                })
+                    tooltipDelay: b.vB,
+                }),
             }),
             (0, r.jsx)(m.Z, {
-                heading: j.intl.string(j.t['mQKv+v']),
+                heading: j.intl.string(j.t["mQKv+v"]),
                 scrollIntoView: O === b.Tb.NOTE,
                 children: (0, r.jsx)(i.Z, {
                     userId: t.id,
                     className: h.note,
                     autoFocus: O === b.Tb.NOTE,
-                    onUpdate: () => _({ action: 'SET_NOTE' })
-                })
-            })
-        ]
+                    onUpdate: () => _({ action: "SET_NOTE" }),
+                }),
+            }),
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(539854));
+n.d(t, { Z: () => g }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -13,7 +13,7 @@ var r = n(255367),
 let f = {
     page: p.ZY5.GUILD_DISCOVERY,
     object: p.qAy.CARD,
-    section: p.jXE.DISCOVER_POPULAR
+    section: p.jXE.DISCOVER_POPULAR,
 };
 function g(e) {
     let { tab: t, guildIds: n, loading: p, onScroll: g, onGuildCardClick: m, onGuildCardSeen: b } = e,
@@ -33,10 +33,10 @@ function g(e) {
                             guildId: null != (i = n[a]) ? i : null,
                             index: a,
                             onClick: (e) => m(e, a, y, f),
-                            onView: (e) => b(e, y)
+                            onView: (e) => b(e, y),
                         },
-                        null != (l = n[a]) ? l : a
-                    )
+                        null != (l = n[a]) ? l : a,
+                    ),
                 );
             }
             return t;
@@ -47,22 +47,22 @@ function g(e) {
             (0, r.jsx)(o.Z, {
                 title: _,
                 description: O,
-                children: (0, r.jsx)(a.Z, {})
+                children: (0, r.jsx)(a.Z, {}),
             }),
             (0, r.jsxs)(s.Z, {
                 children: [
                     (0, r.jsx)(l.X6q, {
                         className: h.sectionTitle,
-                        variant: 'heading-lg/semibold',
-                        color: 'header-primary',
-                        children: E
+                        variant: "heading-lg/semibold",
+                        color: "header-primary",
+                        children: E,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: h.content,
-                        children: v
-                    })
-                ]
-            })
-        ]
+                        children: v,
+                    }),
+                ],
+            }),
+        ],
     });
 }

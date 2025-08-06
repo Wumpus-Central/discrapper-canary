@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     E: () => O,
-    Z: () => y
+    Z: () => y,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     o = n(73800),
     l = n(120356),
@@ -29,27 +29,27 @@ function y() {
             return {
                 primary_color: b.tl[e].start,
                 secondary_color: b.tl[e].end,
-                tertiary_color: null
+                tertiary_color: null,
             };
         }),
         { gradientStyle: l, gradientClassname: c } = (0, a.Icv)({
             colorStrings: (0, g.DX)(t),
-            roleStyle: 'username',
+            roleStyle: "username",
             includeConvenienceGlow: !0,
-            animateGradient: !0
+            animateGradient: !0,
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: j.container,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: j.messageContainer,
                 children: (0, r.jsx)(p.l, {
                     avatar: i.Z,
-                    username: 'Cherry',
+                    username: "Cherry",
                     usernameStyle: l,
                     usernameClassName: s()(c, v.animateGradient),
-                    message: x.intl.string(x.t['6OSasb'])
-                })
+                    message: x.intl.string(x.t["6OSasb"]),
+                }),
             }),
             (0, r.jsx)(d.default, {
                 defaultColor: _.p6O,
@@ -63,24 +63,24 @@ function y() {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, t)),
@@ -97,18 +97,18 @@ function y() {
                               })(Object(o)).forEach(function (e) {
                                   Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
                               }),
-                        r)
+                        r),
                     );
                 },
                 onChangeGradientColors: (e) =>
                     n({
                         primary_color: e[0],
                         secondary_color: e[1],
-                        tertiary_color: null
+                        tertiary_color: null,
                     }),
-                isGradient: !0
-            })
-        ]
+                isGradient: !0,
+            }),
+        ],
     });
 }
 function O(e) {
@@ -118,32 +118,32 @@ function O(e) {
         a = o.useMemo(
             () => ({
                 unlockedBadges: s.unlockedBadges.slice(0, 10),
-                lockedBadges: []
+                lockedBadges: [],
             }),
-            [s]
+            [s],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: j.container,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: j.messageContainer,
                 children: (0, r.jsx)(p.l, {
                     avatar: c.Z,
-                    username: 'Roka',
-                    usernameStyle: { color: 'var(--brand-400)' },
-                    message: x.intl.string(x.t['6OSasb']),
+                    username: "Roka",
+                    usernameStyle: { color: "var(--brand-400)" },
+                    message: x.intl.string(x.t["6OSasb"]),
                     decorations: (0, r.jsx)(m.S, {
                         guildId: t,
-                        tag: 'GGEZ',
-                        badge: n
-                    })
-                })
+                        tag: "GGEZ",
+                        badge: n,
+                    }),
+                }),
             }),
             (0, r.jsx)(u.g, {
                 selectedBadge: n,
                 onBadgeClicked: l,
-                badgeCollection: a
-            })
-        ]
+                badgeCollection: a,
+            }),
+        ],
     });
 }

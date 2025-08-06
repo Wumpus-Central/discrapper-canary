@@ -1,6 +1,6 @@
 n.d(t, {
     S: () => Y,
-    default: () => H
+    default: () => H,
 });
 var r = n(255367);
 n(73800);
@@ -50,15 +50,36 @@ function H(e) {
         s,
         u,
         d,
-        { channel: f, message: _, target: p, mediaItem: h, shouldHideMediaOptions: m, onSelect: g, onHeightUpdate: E } = e,
+        {
+            channel: f,
+            message: _,
+            target: p,
+            mediaItem: h,
+            shouldHideMediaOptions: m,
+            onSelect: g,
+            onHeightUpdate: E,
+        } = e,
         { analyticsLocations: b } = (0, c.ZP)([l.Z.MESSAGE_CONTEXT_MENU]),
         y = p,
-        O = p.getAttribute('data-type'),
-        v = p.getAttribute('data-id'),
-        I = p.getAttribute('data-name');
+        O = p.getAttribute("data-type"),
+        v = p.getAttribute("data-id"),
+        I = p.getAttribute("data-name");
     if (null != h) s = o = u = h.url;
-    else for (; (0, i.k)(y); ) ((0, i.k)(y, HTMLImageElement) && null != y.src && (s = y.src), (0, i.k)(y, HTMLAnchorElement) && null != y.href && ((o = y.href), (d = y.textContent), null == s && 'img' === y.getAttribute('data-role') && ((s = o), y.hasAttribute('data-safe-src') && '' !== y.getAttribute('data-safe-src') && (u = y.getAttribute('data-safe-src')))), (y = y.parentNode));
-    let T = null != (n = null == (t = document.getSelection()) ? void 0 : t.toString()) ? n : '';
+    else
+        for (; (0, i.k)(y); )
+            (0, i.k)(y, HTMLImageElement) && null != y.src && (s = y.src),
+                (0, i.k)(y, HTMLAnchorElement) &&
+                    null != y.href &&
+                    ((o = y.href),
+                    (d = y.textContent),
+                    null == s &&
+                        "img" === y.getAttribute("data-role") &&
+                        ((s = o),
+                        y.hasAttribute("data-safe-src") &&
+                            "" !== y.getAttribute("data-safe-src") &&
+                            (u = y.getAttribute("data-safe-src")))),
+                (y = y.parentNode);
+    let T = null != (n = null == (t = document.getSelection()) ? void 0 : t.toString()) ? n : "";
     return (0, r.jsx)(c.Gt, {
         value: b,
         children: Y({
@@ -77,14 +98,33 @@ function H(e) {
             onHeightUpdate: E,
             onSelect: g,
             onClose: a.Zy,
-            navId: 'message',
+            navId: "message",
             ariaLabel: V.intl.string(V.t.ChPNkJ),
-            shouldHideMediaOptions: m
-        })
+            shouldHideMediaOptions: m,
+        }),
     });
 }
 function Y(e) {
-    let { message: t, channel: n, mediaItem: i, textSelection: a, favoriteableType: l, favoriteableId: c, favoriteableName: H, itemHref: Y, itemSrc: W, itemSafeSrc: K, itemTextContent: z, canReport: q, onHeightUpdate: X, onSelect: Q, onClose: J, navId: $, ariaLabel: ee, shouldHideMediaOptions: et = !1 } = e,
+    let {
+            message: t,
+            channel: n,
+            mediaItem: i,
+            textSelection: a,
+            favoriteableType: l,
+            favoriteableId: c,
+            favoriteableName: H,
+            itemHref: Y,
+            itemSrc: W,
+            itemSafeSrc: K,
+            itemTextContent: z,
+            canReport: q,
+            onHeightUpdate: X,
+            onSelect: Q,
+            onClose: J,
+            navId: $,
+            ariaLabel: ee,
+            shouldHideMediaOptions: et = !1,
+        } = e,
         en = (0, d.Z)(a),
         er = (0, p.Z)(a),
         ei = (0, P.Z)(t, n),
@@ -94,7 +134,7 @@ function Y(e) {
         el = (0, A.Z)({
             type: l,
             id: c,
-            name: H
+            name: H,
         }),
         ec = (0, k.Z)(t, n),
         eu = (0, C.Z)(t, n),
@@ -111,13 +151,13 @@ function Y(e) {
         eO = (0, _.Z)(null != Y ? Y : W, z, t, { shouldHideMediaOptions: et }),
         ev = (0, f.Z)(K, t, {
             shouldHideMediaOptions: et,
-            contentType: null == i ? void 0 : i.contentType
+            contentType: null == i ? void 0 : i.contentType,
         }),
         eI = (0, Z.Z)(t, i),
         eT = (0, u.Z)({
             id: t.id,
             label: V.intl.string(V.t.zBoHlZ),
-            shiftId: ''.concat(t.channel_id, '-').concat(t.id)
+            shiftId: "".concat(t.channel_id, "-").concat(t.id),
         }),
         eS = (0, x.Z)(t, n),
         eA = (0, N.Z)(t, n),
@@ -133,35 +173,35 @@ function Y(e) {
             commandTargetId: t.id,
             channel: n,
             guildId: void 0,
-            onHeightUpdate: X
+            onHeightUpdate: X,
         }),
         eM = (0, B.Z)(t),
         ek = (0, h.Z)(t);
     return (0, r.jsxs)(o.v2r, {
         navId: $,
         onClose: J,
-        'aria-label': ee,
+        "aria-label": ee,
         onSelect: Q,
         children: [
             (0, r.jsx)(o.kSQ, { children: en }),
             (0, r.jsx)(o.kSQ, { children: er }),
             (0, r.jsxs)(o.kSQ, {
-                children: ['' === a ? ei : null, eo, ed, eL]
+                children: ["" === a ? ei : null, eo, ed, eL],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [ea, eS, eA, eN]
+                children: [ea, eS, eA, eN],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [eP, ew, es, eR, ex, ec, eu, ef, e_, ey, ek, eM]
+                children: [eP, ew, es, eR, ex, ec, eu, ef, e_, ey, ek, eM],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [eh, ep, em, q && eg, q && eb, eE]
+                children: [eh, ep, em, q && eg, q && eb, eE],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [el, eC, ev, eI, eD]
+                children: [el, eC, ev, eI, eD],
             }),
             (0, r.jsx)(o.kSQ, { children: eO }),
-            (0, r.jsx)(o.kSQ, { children: eT })
-        ]
+            (0, r.jsx)(o.kSQ, { children: eT }),
+        ],
     });
 }

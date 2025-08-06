@@ -1,11 +1,11 @@
-(l.d(t, {
+l.d(t, {
     HJ: () => h,
     Z2: () => g,
-    Zc: () => p
+    Zc: () => p,
 }),
     l(388685),
     l(539854),
-    l(290780));
+    l(290780);
 var n = l(255367),
     r = l(73800),
     a = l(481060),
@@ -21,14 +21,14 @@ function f(e) {
     return {
         value: t.id,
         label: r,
-        key: t.id
+        key: t.id,
     };
 }
 function h(e, t) {
     let l = r.useMemo(() => (0, o.s5)(e), [e]),
         n = r.useMemo(() => (0, o.AH)(e), [e]),
         [a, u] = r.useState([]),
-        [d, h] = r.useState(''),
+        [d, h] = r.useState(""),
         p = r.useMemo(() => {
             let r = s.Z.getFilterResults(e, t, d);
             if (0 === r.length) return [];
@@ -37,8 +37,8 @@ function h(e, t) {
                     f({
                         user: e.user,
                         guildId: l,
-                        channelId: n
-                    })
+                        channelId: n,
+                    }),
                 ),
                 c = new Set(o.map((e) => (null == e ? void 0 : e.value)));
             return (
@@ -51,7 +51,7 @@ function h(e, t) {
                         let r = f({
                             user: t,
                             guildId: l,
-                            channelId: n
+                            channelId: n,
                         });
                         u.unshift(r);
                     }),
@@ -59,7 +59,7 @@ function h(e, t) {
             );
         }, [e, t, d, a, l, n]),
         g = r.useCallback(() => {
-            (u([]), h(''));
+            u([]), h("");
         }, []),
         b = r.useCallback(
             (e) => {
@@ -68,11 +68,11 @@ function h(e, t) {
                 return a
                     .map((e) => {
                         let l = i.default.getUser(e);
-                        return ''.concat(t.key, ' ').concat(null == l ? void 0 : l.username);
+                        return "".concat(t.key, " ").concat(null == l ? void 0 : l.username);
                     })
-                    .join(' ');
+                    .join(" ");
             },
-            [a]
+            [a],
         );
     return {
         options: p,
@@ -80,7 +80,7 @@ function h(e, t) {
         setQuery: u,
         setQueryString: h,
         handleClearFilter: g,
-        getApplyQueryString: b
+        getApplyQueryString: b,
     };
 }
 function p(e) {
@@ -97,27 +97,27 @@ function p(e) {
                 return (0, n.jsx)(a.qEK, {
                     src: u,
                     size: a.EFr.SIZE_16,
-                    'aria-hidden': !0
+                    "aria-hidden": !0,
                 });
             },
-            [e]
+            [e],
         ),
         renderOptionSuffix: r.useCallback((e) => {
             if (null == e) return;
             let t = i.default.getUser(e.value);
             if (null != t)
                 return (0, n.jsx)(a.Text, {
-                    variant: 'text-md/normal',
-                    color: 'text-muted',
-                    children: t.username
+                    variant: "text-md/normal",
+                    color: "text-muted",
+                    children: t.username,
                 });
-        }, [])
+        }, []),
     };
 }
 function g(e) {
     let [t, l] = r.useState([]),
         n = r.useMemo(() => {
-            let t = s.Z.getFilterResults(e, d.dCx.FILTER_HAS, '');
+            let t = s.Z.getFilterResults(e, d.dCx.FILTER_HAS, "");
             if (0 === t.length) return [];
             let l = [];
             return (
@@ -127,9 +127,9 @@ function g(e) {
                         return {
                             value: t,
                             label: t,
-                            key: t
+                            key: t,
                         };
-                    })
+                    }),
                 ),
                 l
             );
@@ -141,15 +141,15 @@ function g(e) {
             (e) => {
                 if (0 === t.length) return null;
                 let l = c.ZP[e];
-                return t.map((e) => ''.concat(l.key, ' ').concat(e)).join(' ');
+                return t.map((e) => "".concat(l.key, " ").concat(e)).join(" ");
             },
-            [t]
+            [t],
         );
     return {
         options: n,
         query: t,
         setQuery: l,
         handleClearFilter: a,
-        getApplyQueryString: i
+        getApplyQueryString: i,
     };
 }

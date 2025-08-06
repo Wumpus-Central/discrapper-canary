@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var r,
     i = n(255367),
     a = n(73800),
@@ -21,7 +21,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -38,20 +38,20 @@ class v extends (r = a.PureComponent) {
                           u.Z,
                           {
                               onVerify: r,
-                              theme: n
+                              theme: n,
                           },
-                          t
+                          t,
                       )
                     : (0, i.jsx)(
                           s.zx,
                           {
                               className: h.marginBottom20,
                               onClick: () => this.handleClick(e),
-                              children: p.Z.getButtonTitle(e)
+                              children: p.Z.getButtonTitle(e),
                           },
-                          e
-                      )
-            )
+                          e,
+                      ),
+            ),
         });
     }
     render() {
@@ -66,59 +66,59 @@ class v extends (r = a.PureComponent) {
                     align: d.Z.Align.CENTER,
                     justify: d.Z.Justify.CENTER,
                     children: [
-                        (0, i.jsx)('div', { className: y.image }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", { className: y.image }),
+                        (0, i.jsx)("div", {
                             className: o()(y.title, h.marginTop20),
-                            children: g.intl.string(g.t.Iz0kDg)
+                            children: g.intl.string(g.t.Iz0kDg),
                         }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: o()(y.body, h.marginTop4, h.marginBottom20),
-                            children: g.intl.format(g.t['0rqMV1'], { helpCenterURL: E })
+                            children: g.intl.format(g.t["0rqMV1"], { helpCenterURL: E }),
                         }),
                         (0, i.jsx)(d.Z, {
                             grow: 0,
                             direction: d.Z.Direction.VERTICAL,
                             justify: d.Z.Justify.CENTER,
-                            children: this.renderFields()
-                        })
-                    ]
+                            children: this.renderFields(),
+                        }),
+                    ],
                 }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: o()(y.footer, h.marginTop20),
-                    children: g.intl.string(g.t.qqYun5)
+                    children: g.intl.string(g.t.qqYun5),
                 }),
                 (0, i.jsxs)(d.Z, {
                     className: o()(h.marginTop4, h.marginBottom20),
                     grow: 0,
                     children: [
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: o()(y.footer, y.footerAction),
-                            children: g.intl.format(g.t.WL51ZW, { supportURL: f.Z.getSubmitRequestURL() })
+                            children: g.intl.format(g.t.WL51ZW, { supportURL: f.Z.getSubmitRequestURL() }),
                         }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: o()(y.footer, y.footerBullet),
-                            children: '\u2022'
+                            children: "\u2022",
                         }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: o()(y.footer, y.footerAction),
-                            children: g.intl.format(g.t.Hv7ztb, { logoutOnClick: this.props.onLogout })
-                        })
-                    ]
-                })
-            ]
+                            children: g.intl.format(g.t.Hv7ztb, { logoutOnClick: this.props.onLogout }),
+                        }),
+                    ],
+                }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            b(this, 'handleClick', (e) => {
+        super(...e),
+            b(this, "handleClick", (e) => {
                 let { onClick: t } = this.props;
                 null == t || t(e);
-            }));
+            });
     }
 }
-b(v, 'defaultProps', {
+b(v, "defaultProps", {
     types: [m.PUi.CAPTCHA],
     onCaptchaVerify: m.dG4,
-    onLogout: m.dG4
+    onLogout: m.dG4,
 });
 let j = v;

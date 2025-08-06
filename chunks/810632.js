@@ -1,4 +1,4 @@
-(n.d(t, { g: () => g }), n(388685));
+n.d(t, { g: () => g }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -22,10 +22,11 @@ function g(e, t) {
         if (!v || null == g) return;
         let [r] = await (0, s.Z)(e);
         if (!r) {
-            if (null == O) return void (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.OKnWyc), l.ToastType.FAILURE));
+            if (null == O)
+                return void (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.OKnWyc), l.ToastType.FAILURE));
             (0, l.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('46746'), n.e('74304')]).then(n.bind(n, 60594));
+                    let { default: e } = await Promise.all([n.e("46746"), n.e("74304")]).then(n.bind(n, 60594));
                     return (t) => {
                         var n, r;
                         return (0, i.jsx)(
@@ -34,24 +35,24 @@ function g(e, t) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         i.forEach(function (t) {
                                             var i;
-                                            ((i = n[t]),
+                                            (i = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: i,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = i));
-                                        }));
+                                                    : (e[t] = i);
+                                        });
                                 }
                                 return e;
                             })({}, t)),
@@ -60,7 +61,7 @@ function g(e, t) {
                                     sourcePID: (0, f.getPID)(),
                                     selectSource: !1,
                                     guildId: b,
-                                    analyticsLocation: h.Sbl.UNLOCKED_OVERLAY
+                                    analyticsLocation: h.Sbl.UNLOCKED_OVERLAY,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -74,11 +75,11 @@ function g(e, t) {
                                   })(Object(r)).forEach(function (e) {
                                       Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                   }),
-                            n)
+                            n),
                         );
                     };
                 },
-                { contextKey: null != t ? (0, l.VnL)(t) : void 0 }
+                { contextKey: null != t ? (0, l.VnL)(t) : void 0 },
             );
         }
     }, [v, b, g, t, e, O]);

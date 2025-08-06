@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var l,
     a = n(392711),
     o = n.n(a),
@@ -18,7 +18,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -71,12 +71,19 @@ let O = new Set(),
 function j(e) {
     let t = e.getGuildId(),
         n = b({}, e.permissionOverwrites);
-    return (null != t && null == n[t] && (n[t] = d.we(t)), n);
+    return null != t && null == n[t] && (n[t] = d.we(t)), n;
 }
 function A() {
     if (((C = p.Z.getChannel()), (S = p.Z.getCategory()), null == C)) return !1;
     let e = C.getGuildId();
-    ((I = v = j(C)), null == v[N] && (N = e), (i = null != S), (r = d.o4(C, S)), (T = null), (y = !1), (E = f.QZA.CLOSED), O.clear());
+    (I = v = j(C)),
+        null == v[N] && (N = e),
+        (i = null != S),
+        (r = d.o4(C, S)),
+        (T = null),
+        (y = !1),
+        (E = f.QZA.CLOSED),
+        O.clear();
 }
 class Z extends (l = s.ZP.Store) {
     initialize() {
@@ -119,7 +126,7 @@ class Z extends (l = s.ZP.Store) {
         return P;
     }
 }
-m(Z, 'displayName', 'ChannelSettingsPermissionsStore');
+m(Z, "displayName", "ChannelSettingsPermissionsStore");
 let x = new Z(u.Z, {
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let { section: t } = e;
@@ -131,15 +138,15 @@ let x = new Z(u.Z, {
         let { id: t, allow: n, deny: i } = e,
             l = null == v ? void 0 : v[t];
         if (null == l || null == C) return !1;
-        ((l = _(b({}, l), {
+        (l = _(b({}, l), {
             allow: n,
-            deny: i
+            deny: i,
         })),
             (v = _(b({}, v), { [t]: l })),
             O.add(t),
             (E = f.QZA.OPEN),
             (y = !o().isEqual(v, I)),
-            (r = d.o4(C, S)));
+            (r = d.o4(C, S));
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
@@ -153,7 +160,7 @@ let x = new Z(u.Z, {
         p.Z.getSection() === f.CoT.PERMISSIONS && A();
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        ((E = f.QZA.CLOSED), (v = null), (I = null), (C = null), (S = null), (y = !1), O.clear(), (N = null), (T = null));
+        (E = f.QZA.CLOSED), (v = null), (I = null), (C = null), (S = null), (y = !1), O.clear(), (N = null), (T = null);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -173,7 +180,9 @@ let x = new Z(u.Z, {
                             null != v && (n[e] = v[e]);
                         }),
                         null == n[t] && null == C.permissionOverwrites[t] && (n[t] = d.we(t)),
-                        null == (v = b({}, C.permissionOverwrites, n))[N] ? (N = t) : null != T && null != v[T] && ((N = T), (T = null)),
+                        null == (v = b({}, C.permissionOverwrites, n))[N]
+                            ? (N = t)
+                            : null != T && null != v[T] && ((N = T), (T = null)),
                         (r = d.o4(C, S)),
                         !0
                     );
@@ -189,6 +198,6 @@ let x = new Z(u.Z, {
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;
-        ((P = t), c.K.set(g.kf, t));
-    }
+        (P = t), c.K.set(g.kf, t);
+    },
 });

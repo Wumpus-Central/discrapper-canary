@@ -1,1 +1,1 @@
-e.exports = { content: 'content__65844' };
+e.exports = { content: "content__65844" };

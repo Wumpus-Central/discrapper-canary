@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(481060),
     i = n(147913),
     o = n(626135),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,24 +30,24 @@ function d(e) {
             (o.default.track(l.rMx.ACTIVITY_CLOSED_RPC_ERROR, {
                 rpc_close_code: t.code,
                 rpc_message: t.message,
-                application_id: r
+                application_id: r,
             }),
             f(t)));
 }
 function f(e) {
     let { code: t, message: n } = e,
-        i = ''.concat(c.intl.formatToPlainString(c.t.hbiAOz, { code: t }), ': ').concat(n);
+        i = "".concat(c.intl.formatToPlainString(c.t.hbiAOz, { code: t }), ": ").concat(n);
     (0, r.showToast)((0, r.createToast)(i, r.ToastType.FAILURE));
 }
 class _ extends i.Z {
     constructor(...e) {
-        (super(...e),
-            u(this, 'actions', {
+        super(...e),
+            u(this, "actions", {
                 RPC_APP_DISCONNECTED: (e) => {
                     d(e);
-                }
-            }));
+                },
+            });
     }
 }
-u(_, 'displayName', 'FramesManager');
+u(_, "displayName", "FramesManager");
 let p = new _();

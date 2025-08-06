@@ -18,7 +18,7 @@ function x(e) {
         icon: c.M[t.id],
         message: t.label,
         onClick: a,
-        autoFocus: l
+        autoFocus: l,
     });
 }
 function C(e) {
@@ -34,21 +34,21 @@ function C(e) {
                 children: [
                     (0, i.jsx)(a.X6q, {
                         className: m.title,
-                        variant: 'heading-xl/semibold',
-                        children: u.intl.format(u.t.T7aLYW, { guildName: C })
+                        variant: "heading-xl/semibold",
+                        children: u.intl.format(u.t.T7aLYW, { guildName: C }),
                     }),
                     (0, i.jsx)(a.Text, {
                         className: m.subtitle,
-                        color: 'header-secondary',
-                        variant: 'text-md/normal',
-                        children: u.intl.string(u.t['RA+St7'])
+                        color: "header-secondary",
+                        variant: "text-md/normal",
+                        children: u.intl.string(u.t["RA+St7"]),
                     }),
                     null != s &&
                         (0, i.jsx)(a.olH, {
                             className: m.closeButton,
-                            onClick: s
-                        })
-                ]
+                            onClick: s,
+                        }),
+                ],
             }),
             (0, i.jsxs)(a.hzk, {
                 className: m.templatesList,
@@ -60,24 +60,24 @@ function C(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         i.forEach(function (t) {
                                             var i;
-                                            ((i = n[t]),
+                                            (i = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: i,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = i));
-                                        }));
+                                                    : (e[t] = i);
+                                        });
                                 }
                                 return e;
                             })({}, h[d.sE.CREATE])),
@@ -95,39 +95,39 @@ function C(e) {
                                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                   }),
                             t),
-                        onClick: c
+                        onClick: c,
                     }),
                     (0, i.jsx)(a.Text, {
                         className: m.optionHeader,
-                        color: 'header-secondary',
-                        variant: 'text-xs/bold',
-                        children: u.intl.string(u.t.JGDkfn)
+                        color: "header-secondary",
+                        variant: "text-xs/bold",
+                        children: u.intl.string(u.t.JGDkfn),
                     }),
                     (0, i.jsx)(x, {
                         guildTemplate: h[d.sE.HUB_STUDY],
-                        onClick: c
+                        onClick: c,
                     }),
                     (0, i.jsx)(x, {
                         guildTemplate: h[d.sE.HUB_SCHOOL_CLUB],
-                        onClick: c
+                        onClick: c,
                     }),
                     (0, i.jsx)(x, {
                         guildTemplate: h[d.sE.HUB_CLASS],
-                        onClick: c
+                        onClick: c,
                     }),
                     (0, i.jsx)(x, {
                         guildTemplate: h[d.sE.HUB_SOCIAL],
-                        onClick: c
+                        onClick: c,
                     }),
                     (0, i.jsx)(x, {
                         guildTemplate: h[d.sE.HUB_MAJOR],
-                        onClick: c
+                        onClick: c,
                     }),
                     (0, i.jsx)(x, {
                         guildTemplate: h[d.sE.HUB_DORM],
-                        onClick: c
-                    })
-                ]
+                        onClick: c,
+                    }),
+                ],
             }),
             (0, i.jsx)(a.mzw, {
                 className: m.footer,
@@ -136,9 +136,9 @@ function C(e) {
                     look: l.zx.Looks.BLANK,
                     size: l.zx.Sizes.MIN,
                     onClick: o,
-                    children: u.intl.string(u.t['13/7kZ'])
-                })
-            })
-        ]
+                    children: u.intl.string(u.t["13/7kZ"]),
+                }),
+            }),
+        ],
     });
 }

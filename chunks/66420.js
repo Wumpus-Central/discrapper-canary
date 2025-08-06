@@ -10,35 +10,35 @@ function l(e) {
     return (0, r.jsxs)(a.Z, {
         iconNode: t.isGroupDM()
             ? (0, r.jsx)(i.Dkj, {
-                  size: 'md',
-                  color: 'var(--premium-tier-2-purple-for-gradients-2)'
+                  size: "md",
+                  color: "var(--premium-tier-2-purple-for-gradients-2)",
               })
             : (0, r.jsx)(i.vdY, {
-                  size: 'md',
-                  color: 'var(--premium-tier-2-purple-for-gradients-2)'
+                  size: "md",
+                  color: "var(--premium-tier-2-purple-for-gradients-2)",
               }),
         iconContainerClassName: s.iconContainer,
         compact: u,
         contentClassName: s.content,
         className: f ? s.withReactions : s.noReactions,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: s.textContainer,
                 children: [
                     (0, r.jsx)(o.xv, {
-                        variant: 'text-md/medium',
-                        color: 'header-primary',
-                        children: l
+                        variant: "text-md/medium",
+                        color: "header-primary",
+                        children: l,
                     }),
                     null != c &&
                         (0, r.jsx)(o.xv, {
-                            variant: 'text-sm/medium',
-                            color: 'text-secondary',
-                            children: c
-                        })
-                ]
+                            variant: "text-sm/medium",
+                            color: "text-secondary",
+                            children: c,
+                        }),
+                ],
             }),
-            d
-        ]
+            d,
+        ],
     });
 }

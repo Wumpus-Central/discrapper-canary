@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => O,
-    g: () => E
+    g: () => E,
 });
 var r = n(255367);
 n(73800);
@@ -21,7 +21,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,14 +67,23 @@ function g(e, t) {
     );
 }
 var E = (function (e) {
-    return ((e[(e.CONTINUE = 0)] = 'CONTINUE'), (e[(e.UPGRADE = 1)] = 'UPGRADE'), (e[(e.PURCHASE = 2)] = 'PURCHASE'), e);
+    return (e[(e.CONTINUE = 0)] = "CONTINUE"), (e[(e.UPGRADE = 1)] = "UPGRADE"), (e[(e.PURCHASE = 2)] = "PURCHASE"), e;
 })({});
 let b = (e) => {
-        let { primaryIcon: t, primaryCTA: n, primaryType: i, primaryText: o, primaryDisabled: c, primarySubmitting: u, onPrimary: d, tooltipProps: f } = e,
+        let {
+                primaryIcon: t,
+                primaryCTA: n,
+                primaryType: i,
+                primaryText: o,
+                primaryDisabled: c,
+                primarySubmitting: u,
+                onPrimary: d,
+                tooltipProps: f,
+            } = e,
             p = {
                 type: i,
                 disabled: c,
-                onClick: d
+                onClick: d,
             };
         return 2 === n
             ? (0, r.jsx)(
@@ -83,20 +92,20 @@ let b = (e) => {
                       h(
                           g(h({}, p), {
                               submitting: u,
-                              color: s.zx.Colors.GREEN
+                              color: s.zx.Colors.GREEN,
                           }),
-                          f
+                          f,
                       ),
                       {
                           children:
                               null == t
                                   ? null
                                   : (0, r.jsx)(t, {
-                                        color: 'currentColor',
-                                        className: _.primaryIcon
-                                    })
-                      }
-                  )
+                                        color: "currentColor",
+                                        className: _.primaryIcon,
+                                    }),
+                      },
+                  ),
               )
             : (0, r.jsx)(
                   a.zx,
@@ -104,22 +113,33 @@ let b = (e) => {
                       g(h({}, p), {
                           text: o,
                           loading: u,
-                          variant: 0 === n ? 'primary' : 'active',
+                          variant: 0 === n ? "primary" : "active",
                           icon:
                               null == t
                                   ? void 0
                                   : () =>
                                         (0, r.jsx)(t, {
-                                            color: 'currentColor',
-                                            className: _.primaryIcon
-                                        })
+                                            color: "currentColor",
+                                            className: _.primaryIcon,
+                                        }),
                       }),
-                      f
-                  )
+                      f,
+                  ),
               );
     },
     y = (e) => {
-        let { onBack: t, backText: n, primaryIcon: a, primaryCTA: s, primaryType: _, primaryText: p, primaryTooltip: m, primaryDisabled: E, primarySubmitting: y, onPrimary: O } = e,
+        let {
+                onBack: t,
+                backText: n,
+                primaryIcon: a,
+                primaryCTA: s,
+                primaryType: _,
+                primaryText: p,
+                primaryTooltip: m,
+                primaryDisabled: E,
+                primarySubmitting: y,
+                onPrimary: O,
+            } = e,
             { premiumBrandRefreshBackgroundClassName: v } = (0, u.JL)(),
             I = () => {
                 if (null == s || null == p) return null;
@@ -130,12 +150,12 @@ let b = (e) => {
                     primaryText: p,
                     primaryDisabled: E,
                     primarySubmitting: y,
-                    onPrimary: O
+                    onPrimary: O,
                 };
                 return null != m
                     ? (0, r.jsx)(l.ua7, {
                           text: m,
-                          children: (t) => (0, r.jsx)(b, g(h({}, e), { tooltipProps: t }))
+                          children: (t) => (0, r.jsx)(b, g(h({}, e), { tooltipProps: t })),
                       })
                     : (0, r.jsx)(b, g(h({}, e), { onPrimary: O }));
             },
@@ -143,25 +163,25 @@ let b = (e) => {
                 null == t
                     ? null
                     : (0, r.jsx)(o.A, {
-                          text: null != n ? n : f.intl.string(f.t['13/7kZ']),
+                          text: null != n ? n : f.intl.string(f.t["13/7kZ"]),
                           onClick: t,
-                          variant: 'secondary'
+                          variant: "secondary",
                       });
         return (0, r.jsxs)(l.mzw, {
-            'data-migration-pending': !0,
+            "data-migration-pending": !0,
             justify: c.Z.Justify.BETWEEN,
             align: c.Z.Align.CENTER,
             className: v,
             children: [
                 (0, r.jsxs)(i.Kq, {
-                    direction: 'horizontal-reverse',
-                    align: 'center',
+                    direction: "horizontal-reverse",
+                    align: "center",
                     gap: 0,
                     padding: 0,
-                    children: [I(), (0, r.jsx)(d.Z, {})]
+                    children: [I(), (0, r.jsx)(d.Z, {})],
                 }),
-                T()
-            ]
+                T(),
+            ],
         });
     };
 y.CTAType = E;

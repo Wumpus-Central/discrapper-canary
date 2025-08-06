@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(539854));
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -14,11 +14,21 @@ var r = n(255367),
     h = n(727138);
 let f = (e) => {
         var t;
-        let { reason: n = '', emoji_name: u, onSetReason: p, onSelectEmoji: f, onClearPressed: x, reasonMinLength: b, reasonMaxLength: j, placeholder: v, position: _ } = e,
+        let {
+                reason: n = "",
+                emoji_name: u,
+                onSetReason: p,
+                onSelectEmoji: f,
+                onClearPressed: x,
+                reasonMinLength: b,
+                reasonMaxLength: j,
+                placeholder: v,
+                position: _,
+            } = e,
             O = i.useRef(null),
             [y, C] = i.useState(!1),
             N = (0, l.e7)([m.Z], () => m.Z.isGuildMetadataLoaded());
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: h.reasonContainer,
             children: [
                 (0, r.jsx)(s.yRy, {
@@ -27,8 +37,8 @@ let f = (e) => {
                         C(!1);
                     },
                     shouldShow: y,
-                    position: 'right',
-                    align: 'top',
+                    position: "right",
+                    align: "top",
                     animation: s.yRy.Animation.NONE,
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
@@ -37,12 +47,12 @@ let f = (e) => {
                             closePopout: t,
                             onSelectEmoji: (e) => {
                                 let { emoji: n, willClose: r } = e;
-                                (null != n && f(n), r && t());
-                            }
+                                null != n && f(n), r && t();
+                            },
                         });
                     },
                     children: () =>
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: h.background,
                             ref: O,
                             children: (0, r.jsx)(c.Z, {
@@ -56,13 +66,13 @@ let f = (e) => {
                                         ? () =>
                                               (0, r.jsx)(o.Z, {
                                                   emojiName: u,
-                                                  animated: !1
+                                                  animated: !1,
                                               })
-                                        : null
-                            })
-                        })
+                                        : null,
+                            }),
+                        }),
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: h.inputContainer,
                     children: [
                         (0, r.jsx)(
@@ -76,9 +86,9 @@ let f = (e) => {
                                 onChange: (e) => {
                                     p(e);
                                 },
-                                defaultDirty: (null == n ? void 0 : n.length) > 0
+                                defaultDirty: (null == n ? void 0 : n.length) > 0,
                             },
-                            'text-input-'.concat(_, '-').concat(N)
+                            "text-input-".concat(_, "-").concat(N),
                         ),
                         (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != u
                             ? (0, r.jsx)(a.zx, {
@@ -87,22 +97,27 @@ let f = (e) => {
                                   look: a.zx.Looks.BLANK,
                                   size: a.zx.Sizes.NONE,
                                   tabIndex: -1,
-                                  'aria-hidden': !0,
+                                  "aria-hidden": !0,
                                   children: (0, r.jsx)(s.k$p, {
-                                      size: 'md',
-                                      color: 'currentColor',
-                                      className: h.clearStatusIcon
-                                  })
+                                      size: "md",
+                                      color: "currentColor",
+                                      className: h.clearStatusIcon,
+                                  }),
                               })
-                            : null
-                    ]
-                })
-            ]
+                            : null,
+                    ],
+                }),
+            ],
         });
     },
     x = (e) => {
         let { reasonMinLength: t, reasonMaxLength: n, guildId: i, reasons: l } = e,
-            a = [p.intl.string(p.t['9dhBGh']), p.intl.string(p.t['8RmhKC']), p.intl.string(p.t['2t0V8/']), p.intl.string(p.t.l8WqCQ)],
+            a = [
+                p.intl.string(p.t["9dhBGh"]),
+                p.intl.string(p.t["8RmhKC"]),
+                p.intl.string(p.t["2t0V8/"]),
+                p.intl.string(p.t.l8WqCQ),
+            ],
             s = [];
         for (let e = 0; e < 4; e++)
             s.push(
@@ -130,58 +145,58 @@ let f = (e) => {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })(
                             {
                                 position: e,
-                                placeholder: a[e]
+                                placeholder: a[e],
                             },
-                            l[e]
+                            l[e],
                         ),
                         {
                             onSetReason: (t) => {
                                 let n = [...l],
                                     r = Object.assign({}, l[e], { reason: t });
-                                ((n[e] = r), (0, u.P$)(i, n));
+                                (n[e] = r), (0, u.P$)(i, n);
                             },
                             onSelectEmoji: (t) => {
                                 let n = [...l],
                                     r = Object.assign({}, l[e], { emoji_name: t.optionallyDiverseSequence });
-                                ((n[e] = r), (0, u.P$)(i, n));
+                                (n[e] = r), (0, u.P$)(i, n);
                             },
                             onClearPressed: () => {
                                 let t = [...l],
                                     n = {
-                                        reason: '',
-                                        emoji_name: null
+                                        reason: "",
+                                        emoji_name: null,
                                     };
-                                ((t[e] = n), (0, u.P$)(i, t));
+                                (t[e] = n), (0, u.P$)(i, t);
                             },
                             reasonMinLength: t,
-                            reasonMaxLength: n
-                        }
+                            reasonMaxLength: n,
+                        },
                     ),
-                    'reasonListItem-' + e
-                )
+                    "reasonListItem-" + e,
+                ),
             );
-        return (0, r.jsx)('div', { children: s });
+        return (0, r.jsx)("div", { children: s });
     };

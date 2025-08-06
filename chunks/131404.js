@@ -49,19 +49,32 @@ var l = e(399606),
 let J = (0, a.Z)(
     (0, s.Z)(
         function (n) {
-            let { user: t, channel: e, channelSelected: s = !1, showMute: a = !0, showMediaItems: c = !1, showChannelCallItems: J = !1, showModalItems: X = !0, targetIsUser: z = !1, context: H, onSelect: $, onHeightUpdate: nn, onInteraction: nt } = n,
+            let {
+                    user: t,
+                    channel: e,
+                    channelSelected: s = !1,
+                    showMute: a = !0,
+                    showMediaItems: c = !1,
+                    showChannelCallItems: J = !1,
+                    showModalItems: X = !0,
+                    targetIsUser: z = !1,
+                    context: H,
+                    onSelect: $,
+                    onHeightUpdate: nn,
+                    onInteraction: nt,
+                } = n,
                 ne = (0, G.Z)({
                     userId: t.id,
-                    guildId: null
+                    guildId: null,
                 }),
                 ni = (0, b.Z)({
                     user: t,
-                    context: H
+                    context: H,
                 }),
                 nl = (0, P.Z)({
                     user: t,
                     channelId: e.id,
-                    context: H
+                    context: H,
                 }),
                 nr = (0, m.Z)({ user: t }),
                 nd = (0, q.Z)(t.id),
@@ -75,7 +88,7 @@ let J = (0, a.Z)(
                 }),
                 { enabled: nf } = A.Z.useExperiment({
                     guildId: null == nc ? void 0 : nc.guild_id,
-                    location: 'DMUserContextMenu'
+                    location: "DMUserContextMenu",
                 }),
                 nh = nf ? (null == nc ? void 0 : nc.id) : e.id,
                 ng = (0, F.Z)(t, nh),
@@ -86,26 +99,26 @@ let J = (0, a.Z)(
                 nI = (0, Z.B)({
                     userId: t.id,
                     channelId: e.id,
-                    guildId: e.getGuildId()
+                    guildId: e.getGuildId(),
                 }),
                 n_ = (0, O.Z)(t.id, e.id),
                 nN = (0, y.Z)({
                     user: t,
-                    location: 'DMUserContextMenu'
+                    location: "DMUserContextMenu",
                 }),
                 nv = (0, W.Z)({
                     user: t,
-                    location: 'DMUserContextMenu'
+                    location: "DMUserContextMenu",
                 }),
                 np = (0, x.ZP)(e),
-                nE = (0, E.Uf)(B.aIL, e.id, 'trailing'),
+                nE = (0, E.Uf)(B.aIL, e.id, "trailing"),
                 nk = (0, _.Z)({
                     id: t.id,
-                    label: L.intl.string(L.t['/AXYnJ'])
+                    label: L.intl.string(L.t["/AXYnJ"]),
                 }),
                 nA = (0, _.Z)({
                     id: e.id,
-                    label: L.intl.string(L.t.gFHI3t)
+                    label: L.intl.string(L.t.gFHI3t),
                 }),
                 nC = (0, j.Z)(e),
                 nU = (0, h.Z)(t.id),
@@ -117,7 +130,7 @@ let J = (0, a.Z)(
                     commandTargetId: t.id,
                     channel: e,
                     guildId: void 0,
-                    onHeightUpdate: nn
+                    onHeightUpdate: nn,
                 }),
                 nR = (0, N.l)(e),
                 ny = (0, N.P)(e),
@@ -128,26 +141,26 @@ let J = (0, a.Z)(
                 nW = e.isManaged(),
                 nV = t.isNonUserBot();
             return (0, i.jsxs)(r.v2r, {
-                navId: 'user-context',
+                navId: "user-context",
                 onClose: d.Zy,
-                'aria-label': L.intl.string(L.t.liqwPD),
+                "aria-label": L.intl.string(L.t.liqwPD),
                 onSelect: $,
                 onInteraction: nt,
                 children: [
                     (0, i.jsx)(r.kSQ, { children: !(nV && !(0, S.Z)(e.id)) && nC }),
                     (0, i.jsxs)(r.kSQ, {
-                        children: [nR, nb, nQ, nO]
+                        children: [nR, nb, nQ, nO],
                     }),
                     (0, i.jsx)(r.kSQ, { children: !nV && nm }),
                     (0, i.jsxs)(r.kSQ, {
                         children: [
                             !nV &&
                                 (0, i.jsxs)(i.Fragment, {
-                                    children: [X && ne, ni, !nW && ng, X && nl, X && nr, nd]
+                                    children: [X && ne, ni, !nW && ng, X && nl, X && nr, nd],
                                 }),
                             (0, S.Z)(e.id) && ne,
-                            ns
-                        ]
+                            ns,
+                        ],
                     }),
                     !nV &&
                         (0, i.jsxs)(i.Fragment, {
@@ -155,30 +168,42 @@ let J = (0, a.Z)(
                                 (0, i.jsx)(r.kSQ, { children: c && no }),
                                 (0, i.jsx)(r.kSQ, { children: X && nu }),
                                 (0, i.jsxs)(r.kSQ, {
-                                    children: [c && nx, X && nI, c && n_, nP, X && na, nZ, nS, nj, X && nv, X && nN, c && nM]
+                                    children: [
+                                        c && nx,
+                                        X && nI,
+                                        c && n_,
+                                        nP,
+                                        X && na,
+                                        nZ,
+                                        nS,
+                                        nj,
+                                        X && nv,
+                                        X && nN,
+                                        c && nM,
+                                    ],
                                 }),
                                 (0, i.jsxs)(r.kSQ, {
-                                    children: [a && np, nE]
+                                    children: [a && np, nE],
                                 }),
                                 J &&
                                     (0, i.jsxs)(r.kSQ, {
-                                        children: [nT, nU]
-                                    })
-                            ]
+                                        children: [nT, nU],
+                                    }),
+                            ],
                         }),
                     (0, S.Z)(e.id) &&
                         (0, i.jsxs)(r.kSQ, {
-                            children: [a && np, nE]
+                            children: [a && np, nE],
                         }),
                     (0, i.jsx)(r.kSQ, { children: ny }),
                     (0, i.jsx)(r.kSQ, { children: nD }),
                     (0, i.jsxs)(r.kSQ, {
-                        children: [nk, !z && nA]
-                    })
-                ]
+                        children: [nk, !z && nA],
+                    }),
+                ],
             });
         },
-        { object: B.qAy.CONTEXT_MENU }
+        { object: B.qAy.CONTEXT_MENU },
     ),
-    [c.Z.CONTEXT_MENU, c.Z.DM_USER_MENU]
+    [c.Z.CONTEXT_MENU, c.Z.DM_USER_MENU],
 );

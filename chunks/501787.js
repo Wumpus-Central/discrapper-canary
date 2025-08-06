@@ -5,9 +5,9 @@ n.d(t, {
     Og: () => l,
     mo: () => o,
     vZ: () => i,
-    yC: () => c
+    yC: () => c,
 });
-let r = 'DISCORD_OutOfProcessOverlay',
+let r = "DISCORD_OutOfProcessOverlay",
     i = 192,
     o = 120,
     a = 4,

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(423875),
     i = n(740605),
     o = n(206583),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -37,11 +37,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,11 +65,11 @@ function f(e) {
         m = f.name,
         g = {
             onClick: () => (0, i.o)(a.Hw.TRACK, u.external_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: _ })
+            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: _ }),
         },
         E = {
             onClick: () => (0, i.o)(a.Hw.ARTIST, f.external_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: m })
+            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: m }),
         };
     return (
         p === r.p.SPOTIFY && (t = { type: o.kG.SPOTIFY }),
@@ -81,7 +81,7 @@ function f(e) {
             subtitleClickable: E,
             thumbnailClickable: g,
             userDescription: s.t.CcVI1d,
-            providerIconProps: t
+            providerIconProps: t,
         })
     );
 }

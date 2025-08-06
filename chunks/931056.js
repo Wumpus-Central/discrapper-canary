@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(539854), n(388685));
+n.d(t, { Z: () => p }), n(539854), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(417438),
@@ -11,7 +11,10 @@ function d(e, t) {
     if (!t.isPrivate()) return [u, c];
     let n = e.filter((e) => {
             var t, n;
-            return (null == (t = e.application) ? void 0 : t.id) != null && (null == (n = e.activity) ? void 0 : n.party_id) != null;
+            return (
+                (null == (t = e.application) ? void 0 : t.id) != null &&
+                (null == (n = e.activity) ? void 0 : n.party_id) != null
+            );
         }),
         r = n.map((e) => e.id);
     return [n, r];
@@ -32,7 +35,7 @@ function f(e, t) {
                     partyId: a,
                     messageId: e.id,
                     channelId: e.channel_id,
-                    inviteTime: s
+                    inviteTime: s,
                 };
             n.push(l);
         }),
@@ -41,28 +44,28 @@ function f(e, t) {
 }
 function _(e, t) {
     let [n, o] = r.useMemo(() => d(e, t), [e, t]),
-        a = (0, i.Wu)(
-            [s.Z],
-            () => {
-                let e = [];
-                return (
-                    n.forEach((t) => {
-                        null !=
-                            s.Z.findActivity(
-                                t.author.id,
-                                (e) => {
-                                    var n, r, i;
-                                    return e.application_id === (null == (n = t.application) ? void 0 : n.id) && (null == (r = e.party) ? void 0 : r.id) === (null == (i = t.activity) ? void 0 : i.party_id);
-                                },
-                                null,
-                                !0
-                            ) && e.push(t.id);
-                    }),
-                    e
-                );
-            },
-            [n]
-        );
+        a = (0, i.Wu)([s.Z], () => {
+            let e = [];
+            return (
+                n.forEach((t) => {
+                    null !=
+                        s.Z.findActivity(
+                            t.author.id,
+                            (e) => {
+                                var n, r, i;
+                                return (
+                                    e.application_id === (null == (n = t.application) ? void 0 : n.id) &&
+                                    (null == (r = e.party) ? void 0 : r.id) ===
+                                        (null == (i = t.activity) ? void 0 : i.party_id)
+                                );
+                            },
+                            null,
+                            !0,
+                        ) && e.push(t.id);
+                }),
+                e
+            );
+        }, [n]);
     return [o, r.useMemo(() => f(n, a), [n, a])];
 }
 function p(e, t) {

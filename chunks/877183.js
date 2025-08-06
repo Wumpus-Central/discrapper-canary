@@ -16,9 +16,9 @@ let f = () => ({
         title: p.intl.string(p.t.r0ObgY),
         body: p.intl.string(p.t.hc6XFx),
         hint: g,
-        notifType: h.n0.OopWelcomeNudge
+        notifType: h.n0.OopWelcomeNudge,
     }),
-    g = (e) => (0, s.QR)(e, (0, u.P)(), p.t['z8/sgI']);
+    g = (e) => (0, s.QR)(e, (0, u.P)(), p.t["z8/sgI"]);
 function m(e) {
     let { isFirstTimeNux: t } = e,
         {
@@ -26,7 +26,7 @@ function m(e) {
             title: s,
             body: h,
             hint: g,
-            notifType: m
+            notifType: m,
         } = (function (e, t) {
             if (t.isFirstTimeNux) {
                 var n, i;
@@ -35,31 +35,31 @@ function m(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    ((i = n[t]),
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = i));
-                                }));
+                                            : (e[t] = i);
+                                });
                         }
                         return e;
                     })({}, e)),
                     (i = i =
                         {
                             title: p.intl.string(p.t.xxADho),
-                            body: p.intl.string(p.t.GtUrGB)
+                            body: p.intl.string(p.t.GtUrGB),
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -85,27 +85,30 @@ function m(e) {
         body: h,
         hint: g,
         renderFooter: () =>
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 style: {
-                    textAlign: 'center',
-                    padding: 2
+                    textAlign: "center",
+                    padding: 2,
                 },
-                children: p.intl.string(p.t['9MyuT0'])
+                children: p.intl.string(p.t["9MyuT0"]),
             }),
         confirmText: t ? p.intl.string(p.t.TxyTbm) : void 0,
         onConfirmClick: t
             ? () => {
-                  (O('unlock'), o.Z.setInputLocked(!1, (0, d.getPID)()));
+                  O("unlock"), o.Z.setInputLocked(!1, (0, d.getPID)());
               }
             : void 0,
         onNotificationShow: () => {
-            (y(), t && (0, l.Q3)(r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX));
+            y(), t && (0, l.Q3)(r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX);
         },
         onNotificationClick: (e, t) => {
-            (O('unlock'), a.default.isOverlayOOPEnabledForPid((0, d.getPID)()) ? o.Z.setInputLocked(!1, (0, d.getPID)()) : c.default.isInstanceLocked() && o.Z.setInstanceLocked(!1));
+            O("unlock"),
+                a.default.isOverlayOOPEnabledForPid((0, d.getPID)())
+                    ? o.Z.setInputLocked(!1, (0, d.getPID)())
+                    : c.default.isInstanceLocked() && o.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            O('dismiss');
-        }
+            O("dismiss");
+        },
     };
 }

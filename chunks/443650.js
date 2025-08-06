@@ -12,10 +12,10 @@ function a(e) {
         className: c()(u.closeButtonContainer, t),
         onClick: r,
         children: (0, n.jsx)(l.Dio, {
-            size: 'xs',
-            color: 'currentColor',
-            className: u.closeButtonIcon
-        })
+            size: "xs",
+            color: "currentColor",
+            className: u.closeButtonIcon,
+        }),
     });
 }
 function s(e) {
@@ -28,12 +28,12 @@ function s(e) {
                 className: u.headerImage,
                 listing: t,
                 imageSize: 500,
-                alt: ''
+                alt: "",
             }),
             (0, n.jsx)(a, {
                 className: u.closeButton,
-                onClose: r
-            })
-        ]
+                onClose: r,
+            }),
+        ],
     });
 }

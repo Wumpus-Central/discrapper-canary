@@ -20,7 +20,7 @@ class u extends r.ZP.Store {
             ((a[e] = {
                 fetchState: 1,
                 foundMembers: 0,
-                notFoundMembers: 0
+                notFoundMembers: 0,
             }),
             (o = t.length),
             l.Z.requestMembersById(e, t, !1));
@@ -35,6 +35,9 @@ let d = new u(i.Z, {
         var t, n;
         let r = e.chunks[0],
             { guildId: i } = r;
-        1 === s(i) && ((a[i].foundMembers += r.members.length), (a[i].notFoundMembers += null != (n = null == (t = r.notFound) ? void 0 : t.length) ? n : 0), a[i].foundMembers + a[i].notFoundMembers >= o && (a[i].fetchState = 2));
-    }
+        1 === s(i) &&
+            ((a[i].foundMembers += r.members.length),
+            (a[i].notFoundMembers += null != (n = null == (t = r.notFound) ? void 0 : t.length) ? n : 0),
+            a[i].foundMembers + a[i].notFoundMembers >= o && (a[i].fetchState = 2));
+    },
 });

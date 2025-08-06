@@ -4,7 +4,7 @@ var t = 4,
     i = 10,
     o = 11,
     a = 0.1,
-    s = 'function' == typeof Float32Array;
+    s = "function" == typeof Float32Array;
 function l(e, t) {
     return 1 - 3 * t + 3 * e;
 }
@@ -38,7 +38,7 @@ function p(e, n, r, i) {
     return n;
 }
 e.exports = function (e, t, r, i) {
-    if (!(0 <= e && e <= 1 && 0 <= r && r <= 1)) throw Error('bezier x values must be in [0, 1] range');
+    if (!(0 <= e && e <= 1 && 0 <= r && r <= 1)) throw Error("bezier x values must be in [0, 1] range");
     var l = s ? new Float32Array(o) : Array(o);
     if (e !== t || r !== i) for (var c = 0; c < o; ++c) l[c] = d(c * a, e, r);
     function u(t) {

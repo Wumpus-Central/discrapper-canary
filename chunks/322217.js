@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,107 +68,107 @@ function d(e) {
                             o.Text,
                             u(l({}, e), {
                                 variant: t,
-                                children: e.children
-                            })
+                                children: e.children,
+                            }),
                         ),
                         (0, r.jsx)(o.Text, {
-                            variant: 'text-xs/normal',
-                            color: 'text-secondary',
-                            children: t
-                        })
-                    ]
+                            variant: "text-xs/normal",
+                            color: "text-secondary",
+                            children: t,
+                        }),
+                    ],
                 },
-                t
-            )
-        )
+                t,
+            ),
+        ),
     });
 }
 let f = {
-    title: 'Text',
+    title: "Text",
     stories: [
         {
-            name: 'Text',
-            id: 'text',
+            name: "Text",
+            id: "text",
             component: o.Text,
             controls: {
                 variant: {
-                    label: 'Variant',
-                    type: 'select',
-                    defaultValue: 'text-sm/normal',
+                    label: "Variant",
+                    type: "select",
+                    defaultValue: "text-sm/normal",
                     options: Object.values(i.O).map((e) => ({
                         label: e,
-                        value: e
-                    }))
+                        value: e,
+                    })),
                 },
                 color: {
-                    label: 'Color',
-                    type: 'select',
-                    defaultValue: 'text-primary',
+                    label: "Color",
+                    type: "select",
+                    defaultValue: "text-primary",
                     options: [
                         {
-                            label: 'Text Primary',
-                            value: 'text-primary'
+                            label: "Text Primary",
+                            value: "text-primary",
                         },
                         {
-                            label: 'Text Secondary',
-                            value: 'text-secondary'
+                            label: "Text Secondary",
+                            value: "text-secondary",
                         },
                         {
-                            label: 'Text Tertiary',
-                            value: 'text-tertiary'
+                            label: "Text Tertiary",
+                            value: "text-tertiary",
                         },
                         {
-                            label: 'Text Muted',
-                            value: 'text-muted'
+                            label: "Text Muted",
+                            value: "text-muted",
                         },
                         {
-                            label: 'Header Primary',
-                            value: 'header-primary'
+                            label: "Header Primary",
+                            value: "header-primary",
                         },
                         {
-                            label: 'Header Secondary',
-                            value: 'header-secondary'
+                            label: "Header Secondary",
+                            value: "header-secondary",
                         },
                         {
-                            label: 'Header Muted',
-                            value: 'header-muted'
+                            label: "Header Muted",
+                            value: "header-muted",
                         },
                         {
-                            label: 'Feedback Positive',
-                            value: 'text-feedback-positive'
+                            label: "Feedback Positive",
+                            value: "text-feedback-positive",
                         },
                         {
-                            label: 'Feedback Critical',
-                            value: 'text-feedback-critical'
+                            label: "Feedback Critical",
+                            value: "text-feedback-critical",
                         },
                         {
-                            label: 'Feedback Warning',
-                            value: 'text-feedback-warning'
+                            label: "Feedback Warning",
+                            value: "text-feedback-warning",
                         },
                         {
-                            label: 'Feedback Info',
-                            value: 'text-feedback-info'
-                        }
-                    ]
+                            label: "Feedback Info",
+                            value: "text-feedback-info",
+                        },
+                    ],
                 },
                 children: {
-                    label: 'Text',
-                    type: 'text',
-                    defaultValue: 'Hello, world!'
-                }
-            }
+                    label: "Text",
+                    type: "text",
+                    defaultValue: "Hello, world!",
+                },
+            },
         },
         {
-            name: 'Typography Scales',
-            id: 'text-scales',
+            name: "Typography Scales",
+            id: "text-scales",
             component: d,
             controls: {
                 children: {
-                    label: 'Text',
-                    type: 'text',
-                    defaultValue: 'Hello, world!'
-                }
-            }
-        }
-    ]
+                    label: "Text",
+                    type: "text",
+                    defaultValue: "Hello, world!",
+                },
+            },
+        },
+    ],
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(415506), n(388685));
+n.d(t, { Z: () => o }), n(415506), n(388685);
 var r = n(141795),
     i = n(981631);
 async function o(e) {
@@ -12,24 +12,24 @@ async function o(e) {
                             e.upload();
                             break;
                         case r.mw.COMPLETED:
-                            o('complete');
+                            o("complete");
                             break;
                         case r.mw.ERROR:
-                            t && e.error !== i.evJ.ENTITY_TOO_LARGE ? e.upload() : a(Error('File failed to upload'));
+                            t && e.error !== i.evJ.ENTITY_TOO_LARGE ? e.upload() : a(Error("File failed to upload"));
                             break;
                         case r.mw.CANCELED:
-                            a(Error('Upload is canceled'));
+                            a(Error("Upload is canceled"));
                     }
-                    (e.on('complete', () => {
-                        o('complete');
+                    e.on("complete", () => {
+                        o("complete");
                     }),
-                        e.on('error', () => {
-                            a(Error('File '.concat(e.id, ' failed to upload')));
+                        e.on("error", () => {
+                            a(Error("File ".concat(e.id, " failed to upload")));
                         }),
-                        e.on('progress', (e, t) => {
+                        e.on("progress", (e, t) => {
                             null == n || n(e, t);
-                        }));
-                })
+                        });
+                }),
         );
     await Promise.all(o);
 }

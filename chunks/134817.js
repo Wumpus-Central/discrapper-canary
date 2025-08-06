@@ -16,18 +16,21 @@ class d extends i.Component {
             onClose: async () => {
                 await n(!1);
             },
-            'aria-label': p.intl.string(p.t.BNg1io),
+            "aria-label": p.intl.string(p.t.BNg1io),
             title: p.intl.string(p.t.BNg1io),
             premiumModalType: c.C.Types.UPGRADE,
             primary: {
                 onClick: () => n(!0),
-                label: p.intl.string(p.t.P3etAg)
+                label: p.intl.string(p.t.P3etAg),
             },
-            children: u.ZP.isPremium(e) && !u.ZP.canInstallPremiumApplications(e) ? p.intl.string(p.t.mKA9OD) : p.intl.string(p.t.sqSlm5)
+            children:
+                u.ZP.isPremium(e) && !u.ZP.canInstallPremiumApplications(e)
+                    ? p.intl.string(p.t.mKA9OD)
+                    : p.intl.string(p.t.sqSlm5),
         });
     }
 }
 let g = o.ZP.connectStores([l.default], () => {
     let e = l.default.getCurrentUser();
-    return (s()(null != e, 'PremiumRequiredModal: user cannot be null'), { user: e });
+    return s()(null != e, "PremiumRequiredModal: user cannot be null"), { user: e };
 })(d);

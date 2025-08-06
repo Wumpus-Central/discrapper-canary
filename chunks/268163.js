@@ -9,19 +9,19 @@ var r = n(220159),
 if (
     (r(
         {
-            target: 'Promise',
+            target: "Promise",
             proto: !0,
             forced: a,
-            real: !0
+            real: !0,
         },
         {
             catch: function (e) {
                 return this.then(void 0, e);
-            }
-        }
+            },
+        },
     ),
     !o && c(i))
 ) {
-    var d = s('Promise').prototype.catch;
-    u.catch !== d && l(u, 'catch', d, { unsafe: !0 });
+    var d = s("Promise").prototype.catch;
+    u.catch !== d && l(u, "catch", d, { unsafe: !0 });
 }

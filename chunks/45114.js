@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     CZ: () => m,
     FT: () => b,
     In: () => d,
@@ -6,10 +6,10 @@
     U6: () => _,
     iV: () => h,
     jT: () => g,
-    y5: () => p
+    y5: () => p,
 }),
     n(388685),
-    n(539854));
+    n(539854);
 var r = n(570140),
     i = n(601070),
     o = n(131704),
@@ -23,13 +23,13 @@ function d(e, t) {
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         o = arguments.length > 4 ? arguments[4] : void 0;
     r.Z.dispatch({
-        type: 'CHANNEL_ACK',
+        type: "CHANNEL_ACK",
         channelId: e,
         messageId: o,
         immediate: n,
         force: i,
         context: u.e3s,
-        location: t
+        location: t,
     });
 }
 function f(e, t) {
@@ -57,52 +57,56 @@ function f(e, t) {
         d(e, t, n, r);
 }
 function _(e, t) {
-    e.isCategory() ? f(e.id, t, !0, !0) : e.isForumLikeChannel() ? d(e.id, t, !0, !0, c.default.fromTimestamp(Date.now())) : d(e.id, t, !0, !0);
+    e.isCategory()
+        ? f(e.id, t, !0, !0)
+        : e.isForumLikeChannel()
+          ? d(e.id, t, !0, !0, c.default.fromTimestamp(Date.now()))
+          : d(e.id, t, !0, !0);
 }
 function p(e, t) {
     r.Z.dispatch({
-        type: 'BULK_ACK',
+        type: "BULK_ACK",
         channels: e,
         context: u.e3s,
-        onFinished: t
+        onFinished: t,
     });
 }
 function h(e) {
     r.Z.dispatch({
-        type: 'CHANNEL_LOCAL_ACK',
-        channelId: e
+        type: "CHANNEL_LOCAL_ACK",
+        channelId: e,
     });
 }
 function m(e, t) {
     r.Z.dispatch({
-        type: 'ENABLE_AUTOMATIC_ACK',
+        type: "ENABLE_AUTOMATIC_ACK",
         channelId: e,
-        windowId: t
+        windowId: t,
     });
 }
 function g(e, t) {
     r.Z.dispatch({
-        type: 'DISABLE_AUTOMATIC_ACK',
+        type: "DISABLE_AUTOMATIC_ACK",
         channelId: e,
-        windowId: t
+        windowId: t,
     });
 }
 function E(e, t, n) {
     r.Z.dispatch({
-        type: 'GUILD_FEATURE_ACK',
+        type: "GUILD_FEATURE_ACK",
         id: e,
         ackType: t,
         ackedId: n,
-        local: !1
+        local: !1,
     });
 }
 function b(e, t) {
     var n;
     null != (null == (n = l.default.getCurrentUser()) ? void 0 : n.id) &&
         r.Z.dispatch({
-            type: 'USER_NON_CHANNEL_ACK',
+            type: "USER_NON_CHANNEL_ACK",
             ackType: e,
             ackedId: t,
-            local: !1
+            local: !1,
         });
 }

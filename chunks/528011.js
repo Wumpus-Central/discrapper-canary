@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     g: () => g,
-    mI: () => m
+    mI: () => m,
 }),
-    n(388685));
+    n(388685);
 var r = n(149765),
     i = n(399606),
     o = n(581883),
@@ -27,9 +27,9 @@ function h(e) {
                 u.uB({
                     user: t,
                     context: i,
-                    checkElevated: !1
+                    checkElevated: !1,
                 }),
-                p.cv
+                p.cv,
             )
         )
             return i.id;
@@ -48,7 +48,7 @@ function m(e) {
     return {
         shouldShowIncidentActions: t,
         incidentData: n,
-        isUnderLockdown: o
+        isUnderLockdown: o,
     };
 }
 function g() {
@@ -59,7 +59,7 @@ function g() {
         i = null != r && r.disableRaidAlertNag;
     return {
         show: null != t && !i,
-        guildId: t
+        guildId: t,
     };
 }
 n(981631);

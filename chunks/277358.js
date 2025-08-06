@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(570140),
     i = n(147913),
     o = n(70956),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,66 +26,76 @@ function p(e, t, n) {
 let h = 3 * o.Z.Millis.DAY,
     m = 7 * o.Z.Millis.DAY,
     g = {
-        joinGameLogPrefix: '[FLog::GameJoinLoadTime] Report game_join_loadtime:',
+        joinGameLogPrefix: "[FLog::GameJoinLoadTime] Report game_join_loadtime:",
         joinGameFields: [
             {
-                regex: 'universeid:([0-9]+)',
-                key: u.SQ.UNIVERSE_ID
+                regex: "universeid:([0-9]+)",
+                key: u.SQ.UNIVERSE_ID,
             },
             {
-                regex: 'placeid:([0-9]+)',
-                key: u.SQ.PLACE_ID
+                regex: "placeid:([0-9]+)",
+                key: u.SQ.PLACE_ID,
             },
             {
-                regex: 'userid:([0-9]+)',
-                key: u.SQ.USER_ID
+                regex: "userid:([0-9]+)",
+                key: u.SQ.USER_ID,
             },
             {
-                regex: 'sid:([0-9a-zA-Z-]+)',
-                key: u.SQ.JOB_ID
-            }
+                regex: "sid:([0-9a-zA-Z-]+)",
+                key: u.SQ.JOB_ID,
+            },
         ],
-        leaveGameLogPrefix: '[FLog::SingleSurfaceApp] returnToLuaApp:'
+        leaveGameLogPrefix: "[FLog::SingleSurfaceApp] returnToLuaApp:",
     };
 class E extends i.Z {
     _initialize() {
         this.stores = new Map().set(f.Z, () => this.handleRobloxSubgameStoreChanged());
     }
     constructor(...e) {
-        (super(...e),
-            p(this, 'currentInterval_', null),
-            p(this, 'currentSubgameInfo_', null),
-            p(this, 'actions', {
+        super(...e),
+            p(this, "currentInterval_", null),
+            p(this, "currentSubgameInfo_", null),
+            p(this, "actions", {
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
-                RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChange(e)
+                RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChange(e),
             }),
-            p(this, 'handleRobloxSubgameStoreChanged', () => {
+            p(this, "handleRobloxSubgameStoreChanged", () => {
                 let e = f.Z.getCurrentSubgameInfo();
-                if (null == e.subgameInfo || null == e.subgameInfo.universeId || !c.D.getCurrentConfig({ location: 'roblox_subgame_detection' }).enabled) return;
+                if (
+                    null == e.subgameInfo ||
+                    null == e.subgameInfo.universeId ||
+                    !c.D.getCurrentConfig({ location: "roblox_subgame_detection" }).enabled
+                )
+                    return;
                 let t = e.subgameInfo.universeId,
                     n = f.Z.getState();
-                (null == n.universeIdToApplicationInfo[t] || (null == e.application && n.universeIdToApplicationInfo[t].lastFetchedTime < Date.now() - h) || (null != e.application && n.universeIdToApplicationInfo[t].lastFetchedTime < Date.now() - m)) && (0, l.s)(t);
+                (null == n.universeIdToApplicationInfo[t] ||
+                    (null == e.application && n.universeIdToApplicationInfo[t].lastFetchedTime < Date.now() - h) ||
+                    (null != e.application && n.universeIdToApplicationInfo[t].lastFetchedTime < Date.now() - m)) &&
+                    (0, l.s)(t);
             }),
-            p(this, 'handleGetRobloxSubgameInfo', (e) => {
+            p(this, "handleGetRobloxSubgameInfo", (e) => {
                 let t = (0, d.I8)(e);
                 (0, d.yA)(this.currentSubgameInfo_, t) &&
                     ((this.currentSubgameInfo_ = t),
                     r.Z.dispatch({
-                        type: 'ROBLOX_SUBGAME_UPDATE',
-                        subgameInfo: t
+                        type: "ROBLOX_SUBGAME_UPDATE",
+                        subgameInfo: t,
                     }));
             }),
-            p(this, 'handlePostConnectionOpen', () => {
-                !__OVERLAY__ && ((0, a.isWindows)() || (0, a.isMac)()) && s.ZP.setRobloxSubgameDetectionConfig(g, this.handleGetRobloxSubgameInfo);
+            p(this, "handlePostConnectionOpen", () => {
+                !__OVERLAY__ &&
+                    ((0, a.isWindows)() || (0, a.isMac)()) &&
+                    s.ZP.setRobloxSubgameDetectionConfig(g, this.handleGetRobloxSubgameInfo);
             }),
-            p(this, 'handleRunningGamesChange', (e) => {
+            p(this, "handleRunningGamesChange", (e) => {
                 if (__OVERLAY__) return;
                 let t = e.games.some((e) => e.distributor === _.GQo.ROBLOX);
-                (t &&
+                t &&
                     !e.added.some((e) => e.distributor === _.GQo.ROBLOX) &&
                     r.Z.dispatch({
-                        type: 'ROBLOX_SUBGAME_UPDATE',
-                        subgameInfo: this.currentSubgameInfo_
+                        type: "ROBLOX_SUBGAME_UPDATE",
+                        subgameInfo: this.currentSubgameInfo_,
                     }),
                     t || null == this.currentInterval_
                         ? t &&
@@ -94,8 +104,8 @@ class E extends i.Z {
                           (this.currentInterval_ = setInterval(() => {
                               s.ZP.checkForRobloxSubgameUpdate();
                           }, 5000)))
-                        : (clearInterval(this.currentInterval_), (this.currentInterval_ = null)));
-            }));
+                        : (clearInterval(this.currentInterval_), (this.currentInterval_ = null));
+            });
     }
 }
 let b = new E();

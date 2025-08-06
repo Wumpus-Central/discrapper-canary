@@ -9,7 +9,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -35,11 +35,11 @@ function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -57,14 +57,14 @@ function l(e, t) {
 function c(e) {
     let { message: t, initialAnswerId: o } = e;
     (0, i.ZDy)(async () => {
-        let { default: e } = await n.e('74590').then(n.bind(n, 651081));
+        let { default: e } = await n.e("74590").then(n.bind(n, 651081));
         return (n) =>
             (0, r.jsx)(
                 e,
                 l(a({}, n), {
                     message: t,
-                    initialAnswerId: o
-                })
+                    initialAnswerId: o,
+                }),
             );
     });
 }

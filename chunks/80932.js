@@ -1,14 +1,14 @@
-(n.d(t, {
+n.d(t, {
     $K: () => N,
     OQ: () => O,
     RE: () => I,
     Xe: () => C,
     dv: () => T,
     rS: () => v,
-    t0: () => y
+    t0: () => y,
 }),
     n(388685),
-    n(539854));
+    n(539854);
 var r = n(392711),
     i = n.n(r),
     o = n(544891),
@@ -28,44 +28,44 @@ var r = n(392711),
     b = n(388032);
 function y(e) {
     _.hW.updateAsync(
-        'textAndImages',
+        "textAndImages",
         (t) => {
-            ((t.diversitySurrogate = a.Gm.create()), (t.diversitySurrogate.value = e));
+            (t.diversitySurrogate = a.Gm.create()), (t.diversitySurrogate.value = e);
         },
-        E.fy.FREQUENT_USER_ACTION
+        E.fy.FREQUENT_USER_ACTION,
     );
 }
 function O(e) {
-    (s.Z.dispatch({
-        type: 'EMOJI_FETCH',
-        guildId: e
+    s.Z.dispatch({
+        type: "EMOJI_FETCH",
+        guildId: e,
     }),
         o.tn
             .get({
                 url: g.ANM.GUILD_EMOJIS(e),
                 oldFormErrors: !0,
-                rejectWithError: !0
+                rejectWithError: !0,
             })
             .then(
                 (t) =>
                     s.Z.dispatch({
-                        type: 'EMOJI_FETCH_SUCCESS',
+                        type: "EMOJI_FETCH_SUCCESS",
                         guildId: e,
-                        emojis: t.body
+                        emojis: t.body,
                     }),
                 () =>
                     s.Z.dispatch({
-                        type: 'EMOJI_FETCH_FAILURE',
-                        guildId: e
-                    })
-            ));
+                        type: "EMOJI_FETCH_FAILURE",
+                        guildId: e,
+                    }),
+            );
 }
 function v(e) {
     let { guildId: t, image: n, name: r, roles: i, analyticsLocation: a } = e;
     return (
         s.Z.dispatch({
-            type: 'EMOJI_UPLOAD_START',
-            guildId: t
+            type: "EMOJI_UPLOAD_START",
+            guildId: t,
         }),
         o.tn
             .post({
@@ -73,41 +73,41 @@ function v(e) {
                 body: {
                     image: n,
                     name: r,
-                    roles: i
+                    roles: i,
                 },
                 context: { client_event_source: null == a ? void 0 : a.page },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             })
             .then(
                 (e) => (
                     s.Z.dispatch({
-                        type: 'EMOJI_UPLOAD_STOP',
-                        guildId: t
+                        type: "EMOJI_UPLOAD_STOP",
+                        guildId: t,
                     }),
                     e.body
                 ),
                 (e) => (
                     s.Z.dispatch({
-                        type: 'EMOJI_UPLOAD_STOP',
-                        guildId: t
+                        type: "EMOJI_UPLOAD_STOP",
+                        guildId: t,
                     }),
                     Promise.reject(e)
-                )
+                ),
             )
     );
 }
 function I(e, t) {
     return (
         s.Z.dispatch({
-            type: 'EMOJI_DELETE',
+            type: "EMOJI_DELETE",
             guildId: e,
-            emojiId: t
+            emojiId: t,
         }),
         o.tn.del({
             url: g.ANM.GUILD_EMOJI(e, t),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     );
 }
@@ -118,10 +118,10 @@ async function T(e) {
             url: g.ANM.GUILD_EMOJI(t, n),
             body: {
                 name: r,
-                roles: i
+                roles: i,
             },
             oldFormErrors: !0,
-            rejectWithError: !0
+            rejectWithError: !0,
         });
     } catch (e) {
         throw new l.Z(e);
@@ -139,33 +139,38 @@ function S(e) {
 }
 function A(e) {
     var t, n, r;
-    return null == e ? null : null != (r = null != (n = e.id) ? n : null == (t = u.ZP.convertSurrogateToBase(e.surrogates)) ? void 0 : t.name) ? r : e.name;
+    return null == e
+        ? null
+        : null !=
+            (r = null != (n = e.id) ? n : null == (t = u.ZP.convertSurrogateToBase(e.surrogates)) ? void 0 : t.name)
+          ? r
+          : e.name;
 }
 function N(e) {
     let t = A(e);
     null != t &&
         _.DZ.updateAsync(
-            'favoriteEmojis',
+            "favoriteEmojis",
             (e) =>
                 ((e.emojis = S(e.emojis)), i().size(e.emojis) >= E.oX)
                     ? (m.Z.show({
-                          title: b.intl.string(b.t['+XYXtb']),
-                          body: b.intl.formatToPlainString(b.t.JaIyFh, { count: E.oX })
+                          title: b.intl.string(b.t["+XYXtb"]),
+                          body: b.intl.formatToPlainString(b.t.JaIyFh, { count: E.oX }),
                       }),
                       !1)
                     : !e.emojis.includes(t) && void e.emojis.push(t),
-            E.fy.INFREQUENT_USER_ACTION
+            E.fy.INFREQUENT_USER_ACTION,
         );
 }
 function C(e) {
     let t = A(e);
     null != t &&
         _.DZ.updateAsync(
-            'favoriteEmojis',
+            "favoriteEmojis",
             (e) => {
                 if (((e.emojis = S(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
-            E.fy.INFREQUENT_USER_ACTION
+            E.fy.INFREQUENT_USER_ACTION,
         );
 }

@@ -3,19 +3,22 @@ var r = n(255367),
     i = n(73800),
     o = n(468204),
     a = n(136954),
-    s = ['children'];
+    s = ["children"];
 function l(e, t) {
     return _(e) || f(e, t) || u(e, t) || c();
 }
 function c() {
-    throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+    throw TypeError(
+        "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+    );
 }
 function u(e, t) {
     if (e) {
-        if ('string' == typeof e) return d(e, t);
+        if ("string" == typeof e) return d(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
-        if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return d(e, t);
+        if (("Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n))
+            return Array.from(e);
+        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return d(e, t);
     }
 }
 function d(e, t) {
@@ -26,7 +29,7 @@ function d(e, t) {
 function f(e, t) {
     var n,
         r,
-        i = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
+        i = null == e ? null : ("undefined" != typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
     if (null != i) {
         var o = [],
             a = !0,
@@ -34,7 +37,7 @@ function f(e, t) {
         try {
             for (i = i.call(e); !(a = (n = i.next()).done) && (o.push(n.value), !t || o.length !== t); a = !0);
         } catch (e) {
-            ((s = !0), (r = e));
+            (s = !0), (r = e);
         } finally {
             try {
                 a || null == i.return || i.return();
@@ -55,7 +58,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -65,11 +69,11 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var m = 0,
-    g = Symbol.for('__REACT_DND_CONTEXT_INSTANCE__'),
+    g = Symbol.for("__REACT_DND_CONTEXT_INSTANCE__"),
     E = (0, i.memo)(function (e) {
         var t = e.children,
             n = l(b(p(e, s)), 2),
@@ -91,14 +95,16 @@ var m = 0,
         );
     });
 function b(e) {
-    return 'manager' in e ? [{ dragDropManager: e.manager }, !1] : [y(e.backend, e.context, e.options, e.debugMode), !e.context];
+    return "manager" in e
+        ? [{ dragDropManager: e.manager }, !1]
+        : [y(e.backend, e.context, e.options, e.debugMode), !e.context];
 }
 function y(e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O(),
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = arguments.length > 3 ? arguments[3] : void 0,
         i = t;
-    return (i[g] || (i[g] = { dragDropManager: (0, o.i)(e, t, n, r) }), i[g]);
+    return i[g] || (i[g] = { dragDropManager: (0, o.i)(e, t, n, r) }), i[g];
 }
 function O() {
     return void 0 !== n.g ? n.g : window;

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     J: () => h,
-    q: () => m
+    q: () => m,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(524437),
@@ -29,19 +29,21 @@ let h = () => {
         );
     },
     m = () => {
-        let { previewPaneVariant: e } = (0, i.cj)([d.Z], () => ({ previewPaneVariant: d.Z.isPreview ? _.h1.FREE : _.h1.PREMIUM_STANDARD })),
+        let { previewPaneVariant: e } = (0, i.cj)([d.Z], () => ({
+                previewPaneVariant: d.Z.isPreview ? _.h1.FREE : _.h1.PREMIUM_STANDARD,
+            })),
             t = (0, i.e7)([l.Z], () => {
                 var e;
                 let t = null == (e = l.Z.settings.appearance) ? void 0 : e.theme;
-                return 'default '.concat(t === o.Q2.LIGHT ? f.BRd.LIGHT : f.BRd.DARK);
+                return "default ".concat(t === o.Q2.LIGHT ? f.BRd.LIGHT : f.BRd.DARK);
             });
         return (0, r.useCallback)(
             (n) => {
                 c.default.track(n, {
                     preview_pane_variant: e,
-                    original_theme: t
+                    original_theme: t,
                 });
             },
-            [e, t]
+            [e, t],
         );
     };

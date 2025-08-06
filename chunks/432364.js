@@ -9,15 +9,15 @@ var e = n(220159),
     p = n(394370),
     l = n(536448),
     v = n(689933),
-    y = l('slice'),
-    h = p('species'),
+    y = l("slice"),
+    h = p("species"),
     x = Array,
     d = Math.max;
 e(
     {
-        target: 'Array',
+        target: "Array",
         proto: !0,
-        forced: !y
+        forced: !y,
     },
     {
         slice: function (t, r) {
@@ -28,9 +28,16 @@ e(
                 y = c(l),
                 g = s(t, y),
                 b = s(void 0 === r ? y : r, y);
-            if (o(l) && (i((n = l.constructor)) && (n === x || o(n.prototype)) ? (n = void 0) : u(n) && null === (n = n[h]) && (n = void 0), n === x || void 0 === n)) return v(l, g, b);
+            if (
+                o(l) &&
+                (i((n = l.constructor)) && (n === x || o(n.prototype))
+                    ? (n = void 0)
+                    : u(n) && null === (n = n[h]) && (n = void 0),
+                n === x || void 0 === n)
+            )
+                return v(l, g, b);
             for (p = 0, e = new (void 0 === n ? x : n)(d(b - g, 0)); g < b; g++, p++) g in l && a(e, p, l[g]);
-            return ((e.length = p), e);
-        }
-    }
+            return (e.length = p), e;
+        },
+    },
 );

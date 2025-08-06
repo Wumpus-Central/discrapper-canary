@@ -11,18 +11,18 @@ function c(e) {
         { error: f, loaded: _, message: p } = (0, s.a)(t);
     if (null == p && (_ || f)) return null;
     let h = () => {
-            (null == c || c(), o.Z.closePrivateChannel(t.id));
+            null == c || c(), o.Z.closePrivateChannel(t.id);
         },
         m = (e) => {
-            (e.stopPropagation(), null == n || n(), null != p && (0, a.WL)(p, h));
+            e.stopPropagation(), null == n || n(), null != p && (0, a.WL)(p, h);
         };
     return (0, r.jsx)(i.zxk, {
-        variant: 'critical-primary',
-        size: 'sm',
+        variant: "critical-primary",
+        size: "sm",
         disabled: null == p,
         onClick: m,
         onMouseEnter: u,
         onMouseLeave: d,
-        text: l.intl.string(l.t['+78Pfn'])
+        text: l.intl.string(l.t["+78Pfn"]),
     });
 }

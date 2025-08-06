@@ -7,17 +7,26 @@ var r = n(255367),
     l = n(185923);
 let c = {
         section: s.jXE.MESSAGE_CONFETTI_EMOJI_PICKER_POPOUT,
-        openPopoutType: 'message_confetti_emoji_picker'
+        openPopoutType: "message_confetti_emoji_picker",
     },
     u = l.Hz.MESSAGE_CONFETTI;
 function d(e) {
-    let { channel: t, setEmojiConfetti: n, shouldShow: s, onRequestClose: l, position: d, align: f, positionRef: _, children: p } = e,
+    let {
+            channel: t,
+            setEmojiConfetti: n,
+            shouldShow: s,
+            onRequestClose: l,
+            position: d,
+            align: f,
+            positionRef: _,
+            children: p,
+        } = e,
         h = i.useCallback(
             (e) => {
                 let { emoji: t } = e;
                 null != t && (n(t), l());
             },
-            [l, n]
+            [l, n],
         );
     return (0, r.jsx)(o.yRy, {
         shouldShow: s,
@@ -33,9 +42,9 @@ function d(e) {
                 closePopout: n,
                 onSelectEmoji: h,
                 pickerIntention: u,
-                includeCreateEmojiButton: !1
+                includeCreateEmojiButton: !1,
             });
         },
-        children: p
+        children: p,
     });
 }

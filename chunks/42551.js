@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(388685), n(539854));
+n.d(t, { Z: () => H }), n(388685), n(539854);
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -32,55 +32,55 @@ function H(e) {
                 b.lo1,
                 {
                     value: l.id,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: v.roleNameContainer,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: v.roleLabel,
                                 children: [
-                                    (0, r.jsx)('div', { className: i()(v.labelBackground, n && v.selected) }),
+                                    (0, r.jsx)("div", { className: i()(v.labelBackground, n && v.selected) }),
                                     (0, r.jsx)(b.lo1.Label, {
                                         children: (0, r.jsx)(
                                             g.Z,
                                             {
                                                 className: y.roleTooltipItem,
                                                 role: l,
-                                                guildId: t
+                                                guildId: t,
                                             },
-                                            l.id
-                                        )
-                                    })
-                                ]
+                                            l.id,
+                                        ),
+                                    }),
+                                ],
                             }),
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: v.checkboxContainer,
-                                children: (0, r.jsx)(b.lo1.Checkbox, { checked: n })
-                            })
-                        ]
-                    })
+                                children: (0, r.jsx)(b.lo1.Checkbox, { checked: n }),
+                            }),
+                        ],
+                    }),
                 },
-                l.id
+                l.id,
             );
         },
         w = (e, t) =>
             H.reduce((n, r) => {
                 let { record: l } = r,
                     o = e.has(l.id);
-                return (s()(t.toLowerCase(), l.name.toLowerCase()) ? n.push(_(r, o)) : o && n.push(_(r, o)), n);
+                return s()(t.toLowerCase(), l.name.toLowerCase()) ? n.push(_(r, o)) : o && n.push(_(r, o)), n;
             }, []),
         N = l.useCallback(
             (e) => {
-                ((0, j.Dr)(t, { selectedRoleIds: e }), o(e));
+                (0, j.Dr)(t, { selectedRoleIds: e }), o(e);
             },
-            [t, o]
+            [t, o],
         ),
         S = l.useMemo(() => u()(N, 300), [N]),
         Z = l.useCallback(
             (e) => {
                 let t;
-                (d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), S(t));
+                d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), S(t);
             },
-            [c, S]
+            [c, S],
         );
     return (0, r.jsx)(b.DBG, {
         className: v.rolePopout,
@@ -93,6 +93,6 @@ function H(e) {
         multiSelect: !0,
         showScrollbar: !0,
         autoFocus: !0,
-        children: (e) => w(c, e)
+        children: (e) => w(c, e),
     });
 }

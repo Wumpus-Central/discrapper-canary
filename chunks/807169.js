@@ -2,7 +2,7 @@ n.d(t, {
     Hs: () => g,
     Vh: () => y,
     k: () => m,
-    ny: () => O
+    ny: () => O,
 });
 var r = n(73800),
     i = n(149765),
@@ -20,13 +20,20 @@ var r = n(73800),
 function m(e, t) {
     var n, r, i, o, a;
     let _,
-        h = null != (_ = e instanceof c.Sf && e.isThread() && null != (i = d.Z.getChannel(e.parent_id)) ? i : e) ? O(_) : void 0,
+        h =
+            null != (_ = e instanceof c.Sf && e.isThread() && null != (i = d.Z.getChannel(e.parent_id)) ? i : e)
+                ? O(_)
+                : void 0,
         m = l.xM.getSetting(),
         g = u.default.getId(),
         y = null != (o = null == (n = p.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) && o,
         v = null != h && null != (a = null == (r = f.ZP.getMember(h, g)) ? void 0 : r.roles) ? a : [],
         I = s.Z.isViewingRoles(h),
-        { computedPermissions: T, hasBaseAccessPermissions: S, hasSendMessagesPermission: A } = b(_, e instanceof c.Sf && e.isThread());
+        {
+            computedPermissions: T,
+            hasBaseAccessPermissions: S,
+            hasSendMessagesPermission: A,
+        } = b(_, e instanceof c.Sf && e.isThread());
     return {
         context: _,
         userId: g,
@@ -36,7 +43,7 @@ function m(e, t) {
         computedPermissions: T,
         hasBaseAccessPermissions: S,
         hasSendMessagesPermission: A,
-        allowNsfw: E(_, y, m)
+        allowNsfw: E(_, y, m),
     };
 }
 function g(e, t) {
@@ -60,7 +67,11 @@ function g(e, t) {
         }),
         g = (0, o.e7)([s.Z], () => s.Z.isViewingRoles(i));
     return r.useMemo(() => {
-        let { computedPermissions: r, hasBaseAccessPermissions: i, hasSendMessagesPermission: o } = b(n, e instanceof c.Sf && e.isThread());
+        let {
+            computedPermissions: r,
+            hasBaseAccessPermissions: i,
+            hasSendMessagesPermission: o,
+        } = b(n, e instanceof c.Sf && e.isThread());
         return {
             context: n,
             userId: _,
@@ -70,7 +81,7 @@ function g(e, t) {
             computedPermissions: r,
             hasBaseAccessPermissions: i,
             hasSendMessagesPermission: o,
-            allowNsfw: E(n, h, a)
+            allowNsfw: E(n, h, a),
         };
     }, [t, n, g, m, _, h, a, e]);
 }
@@ -83,20 +94,29 @@ function b(e, t) {
         return {
             computedPermissions: i.vB(0),
             hasBaseAccessPermissions: !0,
-            hasSendMessagesPermission: !0
+            hasSendMessagesPermission: !0,
         };
     let o = _.Z.computePermissions(e);
     return (
-        i.e$(o, h.Plq.ADMINISTRATOR) ? ((n = !0), (r = !0)) : e instanceof c.Sf ? ((n = i.e$(o, h.Plq.VIEW_CHANNEL) && i.e$(o, h.Plq.USE_APPLICATION_COMMANDS)), (r = t ? i.e$(o, h.Plq.SEND_MESSAGES_IN_THREADS) : i.e$(o, h.Plq.SEND_MESSAGES))) : ((n = i.e$(o, h.Plq.VIEW_CHANNEL)), (r = !0)),
+        i.e$(o, h.Plq.ADMINISTRATOR)
+            ? ((n = !0), (r = !0))
+            : e instanceof c.Sf
+              ? ((n = i.e$(o, h.Plq.VIEW_CHANNEL) && i.e$(o, h.Plq.USE_APPLICATION_COMMANDS)),
+                (r = t ? i.e$(o, h.Plq.SEND_MESSAGES_IN_THREADS) : i.e$(o, h.Plq.SEND_MESSAGES)))
+              : ((n = i.e$(o, h.Plq.VIEW_CHANNEL)), (r = !0)),
         {
             computedPermissions: o,
             hasBaseAccessPermissions: n,
-            hasSendMessagesPermission: r
+            hasSendMessagesPermission: r,
         }
     );
 }
 function y(e, t) {
-    return e instanceof c.Sf && (null == e ? void 0 : e.guild_id) == null ? ((null == e ? void 0 : e.type) === h.d4z.DM && (null == e ? void 0 : e.getRecipientId()) === t ? a.D.BOT_DM : a.D.PRIVATE_CHANNEL) : a.D.GUILD;
+    return e instanceof c.Sf && (null == e ? void 0 : e.guild_id) == null
+        ? (null == e ? void 0 : e.type) === h.d4z.DM && (null == e ? void 0 : e.getRecipientId()) === t
+            ? a.D.BOT_DM
+            : a.D.PRIVATE_CHANNEL
+        : a.D.GUILD;
 }
 function O(e) {
     return e instanceof c.Sf ? e.guild_id : e.id;

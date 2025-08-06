@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(13245),
@@ -11,7 +11,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,7 +24,7 @@ class c extends r.Component {
             n,
             i,
             {
-                props: { position: r, zIndex: o }
+                props: { position: r, zIndex: o },
             } = this;
         switch (r) {
             case s._vf.TOP_LEFT:
@@ -47,7 +47,7 @@ class c extends r.Component {
             right: t,
             bottom: n,
             top: i,
-            zIndex: o
+            zIndex: o,
         };
     }
     render() {
@@ -56,9 +56,16 @@ class c extends r.Component {
                 props: {
                     locked: n,
                     notification: {
-                        props: { renderFooter: r, onNotificationShow: o, onDismissClick: s, onNotificationClick: c, onConfirmClick: d, onCancelClick: u }
-                    }
-                }
+                        props: {
+                            renderFooter: r,
+                            onNotificationShow: o,
+                            onDismissClick: s,
+                            onNotificationClick: c,
+                            onConfirmClick: d,
+                            onCancelClick: u,
+                        },
+                    },
+                },
             } = this,
             h = (function (e, t) {
                 if (null == e) return {};
@@ -70,30 +77,39 @@ class c extends r.Component {
                             i,
                             r = {},
                             o = Object.keys(e);
-                        for (i = 0; i < o.length; i++) ((n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                        for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < o.length; i++) ((n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                    for (i = 0; i < o.length; i++)
+                        (n = o[i]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
-            })(this.props.notification.props, ['renderFooter', 'onNotificationShow', 'onDismissClick', 'onNotificationClick', 'onConfirmClick', 'onCancelClick']);
+            })(this.props.notification.props, [
+                "renderFooter",
+                "onNotificationShow",
+                "onDismissClick",
+                "onNotificationClick",
+                "onConfirmClick",
+                "onCancelClick",
+            ]);
         return (0, i.jsx)(
             l.ZP,
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         i.forEach(function (t) {
                             a(e, t, n[t]);
-                        }));
+                        });
                 }
                 return e;
             })({}, h)),
@@ -106,7 +122,7 @@ class c extends r.Component {
                     onConfirmClick: null != d ? this.handleConfirmClick : null,
                     onCancelClick: null != u ? this.handleCancelClick : null,
                     renderFooter: this.renderFooter,
-                    expand: !n
+                    expand: !n,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -120,54 +136,54 @@ class c extends r.Component {
                   })(Object(t)).forEach(function (n) {
                       Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                   }),
-            e)
+            e),
         );
     }
     constructor(...e) {
-        (super(...e),
-            a(this, 'handleNotificationShow', () => {
+        super(...e),
+            a(this, "handleNotificationShow", () => {
                 let {
                     id: e,
-                    props: { onNotificationShow: t }
+                    props: { onNotificationShow: t },
                 } = this.props.notification;
                 t(e);
             }),
-            a(this, 'handleDismissClick', (e) => {
+            a(this, "handleDismissClick", (e) => {
                 let {
                     id: t,
-                    props: { onDismissClick: n }
+                    props: { onDismissClick: n },
                 } = this.props.notification;
-                (o.Z.updateNotificationStatus(t), null == n || n(e, t));
+                o.Z.updateNotificationStatus(t), null == n || n(e, t);
             }),
-            a(this, 'handleNotificationClick', (e) => {
+            a(this, "handleNotificationClick", (e) => {
                 let {
                     id: t,
-                    props: { onNotificationClick: n }
-                } = this.props.notification;
-                null != n && n(e, t);
-            }),
-            a(this, 'handleConfirmClick', (e) => {
-                let {
-                    id: t,
-                    props: { onConfirmClick: n }
+                    props: { onNotificationClick: n },
                 } = this.props.notification;
                 null != n && n(e, t);
             }),
-            a(this, 'handleCancelClick', (e) => {
+            a(this, "handleConfirmClick", (e) => {
                 let {
                     id: t,
-                    props: { onCancelClick: n }
+                    props: { onConfirmClick: n },
                 } = this.props.notification;
                 null != n && n(e, t);
             }),
-            a(this, 'renderFooter', (e) => {
+            a(this, "handleCancelClick", (e) => {
+                let {
+                    id: t,
+                    props: { onCancelClick: n },
+                } = this.props.notification;
+                null != n && n(e, t);
+            }),
+            a(this, "renderFooter", (e) => {
                 let {
                         id: t,
-                        props: { renderFooter: n }
+                        props: { renderFooter: n },
                     } = this.props.notification,
                     i = this.props.locked;
                 return null != n ? n(e, t, i) : null;
-            }));
+            });
     }
 }
 let d = c;

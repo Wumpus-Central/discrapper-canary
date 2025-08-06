@@ -1,1 +1,1 @@
-e.exports = { confettiCanvas: 'confettiCanvas__6c43c' };
+e.exports = { confettiCanvas: "confettiCanvas__6c43c" };

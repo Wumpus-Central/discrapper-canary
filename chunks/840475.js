@@ -28,10 +28,10 @@ var r,
     P = A && E(A),
     w = Object.prototype,
     D = l.TypeError,
-    L = y('toStringTag'),
-    x = O('TYPED_ARRAY_TAG'),
-    M = 'TypedArrayConstructor',
-    k = a && !!b && 'Opera' !== f(l.opera),
+    L = y("toStringTag"),
+    x = O("TYPED_ARRAY_TAG"),
+    M = "TypedArrayConstructor",
+    k = a && !!b && "Opera" !== f(l.opera),
     j = !1,
     U = {
         Int8Array: 1,
@@ -42,16 +42,16 @@ var r,
         Int32Array: 4,
         Uint32Array: 4,
         Float32Array: 4,
-        Float64Array: 8
+        Float64Array: 8,
     },
     G = {
         BigInt64Array: 8,
-        BigUint64Array: 8
+        BigUint64Array: 8,
     },
     B = function (e) {
         if (!u(e)) return !1;
         var t = f(e);
-        return 'DataView' === t || d(U, t) || d(G, t);
+        return "DataView" === t || d(U, t) || d(G, t);
     },
     Z = function (e) {
         var t = E(e);
@@ -67,11 +67,11 @@ var r,
     },
     V = function (e) {
         if (F(e)) return e;
-        throw new D('Target is not a typed array');
+        throw new D("Target is not a typed array");
     },
     H = function (e) {
         if (c(e) && (!b || g(R, e))) return e;
-        throw new D(_(e) + ' is not a typed array constructor');
+        throw new D(_(e) + " is not a typed array constructor");
     },
     Y = function (e, t, n, r) {
         if (s) {
@@ -114,7 +114,7 @@ for (r in G) (o = (i = l[r]) && i.prototype) && (I(o)[M] = i);
 if (
     (!k || !c(R) || R === Function.prototype) &&
     ((R = function () {
-        throw new D('Incorrect invocation');
+        throw new D("Incorrect invocation");
     }),
     k)
 )
@@ -126,7 +126,7 @@ if ((k && E(C) !== P && b(C, P), s && !d(P, L)))
         configurable: !0,
         get: function () {
             return u(this) ? this[x] : void 0;
-        }
+        },
     }),
     U))
         l[r] && p(l[r], x, r);
@@ -141,5 +141,5 @@ e.exports = {
     isView: B,
     isTypedArray: F,
     TypedArray: R,
-    TypedArrayPrototype: P
+    TypedArrayPrototype: P,
 };

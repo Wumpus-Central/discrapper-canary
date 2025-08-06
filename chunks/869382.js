@@ -16,24 +16,24 @@ let s = (0, r.U)(
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
-                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                            "function" == typeof Object.getOwnPropertySymbols &&
                                                 (r = r.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
+                                                    }),
                                                 )),
                                                 r.forEach(function (t) {
                                                     var r;
-                                                    ((r = n[t]),
+                                                    (r = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: r,
                                                                   enumerable: !0,
                                                                   configurable: !0,
-                                                                  writable: !0
+                                                                  writable: !0,
                                                               })
-                                                            : (e[t] = r));
-                                                }));
+                                                            : (e[t] = r);
+                                                });
                                         }
                                         return e;
                                     })({}, e.channelShowResolvedFlags)),
@@ -50,20 +50,20 @@ let s = (0, r.U)(
                                           })(Object(l)).forEach(function (e) {
                                               Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                                           }),
-                                    r)
+                                    r),
                             };
                         });
                     }),
                 getShowResolvedFlags: (e) => {
                     var n;
                     return null == (n = t().channelShowResolvedFlags[e]) || n;
-                }
+                },
             }),
             {
-                name: 'report-to-mod-channel-storage',
-                storage: (0, l.FL)(() => localStorage)
-            }
-        )
+                name: "report-to-mod-channel-storage",
+                storage: (0, l.FL)(() => localStorage),
+            },
+        ),
     ),
     o = (e) => {
         var t;
@@ -71,10 +71,10 @@ let s = (0, r.U)(
         return null == e
             ? {
                   showResolvedFlags: !0,
-                  setShowResolvedFlags: () => {}
+                  setShowResolvedFlags: () => {},
               }
             : {
                   showResolvedFlags: null == (t = n.getShowResolvedFlags(e)) || t,
-                  setShowResolvedFlags: (t) => n.setShowResolvedFlags(e, t)
+                  setShowResolvedFlags: (t) => n.setShowResolvedFlags(e, t),
               };
     };

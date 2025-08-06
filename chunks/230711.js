@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(415506));
+n.d(t, { Z: () => g }), n(415506);
 var r = n(544891),
     i = n(433517),
     o = n(570140),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,17 +66,17 @@ let g = {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { openWithoutBackstack: !1 };
-        (o.Z.dispatch(
+        o.Z.dispatch(
             p(
                 {
-                    type: 'USER_SETTINGS_MODAL_OPEN',
+                    type: "USER_SETTINGS_MODAL_OPEN",
                     section: e,
-                    subsection: t
+                    subsection: t,
                 },
-                n
-            )
+                n,
+            ),
         ),
-            (0, c.jN)(u.S9g.USER_SETTINGS));
+            (0, c.jN)(u.S9g.USER_SETTINGS);
     },
     init: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -84,17 +84,17 @@ let g = {
         o.Z.dispatch(
             p(
                 {
-                    type: 'USER_SETTINGS_MODAL_INIT',
+                    type: "USER_SETTINGS_MODAL_INIT",
                     section: e,
-                    subsection: t
+                    subsection: t,
                 },
-                n
-            )
+                n,
+            ),
         );
     },
     close() {
         let e = s.Z.onClose;
-        (o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), null != e && e());
+        o.Z.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" }), null != e && e();
     },
     setSection(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -102,40 +102,40 @@ let g = {
         o.Z.dispatch(
             p(
                 {
-                    type: 'USER_SETTINGS_MODAL_SET_SECTION',
+                    type: "USER_SETTINGS_MODAL_SET_SECTION",
                     section: e,
-                    subsection: t
+                    subsection: t,
                 },
-                n
-            )
+                n,
+            ),
         );
     },
     clearSubsection(e) {
         o.Z.dispatch({
-            type: 'USER_SETTINGS_MODAL_CLEAR_SUBSECTION',
-            forSection: e
+            type: "USER_SETTINGS_MODAL_CLEAR_SUBSECTION",
+            forSection: e,
         });
     },
     clearScrollPosition(e) {
         o.Z.dispatch({
-            type: 'USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION',
-            forSection: e
+            type: "USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION",
+            forSection: e,
         });
     },
     updateAccount(e) {
         o.Z.dispatch({
-            type: 'USER_SETTINGS_MODAL_UPDATE_ACCOUNT',
-            settings: e
+            type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT",
+            settings: e,
         });
     },
     submitComplete() {
-        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT_COMPLETE' });
+        o.Z.dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE" });
     },
     reset() {
-        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_RESET' });
+        o.Z.dispatch({ type: "USER_SETTINGS_MODAL_RESET" });
     },
     saveAccountChanges(e, t) {
-        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
+        o.Z.dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT" });
         let { username: n, email: s, emailToken: c, password: _, avatar: h, newPassword: g, discriminator: E } = e,
             { close: b } = t;
         return (0, l.Z)(
@@ -148,11 +148,11 @@ let g = {
                                 email_token: c,
                                 password: _,
                                 avatar: h,
-                                new_password: g
+                                new_password: g,
                             },
-                            e
+                            e,
                         ),
-                        { discriminator: null != E && '' !== E ? E : void 0 }
+                        { discriminator: null != E && "" !== E ? E : void 0 },
                     ),
                     o = i.K.get(u.JkL),
                     a = (0, d.xJ)();
@@ -164,7 +164,7 @@ let g = {
                         url: u.ANM.ME,
                         oldFormErrors: !0,
                         body: t,
-                        rejectWithError: !1
+                        rejectWithError: !1,
                     })
                 );
             },
@@ -174,11 +174,11 @@ let g = {
                 hooks: {
                     onEarlyClose: () =>
                         o.Z.dispatch({
-                            type: 'USER_SETTINGS_MODAL_SUBMIT_FAILURE',
-                            errors: {}
-                        })
-                }
-            }
+                            type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
+                            errors: {},
+                        }),
+                },
+            },
         ).then(
             (e) => {
                 let t = e.body,
@@ -186,26 +186,26 @@ let g = {
                 return (
                     delete t.token,
                     o.Z.dispatch({
-                        type: 'UPDATE_TOKEN',
+                        type: "UPDATE_TOKEN",
                         token: n,
-                        userId: t.id
+                        userId: t.id,
                     }),
                     o.Z.dispatch({
-                        type: 'CURRENT_USER_UPDATE',
-                        user: t
+                        type: "CURRENT_USER_UPDATE",
+                        user: t,
                     }),
                     void 0 !== h && (0, a.Z)({ avatarHash: t.avatar }),
                     null != g &&
                         o.Z.dispatch({
-                            type: 'USER_PASSWORD_UPDATE',
+                            type: "USER_PASSWORD_UPDATE",
                             user: t,
-                            newPassword: g
+                            newPassword: g,
                         }),
                     null != _ &&
                         null != g &&
                         o.Z.dispatch({
-                            type: 'PASSWORD_UPDATED',
-                            userId: t.id
+                            type: "PASSWORD_UPDATED",
+                            userId: t.id,
                         }),
                     b ? this.close() : this.submitComplete(),
                     e
@@ -213,11 +213,11 @@ let g = {
             },
             (e) => (
                 o.Z.dispatch({
-                    type: 'USER_SETTINGS_MODAL_SUBMIT_FAILURE',
-                    errors: e.body
+                    type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
+                    errors: e.body,
                 }),
                 e
-            )
+            ),
         );
-    }
+    },
 };

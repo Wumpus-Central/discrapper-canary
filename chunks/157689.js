@@ -13,11 +13,11 @@ function a(e, t, n, a) {
                 {
                     scheduled_start_time: null == d ? void 0 : d.toISOString(),
                     scheduled_end_time: null == c ? void 0 : c.toISOString(),
-                    is_canceled: a.is_canceled
+                    is_canceled: a.is_canceled,
                 },
                 e.guild_id,
                 e.id,
-                t
+                t,
             );
     {
         let n = l.default.extractTimestamp(t);
@@ -26,10 +26,10 @@ function a(e, t, n, a) {
                 original_scheduled_start_time: new Date(n).toISOString(),
                 scheduled_start_time: null == d ? void 0 : d.toISOString(),
                 scheduled_end_time: null == c ? void 0 : c.toISOString(),
-                is_canceled: !1
+                is_canceled: !1,
             },
             e.guild_id,
-            e.id
+            e.id,
         );
     }
 }

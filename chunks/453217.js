@@ -16,32 +16,39 @@ var s = n(120356),
     x = n(192214);
 let h = function (e) {
     var t;
-    let { className: n, expansionSpring: s, isExpanded: h, isExpansionAnimationComplete: b, quest: j, useReducedMotion: _ } = e,
+    let {
+            className: n,
+            expansionSpring: s,
+            isExpanded: h,
+            isExpansionAnimationComplete: b,
+            quest: j,
+            useReducedMotion: _,
+        } = e,
         v = (null == (t = j.userStatus) ? void 0 : t.enrolledAt) != null,
         { percentComplete: C } = (0, l.Rf)(j),
         y = (0, l.Jf)(j),
         O = null != y ? y.percentComplete > 0 : C > 0;
     return (0, r.jsxs)(a.animated.div, {
-        'aria-hidden': h && b,
+        "aria-hidden": h && b,
         className: o()(n, x.contentCollapsed, {
             [x.contentCollapsedExpanded]: h,
-            [x.contentCollapsedAccepted]: v
+            [x.contentCollapsedAccepted]: v,
         }),
         style: {
             opacity: s.to({
                 range: [0, 1],
-                output: [1, 0]
-            })
+                output: [1, 0],
+            }),
         },
         children: [
             (0, r.jsx)(m.Z, {
                 quest: j,
-                useReducedMotion: _
+                useReducedMotion: _,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: x.contentCollapsedWrapper,
                 children: v
-                    ? (0, r.jsxs)('div', {
+                    ? (0, r.jsxs)("div", {
                           className: x.questProgressWrapper,
                           children: [
                               (0, r.jsx)(p.Z, {
@@ -50,37 +57,37 @@ let h = function (e) {
                                   questContent: c.jn.QUEST_BAR,
                                   autoplay: !1,
                                   location: f.dr.QUESTS_BAR,
-                                  sourceQuestContent: c.jn.QUEST_BAR
+                                  sourceQuestContent: c.jn.QUEST_BAR,
                               }),
                               O
                                   ? (0, r.jsx)(d.Z, {
                                         className: x.questProgressBar,
-                                        quest: j
+                                        quest: j,
                                     })
                                   : (0, r.jsx)(i.Text, {
                                         className: x.questProgressHint,
-                                        color: 'always-white',
-                                        variant: 'text-sm/semibold',
-                                        children: g.intl.string(g.t['7e5k7O'])
-                                    })
-                          ]
+                                        color: "always-white",
+                                        variant: "text-sm/semibold",
+                                        children: g.intl.string(g.t["7e5k7O"]),
+                                    }),
+                          ],
                       })
-                    : (0, r.jsxs)('div', {
+                    : (0, r.jsxs)("div", {
                           className: x.brandingWrapper,
                           children: [
                               (0, r.jsx)(u.ZP, {
                                   className: x.partnerBranding,
-                                  quest: j
+                                  quest: j,
                               }),
                               (0, r.jsx)(i.X6q, {
-                                  color: 'always-white',
-                                  variant: 'heading-sm/medium',
+                                  color: "always-white",
+                                  variant: "heading-sm/medium",
                                   className: x.questName,
-                                  children: g.intl.format(g.t.EAYZAg, { questName: j.config.messages.questName })
-                              })
-                          ]
-                      })
-            })
-        ]
+                                  children: g.intl.format(g.t.EAYZAg, { questName: j.config.messages.questName }),
+                              }),
+                          ],
+                      }),
+            }),
+        ],
     });
 };

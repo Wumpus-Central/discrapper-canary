@@ -1,4 +1,4 @@
-(n.d(t, { Y: () => y }), n(388685));
+n.d(t, { Y: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -13,13 +13,13 @@ var r = n(255367),
     p = n(981631),
     h = n(388032),
     m = n(968216);
-let g = ['embedded_cover'],
+let g = ["embedded_cover"],
     E = {
         tension: 800,
-        friction: 24
+        friction: 24,
     };
 var b = (function (e) {
-    return ((e[(e.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (e[(e.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), e);
+    return (e[(e.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"), (e[(e.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"), e;
 })(b || {});
 function y(e) {
     var t;
@@ -28,7 +28,7 @@ function y(e) {
             onActivityItemSelected: I,
             imageBackground: T,
             activityAction: S,
-            labelType: A
+            labelType: A,
         } = (0, u.ZP)({
             context: n,
             activityItem: o,
@@ -37,7 +37,7 @@ function y(e) {
             onActivityItemSelected: b,
             embeddedActivitiesManager: _.Z,
             assetNames: g,
-            commandOrigin: v
+            commandOrigin: v,
         }),
         [N, C] = i.useState(!1),
         R = i.useCallback(() => {
@@ -48,40 +48,40 @@ function y(e) {
         }, [C]),
         w = i.useMemo(
             () =>
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: m.overlayBadge,
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: m.badgeContainer,
-                        children: (0, r.jsx)(f.Z, { labelType: A })
-                    })
+                        children: (0, r.jsx)(f.Z, { labelType: A }),
+                    }),
                 }),
-            [A]
+            [A],
         ),
         D = i.useMemo(() => {
             switch (S) {
                 case u.JS.JOIN:
-                    return (0, r.jsx)('div', {
+                    return (0, r.jsx)("div", {
                         className: m.activityAction,
-                        children: (0, r.jsx)('div', {
+                        children: (0, r.jsx)("div", {
                             className: m.activityActionButton,
                             children: (0, r.jsx)(c.Text, {
-                                variant: 'text-sm/medium',
-                                color: 'always-white',
-                                children: h.intl.string(h.t.VJlc0d)
-                            })
-                        })
+                                variant: "text-sm/medium",
+                                color: "always-white",
+                                children: h.intl.string(h.t.VJlc0d),
+                            }),
+                        }),
                     });
                 case u.JS.LEAVE:
-                    return (0, r.jsx)('div', {
+                    return (0, r.jsx)("div", {
                         className: m.activityAction,
-                        children: (0, r.jsx)('div', {
+                        children: (0, r.jsx)("div", {
                             className: a()(m.activityActionButton, m.activityActionButtonDanger),
                             children: (0, r.jsx)(c.Text, {
-                                variant: 'text-sm/medium',
-                                color: 'always-white',
-                                children: h.intl.string(h.t['wH/wDA'])
-                            })
-                        })
+                                variant: "text-sm/medium",
+                                color: "always-white",
+                                children: h.intl.string(h.t["wH/wDA"]),
+                            }),
+                        }),
                     });
                 case u.JS.START:
                 default:
@@ -90,7 +90,7 @@ function y(e) {
         }, [S]);
     return (0, r.jsx)(l.zx, {
         onClick: I,
-        color: 'transparent',
+        color: "transparent",
         look: l.zx.Looks.BLANK,
         size: l.zx.Sizes.NONE,
         onFocus: R,
@@ -110,25 +110,25 @@ function y(e) {
                         (0, r.jsxs)(s.animated.div, {
                             className: a()(e, m.activityItem, O, {
                                 [m.activityItem_13_11]: 0 === y,
-                                [m.activityItem_16_9]: 1 === y
+                                [m.activityItem_16_9]: 1 === y,
                             }),
                             style: {
-                                transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
+                                transform: t.to([0, 1], [1, 1.05]).to((e) => "scale(".concat(e, ")")),
                             },
                             children: [
                                 (0, r.jsx)(d.Z, {
                                     imageBackground: T,
                                     applicationName: o.application.name,
                                     imageClassName: m.activitySuggestionImage,
-                                    imageNotFoundClassName: m.brokenImageIconWrapper
+                                    imageNotFoundClassName: m.brokenImageIconWrapper,
                                 }),
                                 w,
-                                D
-                            ]
-                        })
+                                D,
+                            ],
+                        }),
                 });
-            }
-        })
+            },
+        }),
     });
 }
 y.AspectRatio = b;

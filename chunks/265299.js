@@ -11,7 +11,7 @@ var r = n(255367),
     f = n(626314);
 function _(e) {
     let { questId: t } = e,
-        { quests: n, excludedQuests: _, isFetchingCurrentQuests: p } = (0, s.J2)({ fetchPolicy: 'cache-or-network' }),
+        { quests: n, excludedQuests: _, isFetchingCurrentQuests: p } = (0, s.J2)({ fetchPolicy: "cache-or-network" }),
         h = i.useMemo(() => n.find((e) => e.id === t), [t, n]),
         m = i.useMemo(() => _.find((e) => e.id === t), [t, _]);
     return p
@@ -21,20 +21,20 @@ function _(e) {
           : null == h
             ? (0, r.jsx)(d.o, {
                   questId: t,
-                  reason: d.X.NOT_FOUND
+                  reason: d.X.NOT_FOUND,
               })
             : (0, a.HJ)(h)
               ? (0, r.jsx)(d.o, {
                     questId: t,
-                    reason: d.X.MOBILE_ONLY
+                    reason: d.X.MOBILE_ONLY,
                 })
               : (0, r.jsx)(
                     c.Z,
                     {
                         quest: h,
                         location: l.jn.QUESTS_EMBED,
-                        sourceQuestContent: l.jn.QUESTS_EMBED
+                        sourceQuestContent: l.jn.QUESTS_EMBED,
                     },
-                    h.id
+                    h.id,
                 );
 }

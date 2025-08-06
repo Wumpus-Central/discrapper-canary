@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(512722),
@@ -26,7 +26,7 @@ function _(e) {
                     t.map((e) => {
                         let { user: t } = e;
                         return t.id;
-                    })
+                    }),
                 ),
                 i = n.filter((e) => !r.has(e.id)),
                 l = p.ZP.getName(t[0].user),
@@ -37,13 +37,13 @@ function _(e) {
                 case 2:
                     return b.intl.format(b.t.t1DyCw, {
                         user1: l,
-                        user2: a
+                        user2: a,
                     });
                 default:
-                    return b.intl.format(b.t['5CSEcH'], {
+                    return b.intl.format(b.t["5CSEcH"], {
                         user1: l,
                         user2: a,
-                        extras: n.length - 2
+                        extras: n.length - 2,
                     });
             }
         })(_),
@@ -55,22 +55,22 @@ function _(e) {
                 E = p[0],
                 y = null == E ? void 0 : E.activity,
                 v = null == E ? void 0 : E.startedPlayingTime,
-                I = { name: null != (t = null == y ? void 0 : y.name) ? t : '' };
+                I = { name: null != (t = null == y ? void 0 : y.name) ? t : "" };
             if ((0, a.Z)(y) && null != y)
                 return {
                     subtitle: (0, r.jsx)(d.ZP, {
                         start: v,
                         location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: I
+                        messageProps: I,
                     }),
-                    icon: null
+                    icon: null,
                 };
             if (_ + O === 1 && null != E) {
                 let { game: e } = E;
                 if (null == y)
                     return {
                         subtitle: null,
-                        icon: null
+                        icon: null,
                     };
                 let t = h.dc(y);
                 if (null != t) return t;
@@ -79,39 +79,54 @@ function _(e) {
                         if ((0, s.Z)(y))
                             return {
                                 subtitle: b.intl.string(b.t.tO8wOz),
-                                icon: (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.XBOX })
+                                icon: (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.XBOX }),
                             };
                         return {
                             subtitle: (0, r.jsx)(d.ZP, {
                                 start: v,
                                 location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: I
+                                messageProps: I,
                             }),
-                            icon: null != e ? (0, r.jsx)(f.Z.Header.Icon, { src: null != e.getIconURL(g.Z) ? e.getIconURL(g.Z) : n(211827) }) : null
+                            icon:
+                                null != e
+                                    ? (0, r.jsx)(f.Z.Header.Icon, {
+                                          src: null != e.getIconURL(g.Z) ? e.getIconURL(g.Z) : n(211827),
+                                      })
+                                    : null,
                         };
                     case m.IIU.STREAMING:
                         return {
                             subtitle: b.intl.string(b.t.HyGHj4),
-                            icon: null != e && null != e.getIconURL(g.Z) ? (0, r.jsx)(f.Z.Header.Icon, { src: e.getIconURL(g.Z) }) : null
+                            icon:
+                                null != e && null != e.getIconURL(g.Z)
+                                    ? (0, r.jsx)(f.Z.Header.Icon, { src: e.getIconURL(g.Z) })
+                                    : null,
                         };
                     case m.IIU.LISTENING:
                         let i;
                         return (
-                            (i = (0, o.Z)(y) ? (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.SPOTIFY }) : null != e.getIconURL(g.Z) ? (0, r.jsx)(f.Z.Header.Icon, { src: e.getIconURL(g.Z) }) : (0, r.jsx)(f.Z.Header.Icon, { src: n(211827) })),
+                            (i = (0, o.Z)(y)
+                                ? (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.SPOTIFY })
+                                : null != e.getIconURL(g.Z)
+                                  ? (0, r.jsx)(f.Z.Header.Icon, { src: e.getIconURL(g.Z) })
+                                  : (0, r.jsx)(f.Z.Header.Icon, { src: n(211827) })),
                             {
                                 subtitle: b.intl.formatToPlainString(b.t.NF5xoq, { name: y.name }),
-                                icon: i
+                                icon: i,
                             }
                         );
                     case m.IIU.WATCHING:
                         return {
                             subtitle: b.intl.formatToPlainString(b.t.pW3Ip6, { name: y.name }),
-                            icon: null != e && null != e.getIconURL(g.Z) ? (0, r.jsx)(f.Z.Header.Icon, { src: e.getIconURL(g.Z) }) : null
+                            icon:
+                                null != e && null != e.getIconURL(g.Z)
+                                    ? (0, r.jsx)(f.Z.Header.Icon, { src: e.getIconURL(g.Z) })
+                                    : null,
                         };
                     default:
                         return {
                             subtitle: b.intl.string(b.t.grGyaW),
-                            icon: null
+                            icon: null,
                         };
                 }
             }
@@ -119,7 +134,7 @@ function _(e) {
                 if (u.length > 0)
                     return {
                         subtitle: b.intl.string(b.t.grGyaW),
-                        icon: null
+                        icon: null,
                     };
                 let e = p[0];
                 if (null != e) {
@@ -131,7 +146,7 @@ function _(e) {
                     if (null != t && t.type === m.IIU.LISTENING)
                         return {
                             subtitle: b.intl.string(b.t.rmnkz8),
-                            icon: (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.SPOTIFY })
+                            icon: (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.SPOTIFY }),
                         };
                 }
             } else if (1 === p.length) {
@@ -139,30 +154,33 @@ function _(e) {
                 if (null == e)
                     return {
                         subtitle: null,
-                        icon: null
+                        icon: null,
                     };
                 let { activity: t, game: n, startedPlayingTime: i } = e;
                 return (
-                    l()(null != t, 'Activity was null somehow'),
+                    l()(null != t, "Activity was null somehow"),
                     {
                         subtitle: (0, r.jsx)(d.ZP, {
                             start: i,
                             location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: I
+                            messageProps: I,
                         }),
-                        icon: null != n && null != n.getIconURL(g.Z) ? (0, r.jsx)(f.Z.Header.Icon, { src: n.getIconURL(g.Z) }) : null
+                        icon:
+                            null != n && null != n.getIconURL(g.Z)
+                                ? (0, r.jsx)(f.Z.Header.Icon, { src: n.getIconURL(g.Z) })
+                                : null,
                     }
                 );
             }
             return {
                 subtitle: b.intl.string(b.t.sau5tr),
-                icon: (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.MULTIPLE })
+                icon: (0, r.jsx)(f.Z.Header.Icon, { src: f.Z.Header.Icon.Src.MULTIPLE }),
             };
         })(_),
         N = (0, u.Z)({
             applicationId: null == (i = _.currentActivities[0]) || null == (t = i.activity) ? void 0 : t.application_id,
-            location: 'FriendsActivityFeed',
-            source: c.m1.FriendsActivityFeed
+            location: "FriendsActivityFeed",
+            source: c.m1.FriendsActivityFeed,
         });
     return (0, r.jsx)(f.Z.Header, {
         priorityUser: v,
@@ -172,6 +190,6 @@ function _(e) {
         icon: S,
         onSubtitleClick: N,
         onIconClick: N,
-        onContextMenu: (e) => O(e, v.user)
+        onContextMenu: (e) => O(e, v.user),
     });
 }

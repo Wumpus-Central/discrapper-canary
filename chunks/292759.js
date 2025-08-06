@@ -15,7 +15,7 @@ function u(n, r, t) {
             (function (n, r) {
                 var t,
                     e,
-                    o = null == n ? null : ('undefined' != typeof Symbol && n[Symbol.iterator]) || n['@@iterator'];
+                    o = null == n ? null : ("undefined" != typeof Symbol && n[Symbol.iterator]) || n["@@iterator"];
                 if (null != o) {
                     var i = [],
                         u = !0,
@@ -23,7 +23,7 @@ function u(n, r, t) {
                     try {
                         for (o = o.call(n); !(u = (t = o.next()).done) && (i.push(t.value), i.length !== r); u = !0);
                     } catch (n) {
-                        ((a = !0), (e = n));
+                        (a = !0), (e = n);
                     } finally {
                         try {
                             u || null == o.return || o.return();
@@ -36,14 +36,17 @@ function u(n, r, t) {
             })(u, 2) ||
             (function (n, r) {
                 if (n) {
-                    if ('string' == typeof n) return i(n, 2);
+                    if ("string" == typeof n) return i(n, 2);
                     var t = Object.prototype.toString.call(n).slice(8, -1);
-                    if (('Object' === t && n.constructor && (t = n.constructor.name), 'Map' === t || 'Set' === t)) return Array.from(n);
-                    if ('Arguments' === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return i(n, r);
+                    if (("Object" === t && n.constructor && (t = n.constructor.name), "Map" === t || "Set" === t))
+                        return Array.from(n);
+                    if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return i(n, r);
                 }
             })(u, 2) ||
             (function () {
-                throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+                throw TypeError(
+                    "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+                );
             })(),
         c = a[0],
         f = a[1];
@@ -53,7 +56,7 @@ function u(n, r, t) {
                 var r = n.getHandlerId();
                 if (null != r) return n.subscribeToStateChange(f, { handlerIds: [r] });
             },
-            [n, f]
+            [n, f],
         ),
         c
     );

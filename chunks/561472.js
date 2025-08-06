@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -31,7 +31,13 @@ let v = function (e) {
             return !0 == !(null == (e = h.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
         }),
         D = (0, o.e7)([u.Z], () => u.Z.didAgree(R)) && !w,
-        L = i.useMemo(() => !A && ((v.isPrivate() && !v.isManaged()) || (null != R && (!(0, a.aC)(v) || D) && N && d.Z.canChatInGuild(R))), [N, D, v, R, A]),
+        L = i.useMemo(
+            () =>
+                !A &&
+                ((v.isPrivate() && !v.isManaged()) ||
+                    (null != R && (!(0, a.aC)(v) || D) && N && d.Z.canChatInGuild(R))),
+            [N, D, v, R, A],
+        ),
         x = (e) => {
             if (C) return !1;
             L &&
@@ -39,7 +45,7 @@ let v = function (e) {
                 ((0, g.d)(e, v, I, {
                     requireConfirm: T,
                     showLargeMessageDialog: !1,
-                    origin: 'drag_drop'
+                    origin: "drag_drop",
                 }),
                 m.S.dispatchToLastSubscribed(y.CkL.TEXTAREA_FOCUS));
         },
@@ -48,7 +54,13 @@ let v = function (e) {
             if (C) return !1;
             P || e.shiftKey !== T || S(!e.shiftKey);
         },
-        j = P ? (y.TPd.GUILD_THREADS_ONLY.has(v.type) ? O.intl.string(O.t.RBBLhI) : O.intl.string(O.t.gUx4en)) : T ? O.intl.format(O.t.dYP2FR, { destination: (0, l.F6)(v, h.default, p.Z, !0) }) : O.intl.string(O.t.h76ulJ);
+        j = P
+            ? y.TPd.GUILD_THREADS_ONLY.has(v.type)
+                ? O.intl.string(O.t.RBBLhI)
+                : O.intl.string(O.t.gUx4en)
+            : T
+              ? O.intl.format(O.t.dYP2FR, { destination: (0, l.F6)(v, h.default, p.Z, !0) })
+              : O.intl.string(O.t.h76ulJ);
     return C || !L
         ? null
         : (0, r.jsx)(E.Z, {
@@ -59,6 +71,6 @@ let v = function (e) {
               icons: b.J6,
               onDrop: x,
               onDragClear: M,
-              onDragOver: k
+              onDragOver: k,
           });
 };

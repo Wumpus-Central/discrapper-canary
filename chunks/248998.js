@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(953529));
+n.d(t, { Z: () => p }), n(953529);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -17,47 +17,47 @@ function p(e) {
     let a = null != n,
         { name: p, description: g, hideDescriptionUntilUnlock: h, onAction: f } = r,
         b = h && !a,
-        x = a ? 'header-primary' : 'text-muted',
-        _ = a ? 'header-secondary' : 'text-muted',
+        x = a ? "header-primary" : "text-muted",
+        _ = a ? "header-secondary" : "text-muted",
         j = l()(n),
         E = null != f && a,
-        C = E ? o.P3F : 'div';
+        C = E ? o.P3F : "div";
     return (0, i.jsxs)(C, {
         className: s()(m.container, E && m.actionable),
         onClick: () => {
             E && f();
         },
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: m.iconContainer,
                 children: (0, i.jsx)(u.Z, {
                     achievementId: t,
                     size: u.Z.Sizes.SIZE_40,
-                    unlocked: a
-                })
+                    unlocked: a,
+                }),
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: m.nameContainer,
                 children: [
                     null != n &&
                         (0, i.jsx)(o.Text, {
-                            variant: 'text-xxs/semibold',
-                            color: 'text-muted',
+                            variant: "text-xxs/semibold",
+                            color: "text-muted",
                             className: m.unlocked,
-                            children: (0, c.Y4)(j)
+                            children: (0, c.Y4)(j),
                         }),
                     (0, i.jsx)(o.Text, {
-                        variant: 'text-md/medium',
+                        variant: "text-md/medium",
                         color: x,
-                        children: p()
+                        children: p(),
                     }),
                     (0, i.jsx)(o.Text, {
-                        variant: 'text-xs/normal',
+                        variant: "text-xs/normal",
                         color: _,
-                        children: b ? '?????' : g()
-                    })
-                ]
-            })
-        ]
+                        children: b ? "?????" : g(),
+                    }),
+                ],
+            }),
+        ],
     });
 }

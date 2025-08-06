@@ -4,5 +4,5 @@ e.exports = {
     },
     logSelectionStateFailure: function () {
         return null;
-    }
+    },
 };

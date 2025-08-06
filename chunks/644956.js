@@ -38,7 +38,7 @@ function M(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -48,15 +48,15 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 M(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -64,11 +64,11 @@ function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -84,29 +84,25 @@ function U(e, t) {
     );
 }
 let G = (0, E.B)({
-    kind: 'user',
-    id: '2021-07_role_popout',
-    label: 'Role Popout',
+    kind: "user",
+    id: "2021-07_role_popout",
+    label: "Role Popout",
     defaultConfig: { enabled: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Enable Popout',
-            config: { enabled: !0 }
-        }
-    ]
+            label: "Enable Popout",
+            config: { enabled: !0 },
+        },
+    ],
 });
 function B(e) {
     let { member: t, guildId: o, channelId: a, role: s } = e,
         c = i.useRef(null),
-        u = (0, l.e7)(
-            [R.Z],
-            () => {
-                var e;
-                return null == (e = R.Z.getGuild(o)) ? void 0 : e.ownerId;
-            },
-            [o]
-        ),
+        u = (0, l.e7)([R.Z], () => {
+            var e;
+            return null == (e = R.Z.getGuild(o)) ? void 0 : e.ownerId;
+        }, [o]),
         _ = (0, l.e7)([P.default], () => P.default.getUser(t.userId), [t.userId]),
         p = (0, l.e7)([A.Z], () => A.Z.getChannel(a), [a]);
     return null == _ || null == p
@@ -140,7 +136,13 @@ function B(e) {
                                   guildId: o,
                                   onContextMenu: (e) => {
                                       (0, d.jW)(e, async () => {
-                                          let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('8982'), n.e('7717'), n.e('12658')]).then(n.bind(n, 757387));
+                                          let { default: e } = await Promise.all([
+                                              n.e("79695"),
+                                              n.e("98783"),
+                                              n.e("8982"),
+                                              n.e("7717"),
+                                              n.e("12658"),
+                                          ]).then(n.bind(n, 757387));
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
@@ -148,64 +150,52 @@ function B(e) {
                                                       user: _,
                                                       guildId: o,
                                                       channel: p,
-                                                      showMediaItems: !0
-                                                  })
+                                                      showMediaItems: !0,
+                                                  }),
                                               );
                                       });
-                                  }
+                                  },
                               },
-                              e
+                              e,
                           ),
-                          t.userId
+                          t.userId,
                       );
-                  }
+                  },
               },
-              t.userId
+              t.userId,
           );
 }
 function Z(e) {
     let { popoutProps: t, roleId: n, guildId: o, channelId: s } = e,
         d = i.useRef(null);
-    ((0, _.ZP)(() => {
+    (0, _.ZP)(() => {
         var e;
         null == (e = t.setPopoutRef) || e.call(t, d.current);
     }),
         (0, _.zq)(() => {
             var e;
             null == (e = t.setPopoutRef) || e.call(t, null);
-        }));
+        });
     let f = (0, b.Z)(o),
-        p = (0, l.e7)(
-            [R.Z],
-            () => {
-                let e = R.Z.getGuild(o);
-                return null == e ? null : (0, S.lV)(e);
-            },
-            [o]
-        ),
-        h = (0, l.Wu)(
-            [N.ZP, P.default],
-            () => {
-                let e = N.ZP.getMembers(o),
-                    t = null == n || n === p ? e : e.filter((e) => e.roles.includes(n));
-                return a()(t)
-                    .filter((e) => null != P.default.getUser(e.userId))
-                    .sortBy((e) => {
-                        var t;
-                        return null != (t = e.nick) ? t : w.ZP.getName(P.default.getUser(e.userId));
-                    })
-                    .value();
-            },
-            [o, n, p]
-        ),
-        m = (0, l.e7)(
-            [C.Z],
-            () => {
-                let e = null != n ? n : p;
-                return null == e ? null : C.Z.getRole(o, e);
-            },
-            [o, n, p]
-        ),
+        p = (0, l.e7)([R.Z], () => {
+            let e = R.Z.getGuild(o);
+            return null == e ? null : (0, S.lV)(e);
+        }, [o]),
+        h = (0, l.Wu)([N.ZP, P.default], () => {
+            let e = N.ZP.getMembers(o),
+                t = null == n || n === p ? e : e.filter((e) => e.roles.includes(n));
+            return a()(t)
+                .filter((e) => null != P.default.getUser(e.userId))
+                .sortBy((e) => {
+                    var t;
+                    return null != (t = e.nick) ? t : w.ZP.getName(P.default.getUser(e.userId));
+                })
+                .value();
+        }, [o, n, p]),
+        m = (0, l.e7)([C.Z], () => {
+            let e = null != n ? n : p;
+            return null == e ? null : C.Z.getRole(o, e);
+        }, [o, n, p]),
         E = null == n ? null : null == f ? void 0 : f[n],
         y = i.useMemo(
             () =>
@@ -217,13 +207,13 @@ function Z(e) {
                                   member: e,
                                   guildId: o,
                                   channelId: s,
-                                  role: m
+                                  role: m,
                               },
-                              e.userId
-                          )
+                              e.userId,
+                          ),
                       )
                     : [],
-            [s, o, m, h]
+            [s, o, m, h],
         );
     if (null == m) return null;
     let O =
@@ -231,19 +221,19 @@ function Z(e) {
             ? m.name
             : D.intl.formatToPlainString(D.t.CuAQkJ, {
                   title: m.name,
-                  count: E
+                  count: E,
               });
     return (0, r.jsx)(c.d.Provider, {
         value: void 0,
         children: (0, r.jsx)(
-            'div',
+            "div",
             U(
                 k(
                     {
                         className: L.rolePopout,
-                        ref: d
+                        ref: d,
                     },
-                    t
+                    t,
                 ),
                 {
                     children: (0, r.jsxs)(u.Ttm, {
@@ -251,27 +241,27 @@ function Z(e) {
                         children: [
                             (0, r.jsx)(g.Z, {
                                 className: L.roleHeader,
-                                'aria-label': D.intl.formatToPlainString(D.t.UaqbkZ, {
+                                "aria-label": D.intl.formatToPlainString(D.t.UaqbkZ, {
                                     title: m.name,
-                                    count: y.length
+                                    count: y.length,
                                 }),
-                                children: (0, r.jsx)('span', {
-                                    'aria-hidden': !0,
-                                    children: O
-                                })
+                                children: (0, r.jsx)("span", {
+                                    "aria-hidden": !0,
+                                    children: O,
+                                }),
                             }),
                             y,
                             null == E || E <= y.length
                                 ? null
                                 : (0, r.jsx)(g.Z, {
                                       className: L.roleHeader,
-                                      children: D.intl.formatToPlainString(D.t['9oMmZG'], { count: E - y.length })
-                                  })
-                        ]
-                    })
-                }
-            )
-        )
+                                      children: D.intl.formatToPlainString(D.t["9oMmZG"], { count: E - y.length }),
+                                  }),
+                        ],
+                    }),
+                },
+            ),
+        ),
     });
 }
 function F(e) {
@@ -281,8 +271,8 @@ function F(e) {
         g = (0, l.e7)([C.Z], () => (null == a || null == t ? null : C.Z.getRole(a, t))),
         E = (0, I.yH)(a, g),
         b = !d && null != g && !(0, v.Gr)(g),
-        T = b && 'dot' === _,
-        S = b && 'username' === _,
+        T = b && "dot" === _,
+        S = b && "username" === _,
         A = E && null != g ? g.colorStrings : null,
         N = i.useRef(null),
         R = (e) =>
@@ -294,9 +284,9 @@ function F(e) {
                             ref: N,
                             className: L.roleMention,
                             color: S ? g.color : null,
-                            roleColors: S ? A : null
+                            roleColors: S ? A : null,
                         },
-                        e
+                        e,
                     ),
                     {
                         children: [
@@ -307,18 +297,18 @@ function F(e) {
                                     colors: A,
                                     className: x.roleDot,
                                     background: !1,
-                                    tooltip: !1
+                                    tooltip: !1,
                                 }),
-                            c
-                        ]
-                    }
-                )
+                            c,
+                        ],
+                    },
+                ),
             ),
-        { enabled: P } = G.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
-    return !P || d || null == n || null == a || (null == t && '@everyone' !== o)
+        { enabled: P } = G.getCurrentConfig({ location: "2ec235_1" }, { autoTrackExposure: !1 });
+    return !P || d || null == n || null == a || (null == t && "@everyone" !== o)
         ? (0, r.jsx)(m.Gt, {
               value: f,
-              children: R()
+              children: R(),
           })
         : (0, r.jsx)(m.Gt, {
               value: f,
@@ -332,10 +322,10 @@ function F(e) {
                           guildId: a,
                           channelId: n,
                           roleId: t,
-                          popoutProps: e
+                          popoutProps: e,
                       }),
-                  position: 'right',
-                  children: R
-              })
+                  position: "right",
+                  children: R,
+              }),
           });
 }

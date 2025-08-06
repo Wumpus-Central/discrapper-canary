@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(392711),
     s = n.n(r),
     o = n(570140),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,55 +23,65 @@ function f(e, t, n) {
 }
 class p extends a.Z {
     _initialize() {
-        ((this.loaded = !0), (this.startingTime = Date.now()), i.Z.addChangeListener(this._onStoreChange));
+        (this.loaded = !0), (this.startingTime = Date.now()), i.Z.addChangeListener(this._onStoreChange);
     }
     _terminate() {
-        ((this.loaded = !1),
+        (this.loaded = !1),
             i.Z.removeChangeListener(this._onStoreChange),
             o.Z.dispatch({
-                type: 'LOCAL_ACTIVITY_UPDATE',
-                socketId: 'clicker-game',
-                activity: void 0
-            }));
+                type: "LOCAL_ACTIVITY_UPDATE",
+                socketId: "clicker-game",
+                activity: void 0,
+            });
     }
     constructor(...e) {
-        (super(...e),
-            f(this, 'startingTime', 0),
-            f(this, 'loaded', !1),
+        super(...e),
+            f(this, "startingTime", 0),
+            f(this, "loaded", !1),
             f(
                 this,
-                '_onStoreChange',
+                "_onStoreChange",
                 s().debounce(
                     () => {
                         if (!this.loaded) return;
                         let e = {
                             application_id: c.bO,
                             type: l.IIU.PLAYING,
-                            name: d.intl.string(u.default['7qZdOz']),
-                            details: d.intl.formatToPlainString(u.default['A3tW/f'], { total: Math.round(i.Z.lifetimePoints) }),
+                            name: d.intl.string(u.default["7qZdOz"]),
+                            details: d.intl.formatToPlainString(u.default["A3tW/f"], {
+                                total: Math.round(i.Z.lifetimePoints),
+                            }),
                             state: (function (e) {
                                 if (null == e) return d.intl.string(u.default.HXxY0N);
-                                if ('purchase-item' === e.type) return d.intl.formatToPlainString(u.default.QfiQys, { name: (0, c.w2)()[e.id].name });
-                                if ('purchase-item-upgrade' === e.type) {
+                                if ("purchase-item" === e.type)
+                                    return d.intl.formatToPlainString(u.default.QfiQys, {
+                                        name: (0, c.w2)()[e.id].name,
+                                    });
+                                if ("purchase-item-upgrade" === e.type) {
                                     let t = (0, c.r7)()[e.id],
                                         n = i.Z.getNumPurchasesForItemUpgrade(t.itemId, e.id),
-                                        r = 'string' == typeof t.name ? t.name : d.intl.formatToPlainString(t.name, { numPurchasing: n });
+                                        r =
+                                            "string" == typeof t.name
+                                                ? t.name
+                                                : d.intl.formatToPlainString(t.name, { numPurchasing: n });
                                     return d.intl.formatToPlainString(u.default.GJwbPj, { name: r });
                                 }
-                                return 'unlock-achievement' === e.type ? d.intl.formatToPlainString(u.default.hUterq, { name: (0, c.EC)()[e.id].name }) : d.intl.string(u.default.HXxY0N);
+                                return "unlock-achievement" === e.type
+                                    ? d.intl.formatToPlainString(u.default.hUterq, { name: (0, c.EC)()[e.id].name })
+                                    : d.intl.string(u.default.HXxY0N);
                             })(i.Z.getLastAction()),
-                            timestamps: { start: this.startingTime }
+                            timestamps: { start: this.startingTime },
                         };
                         o.Z.dispatch({
-                            type: 'LOCAL_ACTIVITY_UPDATE',
-                            socketId: 'clicker-game',
-                            activity: e
+                            type: "LOCAL_ACTIVITY_UPDATE",
+                            socketId: "clicker-game",
+                            activity: e,
                         });
                     },
                     5000,
-                    { maxWait: 5000 }
-                )
-            ));
+                    { maxWait: 5000 },
+                ),
+            );
     }
 }
 let m = new p();

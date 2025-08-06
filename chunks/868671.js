@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     H: () => O,
-    T: () => _
+    T: () => _,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(442837),
     l = n(570140),
@@ -26,7 +26,7 @@ function O(e) {
     let {
             memberStoreProps: { groups: t, rows: n, version: _ },
             channelId: O,
-            guildId: v
+            guildId: v,
         } = e,
         [C, E] = r.useState(!1),
         { requestId: S, entries: Z, impressionCappedEntryIds: I, hasLeaderboardEntry: P } = (0, g.Z)(O),
@@ -46,7 +46,7 @@ function O(e) {
                 : i.map((e) => ({
                       type: a.so.CONTENT_INVENTORY,
                       entry: e,
-                      requestId: S
+                      requestId: S,
                   }));
             let l = {
                 id: y.G,
@@ -54,7 +54,7 @@ function O(e) {
                 key: y.G,
                 count: e.length,
                 index: n.length,
-                title: j.intl.string(j.t['6gwSFR']),
+                title: j.intl.string(j.t["6gwSFR"]),
                 onToggleExpand: () => {
                     E((e) => {
                         let t = !e;
@@ -62,7 +62,7 @@ function O(e) {
                             u.default.track(x.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: O,
                                 guild_id: v,
-                                expanded: t
+                                expanded: t,
                             }),
                             t
                         );
@@ -70,7 +70,7 @@ function O(e) {
                 },
                 expanded: C,
                 expandedCount: Z.length,
-                feedHeight: e.map(m.iZ).reduce((e, t) => e + t, 0)
+                feedHeight: e.map(m.iZ).reduce((e, t) => e + t, 0),
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
         }, [O, Z, C, t, v, S, n, _, T, D, P]),
@@ -85,7 +85,7 @@ function O(e) {
                     r = Math.min(null != (t = null == U ? void 0 : U.length) ? t : 0, n);
                 H.current = Math.max(H.current, r);
             },
-            [U]
+            [U],
         );
     return (
         r.useEffect(() => {
@@ -114,22 +114,22 @@ function O(e) {
                             channel_id: O,
                             guild_id: v,
                             all_item_ids: n,
-                            impression_capped_item_ids: [...B.current.impressionCappedEntryIds]
+                            impression_capped_item_ids: [...B.current.impressionCappedEntryIds],
                         }),
-                        (0, d.wm)('useInjectContentInventoryFeed') &&
+                        (0, d.wm)("useInjectContentInventoryFeed") &&
                             l.Z.dispatch({
-                                type: 'CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS',
-                                itemIds: r
+                                type: "CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS",
+                                itemIds: r,
                             }));
                 }
             ),
-            [S, O, v, T, N, D]
+            [S, O, v, T, N, D],
         ),
         {
             groups: L,
             rows: k,
             version: M,
-            updateMaxRowSeen: z
+            updateMaxRowSeen: z,
         }
     );
 }

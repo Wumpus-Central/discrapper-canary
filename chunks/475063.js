@@ -1,4 +1,4 @@
-(n.d(t, { K: () => N }), n(539854));
+n.d(t, { K: () => N }), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,7 +71,8 @@ function y(e, t) {
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,7 +82,7 @@ function O(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let v = (0, s.Z)(),
@@ -90,92 +91,122 @@ let v = (0, s.Z)(),
     S = 10,
     A = 7.23;
 function N(e) {
-    var { value: t, placeholder: n = '', autoFocus: o = !1, minLength: s, maxLength: m, error: E, defaultDirty: O, showCharacterCountFullPadding: N, showCharacterCount: P, showRemainingCharacterCount: w, 'aria-labelledby': D, rows: L = 3 } = e,
-        x = y(e, ['value', 'placeholder', 'autoFocus', 'minLength', 'maxLength', 'error', 'defaultDirty', 'showCharacterCountFullPadding', 'showCharacterCount', 'showRemainingCharacterCount', 'aria-labelledby', 'rows']);
+    var {
+            value: t,
+            placeholder: n = "",
+            autoFocus: o = !1,
+            minLength: s,
+            maxLength: m,
+            error: E,
+            defaultDirty: O,
+            showCharacterCountFullPadding: N,
+            showCharacterCount: P,
+            showRemainingCharacterCount: w,
+            "aria-labelledby": D,
+            rows: L = 3,
+        } = e,
+        x = y(e, [
+            "value",
+            "placeholder",
+            "autoFocus",
+            "minLength",
+            "maxLength",
+            "error",
+            "defaultDirty",
+            "showCharacterCountFullPadding",
+            "showCharacterCount",
+            "showRemainingCharacterCount",
+            "aria-labelledby",
+            "rows",
+        ]);
     let M = (0, f.m)({
-            validateOn: 'change',
+            validateOn: "change",
             error: E,
             value: t,
             minLength: s,
             maxLength: m,
-            defaultDirty: O
+            defaultDirty: O,
         }),
         k = i.useContext(c.q3),
         j = null != D ? D : null == k ? void 0 : k.titleId,
         U = i.useMemo(() => {
             let e = [],
                 t = null == k ? void 0 : k.errorId;
-            return (null != t && e.push(t), null != E ? e.push(v) : (null != m && e.push(T), null != s && e.push(I)), e.length > 0 ? e.join(' ') : void 0);
+            return (
+                null != t && e.push(t),
+                null != E ? e.push(v) : (null != m && e.push(T), null != s && e.push(I)),
+                e.length > 0 ? e.join(" ") : void 0
+            );
         }, [E, null == k ? void 0 : k.errorId, m, s]),
         G = i.useMemo(() => {
             if (null == m) return S;
-            let e = ''.concat(m).length;
-            return (N && (e += ''.concat(m, ' / ').length), A * e + S);
+            let e = "".concat(m).length;
+            return N && (e += "".concat(m, " / ").length), A * e + S;
         }, [m, N]),
         B = (e) => {
             let { onChange: t } = x;
-            (null == t || t(e.currentTarget.value), M.setShouldValidate(!0));
+            null == t || t(e.currentTarget.value), M.setShouldValidate(!0);
         };
     return (0, r.jsxs)(d.J, {
         validation: M,
         children: [
             (0, r.jsx)(l.t, {
                 children: (0, r.jsx)(
-                    'textarea',
+                    "textarea",
                     b(
                         g(
                             {
                                 className: a()(p.textArea, h.scrollbarDefault),
-                                'aria-labelledby': j,
-                                'aria-describedby': U,
-                                'aria-invalid': M.hasError,
+                                "aria-labelledby": j,
+                                "aria-describedby": U,
+                                "aria-invalid": M.hasError,
                                 style: { paddingRight: G },
                                 placeholder: n,
                                 value: t,
                                 autoFocus: o,
                                 minLength: s,
                                 maxLength: m,
-                                rows: L
+                                rows: L,
                             },
-                            x
+                            x,
                         ),
-                        { onChange: B }
-                    )
-                )
+                        { onChange: B },
+                    ),
+                ),
             }),
             null != s &&
                 (0, r.jsx)(u.n, {
                     id: I,
-                    children: _.intl.format(_.t['bmQU//'], { minLength: s })
+                    children: _.intl.format(_.t["bmQU//"], { minLength: s }),
                 }),
             null != m &&
                 (0, r.jsx)(u.n, {
                     id: T,
-                    children: _.intl.format(_.t['+DFxLS'], { maxLength: m })
+                    children: _.intl.format(_.t["+DFxLS"], { maxLength: m }),
                 }),
             P
                 ? (0, r.jsx)(C, {
                       value: t,
                       maxLength: m,
-                      hasError: M.hasError
+                      hasError: M.hasError,
                   })
                 : null,
             P || !1 === w
                 ? null
                 : (0, r.jsx)(R, {
                       value: t,
-                      maxLength: m
-                  })
-        ]
+                      maxLength: m,
+                  }),
+        ],
     });
 }
 function C(e) {
     var t;
     let { value: n, maxLength: i, hasError: o } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(p.maxLength, { [p.errorOverflow]: o }),
-        'aria-hidden': 'true',
-        children: [null != (t = null == n ? void 0 : n.length) ? t : 0, ' ', null != i && '/ '.concat(i)]
+        "aria-hidden": "true",
+        children: [null != (t = null == n ? void 0 : n.length) ? t : 0, " ", null != i && "/ ".concat(i)],
     });
 }
 function R(e) {
@@ -183,9 +214,9 @@ function R(e) {
         o = i.useMemo(() => (null == n ? null : n - (null != t ? t.length : 0)), [n, t]);
     return null == o
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: a()(p.maxLength, { [p.errorOverflow]: o < 0 }),
-              'aria-hidden': 'true',
-              children: o
+              "aria-hidden": "true",
+              children: o,
           });
 }

@@ -10,24 +10,24 @@ function a(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (n) {
                 var r;
-                ((r = t[n]),
+                (r = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[n] = r));
-            }));
+                        : (e[n] = r);
+            });
     }
     return e;
 }
@@ -50,22 +50,22 @@ function c(e, n) {
     );
 }
 let d = {
-    size: 'md',
-    color: i.TVs.colors.INTERACTIVE_NORMAL
+    size: "md",
+    color: i.TVs.colors.INTERACTIVE_NORMAL,
 };
 function p(e) {
-    let { subscriptions: n, color: t = 'text-default' } = e,
+    let { subscriptions: n, color: t = "text-default" } = e,
         p = n.some((e) => (0, l.yE)(e.skuFlags, s.l4R.APPLICATION_GUILD_SUBSCRIPTION));
     return (0, r.jsx)(i.X6q, {
-        variant: 'heading-lg/semibold',
+        variant: "heading-lg/semibold",
         color: t,
         className: u.heading,
         children: p
             ? (0, r.jsxs)(r.Fragment, {
-                  children: [(0, r.jsx)(i.QTo, c(a({}, d), { color: 'currentColor' })), o.intl.string(o.t.XIhSoq)]
+                  children: [(0, r.jsx)(i.QTo, c(a({}, d), { color: "currentColor" })), o.intl.string(o.t.XIhSoq)],
               })
             : (0, r.jsxs)(r.Fragment, {
-                  children: [(0, r.jsx)(i.tBG, c(a({}, d), { color: 'currentColor' })), o.intl.string(o.t.dxfZpq)]
-              })
+                  children: [(0, r.jsx)(i.tBG, c(a({}, d), { color: "currentColor" })), o.intl.string(o.t.dxfZpq)],
+              }),
     });
 }

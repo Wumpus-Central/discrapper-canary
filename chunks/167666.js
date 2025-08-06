@@ -12,7 +12,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -64,7 +64,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,13 +75,13 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let m = {
     SMALL: c.sizeSmall,
     MEDIUM: c.sizeMedium,
-    LARGE: c.sizeLarge
+    LARGE: c.sizeLarge,
 };
 class g extends (r = o.PureComponent) {
     calculateScroll() {
@@ -101,42 +102,47 @@ class g extends (r = o.PureComponent) {
                     ? o.cloneElement(t, {
                           scrollerRef: this.setRef,
                           onScroll: this.handleScroll,
-                          onResize: this.handleScroll
+                          onResize: this.handleScroll,
                       })
                     : t.type === l.xBx && e
                       ? o.cloneElement(t, { separator: !1 })
                       : t
-                : t
+                : t,
         );
     }
     render() {
         let e = this.props,
             { className: t, children: n, tag: r, size: o, fullscreenOnMobile: a } = e,
-            l = p(e, ['className', 'children', 'tag', 'size', 'fullscreenOnMobile']);
-        return (0, i.jsx)(r, _(d({ className: s()(c.modal, t, o, { [c.fullscreenOnMobile]: a }) }, l), { children: this.renderChildren() }));
+            l = p(e, ["className", "children", "tag", "size", "fullscreenOnMobile"]);
+        return (0, i.jsx)(
+            r,
+            _(d({ className: s()(c.modal, t, o, { [c.fullscreenOnMobile]: a }) }, l), {
+                children: this.renderChildren(),
+            }),
+        );
     }
     constructor(e) {
-        (super(e),
-            u(this, '_scroller', null),
-            u(this, 'setRef', (e) => {
-                ((this._scroller = e), null != e && this.calculateScroll());
+        super(e),
+            u(this, "_scroller", null),
+            u(this, "setRef", (e) => {
+                (this._scroller = e), null != e && this.calculateScroll();
             }),
-            u(this, 'handleScroll', (e) => {
+            u(this, "handleScroll", (e) => {
                 this.calculateScroll();
                 let { onScroll: t } = this.props;
                 null == t || t(e);
             }),
-            (this.state = { hideSeparator: !1 }));
+            (this.state = { hideSeparator: !1 });
     }
 }
-(u(g, 'Header', l.xBx),
-    u(g, 'Footer', l.mzw),
-    u(g, 'Content', l.hzk),
-    u(g, 'ListContent', l.YAO),
-    u(g, 'CloseButton', l.olH),
-    u(g, 'Sizes', m),
-    u(g, 'defaultProps', {
+u(g, "Header", l.xBx),
+    u(g, "Footer", l.mzw),
+    u(g, "Content", l.hzk),
+    u(g, "ListContent", l.YAO),
+    u(g, "CloseButton", l.olH),
+    u(g, "Sizes", m),
+    u(g, "defaultProps", {
         fullscreenOnMobile: !0,
         size: m.SMALL,
-        tag: 'div'
-    }));
+        tag: "div",
+    });

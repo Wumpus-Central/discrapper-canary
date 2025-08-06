@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685), n(539854));
+n.d(t, { Z: () => C }), n(388685), n(539854);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -21,13 +21,13 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let b = 'DetectedOffPlatformPremiumPerksStore',
+let b = "DetectedOffPlatformPremiumPerksStore",
     y = {},
     O = {},
     v = [];
@@ -39,13 +39,16 @@ function I() {
                 r !== t ||
                     v.includes(n) ||
                     (null == O[n] &&
-                        (h.Z.applicationIdsFetched.has(r) || h.Z.applicationIdsFetching.has(r) || null != h.Z.getForSku(n) || c.yD(r),
+                        (h.Z.applicationIdsFetched.has(r) ||
+                            h.Z.applicationIdsFetching.has(r) ||
+                            null != h.Z.getForSku(n) ||
+                            c.yD(r),
                         (O[n] = {
                             skuId: n,
-                            applicationId: r
+                            applicationId: r,
                         }),
                         (e = !0)));
-    return (e && T(), e);
+    return e && T(), e;
 }
 function T() {
     let e = !1;
@@ -61,11 +64,13 @@ function T() {
             m.Z.isFetching(t) || m.Z.didFetchingSkuFail(t) || u.$N(r.id, t);
             continue;
         }
-        h.Z.applicationIdsFetching.has(r.id) || h.Z.isEntitledToSku(p.default.getCurrentUser(), t, r.id, r.id) || !i.available
+        h.Z.applicationIdsFetching.has(r.id) ||
+        h.Z.isEntitledToSku(p.default.getCurrentUser(), t, r.id, r.id) ||
+        !i.available
             ? null != y[t] && (delete y[t], (e = !0))
             : ((y[t] = {
                   skuId: t,
-                  applicationId: n
+                  applicationId: n,
               }),
               (e = !0));
     }
@@ -74,21 +79,21 @@ function T() {
 function S(e) {
     let { skuId: t } = e;
     if ((delete y[t], v.includes(t))) return !1;
-    (v.push(t), s.K.set(b, v));
+    v.push(t), s.K.set(b, v);
 }
 function A() {
-    ((y = {}), (O = {}));
+    (y = {}), (O = {});
 }
 class N extends (r = a.ZP.Store) {
     initialize() {
         var e;
-        (this.waitFor(_.ZP, m.Z, h.Z), (v = null != (e = s.K.get(b)) ? e : v));
+        this.waitFor(_.ZP, m.Z, h.Z), (v = null != (e = s.K.get(b)) ? e : v);
     }
     getDetectedOffPlatformPremiumPerks() {
         return o().values(y);
     }
 }
-E(N, 'displayName', 'DetectedOffPlatformPremiumPerksStore');
+E(N, "displayName", "DetectedOffPlatformPremiumPerksStore");
 let C = new N(l.Z, {
     LOGOUT: A,
     SKU_FETCH_SUCCESS: T,
@@ -96,5 +101,5 @@ let C = new N(l.Z, {
     ENTITLEMENT_CREATE: T,
     APPLICATION_FETCH_SUCCESS: T,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: S,
-    RUNNING_GAMES_CHANGE: I
+    RUNNING_GAMES_CHANGE: I,
 });

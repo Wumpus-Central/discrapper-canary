@@ -15,35 +15,35 @@ function m() {
         m = null == i ? void 0 : i.planSelection;
     if (null == m || null == t || 0 === t.length) return null;
     let C = (0, o.Tl)(m.gradientConfig);
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: d.promotionalGiftMessage,
         style: C,
         children: [
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 className: d.promotionalTextSection,
                 children: [
                     (0, n.jsx)(l.Text, {
                         className: d.promotionalGiftMessageText,
-                        variant: 'text-sm/semibold',
-                        children: m.heading()
+                        variant: "text-sm/semibold",
+                        children: m.heading(),
                     }),
                     null != m.subheading &&
                         t.length > 1 &&
                         (0, n.jsx)(l.Text, {
                             className: d.promotionalGiftMessageText,
-                            variant: 'text-sm/normal',
-                            children: m.subheading(t.length)
-                        })
-                ]
+                            variant: "text-sm/normal",
+                            children: m.subheading(t.length),
+                        }),
+                ],
             }),
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 className: d.avatar,
                 children: (0, n.jsx)(u.Z, {
                     maxRewardImageSrc: m.getImageUrl(!0, e),
                     claimableRewards: t,
-                    size: l.EFr.SIZE_80
-                })
-            })
-        ]
+                    size: l.EFr.SIZE_80,
+                }),
+            }),
+        ],
     });
 }

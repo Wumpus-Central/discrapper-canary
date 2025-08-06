@@ -10,8 +10,8 @@ function c(e, t) {
     return e.state !== s.yb.SEND_FAILED
         ? null
         : (0, r.jsx)(i.sNh, {
-              id: 'resend',
+              id: "resend",
               label: l.intl.string(l.t.lXHojo),
-              action: () => (0, a.Z)(t, e, void 0, o.Z.getOptions(e.id))
+              action: () => (0, a.Z)(t, e, void 0, o.Z.getOptions(e.id)),
           });
 }

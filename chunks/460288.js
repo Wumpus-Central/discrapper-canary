@@ -16,10 +16,10 @@ function a(e) {
         return new r(function (r, a) {
             var i = e.apply(t, n);
             function s(e) {
-                o(i, r, a, s, c, 'next', e);
+                o(i, r, a, s, c, "next", e);
             }
             function c(e) {
-                o(i, r, a, s, c, 'throw', e);
+                o(i, r, a, s, c, "throw", e);
             }
             s(void 0);
         });

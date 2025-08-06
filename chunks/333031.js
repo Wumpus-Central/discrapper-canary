@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -24,7 +24,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,35 +36,42 @@ function v(e, t) {
         left: Math.ceil(t.left),
         top: Math.ceil(t.top),
         right: Math.ceil(t.right),
-        bottom: Math.ceil(t.bottom)
+        bottom: Math.ceil(t.bottom),
     };
 }
 class I {
     observe(e) {
         var t;
-        if ((null == this.resizeObserver && (this.resizeObserver = new this.window.ResizeObserver(this.handleResize)), null == this.mutationObserver)) {
+        if (
+            (null == this.resizeObserver && (this.resizeObserver = new this.window.ResizeObserver(this.handleResize)),
+            null == this.mutationObserver)
+        ) {
             this.mutationObserver = new MutationObserver(this.handleMutations);
             let e = _.Z.getWindow(b.$J);
             null != e &&
                 this.mutationObserver.observe(null == e ? void 0 : e.document.body, {
                     subtree: !0,
-                    attributes: !0
+                    attributes: !0,
                 });
         }
         let n = this.zones.get(e);
         null != n && this.resizeObserver.unobserve(n.element);
         let r = e.getBoundingClientRect();
-        (this.zones.set(e, {
+        this.zones.set(e, {
             element: e,
-            zone: v(null != (t = null == n ? void 0 : n.zone.name) ? t : (0, c.Z)(), r)
+            zone: v(null != (t = null == n ? void 0 : n.zone.name) ? t : (0, c.Z)(), r),
         }),
             this.elements.add(e),
             this.resizeObserver.observe(e),
-            this.updateZones());
+            this.updateZones();
     }
     unobserve(e) {
         var t;
-        null != this.zones.get(e) && (null == (t = this.resizeObserver) || t.unobserve(e), this.zones.delete(e), this.elements.delete(e), this.updateZones());
+        null != this.zones.get(e) &&
+            (null == (t = this.resizeObserver) || t.unobserve(e),
+            this.zones.delete(e),
+            this.elements.delete(e),
+            this.updateZones());
     }
     updateZones() {
         if (!h.isPlatformEmbedded) return;
@@ -78,30 +85,35 @@ class I {
                         left: n.left / e.innerWidth,
                         top: n.top / e.innerHeight,
                         right: n.right / e.innerWidth,
-                        bottom: n.bottom / e.innerHeight
+                        bottom: n.bottom / e.innerHeight,
                     };
-                })
+                }),
             );
     }
     cleanUp() {
         var e, t;
-        (this.globalUpdate.cancel(), this.zones.clear(), this.elements.clear(), null == (e = this.resizeObserver) || e.disconnect(), null == (t = this.mutationObserver) || t.disconnect(), this.updateZones());
+        this.globalUpdate.cancel(),
+            this.zones.clear(),
+            this.elements.clear(),
+            null == (e = this.resizeObserver) || e.disconnect(),
+            null == (t = this.mutationObserver) || t.disconnect(),
+            this.updateZones();
     }
     constructor(e) {
-        (O(this, 'resizeObserver', void 0),
-            O(this, 'mutationObserver', void 0),
-            O(this, 'zones', new Map()),
-            O(this, 'elements', new Set()),
-            O(this, 'window', void 0),
-            O(this, 'handleResize', () => {
+        O(this, "resizeObserver", void 0),
+            O(this, "mutationObserver", void 0),
+            O(this, "zones", new Map()),
+            O(this, "elements", new Set()),
+            O(this, "window", void 0),
+            O(this, "handleResize", () => {
                 this.globalUpdate();
             }),
-            O(this, 'handleMutations', () => {
+            O(this, "handleMutations", () => {
                 this.globalUpdate();
             }),
             O(
                 this,
-                'globalUpdate',
+                "globalUpdate",
                 l()(
                     () => {
                         let e = !1;
@@ -112,7 +124,7 @@ class I {
                                 ((e = !0),
                                 (n = {
                                     element: n.element,
-                                    zone: i
+                                    zone: i,
                                 }),
                                 this.zones.set(t, n));
                         }
@@ -121,11 +133,11 @@ class I {
                     250,
                     {
                         trailing: !0,
-                        maxWait: 1000
-                    }
-                )
+                        maxWait: 1000,
+                    },
+                ),
             ),
-            (this.window = e));
+            (this.window = e);
     }
 }
 let T = i.createContext(new I((0, E.i)()));
@@ -141,20 +153,20 @@ function S(e) {
                     null != e && (t ? l.observe(e) : l.unobserve(e));
                 },
                 refHandler(t) {
-                    (null != e && l.unobserve(e), (e = t));
-                }
+                    null != e && l.unobserve(e), (e = t);
+                },
             };
         });
     return (
         i.useLayoutEffect(() => {
             d ? _(!1) : _(t);
         }, [t, _, d]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             ref: f,
             style: o,
             className: a()(n, y.clickable, c && y.debugMode),
-            'data-click-zone': !0,
-            children: s
+            "data-click-zone": !0,
+            children: s,
         })
     );
 }

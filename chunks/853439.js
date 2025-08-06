@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -49,8 +49,8 @@ class _ extends (r = i.ZP.Store) {
         return u[e];
     }
 }
-l(_, 'displayName', 'GuildRoleSubscriptionTierTemplatesStore');
+l(_, "displayName", "GuildRoleSubscriptionTierTemplatesStore");
 let p = new _(o.Z, {
     GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: f,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES: d
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES: d,
 });

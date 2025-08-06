@@ -6,8 +6,8 @@ var r = n(98405),
     l = n(137294);
 r(
     {
-        target: 'Array',
-        proto: !0
+        target: "Array",
+        proto: !0,
     },
     {
         flat: function () {
@@ -15,7 +15,7 @@ r(
                 t = o(this),
                 n = a(t),
                 r = l(t, 0);
-            return ((r.length = i(r, t, t, n, 0, void 0 === e ? 1 : s(e))), r);
-        }
-    }
+            return (r.length = i(r, t, t, n, 0, void 0 === e ? 1 : s(e))), r;
+        },
+    },
 );

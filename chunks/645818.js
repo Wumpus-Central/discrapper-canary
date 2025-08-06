@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -16,7 +16,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,14 +32,18 @@ let f = (0, o.GSL)(c.Z),
         [d.TzF.PUSHING]: o.rG2,
         [d.TzF.PULLING]: o._8t,
         [d.TzF.CONFLICT]: f,
-        [d.TzF.ERROR]: f
+        [d.TzF.ERROR]: f,
     });
 class _ extends i.PureComponent {
     componentDidMount() {
         this.getIsRecentlySynced() && this.setRecentlySyncedTimeout();
     }
     componentDidUpdate(e) {
-        null != this.props.cloudSyncState && this.props.cloudSyncState.type === d.TzF.DONE && null != this.props.cloudSyncState.timestamp && (null == e.cloudSyncState || null == e.cloudSyncState.timestamp) && this.setRecentlySyncedTimeout();
+        null != this.props.cloudSyncState &&
+            this.props.cloudSyncState.type === d.TzF.DONE &&
+            null != this.props.cloudSyncState.timestamp &&
+            (null == e.cloudSyncState || null == e.cloudSyncState.timestamp) &&
+            this.setRecentlySyncedTimeout();
     }
     componentWillUnmount() {
         this._doneTimer.stop();
@@ -91,9 +95,9 @@ class _ extends i.PureComponent {
         (m.has(i.type) || l) &&
             (a.gradientConfig = {
                 id: t.id,
-                startColor: 'rgba(199, 208, 240, 1)',
-                stopColor: 'rgba(114, 137, 218, 1)',
-                stop: this.getStop(i, l)
+                startColor: "rgba(199, 208, 240, 1)",
+                stopColor: "rgba(114, 137, 218, 1)",
+                stop: this.getStop(i, l),
             });
         let s = l ? g : b[i.type];
         return (0, r.jsx)(o.ua7, {
@@ -105,23 +109,23 @@ class _ extends i.PureComponent {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     h(e, t, n[t]);
-                                }));
+                                });
                         }
                         return e;
-                    })({ className: n }, a, e)
-                )
+                    })({ className: n }, a, e),
+                ),
         });
     }
     constructor(...e) {
-        (super(...e), h(this, '_doneTimer', new a.V7()));
+        super(...e), h(this, "_doneTimer", new a.V7());
     }
 }
 let O = l.ZP.connectStores([s.Z], (e) => {

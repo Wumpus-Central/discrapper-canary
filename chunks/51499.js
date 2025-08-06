@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(361932), n(187205));
+n.d(t, { Z: () => u }), n(361932), n(187205);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -9,14 +9,19 @@ var i = n(120356),
     c = n(175531);
 function u(e) {
     let { className: t, isEligibleForTrial: n = !1 } = e,
-        { step: i, breadcrumbs: u, startedPaymentFlowWithPaymentSourcesRef: d, enablePremiumBrandRefresh: f } = (0, s.JL)();
+        {
+            step: i,
+            breadcrumbs: u,
+            startedPaymentFlowWithPaymentSourcesRef: d,
+            enablePremiumBrandRefresh: f,
+        } = (0, s.JL)();
     if (f || null == u || 0 === u.length) return null;
     let _ = u.flatMap((e) => {
         let t = e.useBreadcrumbLabel(n);
         return null != t
             ? {
                   id: e.id,
-                  label: t
+                  label: t,
               }
             : [];
     });
@@ -27,11 +32,11 @@ function u(e) {
                   r = e.id === l.h8.ADD_PAYMENT_STEPS && !d.current;
               return !n || (n && (t || r));
           })),
-          (0, r.jsx)('div', {
-              className: o()('breadcrumb', c.wrapper, t),
+          (0, r.jsx)("div", {
+              className: o()("breadcrumb", c.wrapper, t),
               children: (0, r.jsx)(a.OoM, {
                   activeId: i,
-                  breadcrumbs: _
-              })
+                  breadcrumbs: _,
+              }),
           }));
 }

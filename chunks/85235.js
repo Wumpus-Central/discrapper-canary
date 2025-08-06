@@ -7,32 +7,32 @@ let s = {
     search(e, t) {
         null == o.Z.getResults(e, t) &&
             (i.Z.dispatch({
-                type: 'INTEGRATION_QUERY',
+                type: "INTEGRATION_QUERY",
                 integration: e,
-                query: t
+                query: t,
             }),
             r.tn
                 .get({
-                    url: a.ANM.INTEGRATION_SEARCH('tenor'),
+                    url: a.ANM.INTEGRATION_SEARCH("tenor"),
                     query: { q: t },
                     oldFormErrors: !0,
-                    rejectWithError: !0
+                    rejectWithError: !0,
                 })
                 .then(
                     (n) => {
                         i.Z.dispatch({
-                            type: 'INTEGRATION_QUERY_SUCCESS',
+                            type: "INTEGRATION_QUERY_SUCCESS",
                             integration: e,
                             query: t,
-                            results: n.body
+                            results: n.body,
                         });
                     },
                     () =>
                         i.Z.dispatch({
-                            type: 'INTEGRATION_QUERY_FAILURE',
+                            type: "INTEGRATION_QUERY_FAILURE",
                             integration: e,
-                            query: t
-                        })
+                            query: t,
+                        }),
                 ));
-    }
+    },
 };

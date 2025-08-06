@@ -36,76 +36,76 @@ let T = r.memo(
             w = !A && Z.length > 0;
         return (0, i.jsx)(u.Gt, {
             value: T,
-            children: (0, i.jsx)('div', {
+            children: (0, i.jsx)("div", {
                 ref: t,
                 className: a()(S.container, n),
-                'data-testid': 'marketing-page-hero-header',
-                children: (0, i.jsx)('div', {
+                "data-testid": "marketing-page-hero-header",
+                children: (0, i.jsx)("div", {
                     ref: R,
-                    children: (0, i.jsxs)('div', {
+                    children: (0, i.jsxs)("div", {
                         className: S.contentContainer,
                         children: [
                             (0, i.jsx)(O.Z, { containerVisibilityPercentage: D }),
                             I &&
-                                (0, i.jsx)('div', {
+                                (0, i.jsx)("div", {
                                     className: S.offerPillContainer,
-                                    children: (0, i.jsx)(C.Z, { enablePremiumBrandRefresh: !0 })
+                                    children: (0, i.jsx)(C.Z, { enablePremiumBrandRefresh: !0 }),
                                 }),
-                            (0, i.jsx)('div', {
+                            (0, i.jsx)("div", {
                                 className: S.marketingPageTextContainer,
-                                children: (0, i.jsx)(E.Z, { children: v.intl.string(v.t['EW+VIS']) })
+                                children: (0, i.jsx)(E.Z, { children: v.intl.string(v.t["EW+VIS"]) }),
                             }),
-                            (0, i.jsxs)('div', {
+                            (0, i.jsxs)("div", {
                                 className: S.body,
                                 children: [
                                     A &&
-                                        (0, i.jsx)('div', {
+                                        (0, i.jsx)("div", {
                                             className: S.referrerAttributionContainer,
                                             children: (0, i.jsx)(_.Z, {
                                                 referrer: y,
-                                                enablePremiumBrandRefresh: !0
-                                            })
+                                                enablePremiumBrandRefresh: !0,
+                                            }),
                                         }),
                                     w &&
-                                        (0, i.jsx)('div', {
+                                        (0, i.jsx)("div", {
                                             className: S.affinitiesContainer,
                                             children: (0, i.jsx)(b.Z, {
-                                                textColor: 'text-primary',
+                                                textColor: "text-primary",
                                                 smallerText: !1,
                                                 isApplicationHome: !0,
-                                                enablePremiumBrandRefresh: !0
-                                            })
+                                                enablePremiumBrandRefresh: !0,
+                                            }),
                                         }),
-                                    (0, i.jsxs)('div', {
+                                    (0, i.jsxs)("div", {
                                         className: I ? S.singleButtonContainer : S.twoButtonContainer,
                                         children: [
                                             (0, i.jsx)(f.Z, {
-                                                size: 'md',
+                                                size: "md",
                                                 fullWidth: I,
                                                 hasActivePromotion: !!s,
-                                                subscriptionTier: r
+                                                subscriptionTier: r,
                                             }),
                                             !I &&
                                                 (0, i.jsx)(h.Z, {
-                                                    variant: 'secondary',
-                                                    size: 'md'
-                                                })
-                                        ]
+                                                    variant: "secondary",
+                                                    size: "md",
+                                                }),
+                                        ],
                                     }),
-                                    (0, i.jsx)('div', {
+                                    (0, i.jsx)("div", {
                                         className: S.descriptionContainer,
                                         children: (0, i.jsx)(o.Text, {
-                                            color: 'text-tertiary',
-                                            variant: 'text-xs/medium',
-                                            children: v.intl.format(v.t.kt9wxs, { cheapestMonthlyPrice: N })
-                                        })
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                })
-            })
+                                            color: "text-tertiary",
+                                            variant: "text-xs/medium",
+                                            children: v.intl.format(v.t.kt9wxs, { cheapestMonthlyPrice: N }),
+                                        }),
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                }),
+            }),
         });
-    })
+    }),
 );

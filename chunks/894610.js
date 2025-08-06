@@ -7,23 +7,23 @@ var r = n(255367),
     o = n(963877);
 let c = (0, l.Yn)([
     (0, l.nn)({
-        key: 'LISTING_NAME',
+        key: "LISTING_NAME",
         cellClassName: o.listingNameColumn,
         renderHeader: () => (0, r.jsx)(l.qN, { children: s.intl.string(s.t.OGpGqK) }),
-        sort: (0, l.Qg)((e) => e.listing.name.toLowerCase())
+        sort: (0, l.Qg)((e) => e.listing.name.toLowerCase()),
     }),
     (0, l.GW)({
-        key: 'PAYMENTS_COUNT',
+        key: "PAYMENTS_COUNT",
         cellClassName: o.paymentsCountColumn,
         renderHeader: () => (0, r.jsx)(l.qN, { children: s.intl.string(s.t.vpHXJy) }),
         getCount: (e) => e.paymentsCount,
         sort: (0, l.Qg)((e) => {
             var t;
             return null != (t = e.paymentsCount) ? t : 0;
-        })
+        }),
     }),
     (0, l.i$)({
-        key: 'PRICE',
+        key: "PRICE",
         cellClassName: o.priceColumn,
         renderHeader: () => (0, r.jsx)(l.qN, { children: s.intl.string(s.t.VodAGR) }),
         getAmount(e) {
@@ -33,8 +33,8 @@ let c = (0, l.Yn)([
         sort: (0, l.Qg)((e) => {
             var t;
             return null != (t = e.listing.price_tier) ? t : 0;
-        })
-    })
+        }),
+    }),
 ]);
 function d(e) {
     let { earningsData: t, guildId: n } = e,
@@ -51,24 +51,24 @@ function d(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })({}, null != i ? i : {})),
@@ -76,7 +76,7 @@ function d(e) {
                                 {
                                     key: e.id,
                                     listing: e,
-                                    paymentsCount: null != (t = null == i ? void 0 : i.purchase_count) ? t : 0
+                                    paymentsCount: null != (t = null == i ? void 0 : i.purchase_count) ? t : 0,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -94,13 +94,13 @@ function d(e) {
                         );
                     })
                     .filter((e) => e.listing.published || e.paymentsCount > 0),
-            [s, null == o ? void 0 : o.ppgs]
+            [s, null == o ? void 0 : o.ppgs],
         );
     return null == s || 0 === s.length
         ? null
         : (0, r.jsx)(l.ZP, {
               columns: c,
               data: d,
-              initialSortKey: 'LISTING_NAME'
+              initialSortKey: "LISTING_NAME",
           });
 }

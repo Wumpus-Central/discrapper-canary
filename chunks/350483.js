@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(392711),
@@ -18,40 +18,50 @@ function b(e, t) {
     return [
         {
             resourceId: e,
-            type: f.W.GUILD_EVENT
+            type: f.W.GUILD_EVENT,
         },
         ...(e === h.ME
             ? m.Z.getPrivateChannelIds()
             : (0, l.Z)(e, {
                   withVoiceChannels: t,
-                  withCurrentVoiceChannel: !0
-              }).map((e) => e.id))
+                  withCurrentVoiceChannel: !0,
+              }).map((e) => e.id)),
     ];
 }
 let x = s().throttle(function (e, t) {
     var r, s;
     let l,
-        { channelPredicate: m = () => !0, guildPredicate: f = () => !0, guildFeaturePredicate: x = () => !1, ensureChatIsVisible: _ = () => !1, withVoiceChannels: j = !1 } = t,
+        {
+            channelPredicate: m = () => !0,
+            guildPredicate: f = () => !0,
+            guildFeaturePredicate: x = () => !1,
+            ensureChatIsVisible: _ = () => !1,
+            withVoiceChannels: j = !1,
+        } = t,
         E = null != (r = o.Z.getState().guildId) ? r : h.ME,
         C = o.Z.getState().channelId,
         O = (function (e, t) {
             let n = [h.ME, ...u.ZP.getFlattenedGuildIds()],
                 i = n.indexOf(e);
-            return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)));
+            return t > 0
+                ? n.slice(i).concat(n.slice(0, i), e)
+                : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)));
         })(E, e),
         v = e > 0 ? 0 : O.length - 1,
         S = b(E, j),
         T = S.indexOf(C) + e;
-    for (; null != E && '' !== E; ) {
+    for (; null != E && "" !== E; ) {
         if (((l = S[T]), f(E)))
-            for (; null != l && '' !== l; ) {
-                if ('string' == typeof l) {
+            for (; null != l && "" !== l; ) {
+                if ("string" == typeof l) {
                     if (m(E, l)) return (0, g.K)(E, l, !1, _(E, l));
-                } else if ('object' == typeof l && x(l.resourceId, l.type))
+                } else if ("object" == typeof l && x(l.resourceId, l.type))
                     return (
                         E !== d.Z.getGuildId() && (0, g.K)(E, null == (s = c.ZP.getDefaultChannel(E)) ? void 0 : s.id),
                         (0, a.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('78036')]).then(n.bind(n, 17671));
+                            let { default: e } = await Promise.all([n.e("22347"), n.e("56236"), n.e("78036")]).then(
+                                n.bind(n, 17671),
+                            );
                             return (t) =>
                                 (0, i.jsx)(
                                     e,
@@ -68,7 +78,11 @@ let x = s().throttle(function (e, t) {
                                                       }
                                                       return n;
                                                   })(Object(t)).forEach(function (n) {
-                                                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                                      Object.defineProperty(
+                                                          e,
+                                                          n,
+                                                          Object.getOwnPropertyDescriptor(t, n),
+                                                      );
                                                   }),
                                             e
                                         );
@@ -77,39 +91,39 @@ let x = s().throttle(function (e, t) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     i = Object.keys(n);
-                                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                                "function" == typeof Object.getOwnPropertySymbols &&
                                                     (i = i.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        })
+                                                        }),
                                                     )),
                                                     i.forEach(function (t) {
                                                         var i;
-                                                        ((i = n[t]),
+                                                        (i = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: i,
                                                                       enumerable: !0,
                                                                       configurable: !0,
-                                                                      writable: !0
+                                                                      writable: !0,
                                                                   })
-                                                                : (e[t] = i));
-                                                    }));
+                                                                : (e[t] = i);
+                                                    });
                                             }
                                             return e;
                                         })({}, t),
-                                        { guildId: E }
-                                    )
+                                        { guildId: E },
+                                    ),
                                 );
                         })
                     );
-                ((T += e), (l = S[T]));
+                (T += e), (l = S[T]);
             }
-        if (((v += e), null == (E = O[v]) || '' === E)) break;
-        ((S = b(E, j)), (T = e < 0 ? S.length - 1 : 0));
+        if (((v += e), null == (E = O[v]) || "" === E)) break;
+        (S = b(E, j)), (T = e < 0 ? S.length - 1 : 0);
     }
     p.S.dispatch(h.CkL.SHAKE_APP, {
         duration: 200,
-        intensity: 2
+        intensity: 2,
     });
 }, h.aZC);

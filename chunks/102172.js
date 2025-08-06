@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     JL: () => h,
     P9: () => m,
     gR: () => g,
     h_: () => y,
     p9: () => E,
-    wq: () => b
+    wq: () => b,
 }),
     n(539854),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(622822),
     o = n(387343),
@@ -26,12 +26,18 @@ function h(e, t, n) {
     if (e.isPrivate()) return !0;
     let a = t.getGuild(e.getGuildId()),
         s = null != (r = null == a ? void 0 : a.maxStageVideoChannelUsers) ? r : 0;
-    return (!e.isGuildStageVoice() || !(s <= 0)) && (!i || !!(0, o.Z)(e, n)) && !!n.can(_.Plq.STREAM, e) && null != a && a.afkChannelId !== e.id;
+    return (
+        (!e.isGuildStageVoice() || !(s <= 0)) &&
+        (!i || !!(0, o.Z)(e, n)) &&
+        !!n.can(_.Plq.STREAM, e) &&
+        null != a &&
+        a.afkChannelId !== e.id
+    );
 }
 function m(e) {
     switch (e) {
         case 0:
-            return p.intl.string(p.t['1i3tSU']);
+            return p.intl.string(p.t["1i3tSU"]);
         case 1:
             return p.intl.string(p.t.elyVbm);
         case 2:
@@ -39,21 +45,21 @@ function m(e) {
         case 3:
             return p.intl.string(p.t.b5FqhI);
         default:
-            return p.intl.string(p.t['7Xq/nZ']);
+            return p.intl.string(p.t["7Xq/nZ"]);
     }
 }
 function g(e) {
     switch (e) {
         case 0:
-            return ''.concat(p.intl.string(p.t['7Xq/nZ']), ': ').concat(p.intl.string(p.t['1i3tSU']));
+            return "".concat(p.intl.string(p.t["7Xq/nZ"]), ": ").concat(p.intl.string(p.t["1i3tSU"]));
         case 1:
-            return ''.concat(p.intl.string(p.t['7Xq/nZ']), ': ').concat(p.intl.string(p.t.elyVbm));
+            return "".concat(p.intl.string(p.t["7Xq/nZ"]), ": ").concat(p.intl.string(p.t.elyVbm));
         case 2:
-            return ''.concat(p.intl.string(p.t['7Xq/nZ']), ': ').concat(p.intl.string(p.t.pgUTZG));
+            return "".concat(p.intl.string(p.t["7Xq/nZ"]), ": ").concat(p.intl.string(p.t.pgUTZG));
         case 3:
-            return ''.concat(p.intl.string(p.t['7Xq/nZ']), ': ').concat(p.intl.string(p.t.b5FqhI));
+            return "".concat(p.intl.string(p.t["7Xq/nZ"]), ": ").concat(p.intl.string(p.t.b5FqhI));
         default:
-            return ''.concat(p.intl.string(p.t['7Xq/nZ']), ': ').concat(p.intl.string(p.t['9C444u']));
+            return "".concat(p.intl.string(p.t["7Xq/nZ"]), ": ").concat(p.intl.string(p.t["9C444u"]));
     }
 }
 function E(e, t, n, r, a) {

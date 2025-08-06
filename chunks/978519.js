@@ -1,13 +1,13 @@
-(n.d(t, { r: () => u }), n(35282), n(73800), n(399606));
+n.d(t, { r: () => u }), n(35282), n(73800), n(399606);
 var r = n(430824),
     i = n(358085),
     o = n(341653),
     a = n(981631);
-let s = '13.2',
+let s = "13.2",
     l = [a.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
 function c(e, t) {
-    let n = e.split('.').map(Number),
-        r = t.split('.').map(Number),
+    let n = e.split(".").map(Number),
+        r = t.split(".").map(Number),
         i = Math.max(n.length, r.length);
     for (let e = 0; e < i; e++) {
         var o, a;

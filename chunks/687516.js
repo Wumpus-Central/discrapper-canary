@@ -1,7 +1,7 @@
 n.d(t, {
     Cf: () => f,
     L2: () => u,
-    Um: () => c
+    Um: () => c,
 });
 var r = n(442837),
     i = n(902704),
@@ -23,7 +23,7 @@ function u(e, t) {
         ? null
         : {
               id: n.application_id,
-              name: n.name
+              name: n.name,
           };
 }
 function d(e, t) {

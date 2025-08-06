@@ -10,33 +10,33 @@ let d = (e) => {
     var t, n;
     let {
             node: { header: d, subheader: u, button: m },
-            isModeratorReport: p
+            isModeratorReport: p,
         } = e,
-        g = (null == m ? void 0 : m.type) === 'submit',
+        g = (null == m ? void 0 : m.type) === "submit",
         x = l.useRef(
             a.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, a.Z.defaultRules)),
@@ -53,32 +53,32 @@ let d = (e) => {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
-            )
+                t),
+            ),
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: c.headerContainer,
         children: [
-            null != d && '' !== d
+            null != d && "" !== d
                 ? (0, r.jsx)(i.X6q, {
-                      variant: 'heading-xl/semibold',
-                      color: 'header-primary',
-                      children: d
+                      variant: "heading-xl/semibold",
+                      color: "header-primary",
+                      children: d,
                   })
                 : null,
-            null != u && '' !== d
+            null != u && "" !== d
                 ? (0, r.jsx)(i.Text, {
-                      variant: 'text-md/normal',
-                      color: 'header-secondary',
-                      children: x.current(u)
+                      variant: "text-md/normal",
+                      color: "header-secondary",
+                      children: x.current(u),
                   })
                 : null,
             g &&
                 !p &&
                 (0, r.jsx)(i.Text, {
-                    variant: 'text-sm/normal',
-                    children: o.intl.format(o.t.Q0tSKS, {})
-                })
-        ]
+                    variant: "text-sm/normal",
+                    children: o.intl.format(o.t.Q0tSKS, {}),
+                }),
+        ],
     });
 };

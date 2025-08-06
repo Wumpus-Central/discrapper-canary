@@ -6,13 +6,13 @@ function a(e, t) {
     let n, a;
     if (null == e) return null;
     let s = (0, o.cS)(e);
-    if (null != s) ((n = r._tJ), (a = s));
+    if (null != s) (n = r._tJ), (a = s);
     else {
         if (null == t) return null;
-        ((n = (0, i.Th)(t.type)), (a = t.name));
+        (n = (0, i.Th)(t.type)), (a = t.name);
     }
     return {
         IconComponent: n,
-        locationName: a
+        locationName: a,
     };
 }

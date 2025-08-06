@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => w }), n(388685));
+n.d(t, { Z: () => w }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -30,24 +30,24 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -59,30 +59,34 @@ function Z(e) {
         a = (0, o.e7)([u.Z], () => u.Z.getState().theme),
         s = (0, c.wjy)(a) ? T.BRd.DARK : T.BRd.LIGHT,
         d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: j.heading,
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 className: j.headingGameTile,
-                alt: '',
-                src: (0, _.fh)(n, _.eC.GAME_TILE, s).url
+                alt: "",
+                src: (0, _.fh)(n, _.eC.GAME_TILE, s).url,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: j.headingCopy,
                 children: [
                     (0, r.jsx)(c.X6q, {
-                        variant: 'heading-md/semibold',
-                        color: 'header-primary',
-                        children: d ? P.intl.string(P.t.XBboAA) : P.intl.formatToPlainString(P.t.EQa7oq, { questName: n.config.messages.questName })
+                        variant: "heading-md/semibold",
+                        color: "header-primary",
+                        children: d
+                            ? P.intl.string(P.t.XBboAA)
+                            : P.intl.formatToPlainString(P.t.EQa7oq, { questName: n.config.messages.questName }),
                     }),
                     (0, r.jsx)(c.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'header-secondary',
-                        children: d ? P.intl.formatToPlainString(P.t.APddvL, { expirationDate: l }) : P.intl.formatToPlainString(P.t['pX+fmp'], { expirationDate: i })
-                    })
-                ]
-            })
-        ]
+                        variant: "text-xs/normal",
+                        color: "header-secondary",
+                        children: d
+                            ? P.intl.formatToPlainString(P.t.APddvL, { expirationDate: l })
+                            : P.intl.formatToPlainString(P.t["pX+fmp"], { expirationDate: i }),
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function x(e) {
@@ -101,7 +105,7 @@ function x(e) {
             (0, h.AH)(O.id, {
                 questContent: m.jn.ACTIVITY_PANEL,
                 questContentCTA: d.jZ.ACCEPT_QUEST,
-                sourceQuestContent: m.jn.ACTIVITY_PANEL
+                sourceQuestContent: m.jn.ACTIVITY_PANEL,
             });
         }, [O]),
         U = i.useCallback(() => {
@@ -110,29 +114,29 @@ function x(e) {
                     questId: O.id,
                     questContent: m.jn.ACTIVITY_PANEL,
                     questContentCTA: d.jZ.TRACK_PROGRESS,
-                    sourceQuestContent: m.jn.ACTIVITY_PANEL
+                    sourceQuestContent: m.jn.ACTIVITY_PANEL,
                 }),
                 (0, v.navigateToQuestHome)({
                     fromContent: m.jn.ACTIVITY_PANEL,
-                    questId: O.id
+                    questId: O.id,
                 }));
         }, [O, E]),
         G = i.useCallback(() => {
-            (E({
+            E({
                 questId: O.id,
                 questContent: m.jn.ACTIVITY_PANEL,
                 questContentCTA: d.jZ.LEARN_MORE,
-                sourceQuestContent: m.jn.ACTIVITY_PANEL
+                sourceQuestContent: m.jn.ACTIVITY_PANEL,
             }),
                 (0, v.navigateToQuestHome)({
                     fromContent: m.jn.ACTIVITY_PANEL,
-                    questId: O.id
-                }));
+                    questId: O.id,
+                });
         }, [O.id, E]),
         V = (0, C.hf)({
             quest: O,
             questContent: m.jn.ACTIVITY_PANEL,
-            sourceQuestContent: m.jn.ACTIVITY_PANEL
+            sourceQuestContent: m.jn.ACTIVITY_PANEL,
         }),
         H = (0, f.tP)(O),
         B = (null == (t = O.userStatus) ? void 0 : t.enrolledAt) != null,
@@ -145,11 +149,11 @@ function x(e) {
             taskDetails: Y,
             location: N.dr.ACTIVITY_PANEL,
             questContent: m.jn.ACTIVITY_PANEL,
-            sourceQuestContent: m.jn.ACTIVITY_PANEL
+            sourceQuestContent: m.jn.ACTIVITY_PANEL,
         });
     return W || H || z || x
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               ref: (e) => {
                   _.current = e;
               },
@@ -161,7 +165,7 @@ function x(e) {
               onBlur: D,
               onMouseLeave: D,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: j.utils,
                       children: [
                           B ? (0, r.jsx)(Z, { quest: O }) : (0, r.jsx)(y.Z, {}),
@@ -178,12 +182,12 @@ function x(e) {
                                       ((t = A({}, e)),
                                       (n = n =
                                           {
-                                              'aria-label': P.intl.string(P.t.DEoVWV),
+                                              "aria-label": P.intl.string(P.t.DEoVWV),
                                               children: (0, r.jsx)(c.xhG, {
-                                                  size: 'md',
-                                                  color: 'currentColor',
-                                                  className: j.submenuIcon
-                                              })
+                                                  size: "md",
+                                                  color: "currentColor",
+                                                  className: j.submenuIcon,
+                                              }),
                                           }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -197,25 +201,25 @@ function x(e) {
                                             })(Object(n)).forEach(function (e) {
                                                 Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                             }),
-                                      t)
+                                      t),
                                   );
-                              }
-                          })
-                      ]
+                              },
+                          }),
+                      ],
                   }),
                   !B &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(Z, { quest: O }),
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: j.instructions,
                                   children: (0, r.jsx)(c.Text, {
-                                      variant: 'text-sm/normal',
-                                      color: 'text-default',
-                                      children: K
-                                  })
-                              })
-                          ]
+                                      variant: "text-sm/normal",
+                                      color: "text-default",
+                                      children: K,
+                                  }),
+                              }),
+                          ],
                       }),
                   B &&
                       !F &&
@@ -226,9 +230,9 @@ function x(e) {
                           questContent: m.jn.ACTIVITY_PANEL,
                           location: N.dr.ACTIVITY_PANEL,
                           taskDetails: Y,
-                          sourceQuestContent: m.jn.ACTIVITY_PANEL
+                          sourceQuestContent: m.jn.ACTIVITY_PANEL,
                       }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: j.ctas,
                       children: [
                           !B &&
@@ -240,7 +244,7 @@ function x(e) {
                                           fullWidth: !0,
                                           size: s.zx.Sizes.SMALL,
                                           onClick: G,
-                                          children: P.intl.string(P.t.LLLLPD)
+                                          children: P.intl.string(P.t.LLLLPD),
                                       }),
                                       (0, r.jsx)(s.zx, {
                                           className: j.cta,
@@ -249,9 +253,9 @@ function x(e) {
                                           onClick: M,
                                           size: s.zx.Sizes.SMALL,
                                           submitting: T,
-                                          children: P.intl.string(P.t.l7E81t)
-                                      })
-                                  ]
+                                          children: P.intl.string(P.t.l7E81t),
+                                      }),
+                                  ],
                               }),
                           B &&
                               !F &&
@@ -261,7 +265,7 @@ function x(e) {
                                   fullWidth: !0,
                                   onClick: U,
                                   size: s.zx.Sizes.SMALL,
-                                  children: P.intl.string(P.t.VN1Ajo)
+                                  children: P.intl.string(P.t.VN1Ajo),
                               }),
                           F &&
                               (0, r.jsx)(s.zx, {
@@ -270,11 +274,11 @@ function x(e) {
                                   fullWidth: !0,
                                   onClick: V,
                                   size: s.zx.Sizes.SMALL,
-                                  children: P.intl.string(P.t.cfY4PD)
-                              })
-                      ]
-                  })
-              ]
+                                  children: P.intl.string(P.t.cfY4PD),
+                              }),
+                      ],
+                  }),
+              ],
           });
 }
 let w = function (e) {
@@ -282,6 +286,6 @@ let w = function (e) {
         questOrQuests: e.quest,
         questContent: m.jn.ACTIVITY_PANEL,
         sourceQuestContent: m.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(x, A({ nodeRef: t }, e))
+        children: (t) => (0, r.jsx)(x, A({ nodeRef: t }, e)),
     });
 };

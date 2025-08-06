@@ -6,26 +6,26 @@ var r = n(507604),
 e.exports = i(function () {
     if (r) {
         var e = Object.create(
-            Object.defineProperty({}, 'name', {
+            Object.defineProperty({}, "name", {
                 get: function () {
                     return this === e;
-                }
-            })
+                },
+            }),
         );
-        if ('true' !== s.call(e)) return !0;
+        if ("true" !== s.call(e)) return !0;
     }
     return (
-        '2: 1' !==
+        "2: 1" !==
             s.call({
                 message: 1,
-                name: 2
-            }) || 'Error' !== s.call({})
+                name: 2,
+            }) || "Error" !== s.call({})
     );
 })
     ? function () {
           var e = o(this),
-              t = a(e.name, 'Error'),
+              t = a(e.name, "Error"),
               n = a(e.message);
-          return t ? (n ? t + ': ' + n : t) : n;
+          return t ? (n ? t + ": " + n : t) : n;
       }
     : s;

@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,38 +36,41 @@ function v() {
     Date.now() - h > Math.min(l.CM.getSetting() * c.Z.Millis.SECOND, f.OSm) || O()
         ? g ||
           o.Z.dispatch({
-              type: 'AFK',
-              afk: !0
+              type: "AFK",
+              afk: !0,
           })
         : g &&
           o.Z.dispatch({
-              type: 'AFK',
-              afk: !1
+              type: "AFK",
+              afk: !1,
           });
 }
 function I() {
     Date.now() - h > f.OSm || O()
         ? m ||
           o.Z.dispatch({
-              type: 'IDLE',
+              type: "IDLE",
               idle: !0,
-              idleSince: h
+              idleSince: h,
           })
         : m &&
           o.Z.dispatch({
-              type: 'IDLE',
-              idle: !1
+              type: "IDLE",
+              idle: !1,
           });
 }
 function T() {
-    (I(), v());
+    I(), v();
 }
 function S() {
     var e;
     let t = (e) => {
-        ((h = Math.max(Date.now() - e, h)), T(), setTimeout(S, 10 * c.Z.Millis.SECOND));
+        (h = Math.max(Date.now() - e, h)), T(), setTimeout(S, 10 * c.Z.Millis.SECOND);
     };
-    if ((null === s.Z || void 0 === s.Z || null == (e = s.Z.remotePowerMonitor) ? void 0 : e.getSystemIdleTimeMs) != null) {
+    if (
+        (null === s.Z || void 0 === s.Z || null == (e = s.Z.remotePowerMonitor) ? void 0 : e.getSystemIdleTimeMs) !=
+        null
+    ) {
         let e = s.Z.remotePowerMonitor.getSystemIdleTimeMs();
         e instanceof Promise ? e.then(t) : t(e);
     }
@@ -80,22 +83,22 @@ function N(e) {
 }
 function C(e) {
     let { userId: t, speakingFlags: n } = e;
-    return (n !== _.Dg.NONE && t === d.default.getId() && P({}), !1);
+    return n !== _.Dg.NONE && t === d.default.getId() && P({}), !1;
 }
 function R(e) {
     let { state: t } = e;
-    return ((y = t === f.$7l.BACKGROUND), (h = Date.now()), T(), !1);
+    return (y = t === f.$7l.BACKGROUND), (h = Date.now()), T(), !1;
 }
 function P(e) {
     let { timestamp: t, type: n } = e,
-        r = 'OVERLAY_SET_NOT_IDLE' === n && null != t;
+        r = "OVERLAY_SET_NOT_IDLE" === n && null != t;
     return (
         (!r || !(t <= h)) &&
         ((h = r ? t : Date.now()),
         __OVERLAY__
             ? o.Z.dispatch({
-                  type: 'OVERLAY_SET_NOT_IDLE',
-                  timestamp: h
+                  type: "OVERLAY_SET_NOT_IDLE",
+                  timestamp: h,
               })
             : T(),
         !1)
@@ -104,17 +107,17 @@ function P(e) {
 __OVERLAY__ ||
     (u.isPlatformEmbedded && (null === s.Z || void 0 === s.Z ? void 0 : s.Z.remotePowerMonitor) != null
         ? (S(),
-          s.Z.remotePowerMonitor.on('resume', () => {
-              ((E = !1), P({}));
+          s.Z.remotePowerMonitor.on("resume", () => {
+              (E = !1), P({});
           }),
-          s.Z.remotePowerMonitor.on('suspend', () => {
-              ((E = !0), P({}), a.default.disconnect());
+          s.Z.remotePowerMonitor.on("suspend", () => {
+              (E = !0), P({}), a.default.disconnect();
           }),
-          s.Z.remotePowerMonitor.on('lock-screen', () => {
-              ((b = !0), P({}));
+          s.Z.remotePowerMonitor.on("lock-screen", () => {
+              (b = !0), P({});
           }),
-          s.Z.remotePowerMonitor.on('unlock-screen', () => {
-              ((b = !1), P({}));
+          s.Z.remotePowerMonitor.on("unlock-screen", () => {
+              (b = !1), P({});
           }))
         : setInterval(T, 30 * c.Z.Millis.SECOND));
 class w extends (r = i.ZP.Store) {
@@ -134,7 +137,7 @@ class w extends (r = i.ZP.Store) {
         return b;
     }
 }
-p(w, 'displayName', 'IdleStore');
+p(w, "displayName", "IdleStore");
 let D = new w(o.Z, {
     IDLE: A,
     AFK: N,
@@ -146,5 +149,5 @@ let D = new w(o.Z, {
     WINDOW_FOCUS: P,
     OVERLAY_INITIALIZE: P,
     OVERLAY_SET_INPUT_LOCKED: P,
-    USER_SETTINGS_PROTO_UPDATE: P
+    USER_SETTINGS_PROTO_UPDATE: P,
 });

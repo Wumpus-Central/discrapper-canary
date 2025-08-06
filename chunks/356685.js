@@ -7,9 +7,9 @@ async function i(e, t, n) {
             url: l.ANM.DIRECTORY_ENTRIES_BROADCAST_INFO(e),
             query: {
                 type: t,
-                entity_id: n
+                entity_id: n,
             },
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     ).body;
 }

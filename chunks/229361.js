@@ -11,15 +11,15 @@ let l = function (e) {
         u = (0, o.default)({
             default: {
                 group: {
-                    paddingBottom: '10px',
-                    width: '40px',
-                    float: 'left',
-                    marginRight: '10px'
-                }
-            }
+                    paddingBottom: "10px",
+                    width: "40px",
+                    float: "left",
+                    marginRight: "10px",
+                },
+            },
         });
     return n.createElement(
-        'div',
+        "div",
         { style: u.group },
         (0, a.Z)(l, function (e, o) {
             return n.createElement(i.Z, {
@@ -29,8 +29,8 @@ let l = function (e) {
                 first: 0 === o,
                 last: o === l.length - 1,
                 onClick: t,
-                onSwatchHover: r
+                onSwatchHover: r,
             });
-        })
+        }),
     );
 };

@@ -21,29 +21,29 @@ let g = function (e) {
         }, []),
         x = (0, i.e7)([u.Z], () => u.Z.getCategories()),
         v = a.useMemo(() => x.find((e) => e.id === n), [x, n]),
-        C = a.useMemo(() => (null != v ? (0, d.v)(v) : ''), [v]);
+        C = a.useMemo(() => (null != v ? (0, d.v)(v) : ""), [v]);
     return (0, r.jsxs)(c.Z, {
         onScroll: f,
         ref: _,
         children: [
             (0, r.jsx)(s.Z, {
-                title: null != (t = null == v ? void 0 : v.name) ? t : '',
+                title: null != (t = null == v ? void 0 : v.name) ? t : "",
                 description: C,
-                children: (0, r.jsx)(l.Z, {})
+                children: (0, r.jsx)(l.Z, {}),
             }),
             (0, r.jsx)(o.Z, {
                 children:
                     null == v
-                        ? (0, r.jsx)('div', {
+                        ? (0, r.jsx)("div", {
                               className: h.errorContainer,
-                              children: (0, r.jsx)(p.Z, { className: h.error })
+                              children: (0, r.jsx)(p.Z, { className: h.error }),
                           })
                         : (0, r.jsx)(m.Z, {
                               categoryId: v.id,
                               onSelectApplication: g,
-                              resetScroll: b
-                          })
-            })
-        ]
+                              resetScroll: b,
+                          }),
+            }),
+        ],
     });
 };

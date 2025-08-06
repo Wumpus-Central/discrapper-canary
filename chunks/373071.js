@@ -1,7 +1,7 @@
-(n.d(t, {
+n.d(t, {
     lb: () => b,
     mr: () => y,
-    n6: () => E
+    n6: () => E,
 }),
     n(190126),
     n(368063),
@@ -10,7 +10,7 @@
     n(490233),
     n(97749),
     n(388685),
-    n(539854));
+    n(539854);
 var r,
     i = n(73800),
     o = n(94171),
@@ -26,7 +26,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,13 +71,19 @@ function p(e, t) {
         e
     );
 }
-let h = '__DEBUG_PROFILE_EFFECTS_STORE',
+let h = "__DEBUG_PROFILE_EFFECTS_STORE",
     m = { profileEffects: null != (r = l.K.get(h)) ? r : {} },
     g = (e) => {
         try {
             l.K.set(h, e.profileEffects);
         } catch (e) {
-            (console.error(e), (0, c.showToast)((0, c.createToast)('Failed to save changes. This can happen when you run out of memory in localStorage. Please try deleting some configs and try again.', c.ToastType.FAILURE)));
+            console.error(e),
+                (0, c.showToast)(
+                    (0, c.createToast)(
+                        "Failed to save changes. This can happen when you run out of memory in localStorage. Please try deleting some configs and try again.",
+                        c.ToastType.FAILURE,
+                    ),
+                );
         }
     },
     E = (0, a.F)((e) =>
@@ -86,17 +92,17 @@ let h = '__DEBUG_PROFILE_EFFECTS_STORE',
                 (0, s.j)(() => {
                     e((e) => {
                         let n = f({}, e);
-                        return ((n.profileEffects[t.id] = t), g(n), n);
+                        return (n.profileEffects[t.id] = t), g(n), n;
                     });
                 }),
             deleteConfig: (t) =>
                 (0, s.j)(() => {
                     e((e) => {
                         let n = f({}, e);
-                        return (delete n.profileEffects[t], g(n), n);
+                        return delete n.profileEffects[t], g(n), n;
                     });
-                })
-        })
+                }),
+        }),
     ),
     b = () =>
         E((e) => {
@@ -109,18 +115,18 @@ let h = '__DEBUG_PROFILE_EFFECTS_STORE',
         return (
             i.useEffect(
                 () => () => {
-                    (n.current.forEach((e) => {
+                    n.current.forEach((e) => {
                         URL.revokeObjectURL(e);
                     }),
-                        (n.current = []));
+                        (n.current = []);
                 },
-                []
+                [],
             ),
             i.useMemo(() => {
                 if (null == t) return null;
                 let e = (e) => {
                         let t = (0, u.$j)(e);
-                        return (n.current.push(t), t);
+                        return n.current.push(t), t;
                     },
                     r = t.config.effects.map((t) => p(f({}, t), { src: e(t.base64) })),
                     i = t.config.stillFrames,
@@ -132,8 +138,8 @@ let h = '__DEBUG_PROFILE_EFFECTS_STORE',
                 return p(f({}, t), {
                     config: p(f({}, t.config), {
                         effects: r,
-                        stillFrames: o
-                    })
+                        stillFrames: o,
+                    }),
                 });
             }, [t])
         );

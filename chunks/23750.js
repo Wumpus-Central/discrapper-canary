@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     Hx: () => g,
     ZP: () => y,
     hv: () => b,
-    pi: () => m
+    pi: () => m,
 }),
     n(997841),
-    n(539854));
+    n(539854);
 var r = n(373793),
     i = n(81825),
     o = n(712057),
@@ -22,7 +22,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,13 +73,41 @@ class m extends i.Z {
     }
     constructor(e) {
         var t, n, r, i, o, a, s, l, c, u, _, p, h;
-        (super(), f(this, 'type', void 0), f(this, 'content', void 0), f(this, 'attachments', void 0), f(this, 'embeds', void 0), f(this, 'timestamp', void 0), f(this, 'editedTimestamp', void 0), f(this, 'flags', void 0), f(this, 'components', void 0), f(this, 'codedLinks', void 0), f(this, 'stickers', void 0), f(this, 'stickerItems', void 0), f(this, 'soundboardSounds', void 0), (this.type = null != (t = e.type) ? t : d.uaV.DEFAULT), (this.content = null != (n = e.content) ? n : ''), (this.attachments = null != (r = e.attachments) ? r : []), (this.embeds = null != (i = e.embeds) ? i : []), (this.timestamp = null != (o = e.timestamp) ? o : new Date()), (this.editedTimestamp = null != (a = e.editedTimestamp) ? a : null), (this.flags = null != (s = e.flags) ? s : 0), (this.components = null != (l = e.components) ? l : []), (this.codedLinks = null != (c = e.codedLinks) ? c : []), (this.stickers = null != (u = e.stickers) ? u : []), (this.stickerItems = null != (p = null != (_ = e.sticker_items) ? _ : e.stickerItems) ? p : []), (this.soundboardSounds = null != (h = e.soundboard_sounds) ? h : e.soundboardSounds));
+        super(),
+            f(this, "type", void 0),
+            f(this, "content", void 0),
+            f(this, "attachments", void 0),
+            f(this, "embeds", void 0),
+            f(this, "timestamp", void 0),
+            f(this, "editedTimestamp", void 0),
+            f(this, "flags", void 0),
+            f(this, "components", void 0),
+            f(this, "codedLinks", void 0),
+            f(this, "stickers", void 0),
+            f(this, "stickerItems", void 0),
+            f(this, "soundboardSounds", void 0),
+            (this.type = null != (t = e.type) ? t : d.uaV.DEFAULT),
+            (this.content = null != (n = e.content) ? n : ""),
+            (this.attachments = null != (r = e.attachments) ? r : []),
+            (this.embeds = null != (i = e.embeds) ? i : []),
+            (this.timestamp = null != (o = e.timestamp) ? o : new Date()),
+            (this.editedTimestamp = null != (a = e.editedTimestamp) ? a : null),
+            (this.flags = null != (s = e.flags) ? s : 0),
+            (this.components = null != (l = e.components) ? l : []),
+            (this.codedLinks = null != (c = e.codedLinks) ? c : []),
+            (this.stickers = null != (u = e.stickers) ? u : []),
+            (this.stickerItems = null != (p = null != (_ = e.sticker_items) ? _ : e.stickerItems) ? p : []),
+            (this.soundboardSounds = null != (h = e.soundboard_sounds) ? h : e.soundboardSounds);
     }
 }
 class g extends i.Z {
     constructor(e) {
         var t;
-        (super(), f(this, 'message', void 0), f(this, 'moderatorReport', void 0), (this.message = new m(e.message)), (this.moderatorReport = null != (t = e.moderator_report) ? t : null));
+        super(),
+            f(this, "message", void 0),
+            f(this, "moderatorReport", void 0),
+            (this.message = new m(e.message)),
+            (this.moderatorReport = null != (t = e.moderator_report) ? t : null);
     }
 }
 class E extends m {
@@ -118,8 +146,8 @@ class E extends m {
                             burst_colors: r,
                             themedBurstColors: (0, o.u)({
                                 colors: r,
-                                shouldProcessMobileColors: (0, u.isIOS)()
-                            })
+                                shouldProcessMobileColors: (0, u.isIOS)(),
+                            }),
                         });
                     } else if (r === s.O.VOTE) {
                         var d, f;
@@ -127,7 +155,7 @@ class E extends m {
                             n = t && a.me_vote ? e : e + 1;
                         a = h(_({}, a), {
                             count_details: h(_({}, a.count_details), { vote: n }),
-                            me_vote: !!t || a.me_vote
+                            me_vote: !!t || a.me_vote,
                         });
                     } else {
                         if (t && a.me_burst) return a;
@@ -135,7 +163,7 @@ class E extends m {
                         a = h(_({}, a), {
                             count: e,
                             count_details: h(_({}, a.count_details), { normal: e }),
-                            me: !!t || a.me
+                            me: !!t || a.me,
                         });
                     }
                 return a;
@@ -150,14 +178,14 @@ class E extends m {
                           count: 0,
                           count_details: {
                               burst: 1,
-                              normal: 0
+                              normal: 0,
                           },
                           burst_count: 1,
                           burst_colors: n,
                           themedBurstColors: (0, o.u)({
                               colors: null != n ? n : [],
-                              shouldProcessMobileColors: (0, u.isIOS)()
-                          })
+                              shouldProcessMobileColors: (0, u.isIOS)(),
+                          }),
                       })
                     : r === s.O.VOTE
                       ? a.push({
@@ -169,10 +197,10 @@ class E extends m {
                             count_details: {
                                 burst: 0,
                                 normal: 0,
-                                vote: 1
+                                vote: 1,
                             },
                             burst_count: 0,
-                            burst_colors: []
+                            burst_colors: [],
                         })
                       : a.push({
                             emoji: e,
@@ -181,12 +209,12 @@ class E extends m {
                             count: 1,
                             count_details: {
                                 burst: 0,
-                                normal: 1
+                                normal: 1,
                             },
                             burst_count: 0,
-                            burst_colors: []
+                            burst_colors: [],
                         })),
-            this.set('reactions', a)
+            this.set("reactions", a)
         );
     }
     addReactionBatch(e, t) {
@@ -207,7 +235,7 @@ class E extends m {
                         t = h(_({}, t), {
                             burst_count: e,
                             me_burst: !o && t.me_burst,
-                            count_details: h(_({}, t.count_details), { burst: e })
+                            count_details: h(_({}, t.count_details), { burst: e }),
                         });
                     } else if (a === s.O.VOTE) {
                         var r, i;
@@ -215,14 +243,14 @@ class E extends m {
                             n = o && !t.me_vote ? e : e - 1;
                         t = h(_({}, t), {
                             count_details: h(_({}, t.count_details), { vote: n }),
-                            me_vote: !o && t.me_vote
+                            me_vote: !o && t.me_vote,
                         });
                     } else {
                         let e = o && !t.me ? t.count : t.count - 1;
                         t = h(_({}, t), {
                             count: e,
                             me: !o && t.me,
-                            count_details: h(_({}, t.count_details), { normal: e })
+                            count_details: h(_({}, t.count_details), { normal: e }),
                         });
                     }
                     c = n;
@@ -233,12 +261,12 @@ class E extends m {
             m = null != (n = null == p ? void 0 : p.normal) ? n : 0,
             g = null != (r = null == p ? void 0 : p.burst) ? r : 0,
             E = null != (i = null == p ? void 0 : p.vote) ? i : 0;
-        return (-1 !== c && d <= 0 && f <= 0 && m <= 0 && g <= 0 && E <= 0 && u.splice(c, 1), this.set('reactions', u));
+        return -1 !== c && d <= 0 && f <= 0 && m <= 0 && g <= 0 && E <= 0 && u.splice(c, 1), this.set("reactions", u);
     }
     removeReactionsForEmoji(e) {
         return this.set(
-            'reactions',
-            this.reactions.filter((t) => !(0, l.ir)(t.emoji, e))
+            "reactions",
+            this.reactions.filter((t) => !(0, l.ir)(t.emoji, e)),
         );
     }
     isSystemDM() {
@@ -260,14 +288,19 @@ class E extends m {
     canDeleteOwnMessage(e) {
         var t, n, i;
         if (this.author.id === e) return !0;
-        let o = null != (i = null == (t = this.interactionMetadata) ? void 0 : t.authorizing_integration_owners) ? i : {};
-        return (null == (n = this.interactionMetadata) ? void 0 : n.user.id) === e && 1 === Object.keys(o).length && r.Y.USER_INSTALL in o;
+        let o =
+            null != (i = null == (t = this.interactionMetadata) ? void 0 : t.authorizing_integration_owners) ? i : {};
+        return (
+            (null == (n = this.interactionMetadata) ? void 0 : n.user.id) === e &&
+            1 === Object.keys(o).length &&
+            r.Y.USER_INSTALL in o
+        );
     }
     toJS() {
         return h(_({}, this), {
             webkhook_id: this.webhookId,
             edited_timestamp: this.editedTimestamp,
-            mention_everyone: this.mentionEveryone
+            mention_everyone: this.mentionEveryone,
         });
     }
     isFirstMessageInForumPost(e) {
@@ -275,7 +308,97 @@ class E extends m {
     }
     constructor(e) {
         var t, n, r;
-        (super(e), f(this, 'id', void 0), f(this, 'channel_id', void 0), f(this, 'author', void 0), f(this, 'bot', void 0), f(this, 'customRenderedContent', void 0), f(this, 'pinned', void 0), f(this, 'mentions', void 0), f(this, 'mentionRoles', void 0), f(this, 'mentionChannels', void 0), f(this, 'mentionGames', void 0), f(this, 'mentionEveryone', void 0), f(this, 'mentioned', void 0), f(this, 'tts', void 0), f(this, 'giftCodes', void 0), f(this, 'state', void 0), f(this, 'nonce', void 0), f(this, 'blocked', void 0), f(this, 'ignored', void 0), f(this, 'call', void 0), f(this, 'webhookId', void 0), f(this, 'reactions', void 0), f(this, 'applicationId', void 0), f(this, 'application', void 0), f(this, 'activity', void 0), f(this, 'activityInstance', void 0), f(this, 'interaction', void 0), f(this, 'interactionData', void 0), f(this, 'interactionMetadata', void 0), f(this, 'interactionError', void 0), f(this, 'messageReference', void 0), f(this, 'isSearchHit', void 0), f(this, 'roleSubscriptionData', void 0), f(this, 'purchaseNotification', void 0), f(this, 'poll', void 0), f(this, 'potions', void 0), f(this, 'loggingName', void 0), f(this, 'referralTrialOfferId', void 0), f(this, 'giftInfo', void 0), f(this, 'giftingPrompt', void 0), f(this, 'messageSnapshots', void 0), f(this, 'isUnsupported', void 0), f(this, 'changelogId', void 0), f(this, 'chatWallpaperInfo', void 0), f(this, 'colorString', void 0), f(this, 'nick', void 0), (this.id = e.id), (this.channel_id = e.channel_id), (this.author = e.author), (this.customRenderedContent = e.customRenderedContent), (this.mentions = e.mentions || []), (this.mentionRoles = e.mentionRoles || []), (this.mentionChannels = e.mentionChannels || []), (this.mentionGames = e.mentionGames || []), (this.mentioned = e.mentioned || !1), (this.pinned = e.pinned || !1), (this.mentionEveryone = e.mentionEveryone || !1), (this.tts = e.tts || !1), (this.giftCodes = e.giftCodes || []), (this.state = e.state || d.yb.SENT), (this.nonce = null != (t = e.nonce) ? t : void 0), (this.blocked = e.blocked || !1), (this.ignored = e.ignored || !1), (this.call = e.call || null), (this.bot = e.bot || !1), (this.webhookId = e.webhookId || null), (this.reactions = e.reactions || []), (this.applicationId = e.application_id || e.applicationId || null), (this.application = e.application || null), (this.activity = e.activity || null), (this.activityInstance = e.activity_instance || e.activityInstance || null), (this.messageReference = e.messageReference || null), (this.isSearchHit = e.hit || e.isSearchHit || !1), (this.loggingName = e.loggingName || null), (this.colorString = e.colorString), (this.nick = e.nick), (this.interaction = e.interaction || null), (this.interactionData = e.interactionData || null), (this.interactionMetadata = e.interactionMetadata || null), (this.interactionError = e.interactionError || null), (this.roleSubscriptionData = e.roleSubscriptionData), (this.purchaseNotification = e.purchaseNotification), (this.poll = e.poll), (this.potions = e.potions), (this.referralTrialOfferId = e.referralTrialOfferId || null), (this.giftInfo = null != (n = e.gift_info) ? n : e.giftInfo), (this.giftingPrompt = e.giftingPrompt || null), (this.messageSnapshots = e.messageSnapshots || []), (this.isUnsupported = e.isUnsupported || !1), (this.changelogId = null != (r = e.changelog_id) ? r : e.changelogId || null), (this.chatWallpaperInfo = e.chatWallpaperInfo || null));
+        super(e),
+            f(this, "id", void 0),
+            f(this, "channel_id", void 0),
+            f(this, "author", void 0),
+            f(this, "bot", void 0),
+            f(this, "customRenderedContent", void 0),
+            f(this, "pinned", void 0),
+            f(this, "mentions", void 0),
+            f(this, "mentionRoles", void 0),
+            f(this, "mentionChannels", void 0),
+            f(this, "mentionGames", void 0),
+            f(this, "mentionEveryone", void 0),
+            f(this, "mentioned", void 0),
+            f(this, "tts", void 0),
+            f(this, "giftCodes", void 0),
+            f(this, "state", void 0),
+            f(this, "nonce", void 0),
+            f(this, "blocked", void 0),
+            f(this, "ignored", void 0),
+            f(this, "call", void 0),
+            f(this, "webhookId", void 0),
+            f(this, "reactions", void 0),
+            f(this, "applicationId", void 0),
+            f(this, "application", void 0),
+            f(this, "activity", void 0),
+            f(this, "activityInstance", void 0),
+            f(this, "interaction", void 0),
+            f(this, "interactionData", void 0),
+            f(this, "interactionMetadata", void 0),
+            f(this, "interactionError", void 0),
+            f(this, "messageReference", void 0),
+            f(this, "isSearchHit", void 0),
+            f(this, "roleSubscriptionData", void 0),
+            f(this, "purchaseNotification", void 0),
+            f(this, "poll", void 0),
+            f(this, "potions", void 0),
+            f(this, "loggingName", void 0),
+            f(this, "referralTrialOfferId", void 0),
+            f(this, "giftInfo", void 0),
+            f(this, "giftingPrompt", void 0),
+            f(this, "messageSnapshots", void 0),
+            f(this, "isUnsupported", void 0),
+            f(this, "changelogId", void 0),
+            f(this, "chatWallpaperInfo", void 0),
+            f(this, "colorString", void 0),
+            f(this, "nick", void 0),
+            (this.id = e.id),
+            (this.channel_id = e.channel_id),
+            (this.author = e.author),
+            (this.customRenderedContent = e.customRenderedContent),
+            (this.mentions = e.mentions || []),
+            (this.mentionRoles = e.mentionRoles || []),
+            (this.mentionChannels = e.mentionChannels || []),
+            (this.mentionGames = e.mentionGames || []),
+            (this.mentioned = e.mentioned || !1),
+            (this.pinned = e.pinned || !1),
+            (this.mentionEveryone = e.mentionEveryone || !1),
+            (this.tts = e.tts || !1),
+            (this.giftCodes = e.giftCodes || []),
+            (this.state = e.state || d.yb.SENT),
+            (this.nonce = null != (t = e.nonce) ? t : void 0),
+            (this.blocked = e.blocked || !1),
+            (this.ignored = e.ignored || !1),
+            (this.call = e.call || null),
+            (this.bot = e.bot || !1),
+            (this.webhookId = e.webhookId || null),
+            (this.reactions = e.reactions || []),
+            (this.applicationId = e.application_id || e.applicationId || null),
+            (this.application = e.application || null),
+            (this.activity = e.activity || null),
+            (this.activityInstance = e.activity_instance || e.activityInstance || null),
+            (this.messageReference = e.messageReference || null),
+            (this.isSearchHit = e.hit || e.isSearchHit || !1),
+            (this.loggingName = e.loggingName || null),
+            (this.colorString = e.colorString),
+            (this.nick = e.nick),
+            (this.interaction = e.interaction || null),
+            (this.interactionData = e.interactionData || null),
+            (this.interactionMetadata = e.interactionMetadata || null),
+            (this.interactionError = e.interactionError || null),
+            (this.roleSubscriptionData = e.roleSubscriptionData),
+            (this.purchaseNotification = e.purchaseNotification),
+            (this.poll = e.poll),
+            (this.potions = e.potions),
+            (this.referralTrialOfferId = e.referralTrialOfferId || null),
+            (this.giftInfo = null != (n = e.gift_info) ? n : e.giftInfo),
+            (this.giftingPrompt = e.giftingPrompt || null),
+            (this.messageSnapshots = e.messageSnapshots || []),
+            (this.isUnsupported = e.isUnsupported || !1),
+            (this.changelogId = null != (r = e.changelog_id) ? r : e.changelogId || null),
+            (this.chatWallpaperInfo = e.chatWallpaperInfo || null);
     }
 }
 function b(e) {

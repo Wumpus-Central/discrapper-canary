@@ -10,57 +10,57 @@ let o = (t) => {
         {
             title: d,
             body: h,
-            confirm: x
+            confirm: x,
         } = (function (t) {
             let i = (0, l.ZP)(t, !0);
             return t.type === e.d.GUILD_CATEGORY
                 ? {
-                      title: s.intl.string(s.t['4VpUw8']),
+                      title: s.intl.string(s.t["4VpUw8"]),
                       body: s.intl.format(s.t.GuhMa2, { channelName: i }),
-                      confirm: s.intl.string(s.t.xOscRk)
+                      confirm: s.intl.string(s.t.xOscRk),
                   }
                 : {
-                      title: s.intl.string(s.t['4VpUw8']),
-                      body: s.intl.format(s.t['2z/hBg'], { channelName: i }),
-                      confirm: s.intl.string(s.t.gGs6TU)
+                      title: s.intl.string(s.t["4VpUw8"]),
+                      body: s.intl.format(s.t["2z/hBg"], { channelName: i }),
+                      confirm: s.intl.string(s.t.gGs6TU),
                   };
         })(i);
     return (0, n.jsxs)(a.Y0X, {
         transitionState: c,
-        'aria-label': d,
-        parentComponent: 'RemoveFromFavoritesModal',
+        "aria-label": d,
+        parentComponent: "RemoveFromFavoritesModal",
         children: [
             (0, n.jsx)(a.xBx, {
                 separator: !1,
                 children: (0, n.jsx)(a.X6q, {
-                    variant: 'heading-lg/semibold',
-                    children: d
-                })
+                    variant: "heading-lg/semibold",
+                    children: d,
+                }),
             }),
             (0, n.jsx)(a.hzk, {
                 children: (0, n.jsx)(a.Text, {
-                    variant: 'text-md/normal',
-                    color: 'header-primary',
-                    children: h
-                })
+                    variant: "text-md/normal",
+                    color: "header-primary",
+                    children: h,
+                }),
             }),
             (0, n.jsx)(a.mzw, {
                 children: (0, n.jsxs)(a.hE2, {
-                    direction: 'horizontal-reverse',
+                    direction: "horizontal-reverse",
                     children: [
                         (0, n.jsx)(a.zxk, {
-                            variant: 'critical-primary',
+                            variant: "critical-primary",
                             text: x,
-                            onClick: o
+                            onClick: o,
                         }),
                         (0, n.jsx)(a.zxk, {
-                            variant: 'secondary',
-                            text: s.intl.string(s.t['ETE/oK']),
-                            onClick: r
-                        })
-                    ]
-                })
-            })
-        ]
+                            variant: "secondary",
+                            text: s.intl.string(s.t["ETE/oK"]),
+                            onClick: r,
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 };

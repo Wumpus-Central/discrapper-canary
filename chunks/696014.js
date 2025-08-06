@@ -1,4 +1,4 @@
-(n.d(t, { s: () => c }), n(388685));
+n.d(t, { s: () => c }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -11,20 +11,20 @@ function c() {
         let { showAll: n = !1, className: i, children: o, lineClamp: c = l } = e,
             u = {
                 lineClamp: c,
-                WebkitLineClamp: c
+                WebkitLineClamp: c,
             },
             d = (e) => {
                 null != e && t(e.scrollHeight - e.clientHeight > 1);
             };
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             ref: d,
             className: a()(s.lineClamp, i),
             style: n ? void 0 : u,
-            children: o
+            children: o,
         });
     }
     return {
         isTruncated: e,
-        ExpandableTextContainer: i.memo(n)
+        ExpandableTextContainer: i.memo(n),
     };
 }

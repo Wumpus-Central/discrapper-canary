@@ -1,1 +1,1 @@
-e.exports = { section: 'section_be87fd' };
+e.exports = { section: "section_be87fd" };

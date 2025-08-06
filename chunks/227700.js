@@ -5,9 +5,9 @@ var r = {
         floor: Math.floor,
         trunc: function (e) {
             return e < 0 ? Math.ceil(e) : Math.floor(e);
-        }
+        },
     },
-    i = 'trunc';
+    i = "trunc";
 function o(e) {
     return e ? r[e] : r[i];
 }

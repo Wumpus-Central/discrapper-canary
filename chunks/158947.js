@@ -6,6 +6,6 @@ function a(e) {
     let { className: t } = e;
     return (0, i.jsx)(r.IGR, {
         text: s.intl.string(s.t.y2b7CA),
-        className: t
+        className: t,
     });
 }

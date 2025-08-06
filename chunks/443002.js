@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(622535),
@@ -34,19 +34,19 @@ let T = function (e) {
                 null != w.current &&
                 w.current.scrollTo({
                     to: D.current.offsetTop,
-                    animate: !0
+                    animate: !0,
                 });
         }, []),
         x = i.useCallback(() => {
-            (null == T || T(),
+            null == T || T(),
                 f.default.track(O.rMx.MODAL_DISMISSED, {
                     type: O.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_stack: R,
                     location_section: t.section,
                     location_object: t.object,
                     guild_id: n.id,
-                    duration_open_ms: Date.now() - C
-                }));
+                    duration_open_ms: Date.now() - C,
+                });
         }, [T, t, R, C, n.id]),
         M = i.useCallback(
             (e) => {
@@ -57,11 +57,11 @@ let T = function (e) {
                         location_stack: R,
                         location_section: t.section,
                         location_object: t.object,
-                        guild_id: n.id
+                        guild_id: n.id,
                     }),
                     (N.current = !0));
             },
-            [t, R, n.id]
+            [t, R, n.id],
         );
     return (
         i.useEffect(() => {
@@ -70,107 +70,107 @@ let T = function (e) {
                 location_stack: R,
                 location_section: t.section,
                 location_object: t.object,
-                guild_id: n.id
+                guild_id: n.id,
             });
         }, [n.id, t, R]),
         i.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && x();
+                "Escape" === e.key && x();
             }
             return (
-                window.addEventListener('keydown', e),
+                window.addEventListener("keydown", e),
                 () => {
-                    window.removeEventListener('keydown', e);
+                    window.removeEventListener("keydown", e);
                 }
             );
         }, [x]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != T &&
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: I.closeIconWrapper,
                         children: (0, r.jsx)(s.Z, {
                             className: I.closeIcon,
                             closeAction: x,
-                            keybind: 'ESC',
-                            variant: s.Z.Variants.BOLD
-                        })
+                            keybind: "ESC",
+                            variant: s.Z.Variants.BOLD,
+                        }),
                     }),
                 (0, r.jsxs)(a.yWw, {
                     ref: w,
                     className: I.scroller,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: I.header,
                             children: [
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: I.headerContentWrapper,
                                     children: [
                                         (0, r.jsx)(u.Z, {
                                             guild: e.guild,
                                             themeResponsive: !1,
-                                            onButtonClick: L
+                                            onButtonClick: L,
                                         }),
                                         (0, r.jsx)(a.X6q, {
                                             className: I.heading,
-                                            color: 'always-white',
-                                            variant: 'display-lg',
-                                            children: v.intl.string(v.t.N4sqzM)
+                                            color: "always-white",
+                                            variant: "display-lg",
+                                            children: v.intl.string(v.t.N4sqzM),
                                         }),
                                         (0, r.jsx)(p.Z, {
                                             guild: n,
                                             closeLayer: x,
-                                            onCtaVisibilityChange: A
+                                            onCtaVisibilityChange: A,
                                         }),
                                         (0, r.jsx)(g.Z, { guild: n }),
-                                        (0, r.jsx)(E.Z, { guild: n })
-                                    ]
+                                        (0, r.jsx)(E.Z, { guild: n }),
+                                    ],
                                 }),
-                                (0, r.jsx)(y.O, {})
-                            ]
+                                (0, r.jsx)(y.O, {}),
+                            ],
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: I.middleBodyContentWrapper,
                             children: (0, r.jsx)(d.Z, {
                                 ref: D,
                                 guild: e.guild,
-                                onClose: x
-                            })
+                                onClose: x,
+                            }),
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: I.lowerBody,
                             children: [
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: I.lowerBodyContentWrapper,
                                     children: [
                                         (0, r.jsx)(b.Z, {
                                             className: I.tierComparisonTable,
-                                            guild: n
+                                            guild: n,
                                         }),
                                         (0, r.jsx)(_.Z, {}),
-                                        (0, r.jsx)(h.Z, {})
-                                    ]
+                                        (0, r.jsx)(h.Z, {}),
+                                    ],
                                 }),
                                 (0, r.jsx)(y.A, {}),
-                                (0, r.jsx)('div', { className: I.lowerBodyBackgroundImage })
-                            ]
+                                (0, r.jsx)("div", { className: I.lowerBodyBackgroundImage }),
+                            ],
                         }),
                         (0, r.jsx)(o.$, {
                             innerRef: P,
                             onChange: M,
-                            children: (0, r.jsx)('div', {
+                            children: (0, r.jsx)("div", {
                                 ref: P,
-                                className: I.persistentCtaSpacer
-                            })
-                        })
-                    ]
+                                className: I.persistentCtaSpacer,
+                            }),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(m.Z, {
                     guild: n,
                     isVisible: !S,
-                    closeLayer: x
-                })
-            ]
+                    closeLayer: x,
+                }),
+            ],
         })
     );
 };

@@ -10,32 +10,32 @@ var i = n(468363),
     u = n(223009);
 let d = function (e) {
     let { hovered: t, activities: n, applicationStream: d, status: p, user: h, userIgnored: f } = e,
-        { voiceActivityStatusEnabled: g } = (0, i.U)({ location: 'StatusText' }),
+        { voiceActivityStatusEnabled: g } = (0, i.U)({ location: "StatusText" }),
         { voiceChannel: m } = (0, a.Z)({ userId: null == h ? void 0 : h.id }),
         b = g ? m : void 0;
     return f
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: u.text,
-              children: c.intl.string(c.t.tFY5ZW)
+              children: c.intl.string(c.t.tFY5ZW),
           })
         : (0, l.Z)({
                 activities: n,
                 status: p,
                 applicationStream: d,
-                voiceChannel: b
+                voiceChannel: b,
             })
           ? (0, r.jsx)(o.Z, {
-                location: 'StatusText',
+                location: "StatusText",
                 textClassName: u.statusText,
                 activities: n,
                 applicationStream: d,
                 voiceChannel: b,
                 animateEmoji: t,
                 user: h,
-                textSize: 'sm'
+                textSize: "sm",
             })
-          : (0, r.jsx)('div', {
+          : (0, r.jsx)("div", {
                 className: u.text,
-                children: (0, s.u5)(p)
+                children: (0, s.u5)(p),
             });
 };

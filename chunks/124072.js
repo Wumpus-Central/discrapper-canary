@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,8 @@ function h(e, t) {
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,45 +77,54 @@ function m(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let g = (e) => {
-    var { ref: t, children: n, className: o, color: d, roleColors: _, iconType: m, onMouseEnter: g, onMouseLeave: E } = e,
-        b = h(e, ['ref', 'children', 'className', 'color', 'roleColors', 'iconType', 'onMouseEnter', 'onMouseLeave']);
+    var {
+            ref: t,
+            children: n,
+            className: o,
+            color: d,
+            roleColors: _,
+            iconType: m,
+            onMouseEnter: g,
+            onMouseLeave: E,
+        } = e,
+        b = h(e, ["ref", "children", "className", "color", "roleColors", "iconType", "onMouseEnter", "onMouseLeave"]);
     let [y, O] = i.useState(!1),
         { gradientStyle: v, gradientClassname: I } = (0, l.Icv)({
             colorStrings: null != _ ? _ : null,
-            roleStyle: 'username',
-            animateGradient: y
+            roleStyle: "username",
+            animateGradient: y,
         }),
         T = i.useCallback(
             (e) => {
-                (O(!0), null == g || g(e));
+                O(!0), null == g || g(e);
             },
-            [O, g]
+            [O, g],
         ),
         S = i.useCallback(
             (e) => {
-                (O(!1), null == E || E(e));
+                O(!1), null == E || E(e);
             },
-            [O, E]
+            [O, E],
         ),
         A = {};
     return (
         null != d &&
             (A = {
                 color: (0, s.Rf)(d),
-                backgroundColor: y ? (0, s.br)(d, 0.3) : (0, s.br)(d, 0.1)
+                backgroundColor: y ? (0, s.br)(d, 0.3) : (0, s.br)(d, 0.1),
             }),
         (0, r.jsx)(
             l.P3F,
             p(f({}, b), {
                 innerRef: t,
-                tag: 'span',
+                tag: "span",
                 className: a()(o, {
                     [u.wrapper]: !0,
-                    interactive: b.onClick
+                    interactive: b.onClick,
                 }),
                 onMouseEnter: T,
                 onMouseLeave: S,
@@ -124,16 +134,16 @@ let g = (e) => {
                     null != m
                         ? (0, r.jsx)(c.Z, {
                               iconType: m,
-                              children: n
+                              children: n,
                           })
                         : null != _
-                          ? (0, r.jsx)('span', {
+                          ? (0, r.jsx)("span", {
                                 style: f({}, v),
                                 className: I,
-                                children: n
+                                children: n,
                             })
-                          : n
-            })
+                          : n,
+            }),
         )
     );
 };

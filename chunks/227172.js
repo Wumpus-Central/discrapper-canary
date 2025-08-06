@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => G,
-    v: () => U
+    v: () => U,
 });
 var r = n(255367),
     i = n(73800),
@@ -42,7 +42,7 @@ function k(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -52,15 +52,15 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 k(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -72,10 +72,18 @@ let U = {
         [o.z.IOS]: null,
         [o.z.ANDROID]: null,
         [o.z.XBOX]: b.Z,
-        [o.z.PLAYSTATION]: E.Z
+        [o.z.PLAYSTATION]: E.Z,
     },
     G = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: E, onReaction: b, onVoiceChannelPreview: k, onUserPopoutClosed: G, trackRankingItemInteraction: B } = e,
+        let {
+                channel: t,
+                entry: n,
+                disableGameProfileLinks: E,
+                onReaction: b,
+                onVoiceChannelPreview: k,
+                onUserPopoutClosed: G,
+                trackRankingItemInteraction: B,
+            } = e,
             { largeImage: Z } = (0, O.rv)({ entry: n }),
             { user: F, details: V, appName: H, activity: Y, embeddedActivity: W } = (0, L.n)(n),
             { primaryColor: K, secondaryColor: z } = (0, C.Z)(null == Z ? void 0 : Z.src),
@@ -87,7 +95,7 @@ let U = {
             ei = en === o.z.XBOX ? x.ABu.XBOX : en === o.z.PLAYSTATION ? x.ABu.PLAYSTATION : void 0,
             eo = (0, N.Z)(ei),
             { data: ea } = (0, h.IX)(n.extra.application_id),
-            es = (0, d.q)(ea, 'MemberListGamingContentPopout'),
+            es = (0, d.q)(ea, "MemberListGamingContentPopout"),
             el = (0, m.L)(Y, W),
             ec = i.useCallback(
                 (e) => {
@@ -98,7 +106,7 @@ let U = {
                                   entry: n,
                                   channel: t,
                                   users: [$, ee],
-                                  countOthers: et
+                                  countOthers: et,
                               })
                             : (0, A.HV)(n, t, F);
                     return (0, S.SO)({
@@ -108,15 +116,15 @@ let U = {
                         description: r,
                         timestamp: (0, T.yh)(n, q),
                         colors: [K, z],
-                        channelId: e
+                        channelId: e,
                     });
                 },
-                [null == Z ? void 0 : Z.src, t, J, n, q, et, $, ee, K, z, F]
+                [null == Z ? void 0 : Z.src, t, J, n, q, et, $, ee, K, z, F],
             );
         if (null == F) return null;
         let eu = (0, r.jsx)(P.Gk, {
                 location: null == X ? P.Gt.POPOUT : P.Gt.STREAMING_POPOUT,
-                children: R.W.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
+                children: R.W.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
             }),
             ed =
                 null == Q
@@ -128,7 +136,7 @@ let U = {
                                   : (0, r.jsx)(D.Z, {
                                         onClick: eo,
                                         Icon: er,
-                                        'aria-label': M.intl.string(M.t.YR4cHB)
+                                        "aria-label": M.intl.string(M.t.YR4cHB),
                                     }),
                           userDescription: (0, T.kr)(n) ? M.t.vPg1JS : M.t.rPqqtr,
                           title: H,
@@ -137,25 +145,25 @@ let U = {
                           entry: n,
                           disableGameProfileLinks: E,
                           onUserPopoutClosed: G,
-                          trackRankingItemInteraction: B
+                          trackRankingItemInteraction: B,
                       })
                     : (0, r.jsx)(w.jL, {
                           channel: t,
                           title: n.extra.game_name,
                           subtitle: V,
                           badges: eu,
-                          userDescription: M.t['6oWFUF'],
+                          userDescription: M.t["6oWFUF"],
                           entry: n,
                           stream: Q,
                           onUserPopoutClosed: G,
-                          trackRankingItemInteraction: B
+                          trackRankingItemInteraction: B,
                       }),
             ef =
                 !el && es
                     ? (0, r.jsx)(f.Z, {
                           application: ea,
                           ButtonComponent: (e) => (0, r.jsx)(w.Ll, j({ IconComponent: s.v3n }, e)),
-                          location: 'MemberListGamingContentPopout'
+                          location: "MemberListGamingContentPopout",
                       })
                     : null,
             e_ = [
@@ -163,16 +171,16 @@ let U = {
                     ? (0, r.jsx)(_.Z, {
                           activity: Y,
                           user: F,
-                          ButtonComponent: (e) => (0, r.jsx)(w.Ll, j({ IconComponent: s.iWm }, e))
+                          ButtonComponent: (e) => (0, r.jsx)(w.Ll, j({ IconComponent: s.iWm }, e)),
                       })
                     : null,
                 (0, u.Z)(Y)
                     ? (0, r.jsx)(p.Z, {
                           activity: Y,
-                          ButtonComponent: (e) => (0, r.jsx)(w.Ll, j({ IconComponent: s.tEF }, e))
+                          ButtonComponent: (e) => (0, r.jsx)(w.Ll, j({ IconComponent: s.tEF }, e)),
                       })
                     : null,
-                ef
+                ef,
             ].filter(y.lm);
         return (0, r.jsxs)(w.yR, {
             children: [
@@ -186,9 +194,9 @@ let U = {
                         generateReactionImage: ec,
                         reactionImageAltText: (0, A.IS)(n, F),
                         entry: n,
-                        buttons: e_
-                    })
-                })
-            ]
+                        buttons: e_,
+                    }),
+                }),
+            ],
         });
     };

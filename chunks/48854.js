@@ -4,5 +4,5 @@ let i = 0,
     o = new r.SnowflakeSequence();
 function a() {
     let e = Date.now();
-    return (i !== e && (o.reset(), (i = e)), r.default.fromTimestampWithSequence(e, o));
+    return i !== e && (o.reset(), (i = e)), r.default.fromTimestampWithSequence(e, o);
 }

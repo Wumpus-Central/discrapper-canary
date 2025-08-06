@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(539854), n(388685), n(467055));
+n.d(t, { Z: () => y }), n(539854), n(388685), n(467055);
 var i = n(73800),
     r = n(512722),
     l = n.n(r),
@@ -21,24 +21,24 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -56,37 +56,33 @@ function y(e, t, n) {
                             (n[l] = {
                                 id: e,
                                 permission: !0,
-                                type: d.Kw.ROLE
+                                type: d.Kw.ROLE,
                             }),
                         r in n ||
                             (n[r] = {
                                 id: i,
                                 permission: !0,
-                                type: d.Kw.CHANNEL
+                                type: d.Kw.CHANNEL,
                             }),
                         n
                     );
                 })(e, null != r ? r : {}),
-            [r, e]
+            [r, e],
         ),
-        y = (0, s.e7)(
-            [x.Z],
-            () => {
-                var e;
-                if (null == n) return;
-                let t = x.Z.getCommand(n);
-                return null != (e = null == t ? void 0 : t.permissions) ? e : {};
-            },
-            [n]
-        ),
-        _ = (0, s.e7)(
-            [x.Z],
-            () => {
-                var e;
-                return null == n ? x.Z.getEditedApplication() : null == (e = x.Z.getEditedCommand()) ? void 0 : e.permissions;
-            },
-            [n]
-        ),
+        y = (0, s.e7)([x.Z], () => {
+            var e;
+            if (null == n) return;
+            let t = x.Z.getCommand(n);
+            return null != (e = null == t ? void 0 : t.permissions) ? e : {};
+        }, [n]),
+        _ = (0, s.e7)([x.Z], () => {
+            var e;
+            return null == n
+                ? x.Z.getEditedApplication()
+                : null == (e = x.Z.getEditedCommand())
+                  ? void 0
+                  : e.permissions;
+        }, [n]),
         C = null != n ? n : t,
         N = null != n ? y : o,
         S = i.useMemo(() => (null != _ ? _ : O({}, null != N ? N : {})), [_, N]),
@@ -101,27 +97,32 @@ function y(e, t, n) {
             originalCommandPermissions: y,
             editedTargetPermissions: (function (e, t) {
                 let n = (0, s.e7)([b.Z], () => b.Z.getGuild(e), [e]);
-                l()(null != n, 'guild must be present to be editing its integration settings');
+                l()(null != n, "guild must be present to be editing its integration settings");
                 let r = (0, s.e7)([g.Z], () => g.Z.getHighestRole(n), [n]),
                     o = (0, s.e7)([f.default], () => {
                         var e;
                         return null == (e = f.default.getCurrentUser()) ? void 0 : e.id;
                     });
-                l()(null != o, 'useComputePermissions: currentUserId must not be null');
+                l()(null != o, "useComputePermissions: currentUserId must not be null");
                 let a = o === n.ownerId,
                     {
                         channelIds: c,
                         roleIds: x,
-                        userIds: j
+                        userIds: j,
                     } = i.useMemo(() => {
                         let e = [],
                             n = [],
                             i = [];
-                        for (let r of Object.values(t)) r.type === d.Kw.CHANNEL ? e.push(r.id) : r.type === d.Kw.ROLE ? n.push(r.id) : r.type === d.Kw.USER && i.push(r.id);
+                        for (let r of Object.values(t))
+                            r.type === d.Kw.CHANNEL
+                                ? e.push(r.id)
+                                : r.type === d.Kw.ROLE
+                                  ? n.push(r.id)
+                                  : r.type === d.Kw.USER && i.push(r.id);
                         return {
                             channelIds: e,
                             roleIds: n,
-                            userIds: i
+                            userIds: i,
                         };
                     }, [t]),
                     y = (0, s.cj)(
@@ -131,9 +132,9 @@ function y(e, t, n) {
                                 c
                                     .map(p.Z.getChannel)
                                     .filter(h.lm)
-                                    .map((e) => [e.id, e])
+                                    .map((e) => [e.id, e]),
                             ),
-                        [c]
+                        [c],
                     ),
                     _ = (0, s.cj)(
                         [m.Z],
@@ -142,9 +143,9 @@ function y(e, t, n) {
                                 x
                                     .map((t) => m.Z.getRole(e, t))
                                     .filter(h.lm)
-                                    .map((e) => [e.id, e])
+                                    .map((e) => [e.id, e]),
                             ),
-                        [x, e]
+                        [x, e],
                     ),
                     C = (0, s.cj)(
                         [f.default],
@@ -153,9 +154,9 @@ function y(e, t, n) {
                                 j
                                     .map(f.default.getUser)
                                     .filter(h.lm)
-                                    .map((e) => [e.id, e])
+                                    .map((e) => [e.id, e]),
                             ),
-                        [j]
+                        [j],
                     );
                 return i.useMemo(() => {
                     let e = n.id,
@@ -167,14 +168,15 @@ function y(e, t, n) {
                         if (s.type === d.Kw.CHANNEL) {
                             let e = s.id === i,
                                 n = y[s.id];
-                            ((t = e || g.Z.can(v.Plq.VIEW_CHANNEL, n)), (c = !0));
+                            (t = e || g.Z.can(v.Plq.VIEW_CHANNEL, n)), (c = !0);
                         } else if (s.type === d.Kw.ROLE) {
                             let i = s.id === e,
                                 l = _[s.id];
-                            ((t = i || null != l), (c = a || i || g.Z.isRoleHigher(n, r, l)));
+                            (t = i || null != l), (c = a || i || g.Z.isRoleHigher(n, r, l));
                         } else if (s.type === d.Kw.USER) {
                             let e = C[s.id];
-                            ((t = null != e), (c = null != e && (a || g.Z.canManageUser(v.Plq.USE_APPLICATION_COMMANDS, e, n))));
+                            (t = null != e),
+                                (c = null != e && (a || g.Z.canManageUser(v.Plq.USE_APPLICATION_COMMANDS, e, n)));
                         }
                         l[o] = (function (e, t) {
                             return (
@@ -195,14 +197,14 @@ function y(e, t, n) {
                             );
                         })(O({}, s), {
                             canRead: t,
-                            canWrite: c
+                            canWrite: c,
                         });
                     }
                     return l;
                 }, [y, n, r, a, t, _, C]);
             })(e, S),
             hasChanges: w,
-            selectedPermissionCount: I
+            selectedPermissionCount: I,
         }
     );
 }

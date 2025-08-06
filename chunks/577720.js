@@ -8,14 +8,17 @@ var i = n(255367),
 class c extends r.Component {
     render() {
         let { className: e, videoID: t, videoClassName: n } = this.props;
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: a()(e, o.videoWrapper),
-            children: (0, i.jsx)('iframe', {
+            children: (0, i.jsx)("iframe", {
                 className: a()(n, o.video),
-                src: 'https://www.youtube.com/embed/'.concat(t, '?rel=0&showinfo=0&controls=1&origin=https://').concat(l.$R1),
+                src: "https://www.youtube.com/embed/"
+                    .concat(t, "?rel=0&showinfo=0&controls=1&origin=https://")
+                    .concat(l.$R1),
                 allowFullScreen: !0,
-                sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
-            })
+                sandbox:
+                    "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
+            }),
         });
     }
 }

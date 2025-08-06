@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { createStringInterpolator: () => _ }));
+n.r(t), n.d(t, { createStringInterpolator: () => _ });
 var r,
     i = n(109393),
     o = n(414776),
@@ -9,10 +9,10 @@ var r,
     u = /(#(?:[0-9a-f]{2}){2,4}|(#[0-9a-f]{3})|(rgb|hsl)a?\((-?\d+%?[,\s]+){2,3}\s*[\d\.]+%?\))/gi,
     d = /rgba\(([0-9\.-]+), ([0-9\.-]+), ([0-9\.-]+), ([0-9\.-]+)\)/gi,
     f = function (e, t, n, r, i) {
-        return 'rgba(' + Math.round(t) + ', ' + Math.round(n) + ', ' + Math.round(r) + ', ' + i + ')';
+        return "rgba(" + Math.round(t) + ", " + Math.round(n) + ", " + Math.round(r) + ", " + i + ")";
     },
     _ = function (e) {
-        r || (r = l.colorNames ? RegExp('(' + Object.keys(l.colorNames).join('|') + ')', 'g') : /^\b$/);
+        r || (r = l.colorNames ? RegExp("(" + Object.keys(l.colorNames).join("|") + ")", "g") : /^\b$/);
         var t = e.output.map(function (e) {
                 return (0, o.je)(e).replace(u, s.c).replace(r, s.c);
             }),

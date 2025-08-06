@@ -8,13 +8,13 @@ var r = n(720379),
     },
     c = s({
         start: null,
-        end: null
+        end: null,
     }),
     u = s({
         start: null,
         end: null,
         decoratorKey: null,
-        leaves: null
+        leaves: null,
     });
 function d(e, t) {
     var n = [];
@@ -31,10 +31,10 @@ function d(e, t) {
                 n.push(
                     new c({
                         start: e + t,
-                        end: r + t
-                    })
+                        end: r + t,
+                    }),
                 );
-            }
+            },
         ),
         o(n)
     );
@@ -54,10 +54,10 @@ e.exports = {
                     leaves: o.of(
                         new c({
                             start: 0,
-                            end: 0
-                        })
-                    )
-                })
+                            end: 0,
+                        }),
+                    ),
+                }),
             );
         var s = [],
             _ = n ? n.getDecorations(t, e) : o(a(null, i)),
@@ -69,11 +69,11 @@ e.exports = {
                         start: e,
                         end: t,
                         decoratorKey: _.get(e),
-                        leaves: d(p.slice(e, t).toList(), e)
-                    })
+                        leaves: d(p.slice(e, t).toList(), e),
+                    }),
                 );
             }),
             o(s)
         );
-    }
+    },
 };

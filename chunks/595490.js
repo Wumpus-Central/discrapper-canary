@@ -1,6 +1,6 @@
 e.exports = function e(t, n) {
     if (t === n) return !0;
-    if (t && n && 'object' == typeof t && 'object' == typeof n) {
+    if (t && n && "object" == typeof t && "object" == typeof n) {
         if (t.constructor !== n.constructor) return !1;
         if (Array.isArray(t)) {
             if ((r = t.length) != n.length) return !1;

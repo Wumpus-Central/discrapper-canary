@@ -12,16 +12,17 @@ function u() {
         return {
             frame: e,
             channel: void 0,
-            guild: void 0
+            guild: void 0,
         };
     let t = (0, s.Z)();
-    if (null == t) throw new o.Z({ errorCode: c.lTL.INVALID_CHANNEL }, 'Invalid channel');
+    if (null == t) throw new o.Z({ errorCode: c.lTL.INVALID_CHANNEL }, "Invalid channel");
     let n = l.Z.getGuild(t.getGuildId());
-    if (null == n) throw new o.Z({ errorCode: c.lTL.INVALID_CHANNEL }, 'Invalid guild '.concat(t.getGuildId()));
-    if (!(0, i.b)(a.Z, n, t)) throw new o.Z({ errorCode: c.lTL.INVALID_PERMISSIONS }, 'No invite permissions for '.concat(t.id));
+    if (null == n) throw new o.Z({ errorCode: c.lTL.INVALID_CHANNEL }, "Invalid guild ".concat(t.getGuildId()));
+    if (!(0, i.b)(a.Z, n, t))
+        throw new o.Z({ errorCode: c.lTL.INVALID_PERMISSIONS }, "No invite permissions for ".concat(t.id));
     return {
         frame: void 0,
         channel: t,
-        guild: n
+        guild: n,
     };
 }

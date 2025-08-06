@@ -8,7 +8,7 @@ var r = n(255367),
 let c = (e) => {
     var t, n;
     let {
-            node: { info: c }
+            node: { info: c },
         } = e,
         d = l.useRef(
             a.Z.reactParserFor(
@@ -16,24 +16,24 @@ let c = (e) => {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, a.Z.defaultRules)),
@@ -50,14 +50,14 @@ let c = (e) => {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
-            )
+                t),
+            ),
         );
     return null == c
         ? null
         : (0, r.jsx)(i.Wn, {
               className: o.infoBox,
               messageType: i.QYI.INFO,
-              children: d.current(c)
+              children: d.current(c),
           });
 };

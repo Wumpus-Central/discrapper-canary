@@ -7,7 +7,7 @@ function s(e) {
             null == o || o();
             let e = setInterval(n, s);
             return () => {
-                (null == a || a(), clearInterval(e));
+                null == a || a(), clearInterval(e);
             };
         }
     }, [s, t, n, a, o]);

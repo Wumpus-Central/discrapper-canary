@@ -28,31 +28,31 @@ function x(e) {
         : (0, n.jsx)(_.O3, {
               children: (0, n.jsx)(o.mzw, {
                   align: c.Z.Align.CENTER,
-                  'data-migration-pending': !0,
-                  children: (0, n.jsxs)('div', {
+                  "data-migration-pending": !0,
+                  children: (0, n.jsxs)("div", {
                       className: m.promotionalFooter,
                       children: [
                           (0, n.jsx)(o.Xo$, {
-                              'aria-label': null == h ? void 0 : h.username,
+                              "aria-label": null == h ? void 0 : h.username,
                               size: b,
                               src: null == h ? void 0 : h.getAvatarURL(void 0, (0, o.pxk)(b), !j),
-                              avatarDecoration: g
+                              avatarDecoration: g,
                           }),
                           (0, n.jsx)(l.zx, {
-                              variant: 'primary',
+                              variant: "primary",
                               text: S.collectRewardButtonText(),
                               onClick: () => {
-                                  (r(),
+                                  r(),
                                       (0, C.Z)({
                                           product: t,
                                           shouldShowPromotionalExperience: !0,
                                           analyticsLocations: L,
-                                          purchaseType: f.o8.PROMOTIONAL
-                                      }));
-                              }
-                          })
-                      ]
-                  })
-              })
+                                          purchaseType: f.o8.PROMOTIONAL,
+                                      });
+                              },
+                          }),
+                      ],
+                  }),
+              }),
           });
 }

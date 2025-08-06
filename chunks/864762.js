@@ -1,4 +1,4 @@
-(t.d(a, { k: () => o }), t(388685));
+t.d(a, { k: () => o }), t(388685);
 var r = t(73800),
     s = t(110924),
     n = t(626135),
@@ -23,13 +23,13 @@ function o(e, a) {
             }
         }, [t]),
         j = r.useCallback((e) => {
-            (x(null), N(e), o(l.O.ERROR));
+            x(null), N(e), o(l.O.ERROR);
         }, []),
         p = r.useCallback((e) => {
-            (x(e), o(l.O.PRE_CONNECT_WAITING));
+            x(e), o(l.O.PRE_CONNECT_WAITING);
         }, []),
         v = r.useCallback((e) => {
-            (x(null), h(e), o(l.O.DISCORD_CONSENT));
+            x(null), h(e), o(l.O.DISCORD_CONSENT);
         }, []);
     return (
         r.useEffect(() => {
@@ -38,7 +38,7 @@ function o(e, a) {
                     location_stack: e,
                     previous_step: c,
                     current_step: t,
-                    platform_type: a
+                    platform_type: a,
                 });
         }, [t, c, e, a]),
         {
@@ -49,7 +49,7 @@ function o(e, a) {
             handleAuthToken: v,
             expectedCallbackState: d,
             callbackData: u,
-            errorCode: m
+            errorCode: m,
         }
     );
 }

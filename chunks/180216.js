@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685), n(953529));
+n.d(t, { Z: () => b }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -17,7 +17,7 @@ function b(e) {
     let { guildId: t, channelId: n } = e,
         b = (0, u.C)({
             guildId: t,
-            channelId: n
+            channelId: n,
         }),
         y = (0, c.GG)(t),
         x = (0, c.YB)(t),
@@ -32,29 +32,29 @@ function b(e) {
     return ((0, d.Z)({
         guildId: t,
         location: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
-        relevantSubscriptionListingIds: b.map((e) => e.id)
+        relevantSubscriptionListingIds: b.map((e) => e.id),
     }),
     null == j)
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: m.__invalid_spinnerContainer,
-              children: (0, r.jsx)(a.$jN, { className: m.__invalid_spinner })
+              children: (0, r.jsx)(a.$jN, { className: m.__invalid_spinner }),
           })
         : (0, r.jsxs)(a.w0Z, {
               className: m.pageContainer,
               children: [
                   (0, r.jsx)(a.X6q, {
-                      variant: 'heading-xl/semibold',
+                      variant: "heading-xl/semibold",
                       className: m.joinCtaTitle,
                       children: g.intl.format(g.t.xHMpys, {
                           serverName: _,
-                          channelName: null == O ? void 0 : O.name
-                      })
+                          channelName: null == O ? void 0 : O.name,
+                      }),
                   }),
                   (0, r.jsx)(a.Text, {
                       className: m.joinCtaSubtitle,
-                      variant: 'text-md/normal',
-                      color: 'header-secondary',
-                      children: null == x ? void 0 : x.description
+                      variant: "text-md/normal",
+                      color: "header-secondary",
+                      children: null == x ? void 0 : x.description,
                   }),
                   (0, r.jsx)(h.Z, {
                       guildId: t,
@@ -67,12 +67,12 @@ function b(e) {
                                       guildId: t,
                                       listingId: e.id,
                                       groupListingId: v[e.id],
-                                      analyticsLocation: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
+                                      analyticsLocation: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
                                   },
-                                  e.id
-                              )
-                          )
-                  })
-              ]
+                                  e.id,
+                              ),
+                          ),
+                  }),
+              ],
           });
 }

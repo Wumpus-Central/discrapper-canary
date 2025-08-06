@@ -1,1 +1,1 @@
-e.exports = { keyRecorder: 'keyRecorder__90f76' };
+e.exports = { keyRecorder: "keyRecorder__90f76" };

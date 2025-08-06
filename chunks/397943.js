@@ -1,4 +1,4 @@
-(n.d(t, { M: () => l }), n(388685));
+n.d(t, { M: () => l }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(921349),
@@ -8,16 +8,16 @@ function l(e) {
     let { value: t, onChange: n, hideValue: l, disabled: c = !1 } = e,
         u = i.useRef(null),
         d = i.useMemo(() => new a.tR(), []),
-        [f, _] = i.useState('');
+        [f, _] = i.useState("");
     function p(e) {
         null != t && n((0, a.rK)(t, d.selectValue(e)));
     }
     function h(e) {
-        if ('Enter' === e.key) {
+        if ("Enter" === e.key) {
             let e = (0, a.tj)(t, f);
             if (null != e) {
                 var n;
-                (p(e), null == (n = u.current) || n.close());
+                p(e), null == (n = u.current) || n.close();
             }
         }
     }
@@ -29,6 +29,6 @@ function l(e) {
         onChange: p,
         isDisabled: c,
         onSearchChange: _,
-        onKeyDown: h
+        onKeyDown: h,
     });
 }

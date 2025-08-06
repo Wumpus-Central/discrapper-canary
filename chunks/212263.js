@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,12 +70,28 @@ function I(e, t) {
 }
 let T = (e) => {
     let t,
-        { onClose: n, channel: y, emojiDescriptor: v, pickerIntention: T, analyticsLocation: S, containerContext: A } = e,
-        N = (0, o.e7)([f.Z], () => f.Z.theme) === m.BRd.LIGHT ? 'light' : 'dark',
-        C = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(N, '.png'),
+        {
+            onClose: n,
+            channel: y,
+            emojiDescriptor: v,
+            pickerIntention: T,
+            analyticsLocation: S,
+            containerContext: A,
+        } = e,
+        N = (0, o.e7)([f.Z], () => f.Z.theme) === m.BRd.LIGHT ? "light" : "dark",
+        C = "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_".concat(N, ".png"),
         R = (0, c.Iu)((e) => e.searchQuery),
         { analyticsLocations: P } = (0, l.ZP)(s.Z.EMOJI_PICKER);
-    t = T === g.Hz.REACTION ? E.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == v ? E.cd.EMOJI_PICKER_FLOATING_UPSELL : v.subCategory === h.t0.TOP_GUILD_EMOJI ? E.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : v.subCategory === h.t0.NEWLY_ADDED_EMOJI ? E.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : E.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    t =
+        T === g.Hz.REACTION
+            ? E.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED
+            : null == v
+              ? E.cd.EMOJI_PICKER_FLOATING_UPSELL
+              : v.subCategory === h.t0.TOP_GUILD_EMOJI
+                ? E.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED
+                : v.subCategory === h.t0.NEWLY_ADDED_EMOJI
+                  ? E.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
+                  : E.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let w = null != v ? v.emoji : void 0,
         D = null != w && w.animated,
         L = null != w && !_.ZP.isInternalEmojiForGuildId(w, null == y ? void 0 : y.getGuildId()),
@@ -90,9 +106,9 @@ let T = (e) => {
             image: {
                 url: C,
                 width: 220,
-                height: 132
+                height: 132,
             },
-            title: b.intl.string(b.t['0+11FB']),
+            title: b.intl.string(b.t["0+11FB"]),
             description: b.intl.string(b.t.dURIzc),
             enableSocialProof: !1,
             analyticsLocationSection: m.jXE.EMOJI_UPSELL_POPOUT,
@@ -103,10 +119,10 @@ let T = (e) => {
                 location: I(O({}, S), { object: x }),
                 location_stack: P,
                 sku_id: (0, p.Wz)(p.ZP.getSkuIdForPremiumType(E.p9.TIER_2)),
-                has_search_query: null != R && '' !== R,
-                is_animated: D
+                has_search_query: null != R && "" !== R,
+                is_animated: D,
             },
-            isEmojiPickerOverlay: !0
+            isEmojiPickerOverlay: !0,
         })
     );
 };

@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     Q2: () => H,
-    pe: () => V
+    pe: () => V,
 }),
     n(388685),
     n(539854),
     n(35282),
     n(472816),
-    n(794429));
+    n(794429);
 var r = n(73800),
     i = n(392711),
     o = n.n(i),
@@ -28,17 +28,28 @@ var r = n(73800),
     O = n(689079),
     v = n(761652);
 function I(e) {
-    let { context: t, onlyWithCommands: n, includeBuiltIn: i, allowFetch: o = !0, includeEmbeddedApps: a, includeNonEmbeddedApps: s } = e,
-        l = 'channel' === t.type ? t.channel : void 0,
+    let {
+            context: t,
+            onlyWithCommands: n,
+            includeBuiltIn: i,
+            allowFetch: o = !0,
+            includeEmbeddedApps: a,
+            includeNonEmbeddedApps: s,
+        } = e,
+        l = "channel" === t.type ? t.channel : void 0,
         u = (0, _.Hs)(l, [c.yU.CHAT]).hasBaseAccessPermissions,
         d = (0, f.em)(t, u, o),
         p = (0, f.PL)(u, o),
         h = r.useCallback(
             (e) => {
                 let t = e.descriptor.application;
-                return null != t && (!!(a && (0, y.ye)(t)) || (null != t && s && !(0, y.ye)(t) && (!n || Object.keys(e.commands).length > 0)));
+                return (
+                    null != t &&
+                    (!!(a && (0, y.ye)(t)) ||
+                        (null != t && s && !(0, y.ye)(t) && (!n || Object.keys(e.commands).length > 0)))
+                );
             },
-            [a, s, n]
+            [a, s, n],
         ),
         m = [],
         g = new Set();
@@ -56,7 +67,9 @@ function I(e) {
         s && i && m.push(y.Wx),
         {
             apps: m,
-            loading: (null == d ? void 0 : d.fetchState.fetching) === !0 || (null == p ? void 0 : p.fetchState.fetching) === !0
+            loading:
+                (null == d ? void 0 : d.fetchState.fetching) === !0 ||
+                (null == p ? void 0 : p.fetchState.fetching) === !0,
         }
     );
 }
@@ -76,25 +89,38 @@ function T(e) {
         for (let e of d) {
             let t = (0, f.If)(i, e),
                 n = null != (a = t.sectionCommands) ? a : [];
-            (_.push(...n),
+            _.push(...n),
                 n.forEach((e) => {
                     null != t.descriptor && (p[e.id] = t.descriptor);
-                }));
+                });
         }
         return {
             commands: _,
             commandSectionMap: p,
-            loading: !0 === s.fetchState.fetching || !0 === l.fetchState.fetching
+            loading: !0 === s.fetchState.fetching || !0 === l.fetchState.fetching,
         };
-    }, [i, o, s.fetchState.fetching, null == (t = s.result) ? void 0 : t.sections, l.fetchState.fetching, null == (n = l.result) ? void 0 : n.sections]);
+    }, [
+        i,
+        o,
+        s.fetchState.fetching,
+        null == (t = s.result) ? void 0 : t.sections,
+        l.fetchState.fetching,
+        null == (n = l.result) ? void 0 : n.sections,
+    ]);
 }
 function S(e) {
-    let t = (0, _.k)('channel' === e.type ? e.channel : void 0, [c.yU.CHAT, c.yU.PRIMARY_ENTRY_POINT]);
+    let t = (0, _.k)("channel" === e.type ? e.channel : void 0, [c.yU.CHAT, c.yU.PRIMARY_ENTRY_POINT]);
     return (n) => {
         let { context: r, userId: i, roleIds: o, isImpersonating: a } = t,
             { descriptor: s, sectionCommands: l, isGuildInstalled: c, isUserInstalled: u } = (0, f.If)(e, n.id),
-            d = (null == r ? void 0 : r.guild_id) != null ? p.ML(null == s ? void 0 : s.permissions, r.guild_id, i, o, a) : null,
-            _ = (null == r ? void 0 : r.guild_id) != null ? p.ZJ(null == s ? void 0 : s.permissions, r, r.guild_id) : null;
+            d =
+                (null == r ? void 0 : r.guild_id) != null
+                    ? p.ML(null == s ? void 0 : s.permissions, r.guild_id, i, o, a)
+                    : null,
+            _ =
+                (null == r ? void 0 : r.guild_id) != null
+                    ? p.ZJ(null == s ? void 0 : s.permissions, r, r.guild_id)
+                    : null;
         return (
             null == l ||
             !(l.length > 0) ||
@@ -105,8 +131,8 @@ function S(e) {
                         applicationAllowedForChannel: _,
                         commandBotId: null == s ? void 0 : s.botId,
                         isGuildInstalled: c,
-                        isUserInstalled: u
-                    }) === p.mF.ALLOWED
+                        isUserInstalled: u,
+                    }) === p.mF.ALLOWED,
             )
         );
     };
@@ -144,30 +170,42 @@ function D(e, t) {
     return (0, f.un)(n, r);
 }
 function L(e) {
-    let t = (0, _.k)('channel' === e.type ? e.channel : void 0, [c.yU.CHAT]),
+    let t = (0, _.k)("channel" === e.type ? e.channel : void 0, [c.yU.CHAT]),
         n = {};
     return (r) => {
         let { context: i, userId: o, roleIds: a, isImpersonating: s } = t;
         if (!(r.applicationId in n)) {
             let { descriptor: t, isGuildInstalled: l, isUserInstalled: c } = (0, f.If)(e, r.applicationId),
-                u = (null == i ? void 0 : i.guild_id) != null ? p.ML(null == t ? void 0 : t.permissions, i.guild_id, o, a, s) : null,
-                d = (null == i ? void 0 : i.guild_id) != null ? p.ZJ(null == t ? void 0 : t.permissions, i, i.guild_id) : null;
+                u =
+                    (null == i ? void 0 : i.guild_id) != null
+                        ? p.ML(null == t ? void 0 : t.permissions, i.guild_id, o, a, s)
+                        : null,
+                d =
+                    (null == i ? void 0 : i.guild_id) != null
+                        ? p.ZJ(null == t ? void 0 : t.permissions, i, i.guild_id)
+                        : null;
             n[r.applicationId] = {
                 descriptor: t,
                 applicationAllowedForUser: u,
                 applicationAllowedForChannel: d,
                 isGuildInstalled: l,
-                isUserInstalled: c
+                isUserInstalled: c,
             };
         }
-        let { descriptor: l, applicationAllowedForChannel: c, applicationAllowedForUser: u, isGuildInstalled: d, isUserInstalled: _ } = n[r.applicationId];
+        let {
+            descriptor: l,
+            applicationAllowedForChannel: c,
+            applicationAllowedForUser: u,
+            isGuildInstalled: d,
+            isUserInstalled: _,
+        } = n[r.applicationId];
         return (
             p.Ft(r, t, {
                 applicationAllowedForUser: u,
                 applicationAllowedForChannel: c,
                 commandBotId: null == l ? void 0 : l.botId,
                 isGuildInstalled: d,
-                isUserInstalled: _
+                isUserInstalled: _,
             }) === p.mF.ALLOWED
         );
     };
@@ -183,13 +221,18 @@ function M(e) {
     };
 }
 function k(e) {
-    let t = null == e ? void 0 : e.split(' '),
+    let t = null == e ? void 0 : e.split(" "),
         n = t[0],
-        r = t.slice(1).join(' ');
+        r = t.slice(1).join(" ");
     return (e) => {
         let t = e.untranslatedName,
             i = e.displayName;
-        return !!((t.startsWith(n) && t.split(' ').slice(1).join(' ').startsWith(r)) || (i.startsWith(n) && i.split(' ').slice(1).join(' ').startsWith(r))) || !1;
+        return (
+            !!(
+                (t.startsWith(n) && t.split(" ").slice(1).join(" ").startsWith(r)) ||
+                (i.startsWith(n) && i.split(" ").slice(1).join(" ").startsWith(r))
+            ) || !1
+        );
     };
 }
 function j(e) {
@@ -202,14 +245,25 @@ function j(e) {
 function U(e) {
     return (t) => {
         var n;
-        for (let { name: r, serverLocalizedName: i } of null != (n = t.options) ? n : []) if (r.startsWith(e) || ''.concat(t.untranslatedName, ' ').concat(r).startsWith(e) || (null != t.displayName && ''.concat(t.displayName, ' ').concat(r).startsWith(e)) || (null != i && (i.startsWith(e) || ''.concat(t.untranslatedName, ' ').concat(i).startsWith(e) || (null != t.displayName && ''.concat(t.displayName, ' ').concat(i).startsWith(e))))) return !0;
+        for (let { name: r, serverLocalizedName: i } of null != (n = t.options) ? n : [])
+            if (
+                r.startsWith(e) ||
+                "".concat(t.untranslatedName, " ").concat(r).startsWith(e) ||
+                (null != t.displayName && "".concat(t.displayName, " ").concat(r).startsWith(e)) ||
+                (null != i &&
+                    (i.startsWith(e) ||
+                        "".concat(t.untranslatedName, " ").concat(i).startsWith(e) ||
+                        (null != t.displayName && "".concat(t.displayName, " ").concat(i).startsWith(e))))
+            )
+                return !0;
         return !1;
     };
 }
 function G(e) {
     return (t) => {
         var n;
-        for (let { name: r, serverLocalizedName: i } of null != (n = t.options) ? n : []) if (r.includes(e) || (null == i ? void 0 : i.includes(e))) return !0;
+        for (let { name: r, serverLocalizedName: i } of null != (n = t.options) ? n : [])
+            if (r.includes(e) || (null == i ? void 0 : i.includes(e))) return !0;
         return !1;
     };
 }
@@ -226,24 +280,32 @@ function F(e, t) {
     return (0, f.un)(e.displayName, t.displayName);
 }
 function V(e) {
-    let { context: t, query: n, commandLimit: i, applicationLimit: a, searchesCommands: s = !0, searchesBots: l = !0, searchesActivities: c = !0 } = e;
-    n.startsWith(''.concat(v.GI)) && (n = n.substring(1));
+    let {
+        context: t,
+        query: n,
+        commandLimit: i,
+        applicationLimit: a,
+        searchesCommands: s = !0,
+        searchesBots: l = !0,
+        searchesActivities: c = !0,
+    } = e;
+    n.startsWith("".concat(v.GI)) && (n = n.substring(1));
     let {
             commands: d,
             commandSectionMap: f,
-            loading: _
+            loading: _,
         } = T({
             context: t,
-            includeBuiltIn: !0
+            includeBuiltIn: !0,
         }),
         { apps: p } = I({
             context: t,
             onlyWithCommands: !0,
             includeBuiltIn: !0,
             includeEmbeddedApps: c,
-            includeNonEmbeddedApps: l
+            includeNonEmbeddedApps: l,
         }),
-        h = (0, u.Z)({ guildId: 'channel' === t.type ? t.channel.guild_id : null }),
+        h = (0, u.Z)({ guildId: "channel" === t.type ? t.channel.guild_id : null }),
         m = r.useMemo(
             () =>
                 s
@@ -251,10 +313,10 @@ function V(e) {
                           limit: i,
                           filterPredicates: [L(t)],
                           bucketPredicates: x(n),
-                          sortComparers: B({ channel: 'channel' === t.type ? t.channel : void 0 })
+                          sortComparers: B({ channel: "channel" === t.type ? t.channel : void 0 }),
                       })
                     : [],
-            [s, d, i, t, n]
+            [s, d, i, t, n],
         ),
         g = r.useMemo(() => {
             if (0 === m.length) return [];
@@ -268,9 +330,9 @@ function V(e) {
                     return {
                         command: t,
                         application: r,
-                        section: i
+                        section: i,
                     };
-                })
+                }),
             );
         }, [p, m, f]),
         b = r.useMemo(() => {
@@ -280,28 +342,28 @@ function V(e) {
                     p.map((e) => {
                         let { id: t } = e;
                         return t;
-                    })
+                    }),
                 );
-                (e.push(...p),
+                e.push(...p),
                     e.push(
                         ...h
                             .filter((e) => {
                                 let {
-                                    application: { id: n }
+                                    application: { id: n },
                                 } = e;
                                 return !t.has(n);
                             })
                             .map((e) => {
                                 let { application: t } = e;
                                 return t;
-                            })
-                    ));
+                            }),
+                    );
             } else l && (e = p);
             return (0, E.N)(e, {
                 limit: a,
                 filterPredicates: [S(t)],
                 bucketPredicates: A(n),
-                sortComparers: [w, D]
+                sortComparers: [w, D],
             });
         }, [l, c, a, t, n, p, h]),
         y = g.length > 0,
@@ -313,56 +375,52 @@ function V(e) {
         applicationResults: b,
         hasApplicationResults: O,
         isEmptyState: N,
-        loading: _ && s
+        loading: _ && s,
     };
 }
 function H(e) {
     let { context: t, query: n, fetches: i = !0, pageLimit: o = 1 / 0, entrypoint: c } = e;
-    n.startsWith(''.concat(v.GI)) && (n = n.substring(1));
+    n.startsWith("".concat(v.GI)) && (n = n.substring(1));
     let u = c === b._b.VOICE,
-        d = 'channel' === t.type ? t.channel.guild_id : void 0,
+        d = "channel" === t.type ? t.channel.guild_id : void 0,
         [f, _] = r.useState(1),
         p = r.useRef(f);
     p.current = f;
-    let { fetchState: h, totalPages: E } = (0, l.cj)(
-            [g.Z],
-            () => {
-                var e, t;
-                return {
-                    fetchState: g.Z.getFetchState({
-                        query: n,
-                        guildId: d,
-                        page: f,
-                        integrationType: a.Y.USER_INSTALL,
-                        minUserInstallCommandCount: 1,
-                        excludeAppsWithCustomInstallUrl: !0,
-                        excludeNonEmbeddedApps: u,
-                        excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                        source: s.F.APP_LAUNCHER
-                    }),
-                    totalPages:
-                        null !=
-                        (t =
-                            null ==
-                            (e = g.Z.getSearchResults({
-                                query: n,
-                                guildId: d,
-                                page: f,
-                                integrationType: a.Y.USER_INSTALL,
-                                minUserInstallCommandCount: 1,
-                                excludeAppsWithCustomInstallUrl: !0,
-                                excludeNonEmbeddedApps: u,
-                                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: s.F.APP_LAUNCHER
-                            }))
-                                ? void 0
-                                : e.totalPages)
-                            ? t
-                            : 0
-                };
-            },
-            [n, d, f, u]
-        ),
+    let { fetchState: h, totalPages: E } = (0, l.cj)([g.Z], () => {
+            var e, t;
+            return {
+                fetchState: g.Z.getFetchState({
+                    query: n,
+                    guildId: d,
+                    page: f,
+                    integrationType: a.Y.USER_INSTALL,
+                    minUserInstallCommandCount: 1,
+                    excludeAppsWithCustomInstallUrl: !0,
+                    excludeNonEmbeddedApps: u,
+                    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
+                    source: s.F.APP_LAUNCHER,
+                }),
+                totalPages:
+                    null !=
+                    (t =
+                        null ==
+                        (e = g.Z.getSearchResults({
+                            query: n,
+                            guildId: d,
+                            page: f,
+                            integrationType: a.Y.USER_INSTALL,
+                            minUserInstallCommandCount: 1,
+                            excludeAppsWithCustomInstallUrl: !0,
+                            excludeNonEmbeddedApps: u,
+                            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
+                            source: s.F.APP_LAUNCHER,
+                        }))
+                            ? void 0
+                            : e.totalPages)
+                        ? t
+                        : 0,
+            };
+        }, [n, d, f, u]),
         y = r.useMemo(
             () =>
                 Array.from({ length: h === g.M.FETCHED || h === g.M.ERROR ? f : f - 1 }, (e, t) => {
@@ -379,18 +437,24 @@ function H(e) {
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: u,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: s.F.APP_LAUNCHER
+                                source: s.F.APP_LAUNCHER,
                             }))
                                 ? void 0
                                 : r.results)
                         ? i
                         : [];
                 }),
-            [h, d, n, f, u]
+            [h, d, n, f, u],
         ),
         O = r.useCallback(() => {
             let e = y.length;
-            h === g.M.FETCHED && e === p.current && e > 0 && e < E && e < o && y[e - 1].length > 0 && (p.current++, _((e) => e + 1));
+            h === g.M.FETCHED &&
+                e === p.current &&
+                e > 0 &&
+                e < E &&
+                e < o &&
+                y[e - 1].length > 0 &&
+                (p.current++, _((e) => e + 1));
         }, [h, o, y, E]),
         I = r.useCallback(
             (e) => {
@@ -405,11 +469,11 @@ function H(e) {
                         excludeAppsWithCustomInstallUrl: !0,
                         excludeNonEmbeddedApps: u,
                         excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                        source: s.F.APP_LAUNCHER
-                    }
+                        source: s.F.APP_LAUNCHER,
+                    },
                 });
             },
-            [u]
+            [u],
         );
     return (
         r.useEffect(() => {
@@ -417,7 +481,7 @@ function H(e) {
                 I({
                     query: n,
                     page: f,
-                    guildId: d
+                    guildId: d,
                 });
         }, [n, d, I, f, i]),
         r.useEffect(() => {
@@ -426,7 +490,7 @@ function H(e) {
         {
             fetchState: h,
             applicationResults: y.flat(),
-            fetchNextPage: O
+            fetchNextPage: O,
         }
     );
 }

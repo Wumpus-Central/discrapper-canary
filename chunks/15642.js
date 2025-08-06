@@ -19,7 +19,7 @@ function u(e) {
             recipientUser: n,
             analyticsPage: (0, a.mE)(d),
             analyticsSection: l.jXE.CHANNEL,
-            giftIntentSecondaryAction: u
-        })
+            giftIntentSecondaryAction: u,
+        }),
     });
 }

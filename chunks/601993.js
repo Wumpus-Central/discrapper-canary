@@ -6,7 +6,7 @@ n.d(t, {
     _2: () => p,
     f5: () => d,
     fG: () => u,
-    gL: () => c
+    gL: () => c,
 });
 var r = n(579806),
     i = n(405826),
@@ -47,6 +47,6 @@ async function p(e) {
 }
 function h(e) {
     if (!a()) return () => {};
-    let t = r.Z.spellCheck.on('spellcheck-result', e);
+    let t = r.Z.spellCheck.on("spellcheck-result", e);
     return null != t ? t : () => {};
 }

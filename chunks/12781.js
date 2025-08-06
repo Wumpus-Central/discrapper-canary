@@ -14,17 +14,21 @@ t.a(e, async function (e, r) {
         function f(e) {
             let { value: n, type: t } = e,
                 r = (0, c.Kq)(),
-                i = 1 === r.length && 'paragraph' === r[0].type && 1 === r[0].value.length && 'emoji' === r[0].value[0].type;
+                i =
+                    1 === r.length &&
+                    "paragraph" === r[0].type &&
+                    1 === r[0].value.length &&
+                    "emoji" === r[0].value[0].type;
             switch (t) {
-                case 'unicode':
+                case "unicode":
                     return (0, l.jsx)(j, {
                         value: n,
-                        jumboable: i
+                        jumboable: i,
                     });
-                case 'custom':
+                case "custom":
                     return (0, l.jsx)(m, {
                         value: n,
-                        jumboable: i
+                        jumboable: i,
                     });
             }
         }
@@ -37,10 +41,10 @@ t.a(e, async function (e, r) {
                 node: {
                     name: c,
                     src: r,
-                    jumboable: t
+                    jumboable: t,
                 },
                 channelId: null == i ? void 0 : i.channelId,
-                messageId: null == i ? void 0 : i.messageId
+                messageId: null == i ? void 0 : i.messageId,
             });
         }
         function m(e) {
@@ -51,20 +55,20 @@ t.a(e, async function (e, r) {
                 d = (0, i.e7)([o.ZP], () => o.ZP.getDisambiguatedEmojiContext(a).getById(t.id), [a, t.id]),
                 h = null != (n = null == d ? void 0 : d.name) ? n : t.name;
             return (
-                null != d && d.require_colons && (h = ':'.concat(d.name, ':')),
+                null != d && d.require_colons && (h = ":".concat(d.name, ":")),
                 (0, l.jsx)(s.Y, {
                     node: {
                         name: h,
                         animated: t.animated,
                         emojiId: t.id,
-                        jumboable: r
+                        jumboable: r,
                     },
                     channelId: null == c ? void 0 : c.channelId,
-                    messageId: null == c ? void 0 : c.messageId
+                    messageId: null == c ? void 0 : c.messageId,
                 })
             );
         }
-        ((c = (h.then ? (await h)() : h)[0]), r());
+        (c = (h.then ? (await h)() : h)[0]), r();
     } catch (e) {
         r(e);
     }

@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => O,
-    _: () => b
+    _: () => b,
 });
 var r = n(73800),
     i = n(494497),
@@ -26,12 +26,12 @@ function b(e, t) {
         b = p
             ? {
                   title: m.intl.formatToPlainString(g.default.mgoPkZ, { perkName: null == r ? void 0 : r.title }),
-                  description: m.intl.formatToPlainString(g.default.UT9pkJ, { dateString: (0, h.Z)(u) })
+                  description: m.intl.formatToPlainString(g.default.UT9pkJ, { dateString: (0, h.Z)(u) }),
               }
             : null;
     return {
         shouldShow: p,
-        notificationConfig: b
+        notificationConfig: b,
     };
 }
 function O(e, t) {
@@ -51,26 +51,26 @@ function O(e, t) {
             (e) => {
                 P(e);
             },
-            [P]
+            [P],
         ),
         Z = r.useMemo(() => {
             if (!N) return null;
             let e = (0, h.Z)(x);
             return {
                 firstHeader: S.title,
-                secondHeader: m.intl.formatToPlainString(g.default['8imxAg'], { dateString: e }),
-                firstBody: m.intl.formatToPlainString(g.default['/bW9tb'], { serverName: _.name }),
+                secondHeader: m.intl.formatToPlainString(g.default["8imxAg"], { dateString: e }),
+                firstBody: m.intl.formatToPlainString(g.default["/bW9tb"], { serverName: _.name }),
                 secondBody: m.intl.formatToPlainString(g.default.D09fdn, {
                     dateString: e,
-                    boostCount: S.cost
+                    boostCount: S.cost,
                 }),
-                thirdBody: m.intl.string(g.default['+zvKPj']),
-                primaryButtonText: m.intl.string(g.default['0uo/LC']),
-                onPrimaryClick: w
+                thirdBody: m.intl.string(g.default["+zvKPj"]),
+                primaryButtonText: m.intl.string(g.default["0uo/LC"]),
+                onPrimaryClick: w,
             };
         }, [N, S, x, _, w]);
     return {
         shouldShow: N,
-        modalConfig: Z
+        modalConfig: Z,
     };
 }

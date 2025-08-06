@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -21,34 +21,37 @@ function b(e) {
             () =>
                 o().partition(_, (e) => {
                     var t;
-                    return (null == (t = y[e.invite_id]) ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+                    return (
+                        (null == (t = y[e.invite_id]) ? void 0 : t.joinable) !== !1 &&
+                        (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl
+                    );
                 }),
-            [_, y]
+            [_, y],
         );
     return (i.useEffect(() => {
         (0, d.sJ)();
     }),
     0 === _.length)
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: m.container,
               children: [
                   (0, r.jsx)(p.Z, {
                       tab: a.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
-                      closePopout: b
+                      closePopout: b,
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: m.__invalid_emptyStateContainer,
                       children: (0, r.jsx)(h.Z, {
                           Icon: c.iWm,
                           header: g.intl.string(g.t.PbSPWV),
-                          tip: g.intl.string(g.t.BxNbS0)
-                      })
-                  })
-              ]
+                          tip: g.intl.string(g.t.BxNbS0),
+                      }),
+                  }),
+              ],
           })
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: m.container,
               children: [
                   (0, r.jsx)(p.Z, {
@@ -60,10 +63,10 @@ function b(e) {
                           className: m.__invalid_deleteButton,
                           tooltip: g.intl.string(g.t.Zy3MR0),
                           color: c.YX$.SECONDARY,
-                          icon: (0, r.jsx)(c.XHJ, { size: 'xs' }),
+                          icon: (0, r.jsx)(c.XHJ, { size: "xs" }),
                           onClick: function () {
                               (0, c.ZDy)(async () => {
-                                  let { default: e } = await n.e('13111').then(n.bind(n, 93756));
+                                  let { default: e } = await n.e("13111").then(n.bind(n, 93756));
                                   return (t) => {
                                       var n, i;
                                       return (0, r.jsx)(
@@ -72,24 +75,24 @@ function b(e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
                                                       r = Object.keys(n);
-                                                  ('function' == typeof Object.getOwnPropertySymbols &&
+                                                  "function" == typeof Object.getOwnPropertySymbols &&
                                                       (r = r.concat(
                                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                          })
+                                                          }),
                                                       )),
                                                       r.forEach(function (t) {
                                                           var r;
-                                                          ((r = n[t]),
+                                                          (r = n[t]),
                                                               t in e
                                                                   ? Object.defineProperty(e, t, {
                                                                         value: r,
                                                                         enumerable: !0,
                                                                         configurable: !0,
-                                                                        writable: !0
+                                                                        writable: !0,
                                                                     })
-                                                                  : (e[t] = r));
-                                                      }));
+                                                                  : (e[t] = r);
+                                                      });
                                               }
                                               return e;
                                           })({}, t)),
@@ -97,7 +100,7 @@ function b(e) {
                                               {
                                                   onDelete: async () => {
                                                       await t.onClose();
-                                                  }
+                                                  },
                                               }),
                                           Object.getOwnPropertyDescriptors
                                               ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -111,15 +114,15 @@ function b(e) {
                                                 })(Object(i)).forEach(function (e) {
                                                     Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                                 }),
-                                          n)
+                                          n),
                                       );
                                   };
                               });
-                          }
-                      })
+                          },
+                      }),
                   }),
                   (0, r.jsx)(c.h21, {
-                      children: (0, r.jsxs)('div', {
+                      children: (0, r.jsxs)("div", {
                           className: m.invitesContainer,
                           children: [
                               C.length > 0 &&
@@ -132,13 +135,13 @@ function b(e) {
                                                       f.Z,
                                                       {
                                                           invite: e,
-                                                          expired: !1
+                                                          expired: !1,
                                                       },
-                                                      e.invite_id
-                                                  )
-                                              )
-                                          })
-                                      ]
+                                                      e.invite_id,
+                                                  ),
+                                              ),
+                                          }),
+                                      ],
                                   }),
                               v.length > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
@@ -150,32 +153,32 @@ function b(e) {
                                                       f.Z,
                                                       {
                                                           invite: e,
-                                                          expired: !0
+                                                          expired: !0,
                                                       },
-                                                      e.invite_id
-                                                  )
-                                              )
-                                          })
-                                      ]
-                                  })
-                          ]
-                      })
-                  })
-              ]
+                                                      e.invite_id,
+                                                  ),
+                                              ),
+                                          }),
+                                      ],
+                                  }),
+                          ],
+                      }),
+                  }),
+              ],
           });
 }
 function O(e) {
     let { title: t } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: m.headerContainer,
         children: [
             (0, r.jsx)(c.Text, {
                 className: m.headerTitle,
-                variant: 'text-xs/semibold',
-                color: 'interactive-normal',
-                children: t
+                variant: "text-xs/semibold",
+                color: "interactive-normal",
+                children: t,
             }),
-            (0, r.jsx)('div', { className: m.headerDivider })
-        ]
+            (0, r.jsx)("div", { className: m.headerDivider }),
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(539854));
+n.d(t, { Z: () => R }), n(539854);
 var l = n(255367),
     r = n(73800),
     i = n(442837),
@@ -34,24 +34,24 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             l.forEach(function (t) {
                 var l;
-                ((l = n[t]),
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = l));
-            }));
+                        : (e[t] = l);
+            });
     }
     return e;
 }
@@ -74,7 +74,7 @@ function B(e, t) {
     );
 }
 function R(e) {
-    let { channelId: t, baseChannelId: R, channelViewSource: D = 'Split View', isResourceChannelView: L } = e,
+    let { channelId: t, baseChannelId: R, channelViewSource: D = "Split View", isResourceChannelView: L } = e,
         M = (0, i.e7)([y.Z], () => y.Z.getChannel(t)),
         H = (0, i.e7)([N.Z], () => N.Z.getGuild(null == M ? void 0 : M.getGuildId())),
         U = (0, i.e7)([w.default], () => w.default.getCurrentUser()),
@@ -90,34 +90,38 @@ function R(e) {
         V = r.useRef(!1);
     if (
         (r.useEffect(() => {
-            null == M || V.current || ((V.current = !0), (0, u.yw)(S.rMx.CHANNEL_OPENED, B(k({}, (0, u.$H)(M.id)), { channel_view: D })), (0, m.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: M.id }));
+            null == M ||
+                V.current ||
+                ((V.current = !0),
+                (0, u.yw)(S.rMx.CHANNEL_OPENED, B(k({}, (0, u.$H)(M.id)), { channel_view: D })),
+                (0, m.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: M.id }));
         }, [M, D]),
         null == M || null == H)
     )
         return null;
     let J = [];
-    return (q || J.push((0, l.jsx)(_.Z, { channel: M }, 'notifications')),
+    return (q || J.push((0, l.jsx)(_.Z, { channel: M }, "notifications")),
     J.push(
         (0, l.jsx)(
             x.ZP.Icon,
             {
                 icon: a.Dio,
                 tooltip: T.intl.string(T.t.cpT0Cg),
-                onClick: () => v.Z.closeChannelSidebar(R)
+                onClick: () => v.Z.closeChannelSidebar(R),
             },
-            'close'
-        )
+            "close",
+        ),
     ),
     !(0, d.aC)(M) || (W && G))
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsx)(s.Z, {
                       channel: M,
-                      draftType: O.d.ChannelMessage
+                      draftType: O.d.ChannelMessage,
                   }),
                   (0, l.jsx)(x.ZP, {
                       toolbar: J,
-                      'aria-label': T.intl.string(T.t.BIYAqa),
+                      "aria-label": T.intl.string(T.t.BIYAqa),
                       children: (0, C.ud)({
                           channel: M,
                           channelName: z ? X : F,
@@ -125,43 +129,45 @@ function R(e) {
                           inSidebar: !0,
                           handleContextMenu: (e) => {
                               (0, o.jW)(e, async () => {
-                                  let { default: e } = await Promise.all([n.e('24783'), n.e('49220')]).then(n.bind(n, 439635));
+                                  let { default: e } = await Promise.all([n.e("24783"), n.e("49220")]).then(
+                                      n.bind(n, 439635),
+                                  );
                                   return (t) =>
                                       (0, l.jsx)(
                                           e,
                                           B(k({}, t), {
                                               channel: M,
-                                              guild: H
-                                          })
+                                              guild: H,
+                                          }),
                                       );
                               });
                           },
                           handleClick: () => {
                               let e = I.Z.getMessages(M.id);
                               if (L) {
-                                  ((0, j.uL)(S.Z5c.CHANNEL(M.guild_id, M.id)), (0, p.C3)(M.guild_id, null));
+                                  (0, j.uL)(S.Z5c.CHANNEL(M.guild_id, M.id)), (0, p.C3)(M.guild_id, null);
                                   return;
                               }
                               (0, j.XU)(M.guild_id, M.id, e.jumpTargetId);
-                          }
-                      })
+                          },
+                      }),
                   }),
-                  (0, l.jsx)('div', {
+                  (0, l.jsx)("div", {
                       className: A.chat,
                       children: (0, l.jsx)(
                           E.Z,
                           {
                               channel: M,
                               guild: H,
-                              chatInputType: h.Ie.SIDEBAR
+                              chatInputType: h.Ie.SIDEBAR,
                           },
-                          t
-                      )
-                  })
-              ]
+                          t,
+                      ),
+                  }),
+              ],
           })
         : (0, l.jsx)(c.Z, {
               guild: H,
-              channelId: M.id
+              channelId: M.id,
           });
 }

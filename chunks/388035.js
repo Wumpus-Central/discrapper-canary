@@ -1,4 +1,4 @@
-(n.d(t, { U: () => g }), n(388685));
+n.d(t, { U: () => g }), n(388685);
 var r = n(255367),
     i = n(704215),
     o = n(755721),
@@ -12,13 +12,13 @@ var r = n(255367),
     _ = n(235810);
 let p = i.z.FOR_LATER_POPOUT_COACHMARK,
     h = () =>
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: f.imageContainer,
-            children: (0, r.jsx)('img', {
+            children: (0, r.jsx)("img", {
                 className: f.image,
                 src: _,
-                alt: ''
-            })
+                alt: "",
+            }),
         }),
     m = (e) =>
         (0, r.jsx)(l.ZP, {
@@ -26,19 +26,19 @@ let p = i.z.FOR_LATER_POPOUT_COACHMARK,
             asset: (0, r.jsx)(h, {}),
             header: d.intl.string(d.t.qPbFKy),
             content: d.intl.string(d.t.URrJq6),
-            buttonCTA: d.intl.string(d.t['NX+WJC']),
+            buttonCTA: d.intl.string(d.t["NX+WJC"]),
             buttonProps: {
                 color: o.Tt.WHITE,
-                innerClassName: f.primaryButton
+                innerClassName: f.primaryButton,
             },
             onClick: () => e(u.L.USER_DISMISS),
             markAsDismissed: e,
-            caretPosition: l.DF.TOP_RIGHT
+            caretPosition: l.DF.TOP_RIGHT,
         });
 function g(e) {
     let { location: t, children: n, targetElementRef: i } = e,
-        { enabled: o, inInbox: l } = c.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
-        u = t === (l ? 'inbox-button' : 'bookmarks-button'),
+        { enabled: o, inInbox: l } = c.Z.useExperiment({ location: "ForLaterCoachmarkWeb" }, { autoTrackExposure: !1 }),
+        u = t === (l ? "inbox-button" : "bookmarks-button"),
         d = o && u ? [p] : [],
         [f, _] = (0, s.US)(d, void 0);
     return f !== p
@@ -46,10 +46,10 @@ function g(e) {
         : (0, r.jsx)(a.yRy, {
               targetElementRef: i,
               renderPopout: () => m(_),
-              position: 'bottom',
-              align: 'right',
+              position: "bottom",
+              align: "right",
               animation: a.yRy.Animation.TRANSLATE,
               shouldShow: !0,
-              children: () => n
+              children: () => n,
           });
 }

@@ -19,19 +19,21 @@ function u(e) {
                         r,
                         o = {},
                         c = Object.keys(e);
-                    for (r = 0; r < c.length; r++) ((n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                    for (r = 0; r < c.length; r++) (n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < c.length; r++) ((n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                for (r = 0; r < c.length; r++)
+                    (n = c[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
-        })(e, ['onClose', 'source']);
+        })(e, ["onClose", "source"]);
     let b = l.intl.format(l.t.WMO9pq, {
         onAndMore: function () {
-            (t(), (0, o.z)(!0));
-        }
+            t(), (0, o.z)(!0);
+        },
     });
     return (0, r.jsx)(
         c.Z,
@@ -39,24 +41,24 @@ function u(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         var r;
-                        ((r = n[t]),
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = r));
-                    }));
+                                : (e[t] = r);
+                    });
             }
             return e;
         })(
@@ -69,11 +71,11 @@ function u(e) {
                 analyticsSource: n,
                 analyticsLocation: {
                     section: i.jXE.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_MODAL,
-                    object: i.qAy.BUTTON_CTA
+                    object: i.qAy.BUTTON_CTA,
                 },
-                onClose: t
+                onClose: t,
             },
-            u
-        )
+            u,
+        ),
     );
 }

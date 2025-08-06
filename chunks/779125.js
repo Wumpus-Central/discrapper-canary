@@ -24,7 +24,7 @@ function b(e, t) {
     let i = f.Z.getChannel(t);
     if (null != i && (0, d.bw)(i.type)) {
         if (n) {
-            (a.Z.updateChatOpen(i.id, !0), (0, u.uL)(E.Z5c.CHANNEL(e, t)));
+            a.Z.updateChatOpen(i.id, !0), (0, u.uL)(E.Z5c.CHANNEL(e, t));
             return;
         }
         s.default.selectVoiceChannel(i.id);
@@ -34,23 +34,28 @@ function b(e, t) {
 }
 function y(e) {
     let { channel: t, onClick: n, beforeTransition: a, className: s, openChatWithoutConnecting: u } = e,
-        d = (0, i.e7)([h.default, p.Z], () => (null == t ? '' : (0, l.F6)(t, h.default, p.Z)), [t]);
+        d = (0, i.e7)([h.default, p.Z], () => (null == t ? "" : (0, l.F6)(t, h.default, p.Z)), [t]);
     return (0, r.jsx)(o.ua7, {
         text: d,
-        position: 'top',
+        position: "top",
         children: (e) => {
             let { onMouseEnter: i, onMouseLeave: l } = e;
             return (0, r.jsx)(c.Z, {
-                role: 'link',
+                role: "link",
                 className: s,
                 onClick: (e) => {
-                    (e.stopPropagation(), null != n ? n() : (null != a && a(), (0, o.pTH)(), b(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, u)));
+                    e.stopPropagation(),
+                        null != n
+                            ? n()
+                            : (null != a && a(),
+                              (0, o.pTH)(),
+                              b(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, u));
                 },
                 onMouseEnter: i,
                 onMouseLeave: l,
                 iconType: (0, m.wl)(t),
-                children: d
+                children: d,
             });
-        }
+        },
     });
 }

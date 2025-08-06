@@ -1,6 +1,6 @@
 n.d(t, {
     L: () => l,
-    a: () => c
+    a: () => c,
 });
 var r = n(442837),
     i = n(480294),
@@ -10,7 +10,7 @@ var r = n(442837),
 function l() {
     return u(
         (0, r.e7)([o.Z], () => o.Z.windowSize().width),
-        (0, r.e7)([i.Z], () => i.Z.hasConsented(s.pjP.PERSONALIZATION))
+        (0, r.e7)([i.Z], () => i.Z.hasConsented(s.pjP.PERSONALIZATION)),
     );
 }
 function c() {

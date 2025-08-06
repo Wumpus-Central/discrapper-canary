@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -14,35 +14,35 @@ var i = n(120356),
 function p(e) {
     let { message: t, channel: i, compact: s } = e,
         l = null != t.embeds && t.embeds.length > 0;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(c.Z, {
                 className: o()(_.mainContainer, { [_.compact]: s }),
                 icon: n(570111),
                 compact: s,
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: o()(_.__invalid_content, { [_.compact]: s }),
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: o()(_.__invalid_messageContent, { [_.compact]: s }),
-                        children: t.content
-                    })
-                })
+                        children: t.content,
+                    }),
+                }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: o()(_.__invalid_embedContent, { [_.compact]: s }),
-                children: (0, r.jsx)(h, { message: t })
+                children: (0, r.jsx)(h, { message: t }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: _.actions,
                 children: (0, r.jsx)(a.zxk, {
-                    variant: 'secondary',
+                    variant: "secondary",
                     text: f.intl.string(f.t.zdBCIi),
                     onClick: () => {
                         l ? (0, u.z$)(t) : (0, u.XP)(i.guild_id, i.id, t.id);
-                    }
-                })
-            })
-        ]
+                    },
+                }),
+            }),
+        ],
     });
 }
 function h(e) {
@@ -60,6 +60,6 @@ function h(e) {
         autoPlayGif: !1,
         renderImageComponent: d.VqG,
         renderVideoComponent: d.VqG,
-        renderLinkComponent: d.VqG
+        renderLinkComponent: d.VqG,
     });
 }

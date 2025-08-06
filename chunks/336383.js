@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,7 +71,8 @@ function y(e, t) {
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,52 +82,60 @@ function O(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let v = i.forwardRef(function (e, t) {
-    var { children: n, className: i, subsection: o, onAction: m, onClose: E, 'aria-label': O, 'aria-labelledby': v } = e,
-        I = y(e, ['children', 'className', 'subsection', 'onAction', 'onClose', 'aria-label', 'aria-labelledby']);
+    var {
+            children: n,
+            className: i,
+            subsection: o,
+            onAction: m,
+            onClose: E,
+            "aria-label": O,
+            "aria-labelledby": v,
+        } = e,
+        I = y(e, ["children", "className", "subsection", "onAction", "onClose", "aria-label", "aria-labelledby"]);
     let { themeType: T } = (0, f.z)(),
         { analyticsLocations: S } = (0, l.ZP)(),
         { context: A } = (0, c.KZ)();
     return T === _.lY.MODAL || T === _.lY.MODAL_V2 || (null == A ? void 0 : A.userId) == null
-        ? (0, r.jsx)('article', {
-              'aria-label': O,
-              'aria-labelledby': v,
+        ? (0, r.jsx)("article", {
+              "aria-label": O,
+              "aria-labelledby": v,
               children: (0, r.jsx)(
                   d.Z.Overlay,
                   b(
                       g(
                           {
                               ref: t,
-                              className: a()(h.card, i)
+                              className: a()(h.card, i),
                           },
-                          I
+                          I,
                       ),
-                      { children: n }
-                  )
-              )
+                      { children: n },
+                  ),
+              ),
           })
-        : (0, r.jsx)('article', {
-              'aria-labelledby': v,
+        : (0, r.jsx)("article", {
+              "aria-labelledby": v,
               children: (0, r.jsx)(s.kL8, {
                   className: h.clickableContainer,
-                  'aria-label': p.intl.string(p.t.pD1L1t),
+                  "aria-label": p.intl.string(p.t.pD1L1t),
                   focusProps: { ringTarget: t },
                   onClick: () => {
-                      (null == m || m({ action: 'PRESS_CARD' }),
+                      null == m || m({ action: "PRESS_CARD" }),
                           (0, u.openUserProfileModal)(
                               g(
                                   {
                                       section: _.oh.ACTIVITY,
                                       sourceAnalyticsLocations: S,
-                                      subsection: o
+                                      subsection: o,
                                   },
-                                  A
-                              )
+                                  A,
+                              ),
                           ),
-                          null == E || E());
+                          null == E || E();
                   },
                   children: (0, r.jsx)(
                       d.Z.Overlay,
@@ -134,13 +143,13 @@ let v = i.forwardRef(function (e, t) {
                           g(
                               {
                                   ref: t,
-                                  className: a()(h.card, i)
+                                  className: a()(h.card, i),
                               },
-                              I
+                              I,
                           ),
-                          { children: n }
-                      )
-                  )
-              })
+                          { children: n },
+                      ),
+                  ),
+              }),
           });
 });

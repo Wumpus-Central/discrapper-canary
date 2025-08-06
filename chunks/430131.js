@@ -18,20 +18,20 @@ function m(e) {
         errors: t,
         children: [
             (0, i.jsx)(s.oil, {
-                value: null != h ? h : '',
+                value: null != h ? h : "",
                 placeholder: p,
                 maxLength: c.l$U,
                 onChange: function (e) {
                     (0, o.wi)(e, m);
                 },
-                disabled: !f
+                disabled: !f,
             }),
             !f &&
                 (0, i.jsx)(s.R94, {
                     className: u.nicknameDisabled,
                     type: s.R94.Types.DESCRIPTION,
-                    children: d.intl.string(d.t.gzjxQk)
-                })
-        ]
+                    children: d.intl.string(d.t.gzjxQk),
+                }),
+        ],
     });
 }

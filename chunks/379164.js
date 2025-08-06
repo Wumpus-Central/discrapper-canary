@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(570140),
     i = n(447543),
     l = n(87051),
@@ -13,7 +13,7 @@ var r = n(570140),
     f = n(981631);
 let g = {
     acceptInvite(e) {
-        let t = i.ZP.getInviteContext('Desktop Invite Modal', e),
+        let t = i.ZP.getInviteContext("Desktop Invite Modal", e),
             n = (0, a.y)(),
             u = (0, a.h6)(),
             f = (0, a.U1)(),
@@ -23,45 +23,47 @@ let g = {
             context: t,
             callback: (e) => {
                 null == e || null == e.guild || null == e.channel || __OVERLAY__ || i.ZP.transitionToInvite(e);
-            }
+            },
         }).then(
             () => {
-                if ((0, s.gY)({ location: 'acceptInvite' }) && null != e.guild) {
+                if ((0, s.gY)({ location: "acceptInvite" }) && null != e.guild) {
                     if (u) {
                         if (c.h2.getSetting().includes(e.guild.id)) {
                             let t = new Set((0, p.YK)());
-                            (t.delete(e.guild.id), c.h2.updateSetting(Array.from(t)));
+                            t.delete(e.guild.id), c.h2.updateSetting(Array.from(t));
                         }
                     } else {
                         var t;
                         let n = new Set((0, p.YK)());
-                        (n.add(null == (t = e.guild) ? void 0 : t.id), c.h2.updateSetting(Array.from(n)));
+                        n.add(null == (t = e.guild) ? void 0 : t.id), c.h2.updateSetting(Array.from(n));
                     }
                     if (f) {
                         if (c.SE.getSetting().includes(e.guild.id)) {
                             let t = new Set((0, p._o)());
-                            (t.delete(e.guild.id), c.SE.updateSetting(Array.from(t)));
+                            t.delete(e.guild.id), c.SE.updateSetting(Array.from(t));
                         }
                     } else {
                         let t = new Set((0, p._o)());
-                        (t.add(e.guild.id), c.SE.updateSetting(Array.from(t)));
+                        t.add(e.guild.id), c.SE.updateSetting(Array.from(t));
                     }
-                    (null != n && n.length > 0 && (0, o.iq)(e.guild.id, { nick: n }), (0, s.m4)({ location: 'acceptInvite' }) && l.Z.updateGuildNotificationSettings(e.guild.id, { muted: g }, h.ZB.Muted));
+                    null != n && n.length > 0 && (0, o.iq)(e.guild.id, { nick: n }),
+                        (0, s.m4)({ location: "acceptInvite" }) &&
+                            l.Z.updateGuildNotificationSettings(e.guild.id, { muted: g }, h.ZB.Muted);
                 }
                 this.close();
             },
             (e) => {
                 r.Z.dispatch({
-                    type: 'INVITE_MODAL_ERROR',
-                    message: (0, d.O)(e.code)
+                    type: "INVITE_MODAL_ERROR",
+                    message: (0, d.O)(e.code),
                 });
-            }
+            },
         );
     },
     close() {
         let e = (0, a.e7)(),
             t = (0, a._J)();
-        if ((0, s.gY)({ location: 'closeInvite' }) && (0, a.NQ)()) {
+        if ((0, s.gY)({ location: "closeInvite" }) && (0, a.NQ)()) {
             let n = (0, a.y)(),
                 r = (0, a.h6)(),
                 i = (0, a.U1)(),
@@ -74,9 +76,9 @@ let g = {
                 dms_allowed: r,
                 activity_status_shown: i,
                 muted_server: l,
-                changed_from_default: o
+                changed_from_default: o,
             });
         }
-        ((0, a.oE)(), r.Z.dispatch({ type: 'INVITE_MODAL_CLOSE' }));
-    }
+        (0, a.oE)(), r.Z.dispatch({ type: "INVITE_MODAL_CLOSE" });
+    },
 };

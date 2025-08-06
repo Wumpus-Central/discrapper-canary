@@ -22,26 +22,26 @@ class p extends i.PureComponent {
         return (0, r.jsx)(s.hjN, {
             className: t,
             title: f.intl.string(f.t.QQBAoq),
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: _.inputWrapper,
                 children: [
                     (0, r.jsx)(c.ZP, {
                         type: c.ZP.Types.PAYPAL,
-                        className: _.paypalIcon
+                        className: _.paypalIcon,
                     }),
                     (0, r.jsx)(a.Is, {
                         value: e,
                         editable: !1,
                         readOnly: !0,
                         placeholder: null == n ? f.intl.string(f.t.dte2Mz) : f.intl.string(f.t.hopw7e),
-                        inputClassName: _.paypalInput
-                    })
-                ]
-            })
+                        inputClassName: _.paypalInput,
+                    }),
+                ],
+            }),
         });
     }
 }
 let h = o.ZP.connectStores([u.Z, d.Z], () => ({
     braintreeEmail: d.Z.braintreeEmail,
-    paypalClient: u.Z.getPayPalClient()
+    paypalClient: u.Z.getPayPalClient(),
 }))(p);

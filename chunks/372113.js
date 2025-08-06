@@ -35,7 +35,7 @@ function D(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -45,15 +45,15 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 D(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -61,11 +61,11 @@ function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,32 +80,46 @@ function M(e, t) {
         e
     );
 }
-let k = (e, t, n) => ((0, A.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
+let k = (e, t, n) =>
+    (0, A.uq)(e) && !n && "lg" === t
+        ? "text-lg/medium"
+        : "lg" === t
+          ? "text-md/medium"
+          : "sm" === t
+            ? "text-sm/medium"
+            : "text-xs/medium";
 function j(e) {
     let { containerSize: t, onClick: n, children: i, tabIndex: o } = e;
-    return 'xs' === t
+    return "xs" === t
         ? (0, r.jsx)(c.P3F, {
               tabIndex: o,
               className: w.learnMoreLink,
-              tag: 'span',
+              tag: "span",
               onClick: n,
               children: (0, r.jsx)(c.Text, {
-                  variant: 'text-sm/medium',
-                  color: 'text-link',
-                  children: i
-              })
+                  variant: "text-sm/medium",
+                  color: "text-link",
+                  children: i,
+              }),
           })
         : (0, r.jsx)(l.zx, {
               tabIndex: o,
               wrapperClassName: w.ctaButtonWrapper,
               color: l.Tt.PRIMARY,
               onClick: n,
-              children: i
+              children: i,
           });
 }
 function U(e) {
     var t, n, r, i, o;
-    let { quest: a, locale: s, isQuestExpired: l, sharedQuestFields: c, collectibleQuestRewardDescription: u, formattedCompletionDate: d } = e,
+    let {
+            quest: a,
+            locale: s,
+            isQuestExpired: l,
+            sharedQuestFields: c,
+            collectibleQuestRewardDescription: u,
+            formattedCompletionDate: d,
+        } = e,
         p = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
         m = p && (null == (n = a.userStatus) ? void 0 : n.claimedAt) != null,
         g = (0, h.oo)({ quest: a }),
@@ -114,18 +128,18 @@ function U(e) {
         let e = g
                 ? (0, h.o9)({
                       quest: a,
-                      idx: null == (r = a.userStatus) ? void 0 : r.claimedTier
+                      idx: null == (r = a.userStatus) ? void 0 : r.claimedTier,
                   })
                 : null,
             t = null != (i = null == e ? void 0 : e.messages.nameWithArticle) ? i : null;
         return null != t
             ? P.intl.formatToPlainString(P.t.RrxtPT, {
                   reward: t,
-                  date: d
+                  date: d,
               })
             : P.intl.formatToPlainString(P.t.zNoqRU, {
                   reward: E,
-                  date: d
+                  date: d,
               });
     }
     if (p)
@@ -133,26 +147,36 @@ function U(e) {
             ? P.intl.formatToPlainString(P.t.l1jCMz, { date: d })
             : P.intl.formatToPlainString(P.t.zNoqRU, {
                   reward: E,
-                  date: d
+                  date: d,
               });
     let b = g
         ? (0, h.o9)({
               quest: a,
-              idx: 0
+              idx: 0,
           })
         : null;
     return l
-        ? P.intl.formatToPlainString(P.t.DT3aub, { reward: null != (o = null == b ? void 0 : b.messages.nameWithArticle) ? o : E })
+        ? P.intl.formatToPlainString(P.t.DT3aub, {
+              reward: null != (o = null == b ? void 0 : b.messages.nameWithArticle) ? o : E,
+          })
         : null != b && null != b.approximateCount
-          ? P.intl.format(P.t['4bMK19'], {
+          ? P.intl.format(P.t["4bMK19"], {
                 maxReward: b.messages.nameWithArticle,
                 maxRewardCount: (0, _.Bs)(b.approximateCount, s),
-                helpCenterLink: f.Z.getArticleURL(R.BhN.QUESTS_LEARN_MORE)
+                helpCenterLink: f.Z.getArticleURL(R.BhN.QUESTS_LEARN_MORE),
             })
           : u;
 }
 function G(e) {
-    let { quest: t, progressState: n, isCollectibleQuest: i, questContent: o, questContentPosition: a, inGiftInventory: d, sourceQuestContent: f } = e,
+    let {
+            quest: t,
+            progressState: n,
+            isCollectibleQuest: i,
+            questContent: o,
+            questContentPosition: a,
+            inGiftInventory: d,
+            sourceQuestContent: f,
+        } = e,
         _ = n >= m.OH.COMPLETED,
         p = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         E = (0, s.e7)([g.Z], () => g.Z.isEnrolling(t.id)),
@@ -167,7 +191,7 @@ function G(e) {
             inGiftInventory: d,
             isVideoQuest: b,
             inGameQuest: y,
-            sourceQuestContent: f
+            sourceQuestContent: f,
         }),
         v = _ && !p ? c.gtL : l.zx;
     return (0, r.jsx)(
@@ -185,25 +209,35 @@ function G(e) {
                         disabled: null == O.onClick,
                         submitting: E,
                         onClick: null != (t = O.onClick) ? t : () => {},
-                        children: (0, r.jsx)('div', {
+                        children: (0, r.jsx)("div", {
                             className: w.ctaButtonInner,
-                            children: O.text
-                        })
-                    })
+                            children: O.text,
+                        }),
+                    }),
                 );
-            }
+            },
         },
-        O.tooltipText
+        O.tooltipText,
     );
 }
 let B = (e) => {
     var t;
-    let { quest: n, location: o, size: u, isFocused: f, isQuestExpired: _, isExpanded: T, isAnimating: R, contentPosition: D, sourceQuestContent: x } = e,
+    let {
+            quest: n,
+            location: o,
+            size: u,
+            isFocused: f,
+            isQuestExpired: _,
+            isExpanded: T,
+            isAnimating: R,
+            contentPosition: D,
+            sourceQuestContent: x,
+        } = e,
         B = (0, m._Q)(n),
         Z = (0, m.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
+            year: "numeric",
+            month: "long",
+            day: "numeric",
         }),
         F = B >= m.OH.ACCEPTED,
         V = B >= m.OH.COMPLETED,
@@ -223,21 +257,21 @@ let B = (e) => {
             taskDetails: ee,
             location: C.dr.QUESTS_CARD,
             questContent: E.jn.QUESTS_EMBED,
-            sourceQuestContent: x
+            sourceQuestContent: x,
         }),
         en = (0, s.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil, []),
         er = () => {
-            ((0, I.navigateToQuestHome)({
+            (0, I.navigateToQuestHome)({
                 fromContent: o,
-                questId: n.id
+                questId: n.id,
             }),
                 J({
                     questId: n.id,
                     questContent: o,
                     questContentPosition: D,
                     questContentCTA: p.jZ.LEARN_MORE,
-                    sourceQuestContent: x
-                }));
+                    sourceQuestContent: x,
+                });
         },
         ei = (0, s.e7)([d.default], () => d.default.locale),
         eo = (0, m.z)(n),
@@ -247,17 +281,17 @@ let B = (e) => {
         ec = (0, r.jsx)(v.Z, {
             autoplay: f,
             className: a()(w.gridImg, {
-                [w.questRewardGiftInventory]: W && 'lg' === u,
-                [w.questRewardEmbed]: K && 'lg' === u,
-                [w.questRewardEmbedSm]: 'sm' === u,
-                [w.questRewardEmbedXs]: 'xs' === u
+                [w.questRewardGiftInventory]: W && "lg" === u,
+                [w.questRewardEmbed]: K && "lg" === u,
+                [w.questRewardEmbedSm]: "sm" === u,
+                [w.questRewardEmbedXs]: "xs" === u,
             }),
-            learnMoreStyle: W ? null : 'text',
+            learnMoreStyle: W ? null : "text",
             location: C.dr.QUESTS_CARD,
             quest: n,
             questContent: o,
             questContentPosition: D,
-            sourceQuestContent: x
+            sourceQuestContent: x,
         }),
         eu = () =>
             _ && !V
@@ -268,118 +302,122 @@ let B = (e) => {
                       isCollectibleQuest: Y,
                       questContent: o,
                       inGiftInventory: W,
-                      sourceQuestContent: x
+                      sourceQuestContent: x,
                   });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: w.root,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a()(w.outerContainer, {
-                    [w.outerContainerSm]: 'sm' === u,
-                    [w.outerContainerXs]: 'xs' === u,
-                    [w.outerContainerNoProgress]: !q
+                    [w.outerContainerSm]: "sm" === u,
+                    [w.outerContainerXs]: "xs" === u,
+                    [w.outerContainerNoProgress]: !q,
                 }),
-                style: { visibility: z ? 'inherit' : 'hidden' },
-                'aria-hidden': !z,
+                style: { visibility: z ? "inherit" : "hidden" },
+                "aria-hidden": !z,
                 children: [
                     (0, r.jsx)(c.ua7, {
-                        text: es ? P.intl.string(P.t['04MTGR']) : null,
+                        text: es ? P.intl.string(P.t["04MTGR"]) : null,
                         tooltipContentClassName: w.rewardTileExpirationTooltip,
                         shouldShow: es,
                         children: (e) =>
                             (0, r.jsxs)(
-                                'div',
+                                "div",
                                 M(L({ className: w.rewardTileWrapper }, e), {
                                     children: [
                                         _ &&
-                                            (0, r.jsx)('div', {
+                                            (0, r.jsx)("div", {
                                                 className: w.rewardTileExpired,
-                                                children: (0, r.jsx)(c.Mgn, { color: c.TVs.colors.WHITE })
+                                                children: (0, r.jsx)(c.Mgn, { color: c.TVs.colors.WHITE }),
                                             }),
                                         ea
                                             ? (0, r.jsx)(N.Z, {
                                                   questConfig: n.config,
                                                   fallback: ec,
-                                                  isFocused: f
+                                                  isFocused: f,
                                               })
-                                            : ec
-                                    ]
-                                })
-                            )
+                                            : ec,
+                                    ],
+                                }),
+                            ),
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: a()(w.gridText, w.taskDetails),
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: k(o, u, F),
                                 className: w.taskInstructions,
-                                children: _ ? P.intl.formatToPlainString(P.t['ge+AJi'], { questName: n.config.messages.questName }) : X
+                                children: _
+                                    ? P.intl.formatToPlainString(P.t["ge+AJi"], {
+                                          questName: n.config.messages.questName,
+                                      })
+                                    : X,
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: 'lg' === u ? 'text-sm/medium' : 'text-xs/medium',
-                                color: 'text-muted',
+                                variant: "lg" === u ? "text-sm/medium" : "text-xs/medium",
+                                color: "text-muted",
                                 children: U({
                                     quest: n,
                                     locale: ei,
                                     isQuestExpired: _,
                                     sharedQuestFields: $,
                                     collectibleQuestRewardDescription: et,
-                                    formattedCompletionDate: Z
-                                })
-                            })
-                        ]
+                                    formattedCompletionDate: Z,
+                                }),
+                            }),
+                        ],
                     }),
                     en
-                        ? (0, r.jsxs)('div', {
+                        ? (0, r.jsxs)("div", {
                               className: a()(w.ctaButtonContainer, w.gridCtaButtons),
                               children: [
                                   (0, r.jsx)(l.zx, {
                                       color: l.Tt.PRIMARY,
                                       disabled: !0,
                                       className: w.questEnrollmentBlockedButton,
-                                      children: P.intl.string(P.t.V293qq)
+                                      children: P.intl.string(P.t.V293qq),
                                   }),
                                   (0, r.jsx)(l.zx, {
                                       color: l.Tt.BRAND,
                                       onClick: () => (0, I.openQuestMinorEnrollmentBlockModal)(n, o, x),
                                       className: w.questEnrollmentBlockedButton,
-                                      children: P.intl.string(P.t.vY9GgI)
-                                  })
-                              ]
+                                      children: P.intl.string(P.t.vY9GgI),
+                                  }),
+                              ],
                           })
-                        : (0, r.jsxs)('div', {
+                        : (0, r.jsxs)("div", {
                               className: a()(w.ctaButtonContainer, w.gridCtaButtons),
                               children: [
                                   !W &&
                                       (0, r.jsx)(j, {
                                           containerSize: u,
                                           onClick: er,
-                                          children: P.intl.string(P.t.LLLLPD)
+                                          children: P.intl.string(P.t.LLLLPD),
                                       }),
-                                  eu()
-                              ]
+                                  eu(),
+                              ],
                           }),
                     q &&
                         (0, r.jsx)(O.Z, {
                             className: w.gridProgressBar,
                             color: V ? c.TVs.colors.TEXT_FEEDBACK_POSITIVE : c.TVs.colors.BG_BRAND,
                             quest: n,
-                            isInventory: W
-                        })
-                ]
+                            isInventory: W,
+                        }),
+                ],
             }),
             el &&
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: w.microphoneContainer,
                     children: [
-                        (0, r.jsx)('div', { className: w.separator }),
+                        (0, r.jsx)("div", { className: w.separator }),
                         (0, r.jsx)(S.Z, {
                             quest: n,
                             location: o,
-                            sourceQuestContent: x
-                        })
-                    ]
-                })
-        ]
+                            sourceQuestContent: x,
+                        }),
+                    ],
+                }),
+        ],
     });
 };

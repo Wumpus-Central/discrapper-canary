@@ -19,9 +19,9 @@ function d(e) {
         children: p(
             a()((0, c.Q)(null != (n = null != (t = null == d ? void 0 : d.theme) ? t : o) ? n : h), {
                 [u.e3]: null != d,
-                'disable-adaptive-theme': f,
-                'reduce-adaptive-theme': _
-            })
-        )
+                "disable-adaptive-theme": f,
+                "reduce-adaptive-theme": _,
+            }),
+        ),
     });
 }

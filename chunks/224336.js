@@ -3,5 +3,5 @@ var r = n(255367);
 n(73800);
 var i = n(339756);
 function l() {
-    return (0, r.jsx)('div', { className: i.divider });
+    return (0, r.jsx)("div", { className: i.divider });
 }

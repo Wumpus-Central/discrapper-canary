@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => l,
-    R: () => s
+    R: () => s,
 });
 var r = n(570140),
     i = n(522474),
@@ -15,12 +15,12 @@ async function l(e, t) {
     e &&
         !s &&
         r.Z.wait(() => {
-            r.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
+            r.Z.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
         });
     try {
         n = await t();
     } catch (e) {
         n = !1;
     }
-    return (!n && e && o.xv(a.KJ3.ACTIVITY_POPOUT), n);
+    return !n && e && o.xv(a.KJ3.ACTIVITY_POPOUT), n;
 }

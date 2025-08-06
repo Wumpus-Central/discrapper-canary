@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     S: () => p,
-    m: () => _
+    m: () => _,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -25,18 +25,18 @@ function _() {
         avatarSrc: a,
         eventHandlers: {
             onMouseEnter: i.useCallback(() => n(!0), []),
-            onMouseLeave: i.useCallback(() => n(!1), [])
-        }
+            onMouseLeave: i.useCallback(() => n(!1), []),
+        },
     };
 }
 function p(e) {
     let { src: t } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: d.avatarContainer,
         children: (0, r.jsx)(f, {
             src: t,
             size: a.EFr.SIZE_40,
-            'aria-label': u.intl.string(u.t.hG1StL)
-        })
+            "aria-label": u.intl.string(u.t.hG1StL),
+        }),
     });
 }

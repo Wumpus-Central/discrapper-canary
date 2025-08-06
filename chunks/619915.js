@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     QN: () => m,
     ZP: () => h,
     gb: () => g,
-    uF: () => E
+    uF: () => E,
 }),
     n(388685),
-    n(539854));
+    n(539854);
 var r = n(73800),
     i = n(442837),
     o = n(835473),
@@ -21,7 +21,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,8 +68,10 @@ function p(e, t) {
 }
 function h(e, t) {
     return g(
-        (0, i.Wu)([c.ZP], () => (null != e && null != e.id && '' !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6)),
-        t
+        (0, i.Wu)([c.ZP], () =>
+            null != e && null != e.id && "" !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6,
+        ),
+        t,
     );
 }
 function m(e) {
@@ -82,7 +84,7 @@ function m(e) {
                 let r = (0, u.p)(t.embeddedActivity.location);
                 if (null == r) return;
                 let i = null != (n = e.get(r)) ? n : [];
-                (i.push(t), e.set(r, i));
+                i.push(t), e.set(r, i);
             }),
             e
         );
@@ -93,15 +95,11 @@ function g(e, t) {
         a = (0, o.Z)(n),
         c = new Set([]);
     for (let t of e) for (let e of t.userIds) c.add(e);
-    let u = (0, i.Wu)(
-        [s.default],
-        () => {
-            let e = [];
-            for (let t of c) e.push(s.default.getUser(t));
-            return e;
-        },
-        [c]
-    );
+    let u = (0, i.Wu)([s.default], () => {
+        let e = [];
+        for (let t of c) e.push(s.default.getUser(t));
+        return e;
+    }, [c]);
     return r.useMemo(() => {
         let n = new Map();
         return (
@@ -125,7 +123,7 @@ function g(e, t) {
                         : {
                               embeddedActivity: e,
                               application: i,
-                              userParticipantAvatarUrls: o
+                              userParticipantAvatarUrls: o,
                           };
                 })
                 .filter(l.lm)
@@ -140,16 +138,22 @@ function E(e) {
             return (
                 e.forEach((e) => {
                     var n;
-                    let r = a.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
-                        var n;
-                        return t.application_id === (null == e || null == (n = e.application) ? void 0 : n.id);
-                    });
-                    t.set(null == e || null == (n = e.application) ? void 0 : n.id, p(f({}, e), { presenceActivity: r }));
+                    let r = a.Z.findActivity(
+                        null == e ? void 0 : e.embeddedActivity.userIds.values().next().value,
+                        (t) => {
+                            var n;
+                            return t.application_id === (null == e || null == (n = e.application) ? void 0 : n.id);
+                        },
+                    );
+                    t.set(
+                        null == e || null == (n = e.application) ? void 0 : n.id,
+                        p(f({}, e), { presenceActivity: r }),
+                    );
                 }),
                 t
             );
         },
         [e],
-        i.pF
+        i.pF,
     );
 }

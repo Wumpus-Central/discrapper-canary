@@ -4,9 +4,9 @@ var i = n(442837),
     l = n(509613),
     a = n(292959),
     r = n(388032);
-let s = (0, l.qs)('EnableUnreadMessageBadge', {
+let s = (0, l.qs)("EnableUnreadMessageBadge", {
     useTitle: () => r.intl.string(r.t.VH8AIC),
-    useSubtitle: () => r.intl.string(r.t['9K4qwc']),
+    useSubtitle: () => r.intl.string(r.t["9K4qwc"]),
     useValue: () => (0, i.e7)([a.Z], () => !a.Z.getDisableUnreadBadge()),
-    setValue: (e) => o.default.setDisableUnreadBadge(!e)
+    setValue: (e) => o.default.setDisableUnreadBadge(!e),
 });

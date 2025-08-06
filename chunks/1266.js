@@ -18,5 +18,5 @@ var r = n(48657),
     };
 e.exports = {
     findLast: s(0),
-    findLastIndex: s(1)
+    findLastIndex: s(1),
 };

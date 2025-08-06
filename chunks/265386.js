@@ -22,42 +22,45 @@ function b(e) {
         v = () => {
             if (!O) return y;
             let e = (e) => {
-                (e.stopPropagation(), t.isGuildStageVoice() ? (0, f.Cq)(t) : (l.default.selectVoiceChannel(t.id), (0, u.Kh)(t.id)), null == i || i({ action: 'OPEN_VOICE_CHANNEL' }), null == b || b());
+                e.stopPropagation(),
+                    t.isGuildStageVoice() ? (0, f.Cq)(t) : (l.default.selectVoiceChannel(t.id), (0, u.Kh)(t.id)),
+                    null == i || i({ action: "OPEN_VOICE_CHANNEL" }),
+                    null == b || b();
             };
             return (0, r.jsx)(s.P3F, {
                 className: o()(E.clickableText, E.inline),
                 onClick: e,
-                children: y
+                children: y,
             });
         },
         I = () => {
             if (null == n) return null;
             let e = (e) => {
-                (e.stopPropagation(), (0, d.X)(n.id), null == i || i({ action: 'OPEN_VOICE_GUILD' }), null == b || b());
+                e.stopPropagation(), (0, d.X)(n.id), null == i || i({ action: "OPEN_VOICE_GUILD" }), null == b || b();
             };
             return (0, r.jsx)(p.Z, {
-                variant: 'text-xs/normal',
-                text: g.intl.formatToPlainString(g.t['hq/Qzc'], { guildName: n.name }),
-                onClick: e
+                variant: "text-xs/normal",
+                text: g.intl.formatToPlainString(g.t["hq/Qzc"], { guildName: n.name }),
+                onClick: e,
             });
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         children: [
             (0, r.jsxs)(s.X6q, {
-                variant: 'heading-sm/semibold',
-                color: 'text-default',
+                variant: "heading-sm/semibold",
+                color: "text-default",
                 className: E.voiceChannelHeading,
                 children: [
                     (0, r.jsx)(h.Z, {
                         channel: t,
-                        size: 'xxs',
+                        size: "xxs",
                         color: s.TVs.colors.TEXT_DEFAULT,
-                        className: E.voiceIcon
+                        className: E.voiceIcon,
                     }),
-                    v()
-                ]
+                    v(),
+                ],
             }),
-            I()
-        ]
+            I(),
+        ],
     });
 }

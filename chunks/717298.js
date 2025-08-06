@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => ee }), n(388685));
+n.d(t, { Z: () => ee }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -59,20 +59,31 @@ function ee(e) {
             twoClickVariant: et,
             twoStepModal: en,
             showSDHDUpsell: er,
-            footerSlideIn: ei
+            footerSlideIn: ei,
         } = (0, N.a)({
-            location: 'golivemodalv2',
-            autoTrackExposure: !1
+            location: "golivemodalv2",
+            autoTrackExposure: !1,
         }),
         el = i.useRef(performance.now()),
-        es = (0, m.e7)([C.Z], () => C.Z.getUseSystemScreensharePicker() && ((0, Z.isLinux)() || ((0, Z.isMac)() && c().satisfies(null === x.Z || void 0 === x.Z ? void 0 : x.Z.os.release, J.jR)))),
+        es = (0, m.e7)(
+            [C.Z],
+            () =>
+                C.Z.getUseSystemScreensharePicker() &&
+                ((0, Z.isLinux)() ||
+                    ((0, Z.isMac)() && c().satisfies(null === x.Z || void 0 === x.Z ? void 0 : x.Z.os.release, J.jR))),
+        ),
         { analyticsLocations: eo } = (0, v.ZP)(_.Z.GO_LIVE_MODAL_V2),
         ea = (0, m.e7)([O.default], () => O.default.getCurrentUser()),
         ec = (0, M.Z)(),
-        { state: ed, dispatch: eu } = (0, U.Ti)(a, ea, ec, (0, Z.isWindows)() && null != a && ee ? 'confirm' : 'source_select'),
-        [ef, em] = (0, b.L)(X.h7.AUDIO_INPUT, { location: 'GoLiveModalV2' }),
+        { state: ed, dispatch: eu } = (0, U.Ti)(
+            a,
+            ea,
+            ec,
+            (0, Z.isWindows)() && null != a && ee ? "confirm" : "source_select",
+        ),
+        [ef, em] = (0, b.L)(X.h7.AUDIO_INPUT, { location: "GoLiveModalV2" }),
         eh = ef.concat(em);
-    (0, Y.Z)(es, eu, 'confirm' === ed.modalStep);
+    (0, Y.Z)(es, eu, "confirm" === ed.modalStep);
     let ep = !w.ZP.canStreamQuality(w.ZP.StreamQuality.HIGH, ea),
         ex = ei && !es,
         eg = (0, h.q_F)(
@@ -80,13 +91,13 @@ function ee(e) {
                 height: ex && null == ed.selectedSource ? 0 : 76 + 40 * !!ep,
                 config: {
                     easing: $,
-                    duration: 200
-                }
+                    duration: 200,
+                },
             },
-            'respect-motion-settings'
+            "respect-motion-settings",
         ),
         e_ = !(0, Z.isLinux)(),
-        ev = 'confirm' === ed.modalStep,
+        ev = "confirm" === ed.modalStep,
         ej = !ee && null != a && !ev,
         eb = ev || (!ej && et && (!es || ed.sourceType === f.vA.CAMERA)),
         eS = es && ed.sourceType !== f.vA.CAMERA,
@@ -98,20 +109,20 @@ function ee(e) {
                 {
                     name: q.intl.string(q.t.tHoi7u),
                     value: f.vA.WINDOW,
-                    icon: h.GON
+                    icon: h.GON,
                 },
                 {
                     name: q.intl.string(q.t.MhJ43N),
                     value: f.vA.CAMERA,
-                    icon: h.Odl
-                }
+                    icon: h.Odl,
+                },
             ];
             return (
                 es ||
                     e.splice(1, 0, {
                         name: q.intl.string(q.t.slM8rK),
                         value: f.vA.SCREEN,
-                        icon: h.pzj
+                        icon: h.pzj,
                     }),
                 e
             );
@@ -119,36 +130,36 @@ function ee(e) {
         { sourceType: eZ } = ed,
         ew = i.useCallback(
             async (e) => {
-                (S.eo.updateSetting(ed.notifyFriends), S.I0.updateSetting(ed.hidePreview));
-                let [t, r] = await (0, R.Z)(e.hasOwnProperty('pid') ? e.pid : e, {
+                S.eo.updateSetting(ed.notifyFriends), S.I0.updateSetting(ed.hidePreview);
+                let [t, r] = await (0, R.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
                     preset: ed.preset,
                     fps: ed.fps,
                     resolution: ed.resolution,
                     soundshareEnabled: !ed.muteStreamAudio,
                     previewDisabled: ed.hidePreview,
                     goLiveModalDurationMs: performance.now() - el.current,
-                    audioSourceId: ed.audioSourceId
+                    audioSourceId: ed.audioSourceId,
                 });
                 if (t) return n();
-                ('no permission' === r &&
+                "no permission" === r &&
                     p.Z.show({
-                        title: q.intl.string(q.t['X+mXen']),
-                        body: q.intl.string(q.t.MIJCzs)
+                        title: q.intl.string(q.t["X+mXen"]),
+                        body: q.intl.string(q.t.MIJCzs),
                     }),
-                    n());
+                    n();
             },
-            [n, ed]
+            [n, ed],
         );
     async function eN(e) {
-        if ((0, Z.isWindows)() && en && 'source_select' === ed.modalStep) {
-            (eu({
-                type: 'set_step',
-                step: 'confirm'
+        if ((0, Z.isWindows)() && en && "source_select" === ed.modalStep) {
+            eu({
+                type: "set_step",
+                step: "confirm",
             }),
                 eu({
-                    type: 'set_selected_channel',
-                    channelId: e
-                }));
+                    type: "set_selected_channel",
+                    channelId: e,
+                });
             return;
         }
         (await (0, g.Z)({ channelId: e })) && null != a && ew(a);
@@ -156,9 +167,9 @@ function ee(e) {
     let eT = i.useCallback(() => {
             var e;
             ew({
-                id: 'prepicked:' + ed.nativeSourceType,
-                name: null != (e = E.ZP.getLastPickedContentTitle()) ? e : q.intl.string(q.t['KKcy9/']),
-                url: ''
+                id: "prepicked:" + ed.nativeSourceType,
+                name: null != (e = E.ZP.getLastPickedContentTitle()) ? e : q.intl.string(q.t["KKcy9/"]),
+                url: "",
             });
         }, [ew, ed.nativeSourceType]),
         eE = (0, r.jsxs)(h.mzw, {
@@ -166,52 +177,54 @@ function ee(e) {
             separator: !1,
             direction: u.k.Direction.VERTICAL,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: Q.footerContent,
                     children: [
                         (0, r.jsx)(V.Z, { nativePickerEnabled: es }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: Q.rightButtonGroup,
                             children: [
                                 ey && (0, r.jsx)(H.Z, { onClose: n }),
                                 eS &&
                                     !eb &&
                                     (0, r.jsx)(k.Z, {
-                                        mainCTADisabled: !e_ && '' === ed.nativeSourceType,
+                                        mainCTADisabled: !e_ && "" === ed.nativeSourceType,
                                         mainCTAOnClick: () => {
-                                            ((0, T.t)(), (0, T.T)(ed.nativeSourceType));
+                                            (0, T.t)(), (0, T.T)(ed.nativeSourceType);
                                         },
-                                        align: 'right',
+                                        align: "right",
                                         ctaText: q.intl.string(q.t.FiBjwc),
-                                        hideOptionsButton: !ey
+                                        hideOptionsButton: !ey,
                                     }),
                                 eb &&
                                     !eS &&
                                     (0, r.jsx)(k.Z, {
                                         mainCTADisabled: null == ed.selectedSource,
                                         mainCTAOnClick: () => {
-                                            null != ed.selectedChannel ? eN(ed.selectedChannel) : null != ed.selectedSource && ew(ed.selectedSource);
+                                            null != ed.selectedChannel
+                                                ? eN(ed.selectedChannel)
+                                                : null != ed.selectedSource && ew(ed.selectedSource);
                                         },
-                                        align: 'right',
+                                        align: "right",
                                         hideOptionsButton: !ey,
-                                        ctaText: q.intl.string(K.default['5AyH/v'])
+                                        ctaText: q.intl.string(K.default["5AyH/v"]),
                                     }),
                                 (!ey || !(eb || eS)) &&
                                     (0, r.jsx)(F.Z, {
                                         useSimplifiedMenu: eO,
-                                        align: 'right'
-                                    })
-                            ]
-                        })
-                    ]
+                                        align: "right",
+                                    }),
+                            ],
+                        }),
+                    ],
                 }),
-                ep && (0, r.jsx)(z.Z, { onClose: n })
-            ]
+                ep && (0, r.jsx)(z.Z, { onClose: n }),
+            ],
         }),
         eP = ex
             ? (0, r.jsx)(o.animated.div, {
                   style: eg,
-                  children: eE
+                  children: eE,
               })
             : eE;
     return (0, r.jsx)(U.Yw, {
@@ -223,22 +236,22 @@ function ee(e) {
                 impressionProperties: {
                     location_stack: eo,
                     application_id: (0, Z.isWindows)() ? (null == (t = (0, P.Z)(j.ZP, I.Z)) ? void 0 : t.id) : void 0,
-                    parent_media_session_id: y.Z.getMediaSessionId()
-                }
+                    parent_media_session_id: y.Z.getMediaSessionId(),
+                },
             },
             className: s()(Q.root, {
                 [Q.nativePicker]: es && null == a,
                 [Q.channelSelector]: ej,
-                [Q.confirmStep]: ev
+                [Q.confirmStep]: ev,
             }),
             size: h.CgR.DYNAMIC,
             transitionState: l,
-            parentComponent: 'GoLiveModalV2',
+            parentComponent: "GoLiveModalV2",
             children: [
                 ej
                     ? (0, r.jsx)(L.Z, {
                           className: s()(Q.channelSelectorComponent, { [Q.withFooter]: eC }),
-                          onSelectChannel: eN
+                          onSelectChannel: eN,
                       })
                     : ev
                       ? (0, r.jsx)(B.Z, { hideBackButton: null != a })
@@ -250,17 +263,17 @@ function ee(e) {
                                     children: (0, r.jsx)(h.sY7, {
                                         className: Q.segmentedControl,
                                         value: eZ,
-                                        look: 'pill',
+                                        look: "pill",
                                         optionClassName: Q.segmentedControlOption,
                                         onChange: (e) => {
                                             let { value: t } = e;
                                             return eu({
-                                                type: 'set_source_type',
-                                                sourceType: t
+                                                type: "set_source_type",
+                                                sourceType: t,
                                             });
                                         },
-                                        options: eI
-                                    })
+                                        options: eI,
+                                    }),
                                 }),
                                 (0, r.jsx)(h.hzk, {
                                     className: Q.content,
@@ -271,39 +284,42 @@ function ee(e) {
                                                   onClick: function (e) {
                                                       function t() {
                                                           var t;
-                                                          if (!(null == (t = e.id) ? void 0 : t.startsWith(f.vA.CAMERA))) return;
+                                                          if (
+                                                              !(null == (t = e.id) ? void 0 : t.startsWith(f.vA.CAMERA))
+                                                          )
+                                                              return;
                                                           let n = (0, A.K)(e.id, ed.deviceSources, eh);
                                                           eu({
-                                                              type: 'set_audio_source',
-                                                              audioSourceId: null != n ? n : void 0
+                                                              type: "set_audio_source",
+                                                              audioSourceId: null != n ? n : void 0,
                                                           });
                                                       }
                                                       if (en && (0, Z.isWindows)()) {
-                                                          (t(),
+                                                          t(),
                                                               eu({
-                                                                  type: 'set_selected_source',
-                                                                  source: e
+                                                                  type: "set_selected_source",
+                                                                  source: e,
                                                               }),
                                                               eu({
-                                                                  type: 'set_step',
-                                                                  step: 'confirm'
-                                                              }));
+                                                                  type: "set_step",
+                                                                  step: "confirm",
+                                                              });
                                                           return;
                                                       }
                                                       if (!et) return ew(e);
-                                                      (t(),
+                                                      t(),
                                                           eu({
-                                                              type: 'set_selected_source',
-                                                              source: e
-                                                          }));
-                                                  }
-                                              })
-                                })
-                            ]
+                                                              type: "set_selected_source",
+                                                              source: e,
+                                                          });
+                                                  },
+                                              }),
+                                }),
+                            ],
                         }),
                 eO && (0, r.jsx)(D.Z, {}),
-                eC && eP
-            ]
-        })
+                eC && eP,
+            ],
+        }),
     });
 }

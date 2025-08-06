@@ -5,6 +5,6 @@ var i = n(739754);
 function o(e) {
     return {
         content: (0, r.jsx)(i.ZP, { message: e }),
-        hasSpoilerEmbeds: !1
+        hasSpoilerEmbeds: !1,
     };
 }

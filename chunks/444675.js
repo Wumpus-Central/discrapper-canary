@@ -3,14 +3,14 @@ var t,
     r,
     i = (e.exports = {});
 function o() {
-    throw Error('setTimeout has not been defined');
+    throw Error("setTimeout has not been defined");
 }
 function a() {
-    throw Error('clearTimeout has not been defined');
+    throw Error("clearTimeout has not been defined");
 }
 function s(e) {
     if (t === setTimeout) return setTimeout(e, 0);
-    if ((t === o || !t) && setTimeout) return ((t = setTimeout), setTimeout(e, 0));
+    if ((t === o || !t) && setTimeout) return (t = setTimeout), setTimeout(e, 0);
     try {
         return t(e, 0);
     } catch (n) {
@@ -23,7 +23,7 @@ function s(e) {
 }
 function l(e) {
     if (n === clearTimeout) return clearTimeout(e);
-    if ((n === a || !n) && clearTimeout) return ((n = clearTimeout), clearTimeout(e));
+    if ((n === a || !n) && clearTimeout) return (n = clearTimeout), clearTimeout(e);
     try {
         return n(e);
     } catch (t) {
@@ -36,12 +36,12 @@ function l(e) {
 }
 !(function () {
     try {
-        t = 'function' == typeof setTimeout ? setTimeout : o;
+        t = "function" == typeof setTimeout ? setTimeout : o;
     } catch (e) {
         t = o;
     }
     try {
-        n = 'function' == typeof clearTimeout ? clearTimeout : a;
+        n = "function" == typeof clearTimeout ? clearTimeout : a;
     } catch (e) {
         n = a;
     }
@@ -58,28 +58,28 @@ function _() {
         u = !0;
         for (var t = c.length; t; ) {
             for (r = c, c = []; ++d < t; ) r && r[d].run();
-            ((d = -1), (t = c.length));
+            (d = -1), (t = c.length);
         }
-        ((r = null), (u = !1), l(e));
+        (r = null), (u = !1), l(e);
     }
 }
 function p(e, t) {
-    ((this.fun = e), (this.array = t));
+    (this.fun = e), (this.array = t);
 }
 function h() {}
-((i.nextTick = function (e) {
+(i.nextTick = function (e) {
     var t = Array(arguments.length - 1);
     if (arguments.length > 1) for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-    (c.push(new p(e, t)), 1 !== c.length || u || s(_));
+    c.push(new p(e, t)), 1 !== c.length || u || s(_);
 }),
     (p.prototype.run = function () {
         this.fun.apply(null, this.array);
     }),
-    (i.title = 'browser'),
+    (i.title = "browser"),
     (i.browser = !0),
     (i.env = {}),
     (i.argv = []),
-    (i.version = ''),
+    (i.version = ""),
     (i.versions = {}),
     (i.on = h),
     (i.addListener = h),
@@ -94,14 +94,14 @@ function h() {}
         return [];
     }),
     (i.binding = function (e) {
-        throw Error('process.binding is not supported');
+        throw Error("process.binding is not supported");
     }),
     (i.cwd = function () {
-        return '/';
+        return "/";
     }),
     (i.chdir = function (e) {
-        throw Error('process.chdir is not supported');
+        throw Error("process.chdir is not supported");
     }),
     (i.umask = function () {
         return 0;
-    }));
+    });

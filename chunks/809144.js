@@ -17,6 +17,6 @@ function u(e) {
               iconSize: o.Z.Sizes.SMALL,
               icon: i.OgN,
               color: null == t ? o.Z.Colors.PRIMARY : o.Z.Colors.SECONDARY,
-              children: t
+              children: t,
           });
 }

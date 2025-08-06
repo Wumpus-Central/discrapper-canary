@@ -16,13 +16,24 @@ var r = n(120356),
     f = n(388032),
     b = n(732391);
 function x(e) {
-    let { user: t, pendingAvatarSrc: n, pendingColors: r, onThemeColorsChange: a, preventDisabled: x, guildId: _, className: j, showPremiumIcon: E = !0, showResetThemeButton: C = !1, forcedDivider: O } = e,
+    let {
+            user: t,
+            pendingAvatarSrc: n,
+            pendingColors: r,
+            onThemeColorsChange: a,
+            preventDisabled: x,
+            guildId: _,
+            className: j,
+            showPremiumIcon: E = !0,
+            showResetThemeButton: C = !1,
+            forcedDivider: O,
+        } = e,
         v = (0, u.ZP)(t.id, _),
         { primaryColor: S, secondaryColor: T } = (0, m.Z)({
             user: t,
             displayProfile: v,
             pendingThemeColors: r,
-            isPreview: !0
+            isPreview: !0,
         }),
         I = p.ZP.canUsePremiumProfileCustomization(t),
         N = null != n ? n : t.getAvatarURL(_, 80),
@@ -38,10 +49,10 @@ function x(e) {
         className: s()(b.__invalid_profileThemesSection, j),
         showPremiumIcon: E,
         forcedDivider: O,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: b.sectionContainer,
             children: [
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: b.sparkleContainer,
                     children: (0, i.jsx)(g.Z, {
                         onChange: (e) => P([e, T]),
@@ -50,14 +61,14 @@ function x(e) {
                         showEyeDropper: !0,
                         label: (0, i.jsx)(c.Text, {
                             className: b.colorSwatchLabel,
-                            color: 'header-secondary',
-                            variant: 'text-xs/normal',
-                            'aria-hidden': !0,
-                            children: f.intl.string(f.t.C3KTQk)
-                        })
-                    })
+                            color: "header-secondary",
+                            variant: "text-xs/normal",
+                            "aria-hidden": !0,
+                            children: f.intl.string(f.t.C3KTQk),
+                        }),
+                    }),
                 }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: b.sparkleContainer,
                     children: (0, i.jsx)(g.Z, {
                         onChange: (e) => P([S, e]),
@@ -66,26 +77,26 @@ function x(e) {
                         showEyeDropper: !0,
                         label: (0, i.jsx)(c.Text, {
                             className: b.colorSwatchLabel,
-                            color: 'header-secondary',
-                            variant: 'text-xs/normal',
-                            'aria-hidden': !0,
-                            children: f.intl.string(f.t['8elvy8'])
-                        })
-                    })
+                            color: "header-secondary",
+                            variant: "text-xs/normal",
+                            "aria-hidden": !0,
+                            children: f.intl.string(f.t["8elvy8"]),
+                        }),
+                    }),
                 }),
                 C &&
                     null != _ &&
-                    (0, i.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
+                    (0, i.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
                         className: b.resetButton,
                         children: (0, i.jsx)(c.zxk, {
-                            variant: 'secondary',
-                            size: 'sm',
-                            text: f.intl.string(f.t['L+Gmoa']),
-                            onClick: () => P([null, null])
-                        })
-                    })
-            ]
-        })
+                            variant: "secondary",
+                            size: "sm",
+                            text: f.intl.string(f.t["L+Gmoa"]),
+                            onClick: () => P([null, null]),
+                        }),
+                    }),
+            ],
+        }),
     });
 }

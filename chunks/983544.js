@@ -1,6 +1,6 @@
 n.d(t, {
     F: () => d,
-    e: () => u
+    e: () => u,
 });
 var r = n(277985),
     i = n(679337),
@@ -30,7 +30,12 @@ class c {
     }
 }
 var u = (function (e) {
-    return ((e[(e.MESSAGE_ATTACHMENT = 0)] = 'MESSAGE_ATTACHMENT'), (e[(e.GUILD_PRODUCT_ATTACHMENT = 1)] = 'GUILD_PRODUCT_ATTACHMENT'), (e[(e.GRAVITY_ATTACHMENT = 2)] = 'GRAVITY_ATTACHMENT'), e);
+    return (
+        (e[(e.MESSAGE_ATTACHMENT = 0)] = "MESSAGE_ATTACHMENT"),
+        (e[(e.GUILD_PRODUCT_ATTACHMENT = 1)] = "GUILD_PRODUCT_ATTACHMENT"),
+        (e[(e.GRAVITY_ATTACHMENT = 2)] = "GRAVITY_ATTACHMENT"),
+        e
+    );
 })({});
 function d(e) {
     switch (e) {

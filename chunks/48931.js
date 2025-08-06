@@ -14,13 +14,13 @@ function l(e) {
                 className: s.header,
                 children: (0, r.jsx)(i.olH, {
                     className: s.closeButton,
-                    onClick: t
-                })
+                    onClick: t,
+                }),
             }),
             (0, r.jsx)(a.Z, {
                 onRetry: n,
-                errorOrigin: a.i.GIFT_MODAL
-            })
-        ]
+                errorOrigin: a.i.GIFT_MODAL,
+            }),
+        ],
     });
 }

@@ -16,113 +16,113 @@ function _(e) {
         transitionState: t,
         size: n.CgR.DYNAMIC,
         className: m.modalRoot,
-        parentComponent: 'MemberListContentLearnMoreModal',
+        parentComponent: "MemberListContentLearnMoreModal",
         children: [
             (0, s.jsxs)(n.xBx, {
                 separator: !1,
                 className: m.modalHeader,
                 children: [
-                    (0, s.jsx)('div', {
+                    (0, s.jsx)("div", {
                         className: m.imageFrame,
-                        children: (0, s.jsx)('img', {
+                        children: (0, s.jsx)("img", {
                             alt: c.intl.string(c.t.AWkQTk),
                             src: x,
-                            className: m.heroImage
-                        })
+                            className: m.heroImage,
+                        }),
                     }),
-                    (0, s.jsxs)('div', {
+                    (0, s.jsxs)("div", {
                         className: m.headerWrapper,
                         children: [
                             (0, s.jsx)(n.X6q, {
-                                variant: 'heading-xl/bold',
-                                children: c.intl.string(c.t.gb37Ky)
+                                variant: "heading-xl/bold",
+                                children: c.intl.string(c.t.gb37Ky),
                             }),
-                            (0, s.jsx)(i.Z, { className: m.betaTag })
-                        ]
-                    })
-                ]
+                            (0, s.jsx)(i.Z, { className: m.betaTag }),
+                        ],
+                    }),
+                ],
             }),
             (0, s.jsxs)(n.hzk, {
                 className: m.modalContent,
                 children: [
-                    (0, s.jsxs)('div', {
+                    (0, s.jsxs)("div", {
                         className: m.modalContentFrame,
                         children: [
                             (0, s.jsx)(n.Text, {
-                                variant: 'text-md/medium',
-                                color: 'header-secondary',
-                                children: c.intl.string(c.t.WKxo8v)
+                                variant: "text-md/medium",
+                                color: "header-secondary",
+                                children: c.intl.string(c.t.WKxo8v),
                             }),
-                            (0, s.jsx)(h, {})
-                        ]
+                            (0, s.jsx)(h, {}),
+                        ],
                     }),
-                    (0, s.jsxs)('div', {
+                    (0, s.jsxs)("div", {
                         className: m.modalFooter,
                         children: [
                             (0, s.jsx)(n.zxk, {
                                 onClick: a,
-                                variant: 'primary',
+                                variant: "primary",
                                 fullWidth: !0,
-                                text: c.intl.string(c.t['x/26d3'])
+                                text: c.intl.string(c.t["x/26d3"]),
                             }),
                             (0, s.jsx)(n.Text, {
-                                variant: 'text-xs/normal',
-                                color: 'text-muted',
+                                variant: "text-xs/normal",
+                                color: "text-muted",
                                 className: m.disclosureText,
-                                children: c.intl.format(c.t['5Ey5Dw'], {
+                                children: c.intl.format(c.t["5Ey5Dw"], {
                                     recentActivityURL: o.Z.getArticleURL(l.BhN.MEMBER_LIST_ACTIVITY_FEED),
                                     handleActivityPrivacyClick: () => {
-                                        (a(), (0, r.Z)(d.Z.ACTIVITY_PRIVACY));
-                                    }
-                                })
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
+                                        a(), (0, r.Z)(d.Z.ACTIVITY_PRIVACY);
+                                    },
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 }
 let h = () => {
     let e = [
         {
             icon: (0, s.jsx)(n.iFz, { className: m.icon }),
-            text: c.intl.string(c.t.vXBrdn)
+            text: c.intl.string(c.t.vXBrdn),
         },
         {
             icon: (0, s.jsx)(n.iWm, { className: m.icon }),
-            text: c.intl.string(c.t.aExjOz)
+            text: c.intl.string(c.t.aExjOz),
         },
         {
             icon: (0, s.jsx)(n.kBi, { className: m.icon }),
-            text: c.intl.string(c.t['i7/QHB'])
+            text: c.intl.string(c.t["i7/QHB"]),
         },
         {
             icon: (0, s.jsx)(n.lMe, { className: m.icon }),
-            text: c.intl.string(c.t.ZmBfKC)
-        }
+            text: c.intl.string(c.t.ZmBfKC),
+        },
     ];
-    return (0, s.jsx)('div', {
+    return (0, s.jsx)("div", {
         className: m.notes,
         children: e.map((e, t) => {
             let { icon: a, text: i } = e;
             return (0, s.jsxs)(
-                'div',
+                "div",
                 {
                     className: m.badgeNote,
                     children: [
-                        (0, s.jsx)('div', {
+                        (0, s.jsx)("div", {
                             className: m.badge,
-                            children: a
+                            children: a,
                         }),
                         (0, s.jsx)(n.Text, {
-                            variant: 'text-sm/medium',
-                            children: i
-                        })
-                    ]
+                            variant: "text-sm/medium",
+                            children: i,
+                        }),
+                    ],
                 },
-                'memberlist-learn-more-note-'.concat(t)
+                "memberlist-learn-more-note-".concat(t),
             );
-        })
+        }),
     });
 };

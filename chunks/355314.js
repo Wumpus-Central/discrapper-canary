@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,7 +51,8 @@ function O(e, t) {
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -61,20 +62,20 @@ function v(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function I(e) {
     var { onClose: t, handleLearnMore: n } = e,
-        b = O(e, ['onClose', 'handleLearnMore']);
+        b = O(e, ["onClose", "handleLearnMore"]);
     let v = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         I = (0, o.e7)([s.Z], () => s.Z.theme),
         T = (0, o.e7)([l.Z], () => l.Z.getGuildId()),
-        S = I === m.BRd.LIGHT ? 'light' : 'dark',
-        A = (0, r.jsx)('img', {
+        S = I === m.BRd.LIGHT ? "light" : "dark",
+        A = (0, r.jsx)("img", {
             className: E.art,
-            alt: 'File Upload Nitro Perk',
-            src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(S, '_v2.png')
+            alt: "File Upload Nitro Perk",
+            src: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_".concat(S, "_v2.png"),
         }),
         N = i.useMemo(() => {
             let e = _.ZP.getUserMaxFileSize(v);
@@ -83,15 +84,15 @@ function I(e) {
         C = (0, d.iL)({
             guildId: T,
             onClick: () => {
-                window.open(f.Z.getArticleURL(m.BhN.NITRO_FAQ), '_blank');
-            }
+                window.open(f.Z.getArticleURL(m.BhN.NITRO_FAQ), "_blank");
+            },
         }),
-        R = (0, r.jsx)('div', {
+        R = (0, r.jsx)("div", {
             className: E.body,
             children: (0, r.jsx)(a.Text, {
-                variant: 'text-sm/medium',
-                children: C
-            })
+                variant: "text-sm/medium",
+                children: C,
+            }),
         });
     return (0, r.jsx)(
         p.Z,
@@ -101,7 +102,7 @@ function I(e) {
                 artContainerClassName: E.artContainer,
                 enableArtBoxShadow: !1,
                 type: h.cd.UPLOAD_ERROR_UPSELL,
-                title: g.intl.string(g.t['9C+41t']),
+                title: g.intl.string(g.t["9C+41t"]),
                 body: R,
                 context: g.intl.formatToPlainString(g.t.q5fTZm, { maxSize: N }),
                 glowUp: C,
@@ -110,9 +111,9 @@ function I(e) {
                 subscriptionTier: h.Si.TIER_2,
                 secondaryCTA: g.intl.string(g.t.ZnqyZ2),
                 onSecondaryClick: n,
-                showEnhancedUpsell: !0
+                showEnhancedUpsell: !0,
             },
-            b
-        )
+            b,
+        ),
     );
 }

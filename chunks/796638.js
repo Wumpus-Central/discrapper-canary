@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     ZB: () => I,
     ZP: () => T,
-    cF: () => p
+    cF: () => p,
 }),
     n(388685),
-    n(539854));
+    n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -24,22 +24,26 @@ let _ = 8640000000000000,
     b = 10 * l.Z.Millis.SECOND;
 function y(e) {
     let t = String(_).length;
-    return String(_ - e).padStart(t, '0');
+    return String(_ - e).padStart(t, "0");
 }
 function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
     switch (e.type) {
         case d.fO.ACTIVITY:
-            return '\x01'.concat(e.sortKey);
+            return "\x01".concat(e.sortKey);
         case d.fO.HIDDEN_STREAM:
         case d.fO.STREAM:
-            return '\x02'.concat((0, a.Z)(e.userNick, e.user));
+            return "\x02".concat((0, a.Z)(e.userNick, e.user));
         case d.fO.USER:
             var n;
-            let r = '\x06';
+            let r = "\x06";
             return (
-                e.speaking ? (r = '\x03') : t - e.lastSpoke < b ? (r = '\x04') : (null == (n = e.voiceState) ? void 0 : n.selfVideo) && (r = '\x05'),
-                ''
+                e.speaking
+                    ? (r = "\x03")
+                    : t - e.lastSpoke < b
+                      ? (r = "\x04")
+                      : (null == (n = e.voiceState) ? void 0 : n.selfVideo) && (r = "\x05"),
+                ""
                     .concat(r)
                     .concat(y(e.lastSpoke))
                     .concat((0, a.Z)(e.userNick, e.user))
@@ -60,7 +64,7 @@ function I(e, t) {
                       tileMinWidth: h,
                       tileMargin: g,
                       limit: m,
-                      cropSelfVideo: !1
+                      cropSelfVideo: !1,
                   },
         { tileWidth: r, tileMinWidth: a, tileMargin: s, limit: l, cropSelfVideo: u, version: f } = n,
         [_, p] = i.useState(Date.now());
@@ -107,25 +111,36 @@ function I(e, t) {
                 null != h && (u && N.length >= g ? (N[Math.max(0, N.length - 1)] = h) : N.push(h)),
                 {
                     visibleParticipants: N,
-                    participantTileWidth: E
+                    participantTileWidth: E,
                 }
             );
         }, [e, t, _, f, u, l, s, a, r]);
     return {
         visibleParticipants: I,
-        participantTileWidth: T
+        participantTileWidth: T,
     };
 }
 function T(e) {
-    let { participants: t, participantTileWidth: n, selectedParticipantId: i, onDoubleClick: o, onContextMenu: a, onClick: s, channel: l, inCall: c, popoutWindow: d, paused: _ = !1 } = e,
+    let {
+            participants: t,
+            participantTileWidth: n,
+            selectedParticipantId: i,
+            onDoubleClick: o,
+            onContextMenu: a,
+            onClick: s,
+            channel: l,
+            inCall: c,
+            popoutWindow: d,
+            paused: _ = !1,
+        } = e,
         p = null != d;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: f.root,
         children: t.map((e) => {
             if (null == e) return null;
             let t = v(e);
             return (0, r.jsx)(
-                'div',
+                "div",
                 {
                     className: f.tileSizer,
                     style: t ? { flexShrink: 0 } : void 0,
@@ -141,11 +156,11 @@ function T(e) {
                         width: t ? E : n,
                         inCall: c,
                         paused: _,
-                        inPopout: p
-                    })
+                        inPopout: p,
+                    }),
                 },
-                e.id
+                e.id,
             );
-        })
+        }),
     });
 }

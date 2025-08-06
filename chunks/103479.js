@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => h,
-    s: () => p
+    s: () => p,
 });
 var r = n(255367);
 n(73800);
@@ -20,12 +20,12 @@ async function p(e) {
         let e = await (0, o.sd)(t, n.id);
         if (e.button_urls.length <= r) return;
         let i = e.button_urls[r];
-        if ('string' != typeof i) return;
+        if ("string" != typeof i) return;
         let a = l.Z.safeParseWithQuery(i);
         if ((null == a ? void 0 : a.protocol) == null || (null == a ? void 0 : a.hostname) == null) return;
         (0, s.q)({
             href: l.Z.format(a),
-            trusted: !1
+            trusted: !1,
         });
     } catch (e) {}
 }
@@ -40,45 +40,47 @@ function h(e) {
                   (0, r.jsx)(
                       u.tG,
                       {
-                          text: l ? f.intl.string(f.t['I6JG4+']) : e,
+                          text: l ? f.intl.string(f.t["I6JG4+"]) : e,
                           size: i.Ph.TINY,
-                          themeColor: 'secondary',
+                          themeColor: "secondary",
                           onClick: (e) => {
-                              (e.stopPropagation(),
-                                  null == o || o({ action: l ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON' }),
+                              e.stopPropagation(),
+                                  null == o ||
+                                      o({ action: l ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
                                   p({
                                       user: t,
                                       activity: n,
-                                      index: a
-                                  }));
-                          }
+                                      index: a,
+                                  });
+                          },
                       },
-                      a
-                  )
-              )
+                      a,
+                  ),
+              ),
           })
         : (0, r.jsx)(r.Fragment, {
               children: n.buttons.map((e, a) =>
                   (0, r.jsx)(
                       u.tG,
                       {
-                          text: l ? f.intl.string(f.t['I6JG4+']) : e,
+                          text: l ? f.intl.string(f.t["I6JG4+"]) : e,
                           size: i.Ph.SMALL,
                           className: _.customButton,
-                          themeColor: 'secondary',
+                          themeColor: "secondary",
                           fullWidth: !0,
                           onClick: (e) => {
-                              (e.stopPropagation(),
-                                  null == o || o({ action: l ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON' }),
+                              e.stopPropagation(),
+                                  null == o ||
+                                      o({ action: l ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
                                   p({
                                       user: t,
                                       activity: n,
-                                      index: a
-                                  }));
-                          }
+                                      index: a,
+                                  });
+                          },
                       },
-                      a
-                  )
-              )
+                      a,
+                  ),
+              ),
           });
 }

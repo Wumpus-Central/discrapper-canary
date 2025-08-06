@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -17,45 +17,45 @@ var r = n(255367),
 let E = {
         tension: 750,
         mass: 2.5,
-        friction: 70
+        friction: 70,
     },
     b = 20;
 function y(e) {
     let { tooltipText: t, headingText: n, textColor: i } = e,
         o = null != n;
-    return (0, r.jsxs)('span', {
+    return (0, r.jsxs)("span", {
         className: o ? void 0 : g.tooltipContainer,
         children: [
-            (0, r.jsxs)('span', {
+            (0, r.jsxs)("span", {
                 className: g.tooltipContainer,
                 children: [
                     (0, r.jsx)(u.SrA, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: g.nitroWheel
+                        size: "md",
+                        color: "currentColor",
+                        className: g.nitroWheel,
                     }),
                     o
                         ? (0, r.jsx)(u.X6q, {
-                              color: null != i ? i : 'text-default',
-                              variant: 'heading-sm/semibold',
-                              children: n
+                              color: null != i ? i : "text-default",
+                              variant: "heading-sm/semibold",
+                              children: n,
                           })
-                        : null
-                ]
+                        : null,
+                ],
             }),
             (0, r.jsx)(u.Text, {
-                variant: o ? 'text-xs/normal' : 'text-sm/medium',
-                color: null != i ? i : 'text-default',
-                children: t
-            })
-        ]
+                variant: o ? "text-xs/normal" : "text-sm/medium",
+                color: null != i ? i : "text-default",
+                children: t,
+            }),
+        ],
     });
 }
 function O(e) {
-    return e ? m.intl.string(m.t['5cRA/f']) : m.intl.string(m.t.buV4am);
+    return e ? m.intl.string(m.t["5cRA/f"]) : m.intl.string(m.t.buV4am);
 }
 function v(e) {
-    let { checked: t, onClick: n, id: o = 'burst-reaction-toggle-button' } = e,
+    let { checked: t, onClick: n, id: o = "burst-reaction-toggle-button" } = e,
         v = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         I = _.default.getCurrentUser(),
         T = null == I || (0, p.I5)(I) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
@@ -64,60 +64,60 @@ function v(e) {
         [R, P] = (0, u.q_F)(() => ({})),
         w = (0, s.animated)(u.Pt5);
     function D() {
-        (P({
-            from: { rotate: t ? '360deg' : '0deg' },
-            to: { rotate: t ? '0deg' : '360deg' },
-            config: E
+        P({
+            from: { rotate: t ? "360deg" : "0deg" },
+            to: { rotate: t ? "0deg" : "360deg" },
+            config: E,
         }),
             null == n || n(),
-            C(!1));
+            C(!1);
     }
     i.useEffect(() => {
         let e = S === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (A(h.L.DISMISS), setTimeout(() => C(e), 200));
     }, [S, A]);
-    let L = N ? m.intl.string(m.t['Osi/u7']) : O(t),
+    let L = N ? m.intl.string(m.t["Osi/u7"]) : O(t),
         x = N ? m.intl.string(m.t.ORK94u) : void 0;
     return (0, r.jsxs)(u.DY3, {
-        position: 'top',
+        position: "top",
         text: (0, r.jsx)(y, {
-            textColor: 'always-white',
+            textColor: "always-white",
             tooltipText: L,
-            headingText: x
+            headingText: x,
         }),
         color: u.ua7.Colors.BRAND,
         forceOpen: N,
-        'aria-label': L,
+        "aria-label": L,
         tooltipClassName: g.tooltip,
         children: [
-            (0, r.jsx)('input', {
+            (0, r.jsx)("input", {
                 className: g.visuallyHidden,
                 checked: t,
                 onChange: D,
                 id: o,
-                type: 'checkbox'
+                type: "checkbox",
             }),
-            (0, r.jsxs)('label', {
+            (0, r.jsxs)("label", {
                 htmlFor: o,
                 className: a()(g.label, { [g.labelChecked]: t }),
                 children: [
                     (0, r.jsx)(w, {
                         style: v ? void 0 : R,
-                        size: 'custom',
+                        size: "custom",
                         width: b,
                         height: b,
-                        color: t ? 'white' : 'currentColor',
-                        className: g.icon
+                        color: t ? "white" : "currentColor",
+                        className: g.icon,
                     }),
-                    (0, r.jsx)('span', {
+                    (0, r.jsx)("span", {
                         children: (0, r.jsx)(u.Text, {
                             className: g.visuallyHidden,
-                            variant: 'text-sm/semibold',
-                            children: m.intl.string(m.t.buV4am)
-                        })
-                    })
-                ]
-            })
-        ]
+                            variant: "text-sm/semibold",
+                            children: m.intl.string(m.t.buV4am),
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

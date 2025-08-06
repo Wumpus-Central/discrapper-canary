@@ -19,16 +19,16 @@ let b = (0, u.Z)(
                 g = null != (t = null == s ? void 0 : s[0]) ? t : E[0],
                 O = (0, d.Z)(n.id, i, !0, g, f);
             return (0, l.jsx)(r.v2r, {
-                navId: 'guild-moderation-roles',
+                navId: "guild-moderation-roles",
                 onClose: () => {
-                    ((0, o.Zy)(), null == b || b());
+                    (0, o.Zy)(), null == b || b();
                 },
-                'aria-label': _.intl.string(_.t.liqwPD),
+                "aria-label": _.intl.string(_.t.liqwPD),
                 onSelect: u,
-                children: (0, l.jsx)(r.kSQ, { children: O })
+                children: (0, l.jsx)(r.kSQ, { children: O }),
             });
         },
-        { object: s.qAy.CONTEXT_MENU }
+        { object: s.qAy.CONTEXT_MENU },
     ),
-    [c.Z.CONTEXT_MENU, c.Z.GUILD_MODERATION_USER_MENU]
+    [c.Z.CONTEXT_MENU, c.Z.GUILD_MODERATION_USER_MENU],
 );

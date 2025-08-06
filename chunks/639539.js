@@ -1,4 +1,4 @@
-(n.d(t, { J: () => v }), n(388685));
+n.d(t, { J: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,23 +67,23 @@ function g(e) {
             {
                 hours: n,
                 minutes: r,
-                seconds: i
+                seconds: i,
             } = (0, s.Z)({
                 start: t,
-                end: e
+                end: e,
             });
         return {
-            hours: String(n).padStart(2, '0'),
-            minutes: String(r).padStart(2, '0'),
-            seconds: String(i).padStart(2, '0'),
-            countdownString: d.intl.formatToPlainString(d.t.U0Hhr6, { duration: new Date(0, 0, 0, n, r, i) })
+            hours: String(n).padStart(2, "0"),
+            minutes: String(r).padStart(2, "0"),
+            seconds: String(i).padStart(2, "0"),
+            countdownString: d.intl.formatToPlainString(d.t.U0Hhr6, { duration: new Date(0, 0, 0, n, r, i) }),
         };
     }
     return {
-        hours: '',
-        minutes: '',
-        seconds: '',
-        countdownString: ''
+        hours: "",
+        minutes: "",
+        seconds: "",
+        countdownString: "",
     };
 }
 let E = (e) => {
@@ -91,37 +91,37 @@ let E = (e) => {
             n = (0, c.Yzy)(t, {
                 from: {
                     opacity: 0,
-                    translateY: '-100%'
+                    translateY: "-100%",
                 },
                 enter: {
                     opacity: 1,
-                    translateY: '0%'
+                    translateY: "0%",
                 },
                 leave: {
                     opacity: 0,
-                    translateY: '100%'
+                    translateY: "100%",
                 },
                 config: {
                     tension: 210,
                     friction: 20,
-                    duration: 200
-                }
+                    duration: 200,
+                },
             });
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: f.animatedDigit,
             children: n((e, t) =>
                 (0, r.jsx)(l.animated.div, {
                     style: m(p({}, e), {
-                        position: 'absolute',
-                        width: '100%',
-                        textAlign: 'center'
+                        position: "absolute",
+                        width: "100%",
+                        textAlign: "center",
                     }),
                     children: (0, r.jsx)(c.Text, {
-                        variant: 'text-sm/bold',
-                        children: t
-                    })
-                })
-            )
+                        variant: "text-sm/bold",
+                        children: t,
+                    }),
+                }),
+            ),
         });
     },
     b = () => {
@@ -132,9 +132,9 @@ let E = (e) => {
                 let r = Date.now();
                 e = setTimeout(
                     () => {
-                        (t((e) => !e), n());
+                        t((e) => !e), n();
                     },
-                    Math.max(100, (Math.floor(r / u.Z.Millis.HALF_SECOND) + 1) * u.Z.Millis.HALF_SECOND - r)
+                    Math.max(100, (Math.floor(r / u.Z.Millis.HALF_SECOND) + 1) * u.Z.Millis.HALF_SECOND - r),
                 );
             }
             return (
@@ -146,34 +146,40 @@ let E = (e) => {
         }, []);
         let n = (0, c.q_F)({
             opacity: e ? 0.5 : 1,
-            config: { duration: 100 }
+            config: { duration: 100 },
         });
         return (0, r.jsxs)(l.animated.div, {
             style: n,
             className: f.colonContainer,
-            children: [(0, r.jsx)('div', { className: f.tinyDot }), (0, r.jsx)('div', { className: f.tinyDot })]
+            children: [(0, r.jsx)("div", { className: f.tinyDot }), (0, r.jsx)("div", { className: f.tinyDot })],
         });
     },
     y = (e) => {
         let { digits: t } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: f.digitContainer,
-                    children: (0, r.jsx)(E, { digit: t[0] })
+                    children: (0, r.jsx)(E, { digit: t[0] }),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: f.digitContainer,
-                    children: (0, r.jsx)(E, { digit: t[1] })
-                })
-            ]
+                    children: (0, r.jsx)(E, { digit: t[1] }),
+                }),
+            ],
         });
     },
     O = (e) => {
         let { countdown: t } = e;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: f.digitsContainer,
-            children: [(0, r.jsx)(y, { digits: t.hours }), (0, r.jsx)(b, {}), (0, r.jsx)(y, { digits: t.minutes }), (0, r.jsx)(b, {}), (0, r.jsx)(y, { digits: t.seconds })]
+            children: [
+                (0, r.jsx)(y, { digits: t.hours }),
+                (0, r.jsx)(b, {}),
+                (0, r.jsx)(y, { digits: t.minutes }),
+                (0, r.jsx)(b, {}),
+                (0, r.jsx)(y, { digits: t.seconds }),
+            ],
         });
     };
 function v(e) {
@@ -186,35 +192,35 @@ function v(e) {
             }, 1000);
             return () => clearInterval(e);
         }, [o]),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: a()(n, f.countdownContainer, { [f.isScrolled]: s }),
-            'aria-label': l.countdownString,
+            "aria-label": l.countdownString,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: f.iconContainer,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: f.clockIconWrapper,
                             children: (0, r.jsx)(c.T39, {
-                                size: 'custom',
+                                size: "custom",
                                 height: 16,
                                 width: 16,
-                                color: 'currentColor',
-                                colorClass: f.clockIcon
-                            })
+                                color: "currentColor",
+                                colorClass: f.clockIcon,
+                            }),
                         }),
                         (0, r.jsx)(c.Text, {
-                            variant: null != t ? t : 'text-sm/medium',
-                            color: 'header-primary',
-                            children: d.intl.string(d.t.VZsY3t)
-                        })
-                    ]
+                            variant: null != t ? t : "text-sm/medium",
+                            color: "header-primary",
+                            children: d.intl.string(d.t.VZsY3t),
+                        }),
+                    ],
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: f.digitsContainer,
-                    children: (0, r.jsx)(O, { countdown: l })
-                })
-            ]
+                    children: (0, r.jsx)(O, { countdown: l }),
+                }),
+            ],
         })
     );
 }

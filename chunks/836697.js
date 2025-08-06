@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685), n(539854));
+n.d(t, { Z: () => y }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -28,10 +28,16 @@ function _(e) {
         i.useEffect(() => {
             if (d && d !== p) {
                 var e, n, r, i, l;
-                (t(), null == (l = f.current) || null == (i = l.ref) || null == (r = i.current) || null == (n = r.layerRef) || null == (e = n.current) || e.updatePosition());
+                t(),
+                    null == (l = f.current) ||
+                        null == (i = l.ref) ||
+                        null == (r = i.current) ||
+                        null == (n = r.layerRef) ||
+                        null == (e = n.current) ||
+                        e.updatePosition();
             }
         }, [f, d, p, t]),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: O.container,
             children: [
                 (0, r.jsx)(o.yRy, {
@@ -39,75 +45,75 @@ function _(e) {
                     targetElementRef: a,
                     shouldShow: d,
                     renderPopout: () =>
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: O.popoutContainer,
                             children: [
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: O.popoutContent,
                                     children: [
-                                        (0, r.jsxs)('div', {
+                                        (0, r.jsxs)("div", {
                                             className: O.coachmarkTextContainer,
                                             children: [
                                                 (0, r.jsx)(o.X6q, {
-                                                    variant: 'heading-md/medium',
-                                                    children: b.intl.string(b.t['0YV0YG'])
+                                                    variant: "heading-md/medium",
+                                                    children: b.intl.string(b.t["0YV0YG"]),
                                                 }),
                                                 (0, r.jsx)(o.Text, {
-                                                    variant: 'text-xs/normal',
-                                                    color: 'text-muted',
-                                                    children: b.intl.string(b.t['0UQVDA'])
-                                                })
-                                            ]
+                                                    variant: "text-xs/normal",
+                                                    color: "text-muted",
+                                                    children: b.intl.string(b.t["0UQVDA"]),
+                                                }),
+                                            ],
                                         }),
                                         (0, r.jsx)(o.zxk, {
-                                            variant: 'primary',
-                                            size: 'sm',
-                                            text: b.intl.string(b.t['4r+amZ']),
+                                            variant: "primary",
+                                            size: "sm",
+                                            text: b.intl.string(b.t["4r+amZ"]),
                                             fullWidth: !0,
-                                            onClick: h
-                                        })
-                                    ]
+                                            onClick: h,
+                                        }),
+                                    ],
                                 }),
-                                (0, r.jsx)('div', { className: O.popoutCaretLeft })
-                            ]
+                                (0, r.jsx)("div", { className: O.popoutCaretLeft }),
+                            ],
                         }),
-                    position: 'right',
-                    animationPosition: 'right',
-                    align: 'top',
+                    position: "right",
+                    animationPosition: "right",
+                    align: "top",
                     spacing: 16,
                     children: (e) => {
                         var t, n;
                         return (0, r.jsx)(
-                            'div',
+                            "div",
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })({}, e)),
                             (n = n =
                                 {
                                     className: O.popoutAnchor,
-                                    ref: a
+                                    ref: a,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -121,12 +127,12 @@ function _(e) {
                                   })(Object(n)).forEach(function (e) {
                                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                   }),
-                            t)
+                            t),
                         );
-                    }
+                    },
                 }),
-                n
-            ]
+                n,
+            ],
         })
     );
 }
@@ -140,9 +146,9 @@ function y(e) {
         S = i.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
-                folderName: b.intl.string(b.t['scsU+v']),
+                folderName: b.intl.string(b.t["scsU+v"]),
                 expanded: n,
-                guildIds: []
+                guildIds: [],
             });
             for (let t of j) e.children.push((0, p.Mg)(t, e.id));
             return e;
@@ -165,15 +171,15 @@ function y(e) {
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      (y(!n), c.ZP.clearCoachmark());
+                      y(!n), c.ZP.clearCoachmark();
                   },
-                  folderButtonSize: 'icon',
-                  folderButtonContent: (0, r.jsx)('div', {
+                  folderButtonSize: "icon",
+                  folderButtonContent: (0, r.jsx)("div", {
                       className: O.pendingFolderButtonIcon,
                       children: (0, r.jsx)(o.wGF, {
-                          size: 'sm',
-                          color: 'currentColor'
-                      })
+                          size: "sm",
+                          color: "currentColor",
+                      }),
                   }),
                   renderChildNode: function (e, t, n) {
                       return e.type !== p.eD.GUILD
@@ -182,12 +188,12 @@ function y(e) {
                                 m.Z,
                                 {
                                     guildNode: e,
-                                    'aria-setsize': n,
-                                    'aria-posinset': t
+                                    "aria-setsize": n,
+                                    "aria-posinset": t,
                                 },
-                                e.id
+                                e.id,
                             );
-                  }
-              })
+                  },
+              }),
           });
 }

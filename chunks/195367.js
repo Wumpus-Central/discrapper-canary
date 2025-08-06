@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(953529), n(388685));
+n.d(t, { Z: () => N }), n(953529), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(913527),
@@ -22,30 +22,35 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
 function E(e) {
     let { editBroadcastInfoData: t } = e,
-        { broadcastInfo: n, broadcastToDirectoryChannels: l, setBroadcastToDirectoryChannels: i, canEveryoneRoleViewEvent: a } = t;
+        {
+            broadcastInfo: n,
+            broadcastToDirectoryChannels: l,
+            setBroadcastToDirectoryChannels: i,
+            canEveryoneRoleViewEvent: a,
+        } = t;
     return n.can_broadcast
         ? (0, r.jsxs)(o.xJW, {
               title: b.intl.string(b.t.BgAW29),
@@ -54,15 +59,15 @@ function E(e) {
                   (0, r.jsx)(o.ua7, {
                       text: (0, r.jsx)(o.Text, {
                           className: y.broadcastInfoTooltip,
-                          variant: 'text-sm/normal',
-                          children: b.intl.string(b.t.gTgUmZ)
+                          variant: "text-sm/normal",
+                          children: b.intl.string(b.t.gTgUmZ),
                       }),
-                      'aria-label': b.intl.string(b.t.gTgUmZ),
+                      "aria-label": b.intl.string(b.t.gTgUmZ),
                       shouldShow: !a,
                       children: (e) => {
                           var t, n;
                           return (0, r.jsx)(
-                              'div',
+                              "div",
                               ((t = O({}, e)),
                               (n = n =
                                   {
@@ -72,11 +77,11 @@ function E(e) {
                                           value: l,
                                           onChange: (e, t) => i(t),
                                           children: (0, r.jsx)(o.Text, {
-                                              variant: 'text-md/normal',
-                                              color: 'interactive-active',
-                                              children: b.intl.string(b.t['8GW68/'])
-                                          })
-                                      })
+                                              variant: "text-md/normal",
+                                              color: "interactive-active",
+                                              children: b.intl.string(b.t["8GW68/"]),
+                                          }),
+                                      }),
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -90,23 +95,41 @@ function E(e) {
                                     })(Object(n)).forEach(function (e) {
                                         Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                     }),
-                              t)
+                              t),
                           );
-                      }
+                      },
                   }),
                   (0, r.jsx)(o.Text, {
                       className: y.broadcastInfoDescription,
-                      variant: 'text-xs/normal',
-                      color: 'header-secondary',
-                      children: b.intl.string(b.t.V8Oq8P)
-                  })
-              ]
+                      variant: "text-xs/normal",
+                      color: "header-secondary",
+                      children: b.intl.string(b.t.V8Oq8P),
+                  }),
+              ],
           })
         : null;
 }
 function N(e) {
-    let { guildEvent: t, guildEventId: i, guildId: N, editBroadcastInfoData: I, error: S, validationErrorMessage: T, onChange: P, canSetFocus: w = !1 } = e,
-        { entityType: Z, channelId: D, description: _, name: R, image: k, scheduledEndTime: A, scheduledStartTime: U, recurrenceRule: M } = t,
+    let {
+            guildEvent: t,
+            guildEventId: i,
+            guildId: N,
+            editBroadcastInfoData: I,
+            error: S,
+            validationErrorMessage: T,
+            onChange: P,
+            canSetFocus: w = !1,
+        } = e,
+        {
+            entityType: Z,
+            channelId: D,
+            description: _,
+            name: R,
+            image: k,
+            scheduledEndTime: A,
+            scheduledStartTime: U,
+            recurrenceRule: M,
+        } = t,
         L = (0, d._d)(D),
         G = (0, d.K3)(D),
         z = null != t && (0, x.xt)(t),
@@ -128,7 +151,9 @@ function N(e) {
         Y = (e, t) => {
             if (null == e || void 0 === t) return void B(null);
             (0, o.ZDy)(async () => {
-                let { default: l } = await Promise.all([n.e('91689'), n.e('59732'), n.e('48389')]).then(n.bind(n, 712451));
+                let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("48389")]).then(
+                    n.bind(n, 712451),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         l,
@@ -140,27 +165,27 @@ function N(e) {
                                     let { imageUri: t } = e;
                                     return B(t);
                                 },
-                                uploadType: j.pC.SCHEDULED_EVENT_IMAGE
+                                uploadType: j.pC.SCHEDULED_EVENT_IMAGE,
                             },
-                            n
-                        )
+                            n,
+                        ),
                     );
             });
         },
-        q = null == S ? void 0 : S.getFirstFieldErrorMessage('name'),
-        H = null == S ? void 0 : S.getFirstFieldErrorMessage('description'),
+        q = null == S ? void 0 : S.getFirstFieldErrorMessage("name"),
+        H = null == S ? void 0 : S.getFirstFieldErrorMessage("description"),
         J = null == q && null == H ? (null == S ? void 0 : S.getAnyErrorMessage()) : null;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: y.blockedUsersContainer,
-                children: null != D && !z && (L > 0 || G > 0) && (0, r.jsx)(m.mv, { channelId: D })
+                children: null != D && !z && (L > 0 || G > 0) && (0, r.jsx)(m.mv, { channelId: D }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: y.form,
                 children: [
                     (0, r.jsxs)(o.xJW, {
-                        title: b.intl.string(b.t['0HbEQ0']),
+                        title: b.intl.string(b.t["0HbEQ0"]),
                         className: y.topicFormItem,
                         required: !0,
                         children: [
@@ -169,15 +194,15 @@ function N(e) {
                                 onChange: (e) => {
                                     P({ name: e });
                                 },
-                                placeholder: b.intl.string(b.t['6/yarq']),
+                                placeholder: b.intl.string(b.t["6/yarq"]),
                                 maxLength: f.p,
                                 value: R,
-                                autoComplete: 'off',
-                                inputRef: F
+                                autoComplete: "off",
+                                inputRef: F,
                             }),
                             (0, r.jsx)(C, { error: q }),
-                            (0, r.jsx)(C, { error: J })
-                        ]
+                            (0, r.jsx)(C, { error: J }),
+                        ],
                     }),
                     (0, r.jsx)(p.Z, {
                         className: y.formItem,
@@ -185,9 +210,14 @@ function N(e) {
                             let { startDate: t, endDate: n } = e,
                                 r = {
                                     scheduledStartTime: null == t ? void 0 : t.toISOString(),
-                                    scheduledEndTime: null == n ? void 0 : n.toISOString()
+                                    scheduledEndTime: null == n ? void 0 : n.toISOString(),
                                 };
-                            (null != t && null != A && (null == n ? void 0 : n.isBefore(t)) && (r.scheduledEndTime = t.add(1, 'hour').toISOString()), null != t && null != W && (r.recurrenceRule = (0, h.mF)(W, t)), P(r));
+                            null != t &&
+                                null != A &&
+                                (null == n ? void 0 : n.isBefore(t)) &&
+                                (r.scheduledEndTime = t.add(1, "hour").toISOString()),
+                                null != t && null != W && (r.recurrenceRule = (0, h.mF)(W, t)),
+                                P(r);
                         },
                         onRecurrenceChange: (e) => {
                             let t = V.startDate;
@@ -198,34 +228,34 @@ function N(e) {
                         showEndDate: Z === f.WX.EXTERNAL,
                         requireEndDate: Z === f.WX.EXTERNAL,
                         disableStartDateTime: z,
-                        guildId: N
+                        guildId: N,
                     }),
                     (0, r.jsx)(C, { error: T }),
                     (0, r.jsxs)(o.xJW, {
-                        title: b.intl.string(b.t['+gRCCw']),
+                        title: b.intl.string(b.t["+gRCCw"]),
                         className: y.formItem,
                         children: [
                             (0, r.jsx)(s.iS, {
-                                placeholder: b.intl.string(b.t['kWO/Ex']),
+                                placeholder: b.intl.string(b.t["kWO/Ex"]),
                                 value: _,
                                 onChange: (e) => {
                                     P({ description: e });
                                 },
                                 maxLength: f.wm,
-                                autosize: !0
+                                autosize: !0,
                             }),
-                            (0, r.jsx)(C, { error: H })
-                        ]
+                            (0, r.jsx)(C, { error: H }),
+                        ],
                     }),
                     (0, r.jsxs)(o.xJW, {
                         title: b.intl.string(b.t.Ly121d),
                         className: y.formItem,
                         children: [
                             (0, r.jsx)(o.Text, {
-                                variant: 'text-xs/normal',
-                                color: 'header-secondary',
+                                variant: "text-xs/normal",
+                                color: "header-secondary",
                                 className: y.addImageHint,
-                                children: b.intl.string(b.t.B9C9bW)
+                                children: b.intl.string(b.t.B9C9bW),
                             }),
                             null != k
                                 ? (0, r.jsxs)(r.Fragment, {
@@ -244,27 +274,27 @@ function N(e) {
                                               onChange: Y,
                                               hint: b.intl.string(b.t.G44Xmp),
                                               showRemoveButton: !1,
-                                              enabled: !0
+                                              enabled: !0,
                                           }),
                                           (0, r.jsx)(o.zxk, {
-                                              variant: 'primary',
-                                              size: 'sm',
+                                              variant: "primary",
+                                              size: "sm",
                                               text: b.intl.string(b.t.gmUvOz),
-                                              onClick: () => B(null)
-                                          })
-                                      ]
+                                              onClick: () => B(null),
+                                          }),
+                                      ],
                                   })
                                 : (0, r.jsx)(u.Z, {
                                       size: s.zx.Sizes.SMALL,
                                       onChange: Y,
-                                      buttonCTA: b.intl.string(b.t.vKCGYW)
-                                  })
-                        ]
+                                      buttonCTA: b.intl.string(b.t.vKCGYW),
+                                  }),
+                        ],
                     }),
-                    (0, r.jsx)(E, { editBroadcastInfoData: I })
-                ]
-            })
-        ]
+                    (0, r.jsx)(E, { editBroadcastInfoData: I }),
+                ],
+            }),
+        ],
     });
 }
 function C(e) {
@@ -272,9 +302,9 @@ function C(e) {
     return null == t
         ? null
         : (0, r.jsx)(o.Text, {
-              color: 'text-danger',
-              variant: 'text-xs/normal',
+              color: "text-danger",
+              variant: "text-xs/normal",
               className: y.warning,
-              children: t
+              children: t,
           });
 }

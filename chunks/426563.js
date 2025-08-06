@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => w,
-    j: () => P
+    j: () => P,
 });
 var r = n(526167),
     i = n(621554),
@@ -40,10 +40,10 @@ let w = {
     BOT_AVATARS: {
         clyde: o,
         nitro: O,
-        nitro_wumpus: v
+        nitro_wumpus: v,
     },
     DEFAULT_CHANNEL_ICON: y,
     canUseWebp: function () {
         return r.og();
-    }
+    },
 };

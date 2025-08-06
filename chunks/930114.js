@@ -16,7 +16,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,7 +46,7 @@ function p(e) {
         b = (0, l.yd)(null == E ? void 0 : E.premiumType, u.p9.TIER_0);
     (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('92446'), n.e('24566')]).then(n.bind(n, 409858));
+            let { default: e } = await Promise.all([n.e("92446"), n.e("24566")]).then(n.bind(n, 409858));
             return (n) => {
                 var i, o;
                 return (0, r.jsx)(
@@ -59,19 +59,28 @@ function p(e) {
                             emojiName: null == h || null == (i = h.emoji) ? void 0 : i.name,
                             soundId: null == h || null == (o = h.sound) ? void 0 : o.id,
                             onComplete: (e, t) => {
-                                ((g = e), t && ((m = t), e.isSubscription && null == a.Z.getPremiumSubscription(!1) && (0, c.H)(!0)));
-                            }
+                                (g = e),
+                                    t &&
+                                        ((m = t),
+                                        e.isSubscription && null == a.Z.getPremiumSubscription(!1) && (0, c.H)(!0));
+                            },
                         },
-                        n
-                    )
+                        n,
+                    ),
                 );
             };
         },
         {
             onCloseCallback: () => {
                 var e;
-                m && null != g && !b && g.isSubscription && (null == g || null == (e = g.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && s.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
-            }
-        }
+                m &&
+                    null != g &&
+                    !b &&
+                    g.isSubscription &&
+                    (null == g || null == (e = g.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) ===
+                        u.p9.TIER_2 &&
+                    s.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+            },
+        },
     );
 }

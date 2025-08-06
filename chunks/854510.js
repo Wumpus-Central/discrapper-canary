@@ -1,4 +1,4 @@
-(n.d(e, { default: () => a }), n(388685));
+n.d(e, { default: () => a }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(82659),
@@ -15,30 +15,38 @@ function a(t) {
         actions: [
             {
                 text: l.intl.string(l.t.CZGqeX),
-                variant: 'secondary',
-                onClick: c
+                variant: "secondary",
+                onClick: c,
             },
             {
                 text: l.intl.string(l.t.mbD50N),
-                variant: 'primary',
+                variant: "primary",
                 onClick: () => {
-                    (n(e), c());
-                }
-            }
+                    n(e), c();
+                },
+            },
         ],
         title: (function (t) {
             let { blockedUsersCount: e, ignoredUsersCount: n } = t;
-            return e > 0 && n > 0 ? l.intl.formatToPlainString(l.t.Uzdyho, { number: e + n }) : n > 0 ? l.intl.formatToPlainString(l.t.wvygk5, { number: n }) : l.intl.formatToPlainString(l.t.HviVAw, { number: e });
+            return e > 0 && n > 0
+                ? l.intl.formatToPlainString(l.t.Uzdyho, { number: e + n })
+                : n > 0
+                  ? l.intl.formatToPlainString(l.t.wvygk5, { number: n })
+                  : l.intl.formatToPlainString(l.t.HviVAw, { number: e });
         })({
             blockedUsersCount: d.length,
-            ignoredUsersCount: u.length
+            ignoredUsersCount: u.length,
         }),
         subtitle: (function (t) {
             let { blockedUsersCount: e, ignoredUsersCount: n } = t;
-            return e > 0 && n > 0 ? l.intl.string(l.t['P/KFX1']) : n > 0 ? l.intl.format(l.t.Ri3o39, { number: n }) : l.intl.format(l.t['28qZMT'], { number: e });
+            return e > 0 && n > 0
+                ? l.intl.string(l.t["P/KFX1"])
+                : n > 0
+                  ? l.intl.format(l.t.Ri3o39, { number: n })
+                  : l.intl.format(l.t["28qZMT"], { number: e });
         })({
             blockedUsersCount: d.length,
-            ignoredUsersCount: u.length
+            ignoredUsersCount: u.length,
         }),
         children: [...d, ...u].map((t) => {
             let { user: n, id: i, speaker: s } = t;
@@ -48,10 +56,10 @@ function a(t) {
                     user: n,
                     speaker: s,
                     showStatus: !0,
-                    channelId: e.id
+                    channelId: e.id,
                 },
-                i
+                i,
             );
-        })
+        }),
     });
 }

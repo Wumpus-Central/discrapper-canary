@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685), n(704826), n(35282));
+n.d(t, { Z: () => d }), n(388685), n(704826), n(35282);
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -10,7 +10,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,23 +30,23 @@ class c extends r.PureComponent {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         i.forEach(function (t) {
                             l(e, t, n[t]);
-                        }));
+                        });
                 }
                 return e;
             })({}, this.props)),
             (t = t =
                 {
-                    inputMode: 'numeric',
+                    inputMode: "numeric",
                     onChange: this.handleChange,
-                    inputRef: this.setRef
+                    inputRef: this.setRef,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -60,25 +60,30 @@ class c extends r.PureComponent {
                   })(Object(t)).forEach(function (n) {
                       Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                   }),
-            e)
+            e),
         );
     }
     constructor(...e) {
-        (super(...e),
-            l(this, '_inputRef', void 0),
-            l(this, 'selectionStart', 0),
-            l(this, 'setRef', (e) => {
+        super(...e),
+            l(this, "_inputRef", void 0),
+            l(this, "selectionStart", 0),
+            l(this, "setRef", (e) => {
                 let { inputRef: t } = this.props;
-                ((this._inputRef = e), null != t && t(e));
+                (this._inputRef = e), null != t && t(e);
             }),
-            l(this, 'handleChange', (e, t) => {
+            l(this, "handleChange", (e, t) => {
                 let { value: n, onChange: i } = this.props,
                     r = this._inputRef;
                 if (e === n || null == r || null == n) return;
                 let s = (0, a.M)(e),
                     l = r.selectionStart;
-                (s === n && s.length <= 3 && n.includes('/') && !e.includes('/') ? (s = s.replace(o, '')) : s === n && e.includes('/') && !n.includes('/') && (s += '/'), s.length > e.length && (l += s.length - e.length), (this.selectionStart = l), null != i && i(s, t));
-            }));
+                s === n && s.length <= 3 && n.includes("/") && !e.includes("/")
+                    ? (s = s.replace(o, ""))
+                    : s === n && e.includes("/") && !n.includes("/") && (s += "/"),
+                    s.length > e.length && (l += s.length - e.length),
+                    (this.selectionStart = l),
+                    null != i && i(s, t);
+            });
     }
 }
 let d = c;

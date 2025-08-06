@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(953529), n(388685));
+n.d(t, { Z: () => x }), n(953529), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -16,122 +16,122 @@ let f = (e) => {
         let { setWelcomeView: t, setShowCreateModal: i } = e,
             l = [
                 {
-                    emoji: '\uD83D\uDCAC',
-                    description: g.intl.string(g.t['s/ent7']),
-                    name: g.intl.string(g.t['v/gQ4e'])
+                    emoji: "\uD83D\uDCAC",
+                    description: g.intl.string(g.t["s/ent7"]),
+                    name: g.intl.string(g.t["v/gQ4e"]),
                 },
                 {
-                    emoji: '\uD83C\uDFF9',
+                    emoji: "\uD83C\uDFF9",
                     description: g.intl.string(g.t.Y9So0N),
-                    name: g.intl.string(g.t['7mUf0d'])
+                    name: g.intl.string(g.t["7mUf0d"]),
                 },
                 {
-                    emoji: '\uD83D\uDDDE',
+                    emoji: "\uD83D\uDDDE",
                     description: g.intl.string(g.t.wsJcws),
-                    name: g.intl.string(g.t.vrGLjo)
-                }
+                    name: g.intl.string(g.t.vrGLjo),
+                },
             ];
         return (0, r.jsxs)(a.hjN, {
-            title: g.intl.string(g.t['2rkmDg']),
-            tag: 'h1',
+            title: g.intl.string(g.t["2rkmDg"]),
+            tag: "h1",
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: p.welcomeDescription,
                     children: [
                         (0, r.jsx)(a.Text, {
-                            variant: 'text-sm/normal',
-                            children: g.intl.format(g.t.a59UeH, {})
+                            variant: "text-sm/normal",
+                            children: g.intl.format(g.t.a59UeH, {}),
                         }),
                         (0, r.jsx)(a.zxk, {
-                            variant: 'primary',
+                            variant: "primary",
                             text: g.intl.string(g.t.RWdjPz),
                             onClick: () => {
-                                (i(!0), t(2));
-                            }
-                        })
-                    ]
+                                i(!0), t(2);
+                            },
+                        }),
+                    ],
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: p.exampleContainer,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: p.exampleWumpus,
                             children: [
-                                (0, r.jsx)('img', {
+                                (0, r.jsx)("img", {
                                     className: p.wumpus,
-                                    alt: '',
-                                    src: n(663346)
+                                    alt: "",
+                                    src: n(663346),
                                 }),
-                                (0, r.jsx)('div', { className: p.tooltipPointer }),
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", { className: p.tooltipPointer }),
+                                (0, r.jsx)("div", {
                                     className: p.tooltip,
-                                    children: g.intl.string(g.t.aHNFSE)
-                                })
-                            ]
+                                    children: g.intl.string(g.t.aHNFSE),
+                                }),
+                            ],
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: p.exampleModal,
                             children: [
-                                (0, r.jsx)('img', {
-                                    alt: '',
+                                (0, r.jsx)("img", {
+                                    alt: "",
                                     className: h.guildIcon,
                                     src: n(691466),
                                     width: 64,
-                                    height: 64
+                                    height: 64,
                                 }),
                                 (0, r.jsx)(a.X6q, {
-                                    variant: 'heading-xl/semibold',
+                                    variant: "heading-xl/semibold",
                                     className: p.header,
-                                    children: g.intl.format(g.t['5NJlXl'], {})
+                                    children: g.intl.format(g.t["5NJlXl"], {}),
                                 }),
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-sm/normal',
-                                    color: 'header-secondary',
+                                    variant: "text-sm/normal",
+                                    color: "header-secondary",
                                     className: h.guildDescription,
-                                    children: g.intl.string(g.t.Xvsuk5)
+                                    children: g.intl.string(g.t.Xvsuk5),
                                 }),
                                 (0, r.jsx)(a.vwX, {
                                     className: h.choiceHeader,
-                                    children: g.intl.string(g.t['haj5+v'])
+                                    children: g.intl.string(g.t["haj5+v"]),
                                 }),
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: h.options,
                                     children: l.map((e) =>
                                         (0, r.jsxs)(
-                                            'div',
+                                            "div",
                                             {
                                                 className: p.optionContainer,
                                                 children: [
                                                     (0, r.jsx)(o.Z, {
                                                         emojiName: e.emoji,
-                                                        className: h.optionEmoji
+                                                        className: h.optionEmoji,
                                                     }),
-                                                    (0, r.jsxs)('div', {
+                                                    (0, r.jsxs)("div", {
                                                         className: h.optionTextContainer,
                                                         children: [
                                                             (0, r.jsx)(a.Text, {
-                                                                variant: 'text-md/semibold',
+                                                                variant: "text-md/semibold",
                                                                 className: h.channelDescription,
-                                                                children: e.description
+                                                                children: e.description,
                                                             }),
                                                             (0, r.jsx)(a.Text, {
-                                                                variant: 'text-xs/normal',
-                                                                color: 'header-secondary',
-                                                                children: '#'.concat(e.name)
-                                                            })
-                                                        ]
-                                                    })
-                                                ]
+                                                                variant: "text-xs/normal",
+                                                                color: "header-secondary",
+                                                                children: "#".concat(e.name),
+                                                            }),
+                                                        ],
+                                                    }),
+                                                ],
                                             },
-                                            e.name
-                                        )
-                                    )
-                                })
-                            ]
-                        })
-                    ]
-                })
-            ]
+                                            e.name,
+                                        ),
+                                    ),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            ],
         });
     },
     x = () => {
@@ -154,12 +154,12 @@ let f = (e) => {
             case 1:
                 return (0, r.jsx)(f, {
                     setWelcomeView: n,
-                    setShowCreateModal: g
+                    setShowCreateModal: g,
                 });
             case 2:
                 return (0, r.jsx)(m.Z, {
                     guild: e,
-                    showCreateModal: o
+                    showCreateModal: o,
                 });
             default:
                 return (0, d.vE)(t);

@@ -1,9 +1,9 @@
 var r = n(657398),
     i = n(706627),
-    o = '[object AsyncFunction]',
-    a = '[object Function]',
-    s = '[object GeneratorFunction]',
-    l = '[object Proxy]';
+    o = "[object AsyncFunction]",
+    a = "[object Function]",
+    s = "[object GeneratorFunction]",
+    l = "[object Proxy]";
 e.exports = function (e) {
     if (!i(e)) return !1;
     var t = r(e);

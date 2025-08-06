@@ -5,37 +5,37 @@ var o,
     l = n(984134);
 let a = { showRefreshedCallTaxonomy: !1 },
     s = (0, i.B)({
-        kind: 'user',
-        id: '2025-05_av_survey_taxonomy_refresh',
-        label: 'Call survey taxonomy refresh',
+        kind: "user",
+        id: "2025-05_av_survey_taxonomy_refresh",
+        label: "Call survey taxonomy refresh",
         defaultConfig: a,
         treatments: [
             {
                 id: 1,
-                label: 'Show refreshed call taxonomy',
+                label: "Show refreshed call taxonomy",
                 config:
                     ((o = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 o = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (o = o.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 o.forEach(function (t) {
                                     var o;
-                                    ((o = n[t]),
+                                    (o = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: o,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = o));
-                                }));
+                                            : (e[t] = o);
+                                });
                         }
                         return e;
                     })({}, a)),
@@ -52,9 +52,9 @@ let a = { showRefreshedCallTaxonomy: !1 },
                           })(Object(r)).forEach(function (e) {
                               Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
-                    o)
-            }
-        ]
+                    o),
+            },
+        ],
     });
 function c(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -63,7 +63,7 @@ function c(e) {
         { location: t },
         {
             disable: o,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     );
 }

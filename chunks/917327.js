@@ -20,15 +20,15 @@ function g(e, t) {
     return e.isGuildVoice() && (g || h)
         ? !b && g && v
             ? (0, i.jsx)(l.sNh, {
-                  id: 'clear-status',
-                  label: f.intl.string(f.t['22CYiY']),
+                  id: "clear-status",
+                  label: f.intl.string(f.t["22CYiY"]),
                   action: () => {
-                      a.ZP.updateVoiceChannelStatus(e.id, '');
-                  }
+                      a.ZP.updateVoiceChannelStatus(e.id, "");
+                  },
               })
             : b && h
               ? (0, i.jsx)(l.sNh, {
-                    id: 'set-status',
+                    id: "set-status",
                     label: f.intl.string(f.t.Mgpxi4),
                     action: () => {
                         (0, l.ZDy)(
@@ -41,32 +41,32 @@ function g(e, t) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     i = Object.keys(n);
-                                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                                "function" == typeof Object.getOwnPropertySymbols &&
                                                     (i = i.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        })
+                                                        }),
                                                     )),
                                                     i.forEach(function (t) {
                                                         var i;
-                                                        ((i = n[t]),
+                                                        (i = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: i,
                                                                       enumerable: !0,
                                                                       configurable: !0,
-                                                                      writable: !0
+                                                                      writable: !0,
                                                                   })
-                                                                : (e[t] = i));
-                                                    }));
+                                                                : (e[t] = i);
+                                                    });
                                             }
                                             return e;
-                                        })({ channel: e }, n)
+                                        })({ channel: e }, n),
                                     );
                             },
-                            { modalKey: c.a }
+                            { modalKey: c.a },
                         );
-                    }
+                    },
                 })
               : null
         : null;

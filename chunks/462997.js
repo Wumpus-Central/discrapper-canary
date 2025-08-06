@@ -8,7 +8,7 @@ let o = {
         avatarOffsetY: 4,
         bannerWidth: 300,
         bannerHeight: 105,
-        themePadding: 4
+        themePadding: 4,
     },
     [i.lY.MODAL]: {
         avatarSize: r.EFr.SIZE_120,
@@ -16,7 +16,7 @@ let o = {
         avatarOffsetY: 5,
         bannerWidth: 600,
         bannerHeight: 210,
-        themePadding: 0
+        themePadding: 0,
     },
     [i.lY.MODAL_V2]: {
         avatarSize: r.EFr.SIZE_120,
@@ -24,7 +24,7 @@ let o = {
         avatarOffsetY: 0,
         bannerWidth: 400,
         bannerHeight: 140,
-        themePadding: 0
+        themePadding: 0,
     },
     [i.lY.SIDEBAR]: {
         avatarSize: r.EFr.SIZE_80,
@@ -32,6 +32,6 @@ let o = {
         avatarOffsetY: 8,
         bannerWidth: 340,
         bannerHeight: 120,
-        themePadding: 0
-    }
+        themePadding: 0,
+    },
 };

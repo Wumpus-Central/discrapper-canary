@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => m,
-    r: () => y
+    r: () => y,
 });
 var r = n(73800),
     i = n(94171),
@@ -16,7 +16,15 @@ var r = n(73800),
     f = n(928477),
     g = n(388032);
 function m(e) {
-    let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: c, location: u, onThreadCreated: m, useDefaultThreadName: b } = e,
+    let {
+            parentChannel: t,
+            parentMessageId: n,
+            threadSettings: i,
+            privateThreadMode: c,
+            location: u,
+            onThreadCreated: m,
+            useDefaultThreadName: b,
+        } = e,
         y = r.useCallback((e, t, n, r) => {
             a.Z.sendMessage(e.id, d.ZP.parse(e, n), void 0, {
                 eagerDispatch: !1,
@@ -24,18 +32,20 @@ function m(e) {
                 attachmentsToUpload: t,
                 onAttachmentUploadError: (r, i, a, c) => {
                     var u;
-                    ((0, o.openUploadError)({
+                    (0, o.openUploadError)({
                         title: g.intl.string(g.t.B3vFdX),
-                        help: null != (u = null == c ? void 0 : c.message) ? u : g.intl.string(g.t.zMEjJi)
+                        help: null != (u = null == c ? void 0 : c.message) ? u : g.intl.string(g.t.zMEjJi),
                     }),
-                        '' !== n && '' === h.Z.getDraft(e.id, h.d.FirstThreadMessage) && l.Z.saveDraft(e.id, n, h.d.FirstThreadMessage),
+                        "" !== n &&
+                            "" === h.Z.getDraft(e.id, h.d.FirstThreadMessage) &&
+                            l.Z.saveDraft(e.id, n, h.d.FirstThreadMessage),
                         0 === p.Z.getUploadCount(e.id, h.d.FirstThreadMessage) &&
                             s.Z.setUploads({
                                 channelId: e.id,
                                 uploads: t,
-                                draftType: h.d.FirstThreadMessage
-                            }));
-                }
+                                draftType: h.d.FirstThreadMessage,
+                            });
+                },
             });
         }, []);
     return (0, f.JA)({
@@ -46,7 +56,7 @@ function m(e) {
         location: u,
         onThreadCreated: m,
         useDefaultThreadName: b,
-        uploadHandler: y
+        uploadHandler: y,
     });
 }
 async function b(e) {
@@ -54,7 +64,7 @@ async function b(e) {
         n = await t.uploadFiles(e);
     return {
         uploaderFile: t._file,
-        files: n
+        files: n,
     };
 }
 function y(e) {
@@ -63,13 +73,13 @@ function y(e) {
             let { name: t, appliedTags: n } = e;
             return {
                 name: t,
-                appliedTags: n
+                appliedTags: n,
             };
         }, i.X);
     return (0, f.Wj)({
         parentChannel: t,
         name: n,
         appliedTags: r,
-        upload: b
+        upload: b,
     });
 }

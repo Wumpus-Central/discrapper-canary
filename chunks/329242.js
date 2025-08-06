@@ -8,19 +8,19 @@ var r = n(120356),
     o = n(261182);
 let c = (e) => {
     let { user: t, fill: n } = e,
-        r = '\xA0(@'.concat(l.ZP.getUserTag(t, { decoration: 'never' }), ')');
+        r = "\xA0(@".concat(l.ZP.getUserTag(t, { decoration: "never" }), ")");
     return (0, i.jsxs)(a.Text, {
         className: s()([{ [o.fill]: n }]),
-        variant: 'text-md/medium',
+        variant: "text-md/medium",
         children: [
-            (0, i.jsx)('span', {
+            (0, i.jsx)("span", {
                 className: o.username,
-                children: l.ZP.getName(t)
+                children: l.ZP.getName(t),
             }),
-            (0, i.jsx)('span', {
+            (0, i.jsx)("span", {
                 className: o.discriminator,
-                children: r
-            })
-        ]
+                children: r,
+            }),
+        ],
     });
 };

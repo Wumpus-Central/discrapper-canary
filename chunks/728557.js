@@ -1,1 +1,1 @@
-e.exports = { key: 'key__1728a' };
+e.exports = { key: "key__1728a" };

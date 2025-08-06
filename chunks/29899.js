@@ -8,7 +8,7 @@ function l(e) {
     let { userId: t, guildId: n } = e,
         { voiceState: l, voiceChannel: c } = (0, o.Z)({
             userId: t,
-            guildId: n
+            guildId: n,
         }),
         u = null == c ? void 0 : c.id;
     return {
@@ -22,6 +22,6 @@ function l(e) {
                 return (null == n ? void 0 : n.channelId) === u;
             });
             return null != e ? e : void 0;
-        })
+        }),
     };
 }

@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => b }), a(388685));
+a.d(t, { Z: () => b }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(515149),
@@ -16,83 +16,83 @@ var n = a(255367),
 function b() {
     let e = (0, c.e7)([x.default], () => x.default.locale),
         [t, a] = r.useState(),
-        i = (0, l.runtimeHashMessageKey)(null != t ? t : ''),
+        i = (0, l.runtimeHashMessageKey)(null != t ? t : ""),
         b = r.useMemo(() => f.t[i], [i]);
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         children: [
             (0, n.jsxs)(m.ZP, {
                 children: [
                     (0, n.jsx)(m.ZP.Icon, {
                         icon: u.os0,
-                        tooltip: 'Locale'
+                        tooltip: "Locale",
                     }),
-                    (0, n.jsx)(m.ZP.Title, { children: 'Locale' })
-                ]
+                    (0, n.jsx)(m.ZP.Title, { children: "Locale" }),
+                ],
             }),
             (0, n.jsxs)(p.E, {
                 children: [
                     (0, n.jsx)(p.Z9, {
-                        name: 'Active System',
-                        children: '@discord/intl'
+                        name: "Active System",
+                        children: "@discord/intl",
                     }),
                     (0, n.jsx)(p.Z9, {
-                        name: 'App',
-                        children: e
+                        name: "App",
+                        children: e,
                     }),
                     (0, n.jsx)(p.Z9, {
-                        name: 'System',
-                        children: f.systemLocale
+                        name: "System",
+                        children: f.systemLocale,
                     }),
                     (0, n.jsx)(p.Z9, {
-                        name: '@discord/intl',
-                        children: f.intl.currentLocale
+                        name: "@discord/intl",
+                        children: f.intl.currentLocale,
                     }),
                     (0, n.jsx)(p.Z9, {
-                        name: 'common i18n',
-                        children: o.Z.getLocale()
+                        name: "common i18n",
+                        children: o.Z.getLocale(),
                     }),
                     (0, n.jsx)(p.Z9, {
-                        name: 'Moment',
-                        children: s().locale()
-                    })
-                ]
+                        name: "Moment",
+                        children: s().locale(),
+                    }),
+                ],
             }),
             (0, n.jsxs)(m.ZP, {
                 children: [
                     (0, n.jsx)(m.ZP.Icon, {
                         icon: u.os0,
-                        tooltip: 'Messages'
+                        tooltip: "Messages",
                     }),
-                    (0, n.jsx)(m.ZP.Title, { children: 'New System Messages' })
-                ]
+                    (0, n.jsx)(m.ZP.Title, { children: "New System Messages" }),
+                ],
             }),
             (0, n.jsx)(p.E, {
                 children: (0, n.jsx)(p.Z9, {
-                    name: 'Unique Rendered Main Messages',
-                    children: Object.keys(f.t).length
-                })
+                    name: "Unique Rendered Main Messages",
+                    children: Object.keys(f.t).length,
+                }),
             }),
             (0, n.jsx)(d.Is, {
                 onChange: function (e) {
                     a(e);
                 },
-                name: 'Message name',
+                name: "Message name",
                 style: { margin: 16 },
-                placeholder: 'Find a message'
+                placeholder: "Find a message",
             }),
             (0, n.jsxs)(p.E, {
                 children: [
                     (0, n.jsx)(p.Z9, {
-                        name: 'Hashed key',
-                        children: i
+                        name: "Hashed key",
+                        children: i,
                     }),
                     (0, n.jsx)(p.Z9, {
-                        name: 'Exists?',
-                        children: null != b ? 'yes' : 'no'
-                    })
-                ]
+                        name: "Exists?",
+                        children: null != b ? "yes" : "no",
+                    }),
+                ],
             }),
-            (0, n.jsx)(h.Z, { data: null == b ? void 0 : b(e) })
-        ]
+            (0, n.jsx)(h.Z, { data: null == b ? void 0 : b(e) }),
+        ],
     });
 }

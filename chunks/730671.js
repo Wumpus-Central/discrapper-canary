@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(73800),
     i = n(392711),
     l = n(236413),
@@ -16,24 +16,24 @@ function s(e) {
                     () =>
                         (0, i.debounce)(
                             (t) => {
-                                (clearTimeout(a.current),
+                                clearTimeout(a.current),
                                     (a.current = setTimeout(() => {
                                         try {
-                                            ((0, l.km)(t, e), n(null));
+                                            (0, l.km)(t, e), n(null);
                                         } catch (e) {
                                             n(e.message);
                                         }
                                         clearTimeout(a.current);
-                                    }, 500)));
+                                    }, 500));
                             },
                             300,
                             {
                                 leading: !0,
-                                trailing: !0
-                            }
+                                trailing: !0,
+                            },
                         ),
-                    [e]
-                )
+                    [e],
+                ),
             };
         })(n),
         u = r.useCallback((e) => (0 !== e.length && (0, a.kU)(e) ? (0, a.se)((0, a.Ac)(e)) : e), []);
@@ -43,11 +43,11 @@ function s(e) {
         onChange: r.useCallback(
             (t) => {
                 let n = t.currentTarget.value;
-                'insertFromPaste' === t.nativeEvent.inputType && (n = u(n));
+                "insertFromPaste" === t.nativeEvent.inputType && (n = u(n));
                 let r = (0, a.Ac)(n);
-                (o(n), e(r), d()(r));
+                o(n), e(r), d()(r);
             },
-            [d, u, e]
-        )
+            [d, u, e],
+        ),
     };
 }

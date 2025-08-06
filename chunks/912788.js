@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -38,7 +38,7 @@ function h() {
     l = null;
 }
 function m(e) {
-    ((c = e.giftCode), (u = e.skuId));
+    (c = e.giftCode), (u = e.skuId);
 }
 function g(e) {
     let { giftCode: t } = e;
@@ -59,7 +59,7 @@ class y extends (r = i.ZP.Store) {
         return e === u ? c : null;
     }
 }
-s(y, 'displayName', 'PremiumPaymentModalStore');
+s(y, "displayName", "PremiumPaymentModalStore");
 let O = new y(o.Z, {
     PREMIUM_PAYMENT_SUBSCRIBE_FAIL: d,
     PREMIUM_PAYMENT_UPDATE_FAIL: d,
@@ -71,5 +71,5 @@ let O = new y(o.Z, {
     SKU_PURCHASE_SUCCESS: m,
     SKU_PURCHASE_FAIL: E,
     SKU_PURCHASE_AWAIT_CONFIRMATION: b,
-    GIFT_CODE_CREATE: g
+    GIFT_CODE_CREATE: g,
 });

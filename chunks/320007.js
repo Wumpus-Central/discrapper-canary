@@ -17,29 +17,29 @@ var r = n(255367),
 function _(e) {
     let { canShowReminder: t = !1, className: _ } = e,
         O = (0, h.Z)(u.Z),
-        { showClipsHeaderEntrypoint: E } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+        { showClipsHeaderEntrypoint: E } = d.NV.useExperiment({ location: "ClipsButton" }, { autoTrackExposure: !1 }),
         {
             hasClips: y,
             hasNewClips: v,
             lastClipsSession: I,
             remindersEnabled: C,
-            hasAnyClipAnimations: S
+            hasAnyClipAnimations: S,
         } = (0, l.cj)([p.Z], () => ({
             hasClips: p.Z.hasClips(),
             hasNewClips: p.Z.getNewClipIds().length > 0,
             lastClipsSession: p.Z.getLastClipsSession(),
             remindersEnabled: p.Z.getSettings().remindersEnabled,
-            hasAnyClipAnimations: p.Z.hasAnyClipAnimations()
+            hasAnyClipAnimations: p.Z.hasAnyClipAnimations(),
         })),
         N = null != I && I.newClipIds.length > 0,
         T = (0, f.n)((e) => e.clipsButtonRef),
         P = (0, f.n)((e) => e.setClipsButtonRef),
         j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
-        { preventIdle: A, allowIdle: Z } = (0, s.Y)('animation');
+        { preventIdle: A, allowIdle: Z } = (0, s.Y)("animation");
     function x() {
         (0, a.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('2668'), n.e('71248')]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e("2668"), n.e("71248")]).then(n.bind(n, 542055));
                 return (t) =>
                     (0, r.jsx)(
                         e,
@@ -47,30 +47,30 @@ function _(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
-                        })({}, t)
+                        })({}, t),
                     );
             },
-            { modalKey: m.Qr }
+            { modalKey: m.Qr },
         );
     }
     return (i.useEffect(() => (S ? A() : Z(), () => Z()), [S, A, Z]), E && O && y)
@@ -85,19 +85,19 @@ function _(e) {
                       (0, r.jsx)(g.Z, {
                           clipIconRef: T,
                           lastClipsSession: I,
-                          onOpenClipsGallery: x
+                          onOpenClipsGallery: x,
                       }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       ref: P,
                       children: (0, r.jsx)(o.JO, {
                           className: _,
                           icon: a.AlX,
                           showBadge: v,
                           tooltip: b.intl.string(b.t.MXaLEB),
-                          onClick: x
-                      })
-                  })
-              ]
+                          onClick: x,
+                      }),
+                  }),
+              ],
           })
         : null;
 }

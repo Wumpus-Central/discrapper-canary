@@ -22,50 +22,50 @@ var n = r(73800),
                 {
                     default: {
                         colors: {
-                            margin: '0 -10px',
-                            padding: '10px 0 0 10px',
-                            borderTop: '1px solid #eee',
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            position: 'relative'
+                            margin: "0 -10px",
+                            padding: "10px 0 0 10px",
+                            borderTop: "1px solid #eee",
+                            display: "flex",
+                            flexWrap: "wrap",
+                            position: "relative",
                         },
                         swatchWrap: {
-                            width: '16px',
-                            height: '16px',
-                            margin: '0 10px 10px 0'
+                            width: "16px",
+                            height: "16px",
+                            margin: "0 10px 10px 0",
                         },
                         swatch: {
-                            borderRadius: '3px',
-                            boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.15)'
-                        }
+                            borderRadius: "3px",
+                            boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15)",
+                        },
                     },
-                    'no-presets': { colors: { display: 'none' } }
+                    "no-presets": { colors: { display: "none" } },
                 },
-                { 'no-presets': !t || !t.length }
+                { "no-presets": !t || !t.length },
             ),
             c = function (e, t) {
                 o(
                     {
                         hex: e,
-                        source: 'hex'
+                        source: "hex",
                     },
-                    t
+                    t,
                 );
             };
         return n.createElement(
-            'div',
+            "div",
             {
                 style: u.colors,
-                className: 'flexbox-fix'
+                className: "flexbox-fix",
             },
             t.map(function (e) {
-                var t = 'string' == typeof e ? { color: e } : e,
-                    r = '' + t.color + (t.title || '');
+                var t = "string" == typeof e ? { color: e } : e,
+                    r = "" + t.color + (t.title || "");
                 return n.createElement(
-                    'div',
+                    "div",
                     {
                         key: r,
-                        style: u.swatchWrap
+                        style: u.swatchWrap,
                     },
                     n.createElement(
                         l.m4,
@@ -73,11 +73,11 @@ var n = r(73800),
                             style: u.swatch,
                             onClick: c,
                             onHover: a,
-                            focusStyle: { boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px ' + t.color }
-                        })
-                    )
+                            focusStyle: { boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px " + t.color },
+                        }),
+                    ),
                 );
-            })
+            }),
         );
     };
 u.propTypes = {
@@ -86,9 +86,9 @@ u.propTypes = {
             a().string,
             a().shape({
                 color: a().string,
-                title: a().string
-            })
-        ])
-    ).isRequired
+                title: a().string,
+            }),
+        ]),
+    ).isRequired,
 };
 let c = u;

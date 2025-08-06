@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(539854), n(388685));
+n.d(t, { Z: () => Z }), n(539854), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -78,16 +78,20 @@ function N(e) {
         o = [],
         a = [],
         u = l.default.getId();
-    (t.forEach((e) => {
+    t.forEach((e) => {
         if (e.user_id !== u) return;
         let t = s.Q.createFromServer(e);
-        ((r[t.id] = t), U(t) && ((i[t.id] = t), t.type === c.NYc.GUILD && t.status !== c.O0b.ENDED && o.push(t), t.type === c.NYc.APPLICATION && t.status !== c.O0b.ENDED && a.push(t)));
+        (r[t.id] = t),
+            U(t) &&
+                ((i[t.id] = t),
+                t.type === c.NYc.GUILD && t.status !== c.O0b.ENDED && o.push(t),
+                t.type === c.NYc.APPLICATION && t.status !== c.O0b.ENDED && a.push(t));
     }),
         (h = r),
         (m = i),
         (E = o),
         (b = a),
-        (A = n));
+        (A = n);
 }
 function C(e) {
     let { activeSubscriptions: t, record: n } = e,
@@ -95,27 +99,27 @@ function C(e) {
     if (-1 === r) return [n, ...t];
     {
         let e = [...t];
-        return (U(n) && n.status !== c.O0b.ENDED ? (e[r] = n) : e.splice(r, 1), e);
+        return U(n) && n.status !== c.O0b.ENDED ? (e[r] = n) : e.splice(r, 1), e;
     }
 }
 function R(e) {
     let { subscription: t } = e;
     if (t.user_id !== l.default.getId()) return;
     let n = s.Q.createFromServer(t);
-    ((h = p(f({}, h), { [n.id]: n })),
+    (h = p(f({}, h), { [n.id]: n })),
         U(n) && (m = p(f({}, m), { [n.id]: n })),
         null != E &&
             n.type === c.NYc.GUILD &&
             (E = C({
                 activeSubscriptions: E,
-                record: n
+                record: n,
             })),
         null != b &&
             n.type === c.NYc.APPLICATION &&
             (E = C({
                 activeSubscriptions: b,
-                record: n
-            })));
+                record: n,
+            }));
 }
 function P(e) {
     let { subscription: t } = e;
@@ -148,14 +152,24 @@ function x() {
 }
 function M(e) {
     let { eligible: t } = e;
-    ((T = t), (I = !1));
+    (T = t), (I = !1);
 }
 function k(e) {
     let {} = e;
-    ((T = !1), (I = !1));
+    (T = !1), (I = !1);
 }
 function j() {
-    ((h = null), (m = null), (g = null), (E = null), (b = null), (y = !1), (O = null), (v = !1), (I = !1), (S = !1), (A = null));
+    (h = null),
+        (m = null),
+        (g = null),
+        (E = null),
+        (b = null),
+        (y = !1),
+        (O = null),
+        (v = !1),
+        (I = !1),
+        (S = !1),
+        (A = null);
 }
 function U(e) {
     return e.status !== c.O0b.UNPAID;
@@ -212,7 +226,11 @@ class B extends (r = i.ZP.Store) {
         let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             r = new Set(e),
             i = n ? m : h;
-        return null == i ? null : null != (t = Object.values(i).find((e) => e.items.some((e) => r.has(e.planId)))) ? t : null;
+        return null == i
+            ? null
+            : null != (t = Object.values(i).find((e) => e.items.some((e) => r.has(e.planId))))
+              ? t
+              : null;
     }
     getMostRecentPremiumTypeSubscription() {
         return g;
@@ -233,7 +251,7 @@ class B extends (r = i.ZP.Store) {
         return A;
     }
 }
-d(B, 'displayName', 'SubscriptionStore');
+d(B, "displayName", "SubscriptionStore");
 let Z = new B(o.Z, {
     BILLING_SUBSCRIPTION_FETCH_SUCCESS: N,
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: R,
@@ -245,5 +263,5 @@ let Z = new B(o.Z, {
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: L,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: M,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: k,
-    LOGOUT: j
+    LOGOUT: j,
 });

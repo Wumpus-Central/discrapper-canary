@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => L }), n(781311), n(642613), n(388685));
+n.d(t, { ZP: () => L }), n(781311), n(642613), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -30,24 +30,24 @@ function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -83,17 +83,17 @@ async function R(e, t, n) {
                     actions: [
                         {
                             text: E.intl.string(E.t.BddRzc),
-                            variant: 'primary',
-                            onClick: t.onClose
-                        }
+                            variant: "primary",
+                            onClick: t.onClose,
+                        },
                     ],
                     children: (0, r.jsx)(c.Text, {
-                        color: 'text-default',
-                        variant: 'text-md/normal',
-                        children: e.getAnyErrorMessage()
-                    })
-                })
-            )
+                        color: "text-default",
+                        variant: "text-md/normal",
+                        children: e.getAnyErrorMessage(),
+                    }),
+                }),
+            ),
         );
     }
 }
@@ -109,33 +109,33 @@ function Z(e) {
                 (0, r.jsx)(
                     o.Modal,
                     w(P({}, e), {
-                        title: E.intl.string(E.t['7sFNfX']),
+                        title: E.intl.string(E.t["7sFNfX"]),
                         subtitle: E.intl.format(E.t.scORUl, {
                             username: t.name,
-                            roleName: null == n ? void 0 : n.name
+                            roleName: null == n ? void 0 : n.name,
                         }),
                         actions: [
                             {
-                                text: E.intl.string(E.t['ETE/oK']),
-                                variant: 'secondary',
-                                onClick: e.onClose
+                                text: E.intl.string(E.t["ETE/oK"]),
+                                variant: "secondary",
+                                onClick: e.onClose,
                             },
                             {
                                 text: E.intl.string(E.t.N86XcH),
-                                variant: 'critical-primary',
+                                variant: "critical-primary",
                                 onClick: () => {
-                                    (R(t, l, s), e.onClose());
-                                }
-                            }
+                                    R(t, l, s), e.onClose();
+                                },
+                            },
                         ],
                         children: (0, r.jsx)(c.Text, {
                             className: S.removeTip,
-                            color: 'text-muted',
-                            variant: 'text-md/normal',
-                            children: E.intl.string(E.t.jxIxJC)
-                        })
-                    })
-                )
+                            color: "text-muted",
+                            variant: "text-md/normal",
+                            children: E.intl.string(E.t.jxIxJC),
+                        }),
+                    }),
+                ),
             );
         }
     }
@@ -143,28 +143,30 @@ function Z(e) {
         let i = f.default.getUser(t.id);
         null != i &&
             (0, d.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('26976'), n.e('73518')]).then(n.bind(n, 415118));
+                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("73518")]).then(
+                    n.bind(n, 415118),
+                );
                 return (t) =>
                     (0, r.jsx)(
                         e,
                         w(P({}, t), {
                             user: i,
                             guildId: l,
-                            showChatItems: !1
-                        })
+                            showChatItems: !1,
+                        }),
                     );
             });
     }
     return (
         (0, m.$)(p),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: T.contentWidth,
             children: (0, r.jsx)(h.Z, {
                 targetElementRef: g,
                 userId: t.id,
                 guildId: l,
                 roleId: s,
-                position: 'left',
+                position: "left",
                 children: (e) =>
                     (0, r.jsxs)(
                         c.P3F,
@@ -179,13 +181,13 @@ function Z(e) {
                                     name: t.name,
                                     bot: t.bot,
                                     verifiedBot: t.verifiedBot,
-                                    userTag: t.userTag
+                                    userTag: t.userTag,
                                 }),
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: S.removeButtonContainer,
                                     children: (0, r.jsx)(c.ua7, {
-                                        text: u ? E.intl.string(E.t.wkrQaG) : E.intl.string(E.t['7sFNfX']),
-                                        position: 'top',
+                                        text: u ? E.intl.string(E.t.wkrQaG) : E.intl.string(E.t["7sFNfX"]),
+                                        position: "top",
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 c.P3F,
@@ -193,35 +195,35 @@ function Z(e) {
                                                     className: a()(S.removeButton, { [S.removeButtonDisabled]: u }),
                                                     onClick: x,
                                                     children: (0, r.jsx)(c.k$p, {
-                                                        size: 'xs',
-                                                        color: 'currentColor'
-                                                    })
-                                                })
-                                            )
-                                    })
-                                })
-                            ]
-                        })
-                    )
-            })
+                                                        size: "xs",
+                                                        color: "currentColor",
+                                                    }),
+                                                }),
+                                            ),
+                                    }),
+                                }),
+                            ],
+                        }),
+                    ),
+            }),
         })
     );
 }
 function D(e) {
     let { handleAddClick: t, locked: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: T.contentWidth,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: a()(S.memberRow, S.emptyRowContainer),
             children: [
                 (0, r.jsx)(c.BFJ, {
-                    size: 'md',
-                    color: 'currentColor'
+                    size: "md",
+                    color: "currentColor",
                 }),
                 (0, r.jsx)(c.Text, {
                     className: S.emptyRowText,
-                    variant: 'text-sm/semibold',
-                    color: 'text-muted',
+                    variant: "text-sm/semibold",
+                    color: "text-muted",
                     children: E.intl.format(E.t.P9pZOT, {
                         addMembersHook: function (e, i) {
                             return n
@@ -230,19 +232,28 @@ function D(e) {
                                       c.eee,
                                       {
                                           onClick: t,
-                                          children: e
+                                          children: e,
                                       },
-                                      i
+                                      i,
                                   );
-                        }
-                    })
-                })
-            ]
-        })
+                        },
+                    }),
+                }),
+            ],
+        }),
     });
 }
 function A(e) {
-    let { guildId: t, roleId: n, query: l, headerHeight: a, locked: s, onScroll: o, roleMembers: d, handleAddClick: u } = e,
+    let {
+            guildId: t,
+            roleId: n,
+            query: l,
+            headerHeight: a,
+            locked: s,
+            onScroll: o,
+            roleMembers: d,
+            handleAddClick: u,
+        } = e,
         { analyticsLocations: m } = (0, p.ZP)(g.Z.MEMBER_LIST),
         h = i.useMemo(() => l.trim().toLowerCase(), [l]);
     (0, _.rY)(t, h);
@@ -254,7 +265,7 @@ function A(e) {
             className: S.list,
             sections: [Math.max(f.length, 1)],
             sectionHeight: a,
-            renderSection: () => (0, r.jsx)('div', { style: { height: a } }, 'section'),
+            renderSection: () => (0, r.jsx)("div", { style: { height: a } }, "section"),
             style: { scrollPaddingTop: a },
             rowHeight: 40,
             renderRow: function (e) {
@@ -264,9 +275,9 @@ function A(e) {
                         D,
                         {
                             handleAddClick: u,
-                            locked: s
+                            locked: s,
                         },
-                        'empty'
+                        "empty",
                     );
                 let l = x[i];
                 return (0, r.jsx)(
@@ -275,40 +286,40 @@ function A(e) {
                         member: l,
                         guildId: t,
                         roleId: n,
-                        locked: s
+                        locked: s,
                     },
-                    l.id
+                    l.id,
                 );
             },
-            onScroll: o
-        })
+            onScroll: o,
+        }),
     });
 }
 function k(e) {
     let { query: t, setQuery: n, locked: i, handleAddClick: l } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: S.searchContainer,
         children: [
             (0, r.jsx)(c.E1j, {
                 query: t,
                 onChange: n,
-                onClear: () => n(''),
+                onClear: () => n(""),
                 placeholder: E.intl.string(E.t.pYHobG),
-                'aria-label': E.intl.string(E.t.pYHobG)
+                "aria-label": E.intl.string(E.t.pYHobG),
             }),
             (0, r.jsx)(c.zxk, {
                 onClick: l,
-                variant: 'primary',
-                size: 'sm',
+                variant: "primary",
+                size: "sm",
                 disabled: i,
-                text: E.intl.string(E.t.cHszXl)
-            })
-        ]
+                text: E.intl.string(E.t.cHszXl),
+            }),
+        ],
     });
 }
 function L(e) {
     let { guild: t, role: l, locked: o, setSelectedSection: d } = e,
-        [u, m] = i.useState(''),
+        [u, m] = i.useState(""),
         { headerHeight: g, headerRef: p } = (0, O.Z)(0),
         { scrolledToTop: h, handleScroll: f } = (0, y.V)(),
         j = l.managed || o,
@@ -319,56 +330,56 @@ function L(e) {
                 return null != (n = null == (e = b.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
             }) > v.length,
         R = () => {
-            (x.default.track(I.rMx.OPEN_MODAL, {
-                type: 'Add Role Members',
-                location_page: 'Role Settings',
-                location_section: 'Members'
+            x.default.track(I.rMx.OPEN_MODAL, {
+                type: "Add Role Members",
+                location_page: "Role Settings",
+                location_section: "Members",
             }),
                 (0, c.ZDy)(async () => {
-                    let { default: e } = await n.e('15968').then(n.bind(n, 24722));
+                    let { default: e } = await n.e("15968").then(n.bind(n, 24722));
                     return (n) =>
                         (0, r.jsx)(
                             e,
                             w(P({}, n), {
                                 roleId: l.id,
-                                guildId: t.id
-                            })
+                                guildId: t.id,
+                            }),
                         );
-                }));
+                });
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: S.container,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: S.headerContainer,
                 ref: p,
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: T.contentWidth,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: a()(T.header, { [T.stickyHeaderElevated]: !h }),
                         children: [
                             (0, r.jsx)(y.Z, {
                                 guild: t,
                                 role: l,
                                 selectedSection: N.ZI.MEMBERS,
-                                setSelectedSection: d
+                                setSelectedSection: d,
                             }),
                             (0, r.jsx)(k, {
                                 query: u,
                                 setQuery: m,
                                 locked: j,
-                                handleAddClick: R
+                                handleAddClick: R,
                             }),
                             C
                                 ? (0, r.jsx)(c.Wn, {
                                       className: S.searchWarning,
                                       messageType: c.QYI.INFO,
-                                      children: E.intl.string(E.t.RQxHZ2)
+                                      children: E.intl.string(E.t.RQxHZ2),
                                   })
-                                : null
-                        ]
-                    })
-                })
+                                : null,
+                        ],
+                    }),
+                }),
             }),
             (0, r.jsx)(A, {
                 headerHeight: g + 8,
@@ -378,8 +389,8 @@ function L(e) {
                 locked: j,
                 onScroll: f,
                 roleMembers: v,
-                handleAddClick: R
-            })
-        ]
+                handleAddClick: R,
+            }),
+        ],
     });
 }

@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,5 +24,5 @@ class c extends (r = i.ZP.Store) {
         return s.matureAgree;
     }
 }
-a(c, 'displayName', 'ApplicationStoreSettingsStore');
+a(c, "displayName", "ApplicationStoreSettingsStore");
 let u = new c(o.Z, { APPLICATION_STORE_MATURE_AGREE: l });

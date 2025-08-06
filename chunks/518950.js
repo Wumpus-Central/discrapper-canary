@@ -7,24 +7,33 @@ var r = n(73800),
     l = n(594174),
     c = n(287008);
 function u(e) {
-    let { userId: t, guildId: n, size: u, showPending: d = !1, showTryItOut: f = !1, animateOnHover: _ = !1, avatarDecorationOverride: p, avatarOverride: h } = e,
+    let {
+            userId: t,
+            guildId: n,
+            size: u,
+            showPending: d = !1,
+            showTryItOut: f = !1,
+            animateOnHover: _ = !1,
+            avatarDecorationOverride: p,
+            avatarOverride: h,
+        } = e,
         m = (0, i.e7)([l.default], () => l.default.getUser(t)),
         {
             avatarSrc: g,
             isAvatarAnimating: E,
-            eventHandlers: b
+            eventHandlers: b,
         } = (0, c.Z)({
             user: m,
             guildId: n,
             size: (0, o.pxk)(u),
             showPending: d,
             animateOnHover: _,
-            avatarOverride: h
+            avatarOverride: h,
         }),
         {
             avatarPlaceholderSrc: y,
             avatarDecorationSrc: O,
-            eventHandlers: v
+            eventHandlers: v,
         } = (0, s.Z)({
             user: m,
             guildId: null != n ? n : void 0,
@@ -32,7 +41,7 @@ function u(e) {
             showPending: d,
             onlyAnimateOnHover: _,
             avatarDecorationOverride: p,
-            showTryItOut: f
+            showTryItOut: f,
         });
     return {
         avatarPlaceholderSrc: y,
@@ -41,11 +50,11 @@ function u(e) {
         isAnimating: E,
         eventHandlers: {
             onMouseEnter: r.useCallback(() => {
-                (b.onMouseEnter(), v.onMouseEnter());
+                b.onMouseEnter(), v.onMouseEnter();
             }, [b, v]),
             onMouseLeave: r.useCallback(() => {
-                (b.onMouseLeave(), v.onMouseLeave());
-            }, [b, v])
-        }
+                b.onMouseLeave(), v.onMouseLeave();
+            }, [b, v]),
+        },
     };
 }

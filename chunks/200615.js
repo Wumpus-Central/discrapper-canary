@@ -17,9 +17,9 @@ let u = (e) => {
             (0, o.Z)({
                 subscriptionTier: s.Si.TIER_2,
                 analyticsLocations: n,
-                returnRef: u
+                returnRef: u,
             });
         },
-        children: t
+        children: t,
     });
 };

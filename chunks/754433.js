@@ -11,18 +11,18 @@ let u = (e) => {
     let {
             price: { amount: t, currency: r },
             className: l,
-            variant: u = 'heading-md/semibold'
+            variant: u = "heading-md/semibold",
         } = e,
         d = (0, o.qr)(t, r);
     return (0, n.jsxs)(i.Text, {
         variant: u,
         className: a()(c.striked, l),
         children: [
-            (0, n.jsx)(i.nn4, { children: s.intl.format(s.t['2CEGlp'], { price: d }) }),
-            (0, n.jsx)('span', {
-                'aria-hidden': !0,
-                children: d
-            })
-        ]
+            (0, n.jsx)(i.nn4, { children: s.intl.format(s.t["2CEGlp"], { price: d }) }),
+            (0, n.jsx)("span", {
+                "aria-hidden": !0,
+                children: d,
+            }),
+        ],
     });
 };

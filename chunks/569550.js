@@ -5,6 +5,6 @@ function o(e, t, n, o) {
     return r.default.track(i.rMx.VOICE_AND_VIDEO_SETTINGS_UPDATED, {
         previous_setting_value: null != n ? String(n) : void 0,
         [e]: t,
-        location_stack: o
+        location_stack: o,
     });
 }

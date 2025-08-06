@@ -10,7 +10,7 @@ function i(e) {
         n = null;
     return function () {
         for (var i = arguments.length, o = Array(i), a = 0; a < i; a++) o[a] = arguments[a];
-        return (r(t, o) || (n = e(...o)), (t = o), n);
+        return r(t, o) || (n = e(...o)), (t = o), n;
     };
 }
 function o(e) {
@@ -20,10 +20,10 @@ function a(e) {
     for (let t in e) return !1;
     return !0;
 }
-(n.d(t, {
+n.d(t, {
     EF: () => r,
     Ti: () => o,
     ld: () => a,
-    oH: () => i
+    oH: () => i,
 }),
-    n(388685));
+    n(388685);

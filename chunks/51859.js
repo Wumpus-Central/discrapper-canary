@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685), n(953529));
+n.d(t, { Z: () => _ }), n(388685), n(953529);
 var r = n(255367),
     o = n(73800),
     i = n(494497),
@@ -20,40 +20,40 @@ function _(e) {
     let [b, j] = o.useState(!1),
         h = (0, a.Z)(t, n).type !== g.A3.INACTIVE,
         E = (0, m.d)(h),
-        C = (0, s.g1)(t, 'GuildPowerupPerkCard'),
+        C = (0, s.g1)(t, "GuildPowerupPerkCard"),
         O = n.skuId === i.A$;
     return (0, r.jsxs)(p.Z, {
         onHover: (e) => j(e),
         guildId: t,
         powerup: n,
-        badge: O || C ? (O && C ? 'beta' : void 0) : 'new',
+        badge: O || C ? (O && C ? "beta" : void 0) : "new",
         children: [
             (0, r.jsx)(d.m, {
                 className: x.image,
                 powerup: n,
-                isHovering: b
+                isHovering: b,
             }),
             (0, r.jsx)(c.Q9, {
                 title: n.title,
                 textColor: E,
                 footer: (0, r.jsx)(p.g, {
                     guildId: t,
-                    powerup: n
+                    powerup: n,
                 }),
                 children: (0, r.jsx)(l.Text, {
                     className: x.description,
                     color: E,
-                    variant: 'text-sm/medium',
-                    children: n.description
-                })
+                    variant: "text-sm/medium",
+                    children: n.description,
+                }),
             }),
             (0, r.jsx)(c.N4, {
                 children: (0, r.jsx)(u.ZP, {
                     guildId: t,
                     powerup: n,
-                    onError: v
-                })
-            })
-        ]
+                    onError: v,
+                }),
+            }),
+        ],
     });
 }

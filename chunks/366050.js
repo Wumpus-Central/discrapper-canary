@@ -1,5 +1,5 @@
 let r, i, o;
-(n.d(t, { Z: () => R }), n(388685));
+n.d(t, { Z: () => R }), n(388685);
 var a,
     s = n(442837),
     l = n(570140),
@@ -12,7 +12,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,7 +62,7 @@ let h = new Map(),
     g = c.VD2.BOTTOM_RIGHT,
     E = {
         [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
-        [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
+        [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW],
     };
 function b(e) {
     var t, n;
@@ -73,9 +73,14 @@ function b(e) {
         component: s,
         position: null != (t = l.position) ? t : g,
         props: l,
-        docked: null != (n = l.docked) && n
+        docked: null != (n = l.docked) && n,
     };
-    (h.set(a, u), s === c.NYg.VIDEO ? null == r && (r = a) : s === c.NYg.ACTIVITY ? null == i && (i = a) : s === c.NYg.FRAME && null == o && (o = a));
+    h.set(a, u),
+        s === c.NYg.VIDEO
+            ? null == r && (r = a)
+            : s === c.NYg.ACTIVITY
+              ? null == i && (i = a)
+              : s === c.NYg.FRAME && null == o && (o = a);
 }
 function y(e) {
     let { id: t } = e;
@@ -105,11 +110,11 @@ function O(e) {
     if (null == t || (r !== t && i !== t && o !== t)) return !1;
     {
         let e = new Map();
-        (h.forEach((t, r) => {
+        h.forEach((t, r) => {
             e.set(r, p(f({}, t), { position: n }));
         }),
             (h = e),
-            (g = n));
+            (g = n);
     }
 }
 function v(e) {
@@ -141,26 +146,33 @@ function S(e) {
 function A(e) {
     let { id: t } = e,
         n = h.get(t);
-    null != n && (n.component === c.NYg.VIDEO ? (r = t) : n.component === c.NYg.ACTIVITY ? (i = t) : n.component === c.NYg.FRAME && (o = t));
+    null != n &&
+        (n.component === c.NYg.VIDEO
+            ? (r = t)
+            : n.component === c.NYg.ACTIVITY
+              ? (i = t)
+              : n.component === c.NYg.FRAME && (o = t));
 }
 function N() {
-    ((r = null), (i = null), (o = null), (h = new Map()));
+    (r = null), (i = null), (o = null), (h = new Map());
 }
 class C extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
-            ((g = c.VD2.BOTTOM_RIGHT),
+            (g = c.VD2.BOTTOM_RIGHT),
                 (E = {
                     [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
-                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
-                }));
+                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW],
+                });
             return;
         }
-        ((g = e.openPosition), (E = e.pipWidths));
+        (g = e.openPosition), (E = e.pipWidths);
     }
     get pipWindow() {
         var e, t;
-        return null == r && null == i && null == o ? null : h.get(null != (t = null != (e = null != r ? r : i) ? e : o) ? t : '');
+        return null == r && null == i && null == o
+            ? null
+            : h.get(null != (t = null != (e = null != r ? r : i) ? e : o) ? t : "");
     }
     get pipVideoWindow() {
         return null == r ? null : h.get(r);
@@ -192,24 +204,24 @@ class C extends (a = s.ZP.PersistedStore) {
     getState() {
         return {
             openPosition: g,
-            pipWidths: E
+            pipWidths: E,
         };
     }
 }
-(d(C, 'displayName', 'PictureInPictureStore'),
-    d(C, 'persistKey', 'PictureInPictureStore'),
-    d(C, 'migrations', [
+d(C, "displayName", "PictureInPictureStore"),
+    d(C, "persistKey", "PictureInPictureStore"),
+    d(C, "migrations", [
         (e) => {
             var t, n;
             return {
                 pipWidths: {
                     [u.cL.VIDEO]: null != (t = e.pipWidth) ? t : u.l8[u.cL.VIDEO],
-                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
+                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW],
                 },
-                openPosition: null != (n = e.openPosition) ? n : c.VD2.BOTTOM_RIGHT
+                openPosition: null != (n = e.openPosition) ? n : c.VD2.BOTTOM_RIGHT,
             };
-        }
-    ]));
+        },
+    ]);
 let R = new C(l.Z, {
     PICTURE_IN_PICTURE_OPEN: b,
     PICTURE_IN_PICTURE_CLOSE: y,
@@ -219,5 +231,5 @@ let R = new C(l.Z, {
     PICTURE_IN_PICTURE_SHOW: S,
     PICTURE_IN_PICTURE_UPDATE_RECT: I,
     PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: A,
-    LOGOUT: N
+    LOGOUT: N,
 });

@@ -1,7 +1,7 @@
 function r(e) {
     return function (t, n) {
         var r;
-        if ('formatting' === (null != n && n.context ? String(n.context) : 'standalone') && e.formattingValues) {
+        if ("formatting" === (null != n && n.context ? String(n.context) : "standalone") && e.formattingValues) {
             var i = e.defaultFormattingWidth || e.defaultWidth,
                 o = null != n && n.width ? String(n.width) : i;
             r = e.formattingValues[o] || e.formattingValues[i];

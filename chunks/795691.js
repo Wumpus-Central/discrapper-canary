@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685), n(457542), n(642613));
+n.d(t, { Z: () => d }), n(388685), n(457542), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -12,10 +12,10 @@ function d(e) {
         p = m.get(t),
         [h, f] = i.useState(!1);
     i.useEffect(() => {
-        (f(!0),
+        f(!0),
             g(t).finally(() => {
                 f(!1);
-            }));
+            });
     }, [t, g]);
     let x = i.useMemo(
             () =>
@@ -24,13 +24,13 @@ function d(e) {
                     : Object.keys(p)
                           .filter((e) => !n.includes(e))
                           .sort((e, t) => p[t].score - p[e].score),
-            [p, n]
+            [p, n],
         ),
         b = i.useCallback(
             (e) => {
                 n.includes(e) ? d(n.filter((t) => t !== e)) : d([...n, e]);
             },
-            [d, n]
+            [d, n],
         );
     return h && null == p
         ? (0, r.jsx)(l.$jN, {})
@@ -38,16 +38,16 @@ function d(e) {
           ? null
           : (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)('div', { className: c.separator }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsx)("div", { className: c.separator }),
+                    (0, r.jsxs)("div", {
                         className: c.gamesContainer,
                         children: [
                             (0, r.jsx)(l.Text, {
-                                variant: 'text-xs/semibold',
-                                color: 'text-muted',
-                                children: o.intl.string(o.t.bFGpub)
+                                variant: "text-xs/semibold",
+                                color: "text-muted",
+                                children: o.intl.string(o.t.bFGpub),
                             }),
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: c.gamesList,
                                 children: x.map((e) =>
                                     (0, r.jsx)(
@@ -56,14 +56,14 @@ function d(e) {
                                             applicationId: e,
                                             selected: !1,
                                             onClick: b,
-                                            disabled: u
+                                            disabled: u,
                                         },
-                                        e
-                                    )
-                                )
-                            })
-                        ]
-                    })
-                ]
+                                        e,
+                                    ),
+                                ),
+                            }),
+                        ],
+                    }),
+                ],
             });
 }

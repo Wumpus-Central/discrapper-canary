@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => g,
-    Z: () => E
+    Z: () => E,
 });
 var r = n(255367),
     i = n(73800),
@@ -24,10 +24,10 @@ function E(e) {
         O = g.guild_settings.sort_by_statistic_id,
         v = i.useMemo(() => g.users.findIndex((e) => e.user_id === E) + 1, [g, E]),
         I = i.useMemo(() => g.users.find((e) => e.user_id === E), [g, E]);
-    (a()(null != I, 'User row should not be null'), a()(null != y, 'User must exist'));
+    a()(null != I, "User row should not be null"), a()(null != y, "User must exist");
     let T = d.ZP.getName(b, void 0, y),
         S = null != (n = null == (t = I.statistics[O]) ? void 0 : t.value) ? n : 0;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         ref: o,
         className: m.container,
         children: [
@@ -35,32 +35,32 @@ function E(e) {
                 user: y,
                 rank: v,
                 avatarClassName: m.avatar,
-                rankBadgeVisibility: 'visibleWithoutBorder'
+                rankBadgeVisibility: "visibleWithoutBorder",
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: m.gameTitleContainer,
                         children: [
                             (0, r.jsx)(_.Z, {
                                 className: m.winnerImage,
-                                leaderboard: g
+                                leaderboard: g,
                             }),
                             (0, r.jsx)(l.Text, {
-                                variant: 'text-sm/medium',
+                                variant: "text-sm/medium",
                                 className: m.gameTitle,
-                                children: 'League of Legends'
-                            })
-                        ]
+                                children: "League of Legends",
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(l.LZC, { size: 4 }),
                     (0, r.jsx)(l.Text, {
                         className: m.title,
-                        variant: 'text-md/semibold',
+                        variant: "text-md/semibold",
                         children: h.intl.format(h.t.tluICw, {
                             username: T,
-                            rank: v
-                        })
+                            rank: v,
+                        }),
                     }),
                     (0, r.jsx)(l.LZC, { size: 2 }),
                     (0, r.jsxs)(c.Gk, {
@@ -68,16 +68,16 @@ function E(e) {
                         children: [
                             (0, r.jsx)(f.DC, {
                                 value: S,
-                                statisticId: O
+                                statisticId: O,
                             }),
                             (0, r.jsx)(f.Js, {
                                 intervalStart: g.interval_start,
-                                intervalEnd: g.interval_end
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
+                                intervalEnd: g.interval_end,
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 }

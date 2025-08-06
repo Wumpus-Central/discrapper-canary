@@ -43,24 +43,24 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -83,36 +83,36 @@ function X(e) {
         R = (0, I.Z)(t, n),
         X = (0, d.Z)({
             id: t.id,
-            label: U.intl.string(U.t.gFHI3t)
+            label: U.intl.string(U.t.gFHI3t),
         }),
         q = (0, Q.Z)(t),
         Y = (0, s.Z)(t),
-        H = (0, O.Mn)('ChannelListVoiceContextMenuFavorite'),
+        H = (0, O.Mn)("ChannelListVoiceContextMenuFavorite"),
         F = (0, w.ZP)(t),
         W = (0, D.Z)();
     return (0, i.jsxs)(l.v2r, {
-        navId: 'channel-context',
+        navId: "channel-context",
         onClose: a.Zy,
-        'aria-label': U.intl.string(U.t.Xm41aW),
+        "aria-label": U.intl.string(U.t.Xm41aW),
         onSelect: o,
         children: [
             (0, i.jsx)(l.kSQ, { children: null != j ? x : P }),
             (0, i.jsxs)(l.kSQ, {
-                children: [k, L, _, C]
+                children: [k, L, _, C],
             }),
             (0, i.jsxs)(l.kSQ, {
-                children: [G, H ? F : M, A]
+                children: [G, H ? F : M, A],
             }),
             (0, i.jsx)(l.kSQ, { children: Y }),
             (0, i.jsx)(l.kSQ, { children: N }),
             (0, i.jsxs)(l.kSQ, {
-                children: [R, Z]
+                children: [R, Z],
             }),
             (0, i.jsx)(l.kSQ, { children: q }),
             (0, i.jsxs)(l.kSQ, {
-                children: [X, W]
-            })
-        ]
+                children: [X, W],
+            }),
+        ],
     });
 }
 function q(e) {
@@ -138,67 +138,67 @@ function q(e) {
         $ = (0, C.Z)(t),
         ee = (0, d.Z)({
             id: t.id,
-            label: U.intl.string(U.t.gFHI3t)
+            label: U.intl.string(U.t.gFHI3t),
         }),
         et = (0, Q.Z)(t),
         en = (0, s.Z)(t),
         ei = (0, L.Z)(t),
         er = (0, j.Z)(t),
         el = (0, k.ZP)(t),
-        ea = (0, O.Mn)('ChannelListVoiceContextMenuNormal'),
+        ea = (0, O.Mn)("ChannelListVoiceContextMenuNormal"),
         eo = (0, w.ZP)(t),
         ec = (0, D.Z)();
     return (0, i.jsxs)(l.v2r, {
-        navId: 'channel-context',
+        navId: "channel-context",
         onClose: a.Zy,
-        'aria-label': U.intl.string(U.t.Xm41aW),
+        "aria-label": U.intl.string(U.t.Xm41aW),
         onSelect: o,
         children: [
             (0, i.jsx)(l.kSQ, { children: null != h ? b : A }),
             (0, i.jsxs)(
                 l.kSQ,
                 {
-                    children: [Z, R]
+                    children: [Z, R],
                 },
-                'mark-as-read-or-favorite'
+                "mark-as-read-or-favorite",
             ),
             (0, i.jsxs)(
                 l.kSQ,
                 {
-                    children: [F, en, ei, g]
+                    children: [F, en, ei, g],
                 },
-                'channel-actions'
+                "channel-actions",
             ),
             (0, i.jsxs)(
                 l.kSQ,
                 {
-                    children: [B, W, z, q, er, et]
+                    children: [B, W, z, q, er, et],
                 },
-                'voice-actions'
+                "voice-actions",
             ),
             (0, i.jsxs)(
                 l.kSQ,
                 {
-                    children: [el, ea ? eo : Y]
+                    children: [el, ea ? eo : Y],
                 },
-                'notifications'
+                "notifications",
             ),
             (0, i.jsx)(l.kSQ, { children: X }),
             (0, i.jsxs)(
                 l.kSQ,
                 {
-                    children: [H, K, J, $]
+                    children: [H, K, J, $],
                 },
-                'admin-actions'
+                "admin-actions",
             ),
             (0, i.jsxs)(
                 l.kSQ,
                 {
-                    children: [ee, ec]
+                    children: [ee, ec],
                 },
-                'developer-actions'
-            )
-        ]
+                "developer-actions",
+            ),
+        ],
     });
 }
 let Y = (0, c.Z)(
@@ -206,7 +206,7 @@ let Y = (0, c.Z)(
         function (e) {
             return (0, Z.Z)() ? (0, i.jsx)(X, R({}, e)) : (0, i.jsx)(q, R({}, e));
         },
-        { object: A.qAy.CONTEXT_MENU }
+        { object: A.qAy.CONTEXT_MENU },
     ),
-    [u.Z.CONTEXT_MENU, u.Z.CHANNEL_LIST_VOICE_CHANNEL_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.CHANNEL_LIST_VOICE_CHANNEL_MENU],
 );

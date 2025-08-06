@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     $V: () => N,
     Bz: () => R,
     ZP: () => L,
-    hc: () => P
+    hc: () => P,
 }),
     n(539854),
     n(388685),
-    n(49124));
+    n(49124);
 var r = n(512722),
     i = n.n(r),
     o = n(544891),
@@ -32,7 +32,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -42,15 +42,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -58,11 +58,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -84,7 +84,8 @@ function S(e, t) {
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -94,11 +95,17 @@ function A(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var N = (function (e) {
-    return ((e[(e.SEND = 0)] = 'SEND'), (e[(e.EDIT = 1)] = 'EDIT'), (e[(e.COMMAND = 2)] = 'COMMAND'), (e[(e.SEND_ANNOUNCEMENT = 3)] = 'SEND_ANNOUNCEMENT'), e);
+    return (
+        (e[(e.SEND = 0)] = "SEND"),
+        (e[(e.EDIT = 1)] = "EDIT"),
+        (e[(e.COMMAND = 2)] = "COMMAND"),
+        (e[(e.SEND_ANNOUNCEMENT = 3)] = "SEND_ANNOUNCEMENT"),
+        e
+    );
 })({});
 let C = (e) => 0 === e.type || 3 === e.type,
     R = (e) => 1 === e.type,
@@ -109,7 +116,7 @@ class D extends m.Z {
         return this.queue.length >= this.maxSize;
     }
     drain(e, t) {
-        switch ((this.logger.log('Draining Message Queue with: ', e.type), e.type)) {
+        switch ((this.logger.log("Draining Message Queue with: ", e.type), e.type)) {
             case 0:
                 this.handleSend(e.message, t);
                 break;
@@ -125,7 +132,10 @@ class D extends m.Z {
     }
     cancelRequest(e) {
         var t;
-        (this.logger.log('Cancel message send: ', e), null == (t = this.requests.get(e)) || t.abort(), this.requests.delete(e), this.cancelQueueMetricTimers(e));
+        this.logger.log("Cancel message send: ", e),
+            null == (t = this.requests.get(e)) || t.abort(),
+            this.requests.delete(e),
+            this.cancelQueueMetricTimers(e);
     }
     cancelPendingSendRequests(e) {
         let t = [],
@@ -135,26 +145,31 @@ class D extends m.Z {
                 { message: i } = r;
             0 === i.type && i.message.channelId === e ? t.push(i.message) : n.push(r);
         }
-        return (this.queue.push(...n), this.logger.log('Cancel pending send requests', t.length), t);
+        return this.queue.push(...n), this.logger.log("Cancel pending send requests", t.length), t;
     }
     startQueueMetricTimers(e) {
         let t = w.map((e) =>
             setTimeout(() => {
                 (0, s.yw)(b.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
-            }, e)
+            }, e),
         );
         this.analyticsTimeouts.set(e, t);
     }
     cancelQueueMetricTimers(e) {
         var t;
-        (null == (t = this.analyticsTimeouts.get(e)) || t.forEach(clearTimeout), this.analyticsTimeouts.delete(e));
+        null == (t = this.analyticsTimeouts.get(e)) || t.forEach(clearTimeout), this.analyticsTimeouts.delete(e);
     }
     createResponseHandler(e, t) {
         return (n) => {
             if ((null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr)) return t(null, n);
-            if (null != n.body && (n.body.code === b.evJ.SLOWMODE_RATE_LIMITED || n.body.code === b.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)) t(null, n);
+            if (
+                null != n.body &&
+                (n.body.code === b.evJ.SLOWMODE_RATE_LIMITED ||
+                    n.body.code === b.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)
+            )
+                t(null, n);
             else if (429 === n.status) {
-                let e = parseInt(n.headers['retry-after']);
+                let e = parseInt(n.headers["retry-after"]);
                 isNaN(e) ? t(null, n) : t({ retryAfter: e * p.Z.Millis.SECOND });
             } else t(null, n);
         };
@@ -162,26 +177,26 @@ class D extends m.Z {
     handleSend(e, t) {
         var n;
         let { channelId: r, analyticsLocation: i } = e,
-            a = S(e, ['channelId', 'analyticsLocation']),
+            a = S(e, ["channelId", "analyticsLocation"]),
             s = null != (n = (0, d.Z)()) ? n : i,
             l = null != s ? { location: s } : void 0,
             f = (0, u.d)(),
             p = v({ mobile_network_type: _.Z.getType() }, a, null != f && { signal_strength: f });
-        if (c.ZP.get('send_fail_100')) {
-            (this.logger.log('Skipping message send because send_fail_100 is enabled'),
+        if (c.ZP.get("send_fail_100")) {
+            this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, {
                     ok: !1,
                     hasErr: !1,
                     status: 500,
                     headers: {},
-                    body: '{}',
-                    text: 'Simulated failure'
-                }));
+                    body: "{}",
+                    text: "Simulated failure",
+                });
             return;
         }
         let h = this.createResponseHandler(e.nonce, t),
             m = new AbortController();
-        (this.startQueueMetricTimers(e.nonce),
+        this.startQueueMetricTimers(e.nonce),
             o.tn.post(
                 T(
                     v(
@@ -189,44 +204,44 @@ class D extends m.Z {
                             url: b.ANM.MESSAGES(r),
                             body: p,
                             context: l,
-                            oldFormErrors: !0
+                            oldFormErrors: !0,
                         },
-                        y.hs
+                        y.hs,
                     ),
                     {
                         signal: m.signal,
                         rejectWithError: !0,
                         onRequestCreated: () => {
                             null != e.nonce && this.requests.set(e.nonce, m);
-                        }
-                    }
+                        },
+                    },
                 ),
-                h
-            ));
+                h,
+            );
     }
     handleSendAnnouncement(e, t) {
         var n;
         let { channelId: r, analyticsLocation: i } = e,
-            a = S(e, ['channelId', 'analyticsLocation']),
+            a = S(e, ["channelId", "analyticsLocation"]),
             s = null != (n = (0, d.Z)()) ? n : i,
             l = null != s ? { location: s } : void 0,
             f = (0, u.d)(),
             p = v({ mobile_network_type: _.Z.getType() }, a, null != f && { signal_strength: f });
-        if (c.ZP.get('send_fail_100')) {
-            (this.logger.log('Skipping message send because send_fail_100 is enabled'),
+        if (c.ZP.get("send_fail_100")) {
+            this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, {
                     ok: !1,
                     hasErr: !1,
                     status: 500,
                     headers: {},
-                    body: '{}',
-                    text: 'Simulated failure'
-                }));
+                    body: "{}",
+                    text: "Simulated failure",
+                });
             return;
         }
         let h = this.createResponseHandler(e.nonce, t),
             m = new AbortController();
-        (this.startQueueMetricTimers(e.nonce),
+        this.startQueueMetricTimers(e.nonce),
             o.tn.post(
                 T(
                     v(
@@ -234,24 +249,35 @@ class D extends m.Z {
                             url: b.ANM.MESSAGES_ANNOUNCEMENT(r),
                             body: p,
                             context: l,
-                            oldFormErrors: !0
+                            oldFormErrors: !0,
                         },
-                        y.hs
+                        y.hs,
                     ),
                     {
                         signal: m.signal,
                         rejectWithError: !0,
                         onRequestCreated: () => {
                             null != e.nonce && this.requests.set(e.nonce, m);
-                        }
-                    }
+                        },
+                    },
                 ),
-                h
-            ));
+                h,
+            );
     }
     handleCommand(e, t) {
         let n,
-            { applicationId: r, guildId: s, channelId: l, data: c, nonce: u, attachments: d, maxSizeCallback: _, analytics_location: p, sectionName: m, source: y } = e,
+            {
+                applicationId: r,
+                guildId: s,
+                channelId: l,
+                data: c,
+                nonce: u,
+                attachments: d,
+                maxSizeCallback: _,
+                analytics_location: p,
+                sectionName: m,
+                source: y,
+            } = e,
             O = {
                 type: a.B8.APPLICATION_COMMAND,
                 application_id: r,
@@ -262,12 +288,17 @@ class D extends m.Z {
                 nonce: u,
                 analytics_location: p,
                 section_name: m,
-                source: y
+                source: y,
             };
         if (null != d) {
-            ((O.data.attachments = []), (n = []));
+            (O.data.attachments = []), (n = []);
             let e = d;
-            O.data.attachments = e.map((e, t) => (i()(e.status === E.mw.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, g.B)(e, t)));
+            O.data.attachments = e.map(
+                (e, t) => (
+                    i()(e.status === E.mw.COMPLETED, "Uploads must be staged before trying to send a message"),
+                    (0, g.B)(e, t)
+                ),
+            );
         }
         let v = new AbortController();
         o.tn.post(
@@ -275,37 +306,37 @@ class D extends m.Z {
                 url: b.ANM.INTERACTIONS,
                 fields: [
                     {
-                        name: 'payload_json',
-                        value: JSON.stringify(O)
-                    }
+                        name: "payload_json",
+                        value: JSON.stringify(O),
+                    },
                 ],
                 attachments: n,
                 signal: v.signal,
                 rejectWithError: !0,
                 onRequestCreated: (e) => {
-                    (this.requests.set(u, v),
-                        e.on('progress', (e) => {
+                    this.requests.set(u, v),
+                        e.on("progress", (e) => {
                             let { total: t } = e,
                                 n = (0, h.dg)(s);
                             null != t && t > n && (this.cancelRequest(u), null == _ || _(n));
-                        }));
-                }
+                        });
+                },
             },
-            this.createResponseHandler(u, t)
+            this.createResponseHandler(u, t),
         );
     }
     constructor(e = 5) {
-        (super(new l.Z('MessageQueue')),
-            O(this, 'maxSize', void 0),
-            O(this, 'requests', void 0),
-            O(this, 'analyticsTimeouts', void 0),
-            O(this, 'handleEdit', void 0),
+        super(new l.Z("MessageQueue")),
+            O(this, "maxSize", void 0),
+            O(this, "requests", void 0),
+            O(this, "analyticsTimeouts", void 0),
+            O(this, "handleEdit", void 0),
             (this.maxSize = e),
             (this.requests = new Map()),
             (this.analyticsTimeouts = new Map()),
             (this.handleEdit = (e, t) => {
                 var { channelId: n, messageId: r, isCrossposted: i } = e,
-                    a = S(e, ['channelId', 'messageId', 'isCrossposted']);
+                    a = S(e, ["channelId", "messageId", "isCrossposted"]);
                 let s = new AbortController(),
                     l = this.createResponseHandler(r, t),
                     c = {
@@ -317,10 +348,10 @@ class D extends m.Z {
                         rejectWithError: !0,
                         onRequestCreated: () => {
                             this.requests.set(r, s);
-                        }
+                        },
                     };
-                (i && (c.failImmediatelyWhenRateLimited = !0), o.tn.patch(c, l));
-            }));
+                i && (c.failImmediatelyWhenRateLimited = !0), o.tn.patch(c, l);
+            });
     }
 }
 let L = new D();

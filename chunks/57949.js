@@ -14,7 +14,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,7 +69,7 @@ function p(e) {
         };
     (0, o.ZDy)(
         async () => {
-            let { default: e } = await n.e('88806').then(n.bind(n, 578780));
+            let { default: e } = await n.e("88806").then(n.bind(n, 578780));
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -79,27 +79,27 @@ function p(e) {
                         sourceAnalyticsLocations: f,
                         guildProductContext: {
                             guildProductListingId: t.id,
-                            guildId: u
+                            guildId: u,
                         },
                         loadId: h,
-                        onComplete: g
-                    })
+                        onComplete: g,
+                    }),
                 );
         },
         {
             onCloseCallback: () => {
-                (p ||
+                p ||
                     l.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: h,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
                         is_gift: !1,
                         sku_id: m,
-                        location_stack: Array.isArray(f) ? f : [f]
+                        location_stack: Array.isArray(f) ? f : [f],
                     }),
                     (0, a.fw)(),
-                    (0, s.p)());
+                    (0, s.p)();
             },
-            onCloseRequest: c.dG4
-        }
+            onCloseRequest: c.dG4,
+        },
     );
 }

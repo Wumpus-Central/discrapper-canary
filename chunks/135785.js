@@ -19,36 +19,42 @@ let h = (e) => {
         b = (0, d.Nx)();
     if (null == r) return null;
     let x = null != r ? c.ZP.getPremiumPlanItem(r) : null;
-    if ((c.ZP.isBoostOnlySubscription(r) ? (t = p.intl.string(p.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
+    if (
+        (c.ZP.isBoostOnlySubscription(r)
+            ? (t = p.intl.string(p.t.Uj0md3))
+            : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)),
+        null == t)
+    )
+        return null;
     let _ = () => l.Z.open(m.oAB.SUBSCRIPTIONS),
         j = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
     return (
-        (n = null != f ? f : b ? 'always-white' : 'text-default'),
+        (n = null != f ? f : b ? "always-white" : "text-default"),
         (0, i.jsxs)(a.Zbd, {
             className: s()(g.container, h, { [g.centerText]: b }),
             type: a.Zbd.Types.CUSTOM,
             children: [
                 (0, i.jsx)(a.Mgn, {
-                    size: 'custom',
+                    size: "custom",
                     width: 20,
                     height: 20,
-                    color: 'currentColor',
-                    className: s()(g.icon, { [g.lightThemeColorOnly]: b })
+                    color: "currentColor",
+                    className: s()(g.icon, { [g.lightThemeColorOnly]: b }),
                 }),
                 (0, i.jsx)(a.Text, {
-                    variant: 'text-sm/medium',
+                    variant: "text-sm/medium",
                     color: n,
                     children: j
-                        ? p.intl.format(p.t['tYuv+f'], {
+                        ? p.intl.format(p.t["tYuv+f"], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
-                              onSubscriptionsClick: _
+                              onSubscriptionsClick: _,
                           })
                         : p.intl.format(p.t.xHRgU1, {
                               subscriptionName: t,
-                              onSubscriptionsClick: _
-                          })
-                })
-            ]
+                              onSubscriptionsClick: _,
+                          }),
+                }),
+            ],
         })
     );
 };

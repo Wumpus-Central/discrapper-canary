@@ -9,5 +9,15 @@ let d = {
     title: () => u.intl.string(u.t.aTFQKi),
     description: () => u.intl.string(u.t.oTbFQk),
     canCreateGuild: !1,
-    useIsGuildSupported: () => (0, n.e7)([l.Z, r.Z], () => (e) => e.features.has(s.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && !e.features.has(s.oNc.CREATOR_MONETIZABLE_RESTRICTED) && r.Z.can(s.Plq.ADMINISTRATOR, e) && (0, a.$F)() && (0, a.hQ)(e.id), [])
+    useIsGuildSupported: () =>
+        (0, n.e7)(
+            [l.Z, r.Z],
+            () => (e) =>
+                e.features.has(s.oNc.ROLE_SUBSCRIPTIONS_ENABLED) &&
+                !e.features.has(s.oNc.CREATOR_MONETIZABLE_RESTRICTED) &&
+                r.Z.can(s.Plq.ADMINISTRATOR, e) &&
+                (0, a.$F)() &&
+                (0, a.hQ)(e.id),
+            [],
+        ),
 };

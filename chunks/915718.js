@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685), n(539854));
+n.d(t, { Z: () => L }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -37,7 +37,7 @@ function A(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -53,37 +53,77 @@ class D extends i.PureComponent {
     renderVideoCallButton() {
         let e,
             t,
-            { inCall: n, callActive: i, callUnavailable: l, isBlocked: a, channel: o, mode: c, isProvisional: u } = this.props;
+            {
+                inCall: n,
+                callActive: i,
+                callUnavailable: l,
+                isBlocked: a,
+                channel: o,
+                mode: c,
+                isProvisional: u,
+            } = this.props;
         if (n || (i && c === P.WtW.VOICE)) return null;
         let d = o.isManaged(),
             h = null,
             p = !1;
         return (
-            u ? ((p = !0), (h = R.intl.string(R.t.izMR7u)), (e = s.ua7.Colors.RED)) : O.Z.supports(N.AN.VIDEO) ? (a ? ((h = R.intl.string(R.t.PHzjvb)), (e = s.ua7.Colors.RED), (p = !0)) : i && c === P.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (h = d ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.W68MhI))) : ((t = this.handleStartVideoCall), (h = d ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.oCqlGB)))) : ((p = !0), (t = this.handleBrowserNotSupported), (h = R.intl.string(R.t.UVpg3d))),
+            u
+                ? ((p = !0), (h = R.intl.string(R.t.izMR7u)), (e = s.ua7.Colors.RED))
+                : O.Z.supports(N.AN.VIDEO)
+                  ? a
+                      ? ((h = R.intl.string(R.t.PHzjvb)), (e = s.ua7.Colors.RED), (p = !0))
+                      : i && c === P.WtW.VIDEO
+                        ? ((t = this.handleJoinVideoCall),
+                          (h = d ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.W68MhI)))
+                        : ((t = this.handleStartVideoCall),
+                          (h = d ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.oCqlGB)))
+                  : ((p = !0), (t = this.handleBrowserNotSupported), (h = R.intl.string(R.t.UVpg3d))),
             (0, r.jsx)(I.ZP.Icon, {
                 icon: s.Odl,
                 onClick: t,
                 disabled: p || l,
                 tooltip: h,
-                tooltipColor: e
+                tooltipColor: e,
             })
         );
     }
     renderVoiceCallButton() {
         let e,
             t,
-            { inCall: n, canShowTooltip: i, callActive: l, callUnavailable: o, isBlocked: c, channel: u, canShowActivityGdmTooltip: d, dismissibleContentTypes: h, isProvisional: p } = this.props;
+            {
+                inCall: n,
+                canShowTooltip: i,
+                callActive: l,
+                callUnavailable: o,
+                isBlocked: c,
+                channel: u,
+                canShowActivityGdmTooltip: d,
+                dismissibleContentTypes: h,
+                isProvisional: p,
+            } = this.props;
         if (n) return null;
         let f = u.isManaged(),
             m = !1;
-        p ? ((m = !0), (e = R.intl.string(R.t.izMR7u)), (t = s.ua7.Colors.RED)) : o ? ((e = f ? R.intl.string(R.t.LW2Gho) : R.intl.string(R.t.rF7lNz)), (t = s.ua7.Colors.RED), (m = !0)) : c ? ((e = R.intl.string(R.t.PHzjvb)), (t = s.ua7.Colors.RED), (m = !0)) : (e = l ? (f ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.fdEeb2)) : f ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.focH1t));
+        p
+            ? ((m = !0), (e = R.intl.string(R.t.izMR7u)), (t = s.ua7.Colors.RED))
+            : o
+              ? ((e = f ? R.intl.string(R.t.LW2Gho) : R.intl.string(R.t.rF7lNz)), (t = s.ua7.Colors.RED), (m = !0))
+              : c
+                ? ((e = R.intl.string(R.t.PHzjvb)), (t = s.ua7.Colors.RED), (m = !0))
+                : (e = l
+                      ? f
+                          ? R.intl.string(R.t.S0W8Z2)
+                          : R.intl.string(R.t.fdEeb2)
+                      : f
+                        ? R.intl.string(R.t.S0W8Z2)
+                        : R.intl.string(R.t.focH1t));
         let y = (0, r.jsx)(I.ZP.Icon, {
             ref: this.iconRef,
             icon: s.Csw,
             onClick: this.handleVoiceClick,
             disabled: m,
             tooltip: e,
-            tooltipColor: t
+            tooltipColor: t,
         });
         return (0, r.jsx)(g.ZP, {
             contentTypes: h,
@@ -92,77 +132,77 @@ class D extends i.PureComponent {
                 return t === a.z.ACTIVITY_GDM_CALL_TOOLTIP
                     ? (0, r.jsx)(s.yRy, {
                           targetElementRef: this.iconRef,
-                          position: 'bottom',
-                          align: 'center',
+                          position: "bottom",
+                          align: "center",
                           animation: s.yRy.Animation.TRANSLATE,
                           shouldShow: i && d && !n,
                           renderPopout: (e) => {
                               let { closePopout: t } = e;
                               return (0, r.jsx)(b.ZP, {
                                   header: (0, r.jsx)(s.X6q, {
-                                      variant: 'heading-md/bold',
-                                      color: 'always-white',
-                                      children: R.intl.string(R.t.HOPqzc)
+                                      variant: "heading-md/bold",
+                                      color: "always-white",
+                                      children: R.intl.string(R.t.HOPqzc),
                                   }),
-                                  content: (0, r.jsxs)('div', {
+                                  content: (0, r.jsxs)("div", {
                                       children: [
                                           (0, r.jsx)(s.Text, {
-                                              variant: 'text-sm/normal',
-                                              color: 'always-white',
-                                              children: R.intl.string(R.t.xAW71d)
+                                              variant: "text-sm/normal",
+                                              color: "always-white",
+                                              children: R.intl.string(R.t.xAW71d),
                                           }),
                                           (0, r.jsx)(s.eee, {
                                               href: Z.Z.getArticleURL(P.BhN.ACTIVITIES),
-                                              children: R.intl.string(R.t.hvVgAQ)
-                                          })
-                                      ]
+                                              children: R.intl.string(R.t.hvVgAQ),
+                                          }),
+                                      ],
                                   }),
-                                  buttonCTA: R.intl.string(R.t['NX+WJC']),
+                                  buttonCTA: R.intl.string(R.t["NX+WJC"]),
                                   onClick: () => {
-                                      (t(), l(T.L.UNKNOWN));
+                                      t(), l(T.L.UNKNOWN);
                                   },
-                                  className: w.tooltip
+                                  className: w.tooltip,
                               });
                           },
-                          children: () => y
+                          children: () => y,
                       })
                     : y;
-            }
+            },
         });
     }
     render() {
         return (0, r.jsxs)(i.Fragment, {
-            children: [this.renderVoiceCallButton(), this.renderVideoCallButton()]
+            children: [this.renderVoiceCallButton(), this.renderVideoCallButton()],
         });
     }
     constructor(...e) {
-        (super(...e),
-            A(this, 'iconRef', i.createRef()),
-            A(this, 'handleStartCall', (e, t) => {
+        super(...e),
+            A(this, "iconRef", i.createRef()),
+            A(this, "handleStartCall", (e, t) => {
                 let { channel: n, notFriend: r, appContext: i } = this.props,
                     l = r ? n.getRecipientId() : null,
                     a = () => o.Z.call(n.id, t, !r && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), l);
                 t ? (0, x.Z)(a, i) : a();
             }),
-            A(this, 'handleJoinCall', (e) => {
+            A(this, "handleJoinCall", (e) => {
                 c.default.selectVoiceChannel(this.props.channel.id, e);
             }),
-            A(this, 'handleVoiceClick', (e) => {
+            A(this, "handleVoiceClick", (e) => {
                 let { callUnavailable: t, callActive: n, canShowActivityGdmTooltip: r } = this.props;
                 if ((r && (0, f.Q3)(a.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: T.L.AUTO }), t));
                 else if (n) return this.handleJoinCall(!1);
                 else return this.handleStartCall(e, !1);
             }),
-            A(this, 'handleStartVideoCall', (e) => {
+            A(this, "handleStartVideoCall", (e) => {
                 this.handleStartCall(e, !0);
             }),
-            A(this, 'handleJoinVideoCall', () => {
+            A(this, "handleJoinVideoCall", () => {
                 let { appContext: e } = this.props;
                 (0, x.Z)(() => this.handleJoinCall(!0), e);
             }),
-            A(this, 'handleBrowserNotSupported', () => {
+            A(this, "handleBrowserNotSupported", () => {
                 (0, y.Z)();
-            }));
+            });
     }
 }
 function L(e) {
@@ -174,12 +214,12 @@ function L(e) {
         f = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         { callActive: g, callUnavailable: b } = (0, l.cj)([j.Z], () => ({
             callActive: j.Z.isCallActive(n.id),
-            callUnavailable: j.Z.isCallUnavailable(n.id)
+            callUnavailable: j.Z.isCallUnavailable(n.id),
         })),
         y = n.getRecipientId(),
         { notFriend: x, isBlocked: O } = (0, l.cj)([v.Z], () => ({
             notFriend: n.type === P.d4z.DM && null != y && !v.Z.isFriend(y),
-            isBlocked: n.type === P.d4z.DM && null != y && v.Z.isBlocked(y)
+            isBlocked: n.type === P.d4z.DM && null != y && v.Z.isBlocked(y),
         })),
         S = (0, l.e7)([C.default], () => C.default.getUser(y)),
         Z = (0, u.bp)(),
@@ -209,6 +249,6 @@ function L(e) {
               canShowTooltip: R,
               canShowActivityGdmTooltip: T,
               dismissibleContentTypes: I,
-              useReducedMotion: f
+              useReducedMotion: f,
           });
 }

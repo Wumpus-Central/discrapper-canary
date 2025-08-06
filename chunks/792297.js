@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => b,
-    p: () => g
+    p: () => g,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -23,7 +23,7 @@ function g(e, t) {
     if (!(0, l._H)(t))
         return {
             width: n,
-            height: r
+            height: r,
         };
     let { width: i, height: o } = t,
         a = window.innerWidth - 2 * m,
@@ -32,13 +32,13 @@ function g(e, t) {
             width: i,
             height: o,
             maxWidth: n,
-            maxHeight: r
+            maxHeight: r,
         }),
         u = (0, l.Tj)({
             width: i,
             height: o,
             maxWidth: a,
-            maxHeight: s
+            maxHeight: s,
         });
     return c.width >= u.width ? c : u;
 }
@@ -47,32 +47,32 @@ function E(e) {
         l = t[n],
         f = g(t.length > 1, {
             width: l.width,
-            height: l.height
+            height: l.height,
         }),
         [_, p] = i.useState(0);
     return (
         i.useEffect(() => {
             let e = () => p((e) => e + 1);
-            return (window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
+            return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }),
         i.useEffect(() => {
             if (t.length > 1) {
                 let e = t[(0, s.gN)(n - 1, t.length)],
                     r = t[(0, s.gN)(n + 1, t.length)];
-                ((0, c.WG)(e, !0), t.length > 2 && (0, c.WG)(r, !0));
+                (0, c.WG)(e, !0), t.length > 2 && (0, c.WG)(r, !0);
             }
         }, [n, t]),
         (0, r.jsx)(u.ZP, {
             mode: u.lx.PINNED,
             children: (e) =>
                 (0, r.jsx)(
-                    'div',
+                    "div",
                     {
                         className: a()(d.mediaArea, e),
-                        children: f.width > 0 && f.height > 0 && o(f.width, f.height)
+                        children: f.width > 0 && f.height > 0 && o(f.width, f.height),
                     },
-                    l.url
-                )
+                    l.url,
+                ),
         })
     );
 }

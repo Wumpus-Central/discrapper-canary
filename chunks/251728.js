@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,8 +25,8 @@ class f {
         return new f(e);
     }
     constructor(e) {
-        (d(this, 'shopBlocks', void 0),
-            d(this, 'categories', void 0),
+        d(this, "shopBlocks", void 0),
+            d(this, "categories", void 0),
             (this.shopBlocks = e.shop_blocks
                 .map((e) => {
                     switch (e.type) {
@@ -47,6 +47,6 @@ class f {
                     }
                 })
                 .filter((e) => void 0 !== e)),
-            (this.categories = e.categories.map((e) => i.Z.fromServer(e))));
+            (this.categories = e.categories.map((e) => i.Z.fromServer(e)));
     }
 }

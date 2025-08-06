@@ -17,16 +17,16 @@ function u(e, t) {
     return e.state !== l.yb.SEND_FAILED && (0, s.Z)(e, t)
         ? !1 === e.pinned
             ? (0, r.jsx)(i.sNh, {
-                  id: 'pin',
+                  id: "pin",
                   action: n,
-                  label: c.intl.string(c.t['CvQ18/']),
-                  icon: i.qQX
+                  label: c.intl.string(c.t["CvQ18/"]),
+                  icon: i.qQX,
               })
             : (0, r.jsx)(i.sNh, {
-                  id: 'unpin',
+                  id: "unpin",
                   action: u,
-                  label: c.intl.string(c.t['Bse+Fx']),
-                  icon: i.qQX
+                  label: c.intl.string(c.t["Bse+Fx"]),
+                  icon: i.qQX,
               })
         : null;
 }

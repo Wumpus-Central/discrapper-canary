@@ -19,13 +19,13 @@ class d extends (l = o.ZP.Store) {
         (e !== u || t !== c) && ((u = e), (c = t), this.emitChange());
     }
 }
-((i = 'NotificationsInboxCaughtUpBannerStore'),
-    (r = 'displayName') in d
+(i = "NotificationsInboxCaughtUpBannerStore"),
+    (r = "displayName") in d
         ? Object.defineProperty(d, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (d[r] = i));
+        : (d[r] = i);
 let h = new d(s.Z, {});

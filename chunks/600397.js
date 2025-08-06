@@ -18,7 +18,7 @@ function p(e) {
             user: p,
             channelId: n.id,
             guildId: void 0,
-            messageId: void 0
+            messageId: void 0,
         })(),
         E = (0, o.q)(t.applicationId);
     if (null == E) return null;
@@ -27,24 +27,24 @@ function p(e) {
         usernameHook: g,
         gameName: E.name,
         gameIconHook: (e) =>
-            (0, r.jsxs)('span', {
+            (0, r.jsxs)("span", {
                 className: _.gameContainer,
                 children: [
                     (0, r.jsx)(a.Z, {
                         game: E,
                         size: a.Z.Sizes.XXSMALL,
-                        className: _.inlineIcon
+                        className: _.inlineIcon,
                     }),
-                    ' ',
-                    e
-                ]
+                    " ",
+                    e,
+                ],
             }),
-        helpdeskArticle: s.Z.getArticleURL(d.BhN.SOCIAL_LAYER_CONNECTIONS)
+        helpdeskArticle: s.Z.getArticleURL(d.BhN.SOCIAL_LAYER_CONNECTIONS),
     });
     return (0, r.jsx)(u.Z, {
-        iconNode: (0, r.jsx)(i.iWm, { size: 'sm' }),
+        iconNode: (0, r.jsx)(i.iWm, { size: "sm" }),
         compact: h,
         contentClassName: _.content,
-        children: (0, r.jsx)('div', { children: b })
+        children: (0, r.jsx)("div", { children: b }),
     });
 }

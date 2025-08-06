@@ -1,4 +1,13 @@
-(n.r(t), n.d(t, { default: () => B }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282));
+n.r(t),
+    n.d(t, { default: () => B }),
+    n(190126),
+    n(368063),
+    n(65234),
+    n(111804),
+    n(490233),
+    n(97749),
+    n(388685),
+    n(35282);
 var r = n(873546),
     i = n(636977),
     o = n(570140),
@@ -36,35 +45,43 @@ n(215023);
 var k = n(46140);
 async function j(e, t) {
     await o.Z.dispatch({
-        type: 'INVITE_MODAL_OPEN',
+        type: "INVITE_MODAL_OPEN",
         invite: e,
         code: t,
-        context: M.IlC.APP
+        context: M.IlC.APP,
     });
 }
 async function U(e) {
     var t;
     let n = C.Z.getInvite(e.code);
     if (null == n) {
-        let { invite: t } = await s.ZP.resolveInvite(e.code, 'Markdown Link');
+        let { invite: t } = await s.ZP.resolveInvite(e.code, "Markdown Link");
         n = t;
     }
     if (null == n) return;
-    if (n.state === M.r2o.EXPIRED || n.state === M.r2o.BANNED || n.state === M.r2o.ERROR) return void (await j(n, e.code));
+    if (n.state === M.r2o.EXPIRED || n.state === M.r2o.BANNED || n.state === M.r2o.ERROR)
+        return void (await j(n, e.code));
     let r = w.ZP.getFlattenedGuildIds(),
         i = null == n || null == (t = n.guild) ? void 0 : t.id;
     null != i && r.includes(i) ? s.ZP.transitionToInviteSync(n) : await j(n, e.code);
 }
 let G = {
     skipExtensionCheck: void 0,
-    analyticsLocations: []
+    analyticsLocations: [],
 };
 function B(e) {
     var t;
-    let { skipExtensionCheck: o, analyticsLocations: s } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : G,
+    let { skipExtensionCheck: o, analyticsLocations: s } =
+            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : G,
         C = (0, E.zO)(e);
-    if (null != C && (C.type === g.g.INVITE || C.type === g.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), U(C), !0);
-    if (null != C && (C.type === g.g.APP_DIRECTORY_PROFILE || C.type === g.g.APP_DIRECTORY_STOREFRONT || C.type === g.g.APP_DIRECTORY_STOREFRONT_SKU))
+    if (null != C && (C.type === g.g.INVITE || C.type === g.g.EMBEDDED_ACTIVITY_INVITE))
+        return (e) => (null == e || e.preventDefault(), U(C), !0);
+    if (
+        null != C &&
+        (C.type === g.g.APP_DIRECTORY_PROFILE ||
+            C.type === g.g.APP_DIRECTORY_STOREFRONT ||
+            C.type === g.g.APP_DIRECTORY_STOREFRONT_SKU)
+    )
         return (t) => {
             var i, o;
             null == t || t.preventDefault();
@@ -73,13 +90,13 @@ function B(e) {
                     C.type === g.g.APP_DIRECTORY_PROFILE || C.type === g.g.APP_DIRECTORY_STOREFRONT
                         ? {
                               applicationId: a,
-                              skuId: void 0
+                              skuId: void 0,
                           }
                         : null != (i = (0, p.Q)(a))
                           ? i
                           : {
                                 applicationId: void 0,
-                                skuId: void 0
+                                skuId: void 0,
                             },
                 c = null != (o = P.Z.getGuildId()) ? o : void 0;
             return (
@@ -87,9 +104,9 @@ function B(e) {
                     ? (0, x.Z)(e)
                     : (D.default.track(M.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                           application_id: s,
-                          device_platform: r.tq ? 'mobile_web' : 'desktop_web',
+                          device_platform: r.tq ? "mobile_web" : "desktop_web",
                           guild_id: c,
-                          channel_id: R.Z.getChannelId()
+                          channel_id: R.Z.getChannelId(),
                       }),
                       Promise.resolve()
                           .then(n.bind(n, 749681))
@@ -101,7 +118,7 @@ function B(e) {
                                   tab: r.APPS,
                                   applicationId: s,
                                   section: (0, O.Z)(i, C.type === g.g.APP_DIRECTORY_PROFILE ? i.ABOUT : i.STORE),
-                                  skuId: l
+                                  skuId: l,
                               });
                           })),
                 !0
@@ -114,14 +131,14 @@ function B(e) {
             let { code: r, url: i } = C,
                 o = h.Z.getApplication(r),
                 l = new URL(i),
-                _ = null != (t = l.searchParams.get('referrer_id')) ? t : void 0,
+                _ = null != (t = l.searchParams.get("referrer_id")) ? t : void 0,
                 p = (0, f.Z)(),
                 { currentChannelId: g, instanceId: E, isCurrentlyInInstance: b, canLaunchInChannel: y } = (0, m.v)(r);
             if (y)
                 return (
                     !b &&
                     null != g &&
-                    ((0, d.ur)(r, l.searchParams.get('link_id'), l.searchParams.get('custom_id'))
+                    ((0, d.ur)(r, l.searchParams.get("link_id"), l.searchParams.get("custom_id"))
                         .then(async (e) => {
                             let { customId: t } = e;
                             await (0, c.G6)({
@@ -131,7 +148,7 @@ function B(e) {
                                 embeddedActivitiesManager: p,
                                 customId: t,
                                 referrerId: _,
-                                analyticsLocations: s
+                                analyticsLocations: s,
                             });
                         })
                         .catch(() => {}),
@@ -143,13 +160,17 @@ function B(e) {
                     null != e &&
                     (a.Z.openPrivateChannel({ recipientIds: e })
                         .then(async (e) => {
-                            let { customId: t } = await (0, d.ur)(r, l.searchParams.get('link_id'), l.searchParams.get('custom_id'));
+                            let { customId: t } = await (0, d.ur)(
+                                r,
+                                l.searchParams.get("link_id"),
+                                l.searchParams.get("custom_id"),
+                            );
                             (0, u.Z)({
                                 targetApplicationId: r,
                                 channelId: e,
                                 analyticsLocations: s,
                                 customId: t,
-                                referrerId: _
+                                referrerId: _,
                             });
                         })
                         .catch(() => {}),
@@ -160,10 +181,10 @@ function B(e) {
     if (null != C && C.type === g.g.GUILD_PRODUCT)
         return (e) => {
             null == e || e.preventDefault();
-            let [t, r] = C.code.split('-');
+            let [t, r] = C.code.split("-");
             return (
                 n
-                    .e('84239')
+                    .e("84239")
                     .then(n.bind(n, 838433))
                     .then((e) => {
                         let { openGuildProductLink: n } = e;
@@ -181,25 +202,33 @@ function B(e) {
                     let { navigateToQuestHome: t } = e;
                     t({
                         fromContent: i.j.QUEST_SHARE_LINK,
-                        questId: C.code
+                        questId: C.code,
                     });
                 }),
             !0
         );
     let { host: w, hostname: j, pathname: B, search: Z, hash: F } = null != (t = L.Z.toURLSafe(e)) ? t : {},
-        V = L.Z.isDiscordHostname(null != j ? j : null) || L.Z.isDiscordLocalhost(null != w ? w : null, null != j ? j : null);
-    if (V && ((null == B ? void 0 : B.startsWith('/application-directory')) || (null == B ? void 0 : B.startsWith('/discovery/applications')))) {
-        let e = B.split('/'),
-            t = null == B ? void 0 : B.startsWith('/discovery/applications'),
+        V =
+            L.Z.isDiscordHostname(null != j ? j : null) ||
+            L.Z.isDiscordLocalhost(null != w ? w : null, null != j ? j : null);
+    if (
+        V &&
+        ((null == B ? void 0 : B.startsWith("/application-directory")) ||
+            (null == B ? void 0 : B.startsWith("/discovery/applications")))
+    ) {
+        let e = B.split("/"),
+            t = null == B ? void 0 : B.startsWith("/discovery/applications"),
             r = e[t ? 3 : 2],
-            i = 'search' === r,
-            o = t && 'categories' === r && 'featured' !== e[4];
+            i = "search" === r,
+            o = t && "categories" === r && "featured" !== e[4];
         return (t) => {
             let r, a, s;
             if ((null == t || t.preventDefault(), i)) {
                 var l, c, u;
                 let e = new URLSearchParams(Z);
-                ((r = null != (l = e.get('q')) ? l : void 0), (a = null != (c = e.get('category_id')) ? c : void 0), (s = null != (u = e.get('page')) ? u : void 0));
+                (r = null != (l = e.get("q")) ? l : void 0),
+                    (a = null != (c = e.get("category_id")) ? c : void 0),
+                    (s = null != (u = e.get("page")) ? u : void 0);
             } else o && (a = e[4]);
             return (
                 Promise.resolve()
@@ -211,7 +240,7 @@ function B(e) {
                             tab: i.APPS,
                             categoryId: null == a || Number.isNaN(a) ? void 0 : Number(a),
                             page: null == s || Number.isNaN(s) ? void 0 : Number(s),
-                            query: r
+                            query: r,
                         });
                     }),
                 !0
@@ -221,25 +250,37 @@ function B(e) {
     if (null != B && V && L.Z.isAppRoute(B)) {
         let e = {
             navigationReplace: !1,
-            openChannel: !0
+            openChannel: !0,
         };
-        return (null != Z && (e.search = Z), null != F && (e.hash = F), (t) => (null == t || t.preventDefault(), (0, I.Z)(B, e), !0));
+        return (
+            null != Z && (e.search = Z),
+            null != F && (e.hash = F),
+            (t) => (null == t || t.preventDefault(), (0, I.Z)(B, e), !0)
+        );
     }
     if (null != B && V) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
             i = t(e);
-        if (null != i) return (e) => (null == e || e.preventDefault(), null != C && C.type === g.g.APP_OAUTH2_LINK && _.ZP.trackWithMetadata(M.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }), r(i), !0);
+        if (null != i)
+            return (e) => (
+                null == e || e.preventDefault(),
+                null != C &&
+                    C.type === g.g.APP_OAUTH2_LINK &&
+                    _.ZP.trackWithMetadata(M.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }),
+                r(i),
+                !0
+            );
     }
     let H = (0, v.Ao)(B);
     if (null != B && V && null != H)
         return (e) => {
             null == e || e.preventDefault();
             let t = P.Z.getGuildId();
-            null != H.guildId && '' !== H.guildId && H.guildId !== t && (0, I.Z)(M.Z5c.CHANNEL(H.guildId));
+            null != H.guildId && "" !== H.guildId && H.guildId !== t && (0, I.Z)(M.Z5c.CHANNEL(H.guildId));
             let n = y.ZP.getGuildScheduledEvent(H.guildEventId);
-            return (null != n && (0, b.bO)({ eventId: n.id }), !0);
+            return null != n && (0, b.bO)({ eventId: n.id }), !0;
         };
-    if (V && (null == B ? void 0 : B.startsWith('/settings/'))) {
+    if (V && (null == B ? void 0 : B.startsWith("/settings/"))) {
         let { default: e } = n(722589),
             t = e(B);
         if (null != t)
@@ -248,14 +289,14 @@ function B(e) {
                 l.Z.open(t.section, t.subsection, {
                     openWithoutBackstack: !1,
                     impressionSource: t.source,
-                    analyticsLocations: s
+                    analyticsLocations: s,
                 }),
                 !0
             );
     }
-    return V && (null == B ? void 0 : B.startsWith('/discovery/quests'))
+    return V && (null == B ? void 0 : B.startsWith("/discovery/quests"))
         ? (e) => (null == e || e.preventDefault(), (0, S.navigateToQuestHome)({ fromContent: i.j.QUEST_BADGE }), !0)
-        : V && (null == B ? void 0 : B.startsWith('/discovery/servers'))
+        : V && (null == B ? void 0 : B.startsWith("/discovery/servers"))
           ? (e) => (
                 null == e || e.preventDefault(),
                 Promise.resolve()

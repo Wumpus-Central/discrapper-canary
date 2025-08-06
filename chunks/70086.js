@@ -14,13 +14,13 @@ function o(e) {
         onClick: t,
         children: [
             (0, r.jsx)(l.$Eu, {
-                color: 'white',
-                size: 'custom',
+                color: "white",
+                size: "custom",
                 height: 16,
                 width: 16,
-                className: s.premiumUpsellBadge
+                className: s.premiumUpsellBadge,
             }),
-            a.intl.string(a.t['+7XY39'])
-        ]
+            a.intl.string(a.t["+7XY39"]),
+        ],
     });
 }

@@ -21,36 +21,36 @@ function m(e) {
             notif_user_id: g,
             guild_id: e.guild_id,
             channel_id: e.id,
-            channel_type: e.type
+            channel_type: e.type,
         });
     return {
         icon: m,
         title: t,
         body: n,
-        confirmText: h.intl.string(h.t['0D/6R0']),
+        confirmText: h.intl.string(h.t["0D/6R0"]),
         cancelText: h.intl.string(h.t.BVN4pK),
         onNotificationShow: () => {
             y();
         },
         onConfirmClick: (t, n) => {
-            if ((O('join'), f.TPd.CALLABLE.has(e.type))) i.Z.call(e.id, !1, !1);
+            if ((O("join"), f.TPd.CALLABLE.has(e.type))) i.Z.call(e.id, !1, !1);
             else {
                 if (e.type !== f.d4z.GUILD_VOICE) return;
                 o.default.selectVoiceChannel(e.id);
             }
-            (r.Z.updateNotificationStatus(n),
+            r.Z.updateNotificationStatus(n),
                 r.Z.track(f.rMx.VOICE_CHANNEL_SELECTED, {
-                    location: 'Overlay Notificaiton',
+                    location: "Overlay Notificaiton",
                     guild_id: e.guild_id,
                     channel_id: e.id,
-                    video_enabled: !1
-                }));
+                    video_enabled: !1,
+                });
         },
         onCancelClick: () => {
-            (O('decline'), i.Z.stopRinging(e.id));
+            O("decline"), i.Z.stopRinging(e.id);
         },
         onDismissClick: () => {
-            O('dismiss');
-        }
+            O("dismiss");
+        },
     };
 }

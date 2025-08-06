@@ -3,28 +3,28 @@ var r = t(73800);
 let o = (0, r.createContext)(null),
     i = {
         didCatch: !1,
-        error: null
+        error: null,
     };
 class u extends r.Component {
     constructor(e) {
-        (super(e), (this.resetErrorBoundary = this.resetErrorBoundary.bind(this)), (this.state = i));
+        super(e), (this.resetErrorBoundary = this.resetErrorBoundary.bind(this)), (this.state = i);
     }
     static getDerivedStateFromError(e) {
         return {
             didCatch: !0,
-            error: e
+            error: e,
         };
     }
     resetErrorBoundary() {
         let { error: e } = this.state;
         if (null !== e) {
             for (var n, t, r = arguments.length, o = Array(r), u = 0; u < r; u++) o[u] = arguments[u];
-            (null == (n = (t = this.props).onReset) ||
+            null == (n = (t = this.props).onReset) ||
                 n.call(t, {
                     args: o,
-                    reason: 'imperative-api'
+                    reason: "imperative-api",
                 }),
-                this.setState(i));
+                this.setState(i);
         }
     }
     componentDidCatch(e, n) {
@@ -44,13 +44,13 @@ class u extends r.Component {
             })(e.resetKeys, r)
         ) {
             var o, u;
-            (null == (o = (u = this.props).onReset) ||
+            null == (o = (u = this.props).onReset) ||
                 o.call(u, {
                     next: r,
                     prev: e.resetKeys,
-                    reason: 'keys'
+                    reason: "keys",
                 }),
-                this.setState(i));
+                this.setState(i);
         }
     }
     render() {
@@ -60,9 +60,9 @@ class u extends r.Component {
         if (u) {
             let e = {
                 error: c,
-                resetErrorBoundary: this.resetErrorBoundary
+                resetErrorBoundary: this.resetErrorBoundary,
             };
-            if ('function' == typeof n) _ = n(e);
+            if ("function" == typeof n) _ = n(e);
             else if (t) _ = (0, r.createElement)(t, e);
             else if (void 0 !== i) _ = i;
             else throw c;
@@ -73,10 +73,10 @@ class u extends r.Component {
                 value: {
                     didCatch: u,
                     error: c,
-                    resetErrorBoundary: this.resetErrorBoundary
-                }
+                    resetErrorBoundary: this.resetErrorBoundary,
+                },
             },
-            _
+            _,
         );
     }
 }

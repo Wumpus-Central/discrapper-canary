@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     M: () => u,
-    Z: () => y
+    Z: () => y,
 }),
-    n(388685));
+    n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -16,29 +16,29 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 var u = (function (e) {
-    return ((e.NOT_FETCHED = 'NOT_FETCHED'), (e.FETCHING = 'FETCHING'), (e.FETCHED = 'FETCHED'), e);
+    return (e.NOT_FETCHED = "NOT_FETCHED"), (e.FETCHING = "FETCHING"), (e.FETCHED = "FETCHED"), e;
 })({});
 let d = new Map(),
     f = [],
     _ = [],
-    p = 'NOT_FETCHED';
+    p = "NOT_FETCHED";
 function h() {
-    p = 'FETCHING';
+    p = "FETCHING";
 }
 function m(e) {
-    ((p = 'FETCHED'),
+    (p = "FETCHED"),
         (d = new Map(e.tokens.map((e) => [e.application.id, e]))),
         (_ = (f = e.tokens).filter((e) => {
             let { application: t } = e;
             return null == t.parent_id;
-        })));
+        }));
 }
 function g(e) {
     let { id: t, application: n, scopes: r } = e,
@@ -55,15 +55,15 @@ function g(e) {
     let o = {
         id: t,
         application: n,
-        scopes: r
+        scopes: r,
     };
-    (d.set(o.application.id, o), (f = [...f, o]), null == o.application.parent_id && (_ = [..._, o]));
+    d.set(o.application.id, o), (f = [...f, o]), null == o.application.parent_id && (_ = [..._, o]);
 }
 function E(e) {
     let { id: t, applicationId: n } = e,
         r = d.get(n);
     if (null == r || r.id !== t) return !1;
-    (d.delete(r.application.id),
+    d.delete(r.application.id),
         (f = f.filter((e) => {
             let { id: t } = e;
             return t !== r.id;
@@ -71,7 +71,7 @@ function E(e) {
         (_ = _.filter((e) => {
             let { id: t } = e;
             return t !== r.id;
-        })));
+        }));
 }
 class b extends (r = i.ZP.Store) {
     initialize() {
@@ -91,10 +91,10 @@ class b extends (r = i.ZP.Store) {
         return p;
     }
 }
-c(b, 'displayName', 'AuthorizedAppsStore');
+c(b, "displayName", "AuthorizedAppsStore");
 let y = new b(o.Z, {
     USER_AUTHORIZED_APPS_REQUEST: h,
     USER_AUTHORIZED_APPS_UPDATE: m,
     OAUTH2_TOKEN_CREATE: g,
-    OAUTH2_TOKEN_DELETE: E
+    OAUTH2_TOKEN_DELETE: E,
 });

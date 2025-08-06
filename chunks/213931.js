@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => c,
-    t: () => a
+    t: () => a,
 });
 var i = n(381499),
     r = n(675478),
@@ -14,12 +14,12 @@ function a(e, t, n, l) {
             (e) => {
                 e.customNotificationSoundConfig = { notificationSoundPackId: i.Gm.create({ value: n }) };
             },
-            r.fy.INFREQUENT_USER_ACTION
+            r.fy.INFREQUENT_USER_ACTION,
         ),
         s.default.track(o.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
             guild_id: e,
             location: l,
-            soundpack: n
+            soundpack: n,
         }));
 }
 function c(e, t, n, a, c) {
@@ -31,13 +31,13 @@ function c(e, t, n, a, c) {
             (e) => {
                 e.customNotificationSoundConfig = { notificationSoundPackId: i.Gm.create({ value: a }) };
             },
-            r.fy.INFREQUENT_USER_ACTION
+            r.fy.INFREQUENT_USER_ACTION,
         ),
         s.default.track(o.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
             guild_id: e,
             channel_id: t,
             channel_type: null == (u = l.Z.getChannel(t)) ? void 0 : u.type,
             location: c,
-            soundpack: a
+            soundpack: a,
         }));
 }

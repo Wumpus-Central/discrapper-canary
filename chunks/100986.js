@@ -8,7 +8,7 @@ var r = n(594190),
     c = n(981631),
     u = n(474936);
 function d(e, t) {
-    return e.guildId === l.X8 ? 'default' : t ? 'custom-external' : 'custom';
+    return e.guildId === l.X8 ? "default" : t ? "custom-external" : "custom";
 }
 function f(e, t, n, f) {
     var _;
@@ -32,6 +32,6 @@ function f(e, t, n, f) {
         emoji_count: +(null != n.emojiId || null != n.emojiName),
         feature_selection: y,
         feature_selection_id: n.soundId,
-        sound_type: f
+        sound_type: f,
     });
 }

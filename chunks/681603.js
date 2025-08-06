@@ -21,43 +21,49 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
 class _ extends i.Component {
     componentDidUpdate(e) {
         if (this.props.locked) return null;
-        let { selectedGuild: t, selectedChannel: n, isMemberPending: i, hasPreviewEnabled: r, postableChannelCount: o } = this.props;
+        let {
+            selectedGuild: t,
+            selectedChannel: n,
+            isMemberPending: i,
+            hasPreviewEnabled: r,
+            postableChannelCount: o,
+        } = this.props;
         if (null != t && (t !== e.selectedGuild || (i && !e.isMemberPending))) {
             var d, p;
-            ((0, c.Q)(
+            (0, c.Q)(
                 v.rMx.GUILD_VIEWED,
                 ((d = E(
                     {},
                     i
                         ? {
                               is_pending: i,
-                              preview_enabled: r
+                              preview_enabled: r,
                           }
-                        : {}
+                        : {},
                 )),
                 (p = p = { postable_channels: o }),
                 Object.getOwnPropertyDescriptors
@@ -72,13 +78,14 @@ class _ extends i.Component {
                       })(Object(p)).forEach(function (e) {
                           Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(p, e));
                       }),
-                d)
+                d),
             ),
-                (0, s.a)(v.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: t }));
+                (0, s.a)(v.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: t });
         }
         if (null != n && n !== e.selectedChannel) {
             let e = (0, a.K)(u.Z.getChannel(n), !0);
-            ((0, c.Q)(v.rMx.CHANNEL_OPENED, E({}, e, (0, l.$H)(n))), (0, s.a)(v.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: n }));
+            (0, c.Q)(v.rMx.CHANNEL_OPENED, E({}, e, (0, l.$H)(n))),
+                (0, s.a)(v.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: n });
         }
     }
     render() {
@@ -106,6 +113,6 @@ let x = o.ZP.connectStores([g.Z, m.Z, f.Z, y.default, O.default, d.ZP, h.Z, p.ZP
         locked: O.default.isLocked((0, b.getPID)()),
         hasPreviewEnabled: null == l ? void 0 : l.features.has(v.oNc.PREVIEW_ENABLED),
         isMemberPending: u,
-        postableChannelCount: c
+        postableChannelCount: c,
     };
 })(_);

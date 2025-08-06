@@ -14,37 +14,37 @@ let m = (e) => {
         f = (0, r.e7)([o.Z], () => o.Z.getGuild(m), [m]),
         h = (0, c.Z)({
             listing: n,
-            guildId: m
+            guildId: m,
         });
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: u.confirmationContainer,
         children: [
             (0, i.jsx)(a.X6q, {
                 className: u.confirmationHeader,
-                variant: 'heading-lg/extrabold',
+                variant: "heading-lg/extrabold",
                 children: d.intl.format(d.t.I5dYFh, {
                     serverName: null == f ? void 0 : f.name,
-                    tierName: n.name
-                })
+                    tierName: n.name,
+                }),
             }),
             !h.isEmpty() &&
                 (0, i.jsx)(a.Text, {
                     className: u.confirmationSubtitle,
-                    variant: 'text-sm/normal',
-                    color: 'header-secondary',
-                    children: d.intl.format(d.t.TnhFHh, { benefits: h.asString() })
+                    variant: "text-sm/normal",
+                    color: "header-secondary",
+                    children: d.intl.format(d.t.TnhFHh, { benefits: h.asString() }),
                 }),
             (0, i.jsx)(l.zx, {
                 className: u.openDiscordButton,
-                onClick: () => (0, s.Z)('role_sub_mweb_success_modal'),
-                children: d.intl.string(d.t.WWvswM)
+                onClick: () => (0, s.Z)("role_sub_mweb_success_modal"),
+                children: d.intl.string(d.t.WWvswM),
             }),
             (0, i.jsx)(l.zx, {
                 className: u.doneButton,
                 look: l.zx.Looks.BLANK,
                 onClick: () => t(!0),
-                children: d.intl.string(d.t.y84Dho)
-            })
-        ]
+                children: d.intl.string(d.t.y84Dho),
+            }),
+        ],
     });
 };

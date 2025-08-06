@@ -1,7 +1,7 @@
 n.d(t, { s: () => o });
 let r = (e, t) => ({
         x: e.x - t.x,
-        y: e.y - t.y
+        y: e.y - t.y,
     }),
     i = (e) => {
         let t = e.getInitialClientOffset(),
@@ -9,7 +9,7 @@ let r = (e, t) => ({
         return null === t || null === n
             ? {
                   x: 0,
-                  y: 0
+                  y: 0,
               }
             : r(t, n);
     },
@@ -20,6 +20,6 @@ let r = (e, t) => ({
         let o = t.current.getBoundingClientRect();
         return r(n, {
             x: o.width / 2,
-            y: o.height / 2
+            y: o.height / 2,
         });
     };

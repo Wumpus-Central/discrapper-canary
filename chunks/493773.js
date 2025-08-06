@@ -1,7 +1,7 @@
 n.d(t, {
     Ng: () => o,
     ZP: () => i,
-    zq: () => a
+    zq: () => a,
 });
 var r = n(73800);
 function i(e) {
@@ -14,13 +14,13 @@ function o(e) {
 }
 function a(e) {
     let t = r.useRef(e);
-    (r.useEffect(() => {
+    r.useEffect(() => {
         t.current = e;
     }),
         r.useEffect(
             () => () => {
                 t.current();
             },
-            []
-        ));
+            [],
+        );
 }

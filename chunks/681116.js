@@ -11,7 +11,7 @@ var r = n(512972),
     _ = n(108665);
 function p(e, t, n) {
     var r = a.replaceWithFragment(e.getCurrentContent(), e.getSelection(), t);
-    return l.push(e, r.set('entityMap', n), 'insert-fragment');
+    return l.push(e, r.set("entityMap", n), "insert-fragment");
 }
 function h(e, t) {
     return (
@@ -35,13 +35,13 @@ e.exports = function (e, t) {
                         o = _(t),
                         d = i.create({
                             style: n.getCurrentInlineStyle(),
-                            entity: u(n.getCurrentContent(), n.getSelection())
+                            entity: u(n.getCurrentContent(), n.getSelection()),
                         }),
                         f = c.getCurrentBlockType(n),
                         p = s.processText(o, d, f),
                         h = r.createFromArray(p),
                         m = a.replaceWithFragment(n.getCurrentContent(), n.getSelection(), h);
-                    e.update(l.push(n, m, 'insert-fragment'));
+                    e.update(l.push(n, m, "insert-fragment"));
                 }
             });
             return;
@@ -55,8 +55,10 @@ e.exports = function (e, t) {
         if ((b && (E = _(b)), !e.props.stripPastedStyles)) {
             var v = e.getClipboard();
             if (n.isRichText() && v) {
-                if (-1 !== y.indexOf(e.getEditorKey()) || (1 === E.length && 1 === v.size && v.first().getText() === b)) return void e.update(p(e._latestEditorState, v));
-            } else if (v && n.types.includes('com.apple.webarchive') && !n.types.includes('text/html') && h(E, v)) return void e.update(p(e._latestEditorState, v));
+                if (-1 !== y.indexOf(e.getEditorKey()) || (1 === E.length && 1 === v.size && v.first().getText() === b))
+                    return void e.update(p(e._latestEditorState, v));
+            } else if (v && n.types.includes("com.apple.webarchive") && !n.types.includes("text/html") && h(E, v))
+                return void e.update(p(e._latestEditorState, v));
             if (y) {
                 var I = s.processHTML(y, e.props.blockRenderMap);
                 if (I) {
@@ -74,7 +76,7 @@ e.exports = function (e, t) {
         if (E.length) {
             var N = i.create({
                     style: O.getCurrentInlineStyle(),
-                    entity: u(O.getCurrentContent(), O.getSelection())
+                    entity: u(O.getCurrentContent(), O.getSelection()),
                 }),
                 C = c.getCurrentBlockType(O),
                 R = s.processText(E, N, C),

@@ -24,7 +24,7 @@ function b(e) {
         A = i.useCallback(() => {
             v(!0);
         }, [v]);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         v();
     }, [v]),
         i.useEffect(() => {
@@ -32,42 +32,42 @@ function b(e) {
         }, [t, y]),
         i.useEffect(() => {
             null == o || o(null == S ? void 0 : S.current);
-        }, [S, o]));
+        }, [S, o]);
     let N = i.useMemo(
         () =>
             I === f.a.NOT_FETCHED || I === f.a.FETCHING
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: a()(g.container, g.spinnerContainer),
-                      children: (0, r.jsx)(l.$jN, {})
+                      children: (0, r.jsx)(l.$jN, {}),
                   })
                 : null == O && T === E
-                  ? (0, r.jsx)('div', {
+                  ? (0, r.jsx)("div", {
                         className: g.container,
                         children: (0, r.jsx)(m.Z, {
                             guildId: t,
-                            name: n
-                        })
+                            name: n,
+                        }),
                     })
                   : null == O
-                    ? (0, r.jsx)('div', {
+                    ? (0, r.jsx)("div", {
                           className: g.container,
                           children: (0, r.jsx)(p.Z, {
                               name: n,
-                              onRetry: A
-                          })
+                              onRetry: A,
+                          }),
                       })
-                    : (0, r.jsx)('div', {
+                    : (0, r.jsx)("div", {
                           className: g.container,
                           children: (0, r.jsx)(h.ZP, {
                               profile: O,
-                              onClose: b
-                          })
+                              onClose: b,
+                          }),
                       }),
-        [I, O, T, t, n, A, b]
+        [I, O, T, t, n, A, b],
     );
     return (0, r.jsx)(l.VqE, {
         ref: S,
-        'aria-label': null == O ? void 0 : O.name,
-        children: N
+        "aria-label": null == O ? void 0 : O.name,
+        children: N,
     });
 }

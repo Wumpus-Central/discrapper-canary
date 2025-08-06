@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     As: () => E,
     BP: () => h,
     MC: () => y,
     dn: () => p,
     hL: () => b,
-    lK: () => m
+    lK: () => m,
 }),
-    n(997841));
+    n(997841);
 var r = n(399606),
     i = n(991621),
     o = n(936141),
@@ -23,35 +23,41 @@ let p = (e, t) => {
             s = (0, a.LD)(
                 {
                     type: i.l.Attachment,
-                    media: e
+                    media: e,
                 },
-                t
+                t,
             ),
             l = (0, a.UJ)(
                 {
                     type: i.l.Attachment,
-                    media: e
+                    media: e,
                 },
-                t
+                t,
             );
-        return s.length > 0 ? s[0] : l ? o.wk.POTENTIAL_EXPLICIT_CONTENT : n || (0, u.yE)(r, f.J0y.IS_SPOILER) ? o.wk.SPOILER : null;
+        return s.length > 0
+            ? s[0]
+            : l
+              ? o.wk.POTENTIAL_EXPLICIT_CONTENT
+              : n || (0, u.yE)(r, f.J0y.IS_SPOILER)
+                ? o.wk.SPOILER
+                : null;
     },
     h = (e, t, n, r) => {
         let s = (0, a.LD)(
                 {
                     type: i.l.Embed,
-                    media: e
+                    media: e,
                 },
-                r
+                r,
             ),
             l =
                 !t.author.bot &&
                 (0, a.UJ)(
                     {
                         type: i.l.Embed,
-                        media: e
+                        media: e,
                     },
-                    r
+                    r,
                 );
         return s.length > 0 ? s[0] : l ? o.wk.POTENTIAL_EXPLICIT_CONTENT : n ? o.wk.SPOILER : null;
     },
@@ -61,37 +67,45 @@ let p = (e, t) => {
             s = (0, a.LD)(
                 {
                     type: i.l.GenericMedia,
-                    media: e
+                    media: e,
                 },
-                t
+                t,
             ),
             l =
                 !r &&
                 (0, a.UJ)(
                     {
                         type: i.l.GenericMedia,
-                        media: e
+                        media: e,
                     },
-                    t
+                    t,
                 );
-        return s.includes(o.wk.EXPLICIT_CONTENT) ? o.wk.EXPLICIT_CONTENT : s.includes(o.wk.GORE_CONTENT) ? o.wk.GORE_CONTENT : l ? o.wk.POTENTIAL_EXPLICIT_CONTENT : n ? o.wk.SPOILER : null;
+        return s.includes(o.wk.EXPLICIT_CONTENT)
+            ? o.wk.EXPLICIT_CONTENT
+            : s.includes(o.wk.GORE_CONTENT)
+              ? o.wk.GORE_CONTENT
+              : l
+                ? o.wk.POTENTIAL_EXPLICIT_CONTENT
+                : n
+                  ? o.wk.SPOILER
+                  : null;
     };
 function g(e) {
     switch (e.type) {
         case s.Ah.EMBED:
             return {
                 type: i.l.Embed,
-                media: e
+                media: e,
             };
         case s.Ah.ATTACHMENT:
             return {
                 type: i.l.Attachment,
-                media: e
+                media: e,
             };
         case s.Ah.COMPONENT:
             return {
                 type: i.l.GenericMedia,
-                media: e.srcUnfurledMediaItem
+                media: e.srcUnfurledMediaItem,
             };
         default:
             return null;
@@ -103,7 +117,13 @@ function E(e, t, n) {
     if (null == r) return [!1, void 0];
     let i = (0, a.LD)(r, n),
         s = (0, a.UJ)(r, n);
-    return i.length > 0 ? [!0, i[0]] : s ? [!0, o.wk.POTENTIAL_EXPLICIT_CONTENT] : e.spoiler ? [t, o.wk.SPOILER] : [!1, void 0];
+    return i.length > 0
+        ? [!0, i[0]]
+        : s
+          ? [!0, o.wk.POTENTIAL_EXPLICIT_CONTENT]
+          : e.spoiler
+            ? [t, o.wk.SPOILER]
+            : [!1, void 0];
 }
 function b(e) {
     let { channel: t, media: n } = e,

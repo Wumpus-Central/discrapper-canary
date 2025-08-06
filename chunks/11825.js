@@ -7,18 +7,18 @@ var r = n(255367),
 let a = (e) => {
         let { item: t, closePopout: n } = e;
         return (0, r.jsx)(l.v2r, {
-            navId: 'notification-actions',
+            navId: "notification-actions",
             onClose: n,
             onSelect: n,
-            'aria-label': s.intl.string(s.t.ljs3OT),
+            "aria-label": s.intl.string(s.t.ljs3OT),
             children: (0, r.jsx)(l.sNh, {
-                id: 'delete',
+                id: "delete",
                 label: s.intl.string(s.t.oyYWHB),
                 icon: l.XHJ,
                 action: async () => {
                     await (0, o.g3)(t);
-                }
-            })
+                },
+            }),
         });
     },
     c = i.memo(function (e) {
@@ -34,24 +34,24 @@ let a = (e) => {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, e)),
@@ -68,11 +68,11 @@ let a = (e) => {
                           })(Object(i)).forEach(function (e) {
                               Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                           }),
-                    n)
+                    n),
                 );
             },
-            position: 'bottom',
-            align: 'right',
+            position: "bottom",
+            align: "right",
             animation: l.yRy.Animation.NONE,
             children: (e) => {
                 let { onClick: t } = e;
@@ -81,14 +81,14 @@ let a = (e) => {
                     tooltip: s.intl.string(s.t.UKOtz8),
                     color: l.YX$.TERTIARY,
                     icon: (0, r.jsx)(l.xhG, {
-                        size: 'xs',
-                        color: 'currentColor'
+                        size: "xs",
+                        color: "currentColor",
                     }),
                     onClick: (e) => {
-                        (e.stopPropagation(), t(e));
+                        e.stopPropagation(), t(e);
                     },
-                    'aria-haspopup': 'menu'
+                    "aria-haspopup": "menu",
                 });
-            }
+            },
         });
     });

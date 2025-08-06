@@ -26,7 +26,7 @@ function y(e) {
                 ((0, m.I1)(t),
                 (0, b.default)({
                     guildId: t,
-                    returnChannelId: n
+                    returnChannelId: n,
                 }));
         }, [t, n]),
         C = (0, o.e7)([h.Z], () => h.Z.getGuild(t)),
@@ -36,12 +36,12 @@ function y(e) {
                     ? null
                     : f.ZP.getGuildSplashURL({
                           id: C.id,
-                          splash: C.splash
+                          splash: C.splash,
                       }),
-            [C]
+            [C],
         ),
         N = (0, d.N)(S);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(O.outerWrapping, E.main, { [E.fullBorderWithGradient]: null == S }),
         ref: l,
         children: [
@@ -51,42 +51,46 @@ function y(e) {
                       src: S,
                       width: y,
                       height: v,
-                      imageClassName: E.cover
+                      imageClassName: E.cover,
                   })
                 : (0, r.jsx)(p.Z, {}),
             null != N &&
                 null != S &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: E.gradient,
-                    style: { background: 'linear-gradient(180deg, '.concat((0, g.aD)(N, 0.16), ' 0%, ').concat((0, g.aD)(N, 1), ' 100%)') }
+                    style: {
+                        background: "linear-gradient(180deg, "
+                            .concat((0, g.aD)(N, 0.16), " 0%, ")
+                            .concat((0, g.aD)(N, 1), " 100%)"),
+                    },
                 }),
-            null != S && (0, r.jsx)('div', { className: E.gradient }),
-            (0, r.jsxs)('div', {
+            null != S && (0, r.jsx)("div", { className: E.gradient }),
+            (0, r.jsxs)("div", {
                 className: a()(O.explainerContainer, O.transparentBackground),
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: O.header,
                         children: [
                             (0, r.jsx)(s.X6q, {
-                                variant: 'heading-xxl/normal',
-                                color: 'always-white',
-                                children: _.intl.string(_.t.CCmhpK)
+                                variant: "heading-xxl/normal",
+                                color: "always-white",
+                                children: _.intl.string(_.t.CCmhpK),
                             }),
                             (0, r.jsx)(s.Text, {
-                                variant: 'text-lg/normal',
-                                color: 'always-white',
-                                children: _.intl.string(_.t.gRAHcX)
-                            })
-                        ]
+                                variant: "text-lg/normal",
+                                color: "always-white",
+                                children: _.intl.string(_.t.gRAHcX),
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(s.zxk, {
-                        variant: 'overlay-primary',
-                        size: 'md',
+                        variant: "overlay-primary",
+                        size: "md",
                         text: _.intl.string(_.t.VVFjAA),
-                        onClick: I
-                    })
-                ]
-            })
-        ]
+                        onClick: I,
+                    }),
+                ],
+            }),
+        ],
     });
 }

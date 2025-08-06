@@ -10,7 +10,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,7 +39,8 @@ function l(e, t) {
         i = c(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -49,22 +50,22 @@ function c(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function u(e) {
     let { action: t, onClick: n } = e,
         { trackUserProfileAction: r } = (0, o.KZ)();
     return (e) => {
-        (null != t && r({ action: t }), null == n || n(e));
+        null != t && r({ action: t }), null == n || n(e);
     };
 }
 function d(e) {
-    var { action: t, onClick: n, variant: o = 'secondary', size: a = 'sm' } = e,
-        c = l(e, ['action', 'onClick', 'variant', 'size']);
+    var { action: t, onClick: n, variant: o = "secondary", size: a = "sm" } = e,
+        c = l(e, ["action", "onClick", "variant", "size"]);
     let d = u({
         action: t,
-        onClick: n
+        onClick: n,
     });
     return (0, r.jsx)(
         i.zxk,
@@ -72,9 +73,9 @@ function d(e) {
             {
                 onClick: d,
                 variant: o,
-                size: a
+                size: a,
             },
-            c
-        )
+            c,
+        ),
     );
 }

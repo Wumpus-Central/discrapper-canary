@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685));
+n.d(t, { Z: () => u }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -8,7 +8,7 @@ var i = n(255367),
     c = n(384619);
 let d = r.createContext({
     isOpen: !1,
-    toggleOpen: () => {}
+    toggleOpen: () => {},
 });
 function u(e) {
     let { children: t } = e,
@@ -16,13 +16,13 @@ function u(e) {
         a = r.useMemo(
             () => ({
                 isOpen: n,
-                toggleOpen: s
+                toggleOpen: s,
             }),
-            [n]
+            [n],
         );
     return (0, i.jsx)(d.Provider, {
         value: a,
-        children: t(n)
+        children: t(n),
     });
 }
 u.Toggle = function (e) {
@@ -35,15 +35,15 @@ u.Toggle = function (e) {
         onClick: u,
         children: [
             (0, i.jsx)(l.Text, {
-                variant: 'heading-sm/semibold',
-                tag: 'div',
-                color: 'currentColor',
-                children: p
+                variant: "heading-sm/semibold",
+                tag: "div",
+                color: "currentColor",
+                children: p,
             }),
             (0, i.jsx)(m, {
-                size: 'sm',
-                color: 'currentColor'
-            })
-        ]
+                size: "sm",
+                color: "currentColor",
+            }),
+        ],
     });
 };

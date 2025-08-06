@@ -9,7 +9,7 @@ var r = n(255367),
 class u extends i.PureComponent {
     render() {
         let { note: e, title: t, action: n, className: i } = this.props;
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: a()(c.wrapper, i),
             children: (0, r.jsxs)(l.Z, {
                 className: c.flexWrapper,
@@ -19,7 +19,7 @@ class u extends i.PureComponent {
                 children: [
                     (0, r.jsx)(l.Z.Child, {
                         grow: 0,
-                        className: c.image
+                        className: c.image,
                     }),
                     (0, r.jsxs)(l.Z.Child, {
                         grow: 0,
@@ -27,19 +27,19 @@ class u extends i.PureComponent {
                         children: [
                             (0, r.jsx)(s.H, {
                                 className: c.title,
-                                children: t
+                                children: t,
                             }),
                             null != e
-                                ? (0, r.jsx)('div', {
+                                ? (0, r.jsx)("div", {
                                       className: c.note,
-                                      children: e
+                                      children: e,
                                   })
-                                : null
-                        ]
+                                : null,
+                        ],
                     }),
-                    n
-                ]
-            })
+                    n,
+                ],
+            }),
         });
     }
 }

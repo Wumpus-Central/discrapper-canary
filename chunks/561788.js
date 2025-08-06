@@ -12,16 +12,16 @@ function c(e) {
         c = (0, o.KS)(t, n);
     return null == c
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: a.popoutHeader,
               children: [
                   (0, r.jsx)(c, { className: a.channelIcon }),
                   (0, r.jsx)(l.Text, {
-                      variant: 'text-md/semibold',
-                      color: 'interactive-normal',
+                      variant: "text-md/semibold",
+                      color: "interactive-normal",
                       className: a.channelName,
-                      children: t.name
-                  })
-              ]
+                      children: t.name,
+                  }),
+              ],
           });
 }

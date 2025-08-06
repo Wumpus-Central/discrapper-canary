@@ -1,8 +1,8 @@
-(i.d(e, {
+i.d(e, {
     Z: () => y,
-    h: () => w
+    h: () => w,
 }),
-    i(388685));
+    i(388685);
 var s,
     n = i(255367),
     a = i(73800),
@@ -22,7 +22,7 @@ function m(t, e, i) {
                   value: i,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (t[e] = i),
         t
@@ -41,7 +41,7 @@ function g(t, e) {
             naturalWidth: t,
             naturalHeight: e,
             width: a,
-            height: h
+            height: h,
         }
     );
 }
@@ -51,7 +51,7 @@ function w(t) {
             width: 0,
             height: 0,
             naturalHeight: 0,
-            naturalWidth: 0
+            naturalWidth: 0,
         });
     return (
         a.useEffect(() => {
@@ -62,7 +62,7 @@ function w(t) {
                     return null != s ? s : t;
                 });
             }
-            return (window.addEventListener('resize', t), () => window.removeEventListener('reslize', t));
+            return window.addEventListener("resize", t), () => window.removeEventListener("reslize", t);
         }, []),
         (0, n.jsxs)(n.Fragment, {
             children: [
@@ -76,19 +76,19 @@ function w(t) {
                     },
                     src: e,
                     width: s,
-                    height: h
+                    height: h,
                 }),
-                (0, n.jsx)('div', {
+                (0, n.jsx)("div", {
                     className: r()(f.leftSplit, { [f.nonEmbeddedLeftSplit]: !0 }),
-                    children: i
-                })
-            ]
+                    children: i,
+                }),
+            ],
         })
     );
 }
 class b extends (s = a.PureComponent) {
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleResize);
+        window.removeEventListener("resize", this.handleResize);
     }
     calculateShowWaveAnimation() {
         return window.innerWidth > v;
@@ -102,7 +102,7 @@ class b extends (s = a.PureComponent) {
                   src: t,
                   width: i,
                   height: s,
-                  onLoad: this.handleLoad
+                  onLoad: this.handleLoad,
               })
             : null;
     }
@@ -114,9 +114,9 @@ class b extends (s = a.PureComponent) {
                   embedded: i,
                   waveState: t,
                   updateWaveState: e,
-                  hideFallback: !a
+                  hideFallback: !a,
               })
-            : (0, n.jsx)('div', { className: f.mobileWave });
+            : (0, n.jsx)("div", { className: f.mobileWave });
     }
     renderContent() {
         let { children: t, waveState: e, showLogo: i, logoClassName: s, embedded: h } = this.props,
@@ -124,39 +124,39 @@ class b extends (s = a.PureComponent) {
         return (0, n.jsxs)(a.Fragment, {
             children: [
                 this.renderWave(),
-                (0, n.jsxs)('div', {
+                (0, n.jsxs)("div", {
                     className: r()(f.leftSplit, { [f.nonEmbeddedLeftSplit]: h }),
                     children: [
                         i
                             ? (0, n.jsx)(c.Z, {
                                   show: !o || (e === p.hO.ENTERED && e !== p.hO.FILLING),
-                                  className: r()(f.logo, s)
+                                  className: r()(f.logo, s),
                               })
                             : null,
-                        t
-                    ]
-                })
-            ]
+                        t,
+                    ],
+                }),
+            ],
         });
     }
     render() {
         let { className: t } = this.props;
-        return (0, n.jsxs)('div', {
+        return (0, n.jsxs)("div", {
             className: r()(t, f.wrapper),
-            children: [this.renderSplashArt(), this.renderContent()]
+            children: [this.renderSplashArt(), this.renderContent()],
         });
     }
     constructor(...t) {
-        (super(...t),
-            m(this, 'state', {
+        super(...t),
+            m(this, "state", {
                 naturalWidth: 0,
                 naturalHeight: 0,
                 width: 0,
                 height: 0,
                 showWaveAnimation: this.calculateShowWaveAnimation(),
-                splashLoaded: !1
+                splashLoaded: !1,
             }),
-            m(this, 'handleResize', () => {
+            m(this, "handleResize", () => {
                 let { naturalWidth: t, naturalHeight: e } = this.state,
                     i = g(t, e),
                     s = this.calculateShowWaveAnimation();
@@ -167,15 +167,15 @@ class b extends (s = a.PureComponent) {
                             for (var e = 1; e < arguments.length; e++) {
                                 var i = null != arguments[e] ? arguments[e] : {},
                                     s = Object.keys(i);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (s = s.concat(
                                         Object.getOwnPropertySymbols(i).filter(function (t) {
                                             return Object.getOwnPropertyDescriptor(i, t).enumerable;
-                                        })
+                                        }),
                                     )),
                                     s.forEach(function (e) {
                                         m(t, e, i[e]);
-                                    }));
+                                    });
                             }
                             return t;
                         })({}, i)),
@@ -192,17 +192,20 @@ class b extends (s = a.PureComponent) {
                               })(Object(a)).forEach(function (t) {
                                   Object.defineProperty(n, t, Object.getOwnPropertyDescriptor(a, t));
                               }),
-                        n)
+                        n),
                     );
                 } else this.setState({ showWaveAnimation: s });
             }),
-            m(this, 'handleLoad', (t) => {
+            m(this, "handleLoad", (t) => {
                 let { currentTarget: e } = t,
                     { naturalWidth: i, naturalHeight: s } = e,
                     n = g(i, s);
-                (null != n && this.setState(n), this.setState({ splashLoaded: !0 }), window.removeEventListener('resize', this.handleResize), window.addEventListener('resize', this.handleResize));
-            }));
+                null != n && this.setState(n),
+                    this.setState({ splashLoaded: !0 }),
+                    window.removeEventListener("resize", this.handleResize),
+                    window.addEventListener("resize", this.handleResize);
+            });
     }
 }
-m(b, 'defaultProps', { embedded: !1 });
+m(b, "defaultProps", { embedded: !1 });
 let y = 12633 == i.j ? b : null;

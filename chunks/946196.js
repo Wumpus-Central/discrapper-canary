@@ -1,4 +1,4 @@
-(n.d(t, { l: () => d }), n(388685));
+n.d(t, { l: () => d }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(126663),
@@ -19,18 +19,18 @@ let f = (e) => {
             {
                 from: {
                     opacity: 0,
-                    translateY: 20
+                    translateY: 20,
                 },
                 enter: {
                     opacity: 1,
-                    translateY: 0
+                    translateY: 0,
                 },
                 leave: {
                     opacity: 0,
-                    translateY: 80
-                }
+                    translateY: 80,
+                },
             },
-            'respect-motion-settings'
+            "respect-motion-settings",
         ),
         f = (() => {
             switch (t) {
@@ -48,17 +48,17 @@ let f = (e) => {
             : (0, r.jsx)(o.animated.div, {
                   style: e,
                   className: u.floaterWrapper,
-                  children: (0, r.jsxs)('div', {
+                  children: (0, r.jsxs)("div", {
                       className: u.visibleFloater,
                       children: [
                           (0, r.jsx)(s.Text, {
-                              variant: 'text-sm/semibold',
-                              color: 'always-white',
-                              children: f
+                              variant: "text-sm/semibold",
+                              color: "always-white",
+                              children: f,
                           }),
-                          (0, r.jsx)(s.RyX, { onClick: () => a(!0) })
-                      ]
-                  })
-              })
+                          (0, r.jsx)(s.RyX, { onClick: () => a(!0) }),
+                      ],
+                  }),
+              }),
     );
 };

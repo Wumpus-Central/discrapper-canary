@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -24,7 +24,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -52,7 +52,7 @@ function A(e, t) {
             !S({
                 guildId: t.id,
                 role: i,
-                isPreviewingRoles: n
+                isPreviewingRoles: n,
             })
         )
             continue;
@@ -68,7 +68,7 @@ function A(e, t) {
                 S({
                     guildId: t.id,
                     role: e,
-                    isPreviewingRoles: n
+                    isPreviewingRoles: n,
                 }) &&
                 (0, d.yt)(e)
             )
@@ -99,7 +99,7 @@ function C(e, t) {
     return o !== a && (a ? n.add(t) : n.delete(t), !0);
 }
 function R() {
-    ((v = {}), I.clear());
+    (v = {}), I.clear();
 }
 function P(e) {
     let { guild: t } = e;
@@ -129,12 +129,12 @@ function M(e) {
 }
 class k extends (r = i.ZP.Store) {
     initialize() {
-        (this.waitFor(E.Z, g.Z, h.Z, f.Z), l.Zo.subscribe({ location: '1' }, () => R()));
+        this.waitFor(E.Z, g.Z, h.Z, f.Z), l.Zo.subscribe({ location: "1" }, () => R());
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
         let n = v[e];
-        return (null == n && (N(e), (n = v[e])), null != n && n.has(t));
+        return null == n && (N(e), (n = v[e])), null != n && n.has(t);
     }
     isChannelGatedAndVisible(e, t) {
         return null != e && this.isChannelGated(e, t) && !I.has(e);
@@ -143,10 +143,13 @@ class k extends (r = i.ZP.Store) {
         if (null == e) return !1;
         if (this.isChannelGated(e, t)) return !0;
         let n = h.Z.getChannel(t);
-        return !!(null != n && null != n.parent_id && _.Ec.has(null == n ? void 0 : n.type)) && this.isChannelOrThreadParentGated(e, n.parent_id);
+        return (
+            !!(null != n && null != n.parent_id && _.Ec.has(null == n ? void 0 : n.type)) &&
+            this.isChannelOrThreadParentGated(e, n.parent_id)
+        );
     }
 }
-O(k, 'displayName', 'GatedChannelStore');
+O(k, "displayName", "GatedChannelStore");
 let j = new k(o.Z, {
     CONNECTION_OPEN: R,
     OVERLAY_INITIALIZE: R,
@@ -163,5 +166,5 @@ let j = new k(o.Z, {
     CHANNEL_DELETE: D,
     CHANNEL_UPDATES: L,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: x,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: M
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: M,
 });

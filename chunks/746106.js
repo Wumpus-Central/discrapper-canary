@@ -1,4 +1,4 @@
-(n.d(t, { w: () => I }), n(388685));
+n.d(t, { w: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -38,7 +38,7 @@ function I(e) {
             useReducedMotion: M,
             alwaysShowLinkDecorations: k,
             confettiMode: j,
-            highContrastMode: U
+            highContrastMode: U,
         } = (0, s.cj)([g.default, c.Z, E.Z, b.Z, h.Z, m.Z], () => {
             var e;
             return {
@@ -56,19 +56,19 @@ function I(e) {
                 useReducedMotion: c.Z.useReducedMotion,
                 alwaysShowLinkDecorations: c.Z.alwaysShowLinkDecorations,
                 highContrastMode: c.Z.isHighContrastModeEnabled,
-                confettiMode: m.Z.confettiMode
+                confettiMode: m.Z.confettiMode,
             };
         }),
-        G = u.U.useExperiment({ location: 'RootThemeContextProvider' }, { autoTrackExposure: !0 }).enabled,
+        G = u.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
         B = (0, _.Z)(N, __OVERLAY__ || A),
         Z = 0;
     1 !== w && (Z = (0, l.OdO)(Z, l.bgu.REDUCE_SATURATION_ENABLED));
     let F = (0, O.A)(),
-        V = (0, p.Ml)('RootThemeContextProvider'),
-        H = (0, p.CL)('RootThemeContextProvider'),
-        Y = (0, p.VM)('RootThemeContextProvider'),
-        W = f.M.useExperiment({ location: 'RootThemeContextProvider' }).enabled,
-        K = (0, d.Z)('RootThemeContextProvider');
+        V = (0, p.Ml)("RootThemeContextProvider"),
+        H = (0, p.CL)("RootThemeContextProvider"),
+        Y = (0, p.VM)("RootThemeContextProvider"),
+        W = f.M.useExperiment({ location: "RootThemeContextProvider" }).enabled,
+        K = (0, d.Z)("RootThemeContextProvider");
     return (0, r.jsx)(l.wMY, {
         theme: S,
         flags: Z,
@@ -92,14 +92,14 @@ function I(e) {
             hardwareAccelerationEnabled: I,
             highContrastMode: G && U,
             rootClassName: a()({
-                'confetti-mode': j,
-                'refresh-fast-follow-avatars': V && !K,
-                'refresh-fast-follow-guild-bg': H,
-                'refresh-fast-follow-distinct-borders': Y,
-                'client-theme-color-picker': W,
-                'align-chat-input': K
+                "confetti-mode": j,
+                "refresh-fast-follow-avatars": V && !K,
+                "refresh-fast-follow-guild-bg": H,
+                "refresh-fast-follow-distinct-borders": Y,
+                "client-theme-color-picker": W,
+                "align-chat-input": K,
             }),
-            children: n
-        })
+            children: n,
+        }),
     });
 }

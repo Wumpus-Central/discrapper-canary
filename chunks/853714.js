@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => B }), n(388685));
+n.d(t, { Z: () => B }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -37,7 +37,7 @@ function D(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -47,15 +47,15 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 D(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -87,18 +87,19 @@ function L(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < l.length; r++)
+            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
 let M = i.forwardRef((e, t) => {
     var { onHeaderClick: i, guildId: l, guild: a } = e,
-        s = L(e, ['onHeaderClick', 'guildId', 'guild']);
+        s = L(e, ["onHeaderClick", "guildId", "guild"]);
     return null == l
         ? null
         : (0, r.jsx)(
@@ -116,14 +117,14 @@ let M = i.forwardRef((e, t) => {
                       null != i &&
                           null != l &&
                           (0, m.jW)(e, async () => {
-                              let { default: e } = await n.e('50929').then(n.bind(n, 595011));
+                              let { default: e } = await n.e("50929").then(n.bind(n, 595011));
                               return (t) =>
                                   (0, r.jsx)(
                                       e,
                                       k(A({}, t), {
                                           guildId: l,
-                                          user: i
-                                      })
+                                          user: i,
+                                      }),
                                   );
                           });
                   },
@@ -131,11 +132,14 @@ let M = i.forwardRef((e, t) => {
                       let { log: t } = s,
                           i = j.Z.getGuild(l);
                       null != t.options.channel &&
-                          'string' != typeof t.options.channel &&
+                          "string" != typeof t.options.channel &&
                           null != i &&
                           (0, m.jW)(e, async () => {
-                              let { default: e } = await n.e('51529').then(n.bind(n, 228620));
-                              return (n) => (null != t.options.channel ? (0, r.jsx)(e, k(A({}, n), { channel: t.options.channel })) : null);
+                              let { default: e } = await n.e("51529").then(n.bind(n, 228620));
+                              return (n) =>
+                                  null != t.options.channel
+                                      ? (0, r.jsx)(e, k(A({}, n), { channel: t.options.channel }))
+                                      : null;
                           });
                   },
                   onTargetContextMenu: (e) => {
@@ -147,55 +151,66 @@ let M = i.forwardRef((e, t) => {
                                   a = j.Z.getGuild(l);
                               if (null != i && null != a)
                                   return (0, m.jW)(e, async () => {
-                                      let { default: e } = await n.e('51529').then(n.bind(n, 228620));
+                                      let { default: e } = await n.e("51529").then(n.bind(n, 228620));
                                       return (t) => (0, r.jsx)(e, k(A({}, t), { channel: i }));
                                   });
                               return (0, m.jW)(e, async () => {
-                                  let { default: e } = await n.e('5396').then(n.bind(n, 731646));
+                                  let { default: e } = await n.e("5396").then(n.bind(n, 731646));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
                                           k(A({}, n), {
                                               id: t.targetId,
-                                              label: P.intl.string(P.t.rCaznZ)
-                                          })
+                                              label: P.intl.string(P.t.rCaznZ),
+                                          }),
                                       );
                               });
                           case T.KFR.USER:
                               let o = _.default.getUser(t.targetId);
                               if (null != o && null != l)
                                   return (0, m.jW)(e, async () => {
-                                      let { default: e } = await n.e('50929').then(n.bind(n, 595011));
+                                      let { default: e } = await n.e("50929").then(n.bind(n, 595011));
                                       return (t) =>
                                           (0, r.jsx)(
                                               e,
                                               k(A({}, t), {
                                                   guildId: l,
-                                                  user: o
-                                              })
+                                                  user: o,
+                                              }),
                                           );
                                   });
                       }
                       return null;
-                  }
-              })
+                  },
+              }),
           );
 });
 function G(e) {
-    let { logs: t, guildId: n, guild: l, expandedId: a, lastExpandedId: o, scroller: c, setExpandedRef: d, setLastExpandedRef: u, onHeaderClick: m, onContentClick: g } = e,
+    let {
+            logs: t,
+            guildId: n,
+            guild: l,
+            expandedId: a,
+            lastExpandedId: o,
+            scroller: c,
+            setExpandedRef: d,
+            setLastExpandedRef: u,
+            onHeaderClick: m,
+            onContentClick: g,
+        } = e,
         h = i.useRef(c);
     i.useEffect(() => {
         h.current = c;
     }, [c]);
-    let f = (0, p.Z)('audit-log', h);
+    let f = (0, p.Z)("audit-log", h);
     return (0, r.jsx)(s.bG, {
         navigator: f,
         children: (0, r.jsx)(s.SJ, {
             children: (e) => {
                 var { ref: i } = e,
-                    s = L(e, ['ref']);
+                    s = L(e, ["ref"]);
                 return (0, r.jsx)(
-                    'div',
+                    "div",
                     k(A({ ref: i }, s), {
                         className: w.list,
                         children: t.map((e) => {
@@ -214,27 +229,32 @@ function G(e) {
                                     onHeaderClick: m,
                                     onContentClick: g,
                                     log: e,
-                                    expanded: t
+                                    expanded: t,
                                 },
-                                e.id
+                                e.id,
                             );
-                        })
-                    })
+                        }),
+                    }),
                 );
-            }
-        })
+            },
+        }),
     });
 }
-M.displayName = 'AuditLogClickWrap';
+M.displayName = "AuditLogClickWrap";
 class U extends i.PureComponent {
     componentDidMount() {
-        ((0, u.bY)(this.props.guildId), document.addEventListener('click', this.handleOutsideClick));
+        (0, u.bY)(this.props.guildId), document.addEventListener("click", this.handleOutsideClick);
     }
     componentWillUnmount() {
-        document.removeEventListener('click', this.handleOutsideClick);
+        document.removeEventListener("click", this.handleOutsideClick);
     }
     componentDidUpdate(e, t) {
-        (this.state.expandedId !== t.expandedId && this.fixScroll(), !this.props.showLoadMore && this.props.logs.length !== e.logs.length && null != this._scrollerRef && this.isScrollerAtBottom() && (0, u.OY)(this.props.guildId, !0));
+        this.state.expandedId !== t.expandedId && this.fixScroll(),
+            !this.props.showLoadMore &&
+                this.props.logs.length !== e.logs.length &&
+                null != this._scrollerRef &&
+                this.isScrollerAtBottom() &&
+                (0, u.OY)(this.props.guildId, !0);
     }
     isScrollerAtBottom() {
         var e;
@@ -245,7 +265,8 @@ class U extends i.PureComponent {
         if (null == e) return;
         let t = this.getRects(),
             n = this._prevRects;
-        if (null == t.expanded || null == t.lastExpanded || null == n.expanded || t.expanded.top < t.lastExpanded.top) return;
+        if (null == t.expanded || null == t.lastExpanded || null == n.expanded || t.expanded.top < t.lastExpanded.top)
+            return;
         let r = n.expanded.height - t.lastExpanded.height,
             i = e.getScrollerState().scrollTop - r;
         e.scrollTo({ to: i });
@@ -253,7 +274,7 @@ class U extends i.PureComponent {
     getRects() {
         let e = {
             lastExpanded: null,
-            expanded: null
+            expanded: null,
         };
         if (null != this._lastExpandedRef) {
             let t = this._lastExpandedRef;
@@ -276,19 +297,19 @@ class U extends i.PureComponent {
     renderHeader() {
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: w.customHeader,
                     children: [
                         (0, r.jsx)(d.vwX, {
                             tag: d.RB0.H1,
                             className: w.formTitle,
-                            children: P.intl.string(P.t.SPWLyc)
+                            children: P.intl.string(P.t.SPWLyc),
                         }),
-                        this.renderHeaderDropdowns()
-                    ]
+                        this.renderHeaderDropdowns(),
+                    ],
                 }),
-                (0, r.jsx)(d.$i$, { className: w.divider })
-            ]
+                (0, r.jsx)(d.$i$, { className: w.divider }),
+            ],
         });
     }
     renderSpinner() {
@@ -296,12 +317,21 @@ class U extends i.PureComponent {
     }
     renderContent() {
         let { expandedId: e, lastExpandedId: t } = this.state,
-            { logs: i, theme: l, hide: a, isInitialLoading: s, isLoading: o, hasError: c, guildId: u, guild: m } = this.props;
+            {
+                logs: i,
+                theme: l,
+                hide: a,
+                isInitialLoading: s,
+                isLoading: o,
+                hasError: c,
+                guildId: u,
+                guild: m,
+            } = this.props;
         if (a) return (0, r.jsx)(g.Z, {});
         if (o || s) return this.renderSpinner();
         if (0 === i.length) {
             let e = c ? P.intl.string(P.t.tzkaDw) : P.intl.string(P.t.lNuYho),
-                t = c ? P.intl.string(P.t.Ww5Tj4) : P.intl.string(P.t['RHhk+P']);
+                t = c ? P.intl.string(P.t.Ww5Tj4) : P.intl.string(P.t["RHhk+P"]);
             return (0, r.jsxs)(d.ubH, {
                 theme: l,
                 className: w.empty,
@@ -310,14 +340,14 @@ class U extends i.PureComponent {
                         darkSrc: n(28269),
                         lightSrc: n(357115),
                         width: 272,
-                        height: 130
+                        height: 130,
                     }),
                     (0, r.jsx)(d.OZU, {
                         note: e,
                         style: { maxWidth: 300 },
-                        children: t
-                    })
-                ]
+                        children: t,
+                    }),
+                ],
             });
         }
         return (0, r.jsx)(G, {
@@ -330,45 +360,50 @@ class U extends i.PureComponent {
             setLastExpandedRef: this.handleSetLastExpandedRef,
             onHeaderClick: this.handleHeaderClick,
             onContentClick: this.handleContentClick,
-            scroller: this._scrollerRef
+            scroller: this._scrollerRef,
         });
     }
     render() {
         let { isLoadingNextPage: e, hide: t, isLoading: n } = this.props;
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: R.customColumn,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: R.customContainer,
                 children: (0, r.jsx)(d.yWw, {
                     className: a()(R.customScroller, w.scroller),
                     onScroll: this.handleOnScroll,
                     ref: this.handleSetScrollerRef,
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: w.content,
                         ref: this._contentRef,
                         children: (0, r.jsxs)(d.JcV, {
                             containerRef: this._contentRef,
-                            children: [this.renderHeader(), this.renderContent(), this.renderLoadMore(), !e || t || n ? null : this.renderSpinner()]
-                        })
-                    })
-                })
-            })
+                            children: [
+                                this.renderHeader(),
+                                this.renderContent(),
+                                this.renderLoadMore(),
+                                !e || t || n ? null : this.renderSpinner(),
+                            ],
+                        }),
+                    }),
+                }),
+            }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            D(this, '_clickedInside', !1),
-            D(this, '_scrollerRef', null),
-            D(this, '_expandedRef', null),
-            D(this, '_lastExpandedRef', null),
-            D(this, '_prevRects', this.getRects()),
-            D(this, '_contentRef', i.createRef()),
-            D(this, 'state', {
+        super(...e),
+            D(this, "_clickedInside", !1),
+            D(this, "_scrollerRef", null),
+            D(this, "_expandedRef", null),
+            D(this, "_lastExpandedRef", null),
+            D(this, "_prevRects", this.getRects()),
+            D(this, "_contentRef", i.createRef()),
+            D(this, "state", {
                 expandedId: null,
                 lastExpandedId: null,
-                actionFilterQuery: ''
+                actionFilterQuery: "",
             }),
-            D(this, 'renderActionQuickSelectItem', (e, t) => {
+            D(this, "renderActionQuickSelectItem", (e, t) => {
                 var n;
                 let { actionFilter: i } = this.props,
                     l = (0, f.Pw)(e.value),
@@ -385,17 +420,17 @@ class U extends i.PureComponent {
                                     themeOverride: s ? T.BRd.DARK : null,
                                     actionType: l,
                                     targetType: a,
-                                    action: e.value
-                                })
+                                    action: e.value,
+                                }),
                             }),
                             (0, r.jsx)(d.lo1.Label, { children: e.label }),
-                            (0, r.jsx)(d.lo1.Checkmark, {})
-                        ]
+                            (0, r.jsx)(d.lo1.Checkmark, {}),
+                        ],
                     },
-                    null != (n = e.key) ? n : t
+                    null != (n = e.key) ? n : t,
                 );
             }),
-            D(this, 'renderUserQuickSelectItem', (e, t) => {
+            D(this, "renderUserQuickSelectItem", (e, t) => {
                 var n;
                 if (e.user instanceof x.Z) {
                     let t = e.user;
@@ -409,28 +444,28 @@ class U extends i.PureComponent {
                                     children: (0, r.jsx)(d.qEK, {
                                         size: d.EFr.SIZE_32,
                                         src: t.getAvatarURL(this.props.guildId, 32),
-                                        'aria-label': t.username,
-                                        className: w.avatar
-                                    })
+                                        "aria-label": t.username,
+                                        className: w.avatar,
+                                    }),
                                 }),
                                 (0, r.jsxs)(d.lo1.Label, {
                                     children: [
                                         (0, r.jsx)(d.Text, {
-                                            variant: 'text-sm/normal',
-                                            children: y.ZP.getUserTag(t, { mode: 'username' })
+                                            variant: "text-sm/normal",
+                                            children: y.ZP.getUserTag(t, { mode: "username" }),
                                         }),
                                         !t.hasUniqueUsername() &&
                                             (0, r.jsxs)(d.Text, {
-                                                variant: 'text-xs/normal',
+                                                variant: "text-xs/normal",
                                                 className: w.discriminator,
-                                                children: ['#', t.discriminator]
-                                            })
-                                    ]
+                                                children: ["#", t.discriminator],
+                                            }),
+                                    ],
                                 }),
-                                (0, r.jsx)(d.lo1.Checkmark, {})
-                            ]
+                                (0, r.jsx)(d.lo1.Checkmark, {}),
+                            ],
                         },
-                        t.id
+                        t.id,
                     );
                 }
                 return (0, r.jsxs)(
@@ -441,20 +476,20 @@ class U extends i.PureComponent {
                         children: [
                             (0, r.jsx)(d.lo1.Icon, {
                                 children: (0, r.jsx)(d.BFJ, {
-                                    size: 'custom',
-                                    color: 'currentColor',
+                                    size: "custom",
+                                    color: "currentColor",
                                     width: 30,
-                                    height: 30
-                                })
+                                    height: 30,
+                                }),
                             }),
                             (0, r.jsx)(d.lo1.Label, { children: e.label }),
-                            (0, r.jsx)(d.lo1.Checkmark, {})
-                        ]
+                            (0, r.jsx)(d.lo1.Checkmark, {}),
+                        ],
                     },
-                    null != (n = e.key) ? n : t
+                    null != (n = e.key) ? n : t,
                 );
             }),
-            D(this, 'renderHeaderDropdowns', () => {
+            D(this, "renderHeaderDropdowns", () => {
                 var e, t;
                 let { actionFilter: n, hide: i, userIdFilter: l, moderators: s } = this.props;
                 if (i) return null;
@@ -470,16 +505,16 @@ class U extends i.PureComponent {
                     u = {
                         label: P.intl.string(P.t.ZRFdsL),
                         valueLabel: P.intl.string(P.t.an9Ry8),
-                        value: null
+                        value: null,
                     },
                     m = [u, ...s].map((e) =>
                         e instanceof x.Z
                             ? {
                                   label: e.username,
                                   value: e.id,
-                                  user: e
+                                  user: e,
                               }
-                            : e
+                            : e,
                     ),
                     g =
                         null !=
@@ -489,7 +524,7 @@ class U extends i.PureComponent {
                         }))
                             ? t
                             : u;
-                return (0, r.jsxs)('div', {
+                return (0, r.jsxs)("div", {
                     className: w.quickSelect,
                     children: [
                         (0, r.jsx)(d.EFH, {
@@ -499,12 +534,12 @@ class U extends i.PureComponent {
                             renderValue: this.renderUserQuickSelectValue,
                             value: g,
                             onChange: this.handleFilterUserChange,
-                            label: P.intl.string(P.t['hxnY/v']),
+                            label: P.intl.string(P.t["hxnY/v"]),
                             placeholder: P.intl.string(P.t.pYHobG),
                             popoutProps: {
                                 autoInvert: !1,
-                                position: 'bottom'
-                            }
+                                position: "bottom",
+                            },
                         }),
                         (0, r.jsx)(d.EFH, {
                             placeholder: P.intl.string(P.t.I288Z2),
@@ -517,38 +552,38 @@ class U extends i.PureComponent {
                             onChange: this.handleFilterActionChange,
                             popoutProps: {
                                 autoInvert: !1,
-                                position: 'bottom'
-                            }
-                        })
-                    ]
+                                position: "bottom",
+                            },
+                        }),
+                    ],
                 });
             }),
-            D(this, 'renderLoadMore', () => {
+            D(this, "renderLoadMore", () => {
                 let { showLoadMore: e, hasOlderLogs: t, hide: n } = this.props;
                 if (e && t && !n)
-                    return (0, r.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
+                    return (0, r.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
                         className: w.loadMore,
                         children: (0, r.jsx)(d.zxk, {
-                            variant: 'secondary',
-                            text: P.intl.string(P.t['Q/LSXl']),
-                            onClick: this.handleFetchNextPage
-                        })
+                            variant: "secondary",
+                            text: P.intl.string(P.t["Q/LSXl"]),
+                            onClick: this.handleFetchNextPage,
+                        }),
                     });
             }),
-            D(this, 'handleFilterActionChange', (e) => {
+            D(this, "handleFilterActionChange", (e) => {
                 (0, u.ZX)(e, this.props.guildId);
             }),
-            D(this, 'handleFilterUserChange', (e) => {
+            D(this, "handleFilterUserChange", (e) => {
                 (0, u.uo)(e, this.props.guildId);
             }),
-            D(this, 'handleHeaderClick', (e) => {
+            D(this, "handleHeaderClick", (e) => {
                 let { expandedId: t } = this.state;
                 t !== e.id
                     ? ((this._clickedInside = !0),
                       this.setState({
                           expandedId: e.id,
-                          lastExpandedId: t
+                          lastExpandedId: t,
                       }),
                       (this._prevRects = this.getRects()))
                     : ((this._expandedRef = null),
@@ -556,44 +591,44 @@ class U extends i.PureComponent {
                       null != t && (this._prevRects = this.getRects()),
                       this.setState({
                           expandedId: null,
-                          lastExpandedId: null
+                          lastExpandedId: null,
                       }));
             }),
-            D(this, 'handleOutsideClick', () => {
+            D(this, "handleOutsideClick", () => {
                 null == this.state.expandedId || this._clickedInside
                     ? null != this.state.expandedId && (this._clickedInside = !1)
                     : ((this._expandedRef = null),
                       (this._lastExpandedRef = null),
                       this.setState({
                           expandedId: null,
-                          lastExpandedId: null
+                          lastExpandedId: null,
                       }),
                       (this._prevRects = this.getRects()));
             }),
-            D(this, 'handleContentClick', (e) => {
-                ((this._clickedInside = !0), e.stopPropagation());
+            D(this, "handleContentClick", (e) => {
+                (this._clickedInside = !0), e.stopPropagation();
             }),
-            D(this, 'handleSetScrollerRef', (e) => {
+            D(this, "handleSetScrollerRef", (e) => {
                 this._scrollerRef = e;
             }),
-            D(this, 'handleOnScroll', () => {
+            D(this, "handleOnScroll", () => {
                 this.isScrollerAtBottom() && this.handleFetchNextPage();
             }),
-            D(this, 'handleFetchNextPage', () => {
+            D(this, "handleFetchNextPage", () => {
                 (0, u.OY)(this.props.guildId);
             }),
-            D(this, 'handleActionFilterQueryChange', (e) => {
+            D(this, "handleActionFilterQueryChange", (e) => {
                 this.setState({ actionFilterQuery: e });
             }),
-            D(this, 'handleActionFilterQueryClear', () => {
-                this.setState({ actionFilterQuery: '' });
+            D(this, "handleActionFilterQueryClear", () => {
+                this.setState({ actionFilterQuery: "" });
             }),
-            D(this, 'handleSetExpandedRef', (e) => {
+            D(this, "handleSetExpandedRef", (e) => {
                 this._expandedRef = e;
             }),
-            D(this, 'handleSetLastExpandedRef', (e) => {
+            D(this, "handleSetLastExpandedRef", (e) => {
                 this._lastExpandedRef = e;
-            }));
+            });
     }
 }
 let B = c.ZP.connectStores([C.Z, N.Z, j.Z, h.Z, v.Z, _.default], () => {
@@ -614,6 +649,6 @@ let B = c.ZP.connectStores([C.Z, N.Z, j.Z, h.Z, v.Z, _.default], () => {
         actionFilter: C.Z.actionFilter,
         userIdFilter: C.Z.userIdFilter,
         theme: h.Z.theme,
-        hide: v.Z.enabled
+        hide: v.Z.enabled,
     };
 })(U);

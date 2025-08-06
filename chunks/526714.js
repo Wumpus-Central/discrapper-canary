@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -60,13 +60,24 @@ function p(e, t) {
     );
 }
 function h(e) {
-    let { color: t = 'default', label: n, control: o, disabled: d, isFocused: _, showDefaultFocus: h = !1, menuItemProps: m, onClose: g } = e,
+    let {
+            color: t = "default",
+            label: n,
+            control: o,
+            disabled: d,
+            isFocused: _,
+            showDefaultFocus: h = !1,
+            menuItemProps: m,
+            onClose: g,
+        } = e,
         { onInteraction: E } = i.useContext(s.p),
         b = i.useRef(null),
         y = i.useRef(null);
     i.useLayoutEffect(() => {
         var e, t, n;
-        _ ? ((0, l.F)(b), null == (e = y.current) || e.focus()) : null == (n = y.current) || null == (t = n.blur) || t.call(n);
+        _
+            ? ((0, l.F)(b), null == (e = y.current) || e.focus())
+            : null == (n = y.current) || null == (t = n.blur) || t.call(n);
     }, [_]);
     let O = i.useCallback(() => {
             var e, t;
@@ -81,13 +92,13 @@ function h(e) {
                     (e) => {
                         null == E || E({ type: null != e ? e : s.U.DEFAULT });
                     },
-                    [E]
-                )
+                    [E],
+                ),
             },
-            y
+            y,
         );
     return (0, r.jsxs)(
-        'div',
+        "div",
         p(
             f(
                 {
@@ -95,26 +106,26 @@ function h(e) {
                     className: a()(u.item, c._[t], {
                         [u.disabled]: d,
                         [u.focused]: h && _,
-                        [u.hideInteraction]: !h
+                        [u.hideInteraction]: !h,
                     }),
-                    'aria-disabled': d
+                    "aria-disabled": d,
                 },
-                m
+                m,
             ),
             {
                 children: [
                     null != n
-                        ? (0, r.jsx)('div', {
+                        ? (0, r.jsx)("div", {
                               className: u.labelContainer,
-                              children: (0, r.jsx)('div', {
+                              children: (0, r.jsx)("div", {
                                   className: u.label,
-                                  children: n
-                              })
+                                  children: n,
+                              }),
                           })
                         : null,
-                    v
-                ]
-            }
-        )
+                    v,
+                ],
+            },
+        ),
     );
 }

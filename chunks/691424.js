@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => z }), n(388685));
+n.d(t, { Z: () => z }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -42,7 +42,7 @@ function G(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -52,15 +52,15 @@ function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 G(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -68,11 +68,11 @@ function Z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -88,7 +88,7 @@ function F(e, t) {
     );
 }
 function V(e) {
-    let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
+    let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, o) {
             let { key: a, channelId: s, messageId: l } = o;
@@ -100,23 +100,23 @@ function V(e) {
                           tooltipPosition: t,
                           enableClick: n,
                           channelId: s,
-                          messageId: l
+                          messageId: l,
                       },
-                      a
+                      a,
                   )
-                : (0, r.jsx)('span', { children: e.surrogate }, a);
-        }
+                : (0, r.jsx)("span", { children: e.surrogate }, a);
+        },
     };
 }
 function H(e) {
-    let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
+    let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, o) {
             let { key: a, guildId: s, channelId: l, messageId: c, isInteracting: u } = o,
                 d = _.ZP.getDisambiguatedEmojiContext(s).getById(e.emojiId);
             if (null != d) {
                 let t = d.require_colons;
-                e = F(B({}, e), { name: t ? ':'.concat(d.name, ':') : d.name });
+                e = F(B({}, e), { name: t ? ":".concat(d.name, ":") : d.name });
             }
             return (0, r.jsx)(
                 y.Y,
@@ -126,11 +126,11 @@ function H(e) {
                     tooltipPosition: t,
                     enableClick: n,
                     channelId: l,
-                    messageId: c
+                    messageId: c,
                 },
-                a
+                a,
             );
-        }
+        },
     };
 }
 function Y(e, t, n) {
@@ -140,35 +140,35 @@ function Y(e, t, n) {
         r.features.has(M.oNc.COMMUNITY) && (0, O.uL)(M.Z5c.CHANNEL(e, t));
     };
     switch (t) {
-        case 'home':
-        case 'guide':
+        case "home":
+        case "guide":
             i(k.oC.GUILD_HOME);
             break;
-        case 'browse':
+        case "browse":
             i(k.oC.CHANNEL_BROWSER);
             break;
-        case 'customize':
+        case "customize":
             i(k.oC.CUSTOMIZE_COMMUNITY);
             break;
-        case 'linked-roles':
+        case "linked-roles":
             if (null != n) {
                 let t = v.ZP.getSelfMember(e);
                 if (null == t) return null;
                 let r = I.Z.getRole(e, n);
                 null == r || t.roles.includes(r.id)
                     ? c.Z.dispatch({
-                          type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
-                          guildId: e
+                          type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW",
+                          guildId: e,
                       })
                     : c.Z.dispatch({
-                          type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
+                          type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW",
                           guildId: e,
-                          role: r
+                          role: r,
                       });
             } else
                 c.Z.dispatch({
-                    type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
-                    guildId: e
+                    type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW",
+                    guildId: e,
                 });
     }
 }
@@ -179,20 +179,20 @@ function W(e) {
             (0, S.JG)(
                 t,
                 () => o(!0),
-                () => o(!1)
+                () => o(!1),
             );
         };
     return (0, r.jsx)(l.P3F, {
         onClick: a,
         children: n
             ? (0, r.jsx)(l.dz2, {
-                  size: 'xs',
-                  color: 'currentColor'
+                  size: "xs",
+                  color: "currentColor",
               })
             : (0, r.jsx)(l.TIy, {
-                  size: 'xs',
-                  color: 'currentColor'
-              })
+                  size: "xs",
+                  color: "currentColor",
+              }),
     });
 }
 n(484944);
@@ -200,55 +200,58 @@ let K = {
     blockQuote: {
         react: (e, t, n) =>
             (0, r.jsxs)(
-                'div',
+                "div",
                 {
                     className: j.blockquoteContainer,
-                    children: [(0, r.jsx)('div', { className: j.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
+                    children: [
+                        (0, r.jsx)("div", { className: j.blockquoteDivider }),
+                        (0, r.jsx)("blockquote", { children: t(e.content, n) }),
+                    ],
                 },
-                n.key
-            )
+                n.key,
+            ),
     },
-    s: { react: (e, t, n) => (0, r.jsx)('s', { children: t(e.content, n) }, n.key) },
+    s: { react: (e, t, n) => (0, r.jsx)("s", { children: t(e.content, n) }, n.key) },
     highlight: {
         react: (e, t, n) =>
             (0, r.jsx)(
-                'span',
+                "span",
                 {
-                    className: 'highlight',
-                    children: e.content
+                    className: "highlight",
+                    children: e.content,
                 },
-                n.key
-            )
+                n.key,
+            ),
     },
-    paragraph: { react: (e, t, n) => (0, r.jsx)('p', { children: t(e.content, n) }, n.key) },
+    paragraph: { react: (e, t, n) => (0, r.jsx)("p", { children: t(e.content, n) }, n.key) },
     inlineCode: {
         react: (e, t, n) =>
             (0, r.jsx)(
-                'code',
+                "code",
                 {
-                    className: 'inline',
-                    children: (0, A.S)(e, t, n)
+                    className: "inline",
+                    children: (0, A.S)(e, t, n),
                 },
-                n.key
-            )
+                n.key,
+            ),
     },
     codeBlock: {
         react(e, t, i) {
             let o = () =>
-                (0, r.jsx)('code', {
-                    className: a()(U.scrollbarGhostHairline, 'hljs'),
-                    children: (0, A.S)(e, t, i)
+                (0, r.jsx)("code", {
+                    className: a()(U.scrollbarGhostHairline, "hljs"),
+                    children: (0, A.S)(e, t, i),
                 });
             return (0, r.jsx)(
-                'pre',
+                "pre",
                 {
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: j.codeContainer,
                         children: [
                             S.wS
-                                ? (0, r.jsx)('div', {
+                                ? (0, r.jsx)("div", {
                                       className: j.codeActions,
-                                      children: (0, r.jsx)(W, { text: e.content })
+                                      children: (0, r.jsx)(W, { text: e.content }),
                                   })
                                 : null,
                             (0, r.jsx)(d.GI, {
@@ -261,21 +264,26 @@ let K = {
                                         let n = t.highlight(e.lang, e.content, !0);
                                         return null == n
                                             ? o()
-                                            : (0, r.jsx)('code', {
-                                                  className: a()(U.scrollbarGhostHairline, 'hljs', n.language),
-                                                  dangerouslySetInnerHTML: { __html: n.value }
+                                            : (0, r.jsx)("code", {
+                                                  className: a()(U.scrollbarGhostHairline, "hljs", n.language),
+                                                  dangerouslySetInnerHTML: { __html: n.value },
                                               });
                                     }
-                                }
-                            })
-                        ]
-                    })
+                                },
+                            }),
+                        ],
+                    }),
                 },
-                i.key
+                i.key,
             );
-        }
+        },
     },
-    text: { react: (e, t, n) => ('string' == typeof e.content ? (0, r.jsx)('span', { children: e.content }, n.key) : (0, r.jsx)('span', { children: t(e.content, n) }, n.key)) },
+    text: {
+        react: (e, t, n) =>
+            "string" == typeof e.content
+                ? (0, r.jsx)("span", { children: e.content }, n.key)
+                : (0, r.jsx)("span", { children: t(e.content, n) }, n.key),
+    },
     spoiler: {
         react: (e, t, n) =>
             (0, r.jsx)(
@@ -283,11 +291,12 @@ let K = {
                 {
                     type: f.ZP.Types.TEXT,
                     inline: n.formatInline,
-                    renderTextElement: (e, t) => (null == e || e.type !== u.Z || t ? e : i.cloneElement(e, { tabIndex: -1 })),
-                    children: () => t(e.content, n)
+                    renderTextElement: (e, t) =>
+                        null == e || e.type !== u.Z || t ? e : i.cloneElement(e, { tabIndex: -1 }),
+                    children: () => t(e.content, n),
                 },
-                n.key
-            )
+                n.key,
+            ),
     },
     soundboard: {
         react: (e, t, n) =>
@@ -296,8 +305,8 @@ let K = {
                 messageId: e.messageId,
                 soundId: e.soundId,
                 jumbo: e.jumboable,
-                messageSounds: n.soundboardSounds
-            })
+                messageSounds: n.soundboardSounds,
+            }),
     },
     staticRouteLink: {
         react(e, t, n) {
@@ -308,43 +317,49 @@ let K = {
                 ? (0, r.jsxs)(
                       m.Z,
                       {
-                          role: 'link',
+                          role: "link",
                           onClick: i,
-                          className: 'channelMention',
+                          className: "channelMention",
                           iconType: e.id,
-                          children: [t(e.mainContent, n), null != e.itemContent ? (0, r.jsx)(g.Z, {}) : null, null != e.itemContent ? t(e.itemContent, n) : null]
+                          children: [
+                              t(e.mainContent, n),
+                              null != e.itemContent ? (0, r.jsx)(g.Z, {}) : null,
+                              null != e.itemContent ? t(e.itemContent, n) : null,
+                          ],
                       },
-                      n.key
+                      n.key,
                   )
                 : null;
-        }
+        },
     },
     timestamp: { react: (e, t, n) => (0, r.jsx)(N.Z, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
-            let i = e.ordered ? 'ol' : 'ul',
+            let i = e.ordered ? "ol" : "ul",
                 o = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
-            return (0, s.reactElement)(i, ''.concat(n.key), {
+            return (0, s.reactElement)(i, "".concat(n.key), {
                 start: e.start,
                 className: n.formatInline ? j.inlineFormat : null,
-                style: { '--totalCharacters': o },
+                style: { "--totalCharacters": o },
                 children: e.items.map((e, i) => {
-                    let o = (0, s.reactElement)('span', ''.concat(n.key, '-').concat(i, '-innerSpan'), { children: t(e, n) });
-                    return (0, s.reactElement)('li', ''.concat(n.key, '-').concat(i) + i, {
-                        children: [o, (0, r.jsx)(l.nn4, { children: ',' }, 'screen-reader-pause')]
+                    let o = (0, s.reactElement)("span", "".concat(n.key, "-").concat(i, "-innerSpan"), {
+                        children: t(e, n),
                     });
-                })
+                    return (0, s.reactElement)("li", "".concat(n.key, "-").concat(i) + i, {
+                        children: [o, (0, r.jsx)(l.nn4, { children: "," }, "screen-reader-pause")],
+                    });
+                }),
             });
-        }
+        },
     },
     heading: {
         react: (e, t, n) => {
-            let i = (0, s.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
-            return (0, s.reactElement)('h' + e.level, (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
-                children: [i, (0, r.jsx)(l.nn4, { children: ',' }, 'screen-reader-pause')],
-                className: n.formatInline ? j.inlineFormat : null
+            let i = (0, s.reactElement)("span", "".concat(n.key, "-innerSpan"), { children: t(e.content, n) });
+            return (0, s.reactElement)("h" + e.level, (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
+                children: [i, (0, r.jsx)(l.nn4, { children: "," }, "screen-reader-pause")],
+                className: n.formatInline ? j.inlineFormat : null,
             });
-        }
+        },
     },
     guild: {
         react: (e, t, n) => {
@@ -353,11 +368,11 @@ let K = {
                 h.Z,
                 {
                     guild: i,
-                    children: (0, A.S)(e, t, n)
+                    children: (0, A.S)(e, t, n),
                 },
-                n.key
+                n.key,
             );
-        }
+        },
     },
     channel: {
         react: (e, t, n) =>
@@ -365,22 +380,27 @@ let K = {
                 p.Z,
                 {
                     iconType: e.iconType,
-                    children: (0, A.S)(e, t, n)
+                    children: (0, A.S)(e, t, n),
                 },
-                n.key
-            )
+                n.key,
+            ),
     },
     message: { react: (e, t, n) => (0, r.jsx)(E.Z, {}, n.key) },
     subtext: {
         react: (e, t, n) => {
-            let r = (0, s.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
-            return (0, s.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
+            let r = (0, s.reactElement)("span", "".concat(n.key, "-innerSpan"), { children: t(e.content, n) });
+            return (0, s.reactElement)("small", (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? j.inlineFormat : null
+                className: n.formatInline ? j.inlineFormat : null,
             });
-        }
+        },
     },
-    silentPrefix: { react: (e, t, n) => ('string' == typeof e.content ? (0, r.jsx)('span', { children: e.content }, n.key) : (0, r.jsx)('span', { children: t(e.content, n) }, n.key)) }
+    silentPrefix: {
+        react: (e, t, n) =>
+            "string" == typeof e.content
+                ? (0, r.jsx)("span", { children: e.content }, n.key)
+                : (0, r.jsx)("span", { children: t(e.content, n) }, n.key),
+    },
 };
 function z(e) {
     return F(B({}, K), {
@@ -392,6 +412,6 @@ function z(e) {
         commandMention: (0, P.ZP)(e),
         attachmentLink: (0, C.Z)(e),
         shopLink: (0, x.Z)(e),
-        gameMention: D.Z
+        gameMention: D.Z,
     });
 }

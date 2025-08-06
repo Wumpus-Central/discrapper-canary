@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(953529));
+n.d(t, { Z: () => m }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -10,70 +10,70 @@ var i = n(481060),
     d = n(174618);
 function u(e) {
     let { imageSrc: t, description: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: s.howItWorksCard,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: s.howItWorksImageContainer,
-                children: (0, r.jsx)('img', {
+                children: (0, r.jsx)("img", {
                     className: s.howItWorksImage,
                     src: t,
-                    alt: ''
-                })
+                    alt: "",
+                }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: s.howItWorksDescription,
                 children: (0, r.jsx)(i.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'header-primary',
-                    children: n
-                })
-            })
-        ]
+                    variant: "text-sm/normal",
+                    color: "header-primary",
+                    children: n,
+                }),
+            }),
+        ],
     });
 }
 function m() {
     let e = [
         {
             imageSrc: d,
-            description: a.intl.string(a.t.lT0ZNT)
+            description: a.intl.string(a.t.lT0ZNT),
         },
         {
             imageSrc: o,
-            description: a.intl.string(a.t.ihN2WV)
+            description: a.intl.string(a.t.ihN2WV),
         },
         {
             imageSrc: c,
-            description: a.intl.string(a.t.c8krDQ)
-        }
+            description: a.intl.string(a.t.c8krDQ),
+        },
     ];
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(i.X6q, {
-                variant: 'heading-lg/semibold',
-                color: 'header-primary',
-                children: a.intl.string(a.t.R9rNIi)
+                variant: "heading-lg/semibold",
+                color: "header-primary",
+                children: a.intl.string(a.t.R9rNIi),
             }),
             (0, r.jsx)(i.LZC, { size: 24 }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: s.howItWorksContainer,
                 children: e.map((e) =>
                     (0, r.jsx)(
                         u,
                         {
                             imageSrc: e.imageSrc,
-                            description: e.description
+                            description: e.description,
                         },
-                        e.imageSrc
-                    )
-                )
+                        e.imageSrc,
+                    ),
+                ),
             }),
             (0, r.jsx)(i.LZC, { size: 24 }),
             (0, r.jsx)(i.Text, {
-                variant: 'text-sm/normal',
-                color: 'header-secondary',
-                children: a.intl.format(a.t.oxW30N, { creatorPortalUrl: l.C5 })
-            })
-        ]
+                variant: "text-sm/normal",
+                color: "header-secondary",
+                children: a.intl.format(a.t.oxW30N, { creatorPortalUrl: l.C5 }),
+            }),
+        ],
     });
 }

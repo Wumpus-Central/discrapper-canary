@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -16,7 +16,7 @@ let p = (e) => {
         b = r.useCallback(() => {
             (0, u.openUserProfileModal)({
                 userId: t,
-                sourceAnalyticsLocations: f
+                sourceAnalyticsLocations: f,
             });
         }, [t, f]),
         x = () => {
@@ -32,7 +32,7 @@ let p = (e) => {
             return (0, i.jsx)(l.tE, {
                 offset: {
                     left: -8,
-                    right: -8
+                    right: -8,
                 },
                 children: (0, i.jsx)(
                     o.Z.div,
@@ -40,24 +40,24 @@ let p = (e) => {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    ((i = n[t]),
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = i));
-                                }));
+                                            : (e[t] = i);
+                                });
                         }
                         return e;
                     })(
@@ -65,13 +65,13 @@ let p = (e) => {
                             style: { opacity: 1 },
                             className: a()(m.rowItem, p, {
                                 [m.last]: s,
-                                [m.active]: g
+                                [m.active]: g,
                             }),
                             onMouseEnter: x,
                             onMouseLeave: _,
-                            onClick: b
+                            onClick: b,
                         },
-                        e
+                        e,
                     )),
                     (r = r = { children: n(g) }),
                     Object.getOwnPropertyDescriptors
@@ -86,9 +86,9 @@ let p = (e) => {
                           })(Object(r)).forEach(function (e) {
                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
-                    t)
-                )
+                    t),
+                ),
             });
-        }
+        },
     });
 };

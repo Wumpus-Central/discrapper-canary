@@ -5,12 +5,12 @@ var i = n(392711),
     a = n(388032);
 let r = i.range(1, 11).map((e) => ({
         value: 60 * e,
-        label: () => a.intl.formatToPlainString(a.t.iXLF9f, { minutes: e })
+        label: () => a.intl.formatToPlainString(a.t.iXLF9f, { minutes: e }),
     })),
-    s = (0, o.Em)('MobileNotificationDelay', {
-        useTitle: () => a.intl.string(a.t['8rHeOj']),
-        useSubtitle: () => a.intl.string(a.t['eJE6+P']),
+    s = (0, o.Em)("MobileNotificationDelay", {
+        useTitle: () => a.intl.string(a.t["8rHeOj"]),
+        useSubtitle: () => a.intl.string(a.t["eJE6+P"]),
         options: r,
         useValue: l.CM.useSetting,
-        setValue: l.CM.updateSetting
+        setValue: l.CM.updateSetting,
     });

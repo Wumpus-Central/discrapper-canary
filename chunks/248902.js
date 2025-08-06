@@ -11,9 +11,9 @@ function d(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(i.Z.SlideHeader, {
-                subtitle: a.intl.string(a.t['XQaT+/']),
+                subtitle: a.intl.string(a.t["XQaT+/"]),
                 onClose: d,
-                headerAlignStart: c
+                headerAlignStart: c,
             }),
             (0, l.jsx)(i.Z.SlideContent, {
                 children: t.methods.map((e) =>
@@ -27,22 +27,22 @@ function d(e) {
                             children: [
                                 (0, l.jsx)(r.Text, {
                                     className: o.listItemText,
-                                    variant: 'text-md/semibold',
-                                    children: s.P[e.type]
+                                    variant: "text-md/semibold",
+                                    children: s.P[e.type],
                                 }),
                                 (0, l.jsx)(r.Fbu, {
-                                    size: 'custom',
-                                    color: 'currentColor',
+                                    size: "custom",
+                                    color: "currentColor",
                                     width: 20,
                                     height: 20,
-                                    className: o.listItemArrow
-                                })
-                            ]
+                                    className: o.listItemArrow,
+                                }),
+                            ],
                         },
-                        e.type
-                    )
-                )
-            })
-        ]
+                        e.type,
+                    ),
+                ),
+            }),
+        ],
     });
 }

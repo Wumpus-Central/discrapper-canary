@@ -4,7 +4,7 @@ e.exports = !n(621523)(function () {
         Object.defineProperty({}, 1, {
             get: function () {
                 return 7;
-            }
+            },
         })[1]
     );
 });

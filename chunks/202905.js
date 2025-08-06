@@ -17,10 +17,10 @@ var r = n(255367),
     b = n(388032),
     j = n(870751);
 let v = {
-    id: '0',
-    name: '',
-    description: '',
-    icon: '',
+    id: "0",
+    name: "",
+    description: "",
+    icon: "",
     customBanner: null,
     onlineCount: 0,
     memberCount: 0,
@@ -33,13 +33,13 @@ let v = {
     badge: null,
     badgeHash: null,
     badgeColorPrimary: null,
-    badgeColorSecondary: null
+    badgeColorSecondary: null,
 };
 function _(e) {
     let { pendingFields: t } = e,
         { guild: n, guildProfile: _ } = (0, s.cj)([p.Z], () => ({
             guild: p.Z.getGuild(),
-            guildProfile: p.Z.getGuildProfile()
+            guildProfile: p.Z.getGuildProfile(),
         })),
         O = null == n ? void 0 : n.id,
         y = (0, s.e7)([d.Z], () => d.Z.get(O)),
@@ -51,7 +51,10 @@ function _(e) {
     }, [O, C]);
     let E = i.useMemo(() => (null == n || null == _ ? v : _), [n, _]),
         S = i.useCallback(() => {
-            (null == n ? void 0 : n.id) != null && (I ? g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC }) : g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
+            (null == n ? void 0 : n.id) != null &&
+                (I
+                    ? g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC })
+                    : g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
         }, [null == n ? void 0 : n.id, I]),
         T = i.useCallback(() => {
             g.Z.setSection(x.pNK.PROFILE);
@@ -61,33 +64,33 @@ function _(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.X6, {
-                variant: 'heading-md/semibold',
-                color: 'header-primary',
-                children: b.intl.string(b.t.AHJddH)
+                variant: "heading-md/semibold",
+                color: "header-primary",
+                children: b.intl.string(b.t.AHJddH),
             }),
             (0, r.jsx)(a.xv, {
-                tag: 'p',
-                variant: 'text-sm/medium',
-                color: 'text-secondary',
+                tag: "p",
+                variant: "text-sm/medium",
+                color: "text-secondary",
                 className: j.applicationBody,
-                children: b.intl.string(b.t.Z7TCtb)
+                children: b.intl.string(b.t.Z7TCtb),
             }),
             (0, r.jsx)(f.c, { guildId: n.id }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: j.form,
                 children:
                     null != P
                         ? (0, r.jsx)(h.y, {
                               guild: n,
-                              formFields: P
+                              formFields: P,
                           })
-                        : (0, r.jsx)(c.$jN, {})
+                        : (0, r.jsx)(c.$jN, {}),
             }),
-            (0, r.jsx)('div', { className: j.divider }),
+            (0, r.jsx)("div", { className: j.divider }),
             (0, r.jsxs)(c.hjN, {
                 className: j.twoColumnContainer,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: j.column,
                         children: [
                             (0, r.jsx)(c.j7V, {
@@ -95,37 +98,37 @@ function _(e) {
                                 value: I,
                                 hideBorder: !0,
                                 disabled: N,
-                                children: b.intl.string(b.t['N/0239'])
+                                children: b.intl.string(b.t["N/0239"]),
                             }),
                             (0, r.jsx)(a.xv, {
-                                variant: 'text-sm/normal',
-                                color: 'text-secondary',
-                                children: b.intl.string(b.t['3TSZYG'])
+                                variant: "text-sm/normal",
+                                color: "text-secondary",
+                                children: b.intl.string(b.t["3TSZYG"]),
                             }),
                             N &&
                                 (0, r.jsx)(a.xv, {
-                                    variant: 'text-xs/normal',
-                                    color: 'text-muted',
+                                    variant: "text-xs/normal",
+                                    color: "text-muted",
                                     children: b.intl.format(b.t.Bk0VOj, {
                                         profileLink: (e, t) =>
                                             (0, r.jsx)(
                                                 c.eee,
                                                 {
                                                     onClick: T,
-                                                    children: e
+                                                    children: e,
                                                 },
-                                                t
-                                            )
-                                    })
-                                })
-                        ]
+                                                t,
+                                            ),
+                                    }),
+                                }),
+                        ],
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: j.column,
-                        children: (0, r.jsxs)('div', {
+                        children: (0, r.jsxs)("div", {
                             className: j.previewWrapper,
                             children: [
-                                (0, r.jsx)('div', { className: j.gradient }),
+                                (0, r.jsx)("div", { className: j.gradient }),
                                 (0, r.jsx)(m.ZP, {
                                     className: j.preview,
                                     profile: E,
@@ -133,15 +136,15 @@ function _(e) {
                                         className: j.previewButton,
                                         size: o.zx.Sizes.SMALL,
                                         fullWidth: !0,
-                                        children: b.intl.string(b.t['7XdMW1'])
+                                        children: b.intl.string(b.t["7XdMW1"]),
                                     }),
-                                    disableGuildNameClick: !0
-                                })
-                            ]
-                        })
-                    })
-                ]
-            })
-        ]
+                                    disableGuildNameClick: !0,
+                                }),
+                            ],
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

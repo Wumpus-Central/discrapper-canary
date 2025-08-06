@@ -11,10 +11,10 @@ function s(e) {
               className: a.link,
               href: n,
               onClick: (e) => {
-                  (e.stopPropagation(), o.q({ href: n }, e));
+                  e.stopPropagation(), o.q({ href: n }, e);
               },
-              target: '_blank',
-              rel: 'noopener noreferrer',
-              children: t
+              target: "_blank",
+              rel: "noopener noreferrer",
+              children: t,
           });
 }

@@ -5,29 +5,33 @@ var n = r(73800),
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
+                (n.enumerable = n.enumerable || !1),
+                    (n.configurable = !0),
+                    "value" in n && (n.writable = !0),
+                    Object.defineProperty(e, n.key, n);
             }
         }
         return function (t, r, n) {
-            return (r && e(t.prototype, r), n && e(t, n), t);
+            return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
     i = [38, 40],
     l = 1;
 let s = (function (e) {
-    if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function, not ' + typeof e);
+    if ("function" != typeof e && null !== e)
+        throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t(e) {
-        if (!(this instanceof t)) throw TypeError('Cannot call a class as a function');
+        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         var r = (function (e, t) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
+            return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (
             (r.handleBlur = function () {
                 r.state.blurValue &&
                     r.setState({
                         value: r.state.blurValue,
-                        blurValue: null
+                        blurValue: null,
                     });
             }),
             (r.handleChange = function (e) {
@@ -35,7 +39,7 @@ let s = (function (e) {
             }),
             (r.handleKeyDown = function (e) {
                 var t,
-                    n = Number(String(e.target.value).replace(/%/g, ''));
+                    n = Number(String(e.target.value).replace(/%/g, ""));
                 if (!isNaN(n) && ((t = e.keyCode), i.indexOf(t) > -1)) {
                     var o = r.getArrowOffset(),
                         a = 38 === e.keyCode ? n + o : n - o;
@@ -45,23 +49,31 @@ let s = (function (e) {
             (r.handleDrag = function (e) {
                 if (r.props.dragLabel) {
                     var t = Math.round(r.props.value + e.movementX);
-                    t >= 0 && t <= r.props.dragMax && r.props.onChange && r.props.onChange(r.getValueObjectWithLabel(t), e);
+                    t >= 0 &&
+                        t <= r.props.dragMax &&
+                        r.props.onChange &&
+                        r.props.onChange(r.getValueObjectWithLabel(t), e);
                 }
             }),
             (r.handleMouseDown = function (e) {
-                r.props.dragLabel && (e.preventDefault(), r.handleDrag(e), window.addEventListener('mousemove', r.handleDrag), window.addEventListener('mouseup', r.handleMouseUp));
+                r.props.dragLabel &&
+                    (e.preventDefault(),
+                    r.handleDrag(e),
+                    window.addEventListener("mousemove", r.handleDrag),
+                    window.addEventListener("mouseup", r.handleMouseUp));
             }),
             (r.handleMouseUp = function () {
                 r.unbindEventListeners();
             }),
             (r.unbindEventListeners = function () {
-                (window.removeEventListener('mousemove', r.handleDrag), window.removeEventListener('mouseup', r.handleMouseUp));
+                window.removeEventListener("mousemove", r.handleDrag),
+                    window.removeEventListener("mouseup", r.handleMouseUp);
             }),
             (r.state = {
                 value: String(e.value).toUpperCase(),
-                blurValue: String(e.value).toUpperCase()
+                blurValue: String(e.value).toUpperCase(),
             }),
-            (r.inputId = 'rc-editable-input-' + l++),
+            (r.inputId = "rc-editable-input-" + l++),
             r
         );
     }
@@ -71,13 +83,13 @@ let s = (function (e) {
                 value: t,
                 enumerable: !1,
                 writable: !0,
-                configurable: !0
-            }
+                configurable: !0,
+            },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
         a(t, [
             {
-                key: 'componentDidUpdate',
+                key: "componentDidUpdate",
                 value: function (e, t) {
                     this.props.value !== this.state.value &&
                         (e.value !== this.props.value || t.value !== this.state.value) &&
@@ -85,18 +97,18 @@ let s = (function (e) {
                             ? this.setState({ blurValue: String(this.props.value).toUpperCase() })
                             : this.setState({
                                   value: String(this.props.value).toUpperCase(),
-                                  blurValue: !this.state.blurValue && String(this.props.value).toUpperCase()
+                                  blurValue: !this.state.blurValue && String(this.props.value).toUpperCase(),
                               }));
-                }
+                },
             },
             {
-                key: 'componentWillUnmount',
+                key: "componentWillUnmount",
                 value: function () {
                     this.unbindEventListeners();
-                }
+                },
             },
             {
-                key: 'getValueObjectWithLabel',
+                key: "getValueObjectWithLabel",
                 value: function (e) {
                     var t, r;
                     return (
@@ -107,47 +119,47 @@ let s = (function (e) {
                                   value: e,
                                   enumerable: !0,
                                   configurable: !0,
-                                  writable: !0
+                                  writable: !0,
                               })
                             : (t[r] = e),
                         t
                     );
-                }
+                },
             },
             {
-                key: 'getArrowOffset',
+                key: "getArrowOffset",
                 value: function () {
                     return this.props.arrowOffset || 1;
-                }
+                },
             },
             {
-                key: 'setUpdatedValue',
+                key: "setUpdatedValue",
                 value: function (e, t) {
                     var r = this.props.label ? this.getValueObjectWithLabel(e) : e;
-                    (this.props.onChange && this.props.onChange(r, t), this.setState({ value: e }));
-                }
+                    this.props.onChange && this.props.onChange(r, t), this.setState({ value: e });
+                },
             },
             {
-                key: 'render',
+                key: "render",
                 value: function () {
                     var e = this,
                         t = (0, o.default)(
                             {
-                                default: { wrap: { position: 'relative' } },
-                                'user-override': {
+                                default: { wrap: { position: "relative" } },
+                                "user-override": {
                                     wrap: this.props.style && this.props.style.wrap ? this.props.style.wrap : {},
                                     input: this.props.style && this.props.style.input ? this.props.style.input : {},
-                                    label: this.props.style && this.props.style.label ? this.props.style.label : {}
+                                    label: this.props.style && this.props.style.label ? this.props.style.label : {},
                                 },
-                                'dragLabel-true': { label: { cursor: 'ew-resize' } }
+                                "dragLabel-true": { label: { cursor: "ew-resize" } },
                             },
-                            { 'user-override': !0 },
-                            this.props
+                            { "user-override": !0 },
+                            this.props,
                         );
                     return n.createElement(
-                        'div',
+                        "div",
                         { style: t.wrap },
-                        n.createElement('input', {
+                        n.createElement("input", {
                             id: this.inputId,
                             style: t.input,
                             ref: function (t) {
@@ -158,22 +170,22 @@ let s = (function (e) {
                             onChange: this.handleChange,
                             onBlur: this.handleBlur,
                             placeholder: this.props.placeholder,
-                            spellCheck: 'false'
+                            spellCheck: "false",
                         }),
                         this.props.label && !this.props.hideLabel
                             ? n.createElement(
-                                  'label',
+                                  "label",
                                   {
                                       htmlFor: this.inputId,
                                       style: t.label,
-                                      onMouseDown: this.handleMouseDown
+                                      onMouseDown: this.handleMouseDown,
                                   },
-                                  this.props.label
+                                  this.props.label,
                               )
-                            : null
+                            : null,
                     );
-                }
-            }
+                },
+            },
         ]),
         t
     );

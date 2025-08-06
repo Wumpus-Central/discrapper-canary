@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     hi: () => u,
     kH: () => m,
-    rz: () => h
+    rz: () => h,
 }),
     n(997841),
     n(388685),
     n(539854),
-    n(524437));
+    n(524437);
 var l = n(549817);
 n(581883);
 var r = n(984933),
@@ -32,7 +32,8 @@ function m(e) {
     }
 }
 function h(e) {
-    let { include: t = new Set(), exclude: n = new Set() } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+    let { include: t = new Set(), exclude: n = new Set() } =
+            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = r.ZP.getChannels(e),
         a = [...i[r.sH], ...i[r.Zb]]
             .filter((e) => {
@@ -43,5 +44,5 @@ function h(e) {
                 let { channel: t } = e;
                 return t.id;
             });
-    (t.forEach((e) => a.push(e)), l.Z.onboardExistingMember(e, new Set(a)));
+    t.forEach((e) => a.push(e)), l.Z.onboardExistingMember(e, new Set(a));
 }

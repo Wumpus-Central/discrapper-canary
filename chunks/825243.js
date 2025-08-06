@@ -1,1 +1,1 @@
-e.exports = { coverList: 'coverList__1094b' };
+e.exports = { coverList: "coverList__1094b" };

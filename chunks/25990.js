@@ -12,7 +12,7 @@ function S(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,18 +21,18 @@ function S(e, t, n) {
 let A = T.QZA.CLOSED,
     N = {};
 function C() {
-    ((A = T.QZA.OPEN), (N = {}));
+    (A = T.QZA.OPEN), (N = {});
 }
 function R() {
-    ((A = T.QZA.CLOSED), (N = {}));
+    (A = T.QZA.CLOSED), (N = {});
 }
 function P() {
-    ((A = T.QZA.SUBMITTING), (N = {}));
+    (A = T.QZA.SUBMITTING), (N = {});
 }
 function w(e) {
     var t;
     if (A !== T.QZA.SUBMITTING) return !1;
-    ((A = T.QZA.OPEN), (N = null != (t = e.errors) ? t : {}));
+    (A = T.QZA.OPEN), (N = null != (t = e.errors) ? t : {});
 }
 function D(e) {
     let { section: t } = e;
@@ -40,7 +40,7 @@ function D(e) {
 }
 function L(e) {
     let { avatar: t } = e;
-    ((r = t), (m = void 0));
+    (r = t), (m = void 0);
 }
 function x(e) {
     let { globalName: t } = e;
@@ -64,7 +64,9 @@ function U(e) {
 }
 function G(e) {
     let { item: t } = e;
-    (null == t ? void 0 : t.type) === O.Z.PROFILE_EFFECT ? ((g = null), (E = null == t ? void 0 : t.id)) : (null == t ? void 0 : t.type) === O.Z.AVATAR_DECORATION && ((E = null), (g = t));
+    (null == t ? void 0 : t.type) === O.Z.PROFILE_EFFECT
+        ? ((g = null), (E = null == t ? void 0 : t.id))
+        : (null == t ? void 0 : t.type) === O.Z.AVATAR_DECORATION && ((E = null), (g = t));
 }
 function B(e) {
     let { banner: t } = e;
@@ -112,7 +114,7 @@ function X(e) {
 }
 function Q(e) {
     let { banner: t, themeColors: n, avatarDecoration: r } = e;
-    ((b = t), (h = n), (g = r));
+    (b = t), (h = n), (g = r);
 }
 function J() {
     r = void 0;
@@ -121,16 +123,16 @@ function $() {
     N = {};
 }
 function ee() {
-    (et(), en(), eo(), ea(), (N = {}));
+    et(), en(), eo(), ea(), (N = {});
 }
 function et() {
-    ((r = void 0), (i = void 0), (o = void 0), (a = void 0), (s = void 0));
+    (r = void 0), (i = void 0), (o = void 0), (a = void 0), (s = void 0);
 }
 function en() {
-    ((l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (a = void 0));
+    (l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (a = void 0);
 }
 function er() {
-    ((m = void 0), (g = void 0), (E = void 0), (b = void 0), (h = void 0));
+    (m = void 0), (g = void 0), (E = void 0), (b = void 0), (h = void 0);
 }
 function ei() {
     o = void 0;
@@ -142,7 +144,7 @@ function ea() {
     p = void 0;
 }
 function es() {
-    (ee(), er(), R());
+    ee(), er(), R();
 }
 class el extends (y = v.ZP.Store) {
     getFormState() {
@@ -152,7 +154,20 @@ class el extends (y = v.ZP.Store) {
         return N;
     }
     showNotice() {
-        return void 0 !== r || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== f || void 0 !== o || void 0 !== a || void 0 !== i || void 0 !== s || void 0 !== _ || void 0 !== p;
+        return (
+            void 0 !== r ||
+            void 0 !== l ||
+            void 0 !== c ||
+            void 0 !== u ||
+            void 0 !== d ||
+            void 0 !== f ||
+            void 0 !== o ||
+            void 0 !== a ||
+            void 0 !== i ||
+            void 0 !== s ||
+            void 0 !== _ ||
+            void 0 !== p
+        );
     }
     getIsSubmitDisabled() {
         return void 0 !== c && c.length > T.tPV;
@@ -200,7 +215,7 @@ class el extends (y = v.ZP.Store) {
             pendingGlobalName: i,
             pendingNameplate: s,
             pendingLegacyUsernameDisabled: _,
-            pendingPrimaryGuildId: p
+            pendingPrimaryGuildId: p,
         };
     }
     getTryItOutThemeColors() {
@@ -224,11 +239,11 @@ class el extends (y = v.ZP.Store) {
             tryItOutAvatar: m,
             tryItOutAvatarDecoration: g,
             tryItOutProfileEffectId: E,
-            tryItOutBanner: b
+            tryItOutBanner: b,
         };
     }
 }
-S(el, 'displayName', 'UserSettingsAccountStore');
+S(el, "displayName", "UserSettingsAccountStore");
 let ec = new el(I.Z, {
     USER_SETTINGS_ACCOUNT_INIT: C,
     USER_SETTINGS_MODAL_INIT: C,
@@ -265,5 +280,5 @@ let ec = new el(I.Z, {
     USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: ei,
     USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED: eo,
     USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: ea,
-    LOGOUT: J
+    LOGOUT: J,
 });

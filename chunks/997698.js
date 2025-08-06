@@ -11,38 +11,38 @@ function d(e) {
     let { canManageGuild: t, guild: n } = e;
     return (0, r.jsxs)(l.hjN, {
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: c.inactiveSelects,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: c.halfWidth,
                         children: [
                             (0, r.jsx)(l.vwX, { children: o.intl.string(o.t.KuYcnZ) }),
                             (0, r.jsx)(s.g, {
                                 canManageGuild: t,
                                 guildId: n.id,
-                                afkChannelId: n.afkChannelId
-                            })
-                        ]
+                                afkChannelId: n.afkChannelId,
+                            }),
+                        ],
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: c.halfWidth,
                         children: [
                             (0, r.jsx)(l.vwX, { children: o.intl.string(o.t.brhYaW) }),
                             (0, r.jsx)(a.M, {
                                 canManageGuild: t,
                                 afkChannelId: n.afkChannelId,
-                                afkTimeout: n.afkTimeout
-                            })
-                        ]
-                    })
-                ]
+                                afkTimeout: n.afkTimeout,
+                            }),
+                        ],
+                    }),
+                ],
             }),
             (0, r.jsx)(i.xv, {
-                variant: 'text-sm/medium',
-                color: 'text-secondary',
-                children: o.intl.string(o.t.ffEOKC)
-            })
-        ]
+                variant: "text-sm/medium",
+                color: "text-secondary",
+                children: o.intl.string(o.t.ffEOKC),
+            }),
+        ],
     });
 }

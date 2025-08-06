@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(213919),
     i = n(570140),
     o = n(317770),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,16 +18,16 @@ function s(e, t, n) {
 }
 class l extends o.Z {
     _initialize() {
-        i.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen);
+        i.Z.subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
     }
     _terminate() {
-        i.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen);
+        i.Z.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
     }
     constructor(...e) {
-        (super(...e),
-            s(this, 'handleConnectionOpen', (e) => {
+        super(...e),
+            s(this, "handleConnectionOpen", (e) => {
                 ((0, a.isWindows)() || (0, a.isMac)()) && r.encryptAndStoreTokens();
-            }));
+            });
     }
 }
 let c = new l();

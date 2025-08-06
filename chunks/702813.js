@@ -2,127 +2,127 @@ n.d(t, { L: () => r });
 let r = {
     __proto__: null,
     bg: {
-        group: ' ',
-        decimal: ','
+        group: " ",
+        decimal: ",",
     },
     cs: {
-        group: ' ',
-        decimal: ','
+        group: " ",
+        decimal: ",",
     },
     da: {
-        group: '.',
-        decimal: ','
+        group: ".",
+        decimal: ",",
     },
     de: {
-        group: '.',
-        decimal: ','
+        group: ".",
+        decimal: ",",
     },
     el: {
-        group: '.',
-        decimal: ','
+        group: ".",
+        decimal: ",",
     },
-    'en-GB': {
-        group: ',',
-        decimal: '.'
+    "en-GB": {
+        group: ",",
+        decimal: ".",
     },
-    'en-US': {
-        group: ',',
-        decimal: '.'
+    "en-US": {
+        group: ",",
+        decimal: ".",
     },
-    'es-ES': {
-        group: '.',
-        decimal: ','
+    "es-ES": {
+        group: ".",
+        decimal: ",",
     },
-    'es-419': {
-        group: '.',
-        decimal: ','
+    "es-419": {
+        group: ".",
+        decimal: ",",
     },
     fi: {
-        group: ' ',
-        decimal: ','
+        group: " ",
+        decimal: ",",
     },
     fr: {
-        group: '\u202F',
-        decimal: ','
+        group: "\u202F",
+        decimal: ",",
     },
     hi: {
-        group: ',',
-        decimal: '.'
+        group: ",",
+        decimal: ".",
     },
     hr: {
-        group: '.',
-        decimal: ','
+        group: ".",
+        decimal: ",",
     },
     hu: {
-        group: ' ',
-        decimal: ','
+        group: " ",
+        decimal: ",",
     },
     it: {
-        group: '.',
-        decimal: ','
+        group: ".",
+        decimal: ",",
     },
     ja: {
-        group: ',',
-        decimal: '.'
+        group: ",",
+        decimal: ".",
     },
     ko: {
-        group: ',',
-        decimal: '.'
+        group: ",",
+        decimal: ".",
     },
     lt: {
-        group: ' ',
-        decimal: ','
+        group: " ",
+        decimal: ",",
     },
     nl: {
-        group: '.',
-        decimal: ','
+        group: ".",
+        decimal: ",",
     },
     no: {
-        group: ' ',
-        decimal: ','
+        group: " ",
+        decimal: ",",
     },
     pl: {
-        group: ' ',
-        decimal: ','
+        group: " ",
+        decimal: ",",
     },
-    'pt-BR': {
-        group: '.',
-        decimal: ','
+    "pt-BR": {
+        group: ".",
+        decimal: ",",
     },
     ro: {
-        group: '.',
-        decimal: ','
+        group: ".",
+        decimal: ",",
     },
     ru: {
-        group: ' ',
-        decimal: ','
+        group: " ",
+        decimal: ",",
     },
-    'sv-SE': {
-        group: ' ',
-        decimal: ','
+    "sv-SE": {
+        group: " ",
+        decimal: ",",
     },
     th: {
-        group: ',',
-        decimal: '.'
+        group: ",",
+        decimal: ".",
     },
     tr: {
-        group: '.',
-        decimal: ','
+        group: ".",
+        decimal: ",",
     },
     uk: {
-        group: ' ',
-        decimal: ','
+        group: " ",
+        decimal: ",",
     },
     vi: {
-        group: '.',
-        decimal: ','
+        group: ".",
+        decimal: ",",
     },
-    'zh-CN': {
-        group: ',',
-        decimal: '.'
+    "zh-CN": {
+        group: ",",
+        decimal: ".",
     },
-    'zh-TW': {
-        group: ',',
-        decimal: '.'
-    }
+    "zh-TW": {
+        group: ",",
+        decimal: ".",
+    },
 };

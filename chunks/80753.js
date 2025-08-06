@@ -1,4 +1,4 @@
-(s.r(t), s.d(t, { default: () => h }), s(388685));
+s.r(t), s.d(t, { default: () => h }), s(388685);
 var i = s(255367),
     r = s(73800),
     l = s(755721),
@@ -11,13 +11,13 @@ var i = s(255367),
 function h() {
     let [e, t] = r.useState(!1),
         s = (0, u.LL)(),
-        { reporting: h } = c.Z.useExperiment({ location: 'be7a1c_1' }, { autoTrackExposure: !1 });
+        { reporting: h } = c.Z.useExperiment({ location: "be7a1c_1" }, { autoTrackExposure: !1 });
     return (r.useEffect(() => {
         if (h && e && null != s)
             return (
                 s.forEach((e) => {
                     e.elements.forEach((e) => {
-                        e.setAttribute(d.OF, '');
+                        e.setAttribute(d.OF, "");
                     });
                 }),
                 () => {
@@ -30,45 +30,45 @@ function h() {
             );
     }, [s, h, e]),
     h && null != s && 0 !== s.length)
-        ? (0, i.jsxs)('div', {
+        ? (0, i.jsxs)("div", {
               style: {
                   backgroundColor: a.Z.BACKGROUND_FEEDBACK_CRITICAL,
                   color: a.Z.TEXT_FEEDBACK_CRITICAL,
-                  display: 'flex',
-                  alignItems: 'center',
-                  padding: '8px 12px'
+                  display: "flex",
+                  alignItems: "center",
+                  padding: "8px 12px",
               },
               children: [
                   (0, i.jsx)(n.Text, {
-                      variant: 'text-sm/semibold',
-                      color: 'text-feedback-critical',
-                      children: 'Accessibility compliance issue(s) detected, check in-app DevTools'
+                      variant: "text-sm/semibold",
+                      color: "text-feedback-critical",
+                      children: "Accessibility compliance issue(s) detected, check in-app DevTools",
                   }),
-                  (0, i.jsxs)('div', {
+                  (0, i.jsxs)("div", {
                       style: {
-                          display: 'grid',
-                          gridAutoFlow: 'column',
+                          display: "grid",
+                          gridAutoFlow: "column",
                           gap: 4,
-                          marginLeft: 'auto'
+                          marginLeft: "auto",
                       },
                       children: [
                           (0, i.jsx)(l.zx, {
                               size: l.zx.Sizes.TINY,
                               color: l.zx.Colors.RED,
-                              style: { marginLeft: 'auto' },
+                              style: { marginLeft: "auto" },
                               onClick: o.SO,
-                              children: 'Open DevTools'
+                              children: "Open DevTools",
                           }),
                           (0, i.jsxs)(l.zx, {
                               size: l.zx.Sizes.TINY,
                               color: l.zx.Colors.RED,
-                              style: { marginLeft: 'auto' },
+                              style: { marginLeft: "auto" },
                               onClick: () => t(!e),
-                              children: [e ? 'Hide' : 'Show', ' Overlays']
-                          })
-                      ]
-                  })
-              ]
+                              children: [e ? "Hide" : "Show", " Overlays"],
+                          }),
+                      ],
+                  }),
+              ],
           })
         : null;
 }

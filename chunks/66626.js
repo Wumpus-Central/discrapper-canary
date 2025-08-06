@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(953529), n(388685));
+n.d(t, { Z: () => m }), n(953529), n(388685);
 var i = n(255367),
     s = n(73800),
     l = n(755721),
@@ -9,7 +9,16 @@ var i = n(255367),
     d = n(388032),
     u = n(685554);
 function m(e) {
-    let { directoryChannelId: t, description: n, onDescriptionChange: m, categoryId: x, onCategoryIdChange: C, onSubmit: h, onClose: p, onBack: g } = e,
+    let {
+            directoryChannelId: t,
+            description: n,
+            onDescriptionChange: m,
+            categoryId: x,
+            onCategoryIdChange: C,
+            onSubmit: h,
+            onClose: p,
+            onBack: g,
+        } = e,
         [f, j] = s.useState(!1),
         [_, b] = s.useState(null),
         L = async () => {
@@ -30,21 +39,21 @@ function m(e) {
                 children: [
                     (0, i.jsx)(a.X6q, {
                         className: u.title,
-                        variant: 'heading-xl/semibold',
-                        children: d.intl.string(d.t['5bQcoa'])
+                        variant: "heading-xl/semibold",
+                        children: d.intl.string(d.t["5bQcoa"]),
                     }),
                     (0, i.jsx)(a.Text, {
                         className: u.subtitle,
-                        color: 'header-secondary',
-                        variant: 'text-md/normal',
-                        children: d.intl.string(d.t.Ie60WV)
+                        color: "header-secondary",
+                        variant: "text-md/normal",
+                        children: d.intl.string(d.t.Ie60WV),
                     }),
                     null != p &&
                         (0, i.jsx)(a.olH, {
                             className: u.closeButton,
-                            onClick: p
-                        })
-                ]
+                            onClick: p,
+                        }),
+                ],
             }),
             (0, i.jsxs)(a.hzk, {
                 className: u.createGuild,
@@ -57,8 +66,8 @@ function m(e) {
                             maxLength: 200,
                             placeholder: d.intl.string(d.t.VzuITE),
                             onChange: m,
-                            error: null == _ ? void 0 : _.getAnyErrorMessage()
-                        })
+                            error: null == _ ? void 0 : _.getAnyErrorMessage(),
+                        }),
                     }),
                     (0, i.jsx)(a.xJW, {
                         className: u.formItemSpaced,
@@ -69,30 +78,30 @@ function m(e) {
                             clearable: !1,
                             value: x,
                             onChange: C,
-                            maxVisibleItems: 4
-                        })
-                    })
-                ]
+                            maxVisibleItems: 4,
+                        }),
+                    }),
+                ],
             }),
             (0, i.jsxs)(a.mzw, {
                 justify: o.Z.Justify.BETWEEN,
                 children: [
                     (0, i.jsx)(a.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: d.intl.string(d.t.H9jxS0),
                         onClick: L,
                         loading: f,
-                        disabled: '' === n || x === c.AR.UNCATEGORIZED
+                        disabled: "" === n || x === c.AR.UNCATEGORIZED,
                     }),
                     (0, i.jsx)(l.zx, {
                         className: u.backButton,
                         look: l.zx.Looks.BLANK,
                         size: l.zx.Sizes.MIN,
                         onClick: g,
-                        children: d.intl.string(d.t['13/7kZ'])
-                    })
-                ]
-            })
-        ]
+                        children: d.intl.string(d.t["13/7kZ"]),
+                    }),
+                ],
+            }),
+        ],
     });
 }

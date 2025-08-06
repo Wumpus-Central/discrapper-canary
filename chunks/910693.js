@@ -5,7 +5,7 @@ n.d(t, {
     gm: () => d,
     h1: () => g,
     jQ: () => m,
-    sE: () => I
+    sE: () => I,
 });
 var r,
     l,
@@ -21,24 +21,24 @@ function E(e, t, n) {
         for (var t = 1; t < arguments.length; t++) {
             var n = null != arguments[t] ? arguments[t] : {},
                 r = Object.keys(n);
-            ('function' == typeof Object.getOwnPropertySymbols &&
+            "function" == typeof Object.getOwnPropertySymbols &&
                 (r = r.concat(
                     Object.getOwnPropertySymbols(n).filter(function (e) {
                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                    })
+                    }),
                 )),
                 r.forEach(function (t) {
                     var r;
-                    ((r = n[t]),
+                    (r = n[t]),
                         t in e
                             ? Object.defineProperty(e, t, {
                                   value: r,
                                   enumerable: !0,
                                   configurable: !0,
-                                  writable: !0
+                                  writable: !0,
                               })
-                            : (e[t] = r));
-                }));
+                            : (e[t] = r);
+                });
         }
         return e;
     })({}, t, (0, a.hH)(null != (r = t.guild_id) ? r : n));
@@ -49,11 +49,11 @@ function d(e) {
         (t) => {
             let n = {
                 guild_id: e,
-                location: i.Z.MEMBER_SAFETY_PAGE
+                location: i.Z.MEMBER_SAFETY_PAGE,
             };
             E(c.rMx.MOD_DASH_SEARCH_MEMBERS, n);
         },
-        [e]
+        [e],
     );
 }
 function _(e) {
@@ -62,28 +62,42 @@ function _(e) {
             let n = {
                 selected_role_count: t.size,
                 guild_id: e,
-                location: i.Z.MEMBER_SAFETY_PAGE
+                location: i.Z.MEMBER_SAFETY_PAGE,
             };
             E(c.rMx.MOD_DASH_FILTER_ROLES, n);
         },
-        [e]
+        [e],
     );
 }
-var A = (((r = {}).UNUSUAL_DM_ACTIVITY = 'unusual_dm_activity'), (r.COMMUNICATION_DISABLED = 'communication_disabled'), (r.UNUSUAL_ACCOUNT_ACTIVITY = 'unusual_account_activity'), (r.USERNAME_QUARANTINED = 'username_quarantined'), r);
+var A =
+    (((r = {}).UNUSUAL_DM_ACTIVITY = "unusual_dm_activity"),
+    (r.COMMUNICATION_DISABLED = "communication_disabled"),
+    (r.UNUSUAL_ACCOUNT_ACTIVITY = "unusual_account_activity"),
+    (r.USERNAME_QUARANTINED = "username_quarantined"),
+    r);
 function T(e) {
     return s.useCallback(
         (t) => {
             let n = {
                 flag_type: t,
                 guild_id: e,
-                location: i.Z.MEMBER_SAFETY_PAGE
+                location: i.Z.MEMBER_SAFETY_PAGE,
             };
             E(c.rMx.MOD_DASH_FILTER_SAFETY_FLAGS, n);
         },
-        [e]
+        [e],
     );
 }
-var m = (((l = {}).BAN = 'ban'), (l.KICK = 'kick'), (l.MUTE = 'mute'), (l.TIMEOUT = 'timeout'), (l.ADD_ROLE = 'add_role'), (l.REMOVE_ROLE = 'remove_role'), (l.COPY_ID = 'copy_id'), (l.CHANGE_NICKNAME = 'change_nickname'), l);
+var m =
+    (((l = {}).BAN = "ban"),
+    (l.KICK = "kick"),
+    (l.MUTE = "mute"),
+    (l.TIMEOUT = "timeout"),
+    (l.ADD_ROLE = "add_role"),
+    (l.REMOVE_ROLE = "remove_role"),
+    (l.COPY_ID = "copy_id"),
+    (l.CHANGE_NICKNAME = "change_nickname"),
+    l);
 function I(e, t) {
     let { location: n, targetUserId: r, targets: l, locations: i } = t;
     return s.useCallback(
@@ -95,16 +109,16 @@ function I(e, t) {
                 location: n,
                 locations: i,
                 target_user_id: null != r ? r : void 0,
-                targets: null != l ? l : void 0
+                targets: null != l ? l : void 0,
             };
             E(c.rMx.MODERATION_ACTION, s);
         },
-        [e, n, r, l, i]
+        [e, n, r, l, i],
     );
 }
 function g(e, t) {
     E(c.rMx.MOD_DASH_MEMBERS_TABLE_VIEWED, {
         guild_id: e,
-        location: t
+        location: t,
     });
 }

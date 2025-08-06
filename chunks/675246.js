@@ -1,7 +1,7 @@
 function t(e, t) {
-    var r = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
+    var r = ("undefined" != typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
     if (!r) {
-        if (Array.isArray(e) || (r = n(e)) || (t && e && 'number' == typeof e.length)) {
+        if (Array.isArray(e) || (r = n(e)) || (t && e && "number" == typeof e.length)) {
             r && (e = r);
             var i = 0,
                 o = function () {};
@@ -12,16 +12,18 @@ function t(e, t) {
                         ? { done: !0 }
                         : {
                               done: !1,
-                              value: e[i++]
+                              value: e[i++],
                           };
                 },
                 e: function (e) {
                     throw e;
                 },
-                f: o
+                f: o,
             };
         }
-        throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+        throw TypeError(
+            "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+        );
     }
     var a,
         s = !0,
@@ -32,10 +34,10 @@ function t(e, t) {
         },
         n: function () {
             var e = r.next();
-            return ((s = e.done), e);
+            return (s = e.done), e;
         },
         e: function (e) {
-            ((l = !0), (a = e));
+            (l = !0), (a = e);
         },
         f: function () {
             try {
@@ -43,15 +45,16 @@ function t(e, t) {
             } finally {
                 if (l) throw a;
             }
-        }
+        },
     };
 }
 function n(e, t) {
     if (e) {
-        if ('string' == typeof e) return r(e, t);
+        if ("string" == typeof e) return r(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
-        if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return r(e, t);
+        if (("Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n))
+            return Array.from(e);
+        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return r(e, t);
     }
 }
 function r(e, t) {
@@ -62,20 +65,48 @@ function r(e, t) {
 function i() {
     this._defaults = [];
 }
-for (var o = 0, a = ['use', 'on', 'once', 'set', 'query', 'type', 'accept', 'auth', 'withCredentials', 'sortQuery', 'retry', 'ok', 'redirects', 'timeout', 'buffer', 'serialize', 'parse', 'ca', 'key', 'pfx', 'cert', 'disableTLSCerts']; o < a.length; o++) {
+for (
+    var o = 0,
+        a = [
+            "use",
+            "on",
+            "once",
+            "set",
+            "query",
+            "type",
+            "accept",
+            "auth",
+            "withCredentials",
+            "sortQuery",
+            "retry",
+            "ok",
+            "redirects",
+            "timeout",
+            "buffer",
+            "serialize",
+            "parse",
+            "ca",
+            "key",
+            "pfx",
+            "cert",
+            "disableTLSCerts",
+        ];
+    o < a.length;
+    o++
+) {
     let e = a[o];
     i.prototype[e] = function () {
         for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
         return (
             this._defaults.push({
                 fn: e,
-                args: n
+                args: n,
             }),
             this
         );
     };
 }
-((i.prototype._setDefaults = function (e) {
+(i.prototype._setDefaults = function (e) {
     var n,
         r = t(this._defaults);
     try {
@@ -89,4 +120,4 @@ for (var o = 0, a = ['use', 'on', 'once', 'set', 'query', 'type', 'accept', 'aut
         r.f();
     }
 }),
-    (e.exports = i));
+    (e.exports = i);

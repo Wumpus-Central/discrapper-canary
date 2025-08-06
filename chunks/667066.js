@@ -6,9 +6,9 @@ var n = r(657398),
     s = i.hasOwnProperty,
     u = l.call(Object);
 e.exports = function (e) {
-    if (!a(e) || '[object Object]' != n(e)) return !1;
+    if (!a(e) || "[object Object]" != n(e)) return !1;
     var t = o(e);
     if (null === t) return !0;
-    var r = s.call(t, 'constructor') && t.constructor;
-    return 'function' == typeof r && r instanceof r && l.call(r) == u;
+    var r = s.call(t, "constructor") && t.constructor;
+    return "function" == typeof r && r instanceof r && l.call(r) == u;
 };

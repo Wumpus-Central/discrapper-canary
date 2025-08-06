@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => F,
     d7: () => Z,
-    iD: () => B
+    iD: () => B,
 }),
     n(539854),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -40,7 +40,7 @@ function w(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -50,15 +50,15 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 w(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -66,11 +66,11 @@ function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -92,7 +92,8 @@ function M(e, t) {
         i = k(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -102,14 +103,14 @@ function k(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let j = [];
 class U extends i.PureComponent {
     componentDidMount() {
         this.timeout = setTimeout(() => {
-            (this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded());
+            this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded();
         }, 100);
     }
     componentDidUpdate() {
@@ -120,8 +121,8 @@ class U extends i.PureComponent {
         null != e &&
             -1 === j.indexOf(e) &&
             (S.default.track(C.rMx.SHOW_TUTORIAL, {
-                tutorial: 'activity-invite-nux-inline',
-                application_id: e
+                tutorial: "activity-invite-nux-inline",
+                application_id: e,
             }),
             j.push(e));
     }
@@ -130,31 +131,42 @@ class U extends i.PureComponent {
     }
     render() {
         let { activity: e } = this.props;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: a()(P.activityInviteEducation, { [P.activityInviteEducationFadeIn]: this.state.fadeIn }),
             children: [
-                (0, r.jsx)('div', { className: P.activityInviteEducationArrow }),
-                (0, r.jsx)('span', {
-                    children: R.intl.format(R.t['i/MoCg'], {
+                (0, r.jsx)("div", { className: P.activityInviteEducationArrow }),
+                (0, r.jsx)("span", {
+                    children: R.intl.format(R.t["i/MoCg"], {
                         game: e.name,
-                        dismissOnClick: this.handleDismissInviteEducation
-                    })
-                })
-            ]
+                        dismissOnClick: this.handleDismissInviteEducation,
+                    }),
+                }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            w(this, 'state', { fadeIn: !1 }),
-            w(this, 'timeout', null),
-            w(this, 'handleDismissInviteEducation', () => {
+        super(...e),
+            w(this, "state", { fadeIn: !1 }),
+            w(this, "timeout", null),
+            w(this, "handleDismissInviteEducation", () => {
                 let { activity: e } = this.props;
                 null != e && null != e.application_id && f.Z.dismissForApplicationId(e.application_id);
-            }));
+            });
     }
 }
 function G(e) {
-    let { activityInviteEducationActivity: t, isFocused: n, typingUsers: o, className: s, channel: l, isThreadCreation: c, renderDots: u, poggermodeEnabled: f, isComboing: _, isInTextChannel: p } = e,
+    let {
+            activityInviteEducationActivity: t,
+            isFocused: n,
+            typingUsers: o,
+            className: s,
+            channel: l,
+            isThreadCreation: c,
+            renderDots: u,
+            poggermodeEnabled: f,
+            isComboing: _,
+            isInTextChannel: p,
+        } = e,
         { rateLimitPerUser: m } = l,
         E = m > 0,
         b = i.useRef(null),
@@ -187,38 +199,38 @@ function G(e) {
         return null != t
             ? (0, r.jsx)(U, {
                   activity: t,
-                  isFocused: n
+                  isFocused: n,
               })
             : null;
     let [I, T, S] = o,
-        A = '';
+        A = "";
     1 === o.length
         ? (A = R.intl.format(R.t.lJ9sZW, { a: I }))
         : 2 === o.length
           ? (A = R.intl.format(R.t.rB0CUV, {
                 a: I,
-                b: T
+                b: T,
             }))
           : 3 === o.length
             ? (A = R.intl.format(R.t.StKTho, {
                   a: I,
                   b: T,
-                  c: S
+                  c: S,
               }))
             : o.length > 3 && (A = R.intl.format(R.t.Q8lUnJ, {}));
     let N = O && o.length > 0 ? R.intl.format(R.t.Q8lUnJ, {}) : A;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(
             P.typing,
             {
-                'stop-animation': !n,
+                "stop-animation": !n,
                 [P.isComboing]: f && _,
-                [P.inTextChannel]: p
+                [P.inTextChannel]: p,
             },
-            s
+            s,
         ),
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: P.typingDots,
                 ref: b,
                 children: [
@@ -227,32 +239,32 @@ function G(e) {
                         (0, r.jsx)(d.bbz, {
                             className: P.ellipsis,
                             dotRadius: 3.5,
-                            themed: !0
+                            themed: !0,
                         }),
-                    (0, r.jsx)('span', {
+                    (0, r.jsx)("span", {
                         className: P.text,
-                        'aria-live': 'polite',
-                        'aria-atomic': !0,
-                        children: N
+                        "aria-live": "polite",
+                        "aria-atomic": !0,
+                        children: N,
                     }),
-                    (0, r.jsx)('span', {
+                    (0, r.jsx)("span", {
                         className: P.text,
                         style: {
-                            position: 'absolute',
-                            visibility: 'hidden'
+                            position: "absolute",
+                            visibility: "hidden",
                         },
-                        'aria-hidden': !0,
+                        "aria-hidden": !0,
                         ref: y,
-                        children: A
-                    })
-                ]
+                        children: A,
+                    }),
+                ],
             }),
             (0, r.jsx)(h.Z, {
                 channel: l,
-                isThreadCreation: c
+                isThreadCreation: c,
             }),
-            f && _ && (0, r.jsx)(g.Z, { channelId: l.id })
-        ]
+            f && _ && (0, r.jsx)(g.Z, { channelId: l.id }),
+        ],
     });
 }
 function B(e) {
@@ -273,7 +285,7 @@ function Z(e) {
 }
 function F(e) {
     var { channel: t, isThreadCreation: n = !1 } = e,
-        i = M(e, ['channel', 'isThreadCreation']);
+        i = M(e, ["channel", "isThreadCreation"]);
     let o = (0, c.e7)([m.ZP, b.default], () => m.ZP.getUserCombo(b.default.getId(), t.id)),
         a = B(t),
         s = x(D({}, i), {
@@ -285,7 +297,7 @@ function F(e) {
             guildId: t.guild_id,
             isComboing: null != o,
             channel: t,
-            isThreadCreation: n
+            isThreadCreation: n,
         });
     return (0, r.jsx)(G, D({}, s));
 }

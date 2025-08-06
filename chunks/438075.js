@@ -1,6 +1,6 @@
 n.d(t, {
     Q: () => s,
-    Z: () => a
+    Z: () => a,
 });
 var r = n(255367);
 n(73800);
@@ -19,7 +19,7 @@ function a(e) {
         renderReactions: p,
         forceAddReactions: h,
         disableComponentInteractivity: m,
-        className: g
+        className: g,
     } = e;
     return u
         ? null
@@ -38,12 +38,20 @@ function a(e) {
                   disableComponentInteractivity: m,
                   renderSuppressEmbeds: _,
                   forceAddReactions: h,
-                  renderReactions: p
-              })
+                  renderReactions: p,
+              }),
           });
 }
 function s(e, t) {
-    let { message: n, channel: i, compact: a = !1, renderThreadAccessory: s, disableReactionCreates: l, disableReactionUpdates: c, isSearchResult: u } = e;
+    let {
+        message: n,
+        channel: i,
+        compact: a = !1,
+        renderThreadAccessory: s,
+        disableReactionCreates: l,
+        disableReactionUpdates: c,
+        isSearchResult: u,
+    } = e;
     return (0, r.jsx)(o.$p, {
         message: n,
         channel: i,
@@ -52,6 +60,6 @@ function s(e, t) {
         renderThreadAccessory: s,
         disableReactionCreates: l,
         disableReactionUpdates: c,
-        isSearchResult: u
+        isSearchResult: u,
     });
 }

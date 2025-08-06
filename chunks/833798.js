@@ -1,4 +1,4 @@
-(n.d(t, { s: () => u }), n(467055), n(388685), n(314940));
+n.d(t, { s: () => u }), n(467055), n(388685), n(314940);
 var r = n(278074),
     i = n(264181),
     o = n(178185),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,13 +32,13 @@ class u {
                             .with({ type: i.Z.BADGE }, (e) => o.E.fromServer(e))
                             .with({ type: i.Z.BANNER }, (e) => a.I.fromServer(e))
                             .with({ type: i.Z.COACHMARK }, (e) => s.F.fromServer(e))
-                            .otherwise(() => void 0)
+                            .otherwise(() => void 0),
                     ];
-                })
-            )
+                }),
+            ),
         );
     }
     constructor(e) {
-        (c(this, 'marketingsBySurfaces', void 0), (this.marketingsBySurfaces = e));
+        c(this, "marketingsBySurfaces", void 0), (this.marketingsBySurfaces = e);
     }
 }

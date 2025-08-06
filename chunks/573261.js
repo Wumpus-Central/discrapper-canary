@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,15 +18,15 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -37,7 +37,8 @@ function s(e, t) {
         i = l(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -47,56 +48,58 @@ function l(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function c(e, t, n) {
     let { trackedActionData: r } = t,
-        o = s(t, ['trackedActionData']),
+        o = s(t, ["trackedActionData"]),
         l = {
             url: o.url,
-            request_method: n
+            request_method: n,
         };
     return new Promise((t, n) => {
         e(o)
             .then((e) => {
                 let n = r.properties;
-                ('function' == typeof r.properties && (n = r.properties(e)), (0, i.trackNetworkAction)(r.event, a({ status_code: e.status }, l, n)), t(e));
+                "function" == typeof r.properties && (n = r.properties(e)),
+                    (0, i.trackNetworkAction)(r.event, a({ status_code: e.status }, l, n)),
+                    t(e);
             })
             .catch((e) => {
                 var t, o;
                 let s = r.properties;
-                ('function' == typeof r.properties && (s = r.properties(e)),
+                "function" == typeof r.properties && (s = r.properties(e)),
                     (0, i.trackNetworkAction)(
                         r.event,
                         a(
                             {
                                 status_code: e.status,
                                 error_code: null == (t = e.body) ? void 0 : t.code,
-                                error_message: null == (o = e.body) ? void 0 : o.message
+                                error_message: null == (o = e.body) ? void 0 : o.message,
                             },
                             l,
-                            s
-                        )
+                            s,
+                        ),
                     ),
-                    n(e));
+                    n(e);
             });
     });
 }
 let u = {
     get: function (e) {
-        return c(r.tn.get, e, 'get');
+        return c(r.tn.get, e, "get");
     },
     post: function (e) {
-        return c(r.tn.post, e, 'post');
+        return c(r.tn.post, e, "post");
     },
     put: function (e) {
-        return c(r.tn.put, e, 'put');
+        return c(r.tn.put, e, "put");
     },
     patch: function (e) {
-        return c(r.tn.patch, e, 'patch');
+        return c(r.tn.patch, e, "patch");
     },
     delete: function (e) {
-        return c(r.tn.del, e, 'del');
-    }
+        return c(r.tn.del, e, "del");
+    },
 };

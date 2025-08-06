@@ -5,8 +5,8 @@ function i(n) {
     var r = n.accept;
     return (0, o.useMemo)(
         function () {
-            return ((0, e.k)(null != n.accept, 'accept must be defined'), Array.isArray(r) ? r : [r]);
+            return (0, e.k)(null != n.accept, "accept must be defined"), Array.isArray(r) ? r : [r];
         },
-        [r]
+        [r],
     );
 }

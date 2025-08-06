@@ -3,7 +3,7 @@ var r = n(621049),
     o = i.apply,
     a = i.call;
 e.exports =
-    ('object' == typeof Reflect && Reflect.apply) ||
+    ("object" == typeof Reflect && Reflect.apply) ||
     (r
         ? a.bind(o)
         : function () {

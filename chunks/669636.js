@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => A }), r(388685), r(314940));
+r.r(t), r.d(t, { default: () => A }), r(388685), r(314940);
 var a = r(255367),
     n = r(73800),
     i = r(512722),
@@ -26,24 +26,24 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (a = a.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             a.forEach(function (t) {
                 var a;
-                ((a = r[t]),
+                (a = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: a,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = a));
-            }));
+                        : (e[t] = a);
+            });
     }
     return e;
 }
@@ -53,65 +53,66 @@ let C = (e) => {
             o = null == r ? void 0 : r.items[0],
             b = (0, u.e7)([h.default], () => {
                 let e = h.default.getCurrentUser();
-                return (s()(null != e, 'User cannot be undefined'), e);
+                return s()(null != e, "User cannot be undefined"), e;
             }),
             x = Object.values(d.a).includes(t.skuId),
-            C = (0, v.Z)({ location: 'CollectiblesProductPreview' });
+            C = (0, v.Z)({ location: "CollectiblesProductPreview" });
         return (0, l.EQ)(t.type)
             .with(c.Z.PROFILE_EFFECT, () =>
-                (0, a.jsx)('div', {
+                (0, a.jsx)("div", {
                     className: O.profileEffectShopPreview,
                     children: (0, a.jsx)(p.Z, {
                         forCollectedModal: !0,
-                        profileEffectId: i.id
-                    })
-                })
+                        profileEffectId: i.id,
+                    }),
+                }),
             )
             .with(c.Z.AVATAR_DECORATION, () =>
-                (s()(i.type === c.Z.AVATAR_DECORATION, 'ts-match already checked the type'), null != o && o.type === c.Z.AVATAR_DECORATION)
-                    ? (0, a.jsxs)('div', {
+                (s()(i.type === c.Z.AVATAR_DECORATION, "ts-match already checked the type"),
+                null != o && o.type === c.Z.AVATAR_DECORATION)
+                    ? (0, a.jsxs)("div", {
                           children: [
-                              (0, a.jsx)('div', {
+                              (0, a.jsx)("div", {
                                   className: O.avatarDecorationPairOne,
                                   children: (0, a.jsx)(g.R, {
                                       item: i,
                                       user: b,
                                       avatarSize: f.EFr.SIZE_120,
                                       isPurchased: !1,
-                                      isHighlighted: !0
-                                  })
+                                      isHighlighted: !0,
+                                  }),
                               }),
-                              (0, a.jsx)('div', {
+                              (0, a.jsx)("div", {
                                   className: O.avatarDecorationPairTwo,
                                   children: (0, a.jsx)(g.R, {
                                       item: o,
                                       avatarSize: f.EFr.SIZE_120,
-                                      isPurchased: !1
-                                  })
-                              })
-                          ]
+                                      isPurchased: !1,
+                                  }),
+                              }),
+                          ],
                       })
                     : (0, a.jsx)(g.R, {
                           item: i,
                           user: b,
                           avatarSize: f.EFr.SIZE_120,
                           isPurchased: !1,
-                          isHighlighted: !0
-                      })
+                          isHighlighted: !0,
+                      }),
             )
             .with(c.Z.NAMEPLATE, () =>
-                (0, a.jsx)('div', {
+                (0, a.jsx)("div", {
                     className: O.nameplate,
                     children: (0, a.jsx)(P.Z, {
                         nameplate: i,
                         user: b,
-                        nameplatePreviewSize: 'large',
-                        isHighlighted: !0
-                    })
-                })
+                        nameplatePreviewSize: "large",
+                        isHighlighted: !0,
+                    }),
+                }),
             )
             .with(c.Z.BUNDLE, () =>
-                (0, a.jsx)('div', {
+                (0, a.jsx)("div", {
                     className: O.bundlePreview,
                     children: (0, a.jsx)(y.d, {
                         containerClassName: O.bundlePreviewContainer,
@@ -120,22 +121,22 @@ let C = (e) => {
                         isPurchased: !1,
                         isHighlighted: !0,
                         profileEffectClassName: O.bundleProfileEffectCard,
-                        avatarDecorationClassName: O.bundleAvatarDecorationCard
-                    })
-                })
+                        avatarDecorationClassName: O.bundleAvatarDecorationCard,
+                    }),
+                }),
             )
             .with(c.Z.EXTERNAL_SKU, () => {
                 if (x)
                     if (n)
-                        return (0, a.jsx)('img', {
+                        return (0, a.jsx)("img", {
                             src: C ? E : _,
-                            alt: w.intl.string(w.t['Q+BB29']),
-                            style: { width: '100%' }
+                            alt: w.intl.string(w.t["Q+BB29"]),
+                            style: { width: "100%" },
                         });
                     else
-                        return (0, a.jsx)('img', {
+                        return (0, a.jsx)("img", {
                             src: j,
-                            alt: w.intl.string(w.t['+PHEo6'])
+                            alt: w.intl.string(w.t["+PHEo6"]),
                         });
                 return (0, a.jsx)(m.b, { product: t });
             })
@@ -146,63 +147,63 @@ let C = (e) => {
             [i, s] = n.useState(!1),
             l = (0, f.q_F)({
                 from: {
-                    transform: 'translateX(100%)',
-                    right: '-100%'
+                    transform: "translateX(100%)",
+                    right: "-100%",
                 },
                 to: {
-                    transform: 'translateX(50%)',
-                    right: '50%'
+                    transform: "translateX(50%)",
+                    right: "50%",
                 },
                 config: { duration: 1550 },
-                onRest: () => setTimeout(() => s(!0), 100)
+                onRest: () => setTimeout(() => s(!0), 100),
             }),
             c = (0, f.q_F)({
                 from: {
-                    transform: 'translateX(100%)',
-                    right: '-100%'
+                    transform: "translateX(100%)",
+                    right: "-100%",
                 },
                 to: {
-                    transform: 'translateX(50%)',
-                    right: '50%'
+                    transform: "translateX(50%)",
+                    right: "50%",
                 },
                 config: { duration: 1550 },
-                reverse: i
+                reverse: i,
             }),
             d = (0, f.q_F)(
                 {
                     from: {
-                        transform: 'translateX(50%)',
-                        right: '50%',
-                        opacity: 1
+                        transform: "translateX(50%)",
+                        right: "50%",
+                        opacity: 1,
                     },
                     to: {
-                        transform: 'translateX(50%)',
-                        right: '50%',
-                        opacity: 0
+                        transform: "translateX(50%)",
+                        right: "50%",
+                        opacity: 0,
                     },
                     config: { duration: 300 },
-                    delay: 600
+                    delay: 600,
                 },
-                'animate-always'
+                "animate-always",
             );
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)(o.animated.div, {
                     className: O.easterEggContainer,
                     style: l,
-                    children: (0, a.jsx)(C, x({}, e))
+                    children: (0, a.jsx)(C, x({}, e)),
                 }),
                 (0, a.jsx)(o.animated.div, {
                     className: O.easterEggContainer,
                     style: t ? d : c,
-                    children: (0, a.jsx)('img', {
+                    children: (0, a.jsx)("img", {
                         src: r.getSrc(),
                         style: r.style,
-                        alt: '',
-                        'aria-hidden': 'true'
-                    })
-                })
-            ]
+                        alt: "",
+                        "aria-hidden": "true",
+                    }),
+                }),
+            ],
         });
     };
 function A(e) {
@@ -225,7 +226,7 @@ function A(e) {
                     })(Object(r)).forEach(function (e) {
                         Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                     }),
-              t)
+              t),
           )
         : (0, a.jsx)(C, x({}, e));
 }

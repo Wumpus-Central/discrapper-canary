@@ -1,4 +1,4 @@
-(n.d(t, { L: () => E }), n(388685));
+n.d(t, { L: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,34 +28,46 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function g(e, t) {
-    let { color: o, useLottieDefaultColors: s, src: h, size: g = 'md', width: E, height: b, className: y, initialAnimation: O, initialFrame: v, markers: I, onBeforeDismount: T } = e,
+    let {
+            color: o,
+            useLottieDefaultColors: s,
+            src: h,
+            size: g = "md",
+            width: E,
+            height: b,
+            className: y,
+            initialAnimation: O,
+            initialFrame: v,
+            markers: I,
+            onBeforeDismount: T,
+        } = e,
         [S, A] = i.useState(null),
         N = i.useRef(null),
         C = i.useRef(null),
         R = i.useRef(null),
         P =
-            'custom' === g
+            "custom" === g
                 ? {
                       width: E,
-                      height: b
+                      height: b,
                   }
                 : (0, u.m)(g),
-        w = !(0, _.Z)('lottie_hover_multiple_loop'),
+        w = !(0, _.Z)("lottie_hover_multiple_loop"),
         D = i.useContext(c.S).reducedMotion.enabled,
-        { enabled: L } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
+        { enabled: L } = d.Z.useExperiment({ location: "LottieIcon web entry point" }),
         x = D || !L,
         M = i.useRef(O);
     return (
@@ -71,9 +83,11 @@ function g(e, t) {
                     let t = null == C.current;
                     if (((C.current = e), x)) {
                         let t = I[e];
-                        (R.current.resetSegments(!0), R.current.setSegment(t.start + t.duration, t.start + t.duration), R.current.stop());
+                        R.current.resetSegments(!0),
+                            R.current.setSegment(t.start + t.duration, t.start + t.duration),
+                            R.current.stop();
                     } else {
-                        (R.current.setLoop(!w && e.includes('hover')), R.current.resetSegments(!0));
+                        R.current.setLoop(!w && e.includes("hover")), R.current.resetSegments(!0);
                         let n = t && null != v && v >= I[e].start && v <= I[e].start + I[e].duration ? v : I[e].start;
                         R.current.playSegments([n, I[e].start + I[e].duration], !0);
                     }
@@ -82,12 +96,17 @@ function g(e, t) {
                     if (null == R.current || x) return;
                 },
                 stopIfPlaying: (e) => {
-                    null == R.current || x || (C.current === e && (R.current.resetSegments(!0), R.current.setSegment(I[e].start, I[e].start), R.current.stop()));
+                    null == R.current ||
+                        x ||
+                        (C.current === e &&
+                            (R.current.resetSegments(!0),
+                            R.current.setSegment(I[e].start, I[e].start),
+                            R.current.stop()));
                 },
                 getDuration: (e) => (null == R.current ? null : R.current.getDuration(e)),
-                getCurrentFrame: () => (null == R.current ? null : R.current.currentFrame)
+                getCurrentFrame: () => (null == R.current ? null : R.current.currentFrame),
             }),
-            [x, w, I, v]
+            [x, w, I, v],
         ),
         i.useEffect(() => {
             null == S && h().then((e) => A(e.default));
@@ -109,11 +128,11 @@ function g(e, t) {
                         null != N.current &&
                             (R.current = i.loadAnimation({
                                 container: N.current,
-                                renderer: 'svg',
+                                renderer: "svg",
                                 loop: !1,
                                 autoplay: !1,
                                 animationData: l()(S),
-                                initialSegment: r
+                                initialSegment: r,
                             }));
                     }),
                 () => {
@@ -121,18 +140,18 @@ function g(e, t) {
                     null == (e = R.current) || e.destroy();
                 }
             ),
-            [S, I, v, x]
+            [S, I, v, x],
         ),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             style: m(
                 {
-                    '--__lottieIconColor': null != o && 'string' == typeof o ? o : null == o ? void 0 : o.css,
-                    display: 'flex'
+                    "--__lottieIconColor": null != o && "string" == typeof o ? o : null == o ? void 0 : o.css,
+                    display: "flex",
                 },
-                P
+                P,
             ),
             className: a()(p.lottieIcon, s ? void 0 : p.lottieIconColors, y),
-            ref: N
+            ref: N,
         })
     );
 }

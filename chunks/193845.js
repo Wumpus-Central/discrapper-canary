@@ -1,4 +1,4 @@
-(r.d(t, { default: () => N }), r(539854));
+r.d(t, { default: () => N }), r(539854);
 var n = r(255367),
     s = r(73800),
     i = r(149765),
@@ -19,121 +19,121 @@ function _(e) {
         r = m.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
-            size: 120
+            size: 120,
         });
     return (0, n.jsxs)(l.xBx, {
         className: j.header,
         children: [
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 className: j.headerIconContainer,
                 children:
                     null != r
                         ? (0, n.jsx)(l.qEK, {
                               src: r,
-                              'aria-label': t.name,
+                              "aria-label": t.name,
                               size: l.EFr.SIZE_120,
-                              className: j.__invalid_guildIcon
+                              className: j.__invalid_guildIcon,
                           })
-                        : (0, n.jsx)('div', {
+                        : (0, n.jsx)("div", {
                               className: j.acronym,
-                              children: (0, c.gM)(t)
-                          })
+                              children: (0, c.gM)(t),
+                          }),
             }),
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 className: j.headerText,
                 children: [
                     (0, n.jsx)(l.X6q, {
-                        variant: 'heading-lg/extrabold',
-                        color: 'header-primary',
-                        children: h.intl.string(h.t.MatO7O)
+                        variant: "heading-lg/extrabold",
+                        color: "header-primary",
+                        children: h.intl.string(h.t.MatO7O),
                     }),
                     (0, n.jsx)(l.Text, {
-                        variant: 'text-md/normal',
-                        color: 'header-primary',
-                        children: h.intl.string(h.t.VyPIen)
-                    })
-                ]
-            })
-        ]
+                        variant: "text-md/normal",
+                        color: "header-primary",
+                        children: h.intl.string(h.t.VyPIen),
+                    }),
+                ],
+            }),
+        ],
     });
 }
 let f = (e) => (e.toString() === p.Plq.MENTION_EVERYONE.toString() ? h.intl.string(h.t.yCpsQ0) : (0, o.wt)(e));
 function v(e) {
     let { permissions: t } = e;
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: j.tableContainer,
         children: [
             (0, n.jsx)(l.Text, {
                 className: j.tableHeader,
-                variant: 'text-xs/semibold',
-                color: 'text-muted',
-                children: h.intl.string(h.t['0WZKIy'])
+                variant: "text-xs/semibold",
+                color: "text-muted",
+                children: h.intl.string(h.t["0WZKIy"]),
             }),
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 className: j.permissionsTable,
                 children: t.map((e, t) =>
                     (0, n.jsxs)(
-                        'div',
+                        "div",
                         {
                             className: j.permissionRow,
                             children: [
-                                (0, n.jsx)('div', { className: j.bulletWarning }),
+                                (0, n.jsx)("div", { className: j.bulletWarning }),
                                 (0, n.jsx)(l.Text, {
-                                    variant: 'text-sm/normal',
-                                    color: 'text-default',
-                                    children: f(e)
-                                })
-                            ]
+                                    variant: "text-sm/normal",
+                                    color: "text-default",
+                                    children: f(e),
+                                }),
+                            ],
                         },
-                        t
-                    )
-                )
-            })
-        ]
+                        t,
+                    ),
+                ),
+            }),
+        ],
     });
 }
 function g(e) {
     let { permissions: t } = e;
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: j.tableContainer,
         children: [
             (0, n.jsx)(l.Text, {
                 className: j.tableHeader,
-                variant: 'text-xs/semibold',
-                color: 'text-muted',
-                children: h.intl.string(h.t.Yo5qlp)
+                variant: "text-xs/semibold",
+                color: "text-muted",
+                children: h.intl.string(h.t.Yo5qlp),
             }),
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 className: j.permissionsTable,
                 children: t.map((e, t) =>
                     (0, n.jsxs)(
-                        'div',
+                        "div",
                         {
                             className: j.permissionRow,
                             children: [
-                                (0, n.jsx)('div', { className: j.bullet }),
+                                (0, n.jsx)("div", { className: j.bullet }),
                                 (0, n.jsx)(l.Text, {
-                                    variant: 'text-sm/normal',
-                                    color: 'text-muted',
-                                    children: f(e)
-                                })
-                            ]
+                                    variant: "text-sm/normal",
+                                    color: "text-muted",
+                                    children: f(e),
+                                }),
+                            ],
                         },
-                        t
-                    )
-                )
-            })
-        ]
+                        t,
+                    ),
+                ),
+            }),
+        ],
     });
 }
 function y(e) {
     let { permissions: t } = e,
         { enabledPermissions: r, disabledPermissions: s } = t;
     return (0, n.jsx)(l.hzk, {
-        children: (0, n.jsxs)('div', {
+        children: (0, n.jsxs)("div", {
             className: j.table,
-            children: [(0, n.jsx)(v, { permissions: r }), (0, n.jsx)(g, { permissions: s })]
-        })
+            children: [(0, n.jsx)(v, { permissions: r }), (0, n.jsx)(g, { permissions: s })],
+        }),
     });
 }
 function O(e) {
@@ -142,21 +142,21 @@ function O(e) {
         className: j.footer,
         children: [
             (0, n.jsx)(l.zxk, {
-                variant: 'primary',
+                variant: "primary",
                 text: h.intl.string(h.t.iOSdAQ),
-                onClick: t
+                onClick: t,
             }),
             (0, n.jsx)(a.zx, {
                 look: a.zx.Looks.LINK,
                 onClick: r,
                 color: a.zx.Colors.PRIMARY,
                 children: (0, n.jsx)(l.Text, {
-                    variant: 'text-sm/semibold',
-                    color: 'header-primary',
-                    children: h.intl.string(h.t.gWQZvr)
-                })
-            })
-        ]
+                    variant: "text-sm/semibold",
+                    color: "header-primary",
+                    children: h.intl.string(h.t.gWQZvr),
+                }),
+            }),
+        ],
     });
 }
 function N(e) {
@@ -170,7 +170,7 @@ function N(e) {
                 }),
                 {
                     enabledPermissions: e,
-                    disabledPermissions: r
+                    disabledPermissions: r,
                 }
             );
         }, [t]);
@@ -180,29 +180,29 @@ function N(e) {
         let n = null != t ? d.Z.getEveryoneRole(t) : void 0;
         if (null == n) return;
         let s = i.Od(n.permissions, b.mu);
-        (await (0, u.Gf)(t.id, [
+        await (0, u.Gf)(t.id, [
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var r = null != arguments[t] ? arguments[t] : {},
                         n = Object.keys(r);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (n = n.concat(
                             Object.getOwnPropertySymbols(r).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                            })
+                            }),
                         )),
                         n.forEach(function (t) {
                             var n;
-                            ((n = r[t]),
+                            (n = r[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: n,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = n));
-                        }));
+                                    : (e[t] = n);
+                        });
                 }
                 return e;
             })({}, n)),
@@ -219,15 +219,15 @@ function N(e) {
                   })(Object(r)).forEach(function (t) {
                       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                   }),
-            e)
+            e),
         ]),
-            a());
+            a();
     };
     return (0, n.jsxs)(l.Y0X, {
         transitionState: r,
         size: l.CgR.SMALL,
         className: j.modal,
-        parentComponent: 'DisableRiskyPermsModal',
+        parentComponent: "DisableRiskyPermsModal",
         children: [
             (0, n.jsx)(_, { guild: t }),
             (0, n.jsx)(y, { permissions: o }),
@@ -235,8 +235,8 @@ function N(e) {
                 onConfirm: c,
                 onDismiss: () => {
                     a();
-                }
-            })
-        ]
+                },
+            }),
+        ],
     });
 }

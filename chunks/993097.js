@@ -13,11 +13,11 @@ function g() {
     let {
             vanityURLCode: e,
             hasChanges: t,
-            errorDetails: n
+            errorDetails: n,
         } = (0, l.cj)([d.Z], () => ({
             vanityURLCode: d.Z.vanityURLCode,
             hasChanges: d.Z.hasChanges(),
-            errorDetails: d.Z.errorDetails
+            errorDetails: d.Z.errorDetails,
         })),
         { guild: g, submitting: p, errors: h, hasChanges: f } = (0, l.cj)([o.Z], () => o.Z.getProps()),
         x = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, m.LG)(h)), [h, n]),
@@ -26,7 +26,7 @@ function g() {
                 let e = {
                     premiumProgressBarEnabled: g.premiumProgressBarEnabled,
                     banner: g.banner,
-                    splash: g.splash
+                    splash: g.splash,
                 };
                 await s.Z.saveGuild(g.id, e, { throwErr: !0 });
             }
@@ -38,6 +38,6 @@ function g() {
         submitting: p,
         errorMessage: x,
         onSave: b,
-        onReset: j
+        onReset: j,
     });
 }

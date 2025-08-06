@@ -21,19 +21,23 @@ function f(e, t, n) {
         p = (0, r.Z)(e, f, n),
         h = {
             scrollLeft: 0,
-            scrollTop: 0
+            scrollTop: 0,
         },
         m = {
             x: 0,
-            y: 0
+            y: 0,
         };
     return (
-        (u || (!u && !n)) && (('body' !== (0, o.Z)(t) || (0, c.Z)(_)) && (h = (0, i.Z)(t)), (0, a.Re)(t) ? ((m = (0, r.Z)(t, !0)), (m.x += t.clientLeft), (m.y += t.clientTop)) : _ && (m.x = (0, s.Z)(_))),
+        (u || (!u && !n)) &&
+            (("body" !== (0, o.Z)(t) || (0, c.Z)(_)) && (h = (0, i.Z)(t)),
+            (0, a.Re)(t)
+                ? ((m = (0, r.Z)(t, !0)), (m.x += t.clientLeft), (m.y += t.clientTop))
+                : _ && (m.x = (0, s.Z)(_))),
         {
             x: p.left + h.scrollLeft - m.x,
             y: p.top + h.scrollTop - m.y,
             width: p.width,
-            height: p.height
+            height: p.height,
         }
     );
 }

@@ -21,16 +21,35 @@ function y(e) {
 }
 async function O(e) {
     let t,
-        { applicationId: n, activityChannelId: l, locationObject: y, analyticsLocations: O, componentId: v, sectionName: I, source: T, inviterUserId: S, customId: A, referrerId: N } = e,
+        {
+            applicationId: n,
+            activityChannelId: l,
+            locationObject: y,
+            analyticsLocations: O,
+            componentId: v,
+            sectionName: I,
+            source: T,
+            inviterUserId: S,
+            customId: A,
+            referrerId: N,
+        } = e,
         C = (0, h.Z)(),
         R = i.Z.getChannel(l),
         P = null == R ? void 0 : R.getGuildId(),
-        w = null == P || '' === P,
+        w = null == P || "" === P,
         D = a.default.getCurrentUser();
     if (null == D) return !1;
     if (null == R || (w && !R.isPrivate()) || null == l) return Promise.resolve(!1);
     let L = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == L ? void 0 : L.applicationId) != null && (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)), o.Z.getVoiceChannelId() === l && null != L && L.applicationId === n && (0, _.p)(L.location) === o.Z.getVoiceChannelId())) return ((0, E.Z)(P, L.location), Promise.resolve(!0));
+    if (
+        ((null == L ? void 0 : L.applicationId) != null &&
+            (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)),
+        o.Z.getVoiceChannelId() === l &&
+            null != L &&
+            L.applicationId === n &&
+            (0, _.p)(L.location) === o.Z.getVoiceChannelId())
+    )
+        return (0, E.Z)(P, L.location), Promise.resolve(!0);
     let x = await (0, p.Z)(n, l);
     if (
         !(await (0, f.p)({
@@ -39,7 +58,7 @@ async function O(e) {
             channel: R,
             currentEmbeddedApplication: t,
             embeddedActivitiesManager: C,
-            user: D
+            user: D,
         }))
     )
         return !1;
@@ -50,7 +69,7 @@ async function O(e) {
             if (
                 !(await (0, g.Z)({
                     channelId: R.id,
-                    bypassChangeModal: null != t
+                    bypassChangeModal: null != t,
                 }))
             )
                 return !1;
@@ -71,7 +90,7 @@ async function O(e) {
             source: T,
             inviterUserId: S,
             customId: A,
-            referrerId: N
+            referrerId: N,
         })
     );
 }

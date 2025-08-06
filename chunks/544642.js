@@ -10,10 +10,10 @@ function u(e, t) {
     return t === a.IlC.POPOUT
         ? null
         : (0, n.jsx)(o.sNh, {
-              id: 'report-raid',
+              id: "report-raid",
               label: l.intl.string(l.t.cswId3),
               action: () => {
-                  ((0, c.xf)(), (0, i.J)(e));
-              }
+                  (0, c.xf)(), (0, i.J)(e);
+              },
           });
 }

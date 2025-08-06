@@ -1,6 +1,6 @@
 n.d(t, {
     ps: () => _,
-    y9: () => f
+    y9: () => f,
 });
 var r = n(255367);
 n(73800);
@@ -16,7 +16,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,10 +62,17 @@ function d(e, t) {
     );
 }
 function f(e) {
-    return 'number' != typeof e ? (0, i.pxk)(e) * a.hs : e * a.hs;
+    return "number" != typeof e ? (0, i.pxk)(e) * a.hs : e * a.hs;
 }
 let _ = (e) => {
-    let { analyticsLocations: t, initialSelectedDecoration: a, initialSelectedDecorationId: l, isTryItOutFlow: u, guild: f, onClose: _ } = e;
+    let {
+        analyticsLocations: t,
+        initialSelectedDecoration: a,
+        initialSelectedDecorationId: l,
+        isTryItOutFlow: u,
+        guild: f,
+        onClose: _,
+    } = e;
     (0, i.ZDy)(async () => {
         (0, o.s1)().location.pathname === s.Z5c.COLLECTIBLES_SHOP_FULLSCREEN && (0, o.uL)(s.Z5c.APP);
         let { default: e } = await Promise.resolve().then(n.bind(n, 235400));
@@ -79,8 +86,8 @@ let _ = (e) => {
                     initialSelectedDecoration: a,
                     initialSelectedDecorationId: l,
                     isTryItOutFlow: u,
-                    guild: f
-                })
+                    guild: f,
+                }),
             );
     }, {});
 };

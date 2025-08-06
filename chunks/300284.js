@@ -5,15 +5,21 @@ var r = n(73800),
     a = n(981631),
     s = n(526761);
 function l() {
-    let { guild: e, scrollPosition: t, analyticsLocation: n, analyticsLocations: l, openWithoutBackstack: c } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    let {
+        guild: e,
+        scrollPosition: t,
+        analyticsLocation: n,
+        analyticsLocations: l,
+        openWithoutBackstack: c,
+    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (0, r.useCallback)(() => {
-        (null != e && (0, o.Fq)(e),
+        null != e && (0, o.Fq)(e),
             i.Z.open(a.oAB.PROFILE_CUSTOMIZATION, null != e ? s.NB.GUILD : s.NB.USER_PROFILE, {
                 analyticsLocation: n,
                 analyticsLocations: l,
                 openWithoutBackstack: c,
-                scrollPosition: t
-            }));
+                scrollPosition: t,
+            });
     }, [e, t, n, l, c]);
 }
-(n(778825), n(663389));
+n(778825), n(663389);

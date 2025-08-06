@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(997841));
+n.d(t, { Z: () => m }), n(388685), n(997841);
 var r = n(544891),
     i = n(115130),
     l = n(287545),
@@ -19,26 +19,27 @@ let m = {
                 .required()
                 .keys({
                     event_name: e.string().required(),
-                    event_properties: (0, p.Z)(e).required()
+                    event_properties: (0, p.Z)(e).required(),
                 }),
         handler(e) {
             var t;
             let {
                 socket: n,
-                args: { event_name: r, event_properties: i }
+                args: { event_name: r, event_properties: i },
             } = e;
-            ((0, d.bu)(n.transport), (0, d._f)(n.application));
+            (0, d.bu)(n.transport), (0, d._f)(n.application);
             let o = n.application.id,
                 p = (0, h.Z)(),
                 f = null == p ? void 0 : p.getGuildId(),
                 m = a.Z.getApplication(o);
-            if (!(0, c.yE)(null != (t = null == m ? void 0 : m.flags) ? t : 0, g.udG.EMBEDDED_FIRST_PARTY)) throw new u.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+            if (!(0, c.yE)(null != (t = null == m ? void 0 : m.flags) ? t : 0, g.udG.EMBEDDED_FIRST_PARTY))
+                throw new u.Z({ errorCode: g.lTL.INVALID_COMMAND }, "This application cannot access this API");
             let b = (0, l.U)(o),
                 _ = {
                     activity_application_id: o,
                     activity_channel_type: null == p ? void 0 : p.type,
                     activity_guild_id: f,
-                    activity_user_session_id: null == b ? void 0 : b.activityUserSessionId
+                    activity_user_session_id: null == b ? void 0 : b.activityUserSessionId,
                 };
             s.default.track(
                 r,
@@ -46,48 +47,48 @@ let m = {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
-                })({}, _, i)
+                })({}, _, i),
             );
-        }
+        },
     },
     [g.Etm.GET_APPLICATION_TICKET]: {
         scope: f.lH,
         handler(e) {
             let { socket: t } = e,
                 n = t.application.id;
-            if (null == n) throw new u.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
+            if (null == n) throw new u.Z({ errorCode: g.lTL.INVALID_COMMAND }, "No application.");
             return r.tn
                 .post({
                     url: g.ANM.APPLICATION_TICKET(n),
                     body: { test_mode: o.Z.inTestModeForApplication(n) || i.Z.inDevModeForApplication(n) },
                     retries: 3,
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
                 .then((e) => {
                     let { body: t } = e;
                     return t;
                 });
-        }
-    }
+        },
+    },
 };

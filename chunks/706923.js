@@ -1,4 +1,4 @@
-(l.d(t, { default: () => m }), l(388685));
+l.d(t, { default: () => m }), l(388685);
 var e = l(255367);
 l(73800);
 var i = l(399606),
@@ -18,14 +18,14 @@ function m(n) {
         Z = null == f ? void 0 : f.guild_id;
     return (0, e.jsx)(s.ConfirmModal, {
         header: g.intl.string(g.t.aIz1oa),
-        confirmText: g.intl.string(g.t['cY+Ooa']),
-        cancelText: g.intl.string(g.t['ETE/oK']),
+        confirmText: g.intl.string(g.t["cY+Ooa"]),
+        cancelText: g.intl.string(g.t["ETE/oK"]),
         confirmButtonColor: o.zx.Colors.BRAND,
         onConfirm: () => a.Z.crosspostMessage(t, l),
         transitionState: m,
         onClose: x,
         children: (0, e.jsx)(s.Text, {
-            variant: 'text-md/normal',
+            variant: "text-md/normal",
             className: h.spacing,
             children: C
                 ? (0, e.jsx)(s.$jN, {})
@@ -34,20 +34,20 @@ function m(n) {
                         children: [
                             (0, e.jsx)(s.Text, {
                                 className: h.spacing,
-                                variant: 'text-sm/normal',
-                                children: g.intl.format(g.t.GCGrND, { numGuildsFollowing: p.guildsFollowing })
+                                variant: "text-sm/normal",
+                                children: g.intl.format(g.t.GCGrND, { numGuildsFollowing: p.guildsFollowing }),
                             }),
                             (0, e.jsx)(s.Text, {
-                                variant: 'text-sm/normal',
+                                variant: "text-sm/normal",
                                 children: g.intl.format(g.t.IMhGZ2, {
                                     onClick: () => {
                                         null != Z && null != x && (x(), r.Z.open(Z, d.pNK.ANALYTICS));
-                                    }
-                                })
-                            })
-                        ]
+                                    },
+                                }),
+                            }),
+                        ],
                     })
-                  : g.intl.string(g.t['8FpqOj'])
-        })
+                  : g.intl.string(g.t["8FpqOj"]),
+        }),
     });
 }

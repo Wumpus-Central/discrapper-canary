@@ -12,7 +12,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,20 +22,20 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let u = (e, t) => {
-    let l = 'group-dm-edit-modal-'.concat(e),
+    let l = "group-dm-edit-modal-".concat(e),
         u = !1,
         d = (e) => {
             u = e;
@@ -45,11 +45,11 @@ let u = (e, t) => {
                 ? o.Z.show({
                       title: s.intl.string(s.t.pvRCSk),
                       body: s.intl.string(s.t.DRi46e),
-                      confirmText: s.intl.string(s.t['6GQDFh']),
-                      confirmVariant: 'critical-primary',
+                      confirmText: s.intl.string(s.t["6GQDFh"]),
+                      confirmVariant: "critical-primary",
                       cancelText: s.intl.string(s.t.DmDzZG),
                       onConfirm: () => (0, i.Mr3)(l),
-                      onCancel: a.dG
+                      onCancel: a.dG,
                   })
                 : (0, i.Mr3)(l);
         };
@@ -64,15 +64,15 @@ let u = (e, t) => {
                             closeOrShowDiscardChangesAlert: f,
                             setHasPendingChanges: d,
                             channelId: e,
-                            location: t
+                            location: t,
                         },
-                        n
-                    )
+                        n,
+                    ),
                 );
         },
         {
             modalKey: l,
-            onCloseRequest: f
-        }
+            onCloseRequest: f,
+        },
     );
 };

@@ -7,10 +7,10 @@ function a(e) {
         s = (0, i.xF)(t.settings.application_id, t.settings.winner_asset_id);
     return null == s
         ? null
-        : (0, r.jsx)('img', {
+        : (0, r.jsx)("img", {
               className: n,
               src: s,
               alt: o.intl.string(o.t.QyRmzc),
-              ref: a
+              ref: a,
           });
 }

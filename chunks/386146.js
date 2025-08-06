@@ -1,22 +1,22 @@
 n.d(t, {
     H3: () => l,
     JN: () => a,
-    tc: () => s
+    tc: () => s,
 });
 var r = n(818083),
     i = n(984134);
 let o = (0, r.B)({
-    kind: 'user',
-    id: '2025-02_av_error_codes',
-    label: 'AV error new UI',
+    kind: "user",
+    id: "2025-02_av_error_codes",
+    label: "AV error new UI",
     defaultConfig: { avErrorUIEnabled: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Show new AV error UI',
-            config: { avErrorUIEnabled: !0 }
-        }
-    ]
+            label: "Show new AV error UI",
+            config: { avErrorUIEnabled: !0 },
+        },
+    ],
 });
 function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
@@ -25,8 +25,8 @@ function a(e) {
         { location: t },
         {
             disable: r,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     );
 }
 function s(e) {
@@ -36,8 +36,8 @@ function s(e) {
         { location: t },
         {
             disable: r,
-            autoTrackExposure: n
-        }
+            autoTrackExposure: n,
+        },
     ).avErrorUIEnabled;
 }
 function l(e) {

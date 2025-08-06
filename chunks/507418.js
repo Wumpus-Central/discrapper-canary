@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(35282));
+n.d(t, { Z: () => g }), n(35282);
 var r = n(255367);
 n(73800);
 var i = n(512722),
@@ -17,7 +17,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,23 +66,26 @@ function g(e, t) {
     if ((0, s.cp)(t)) return (0, r.jsx)(l.Z, {});
     if ((0, f.Z)(t)) {
         var n, i;
-        let o = (null != (i = null == t || null == (n = t.author) ? void 0 : n.username) ? i : '').split(' ').slice(0, -1).join(' '),
+        let o = (null != (i = null == t || null == (n = t.author) ? void 0 : n.username) ? i : "")
+                .split(" ")
+                .slice(0, -1)
+                .join(" "),
             { guild_id: s } = t.messageReference;
         if (null != s)
             return (0, r.jsx)(a.Z, {
                 setPopoutRef: e.setPopoutRef,
                 guildId: s,
-                name: o
+                name: o,
             });
     }
-    if (null != t.interaction && 'SENDING' === t.state) return (0, r.jsx)(r.Fragment, {});
+    if (null != t.interaction && "SENDING" === t.state) return (0, r.jsx)(r.Fragment, {});
     let _ = null != t.webhookId ? t.author : d.default.getUser(t.author.id);
-    o()(null != _, 'renderUserGuildPopout: user should never be null');
+    o()(null != _, "renderUserGuildPopout: user should never be null");
     let h = d.default.getCurrentUser();
-    o()(null != h, 'renderUserGuildPopout: currentUser should never be null');
+    o()(null != h, "renderUserGuildPopout: currentUser should never be null");
     let g = u.Z.getChannel(t.channel_id);
     return (
-        o()(null != g, 'renderUserGuildPopout: channel should never be null'),
+        o()(null != g, "renderUserGuildPopout: channel should never be null"),
         (0, r.jsx)(
             c.Z,
             m(p({}, e), {
@@ -90,8 +93,8 @@ function g(e, t) {
                 currentUser: h,
                 guildId: g.guild_id,
                 channelId: t.channel_id,
-                messageId: t.id
-            })
+                messageId: t.id,
+            }),
         )
     );
 }

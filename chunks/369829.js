@@ -2,9 +2,9 @@ n.d(t, { Z: () => o });
 var r = n(49691),
     i = { passive: !0 };
 let o = {
-    name: 'eventListeners',
+    name: "eventListeners",
     enabled: !0,
-    phase: 'write',
+    phase: "write",
     fn: function () {},
     effect: function (e) {
         var t = e.state,
@@ -19,17 +19,17 @@ let o = {
         return (
             s &&
                 d.forEach(function (e) {
-                    e.addEventListener('scroll', n.update, i);
+                    e.addEventListener("scroll", n.update, i);
                 }),
-            c && u.addEventListener('resize', n.update, i),
+            c && u.addEventListener("resize", n.update, i),
             function () {
-                (s &&
+                s &&
                     d.forEach(function (e) {
-                        e.removeEventListener('scroll', n.update, i);
+                        e.removeEventListener("scroll", n.update, i);
                     }),
-                    c && u.removeEventListener('resize', n.update, i));
+                    c && u.removeEventListener("resize", n.update, i);
             }
         );
     },
-    data: {}
+    data: {},
 };

@@ -1,6 +1,6 @@
-(n.d(t, {
+n.d(t, {
     NN: () => m,
-    b1: () => d
+    b1: () => d,
 }),
     n(190126),
     n(368063),
@@ -9,16 +9,16 @@
     n(490233),
     n(97749),
     n(388685),
-    n(415506));
+    n(415506);
 var l = n(73800),
     a = n(772848),
     i = n(304809),
     r = n(586826),
     s = n(943351);
-let o = new Worker(new URL('/assets/' + n.u('14315'), n.b)),
+let o = new Worker(new URL("/assets/" + n.u("14315"), n.b)),
     u = (0, i.N)();
 async function c(e) {
-    if (null == u) throw Error('Failed to create audio context');
+    if (null == u) throw Error("Failed to create audio context");
     let t = await e.arrayBuffer();
     return (await u.decodeAudioData(t)).getChannelData(0);
 }
@@ -38,24 +38,24 @@ let f = (function (e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             l.forEach(function (t) {
                 var l;
-                ((l = n[t]),
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = l));
-            }));
+                        : (e[t] = l);
+            });
     }
     return e;
 })({}, s.nl);
@@ -67,28 +67,28 @@ function m(e, t, n) {
         p = l.useCallback(
             (e, t) => {
                 var l;
-                (d(null),
+                d(null),
                     ((l = t.offsetWidth),
                     new Promise((t) => {
                         let i = (0, a.Z)(),
                             r = (e) => {
                                 let {
-                                    data: { waveform: n, id: l, normalizedVolumeMultipler: a }
+                                    data: { waveform: n, id: l, normalizedVolumeMultipler: a },
                                 } = e;
-                                (i === l && (t(n), h(a)), null == o || o.removeEventListener('message', r));
+                                i === l && (t(n), h(a)), null == o || o.removeEventListener("message", r);
                             };
-                        (null == o || o.addEventListener('message', r),
+                        null == o || o.addEventListener("message", r),
                             null == o ||
                                 o.postMessage({
                                     id: i,
                                     options: n,
                                     config: f,
                                     width: l,
-                                    rawBufferData: e
-                                }));
-                    })).then(d));
+                                    rawBufferData: e,
+                                });
+                    })).then(d);
             },
-            [n]
+            [n],
         );
     return (
         l.useEffect(() => {

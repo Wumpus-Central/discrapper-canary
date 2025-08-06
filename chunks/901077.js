@@ -4,24 +4,24 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -43,13 +43,13 @@ function l(e, t) {
         e
     );
 }
-let a = '<removed>';
+let a = "<removed>";
 function o(e) {
     var t, n;
     let o = i({}, e);
     return (
-        'object' == typeof (t = o).args &&
-            'string' == typeof t.cmd &&
+        "object" == typeof (t = o).args &&
+            "string" == typeof t.cmd &&
             (o = (function (e) {
                 switch (e.cmd) {
                     case r.Etm.AUTHENTICATE:
@@ -59,8 +59,8 @@ function o(e) {
                         return i({}, e);
                 }
             })(o)),
-        'object' == typeof (n = o).data &&
-            'string' == typeof n.cmd &&
+        "object" == typeof (n = o).data &&
+            "string" == typeof n.cmd &&
             (o = (function (e) {
                 switch (e.cmd) {
                     case r.Etm.AUTHENTICATE:

@@ -14,13 +14,13 @@ function u(e) {
         guild: t,
         onDismissed: n,
         cta: s.intl.string(s.t.RzWDqa),
-        message: s.intl.format(s.t['kQ/MDg'], {}),
+        message: s.intl.format(s.t["kQ/MDg"], {}),
         type: o.vID.COMMANDS_MIGRATION,
         image: c,
         onClick: () => {
-            (n(), l.Z.open(t.id, o.pNK.INTEGRATIONS));
+            n(), l.Z.open(t.id, o.pNK.INTEGRATIONS);
         },
         imageMarginTop: 15,
-        imageMarginX: 22
+        imageMarginX: 22,
     });
 }

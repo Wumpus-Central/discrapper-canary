@@ -11,19 +11,19 @@ var r = n(704215),
 let u = () => {
     let e = a.Z.getArticleURL(o.BhN.XBOX_CONNECTION);
     return (0, i.jsx)(l.t, {
-        title: c.intl.string(c.t['2okkZW']),
+        title: c.intl.string(c.t["2okkZW"]),
         body: c.intl.format(c.t.OnERSU, { help_article: e }),
-        img: (0, i.jsx)('img', {
+        img: (0, i.jsx)("img", {
             src: d,
-            width: 'auto',
-            height: '45',
-            alt: ''
+            width: "auto",
+            height: "45",
+            alt: "",
         }),
         newIndicatorDismissibleContent: r.z.XBOX_ONE_WAY_RECONNECT,
         onClick: () =>
             (0, s.Z)({
                 platformType: o.ABu.XBOX,
-                location: 'Xbox two way upsell'
-            })
+                location: "Xbox two way upsell",
+            }),
     });
 };

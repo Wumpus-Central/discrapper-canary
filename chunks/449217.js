@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var r = n(399606),
     i = n(597688),
     o = n(1870);
@@ -7,6 +7,6 @@ let a = (e) => {
     return {
         category: t,
         product: n,
-        purchase: (0, r.e7)([o.Z], () => o.Z.getPurchase(e))
+        purchase: (0, r.e7)([o.Z], () => o.Z.getPurchase(e)),
     };
 };

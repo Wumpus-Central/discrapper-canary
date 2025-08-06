@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     SD: () => p,
     kS: () => m,
     np: () => b,
-    uZ: () => y
+    uZ: () => y,
 }),
     n(388685),
-    n(953529));
+    n(953529);
 var r = n(866442),
     i = n(911969),
     o = n(622449),
@@ -24,13 +24,17 @@ let f = (e, t) => ({
                 ? s.ZP.getEmojiURL({
                       id: e.id,
                       animated: e.animated || !1,
-                      size: 48
+                      size: 48,
                   })
-                : void 0
+                : void 0,
     }),
     _ = (e) => ((null == e ? void 0 : e.errorCode) === 429 ? d.intl.string(d.t.fitPBQ) : d.intl.string(d.t.VCsUJi)),
     p = (e, t, n) => {
-        let r = (null == e ? void 0 : e.data.interactionType) === i.B8.MESSAGE_COMPONENT && (null == e ? void 0 : e.state) === o.F.FAILED ? e.data.componentId : null;
+        let r =
+            (null == e ? void 0 : e.data.interactionType) === i.B8.MESSAGE_COMPONENT &&
+            (null == e ? void 0 : e.state) === o.F.FAILED
+                ? e.data.componentId
+                : null;
         if (null != (null != r ? E(n, r) : null)) {
             var a;
             return null != (a = null == t ? void 0 : t.interactionError) ? a : _(e);
@@ -55,7 +59,7 @@ let f = (e, t) => ({
             case i.re.CONTAINER:
                 return !0;
             case i.re.CONTENT_INVENTORY_ENTRY:
-                return (0, u.Io)('canShowComponent');
+                return (0, u.Io)("canShowComponent");
         }
     };
 function m(e) {
@@ -69,7 +73,7 @@ function g(e, t) {
             t.components.forEach((t) => g(e, t));
             break;
         case i.re.SECTION:
-            (t.components.forEach((t) => g(e, t)), g(e, t.accessory));
+            t.components.forEach((t) => g(e, t)), g(e, t.accessory);
             break;
         case i.re.CONTAINER:
             t.components.forEach((t) => g(e, t));
@@ -91,8 +95,8 @@ function b(e) {
     let t = Array.from(m(e).values())
         .filter((e) => e.type === i.re.TEXT_DISPLAY)
         .map((e) => e.content)
-        .join('\n');
-    return '' !== t ? t : null;
+        .join("\n");
+    return "" !== t ? t : null;
 }
 function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -112,7 +116,7 @@ function O(e, t, n) {
             return {
                 type: i.re.ACTION_ROW,
                 id: v(n),
-                components: t
+                components: t,
             };
         }
         case i.re.BUTTON: {
@@ -126,7 +130,7 @@ function O(e, t, n) {
                 url: e.url,
                 label: e.label,
                 emoji: t,
-                skuId: e.sku_id
+                skuId: e.sku_id,
             };
         }
         case i.re.STRING_SELECT:
@@ -141,11 +145,11 @@ function O(e, t, n) {
                     value: e.value,
                     default: e.default,
                     description: e.description,
-                    emoji: null != e.emoji ? f(e.emoji, y) : void 0
+                    emoji: null != e.emoji ? f(e.emoji, y) : void 0,
                 })),
                 placeholder: null != (o = e.placeholder) ? o : d.intl.string(d.t.Otr6W1),
                 minValues: e.min_values,
-                maxValues: e.max_values
+                maxValues: e.max_values,
             };
         case i.re.TEXT_INPUT:
             return {
@@ -159,7 +163,7 @@ function O(e, t, n) {
                 disabled: e.disabled,
                 required: null != (s = e.required) && s,
                 minLength: e.min_length,
-                maxLength: e.max_length
+                maxLength: e.max_length,
             };
         case i.re.USER_SELECT:
             return {
@@ -170,7 +174,7 @@ function O(e, t, n) {
                 placeholder: null != (u = e.placeholder) ? u : d.intl.string(d.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
-                defaultValues: e.default_values
+                defaultValues: e.default_values,
             };
         case i.re.ROLE_SELECT:
             return {
@@ -181,7 +185,7 @@ function O(e, t, n) {
                 placeholder: null != (_ = e.placeholder) ? _ : d.intl.string(d.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
-                defaultValues: e.default_values
+                defaultValues: e.default_values,
             };
         case i.re.MENTIONABLE_SELECT:
             return {
@@ -192,7 +196,7 @@ function O(e, t, n) {
                 placeholder: null != (p = e.placeholder) ? p : d.intl.string(d.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
-                defaultValues: e.default_values
+                defaultValues: e.default_values,
             };
         case i.re.CHANNEL_SELECT:
             return {
@@ -204,7 +208,7 @@ function O(e, t, n) {
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 channelTypes: e.channel_types,
-                defaultValues: e.default_values
+                defaultValues: e.default_values,
             };
         case i.re.SECTION: {
             let t = e.components.map((e, t) => b(e, t)).filter(l.lm),
@@ -214,14 +218,14 @@ function O(e, t, n) {
                 type: i.re.SECTION,
                 id: v(n),
                 components: t,
-                accessory: r
+                accessory: r,
             };
         }
         case i.re.TEXT_DISPLAY:
             return {
                 type: i.re.TEXT_DISPLAY,
                 id: v(n),
-                content: e.content
+                content: e.content,
             };
         case i.re.THUMBNAIL:
             return {
@@ -229,7 +233,7 @@ function O(e, t, n) {
                 id: v(n),
                 media: (0, a.ym)(e.media),
                 description: e.description,
-                spoiler: e.spoiler
+                spoiler: e.spoiler,
             };
         case i.re.MEDIA_GALLERY:
             return {
@@ -238,8 +242,8 @@ function O(e, t, n) {
                 items: e.items.map((e) => ({
                     media: (0, a.ym)(e.media),
                     description: e.description,
-                    spoiler: e.spoiler
-                }))
+                    spoiler: e.spoiler,
+                })),
             };
         case i.re.FILE:
             return {
@@ -248,21 +252,21 @@ function O(e, t, n) {
                 file: (0, a.ym)(e.file),
                 name: e.name,
                 size: e.size,
-                spoiler: e.spoiler
+                spoiler: e.spoiler,
             };
         case i.re.SEPARATOR:
             return {
                 type: i.re.SEPARATOR,
                 id: v(n),
                 divider: null == (g = e.divider) || g,
-                spacing: null != (E = e.spacing) ? E : i.US.SMALL
+                spacing: null != (E = e.spacing) ? E : i.US.SMALL,
             };
         case i.re.CONTENT_INVENTORY_ENTRY:
             if (null == e.content_inventory_entry) return null;
             return {
                 type: i.re.CONTENT_INVENTORY_ENTRY,
                 id: v(n),
-                contentInventoryEntry: e.content_inventory_entry
+                contentInventoryEntry: e.content_inventory_entry,
             };
         case i.re.CONTAINER: {
             let t = e.components.map((e, t) => b(e, t)).filter(l.lm);
@@ -271,7 +275,7 @@ function O(e, t, n) {
                 id: v(n),
                 accentColor: null != e.accent_color ? (0, r.ho)(e.accent_color, !0) : void 0,
                 spoiler: e.spoiler,
-                components: t
+                components: t,
             };
         }
         default:
@@ -279,5 +283,5 @@ function O(e, t, n) {
     }
 }
 function v(e) {
-    return (0, c.FF)(e.join(','));
+    return (0, c.FF)(e.join(","));
 }

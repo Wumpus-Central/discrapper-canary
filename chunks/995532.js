@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => I,
-    a: () => o
+    a: () => o,
 });
 var r,
     l,
@@ -41,15 +41,15 @@ class m extends (s = i.ZP.Store) {
         return null == t || 0 === t.welcome_channels.length;
     }
 }
-((l = 'WelcomeScreenStore'),
-    (r = 'displayName') in m
+(l = "WelcomeScreenStore"),
+    (r = "displayName") in m
         ? Object.defineProperty(m, r, {
               value: l,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (m[r] = l));
+        : (m[r] = l);
 let I = new m(a.Z, {
     INVITE_RESOLVE_SUCCESS: A,
     INVITE_ACCEPT_SUCCESS: A,
@@ -57,26 +57,26 @@ let I = new m(a.Z, {
     WELCOME_SCREEN_UPDATE: T,
     WELCOME_SCREEN_VIEW: function (e) {
         let { guildId: t, isLurking: n } = e;
-        ((c[t] = !0), n && (E = !0));
+        (c[t] = !0), n && (E = !0);
     },
     GUILD_STOP_LURKING: function () {
         E = !1;
     },
     GUILD_DELETE: function (e) {
         let {
-            guild: { id: t }
+            guild: { id: t },
         } = e;
         c[t] = !1;
     },
     WELCOME_SCREEN_FETCH_START: function () {
-        ((d = !0), (_ = !1));
+        (d = !0), (_ = !1);
     },
     WELCOME_SCREEN_FETCH_SUCCESS: function (e) {
-        ((d = !1), (_ = !1));
+        (d = !1), (_ = !1);
         let { welcomeScreen: t, guildId: n } = e;
         u[n] = null != t ? t : o;
     },
     WELCOME_SCREEN_FETCH_FAIL: function () {
-        ((d = !1), (_ = !0));
-    }
+        (d = !1), (_ = !0);
+    },
 });

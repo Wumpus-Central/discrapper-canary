@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(539854), n(388685));
+n.d(t, { Z: () => _ }), n(539854), n(388685);
 var r,
     i = n(348327),
     o = n.n(i),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,5 +35,5 @@ class f extends (r = a.ZP.Store) {
         return u;
     }
 }
-l(f, 'displayName', 'FirstPartyRichPresenceStore');
+l(f, "displayName", "FirstPartyRichPresenceStore");
 let _ = new f(s.Z);

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => g,
-    u: () => f
+    u: () => f,
 });
 var r = n(255367);
 n(73800);
@@ -22,25 +22,25 @@ function f(e) {
             (0, r.jsx)(a.Ee, { src: n(689411) }),
             (0, r.jsx)(a.Dx, {
                 className: l()(m.marginTop20, m.marginBottom8, p.flexCenter),
-                children: d.intl.string(d.t.eL5z0t)
+                children: d.intl.string(d.t.eL5z0t),
             }),
             (0, r.jsx)(a.DK, {
                 className: m.marginBottom40,
-                children: d.intl.string(d.t['poAv6+'])
+                children: d.intl.string(d.t["poAv6+"]),
             }),
             (0, r.jsxs)(o.Zbd, {
                 className: h.card,
                 type: o.Zbd.Types.CUSTOM,
                 children: [
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("img", {
+                        alt: "",
                         className: h.cardAccentLeft,
-                        src: n(70519)
+                        src: n(70519),
                     }),
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("img", {
+                        alt: "",
                         className: h.cardAccentRight,
-                        src: n(806848)
+                        src: n(806848),
                     }),
                     (0, r.jsxs)(c.Z, {
                         className: h.cardContents,
@@ -49,22 +49,22 @@ function f(e) {
                         grow: 0,
                         children: [
                             (0, r.jsx)(o.Text, {
-                                tag: 'strong',
+                                tag: "strong",
                                 className: h.buttonTitle,
-                                variant: 'text-md/normal',
+                                variant: "text-md/normal",
                                 style: { color: s.Z.unsafe_rawColors.PRIMARY_300.css },
-                                children: t
+                                children: t,
                             }),
                             (0, r.jsx)(a.zx, {
                                 className: h.button,
                                 onClick: u,
-                                children: i
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
+                                children: i,
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function g(e) {
@@ -74,7 +74,7 @@ function g(e) {
         children: (0, r.jsx)(f, {
             text: t,
             buttonCta: n,
-            onClick: l
-        })
+            onClick: l,
+        }),
     });
 }

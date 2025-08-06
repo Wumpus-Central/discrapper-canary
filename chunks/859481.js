@@ -23,21 +23,21 @@ function y(e) {
     let { errorDetails: t, originalVanityURLCode: n } = e;
     if (null != t)
         return (0, r.jsx)(s.Text, {
-            variant: 'text-md/normal',
-            color: 'text-danger',
+            variant: "text-md/normal",
+            color: "text-danger",
             className: O.vanityInfo,
-            children: (0, h.i)(null == t ? void 0 : t.code)
+            children: (0, h.i)(null == t ? void 0 : t.code),
         });
     if (null != n && n.length > 0) {
         let e = (0, d.Z)(n);
         return (0, r.jsx)(s.Text, {
-            variant: 'text-sm/medium',
-            color: 'text-secondary',
+            variant: "text-sm/medium",
+            color: "text-secondary",
             className: O.vanityInfo,
-            children: _.intl.format(_.t['1qTOvr'], {
+            children: _.intl.format(_.t["1qTOvr"], {
                 urlText: e,
-                urlValue: e
-            })
+                urlValue: e,
+            }),
         });
     }
     return null;
@@ -46,7 +46,7 @@ function C(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: o, hasError: c } = e,
         d = (null == t ? void 0 : t.features.has(j.oNc.VANITY_URL)) === !0,
         u = i.useCallback(() => {
-            (0, p.Gy)('');
+            (0, p.Gy)("");
         }, []),
         m = i.useCallback((e) => {
             (0, p.Gy)(e);
@@ -57,28 +57,28 @@ function C(e) {
               editable: !0,
               className: O.editVanityUrlCard,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: O.formTitleField,
                       children: [
                           (0, r.jsx)(s.X6q, {
-                              variant: 'heading-sm/semibold',
-                              color: 'text-default',
-                              children: _.intl.string(_.t['6oJyq6'])
+                              variant: "heading-sm/semibold",
+                              color: "text-default",
+                              children: _.intl.string(_.t["6oJyq6"]),
                           }),
                           n.length > 0
                               ? (0, r.jsx)(s.Text, {
-                                    variant: 'text-sm/medium',
-                                    color: 'text-secondary',
-                                    children: _.intl.format(_.t.MVWOUV, { uses: l })
+                                    variant: "text-sm/medium",
+                                    color: "text-secondary",
+                                    children: _.intl.format(_.t.MVWOUV, { uses: l }),
                                 })
-                              : null
-                      ]
+                              : null,
+                      ],
                   }),
                   (0, r.jsx)(b.Z, {
                       value: n,
                       onChange: m,
                       error: c,
-                      disabled: !d
+                      disabled: !d,
                   }),
                   null != o && o.length > 0
                       ? (0, r.jsx)(a.zx, {
@@ -87,19 +87,19 @@ function C(e) {
                             look: a.zx.Looks.LINK,
                             size: a.zx.Sizes.MIN,
                             color: a.zx.Colors.RED,
-                            children: _.intl.string(_.t['3ggb6O'])
+                            children: _.intl.string(_.t["3ggb6O"]),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           });
 }
 function N(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: a, originalVanityURLCode: s, errorDetails: d } = e,
         { analyticsLocations: p } = (0, c.ZP)(),
-        b = (0, u.g1)(t.id, 'GuildSettingsBoostPerks'),
+        b = (0, u.g1)(t.id, "GuildSettingsBoostPerks"),
         _ = i.useCallback(
             (e) => {
-                (e.preventDefault(),
+                e.preventDefault(),
                     e.stopPropagation(),
                     b
                         ? (g.Z.close(), (0, m.Z)(t.id, o.Z.GUILD_POWERUPS_GUILD_SETTINGS_VANITY_URL, l.A$))
@@ -109,10 +109,10 @@ function N(e) {
                               analyticsSection: j.jXE.GUILD_SETTINGS_VANITY_URL,
                               analyticsObject: j.qAy.BUTTON_CTA,
                               perks: (0, v.WW)(),
-                              targetPremiumGuildTier: j.Eu4.TIER_3
-                          }));
+                              targetPremiumGuildTier: j.Eu4.TIER_3,
+                          });
             },
-            [p, t, b]
+            [p, t, b],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -122,16 +122,16 @@ function N(e) {
                       vanityURLCode: n,
                       vanityURLUses: a,
                       originalVanityURLCode: s,
-                      hasError: null != d
+                      hasError: null != d,
                   })
                 : (0, r.jsx)(f.P, {
                       onClick: _,
-                      className: O.upsellButton
+                      className: O.upsellButton,
                   }),
             (0, r.jsx)(y, {
                 errorDetails: d,
-                originalVanityURLCode: s
-            })
-        ]
+                originalVanityURLCode: s,
+            }),
+        ],
     });
 }

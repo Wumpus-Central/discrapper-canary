@@ -1,6 +1,6 @@
 a.d(e, {
     D: () => A,
-    N: () => d
+    N: () => d,
 });
 var r = a(263449),
     _ = a(696486),
@@ -33,7 +33,7 @@ function d() {
                 O = (null != I ? R.get(I) : void 0) || h,
                 P = O ? (0, _.XU)(O).description : p.getScopeData().transactionName,
                 g = p.getUser(),
-                D = a.getIntegrationByName('Replay'),
+                D = a.getIntegrationByName("Replay"),
                 C = D && D.getReplayId(),
                 m = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
             try {
@@ -45,24 +45,24 @@ function d() {
                     environment: A.environment,
                     transaction: P,
                     [n.JQ]: t.value,
-                    [n.S3]: 'auto.http.browser.inp',
+                    [n.S3]: "auto.http.browser.inp",
                     user: m || void 0,
                     profile_id: e || void 0,
                     replay_id: C || void 0,
-                    'user_agent.original': s.m.navigator && s.m.navigator.userAgent
+                    "user_agent.original": s.m.navigator && s.m.navigator.userAgent,
                 }),
                 S = (0, o.qp)({
                     name: v,
                     op: `ui.interaction.${d}`,
                     attributes: y,
                     startTime: f,
-                    experimental: { standalone: !0 }
+                    experimental: { standalone: !0 },
                 });
-            (S.addEvent('inp', {
-                [n.E1]: 'millisecond',
-                [n.Wb]: t.value
+            S.addEvent("inp", {
+                [n.E1]: "millisecond",
+                [n.Wb]: t.value,
             }),
-                S.end(f + T));
+                S.end(f + T);
         });
         return () => {
             t();
@@ -71,32 +71,32 @@ function d() {
     return () => void 0;
 }
 let N = {
-    click: 'click',
-    pointerdown: 'click',
-    pointerup: 'click',
-    mousedown: 'click',
-    mouseup: 'click',
-    touchstart: 'click',
-    touchend: 'click',
-    mouseover: 'hover',
-    mouseout: 'hover',
-    mouseenter: 'hover',
-    mouseleave: 'hover',
-    pointerover: 'hover',
-    pointerout: 'hover',
-    pointerenter: 'hover',
-    pointerleave: 'hover',
-    dragstart: 'drag',
-    dragend: 'drag',
-    drag: 'drag',
-    dragenter: 'drag',
-    dragleave: 'drag',
-    dragover: 'drag',
-    drop: 'drag',
-    keydown: 'press',
-    keyup: 'press',
-    keypress: 'press',
-    input: 'press'
+    click: "click",
+    pointerdown: "click",
+    pointerup: "click",
+    mousedown: "click",
+    mouseup: "click",
+    touchstart: "click",
+    touchend: "click",
+    mouseover: "hover",
+    mouseout: "hover",
+    mouseenter: "hover",
+    mouseleave: "hover",
+    pointerover: "hover",
+    pointerout: "hover",
+    pointerenter: "hover",
+    pointerleave: "hover",
+    dragstart: "drag",
+    dragend: "drag",
+    drag: "drag",
+    dragenter: "drag",
+    dragleave: "drag",
+    dragover: "drag",
+    drop: "drag",
+    keydown: "press",
+    keyup: "press",
+    keypress: "press",
+    input: "press",
 };
 function A(t) {
     let e = ({ entries: t }) => {
@@ -110,9 +110,9 @@ function A(t) {
                     let t = I.shift();
                     R.delete(t);
                 }
-                (I.push(e), R.set(e, a));
+                I.push(e), R.set(e, a);
             }
         });
     };
-    ((0, l._j)('event', e), (0, l._j)('first-input', e));
+    (0, l._j)("event", e), (0, l._j)("first-input", e);
 }

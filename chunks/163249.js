@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -13,31 +13,31 @@ var r = n(255367),
     p = n(406116);
 function h(e) {
     let { color: t, children: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: p.roleTag,
         children: [
             (0, r.jsx)(s.xko, {
                 className: p.roleDot,
                 color: t,
-                colors: null
+                colors: null,
             }),
-            (0, r.jsx)('span', {
+            (0, r.jsx)("span", {
                 className: p.roleText,
-                children: n
-            })
-        ]
+                children: n,
+            }),
+        ],
     });
 }
 function f(e) {
     let { guild: t, display: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(p.banner, t.backgroundClass, { [p.bannerOut]: !n }),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: p.roles,
                 children: t.roles.map((e, t) =>
                     (0, r.jsx)(
-                        'div',
+                        "div",
                         {
                             className: p.rolesRow,
                             children: e.map((e) =>
@@ -45,37 +45,37 @@ function f(e) {
                                     h,
                                     {
                                         color: e.color,
-                                        children: e.name
+                                        children: e.name,
                                     },
-                                    e.name
-                                )
-                            )
+                                    e.name,
+                                ),
+                            ),
                         },
-                        t
-                    )
-                )
+                        t,
+                    ),
+                ),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: p.profileCard,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: p.avatarContainer,
                     children: [
                         (0, r.jsx)(s.qEK, {
                             size: s.EFr.SIZE_56,
-                            'aria-hidden': !0,
+                            "aria-hidden": !0,
                             status: m.Skl.ONLINE,
-                            src: t.avatar
+                            src: t.avatar,
                         }),
                         (0, r.jsx)(s.Text, {
-                            color: 'header-primary',
-                            variant: 'text-md/bold',
+                            color: "header-primary",
+                            variant: "text-md/bold",
                             className: p.avatarName,
-                            children: t.username
-                        })
-                    ]
-                })
-            })
-        ]
+                            children: t.username,
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }
 function x() {
@@ -83,111 +83,111 @@ function x() {
             () => [
                 {
                     backgroundClass: p.bannerClubs,
-                    username: 'Wumpus#0000',
+                    username: "Wumpus#0000",
                     avatar: n(91055),
                     roles: [
                         [
                             {
-                                name: g.intl.string(g.t['7oaPPj']),
-                                color: '#7e00fc'
+                                name: g.intl.string(g.t["7oaPPj"]),
+                                color: "#7e00fc",
                             },
                             {
-                                name: g.intl.string(g.t['Z/HN6+']),
-                                color: '#faa61a'
+                                name: g.intl.string(g.t["Z/HN6+"]),
+                                color: "#faa61a",
                             },
                             {
                                 name: g.intl.string(g.t.lvHTg4),
-                                color: '#f06ea8'
-                            }
+                                color: "#f06ea8",
+                            },
                         ],
                         [
                             {
-                                name: g.intl.string(g.t['6yECkp']),
-                                color: '#45ddc0'
+                                name: g.intl.string(g.t["6yECkp"]),
+                                color: "#45ddc0",
                             },
                             {
-                                name: g.intl.string(g.t['5DabCQ']),
-                                color: '#00b0f4'
+                                name: g.intl.string(g.t["5DabCQ"]),
+                                color: "#00b0f4",
                             },
                             {
                                 name: g.intl.string(g.t.bB900d),
-                                color: '#ba1616'
-                            }
-                        ]
-                    ]
+                                color: "#ba1616",
+                            },
+                        ],
+                    ],
                 },
                 {
                     backgroundClass: p.bannerGaming,
-                    username: 'Graggle#0000',
+                    username: "Graggle#0000",
                     avatar: n(507003),
                     roles: [
                         [
                             {
-                                name: g.intl.string(g.t['xz/Vfn']),
-                                color: '#4a76e6'
+                                name: g.intl.string(g.t["xz/Vfn"]),
+                                color: "#4a76e6",
                             },
                             {
                                 name: g.intl.string(g.t.Bceru7),
-                                color: '#ad87ff'
+                                color: "#ad87ff",
                             },
                             {
                                 name: g.intl.string(g.t.W51slp),
-                                color: '#6defcf'
-                            }
+                                color: "#6defcf",
+                            },
                         ],
                         [
                             {
                                 name: g.intl.string(g.t.y9gTiY),
-                                color: '#ff73fa'
+                                color: "#ff73fa",
                             },
                             {
                                 name: g.intl.string(g.t.HslvdX),
-                                color: '#3ba55c'
+                                color: "#3ba55c",
                             },
                             {
                                 name: g.intl.string(g.t.ipL1AA),
-                                color: '#ff1b66'
-                            }
-                        ]
-                    ]
+                                color: "#ff1b66",
+                            },
+                        ],
+                    ],
                 },
                 {
                     backgroundClass: p.bannerHobbies,
-                    username: 'Mallow#0000',
+                    username: "Mallow#0000",
                     avatar: n(552557),
                     roles: [
                         [
                             {
                                 name: g.intl.string(g.t.pAFEbm),
-                                color: '#20d6b8'
+                                color: "#20d6b8",
                             },
                             {
-                                name: g.intl.string(g.t['p/HZEB']),
-                                color: '#236136'
+                                name: g.intl.string(g.t["p/HZEB"]),
+                                color: "#236136",
                             },
                             {
-                                name: g.intl.string(g.t['9Qp/JS']),
-                                color: '#ff9a15'
-                            }
+                                name: g.intl.string(g.t["9Qp/JS"]),
+                                color: "#ff9a15",
+                            },
                         ],
                         [
                             {
                                 name: g.intl.string(g.t.craF5e),
-                                color: '#ff78b9'
+                                color: "#ff78b9",
                             },
                             {
                                 name: g.intl.string(g.t.L1TvXF),
-                                color: '#00b0f4'
+                                color: "#00b0f4",
                             },
                             {
                                 name: g.intl.string(g.t.lqKz9P),
-                                color: '#6f52e4'
-                            }
-                        ]
-                    ]
-                }
+                                color: "#6f52e4",
+                            },
+                        ],
+                    ],
+                },
             ],
-            []
+            [],
         ),
         [t, l] = i.useState(0),
         a = i.useRef(e);
@@ -200,19 +200,19 @@ function x() {
             let e = setTimeout(() => l((t + 1) % a.current.length), 6332);
             return () => clearTimeout(e);
         }, [t]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: p.bannerContainer,
-            'aria-hidden': !0,
+            "aria-hidden": !0,
             children: e.map((e, n) =>
                 (0, r.jsx)(
                     f,
                     {
                         guild: e,
-                        display: n === t
+                        display: n === t,
                     },
-                    n
-                )
-            )
+                    n,
+                ),
+            ),
         })
     );
 }
@@ -220,7 +220,7 @@ function b(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
         [a, d] = i.useState(!1),
         m = async () => {
-            (d(!0), await o.Z.createRole(t.id), d(!1));
+            d(!0), await o.Z.createRole(t.id), d(!1);
         },
         h = i.useCallback(() => {
             l(n.id);
@@ -231,38 +231,38 @@ function b(e) {
             title: g.intl.string(g.t.LPJmLy),
             tag: s.RB0.H2,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: p.container,
                     children: [
                         (0, r.jsx)(x, {}),
                         (0, r.jsx)(s.X6q, {
-                            variant: 'heading-xl/semibold',
-                            children: g.intl.string(g.t.ALlnbm)
+                            variant: "heading-xl/semibold",
+                            children: g.intl.string(g.t.ALlnbm),
                         }),
                         (0, r.jsx)(s.Text, {
-                            color: 'header-secondary',
-                            variant: 'text-md/normal',
+                            color: "header-secondary",
+                            variant: "text-md/normal",
                             className: p.introBody,
-                            children: g.intl.string(g.t['1ydhVl'])
+                            children: g.intl.string(g.t["1ydhVl"]),
                         }),
-                        (0, r.jsx)('div', {
-                            'data-button-hoisted-classname-wrapper': !0,
+                        (0, r.jsx)("div", {
+                            "data-button-hoisted-classname-wrapper": !0,
                             className: p.button,
                             children: (0, r.jsx)(s.zxk, {
-                                variant: 'primary',
+                                variant: "primary",
                                 text: g.intl.string(g.t.JZZjQE),
                                 onClick: m,
-                                loading: a
-                            })
-                        })
-                    ]
+                                loading: a,
+                            }),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(s.$i$, { className: p.divider }),
                 (0, r.jsx)(u.Z, {
                     role: n,
-                    onClick: h
-                })
-            ]
-        })
+                    onClick: h,
+                }),
+            ],
+        }),
     });
 }

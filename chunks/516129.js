@@ -14,24 +14,24 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -49,21 +49,23 @@ function f(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['enabled', 'imageClassName', 'iconWrapperClassName']);
+        })(e, ["enabled", "imageClassName", "iconWrapperClassName"]);
     let f = (0, o.ZP)(),
         x = (0, a.wj)(f) ? p : h,
         b = {
             height: 18,
             width: 18,
-            color: (0, c.Lq)(x)
+            color: (0, c.Lq)(x),
         };
     return (0, r.jsx)(
         d.Z,
@@ -71,17 +73,20 @@ function f(e) {
             {
                 className: l()({
                     [m.avatarUploader]: t,
-                    [m.avatarUploaderDisabled]: !t
+                    [m.avatarUploaderDisabled]: !t,
                 }),
                 imageClassName: l()(n, m.avatarUploaderInnerSquare, { [m.avatarUploaderInnerSquareDisabled]: !t }),
-                icon: null != u.image && '' !== u.image ? (0, r.jsx)(s.vdY, g({ size: 'custom' }, b)) : (0, r.jsx)(s.FmF, g({ size: 'custom' }, b)),
+                icon:
+                    null != u.image && "" !== u.image
+                        ? (0, r.jsx)(s.vdY, g({ size: "custom" }, b))
+                        : (0, r.jsx)(s.FmF, g({ size: "custom" }, b)),
                 iconClassName: l()(m.avatarUploadIcon, m.hideDefaultIcon),
                 iconWrapperClassName: i,
                 showIcon: !0,
                 showIconDisabled: !0,
-                hideSize: !0
+                hideSize: !0,
             },
-            u
-        )
+            u,
+        ),
     );
 }

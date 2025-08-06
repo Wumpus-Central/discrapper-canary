@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Mo: () => s,
     SC: () => c,
-    _U: () => l
+    _U: () => l,
 }),
-    n(388685));
+    n(388685);
 var r = n(97519),
     i = n(296574),
     o = n(731965);
@@ -14,11 +14,11 @@ function s(e) {
         s = i.get(t);
     if (null == s || s.location !== n || s.sectionName !== r) {
         let e = new Map(i);
-        (e.set(t, {
+        e.set(t, {
             location: n,
-            sectionName: r
+            sectionName: r,
         }),
-            (0, o.j)(() => a.setState({ commandAnalyticsContext: e })));
+            (0, o.j)(() => a.setState({ commandAnalyticsContext: e }));
     }
 }
 function l(e) {
@@ -29,6 +29,6 @@ function c(e) {
     let { commandAnalyticsContext: t } = a.getState();
     if (t.has(e)) {
         let n = new Map(t);
-        (n.delete(e), (0, o.j)(() => a.setState({ commandAnalyticsContext: n })));
+        n.delete(e), (0, o.j)(() => a.setState({ commandAnalyticsContext: n }));
     }
 }

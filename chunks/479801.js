@@ -1,4 +1,4 @@
-(n.d(t, { e: () => h }), n(388685));
+n.d(t, { e: () => h }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(353926),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,10 +62,18 @@ let _ = 600000,
 function h(e, t, n) {
     let c = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
         d = null == e ? void 0 : e.includeBundles,
-        h = (0, l.hv)('useMaybeFetchCollectiblesCategoriesShared'),
+        h = (0, l.hv)("useMaybeFetchCollectiblesCategoriesShared"),
         [m, g, E, b, y, O, v] = (0, i.Wu)([s.Z], () => {
             var e, t;
-            return [s.Z.isFetchingCategories, s.Z.lastFetchOptions, s.Z.error, null != (e = s.Z.lastErrorTimestamp) ? e : 0, null != (t = s.Z.lastSuccessfulFetch) ? t : 0, s.Z.categories, s.Z.skipNumCategories];
+            return [
+                s.Z.isFetchingCategories,
+                s.Z.lastFetchOptions,
+                s.Z.error,
+                null != (e = s.Z.lastErrorTimestamp) ? e : 0,
+                null != (t = s.Z.lastSuccessfulFetch) ? t : 0,
+                s.Z.categories,
+                s.Z.skipNumCategories,
+            ];
         });
     return (
         (0, r.useEffect)(() => {
@@ -75,7 +83,7 @@ function h(e, t, n) {
             let i = f(u({}, e), {
                     includeBundles: d,
                     variantsReturnStyle: h,
-                    skipNumCategories: v
+                    skipNumCategories: v,
                 }),
                 o = !(0, a.oc)(g, i),
                 s = Date.now() - y < _;
@@ -88,10 +96,10 @@ function h(e, t, n) {
             refreshCategories: (0, r.useCallback)(() => {
                 let t = f(u({}, e), {
                     includeBundles: d,
-                    skipNumCategories: v
+                    skipNumCategories: v,
                 });
                 (0, a.F$)(t, void 0, n);
-            }, [e, d, n, v])
+            }, [e, d, n, v]),
         }
     );
 }

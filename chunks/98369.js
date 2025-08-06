@@ -1,4 +1,17 @@
-(n.d(t, { Z: () => R }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733));
+n.d(t, { Z: () => R }),
+    n(388685),
+    n(410992),
+    n(227481),
+    n(730884),
+    n(20464),
+    n(341884),
+    n(364341),
+    n(629680),
+    n(505025),
+    n(918970),
+    n(121784),
+    n(644351),
+    n(146733);
 var r,
     i = n(442837),
     o = n(46973),
@@ -18,7 +31,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,14 +49,14 @@ function y(e) {
         i = (0, d.UB)(e, [c.Z, u.Z]),
         o = r && !i,
         a = o !== m.get(e);
-    return (m.set(e, o), a);
+    return m.set(e, o), a;
 }
 function O() {
     return u.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, s.my)(t),
             r = !0 === m.get(n),
             i = g.get(t) !== r;
-        return (g.set(t, r), !!i || e);
+        return g.set(t, r), !!i || e;
     }, !1);
 }
 function v() {
@@ -57,7 +70,7 @@ function v() {
             break;
         }
     let i = r !== E;
-    return ((E = r), i);
+    return (E = r), i;
 }
 function I(e) {
     let { userId: t } = e;
@@ -76,12 +89,12 @@ function T(e) {
     return r || i || o;
 }
 function S() {
-    (m.clear(), g.clear(), (E = !1));
+    m.clear(), g.clear(), (E = !1);
 }
 function A(e) {
     let { channelId: t } = e;
     if (t === b) return !1;
-    ((b = t), S());
+    (b = t), S();
 }
 function N(e) {
     let { streamKey: t, state: n, context: r } = e;
@@ -89,7 +102,7 @@ function N(e) {
     switch (r) {
         case o.Yn.STREAM:
             if (null == t) return !1;
-            return (g.delete(t), v());
+            return g.delete(t), v();
         case o.Yn.DEFAULT:
             S();
     }
@@ -108,7 +121,7 @@ class C extends (r = i.ZP.Store) {
         return m.get(e);
     }
 }
-h(C, 'displayName', 'SecureFramesVerifiedStore');
+h(C, "displayName", "SecureFramesVerifiedStore");
 let R = new C(a.Z, {
     CONNECTION_OPEN: S,
     VOICE_CHANNEL_SELECT: A,
@@ -118,5 +131,5 @@ let R = new C(a.Z, {
     SECURE_FRAMES_TRANSIENT_KEY_DELETE: I,
     SECURE_FRAMES_VERIFIED_KEY_CREATE: I,
     SECURE_FRAMES_VERIFIED_KEY_DELETE: I,
-    SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: I
+    SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: I,
 });

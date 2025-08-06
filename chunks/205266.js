@@ -13,17 +13,17 @@ let u = () => {
     return (0, i.jsx)(l.t, {
         title: c.intl.string(c.t.v20wws),
         body: c.intl.format(c.t.lTZBio, { help_article: e }),
-        img: (0, i.jsx)('img', {
+        img: (0, i.jsx)("img", {
             src: d,
-            width: '82',
-            height: 'auto',
-            alt: ''
+            width: "82",
+            height: "auto",
+            alt: "",
         }),
         newIndicatorDismissibleContent: r.z.PS_ONE_WAY_RECONNECT,
         onClick: () =>
             (0, s.Z)({
                 platformType: o.ABu.PLAYSTATION,
-                location: 'PS two way upsell'
-            })
+                location: "PS two way upsell",
+            }),
     });
 };

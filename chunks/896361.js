@@ -12,8 +12,8 @@ function c(e) {
         (0, r.jsx)(o.B6, {
             children: (0, r.jsx)(a.F0, {
                 history: (0, l.s1)(),
-                children: t
-            })
+                children: t,
+            }),
         })
     );
 }

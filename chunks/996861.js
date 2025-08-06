@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     $Z: () => C,
     B8: () => P,
     F4: () => A,
@@ -13,11 +13,11 @@
     qe: () => k,
     rY: () => w,
     ts: () => G,
-    zW: () => S
+    zW: () => S,
 }),
     n(255367),
     n(73800),
-    n(481060));
+    n(481060);
 var r = n(332148),
     i = n(904245),
     o = n(257559),
@@ -46,7 +46,7 @@ function I(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -56,11 +56,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,17 +69,19 @@ function S(e) {
     null != t && l.Z.open(t, v.pNK.ENGAGEMENT);
 }
 function A(e, t, n) {
-    (0, m.JG)(n.shiftKey ? ''.concat(t.channel_id, '-').concat(t.id) : t.id);
+    (0, m.JG)(n.shiftKey ? "".concat(t.channel_id, "-").concat(t.id) : t.id);
 }
 function N(e, t) {
-    (p.default.track(v.rMx.MESSAGE_LINK_COPIED, {
+    p.default.track(v.rMx.MESSAGE_LINK_COPIED, {
         message_id: t.id,
-        channel: t.channel_id
+        channel: t.channel_id,
     }),
-        (0, m.JG)((0, h.wR)(e.guild_id, e.id, t.id)));
+        (0, m.JG)((0, h.wR)(e.guild_id, e.id, t.id));
 }
 function C(e, t, n) {
-    t.state === v.yb.SEND_FAILED || n.shiftKey ? i.Z.deleteMessage(e.id, t.id, t.state === v.yb.SEND_FAILED) : o.Z.confirmDelete(e, t);
+    t.state === v.yb.SEND_FAILED || n.shiftKey
+        ? i.Z.deleteMessage(e.id, t.id, t.state === v.yb.SEND_FAILED)
+        : o.Z.confirmDelete(e, t);
 }
 function R(e, t) {
     i.Z.startEditMessageRecord(e.id, t);
@@ -100,16 +102,16 @@ function L(e, t) {
 function x(e, t, n) {
     let r = e.isPrivate(),
         i = t.author.id === f.default.getId();
-    ((0, c.fE)({
+    (0, c.fE)({
         channel: e,
         message: t,
         shouldMention: !n.shiftKey && !i,
-        showMentionToggle: !r && !i
+        showMentionToggle: !r && !i,
     }),
-        g.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id }));
+        g.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
 }
 function M(e, t) {
-    (0, d.R6)(e, t, 'Message');
+    (0, d.R6)(e, t, "Message");
 }
 function k(e, t) {
     let n = _.Z.getChannel(E.default.castMessageIdAsChannelId(t.id));
@@ -118,18 +120,18 @@ function k(e, t) {
 function j(e, t) {
     (0, u.z)({
         channelId: e.id,
-        messageId: t.id
+        messageId: t.id,
     });
 }
 function U(e, t) {
     (0, u.x)({
         channelId: e.id,
-        messageId: t.id
+        messageId: t.id,
     });
 }
 function G(e, t) {
     (0, s.l8)({
         message: t,
-        source: 'message-actions'
+        source: "message-actions",
     });
 }

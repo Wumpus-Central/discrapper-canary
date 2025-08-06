@@ -1,4 +1,4 @@
-(i.r(e), i.d(e, { default: () => o }));
+i.r(e), i.d(e, { default: () => o });
 var t = i(255367);
 i(73800);
 var l = i(512722),
@@ -12,15 +12,15 @@ function o(n) {
     let { windowKey: e, channelId: i } = n,
         l = (0, r.e7)([d.Z], () => d.Z.getChannel(i));
     return (
-        a()(null != l, 'channel cannot be null for popout'),
+        a()(null != l, "channel cannot be null for popout"),
         (0, t.jsx)(c.Z, {
             withTitleBar: !0,
             windowKey: e,
             title: l.name,
             children: (0, t.jsx)(u.Z.Provider, {
                 value: l.guild_id,
-                children: (0, t.jsx)(h.Z, { channel: l })
-            })
+                children: (0, t.jsx)(h.Z, { channel: l }),
+            }),
         })
     );
 }

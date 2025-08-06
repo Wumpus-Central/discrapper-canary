@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,7 +40,7 @@ let d = (e) => {
     if (!d.bot) return null;
     function _() {
         (0, a.ZDy)(async () => {
-            let { default: e } = await n.e('83545').then(n.bind(n, 53149));
+            let { default: e } = await n.e("83545").then(n.bind(n, 53149));
             return (t) => (0, r.jsx)(e, u({ channelId: c.id }, t));
         });
     }
@@ -49,6 +49,6 @@ let d = (e) => {
         size: o.Ph.SMALL,
         color: f ? o.zx.Colors.PRIMARY : o.zx.Colors.RED,
         onClick: _,
-        children: f ? l.intl.string(l.t.YqAjX1) : l.intl.string(l.t['w4m94+'])
+        children: f ? l.intl.string(l.t.YqAjX1) : l.intl.string(l.t["w4m94+"]),
     });
 };

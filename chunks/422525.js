@@ -16,11 +16,11 @@ function p(e) {
         n = (0, c.Z)(e);
     if (__OVERLAY__ || !n) return null;
     let p = (n) => {
-        (a.Z.open(e.id, n), t.dispatch(d.CkL.POPOUT_CLOSE), (0, r.pTH)());
+        a.Z.open(e.id, n), t.dispatch(d.CkL.POPOUT_CLOSE), (0, r.pTH)();
     };
     return (0, i.jsx)(r.sNh, {
-        id: 'guild-settings',
-        label: b.intl.string(b.t['154/bG']),
+        id: "guild-settings",
+        label: b.intl.string(b.t["154/bG"]),
         action: () => p(),
         children: (0, u.t)(e).map((t) => {
             let { section: n, label: l } = t;
@@ -34,9 +34,9 @@ function p(e) {
                         {
                             id: n,
                             action: () => p(n),
-                            label: b.intl.string(b.t.nRtNqq)
+                            label: b.intl.string(b.t.nRtNqq),
                         },
-                        n
+                        n,
                     );
                 case d.pNK.APP_DIRECTORY:
                     return (0, i.jsx)(
@@ -48,13 +48,13 @@ function p(e) {
                                     tab: g.GlobalDiscoveryTab.APPS,
                                     newSessionState: {
                                         guildId: e.id,
-                                        entrypoint: { name: o.xF.GUILD_HEADER_POPOUT }
-                                    }
+                                        entrypoint: { name: o.xF.GUILD_HEADER_POPOUT },
+                                    },
                                 });
                             },
-                            label: l
+                            label: l,
                         },
-                        n
+                        n,
                     );
                 default:
                     return (0, i.jsx)(
@@ -62,11 +62,11 @@ function p(e) {
                         {
                             id: n,
                             action: () => p(n),
-                            label: l
+                            label: l,
                         },
-                        n
+                        n,
                     );
             }
-        })
+        }),
     });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Y: () => h,
-    Z: () => m
+    Z: () => m,
 });
 var r = n(255367),
     i = n(73800),
@@ -21,8 +21,8 @@ function h(e) {
         p = (0, s.Z)({
             user: t,
             location: n,
-            onFriendRemove: () => a({ action: 'REMOVE_FRIEND' }),
-            onFriendRequestSent: () => a({ action: 'SEND_FRIEND_REQUEST' })
+            onFriendRemove: () => a({ action: "REMOVE_FRIEND" }),
+            onFriendRequestSent: () => a({ action: "SEND_FRIEND_REQUEST" }),
         }),
         h = (0, l.Z)({ user: t }),
         m = (0, c.Z)({ user: t });
@@ -35,13 +35,13 @@ function m(e) {
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, r.jsx)(a.v2r, {
-                navId: 'user-profile-friend-request-buttons',
+                navId: "user-profile-friend-request-buttons",
                 onSelect: void 0,
                 onClose: n,
-                'aria-label': p.intl.string(p.t.Jszi3N),
-                children: t
+                "aria-label": p.intl.string(p.t.Jszi3N),
+                children: t,
             });
         },
-        children: (e) => n(e)
+        children: (e) => n(e),
     });
 }

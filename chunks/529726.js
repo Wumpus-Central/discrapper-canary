@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(539854));
+n.d(t, { Z: () => m }), n(388685), n(539854);
 var r = n(31775),
     i = n.n(r),
     o = n(147913),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,7 +30,10 @@ class h extends o.Z {
         let n = this.recentViewTimes.get(t);
         if (null != n && Date.now() - n < u) return;
         let r = setTimeout(() => {
-            (delete this.currentlyVisibleMessageTimers[t], this.viewsInCurrentChannel.add(t), this.recentViewTimes.set(t, Date.now()), this.bufferViewTrack(e));
+            delete this.currentlyVisibleMessageTimers[t],
+                this.viewsInCurrentChannel.add(t),
+                this.recentViewTimes.set(t, Date.now()),
+                this.bufferViewTrack(e);
         }, d);
         this.currentlyVisibleMessageTimers[t] = r;
     }
@@ -41,11 +44,12 @@ class h extends o.Z {
     handleMessageListVisibilityChange(e) {
         for (let t of e) this.handleMessageBecameVisible(t);
         let t = new Set(e.map((e) => e.messageId));
-        for (let e of s.default.keys(this.currentlyVisibleMessageTimers)) t.has(e) || this.handleMessageLostVisibility(e);
+        for (let e of s.default.keys(this.currentlyVisibleMessageTimers))
+            t.has(e) || this.handleMessageLostVisibility(e);
     }
     handleChannelSelect() {
         for (let e of Object.values(this.currentlyVisibleMessageTimers)) clearTimeout(e);
-        ((this.currentlyVisibleMessageTimers = {}), this.viewsInCurrentChannel.clear(), this.drainBuffer());
+        (this.currentlyVisibleMessageTimers = {}), this.viewsInCurrentChannel.clear(), this.drainBuffer();
     }
     drainBuffer() {
         for (let e of this.batchBuffer)
@@ -54,28 +58,31 @@ class h extends o.Z {
                 channel_id: e.channelId,
                 guild_id: e.guildId,
                 source_channel_id: e.sourceChannelId,
-                source_guild_id: e.sourceGuildId
+                source_guild_id: e.sourceGuildId,
             });
-        ((this.batchBuffer = []), null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null)));
+        (this.batchBuffer = []),
+            null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
     }
     bufferViewTrack(e) {
-        (this.batchBuffer.length >= f && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), _)));
+        this.batchBuffer.length >= f && this.drainBuffer(),
+            this.batchBuffer.push(e),
+            null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), _));
     }
     constructor(...e) {
-        (super(...e),
-            c(this, 'currentlyVisibleMessageTimers', {}),
-            c(this, 'viewsInCurrentChannel', new Set()),
+        super(...e),
+            c(this, "currentlyVisibleMessageTimers", {}),
+            c(this, "viewsInCurrentChannel", new Set()),
             c(
                 this,
-                'recentViewTimes',
+                "recentViewTimes",
                 new (i())({
                     max: p,
-                    maxAge: u
-                })
+                    maxAge: u,
+                }),
             ),
-            c(this, 'batchBuffer', []),
-            c(this, 'batchTimerId', null),
-            c(this, 'actions', { CHANNEL_SELECT: () => this.handleChannelSelect() }));
+            c(this, "batchBuffer", []),
+            c(this, "batchTimerId", null),
+            c(this, "actions", { CHANNEL_SELECT: () => this.handleChannelSelect() });
     }
 }
 let m = new h();

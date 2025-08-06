@@ -1,18 +1,18 @@
-(n.d(t, { Mn: () => d }), n(539854), n(415506));
+n.d(t, { Mn: () => d }), n(539854), n(415506);
 var r = n(668757),
     i = n(511495),
     o = n(710845),
     a = n(626135),
     s = n(894276),
     l = n(981631);
-let c = new o.Z('libdiscore'),
+let c = new o.Z("libdiscore"),
     u = !1;
 async function d() {
     if (!u) {
         try {
             await (0, i.e)();
             let e = (0, r.rs)(6, 7);
-            (c.info('The answer for life the universe and everything is:', e), f());
+            c.info("The answer for life the universe and everything is:", e), f();
         } catch (e) {
             p(e);
         }
@@ -21,25 +21,29 @@ async function d() {
 }
 function f() {
     let e = [];
-    (s.Re.forEach((t) => {
+    s.Re.forEach((t) => {
         let n = t.getEnabledFeatureName();
         null != n && e.push(n);
     }),
         a.default.track(l.rMx.LIBDISCORE_LOADED, {
             success: !0,
-            experimental_features: e
-        }));
+            experimental_features: e,
+        });
 }
 function _(e) {
-    let t = '',
+    let t = "",
         n = null;
-    return (e instanceof Error ? ((t = e.message), (n = e.name)) : (t = null != e ? String(e) : 'Unknown error'), t.length > 1000 && (t = t.substring(0, 997) + '...'), null != n) ? ''.concat(n, ': ').concat(t) : t;
+    return (e instanceof Error ? ((t = e.message), (n = e.name)) : (t = null != e ? String(e) : "Unknown error"),
+    t.length > 1000 && (t = t.substring(0, 997) + "..."),
+    null != n)
+        ? "".concat(n, ": ").concat(t)
+        : t;
 }
 function p(e) {
-    c.error('Failed to execute smoke test:', e);
+    c.error("Failed to execute smoke test:", e);
     let t = _(e);
     a.default.track(l.rMx.LIBDISCORE_LOADED, {
         success: !1,
-        error: t
+        error: t,
     });
 }

@@ -9,20 +9,20 @@ function s(e) {
         { message: s } = (0, o.CJ)();
     return null == t || 0 === t.length
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: a.container,
               children: [
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: a.children,
-                      children: n(t)
+                      children: n(t),
                   }),
                   null != s
                       ? (0, r.jsx)(i.ZP, {
                             className: a.error,
                             message: s,
-                            component: e
+                            component: e,
                         })
-                      : null
-              ]
+                      : null,
+              ],
           });
 }

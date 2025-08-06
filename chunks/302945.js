@@ -16,10 +16,10 @@ function f(e) {
                 t.length > 1
                     ? u.intl.formatToPlainString(u.t.HaVk0d, {
                           username: o(t[0]),
-                          numFriends: t.length - 1
+                          numFriends: t.length - 1,
                       })
-                    : '',
-            [t]
+                    : "",
+            [t],
         );
     if (t.length <= 1) return null;
     let _ = t.map((e, n) =>
@@ -28,25 +28,25 @@ function f(e) {
             {
                 affinity: e,
                 applyMask: n !== t.length - 1,
-                size: c.EF.SIZE_20
+                size: c.EF.SIZE_20,
             },
-            e.id
-        )
+            e.id,
+        ),
     );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(d.container, n),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.iconContainer,
-                children: _
+                children: _,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.textContainer,
                 children: (0, r.jsx)(s.xv, {
-                    variant: 'text-sm/medium',
-                    children: f
-                })
-            })
-        ]
+                    variant: "text-sm/medium",
+                    children: f,
+                }),
+            }),
+        ],
     });
 }

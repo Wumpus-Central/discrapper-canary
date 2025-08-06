@@ -10,24 +10,24 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -53,8 +53,8 @@ let p = [!1, !0];
 function m(e) {
     let { isDisabled: t, currentValue: n, onChange: l } = e,
         s = (0, a.arW)({
-            orientation: 'horizontal',
-            isDisabled: t
+            orientation: "horizontal",
+            isDisabled: t,
         }),
         { ref: m } = s,
         g = (function (e, t) {
@@ -67,30 +67,32 @@ function m(e) {
                         i,
                         r = {},
                         l = Object.keys(e);
-                    for (i = 0; i < l.length; i++) ((n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < l.length; i++) ((n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(s, ['ref']),
+        })(s, ["ref"]),
         f = r.useCallback(
             (e) => {
                 t || e === n || l(e);
             },
-            [t, n, l]
+            [t, n, l],
         );
     return (0, i.jsx)(
-        'div',
+        "div",
         u(
             d(
                 {
                     className: o()(c.group, { [c.disabled]: t }),
-                    ref: m
+                    ref: m,
                 },
-                g
+                g,
             ),
             {
                 children: p.map((e) =>
@@ -99,23 +101,23 @@ function m(e) {
                         {
                             isSelected: n === e,
                             itemValue: e,
-                            onClick: () => f(e)
+                            onClick: () => f(e),
                         },
-                        e.toString()
-                    )
-                )
-            }
-        )
+                        e.toString(),
+                    ),
+                ),
+            },
+        ),
     );
 }
 function b(e) {
     let { isSelected: t, itemValue: n, onClick: r } = e,
         l = n ? c.allow : c.deny,
         p = n ? a.dz2 : a.Dio,
-        m = n ? s.intl.string(s.t.RzDfSk) : s.intl.string(s.t['6639Oz']),
+        m = n ? s.intl.string(s.t.RzDfSk) : s.intl.string(s.t["6639Oz"]),
         b = (0, a.xUy)({
             isSelected: t,
-            label: m
+            label: m,
         });
     return (0, i.jsx)(
         a.P3F,
@@ -123,16 +125,16 @@ function b(e) {
             d(
                 {
                     className: o()(c.item, l, { [c.selected]: t }),
-                    onClick: r
+                    onClick: r,
                 },
-                b
+                b,
             ),
             {
                 children: (0, i.jsx)(p, {
-                    size: 'xs',
-                    color: 'currentColor'
-                })
-            }
-        )
+                    size: "xs",
+                    color: "currentColor",
+                }),
+            },
+        ),
     );
 }

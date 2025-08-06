@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Ng: () => O,
     OC: () => A,
     dg: () => v,
@@ -8,10 +8,10 @@
     nA: () => I,
     qF: () => m,
     uV: () => y,
-    vY: () => S
+    vY: () => S,
 }),
     n(35282),
-    n(388685));
+    n(388685);
 var r = n(112456),
     i = n.n(r),
     o = n(392711),
@@ -26,7 +26,7 @@ var r = n(112456),
 let p = 524288000,
     h = 524288000;
 function m(e, t) {
-    return e instanceof File ? e : g(e.data.buffer, e.filename, null != t ? t : 'text/plain');
+    return e instanceof File ? e : g(e.data.buffer, e.filename, null != t ? t : "text/plain");
 }
 function g(e, t, n) {
     return new File([e], t, { type: n });
@@ -34,69 +34,71 @@ function g(e, t, n) {
 let E = [
     {
         reType: /^image\/vnd.adobe.photoshop/,
-        klass: 'photoshop'
+        klass: "photoshop",
     },
     {
         reType: /^image\/svg\+xml/,
-        klass: 'webcode'
+        klass: "webcode",
     },
     {
         reType: /^image\//,
-        klass: 'image'
+        klass: "image",
     },
     {
         reType: /^video\//,
-        klass: 'video'
+        klass: "video",
     },
     {
         reName: /\.pdf$/,
-        klass: 'acrobat'
+        klass: "acrobat",
     },
     {
         reName: /\.ae/,
-        klass: 'ae'
+        klass: "ae",
     },
     {
         reName: /\.sketch$/,
-        klass: 'sketch'
+        klass: "sketch",
     },
     {
         reName: /\.ai$/,
-        klass: 'ai'
+        klass: "ai",
     },
     {
         reName: /\.(?:rar|zip|7z|tar|tar\.gz)$/,
-        klass: 'archive'
+        klass: "archive",
     },
     {
         reName: /\.(?:c\+\+|cpp|cc|c|h|hpp|mm|m|json|js|rb|rake|py|asm|fs|pyc|dtd|cgi|bat|rss|java|graphml|idb|lua|o|gml|prl|sls|conf|cmake|make|sln|vbe|cxx|wbf|vbs|r|wml|php|bash|applescript|fcgi|yaml|ex|exs|sh|ml|actionscript)$/,
-        klass: 'code'
+        klass: "code",
     },
     {
         reName: /\.(?:txt|rtf|doc|docx|md|pages|ppt|pptx|pptm|key|log)$/,
-        klass: 'document'
+        klass: "document",
     },
     {
         reName: /\.(?:xls|xlsx|numbers|csv)$/,
-        klass: 'spreadsheet'
+        klass: "spreadsheet",
     },
     {
         reName: /\.(?:html|xhtml|htm|js|xml|xls|xsd|css|styl)$/,
-        klass: 'webcode'
+        klass: "webcode",
     },
     {
         reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/,
-        klass: 'audio'
-    }
+        klass: "audio",
+    },
 ];
 function b(e) {
     return y(e.name, e.type);
 }
 function y(e, t) {
     var n;
-    e = null != (n = null == e ? void 0 : e.toLowerCase()) ? n : '';
-    let r = a().find(E, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
-    return null != r ? r.klass : 'unknown';
+    e = null != (n = null == e ? void 0 : e.toLowerCase()) ? n : "";
+    let r = a().find(E, (n) =>
+        null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e),
+    );
+    return null != r ? r.klass : "unknown";
 }
 function O(e) {
     return i().filesize(e);
@@ -131,6 +133,6 @@ function N(e) {
     return _.intl.format(_.t.tRuxk5, {
         maxSize: r,
         premiumMaxSize: i,
-        onClick: n
+        onClick: n,
     });
 }

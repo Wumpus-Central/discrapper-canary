@@ -2,7 +2,7 @@ n.d(t, {
     PM: () => c,
     ZC: () => i.u$,
     de: () => s,
-    x9: () => l
+    x9: () => l,
 });
 var r = n(544891),
     i = n(921072),
@@ -13,13 +13,13 @@ async function s(e) {
         n = await r.tn.get({
             url: t,
             retries: 3,
-            rejectWithError: !1
+            rejectWithError: !1,
         }),
         i = n.body.disclosures;
     return {
         disclosures: i,
         ackedDisclosures: n.body.acked_disclosures,
-        allAcked: n.body.all_acked
+        allAcked: n.body.all_acked,
     };
 }
 async function l(e, t) {
@@ -27,15 +27,15 @@ async function l(e, t) {
     await r.tn.post({
         url: n,
         body: { disclosures: t },
-        rejectWithError: !1
+        rejectWithError: !1,
     });
 }
 function c(e) {
     switch (e) {
         case i.u$.IP_LOCATION:
-            return a.intl.string(a.t['6wPmjo']);
+            return a.intl.string(a.t["6wPmjo"]);
         case i.u$.DISPLAYS_ADVERTISEMENTS:
-            return a.intl.string(a.t['/uOMKS']);
+            return a.intl.string(a.t["/uOMKS"]);
         default:
             return null;
     }

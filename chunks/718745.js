@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,31 +18,31 @@ function s(e, t, n) {
 }
 let l = {},
     c = {
-        integration: '',
-        query: ''
+        integration: "",
+        query: "",
     };
 function u(e) {
     var t;
     let { integration: n, query: r } = e;
-    ((l[n] = null != (t = l[n]) ? t : {}),
+    (l[n] = null != (t = l[n]) ? t : {}),
         (l[n][r] = {
             loading: !0,
-            results: []
-        }));
+            results: [],
+        });
 }
 function d(e) {
     let { integration: t, query: n, results: r } = e;
-    ((l[t][n] = {
+    (l[t][n] = {
         loading: !1,
         results: r.map((e) => ({
             type: a.nkL[t].type,
-            meta: e
-        }))
+            meta: e,
+        })),
     }),
         (c = {
             query: n,
-            integration: t
-        }));
+            integration: t,
+        });
 }
 function f(e) {
     let { integration: t, query: n } = e;
@@ -58,9 +58,9 @@ class _ extends (r = i.ZP.Store) {
         return c;
     }
 }
-s(_, 'displayName', 'IntegrationQueryStore');
+s(_, "displayName", "IntegrationQueryStore");
 let p = new _(o.Z, {
     INTEGRATION_QUERY: u,
     INTEGRATION_QUERY_SUCCESS: d,
-    INTEGRATION_QUERY_FAILURE: f
+    INTEGRATION_QUERY_FAILURE: f,
 });

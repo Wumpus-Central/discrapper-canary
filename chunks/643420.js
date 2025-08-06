@@ -1,4 +1,4 @@
-(n.d(t, { k: () => y }), n(388685));
+n.d(t, { k: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(505266),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,57 +63,57 @@ let h = 1000 / 60,
     m = 24,
     g = {
         velocity: {
-            type: 'static-random',
+            type: "static-random",
             minValue: {
                 x: 8,
-                y: 0
+                y: 0,
             },
             maxValue: {
                 x: 50,
-                y: 0
-            }
+                y: 0,
+            },
         },
         rotation: {
-            type: 'linear-random',
+            type: "linear-random",
             minValue: {
                 x: 0,
                 y: 0,
-                z: 0
+                z: 0,
             },
             maxValue: {
                 x: 0,
                 y: 0,
-                z: 360
+                z: 360,
             },
             minAddValue: {
                 x: 0,
                 y: 0,
-                z: -5
+                z: -5,
             },
             maxAddValue: {
                 x: 0,
                 y: 0,
-                z: 5
-            }
+                z: 5,
+            },
         },
         size: {
-            type: 'static-random',
+            type: "static-random",
             minValue: 2,
             maxValue: 24,
-            uniformVectorValues: !0
+            uniformVectorValues: !0,
         },
         dragCoefficient: {
-            type: 'static',
-            value: 0.8
+            type: "static",
+            value: 0.8,
         },
         opacity: {
-            type: 'static-random',
+            type: "static-random",
             minValue: 0.7,
-            maxValue: 0.5
-        }
+            maxValue: 0.5,
+        },
     },
-    E = ['#FFFFFF'],
-    b = [n(123353), ...(0, l.Z)(['snowflake'])];
+    E = ["#FFFFFF"],
+    b = [n(123353), ...(0, l.Z)(["snowflake"])];
 function y(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
@@ -124,9 +124,9 @@ function y(e) {
         I = i.useMemo(
             () => ({
                 triggerAnimation: () => l(!0),
-                untriggerAnimation: () => l(!1)
+                untriggerAnimation: () => l(!1),
             }),
-            []
+            [],
         ),
         T = i.useCallback(() => {
             let e = null == O ? void 0 : O.getCanvas();
@@ -135,17 +135,17 @@ function y(e) {
             v.createConfetti(
                 p(f({}, g), {
                     position: {
-                        type: 'static-random',
+                        type: "static-random",
                         minValue: {
                             x: -t.width / 2,
-                            y: -m
+                            y: -m,
                         },
                         maxValue: {
                             x: t.width,
-                            y: -m
-                        }
-                    }
-                })
+                            y: -m,
+                        },
+                    },
+                }),
             );
         }, [v, O]);
     return (i.useEffect(() => {
@@ -163,8 +163,8 @@ function y(e) {
                       colors: E,
                       sprites: b,
                       spriteWidth: m,
-                      spriteHeight: m
-                  })
-              ]
+                      spriteHeight: m,
+                  }),
+              ],
           });
 }

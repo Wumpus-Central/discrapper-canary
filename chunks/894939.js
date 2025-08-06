@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685));
+n.d(t, { Z: () => P }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -39,13 +39,16 @@ function P(e) {
             children: [
                 (0, i.jsxs)(p.F, {
                     setting: v.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                    children: [(0, i.jsx)(C.Z, { refreshStyles: t }), (0, i.jsx)(O.Z, { refreshStyles: t })]
+                    children: [(0, i.jsx)(C.Z, { refreshStyles: t }), (0, i.jsx)(O.Z, { refreshStyles: t })],
                 }),
                 (0, i.jsxs)(p.F, {
                     setting: v.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
-                    children: [t ? null : (0, i.jsx)(o.$i$, { className: N.callSoundsDivider }), (0, i.jsx)(R, { refreshStyles: t })]
-                })
-            ]
+                    children: [
+                        t ? null : (0, i.jsx)(o.$i$, { className: N.callSoundsDivider }),
+                        (0, i.jsx)(R, { refreshStyles: t }),
+                    ],
+                }),
+            ],
         });
     return t
         ? n
@@ -54,7 +57,7 @@ function P(e) {
               tag: o.RB0.H1,
               titleClassName: y.__invalid_marginBottom16,
               title: I.intl.string(I.t.ABjMWF),
-              children: n
+              children: n,
           });
 }
 function R(e) {
@@ -65,12 +68,12 @@ function R(e) {
         j = A(p),
         C = (null == p ? void 0 : p.type) === b.zx.GLOBAL,
         O = (0, l.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != p && null == j;
-    (r.useEffect(() => {
+    r.useEffect(() => {
         O && (0, f.tt)({ location: n });
     }, [O, n]),
         r.useEffect(() => {
             (0, g.w)();
-        }, []));
+        }, []);
     let v = r.useCallback((e, t) => {
             let { inDropdown: n } = t;
             return null == e ? null : n ? (0, i.jsx)(D, { guildId: e.value }) : null;
@@ -79,30 +82,32 @@ function R(e) {
             children: [
                 (0, i.jsx)(o.xJW, {
                     title: I.intl.string(I.t.nzUc3N),
-                    children: (0, i.jsx)(o.R94, { children: I.intl.format(I.t.u9RWmp, { helpdeskArticle: _.Z.getArticleURL(S.BhN.SOUNDBOARD) }) })
+                    children: (0, i.jsx)(o.R94, {
+                        children: I.intl.format(I.t.u9RWmp, { helpdeskArticle: _.Z.getArticleURL(S.BhN.SOUNDBOARD) }),
+                    }),
                 }),
                 (0, i.jsx)(u.Z, {
                     guildId: s,
                     className: a()(N.guildSelector, { [N.refreshGuildSelector]: t }),
                     globalOption: {
                         label: I.intl.string(I.t.CpEUPz),
-                        value: T.hY
+                        value: T.hY,
                     },
                     onChange: (e) => {
                         c(null == e ? T.hY : e.id);
                     },
                     renderOptionSuffix: v,
-                    hideDivider: !0
+                    hideDivider: !0,
                 }),
                 (0, i.jsxs)(m.Z, {
                     className: a()({ [y.marginTop20]: !t }),
                     title: I.intl.format(I.t.I2TsYG, {
                         nitroWheelHook: () =>
                             (0, i.jsx)(o.SrA, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: N.nitroWheel
-                            })
+                                size: "md",
+                                color: "currentColor",
+                                className: N.nitroWheel,
+                            }),
                     }),
                     forcedDivider: !t,
                     children: [
@@ -111,17 +116,17 @@ function R(e) {
                             isGlobal: C,
                             onSelect: (e) => {
                                 null == e ? (0, f.aC)(s, n) : (0, f.SZ)(s, e, n);
-                            }
+                            },
                         }),
                         O &&
                             (0, i.jsx)(o.Wn, {
                                 className: N.notice,
                                 messageType: o.QYI.WARNING,
-                                children: I.intl.string(I.t.WkPsFR)
-                            })
-                    ]
-                })
-            ]
+                                children: I.intl.string(I.t.WkPsFR),
+                            }),
+                    ],
+                }),
+            ],
         });
     return t ? (0, i.jsx)(E.Z, { children: P }) : P;
 }
@@ -129,31 +134,33 @@ function D(e) {
     let { guildId: t } = e,
         n = (0, l.e7)([j.Z], () => {
             var e, n, i;
-            return null == (i = j.Z.settings.guilds) || null == (n = i.guilds) || null == (e = n[t]) ? void 0 : e.joinSound;
+            return null == (i = j.Z.settings.guilds) || null == (n = i.guilds) || null == (e = n[t])
+                ? void 0
+                : e.joinSound;
         }),
         r = A(n);
     if (null == n || null == r) return null;
     let { emojiId: s, emojiName: a } = r,
         d = null != s || null != a;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: N.pill,
         children: [
             d
                 ? (0, i.jsx)(c.Z, {
                       emojiId: s,
                       emojiName: a,
-                      className: N.pillIcon
+                      className: N.pillIcon,
                   })
                 : (0, i.jsx)(o.gj8, {
-                      size: 'md',
-                      color: 'currentColor',
-                      className: N.pillIcon
+                      size: "md",
+                      color: "currentColor",
+                      className: N.pillIcon,
                   }),
             (0, i.jsx)(o.Text, {
                 className: N.pillText,
-                variant: 'text-xs/medium',
-                children: r.name
-            })
-        ]
+                variant: "text-xs/medium",
+                children: r.name,
+            }),
+        ],
     });
 }

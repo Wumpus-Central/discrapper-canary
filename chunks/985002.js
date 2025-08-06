@@ -1,4 +1,4 @@
-(n.d(t, { G: () => o }), n(388685));
+n.d(t, { G: () => o }), n(388685);
 var i = n(73800),
     r = n(881052),
     s = n(260722),
@@ -20,7 +20,7 @@ function o(e) {
                 if (!v) {
                     c(!0);
                     try {
-                        (await (0, s.Yw)(e.id, l.ne.ACTIVE), null == n || n());
+                        await (0, s.Yw)(e.id, l.ne.ACTIVE), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -29,14 +29,14 @@ function o(e) {
                     }
                 }
             },
-            [v, t, n]
+            [v, t, n],
         ),
         T = i.useCallback(
             async (e) => {
                 if (!v) {
                     u(!0);
                     try {
-                        (await (0, s.Yw)(e.id, l.ne.DECLINED), null == n || n());
+                        await (0, s.Yw)(e.id, l.ne.DECLINED), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -45,14 +45,14 @@ function o(e) {
                     }
                 }
             },
-            [v, t, n]
+            [v, t, n],
         ),
         I = i.useCallback(
             async (e) => {
                 if (!v) {
                     p(!0);
                     try {
-                        (await (0, s.Yw)(e.id, l.ne.INACTIVE), null == n || n());
+                        await (0, s.Yw)(e.id, l.ne.INACTIVE), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -61,14 +61,14 @@ function o(e) {
                     }
                 }
             },
-            [v, t, n]
+            [v, t, n],
         ),
         N = i.useCallback(
             async (e) => {
                 if (!v) {
                     h(!0);
                     try {
-                        (await (0, s.fc)(e.id), null == n || n());
+                        await (0, s.fc)(e.id), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -77,13 +77,13 @@ function o(e) {
                     }
                 }
             },
-            [v, t, n]
+            [v, t, n],
         ),
         y = i.useCallback(async () => {
             if (!f) {
                 b(!0);
                 try {
-                    (await (0, s.qd)(), null == n || n());
+                    await (0, s.qd)(), null == n || n();
                 } catch (n) {
                     let e = new r.Hx(n);
                     null == t || t(e);
@@ -97,7 +97,7 @@ function o(e) {
                 if (!j) {
                     E(!0);
                     try {
-                        (await s.ZP.fetchTeenActivity(e), null == n || n());
+                        await s.ZP.fetchTeenActivity(e), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -106,7 +106,7 @@ function o(e) {
                     }
                 }
             },
-            [j, t, n]
+            [j, t, n],
         );
     return {
         acceptLinkRequest: S,
@@ -120,7 +120,7 @@ function o(e) {
                 if (!x) {
                     _(!0);
                     try {
-                        (await s.ZP.requestLink(e, i), null == n || n());
+                        await s.ZP.requestLink(e, i), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
@@ -129,7 +129,7 @@ function o(e) {
                     }
                 }
             },
-            [x, t, n]
+            [x, t, n],
         ),
         loadMore: i.useCallback(
             async (e) => {
@@ -149,7 +149,7 @@ function o(e) {
                     }
                 }
             },
-            [C, t]
+            [C, t],
         ),
         isAcceptLoading: o,
         isDeclineLoading: d,
@@ -158,6 +158,6 @@ function o(e) {
         isGetLinkCodeLoading: f,
         isSelectTeenUserLoading: j,
         isRequestingLink: x,
-        isMoreLoading: C
+        isMoreLoading: C,
     };
 }

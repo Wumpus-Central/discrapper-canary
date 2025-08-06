@@ -1,4 +1,4 @@
-(i.d(t, { Z: () => x }), i(388685));
+i.d(t, { Z: () => x }), i(388685);
 var n,
     s = i(255367),
     a = i(73800),
@@ -20,7 +20,7 @@ function C(e, t, i) {
                   value: i,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = i),
         e
@@ -28,23 +28,26 @@ function C(e, t, i) {
 }
 class v extends (n = a.PureComponent) {
     async componentDidMount() {
-        let [e, { default: t }] = await Promise.all([i.e('27526').then(i.t.bind(i, 555589, 19)), Promise.resolve().then(i.t.bind(i, 500923, 23))]);
+        let [e, { default: t }] = await Promise.all([
+            i.e("27526").then(i.t.bind(i, 555589, 19)),
+            Promise.resolve().then(i.t.bind(i, 500923, 23)),
+        ]);
         null != this._lottieRef &&
             (this._animItem = t.loadAnimation({
                 container: this._lottieRef,
-                renderer: 'svg',
+                renderer: "svg",
                 loop: !0,
                 autoplay: !0,
-                animationData: e
+                animationData: e,
             }));
     }
     componentWillUnmount() {
-        (this._timeout.stop(), null != this._animItem && (this._animItem.destroy(), (this._animItem = void 0)));
+        this._timeout.stop(), null != this._animItem && (this._animItem.destroy(), (this._animItem = void 0));
     }
     renderInputs() {
         let { emailError: e, passwordError: t, submitting: i } = this.props,
             { email: n, password: a } = this.state;
-        return (0, s.jsxs)('div', {
+        return (0, s.jsxs)("div", {
             className: g.container,
             children: [
                 (0, s.jsx)(c.xJW, {
@@ -55,19 +58,19 @@ class v extends (n = a.PureComponent) {
                         error: e,
                         onChange: this.handleEmailChange,
                         onKeyPress: this.handleKeyPress,
-                        autoFocus: !0
-                    })
+                        autoFocus: !0,
+                    }),
                 }),
                 (0, s.jsx)(c.xJW, {
-                    title: u.intl.string(u.t['CIGa+/']),
+                    title: u.intl.string(u.t["CIGa+/"]),
                     className: f.marginBottom40,
                     children: (0, s.jsx)(c.oil, {
-                        type: 'password',
+                        type: "password",
                         value: a,
                         error: t,
                         onChange: this.handlePasswordChange,
-                        onKeyPress: this.handleKeyPress
-                    })
+                        onKeyPress: this.handleKeyPress,
+                    }),
                 }),
                 (0, s.jsx)(d.zx, {
                     fullWidth: !0,
@@ -75,14 +78,14 @@ class v extends (n = a.PureComponent) {
                     onClick: this.handleVerify,
                     submitting: i,
                     disabled: 0 === n.length || 0 === a.length,
-                    children: u.intl.string(u.t.v740sr)
-                })
-            ]
+                    children: u.intl.string(u.t.v740sr),
+                }),
+            ],
         });
     }
     renderActions() {
         let { canChange: e } = this.props;
-        return (0, s.jsxs)('div', {
+        return (0, s.jsxs)("div", {
             className: g.container,
             children: [
                 (0, s.jsx)(d.zx, {
@@ -91,7 +94,7 @@ class v extends (n = a.PureComponent) {
                     size: d.zx.Sizes.LARGE,
                     color: d.Tt.PRIMARY,
                     onClick: this.handleResendEmail,
-                    children: u.intl.string(u.t.LdUkOz)
+                    children: u.intl.string(u.t.LdUkOz),
                 }),
                 e &&
                     (0, s.jsx)(d.zx, {
@@ -101,9 +104,9 @@ class v extends (n = a.PureComponent) {
                         look: d.iL.LINK,
                         color: d.Tt.LINK,
                         onClick: this.handleChangeEmailClick,
-                        children: u.intl.string(u.t.oP5zGB)
-                    })
-            ]
+                        children: u.intl.string(u.t.oP5zGB),
+                    }),
+            ],
         });
     }
     render() {
@@ -111,88 +114,93 @@ class v extends (n = a.PureComponent) {
             { resent: t } = this.state,
             { email: i, canResend: n, transitionState: a } = this.props;
         return (
-            (e = t && null != i ? u.intl.format(u.t.JqLgQE, { email: i }) : n ? u.intl.string(u.t.tSXg8P) : u.intl.string(u.t.KW5DEh)),
+            (e =
+                t && null != i
+                    ? u.intl.format(u.t.JqLgQE, { email: i })
+                    : n
+                      ? u.intl.string(u.t.tSXg8P)
+                      : u.intl.string(u.t.KW5DEh)),
             (0, s.jsxs)(c.Y0X, {
                 transitionState: a,
-                'aria-labelledby': this._headerId,
+                "aria-labelledby": this._headerId,
                 className: o()(g.emailVerificationModal, p.vertical, p.alignCenter, p.justifyCenter, f.marginTop60),
-                parentComponent: 'EmailVerificationModal',
+                parentComponent: "EmailVerificationModal",
                 children: [
-                    (0, s.jsx)('div', {
+                    (0, s.jsx)("div", {
                         className: g.animationContainer,
-                        ref: this.setLottieRef
+                        ref: this.setLottieRef,
                     }),
-                    (0, s.jsx)('div', {
+                    (0, s.jsx)("div", {
                         id: this._headerId,
                         className: o()(g.title, f.marginBottom8),
-                        children: u.intl.string(u.t['1MPz29'])
+                        children: u.intl.string(u.t["1MPz29"]),
                     }),
-                    (0, s.jsx)('div', {
+                    (0, s.jsx)("div", {
                         className: o()(g.body, f.marginBottom20),
-                        children: e
+                        children: e,
                     }),
-                    n ? this.renderActions() : this.renderInputs()
-                ]
+                    n ? this.renderActions() : this.renderInputs(),
+                ],
             })
         );
     }
     constructor(...e) {
-        (super(...e),
-            C(this, '_lottieRef', void 0),
-            C(this, '_animItem', null),
-            C(this, '_timeout', new h.V7()),
-            C(this, '_headerId', (0, r.Z)()),
-            C(this, 'state', {
+        super(...e),
+            C(this, "_lottieRef", void 0),
+            C(this, "_animItem", null),
+            C(this, "_timeout", new h.V7()),
+            C(this, "_headerId", (0, r.Z)()),
+            C(this, "state", {
                 resent: !1,
                 shouldClose: !1,
-                email: '',
-                password: ''
+                email: "",
+                password: "",
             }),
-            C(this, 'setLottieRef', (e) => {
+            C(this, "setLottieRef", (e) => {
                 this._lottieRef = e;
             }),
-            C(this, 'handleVerify', () => {
+            C(this, "handleVerify", () => {
                 let { onVerify: e } = this.props;
                 e(this.state.email, this.state.password);
             }),
-            C(this, 'handleResendEmail', () => {
+            C(this, "handleResendEmail", () => {
                 let { onResend: e, onClose: t } = this.props;
-                (e(),
+                e(),
                     this.state.resent ||
                         (this.setState({
                             resent: !0,
-                            shouldClose: !0
+                            shouldClose: !0,
                         }),
                         this._timeout.start(3000, () => {
                             this.state.shouldClose && t();
-                        })));
+                        }));
             }),
-            C(this, 'handleChangeEmailClick', () => {
+            C(this, "handleChangeEmailClick", () => {
                 let { onChangeEmailClick: e } = this.props;
-                (this.setState({
+                this.setState({
                     resent: !1,
-                    shouldClose: !1
+                    shouldClose: !1,
                 }),
-                    e());
+                    e();
             }),
-            C(this, 'handleEmailChange', (e) => {
+            C(this, "handleEmailChange", (e) => {
                 this.setState({ email: e });
             }),
-            C(this, 'handlePasswordChange', (e) => {
+            C(this, "handlePasswordChange", (e) => {
                 this.setState({ password: e });
             }),
-            C(this, 'handleKeyPress', (e) => {
+            C(this, "handleKeyPress", (e) => {
                 let { email: t, password: i } = this.state;
                 13 === e.which && t.length > 0 && i.length > 0 && (e.preventDefault(), this.handleVerify());
-            }));
+            });
     }
 }
-C(v, 'defaultProps', {
+C(v, "defaultProps", {
     canResend: !1,
     canChange: !0,
     onChangeEmailClick: m.dG4,
     onVerify: (e, t) => {},
     onResend: m.dG4,
-    onClose: m.dG4
+    onClose: m.dG4,
 });
 let x = v;

@@ -1,4 +1,4 @@
-(e.d(n, { Z: () => g }), e(388685));
+e.d(n, { Z: () => g }), e(388685);
 var l = e(255367);
 e(73800);
 var i = e(442837),
@@ -35,45 +35,46 @@ function g(t) {
                     for (var n = 1; n < arguments.length; n++) {
                         var e = null != arguments[n] ? arguments[n] : {},
                             l = Object.keys(e);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (l = l.concat(
                                 Object.getOwnPropertySymbols(e).filter(function (t) {
                                     return Object.getOwnPropertyDescriptor(e, t).enumerable;
-                                })
+                                }),
                             )),
                             l.forEach(function (n) {
                                 var l;
-                                ((l = e[n]),
+                                (l = e[n]),
                                     n in t
                                         ? Object.defineProperty(t, n, {
                                               value: l,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (t[n] = l));
-                            }));
+                                        : (t[n] = l);
+                            });
                     }
                     return t;
                 })({}, i)),
                 (a = a =
                     {
                         header: d.intl.string(d.t.R5bpio),
-                        confirmText: Z || t ? d.intl.string(d.t['8ZsNv7']) : d.intl.string(d.t.B9sJLS),
+                        confirmText: Z || t ? d.intl.string(d.t["8ZsNv7"]) : d.intl.string(d.t.B9sJLS),
                         cancelText: d.intl.string(d.t.oEAioK),
-                        onConfirm: () => (b && !t ? c.Z.deleteRecurrence(g.id, n, e, h) : c.Z.deleteGuildEvent(n, g.id)),
+                        onConfirm: () =>
+                            b && !t ? c.Z.deleteRecurrence(g.id, n, e, h) : c.Z.deleteGuildEvent(n, g.id),
                         children: [
                             (0, l.jsx)(r.Text, {
-                                variant: 'text-md/normal',
-                                children: d.intl.string(d.t.v2GWNT)
+                                variant: "text-md/normal",
+                                children: d.intl.string(d.t.v2GWNT),
                             }),
-                            (0, l.jsx)('br', {}),
+                            (0, l.jsx)("br", {}),
                             (Z || t) &&
                                 (0, l.jsx)(r.Text, {
-                                    variant: 'text-md/normal',
-                                    children: d.intl.format(d.t.ZcpcyM, {})
-                                })
-                        ]
+                                    variant: "text-md/normal",
+                                    children: d.intl.format(d.t.ZcpcyM, {}),
+                                }),
+                        ],
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
@@ -87,7 +88,7 @@ function g(t) {
                       })(Object(a)).forEach(function (t) {
                           Object.defineProperty(o, t, Object.getOwnPropertyDescriptor(a, t));
                       }),
-                o)
+                o),
             );
         });
     };
@@ -95,7 +96,7 @@ function g(t) {
         id: d.intl.string(d.t.B9sJLS),
         label: d.intl.string(d.t.B9sJLS),
         action: b ? void 0 : () => w(),
-        color: 'danger',
+        color: "danger",
         children:
             b &&
             (0, l.jsxs)(l.Fragment, {
@@ -105,15 +106,15 @@ function g(t) {
                         label: d.intl.string(d.t.tqCll5),
                         action: () => w(),
                         disabled: null == h ? void 0 : h.is_canceled,
-                        color: 'danger'
+                        color: "danger",
                     }),
                     (0, l.jsx)(r.sNh, {
                         id: d.intl.string(d.t.wr33ra),
                         label: d.intl.string(d.t.wr33ra),
                         action: () => w(!0),
-                        color: 'danger'
-                    })
-                ]
-            })
+                        color: "danger",
+                    }),
+                ],
+            }),
     });
 }

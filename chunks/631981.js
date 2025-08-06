@@ -14,19 +14,19 @@ let f = (0, a.Z)(
         let { onSelect: t } = e,
             r = (0, c.e7)([l.Z], () => l.Z.favoriteServerMuted);
         return (0, n.jsx)(o.v2r, {
-            navId: 'favorite-server-context',
+            navId: "favorite-server-context",
             onClose: i.Zy,
-            'aria-label': b.intl.string(b.t.liqwPD),
+            "aria-label": b.intl.string(b.t.liqwPD),
             onSelect: t,
             children: (0, n.jsx)(o.kSQ, {
                 children: (0, n.jsx)(o.S89, {
-                    id: 'mute-server',
+                    id: "mute-server",
                     label: b.intl.string(b.t.vRzp7O),
                     action: () => (0, u._Z)(),
-                    checked: r
-                })
-            })
+                    checked: r,
+                }),
+            }),
         });
     },
-    { object: s.qAy.CONTEXT_MENU }
+    { object: s.qAy.CONTEXT_MENU },
 );

@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     kb: () => l,
-    o8: () => u
+    o8: () => u,
 }),
     n(361932),
-    n(187205));
+    n(187205);
 var r = n(887003),
     i = n(55935),
     o = n(70956),
@@ -11,7 +11,9 @@ var r = n(887003),
     s = n(388032);
 let l = (e) => {
         let t = (0, a.xG)(e.map((e) => e.skuId));
-        return t % 24 == 0 ? s.intl.formatToPlainString(s.t['Cz1G9/'], { days: t / 24 }) : s.intl.formatToPlainString(s.t.J9Lu4u, { hours: t });
+        return t % 24 == 0
+            ? s.intl.formatToPlainString(s.t["Cz1G9/"], { days: t / 24 })
+            : s.intl.formatToPlainString(s.t.J9Lu4u, { hours: t });
     },
     c = (e) => e.rewardsConfig.rewards.filter((e) => e.type === r.w.FRACTIONAL_PREMIUM),
     u = (e) => {
@@ -19,9 +21,9 @@ let l = (e) => {
             n = (0, a.xG)(t),
             r = {
                 days: s.t.fYmir6,
-                hours: s.t['C3RO+v'],
-                minutes: s.t.r77oHR
+                hours: s.t["C3RO+v"],
+                minutes: s.t.r77oHR,
             },
             l = (0, i.TD)(0, n * o.Z.Millis.HOUR);
-        return s.intl.formatToPlainString(s.t['4SqnVF'], { time: (0, i.QX)(l, r) });
+        return s.intl.formatToPlainString(s.t["4SqnVF"], { time: (0, i.QX)(l, r) });
     };

@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,5 +33,5 @@ class h extends (r = i.ZP.Store) {
         return _;
     }
 }
-u(h, 'displayName', 'PremiumPromoStore');
+u(h, "displayName", "PremiumPromoStore");
 let m = new h(o.Z, { CONNECTION_OPEN: p });

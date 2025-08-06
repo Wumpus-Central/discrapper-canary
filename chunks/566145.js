@@ -5,7 +5,7 @@ var n = {
     today: "'bugün saat' p",
     tomorrow: "'yarın saat' p",
     nextWeek: "eeee 'saat' p",
-    other: 'P'
+    other: "P",
 };
 let i = function (a, e, t, i) {
     return n[a];

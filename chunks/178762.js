@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     Ir: () => z,
     J: () => K,
     YN: () => F,
     ZP: () => X,
-    iZ: () => H
+    iZ: () => H,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -46,7 +46,7 @@ function k(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -56,15 +56,15 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 k(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -72,11 +72,11 @@ function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -98,7 +98,8 @@ function B(e, t) {
         i = Z(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -108,7 +109,7 @@ function Z(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let F = 72,
@@ -118,7 +119,7 @@ function H(e) {
 }
 let Y = (e) => {
         var { entry: t } = e,
-            n = B(e, ['entry']);
+            n = B(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
                 return (0, r.jsx)(I.Z, G(j({}, n), { entry: t }));
@@ -140,34 +141,34 @@ let Y = (e) => {
     },
     W = (e) => {
         var { closePopout: t } = e,
-            n = B(e, ['closePopout']);
+            n = B(e, ["closePopout"]);
         return (0, r.jsx)(
             K,
             j(
                 {
                     onReaction: (e, r) => {
-                        (n.trackRankingItemInteraction(e, {
+                        n.trackRankingItemInteraction(e, {
                             destinationChannelId: r.id,
-                            destinationGuildId: r.guild_id
+                            destinationGuildId: r.guild_id,
                         }),
-                            t());
+                            t();
                     },
                     closePopout: t,
                     onVoiceChannelPreview: (e) => {
                         n.trackRankingItemInteraction(x.xP.VOICE_CHANNEL_PREVIEWED, {
                             destinationChannelId: e.id,
-                            destinationGuildId: e.guild_id
+                            destinationGuildId: e.guild_id,
                         });
-                    }
+                    },
                 },
-                n
-            )
+                n,
+            ),
         );
     },
     K = (e) => {
         var t,
             { entry: n } = e,
-            i = B(e, ['entry']);
+            i = B(e, ["entry"]);
         switch (n.content_type) {
             case l.s.PLAYED_GAME:
                 return (0, r.jsx)(T.Z, G(j({}, i), { entry: n }));
@@ -187,7 +188,7 @@ let Y = (e) => {
                           guildId: i.channel.guild_id,
                           leaderboardId: n.extra.leaderboard_id,
                           source: p.Z.MEMBER_LIST,
-                          trackRankingItemInteraction: i.trackRankingItemInteraction
+                          trackRankingItemInteraction: i.trackRankingItemInteraction,
                       })
                     : null;
             default:
@@ -198,10 +199,10 @@ let Y = (e) => {
     q = (e) => {
         var t,
             { index: o, ref: p } = e,
-            m = B(e, ['index', 'ref']);
+            m = B(e, ["index", "ref"]);
         let g = i.useRef(null),
-            [E, O] = i.useState('default'),
-            v = (0, s.JA)(''.concat(o)),
+            [E, O] = i.useState("default"),
+            v = (0, s.JA)("".concat(o)),
             I = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
             { isRich: T, appName: S } = (0, L.n)(m.entry),
             A = i.useMemo(
@@ -210,9 +211,9 @@ let Y = (e) => {
                     channelId: m.channel.id,
                     guildId: m.channel.guild_id,
                     requestId: m.requestId,
-                    richPresenceName: T ? S : void 0
+                    richPresenceName: T ? S : void 0,
                 }),
-                [S, m.channel.guild_id, m.channel.id, m.entry, m.requestId, T]
+                [S, m.channel.guild_id, m.channel.id, m.entry, m.requestId, T],
             ),
             N = i.useRef(!1),
             [C, R] = i.useState(!1),
@@ -225,15 +226,15 @@ let Y = (e) => {
                 (e) => {
                     I &&
                         (0, f.jW)(e, async () => {
-                            let { default: e } = await n.e('153').then(n.bind(n, 330150));
+                            let { default: e } = await n.e("153").then(n.bind(n, 330150));
                             return () =>
                                 (0, r.jsx)(e, {
                                     entry: m.entry,
-                                    requestId: m.requestId
+                                    requestId: m.requestId,
                                 });
                         });
                 },
-                [m, I]
+                [m, I],
             ),
             U = i.useCallback(() => {
                 O(String(Date.now()));
@@ -243,7 +244,7 @@ let Y = (e) => {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                     (0, y.L)(e, j({}, A, t));
                 },
-                [A]
+                [A],
             ),
             F = i.useMemo(
                 () =>
@@ -254,25 +255,27 @@ let Y = (e) => {
                         V,
                         {
                             leading: !0,
-                            trailing: !1
-                        }
+                            trailing: !1,
+                        },
                     ),
-                []
+                [],
             ),
             H = () => {
-                ((N.current = !1),
+                (N.current = !1),
                     setTimeout(() => {
                         N.current || (R(!1), w(D));
-                    }, 100));
+                    }, 100);
             };
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             ref: p,
             onMouseEnter: () => {
-                (m.entry.content_type !== l.s.LEADERBOARD || (0, h.zu)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.Q3)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: M.L.SECONDARY }),
+                m.entry.content_type !== l.s.LEADERBOARD ||
+                    (0, h.zu)(u.z.LEADERBOARD_NUX_COACHMARK) ||
+                    (0, h.Q3)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: M.L.SECONDARY }),
                     (N.current = !0),
                     setTimeout(() => {
-                        (N.current && R(!0), F(A));
-                    }, 100));
+                        N.current && R(!0), F(A);
+                    }, 100);
             },
             onMouseLeave: H,
             children: (0, r.jsx)(d.yRy, {
@@ -287,14 +290,14 @@ let Y = (e) => {
                                 {
                                     closePopout: t,
                                     updatePopoutPosition: U,
-                                    trackRankingItemInteraction: Z
+                                    trackRankingItemInteraction: Z,
                                 },
-                                m
-                            )
-                        )
+                                m,
+                            ),
+                        ),
                     });
                 },
-                position: 'left',
+                position: "left",
                 shouldShow: C,
                 positionKey: E,
                 onRequestOpen: () => F(A),
@@ -313,8 +316,8 @@ let Y = (e) => {
                                     top: 4,
                                     bottom: 4,
                                     left: 4,
-                                    right: 4
-                                }
+                                    right: 4,
+                                },
                             },
                             onClick: () => {
                                 C || R(!0);
@@ -324,13 +327,13 @@ let Y = (e) => {
                                 Y,
                                 G(j({}, m), {
                                     selected: n,
-                                    hovered: N.current
-                                })
-                            )
-                        })
+                                    hovered: N.current,
+                                }),
+                            ),
+                        }),
                     );
-                }
-            })
+                },
+            }),
         });
     },
     X = i.memo(q);

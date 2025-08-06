@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(997841), n(388685));
+n.d(t, { Z: () => P }), n(997841), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -26,7 +26,7 @@ function I(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -78,7 +78,7 @@ function N(e) {
         content: t,
         channel: n,
         restrictMentions: !1,
-        respectCooldown: !1
+        respectCooldown: !1,
     });
 }
 function C(e) {
@@ -93,15 +93,15 @@ function C(e) {
         {
             editingMessage: C,
             editingTextValue: P,
-            editingRichValue: w
+            editingRichValue: w,
         } = (0, o.cj)(
             [f.Z],
             () => ({
                 editingMessage: f.Z.getEditingMessage(c),
                 editingTextValue: f.Z.getEditingTextValue(c),
-                editingRichValue: f.Z.getEditingRichValue(c)
+                editingRichValue: f.Z.getEditingRichValue(c),
             }),
-            [c]
+            [c],
         ),
         D = (0, o.e7)([d.default], () => d.default.getId()),
         L = i.useCallback(
@@ -112,23 +112,28 @@ function C(e) {
                     d = S && (u === D || c),
                     f = {
                         content: o,
-                        components: void 0
+                        components: void 0,
                     };
                 if (n.hasFlag(y.iLy.IS_COMPONENTS_V2)) {
                     var _;
                     let e = (null == (_ = n.components[0]) ? void 0 : _.type) === l.re.MEDIA_GALLERY,
                         t = n.components.filter((e) => e.type !== l.re.TEXT_DISPLAY);
-                    (t.splice(+!!e, 0, {
+                    t.splice(+!!e, 0, {
                         type: l.re.TEXT_DISPLAY,
                         content: o,
-                        id: ''.concat(O.Kb)
+                        id: "".concat(O.Kb),
                     }),
-                        (f.content = ''),
-                        (f.components = t));
+                        (f.content = ""),
+                        (f.components = t);
                 }
-                return (d && null != C && (0, m.yE)(C.flags, y.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, r, f) : a.Z.editMessage(e, r, f), Promise.resolve());
+                return (
+                    d && null != C && (0, m.yE)(C.flags, y.iLy.CROSSPOSTED)
+                        ? s.Z.confirmEdit(e, r, f)
+                        : a.Z.editMessage(e, r, f),
+                    Promise.resolve()
+                );
             },
-            [C, S, D, t, n]
+            [C, S, D, t, n],
         ),
         x = i.useCallback(
             (e) =>
@@ -136,10 +141,10 @@ function C(e) {
                     R,
                     A(T({}, e), {
                         className: v.channelTextArea,
-                        key: u
-                    })
+                        key: u,
+                    }),
                 ),
-            [u]
+            [u],
         );
     return null != P && null != w
         ? (0, r.jsx)(b.Z, {
@@ -153,12 +158,21 @@ function C(e) {
               onConfirmDelete: s.Z.confirmDelete,
               saveMessage: L,
               validateEdit: N,
-              children: x
+              children: x,
           })
         : null;
 }
 function R(e) {
-    let { textValue: t, richValue: n, message: o, channel: a, onChange: s, onSubmit: l, onKeyDown: d, renderLeftAccessories: f } = e,
+    let {
+            textValue: t,
+            richValue: n,
+            message: o,
+            channel: a,
+            onChange: s,
+            onSubmit: l,
+            onKeyDown: d,
+            renderLeftAccessories: f,
+        } = e,
         [_, p] = i.useState(!0),
         m = i.useCallback(() => p(!0), []),
         g = i.useCallback(() => p(!1), []);
@@ -168,10 +182,10 @@ function R(e) {
                 h.S.subscribe(y.CkL.TEXTAREA_FOCUS, m),
                 h.S.subscribe(y.CkL.TEXTAREA_BLUR, g),
                 () => {
-                    (h.S.unsubscribe(y.CkL.TEXTAREA_FOCUS, m), h.S.unsubscribe(y.CkL.TEXTAREA_BLUR, g));
+                    h.S.unsubscribe(y.CkL.TEXTAREA_FOCUS, m), h.S.unsubscribe(y.CkL.TEXTAREA_BLUR, g);
                 }
             ),
-            [m, g]
+            [m, g],
         ),
         (0, r.jsx)(
             u.ZP,
@@ -190,9 +204,9 @@ function R(e) {
                 focused: _,
                 onFocus: m,
                 onBlur: g,
-                renderLeftAccessories: f
+                renderLeftAccessories: f,
             },
-            o.id
+            o.id,
         )
     );
 }
@@ -201,11 +215,11 @@ function P(e, t, n) {
     return n
         ? (0, r.jsx)(C, {
               channel: o,
-              message: i
+              message: i,
           })
         : (0, r.jsx)(E.ZP, {
               message: i,
               content: t,
-              compact: null != a && a
+              compact: null != a && a,
           });
 }

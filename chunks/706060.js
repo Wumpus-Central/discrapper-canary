@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(642613), n(539854));
+n.d(t, { Z: () => m }), n(388685), n(642613), n(539854);
 var i = n(255367),
     r = n(73800),
     s = n(772848),
@@ -9,8 +9,8 @@ var i = n(255367),
 function d(e) {
     let { setting: t, hasChildren: n } = e;
     return (0, i.jsx)(a.Text, {
-        variant: n ? 'text-md/bold' : 'text-md/normal',
-        children: t
+        variant: n ? "text-md/bold" : "text-md/normal",
+        children: t,
     });
 }
 function u(e) {
@@ -21,19 +21,19 @@ function u(e) {
         }, [m, p]);
     if (0 === n.length)
         return (0, i.jsx)(
-            'div',
+            "div",
             {
                 style: { marginLeft: 8 * o },
                 className: c.settingNode,
                 children: (0, i.jsx)(d, {
                     setting: t,
-                    hasChildren: !1
-                })
+                    hasChildren: !1,
+                }),
             },
-            (0, s.Z)()
+            (0, s.Z)(),
         );
     let h = m
-        ? (0, i.jsx)('div', {
+        ? (0, i.jsx)("div", {
               className: c.settingNodeChildren,
               children: n
                   .sort((e, t) => e.setting.localeCompare(t.setting))
@@ -44,15 +44,15 @@ function u(e) {
                           {
                               setting: e.setting,
                               children: e.children,
-                              depth: o + 1
+                              depth: o + 1,
                           },
-                          (0, s.Z)()
-                      )
-                  )
+                          (0, s.Z)(),
+                      ),
+                  ),
           })
         : null;
     return (0, i.jsxs)(
-        'div',
+        "div",
         {
             style: { marginLeft: 8 * o },
             className: c.settingNode,
@@ -63,18 +63,18 @@ function u(e) {
                     children: [
                         (0, i.jsx)(d, {
                             setting: t,
-                            hasChildren: n.length > 0
+                            hasChildren: n.length > 0,
                         }),
                         (0, i.jsx)(l.Z, {
                             direction: m ? l.Z.Directions.DOWN : l.Z.Directions.RIGHT,
-                            className: c.headerCaret
-                        })
-                    ]
+                            className: c.headerCaret,
+                        }),
+                    ],
                 }),
-                h
-            ]
+                h,
+            ],
         },
-        (0, s.Z)()
+        (0, s.Z)(),
     );
 }
 function m() {
@@ -89,13 +89,13 @@ function m() {
                 var n;
                 return {
                     setting: t,
-                    parent: null != (n = e[t].parent) ? n : null
+                    parent: null != (n = e[t].parent) ? n : null,
                 };
             });
     n.filter((e) => null === e.parent).forEach((e) => {
         t.children.push({
             setting: e.setting,
-            children: []
+            children: [],
         });
     });
     let r = [...t.children];
@@ -106,18 +106,18 @@ function m() {
             .filter((t) => t.parent === e.setting)
             .map((e) => ({
                 setting: e.setting,
-                children: []
+                children: [],
             }));
-        ((e.children = t), r.push(...t));
+        (e.children = t), r.push(...t);
     }
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: c.root,
         children: [
             (0, i.jsx)(a.X6q, {
-                variant: 'heading-lg/bold',
-                children: 'Settings Tree'
+                variant: "heading-lg/bold",
+                children: "Settings Tree",
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: c.tree,
                 children: t.children
                     .sort((e, t) => e.setting.localeCompare(t.setting))
@@ -127,12 +127,12 @@ function m() {
                             {
                                 setting: e.setting,
                                 children: e.children,
-                                depth: 1
+                                depth: 1,
                             },
-                            (0, s.Z)()
-                        )
-                    )
-            })
-        ]
+                            (0, s.Z)(),
+                        ),
+                    ),
+            }),
+        ],
     });
 }

@@ -24,24 +24,24 @@ var i = n(620662),
     T = n(327833);
 function S(e) {
     let { user: t, activity: n, onAction: S, onClose: A, application: N } = e,
-        C = (0, c.q)(N, 'UserProfileActivityButtons'),
+        C = (0, c.q)(N, "UserProfileActivityButtons"),
         R = (0, u.L)(null != n ? n : void 0, void 0);
     if ((0, s.Z)(n))
         return (0, r.jsx)(E.Z, {
             platformType: I.ABu.XBOX,
             icon: () => (0, r.jsx)(_.Z, {}),
-            onAction: S
+            onAction: S,
         });
     if ((0, a.Z)(n))
         return (0, r.jsx)(E.Z, {
             platformType: I.ABu.PLAYSTATION,
             icon: () => (0, r.jsx)(f.Z, {}),
-            onAction: S
+            onAction: S,
         });
     if ((0, l.Z)(n))
         return (0, r.jsx)(O.Z, {
             activity: n,
-            onAction: S
+            onAction: S,
         });
     let P = (0, i.Z)(n, I.xjy.JOIN) || (0, o.Z)(n),
         w = (null == n ? void 0 : n.application_id) != null;
@@ -49,60 +49,60 @@ function S(e) {
         ? (0, r.jsx)(v.Z, {
               application: N,
               onAction: S,
-              onClose: A
+              onClose: A,
           })
         : P && w
-          ? (0, r.jsxs)('div', {
+          ? (0, r.jsxs)("div", {
                 className: T.buttonContainer,
                 children: [
                     (0, r.jsx)(m.Z, {
                         user: t,
                         activity: n,
                         onAction: S,
-                        onClose: A
+                        onClose: A,
                     }),
                     (0, r.jsx)(y.Z, {
                         activity: n,
-                        onAction: S
-                    })
-                ]
+                        onAction: S,
+                    }),
+                ],
             })
           : P
             ? (0, r.jsx)(m.Z, {
                   user: t,
                   activity: n,
                   onAction: S,
-                  onClose: A
+                  onClose: A,
               })
             : (null == n ? void 0 : n.type) === I.IIU.HANG_STATUS
               ? (0, r.jsx)(h.Z, {
                     user: t,
                     activity: n,
                     onAction: S,
-                    onClose: A
+                    onClose: A,
                 })
               : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
                 ? (0, r.jsx)(p.Z, {
                       user: t,
                       activity: n,
-                      onAction: S
+                      onAction: S,
                   })
                 : w
                   ? (0, r.jsx)(y.Z, {
                         activity: n,
-                        onAction: S
+                        onAction: S,
                     })
                   : (0, i.Z)(n, I.xjy.INSTANCE)
                     ? (0, r.jsx)(g.Z, {
                           user: t,
                           activity: n,
-                          onAction: S
+                          onAction: S,
                       })
                     : (0, d.dS)(n)
                       ? (0, r.jsx)(b.Z, {
                             activity: n,
                             onAction: S,
-                            onClose: A
+                            onClose: A,
                         })
                       : null;
 }

@@ -19,46 +19,46 @@ function p(e) {
         m = s.ZP.getName(n.guild_id, void 0, p);
     return (0, r.jsx)(c.z, {
         imageUrl: h,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: _.userContainer,
             children: [
                 (0, r.jsx)(d.Z, {
                     user: p,
                     rank: 1,
-                    rankBadgeVisibility: 'hidden'
+                    rankBadgeVisibility: "hidden",
                 }),
                 (0, r.jsx)(o.LZC, {
                     size: 8,
-                    horizontal: !0
+                    horizontal: !0,
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: _.userNameContainer,
                             children: [
                                 (0, r.jsx)(o.Text, {
-                                    variant: 'text-sm/semibold',
+                                    variant: "text-sm/semibold",
                                     className: _.userName,
-                                    children: m
+                                    children: m,
                                 }),
                                 (0, r.jsx)(o.LZC, {
                                     size: 4,
-                                    horizontal: !0
+                                    horizontal: !0,
                                 }),
                                 (0, r.jsx)(u.Z, {
                                     className: _.winnerImage,
-                                    leaderboard: n
-                                })
-                            ]
+                                    leaderboard: n,
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(o.Text, {
-                            variant: 'text-xs/normal',
+                            variant: "text-xs/normal",
                             className: _.userSubtitle,
-                            children: f.intl.string(f.t['0ScUkZ'])
-                        })
-                    ]
-                })
-            ]
-        })
+                            children: f.intl.string(f.t["0ScUkZ"]),
+                        }),
+                    ],
+                }),
+            ],
+        }),
     });
 }

@@ -17,18 +17,18 @@ function p(e) {
         f = (0, u.Z)({
             guild: t,
             source: s.t4x.GUILD_CONTEXT_MENU,
-            channel: p
+            channel: p,
         });
     return (0, r.jsxs)(l.v2r, {
-        navId: 'guild-context',
-        'aria-label': d.intl.string(d.t.HpQykZ),
+        navId: "guild-context",
+        "aria-label": d.intl.string(d.t.HpQykZ),
         onClose: i.Zy,
         onSelect: n,
         children: [
             (0, r.jsx)(l.kSQ, { children: b }),
             (0, r.jsxs)(l.kSQ, {
-                children: [y, f]
-            })
-        ]
+                children: [y, f],
+            }),
+        ],
     });
 }

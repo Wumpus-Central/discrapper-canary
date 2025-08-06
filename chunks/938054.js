@@ -11,7 +11,7 @@ var r = n(169774),
     _ = n(993083),
     p = n(681116),
     h = n(536574),
-    m = r.isBrowser('Chrome') ? h : function (e) {};
+    m = r.isBrowser("Chrome") ? h : function (e) {};
 e.exports = {
     onBeforeInput: i,
     onBlur: o,
@@ -26,5 +26,5 @@ e.exports = {
     onPaste: p,
     onSelect: h,
     onMouseUp: m,
-    onKeyUp: m
+    onKeyUp: m,
 };

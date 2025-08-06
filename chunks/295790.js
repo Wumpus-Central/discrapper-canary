@@ -10,7 +10,7 @@ function a(e) {
               message: t,
               channel: n,
               compact: a,
-              disableInteraction: s
+              disableInteraction: s,
           })
         : null;
 }

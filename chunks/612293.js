@@ -1,4 +1,4 @@
-(r.d(t, { default: () => C }), r(388685));
+r.d(t, { default: () => C }), r(388685);
 var n = r(255367),
     a = r(73800),
     l = r(442837),
@@ -22,13 +22,13 @@ function C(e) {
     let { transitionState: t, analyticsLocations: r, onClose: o, guildId: u, initialSelectedNameplate: p } = e,
         b = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
         { analyticsLocations: h } = (0, c.ZP)(r, s.Z.EDIT_NAMEPLATE_MODAL),
-        { available: m, purchased: _, isFetchingCategories: y, isFetchingPurchases: C } = (0, d.yV)('NameplateModal'),
+        { available: m, purchased: _, isFetchingCategories: y, isFetchingPurchases: C } = (0, d.yV)("NameplateModal"),
         P = y || (C && 0 === _.length);
     return (
         (0, a.useEffect)(() => {
             v.default.track(O.rMx.OPEN_MODAL, {
                 type: O.jXE.NAMEPLATE_CUSTOMIZATION,
-                location_stack: h
+                location_stack: h,
             });
         }, [h]),
         null == b
@@ -38,12 +38,12 @@ function C(e) {
                   children: (0, n.jsx)(i.Y0X, {
                       transitionState: t,
                       size: P ? i.CgR.DYNAMIC : i.CgR.MEDIUM,
-                      parentComponent: 'NameplateModal',
-                      'data-migration-pending': !0,
+                      parentComponent: "NameplateModal",
+                      "data-migration-pending": !0,
                       children: P
                           ? (0, n.jsx)(i.$jN, {
                                 className: g.spinner,
-                                type: i.$jN.Type.SPINNING_CIRCLE
+                                type: i.$jN.Type.SPINNING_CIRCLE,
                             })
                           : (0, n.jsx)(j, {
                                 user: b,
@@ -52,35 +52,52 @@ function C(e) {
                                 purchased: _,
                                 analyticsLocations: h,
                                 guildId: u,
-                                initialSelectedNameplate: p
-                            })
-                  })
+                                initialSelectedNameplate: p,
+                            }),
+                  }),
               })
     );
 }
 function j(e) {
     var t, r, c, d;
-    let { user: f, available: v, purchased: O, analyticsLocations: C, onClose: j, guildId: P, initialSelectedNameplate: E } = e,
+    let {
+            user: f,
+            available: v,
+            purchased: O,
+            analyticsLocations: C,
+            onClose: j,
+            guildId: P,
+            initialSelectedNameplate: E,
+        } = e,
         x = (0, l.e7)([h.ZP], () => (null != P && null != f ? h.ZP.getMember(P, f.id) : null)),
-        S = null != P ? (null == x || null == (r = x.collectibles) || null == (t = r.nameplate) ? void 0 : t.skuId) : null == f || null == (d = f.collectibles) || null == (c = d.nameplate) ? void 0 : c.skuId,
+        S =
+            null != P
+                ? null == x || null == (r = x.collectibles) || null == (t = r.nameplate)
+                    ? void 0
+                    : t.skuId
+                : null == f || null == (d = f.collectibles) || null == (c = d.nameplate)
+                  ? void 0
+                  : c.skuId,
         w = O.find((e) => e.skuId === S),
         { pendingNameplate: R } = (0, b.Zx)(f, P),
         [I, A] = (0, a.useState)(() => {
             var e;
             return void 0 !== R ? R : null != (e = null != E ? E : w) ? e : null;
         }),
-        N = (null == I ? void 0 : I.skuId) === (void 0 === R ? (null == w ? void 0 : w.skuId) : null == R ? void 0 : R.skuId),
+        N =
+            (null == I ? void 0 : I.skuId) ===
+            (void 0 === R ? (null == w ? void 0 : w.skuId) : null == R ? void 0 : R.skuId),
         [k, T] = (0, a.useState)(() => null != I && O.some((e) => e.id === I.id)),
         D = (0, a.useCallback)(
             (e) => {
-                (j(),
+                j(),
                     (0, u.mK)({
                         analyticsLocations: C,
                         analyticsSource: s.Z.EDIT_NAMEPLATE_MODAL,
-                        initialProductSkuId: e
-                    }));
+                        initialProductSkuId: e,
+                    });
             },
-            [C, j]
+            [C, j],
         );
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -89,60 +106,60 @@ function j(e) {
                 className: g.header,
                 children: [
                     (0, n.jsx)(i.X6q, {
-                        variant: 'heading-lg/semibold',
-                        children: y.intl.string(y.t.BwdeMz)
+                        variant: "heading-lg/semibold",
+                        children: y.intl.string(y.t.BwdeMz),
                     }),
                     (0, n.jsx)(i.olH, {
                         className: g.closeButton,
-                        onClick: j
-                    })
-                ]
+                        onClick: j,
+                    }),
+                ],
             }),
             (0, n.jsxs)(i.hzk, {
                 className: g.content,
-                scrollbarType: 'none',
+                scrollbarType: "none",
                 children: [
                     (0, n.jsx)(_.Z, {
                         selected: I,
                         onSelect: (e, t) => {
-                            (A(e), T(null != t && t));
+                            A(e), T(null != t && t);
                         },
                         onOpenShop: D,
                         available: v,
-                        purchased: O
+                        purchased: O,
                     }),
                     (0, n.jsx)(m.Z, {
                         user: f,
                         guildId: P,
                         selectedNameplate: I,
-                        purchased: k
-                    })
-                ]
+                        purchased: k,
+                    }),
+                ],
             }),
             (0, n.jsxs)(i.mzw, {
                 className: g.modalFooter,
                 children: [
                     k || null == I
                         ? (0, n.jsx)(i.zxk, {
-                              variant: 'primary',
+                              variant: "primary",
                               text: y.intl.string(y.t.Jh8fJy),
                               disabled: N,
                               onClick: () => {
-                                  (null != P ? (0, p.RH)(I) : (0, o.Rx)(I), j());
-                              }
+                                  null != P ? (0, p.RH)(I) : (0, o.Rx)(I), j();
+                              },
                           })
                         : (0, n.jsx)(i.zxk, {
-                              variant: 'primary',
+                              variant: "primary",
                               onClick: () => D(null == I ? void 0 : I.skuId),
-                              text: y.intl.string(y.t.fYfGgI)
+                              text: y.intl.string(y.t.fYfGgI),
                           }),
                     (0, n.jsx)(i.zxk, {
-                        variant: 'secondary',
+                        variant: "secondary",
                         text: y.intl.string(y.t.mDcKND),
-                        onClick: j
-                    })
-                ]
-            })
-        ]
+                        onClick: j,
+                    }),
+                ],
+            }),
+        ],
     });
 }

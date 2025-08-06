@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,24 +53,24 @@ let m = (e) => {
         case d.HeQ.KAKAOPAY:
         case d.HeQ.GOPAY_WALLET:
         case d.HeQ.BANCONTACT:
-            t = 'en-US' === b ? s.ZP.Layouts.MODAL_US_WITH_NAME : s.ZP.Layouts.MODAL_INTL_WITH_NAME;
+            t = "en-US" === b ? s.ZP.Layouts.MODAL_US_WITH_NAME : s.ZP.Layouts.MODAL_INTL_WITH_NAME;
             break;
         case d.HeQ.VENMO:
         case d.HeQ.CASH_APP:
             t = s.ZP.Layouts.MODAL_US_WITH_NAME;
             break;
         default:
-            t = 'en-US' === b ? s.ZP.Layouts.MODAL_US : s.ZP.Layouts.MODAL_INTL;
+            t = "en-US" === b ? s.ZP.Layouts.MODAL_US : s.ZP.Layouts.MODAL_INTL;
     }
     let y = (0, o.e7)([c.Z], () => c.Z.ipCountryCode);
     return (
-        0 === n.country.length && (n.country = null != y ? y : ''),
+        0 === n.country.length && (n.country = null != y ? y : ""),
         (0, r.jsxs)(i.Fragment, {
             children: [
                 E
                     ? (0, r.jsx)(a.kzN, {
                           className: _.errorBlock,
-                          children: f.intl.string(f.t.vZ8y7u)
+                          children: f.intl.string(f.t.vZ8y7u),
                       })
                     : null,
                 (0, r.jsx)(
@@ -80,12 +80,12 @@ let m = (e) => {
                             className: _.__invalid_formItem,
                             onBillingAddressChange: m,
                             error: p,
-                            layout: t
+                            layout: t,
                         },
-                        n
-                    )
-                )
-            ]
+                        n,
+                    ),
+                ),
+            ],
         })
     );
 };

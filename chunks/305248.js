@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685), n(642613));
+n.d(t, { Z: () => y }), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -34,7 +34,7 @@ function y(e) {
                     .filter(g.lm)
                     .sort((e, t) => m.default.compare(e.id, t.id))
                     .value(),
-            [t.oldestReadMessageId, n.guild_id, n.id]
+            [t.oldestReadMessageId, n.guild_id, n.id],
         ),
         C = i.useCallback((e, t) => {
             (0, p.ok)(e, t, O.on.INBOX);
@@ -47,19 +47,19 @@ function y(e) {
                 t.collapsed ||
                 0 !== y.length ||
                 a.Z.wait(() => {
-                    ((0, c.In)(
+                    (0, c.In)(
                         t.channelId,
                         {
                             section: b.jXE.INBOX,
                             object: b.qAy.ACK_INBOX_FORUM_NO_POSTS,
-                            objectType: b.Qqv.ACK_AUTOMATIC
+                            objectType: b.Qqv.ACK_AUTOMATIC,
                         },
-                        !0
+                        !0,
                     ),
-                        l(t.channelId));
+                        l(t.channelId);
                 });
         }),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: _.container,
             children: y.map((e) =>
                 (0, r.jsx)(
@@ -69,12 +69,12 @@ function y(e) {
                         children: (0, r.jsx)(u.ZP, {
                             className: _.forumPost,
                             threadId: e.id,
-                            goToThread: C
-                        })
+                            goToThread: C,
+                        }),
                     },
-                    e.id
-                )
-            )
+                    e.id,
+                ),
+            ),
         })
     );
 }

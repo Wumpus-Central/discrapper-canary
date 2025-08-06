@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685));
+n.d(t, { Z: () => A }), n(388685);
 var r = n(268146),
     i = n(872810),
     o = n(594190),
@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,18 +69,21 @@ function I(e, t) {
     );
 }
 function T(e) {
-    return e.hasOwnProperty('pid');
+    return e.hasOwnProperty("pid");
 }
 function S(e) {
     if (T(e)) return { pid: e.pid };
     let t = (0, g.Z)(void 0, e, o.ZP.getRunningGames()),
-        n = !(0, p.isWindows)() || null == t || (null == e ? void 0 : e.id.startsWith(r.vA.CAMERA)) || null == t ? null : t.pid;
+        n =
+            !(0, p.isWindows)() || null == t || (null == e ? void 0 : e.id.startsWith(r.vA.CAMERA)) || null == t
+                ? null
+                : t.pid;
     return null != n
         ? { pid: n }
         : {
               sourceId: e.id,
               sourceName: e.name,
-              sourceIcon: e.icon
+              sourceIcon: e.icon,
           };
 }
 async function A(e, t) {
@@ -90,10 +93,14 @@ async function A(e, t) {
         P = c.Z.getChannel(R),
         w = null == P ? void 0 : P.getGuildId(),
         D = null == (n = u.Z.getGuild(w)) ? void 0 : n.premiumTier;
-    if (null == C || null == P || null == R) return [!1, 'no user or channel'];
+    if (null == C || null == P || null == R) return [!1, "no user or channel"];
     let L = null;
-    if (null == (L = 'number' == typeof e ? o.ZP.getGameForPID(e) : e)) return [!1, 'no source'];
-    if (!d.Z.getUseSystemScreensharePicker() && !(await a.Z.hasPermission(b.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) return [!1, 'no permission'];
+    if (null == (L = "number" == typeof e ? o.ZP.getGameForPID(e) : e)) return [!1, "no source"];
+    if (
+        !d.Z.getUseSystemScreensharePicker() &&
+        !(await a.Z.hasPermission(b.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))
+    )
+        return [!1, "no permission"];
     let { preset: x, resolution: M, fps: k, soundshareEnabled: j } = l.Z.getState(),
         U = null != (g = null == t ? void 0 : t.preset) ? g : x,
         [G, B] = null != (y = (0, m.Z)(U, C, D)) ? y : [],
@@ -107,17 +114,21 @@ async function A(e, t) {
             preset: U,
             resolution: Z,
             frameRate: F,
-            soundshareEnabled: H
+            soundshareEnabled: H,
         }),
         (0, i.WH)(
             w,
             R,
             I(O({}, S(L)), {
-                audioSourceId: (null == (p = L.id) ? void 0 : p.startsWith(r.vA.CAMERA)) ? (null == t ? void 0 : t.audioSourceId) : void 0,
+                audioSourceId: (null == (p = L.id) ? void 0 : p.startsWith(r.vA.CAMERA))
+                    ? null == t
+                        ? void 0
+                        : t.audioSourceId
+                    : void 0,
                 sound: H,
                 previewDisabled: V,
-                goLiveModalDurationMs: null == t ? void 0 : t.goLiveModalDurationMs
-            })
+                goLiveModalDurationMs: null == t ? void 0 : t.goLiveModalDurationMs,
+            }),
         ),
         [!0, void 0]
     );

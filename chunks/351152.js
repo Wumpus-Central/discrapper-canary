@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(361932), n(187205));
+n.d(t, { Z: () => S }), n(361932), n(187205);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -25,7 +25,7 @@ function b(e) {
             u.ZP.getChannels(t)[u.Zb].some((e) => {
                 let { channel: t } = e;
                 return (0, x.JL)(t, f.Z, m.Z);
-            })
+            }),
         );
     return null != i && l
         ? (0, r.jsxs)(c.P3F, {
@@ -35,18 +35,18 @@ function b(e) {
                   (0, r.jsx)(d.Z, {
                       guild: i,
                       size: d.Z.Sizes.SMALL,
-                      className: j.guildIcon
+                      className: j.guildIcon,
                   }),
                   (0, r.jsx)(c.Text, {
-                      variant: 'text-md/normal',
+                      variant: "text-md/normal",
                       className: j.guildName,
-                      children: i.name
+                      children: i.name,
                   }),
                   (0, r.jsx)(p.Z, {
                       direction: p.Z.Directions.RIGHT,
-                      className: j.guildArrow
-                  })
-              ]
+                      className: j.guildArrow,
+                  }),
+              ],
           })
         : null;
 }
@@ -63,11 +63,11 @@ function S(e) {
                     b,
                     {
                         guildId: e,
-                        onClick: t
+                        onClick: t,
                     },
-                    e
-                )
+                    e,
+                ),
             );
-        })
+        }),
     });
 }

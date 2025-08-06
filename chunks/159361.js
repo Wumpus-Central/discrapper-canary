@@ -13,7 +13,15 @@ function l(e) {
             if (isNaN(n) || n < r) return;
             let l = Math.round((n - r) / 60000),
                 a = (e) => Math.round(l / e);
-            return l >= 43200 ? i.intl.formatToPlainString(i.t.kridzM, { months: a(43200) }) : l >= 10080 ? i.intl.formatToPlainString(i.t.EmoBDw, { weeks: a(10080) }) : l >= 1440 ? i.intl.formatToPlainString(i.t.k2UNz8, { days: a(1440) }) : l >= 60 ? i.intl.formatToPlainString(i.t.xCjYxM, { hours: a(60) }) : i.intl.formatToPlainString(i.t.iXLF9f, { minutes: l });
-        })(null == e || null == (n = e.rejection) ? void 0 : n.can_reapply_at)
+            return l >= 43200
+                ? i.intl.formatToPlainString(i.t.kridzM, { months: a(43200) })
+                : l >= 10080
+                  ? i.intl.formatToPlainString(i.t.EmoBDw, { weeks: a(10080) })
+                  : l >= 1440
+                    ? i.intl.formatToPlainString(i.t.k2UNz8, { days: a(1440) })
+                    : l >= 60
+                      ? i.intl.formatToPlainString(i.t.xCjYxM, { hours: a(60) })
+                      : i.intl.formatToPlainString(i.t.iXLF9f, { minutes: l });
+        })(null == e || null == (n = e.rejection) ? void 0 : n.can_reapply_at),
     };
 }

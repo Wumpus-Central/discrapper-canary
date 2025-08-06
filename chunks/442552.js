@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(607070),
@@ -13,6 +13,6 @@ function s() {
     return {
         shouldAnimate: u,
         onMouseEnter: r.useCallback(() => n(!0), []),
-        onMouseLeave: r.useCallback(() => n(!1), [])
+        onMouseLeave: r.useCallback(() => n(!1), []),
     };
 }

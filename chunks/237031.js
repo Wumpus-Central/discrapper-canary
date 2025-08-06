@@ -1,16 +1,24 @@
 r.d(t, {
     T: () => i,
-    v: () => o
+    v: () => o,
 });
 var n = r(255367);
 r(73800);
 var l = r(481060);
-let a = 'collectibles shop product details modal',
+let a = "collectibles shop product details modal",
     i = (e) => {
-        let { product: t, category: i, shouldCheckoutWithOrbs: o, analyticsSource: s, analyticsLocations: c, returnRef: u, tab: d } = e;
+        let {
+            product: t,
+            category: i,
+            shouldCheckoutWithOrbs: o,
+            analyticsSource: s,
+            analyticsLocations: c,
+            returnRef: u,
+            tab: d,
+        } = e;
         (0, l.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([r.e('78223'), r.e('16476')]).then(r.bind(r, 702370));
+                let { default: e } = await Promise.all([r.e("78223"), r.e("16476")]).then(r.bind(r, 702370));
                 return (r) => {
                     var l, a;
                     return (0, n.jsx)(
@@ -19,24 +27,24 @@ let a = 'collectibles shop product details modal',
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(r);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (n = n.concat(
                                         Object.getOwnPropertySymbols(r).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     n.forEach(function (t) {
                                         var n;
-                                        ((n = r[t]),
+                                        (n = r[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: n,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = n));
-                                    }));
+                                                : (e[t] = n);
+                                    });
                             }
                             return e;
                         })({}, r)),
@@ -48,7 +56,7 @@ let a = 'collectibles shop product details modal',
                                 analyticsSource: s,
                                 analyticsLocations: c,
                                 returnRef: u,
-                                tab: d
+                                tab: d,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
@@ -62,11 +70,11 @@ let a = 'collectibles shop product details modal',
                               })(Object(a)).forEach(function (e) {
                                   Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
-                        l)
+                        l),
                     );
                 };
             },
-            { modalKey: a }
+            { modalKey: a },
         );
     },
     o = () => {

@@ -25,9 +25,12 @@ async function b(e) {
         c = m.Z.get(n);
     if (null == c) {
         let e = (await (0, s.oJ)(t)).find((e) => e.sku.id === n);
-        (o()(null != e, 'Could not find store listing for sku'), e.sku.type === g.epS.SUBSCRIPTION_GROUP && (await (0, p.rx)(t, e.id)));
+        o()(null != e, "Could not find store listing for sku"),
+            e.sku.type === g.epS.SUBSCRIPTION_GROUP && (await (0, p.rx)(t, e.id));
     }
-    ((c = null != c ? c : m.Z.get(n)), o()(null != c && c.applicationId === t, 'SKU must belong to application'), c.type !== g.epS.SUBSCRIPTION || (0, u.a)([c.id]) || (await (0, l.GZ)(c.id)));
+    (c = null != c ? c : m.Z.get(n)),
+        o()(null != c && c.applicationId === t, "SKU must belong to application"),
+        c.type !== g.epS.SUBSCRIPTION || (0, u.a)([c.id]) || (await (0, l.GZ)(c.id));
     let d = E(t);
     if (c.type !== g.epS.SUBSCRIPTION)
         return new Promise((e, r) => {
@@ -45,7 +48,7 @@ async function b(e) {
                 analyticsLocations: i,
                 contextKey: d,
                 onComplete: o,
-                onClose: s
+                onClose: s,
             });
         });
     await y(t, n, r, a, i);
@@ -54,7 +57,7 @@ function y(e, t, n, i, o) {
     let a = (e, t, n) =>
         (0, r.jsx)(h.t, {
             step: n,
-            onClose: () => t(!1)
+            onClose: () => t(!1),
         });
     return (0, d.m)({
         applicationId: e,
@@ -62,6 +65,6 @@ function y(e, t, n, i, o) {
         initialPlanId: n,
         analyticsLocationObject: i,
         analyticsLocations: o,
-        renderHeader: a
+        renderHeader: a,
     });
 }

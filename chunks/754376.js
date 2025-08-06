@@ -12,22 +12,22 @@ function d(e) {
     var t;
     let { applicationId: n, onMouseDown: d, onMouseMove: f, onMouseLeave: _, onFocus: p, idle: h } = e,
         m = (0, i.q)(n);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: u.videoControls,
         onMouseMove: f,
         onMouseDown: d,
         onMouseLeave: _,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.topControls,
                 children: (0, r.jsx)(s.r, {
                     idle: h,
-                    title: null != (t = null == m ? void 0 : m.name) ? t : '',
+                    title: null != (t = null == m ? void 0 : m.name) ? t : "",
                     onJumpToChannel: p,
-                    preventIdleComponent: a.Z
-                })
+                    preventIdleComponent: a.Z,
+                }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.bottomControls,
                 children: (0, r.jsx)(o.Z, {
                     grow: 1,
@@ -36,10 +36,10 @@ function d(e) {
                     align: o.Z.Align.CENTER,
                     children: (0, r.jsx)(l.Z, {
                         applicationId: n,
-                        className: c.rightPipIcon
-                    })
-                })
-            })
-        ]
+                        className: c.rightPipIcon,
+                    }),
+                }),
+            }),
+        ],
     });
 }

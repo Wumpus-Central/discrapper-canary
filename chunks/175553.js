@@ -7,13 +7,13 @@ var i = n(593481),
     a = n(388032);
 function c(e, t) {
     let n = e.username,
-        c = a.intl.format(a.t['Yk+uYG'], { username: '' }),
+        c = a.intl.format(a.t["Yk+uYG"], { username: "" }),
         d = (0, r.ov)(e),
         { trackView: u, trackClick: h } = (0, o.R)(s.n0.ActivityUserJoin, {
             notif_type: s.n0.ActivityUserJoin,
             notif_user_id: e.id,
             activity_type: l.mFx.JOIN,
-            activity_name: t.name
+            activity_name: t.name,
         });
     return {
         icon: d,
@@ -24,7 +24,7 @@ function c(e, t) {
             u();
         },
         onDismissClick: () => {
-            h('dismiss');
-        }
+            h("dismiss");
+        },
     };
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(953529), n(388685));
+n.d(t, { Z: () => E }), n(953529), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -24,11 +24,19 @@ var r = n(255367),
     N = n(388032),
     I = n(587072);
 function E(e) {
-    let { guild: t, everyoneRole: n, filteredRoles: l, setEditRoleId: a, query: s, setQuery: o, setHeaderHeight: c } = e,
+    let {
+            guild: t,
+            everyoneRole: n,
+            filteredRoles: l,
+            setEditRoleId: a,
+            query: s,
+            setQuery: o,
+            setHeaderHeight: c,
+        } = e,
         u = i.useRef(null),
         m = p.D.useExperiment({
             guildId: t.id,
-            location: 'GuildSettingsRolesOverviewHeader'
+            location: "GuildSettingsRolesOverviewHeader",
         }).enabled;
     i.useEffect(() => {
         var e, t;
@@ -37,18 +45,18 @@ function E(e) {
     let g = i.useCallback(() => {
         a(n.id);
     }, [a, n.id]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         ref: u,
         children: [
             (0, r.jsx)(d.vwX, {
                 tag: d.RB0.H1,
-                children: N.intl.string(N.t.LPJmLy)
+                children: N.intl.string(N.t.LPJmLy),
             }),
             (0, r.jsx)(d.Text, {
                 className: I.description,
-                color: 'header-secondary',
-                variant: 'text-sm/normal',
-                children: N.intl.string(N.t['1ydhVl'])
+                color: "header-secondary",
+                variant: "text-sm/normal",
+                children: N.intl.string(N.t["1ydhVl"]),
             }),
             m ? (0, r.jsx)(S, { guild: t }) : null,
             (0, r.jsx)(T, {
@@ -57,9 +65,9 @@ function E(e) {
                 filteredRoles: l,
                 query: s,
                 setQuery: o,
-                onEveryoneRoleClick: g
-            })
-        ]
+                onEveryoneRoleClick: g,
+            }),
+        ],
     });
 }
 function S(e) {
@@ -68,41 +76,41 @@ function S(e) {
         (0, g.wE)(c.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION, t.id, {
             dismissAction: y.L.INDIRECT_ACTION,
             guildId: t.id,
-            forceTrack: !0
+            forceTrack: !0,
         });
     }, [t]);
-    let n = (0, x.vc)(o()(O.LCk), 'LL'),
+    let n = (0, x.vc)(o()(O.LCk), "LL"),
         l = t.features.has(O.oNc.PIN_PERMISSION_MIGRATION_COMPLETE)
             ? (0, r.jsx)(d.Text, {
-                  variant: 'text-sm/normal',
-                  children: N.intl.format(N.t.Vg2oTE, { breakingChangeDate: n })
+                  variant: "text-sm/normal",
+                  children: N.intl.format(N.t.Vg2oTE, { breakingChangeDate: n }),
               })
             : f.Z.can(C.Pl.ADMINISTRATOR, t)
               ? (0, r.jsx)(d.Text, {
-                    variant: 'text-sm/normal',
+                    variant: "text-sm/normal",
                     children: N.intl.format(N.t.HYM8OD, {
                         onClickMigrate: () => {
                             u.Z.show({
                                 title: N.intl.string(N.t.nFE8dH),
-                                body: N.intl.format(N.t['1PAzQ0'], { guildName: t.name }),
-                                cancelText: N.intl.string(N.t['ETE/oK']),
-                                confirmText: N.intl.string(N.t['cY+Ooa']),
+                                body: N.intl.format(N.t["1PAzQ0"], { guildName: t.name }),
+                                cancelText: N.intl.string(N.t["ETE/oK"]),
+                                confirmText: N.intl.string(N.t["cY+Ooa"]),
                                 onConfirm: () => {
                                     j.Z.migratePinPermission(t.id);
-                                }
+                                },
                             });
                         },
-                        breakingChangeDate: n
-                    })
+                        breakingChangeDate: n,
+                    }),
                 })
               : (0, r.jsx)(d.Text, {
-                    variant: 'text-sm/normal',
-                    children: N.intl.format(N.t.cAuU1d, { breakingChangeDate: n })
+                    variant: "text-sm/normal",
+                    children: N.intl.format(N.t.cAuU1d, { breakingChangeDate: n }),
                 });
     return (0, r.jsx)(h.Z, {
         look: h.z.WARNING,
         className: I.migrationInfoBox,
-        children: l
+        children: l,
     });
 }
 function T(e) {
@@ -111,40 +119,40 @@ function T(e) {
         children: [
             (0, r.jsx)(v.Z, {
                 role: n,
-                onClick: o
+                onClick: o,
             }),
             (0, r.jsx)(P, {
                 guild: t,
                 query: l,
-                setQuery: s
+                setQuery: s,
             }),
             (0, r.jsx)(d.Text, {
                 className: I.helpText,
-                color: 'header-secondary',
-                variant: 'text-sm/normal',
-                children: N.intl.format(N.t.xkC3YW, { articleURL: b.Z.getArticleURL(O.BhN.PERMISSIONS_TUTORIAL) })
+                color: "header-secondary",
+                variant: "text-sm/normal",
+                children: N.intl.format(N.t.xkC3YW, { articleURL: b.Z.getArticleURL(O.BhN.PERMISSIONS_TUTORIAL) }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: I.rolesTable,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: I.tableHeader,
                     children: [
-                        (0, r.jsx)('div', { className: I.dragSpacing }),
+                        (0, r.jsx)("div", { className: I.dragSpacing }),
                         (0, r.jsx)(d.Text, {
                             className: a()(I.tableTitle, I.roleNameSpacing),
-                            variant: 'text-sm/normal',
-                            children: N.intl.format(N.t['38N3V1'], { numRoles: String(i.length) })
+                            variant: "text-sm/normal",
+                            children: N.intl.format(N.t["38N3V1"], { numRoles: String(i.length) }),
                         }),
                         (0, r.jsx)(d.Text, {
                             className: a()(I.tableTitle, I.memberSpacing),
-                            variant: 'text-sm/normal',
-                            children: N.intl.string(N.t['9Oq93t'])
+                            variant: "text-sm/normal",
+                            children: N.intl.string(N.t["9Oq93t"]),
                         }),
-                        (0, r.jsx)('div', { className: I.buttonsSpacing })
-                    ]
-                })
-            })
-        ]
+                        (0, r.jsx)("div", { className: I.buttonsSpacing }),
+                    ],
+                }),
+            }),
+        ],
     });
 }
 function P(e) {
@@ -154,17 +162,17 @@ function P(e) {
             (e) => {
                 l(e);
             },
-            [l]
+            [l],
         ),
         c = i.useCallback(() => {
-            l('');
+            l("");
         }, [l]),
         u = async () => {
-            (s(!0), await m.Z.createRole(t.id), s(!1));
+            s(!0), await m.Z.createRole(t.id), s(!1);
         };
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: I.__invalid_rolesList,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: I.searchContainer,
             children: [
                 (0, r.jsx)(d.E1j, {
@@ -172,15 +180,15 @@ function P(e) {
                     onChange: o,
                     onClear: c,
                     placeholder: N.intl.string(N.t.Sojqsr),
-                    'aria-label': N.intl.string(N.t.Sojqsr)
+                    "aria-label": N.intl.string(N.t.Sojqsr),
                 }),
                 (0, r.jsx)(d.zxk, {
-                    size: 'sm',
+                    size: "sm",
                     onClick: u,
                     loading: a,
-                    text: N.intl.string(N.t.JZZjQE)
-                })
-            ]
-        })
+                    text: N.intl.string(N.t.JZZjQE),
+                }),
+            ],
+        }),
     });
 }

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     C: () => N,
-    default: () => S
+    default: () => S,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -26,7 +26,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -78,23 +78,23 @@ function S(e) {
         p = (0, _.B4)(t),
         [b, O] = i.useState(0),
         [S, N] = (0, l.q_F)(() => ({
-            from: { width: '0%' },
-            config: { duration: I }
+            from: { width: "0%" },
+            config: { duration: I },
         })),
         R = (e) => {
-            (f(),
+            f(),
                 O(1),
                 null != p &&
                     d.default.track(
                         h.rMx.QUEST_SURVEY_SUBMITTED,
                         v(y({}, C(p, n)), {
                             choice: e.text,
-                            choice_id: e.key
-                        })
-                    ));
+                            choice_id: e.key,
+                        }),
+                    );
         },
         P = async (e) => {
-            1 === e && (await N({ width: '100%' }), a());
+            1 === e && (await N({ width: "100%" }), a());
         };
     return (
         (0, c.ZP)(() => {
@@ -105,7 +105,7 @@ function S(e) {
             transitionState: o,
             size: l.CgR.DYNAMIC,
             className: g.modalRoot,
-            parentComponent: 'QuestSurveyModal',
+            parentComponent: "QuestSurveyModal",
             children: (0, r.jsxs)(l.MyZ, {
                 activeSlide: b,
                 width: T,
@@ -121,23 +121,23 @@ function S(e) {
                                 children: [
                                     (0, r.jsx)(l.olH, {
                                         className: g.closeBtn,
-                                        onClick: a
+                                        onClick: a,
                                     }),
-                                    (0, r.jsx)('img', {
+                                    (0, r.jsx)("img", {
                                         src: E,
-                                        alt: '',
-                                        className: g.asset
+                                        alt: "",
+                                        className: g.asset,
                                     }),
                                     (0, r.jsx)(l.X6q, {
-                                        variant: 'heading-lg/semibold',
-                                        children: n.title
+                                        variant: "heading-lg/semibold",
+                                        children: n.title,
                                     }),
                                     (0, r.jsx)(l.Text, {
-                                        variant: 'text-md/normal',
-                                        color: 'text-muted',
-                                        children: n.subtitle
-                                    })
-                                ]
+                                        variant: "text-md/normal",
+                                        color: "text-muted",
+                                        children: n.subtitle,
+                                    }),
+                                ],
                             }),
                             (0, r.jsx)(l.hzk, {
                                 className: g.modalContent,
@@ -146,13 +146,13 @@ function S(e) {
                                         A,
                                         {
                                             choice: e,
-                                            onClick: R
+                                            onClick: R,
                                         },
-                                        e.key
-                                    )
-                                )
-                            })
-                        ]
+                                        e.key,
+                                    ),
+                                ),
+                            }),
+                        ],
                     }),
                     (0, r.jsxs)(l.Mi4, {
                         id: 1,
@@ -160,42 +160,42 @@ function S(e) {
                             (0, r.jsxs)(l.hzk, {
                                 className: g.completedModalContent,
                                 children: [
-                                    (0, r.jsx)('img', {
+                                    (0, r.jsx)("img", {
                                         src: E,
-                                        alt: '',
-                                        className: g.asset
+                                        alt: "",
+                                        className: g.asset,
                                     }),
                                     (0, r.jsx)(l.X6q, {
-                                        variant: 'heading-lg/semibold',
-                                        children: m.intl.string(m.t.KTjjrK)
+                                        variant: "heading-lg/semibold",
+                                        children: m.intl.string(m.t.KTjjrK),
                                     }),
                                     (0, r.jsx)(l.Text, {
-                                        variant: 'text-md/normal',
-                                        color: 'text-muted',
-                                        children: m.intl.string(m.t.AvbrEB)
-                                    })
-                                ]
+                                        variant: "text-md/normal",
+                                        color: "text-muted",
+                                        children: m.intl.string(m.t.AvbrEB),
+                                    }),
+                                ],
                             }),
                             (0, r.jsx)(l.mzw, {
-                                children: (0, r.jsxs)('div', {
+                                children: (0, r.jsxs)("div", {
                                     className: g.closeButtonContainer,
                                     children: [
                                         (0, r.jsx)(l.zxk, {
-                                            variant: 'primary',
+                                            variant: "primary",
                                             text: m.intl.string(m.t.cpT0Cg),
-                                            onClick: a
+                                            onClick: a,
                                         }),
                                         (0, r.jsx)(s.animated.div, {
                                             className: g.progressOverlay,
-                                            style: S
-                                        })
-                                    ]
-                                })
-                            })
-                        ]
-                    })
-                ]
-            })
+                                            style: S,
+                                        }),
+                                    ],
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
         })
     );
 }
@@ -206,11 +206,11 @@ function A(e) {
         onClick: () => i(n),
         children: [
             (0, r.jsx)(l.Text, {
-                variant: 'text-sm/semibold',
-                children: n.text
+                variant: "text-sm/semibold",
+                children: n.text,
             }),
-            (0, r.jsx)(l.Fbu, {})
-        ]
+            (0, r.jsx)(l.Fbu, {}),
+        ],
     });
 }
 function N(e) {
@@ -224,16 +224,16 @@ function N(e) {
                     v(y({}, n, e), {
                         onSubmit: () => {
                             t = !0;
-                        }
-                    })
+                        },
+                    }),
                 );
         },
         {
             onCloseCallback: () => {
                 let n = p.Z.getQuest(e.questId);
                 null != n && d.default.track(h.rMx.QUEST_SURVEY_DISMISSED, v(y({}, C(n, e.survey)), { submitted: t }));
-            }
-        }
+            },
+        },
     );
 }
 function C(e, t) {
@@ -243,6 +243,6 @@ function C(e, t) {
         survey_id: t.id,
         survey_title: t.title,
         survey_subtitle: t.subtitle,
-        choices: t.choices.map((e) => e.text)
+        choices: t.choices.map((e) => e.text),
     };
 }

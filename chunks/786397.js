@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     B: () => c,
-    w: () => u
+    w: () => u,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(846519),
@@ -15,7 +15,9 @@ function c(e) {
 function u(e) {
     let t = (0, i.e7)([s.Z], () => s.Z.getUserTrialOffer(e)),
         [n, u] = r.useState(c(t)),
-        d = !(0, i.e7)([a.default], () => (0, l.I5)(a.default.getCurrentUser())) || s.Z.canFractionalPremiumUserUseOffer();
+        d =
+            !(0, i.e7)([a.default], () => (0, l.I5)(a.default.getCurrentUser())) ||
+            s.Z.canFractionalPremiumUserUseOffer();
     return (
         r.useEffect(() => {
             if (null != t && null != t.expires_at) {
@@ -27,7 +29,7 @@ function u(e) {
                                 !n && c(t) ? u(!0) : r();
                             });
                     };
-                return (r(), () => e.stop());
+                return r(), () => e.stop();
             }
         }, [n, t]),
         !n && d ? t : null

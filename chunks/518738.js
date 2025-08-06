@@ -1,7 +1,7 @@
 n.d(t, {
     Kz: () => l,
     oC: () => u,
-    p9: () => c
+    p9: () => c,
 });
 var r = n(73800),
     i = n(442837),
@@ -18,7 +18,7 @@ function l(e, t) {
             name: e.name,
             roleId: e.id,
             size: t,
-            unicodeEmoji: i
+            unicodeEmoji: i,
         };
 }
 function c(e) {
@@ -27,9 +27,9 @@ function c(e) {
             [a.Z, o.Z],
             () => ({
                 guild: a.Z.getGuild(t),
-                role: null != n ? o.Z.getRole(t, n) : void 0
+                role: null != n ? o.Z.getRole(t, n) : void 0,
             }),
-            [t, n]
+            [t, n],
         );
     return r.useMemo(() => {
         if (null != u && null != n && (0, s._b)(u, d)) return l(d, c);

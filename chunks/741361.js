@@ -4,7 +4,7 @@ n.d(t, {
     d$: () => l,
     hw: () => u,
     kU: () => d,
-    kY: () => a
+    kY: () => a,
 });
 var r = n(570140),
     i = n(156699),
@@ -13,33 +13,33 @@ async function a(e, t, n, o) {
     let a = e.getGuildId();
     if (null != a && t === a && !(await (0, i.u)(e, o, n))) return !1;
     r.Z.dispatch({
-        type: 'CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION',
+        type: "CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION",
         id: t,
         allow: n,
-        deny: o
+        deny: o,
     });
 }
 function s(e) {
     r.Z.dispatch({
-        type: 'CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION',
-        id: e
+        type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION",
+        id: e,
     });
 }
 function l(e) {
     r.Z.dispatch({
-        type: 'CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE',
-        advancedMode: e
+        type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE",
+        advancedMode: e,
     });
 }
 function c() {
-    r.Z.dispatch({ type: 'CHANNEL_SETTINGS_PERMISSIONS_INIT' });
+    r.Z.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
 }
 function u(e, t, n) {
     return d(e, t, [], n);
 }
 function d(e, t, n, i) {
     return (
-        r.Z.dispatch({ type: 'CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING' }),
+        r.Z.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" }),
         new Promise((r) => {
             let i = () => {
                 if (0 === t.length && 0 === n.length) return r();
@@ -56,8 +56,8 @@ function d(e, t, n, i) {
             i();
         }).then(() => {
             r.Z.dispatch({
-                type: 'CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS',
-                silent: i
+                type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS",
+                silent: i,
             });
         })
     );

@@ -13,27 +13,27 @@ let a = function (e) {
             {
                 default: {
                     swatch: {
-                        height: '12px',
-                        background: 'hsl(' + t.h + ', 50%, ' + 100 * r + '%)',
-                        cursor: 'pointer'
-                    }
+                        height: "12px",
+                        background: "hsl(" + t.h + ", 50%, " + 100 * r + "%)",
+                        cursor: "pointer",
+                    },
                 },
-                first: { swatch: { borderRadius: '2px 0 0 2px' } },
-                last: { swatch: { borderRadius: '0 2px 2px 0' } },
+                first: { swatch: { borderRadius: "2px 0 0 2px" } },
+                last: { swatch: { borderRadius: "0 2px 2px 0" } },
                 active: {
                     swatch: {
-                        transform: 'scaleY(1.8)',
-                        borderRadius: '3.6px/2px'
-                    }
-                }
+                        transform: "scaleY(1.8)",
+                        borderRadius: "3.6px/2px",
+                    },
+                },
             },
             {
                 active: l,
                 first: s,
-                last: u
-            }
+                last: u,
+            },
         );
-    return n.createElement('div', {
+    return n.createElement("div", {
         style: c.swatch,
         onClick: function (e) {
             return i(
@@ -41,10 +41,10 @@ let a = function (e) {
                     h: t.h,
                     s: 0.5,
                     l: r,
-                    source: 'hsl'
+                    source: "hsl",
                 },
-                e
+                e,
             );
-        }
+        },
     });
 };

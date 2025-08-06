@@ -8,16 +8,16 @@ function r(e) {
         .map(function (e) {
             var t = e[0],
                 n = e[1];
-            return encodeURIComponent(t) + '=' + encodeURIComponent(n);
+            return encodeURIComponent(t) + "=" + encodeURIComponent(n);
         })
-        .join('&');
+        .join("&");
 }
 function a(e) {
     var t = (e && e.ownerDocument) || document,
         n = t.defaultView || t.parentWindow || window;
     return {
         document: t,
-        window: n
+        window: n,
     };
 }
 function i(e) {
@@ -26,5 +26,5 @@ function i(e) {
 n.d(t, {
     $h: () => a,
     Ku: () => r,
-    as: () => i
+    as: () => i,
 });

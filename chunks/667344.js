@@ -1,4 +1,4 @@
-(n.d(t, { Q: () => u }), n(388685));
+n.d(t, { Q: () => u }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(588486),
@@ -17,15 +17,15 @@ function u() {
             for (let [t, r] of Object.entries(e))
                 n[t] = {
                     system: a.I.APEX,
-                    kind: r.unitType === c.Cm.User ? 'user' : 'guild',
+                    kind: r.unitType === c.Cm.User ? "user" : "guild",
                     name: r.name,
                     title: r.title,
                     variants: r.variants.map((e) => ({
                         id: e.id,
-                        label: 'Variant '.concat(e.id, ': ').concat(e.label),
-                        shortLabel: 'Variant '.concat(e.id),
-                        type: e.type
-                    }))
+                        label: "Variant ".concat(e.id, ": ").concat(e.label),
+                        shortLabel: "Variant ".concat(e.id),
+                        type: e.type,
+                    })),
                 };
             for (let [e, r] of Object.entries(t))
                 null == n[e] &&
@@ -38,11 +38,11 @@ function u() {
                             let [t, n] = e;
                             return {
                                 id: Number(t),
-                                label: 'Variant '.concat(t),
-                                shortLabel: 'Variant '.concat(t),
-                                type: o.k3.UNSPECIFIED
+                                label: "Variant ".concat(t),
+                                shortLabel: "Variant ".concat(t),
+                                type: o.k3.UNSPECIFIED,
                             };
-                        })
+                        }),
                     });
             return n;
         }, [e, t]),
@@ -55,9 +55,9 @@ function u() {
                 e[t] = {
                     experimentId: t,
                     variantId: n.variantId,
-                    originalDescriptor: n
+                    originalDescriptor: n,
                 };
             return e;
-        }, [u])
+        }, [u]),
     };
 }

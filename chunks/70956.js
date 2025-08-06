@@ -6,7 +6,7 @@ let r = Object.freeze({
         HOUR: 3600000,
         DAY: 86400000,
         WEEK: 604800000,
-        DAYS_30: 2592000000
+        DAYS_30: 2592000000,
     }),
     i = {
         Millis: r,
@@ -16,13 +16,13 @@ let r = Object.freeze({
             HOUR: 3600,
             DAY: 86400,
             WEEK: 604800,
-            DAYS_30: 2592000
+            DAYS_30: 2592000,
         }),
         Minutes: Object.freeze({
             MINUTE: 1,
             HOUR: 60,
             DAY: 1440,
             WEEK: 10080,
-            DAYS_30: 43200
-        })
+            DAYS_30: 43200,
+        }),
     };

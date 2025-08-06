@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     P: () => B,
-    Z: () => k
+    Z: () => k,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -39,7 +39,7 @@ function R(e) {
             mode: t ? P.NH.EXPANDED : P.NH.COLLAPSED,
             questContent: b.jn.QUEST_BAR_V2,
             questId: n,
-            sourceQuestContent: b.jn.QUEST_BAR_V2
+            sourceQuestContent: b.jn.QUEST_BAR_V2,
         }),
         null
     );
@@ -49,13 +49,13 @@ function B(e) {
     let { quest: o } = e,
         x = (0, v.T)({
             quest: o,
-            location: P.dr.QUESTS_BAR
+            location: P.dr.QUESTS_BAR,
         }),
         B = (0, _.Zy)({ location: P.dr.QUESTS_BAR }),
         k = (0, l.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil),
         { isQuestBarVisible: I, reason: q } = (0, E.qN)({
             quest: o,
-            location: P.dr.QUESTS_BAR
+            location: P.dr.QUESTS_BAR,
         }),
         D = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         Q = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
@@ -78,23 +78,23 @@ function B(e) {
         [ea, ei] = s.useState(K.preEnrollmentExpandedHeight),
         el = s.useRef(null),
         ec = s.useCallback((e) => {
-            (er(!1), et(e));
+            er(!1), et(e);
         }, []),
         eu = s.useCallback(() => {
             var e, t;
             ei((null != (t = null == (e = el.current) ? void 0 : e.offsetHeight) ? t : 84) + 2 * K.paddingVertical);
         }, [K.paddingVertical]),
         ed = s.useCallback(() => {
-            (eu(), ec(!0));
+            eu(), ec(!0);
         }, [eu, ec]),
         ep = s.useCallback(() => {
             $(!0);
         }, []),
         em = s.useCallback(() => {
-            ($(!1), G.current || W || ec(!1));
+            $(!1), G.current || W || ec(!1);
         }, [W, ec]),
         ef = s.useCallback(() => {
-            ($(!1), W || ec(!1), (G.current = !1));
+            $(!1), W || ec(!1), (G.current = !1);
         }, [W, ec]),
         eg = s.useCallback(
             function () {
@@ -103,46 +103,46 @@ function B(e) {
                 let { withDelay: t = !1 } = e;
                 t ? (Y.current = window.setTimeout(ed, 75)) : ed();
             },
-            [ed, ee]
+            [ed, ee],
         ),
         ex = s.useCallback(() => {
             eg();
         }, [eg]),
         eh = s.useCallback(() => {
-            (window.clearTimeout(Y.current), K.canCollapseOnBlur && !J && (G.current || ec(!1)));
+            window.clearTimeout(Y.current), K.canCollapseOnBlur && !J && (G.current || ec(!1));
         }, [J, K, ec]),
         eb = s.useCallback(() => {
             var e;
-            ((0, m.dA)({
+            (0, m.dA)({
                 questId: o.id,
                 event: A.rMx.QUEST_HOVER,
                 properties: {
                     content_id: b.jn.QUEST_BAR,
                     content_name: (0, m._b)(b.jn.QUEST_BAR),
-                    impression_id: null == (e = V.current) ? void 0 : e.getId()
+                    impression_id: null == (e = V.current) ? void 0 : e.getId(),
                 },
                 shouldExtendSession: !0,
-                sourceQuestContent: K.trackingCtx.content
+                sourceQuestContent: K.trackingCtx.content,
             }),
                 (G.current = !0),
-                eg({ withDelay: !0 }));
+                eg({ withDelay: !0 });
         }, [eg, o, K.trackingCtx.content]),
         ej = s.useCallback(() => {
             var e;
-            ((0, m.dA)({
+            (0, m.dA)({
                 questId: o.id,
                 event: A.rMx.QUEST_HOVER_OFF,
                 properties: {
                     content_id: b.jn.QUEST_BAR,
                     content_name: (0, m._b)(b.jn.QUEST_BAR),
-                    impression_id: null == (e = V.current) ? void 0 : e.getId()
+                    impression_id: null == (e = V.current) ? void 0 : e.getId(),
                 },
-                sourceQuestContent: K.trackingCtx.content
+                sourceQuestContent: K.trackingCtx.content,
             }),
                 (G.current = !1),
-                eh());
+                eh();
         }, [eh, o, K.trackingCtx.content]);
-    (s.useLayoutEffect(() => {
+    s.useLayoutEffect(() => {
         W && K.shouldExpandOnQuestComplete && ed();
     }, [ed, W, K.shouldExpandOnQuestComplete]),
         s.useLayoutEffect(() => {
@@ -152,8 +152,8 @@ function B(e) {
             W || !M || Z || G.current || ec(!1);
         }, [M, W, Z, ec]),
         s.useLayoutEffect(() => {
-            (F !== X.current && eo(!1), (X.current = F));
-        }, [F]));
+            F !== X.current && eo(!1), (X.current = F);
+        }, [F]);
     let e_ = M ? P.XZ : P.R4,
         [{ expansionSpring: ev }, eC] = (0, c.q_F)(() => ({
             from: { expansionSpring: 0 },
@@ -163,12 +163,12 @@ function B(e) {
             },
             onStart: () => {
                 er(!1);
-            }
+            },
         }));
     s.useEffect(() => {
         eC({
             expansionSpring: +!!ee,
-            immediate: D
+            immediate: D,
         });
     }, [ee, eC, D]);
     let { visibilitySpring: ey } = (0, c.q_F)({
@@ -177,16 +177,16 @@ function B(e) {
         config: {
             tension: 250,
             friction: 10,
-            clamp: !0
+            clamp: !0,
         },
         onRest: () => {
             eo(!0);
         },
         onStart: () => {
             eo(!1);
-        }
+        },
     });
-    (s.useEffect(() => {
+    s.useEffect(() => {
         L && (0, y.loadVideoQuestModal)();
     }, [L]),
         s.useLayoutEffect(() => {
@@ -194,17 +194,17 @@ function B(e) {
         }, [W, ed, K.canCollapseOnBlur, eu, U]),
         s.useEffect(() => {
             var e, t;
-            (H &&
+            H &&
                 (0, m.dA)({
                     questId: o.id,
                     event: A.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
                         content_id: b.jn.QUEST_BAR,
                         content_name: (0, m._b)(b.jn.QUEST_BAR),
-                        reason: 'asset_loading_error',
-                        impression_id: null == (e = V.current) ? void 0 : e.getId()
+                        reason: "asset_loading_error",
+                        impression_id: null == (e = V.current) ? void 0 : e.getId(),
                     },
-                    sourceQuestContent: K.trackingCtx.content
+                    sourceQuestContent: K.trackingCtx.content,
                 }),
                 B ||
                     (0, m.dA)({
@@ -213,11 +213,11 @@ function B(e) {
                         properties: {
                             content_id: b.jn.QUEST_BAR,
                             content_name: (0, m._b)(b.jn.QUEST_BAR),
-                            reason: 'not_eligible_for_quest',
-                            impression_id: null == (t = V.current) ? void 0 : t.getId()
+                            reason: "not_eligible_for_quest",
+                            impression_id: null == (t = V.current) ? void 0 : t.getId(),
                         },
-                        sourceQuestContent: K.trackingCtx.content
-                    }));
+                        sourceQuestContent: K.trackingCtx.content,
+                    });
         }, [H, B, o.id, K.trackingCtx.content]),
         s.useEffect(() => {
             if (!F && es && !z) {
@@ -229,18 +229,18 @@ function B(e) {
                         content_id: b.jn.QUEST_BAR,
                         content_name: (0, m._b)(b.jn.QUEST_BAR),
                         reason: q,
-                        impression_id: null == (e = V.current) ? void 0 : e.getId()
+                        impression_id: null == (e = V.current) ? void 0 : e.getId(),
                     },
-                    sourceQuestContent: K.trackingCtx.content
+                    sourceQuestContent: K.trackingCtx.content,
                 });
             }
         }, [F, es, z, o.id, q, K.trackingCtx.content]),
         s.useEffect(() => {
-            ((!I || k) && f.Z.clearTracking(), F && es && !z && !H && B && f.Z.stopTracking(o.id));
-        }, [I, k, F, es, z, H, B, o.id]));
+            (!I || k) && f.Z.clearTracking(), F && es && !z && !H && B && f.Z.stopTracking(o.id);
+        }, [I, k, F, es, z, H, B, o.id]);
     let eO = (0, j.h)({
         location: P.dr.QUESTS_BAR,
-        questConfig: o.config
+        questConfig: o.config,
     });
     return B && (F || !es || z) && !H
         ? (0, r.jsx)(C.A, {
@@ -252,40 +252,40 @@ function B(e) {
                   let n = K.component;
                   return (
                       (V.current = t.current),
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: N.mask,
                           children: [
                               F &&
                                   (0, r.jsx)(R, {
                                       questId: o.id,
-                                      isExpanded: ee
+                                      isExpanded: ee,
                                   }),
                               (0, r.jsx)(i.animated.div, {
-                                  'aria-hidden': !F,
+                                  "aria-hidden": !F,
                                   onMouseLeave: ej,
                                   onMouseEnter: eb,
                                   onFocus: ex,
                                   onBlur: eh,
                                   className: a()(N.wrapper, {
                                       [N.wrapperInvisible]: !F,
-                                      [N.wrapperVisible]: F && es
+                                      [N.wrapperVisible]: F && es,
                                   }),
                                   style: {
                                       color: eO ? void 0 : o.config.colors.secondary,
                                       height: ey.to({
                                           range: [0, 1],
-                                          output: [0, !K.canCollapseOnBlur && ee ? ea : 70]
-                                      })
+                                          output: [0, !K.canCollapseOnBlur && ee ? ea : 70],
+                                      }),
                                   },
                                   children: (0, r.jsx)(i.animated.div, {
                                       className: a()(N.contentWrapper, {
                                           [N.contentWrapperExpanded]: ee,
                                           [N.contentWrapperAccepted]: M,
-                                          [N.contentWrapperBrandColorRemoval]: eO
+                                          [N.contentWrapperBrandColorRemoval]: eO,
                                       }),
                                       style: {
                                           backgroundColor: eO ? void 0 : K.preEnrollmentBackgroundColor,
-                                          backgroundImage: M && !eO ? K.postEnrollmentBackgroundImage : void 0
+                                          backgroundImage: M && !eO ? K.postEnrollmentBackgroundImage : void 0,
                                       },
                                       children: (0, r.jsx)(S.t, {
                                           springConfig: e_,
@@ -300,17 +300,17 @@ function B(e) {
                                               onCtxMenuSelection: ef,
                                               quest: o,
                                               useReducedMotion: D,
-                                              collapsedHeight: 70
-                                          })
-                                      })
-                                  })
-                              })
-                          ]
+                                              collapsedHeight: 70,
+                                          }),
+                                      }),
+                                  }),
+                              }),
+                          ],
                       })
                   );
-              }
+              },
           })
-        : (H ? x.log('Not rendered due to asset error') : B || x.log('Not rendered due to ineligibility'), null);
+        : (H ? x.log("Not rendered due to asset error") : B || x.log("Not rendered due to ineligibility"), null);
 }
 let k =
     12633 == n.j
@@ -323,9 +323,9 @@ let k =
                         {
                             source: P.dr.QUESTS_BAR,
                             questId: e.id,
-                            children: (0, r.jsx)(B, { quest: e })
+                            children: (0, r.jsx)(B, { quest: e }),
                         },
-                        e.id
+                        e.id,
                     );
           }
         : null;

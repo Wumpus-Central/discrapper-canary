@@ -32,7 +32,7 @@ function P(e) {
         ? (0, r.jsx)(T, { channel: t })
         : (0, r.jsx)(C, {
               channel: t,
-              message: n
+              message: n,
           });
 }
 function T(e) {
@@ -40,9 +40,9 @@ function T(e) {
         n = (0, y.Ok)(t);
     return (0, r.jsxs)(s.Text, {
         className: N.subtext,
-        variant: 'text-sm/normal',
-        color: 'header-secondary',
-        children: [w.intl.string(w.t.Jmh6n5), '\xA0 \u2022 \xA0', (0, y.Ye)(n)]
+        variant: "text-sm/normal",
+        color: "header-secondary",
+        children: [w.intl.string(w.t.Jmh6n5), "\xA0 \u2022 \xA0", (0, y.Ye)(n)],
     });
 }
 function C(e) {
@@ -58,92 +58,101 @@ function C(e) {
             [v.Z],
             () => ({
                 isBlocked: v.Z.isBlockedForMessage(n),
-                isIgnored: v.Z.isIgnoredForMessage(n)
+                isIgnored: v.Z.isIgnoredForMessage(n),
             }),
-            [n]
+            [n],
         ),
         P = (0, d.p)(),
         T = l.useMemo(() => {
             let e =
-                    null != n.content && '' !== n.content
+                    null != n.content && "" !== n.content
                         ? (0, u.ZP)(n, {
                               formatInline: !0,
-                              shouldFilterKeywords: P
+                              shouldFilterKeywords: P,
                           }).content
                         : null,
                 {
                     contentPlaceholder: t,
                     renderedContent: l,
                     trailingIcon: a,
-                    leadingIcon: s
+                    leadingIcon: s,
                 } = (0, g.f)(n, e, w, S, N.messageContent, {
                     trailingIconClass: N.messageContentTrailingIcon,
                     leadingIconClass: N.messageContentLeadingIcon,
-                    iconSize: O.WW
+                    iconSize: O.WW,
                 });
             return (0, r.jsxs)(r.Fragment, {
-                children: [s, null != l ? l : (0, r.jsx)('span', { children: t }), a]
+                children: [s, null != l ? l : (0, r.jsx)("span", { children: t }), a],
             });
         }, [n, w, S, P]);
     return (0, r.jsxs)(s.Text, {
         className: N.subtext,
-        variant: 'text-sm/normal',
-        color: 'header-secondary',
+        variant: "text-sm/normal",
+        color: "header-secondary",
         children: [
             (0, r.jsx)(o.Z, {
                 className: N.avatar,
                 user: c,
-                size: s.EFr.SIZE_16
+                size: s.EFr.SIZE_16,
             }),
             (0, r.jsx)(s.PUh, {
                 name: f,
                 colorString: j,
                 colorStrings: Z,
-                className: N.authorName
+                className: N.authorName,
             }),
-            ':\xA0',
+            ":\xA0",
             T,
-            '\xA0 \u2022 \xA0',
-            (0, y.Ye)(p.default.extractTimestamp(n.id))
-        ]
+            "\xA0 \u2022 \xA0",
+            (0, y.Ye)(p.default.extractTimestamp(n.id)),
+        ],
     });
 }
 function I(e) {
     var t, n, l, d;
     let { channel: u } = e,
         h = (0, a.e7)([j.ZP], () => j.ZP.lastMessageId(u.id)),
-        g = null == h ? new Date(null != (n = null == (t = u.threadMetadata) ? void 0 : t.archiveTimestamp) ? n : Date.now()).getTime() : p.default.extractTimestamp(h);
+        g =
+            null == h
+                ? new Date(
+                      null != (n = null == (t = u.threadMetadata) ? void 0 : t.archiveTimestamp) ? n : Date.now(),
+                  ).getTime()
+                : p.default.extractTimestamp(h);
     (0, i.$)({ [u.guild_id]: [u.ownerId] });
     let v = (0, a.e7)([x.default], () => x.default.getUser(u.ownerId)),
         Z = (0, a.e7)([f.ZP], () => f.ZP.getMember(u.guild_id, u.ownerId)),
-        O = (0, m.X7)(u.guild_id, null == v ? void 0 : v.id, null != (l = null == Z ? void 0 : Z.colorStrings) ? l : null),
+        O = (0, m.X7)(
+            u.guild_id,
+            null == v ? void 0 : v.id,
+            null != (l = null == Z ? void 0 : Z.colorStrings) ? l : null,
+        ),
         S = null != (d = (0, c.KS)(u)) ? d : s.or_;
     return (0, r.jsx)(s.Text, {
         className: N.subtext,
-        variant: 'text-sm/normal',
-        color: 'header-secondary',
+        variant: "text-sm/normal",
+        color: "header-secondary",
         children:
             null == v
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: N.noAvatarIcon,
                               children: (0, r.jsx)(S, {
                                   width: 10,
                                   height: 10,
-                                  size: 'custom',
-                                  color: 'currentColor'
-                              })
+                                  size: "custom",
+                                  color: "currentColor",
+                              }),
                           }),
-                          w.intl.format(w.t['5Wk9+v'], { time: (0, y.Ye)(g) })
-                      ]
+                          w.intl.format(w.t["5Wk9+v"], { time: (0, y.Ye)(g) }),
+                      ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(o.Z, {
                               className: N.avatar,
                               user: v,
-                              size: s.EFr.SIZE_16
+                              size: s.EFr.SIZE_16,
                           }),
                           w.intl.format(w.t.GFDmd3, {
                               authorHook(e, t) {
@@ -154,18 +163,18 @@ function I(e) {
                                           className: N.startedByName,
                                           colorString: null != (n = null == Z ? void 0 : Z.colorString) ? n : null,
                                           colorStrings: O,
-                                          name: null != (l = null == Z ? void 0 : Z.nick) ? l : b.ZP.getName(v)
+                                          name: null != (l = null == Z ? void 0 : Z.nick) ? l : b.ZP.getName(v),
                                       },
-                                      t
+                                      t,
                                   );
-                              }
+                              },
                           }),
-                          (0, r.jsx)('span', {
+                          (0, r.jsx)("span", {
                               className: N.bullet,
-                              children: '\u2022'
+                              children: "\u2022",
                           }),
-                          w.intl.format(w.t['5Wk9+v'], { time: (0, y.Ye)(g) })
-                      ]
-                  })
+                          w.intl.format(w.t["5Wk9+v"], { time: (0, y.Ye)(g) }),
+                      ],
+                  }),
     });
 }

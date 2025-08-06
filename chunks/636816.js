@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(539854));
+n.d(t, { Z: () => u }), n(539854);
 var i = n(255367),
     s = n(73800),
     r = n(580685),
@@ -17,8 +17,12 @@ function u(e) {
         m();
     }, [t, m]);
     let x = [];
-    if (n === c.d4z.GUILD_ANNOUNCEMENT && (x.push(h.intl.format(h.t.tI7KNT, { documentationLink: d.Z.getArticleURL(c.BhN.ANNOUNCEMENT_CHANNELS) })), !C && !N)) {
-        let e = h.intl.string(h.t['2Ab4IS']);
+    if (
+        n === c.d4z.GUILD_ANNOUNCEMENT &&
+        (x.push(h.intl.format(h.t.tI7KNT, { documentationLink: d.Z.getArticleURL(c.BhN.ANNOUNCEMENT_CHANNELS) })),
+        !C && !N)
+    ) {
+        let e = h.intl.string(h.t["2Ab4IS"]);
         x.push(e);
     }
     return 0 === x.length
@@ -30,10 +34,10 @@ function u(e) {
                       {
                           className: u,
                           type: l.R94.Types.DESCRIPTION,
-                          children: e
+                          children: e,
                       },
-                      'description-'.concat(t)
-                  )
-              )
+                      "description-".concat(t),
+                  ),
+              ),
           });
 }

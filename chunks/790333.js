@@ -4,5 +4,5 @@ e.exports = n(757009)(
     },
     function () {
         return [[], []];
-    }
+    },
 );

@@ -5,7 +5,7 @@ n.d(t, {
     ZP: () => v,
     ZT: () => h,
     iv: () => b,
-    pk: () => g
+    pk: () => g,
 });
 var r = n(255367);
 n(73800);
@@ -22,7 +22,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,20 +32,20 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function f(e) {
-    return ''.concat(e / 16, 'rem');
+    return "".concat(e / 16, "rem");
 }
 function _() {
     return Array(s().random(3, 8))
@@ -53,28 +53,36 @@ function _() {
         .map(() => s().random(30, 80));
 }
 function p() {
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: c.avatar,
-        style: { opacity: 0.08 }
+        style: { opacity: 0.08 },
     });
 }
 function h(e) {
     let { width: t, height: n, opacity: i, className: a } = e,
         l = {
             width: f(t),
-            opacity: null != i ? i : s().random(0.02, 0.08)
+            opacity: null != i ? i : s().random(0.02, 0.08),
         };
     return (
         null != n && (l.height = f(n)),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: o()(a, { [c.blob]: !0 }),
-            style: l
+            style: l,
         })
     );
 }
 function m(e) {
     let t,
-        { groupStart: n = !1, compact: i = !1, attachmentSpecs: a, usernameWidth: u, usernameOpacity: f, className: m, style: g } = e,
+        {
+            groupStart: n = !1,
+            compact: i = !1,
+            attachmentSpecs: a,
+            usernameWidth: u,
+            usernameOpacity: f,
+            className: m,
+            style: g,
+        } = e,
         E = i ? 50 : s().random(40, 50);
     return (
         !i && n
@@ -86,10 +94,10 @@ function m(e) {
                           children: (0, r.jsx)(h, {
                               width: u,
                               opacity: f,
-                              className: c.__invalid_username
-                          })
-                      })
-                  ]
+                              className: c.__invalid_username,
+                          }),
+                      }),
+                  ],
               }))
             : i &&
               (t = (0, r.jsxs)(r.Fragment, {
@@ -99,55 +107,55 @@ function m(e) {
                               width: E,
                               className: o()({
                                   [c.compactTimestamp]: !0,
-                                  [c.hidden]: !n
-                              })
+                                  [c.hidden]: !n,
+                              }),
                           }),
                       (0, r.jsx)(l.H, {
                           className: c.header,
                           children: (0, r.jsx)(h, {
                               width: u,
-                              opacity: f
-                          })
-                      })
-                  ]
+                              opacity: f,
+                          }),
+                      }),
+                  ],
               })),
-        (0, r.jsxs)('div', {
-            'aria-hidden': !0,
+        (0, r.jsxs)("div", {
+            "aria-hidden": !0,
             className: o()(m, {
                 [c.wrapper]: !0,
                 [c.compact]: i,
-                [c.cozy]: !i
+                [c.cozy]: !i,
             }),
             style: g,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: c.contents,
                     children: [
                         t,
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: c.content,
                             children: _().map((e, t) =>
                                 (0, r.jsx)(
                                     h,
                                     {
                                         width: e,
-                                        opacity: 0.06
+                                        opacity: 0.06,
                                     },
-                                    t
-                                )
-                            )
-                        })
-                    ]
+                                    t,
+                                ),
+                            ),
+                        }),
+                    ],
                 }),
                 null != a &&
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: c.attachmentContainer,
-                        children: (0, r.jsx)('div', {
+                        children: (0, r.jsx)("div", {
                             className: c.attachment,
-                            style: d({ opacity: 0.03 }, a)
-                        })
-                    })
-            ]
+                            style: d({ opacity: 0.03 }, a),
+                        }),
+                    }),
+            ],
         })
     );
 }
@@ -174,10 +182,10 @@ function v(e) {
                         usernameOpacity: u,
                         groupStart: 0 === t,
                         attachmentSpecs: t === l ? o : void 0,
-                        style: 0 === t ? { marginTop: f(n) } : void 0
+                        style: 0 === t ? { marginTop: f(n) } : void 0,
                     },
-                    t
-                )
-            )
+                    t,
+                ),
+            ),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -20,9 +20,9 @@ let b = (e) => {
     let { location: t } = e,
         n = (0, l.e7)([f.default], () => f.default.isAuthenticated()),
         b = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-        E = (0, p.oK)('RSL - Landing Page'),
+        E = (0, p.oK)("RSL - Landing Page"),
         [v, j] = i.useState(!1),
-        [I, O] = i.useState(_.intl.string(_.t['9exy+f'])),
+        [I, O] = i.useState(_.intl.string(_.t["9exy+f"])),
         [N, S] = i.useState(!0),
         C = (e) => {
             switch (e) {
@@ -34,13 +34,13 @@ let b = (e) => {
                     O(_.intl.string(_.t.rV00ws));
                     break;
                 case g.evJ.DSA_RSL_LIMITED_TIME:
-                    O(_.intl.string(_.t['0dI29v']));
+                    O(_.intl.string(_.t["0dI29v"]));
                     break;
                 case g.evJ.DSA_RSL_REPORT_INELIGIBLE:
-                    O(_.intl.string(_.t['RGa/GR']));
+                    O(_.intl.string(_.t["RGa/GR"]));
                     break;
                 default:
-                    O(_.intl.string(_.t['0QLzfn']));
+                    O(_.intl.string(_.t["0QLzfn"]));
             }
         };
     return (
@@ -68,7 +68,7 @@ let b = (e) => {
                     j(!1);
                 }
             };
-            (j(!0), e((0, c.Z)(t)), (0, m.e)('report_second_look'));
+            j(!0), e((0, c.Z)(t)), (0, m.e)("report_second_look");
         }, [t]),
         E &&
             !N &&
@@ -76,10 +76,10 @@ let b = (e) => {
                 children: [
                     (0, r.jsx)(u.Dx, {
                         className: x.marginBottom8,
-                        children: I
+                        children: I,
                     }),
-                    v && (0, r.jsx)(s.$jN, {})
-                ]
+                    v && (0, r.jsx)(s.$jN, {}),
+                ],
             })
     );
 };

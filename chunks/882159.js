@@ -1,7 +1,7 @@
 n.d(t, {
     Re: () => o,
     Zq: () => a,
-    kK: () => i
+    kK: () => i,
 });
 var r = n(49691);
 function i(e) {
@@ -13,7 +13,7 @@ function o(e) {
     return e instanceof t || e instanceof HTMLElement;
 }
 function a(e) {
-    if ('undefined' == typeof ShadowRoot) return !1;
+    if ("undefined" == typeof ShadowRoot) return !1;
     var t = (0, r.Z)(e).ShadowRoot;
     return e instanceof t || e instanceof ShadowRoot;
 }

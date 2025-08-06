@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     Z: () => eS,
-    l: () => eA
+    l: () => eA,
 }),
     n(642613),
     n(415506),
     n(539854),
     n(388685),
     n(35282),
-    n(49124));
+    n(49124);
 var r,
     i = n(255367),
     o = n(73800),
@@ -73,7 +73,7 @@ function es(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -83,15 +83,15 @@ function el(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 es(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -99,11 +99,11 @@ function ec(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -125,7 +125,8 @@ function ed(e, t) {
         i = ef(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -135,7 +136,7 @@ function ef(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let e_ = 48,
@@ -151,44 +152,44 @@ function eb(e) {
         justify: w.Z.Justify.CENTER,
         direction: w.Z.Direction.VERTICAL,
         className: s()(eo.errorState, t),
-        children: [(0, i.jsx)('div', { className: s()(eo.errorStateIcon, ea.marginBottom20) }), n]
+        children: [(0, i.jsx)("div", { className: s()(eo.errorStateIcon, ea.marginBottom20) }), n],
     });
 }
 let ey = (e) => {
         var t;
         let { channel: n, onClose: r } = e,
-            o = null != (t = (0, P.ZP)(n)) ? t : '',
+            o = null != (t = (0, P.ZP)(n)) ? t : "",
             a = (0, f.e7)([H.ZP], () => {
                 var e;
                 return null != (e = H.ZP.lastMessageId(n.id)) ? e : n.id;
             });
         return (0, i.jsx)(p.P3F, {
             onClick: () => {
-                ((0, k.XU)(er.ME, n.id), r());
+                (0, k.XU)(er.ME, n.id), r();
             },
-            children: (0, i.jsxs)('div', {
+            children: (0, i.jsxs)("div", {
                 className: eo.confirmChannelItemContainer,
                 children: [
                     (0, i.jsx)(p.qEK, {
                         src: (0, R.x)(n),
                         size: p.EFr.SIZE_24,
-                        'aria-label': o
+                        "aria-label": o,
                     }),
-                    (0, i.jsx)('span', {
+                    (0, i.jsx)("span", {
                         className: eo.confirmChannelName,
-                        children: o
+                        children: o,
                     }),
-                    (0, i.jsx)('span', {
+                    (0, i.jsx)("span", {
                         className: eo.lastActiveTimestamp,
-                        children: u()(J.default.extractTimestamp(a)).fromNow()
-                    })
-                ]
-            })
+                        children: u()(J.default.extractTimestamp(a)).fromNow(),
+                    }),
+                ],
+            }),
         });
     },
     eO = (e) => {
         var { onConfirm: t, channelIds: n } = e,
-            r = ed(e, ['onConfirm', 'channelIds']);
+            r = ed(e, ["onConfirm", "channelIds"]);
         let o = (0, f.Wu)([B.Z], () => Array.from(n).map(B.Z.getChannel), [n]);
         return (0, i.jsxs)(
             p.ConfirmModal,
@@ -197,21 +198,21 @@ let ey = (e) => {
                     {
                         header: ei.intl.string(ei.t.uFHxNT),
                         confirmText: ei.intl.string(ei.t.KCNNJi),
-                        cancelText: ei.intl.string(ei.t['ETE/oK']),
+                        cancelText: ei.intl.string(ei.t["ETE/oK"]),
                         onConfirm: t,
-                        confirmButtonColor: _.zx.Colors.BRAND
+                        confirmButtonColor: _.zx.Colors.BRAND,
                     },
-                    r
+                    r,
                 ),
                 {
                     children: [
                         (0, i.jsx)(p.Text, {
-                            variant: 'text-md/normal',
-                            children: ei.intl.string(ei.t.rIsSqK)
+                            variant: "text-md/normal",
+                            children: ei.intl.string(ei.t.rIsSqK),
                         }),
                         (0, i.jsx)(p.vwX, {
                             className: eo.selectExistingFormHeader,
-                            children: ei.intl.string(ei.t.cjE7wM)
+                            children: ei.intl.string(ei.t.cjE7wM),
                         }),
                         (0, i.jsx)(p.Ttm, {
                             className: eo.confirmInviteScroller,
@@ -228,15 +229,15 @@ let ey = (e) => {
                                         ey,
                                         {
                                             onClose: r.onClose,
-                                            channel: e
+                                            channel: e,
                                         },
-                                        e.id
-                                    )
-                                )
-                        })
-                    ]
-                }
-            )
+                                        e.id,
+                                    ),
+                                ),
+                        }),
+                    ],
+                },
+            ),
         );
     };
 class ev extends (r = o.PureComponent) {
@@ -248,13 +249,17 @@ class ev extends (r = o.PureComponent) {
     }
     _getAnalyticsEntryPoint() {
         let { channel: e } = this.props,
-            t = '',
-            n = '';
+            t = "",
+            n = "";
         return (
-            null != e ? (e.isDM() ? ((t = 'Add Friends to DM'), (n = 'DM')) : ((t = 'Add Friends to DM'), (n = 'Group DM'))) : ((t = 'New Group DM'), (n = 'Friends List')),
+            null != e
+                ? e.isDM()
+                    ? ((t = "Add Friends to DM"), (n = "DM"))
+                    : ((t = "Add Friends to DM"), (n = "Group DM"))
+                : ((t = "New Group DM"), (n = "Friends List")),
             {
                 entryPointType: t,
-                entryPointSource: n
+                entryPointSource: n,
             }
         );
     }
@@ -262,31 +267,34 @@ class ev extends (r = o.PureComponent) {
         let { channel: e } = this.props;
         h.Z.wait(() => y.Z.open(null == e ? void 0 : e.id));
         let t = (0, N.v_)(e);
-        (z.default.track(
+        z.default.track(
             er.rMx.OPEN_POPOUT,
             eu(el({}, t), {
                 type: this._getAnalyticsEntryPoint().entryPointType,
                 source: this._getAnalyticsEntryPoint().entryPointSource,
-                is_friend: !this.isNotFriends()
-            })
+                is_friend: !this.isNotFriends(),
+            }),
         ),
             X.S.subscribe(er.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            X.S.subscribe(er.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown));
+            X.S.subscribe(er.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
     }
     componentWillUnmount() {
-        (X.S.unsubscribe(er.CkL.SCROLL_PAGE_UP, this.scrollPageUp), X.S.unsubscribe(er.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), h.Z.wait(() => y.Z.close()));
+        X.S.unsubscribe(er.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            X.S.unsubscribe(er.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
+            null != this.copyTimeout && clearTimeout(this.copyTimeout),
+            h.Z.wait(() => y.Z.close());
     }
     isNotFriends() {
         let { channel: e } = this.props;
         if (null == e || !e.isDM()) return !1;
         let t = e.getRecipientId();
-        if (null == t) throw Error('no recipient in DM');
+        if (null == t) throw Error("no recipient in DM");
         return !Y.Z.isFriend(t);
     }
     createInvite() {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
-        let { inviteMaxAgeSeconds: t } = ee.Z.getCurrentConfig({ location: '5326c5_1' }, { autoTrackExposure: !1 });
+        let { inviteMaxAgeSeconds: t } = ee.Z.getCurrentConfig({ location: "5326c5_1" }, { autoTrackExposure: !1 });
         b.ZP.createInvite(e.id, { max_age: t }, er.t4x.GROUP_DM);
     }
     isPartyFull() {
@@ -307,13 +315,13 @@ class ev extends (r = o.PureComponent) {
         let { channel: e, selectedUsers: t } = this.props,
             n = this.getRemaining(),
             r = (null != e && 0 === t.size) || n < 0,
-            o = t.size > 1 || null != e ? ei.intl.string(ei.t.ZGMNAw) : ei.intl.string(ei.t['6Urw1t']);
+            o = t.size > 1 || null != e ? ei.intl.string(ei.t.ZGMNAw) : ei.intl.string(ei.t["6Urw1t"]);
         return (0, i.jsx)(p.zxk, {
-            variant: 'primary',
+            variant: "primary",
             fullWidth: !0,
             disabled: r,
             onClick: this.handleInviteUsers,
-            text: o
+            text: o,
         });
     }
     renderAddUsersButton() {
@@ -321,25 +329,28 @@ class ev extends (r = o.PureComponent) {
         if (null == e || e.isDM()) return;
         let n = this.getRemaining(),
             r = 0 === t.size || n < 0;
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: eo.addButton,
             children: (0, i.jsx)(p.zxk, {
-                variant: 'primary',
-                size: 'sm',
+                variant: "primary",
+                size: "sm",
                 text: ei.intl.string(ei.t.OYkgVl),
                 disabled: r,
-                onClick: this.handleInviteUsers
-            })
+                onClick: this.handleInviteUsers,
+            }),
         });
     }
     renderSubtitle() {
         if (!this.props.hasFriends || this.isNotFriends() || this.isPartyFull()) return null;
         let e = this.getRemaining(),
-            t = e <= 0 ? ei.intl.formatToPlainString(ei.t.xYr009, { number: this.getMaxParticipants() }) : ei.intl.formatToPlainString(ei.t.HrSDPD, { number: e });
+            t =
+                e <= 0
+                    ? ei.intl.formatToPlainString(ei.t.xYr009, { number: this.getMaxParticipants() })
+                    : ei.intl.formatToPlainString(ei.t.HrSDPD, { number: e });
         return (0, i.jsx)(p.Text, {
-            variant: 'text-xs/normal',
+            variant: "text-xs/normal",
             className: s()(eo.subtitle, { [eo.subtitleWarning]: e < 0 }, ea.marginTop4),
-            children: t
+            children: t,
         });
     }
     renderSearchBar() {
@@ -352,14 +363,14 @@ class ev extends (r = o.PureComponent) {
                 let t = K.default.getUser(e);
                 null != t && s.push($.ZP.getName(t));
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: eo.searchBar,
                 children: [
                     (0, i.jsx)(I.Z, {
                         ref: this.searchBarRef,
                         className: eo.searchBarComponent,
                         autoFocus: !0,
-                        placeholder: 0 === a.size ? ei.intl.string(ei.t.Wxnb6u) : '',
+                        placeholder: 0 === a.size ? ei.intl.string(ei.t.Wxnb6u) : "",
                         disabled: this.isPartyFull(),
                         size: I.Z.Sizes.MEDIUM,
                         maxHeight: this.props.inBornThisNamedExperiment ? eE : void 0,
@@ -373,15 +384,15 @@ class ev extends (r = o.PureComponent) {
                         onRemoveTag: this.handleRemoveUser,
                         onHeightChange: this.scrollToCounterSearchBarHeightChange,
                         inputProps: {
-                            'aria-labelledby': em,
-                            'aria-controls': eg,
-                            'aria-expanded': !0,
-                            'aria-activedescendant': 'user-row-'.concat(o),
-                            autoComplete: 'off'
-                        }
+                            "aria-labelledby": em,
+                            "aria-controls": eg,
+                            "aria-expanded": !0,
+                            "aria-activedescendant": "user-row-".concat(o),
+                            autoComplete: "off",
+                        },
                     }),
-                    this.renderAddUsersButton()
-                ]
+                    this.renderAddUsersButton(),
+                ],
             })
         );
     }
@@ -397,57 +408,62 @@ class ev extends (r = o.PureComponent) {
                 d.tq ? this.renderMobileCloseButton() : null,
                 (0, i.jsx)(p.X6q, {
                     id: em,
-                    variant: 'heading-lg/semibold',
-                    children: t
+                    variant: "heading-lg/semibold",
+                    children: t,
                 }),
                 this.renderSubtitle(),
                 (0, i.jsx)(p.olH, {
                     className: eo.closeButton,
-                    onClick: this.props.onClose
-                })
-            ]
+                    onClick: this.props.onClose,
+                }),
+            ],
         });
     }
     renderBody() {
         let { channel: e, hasFriends: t, results: n } = this.props;
         if (this.isNotFriends()) {
             let t = null != e ? e.getRecipientId() : null;
-            if (null == t) throw Error('no recipient in DM');
+            if (null == t) throw Error("no recipient in DM");
             let n = K.default.getUser(t),
-                r = null != n ? n.username : '',
+                r = null != n ? n.username : "",
                 o = null != n && Y.Z.getRelationshipType(n.id) === er.OGo.PENDING_OUTGOING;
             return (0, i.jsxs)(eb, {
                 className: eo.notFriends,
                 children: [
                     (0, i.jsx)(p.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'text-secondary',
-                        children: ei.intl.format(ei.t['eg+R9/'], { username: r })
+                        variant: "text-sm/medium",
+                        color: "text-secondary",
+                        children: ei.intl.format(ei.t["eg+R9/"], { username: r }),
                     }),
-                    (0, i.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
+                    (0, i.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
                         className: ea.marginTop20,
                         children: (0, i.jsx)(p.zxk, {
-                            variant: 'primary',
-                            size: 'sm',
-                            text: o ? ei.intl.string(ei.t.xMH6vL) : ei.intl.string(ei.t['PMsq/f']),
+                            variant: "primary",
+                            size: "sm",
+                            text: o ? ei.intl.string(ei.t.xMH6vL) : ei.intl.string(ei.t["PMsq/f"]),
                             disabled: o,
-                            onClick: () => (null != n ? this.handleAddFriend(n) : null)
-                        })
-                    })
-                ]
+                            onClick: () => (null != n ? this.handleAddFriend(n) : null),
+                        }),
+                    }),
+                ],
             });
         }
         return t
             ? this.isPartyFull()
                 ? (0, i.jsxs)(eb, {
                       className: eo.partyFull,
-                      children: [(0, i.jsx)('div', { children: ei.intl.string(ei.t.OtTQDw) }), (0, i.jsx)('div', { children: ei.intl.format(ei.t.xYr009, { number: this.getMaxParticipants() }) })]
+                      children: [
+                          (0, i.jsx)("div", { children: ei.intl.string(ei.t.OtTQDw) }),
+                          (0, i.jsx)("div", {
+                              children: ei.intl.format(ei.t.xYr009, { number: this.getMaxParticipants() }),
+                          }),
+                      ],
                   })
                 : 0 === n.length
                   ? (0, i.jsx)(eb, {
                         className: s()(eo.noResults, ea.marginBottom20),
-                        children: (0, i.jsx)('div', { children: ei.intl.string(ei.t.SV4DJy) })
+                        children: (0, i.jsx)("div", { children: ei.intl.string(ei.t.SV4DJy) }),
                     })
                   : (0, i.jsx)(p.aVo, {
                         ref: this.scrollerRef,
@@ -463,28 +479,28 @@ class ev extends (r = o.PureComponent) {
                         paddingBottom: 14,
                         fade: !0,
                         role: void 0,
-                        innerRole: 'listbox',
+                        innerRole: "listbox",
                         innerId: eg,
                         innerAriaMultiselectable: !0,
-                        innerAriaOrientation: 'vertical'
+                        innerAriaOrientation: "vertical",
                     })
             : (0, i.jsxs)(eb, {
                   className: eo.noFriends,
                   children: [
-                      (0, i.jsx)('div', { children: ei.intl.string(ei.t['7orY6O']) }),
-                      (0, i.jsx)('div', {
-                          'data-button-hoisted-classname-wrapper': !0,
+                      (0, i.jsx)("div", { children: ei.intl.string(ei.t["7orY6O"]) }),
+                      (0, i.jsx)("div", {
+                          "data-button-hoisted-classname-wrapper": !0,
                           className: ea.marginTop20,
                           children: (0, i.jsx)(p.zxk, {
-                              variant: 'primary',
-                              size: 'sm',
+                              variant: "primary",
+                              size: "sm",
                               text: ei.intl.string(ei.t.w5uwoK),
                               autoFocus: !0,
                               fullWidth: !0,
-                              onClick: this.handleAddFriendNavigation
-                          })
-                      })
-                  ]
+                              onClick: this.handleAddFriendNavigation,
+                          }),
+                      }),
+                  ],
               });
     }
     renderSection() {
@@ -494,34 +510,38 @@ class ev extends (r = o.PureComponent) {
         let { channel: e, invite: t, hideInstantInvites: n } = this.props,
             { copied: r } = this.state;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-        let a = null != t ? (0, M.Z)(t.code) : '',
+        let a = null != t ? (0, M.Z)(t.code) : "",
             l = a.length > 0;
         return (0, i.jsxs)(o.Fragment, {
             children: [
                 (0, i.jsx)(p.vwX, {
-                    tag: 'h5',
+                    tag: "h5",
                     className: ea.marginBottom8,
-                    children: ei.intl.string(ei.t.t3O2BQ)
+                    children: ei.intl.string(ei.t.t3O2BQ),
                 }),
                 (0, i.jsx)(p.kO8, {
                     supportsCopy: q.wS,
                     placeholder: (0, M.Z)(ei.intl.string(ei.t.lPVBqK)),
-                    value: l ? (n ? ei.intl.string(ei.t['6HzNgY']) : a) : '',
+                    value: l ? (n ? ei.intl.string(ei.t["6HzNgY"]) : a) : "",
                     buttonColor: _.zx.Colors.BRAND,
-                    text: l ? (r ? ei.intl.string(ei.t.q30c5u) : ei.intl.string(ei.t.OpuAlJ)) : ei.intl.string(ei.t.qzxqUV),
+                    text: l
+                        ? r
+                            ? ei.intl.string(ei.t.q30c5u)
+                            : ei.intl.string(ei.t.OpuAlJ)
+                        : ei.intl.string(ei.t.qzxqUV),
                     mode: r ? p.uA3.SUCCESS : p.uA3.DEFAULT,
                     onCopy: () => {
                         l ? this.handleCopyInvite(a) : this.createInvite();
-                    }
+                    },
                 }),
                 a.length > 0
                     ? (0, i.jsx)(p.Text, {
-                          variant: 'text-xs/normal',
+                          variant: "text-xs/normal",
                           className: s()(ea.marginTop8, eo.footerText),
-                          children: ei.intl.format(ei.t.ZVdJMz, { numHours: ''.concat(eh) })
+                          children: ei.intl.format(ei.t.ZVdJMz, { numHours: "".concat(eh) }),
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     }
     renderFooter() {
@@ -538,27 +558,27 @@ class ev extends (r = o.PureComponent) {
                             channelName: this.state.newChannelName,
                             onChange: this.handleChannelNameChange,
                             onIconChange: this.handleIconChange,
-                            onIconRemove: this.handleIconRemove
+                            onIconRemove: this.handleIconRemove,
                         }),
                     (0, i.jsxs)(p.hE2, {
                         fullWidth: !0,
-                        direction: 'horizontal',
+                        direction: "horizontal",
                         children: [
                             (0, i.jsx)(p.zxk, {
-                                variant: 'secondary',
-                                text: ei.intl.string(ei.t['ETE/oK']),
-                                onClick: this.props.onClose
+                                variant: "secondary",
+                                text: ei.intl.string(ei.t["ETE/oK"]),
+                                onClick: this.props.onClose,
                             }),
-                            this.renderCreateGroupButton()
-                        ]
-                    })
-                ]
+                            this.renderCreateGroupButton(),
+                        ],
+                    }),
+                ],
             });
         let r = t.isDM() ? this.renderCreateGroupButton() : this.renderInviteLink();
         if (null != r)
             return (0, i.jsx)(p.mzw, {
                 className: eo.footer,
-                children: r
+                children: r,
             });
     }
     render() {
@@ -567,19 +587,19 @@ class ev extends (r = o.PureComponent) {
             transitionState: null != e ? e : p.Dvm.ENTERED,
             className: s()(eo.popout, {
                 [eo.showAsModal]: t,
-                [eo.showAsPopout]: !t
+                [eo.showAsPopout]: !t,
             }),
             fullscreenOnMobile: !1,
-            parentComponent: 'PrivateChannelRecipientsInvite',
-            children: [this.renderHeader(), this.renderSearchBar(), this.renderBody(), this.renderFooter()]
+            parentComponent: "PrivateChannelRecipientsInvite",
+            children: [this.renderHeader(), this.renderSearchBar(), this.renderBody(), this.renderFooter()],
         });
     }
     handleAddFriend(e) {
-        (this.props.onClose(),
+        this.props.onClose(),
             O.Z.sendRequest({
-                discordTag: $.ZP.getUserTag(e, { identifiable: 'always' }),
-                context: { location: 'Group DM' }
-            }));
+                discordTag: $.ZP.getUserTag(e, { identifiable: "always" }),
+                context: { location: "Group DM" },
+            });
     }
     _getUserAffinities(e) {
         return {
@@ -587,53 +607,53 @@ class ev extends (r = o.PureComponent) {
                 var t;
                 let n = U.Z.getUserAffinity(e);
                 return null != (t = null == n ? void 0 : n.communicationProbability) ? t : -1;
-            })
+            }),
         };
     }
     constructor(...e) {
-        (super(...e),
-            es(this, 'state', {
+        super(...e),
+            es(this, "state", {
                 separator: !1,
                 copied: !1,
-                newChannelName: '',
-                previewIcon: void 0
+                newChannelName: "",
+                previewIcon: void 0,
             }),
-            es(this, 'copyTimeout', void 0),
-            es(this, 'scrollerRef', o.createRef()),
-            es(this, 'searchBarRef', o.createRef()),
-            es(this, '_mobileCloseRef', o.createRef()),
-            es(this, '_searchCounter', 0),
-            es(this, '_existingTimeout', null),
-            es(this, 'scrollPageUp', () => {
+            es(this, "copyTimeout", void 0),
+            es(this, "scrollerRef", o.createRef()),
+            es(this, "searchBarRef", o.createRef()),
+            es(this, "_mobileCloseRef", o.createRef()),
+            es(this, "_searchCounter", 0),
+            es(this, "_existingTimeout", null),
+            es(this, "scrollPageUp", () => {
                 var e;
                 null == (e = this.scrollerRef.current) || e.scrollPageUp({ animate: !0 });
             }),
-            es(this, 'scrollPageDown', () => {
+            es(this, "scrollPageDown", () => {
                 var e;
                 null == (e = this.scrollerRef.current) || e.scrollPageDown({ animate: !0 });
             }),
-            es(this, 'renderMobileCloseButton', () =>
-                (0, i.jsx)('div', {
+            es(this, "renderMobileCloseButton", () =>
+                (0, i.jsx)("div", {
                     className: eo.mobileToolsContainer,
                     ref: this._mobileCloseRef,
                     children: (0, i.jsx)(p.JcV, {
                         containerRef: this._mobileCloseRef,
-                        children: (0, i.jsx)('div', {
+                        children: (0, i.jsx)("div", {
                             children: (0, i.jsx)(v.Z, {
                                 className: eo.mobileToolsCloseIcon,
                                 closeAction: this.props.onClose,
-                                keybind: 'ESC'
-                            })
-                        })
-                    })
-                })
+                                keybind: "ESC",
+                            }),
+                        }),
+                    }),
+                }),
             ),
-            es(this, 'getRowHeight', (e, t) => {
+            es(this, "getRowHeight", (e, t) => {
                 if (e > 0) return 0;
                 let { results: n } = this.props;
                 return null != n[t] ? (this.props.inBornThisNamedExperiment ? e_ : ep) : 0;
             }),
-            es(this, 'renderRow', (e) => {
+            es(this, "renderRow", (e) => {
                 let { section: t, row: n } = e;
                 if (t > 0) return null;
                 let { results: r, selectedUsers: o, selectedRow: a, hideDiscriminator: s } = this.props,
@@ -654,82 +674,85 @@ class ev extends (r = o.PureComponent) {
                         selected: n === a,
                         onClick: this.handleClick,
                         onMouseEnter: this.focusResult,
-                        'aria-posinset': n + 1,
-                        'aria-setsize': r.length,
-                        inlineUsername: !this.props.inBornThisNamedExperiment
+                        "aria-posinset": n + 1,
+                        "aria-setsize": r.length,
+                        inlineUsername: !this.props.inBornThisNamedExperiment,
                     },
-                    c.id
+                    c.id,
                 );
             }),
-            es(this, 'forceFocus', () => {
+            es(this, "forceFocus", () => {
                 let e = this.searchBarRef.current;
                 null == e || e.focus();
             }),
-            es(this, 'focusResult', (e) => {
+            es(this, "focusResult", (e) => {
                 y.Z.select(e);
             }),
-            es(this, 'handleSelect', (e, t) => {
+            es(this, "handleSelect", (e, t) => {
                 let { results: n, channel: r } = this.props;
                 null == t ? y.Z.clear(null == r ? void 0 : r.id) : null != n && this.handleClick(n[t].user.id);
             }),
-            es(this, 'handleSelectionChange', (e, t) => {
+            es(this, "handleSelectionChange", (e, t) => {
                 y.Z.select(t);
                 let n = this.scrollerRef.current;
                 null != n &&
                     n.scrollToIndex({
                         section: e,
                         row: t,
-                        padding: 8
+                        padding: 8,
                     });
             }),
-            es(this, 'handleQueryChange', (e) => {
+            es(this, "handleQueryChange", (e) => {
                 let { channel: t } = this.props,
                     n = (0, N.v_)(t);
-                (y.Z.search(e, null == t ? void 0 : t.id),
+                y.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
-                        (z.default.track(
+                        z.default.track(
                             er.rMx.SEARCH_USER_LIST_STARTED,
                             eu(el({}, n), {
                                 entry_point_type: this._getAnalyticsEntryPoint().entryPointType,
                                 entry_point_source: this._getAnalyticsEntryPoint().entryPointSource,
-                                search_query_length: e.length
-                            })
+                                search_query_length: e.length,
+                            }),
                         ),
-                            this._searchCounter++);
-                    }, 500)));
+                            this._searchCounter++;
+                    }, 500));
             }),
-            es(this, 'handleRemoveUser', (e) => {
+            es(this, "handleRemoveUser", (e) => {
                 let t = Array.from(this.props.selectedUsers);
-                (y.Z.removeUser(t[e]), this.forceFocus());
+                y.Z.removeUser(t[e]), this.forceFocus();
             }),
-            es(this, 'handleClick', (e) => {
+            es(this, "handleClick", (e) => {
                 let { selectedUsers: t, query: n, channel: r } = this.props;
-                (t.has(e) ? y.Z.removeUser(e) : this.getRemaining() > 0 && (y.Z.addUser(e), n.length > 0 && y.Z.clear(null == r ? void 0 : r.id)), this.forceFocus());
+                t.has(e)
+                    ? y.Z.removeUser(e)
+                    : this.getRemaining() > 0 && (y.Z.addUser(e), n.length > 0 && y.Z.clear(null == r ? void 0 : r.id)),
+                    this.forceFocus();
             }),
-            es(this, 'handleAddFriendNavigation', () => {
-                (E.Z.transitionToSection(er.pJs.ADD_FRIEND, { explicit: !0 }), this.props.onClose());
+            es(this, "handleAddFriendNavigation", () => {
+                E.Z.transitionToSection(er.pJs.ADD_FRIEND, { explicit: !0 }), this.props.onClose();
             }),
-            es(this, 'handleScroll', () => {
+            es(this, "handleScroll", () => {
                 let e = this.scrollerRef.current;
                 null != e && this.setState({ separator: !e.isScrolledToTop() });
             }),
-            es(this, 'handleChannelNameChange', (e) => {
+            es(this, "handleChannelNameChange", (e) => {
                 this.setState({ newChannelName: e });
             }),
-            es(this, 'handleIconChange', (e) => {
+            es(this, "handleIconChange", (e) => {
                 let { imageUri: t } = e;
                 this.setState({ previewIcon: t });
             }),
-            es(this, 'handleIconRemove', () => {
+            es(this, "handleIconRemove", () => {
                 this.setState({ previewIcon: null });
             }),
-            es(this, 'createNewDM', (e) => {
+            es(this, "createNewDM", (e) => {
                 let t = this._searchCounter,
                     { channel: n } = this.props,
                     r = (0, N.v_)(n),
                     i = !0;
-                (1 === e.length && (i = null == g.Z._openCachedDMChannel(e[0])),
+                1 === e.length && (i = null == g.Z._openCachedDMChannel(e[0])),
                     z.default.track(
                         er.rMx.CREATE_DM_USER_LIST_CLICKED,
                         eu(el({}, r), {
@@ -739,35 +762,36 @@ class ev extends (r = o.PureComponent) {
                             recipient_ids: e,
                             num_searches: t,
                             affinity_score: this._getUserAffinities(e).affinities,
-                            name_is_set: '' !== this.state.newChannelName,
-                            icon_is_set: null != this.state.previewIcon
-                        })
+                            name_is_set: "" !== this.state.newChannelName,
+                            icon_is_set: null != this.state.previewIcon,
+                        }),
                     ),
                     g.Z.openPrivateChannel({
                         recipientIds: e,
-                        location: 'New Group DM'
+                        location: "New Group DM",
                     }).then((e) => {
                         let t = {};
-                        ('' !== this.state.newChannelName && (t.name = this.state.newChannelName),
+                        "" !== this.state.newChannelName && (t.name = this.state.newChannelName),
                             null != this.state.previewIcon && (t.icon = this.state.previewIcon),
-                            (null != t.name || null != t.icon) && g.Z.updateChannel(e, t, A.Z.NEW_GROUP_DM_INVITE_MODAL),
+                            (null != t.name || null != t.icon) &&
+                                g.Z.updateChannel(e, t, A.Z.NEW_GROUP_DM_INVITE_MODAL),
                             z.default.track(er.rMx.GDM_EDIT_INTERACTED, {
                                 channel_id: e,
                                 channel_type: er.d4z.GROUP_DM,
                                 location: A.Z.NEW_GROUP_DM_INVITE_MODAL,
-                                new_name_set: '' !== this.state.newChannelName,
-                                new_icon_set: null != this.state.previewIcon
-                            }));
-                    }));
+                                new_name_set: "" !== this.state.newChannelName,
+                                new_icon_set: null != this.state.previewIcon,
+                            });
+                    });
             }),
-            es(this, 'pushToExistingDM', (e, t) => {
+            es(this, "pushToExistingDM", (e, t) => {
                 let n = this._searchCounter,
                     r = (0, N.v_)(e),
                     i = V.Z.getChannelId() === e.id;
-                (g.Z.addRecipients(e.id, t, er.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
+                g.Z.addRecipients(e.id, t, er.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (i) {
                         if (e.isDM() && n !== e.id) return void m.Z.call(n, !1, !0);
-                        m.Z.ring(n, t, 'dm_invite');
+                        m.Z.ring(n, t, "dm_invite");
                     }
                 }),
                     z.default.track(
@@ -778,11 +802,11 @@ class ev extends (r = o.PureComponent) {
                             entry_point_source: this._getAnalyticsEntryPoint().entryPointSource,
                             recipient_ids: t,
                             num_searches: n,
-                            affinity_score: this._getUserAffinities(t).affinities
-                        })
-                    ));
+                            affinity_score: this._getUserAffinities(t).affinities,
+                        }),
+                    );
             }),
-            es(this, 'handleInviteUsers', () => {
+            es(this, "handleInviteUsers", () => {
                 let { channel: e, selectedUsers: t, onClose: n } = this.props,
                     r = Array.from(t);
                 if (null != e) {
@@ -794,11 +818,11 @@ class ev extends (r = o.PureComponent) {
                                       eO,
                                       eu(el({}, n), {
                                           onConfirm: () => this.pushToExistingDM(e, r),
-                                          channelIds: t
-                                      })
+                                          channelIds: t,
+                                      }),
                                   ),
                               {},
-                              (0, p.VnL)(this.context.appContext)
+                              (0, p.VnL)(this.context.appContext),
                           )
                         : this.pushToExistingDM(e, r);
                 } else {
@@ -810,19 +834,19 @@ class ev extends (r = o.PureComponent) {
                                       eO,
                                       eu(el({}, t), {
                                           onConfirm: () => this.createNewDM(r),
-                                          channelIds: e
-                                      })
+                                          channelIds: e,
+                                      }),
                                   ),
                               {},
-                              (0, p.VnL)(this.context.appContext)
+                              (0, p.VnL)(this.context.appContext),
                           )
                         : this.createNewDM(r);
                 }
                 n();
             }),
-            es(this, 'handleCopyInvite', (e) => {
+            es(this, "handleCopyInvite", (e) => {
                 let { channel: t, invite: n } = this.props;
-                (null != n && (0, q.JG)(e),
+                null != n && (0, q.JG)(e),
                     null != this.copyTimeout && clearTimeout(this.copyTimeout),
                     this.setState({ copied: !0 }),
                     (this.copyTimeout = setTimeout(() => {
@@ -833,15 +857,15 @@ class ev extends (r = o.PureComponent) {
                         channel: null != t ? t.id : null,
                         channel_type: null != t ? t.type : null,
                         location: er.Sbl.ADD_FRIENDS_TO_DM,
-                        code: null != n ? n.code : null
-                    }));
+                        code: null != n ? n.code : null,
+                    });
             }),
-            es(this, 'scrollToCounterSearchBarHeightChange', (e) => {
+            es(this, "scrollToCounterSearchBarHeightChange", (e) => {
                 var t, n;
                 if (!this.props.inBornThisNamedExperiment) return;
                 let r = null == (n = this.scrollerRef.current) || null == (t = n.getScrollerNode) ? void 0 : t.call(n);
                 null != r && (r.scrollTop = Math.max(0, r.scrollTop + e));
-            }));
+            });
     }
 }
 function eI(e) {
@@ -849,7 +873,7 @@ function eI(e) {
         { analyticsLocations: l } = (0, C.ZP)(A.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, L.a)(A.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
     let c = (0, P.pT)(Array.from(t), K.default, Y.Z);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: eo.customizationContainer,
         children: [
             (0, i.jsx)(x.B, {
@@ -860,29 +884,29 @@ function eI(e) {
                 onIconRemove: a,
                 analyticsLocations: l,
                 petite: !0,
-                allowRemovingIcon: !1
+                allowRemovingIcon: !1,
             }),
             (0, i.jsx)(p.Text, {
                 className: eo.channelNameLabel,
-                variant: 'text-sm/medium',
-                color: 'header-muted',
-                children: ei.intl.string(ei.t.YynaLC)
+                variant: "text-sm/medium",
+                color: "header-muted",
+                children: ei.intl.string(ei.t.YynaLC),
             }),
             (0, i.jsx)(_.Is, {
-                'aria-label': ei.intl.string(ei.t.YynaLC),
+                "aria-label": ei.intl.string(ei.t.YynaLC),
                 className: eo.channelNameInput,
                 inputClassName: eo.channelNameInputInner,
-                name: 'create-gdm-channel-name',
+                name: "create-gdm-channel-name",
                 placeholder: c,
                 value: n,
-                onChange: s
-            })
-        ]
+                onChange: s,
+            }),
+        ],
     });
 }
 function eT(e) {
     var { channel: t } = e,
-        n = ed(e, ['channel']);
+        n = ed(e, ["channel"]);
     let r = (0, f.cj)([F.Z, Z.Z, W.Z], () => {
         let e;
         return (
@@ -890,7 +914,7 @@ function eT(e) {
             eu(el({}, F.Z.getState()), {
                 invite: e,
                 hideDiscriminator: W.Z.hidePersonalInformation,
-                hideInstantInvites: W.Z.hideInstantInvites
+                hideInstantInvites: W.Z.hideInstantInvites,
             })
         );
     });
@@ -898,10 +922,21 @@ function eT(e) {
 }
 function eS(e) {
     var t, n;
-    let { channel: r, iconClassName: a, className: s, icon: l, tooltip: c, tooltipPosition: u = 'bottom', popoutPosition: d = 'bottom', popoutAlign: _ = 'right', subscribeToGlobalHotkey: h = !1, location: m } = e,
+    let {
+            channel: r,
+            iconClassName: a,
+            className: s,
+            icon: l,
+            tooltip: c,
+            tooltipPosition: u = "bottom",
+            popoutPosition: d = "bottom",
+            popoutAlign: _ = "right",
+            subscribeToGlobalHotkey: h = !1,
+            location: m,
+        } = e,
         g = null != l ? l : null == r ? p.kL_ : p.ejJ,
         E = (0, L.a)(m),
-        b = 'channel-invite-modal-'.concat(null == r ? void 0 : r.id),
+        b = "channel-invite-modal-".concat(null == r ? void 0 : r.id),
         y = (0, p.VXO)(b),
         O = o.useCallback(
             () =>
@@ -912,13 +947,13 @@ function eS(e) {
                                 eT,
                                 eu(el({}, e), {
                                     channel: r,
-                                    inBornThisNamedExperiment: E
-                                })
-                            )
+                                    inBornThisNamedExperiment: E,
+                                }),
+                            ),
                         ),
-                    { modalKey: b }
+                    { modalKey: b },
                 ),
-            [r, b, E]
+            [r, b, E],
         ),
         v = o.useRef(null),
         [I, S] = o.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
@@ -934,7 +969,7 @@ function eS(e) {
                 X.S.unsubscribe(er.CkL.TOGGLE_DM_CREATE, A);
             }
         ),
-        [h, A, E]
+        [h, A, E],
     );
     let N = (0, f.e7)([K.default], () => K.default.getUser(null == r ? void 0 : r.getRecipientId())),
         C = (e) =>
@@ -943,8 +978,8 @@ function eS(e) {
                 eu(el({}, e), {
                     onClose: e.closePopout,
                     channel: r,
-                    inBornThisNamedExperiment: E
-                })
+                    inBornThisNamedExperiment: E,
+                }),
             );
     return ((0, T.ZP)(() => {
         (0, j._)();
@@ -959,7 +994,7 @@ function eS(e) {
                 className: s,
                 iconClassName: a,
                 tooltip: c,
-                tooltipPosition: u
+                tooltipPosition: u,
             })
           : (0, i.jsx)(p.yRy, {
                 targetElementRef: v,
@@ -983,17 +1018,17 @@ function eS(e) {
                             className: s,
                             iconClassName: a,
                             tooltip: c,
-                            tooltipPosition: u
-                        })
-                    )
+                            tooltipPosition: u,
+                        }),
+                    ),
             });
 }
 function eA(e) {
-    let { channel: t, popoutPosition: n = 'bottom', popoutAlign: r = 'right' } = e;
+    let { channel: t, popoutPosition: n = "bottom", popoutAlign: r = "right" } = e;
     (0, T.ZP)(() => {
         (0, j._)();
     });
-    let a = (0, L.a)('PrivateChannelRecipientsInviteTextButton'),
+    let a = (0, L.a)("PrivateChannelRecipientsInviteTextButton"),
         s = o.useRef(null),
         [l, c] = o.useState(!1),
         u = o.useCallback(() => c((e) => !e), []),
@@ -1003,8 +1038,8 @@ function eA(e) {
                 eu(el({}, e), {
                     onClose: e.closePopout,
                     channel: t,
-                    inBornThisNamedExperiment: a
-                })
+                    inBornThisNamedExperiment: a,
+                }),
             ),
         f = o.useCallback(
             () =>
@@ -1014,21 +1049,21 @@ function eA(e) {
                             eT,
                             eu(el({}, e), {
                                 channel: t,
-                                inBornThisNamedExperiment: a
-                            })
-                        )
-                    )
+                                inBornThisNamedExperiment: a,
+                            }),
+                        ),
+                    ),
                 ),
-            [t, a]
+            [t, a],
         );
     return a
         ? (0, i.jsx)(p.zxk, {
               onClick: f,
-              variant: 'primary',
+              variant: "primary",
               buttonRef: s,
-              text: ei.intl.string(ei.t['6Qgren']),
-              'aria-label': ei.intl.string(ei.t['6Qgren']),
-              icon: p.ejJ
+              text: ei.intl.string(ei.t["6Qgren"]),
+              "aria-label": ei.intl.string(ei.t["6Qgren"]),
+              icon: p.ejJ,
           })
         : (0, i.jsx)(p.yRy, {
               targetElementRef: s,
@@ -1047,13 +1082,13 @@ function eA(e) {
                       p.zxk,
                       eu(el({}, e), {
                           onClick: u,
-                          variant: 'primary',
+                          variant: "primary",
                           buttonRef: s,
-                          text: ei.intl.string(ei.t['6Qgren']),
-                          'aria-label': ei.intl.string(ei.t['6Qgren']),
-                          icon: p.ejJ
-                      })
-                  )
+                          text: ei.intl.string(ei.t["6Qgren"]),
+                          "aria-label": ei.intl.string(ei.t["6Qgren"]),
+                          icon: p.ejJ,
+                      }),
+                  ),
           });
 }
 function eN(e) {
@@ -1064,10 +1099,10 @@ function eN(e) {
             .filter((e) => (0, G.bc)(e.type))
             .filter((e) => eC(e.recipients) === t)
             .map((e) => e.id)
-            .value()
+            .value(),
     );
 }
 function eC(e) {
     return JSON.stringify(e.sort());
 }
-es(ev, 'contextType', S.ZP);
+es(ev, "contextType", S.ZP);

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     P: () => l,
-    Z: () => v
+    Z: () => v,
 }),
-    n(388685));
+    n(388685);
 var r,
     i = n(442837),
     o = n(570140);
@@ -13,7 +13,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -66,7 +66,7 @@ function g(e) {
 function E(e) {
     let { guild: t } = e;
     if (null == u[t.id]) return !1;
-    (delete u[t.id], delete f[t.id]);
+    delete u[t.id], delete f[t.id];
 }
 function b(e) {
     var t;
@@ -93,7 +93,11 @@ class O extends (r = i.ZP.Store) {
     }
     getNewMemberActions(e) {
         var t;
-        return null == e || (null == (t = this.getSettings(e)) ? void 0 : t.newMemberActions) == null ? null : null == f[e] ? _(e) : f[e];
+        return null == e || (null == (t = this.getSettings(e)) ? void 0 : t.newMemberActions) == null
+            ? null
+            : null == f[e]
+              ? _(e)
+              : f[e];
     }
     getActionForChannel(e, t) {
         var n;
@@ -128,10 +132,15 @@ class O extends (r = i.ZP.Store) {
     }
     getNewMemberAction(e, t) {
         var n, r, i;
-        return null == e || null == t ? null : null != (i = null == (r = u[e]) || null == (n = r.newMemberActions) ? void 0 : n.find((e) => e.channelId === t)) ? i : null;
+        return null == e || null == t
+            ? null
+            : null !=
+                (i = null == (r = u[e]) || null == (n = r.newMemberActions) ? void 0 : n.find((e) => e.channelId === t))
+              ? i
+              : null;
     }
 }
-a(O, 'displayName', 'GuildOnboardingHomeSettingsStore');
+a(O, "displayName", "GuildOnboardingHomeSettingsStore");
 let v = new O(o.Z, {
     GUILD_HOME_SETTINGS_FETCH_START: h,
     GUILD_HOME_SETTINGS_FETCH_SUCCESS: p,
@@ -140,5 +149,5 @@ let v = new O(o.Z, {
     GUILD_HOME_SETTINGS_TOGGLE_ENABLED: g,
     GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS: b,
     GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: y,
-    GUILD_DELETE: E
+    GUILD_DELETE: E,
 });

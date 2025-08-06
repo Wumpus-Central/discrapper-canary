@@ -5,27 +5,27 @@ let n = {
         formats: {
             full: "EEEE, d 'de' MMMM 'de' y",
             long: "d 'de' MMMM 'de' y",
-            medium: 'd MMM y',
-            short: 'dd/MM/yyyy'
+            medium: "d MMM y",
+            short: "dd/MM/yyyy",
         },
-        defaultWidth: 'full'
+        defaultWidth: "full",
     }),
     time: (0, i.Z)({
         formats: {
-            full: 'HH:mm:ss zzzz',
-            long: 'HH:mm:ss z',
-            medium: 'HH:mm:ss',
-            short: 'HH:mm'
+            full: "HH:mm:ss zzzz",
+            long: "HH:mm:ss z",
+            medium: "HH:mm:ss",
+            short: "HH:mm",
         },
-        defaultWidth: 'full'
+        defaultWidth: "full",
     }),
     dateTime: (0, i.Z)({
         formats: {
             full: "{{date}} 'às' {{time}}",
             long: "{{date}} 'às' {{time}}",
-            medium: '{{date}}, {{time}}',
-            short: '{{date}}, {{time}}'
+            medium: "{{date}}, {{time}}",
+            short: "{{date}}, {{time}}",
         },
-        defaultWidth: 'full'
-    })
+        defaultWidth: "full",
+    }),
 };

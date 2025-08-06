@@ -16,17 +16,17 @@ function C(t) {
     let { onClose: n, transitionState: a } = t,
         C = (0, o.Dt)();
     function b() {
-        (n(), r.Z.open(d.oAB.ACCESSIBILITY, null, { scrollPosition: x.rP.LEGACY_CHAT_INPUT }));
+        n(), r.Z.open(d.oAB.ACCESSIBILITY, null, { scrollPosition: x.rP.LEGACY_CHAT_INPUT });
     }
     return (0, e.jsxs)(i.Y0X, {
         transitionState: a,
-        'aria-labelledby': C,
-        parentComponent: 'LegacyChatInputExplanationModal',
+        "aria-labelledby": C,
+        parentComponent: "LegacyChatInputExplanationModal",
         children: [
-            (0, e.jsx)('img', {
+            (0, e.jsx)("img", {
                 className: u.art,
                 src: h,
-                alt: ''
+                alt: "",
             }),
             (0, e.jsx)(i.hzk, {
                 children: (0, e.jsxs)(s.Z, {
@@ -35,12 +35,12 @@ function C(t) {
                     children: [
                         (0, e.jsx)(i.X6q, {
                             id: C,
-                            variant: 'heading-lg/semibold',
+                            variant: "heading-lg/semibold",
                             className: u.title,
-                            children: p.intl.string(p.t.G9HG5O)
+                            children: p.intl.string(p.t.G9HG5O),
                         }),
                         (0, e.jsx)(i.Text, {
-                            variant: 'text-md/normal',
+                            variant: "text-md/normal",
                             className: u.body,
                             children: p.intl.format(p.t.ZtUieH, {
                                 openSettingsHook: (t, n) =>
@@ -48,41 +48,41 @@ function C(t) {
                                         i.eee,
                                         {
                                             onClick: b,
-                                            children: t
+                                            children: t,
                                         },
-                                        n
-                                    )
-                            })
-                        })
-                    ]
-                })
+                                        n,
+                                    ),
+                            }),
+                        }),
+                    ],
+                }),
             }),
             (0, e.jsx)(i.mzw, {
                 children: (0, e.jsxs)(i.hE2, {
-                    direction: 'horizontal-reverse',
+                    direction: "horizontal-reverse",
                     children: [
                         (0, e.jsx)(i.zxk, {
-                            variant: 'primary',
+                            variant: "primary",
                             text: p.intl.string(p.t.VdzwlJ),
-                            type: 'button',
+                            type: "button",
                             onClick: function () {
-                                (c.default.track(d.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                                c.default.track(d.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                     enabled: !1,
-                                    location: 'LegacyChatInputExplanationModal'
+                                    location: "LegacyChatInputExplanationModal",
                                 }),
                                     l.dN.updateSetting(!1),
-                                    n());
-                            }
+                                    n();
+                            },
                         }),
                         (0, e.jsx)(i.zxk, {
-                            variant: 'secondary',
+                            variant: "secondary",
                             text: p.intl.string(p.t.f3Pet7),
-                            type: 'button',
-                            onClick: n
-                        })
-                    ]
-                })
-            })
-        ]
+                            type: "button",
+                            onClick: n,
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

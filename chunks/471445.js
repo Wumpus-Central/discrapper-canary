@@ -1,7 +1,7 @@
 n.d(t, {
     KS: () => p,
     Th: () => h,
-    bT: () => _
+    bT: () => _,
 });
 var r = n(481060),
     i = n(622822),
@@ -15,7 +15,7 @@ var r = n(481060),
     f = n(388032);
 function _(e, t, n, r) {
     if (null == e) return null;
-    if (e.id === (null == t ? void 0 : t.rulesChannelId)) return f.intl.string(f.t['/7EhaW']);
+    if (e.id === (null == t ? void 0 : t.rulesChannelId)) return f.intl.string(f.t["/7EhaW"]);
     let o = (0, i.aC)(e);
     switch (e.type) {
         case d.d4z.GUILD_TEXT:
@@ -26,21 +26,21 @@ function _(e, t, n, r) {
             return f.intl.string(f.t.t1yj0N);
         case d.d4z.GUILD_FORUM:
             let a = e.isMediaChannel();
-            if (o) return a ? f.intl.string(f.t['pZ/fYW']) : f.intl.string(f.t.ibmpPj);
+            if (o) return a ? f.intl.string(f.t["pZ/fYW"]) : f.intl.string(f.t.ibmpPj);
             if ((0, c.Z)(e)) return a ? f.intl.string(f.t.gfVCfH) : f.intl.string(f.t.UbLM3N);
-            return a ? f.intl.string(f.t.seKITE) : f.intl.string(f.t['0sDXdn']);
+            return a ? f.intl.string(f.t.seKITE) : f.intl.string(f.t["0sDXdn"]);
         case d.d4z.GUILD_MEDIA:
-            if (o) return f.intl.string(f.t['pZ/fYW']);
+            if (o) return f.intl.string(f.t["pZ/fYW"]);
             if ((0, c.Z)(e)) return f.intl.string(f.t.gfVCfH);
             return f.intl.string(f.t.seKITE);
         case d.d4z.GUILD_STAGE_VOICE:
             if (n) return f.intl.string(f.t.ZjZB3t);
-            if ((0, c.Z)(e)) return f.intl.string(f.t['7pRuCQ']);
+            if ((0, c.Z)(e)) return f.intl.string(f.t["7pRuCQ"]);
             return f.intl.string(f.t.eJFSiI);
         case d.d4z.GUILD_VOICE:
             if (n) return f.intl.string(f.t.xY8Wtr);
             if ((0, c.Z)(e)) return f.intl.string(f.t.qaY8Dg);
-            return f.intl.string(f.t['0kBmo6']);
+            return f.intl.string(f.t["0kBmo6"]);
         case d.d4z.GUILD_ANNOUNCEMENT:
             if (o) return f.intl.string(f.t.eRc6o6);
             if ((0, c.Z)(e)) return f.intl.string(f.t.EHLQws);
@@ -50,11 +50,11 @@ function _(e, t, n, r) {
         case d.d4z.DM:
             return f.intl.string(f.t.jN2DfX);
         case d.d4z.GROUP_DM:
-            return f.intl.string(f.t['e5y+go']);
+            return f.intl.string(f.t["e5y+go"]);
         case d.d4z.GUILD_DIRECTORY:
             return f.intl.string(f.t.IzZTIS);
         case d.d4z.PUBLIC_THREAD:
-            return f.intl.string(f.t['7Xm5QE']);
+            return f.intl.string(f.t["7Xm5QE"]);
         case d.d4z.PRIVATE_THREAD:
             return f.intl.string(f.t.F1zyvb);
         default:

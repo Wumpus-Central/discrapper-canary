@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -25,22 +25,22 @@ function I(e) {
         i =
             null == n
                 ? null
-                : (0, r.jsx)('img', {
+                : (0, r.jsx)("img", {
                       className: v.gameIcon,
                       src: n,
-                      'aria-hidden': !0,
-                      alt: ''
+                      "aria-hidden": !0,
+                      alt: "",
                   });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: v.gameTitleContainer,
         children: [
             i,
             (0, r.jsx)(a.Text, {
-                variant: 'text-sm/medium',
+                variant: "text-sm/medium",
                 className: v.gameTitle,
-                children: t.name
-            })
-        ]
+                children: t.name,
+            }),
+        ],
     });
 }
 function T(e) {
@@ -50,7 +50,7 @@ function T(e) {
         null != r &&
             f.default.track(b.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
                 leaderboard_id: r,
-                guild_id: n
+                guild_id: n,
             });
     }, [r, n]);
 }
@@ -62,12 +62,12 @@ function S(e) {
         R = (0, p.Z)({
             guildId: C,
             leaderboardId: N.extra.leaderboard_id,
-            intervalOffset: 0
+            intervalOffset: 0,
         }),
         { rankChanges: P } = (0, h.Z)({
             guildId: C,
             leaderboardId: N.extra.leaderboard_id,
-            intervalStart: null != (E = null == R ? void 0 : R.interval_start) ? E : ''
+            intervalStart: null != (E = null == R ? void 0 : R.interval_start) ? E : "",
         }),
         w = (0, o.e7)([u.default], () => u.default.getId()),
         [D, L] = i.useMemo(() => {
@@ -81,14 +81,14 @@ function S(e) {
         M = _.ZP.getName(C, void 0, x);
     T({
         leaderboard: R,
-        guildId: C
+        guildId: C,
     });
     let k = (0, s.q)(null == R || null == (t = R.settings) ? void 0 : t.application_id);
     if (null == R || null == k) return null;
     if (0 === R.users.length || null == D || null == x)
         return (0, r.jsx)(A, {
             application: k,
-            selected: v
+            selected: v,
         });
     let { sort_by_statistic_id: j } = R.guild_settings,
         U = null != (b = null == L || null == (f = L.statistics) || null == (n = f[j]) ? void 0 : n.value) ? b : 0,
@@ -96,10 +96,10 @@ function S(e) {
     return (
         (y =
             D.userId === w
-                ? O.intl.formatToPlainString(O.t['eU+JxM'], { rank: G })
-                : O.intl.formatToPlainString(O.t['8BLSQ0'], {
+                ? O.intl.formatToPlainString(O.t["eU+JxM"], { rank: G })
+                : O.intl.formatToPlainString(O.t["8BLSQ0"], {
                       rank: G,
-                      username: M
+                      username: M,
                   })),
         (0, r.jsxs)(c.Zb, {
             selected: v,
@@ -113,16 +113,16 @@ function S(e) {
                             location: l.Gt.CARD,
                             children: (0, r.jsx)(m.DC, {
                                 value: U,
-                                statisticId: j
-                            })
-                        })
-                    ]
+                                statisticId: j,
+                            }),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(g.Z, {
                     user: x,
-                    rank: G
-                })
-            ]
+                    rank: G,
+                }),
+            ],
         })
     );
 }
@@ -135,21 +135,21 @@ function A(e) {
                 children: [
                     (0, r.jsx)(I, { application: n }),
                     (0, r.jsx)(a.LZC, { size: 2 }),
-                    (0, r.jsx)(c.ll, { children: O.intl.string(O.t['t+b0DA']) }),
+                    (0, r.jsx)(c.ll, { children: O.intl.string(O.t["t+b0DA"]) }),
                     (0, r.jsx)(l.Gk, {
                         location: l.Gt.CARD,
-                        children: (0, r.jsx)(m.ZR, { text: O.intl.string(O.t.zX8HUl) })
-                    })
-                ]
+                        children: (0, r.jsx)(m.ZR, { text: O.intl.string(O.t.zX8HUl) }),
+                    }),
+                ],
             }),
             (0, r.jsx)(E.Z, {
-                color: '#5B5A56',
-                children: (0, r.jsx)('img', {
-                    src: 'https://cdn.discordapp.com/assets/content/173a83bdbe0a455bf0d251f4cc9c2c027cd3da855384773916f3eb08298a880c.png',
-                    alt: '',
-                    className: v.emptyStateImage
-                })
-            })
-        ]
+                color: "#5B5A56",
+                children: (0, r.jsx)("img", {
+                    src: "https://cdn.discordapp.com/assets/content/173a83bdbe0a455bf0d251f4cc9c2c027cd3da855384773916f3eb08298a880c.png",
+                    alt: "",
+                    className: v.emptyStateImage,
+                }),
+            }),
+        ],
     });
 }

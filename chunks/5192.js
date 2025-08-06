@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => f,
     oY: () => u,
-    y: () => c
+    y: () => c,
 });
 var r = n(442837),
     i = n(592125),
@@ -28,5 +28,5 @@ function d(e, t, n) {
 let f = {
     getNickname: c,
     getName: u,
-    useName: d
+    useName: d,
 };

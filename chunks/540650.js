@@ -7,13 +7,13 @@ function s(e) {
     let { onClose: t, onInteraction: n, location: s, overlayLimitedInteraction: l = !1 } = e;
     return (0, o.Hu)({
         location: s,
-        autoTrackExposure: !0
+        autoTrackExposure: !0,
     })
         ? (0, r.jsx)(a.l, {
               wide: !0,
               showOutputDevices: !0,
               onSettingsButtonClick: t,
-              showSearchBar: !l
+              showSearchBar: !l,
           })
         : (0, r.jsx)(i.default, {
               onClose: t,
@@ -24,6 +24,6 @@ function s(e) {
               renderOutputVolume: !0,
               renderDeafen: !0,
               minimal: !0,
-              onInteraction: n
+              onInteraction: n,
           });
 }

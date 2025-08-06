@@ -44,31 +44,45 @@ var r = n(442837),
 let V = (0, o.Z)(
     (0, s.Z)(
         function (e) {
-            let { user: l, guildId: n, channel: s, showMediaItems: o = !1, showChatItems: u = !0, showChannelCallItems: V = !1, showModalItems: B = !0, showStageChannelItems: F = !1, context: X, onSelect: Y, onHeightUpdate: K, viewingChannelId: W, onInteraction: J } = e,
+            let {
+                    user: l,
+                    guildId: n,
+                    channel: s,
+                    showMediaItems: o = !1,
+                    showChatItems: u = !0,
+                    showChannelCallItems: V = !1,
+                    showModalItems: B = !0,
+                    showStageChannelItems: F = !1,
+                    context: X,
+                    onSelect: Y,
+                    onHeightUpdate: K,
+                    viewingChannelId: W,
+                    onInteraction: J,
+                } = e,
                 $ = s.id,
                 z = {
                     page: Q.ZY5.GUILD_CHANNEL,
                     section: Q.jXE.CHAT_USERNAME,
-                    object: Q.qAy.CONTEXT_MENU_ITEM
+                    object: Q.qAy.CONTEXT_MENU_ITEM,
                 },
                 ee = (0, G.Z)({
                     userId: l.id,
                     guildId: n,
                     channelId: $,
-                    showGuildProfile: !0
+                    showGuildProfile: !0,
                 }),
                 el = (0, A.Z)(l, n, X),
                 en = (0, U.Z)(l.id, X),
                 et = (0, D.Z)(l.id),
                 er = (0, v.Z)({
                     user: l,
-                    context: X
+                    context: X,
                 }),
                 ei = (0, S.Z)({
                     user: l,
                     guildId: n,
                     channelId: $,
-                    context: X
+                    context: X,
                 }),
                 ed = (0, m.Z)({ user: l }),
                 es = (0, L.Z)(l.id),
@@ -76,17 +90,17 @@ let V = (0, o.Z)(
                 ea = (0, f.B)({
                     userId: l.id,
                     channelId: $,
-                    guildId: s.getGuildId()
+                    guildId: s.getGuildId(),
                 }),
                 ec = (0, j.Z)({
                     guildId: n,
                     userId: l.id,
                     analyticsLocation: z,
-                    context: X
+                    context: X,
                 }),
                 eu = (0, k.Z)({
                     user: l,
-                    guildId: n
+                    guildId: n,
                 }),
                 eZ = (0, c.Z)(null, l),
                 eg = (0, C.Z)({ user: l }),
@@ -94,20 +108,20 @@ let V = (0, o.Z)(
                     user: l,
                     guildId: n,
                     channelId: $,
-                    location: 'GuildChannelUserContextMenu'
+                    location: "GuildChannelUserContextMenu",
                 }),
                 ef = (0, _.Z)({
                     user: l,
                     guildId: n,
                     channelId: $,
-                    location: 'GuildChannelUserContextMenu'
+                    location: "GuildChannelUserContextMenu",
                 }),
                 eb = (0, x.Z)(l, n, $),
                 ej = (0, w.Z)(l.id, n),
                 eO = (0, R.Z)(l, n),
                 ep = (0, b.Z)({
                     id: l.id,
-                    label: H.intl.string(H.t['/AXYnJ'])
+                    label: H.intl.string(H.t["/AXYnJ"]),
                 }),
                 eE = (0, I.Z)(l.id, $),
                 eP = (0, g.Z)(l.id),
@@ -121,7 +135,7 @@ let V = (0, o.Z)(
                     channel: null != eS ? eS : s,
                     guildId: n,
                     onHeightUpdate: K,
-                    context: X
+                    context: X,
                 }),
                 eM = (0, h.Z)(l.id),
                 ey = (0, r.e7)([N.Z], () => N.Z.getVoiceChannelId()),
@@ -129,9 +143,9 @@ let V = (0, o.Z)(
                 eI = (0, O.Z)(l.id, s),
                 e_ = l.isNonUserBot();
             return (0, t.jsxs)(i.v2r, {
-                navId: 'user-context',
+                navId: "user-context",
                 onClose: d.Zy,
-                'aria-label': H.intl.string(H.t.liqwPD),
+                "aria-label": H.intl.string(H.t.liqwPD),
                 onSelect: Y,
                 onInteraction: J,
                 children: [
@@ -139,31 +153,42 @@ let V = (0, o.Z)(
                         (0, t.jsxs)(t.Fragment, {
                             children: [
                                 (0, t.jsxs)(i.kSQ, {
-                                    children: [eC, o && !F && eI, F && em]
+                                    children: [eC, o && !F && eI, F && em],
                                 }),
                                 (0, t.jsxs)(i.kSQ, {
-                                    children: [B && ee, u && el, en, er, ev, B && ei, B && ed, et]
+                                    children: [B && ee, u && el, en, er, ev, B && ei, B && ed, et],
                                 }),
                                 o && (0, t.jsx)(i.kSQ, { children: es }),
                                 (0, t.jsx)(i.kSQ, { children: B && eZ }),
                                 (0, t.jsxs)(i.kSQ, {
-                                    children: [o && eo, o && ea, o && eE, B && ec, ex, B && eu, eg, B && ef, B && eh, V && eM]
+                                    children: [
+                                        o && eo,
+                                        o && ea,
+                                        o && eE,
+                                        B && ec,
+                                        ex,
+                                        B && eu,
+                                        eg,
+                                        B && ef,
+                                        B && eh,
+                                        V && eM,
+                                    ],
                                 }),
                                 (0, t.jsx)(i.kSQ, { children: eb }),
                                 (0, t.jsxs)(i.kSQ, {
-                                    children: [ej, eO]
+                                    children: [ej, eO],
                                 }),
                                 V &&
                                     (0, t.jsxs)(i.kSQ, {
-                                        children: [eN, eP]
-                                    })
-                            ]
+                                        children: [eN, eP],
+                                    }),
+                            ],
                         }),
-                    (0, t.jsx)(i.kSQ, { children: ep })
-                ]
+                    (0, t.jsx)(i.kSQ, { children: ep }),
+                ],
             });
         },
-        { object: Q.qAy.CONTEXT_MENU }
+        { object: Q.qAy.CONTEXT_MENU },
     ),
-    [u.Z.CONTEXT_MENU, u.Z.GUILD_CHANNEL_USER_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.GUILD_CHANNEL_USER_MENU],
 );

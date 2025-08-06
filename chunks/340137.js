@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -25,20 +25,20 @@ function E(e) {
         y = (0, r.jsx)(c.Dkj, {
             className: O.icon,
             color: d || E ? c.TVs.colors.ICON_PRIMARY : c.TVs.colors.ICON_TERTIARY,
-            size: 'custom',
+            size: "custom",
             height: 20,
-            width: 20
+            width: 20,
         }),
         { badge: v, badgeType: I } = (0, g.h6)({ isSelected: b });
     return (0, r.jsxs)(c.Kqy, {
         gap: 0,
-        direction: 'horizontal',
+        direction: "horizontal",
         children: [
             (0, r.jsx)(c.LZC, {
                 size: (0, p.isMac)() ? 4 : 72,
-                horizontal: !0
+                horizontal: !0,
             }),
-            ' ',
+            " ",
             (0, r.jsx)(c.ua7, {
                 shouldShow: !E,
                 text: _.intl.string(_.t.HcoRu7),
@@ -50,69 +50,71 @@ function E(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })(
                             {
                                 innerRef: o,
-                                className: O.clickableContainer
+                                className: O.clickableContainer,
                             },
                             s,
                             e,
-                            l
+                            l,
                         )),
                         (i = i =
                             {
                                 onMouseEnter: () => {
                                     var t;
-                                    (h(!0), null == (t = e.onMouseEnter) || t.call(e));
+                                    h(!0), null == (t = e.onMouseEnter) || t.call(e);
                                 },
                                 onMouseLeave: () => {
                                     var t;
-                                    (h(!1), null == (t = e.onMouseLeave) || t.call(e));
+                                    h(!1), null == (t = e.onMouseLeave) || t.call(e);
                                 },
                                 onClick: () => {
                                     var n, r;
-                                    (null == t || t(), null == l || null == (n = l.onClick) || n.call(l), null == (r = e.onClick) || r.call(e));
+                                    null == t || t(),
+                                        null == l || null == (n = l.onClick) || n.call(l),
+                                        null == (r = e.onClick) || r.call(e);
                                 },
                                 children: [
-                                    (0, r.jsx)('div', {
+                                    (0, r.jsx)("div", {
                                         className: a()(O.iconWrapper, null),
                                         children:
-                                            'unread' === I
+                                            "unread" === I
                                                 ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
                                                           (0, r.jsx)(u.ZP, {
                                                               width: 20,
                                                               height: 20,
                                                               mask: u.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                                              children: y
+                                                              children: y,
                                                           }),
-                                                          (0, r.jsx)('div', { className: O.unreadDot })
-                                                      ]
+                                                          (0, r.jsx)("div", { className: O.unreadDot }),
+                                                      ],
                                                   })
-                                                : y
+                                                : y,
                                     }),
-                                    v
-                                ]
+                                    v,
+                                ],
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -126,43 +128,43 @@ function E(e) {
                               })(Object(i)).forEach(function (e) {
                                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                               }),
-                        n)
+                        n),
                     );
-                }
-            })
-        ]
+                },
+            }),
+        ],
     });
 }
 function y() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = i.useRef(null),
-        { notificationCenterVariant: n } = h.Lk.useExperiment({ location: 'NotificationsInboxButton' }),
+        { notificationCenterVariant: n } = h.Lk.useExperiment({ location: "NotificationsInboxButton" }),
         l = (0, s.e7)([d.Z], () => d.Z.getChannelId()),
         a = i.useMemo(() => b.Z5c.CHANNEL(b.STv, null != l ? l : void 0), [l]),
         c = (0, g.mv)();
     return n === h.jP.SIDEBAR
         ? (0, r.jsx)(E, {
               onClick: () => {
-                  (c(), (0, o.uL)(a));
+                  c(), (0, o.uL)(a);
               },
-              focusSectionProps: e
+              focusSectionProps: e,
           })
         : n === h.jP.POPOUT
           ? (0, r.jsx)(m.Z, {
                 targetElementRef: t,
-                popoutPosition: 'bottom',
-                popoutAlign: 'left',
+                popoutPosition: "bottom",
+                popoutAlign: "left",
                 spacing: 2,
                 children: (n, i, l) =>
                     (0, r.jsx)(E, {
                         ref: t,
                         selectedOverride: i,
                         onClick: () => {
-                            (c(), n());
+                            c(), n();
                         },
                         popoutProps: l,
-                        focusSectionProps: e
-                    })
+                        focusSectionProps: e,
+                    }),
             })
           : null;
 }

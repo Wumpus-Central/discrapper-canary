@@ -1,4 +1,4 @@
-(r.d(t, { default: () => f }), r(388685));
+r.d(t, { default: () => f }), r(388685);
 var a = r(255367),
     i = r(73800),
     s = r(481060),
@@ -23,26 +23,26 @@ let f = (e) => {
                     try {
                         o.default.track(x.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: L });
                         let t = await (0, C.jy)(e.map((e) => e.id));
-                        (h(2), j(new Set(e)), g(t));
+                        h(2), j(new Set(e)), g(t);
                     } catch (e) {}
                 },
-                onClose: f
+                onClose: f,
             });
             break;
         case 2:
             t = (0, a.jsx)(c.Z, {
                 selectedUsers: m,
                 trialCreationResult: _,
-                onClose: f
+                onClose: f,
             });
             break;
         default:
             f();
     }
     return (0, a.jsx)(s.Y0X, {
-        'data-migration-pending': !0,
+        "data-migration-pending": !0,
         transitionState: r,
-        parentComponent: 'ReferralProgramShareModal',
-        children: t
+        parentComponent: "ReferralProgramShareModal",
+        children: t,
     });
 };

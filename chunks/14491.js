@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(997841));
+n.d(t, { Z: () => _ }), n(997841);
 var r = n(255367),
     i = n(481060),
     o = n(783097),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,12 +47,12 @@ function _(e) {
         let n = (0, l.yE)(null != (e = t.flags) ? e : 0, u.udG.EMBEDDED)
             ? (0, c.H)({
                   applicationId: t.id,
-                  referrerId: null == h ? void 0 : h.id
+                  referrerId: null == h ? void 0 : h.id,
               })
             : (0, c.J)(f({ id: t.id }, m));
         null != n && (0, s.JG)(n, d);
     }
-    let E = 'copy-app-link-'.concat(t.id);
+    let E = "copy-app-link-".concat(t.id);
     return (0, r.jsx)(
         i.sNh,
         {
@@ -61,8 +61,8 @@ function _(e) {
             action: g,
             icon: _ ? void 0 : i.xPt,
             iconLeft: _ ? i.xPt : void 0,
-            focusedClassName: p
+            focusedClassName: p,
         },
-        E
+        E,
     );
 }

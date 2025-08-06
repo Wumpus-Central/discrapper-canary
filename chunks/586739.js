@@ -7,7 +7,7 @@ let l = {
         return r.tn.get({
             url: i.ANM.TEAMS,
             query: { include_payout_account_status: e },
-            rejectWithError: !1
+            rejectWithError: !1,
         });
-    }
+    },
 };

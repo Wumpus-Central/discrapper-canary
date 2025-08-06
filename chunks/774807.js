@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r,
     i = n(442837),
     l = n(570140),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -59,18 +59,18 @@ let p = 90 * s.Z.Millis.DAY,
         localItemAcks: {},
         hasNewMentions: !1,
         isDataStale: !1,
-        isRefreshing: !1
+        isRefreshing: !1,
     };
 class g extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(o.ZP), null != e)) {
             var t;
-            (((f = e).localItemAcks = (function (e) {
+            ((f = e).localItemAcks = (function (e) {
                 let t = {};
                 for (let [n, r] of Object.entries(e)) Date.now() - r < p && (t[n] = r);
                 return t;
             })(null != (t = f.localItemAcks) ? t : {})),
-                (f.isDataStale = !0));
+                (f.isDataStale = !0);
         }
     }
     getState() {
@@ -97,9 +97,9 @@ class g extends (r = i.ZP.PersistedStore) {
     }
 }
 function m() {
-    ((f.hasNewMentions = !1), (f.isDataStale = !1), (f.isRefreshing = !1));
+    (f.hasNewMentions = !1), (f.isDataStale = !1), (f.isRefreshing = !1);
 }
-(u(g, 'displayName', 'NotificationCenterStore'), u(g, 'persistKey', 'NotificationCenterStore'));
+u(g, "displayName", "NotificationCenterStore"), u(g, "persistKey", "NotificationCenterStore");
 let b = new g(l.Z, {
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
@@ -117,5 +117,5 @@ let b = new g(l.Z, {
         f.isRefreshing = !0;
     },
     LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: m,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: m
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: m,
 });

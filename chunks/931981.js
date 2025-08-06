@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     V: () => O,
-    e: () => b
+    e: () => b,
 }),
-    n(388685));
+    n(388685);
 var r,
     i = n(255367);
 n(73800);
@@ -23,7 +23,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,7 +41,7 @@ class g extends (r = o.ZP.PersistedStore) {
         return [...m];
     }
 }
-(h(g, 'displayName', 'PTOStore'), h(g, 'persistKey', 'PTOStore'));
+h(g, "displayName", "PTOStore"), h(g, "persistKey", "PTOStore");
 let E = new g(s.Z, {}),
     b = (e) =>
         (0, o.e7)([u.ZP, f.default, E], () => {
@@ -49,7 +49,7 @@ let E = new g(s.Z, {}),
             if (null == t || !t.isStaff() || !e.isDM()) return !1;
             let n = f.default.getUser(e.getRecipientId());
             if (!(null == n ? void 0 : n.isStaff())) return !1;
-            let r = u.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
+            let r = u.ZP.getNicknames(n.id).some((e) => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
             return r ? !E.hasId(n.id) && r : (m.delete(n.id) && E.emitChange(), !1);
         }),
     y = () => {
@@ -59,13 +59,13 @@ let E = new g(s.Z, {}),
         null != t && t.isPrivate() && (m.has(t.getRecipientId()) || (m.add(t.getRecipientId()), E.emitChange()));
     },
     O = () =>
-        (0, i.jsxs)('div', {
+        (0, i.jsxs)("div", {
             className: p.bar,
             children: [
                 (0, i.jsx)(a.Text, {
-                    variant: 'text-sm/medium',
-                    children: _.intl.string(_.t['2UvR1N'])
+                    variant: "text-sm/medium",
+                    children: _.intl.string(_.t["2UvR1N"]),
                 }),
-                (0, i.jsx)(l.B, { onClick: y })
-            ]
+                (0, i.jsx)(l.B, { onClick: y }),
+            ],
         });

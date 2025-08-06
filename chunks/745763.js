@@ -12,20 +12,20 @@ function o(t) {
         o = (0, a.Z)(n);
     return c.isPlatformEmbedded
         ? (0, i.jsxs)(s.v2r, {
-              navId: 'text-context',
+              navId: "text-context",
               onClose: l.Zy,
-              'aria-label': d.intl.string(d.t.s285pq),
+              "aria-label": d.intl.string(d.t.s285pq),
               onSelect: e,
               children: [
                   (0, i.jsx)(s.kSQ, { children: o }),
                   (0, i.jsx)(s.kSQ, {
                       children: (0, i.jsx)(s.sNh, {
-                          id: 'copy',
+                          id: "copy",
                           label: d.intl.string(d.t.OpuAlJ),
-                          action: () => r.ZP.copy(n)
-                      })
-                  })
-              ]
+                          action: () => r.ZP.copy(n),
+                      }),
+                  }),
+              ],
           })
         : null;
 }

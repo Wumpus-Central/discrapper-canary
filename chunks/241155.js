@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,7 +32,7 @@ let f = !1,
             scheduledEventId: e.entity_id,
             type: u.C2.GUILD_SCHEDULED_EVENT,
             authorId: e.author_id,
-            createdAt: e.created_at
+            createdAt: e.created_at,
         }
     );
 function g() {
@@ -46,8 +46,8 @@ function E(e) {
             [
                 function (e) {
                     return (0, l.CQ)(e.guild_scheduled_event);
-                }
-            ]
+                },
+            ],
         ),
         i = o().map(r, m);
     _[t] = i;
@@ -71,9 +71,9 @@ class y extends (r = a.ZP.Store) {
         return null != (t = p[e]) ? t : void 0;
     }
 }
-d(y, 'displayName', 'EventDirectoryStore');
+d(y, "displayName", "EventDirectoryStore");
 let O = new y(s.Z, {
     EVENT_DIRECTORY_FETCH_START: g,
     EVENT_DIRECTORY_FETCH_SUCCESS: E,
-    EVENT_DIRECTORY_FETCH_FAILURE: b
+    EVENT_DIRECTORY_FETCH_FAILURE: b,
 });

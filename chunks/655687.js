@@ -9,35 +9,35 @@ function a(e) {
     return null == t || null == s
         ? {
               placeholder: o.intl.string(o.t.MKDeyM),
-              accessibilityLabel: o.intl.string(o.t.MKDeyM)
+              accessibilityLabel: o.intl.string(o.t.MKDeyM),
           }
         : a
           ? {
                 placeholder: o.intl.string(o.t.YzpScX),
-                accessibilityLabel: o.intl.string(o.t.YzpScX)
+                accessibilityLabel: o.intl.string(o.t.YzpScX),
             }
           : n
             ? {
                   placeholder: o.intl.string(o.t.RRvRp6),
-                  accessibilityLabel: o.intl.string(o.t.RRvRp6)
+                  accessibilityLabel: o.intl.string(o.t.RRvRp6),
               }
             : t.isForumPost()
               ? {
                     placeholder: o.intl.formatToPlainString(o.t.Y6qWLS, { channel: s }),
-                    accessibilityLabel: o.intl.formatToPlainString(o.t.KffKoa, { channel: l })
+                    accessibilityLabel: o.intl.formatToPlainString(o.t.KffKoa, { channel: l }),
                 }
               : i.TPd.THREADS.has(t.type)
                 ? {
-                      placeholder: o.intl.formatToPlainString(o.t['8lzR/f'], { channel: s }),
-                      accessibilityLabel: o.intl.formatToPlainString(o.t.UZIMWV, { channel: l })
+                      placeholder: o.intl.formatToPlainString(o.t["8lzR/f"], { channel: s }),
+                      accessibilityLabel: o.intl.formatToPlainString(o.t.UZIMWV, { channel: l }),
                   }
                 : t.type === i.d4z.DM
                   ? {
-                        placeholder: o.intl.formatToPlainString(o.t['4c+CAw'], { channel: s }),
-                        accessibilityLabel: o.intl.formatToPlainString(o.t.fqOxbW, { channel: l })
+                        placeholder: o.intl.formatToPlainString(o.t["4c+CAw"], { channel: s }),
+                        accessibilityLabel: o.intl.formatToPlainString(o.t.fqOxbW, { channel: l }),
                     }
                   : {
-                        placeholder: o.intl.formatToPlainString(o.t['8lzR/f'], { channel: s }),
-                        accessibilityLabel: o.intl.formatToPlainString(o.t.ih7ZSE, { channel: l })
+                        placeholder: o.intl.formatToPlainString(o.t["8lzR/f"], { channel: s }),
+                        accessibilityLabel: o.intl.formatToPlainString(o.t.ih7ZSE, { channel: l }),
                     };
 }

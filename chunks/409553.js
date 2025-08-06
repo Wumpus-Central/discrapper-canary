@@ -15,22 +15,22 @@ function u(e) {
             () => [
                 {
                     label: c.intl.string(c.t.ihQXsb),
-                    icon: i.gj8
+                    icon: i.gj8,
                 },
                 {
                     label: c.intl.string(c.t.Xt1n4O),
-                    icon: i.m3e
+                    icon: i.m3e,
                 },
                 {
                     label: c.intl.string(c.t.xqVY3t),
-                    icon: i.BFJ
+                    icon: i.BFJ,
                 },
                 {
                     label: c.intl.string(c.t.iQsKVV),
-                    icon: i.iWm
-                }
+                    icon: i.iWm,
+                },
             ],
-            []
+            [],
         );
     return (0, o.jsx)(a.m, {
         platformType: l.ABu.XBOX,
@@ -39,12 +39,12 @@ function u(e) {
         body: p,
         onClose: n,
         onContinue: t,
-        img: (0, o.jsx)('img', {
+        img: (0, o.jsx)("img", {
             src: d.Z,
             width: 230,
             height: 160,
-            alt: ''
+            alt: "",
         }),
-        valueProps: f
+        valueProps: f,
     });
 }

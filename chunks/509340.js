@@ -14,6 +14,6 @@ function l(e) {
         authToken: t,
         onContinue: n,
         onError: l,
-        onClose: c
+        onClose: c,
     });
 }

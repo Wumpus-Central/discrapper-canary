@@ -10,33 +10,35 @@ var r = n(46015),
     f = u.get,
     _ = String,
     p = Object.defineProperty,
-    h = r(''.slice),
-    m = r(''.replace),
+    h = r("".slice),
+    m = r("".replace),
     g = r([].join),
     E =
         s &&
         !i(function () {
-            return 8 !== p(function () {}, 'length', { value: 8 }).length;
+            return 8 !== p(function () {}, "length", { value: 8 }).length;
         }),
-    b = String(String).split('String'),
+    b = String(String).split("String"),
     y = (e.exports = function (e, t, n) {
-        ('Symbol(' === h(_(t), 0, 7) && (t = '[' + m(_(t), /^Symbol\(([^)]*)\).*$/, '$1') + ']'),
-            n && n.getter && (t = 'get ' + t),
-            n && n.setter && (t = 'set ' + t),
-            (!a(e, 'name') || (l && e.name !== t)) &&
+        "Symbol(" === h(_(t), 0, 7) && (t = "[" + m(_(t), /^Symbol\(([^)]*)\).*$/, "$1") + "]"),
+            n && n.getter && (t = "get " + t),
+            n && n.setter && (t = "set " + t),
+            (!a(e, "name") || (l && e.name !== t)) &&
                 (s
-                    ? p(e, 'name', {
+                    ? p(e, "name", {
                           value: t,
-                          configurable: !0
+                          configurable: !0,
                       })
                     : (e.name = t)),
-            E && n && a(n, 'arity') && e.length !== n.arity && p(e, 'length', { value: n.arity }));
+            E && n && a(n, "arity") && e.length !== n.arity && p(e, "length", { value: n.arity });
         try {
-            n && a(n, 'constructor') && n.constructor ? s && p(e, 'prototype', { writable: !1 }) : e.prototype && (e.prototype = void 0);
+            n && a(n, "constructor") && n.constructor
+                ? s && p(e, "prototype", { writable: !1 })
+                : e.prototype && (e.prototype = void 0);
         } catch (e) {}
         var r = d(e);
-        return (a(r, 'source') || (r.source = g(b, 'string' == typeof t ? t : '')), e);
+        return a(r, "source") || (r.source = g(b, "string" == typeof t ? t : "")), e;
     });
 Function.prototype.toString = y(function () {
     return (o(this) && f(this).source) || c(this);
-}, 'toString');
+}, "toString");

@@ -9,7 +9,7 @@ n.d(t, {
     Rg: () => h,
     q5: () => y,
     t0: () => I,
-    z8: () => b
+    z8: () => b,
 });
 var r = n(97519),
     i = n(731965),
@@ -22,7 +22,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,11 +69,11 @@ function u(e, t) {
 }
 let d = Object.freeze({
         messageSendConfetti: {},
-        messageReactionConfetti: void 0
+        messageReactionConfetti: void 0,
     }),
     f = (0, r.U)(() => d),
     _ = (e, t) => {
-        (o.default.track(a.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: t }),
+        o.default.track(a.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: t }),
             (0, i.j)(() => {
                 f.setState((t) => {
                     let { messageSendConfetti: n } = t;
@@ -82,19 +82,19 @@ let d = Object.freeze({
                             [e]: {
                                 state: 0,
                                 emoji: void 0,
-                                hasAutoPopped: !1
-                            }
-                        })
+                                hasAutoPopped: !1,
+                            },
+                        }),
                     };
                 });
-            }));
+            });
     },
     p = (e) => {
         (0, i.j)(() => {
             f.setState((t) => {
                 let { messageSendConfetti: n } = t,
                     r = l({}, n);
-                return (delete r[e], { messageSendConfetti: r });
+                return delete r[e], { messageSendConfetti: r };
             });
         });
     },
@@ -103,7 +103,9 @@ let d = Object.freeze({
     },
     m = (e) => {
         let t = f.getState();
-        null != t.messageSendConfetti[e] && 0 === t.messageSendConfetti[e].state && (t.messageSendConfetti[e].hasAutoPopped = !0);
+        null != t.messageSendConfetti[e] &&
+            0 === t.messageSendConfetti[e].state &&
+            (t.messageSendConfetti[e].hasAutoPopped = !0);
     };
 function g(e) {
     return f((t) => null != t.messageSendConfetti[e]);
@@ -116,9 +118,9 @@ function E(e, t) {
                 messageSendConfetti: u(l({}, r), {
                     [t]: {
                         state: 1,
-                        emoji: e
-                    }
-                })
+                        emoji: e,
+                    },
+                }),
             };
         });
     });

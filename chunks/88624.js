@@ -17,46 +17,46 @@ function f() {
     let {
         houseMembership: e,
         isClaimed: t,
-        isVerified: n
+        isVerified: n,
     } = (0, a.cj)([m.default, u.Z], () => {
         let e = m.default.getCurrentUser();
         return (
-            s()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
+            s()(null != e, "UserSettingsHypeSquad: currentUser cannot be undefined"),
             {
                 houseMembership: u.Z.getHouseMembership(),
                 isClaimed: e.isClaimed(),
-                isVerified: e.verified
+                isVerified: e.verified,
             }
         );
     });
     return (0, i.jsxs)(l.y5t, {
-        component: (0, i.jsxs)('div', {
+        component: (0, i.jsxs)("div", {
             className: h.intro,
             children: [
                 (0, i.jsx)(l.X6q, {
-                    variant: 'heading-xxl/semibold',
+                    variant: "heading-xxl/semibold",
                     className: h.introHeader,
-                    children: null == e ? g.intl.string(g.t.iZowCQ) : g.intl.string(g.t.e7fL7O)
+                    children: null == e ? g.intl.string(g.t.iZowCQ) : g.intl.string(g.t.e7fL7O),
                 }),
                 (0, i.jsx)(l.Text, {
-                    variant: 'text-lg/normal',
-                    children: g.intl.string(g.t['6FaVFB'])
-                })
-            ]
+                    variant: "text-lg/normal",
+                    children: g.intl.string(g.t["6FaVFB"]),
+                }),
+            ],
         }),
         children: [
             (0, i.jsx)(p.Z, {
                 className: h.verificationNotice,
                 unclaimedNotice: g.intl.string(g.t.vZU8Ki),
-                unverifiedNotice: g.intl.string(g.t.T7TYEB)
+                unverifiedNotice: g.intl.string(g.t.T7TYEB),
             }),
             (0, i.jsx)(c.Z, {
                 houseMembership: e,
                 isClaimed: t,
-                isVerified: n
+                isVerified: n,
             }),
             (0, i.jsx)(o.Z, {}),
-            (0, i.jsx)(d.Z, { isHypeSquadOnlineMember: null != e })
-        ]
+            (0, i.jsx)(d.Z, { isHypeSquadOnlineMember: null != e }),
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(505266),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,31 +63,31 @@ function p(e, t) {
         (t = null != t ? t : 1),
         u(l({}, a.We), {
             position: {
-                type: 'static-random',
+                type: "static-random",
                 minValue: {
                     x: e.x,
-                    y: e.y
+                    y: e.y,
                 },
                 maxValue: {
                     x: e.x + e.width,
-                    y: e.y + e.height / 2
-                }
+                    y: e.y + e.height / 2,
+                },
             },
             velocity: {
-                type: 'static-random',
+                type: "static-random",
                 minValue: {
                     x: -100 * t,
-                    y: -50 * t
+                    y: -50 * t,
                 },
                 maxValue: {
                     x: 100 * t,
-                    y: -300 * t
-                }
+                    y: -300 * t,
+                },
             },
             dragCoefficient: {
-                type: 'static',
-                value: 0.166
-            }
+                type: "static",
+                value: 0.166,
+            },
         })
     );
 }
@@ -105,8 +105,8 @@ let h = function (e) {
                     !g &&
                     (e = e.map((n, r) =>
                         setTimeout(() => {
-                            (r === e.length - 1 && E(!0), m.createMultipleConfetti(p(t.getBoundingClientRect(), s), d));
-                        }, r * _)
+                            r === e.length - 1 && E(!0), m.createMultipleConfetti(p(t.getBoundingClientRect(), s), d);
+                        }, r * _),
                     )),
                 () => {
                     for (let t of e) clearTimeout(t);
@@ -118,7 +118,7 @@ let h = function (e) {
             sprites: null != l ? l : a.CA,
             colors: null != c ? c : a.Br,
             spriteWidth: a.Ko,
-            spriteHeight: a.Ko
+            spriteHeight: a.Ko,
         })
     );
 };

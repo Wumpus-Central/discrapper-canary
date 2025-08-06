@@ -9,6 +9,6 @@ function l(e) {
             let { activity: t } = e;
             return (0, i.Z)(t);
         }),
-        game_platform: e.currentActivities.length > 0 ? (0, r.Z)(e.currentActivities[0].activity) : null
+        game_platform: e.currentActivities.length > 0 ? (0, r.Z)(e.currentActivities[0].activity) : null,
     };
 }

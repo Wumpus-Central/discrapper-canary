@@ -16,30 +16,33 @@ function d() {
             return null != (e = s.Z.getFeedState(c.YN.GLOBAL_FEED)) ? e : { loading: !1 };
         }),
         d = (0, r.e7)([s.Z], () => s.Z.getLastFeedFetchDate(c.YN.GLOBAL_FEED));
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         children: [
             t
                 ? (0, n.jsx)(l.Text, {
-                      variant: 'text-md/normal',
-                      children: '(fetching)'
+                      variant: "text-md/normal",
+                      children: "(fetching)",
                   })
                 : (0, n.jsxs)(l.Text, {
-                      variant: 'text-md/normal',
-                      children: ['Next fetch: ', null != a ? (0, n.jsx)(i.Z, { deadline: a }) : e ? '(awaiting push)' : '(unscheduled)']
+                      variant: "text-md/normal",
+                      children: [
+                          "Next fetch: ",
+                          null != a ? (0, n.jsx)(i.Z, { deadline: a }) : e ? "(awaiting push)" : "(unscheduled)",
+                      ],
                   }),
             (0, n.jsxs)(l.Text, {
-                variant: 'text-md/normal',
+                variant: "text-md/normal",
                 children: [
-                    'Last fetch:',
-                    ' ',
+                    "Last fetch:",
+                    " ",
                     null != d
                         ? (0, n.jsx)(o.x3, {
                               inline: !0,
-                              entry: { start: d.getTime() }
+                              entry: { start: d.getTime() },
                           })
-                        : '(never)'
-                ]
-            })
-        ]
+                        : "(never)",
+                ],
+            }),
+        ],
     });
 }

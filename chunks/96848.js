@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685), n(704826), n(35282));
+n.d(t, { Z: () => _ }), n(388685), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(481060),
@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(853464);
 let d = {
         section: s.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
-        openPopoutType: 'gift_effect_emoji_picker'
+        openPopoutType: "gift_effect_emoji_picker",
     },
     f = l.Hz.GIFT;
 function _(e) {
@@ -17,24 +17,24 @@ function _(e) {
         [s, l] = i.useState(!1),
         _ = i.useRef(null),
         p = (e) =>
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: u.customGiftContent,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: u.customGiftHeader,
                         children: [
                             (0, r.jsx)(o.Text, {
-                                variant: 'text-md/bold',
-                                children: c.intl.string(c.t.Hl2IgY)
+                                variant: "text-md/bold",
+                                children: c.intl.string(c.t.Hl2IgY),
                             }),
                             (0, r.jsx)(o.Text, {
-                                variant: 'text-sm/normal',
-                                children: c.intl.string(c.t.stGFAw)
-                            })
-                        ]
+                                variant: "text-sm/normal",
+                                children: c.intl.string(c.t.stGFAw),
+                            }),
+                        ],
                     }),
-                    e
-                ]
+                    e,
+                ],
             }),
         h = (e) => {
             let { emoji: n } = e;
@@ -43,8 +43,8 @@ function _(e) {
     return (0, r.jsx)(o.yRy, {
         targetElementRef: _,
         shouldShow: s,
-        position: 'bottom',
-        align: 'left',
+        position: "bottom",
+        align: "left",
         onRequestClose: () => l(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -53,15 +53,15 @@ function _(e) {
                     analyticsOverride: d,
                     closePopout: t,
                     onSelectEmoji: h,
-                    wrapper: 'div',
+                    wrapper: "div",
                     pickerIntention: f,
                     renderHeader: p,
                     headerClassName: u.emojiHeader,
                     className: u.emojiList,
                     listHeaderClassName: u.emojiList,
                     categoryListClassName: u.categoryList,
-                    searchProps: { accessory: (0, r.jsx)(r.Fragment, {}) }
-                })
+                    searchProps: { accessory: (0, r.jsx)(r.Fragment, {}) },
+                }),
             });
         },
         children: () =>
@@ -71,40 +71,40 @@ function _(e) {
                 innerRef: _,
                 children:
                     (null == n ? void 0 : n.name) == null
-                        ? (0, r.jsxs)('div', {
+                        ? (0, r.jsxs)("div", {
                               className: u.contentContainer,
                               children: [
                                   (0, r.jsx)(o.EO4, {
-                                      size: 'custom',
-                                      color: 'currentColor',
+                                      size: "custom",
+                                      color: "currentColor",
                                       className: u.emojiIcon,
                                       width: 14,
-                                      height: 14
+                                      height: 14,
                                   }),
                                   (0, r.jsx)(o.Text, {
                                       className: u.text,
-                                      variant: 'text-sm/semibold',
+                                      variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: c.intl.string(c.t.Hl2IgY)
-                                  })
-                              ]
+                                      children: c.intl.string(c.t.Hl2IgY),
+                                  }),
+                              ],
                           })
-                        : (0, r.jsxs)('div', {
+                        : (0, r.jsxs)("div", {
                               className: u.contentContainer,
                               children: [
                                   (0, r.jsx)(o.Text, {
                                       className: u.textSelected,
-                                      variant: 'text-sm/semibold',
-                                      children: null == n.guildId ? n.optionallyDiverseSequence : null
+                                      variant: "text-sm/semibold",
+                                      children: null == n.guildId ? n.optionallyDiverseSequence : null,
                                   }),
                                   (0, r.jsx)(o.Text, {
                                       className: u.text,
-                                      variant: 'text-sm/semibold',
+                                      variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: n.name.replace(/_/g, ' ')
-                                  })
-                              ]
-                          })
-            })
+                                      children: n.name.replace(/_/g, " "),
+                                  }),
+                              ],
+                          }),
+            }),
     });
 }

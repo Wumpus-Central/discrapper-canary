@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => P,
-    u: () => N
+    u: () => N,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -27,7 +27,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,11 +77,11 @@ let T = 20,
     A = 77,
     N = {
         tension: 800,
-        friction: 24
+        friction: 24,
     },
     C = () => {
         let e = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: b.premiumTooltipContainer,
             children: [
                 (0, r.jsx)(u.Fmz, {
@@ -89,34 +89,43 @@ let T = 20,
                     loop: !1,
                     shouldAnimate: !e,
                     pauseAtFrame: e ? 149 : void 0,
-                    importData: () => n.e('21812').then(n.t.bind(n, 741855, 19))
+                    importData: () => n.e("21812").then(n.t.bind(n, 741855, 19)),
                 }),
                 (0, r.jsx)(u.Text, {
-                    variant: 'text-sm/medium',
+                    variant: "text-sm/medium",
                     className: b.premiumTooltipText,
-                    children: E.intl.format(E.t['/7R4q6'], {})
-                })
-            ]
+                    children: E.intl.format(E.t["/7R4q6"], {}),
+                }),
+            ],
         });
     };
 function R(e) {
     return {
-        '--custom-emoji-sprite-size': ''.concat(S, 'px'),
-        '--custom-emoji-sprite-row': Math.floor(e / T),
-        '--custom-emoji-sprite-col': e % T
+        "--custom-emoji-sprite-size": "".concat(S, "px"),
+        "--custom-emoji-sprite-row": Math.floor(e / T),
+        "--custom-emoji-sprite-col": e % T,
     };
 }
 let P = function (e) {
-    let { tabIndex: t, className: n, renderButtonContents: o, active: y, onClick: v, 'aria-controls': T, focusProps: S, ref: P } = e,
+    let {
+            tabIndex: t,
+            className: n,
+            renderButtonContents: o,
+            active: y,
+            onClick: v,
+            "aria-controls": T,
+            focusProps: S,
+            ref: P,
+        } = e,
         [w, D] = i.useState(!1),
         [L, x] = i.useState(50),
         M = w || y,
-        k = (0, h.l)(b, 'emojiButton', M ? 'Hovered' : 'Normal'),
+        k = (0, h.l)(b, "emojiButton", M ? "Hovered" : "Normal"),
         j = R(L),
         U = i.useCallback(() => {
             if (M) return;
             let e = Math.floor(Math.random() * A);
-            (D(!0), x(e), (0, _.x)(g.qR.EmojiButtonMouseEntered));
+            D(!0), x(e), (0, _.x)(g.qR.EmojiButtonMouseEntered);
         }, [M, D, x]),
         G = i.useCallback(() => {
             D(!1);
@@ -132,8 +141,8 @@ let P = function (e) {
     return (0, r.jsx)(u.ua7, {
         targetElementRef: z,
         text: () => (0, r.jsx)(C, {}),
-        'aria-label': E.intl.formatToMarkdownString(E.t['/7R4q6'], {}),
-        position: 'top',
+        "aria-label": E.intl.formatToMarkdownString(E.t["/7R4q6"], {}),
+        position: "top",
         shouldShow: Y,
         tooltipClassName: b.premiumTooltip,
         tooltipContentClassName: b.premiumTooltipContainer,
@@ -144,22 +153,22 @@ let P = function (e) {
                 className: a()(k, n),
                 onMouseEnter: () => {
                     var t;
-                    (U(), null == (t = e.onMouseEnter) || t.call(e));
+                    U(), null == (t = e.onMouseEnter) || t.call(e);
                 },
                 onMouseOver: U,
                 onMouseLeave: () => {
                     var t;
-                    (G(), null == (t = e.onMouseLeave) || t.call(e), H && V(m.L.USER_DISMISS));
+                    G(), null == (t = e.onMouseLeave) || t.call(e), H && V(m.L.USER_DISMISS);
                 },
                 onFocus: B,
                 onClick: (t) => {
                     var n;
-                    (null == v || v(t), null == (n = e.onClick) || n.call(e));
+                    null == v || v(t), null == (n = e.onClick) || n.call(e);
                 },
-                'aria-label': E.intl.string(E.t['59QgaG']),
-                'aria-controls': T,
-                'aria-expanded': y,
-                'aria-haspopup': 'dialog',
+                "aria-label": E.intl.string(E.t["59QgaG"]),
+                "aria-controls": T,
+                "aria-expanded": y,
+                "aria-haspopup": "dialog",
                 focusProps: S,
                 onContextMenu: e.onContextMenu,
                 children:
@@ -173,12 +182,24 @@ let P = function (e) {
                                   return (0, r.jsxs)(s.animated.div, {
                                       className: b.spriteContainer,
                                       style: I(O({}, j), {
-                                          transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
+                                          transform: t.to([0, 1], [1, 1.14]).to((e) => "scale(".concat(e, ")")),
                                       }),
-                                      children: [(0, r.jsx)('div', { className: a()(b.sprite, b.spriteColored, M ? b.active : b.inactive) }), (0, r.jsx)('div', { className: a()(b.sprite, H ? b.spritePremiumColored : b.spriteGreyscale, M ? b.inactive : b.active, { [b.reducedMotion]: W }) })]
+                                      children: [
+                                          (0, r.jsx)("div", {
+                                              className: a()(b.sprite, b.spriteColored, M ? b.active : b.inactive),
+                                          }),
+                                          (0, r.jsx)("div", {
+                                              className: a()(
+                                                  b.sprite,
+                                                  H ? b.spritePremiumColored : b.spriteGreyscale,
+                                                  M ? b.inactive : b.active,
+                                                  { [b.reducedMotion]: W },
+                                              ),
+                                          }),
+                                      ],
                                   });
-                              }
-                          })
-            })
+                              },
+                          }),
+            }),
     });
 };

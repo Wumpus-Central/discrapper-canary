@@ -19,39 +19,39 @@ function j(e) {
         j = (0, o.e7)([p.Z], () => p.Z.getSettings().clipsEnabled),
         h = t ? g.noSearchResultsImage : g.noClipsImage,
         y = l.useCallback(() => {
-            (n(), (0, c.Z)(f.Z.CLIPS));
+            n(), (0, c.Z)(f.Z.CLIPS);
         }, [n]),
         x = (() => {
-            if (!j) return b.intl.format(b.t['3iveam'], { onClick: y });
-            if (t) return b.intl.string(b.t['xrEs6+']);
+            if (!j) return b.intl.format(b.t["3iveam"], { onClick: y });
+            if (t) return b.intl.string(b.t["xrEs6+"]);
             if (null == a) return b.intl.format(b.t.jpKk7e, { onClick: y });
             {
                 let e = d.BB(a.shortcut, !0);
-                return b.intl.format(b.t['xY/8Ky'], {
+                return b.intl.format(b.t["xY/8Ky"], {
                     keybind: e,
                     keybindHook: () =>
-                        (0, r.jsx)('span', {
+                        (0, r.jsx)("span", {
                             className: g.keybindHintKeys,
                             children: (0, r.jsx)(s.M2$, {
                                 className: g.keybindShortcut,
-                                shortcut: e
-                            })
-                        })
+                                shortcut: e,
+                            }),
+                        }),
                 });
             }
         })();
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: g.container,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: g.content,
             children: [
-                (0, r.jsx)('div', { className: h }),
+                (0, r.jsx)("div", { className: h }),
                 (0, r.jsx)(s.Text, {
-                    variant: 'text-md/medium',
+                    variant: "text-md/medium",
                     className: i()(g.noClipsText, { [g.noSearchResultsText]: t }),
-                    children: x
-                })
-            ]
-        })
+                    children: x,
+                }),
+            ],
+        }),
     });
 }

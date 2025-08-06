@@ -15,12 +15,12 @@ function p(e) {
         p = (0, i.e7)([c.default], () => c.default.getCurrentUser());
     return null != p && null != r && (r.features.has(s.oNc.COMMUNITY) || p.isStaff())
         ? (0, n.jsx)(l.S89, {
-              id: 'opt-in',
+              id: "opt-in",
               label: b.intl.string(b.t.FB2ZZW),
               checked: !t,
               action: () => {
                   (0, a.kH)(e);
-              }
+              },
           })
         : null;
 }

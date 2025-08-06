@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => S }), n(953529));
+n.d(t, { ZP: () => S }), n(953529);
 var r = n(544891),
     i = n(570140),
     o = n(668781),
@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,8 +70,8 @@ function v(e, t) {
 let I = -1;
 function T(e) {
     i.Z.dispatch({
-        type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW',
-        guildId: e
+        type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW",
+        guildId: e,
     });
 }
 let S = {
@@ -84,31 +84,31 @@ let S = {
                 url: g.ANM.GUILD_MEMBER_VERIFICATION(e),
                 query: {
                     with_guild: a,
-                    invite_code: null != n ? (0, d.jX)(n) : void 0
+                    invite_code: null != n ? (0, d.jX)(n) : void 0,
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             });
             if (null == t.body) throw t;
             let { body: o } = t;
             return (
                 i.Z.dispatch({
-                    type: 'MEMBER_VERIFICATION_FORM_UPDATE',
+                    type: "MEMBER_VERIFICATION_FORM_UPDATE",
                     guildId: e,
                     form: {
                         version: o.version,
                         description: o.description,
                         formFields: o.form_fields,
                         guild: o.guild,
-                        profile: null != o.profile ? (0, l.xo)(o.profile) : null
-                    }
+                        profile: null != o.profile ? (0, l.xo)(o.profile) : null,
+                    },
                 }),
                 o
             );
         } catch (t) {
             i.Z.dispatch({
-                type: 'MEMBER_VERIFICATION_FORM_FETCH_FAIL',
-                guildId: e
+                type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL",
+                guildId: e,
             });
         }
     },
@@ -118,27 +118,27 @@ let S = {
             body: {
                 form_fields: t,
                 enabled: n,
-                bulk_action: o
+                bulk_action: o,
             },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         i.Z.dispatch({
-            type: 'MEMBER_VERIFICATION_FORM_UPDATE',
+            type: "MEMBER_VERIFICATION_FORM_UPDATE",
             guildId: e,
             form: {
                 version: a.version,
                 description: a.description,
-                formFields: a.form_fields
-            }
+                formFields: a.form_fields,
+            },
         });
     },
     updateVerificationFormFieldsLocal: (e, t) => {
         i.Z.dispatch({
-            type: 'MEMBER_VERIFICATION_FORM_UPDATE',
+            type: "MEMBER_VERIFICATION_FORM_UPDATE",
             guildId: e,
             form: { formFields: t },
-            isLocalUpdate: !0
+            isLocalUpdate: !0,
         });
     },
     updateVerificationFormDescription: async (e, t) => {
@@ -146,24 +146,24 @@ let S = {
             url: g.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { description: t },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         i.Z.dispatch({
-            type: 'MEMBER_VERIFICATION_FORM_UPDATE',
+            type: "MEMBER_VERIFICATION_FORM_UPDATE",
             guildId: e,
             form: {
                 version: n.version,
                 description: n.description,
-                formFields: n.form_fields
-            }
+                formFields: n.form_fields,
+            },
         });
     },
     updateVerificationFormDescriptionLocal: (e, t) => {
         i.Z.dispatch({
-            type: 'MEMBER_VERIFICATION_FORM_UPDATE',
+            type: "MEMBER_VERIFICATION_FORM_UPDATE",
             guildId: e,
             form: { description: t },
-            isLocalUpdate: !0
+            isLocalUpdate: !0,
         });
     },
     enableVerificationForm: async (e, t) => {
@@ -171,7 +171,7 @@ let S = {
             url: g.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { enabled: t },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
     },
     submitVerificationForm: async function (e, t) {
@@ -182,15 +182,15 @@ let S = {
                 url: g.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
                 body: {
                     version: t.version,
-                    form_fields: t.formFields
+                    form_fields: t.formFields,
                 },
-                rejectWithError: !1
+                rejectWithError: !1,
             });
             return (
                 i.Z.dispatch({
-                    type: 'USER_GUILD_JOIN_REQUEST_UPDATE',
+                    type: "USER_GUILD_JOIN_REQUEST_UPDATE",
                     guildId: e,
-                    request: o
+                    request: o,
                 }),
                 (0, m.YG)(t.formFields) && n !== I && setTimeout(() => T(e), n),
                 o
@@ -200,24 +200,27 @@ let S = {
             switch (e) {
                 case 429:
                     throw (
-                        (0, a.Zy)(),
+                        ((0, a.Zy)(),
                         o.Z.show({
                             title: E.intl.string(E.t.MmIrpa),
                             body: E.intl.string(E.t.yjpDQ0),
-                            confirmText: E.intl.string(E.t.XNGT1N)
+                            confirmText: E.intl.string(E.t.XNGT1N),
                         }),
-                        v(y({}, t), { message: E.intl.string(E.t.yjpDQ0) })
+                        v(y({}, t), { message: E.intl.string(E.t.yjpDQ0) }))
                     );
                 case 403:
-                    throw v(y({}, t), { message: E.intl.string(E.t['8T1rxM']) });
+                    throw v(y({}, t), { message: E.intl.string(E.t["8T1rxM"]) });
                 default:
                     var l, d;
-                    throw v(y({}, t), { message: null != (d = ((l = new s.Hx(t)), l.getAnyErrorMessage())) ? d : E.intl.string(E.t.R0RpRU) });
+                    throw v(y({}, t), {
+                        message:
+                            null != (d = ((l = new s.Hx(t)), l.getAnyErrorMessage())) ? d : E.intl.string(E.t.R0RpRU),
+                    });
             }
         }
     },
     clearCoachmark: function () {
-        i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR' });
+        i.Z.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR" });
     },
     reportApplication: function (e) {
         let { guild: t, guildJoinRequest: n, guildJoinRequestUser: r, reason: i, reasonOther: o, responses: a } = e;
@@ -227,7 +230,7 @@ let S = {
             guild_id: t.id,
             reason: i,
             reason_other: o,
-            responses: a
+            responses: a,
         });
-    }
+    },
 };

@@ -13,7 +13,7 @@ function u(e) {
         d = (0, r.jsx)(s.ZP.Icon, {
             icon: i.Dio,
             tooltip: c.intl.string(c.t.cpT0Cg),
-            onClick: u
+            onClick: u,
         });
     return (0, r.jsx)(a.Z, {
         sidebarType: a.y.ParticipantsSidebar,
@@ -21,15 +21,15 @@ function u(e) {
         floatingLayer: l.ZP,
         children: (0, r.jsxs)(s.ZP, {
             toolbar: d,
-            'aria-label': c.intl.string(c.t.jNqDh4),
+            "aria-label": c.intl.string(c.t.jNqDh4),
             children: [
                 (0, r.jsx)(s.ZP.Icon, {
                     icon: i.BFJ,
                     disabled: !0,
-                    'aria-label': c.intl.string(c.t.jNqDh4)
+                    "aria-label": c.intl.string(c.t.jNqDh4),
                 }),
-                (0, r.jsx)(s.ZP.Title, { children: c.intl.string(c.t.jNqDh4) })
-            ]
-        })
+                (0, r.jsx)(s.ZP.Title, { children: c.intl.string(c.t.jNqDh4) }),
+            ],
+        }),
     });
 }

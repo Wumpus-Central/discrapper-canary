@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,7 +63,18 @@ function g(e, t) {
     );
 }
 function E(e) {
-    let { color: t = 'default', label: n, checked: o, subtext: p, disabled: m, isFocused: E, menuItemProps: b, action: y, className: O, focusedClassName: v } = e,
+    let {
+            color: t = "default",
+            label: n,
+            checked: o,
+            subtext: p,
+            disabled: m,
+            isFocused: E,
+            menuItemProps: b,
+            action: y,
+            className: O,
+            focusedClassName: v,
+        } = e,
         { onInteraction: I } = i.useContext(c.p),
         T = i.useRef(null);
     i.useEffect(() => {
@@ -71,9 +82,9 @@ function E(e) {
     }, [E]);
     let S = i.useCallback(
         (e) => {
-            (y(e), null == I || I({ type: c.U.CHECKBOX }));
+            y(e), null == I || I({ type: c.U.CHECKBOX });
         },
-        [y, I]
+        [y, I],
     );
     return (0, r.jsxs)(
         s.P,
@@ -84,38 +95,38 @@ function E(e) {
                     className: a()(_.item, _.checkboxContainer, _.labelContainer, f._[t], O, {
                         [_.disabled]: m,
                         [_.focused]: E,
-                        [null != v ? v : '']: E
+                        [null != v ? v : ""]: E,
                     }),
-                    onClick: m ? void 0 : S
+                    onClick: m ? void 0 : S,
                 },
-                b
+                b,
             ),
             {
-                'aria-checked': o,
-                'aria-disabled': m,
+                "aria-checked": o,
+                "aria-disabled": m,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: _.label,
                         children: [
                             (0, l.I)(n, e),
                             null != p &&
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: _.subtext,
-                                    children: p
-                                })
-                        ]
+                                    children: p,
+                                }),
+                        ],
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: _.iconContainer,
                         children: (0, r.jsx)(d.FZ5, {
                             shape: d.XZJ.Shapes.BOX,
                             size: 20,
                             value: o,
-                            disabled: m
-                        })
-                    })
-                ]
-            }
-        )
+                            disabled: m,
+                        }),
+                    }),
+                ],
+            },
+        ),
     );
 }

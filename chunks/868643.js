@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     a: () => _,
-    h: () => f
+    h: () => f,
 }),
-    n(997841));
+    n(997841);
 var r = n(73800),
     i = n(442837),
     o = n(430198),
@@ -10,9 +10,30 @@ var r = n(73800),
     s = n(430824),
     l = n(630388),
     c = n(981631);
-let u = c.iLy.CROSSPOSTED | c.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | c.iLy.GUILD_FEED_HIDDEN | c.iLy.HAS_SNAPSHOT | c.iLy.HAS_THREAD | c.iLy.IS_CROSSPOST | c.iLy.IS_VOICE_MESSAGE | c.iLy.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | c.iLy.SUPPRESS_EMBEDS | c.iLy.SUPPRESS_NOTIFICATIONS | c.iLy.URGENT | c.iLy.IS_COMPONENTS_V2;
+let u =
+    c.iLy.CROSSPOSTED |
+    c.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD |
+    c.iLy.GUILD_FEED_HIDDEN |
+    c.iLy.HAS_SNAPSHOT |
+    c.iLy.HAS_THREAD |
+    c.iLy.IS_CROSSPOST |
+    c.iLy.IS_VOICE_MESSAGE |
+    c.iLy.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING |
+    c.iLy.SUPPRESS_EMBEDS |
+    c.iLy.SUPPRESS_NOTIFICATIONS |
+    c.iLy.URGENT |
+    c.iLy.IS_COMPONENTS_V2;
 function d(e) {
-    return e.state !== c.yb.SEND_FAILED && !!c.V$x.FORWARDABLE.has(e.type) && null == e.poll && null == e.activity && null == e.call && null == e.activityInstance && 0 === (0, l.Ge)(e.flags, u) && !0;
+    return (
+        e.state !== c.yb.SEND_FAILED &&
+        !!c.V$x.FORWARDABLE.has(e.type) &&
+        null == e.poll &&
+        null == e.activity &&
+        null == e.call &&
+        null == e.activityInstance &&
+        0 === (0, l.Ge)(e.flags, u) &&
+        !0
+    );
 }
 function f(e) {
     var t;
@@ -25,7 +46,8 @@ function _(e) {
         var t, n, r;
         if (null == e) return !0;
         let i = null == (t = a.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
-        if (null != i && (null == (n = s.Z.getGuild(i)) ? void 0 : n.features.has(c.oNc.FORWARDING_DISABLED))) return !0;
+        if (null != i && (null == (n = s.Z.getGuild(i)) ? void 0 : n.features.has(c.oNc.FORWARDING_DISABLED)))
+            return !0;
         let l = null != i && o.Z.isChannelOrThreadParentGated(i, e.channel_id),
             u = null != e && (null == (r = a.Z.getChannel(e.channel_id)) ? void 0 : r.isModeratorReportChannel());
         return l || u;

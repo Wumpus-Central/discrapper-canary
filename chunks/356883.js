@@ -1,4 +1,4 @@
 A.exports = {
-    container: 'container__33718',
-    text: 'text__33718'
+    container: "container__33718",
+    text: "text__33718",
 };

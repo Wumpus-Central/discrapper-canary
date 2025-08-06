@@ -16,6 +16,6 @@ e.exports = function (e, t, n) {
     return e.merge({
         blockMap: a.merge(s),
         selectionBefore: t,
-        selectionAfter: t
+        selectionAfter: t,
     });
 };

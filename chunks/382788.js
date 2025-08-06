@@ -28,11 +28,11 @@ function m(e) {
             isPaused: t,
             children: (e) =>
                 (0, r.jsx)(a.Z, {
-                    className: 'left' === e ? u.imageFlipped : u.image,
+                    className: "left" === e ? u.imageFlipped : u.image,
                     isPaused: t,
                     interval: 150,
-                    sources: [d, f]
-                })
+                    sources: [d, f],
+                }),
         })
     );
 }
@@ -45,12 +45,12 @@ function g(e) {
                 interval: 1000,
                 pointsPerInterval: o.points,
                 isPaused: t,
-                itemId: l.yN.BEE
+                itemId: l.yN.BEE,
             }),
             (0, r.jsx)(m, {
                 isPaused: t,
-                width: n
-            })
-        ]
+                width: n,
+            }),
+        ],
     });
 }

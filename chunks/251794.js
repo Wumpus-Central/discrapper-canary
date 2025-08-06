@@ -1,6 +1,6 @@
 n.d(t, {
     q: () => l,
-    z: () => s
+    z: () => s,
 });
 var r = n(255367);
 n(73800);
@@ -12,7 +12,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,22 +22,22 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function s(e) {
     let { guildId: t, userId: o, anaylticsLocations: s, modReportId: l } = e;
     (0, i.ZDy)(async () => {
-        let { default: e } = await n.e('72920').then(n.bind(n, 109730));
+        let { default: e } = await n.e("72920").then(n.bind(n, 109730));
         return (n) =>
             (0, r.jsx)(
                 e,
@@ -46,17 +46,17 @@ function s(e) {
                         guildId: t,
                         userId: o,
                         anaylticsLocations: s,
-                        modReportId: l
+                        modReportId: l,
                     },
-                    n
-                )
+                    n,
+                ),
             );
     });
 }
 function l(e) {
     let { guildId: t, userId: o, anaylticsLocations: s } = e;
     (0, i.ZDy)(async () => {
-        let { default: e } = await n.e('76233').then(n.bind(n, 171494));
+        let { default: e } = await n.e("76233").then(n.bind(n, 171494));
         return (n) =>
             (0, r.jsx)(
                 e,
@@ -64,10 +64,10 @@ function l(e) {
                     {
                         guildId: t,
                         userId: o,
-                        anaylticsLocations: s
+                        anaylticsLocations: s,
                     },
-                    n
-                )
+                    n,
+                ),
             );
     });
 }

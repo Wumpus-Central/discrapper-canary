@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => P,
-    j: () => h
+    j: () => h,
 });
 var r,
     i = n(442837),
@@ -15,7 +15,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,21 +39,21 @@ function h(e) {
         actionedAt: e.actioned_at,
         actionedByUser: e.actioned_by_user,
         lastSeen: e.last_seen,
-        interviewChannelId: e.interview_channel_id
+        interviewChannelId: e.interview_channel_id,
     };
 }
 function m(e) {
-    (delete d[e], u === e && (u = null));
+    delete d[e], u === e && (u = null);
 }
 function g(e) {
     let { guildJoinRequests: t } = e;
-    ((f = !1),
+    (f = !1),
         (_ = {}),
         (d = {}),
         t.forEach((e) => {
             let { guild_id: t } = e;
             null != t && (d[t] = h(e));
-        }));
+        });
 }
 function E(e) {
     let { request: t, guildId: n } = e;
@@ -89,13 +89,13 @@ function v(e) {
             name: i,
             icon: o,
             features: null != a ? a : [],
-            splash: s
+            splash: s,
         };
     }
 }
 function I(e) {
     let { guilds: t } = e;
-    ((f = !0),
+    (f = !0),
         t.forEach((e) => {
             let { id: t, name: n, features: r, icon: i, splash: o } = e;
             _[t] = {
@@ -103,9 +103,9 @@ function I(e) {
                 name: n,
                 features: r,
                 icon: i,
-                splash: o
+                splash: o,
             };
-        }));
+        });
 }
 function T(e) {
     let { guildId: t, cooldown: n } = e;
@@ -120,7 +120,7 @@ function S(e) {
             name: r,
             icon: i,
             features: null != o ? o : [],
-            splash: a
+            splash: a,
         };
     }
 }
@@ -157,7 +157,7 @@ class R extends (r = i.ZP.Store) {
         return p[e];
     }
 }
-c(R, 'displayName', 'UserGuildJoinRequestStore');
+c(R, "displayName", "UserGuildJoinRequestStore");
 let P = new R(o.Z, {
     CONNECTION_OPEN: g,
     GUILD_JOIN_REQUEST_UPDATE: b,
@@ -171,5 +171,5 @@ let P = new R(o.Z, {
     ACK_APPROVED_GUILD_JOIN_REQUEST: A,
     USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: N,
     USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: C,
-    USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: T
+    USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: T,
 });

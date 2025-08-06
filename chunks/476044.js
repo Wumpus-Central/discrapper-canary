@@ -20,12 +20,12 @@ function i(e) {
                 ((c < 0 && u > i) || (c > 0 && u > l)) && n();
             };
         return (
-            document.addEventListener('scroll', r, {
+            document.addEventListener("scroll", r, {
                 passive: !0,
-                capture: !0
+                capture: !0,
             }),
             () => {
-                document.removeEventListener('scroll', r, { capture: !0 });
+                document.removeEventListener("scroll", r, { capture: !0 });
             }
         );
     }, [s, t, n, i, l]);

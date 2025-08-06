@@ -20,102 +20,102 @@ function p(t) {
         n.useEffect(() => {
             d.default.track(x.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                 type: o.z[v],
-                guild_id: i
+                guild_id: i,
             });
         }, [i, v]),
         (0, s.jsx)(r.I, {
-            title: _.intl.string(_.t['2tv5YG']),
+            title: _.intl.string(_.t["2tv5YG"]),
             subtitle: _.intl.string(_.t.pgwlDw),
             transitionState: p,
-            size: 'sm',
+            size: "sm",
             graphic: {
-                type: 'lottie',
-                lottie: () => e.e('94792').then(e.t.bind(e, 972951, 19)),
-                aspectRatio: '6/4'
+                type: "lottie",
+                lottie: () => e.e("94792").then(e.t.bind(e, 972951, 19)),
+                aspectRatio: "6/4",
             },
             onClose: h,
             actions: [
                 {
-                    variant: 'secondary',
+                    variant: "secondary",
                     text: _.intl.string(_.t.L5eIZ2),
                     onClick: () => {
-                        (h(),
+                        h(),
                             (0, c.Q3)(v, {
                                 forceTrack: !0,
                                 dismissAction: I.L.SECONDARY,
-                                guildId: i
-                            }));
-                    }
+                                guildId: i,
+                            });
+                    },
                 },
                 {
-                    variant: 'primary',
-                    text: _.intl.string(_.t['5e8Mrq']),
+                    variant: "primary",
+                    text: _.intl.string(_.t["5e8Mrq"]),
                     onClick: () => {
-                        (h(),
+                        h(),
                             (0, c.Q3)(v, {
                                 forceTrack: !0,
                                 dismissAction: I.L.PRIMARY,
-                                guildId: i
+                                guildId: i,
                             }),
                             (0, a.transitionToGlobalDiscovery)({
                                 tab: u.GlobalDiscoveryTab.APPS,
                                 newSessionState: {
                                     guildId: i,
-                                    entrypoint: { name: m.xF.APPLICATION_DIRECTORY_UPSELL_MODAL }
-                                }
-                            }));
-                    }
-                }
+                                    entrypoint: { name: m.xF.APPLICATION_DIRECTORY_UPSELL_MODAL },
+                                },
+                            });
+                    },
+                },
             ],
-            children: (0, s.jsxs)('ul', {
+            children: (0, s.jsxs)("ul", {
                 className: C.listContainer,
                 children: [
-                    (0, s.jsxs)('li', {
+                    (0, s.jsxs)("li", {
                         className: C.listItem,
                         children: [
                             (0, s.jsx)(l.$2U, {
-                                color: 'currentColor',
-                                className: C.wandIcon
+                                color: "currentColor",
+                                className: C.wandIcon,
                             }),
                             (0, s.jsx)(l.Text, {
-                                variant: 'text-sm/medium',
-                                color: 'text-default',
-                                children: _.intl.string(_.t['0vKo5O'])
-                            })
-                        ]
+                                variant: "text-sm/medium",
+                                color: "text-default",
+                                children: _.intl.string(_.t["0vKo5O"]),
+                            }),
+                        ],
                     }),
                     (0, s.jsx)(b.Z, { className: C.divider }),
-                    (0, s.jsxs)('li', {
+                    (0, s.jsxs)("li", {
                         className: C.listItem,
                         children: [
                             (0, s.jsx)(l.wGt, {
-                                color: 'currentColor',
-                                className: C.robotIcon
+                                color: "currentColor",
+                                className: C.robotIcon,
                             }),
                             (0, s.jsx)(l.Text, {
-                                variant: 'text-sm/medium',
-                                color: 'text-default',
-                                children: _.intl.string(_.t.CprEDA)
-                            })
-                        ]
+                                variant: "text-sm/medium",
+                                color: "text-default",
+                                children: _.intl.string(_.t.CprEDA),
+                            }),
+                        ],
                     }),
                     (0, s.jsx)(b.Z, { className: C.divider }),
-                    (0, s.jsxs)('li', {
+                    (0, s.jsxs)("li", {
                         className: C.listItem,
                         children: [
                             (0, s.jsx)(l.EO4, {
-                                color: 'currentColor',
-                                className: C.smileIcon
+                                color: "currentColor",
+                                className: C.smileIcon,
                             }),
                             (0, s.jsx)(l.Text, {
-                                variant: 'text-sm/medium',
-                                color: 'text-default',
-                                children: _.intl.string(_.t.wQJMPD)
-                            })
-                        ]
-                    })
-                ]
-            })
+                                variant: "text-sm/medium",
+                                color: "text-default",
+                                children: _.intl.string(_.t.wQJMPD),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
         })
     );
 }

@@ -7,33 +7,33 @@ var i = n(481060),
     s = n(237292);
 function l(e) {
     let { channelId: t, warningId: l, senderId: c, warningType: u } = e;
-    if (!(0, s.mG)({ location: 'takeover-modal' })) return;
+    if (!(0, s.mG)({ location: "takeover-modal" })) return;
     let d = () => {
-        ((0, o.T)(t, [l]),
+        (0, o.T)(t, [l]),
             (0, a.qc)({
                 channelId: t,
                 senderId: c,
                 warningId: l,
                 warningType: u,
                 cta: a.NM.USER_TAKEOVER_MODAL_DISMISS,
-                isNudgeWarning: !1
-            }));
+                isNudgeWarning: !1,
+            });
     };
     (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('49508'), n.e('5749')]).then(n.bind(n, 955708));
+            let { default: e } = await Promise.all([n.e("49508"), n.e("5749")]).then(n.bind(n, 955708));
             return (n) =>
                 (0, r.jsx)(e, {
                     channelId: t,
                     warningId: l,
                     senderId: c,
                     warningType: u,
-                    modalProps: n
+                    modalProps: n,
                 });
         },
         {
             backdropStyle: i.fCB.BLUR,
-            onCloseCallback: d
-        }
+            onCloseCallback: d,
+        },
     );
 }

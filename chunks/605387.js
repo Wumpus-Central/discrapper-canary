@@ -8,16 +8,16 @@ var t = (function () {
             return (e[t] << 8) | e[t + 1];
         },
         writeUshort: function (e, t, n) {
-            ((e[t] = (n >> 8) & 255), (e[t + 1] = 255 & n));
+            (e[t] = (n >> 8) & 255), (e[t + 1] = 255 & n);
         },
         readUint: function (e, t) {
             return 16777216 * e[t] + ((e[t + 1] << 16) | (e[t + 2] << 8) | e[t + 3]);
         },
         writeUint: function (e, t, n) {
-            ((e[t] = (n >> 24) & 255), (e[t + 1] = (n >> 16) & 255), (e[t + 2] = (n >> 8) & 255), (e[t + 3] = 255 & n));
+            (e[t] = (n >> 24) & 255), (e[t + 1] = (n >> 16) & 255), (e[t + 2] = (n >> 8) & 255), (e[t + 3] = 255 & n);
         },
         readASCII: function (e, t, n) {
-            for (var r = '', i = 0; i < n; i++) r += String.fromCharCode(e[t + i]);
+            for (var r = "", i = 0; i < n; i++) r += String.fromCharCode(e[t + i]);
             return r;
         },
         writeASCII: function (e, t, n) {
@@ -28,17 +28,17 @@ var t = (function () {
             return r;
         },
         pad: function (e) {
-            return e.length < 2 ? '0' + e : e;
+            return e.length < 2 ? "0" + e : e;
         },
         readUTF8: function (t, n, r) {
-            for (var i, o = '', a = 0; a < r; a++) o += '%' + e.pad(t[n + a].toString(16));
+            for (var i, o = "", a = 0; a < r; a++) o += "%" + e.pad(t[n + a].toString(16));
             try {
                 i = decodeURIComponent(o);
             } catch (i) {
                 return e.readASCII(t, n, r);
             }
             return i;
-        }
+        },
     };
     function t(e) {
         var t = e.width,
@@ -46,7 +46,11 @@ var t = (function () {
         if (null == e.tabs.acTL) return [n(e.data, t, r, e).buffer];
         var i = [];
         null == e.frames[0].data && (e.frames[0].data = e.data);
-        for (var o = t * r * 4, a = new Uint8Array(o), s = new Uint8Array(o), l = new Uint8Array(o), c = 0; c < e.frames.length; c++) {
+        for (
+            var o = t * r * 4, a = new Uint8Array(o), s = new Uint8Array(o), l = new Uint8Array(o), c = 0;
+            c < e.frames.length;
+            c++
+        ) {
             var u = e.frames[c],
                 d = u.rect.x,
                 _ = u.rect.y,
@@ -54,7 +58,11 @@ var t = (function () {
                 h = u.rect.height,
                 m = n(u.data, p, h, e);
             if (0 != c) for (var g = 0; g < o; g++) l[g] = a[g];
-            if ((0 == u.blend ? f(m, p, h, a, t, r, d, _, 0) : 1 == u.blend && f(m, p, h, a, t, r, d, _, 1), i.push(a.buffer.slice(0)), 0 == u.dispose));
+            if (
+                (0 == u.blend ? f(m, p, h, a, t, r, d, _, 0) : 1 == u.blend && f(m, p, h, a, t, r, d, _, 1),
+                i.push(a.buffer.slice(0)),
+                0 == u.dispose)
+            );
             else if (1 == u.dispose) f(s, p, h, a, t, r, d, _, 0);
             else if (2 == u.dispose) for (var g = 0; g < o; g++) a[g] = l[g];
         }
@@ -70,7 +78,9 @@ var t = (function () {
             f = e.readUshort;
         if ((Date.now(), 6 == u)) {
             var _ = o << 2;
-            if (8 == d) for (var p = 0; p < _; p += 4) ((s[p] = t[p]), (s[p + 1] = t[p + 1]), (s[p + 2] = t[p + 2]), (s[p + 3] = t[p + 3]));
+            if (8 == d)
+                for (var p = 0; p < _; p += 4)
+                    (s[p] = t[p]), (s[p + 1] = t[p + 1]), (s[p + 2] = t[p + 2]), (s[p + 3] = t[p + 3]);
             if (16 == d) for (var p = 0; p < _; p++) s[p] = t[p << 1];
         } else if (2 == u) {
             var h = i.tabs.tRNS;
@@ -93,13 +103,15 @@ var t = (function () {
                     for (var p = 0; p < o; p++) {
                         var y = p << 2,
                             m = 3 * p;
-                        ((c[p] = -16777216 | (t[m + 2] << 16) | (t[m + 1] << 8) | t[m]), t[m] == g && t[m + 1] == E && t[m + 2] == b && (s[y + 3] = 0));
+                        (c[p] = -16777216 | (t[m + 2] << 16) | (t[m + 1] << 8) | t[m]),
+                            t[m] == g && t[m + 1] == E && t[m + 2] == b && (s[y + 3] = 0);
                     }
                 if (16 == d)
                     for (var p = 0; p < o; p++) {
                         var y = p << 2,
                             m = 6 * p;
-                        ((c[p] = -16777216 | (t[m + 4] << 16) | (t[m + 2] << 8) | t[m]), f(t, m) == g && f(t, m + 2) == E && f(t, m + 4) == b && (s[y + 3] = 0));
+                        (c[p] = -16777216 | (t[m + 4] << 16) | (t[m + 2] << 8) | t[m]),
+                            f(t, m) == g && f(t, m + 2) == E && f(t, m + 4) == b && (s[y + 3] = 0);
                     }
             }
         } else if (3 == u) {
@@ -112,7 +124,7 @@ var t = (function () {
                         var y = (A + p) << 2,
                             N = (t[S + (p >> 3)] >> (7 - ((7 & p) << 0))) & 1,
                             C = 3 * N;
-                        ((s[y] = O[C]), (s[y + 1] = O[C + 1]), (s[y + 2] = O[C + 2]), (s[y + 3] = N < I ? v[N] : 255));
+                        (s[y] = O[C]), (s[y + 1] = O[C + 1]), (s[y + 2] = O[C + 2]), (s[y + 3] = N < I ? v[N] : 255);
                     }
             if (2 == d)
                 for (var T = 0; T < r; T++)
@@ -120,7 +132,7 @@ var t = (function () {
                         var y = (A + p) << 2,
                             N = (t[S + (p >> 2)] >> (6 - ((3 & p) << 1))) & 3,
                             C = 3 * N;
-                        ((s[y] = O[C]), (s[y + 1] = O[C + 1]), (s[y + 2] = O[C + 2]), (s[y + 3] = N < I ? v[N] : 255));
+                        (s[y] = O[C]), (s[y + 1] = O[C + 1]), (s[y + 2] = O[C + 2]), (s[y + 3] = N < I ? v[N] : 255);
                     }
             if (4 == d)
                 for (var T = 0; T < r; T++)
@@ -128,14 +140,14 @@ var t = (function () {
                         var y = (A + p) << 2,
                             N = (t[S + (p >> 1)] >> (4 - ((1 & p) << 2))) & 15,
                             C = 3 * N;
-                        ((s[y] = O[C]), (s[y + 1] = O[C + 1]), (s[y + 2] = O[C + 2]), (s[y + 3] = N < I ? v[N] : 255));
+                        (s[y] = O[C]), (s[y + 1] = O[C + 1]), (s[y + 2] = O[C + 2]), (s[y + 3] = N < I ? v[N] : 255);
                     }
             if (8 == d)
                 for (var p = 0; p < o; p++) {
                     var y = p << 2,
                         N = t[p],
                         C = 3 * N;
-                    ((s[y] = O[C]), (s[y + 1] = O[C + 1]), (s[y + 2] = O[C + 2]), (s[y + 3] = N < I ? v[N] : 255));
+                    (s[y] = O[C]), (s[y + 1] = O[C + 1]), (s[y + 2] = O[C + 2]), (s[y + 3] = N < I ? v[N] : 255);
                 }
         } else if (4 == u) {
             if (8 == d)
@@ -143,14 +155,14 @@ var t = (function () {
                     var y = p << 2,
                         R = p << 1,
                         P = t[R];
-                    ((s[y] = P), (s[y + 1] = P), (s[y + 2] = P), (s[y + 3] = t[R + 1]));
+                    (s[y] = P), (s[y + 1] = P), (s[y + 2] = P), (s[y + 3] = t[R + 1]);
                 }
             if (16 == d)
                 for (var p = 0; p < o; p++) {
                     var y = p << 2,
                         R = p << 2,
                         P = t[R];
-                    ((s[y] = P), (s[y + 1] = P), (s[y + 2] = P), (s[y + 3] = t[R + 2]));
+                    (s[y] = P), (s[y + 1] = P), (s[y + 2] = P), (s[y + 3] = t[R + 2]);
                 }
         } else if (0 == u)
             for (var g = i.tabs.tRNS ? i.tabs.tRNS : -1, T = 0; T < r; T++) {
@@ -199,7 +211,7 @@ var t = (function () {
                 u = l.readUint,
                 f = {
                     tabs: {},
-                    frames: []
+                    frames: [],
                 },
                 _ = new Uint8Array(r.length),
                 p = 0,
@@ -209,15 +221,15 @@ var t = (function () {
             g < 8;
             g++
         )
-            if (r[g] != m[g]) throw 'The input is not a PNG file!';
+            if (r[g] != m[g]) throw "The input is not a PNG file!";
         for (; s < r.length; ) {
             var E = l.readUint(r, s);
             s += 4;
             var b = l.readASCII(r, s, 4);
-            if (((s += 4), 'IHDR' == b)) d(r, s, f);
-            else if ('iCCP' == b) {
+            if (((s += 4), "IHDR" == b)) d(r, s, f);
+            else if ("iCCP" == b) {
                 for (var y = s; 0 != r[y]; ) y++;
-                (l.readASCII(r, s, y - s), r[y + 1]);
+                l.readASCII(r, s, y - s), r[y + 1];
                 var O = r.slice(y + 2, s + E),
                     v = null;
                 try {
@@ -226,62 +238,68 @@ var t = (function () {
                     v = a(O);
                 }
                 f.tabs[b] = v;
-            } else if ('CgBI' == b) f.tabs[b] = r.slice(s, s + 4);
-            else if ('IDAT' == b) {
+            } else if ("CgBI" == b) f.tabs[b] = r.slice(s, s + 4);
+            else if ("IDAT" == b) {
                 for (var g = 0; g < E; g++) _[p + g] = r[s + g];
                 p += E;
-            } else if ('acTL' == b)
-                ((f.tabs[b] = {
+            } else if ("acTL" == b)
+                (f.tabs[b] = {
                     num_frames: u(r, s),
-                    num_plays: u(r, s + 4)
+                    num_plays: u(r, s + 4),
                 }),
-                    (n = new Uint8Array(r.length)));
-            else if ('fcTL' == b) {
+                    (n = new Uint8Array(r.length));
+            else if ("fcTL" == b) {
                 if (0 != h) {
                     var I = f.frames[f.frames.length - 1];
-                    ((I.data = i(f, n.slice(0, h), I.rect.width, I.rect.height)), (h = 0));
+                    (I.data = i(f, n.slice(0, h), I.rect.width, I.rect.height)), (h = 0);
                 }
                 var T = {
                         x: u(r, s + 12),
                         y: u(r, s + 16),
                         width: u(r, s + 4),
-                        height: u(r, s + 8)
+                        height: u(r, s + 8),
                     },
                     S = c(r, s + 22),
                     A = {
                         rect: T,
                         delay: 1000 * (S = c(r, s + 20) / (0 == S ? 100 : S)),
                         dispose: r[s + 24],
-                        blend: r[s + 25]
+                        blend: r[s + 25],
                     };
                 f.frames.push(A);
-            } else if ('fdAT' == b) {
+            } else if ("fdAT" == b) {
                 for (var g = 0; g < E - 4; g++) n[h + g] = r[s + g + 4];
                 h += E - 4;
-            } else if ('pHYs' == b) f.tabs[b] = [l.readUint(r, s), l.readUint(r, s + 4), r[s + 8]];
-            else if ('cHRM' == b) {
+            } else if ("pHYs" == b) f.tabs[b] = [l.readUint(r, s), l.readUint(r, s + 4), r[s + 8]];
+            else if ("cHRM" == b) {
                 f.tabs[b] = [];
                 for (var g = 0; g < 8; g++) f.tabs[b].push(l.readUint(r, s + 4 * g));
-            } else if ('tEXt' == b || 'zTXt' == b) {
+            } else if ("tEXt" == b || "zTXt" == b) {
                 null == f.tabs[b] && (f.tabs[b] = {});
                 var N,
                     C = l.nextZero(r, s),
                     R = l.readASCII(r, s, C - s),
                     P = s + E - C - 1;
-                if ('tEXt' == b) N = l.readASCII(r, C + 1, P);
+                if ("tEXt" == b) N = l.readASCII(r, C + 1, P);
                 else {
                     var w = o(r.slice(C + 2, C + 2 + P));
                     N = l.readUTF8(w, 0, w.length);
                 }
                 f.tabs[b][R] = N;
-            } else if ('iTXt' == b) {
+            } else if ("iTXt" == b) {
                 null == f.tabs[b] && (f.tabs[b] = {});
                 var C = 0,
                     y = s;
                 C = l.nextZero(r, y);
                 var R = l.readASCII(r, y, C - y),
                     D = r[(y = C + 1)];
-                (r[y + 1], (y += 2), (C = l.nextZero(r, y)), l.readASCII(r, y, C - y), (y = C + 1), (C = l.nextZero(r, y)), l.readUTF8(r, y, C - y));
+                r[y + 1],
+                    (y += 2),
+                    (C = l.nextZero(r, y)),
+                    l.readASCII(r, y, C - y),
+                    (y = C + 1),
+                    (C = l.nextZero(r, y)),
+                    l.readUTF8(r, y, C - y);
                 var N,
                     P = E - ((y = C + 1) - s);
                 if (0 == D) N = l.readUTF8(r, y, P);
@@ -290,30 +308,40 @@ var t = (function () {
                     N = l.readUTF8(w, 0, w.length);
                 }
                 f.tabs[b][R] = N;
-            } else if ('PLTE' == b) f.tabs[b] = l.readBytes(r, s, E);
-            else if ('hIST' == b) {
+            } else if ("PLTE" == b) f.tabs[b] = l.readBytes(r, s, E);
+            else if ("hIST" == b) {
                 var L = f.tabs.PLTE.length / 3;
                 f.tabs[b] = [];
                 for (var g = 0; g < L; g++) f.tabs[b].push(c(r, s + 2 * g));
-            } else if ('tRNS' == b) 3 == f.ctype ? (f.tabs[b] = l.readBytes(r, s, E)) : 0 == f.ctype ? (f.tabs[b] = c(r, s)) : 2 == f.ctype && (f.tabs[b] = [c(r, s), c(r, s + 2), c(r, s + 4)]);
-            else if ('gAMA' == b) f.tabs[b] = l.readUint(r, s) / 100000;
-            else if ('sRGB' == b) f.tabs[b] = r[s];
-            else if ('bKGD' == b) 0 == f.ctype || 4 == f.ctype ? (f.tabs[b] = [c(r, s)]) : 2 == f.ctype || 6 == f.ctype ? (f.tabs[b] = [c(r, s), c(r, s + 2), c(r, s + 4)]) : 3 == f.ctype && (f.tabs[b] = r[s]);
-            else if ('IEND' == b) break;
-            ((s += E), l.readUint(r, s), (s += 4));
+            } else if ("tRNS" == b)
+                3 == f.ctype
+                    ? (f.tabs[b] = l.readBytes(r, s, E))
+                    : 0 == f.ctype
+                      ? (f.tabs[b] = c(r, s))
+                      : 2 == f.ctype && (f.tabs[b] = [c(r, s), c(r, s + 2), c(r, s + 4)]);
+            else if ("gAMA" == b) f.tabs[b] = l.readUint(r, s) / 100000;
+            else if ("sRGB" == b) f.tabs[b] = r[s];
+            else if ("bKGD" == b)
+                0 == f.ctype || 4 == f.ctype
+                    ? (f.tabs[b] = [c(r, s)])
+                    : 2 == f.ctype || 6 == f.ctype
+                      ? (f.tabs[b] = [c(r, s), c(r, s + 2), c(r, s + 4)])
+                      : 3 == f.ctype && (f.tabs[b] = r[s]);
+            else if ("IEND" == b) break;
+            (s += E), l.readUint(r, s), (s += 4);
         }
         if (0 != h) {
             var I = f.frames[f.frames.length - 1];
             I.data = i(f, n.slice(0, h), I.rect.width, I.rect.height);
         }
-        return ((f.data = i(f, _, f.width, f.height)), delete f.compress, delete f.interlace, delete f.filter, f);
+        return (f.data = i(f, _, f.width, f.height)), delete f.compress, delete f.interlace, delete f.filter, f;
     }
     function i(e, t, n, r) {
         var i = Date.now(),
             u = new Uint8Array((Math.ceil((n * l(e)) / 8) + 1 + e.interlace) * r);
         t = e.tabs.CgBI ? a(t, u) : o(t, u);
         var i = Date.now();
-        return (0 == e.interlace ? (t = c(t, e, 0, n, r)) : 1 == e.interlace && (t = s(t, e)), t);
+        return 0 == e.interlace ? (t = c(t, e, 0, n, r)) : 1 == e.interlace && (t = s(t, e)), t;
     }
     function o(e, t) {
         return a(new Uint8Array(e.buffer, 2, e.length - 6), t);
@@ -326,11 +354,20 @@ var t = (function () {
                 m: new e(16),
                 v: new e(16),
                 d: [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15],
-                o: [3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43, 51, 59, 67, 83, 99, 115, 131, 163, 195, 227, 258, 999, 999, 999],
+                o: [
+                    3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43, 51, 59, 67, 83, 99, 115, 131, 163,
+                    195, 227, 258, 999, 999, 999,
+                ],
                 z: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0],
                 B: new e(32),
-                p: [1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193, 257, 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145, 8193, 12289, 16385, 24577, 65535, 65535],
-                w: [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0],
+                p: [
+                    1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193, 257, 385, 513, 769, 1025, 1537, 2049,
+                    3073, 4097, 6145, 8193, 12289, 16385, 24577, 65535, 65535,
+                ],
+                w: [
+                    0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0,
+                    0,
+                ],
                 h: new t(32),
                 g: new e(512),
                 s: [],
@@ -349,18 +386,24 @@ var t = (function () {
                 l: new t(19),
                 u: new t(15000),
                 q: new e(65536),
-                j: new e(32768)
+                j: new e(32768),
             };
         })();
         function t(t, n) {
             for (var r, i, o, a, s, l = t.length, c = e.v, a = 0; a <= n; a++) c[a] = 0;
             for (a = 1; a < l; a += 2) c[t[a]]++;
             var u = e.m;
-            for (i = 1, r = 0, c[0] = 0; i <= n; i++) ((r = (r + c[i - 1]) << 1), (u[i] = r));
+            for (i = 1, r = 0, c[0] = 0; i <= n; i++) (r = (r + c[i - 1]) << 1), (u[i] = r);
             for (o = 0; o < l; o += 2) 0 != (s = t[o + 1]) && ((t[o] = u[s]), u[s]++);
         }
         function n(t, n, r) {
-            for (var i = t.length, o = e.i, a = 0; a < i; a += 2) if (0 != t[a + 1]) for (var s = a >> 1, l = t[a + 1], c = (s << 4) | l, u = n - l, d = t[a] << u, f = d + (1 << u); d != f; ) ((r[o[d] >>> (15 - n)] = c), d++);
+            for (var i = t.length, o = e.i, a = 0; a < i; a += 2)
+                if (0 != t[a + 1])
+                    for (
+                        var s = a >> 1, l = t[a + 1], c = (s << 4) | l, u = n - l, d = t[a] << u, f = d + (1 << u);
+                        d != f;
+                    )
+                        (r[o[d] >>> (15 - n)] = c), d++;
         }
         function r(t, n) {
             for (var r = e.i, i = 15 - n, o = 0; o < t.length; o += 2) {
@@ -381,19 +424,23 @@ var t = (function () {
             var n = e.length;
             if (t <= n) return e;
             var r = new Uint8Array(Math.max(n << 1, t));
-            return (r.set(e, 0), r);
+            return r.set(e, 0), r;
         }
         function l(e, t, n, r, o, s) {
             for (var l = 0; l < n; ) {
                 var c = e[a(r, o) & t];
                 o += 15 & c;
                 var u = c >>> 4;
-                if (u <= 15) ((s[l] = u), l++);
+                if (u <= 15) (s[l] = u), l++;
                 else {
                     var d = 0,
                         f = 0;
-                    16 == u ? ((f = 3 + i(r, o, 2)), (o += 2), (d = s[l - 1])) : 17 == u ? ((f = 3 + i(r, o, 3)), (o += 3)) : 18 == u && ((f = 11 + i(r, o, 7)), (o += 7));
-                    for (var _ = l + f; l < _; ) ((s[l] = d), l++);
+                    16 == u
+                        ? ((f = 3 + i(r, o, 2)), (o += 2), (d = s[l - 1]))
+                        : 17 == u
+                          ? ((f = 3 + i(r, o, 3)), (o += 3))
+                          : 18 == u && ((f = 11 + i(r, o, 7)), (o += 7));
+                    for (var _ = l + f; l < _; ) (s[l] = d), l++;
                 }
             }
             return o;
@@ -401,22 +448,48 @@ var t = (function () {
         function c(e, t, n, r) {
             for (var i = 0, o = 0, a = r.length >>> 1; o < n; ) {
                 var s = e[o + t];
-                ((r[o << 1] = 0), (r[(o << 1) + 1] = s), s > i && (i = s), o++);
+                (r[o << 1] = 0), (r[(o << 1) + 1] = s), s > i && (i = s), o++;
             }
-            for (; o < a; ) ((r[o << 1] = 0), (r[(o << 1) + 1] = 0), o++);
+            for (; o < a; ) (r[o << 1] = 0), (r[(o << 1) + 1] = 0), o++;
             return i;
         }
         return (
             !(function () {
                 for (var i = 32768, o = 0; o < i; o++) {
                     var a = o;
-                    ((a = ((4278255360 & (a = ((4042322160 & (a = ((3435973836 & (a = ((2863311530 & a) >>> 1) | ((1431655765 & a) << 1))) >>> 2) | ((858993459 & a) << 2))) >>> 4) | ((252645135 & a) << 4))) >>> 8) | ((16711935 & a) << 8)), (e.i[o] = ((a >>> 16) | (a << 16)) >>> 17));
+                    (a =
+                        ((4278255360 &
+                            (a =
+                                ((4042322160 &
+                                    (a =
+                                        ((3435973836 & (a = ((2863311530 & a) >>> 1) | ((1431655765 & a) << 1))) >>>
+                                            2) |
+                                        ((858993459 & a) << 2))) >>>
+                                    4) |
+                                ((252645135 & a) << 4))) >>>
+                            8) |
+                        ((16711935 & a) << 8)),
+                        (e.i[o] = ((a >>> 16) | (a << 16)) >>> 17);
                 }
                 function s(e, t, n) {
                     for (; 0 != t--; ) e.push(0, n);
                 }
-                for (var o = 0; o < 32; o++) ((e.B[o] = (e.o[o] << 3) | e.z[o]), (e.h[o] = (e.p[o] << 4) | e.w[o]));
-                (s(e.s, 144, 8), s(e.s, 112, 9), s(e.s, 24, 7), s(e.s, 8, 8), t(e.s, 9), n(e.s, 9, e.g), r(e.s, 9), s(e.t, 32, 5), t(e.t, 5), n(e.t, 5, e.A), r(e.t, 5), s(e.b, 19, 0), s(e.c, 286, 0), s(e.e, 30, 0), s(e.a, 320, 0));
+                for (var o = 0; o < 32; o++) (e.B[o] = (e.o[o] << 3) | e.z[o]), (e.h[o] = (e.p[o] << 4) | e.w[o]);
+                s(e.s, 144, 8),
+                    s(e.s, 112, 9),
+                    s(e.s, 24, 7),
+                    s(e.s, 8, 8),
+                    t(e.s, 9),
+                    n(e.s, 9, e.g),
+                    r(e.s, 9),
+                    s(e.t, 32, 5),
+                    t(e.t, 5),
+                    n(e.t, 5, e.A),
+                    r(e.t, 5),
+                    s(e.b, 19, 0),
+                    s(e.c, 286, 0),
+                    s(e.e, 30, 0),
+                    s(e.a, 320, 0);
             })(),
             function (r, u) {
                 var d,
@@ -438,21 +511,29 @@ var t = (function () {
                         (7 & v) != 0 && (v += 8 - (7 & v));
                         var T = (v >>> 3) + 4,
                             S = r[T - 4] | (r[T - 3] << 8);
-                        (I && (u = s(u, O + S)), u.set(new _(r.buffer, r.byteOffset + T, S), O), (v = (T + S) << 3), (O += S));
+                        I && (u = s(u, O + S)),
+                            u.set(new _(r.buffer, r.byteOffset + T, S), O),
+                            (v = (T + S) << 3),
+                            (O += S);
                         continue;
                     }
                     if ((I && (u = s(u, O + 131072)), 1 == h && ((d = e.g), (f = e.A), (b = 511), (y = 31)), 2 == h)) {
-                        ((m = i(r, v, 5) + 257), (g = i(r, v + 5, 5) + 1), (E = i(r, v + 10, 4) + 4), (v += 14));
-                        for (var A = 1, N = 0; N < 38; N += 2) ((e.b[N] = 0), (e.b[N + 1] = 0));
+                        (m = i(r, v, 5) + 257), (g = i(r, v + 5, 5) + 1), (E = i(r, v + 10, 4) + 4), (v += 14);
+                        for (var A = 1, N = 0; N < 38; N += 2) (e.b[N] = 0), (e.b[N + 1] = 0);
                         for (var N = 0; N < E; N++) {
                             var C = i(r, v + 3 * N, 3);
-                            ((e.b[(e.d[N] << 1) + 1] = C), C > A && (A = C));
+                            (e.b[(e.d[N] << 1) + 1] = C), C > A && (A = C);
                         }
-                        ((v += 3 * E), t(e.b, A), n(e.b, A, e.C), (d = e.k), (f = e.n), (v = l(e.C, (1 << A) - 1, m + g, r, v, e.a)));
+                        (v += 3 * E),
+                            t(e.b, A),
+                            n(e.b, A, e.C),
+                            (d = e.k),
+                            (f = e.n),
+                            (v = l(e.C, (1 << A) - 1, m + g, r, v, e.a));
                         var R = c(e.a, 0, m, e.c);
                         b = (1 << R) - 1;
                         var P = c(e.a, m, g, e.e);
-                        ((y = (1 << P) - 1), t(e.c, R), n(e.c, R, d), t(e.e, P), n(e.e, P, f));
+                        (y = (1 << P) - 1), t(e.c, R), n(e.c, R, d), t(e.e, P), n(e.e, P, f);
                     }
                     for (;;) {
                         var w = d[a(r, v) & b];
@@ -464,14 +545,15 @@ var t = (function () {
                             var L = O + D - 254;
                             if (D > 264) {
                                 var x = e.B[D - 257];
-                                ((L = O + (x >>> 3) + i(r, v, 7 & x)), (v += 7 & x));
+                                (L = O + (x >>> 3) + i(r, v, 7 & x)), (v += 7 & x);
                             }
                             var M = f[a(r, v) & y];
                             v += 15 & M;
                             var k = M >>> 4,
                                 j = e.h[k],
                                 U = (j >>> 4) + o(r, v, 15 & j);
-                            for (v += 15 & j, I && (u = s(u, O + 131072)); O < L; ) ((u[O] = u[O++ - U]), (u[O] = u[O++ - U]), (u[O] = u[O++ - U]), (u[O] = u[O++ - U]));
+                            for (v += 15 & j, I && (u = s(u, O + 131072)); O < L; )
+                                (u[O] = u[O++ - U]), (u[O] = u[O++ - U]), (u[O] = u[O++ - U]), (u[O] = u[O++ - U]);
                             O = L;
                         }
                     }
@@ -481,31 +563,45 @@ var t = (function () {
         );
     })();
     function s(e, t) {
-        for (var n = t.width, r = t.height, i = l(t), o = i >> 3, a = Math.ceil((n * i) / 8), s = new Uint8Array(r * a), u = 0, d = [0, 0, 4, 0, 2, 0, 1], f = [0, 4, 0, 2, 0, 1, 0], _ = [8, 8, 8, 4, 4, 2, 2], p = [8, 8, 4, 4, 2, 2, 1], h = 0; h < 7; ) {
-            for (var m = _[h], g = p[h], E = 0, b = 0, y = d[h]; y < r; ) ((y += m), b++);
-            for (var O = f[h]; O < n; ) ((O += g), E++);
+        for (
+            var n = t.width,
+                r = t.height,
+                i = l(t),
+                o = i >> 3,
+                a = Math.ceil((n * i) / 8),
+                s = new Uint8Array(r * a),
+                u = 0,
+                d = [0, 0, 4, 0, 2, 0, 1],
+                f = [0, 4, 0, 2, 0, 1, 0],
+                _ = [8, 8, 8, 4, 4, 2, 2],
+                p = [8, 8, 4, 4, 2, 2, 1],
+                h = 0;
+            h < 7;
+        ) {
+            for (var m = _[h], g = p[h], E = 0, b = 0, y = d[h]; y < r; ) (y += m), b++;
+            for (var O = f[h]; O < n; ) (O += g), E++;
             var v = Math.ceil((E * i) / 8);
             c(e, t, u, E, b);
             for (var I = 0, T = d[h]; T < r; ) {
                 for (var S = f[h], A = (u + I * v) << 3; S < n; ) {
                     if (1 == i) {
                         var N = e[A >> 3];
-                        ((N = (N >> (7 - (7 & A))) & 1), (s[T * a + (S >> 3)] |= N << (7 - ((7 & S) << 0))));
+                        (N = (N >> (7 - (7 & A))) & 1), (s[T * a + (S >> 3)] |= N << (7 - ((7 & S) << 0)));
                     }
                     if (2 == i) {
                         var N = e[A >> 3];
-                        ((N = (N >> (6 - (7 & A))) & 3), (s[T * a + (S >> 2)] |= N << (6 - ((3 & S) << 1))));
+                        (N = (N >> (6 - (7 & A))) & 3), (s[T * a + (S >> 2)] |= N << (6 - ((3 & S) << 1)));
                     }
                     if (4 == i) {
                         var N = e[A >> 3];
-                        ((N = (N >> (4 - (7 & A))) & 15), (s[T * a + (S >> 1)] |= N << (4 - ((1 & S) << 2))));
+                        (N = (N >> (4 - (7 & A))) & 15), (s[T * a + (S >> 1)] |= N << (4 - ((1 & S) << 2)));
                     }
                     if (i >= 8) for (var C = T * a + S * o, R = 0; R < o; R++) s[C + R] = e[(A >> 3) + R];
-                    ((A += i), (S += g));
+                    (A += i), (S += g);
                 }
-                (I++, (T += m));
+                I++, (T += m);
             }
-            (E * b != 0 && (u += b * (1 + v)), (h += 1));
+            E * b != 0 && (u += b * (1 + v)), (h += 1);
         }
         return s;
     }
@@ -520,7 +616,8 @@ var t = (function () {
             c,
             d = e[n],
             f = 0;
-        if ((d > 1 && (e[n] = [0, 0, 1][d - 2]), 3 == d)) for (f = o; f < a; f++) e[f + 1] = (e[f + 1] + (e[f + 1 - o] >>> 1)) & 255;
+        if ((d > 1 && (e[n] = [0, 0, 1][d - 2]), 3 == d))
+            for (f = o; f < a; f++) e[f + 1] = (e[f + 1] + (e[f + 1 - o] >>> 1)) & 255;
         for (var _ = 0; _ < i; _++)
             if (((d = e[(c = (s = n + _ * a) + _ + 1) - 1]), (f = 0), 0 == d)) for (; f < a; f++) e[s + f] = e[c + f];
             else if (1 == d) {
@@ -544,12 +641,26 @@ var t = (function () {
         return i * i <= o * o && i * i <= a * a ? e : o * o <= a * a ? t : n;
     }
     function d(t, n, r) {
-        ((r.width = e.readUint(t, n)), (n += 4), (r.height = e.readUint(t, n)), (r.depth = t[(n += 4)]), (r.ctype = t[++n]), (r.compress = t[++n]), (r.filter = t[++n]), (r.interlace = t[++n]), n++);
+        (r.width = e.readUint(t, n)),
+            (n += 4),
+            (r.height = e.readUint(t, n)),
+            (r.depth = t[(n += 4)]),
+            (r.ctype = t[++n]),
+            (r.compress = t[++n]),
+            (r.filter = t[++n]),
+            (r.interlace = t[++n]),
+            n++;
     }
     function f(e, t, n, r, i, o, a, s, l) {
         for (var c = Math.min(t, i), u = Math.min(n, o), d = 0, f = 0, _ = 0; _ < u; _++)
             for (var p = 0; p < c; p++)
-                if ((a >= 0 && s >= 0 ? ((d = (_ * t + p) << 2), (f = ((s + _) * i + a + p) << 2)) : ((d = ((-s + _) * t - a + p) << 2), (f = (_ * i + p) << 2)), 0 == l)) ((r[f] = e[d]), (r[f + 1] = e[d + 1]), (r[f + 2] = e[d + 2]), (r[f + 3] = e[d + 3]));
+                if (
+                    (a >= 0 && s >= 0
+                        ? ((d = (_ * t + p) << 2), (f = ((s + _) * i + a + p) << 2))
+                        : ((d = ((-s + _) * t - a + p) << 2), (f = (_ * i + p) << 2)),
+                    0 == l)
+                )
+                    (r[f] = e[d]), (r[f + 1] = e[d + 1]), (r[f + 2] = e[d + 2]), (r[f + 3] = e[d + 3]);
                 else if (1 == l) {
                     var h = e[d + 3] * (1 / 255),
                         m = e[d] * h,
@@ -562,7 +673,10 @@ var t = (function () {
                         I = 1 - h,
                         T = h + b * I,
                         S = 0 == T ? 0 : 1 / T;
-                    ((r[f + 3] = 255 * T), (r[f + 0] = (m + y * I) * S), (r[f + 1] = (g + O * I) * S), (r[f + 2] = (E + v * I) * S));
+                    (r[f + 3] = 255 * T),
+                        (r[f + 0] = (m + y * I) * S),
+                        (r[f + 1] = (g + O * I) * S),
+                        (r[f + 2] = (E + v * I) * S);
                 } else if (2 == l) {
                     var h = e[d + 3],
                         m = e[d],
@@ -572,7 +686,9 @@ var t = (function () {
                         y = r[f],
                         O = r[f + 1],
                         v = r[f + 2];
-                    h == b && m == y && g == O && E == v ? ((r[f] = 0), (r[f + 1] = 0), (r[f + 2] = 0), (r[f + 3] = 0)) : ((r[f] = m), (r[f + 1] = g), (r[f + 2] = E), (r[f + 3] = h));
+                    h == b && m == y && g == O && E == v
+                        ? ((r[f] = 0), (r[f + 1] = 0), (r[f + 2] = 0), (r[f + 3] = 0))
+                        : ((r[f] = m), (r[f + 1] = g), (r[f + 2] = E), (r[f + 3] = h));
                 } else if (3 == l) {
                     var h = e[d + 3],
                         m = e[d],
@@ -592,10 +708,10 @@ var t = (function () {
         toRGBA8: t,
         _paeth: u,
         _copyTile: f,
-        _bin: e
+        _bin: e,
     };
 })();
-(!(function () {
+!(function () {
     var e = t._copyTile,
         n = t._bin,
         r = t._paeth,
@@ -613,10 +729,13 @@ var t = (function () {
             },
             crc: function (e, t, n) {
                 return 4294967295 ^ i.update(4294967295, e, t, n);
-            }
+            },
         };
     function o(e, t, n, r) {
-        ((t[n] += (e[0] * r) >> 4), (t[n + 1] += (e[1] * r) >> 4), (t[n + 2] += (e[2] * r) >> 4), (t[n + 3] += (e[3] * r) >> 4));
+        (t[n] += (e[0] * r) >> 4),
+            (t[n + 1] += (e[1] * r) >> 4),
+            (t[n + 2] += (e[2] * r) >> 4),
+            (t[n + 3] += (e[3] * r) >> 4);
     }
     function a(e) {
         return Math.max(0, Math.min(255, e));
@@ -642,12 +761,22 @@ var t = (function () {
             var b = Math.sqrt(h) / 2;
             f[_] = ~~(b * b);
         }
-        for (var y = new Uint32Array(i.buffer), O = new Int16Array(t * n * 4), v = 4, I = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5], _ = 0; _ < I.length; _++) I[_] = 255 * (-0.5 + (I[_] + 0.5) / (v * v));
+        for (
+            var y = new Uint32Array(i.buffer),
+                O = new Int16Array(t * n * 4),
+                v = 4,
+                I = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5],
+                _ = 0;
+            _ < I.length;
+            _++
+        )
+            I[_] = 255 * (-0.5 + (I[_] + 0.5) / (v * v));
         for (var T = 0; T < n; T++)
             for (var S = 0; S < t; S++) {
                 var A,
                     _ = (T * t + S) * 4;
-                if (2 != c) A = [a(e[_] + O[_]), a(e[_ + 1] + O[_ + 1]), a(e[_ + 2] + O[_ + 2]), a(e[_ + 3] + O[_ + 3])];
+                if (2 != c)
+                    A = [a(e[_] + O[_]), a(e[_ + 1] + O[_ + 1]), a(e[_ + 2] + O[_ + 2]), a(e[_ + 3] + O[_ + 3])];
                 else {
                     var E = I[(T & (v - 1)) * v + (S & (v - 1))];
                     A = [a(e[_] + E), a(e[_ + 1] + E), a(e[_ + 2] + E), a(e[_ + 3] + E)];
@@ -658,14 +787,21 @@ var t = (function () {
                 }
                 var R = d[m],
                     P = [A[0] - R[0], A[1] - R[1], A[2] - R[2], A[3] - R[3]];
-                (1 == c && (S != t - 1 && o(P, O, _ + 4, 7), T != n - 1 && (0 != S && o(P, O, _ + 4 * t - 4, 3), o(P, O, _ + 4 * t, 5), S != t - 1 && o(P, O, _ + 4 * t + 4, 1))), (l[_ >> 2] = m), (y[_ >> 2] = r[m]));
+                1 == c &&
+                    (S != t - 1 && o(P, O, _ + 4, 7),
+                    T != n - 1 &&
+                        (0 != S && o(P, O, _ + 4 * t - 4, 3),
+                        o(P, O, _ + 4 * t, 5),
+                        S != t - 1 && o(P, O, _ + 4 * t + 4, 1))),
+                    (l[_ >> 2] = m),
+                    (y[_ >> 2] = r[m]);
             }
     }
     function c(e, t, n, r, i, o, a, s) {
         var l = {
             ctype: 0 + 2 * (1 != r) + 4 * (0 != i),
             depth: o,
-            frames: []
+            frames: [],
         };
         Date.now();
         for (var c = (r + i) * o, f = c * t, _ = 0; _ < e.length; _++)
@@ -674,15 +810,15 @@ var t = (function () {
                     x: 0,
                     y: 0,
                     width: t,
-                    height: n
+                    height: n,
                 },
                 img: new Uint8Array(e[_]),
                 blend: 0,
                 dispose: 1,
                 bpp: Math.ceil(c / 8),
-                bpl: Math.ceil(f / 8)
+                bpl: Math.ceil(f / 8),
             });
-        return (d(l, 0, !0), u(l, t, n, a, s));
+        return d(l, 0, !0), u(l, t, n, a, s);
     }
     function u(e, t, r, o, a) {
         null == a && (a = {});
@@ -695,46 +831,108 @@ var t = (function () {
             _ = e.frames.length > 1,
             p = !1,
             h = 33 + 20 * !!_;
-        if ((null != a.sRGB && (h += 13), null != a.pHYs && (h += 21), null != a.iCCP && (h += 21 + (s = pako.deflate(a.iCCP)).length + 4), 3 == e.ctype)) {
+        if (
+            (null != a.sRGB && (h += 13),
+            null != a.pHYs && (h += 21),
+            null != a.iCCP && (h += 21 + (s = pako.deflate(a.iCCP)).length + 4),
+            3 == e.ctype)
+        ) {
             for (var m = e.plte.length, g = 0; g < m; g++) e.plte[g] >>> 24 != 255 && (p = !0);
             h += 8 + 3 * m + 4 + (p ? 8 + +m + 4 : 0);
         }
         for (var E = 0; E < e.frames.length; E++) {
             var b = e.frames[E];
-            (_ && (h += 38), (h += b.cimg.length + 12), 0 != E && (h += 4));
+            _ && (h += 38), (h += b.cimg.length + 12), 0 != E && (h += 4);
         }
         for (var y = new Uint8Array((h += 12)), O = [137, 80, 78, 71, 13, 10, 26, 10], g = 0; g < 8; g++) y[g] = O[g];
-        if ((c(y, f, 13), d(y, (f += 4), 'IHDR'), c(y, (f += 4), t), c(y, (f += 4), r), (y[(f += 4)] = e.depth), (y[++f] = e.ctype), (y[++f] = 0), (y[++f] = 0), (y[++f] = 0), c(y, ++f, l(y, f - 17, 17)), (f += 4), null != a.sRGB && (c(y, f, 1), d(y, (f += 4), 'sRGB'), (y[(f += 4)] = a.sRGB), c(y, ++f, l(y, f - 5, 5)), (f += 4)), null != a.iCCP)) {
+        if (
+            (c(y, f, 13),
+            d(y, (f += 4), "IHDR"),
+            c(y, (f += 4), t),
+            c(y, (f += 4), r),
+            (y[(f += 4)] = e.depth),
+            (y[++f] = e.ctype),
+            (y[++f] = 0),
+            (y[++f] = 0),
+            (y[++f] = 0),
+            c(y, ++f, l(y, f - 17, 17)),
+            (f += 4),
+            null != a.sRGB &&
+                (c(y, f, 1), d(y, (f += 4), "sRGB"), (y[(f += 4)] = a.sRGB), c(y, ++f, l(y, f - 5, 5)), (f += 4)),
+            null != a.iCCP)
+        ) {
             var v = 13 + s.length;
-            (c(y, f, v), d(y, (f += 4), 'iCCP'), d(y, (f += 4), 'ICC profile'), (f += 11), (f += 2), y.set(s, f), c(y, (f += s.length), l(y, f - (v + 4), v + 4)), (f += 4));
+            c(y, f, v),
+                d(y, (f += 4), "iCCP"),
+                d(y, (f += 4), "ICC profile"),
+                (f += 11),
+                (f += 2),
+                y.set(s, f),
+                c(y, (f += s.length), l(y, f - (v + 4), v + 4)),
+                (f += 4);
         }
-        if ((null != a.pHYs && (c(y, f, 9), d(y, (f += 4), 'pHYs'), c(y, (f += 4), a.pHYs[0]), c(y, (f += 4), a.pHYs[1]), (y[(f += 4)] = a.pHYs[2]), c(y, ++f, l(y, f - 13, 13)), (f += 4)), _ && (c(y, f, 8), d(y, (f += 4), 'acTL'), c(y, (f += 4), e.frames.length), c(y, (f += 4), null != a.loop ? a.loop : 0), c(y, (f += 4), l(y, f - 12, 12)), (f += 4)), 3 == e.ctype)) {
+        if (
+            (null != a.pHYs &&
+                (c(y, f, 9),
+                d(y, (f += 4), "pHYs"),
+                c(y, (f += 4), a.pHYs[0]),
+                c(y, (f += 4), a.pHYs[1]),
+                (y[(f += 4)] = a.pHYs[2]),
+                c(y, ++f, l(y, f - 13, 13)),
+                (f += 4)),
+            _ &&
+                (c(y, f, 8),
+                d(y, (f += 4), "acTL"),
+                c(y, (f += 4), e.frames.length),
+                c(y, (f += 4), null != a.loop ? a.loop : 0),
+                c(y, (f += 4), l(y, f - 12, 12)),
+                (f += 4)),
+            3 == e.ctype)
+        ) {
             var m = e.plte.length;
-            (c(y, f, 3 * m), d(y, (f += 4), 'PLTE'), (f += 4));
+            c(y, f, 3 * m), d(y, (f += 4), "PLTE"), (f += 4);
             for (var g = 0; g < m; g++) {
                 var I = 3 * g,
                     T = e.plte[g],
                     S = 255 & T,
                     A = (T >>> 8) & 255,
                     N = (T >>> 16) & 255;
-                ((y[f + I + 0] = S), (y[f + I + 1] = A), (y[f + I + 2] = N));
+                (y[f + I + 0] = S), (y[f + I + 1] = A), (y[f + I + 2] = N);
             }
             if ((c(y, (f += 3 * m), l(y, f - 3 * m - 4, 3 * m + 4)), (f += 4), p)) {
-                (c(y, f, m), d(y, (f += 4), 'tRNS'), (f += 4));
+                c(y, f, m), d(y, (f += 4), "tRNS"), (f += 4);
                 for (var g = 0; g < m; g++) y[f + g] = (e.plte[g] >>> 24) & 255;
-                (c(y, (f += m), l(y, f - m - 4, m + 4)), (f += 4));
+                c(y, (f += m), l(y, f - m - 4, m + 4)), (f += 4);
             }
         }
         for (var C = 0, E = 0; E < e.frames.length; E++) {
             var b = e.frames[E];
-            _ && (c(y, f, 26), d(y, (f += 4), 'fcTL'), c(y, (f += 4), C++), c(y, (f += 4), b.rect.width), c(y, (f += 4), b.rect.height), c(y, (f += 4), b.rect.x), c(y, (f += 4), b.rect.y), u(y, (f += 4), o[E]), u(y, (f += 2), 1000), (y[(f += 2)] = b.dispose), (y[++f] = b.blend), c(y, ++f, l(y, f - 30, 30)), (f += 4));
+            _ &&
+                (c(y, f, 26),
+                d(y, (f += 4), "fcTL"),
+                c(y, (f += 4), C++),
+                c(y, (f += 4), b.rect.width),
+                c(y, (f += 4), b.rect.height),
+                c(y, (f += 4), b.rect.x),
+                c(y, (f += 4), b.rect.y),
+                u(y, (f += 4), o[E]),
+                u(y, (f += 2), 1000),
+                (y[(f += 2)] = b.dispose),
+                (y[++f] = b.blend),
+                c(y, ++f, l(y, f - 30, 30)),
+                (f += 4));
             var R = b.cimg,
                 m = R.length;
             c(y, f, m + 4 * (0 != E));
             var P = (f += 4);
-            (d(y, f, 0 == E ? 'IDAT' : 'fdAT'), (f += 4), 0 != E && (c(y, f, C++), (f += 4)), y.set(R, f), c(y, (f += m), l(y, P, f - P)), (f += 4));
+            d(y, f, 0 == E ? "IDAT" : "fdAT"),
+                (f += 4),
+                0 != E && (c(y, f, C++), (f += 4)),
+                y.set(R, f),
+                c(y, (f += m), l(y, P, f - P)),
+                (f += 4);
         }
-        return (c(y, f, 0), d(y, (f += 4), 'IEND'), c(y, (f += 4), l(y, f - 4, 4)), (f += 4), y.buffer);
+        return c(y, f, 0), d(y, (f += 4), "IEND"), c(y, (f += 4), l(y, f - 4, 4)), (f += 4), y.buffer;
     }
     function d(e, t, n) {
         for (var r = 0; r < e.frames.length; r++) {
@@ -745,7 +943,12 @@ var t = (function () {
         }
     }
     function f(e, t, n, r, i) {
-        for (var o = i[0], a = i[1], s = i[2], c = i[3], u = i[4], d = i[5], f = 6, p = 8, h = 255, m = 0; m < e.length; m++) for (var g = new Uint8Array(e[m]), b = g.length, y = 0; y < b; y += 4) h &= g[y + 3];
+        for (
+            var o = i[0], a = i[1], s = i[2], c = i[3], u = i[4], d = i[5], f = 6, p = 8, h = 255, m = 0;
+            m < e.length;
+            m++
+        )
+            for (var g = new Uint8Array(e[m]), b = g.length, y = 0; y < b; y += 4) h &= g[y + 3];
         var O = 255 != h,
             v = _(e, t, n, o, a, s),
             I = {},
@@ -760,7 +963,7 @@ var t = (function () {
                     w = new Uint8Array(N.inds.buffer, C >> 2, P >> 2);
                 S.push(w);
                 var L = new Uint8Array(N.abuf, C, P);
-                (d && l(R.img, R.rect.width, R.rect.height, T, L, w), R.img.set(L), (C += P));
+                d && l(R.img, R.rect.width, R.rect.height, T, L, w), R.img.set(L), (C += P);
             }
         } else
             for (var m = 0; m < v.length; m++) {
@@ -800,22 +1003,22 @@ var t = (function () {
                     else if (2 == p) for (var K = 0; K < M; K++) V[y + (K >> 2)] |= H[W + K] << (6 - (3 & K) * 2);
                     else if (1 == p) for (var K = 0; K < M; K++) V[y + (K >> 3)] |= H[W + K] << (7 - (7 & K) * 1);
                 }
-                ((B = V), (f = 3), (F = 1));
+                (B = V), (f = 3), (F = 1);
             } else if (!1 == O && 1 == v.length) {
                 for (var V = new Uint8Array(M * G * 3), z = M * G, y = 0; y < z; y++) {
                     var q = 3 * y,
                         X = 4 * y;
-                    ((V[q] = B[X]), (V[q + 1] = B[X + 1]), (V[q + 2] = B[X + 2]));
+                    (V[q] = B[X]), (V[q + 1] = B[X + 1]), (V[q + 2] = B[X + 2]);
                 }
-                ((B = V), (f = 2), (F = 3), (Z = 3 * M));
+                (B = V), (f = 2), (F = 3), (Z = 3 * M);
             }
-            ((R.img = B), (R.bpl = Z), (R.bpp = F));
+            (R.img = B), (R.bpl = Z), (R.bpp = F);
         }
         return {
             ctype: f,
             depth: p,
             plte: T,
-            frames: v
+            frames: v,
         };
     }
     function _(t, n, r, i, o, a) {
@@ -829,38 +1032,52 @@ var t = (function () {
                 g = r,
                 E = +!!i;
             if (0 != l) {
-                for (var b = a || i || 1 == l || 0 != s[l - 2].dispose ? 1 : 2, y = 0, O = 1000000000, v = 0; v < b; v++) {
-                    for (var I = new Uint8Array(t[l - 1 - v]), T = new Uint32Array(t[l - 1 - v]), S = n, A = r, N = -1, C = -1, R = 0; R < r; R++)
+                for (
+                    var b = a || i || 1 == l || 0 != s[l - 2].dispose ? 1 : 2, y = 0, O = 1000000000, v = 0;
+                    v < b;
+                    v++
+                ) {
+                    for (
+                        var I = new Uint8Array(t[l - 1 - v]),
+                            T = new Uint32Array(t[l - 1 - v]),
+                            S = n,
+                            A = r,
+                            N = -1,
+                            C = -1,
+                            R = 0;
+                        R < r;
+                        R++
+                    )
                         for (var P = 0; P < n; P++) {
                             var w = R * n + P;
                             d[w] != T[w] && (P < S && (S = P), P > N && (N = P), R < A && (A = R), R > C && (C = R));
                         }
-                    (-1 == N && (S = A = N = C = 0), o && ((1 & S) == 1 && S--, (1 & A) == 1 && A--));
+                    -1 == N && (S = A = N = C = 0), o && ((1 & S) == 1 && S--, (1 & A) == 1 && A--);
                     var D = (N - S + 1) * (C - A + 1);
                     D < O && ((O = D), (y = v), (f = S), (_ = A), (m = N - S + 1), (g = C - A + 1));
                 }
                 var I = new Uint8Array(t[l - 1 - y]);
-                (1 == y && (s[l - 1].dispose = 2),
+                1 == y && (s[l - 1].dispose = 2),
                     e(I, n, r, (c = new Uint8Array(m * g * 4)), m, g, -f, -_, 0),
                     1 == (E = +!!e(u, n, r, c, m, g, -f, -_, 3))
                         ? h(u, n, r, c, {
                               x: f,
                               y: _,
                               width: m,
-                              height: g
+                              height: g,
                           })
-                        : e(u, n, r, c, m, g, -f, -_, 0));
+                        : e(u, n, r, c, m, g, -f, -_, 0);
             } else c = u.slice(0);
             s.push({
                 rect: {
                     x: f,
                     y: _,
                     width: m,
-                    height: g
+                    height: g,
                 },
                 img: c,
                 blend: E,
-                dispose: 0
+                dispose: 0,
             });
         }
         if (i)
@@ -877,9 +1094,9 @@ var t = (function () {
                             x: k,
                             y: j,
                             width: U - k,
-                            height: G - j
+                            height: G - j,
                         };
-                    ((s[l - 1].dispose = 1), l - 1 != 0 && p(t, n, r, s, l - 1, B, o), p(t, n, r, s, l, B, o));
+                    (s[l - 1].dispose = 1), l - 1 != 0 && p(t, n, r, s, l - 1, B, o), p(t, n, r, s, l, B, o);
                 }
             }
         var Z = 0;
@@ -891,24 +1108,46 @@ var t = (function () {
         return s;
     }
     function p(t, n, r, i, o, a, s) {
-        for (var l = Uint8Array, c = Uint32Array, u = new l(t[o - 1]), d = new c(t[o - 1]), f = o + 1 < t.length ? new l(t[o + 1]) : null, _ = new l(t[o]), p = new c(_.buffer), m = n, g = r, E = -1, b = -1, y = 0; y < a.height; y++)
+        for (
+            var l = Uint8Array,
+                c = Uint32Array,
+                u = new l(t[o - 1]),
+                d = new c(t[o - 1]),
+                f = o + 1 < t.length ? new l(t[o + 1]) : null,
+                _ = new l(t[o]),
+                p = new c(_.buffer),
+                m = n,
+                g = r,
+                E = -1,
+                b = -1,
+                y = 0;
+            y < a.height;
+            y++
+        )
             for (var O = 0; O < a.width; O++) {
                 var v = a.x + O,
                     I = a.y + y,
                     T = I * n + v,
                     S = p[T];
-                0 == S || (0 == i[o - 1].dispose && d[T] == S && (null == f || 0 != f[4 * T + 3])) || (v < m && (m = v), v > E && (E = v), I < g && (g = I), I > b && (b = I));
+                0 == S ||
+                    (0 == i[o - 1].dispose && d[T] == S && (null == f || 0 != f[4 * T + 3])) ||
+                    (v < m && (m = v), v > E && (E = v), I < g && (g = I), I > b && (b = I));
             }
-        (-1 == E && (m = g = E = b = 0),
+        -1 == E && (m = g = E = b = 0),
             s && ((1 & m) == 1 && m--, (1 & g) == 1 && g--),
             (a = {
                 x: m,
                 y: g,
                 width: E - m + 1,
-                height: b - g + 1
-            }));
+                height: b - g + 1,
+            });
         var A = i[o];
-        ((A.rect = a), (A.blend = 1), (A.img = new Uint8Array(a.width * a.height * 4)), 0 == i[o - 1].dispose ? (e(u, n, r, A.img, a.width, a.height, -a.x, -a.y, 0), h(_, n, r, A.img, a)) : e(_, n, r, A.img, a.width, a.height, -a.x, -a.y, 0));
+        (A.rect = a),
+            (A.blend = 1),
+            (A.img = new Uint8Array(a.width * a.height * 4)),
+            0 == i[o - 1].dispose
+                ? (e(u, n, r, A.img, a.width, a.height, -a.x, -a.y, 0), h(_, n, r, A.img, a))
+                : e(_, n, r, A.img, a.width, a.height, -a.x, -a.y, 0);
     }
     function h(t, n, r, i, o) {
         e(t, n, r, i, o.width, o.height, -o.x, -o.y, 2);
@@ -916,7 +1155,7 @@ var t = (function () {
     function m(e, t, n, r, i, o, a) {
         var s = [],
             l = [0, 1, 2, 3, 4];
-        (-1 != o ? (l = [o]) : (t * r > 500000 || 1 == n) && (l = [0]), a && (f = { level: 0 }));
+        -1 != o ? (l = [o]) : (t * r > 500000 || 1 == n) && (l = [0]), a && (f = { level: 0 });
         var c = i.length > 10000000 && null != window.UZIP ? window.UZIP : pako;
         Date.now();
         for (var u = 0; u < l.length; u++) {
@@ -948,24 +1187,39 @@ var t = (function () {
             }
             if (4 == a) {
                 for (var c = 0; c < o; c++) e[l + c] = (t[s + c] + 256 - r(0, t[s + c - i], 0)) & 255;
-                for (var c = o; c < i; c++) e[l + c] = (t[s + c] + 256 - r(t[s + c - o], t[s + c - i], t[s + c - o - i])) & 255;
+                for (var c = o; c < i; c++)
+                    e[l + c] = (t[s + c] + 256 - r(t[s + c - o], t[s + c - i], t[s + c - o - i])) & 255;
             }
         }
     }
     function E(e, t, n) {
         Date.now();
-        for (var r = new Uint8Array(e), i = r.slice(0), o = new Uint32Array(i.buffer), a = I(i, t), s = a[0], l = a[1], c = l.length, u = new Uint32Array(c), d = new Uint8Array(u.buffer), f = 0; f < c; f++) u[f] = l[f].est.rgba;
+        for (
+            var r = new Uint8Array(e),
+                i = r.slice(0),
+                o = new Uint32Array(i.buffer),
+                a = I(i, t),
+                s = a[0],
+                l = a[1],
+                c = l.length,
+                u = new Uint32Array(c),
+                d = new Uint8Array(u.buffer),
+                f = 0;
+            f < c;
+            f++
+        )
+            u[f] = l[f].est.rgba;
         var _,
             p = r.length,
             h = new Uint8Array(p >> 2);
-        if (c <= 60) (v(r, h, d), b(h, o, u));
+        if (c <= 60) v(r, h, d), b(h, o, u);
         else if (r.length < 32000000)
             for (var f = 0; f < p; f += 4) {
                 var m = r[f] * (1 / 255),
                     g = r[f + 1] * (1 / 255),
                     E = r[f + 2] * (1 / 255),
                     O = r[f + 3] * (1 / 255);
-                ((_ = T(s, m, g, E, O)), (h[f >> 2] = _.ind), (o[f >> 2] = _.est.rgba));
+                (_ = T(s, m, g, E, O)), (h[f >> 2] = _.ind), (o[f >> 2] = _.est.rgba);
             }
         else
             for (var f = 0; f < p; f += 4) {
@@ -974,7 +1228,7 @@ var t = (function () {
                     E = r[f + 2] * (1 / 255),
                     O = r[f + 3] * (1 / 255);
                 for (_ = s; _.left; ) _ = 0 >= S(_.est, m, g, E, O) ? _.left : _.right;
-                ((h[f >> 2] = _.ind), (o[f >> 2] = _.est.rgba));
+                (h[f >> 2] = _.ind), (o[f >> 2] = _.est.rgba);
             }
         if (n || r.length * c < 10 * 4000000) {
             for (var A = 1000000000, f = 0; f < 10; f++) {
@@ -988,26 +1242,30 @@ var t = (function () {
         return {
             abuf: i.buffer,
             inds: h,
-            plte: l
+            plte: l,
         };
     }
     function b(e, t, n) {
         for (var r = 0; r < e.length; r++) t[r] = n[e[r]];
     }
     function y(e, t, n) {
-        return (O(e, t, n), v(e, t, n));
+        return O(e, t, n), v(e, t, n);
     }
     function O(e, t, n) {
         for (var r = n.length >>> 2, i = new Uint32Array(4 * r), o = new Uint32Array(r), a = 0; a < e.length; a += 4) {
             var s = t[a >>> 2],
                 l = 4 * s;
-            (o[s]++, (i[l] += e[a]), (i[l + 1] += e[a + 1]), (i[l + 2] += e[a + 2]), (i[l + 3] += e[a + 3]));
+            o[s]++, (i[l] += e[a]), (i[l + 1] += e[a + 1]), (i[l + 2] += e[a + 2]), (i[l + 3] += e[a + 3]);
         }
         for (var a = 0; a < n.length; a++) n[a] = Math.round(i[a] / o[a >>> 2]);
     }
     function v(e, t, n) {
         for (var r = 0, i = n.length >>> 2, o = [], a = 0; a < i; a++) {
-            for (var s = 4 * a, l = n[s], c = n[s + 1], u = n[s + 2], d = n[s + 3], f = 0, _ = 1000000000, p = 0; p < i; p++)
+            for (
+                var s = 4 * a, l = n[s], c = n[s + 1], u = n[s + 2], d = n[s + 3], f = 0, _ = 1000000000, p = 0;
+                p < i;
+                p++
+            )
                 if (a != p) {
                     var h = 4 * p,
                         m = l - n[h],
@@ -1017,7 +1275,7 @@ var t = (function () {
                         y = m * m + g * g + E * E + b * b;
                     y < _ && ((_ = y), (f = p));
                 }
-            ((o[a] = 0.5 * Math.sqrt(_)), (o[a] = o[a] * o[a]));
+            (o[a] = 0.5 * Math.sqrt(_)), (o[a] = o[a] * o[a]);
         }
         for (var a = 0; a < e.length; a += 4) {
             var l = e[a],
@@ -1033,11 +1291,11 @@ var t = (function () {
                 _ = m * m + g * g + E * E + b * b;
             if (_ > o[f])
                 for (var p = 0; p < i; p++) {
-                    ((m = l - n[(s = 4 * p)]), (g = c - n[s + 1]));
+                    (m = l - n[(s = 4 * p)]), (g = c - n[s + 1]);
                     var y = m * m + g * g + (E = u - n[s + 2]) * E + (b = d - n[s + 3]) * b;
                     if (y < _ && ((_ = y), (f = p), _ < o[p])) break;
                 }
-            ((t[a >>> 2] = f), (r += _));
+            (t[a >>> 2] = f), (r += _);
         }
         return r / (e.length >>> 2);
     }
@@ -1051,9 +1309,9 @@ var t = (function () {
                 est: null,
                 tdst: 0,
                 left: null,
-                right: null
+                right: null,
             };
-        ((i.bst = R(e, i.i0, i.i1)), (i.est = P(i.bst)));
+        (i.bst = R(e, i.i0, i.i1)), (i.est = P(i.bst));
         for (var o = [i]; o.length < t; ) {
             for (var a = 0, s = 0, l = 0; l < o.length; l++) o[l].est.L > a && ((a = o[l].est.L), (s = l));
             if (a < n) break;
@@ -1070,9 +1328,9 @@ var t = (function () {
                 est: null,
                 tdst: 0,
                 left: null,
-                right: null
+                right: null,
             };
-            ((d.bst = R(e, d.i0, d.i1)), (d.est = P(d.bst)));
+            (d.bst = R(e, d.i0, d.i1)), (d.est = P(d.bst));
             var f = {
                 i0: u,
                 i1: c.i1,
@@ -1080,16 +1338,16 @@ var t = (function () {
                 est: null,
                 tdst: 0,
                 left: null,
-                right: null
+                right: null,
             };
             f.bst = {
                 R: [],
                 m: [],
-                N: c.bst.N - d.bst.N
+                N: c.bst.N - d.bst.N,
             };
             for (var l = 0; l < 16; l++) f.bst.R[l] = c.bst.R[l] - d.bst.R[l];
             for (var l = 0; l < 4; l++) f.bst.m[l] = c.bst.m[l] - d.bst.m[l];
-            ((f.est = P(f.bst)), (c.left = d), (c.right = f), (o[s] = d), o.push(f));
+            (f.est = P(f.bst)), (c.left = d), (c.right = f), (o[s] = d), o.push(f);
         }
         o.sort(function (e, t) {
             return t.bst.N - e.bst.N;
@@ -1098,7 +1356,7 @@ var t = (function () {
         return [i, o];
     }
     function T(e, t, n, r, i) {
-        if (null == e.left) return ((e.tdst = A(e.est.q, t, n, r, i)), e);
+        if (null == e.left) return (e.tdst = A(e.est.q, t, n, r, i)), e;
         var o = S(e.est, t, n, r, i),
             a = e.left,
             s = e.right;
@@ -1125,7 +1383,7 @@ var t = (function () {
             for (; C(e, r, i) > o; ) r -= 4;
             if (n >= r) break;
             var a = t[n >> 2];
-            ((t[n >> 2] = t[r >> 2]), (t[r >> 2] = a), (n += 4), (r -= 4));
+            (t[n >> 2] = t[r >> 2]), (t[r >> 2] = a), (n += 4), (r -= 4);
         }
         for (; C(e, n, i) > o; ) n -= 4;
         return n + 4;
@@ -1134,12 +1392,29 @@ var t = (function () {
         return e[t] * n[0] + e[t + 1] * n[1] + e[t + 2] * n[2] + e[t + 3] * n[3];
     }
     function R(e, t, n) {
-        for (var r = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], i = [0, 0, 0, 0], o = (n - t) >> 2, a = t; a < n; a += 4) {
+        for (
+            var r = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], i = [0, 0, 0, 0], o = (n - t) >> 2, a = t;
+            a < n;
+            a += 4
+        ) {
             var s = e[a] * (1 / 255),
                 l = e[a + 1] * (1 / 255),
                 c = e[a + 2] * (1 / 255),
                 u = e[a + 3] * (1 / 255);
-            ((i[0] += s), (i[1] += l), (i[2] += c), (i[3] += u), (r[0] += s * s), (r[1] += s * l), (r[2] += s * c), (r[3] += s * u), (r[5] += l * l), (r[6] += l * c), (r[7] += l * u), (r[10] += c * c), (r[11] += c * u), (r[15] += u * u));
+            (i[0] += s),
+                (i[1] += l),
+                (i[2] += c),
+                (i[3] += u),
+                (r[0] += s * s),
+                (r[1] += s * l),
+                (r[2] += s * c),
+                (r[3] += s * u),
+                (r[5] += l * l),
+                (r[6] += l * c),
+                (r[7] += l * u),
+                (r[10] += c * c),
+                (r[11] += c * u),
+                (r[15] += u * u);
         }
         return (
             (r[4] = r[1]),
@@ -1151,7 +1426,7 @@ var t = (function () {
             {
                 R: r,
                 m: i,
-                N: o
+                N: o,
             }
         );
     }
@@ -1164,13 +1439,40 @@ var t = (function () {
             a = n[2],
             s = n[3],
             l = 0 == r ? 0 : 1 / r,
-            c = [t[0] - i * i * l, t[1] - i * o * l, t[2] - i * a * l, t[3] - i * s * l, t[4] - o * i * l, t[5] - o * o * l, t[6] - o * a * l, t[7] - o * s * l, t[8] - a * i * l, t[9] - a * o * l, t[10] - a * a * l, t[11] - a * s * l, t[12] - s * i * l, t[13] - s * o * l, t[14] - s * a * l, t[15] - s * s * l],
+            c = [
+                t[0] - i * i * l,
+                t[1] - i * o * l,
+                t[2] - i * a * l,
+                t[3] - i * s * l,
+                t[4] - o * i * l,
+                t[5] - o * o * l,
+                t[6] - o * a * l,
+                t[7] - o * s * l,
+                t[8] - a * i * l,
+                t[9] - a * o * l,
+                t[10] - a * a * l,
+                t[11] - a * s * l,
+                t[12] - s * i * l,
+                t[13] - s * o * l,
+                t[14] - s * a * l,
+                t[15] - s * s * l,
+            ],
             u = c,
             d = w,
             f = [Math.random(), Math.random(), Math.random(), Math.random()],
             _ = 0,
             p = 0;
-        if (0 != r) for (var h = 0; h < 16 && ((f = d.multVec(u, f)), (p = Math.sqrt(d.dot(f, f))), (f = d.sml(1 / p, f)), !(0 != h && 1e-9 > Math.abs(p - _))); h++) _ = p;
+        if (0 != r)
+            for (
+                var h = 0;
+                h < 16 &&
+                ((f = d.multVec(u, f)),
+                (p = Math.sqrt(d.dot(f, f))),
+                (f = d.sml(1 / p, f)),
+                !(0 != h && 1e-9 > Math.abs(p - _)));
+                h++
+            )
+                _ = p;
         var m = [i * l, o * l, a * l, s * l],
             g = d.dot(d.sml(255, m), f);
         return {
@@ -1180,19 +1482,29 @@ var t = (function () {
             L: _,
             eMq255: g,
             eMq: d.dot(f, m),
-            rgba: ((Math.round(255 * m[3]) << 24) | (Math.round(255 * m[2]) << 16) | (Math.round(255 * m[1]) << 8) | (Math.round(255 * m[0]) << 0)) >>> 0
+            rgba:
+                ((Math.round(255 * m[3]) << 24) |
+                    (Math.round(255 * m[2]) << 16) |
+                    (Math.round(255 * m[1]) << 8) |
+                    (Math.round(255 * m[0]) << 0)) >>>
+                0,
         };
     }
     var w = {
         multVec: function (e, t) {
-            return [e[0] * t[0] + e[1] * t[1] + e[2] * t[2] + e[3] * t[3], e[4] * t[0] + e[5] * t[1] + e[6] * t[2] + e[7] * t[3], e[8] * t[0] + e[9] * t[1] + e[10] * t[2] + e[11] * t[3], e[12] * t[0] + e[13] * t[1] + e[14] * t[2] + e[15] * t[3]];
+            return [
+                e[0] * t[0] + e[1] * t[1] + e[2] * t[2] + e[3] * t[3],
+                e[4] * t[0] + e[5] * t[1] + e[6] * t[2] + e[7] * t[3],
+                e[8] * t[0] + e[9] * t[1] + e[10] * t[2] + e[11] * t[3],
+                e[12] * t[0] + e[13] * t[1] + e[14] * t[2] + e[15] * t[3],
+            ];
         },
         dot: function (e, t) {
             return e[0] * t[0] + e[1] * t[1] + e[2] * t[2] + e[3] * t[3];
         },
         sml: function (e, t) {
             return [e * t[0], e * t[1], e * t[2], e * t[3]];
-        }
+        },
     };
     function D(e) {
         for (var t = 0, n = 0; n < e.length; n++) t += e[n].byteLength;
@@ -1202,16 +1514,16 @@ var t = (function () {
                     c = o[s + 1],
                     u = o[s + 2],
                     d = o[s + 3];
-                (0 == d && (l = c = u = 0), (r[i + s] = l), (r[i + s + 1] = c), (r[i + s + 2] = u), (r[i + s + 3] = d));
+                0 == d && (l = c = u = 0), (r[i + s] = l), (r[i + s + 1] = c), (r[i + s + 2] = u), (r[i + s + 3] = d);
             }
             i += a;
         }
         return r.buffer;
     }
-    ((t.encode = function (e, t, n, r, i, o, a) {
-        (null == r && (r = 0), null == a && (a = !1));
+    (t.encode = function (e, t, n, r, i, o, a) {
+        null == r && (r = 0), null == a && (a = !1);
         var s = f(e, t, n, r, [!1, !1, !1, 0, a, !1]);
-        return (d(s, -1), u(s, t, n, i, o));
+        return d(s, -1), u(s, t, n, i, o);
     }),
         (t.encodeLL = c),
         (t.encode.compress = f),
@@ -1219,6 +1531,6 @@ var t = (function () {
         (t.quantize = E),
         (t.quantize.findNearest = v),
         (t.quantize.getKDtree = I),
-        (t.quantize.getNearest = T));
+        (t.quantize.getNearest = T);
 })(),
-    (e.exports = t));
+    (e.exports = t);

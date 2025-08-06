@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => i }), n(388685), n(642613));
+n.d(t, { Z: () => i }), n(388685), n(642613);
 var r = n(73800);
 function i(e) {
     var t;
@@ -16,15 +16,17 @@ function i(e) {
             breadcrumbsData: n
                 .filter((e) => {
                     var t;
-                    return null != e.key && (null == e || null == (t = e.options) ? void 0 : t.useBreadcrumbLabel) != null;
+                    return (
+                        null != e.key && (null == e || null == (t = e.options) ? void 0 : t.useBreadcrumbLabel) != null
+                    );
                 })
                 .map((e) => ({
                     id: e.key,
                     useBreadcrumbLabel: e.options.useBreadcrumbLabel,
-                    sectionHeaderText: e.options.sectionHeaderText
+                    sectionHeaderText: e.options.sectionHeaderText,
                 }))
                 .sort((e, t) => (null != i ? i.indexOf(e.id) - i.indexOf(t.id) : 0)),
-            previousStepRef: s
+            previousStepRef: s,
         }
     );
 }

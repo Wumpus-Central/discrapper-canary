@@ -15,9 +15,9 @@ function s(e) {
                     a = null != e ? n.getVoiceState(e.getGuildId(), s.getId()) : null;
                 return {
                     selfDeaf: r.isSelfDeaf(),
-                    deaf: null != (t = null == a ? void 0 : a.deaf) && t
+                    deaf: null != (t = null == a ? void 0 : a.deaf) && t,
                 };
             })(e, o.Z, l.Z, i.default),
-        [e]
+        [e],
     );
 }

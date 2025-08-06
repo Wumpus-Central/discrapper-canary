@@ -18,15 +18,17 @@ function u(e) {
                         r,
                         o = {},
                         i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) ((t = i[r]), n.indexOf(t) >= 0 || (o[t] = e[t]));
+                    for (r = 0; r < i.length; r++) (t = i[r]), n.indexOf(t) >= 0 || (o[t] = e[t]);
                     return o;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) ((t = i[r]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]));
+                for (r = 0; r < i.length; r++)
+                    (t = i[r]),
+                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
             }
             return o;
-        })(e, ['onClick']);
+        })(e, ["onClick"]);
     let { parentAnalyticsLocation: u } = (0, i.ZP)();
     return (0, r.jsx)(
         a.Z,
@@ -34,36 +36,36 @@ function u(e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
                     r = Object.keys(t);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(t).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (n) {
                         var r;
-                        ((r = t[n]),
+                        (r = t[n]),
                             n in e
                                 ? Object.defineProperty(e, n, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[n] = r));
-                    }));
+                                : (e[n] = r);
+                    });
             }
             return e;
         })(
             {
                 label: c.intl.string(c.t.UKOtz8),
                 iconComponent: o.xhG,
-                tooltipPosition: 'bottom',
+                tooltipPosition: "bottom",
                 onClick: (e) => {
-                    ((0, l.v)(u, l.d.MORE), n(e));
-                }
+                    (0, l.v)(u, l.d.MORE), n(e);
+                },
             },
-            t
-        )
+            t,
+        ),
     );
 }

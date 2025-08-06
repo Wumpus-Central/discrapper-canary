@@ -6,9 +6,9 @@ var r = n(98405),
     l = n(683385);
 r(
     {
-        target: 'Promise',
+        target: "Promise",
         stat: !0,
-        forced: n(168527)
+        forced: n(168527),
     },
     {
         allSettled: function (e) {
@@ -21,17 +21,17 @@ r(
                         a = [],
                         s = 0,
                         c = 1;
-                    (l(e, function (e) {
+                    l(e, function (e) {
                         var o = s++,
                             l = !1;
-                        (c++,
+                        c++,
                             i(n, t, e).then(
                                 function (e) {
                                     !l &&
                                         ((l = !0),
                                         (a[o] = {
-                                            status: 'fulfilled',
-                                            value: e
+                                            status: "fulfilled",
+                                            value: e,
                                         }),
                                         --c || r(a));
                                 },
@@ -39,16 +39,16 @@ r(
                                     !l &&
                                         ((l = !0),
                                         (a[o] = {
-                                            status: 'rejected',
-                                            reason: e
+                                            status: "rejected",
+                                            reason: e,
                                         }),
                                         --c || r(a));
-                                }
-                            ));
+                                },
+                            );
                     }),
-                        --c || r(a));
+                        --c || r(a);
                 });
-            return (u.error && c(u.value), n.promise);
-        }
-    }
+            return u.error && c(u.value), n.promise;
+        },
+    },
 );

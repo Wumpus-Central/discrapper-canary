@@ -1,7 +1,7 @@
 n.d(t, {
     Cn: () => h,
     R6: () => g,
-    Ue: () => m
+    Ue: () => m,
 });
 var r = n(255367),
     i = n(73800),
@@ -21,7 +21,7 @@ let p = (e, t) => {
             user: s,
             channelId: t.id,
             guildId: t.guild_id,
-            messageId: e.id
+            messageId: e.id,
         }),
         p = (0, o.e7)([u.ZP, c.default], () => u.ZP.isMember(null == r ? void 0 : r.id, c.default.getId())),
         h = i.useCallback(() => {
@@ -31,7 +31,7 @@ let p = (e, t) => {
         guild: r,
         joinRequest: n,
         usernameHook: _,
-        guildNameClick: h
+        guildNameClick: h,
     };
 };
 function h(e) {
@@ -46,13 +46,13 @@ function h(e) {
         compact: a,
         children:
             null != f && null != h
-                ? _.intl.format(_.t['21R6Cg'], {
+                ? _.intl.format(_.t["21R6Cg"], {
                       username: f,
                       usernameHook: u(),
                       guildName: h,
-                      guildNameClick: d
+                      guildNameClick: d,
                   })
-                : _.intl.string(_.t['2VLV0d'])
+                : _.intl.string(_.t["2VLV0d"]),
     });
 }
 function m(e) {
@@ -67,13 +67,13 @@ function m(e) {
         compact: a,
         children:
             null != f && null != h
-                ? _.intl.format(_.t['Bz/QCw'], {
+                ? _.intl.format(_.t["Bz/QCw"], {
                       username: f,
                       usernameHook: u(),
                       guildName: h,
-                      guildNameClick: d
+                      guildNameClick: d,
                   })
-                : _.intl.string(_.t.FVF6qa)
+                : _.intl.string(_.t.FVF6qa),
     });
 }
 function g(e) {
@@ -92,8 +92,8 @@ function g(e) {
                       username: f,
                       usernameHook: u(),
                       guildName: h,
-                      guildNameClick: d
+                      guildNameClick: d,
                   })
-                : _.intl.string(_.t.BMlbEx)
+                : _.intl.string(_.t.BMlbEx),
     });
 }

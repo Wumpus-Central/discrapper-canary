@@ -8,7 +8,7 @@ var n = i(442837),
     d = i(144507),
     o = i(388032);
 let c = {
-    title: () => o.intl.string(o.t['KzCF//']),
+    title: () => o.intl.string(o.t["KzCF//"]),
     description: () => o.intl.string(o.t.xMW8FB),
     canCreateGuild: !1,
     useIsGuildSupported: () =>
@@ -24,9 +24,9 @@ let c = {
                     isGuildEligibleForRoleSubscriptions: (0, u.kT)(e.id),
                     isExpeditedMonetizationOnboardingGuild: (0, l.Rw)(e),
                     isUserInCreatorMonetizationEligibleCountry: (0, l.DB)(),
-                    shouldRestrictUpdatingRoleSubscriptionSettings: (0, r.cu)(e.id)
+                    shouldRestrictUpdatingRoleSubscriptionSettings: (0, r.cu)(e.id),
                 }),
             [],
-            n.pF
-        )
+            n.pF,
+        ),
 };

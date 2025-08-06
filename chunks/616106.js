@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,7 +28,7 @@ function _(e) {
         let e = l.Z.createFromServer(t);
         if (null == (0, u.Af)(e) || (null == (n = e.metadata) ? void 0 : n.ended_at) == null) return;
         let r = o()(e.metadata.ended_at);
-        o()().isBetween(r.clone().add(4, 'days'), r.clone().add(11, 'days')) && (f = !0);
+        o()().isBetween(r.clone().add(4, "days"), r.clone().add(11, "days")) && (f = !0);
     }
 }
 class p extends (r = a.ZP.Store) {
@@ -37,5 +37,5 @@ class p extends (r = a.ZP.Store) {
         return !(0, u.I5)(e) && f;
     }
 }
-d(p, 'displayName', 'SubscriptionRemindersStore');
+d(p, "displayName", "SubscriptionRemindersStore");
 let h = new p(s.Z, { BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: _ });

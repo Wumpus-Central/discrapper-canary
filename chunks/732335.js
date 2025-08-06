@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685), n(290780), n(539854));
+n.d(t, { Z: () => u }), n(388685), n(290780), n(539854);
 var i = n(255367),
     l = n(73800),
     r = n(481060),
@@ -17,18 +17,18 @@ function u(e) {
                 e.includes(g) || e.unshift(g),
                 e.map((e) => ({
                     label: (0, a.A)(e, !1),
-                    value: e
+                    value: e,
                 }))
             );
         }, [u, g]),
         p = l.useCallback(
             (e) => {
-                (n(e), h(null));
+                n(e), h(null);
             },
-            [n]
+            [n],
         ),
         f = l.useCallback((e) => {
-            if ('' === e) return void h(null);
+            if ("" === e) return void h(null);
             let t = [],
                 n = parseInt(e, 10);
             if (Number.isNaN(n)) return void h(null);
@@ -36,7 +36,7 @@ function u(e) {
             let i = n * s.Z.Seconds.MINUTE;
             i <= o.GI0 && t.push(i);
             let l = n * s.Z.Seconds.HOUR;
-            (l <= o.GI0 && t.push(l), h(t));
+            l <= o.GI0 && t.push(l), h(t);
         }, []),
         x = l.useCallback(() => {
             h(null);
@@ -48,6 +48,6 @@ function u(e) {
         onSearchChange: f,
         options: m,
         onBlur: x,
-        placeholder: c.intl.string(c.t.dBqQu7)
+        placeholder: c.intl.string(c.t.dBqQu7),
     });
 }

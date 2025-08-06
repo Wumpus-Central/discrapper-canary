@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(539854), n(583741), n(388685), n(642613));
+n.d(t, { Z: () => D }), n(539854), n(583741), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -33,79 +33,91 @@ function Z(e) {
 function T(e) {
     let { group: t, isOpen: n, toggleOpenedState: i } = e;
     return (0, r.jsx)(h.P3F, {
-        'aria-expanded': n,
+        "aria-expanded": n,
         onClick: i,
         className: o()(w.messagesGroupHeaderWrap, { [w.collapsed]: !n }),
         children: (0, r.jsxs)(h.Kqy, {
             gap: 4,
-            direction: 'horizontal',
-            align: 'center',
+            direction: "horizontal",
+            align: "center",
             children: [
                 (0, r.jsx)(h.X6q, {
-                    variant: 'text-sm/medium',
-                    color: 'text-secondary',
+                    variant: "text-sm/medium",
+                    color: "text-secondary",
                     className: w.messagesGroupHeader,
-                    children: (0, s.capitalize)(N.intl.string(x.Vv[t]).toLowerCase())
+                    children: (0, s.capitalize)(N.intl.string(x.Vv[t]).toLowerCase()),
                 }),
                 (0, r.jsx)(h.CJ0, {
-                    size: 'xxs',
-                    className: w.chevron
-                })
-            ]
-        })
+                    size: "xxs",
+                    className: w.chevron,
+                }),
+            ],
+        }),
     });
 }
 let A = [x.KZ.UNREAD, x.KZ.TODAY, x.KZ.YESTERDAY, x.KZ.OLDER];
 function R() {
     let { analyticsLocations: e } = (0, g.ZP)(f.Z.NOTIFICATIONS_INBOX);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: w.emptyStateContainer,
         children: (0, r.jsxs)(h.Kqy, {
             gap: 24,
-            align: 'center',
+            align: "center",
             children: [
                 (0, r.jsxs)(h.Kqy, {
                     gap: 16,
-                    align: 'center',
+                    align: "center",
                     children: [
                         (0, r.jsx)(h.xx7, {
-                            size: 'custom',
+                            size: "custom",
                             height: 40,
                             width: 40,
-                            color: h.TVs.colors.BACKGROUND_MOD_STRONG
+                            color: h.TVs.colors.BACKGROUND_MOD_STRONG,
                         }),
                         (0, r.jsx)(h.Text, {
-                            variant: 'text-sm/medium',
+                            variant: "text-sm/medium",
                             color: I.tPk.TEXT_MUTED,
-                            style: { textAlign: 'center' },
-                            children: N.intl.string(P.default['O+racX'])
-                        })
-                    ]
+                            style: { textAlign: "center" },
+                            children: N.intl.string(P.default["O+racX"]),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(d.zx, {
                     onClick: () => (0, j.j4)(e),
                     color: d.zx.Colors.PRIMARY,
                     style: { fontWeight: 600 },
-                    children: N.intl.string(P.default.klSpfn)
-                })
-            ]
-        })
+                    children: N.intl.string(P.default.klSpfn),
+                }),
+            ],
+        }),
     });
 }
 function D(e) {
-    let { messages: t, unreadMessages: n, loadMore: l, renderLoadingState: s, renderMessageGroup: d, scrollerClassName: f, className: g, listName: P, ignoreGrouping: N = !1 } = e,
+    let {
+            messages: t,
+            unreadMessages: n,
+            loadMore: l,
+            renderLoadingState: s,
+            renderMessageGroup: d,
+            scrollerClassName: f,
+            className: g,
+            listName: P,
+            ignoreGrouping: N = !1,
+        } = e,
         D = (0, y.fJ)(),
         L = i.useRef(null),
         M = (0, p.Z)(P, L),
-        { entrypoint: k, notificationCenterVariant: U } = _.Lk.useExperiment({ location: 'NotificationsInboxSidebarList' }),
+        { entrypoint: k, notificationCenterVariant: U } = _.Lk.useExperiment({
+            location: "NotificationsInboxSidebarList",
+        }),
         {
             isLoading: G,
             isLoadingComplete: B,
-            hasLoadedEver: V
+            hasLoadedEver: V,
         } = (0, u.cj)([v.Z], () => ({
             isLoading: v.Z.isLoading,
             isLoadingComplete: v.Z.isLoadingComplete,
-            hasLoadedEver: v.Z.hasLoadedEver
+            hasLoadedEver: v.Z.hasLoadedEver,
         })),
         F = !V && G,
         { messageCategoryOpenStates: H, toggleOpenState: z } = (0, C.Z)(),
@@ -114,19 +126,15 @@ function D(e) {
                 var e;
                 return null != (e = v.Z.getNotifyingChannelIds()) ? e : [];
             });
-            return (0, u.e7)(
-                [v.Z, m.ZP],
-                () => {
-                    let t = v.Z.getChannelInfoMap();
-                    for (let r of e) {
-                        var n;
-                        let e = t[r];
-                        if ((null == e || e.loadState === x.a7.UNLOADED) && null != (n = m.ZP.hasUnread(r)) && n) return !0;
-                    }
-                    return !1;
-                },
-                [e]
-            );
+            return (0, u.e7)([v.Z, m.ZP], () => {
+                let t = v.Z.getChannelInfoMap();
+                for (let r of e) {
+                    var n;
+                    let e = t[r];
+                    if ((null == e || e.loadState === x.a7.UNLOADED) && null != (n = m.ZP.hasUnread(r)) && n) return !0;
+                }
+                return !1;
+            }, [e]);
         })();
     i.useEffect(() => {
         function e() {
@@ -141,7 +149,7 @@ function D(e) {
             b.S.subscribe(I.CkL.SCROLL_PAGE_DOWN, t),
             b.S.subscribe(I.CkL.SCROLL_PAGE_UP, e),
             () => {
-                (b.S.unsubscribe(I.CkL.SCROLL_PAGE_DOWN, t), b.S.unsubscribe(I.CkL.SCROLL_PAGE_UP, e));
+                b.S.unsubscribe(I.CkL.SCROLL_PAGE_DOWN, t), b.S.unsubscribe(I.CkL.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
@@ -157,28 +165,36 @@ function D(e) {
                     [x.KZ.UNREAD]: [],
                     [x.KZ.TODAY]: [],
                     [x.KZ.YESTERDAY]: [],
-                    [x.KZ.OLDER]: []
+                    [x.KZ.OLDER]: [],
                 },
                 r = {
                     [x.KZ.UNREAD]: [],
                     [x.KZ.TODAY]: [],
                     [x.KZ.YESTERDAY]: [],
-                    [x.KZ.OLDER]: []
+                    [x.KZ.OLDER]: [],
                 },
                 i = {
                     [x.KZ.UNREAD]: {},
                     [x.KZ.TODAY]: {},
                     [x.KZ.YESTERDAY]: {},
-                    [x.KZ.OLDER]: {}
+                    [x.KZ.OLDER]: {},
                 };
             return (
                 (t.length > 0 || n.length > 0) &&
                     (a().each(n, (e) => {
-                        e.kind === x.fL.MENTION ? r[x.KZ.UNREAD].push(e) : e.channelId in i[x.KZ.UNREAD] ? i[x.KZ.UNREAD][e.channelId].push(e) : (i[x.KZ.UNREAD][e.channelId] = [e]);
+                        e.kind === x.fL.MENTION
+                            ? r[x.KZ.UNREAD].push(e)
+                            : e.channelId in i[x.KZ.UNREAD]
+                              ? i[x.KZ.UNREAD][e.channelId].push(e)
+                              : (i[x.KZ.UNREAD][e.channelId] = [e]);
                     }),
                     a().each(t, (e) => {
                         let t = (0, j.bl)(e);
-                        e.kind === x.fL.MENTION ? r[t].push(e) : e.channelId in i[t] ? i[t][e.channelId].push(e) : (i[t][e.channelId] = [e]);
+                        e.kind === x.fL.MENTION
+                            ? r[t].push(e)
+                            : e.channelId in i[t]
+                              ? i[t][e.channelId].push(e)
+                              : (i[t][e.channelId] = [e]);
                     }),
                     a().each(A, (t) => {
                         [...Object.values(i[t]).map((e) => e.reverse()), ...r[t].map((e) => [e])]
@@ -198,7 +214,7 @@ function D(e) {
                 X
                     ? e.push(s())
                     : q
-                      ? e.push((0, r.jsx)(R, {}, 'empty-state'))
+                      ? e.push((0, r.jsx)(R, {}, "empty-state"))
                       : N
                         ? (e.push(...n.map((e) => d([e], !0))), e.push(...t.map((e) => d([e], !1))))
                         : a().each(A, (t) => {
@@ -211,16 +227,16 @@ function D(e) {
                                               isOpen: H[t],
                                               toggleOpenedState: () => {
                                                   let e = H[t];
-                                                  (z(t),
+                                                  z(t),
                                                       (0, y.RZ)({
                                                           section: t,
                                                           enabled: !e,
-                                                          viewId: D
-                                                      }));
-                                              }
+                                                          viewId: D,
+                                                      });
+                                              },
                                           },
-                                          t
-                                      )
+                                          t,
+                                      ),
                                   ),
                                   H[t] && e.push(...Y[t].map((e) => d(e, t === x.KZ.UNREAD))));
                           }),
@@ -233,8 +249,26 @@ function D(e) {
         var e, t, n, r, i, l, o;
         if (X) return;
         let s = 0 === Y.UNREAD.length,
-            a = null != (o = null != (l = null != (i = null == (t = (e = Y).TODAY[0]) ? void 0 : t[0]) ? i : null == (n = e.YESTERDAY[0]) ? void 0 : n[0]) ? l : null == (r = e.OLDER[0]) ? void 0 : r[0]) ? o : null;
-        E.Z.setInboxReadState(s, (null == a ? void 0 : a.id) != null ? O.default.extractTimestamp(null == a ? void 0 : a.id) : null);
+            a =
+                null !=
+                (o =
+                    null !=
+                    (l =
+                        null != (i = null == (t = (e = Y).TODAY[0]) ? void 0 : t[0])
+                            ? i
+                            : null == (n = e.YESTERDAY[0])
+                              ? void 0
+                              : n[0])
+                        ? l
+                        : null == (r = e.OLDER[0])
+                          ? void 0
+                          : r[0])
+                    ? o
+                    : null;
+        E.Z.setInboxReadState(
+            s,
+            (null == a ? void 0 : a.id) != null ? O.default.extractTimestamp(null == a ? void 0 : a.id) : null,
+        );
     }, [Y, X]);
     let ee = (t.length > 0 || n.length > 0) && null != l && G;
     !(function (e) {
@@ -247,7 +281,7 @@ function D(e) {
         }, [o, l, t]);
     })({
         messagesByCategory: Y,
-        loadingInitial: F
+        loadingInitial: F,
     });
     let et = i.useCallback(() => {
         var e;
@@ -262,7 +296,7 @@ function D(e) {
         let e = Math.min(Math.max(2, et()), 20);
         return (0, r.jsx)(S.Z, {
             withHeader: !1,
-            size: e
+            size: e,
         });
     }, [et]);
     return (
@@ -272,13 +306,13 @@ function D(e) {
             messages: t,
             unreadMessages: n,
             messagesByCategory: Y,
-            viewId: D
+            viewId: D,
         }),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: o()(g, w.messagesPopoutWrap),
             onClick: Z,
             onDoubleClick: Z,
-            'aria-label': e['aria-label'],
+            "aria-label": e["aria-label"],
             children: (0, r.jsx)(c.bG, {
                 navigator: M,
                 children: (0, r.jsx)(c.SJ, {
@@ -296,56 +330,62 @@ function D(e) {
                                             r,
                                             i = {},
                                             l = Object.keys(e);
-                                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                         return i;
                                     })(e, t);
                                 if (Object.getOwnPropertySymbols) {
                                     var l = Object.getOwnPropertySymbols(e);
-                                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                                    for (r = 0; r < l.length; r++)
+                                        (n = l[r]),
+                                            !(t.indexOf(n) >= 0) &&
+                                                Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                (i[n] = e[n]);
                                 }
                                 return i;
-                            })(e, ['ref']);
+                            })(e, ["ref"]);
                         return (0, r.jsxs)(
                             h.Den,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })(
                                 {
                                     ref: (e) => {
                                         var t;
-                                        ((L.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
+                                        (L.current = e),
+                                            (i.current =
+                                                null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
                                     className: o()(w.messagesPopout, f),
                                     onScroll: K,
-                                    fade: !0
+                                    fade: !0,
                                 },
-                                l
+                                l,
                             )),
                             (n = n =
                                 {
-                                    children: [Q, ee && !$ ? en : null]
+                                    children: [Q, ee && !$ ? en : null],
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -359,11 +399,11 @@ function D(e) {
                                   })(Object(n)).forEach(function (e) {
                                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                   }),
-                            t)
+                            t),
                         );
-                    }
-                })
-            })
+                    },
+                }),
+            }),
         })
     );
 }

@@ -14,21 +14,32 @@ var i = n(120356),
     p = n(556638),
     h = n(843280);
 function m(e) {
-    let { customStatusActivity: t, textClassName: n, iconClassName: i, tooltipClassName: m, voiceChannel: g, hangStatus: E, textSize: b = 'xs', animateEmoji: y = !0, hideEmoji: O = !1, hideTooltip: v = !1 } = e,
-        I = (0, l.Z)({ location: 'CustomStatusActivityStatus' }),
-        T = (0, f.E)('ActivityStatus', g);
+    let {
+            customStatusActivity: t,
+            textClassName: n,
+            iconClassName: i,
+            tooltipClassName: m,
+            voiceChannel: g,
+            hangStatus: E,
+            textSize: b = "xs",
+            animateEmoji: y = !0,
+            hideEmoji: O = !1,
+            hideTooltip: v = !1,
+        } = e,
+        I = (0, l.Z)({ location: "CustomStatusActivityStatus" }),
+        T = (0, f.E)("ActivityStatus", g);
     if (null == t && null == E) return null;
     let S = null == t ? void 0 : t.emoji,
         A = null == t ? void 0 : t.state,
         N = I ? (0, c.Z)(t) : null,
-        C = null != N ? ''.concat((0, u.Z)(N), ': ') : null,
-        R = null != A && '' !== A,
+        C = null != N ? "".concat((0, u.Z)(N), ": ") : null,
+        R = null != A && "" !== A,
         P = R || null != N,
         w = null;
     null != E && T
         ? (w = (0, r.jsx)(d.Z, {
               className: o()(i, h.hangStatusIcon),
-              hangStatusActivity: E
+              hangStatusActivity: E,
           }))
         : null == S ||
           O ||
@@ -36,25 +47,25 @@ function m(e) {
               emoji: S,
               animate: y,
               className: i,
-              hideTooltip: v || P
+              hideTooltip: v || P,
           }));
-    let D = R && (null != w ? ' '.concat(A) : A),
+    let D = R && (null != w ? " ".concat(A) : A),
         L = () => {
             let e = null != S && !O && !R && null == N;
             return v || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [C, w, D]
+                      children: [C, w, D],
                   })
                 : (0, r.jsxs)(s.Z, {
                       delay: p.X,
                       tooltipClassName: m,
-                      children: [C, w, D]
+                      children: [C, w, D],
                   });
         };
     return (0, r.jsx)(a.Text, {
-        variant: 'text-'.concat(b, '/medium'),
-        color: 'none',
+        variant: "text-".concat(b, "/medium"),
+        color: "none",
         className: o()(h.truncated, n),
-        children: L()
+        children: L(),
     });
 }

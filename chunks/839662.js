@@ -12,10 +12,10 @@ function o(e, t) {
         case i.fO.ACTIVITY:
             break;
         case i.fO.USER:
-            ((a = e.streamId), (l = e.voiceState), (c = e.speaking), (u = e.ringing));
+            (a = e.streamId), (l = e.voiceState), (c = e.speaking), (u = e.ringing);
             break;
         case i.fO.STREAM:
-            ((a = e.streamId), (s = e.stream));
+            (a = e.streamId), (s = e.stream);
     }
     return {
         streamId: a,
@@ -25,6 +25,6 @@ function o(e, t) {
         muted: null != (n = null == l ? void 0 : l.isVoiceMuted()) && n,
         deafen: null != (o = null == l ? void 0 : l.isVoiceDeafened()) && o,
         mirror: e.type === i.fO.USER && e.user.id === t,
-        hasVideo: (0, r.ZP)(e)
+        hasVideo: (0, r.ZP)(e),
     };
 }

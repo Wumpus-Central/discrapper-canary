@@ -1,6 +1,6 @@
 var a,
     o = t(705723);
-(t(864733)(r, '__esModule', { value: !0 }), (r.default = void 0));
+t(864733)(r, "__esModule", { value: !0 }), (r.default = void 0);
 var n = o(t(596185)),
     l = o(t(443998)),
     i = o(t(413352)),
@@ -21,14 +21,15 @@ function q(e, r) {
             (0, l.default)(e) ||
             (o = (function (e, r) {
                 if (e) {
-                    if ('string' == typeof e) return x(e, void 0);
+                    if ("string" == typeof e) return x(e, void 0);
                     var t,
                         a = (0, d.default)((t = Object.prototype.toString.call(e))).call(t, 8, -1);
-                    if (('Object' === a && e.constructor && (a = e.constructor.name), 'Map' === a || 'Set' === a)) return (0, u.default)(e);
-                    if ('Arguments' === a || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(a)) return x(e, r);
+                    if (("Object" === a && e.constructor && (a = e.constructor.name), "Map" === a || "Set" === a))
+                        return (0, u.default)(e);
+                    if ("Arguments" === a || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(a)) return x(e, r);
                 }
             })(e)) ||
-            (r && e && 'number' == typeof e.length)
+            (r && e && "number" == typeof e.length)
         ) {
             o && (e = o);
             var t = 0,
@@ -40,16 +41,18 @@ function q(e, r) {
                         ? { done: !0 }
                         : {
                               done: !1,
-                              value: e[t++]
+                              value: e[t++],
                           };
                 },
                 e: function (e) {
                     throw e;
                 },
-                f: a
+                f: a,
             };
         }
-        throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+        throw TypeError(
+            "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+        );
     }
     var o,
         c,
@@ -61,10 +64,10 @@ function q(e, r) {
         },
         n: function () {
             var e = o.next();
-            return ((p = e.done), e);
+            return (p = e.done), e;
         },
         e: function (e) {
-            ((m = !0), (c = e));
+            (m = !0), (c = e);
         },
         f: function () {
             try {
@@ -72,7 +75,7 @@ function q(e, r) {
             } finally {
                 if (m) throw c;
             }
-        }
+        },
     };
 }
 function x(e, r) {
@@ -81,7 +84,7 @@ function x(e, r) {
     return a;
 }
 var P = new b.default([]);
-((0, f.default)((a = [v.default, h.default, C.default])).call(a, function (e) {
+(0, f.default)((a = [v.default, h.default, C.default])).call(a, function (e) {
     (0, f.default)(e).call(e, function (e, r) {
         return P.set(r, e);
     });
@@ -101,7 +104,8 @@ var P = new b.default([]);
                         if (s)
                             for (var u = 0, d = (0, m.default)(s.props); u < d.length; u++) {
                                 var f = d[u];
-                                Object.prototype.hasOwnProperty.call(e.props, f) || (0, p.default)(e.props, (0, c.default)({}, f, s.props[f]));
+                                Object.prototype.hasOwnProperty.call(e.props, f) ||
+                                    (0, p.default)(e.props, (0, c.default)({}, f, s.props[f]));
                             }
                     }
                 } catch (e) {
@@ -116,4 +120,4 @@ var P = new b.default([]);
             a.f();
         }
     }),
-    (r.default = P));
+    (r.default = P);

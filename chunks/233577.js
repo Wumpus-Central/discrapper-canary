@@ -20,21 +20,26 @@ let b = 8,
     y = {
         results: {
             command: null,
-            stickers: []
-        }
+            stickers: [],
+        },
     };
 function O(e, t) {
     return (0, r.jsx)(_.Z, {
         sticker: e,
         isInteracting: t,
-        size: 40
+        size: 40,
     });
 }
 let v = {
     stores: [d.Z],
     matches(e, t, n, r, i) {
         var o;
-        return i.commands !== m.L8.DISABLED && i.commands !== m.L8.OLD_BUILT_INS && (null == (o = a.Z.getActiveCommand(e.id)) ? void 0 : o.integrationType) === g.q9n.STICKER && a.Z.getOptionStates(e.id).query.hasValue;
+        return (
+            i.commands !== m.L8.DISABLED &&
+            i.commands !== m.L8.OLD_BUILT_INS &&
+            (null == (o = a.Z.getActiveCommand(e.id)) ? void 0 : o.integrationType) === g.q9n.STICKER &&
+            a.Z.getOptionStates(e.id).query.hasValue
+        );
     },
     queryResults(e, t, n, r) {
         var i;
@@ -47,9 +52,9 @@ let v = {
         return {
             results: {
                 command: o,
-                stickers: (s = l.slice(0, d))
+                stickers: (s = l.slice(0, d)),
             },
-            metadata: { numStickerResults: s.length }
+            metadata: { numStickerResults: s.length },
         };
     },
     renderResults(e) {
@@ -58,7 +63,7 @@ let v = {
             selectedIndex: n,
             query: i,
             onHover: o,
-            onClick: a
+            onClick: a,
         } = e;
         return (0, r.jsx)(r.Fragment, {
             children: (0, h.HI)({
@@ -68,7 +73,7 @@ let v = {
                 onHover: o,
                 onClick: a,
                 titleWithQuery: E.t.uferGB,
-                titleWithoutQuery: E.intl.string(E.t['fT+Yjo']),
+                titleWithoutQuery: E.intl.string(E.t["fT+Yjo"]),
                 Component: l.ZP.Sticker,
                 getProps: (e) => {
                     let { comparator: t, sticker: n } = e;
@@ -76,12 +81,12 @@ let v = {
                         renderSticker: O,
                         queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                         sticker: n,
-                        key: n.id
+                        key: n.id,
                     };
                 },
                 getQuery: (e) => e,
-                key: 'stickers'
-            })
+                key: "stickers",
+            }),
         });
     },
     onSelect(e) {
@@ -92,25 +97,25 @@ let v = {
                 options: c,
                 channel: u,
                 guild: d,
-                queryText: _
+                queryText: _,
             } = e;
         if (null == n || l >= r.length) return { type: null };
         let p = a.Z.getActiveCommand(u.id);
         (null == p ? void 0 : p.inputType) === s.iw.BUILT_IN_INTEGRATION &&
             (i.Z.dispatch({
-                type: 'APPLICATION_COMMAND_USED',
+                type: "APPLICATION_COMMAND_USED",
                 context: {
                     channel: u,
-                    guild: d
+                    guild: d,
                 },
                 command: p,
-                commandOrigin: s.bB.CHAT
+                commandOrigin: s.bB.CHAT,
             }),
             o.ZP.trackWithMetadata(g.rMx.APPLICATION_COMMAND_USED, {
                 command_id: p.id,
                 application_id: p.applicationId,
                 command_type: p.type,
-                source: a.Z.getSource(u.id)
+                source: a.Z.getSource(u.id),
             }));
         let h = r[l];
         return (
@@ -119,20 +124,20 @@ let v = {
             o.ZP.trackWithMetadata(g.rMx.SEARCH_RESULT_SELECTED, {
                 load_id: h.sticker.id,
                 search_type: g.aib.STICKER,
-                source_object: '/'.concat(n),
+                source_object: "/".concat(n),
                 total_results: r.length,
                 index_num: l,
                 expression_guild_id: t,
                 sticker_id: h.sticker.id,
-                query: _
+                query: _,
             }),
             {
                 type: m.z2.STICKER,
                 metadata: {
                     numStickerResults: r.length,
-                    stickerId: h.sticker.id
-                }
+                    stickerId: h.sticker.id,
+                },
             }
         );
-    }
+    },
 };

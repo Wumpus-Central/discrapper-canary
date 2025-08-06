@@ -9,12 +9,12 @@ let l = (e) => {
         n = (0, s.Z)();
     return null == n
         ? null
-        : (0, i.jsx)('div', {
+        : (0, i.jsx)("div", {
               className: t ? a.premiumBrandRefreshOfferPill : a.offerPill,
               children: (0, i.jsx)(r.Text, {
-                  variant: t ? 'text-sm/bold' : 'text-xs/bold',
-                  color: 'always-white',
-                  children: n
-              })
+                  variant: t ? "text-sm/bold" : "text-xs/bold",
+                  color: "always-white",
+                  children: n,
+              }),
           });
 };

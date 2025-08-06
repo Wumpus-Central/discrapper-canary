@@ -8,23 +8,23 @@ function o(e) {
         return i.intl.format(n, {
             application: e.name,
             privacyPolicyURL: e.privacy_policy_url,
-            termsOfServiceURL: e.terms_of_service_url
+            termsOfServiceURL: e.terms_of_service_url,
         });
     }
     if (null != e.privacy_policy_url) {
         let n = t ? i.t.pYVSam : i.t.TBvmMz;
         return i.intl.format(n, {
             application: e.name,
-            privacyPolicyURL: e.privacy_policy_url
+            privacyPolicyURL: e.privacy_policy_url,
         });
     }
     if (null != e.terms_of_service_url) {
-        let n = t ? i.t.nBLOp6 : i.t['q0T/Q0'];
+        let n = t ? i.t.nBLOp6 : i.t["q0T/Q0"];
         return i.intl.format(n, {
             application: e.name,
-            termsOfServiceURL: e.terms_of_service_url
+            termsOfServiceURL: e.terms_of_service_url,
         });
     }
-    let n = t ? i.t['8LemYm'] : i.t['3Ywek5'];
+    let n = t ? i.t["8LemYm"] : i.t["3Ywek5"];
     return i.intl.formatToPlainString(n, { application: e.name });
 }

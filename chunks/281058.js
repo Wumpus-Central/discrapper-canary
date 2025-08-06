@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,17 +34,17 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
         let { state: t, permissionType: n } = e,
             r = u.permissionStates,
             i = r[n];
-        ((r[n] = t),
+        (r[n] = t),
             i !== t &&
                 a.default.track(l.rMx.PERMISSIONS_ACKED, {
                     type: n,
                     action: t,
-                    previous_action: null != i ? i : s.PQ.NONE
-                }));
+                    previous_action: null != i ? i : s.PQ.NONE,
+                });
     }
     constructor() {
         super(o.Z, { SET_NATIVE_PERMISSION: (e) => this.handleSetNativePermission(e) });
     }
 }
-(c(d, 'displayName', 'NativePermissionStore'), c(d, 'persistKey', 'NativePermissionsStore'));
+c(d, "displayName", "NativePermissionStore"), c(d, "persistKey", "NativePermissionsStore");
 let f = d;

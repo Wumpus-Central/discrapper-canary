@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var r = n(147913),
     i = n(594174),
     o = n(74538);
@@ -13,7 +13,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,30 +21,30 @@ function c(e, t, n) {
 }
 class u extends r.Z {
     async onPostConnectionOpen() {
-        (this.maybeFetchActiveOutboundPromotions(), await this.maybeFetchBogoPromotion());
+        this.maybeFetchActiveOutboundPromotions(), await this.maybeFetchBogoPromotion();
     }
     maybeFetchActiveOutboundPromotions() {
         let e = i.default.getCurrentUser(),
             t = o.ZP.isPremiumExactly(e, l.p9.TIER_2),
             n = a.g.getCurrentConfig(
-                { location: 'maybeFetchActiveOutboundPromotions' },
+                { location: "maybeFetchActiveOutboundPromotions" },
                 {
                     autoTrackExposure: !1,
-                    disable: t
-                }
+                    disable: t,
+                },
             ).enabled;
         (t || n) && (0, s.vM)();
     }
     constructor(...e) {
-        (super(...e),
-            c(this, 'actions', {
+        super(...e),
+            c(this, "actions", {
                 POST_CONNECTION_OPEN: this.onPostConnectionOpen.bind(this),
-                EXPERIMENTS_FETCH_SUCCESS: this.onPostConnectionOpen.bind(this)
+                EXPERIMENTS_FETCH_SUCCESS: this.onPostConnectionOpen.bind(this),
             }),
-            c(this, 'maybeFetchBogoPromotion', async () => {
+            c(this, "maybeFetchBogoPromotion", async () => {
                 let e = i.default.getCurrentUser();
                 o.ZP.isPremiumExactly(e, l.p9.TIER_2);
-            }));
+            });
     }
 }
 let d = new u();

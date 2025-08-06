@@ -32,13 +32,13 @@ function S(e) {
         : 0 === i && 0 === l
           ? I.intl.format(I.t.kF0HER, {
                 tierName: r,
-                numPremiumSubscriptions: n
+                numPremiumSubscriptions: n,
             })
           : I.intl.format(I.t.neDJho, {
                 days: i,
                 hours: l,
                 tierName: r,
-                numPremiumSubscriptions: n
+                numPremiumSubscriptions: n,
             });
 }
 function T(e) {
@@ -50,16 +50,16 @@ function T(e) {
     return (0, r.jsxs)(a.Wn, {
         messageType: a.QYI.WARNING,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: E.guildBoostingGracePeriodTitle,
-                children: I.intl.format(I.t.LG7vvr, {})
+                children: I.intl.format(I.t.LG7vvr, {}),
             }),
             (0, r.jsx)(S, {
                 endsAt: i,
                 appliedGuildBoostsToMaintain: s,
-                tierName: l
-            })
-        ]
+                tierName: l,
+            }),
+        ],
     });
 }
 let P = (e) => {
@@ -72,15 +72,15 @@ let P = (e) => {
             onSetRef: n,
             isAnimatedTo: t,
             hasBottomMargin: s !== a.length - 1,
-            guildId: o
+            guildId: o,
         },
-        l.tier
+        l.tier,
     );
 };
 function w() {
     i.useEffect(() => {
         s.Z.wait(() => {
-            ((0, o.tZ)(), (0, d.Y2)());
+            (0, o.tZ)(), (0, d.Y2)();
         });
     }, []);
     let e = (0, l.e7)([C.Z], () => C.Z.getGuild()),
@@ -92,33 +92,35 @@ function w() {
                 children: [
                     (0, r.jsx)(a.vwX, {
                         tag: a.RB0.H1,
-                        children: I.intl.string(I.t.nLovSU)
+                        children: I.intl.string(I.t.nLovSU),
                     }),
                     null != t && null != e
                         ? (0, r.jsx)(T, {
                               appliedGuildBoosts: t,
-                              guildId: e.id
+                              guildId: e.id,
                           })
                         : null,
                     (0, r.jsx)(a.R94, {
                         type: a.R94.Types.DESCRIPTION,
                         className: E.titleBlurb,
-                        children: I.intl.format(I.t.hLOkp6, { helpdeskArticle: y.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS) })
-                    })
-                ]
+                        children: I.intl.format(I.t.hLOkp6, {
+                            helpdeskArticle: y.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS),
+                        }),
+                    }),
+                ],
             }),
             null != e &&
                 (0, r.jsx)(x.Z, {
                     guild: e,
                     onButtonClick: function () {
                         null != e && ((0, c.xf)(), (0, f.Z)(e.id, m.Z.GUILD_POWERUPS_GUILD_SETTINGS_PREMIUM));
-                    }
+                    },
                 }),
             (0, r.jsx)(b.Z, {
                 tiers: (0, O.cP)(null != e && e.features.has(N.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o),
-                renderTier: P
+                renderTier: P,
             }),
-            (0, r.jsx)('div', { className: E.divider }),
+            (0, r.jsx)("div", { className: E.divider }),
             n ? (0, r.jsx)(h.Z, {}) : null,
             n
                 ? (0, r.jsx)(p.Z, {
@@ -127,11 +129,11 @@ function w() {
                               location: {
                                   page: N.ZY5.GUILD_SETTINGS,
                                   section: N.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
-                                  object: N.qAy.BUTTON_CTA
-                              }
-                          })
+                                  object: N.qAy.BUTTON_CTA,
+                              },
+                          }),
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

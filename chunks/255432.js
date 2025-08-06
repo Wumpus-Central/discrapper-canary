@@ -1,4 +1,4 @@
-(n.d(t, { a: () => u }), n(388685));
+n.d(t, { a: () => u }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -10,7 +10,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,7 +63,7 @@ function u(e) {
         u = Object.entries(t);
     return 0 === u.length
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: o.controlsSection,
               children: (0, r.jsx)(i.Kqy, {
                   gap: 16,
@@ -76,38 +76,38 @@ function u(e) {
                           {
                               title: a.label,
                               children: [
-                                  'select' === a.type &&
+                                  "select" === a.type &&
                                       null != a.options &&
                                       (0, r.jsx)(i.q4e, {
                                           value: s,
                                           onChange: (e) => l(o, e),
-                                          options: a.options
+                                          options: a.options,
                                       }),
-                                  'boolean' === a.type &&
+                                  "boolean" === a.type &&
                                       (0, r.jsx)(i.XZJ, {
                                           value: s,
                                           onChange: (e, t) => l(o, t),
                                           children: (0, r.jsx)(i.Text, {
-                                              variant: 'text-md/medium',
-                                              children: a.label
-                                          })
+                                              variant: "text-md/medium",
+                                              children: a.label,
+                                          }),
                                       }),
-                                  'text' === a.type &&
+                                  "text" === a.type &&
                                       (0, r.jsx)(i.oil, {
                                           value: s,
-                                          onChange: (e) => l(o, e)
+                                          onChange: (e) => l(o, e),
                                       }),
-                                  'number' === a.type &&
+                                  "number" === a.type &&
                                       (0, r.jsx)(i.oil, {
-                                          type: 'number',
+                                          type: "number",
                                           value: String(s),
-                                          onChange: (e) => l(o, Number(e))
-                                      })
-                              ]
+                                          onChange: (e) => l(o, Number(e)),
+                                      }),
+                              ],
                           },
-                          o
+                          o,
                       );
-                  })
-              })
+                  }),
+              }),
           });
 }

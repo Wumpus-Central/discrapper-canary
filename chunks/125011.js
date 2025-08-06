@@ -8,16 +8,16 @@ var i = n(120356),
     s = n(201284);
 let c = (e) => {
     let { className: t } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: l()(o.container, t),
         children: (0, r.jsx)(a.Z, {
             className: o.asset,
             playsInline: !0,
             controls: !1,
-            children: (0, r.jsx)('source', {
+            children: (0, r.jsx)("source", {
                 src: s.Z,
-                type: 'video/webm'
-            })
-        })
+                type: "video/webm",
+            }),
+        }),
     });
 };

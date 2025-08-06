@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -17,11 +17,11 @@ function _(e) {
     return (null == (t = _.stickers) ? void 0 : t.allowSending) && null != m && 0 !== m.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: f.stickerPreviews,
                       children: m.map((e) =>
                           (0, r.jsxs)(
-                              'div',
+                              "div",
                               {
                                   className: f.stickerPreviewContainer,
                                   children: [
@@ -29,31 +29,31 @@ function _(e) {
                                           onFocus: () => h(e.id),
                                           onBlur: () => h(null),
                                           className: f.closeButton,
-                                          'aria-label': d.intl.formatToPlainString(d.t.BGAQRU, { name: e.name }),
+                                          "aria-label": d.intl.formatToPlainString(d.t.BGAQRU, { name: e.name }),
                                           onClick: () => (0, c.qB)(n, _.drafts.type),
-                                          children: (0, r.jsx)('div', {
+                                          children: (0, r.jsx)("div", {
                                               className: f.closeIconContainer,
                                               children: (0, r.jsx)(a.k$p, {
-                                                  size: 'md',
-                                                  color: 'currentColor',
-                                                  className: f.closeIcon
-                                              })
-                                          })
+                                                  size: "md",
+                                                  color: "currentColor",
+                                                  className: f.closeIcon,
+                                              }),
+                                          }),
                                       }),
                                       (0, r.jsx)(u.Z, {
                                           isInteracting: p === e.id,
                                           className: f.stickerPreview,
                                           size: 48,
-                                          sticker: e
-                                      })
-                                  ]
+                                          sticker: e,
+                                      }),
+                                  ],
                               },
-                              e.id
-                          )
-                      )
+                              e.id,
+                          ),
+                      ),
                   }),
-                  (0, r.jsx)(s.Z, { className: f.stickerPreviewDivider })
-              ]
+                  (0, r.jsx)(s.Z, { className: f.stickerPreviewDivider }),
+              ],
           })
         : null;
 }

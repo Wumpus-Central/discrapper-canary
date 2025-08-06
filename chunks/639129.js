@@ -4,12 +4,12 @@ var r = n(220159),
     i = o(a.prototype.getTime);
 r(
     {
-        target: 'Date',
-        stat: !0
+        target: "Date",
+        stat: !0,
     },
     {
         now: function () {
             return i(new a());
-        }
-    }
+        },
+    },
 );

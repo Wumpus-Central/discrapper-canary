@@ -7,5 +7,5 @@ let r = -1,
             return e;
         },
         startBackgroundTask: i,
-        endBackgroundTask: (e) => {}
+        endBackgroundTask: (e) => {},
     };

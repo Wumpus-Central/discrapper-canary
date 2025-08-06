@@ -1,6 +1,6 @@
 n.d(t, {
     c: () => s,
-    v: () => l
+    v: () => l,
 });
 var r = n(442837),
     i = n(317381),
@@ -22,7 +22,7 @@ function s(e) {
         instanceId: s,
         instanceLocation: l,
         isCurrentlyInInstance: null != s && (null == c ? void 0 : c.compositeInstanceId) === s,
-        canLaunchInChannel: u
+        canLaunchInChannel: u,
     };
 }
 function l(e, t) {
@@ -33,7 +33,7 @@ function l(e, t) {
             instanceId: null,
             instanceLocation: null,
             isCurrentlyInInstance: !1,
-            canLaunchInChannel: !1
+            canLaunchInChannel: !1,
         };
     let r = (null != n ? (0, o.Hn)(n) : o.jy.NO_CHANNEL) === o.jy.CAN_LAUNCH,
         s = i.ZP.getEmbeddedActivitiesForChannel(n).filter((t) => t.applicationId === e),
@@ -46,6 +46,6 @@ function l(e, t) {
         instanceId: c,
         instanceLocation: u,
         isCurrentlyInInstance: null != c && (null == d ? void 0 : d.compositeInstanceId) === c,
-        canLaunchInChannel: r
+        canLaunchInChannel: r,
     };
 }

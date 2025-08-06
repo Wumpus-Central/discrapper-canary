@@ -11,10 +11,10 @@ function o(e) {
             let e = o.current;
             null != e && n(e.childNodes.length > 0);
         }),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: a.container,
             ref: o,
-            children: (0, r.jsx)(l.Z, { guild: t })
+            children: (0, r.jsx)(l.Z, { guild: t }),
         })
     );
 }

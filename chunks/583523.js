@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(570140),
     i = n(147913),
     o = n(314897),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,8 +28,8 @@ function f() {
     null != n &&
         t !== n.bitrate &&
         r.Z.dispatch({
-            type: 'SET_CHANNEL_BITRATE',
-            bitrate: n.bitrate
+            type: "SET_CHANNEL_BITRATE",
+            bitrate: n.bitrate,
         });
 }
 function _() {
@@ -42,12 +42,12 @@ function _() {
     let o = null != (e = i.videoQualityMode) ? e : u.Ucd.AUTO;
     n !== o &&
         r.Z.dispatch({
-            type: 'SET_CHANNEL_VIDEO_QUALITY_MODE',
-            mode: o
+            type: "SET_CHANNEL_VIDEO_QUALITY_MODE",
+            mode: o,
         });
 }
 function p() {
-    (f(), _());
+    f(), _();
 }
 function h(e) {
     let { channels: t } = e;
@@ -61,11 +61,11 @@ function m(e) {
 }
 class g extends i.Z {
     constructor(...e) {
-        (super(...e),
-            d(this, 'actions', {
+        super(...e),
+            d(this, "actions", {
                 CHANNEL_UPDATES: h,
-                VOICE_STATE_UPDATES: m
-            }));
+                VOICE_STATE_UPDATES: m,
+            });
     }
 }
 let E = new g();

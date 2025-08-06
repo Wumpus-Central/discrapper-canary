@@ -1,6 +1,6 @@
-(n.d(t, {
+n.d(t, {
     Z: () => L,
-    r: () => D
+    r: () => D,
 }),
     n(388685),
     n(190126),
@@ -9,7 +9,7 @@
     n(111804),
     n(490233),
     n(97749),
-    n(953529));
+    n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -38,7 +38,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -48,15 +48,15 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -64,11 +64,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -83,7 +83,7 @@ function N(e, t) {
         e
     );
 }
-let C = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/avif', 'video/quicktime', 'video/mp4'];
+let C = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function R(e) {
     let { alt: t, spoiler: n, renderContent: o, size: a } = e,
         [s, l] = i.useState(!1);
@@ -95,37 +95,37 @@ function R(e) {
                     ? {
                           borderBottomLeftRadius: 0,
                           borderBottomRightRadius: 0,
-                          boxShadow: 'none'
+                          boxShadow: "none",
                       }
                     : void 0,
             type: p.ZP.Types.ATTACHMENT,
             onReveal: () => l(!0),
             className: I.spoilerContainer,
             children: (e) =>
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: I.spoilerWrapper,
                     children: [
                         o(e),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: I.tags,
                             children: [
-                                null != t && '' !== t
-                                    ? (0, r.jsx)('span', {
+                                null != t && "" !== t
+                                    ? (0, r.jsx)("span", {
                                           className: I.altTag,
-                                          children: v.intl.string(v.t.QEW819)
+                                          children: v.intl.string(v.t.QEW819),
                                       })
                                     : null,
                                 s && n
-                                    ? (0, r.jsx)('span', {
+                                    ? (0, r.jsx)("span", {
                                           className: I.altTag,
-                                          children: v.intl.string(v.t['F+x38P'])
+                                          children: v.intl.string(v.t["F+x38P"]),
                                       })
-                                    : null
-                            ]
-                        })
-                    ]
-                })
-        })
+                                    : null,
+                            ],
+                        }),
+                    ],
+                }),
+        }),
     });
 }
 function P(e) {
@@ -133,7 +133,7 @@ function P(e) {
         [u, d] = i.useState(),
         [f, _] = i.useState({
             width: 0,
-            height: 0
+            height: 0,
         }),
         p = s === O.q.SMALL;
     i.useEffect(() => {
@@ -146,17 +146,17 @@ function P(e) {
                 let { width: e, height: t } = (0, E.zp)(n.width, n.height);
                 _({
                     width: e,
-                    height: t
+                    height: t,
                 });
             }),
             (n.src = e),
             () => {
-                (d(void 0),
+                d(void 0),
                     _({
                         width: 0,
-                        height: 0
+                        height: 0,
                     }),
-                    URL.revokeObjectURL(e));
+                    URL.revokeObjectURL(e);
             }
         );
     }, [t]);
@@ -165,33 +165,33 @@ function P(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 return null == u
                     ? (0, r.jsx)(r.Fragment, {})
-                    : (0, r.jsx)('img', {
+                    : (0, r.jsx)("img", {
                           src: u,
                           className: a()(I.media, {
                               [I.spoiler]: e,
-                              [I.imageSmall]: p
+                              [I.imageSmall]: p,
                           }),
-                          'aria-hidden': !0,
-                          alt: null != n ? n : '',
-                          style: t ? f : {}
+                          "aria-hidden": !0,
+                          alt: null != n ? n : "",
+                          style: t ? f : {},
                       });
             },
-            [u, p, n, f]
+            [u, p, n, f],
         ),
         g = i.useCallback(() => {
             null != u &&
                 (0, m.K)({
-                    location: 'ChannelAttachmentUpload',
+                    location: "ChannelAttachmentUpload",
                     items: [
                         {
-                            type: 'IMAGE',
-                            url: u
-                        }
+                            type: "IMAGE",
+                            url: u,
+                        },
                     ],
-                    shouldHideMediaOptions: !0
+                    shouldHideMediaOptions: !0,
                 });
         }, [u]);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         onMouseEnter: c,
         className: a()(I.mediaContainer, { [I.imageSmall]: p }),
         children: (0, r.jsx)(l.P3F, {
@@ -201,9 +201,9 @@ function P(e) {
                 size: s,
                 alt: n,
                 spoiler: o,
-                renderContent: h
-            })
-        })
+                renderContent: h,
+            }),
+        }),
     });
 }
 function w(e) {
@@ -217,11 +217,11 @@ function w(e) {
             return (
                 d(e),
                 () => {
-                    (d(void 0), URL.revokeObjectURL(e));
+                    d(void 0), URL.revokeObjectURL(e);
                 }
             );
         }, [t]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             onMouseEnter: l,
             className: I.mediaContainer,
             children: (0, r.jsx)(R, {
@@ -234,13 +234,13 @@ function w(e) {
                         src: u,
                         className: a()(I.media, {
                             [I.spoiler]: e,
-                            [I.sizeClip]: s === O.q.CLIP
+                            [I.sizeClip]: s === O.q.CLIP,
                         }),
                         onError: c,
-                        preload: 'none',
-                        'aria-hidden': !0
-                    })
-            })
+                        preload: "none",
+                        "aria-hidden": !0,
+                    }),
+            }),
         })
     );
 }
@@ -255,7 +255,7 @@ function D(e) {
               alt: n.description,
               spoiler: n.spoiler,
               size: o,
-              onMouseEnter: s
+              onMouseEnter: s,
           })
         : !l && n.isVideo && n.item.platform === d.ow.WEB
           ? (0, r.jsx)(w, {
@@ -264,27 +264,37 @@ function D(e) {
                 alt: n.description,
                 spoiler: n.spoiler,
                 onMouseEnter: s,
-                onVideoLoadError: () => c(!0)
+                onVideoLoadError: () => c(!0),
             })
-          : (0, r.jsx)('div', {
+          : (0, r.jsx)("div", {
                 onMouseEnter: s,
                 className: a()(I.icon, I.__invalid_imageContainer, {
-                    [I[null != (t = n.classification) ? t : '']]: !0,
-                    [I.imageSmall]: u
+                    [I[null != (t = n.classification) ? t : ""]]: !0,
+                    [I.imageSmall]: u,
                 }),
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: I.tags,
                     children: n.spoiler
-                        ? (0, r.jsx)('span', {
+                        ? (0, r.jsx)("span", {
                               className: I.altTag,
-                              children: v.intl.string(v.t['F+x38P'])
+                              children: v.intl.string(v.t["F+x38P"]),
                           })
-                        : null
-                })
+                        : null,
+                }),
             });
 }
 function L(e) {
-    let { channelId: t, draftType: n, upload: o, keyboardModeEnabled: d, label: p, size: h = O.q.MEDIUM, canEdit: m = !0, hideFileName: E = !1, clip: T } = e,
+    let {
+            channelId: t,
+            draftType: n,
+            upload: o,
+            keyboardModeEnabled: d,
+            label: p,
+            size: h = O.q.MEDIUM,
+            canEdit: m = !0,
+            hideFileName: E = !1,
+            clip: T,
+        } = e,
         A = null != T,
         C = (h = A ? O.q.CLIP : h) === O.q.SMALL,
         R = (0, s.e7)([g.Z], () => {
@@ -292,7 +302,7 @@ function L(e) {
             return null == (e = g.Z.getChannel(t)) ? void 0 : e.guild_id;
         }),
         P = (e) => {
-            (e.stopPropagation(),
+            e.stopPropagation(),
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
                         u.default,
@@ -305,12 +315,12 @@ function L(e) {
                                 c.Z.update(t, o.id, n, {
                                     filename: r,
                                     description: i,
-                                    spoiler: a
+                                    spoiler: a,
                                 });
-                            }
-                        })
-                    )
-                ));
+                            },
+                        }),
+                    ),
+                );
         };
     return (0, r.jsxs)(O.Z, {
         actions: (0, r.jsxs)(i.Fragment, {
@@ -322,15 +332,15 @@ function L(e) {
                           onClick: () => c.Z.update(t, o.id, n, { spoiler: !o.spoiler }),
                           children: o.spoiler
                               ? (0, r.jsx)(l.kZF, {
-                                    size: 'md',
-                                    color: 'currentColor',
-                                    className: a()({ [I.actionBarIcon]: C })
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: a()({ [I.actionBarIcon]: C }),
                                 })
                               : (0, r.jsx)(l.tEF, {
-                                    size: 'xs',
-                                    color: 'currentColor',
-                                    className: a()({ [I.actionBarIcon]: C })
-                                })
+                                    size: "xs",
+                                    color: "currentColor",
+                                    className: a()({ [I.actionBarIcon]: C }),
+                                }),
                       })
                     : null,
                 m && !A
@@ -339,10 +349,10 @@ function L(e) {
                           tooltip: v.intl.string(v.t.Y8ujqq),
                           onClick: P,
                           children: (0, r.jsx)(l.vdY, {
-                              size: 'xs',
-                              color: 'currentColor',
-                              className: a()({ [I.actionBarIcon]: C })
-                          })
+                              size: "xs",
+                              color: "currentColor",
+                              className: a()({ [I.actionBarIcon]: C }),
+                          }),
                       })
                     : null,
                 (0, r.jsx)(y.Z, {
@@ -351,12 +361,12 @@ function L(e) {
                     onClick: () => c.Z.remove(t, o.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.XHJ, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: a()({ [I.actionBarIcon]: C })
-                    })
-                })
-            ]
+                        size: "md",
+                        color: "currentColor",
+                        className: a()({ [I.actionBarIcon]: C }),
+                    }),
+                }),
+            ],
         }),
         draftType: n,
         id: o.id,
@@ -368,17 +378,17 @@ function L(e) {
         children: [
             (0, r.jsx)(D, {
                 upload: o,
-                size: h
+                size: h,
             }),
             !E &&
                 !A &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: I.filenameContainer,
                     children: (0, r.jsx)(l.Text, {
                         className: I.filename,
-                        variant: 'text-sm/normal',
-                        children: null != p ? p : o.filename
-                    })
+                        variant: "text-sm/normal",
+                        children: null != p ? p : o.filename,
+                    }),
                 }),
             A &&
                 (0, r.jsxs)(r.Fragment, {
@@ -389,15 +399,15 @@ function L(e) {
                             participantIds: T.users,
                             applicationId: T.applicationId,
                             title: T.name,
-                            guildId: R
+                            guildId: R,
                         }),
                         (0, r.jsx)(l.IGR, {
                             color: _.Z.BG_BRAND,
                             className: I.clipsBadge,
-                            text: v.intl.string(v.t.oA4afH)
-                        })
-                    ]
-                })
-        ]
+                            text: v.intl.string(v.t.oA4afH),
+                        }),
+                    ],
+                }),
+        ],
     });
 }

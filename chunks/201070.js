@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     $j: () => Y,
     M3: () => W,
-    ZP: () => z
+    ZP: () => z,
 }),
     n(388685),
     n(642613),
-    n(415506));
+    n(415506);
 var r = n(348327),
     i = n.n(r),
     o = n(392711),
@@ -28,7 +28,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -38,15 +38,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -54,11 +54,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,9 +74,9 @@ function O(e, t) {
     );
 }
 let v = -1,
-    I = new u.Z('MemberSafetySearchManager');
+    I = new u.Z("MemberSafetySearchManager");
 function T(e) {
-    return 'guild_'.concat(e);
+    return "guild_".concat(e);
 }
 function S(e) {
     return {
@@ -87,7 +87,7 @@ function S(e) {
         cursor: null,
         previousPagination: null,
         sort: null,
-        elasticSearchCursor: null
+        elasticSearchCursor: null,
     };
 }
 let A = (0, a.U)((e) => ({}));
@@ -107,13 +107,13 @@ function C(e) {
 }
 function R(e) {
     let t = C(e);
-    return (null == t && N(e, (t = S(1))), t);
+    return null == t && N(e, (t = S(1))), t;
 }
 function P(e) {
     (0, s.j)(() => {
         A.setState((t) => {
             let n = b({}, t);
-            return (delete n[e], n);
+            return delete n[e], n;
         });
     });
 }
@@ -130,7 +130,7 @@ function w(e, t, n, r, i) {
         query: t,
         cursor: n,
         previousPagination: r,
-        sort: i
+        sort: i,
     });
 }
 function D(e) {
@@ -138,23 +138,23 @@ function D(e) {
         N(e, {
             requestState: 0,
             abortController: null,
-            lastUpdated: Date.now()
+            lastUpdated: Date.now(),
         });
 }
 async function L(e) {
-    (await (0, l._v)(200),
+    await (0, l._v)(200),
         null != C(e) &&
             N(e, {
                 requestState: 3,
                 abortController: null,
-                lastUpdated: Date.now()
-            }));
+                lastUpdated: Date.now(),
+            });
 }
 function x(e) {
     N(e, {
         requestState: 4,
         abortController: null,
-        lastUpdated: Date.now()
+        lastUpdated: Date.now(),
     });
 }
 function M(e) {
@@ -169,11 +169,20 @@ function j(e) {
         { query: r } = e;
     if (k(r)) {
         let [e, n] = (0, p.C)(r);
-        (e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n }));
+        e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n });
     }
-    let { requireUnusualDmActivity: i, requireCommunicationDisabled: o, requireUnusualAccountActivity: a, requireUsernameQuarantined: s } = e,
+    let {
+            requireUnusualDmActivity: i,
+            requireCommunicationDisabled: o,
+            requireUnusualAccountActivity: a,
+            requireUsernameQuarantined: s,
+        } = e,
         l = {};
-    (i && (l.unusual_dm_activity_until = { range: { gte: Date.now() - h.rL } }), o && (l.communication_disabled_until = { range: { gte: Date.now() } }), a && (l.unusual_account_activity = a), s && (l.automod_quarantined_username = s), Object.keys(l).length > 0 && (n.safety_signals = l));
+    i && (l.unusual_dm_activity_until = { range: { gte: Date.now() - h.rL } }),
+        o && (l.communication_disabled_until = { range: { gte: Date.now() } }),
+        a && (l.unusual_account_activity = a),
+        s && (l.automod_quarantined_username = s),
+        Object.keys(l).length > 0 && (n.safety_signals = l);
     let { selectedRoleIds: c } = e;
     c.size > 0 && (t.role_ids = { and_query: Array.from(c) });
     let { selectedJoinDateOption: u } = e;
@@ -182,8 +191,8 @@ function j(e) {
         t.guild_joined_at = {
             range: {
                 gte: u.afterDate,
-                lte: null != (d = u.beforeDate) ? d : void 0
-            }
+                lte: null != (d = u.beforeDate) ? d : void 0,
+            },
         };
     }
     let { selectedAccountAgeOption: _ } = e;
@@ -192,8 +201,8 @@ function j(e) {
         t.user_id = O(b({}, e), {
             range: {
                 gte: f.default.fromTimestamp(_.afterDate),
-                lte: null != _.beforeDate ? f.default.fromTimestamp(_.beforeDate) : void 0
-            }
+                lte: null != _.beforeDate ? f.default.fromTimestamp(_.beforeDate) : void 0,
+            },
         });
     }
     let { selectedSourceInviteCode: m } = e;
@@ -202,10 +211,10 @@ function j(e) {
     null != g && (t.join_source_type = { or_query: [g] });
     let E = {
             or_query: n,
-            and_query: t
+            and_query: t,
         },
         { selectedSort: y } = e;
-    return (null != y && (E.sort = y), E);
+    return null != y && (E.sort = y), E;
 }
 function U(e, t) {
     return null == t ? e : b({}, e, t);
@@ -221,7 +230,7 @@ function B(e) {
     return {
         previousPageChunkNumber: G(n, t),
         currentPageChunkNumber: G(r, t),
-        nextPageChunkNumber: G(i, t)
+        nextPageChunkNumber: G(i, t),
     };
 }
 function Z(e, t) {
@@ -259,24 +268,24 @@ function F(e, t, n) {
                 null != (r = t.cursor) ? r : null,
                 {
                     limit: f,
-                    after: null != (i = t.cursor) ? i : void 0
-                }
+                    after: null != (i = t.cursor) ? i : void 0,
+                },
             ];
         case 2:
             return [
                 null != (o = null == u ? void 0 : u.after) ? o : null,
                 {
                     limit: f,
-                    after: null != (a = null == u ? void 0 : u.after) ? a : void 0
-                }
+                    after: null != (a = null == u ? void 0 : u.after) ? a : void 0,
+                },
             ];
         case 3:
             return [
                 null != (s = null == u ? void 0 : u.before) ? s : null,
                 {
                     limit: f,
-                    before: null != (l = null == u ? void 0 : u.before) ? l : void 0
-                }
+                    before: null != (l = null == u ? void 0 : u.before) ? l : void 0,
+                },
             ];
         default:
             (0, d.vE)(c);
@@ -299,14 +308,16 @@ async function H(e) {
     let _ = w(s, d, c, a, f);
     try {
         if (
-            (I.info('Making member search request', {
+            (I.info("Making member search request", {
                 query: _.query,
-                guildId: e
+                guildId: e,
             }),
             null == _.query)
         )
-            throw Error('Query is null');
-        await (0, m.D)(e, _.query, { signal: null != (r = null == (n = _.abortController) ? void 0 : n.signal) ? r : void 0 });
+            throw Error("Query is null");
+        await (0, m.D)(e, _.query, {
+            signal: null != (r = null == (n = _.abortController) ? void 0 : n.signal) ? r : void 0,
+        });
     } catch (e) {
         if (v === e.code) return;
         D(s);
@@ -329,7 +340,7 @@ function W(e) {
 class K extends c.Z {
     handleInitialize(e) {
         let { guildId: t } = e;
-        return (M(t), H(t));
+        return M(t), H(t);
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
@@ -356,16 +367,16 @@ class K extends c.Z {
         return H(t);
     }
     constructor(...e) {
-        (super(...e),
-            E(this, 'actions', {
+        super(...e),
+            E(this, "actions", {
                 INITIALIZE_MEMBER_SAFETY_STORE: (e) => this.handleInitialize(e),
                 GUILD_DELETE: (e) => this.handleGuildDelete(e),
                 MEMBER_SAFETY_SEARCH_STATE_UPDATE: (e) => this.handleSearchStateUpdate(e),
                 MEMBER_SAFETY_PAGINATION_UPDATE: (e) => this.handlePaginationUpdate(e),
                 MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: (e) => this.handleGuildMemberSearchSuccess(e),
                 MEMBER_SAFETY_GUILD_MEMBER_SEARCH_STILL_INDEXING: (e) => this.handleGuildMemberSearchStillIndexing(e),
-                MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: (e) => this.handleNewMemberTimestampRefresh(e)
-            }));
+                MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: (e) => this.handleNewMemberTimestampRefresh(e),
+            });
     }
 }
 let z = new K();

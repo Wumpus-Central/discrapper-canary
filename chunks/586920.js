@@ -1,4 +1,4 @@
-(n.d(t, { i: () => f }), n(388685));
+n.d(t, { i: () => f }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -13,7 +13,14 @@ var i = n(255367),
     g = n(997892),
     h = n(234286);
 let f = () => {
-    let { transitionState: e, onClose: t, premiumType: n, confettiCanvas: f, churnUserDiscountOffer: b, discountedPrice: x } = (0, d.a)(),
+    let {
+            transitionState: e,
+            onClose: t,
+            premiumType: n,
+            confettiCanvas: f,
+            churnUserDiscountOffer: b,
+            discountedPrice: x,
+        } = (0, d.a)(),
         _ = (0, r.useRef)(null),
         [j, E] = (0, r.useState)(!1),
         C = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
@@ -27,40 +34,40 @@ let f = () => {
     let O = n === u.p9.TIER_2,
         v = [
             {
-                text: m.intl.string(m.t['/r8g/v']),
+                text: m.intl.string(m.t["/r8g/v"]),
                 onClick: () => t(),
-                variant: 'primary',
-                fullWidth: !0
-            }
+                variant: "primary",
+                fullWidth: !0,
+            },
         ];
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         ref: _,
         children: [
             (0, i.jsx)(a.I, {
                 graphic: {
-                    type: 'image',
-                    src: O ? h : g
+                    type: "image",
+                    src: O ? h : g,
                 },
-                gradientColor: O ? 'nitro-pink' : 'nitro-green',
+                gradientColor: O ? "nitro-pink" : "nitro-green",
                 transitionState: e,
                 title: m.intl.string(m.t.PZSyRk),
                 actions: v,
                 onClose: async () => t(),
-                children: (0, i.jsx)('div', {
+                children: (0, i.jsx)("div", {
                     className: p.offerDetailContainer,
                     children: (0, i.jsx)(c.o, {
                         offerState: c.w.APPLIED,
-                        userDiscountOffer: b
-                    })
-                })
+                        userDiscountOffer: b,
+                    }),
+                }),
             }),
             !C &&
                 j &&
                 (0, i.jsx)(o.Z, {
                     confettiTarget: _.current,
                     confettiCanvas: f,
-                    confettiVelocityMultiplier: 0.75
-                })
-        ]
+                    confettiVelocityMultiplier: 0.75,
+                }),
+        ],
     });
 };

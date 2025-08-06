@@ -10,44 +10,44 @@ var r = a(622916),
 let l = (0, a(151122)._I)((t = {}) => {
     let e = t.levels || r.RU;
     return {
-        name: 'CaptureConsole',
+        name: "CaptureConsole",
         setup(t) {
-            'console' in _.n &&
+            "console" in _.n &&
                 (0, n.e)(({ args: a, level: r }) => {
                     (0, E.s3)() === t &&
                         e.includes(r) &&
                         (function (t, e) {
                             let a = {
                                 level: (0, o.V)(e),
-                                extra: { arguments: t }
+                                extra: { arguments: t },
                             };
                             (0, E.$e)((r) => {
                                 if (
                                     (r.addEventProcessor(
                                         (t) => (
-                                            (t.logger = 'console'),
+                                            (t.logger = "console"),
                                             (0, i.EG)(t, {
                                                 handled: !1,
-                                                type: 'console'
+                                                type: "console",
                                             }),
                                             t
-                                        )
+                                        ),
                                     ),
-                                    'assert' === e)
+                                    "assert" === e)
                                 ) {
                                     if (!t[0]) {
-                                        let e = `Assertion failed: ${(0, c.nK)(t.slice(1), ' ') || 'console.assert'}`;
-                                        (r.setExtra('arguments', t.slice(1)), (0, s.uT)(e, a));
+                                        let e = `Assertion failed: ${((0, c.nK))(t.slice(1), " ") || "console.assert"}`;
+                                        r.setExtra("arguments", t.slice(1)), (0, s.uT)(e, a);
                                     }
                                     return;
                                 }
                                 let _ = t.find((t) => t instanceof Error);
                                 if (_) return void (0, s.Tb)(_, a);
-                                let n = (0, c.nK)(t, ' ');
+                                let n = (0, c.nK)(t, " ");
                                 (0, s.uT)(n, a);
                             });
                         })(a, r);
                 });
-        }
+        },
     };
 });

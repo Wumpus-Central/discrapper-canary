@@ -40,60 +40,60 @@ let w = () => {
                     : a
                       ? (0, v.Rt)({
                             intervalType: null == o || null == (t = o.subscription_trial) ? void 0 : t.interval,
-                            intervalCount: null == o || null == (n = o.subscription_trial) ? void 0 : n.interval_count
+                            intervalCount: null == o || null == (n = o.subscription_trial) ? void 0 : n.interval_count,
                         })
-                      : R.intl.string(R.t.mr4K7O)
+                      : R.intl.string(R.t.mr4K7O),
             },
-            subscriptionTier: C.Si.TIER_2
+            subscriptionTier: C.Si.TIER_2,
         });
     },
     D = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                (null == t || t(N.L.DISMISS), (0, m.Ll)(), (0, I.O)());
+                null == t || t(N.L.DISMISS), (0, m.Ll)(), (0, I.O)();
             };
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: P.editorHeader,
             children: [
                 (0, r.jsx)(u.P3F, {
                     className: P.closeCircleButton,
                     onClick: () => n(),
                     children: (0, r.jsx)(u.k$p, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: P.closeCircle
-                    })
+                        size: "md",
+                        color: "currentColor",
+                        className: P.closeCircle,
+                    }),
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: P.title,
                     children: [
                         (0, r.jsx)(u.X6q, {
-                            variant: 'heading-lg/extrabold',
-                            children: R.intl.string(R.t['hb/wEx'])
+                            variant: "heading-lg/extrabold",
+                            children: R.intl.string(R.t["hb/wEx"]),
                         }),
-                        (0, r.jsx)(b.Z, { className: P.premiumIcon })
-                    ]
-                })
-            ]
+                        (0, r.jsx)(b.Z, { className: P.premiumIcon }),
+                    ],
+                }),
+            ],
         });
     },
     L = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, s.e7)([T.Z], () => T.Z.isUpsellPreview),
             o = () => {
-                (null == n || n(N.L.DISMISS), (0, m.Ll)(), (0, I.O)(), t || d.Z.open());
+                null == n || n(N.L.DISMISS), (0, m.Ll)(), (0, I.O)(), t || d.Z.open();
             };
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: P.editorFooter,
             children: [
                 i && (0, r.jsx)(w, {}),
                 (0, r.jsx)(l.z, {
                     onClick: o,
-                    variant: 'secondary',
+                    variant: "secondary",
                     fullWidth: !0,
-                    text: i || t ? R.intl.string(R.t['dqH+qq']) : R.intl.string(R.t.Olc2Ky)
-                })
-            ]
+                    text: i || t ? R.intl.string(R.t["dqH+qq"]) : R.intl.string(R.t.Olc2Ky),
+                }),
+            ],
         });
     };
 function x(e) {
@@ -102,14 +102,14 @@ function x(e) {
         l = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
         { isUpsellPreview: c, shouldEditorAnimate: d } = (0, s.cj)([T.Z, _.Z], () => ({
             isUpsellPreview: T.Z.isUpsellPreview,
-            shouldEditorAnimate: t && !_.Z.useReducedMotion
+            shouldEditorAnimate: t && !_.Z.useReducedMotion,
         })),
         g = m.oq.getState().activePanel === m.wh.APP_ICON;
     i.useEffect(() => {
         c &&
             O.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: C.cd.APP_ICON_UPSELL,
-                location_stack: o
+                location_stack: o,
             });
     }, [c, o]);
     let E = (0, f.Z)(null, c ? I.O : A.dG4);
@@ -120,10 +120,10 @@ function x(e) {
         ? null
         : (0, r.jsx)(h.Gt, {
               value: o,
-              children: (0, r.jsx)('div', {
+              children: (0, r.jsx)("div", {
                   ref: E,
                   className: a()(P.editor, d ? P.editorAnimate : null),
-                  'data-app-right-panel': !0,
+                  "data-app-right-panel": !0,
                   children: (0, r.jsxs)(u.y5t, {
                       children: [
                           (0, r.jsx)(D, { markAsDismissed: n }),
@@ -131,15 +131,15 @@ function x(e) {
                               className: P.editorBody,
                               children: (0, r.jsx)(S.Z, {
                                   className: P.selectionGroup,
-                                  isEditor: !0
-                              })
+                                  isEditor: !0,
+                              }),
                           }),
                           (0, r.jsx)(L, {
                               markAsDismissed: n,
-                              isCoachmark: t
-                          })
-                      ]
-                  })
-              })
+                              isCoachmark: t,
+                          }),
+                      ],
+                  }),
+              }),
           });
 }

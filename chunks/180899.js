@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(73800),
     i = n(512722),
     l = n.n(i),
@@ -22,12 +22,13 @@ function s(e) {
             },
             savedOptions: u,
             handleSettingsSave: function (e) {
-                if ((x(e), e.privacyLevel === o.j8.PUBLIC && (null == t ? void 0 : t.privacy_level) !== o.j8.PUBLIC)) return void d(a.lv.PUBLIC_STAGE_PREVIEW);
+                if ((x(e), e.privacyLevel === o.j8.PUBLIC && (null == t ? void 0 : t.privacy_level) !== o.j8.PUBLIC))
+                    return void d(a.lv.PUBLIC_STAGE_PREVIEW);
                 s(e);
             },
             handleDelayedSave: function () {
-                (l()(null != u, 'Must have some saved options.'), s(u));
-            }
+                l()(null != u, "Must have some saved options."), s(u);
+            },
         }
     );
 }

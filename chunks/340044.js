@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,7 +67,8 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,37 +78,37 @@ function g(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = i.memo(function (e) {
     var { children: t, isOverlay: n, contextGuildId: o } = e,
-        f = m(e, ['children', 'isOverlay', 'contextGuildId']);
-    let [p, g] = i.useState({ maskImage: 'none' }),
+        f = m(e, ["children", "isOverlay", "contextGuildId"]);
+    let [p, g] = i.useState({ maskImage: "none" }),
         E = i.useRef(null),
         b = (0, l.Z)(() => {
             var e, t, r, i;
             let o = null != (r = null == (e = y.current) ? void 0 : e.getBoundingClientRect()) ? r : null,
                 a = null != (i = null == (t = E.current) ? void 0 : t.getBoundingClientRect()) ? i : null;
-            if (n || null == o || null == a) return void g({ maskImage: 'none' });
+            if (n || null == o || null == a) return void g({ maskImage: "none" });
             let s = a.right - o.right,
                 l = a.width - s;
-            if (l > a.width) return void g({ maskImage: 'none' });
-            g({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(l, 'px)') });
+            if (l > a.width) return void g({ maskImage: "none" });
+            g({ maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ".concat(l, "px)") });
         }),
         y = (0, s.y)(b),
         O = (0, c.yF)(f.userId, o);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(d.container, n && d.isOverlayContainer),
         ref: y,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.usernameContainer,
-                children: t
+                children: t,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.chipletParent,
-                children: (0, r.jsx)('span', {
+                children: (0, r.jsx)("span", {
                     className: a()(d.chipletContainer, !O && n && d.noPadding),
                     ref: E,
                     style: p,
@@ -116,11 +117,11 @@ let E = i.memo(function (e) {
                         h(_({}, f), {
                             contextGuildId: o,
                             className: a()(f.className, n && d.isOverlayTag),
-                            disableGuildProfile: !0
-                        })
-                    )
-                })
-            })
-        ]
+                            disableGuildProfile: !0,
+                        }),
+                    ),
+                }),
+            }),
+        ],
     });
 });

@@ -6,8 +6,8 @@ var r = n(220159),
     c = n(84186);
 r(
     {
-        target: 'Array',
-        proto: !0
+        target: "Array",
+        proto: !0,
     },
     {
         flat: function () {
@@ -15,7 +15,7 @@ r(
                 t = a(this),
                 n = i(t),
                 r = c(t, 0);
-            return ((r.length = o(r, t, t, n, 0, void 0 === e ? 1 : s(e))), r);
-        }
-    }
+            return (r.length = o(r, t, t, n, 0, void 0 === e ? 1 : s(e))), r;
+        },
+    },
 );

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685), n(415506));
+n.d(t, { Z: () => A }), n(388685), n(415506);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -27,7 +27,15 @@ var i = n(255367),
     N = n(628654),
     y = n(893354);
 function A(e) {
-    let { subscription: t, onPaymentSourceAdded: n, highlightAddPaymentMethodButton: s, dropdownClassName: l, analyticsLocation: A, currentInvoicePreview: R, disabled: D = !1 } = e,
+    let {
+            subscription: t,
+            onPaymentSourceAdded: n,
+            highlightAddPaymentMethodButton: s,
+            dropdownClassName: l,
+            analyticsLocation: A,
+            currentInvoicePreview: R,
+            disabled: D = !1,
+        } = e,
         Z = (0, c.e7)([_.Z], () => _.Z.hidePersonalInformation),
         [w, k] = (0, c.Wu)([j.Z], () => [j.Z.paymentSources, j.Z.hasFetchedPaymentSources]),
         L = (0, x.V)((0, v.yb)(t)),
@@ -36,8 +44,8 @@ function A(e) {
         [U, V] = r.useState(!1),
         [G, F] = r.useState(t.currency),
         H = async (e, n, i) => {
-            if (null == t) throw Error('missing subscription and paymentSource');
-            (null == e ? await p.fG(t, n, i, M, A) : await p.tq(t, e, n, i, M, A), V(!1), F(n));
+            if (null == t) throw Error("missing subscription and paymentSource");
+            null == e ? await p.fG(t, n, i, M, A) : await p.tq(t, e, n, i, M, A), V(!1), F(n);
         },
         z = async (e, n, i) => {
             V(!0);
@@ -47,11 +55,11 @@ function A(e) {
                     renewal: !0,
                     currency: n,
                     analyticsLocations: M,
-                    analyticsLocation: A
+                    analyticsLocation: A,
                 }),
                 s = {
                     amount: r.subtotal,
-                    currency: r.currency
+                    currency: r.currency,
                 };
             R.currency !== r.currency || (R.currency === r.currency && R.total !== r.total)
                 ? await P(
@@ -61,13 +69,13 @@ function A(e) {
                       },
                       () => {
                           V(!1);
-                      }
+                      },
                   )
                 : i(e, n, s);
         },
         W = (e) => {
             let n = E.Z.get(t.planIdForCurrencies);
-            (o()(null != e, 'paymentSource not specified for change'), o()(null != n, 'Unable to fetch plan'));
+            o()(null != e, "paymentSource not specified for change"), o()(null != n, "Unable to fetch plan");
             let i = (0, O.DE)(n.id, e.id, !1);
             return i.length > 0 ? i[0] : T.pKx.USD;
         },
@@ -75,10 +83,10 @@ function A(e) {
             null != e && z(e, W(e), H);
         },
         K = (e) => {
-            ((0, O.i1)(e.id, (0, v.yb)(t)).then(() => {
+            (0, O.i1)(e.id, (0, v.yb)(t)).then(() => {
                 z(e, W(e), H);
             }),
-                'function' == typeof n && n(e.id));
+                "function" == typeof n && n(e.id);
         },
         q = () => {
             (0, u.ZDy)(
@@ -90,31 +98,31 @@ function A(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        ((i = n[t]),
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = i));
-                                    }));
+                                                : (e[t] = i);
+                                    });
                             }
                             return e;
                         })({}, e)),
                         (n = n =
                             {
                                 onAddPaymentSource: K,
-                                analyticsLocation: A
+                                analyticsLocation: A,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -128,29 +136,29 @@ function A(e) {
                               })(Object(n)).forEach(function (e) {
                                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                               }),
-                        t)
+                        t),
                     );
                 },
                 {
                     onCloseCallback: () => {
                         (0, m.fw)();
                     },
-                    onCloseRequest: T.dG4
-                }
+                    onCloseRequest: T.dG4,
+                },
             );
         };
     if (t.isPurchasedExternally) {
-        o()(null != t.paymentGateway, 'Expected payment gateway when managed externally');
-        let e = (0, C.JE)(t.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT');
+        o()(null != t.paymentGateway, "Expected payment gateway when managed externally");
+        let e = (0, C.JE)(t.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT");
         return (0, i.jsx)(u.eee, {
             href: e,
             useDefaultUnderlineStyles: !1,
             className: N.externalLink,
             children: (0, i.jsx)(u.zxk, {
-                variant: 'secondary',
+                variant: "secondary",
                 text: I.intl.string(I.t.SgX7RU),
-                fullWidth: !0
-            })
+                fullWidth: !0,
+            }),
         });
     }
     if (!k || !L) return (0, i.jsx)(u.$jN, {});
@@ -160,11 +168,11 @@ function A(e) {
             look: d.zx.Looks.FILLED,
             color: s ? d.zx.Colors.BRAND : d.zx.Colors.PRIMARY,
             onClick: q,
-            children: I.intl.string(I.t.CpOiEB)
+            children: I.intl.string(I.t.CpOiEB),
         });
     {
         let e = E.Z.get(t.planIdForCurrencies);
-        o()(null != e, 'Unable to fetch plan');
+        o()(null != e, "Unable to fetch plan");
         let n = (0, O.DE)(e, t.paymentSourceId, !1);
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -175,7 +183,7 @@ function A(e) {
                             null == e
                                 ? {
                                       label: I.intl.string(I.t.iA5vAw),
-                                      value: null
+                                      value: null,
                                   }
                                 : null,
                         className: l,
@@ -186,48 +194,48 @@ function A(e) {
                         onPaymentSourceAdd: q,
                         dropdownLoading: U,
                         disabled: D,
-                        paymentGatewayRestrictions: t.eligiblePaymentGateways
+                        paymentGatewayRestrictions: t.eligiblePaymentGateways,
                     });
                 })(),
                 null != t.paymentSourceId
                     ? (0, i.jsx)(h.b, {
                           currencies: n,
-                          children: (0, i.jsxs)('div', {
+                          children: (0, i.jsxs)("div", {
                               className: a()(N.currency, y.flex, y.alignCenter),
                               children: [
-                                  (0, i.jsx)('div', { children: I.intl.string(I.t['0YjaXV']) }),
+                                  (0, i.jsx)("div", { children: I.intl.string(I.t["0YjaXV"]) }),
                                   (0, i.jsx)(h.Z, {
                                       className: N.currencyDropdown,
                                       selectedCurrency: G,
                                       currencies: n,
                                       onChange: (e) => {
                                           z(void 0, e, H);
-                                      }
-                                  })
-                              ]
-                          })
+                                      },
+                                  }),
+                              ],
+                          }),
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     }
 }
 let P = async (e, t, r) => {
     let s = await (0, u.ZDy)(
         async () => {
-            let { default: s } = await n.e('97516').then(n.bind(n, 358927));
+            let { default: s } = await n.e("97516").then(n.bind(n, 358927));
             return (n) =>
                 (0, i.jsx)(s, {
                     newInvoice: e,
                     onConfirm: t,
                     onCancel: r,
-                    modalProps: n
+                    modalProps: n,
                 });
         },
         {
             onCloseRequest: () => {
-                (null != s && (0, u.Mr3)(s), r());
-            }
-        }
+                null != s && (0, u.Mr3)(s), r();
+            },
+        },
     );
 };

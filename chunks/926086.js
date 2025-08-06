@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(415506));
+n.d(t, { Z: () => m }), n(388685), n(415506);
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -14,7 +14,7 @@ let h = {
     mass: 1,
     tension: 600,
     friction: 60,
-    clamp: !0
+    clamp: !0,
 };
 function m(e) {
     let { locked: t, pinned: n } = e,
@@ -26,46 +26,46 @@ function m(e) {
         { timeToLiveMs: _, reappearTimeMs: x } = d.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
-                reappearTimeMs: e.reappearTimeMs
+                reappearTimeMs: e.reappearTimeMs,
             }),
-            s()
+            s(),
         ),
         S = {
             timeToLiveMs: _,
-            reappearTimeMs: x
+            reappearTimeMs: x,
         },
         I = r.useRef(S);
-    (r.useEffect(() => {
+    r.useEffect(() => {
         I.current = S;
     }),
         r.useEffect(
             () => (
                 (b.current = setInterval(() => {
                     let e = Date.now();
-                    (g(e),
+                    g(e),
                         O((t) => {
                             if (0 === t) return e;
                             let n = e - t,
                                 i = I.current.timeToLiveMs,
                                 r = i + I.current.reappearTimeMs;
                             return n > i ? t + r : t;
-                        }));
+                        });
                 }, 100)),
                 () => {
                     clearInterval(b.current);
                 }
             ),
-            []
-        ));
+            [],
+        );
     let j = () => {
-            (a(Date.now()), E((e) => e + 1));
+            a(Date.now()), E((e) => e + 1);
         },
         C = o > 0 && m - o < 1000,
         N = (0, u.Yzy)(y > 0 && y < m && m - y < _, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
-            config: h
+            config: h,
         }),
         [w, Z] = r.useState(!1);
     if (
@@ -74,7 +74,7 @@ function m(e) {
         }, [v]),
         w)
     )
-        throw Error('ClickZoneDebugWidget crashed, too many clicks');
+        throw Error("ClickZoneDebugWidget crashed, too many clicks");
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {
@@ -90,13 +90,13 @@ function m(e) {
                                   onClick: j,
                                   className: f.clickable,
                                   children: (0, i.jsxs)(u.Text, {
-                                      variant: 'text-md/semibold',
-                                      color: 'always-white',
-                                      children: ['Click Me (', v, ')']
-                                  })
-                              })
-                          })
-                      })
-              )
+                                      variant: "text-md/semibold",
+                                      color: "always-white",
+                                      children: ["Click Me (", v, ")"],
+                                  }),
+                              }),
+                          }),
+                      }),
+              ),
           });
 }

@@ -1,9 +1,9 @@
-(Object.defineProperty(t, '__esModule', { value: !0 }), (t.makeDataFormatters = o));
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.makeDataFormatters = o);
 let r = n(180660),
     i = n(912913);
 function o(e, t, n = !1) {
     function a(e) {
-        return n ? Object.assign(Object.assign({}, e), { localeMatcher: 'lookup' }) : e;
+        return n ? Object.assign(Object.assign({}, e), { localeMatcher: "lookup" }) : e;
     }
     return {
         formatDate(n, o) {
@@ -25,7 +25,7 @@ function o(e, t, n = !1) {
         formatListToParts(n, o) {
             let s = (0, r.resolveFormatConfigOptions)(t.list, o),
                 l = {};
-            for (let e in n) l['$+/-$placeholder.' + e] = n[e];
+            for (let e in n) l["$+/-$placeholder." + e] = n[e];
             return i.dataFormatterCache
                 .getListFormatter(e, a(s))
                 .formatToParts(Object.keys(l))
@@ -42,6 +42,6 @@ function o(e, t, n = !1) {
             let s = (0, r.resolveFormatConfigOptions)(t.time, o);
             return i.dataFormatterCache.getDateTimeFormatter(e, a(s)).format(n);
         },
-        getPluralRules: (t) => i.dataFormatterCache.getPluralRules(e, a(t))
+        getPluralRules: (t) => i.dataFormatterCache.getPluralRules(e, a(t)),
     };
 }

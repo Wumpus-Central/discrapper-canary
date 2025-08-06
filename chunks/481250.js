@@ -1,10 +1,10 @@
-(r.d(t, {
+r.d(t, {
     V: () => b,
-    a: () => v
+    a: () => v,
 }),
     r(539854),
     r(642613),
-    r(388685));
+    r(388685);
 var n = r(255367);
 r(73800);
 var a = r(120356),
@@ -21,9 +21,9 @@ var a = r(120356),
     y = r(442122),
     f = r(20493);
 let g = {
-    [h.Z.NO_OVERRIDE]: 'None',
-    [h.Z.LOW]: 'Low Quality Stream',
-    [h.Z.HIGH]: 'High Quality Stream'
+    [h.Z.NO_OVERRIDE]: "None",
+    [h.Z.LOW]: "Low Quality Stream",
+    [h.Z.HIGH]: "High Quality Stream",
 };
 function v(e) {
     let t = [],
@@ -34,31 +34,30 @@ function v(e) {
             (0, n.jsx)(
                 c.Z,
                 {
-                    basis: '50%',
-                    grow: 0
+                    basis: "50%",
+                    grow: 0,
                 },
-                r++
-            )
+                r++,
+            ),
         );
         e.length > 0;
-
     )
         t.push(
             (0, n.jsx)(
                 c.Z,
                 {
-                    basis: '50%',
+                    basis: "50%",
                     grow: 0,
-                    children: e.splice(0, 2)
+                    children: e.splice(0, 2),
                 },
-                r++
-            )
+                r++,
+            ),
         );
     return t;
 }
 let D = {
     ssrc: 1,
-    codec: 2
+    codec: 2,
 };
 function b(e, t, r, a, b) {
     return e.map((C, E) => {
@@ -66,7 +65,19 @@ function b(e, t, r, a, b) {
         for (let e of Object.keys(C).sort((e, t) => {
             let r = D[e],
                 n = D[t];
-            return r !== n ? (void 0 === r ? 1 : void 0 === n ? -1 : r - n) : m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
+            return r !== n
+                ? void 0 === r
+                    ? 1
+                    : void 0 === n
+                      ? -1
+                      : r - n
+                : m.Pz[e] !== m.Pz[t]
+                  ? m.Pz[e]
+                      ? 1
+                      : -1
+                  : e > t
+                    ? 1
+                    : -1;
         })) {
             let t = C[e];
             p.al[e] ||
@@ -77,10 +88,10 @@ function b(e, t, r, a, b) {
                         {
                             section: a,
                             label: e,
-                            value: t
+                            value: t,
                         },
-                        e
-                    )
+                        e,
+                    ),
                 );
         }
         return (0, n.jsxs)(
@@ -90,27 +101,27 @@ function b(e, t, r, a, b) {
                 title: C.type,
                 titleClassName: y.sectionHeader,
                 children: [
-                    'video' === C.type &&
+                    "video" === C.type &&
                         null != r &&
                         null != a &&
                         null != b &&
                         (function (e, t, r, a) {
                             let l = a.get(t, r, e.ssrc);
                             return null != l
-                                ? (0, n.jsx)('div', {
+                                ? (0, n.jsx)("div", {
                                       className: i()(y.videoWrapper, f.marginBottom40),
                                       children: (0, n.jsx)(d.Z, {
                                           streamId: l,
                                           videoComponent: u.Z.getMediaEngine().Video,
                                           paused: !1,
                                           videoSpinnerContext: s.m.REPLAY_VIDEO_STREAM,
-                                          userId: r
-                                      })
+                                          userId: r,
+                                      }),
                                   })
                                 : null;
                         })(C, r, a, b),
                     v(P),
-                    'video' === C.type &&
+                    "video" === C.type &&
                         E === e.length - 1 &&
                         null != r &&
                         null != a &&
@@ -118,12 +129,12 @@ function b(e, t, r, a, b) {
                         (0, n.jsx)(c.Z, {
                             className: f.marginBottom20,
                             children: (0, n.jsxs)(c.Z.Child, {
-                                basis: '100%',
+                                basis: "100%",
                                 children: [
                                     (0, n.jsx)(l.vwX, {
                                         tag: l.RB0.H5,
                                         className: f.marginBottom8,
-                                        children: 'Simulcast Override'
+                                        children: "Simulcast Override",
                                     }),
                                     (0, n.jsx)(l.q4e, {
                                         value: m.ZP.getSimulcastDebugOverride(a, t),
@@ -132,15 +143,15 @@ function b(e, t, r, a, b) {
                                         },
                                         options: Object.values(h.Z).map((e) => ({
                                             value: e,
-                                            label: g[e]
-                                        }))
-                                    })
-                                ]
-                            })
-                        })
-                ]
+                                            label: g[e],
+                                        })),
+                                    }),
+                                ],
+                            }),
+                        }),
+                ],
             },
-            ''.concat(C.type, ' + ').concat(C.ssrc)
+            "".concat(C.type, " + ").concat(C.ssrc),
         );
     });
 }

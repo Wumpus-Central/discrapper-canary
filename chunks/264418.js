@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,8 @@ function h(e, t) {
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,7 +77,7 @@ function m(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function g(e) {
@@ -84,19 +85,31 @@ function g(e) {
             title: t,
             body: n,
             caretConfig: d = {
-                position: 'bottom',
-                align: 'center'
+                position: "bottom",
+                align: "center",
             },
             badge: _,
             asset: m,
-            size: g = 'md',
+            size: g = "md",
             actions: E,
             textLink: b,
             gradientColor: y,
             onRequestClose: O,
-            popoverRef: v
+            popoverRef: v,
         } = e,
-        I = h(e, ['title', 'body', 'caretConfig', 'badge', 'asset', 'size', 'actions', 'textLink', 'gradientColor', 'onRequestClose', 'popoverRef']);
+        I = h(e, [
+            "title",
+            "body",
+            "caretConfig",
+            "badge",
+            "asset",
+            "size",
+            "actions",
+            "textLink",
+            "gradientColor",
+            "onRequestClose",
+            "popoverRef",
+        ]);
     let T = i.useCallback(() => {
             null == O || O();
         }, [O]),
@@ -109,17 +122,17 @@ function g(e) {
             onRequestClose: T,
             gradientColor: y,
             caretConfig: d,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 ref: v,
                 children: [
                     (0, r.jsx)(c.u, {
                         onClick: S,
-                        colorMix: null != y
+                        colorMix: null != y,
                     }),
                     null != m
                         ? (0, r.jsx)(s.V, {
                               asset: m,
-                              size: g
+                              size: g,
                           })
                         : null,
                     (0, r.jsx)(u.Y, {
@@ -127,12 +140,12 @@ function g(e) {
                         body: n,
                         badge: _,
                         textLink: b,
-                        hasBottomMargin: null != E
+                        hasBottomMargin: null != E,
                     }),
                     null != E && E.length > 0 ? (0, r.jsx)(a.k, { actions: E }) : null,
-                    (0, r.jsx)(l.$, { caretConfig: d })
-                ]
-            })
-        })
+                    (0, r.jsx)(l.$, { caretConfig: d }),
+                ],
+            }),
+        }),
     );
 }

@@ -1,4 +1,4 @@
-(t.d(n, { default: () => y }), t(388685));
+t.d(n, { default: () => y }), t(388685);
 var a = t(255367),
     r = t(73800),
     o = t(120356),
@@ -29,35 +29,35 @@ function A(e) {
         A = r.useRef(new i.qA()),
         y = (0, d.e7)([c.Z], () => c.Z.useReducedMotion),
         S = (null == (n = C.userStatus) ? void 0 : n.claimedAt) != null,
-        [k, q] = r.useState(S ? 'claimed' : 'loading');
+        [k, q] = r.useState(S ? "claimed" : "loading");
     r.useEffect(() => {
         if (!S) {
             let e = x.r.build(C.config),
                 n = e.rewardPlatforms.length > 0 ? e.rewardPlatforms[0] : f.y$.CROSS_PLATFORM;
             (0, m.QB)(C.id, n, h)
-                .then(() => q('claimed'))
-                .catch(() => q('error'));
+                .then(() => q("claimed"))
+                .catch(() => q("error"));
         }
     }, [C, h, S]);
-    let I = 'loading' === k;
+    let I = "loading" === k;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(i.O_, {
                 ref: N,
                 className: R.confettiCanvas,
-                environment: A.current
+                environment: A.current,
             }),
-            (0, a.jsx)('div', {
+            (0, a.jsx)("div", {
                 ref: v,
                 children: (0, a.jsx)(l.Y0X, {
                     transitionState: t,
                     size: l.CgR.DYNAMIC,
                     className: s()(R.rootContainer, { [R.rootContainerLoading]: I }),
                     hideShadow: !0,
-                    parentComponent: 'QuestsRewardInGameModal',
+                    parentComponent: "QuestsRewardInGameModal",
                     children: I
                         ? (0, a.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
-                        : 'error' === k
+                        : "error" === k
                           ? (0, a.jsx)(_.Z, { onClose: o })
                           : (0, a.jsx)(M, {
                                 quest: C,
@@ -65,30 +65,30 @@ function A(e) {
                                 location: h,
                                 useReducedMotion: y,
                                 onClose: o,
-                                sourceQuestContent: j
-                            })
-                })
+                                sourceQuestContent: j,
+                            }),
+                }),
             }),
             !y &&
                 !S &&
-                'claimed' === k &&
+                "claimed" === k &&
                 (0, a.jsx)(u.Z, {
                     confettiTarget: v.current,
                     confettiCanvas: p,
                     sprites: w.CA,
-                    colors: w.Br
-                })
-        ]
+                    colors: w.Br,
+                }),
+        ],
     });
 }
 function M(e) {
     let { quest: n, rewardName: t, location: o, useReducedMotion: s, onClose: i, sourceQuestContent: d } = e,
         c = r.useMemo(() => (0, g.fh)(n, g.eC.HERO), [n]),
         u = c.isAnimated && !s;
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         className: R.claimedRootContainer,
         children: [
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 className: R.headerContainer,
                 children: [
                     (0, a.jsx)(C.Z, {
@@ -99,12 +99,12 @@ function M(e) {
                         playsInline: !0,
                         controls: !1,
                         poster: c.isAnimated ? void 0 : c.url,
-                        src: c.isAnimated ? c.url : void 0
+                        src: c.isAnimated ? c.url : void 0,
                     }),
-                    (0, a.jsxs)('div', {
+                    (0, a.jsxs)("div", {
                         className: R.headerForeground,
                         children: [
-                            (0, a.jsx)('div', {
+                            (0, a.jsx)("div", {
                                 className: R.previewContainer,
                                 children: (0, a.jsx)(v.Z, {
                                     autoplay: !0,
@@ -113,40 +113,40 @@ function M(e) {
                                     quest: n,
                                     questContent: o,
                                     location: p.dr.INGAME_REWARD_MODAL,
-                                    sourceQuestContent: d
-                                })
+                                    sourceQuestContent: d,
+                                }),
                             }),
                             (0, a.jsx)(l.olH, {
                                 className: R.close,
                                 withCircleBackground: !0,
-                                onClick: i
-                            })
-                        ]
-                    })
-                ]
+                                onClick: i,
+                            }),
+                        ],
+                    }),
+                ],
             }),
             (0, a.jsx)(l.mzw, {
                 className: R.footerContainer,
                 separator: !1,
-                children: (0, a.jsxs)('div', {
+                children: (0, a.jsxs)("div", {
                     className: R.gradient,
                     children: [
                         (0, a.jsx)(l.X6q, {
-                            variant: 'heading-lg/bold',
-                            color: 'always-white',
+                            variant: "heading-lg/bold",
+                            color: "always-white",
                             className: R.heading,
-                            children: N.intl.string(N.t['0/Yz+f'])
+                            children: N.intl.string(N.t["0/Yz+f"]),
                         }),
                         (0, a.jsx)(l.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'always-white',
+                            variant: "text-sm/normal",
+                            color: "always-white",
                             className: R.text,
-                            children: N.intl.format(N.t['v1u/zs'], { rewardName: t })
-                        })
-                    ]
-                })
-            })
-        ]
+                            children: N.intl.format(N.t["v1u/zs"], { rewardName: t }),
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 }
 function y(e) {
@@ -166,7 +166,7 @@ function y(e) {
                       quest: n,
                       location: t,
                       reward: d,
-                      sourceQuestContent: i
-                  })
+                      sourceQuestContent: i,
+                  }),
           });
 }

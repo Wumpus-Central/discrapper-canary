@@ -11,7 +11,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,12 +34,12 @@ class d extends (i = l.ZP.DeviceSettingsStore) {
         return null != r ? r : c;
     }
 }
-(s(d, 'displayName', 'PhoneStore'), s(d, 'persistKey', 'PhoneStore'));
+s(d, "displayName", "PhoneStore"), s(d, "persistKey", "PhoneStore");
 let p = new d(a.Z, {
     PHONE_SET_COUNTRY_CODE: function (e) {
         let { countryCode: t } = e;
         r = t;
     },
     CONNECTION_OPEN: u,
-    SET_LOCATION_METADATA: u
+    SET_LOCATION_METADATA: u,
 });

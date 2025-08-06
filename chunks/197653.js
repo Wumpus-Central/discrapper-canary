@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     $Y: () => l,
     am: () => a,
-    e4: () => c
+    e4: () => c,
 }),
     n(388685),
-    n(415506));
+    n(415506);
 var r = n(255367),
     i = n(73800);
 let o = i.createContext(null),
@@ -14,13 +14,13 @@ let o = i.createContext(null),
                 a = i.useMemo(
                     () => ({
                         isParentWidthLimited: !0,
-                        parentContainerInnerWidth: t
+                        parentContainerInnerWidth: t,
                     }),
-                    [t]
+                    [t],
                 );
             return (0, r.jsx)(o.Provider, {
                 value: a,
-                children: n
+                children: n,
             });
         },
         NestedContainer(e) {
@@ -30,13 +30,13 @@ let o = i.createContext(null),
                 d = i.useMemo(
                     () => ({
                         isParentWidthLimited: u,
-                        parentContainerInnerWidth: n
+                        parentContainerInnerWidth: n,
                     }),
-                    [u, n]
+                    [u, n],
                 );
             return (0, r.jsx)(o.Provider, {
                 value: d,
-                children: a
+                children: a,
             });
         },
         AutoMeasuredNestedContainer(e) {
@@ -45,13 +45,13 @@ let o = i.createContext(null),
             return (0, r.jsx)(a.NestedContainer, {
                 containerOuterWidth: i,
                 containerInnerWidth: o,
-                children: t(n)
+                children: t(n),
             });
-        }
+        },
     };
 function s() {
     let e = i.useContext(o);
-    if (null == e) throw Error('Cannot use the ComponentLayoutLimitContext system when not within the context');
+    if (null == e) throw Error("Cannot use the ComponentLayoutLimitContext system when not within the context");
     return e;
 }
 function l(e) {
@@ -69,9 +69,17 @@ function c() {
             let n = new ResizeObserver(() => {
                 let n = t.current.getBoundingClientRect().width,
                     i = getComputedStyle(t.current);
-                (r(n + (parseFloat(i.marginLeft) + parseFloat(i.marginRight))), e && a(n - (parseFloat(i.paddingLeft) + parseFloat(i.paddingRight) + parseFloat(i.borderLeftWidth) + parseFloat(i.borderRightWidth))));
+                r(n + (parseFloat(i.marginLeft) + parseFloat(i.marginRight))),
+                    e &&
+                        a(
+                            n -
+                                (parseFloat(i.paddingLeft) +
+                                    parseFloat(i.paddingRight) +
+                                    parseFloat(i.borderLeftWidth) +
+                                    parseFloat(i.borderRightWidth)),
+                        );
             });
-            return (n.observe(t.current), () => n.disconnect());
+            return n.observe(t.current), () => n.disconnect();
         }, [e]),
         [t, n, o]
     );

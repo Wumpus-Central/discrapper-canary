@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685));
+n.d(t, { Z: () => u }), n(388685);
 var i = n(73800),
     r = n(399606),
     s = n(230711),
@@ -16,10 +16,10 @@ let c = new Set(Object.values(o.NB)),
                 (t) => {
                     e !== t && s.Z.setSection(l.oAB.PROFILE_CUSTOMIZATION, t);
                 },
-                [e]
+                [e],
             );
         return {
             subsection: e,
-            setSubsection: t
+            setSubsection: t,
         };
     };

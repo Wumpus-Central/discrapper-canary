@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => i,
-    i: () => r
+    i: () => r,
 });
-let r = '(max-width: 485px)',
-    i = '(max-height: 450px)';
+let r = "(max-width: 485px)",
+    i = "(max-height: 450px)";

@@ -13,32 +13,33 @@ let u = function () {
     return (0, i.jsxs)(c.$0, {
         children: [
             (0, i.jsx)(s.X6q, {
-                variant: 'heading-xl/semibold',
-                children: 'Virtual Currency Configuration'
+                variant: "heading-xl/semibold",
+                children: "Virtual Currency Configuration",
             }),
             (0, i.jsxs)(c.E_, {
-                label: 'Reset Onboarding State',
-                direction: 'vertical',
+                label: "Reset Onboarding State",
+                direction: "vertical",
                 children: [
                     (0, i.jsx)(s.Text, {
-                        variant: 'text-md/normal',
-                        color: 'text-feedback-info',
-                        style: { marginBottom: '8px' },
-                        children: 'Click the button below to reset your onboarding state for Virtual Currency.'
+                        variant: "text-md/normal",
+                        color: "text-feedback-info",
+                        style: { marginBottom: "8px" },
+                        children: "Click the button below to reset your onboarding state for Virtual Currency.",
                     }),
                     (0, i.jsx)(r.zx, {
                         onClick: () => {
-                            (e(), t(), (0, a.xf)(), (0, l.uL)(d.Z5c.APP));
+                            e(), t(), (0, a.xf)(), (0, l.uL)(d.Z5c.APP);
                         },
-                        children: 'Reset Onboarding State'
+                        children: "Reset Onboarding State",
                     }),
                     (0, i.jsx)(s.Text, {
-                        variant: 'text-md/normal',
-                        color: 'text-feedback-info',
-                        children: 'Your may have to refresh your client after being redirected to the main application in order to see these changes.'
-                    })
-                ]
-            })
-        ]
+                        variant: "text-md/normal",
+                        color: "text-feedback-info",
+                        children:
+                            "Your may have to refresh your client after being redirected to the main application in order to see these changes.",
+                    }),
+                ],
+            }),
+        ],
     });
 };

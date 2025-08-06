@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => Z }), a(388685));
+a.d(t, { Z: () => Z }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -31,37 +31,37 @@ var n = a(255367),
     R = a(616257);
 let k = [
     {
-        key: 'type',
+        key: "type",
         cellClassName: i()(I.cell, I.cellType),
         render(e) {
             let { type: t } = e;
             return (0, n.jsx)(h.Text, {
-                variant: 'text-md/semibold',
-                children: c.s[t]
+                variant: "text-md/semibold",
+                children: c.s[t],
             });
-        }
+        },
     },
     {
-        key: 'count',
+        key: "count",
         cellClassName: i()(I.cell, I.cellCount),
         render(e) {
             let { entries: t } = e;
-            return (0, n.jsx)('div', {
+            return (0, n.jsx)("div", {
                 children: (0, n.jsx)(h.Text, {
-                    variant: 'text-md/normal',
-                    children: t.length
-                })
+                    variant: "text-md/normal",
+                    children: t.length,
+                }),
             });
-        }
+        },
     },
     {
-        key: 'only?',
+        key: "only?",
         cellClassName: I.cell,
         render(e) {
             let { type: t } = e;
             return (0, n.jsx)(A, { type: t });
-        }
-    }
+        },
+    },
 ];
 function A(e) {
     var t, a;
@@ -73,14 +73,14 @@ function A(e) {
         onClick: function () {
             i
                 ? p.Z.dispatch({
-                      type: 'CONTENT_INVENTORY_SET_FILTERS',
-                      filters: void 0
+                      type: "CONTENT_INVENTORY_SET_FILTERS",
+                      filters: void 0,
                   })
                 : p.Z.dispatch({
-                      type: 'CONTENT_INVENTORY_SET_FILTERS',
-                      filters: { types: new Set([r]) }
+                      type: "CONTENT_INVENTORY_SET_FILTERS",
+                      filters: { types: new Set([r]) },
                   });
-        }
+        },
     });
 }
 function Z() {
@@ -93,9 +93,9 @@ function Z() {
             return Object.keys(t).map((e) => {
                 let a = t[e];
                 return {
-                    key: ''.concat(e),
+                    key: "".concat(e),
                     type: a[0].content_type,
-                    entries: a
+                    entries: a,
                 };
             });
         })(null == a || null == (e = a.entries) ? void 0 : e.map((e) => e.content)),
@@ -103,21 +103,23 @@ function Z() {
             var e;
             return (null == (e = E.Z.getFeedState(w.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [A, Z] = r.useState(''),
-        L = (0, u.e7)(
-            [y.Z, f.Z],
-            () => {
-                var e, t, a;
-                return parseInt(A) > 0 ? A : null != (a = null == (e = y.Z.getGameByName(A)) ? void 0 : e.id) ? a : null == (t = f.Z.getApplicationByName(A)) ? void 0 : t.id;
-            },
-            [A]
-        ),
+        [A, Z] = r.useState(""),
+        L = (0, u.e7)([y.Z, f.Z], () => {
+            var e, t, a;
+            return parseInt(A) > 0
+                ? A
+                : null != (a = null == (e = y.Z.getGameByName(A)) ? void 0 : e.id)
+                  ? a
+                  : null == (t = f.Z.getApplicationByName(A))
+                    ? void 0
+                    : t.id;
+        }, [A]),
         M = (0, _.Z)({
             applicationId: L,
-            location: 'DevToolsContentInventory',
-            source: g.m1.DevTools
+            location: "DevToolsContentInventory",
+            source: g.m1.DevTools,
         }),
-        B = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
+        B = Object.entries(null != (t = m.K.get("GameProfileModal")) ? t : {})
             .filter((e) => {
                 let [t, a] = e;
                 return a;
@@ -128,138 +130,150 @@ function Z() {
             }),
         U = (0, b.Z)(B).filter(C.lm),
         F = (0, u.e7)([N.Z], () => N.Z.getFakeGameToShow());
-    return (0, n.jsx)('div', {
+    return (0, n.jsx)("div", {
         className: R.panel,
         children: (0, n.jsxs)(h.zJl, {
             className: I.content,
             children: [
                 (0, n.jsxs)(h.hjN, {
                     children: [
-                        (0, n.jsx)(h.vwX, { children: 'Inventory' }),
+                        (0, n.jsx)(h.vwX, { children: "Inventory" }),
                         s.length > 0 &&
                             (0, n.jsx)(j.Z, {
                                 columns: k,
-                                data: s
+                                data: s,
                             }),
                         (0, n.jsx)(h.LZC, { size: 8 }),
                         (0, n.jsx)(P.Z, {}),
                         (0, n.jsx)(h.zxk, {
-                            variant: 'primary',
-                            text: 'Refresh Now',
+                            variant: "primary",
+                            text: "Refresh Now",
                             fullWidth: !0,
                             onClick: function () {
                                 p.Z.dispatch({
-                                    type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
+                                    type: "CONTENT_INVENTORY_MANUAL_REFRESH",
                                     feedId: w.YN.GLOBAL_FEED,
-                                    feature: d.L.INBOX
+                                    feature: d.L.INBOX,
                                 });
                             },
-                            loading: c
-                        })
-                    ]
+                            loading: c,
+                        }),
+                    ],
                 }),
                 (0, n.jsxs)(h.hjN, {
                     children: [
-                        (0, n.jsx)(h.vwX, { children: 'Impression Capping' }),
+                        (0, n.jsx)(h.vwX, { children: "Impression Capping" }),
                         (0, n.jsx)(h.zxk, {
-                            variant: 'primary',
-                            text: 'Clear Impressions',
+                            variant: "primary",
+                            text: "Clear Impressions",
                             fullWidth: !0,
                             onClick: function () {
-                                p.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
-                            }
+                                p.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS" });
+                            },
                         }),
                         (0, n.jsx)(h.LZC, { size: 8 }),
                         (0, n.jsx)(h.zxk, {
-                            variant: 'primary',
-                            text: 'Log Impressions',
+                            variant: "primary",
+                            text: "Log Impressions",
                             fullWidth: !0,
                             onClick: function () {
-                                p.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
-                            }
+                                p.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS" });
+                            },
                         }),
                         (0, n.jsx)(h.LZC, { size: 8 }),
                         (0, n.jsx)(h.zxk, {
-                            variant: 'primary',
-                            text: l ? 'Enable Impression Capping' : 'Disable Impression Capping',
+                            variant: "primary",
+                            text: l ? "Enable Impression Capping" : "Disable Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
-                                p.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
-                            }
+                                p.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING" });
+                            },
                         }),
                         (0, n.jsx)(h.LZC, { size: 8 }),
                         (0, n.jsx)(h.zxk, {
-                            variant: 'primary',
-                            text: i ? 'Disable Fast Impression Capping' : 'Enable Fast Impression Capping',
+                            variant: "primary",
+                            text: i ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
-                                p.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING' });
-                            }
-                        })
-                    ]
+                                p.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING" });
+                            },
+                        }),
+                    ],
                 }),
                 !1,
                 (0, n.jsx)(S.Z, {}),
                 (0, n.jsxs)(h.hjN, {
                     children: [
-                        (0, n.jsx)(h.vwX, { children: 'Game Profile' }),
+                        (0, n.jsx)(h.vwX, { children: "Game Profile" }),
                         (0, n.jsx)(x.Is, {
-                            placeholder: 'App ID or full name',
+                            placeholder: "App ID or full name",
                             onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (A === e.currentTarget.value ? null == M || M(e) : Z(e.currentTarget.value));
+                                "Enter" === e.key &&
+                                    (A === e.currentTarget.value ? null == M || M(e) : Z(e.currentTarget.value));
                             },
-                            error: A.length > 0 && null == M ? 'No game profile for '.concat(null != L ? L : A + ' - try by id', '.') : void 0,
-                            style: null != M ? { border: '1px solid green' } : {}
+                            error:
+                                A.length > 0 && null == M
+                                    ? "No game profile for ".concat(null != L ? L : A + " - try by id", ".")
+                                    : void 0,
+                            style: null != M ? { border: "1px solid green" } : {},
                         }),
-                        (0, n.jsx)('ul', { children: U.map((e) => (0, n.jsx)('li', { children: (0, n.jsx)(D, { application: e }) }, 'follow-game-'.concat(e.id))) })
-                    ]
+                        (0, n.jsx)("ul", {
+                            children: U.map((e) =>
+                                (0, n.jsx)(
+                                    "li",
+                                    { children: (0, n.jsx)(D, { application: e }) },
+                                    "follow-game-".concat(e.id),
+                                ),
+                            ),
+                        }),
+                    ],
                 }),
                 (0, n.jsxs)(h.hjN, {
                     children: [
-                        (0, n.jsx)(h.vwX, { children: 'Activity Sharing' }),
+                        (0, n.jsx)(h.vwX, { children: "Activity Sharing" }),
                         (0, n.jsx)(h.Text, {
-                            variant: 'text-md/normal',
-                            children: 'Force show game:'
+                            variant: "text-md/normal",
+                            children: "Force show game:",
                         }),
                         (0, n.jsx)(h.PhF, {
                             options: T.h.map((e) => ({
                                 label: e,
-                                value: e
+                                value: e,
                             })),
                             isSelected: (e) => e === F,
                             select: function (e) {
                                 p.Z.dispatch({
-                                    type: 'CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING',
-                                    gameToShow: e
+                                    type: "CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING",
+                                    gameToShow: e,
                                 });
                             },
                             serialize: (e) => e,
-                            popoutLayerContext: v.O$
-                        })
-                    ]
-                })
-            ]
-        })
+                            popoutLayerContext: v.O$,
+                        }),
+                    ],
+                }),
+            ],
+        }),
     });
 }
 let D = (e) => {
     let { application: t } = e,
         a = (0, _.Z)({
             applicationId: t.id,
-            location: 'DevToolsContentInventory',
-            source: g.m1.DevTools
+            location: "DevToolsContentInventory",
+            source: g.m1.DevTools,
         });
     return (0, n.jsx)(h.P3F, {
         onClick: a,
         style: {
-            margin: '2px',
-            cursor: 'pointer'
+            margin: "2px",
+            cursor: "pointer",
         },
         children: (0, n.jsx)(h.Text, {
-            variant: 'text-xs/normal',
-            color: 'text-muted',
-            children: t.name
-        })
+            variant: "text-xs/normal",
+            color: "text-muted",
+            children: t.name,
+        }),
     });
 };

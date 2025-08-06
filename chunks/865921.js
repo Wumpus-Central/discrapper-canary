@@ -1,4 +1,4 @@
-(n.d(t, { v: () => p }), n(388685));
+n.d(t, { v: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(399606),
@@ -12,7 +12,15 @@ var r = n(255367),
     _ = n(981631);
 function p(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { blockedPayments: p, hasFetchedSkus: h, paymentSources: m, hasFetchedPaymentSources: g, application: E, skusById: b, selectedSkuId: y } = (0, c.JL)(),
+        {
+            blockedPayments: p,
+            hasFetchedSkus: h,
+            paymentSources: m,
+            hasFetchedPaymentSources: g,
+            application: E,
+            skusById: b,
+            selectedSkuId: y,
+        } = (0, c.JL)(),
         { isGift: O } = (0, l.wD)(),
         [v, I] = i.useState(!0),
         [T, S] = (0, o.Wu)([s.Z], () => [s.Z.isFetchingCategories, s.Z.error]);
@@ -23,7 +31,11 @@ function p(e) {
     i.useEffect(() => {
         if (v || p || null == y) return;
         let e = b[y];
-        return O && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES ? void t(u.h8.GIFT_CUSTOMIZATION) : 0 === Object.keys(m).length ? void t(u.h8.ADD_PAYMENT_STEPS) : void t(u.h8.REVIEW);
+        return O && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES
+            ? void t(u.h8.GIFT_CUSTOMIZATION)
+            : 0 === Object.keys(m).length
+              ? void t(u.h8.ADD_PAYMENT_STEPS)
+              : void t(u.h8.REVIEW);
     }, [v, p, t, m, O, b, y]),
     v)
         ? (0, r.jsx)(f.Z, {})

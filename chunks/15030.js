@@ -24,7 +24,9 @@ function j() {
     i.useEffect(() => {
         null != t && (0, m.sO)(t) && (0, c.Q3)(a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
-    let O = (null == t ? void 0 : t.features.has(f.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.features.has(f.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+    let O =
+        (null == t ? void 0 : t.features.has(f.oNc.CREATOR_MONETIZABLE)) === !1 &&
+        (null == t ? void 0 : t.features.has(f.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
             null == t || j
@@ -32,30 +34,30 @@ function j() {
                 : null != _
                   ? (0, r.jsx)(p.Z, {
                         guild: t,
-                        config: _
+                        config: _,
                     })
                   : O
                     ? (0, r.jsx)(h.Z, { guild: t })
                     : (0, r.jsx)(g.Z, {
                           guild: t,
-                          application: n
+                          application: n,
                       })),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: b.settingsColumn,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: b.settingsContainer,
                 children: (0, r.jsx)(s.w0Z, {
                     className: b.settingsScroller,
-                    children: (0, r.jsx)('main', {
+                    children: (0, r.jsx)("main", {
                         ref: v,
                         className: b.settingsContent,
                         children: (0, r.jsx)(s.JcV, {
                             containerRef: v,
-                            children: e
-                        })
-                    })
-                })
-            })
+                            children: e,
+                        }),
+                    }),
+                }),
+            }),
         })
     );
 }

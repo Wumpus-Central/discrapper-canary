@@ -16,5 +16,5 @@ var r = n(146063),
     };
 e.exports = {
     includes: a(!0),
-    indexOf: a(!1)
+    indexOf: a(!1),
 };

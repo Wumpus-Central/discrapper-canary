@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(314897),
@@ -19,7 +19,11 @@ function l(e) {
                     p = null == d ? void 0 : d.isOverride;
                 if (
                     ((0, r.useEffect)(() => {
-                        null != u && null != f && null != _ && !1 === p && s.Z.trackExperimentExposure(u, n, e.location, o, _, f);
+                        null != u &&
+                            null != f &&
+                            null != _ &&
+                            !1 === p &&
+                            s.Z.trackExperimentExposure(u, n, e.location, o, _, f);
                     }, [t, u, f, _, e.location, p]),
                     null == f)
                 )
@@ -35,20 +39,28 @@ function l(e) {
                     u = null == i ? void 0 : i.variantId,
                     d = null == i ? void 0 : i.revision,
                     f = null == i ? void 0 : i.isOverride;
-                if ((null != r && null != u && null != d && !1 === f && s.Z.trackExperimentExposure(r, n, e.location, o, d, u), null == u)) return l;
+                if (
+                    (null != r &&
+                        null != u &&
+                        null != d &&
+                        !1 === f &&
+                        s.Z.trackExperimentExposure(r, n, e.location, o, d, u),
+                    null == u)
+                )
+                    return l;
                 {
                     let e = a[u];
                     return null != e ? e : l;
                 }
-            }
+            },
         }
     );
 }
 function c(e, t) {
     switch (e) {
-        case 'guild':
+        case "guild":
             return t.guildId;
-        case 'user':
+        case "user":
             return o.default.getId();
         default:
             (0, a.vE)(e);

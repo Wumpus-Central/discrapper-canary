@@ -1,1 +1,1 @@
-e.exports = { title: 'title_a9fc04' };
+e.exports = { title: "title_a9fc04" };

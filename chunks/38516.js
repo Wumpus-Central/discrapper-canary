@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => p }), r(415506), r(642613));
+r.d(t, { Z: () => p }), r(415506), r(642613);
 var n = r(255367);
 r(73800);
 var a = r(120356),
@@ -15,29 +15,29 @@ function g(e) {
         {
             action: a,
             icon: i,
-            title: d
+            title: d,
         } = (function (e) {
             switch (e.category) {
                 case l.p.OFFICIAL:
                     return {
                         icon: (0, n.jsx)(o.enf, { colorClass: u.linkIcon }),
                         action: s.as.WebsiteLink,
-                        title: c.intl.string(c.t.fOUKvr)
+                        title: c.intl.string(c.t.fOUKvr),
                     };
                 case l.p.TWITTER:
                     return {
                         icon: (0, n.jsx)(o.TAi, { colorClass: u.linkIcon }),
                         action: s.as.XLink,
-                        title: c.intl.string(c.t['INic4+'])
+                        title: c.intl.string(c.t["INic4+"]),
                     };
                 case l.p.YOUTUBE:
                     return {
                         action: s.as.YouTubeLink,
                         icon: (0, n.jsx)(o.$5w, { colorClass: u.linkIcon }),
-                        title: c.intl.string(c.t.lNmxbG)
+                        title: c.intl.string(c.t.lNmxbG),
                     };
                 default:
-                    throw Error('Unknown IGDB website category');
+                    throw Error("Unknown IGDB website category");
             }
         })(t);
     return (0, n.jsx)(o.ua7, {
@@ -58,39 +58,43 @@ function g(e) {
                                 n,
                                 a = {},
                                 i = Object.keys(e);
-                            for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]));
+                            for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
                             return a;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var i = Object.getOwnPropertySymbols(e);
-                        for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
+                        for (n = 0; n < i.length; n++)
+                            (r = i[n]),
+                                !(t.indexOf(r) >= 0) &&
+                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
+                                    (a[r] = e[r]);
                     }
                     return a;
-                })(e, ['onClick']);
+                })(e, ["onClick"]);
             return (0, n.jsx)(
                 o.eee,
                 ((l = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
                             n = Object.keys(r);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (n = n.concat(
                                 Object.getOwnPropertySymbols(r).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                })
+                                }),
                             )),
                             n.forEach(function (t) {
                                 var n;
-                                ((n = r[t]),
+                                (n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: n,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = n));
-                            }));
+                                        : (e[t] = n);
+                            });
                     }
                     return e;
                 })({}, m)),
@@ -100,10 +104,10 @@ function g(e) {
                         title: d,
                         href: t.url,
                         onClick: () => {
-                            (r(a), null == c || c());
+                            r(a), null == c || c();
                         },
-                        target: '_blank',
-                        children: i
+                        target: "_blank",
+                        children: i,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
@@ -117,9 +121,9 @@ function g(e) {
                       })(Object(s)).forEach(function (e) {
                           Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
                       }),
-                l)
+                l),
             );
-        }
+        },
     });
 }
 let p = function (e) {
@@ -133,27 +137,27 @@ let p = function (e) {
         .sort((e, t) => e.category - t.category);
     return 0 === a.length
         ? null
-        : (0, n.jsxs)('div', {
+        : (0, n.jsxs)("div", {
               children: [
                   (0, n.jsx)(o.X6q, {
                       className: d.sectionHeader,
-                      variant: 'text-xs/semibold',
-                      color: 'header-secondary',
-                      children: c.intl.string(c.t.Oj3o19)
+                      variant: "text-xs/semibold",
+                      color: "header-secondary",
+                      children: c.intl.string(c.t.Oj3o19),
                   }),
-                  (0, n.jsx)('div', {
+                  (0, n.jsx)("div", {
                       className: i()(d.row, d.gapMd),
                       children: a.map((e) =>
                           (0, n.jsx)(
                               g,
                               {
                                   website: e,
-                                  trackClick: r
+                                  trackClick: r,
                               },
-                              e.url
-                          )
-                      )
-                  })
-              ]
+                              e.url,
+                          ),
+                      ),
+                  }),
+              ],
           });
 };

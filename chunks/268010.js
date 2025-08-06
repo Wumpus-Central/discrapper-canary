@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(804061), n(704826), n(35282));
+n.d(t, { Z: () => S }), n(804061), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -27,14 +27,14 @@ let I = (e, t, n) => {
             .formatToMarkdownString(r, {
                 mediaTitle: o,
                 userName: i,
-                episodeDescription: e.extra.media_subtitle
+                episodeDescription: e.extra.media_subtitle,
             })
-            .replaceAll('*', '');
+            .replaceAll("*", "");
     },
     T = (e, t) =>
         v.intl.formatToPlainString(v.t.kCbfbG, {
             username: t.username,
-            activity: e.extra.media_title
+            activity: e.extra.media_title,
         }),
     S = (e) => {
         let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: S } = e,
@@ -55,10 +55,10 @@ let I = (e, t, n) => {
                             timestamp: (0, _.yh)(n, P),
                             episodeDescription: D,
                             colors: [C, R],
-                            channelId: e
+                            channelId: e,
                         });
                 },
-                [t, n, D, P, null == N ? void 0 : N.src, C, R, A]
+                [t, n, D, P, null == N ? void 0 : N.src, C, R, A],
             ),
             x = () => {
                 if (null == n.extra.url) return;
@@ -68,7 +68,7 @@ let I = (e, t, n) => {
                     null != e.hostname &&
                     (0, c.q)({
                         href: d.Z.format(e),
-                        trusted: !1
+                        trusted: !1,
                     });
             };
         return null == A
@@ -78,20 +78,20 @@ let I = (e, t, n) => {
                       (0, r.jsx)(b.wG, {
                           channel: t,
                           entry: n,
-                          userDescription: (0, _.kr)(n) ? v.t['LH+Z39'] : v.t.YuKgmp,
+                          userDescription: (0, _.kr)(n) ? v.t["LH+Z39"] : v.t.YuKgmp,
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
                           headerIcons: (0, r.jsx)(y.Z, {
                               onClick: w,
                               Icon: a.omf,
-                              'aria-label': v.intl.string(v.t.jdJYX1)
+                              "aria-label": v.intl.string(v.t.jdJYX1),
                           }),
                           badges: (0, r.jsx)(E.Gk, {
                               location: E.Gt.POPOUT,
-                              children: g.t.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
+                              children: g.t.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
                           }),
                           onClickTitle: x,
-                          onClickThumbnail: x
+                          onClickThumbnail: x,
                       }),
                       (0, r.jsx)(b.St, {
                           children: (0, r.jsx)(b.WT, {
@@ -101,9 +101,9 @@ let I = (e, t, n) => {
                               channel: t,
                               generateReactionImage: L,
                               reactionImageAltText: T(n, A),
-                              entry: n
-                          })
-                      })
-                  ]
+                              entry: n,
+                          }),
+                      }),
+                  ],
               });
     };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => i }), n(539854));
+n.d(t, { Z: () => i }), n(539854);
 var r = n(633302);
 function i(e) {
     let t = [];
@@ -9,7 +9,7 @@ function i(e) {
                 null != n &&
                 (t.push({
                     src: n.url,
-                    colorize: !1
+                    colorize: !1,
                 }),
                 n.hasDiversity)
             )
@@ -17,7 +17,7 @@ function i(e) {
                     let r = n.diversityChildren[e];
                     t.push({
                         src: r.url,
-                        colorize: !1
+                        colorize: !1,
                     });
                 }
         }),

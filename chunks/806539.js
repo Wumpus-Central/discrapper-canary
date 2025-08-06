@@ -1,1 +1,1 @@
-e.exports = { baseCardOutline: 'baseCardOutline__1ab14' };
+e.exports = { baseCardOutline: "baseCardOutline__1ab14" };

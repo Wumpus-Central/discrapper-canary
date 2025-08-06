@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Gt: () => h,
-    ZP: () => m
+    ZP: () => m,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -18,7 +18,7 @@ function p(e) {
     let { children: t } = e;
     return (0, r.jsx)(_.Provider, {
         value: d,
-        children: t
+        children: t,
     });
 }
 function h() {
@@ -31,15 +31,15 @@ function m(e) {
         h = (e) =>
             (0, r.jsx)(c.am.AutoMeasuredNestedContainer, {
                 children: (i) =>
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         ref: i,
                         className: a()(u.container, {
                             [u.isHidden]: e,
-                            [u.withAccentColor]: null != n
+                            [u.withAccentColor]: null != n,
                         }),
-                        style: { '--__accent-color': n },
-                        children: (0, r.jsx)(p, { children: d(t) })
-                    })
+                        style: { "--__accent-color": n },
+                        children: (0, r.jsx)(p, { children: d(t) }),
+                    }),
             });
     return null == t || 0 === t.length
         ? null
@@ -49,7 +49,7 @@ function m(e) {
                 reason: l.wk.SPOILER,
                 obscured: f,
                 onToggleObscurity: () => _((e) => !e),
-                children: (e) => h(e)
+                children: (e) => h(e),
             })
           : h(!1);
 }

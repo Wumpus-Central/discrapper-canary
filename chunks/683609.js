@@ -11,41 +11,41 @@ function s(t) {
     return null == t
         ? null
         : (0, r.jsx)(i.S89, {
-              id: 'on-overlay',
+              id: "on-overlay",
               label: u.intl.string(u.t.rgZKg4),
               action: function () {
                   if (null == t) return;
                   let e = (0, c.x9)(t.getFlags(), o.eHb.OVERLAY_DISABLED);
-                  (l.h(t.id, t.branchId, e),
+                  l.h(t.id, t.branchId, e),
                       a.default.track(
                           o.rMx.APPLICATION_SETTINGS_UPDATED,
                           (function (t) {
                               for (var e = 1; e < arguments.length; e++) {
                                   var n = null != arguments[e] ? arguments[e] : {},
                                       r = Object.keys(n);
-                                  ('function' == typeof Object.getOwnPropertySymbols &&
+                                  "function" == typeof Object.getOwnPropertySymbols &&
                                       (r = r.concat(
                                           Object.getOwnPropertySymbols(n).filter(function (t) {
                                               return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                          })
+                                          }),
                                       )),
                                       r.forEach(function (e) {
                                           var r;
-                                          ((r = n[e]),
+                                          (r = n[e]),
                                               e in t
                                                   ? Object.defineProperty(t, e, {
                                                         value: r,
                                                         enumerable: !0,
                                                         configurable: !0,
-                                                        writable: !0
+                                                        writable: !0,
                                                     })
-                                                  : (t[e] = r));
-                                      }));
+                                                  : (t[e] = r);
+                                      });
                               }
                               return t;
-                          })({ overlay_disabled: (0, c.yE)(e, o.eHb.OVERLAY_DISABLED) }, t.getAnalyticsData())
-                      ));
+                          })({ overlay_disabled: (0, c.yE)(e, o.eHb.OVERLAY_DISABLED) }, t.getAnalyticsData()),
+                      );
               },
-              checked: t.hasFlag(o.eHb.OVERLAY_DISABLED)
+              checked: t.hasFlag(o.eHb.OVERLAY_DISABLED),
           });
 }

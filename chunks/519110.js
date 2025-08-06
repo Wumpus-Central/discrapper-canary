@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(704826), n(35282));
+n.d(t, { Z: () => S }), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,7 +69,7 @@ function I(e, t) {
     );
 }
 function T(e) {
-    return d.ZP.getByName(e.replace(/(^:|:$)/g, ''));
+    return d.ZP.getByName(e.replace(/(^:|:$)/g, ""));
 }
 function S(e) {
     let { type: t, id: n, name: y, isInExpressionPicker: v = !1 } = e,
@@ -93,38 +93,38 @@ function S(e) {
             ? null
             : R
               ? (0, r.jsx)(a.sNh, {
-                    id: 'unfavorite',
+                    id: "unfavorite",
                     action: () => (0, _.hW)(C.id),
-                    label: b.intl.string(b.t.XhzKyM)
+                    label: b.intl.string(b.t.XhzKyM),
                 })
               : (0, r.jsx)(a.sNh, {
-                    id: 'favorite',
+                    id: "favorite",
                     action: () => {
-                        ((0, p.cQ)({
+                        (0, p.cQ)({
                             sticker: C,
-                            location: I(O({}, A), { object: E.qAy.STICKER })
+                            location: I(O({}, A), { object: E.qAy.STICKER }),
                         }),
-                            (0, _.SA)(null == C ? void 0 : C.id));
+                            (0, _.SA)(null == C ? void 0 : C.id);
                     },
-                    label: b.intl.string(b.t.kWmiPT)
+                    label: b.intl.string(b.t.kWmiPT),
                 })
         : null != P && t === f.S.EMOJI
           ? w
               ? (0, r.jsx)(a.sNh, {
-                    id: 'unfavorite',
+                    id: "unfavorite",
                     action: () => (0, s.Xe)(P),
-                    label: b.intl.string(b.t.Ay49KC)
+                    label: b.intl.string(b.t.Ay49KC),
                 })
               : (0, r.jsx)(a.sNh, {
-                    id: 'favorite',
+                    id: "favorite",
                     action: () => {
-                        ((0, c.J1)({
+                        (0, c.J1)({
                             emoji: P,
-                            location: I(O({}, A), { object: E.qAy.EMOJI })
+                            location: I(O({}, A), { object: E.qAy.EMOJI }),
                         }),
-                            (0, s.$K)(P));
+                            (0, s.$K)(P);
                     },
-                    label: b.intl.string(b.t['nNsr6+'])
+                    label: b.intl.string(b.t["nNsr6+"]),
                 })
           : void 0;
 }

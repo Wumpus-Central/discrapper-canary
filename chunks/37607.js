@@ -19,21 +19,21 @@ function x(e) {
         r = (0, c.q)(t);
     return 0 === n.length || null == r
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               className: h.applicationGroup,
               children: [
-                  (0, i.jsxs)('div', {
+                  (0, i.jsxs)("div", {
                       className: h.header,
                       children: [
                           (0, i.jsx)(u.Z, {
                               game: r,
-                              size: u.Z.Sizes.XSMALL
+                              size: u.Z.Sizes.XSMALL,
                           }),
                           (0, i.jsx)(a.X6q, {
-                              variant: 'heading-md/semibold',
-                              children: null == r ? void 0 : r.name
-                          })
-                      ]
+                              variant: "heading-md/semibold",
+                              children: null == r ? void 0 : r.name,
+                          }),
+                      ],
                   }),
                   n.map((e) => {
                       var t;
@@ -46,12 +46,12 @@ function x(e) {
                               icon: null != (t = (0, d.KS)(e)) ? t : void 0,
                               iconWrapperClassName: h.iconwrapper,
                               hasNextSection: !0,
-                              trailing: (0, i.jsx)(a.vdY, { size: 'xs' })
+                              trailing: (0, i.jsx)(a.vdY, { size: "xs" }),
                           },
-                          e.id
+                          e.id,
                       );
-                  })
-              ]
+                  }),
+              ],
           });
 }
 function j(e) {
@@ -70,7 +70,9 @@ function j(e) {
             children: [
                 (0, i.jsx)(a.R94, {
                     type: a.geA.DESCRIPTION,
-                    children: f.intl.format(f.t['9gsSLi'], { helpdeskArticle: m.Z.getArticleURL(g.BhN.LINKED_LOBBIES) })
+                    children: f.intl.format(f.t["9gsSLi"], {
+                        helpdeskArticle: m.Z.getArticleURL(g.BhN.LINKED_LOBBIES),
+                    }),
                 }),
                 (0, i.jsx)(a.$i$, { className: h.headerDivider }),
                 c.map((e) =>
@@ -78,12 +80,12 @@ function j(e) {
                         x,
                         {
                             applicationId: e,
-                            channels: l[e]
+                            channels: l[e],
                         },
-                        e
-                    )
-                )
-            ]
+                        e,
+                    ),
+                ),
+            ],
         })
     );
 }

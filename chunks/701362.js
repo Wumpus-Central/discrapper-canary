@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685));
+n.d(t, { Z: () => M }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -31,7 +31,7 @@ function C(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,15 +41,15 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 C(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -57,11 +57,11 @@ function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -83,7 +83,8 @@ function D(e, t) {
         i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -93,19 +94,19 @@ function L(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 class x extends i.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
         y.default.track(S.rMx.OPEN_POPOUT, {
-            type: 'Stream Preview',
+            type: "Stream Preview",
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
             application_name: null != t ? t.name : null,
             game_id: null != t ? t.id : null,
-            is_streaming: !0
+            is_streaming: !0,
         });
     }
     renderPreview(e) {
@@ -116,33 +117,33 @@ class x extends i.PureComponent {
             children: [
                 (0, r.jsx)(T.Z, {
                     className: N.previewImage,
-                    stream: e
+                    stream: e,
                 }),
                 o
-                    ? (0, r.jsx)('div', {
+                    ? (0, r.jsx)("div", {
                           className: N.previewHover,
                           children: (0, r.jsx)(l.Text, {
-                              variant: 'text-sm/normal',
-                              color: 'none',
+                              variant: "text-sm/normal",
+                              color: "none",
                               className: N.white,
-                              children: (0, I.Z)(e, n, i, a)
-                          })
+                              children: (0, I.Z)(e, n, i, a),
+                          }),
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     }
     render() {
         let { activity: e, user: t, stream: n, previewIsOpen: i, onAction: o, hideTip: s } = this.props;
         return null == n
             ? null
-            : (0, r.jsx)('div', {
+            : (0, r.jsx)("div", {
                   className: a()(N.streamPreviewWrapper, { [N.mounted]: i }),
-                  children: (0, r.jsxs)('div', {
+                  children: (0, r.jsxs)("div", {
                       className: N.streamPreview,
                       children: [
                           this.renderPreview(n),
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: N.body,
                               children: [
                                   null != e
@@ -156,10 +157,10 @@ class x extends i.PureComponent {
                                             analyticsParams: {
                                                 location: {
                                                     page: S.ZY5.GO_LIVE_MODAL,
-                                                    section: S.jXE.STREAM_VIEWER_POPOUT
-                                                }
+                                                    section: S.jXE.STREAM_VIEWER_POPOUT,
+                                                },
                                             },
-                                            onAction: o
+                                            onAction: o,
                                         })
                                       : (0, r.jsx)(d.Z, {
                                             type: c.P.STREAM_PREVIEW,
@@ -169,24 +170,26 @@ class x extends i.PureComponent {
                                             channelId: n.channelId,
                                             className: N.activityActions,
                                             color: N.watchButton,
-                                            onAction: o
+                                            onAction: o,
                                         }),
                                   !s &&
                                       (0, r.jsx)(f.Z, {
                                           type: f.Z.Types.INLINE,
                                           className: N.protip,
-                                          children: __OVERLAY__ ? A.intl.string(A.t['YRdw7+']) : A.intl.string(A.t.CCTgbG)
-                                      })
-                              ]
-                          })
-                      ]
-                  })
+                                          children: __OVERLAY__
+                                              ? A.intl.string(A.t["YRdw7+"])
+                                              : A.intl.string(A.t.CCTgbG),
+                                      }),
+                              ],
+                          }),
+                      ],
+                  }),
               });
     }
 }
 function M(e) {
     var { user: t, channel: n } = e,
-        o = D(e, ['user', 'channel']);
+        o = D(e, ["user", "channel"]);
     let [a, l] = (0, s.Wu)([b.Z, m.Z, g.Z, _.Z], () => (0, O.p9)(n, b.Z, m.Z, g.Z, _.Z)),
         c = (0, s.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())),
         d = (0, s.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)),
@@ -206,8 +209,8 @@ function M(e) {
                 stream: c,
                 activeStream: d,
                 currentUserId: f,
-                activity: I
-            })
+                activity: I,
+            }),
         )
     );
 }

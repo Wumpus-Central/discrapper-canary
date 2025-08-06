@@ -18,7 +18,7 @@ let p = function (e) {
         getHistoricalTotalBytes: g,
         children: (e, t, a) => {
             var c;
-            return (0, r.jsx)('div', {
+            return (0, r.jsx)("div", {
                 className: l()(d.monitor, i),
                 children: (0, r.jsxs)(o.Z, {
                     align: o.Z.Align.CENTER,
@@ -27,17 +27,20 @@ let p = function (e) {
                             className: d.text,
                             direction: o.Z.Direction.VERTICAL,
                             children: [
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: d.title,
-                                    children: n
+                                    children: n,
                                 }),
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: d.rate,
-                                    children: (c = (e[e.length - 1] / t) * 1000) > 1000 ? u.intl.formatToPlainString(u.t['WU+gTU'], { size: Math.round(c / 1000) }) : u.intl.formatToPlainString(u.t.wnF6TE, { size: Math.round(c) })
-                                })
-                            ]
+                                    children:
+                                        (c = (e[e.length - 1] / t) * 1000) > 1000
+                                            ? u.intl.formatToPlainString(u.t["WU+gTU"], { size: Math.round(c / 1000) })
+                                            : u.intl.formatToPlainString(u.t.wnF6TE, { size: Math.round(c) }),
+                                }),
+                            ],
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: d.overflowContainer,
                             children: (0, r.jsx)(s.Z, {
                                 data: e,
@@ -50,12 +53,12 @@ let p = function (e) {
                                 animate: h,
                                 pixelWidth: 600,
                                 pixelHeight: 48,
-                                lineWidth: 4
-                            })
-                        })
-                    ]
-                })
+                                lineWidth: 4,
+                            }),
+                        }),
+                    ],
+                }),
             });
-        }
+        },
     });
 };

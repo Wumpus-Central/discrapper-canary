@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     n: () => m,
-    t: () => p
+    t: () => p,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(126663),
@@ -13,19 +13,19 @@ var r = n(255367),
     u = n(607070);
 let d = s.createContext({
     springConfig: {},
-    isExpanded: !1
+    isExpanded: !1,
 });
 function p(e) {
     let t = s.useMemo(
         () => ({
             springConfig: e.springConfig,
-            isExpanded: e.isExpanded
+            isExpanded: e.isExpanded,
         }),
-        [e.springConfig, e.isExpanded]
+        [e.springConfig, e.isExpanded],
     );
     return (0, r.jsx)(d.Provider, {
         value: t,
-        children: e.children
+        children: e.children,
     });
 }
 function m(e) {
@@ -37,26 +37,26 @@ function m(e) {
         h = null != (t = (0, c.Z)(x)) ? t : null,
         [{ height: b }, j] = (0, i.q_F)(() => ({
             from: { height: 0 },
-            config: p
+            config: p,
         }));
     return (
         s.useLayoutEffect(() => {
             null !== x &&
                 j({
                     height: x,
-                    immediate: !m || f || null === h
+                    immediate: !m || f || null === h,
                 });
         }, [x, j, m, f, h]),
         (0, r.jsx)(o.animated.div, {
             style: {
-                height: null === h ? 'auto' : b,
-                overflow: 'hidden'
+                height: null === h ? "auto" : b,
+                overflow: "hidden",
             },
-            children: (0, r.jsx)('div', {
-                style: { overflow: 'hidden' },
+            children: (0, r.jsx)("div", {
+                style: { overflow: "hidden" },
                 ref: g,
-                children: n
-            })
+                children: n,
+            }),
         })
     );
 }

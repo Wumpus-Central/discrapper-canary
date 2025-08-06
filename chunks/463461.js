@@ -9,11 +9,11 @@ function n(t, { metadata: e, tunnel: a, dsn: n }) {
                 e.sdk && {
                     sdk: {
                         name: e.sdk.name,
-                        version: e.sdk.version
-                    }
+                        version: e.sdk.version,
+                    },
                 }),
-            ...(!!a && !!n && { dsn: (0, r.RA)(n) })
+            ...(!!a && !!n && { dsn: (0, r.RA)(n) }),
         },
-        i = [{ type: 'user_report' }, t];
+        i = [{ type: "user_report" }, t];
     return (0, _.Jd)(o, [i]);
 }

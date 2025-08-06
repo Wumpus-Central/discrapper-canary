@@ -1,4 +1,4 @@
-(n.d(t, { D: () => h }), n(997841));
+n.d(t, { D: () => h }), n(997841);
 var l = n(255367);
 n(73800);
 var i = n(120356),
@@ -11,27 +11,38 @@ var i = n(120356),
     c = n(821022),
     g = n(20493);
 let h = (e) => {
-    let { handleDone: t, headerId: n, modalState: i, shouldHideTemporaryInviteToggle: h, onGenerateNewLink: m, onToggleTemporary: p, onSelectMaxAge: v, onSelectMaxUses: x, isGuestInviteCreationToggleEnabled: I, onSetInviteFlags: f } = e,
+    let {
+            handleDone: t,
+            headerId: n,
+            modalState: i,
+            shouldHideTemporaryInviteToggle: h,
+            onGenerateNewLink: m,
+            onToggleTemporary: p,
+            onSelectMaxAge: v,
+            onSelectMaxUses: x,
+            isGuestInviteCreationToggleEnabled: I,
+            onSetInviteFlags: f,
+        } = e,
         j = (0, a.ZP)(),
         { maxAge: N, maxUses: _, temporary: S, flags: E } = i;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(s.xBx, {
                 children: [
-                    (0, l.jsx)('div', {
+                    (0, l.jsx)("div", {
                         className: c.closeButton,
-                        children: (0, l.jsx)(s.olH, { onClick: t })
+                        children: (0, l.jsx)(s.olH, { onClick: t }),
                     }),
-                    (0, l.jsx)('div', {
+                    (0, l.jsx)("div", {
                         className: c.headerContainer,
                         children: (0, l.jsx)(s.vwX, {
                             id: n,
-                            tag: 'h2',
+                            tag: "h2",
                             className: r()(g.marginReset, c.headerCloseButtonSpacing, c.headerText),
-                            children: d.intl.string(d.t.Atdlys)
-                        })
-                    })
-                ]
+                            children: d.intl.string(d.t.Atdlys),
+                        }),
+                    }),
+                ],
             }),
             (0, l.jsx)(o.Z, {
                 shouldHideTemporaryInviteToggle: h,
@@ -44,18 +55,18 @@ let h = (e) => {
                 onGenerateNewLink: m,
                 isGuestInviteCreationToggleEnabled: I,
                 onSetInviteFlags: f,
-                inviteFlags: E
+                inviteFlags: E,
             }),
             (0, l.jsx)(s.mzw, {
                 className: c.settingsFooter,
                 children: (0, l.jsx)(u.Z, {
                     theme: j,
                     onConfirm: () => {
-                        (m(), t());
+                        m(), t();
                     },
-                    onDismiss: t
-                })
-            })
-        ]
+                    onDismiss: t,
+                }),
+            }),
+        ],
     });
 };

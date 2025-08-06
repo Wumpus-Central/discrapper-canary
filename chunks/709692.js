@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     Y0: () => c.Y0,
     hz: () => c.hz,
     mz: () => c.mz,
     u_: () => u,
-    xB: () => c.xB
+    xB: () => c.xB,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(97613),
     o = n.n(i),
@@ -24,20 +24,20 @@ function u(e) {
                 {
                     modalKey: c,
                     onCloseRequest: n,
-                    onCloseCallback: i
+                    onCloseCallback: i,
                 },
-                u
+                u,
             ),
             () => {
                 (0, s.Mr)(c, u);
             }
-        )
+        ),
     );
     let d = r.useRef(!0),
         f = {
             contextKey: u,
             modalKey: c,
-            onCloseCallback: i
+            onCloseCallback: i,
         },
         _ = r.useRef(f);
     return (
@@ -46,7 +46,7 @@ function u(e) {
         }),
         r.useLayoutEffect(() => {
             let { contextKey: e, modalKey: r, onCloseCallback: i } = _.current;
-            (d.current || (0, s.o)(r, t, n, i, e), (d.current = !1));
+            d.current || (0, s.o)(r, t, n, i, e), (d.current = !1);
         }, [t, n]),
         null
     );

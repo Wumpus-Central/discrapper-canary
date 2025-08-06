@@ -17,49 +17,51 @@ var i = n(120356),
 let g = (e) => {
         let { message: t, userId: n, onClose: i } = e,
             { trackUserProfileAction: a } = (0, d.KZ)();
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: o()(m.toast, h.toastPadding),
             children: [
                 (0, r.jsx)(l.dz2, {
-                    size: 'sm',
+                    size: "sm",
                     className: h.toastIcon,
-                    color: l.TVs.colors.STATUS_POSITIVE.css
+                    color: l.TVs.colors.STATUS_POSITIVE.css,
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: h.successToast,
                     children: [
                         (0, r.jsx)(l.Text, {
-                            color: 'header-primary',
-                            variant: 'text-sm/semibold',
-                            children: t
+                            color: "header-primary",
+                            variant: "text-sm/semibold",
+                            children: t,
                         }),
                         (0, r.jsx)(l.Text, {
-                            variant: 'text-sm/semibold',
+                            variant: "text-sm/semibold",
                             children: p.intl.format(p.t.QEW8Mj, {
                                 onClick: () => {
-                                    (a({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), c.Z.openPrivateChannel({ recipientIds: n }));
-                                }
-                            })
-                        })
-                    ]
-                })
-            ]
+                                    a({ action: "PRESS_REACT_REPLY_TOAST" }),
+                                        null == i || i(),
+                                        c.Z.openPrivateChannel({ recipientIds: n });
+                                },
+                            }),
+                        }),
+                    ],
+                }),
+            ],
         });
     },
     E = () =>
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: o()(m.toast, h.toastPadding),
             children: [
                 (0, r.jsx)(l.$jN, {
                     type: l.RAz.SPINNING_CIRCLE_SIMPLE,
-                    className: h.toastIcon
+                    className: h.toastIcon,
                 }),
                 (0, r.jsx)(l.Text, {
-                    color: 'header-primary',
-                    variant: 'text-sm/semibold',
-                    children: p.intl.string(p.t.tcARX1)
-                })
-            ]
+                    color: "header-primary",
+                    variant: "text-sm/semibold",
+                    children: p.intl.string(p.t.tcARX1),
+                }),
+            ],
         }),
     b = (e) => {
         let { userId: t, onClose: n, className: i } = e,
@@ -70,26 +72,26 @@ let g = (e) => {
                 d,
                 {
                     from: {
-                        transform: b ? 'translateY(0)' : 'translateY(16px)',
-                        opacity: 0
+                        transform: b ? "translateY(0)" : "translateY(16px)",
+                        opacity: 0,
                     },
                     enter: {
-                        transform: 'translateY(0)',
-                        opacity: 1
+                        transform: "translateY(0)",
+                        opacity: 1,
                     },
                     leave: {
-                        transform: b ? 'translateY(0)' : 'translateY(16px)',
-                        opacity: 0
+                        transform: b ? "translateY(0)" : "translateY(16px)",
+                        opacity: 0,
                     },
                     config: {
                         mass: 1,
                         tension: 500,
                         friction: 18,
-                        clamp: !0
+                        clamp: !0,
                     },
-                    delay: 200
+                    delay: 200,
                 },
-                'animate-always'
+                "animate-always",
             );
         return (0, r.jsx)(r.Fragment, {
             children: y(
@@ -101,24 +103,24 @@ let g = (e) => {
                         children:
                             null != c
                                 ? (0, r.jsx)(l.FNi, {
-                                      message: '',
+                                      message: "",
                                       type: l.ToastType.CUSTOM,
-                                      id: 'react_reply_success_toast',
+                                      id: "react_reply_success_toast",
                                       options: {
                                           component: (0, r.jsx)(g, {
                                               userId: t,
                                               message: m,
-                                              onClose: n
-                                          })
-                                      }
+                                              onClose: n,
+                                          }),
+                                      },
                                   })
                                 : (0, r.jsx)(l.FNi, {
-                                      message: '',
+                                      message: "",
                                       type: l.ToastType.CUSTOM,
-                                      id: 'react_reply_loading_toast',
-                                      options: { component: (0, r.jsx)(E, {}) }
-                                  })
-                    })
-            )
+                                      id: "react_reply_loading_toast",
+                                      options: { component: (0, r.jsx)(E, {}) },
+                                  }),
+                    }),
+            ),
         });
     };

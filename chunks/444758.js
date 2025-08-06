@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => G }), n(35282));
+n.d(t, { Z: () => G }), n(35282);
 var r = n(159635),
     i = n.n(r),
     o = n(430198),
@@ -24,7 +24,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -75,62 +75,62 @@ let S = (e) => {
 };
 function A(e) {
     return {
-        type: 'guild',
+        type: "guild",
         guildId: e.id,
         content: (0, m.aF)(e.name, 32),
         icon: p.ZP.getGuildIconURL({
             id: e.id,
             icon: e.icon,
-            size: 40
-        })
+            size: 40,
+        }),
     };
 }
 function N(e, t) {
     let n,
         r = D((0, m.aF)(e.name, 32));
     return {
-        type: 'channel',
+        type: "channel",
         content: [
             (n =
-                'italics' === t
+                "italics" === t
                     ? {
-                          type: 'em',
-                          content: [r]
+                          type: "em",
+                          content: [r],
                       }
-                    : r)
+                    : r),
         ],
         channelType: e.type,
-        iconType: e.iconType
+        iconType: e.iconType,
     };
 }
 function C(e, t) {
     let n = {
-        type: 'channel',
-        content: [D(e.roleSubscriptionGated ? e.name : y.intl.string(y.t['/YzI6+']))],
+        type: "channel",
+        content: [D(e.roleSubscriptionGated ? e.name : y.intl.string(y.t["/YzI6+"]))],
         channelType: e.roleSubscriptionGated ? e.type : b.d4z.UNKNOWN,
-        iconType: 'locked'
+        iconType: "locked",
     };
     return {
-        type: 'channelMention',
+        type: "channelMention",
         guildId: e.guildId,
         channelId: e.id,
         messageId: t,
         inContent: null,
-        content: [n]
+        content: [n],
     };
 }
 function R(e) {
     return {
-        type: 'channel',
-        content: [D('')],
-        iconType: e ? 'post' : 'message'
+        type: "channel",
+        content: [D("")],
+        iconType: e ? "post" : "message",
     };
 }
 function P(e, t) {
     var n;
     let r = c.Z.getChannel(e),
         i = (0, s.$)(e, c.Z, o.Z, d.Z).isSubscriptionGated,
-        u = null != (n = (0, h.wl)(r)) ? n : 'text';
+        u = null != (n = (0, h.wl)(r)) ? n : "text";
     if (null != t) {
         let n = t.find((t) => t.id === e);
         if (null != n)
@@ -145,7 +145,7 @@ function P(e, t) {
                 canViewChannel: !0,
                 roleSubscriptionGated: i,
                 iconType: u,
-                parentId: null == r ? void 0 : r.parent_id
+                parentId: null == r ? void 0 : r.parent_id,
             };
     }
     return null != r
@@ -160,53 +160,53 @@ function P(e, t) {
               canViewChannel: (0, l.YO)(r),
               roleSubscriptionGated: i,
               iconType: u,
-              parentId: r.parent_id
+              parentId: r.parent_id,
           }
         : null;
 }
 function w(e) {
     return {
-        type: 'link',
+        type: "link",
         content: [
             {
-                type: 'text',
-                content: e
-            }
+                type: "text",
+                content: e,
+            },
         ],
         target: e,
-        title: void 0
+        title: void 0,
     };
 }
 function D(e) {
     return {
-        type: 'text',
-        content: e
+        type: "text",
+        content: e,
     };
 }
 function L(e) {
-    return null != e ? w(e) : D('#'.concat(y.intl.string(y.t.J90oLS)));
+    return null != e ? w(e) : D("#".concat(y.intl.string(y.t.J90oLS)));
 }
 function x() {
     return N(
         {
             name: y.intl.string(y.t.zLZPmp).toLowerCase(),
             type: b.d4z.UNKNOWN,
-            iconType: 'text'
+            iconType: "text",
         },
-        'italics'
+        "italics",
     );
 }
 function M(e, t, n, r, i) {
     let o = u.Z.getGuild(e),
         a = (null == o ? void 0 : o.id) === r;
     return {
-        type: 'channelMention',
+        type: "channelMention",
         guildId: e,
         channelId: t,
         messageId: n,
         originalLink: i,
         inContent: null == o || a ? null : [A(o)],
-        content: [x()]
+        content: [x()],
     };
 }
 function k(e, t, n, r) {
@@ -223,44 +223,44 @@ function k(e, t, n, r) {
                         N({
                             name: e.name,
                             type: e.type,
-                            iconType: null != (s = (0, h.wl)(e)) ? s : 'forum'
-                        })
+                            iconType: null != (s = (0, h.wl)(e)) ? s : "forum",
+                        }),
                     ],
-                    content: [o]
+                    content: [o],
                 };
             }
         }
         return {
             inContent: [o],
-            content: [a]
+            content: [a],
         };
     }
     return n && !r
         ? {
               inContent: null,
-              content: [o]
+              content: [o],
           }
         : !n && r
           ? {
                 inContent: [i],
-                content: [t.isForumPost ? o : a]
+                content: [t.isForumPost ? o : a],
             }
           : n || r
             ? void 0
             : {
                   inContent: [i],
-                  content: [o]
+                  content: [o],
               };
 }
 function j(e, t, n, r) {
     if (!e.canViewChannel) return C(e, t);
-    if (!e.isMentionable) return D('#'.concat(e.name));
+    if (!e.isMentionable) return D("#".concat(e.name));
     let i = {
-            type: 'channelMention',
+            type: "channelMention",
             channelId: e.id,
             guildId: e.guildId,
             messageId: t,
-            originalLink: r
+            originalLink: r,
         },
         o = u.Z.getGuild(e.guildId);
     if (null == o)
@@ -268,7 +268,7 @@ function j(e, t, n, r) {
             return T(v({}, i), {
                 guildId: b.ME,
                 inContent: [N(e)],
-                content: [R(!1)]
+                content: [R(!1)],
             });
         else return L(r);
     let a = e.guildId === n;
@@ -276,24 +276,24 @@ function j(e, t, n, r) {
 }
 let U = {
         order: E.ZP.order,
-        requiredFirstCharacters: ['<'],
+        requiredFirstCharacters: ["<"],
         match: (e) => /^<#(\d+)>/.exec(e),
         parse(e, t, n) {
             let r = e[1];
             if (n.returnMentionIds)
                 return {
-                    type: 'channelMention',
-                    id: r
+                    type: "channelMention",
+                    id: r,
                 };
             let i = P(r, n.mentionChannels);
             return null == i ? M(null, r, null, S(n.channelId)) : j(i, null, S(n.channelId));
-        }
+        },
     },
     G = {
         channelMention: U,
         channelOrMessageUrl: {
             order: i().defaultRules.url.order - 0.5,
-            requiredFirstCharacters: ['h'],
+            requiredFirstCharacters: ["h"],
             match(e) {
                 let t = l.Jv.exec(e);
                 return null != t && ((null != t[2] && /\D/.test(t[2])) || (null != t[3] && /\D/.test(t[3]))) ? null : t;
@@ -306,11 +306,11 @@ let U = {
                 if (null == o) return w(r);
                 let s = P(o, null);
                 return null == s ? M(i, o, a, S(n.channelId), r) : j(s, a, S(n.channelId), r);
-            }
+            },
         },
         mediaPostLink: {
             order: i().defaultRules.url.order - 0.5,
-            requiredFirstCharacters: ['h'],
+            requiredFirstCharacters: ["h"],
             match: (e) => l.M0.exec(e),
             parse(e, t, n) {
                 let r = e[0],
@@ -323,6 +323,6 @@ let U = {
                 if (null != l) return j(l, s, S(n.channelId), r);
                 let c = P(o, null);
                 return null != c ? j(c, s, S(n.channelId), r) : M(i, o, s, S(n.channelId), r);
-            }
-        }
+            },
+        },
     };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => J }), n(388685), n(539854));
+n.d(t, { Z: () => J }), n(388685), n(539854);
 var r,
     i = n(442837),
     o = n(570140),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,7 +29,7 @@ function g(e, t, n) {
 let E = !1,
     b = {};
 function y(e) {
-    return (null == b[e] && (b[e] = new f.P(e)), b[e]);
+    return null == b[e] && (b[e] = new f.P(e)), b[e];
 }
 function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -46,7 +46,7 @@ function I(e) {
 }
 function T(e) {
     let {
-        guild: { id: t }
+        guild: { id: t },
     } = e;
     O(t);
 }
@@ -75,7 +75,7 @@ function R(e) {
 function P(e) {
     let t = !1,
         n = y(e.guildId);
-    return ('GUILD_ROLE_DELETE' === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t);
+    return "GUILD_ROLE_DELETE" === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t;
 }
 function w(e) {
     let { guildId: t, userId: n } = e;
@@ -100,7 +100,7 @@ function L(e) {
     let r = y(t),
         i = n.reduce((e, t) => {
             let n = t.userId;
-            return (e.push(n), e);
+            return e.push(n), e;
         }, []);
     return r.updateMembersByMemberIds(i);
 }
@@ -110,7 +110,7 @@ function x(e) {
     let r = y(t),
         i = n.reduce((e, t) => {
             let n = t.userId;
-            return (e.push(n), e);
+            return e.push(n), e;
         }, []);
     return r.updateMembersByMemberIds(i);
 }
@@ -149,7 +149,7 @@ function U(e) {
             let { id: n, activity_instances: r } = e,
                 i = y(n),
                 o = [];
-            (null == r ||
+            null == r ||
                 r.forEach((e) => {
                     var t;
                     null == (t = e.participants) ||
@@ -157,13 +157,13 @@ function U(e) {
                             (0, u.lm)(e.member) && o.push(e.member);
                         });
                 }),
-                (t = i.updateServerMembers(o) || t));
+                (t = i.updateServerMembers(o) || t);
         }),
         t
     );
 }
 function G(e) {
-    return (E ? (E = !1) : v(!0), j(e));
+    return E ? (E = !1) : v(!0), j(e);
 }
 function B(e) {
     return U(e);
@@ -217,7 +217,7 @@ function z(e) {
 function q(e) {
     let { guildId: t, memberSupplementals: n } = e,
         r = (0, p.Qu)(t, n);
-    return (r && y(t).updateMembersByMemberIds(n.map((e) => e.userId)), r);
+    return r && y(t).updateMembersByMemberIds(n.map((e) => e.userId)), r;
 }
 function X(e) {
     var t, n, r, i, o, a;
@@ -227,7 +227,14 @@ function X(e) {
         f = y(c),
         { memberIds: g, memberSupplementals: E } = u.reduce(
             (e, t) => {
-                let { member: n, source_invite_code: r, join_source_type: i, join_source_application_id: o, join_source_channel_id: a, inviter_id: s } = t,
+                let {
+                        member: n,
+                        source_invite_code: r,
+                        join_source_type: i,
+                        join_source_application_id: o,
+                        join_source_channel_id: a,
+                        inviter_id: s,
+                    } = t,
                     l = n.user;
                 return (
                     e.memberIds.push(l.id),
@@ -237,15 +244,15 @@ function X(e) {
                         joinSourceType: i,
                         joinSourceApplicationId: o,
                         joinSourceChannelId: a,
-                        inviterId: s
+                        inviterId: s,
                     }),
                     e
                 );
             },
             {
                 memberIds: [],
-                memberSupplementals: []
-            }
+                memberSupplementals: [],
+            },
         ),
         b = (0, p.Qu)(c, E);
     (0, h.nf)(c, g);
@@ -257,15 +264,15 @@ function X(e) {
             elasticSearchCursor: {
                 before: (0, _.si)({
                     joinedAt: null == s || null == (t = s.member) ? void 0 : t.joined_at,
-                    userId: null != (o = null == s || null == (n = s.member) ? void 0 : n.user.id) ? o : m.lds
+                    userId: null != (o = null == s || null == (n = s.member) ? void 0 : n.user.id) ? o : m.lds,
                 }),
                 after: (0, _.si)({
                     joinedAt: null == l || null == (r = l.member) ? void 0 : r.joined_at,
-                    userId: null != (a = null == l || null == (i = l.member) ? void 0 : i.user.id) ? a : m.lds
-                })
-            }
+                    userId: null != (a = null == l || null == (i = l.member) ? void 0 : i.user.id) ? a : m.lds,
+                }),
+            },
         },
-        !1
+        !1,
     );
     return b || O || v;
 }
@@ -325,7 +332,7 @@ class Q extends (r = i.ZP.Store) {
         return y(e).lastCursorTimestamp;
     }
 }
-g(Q, 'displayName', 'MemberSafetyStore');
+g(Q, "displayName", "MemberSafetyStore");
 let J = new Q(o.Z, {
     CONNECTION_OPEN: G,
     CONNECTION_OPEN_SUPPLEMENTAL: B,
@@ -355,5 +362,5 @@ let J = new Q(o.Z, {
     MEMBER_SAFETY_SEARCH_STATE_UPDATE: z,
     FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS: q,
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: X,
-    MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: A
+    MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: A,
 });

@@ -1,4 +1,4 @@
-(n.r(e), n.d(e, { default: () => E }), n(35282));
+n.r(e), n.d(e, { default: () => E }), n(35282);
 var s = n(255367),
     r = n(73800),
     i = n(593473),
@@ -20,7 +20,7 @@ function D(t, e, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (t[e] = n),
         t
@@ -28,9 +28,9 @@ function D(t, e, n) {
 }
 a.ZP.initialize();
 let x = {
-    HANDOFF: 'handoff',
-    DONE: 'done',
-    FAILED: 'failed'
+    HANDOFF: "handoff",
+    DONE: "done",
+    FAILED: "failed",
 };
 function N() {
     try {
@@ -48,11 +48,11 @@ class E extends r.PureComponent {
                         url: u.ANM.HANDOFF,
                         body: { key: e },
                         oldFormErrors: !0,
-                        rejectWithError: !0
+                        rejectWithError: !0,
                     })
                     .then(
                         (t) => this.handoff(t.body.handoff_token),
-                        () => this.handoff()
+                        () => this.handoff(),
                     )
               : this.handoff();
     }
@@ -60,7 +60,7 @@ class E extends r.PureComponent {
         o.default
             .requestRedirect(u.Etm.BROWSER_HANDOFF, {
                 handoffToken: t,
-                fingerprint: f.default.getFingerprint()
+                fingerprint: f.default.getFingerprint(),
             })
             .then(this.done, this.failed);
     }
@@ -69,21 +69,21 @@ class E extends r.PureComponent {
             children: [
                 (0, s.jsx)(d.Ee, {
                     src: n(69008),
-                    className: m.marginBottom20
+                    className: m.marginBottom20,
                 }),
                 (0, s.jsx)(d.Dx, {
                     className: m.marginBottom8,
-                    children: p.intl.string(p.t.YsLqvr)
+                    children: p.intl.string(p.t.YsLqvr),
                 }),
                 (0, s.jsx)(d.DK, {
                     className: m.marginBottom40,
-                    children: p.intl.string(p.t.CSBYDg)
+                    children: p.intl.string(p.t.CSBYDg),
                 }),
                 (0, s.jsx)(d.zx, {
                     onClick: this.handleOpenApp,
-                    children: p.intl.string(p.t.fIv16O)
-                })
-            ]
+                    children: p.intl.string(p.t.fIv16O),
+                }),
+            ],
         });
     }
     renderFailed() {
@@ -91,21 +91,21 @@ class E extends r.PureComponent {
             children: [
                 (0, s.jsx)(d.Ee, {
                     src: n(69008),
-                    className: m.marginBottom20
+                    className: m.marginBottom20,
                 }),
                 (0, s.jsx)(d.Dx, {
                     className: m.marginBottom8,
-                    children: p.intl.string(p.t.hsLIsb)
+                    children: p.intl.string(p.t.hsLIsb),
                 }),
                 (0, s.jsx)(d.DK, {
                     className: m.marginBottom40,
-                    children: p.intl.string(p.t.CSBYDg)
+                    children: p.intl.string(p.t.CSBYDg),
                 }),
                 (0, s.jsx)(d.zx, {
                     onClick: this.handleOpenApp,
-                    children: p.intl.string(p.t.fIv16O)
-                })
-            ]
+                    children: p.intl.string(p.t.fIv16O),
+                }),
+            ],
         });
     }
     renderHandoff() {
@@ -114,10 +114,10 @@ class E extends r.PureComponent {
                 (0, s.jsx)(d.Hh, {}),
                 (0, s.jsx)(d.Dx, {
                     className: m.marginBottom8,
-                    children: p.intl.string(p.t['ctWa6+'])
+                    children: p.intl.string(p.t["ctWa6+"]),
                 }),
-                (0, s.jsx)(d.DK, { children: p.intl.string(p.t['53IHoq']) })
-            ]
+                (0, s.jsx)(d.DK, { children: p.intl.string(p.t["53IHoq"]) }),
+            ],
         });
     }
     render() {
@@ -138,26 +138,26 @@ class E extends r.PureComponent {
             justify: c.Z.Justify.CENTER,
             align: c.Z.Align.CENTER,
             className: g.wrapper,
-            children: t
+            children: t,
         });
     }
     constructor(t) {
         var e;
-        (super(t),
-            D(this, 'done', () => {
-                (N(), this.setState({ stage: x.DONE }));
+        super(t),
+            D(this, "done", () => {
+                N(), this.setState({ stage: x.DONE });
             }),
-            D(this, 'failed', () => {
-                (this.setState({ stage: x.FAILED }), N());
+            D(this, "failed", () => {
+                this.setState({ stage: x.FAILED }), N();
             }),
-            D(this, 'handleOpenApp', () => {
+            D(this, "handleOpenApp", () => {
                 (0, h.uL)(u.Z5c.ME);
-            }));
+            });
         let { search: n } = t.location,
-            s = null != n && '' !== n ? (0, i.parse)(n) : {};
+            s = null != n && "" !== n ? (0, i.parse)(n) : {};
         this.state = {
-            key: null != (e = s.key) ? e : '',
-            stage: 'true' === s.done ? x.DONE : x.HANDOFF
+            key: null != (e = s.key) ? e : "",
+            stage: "true" === s.done ? x.DONE : x.HANDOFF,
         };
     }
 }

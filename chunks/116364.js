@@ -20,23 +20,23 @@ let b = { results: { choices: [] } },
     y = {
         results: {
             choices: [],
-            isLoading: !0
-        }
+            isLoading: !0,
+        },
     },
     O = Array.from({ length: 5 }, () => ({
-        name: '',
-        displayName: '',
-        value: ''
+        name: "",
+        displayName: "",
+        value: "",
     })),
     v = {
         results: {
             choices: [],
-            isError: !0
-        }
+            isError: !0,
+        },
     },
     I = o().debounce(u.Z, h.Fu, {
         leading: !0,
-        trailing: !0
+        trailing: !0,
     });
 function T(e) {
     return e.displayName;
@@ -46,7 +46,13 @@ let S = {
     showEmpty: !0,
     matches(e, t, n, r, i) {
         let o = c.Z.getActiveOption(e.id);
-        return i.commands !== p.L8.DISABLED && null != o && (o.type === s.jw.BOOLEAN || !!(null == o ? void 0 : o.autocomplete) || ((null == o ? void 0 : o.choices) != null && o.choices.length > 0));
+        return (
+            i.commands !== p.L8.DISABLED &&
+            null != o &&
+            (o.type === s.jw.BOOLEAN ||
+                !!(null == o ? void 0 : o.autocomplete) ||
+                ((null == o ? void 0 : o.choices) != null && o.choices.length > 0))
+        );
     },
     queryResults(e, t, n, r, i) {
         var o;
@@ -63,9 +69,9 @@ let S = {
                             guild: t,
                             autocomplete: {
                                 name: a.name,
-                                query: n
-                            }
-                        }
+                                query: n,
+                            },
+                        },
                     }),
                 l.Z.getLastErrored(e.id))
             )
@@ -76,8 +82,8 @@ let S = {
         return {
             results: f.ZP.queryChoiceResults({
                 query: n,
-                choices: a.type === s.jw.BOOLEAN ? h.ak : null != (o = a.choices) ? o : []
-            })
+                choices: a.type === s.jw.BOOLEAN ? h.ak : null != (o = a.choices) ? o : [],
+            }),
         };
     },
     renderResults(e) {
@@ -86,13 +92,13 @@ let S = {
             selectedIndex: o,
             query: s,
             onHover: l,
-            onClick: c
+            onClick: c,
         } = e;
         return i
             ? (0, r.jsx)(a.Z, {
                   message: m.intl.string(m.t.rTAbPj),
                   noResultsImageURL: E,
-                  className: g.noAutocompleteResults
+                  className: g.noAutocompleteResults,
               })
             : 0 !== t.length || n
               ? (0, _.HI)({
@@ -102,28 +108,28 @@ let S = {
                     onHover: l,
                     onClick: c,
                     titleWithQuery: m.t.pg0anJ,
-                    titleWithoutQuery: m.intl.string(m.t['+1H47u']),
+                    titleWithoutQuery: m.intl.string(m.t["+1H47u"]),
                     Component: n ? d.ZP.Loading : d.ZP.Generic,
                     getProps: (e, t) => ({
                         key: t.toString(),
-                        text: e.displayName
+                        text: e.displayName,
                     }),
                     getQuery: (e) => e,
-                    key: 'choice'
+                    key: "choice",
                 })
               : (0, r.jsx)(a.Z, {
-                    message: m.intl.string(m.t['41014u']),
+                    message: m.intl.string(m.t["41014u"]),
                     noResultsImageURL: E,
-                    className: g.noAutocompleteResults
+                    className: g.noAutocompleteResults,
                 });
     },
     onSelect(e) {
         let {
                 results: { choices: t },
                 index: n,
-                options: r
+                options: r,
             } = e,
             i = t[n];
-        return (r.insertText(T(i)), { type: p.z2.CHOICE });
-    }
+        return r.insertText(T(i)), { type: p.z2.CHOICE };
+    },
 };

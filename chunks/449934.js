@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     $8: () => o,
     LP: () => i,
-    gK: () => a
+    gK: () => a,
 }),
-    n(35282));
+    n(35282);
 var r = n(213919);
 function i() {
     return r.getToken();

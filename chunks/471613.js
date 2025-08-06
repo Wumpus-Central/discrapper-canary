@@ -24,15 +24,15 @@ class g extends (l = a.ZP.Store) {
         return u[e];
     }
 }
-((i = 'GuildSettingsEmojiStore'),
-    (r = 'displayName') in g
+(i = "GuildSettingsEmojiStore"),
+    (r = "displayName") in g
         ? Object.defineProperty(g, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (g[r] = i));
+        : (g[r] = i);
 let p = new g(s.Z, {
     EMOJI_DELETE: function (e) {
         let { guildId: t, emojiId: n } = e;
@@ -56,5 +56,5 @@ let p = new g(s.Z, {
         var t;
         let { guildId: n } = e;
         d[n] = (null != (t = d[n]) ? t : 0) + 1;
-    }
+    },
 });

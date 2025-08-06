@@ -1,4 +1,4 @@
-(n(42547),
+n(42547),
     (e.exports = function (e, t) {
         var n = e.getSelection(),
             r = e.getCurrentContent(),
@@ -13,6 +13,6 @@
         return n.merge({
             focusKey: a,
             focusOffset: s,
-            isBackward: !0
+            isBackward: !0,
         });
-    }));
+    });

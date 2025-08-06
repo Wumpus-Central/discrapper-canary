@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => r }), n(388685));
+n.d(t, { Z: () => r }), n(388685);
 var i = n(73800);
 let r = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
@@ -17,7 +17,7 @@ let r = function () {
         i.useEffect(() => {
             if (!t) {
                 let e = setTimeout(() => {
-                    (l(!1), c(0));
+                    l(!1), c(0);
                 }, 1000);
                 return () => clearTimeout(e);
             }
@@ -31,7 +31,7 @@ let r = function () {
                 n(!1);
             },
             isEasterEggTriggered: a,
-            easterEggLevel: o
+            easterEggLevel: o,
         }
     );
 };

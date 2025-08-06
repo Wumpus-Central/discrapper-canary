@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(512722),
@@ -22,7 +22,7 @@ function b(e) {
             subscriptionId: n.id,
             renewal: !0,
             analyticsLocations: b,
-            analyticsLocation: l.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
+            analyticsLocation: l.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT,
         });
     if (null == x) return null;
     let _ = r ? f.finePrintWithOverheadSeparator : f.finePrint,
@@ -33,15 +33,15 @@ function b(e) {
     if (null == j) return null;
     let E = j.subscriptionPlanId,
         C = c.Z.get(E);
-    s()(null != C, 'Missing plan');
+    s()(null != C, "Missing plan");
     let O = (0, u.T4)(x.total, x.currency);
     return (
         C.interval === p.rV.YEAR
-            ? (t = h.intl.format(h.t['jPz/39'], {
+            ? (t = h.intl.format(h.t["jPz/39"], {
                   price: O,
                   termsUrl: g.EYA.TERMS,
                   paidURL: g.EYA.PAID_TERMS,
-                  privacyUrl: g.EYA.PRIVACY
+                  privacyUrl: g.EYA.PRIVACY,
               }))
             : C.interval === p.rV.MONTH &&
               (t =
@@ -50,20 +50,20 @@ function b(e) {
                             price: O,
                             termsUrl: g.EYA.TERMS,
                             paidURL: g.EYA.PAID_TERMS,
-                            privacyUrl: g.EYA.PRIVACY
+                            privacyUrl: g.EYA.PRIVACY,
                         })
-                      : h.intl.format(h.t['9xf5V1'], {
+                      : h.intl.format(h.t["9xf5V1"], {
                             price: O,
                             termsUrl: g.EYA.TERMS,
                             paidURL: g.EYA.PAID_TERMS,
                             privacyUrl: g.EYA.PRIVACY,
-                            intervalCount: C.intervalCount
+                            intervalCount: C.intervalCount,
                         })),
         (0, i.jsx)(a.Text, {
-            color: 'text-muted',
+            color: "text-muted",
             className: _,
-            variant: 'text-xs/normal',
-            children: t
+            variant: "text-xs/normal",
+            children: t,
         })
     );
 }
@@ -73,6 +73,6 @@ function x(e) {
         ? null
         : (0, i.jsx)(b, {
               subscription: t,
-              withOverheadSeparator: n
+              withOverheadSeparator: n,
           });
 }

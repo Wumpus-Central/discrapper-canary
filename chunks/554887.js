@@ -9,14 +9,14 @@ var r,
     a = function (e) {
         if (!r) {
             var t = 0,
-                n = document.createTextNode(''),
+                n = document.createTextNode(""),
                 a = { characterData: !0 };
-            (new MutationObserver(function () {
+            new MutationObserver(function () {
                 return o();
             }).observe(n, a),
                 (r = function () {
-                    n.textContent = '' + (t ? t-- : t++);
-                }));
+                    n.textContent = "" + (t ? t-- : t++);
+                });
         }
-        (i.push(e), r());
+        i.push(e), r();
     };

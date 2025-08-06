@@ -12,7 +12,7 @@ e.exports = function (e) {
                 a = e.getCurrentContent().getBlockForKey(i).getText().slice(n);
             return o(e, r.getForward(a).length || 1);
         },
-        'forward'
+        "forward",
     );
-    return t === e.getCurrentContent() ? e : i.push(e, t, 'remove-range');
+    return t === e.getCurrentContent() ? e : i.push(e, t, "remove-range");
 };

@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Pz: () => f,
     ZP: () => _,
-    am: () => g
+    am: () => g,
 }),
-    n(388685));
+    n(388685);
 var r,
     a = n(255367),
     i = n(73800),
@@ -20,7 +20,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,7 +28,7 @@ function p(e, t, n) {
 }
 let m = {
     CENTER: u.alignCenter,
-    LEFT: u.alignLeft
+    LEFT: u.alignLeft,
 };
 class h extends (r = i.PureComponent) {
     componentDidUpdate(e) {
@@ -39,7 +39,7 @@ class h extends (r = i.PureComponent) {
         let { renderItem: e, items: t, vertical: n, paginationContainerClass: r, align: l } = this.props,
             o = n ? u.verticalPaginationItemContainer : u.horizontalPaginationItemContainer;
         return (0, a.jsx)(c.yWw, {
-            orientation: n ? 'vertical' : 'horizontal',
+            orientation: n ? "vertical" : "horizontal",
             className: s()(o, r, l),
             ref: this.handleSetScrollerRef,
             children: t.map((t, n) =>
@@ -48,19 +48,19 @@ class h extends (r = i.PureComponent) {
                     key: n,
                     ref: (e) => {
                         this._paginationItemRefs[n] = e;
-                    }
-                })
-            )
+                    },
+                }),
+            ),
         });
     }
     constructor(...e) {
-        (super(...e),
-            p(this, '_scrollerRef', null),
-            p(this, '_paginationItemRefs', []),
-            p(this, 'handleSetScrollerRef', (e) => {
+        super(...e),
+            p(this, "_scrollerRef", null),
+            p(this, "_paginationItemRefs", []),
+            p(this, "handleSetScrollerRef", (e) => {
                 this._scrollerRef = e;
             }),
-            p(this, 'handleSelectedIndexChange', (e) => {
+            p(this, "handleSelectedIndexChange", (e) => {
                 let t = this._scrollerRef;
                 if (null == t) return;
                 let n = this._paginationItemRefs[e];
@@ -68,25 +68,25 @@ class h extends (r = i.PureComponent) {
                     t.scrollIntoViewNode({
                         node: n,
                         animate: !0,
-                        padding: this.props.scrollToPadding
+                        padding: this.props.scrollToPadding,
                     });
             }),
-            p(this, 'handlePageClick', (e) => {
+            p(this, "handlePageClick", (e) => {
                 let { onSetItem: t } = this.props;
                 t(e);
-            }));
+            });
     }
 }
-(p(h, 'Align', m),
-    p(h, 'defaultProps', {
+p(h, "Align", m),
+    p(h, "defaultProps", {
         scrollToPadding: {
             top: 0,
             left: 0,
             bottom: 0,
-            right: 0
+            right: 0,
         },
-        align: m.CENTER
-    }));
+        align: m.CENTER,
+    });
 class g extends i.PureComponent {
     render() {
         let { className: e } = this.props;
@@ -97,17 +97,17 @@ class g extends i.PureComponent {
             onClick: this.handlePrevClick,
             children: (0, a.jsx)(d.Z, {
                 className: u.arrow,
-                direction: d.Z.Directions.LEFT
-            })
+                direction: d.Z.Directions.LEFT,
+            }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            p(this, 'handlePrevClick', (e) => {
-                (e.stopPropagation(), e.preventDefault());
+        super(...e),
+            p(this, "handlePrevClick", (e) => {
+                e.stopPropagation(), e.preventDefault();
                 let { onClick: t } = this.props;
                 null == t || t(e);
-            }));
+            });
     }
 }
 class f extends i.PureComponent {
@@ -120,17 +120,17 @@ class f extends i.PureComponent {
             onClick: this.handleNextClick,
             children: (0, a.jsx)(d.Z, {
                 className: u.arrow,
-                direction: d.Z.Directions.RIGHT
-            })
+                direction: d.Z.Directions.RIGHT,
+            }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            p(this, 'handleNextClick', (e) => {
-                (e.stopPropagation(), e.preventDefault());
+        super(...e),
+            p(this, "handleNextClick", (e) => {
+                e.stopPropagation(), e.preventDefault();
                 let { onClick: t } = this.props;
                 null == t || t(e);
-            }));
+            });
     }
 }
 let _ = h;

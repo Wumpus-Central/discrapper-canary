@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     J: () => C,
-    Z: () => q
+    Z: () => q,
 }),
-    n(388685));
+    n(388685);
 var r,
     i = n(913527),
     o = n.n(i),
@@ -24,7 +24,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,7 +73,7 @@ let O = {
         hiddenSurveys: {},
         surveyOverride: null,
         lastFetched: null,
-        lastSeen: null
+        lastSeen: null,
     },
     v = O,
     I = !1,
@@ -84,7 +84,17 @@ let O = {
     C = 86400000,
     R = 7;
 var P = (function (e) {
-    return ((e.IS_OWNER = 'is_owner'), (e.IS_ADMIN = 'is_admin'), (e.IS_COMMUNITY = 'is_community'), (e.GUILD_SIZE = 'guild_size'), (e.IS_HUB = 'is_hub'), (e.IS_VIEWING = 'is_viewing'), (e.GUILD_PERMISSIONS = 'guild_permissions'), (e.GUILD_SIZE_ALL = 'guild_size_all'), e);
+    return (
+        (e.IS_OWNER = "is_owner"),
+        (e.IS_ADMIN = "is_admin"),
+        (e.IS_COMMUNITY = "is_community"),
+        (e.GUILD_SIZE = "guild_size"),
+        (e.IS_HUB = "is_hub"),
+        (e.IS_VIEWING = "is_viewing"),
+        (e.GUILD_PERMISSIONS = "guild_permissions"),
+        (e.GUILD_SIZE_ALL = "guild_size_all"),
+        e
+    );
 })(P || {});
 let w = new Set(Object.values(P));
 function D() {
@@ -100,18 +110,22 @@ function M(e) {
     let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
     if (0 === t.length) return !0;
     for (let e of t) if (!w.has(e)) return !1;
-    let i = t.includes('guild_size_all'),
+    let i = t.includes("guild_size_all"),
         o = !0;
     for (let s of f.Z.getGuildsArray()) {
-        if (i || t.includes('guild_size')) {
+        if (i || t.includes("guild_size")) {
             let e = d.Z.getMemberCount(s.id);
             if (null == e || (null != n[0] && e < n[0]) || (null != n[1] && e > n[1])) {
                 o = !1;
                 continue;
             }
         }
-        if ((t.includes('is_community') && !s.features.has(m.oNc.COMMUNITY)) || (t.includes('is_hub') && !s.features.has(m.oNc.HUB))) continue;
-        if (t.includes('guild_permissions')) {
+        if (
+            (t.includes("is_community") && !s.features.has(m.oNc.COMMUNITY)) ||
+            (t.includes("is_hub") && !s.features.has(m.oNc.HUB))
+        )
+            continue;
+        if (t.includes("guild_permissions")) {
             if (0 === r.length) continue;
             let e = !1;
             for (let t of r)
@@ -127,11 +141,11 @@ function M(e) {
         let l = h.default.getCurrentUser(),
             c = (null == l ? void 0 : l.id) === s.ownerId,
             u = _.Z.can(m.Plq.ADMINISTRATOR, s);
-        if ((t.includes('is_owner') && !c) || (t.includes('is_admin') && !u)) continue;
+        if ((t.includes("is_owner") && !c) || (t.includes("is_admin") && !u)) continue;
         null == (S = null != S ? S : {})[e.key] && (S[e.key] = e);
         let f = p.Z.getGuildId(),
             g = null != f && f === s.id;
-        if ((!t.includes('is_viewing') || g) && !i) return !0;
+        if ((!t.includes("is_viewing") || g) && !i) return !0;
     }
     return !!i && !!o;
 }
@@ -140,11 +154,11 @@ function k(e) {
 }
 function j(e) {
     let t = l.K.get(m.z7k);
-    return null == t || o()().diff(t, 'day') < e;
+    return null == t || o()().diff(t, "day") < e;
 }
 function U(e) {
     let { survey: t } = e;
-    ((N = !1), (v.lastFetched = Date.now()), null == v.hiddenSurveys && (v.hiddenSurveys = {}));
+    (N = !1), (v.lastFetched = Date.now()), null == v.hiddenSurveys && (v.hiddenSurveys = {});
     let n = null != t,
         r = n && null == v.hiddenSurveys[t.key],
         i = n && x(t);
@@ -154,7 +168,7 @@ function U(e) {
 }
 function G(e) {
     let { id: t } = e;
-    ((v.surveyOverride = t), null != t && delete v.hiddenSurveys[t], (0, u.wk)(v.surveyOverride, !0));
+    (v.surveyOverride = t), null != t && delete v.hiddenSurveys[t], (0, u.wk)(v.surveyOverride, !0);
 }
 function B() {
     I = !0;
@@ -164,7 +178,7 @@ function Z() {
 }
 function F(e) {
     let { key: t } = e;
-    ((v.hiddenSurveys[t] = !0), (A = null), (S = null != S ? S : {}), delete S[t]);
+    (v.hiddenSurveys[t] = !0), (A = null), (S = null != S ? S : {}), delete S[t];
 }
 function V() {
     v.hiddenSurveys = {};
@@ -176,8 +190,8 @@ function Y() {
     let e = Object.values((S = null != S ? S : {}))[0];
     return null != e && x(e)
         ? void U({
-              type: 'SURVEY_FETCHED',
-              survey: e
+              type: "SURVEY_FETCHED",
+              survey: e,
           })
         : null != A && void (A = null);
 }
@@ -190,7 +204,7 @@ function K() {
 }
 class z extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        ((v = null != e ? e : O), this.syncWith([p.Z], W));
+        (v = null != e ? e : O), this.syncWith([p.Z], W);
     }
     getState() {
         return v;
@@ -205,12 +219,19 @@ class z extends (r = s.ZP.PersistedStore) {
         return v.lastSeen;
     }
 }
-(g(z, 'displayName', 'SurveyStore'),
-    g(z, 'persistKey', 'SurveyStore'),
-    g(z, 'migrations', [
+g(z, "displayName", "SurveyStore"),
+    g(z, "persistKey", "SurveyStore"),
+    g(z, "migrations", [
         (e) => {
             let t = E({}, e);
-            return (delete t.validSurveys, delete t.currentSurvey, delete t.iosIsPushNotificationClicked, delete t.iosIsInviteShown, delete t.iosFirstRunDate, t);
+            return (
+                delete t.validSurveys,
+                delete t.currentSurvey,
+                delete t.iosIsPushNotificationClicked,
+                delete t.iosIsInviteShown,
+                delete t.iosFirstRunDate,
+                t
+            );
         },
         (e) => {
             var t;
@@ -219,8 +240,8 @@ class z extends (r = s.ZP.PersistedStore) {
         (e) => {
             var t;
             return y(E({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
-        }
-    ]));
+        },
+    ]);
 let q = new z(c.Z, {
     CONNECTION_OPEN: L,
     CONNECTION_RESUMED: L,
@@ -230,5 +251,5 @@ let q = new z(c.Z, {
     PUSH_NOTIFICATION_CLICK: B,
     DISPLAYED_INVITE_SHOW: Z,
     LOGOUT: V,
-    SURVEY_SEEN: K
+    SURVEY_SEEN: K,
 });

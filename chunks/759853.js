@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -14,7 +14,7 @@ var r = n(255367),
     g = n(675654),
     x = n(513940),
     h = n(197857);
-let b = ['#51BC9D'],
+let b = ["#51BC9D"],
     j = (e) => {
         var t;
         let { expansionSpring: n, overlayRef: o, quest: j, progressBarRef: _, isExpanded: v } = e,
@@ -30,8 +30,8 @@ let b = ['#51BC9D'],
             k = s.useRef(
                 new i.qA({
                     gravity: 0,
-                    wind: 0
-                })
+                    wind: 0,
+                }),
             ),
             I = (0, i.uR)(A, R),
             q = s.useCallback(() => {
@@ -51,65 +51,65 @@ let b = ['#51BC9D'],
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, g.We)),
                         (i = i =
                             {
                                 position: {
-                                    type: 'static-random',
+                                    type: "static-random",
                                     minValue: {
                                         x: n,
-                                        y: r
+                                        y: r,
                                     },
                                     maxValue: {
                                         x: n + s,
-                                        y: r + o
-                                    }
+                                        y: r + o,
+                                    },
                                 },
                                 velocity: {
-                                    type: 'static-random',
+                                    type: "static-random",
                                     minValue: {
                                         x: -20,
-                                        y: -20
+                                        y: -20,
                                     },
                                     maxValue: {
                                         x: 20,
-                                        y: 20
-                                    }
+                                        y: 20,
+                                    },
                                 },
                                 opacity: {
-                                    type: 'linear',
+                                    type: "linear",
                                     value: 2,
-                                    addValue: -0.1
+                                    addValue: -0.1,
                                 },
                                 dragCoefficient: {
-                                    type: 'static',
-                                    value: 0.166
+                                    type: "static",
+                                    value: 0.166,
                                 },
                                 size: {
-                                    type: 'static-random',
+                                    type: "static-random",
                                     minValue: 2,
-                                    maxValue: 3
-                                }
+                                    maxValue: 3,
+                                },
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
@@ -124,7 +124,7 @@ let b = ['#51BC9D'],
                                   Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(i, e));
                               }),
                         a),
-                        100
+                        100,
                     );
                 }
             }, [_, w, I, S]),
@@ -137,7 +137,7 @@ let b = ['#51BC9D'],
                 !T &&
                 P &&
                 setTimeout(() => {
-                    (y(), q());
+                    y(), q();
                 }, 200);
         }, [O, P, T, y, q]),
         s.useEffect(() => {
@@ -145,18 +145,18 @@ let b = ['#51BC9D'],
         }, [O, E, q, y, I]),
         S)
             ? null
-            : (0, r.jsxs)('div', {
+            : (0, r.jsxs)("div", {
                   className: x.wrapper,
-                  'aria-hidden': 'true',
+                  "aria-hidden": "true",
                   ref: w,
                   children: [
                       (0, r.jsx)(c.animated.div, {
                           className: x.background,
-                          style: { opacity: C }
+                          style: { opacity: C },
                       }),
                       (0, r.jsx)(c.animated.div, {
                           className: a()(x.borders, x.bordersTopLeft),
-                          style: { opacity: C }
+                          style: { opacity: C },
                       }),
                       (0, r.jsxs)(c.animated.div, {
                           className: x.confettiWrapper,
@@ -164,33 +164,33 @@ let b = ['#51BC9D'],
                               transform: n
                                   .to({
                                       range: [0, 1],
-                                      output: [-35, 0]
+                                      output: [-35, 0],
                                   })
-                                  .to((e) => 'translateY('.concat(e, 'px)'))
+                                  .to((e) => "translateY(".concat(e, "px)")),
                           },
                           children: [
                               (0, r.jsx)(i.O_, {
                                   ref: N,
                                   className: x.confetti,
-                                  environment: k.current
+                                  environment: k.current,
                               }),
                               (0, r.jsx)(i.Ji, {
                                   ref: B,
                                   sprites: [h],
                                   colors: b,
                                   spriteWidth: g.Ko,
-                                  spriteHeight: g.Ko
+                                  spriteHeight: g.Ko,
                               }),
                               null != o.current &&
                                   (0, l.createPortal)(
                                       (0, r.jsx)(c.animated.div, {
                                           className: a()(x.borders, x.bordersBottom),
-                                          style: { opacity: C }
+                                          style: { opacity: C },
                                       }),
-                                      o.current
-                                  )
-                          ]
-                      })
-                  ]
+                                      o.current,
+                                  ),
+                          ],
+                      }),
+                  ],
               });
     };

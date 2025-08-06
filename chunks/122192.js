@@ -14,13 +14,13 @@ let u = (e) => {
             u
                 ? (0, r.jsx)(o.kzN, {
                       className: c.errorBlock,
-                      children: l.intl.string(l.t['4vnhKS'])
+                      children: l.intl.string(l.t["4vnhKS"]),
                   })
                 : null,
             (0, r.jsx)(a.Z, {
                 onCardInfoChange: n,
-                error: t
-            })
-        ]
+                error: t,
+            }),
+        ],
     });
 };

@@ -15,23 +15,23 @@ function o(e) {
             u &&
                 (0, r.jsx)(a.Z, {
                     guildId: t,
-                    triggerType: o
+                    triggerType: o,
                 }),
             n.map((e) =>
                 (0, r.jsx)(
                     s.Z,
                     {
                         rule: e,
-                        initWithEdit: c
+                        initWithEdit: c,
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             ),
             m &&
                 (0, r.jsx)(l.Z, {
                     guildId: t,
-                    triggerType: o
-                })
-        ]
+                    triggerType: o,
+                }),
+        ],
     });
 }

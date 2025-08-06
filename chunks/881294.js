@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     nu: () => p,
     qF: () => h,
     rf: () => m,
-    zZ: () => u
+    zZ: () => u,
 }),
     n(190126),
     n(368063),
@@ -11,7 +11,7 @@
     n(490233),
     n(97749),
     n(388685),
-    n(35282));
+    n(35282);
 var r = n(860911),
     a = n(442837),
     i = n(703656),
@@ -22,33 +22,33 @@ var r = n(860911),
     d = n(981631);
 function u(e, t) {
     var n, r, a;
-    let i = c.z8.getField('sessionId'),
-        l = c.z8.getField('guildId'),
-        d = null == (n = c.z8.getField('entrypoint')) ? void 0 : n.name,
+    let i = c.z8.getField("sessionId"),
+        l = c.z8.getField("guildId"),
+        d = null == (n = c.z8.getField("entrypoint")) ? void 0 : n.name,
         u = s.default.getCurrentUser(),
         p =
             ((r = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })({}, t)),
@@ -57,7 +57,7 @@ function u(e, t) {
                     guild_id: l,
                     directory_session_id: i,
                     source: d,
-                    user_id: null == u ? void 0 : u.id
+                    user_id: null == u ? void 0 : u.id,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
@@ -90,6 +90,6 @@ function m() {
 }
 function h() {
     let e = new URL(location.href),
-        t = '?redirect_to='.concat(encodeURIComponent(e.pathname + e.search));
+        t = "?redirect_to=".concat(encodeURIComponent(e.pathname + e.search));
     (0, i.uL)(d.Z5c.REGISTER + t);
 }

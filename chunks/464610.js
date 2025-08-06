@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(472816), n(794429));
+n.d(t, { Z: () => x }), n(472816), n(794429);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -14,40 +14,40 @@ var r = n(255367),
     h = n(902893);
 function f(e) {
     let { title: t, subtitle: n, icon: i, page: a } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: h.safetyStepRow,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.safetyStepContent,
                 children: [
                     (0, r.jsx)(l.qEK, {
                         src: i,
                         size: l.EFr.SIZE_40,
-                        'aria-label': t
+                        "aria-label": t,
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)(l.X6q, {
-                                variant: 'heading-md/semibold',
-                                color: 'header-primary',
-                                children: t
+                                variant: "heading-md/semibold",
+                                color: "header-primary",
+                                children: t,
                             }),
                             (0, r.jsx)(l.Text, {
-                                variant: 'text-xs/medium',
-                                color: 'header-secondary',
-                                children: n
-                            })
-                        ]
-                    })
-                ]
+                                variant: "text-xs/medium",
+                                color: "header-secondary",
+                                children: n,
+                            }),
+                        ],
+                    }),
+                ],
             }),
             (0, r.jsx)(l.zxk, {
-                size: 'sm',
-                variant: 'secondary',
+                size: "sm",
+                variant: "secondary",
                 onClick: () => (0, u.K)(a),
-                text: p.intl.string(p.t.bt75u7)
-            })
-        ]
+                text: p.intl.string(p.t.bt75u7),
+            }),
+        ],
     });
 }
 function x(e) {
@@ -67,12 +67,12 @@ function x(e) {
                             let i = null == (r = x[n]) ? void 0 : r.filter(c.lm);
                             if (null == i || 0 === i.length) return void t++;
                             i.forEach((n) => {
-                                (n.enabled && e++, t++);
+                                n.enabled && e++, t++;
                             });
                         }),
                 {
                     numEnabledRules: e,
-                    numRules: t
+                    numRules: t,
                 }
             );
         }, [u, x]),
@@ -81,38 +81,38 @@ function x(e) {
         O = v[m.u.DM_AND_SPAM_PROTECTION],
         y = v[m.u.PERMISSIONS],
         C = (0, o.pr)(t.id);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(l.X6q, {
-                variant: 'heading-lg/semibold',
-                color: 'header-primary',
+                variant: "heading-lg/semibold",
+                color: "header-primary",
                 className: h.header,
-                children: p.intl.string(p.t['0A+VSE'])
+                children: p.intl.string(p.t["0A+VSE"]),
             }),
             (0, r.jsx)(d.z, { guild: t }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.safetyChecklist,
                 children: [
                     (0, r.jsx)(f, {
                         icon: n(14215),
-                        title: p.intl.string(p.t['53eF5u']),
+                        title: p.intl.string(p.t["53eF5u"]),
                         subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
                             enabled: _.filter((e) => e.enabled).length,
-                            total: _.length
+                            total: _.length,
                         }),
-                        page: m.u.CAPTCHA_AND_RAID_PROTECTION
+                        page: m.u.CAPTCHA_AND_RAID_PROTECTION,
                     }),
-                    (0, r.jsx)('div', { className: h.divider }),
+                    (0, r.jsx)("div", { className: h.divider }),
                     (0, r.jsx)(f, {
                         icon: n(128724),
                         title: p.intl.string(p.t.O0SfFx),
                         subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
                             enabled: O.filter((e) => e.enabled).length,
-                            total: O.length
+                            total: O.length,
                         }),
-                        page: m.u.DM_AND_SPAM_PROTECTION
+                        page: m.u.DM_AND_SPAM_PROTECTION,
                     }),
-                    (0, r.jsx)('div', { className: h.divider }),
+                    (0, r.jsx)("div", { className: h.divider }),
                     C &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
@@ -121,24 +121,24 @@ function x(e) {
                                     title: p.intl.string(p.t.uRelg4),
                                     subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
                                         enabled: b,
-                                        total: j
+                                        total: j,
                                     }),
-                                    page: m.u.AUTOMOD
+                                    page: m.u.AUTOMOD,
                                 }),
-                                (0, r.jsx)('div', { className: h.divider })
-                            ]
+                                (0, r.jsx)("div", { className: h.divider }),
+                            ],
                         }),
                     (0, r.jsx)(f, {
                         icon: n(913414),
                         title: p.intl.string(p.t.xrmhRU),
                         subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
                             enabled: y.filter((e) => e.enabled).length,
-                            total: y.length
+                            total: y.length,
                         }),
-                        page: m.u.PERMISSIONS
-                    })
-                ]
-            })
-        ]
+                        page: m.u.PERMISSIONS,
+                    }),
+                ],
+            }),
+        ],
     });
 }

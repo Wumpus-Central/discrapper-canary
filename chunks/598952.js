@@ -7,38 +7,38 @@ function l(e) {
     var t;
     let { attachment: n } = e,
         l = Math.round(((null != (t = n.size) ? t : 0) / 1024 / 1024) * 100) / 100;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: i.container,
         children: [
             (0, r.jsx)(a.ZKT, {
-                size: 'xs',
-                color: 'currentColor',
-                className: i.fileIcon
+                size: "xs",
+                color: "currentColor",
+                className: i.fileIcon,
             }),
             (0, r.jsx)(a.LZC, {
                 size: 8,
-                horizontal: !0
+                horizontal: !0,
             }),
             (0, r.jsx)(a.Text, {
-                variant: 'text-sm/normal',
-                color: 'text-default',
+                variant: "text-sm/normal",
+                color: "text-default",
                 className: i.fileName,
-                children: n.filename
+                children: n.filename,
             }),
             (0, r.jsx)(a.LZC, {
                 size: 8,
-                horizontal: !0
+                horizontal: !0,
             }),
-            (0, r.jsx)('div', { className: i.dot }),
+            (0, r.jsx)("div", { className: i.dot }),
             (0, r.jsx)(a.LZC, {
                 size: 8,
-                horizontal: !0
+                horizontal: !0,
             }),
             (0, r.jsxs)(a.Text, {
-                variant: 'text-sm/normal',
-                color: 'text-muted',
-                children: [l, 'MB']
-            })
-        ]
+                variant: "text-sm/normal",
+                color: "text-muted",
+                children: [l, "MB"],
+            }),
+        ],
     });
 }

@@ -22,7 +22,7 @@ function h() {
         children: [
             (0, i.jsx)(c.H, {
                 header: p.intl.string(p.t.tiCXaG),
-                description: p.intl.format(p.t.RvjRRE, { appealLink: a.Z.getArticleURL(m.BhN.SAFE_DIRECT_MESSAGING) })
+                description: p.intl.format(p.t.RvjRRE, { appealLink: a.Z.getArticleURL(m.BhN.SAFE_DIRECT_MESSAGING) }),
             }),
             (0, i.jsx)(s.FXm, {
                 className: g.radioGroup,
@@ -32,8 +32,8 @@ function h() {
                 onChange: (e) => {
                     let { value: t } = e;
                     return o.Xr.updateSetting(t);
-                }
-            })
-        ]
+                },
+            }),
+        ],
     });
 }

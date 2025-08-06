@@ -11,31 +11,31 @@ function d(e) {
     let { onClick: t, disabled: n = !1 } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', { className: u.separator }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", { className: u.separator }),
+            (0, r.jsx)("div", {
                 className: u.container,
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: u.buttonContainer,
                     children: (0, r.jsx)(l.Z, {
                         className: u.button,
                         childClassName: a()(u.buttonChild, {
                             [u.disabled]: n,
-                            [u.activeButtonChild]: !n
+                            [u.activeButtonChild]: !n,
                         }),
                         onClick: t,
                         disabled: n,
                         isActive: !1,
                         noHover: n,
-                        'aria-label': c.intl.string(c.t.oeb1vr),
+                        "aria-label": c.intl.string(c.t.oeb1vr),
                         children: (0, r.jsx)(s.Uuj, {
-                            size: 'xs',
-                            color: 'currentColor',
-                            className: u.sendIcon
-                        })
-                    })
-                })
-            })
-        ]
+                            size: "xs",
+                            color: "currentColor",
+                            className: u.sendIcon,
+                        }),
+                    }),
+                }),
+            }),
+        ],
     });
 }
 let f = i.memo(d);

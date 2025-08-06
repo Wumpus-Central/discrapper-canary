@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -18,16 +18,16 @@ function b() {
         type: o.sje.PRIMARY,
         title: h.intl.string(h.t.XLw6FB),
         body: h.intl.string(h.t.wVjKGh),
-        button: (0, i.jsx)('div', {
-            'data-button-hoisted-classname-wrapper': !0,
+        button: (0, i.jsx)("div", {
+            "data-button-hoisted-classname-wrapper": !0,
             className: f.marginTop20,
             children: (0, i.jsx)(o.zxk, {
-                variant: 'primary',
-                size: 'sm',
+                variant: "primary",
+                size: "sm",
                 text: h.intl.string(h.t.BK8LKy),
-                onClick: () => (0, u.y)('Video unsupported browser')
-            })
-        })
+                onClick: () => (0, u.y)("Video unsupported browser"),
+            }),
+        }),
     });
 }
 function x(e) {
@@ -41,11 +41,11 @@ function x(e) {
                     children: (0, i.jsx)(m.Z, {
                         previewEnabled: s,
                         onEnablePreview: () => u(!0),
-                        onCancelPreview: () => u(!1)
-                    })
+                        onCancelPreview: () => u(!1),
+                    }),
                 }),
-                !n && (0, i.jsx)(b, {})
-            ]
+                !n && (0, i.jsx)(b, {}),
+            ],
         });
     return t
         ? x
@@ -55,11 +55,11 @@ function x(e) {
                       component: (0, i.jsx)(o.vwX, {
                           tag: o.RB0.H1,
                           className: f.marginBottom20,
-                          children: h.intl.string(h.t.LKzQSE)
+                          children: h.intl.string(h.t.LKzQSE),
                       }),
-                      children: x
+                      children: x,
                   }),
-                  (0, i.jsx)(o.$i$, { className: a()(f.marginBottom40, f.marginTop40) })
-              ]
+                  (0, i.jsx)(o.$i$, { className: a()(f.marginBottom40, f.marginTop40) }),
+              ],
           });
 }

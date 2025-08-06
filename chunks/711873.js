@@ -6,7 +6,7 @@ var t = {
         getDefaultProps: !0,
         mixins: !0,
         propTypes: !0,
-        type: !0
+        type: !0,
     },
     n = {
         name: !0,
@@ -14,11 +14,11 @@ var t = {
         prototype: !0,
         caller: !0,
         arguments: !0,
-        arity: !0
+        arity: !0,
     },
-    r = 'function' == typeof Object.getOwnPropertySymbols;
+    r = "function" == typeof Object.getOwnPropertySymbols;
 e.exports = function (e, i, o) {
-    if ('string' != typeof i) {
+    if ("string" != typeof i) {
         var a = Object.getOwnPropertyNames(i);
         r && (a = a.concat(Object.getOwnPropertySymbols(i)));
         for (var s = 0; s < a.length; ++s)

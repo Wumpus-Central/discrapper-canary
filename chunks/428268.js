@@ -22,7 +22,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,7 +74,7 @@ let v = function (e) {
         I = (0, i.e7)([d.Z], () => d.Z.getAccount(null, h.ABu.LEAGUE_OF_LEGENDS)),
         T = (0, _.Z)({
             guildId: t,
-            leaderboardId: E
+            leaderboardId: E,
         }),
         S = E === p.z;
     if ((!S || (null != v && null != I)) && !y) return null;
@@ -86,14 +86,14 @@ let v = function (e) {
     function w() {
         null != T &&
             (0, s.ZDy)(async () => {
-                let { default: e } = await n.e('73217').then(n.bind(n, 139964));
+                let { default: e } = await n.e("73217").then(n.bind(n, 139964));
                 return (n) =>
                     (0, r.jsx)(
                         e,
                         O(b({}, n), {
                             guildId: t,
-                            leaderboard: T
-                        })
+                            leaderboard: T,
+                        }),
                     );
             });
     }
@@ -101,7 +101,7 @@ let v = function (e) {
         return N || P ? (0, c.Z)({ platformType: h.ABu.RIOT_GAMES }) : w();
     }
     function L() {
-        return N ? m.intl.string(m.t.w6VSSE) : P ? m.intl.string(m.t.CHNBdn) : m.intl.string(m.t['0yRXHx']);
+        return N ? m.intl.string(m.t.w6VSSE) : P ? m.intl.string(m.t.CHNBdn) : m.intl.string(m.t["0yRXHx"]);
     }
     function x() {
         if (y) return null;
@@ -109,19 +109,19 @@ let v = function (e) {
                 ? (0, r.jsx)(s.d3s, { className: g.infoMessageIcon })
                 : (0, r.jsx)(s.aNP, {
                       color: o.Z.colors.STATUS_WARNING,
-                      className: g.infoMessageIcon
+                      className: g.infoMessageIcon,
                   }),
-            t = N ? m.intl.string(m.t['Ihg/Dg']) : m.intl.string(m.t['J8U+Iy']);
-        return (0, r.jsxs)('div', {
+            t = N ? m.intl.string(m.t["Ihg/Dg"]) : m.intl.string(m.t["J8U+Iy"]);
+        return (0, r.jsxs)("div", {
             className: g.updateMessage,
             children: [
                 e,
                 (0, r.jsx)(s.Text, {
-                    variant: 'text-xs/medium',
-                    color: 'text-muted',
-                    children: t
-                })
-            ]
+                    variant: "text-xs/medium",
+                    color: "text-muted",
+                    children: t,
+                }),
+            ],
         });
     }
     return (0, r.jsxs)(r.Fragment, {
@@ -135,14 +135,14 @@ let v = function (e) {
                 children: [
                     S &&
                         !y &&
-                        (0, r.jsx)('img', {
-                            alt: 'Riot Games',
+                        (0, r.jsx)("img", {
+                            alt: "Riot Games",
                             src: A.icon.whiteSVG,
-                            className: g.riotIcon
+                            className: g.riotIcon,
                         }),
-                    L()
-                ]
-            })
-        ]
+                    L(),
+                ],
+            }),
+        ],
     });
 };

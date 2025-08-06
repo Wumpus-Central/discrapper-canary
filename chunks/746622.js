@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => u,
-    z: () => d
+    z: () => d,
 });
 var r = n(255367),
     l = n(481060),
@@ -13,14 +13,14 @@ let u = (e) => {
         return (0, r.jsx)(l.Text, {
             variant: n,
             color: i,
-            children: c(t)
+            children: c(t),
         });
     },
     c = (e) => {
         switch (e) {
             case a.evJ.TOO_MANY_EMOJI:
             case a.evJ.TOO_MANY_ANIMATED_EMOJI:
-                return s.intl.string(s.t['FtKH4+']);
+                return s.intl.string(s.t["FtKH4+"]);
             case i.ze.TOO_BIG:
             case a.evJ.INVALID_FILE_ASSET_SIZE:
             case a.evJ.INVALID_FORM_BODY:
@@ -28,9 +28,9 @@ let u = (e) => {
             case a.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
                 return s.intl.string(s.t.sp16MT);
             case i.ze.MISSING_IMAGE_DATA:
-                return s.intl.string(s.t['41/Kbm']);
+                return s.intl.string(s.t["41/Kbm"]);
             case i.ze.MISSING_GUILD:
-                return s.intl.string(s.t['8RCtpK']);
+                return s.intl.string(s.t["8RCtpK"]);
             case i.ze.GIF_CROPPING:
                 return s.intl.string(s.t.X6rtiI);
             case i.ze.IMAGE_LOAD:
@@ -38,7 +38,7 @@ let u = (e) => {
             case i.ze.NO_PERMISSIONS:
                 return s.intl.string(s.t.QY7ZFR);
             case 429:
-                return s.intl.string(s.t['4rjikp']);
+                return s.intl.string(s.t["4rjikp"]);
             case i.ze.UNKNOWN:
             default:
                 return s.intl.string(s.t.iufib2);

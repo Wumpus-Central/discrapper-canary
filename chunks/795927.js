@@ -10,26 +10,28 @@ let E = [0.1, 0.25],
         (0, c.a)(
             (0, i.R)(() => {
                 let a,
-                    i = (0, _.I)('CLS', 0),
+                    i = (0, _.I)("CLS", 0),
                     c = 0,
                     s = [],
                     l = (t) => {
-                        (t.forEach((t) => {
+                        t.forEach((t) => {
                             if (!t.hadRecentInput) {
                                 let e = s[0],
                                     a = s[s.length - 1];
-                                c && e && a && t.startTime - a.startTime < 1000 && t.startTime - e.startTime < 5000 ? ((c += t.value), s.push(t)) : ((c = t.value), (s = [t]));
+                                c && e && a && t.startTime - a.startTime < 1000 && t.startTime - e.startTime < 5000
+                                    ? ((c += t.value), s.push(t))
+                                    : ((c = t.value), (s = [t]));
                             }
                         }),
-                            c > i.value && ((i.value = c), (i.entries = s), a()));
+                            c > i.value && ((i.value = c), (i.entries = s), a());
                     },
-                    u = (0, n.N)('layout-shift', l);
+                    u = (0, n.N)("layout-shift", l);
                 u &&
                     ((a = (0, r._)(t, i, E, e.reportAllChanges)),
                     (0, o.u)(() => {
-                        (l(u.takeRecords()), a(!0));
+                        l(u.takeRecords()), a(!0);
                     }),
                     setTimeout(a, 0));
-            })
+            }),
         );
     };

@@ -1,5 +1,5 @@
 let r;
-(n.r(t),
+n.r(t),
     n.d(t, {
         DEV_PID: () => p,
         OVERLAY_DEFAULT_RESOLUTION: () => d,
@@ -15,14 +15,14 @@ let r;
         setPID: () => E,
         supportsLegacy: () => S,
         supportsOutOfProcess: () => T,
-        validResolution: () => v
+        validResolution: () => v,
     }),
     n(65234),
     n(111804),
     n(490233),
     n(97749),
     n(388685),
-    n(35282));
+    n(35282);
 var i = n(887278),
     o = n(490029),
     a = n(358085),
@@ -32,21 +32,21 @@ var i = n(887278),
 let u = 2,
     d = {
         width: 3840,
-        height: 2160
+        height: 2160,
     },
     f = {
         width: 768,
-        height: 432
+        height: 432,
     },
-    _ = 'overlay_default',
+    _ = "overlay_default",
     p = -2,
     h = -1,
     m = !1;
 function g() {
     var e;
     if (void 0 !== r && r !== h) return r;
-    let t = parseInt(null != (e = new URLSearchParams(window.location.search).get('pid')) ? e : '', 10);
-    return (isNaN(t) && (t = h), (r = t));
+    let t = parseInt(null != (e = new URLSearchParams(window.location.search).get("pid")) ? e : "", 10);
+    return isNaN(t) && (t = h), (r = t);
 }
 function E(e) {
     r = e;
@@ -55,14 +55,14 @@ function b(e) {
     return null != e && 0 !== e && e !== h;
 }
 function y() {
-    return new URLSearchParams(window.location.search).get('rpc_auth_token');
+    return new URLSearchParams(window.location.search).get("rpc_auth_token");
 }
 function O(e) {
     (0, o.lW)({
         type: l.BmY.LOG_MESSAGES,
         pid: g(),
         token: y(),
-        payload: e
+        payload: e,
     });
 }
 function v(e) {
@@ -75,6 +75,6 @@ function T() {
     return m;
 }
 function S() {
-    let e = (0, a.isWindows)() && 'arm64' === s.ZP.architecture;
+    let e = (0, a.isWindows)() && "arm64" === s.ZP.architecture;
     return c.iP && !e && !(0, i.$1)();
 }

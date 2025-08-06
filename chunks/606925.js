@@ -11,19 +11,19 @@ function u(e) {
     let { platform: t, color: n, look: u, onAction: d, Icon: f } = e;
     if ((0, i.e7)([a.Z], () => a.Z.getAccounts().some((e) => e.type === t.type))) return null;
     let _ = () => {
-            (null == d || d(),
+            null == d || d(),
                 (0, o.Z)({
                     platformType: t.type,
-                    location: 'Activity Action'
-                }));
+                    location: "Activity Action",
+                });
         },
         p =
             null != f
                 ? (0, r.jsx)(f, { className: c.platformIcon })
-                : (0, r.jsx)('img', {
-                      alt: '',
+                : (0, r.jsx)("img", {
+                      alt: "",
                       className: c.platformIcon,
-                      src: t.icon.whiteSVG
+                      src: t.icon.whiteSVG,
                   });
     return (0, r.jsx)(
         s.Z,
@@ -32,11 +32,11 @@ function u(e) {
             color: n,
             look: u,
             fullWidth: !0,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: c.flex,
-                children: [p, l.intl.format(l.t.XWSHTU, { platform: t.name })]
-            })
+                children: [p, l.intl.format(l.t.XWSHTU, { platform: t.name })],
+            }),
         },
-        'connect-platform-activity'
+        "connect-platform-activity",
     );
 }

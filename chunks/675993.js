@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(953529));
+n.d(t, { Z: () => x }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -33,7 +33,7 @@ function P(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -43,15 +43,15 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 P(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -61,7 +61,7 @@ function x(e) {
     let { context: t, application: n, videoUrl: o, imageCoverUrl: l, sectionName: c, hasCommands: d } = e,
         _ = i.useMemo(() => {
             var e;
-            return null != (e = (0, O.jD)(n)) ? e : '';
+            return null != (e = (0, O.jD)(n)) ? e : "";
         }, [n]),
         p = (0, s.e7)([u.Z], () => u.Z.inDevModeForApplication(n.id)),
         { isSlideReady: h } = (0, v.hH)(),
@@ -70,11 +70,11 @@ function x(e) {
         h && E(!0);
     }, [h]);
     let b = null != o;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: C.container,
         children: [
             b
-                ? (0, r.jsxs)('div', {
+                ? (0, r.jsxs)("div", {
                       className: C.videoContainer,
                       children: [
                           m
@@ -84,30 +84,30 @@ function x(e) {
                                     muted: !0,
                                     autoPlay: !0,
                                     src: o,
-                                    poster: l
+                                    poster: l,
                                 })
                               : null,
-                          (0, r.jsx)('img', {
+                          (0, r.jsx)("img", {
                               className: C.videoCover,
                               src: l,
-                              'aria-label': N.intl.string(N.t.X4IxWF)
-                          })
-                      ]
+                              "aria-label": N.intl.string(N.t.X4IxWF),
+                          }),
+                      ],
                   })
                 : null,
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: b ? C.overviewContainerWithVideo : C.overviewContainerNoVideo,
                 children: [
                     (0, r.jsx)(k, { application: n }),
                     (0, r.jsx)(j, { application: n }),
                     _.length > 0 ? (0, r.jsx)(B, { description: _ }) : null,
                     p
-                        ? (0, r.jsx)('div', {
+                        ? (0, r.jsx)("div", {
                               className: C.developerShelfControlsContainer,
                               children: (0, r.jsx)(f.W, {
                                   hideSearch: !0,
-                                  className: C.developerShelfControls
-                              })
+                                  className: C.developerShelfControls,
+                              }),
                           })
                         : null,
                     (0, r.jsx)(G, {
@@ -115,12 +115,12 @@ function x(e) {
                         application: n,
                         sectionName: c,
                         isDeveloperOfThisApp: p,
-                        hasCommands: d
-                    })
-                ]
+                        hasCommands: d,
+                    }),
+                ],
             }),
-            (0, r.jsx)(M, { application: n })
-        ]
+            (0, r.jsx)(M, { application: n }),
+        ],
     });
 }
 function M(e) {
@@ -128,69 +128,69 @@ function M(e) {
         n = (0, O.Cb)(t),
         i = (0, O.Hu)(t);
     return n || i
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: C.monetizationDisclosureContainerStyle,
               children: [
                   n
-                      ? (0, r.jsxs)('div', {
+                      ? (0, r.jsxs)("div", {
                             className: C.monetizationDisclosureStyle,
                             children: [
                                 (0, r.jsx)(c.EOn, {
-                                    size: 'sm',
-                                    color: c.TVs.colors.INTERACTIVE_MUTED
+                                    size: "sm",
+                                    color: c.TVs.colors.INTERACTIVE_MUTED,
                                 }),
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-sm/normal',
-                                    color: 'text-secondary',
-                                    children: N.intl.string(N.t['8z5B2d'])
-                                })
-                            ]
+                                    variant: "text-sm/normal",
+                                    color: "text-secondary",
+                                    children: N.intl.string(N.t["8z5B2d"]),
+                                }),
+                            ],
                         })
                       : null,
                   i
-                      ? (0, r.jsxs)('div', {
+                      ? (0, r.jsxs)("div", {
                             className: C.monetizationDisclosureStyle,
                             children: [
                                 (0, r.jsx)(c.uMN, {
-                                    size: 'sm',
-                                    color: c.TVs.colors.INTERACTIVE_MUTED
+                                    size: "sm",
+                                    color: c.TVs.colors.INTERACTIVE_MUTED,
                                 }),
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-sm/normal',
-                                    color: 'text-secondary',
-                                    children: N.intl.string(N.t['5khEk5'])
-                                })
-                            ]
+                                    variant: "text-sm/normal",
+                                    color: "text-secondary",
+                                    children: N.intl.string(N.t["5khEk5"]),
+                                }),
+                            ],
                         })
-                      : null
-              ]
+                      : null,
+              ],
           })
         : null;
 }
 function k(e) {
     var t;
     let { application: n } = e,
-        i = (0, O.BQ)(n) ? n.name : null != (t = (0, O.$d)(n)) ? t : '',
+        i = (0, O.BQ)(n) ? n.name : null != (t = (0, O.$d)(n)) ? t : "",
         o = (0, O.vJ)(n);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: C.titleContainer,
         children: [
             (0, r.jsx)(c.X6q, {
-                variant: 'heading-xl/extrabold',
+                variant: "heading-xl/extrabold",
                 lineClamp: 1,
-                children: i
+                children: i,
             }),
             o
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: C.partnerLabelContainer,
                       children: (0, r.jsx)(c.Text, {
-                          variant: 'text-xs/medium',
-                          color: 'text-default',
-                          children: N.intl.string(N.t.LO4f0N)
-                      })
+                          variant: "text-xs/medium",
+                          color: "text-default",
+                          children: N.intl.string(N.t.LO4f0N),
+                      }),
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 function j(e) {
@@ -200,25 +200,25 @@ function j(e) {
             return (0, O.BQ)(t) && null != (e = null == t ? void 0 : t.tags) ? e : [];
         }, [t]);
     return (0, O.ye)(t)
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: C.tagsContainer,
               children: [
                   (0, r.jsx)(U, { application: t }),
                   n.map((e, t) =>
                       (0, r.jsx)(
-                          'div',
+                          "div",
                           {
                               className: C.tagContainer,
                               children: (0, r.jsx)(c.Text, {
-                                  variant: 'text-sm/semibold',
-                                  color: 'interactive-normal',
-                                  children: e
-                              })
+                                  variant: "text-sm/semibold",
+                                  color: "interactive-normal",
+                                  children: e,
+                              }),
                           },
-                          e + t
-                      )
-                  )
-              ]
+                          e + t,
+                      ),
+                  ),
+              ],
           })
         : null;
 }
@@ -227,19 +227,19 @@ function U(e) {
     let { application: n } = e;
     if (!(0, O.ye)(n)) return null;
     let i = null != (t = (0, O.BQ)(n) ? (n instanceof b.ZP ? n.maxParticipants : n.max_participants) : 0) ? t : 0;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: C.tagContainer,
         children: [
             (0, r.jsx)(c.BFJ, {
-                size: 'xs',
-                color: c.TVs.colors.INTERACTIVE_NORMAL
+                size: "xs",
+                color: c.TVs.colors.INTERACTIVE_NORMAL,
             }),
             (0, r.jsx)(c.Text, {
-                variant: 'text-sm/semibold',
-                color: 'interactive-normal',
-                children: (0, d.lY)(i)
-            })
-        ]
+                variant: "text-sm/semibold",
+                color: "interactive-normal",
+                children: (0, d.lY)(i),
+            }),
+        ],
     });
 }
 function G(e) {
@@ -251,7 +251,7 @@ function G(e) {
         E = (0, p.Z)({
             context: n,
             application: o,
-            botUserId: g
+            botUserId: g,
         }),
         { analyticsLocations: b } = (0, _.ZP)();
     if (
@@ -263,7 +263,7 @@ function G(e) {
                         application_id: o.id,
                         is_primary_entry_point_command_non_null: null != d,
                         is_bot_user_id_non_null: null != g,
-                        show_try_it_out_button: E
+                        show_try_it_out_button: E,
                     });
             }, L);
             return () => clearTimeout(e);
@@ -273,37 +273,37 @@ function G(e) {
         return null;
     let v = l.Ph.MAX;
     return null != d && null != g
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: C.entrypointContainer,
               children: [
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: C.entryPointContainerFlexChild,
                       children: (0, r.jsx)(T.Z, {
                           context: n,
                           application: o,
                           sectionName: a,
                           primaryEntryPointCommand: d,
-                          buttonSize: v
-                      })
+                          buttonSize: v,
+                      }),
                   }),
                   E && null != g
-                      ? (0, r.jsx)('div', {
+                      ? (0, r.jsx)("div", {
                             className: C.entryPointContainerFlexChild,
                             children: (0, r.jsx)(S.Z, {
                                 botUserId: g,
                                 applicationId: o.id,
                                 buttonSize: v,
-                                analyticsLocations: b
-                            })
+                                analyticsLocations: b,
+                            }),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           })
         : u && !s && (0, O.ye)(o)
           ? (0, r.jsx)(c.Wn, {
                 className: C.primaryEntryPointWarningMessage,
                 messageType: c.QYI.WARNING,
-                children: N.intl.format(N.t['s/3hjI'], {})
+                children: N.intl.format(N.t["s/3hjI"], {}),
             })
           : null;
 }
@@ -319,26 +319,26 @@ function B(e) {
             return {
                 key: 1,
                 minHeightOverride: Math.min(e, D * l),
-                maxHeightOverride: e
+                maxHeightOverride: e,
             };
         }, [u, l]),
         { ref: f, isTransitioning: _, onTransitionEnd: p } = (0, I.Z)(w({ isExpanded: n }, d)),
         h = n || _;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: C.descriptionContainer,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 ref: f,
                 className: C.overflowHidden,
                 onTransitionEnd: p,
                 children: (0, r.jsx)(c.Text, {
                     ref: s,
                     className: R.markup,
-                    variant: 'text-sm/medium',
+                    variant: "text-sm/medium",
                     lineClamp: h ? void 0 : D,
                     style: { maxHeight: h ? void 0 : d.minHeightOverride },
-                    children: a
-                })
+                    children: a,
+                }),
             }),
             null != u && u > D
                 ? (0, r.jsxs)(c.P3F, {
@@ -346,23 +346,23 @@ function B(e) {
                       onClick: () => o((e) => !e),
                       children: [
                           (0, r.jsx)(c.Text, {
-                              variant: 'text-sm/semibold',
-                              color: 'text-brand',
-                              children: h ? N.intl.string(N.t.u4YJ8v) : N.intl.string(N.t['N/tajI'])
+                              variant: "text-sm/semibold",
+                              color: "text-brand",
+                              children: h ? N.intl.string(N.t.u4YJ8v) : N.intl.string(N.t["N/tajI"]),
                           }),
                           h
                               ? (0, r.jsx)(c.u04, {
-                                    size: 'sm',
-                                    color: c.TVs.colors.TEXT_BRAND
+                                    size: "sm",
+                                    color: c.TVs.colors.TEXT_BRAND,
                                 })
                               : (0, r.jsx)(c.CJ0, {
-                                    size: 'sm',
-                                    color: c.TVs.colors.TEXT_BRAND
-                                })
-                      ]
+                                    size: "sm",
+                                    color: c.TVs.colors.TEXT_BRAND,
+                                }),
+                      ],
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 function Z() {
@@ -379,7 +379,7 @@ function Z() {
         {
             ref: e,
             lineHeight: t,
-            lineCount: r
+            lineCount: r,
         }
     );
 }

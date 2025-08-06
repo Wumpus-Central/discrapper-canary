@@ -1,4 +1,4 @@
 e.exports = {
-    modal: 'modal__487be',
-    content: 'content__487be'
+    modal: "modal__487be",
+    content: "content__487be",
 };

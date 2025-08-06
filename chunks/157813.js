@@ -10,39 +10,39 @@ var r = n(255367),
     d = n(321575);
 function f(e) {
     let { className: t, isVertical: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: d.iconContainer,
         children: [
             (0, r.jsx)(s.CJ0, {
-                size: 'md',
-                color: 'currentColor',
-                className: a()(n ? d.upCaret : d.leftCaret, t)
+                size: "md",
+                color: "currentColor",
+                className: a()(n ? d.upCaret : d.leftCaret, t),
             }),
             (0, r.jsx)(s.BFJ, {
-                size: 'md',
-                color: 'currentColor',
-                className: a()(d.members, t)
-            })
-        ]
+                size: "md",
+                color: "currentColor",
+                className: a()(d.members, t),
+            }),
+        ],
     });
 }
 function _(e) {
     let { className: t, isVertical: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: d.iconContainer,
         children: [
             (0, r.jsx)(s.CJ0, {
-                size: 'md',
-                color: 'currentColor',
-                className: a()(n ? d.downCaret : d.rightCaret, t)
+                size: "md",
+                color: "currentColor",
+                className: a()(n ? d.downCaret : d.rightCaret, t),
             }),
             n &&
                 (0, r.jsx)(s.BFJ, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: a()(d.members, t)
-                })
-        ]
+                    size: "md",
+                    color: "currentColor",
+                    className: a()(d.members, t),
+                }),
+        ],
     });
 }
 function p(e) {
@@ -56,20 +56,20 @@ function p(e) {
             return o
                 ? (0, r.jsx)(_, {
                       className: t,
-                      isVertical: s
+                      isVertical: s,
                   })
                 : (0, r.jsx)(f, {
                       className: t,
-                      isVertical: s
+                      isVertical: s,
                   });
         },
-        [o, s]
+        [o, s],
     );
     return (0, r.jsx)(c.Z, {
         label: o ? u.intl.string(u.t.QJMRUF) : u.intl.string(u.t.vZiwmJ),
         className: a()(d.participantsButton, n),
         onClick: h,
         iconComponent: m,
-        shouldShowTooltip: !p
+        shouldShowTooltip: !p,
     });
 }

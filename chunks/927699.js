@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -14,11 +14,22 @@ var r = n(255367),
     h = n(388032),
     m = n(913850);
 let g = (0, f.kt)({
-    id: '1',
-    type: p.d4z.DM
+    id: "1",
+    type: p.d4z.DM,
 });
 function E(e) {
-    let { sectionTitle: t, errors: n, onTextChange: o, pendingText: f, placeholder: p, currentText: E, className: b, innerClassName: y, disabled: O = !1, disableThemedBackground: v = !1 } = e,
+    let {
+            sectionTitle: t,
+            errors: n,
+            onTextChange: o,
+            pendingText: f,
+            placeholder: p,
+            currentText: E,
+            className: b,
+            innerClassName: y,
+            disabled: O = !1,
+            disableThemedBackground: v = !1,
+        } = e,
         [I, T] = i.useState(null != f ? f : E),
         [S, A] = i.useState((0, c.JM)(I)),
         N = i.useRef(!1);
@@ -29,7 +40,7 @@ function E(e) {
         return new Promise((e) => {
             e({
                 shouldClear: !1,
-                shouldRefocus: !0
+                shouldRefocus: !0,
             });
         });
     }
@@ -40,10 +51,10 @@ function E(e) {
         i.useEffect(() => {
             if (void 0 === f) {
                 let e = (0, c.JM)(E);
-                (T(E), A(e));
+                T(E), A(e);
             }
         }, [f, E]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: a()(m.body, b),
             children: (0, r.jsxs)(d.Z, {
                 title: t,
@@ -68,11 +79,11 @@ function E(e) {
                         },
                         focused: N.current,
                         onSubmit: R,
-                        disableThemedBackground: v
+                        disableThemedBackground: v,
                     }),
-                    (0, r.jsx)(s.nn4, { children: h.intl.format(h.t['+DFxLS'], { maxLength: _.$n }) })
-                ]
-            })
+                    (0, r.jsx)(s.nn4, { children: h.intl.format(h.t["+DFxLS"], { maxLength: _.$n }) }),
+                ],
+            }),
         })
     );
 }

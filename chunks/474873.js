@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,13 +18,13 @@ function s(e, t, n) {
 }
 let l = {
     soundpack: a.YC.CLASSIC,
-    lastSoundpackExperimentId: null
+    lastSoundpackExperimentId: null,
 };
 function c(e) {
     let { soundpack: t, forExperimentId: n } = e;
     l = {
         soundpack: t,
-        lastSoundpackExperimentId: void 0 !== n ? n : l.lastSoundpackExperimentId
+        lastSoundpackExperimentId: void 0 !== n ? n : l.lastSoundpackExperimentId,
     };
 }
 class u extends (r = i.ZP.PersistedStore) {
@@ -41,5 +41,5 @@ class u extends (r = i.ZP.PersistedStore) {
         return l.lastSoundpackExperimentId;
     }
 }
-(s(u, 'displayName', 'SoundpackStore'), s(u, 'persistKey', 'SoundpackStore'));
+s(u, "displayName", "SoundpackStore"), s(u, "persistKey", "SoundpackStore");
 let d = new u(o.Z, { SET_SOUNDPACK: c });

@@ -1,13 +1,13 @@
-(r.d(t, {
+r.d(t, {
     Kp: () => S,
     u9: () => O,
-    xV: () => y
+    xV: () => y,
 }),
     r(413496),
     r(433524),
     r(35282),
     r(704826),
-    r(388685));
+    r(388685);
 var n = r(73800),
     l = r(114858),
     a = r(442837),
@@ -23,15 +23,15 @@ var n = r(73800),
     h = r(258939),
     b = r(956472),
     _ = r(981631);
-let m = ''.concat('#').concat('itemSkuId', '='),
-    v = new RegExp('^'.concat(m, '(\\d+)$')),
+let m = "".concat("#").concat("itemSkuId", "="),
+    v = new RegExp("^".concat(m, "(\\d+)$")),
     C = [_.Z5c.COLLECTIBLES_SHOP, _.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
     O = (e) => {
         let t = (0, l.TH)();
         n.useEffect(() => {
             if (null != e && C.includes(t.pathname))
                 return () => {
-                    window.location.hash.startsWith(m) && window.location.replace('#');
+                    window.location.hash.startsWith(m) && window.location.replace("#");
                 };
         }, [e, t.pathname]);
     },
@@ -42,7 +42,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
         if (null != a && null != i) {
             let e = a,
                 s = (0, b.oQ)({ product: a }),
-                c = document.getElementById('shop-item-'.concat(e.skuId));
+                c = document.getElementById("shop-item-".concat(e.skuId));
             if ((c !== document.activeElement && (null == c || c.focus()), null != a.variantGroupStoreListingId)) {
                 let r = u.Z.getProductByStoreListingId(a.variantGroupStoreListingId);
                 if (null != r) {
@@ -58,7 +58,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                 analyticsSource: n,
                 analyticsLocations: r,
                 tab: l,
-                shouldCheckoutWithOrbs: s
+                shouldCheckoutWithOrbs: s,
             });
         }
     },
@@ -67,7 +67,12 @@ let m = ''.concat('#').concat('itemSkuId', '='),
             t = (0, h.R)(),
             r = n.useRef(null),
             i = (0, l.TH)(),
-            u = i.pathname === _.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : i.pathname === _.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
+            u =
+                i.pathname === _.Z5c.COLLECTIBLES_SHOP
+                    ? o.Z.HOME_PAGE_SHOP_TAB
+                    : i.pathname === _.Z5c.COLLECTIBLES_SHOP_FULLSCREEN
+                      ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN
+                      : o.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: p } = (0, s.ZP)(u),
             f = (0, g.Z)();
         n.useEffect(() => {
@@ -85,7 +90,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                         productSkuId: n,
                         analyticsLocations: p,
                         analyticsSource: u,
-                        tab: f
+                        tab: f,
                     });
                 }, 250);
                 return () => clearTimeout(e);
@@ -112,11 +117,11 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                                           node: l,
                                           padding: 48,
                                           animate: !r,
-                                          shouldScrollToStart: !0
+                                          shouldScrollToStart: !0,
                                       }));
                           }, 100);
                 },
-                [e, r, l, s]
+                [e, r, l, s],
             );
         return (
             n.useEffect(() => {
@@ -124,7 +129,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
             }, [l, d, o, s]),
             {
                 setCategoryRef: c,
-                handleScrollToCategory: d
+                handleScrollToCategory: d,
             }
         );
     };

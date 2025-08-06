@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685), n(539854));
+n.d(t, { Z: () => P }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -39,14 +39,18 @@ function P(e) {
                               return t.id;
                           }))
                               ? e
-                              : []
+                              : [],
                   };
         }, [o, g]);
     (0, c.$)(C);
     let v = (0, u.ZP)(o),
         j = Array.from((0, u.uF)(v).values()),
         I = null != (t = null == g ? void 0 : g.filter(O.lm)) ? t : [],
-        P = (e) => (t) => ([E.IIU.PLAYING, E.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === E.IIU.LISTENING,
+        P = (e) => (t) =>
+            ([E.IIU.PLAYING, E.IIU.WATCHING].includes(t.type) &&
+                (null != t.assets || null != t.state || null != t.details || null != t.party) &&
+                (null == t.session_id || t.session_id === e.voiceState.sessionId)) ||
+            t.type === E.IIU.LISTENING,
         w = (0, s.e7)(
             [m.Z],
             () => {
@@ -56,22 +60,24 @@ function P(e) {
                         let n = m.Z.findActivity(t.user.id, P(t));
                         if (null != n && !(0, h.Z)(n)) {
                             var r, i, l, o;
-                            let s = ''.concat(null != (i = n.application_id) ? i : '', ':').concat(null != (l = null == (r = n.party) ? void 0 : r.id) ? l : t.user.id),
+                            let s = ""
+                                    .concat(null != (i = n.application_id) ? i : "", ":")
+                                    .concat(null != (l = null == (r = n.party) ? void 0 : r.id) ? l : t.user.id),
                                 a =
                                     null != (o = e[s])
                                         ? o
                                         : {
                                               members: [],
-                                              activity: n
+                                              activity: n,
                                           };
-                            (a.members.push(t), (0, d.Z)(a.activity, E.xjy.JOIN) || (a.activity = n), (e[s] = a));
+                            a.members.push(t), (0, d.Z)(a.activity, E.xjy.JOIN) || (a.activity = n), (e[s] = a);
                         }
                     }),
                     Object.values(e)
                 );
             },
             [I],
-            s.pF
+            s.pF,
         );
     return w.length + j.length === 0
         ? null
@@ -81,9 +87,9 @@ function P(e) {
                   (0, r.jsx)(N, {
                       channel: o,
                       isChannelSelected: b,
-                      voiceStatesCount: null != (l = null == g ? void 0 : g.length) ? l : 0
+                      voiceStatesCount: null != (l = null == g ? void 0 : g.length) ? l : 0,
                   }),
-                  (0, r.jsx)('div', { className: x.headerDivider }),
+                  (0, r.jsx)("div", { className: x.headerDivider }),
                   j.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
@@ -92,9 +98,9 @@ function P(e) {
                               embeddedApp: e,
                               presenceActivity: null != (n = e.presenceActivity) ? n : void 0,
                               channel: o,
-                              onAction: f
+                              onAction: f,
                           },
-                          t
+                          t,
                       );
                   }),
                   w.map((e, t) => {
@@ -105,24 +111,24 @@ function P(e) {
                               presenceActivity: i,
                               channel: o,
                               members: n,
-                              onAction: f
+                              onAction: f,
                           },
-                          t
+                          t,
                       );
                   }),
                   _ &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)('div', { className: x.headerDivider }),
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", { className: x.headerDivider }),
+                              (0, r.jsx)("div", {
                                   className: x.settingNudgeText,
                                   children: (0, r.jsx)(a.Text, {
-                                      variant: 'text-xs/normal',
-                                      tag: 'span',
+                                      variant: "text-xs/normal",
+                                      tag: "span",
                                       children: S.intl.format(S.t.ePyoY2, {
                                           onClick: () => {
                                               (0, a.ZDy)(async () => {
-                                                  let { default: e } = await n.e('59500').then(n.bind(n, 241420));
+                                                  let { default: e } = await n.e("59500").then(n.bind(n, 241420));
                                                   return (t) => {
                                                       var n, i;
                                                       return (0, r.jsx)(
@@ -131,30 +137,38 @@ function P(e) {
                                                               for (var t = 1; t < arguments.length; t++) {
                                                                   var n = null != arguments[t] ? arguments[t] : {},
                                                                       r = Object.keys(n);
-                                                                  ('function' == typeof Object.getOwnPropertySymbols &&
+                                                                  "function" == typeof Object.getOwnPropertySymbols &&
                                                                       (r = r.concat(
-                                                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                                          })
+                                                                          Object.getOwnPropertySymbols(n).filter(
+                                                                              function (e) {
+                                                                                  return Object.getOwnPropertyDescriptor(
+                                                                                      n,
+                                                                                      e,
+                                                                                  ).enumerable;
+                                                                              },
+                                                                          ),
                                                                       )),
                                                                       r.forEach(function (t) {
                                                                           var r;
-                                                                          ((r = n[t]),
+                                                                          (r = n[t]),
                                                                               t in e
                                                                                   ? Object.defineProperty(e, t, {
                                                                                         value: r,
                                                                                         enumerable: !0,
                                                                                         configurable: !0,
-                                                                                        writable: !0
+                                                                                        writable: !0,
                                                                                     })
-                                                                                  : (e[t] = r));
-                                                                      }));
+                                                                                  : (e[t] = r);
+                                                                      });
                                                               }
                                                               return e;
                                                           })({}, t)),
                                                           (i = i = { guild: p }),
                                                           Object.getOwnPropertyDescriptors
-                                                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                                              ? Object.defineProperties(
+                                                                    n,
+                                                                    Object.getOwnPropertyDescriptors(i),
+                                                                )
                                                               : (function (e, t) {
                                                                     var n = Object.keys(e);
                                                                     if (Object.getOwnPropertySymbols) {
@@ -163,19 +177,23 @@ function P(e) {
                                                                     }
                                                                     return n;
                                                                 })(Object(i)).forEach(function (e) {
-                                                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                                                    Object.defineProperty(
+                                                                        n,
+                                                                        e,
+                                                                        Object.getOwnPropertyDescriptor(i, e),
+                                                                    );
                                                                 }),
-                                                          n)
+                                                          n),
                                                       );
                                                   };
                                               });
-                                          }
-                                      })
-                                  })
-                              })
-                          ]
-                      })
-              ]
+                                          },
+                                      }),
+                                  }),
+                              }),
+                          ],
+                      }),
+              ],
           });
 }
 function N(e) {
@@ -186,12 +204,12 @@ function N(e) {
             channel: t,
             locked: l,
             video: a,
-            selected: n
+            selected: n,
         }),
         u = (0, s.e7)([f.Z], () => f.Z.getGuild(t.guild_id));
     return null == (0, p.KS)(t, u)
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: o()(x.popoutHeaderContainer, I.popoutHeaderContainer),
               children: [
                   (0, r.jsx)(C.Z, { channel: t }),
@@ -199,9 +217,9 @@ function N(e) {
                       ? (0, r.jsx)(v.Z, {
                             userCount: i,
                             video: a,
-                            channel: t
+                            channel: t,
                         })
-                      : (0, r.jsx)(j.Z, { userCount: i })
-              ]
+                      : (0, r.jsx)(j.Z, { userCount: i }),
+              ],
           });
 }

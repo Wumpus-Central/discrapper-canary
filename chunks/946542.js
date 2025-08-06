@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(953529), n(388685));
+n.d(t, { Z: () => b }), n(953529), n(388685);
 var r = n(255367),
     a = n(73800),
     i = n(481060),
@@ -25,16 +25,16 @@ function f(e) {
                     r === t &&
                         (0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
                             application_id: t,
-                            suggested_application_ids: n
+                            suggested_application_ids: n,
                         });
                 }, [r, t, n]),
                 s
             );
         })({
             applicationId: t,
-            similarAppIds: a.useMemo(() => n.map((e) => e.id), [n])
+            similarAppIds: a.useMemo(() => n.map((e) => e.id), [n]),
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: g.contentContainer,
         ref: o,
         children: n.map((e, n) =>
@@ -45,11 +45,11 @@ function f(e) {
                     similarApplication: e,
                     onSelectApplication: i,
                     similarLoadId: s,
-                    position: n
+                    position: n,
                 },
-                e.id
-            )
-        )
+                e.id,
+            ),
+        ),
     });
 }
 function _(e) {
@@ -62,94 +62,95 @@ function _(e) {
                 s.ZP.getApplicationIconURL({
                     id: u.id,
                     icon: u.icon,
-                    size: 48
+                    size: 48,
                 }),
-            [u]
+            [u],
         ),
         C = a.useCallback(() => {
-            ((0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
-                current_page: 'product',
+            (0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
+                current_page: "product",
                 application_id: o,
                 suggested_application_id: u.id,
                 position: f,
                 load_id: _,
-                shown_mutual_guilds_count: b.length
+                shown_mutual_guilds_count: b.length,
             }),
-                h(u.id));
+                h(u.id);
         }, [h, u.id, o, b.length, _, f]);
     return (0, r.jsxs)(i.P3F, {
         onClick: C,
         className: g.appContainer,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.appHeader,
                 children: [
-                    (0, r.jsx)('img', {
+                    (0, r.jsx)("img", {
                         src: v,
-                        alt: '',
+                        alt: "",
                         className: g.avatar,
                         height: 48,
-                        width: 48
+                        width: 48,
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: g.titleContainer,
                         children: [
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 style: {
                                     flex: 1,
                                     minWidth: 0,
-                                    overflow: 'hidden'
+                                    overflow: "hidden",
                                 },
                                 children: (0, r.jsx)(i.X6q, {
-                                    variant: 'heading-md/semibold',
-                                    color: 'header-primary',
+                                    variant: "heading-md/semibold",
+                                    color: "header-primary",
                                     className: g.appName,
-                                    children: u.name
-                                })
+                                    children: u.name,
+                                }),
                             }),
                             null != x
                                 ? (0, r.jsx)(i.Text, {
                                       className: g.appCategory,
-                                      variant: 'text-xs/medium',
-                                      color: 'text-muted',
-                                      children: x.name
+                                      variant: "text-xs/medium",
+                                      color: "text-muted",
+                                      children: x.name,
                                   })
-                                : null
-                        ]
-                    })
-                ]
+                                : null,
+                        ],
+                    }),
+                ],
             }),
             (0, r.jsx)(i.Text, {
                 className: g.appDescription,
-                variant: 'text-sm/medium',
-                color: 'header-secondary',
+                variant: "text-sm/medium",
+                color: "header-secondary",
                 lineClamp: 2,
-                children: null != (l = null == (n = u.directory_entry) ? void 0 : n.short_description) ? l : u.description
+                children:
+                    null != (l = null == (n = u.directory_entry) ? void 0 : n.short_description) ? l : u.description,
             }),
             (0, r.jsx)(d.Z, {
                 application: u,
-                textVariant: 'text-xs/medium',
+                textVariant: "text-xs/medium",
                 mutualGuilds: b,
                 mutualGuildShownMax: 3,
                 guildIconSize: d.x.SMALL,
-                compact: !0
-            })
-        ]
+                compact: !0,
+            }),
+        ],
     });
 }
 let b = function (e) {
     let { applicationId: t, fetchState: n, similarApplications: a, onSelectApplication: l, similarLoadId: s } = e;
     return n !== o.M.FETCHING && (null == a || 0 === a.length)
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: g.sectionContainer,
               children: [
-                  (0, r.jsx)('div', { className: g.divider }),
+                  (0, r.jsx)("div", { className: g.divider }),
                   (0, r.jsx)(i.X6q, {
-                      variant: 'heading-sm/semibold',
-                      color: 'header-primary',
+                      variant: "heading-sm/semibold",
+                      color: "header-primary",
                       className: g.sectionHeader,
-                      children: h.intl.string(h.t.E8wCnp)
+                      children: h.intl.string(h.t.E8wCnp),
                   }),
                   (0, r.jsx)(u.Z, {
                       loading: n === o.M.FETCHING,
@@ -159,10 +160,10 @@ let b = function (e) {
                                     applicationId: t,
                                     similarApplications: a,
                                     onSelectApplication: l,
-                                    similarLoadId: s
+                                    similarLoadId: s,
                                 })
-                              : null
-                  })
-              ]
+                              : null,
+                  }),
+              ],
           });
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(35282), n(388685), n(358797));
+n.d(t, { Z: () => L }), n(35282), n(388685), n(358797);
 var r,
     i = n(442837),
     o = n(570140),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -83,7 +83,7 @@ function v(e) {
     if (((_[i.id] = o), (f[r] = [...s, i]), null == a)) return;
     p[i.id] = a;
     let { items: c } = i;
-    (null != c && (h[a.id] = u(l({}, i), { items: c })), null != (n = a.nonce) || a.id);
+    null != c && (h[a.id] = u(l({}, i), { items: c })), null != (n = a.nonce) || a.id;
 }
 function I(e) {
     let { channelId: t, file: n } = e;
@@ -154,7 +154,7 @@ class D extends (r = i.ZP.Store) {
         if (null != e) return m[e];
     }
 }
-s(D, 'displayName', 'UploadStore');
+s(D, "displayName", "UploadStore");
 let L = new D(o.Z, {
     CONNECTION_OPEN: y,
     LOGOUT: O,
@@ -166,5 +166,5 @@ let L = new D(o.Z, {
     UPLOAD_CANCEL_REQUEST: C,
     UPLOAD_ITEM_CANCEL_REQUEST: R,
     UPLOAD_FILE_UPDATE: P,
-    UPLOAD_RESTORE_FAILED_UPLOAD: w
+    UPLOAD_RESTORE_FAILED_UPLOAD: w,
 });

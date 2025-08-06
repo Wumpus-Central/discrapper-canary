@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,15 +69,17 @@ function I(e, t) {
     );
 }
 let T = {
-        transform: 'scale(0.7)',
-        opacity: 0
+        transform: "scale(0.7)",
+        opacity: 0,
     },
     S = {
-        transform: 'scale(1)',
-        opacity: 1
+        transform: "scale(1)",
+        opacity: 1,
     };
 function A() {
-    return 500 !== a().random(1, 1000) ? 'call_ringing' : a().sample(['call_ringing_beat', 'call_ringing_snow_halation']);
+    return 500 !== a().random(1, 1000)
+        ? "call_ringing"
+        : a().sample(["call_ringing_beat", "call_ringing_snow_halation"]);
 }
 function N() {
     let e = (0, l.Wu)([g.Z, h.Z, u.ZP], () =>
@@ -85,25 +87,28 @@ function N() {
                 let { channel: t } = e,
                     n = h.Z.getChannelId() === t.id,
                     r = null == t.guild_id && n,
-                    i = u.ZP.getConnectedActivityChannelId() === t.id && h.Z.getVoiceChannelId() !== t.id && u.ZP.getActivityPanelMode() === E.Ez.PANEL;
+                    i =
+                        u.ZP.getConnectedActivityChannelId() === t.id &&
+                        h.Z.getVoiceChannelId() !== t.id &&
+                        u.ZP.getActivityPanelMode() === E.Ez.PANEL;
                 return !r || i;
-            })
+            }),
         ),
         t = (0, l.e7)([g.Z], () => g.Z.hasIncomingCalls()),
-        n = (0, l.e7)([p.Z], () => p.Z.isSoundDisabled('call_ringing')),
+        n = (0, l.e7)([p.Z], () => p.Z.isSoundDisabled("call_ringing")),
         o = (0, l.e7)([m.Z], () => m.Z.disableSounds),
         a = (0, l.e7)([_.Z], () => _.Z.getSoundpack()),
         y = i.useRef(!1),
         v = (0, s.Z)(() => {
-            let e = 'call_ringing';
-            return a === b.YC.CLASSIC ? (0, f.tu)(A(), e) : (0, f.uk)('call_ringing', a);
+            let e = "call_ringing";
+            return a === b.YC.CLASSIC ? (0, f.tu)(A(), e) : (0, f.uk)("call_ringing", a);
         }, [a]);
     return (
         i.useEffect(
             () => () => {
                 v.stop();
             },
-            [v]
+            [v],
         ),
         i.useEffect(() => {
             if (o || n) {
@@ -119,15 +124,15 @@ function N() {
             },
             enter: {
                 from: T,
-                to: S
+                to: S,
             },
             leave: T,
             config: {
                 mass: 1,
                 tension: 500,
                 friction: 18,
-                clamp: !0
-            }
+                clamp: !0,
+            },
         })((e, t) => (0, r.jsx)(d.Z, I(O({}, t), { animatedStyle: e })))
     );
 }

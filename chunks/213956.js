@@ -38,14 +38,14 @@ function y() {
             break;
         case f.u.CAPTCHA_AND_RAID_PROTECTION:
             e = (0, r.jsx)(b.Z, {
-                title: _.intl.string(_.t['53eF5u']),
-                settings: C[f.u.CAPTCHA_AND_RAID_PROTECTION]
+                title: _.intl.string(_.t["53eF5u"]),
+                settings: C[f.u.CAPTCHA_AND_RAID_PROTECTION],
             });
             break;
         case f.u.DM_AND_SPAM_PROTECTION:
             e = (0, r.jsx)(b.Z, {
                 title: _.intl.string(_.t.O0SfFx),
-                settings: C[f.u.DM_AND_SPAM_PROTECTION]
+                settings: C[f.u.DM_AND_SPAM_PROTECTION],
             });
             break;
         case f.u.AUTOMOD:
@@ -54,7 +54,7 @@ function y() {
         case f.u.PERMISSIONS:
             e = (0, r.jsx)(b.Z, {
                 title: _.intl.string(_.t.BXoNiY),
-                settings: C[f.u.PERMISSIONS]
+                settings: C[f.u.PERMISSIONS],
             });
     }
     return (0, r.jsxs)(r.Fragment, {
@@ -71,16 +71,16 @@ function y() {
                     children: [
                         (0, r.jsx)(u.Z, {
                             className: O.__invalid_arrow,
-                            direction: u.Z.Directions.LEFT
+                            direction: u.Z.Directions.LEFT,
                         }),
                         (0, r.jsx)(o.Text, {
-                            variant: 'text-sm/semibold',
-                            color: 'interactive-normal',
-                            children: _.intl.string(_.t['13/7kZ'])
-                        })
-                    ]
+                            variant: "text-sm/semibold",
+                            color: "interactive-normal",
+                            children: _.intl.string(_.t["13/7kZ"]),
+                        }),
+                    ],
                 }),
-            e
-        ]
+            e,
+        ],
     });
 }

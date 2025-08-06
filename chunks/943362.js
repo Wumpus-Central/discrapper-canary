@@ -20,7 +20,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,42 +72,45 @@ function y(e) {
                     ? void 0
                     : async (n) => {
                           let r = await (0, d.B_)(t.attachmentUrl);
-                          (e.shouldStopPropagation && (null == n || n.stopPropagation()), c.Z.trackLinkClicked(r), e.shouldCloseDefaultModals && (0, a.pTH)(), (0, l.Z)(r));
+                          e.shouldStopPropagation && (null == n || n.stopPropagation()),
+                              c.Z.trackLinkClicked(r),
+                              e.shouldCloseDefaultModals && (0, a.pTH)(),
+                              (0, l.Z)(r);
                       },
                 y = m.noStyleAndInteraction
                     ? _.dG4
                     : (e) => {
                           (0, s.jW)(e, async () => {
-                              let { default: e } = await n.e('98466').then(n.bind(n, 151578));
+                              let { default: e } = await n.e("98466").then(n.bind(n, 151578));
                               return (n) =>
                                   (0, r.jsx)(
                                       e,
                                       b(g({}, n), {
                                           attachmentUrl: t.attachmentUrl,
-                                          attachmentName: t.attachmentName
-                                      })
+                                          attachmentName: t.attachmentName,
+                                      }),
                                   );
                           });
                       };
             return (0, r.jsxs)(
                 u.Z,
                 {
-                    role: 'link',
+                    role: "link",
                     href: t.attachmentUrl,
                     onClick: E,
                     onContextMenu: y,
-                    className: 'attachmentLink',
+                    className: "attachmentLink",
                     children: [
                         (0, r.jsx)(a.Ujz, {
-                            size: 'xs',
+                            size: "xs",
                             className: o()(h.icon, p.icon),
-                            color: 'currentColor'
+                            color: "currentColor",
                         }),
-                        (0, f.S)(t, i, m)
-                    ]
+                        (0, f.S)(t, i, m),
+                    ],
                 },
-                m.key
+                m.key,
             );
-        }
+        },
     };
 }

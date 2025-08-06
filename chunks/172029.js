@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(442837),
     i = n(570140),
     o = n(569545),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -37,11 +37,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,7 +61,7 @@ let f = {},
 function p(e) {
     let { channelId: t, currentVoiceChannelId: n } = e;
     if (t === n) return !1;
-    ((_ = {}), (f = {}));
+    (_ = {}), (f = {});
 }
 function h(e) {
     let { id: t } = e;
@@ -78,7 +78,7 @@ function m(e) {
     if (null == o.nonce || (null == (t = o.activity) ? void 0 : t.type) !== s.mFx.STREAM_REQUEST) return !1;
     let u = f[o.nonce];
     if (null == u) return !1;
-    (delete f[o.nonce], (_ = d(c({}, _), { [u]: o.id })));
+    delete f[o.nonce], (_ = d(c({}, _), { [u]: o.id }));
 }
 function g(e) {
     let { streamKey: t } = e,
@@ -95,5 +95,5 @@ let b = new E(i.Z, {
     STREAM_WATCH: g,
     MESSAGE_CREATE: m,
     MESSAGE_DELETE: h,
-    VOICE_CHANNEL_SELECT: p
+    VOICE_CHANNEL_SELECT: p,
 });

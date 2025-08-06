@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(953529));
+n.d(t, { Z: () => u }), n(953529);
 var r = n(474936),
     i = n(535396),
     o = n(185923);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -35,11 +35,11 @@ function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,7 +67,7 @@ function u(e, t) {
         dependencies: null != t.sku.dependent_sku_id ? [t.sku.dependent_sku_id] : [],
         animatedImageUrl: null == (l = t.powerup_metadata) ? void 0 : l.animated_image_url,
         staticImageUrl: null == (u = t.powerup_metadata) ? void 0 : u.static_image_url,
-        storeRemovalDate: null == (d = t.powerup_metadata) ? void 0 : d.store_removal_date
+        storeRemovalDate: null == (d = t.powerup_metadata) ? void 0 : d.store_removal_date,
     };
     switch (A) {
         case i.Us.LEVEL: {
@@ -79,7 +79,40 @@ function u(e, t) {
                 d = t.sku.dependent_sku_id;
             for (; null != d; ) {
                 let t = e.find((e) => d === e.sku.id);
-                ((a += null != (v = null == t || null == (h = t.sku) || null == (p = h.powerup_metadata) || null == (_ = p.guild_features) ? void 0 : _.additional_emoji_slots) ? v : 0), (l += null != (I = null == t || null == (E = t.sku) || null == (g = E.powerup_metadata) || null == (m = g.guild_features) ? void 0 : m.additional_sound_slots) ? I : 0), (u += null != (T = null == t || null == (O = t.sku) || null == (y = O.powerup_metadata) || null == (b = y.guild_features) ? void 0 : b.additional_sticker_slots) ? T : 0), (d = null == t ? void 0 : t.sku.dependent_sku_id));
+                (a +=
+                    null !=
+                    (v =
+                        null == t ||
+                        null == (h = t.sku) ||
+                        null == (p = h.powerup_metadata) ||
+                        null == (_ = p.guild_features)
+                            ? void 0
+                            : _.additional_emoji_slots)
+                        ? v
+                        : 0),
+                    (l +=
+                        null !=
+                        (I =
+                            null == t ||
+                            null == (E = t.sku) ||
+                            null == (g = E.powerup_metadata) ||
+                            null == (m = g.guild_features)
+                                ? void 0
+                                : m.additional_sound_slots)
+                            ? I
+                            : 0),
+                    (u +=
+                        null !=
+                        (T =
+                            null == t ||
+                            null == (O = t.sku) ||
+                            null == (y = O.powerup_metadata) ||
+                            null == (b = y.guild_features)
+                                ? void 0
+                                : b.additional_sticker_slots)
+                            ? T
+                            : 0),
+                    (d = null == t ? void 0 : t.sku.dependent_sku_id);
             }
             return s(
                 {
@@ -87,19 +120,19 @@ function u(e, t) {
                     features: c(s({}, n), {
                         total_emoji_slots: a,
                         total_sound_slots: l,
-                        total_sticker_slots: u
-                    })
+                        total_sticker_slots: u,
+                    }),
                 },
-                C
+                C,
             );
         }
         case i.Us.PERK:
             return s(
                 {
                     type: i.Us.PERK,
-                    description: null != (S = t.description) ? S : ''
+                    description: null != (S = t.description) ? S : "",
                 },
-                C
+                C,
             );
     }
 }

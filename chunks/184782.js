@@ -1,4 +1,4 @@
-(a.d(n, { default: () => w }), a(953529), a(539854));
+a.d(n, { default: () => w }), a(953529), a(539854);
 var i = a(255367),
     l = a(73800),
     o = a(442837),
@@ -30,14 +30,16 @@ let T = (e) => {
         let { channelData: a, onClose: l, trackOptionClick: s } = e,
             d = (0, o.e7)([x.Z], () => x.Z.getChannel(a.channel_id)),
             m = (0, o.e7)([C.Z], () => null != d && C.Z.can(I.Pl.VIEW_CHANNEL, d)),
-            h = (0, o.e7)([u.ZP], () => (null != a.emoji_id ? u.ZP.getCustomEmojiById(a.emoji_id) : null), [a.emoji_id]),
+            h = (0, o.e7)([u.ZP], () => (null != a.emoji_id ? u.ZP.getCustomEmojiById(a.emoji_id) : null), [
+                a.emoji_id,
+            ]),
             p = null != a.emoji_name ? _.ZP.getByName(_.ZP.convertSurrogateToName(a.emoji_name, !1)) : null,
             N = null != (n = (0, r.KS)(d)) ? n : t.VL1;
         return null != d && m
             ? (0, i.jsxs)(t.P3F, {
                   className: v.optionContainer,
                   onClick: () => {
-                      (s(), l(), (0, j.XU)(d.guild_id, d.id));
+                      s(), l(), (0, j.XU)(d.guild_id, d.id);
                   },
                   children: [
                       null != h || null != p
@@ -46,36 +48,36 @@ let T = (e) => {
                                 animated: null != h && h.animated,
                                 emojiId: null == h ? void 0 : h.id,
                                 autoplay: !0,
-                                className: v.optionEmoji
+                                className: v.optionEmoji,
                             })
                           : (0, i.jsx)(N, { className: v.channelIcon }),
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: v.optionTextContainer,
                           children: [
                               (0, i.jsx)(t.Text, {
-                                  variant: 'text-md/normal',
+                                  variant: "text-md/normal",
                                   className: v.channelDescription,
-                                  children: a.description
+                                  children: a.description,
                               }),
                               (0, i.jsxs)(t.Text, {
-                                  variant: 'text-xs/normal',
-                                  color: 'header-secondary',
+                                  variant: "text-xs/normal",
+                                  color: "header-secondary",
                                   children: [
                                       (0, i.jsx)(N, {
                                           className: v.channelTitleIcon,
-                                          size: 'xxs',
-                                          color: 'currentColor'
+                                          size: "xxs",
+                                          color: "currentColor",
                                       }),
-                                      (0, i.jsx)('span', { children: d.name })
-                                  ]
-                              })
-                          ]
+                                      (0, i.jsx)("span", { children: d.name }),
+                                  ],
+                              }),
+                          ],
                       }),
                       (0, i.jsx)(g.Z, {
                           direction: g.Z.Directions.RIGHT,
-                          className: v.optionArrow
-                      })
-                  ]
+                          className: v.optionArrow,
+                      }),
+                  ],
               })
             : null;
     },
@@ -86,14 +88,14 @@ let T = (e) => {
             {
                 welcomeScreen: j,
                 fetching: x,
-                hasError: C
+                hasError: C,
             } = (0, o.cj)([E.Z], () => ({
                 welcomeScreen: E.Z.get(r),
                 fetching: E.Z.isFetching(),
-                hasError: E.Z.hasError()
+                hasError: E.Z.hasError(),
             })),
             g = (0, m.Dt)();
-        (l.useEffect(() => {
+        l.useEffect(() => {
             null == j && (0, k.RM)(r);
         }, [r, j]),
             l.useEffect(() => {
@@ -106,9 +108,9 @@ let T = (e) => {
                 !0 !== u &&
                     b.default.track(f.rMx.OPEN_MODAL, {
                         type: Z._,
-                        guild_id: r
+                        guild_id: r,
                     });
-            }, [r, u]));
+            }, [r, u]);
         let I = l.useCallback(
             (e) => {
                 var n;
@@ -116,9 +118,9 @@ let T = (e) => {
                 let a = [],
                     i = [],
                     l = !1;
-                (null == (n = j.welcome_channels) ||
+                null == (n = j.welcome_channels) ||
                     n.forEach((e) => {
-                        (a.push(e.description), i.push(e.channel_id), null != e.emoji_id && (l = !0));
+                        a.push(e.description), i.push(e.channel_id), null != e.emoji_id && (l = !0);
                     }),
                     b.default.track(f.rMx.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
                         index: e,
@@ -126,10 +128,10 @@ let T = (e) => {
                         options: a,
                         options_channel_ids: i,
                         guild_description: j.description,
-                        has_custom_emojis: l
-                    }));
+                        has_custom_emojis: l,
+                    });
             },
-            [r, u, j]
+            [r, u, j],
         );
         return null == _
             ? null
@@ -137,19 +139,19 @@ let T = (e) => {
               ? (0, i.jsx)(t.Y0X, {
                     transitionState: c,
                     className: v.main,
-                    'aria-label': S.intl.string(S.t.ZTNur6),
-                    parentComponent: 'WelcomeScreenModal',
-                    children: (0, i.jsx)(t.$jN, { type: t.$jN.Type.SPINNING_CIRCLE })
+                    "aria-label": S.intl.string(S.t.ZTNur6),
+                    parentComponent: "WelcomeScreenModal",
+                    children: (0, i.jsx)(t.$jN, { type: t.$jN.Type.SPINNING_CIRCLE }),
                 })
               : (0, i.jsxs)(t.Y0X, {
                     transitionState: c,
                     className: v.main,
-                    'aria-labelledby': g,
-                    parentComponent: 'WelcomeScreenModal',
+                    "aria-labelledby": g,
+                    parentComponent: "WelcomeScreenModal",
                     children: [
                         (0, i.jsx)(t.olH, {
                             onClick: a,
-                            className: v.close
+                            className: v.close,
                         }),
                         (0, i.jsx)(d.ZP, {
                             mask: d.ZP.Masks.SQUIRCLE,
@@ -161,49 +163,49 @@ let T = (e) => {
                                 guild: _,
                                 active: !0,
                                 animate: !0,
-                                tabIndex: -1
-                            })
+                                tabIndex: -1,
+                            }),
                         }),
                         (0, i.jsx)(t.X6q, {
-                            variant: 'heading-xl/semibold',
+                            variant: "heading-xl/semibold",
                             className: v.header,
                             id: g,
-                            children: S.intl.format(S.t['0aydCA'], {
+                            children: S.intl.format(S.t["0aydCA"], {
                                 guildName: _.name,
                                 guildNameHook: (e, n) =>
                                     (0, i.jsxs)(
-                                        'span',
+                                        "span",
                                         {
                                             children: [
                                                 (0, i.jsx)(p.Z, {
                                                     guild: _,
                                                     className: v.headerGuildBadge,
                                                     flowerStarClassName: v.flowerStar,
-                                                    tooltipColor: t.ua7.Colors.PRIMARY
+                                                    tooltipColor: t.ua7.Colors.PRIMARY,
                                                 }),
-                                                (0, i.jsx)('strong', {
+                                                (0, i.jsx)("strong", {
                                                     className: v.headerGuildName,
-                                                    children: e
-                                                })
-                                            ]
+                                                    children: e,
+                                                }),
+                                            ],
                                         },
-                                        n
-                                    )
-                            })
+                                        n,
+                                    ),
+                            }),
                         }),
                         null != j.description
                             ? (0, i.jsx)(t.Text, {
-                                  variant: 'text-sm/normal',
-                                  color: 'header-secondary',
+                                  variant: "text-sm/normal",
+                                  color: "header-secondary",
                                   className: v.guildDescription,
-                                  children: j.description
+                                  children: j.description,
                               })
                             : null,
                         (0, i.jsx)(t.vwX, {
                             className: v.choiceHeader,
-                            children: S.intl.string(S.t['haj5+v'])
+                            children: S.intl.string(S.t["haj5+v"]),
                         }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: v.options,
                             children:
                                 null == (n = j.welcome_channels)
@@ -214,19 +216,19 @@ let T = (e) => {
                                               {
                                                   channelData: e,
                                                   trackOptionClick: () => I(n),
-                                                  onClose: a
+                                                  onClose: a,
                                               },
-                                              ''.concat(e.channel_id, '-').concat(n)
-                                          )
-                                      )
+                                              "".concat(e.channel_id, "-").concat(n),
+                                          ),
+                                      ),
                         }),
                         (0, i.jsx)(s.zx, {
                             look: s.zx.Looks.LINK,
                             color: v.skipColor,
                             className: v.skip,
                             onClick: a,
-                            children: S.intl.string(S.t['jizr8/'])
-                        })
-                    ]
+                            children: S.intl.string(S.t["jizr8/"]),
+                        }),
+                    ],
                 });
     };

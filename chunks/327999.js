@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     MS: () => y,
     Ph: () => O,
     _2: () => I,
     bE: () => b,
     gq: () => E,
-    nf: () => g
+    nf: () => g,
 }),
     n(35282),
-    n(539854));
+    n(539854);
 var r = n(544891),
     i = n(780384),
     o = n(410030),
@@ -23,7 +23,7 @@ function f(e, t) {
     return t.map((t) => d(e, t));
 }
 function _(e) {
-    return e.split('-')[1];
+    return e.split("-")[1];
 }
 function p(e) {
     return e.filter((e) => u[e] <= 1).map(_);
@@ -40,7 +40,18 @@ function g(e, t) {
     t.forEach((t) => m(e, t, 3));
 }
 var E = (function (e) {
-    return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.BOT = 1)] = 'BOT'), (e[(e.INTEGRATION = 2)] = 'INTEGRATION'), (e[(e.DISCOVERY = 3)] = 'DISCOVERY'), (e[(e.HUB = 4)] = 'HUB'), (e[(e.INVITE = 5)] = 'INVITE'), (e[(e.VANITY_URL = 6)] = 'VANITY_URL'), (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION'), (e[(e.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL = 8)] = 'SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL'), e);
+    return (
+        (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (e[(e.BOT = 1)] = "BOT"),
+        (e[(e.INTEGRATION = 2)] = "INTEGRATION"),
+        (e[(e.DISCOVERY = 3)] = "DISCOVERY"),
+        (e[(e.HUB = 4)] = "HUB"),
+        (e[(e.INVITE = 5)] = "INVITE"),
+        (e[(e.VANITY_URL = 6)] = "VANITY_URL"),
+        (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = "MANUAL_MEMBER_VERIFICATION"),
+        (e[(e.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL = 8)] = "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL"),
+        e
+    );
 })({});
 let b = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -51,27 +62,27 @@ let b = function (e) {
             case 2:
                 return c.intl.string(c.t.gmCUFx);
             case 3:
-                return c.intl.string(c.t['Ql/e9f']);
+                return c.intl.string(c.t["Ql/e9f"]);
             case 4:
                 return c.intl.string(c.t.Op8B3N);
             case 5:
-                return c.intl.string(c.t['/3vIRU']);
+                return c.intl.string(c.t["/3vIRU"]);
             case 6:
                 if (null != t && !n) return c.intl.formatToPlainString(c.t.EIUjR0, { vanityUrl: t });
                 return c.intl.string(c.t.dGiD1N);
             case 7:
                 return c.intl.string(c.t.vdu7oa);
             case 8:
-                return c.intl.string(c.t['9/ZreX']);
+                return c.intl.string(c.t["9/ZreX"]);
             default:
                 return c.intl.string(c.t.DvMBkZ);
         }
     },
     y = (e) => {
         switch (e) {
-            case 'twitch':
+            case "twitch":
                 return c.intl.string(c.t.AVGAk5);
-            case 'youtube':
+            case "youtube":
                 return c.intl.string(c.t.PHSAsr);
             default:
                 return c.intl.string(c.t.gmCUFx);
@@ -80,7 +91,9 @@ let b = function (e) {
     O = (e) => {
         let t = a.Z.get((0, s.rR)(e)),
             n = (0, o.ZP)();
-        return null != t && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, i.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null;
+        return null != t && ["twitch", "youtube"].includes(e)
+            ? "url('".concat((0, i.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')")
+            : null;
     };
 function v(e) {
     return {
@@ -88,7 +101,7 @@ function v(e) {
         sourceInviteCode: e.source_invite_code,
         joinSourceType: e.join_source_type,
         inviterId: e.inviter_id,
-        integrationType: e.integration_type
+        integrationType: e.integration_type,
     };
 }
 async function I(e, t) {
@@ -100,9 +113,9 @@ async function I(e, t) {
         let t = await r.tn.post({
             url: l.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
             body: { user_ids: i },
-            rejectWithError: !0
+            rejectWithError: !0,
         });
-        if (!Array.isArray(t.body)) return (h(n, 0), []);
+        if (!Array.isArray(t.body)) return h(n, 0), [];
         let o = t.body.map(v),
             a = [];
         o.forEach((e) => {
@@ -112,7 +125,7 @@ async function I(e, t) {
         let s = f(e, a),
             c = i.filter((e) => !a.includes(e)),
             u = f(e, c);
-        return (h(s, 3), h(u, 0), o);
+        return h(s, 3), h(u, 0), o;
     } catch (e) {
         h(n, 0);
     }

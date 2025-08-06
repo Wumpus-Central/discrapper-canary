@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     DI: () => E,
-    x3: () => I
+    x3: () => I,
 }),
     n(388685),
     n(953529),
-    n(539854));
+    n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -28,24 +28,24 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -68,7 +68,7 @@ function y(e, t) {
     );
 }
 function C(e) {
-    let { guildId: t, emojiData: n, 'aria-labelledby': l, onSelectEmoji: a } = e,
+    let { guildId: t, emojiData: n, "aria-labelledby": l, onSelectEmoji: a } = e,
         o = i.useRef(null),
         m = (0, s.e7)([h.ZP], () => (null != n.id ? h.ZP.getCustomEmojiById(n.id) : void 0)),
         b = (0, s.e7)([x.ZP], () => x.ZP.getDefaultChannel(t)),
@@ -82,23 +82,23 @@ function C(e) {
                     onNavigateAway: t,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: r } = e;
-                        (null != n &&
+                        null != n &&
                             a(
                                 null != n.id
                                     ? {
                                           id: n.id,
-                                          name: void 0
+                                          name: void 0,
                                       }
                                     : {
                                           id: void 0,
-                                          name: n.optionallyDiverseSequence
-                                      }
+                                          name: n.optionallyDiverseSequence,
+                                      },
                             ),
-                            r && t());
-                    }
+                            r && t();
+                    },
                 });
             },
-            [a, b]
+            [a, b],
         ),
         N = i.useMemo(
             () =>
@@ -109,30 +109,30 @@ function C(e) {
                               className: _.emoji,
                               emojiId: n.id,
                               emojiName: n.name,
-                              animated: null == m ? void 0 : m.animated
+                              animated: null == m ? void 0 : m.animated,
                           });
                       },
-            [n, m]
+            [n, m],
         ),
-        I = '';
+        I = "";
     return (
-        null != m ? (I = ':'.concat(m.name, ':')) : null != n.name && (I = f.ZP.convertSurrogateToName(n.name)),
+        null != m ? (I = ":".concat(m.name, ":")) : null != n.name && (I = f.ZP.convertSurrogateToName(n.name)),
         (0, r.jsx)(d.yRy, {
             targetElementRef: o,
             animation: d.yRy.Animation.NONE,
-            position: 'top',
+            position: "top",
             renderPopout: C,
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, r.jsxs)(
-                    'div',
+                    "div",
                     y(
                         O(
                             {
                                 ref: o,
-                                className: _.emojiInputContainer
+                                className: _.emojiInputContainer,
                             },
-                            e
+                            e,
                         ),
                         {
                             children: [
@@ -140,80 +140,90 @@ function C(e) {
                                     className: _.emojiButton,
                                     active: n,
                                     tabIndex: 0,
-                                    renderButtonContents: N
+                                    renderButtonContents: N,
                                 }),
                                 (0, r.jsx)(c.Is, {
                                     inputClassName: _.emojiText,
                                     placeholder: v.intl.string(v.t.qJPLNT),
                                     value: I,
-                                    'aria-labelledby': l,
-                                    readOnly: !0
-                                })
-                            ]
-                        }
-                    )
+                                    "aria-labelledby": l,
+                                    readOnly: !0,
+                                }),
+                            ],
+                        },
+                    ),
                 );
-            }
+            },
         })
     );
 }
 function N(e) {
     var t;
-    let { guildId: n, initialData: l, benefitTypeInput: a, descriptionPlaceholder: s, canSubmit: u, onSave: g, onDelete: p, transitionState: h, onClose: f } = e,
+    let {
+            guildId: n,
+            initialData: l,
+            benefitTypeInput: a,
+            descriptionPlaceholder: s,
+            canSubmit: u,
+            onSave: g,
+            onDelete: p,
+            transitionState: h,
+            onClose: f,
+        } = e,
         x = (0, m.Dt)(),
         b = (0, m.Dt)(),
-        [j, _] = i.useState(null != (t = null == l ? void 0 : l.description) ? t : ''),
+        [j, _] = i.useState(null != (t = null == l ? void 0 : l.description) ? t : ""),
         [O, y] = i.useState(() => ({
             id: null == l ? void 0 : l.emoji_id,
-            name: null == l ? void 0 : l.emoji_name
+            name: null == l ? void 0 : l.emoji_name,
         })),
-        N = u && '' !== j && (null != O.id || null != O.name);
+        N = u && "" !== j && (null != O.id || null != O.name);
     function I(e) {
-        (e.preventDefault(),
+        e.preventDefault(),
             N &&
                 (g({
                     description: j,
                     emojiId: O.id,
-                    emojiName: O.name
+                    emojiName: O.name,
                 }),
-                f()));
+                f());
     }
     let E = [
         {
-            text: v.intl.string(v.t['ETE/oK']),
-            variant: 'secondary',
-            onClick: f
-        }
+            text: v.intl.string(v.t["ETE/oK"]),
+            variant: "secondary",
+            onClick: f,
+        },
     ];
     return (
         null != p &&
             E.push({
                 text: v.intl.string(v.t.oyYWHB),
-                variant: 'critical-secondary',
+                variant: "critical-secondary",
                 onClick: () => {
-                    (p(), f());
+                    p(), f();
                 },
-                icon: d.XHJ
+                icon: d.XHJ,
             }),
         E.push({
             text: null == l ? v.intl.string(v.t.OYkgVl) : v.intl.string(v.t.R3BPHx),
-            variant: 'primary',
+            variant: "primary",
             onClick: I,
-            disabled: !N
+            disabled: !N,
         }),
-        (0, r.jsx)('form', {
+        (0, r.jsx)("form", {
             onSubmit: I,
             children: (0, r.jsx)(o.Modal, {
                 transitionState: h,
                 onClose: f,
-                title: v.intl.string(v.t['2qf9EB']),
+                title: v.intl.string(v.t["2qf9EB"]),
                 actions: E,
                 children: (0, r.jsxs)(d.Kqy, {
-                    gap: 'md',
+                    gap: "md",
                     children: [
                         a,
                         (0, r.jsx)(d.hjN, {
-                            title: v.intl.string(v.t['1Ts7QE']),
+                            title: v.intl.string(v.t["1Ts7QE"]),
                             titleId: x,
                             children: (0, r.jsx)(c.iS, {
                                 placeholder: s,
@@ -221,8 +231,8 @@ function N(e) {
                                 rows: 1,
                                 autosize: !0,
                                 onChange: _,
-                                'aria-labelledby': x
-                            })
+                                "aria-labelledby": x,
+                            }),
                         }),
                         (0, r.jsx)(d.hjN, {
                             title: v.intl.string(v.t.sMOuub),
@@ -231,12 +241,12 @@ function N(e) {
                                 guildId: n,
                                 emojiData: O,
                                 onSelectEmoji: y,
-                                'aria-labelledby': b
-                            })
-                        })
-                    ]
-                })
-            })
+                                "aria-labelledby": b,
+                            }),
+                        }),
+                    ],
+                }),
+            }),
         })
     );
 }
@@ -248,7 +258,7 @@ function I(e) {
             children: [
                 (0, r.jsx)(d.Wn, {
                     messageType: d.QYI.WARNING,
-                    children: v.intl.string(v.t.xunxCg)
+                    children: v.intl.string(v.t.xunxCg),
                 }),
                 (0, r.jsx)(d.LZC, { size: 24 }),
                 (0, r.jsx)(d.hjN, {
@@ -262,10 +272,10 @@ function I(e) {
                         onChange: function (e) {
                             p(e);
                         },
-                        'aria-labelledby': h
-                    })
-                })
-            ]
+                        "aria-labelledby": h,
+                    }),
+                }),
+            ],
         });
     return (0, r.jsx)(N, {
         guildId: t,
@@ -274,17 +284,17 @@ function I(e) {
         descriptionPlaceholder: v.intl.string(v.t.J8O1Li),
         canSubmit: null != g,
         onSave: function (e) {
-            (a()(null != g, 'Cannot submit null channel'), s(y(O({}, e), { channelId: g })));
+            a()(null != g, "Cannot submit null channel"), s(y(O({}, e), { channelId: g }));
         },
         transitionState: c,
         onClose: u,
-        onDelete: o
+        onDelete: o,
     });
 }
 function E(e) {
     var t;
     let { initialData: n, onSave: l, transitionState: s, onClose: o, onDelete: u, guildId: g } = e,
-        [p, h] = i.useState(null != (t = null == n ? void 0 : n.name) ? t : ''),
+        [p, h] = i.useState(null != (t = null == n ? void 0 : n.name) ? t : ""),
         f = (0, m.Dt)(),
         x = (0, r.jsx)(d.hjN, {
             title: v.intl.string(v.t.NPOJra),
@@ -296,20 +306,20 @@ function E(e) {
                 onChange: function (e) {
                     h(e);
                 },
-                'aria-labelledby': f
-            })
+                "aria-labelledby": f,
+            }),
         });
     return (0, r.jsx)(N, {
         guildId: g,
         initialData: n,
         benefitTypeInput: x,
         descriptionPlaceholder: v.intl.string(v.t.ucP4Tk),
-        canSubmit: '' !== p,
+        canSubmit: "" !== p,
         onSave: function (e) {
-            (a()('' !== p, 'Cannot submit empty name'), l(y(O({}, e), { name: p })));
+            a()("" !== p, "Cannot submit empty name"), l(y(O({}, e), { name: p }));
         },
         transitionState: s,
         onClose: o,
-        onDelete: u
+        onDelete: u,
     });
 }

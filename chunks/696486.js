@@ -13,7 +13,7 @@ a.d(e, {
     j5: () => g,
     ve: () => I,
     wy: () => N,
-    yc: () => y
+    yc: () => y,
 });
 var r = a(370336),
     _ = a(370541),
@@ -37,7 +37,7 @@ function d(t) {
         data: _,
         op: n,
         status: i,
-        origin: c
+        origin: c,
     });
 }
 function N(t) {
@@ -46,7 +46,7 @@ function N(t) {
     return (0, r.Jr)({
         parent_span_id: _,
         span_id: e,
-        trace_id: a
+        trace_id: a,
     });
 }
 function A(t) {
@@ -55,13 +55,19 @@ function A(t) {
     return (0, _.$p)(e, a, r);
 }
 function f(t) {
-    return 'number' == typeof t ? T(t) : Array.isArray(t) ? t[0] + t[1] / 1000000000 : t instanceof Date ? T(t.getTime()) : (0, n.ph)();
+    return "number" == typeof t
+        ? T(t)
+        : Array.isArray(t)
+          ? t[0] + t[1] / 1000000000
+          : t instanceof Date
+            ? T(t.getTime())
+            : (0, n.ph)();
 }
 function T(t) {
     return t > 9999999999 ? t / 1000 : t;
 }
 function p(t) {
-    if ('function' == typeof t.getSpanJSON) return t.getSpanJSON();
+    if ("function" == typeof t.getSpanJSON) return t.getSpanJSON();
     try {
         var e;
         let { spanId: a, traceId: _ } = t.spanContext();
@@ -78,12 +84,12 @@ function p(t) {
                 status: h(l),
                 op: e[s.$J],
                 origin: e[s.S3],
-                _metrics_summary: (0, E.y)(t)
+                _metrics_summary: (0, E.y)(t),
             });
         }
         return {
             span_id: a,
-            trace_id: _
+            trace_id: _,
         };
     } catch (t) {
         return {};
@@ -94,13 +100,13 @@ function L(t) {
     return e === R;
 }
 function h(t) {
-    if (t && t.code !== l.pq) return t.code === l.OP ? 'ok' : t.message || 'unknown_error';
+    if (t && t.code !== l.pq) return t.code === l.OP ? "ok" : t.message || "unknown_error";
 }
-let O = '_sentryChildSpans',
-    P = '_sentryRootSpan';
+let O = "_sentryChildSpans",
+    P = "_sentryRootSpan";
 function g(t, e) {
     let a = t[P] || t;
-    ((0, r.xp)(e, P, a), t[O] ? t[O].add(e) : (0, r.xp)(t, O, new Set([e])));
+    (0, r.xp)(e, P, a), t[O] ? t[O].add(e) : (0, r.xp)(t, O, new Set([e]));
 }
 function D(t, e) {
     t[O] && t[O].delete(e);

@@ -1,1 +1,1 @@
-e.exports = { loadingWrapper: 'loadingWrapper__5a143' };
+e.exports = { loadingWrapper: "loadingWrapper__5a143" };

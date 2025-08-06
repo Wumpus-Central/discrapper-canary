@@ -20,10 +20,10 @@ function b(t) {
             });
         }, [a, e]),
         x = l.useCallback(() => {
-            (w(), h(), g());
+            w(), h(), g();
         }, [w, h, g]),
         z = l.useCallback(() => {
-            (w(), (0, o.wk)(v), f(), g());
+            w(), (0, o.wk)(v), f(), g();
         }, [v, w, f, g]),
         P = l.useCallback(() => (null == m || m(), null == g || g(), Promise.resolve()), [m, g]),
         S = (0, n.e7)([u.default], () => u.default.getUser(a)),
@@ -35,15 +35,15 @@ function b(t) {
         subtitle: C.intl.string(C.t.aedksr),
         actions: [
             {
-                text: C.intl.string(C.t['3pzuj4']),
+                text: C.intl.string(C.t["3pzuj4"]),
                 onClick: z,
-                variant: 'secondary'
+                variant: "secondary",
             },
             {
                 text: C.intl.string(C.t.MzsUsr),
                 onClick: x,
-                variant: 'primary'
-            }
-        ]
+                variant: "primary",
+            },
+        ],
     });
 }

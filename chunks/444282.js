@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -23,7 +23,7 @@ function E(e) {
         I = (e) => {
             if (e.which === h.yXg.ENTER) {
                 var t;
-                (e.preventDefault(), null == (t = E.current) || t.activateUploadDialogue());
+                e.preventDefault(), null == (t = E.current) || t.activateUploadDialogue();
             }
         },
         T = i.useCallback(() => {
@@ -40,23 +40,28 @@ function E(e) {
                     id: n.name,
                     file: null == (r = e.dataTransfer) ? void 0 : r.files[0],
                     platform: u.ow.WEB,
-                    origin: 'drag_drop'
+                    origin: "drag_drop",
                 };
                 l.Z.setFile({
                     channelId: t,
                     id: n.name,
                     file: i,
-                    draftType: d.d.SlashCommand
+                    draftType: d.d.SlashCommand,
                 });
             },
-            [t, n]
+            [t, n],
         );
     i.useEffect(() => {
         let e = v.current;
         return (
-            null == O && (null == e || e.addEventListener('dragover', T, !1), null == e || e.addEventListener('dragleave', S, !1), null == e || e.addEventListener('drop', A, !1)),
+            null == O &&
+                (null == e || e.addEventListener("dragover", T, !1),
+                null == e || e.addEventListener("dragleave", S, !1),
+                null == e || e.addEventListener("drop", A, !1)),
             () => {
-                (null == e || e.removeEventListener('dragover', T, !1), null == e || e.removeEventListener('dragleave', S, !1), null == e || e.removeEventListener('drop', A, !1));
+                null == e || e.removeEventListener("dragover", T, !1),
+                    null == e || e.removeEventListener("dragleave", S, !1),
+                    null == e || e.removeEventListener("drop", A, !1);
             }
         );
     }, [O, T, S, A]);
@@ -67,15 +72,15 @@ function E(e) {
                 id: n.name,
                 file: e.currentTarget.files[0],
                 platform: u.ow.WEB,
-                origin: 'file_picker'
+                origin: "file_picker",
             };
-            (l.Z.setFile({
+            l.Z.setFile({
                 channelId: t,
                 id: n.name,
                 file: r,
-                draftType: d.d.SlashCommand
+                draftType: d.d.SlashCommand,
             }),
-                (e.currentTarget.value = ''));
+                (e.currentTarget.value = "");
         }
     };
     return null != O
@@ -87,19 +92,19 @@ function E(e) {
               label: (0, r.jsxs)(i.Fragment, {
                   children: [
                       (0, r.jsxs)(s.Text, {
-                          tag: 'span',
-                          variant: 'text-md/normal',
-                          children: [n.name, ': ']
+                          tag: "span",
+                          variant: "text-md/normal",
+                          children: [n.name, ": "],
                       }),
                       (0, r.jsx)(s.Text, {
-                          tag: 'span',
-                          variant: 'text-md/normal',
-                          color: 'text-brand',
-                          children: O.filename
-                      })
-                  ]
+                          tag: "span",
+                          variant: "text-md/normal",
+                          color: "text-brand",
+                          children: O.filename,
+                      }),
+                  ],
               }),
-              canEdit: !1
+              canEdit: !1,
           })
         : (0, r.jsxs)(_.Z, {
               id: n.name,
@@ -110,9 +115,9 @@ function E(e) {
               draftType: d.d.SlashCommand,
               ref: v,
               children: [
-                  (0, r.jsx)('span', {
+                  (0, r.jsx)("span", {
                       className: a()(m.optionName, { [m.optionNameActive]: b }),
-                      children: n.name
+                      children: n.name,
                   }),
                   (0, r.jsx)(s.P3F, {
                       className: m.clickContainer,
@@ -120,30 +125,30 @@ function E(e) {
                           var e;
                           return null == (e = E.current) ? void 0 : e.activateUploadDialogue();
                       },
-                      children: (0, r.jsxs)('div', {
+                      children: (0, r.jsxs)("div", {
                           className: m.commandOptionContainer,
                           children: [
-                              (0, r.jsx)('img', {
+                              (0, r.jsx)("img", {
                                   src: g,
                                   className: m.optionIcon,
-                                  alt: ''
+                                  alt: "",
                               }),
                               (0, r.jsx)(s.Text, {
                                   className: m.optionHelp,
-                                  variant: 'text-sm/normal',
-                                  children: 'Drag and drop or click to upload file'
+                                  variant: "text-sm/normal",
+                                  children: "Drag and drop or click to upload file",
                               }),
                               (0, r.jsx)(c.Z, {
                                   ref: E,
                                   onChange: N,
                                   multiple: !1,
                                   tabIndex: -1,
-                                  'aria-hidden': !0,
-                                  className: m.fileInput
-                              })
-                          ]
-                      })
-                  })
-              ]
+                                  "aria-hidden": !0,
+                                  className: m.fileInput,
+                              }),
+                          ],
+                      }),
+                  }),
+              ],
           });
 }

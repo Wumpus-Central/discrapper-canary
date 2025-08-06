@@ -11,16 +11,16 @@ var i = n(399606),
     u = n(674563);
 function m() {
     let e = (0, i.e7)([s.Z], () => s.Z.getGuild()),
-        t = (0, o.y)(null == e ? void 0 : e.id, 'guild_product_settings'),
+        t = (0, o.y)(null == e ? void 0 : e.id, "guild_product_settings"),
         { application: n, loading: m } = (0, a.Z)(null == e ? void 0 : e.id, u.wW.GUILD_ROLE_SUBSCRIPTIONS),
         g = null != n && (null == e ? void 0 : e.features.has(d.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0;
-    return (0, r.jsx)('main', {
+    return (0, r.jsx)("main", {
         children:
             null == e || !t || m
                 ? (0, r.jsx)(l.$jN, {})
                 : (0, r.jsx)(c.t, {
                       guildId: e.id,
-                      hasValidApplication: g
-                  })
+                      hasValidApplication: g,
+                  }),
     });
 }

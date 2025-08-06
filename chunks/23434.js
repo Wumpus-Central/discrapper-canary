@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,8 +27,8 @@ class l extends (r = i.ZP.Store) {
 function c(e) {
     s = e.requiredAction;
 }
-a(l, 'displayName', 'UserRequiredActionStore');
+a(l, "displayName", "UserRequiredActionStore");
 let u = new l(o.Z, {
     CONNECTION_OPEN: c,
-    USER_REQUIRED_ACTION_UPDATE: c
+    USER_REQUIRED_ACTION_UPDATE: c,
 });

@@ -1,1 +1,1 @@
-e.exports = n(480751)(Object, 'create');
+e.exports = n(480751)(Object, "create");

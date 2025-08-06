@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(73800),
     i = n(710251),
     o = n(442837),
@@ -21,7 +21,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,25 +74,33 @@ function v(e, t, n) {
         M = (0, o.e7)([u.ZP, _.default], () => {
             var e, t;
             let n = _.default.getCurrentUser();
-            return null != (t = null != P.guild_id && null != n ? (null == (e = u.ZP.getMember(P.guild_id, n.id)) ? void 0 : e.isPending) : null) && t;
+            return (
+                null !=
+                    (t =
+                        null != P.guild_id && null != n
+                            ? null == (e = u.ZP.getMember(P.guild_id, n.id))
+                                ? void 0
+                                : e.isPending
+                            : null) && t
+            );
         }),
         { canMentionEveryone: k, hidePersonalInformation: j } = (0, o.cj)(
             [d.Z, f.Z],
             () => ({
                 canMentionEveryone: P.isPrivate() || M || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, P),
-                hidePersonalInformation: f.Z.hidePersonalInformation
+                hidePersonalInformation: f.Z.hidePersonalInformation,
             }),
-            [P, w, M]
+            [P, w, M],
         ),
         { activeCommand: U, activeCommandOption: G } = (0, o.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(P.id),
-            activeCommandOption: s.Z.getActiveOption(P.id)
+            activeCommandOption: s.Z.getActiveOption(P.id),
         })),
         B = (0, h.Z)({
-            navId: 'channel-autocomplete',
+            navId: "channel-autocomplete",
             scrollerRef: n,
             state: D,
-            onFocus: (e) => Y.setSelectedIndex(e)
+            onFocus: (e) => Y.setSelectedIndex(e),
         }),
         Z = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
         F = null == (y = e.editorRef.current) ? void 0 : y.getSlateEditor(),
@@ -108,9 +116,21 @@ function v(e, t, n) {
             hidePersonalInformation: j,
             hideMentionDescription: w === l.Ie.RULES_INPUT,
             emojiIntention: w === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
-            currentWord: null != (C = null == Z ? void 0 : Z.word) ? C : '',
+            currentWord: null != (C = null == Z ? void 0 : Z.word) ? C : "",
             currentWordIsAtStart: (null == Z ? void 0 : Z.isAtStart) === !0,
-            optionText: null != G ? (0, a.KF)({ [G.name]: null != (R = null == (I = e.editorRef.current) ? void 0 : I.getCurrentCommandOptionValue()) ? R : [] }, G.name) : ''
+            optionText:
+                null != G
+                    ? (0, a.KF)(
+                          {
+                              [G.name]:
+                                  null !=
+                                  (R = null == (I = e.editorRef.current) ? void 0 : I.getCurrentCommandOptionValue())
+                                      ? R
+                                      : [],
+                          },
+                          G.name,
+                      )
+                    : "",
         }),
         [Y] = r.useState(() => new p.ZP(H));
     return (
@@ -121,10 +141,10 @@ function v(e, t, n) {
         r.useEffect(() => {
             let e = (e) => L(e);
             return (
-                Y.on('change', e),
-                Y.on('update', x),
+                Y.on("change", e),
+                Y.on("update", x),
                 () => {
-                    (Y.off('change', e), Y.off('update', x));
+                    Y.off("change", e), Y.off("update", x);
                 }
             );
         }, [x, Y]),

@@ -13,40 +13,40 @@ function o(t) {
         size: n.CgR.SMALL,
         transitionState: e,
         className: c.__invalid_modal,
-        parentComponent: 'ClipsDeleteModal',
+        parentComponent: "ClipsDeleteModal",
         children: [
             (0, a.jsxs)(n.hzk, {
                 className: c.modalContent,
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, a.jsxs)("div", {
                         className: c.header,
                         children: [
                             (0, a.jsx)(n.X6q, {
                                 className: c.__invalid_title,
-                                variant: 'text-md/semibold',
-                                color: 'header-primary',
-                                children: d.intl.string(d.t.Lzhui4)
+                                variant: "text-md/semibold",
+                                color: "header-primary",
+                                children: d.intl.string(d.t.Lzhui4),
                             }),
-                            (0, a.jsx)(n.olH, { onClick: i })
-                        ]
+                            (0, a.jsx)(n.olH, { onClick: i }),
+                        ],
                     }),
                     (0, a.jsx)(n.Text, {
-                        variant: 'text-md/medium',
-                        color: 'text-default',
+                        variant: "text-md/medium",
+                        color: "text-default",
                         className: c.__invalid_body,
-                        children: d.intl.string(d.t.yxCBqq)
-                    })
-                ]
+                        children: d.intl.string(d.t.yxCBqq),
+                    }),
+                ],
             }),
             (0, a.jsx)(n.mzw, {
                 children: (0, a.jsx)(n.zxk, {
-                    variant: 'critical-primary',
+                    variant: "critical-primary",
                     text: d.intl.string(d.t.VRWPDg),
                     onClick: function () {
-                        (null == o || o(), s.sS(m.filepath), h(), l.default.track(r.rMx.CLIP_DELETED));
-                    }
-                })
-            })
-        ]
+                        null == o || o(), s.sS(m.filepath), h(), l.default.track(r.rMx.CLIP_DELETED);
+                    },
+                }),
+            }),
+        ],
     });
 }

@@ -9,15 +9,15 @@ function l(e) {
         u = (0, o.Mq)(n),
         d = (0, a.Z)({
             applicationId: u ? n.extra.application_id : void 0,
-            onClose: c
+            onClose: c,
         });
-    return 'recent' === t && u
+    return "recent" === t && u
         ? (0, r.jsx)(i.sNh, {
-              id: 'view-activity',
+              id: "view-activity",
               label: s.intl.string(s.t.GDWYR0),
               action: () => {
-                  (null == l || l({ action: 'PRESS_VIEW_ACTIVITY_MENU_ITEM' }), d());
-              }
+                  null == l || l({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), d();
+              },
           })
         : null;
 }

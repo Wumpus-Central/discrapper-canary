@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(953529));
+n.d(t, { Z: () => g }), n(953529);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -13,32 +13,32 @@ var r = n(120356),
     p = n(128216);
 let g = () => {
     let e = (0, l.o)(d.intl.string(c.default.i4XFEB), d.intl.string(c.default.eHQZuL));
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: s()(u.container, m.box, m),
         children: [
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 children: [
                     (0, i.jsx)(a.X6q, {
                         className: u.header,
-                        variant: 'heading-md/bold',
-                        children: (0, i.jsx)(a.y5t, { children: d.intl.string(c.default.XJabSE) })
+                        variant: "heading-md/bold",
+                        children: (0, i.jsx)(a.y5t, { children: d.intl.string(c.default.XJabSE) }),
                     }),
                     (0, i.jsx)(a.Text, {
                         className: u.description,
-                        variant: 'text-sm/medium',
-                        color: 'text-muted',
-                        children: e
+                        variant: "text-sm/medium",
+                        color: "text-muted",
+                        children: e,
                     }),
-                    (0, i.jsx)(o.Z, {})
-                ]
+                    (0, i.jsx)(o.Z, {}),
+                ],
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: u.artContainer,
-                children: (0, i.jsx)('img', {
+                children: (0, i.jsx)("img", {
                     src: p,
-                    alt: d.intl.string(c.default.o4pfFB)
-                })
-            })
-        ]
+                    alt: d.intl.string(c.default.o4pfFB),
+                }),
+            }),
+        ],
     });
 };

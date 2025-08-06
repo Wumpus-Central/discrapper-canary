@@ -21,7 +21,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,21 +31,21 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function y() {
     (0, l.ZDy)(async () => {
-        let { default: e } = await n.e('3289').then(n.bind(n, 682609));
+        let { default: e } = await n.e("3289").then(n.bind(n, 682609));
         return (t) => (0, r.jsx)(e, b({ channel: null }, t));
     });
 }
@@ -58,50 +58,50 @@ function O(e) {
         { analyticsLocations: E } = (0, u.ZP)(c.Z.PREMIUM_UPSELL);
     i.useEffect(() => {
         p.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
-            type: 'longer messages inline',
+            type: "longer messages inline",
             location: {
                 location_page: o,
-                location_section: h.jXE.CHANNEL_TEXT_AREA
+                location_section: h.jXE.CHANNEL_TEXT_AREA,
             },
-            location_stack: E
+            location_stack: E,
         });
     }, [o, E]);
     let O = () =>
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a()(g.root, t),
                 children: [
                     (0, r.jsx)(l.SrA, {
-                        size: 'md',
+                        size: "md",
                         className: g.premium,
-                        color: d.JX.PREMIUM_TIER_2
+                        color: d.JX.PREMIUM_TIER_2,
                     }),
                     (0, r.jsx)(l.Text, {
                         className: g.text,
-                        variant: 'text-sm/normal',
-                        children: m.intl.format(m.t.BNAIBQ, { onLearnMore: y })
-                    })
-                ]
+                        variant: "text-sm/normal",
+                        children: m.intl.format(m.t.BNAIBQ, { onLearnMore: y }),
+                    }),
+                ],
             }),
         v = () =>
             (0, r.jsx)(l.P3F, {
                 className: g.iconOnly,
                 onClick: () => y(),
                 children: (0, r.jsx)(l.ua7, {
-                    text: m.intl.string(m.t['+eFIjY']),
-                    position: 'top',
+                    text: m.intl.string(m.t["+eFIjY"]),
+                    position: "top",
                     children: (e) =>
                         (0, r.jsx)(
                             l.SrA,
                             b(
                                 {
-                                    size: 'md',
-                                    color: 'currentColor',
-                                    className: g.premium
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: g.premium,
                                 },
-                                e
-                            )
-                        )
-                })
+                                e,
+                            ),
+                        ),
+                }),
             });
     return n ? v() : O();
 }

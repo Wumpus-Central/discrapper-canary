@@ -1,4 +1,4 @@
-(n.d(t, { s: () => m }), n(388685), n(35282));
+n.d(t, { s: () => m }), n(388685), n(35282);
 var l = n(73800),
     r = n(442837),
     a = n(38618),
@@ -18,7 +18,7 @@ function f(e) {
         {
             query: t,
             queryMode: r,
-            resultTypes: l
+            resultTypes: l,
         }
     );
 }
@@ -28,34 +28,34 @@ function m(e) {
         g = l.useMemo(
             () => ({
                 searchOptions: {
-                    blacklist: new Set(['user:'.concat(m)]),
+                    blacklist: new Set(["user:".concat(m)]),
                     frecencyBoosters: !0,
-                    userFilters: null
-                }
+                    userFilters: null,
+                },
             }),
-            [m]
+            [m],
         ),
         { search: _, query: p, results: b } = (0, d.Z)(g),
-        [y, v] = l.useState(f('')),
+        [y, v] = l.useState(f("")),
         x = l.useCallback((e) => v(f(e)), [v]),
         { queryMode: E } = y,
         C = l.useRef(null),
         S = l.useRef(n),
         O = p !== C.current ? n : S.current;
-    (l.useEffect(() => {
-        (p !== C.current && (S.current = n), (C.current = p));
+    l.useEffect(() => {
+        p !== C.current && (S.current = n), (C.current = p);
     }, [p, n]),
         l.useLayoutEffect(() => {
             let { query: e, resultTypes: t } = y;
             _({
                 query: e,
-                resultTypes: t
+                resultTypes: t,
             });
         }, [_, y]),
-        (0, s.D)());
+        (0, s.D)();
     let P = (0, r.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
         w = (0, r.e7)([a.Z], () => a.Z.isConnected()),
-        Z = '' !== p;
+        Z = "" !== p;
     return {
         results: l.useMemo(
             () =>
@@ -69,10 +69,10 @@ function m(e) {
                     pinnedDestinations: O,
                     originDestination: i,
                     includeMissingDMs: h,
-                    isConnected: w
+                    isConnected: w,
                 }),
-            [b, Z, E, t, P, n, O, i, h, w]
+            [b, Z, E, t, P, n, O, i, h, w],
         ),
-        updateSearchText: x
+        updateSearchText: x,
     };
 }

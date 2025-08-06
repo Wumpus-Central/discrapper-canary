@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(539854));
+n.d(t, { Z: () => P }), n(539854);
 var r = n(255367),
     s = n(73800),
     o = n(392711),
@@ -18,31 +18,31 @@ let b = n(742914),
         0: 0,
         3: 16,
         1: 32,
-        2: 48
+        2: 48,
     },
     x = {
         0: 0,
         1: 16,
         2: 32,
-        3: 48
+        3: 48,
     },
     v = [
         {
             x: 0,
-            y: 11
+            y: 11,
         },
         {
             x: 0,
-            y: 12
+            y: 12,
         },
         {
             x: 0,
-            y: 13
+            y: 13,
         },
         {
             x: 0,
-            y: 14
-        }
+            y: 14,
+        },
     ],
     O = new Image();
 O.src = g.Z;
@@ -61,46 +61,63 @@ function P(e) {
                     x: n,
                     y: r,
                     direction: 0,
-                    type: 0 === t ? 0 : t === v.length - 1 ? 2 : 1
+                    type: 0 === t ? 0 : t === v.length - 1 ? 2 : 1,
                 };
-            })
+            }),
         ),
         g = (0, s.useRef)([]),
         P = (0, s.useCallback)(() => {
             for (let n = m.current.length - 1; n >= 0; n--)
                 if (0 === n) {
                     var e, t;
-                    let r = null != (e = 0 === (t = m.current[n]).x && t.y <= 0 ? 3 : 23 === t.x && t.y >= 14 ? 2 : t.x <= 0 && 14 === t.y ? 0 : t.x >= 23 && 0 === t.y ? 1 : void 0) ? e : m.current[n].direction,
+                    let r =
+                            null !=
+                            (e =
+                                0 === (t = m.current[n]).x && t.y <= 0
+                                    ? 3
+                                    : 23 === t.x && t.y >= 14
+                                      ? 2
+                                      : t.x <= 0 && 14 === t.y
+                                        ? 0
+                                        : t.x >= 23 && 0 === t.y
+                                          ? 1
+                                          : void 0)
+                                ? e
+                                : m.current[n].direction,
                         s = (function (e, t) {
                             switch (t) {
                                 case 0:
                                     return {
                                         x: e.x,
-                                        y: e.y - 1
+                                        y: e.y - 1,
                                     };
                                 case 1:
                                     return {
                                         x: e.x,
-                                        y: e.y + 1
+                                        y: e.y + 1,
                                     };
                                 case 2:
                                     return {
                                         x: e.x - 1,
-                                        y: e.y
+                                        y: e.y,
                                     };
                                 case 3:
                                     return {
                                         x: e.x + 1,
-                                        y: e.y
+                                        y: e.y,
                                     };
                             }
                         })(m.current[n], r);
-                    ((m.current[n].direction = r), (m.current[n].x = s.x), (m.current[n].y = s.y));
-                } else ((m.current[n].direction = m.current[n - 1].direction), (m.current[n].x = m.current[n - 1].x), (m.current[n].y = m.current[n - 1].y));
-            for (let e = 1; e < m.current.length - 1; e++) m.current[e].type = m.current[e - 1].direction !== m.current[e].direction ? 3 : 1;
+                    (m.current[n].direction = r), (m.current[n].x = s.x), (m.current[n].y = s.y);
+                } else
+                    (m.current[n].direction = m.current[n - 1].direction),
+                        (m.current[n].x = m.current[n - 1].x),
+                        (m.current[n].y = m.current[n - 1].y);
+            for (let e = 1; e < m.current.length - 1; e++)
+                m.current[e].type = m.current[e - 1].direction !== m.current[e].direction ? 3 : 1;
         }, []),
         _ = (0, s.useCallback)((e) => {
-            ((e.fillStyle = '#7f986a'), e.fillRect(0, 0, 422.4, 278.4), e.drawImage(N, 0, 0, 422.4, 278.4));
+            (e.fillStyle = "#7f986a"), e.fillRect(0, 0, 422.4, 278.4), e.drawImage(N, 0, 0, 422.4, 278.4);
         }, []),
         C = (0, s.useCallback)((e) => {
             m.current.forEach((t, n) => {
@@ -129,15 +146,15 @@ function P(e) {
         w = (0, s.useCallback)(() => {
             let e = {
                     x: m.current[0].x,
-                    y: m.current[0].y
+                    y: m.current[0].y,
                 },
                 t = g.current.filter((t) => t.x !== e.x || t.y !== e.y),
                 n = g.current.length - t.length;
-            ((g.current = t), n > 0 && (p(), (0, i.KH)(d.yN.SNEK, o.getPoints(n))));
+            (g.current = t), n > 0 && (p(), (0, i.KH)(d.yN.SNEK, o.getPoints(n)));
         }, [p, o]),
         E = (0, s.useCallback)(() => {
             var e;
-            let t = null == (e = n.current) ? void 0 : e.getContext('2d');
+            let t = null == (e = n.current) ? void 0 : e.getContext("2d");
             null != t && (P(), w(), t.clearRect(0, 0, 422.4, 278.4), _(t), C(t), Z(t));
         }, [w, _, Z, C, P]),
         S = (0, s.useCallback)(() => {
@@ -148,27 +165,27 @@ function P(e) {
                             case 0:
                                 return {
                                     x: a().random(0, 23),
-                                    y: 0
+                                    y: 0,
                                 };
                             case 2:
                                 return {
                                     x: a().random(0, 23),
-                                    y: 14
+                                    y: 14,
                                 };
                             case 3:
                                 return {
                                     x: 0,
-                                    y: a().random(0, 14)
+                                    y: a().random(0, 14),
                                 };
                             case 1:
                                 return {
                                     x: 23,
-                                    y: a().random(0, 14)
+                                    y: a().random(0, 14),
                                 };
                         }
                         return {
                             x: 0,
-                            y: 0
+                            y: 0,
                         };
                     })();
                     return t.some((e) => e.x === n.x && e.y === n.y) ? e(t) : n;
@@ -180,18 +197,18 @@ function P(e) {
         (0, l.Z)({
             isPaused: t,
             onInterval: E,
-            interval: 500
+            interval: 500,
         }),
         (0, l.Z)({
             isPaused: t,
             onInterval: S,
-            interval: 1000
+            interval: 1000,
         }),
-        (0, r.jsx)('canvas', {
+        (0, r.jsx)("canvas", {
             ref: n,
             className: f.canvas,
             width: 422.4,
-            height: 278.4
+            height: 278.4,
         })
     );
 }

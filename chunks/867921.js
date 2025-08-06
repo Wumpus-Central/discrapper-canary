@@ -16,7 +16,7 @@ function s(t, e, a = (0, r.x)(t.bufferSize || 64)) {
                     let r = (0, _.mL)(a);
                     if ((0, n.Q)(u, r)) {
                         let _ = l(e, a);
-                        t.recordDroppedEvent('ratelimit_backoff', r, _);
+                        t.recordDroppedEvent("ratelimit_backoff", r, _);
                     } else s.push(e);
                 }),
                 0 === s.length)
@@ -32,23 +32,35 @@ function s(t, e, a = (0, r.x)(t.bufferSize || 64)) {
             return a
                 .add(() =>
                     e({ body: (0, _.V$)(I) }).then(
-                        (t) => (void 0 !== t.statusCode && (t.statusCode < 200 || t.statusCode >= 300) && E.X && i.kg.warn(`Sentry responded with status code ${t.statusCode} to sent event.`), (u = (0, n.WG)(u, t)), t),
+                        (t) => (
+                            void 0 !== t.statusCode &&
+                                (t.statusCode < 200 || t.statusCode >= 300) &&
+                                E.X &&
+                                i.kg.warn(`Sentry responded with status code ${t.statusCode} to sent event.`),
+                            (u = (0, n.WG)(u, t)),
+                            t
+                        ),
                         (t) => {
-                            throw (R('network_error'), t);
-                        }
-                    )
+                            throw (R("network_error"), t);
+                        },
+                    ),
                 )
                 .then(
                     (t) => t,
                     (t) => {
-                        if (t instanceof c.b) return (E.X && i.kg.error('Skipped sending event because buffer is full.'), R('queue_overflow'), (0, o.WD)({}));
+                        if (t instanceof c.b)
+                            return (
+                                E.X && i.kg.error("Skipped sending event because buffer is full."),
+                                R("queue_overflow"),
+                                (0, o.WD)({})
+                            );
                         throw t;
-                    }
+                    },
                 );
         },
-        flush: (t) => a.drain(t)
+        flush: (t) => a.drain(t),
     };
 }
 function l(t, e) {
-    if ('event' === e || 'transaction' === e) return Array.isArray(t) ? t[1] : void 0;
+    if ("event" === e || "transaction" === e) return Array.isArray(t) ? t[1] : void 0;
 }

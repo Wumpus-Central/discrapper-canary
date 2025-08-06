@@ -1,4 +1,4 @@
-(n.d(t, { M: () => c }), n(35282), n(388685), n(539854));
+n.d(t, { M: () => c }), n(35282), n(388685), n(539854);
 var r = n(73800),
     i = n(392711),
     l = n(990169),
@@ -15,14 +15,14 @@ function c(e, t, n) {
                     if (null == n || e || 0 === t) return;
                     let r = n.match(a.Z.URL_REGEX);
                     if (null == r || 0 === r.length) {
-                        ((c.current = new Map()), m(null));
+                        (c.current = new Map()), m(null);
                         return;
                     }
                     m(i.uniq(r).slice(0, o.Yh));
                 }, 1000),
-            [t, c, m]
+            [t, c, m],
         );
-    (r.useEffect(() => {
+    r.useEffect(() => {
         h(e, n);
     }, [h, n, e]),
         r.useEffect(() => {
@@ -35,22 +35,25 @@ function c(e, t, n) {
                     try {
                         var l, a, o;
                         let t = await s.V6(i);
-                        ((l = new Map(n)),
+                        (l = new Map(n)),
                             (a = i),
                             (o = null == t ? void 0 : t.embeds),
                             null == o ||
                                 o.forEach((e) => {
                                     var t, n;
-                                    let r = ((t = a), (n = e), t.find((e) => (null == n ? void 0 : n.url) != null && e.startsWith(n.url)));
+                                    let r =
+                                        ((t = a),
+                                        (n = e),
+                                        t.find((e) => (null == n ? void 0 : n.url) != null && e.startsWith(n.url)));
                                     if (null == r) return;
                                     let i = l.get(r);
                                     null == i ? l.set(r, [e]) : i.push(e);
                                 }),
                             (e.current = l),
-                            d({}));
+                            d({});
                     } catch (e) {}
             })(c, u);
-        }, [u]));
+        }, [u]);
     let g = (0, l.Z)(c),
         f = r.useMemo(() => {
             let e = [];

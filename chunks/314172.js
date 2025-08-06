@@ -18,7 +18,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,11 +44,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,8 +70,8 @@ function E(e) {
     let O = (e) => !(0, c.fI)(e) && !e.managed && u.Z.isRoleHigher(t, m, e) && -1 === n.roles.indexOf(e.id);
     return (0, r.jsx)(o.y, {
         targetElementRef: b,
-        position: 'bottom',
-        align: 'center',
+        position: "bottom",
+        align: "center",
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, r.jsx)(s.Z, {
@@ -79,13 +79,13 @@ function E(e) {
                 roleStyle: y,
                 roleFilter: O,
                 onSelect: E,
-                onClose: n
+                onClose: n,
             });
         },
         children: (e) =>
             (0, r.jsx)(a.DY3, {
                 text: f.intl.string(f.t.icyMgY),
-                'aria-label': !1,
+                "aria-label": !1,
                 shouldShow: p > 0,
                 children: (0, r.jsxs)(
                     a.P3F,
@@ -94,27 +94,27 @@ function E(e) {
                             {
                                 innerRef: b,
                                 className: _.button,
-                                role: 'button',
-                                'aria-label': f.intl.string(f.t.icyMgY)
+                                role: "button",
+                                "aria-label": f.intl.string(f.t.icyMgY),
                             },
-                            e
+                            e,
                         ),
                         {
                             children: [
                                 (0, r.jsx)(a.qJs, {
-                                    size: 'xs',
-                                    color: 'currentColor'
+                                    size: "xs",
+                                    color: "currentColor",
                                 }),
                                 0 === p &&
                                     (0, r.jsx)(a.Text, {
-                                        variant: 'text-xs/normal',
-                                        color: 'none',
-                                        children: f.intl.string(f.t.icyMgY)
-                                    })
-                            ]
-                        }
-                    )
-                )
-            })
+                                        variant: "text-xs/normal",
+                                        color: "none",
+                                        children: f.intl.string(f.t.icyMgY),
+                                    }),
+                            ],
+                        },
+                    ),
+                ),
+            }),
     });
 }

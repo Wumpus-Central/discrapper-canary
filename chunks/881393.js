@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(539854));
+n.d(t, { Z: () => m }), n(388685), n(539854);
 var r = n(496929),
     i = n(16084),
     l = n(558381),
@@ -19,7 +19,7 @@ async function h(e, t) {
             let n = e.subscription_listings;
             if (null == n) return null;
             let r = [];
-            (n.forEach((e) => {
+            n.forEach((e) => {
                 e.subscription_plans.forEach((n) => {
                     var i;
                     let l = null == n ? void 0 : n.price,
@@ -31,16 +31,16 @@ async function h(e, t) {
                         type: a.type,
                         price: {
                             amount: l,
-                            currency: p.pKx.USD
+                            currency: p.pKx.USD,
                         },
                         application_id: e.application_id,
                         flags: e.sku_flags,
-                        release_date: null != (i = a.release_date) ? i : null
+                        release_date: null != (i = a.release_date) ? i : null,
                     };
                     r.push(o);
                 });
             }),
-                r.filter((e) => (null == e ? void 0 : e.price) != null).forEach((e) => i.push(e)));
+                r.filter((e) => (null == e ? void 0 : e.price) != null).forEach((e) => i.push(e));
         }),
         i
     );
@@ -49,7 +49,7 @@ async function f(e) {
     let { socket: t } = e;
     (0, u.f)(t.transport);
     let n = t.application.id;
-    if (null == n) throw new c.Z({ errorCode: p.lTL.INVALID_COMMAND }, 'No application.');
+    if (null == n) throw new c.Z({ errorCode: p.lTL.INVALID_COMMAND }, "No application.");
     if (s.Z.inTestModeForApplication(n) || a.Z.inDevModeForApplication(n)) {
         let e = await i.uE(n, !1),
             t = await h(n, e);
@@ -63,32 +63,32 @@ async function f(e) {
             .filter((e) => null != e.price),
         ...(await h(
             n,
-            r.map((e) => e.sku)
-        ))
+            r.map((e) => e.sku),
+        )),
     ];
 }
 function g(e) {
     let { socket: t } = e;
     (0, u.f)(t.transport);
     let n = t.application.id;
-    if (null == n) throw new c.Z({ errorCode: p.lTL.INVALID_COMMAND }, 'No application.');
+    if (null == n) throw new c.Z({ errorCode: p.lTL.INVALID_COMMAND }, "No application.");
     return r.yD(n);
 }
 let m = {
     [p.Etm.GET_SKUS]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        handler: f
+        handler: f,
     },
     [p.Etm.GET_ENTITLEMENTS]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        handler: g
+        handler: g,
     },
     [p.Etm.GET_SKUS_EMBEDDED]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        handler: async (e) => ({ skus: await f(e) })
+        handler: async (e) => ({ skus: await f(e) }),
     },
     [p.Etm.GET_ENTITLEMENTS_EMBEDDED]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        handler: async (e) => ({ entitlements: await g(e) })
-    }
+        handler: async (e) => ({ entitlements: await g(e) }),
+    },
 };

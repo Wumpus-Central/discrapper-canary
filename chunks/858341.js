@@ -21,7 +21,11 @@ function p(n) {
         { channel: g, message: x, target: j, attachment: v, onSelect: b } = n,
         m = j;
     if (null != v) p = l = v.url;
-    else for (; (0, i.k)(m); ) ((0, i.k)(m, HTMLImageElement) && null != m.src && (p = m.src), (0, i.k)(m, HTMLAnchorElement) && null != m.href && ((l = m.href), (S = m.textContent)), (m = m.parentNode));
+    else
+        for (; (0, i.k)(m); )
+            (0, i.k)(m, HTMLImageElement) && null != m.src && (p = m.src),
+                (0, i.k)(m, HTMLAnchorElement) && null != m.href && ((l = m.href), (S = m.textContent)),
+                (m = m.parentNode);
     let C = null == (e = document.getSelection()) ? void 0 : e.toString(),
         Q = (0, d.Z)(C),
         w = (0, o.Z)(C),
@@ -33,27 +37,27 @@ function p(n) {
         L = (0, c.Z)({
             id: x.id,
             label: f.intl.string(f.t.zBoHlZ),
-            shiftId: ''.concat(x.channel_id, '-').concat(x.id)
+            shiftId: "".concat(x.channel_id, "-").concat(x.id),
         }),
         N = (0, c.Z)({
             id: x.author.id,
-            label: f.intl.string(f.t.Muw4ws)
+            label: f.intl.string(f.t.Muw4ws),
         });
     return (0, t.jsxs)(r.v2r, {
-        navId: 'message',
+        navId: "message",
         onClose: s.Zy,
-        'aria-label': f.intl.string(f.t.ChPNkJ),
+        "aria-label": f.intl.string(f.t.ChPNkJ),
         onSelect: b,
         children: [
             (0, t.jsx)(r.kSQ, { children: Q }),
             (0, t.jsx)(r.kSQ, { children: w }),
             (0, t.jsxs)(r.kSQ, {
-                children: [H, I, M, _]
+                children: [H, I, M, _],
             }),
             (0, t.jsx)(r.kSQ, { children: E }),
             (0, t.jsxs)(r.kSQ, {
-                children: [L, N]
-            })
-        ]
+                children: [L, N],
+            }),
+        ],
     });
 }

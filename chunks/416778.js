@@ -61,5 +61,5 @@ var r = n(368762),
         X: new P.F(),
         x: new w.g(),
         t: new D.l(),
-        T: new L.T()
+        T: new L.T(),
     };

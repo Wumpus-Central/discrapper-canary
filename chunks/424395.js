@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     Vb: () => a,
     YI: () => s,
     j1: () => l,
-    u5: () => o
+    u5: () => o,
 }),
     n(642613),
-    n(35282));
+    n(35282);
 var r = n(73800),
     i = n(515149);
 function o() {
@@ -20,7 +20,7 @@ function o() {
             return {
                 value: n,
                 name: r,
-                localizedName: e[(0, i.runtimeHashMessageKey)(n)]
+                localizedName: e[(0, i.runtimeHashMessageKey)(n)],
             };
         })
         .sort((e, t) => {
@@ -44,12 +44,20 @@ function s(e, t) {
             return t;
         });
     if (i.includes(e)) return e;
-    let o = e.split('-');
-    return i.includes(o[0]) ? o[0] : 'zh' === o[0] && o.length > 1 && 'Hant' === o[1] ? (null != (n = i.find((e) => 'zh-TW' === e)) ? n : t) : null != (r = i.find((e) => e.split('-')[0] === o[0])) ? r : t;
+    let o = e.split("-");
+    return i.includes(o[0])
+        ? o[0]
+        : "zh" === o[0] && o.length > 1 && "Hant" === o[1]
+          ? null != (n = i.find((e) => "zh-TW" === e))
+              ? n
+              : t
+          : null != (r = i.find((e) => e.split("-")[0] === o[0]))
+            ? r
+            : t;
 }
 function l(e, t) {
     r.useSyncExternalStore(
         (t) => e.onChange(t),
-        () => e.isLocaleLoaded(t.currentLocale)
+        () => e.isLocaleLoaded(t.currentLocale),
     );
 }

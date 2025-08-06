@@ -5,8 +5,18 @@ var i = n(120356),
     o = n.n(i),
     a = n(576073);
 let s = (e) => {
-    let { left: t, top: n = 0, right: i = 0, bottom: s, size: l = 8, alert: c = !1, showBlurpleTreatment: u = !1, maskColor: d = 2, additionalStyles: f } = e;
-    return (0, r.jsx)('span', {
+    let {
+        left: t,
+        top: n = 0,
+        right: i = 0,
+        bottom: s,
+        size: l = 8,
+        alert: c = !1,
+        showBlurpleTreatment: u = !1,
+        maskColor: d = 2,
+        additionalStyles: f,
+    } = e;
+    return (0, r.jsx)("span", {
         className: o()(a.dot, {
             [a.alert]: c,
             [a.blurpleTreatment]: u,
@@ -14,7 +24,7 @@ let s = (e) => {
             [a.maskPrimary]: 1 === d,
             [a.maskSecondary]: 2 === d,
             [a.maskBlack]: 3 === d,
-            [null != f ? f : '']: void 0 !== f
+            [null != f ? f : ""]: void 0 !== f,
         }),
         style: {
             height: l,
@@ -22,7 +32,7 @@ let s = (e) => {
             left: t,
             top: n,
             right: i,
-            bottom: s
-        }
+            bottom: s,
+        },
     });
 };

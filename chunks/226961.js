@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     J$: () => A,
     Pz: () => E,
     ZP: () => H,
-    fZ: () => N
+    fZ: () => N,
 }),
     n(388685),
     n(35282),
-    n(539854));
+    n(539854);
 var r,
     i = n(442837),
     o = n(46973),
@@ -23,7 +23,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -71,23 +71,23 @@ let p = A(d.Yn.DEFAULT, u._s_.TRANSPORT, 0),
         packetsSent: !0,
         ping: !0,
         qpSum: !0,
-        videoEntropy: !0
+        videoEntropy: !0,
     },
     b = 600;
 function y(e, t, n) {
-    return ''.concat(e, ':').concat(t, ':').concat(n);
+    return "".concat(e, ":").concat(t, ":").concat(n);
 }
 function O(e, t) {
-    return ''.concat(e, ':').concat(t);
+    return "".concat(e, ":").concat(t);
 }
 class v {
     static empty() {
         return new v({});
     }
     put(e, t, n, r) {
-        if ('' === r) {
+        if ("" === r) {
             let r = _({}, this.state);
-            return (delete r[y(e, t, n)], new v(r));
+            return delete r[y(e, t, n)], new v(r);
         }
         return new v(_({ [y(e, t, n)]: r }, this.state));
     }
@@ -96,20 +96,20 @@ class v {
         return null != r ? r : null;
     }
     constructor(e) {
-        (f(this, 'state', void 0), (this.state = e));
+        f(this, "state", void 0), (this.state = e);
     }
 }
 let I = v.empty(),
     T = !1,
     S = null;
 function A(e, t, n) {
-    return ''.concat(e, ':').concat(t, ':').concat(n);
+    return "".concat(e, ":").concat(t, ":").concat(n);
 }
 function N(e) {
-    let [t, n] = e.split(':');
+    let [t, n] = e.split(":");
     return {
         context: t,
-        section: n
+        section: n,
     };
 }
 function C() {
@@ -146,25 +146,25 @@ function M(e) {
     for (let [i, o] of Object.entries(e)) {
         let e = t[i];
         if (Array.isArray(o))
-            if ('object' == typeof o[0]) {
+            if ("object" == typeof o[0]) {
                 let t = Array.isArray(e) ? e : [],
                     a = (r[i] = []);
                 for (let e = 0; e < o.length; e++) {
                     let r = t[e],
-                        i = 'object' == typeof r ? r : {};
+                        i = "object" == typeof r ? r : {};
                     a.push(M(o[e], i, n));
                 }
             } else r[i] = o;
-        else if ('object' == typeof o && null !== o) {
-            let t = 'object' == typeof e && null !== e ? e : {};
+        else if ("object" == typeof o && null !== o) {
+            let t = "object" == typeof e && null !== e ? e : {};
             r[i] = M(o, t, n);
-        } else if (i in E && 'number' == typeof o) {
+        } else if (i in E && "number" == typeof o) {
             let t = (r[i] = Array.isArray(e) ? e : []);
-            (t.push({
+            t.push({
                 value: o,
-                time: n
+                time: n,
             }),
-                t.length > b && t.shift());
+                t.length > b && t.shift();
         } else r[i] = o;
     }
     return r;
@@ -179,7 +179,7 @@ function k(e) {
             j({
                 context: e,
                 stats: t.stats,
-                index: n
+                index: n,
             });
         });
     });
@@ -188,10 +188,10 @@ function j(e) {
     let { context: t, stats: n, index: r } = e,
         i = m[t];
     if (null != n) {
-        let [e, o, a] = h.split(':');
+        let [e, o, a] = h.split(":");
         if (e === t && parseInt(a) === r && null != c.default.getUser(o)) {
             let {
-                rtp: { inbound: e }
+                rtp: { inbound: e },
             } = n;
             Object.keys(e).includes(o) || (h = p);
         }
@@ -210,11 +210,11 @@ function G(e) {
         ((S = r),
         r.on(o.Sh.Video, (e, t, n, i, o) => {
             a.Z.dispatch({
-                type: 'RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT',
+                type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
                 mediaEngineConnectionId: r.mediaEngineConnectionId,
                 userId: e,
                 videoSsrc: null != i ? i : 0,
-                streamId: null != t ? t : ''
+                streamId: null != t ? t : "",
             });
         }),
         a.Z.wait(() => s.bA()));
@@ -238,11 +238,11 @@ class V extends (r = i.ZP.Store) {
     getInboundStats(e, t) {
         var n, r;
         let i = null == (r = this.getAllStats(t)[0]) || null == (n = r.rtp) ? void 0 : n.inbound[e],
-            o = null == i ? void 0 : i.find((e) => 'video' === e.type);
+            o = null == i ? void 0 : i.find((e) => "video" === e.type);
         return {
             codec: null == o ? void 0 : o.codec.name,
             resolution: null == o ? void 0 : o.resolution,
-            bitrateEstimate: void 0
+            bitrateEstimate: void 0,
         };
     }
     getOutboundStats(e) {
@@ -251,13 +251,15 @@ class V extends (r = i.ZP.Store) {
             o = this.getAllStats(e),
             a = null == (t = o[0]) ? void 0 : t.transport,
             s = null == (r = o[0]) || null == (n = r.rtp) ? void 0 : n.outbound,
-            l = null == s ? void 0 : s.find((e) => 'video' === e.type);
+            l = null == s ? void 0 : s.find((e) => "video" === e.type);
         return (
-            Array.isArray(null == a ? void 0 : a.availableOutgoingBitrate) && a.availableOutgoingBitrate.length > 0 && (i = a.availableOutgoingBitrate[a.availableOutgoingBitrate.length - 1].value),
+            Array.isArray(null == a ? void 0 : a.availableOutgoingBitrate) &&
+                a.availableOutgoingBitrate.length > 0 &&
+                (i = a.availableOutgoingBitrate[a.availableOutgoingBitrate.length - 1].value),
             {
                 codec: null == l ? void 0 : l.codec.name,
                 resolution: null == l ? void 0 : l.resolution,
-                bitrateEstimate: i
+                bitrateEstimate: i,
             }
         );
     }
@@ -276,7 +278,7 @@ class V extends (r = i.ZP.Store) {
         return g.has(n) ? g.get(n) : d.Z.NO_OVERRIDE;
     }
 }
-f(V, 'displayName', 'RTCDebugStore');
+f(V, "displayName", "RTCDebugStore");
 let H = new V(a.Z, {
     RTC_DEBUG_MODAL_OPEN: P,
     RTC_DEBUG_MODAL_CLOSE: w,
@@ -288,5 +290,5 @@ let H = new V(a.Z, {
     RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F,
     VOICE_CHANNEL_SELECT: D,
     RTC_CONNECTION_VIDEO: L,
-    MEDIA_ENGINE_CONNECTION_STATS: k
+    MEDIA_ENGINE_CONNECTION_STATS: k,
 });

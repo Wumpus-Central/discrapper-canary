@@ -4,6 +4,6 @@ let i = Object.freeze({
         selectedTab: null,
         isSearchVisible: !1,
         entrypoint: null,
-        searchBarState: n(49898).GlobalDiscoverySearchBarState.DEFAULT
+        searchBarState: n(49898).GlobalDiscoverySearchBarState.DEFAULT,
     }),
     o = (0, r.H)(() => i);

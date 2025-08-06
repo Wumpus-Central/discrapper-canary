@@ -18,7 +18,7 @@ function g(e) {
     return (0, r.jsxs)(a.hjN, {
         className: d.container,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: d.column,
                 children: [
                     (0, r.jsx)(a.j7V, {
@@ -27,23 +27,23 @@ function g(e) {
                         value: n,
                         hideBorder: !0,
                         disabled: !t,
-                        children: c.intl.string(c.t.Dl4mJS)
+                        children: c.intl.string(c.t.Dl4mJS),
                     }),
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'text-secondary',
-                        children: c.intl.string(c.t.xzHcoa)
-                    })
-                ]
+                        variant: "text-sm/medium",
+                        color: "text-secondary",
+                        children: c.intl.string(c.t.xzHcoa),
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.column,
-                children: (0, r.jsx)('img', {
+                children: (0, r.jsx)("img", {
                     alt: c.intl.string(c.t.UOJp5e),
                     src: (0, l.ap)(g) ? m : u,
-                    className: d.progressBarImage
-                })
-            })
-        ]
+                    className: d.progressBarImage,
+                }),
+            }),
+        ],
     });
 }

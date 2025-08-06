@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,14 +20,14 @@ function c(e, t, n) {
 }
 let u = Object.freeze({
         online: null,
-        total: null
+        total: null,
     }),
     d = {},
     p = {},
     h = null;
 class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(a.Z, o.Z), (p = null != e ? e : d));
+        this.waitFor(a.Z, o.Z), (p = null != e ? e : d);
     }
     getState() {
         return p;
@@ -37,21 +37,21 @@ class f extends (r = i.ZP.PersistedStore) {
         return null != (t = p[e]) ? t : u;
     }
     requestCount(e, t) {
-        ((h = {
+        (h = {
             guildId: e,
-            channelId: t
+            channelId: t,
         }),
-            a.Z.getSocket().requestChannelMemberCount(e, t));
+            a.Z.getSocket().requestChannelMemberCount(e, t);
     }
 }
-(c(f, 'displayName', 'ChannelMemberCountStore'),
-    c(f, 'persistKey', 'channelMemberCounts'),
+c(f, "displayName", "ChannelMemberCountStore"),
+    c(f, "persistKey", "channelMemberCounts"),
     new f(l.Z, {
         CONNECTION_OPEN: function () {
-            (null != h && a.Z.getSocket().requestChannelMemberCount(h.guildId, h.channelId),
+            null != h && a.Z.getSocket().requestChannelMemberCount(h.guildId, h.channelId),
                 s.default.keys(p).forEach((e) => {
                     null == o.Z.getChannel(e) && delete p[e];
-                }));
+                });
         },
         CHANNEL_MEMBER_COUNT_UPDATE: function (e) {
             let { channelId: t, online: n, total: r } = e;
@@ -59,9 +59,9 @@ class f extends (r = i.ZP.PersistedStore) {
                 (null != n || null != r) &&
                     (p[t] = {
                         online: n,
-                        total: r
+                        total: r,
                     }),
                 !0
             );
-        }
-    }));
+        },
+    });

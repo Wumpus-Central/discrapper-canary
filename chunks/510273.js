@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(953529));
+n.d(t, { Z: () => p }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,58 +10,58 @@ var r = n(255367),
     d = n(127058);
 let h = (e) => {
     let { color: t } = e;
-    return (0, r.jsxs)('svg', {
-        width: '48',
-        height: '28',
-        viewBox: '0 0 55 34',
-        fill: 'none',
-        xmlns: 'http://www.w3.org/2000/svg',
+    return (0, r.jsxs)("svg", {
+        width: "48",
+        height: "28",
+        viewBox: "0 0 55 34",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg",
         children: [
-            (0, r.jsx)('rect', {
-                x: '10.1968',
-                y: '7',
-                width: '14.4203',
-                height: '14.4203',
-                transform: 'rotate(45 10.1968 7)',
-                className: d.__invalid_toastBG
+            (0, r.jsx)("rect", {
+                x: "10.1968",
+                y: "7",
+                width: "14.4203",
+                height: "14.4203",
+                transform: "rotate(45 10.1968 7)",
+                className: d.__invalid_toastBG,
             }),
-            (0, r.jsx)('rect', {
-                x: '27.3936',
-                y: '0.59021',
-                width: '23.4851',
-                height: '23.4851',
-                transform: 'rotate(45 27.3936 0.59021)',
-                className: d.__invalid_toastBG
+            (0, r.jsx)("rect", {
+                x: "27.3936",
+                y: "0.59021",
+                width: "23.4851",
+                height: "23.4851",
+                transform: "rotate(45 27.3936 0.59021)",
+                className: d.__invalid_toastBG,
             }),
-            (0, r.jsx)('rect', {
-                x: '44.5903',
-                y: '7',
-                width: '14.4203',
-                height: '14.4203',
-                transform: 'rotate(45 44.5903 7)',
-                className: d.__invalid_toastBG
+            (0, r.jsx)("rect", {
+                x: "44.5903",
+                y: "7",
+                width: "14.4203",
+                height: "14.4203",
+                transform: "rotate(45 44.5903 7)",
+                className: d.__invalid_toastBG,
             }),
-            (0, r.jsx)('rect', {
-                x: '10.1968',
-                y: '13',
-                width: '6',
-                height: '6',
-                transform: 'rotate(45 10.1968 13)',
-                fill: t
+            (0, r.jsx)("rect", {
+                x: "10.1968",
+                y: "13",
+                width: "6",
+                height: "6",
+                transform: "rotate(45 10.1968 13)",
+                fill: t,
             }),
-            (0, r.jsx)('path', {
-                d: 'M27.3936 4.39355L34.1233 16.2873L27.3936 28.1811L20.6638 16.2873L27.3936 4.39355Z',
-                fill: t
+            (0, r.jsx)("path", {
+                d: "M27.3936 4.39355L34.1233 16.2873L27.3936 28.1811L20.6638 16.2873L27.3936 4.39355Z",
+                fill: t,
             }),
-            (0, r.jsx)('rect', {
-                x: '44.5903',
-                y: '13',
-                width: '6',
-                height: '6',
-                transform: 'rotate(45 44.5903 13)',
-                fill: t
-            })
-        ]
+            (0, r.jsx)("rect", {
+                x: "44.5903",
+                y: "13",
+                width: "6",
+                height: "6",
+                transform: "rotate(45 44.5903 13)",
+                fill: t,
+            }),
+        ],
     });
 };
 function p(e) {
@@ -77,40 +77,40 @@ function p(e) {
         };
     }, []);
     let O = null != m && n,
-        _ = O ? s.P3F : 'div';
+        _ = O ? s.P3F : "div";
     return (0, r.jsxs)(_, {
         className: o()(d.container, O && d.actionable),
         onClick: () => {
             O && m();
         },
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.iconContainer,
                 children: (0, r.jsx)(u.Z, {
                     achievementId: t.id,
                     size: u.Z.Sizes.SIZE_40,
-                    unlocked: n
-                })
+                    unlocked: n,
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: d.__invalid_nameContainer,
                 children: [
                     (0, r.jsx)(s.Text, {
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
-                        children: l()
+                        variant: "text-md/semibold",
+                        color: "header-primary",
+                        children: l(),
                     }),
                     (0, r.jsx)(s.Text, {
-                        variant: 'text-xs/medium',
-                        color: 'header-secondary',
-                        children: g && !n ? '?????' : p()
-                    })
-                ]
+                        variant: "text-xs/medium",
+                        color: "header-secondary",
+                        children: g && !n ? "?????" : p(),
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: d.flair,
-                children: (0, r.jsx)(h, { color: b })
-            })
-        ]
+                children: (0, r.jsx)(h, { color: b }),
+            }),
+        ],
     });
 }

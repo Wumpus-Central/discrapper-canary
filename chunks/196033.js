@@ -23,9 +23,9 @@ let p = () => {
                           title: d.intl.string(d.t.QZVVBg),
                           body: d.intl.string(d.t.sajmAg),
                           version: 0,
-                          revertTextColor: !1
+                          revertTextColor: !1,
                       },
-            [n]
+            [n],
         );
     return i.useMemo(() => {
         var n, i;
@@ -34,24 +34,24 @@ let p = () => {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         i = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         i.forEach(function (t) {
                             var i;
-                            ((i = n[t]),
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: i,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = i));
-                        }));
+                                    : (e[t] = i);
+                        });
                 }
                 return e;
             })({}, p)),
@@ -59,7 +59,7 @@ let p = () => {
                 {
                     type: s.Z.BANNER,
                     asset: null != e ? e : p.asset,
-                    popoutAsset: null != t ? t : p.popoutAsset
+                    popoutAsset: null != t ? t : p.popoutAsset,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

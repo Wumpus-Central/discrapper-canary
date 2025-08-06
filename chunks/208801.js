@@ -1,50 +1,50 @@
 e.exports = function (e) {
-    let t = '[a-zA-Z-_][^\\n{]+\\{',
+    let t = "[a-zA-Z-_][^\\n{]+\\{",
         n = {
-            className: 'attribute',
+            className: "attribute",
             begin: /[a-zA-Z-_]+/,
             end: /\s*:/,
             excludeEnd: !0,
             starts: {
-                end: ';',
+                end: ";",
                 relevance: 0,
                 contains: [
                     {
-                        className: 'variable',
-                        begin: /\.[a-zA-Z-_]+/
+                        className: "variable",
+                        begin: /\.[a-zA-Z-_]+/,
                     },
                     {
-                        className: 'keyword',
-                        begin: /\(optional\)/
-                    }
-                ]
-            }
+                        className: "keyword",
+                        begin: /\(optional\)/,
+                    },
+                ],
+            },
         };
     return {
-        name: 'Roboconf',
-        aliases: ['graph', 'instances'],
+        name: "Roboconf",
+        aliases: ["graph", "instances"],
         case_insensitive: !0,
-        keywords: 'import',
+        keywords: "import",
         contains: [
             {
-                begin: '^facet ' + t,
+                begin: "^facet " + t,
                 end: /\}/,
-                keywords: 'facet',
-                contains: [n, e.HASH_COMMENT_MODE]
+                keywords: "facet",
+                contains: [n, e.HASH_COMMENT_MODE],
             },
             {
-                begin: '^\\s*instance of ' + t,
+                begin: "^\\s*instance of " + t,
                 end: /\}/,
-                keywords: 'name count channels instance-data instance-state instance of',
+                keywords: "name count channels instance-data instance-state instance of",
                 illegal: /\S/,
-                contains: ['self', n, e.HASH_COMMENT_MODE]
+                contains: ["self", n, e.HASH_COMMENT_MODE],
             },
             {
-                begin: '^' + t,
+                begin: "^" + t,
                 end: /\}/,
-                contains: [n, e.HASH_COMMENT_MODE]
+                contains: [n, e.HASH_COMMENT_MODE],
             },
-            e.HASH_COMMENT_MODE
-        ]
+            e.HASH_COMMENT_MODE,
+        ],
     };
 };

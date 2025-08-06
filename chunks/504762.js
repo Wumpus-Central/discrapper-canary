@@ -6,28 +6,28 @@ var i = n(481060),
     a = n(81512),
     o = n(217110);
 function s() {
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a.container,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: a.content,
             children: [
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     src: o,
-                    alt: l.intl.string(l.t.MvLOqq)
+                    alt: l.intl.string(l.t.MvLOqq),
                 }),
                 (0, r.jsx)(i.LZC, { size: 12 }),
                 (0, r.jsx)(i.X6q, {
                     className: a.header,
-                    variant: 'heading-lg/semibold',
-                    children: l.intl.string(l.t.t18lFh)
+                    variant: "heading-lg/semibold",
+                    children: l.intl.string(l.t.t18lFh),
                 }),
                 (0, r.jsx)(i.LZC, { size: 8 }),
                 (0, r.jsx)(i.Text, {
-                    color: 'header-secondary',
-                    variant: 'text-sm/normal',
-                    children: l.intl.string(l.t.TvGJgo)
-                })
-            ]
-        })
+                    color: "header-secondary",
+                    variant: "text-sm/normal",
+                    children: l.intl.string(l.t.TvGJgo),
+                }),
+            ],
+        }),
     });
 }

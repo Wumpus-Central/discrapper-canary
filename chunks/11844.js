@@ -18,24 +18,24 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -62,19 +62,19 @@ let j = function () {
         { analyticsLocations: t } = (0, o.ZP)(),
         j = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
         { fractionalState: E } = (0, c.Z)(),
-        C = (0, m.y)('guild_boosting_boost_cta', j, E);
+        C = (0, m.y)("guild_boosting_boost_cta", j, E);
     function O(n) {
-        (null != e.current && (0, l.Mr3)(e.current),
+        null != e.current && (0, l.Mr3)(e.current),
             (0, u.u)({
                 analyticsLocation: {
                     page: h.ZY5.GUILD_BOOSTING_USER_SETTINGS,
                     section: h.jXE.GUILD_BOOSTING_BOOST_ANY_GUILD_CTA,
                     object: h.qAy.BUTTON_CTA,
-                    objectType: h.Qqv.BUY
+                    objectType: h.Qqv.BUY,
                 },
                 analyticsLocations: t,
-                guild: n
-            }));
+                guild: n,
+            });
     }
     async function v() {
         e.current = await (0, l.ZDy)(
@@ -85,22 +85,22 @@ let j = function () {
             {
                 onCloseRequest: () => {
                     null != e.current && (0, l.Mr3)(e.current);
-                }
-            }
+                },
+            },
         );
     }
     let S = (0, g.aq)({ isBoostManagementDisabledForFractionalPremium: C });
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: b.wrapper,
         children: [
             (0, i.jsx)(l.$Eu, {
                 color: l.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                className: b.boostIcon
+                className: b.boostIcon,
             }),
             (0, i.jsx)(l.Text, {
                 className: b.copy,
-                color: 'header-secondary',
-                variant: 'text-sm/medium',
+                color: "header-secondary",
+                variant: "text-sm/medium",
                 children: f.intl.format(f.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
                         let n = null != S,
@@ -112,24 +112,24 @@ let j = function () {
                                     color: a.zx.Colors.LINK,
                                     look: a.zx.Looks.LINK,
                                     onClick: n ? void 0 : v,
-                                    children: e
+                                    children: e,
                                 },
-                                t
+                                t,
                             );
                         return n
                             ? (0, i.jsx)(
                                   d.Z,
                                   {
                                       text: S,
-                                      'aria-label': S.toString(),
-                                      children: (e) => (0, i.jsx)('span', _(x({}, e), { children: r }))
+                                      "aria-label": S.toString(),
+                                      children: (e) => (0, i.jsx)("span", _(x({}, e), { children: r })),
                                   },
-                                  t
+                                  t,
                               )
                             : r;
-                    }
-                })
-            })
-        ]
+                    },
+                }),
+            }),
+        ],
     });
 };

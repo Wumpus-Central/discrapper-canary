@@ -11,51 +11,51 @@ var i = n(278323),
 function p(e, t, n, p) {
     let f = t.username,
         h = d.intl.format(d.t.VDODnp, {
-            username: '',
-            game: n.name
+            username: "",
+            game: n.name,
         }),
         m = t.getAvatarURL(e.guild_id, 80),
         { trackView: g, trackClick: y } = (0, s.R)(c.n0.ActivityInvite, {
             notif_type: c.n0.ActivityInvite,
             notif_user_id: t.id,
             activity_type: u.mFx.JOIN_REQUEST,
-            activity_name: p.name
+            activity_name: p.name,
         });
     return {
         icon: m,
         title: f,
         body: h,
-        confirmText: d.intl.string(d.t['fgP/wc']),
+        confirmText: d.intl.string(d.t["fgP/wc"]),
         cancelText: d.intl.string(d.t.tpXzJy),
         onNotificationShow: () => {
             g();
         },
         onConfirmClick: (t, n) => {
-            (i.Z.sendActivityInvite({
+            i.Z.sendActivityInvite({
                 channelId: e.id,
                 type: u.mFx.JOIN,
                 activity: p,
-                location: l.default.isLocked((0, a.getPID)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY
+                location: l.default.isLocked((0, a.getPID)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY,
             }),
-                y('join'),
-                r.Z.updateNotificationStatus(n));
+                y("join"),
+                r.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            ((0, o.In)(
+            (0, o.In)(
                 e.id,
                 {
                     section: u.jXE.OVERLAY,
                     object: u.qAy.ACK_DECLINE_REQUEST_TO_JOIN,
-                    objectType: u.Qqv.ACK_SEMI_AUTOMATIC
+                    objectType: u.Qqv.ACK_SEMI_AUTOMATIC,
                 },
                 !0,
-                !0
+                !0,
             ),
                 r.Z.updateNotificationStatus(n),
-                y('decline'));
+                y("decline");
         },
         onDismissClick: () => {
-            y('dismiss');
-        }
+            y("dismiss");
+        },
     };
 }

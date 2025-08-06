@@ -3,68 +3,68 @@ e.exports = function (e) {
         n = t.concat(/[\p{L}_]/u, t.optional(/[\p{L}0-9_.-]*:/u), /[\p{L}0-9_.-]*/u),
         r = /[\p{L}0-9._:-]+/u,
         i = {
-            className: 'symbol',
-            begin: /&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;/
+            className: "symbol",
+            begin: /&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;/,
         },
         o = {
             begin: /\s/,
             contains: [
                 {
-                    className: 'keyword',
+                    className: "keyword",
                     begin: /#?[a-z_][a-z1-9_-]+/,
-                    illegal: /\n/
-                }
-            ]
+                    illegal: /\n/,
+                },
+            ],
         },
         a = e.inherit(o, {
             begin: /\(/,
-            end: /\)/
+            end: /\)/,
         }),
-        s = e.inherit(e.APOS_STRING_MODE, { className: 'string' }),
-        l = e.inherit(e.QUOTE_STRING_MODE, { className: 'string' }),
+        s = e.inherit(e.APOS_STRING_MODE, { className: "string" }),
+        l = e.inherit(e.QUOTE_STRING_MODE, { className: "string" }),
         c = {
             endsWithParent: !0,
             illegal: /</,
             relevance: 0,
             contains: [
                 {
-                    className: 'attr',
+                    className: "attr",
                     begin: r,
-                    relevance: 0
+                    relevance: 0,
                 },
                 {
                     begin: /=\s*/,
                     relevance: 0,
                     contains: [
                         {
-                            className: 'string',
+                            className: "string",
                             endsParent: !0,
                             variants: [
                                 {
                                     begin: /"/,
                                     end: /"/,
-                                    contains: [i]
+                                    contains: [i],
                                 },
                                 {
                                     begin: /'/,
                                     end: /'/,
-                                    contains: [i]
+                                    contains: [i],
                                 },
-                                { begin: /[^\s"'=<>`]+/ }
-                            ]
-                        }
-                    ]
-                }
-            ]
+                                { begin: /[^\s"'=<>`]+/ },
+                            ],
+                        },
+                    ],
+                },
+            ],
         };
     return {
-        name: 'HTML, XML',
-        aliases: ['html', 'xhtml', 'rss', 'atom', 'xjb', 'xsd', 'xsl', 'plist', 'wsf', 'svg'],
+        name: "HTML, XML",
+        aliases: ["html", "xhtml", "rss", "atom", "xjb", "xsd", "xsl", "plist", "wsf", "svg"],
         case_insensitive: !0,
         unicodeRegex: !0,
         contains: [
             {
-                className: 'meta',
+                className: "meta",
                 begin: /<![a-z]/,
                 end: />/,
                 relevance: 10,
@@ -78,91 +78,91 @@ e.exports = function (e) {
                         end: /\]/,
                         contains: [
                             {
-                                className: 'meta',
+                                className: "meta",
                                 begin: /<![a-z]/,
                                 end: />/,
-                                contains: [o, a, l, s]
-                            }
-                        ]
-                    }
-                ]
+                                contains: [o, a, l, s],
+                            },
+                        ],
+                    },
+                ],
             },
             e.COMMENT(/<!--/, /-->/, { relevance: 10 }),
             {
                 begin: /<!\[CDATA\[/,
                 end: /\]\]>/,
-                relevance: 10
+                relevance: 10,
             },
             i,
             {
-                className: 'meta',
+                className: "meta",
                 end: /\?>/,
                 variants: [
                     {
                         begin: /<\?xml/,
                         relevance: 10,
-                        contains: [l]
+                        contains: [l],
                     },
-                    { begin: /<\?[a-z][a-z0-9]+/ }
-                ]
+                    { begin: /<\?[a-z][a-z0-9]+/ },
+                ],
             },
             {
-                className: 'tag',
+                className: "tag",
                 begin: /<style(?=\s|>)/,
                 end: />/,
-                keywords: { name: 'style' },
+                keywords: { name: "style" },
                 contains: [c],
                 starts: {
                     end: /<\/style>/,
                     returnEnd: !0,
-                    subLanguage: ['css', 'xml']
-                }
+                    subLanguage: ["css", "xml"],
+                },
             },
             {
-                className: 'tag',
+                className: "tag",
                 begin: /<script(?=\s|>)/,
                 end: />/,
-                keywords: { name: 'script' },
+                keywords: { name: "script" },
                 contains: [c],
                 starts: {
                     end: /<\/script>/,
                     returnEnd: !0,
-                    subLanguage: ['javascript', 'handlebars']
-                }
+                    subLanguage: ["javascript", "handlebars"],
+                },
             },
             {
-                className: 'tag',
-                begin: /<>|<\/>/
+                className: "tag",
+                begin: /<>|<\/>/,
             },
             {
-                className: 'tag',
+                className: "tag",
                 begin: t.concat(/</, t.lookahead(t.concat(n, t.either(/\/>/, />/, /\s/)))),
                 end: /\/?>/,
                 contains: [
                     {
-                        className: 'name',
+                        className: "name",
                         begin: n,
                         relevance: 0,
-                        starts: c
-                    }
-                ]
+                        starts: c,
+                    },
+                ],
             },
             {
-                className: 'tag',
+                className: "tag",
                 begin: t.concat(/<\//, t.lookahead(t.concat(n, />/))),
                 contains: [
                     {
-                        className: 'name',
+                        className: "name",
                         begin: n,
-                        relevance: 0
+                        relevance: 0,
                     },
                     {
                         begin: />/,
                         relevance: 0,
-                        endsParent: !0
-                    }
-                ]
-            }
-        ]
+                        endsParent: !0,
+                    },
+                ],
+            },
+        ],
     };
 };

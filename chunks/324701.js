@@ -1,6 +1,6 @@
 n.d(t, {
     x: () => b,
-    z: () => E
+    z: () => E,
 });
 var r = n(255367),
     i = n(481060),
@@ -20,7 +20,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,7 +49,8 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -59,15 +60,15 @@ function g(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 async function E(e) {
     var { displayToast: t = !1 } = e,
-        p = m(e, ['displayToast']);
+        p = m(e, ["displayToast"]);
     if (null == c.Z.getSavedMessage(p.channelId, p.messageId) && !(0, u.Z)())
         return void (0, i.ZDy)(async () => {
-            let { default: e } = await n.e('34906').then(n.bind(n, 639565));
+            let { default: e } = await n.e("34906").then(n.bind(n, 639565));
             return (t) => (0, r.jsx)(e, h({ source: a.Z.FOR_LATER_HELPERS }, t));
         });
     if (
@@ -78,34 +79,51 @@ async function E(e) {
                     (null == e || null == (t = e.body) ? void 0 : t.code) === d.evJ.TOO_MANY_SAVED_MESSAGES
                         ? o.Z.show({
                               title: _.intl.string(_.t.mlbiZW),
-                              body: _.intl.formatToPlainString(_.t['1zVbEB'], { max: f.D }),
+                              body: _.intl.formatToPlainString(_.t["1zVbEB"], { max: f.D }),
                               cancelText: _.intl.string(_.t.BddRzc),
                               confirmText: _.intl.string(_.t.ZGbTc3),
-                              onConfirm: () => s.S.dispatch(d.CkL.TOGGLE_FOR_LATER)
+                              onConfirm: () => s.S.dispatch(d.CkL.TOGGLE_FOR_LATER),
                           })
-                        : (0, i.showToast)((0, i.createToast)(null != (r = null == e || null == (n = e.body) ? void 0 : n.message) ? r : _.intl.string(_.t.R0RpRU), i.ToastType.FAILURE)),
+                        : (0, i.showToast)(
+                              (0, i.createToast)(
+                                  null != (r = null == e || null == (n = e.body) ? void 0 : n.message)
+                                      ? r
+                                      : _.intl.string(_.t.R0RpRU),
+                                  i.ToastType.FAILURE,
+                              ),
+                          ),
                     null
                 );
             })) &&
         t
     ) {
-        let e = null != p.dueAt ? _.intl.string(_.t.i1IsOz) : _.intl.string(_.t['WQdL//']),
+        let e = null != p.dueAt ? _.intl.string(_.t.i1IsOz) : _.intl.string(_.t["WQdL//"]),
             t = null != p.dueAt ? i.ToastType.CLOCK : i.ToastType.BOOKMARK;
         (0, i.showToast)((0, i.createToast)(e, t));
     }
 }
 async function b(e) {
     var { displayToast: t = !1 } = e,
-        n = m(e, ['displayToast']);
+        n = m(e, ["displayToast"]);
     if (
         null !=
             (await (0, l.ep)(n).catch((e) => {
                 var t, n;
-                return ((0, i.showToast)((0, i.createToast)(null != (n = null == e || null == (t = e.body) ? void 0 : t.message) ? n : _.intl.string(_.t.R0RpRU), i.ToastType.FAILURE)), null);
+                return (
+                    (0, i.showToast)(
+                        (0, i.createToast)(
+                            null != (n = null == e || null == (t = e.body) ? void 0 : t.message)
+                                ? n
+                                : _.intl.string(_.t.R0RpRU),
+                            i.ToastType.FAILURE,
+                        ),
+                    ),
+                    null
+                );
             })) &&
         t
     ) {
-        let e = null != n.dueAt ? _.intl.string(_.t.D0tS09) : _.intl.string(_.t['5KOMiY']),
+        let e = null != n.dueAt ? _.intl.string(_.t.D0tS09) : _.intl.string(_.t["5KOMiY"]),
             t = null != n.dueAt ? i.ToastType.CLOCK : i.ToastType.BOOKMARK;
         (0, i.showToast)((0, i.createToast)(e, t));
     }

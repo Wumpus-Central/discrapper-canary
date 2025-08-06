@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,26 +53,26 @@ let E = function (e, t) {
             let e = (0, h.rY)(y, p.Z, d.Z);
             if (e && y.isGuildStageVoice() && (0, s.xJ)(y.id))
                 return void (0, r.ZD)(async () => {
-                    let { default: e } = await n.e('46398').then(n.bind(n, 523794));
+                    let { default: e } = await n.e("46398").then(n.bind(n, 523794));
                     return (t) => e(g({ channel: y }, t));
                 });
             if (e)
                 return void (0, r.ZD)(async () => {
-                    let { default: e } = await n.e('86465').then(n.bind(n, 997308));
+                    let { default: e } = await n.e("86465").then(n.bind(n, 997308));
                     return (t) => e(t);
                 });
         }
-        (m && (0, l.eH)(), (0, c.Z)(I, e, E, m));
+        m && (0, l.eH)(), (0, c.Z)(I, e, E, m);
     }
     function I() {
         i.Z.dispatch({
-            type: 'VOICE_CHANNEL_SELECT',
+            type: "VOICE_CHANNEL_SELECT",
             guildId: t,
             channelId: e,
             currentVoiceChannelId: _.Z.getVoiceChannelId(),
             video: m,
             stream: E,
-            lockVoiceStateForResume: b
+            lockVoiceStateForResume: b,
         });
     }
 };

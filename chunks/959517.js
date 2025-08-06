@@ -12,7 +12,7 @@ n.d(t, {
     j1: () => _,
     kQ: () => c,
     pq: () => a,
-    xi: () => h
+    xi: () => h,
 });
 var r = n(261470),
     i = n(70956);
@@ -31,23 +31,34 @@ let o = [0, 4, 8, 16, 24],
         emojiPicker: !1,
         emojiBurstPicker: !1,
         moreUtilities: !1,
-        contextMenu: !1
+        contextMenu: !1,
     }),
     c = 16,
     u = 16,
     d = 32,
     f = 64,
-    _ = '---new-messages-bar',
-    p = 'SPOILER_';
+    _ = "---new-messages-bar",
+    p = "SPOILER_";
 var h = (function (e) {
-    return ((e.ERROR_SOURCE_UNKNOWN = 'ERROR_SOURCE_UNKNOWN'), (e.PRECOMPRESSION_SUM_TOO_LARGE = 'PRECOMPRESSION_SUM_TOO_LARGE'), (e.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (e.POSTCOMPRESSION_SUM_TOO_LARGE = 'POSTCOMPRESSION_SUM_TOO_LARGE'), (e.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (e.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = 'UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR'), (e.EXPLICIT_CONTENT = 'EXPLICIT_CONTENT'), e);
+    return (
+        (e.ERROR_SOURCE_UNKNOWN = "ERROR_SOURCE_UNKNOWN"),
+        (e.PRECOMPRESSION_SUM_TOO_LARGE = "PRECOMPRESSION_SUM_TOO_LARGE"),
+        (e.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = "PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE"),
+        (e.POSTCOMPRESSION_SUM_TOO_LARGE = "POSTCOMPRESSION_SUM_TOO_LARGE"),
+        (e.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = "POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE"),
+        (e.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = "UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR"),
+        (e.EXPLICIT_CONTENT = "EXPLICIT_CONTENT"),
+        e
+    );
 })({});
 let m = 209715200,
     g = {
         timeout: 60 * i.Z.Millis.SECOND,
         retries: 3,
-        backoff: new r.Z()
+        backoff: new r.Z(),
     };
 var E = (function (e) {
-    return ((e.PUSH_NOTIFICATION = 'push_notification'), (e.CHAT_INPUT = 'chat_input'), (e.SHARE_MODAL = 'share_modal'), e);
+    return (
+        (e.PUSH_NOTIFICATION = "push_notification"), (e.CHAT_INPUT = "chat_input"), (e.SHARE_MODAL = "share_modal"), e
+    );
 })({});

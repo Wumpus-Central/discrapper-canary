@@ -21,7 +21,7 @@ function d(e, t, n, d, u) {
             channel_id: e.id,
             channel_type: e.type,
             activity_type: h,
-            activity_name: u.name
+            activity_name: u.name,
         });
     return {
         icon: f,
@@ -33,18 +33,18 @@ function d(e, t, n, d, u) {
         },
         confirmText: c.intl.string(c.t.VJlc0d),
         onConfirmClick: (o, l) => {
-            (i.Z.join({
+            i.Z.join({
                 userId: n.id,
                 sessionId: p,
                 applicationId: d.id,
                 channelId: e.id,
-                messageId: t.id
+                messageId: t.id,
             }),
                 r.Z.updateNotificationStatus(l),
-                O('join'));
+                O("join");
         },
         onDismissClick: () => {
-            O('dismiss');
-        }
+            O("dismiss");
+        },
     };
 }

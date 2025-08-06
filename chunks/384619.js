@@ -1,1 +1,1 @@
-e.exports = { toggle: 'toggle_a63120' };
+e.exports = { toggle: "toggle_a63120" };

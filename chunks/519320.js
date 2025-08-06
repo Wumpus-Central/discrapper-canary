@@ -1,7 +1,7 @@
 n.d(t, {
     EW: () => a,
     Np: () => s,
-    tb: () => o
+    tb: () => o,
 });
 var r = n(626135),
     i = n(981631);
@@ -10,7 +10,7 @@ function o(e, t, n, o) {
         message_id: e,
         total_duration_secs: t,
         start_duration_secs: Math.min(null != t ? t : n, n),
-        sender_user_id: o
+        sender_user_id: o,
     });
 }
 function a(e, t, n, o, a) {
@@ -19,12 +19,12 @@ function a(e, t, n, o, a) {
         total_duration_secs: t,
         end_duration_secs: Math.min(null != t ? t : n, n),
         sender_user_id: o,
-        duration_listening_secs: a
+        duration_listening_secs: a,
     });
 }
 function s(e, t) {
     r.default.track(i.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
         message_id: e,
-        error_message: t
+        error_message: t,
     });
 }

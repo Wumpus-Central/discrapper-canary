@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,7 +30,10 @@ function p(e) {
     let n = e.message;
     if (s.default.getId() !== (null == (t = n.author) ? void 0 : t.id) || !(0, u.z9)(n.id, n.channel_id)) return;
     let r = l.Z.getChannel(n.channel_id);
-    null != r && null != r.parent_id && a.Z.isChannelGated(r.guild_id, r.parent_id) && f.add(c.default.castMessageIdAsChannelId(e.message.id));
+    null != r &&
+        null != r.parent_id &&
+        a.Z.isChannelGated(r.guild_id, r.parent_id) &&
+        f.add(c.default.castMessageIdAsChannelId(e.message.id));
 }
 function h(e) {
     let { threadId: t } = e;
@@ -44,10 +47,10 @@ class g extends (r = i.ZP.Store) {
         return f.has(e);
     }
 }
-d(g, 'displayName', 'MediaPostSharePromptStore');
+d(g, "displayName", "MediaPostSharePromptStore");
 let E = new g(o.Z, {
     CONNECTION_OPEN: _,
     MESSAGE_CREATE: p,
     DISMISS_MEDIA_POST_SHARE_PROMPT: h,
-    LOGOUT: m
+    LOGOUT: m,
 });

@@ -1,4 +1,4 @@
-(i.d(e, { Z: () => p }), i(388685));
+i.d(e, { Z: () => p }), i(388685);
 var s,
     n = i(255367),
     a = i(73800),
@@ -15,7 +15,7 @@ function u(t, e, i) {
                   value: i,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (t[e] = i),
         t
@@ -39,32 +39,32 @@ class p extends (s = a.Component) {
                       {
                           translateY: t.interpolate({
                               inputRange: [0, 1],
-                              outputRange: ['-100px', '0px']
-                          })
+                              outputRange: ["-100px", "0px"],
+                          }),
                       },
-                      { translateZ: 0 }
-                  ]
+                      { translateZ: 0 },
+                  ],
         };
     }
     render() {
         return (0, n.jsx)(o.Z.a, {
             href: d.Z5c.INDEX,
-            target: '_blank',
-            rel: 'noopener',
+            target: "_blank",
+            rel: "noopener",
             className: r()(c.logo, this.props.className),
-            style: this.getAnimatedStyle()
+            style: this.getAnimatedStyle(),
         });
     }
     constructor(...t) {
-        (super(...t),
-            u(this, 'anim', new o.Z.Value(0)),
-            u(this, 'animate', (t) => {
+        super(...t),
+            u(this, "anim", new o.Z.Value(0)),
+            u(this, "animate", (t) => {
                 o.Z.spring(this.anim, {
                     toValue: t,
                     friction: 10,
-                    tension: 100
+                    tension: 100,
                 }).start();
-            }));
+            });
     }
 }
-u(p, 'contextType', l.Sfi);
+u(p, "contextType", l.Sfi);

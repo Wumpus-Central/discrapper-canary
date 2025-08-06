@@ -19,22 +19,22 @@ var r = a(120356),
 function j(e) {
     let { title: t, can: a } = e,
         r = a ? o.dz2 : o.Dio,
-        i = (0, n.jsx)('div', {
+        i = (0, n.jsx)("div", {
             className: l()(b.iconOuter, a ? b.iconCheck : b.iconCross),
-            children: (0, n.jsx)(r, { className: b.icon })
+            children: (0, n.jsx)(r, { className: b.icon }),
         });
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: b.scope,
         children: [
             i,
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 className: b.scopeInner,
                 children: (0, n.jsx)(o.Text, {
-                    variant: 'text-md/normal',
-                    children: t
-                })
-            })
-        ]
+                    variant: "text-md/normal",
+                    children: t,
+                }),
+            }),
+        ],
     });
 }
 function g() {
@@ -54,9 +54,9 @@ function g() {
                 j,
                 {
                     title: t,
-                    can: r
+                    can: r,
                 },
-                t
+                t,
             );
         }),
         E = Object.values(null != N ? N : {}).map((e) => {
@@ -66,37 +66,37 @@ function g() {
                 j,
                 {
                     title: t,
-                    can: r
+                    can: r,
                 },
-                t
+                t,
             );
         });
-    return (0, n.jsx)('div', {
+    return (0, n.jsx)("div", {
         className: l()(v.panel, b.panel),
-        children: (0, n.jsxs)('div', {
+        children: (0, n.jsxs)("div", {
             className: b.panelInner,
             children: [
-                (0, n.jsxs)('section', {
+                (0, n.jsxs)("section", {
                     className: b.section,
                     children: [
                         (0, n.jsx)(o.X6q, {
-                            variant: 'heading-md/semibold',
-                            children: null != y ? 'Permissions in '.concat(y) : 'No channel selected'
+                            variant: "heading-md/semibold",
+                            children: null != y ? "Permissions in ".concat(y) : "No channel selected",
                         }),
-                        O
-                    ]
+                        O,
+                    ],
                 }),
-                (0, n.jsxs)('section', {
+                (0, n.jsxs)("section", {
                     className: b.section,
                     children: [
                         (0, n.jsx)(o.X6q, {
-                            variant: 'heading-md/semibold',
-                            children: null != r ? 'Permissions in '.concat(r.name) : 'No guild selected'
+                            variant: "heading-md/semibold",
+                            children: null != r ? "Permissions in ".concat(r.name) : "No guild selected",
                         }),
-                        E
-                    ]
-                })
-            ]
-        })
+                        E,
+                    ],
+                }),
+            ],
+        }),
     });
 }

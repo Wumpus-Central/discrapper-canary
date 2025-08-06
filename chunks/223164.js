@@ -18,30 +18,30 @@ function k(t) {
             () => () => {
                 e && d.S.dispatch(u.CkL.FOCUS_COMPOSER_TITLE);
             },
-            [e]
+            [e],
         ),
         (0, i.jsx)(c.Modal, {
             transitionState: a,
             onClose: k,
-            title: p.intl.string(p.t['4d4T4u']),
+            title: p.intl.string(p.t["4d4T4u"]),
             actions: [
                 {
-                    text: p.intl.string(p.t['NX+WJC']),
-                    onClick: k
-                }
+                    text: p.intl.string(p.t["NX+WJC"]),
+                    onClick: k,
+                },
             ],
             children: (0, i.jsx)(r.Text, {
                 className: o()(h.content, C.markup),
-                variant: 'text-sm/normal',
-                color: 'header-secondary',
-                children: (0, i.jsx)('div', {
+                variant: "text-sm/normal",
+                color: "header-secondary",
+                children: (0, i.jsx)("div", {
                     children: l.Z.parseForumPostGuidelines(n.topic, !0, {
                         channelId: n.id,
                         allowHeading: !0,
-                        allowList: !0
-                    })
-                })
-            })
+                        allowList: !0,
+                    }),
+                }),
+            }),
         })
     );
 }

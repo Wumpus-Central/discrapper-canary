@@ -18,16 +18,16 @@ var r = n(255367),
 let v = () =>
         (0, r.jsx)(u.Z, {
             submitting: !1,
-            message: g.intl.string(g.t['8g514e']),
+            message: g.intl.string(g.t["8g514e"]),
             onReset: () => {
                 (0, f.PE)(!1);
             },
-            onResetText: g.intl.string(g.t['ETE/oK']),
+            onResetText: g.intl.string(g.t["ETE/oK"]),
             onSave: () => {
-                ((0, f.PE)(!1), (0, c.Mr3)(p.Pn));
+                (0, f.PE)(!1), (0, c.Mr3)(p.Pn);
             },
-            onSaveText: g.intl.string(g.t['Xt+UaW']),
-            onSaveButtonColor: o.Tt.RED
+            onSaveText: g.intl.string(g.t["Xt+UaW"]),
+            onSaveButtonColor: o.Tt.RED,
         }),
     j = (e) => {
         let { transitionState: t, guildId: n, onClose: o, onComplete: u, inviteKey: p, isPreview: g = !1 } = e,
@@ -43,15 +43,15 @@ let v = () =>
                   children: [
                       (0, r.jsxs)(a.I, {
                           transitionState: t,
-                          'aria-labelledby': O,
-                          size: 'xl',
+                          "aria-labelledby": O,
+                          size: "xl",
                           onClose: o,
                           children: [
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: b.closeButton,
-                                  children: (0, r.jsx)(s.P, { onClick: () => o(!1) })
+                                  children: (0, r.jsx)(s.P, { onClick: () => o(!1) }),
                               }),
-                              (0, r.jsx)('div', {
+                              (0, r.jsx)("div", {
                                   className: b.container,
                                   children: (0, r.jsx)(x.Z, {
                                       verificationForm: C,
@@ -59,19 +59,19 @@ let v = () =>
                                       guildId: n,
                                       onClose: o,
                                       onComplete: u,
-                                      isPreview: g
-                                  })
-                              })
-                          ]
+                                      isPreview: g,
+                                  }),
+                              }),
+                          ],
                       }),
                       (0, r.jsx)(l.W, {
                           children:
                               !0 === j &&
                               (0, r.jsx)(c.oXn, {
                                   className: b.notice,
-                                  children: (0, r.jsx)(v, {})
-                              })
-                      })
-                  ]
+                                  children: (0, r.jsx)(v, {}),
+                              }),
+                      }),
+                  ],
               });
     };

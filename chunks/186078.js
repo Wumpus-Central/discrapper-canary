@@ -1,7 +1,7 @@
 n.d(t, {
     BO: () => d,
     QH: () => C,
-    sp: () => m
+    sp: () => m,
 });
 var r = n(255367),
     l = n(73800),
@@ -20,30 +20,30 @@ function d(e) {
                     name: e,
                     value: t,
                     radioItemIconClassName: i()(u.multipleChoiceIcon, c),
-                    radioBarClassName: u.multipleChoiceItem
+                    radioBarClassName: u.multipleChoiceItem,
                 })),
-            [C, c]
+            [C, c],
         );
     return (0, r.jsx)(a.FXm, {
-        radioPosition: 'right',
+        radioPosition: "right",
         disabled: t,
         options: m,
         value: o,
         onChange: d,
         radioItemClassName: s,
-        itemTitleClassName: u.multipleChoiceTitle
+        itemTitleClassName: u.multipleChoiceTitle,
     });
 }
 function C(e) {
     let { formField: t } = e,
-        n = null != t.response ? t.choices[t.response] : '';
+        n = null != t.response ? t.choices[t.response] : "";
     return (0, r.jsx)(s.CA, {
         title: t.label,
         children: (0, r.jsx)(c.Gi, {
             className: u.disabledFieldBackground,
             value: n,
-            disabled: !0
-        })
+            disabled: !0,
+        }),
     });
 }
 function m(e) {
@@ -53,7 +53,7 @@ function m(e) {
         children: (0, r.jsx)(d, {
             field: t,
             value: t.response,
-            onChange: n
-        })
+            onChange: n,
+        }),
     });
 }

@@ -19,6 +19,6 @@ function u(e) {
               draggable: !1,
               contextMenu: () => {},
               selected: !0,
-              route: c.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(t.id, n.code)
+              route: c.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(t.id, n.code),
           });
 }

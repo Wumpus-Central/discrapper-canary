@@ -41,52 +41,52 @@ function I(e) {
         B = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && M === S.a$.NONE,
         U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && M === S.a$.NONE,
         V = y && M === S.a$.FP_SUB_PAUSED;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(l.oQ, { className: T.blockedPaymentsWarning }),
             (0, i.jsx)(j.Z, {
                 hasGuildBoostSlots: D,
                 hasAppliedGuildBoosts: w,
                 hasBoostPerk: V,
-                canAddBoosts: U
+                canAddBoosts: U,
             }),
-            !(0, u.y)('guild_boosting_settings', N, M) &&
+            !(0, u.y)("guild_boosting_settings", N, M) &&
                 (0, i.jsx)(O.Z, {
                     hasAppliedGuildBoosts: w,
                     hasBoostPerk: V,
                     hasGuildAffinitiesOrInGuild: R,
-                    subscriptionIsPausedOrPausePending: B
+                    subscriptionIsPausedOrPausePending: B,
                 }),
             (0, i.jsx)(x.Z, {
                 hide: k,
                 containerClassName: T.FPContainer,
-                pillClassName: T.FPPill
+                pillClassName: T.FPPill,
             }),
             !R && (0, i.jsx)(E.Z, {}),
             (null == t ? void 0 : t.isPaused) && M !== S.a$.FP_SUB_PAUSED
                 ? (0, i.jsx)(_.r, {
                       appliedGuildBoosts: L,
-                      premiumSubscription: t
+                      premiumSubscription: t,
                   })
                 : (0, i.jsx)(_.Z, {
                       guildBoostSlots: n,
-                      premiumSubscription: t
+                      premiumSubscription: t,
                   }),
             (0, i.jsx)(v.Z, {
                 guildBoostSlots: I,
-                fractionalPremiumState: M
+                fractionalPremiumState: M,
             }),
             (0, i.jsx)(C.Z, {
                 canAddBoosts: w && U,
-                canApplyBoosts: k
+                canApplyBoosts: k,
             }),
             (0, i.jsx)(d.Z, {
                 className: T.tierComparisonTable,
                 hideHeading: !0,
-                hideTier0: !0
+                hideTier0: !0,
             }),
             (0, i.jsx)(o.Z, { cardClassName: T.boosterRecognitionCard }),
-            (0, i.jsx)(c.Z, { className: T.faq })
-        ]
+            (0, i.jsx)(c.Z, { className: T.faq }),
+        ],
     });
 }

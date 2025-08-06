@@ -45,19 +45,19 @@ var r = n(98405),
     K = l.TypedArray,
     z = l.TypedArrayPrototype,
     q = l.isTypedArray,
-    X = 'BYTES_PER_ELEMENT',
-    Q = 'Wrong length',
+    X = "BYTES_PER_ELEMENT",
+    Q = "Wrong length",
     J = function (e, t) {
         P(e, t, {
             configurable: !0,
             get: function () {
                 return k(this)[t];
-            }
+            },
         });
     },
     $ = function (e) {
         var t;
-        return T(V, e) || 'ArrayBuffer' === (t = y(e)) || 'SharedArrayBuffer' === t;
+        return T(V, e) || "ArrayBuffer" === (t = y(e)) || "SharedArrayBuffer" === t;
     },
     ee = function (e, t) {
         return q(e) && !v(t) && t in e && _(+t) && t >= 0;
@@ -66,26 +66,35 @@ var r = n(98405),
         return ee(e, (t = E(t))) ? d(2, e[t]) : B(e, t);
     },
     en = function (e, t, n) {
-        return ee(e, (t = E(t))) && O(n) && b(n, 'value') && !b(n, 'get') && !b(n, 'set') && !n.configurable && (!b(n, 'writable') || n.writable) && (!b(n, 'enumerable') || n.enumerable) ? ((e[t] = n.value), e) : G(e, t, n);
+        return ee(e, (t = E(t))) &&
+            O(n) &&
+            b(n, "value") &&
+            !b(n, "get") &&
+            !b(n, "set") &&
+            !n.configurable &&
+            (!b(n, "writable") || n.writable) &&
+            (!b(n, "enumerable") || n.enumerable)
+            ? ((e[t] = n.value), e)
+            : G(e, t, n);
     };
 a
-    ? (Y || ((D.f = et), (w.f = en), J(z, 'buffer'), J(z, 'byteOffset'), J(z, 'byteLength'), J(z, 'length')),
+    ? (Y || ((D.f = et), (w.f = en), J(z, "buffer"), J(z, "byteOffset"), J(z, "byteLength"), J(z, "length")),
       r(
           {
-              target: 'Object',
+              target: "Object",
               stat: !0,
-              forced: !Y
+              forced: !Y,
           },
           {
               getOwnPropertyDescriptor: et,
-              defineProperty: en
-          }
+              defineProperty: en,
+          },
       ),
       (e.exports = function (e, t, n) {
           var a = e.match(/\d+/)[0] / 8,
-              l = e + (n ? 'Clamped' : '') + 'Array',
-              c = 'get' + e,
-              d = 'set' + e,
+              l = e + (n ? "Clamped" : "") + "Array",
+              c = "get" + e,
+              d = "set" + e,
               _ = i[l],
               E = _,
               b = E && E.prototype,
@@ -106,20 +115,30 @@ a
                       set: function (e) {
                           return T(this, t, e);
                       },
-                      enumerable: !0
+                      enumerable: !0,
                   });
               };
-          (Y
+          Y
               ? s &&
                 ((E = t(function (e, t, n, r) {
                     return (
                         u(e, b),
                         M(
                             (function () {
-                                return O(t) ? ($(t) ? (void 0 !== r ? new _(t, m(n, a), r) : void 0 !== n ? new _(t, m(n, a)) : new _(t)) : q(t) ? L(E, t) : o(N, E, t)) : new _(h(t));
+                                return O(t)
+                                    ? $(t)
+                                        ? void 0 !== r
+                                            ? new _(t, m(n, a), r)
+                                            : void 0 !== n
+                                              ? new _(t, m(n, a))
+                                              : new _(t)
+                                        : q(t)
+                                          ? L(E, t)
+                                          : o(N, E, t)
+                                    : new _(h(t));
                             })(),
                             e,
-                            E
+                            E,
                         )
                     );
                 })),
@@ -137,7 +156,7 @@ a
                         d = 0;
                     if (O(t))
                         if ($(t)) {
-                            ((i = t), (d = m(n, a)));
+                            (i = t), (d = m(n, a));
                             var f = t.byteLength;
                             if (void 0 === r) {
                                 if (f % a || (s = f - d) < 0) throw new Z(Q);
@@ -152,31 +171,30 @@ a
                             byteOffset: d,
                             byteLength: s,
                             length: l,
-                            view: new H(i)
+                            view: new H(i),
                         });
                         c < l;
-
                     )
                         P(e, c++);
                 })),
                 S && S(E, K),
                 (b = E.prototype = I(z))),
-              b.constructor !== E && f(b, 'constructor', E),
+              b.constructor !== E && f(b, "constructor", E),
               (U(b).TypedArrayConstructor = E),
-              W && f(b, W, l));
+              W && f(b, W, l);
           var w = E !== _;
-          ((y[l] = E),
+          (y[l] = E),
               r(
                   {
                       global: !0,
                       constructor: !0,
                       forced: w,
-                      sham: !Y
+                      sham: !Y,
                   },
-                  y
+                  y,
               ),
               X in E || f(E, X, a),
               X in b || f(b, X, a),
-              R(l));
+              R(l);
       }))
     : (e.exports = function () {});

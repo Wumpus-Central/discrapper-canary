@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -17,10 +17,10 @@ function m(e) {
             let e = f.current;
             null != e && null != e.offsetWidth && null != e.scrollWidth && x(e.offsetWidth < e.scrollWidth);
         }, []),
-        (0, i.jsxs)('div', {
+        (0, i.jsxs)("div", {
             className: a()(u.container, t),
             children: [
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: u.guildPrefixContainer,
                     children: [
                         (0, i.jsx)(o.Ft, {
@@ -29,9 +29,9 @@ function m(e) {
                             guildIcon: g,
                             iconSize: h,
                             className: u.guildPrefixIcon,
-                            animate: !1
+                            animate: !1,
                         }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: u.details,
                             children: (0, i.jsx)(l.ua7, {
                                 text: p,
@@ -40,36 +40,36 @@ function m(e) {
                                 children: (e) => {
                                     var t, n;
                                     return (0, i.jsx)(
-                                        'span',
+                                        "span",
                                         ((t = (function (e) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     i = Object.keys(n);
-                                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                                "function" == typeof Object.getOwnPropertySymbols &&
                                                     (i = i.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        })
+                                                        }),
                                                     )),
                                                     i.forEach(function (t) {
                                                         var i;
-                                                        ((i = n[t]),
+                                                        (i = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: i,
                                                                       enumerable: !0,
                                                                       configurable: !0,
-                                                                      writable: !0
+                                                                      writable: !0,
                                                                   })
-                                                                : (e[t] = i));
-                                                    }));
+                                                                : (e[t] = i);
+                                                    });
                                             }
                                             return e;
                                         })({ ref: f }, e)),
                                         (n = n =
                                             {
                                                 className: u.guildName,
-                                                children: p
+                                                children: p,
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -83,14 +83,14 @@ function m(e) {
                                               })(Object(n)).forEach(function (e) {
                                                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                               }),
-                                        t)
+                                        t),
                                     );
-                                }
-                            })
-                        })
-                    ]
+                                },
+                            }),
+                        }),
+                    ],
                 }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: u.tagContainer,
                     children: (0, i.jsx)(c.m0, {
                         guildId: m,
@@ -98,12 +98,12 @@ function m(e) {
                         guildTag: n,
                         guildBadge: s,
                         badgeSize: d.Gg.SIZE_16,
-                        textColor: 'interactive-normal',
-                        textVariant: 'text-sm/semibold',
-                        badgeClassName: u.badge
-                    })
-                })
-            ]
+                        textColor: "interactive-normal",
+                        textVariant: "text-sm/semibold",
+                        badgeClassName: u.badge,
+                    }),
+                }),
+            ],
         })
     );
 }

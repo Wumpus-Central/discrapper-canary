@@ -16,7 +16,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,27 +26,40 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function p(e) {
-    let { showUpsell: t, text: n, textVariant: i, button: f, buttonAnalyticsObject: p, className: h, buttonStyles: m, onSubscribeModalClose: g, showShadow: E = !0, position: b = 'floating', buttonSize: y = 'md', useLockIcon: O = !1 } = e,
+    let {
+            showUpsell: t,
+            text: n,
+            textVariant: i,
+            button: f,
+            buttonAnalyticsObject: p,
+            className: h,
+            buttonStyles: m,
+            onSubscribeModalClose: g,
+            showShadow: E = !0,
+            position: b = "floating",
+            buttonSize: y = "md",
+            useLockIcon: O = !1,
+        } = e,
         v = (0, s.q_F)({
-            transform: t ? 'translateY(0%)' : 'translateY(120%)',
+            transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
             config: {
                 tension: 120,
-                friction: 14
-            }
+                friction: 14,
+            },
         });
     return (0, r.jsxs)(a.animated.div, {
         style: _({}, v),
@@ -54,31 +67,31 @@ function p(e) {
             d.upsellContainer,
             {
                 [d.upsellContainerShadow]: E,
-                [d.upsellContainerFloating]: 'floating' === b,
-                [d.upsellContainerInline]: 'inline' === b
+                [d.upsellContainerFloating]: "floating" === b,
+                [d.upsellContainerInline]: "inline" === b,
             },
-            h
+            h,
         ),
         children: [
             O
                 ? (0, r.jsx)(s.d$P, {
-                      size: 'custom',
+                      size: "custom",
                       height: 20,
                       width: 20,
-                      color: 'currentColor',
-                      className: d.lockIcon
+                      color: "currentColor",
+                      className: d.lockIcon,
                   })
                 : (0, r.jsx)(s.SrA, {
-                      size: 'md',
-                      color: l.JX.PREMIUM_TIER_2
+                      size: "md",
+                      color: l.JX.PREMIUM_TIER_2,
                   }),
             (0, r.jsx)(s.Text, {
-                variant: null != i ? i : 'text-sm/medium',
-                color: 'header-primary',
+                variant: null != i ? i : "text-sm/medium",
+                color: "header-primary",
                 className: d.upsellText,
-                children: n
+                children: n,
             }),
-            'string' == typeof f
+            "string" == typeof f
                 ? (0, r.jsx)(c.Z, {
                       size: y,
                       className: d.upsellButton,
@@ -87,9 +100,9 @@ function p(e) {
                       textOptions: { textOverride: f },
                       premiumModalAnalyticsLocation: p,
                       tabIndex: t ? 0 : -1,
-                      onSubscribeModalClose: g
+                      onSubscribeModalClose: g,
                   })
-                : f
-        ]
+                : f,
+        ],
     });
 }

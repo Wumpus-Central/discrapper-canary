@@ -1,29 +1,32 @@
 n.d(t, { Z: () => s });
 var r = n(374470);
 function i(e, t, n) {
-    let i = 'horizontal' === t ? e.offsetWidth : e.offsetHeight,
-        o = 'horizontal' === t ? e.offsetLeft : e.offsetTop,
+    let i = "horizontal" === t ? e.offsetWidth : e.offsetHeight,
+        o = "horizontal" === t ? e.offsetLeft : e.offsetTop,
         a = e.offsetParent;
-    for (; null != a && a !== n; ) (0, r.k)(a, HTMLElement) ? ((o += 'horizontal' === t ? a.offsetLeft : a.offsetTop), (a = a.offsetParent)) : (a = a.parentNode);
+    for (; null != a && a !== n; )
+        (0, r.k)(a, HTMLElement)
+            ? ((o += "horizontal" === t ? a.offsetLeft : a.offsetTop), (a = a.offsetParent))
+            : (a = a.parentNode);
     return {
         offset: o,
-        offsetSize: i
+        offsetSize: i,
     };
 }
 function o(e, t) {
-    if ('horizontal' === t) {
+    if ("horizontal" === t) {
         let { scrollLeft: t, scrollWidth: n, offsetWidth: r } = e;
         return {
             scrollPosition: t,
             scrollSize: n,
-            offsetSize: r
+            offsetSize: r,
         };
     }
     let { scrollTop: n, scrollHeight: r, offsetHeight: i } = e;
     return {
         scrollPosition: n,
         scrollSize: r,
-        offsetSize: i
+        offsetSize: i,
     };
 }
 function a(e, t, n) {
@@ -31,7 +34,7 @@ function a(e, t, n) {
     return e >= r - 1 ? r : Math.max(0, e);
 }
 function s(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'vertical',
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "vertical",
         s = (e) => {
             let { to: i, animate: s, callback: l } = e,
                 { scrollPosition: c, scrollSize: u, offsetSize: d } = o(t(), r);
@@ -39,13 +42,13 @@ function s(e, t, n) {
                 to: a(i, u, d),
                 from: c,
                 animate: s,
-                callback: l
+                callback: l,
             });
         },
         l = (e) => {
             let { start: n, end: i, shouldScrollToStart: a = !1, padding: l = 0, animate: c, callback: u } = e,
                 { scrollPosition: d, offsetSize: f } = o(t(), r);
-            ((n -= l),
+            (n -= l),
                 (i += l),
                 n >= d && i <= d + f
                     ? null != u && u()
@@ -53,13 +56,13 @@ function s(e, t, n) {
                       ? s({
                             to: n,
                             animate: c,
-                            callback: u
+                            callback: u,
                         })
                       : s({
                             to: i - f,
                             animate: c,
-                            callback: u
-                        }));
+                            callback: u,
+                        });
         };
     return {
         spring: n,
@@ -77,7 +80,7 @@ function s(e, t, n) {
                 shouldScrollToStart: o,
                 padding: a,
                 animate: s,
-                callback: c
+                callback: c,
             });
         },
         scrollPageUp() {
@@ -86,7 +89,7 @@ function s(e, t, n) {
             s({
                 to: i - 0.9 * a,
                 animate: e,
-                callback: n
+                callback: n,
             });
         },
         scrollPageDown() {
@@ -95,7 +98,7 @@ function s(e, t, n) {
             s({
                 to: i + 0.9 * a,
                 animate: e,
-                callback: n
+                callback: n,
             });
         },
         scrollToTop() {
@@ -103,7 +106,7 @@ function s(e, t, n) {
             s({
                 to: 0,
                 animate: e,
-                callback: t
+                callback: t,
             });
         },
         scrollToBottom() {
@@ -111,7 +114,7 @@ function s(e, t, n) {
             s({
                 to: Number.MAX_SAFE_INTEGER,
                 animate: e,
-                callback: t
+                callback: t,
             });
         },
         isScrolledToTop: () => 0 === o(t(), r).scrollPosition,
@@ -123,6 +126,6 @@ function s(e, t, n) {
         getDistanceFromBottom() {
             let { scrollPosition: e, scrollSize: n, offsetSize: i } = o(t(), r);
             return Math.max(0, n - i - e);
-        }
+        },
     };
 }

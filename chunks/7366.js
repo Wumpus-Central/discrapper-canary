@@ -13,7 +13,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,8 @@ function _(e, t) {
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,12 +76,12 @@ function p(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let h = (e) => {
     var { gradientColor: t, title: n, subtitle: c, onClose: d, onSecondaryClick: p, videoSrc: h, loopAt: m } = e,
-        g = _(e, ['gradientColor', 'title', 'subtitle', 'onClose', 'onSecondaryClick', 'videoSrc', 'loopAt']);
+        g = _(e, ["gradientColor", "title", "subtitle", "onClose", "onSecondaryClick", "videoSrc", "loopAt"]);
     let { subscribeButtonProps: E, subscriptionTier: b } = (0, a.G)({ defaultTextOverride: l.intl.string(l.t.pj0XBA) }),
         y = (0, s.Z)();
     return (0, r.jsx)(o.Z, {
@@ -91,32 +92,32 @@ let h = (e) => {
                 i.I,
                 u(
                     {
-                        size: 'md',
+                        size: "md",
                         onClose: async () => {
                             await d();
                         },
                         gradientColor: t,
                         graphic: {
-                            type: 'video',
+                            type: "video",
                             src: h,
                             loop: !0,
-                            loopAt: m
+                            loopAt: m,
                         },
                         title: n,
                         subtitle: c,
                         actions: [
                             {
-                                variant: 'secondary',
+                                variant: "secondary",
                                 text: l.intl.string(l.t.ZnqyZ2),
-                                onClick: p
+                                onClick: p,
                             },
-                            f(u({}, E), { onClick: o })
-                        ]
+                            f(u({}, E), { onClick: o }),
+                        ],
                     },
                     null != y && { badge: { text: y } },
-                    g
-                )
+                    g,
+                ),
             );
-        }
+        },
     });
 };

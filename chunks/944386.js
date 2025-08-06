@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,26 +43,26 @@ let p = (e) => {
             _(
                 {
                     guild_id: n,
-                    emoji_id: t
+                    emoji_id: t,
                 },
-                (0, o.v_)(a.Z.getChannel(s.Z.getChannelId(n)))
-            )
+                (0, o.v_)(a.Z.getChannel(s.Z.getChannelId(n))),
+            ),
         );
     return (
         (0, i.ZP)(() => {
             var e;
-            ((0, c.x)(u.qR.TrackOpenPopoutUsed),
+            (0, c.x)(u.qR.TrackOpenPopoutUsed),
                 h ||
                     l.default.track(
                         d.rMx.OPEN_POPOUT,
                         _(
                             {
-                                type: null != (e = null == f ? void 0 : f.analyticsType) ? e : 'Standard Emoji Popout',
-                                nonce: p
+                                type: null != (e = null == f ? void 0 : f.analyticsType) ? e : "Standard Emoji Popout",
+                                nonce: p,
                             },
-                            m
-                        )
-                    ));
+                            m,
+                        ),
+                    );
         }),
         m
     );

@@ -8,7 +8,7 @@ var i = n(481060),
     s = n(998502),
     c = n(258220),
     u = n(981631);
-let d = 'activity-hardware-acceleration-modal';
+let d = "activity-hardware-acceleration-modal";
 function p(e) {
     l.ZP.disableActivityHardwareAccelerationPrompt ||
         !o.isPlatformEmbedded ||
@@ -23,34 +23,34 @@ function p(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
-                        })({ applicationId: e }, n)
+                        })({ applicationId: e }, n),
                     );
             },
             {
                 modalKey: d,
                 onCloseRequest: () => {
-                    (a.default.track(u.rMx.MODAL_DISMISSED, { type: c.r }), (0, i.Mr3)(d));
-                }
-            }
+                    a.default.track(u.rMx.MODAL_DISMISSED, { type: c.r }), (0, i.Mr3)(d);
+                },
+            },
         );
 }

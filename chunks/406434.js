@@ -16,36 +16,36 @@ function s(e) {
         case a.we:
             t = {
                 x: d,
-                y: n.y - s.height
+                y: n.y - s.height,
             };
             break;
         case a.I:
             t = {
                 x: d,
-                y: n.y + n.height
+                y: n.y + n.height,
             };
             break;
         case a.F2:
             t = {
                 x: n.x + n.width,
-                y: f
+                y: f,
             };
             break;
         case a.t$:
             t = {
                 x: n.x - s.width,
-                y: f
+                y: f,
             };
             break;
         default:
             t = {
                 x: n.x,
-                y: n.y
+                y: n.y,
             };
     }
     var _ = c ? (0, o.Z)(c) : null;
     if (null != _) {
-        var p = 'y' === _ ? 'height' : 'width';
+        var p = "y" === _ ? "height" : "width";
         switch (u) {
             case a.BL:
                 t[_] = t[_] - (n[p] / 2 - s[p] / 2);

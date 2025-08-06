@@ -5,16 +5,16 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-(n.d(t, { L: () => i }), n(388685));
+n.d(t, { L: () => i }), n(388685);
 class i {
     cleanUp(e) {
-        (this.cancel(e), this.delete(e));
+        this.cancel(e), this.delete(e);
     }
     cancel(e) {
         var t;
@@ -30,6 +30,6 @@ class i {
         this.searchFetchers.set(e, t);
     }
     constructor() {
-        r(this, 'searchFetchers', new Map());
+        r(this, "searchFetchers", new Map());
     }
 }

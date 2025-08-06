@@ -2,7 +2,7 @@ n.d(t, {
     Pw: () => E,
     ZP: () => A,
     ms: () => d,
-    p5: () => c
+    p5: () => c,
 });
 var r = n(913527),
     l = n.n(r),
@@ -17,7 +17,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,7 +28,8 @@ function c(e) {
     if (e <= o.rsA.GUILD_UPDATE) return o.KFR.GUILD;
     if (e <= o.rsA.CHANNEL_DELETE || e === o.rsA.MESSAGE_BULK_DELETE) return o.KFR.CHANNEL;
     if (e <= o.rsA.CHANNEL_OVERWRITE_DELETE) return o.KFR.CHANNEL_OVERWRITE;
-    if (e <= o.rsA.BOT_ADD || e === o.rsA.MESSAGE_DELETE || e === o.rsA.MESSAGE_PIN || e === o.rsA.MESSAGE_UNPIN) return o.KFR.USER;
+    if (e <= o.rsA.BOT_ADD || e === o.rsA.MESSAGE_DELETE || e === o.rsA.MESSAGE_PIN || e === o.rsA.MESSAGE_UNPIN)
+        return o.KFR.USER;
     else if (e <= o.rsA.ROLE_DELETE) return o.KFR.ROLE;
     else if (e <= o.rsA.INVITE_DELETE) return o.KFR.INVITE;
     else if (e <= o.rsA.WEBHOOK_DELETE) return o.KFR.WEBHOOK;
@@ -56,7 +57,7 @@ function c(e) {
     else if (e <= o.rsA.GUILD_MEMBER_VERIFICATION_UPDATE) return o.KFR.GUILD_MEMBER_VERIFICATION;
     else if (e <= o.rsA.GUILD_PROFILE_UPDATE) return o.KFR.GUILD_PROFILE;
     else if (e <= o.rsA.GUILD_MIGRATE_PIN_PERMISSION) return o.KFR.GUILD;
-    return (i.Z.captureMessage('Unknown target type for: '.concat(e)), o.KFR.UNKNOWN);
+    return i.Z.captureMessage("Unknown target type for: ".concat(e)), o.KFR.UNKNOWN;
 }
 function E(e) {
     switch (e) {
@@ -145,13 +146,43 @@ function E(e) {
 }
 class d {
     constructor(e, t, n) {
-        (u(this, 'key', void 0), u(this, 'oldValue', void 0), u(this, 'newValue', void 0), u(this, 'subtarget', void 0), (this.key = e), (this.oldValue = t), (this.newValue = n));
+        u(this, "key", void 0),
+            u(this, "oldValue", void 0),
+            u(this, "newValue", void 0),
+            u(this, "subtarget", void 0),
+            (this.key = e),
+            (this.oldValue = t),
+            (this.newValue = n);
     }
 }
 class _ extends s.Z {
     constructor(e) {
         var t, n, r, s, i, o;
-        (super(), u(this, 'id', void 0), u(this, 'actionType', void 0), u(this, 'action', void 0), u(this, 'targetType', void 0), u(this, 'targetId', void 0), u(this, 'target', void 0), u(this, 'userId', void 0), u(this, 'changes', void 0), u(this, 'timestampStart', void 0), u(this, 'timestampEnd', void 0), u(this, 'user', void 0), u(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = E(this.action)), (this.targetId = e.targetId), (this.timestampStart = null != (t = e.timestampStart) ? t : l()(a.default.extractTimestamp(this.id))), (this.timestampEnd = null != (n = e.timestampEnd) ? n : this.timestampStart), (this.userId = e.userId), (this.changes = null != (r = e.changes) ? r : []), (this.targetType = c(this.action)), (this.options = null != (s = e.options) ? s : {}), (this.target = null != (i = e.target) ? i : e.id), (this.user = null != (o = e.user) ? o : null));
+        super(),
+            u(this, "id", void 0),
+            u(this, "actionType", void 0),
+            u(this, "action", void 0),
+            u(this, "targetType", void 0),
+            u(this, "targetId", void 0),
+            u(this, "target", void 0),
+            u(this, "userId", void 0),
+            u(this, "changes", void 0),
+            u(this, "timestampStart", void 0),
+            u(this, "timestampEnd", void 0),
+            u(this, "user", void 0),
+            u(this, "options", void 0),
+            (this.id = e.id),
+            (this.action = e.action),
+            (this.actionType = E(this.action)),
+            (this.targetId = e.targetId),
+            (this.timestampStart = null != (t = e.timestampStart) ? t : l()(a.default.extractTimestamp(this.id))),
+            (this.timestampEnd = null != (n = e.timestampEnd) ? n : this.timestampStart),
+            (this.userId = e.userId),
+            (this.changes = null != (r = e.changes) ? r : []),
+            (this.targetType = c(this.action)),
+            (this.options = null != (s = e.options) ? s : {}),
+            (this.target = null != (i = e.target) ? i : e.id),
+            (this.user = null != (o = e.user) ? o : null);
     }
 }
 let A = _;

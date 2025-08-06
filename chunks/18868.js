@@ -1,4 +1,4 @@
-(a.d(t, { L: () => h }), a(388685));
+a.d(t, { L: () => h }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -19,105 +19,105 @@ let m = () => {
                             for (var t = 1; t < arguments.length; t++) {
                                 var a = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(a);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (n = n.concat(
                                         Object.getOwnPropertySymbols(a).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     n.forEach(function (t) {
                                         var n;
-                                        ((n = a[t]),
+                                        (n = a[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: n,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = n));
-                                    }));
+                                                : (e[t] = n);
+                                    });
                             }
                             return e;
                         })(
                             {
-                                title: 'No image or video files found!',
-                                help: 'Please drop one or more image or video files.'
+                                title: "No image or video files found!",
+                                help: "Please drop one or more image or video files.",
                             },
-                            t
-                        )
+                            t,
+                        ),
                     );
             },
-            { modalKey: c.A }
+            { modalKey: c.A },
         );
     },
     x = (e) => {
-        (e.stopPropagation(), e.preventDefault());
+        e.stopPropagation(), e.preventDefault();
     },
     h = (e) => {
         let { className: t, onDrop: a } = e,
             [l, h] = r.useState(!1),
             p = r.useRef(null),
             f = r.useCallback((e) => {
-                (x(e), h(!0), (0, s.Mr3)(c.A));
+                x(e), h(!0), (0, s.Mr3)(c.A);
             }, []),
             b = r.useCallback((e) => {
-                (x(e), h(!1));
+                x(e), h(!1);
             }, []),
             v = r.useCallback(
                 async (e) => {
-                    (x(e), h(!1));
+                    x(e), h(!1);
                     let t = e.dataTransfer;
                     if (null == t) return void m();
                     let n = await Promise.all(
                         Array.from(t.items).map((e) => {
                             var t;
                             return null != (t = e.webkitGetAsEntry()) ? t : e.getAsEntry();
-                        })
+                        }),
                     ).then((e) => e.filter((e) => null != e));
                     n.length > 0 ? a(n) : m();
                 },
-                [a]
+                [a],
             );
-        return (0, n.jsx)('div', {
+        return (0, n.jsx)("div", {
             ref: p,
             className: i()(t, u.uploadArea),
             onDragEnter: f,
             onDragLeave: b,
             onDrop: v,
-            children: (0, n.jsx)('div', {
+            children: (0, n.jsx)("div", {
                 className: i()(u.uploadModal, { [u.droppable]: l }),
-                children: (0, n.jsxs)('div', {
+                children: (0, n.jsxs)("div", {
                     className: u.inner,
                     children: [
                         (0, n.jsx)(o.Z, { icons: d.J6 }),
                         (0, n.jsx)(s.X6q, {
-                            variant: 'heading-lg/bold',
-                            children: 'Upload Shop Assets'
+                            variant: "heading-lg/bold",
+                            children: "Upload Shop Assets",
                         }),
-                        (0, n.jsxs)('div', {
+                        (0, n.jsxs)("div", {
                             className: u.instructions,
                             children: [
                                 (0, n.jsx)(s.Text, {
-                                    variant: 'text-sm/normal',
-                                    children: 'Drop file(s) into this panel to preview Shop assets!'
+                                    variant: "text-sm/normal",
+                                    children: "Drop file(s) into this panel to preview Shop assets!",
                                 }),
                                 (0, n.jsxs)(s.Text, {
-                                    variant: 'text-sm/normal',
+                                    variant: "text-sm/normal",
                                     children: [
-                                        'Click',
+                                        "Click",
                                         (0, n.jsx)(s.idN, {
                                             className: u.questionIcon,
-                                            size: 'xs',
-                                            color: s.TVs.colors.TEXT_DEFAULT
+                                            size: "xs",
+                                            color: s.TVs.colors.TEXT_DEFAULT,
                                         }),
-                                        'above for more instructions.'
-                                    ]
-                                })
-                            ]
-                        })
-                    ]
-                })
-            })
+                                        "above for more instructions.",
+                                    ],
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            }),
         });
     };

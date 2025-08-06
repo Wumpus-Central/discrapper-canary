@@ -21,7 +21,7 @@ var i = n(255367),
 function C(e) {
     let { groupName: t, targetElementRef: n } = e,
         r = (0, h.Z)(),
-        l = (0, g.Z)({ location: 'TenureLevelUpCoachmark' }),
+        l = (0, g.Z)({ location: "TenureLevelUpCoachmark" }),
         m = (0, d.Z)((e) => e.isOpen),
         p = (0, s.e7)([u.Z], () => u.Z.getLayers().includes(x.S9g.USER_SETTINGS));
     return !l || null == r || m || p
@@ -34,19 +34,19 @@ function C(e) {
                   let { visibleContent: t, markAsDismissed: s } = e;
                   return (0, i.jsx)(o.yRy, {
                       shouldShow: t === a.z.NITRO_TENURE_BADGE_LEVEL_UP,
-                      position: 'top',
+                      position: "top",
                       renderPopout: (e) => {
                           let { closePopout: t } = e;
                           return (0, i.jsx)(O, {
                               recentlyLeveledTenureBadge: r,
                               markAsDismissed: s,
-                              closePopout: t
+                              closePopout: t,
                           });
                       },
                       targetElementRef: n,
-                      children: () => null
+                      children: () => null,
                   });
-              }
+              },
           });
 }
 function O(e) {
@@ -55,13 +55,16 @@ function O(e) {
         c = b.Qh.indexOf(n),
         u = (0, f.J)(b.Qh[c > 0 ? c - 1 : c], { ambient: !0 }),
         g = (0, r.useCallback)(() => {
-            (s(_.L.TAKE_ACTION), a(), d.Z.setState({ shouldRenderTenureLevelUp: !0 }), m.S.dispatch(x.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {}));
+            s(_.L.TAKE_ACTION),
+                a(),
+                d.Z.setState({ shouldRenderTenureLevelUp: !0 }),
+                m.S.dispatch(x.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
         }, [s, a]),
         h = (0, r.useCallback)(() => {
-            (s(_.L.USER_DISMISS), a());
+            s(_.L.USER_DISMISS), a();
         }, [s, a]),
         C = b.vK[n];
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: E.contents,
         children: [
             (0, i.jsx)(o.M0o, {
@@ -70,34 +73,36 @@ function O(e) {
                 color: o.YX$.TERTIARY,
                 size: o.tT7.SIZE_24,
                 icon: (0, i.jsx)(o.Dio, {
-                    size: 'xs',
-                    color: 'currentColor'
+                    size: "xs",
+                    color: "currentColor",
                 }),
-                onClick: h
+                onClick: h,
             }),
             null != u &&
-                (0, i.jsx)('img', {
+                (0, i.jsx)("img", {
                     src: u,
                     alt: j.intl.string(C.nameUnformatted),
-                    className: E.badgeImage
+                    className: E.badgeImage,
                 }),
             (0, i.jsx)(o.X6q, {
-                variant: 'heading-md/extrabold',
-                children: j.intl.string(j.t.VoDxsb)
+                variant: "heading-md/extrabold",
+                children: j.intl.string(j.t.VoDxsb),
             }),
             (0, i.jsx)(o.Text, {
-                variant: 'text-sm/medium',
+                variant: "text-sm/medium",
                 className: E.subtitle,
-                children: j.intl.formatToPlainString(j.t.ewkaVV, { timeMilestone: null == (t = (0, p.q)(C.id, C.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase() })
+                children: j.intl.formatToPlainString(j.t.ewkaVV, {
+                    timeMilestone: null == (t = (0, p.q)(C.id, C.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
+                }),
             }),
             (0, i.jsx)(l.zx, {
                 className: E.checkItOutButton,
                 color: l.Tt.WHITE,
                 size: l.Ph.SMALL,
                 onClick: g,
-                children: j.intl.string(j.t.RzWDqa)
+                children: j.intl.string(j.t.RzWDqa),
             }),
-            (0, i.jsx)('div', { className: E.pointer })
-        ]
+            (0, i.jsx)("div", { className: E.pointer }),
+        ],
     });
 }

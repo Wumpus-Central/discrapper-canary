@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(413496), n(433524), n(35282));
+n.d(t, { Z: () => I }), n(413496), n(433524), n(35282);
 var i,
     r,
     s = n(255367),
@@ -21,7 +21,7 @@ function x(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 x(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -61,34 +61,34 @@ function j(e, t) {
         e
     );
 }
-let E = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
+let E = new RegExp("https?://".concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ""));
 function C(e) {
-    return 'string' == typeof e.content ? e.content : S(e.content);
+    return "string" == typeof e.content ? e.content : S(e.content);
 }
 let O = j(_({}, d().defaultRules), {
         heading: j(_({}, d().defaultRules.heading), {
             react(e, t, n) {
-                let i = 'h'.concat(e.level);
+                let i = "h".concat(e.level);
                 return (0, s.jsx)(
                     m.Z,
                     {
                         tag: i,
-                        children: t(e.content, n)
+                        children: t(e.content, n),
                     },
-                    n.key
+                    n.key,
                 );
-            }
+            },
         }),
         paragraph: j(_({}, d().defaultRules.paragraph), {
             react: (e, t, n) =>
                 (0, s.jsx)(
-                    'div',
+                    "div",
                     {
                         className: f.paragraph,
-                        children: t(e.content, n)
+                        children: t(e.content, n),
                     },
-                    n.key
-                )
+                    n.key,
+                ),
         }),
         strong: j(_({}, d().defaultRules.strong), { order: 6 }),
         em: j(_({}, d().defaultRules.em), { order: 6 }),
@@ -98,13 +98,13 @@ let O = j(_({}, d().defaultRules), {
         blockQuote: j(_({}, d().defaultRules.blockQuote), {
             react: (e, t, n) =>
                 (0, s.jsx)(
-                    'blockquote',
+                    "blockquote",
                     {
                         className: f.blockquote,
-                        children: C(e)
+                        children: C(e),
                     },
-                    n.key
-                )
+                    n.key,
+                ),
         }),
         image: j(_({}, d().defaultRules.image), {
             order: 6,
@@ -114,35 +114,35 @@ let O = j(_({}, d().defaultRules), {
                 let r = i.match(e, t, n);
                 if (null != r && Array.isArray(r) && r.length >= 3) {
                     let e = r[2];
-                    if ('string' == typeof e) return null != e.match(E) ? r : null;
+                    if ("string" == typeof e) return null != e.match(E) ? r : null;
                 }
                 return !1;
-            }
+            },
         }),
         inlineCode: j(_({}, g.Z.RULES.inlineCode), {
             order: 6,
             react: (e, t, n) =>
                 (0, s.jsx)(
-                    'code',
+                    "code",
                     {
                         className: f.codeInline,
-                        children: C(e)
+                        children: C(e),
                     },
-                    n.key
-                )
+                    n.key,
+                ),
         }),
         codeBlock: j(_({}, d().defaultRules.codeBlock), {
             react(e, t, i) {
                 let r = () =>
                     (0, s.jsx)(
-                        'pre',
+                        "pre",
                         {
-                            children: (0, s.jsx)('code', {
-                                className: o()(b.scrollbarGhostHairline, 'hljs'),
-                                children: C(e)
-                            })
+                            children: (0, s.jsx)("code", {
+                                className: o()(b.scrollbarGhostHairline, "hljs"),
+                                children: C(e),
+                            }),
                         },
-                        i.key
+                        i.key,
                     );
                 return (0, s.jsx)(
                     u.GI,
@@ -151,44 +151,44 @@ let O = j(_({}, d().defaultRules), {
                         webpackId: 364964,
                         renderFallback: r,
                         render: (t) => {
-                            if (!(e.lang && t.hasLanguage(e.lang)) || 'string' != typeof e.content) return r();
+                            if (!(e.lang && t.hasLanguage(e.lang)) || "string" != typeof e.content) return r();
                             {
                                 let n = t.highlight(e.lang, e.content, !0);
                                 return null == n
                                     ? r()
                                     : (0, s.jsx)(
-                                          'pre',
+                                          "pre",
                                           {
-                                              children: (0, s.jsx)('code', {
-                                                  className: o()(b.scrollbarGhostHairline, 'hljs', n.language),
-                                                  dangerouslySetInnerHTML: { __html: n.value }
-                                              })
+                                              children: (0, s.jsx)("code", {
+                                                  className: o()(b.scrollbarGhostHairline, "hljs", n.language),
+                                                  dangerouslySetInnerHTML: { __html: n.value },
+                                              }),
                                           },
-                                          i.key
+                                          i.key,
                                       );
                             }
-                        }
+                        },
                     },
-                    i.key
+                    i.key,
                 );
-            }
-        })
+            },
+        }),
     }),
     v = d().parserFor(O),
-    S = d().reactFor(d().ruleOutput(O, 'react'));
+    S = d().reactFor(d().ruleOutput(O, "react"));
 class T extends (r = a.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: i, output: r } = this.props,
-            a = r(i(''.concat(t, '\n\n'), _({ inline: !1 }, n)));
-        return (0, s.jsx)('div', {
+            a = r(i("".concat(t, "\n\n"), _({ inline: !1 }, n)));
+        return (0, s.jsx)("div", {
             className: o()(f.markdown, e),
-            children: a
+            children: a,
         });
     }
 }
-(x(T, 'rules', O),
-    x(T, 'defaultProps', {
+x(T, "rules", O),
+    x(T, "defaultProps", {
         parser: v,
-        output: S
-    }));
+        output: S,
+    });
 let I = T;

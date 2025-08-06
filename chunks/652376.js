@@ -26,9 +26,9 @@ function c(e) {
                 video: h,
                 screenshare: p,
                 liveStage: m,
-                isCurrentUserConnected: u
+                isCurrentUserConnected: u,
             }),
-            [d, h, p, m, u]
+            [d, h, p, m, u],
         )
     );
 }

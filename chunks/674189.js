@@ -1,4 +1,4 @@
-(i.d(t, { default: () => h }), i(953529), i(388685));
+i.d(t, { default: () => h }), i(953529), i(388685);
 var n = i(255367),
     l = i(73800),
     r = i(512722),
@@ -21,13 +21,21 @@ function b(e) {
         onChange: l,
         value: i,
         options: a,
-        placeholder: C.intl.string(C.t.etZ9tb)
+        placeholder: C.intl.string(C.t.etZ9tb),
     });
 }
 function h(e) {
     let { transitionState: t, onClose: i, feature: r, section: G, subsection: C } = e,
         h = (0, d.Dt)(),
-        { canCreateGuild: v, createGuildCta: S, createGuildDescription: f, selectGuildCta: Z, title: x, description: j, isGuildSupported: I } = (0, g.K)(r),
+        {
+            canCreateGuild: v,
+            createGuildCta: S,
+            createGuildDescription: f,
+            selectGuildCta: Z,
+            title: x,
+            description: j,
+            isGuildSupported: I,
+        } = (0, g.K)(r),
         [O, _] = l.useState(),
         [k, y] = l.useState(!1),
         E = async () => {
@@ -35,18 +43,18 @@ function h(e) {
             let e = await new Promise((e) => {
                 o.Z.openCreateGuildModal({ onSuccess: e });
             });
-            (await new Promise((t) => {
+            await new Promise((t) => {
                 p.Z.addChangeListener(function i() {
                     null != p.Z.getGuild(e) && (p.Z.removeChangeListener(i), t());
                 });
             }),
                 c.Z.open(e, G, void 0, C),
-                null == i || i());
+                null == i || i();
         };
     return (0, n.jsxs)(u.Y0X, {
         transitionState: t,
-        'aria-labelledby': h,
-        parentComponent: 'GuildSettingsPickerModal',
+        "aria-labelledby": h,
+        parentComponent: "GuildSettingsPickerModal",
         children: [
             (0, n.jsxs)(u.xBx, {
                 className: m.modalHeader,
@@ -54,65 +62,67 @@ function h(e) {
                 children: [
                     (0, n.jsx)(u.X6q, {
                         id: h,
-                        variant: 'heading-lg/medium',
-                        children: x
+                        variant: "heading-lg/medium",
+                        children: x,
                     }),
-                    (0, n.jsx)(u.olH, { onClick: i })
-                ]
+                    (0, n.jsx)(u.olH, { onClick: i }),
+                ],
             }),
             (0, n.jsxs)(u.hzk, {
                 className: m.modalContent,
                 children: [
                     (0, n.jsxs)(u.Kqy, {
-                        direction: 'vertical',
+                        direction: "vertical",
                         gap: 8,
                         children: [
                             (0, n.jsx)(u.Text, {
-                                variant: 'text-md/medium',
-                                children: j
+                                variant: "text-md/medium",
+                                children: j,
                             }),
-                            (0, n.jsxs)('div', {
+                            (0, n.jsxs)("div", {
                                 className: m.guildSelection,
                                 children: [
-                                    (0, n.jsx)('div', {
+                                    (0, n.jsx)("div", {
                                         className: m.guildSelectorContainer,
                                         children: (0, n.jsx)(b, {
                                             guildId: O,
                                             onChange: _,
-                                            isGuildIncluded: I
-                                        })
+                                            isGuildIncluded: I,
+                                        }),
                                     }),
                                     (0, n.jsx)(u.zxk, {
-                                        variant: 'primary',
+                                        variant: "primary",
                                         text: Z,
                                         onClick: () => {
-                                            (a()(null != O, 'Guild ID must not be null on click'), c.Z.open(O, G, void 0, C), null == i || i());
+                                            a()(null != O, "Guild ID must not be null on click"),
+                                                c.Z.open(O, G, void 0, C),
+                                                null == i || i();
                                         },
-                                        disabled: null == O
-                                    })
-                                ]
-                            })
-                        ]
+                                        disabled: null == O,
+                                    }),
+                                ],
+                            }),
+                        ],
                     }),
                     v &&
                         (0, n.jsxs)(u.Kqy, {
-                            direction: 'vertical',
+                            direction: "vertical",
                             gap: 8,
                             children: [
                                 (0, n.jsx)(u.Text, {
-                                    variant: 'text-md/medium',
-                                    children: f
+                                    variant: "text-md/medium",
+                                    children: f,
                                 }),
                                 (0, n.jsx)(s.zx, {
                                     onClick: E,
                                     submitting: k,
                                     className: m.createGuildButton,
-                                    children: S
-                                })
-                            ]
-                        })
-                ]
-            })
-        ]
+                                    children: S,
+                                }),
+                            ],
+                        }),
+                ],
+            }),
+        ],
     });
 }

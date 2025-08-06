@@ -19,19 +19,19 @@ function m(e) {
         g = i(m),
         {
             avatarSrc: E,
-            eventHandlers: { onMouseEnter: b, onMouseLeave: y }
+            eventHandlers: { onMouseEnter: b, onMouseLeave: y },
         } = (0, u.m)(!0),
         O =
-            '' !== t.content
+            "" !== t.content
                 ? new Date(t.content).toLocaleString(p.intl.currentLocale, {
-                      hour: 'numeric',
-                      minute: '2-digit',
-                      month: '2-digit',
-                      day: '2-digit',
-                      year: 'numeric'
+                      hour: "numeric",
+                      minute: "2-digit",
+                      month: "2-digit",
+                      day: "2-digit",
+                      year: "numeric",
                   })
-                : '';
-    return (0, r.jsx)('div', {
+                : "";
+    return (0, r.jsx)("div", {
         onMouseEnter: b,
         onMouseLeave: y,
         children: (0, r.jsx)(d.Z, {
@@ -39,48 +39,48 @@ function m(e) {
             iconNode: n ? null : (0, r.jsx)(u.S, { src: E }),
             iconContainerClassName: h.iconContainer,
             compact: n,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: o()(h.content, { [h.compact]: n }),
                 children: [
                     (0, r.jsx)(c.nD, {
                         message: t,
                         messageClassname: h.spanCorrection,
                         className: o()(h.usernameContainer, h.spanCorrection, { [h.compact]: n }),
-                        username: (0, r.jsxs)('div', {
+                        username: (0, r.jsxs)("div", {
                             className: h.spanCorrection,
                             children: [
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'text-brand',
-                                    tag: 'span',
+                                    variant: "text-md/normal",
+                                    color: "text-brand",
+                                    tag: "span",
                                     className: h.username,
-                                    children: p.intl.string(p.t.hG1StL)
+                                    children: p.intl.string(p.t.hG1StL),
                                 }),
                                 (0, r.jsx)(s.Z, {
                                     type: _.Hb.SYSTEM_DM,
-                                    className: h.systemTag
-                                })
-                            ]
+                                    className: h.systemTag,
+                                }),
+                            ],
                         }),
                         compact: n,
-                        showTimestamp: !0
+                        showTimestamp: !0,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: o()(h.__invalid_messageContent, { [h.compact]: n }),
                         children:
                             t.type === f.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
-                                ? p.intl.format(p.t['+m8eDw'], {
+                                ? p.intl.format(p.t["+m8eDw"], {
                                       username: m.nick,
                                       usernameHook: g,
-                                      time: O
+                                      time: O,
                                   })
                                 : p.intl.format(p.t.BHeke3, {
                                       username: m.nick,
-                                      usernameHook: g
-                                  })
-                    })
-                ]
-            })
-        })
+                                      usernameHook: g,
+                                  }),
+                    }),
+                ],
+            }),
+        }),
     });
 }

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     T: () => m,
-    Z: () => I
+    Z: () => I,
 }),
-    n(388685));
+    n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -20,7 +20,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,7 +29,7 @@ function _(e, t, n) {
 let p = new Set([a.s.LISTENED_SESSION]),
     h = new Map();
 function m(e) {
-    return ''.concat(e.author_id, ':').concat(e.id);
+    return "".concat(e.author_id, ":").concat(e.id);
 }
 function g(e) {
     return (0, d.C)(e, c.Z);
@@ -41,12 +41,12 @@ function E(e) {
         let e = g(r.content);
         if (void 0 !== e) {
             let i = m(r.content);
-            (n.add(i), e !== h.get(i) && (t.add(i), h.set(i, e)));
+            n.add(i), e !== h.get(i) && (t.add(i), h.set(i, e));
         }
     }
     return {
         updatedKeys: t,
-        matchedKeys: n
+        matchedKeys: n,
     };
 }
 function b(e) {
@@ -63,27 +63,34 @@ function O() {
         n = new Set(),
         r = new Set();
     for (let t of u.Z.getFeeds().values()) {
-        let { updatedKeys: i, matchedKeys: o } = E(n.size > 0 ? t.entries.filter((e) => !n.has(m(e.content))) : t.entries);
+        let { updatedKeys: i, matchedKeys: o } = E(
+            n.size > 0 ? t.entries.filter((e) => !n.has(m(e.content))) : t.entries,
+        );
         for (let e of i) n.add(e);
         for (let e of o) r.add(e);
         e = e || i.size > 0;
     }
-    for (let n of o().difference(t, [...r])) (h.delete(n), (e = !0));
+    for (let n of o().difference(t, [...r])) h.delete(n), (e = !0);
     return e;
 }
 class v extends (r = s.ZP.Store) {
     initialize() {
-        (this.waitFor(u.Z, c.Z), this.syncWith([c.Z], O));
+        this.waitFor(u.Z, c.Z), this.syncWith([c.Z], O);
     }
     getMatchingActivity(e) {
         return (0, f.n2)(e) ? null : h.get(m(e));
     }
     constructor(...e) {
-        (super(...e), _(this, 'canRenderContent', (e) => !(0, f.n2)(e) && (!p.has(e.content_type) || null != this.getMatchingActivity(e))));
+        super(...e),
+            _(
+                this,
+                "canRenderContent",
+                (e) => !(0, f.n2)(e) && (!p.has(e.content_type) || null != this.getMatchingActivity(e)),
+            );
     }
 }
-_(v, 'displayName', 'ContentInventoryActivityStore');
+_(v, "displayName", "ContentInventoryActivityStore");
 let I = new v(l.Z, {
     CONNECTION_OPEN: y,
-    CONTENT_INVENTORY_SET_FEED: b
+    CONTENT_INVENTORY_SET_FEED: b,
 });

@@ -23,12 +23,12 @@ var l = n(442837),
     _ = n(301150);
 function I(e) {
     let { user: t, currentUser: n, displayProfile: I, guildId: P, subsection: Z, onClose: E } = e,
-        { voiceActivityStatusEnabled: N } = (0, i.U)({ location: 'UserProfileModalActivity' }),
-        T = (0, u.b)({ location: 'UserProfileModalActivity' }),
+        { voiceActivityStatusEnabled: N } = (0, i.U)({ location: "UserProfileModalActivity" }),
+        T = (0, u.b)({ location: "UserProfileModalActivity" }),
         { live: A, recent: S, stream: w } = (0, f.Z)(t.id),
         { voiceChannel: C, voiceActivity: G } = (0, p.Z)({
             userId: t.id,
-            guildId: P
+            guildId: P,
         }),
         L = (0, l.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
         M = t.id === n.id,
@@ -47,92 +47,92 @@ function I(e) {
               children: [
                   U
                       ? (0, r.jsx)(m.Z, {
-                            'aria-label': O.intl.string(O.t.J6STd3),
-                            children: (0, r.jsxs)('ul', {
+                            "aria-label": O.intl.string(O.t.J6STd3),
+                            children: (0, r.jsxs)("ul", {
                                 className: x.activityList,
                                 children: [
                                     !T &&
                                         k &&
-                                        (0, r.jsx)('li', {
+                                        (0, r.jsx)("li", {
                                             children: (0, r.jsx)(h.Z, {
                                                 user: t,
                                                 currentUser: n,
                                                 voiceChannel: C,
-                                                onClose: E
-                                            })
+                                                onClose: E,
+                                            }),
                                         }),
                                     null != w &&
-                                        (0, r.jsx)('li', {
+                                        (0, r.jsx)("li", {
                                             children: (0, r.jsx)(j.Z, {
-                                                location: 'UserProfileModalActivity',
+                                                location: "UserProfileModalActivity",
                                                 user: t,
                                                 currentUser: n,
                                                 stream: w,
                                                 onClose: E,
-                                                profileGuildId: null == I ? void 0 : I.guildId
-                                            })
+                                                profileGuildId: null == I ? void 0 : I.guildId,
+                                            }),
                                         }),
                                     A.map((e, l) =>
                                         (0, r.jsx)(
-                                            'li',
+                                            "li",
                                             {
                                                 children: (0, r.jsx)(g.Z, {
                                                     user: t,
                                                     currentUser: n,
                                                     activity: e,
                                                     onClose: E,
-                                                    profileGuildId: null == I ? void 0 : I.guildId
-                                                })
+                                                    profileGuildId: null == I ? void 0 : I.guildId,
+                                                }),
                                             },
-                                            'live-'.concat(l)
-                                        )
-                                    )
-                                ]
-                            })
+                                            "live-".concat(l),
+                                        ),
+                                    ),
+                                ],
+                            }),
                         })
                       : null,
                   B
                       ? (0, r.jsx)(m.Z, {
                             heading: O.intl.string(O.t.M0zgnZ),
                             introText: M
-                                ? O.intl.format(O.t['4bk9Ag'], {
+                                ? O.intl.format(O.t["4bk9Ag"], {
                                       learnMoreHook: (e, t) =>
                                           (0, r.jsx)(
                                               o.eee,
                                               {
                                                   href: d.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS),
-                                                  children: e
+                                                  children: e,
                                               },
-                                              t
-                                          )
+                                              t,
+                                          ),
                                   })
                                 : void 0,
                             scrollIntoView: Z === y.Tb.RECENT_ACTIVITY,
-                            children: (0, r.jsx)('ul', {
+                            children: (0, r.jsx)("ul", {
                                 className: x.activityList,
                                 children: S.map((e) =>
                                     (0, r.jsx)(
-                                        'li',
+                                        "li",
                                         {
                                             children: (0, r.jsx)(b.Z, {
-                                                location: 'UserProfileModalActivity',
+                                                location: "UserProfileModalActivity",
                                                 user: t,
                                                 currentUser: n,
                                                 entry: e,
                                                 profileGuildId: null == I ? void 0 : I.guildId,
-                                                onClose: E
-                                            })
+                                                onClose: E,
+                                            }),
                                         },
-                                        e.id
-                                    )
-                                )
-                            })
+                                        e.id,
+                                    ),
+                                ),
+                            }),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           })
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: _.empty,
-              children: (0, r.jsx)(o.$jN, {})
+              children: (0, r.jsx)(o.$jN, {}),
           });
 }

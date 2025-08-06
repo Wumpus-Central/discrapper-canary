@@ -4,8 +4,8 @@ var t = {
     yesterday: "'Vakar' p",
     today: "'Šiandien' p",
     tomorrow: "'Rytoj' p",
-    nextWeek: 'eeee p',
-    other: 'P'
+    nextWeek: "eeee p",
+    other: "P",
 };
 let r = function (i, e, a, r) {
     return t[i];

@@ -21,14 +21,14 @@ let h = (l) => {
             }
             return {
                 error: l,
-                applicationName: n
+                applicationName: n,
             };
         });
     return (0, r.jsxs)(e.Y0X, {
         transitionState: i,
         size: e.CgR.SMALL,
-        'aria-label': u.intl.string(u.t['6kHRYG']),
-        parentComponent: 'DispatchErrorModal',
+        "aria-label": u.intl.string(u.t["6kHRYG"]),
+        parentComponent: "DispatchErrorModal",
         children: [
             (0, r.jsxs)(e.xBx, {
                 justify: s.Z.Justify.BETWEEN,
@@ -37,55 +37,72 @@ let h = (l) => {
                     (0, r.jsx)(s.Z.Child, {
                         grow: 1,
                         children: (0, r.jsx)(e.X6q, {
-                            variant: 'heading-lg/semibold',
-                            children: u.intl.string(u.t['6kHRYG'])
-                        })
+                            variant: "heading-lg/semibold",
+                            children: u.intl.string(u.t["6kHRYG"]),
+                        }),
                     }),
                     (0, r.jsx)(s.Z.Child, {
                         grow: 0,
-                        children: (0, r.jsx)(e.olH, { onClick: n })
-                    })
-                ]
+                        children: (0, r.jsx)(e.olH, { onClick: n }),
+                    }),
+                ],
             }),
             (0, r.jsx)(e.hzk, {
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: p.body,
                     children: [
-                        (0, r.jsx)('div', { children: u.intl.format(u.t['NnE/6O'], { link: 'https://dis.gd/dispatch-error' }) }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
+                            children: u.intl.format(u.t["NnE/6O"], { link: "https://dis.gd/dispatch-error" }),
+                        }),
+                        (0, r.jsx)("div", {
                             className: p.supportCallToAction,
-                            children: u.intl.string(u.t['o+efY2'])
+                            children: u.intl.string(u.t["o+efY2"]),
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: p.errorLabel,
-                            children: u.intl.string(u.t.BiSnZ2)
+                            children: u.intl.string(u.t.BiSnZ2),
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: p.errorDetails,
-                            children: (0, r.jsxs)('div', {
-                                children: [null != x ? 'Game: '.concat(x, '\n') : null, (null == h ? void 0 : h.applicationId) != null ? 'Game ID: '.concat(h.applicationId, '\n') : null, (null == h ? void 0 : h.branchId) != null && (null == h ? void 0 : h.applicationId) !== (null == h ? void 0 : h.branchId) ? 'Branch ID: '.concat(null == h ? void 0 : h.branchId, '\n') : null, (null == h ? void 0 : h.code) != null ? 'Error Code: '.concat(null == h ? void 0 : h.code, '\n') : null, (null == h ? void 0 : h.uuid) != null ? 'Unique Case ID: '.concat(null == h ? void 0 : h.uuid) : null]
-                            })
-                        })
-                    ]
-                })
+                            children: (0, r.jsxs)("div", {
+                                children: [
+                                    null != x ? "Game: ".concat(x, "\n") : null,
+                                    (null == h ? void 0 : h.applicationId) != null
+                                        ? "Game ID: ".concat(h.applicationId, "\n")
+                                        : null,
+                                    (null == h ? void 0 : h.branchId) != null &&
+                                    (null == h ? void 0 : h.applicationId) !== (null == h ? void 0 : h.branchId)
+                                        ? "Branch ID: ".concat(null == h ? void 0 : h.branchId, "\n")
+                                        : null,
+                                    (null == h ? void 0 : h.code) != null
+                                        ? "Error Code: ".concat(null == h ? void 0 : h.code, "\n")
+                                        : null,
+                                    (null == h ? void 0 : h.uuid) != null
+                                        ? "Unique Case ID: ".concat(null == h ? void 0 : h.uuid)
+                                        : null,
+                                ],
+                            }),
+                        }),
+                    ],
+                }),
             }),
             (0, r.jsxs)(e.mzw, {
                 children: [
                     (0, r.jsx)(e.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: u.intl.string(u.t.VdyWmJ),
                         onClick: () => {
                             window.open(d.Z.getSubmitRequestURL());
-                        }
+                        },
                     }),
                     (0, r.jsx)(o.zx, {
                         look: o.zx.Looks.LINK,
                         onClick: n,
                         color: p.closeLink,
-                        children: u.intl.string(u.t.cpT0Cg)
-                    })
-                ]
-            })
-        ]
+                        children: u.intl.string(u.t.cpT0Cg),
+                    }),
+                ],
+            }),
+        ],
     });
 };

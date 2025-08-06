@@ -6,11 +6,11 @@ function o(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (a = a.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, a));
+            r.push.apply(r, a);
     }
     return r;
 }
@@ -45,20 +45,20 @@ let c = (0, n.t7)(
             LABEL_COLOR: e.base0D,
             ARROW_COLOR: e.base0D,
             ITEM_STRING_COLOR: e.base0B,
-            ITEM_STRING_EXPANDED_COLOR: e.base03
+            ITEM_STRING_EXPANDED_COLOR: e.base03,
         };
         return {
             tree: {
                 border: 0,
                 padding: 0,
-                marginTop: '0.5em',
-                marginBottom: '0.5em',
-                marginLeft: '0.125em',
+                marginTop: "0.5em",
+                marginBottom: "0.5em",
+                marginLeft: "0.125em",
                 marginRight: 0,
-                listStyle: 'none',
-                MozUserSelect: 'none',
-                WebkitUserSelect: 'none',
-                backgroundColor: t.BACKGROUND_COLOR
+                listStyle: "none",
+                MozUserSelect: "none",
+                WebkitUserSelect: "none",
+                backgroundColor: t.BACKGROUND_COLOR,
             },
             value: function (e, t, r) {
                 return {
@@ -66,24 +66,24 @@ let c = (0, n.t7)(
                         i({}, e.style),
                         {},
                         {
-                            paddingTop: '0.25em',
+                            paddingTop: "0.25em",
                             paddingRight: 0,
-                            marginLeft: '0.875em',
-                            WebkitUserSelect: 'text',
-                            MozUserSelect: 'text',
-                            wordWrap: 'break-word',
-                            paddingLeft: r.length > 1 ? '2.125em' : '1.25em',
-                            textIndent: '-0.5em',
-                            wordBreak: 'break-all'
-                        }
-                    )
+                            marginLeft: "0.875em",
+                            WebkitUserSelect: "text",
+                            MozUserSelect: "text",
+                            wordWrap: "break-word",
+                            paddingLeft: r.length > 1 ? "2.125em" : "1.25em",
+                            textIndent: "-0.5em",
+                            wordBreak: "break-all",
+                        },
+                    ),
                 };
             },
             label: {
-                display: 'inline-block',
-                color: t.LABEL_COLOR
+                display: "inline-block",
+                color: t.LABEL_COLOR,
             },
-            valueLabel: { margin: '0 0.5em 0 0' },
+            valueLabel: { margin: "0 0.5em 0 0" },
             valueText: function (e, r) {
                 return {
                     style: i(
@@ -98,19 +98,19 @@ let c = (0, n.t7)(
                                 Null: t.NULL_COLOR,
                                 Undefined: t.UNDEFINED_COLOR,
                                 Function: t.FUNCTION_COLOR,
-                                Symbol: t.SYMBOL_COLOR
-                            }[r]
-                        }
-                    )
+                                Symbol: t.SYMBOL_COLOR,
+                            }[r],
+                        },
+                    ),
                 };
             },
             itemRange: function (e, r) {
                 return {
                     style: {
-                        paddingTop: r ? 0 : '0.25em',
-                        cursor: 'pointer',
-                        color: t.LABEL_COLOR
-                    }
+                        paddingTop: r ? 0 : "0.25em",
+                        cursor: "pointer",
+                        color: t.LABEL_COLOR,
+                    },
                 };
             },
             arrow: function (e, t, r) {
@@ -120,20 +120,20 @@ let c = (0, n.t7)(
                         {},
                         {
                             marginLeft: 0,
-                            transition: '150ms',
-                            WebkitTransition: '150ms',
-                            MozTransition: '150ms',
-                            WebkitTransform: r ? 'rotateZ(90deg)' : 'rotateZ(0deg)',
-                            MozTransform: r ? 'rotateZ(90deg)' : 'rotateZ(0deg)',
-                            transform: r ? 'rotateZ(90deg)' : 'rotateZ(0deg)',
-                            transformOrigin: '45% 50%',
-                            WebkitTransformOrigin: '45% 50%',
-                            MozTransformOrigin: '45% 50%',
-                            position: 'relative',
-                            lineHeight: '1.1em',
-                            fontSize: '0.75em'
-                        }
-                    )
+                            transition: "150ms",
+                            WebkitTransition: "150ms",
+                            MozTransition: "150ms",
+                            WebkitTransform: r ? "rotateZ(90deg)" : "rotateZ(0deg)",
+                            MozTransform: r ? "rotateZ(90deg)" : "rotateZ(0deg)",
+                            transform: r ? "rotateZ(90deg)" : "rotateZ(0deg)",
+                            transformOrigin: "45% 50%",
+                            WebkitTransformOrigin: "45% 50%",
+                            MozTransformOrigin: "45% 50%",
+                            position: "relative",
+                            lineHeight: "1.1em",
+                            fontSize: "0.75em",
+                        },
+                    ),
                 };
             },
             arrowContainer: function (e, t) {
@@ -142,19 +142,19 @@ let c = (0, n.t7)(
                         i({}, e.style),
                         {},
                         {
-                            display: 'inline-block',
-                            paddingRight: '0.5em',
-                            paddingLeft: 'double' === t ? '1em' : 0,
-                            cursor: 'pointer'
-                        }
-                    )
+                            display: "inline-block",
+                            paddingRight: "0.5em",
+                            paddingLeft: "double" === t ? "1em" : 0,
+                            cursor: "pointer",
+                        },
+                    ),
                 };
             },
             arrowSign: { color: t.ARROW_COLOR },
             arrowSignInner: {
-                position: 'absolute',
+                position: "absolute",
                 top: 0,
-                left: '-0.4em'
+                left: "-0.4em",
             },
             nestedNode: function (e, t, r, a, n) {
                 return {
@@ -162,17 +162,17 @@ let c = (0, n.t7)(
                         i({}, e.style),
                         {},
                         {
-                            position: 'relative',
-                            paddingTop: '0.25em',
-                            marginLeft: t.length > 1 ? '0.875em' : 0,
-                            paddingLeft: n ? 0 : '1.125em'
-                        }
-                    )
+                            position: "relative",
+                            paddingTop: "0.25em",
+                            marginLeft: t.length > 1 ? "0.875em" : 0,
+                            paddingLeft: n ? 0 : "1.125em",
+                        },
+                    ),
                 };
             },
             rootNode: {
                 padding: 0,
-                margin: 0
+                margin: 0,
             },
             nestedNodeLabel: function (e, t, r, a, n) {
                 return {
@@ -182,11 +182,11 @@ let c = (0, n.t7)(
                         {
                             margin: 0,
                             padding: 0,
-                            WebkitUserSelect: n ? 'inherit' : 'text',
-                            MozUserSelect: n ? 'inherit' : 'text',
-                            cursor: n ? 'pointer' : 'default'
-                        }
-                    )
+                            WebkitUserSelect: n ? "inherit" : "text",
+                            MozUserSelect: n ? "inherit" : "text",
+                            cursor: n ? "pointer" : "default",
+                        },
+                    ),
                 };
             },
             nestedNodeItemString: function (e, r, a, n) {
@@ -195,16 +195,16 @@ let c = (0, n.t7)(
                         i({}, e.style),
                         {},
                         {
-                            paddingLeft: '0.5em',
-                            cursor: 'default',
-                            color: n ? t.ITEM_STRING_EXPANDED_COLOR : t.ITEM_STRING_COLOR
-                        }
-                    )
+                            paddingLeft: "0.5em",
+                            cursor: "default",
+                            color: n ? t.ITEM_STRING_EXPANDED_COLOR : t.ITEM_STRING_COLOR,
+                        },
+                    ),
                 };
             },
             nestedNodeItemType: {
-                marginLeft: '0.3em',
-                marginRight: '0.3em'
+                marginLeft: "0.3em",
+                marginRight: "0.3em",
             },
             nestedNodeChildren: function (e, t, r) {
                 return {
@@ -214,18 +214,18 @@ let c = (0, n.t7)(
                         {
                             padding: 0,
                             margin: 0,
-                            listStyle: 'none',
-                            display: r ? 'block' : 'none'
-                        }
-                    )
+                            listStyle: "none",
+                            display: r ? "block" : "none",
+                        },
+                    ),
                 };
             },
             rootNodeChildren: {
                 padding: 0,
                 margin: 0,
-                listStyle: 'none'
-            }
+                listStyle: "none",
+            },
         };
     },
-    { defaultBase16: s.Z }
+    { defaultBase16: s.Z },
 );

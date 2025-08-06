@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     R: () => W,
-    Z: () => Y
+    Z: () => Y,
 }),
-    n(415506));
+    n(415506);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -43,24 +43,24 @@ function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -82,27 +82,34 @@ function B(e, t) {
         e
     );
 }
-let U = new h.Z('SubscriptionHeader.tsx'),
+let U = new h.Z("SubscriptionHeader.tsx"),
     V = {
         page: w.ZY5.USER_SETTINGS,
         section: w.jXE.SETTINGS_PREMIUM,
-        object: w.qAy.CARD
+        object: w.qAy.CARD,
     },
     G = [w.O0b.PAUSED, w.O0b.PAUSE_PENDING, w.O0b.BILLING_RETRY];
 function F(e) {
-    let { wordMark: t, subscriptionInfo: n, buttons: r, statusClasses: a, shouldUseDiscountMarketing: l, discountAmount: o } = e;
-    return (0, i.jsxs)('div', {
+    let {
+        wordMark: t,
+        subscriptionInfo: n,
+        buttons: r,
+        statusClasses: a,
+        shouldUseDiscountMarketing: l,
+        discountAmount: o,
+    } = e;
+    return (0, i.jsxs)("div", {
         className: s()(L.banner, a),
         children: [
-            (0, i.jsx)('div', { className: L.bannerBackgroundImage }),
-            (0, i.jsxs)('div', {
+            (0, i.jsx)("div", { className: L.bannerBackgroundImage }),
+            (0, i.jsxs)("div", {
                 className: L.detailsContainer,
                 children: [
-                    (0, i.jsx)('div', { className: L.image }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsx)("div", { className: L.image }),
+                    (0, i.jsxs)("div", {
                         className: L.details,
                         children: [
-                            (0, i.jsxs)('div', {
+                            (0, i.jsxs)("div", {
                                 className: L.headerLabel,
                                 children: [
                                     t,
@@ -112,37 +119,44 @@ function F(e) {
                                             text: k.intl.formatToPlainString(k.t.iiLbvr, { percent: o }),
                                             className: L.discountPill,
                                             colorOptions: P.VE.PREMIUM_TIER_2_WHITE_FILL,
-                                            isPillOnBorder: !1
-                                        })
-                                ]
+                                            isPillOnBorder: !1,
+                                        }),
+                                ],
                             }),
-                            n
-                        ]
-                    })
-                ]
+                            n,
+                        ],
+                    }),
+                ],
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: L.buttons,
-                children: r
-            })
-        ]
+                children: r,
+            }),
+        ],
     });
 }
 function H(e) {
-    let { wordMark: t, subscriptionInfo: n, buttons: r, statusClasses: a, shouldUseDiscountMarketing: l, discountAmount: o } = e;
-    return (0, i.jsxs)('div', {
+    let {
+        wordMark: t,
+        subscriptionInfo: n,
+        buttons: r,
+        statusClasses: a,
+        shouldUseDiscountMarketing: l,
+        discountAmount: o,
+    } = e;
+    return (0, i.jsxs)("div", {
         className: s()(L.banner, a, L.repositioned),
         children: [
-            (0, i.jsx)('div', { className: L.bannerBackgroundImage }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", { className: L.bannerBackgroundImage }),
+            (0, i.jsx)("div", {
                 className: L.detailsContainer,
-                children: (0, i.jsx)('div', {
+                children: (0, i.jsx)("div", {
                     className: L.details,
-                    children: (0, i.jsxs)('div', {
+                    children: (0, i.jsxs)("div", {
                         className: L.headerLabel,
                         children: [
-                            (0, i.jsx)('div', { className: L.image }),
-                            (0, i.jsxs)('div', {
+                            (0, i.jsx)("div", { className: L.image }),
+                            (0, i.jsxs)("div", {
                                 className: L.headerColumnB,
                                 children: [
                                     t,
@@ -152,41 +166,41 @@ function H(e) {
                                             text: k.intl.formatToPlainString(k.t.iiLbvr, { percent: o }),
                                             className: L.discountPill,
                                             colorOptions: P.VE.PREMIUM_TIER_2_WHITE_FILL,
-                                            isPillOnBorder: !1
+                                            isPillOnBorder: !1,
                                         }),
-                                    n
-                                ]
-                            })
-                        ]
-                    })
-                })
+                                    n,
+                                ],
+                            }),
+                        ],
+                    }),
+                }),
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: L.buttons,
-                children: r
-            })
-        ]
+                children: r,
+            }),
+        ],
     });
 }
 function z() {
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: L.wordMark,
         children: [
             (0, i.jsx)(E.Z, {
                 className: L.discordWordmark,
-                'aria-label': k.intl.string(k.t['FSOz7+'])
+                "aria-label": k.intl.string(k.t["FSOz7+"]),
             }),
-            (0, i.jsx)('div', { className: L.classicWordmark })
-        ]
+            (0, i.jsx)("div", { className: L.classicWordmark }),
+        ],
     });
 }
 function W() {
     let { analyticsLocations: e } = (0, p.ZP)(m.Z.ACCOUNT_CREDIT_BANNER);
     return (0, i.jsx)(F, {
         wordMark: (0, i.jsx)(z, {}),
-        subscriptionInfo: (0, i.jsx)('div', {
+        subscriptionInfo: (0, i.jsx)("div", {
             className: L.planInfo,
-            children: k.intl.string(k.t.R0GJLy)
+            children: k.intl.string(k.t.R0GJLy),
         }),
         buttons: (0, i.jsx)(R.Z, {
             className: L.toolsButton,
@@ -194,17 +208,17 @@ function W() {
                 (0, f.Z)({
                     subscriptionTier: Z.Si.TIER_1,
                     analyticsLocations: e,
-                    analyticsObject: V
+                    analyticsObject: V,
                 }),
-            children: k.intl.string(k.t['/ygMUV'])
+            children: k.intl.string(k.t["/ygMUV"]),
         }),
-        statusClasses: { [L.tier1]: !0 }
+        statusClasses: { [L.tier1]: !0 },
     });
 }
 let Y = function (e) {
     var t;
     let { subscription: r, renewalInvoicePreview: a, paymentSource: h, busy: P, analyticsLocation: W } = e,
-        Y = 'subscription_header',
+        Y = "subscription_header",
         { analyticsLocations: K } = (0, p.ZP)(m.Z.SUBSCRIPTION_HEADER),
         q = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
         { fractionalState: X } = (0, g.Z)({ forceFetch: !1 }),
@@ -217,7 +231,8 @@ let Y = function (e) {
         en = (0, T.lr)(),
         ei = (0, I.W)(),
         er = () => {
-            (r.status === w.O0b.ACTIVE || r.status === w.O0b.PAST_DUE || r.status === w.O0b.PAUSED) && el(D.R.PAUSE_SELECT);
+            (r.status === w.O0b.ACTIVE || r.status === w.O0b.PAST_DUE || r.status === w.O0b.PAUSED) &&
+                el(D.R.PAUSE_SELECT);
         },
         es = () => {
             (r.status === w.O0b.ACTIVE || r.status === w.O0b.PAST_DUE || r.status === w.O0b.PAUSE_PENDING || J) && el();
@@ -227,7 +242,7 @@ let Y = function (e) {
         },
         el = (e) => {
             (0, d.ZDy)(async () => {
-                let { default: t } = await n.e('81709').then(n.bind(n, 833569));
+                let { default: t } = await n.e("81709").then(n.bind(n, 833569));
                 return (n) =>
                     (0, i.jsx)(
                         t,
@@ -235,19 +250,22 @@ let Y = function (e) {
                             premiumSubscription: r,
                             analyticsLocation: W,
                             analyticsLocations: K,
-                            initialStep: e
-                        })
+                            initialStep: e,
+                        }),
                     );
             });
         },
         eo = () => {
             if (null != r && null != r.premiumPlanIdFromItems) {
                 let e = _.Z.get(r.premiumPlanIdFromItems);
-                if (null == e) return void U.info('Plan not fetched for plan id: '.concat(r.premiumPlanIdFromItems));
+                if (null == e) return void U.info("Plan not fetched for plan id: ".concat(r.premiumPlanIdFromItems));
                 let t = (0, v.DE)(e, null == h ? void 0 : h.id, !1),
                     n = t.length > 0 ? t[0] : r.currency,
                     i = !1;
-                (1 === t.length && (null == h ? void 0 : h.id) === r.paymentSourceId && (0, v.tD)(e.id, n, null == h ? void 0 : h.id) && (i = !0),
+                1 === t.length &&
+                    (null == h ? void 0 : h.id) === r.paymentSourceId &&
+                    (0, v.tD)(e.id, n, null == h ? void 0 : h.id) &&
+                    (i = !0),
                     i
                         ? u.O5(r, K)
                         : (0, f.Z)({
@@ -255,18 +273,18 @@ let Y = function (e) {
                               analyticsLocations: K,
                               analyticsLocation: W,
                               analyticsObject: V,
-                              subscription: r
-                          }));
+                              subscription: r,
+                          });
             }
         },
         ec = () => {
             if (!G.includes(r.status) || null == r.pauseEndsAt)
-                return void (0, C.q2)(Error('Invalid subscription to resume'), {
+                return void (0, C.q2)(Error("Invalid subscription to resume"), {
                     extra: {
                         subscriptionId: r.id,
                         status: r.status,
-                        pauseEndsAt: r.pauseEndsAt
-                    }
+                        pauseEndsAt: r.pauseEndsAt,
+                    },
                 });
             r.status === w.O0b.PAUSED
                 ? (0, f.Z)({
@@ -275,7 +293,7 @@ let Y = function (e) {
                       analyticsLocation: W,
                       analyticsObject: V,
                       subscription: r,
-                      skipConfirm: !0
+                      skipConfirm: !0,
                   })
                 : u.v4(r, K);
         },
@@ -296,20 +314,20 @@ let Y = function (e) {
             [L.canceled]: ep === w.O0b.CANCELED,
             [L.pausePending]: ep === w.O0b.PAUSE_PENDING,
             [L.paused]: ep === w.O0b.PAUSED && !J,
-            [L.failedPayment]: (0, O.zV)(ep)
+            [L.failedPayment]: (0, O.zV)(ep),
         },
         ef = null;
     switch (eg) {
         case Z.p9.TIER_0:
-            ef = (0, i.jsxs)('div', {
+            ef = (0, i.jsxs)("div", {
                 className: L.wordMark,
                 children: [
                     (0, i.jsx)(E.Z, {
                         className: L.discordWordmark,
-                        'aria-label': k.intl.string(k.t['t9uG/v'])
+                        "aria-label": k.intl.string(k.t["t9uG/v"]),
                     }),
-                    (0, i.jsx)('div', { className: L.basicWordmark })
-                ]
+                    (0, i.jsx)("div", { className: L.basicWordmark }),
+                ],
             });
             break;
         case Z.p9.TIER_1:
@@ -318,31 +336,31 @@ let Y = function (e) {
         case Z.p9.TIER_2:
             ef = (0, i.jsx)(j.Z, {
                 className: L.planName,
-                'aria-label': k.intl.string(k.t.lpNrPj)
+                "aria-label": k.intl.string(k.t.lpNrPj),
             });
     }
     let eb = G.includes(r.status) && !J ? H : F;
     return (0, i.jsx)(eb, {
         wordMark: ef,
         subscriptionInfo:
-            (l()(null != a, 'Expected renewalInvoicePreview'),
-            (0, i.jsx)('div', {
+            (l()(null != a, "Expected renewalInvoicePreview"),
+            (0, i.jsx)("div", {
                 className: L.planInfo,
                 children: ei
-                    ? k.intl.format(k.t['/SfHws'], { weeks: 1 })
+                    ? k.intl.format(k.t["/SfHws"], { weeks: 1 })
                     : (0, O.qV)({
                           planId: em,
                           subscription: r,
                           renewalInvoicePreview: a,
                           hasDiscountApplied: et,
                           activeDiscountInfo: en,
-                          hasFractionalPremiumWithSub: J
-                      })
+                          hasFractionalPremiumWithSub: J,
+                      }),
             })),
         buttons: (() => {
             let { status: e } = r;
             if (r.isPurchasedExternally) {
-                let e = (0, O.JE)(r.paymentGateway, 'SUBSCRIPTION_MANAGEMENT');
+                let e = (0, O.JE)(r.paymentGateway, "SUBSCRIPTION_MANAGEMENT");
                 return (0, i.jsx)(d.eee, {
                     href: e,
                     useDefaultUnderlineStyles: !1,
@@ -352,14 +370,14 @@ let Y = function (e) {
                         look: c.iL.OUTLINED,
                         color: c.Tt.WHITE,
                         submitting: P,
-                        children: k.intl.string(k.t.obRG6e)
-                    })
+                        children: k.intl.string(k.t.obRG6e),
+                    }),
                 });
             }
             function t() {
                 let e = O.ZP.isSwitchingPlansDisabled(r) || (0, N.o)(Y, q, X),
                     t = O.ZP.getSwitchingPlansDisabledMessage(r);
-                return (0, i.jsxs)('div', {
+                return (0, i.jsxs)("div", {
                     className: L.toolsButtons,
                     children: [
                         Q
@@ -370,7 +388,7 @@ let Y = function (e) {
                                   color: c.Tt.WHITE,
                                   submitting: P,
                                   onClick: er,
-                                  children: k.intl.string(k.t.eFlYVF)
+                                  children: k.intl.string(k.t.eFlYVF),
                               })
                             : (0, i.jsx)(c.zx, {
                                   className: L.toolsButton,
@@ -379,7 +397,7 @@ let Y = function (e) {
                                   color: c.Tt.WHITE,
                                   submitting: P,
                                   onClick: es,
-                                  children: k.intl.string(k.t['ETE/oK'])
+                                  children: k.intl.string(k.t["ETE/oK"]),
                               }),
                         (0, i.jsx)(d.ua7, {
                             text: t,
@@ -394,27 +412,27 @@ let Y = function (e) {
                                                 analyticsLocations: K,
                                                 analyticsLocation: W,
                                                 analyticsObject: V,
-                                                subscription: r
+                                                subscription: r,
                                             });
                                         },
-                                        children: k.intl.string(k.t['dylp//'])
-                                    })
-                                )
-                        })
-                    ]
+                                        children: k.intl.string(k.t["dylp//"]),
+                                    }),
+                                ),
+                        }),
+                    ],
                 });
             }
             if (O.ZP.isBaseSubscriptionCanceled(r))
-                return (0, i.jsx)('div', {
-                    'data-button-hoisted-classname-wrapper': !0,
+                return (0, i.jsx)("div", {
+                    "data-button-hoisted-classname-wrapper": !0,
                     className: L.toolsButton,
                     children: (0, i.jsx)(d.zxk, {
-                        variant: 'overlay-primary',
-                        size: 'sm',
+                        variant: "overlay-primary",
+                        size: "sm",
                         text: k.intl.string(k.t.iIvF29),
                         loading: P,
-                        onClick: eo
-                    })
+                        onClick: eo,
+                    }),
                 });
             switch (e) {
                 case w.O0b.BILLING_RETRY:
@@ -424,10 +442,10 @@ let Y = function (e) {
                         color: c.Tt.CUSTOM,
                         submitting: P,
                         onClick: ea,
-                        children: k.intl.string(k.t['ETE/oK'])
+                        children: k.intl.string(k.t["ETE/oK"]),
                     });
                 case w.O0b.PAUSE_PENDING:
-                    return (0, i.jsxs)('div', {
+                    return (0, i.jsxs)("div", {
                         className: L.toolsButtons,
                         children: [
                             (0, i.jsx)(c.zx, {
@@ -437,25 +455,25 @@ let Y = function (e) {
                                 color: c.Tt.WHITE,
                                 submitting: P,
                                 onClick: es,
-                                children: k.intl.string(k.t.cM1H0N)
+                                children: k.intl.string(k.t.cM1H0N),
                             }),
-                            (0, i.jsx)('div', {
-                                'data-button-hoisted-classname-wrapper': !0,
+                            (0, i.jsx)("div", {
+                                "data-button-hoisted-classname-wrapper": !0,
                                 className: L.toolsButton,
                                 children: (0, i.jsx)(d.zxk, {
-                                    variant: 'overlay-primary',
-                                    size: 'sm',
+                                    variant: "overlay-primary",
+                                    size: "sm",
                                     text: k.intl.string(k.t.TgV5QU),
                                     loading: P,
-                                    onClick: ec
-                                })
-                            })
-                        ]
+                                    onClick: ec,
+                                }),
+                            }),
+                        ],
                     });
                 case w.O0b.PAUSED:
                     if (J) return t();
                     let { durations: n } = (0, S.AT)(r);
-                    return (0, i.jsxs)('div', {
+                    return (0, i.jsxs)("div", {
                         className: L.toolsButtons,
                         children: [
                             n.length > 0
@@ -466,7 +484,7 @@ let Y = function (e) {
                                       color: c.Tt.WHITE,
                                       submitting: P,
                                       onClick: ed,
-                                      children: k.intl.string(k.t.jNHWt7)
+                                      children: k.intl.string(k.t.jNHWt7),
                                   })
                                 : (0, i.jsx)(c.zx, {
                                       className: L.linkButton,
@@ -475,20 +493,20 @@ let Y = function (e) {
                                       color: c.Tt.WHITE,
                                       submitting: P,
                                       onClick: eu,
-                                      children: k.intl.string(k.t.cM1H0N)
+                                      children: k.intl.string(k.t.cM1H0N),
                                   }),
-                            (0, i.jsx)('div', {
-                                'data-button-hoisted-classname-wrapper': !0,
+                            (0, i.jsx)("div", {
+                                "data-button-hoisted-classname-wrapper": !0,
                                 className: L.toolsButton,
                                 children: (0, i.jsx)(d.zxk, {
-                                    variant: 'overlay-primary',
-                                    size: 'sm',
+                                    variant: "overlay-primary",
+                                    size: "sm",
                                     text: k.intl.string(k.t.zpi5pq),
                                     loading: P,
-                                    onClick: ec
-                                })
-                            })
-                        ]
+                                    onClick: ec,
+                                }),
+                            }),
+                        ],
                     });
                 case w.O0b.ACTIVE:
                 case w.O0b.PAST_DUE:
@@ -497,6 +515,6 @@ let Y = function (e) {
         })(),
         statusClasses: eh,
         shouldUseDiscountMarketing: et,
-        discountAmount: ee
+        discountAmount: ee,
     });
 };

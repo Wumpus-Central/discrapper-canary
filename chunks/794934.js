@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,6 +20,8 @@ class s {
         return new s(e);
     }
     constructor(e) {
-        (a(this, 'subblocks', void 0), (this.type = i.z.FEATURED), (this.subblocks = e.subblocks.map((e) => (e.type === r.O.CATEGORY ? o.H.fromServer(e) : e))));
+        a(this, "subblocks", void 0),
+            (this.type = i.z.FEATURED),
+            (this.subblocks = e.subblocks.map((e) => (e.type === r.O.CATEGORY ? o.H.fromServer(e) : e)));
     }
 }

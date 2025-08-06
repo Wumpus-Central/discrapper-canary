@@ -1,4 +1,4 @@
-(n.d(t, { G: () => g }), n(388685), n(539854));
+n.d(t, { G: () => g }), n(388685), n(539854);
 var i = n(255367),
     r = n(73800),
     s = n(434333),
@@ -12,15 +12,24 @@ var i = n(255367),
     p = n(388032);
 let g = () => {
         var e;
-        let { transitionState: t, onClose: n, premiumType: l, setStep: m, premiumSubscription: g, paymentsBlocked: f, planId: b, handleCancellation: x } = (0, d.a)(),
+        let {
+                transitionState: t,
+                onClose: n,
+                premiumType: l,
+                setStep: m,
+                premiumSubscription: g,
+                paymentsBlocked: f,
+                planId: b,
+                handleCancellation: x,
+            } = (0, d.a)(),
             [_, j] = (0, r.useState)(!1),
             [E, C] = (0, r.useState)(!1),
             O = async () => {
-                (j(!0), C(!1));
+                j(!0), C(!1);
                 try {
-                    (await x(), n());
+                    await x(), n();
                 } catch (e) {
-                    (C(!0), j(!1));
+                    C(!0), j(!1);
                 }
             },
             v =
@@ -40,31 +49,33 @@ let g = () => {
             S.push({
                 text: p.intl.string(p.t.h9tkAA),
                 onClick: () => n(),
-                variant: 'secondary'
+                variant: "secondary",
             }),
             v
                 ? S.push({
                       text: p.intl.string(p.t.PDTjLC),
                       onClick: () => m(c.R.PREVIEW),
                       disabled: _,
-                      variant: 'critical-primary',
-                      loading: _
+                      variant: "critical-primary",
+                      loading: _,
                   })
                 : S.push({
-                      text: p.intl.string(p.t['cY+Ooa']),
+                      text: p.intl.string(p.t["cY+Ooa"]),
                       onClick: () => O(),
                       disabled: _,
-                      variant: 'critical-primary',
-                      loading: _
+                      variant: "critical-primary",
+                      loading: _,
                   }),
             (0, i.jsx)(a.Modal, {
-                size: 'md',
+                size: "md",
                 transitionState: t,
-                title: ''.concat(p.intl.format(p.t.LZunzc, { planPremiumType: o.ZP.getDisplayPremiumType(''.concat(b)) })),
+                title: "".concat(
+                    p.intl.format(p.t.LZunzc, { planPremiumType: o.ZP.getDisplayPremiumType("".concat(b)) }),
+                ),
                 subtitle: h(f, l, g),
                 actions: S,
                 onClose: async () => n(),
-                children: E ? (0, i.jsx)(s.k, { children: p.intl.string(p.t['5mlOCQ']) }) : null
+                children: E ? (0, i.jsx)(s.k, { children: p.intl.string(p.t["5mlOCQ"]) }) : null,
             })
         );
     },
@@ -78,23 +89,23 @@ let g = () => {
                 switch (t) {
                     case u.p9.TIER_0:
                         return e
-                            ? p.intl.format(p.t['l+A50N'], {
+                            ? p.intl.format(p.t["l+A50N"], {
                                   date: n.currentPeriodEnd,
-                                  helpdeskArticle: l.Z.getArticleURL(m.BhN.BLOCKED_PAYMENTS)
+                                  helpdeskArticle: l.Z.getArticleURL(m.BhN.BLOCKED_PAYMENTS),
                               })
                             : p.intl.format(p.t.Y6Wfa2, { date: n.currentPeriodEnd });
                     case u.p9.TIER_1:
                         return e
                             ? p.intl.format(p.t.QN7eIi, {
                                   date: n.currentPeriodEnd,
-                                  helpdeskArticle: l.Z.getArticleURL(m.BhN.BLOCKED_PAYMENTS)
+                                  helpdeskArticle: l.Z.getArticleURL(m.BhN.BLOCKED_PAYMENTS),
                               })
                             : p.intl.format(p.t.X7i9Dw, { date: n.currentPeriodEnd });
                     default:
                         return e
                             ? p.intl.format(p.t.vuSNho, {
                                   date: n.currentPeriodEnd,
-                                  helpdeskArticle: l.Z.getArticleURL(m.BhN.BLOCKED_PAYMENTS)
+                                  helpdeskArticle: l.Z.getArticleURL(m.BhN.BLOCKED_PAYMENTS),
                               })
                             : p.intl.format(p.t.fCdmNj, { date: n.currentPeriodEnd });
                 }

@@ -1,162 +1,162 @@
-(t(864733)(r, '__esModule', { value: !0 }),
+t(864733)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
         accessibleNameRequired: !0,
         baseConcepts: [],
         childrenPresentational: !1,
-        nameFrom: ['author'],
+        nameFrom: ["author"],
         prohibitedProps: [],
         props: {
-            'aria-activedescendant': null,
-            'aria-autocomplete': null,
-            'aria-errormessage': null,
-            'aria-invalid': null,
-            'aria-readonly': null,
-            'aria-required': null,
-            'aria-expanded': 'false',
-            'aria-haspopup': 'listbox'
+            "aria-activedescendant": null,
+            "aria-autocomplete": null,
+            "aria-errormessage": null,
+            "aria-invalid": null,
+            "aria-readonly": null,
+            "aria-required": null,
+            "aria-expanded": "false",
+            "aria-haspopup": "listbox",
         },
         relatedConcepts: [
             {
                 concept: {
                     attributes: [
                         {
-                            constraints: ['set'],
-                            name: 'list'
+                            constraints: ["set"],
+                            name: "list",
                         },
                         {
-                            name: 'type',
-                            value: 'email'
-                        }
+                            name: "type",
+                            value: "email",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            constraints: ['set'],
-                            name: 'list'
+                            constraints: ["set"],
+                            name: "list",
                         },
                         {
-                            name: 'type',
-                            value: 'search'
-                        }
+                            name: "type",
+                            value: "search",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            constraints: ['set'],
-                            name: 'list'
+                            constraints: ["set"],
+                            name: "list",
                         },
                         {
-                            name: 'type',
-                            value: 'tel'
-                        }
+                            name: "type",
+                            value: "tel",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            constraints: ['set'],
-                            name: 'list'
+                            constraints: ["set"],
+                            name: "list",
                         },
                         {
-                            name: 'type',
-                            value: 'text'
-                        }
+                            name: "type",
+                            value: "text",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            constraints: ['set'],
-                            name: 'list'
+                            constraints: ["set"],
+                            name: "list",
                         },
                         {
-                            name: 'type',
-                            value: 'url'
-                        }
+                            name: "type",
+                            value: "url",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            constraints: ['set'],
-                            name: 'list'
+                            constraints: ["set"],
+                            name: "list",
                         },
                         {
-                            name: 'type',
-                            value: 'url'
-                        }
+                            name: "type",
+                            value: "url",
+                        },
                     ],
-                    name: 'input'
+                    name: "input",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            constraints: ['undefined'],
-                            name: 'multiple'
+                            constraints: ["undefined"],
+                            name: "multiple",
                         },
                         {
-                            constraints: ['undefined'],
-                            name: 'size'
-                        }
+                            constraints: ["undefined"],
+                            name: "size",
+                        },
                     ],
-                    name: 'select'
+                    name: "select",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            constraints: ['undefined'],
-                            name: 'multiple'
+                            constraints: ["undefined"],
+                            name: "multiple",
                         },
                         {
-                            name: 'size',
-                            value: 1
-                        }
+                            name: "size",
+                            value: 1,
+                        },
                     ],
-                    name: 'select'
+                    name: "select",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
-                concept: { name: 'select' },
-                module: 'XForms'
-            }
+                concept: { name: "select" },
+                module: "XForms",
+            },
         ],
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
         requiredProps: {
-            'aria-controls': null,
-            'aria-expanded': 'false'
+            "aria-controls": null,
+            "aria-expanded": "false",
         },
-        superClass: [['roletype', 'widget', 'input']]
-    }));
+        superClass: [["roletype", "widget", "input"]],
+    });

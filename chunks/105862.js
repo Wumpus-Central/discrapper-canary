@@ -23,48 +23,48 @@ function g(e) {
         { trackSectionImpressionRef: y } = (0, d.Z)({
             sectionName: u.L3.NEW_TO_APPS,
             numItems: 1,
-            numVisibleItems: 1
+            numVisibleItems: 1,
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: n ? p.containerPadding : void 0,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             ref: (e) => {
                 y.current = e;
             },
             className: p.container,
             children: [
                 t &&
-                    (0, r.jsx)('img', {
+                    (0, r.jsx)("img", {
                         className: p.image,
                         src: E,
-                        alt: '',
-                        'aria-hidden': !0
+                        alt: "",
+                        "aria-hidden": !0,
                     }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: p.body,
                     children: [
                         (0, r.jsx)(a.X6q, {
-                            variant: 'heading-lg/bold',
-                            color: 'header-primary',
-                            children: _.intl.string(_.t['kw8/ER'])
+                            variant: "heading-lg/bold",
+                            color: "header-primary",
+                            children: _.intl.string(_.t["kw8/ER"]),
                         }),
                         (0, r.jsx)(a.Text, {
-                            variant: 'text-xs/normal',
-                            color: 'text-default',
-                            children: _.intl.string(_.t.GZoV1N)
-                        })
-                    ]
+                            variant: "text-xs/normal",
+                            color: "text-default",
+                            children: _.intl.string(_.t.GZoV1N),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(a.zxk, {
-                    variant: 'primary',
+                    variant: "primary",
                     text: _.intl.string(_.t.Ye51oa),
-                    'aria-label': _.intl.formatToPlainString(_.t.xx5Sur, {
-                        sectionTitle: _.intl.string(_.t['kw8/ER']),
-                        sectionBody: _.intl.string(_.t.GZoV1N)
+                    "aria-label": _.intl.formatToPlainString(_.t.xx5Sur, {
+                        sectionTitle: _.intl.string(_.t["kw8/ER"]),
+                        sectionBody: _.intl.string(_.t.GZoV1N),
                     }),
-                    onClick: b
-                })
-            ]
-        })
+                    onClick: b,
+                }),
+            ],
+        }),
     });
 }

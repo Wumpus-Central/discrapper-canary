@@ -17,14 +17,14 @@ var r = n(98405),
     b = n(199838),
     y = n(507604),
     O = n(511696),
-    v = 'DOMException',
-    I = 'DATA_CLONE_ERR',
-    T = i('Error'),
+    v = "DOMException",
+    I = "DATA_CLONE_ERR",
+    T = i("Error"),
     S =
         i(v) ||
         (function () {
             try {
-                new (i('MessageChannel') || o('worker_threads').MessageChannel)().port1.postMessage(new WeakMap());
+                new (i("MessageChannel") || o("worker_threads").MessageChannel)().port1.postMessage(new WeakMap());
             } catch (e) {
                 if (e.name === I && 25 === e.code) return e.constructor;
             }
@@ -33,7 +33,7 @@ var r = n(98405),
     N = T.prototype,
     C = b.set,
     R = b.getterFor(v),
-    P = 'stack' in new T(v),
+    P = "stack" in new T(v),
     w = function (e) {
         return f(g, e) && g[e].m ? g[e].c : 0;
     },
@@ -41,20 +41,20 @@ var r = n(98405),
         _(this, L);
         var e = arguments.length,
             t = m(e < 1 ? void 0 : arguments[0]),
-            n = m(e < 2 ? void 0 : arguments[1], 'Error'),
+            n = m(e < 2 ? void 0 : arguments[1], "Error"),
             r = w(n);
         if (
             (C(this, {
                 type: v,
                 name: n,
                 message: t,
-                code: r
+                code: r,
             }),
             y || ((this.name = n), (this.message = t), (this.code = r)),
             P)
         ) {
             var i = new T(t);
-            ((i.name = v), c(this, 'stack', l(1, E(i.stack, 1))));
+            (i.name = v), c(this, "stack", l(1, E(i.stack, 1)));
         }
     },
     L = (D.prototype = s(N)),
@@ -62,7 +62,7 @@ var r = n(98405),
         return {
             enumerable: !0,
             configurable: !0,
-            get: e
+            get: e,
         };
     },
     M = function (e) {
@@ -70,19 +70,19 @@ var r = n(98405),
             return R(this)[e];
         });
     };
-(y && (d(L, 'code', M('code')), d(L, 'message', M('message')), d(L, 'name', M('name'))), c(L, 'constructor', l(1, D)));
+y && (d(L, "code", M("code")), d(L, "message", M("message")), d(L, "name", M("name"))), c(L, "constructor", l(1, D));
 var k = a(function () {
         return !(new S() instanceof T);
     }),
     j =
         k ||
         a(function () {
-            return N.toString !== h || '2: 1' !== String(new S(1, 2));
+            return N.toString !== h || "2: 1" !== String(new S(1, 2));
         }),
     U =
         k ||
         a(function () {
-            return 25 !== new S(1, 'DataCloneError').code;
+            return 25 !== new S(1, "DataCloneError").code;
         }),
     G = k || 25 !== S[I] || 25 !== A[I],
     B = O ? j || U || G : k;
@@ -90,27 +90,27 @@ r(
     {
         global: !0,
         constructor: !0,
-        forced: B
+        forced: B,
     },
-    { DOMException: B ? D : S }
+    { DOMException: B ? D : S },
 );
 var Z = i(v),
     F = Z.prototype;
-for (var V in (j && (O || S === Z) && u(F, 'toString', h),
+for (var V in (j && (O || S === Z) && u(F, "toString", h),
 U &&
     y &&
     S === Z &&
     d(
         F,
-        'code',
+        "code",
         x(function () {
             return w(p(this).name);
-        })
+        }),
     ),
 g))
     if (f(g, V)) {
         var H = g[V],
             Y = H.s,
             W = l(6, H.c);
-        (f(Z, Y) || c(Z, Y, W), f(F, Y) || c(F, Y, W));
+        f(Z, Y) || c(Z, Y, W), f(F, Y) || c(F, Y, W);
     }

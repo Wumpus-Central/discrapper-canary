@@ -5,7 +5,7 @@ var e = n(220159),
     s = n(297523);
 e(
     {
-        target: 'Array',
+        target: "Array",
         proto: !0,
         arity: 1,
         forced:
@@ -14,11 +14,11 @@ e(
             }) ||
             !(function () {
                 try {
-                    Object.defineProperty([], 'length', { writable: !1 }).push();
+                    Object.defineProperty([], "length", { writable: !1 }).push();
                 } catch (t) {
                     return t instanceof TypeError;
                 }
-            })()
+            })(),
     },
     {
         push: function (t) {
@@ -26,8 +26,8 @@ e(
                 n = i(r),
                 e = arguments.length;
             s(n + e);
-            for (var c = 0; c < e; c++) ((r[n] = arguments[c]), n++);
-            return (u(r, n), n);
-        }
-    }
+            for (var c = 0; c < e; c++) (r[n] = arguments[c]), n++;
+            return u(r, n), n;
+        },
+    },
 );

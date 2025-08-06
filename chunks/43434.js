@@ -13,20 +13,20 @@ function d() {
         settingsSection: c.oAB.REVENUE_STORYBOOK_PAGE,
         tabs: [
             {
-                title: 'Virtual Currency (Orb) Components',
+                title: "Virtual Currency (Orb) Components",
                 component: () => (0, i.jsx)(l.O, {}),
-                setting: o.s6.ORB_COMPONENTS
+                setting: o.s6.ORB_COMPONENTS,
             },
             {
-                title: 'Payment Components',
+                title: "Payment Components",
                 component: () => (0, i.jsx)(a.f, {}),
-                setting: o.s6.PAYMENT_COMPONENTS
+                setting: o.s6.PAYMENT_COMPONENTS,
             },
             {
-                title: 'Nitro Components',
+                title: "Nitro Components",
                 component: () => (0, i.jsx)(s.X, {}),
-                setting: o.s6.NITRO_COMPONENTS
-            }
-        ]
+                setting: o.s6.NITRO_COMPONENTS,
+            },
+        ],
     });
 }

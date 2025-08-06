@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685), n(953529));
+n.d(t, { Z: () => h }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -18,15 +18,15 @@ function h(e) {
         [O, y] = i.useState(!1),
         [C, N] = i.useState(!1),
         I = i.useRef(null);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         _(f);
     }, [f]),
         i.useEffect(
             () => () => {
                 clearTimeout(I.current);
             },
-            []
-        ));
+            [],
+        );
     let E = x.find((e) => e.value === v),
         S = (e) => {
             e.disabled ||
@@ -35,18 +35,22 @@ function h(e) {
                 null == j || j(e),
                 _(e.value),
                 (I.current = setTimeout(() => {
-                    (N(!1), y(!1));
+                    N(!1), y(!1);
                 }, 1000)));
         };
     return (0, r.jsx)(u.Z, {
         title: O ? h : null != (t = null == E ? void 0 : E.title) ? t : h,
-        description: O ? '('.concat(null != (n = null == E ? void 0 : E.title) ? n : g.intl.string(g.t.PoWNfX), ')') : null != (l = null == E ? void 0 : E.description) ? l : '',
+        description: O
+            ? "(".concat(null != (n = null == E ? void 0 : E.title) ? n : g.intl.string(g.t.PoWNfX), ")")
+            : null != (l = null == E ? void 0 : E.description)
+              ? l
+              : "",
         highlightColor: O ? d.q.NONE : null == E ? void 0 : E.highlightColor,
         action: (0, r.jsx)(s.zx, {
             look: s.zx.Looks.LINK,
             size: s.zx.Sizes.MIN,
             color: s.zx.Colors.LINK,
-            children: g.intl.string(g.t.GEgsAw)
+            children: g.intl.string(g.t.GEgsAw),
         }),
         loading: C,
         className: b,
@@ -59,12 +63,15 @@ function h(e) {
                     highlightColor: e.highlightColor,
                     className: a()(p.groupCollapsedRow, v === e.value && p.selected),
                     selected: v === e.value,
-                    action: v === e.value ? (0, r.jsx)(c.Z, { className: p.radioItem }) : (0, r.jsx)(o.Z, { className: p.radioItem }),
+                    action:
+                        v === e.value
+                            ? (0, r.jsx)(c.Z, { className: p.radioItem })
+                            : (0, r.jsx)(o.Z, { className: p.radioItem }),
                     onClick: () => S(e),
-                    disabled: e.disabled
+                    disabled: e.disabled,
                 },
-                ''.concat(e.title, '-').concat(t)
-            )
-        )
+                "".concat(e.title, "-").concat(t),
+            ),
+        ),
     });
 }

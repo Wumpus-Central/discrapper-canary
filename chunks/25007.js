@@ -16,22 +16,22 @@ let f = i.memo(function (e) {
     return t.isArchivedLockedThread()
         ? (0, r.jsx)(u.s, {
               channel: t,
-              narrow: n
+              narrow: n,
           })
         : t.isLockedThread()
           ? (0, r.jsx)(u.q, {
                 channel: t,
-                narrow: n
+                narrow: n,
             })
           : _
             ? (0, r.jsx)(s.Z, {
                   channel: t,
-                  clearUnreadsNotice: p
+                  clearUnreadsNotice: p,
               })
             : i && f.includes(d.E.OPT_IN_CHANNEL)
               ? (0, r.jsx)(c.Z, {
                     channel: t,
-                    narrow: n
+                    narrow: n,
                 })
               : null;
 });

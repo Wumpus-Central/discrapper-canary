@@ -13,18 +13,18 @@ function d(e) {
         { themeType: f } = (0, s.z)(),
         _ = (0, a.Z)({
             application: t,
-            location: 'User Profile Activity'
+            location: "User Profile Activity",
         });
     return null == _
         ? null
         : (0, r.jsx)(l.tG, {
               icon: o.v3n,
-              text: u.intl.string(u.t['jaYS/v']),
+              text: u.intl.string(u.t["jaYS/v"]),
               size: f === c.lY.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
               fullWidth: f !== c.lY.MODAL_V2,
-              themeColor: 'secondary',
+              themeColor: "secondary",
               onClick: (e) => {
-                  (e.stopPropagation(), null == n || n({ action: 'PRESS_CLOUD_PLAY_BUTTON' }), _(), null == d || d());
-              }
+                  e.stopPropagation(), null == n || n({ action: "PRESS_CLOUD_PLAY_BUTTON" }), _(), null == d || d();
+              },
           });
 }

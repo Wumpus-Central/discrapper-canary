@@ -20,14 +20,14 @@ function v(t) {
                 channel: t,
                 connected: e,
                 needSubscriptionToAccess: v,
-                locked: !1
+                locked: !1,
             });
         }, [t, e, v]);
     return e || !n
         ? null
         : (0, i.jsx)(s.sNh, {
-              id: 'join-thread-voice',
-              label: l ? h.intl.string(h.t['0D/6R0']) : h.intl.string(h.t.My50nZ),
-              action: g
+              id: "join-thread-voice",
+              label: l ? h.intl.string(h.t["0D/6R0"]) : h.intl.string(h.t.My50nZ),
+              action: g,
           });
 }

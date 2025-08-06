@@ -3,34 +3,34 @@ n.d(t, {
     Q_: () => i,
     UD: () => l,
     hi: () => o,
-    y: () => s
+    y: () => s,
 });
 var r = n(570140);
 function i(e) {
     r.Z.dispatch({
-        type: 'SYSTEM_THEME_CHANGE',
-        systemTheme: e
+        type: "SYSTEM_THEME_CHANGE",
+        systemTheme: e,
     });
 }
 function o(e) {
     r.Z.dispatch({
-        type: 'UNSYNCED_USER_SETTINGS_UPDATE',
-        settings: { useSystemTheme: e }
+        type: "UNSYNCED_USER_SETTINGS_UPDATE",
+        settings: { useSystemTheme: e },
     });
 }
 function a(e) {
     r.Z.dispatch({
-        type: 'UPDATE_THEME_PREFERENCES',
-        preferences: e
+        type: "UPDATE_THEME_PREFERENCES",
+        preferences: e,
     });
 }
 function s(e) {
     r.Z.dispatch({
-        type: 'SET_THEME_OVERRIDE',
-        theme: e
+        type: "SET_THEME_OVERRIDE",
+        theme: e,
     });
 }
 function l() {
-    r.Z.dispatch({ type: 'CLEAR_THEME_OVERRIDE' });
+    r.Z.dispatch({ type: "CLEAR_THEME_OVERRIDE" });
 }
-(n(541049), n(740492), n(874893));
+n(541049), n(740492), n(874893);

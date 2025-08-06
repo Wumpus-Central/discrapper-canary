@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(415506), n(997841));
+n.d(t, { Z: () => b }), n(415506), n(997841);
 var r = n(149765),
     i = n(81825),
     o = n(864106),
@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,11 +44,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,7 +80,7 @@ class b extends i.Z {
                   avatar: i,
                   userId: this.id,
                   canAnimate: n,
-                  canWebP: r
+                  canWebP: r,
               })
             : c.ZP.getUserAvatarURL(this, n, t, null, r);
     }
@@ -107,9 +107,9 @@ class b extends i.Z {
                             avatar: r,
                             userId: this.id,
                             canAnimate: t,
-                            size: n
-                        })
-                    )
+                            size: n,
+                        }),
+                    ),
                 );
         }
         return c.ZP.getAnimatableSourceWithFallback(t, (e) => c.ZP.getUserAvatarSource(this, e, n));
@@ -121,10 +121,10 @@ class b extends i.Z {
         return null != this.phone;
     }
     toString() {
-        return '' !== this.username ? this.username : '???';
+        return "" !== this.username ? this.username : "???";
     }
     get tag() {
-        return ''.concat(this.username, '#').concat(''.concat(this.discriminator).padStart(4, '0'));
+        return "".concat(this.username, "#").concat("".concat(this.discriminator).padStart(4, "0"));
     }
     hasPurchasedFlag(e) {
         return (0, u.yE)(this.purchasedFlags, e);
@@ -178,7 +178,7 @@ class b extends i.Z {
         return null != e && null != this.guildMemberAvatars[e];
     }
     hasUniqueUsername() {
-        return '0' === this.discriminator;
+        return "0" === this.discriminator;
     }
     get isProvisional() {
         return this.hasFlag(_.xW$.PROVISIONAL_ACCOUNT);
@@ -195,10 +195,42 @@ class b extends i.Z {
     }
     constructor(e) {
         var t, n, i, o, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k, j, U;
-        (super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'ageVerificationStatus', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'displayNameStyles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1));
+        super(),
+            h(this, "id", void 0),
+            h(this, "username", void 0),
+            h(this, "discriminator", void 0),
+            h(this, "avatar", void 0),
+            h(this, "avatarDecorationData", void 0),
+            h(this, "banner", void 0),
+            h(this, "email", void 0),
+            h(this, "verified", void 0),
+            h(this, "bot", void 0),
+            h(this, "system", void 0),
+            h(this, "mfaEnabled", void 0),
+            h(this, "mobile", void 0),
+            h(this, "desktop", void 0),
+            h(this, "premiumType", void 0),
+            h(this, "flags", void 0),
+            h(this, "publicFlags", void 0),
+            h(this, "purchasedFlags", void 0),
+            h(this, "premiumUsageFlags", void 0),
+            h(this, "phone", void 0),
+            h(this, "nsfwAllowed", void 0),
+            h(this, "ageVerificationStatus", void 0),
+            h(this, "guildMemberAvatars", void 0),
+            h(this, "hasBouncedEmail", void 0),
+            h(this, "personalConnectionId", void 0),
+            h(this, "globalName", void 0),
+            h(this, "primaryGuild", void 0),
+            h(this, "collectibles", void 0),
+            h(this, "displayNameStyles", void 0),
+            h(this, "hasFlag", (e) => !1),
+            h(this, "isStaff", () => !1),
+            h(this, "isStaffPersonal", () => !1),
+            h(this, "hasAnyStaffLevel", () => !1);
         let G = null != (n = e.premium_type) ? n : e.premiumType;
-        ((this.id = e.id),
-            (this.username = null != (i = e.username) ? i : ''),
+        (this.id = e.id),
+            (this.username = null != (i = e.username) ? i : ""),
             (this.discriminator = null != (o = e.discriminator) ? o : _.fo$),
             (this.avatar = null != (l = e.avatar) ? l : null),
             (this.avatarDecoration = null != (c = e.avatar_decoration_data) ? c : e.avatarDecorationData),
@@ -213,13 +245,15 @@ class b extends i.Z {
             (this.flags = null != (y = e.flags) ? y : 0),
             (this.publicFlags = null != (v = null != (O = e.public_flags) ? O : e.publicFlags) ? v : 0),
             (this.purchasedFlags = null != (T = null != (I = e.purchased_flags) ? I : e.purchasedFlags) ? T : 0),
-            (this.premiumUsageFlags = null != (A = null != (S = e.premium_usage_flags) ? S : e.premiumUsageFlags) ? A : 0),
+            (this.premiumUsageFlags =
+                null != (A = null != (S = e.premium_usage_flags) ? S : e.premiumUsageFlags) ? A : 0),
             (this.phone = null != (N = e.phone) ? N : null),
             (this.nsfwAllowed = null != (C = e.nsfw_allowed) ? C : e.nsfwAllowed),
             (this.ageVerificationStatus = null != (R = e.age_verification_status) ? R : e.ageVerificationStatus),
             (this.guildMemberAvatars = null != (P = e.guildMemberAvatars) ? P : {}),
             (this.hasBouncedEmail = null != (D = null != (w = e.has_bounced_email) ? w : e.hasBouncedEmail) && D),
-            (this.personalConnectionId = null != (x = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? x : null),
+            (this.personalConnectionId =
+                null != (x = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? x : null),
             (this.globalName = null != (M = e.global_name) ? M : e.globalName),
             (this.banner = e.banner),
             (this.primaryGuild = (0, s.l)(null != (j = null != (k = e.primary_guild) ? k : e.primaryGuild) ? j : null)),
@@ -236,28 +270,31 @@ class b extends i.Z {
                             n = r.vB(this.publicFlags),
                             i = r.vB(e);
                         return r.e$(r.$e(t, n), i);
-                    }
+                    },
                 },
                 isStaff: {
                     writable: !1,
                     configurable: !1,
                     enumerable: !1,
-                    value: () => this.hasFlag(_.xW$.STAFF)
+                    value: () => this.hasFlag(_.xW$.STAFF),
                 },
                 isStaffPersonal: {
                     writable: !1,
                     configurable: !1,
                     enumerable: !1,
-                    value: () => !this.hasFlag(_.xW$.STAFF) && null != this.personalConnectionId
+                    value: () => !this.hasFlag(_.xW$.STAFF) && null != this.personalConnectionId,
                 },
                 hasAnyStaffLevel: {
                     writable: !1,
                     configurable: !1,
                     enumerable: !1,
-                    value: () => this.hasFlag(_.xW$.STAFF) || this.hasFlag(_.xW$.COLLABORATOR) || this.hasFlag(_.xW$.RESTRICTED_COLLABORATOR)
-                }
+                    value: () =>
+                        this.hasFlag(_.xW$.STAFF) ||
+                        this.hasFlag(_.xW$.COLLABORATOR) ||
+                        this.hasFlag(_.xW$.RESTRICTED_COLLABORATOR),
+                },
             }),
-            (null == (t = this.globalName) ? void 0 : t.length) === 0 && (this.globalName = null));
+            (null == (t = this.globalName) ? void 0 : t.length) === 0 && (this.globalName = null);
     }
 }
-new b({ id: '0' });
+new b({ id: "0" });

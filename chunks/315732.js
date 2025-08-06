@@ -7,9 +7,9 @@ var i = n(481060),
 function o(e) {
     return l.wS
         ? (0, r.jsx)(i.sNh, {
-              id: 'copy-channel-topic',
+              id: "copy-channel-topic",
               label: c.intl.string(c.t.Tb3Vsr),
-              action: () => (0, l.JG)(e.topic)
+              action: () => (0, l.JG)(e.topic),
           })
         : null;
 }

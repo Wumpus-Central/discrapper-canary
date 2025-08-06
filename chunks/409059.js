@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,15 +43,15 @@ function f(e, t) {
                 ? c({}, n)
                 : {
                       code: e,
-                      state: s.Rj.RESOLVING
+                      state: s.Rj.RESOLVING,
                   };
-    (t(r), (u = new Map(u)).set(e, r));
+    t(r), (u = new Map(u)).set(e, r);
 }
 function _(e) {
     let { code: t } = e;
     (u = new Map(u)).set(t, {
         code: t,
-        state: s.Rj.RESOLVING
+        state: s.Rj.RESOLVING,
     });
 }
 function p(e) {
@@ -80,7 +80,7 @@ function E(e) {
 function b(e) {
     return f(e.code, (e) => {
         var t;
-        ((e.state = s.Rj.ACCEPTED), (e.usageCount = (null != (t = e.usageCount) ? t : 0) + 1));
+        (e.state = s.Rj.ACCEPTED), (e.usageCount = (null != (t = e.usageCount) ? t : 0) + 1);
     });
 }
 function y(e) {
@@ -104,14 +104,14 @@ class I extends (r = i.ZP.Store) {
     getForGuild(e) {
         for (let t of u.keys()) {
             let n = u.get(t);
-            if (null != n && 'sourceGuildId' in n && n.sourceGuildId === e && n.state !== s.Rj.EXPIRED) return n;
+            if (null != n && "sourceGuildId" in n && n.sourceGuildId === e && n.state !== s.Rj.EXPIRED) return n;
         }
     }
     getDisplayedGuildTemplateCode() {
         return d;
     }
 }
-l(I, 'displayName', 'GuildTemplateStore');
+l(I, "displayName", "GuildTemplateStore");
 let T = new I(o.Z, {
     GUILD_TEMPLATE_RESOLVE: _,
     GUILD_TEMPLATE_CREATE_SUCCESS: p,
@@ -124,5 +124,5 @@ let T = new I(o.Z, {
     GUILD_TEMPLATE_ACCEPT_SUCCESS: b,
     GUILD_TEMPLATE_ACCEPT_FAILURE: y,
     GUILD_TEMPLATE_MODAL_SHOW: O,
-    GUILD_TEMPLATE_MODAL_HIDE: v
+    GUILD_TEMPLATE_MODAL_HIDE: v,
 });

@@ -13,7 +13,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -54,7 +54,7 @@ class g extends (i = r.ZP.PersistedStore) {
         return null != (t = p.unlockedAchievements[e]) ? t : null;
     }
 }
-(d(g, 'displayName', 'PoggermodeAchievementStore'), d(g, 'persistKey', 'PoggermodeAchievementStore'));
+d(g, "displayName", "PoggermodeAchievementStore"), d(g, "persistKey", "PoggermodeAchievementStore");
 let h = new g(s.Z, {
     POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
         let { achievementId: t } = e;
@@ -62,13 +62,13 @@ let h = new g(s.Z, {
         !(function (e) {
             var t, n;
             if (null == p.unlockedAchievements[e])
-                ((t = u({}, p.unlockedAchievements)),
+                (t = u({}, p.unlockedAchievements)),
                     (n = n =
                         {
                             [e]: {
                                 achievementId: e,
-                                dateUnlocked: Date.now()
-                            }
+                                dateUnlocked: Date.now(),
+                            },
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -85,7 +85,7 @@ let h = new g(s.Z, {
                     (p.unlockedAchievements = t),
                     setTimeout(() => {
                         (0, l.D)(e, !0);
-                    }, 2000));
+                    }, 2000);
         })(t);
-    }
+    },
 });

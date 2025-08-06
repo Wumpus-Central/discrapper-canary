@@ -1,11 +1,11 @@
 function r(e) {
-    return e.split('.')[0];
+    return e.split(".")[0];
 }
 function i(e) {
     return null == e ? null : r(e);
 }
-(n.d(t, {
+n.d(t, {
     K: () => i,
-    s: () => r
+    s: () => r,
 }),
-    n(35282));
+    n(35282);

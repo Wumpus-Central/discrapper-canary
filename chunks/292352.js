@@ -1,4 +1,4 @@
-(n.d(e, {
+n.d(e, {
     AG: () => f,
     MY: () => h,
     Mu: () => b,
@@ -18,9 +18,9 @@
     ne: () => L,
     tx: () => Y,
     vH: () => p,
-    zE: () => I
+    zE: () => I,
 }),
-    n(388685));
+    n(388685);
 var i,
     r,
     l,
@@ -37,75 +37,100 @@ let T = 30 * E.Z.Millis.SECOND,
     S = 3,
     I = 26,
     C = 64,
-    A = (t, e) => 'https://discord.com/feature/family-center/my-family/'.concat(t, '/').concat(e),
+    A = (t, e) => "https://discord.com/feature/family-center/my-family/".concat(t, "/").concat(e),
     g = 4,
     y = 5 * E.Z.Millis.MINUTE,
-    p = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    p = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     N = (0, o.Ft)(
         Object.freeze({
-            FAMILY_CENTER_SETTINGS: '/family-center/settings',
-            FAMILY_CENTER_MY_FAMILY: '/family-center/my-family'
+            FAMILY_CENTER_SETTINGS: "/family-center/settings",
+            FAMILY_CENTER_MY_FAMILY: "/family-center/my-family",
         }),
-        [':', '?', '@']
+        [":", "?", "@"],
     );
-var L = (((i = {})[(i.PENDING = 1)] = 'PENDING'), (i[(i.ACTIVE = 2)] = 'ACTIVE'), (i[(i.INACTIVE = 3)] = 'INACTIVE'), (i[(i.DECLINED = 4)] = 'DECLINED'), (i[(i.EXPIRED = 5)] = 'EXPIRED'), i),
-    h = (((r = {})[(r.USER_ADD = 1)] = 'USER_ADD'), (r[(r.GUILD_ADD = 2)] = 'GUILD_ADD'), (r[(r.USER_INTERACTION = 3)] = 'USER_INTERACTION'), (r[(r.GUILD_INTERACTION = 4)] = 'GUILD_INTERACTION'), (r[(r.USER_CALLED = 5)] = 'USER_CALLED'), r),
-    R = (((l = {}).ACTIVITY = 'ACTIVITY'), (l.REQUESTS = 'REQUESTS'), (l.SETTINGS = 'SETTINGS'), l),
-    M = (((a = {})[(a.ACTIVITY = 0)] = 'ACTIVITY'), (a[(a.REQUESTS = 1)] = 'REQUESTS'), (a[(a.SETTINGS = 2)] = 'SETTINGS'), a),
-    b = (((d = {}).SIDENAV = 'SIDENAV'), (d.SETTINGS = 'SETTINGS'), d),
-    D = (((u = {})[(u.SIDENAV = 0)] = 'SIDENAV'), (u[(u.SETTINGS = 1)] = 'SETTINGS'), u),
-    U = (((s = {})[(s.TabChange = 0)] = 'TabChange'), (s[(s.ShowQRCodeModal = 1)] = 'ShowQRCodeModal'), (s[(s.RevealQRCode = 2)] = 'RevealQRCode'), (s[(s.ScanQRCodeButton = 3)] = 'ScanQRCodeButton'), (s[(s.ScanQRCode = 4)] = 'ScanQRCode'), (s[(s.LoadMore = 5)] = 'LoadMore'), (s[(s.SelectTeen = 6)] = 'SelectTeen'), (s[(s.HideQRCode = 7)] = 'HideQRCode'), s);
+var L =
+        (((i = {})[(i.PENDING = 1)] = "PENDING"),
+        (i[(i.ACTIVE = 2)] = "ACTIVE"),
+        (i[(i.INACTIVE = 3)] = "INACTIVE"),
+        (i[(i.DECLINED = 4)] = "DECLINED"),
+        (i[(i.EXPIRED = 5)] = "EXPIRED"),
+        i),
+    h =
+        (((r = {})[(r.USER_ADD = 1)] = "USER_ADD"),
+        (r[(r.GUILD_ADD = 2)] = "GUILD_ADD"),
+        (r[(r.USER_INTERACTION = 3)] = "USER_INTERACTION"),
+        (r[(r.GUILD_INTERACTION = 4)] = "GUILD_INTERACTION"),
+        (r[(r.USER_CALLED = 5)] = "USER_CALLED"),
+        r),
+    R = (((l = {}).ACTIVITY = "ACTIVITY"), (l.REQUESTS = "REQUESTS"), (l.SETTINGS = "SETTINGS"), l),
+    M =
+        (((a = {})[(a.ACTIVITY = 0)] = "ACTIVITY"),
+        (a[(a.REQUESTS = 1)] = "REQUESTS"),
+        (a[(a.SETTINGS = 2)] = "SETTINGS"),
+        a),
+    b = (((d = {}).SIDENAV = "SIDENAV"), (d.SETTINGS = "SETTINGS"), d),
+    D = (((u = {})[(u.SIDENAV = 0)] = "SIDENAV"), (u[(u.SETTINGS = 1)] = "SETTINGS"), u),
+    U =
+        (((s = {})[(s.TabChange = 0)] = "TabChange"),
+        (s[(s.ShowQRCodeModal = 1)] = "ShowQRCodeModal"),
+        (s[(s.RevealQRCode = 2)] = "RevealQRCode"),
+        (s[(s.ScanQRCodeButton = 3)] = "ScanQRCodeButton"),
+        (s[(s.ScanQRCode = 4)] = "ScanQRCode"),
+        (s[(s.LoadMore = 5)] = "LoadMore"),
+        (s[(s.SelectTeen = 6)] = "SelectTeen"),
+        (s[(s.HideQRCode = 7)] = "HideQRCode"),
+        s);
 let Y = new Map([
     [
         3,
         {
             tooltipHeader: () => _.intl.string(c.default.kvTgWF),
-            tooltipDescription: (t) => (t ? _.intl.string(c.default.cY19ub) : _.intl.string(c.default['K5r+sL'])),
-            sectionHeader: (t) => _.intl.formatToPlainString(c.default['4T3zWV'], { count: t }),
-            sectionDescription: (t) => (t ? _.intl.string(c.default.cY19ub) : _.intl.string(c.default['K5r+sL'])),
+            tooltipDescription: (t) => (t ? _.intl.string(c.default.cY19ub) : _.intl.string(c.default["K5r+sL"])),
+            sectionHeader: (t) => _.intl.formatToPlainString(c.default["4T3zWV"], { count: t }),
+            sectionDescription: (t) => (t ? _.intl.string(c.default.cY19ub) : _.intl.string(c.default["K5r+sL"])),
             timestampFormatter: () => ({
                 today: _.intl.string(c.default.fLBUx8),
                 yesterday: _.intl.string(c.default.cHHgxM),
-                days: c.default.qvKjp6
-            })
-        }
+                days: c.default.qvKjp6,
+            }),
+        },
     ],
     [
         5,
         {
             tooltipHeader: () => _.intl.string(c.default.D7Sng4),
-            tooltipDescription: (t) => (t ? _.intl.string(c.default['w7j/Li']) : _.intl.string(c.default.SCIaWF)),
-            sectionHeader: (t) => _.intl.formatToPlainString(c.default['0GE4Nj'], { count: t }),
-            sectionDescription: (t) => (t ? _.intl.string(c.default['w7j/Li']) : _.intl.string(c.default.SCIaWF)),
+            tooltipDescription: (t) => (t ? _.intl.string(c.default["w7j/Li"]) : _.intl.string(c.default.SCIaWF)),
+            sectionHeader: (t) => _.intl.formatToPlainString(c.default["0GE4Nj"], { count: t }),
+            sectionDescription: (t) => (t ? _.intl.string(c.default["w7j/Li"]) : _.intl.string(c.default.SCIaWF)),
             timestampFormatter: () => ({
                 today: _.intl.string(c.default.IHd5cX),
                 yesterday: _.intl.string(c.default.wOsfxs),
-                days: c.default.oCk8c3
-            })
-        }
+                days: c.default.oCk8c3,
+            }),
+        },
     ],
     [
         1,
         {
             tooltipHeader: () => _.intl.string(c.default.kIcKAg),
-            tooltipDescription: (t) => (t ? _.intl.string(c.default.HvsFJS) : _.intl.string(c.default['1/QpPz'])),
-            sectionHeader: (t) => _.intl.formatToPlainString(c.default['TEvo+P'], { count: t }),
-            sectionDescription: (t) => (t ? _.intl.string(c.default.HvsFJS) : _.intl.string(c.default['1/QpPz'])),
+            tooltipDescription: (t) => (t ? _.intl.string(c.default.HvsFJS) : _.intl.string(c.default["1/QpPz"])),
+            sectionHeader: (t) => _.intl.formatToPlainString(c.default["TEvo+P"], { count: t }),
+            sectionDescription: (t) => (t ? _.intl.string(c.default.HvsFJS) : _.intl.string(c.default["1/QpPz"])),
             timestampFormatter: () => ({
                 today: _.intl.string(c.default.JUHIYW),
                 yesterday: _.intl.string(c.default.GiswUV),
-                days: c.default.fwQgEx
-            })
-        }
+                days: c.default.fwQgEx,
+            }),
+        },
     ],
     [
         2,
         {
-            tooltipHeader: () => _.intl.string(c.default['NulX9/']),
+            tooltipHeader: () => _.intl.string(c.default["NulX9/"]),
             tooltipDescription: (t) => (t ? _.intl.string(c.default.Lmz9Vl) : _.intl.string(c.default.MTFxYW)),
-            sectionHeader: (t) => _.intl.formatToPlainString(c.default['7feG7e'], { count: t }),
-            sectionDescription: (t) => (t ? _.intl.string(c.default.Lmz9Vl) : _.intl.string(c.default.MTFxYW))
-        }
+            sectionHeader: (t) => _.intl.formatToPlainString(c.default["7feG7e"], { count: t }),
+            sectionDescription: (t) => (t ? _.intl.string(c.default.Lmz9Vl) : _.intl.string(c.default.MTFxYW)),
+        },
     ],
     [
         4,
@@ -113,12 +138,18 @@ let Y = new Map([
             tooltipHeader: () => _.intl.string(c.default.CcrbCw),
             tooltipDescription: O,
             sectionHeader: (t) => _.intl.formatToPlainString(c.default.rcPInZ, { count: t }),
-            sectionDescription: O
-        }
-    ]
+            sectionDescription: O,
+        },
+    ],
 ]);
 function O(t, e) {
-    return t ? (e ? _.intl.string(c.default.c0NgBQ) : _.intl.string(c.default.dcvNX1)) : e ? _.intl.string(c.default.DLVyFx) : _.intl.string(c.default['823ugY']);
+    return t
+        ? e
+            ? _.intl.string(c.default.c0NgBQ)
+            : _.intl.string(c.default.dcvNX1)
+        : e
+          ? _.intl.string(c.default.DLVyFx)
+          : _.intl.string(c.default["823ugY"]);
 }
 let m = () => ({
         seconds: _.intl.string(c.default.CJdoeX),
@@ -126,7 +157,7 @@ let m = () => ({
         hours: c.default.ErkYCA,
         yesterday: _.intl.string(c.default.GvfssL),
         days: c.default.pWig19,
-        date: c.default.MP3kho
+        date: c.default.MP3kho,
     }),
     v = () => ({
         seconds: _.intl.string(c.default.BqsamZ),
@@ -134,5 +165,5 @@ let m = () => ({
         hours: c.default.J18GbG,
         yesterday: _.intl.string(c.default.Ln9zMj),
         days: c.default.WRtyS0,
-        date: c.default.Y3ZYtL
+        date: c.default.Y3ZYtL,
     });

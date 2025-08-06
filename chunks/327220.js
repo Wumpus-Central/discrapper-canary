@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(592125),
@@ -25,6 +25,6 @@ function l(e) {
                       for (let t of e.participants) if (c.has(t)) return !1;
                       return !0;
                   }),
-        [e, c]
+        [e, c],
     );
 }

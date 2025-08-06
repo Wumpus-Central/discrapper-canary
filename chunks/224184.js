@@ -30,7 +30,7 @@ function N(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -40,15 +40,15 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -56,11 +56,11 @@ function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,7 +80,7 @@ let w = 40,
         let { hangStatusActivity: t, userId: o, channel: N, previewIsOpen: R, targetElementRef: D } = e,
             { enableHangStatus: L } = b.n.useExperiment({
                 guildId: N.guild_id,
-                location: 'HangStatusPopout'
+                location: "HangStatusPopout",
             }),
             x = (0, s.e7)([f.default], () => f.default.getId()),
             M = (0, s.e7)([m.default], () => m.default.getUser(o)),
@@ -97,9 +97,9 @@ let w = 40,
                 j &&
                 (u.default.selectVoiceChannel(N.id),
                 g.default.track(T.rMx.HANG_STATUS_CTA_CLICKED, {
-                    source: 'HangStatusPopout',
+                    source: "HangStatusPopout",
                     guild_id: N.guild_id,
-                    channel_id: N.id
+                    channel_id: N.id,
                 }));
         };
         if (
@@ -110,103 +110,103 @@ let w = 40,
                     null != M &&
                     x !== o &&
                     g.default.track(T.rMx.VIEW_HANG_STATUS, {
-                        source: 'HangStatusPopout',
+                        source: "HangStatusPopout",
                         guild_id: N.guild_id,
-                        channel_id: N.id
+                        channel_id: N.id,
                     });
             }, [L, t, R, M, x, o, N]),
             !L || null == M)
         )
             return null;
         if (x === o)
-            return (0, r.jsx)('div', {
+            return (0, r.jsx)("div", {
                 className: a()(A.popoutWrapper, { [A.mounted]: R }),
                 children: (0, r.jsx)(I.v, {
                     currentStatus: t,
-                    channel: N
-                })
+                    channel: N,
+                }),
             });
         if (null == t) return null;
         let F = () => {
             let e = t.state;
-            (e === T.tNA.CUSTOM
+            e === T.tNA.CUSTOM
                 ? (0, c.ZDy)(async () => {
-                      let { default: e } = await n.e('1631').then(n.bind(n, 333541));
+                      let { default: e } = await n.e("1631").then(n.bind(n, 333541));
                       return (n) =>
                           (0, r.jsx)(
                               e,
                               P(C({}, n), {
                                   startingText: t.details,
-                                  startingEmoji: t.emoji
-                              })
+                                  startingEmoji: t.emoji,
+                              }),
                           );
                   })
                 : (0, E.Zx)(e, !0),
                 g.default.track(T.rMx.SWIPE_HANG_STATUS, {
                     guild_id: N.guild_id,
                     channel_id: N.id,
-                    media_session_id: h.Z.getMediaSessionId()
-                }));
+                    media_session_id: h.Z.getMediaSessionId(),
+                });
         };
         return (0, r.jsxs)(l.m, {
-            position: 'right',
+            position: "right",
             targetElementRef: D,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: A.contentContainer,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: A.statusGroup,
                             children: [
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-xs/medium',
-                                    color: 'text-muted',
-                                    children: S.intl.string(S.t['74vS//'])
+                                    variant: "text-xs/medium",
+                                    color: "text-muted",
+                                    children: S.intl.string(S.t["74vS//"]),
                                 }),
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-sm/semibold',
+                                    variant: "text-sm/semibold",
                                     className: A.statusText,
-                                    children: (0, y.O8)(t)
-                                })
-                            ]
+                                    children: (0, y.O8)(t),
+                                }),
+                            ],
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: A.iconGroup,
                             children: [
                                 (0, r.jsx)(v.Z, {
                                     className: A.statusIcon,
-                                    hangStatusActivity: t
+                                    hangStatusActivity: t,
                                 }),
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: A.avatarWrapper,
                                     children: [
                                         (0, r.jsx)(c.qEK, {
                                             className: A.avatar,
                                             size: c.EFr.SIZE_40,
                                             src: B,
-                                            'aria-hidden': !0
+                                            "aria-hidden": !0,
                                         }),
-                                        (0, r.jsx)('div', { className: A.outline })
-                                    ]
-                                })
-                            ]
-                        })
-                    ]
+                                        (0, r.jsx)("div", { className: A.outline }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
                 !k && j
                     ? (0, r.jsx)(c.zxk, {
-                          size: 'sm',
-                          text: S.intl.string(S.t['B/dHXF']),
-                          onClick: Z
+                          size: "sm",
+                          text: S.intl.string(S.t["B/dHXF"]),
+                          onClick: Z,
                       })
                     : null,
                 k && U
                     ? (0, r.jsx)(c.zxk, {
-                          size: 'sm',
+                          size: "sm",
                           text: S.intl.string(S.t.xcVcFR),
-                          onClick: F
+                          onClick: F,
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     };

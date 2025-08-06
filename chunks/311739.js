@@ -17,20 +17,20 @@ function _(e) {
     return (0, r.jsxs)(
         s.Z,
         {
-            role: 'link',
+            role: "link",
             href: n,
             onClick: c,
             children: [
                 (0, r.jsx)(i.EOn, {
-                    size: 'sm',
+                    size: "sm",
                     className: f.icon,
-                    color: i.TVs.colors.MENTION_FOREGROUND
+                    color: i.TVs.colors.MENTION_FOREGROUND,
                 }),
-                null != (t = null == u ? void 0 : u.name) ? t : d.intl.string(d.t['Ij+2ra']),
-                (0, r.jsx)(l.Z, {})
-            ]
+                null != (t = null == u ? void 0 : u.name) ? t : d.intl.string(d.t["Ij+2ra"]),
+                (0, r.jsx)(l.Z, {}),
+            ],
         },
-        o
+        o,
     );
 }
 function p(e) {
@@ -39,13 +39,15 @@ function p(e) {
             let a = i.noStyleAndInteraction
                 ? void 0
                 : (n) => {
-                      (e.shouldStopPropagation && (null == n || n.stopPropagation()), c.default.track(u.rMx.SHOP_LINK_MENTION_CLICKED, { sku_id: t.skuId }), (0, o.Z)(t.shopLink));
+                      e.shouldStopPropagation && (null == n || n.stopPropagation()),
+                          c.default.track(u.rMx.SHOP_LINK_MENTION_CLICKED, { sku_id: t.skuId }),
+                          (0, o.Z)(t.shopLink);
                   };
             return (0, r.jsx)(_, {
                 shopLink: t.shopLink,
                 skuId: t.skuId,
-                onClick: a
+                onClick: a,
             });
-        }
+        },
     };
 }

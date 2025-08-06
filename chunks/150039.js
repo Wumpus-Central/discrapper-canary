@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     $U: () => p,
     Jw: () => b,
     Kg: () => m,
@@ -11,9 +11,9 @@
     gc: () => _,
     gd: () => S,
     s6: () => v,
-    xQ: () => E
+    xQ: () => E,
 }),
-    n(539854));
+    n(539854);
 var r = n(73800),
     i = n(442837),
     o = n(809206),
@@ -41,17 +41,17 @@ function p(e, t) {
         r = (0, a.Z)(e.avatarDecoration),
         { pendingUserAvatarDecoration: o, userErrors: s } = (0, i.cj)([f.Z], () => ({
             pendingUserAvatarDecoration: f.Z.getPendingAvatarDecoration(),
-            userErrors: f.Z.getErrors().avatarDecoration
+            userErrors: f.Z.getErrors().avatarDecoration,
         })),
         { pendingGuildAvatarDecoration: c, guildErrors: u } = (0, i.cj)([l.Z], () => ({
             pendingGuildAvatarDecoration: l.Z.getPendingAvatarDecoration(),
-            guildErrors: l.Z.getErrors().avatarDecoration
+            guildErrors: l.Z.getErrors().avatarDecoration,
         }));
     return {
         userAvatarDecoration: r,
         guildAvatarDecoration: null == n ? void 0 : n.avatarDecoration,
         pendingAvatarDecoration: null != t ? c : o,
-        pendingErrors: null != t ? u : s
+        pendingErrors: null != t ? u : s,
     };
 }
 function h(e, t) {
@@ -60,28 +60,30 @@ function h(e, t) {
         o = e.nameplate,
         { pendingUserNameplate: a, userErrors: s } = (0, i.cj)([f.Z], () => ({
             pendingUserNameplate: f.Z.getPendingNameplate(),
-            userErrors: f.Z.getErrors().nameplate
+            userErrors: f.Z.getErrors().nameplate,
         })),
         { pendingGuildNameplate: c, guildErrors: u } = (0, i.cj)([l.Z], () => ({
             pendingGuildNameplate: l.Z.getPendingNameplate(),
-            guildErrors: l.Z.getErrors().nameplate
+            guildErrors: l.Z.getErrors().nameplate,
         }));
     return {
         userNameplate: o,
         guildNameplate: null == r || null == (n = r.collectibles) ? void 0 : n.nameplate,
         pendingNameplate: null != t ? c : a,
-        pendingErrors: null != t ? u : s
+        pendingErrors: null != t ? u : s,
     };
 }
 function m(e, t) {
-    return (0, i.e7)(
-        [u.Z],
-        () => {
-            var n, r;
-            return null == t ? (null == (n = u.Z.getUserProfile(e.id)) ? void 0 : n.profileEffectId) : null == (r = u.Z.getGuildMemberProfile(e.id, t.id)) ? void 0 : r.profileEffectId;
-        },
-        [e, t]
-    );
+    return (0, i.e7)([u.Z], () => {
+        var n, r;
+        return null == t
+            ? null == (n = u.Z.getUserProfile(e.id))
+                ? void 0
+                : n.profileEffectId
+            : null == (r = u.Z.getGuildMemberProfile(e.id, t.id))
+              ? void 0
+              : r.profileEffectId;
+    }, [e, t]);
 }
 function g(e) {
     return (0, i.cj)(
@@ -90,13 +92,13 @@ function g(e) {
             null == e
                 ? {
                       pendingProfileEffectId: f.Z.getPendingProfileEffectId(),
-                      errors: f.Z.getErrors().profileEffect
+                      errors: f.Z.getErrors().profileEffect,
                   }
                 : {
                       pendingProfileEffectId: l.Z.getPendingProfileEffectId(),
-                      errors: l.Z.getErrors().profileEffect
+                      errors: l.Z.getErrors().profileEffect,
                   },
-        [e]
+        [e],
     );
 }
 function E(e, t) {
@@ -118,23 +120,23 @@ function v(e, t, n) {
 function I(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return null != e
-        ? 'string' == typeof e && '' === e
+        ? "string" == typeof e && "" === e
             ? {
                   value: r ? n : null,
-                  isUsingGuildValue: !1
+                  isUsingGuildValue: !1,
               }
             : {
                   value: e,
-                  isUsingGuildValue: r
+                  isUsingGuildValue: r,
               }
-        : null != t && ('string' != typeof t || '' !== t)
+        : null != t && ("string" != typeof t || "" !== t)
           ? {
                 value: t,
-                isUsingGuildValue: !0
+                isUsingGuildValue: !0,
             }
           : {
                 value: n,
-                isUsingGuildValue: !1
+                isUsingGuildValue: !1,
             };
 }
 function T(e) {

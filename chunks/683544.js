@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685), n(35282));
+n.d(t, { Z: () => C }), n(388685), n(35282);
 var r = n(255367),
     a = n(73800),
     i = n(209173),
@@ -19,7 +19,7 @@ var r = n(255367),
 let v = {
         results: [],
         totalPages: 0,
-        loadId: ''
+        loadId: "",
     },
     C = function (e) {
         var t;
@@ -36,17 +36,17 @@ let v = {
                     query: _.EMPTY_QUERY,
                     page: y,
                     pageSize: _.PAGE_SIZE,
-                    categoryId: n
+                    categoryId: n,
                 }),
-                [y, n]
+                [y, n],
             ),
             P = (0, l.e7)([u.Z], () =>
                 u.Z.getFetchState({
                     query: _.EMPTY_QUERY,
                     page: y,
                     pageSize: _.PAGE_SIZE,
-                    categoryId: n
-                })
+                    categoryId: n,
+                }),
             ),
             E = (0, l.cj)([u.Z], () => {
                 var e;
@@ -57,10 +57,10 @@ let v = {
             R = a.useMemo(() => (null == T ? void 0 : T.filter((e) => e.type === i.s.APPLICATION)), [T]),
             Z = a.useCallback((e) => {
                 let { page: t, activeCategoryId: n, onSuccessCallback: r, guildId: a, fetchCounts: i } = e;
-                (i &&
+                i &&
                     c.yC({
                         query: _.EMPTY_QUERY,
-                        guildId: a
+                        guildId: a,
                     }),
                     c.yC({
                         query: _.EMPTY_QUERY,
@@ -68,40 +68,40 @@ let v = {
                         options: {
                             page: t,
                             pageSize: _.PAGE_SIZE,
-                            categoryId: n
+                            categoryId: n,
                         },
-                        onSuccessCallback: r
-                    }));
+                        onSuccessCallback: r,
+                    });
             }, []);
         a.useEffect(() => {
-            (j(),
+            j(),
                 Z({
                     page: y,
                     activeCategoryId: n,
-                    onSuccessCallback: () => {}
-                }));
+                    onSuccessCallback: () => {},
+                });
         }, [n, j, Z, y]);
         let w = a.useCallback(
             (e, t) => {
-                ((0, p.zZ)(b.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+                (0, p.zZ)(b.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: f.m_.SEARCH,
                     application_id: e,
                     load_id: L,
-                    position: t
+                    position: t,
                 }),
-                    C(e));
+                    C(e);
             },
-            [L, C]
+            [L, C],
         );
         return P === d.M.ERROR
-            ? (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", {
                   className: x.errorContainer,
-                  children: (0, r.jsx)(g.Z, { className: x.error })
+                  children: (0, r.jsx)(g.Z, { className: x.error }),
               })
             : (0, r.jsxs)(m.Z, {
                   loading: P === d.M.FETCHING,
                   children: [
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: x.content,
                           children:
                               null == R
@@ -113,13 +113,13 @@ let v = {
                                                 h.Z,
                                                 {
                                                     application: n,
-                                                    onSelectApplication: (e) => w(e, t)
+                                                    onSelectApplication: (e) => w(e, t),
                                                 },
-                                                n.id
+                                                n.id,
                                             );
                                         }
                                         return null;
-                                    })
+                                    }),
                       }),
                       (0, r.jsx)(s.DsT, {
                           className: x.paginationInput,
@@ -128,8 +128,8 @@ let v = {
                           disablePaginationGap: !0,
                           hideMaxPage: !0,
                           currentPage: y,
-                          onPageChange: O
-                      })
-                  ]
+                          onPageChange: O,
+                      }),
+                  ],
               });
     };

@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => O,
     c4: () => g,
-    st: () => b
+    st: () => b,
 });
 var r = n(255367),
     i = n(73800),
@@ -22,19 +22,19 @@ function m(e) {
         icon: (0, r.jsx)(c.bbz, {
             className: h.icon,
             dotRadius: 3.5,
-            themed: !0
-        })
+            themed: !0,
+        }),
     };
 }
 function g(e) {
     return {
         text: null != e ? e : p.intl.string(p.t.VCsUJi),
-        color: 'text-danger',
+        color: "text-danger",
         icon: (0, r.jsx)(c.Mgn, {
-            size: 'xs',
-            color: 'currentColor',
-            className: a()(h.icon, h.errorIcon)
-        })
+            size: "xs",
+            color: "currentColor",
+            className: a()(h.icon, h.errorIcon),
+        }),
     };
 }
 function E(e, t) {
@@ -42,7 +42,7 @@ function E(e, t) {
         case f.rQ.SENDING:
             return m(p.intl.string(p.t.RiLfBQ));
         case f.rQ.CREATED:
-            return m(p.intl.formatToPlainString(p.t['7ePV4u'], { applicationName: t.author.username }));
+            return m(p.intl.formatToPlainString(p.t["7ePV4u"], { applicationName: t.author.username }));
         case f.rQ.TIMED_OUT:
             return g(p.intl.string(p.t.h8hzPT));
         case f.rQ.FAILED:
@@ -51,17 +51,17 @@ function E(e, t) {
 }
 function b(e) {
     let { className: t, icon: n, text: i, color: o } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(h.wrapper, t),
         children: [
             n,
             (0, r.jsx)(c.Text, {
-                variant: 'text-md/normal',
+                variant: "text-md/normal",
                 color: o,
                 scaleFontToUserSetting: !0,
-                children: i
-            })
-        ]
+                children: i,
+            }),
+        ],
     });
 }
 function y(e) {
@@ -90,7 +90,7 @@ function y(e) {
         icon: m,
         text: h,
         className: n,
-        color: y
+        color: y,
     });
 }
 let O = i.memo(y);

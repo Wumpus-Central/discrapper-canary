@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685));
+n.d(t, { Z: () => A }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(505266),
@@ -26,24 +26,24 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -54,8 +54,8 @@ let Z = n(97996),
     I = [
         {
             src: P,
-            colorize: !1
-        }
+            colorize: !1,
+        },
     ],
     k = [],
     M = new o.qA(),
@@ -64,7 +64,7 @@ function A(e) {
     var t, n, O;
     let { isPaused: j, width: N, windowKey: P } = e,
         [_, A] = (0, s.useState)(0),
-        T = (0, s.useRef)('right'),
+        T = (0, s.useRef)("right"),
         [L, B] = (0, s.useState)(null),
         [D, F] = (0, s.useState)(null),
         U = (0, s.useRef)(null),
@@ -80,41 +80,41 @@ function A(e) {
     let J = (0, s.useCallback)(() => {
             if (G.isReady && null != U.current) {
                 let { x: e, y: t } = U.current.getBoundingClientRect(),
-                    n = 'right' === T.current ? 45 : 25;
+                    n = "right" === T.current ? 45 : 25;
                 G.createMultipleConfetti(
                     {
                         position: {
-                            type: 'static',
+                            type: "static",
                             value: {
                                 x: e + n,
-                                y: t + 25
-                            }
+                                y: t + 25,
+                            },
                         },
                         velocity: {
-                            type: 'static-random',
+                            type: "static-random",
                             minValue: {
                                 x: 15,
-                                y: -40
+                                y: -40,
                             },
                             maxValue: {
                                 x: -15,
-                                y: -60
-                            }
+                                y: -60,
+                            },
                         },
                         rotation: {
-                            type: 'linear-random',
+                            type: "linear-random",
                             minValue: 0,
                             maxValue: 360,
                             minAddValue: -25,
-                            maxAddValue: 25
+                            maxAddValue: 25,
                         },
                         size: {
-                            type: 'static-random',
+                            type: "static-random",
                             minValue: 2,
-                            maxValue: 8
-                        }
+                            maxValue: 8,
+                        },
                     },
-                    15
+                    15,
                 );
             }
             V((e) => {
@@ -139,7 +139,7 @@ function A(e) {
             });
         }, [G, W.points]),
         Q = (0, s.useCallback)(() => {
-            (A(1), z({ count: Y + 1 }), X());
+            A(1), z({ count: Y + 1 }), X();
         }, [Y, X, z]),
         $ = (0, s.useCallback)(() => {
             1 === _ && A(2);
@@ -150,13 +150,13 @@ function A(e) {
     (0, u.Z)({
         onInterval: ee,
         interval: 1000,
-        isPaused: j
+        isPaused: j,
     });
     let et = (0, s.useCallback)(
         (e) => {
-            (delete K[e], V(C({}, K)));
+            delete K[e], V(C({}, K));
         },
-        [K]
+        [K],
     );
     return 2 === _
         ? null
@@ -167,14 +167,14 @@ function A(e) {
                       sprites: I,
                       colors: k,
                       spriteWidth: 8,
-                      spriteHeight: 8
+                      spriteHeight: 8,
                   }),
                   (0, r.jsx)(y.Z, {
                       interval: 1000,
                       pointsPerInterval: W.points,
                       isPaused: j || 0 !== _,
                       itemId: x.yN.LAWNMOWER,
-                      onPointsInterval: J
+                      onPointsInterval: J,
                   }),
                   (0, r.jsx)(g.Z, {
                       className: v.lawnmowerClickable,
@@ -192,28 +192,30 @@ function A(e) {
                                   children: [
                                       (0, r.jsx)(h.Z, {
                                           renderedPoints: K,
-                                          onRemovePoint: et
+                                          onRemovePoint: et,
                                       }),
                                       (0, r.jsx)(m.Z, {
                                           imageRef: U,
-                                          className: 'left' === e ? v.imageFlipped : v.image,
+                                          className: "left" === e ? v.imageFlipped : v.image,
                                           isPaused: j,
                                           interval: 200,
                                           sources: 0 === _ ? E : S,
-                                          onLoopEnd: $
-                                      })
-                                  ]
+                                          onLoopEnd: $,
+                                      }),
+                                  ],
                               })
-                          )
-                      })
+                          ),
+                      }),
                   }),
                   (0, r.jsx)(o.O_, {
                       className: v.confettiCanvas,
                       environment: M,
                       ref: B,
-                      requestAnimationFrame: null != (n = null == H ? void 0 : H.requestAnimationFrame) ? n : requestAnimationFrame,
-                      cancelAnimationFrame: null != (O = null == H ? void 0 : H.cancelAnimationFrame) ? O : cancelAnimationFrame
-                  })
-              ]
+                      requestAnimationFrame:
+                          null != (n = null == H ? void 0 : H.requestAnimationFrame) ? n : requestAnimationFrame,
+                      cancelAnimationFrame:
+                          null != (O = null == H ? void 0 : H.cancelAnimationFrame) ? O : cancelAnimationFrame,
+                  }),
+              ],
           });
 }

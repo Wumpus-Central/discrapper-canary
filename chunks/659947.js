@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(539854), n(388685));
+n.d(t, { Z: () => I }), n(539854), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -18,24 +18,24 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -60,27 +60,27 @@ function _(e, t) {
 function j() {}
 let E = [h.h8.VOICE_CHANNEL];
 function C(e) {
-    (e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0));
+    e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
 function O(e) {
     let { height: t } = e;
-    return (0, i.jsx)('div', { style: { height: t } });
+    return (0, i.jsx)("div", { style: { height: t } });
 }
 function v() {
-    return (0, i.jsx)(O, { height: 16 }, 'footer');
+    return (0, i.jsx)(O, { height: 16 }, "footer");
 }
 function S() {
-    return (0, i.jsx)(O, { height: 8 }, 'header');
+    return (0, i.jsx)(O, { height: 8 }, "header");
 }
 function T() {
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: b.voiceListSearchEmpty,
         children: (0, i.jsx)(a.Text, {
-            variant: 'text-md/medium',
-            color: 'text-muted',
+            variant: "text-md/medium",
+            color: "text-muted",
             className: b.noVoiceChannelSelected,
-            children: f.intl.string(f.t.zHjCd3)
-        })
+            children: f.intl.string(f.t.zHjCd3),
+        }),
     });
 }
 function I(e) {
@@ -98,10 +98,10 @@ function I(e) {
                         N,
                         _(x({}, e), {
                             onSelect: (e) => {
-                                (u(e), l.Z.setKeybind(_(x({}, o.current), { params: { channelId: e } })));
-                            }
-                        })
-                    )
+                                u(e), l.Z.setKeybind(_(x({}, o.current), { params: { channelId: e } }));
+                            },
+                        }),
+                    ),
             );
         }, []);
     return (0, i.jsx)(a.hjN, {
@@ -110,21 +110,21 @@ function I(e) {
         children: (0, i.jsxs)(c.Z, {
             align: c.Z.Align.STRETCH,
             children: [
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: b.selectedVoiceChannel,
-                    children: (0, i.jsx)(y, { channelId: d })
+                    children: (0, i.jsx)(y, { channelId: d }),
                 }),
                 (0, i.jsx)(c.Z.Child, {
                     grow: 0,
                     shrink: 0,
                     children: (0, i.jsx)(a.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: f.intl.string(f.t.Dm8O4e),
-                        onClick: m
-                    })
-                })
-            ]
-        })
+                        onClick: m,
+                    }),
+                }),
+            ],
+        }),
     });
 }
 function N(e) {
@@ -134,7 +134,7 @@ function N(e) {
         {
             mouseFocusEnabled: _,
             enableMouseFocus: j,
-            disableMouseFocus: O
+            disableMouseFocus: O,
         } = (function () {
             let e = r.useRef(!1),
                 t = r.useCallback(() => {
@@ -146,34 +146,30 @@ function N(e) {
             return {
                 mouseFocusEnabled: e,
                 enableMouseFocus: t,
-                disableMouseFocus: n
+                disableMouseFocus: n,
             };
         })(),
         {
             query: I,
             updateQuery: N,
-            queryResults: y
+            queryResults: y,
         } = (0, o.Z)({
             visible: !0,
             autocompleterResultTypes: E,
-            autocompleterBeforeCreateSearchContext: C
+            autocompleterBeforeCreateSearchContext: C,
         }),
         A = (function (e) {
-            let t = '' !== e,
-                n = (0, s.Wu)(
-                    [m.ZP, u.Z, g.Z],
-                    () => {
-                        let e = g.Z.getGuildId();
-                        if (t || null == e) return [];
-                        let n = [];
-                        for (let t of m.ZP.getVocalChannelIds(e)) {
-                            let e = u.Z.getChannel(t);
-                            null != e && n.push(e);
-                        }
-                        return n;
-                    },
-                    [t]
-                );
+            let t = "" !== e,
+                n = (0, s.Wu)([m.ZP, u.Z, g.Z], () => {
+                    let e = g.Z.getGuildId();
+                    if (t || null == e) return [];
+                    let n = [];
+                    for (let t of m.ZP.getVocalChannelIds(e)) {
+                        let e = u.Z.getChannel(t);
+                        null != e && n.push(e);
+                    }
+                    return n;
+                }, [t]);
             return t ? null : n;
         })(I),
         { focusedIndex: P, setFocusedIndex: R } = (function (e) {
@@ -186,7 +182,7 @@ function N(e) {
                 }),
                 {
                     focusedIndex: t,
-                    setFocusedIndex: n
+                    setFocusedIndex: n,
                 }
             );
         })(I);
@@ -196,7 +192,7 @@ function N(e) {
             e.isItemVisible(0, P, !0) ||
             e.scrollToIndex({
                 section: 0,
-                row: P
+                row: P,
             });
     }, [P]);
     let D = null != A ? A.length : y.length,
@@ -208,16 +204,16 @@ function N(e) {
             let t = y[P];
             if ((null == t ? void 0 : t.type) === h.h8.VOICE_CHANNEL) return t.record.id;
         })();
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: b.voiceModalContainer,
         onMouseMove: j,
         children: (0, i.jsxs)(a.Y0X, {
             transitionState: t,
             size: a.CgR.MEDIUM,
             className: b.voiceModalRootContainer,
-            parentComponent: 'SwitchChannelKeybindSettings',
+            parentComponent: "SwitchChannelKeybindSettings",
             children: [
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: b.inputWrapper,
                     children: (0, i.jsx)(a.oil, {
                         value: I,
@@ -225,42 +221,42 @@ function N(e) {
                         onKeyDown: function (e) {
                             O();
                             let t = e.key.toLowerCase();
-                            if ('arrowdown' === t || 'arrowup' === t || 'enter' === t || 'escape' === t)
+                            if ("arrowdown" === t || "arrowup" === t || "enter" === t || "escape" === t)
                                 switch ((e.preventDefault(), t)) {
-                                    case 'escape':
+                                    case "escape":
                                         n();
                                         break;
-                                    case 'enter': {
+                                    case "enter": {
                                         let e = (() => {
                                             if (null != A) return A[P];
                                             let e = y[P];
                                             if ((null == e ? void 0 : e.type) === h.h8.VOICE_CHANNEL) return e.record;
                                         })();
-                                        (null == e ? l(void 0) : l(e.id), n());
+                                        null == e ? l(void 0) : l(e.id), n();
                                         break;
                                     }
-                                    case 'arrowup':
+                                    case "arrowup":
                                         0 === P ? R(D - 1) : R(P - 1);
                                         break;
-                                    case 'arrowdown':
+                                    case "arrowdown":
                                         P >= D - 1 ? R(0) : R(P + 1);
                                 }
                         },
                         placeholder: f.intl.string(f.t.tG0r7u),
-                        role: 'combobox',
-                        'aria-controls': c,
-                        'aria-expanded': D > 0,
-                        'aria-activedescendant': D > 0 && null != Z ? Z : void 0,
-                        'aria-autocomplete': 'list',
-                        spellCheck: !1
-                    })
+                        role: "combobox",
+                        "aria-controls": c,
+                        "aria-expanded": D > 0,
+                        "aria-activedescendant": D > 0 && null != Z ? Z : void 0,
+                        "aria-autocomplete": "list",
+                        spellCheck: !1,
+                    }),
                 }),
-                0 === D && '' !== I && (0, i.jsx)(T, {}),
-                (D > 0 || '' === I) &&
+                0 === D && "" !== I && (0, i.jsx)(T, {}),
+                (D > 0 || "" === I) &&
                     (0, i.jsx)(a.Tvr, {
                         innerId: c,
-                        innerRole: 'listbox',
-                        'aria-label': f.intl.string(f.t['+N3fW1']),
+                        innerRole: "listbox",
+                        "aria-label": f.intl.string(f.t["+N3fW1"]),
                         ref: x,
                         sections: [D],
                         renderRow: function (e) {
@@ -282,18 +278,18 @@ function N(e) {
                                     focused: P === t,
                                     onMouseEnter: () => _.current && R(t),
                                     onClick: () => {
-                                        (l(r.id), n());
+                                        l(r.id), n();
                                     },
                                     onFocus: () => R(t),
                                     children:
                                         null != a
-                                            ? (0, i.jsx)('div', {
+                                            ? (0, i.jsx)("div", {
                                                   className: b.guildName,
-                                                  children: a.name
+                                                  children: a.name,
                                               })
-                                            : null
+                                            : null,
                                 },
-                                r.id
+                                r.id,
                             );
                         },
                         renderListHeader: S,
@@ -302,10 +298,10 @@ function N(e) {
                         rowHeight: 34,
                         className: b.voiceChannelList,
                         listHeaderHeight: 8,
-                        footerHeight: 16
-                    })
-            ]
-        })
+                        footerHeight: 16,
+                    }),
+            ],
+        }),
     });
 }
 function y(e) {
@@ -313,27 +309,27 @@ function y(e) {
         {
             channel: n,
             category: r,
-            guild: l
+            guild: l,
         } = (0, s.cj)([u.Z, p.Z], () => {
             let e = null != t ? u.Z.getChannel(t) : void 0;
             return null != e
                 ? {
                       channel: e,
                       category: null != e.parent_id ? u.Z.getChannel(e.parent_id) : void 0,
-                      guild: null != e.guild_id ? p.Z.getGuild(e.guild_id) : void 0
+                      guild: null != e.guild_id ? p.Z.getGuild(e.guild_id) : void 0,
                   }
                 : {
                       channel: void 0,
                       category: void 0,
-                      guild: void 0
+                      guild: void 0,
                   };
         });
     return null == n
         ? (0, i.jsx)(a.Text, {
-              variant: 'text-md/medium',
-              color: 'text-muted',
+              variant: "text-md/medium",
+              color: "text-muted",
               className: b.noVoiceChannelSelected,
-              children: f.intl.string(f.t['/fYIKy'])
+              children: f.intl.string(f.t["/fYIKy"]),
           })
         : (0, i.jsx)(d.$W, {
               channel: n,
@@ -345,10 +341,10 @@ function y(e) {
               focused: !1,
               children:
                   null != l
-                      ? (0, i.jsx)('div', {
+                      ? (0, i.jsx)("div", {
                             className: b.guildName,
-                            children: l.name
+                            children: l.name,
                         })
-                      : null
+                      : null,
           });
 }

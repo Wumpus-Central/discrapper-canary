@@ -9,7 +9,7 @@ n.d(t, {
     kb: () => m,
     l1: () => u,
     np: () => a,
-    oY: () => _
+    oY: () => _,
 });
 var r = n(134994);
 let i = (e) => new Uint32Array(e.buffer, e.byteOffset, Math.floor(e.byteLength / 4)),
@@ -32,11 +32,11 @@ async function _(e, t, n) {
     }
 }
 function p(e) {
-    if ('string' != typeof e) throw Error(`utf8ToBytes expected string, got ${typeof e}`);
+    if ("string" != typeof e) throw Error(`utf8ToBytes expected string, got ${typeof e}`);
     return new Uint8Array(new TextEncoder().encode(e));
 }
 function h(e) {
-    return ('string' == typeof e && (e = p(e)), (0, r.aI)(e), e);
+    return "string" == typeof e && (e = p(e)), (0, r.aI)(e), e;
 }
 class m {
     clone() {
@@ -45,11 +45,11 @@ class m {
 }
 let g = {}.toString;
 function E(e, t) {
-    if (void 0 !== t && '[object Object]' !== g.call(t)) throw Error('Options should be object or undefined');
+    if (void 0 !== t && "[object Object]" !== g.call(t)) throw Error("Options should be object or undefined");
     return Object.assign(e, t);
 }
 function b(e) {
     let t = (t) => e().update(h(t)).digest(),
         n = e();
-    return ((t.outputLen = n.outputLen), (t.blockLen = n.blockLen), (t.create = () => e()), t);
+    return (t.outputLen = n.outputLen), (t.blockLen = n.blockLen), (t.create = () => e()), t;
 }

@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Fd: () => c,
     Io: () => u,
     Rk: () => l,
-    w8: () => s
+    w8: () => s,
 }),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(136015),
     o = n(565799),
@@ -17,9 +17,18 @@ function l(e, t) {
     return (0, r.e7)([o.Z], () => o.Z.getParticipantCount(e, t), [e, t]);
 }
 function c(e) {
-    let [t] = (0, r.e7)([o.Z], () => [o.Z.getMutableRequestToSpeakParticipants(e), o.Z.getRequestToSpeakParticipantsVersion(e)], [e], i.Q);
+    let [t] = (0, r.e7)(
+        [o.Z],
+        () => [o.Z.getMutableRequestToSpeakParticipants(e), o.Z.getRequestToSpeakParticipantsVersion(e)],
+        [e],
+        i.Q,
+    );
     return t;
 }
 function u(e) {
-    return (0, r.e7)([o.Z], () => o.Z.getMutableParticipants(e, a.pV.SPEAKER).filter((e) => e.type === a.Ui.VOICE).length, [e]);
+    return (0, r.e7)(
+        [o.Z],
+        () => o.Z.getMutableParticipants(e, a.pV.SPEAKER).filter((e) => e.type === a.Ui.VOICE).length,
+        [e],
+    );
 }

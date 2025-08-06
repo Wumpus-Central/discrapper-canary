@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(388685));
+n.d(t, { Z: () => o }), n(388685);
 var r = n(73800),
     i = n(442837),
     l = n(881052),
@@ -11,11 +11,11 @@ function o(e, t) {
         [m, g] = r.useState(!1),
         p = r.useCallback(async () => {
             if (null == n && null != e) {
-                (g(!0), c(!0));
+                g(!0), c(!0);
                 try {
                     await a.ZP.getApplicationsForGuild(e, {
                         type: t,
-                        includeTeam: !0
+                        includeTeam: !0,
                     });
                 } catch (e) {
                     u(new l.Hx(e));
@@ -31,7 +31,7 @@ function o(e, t) {
         {
             application: n,
             error: d,
-            loading: o
+            loading: o,
         }
     );
 }

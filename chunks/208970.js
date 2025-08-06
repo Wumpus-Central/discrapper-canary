@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,9 +68,9 @@ function _(e) {
             : {
                   query: null,
                   loading: !1,
-                  results: null
+                  results: null,
               };
-    return ((d[e] = n), n);
+    return (d[e] = n), n;
 }
 function p(e) {
     let { channelId: t, query: n } = e;
@@ -90,7 +90,7 @@ function m(e) {
     let r = _(t);
     d[t] = u(l({}, r), {
         loading: !1,
-        results: n
+        results: n,
     });
 }
 function g(e) {
@@ -99,7 +99,7 @@ function g(e) {
     let n = _(t);
     d[t] = u(l({}, n), {
         loading: !1,
-        results: []
+        results: [],
     });
 }
 function E(e) {
@@ -141,7 +141,7 @@ class v extends (r = i.ZP.Store) {
         return (null == t ? void 0 : t.results) != null && t.results.length > 0;
     }
 }
-s(v, 'displayName', 'ForumSearchStore');
+s(v, "displayName", "ForumSearchStore");
 let I = new v(o.Z, {
     CONNECTION_OPEN: O,
     THREAD_DELETE: b,
@@ -150,5 +150,5 @@ let I = new v(o.Z, {
     FORUM_SEARCH_START: h,
     FORUM_SEARCH_SUCCESS: m,
     FORUM_SEARCH_FAILURE: g,
-    FORUM_SEARCH_CLEAR: E
+    FORUM_SEARCH_CLEAR: E,
 });

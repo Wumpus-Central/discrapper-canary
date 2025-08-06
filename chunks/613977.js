@@ -1,1 +1,1 @@
-e.exports = { paymentSections: 'paymentSections__72707' };
+e.exports = { paymentSections: "paymentSections__72707" };

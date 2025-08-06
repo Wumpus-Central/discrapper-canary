@@ -6,12 +6,12 @@ var r = n(255367),
 function i(e) {
     let { width: t, height: n, showPlaceholder: s, children: i, className: l } = e;
     return s
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: o()(a.placeholderElement, l),
               style: {
                   width: t,
-                  height: n
-              }
+                  height: n,
+              },
           })
         : i;
 }

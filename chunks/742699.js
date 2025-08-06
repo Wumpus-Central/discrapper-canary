@@ -13,25 +13,25 @@ function u(n) {
         C = i.useMemo(
             () => [
                 {
-                    label: c.intl.string(c.t['2TXHQU']),
-                    icon: r.ARS
-                }
+                    label: c.intl.string(c.t["2TXHQU"]),
+                    icon: r.ARS,
+                },
             ],
-            []
+            [],
         );
     return (0, o.jsx)(l.m, {
         platformType: a.ABu.CRUNCHYROLL,
-        headerConnect: c.intl.string(c.t['Da+3ND']),
+        headerConnect: c.intl.string(c.t["Da+3ND"]),
         body: c.intl.string(c.t.MaPpPD),
         learnMoreLink: u,
         onClose: t,
         onContinue: e,
-        img: (0, o.jsx)('img', {
+        img: (0, o.jsx)("img", {
             src: d,
             width: 234,
             height: 152,
-            alt: ''
+            alt: "",
         }),
-        valueProps: C
+        valueProps: C,
     });
 }

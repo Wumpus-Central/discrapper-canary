@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(388685));
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -49,22 +49,26 @@ function Z(e) {
                       let { user: t } = e;
                       return t;
                   })
-                : []
+                : [],
         ),
         z = (0, a.e7)([I.Z], () => I.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, f.Z)(e))),
         { analyticsLocations: q } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         X = (0, S.Z)({
-            display: 'live',
+            display: "live",
             voiceChannelId: null == W ? void 0 : W.id,
             user: t,
             stream: i,
-            analyticsLocations: q
+            analyticsLocations: q,
         }),
         Q = (0, A.Z)({
             userId: t.id,
-            onAction: X
+            onAction: X,
         }),
-        { previewUrl: J, isLoading: $ } = (0, E.Z)(null == i ? void 0 : i.guildId, null == i ? void 0 : i.channelId, null == i ? void 0 : i.ownerId),
+        { previewUrl: J, isLoading: $ } = (0, E.Z)(
+            null == i ? void 0 : i.guildId,
+            null == i ? void 0 : i.channelId,
+            null == i ? void 0 : i.ownerId,
+        ),
         [ee, et] = (0, b.wq)(W),
         en = (0, _.Kt)() && (0, _.zd)(null == W ? void 0 : W.id),
         er = (0, a.e7)([v.Z], () => null != W && !en && v.Z.canBasicChannel(M.S7T.CONNECT, W)),
@@ -73,23 +77,28 @@ function Z(e) {
     if (null == Y || null == W || !1 === i.discoverable) return null;
     let ea = () => {
             let e = (e) => {
-                (e.stopPropagation(), ee && (X({ action: 'PRESS_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, c.iV)(i), null == F || F()));
+                e.stopPropagation(),
+                    ee &&
+                        (X({ action: "PRESS_IMAGE" }),
+                        l.default.selectVoiceChannel(i.channelId),
+                        (0, c.iV)(i),
+                        null == F || F());
             };
             return null == eo && $
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: U.preview,
-                      children: (0, r.jsx)(s.$jN, {})
+                      children: (0, r.jsx)(s.$jN, {}),
                   })
                 : null == eo || en
                   ? (0, r.jsxs)(s.P3F, {
                         className: o()(U.preview, U.overlay, ee ? U.clickable : U.disabled),
                         onClick: e,
-                        'aria-label': (0, b.gR)(et),
-                        'aria-disabled': !ee,
+                        "aria-label": (0, b.gR)(et),
+                        "aria-disabled": !ee,
                         children: [
-                            (0, r.jsx)('img', {
-                                alt: '',
-                                src: H === M.BRd.LIGHT ? B : G
+                            (0, r.jsx)("img", {
+                                alt: "",
+                                src: H === M.BRd.LIGHT ? B : G,
                             }),
                             V !== x.lY.MODAL &&
                                 V !== x.lY.MODAL_V2 &&
@@ -97,28 +106,28 @@ function Z(e) {
                                     children: [
                                         (0, r.jsx)(s.Text, {
                                             className: U.overlayText,
-                                            variant: 'text-sm/medium',
-                                            color: 'always-white',
-                                            children: (0, b.P9)(et)
+                                            variant: "text-sm/medium",
+                                            color: "always-white",
+                                            children: (0, b.P9)(et),
                                         }),
                                         (0, r.jsx)(s.Text, {
-                                            variant: 'text-sm/medium',
-                                            children: er ? k.intl.string(k.t.uQZTBQ) : k.intl.string(k.t.pgUTZG)
-                                        })
-                                    ]
-                                })
-                        ]
+                                            variant: "text-sm/medium",
+                                            children: er ? k.intl.string(k.t.uQZTBQ) : k.intl.string(k.t.pgUTZG),
+                                        }),
+                                    ],
+                                }),
+                        ],
                     })
                   : (0, r.jsxs)(s.P3F, {
                         className: o()(U.preview, U.overlay, ee ? U.clickable : U.disabled),
                         onClick: e,
-                        'aria-label': (0, b.gR)(et),
-                        'aria-disabled': !ee,
+                        "aria-label": (0, b.gR)(et),
+                        "aria-disabled": !ee,
                         children: [
-                            (0, r.jsx)('img', {
-                                alt: '',
+                            (0, r.jsx)("img", {
+                                alt: "",
                                 src: eo,
-                                className: U.image
+                                className: U.image,
                             }),
                             V !== x.lY.MODAL &&
                                 V !== x.lY.MODAL_V2 &&
@@ -126,31 +135,31 @@ function Z(e) {
                                     children: [
                                         (0, r.jsx)(s.Text, {
                                             className: U.overlayText,
-                                            variant: 'text-sm/medium',
-                                            color: 'always-white',
-                                            children: (0, b.P9)(et)
+                                            variant: "text-sm/medium",
+                                            color: "always-white",
+                                            children: (0, b.P9)(et),
                                         }),
                                         (0, r.jsx)(s.gw7, {
-                                            size: 'xs',
-                                            color: 'currentColor',
-                                            className: U.clyde
-                                        })
-                                    ]
-                                })
-                        ]
+                                            size: "xs",
+                                            color: "currentColor",
+                                            className: U.clyde,
+                                        }),
+                                    ],
+                                }),
+                        ],
                     });
         },
         es = () =>
             V !== x.lY.MODAL && V !== x.lY.MODAL_V2
                 ? null
-                : (0, r.jsxs)('div', {
+                : (0, r.jsxs)("div", {
                       className: j.details,
                       children: [
                           (0, r.jsx)(P.Z, {
                               channel: W,
                               guild: Y,
                               onAction: X,
-                              onClose: F
+                              onClose: F,
                           }),
                           (0, r.jsx)(g.Z, {
                               users: K,
@@ -159,15 +168,15 @@ function Z(e) {
                               maxUsers: w.W,
                               size: s.EFr.SIZE_16,
                               onClickOverflow: (e) => {
-                                  (e.stopPropagation(), null == X || X({ action: 'PRESS_VOICE_CHANNEL_AVATARS' }));
+                                  e.stopPropagation(), null == X || X({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
                               },
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
-                              overflowCountColor: 'text-muted',
-                              'aria-label': k.intl.string(k.t.jNqDh4)
+                              overflowCountColor: "text-muted",
+                              "aria-label": k.intl.string(k.t.jNqDh4),
                           }),
-                          V === x.lY.MODAL_V2 && ec()
-                      ]
+                          V === x.lY.MODAL_V2 && ec(),
+                      ],
                   }),
         el = () =>
             V === x.lY.MODAL || V === x.lY.MODAL_V2
@@ -177,20 +186,20 @@ function Z(e) {
                       guild: Y,
                       channel: W,
                       onAction: X,
-                      onClose: F
+                      onClose: F,
                   }),
         ec = () =>
             t.id === n.id
                 ? null
-                : (0, r.jsx)('div', {
+                : (0, r.jsx)("div", {
                       className: j.actions,
                       children: (0, r.jsx)(D.Z, {
                           channel: W,
                           onAction: X,
-                          onClose: F
-                      })
+                          onClose: F,
+                      }),
                   }),
-        eu = null != z ? k.intl.formatToPlainString(k.t['4CQq9f'], { name: z.name }) : k.intl.string(k.t['Jpkr/v']);
+        eu = null != z ? k.intl.formatToPlainString(k.t["4CQq9f"], { name: z.name }) : k.intl.string(k.t["Jpkr/v"]);
     return (0, r.jsx)(h.Gt, {
         value: q,
         children: (0, r.jsxs)(C.Z, {
@@ -198,29 +207,29 @@ function Z(e) {
             className: Z,
             onAction: X,
             onClose: F,
-            'aria-label': eu,
+            "aria-label": eu,
             children: [
                 (0, r.jsx)(R.Z, {
                     text: eu,
                     tags: (0, r.jsx)(m.ZP, { size: m.OH.SMALL }),
                     contextMenu: (0, r.jsx)(L.Z, {
-                        display: 'live',
+                        display: "live",
                         user: t,
-                        onClose: F
-                    })
+                        onClose: F,
+                    }),
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: j.body,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: j.content,
-                            children: [ea(), es(), V === x.lY.MODAL && ec()]
+                            children: [ea(), es(), V === x.lY.MODAL && ec()],
                         }),
-                        el()
-                    ]
+                        el(),
+                    ],
                 }),
-                V !== x.lY.MODAL && V !== x.lY.MODAL_V2 && ec()
-            ]
-        })
+                V !== x.lY.MODAL && V !== x.lY.MODAL_V2 && ec(),
+            ],
+        }),
     });
 }

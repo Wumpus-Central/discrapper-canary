@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(73800),
     i = n(742280),
     o = n(442837),
@@ -12,6 +12,6 @@ function s() {
         setHasViewedPurchaseTerms: t,
         showWithdrawalWaiver: l,
         hasAcceptedWithdrawalWaiver: !l || n,
-        setHasAcceptedWithdrawalWaiver: s
+        setHasAcceptedWithdrawalWaiver: s,
     };
 }

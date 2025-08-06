@@ -13,9 +13,9 @@ e.exports = function (e) {
                 s = n.getBlockForKey(r).getText()[a];
             return o(e, s ? i.getUTF16Length(s, 0) : 1);
         },
-        'forward'
+        "forward",
     );
     if (t === e.getCurrentContent()) return e;
     var n = e.getSelection();
-    return r.push(e, t.set('selectionBefore', n), n.isCollapsed() ? 'delete-character' : 'remove-range');
+    return r.push(e, t.set("selectionBefore", n), n.isCollapsed() ? "delete-character" : "remove-range");
 };

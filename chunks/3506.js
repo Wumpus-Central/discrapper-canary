@@ -39,11 +39,13 @@ function P(e) {
         enabled: O.default.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
-        text_notifications_mode: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
+        text_notifications_mode: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
+            ? "DISABLED"
+            : "ENABLED",
         hotkey: null != r ? (0, T.BB)(r.shortcut) : null,
         text_activation_hotkey: null != s ? (0, T.BB)(s.shortcut) : null,
         text_opacity_slider: v.default.getTextWidgetOpacity(),
-        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : O.default.enabled
+        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : O.default.enabled,
     };
 }
 function R(e) {
@@ -51,7 +53,7 @@ function R(e) {
     return (0, i.jsx)(c.xJW, {
         title: n,
         className: y.userSettingsOverlayField,
-        children: t
+        children: t,
     });
 }
 function D(e) {
@@ -63,17 +65,17 @@ function D(e) {
             displayUserMode: D,
             textChatDisabled: Z,
             notificationPositionMode: w,
-            shouldShowKeybindIndicators: k
+            shouldShowKeybindIndicators: k,
         } = (0, o.cj)([v.default, j.Z], () => ({
             avatarSizeMode: v.default.getAvatarSizeMode(),
             displayNameMode: v.default.getDisplayNameMode(),
             displayUserMode: v.default.getDisplayUserMode(),
             notificationPositionMode: v.default.getNotificationPositionMode(),
             shouldShowKeybindIndicators: v.default.showKeybindIndicators,
-            textChatDisabled: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
+            textChatDisabled: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT),
         })),
         L = (0, o.e7)([C.ZP], () => C.ZP.getOverlayKeybind()),
-        M = (0, x.Z)({ location: 'overlay_user_settings' }),
+        M = (0, x.Z)({ location: "overlay_user_settings" }),
         B = (0, p.$1)(),
         U = P(A);
     return (
@@ -83,10 +85,10 @@ function D(e) {
                 (0, i.jsxs)(c.hjN, {
                     className: t,
                     tag: c.RB0.H1,
-                    title: n ? N.intl.string(N.t['9cb1U1']) : null,
+                    title: n ? N.intl.string(N.t["9cb1U1"]) : null,
                     children: [
                         !1,
-                        (0, i.jsxs)('div', {
+                        (0, i.jsxs)("div", {
                             className: y.enableOverlaySection,
                             children: [
                                 (0, i.jsx)(c.xJW, {
@@ -101,11 +103,15 @@ function D(e) {
                                         onChange: function (e) {
                                             var t, n;
                                             u.Z.setEnabled(e, r);
-                                            let i = null != (n = null == (t = g.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? n : null;
-                                            ((0, f.ou)(e, f.AE.LEGACY, i), !e && a && (0, E.l)(f.AE.LEGACY, i));
+                                            let i =
+                                                null !=
+                                                (n = null == (t = g.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id)
+                                                    ? n
+                                                    : null;
+                                            (0, f.ou)(e, f.AE.LEGACY, i), !e && a && (0, E.l)(f.AE.LEGACY, i);
                                         },
-                                        children: N.intl.string(N.t.vSP6c3)
-                                    })
+                                        children: N.intl.string(N.t.vSP6c3),
+                                    }),
                                 }),
                                 (0, i.jsx)(c.xJW, {
                                     title: N.intl.string(N.t.VsAZcH),
@@ -115,36 +121,42 @@ function D(e) {
                                         defaultValue: null != L ? L.shortcut : [],
                                         onChange: function (e) {
                                             var t, n;
-                                            (s()(null != L, 'Keybind should never be undefined'),
+                                            s()(null != L, "Keybind should never be undefined"),
                                                 d.Z.setKeybind(
                                                     ((t = (function (e) {
                                                         for (var t = 1; t < arguments.length; t++) {
                                                             var n = null != arguments[t] ? arguments[t] : {},
                                                                 i = Object.keys(n);
-                                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                                            "function" == typeof Object.getOwnPropertySymbols &&
                                                                 (i = i.concat(
-                                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                                    })
+                                                                    Object.getOwnPropertySymbols(n).filter(
+                                                                        function (e) {
+                                                                            return Object.getOwnPropertyDescriptor(n, e)
+                                                                                .enumerable;
+                                                                        },
+                                                                    ),
                                                                 )),
                                                                 i.forEach(function (t) {
                                                                     var i;
-                                                                    ((i = n[t]),
+                                                                    (i = n[t]),
                                                                         t in e
                                                                             ? Object.defineProperty(e, t, {
                                                                                   value: i,
                                                                                   enumerable: !0,
                                                                                   configurable: !0,
-                                                                                  writable: !0
+                                                                                  writable: !0,
                                                                               })
-                                                                            : (e[t] = i));
-                                                                }));
+                                                                            : (e[t] = i);
+                                                                });
                                                         }
                                                         return e;
                                                     })({}, L)),
                                                     (n = n = { shortcut: e }),
                                                     Object.getOwnPropertyDescriptors
-                                                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                                        ? Object.defineProperties(
+                                                              t,
+                                                              Object.getOwnPropertyDescriptors(n),
+                                                          )
                                                         : (function (e, t) {
                                                               var n = Object.keys(e);
                                                               if (Object.getOwnPropertySymbols) {
@@ -153,14 +165,18 @@ function D(e) {
                                                               }
                                                               return n;
                                                           })(Object(n)).forEach(function (e) {
-                                                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                                              Object.defineProperty(
+                                                                  t,
+                                                                  e,
+                                                                  Object.getOwnPropertyDescriptor(n, e),
+                                                              );
                                                           }),
-                                                    t)
-                                                ));
-                                        }
-                                    })
-                                })
-                            ]
+                                                    t),
+                                                );
+                                        },
+                                    }),
+                                }),
+                            ],
                         }),
                         (0, i.jsx)(R, {
                             title: N.intl.string(N.t.dnvZSk),
@@ -168,19 +184,19 @@ function D(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.YcOxtr),
-                                        value: I.ipw.LARGE
+                                        value: I.ipw.LARGE,
                                     },
                                     {
                                         name: N.intl.string(N.t.BKIKq6),
-                                        value: I.ipw.SMALL
-                                    }
+                                        value: I.ipw.SMALL,
+                                    },
                                 ],
                                 onChange: (e) => {
                                     let { value: t } = e;
                                     return u.Z.setAvatarSizeMode(t);
                                 },
-                                value: O
-                            })
+                                value: O,
+                            }),
                         }),
                         (0, i.jsx)(R, {
                             title: N.intl.string(N.t.J0dpcH),
@@ -188,23 +204,23 @@ function D(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.nBmDra),
-                                        value: I.wC$.ALWAYS
+                                        value: I.wC$.ALWAYS,
                                     },
                                     {
-                                        name: N.intl.string(N.t['2OvIZW']),
-                                        value: I.wC$.ONLY_WHILE_SPEAKING
+                                        name: N.intl.string(N.t["2OvIZW"]),
+                                        value: I.wC$.ONLY_WHILE_SPEAKING,
                                     },
                                     {
                                         name: N.intl.string(N.t.ekjlPD),
-                                        value: I.wC$.NEVER
-                                    }
+                                        value: I.wC$.NEVER,
+                                    },
                                 ],
                                 onChange: (e) => {
                                     let { value: t } = e;
                                     return u.Z.setDisplayNameMode(t);
                                 },
-                                value: T
-                            })
+                                value: T,
+                            }),
                         }),
                         (0, i.jsx)(R, {
                             title: N.intl.string(N.t.swsWWF),
@@ -212,19 +228,19 @@ function D(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.nBmDra),
-                                        value: I.OYC.ALWAYS
+                                        value: I.OYC.ALWAYS,
                                     },
                                     {
-                                        name: N.intl.string(N.t['2OvIZW']),
-                                        value: I.OYC.ONLY_WHILE_SPEAKING
-                                    }
+                                        name: N.intl.string(N.t["2OvIZW"]),
+                                        value: I.OYC.ONLY_WHILE_SPEAKING,
+                                    },
                                 ],
                                 onChange: (e) => {
                                     let { value: t } = e;
                                     return u.Z.setDisplayUserMode(t);
                                 },
-                                value: D
-                            })
+                                value: D,
+                            }),
                         }),
                         M &&
                             (0, i.jsx)(R, {
@@ -232,25 +248,25 @@ function D(e) {
                                     value: k,
                                     onChange: (e) => u.Z.setShowKeybindIndicators(e),
                                     hideBorder: !0,
-                                    children: N.intl.string(N.t.XZTl9v)
-                                })
-                            })
-                    ]
+                                    children: N.intl.string(N.t.XZTl9v),
+                                }),
+                            }),
+                    ],
                 }),
                 (0, i.jsxs)(c.hjN, {
                     tag: c.RB0.H1,
-                    title: N.intl.string(N.t['3GMnLi']),
+                    title: N.intl.string(N.t["3GMnLi"]),
                     className: y.notificationSection,
                     children: [
                         (0, i.jsx)(R, {
                             title: N.intl.string(N.t.IQv8Eh),
-                            children: (0, i.jsx)('div', {
+                            children: (0, i.jsx)("div", {
                                 className: y.notificationSettings,
                                 children: (0, i.jsx)(h.Z, {
                                     position: w,
-                                    onChange: (e, t) => u.Z.setNotificationPositionMode(t)
-                                })
-                            })
+                                    onChange: (e, t) => u.Z.setNotificationPositionMode(t),
+                                }),
+                            }),
                         }),
                         (0, i.jsx)(R, {
                             children: (0, i.jsx)(c.j7V, {
@@ -258,15 +274,18 @@ function D(e) {
                                 disabled: w === I._vf.DISABLED,
                                 onChange: function () {
                                     let e = j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT);
-                                    u.Z.setNotificationDisabledSetting(b.OverlayNotificationDisabledSetting.TEXT_CHAT, !e);
+                                    u.Z.setNotificationDisabledSetting(
+                                        b.OverlayNotificationDisabledSetting.TEXT_CHAT,
+                                        !e,
+                                    );
                                 },
                                 hideBorder: !0,
-                                children: N.intl.string(N.t.Fy5kPj)
-                            })
-                        })
-                    ]
-                })
-            ]
+                                children: N.intl.string(N.t.Fy5kPj),
+                            }),
+                        }),
+                    ],
+                }),
+            ],
         })
     );
 }

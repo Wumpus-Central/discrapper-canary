@@ -1,18 +1,18 @@
 e.exports = function (e) {
     return {
-        name: 'Node REPL',
+        name: "Node REPL",
         contains: [
             {
-                className: 'meta.prompt',
+                className: "meta.prompt",
                 starts: {
                     end: / |$/,
                     starts: {
-                        end: '$',
-                        subLanguage: 'javascript'
-                    }
+                        end: "$",
+                        subLanguage: "javascript",
+                    },
                 },
-                variants: [{ begin: /^>(?=[ ]|$)/ }, { begin: /^\.\.\.(?=[ ]|$)/ }]
-            }
-        ]
+                variants: [{ begin: /^>(?=[ ]|$)/ }, { begin: /^\.\.\.(?=[ ]|$)/ }],
+            },
+        ],
     };
 };

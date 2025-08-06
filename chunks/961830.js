@@ -3,7 +3,7 @@ n.d(t, {
     WA: () => g,
     s2: () => E,
     wo: () => O,
-    yp: () => I
+    yp: () => I,
 });
 var r = n(255367);
 n(73800);
@@ -23,7 +23,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,7 +70,7 @@ function m(e, t) {
 }
 let g = {
         key: null,
-        renderStep: (e) => (0, r.jsx)(d.v, p({}, e))
+        renderStep: (e) => (0, r.jsx)(d.v, p({}, e)),
     },
     E = {
         key: o.h8.ADD_PAYMENT_STEPS,
@@ -80,28 +80,30 @@ let g = {
                 m(p({}, e), {
                     breadcrumbSteps: [o.h8.ADD_PAYMENT_STEPS, o.h8.REVIEW, o.h8.CONFIRM],
                     onReturn: () => {
-                        0 === Object.keys(i.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(o.h8.REVIEW, { trackedFromStep: o.h8.ADD_PAYMENT_STEPS });
-                    }
-                })
+                        0 === Object.keys(i.Z.paymentSources).length
+                            ? e.handleClose()
+                            : e.handleStepChange(o.h8.REVIEW, { trackedFromStep: o.h8.ADD_PAYMENT_STEPS });
+                    },
+                }),
             ),
-        options: { renderHeader: !0 }
+        options: { renderHeader: !0 },
     },
     b = {
         key: o.h8.AWAITING_PURCHASE_TOKEN_AUTH,
-        renderStep: () => (0, r.jsx)(l.Z, {})
+        renderStep: () => (0, r.jsx)(l.Z, {}),
     },
     y = {
         key: o.h8.AWAITING_AUTHENTICATION,
         renderStep: () => (0, r.jsx)(s.Z, {}),
-        options: { renderHeader: !0 }
+        options: { renderHeader: !0 },
     },
     O = {
         key: o.h8.REVIEW,
         renderStep: (e) => (0, r.jsx)(u.l, p({}, e)),
-        options: { useBreadcrumbLabel: () => f.intl.string(f.t.QBnNHh) }
+        options: { useBreadcrumbLabel: () => f.intl.string(f.t.QBnNHh) },
     },
     v = {
         key: o.h8.CONFIRM,
-        renderStep: (e) => (0, r.jsx)(c.w, p({}, e))
+        renderStep: (e) => (0, r.jsx)(c.w, p({}, e)),
     },
     I = [b, y];

@@ -1,4 +1,4 @@
-(n.d(t, { l: () => p }), n(388685));
+n.d(t, { l: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -8,12 +8,12 @@ var r = n(255367),
     c = n(954332);
 let u = 200;
 var d = (function (e) {
-    return ((e[(e.TRANSLATE = 1)] = 'TRANSLATE'), (e[(e.SCALE = 2)] = 'SCALE'), (e[(e.FADE = 3)] = 'FADE'), e);
+    return (e[(e.TRANSLATE = 1)] = "TRANSLATE"), (e[(e.SCALE = 2)] = "SCALE"), (e[(e.FADE = 3)] = "FADE"), e;
 })(d || {});
 let f = Object.freeze({
         1: c.translate,
         2: c.scale,
-        3: c.fade
+        3: c.fade,
     }),
     _ = Object.freeze({
         top: c.animatorTop,
@@ -21,7 +21,7 @@ let f = Object.freeze({
         left: c.animatorLeft,
         right: c.animatorRight,
         center: c.animatorCenter,
-        window_center: c.animatorCenter
+        window_center: c.animatorCenter,
     });
 function p(e) {
     let { position: t, type: n, children: o } = e,
@@ -34,25 +34,25 @@ function p(e) {
     return (
         i.useLayoutEffect(() => {
             var e;
-            (null == (e = y.current) ||
-                e.addEventListener('transitionend', () => {
+            null == (e = y.current) ||
+                e.addEventListener("transitionend", () => {
                     b(!1);
                 }),
                 setTimeout(() => {
                     b(!1);
-                }, u));
+                }, u);
         }, []),
         i.useEffect(() => () => g.stop(), [g]),
         i.useEffect(() => {
             null != t && g.start(10, () => m(!0));
         }, [t, g]),
-        (0, r.jsx)('div', {
-            'data-popout-animating': E,
+        (0, r.jsx)("div", {
+            "data-popout-animating": E,
             className: a()(null != t ? _[t] : null, {
                 [f[p]]: null != t,
-                [c.didRender]: h
+                [c.didRender]: h,
             }),
-            children: o
+            children: o,
         })
     );
 }

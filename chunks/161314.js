@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685), n(953529));
+n.d(t, { Z: () => C }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -29,7 +29,7 @@ function A(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,15 +39,15 @@ function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -59,104 +59,106 @@ function C(e) {
         { listingsLoaded: R } = (0, h.eD)(n),
         P = (0, h.ue)(n, { publishedOnly: !0 }),
         w = i.useCallback(async () => {
-            (b.default.track(I.rMx.GUILD_SHOP_EMBED_CLICKED, N({}, (0, f.hH)(n))), await (0, m.Z)(I.Z5c.SERVER_SHOP(n)));
+            b.default.track(I.rMx.GUILD_SHOP_EMBED_CLICKED, N({}, (0, f.hH)(n))), await (0, m.Z)(I.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, _.Z)(
         {
             type: s.ImpressionTypes.VIEW,
-            name: s.ImpressionNames.GUILD_SHOP_EMBED
+            name: s.ImpressionNames.GUILD_SHOP_EMBED,
         },
-        { disableTrack: null == o }
+        { disableTrack: null == o },
     );
     let D = P.length > 0 ? new Date(Math.min(...P.map((e) => Date.parse(e.published_at)))) : void 0;
     return A || !R
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: a()(S.guildShopEmbed, S.spinnerContainer),
-              children: (0, r.jsx)(d.$jN, {})
+              children: (0, r.jsx)(d.$jN, {}),
           })
         : null == o || null == C
           ? null
-          : (0, r.jsxs)('div', {
+          : (0, r.jsxs)("div", {
                 className: S.guildShopEmbed,
                 children: [
                     (0, r.jsx)(O.Z, { coverImageAsset: null != (t = C.cover_image_asset) ? t : null }),
                     (0, r.jsx)(d.LZC, { size: 16 }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: S.serverShopLabel,
                         children: [
                             (0, r.jsx)(v.Z, {
-                                height: '16px',
-                                width: '16px',
-                                color: l.Z.INTERACTIVE_NORMAL
+                                height: "16px",
+                                width: "16px",
+                                color: l.Z.INTERACTIVE_NORMAL,
                             }),
                             (0, r.jsx)(d.X6q, {
-                                variant: 'heading-sm/semibold',
-                                color: 'interactive-normal',
+                                variant: "heading-sm/semibold",
+                                color: "interactive-normal",
                                 className: S.serverShopLabelText,
-                                children: T.intl.string(T.t.al5EXF)
-                            })
-                        ]
+                                children: T.intl.string(T.t.al5EXF),
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(d.LZC, { size: 16 }),
                     (0, r.jsx)(d.X6q, {
-                        variant: 'heading-md/semibold',
-                        color: 'text-default',
-                        children: T.intl.format(T.t.NZeik5, { guildName: o.name })
+                        variant: "heading-md/semibold",
+                        color: "text-default",
+                        children: T.intl.format(T.t.NZeik5, { guildName: o.name }),
                     }),
                     (0, r.jsx)(d.LZC, { size: 4 }),
                     (0, r.jsx)(d.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'text-muted',
+                        variant: "text-sm/normal",
+                        color: "text-muted",
                         lineClamp: 2,
-                        children: C.description
+                        children: C.description,
                     }),
                     (0, r.jsx)(d.LZC, { size: 16 }),
                     (0, r.jsx)(g.Z, {}),
                     (0, r.jsx)(d.LZC, { size: 16 }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: S.guildShopEmbedFooter,
                         children: [
                             (0, r.jsx)(p.Z, { guild: o }),
-                            (0, r.jsxs)('ul', {
+                            (0, r.jsxs)("ul", {
                                 className: S.guildShopSummary,
                                 children: [
-                                    (0, r.jsx)('li', {
+                                    (0, r.jsx)("li", {
                                         children: (0, r.jsx)(d.Text, {
-                                            variant: 'text-sm/normal',
-                                            color: 'text-muted',
-                                            children: T.intl.format(T.t.tKZNlZ, { listingCount: P.length })
-                                        })
+                                            variant: "text-sm/normal",
+                                            color: "text-muted",
+                                            children: T.intl.format(T.t.tKZNlZ, { listingCount: P.length }),
+                                        }),
                                     }),
                                     null != D &&
-                                        (0, r.jsx)('li', {
+                                        (0, r.jsx)("li", {
                                             children: (0, r.jsx)(d.Text, {
-                                                variant: 'text-sm/normal',
-                                                color: 'text-muted',
-                                                children: T.intl.format(T.t['kXr8+f'], { createdYear: D.getFullYear() })
-                                            })
-                                        })
-                                ]
+                                                variant: "text-sm/normal",
+                                                color: "text-muted",
+                                                children: T.intl.format(T.t["kXr8+f"], {
+                                                    createdYear: D.getFullYear(),
+                                                }),
+                                            }),
+                                        }),
+                                ],
                             }),
                             (0, r.jsx)(u.zx, {
                                 className: S.guildShopEmbedCta,
                                 onClick: w,
-                                children: (0, r.jsxs)('div', {
+                                children: (0, r.jsxs)("div", {
                                     className: S.guildShopEmbedCtaContent,
                                     children: [
                                         (0, r.jsx)(v.Z, {
-                                            height: '18px',
-                                            width: '18px'
+                                            height: "18px",
+                                            width: "18px",
                                         }),
                                         (0, r.jsx)(d.Text, {
-                                            variant: 'text-sm/medium',
-                                            color: 'always-white',
-                                            children: T.intl.string(T.t.jXx1CA)
-                                        })
-                                    ]
-                                })
-                            })
-                        ]
-                    })
-                ]
+                                            variant: "text-sm/medium",
+                                            color: "always-white",
+                                            children: T.intl.string(T.t.jXx1CA),
+                                        }),
+                                    ],
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
             });
 }

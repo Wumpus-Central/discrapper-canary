@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => I }), r(388685));
+r.d(t, { Z: () => I }), r(388685);
 var n = r(255367),
     l = r(73800),
     a = r(120356),
@@ -31,7 +31,7 @@ let L = (e) => {
             { noCache: p, includeUnpublished: _ } = (0, m.Z)(),
             [S, j] = l.useState(!1),
             L = (0, d.sp)(),
-            I = null != (t = null == L ? void 0 : L.sessionId) ? t : '';
+            I = null != (t = null == L ? void 0 : L.sessionId) ? t : "";
         l.useEffect(() => {
             (0, f.n)({
                 sessionId: I,
@@ -39,27 +39,27 @@ let L = (e) => {
                 tab: c,
                 isFullScreen: u,
                 unpublishedCategoriesShown: _,
-                cacheDisabled: p
+                cacheDisabled: p,
             });
         }, [c]);
         let {
                 isFetchingShopHome: k,
                 fetchShopHomeError: N,
                 shopBlocks: A,
-                refreshShopHome: w
+                refreshShopHome: w,
             } = (0, g.E)(
                 c,
                 {
                     noCache: p,
                     includeUnpublished: _,
                     includeBundles: !0,
-                    logPerf: !0
+                    logPerf: !0,
                 },
                 {
                     sessionId: I,
                     tab: c,
-                    isFullScreen: u
-                }
+                    isFullScreen: u,
+                },
             ),
             B = l.useCallback(() => {
                 w();
@@ -75,7 +75,7 @@ let L = (e) => {
                         tab: c,
                         isFullScreen: u,
                         unpublishedCategoriesShown: _,
-                        cacheDisabled: p
+                        cacheDisabled: p,
                     });
             }, [N, k, A.length, _, p, I, c, u]),
             null != N)
@@ -83,30 +83,30 @@ let L = (e) => {
             return (0, n.jsx)(h.Z, {
                 onRetry: B,
                 errorOrigin: h.i.SHOP_PAGE,
-                errorMessage: N.message
+                errorMessage: N.message,
             });
         if (k || 0 === A.length)
-            return (0, n.jsxs)('div', {
+            return (0, n.jsxs)("div", {
                 className: T.loadingContainer,
                 children: [
                     (0, n.jsx)(O.Z, {
                         isLoading: k,
                         handleTransition: r,
-                        tab: c
+                        tab: c,
                     }),
                     (0, n.jsx)(v.Z, {
                         isLoading: k,
                         handleTransition: r,
-                        categories: []
+                        categories: [],
                     }),
                     (0, n.jsx)(C.Z, {
                         isLoading: k,
                         title: c === x.AW.ORBS ? P.intl.string(P.t.dFgeub) : P.intl.string(P.t.NSv5KS),
                         numVisibleItems: a,
                         hasSorting: c === x.AW.HOME,
-                        tab: c
-                    })
-                ]
+                        tab: c,
+                    }),
+                ],
             });
         let R = (e, t) => {
             if (null == e) return null;
@@ -120,9 +120,9 @@ let L = (e) => {
                             handleTransition: r,
                             heroBlock: e,
                             tab: c,
-                            onVisibilityChange: j
+                            onVisibilityChange: j,
                         },
-                        t
+                        t,
                     );
                     break;
                 case o.z.FEATURED:
@@ -131,9 +131,9 @@ let L = (e) => {
                         {
                             isLoading: k,
                             handleTransition: r,
-                            featuredBlockRecord: e
+                            featuredBlockRecord: e,
                         },
-                        t
+                        t,
                     );
                     break;
                 case o.z.FEED:
@@ -146,9 +146,9 @@ let L = (e) => {
                             numVisibleItems: a,
                             sortedSkuIds: d,
                             hasSorting: c === x.AW.HOME,
-                            tab: c
+                            tab: c,
                         },
-                        t
+                        t,
                     );
                     break;
                 case o.z.WIDE_BANNER:
@@ -157,9 +157,9 @@ let L = (e) => {
                         {
                             handleTransition: r,
                             wideBannerBlock: e,
-                            tab: c
+                            tab: c,
                         },
-                        t
+                        t,
                     );
                     break;
                 case o.z.SHELF:
@@ -168,28 +168,28 @@ let L = (e) => {
                         {
                             handleTransition: r,
                             shelf: e,
-                            tab: c
+                            tab: c,
                         },
-                        t
+                        t,
                     );
                     break;
                 case o.z.COUNTDOWN_TIMER:
                     l = (0, n.jsx)(b.J, {
                         record: e,
                         isVisible: !S,
-                        isFullScreen: u
+                        isFullScreen: u,
                     });
                     break;
                 default:
                     return null;
             }
             return (0, n.jsx)(
-                'div',
+                "div",
                 {
                     className: i()(T.blockContainer, { [T.topBlockContainer]: 0 === t }),
-                    children: l
+                    children: l,
                 },
-                t
+                t,
             );
         };
         return (0, n.jsx)(n.Fragment, { children: A.map((e, t) => R(e, t)) });
@@ -198,7 +198,7 @@ let L = (e) => {
         let { isFullScreen: t, handleTransition: r, tab: a, transitionState: o } = e,
             g = l.useRef(null),
             { handleScroll: f } = (0, c.z)(g, a),
-            h = (0, p.R)('CollectiblesFeedShop'),
+            h = (0, p.R)("CollectiblesFeedShop"),
             b = (0, _.R)(),
             m = (0, d.sp)(),
             [v, C] = l.useState(x.IV),
@@ -213,9 +213,9 @@ let L = (e) => {
                         },
                         t = g.current.getScrollerNode();
                     return (
-                        null == t || t.addEventListener('scroll', e),
+                        null == t || t.addEventListener("scroll", e),
                         () => {
-                            null == t || t.removeEventListener('scroll', e);
+                            null == t || t.removeEventListener("scroll", e);
                         }
                     );
                 }
@@ -224,10 +224,10 @@ let L = (e) => {
                 className: T.shopScroll,
                 ref: g,
                 onScroll: f,
-                children: (0, n.jsxs)('div', {
+                children: (0, n.jsxs)("div", {
                     className: T.shop,
                     children: [
-                        (0, n.jsxs)('div', {
+                        (0, n.jsxs)("div", {
                             className: i()(T.content, T.mainContent),
                             children: [
                                 (0, n.jsx)(L, {
@@ -235,51 +235,53 @@ let L = (e) => {
                                     numVisibleItems: v,
                                     isFetchingCategories: b,
                                     tab: a,
-                                    isFullScreen: t
+                                    isFullScreen: t,
                                 }),
                                 a !== x.AW.CATALOG &&
                                     v >= h &&
-                                    (0, n.jsxs)('div', {
+                                    (0, n.jsxs)("div", {
                                         className: T.endOfFeed,
                                         children: [
                                             (0, n.jsx)(s.X6q, {
-                                                variant: 'heading-md/semibold',
-                                                children: P.intl.string(P.t.Yr70c3)
+                                                variant: "heading-md/semibold",
+                                                children: P.intl.string(P.t.Yr70c3),
                                             }),
                                             (0, n.jsx)(s.zxk, {
-                                                variant: 'primary',
+                                                variant: "primary",
                                                 text: P.intl.string(P.t.AfrvRE),
                                                 onClick: () => {
-                                                    (r('shop all button', void 0, !0),
+                                                    r("shop all button", void 0, !0),
                                                         u.default.track(j.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                                            collectibles_shop_session_id: null == m ? void 0 : m.sessionId,
+                                                            collectibles_shop_session_id:
+                                                                null == m ? void 0 : m.sessionId,
                                                             page_type: a,
-                                                            page_category: a === x.AW.HOME || null == m ? void 0 : m.pageCategory,
-                                                            cta_name: 'browse the shop button'
-                                                        }));
+                                                            page_category:
+                                                                a === x.AW.HOME || null == m ? void 0 : m.pageCategory,
+                                                            cta_name: "browse the shop button",
+                                                        });
                                                 },
-                                                fullWidth: !0
-                                            })
-                                        ]
-                                    })
-                            ]
+                                                fullWidth: !0,
+                                            }),
+                                        ],
+                                    }),
+                            ],
                         }),
                         !t &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     (0, n.jsx)(S.Z, {
                                         peaking: O,
-                                        transitioning: o === x.f7.OUT
+                                        transitioning: o === x.f7.OUT,
                                     }),
                                     (0, n.jsx)(S.Z, {
                                         style: { left: 1850 },
                                         peaking: O,
-                                        transitioning: o === x.f7.OUT
-                                    })
-                                ]
-                            })
-                    ]
-                })
+                                        transitioning: o === x.f7.OUT,
+                                    }),
+                                ],
+                            }),
+                    ],
+                }),
             })
         );
     };

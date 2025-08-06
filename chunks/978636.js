@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     JL: () => o,
-    i9: () => i
+    i9: () => i,
 }),
-    n(388685));
+    n(388685);
 let r = (0, n(97519).U)(() => ({ hasFiredFromMessage: new Set() }));
 function i(e) {
     let { hasFiredFromMessage: t } = r.getState();
-    (t.add(e), r.setState({ hasFiredFromMessage: t }));
+    t.add(e), r.setState({ hasFiredFromMessage: t });
 }
 function o(e) {
     let { hasFiredFromMessage: t } = r.getState();

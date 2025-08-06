@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => x }), a(388685));
+a.d(t, { Z: () => x }), a(388685);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -23,15 +23,15 @@ function x(e) {
                             onChange: (e) => (0, c.Z)(t, e),
                             hideBorder: !0,
                             className: u.switch,
-                            children: r
+                            children: r,
                         },
-                        t
+                        t,
                     );
                 }),
-            [a]
+            [a],
         );
-    return (0, n.jsx)('div', {
+    return (0, n.jsx)("div", {
         className: i()(m.panel, u.panel),
-        children: l
+        children: l,
     });
 }

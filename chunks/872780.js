@@ -8,7 +8,7 @@ async function a(e) {
             await r.tn.get({
                 url: o.ANM.APEX_EXPERIMENTS_METADATA,
                 query: { surface: e },
-                rejectWithError: !0
+                rejectWithError: !0,
             })
         ).body.experiments.map((e) => ({
             id: e.id,
@@ -19,14 +19,14 @@ async function a(e) {
             variants: e.variants.map((e) => ({
                 id: e.id,
                 label: e.label,
-                type: e.type
-            }))
+                type: e.type,
+            })),
         }));
         i.Z.dispatch({
-            type: 'APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS',
-            experiments: t
+            type: "APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS",
+            experiments: t,
         });
     } catch (e) {
-        (i.Z.dispatch({ type: 'APEX_EXPERIMENTS_METADATA_FETCH_FAILURE' }), console.log(e));
+        i.Z.dispatch({ type: "APEX_EXPERIMENTS_METADATA_FETCH_FAILURE" }), console.log(e);
     }
 }

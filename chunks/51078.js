@@ -21,14 +21,14 @@ function b(e, t) {
                   (0, r.jsx)(i.sNh, {
                       id: p,
                       label: f.intl.string(f.t.p2hUt7),
-                      action: () => (0, s.SZ)(t, e, n)
+                      action: () => (0, s.SZ)(t, e, n),
                   }),
                   (0, r.jsx)(i.sNh, {
                       id: y,
-                      label: f.intl.string(f.t['/yA6QU']),
-                      action: () => (0, s.SZ)(d.hY, e, n)
-                  })
-              ]
+                      label: f.intl.string(f.t["/yA6QU"]),
+                      action: () => (0, s.SZ)(d.hY, e, n),
+                  }),
+              ],
           })
         : null;
 }

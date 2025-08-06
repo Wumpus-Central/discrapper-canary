@@ -27,7 +27,7 @@ function I(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -81,24 +81,26 @@ let N = 40,
                 b.rMx.OPEN_POPOUT,
                 T(
                     {
-                        type: 'Role Icon Popout',
-                        guild_id: n.id
+                        type: "Role Icon Popout",
+                        guild_id: n.id,
                     },
-                    (0, s.v_)(p.Z.getChannel(m.Z.getChannelId(n.id)))
-                )
+                    (0, s.v_)(p.Z.getChannel(m.Z.getChannelId(n.id))),
+                ),
             );
         });
         let S = (0, i.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
             C = (0, f.Z)(S),
-            R = C ? O.intl.formatToPlainString(O.t.t0928f, { name: I }) : O.intl.formatToPlainString(O.t.UDDkGx, { name: I }),
+            R = C
+                ? O.intl.formatToPlainString(O.t.t0928f, { name: I })
+                : O.intl.formatToPlainString(O.t.UDDkGx, { name: I }),
             P = A(T({}, t), {
                 src: null == t.src ? t.src : (0, u.o)(t.src, N),
-                size: N
+                size: N,
             }),
             w = () => {
                 (0, d.f)({
                     guildId: n.id,
-                    location: { section: b.jXE.ROLE_ICON_POPOUT }
+                    location: { section: b.jXE.ROLE_ICON_POPOUT },
                 });
             },
             D = () => {
@@ -107,50 +109,50 @@ let N = 40,
             L = C ? D : w;
         return (0, r.jsx)(o.VqE, {
             children: (0, r.jsx)(E.W_, {
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: v.popoutContainer,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: v.mainContent,
                             children: [
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: v.roleIconContainer,
                                     children: (0, r.jsx)(
                                         c.Z,
                                         A(T({}, P), {
                                             enableTooltip: !1,
                                             className: v.__invalid_roleIcon,
-                                            enableHeight: !1
-                                        })
-                                    )
+                                            enableHeight: !1,
+                                        }),
+                                    ),
                                 }),
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: v.truncatingText,
                                     children: [
                                         (0, r.jsx)(o.X6q, {
-                                            variant: 'heading-md/semibold',
+                                            variant: "heading-md/semibold",
                                             className: v.roleName,
-                                            children: (0, r.jsx)(l.Z, { children: I })
+                                            children: (0, r.jsx)(l.Z, { children: I }),
                                         }),
                                         (0, r.jsx)(o.Text, {
-                                            variant: 'text-sm/normal',
-                                            children: R
-                                        })
-                                    ]
-                                })
-                            ]
+                                            variant: "text-sm/normal",
+                                            children: R,
+                                        }),
+                                    ],
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(o.zxk, {
-                            size: 'sm',
-                            variant: 'secondary',
-                            text: O.intl.string(O.t['H930+P']),
+                            size: "sm",
+                            variant: "secondary",
+                            text: O.intl.string(O.t["H930+P"]),
                             onClick: L,
                             icon: o.$Eu,
                             fullWidth: !0,
-                            autoFocus: !0
-                        })
-                    ]
-                })
-            })
+                            autoFocus: !0,
+                        }),
+                    ],
+                }),
+            }),
         });
     };

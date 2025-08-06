@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(755721),
@@ -11,35 +11,35 @@ function c(e) {
         [d, h] = i.useState(!1),
         p = i.useCallback(
             async (e) => {
-                (e.stopPropagation(), h(!0));
+                e.stopPropagation(), h(!0);
                 try {
                     await o.Z.cancelFriendRequest({
                         userId: t,
                         applicationId: n,
-                        location: 'ActionButtonFriendRequest'
+                        location: "ActionButtonFriendRequest",
                     });
                 } finally {
                     h(!1);
                 }
             },
-            [n, t]
+            [n, t],
         ),
         f = i.useCallback(
             async (e) => {
-                (e.stopPropagation(), u(!0));
+                e.stopPropagation(), u(!0);
                 try {
                     await o.Z.maybeConfirmFriendRequestAccept({
                         userId: t,
                         applicationId: n,
-                        location: 'ActionButtonFriendRequest'
+                        location: "ActionButtonFriendRequest",
                     });
                 } finally {
                     u(!1);
                 }
             },
-            [n, t]
+            [n, t],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a.friendRequestContainer,
         children: [
             (0, r.jsx)(l.zx, {
@@ -50,7 +50,7 @@ function c(e) {
                 submitting: c,
                 disabled: d,
                 onClick: f,
-                children: s.intl.string(s.t.ZcibdX)
+                children: s.intl.string(s.t.ZcibdX),
             }),
             (0, r.jsx)(l.zx, {
                 className: a.ignoreButton,
@@ -60,8 +60,8 @@ function c(e) {
                 submitting: d,
                 disabled: c,
                 onClick: p,
-                children: s.intl.string(s.t.xuio0N)
-            })
-        ]
+                children: s.intl.string(s.t.xuio0N),
+            }),
+        ],
     });
 }

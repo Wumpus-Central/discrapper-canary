@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     Tl: () => f,
     YV: () => l,
     a5: () => d,
     cF: () => u,
     iE: () => a,
     id: () => c,
-    tK: () => s
+    tK: () => s,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(223143),
     o = n(286961);
@@ -19,7 +19,10 @@ function a() {
         u = r.useRef(!1);
     return (
         r.useEffect(() => {
-            l && !u.current && null != a && (t(null == c ? a.filter((e) => null == s.get(e.skuId)) : []), (u.current = !0));
+            l &&
+                !u.current &&
+                null != a &&
+                (t(null == c ? a.filter((e) => null == s.get(e.skuId)) : []), (u.current = !0));
         }, [a, s, l, c]),
         null != e ? e : void 0
     );
@@ -30,7 +33,7 @@ function s(e) {
 }
 function l(e) {
     let t = new Map();
-    return (e.forEach((e) => t.set(e.skuId, e.assetId)), t);
+    return e.forEach((e) => t.set(e.skuId, e.assetId)), t;
 }
 function c(e, t, n) {
     let r = d(e),
@@ -51,5 +54,5 @@ function f(e) {
     if (null == e) return;
     let n = Array.isArray(e) ? e : e.gradient,
         r = Array.isArray(e) || null == e.angle ? t : e.angle;
-    return { background: 'linear-gradient('.concat(r, 'deg, ').concat(n.join(', '), ')') };
+    return { background: "linear-gradient(".concat(r, "deg, ").concat(n.join(", "), ")") };
 }

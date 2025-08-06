@@ -1,6 +1,6 @@
-(n.d(t, {
+n.d(t, {
     L: () => c,
-    d: () => l
+    d: () => l,
 }),
     n(410992),
     n(227481),
@@ -18,11 +18,11 @@
     n(853839),
     n(570086),
     n(479048),
-    n(388685));
+    n(388685);
 var r = n(772848),
     i = n(433517),
     o = n(70956);
-let a = 'purchase_token',
+let a = "purchase_token",
     s = 60 * o.Z.Millis.DAY;
 function l() {
     let e = i.K.get(a);
@@ -31,7 +31,7 @@ function l() {
     return (
         i.K.set(a, {
             purchaseToken: t,
-            expires: Date.now() + s
+            expires: Date.now() + s,
         }),
         t
     );
@@ -39,8 +39,8 @@ function l() {
 async function c() {
     let e = new Uint8Array(
         l()
-            .split('')
-            .map((e) => e.charCodeAt(0))
+            .split("")
+            .map((e) => e.charCodeAt(0)),
     );
-    return btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.digest({ name: 'SHA-256' }, e))));
+    return btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.digest({ name: "SHA-256" }, e))));
 }

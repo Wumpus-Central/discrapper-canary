@@ -6,7 +6,7 @@ var e = n(220159),
     c = n(6837);
 e(
     {
-        target: 'Date',
+        target: "Date",
         proto: !0,
         forced: n(779688)(function () {
             return (
@@ -15,16 +15,20 @@ e(
                     o(Date.prototype.toJSON, {
                         toISOString: function () {
                             return 1;
-                        }
+                        },
                     })
             );
-        })
+        }),
     },
     {
         toJSON: function (t) {
             var r = i(this),
-                n = u(r, 'number');
-            return 'number' != typeof n || isFinite(n) ? ('toISOString' in r || 'Date' !== c(r) ? r.toISOString() : o(s, r)) : null;
-        }
-    }
+                n = u(r, "number");
+            return "number" != typeof n || isFinite(n)
+                ? "toISOString" in r || "Date" !== c(r)
+                    ? r.toISOString()
+                    : o(s, r)
+                : null;
+        },
+    },
 );

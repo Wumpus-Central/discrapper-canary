@@ -4,7 +4,7 @@ n.d(t, {
     UN: () => u,
     bg: () => h,
     hn: () => d,
-    np: () => f
+    np: () => f,
 });
 var r = n(979590),
     i = n.n(r),
@@ -15,14 +15,14 @@ var r = n(979590),
     c = n(813900);
 function u(e) {
     let t = e.current,
-        n = null == t ? void 0 : t.getContext('2d');
+        n = null == t ? void 0 : t.getContext("2d");
     null != t && null != n && n.clearRect(0, 0, t.width, t.height);
 }
 function d(e, t) {
     let { width: n, height: r, left: i, top: o } = e.getBoundingClientRect();
     return {
         x: (t.clientX - i) / n,
-        y: (t.clientY - o) / r
+        y: (t.clientY - o) / r,
     };
 }
 function f(e, t) {
@@ -32,7 +32,7 @@ function _(e, t, n) {
     return {
         x: f(e.x, t),
         y: f(e.y, n),
-        deltaTime: e.deltaTime
+        deltaTime: e.deltaTime,
     };
 }
 function p(e) {
@@ -45,17 +45,17 @@ function h(e, t, n, r) {
         f = null != d ? (null == (l = a.SR.getState().palette[d]) ? void 0 : l[0]) : null,
         _ =
             null != f
-                ? '#'.concat(
+                ? "#".concat(
                       i()({
                           r: f[0],
                           g: f[1],
-                          b: f[2]
-                      }).toHex()
+                          b: f[2],
+                      }).toHex(),
                   )
                 : r,
         p = (0, o.Bd)((0, o._i)(_)) > 0.5 ? n : t;
     return {
         fillColor: _,
-        outlineColor: p
+        outlineColor: p,
     };
 }

@@ -3,7 +3,7 @@ n.d(t, {
     HL: () => _,
     KK: () => m,
     Q_: () => f,
-    nw: () => p
+    nw: () => p,
 });
 var r = n(73800),
     i = n(442837),
@@ -36,12 +36,15 @@ function h(e) {
             o.Z.fetchMessages({
                 channelId: t.channel_id,
                 jump: { messageId: t.message_id },
-                limit: 10
+                limit: 10,
             });
     }, [n, t]);
 }
 function m(e) {
     var t, n;
-    let r = null == e || null == (n = e.messageSnapshots[0]) || null == (t = n.moderatorReport) ? void 0 : t.reported_user_id;
+    let r =
+        null == e || null == (n = e.messageSnapshots[0]) || null == (t = n.moderatorReport)
+            ? void 0
+            : t.reported_user_id;
     null != r && (0, a.PR)(r);
 }

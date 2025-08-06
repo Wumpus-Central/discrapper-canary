@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(147913),
     i = n(460181),
     o = n(474873),
@@ -11,7 +11,7 @@ var r = n(147913),
     f = n(938475),
     _ = n(358221);
 function p(e, t) {
-    if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
+    if (t.has(e)) throw TypeError("Cannot initialize the same private elements twice on an object");
 }
 function h(e, t) {
     return t.get ? t.get.call(e) : t.value;
@@ -19,24 +19,24 @@ function h(e, t) {
 function m(e, t, n) {
     if (t.set) t.set.call(e, n);
     else {
-        if (!t.writable) throw TypeError('attempted to set read only private field');
+        if (!t.writable) throw TypeError("attempted to set read only private field");
         t.value = n;
     }
 }
 function g(e, t, n) {
-    if (!t.has(e)) throw TypeError('attempted to ' + n + ' private field on non-instance');
+    if (!t.has(e)) throw TypeError("attempted to " + n + " private field on non-instance");
     return t.get(e);
 }
 function E(e, t) {
-    var n = g(e, t, 'get');
+    var n = g(e, t, "get");
     return h(e, n);
 }
 function b(e, t, n) {
-    (p(e, t), t.set(e, n));
+    p(e, t), t.set(e, n);
 }
 function y(e, t, n) {
-    var r = g(e, t, 'set');
-    return (m(e, r, n), n);
+    var r = g(e, t, "set");
+    return m(e, r, n), n;
 }
 function O(e, t, n) {
     return (
@@ -45,63 +45,71 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let v = (0, i.uk)('call_calling', o.Z.getSoundpack());
+let v = (0, i.uk)("call_calling", o.Z.getSoundpack());
 var I = new WeakMap();
 class T extends r.Z {
     _initialize() {
-        this.stores = new Map().set(a.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(d.Z, this.handleRingUpdate).set(_.Z, this.handleChannelRTCStoreChange).set(o.Z, this.handleSoundpackUpdate);
+        this.stores = new Map()
+            .set(a.Z, this.handleRingUpdate)
+            .set(l.Z, this.handleRingUpdate)
+            .set(u.Z, this.handleRingUpdate)
+            .set(d.Z, this.handleRingUpdate)
+            .set(_.Z, this.handleChannelRTCStoreChange)
+            .set(o.Z, this.handleSoundpackUpdate);
     }
     constructor(...e) {
-        (super(...e),
+        super(...e),
             b(this, I, {
                 writable: !0,
-                value: new Set()
+                value: new Set(),
             }),
-            O(this, 'actions', {
+            O(this, "actions", {
                 GUILD_LOCAL_RING_START: (e) => this.handleGuildRingStart(e),
-                GUILD_RING_STOP: (e) => this.handleGuildRingStop(e)
+                GUILD_RING_STOP: (e) => this.handleGuildRingStop(e),
             }),
-            O(this, '_handleRing', (e, t) => {
+            O(this, "_handleRing", (e, t) => {
                 let n = d.Z.getCurrentClientVoiceChannelId(t),
                     r = null != n && f.ZP.countVoiceStatesForChannel(n) >= 2;
-                null == n || r || !e || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? v.stop() : v.loop();
+                null == n || r || !e || l.Z.isSoundDisabled("call_calling") || u.Z.disableSounds ? v.stop() : v.loop();
             }),
-            O(this, 'handleSoundpackUpdate', () => {
-                (v.stop(), (v = (0, i.uk)('call_calling', o.Z.getSoundpack())));
+            O(this, "handleSoundpackUpdate", () => {
+                v.stop(), (v = (0, i.uk)("call_calling", o.Z.getSoundpack()));
             }),
-            O(this, 'handleRingUpdate', () => {
+            O(this, "handleRingUpdate", () => {
                 var e, t;
                 let n = c.Z.getVoiceChannelId(),
                     r = null != (t = null == (e = s.Z.getChannel(n)) ? void 0 : e.guild_id) ? t : null,
-                    i = a.Z.getCalls().some((e) => e.ringing.length > 0 && d.Z.getCurrentClientVoiceChannelId(null) === e.channelId);
+                    i = a.Z.getCalls().some(
+                        (e) => e.ringing.length > 0 && d.Z.getCurrentClientVoiceChannelId(null) === e.channelId,
+                    );
                 this._handleRing(i || E(this, I).size > 0, r);
             }),
-            O(this, 'handleGuildRingStart', (e) => {
+            O(this, "handleGuildRingStart", (e) => {
                 let { ringing: t, guildId: n } = e;
-                (t.forEach((e) => {
+                t.forEach((e) => {
                     E(this, I).add(e);
                 }),
-                    this._handleRing(E(this, I).size > 0, n));
+                    this._handleRing(E(this, I).size > 0, n);
             }),
-            O(this, 'handleGuildRingStop', (e) => {
+            O(this, "handleGuildRingStop", (e) => {
                 let { ringing: t, guildId: n } = e;
-                (t.forEach((e) => {
+                t.forEach((e) => {
                     E(this, I).delete(e);
                 }),
-                    this._handleRing(E(this, I).size > 0, n));
+                    this._handleRing(E(this, I).size > 0, n);
             }),
-            O(this, 'handleChannelRTCStoreChange', () => {
+            O(this, "handleChannelRTCStoreChange", () => {
                 let e = c.Z.getVoiceChannelId(),
                     t = E(this, I).size > 0;
                 if (!t) return;
                 if (null == e && t) {
-                    (y(this, I, new Set()), this._handleRing(E(this, I).size > 0, null));
+                    y(this, I, new Set()), this._handleRing(E(this, I).size > 0, null);
                     return;
                 }
                 if (null == e) return;
@@ -112,7 +120,7 @@ class T extends r.Z {
                         E(this, I).delete(e);
                     }),
                     this._handleRing(E(this, I).size > 0, null));
-            }));
+            });
     }
 }
 let S = new T();

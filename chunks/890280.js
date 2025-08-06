@@ -8,7 +8,7 @@ var r = n(73800),
 function c(e) {
     let { applicationId: t, context: n, launchingComponentId: c, onSubmissionComplete: u } = e,
         d = (0, s.q)(t),
-        f = (0, i.e7)([a.ZP], () => a.ZP.getLaunchState(t, 'channel' === n.type ? n.channel.id : void 0)),
+        f = (0, i.e7)([a.ZP], () => a.ZP.getLaunchState(t, "channel" === n.type ? n.channel.id : void 0)),
         _ = !(null != d && (0, l.g)(d)) && null != f && f.isLaunching && f.componentId === c,
         p = (0, o.Z)(_);
     return (
@@ -17,7 +17,7 @@ function c(e) {
         }, [_, p, u]),
         {
             submitting: _,
-            wasSubmitting: null != p ? p : null
+            wasSubmitting: null != p ? p : null,
         }
     );
 }

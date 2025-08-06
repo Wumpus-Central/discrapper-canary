@@ -1,1 +1,1 @@
-e.exports = { buttons: 'buttons_bb2295' };
+e.exports = { buttons: "buttons_bb2295" };

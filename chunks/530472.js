@@ -14,33 +14,33 @@ function c(e) {
         _ = () => u(c, !0);
     if (null != f) {
         let e = (0, o.i)(f);
-        n = (0, r.jsx)('div', {
+        n = (0, r.jsx)("div", {
             className: l.userAppsBetaContent,
             children: s.intl.format(s.t.wx1tLS, {
                 handleDelete: _,
-                reason: e
-            })
+                reason: e,
+            }),
         });
     } else
         n =
             c.type === a.uaV.STAGE_RAISE_HAND
-                ? s.intl.format(s.t['qDAX+/'], { handleDelete: _ })
+                ? s.intl.format(s.t["qDAX+/"], { handleDelete: _ })
                 : s.intl.format(s.t.uX3ecH, {
                       count: 1,
                       countMessages: 1,
-                      handleDelete: _
+                      handleDelete: _,
                   });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l.ephemeralMessage,
         onClick: (e) => e.stopPropagation(),
         children: [
             (0, r.jsx)(i.tEF, {
-                size: 'xs',
-                color: 'currentColor',
-                className: l.icon
+                size: "xs",
+                color: "currentColor",
+                className: l.icon,
             }),
             n,
-            d
-        ]
+            d,
+        ],
     });
 }

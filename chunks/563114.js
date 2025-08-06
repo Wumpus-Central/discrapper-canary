@@ -1,23 +1,23 @@
-(n.d(t, {
+n.d(t, {
     T: () => l,
-    Z: () => p
+    Z: () => p,
 }),
     n(388685),
     n(704826),
-    n(35282));
+    n(35282);
 var r = n(336317),
     i = n(768581),
     o = n(302221),
     a = n(956664),
     s = n(753090);
-let l = new Set(['\u2122', '\u2122️', '\xA9', '\xA9️', '\xAE', '\xAE️']);
+let l = new Set(["\u2122", "\u2122️", "\xA9", "\xA9️", "\xAE", "\xAE️"]);
 function c(e) {
-    if (l.has(e)) return '';
+    if (l.has(e)) return "";
     try {
-        let t = 0 > e.indexOf('‍') ? e.replace('️', '') : e;
-        return n(723080)('./'.concat(r.Z.convert.toCodePoint(t), '.svg'));
+        let t = 0 > e.indexOf("‍") ? e.replace("️", "") : e;
+        return n(723080)("./".concat(r.Z.convert.toCodePoint(t), ".svg"));
     } catch (t) {
-        return (console.warn(t, 'no emoji for', e), '');
+        return console.warn(t, "no emoji for", e), "";
     }
 }
 function u(e) {
@@ -35,7 +35,7 @@ async function f(e) {
             ? i.ZP.getEmojiURL({
                   id: n,
                   size: 32,
-                  animated: !1
+                  animated: !1,
               })
             : c(r);
     let s = await (0, a.OF)(t);
@@ -54,5 +54,5 @@ let p = {
     filterUnsupportedEmojis: u,
     applyPlatformToThemedEmojiColorPalette: d,
     getEmojiColors: f,
-    triggerFullscreenAnimation: _
+    triggerFullscreenAnimation: _,
 };

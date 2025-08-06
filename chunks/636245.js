@@ -11,7 +11,7 @@ let u = (e) => {
     let { guildId: t, channelId: n, color: u, look: d, onAction: f } = e,
         _ = (0, i.e7)([a.Z], () => a.Z.isInChannel(n), [n]),
         p = () => {
-            (null == f || f(), o.AC(t, n));
+            null == f || f(), o.AC(t, n);
         };
     return (0, r.jsx)(
         s.Z,
@@ -22,8 +22,8 @@ let u = (e) => {
             disabled: _,
             onClick: p,
             fullWidth: !0,
-            children: l.intl.string(l.t.ZYO5OD)
+            children: l.intl.string(l.t.ZYO5OD),
         },
-        'stage'
+        "stage",
     );
 };

@@ -1,1 +1,1 @@
-e.exports = { settingsPage: 'settingsPage_f131e9' };
+e.exports = { settingsPage: "settingsPage_f131e9" };

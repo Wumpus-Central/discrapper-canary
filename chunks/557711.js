@@ -9,10 +9,21 @@ var i = n(120356),
     c = n(829820),
     u = n(862863);
 function d(e) {
-    let { activity: t, user: n, channelId: i, guildId: d, source: f, size: _, look: p, color: h, className: m, onAction: g } = e,
+    let {
+            activity: t,
+            user: n,
+            channelId: i,
+            guildId: d,
+            source: f,
+            size: _,
+            look: p,
+            color: h,
+            className: m,
+            onAction: g,
+        } = e,
         { tooltip: E, loading: b, disabled: y, onClick: O } = (0, c.Fe)(t, n, f, l.ZP.getNickname(d, i, n)),
         v = () => {
-            (null == g || g(), O());
+            null == g || g(), O();
         };
     return (0, r.jsx)(s.ua7, {
         text: E,
@@ -29,12 +40,12 @@ function d(e) {
                 onMouseLeave: i,
                 disabled: y,
                 submitting: b,
-                'aria-label': null != E ? E : t.name,
+                "aria-label": null != E ? E : t.name,
                 children: (0, r.jsx)(s.iOO, {
-                    size: 'xs',
-                    color: 'currentColor'
-                })
+                    size: "xs",
+                    color: "currentColor",
+                }),
             });
-        }
+        },
     });
 }

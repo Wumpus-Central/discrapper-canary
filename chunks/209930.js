@@ -12,14 +12,14 @@ function _(e, t) {
     var n = null,
         r = null,
         i = s(e.currentTarget);
-    if ('function' == typeof i.caretRangeFromPoint) {
+    if ("function" == typeof i.caretRangeFromPoint) {
         var o = i.caretRangeFromPoint(e.x, e.y);
-        ((n = o.startContainer), (r = o.startOffset));
+        (n = o.startContainer), (r = o.startOffset);
     } else {
         if (!e.rangeParent) return null;
-        ((n = e.rangeParent), (r = e.rangeOffset));
+        (n = e.rangeParent), (r = e.rangeOffset);
     }
-    ((n = f(n)), (r = f(r)));
+    (n = f(n)), (r = f(r));
     var l = f(a(n));
     return c(t, l, r, l, r);
 }
@@ -27,25 +27,25 @@ function p(e) {
     e._internalDrag = !1;
     var t = e.editorContainer;
     if (t) {
-        var n = new MouseEvent('mouseup', {
+        var n = new MouseEvent("mouseup", {
             view: u(t),
             bubbles: !0,
-            cancelable: !0
+            cancelable: !0,
         });
         t.dispatchEvent(n);
     }
 }
 function h(e, t) {
     var n = i.moveText(e.getCurrentContent(), e.getSelection(), t);
-    return o.push(e, n, 'insert-fragment');
+    return o.push(e, n, "insert-fragment");
 }
 function m(e, t, n) {
     var r = i.insertText(e.getCurrentContent(), t, n, e.getCurrentInlineStyle());
-    return o.push(e, r, 'insert-fragment');
+    return o.push(e, r, "insert-fragment");
 }
 e.exports = {
     onDragEnd: function (e) {
-        (e.exitCurrentMode(), p(e));
+        e.exitCurrentMode(), p(e);
     },
     onDrop: function (e, t) {
         var n = new r(t.nativeEvent.dataTransfer),
@@ -60,8 +60,10 @@ e.exports = {
                 });
                 return;
             }
-            var s = e._internalDrag ? 'internal' : 'external';
-            ((e.props.handleDrop && d(e.props.handleDrop(o, n, s))) || (e._internalDrag ? e.update(h(i, o)) : e.update(m(i, o, n.getText()))), p(e));
+            var s = e._internalDrag ? "internal" : "external";
+            (e.props.handleDrop && d(e.props.handleDrop(o, n, s))) ||
+                (e._internalDrag ? e.update(h(i, o)) : e.update(m(i, o, n.getText()))),
+                p(e);
         }
-    }
+    },
 };

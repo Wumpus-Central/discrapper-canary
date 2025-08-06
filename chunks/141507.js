@@ -26,7 +26,7 @@ var r = n(255367),
     N = n(466988);
 let C = 250;
 function R(e) {
-    return null != e && 'animated' in e;
+    return null != e && "animated" in e;
 }
 let P = (e) => {
         let { inspectedEmoji: t, guild: n } = e,
@@ -38,7 +38,7 @@ let P = (e) => {
             w,
             D,
             { className: L, emojiGrid: x, guildId: M, pickerIntention: k, channel: j } = e,
-            { enabled: U } = y.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+            { enabled: U } = y.Z.useExperiment({ location: "EmojiPicker" }, { autoTrackExposure: !1 }),
             G = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             B = i.useMemo(() => {
                 var e;
@@ -51,9 +51,9 @@ let P = (e) => {
                 break;
             case T.ld.EXPAND_OR_COLLAPSE_EMOJIS:
                 t = {
-                    type: 'EXPAND_OR_COLLAPSE_EMOJI',
+                    type: "EXPAND_OR_COLLAPSE_EMOJI",
                     guildId: null == B ? void 0 : B.guildId,
-                    allNamesString: null == B ? void 0 : B.name
+                    allNamesString: null == B ? void 0 : B.name,
                 };
                 break;
             case T.ld.SOUNDMOJI:
@@ -62,9 +62,9 @@ let P = (e) => {
             case T.ld.CREATE_EMOJI:
             default:
                 t = {
-                    type: 'CREATE_EMOJI',
+                    type: "CREATE_EMOJI",
                     guildId: null == B ? void 0 : B.guildId,
-                    allNamesString: null == B ? void 0 : B.name
+                    allNamesString: null == B ? void 0 : B.name,
                 };
         }
         let Z = (0, o.e7)([g.Z], () => (null !== t && t.type === u.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
@@ -82,13 +82,16 @@ let P = (e) => {
                     Date.now() - e >= C &&
                         R(t) &&
                         z !== S.t0.NONE &&
-                        (z === S.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === u.B.GUILD && (0, f.Zg)(t.guildId, K[0].id),
+                        (z === S.t0.NEWLY_ADDED_EMOJI &&
+                            null !== t &&
+                            t.type === u.B.GUILD &&
+                            (0, f.Zg)(t.guildId, K[0].id),
                         null != G.source &&
                             (0, O.Gn)({
                                 emoji: t,
                                 subCategory: z,
                                 position: B.columnIndex + 1,
-                                newlyAddedHighlight: z === S.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(M, t.id)
+                                newlyAddedHighlight: z === S.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(M, t.id),
                             }));
                 };
             }),
@@ -103,43 +106,43 @@ let P = (e) => {
                     ? b.ZP.getEmojiURL({
                           id: t.id,
                           animated: H && t.animated,
-                          size: 28
+                          size: 28,
                       })
                     : t.url;
             w =
-                '' === e
+                "" === e
                     ? (0, r.jsx)(s.Text, {
-                          variant: 'text-md/normal',
+                          variant: "text-md/normal",
                           className: N.glyphEmoji,
-                          children: 'surrogates' in t ? t.surrogates : null
+                          children: "surrogates" in t ? t.surrogates : null,
                       })
-                    : (0, r.jsx)('img', {
-                          alt: null != (X = t.allNamesString) ? X : '',
+                    : (0, r.jsx)("img", {
+                          alt: null != (X = t.allNamesString) ? X : "",
                           src: e,
-                          className: N.emoji
+                          className: N.emoji,
                       });
-        } else if ('CREATE_EMOJI' === t.type)
+        } else if ("CREATE_EMOJI" === t.type)
             w = (0, r.jsx)(s.oFk, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: N.icon,
-                colorClass: N.icon
+                colorClass: N.icon,
             });
-        else if ('EXPAND_OR_COLLAPSE_EMOJI' === t.type) {
+        else if ("EXPAND_OR_COLLAPSE_EMOJI" === t.type) {
             let e = n(187119),
                 i = n(39874),
                 o = n(853871),
                 s = n(63149);
             w = W.has(t.guildId)
-                ? (0, r.jsx)('img', {
+                ? (0, r.jsx)("img", {
                       className: N.icon,
                       src: (0, a.wj)(q) ? o : s,
-                      alt: ''
+                      alt: "",
                   })
-                : (0, r.jsx)('img', {
+                : (0, r.jsx)("img", {
                       className: N.icon,
                       src: (0, a.wj)(q) ? e : i,
-                      alt: ''
+                      alt: "",
                   });
         }
         let Q =
@@ -147,19 +150,26 @@ let P = (e) => {
                 ? (0, r.jsx)(I.Z, {
                       className: N.__invalid_guildIcon,
                       guild: Z,
-                      shouldAnimate: !V && F
+                      shouldAnimate: !V && F,
                   })
                 : null;
-        D = U && 'CREATE_EMOJI' === t.type ? A.intl.string(A.t.XCmLfH) : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (W.has(t.guildId) ? A.intl.string(A.t['/K2RDA']) : A.intl.string(A.t.NZI2Zm)) : t.allNamesString;
+        D =
+            U && "CREATE_EMOJI" === t.type
+                ? A.intl.string(A.t.XCmLfH)
+                : "EXPAND_OR_COLLAPSE_EMOJI" === t.type
+                  ? W.has(t.guildId)
+                      ? A.intl.string(A.t["/K2RDA"])
+                      : A.intl.string(A.t.NZI2Zm)
+                  : t.allNamesString;
         let J =
-            U && 'CREATE_EMOJI' === t.type
-                ? A.intl.string(A.t['Z/r7IS'])
+            U && "CREATE_EMOJI" === t.type
+                ? A.intl.string(A.t["Z/r7IS"])
                 : P({
                       inspectedEmoji: t,
                       channel: j,
                       guildId: M,
                       intention: k,
-                      guild: Z
+                      guild: Z,
                   });
         return (0, r.jsx)(p.Z, {
             className: L,
@@ -168,6 +178,6 @@ let P = (e) => {
             titlePrimary: D,
             titleSecondary: J,
             isFavorite: Y,
-            emojiSubCategory: z
+            emojiSubCategory: z,
         });
     });

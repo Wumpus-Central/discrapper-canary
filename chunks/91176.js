@@ -4,7 +4,7 @@ var l = n(913527),
     r = n(749210);
 let o = {
     async setCommunicationDisabledDuration(e, t, n, l, o, a) {
-        let s = null != n ? i()().add(n, 's').toISOString() : null;
+        let s = null != n ? i()().add(n, "s").toISOString() : null;
         await r.Z.setCommunicationDisabledUntil({
             guildId: e,
             userId: t,
@@ -12,7 +12,7 @@ let o = {
             duration: n,
             reason: l,
             location: o,
-            moderatorReportId: a
+            moderatorReportId: a,
         });
-    }
+    },
 };

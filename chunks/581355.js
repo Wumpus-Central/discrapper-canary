@@ -15,38 +15,49 @@ var r = n(255367),
     b = n(388032),
     p = n(879656);
 function f(e) {
-    let { guild: t, channel: n, stageInstance: i, headerId: l, onClose: o, loading: s, error: c, onSave: u, defaultOptions: m, isSlideReady: h } = e;
+    let {
+        guild: t,
+        channel: n,
+        stageInstance: i,
+        headerId: l,
+        onClose: o,
+        loading: s,
+        error: c,
+        onSave: u,
+        defaultOptions: m,
+        isSlideReady: h,
+    } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: p.content,
                 children: [
                     (0, r.jsx)(d.Z, {
-                        children: (0, r.jsx)('div', {
+                        children: (0, r.jsx)("div", {
                             className: p.stageIconBackground,
                             children: (0, r.jsx)(a.ewx, {
-                                size: 'custom',
-                                color: 'currentColor',
+                                size: "custom",
+                                color: "currentColor",
                                 width: 32,
                                 height: 32,
-                                className: p.stageIcon
-                            })
-                        })
+                                className: p.stageIcon,
+                            }),
+                        }),
                     }),
                     (0, r.jsx)(a.X6q, {
                         id: l,
-                        variant: 'heading-xl/semibold',
-                        color: 'header-primary',
+                        variant: "heading-xl/semibold",
+                        color: "header-primary",
                         className: p.headerTitle,
-                        children: null == i ? b.intl.string(b.t.DDF0cH) : b.intl.string(b.t.YPdQOj)
+                        children: null == i ? b.intl.string(b.t.DDF0cH) : b.intl.string(b.t.YPdQOj),
                     }),
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'header-secondary',
+                        variant: "text-sm/normal",
+                        color: "header-secondary",
                         className: p.headerSubtitle,
-                        children: null == i ? b.intl.string(b.t.bqQIwc) : b.intl.string(b.t['I+9bLy'])
-                    })
-                ]
+                        children: null == i ? b.intl.string(b.t.bqQIwc) : b.intl.string(b.t["I+9bLy"]),
+                    }),
+                ],
             }),
             (0, r.jsx)(x.Z, {
                 guild: t,
@@ -56,9 +67,9 @@ function f(e) {
                 loading: s,
                 onClose: o,
                 defaultOptions: m,
-                isSlideReady: h
-            })
-        ]
+                isSlideReady: h,
+            }),
+        ],
     });
 }
 function v(e) {
@@ -75,15 +86,17 @@ function v(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['channel', 'onClose', 'transitionState']);
+        })(e, ["channel", "onClose", "transitionState"]);
     let _ = (0, o.Dt)(),
         j = (0, l.e7)([s.Z], () => s.Z.getGuild(d.guild_id)),
         N = i.useMemo(() => c.Z.getStageInstanceByChannel(d.id), [d.id]),
@@ -95,12 +108,12 @@ function v(e) {
             handleSlideReady: w,
             savedOptions: T,
             handleSettingsSave: k,
-            handleDelayedSave: P
+            handleDelayedSave: P,
         } = (0, h.Z)({
             stageInstance: N,
             defaultStep: g.lv.STAGE_CHANNEL_SETTINGS,
             error: I,
-            onSave: y
+            onSave: y,
         });
     return (i.useEffect(() => {
         null == j && x();
@@ -113,37 +126,37 @@ function v(e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
                           r = Object.keys(n);
-                      ('function' == typeof Object.getOwnPropertySymbols &&
+                      "function" == typeof Object.getOwnPropertySymbols &&
                           (r = r.concat(
                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                              })
+                              }),
                           )),
                           r.forEach(function (t) {
                               var r;
-                              ((r = n[t]),
+                              (r = n[t]),
                                   t in e
                                       ? Object.defineProperty(e, t, {
                                             value: r,
                                             enumerable: !0,
                                             configurable: !0,
-                                            writable: !0
+                                            writable: !0,
                                         })
-                                      : (e[t] = r));
-                          }));
+                                      : (e[t] = r);
+                          });
                   }
                   return e;
               })(
                   {
                       transitionState: b,
-                      'aria-labelledby': _
+                      "aria-labelledby": _,
                   },
-                  v
+                  v,
               )),
               (n = n =
                   {
                       size: a.CgR.SMALL,
-                      parentComponent: 'StageChannelSettingsModal',
+                      parentComponent: "StageChannelSettingsModal",
                       children: (0, r.jsxs)(a.MyZ, {
                           activeSlide: O,
                           width: 440,
@@ -151,7 +164,7 @@ function v(e) {
                           children: [
                               (0, r.jsx)(a.Mi4, {
                                   id: g.lv.STAGE_CHANNEL_SETTINGS,
-                                  children: (0, r.jsx)('div', {
+                                  children: (0, r.jsx)("div", {
                                       className: p.slideContainer,
                                       children: (0, r.jsx)(f, {
                                           guild: j,
@@ -163,13 +176,13 @@ function v(e) {
                                           error: I,
                                           onSave: k,
                                           defaultOptions: T,
-                                          isSlideReady: E === g.lv.STAGE_CHANNEL_SETTINGS
-                                      })
-                                  })
+                                          isSlideReady: E === g.lv.STAGE_CHANNEL_SETTINGS,
+                                      }),
+                                  }),
                               }),
                               (0, r.jsx)(a.Mi4, {
                                   id: g.lv.PUBLIC_STAGE_PREVIEW,
-                                  children: (0, r.jsx)('div', {
+                                  children: (0, r.jsx)("div", {
                                       className: p.slideContainer,
                                       children: (0, r.jsx)(u.Z, {
                                           headerId: _,
@@ -179,12 +192,12 @@ function v(e) {
                                           loading: C,
                                           onNext: P,
                                           onCancel: x,
-                                          onBack: () => S(g.lv.STAGE_CHANNEL_SETTINGS)
-                                      })
-                                  })
-                              })
-                          ]
-                      })
+                                          onBack: () => S(g.lv.STAGE_CHANNEL_SETTINGS),
+                                      }),
+                                  }),
+                              }),
+                          ],
+                      }),
                   }),
               Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -198,6 +211,6 @@ function v(e) {
                     })(Object(n)).forEach(function (e) {
                         Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                     }),
-              t)
+              t),
           );
 }

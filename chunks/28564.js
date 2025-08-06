@@ -8,24 +8,24 @@ function e(t) {
     let { onClose: i, onConfirmDelete: n, transitionState: e } = t;
     return (0, a.jsx)(r.Modal, {
         transitionState: e,
-        'aria-label': l.intl.string(l.t['u/2TkZ']),
+        "aria-label": l.intl.string(l.t["u/2TkZ"]),
         onClose: i,
-        title: l.intl.string(l.t['u/2TkZ']),
+        title: l.intl.string(l.t["u/2TkZ"]),
         actions: [
             {
-                text: l.intl.string(l.t['ETE/oK']),
-                variant: 'secondary',
-                onClick: i
+                text: l.intl.string(l.t["ETE/oK"]),
+                variant: "secondary",
+                onClick: i,
             },
             {
                 text: l.intl.string(l.t.dO8DLC),
-                variant: 'critical-primary',
-                onClick: n
-            }
+                variant: "critical-primary",
+                onClick: n,
+            },
         ],
         children: (0, a.jsx)(s.Text, {
-            variant: 'text-md/normal',
-            children: l.intl.string(l.t['9sgGbG'])
-        })
+            variant: "text-md/normal",
+            children: l.intl.string(l.t["9sgGbG"]),
+        }),
     });
 }

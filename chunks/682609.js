@@ -19,19 +19,21 @@ function f(e) {
                         r,
                         o = {},
                         c = Object.keys(e);
-                    for (r = 0; r < c.length; r++) ((n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                    for (r = 0; r < c.length; r++) (n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < c.length; r++) ((n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                for (r = 0; r < c.length; r++)
+                    (n = c[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
-        })(e, ['channel', 'onClose']);
+        })(e, ["channel", "onClose"]);
     let s = a.intl.format(a.t.AVVUsb, {
         onLearnMore: function () {
-            (n(), (0, o.z)(!0));
-        }
+            n(), (0, o.z)(!0);
+        },
     });
     return (0, r.jsx)(
         c.Z,
@@ -39,24 +41,24 @@ function f(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         var r;
-                        ((r = n[t]),
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = r));
-                    }));
+                                : (e[t] = r);
+                    });
             }
             return e;
         })(
@@ -66,14 +68,21 @@ function f(e) {
                 title: a.intl.string(a.t.SeL3eX),
                 body: s,
                 glowUp: s,
-                analyticsSource: { page: (null == t ? void 0 : t.getGuildId()) != null ? i.ZY5.GUILD_CHANNEL : (null == t ? void 0 : t.isGroupDM()) || (null == t ? void 0 : t.isPrivate()) ? i.ZY5.DM_CHANNEL : null },
+                analyticsSource: {
+                    page:
+                        (null == t ? void 0 : t.getGuildId()) != null
+                            ? i.ZY5.GUILD_CHANNEL
+                            : (null == t ? void 0 : t.isGroupDM()) || (null == t ? void 0 : t.isPrivate())
+                              ? i.ZY5.DM_CHANNEL
+                              : null,
+                },
                 analyticsLocation: {
                     section: i.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
-                    object: i.qAy.BUTTON_CTA
+                    object: i.qAy.BUTTON_CTA,
                 },
-                onClose: n
+                onClose: n,
             },
-            f
-        )
+            f,
+        ),
     );
 }

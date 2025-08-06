@@ -13,11 +13,11 @@ function c(e) {
     return null == n || 0 === n.length
         ? null
         : (0, r.jsx)(i.sNh, {
-              id: 'copy-text',
+              id: "copy-text",
               label: l.intl.string(l.t.JrGD7O),
               icon: i.TIy,
               action: () => {
                   (0, s.JG)(n);
-              }
+              },
           });
 }

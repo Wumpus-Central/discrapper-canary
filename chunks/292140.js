@@ -25,28 +25,31 @@ function g(e) {
             let e = t.currentActivities
                 .filter((e) => {
                     var t, n;
-                    return (null == (t = e.game) ? void 0 : t.name) != null && (0, a.isGameApplicationType)(null == (n = e.game) ? void 0 : n.type);
+                    return (
+                        (null == (t = e.game) ? void 0 : t.name) != null &&
+                        (0, a.isGameApplicationType)(null == (n = e.game) ? void 0 : n.type)
+                    );
                 })
                 .map((e) => e.game.name);
             a.default.track(h.rMx.OPEN_POPOUT, {
-                type: 'Now Playing Card Popout',
-                games_detected: e
+                type: "Now Playing Card Popout",
+                games_detected: e,
             });
         }),
         (0, r.jsxs)(i.v2r, {
-            navId: 'now-playing-menu',
+            navId: "now-playing-menu",
             onClose: n,
-            'aria-label': f.intl.string(f.t.ogxXGh),
+            "aria-label": f.intl.string(f.t.ogxXGh),
             onSelect: g,
             children: [
                 m,
                 (0, r.jsxs)(i.kSQ, {
-                    children: [b, _]
+                    children: [b, _],
                 }),
                 (0, r.jsx)(i.kSQ, { children: O }),
                 (0, r.jsx)(i.kSQ, { children: E }),
-                y
-            ]
+                y,
+            ],
         })
     );
 }

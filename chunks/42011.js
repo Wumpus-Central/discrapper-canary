@@ -7,14 +7,14 @@ var i = e(376340),
 function a(t) {
     let { onClose: n } = t;
     return (0, o.jsx)(i.L, {
-        img: (0, o.jsx)('img', {
+        img: (0, o.jsx)("img", {
             src: s.Z,
-            width: '124 ',
-            height: '160',
-            alt: ''
+            width: "124 ",
+            height: "160",
+            alt: "",
         }),
         title: r.intl.string(r.t.e6SOl5),
         body: r.intl.string(r.t.QjAZAQ),
-        onClose: n
+        onClose: n,
     });
 }

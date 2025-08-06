@@ -1,1 +1,3 @@
-i.exports = JSON.parse('{"i9e/u7":"Liukuväritys","2akt9v":"Wumpus","x68b1N":"Neon","OpWJ3d":"Kiinteä","rN7cub":"Sakura","JOpi7+":"Valitse väri","cVTpnp":"Lisää värit ensin","NOGFdn":"Yllätä minut"}');
+i.exports = JSON.parse(
+    '{"i9e/u7":"Liukuväritys","2akt9v":"Wumpus","x68b1N":"Neon","OpWJ3d":"Kiinteä","rN7cub":"Sakura","JOpi7+":"Valitse väri","cVTpnp":"Lisää värit ensin","NOGFdn":"Yllätä minut"}',
+);

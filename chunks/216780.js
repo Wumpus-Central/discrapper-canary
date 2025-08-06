@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     $_: () => u,
     KQ: () => c,
     MU: () => l,
-    RF: () => f
+    RF: () => f,
 }),
-    n(35282));
+    n(35282);
 var r = n(477690),
     i = n(911969),
     o = n(472401),
@@ -14,7 +14,7 @@ let l = 0;
 function c() {
     return {
         id: l,
-        name: s.intl.string(s.t.E407b2)
+        name: s.intl.string(s.t.E407b2),
     };
 }
 function u(e) {
@@ -22,7 +22,7 @@ function u(e) {
     return (0, o.$)({
         itemId: t,
         hash: n,
-        containerWidth: i
+        containerWidth: i,
     });
 }
 let d = (e) => {
@@ -39,15 +39,15 @@ function f(e) {
                 type: a.s9s.IMG,
                 width: 0,
                 height: 0,
-                src: n
+                src: n,
             };
         case i.ee.YOUTUBE:
             let r = d(e.url);
             if (null != r)
                 return {
                     type: a.s9s.YOUTUBE_VIDEO,
-                    youtubeVideoId: r
+                    youtubeVideoId: r,
                 };
     }
-    return (console.warn('Unsupported carousel item', e), null);
+    return console.warn("Unsupported carousel item", e), null;
 }

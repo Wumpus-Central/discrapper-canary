@@ -18,7 +18,7 @@ let m = () => {
         ? (0, i.jsx)(o.Z, {})
         : (0, i.jsx)(a.hjN, {
               tag: a.RB0.H1,
-              title: u.intl.string(u.t['Ig/XFR']),
+              title: u.intl.string(u.t["Ig/XFR"]),
               children: (0, i.jsxs)(a.ubH, {
                   theme: t,
                   children: [
@@ -26,13 +26,13 @@ let m = () => {
                           darkSrc: n(703152),
                           lightSrc: n(548617),
                           width: 230,
-                          height: 220
+                          height: 220,
                       }),
                       (0, i.jsx)(a.OZU, {
                           note: u.intl.string(u.t.WenGZ2),
-                          children: u.intl.string(u.t['aoLS8/'])
-                      })
-                  ]
-              })
+                          children: u.intl.string(u.t["aoLS8/"]),
+                      }),
+                  ],
+              }),
           });
 };

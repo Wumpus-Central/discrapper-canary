@@ -10,38 +10,38 @@ function s(e) {
         c = (0, l.c)(null != (t = null == n ? void 0 : n.type) ? t : s, n, o);
     if (null == c) return null;
     let { headerText: d, helperText: u, icon: m } = c;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a.actionContainer,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a.actionIconContainer,
                 children: (0, r.jsx)(m, {
-                    size: 'custom',
-                    color: 'currentColor',
+                    size: "custom",
+                    color: "currentColor",
                     width: 14,
                     height: 14,
-                    className: a.actionIcon
-                })
+                    className: a.actionIcon,
+                }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a.actionTextContainer,
                 children: (0, r.jsxs)(i.Text, {
                     className: a.actionTextHeader,
-                    variant: 'text-xs/medium',
-                    color: 'interactive-normal',
+                    variant: "text-xs/medium",
+                    color: "interactive-normal",
                     children: [
                         d,
                         null != u &&
                             (0, r.jsx)(i.Text, {
                                 className: a.actionTextHelper,
-                                variant: 'text-xs/medium',
-                                color: 'text-muted',
-                                tag: 'span',
-                                children: u
-                            })
-                    ]
-                })
-            })
-        ]
+                                variant: "text-xs/medium",
+                                color: "text-muted",
+                                tag: "span",
+                                children: u,
+                            }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

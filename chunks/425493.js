@@ -8,41 +8,41 @@ var i = n(120356),
     l = n(388032),
     c = n(594619),
     u = (function (e) {
-        return ((e.DEFAULT = ''), (e.BOLD = 'Bold'), (e.SOLID = 'Solid'), e);
+        return (e.DEFAULT = ""), (e.BOLD = "Bold"), (e.SOLID = "Solid"), e;
     })(u || {});
 function d(e) {
-    let { closeAction: t, variant: n = '', keybind: i, className: u } = e;
-    return (0, r.jsxs)('div', {
+    let { closeAction: t, variant: n = "", keybind: i, className: u } = e;
+    return (0, r.jsxs)("div", {
         className: o()(c.container, u),
         children: [
             (0, r.jsx)(s.P3F, {
                 className: o()(c.closeButton, {
-                    [c.closeButtonBold]: 'Bold' === n,
-                    [c.closeButtonSolid]: 'Solid' === n
+                    [c.closeButtonBold]: "Bold" === n,
+                    [c.closeButtonSolid]: "Solid" === n,
                 }),
                 onClick: t,
-                'aria-label': l.intl.string(l.t.cpT0Cg),
+                "aria-label": l.intl.string(l.t.cpT0Cg),
                 children:
-                    'Solid' === n
+                    "Solid" === n
                         ? (0, r.jsx)(s.k$p, {
-                              size: 'md',
-                              color: 'currentColor',
-                              'aria-hidden': !0
+                              size: "md",
+                              color: "currentColor",
+                              "aria-hidden": !0,
                           })
                         : (0, r.jsx)(s.Dio, {
-                              size: 'sm',
-                              color: 'currentColor',
-                              'aria-hidden': !0
-                          })
+                              size: "sm",
+                              color: "currentColor",
+                              "aria-hidden": !0,
+                          }),
             }),
             a.tq
                 ? null
-                : (0, r.jsx)('div', {
+                : (0, r.jsx)("div", {
                       className: c.keybind,
-                      'aria-hidden': !0,
-                      children: i
-                  })
-        ]
+                      "aria-hidden": !0,
+                      children: i,
+                  }),
+        ],
     });
 }
 d.Variants = u;

@@ -1,6 +1,6 @@
 n.d(t, {
     V: () => d,
-    Z: () => u
+    Z: () => u,
 });
 var r = n(255367);
 n(73800);
@@ -14,29 +14,29 @@ function u(e) {
     let { type: t } = e;
     return (0, r.jsx)(d, {
         icon:
-            'user' === t
+            "user" === t
                 ? (0, r.jsx)(o.t, {
-                      size: 'xxs',
-                      color: s.Z.colors.INTERACTIVE_NORMAL
+                      size: "xxs",
+                      color: s.Z.colors.INTERACTIVE_NORMAL,
                   })
                 : (0, r.jsx)(i.Q, {
-                      size: 'xxs',
-                      color: s.Z.colors.INTERACTIVE_NORMAL
+                      size: "xxs",
+                      color: s.Z.colors.INTERACTIVE_NORMAL,
                   }),
-        text: 'user' === t ? l.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : l.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
+        text: "user" === t ? l.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : l.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION,
     });
 }
 function d(e) {
     let { icon: t, text: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: c.container,
         children: [
             t,
             (0, r.jsx)(a.x, {
-                color: 'header-primary',
-                variant: 'text-sm/medium',
-                children: n
-            })
-        ]
+                color: "header-primary",
+                variant: "text-sm/medium",
+                children: n,
+            }),
+        ],
     });
 }

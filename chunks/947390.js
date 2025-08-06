@@ -7,13 +7,13 @@ var i = n(120356),
     s = n(722838);
 function l(e) {
     let { text: t, className: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()(s.pill, s.pillGradient, n),
         children: (0, r.jsx)(a.Text, {
-            variant: 'text-xxs/bold',
-            color: 'text-primary',
+            variant: "text-xxs/bold",
+            color: "text-primary",
             className: s.pillText,
-            children: t
-        })
+            children: t,
+        }),
     });
 }

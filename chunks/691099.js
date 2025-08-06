@@ -15,21 +15,21 @@ function o(e) {
     return e;
 }
 function a(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,7 +40,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -78,7 +78,7 @@ var O = function (e, t) {
                 r.push(c);
             }
         } catch (e) {
-            ((o = !0), (a = e));
+            (o = !0), (a = e);
         } finally {
             try {
                 i || null == l.return || l.return();
@@ -94,21 +94,21 @@ var O = function (e, t) {
                 d.cloneElement(
                     e,
                     {
-                        key: ''.concat(_, '-wrap'),
-                        'data-offset-key': u.encode(_, 0, 0)
+                        key: "".concat(_, "-wrap"),
+                        "data-offset-key": u.encode(_, 0, 0),
                     },
-                    f
-                )
+                    f,
+                ),
             ),
             n
         );
     },
     T = function (e, t) {
-        var n = t.get(e.getType()) || t.get('unstyled'),
+        var n = t.get(e.getType()) || t.get("unstyled"),
             r = n.wrapper;
         return {
-            Element: n.element || t.get('unstyled').element,
-            wrapperTemplate: r
+            Element: n.element || t.get("unstyled").element,
+            wrapperTemplate: r,
         };
     },
     S = function (e, t) {
@@ -117,17 +117,17 @@ var O = function (e, t) {
             ? {
                   CustomComponent: n.component,
                   customProps: n.props,
-                  customEditable: n.editable
+                  customEditable: n.editable,
               }
             : {};
     },
     A = function (e, t, n, r, i, o) {
         var a = {
-                'data-block': !0,
-                'data-editor': t,
-                'data-offset-key': n,
+                "data-block": !0,
+                "data-editor": t,
+                "data-offset-key": n,
                 key: e.getKey(),
-                ref: o
+                ref: o,
             },
             l = r(e);
         return (
@@ -135,7 +135,7 @@ var O = function (e, t) {
             void 0 !== i.customEditable &&
                 (a = s({}, a, {
                     contentEditable: i.customEditable,
-                    suppressContentEditableWarning: !0
+                    suppressContentEditableWarning: !0,
                 })),
             a
         );
@@ -143,7 +143,7 @@ var O = function (e, t) {
 e.exports = (function (e) {
     function t() {
         for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-        return (l(o((t = e.call.apply(e, [this].concat(r)) || this)), 'wrapperRef', d.createRef()), t);
+        return l(o((t = e.call.apply(e, [this].concat(r)) || this)), "wrapperRef", d.createRef()), t;
     }
     a(t, e);
     var n = t.prototype;
@@ -154,7 +154,11 @@ e.exports = (function (e) {
                 r = t.direction,
                 i = t.tree,
                 o = !n.getChildKeys().isEmpty(),
-                a = n !== e.block || i !== e.tree || r !== e.direction || (O(e.selection, e.block.getKey()) && e.forceSelection);
+                a =
+                    n !== e.block ||
+                    i !== e.tree ||
+                    r !== e.direction ||
+                    (O(e.selection, e.block.getKey()) && e.forceSelection);
             return o || a;
         }),
         (n.componentDidMount = function () {
@@ -172,7 +176,8 @@ e.exports = (function (e) {
                     } else {
                         b(r) || E(!1);
                         var s = r;
-                        (e = s.offsetHeight + s.offsetTop - (i.offsetHeight + o.y)) > 0 && f.setTop(i, f.getTop(i) + e + y);
+                        (e = s.offsetHeight + s.offsetTop - (i.offsetHeight + o.y)) > 0 &&
+                            f.setTop(i, f.getTop(i) + e + y);
                     }
                 }
             }
@@ -209,9 +214,9 @@ e.exports = (function (e) {
                             tree: h.getBlockTree(r),
                             blockProps: _.customProps,
                             offsetKey: i,
-                            block: c
+                            block: c,
                         });
-                    return (n.push(d.createElement(E, y, d.createElement(m, O))), !b || v(c, f) || I(b, E, n), n);
+                    return n.push(d.createElement(E, y, d.createElement(m, O))), !b || v(c, f) || I(b, E, n), n;
                 }, []));
             var R = r.getKey(),
                 P = u.encode(R, 0, 0),
@@ -225,8 +230,8 @@ e.exports = (function (e) {
                                   tree: h.getBlockTree(R),
                                   blockProps: w.customProps,
                                   offsetKey: P,
-                                  block: r
-                              })
+                                  block: r,
+                              }),
                           )
                         : d.createElement(c, {
                               block: r,
@@ -239,7 +244,7 @@ e.exports = (function (e) {
                               forceSelection: b,
                               hasSelection: O(y, R),
                               selection: y,
-                              tree: N
+                              tree: N,
                           });
             if (r.getParentKey()) return L;
             var x = T(r, o).Element,

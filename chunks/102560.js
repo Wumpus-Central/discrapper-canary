@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(392711),
@@ -17,40 +17,36 @@ let p = (e) => {
         [h, j] = l.useState(null),
         [g, x] = l.useState([]),
         v = l.useCallback(async () => {
-            (j(null), j(await c.Z.updateEstimate(t.id, p, g)));
+            j(null), j(await c.Z.updateEstimate(t.id, p, g));
         }, [p, t.id, g]);
     l.useEffect(() => {
         v();
     }, [v]);
-    let y = (0, a.Wu)(
-        [C.Z, d.Z],
-        () => {
-            let e = C.Z.getHighestRole(t);
-            return i()(d.Z.getSortedRoles(t.id))
-                .filter((n) => !(0, u.fI)(n) && C.Z.isRoleHigher(t, e, n))
-                .map((e) => {
-                    let { id: t, name: n } = e;
-                    return {
-                        label: n,
-                        value: t
-                    };
-                })
-                .value();
-        },
-        [t]
-    );
+    let y = (0, a.Wu)([C.Z, d.Z], () => {
+        let e = C.Z.getHighestRole(t);
+        return i()(d.Z.getSortedRoles(t.id))
+            .filter((n) => !(0, u.fI)(n) && C.Z.isRoleHigher(t, e, n))
+            .map((e) => {
+                let { id: t, name: n } = e;
+                return {
+                    label: n,
+                    value: t,
+                };
+            })
+            .value();
+    }, [t]);
     return (0, r.jsxs)(s.Y0X, {
         transitionState: n,
-        parentComponent: 'PruneGuild',
+        parentComponent: "PruneGuild",
         children: [
             (0, r.jsx)(s.xBx, {
                 separator: !1,
                 children: (0, r.jsxs)(s.X6q, {
-                    variant: 'heading-lg/semibold',
-                    children: [m.intl.string(m.t.zbyz7u), '\u2014', null != t ? t.name : '']
-                })
+                    variant: "heading-lg/semibold",
+                    children: [m.intl.string(m.t.zbyz7u), "\u2014", null != t ? t.name : ""],
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: b.content,
                 children: [
                     (0, r.jsx)(s.xJW, {
@@ -60,19 +56,19 @@ let p = (e) => {
                             options: [
                                 {
                                     name: m.intl.formatToPlainString(m.t.FM1dHR, { days: 7 }),
-                                    value: 7
+                                    value: 7,
                                 },
                                 {
                                     name: m.intl.formatToPlainString(m.t.FM1dHR, { days: 30 }),
-                                    value: 30
-                                }
+                                    value: 30,
+                                },
                             ],
                             onChange: (e) => {
                                 let { value: t } = e;
                                 f(t);
                             },
-                            className: b.spacing
-                        })
+                            className: b.spacing,
+                        }),
                     }),
                     (0, r.jsx)(s.xJW, {
                         title: m.intl.string(m.t.buoe19),
@@ -83,45 +79,45 @@ let p = (e) => {
                                 multi: !0,
                                 value: g,
                                 onChange: (e) => x(e),
-                                options: y
-                            })
-                        })
+                                options: y,
+                            }),
+                        }),
                     }),
                     (0, r.jsx)(s.R94, {
                         type: s.R94.Types.DESCRIPTION,
                         className: b.spacing,
                         children:
                             g.length > 0
-                                ? m.intl.format(m.t['5WxHHh'], {
+                                ? m.intl.format(m.t["5WxHHh"], {
                                       members: h,
-                                      days: p
+                                      days: p,
                                   })
                                 : m.intl.format(m.t.f13az8, {
                                       members: h,
-                                      days: p
-                                  })
-                    })
-                ]
+                                      days: p,
+                                  }),
+                    }),
+                ],
             }),
             (0, r.jsx)(s.mzw, {
                 children: (0, r.jsxs)(s.hE2, {
-                    direction: 'horizontal-reverse',
+                    direction: "horizontal-reverse",
                     children: [
                         (0, r.jsx)(s.zxk, {
-                            variant: 'primary',
-                            text: m.intl.string(m.t['2mIlKS']),
+                            variant: "primary",
+                            text: m.intl.string(m.t["2mIlKS"]),
                             onClick: () => {
-                                (c.Z.prune(t.id, p, g), o());
-                            }
+                                c.Z.prune(t.id, p, g), o();
+                            },
                         }),
                         (0, r.jsx)(s.zxk, {
-                            variant: 'secondary',
-                            text: m.intl.string(m.t['ETE/oK']),
-                            onClick: o
-                        })
-                    ]
-                })
-            })
-        ]
+                            variant: "secondary",
+                            text: m.intl.string(m.t["ETE/oK"]),
+                            onClick: o,
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 };

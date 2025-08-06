@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(539854));
+n.d(t, { Z: () => f }), n(539854);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -21,28 +21,28 @@ function f() {
         {
             theme: n,
             useSystemTheme: f,
-            useForcedColors: j
+            useForcedColors: j,
         } = (0, i.cj)([p.Z, g.ZP, c.Z], () => ({
             theme: p.Z.theme,
             useSystemTheme: g.ZP.useSystemTheme,
-            useForcedColors: c.Z.useForcedColors
+            useForcedColors: c.Z.useForcedColors,
         })),
         v = b.YC.useSetting(),
         E = (e, i) =>
             (0, r.jsx)(a.k5B, {
                 id: e,
-                group: 'input-modes',
+                group: "input-modes",
                 label: i,
                 disabled: j,
-                checked: f === y.KW.ON ? 'system' === e : e === n,
+                checked: f === y.KW.ON ? "system" === e : e === n,
                 action: () => {
-                    ((0, d.Yk)({
+                    (0, d.Yk)({
                         isPersisted: !0,
                         analyticsLocations: t,
-                        themeName: 'default '.concat(e)
+                        themeName: "default ".concat(e),
                     }),
-                        (0, o.ZI)({ theme: e }));
-                }
+                        (0, o.ZI)({ theme: e });
+                },
             }),
         S = E(O.BRd.DARK, h.intl.string(h.t.SMPT1t)),
         P = E(O.BRd.LIGHT, h.intl.string(h.t.K2sFfn)),
@@ -50,9 +50,15 @@ function f() {
             (0, r.jsxs)(
                 a.kSQ,
                 {
-                    children: [P, S, E(O.BRd.DARKER, h.intl.string(h.t.b8Cei4)), E(O.BRd.MIDNIGHT, h.intl.string(h.t.Do4ZJy)), E('system', h.intl.string(h.t['7rOU6u']))]
+                    children: [
+                        P,
+                        S,
+                        E(O.BRd.DARKER, h.intl.string(h.t.b8Cei4)),
+                        E(O.BRd.MIDNIGHT, h.intl.string(h.t.Do4ZJy)),
+                        E("system", h.intl.string(h.t["7rOU6u"])),
+                    ],
                 },
-                'theme-items'
+                "theme-items",
             ),
             ,
         ];
@@ -61,68 +67,68 @@ function f() {
             (0, r.jsxs)(
                 a.kSQ,
                 {
-                    label: 'UI Density',
+                    label: "UI Density",
                     children: [
                         (0, r.jsx)(a.k5B, {
-                            id: 'compact-ui',
-                            group: 'list-density',
-                            label: h.intl.string(h.t['7iegX1']),
+                            id: "compact-ui",
+                            group: "list-density",
+                            label: h.intl.string(h.t["7iegX1"]),
                             checked: v === l.Pi.COMPACT,
                             action: () => {
                                 b.YC.updateSetting(l.Pi.COMPACT);
-                            }
+                            },
                         }),
                         (0, r.jsx)(a.k5B, {
-                            id: 'default-ui',
-                            group: 'list-density',
+                            id: "default-ui",
+                            group: "list-density",
                             label: h.intl.string(h.t.bBvAEB),
                             checked: v === l.Pi.DEFAULT,
                             action: () => {
                                 b.YC.updateSetting(l.Pi.DEFAULT);
-                            }
+                            },
                         }),
                         (0, r.jsx)(a.k5B, {
-                            id: 'cozy-ui',
-                            group: 'list-density',
-                            label: h.intl.string(h.t['4cuYHx']),
+                            id: "cozy-ui",
+                            group: "list-density",
+                            label: h.intl.string(h.t["4cuYHx"]),
                             checked: v === l.Pi.COZY,
                             action: () => {
                                 b.YC.updateSetting(l.Pi.COZY);
-                            }
-                        })
-                    ]
+                            },
+                        }),
+                    ],
                 },
-                'list-density'
-            )
+                "list-density",
+            ),
         ),
         m.push(
             (0, r.jsxs)(
                 a.kSQ,
                 {
-                    label: 'Message Display',
+                    label: "Message Display",
                     children: [
                         (0, r.jsx)(a.k5B, {
-                            id: 'cozy-chat',
-                            group: 'chat-density',
+                            id: "cozy-chat",
+                            group: "chat-density",
                             label: h.intl.string(h.t.Jqj4cX),
                             checked: !e,
                             action: () => {
-                                (b.jU.updateSetting(!1), (0, s.ZZ)());
-                            }
+                                b.jU.updateSetting(!1), (0, s.ZZ)();
+                            },
                         }),
                         (0, r.jsx)(a.k5B, {
-                            id: 'compact-chat',
-                            group: 'chat-density',
-                            label: h.intl.string(h.t['1JNcPT']),
+                            id: "compact-chat",
+                            group: "chat-density",
+                            label: h.intl.string(h.t["1JNcPT"]),
                             checked: e,
                             action: () => {
-                                (b.jU.updateSetting(!0), (0, s.ZZ)());
-                            }
-                        })
-                    ]
+                                b.jU.updateSetting(!0), (0, s.ZZ)();
+                            },
+                        }),
+                    ],
                 },
-                'chat-density'
-            )
+                "chat-density",
+            ),
         ),
         m
     );

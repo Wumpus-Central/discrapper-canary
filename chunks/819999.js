@@ -12,12 +12,12 @@ var a = r(619825),
             c = e.value,
             l = e.valueGetter;
         return n.createElement(
-            'li',
-            r('value', t, o),
-            n.createElement('label', r(['label', 'valueLabel'], t, o), s(o, t, !1, !1)),
+            "li",
+            r("value", t, o),
+            n.createElement("label", r(["label", "valueLabel"], t, o), s(o, t, !1, !1)),
             n.createElement(
-                'span',
-                r('valueText', t, o),
+                "span",
+                r("valueText", t, o),
                 i.apply(
                     void 0,
                     [
@@ -26,10 +26,10 @@ var a = r(619825),
                                   return e;
                               }
                             : l)(c),
-                        c
-                    ].concat((0, a.Z)(o))
-                )
-            )
+                        c,
+                    ].concat((0, a.Z)(o)),
+                ),
+            ),
         );
     };
 i.propTypes = {
@@ -39,6 +39,6 @@ i.propTypes = {
     keyPath: o().arrayOf(o().oneOfType([o().string, o().number]).isRequired).isRequired,
     valueRenderer: o().func.isRequired,
     value: o().any,
-    valueGetter: o().func
+    valueGetter: o().func,
 };
 let c = i;

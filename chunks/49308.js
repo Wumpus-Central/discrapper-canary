@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,26 +33,33 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function v(e) {
     let { handleClose: t, analyticsLocations: n } = e,
-        { skusById: o, selectedSkuId: l, application: u, paymentError: d, purchaseError: f, purchasePreviewError: p } = (0, h.JL)(),
+        {
+            skusById: o,
+            selectedSkuId: l,
+            application: u,
+            paymentError: d,
+            purchaseError: f,
+            purchasePreviewError: p,
+        } = (0, h.JL)(),
         m = (0, s.e7)([c.Z], () => c.Z.getProduct(l)),
         y = i.useRef(!1);
-    (a()(null != l, 'Expected selectedSkuId'), a()(null != u, 'Expected application'));
+    a()(null != l, "Expected selectedSkuId"), a()(null != u, "Expected application");
     let O = o[l];
-    a()(null != O, 'Expected sku');
+    a()(null != O, "Expected sku");
     let v = null != d || null != f || null != p;
     return (i.useEffect(() => {
         null == m ||
@@ -63,7 +70,7 @@ function v(e) {
                 product: m,
                 analyticsLocations: n,
                 onCloseCallback: t,
-                purchaseType: b.o8.FIAT
+                purchaseType: b.o8.FIAT,
             }));
     }, [m, n, t, v]),
     v)
@@ -71,14 +78,22 @@ function v(e) {
         : null;
 }
 function I(e) {
-    let { isGift: t, giftCode: n, selectedGiftStyle: o, hasSentMessage: a, giftRecipient: _, giftMessageError: g, isSendingMessage: E } = (0, p.wD)(),
+    let {
+            isGift: t,
+            giftCode: n,
+            selectedGiftStyle: o,
+            hasSentMessage: a,
+            giftRecipient: _,
+            giftMessageError: g,
+            isSendingMessage: E,
+        } = (0, p.wD)(),
         b = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         y = i.useRef(null),
         { selectedSkuId: I } = (0, h.JL)(),
         T = (0, s.e7)([c.Z], () => c.Z.getProduct(I)),
         { confettiColors: S } = (0, u.Z)(null == T ? void 0 : T.styles);
     return t
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               ref: y,
               children: [
                   (0, r.jsx)(m.Z, {
@@ -88,7 +103,7 @@ function I(e) {
                       hasSentMessage: a,
                       giftRecipient: _,
                       giftMessageError: g,
-                      isSendingMessage: E
+                      isSendingMessage: E,
                   }),
                   !e.hideConfetti &&
                       !b &&
@@ -96,9 +111,9 @@ function I(e) {
                           confettiTarget: y.current,
                           confettiCanvas: e.confettiCanvas,
                           sprites: (0, f.vK)(null == T ? void 0 : T.categorySkuId),
-                          colors: null == S ? void 0 : S.map((e) => e.toHexString())
-                      })
-              ]
+                          colors: null == S ? void 0 : S.map((e) => e.toHexString()),
+                      }),
+              ],
           })
         : (0, r.jsx)(v, O({}, e));
 }

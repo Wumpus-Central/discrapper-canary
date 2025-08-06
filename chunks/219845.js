@@ -1,7 +1,7 @@
 n.d(t, {
     Fs: () => s,
     Y9: () => h,
-    uP: () => p
+    uP: () => p,
 });
 var r = n(644387),
     i = n(582661),
@@ -12,7 +12,7 @@ var r = n(644387),
     c = /^tb|vertical/,
     u = /msie|trident/i.test(a.C.navigator && a.C.navigator.userAgent),
     d = function (e) {
-        return parseFloat(e || '0');
+        return parseFloat(e || "0");
     },
     f = function (e, t, n) {
         return (
@@ -21,7 +21,7 @@ var r = n(644387),
             void 0 === n && (n = !1),
             Object.freeze({
                 inlineSize: (n ? t : e) || 0,
-                blockSize: (n ? e : t) || 0
+                blockSize: (n ? e : t) || 0,
             })
         );
     },
@@ -29,17 +29,17 @@ var r = n(644387),
         devicePixelContentBoxSize: f(),
         borderBoxSize: f(),
         contentBoxSize: f(),
-        contentRect: new i.N(0, 0, 0, 0)
+        contentRect: new i.N(0, 0, 0, 0),
     }),
     p = function (e) {
         if (s.has(e)) return s.get(e);
-        if ((0, o.xj)(e)) return (s.set(e, _), _);
+        if ((0, o.xj)(e)) return s.set(e, _), _;
         var t = getComputedStyle(e),
             n = (0, o.zd)(e) && e.ownerSVGElement && e.getBBox(),
-            r = !u && 'border-box' === t.boxSizing,
-            a = c.test(t.writingMode || ''),
-            p = !n && l.test(t.overflowY || ''),
-            h = !n && l.test(t.overflowX || ''),
+            r = !u && "border-box" === t.boxSizing,
+            a = c.test(t.writingMode || ""),
+            p = !n && l.test(t.overflowY || ""),
+            h = !n && l.test(t.overflowX || ""),
             m = n ? 0 : d(t.paddingTop),
             g = n ? 0 : d(t.paddingRight),
             E = n ? 0 : d(t.paddingBottom),
@@ -64,9 +64,9 @@ var r = n(644387),
                 devicePixelContentBoxSize: f(Math.round(D * devicePixelRatio), Math.round(L * devicePixelRatio), a),
                 borderBoxSize: f(x, M, a),
                 contentBoxSize: f(D, L, a),
-                contentRect: new i.N(b, m, D, L)
+                contentRect: new i.N(b, m, D, L),
             });
-        return (s.set(e, k), k);
+        return s.set(e, k), k;
     },
     h = function (e, t) {
         var n = p(e),

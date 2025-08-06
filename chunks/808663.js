@@ -5,13 +5,13 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-(n.d(t, { Z: () => o }), n(539854));
+n.d(t, { Z: () => o }), n(539854);
 class i {
     enqueue(e) {
         this.queue.push(e);
@@ -23,7 +23,7 @@ class i {
         }
     }
     constructor() {
-        r(this, 'queue', []);
+        r(this, "queue", []);
     }
 }
 let o = new i();

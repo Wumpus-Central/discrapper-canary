@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(467055), n(388685));
+n.d(t, { Z: () => D }), n(467055), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -26,7 +26,7 @@ function I(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 I(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,11 +52,11 @@ function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,36 +72,56 @@ function A(e, t) {
     );
 }
 let N = {
-        tag: 'span',
-        variant: 'text-md/normal',
-        color: 'header-secondary'
+        tag: "span",
+        variant: "text-md/normal",
+        color: "header-secondary",
     },
-    C = { className: a()('mention', v.mention) };
+    C = { className: a()("mention", v.mention) };
 function R(e) {
     return (0, r.jsx)(
         l.Text,
         A(T({}, N), {
-            color: 'header-primary',
-            children: e
-        })
+            color: "header-primary",
+            children: e,
+        }),
     );
 }
 function P(e) {
     var t, n, o, a, s, u, d;
     let f,
-        { option: g, channel: v, guild: I, messageId: S, parentOptionKey: w, commandOptionSpec: D, sourceAnalyticsLocations: L } = e,
-        x = null != w ? w + ' ' + g.name : g.name;
+        {
+            option: g,
+            channel: v,
+            guild: I,
+            messageId: S,
+            parentOptionKey: w,
+            commandOptionSpec: D,
+            sourceAnalyticsLocations: L,
+        } = e,
+        x = null != w ? w + " " + g.name : g.name;
     if (g.type === c.jw.SUB_COMMAND || g.type === c.jw.SUB_COMMAND_GROUP) {
         let e = [
                 (0, r.jsxs)(
                     i.Fragment,
                     {
-                        children: [' ', (0, r.jsx)(l.Text, A(T({}, N), { children: null != (n = null == D ? void 0 : D.name_localized) ? n : g.name }))]
+                        children: [
+                            " ",
+                            (0, r.jsx)(
+                                l.Text,
+                                A(T({}, N), {
+                                    children: null != (n = null == D ? void 0 : D.name_localized) ? n : g.name,
+                                }),
+                            ),
+                        ],
                     },
-                    x
-                )
+                    x,
+                ),
             ],
-            s = Object.fromEntries(null == (t = null != (o = null == D ? void 0 : D.options) ? o : []) ? void 0 : t.map((e) => [e.name, e]));
+            s = Object.fromEntries(
+                null == (t = null != (o = null == D ? void 0 : D.options) ? o : [])
+                    ? void 0
+                    : t.map((e) => [e.name, e]),
+            );
         for (let t of null != (a = g.options) ? a : [])
             e = e.concat(
                 P({
@@ -111,8 +131,8 @@ function P(e) {
                     messageId: S,
                     parentOptionKey: x,
                     commandOptionSpec: s[t.name],
-                    sourceAnalyticsLocations: L
-                })
+                    sourceAnalyticsLocations: L,
+                }),
             );
         return e;
     }
@@ -133,10 +153,10 @@ function P(e) {
                                     guildId: v.guild_id,
                                     channelId: v.id,
                                     messageId: S,
-                                    sourceAnalyticsLocations: L
+                                    sourceAnalyticsLocations: L,
                                 }),
-                            children: [y.ME, e.nick]
-                        })
+                            children: [y.ME, e.nick],
+                        }),
                     );
                 }
                 break;
@@ -148,8 +168,8 @@ function P(e) {
                     (f = (0, r.jsxs)(
                         _.Z,
                         A(T({}, C), {
-                            children: [y.zy, t.name]
-                        })
+                            children: [y.zy, t.name],
+                        }),
                     ));
                 break;
             }
@@ -160,8 +180,8 @@ function P(e) {
                     (f = (0, r.jsxs)(
                         _.Z,
                         A(T({}, C), {
-                            children: [y.ME, t.name]
-                        })
+                            children: [y.ME, t.name],
+                        }),
                     ));
                 break;
             }
@@ -170,7 +190,7 @@ function P(e) {
                     t = null != I ? m.Z.getRole(I.id, e) : void 0;
                 if (null != t)
                     f = (0, r.jsxs)(_.Z, {
-                        children: [y.ME, t.name]
+                        children: [y.ME, t.name],
                     });
                 else {
                     let t = E.default.getUser(e);
@@ -183,10 +203,10 @@ function P(e) {
                                     (0, p.openUserProfileModal)({
                                         userId: t.id,
                                         guildId: v.guild_id,
-                                        sourceAnalyticsLocations: L
+                                        sourceAnalyticsLocations: L,
                                     }),
-                                children: [y.ME, e.nick]
-                            })
+                                children: [y.ME, e.nick],
+                            }),
                         );
                     }
                 }
@@ -210,14 +230,14 @@ function P(e) {
                         (0, r.jsxs)(
                             l.Text,
                             A(T({}, N), {
-                                children: [' ', null != (d = null == D ? void 0 : D.name_localized) ? d : g.name, ': ']
-                            })
+                                children: [" ", null != (d = null == D ? void 0 : D.name_localized) ? d : g.name, ": "],
+                            }),
                         ),
-                        f
-                    ]
+                        f,
+                    ],
                 },
-                x
-            )
+                x,
+            ),
         ]
     );
 }
@@ -236,11 +256,16 @@ function w(e) {
     )
         h = (0, r.jsx)(l.$jN, {
             type: l.$jN.Type.SPINNING_CIRCLE,
-            className: v.spinner
+            className: v.spinner,
         });
     else {
         let e = [],
-            t = Object.fromEntries((null != (a = null == (n = b.application_command) ? void 0 : n.options) ? a : []).map((e) => [e.name, e]));
+            t = Object.fromEntries(
+                (null != (a = null == (n = b.application_command) ? void 0 : n.options) ? a : []).map((e) => [
+                    e.name,
+                    e,
+                ]),
+            );
         for (let n of null != (_ = b.options) ? _ : [])
             e = e.concat(
                 P({
@@ -250,37 +275,40 @@ function w(e) {
                     messageId: E,
                     parentOptionKey: null,
                     commandOptionSpec: t[n.name],
-                    sourceAnalyticsLocations: y
-                })
+                    sourceAnalyticsLocations: y,
+                }),
             );
         h = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(
                     l.Text,
                     A(T({}, N), {
-                        children: ['/', null != (p = null == (o = b.application_command) ? void 0 : o.name_localized) ? p : b.name]
-                    })
+                        children: [
+                            "/",
+                            null != (p = null == (o = b.application_command) ? void 0 : o.name_localized) ? p : b.name,
+                        ],
+                    }),
                 ),
-                e
-            ]
+                e,
+            ],
         });
     }
     let C = (e) => {
         var t, n, r;
-        let i = null != (r = null == (n = window) || null == (t = n.getSelection()) ? void 0 : t.toString()) ? r : '';
-        i.startsWith('/') && i.endsWith('\n') && O(e, b);
+        let i = null != (r = null == (n = window) || null == (t = n.getSelection()) ? void 0 : t.toString()) ? r : "";
+        i.startsWith("/") && i.endsWith("\n") && O(e, b);
     };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: v.container,
         onCopy: C,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: v.tooltip,
                 ref: I,
-                children: h
+                children: h,
             }),
-            (0, r.jsx)('div', { className: v.tooltipPointer })
-        ]
+            (0, r.jsx)("div", { className: v.tooltipPointer }),
+        ],
     });
 }
 let D = i.memo(w);

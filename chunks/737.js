@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685), n(539854));
+n.d(t, { Z: () => g }), n(388685), n(539854);
 var r = n(442837),
     i = n(963374),
     l = n(735020),
@@ -14,7 +14,7 @@ let f = [];
 function g(e) {
     let { searchContext: t } = e,
         n = (0, s.p)(),
-        g = a.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
+        g = a.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
         m = (0, r.e7)(
             [h.Z, d.Z, l.Z],
             () => {
@@ -23,7 +23,7 @@ function g(e) {
                     a = h.Z.getSearchResultsQuery(r),
                     s = d.Z.getMessages(r);
                 if (null == a || null == s || 0 === s.length) return f;
-                let u = (0, i.nC)(null != (e = a.content) ? e : ''),
+                let u = (0, i.nC)(null != (e = a.content) ? e : ""),
                     m = [];
                 return (
                     s.forEach((e) => {
@@ -35,20 +35,20 @@ function g(e) {
                                     null != r &&
                                         (e = e.merge({
                                             attachments: r.attachments,
-                                            embeds: r.embeds
+                                            embeds: r.embeds,
                                         })),
                                     e
                                 );
                             })(t, [l.Z])).isSearchHit
                                 ? t.set(
-                                      'customRenderedContent',
+                                      "customRenderedContent",
                                       (0, o.ZP)(t, {
                                           postProcessor: u,
                                           allowHeading: !0,
                                           allowList: !0,
                                           allowGameMentions: g,
-                                          shouldFilterKeywords: n
-                                      })
+                                          shouldFilterKeywords: n,
+                                      }),
                                   )
                                 : t;
                         m.push([r]);
@@ -57,7 +57,7 @@ function g(e) {
                 );
             },
             [g, t, n],
-            r.pF
+            r.pF,
         );
     return (0, r.e7)(
         [u.Z],
@@ -69,14 +69,14 @@ function g(e) {
                     n.filter((n) => {
                         let r = u.Z.isBlockedForMessage(n),
                             i = u.Z.isIgnoredForMessage(n);
-                        return (r && n.isSearchHit ? e++ : i && n.isSearchHit && t++, (!r && !i) || n.isSearchHit);
-                    })
+                        return r && n.isSearchHit ? e++ : i && n.isSearchHit && t++, (!r && !i) || n.isSearchHit;
+                    }),
                 ),
                 blockCount: e,
-                ignoreCount: t
+                ignoreCount: t,
             };
         },
         [m],
-        r.pF
+        r.pF,
     );
 }

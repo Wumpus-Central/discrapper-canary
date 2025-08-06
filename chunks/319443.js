@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => z }), n(388685), n(781311));
+n.r(t), n.d(t, { default: () => z }), n(388685), n(781311);
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -43,39 +43,39 @@ function B(e) {
         p = a.useCallback(() => {
             u(n);
         }, [n]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: G.detailHeaderContainer,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: G.detailHeaderSection,
                 children: (0, r.jsx)(m.Cm, {
                     icon: c.j9r,
-                    onClick: i
-                })
+                    onClick: i,
+                }),
             }),
             (0, r.jsx)(c.X6q, {
-                variant: 'heading-lg/semibold',
-                color: 'header-primary',
+                variant: "heading-lg/semibold",
+                color: "header-primary",
                 className: G.detailHeader,
                 lineClamp: 1,
-                children: null == s ? void 0 : s.name
+                children: null == s ? void 0 : s.name,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: l()(G.detailHeaderSection, G.detailHeaderButtonsContainer, {
                     [G.visible]: !n,
                     [G.hide]: n && !d,
-                    [G.hidden]: n && d
+                    [G.hidden]: n && d,
                 }),
                 onTransitionEnd: p,
                 children:
                     null != s
                         ? (0, r.jsx)(R.Z, {
                               application: s,
-                              size: 'sm'
+                              size: "sm",
                           })
-                        : null
-            })
-        ]
+                        : null,
+            }),
+        ],
     });
 }
 function U() {
@@ -90,33 +90,33 @@ function U() {
         className: G.nagbar,
         children: [
             (0, r.jsx)(c.gw7, {
-                size: 'custom',
-                color: 'white',
-                className: G.logo
+                size: "custom",
+                color: "white",
+                className: G.logo,
             }),
             (0, r.jsx)(c.Text, {
-                tag: 'span',
-                color: 'always-white',
-                variant: 'text-md/normal',
-                children: M.intl.string(M.t.Ol3MIi)
+                tag: "span",
+                color: "always-white",
+                variant: "text-md/normal",
+                children: M.intl.string(M.t.Ol3MIi),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: G.nagbarActionContainer,
                 children: [
                     (0, r.jsx)(c.NoS, {
                         onClick: e,
                         noticeType: k.kVF.LOGIN,
-                        children: M.intl.string(M.t['825cFx'])
+                        children: M.intl.string(M.t["825cFx"]),
                     }),
                     (0, r.jsx)(c.NoS, {
                         onClick: t,
                         noticeType: k.kVF.REGISTER,
                         minor: !0,
-                        children: M.intl.string(M.t.HAkXzs)
-                    })
-                ]
-            })
-        ]
+                        children: M.intl.string(M.t.HAkXzs),
+                    }),
+                ],
+            }),
+        ],
     });
 }
 let z = function () {
@@ -133,23 +133,23 @@ let z = function () {
         q = a.useMemo(() => K.find((e) => e.id === Number(W)), [K, W]),
         { tabs: Q, selectedTab: J, onSelectTab: $ } = (0, E.i)(null == F ? void 0 : F.toString()),
         [ee, et] = a.useState(!0),
-        en = N.z8.useField('trackedOpenedFromExternalEntrypoint'),
-        er = N.z8.useField('sessionId'),
+        en = N.z8.useField("trackedOpenedFromExternalEntrypoint"),
+        er = N.z8.useField("sessionId"),
         ea = (0, o.e7)([x.default], () => x.default.getCurrentUser());
-    (a.useEffect(() => {
+    a.useEffect(() => {
         if (!en && null == er) {
             let e = (0, f.PM)();
-            (v.default.track(k.rMx.APP_DIRECTORY_OPENED, {
+            v.default.track(k.rMx.APP_DIRECTORY_OPENED, {
                 source: N.xF.EXTERNAL,
                 session_id: e,
-                user_id: null == ea ? void 0 : ea.id
+                user_id: null == ea ? void 0 : ea.id,
             }),
                 N.z8.setState({
                     trackedOpenedFromExternalEntrypoint: !0,
                     sessionId: e,
                     entrypoint: { name: N.xF.EXTERNAL },
-                    guildId: null
-                }));
+                    guildId: null,
+                });
         }
     }, [er, en, null == ea ? void 0 : ea.id]),
         a.useEffect(() => {
@@ -158,27 +158,32 @@ let z = function () {
         a.useEffect(() => {
             z && C.g5();
         }, [z]),
-        a.useEffect(() => N.aQ.setState({ lastItem: R }), [R]));
-    let { enabled: ei } = d.c.useExperiment({ location: 'GlobalDiscoveryAppsRoot' }, { autoTrackExposure: !0 }),
+        a.useEffect(() => N.aQ.setState({ lastItem: R }), [R]);
+    let { enabled: ei } = d.c.useExperiment({ location: "GlobalDiscoveryAppsRoot" }, { autoTrackExposure: !0 }),
         el = null != V,
         es = (null == R ? void 0 : R.type) === N.m_.SEARCH,
-        { searchQuery: eo, onSearchTextChange: ec, onClearSearch: ed, onSearchSubmit: eu } = (0, P.M)({ initialQuery: null != Y ? Y : '' }),
-        ep = j.Z.useField('searchBarState'),
+        {
+            searchQuery: eo,
+            onSearchTextChange: ec,
+            onClearSearch: ed,
+            onSearchSubmit: eu,
+        } = (0, P.M)({ initialQuery: null != Y ? Y : "" }),
+        ep = j.Z.useField("searchBarState"),
         {
             onTabsAvailableWidthChange: em,
             onCollapsedSearchBarClick: eh,
-            onSearchBarBlur: eg
+            onSearchBarBlur: eg,
         } = (0, p.U)({
             isSearchBarVisible: !0,
-            isSearchBarEmpty: '' === eo.trim(),
+            isSearchBarEmpty: "" === eo.trim(),
             searchBarState: ep,
-            setSearchBarState: (e) => j.Z.setState({ searchBarState: e })
+            setSearchBarState: (e) => j.Z.setState({ searchBarState: e }),
         }),
         ef = a.useCallback(
             (e) => {
-                ($(e), es && ed(), y());
+                $(e), es && ed(), y();
             },
-            [es, ed, $, y]
+            [es, ed, $, y],
         ),
         e_ = a.useCallback((e) => (0, T.ph)({ applicationId: e }), []),
         eb = el || es,
@@ -190,27 +195,27 @@ let z = function () {
             t > 0 &&
                 (0, S.zZ)(k.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
                     scroll_visible_percentile: (t + n) / r,
-                    current_page: a
+                    current_page: a,
                 });
         }, 200),
         eC = a.useCallback(
             (e, t) => {
-                (n(e),
+                n(e),
                     ev({
                         scrollTop: e.currentTarget.scrollTop,
                         offsetHeight: e.currentTarget.offsetHeight,
                         scrollHeight: e.currentTarget.scrollHeight,
-                        location: t
-                    }));
+                        location: t,
+                    });
             },
-            [ev, n]
+            [ev, n],
         ),
         ej = ei ? c.iWm : c.jje;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l()(G.outerContainer, { [G.loggedOutContainer]: t }),
         children: [
             t ? (0, r.jsx)(U, {}) : null,
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: G.innerContainer,
                 children: [
                     (0, r.jsxs)(m.ZP, {
@@ -221,42 +226,50 @@ let z = function () {
                                 ? (0, r.jsx)(B, {
                                       applicationId: V,
                                       hideDetailHeaderButtons: ee,
-                                      onClickBack: ex
+                                      onClickBack: ex,
                                   })
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           es
                                               ? (0, r.jsx)(m.Cm, {
                                                     icon: c.j9r,
-                                                    onClick: ex
+                                                    onClick: ex,
                                                 })
                                               : (0, r.jsx)(m.aV, { icon: ej }),
                                           es
                                               ? (0, r.jsx)(c.X6q, {
-                                                    variant: 'heading-lg/semibold',
-                                                    color: 'header-primary',
+                                                    variant: "heading-lg/semibold",
+                                                    color: "header-primary",
                                                     className: G.searchHeader,
-                                                    children: null != Y && '' !== Y ? M.intl.formatToPlainString(M.t.zHdzqa, { query: Y }) : M.intl.formatToPlainString(M.t.Qhj5Bg, { categoryName: null != (e = null == q ? void 0 : q.name) ? e : M.intl.string(M.t.E407b2) })
+                                                    children:
+                                                        null != Y && "" !== Y
+                                                            ? M.intl.formatToPlainString(M.t.zHdzqa, { query: Y })
+                                                            : M.intl.formatToPlainString(M.t.Qhj5Bg, {
+                                                                  categoryName:
+                                                                      null != (e = null == q ? void 0 : q.name)
+                                                                          ? e
+                                                                          : M.intl.string(M.t.E407b2),
+                                                              }),
                                                 })
                                               : (0, r.jsx)(h.Z, {
                                                     tabs: Q,
                                                     selectedTab: J,
                                                     onTabSelect: ef,
-                                                    onAvailableWidthChange: em
+                                                    onAvailableWidthChange: em,
                                                 }),
                                           (0, r.jsx)(g.Z, {
                                               query: eo,
-                                              placeholder: M.intl.string(M.t['5h0QOD']),
+                                              placeholder: M.intl.string(M.t["5h0QOD"]),
                                               onTextChange: ec,
                                               onClear: ed,
                                               onSubmit: eu,
                                               onCollapsedClick: eh,
                                               state: ep,
-                                              onBlur: eg
-                                          })
-                                      ]
-                                  })
-                        ]
+                                              onBlur: eg,
+                                          }),
+                                      ],
+                                  }),
+                        ],
                     }),
                     el
                         ? (0, r.jsx)(L.Z, {
@@ -264,25 +277,25 @@ let z = function () {
                               onSelectApplication: e_,
                               applicationId: V,
                               initialTab: H,
-                              onButtonsVisibilityChange: et
+                              onButtonsVisibilityChange: et,
                           })
                         : es
                           ? (0, r.jsx)(w.Z, {
                                 onSelectApplication: e_,
-                                onScroll: (e) => eC(e, N.m_.SEARCH)
+                                onScroll: (e) => eC(e, N.m_.SEARCH),
                             })
                           : J === D.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
                             ? (0, r.jsx)(Z.Z, {
                                   onScroll: (e) => eC(e, N.m_.HOME),
-                                  onSelectApplication: e_
+                                  onSelectApplication: e_,
                               })
                             : (0, r.jsx)(A.Z, {
                                   tabId: Number(J),
                                   onScroll: (e) => eC(e, N.m_.CATEGORY),
-                                  onSelectApplication: e_
-                              })
-                ]
-            })
-        ]
+                                  onSelectApplication: e_,
+                              }),
+                ],
+            }),
+        ],
     });
 };

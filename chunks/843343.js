@@ -15,12 +15,12 @@ var i = n(91192),
 function g() {
     var e, t;
     let n = (0, l.e7)([a.Z, c.Z], () => a.Z.unavailableGuilds.filter((e) => null == c.Z.getGuild(e)).length),
-        g = (0, i.Ie)('unavailable-guilds-button');
+        g = (0, i.Ie)("unavailable-guilds-button");
     return n <= 0
         ? null
         : (0, r.jsx)(u.H, {
               children: (0, r.jsx)(d.Z, {
-                  text: p.intl.format(p.t['TnH05+'], { count: n }),
+                  text: p.intl.format(p.t["TnH05+"], { count: n }),
                   color: o.ua7.Colors.RED,
                   children: (0, r.jsx)(
                       o.eee,
@@ -28,41 +28,41 @@ function g() {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
                                   r = Object.keys(n);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (r = r.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   r.forEach(function (t) {
                                       var r;
-                                      ((r = n[t]),
+                                      (r = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: r,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = r));
-                                  }));
+                                              : (e[t] = r);
+                                  });
                           }
                           return e;
                       })(
                           {
                               href: (0, s.Z)(h.RK.TWITTER),
-                              target: '_blank',
+                              target: "_blank",
                               className: f.guildsError,
-                              'aria-label': p.intl.formatToPlainString(p.t['MEpX+/'], { count: n })
+                              "aria-label": p.intl.formatToPlainString(p.t["MEpX+/"], { count: n }),
                           },
-                          g
+                          g,
                       )),
                       (t = t =
                           {
                               children: (0, r.jsx)(o.Mgn, {
-                                  color: 'currentColor',
-                                  'aria-hidden': !0
-                              })
+                                  color: "currentColor",
+                                  "aria-hidden": !0,
+                              }),
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -76,8 +76,8 @@ function g() {
                             })(Object(t)).forEach(function (n) {
                                 Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                             }),
-                      e)
-                  )
-              })
+                      e),
+                  ),
+              }),
           });
 }

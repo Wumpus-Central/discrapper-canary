@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -24,7 +24,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,24 +32,32 @@ function y(e, t, n) {
 }
 class v extends i.PureComponent {
     componentDidMount() {
-        (c.Y(_.Z5c.APPLICATION_LIBRARY), (0, h.T)(O.jE.LIBRARY), s.Z.wait(() => (0, u.o)()), (0, d.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding));
+        c.Y(_.Z5c.APPLICATION_LIBRARY),
+            (0, h.T)(O.jE.LIBRARY),
+            s.Z.wait(() => (0, u.o)()),
+            (0, d.N)(),
+            null != this._scrollToOnMount &&
+                null != this._scrollerRef.current &&
+                this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
     }
     renderToolbar() {
         return (0, r.jsx)(f.Z, {});
     }
     render() {
         let { includeUpdatesInScroller: e } = this.state,
-            t = (0, r.jsx)('div', {
+            t = (0, r.jsx)("div", {
                 children: (0, r.jsx)(p.Z, {
                     section: _.jXE.LIBRARY_INSTALL_MODULE,
-                    children: (0, r.jsx)(b.Z, { onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange })
-                })
+                    children: (0, r.jsx)(b.Z, {
+                        onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange,
+                    }),
+                }),
             });
         return (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(g.Z, {
                     currentRoute: _.Z5c.APPLICATION_LIBRARY,
-                    renderToolbar: this.renderToolbar
+                    renderToolbar: this.renderToolbar,
                 }),
                 e ? null : t,
                 (0, r.jsxs)(o.yWw, {
@@ -61,33 +69,33 @@ class v extends i.PureComponent {
                             section: _.jXE.LIBRARY_APPLICATION_LIST,
                             children: (0, r.jsx)(m.Z, {
                                 stickyHeader: !e,
-                                scrollToRow: this.scrollToRow
-                            })
-                        })
-                    ]
-                })
-            ]
+                                scrollToRow: this.scrollToRow,
+                            }),
+                        }),
+                    ],
+                }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            y(this, '_scrollerRef', i.createRef()),
-            y(this, '_scrollToOnMount', void 0),
-            y(this, '_scrollToPadding', 0),
-            y(this, 'state', { includeUpdatesInScroller: !1 }),
-            y(this, 'handleHeightTallerThanHalfViewportChange', (e) => {
+        super(...e),
+            y(this, "_scrollerRef", i.createRef()),
+            y(this, "_scrollToOnMount", void 0),
+            y(this, "_scrollToPadding", 0),
+            y(this, "state", { includeUpdatesInScroller: !1 }),
+            y(this, "handleHeightTallerThanHalfViewportChange", (e) => {
                 this.setState({ includeUpdatesInScroller: e });
             }),
-            y(this, 'scrollToRow', (e, t) => {
+            y(this, "scrollToRow", (e, t) => {
                 let n = this._scrollerRef.current;
                 null != n
                     ? (e.focus(),
                       n.scrollIntoViewRect({
                           start: t,
-                          end: t
+                          end: t,
                       }),
                       (this._scrollToOnMount = null))
                     : ((this._scrollToOnMount = e), (this._scrollToPadding = t));
-            }));
+            });
     }
 }

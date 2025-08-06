@@ -8,10 +8,10 @@ var r = n(220159),
     u = i.set;
 r(
     {
-        target: 'Map',
+        target: "Map",
         proto: !0,
         real: !0,
-        forced: !0
+        forced: !0,
     },
     {
         update: function (e, t) {
@@ -19,9 +19,9 @@ r(
                 r = arguments.length;
             o(t);
             var i = l(n, e);
-            if (!i && r < 3) throw new s('Updating absent value');
+            if (!i && r < 3) throw new s("Updating absent value");
             var d = i ? c(n, e) : o(r > 2 ? arguments[2] : void 0)(e, n);
-            return (u(n, e, t(d, e, n)), n);
-        }
-    }
+            return u(n, e, t(d, e, n)), n;
+        },
+    },
 );

@@ -1,21 +1,21 @@
 n.d(t, {
     Xo: () => a,
-    pB: () => s
+    pB: () => s,
 });
 var r = n(818083),
     i = n(517858);
 let o = (0, r.B)({
-    kind: 'user',
-    id: '2024-04_keyword_filter_experiment',
-    label: 'Replace registered keywords with asterisks',
+    kind: "user",
+    id: "2024-04_keyword_filter_experiment",
+    label: "Replace registered keywords with asterisks",
     defaultConfig: { enabled: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Enable Keyword Filter',
-            config: { enabled: !0 }
-        }
-    ]
+            label: "Enable Keyword Filter",
+            config: { enabled: !0 },
+        },
+    ],
 });
 function a(e) {
     let { location: t } = e,

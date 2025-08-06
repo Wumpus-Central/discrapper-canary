@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -26,15 +26,15 @@ function b() {
         C = i.useCallback(
             (e) => {
                 let t = _.find((e) => e.isDefault);
-                (a()(null != t, 'Missing default trial duartion option'), l(e ? t.value : null));
+                a()(null != t, "Missing default trial duartion option"), l(e ? t.value : null);
             },
-            [l, _]
+            [l, _],
         ),
         N = (0, d.mY)(),
         I = (0, o.Dt)(),
         E = (0, o.Dt)();
     return (0, r.jsxs)(h.Z, {
-        title: f.intl.string(f.t['6antoq']),
+        title: f.intl.string(f.t["6antoq"]),
         description: f.intl.string(f.t.urVijY),
         children: [
             (0, r.jsx)(s.j7V, {
@@ -42,7 +42,7 @@ function b() {
                 value: y,
                 disabled: N,
                 hideBorder: !0,
-                children: f.intl.string(f.t['+hTmdX'])
+                children: f.intl.string(f.t["+hTmdX"]),
             }),
             (0, r.jsxs)(s.hjN, {
                 title: f.intl.string(f.t.m1KuWV),
@@ -53,11 +53,11 @@ function b() {
                         type: s.R94.Types.DESCRIPTION,
                         className: x.formDescription,
                         disabled: !y || N,
-                        children: f.intl.string(f.t.NB9NLC)
+                        children: f.intl.string(f.t.NB9NLC),
                     }),
                     (0, r.jsx)(s.LZC, { size: 8 }),
                     (0, r.jsx)(s.q4e, {
-                        'aria-labelledby': I,
+                        "aria-labelledby": I,
                         options: _,
                         className: x.formInput,
                         placeholder: f.intl.string(f.t.WZG1BQ),
@@ -65,13 +65,13 @@ function b() {
                         onChange: l,
                         maxVisibleItems: 5,
                         isDisabled: !y || N,
-                        look: s.qQH.CUSTOM
-                    })
-                ]
+                        look: s.qQH.CUSTOM,
+                    }),
+                ],
             }),
             (0, r.jsx)(s.LZC, { size: 24 }),
             (0, r.jsxs)(s.hjN, {
-                title: f.intl.string(f.t['/JD9oa']),
+                title: f.intl.string(f.t["/JD9oa"]),
                 titleId: E,
                 disabled: !y || N,
                 children: [
@@ -79,20 +79,20 @@ function b() {
                         type: s.R94.Types.DESCRIPTION,
                         className: x.formDescription,
                         disabled: !y || N,
-                        children: f.intl.string(f.t.Cg5eBg)
+                        children: f.intl.string(f.t.Cg5eBg),
                     }),
                     (0, r.jsx)(s.q4e, {
-                        'aria-labelledby': E,
+                        "aria-labelledby": E,
                         options: O,
                         className: x.formInput,
                         value: b,
                         onChange: j,
                         maxVisibleItems: 5,
                         isDisabled: !y || N,
-                        look: s.qQH.CUSTOM
-                    })
-                ]
-            })
-        ]
+                        look: s.qQH.CUSTOM,
+                    }),
+                ],
+            }),
+        ],
     });
 }

@@ -2,22 +2,22 @@ n.d(t, { O: () => a });
 var r = n(818083),
     s = n(977156);
 let o = (0, r.B)({
-        id: '2024-03_quest_bar_progress_cta',
-        kind: 'user',
-        label: 'Quest Bar Progress CTA',
+        id: "2024-03_quest_bar_progress_cta",
+        kind: "user",
+        label: "Quest Bar Progress CTA",
         defaultConfig: { enabled: !1 },
         treatments: [
             {
                 id: 0,
-                label: 'Control',
-                config: { enabled: !1 }
+                label: "Control",
+                config: { enabled: !1 },
             },
             {
                 id: 1,
-                label: 'Quest Bar Progress CTA enabled',
-                config: { enabled: !0 }
-            }
-        ]
+                label: "Quest Bar Progress CTA enabled",
+                config: { enabled: !0 },
+            },
+        ],
     }),
     a = (e) => {
         let { location: t, autoTrackExposure: n = !1 } = e,

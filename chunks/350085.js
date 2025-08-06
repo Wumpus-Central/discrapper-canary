@@ -13,9 +13,9 @@ let d = {
         handler(e) {
             let {
                 args: { pid: t },
-                socket: n
+                socket: n,
             } = e;
-            if ('number' != typeof t || t < 10) throw new s.Z({ errorCode: u.lTL.INVALID_EVENT }, 'Invalid pid');
+            if ("number" != typeof t || t < 10) throw new s.Z({ errorCode: u.lTL.INVALID_EVENT }, "Invalid pid");
             return (e) => {
                 let { prevState: r, dispatch: s } = e,
                     c = a.default.enabled,
@@ -23,14 +23,14 @@ let d = {
                     d = n.application.id;
                 if (null != d) {
                     let e = l.Z.getActiveLibraryApplication(d);
-                    (null != e && (c = c && e.isOverlayEnabled()), (u = o.default.isLocked(t)));
+                    null != e && (c = c && e.isOverlayEnabled()), (u = o.default.isLocked(t));
                 }
                 let p = {
                     enabled: c,
-                    locked: u
+                    locked: u,
                 };
-                return (i().isEqual(p, r) || s(p), p);
+                return i().isEqual(p, r) || s(p), p;
             };
-        }
-    }
+        },
+    },
 };

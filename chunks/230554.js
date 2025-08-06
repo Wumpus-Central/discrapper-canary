@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685), n(35282), n(704826));
+n.d(t, { Z: () => b }), n(388685), n(35282), n(704826);
 var r = n(73800),
     i = n(512722),
     o = n.n(i),
@@ -15,7 +15,7 @@ var r = n(73800),
 let m = (e, t, n) => ({
     getSlateEditor: () => e,
     submit(e) {
-        (e.preventDefault(), n());
+        e.preventDefault(), n();
     },
     focus() {
         f.bN.focus(e);
@@ -28,20 +28,20 @@ let m = (e, t, n) => ({
         if (null == t || !f.Ew.isValid(e, t) || f.M8.isExpanded(t) || (0, _.L6)(e))
             return {
                 word: null,
-                isAtStart: !1
+                isAtStart: !1,
             };
         let [n, r] = f.bN.node(e, f.C0.parent(t.anchor.path)),
             [i, o] = f.bN.node(e, t.anchor.path),
             a = t.anchor.offset;
         if (!f.C0.hasPrevious(o) && f.LC.isText(i)) {
             let e = i.text.substring(0, a);
-            if (f.aj.isType(n, 'applicationCommand') && a < n.command.displayName.length + 2)
+            if (f.aj.isType(n, "applicationCommand") && a < n.command.displayName.length + 2)
                 return {
                     word: e,
-                    isAtStart: !0
+                    isAtStart: !0,
                 };
         }
-        let s = '',
+        let s = "",
             l = !1;
         for (;;) {
             if (--a < 0) {
@@ -58,12 +58,12 @@ let m = (e, t, n) => ({
         }
         return {
             word: s,
-            isAtStart: l && f.C0.isFirstEditorBlock(r)
+            isAtStart: l && f.C0.isFirstEditorBlock(r),
         };
     },
     getFirstText() {
         var t, n;
-        return null != (n = null == (t = f.bN.getFirstText(e)) ? void 0 : t.text) ? n : '';
+        return null != (n = null == (t = f.bN.getFirstText(e)) ? void 0 : t.text) ? n : "";
     },
     getCurrentCommandOption() {
         let t = c.HZ(e);
@@ -93,7 +93,7 @@ let m = (e, t, n) => ({
                     let r = f.q.markdown(n[0], t.guild_id);
                     (0, p.Gg)(e, o, t.id, r) && (o = f.q.updateElement(e, o));
                 }
-                (c.xi(e, t.guild_id, t.id, f.q.updateElement(e, o), !1), d.Q.selectNextCommandOption(e));
+                c.xi(e, t.guild_id, t.id, f.q.updateElement(e, o), !1), d.Q.selectNextCommandOption(e);
             }
         });
     },
@@ -103,64 +103,74 @@ let m = (e, t, n) => ({
         u.T.withSingleEntry(e, () => {
             let o = c.HZ(e),
                 a = null != o && g(t, o[0]);
-            if (a) (d.Q.removeInlineChildren(e, o), (i = !1));
+            if (a) d.Q.removeInlineChildren(e, o), (i = !1);
             else {
                 let { word: t } = this.getCurrentWord();
                 null != t &&
                     t.length > 0 &&
                     d.Q.delete(e, {
                         distance: t.length,
-                        unit: 'character',
-                        reverse: !0
+                        unit: "character",
+                        reverse: !0,
                     });
             }
-            (E(e, n, r, i), a && d.Q.selectNextCommandOption(e));
+            E(e, n, r, i), a && d.Q.selectNextCommandOption(e);
         });
     },
     insertInlineAutocompleteInput(t) {
         u.T.withSingleEntry(e, () => {
             let { word: n } = this.getCurrentWord();
-            (null != n &&
+            null != n &&
                 n.length > 0 &&
                 d.Q.delete(e, {
                     distance: n.length,
-                    unit: 'character',
-                    reverse: !0
+                    unit: "character",
+                    reverse: !0,
                 }),
                 d.Q.insertNodes(e, [
                     {
                         type: t,
-                        children: [{ text: '' }]
-                    }
-                ]));
+                        children: [{ text: "" }],
+                    },
+                ]);
         });
     },
     replaceInlineAutocompleteInput(t, n, r) {
         u.T.withSingleEntry(e, () => {
             let i = f.bN.getSelectedParentOfType(e, [t]);
-            (o()(null != i, 'Cannot replace inline input of type '.concat(t, ' when none is selected')), d.Q.removeNodes(e, { at: i[1] }), E(e, n, r, !0));
+            o()(null != i, "Cannot replace inline input of type ".concat(t, " when none is selected")),
+                d.Q.removeNodes(e, { at: i[1] }),
+                E(e, n, r, !0);
         });
     },
     insertEmoji(t) {
         let { emoji: n, addSpace: r = !1 } = t;
         u.T.withSingleEntry(e, () => {
             var t, i;
-            let o = n.animated ? 'a' : '',
-                a = null != (i = null != (t = n.originalName) ? t : n.name) ? i : '';
-            E(e, ':'.concat(n.name, ':'), null != n.id ? '<'.concat(o, ':').concat(a.replace(/:/g, ''), ':').concat(n.id, '>') : null, r);
+            let o = n.animated ? "a" : "",
+                a = null != (i = null != (t = n.originalName) ? t : n.name) ? i : "";
+            E(
+                e,
+                ":".concat(n.name, ":"),
+                null != n.id ? "<".concat(o, ":").concat(a.replace(/:/g, ""), ":").concat(n.id, ">") : null,
+                r,
+            );
         });
-    }
+    },
 });
 function g(e, t) {
     var n;
     let r = l.Z.getActiveCommand(e.id),
         i = null == r || null == (n = r.options) ? void 0 : n.find((e) => e.name === t.optionName);
-    return null != i && (i.type !== s.jw.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete));
+    return (
+        null != i &&
+        (i.type !== s.jw.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete))
+    );
 }
 function E(e, t, n, r) {
     let i = f.bN.areStylesDisabled(e) || null == n ? t : n;
     u.T.withSingleEntry(e, () => {
-        d.Q.insertText(e, r ? i + ' ' : i);
+        d.Q.insertText(e, r ? i + " " : i);
     });
 }
 function b(e, t, n, i) {

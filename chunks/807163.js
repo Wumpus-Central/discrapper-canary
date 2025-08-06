@@ -1,10 +1,10 @@
-(r.d(s, {
+r.d(s, {
     Z: () => ej,
-    g: () => ef
+    g: () => ef,
 }),
     r(953529),
     r(388685),
-    r(539854));
+    r(539854);
 var t = r(255367),
     n = r(73800),
     a = r(120356),
@@ -76,7 +76,7 @@ let er = U.ZP.getEnableHardwareAcceleration() ? x.Xo$ : x.qEK,
         uploadsMessagesItemVisual: Q,
         uploadsMessagesItemVisualV2: X,
         PL: $,
-        TR: ee
+        TR: ee,
     },
     en = {
         boostItemVisual: B,
@@ -85,7 +85,7 @@ let er = U.ZP.getEnableHardwareAcceleration() ? x.Xo$ : x.qEK,
         uploadsMessagesItemVisual: W,
         uploadsMessagesItemVisualV2: Y,
         PL: $,
-        TR: ee
+        TR: ee,
     };
 function ea() {
     let e = (0, C.ZP)();
@@ -94,15 +94,15 @@ function ea() {
 function ei(e) {
     let { description: s, onLearnMore: r, renderVisual: n } = e,
         a = ex();
-    return (0, t.jsxs)('div', {
+    return (0, t.jsxs)("div", {
         className: i()(K.whatYouLoseItem, { [K.premiumRebrand]: a }),
         children: [
-            (0, t.jsxs)('div', {
+            (0, t.jsxs)("div", {
                 className: i()(K.whatYouLoseItemLeftColumn, { [K.premiumRebrand]: a }),
                 children: [
                     (0, t.jsx)(x.Text, {
-                        variant: 'text-md/normal',
-                        children: s
+                        variant: "text-md/normal",
+                        children: s,
                     }),
                     (0, t.jsx)(p.zx, {
                         look: p.zx.Looks.LINK,
@@ -110,15 +110,15 @@ function ei(e) {
                         size: p.zx.Sizes.NONE,
                         className: K.whatYouLoseItemLearnMore,
                         onClick: r,
-                        children: D.intl.string(D.t.hvVgAQ)
-                    })
-                ]
+                        children: D.intl.string(D.t.hvVgAQ),
+                    }),
+                ],
             }),
-            (0, t.jsx)('div', {
+            (0, t.jsx)("div", {
                 className: i()(K.whatYouLoseItemRightColumn, { [K.premiumRebrand]: a }),
-                children: n()
-            })
-        ]
+                children: n(),
+            }),
+        ],
     });
 }
 function eo(e) {
@@ -127,9 +127,9 @@ function eo(e) {
         n = es(
             {},
             (function (e) {
-                if (null == e) throw TypeError('Cannot destructure ' + e);
+                if (null == e) throw TypeError("Cannot destructure " + e);
                 return e;
-            })(e)
+            })(e),
         );
     let { theme: a } = (0, M.z)(),
         i = (0, x.dQu)(x.TVs.colors.INTERACTIVE_ACTIVE, a).hex();
@@ -139,27 +139,27 @@ function eo(e) {
             for (var s = 1; s < arguments.length; s++) {
                 var r = null != arguments[s] ? arguments[s] : {},
                     t = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (t = t.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
+                        }),
                     )),
                     t.forEach(function (s) {
                         var t;
-                        ((t = r[s]),
+                        (t = r[s]),
                             s in e
                                 ? Object.defineProperty(e, s, {
                                       value: t,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[s] = t));
-                    }));
+                                : (e[s] = t);
+                    });
             }
             return e;
-        })({ size: 'md' }, n)),
+        })({ size: "md" }, n)),
         (r = r = { color: i }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(r))
@@ -173,7 +173,7 @@ function eo(e) {
               })(Object(r)).forEach(function (e) {
                   Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(r, e));
               }),
-        s)
+        s),
     );
 }
 function el(e) {
@@ -200,63 +200,67 @@ function el(e) {
                               avatarOffsetY: 2,
                               bannerWidth: 172,
                               bannerHeight: 60,
-                              themePadding: 4
+                              themePadding: 4,
                           }),
                           (0, t.jsx)(er, {
                               className: K.profileAvatar,
                               src: r.getAvatarURL(void 0, (0, x.pxk)(x.EFr.SIZE_56), !o),
                               size: x.EFr.SIZE_56,
-                              'aria-label': r.username
+                              "aria-label": r.username,
                           }),
-                          (0, t.jsxs)('div', {
+                          (0, t.jsxs)("div", {
                               className: K.profileUserInfo,
                               children: [
                                   (0, t.jsx)(y.Z, {
                                       className: K.profileNameTag,
                                       usernameClass: K.profileNameTagUsername,
-                                      name: r.toString()
+                                      name: r.toString(),
                                   }),
-                                  (0, t.jsx)(eo, { className: K.profilePremiumIcon })
-                              ]
-                          })
-                      ]
+                                  (0, t.jsx)(eo, { className: K.profilePremiumIcon }),
+                              ],
+                          }),
+                      ],
                   })
-                : (0, t.jsxs)('div', {
+                : (0, t.jsxs)("div", {
                       className: K.profileCardTier1,
                       children: [
                           (0, t.jsx)(er, {
                               className: K.profileAvatarTier1,
                               src: r.getAvatarURL(void 0, (0, x.pxk)(x.EFr.SIZE_56), !o),
                               size: x.EFr.SIZE_56,
-                              'aria-label': r.username
+                              "aria-label": r.username,
                           }),
-                          (0, t.jsxs)('div', {
+                          (0, t.jsxs)("div", {
                               className: K.profileUserInfoTier1,
                               children: [
                                   (0, t.jsx)(y.Z, {
                                       className: K.profileNameTag,
                                       usernameClass: K.profileNameTagUsername,
-                                      name: r.toString()
+                                      name: r.toString(),
                                   }),
                                   (0, t.jsx)(x.SrA, {
-                                      size: 'md',
-                                      color: 'currentColor',
-                                      className: K.profilePremiumIcon
-                                  })
-                              ]
-                          })
-                      ]
+                                      size: "md",
+                                      color: "currentColor",
+                                      className: K.profilePremiumIcon,
+                                  }),
+                              ],
+                          }),
+                      ],
                   })),
         (0, t.jsx)(
             ei,
             {
-                description: l ? D.intl.format(D.t.xCaYwM, {}) : D.intl.format(D.t['gpqr+v'], {}),
+                description: l ? D.intl.format(D.t.xCaYwM, {}) : D.intl.format(D.t["gpqr+v"], {}),
                 onLearnMore: () => {
-                    (a(), h.Z.open(V.oAB.PROFILE_CUSTOMIZATION), w.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'user_profile_customization' }));
+                    a(),
+                        h.Z.open(V.oAB.PROFILE_CUSTOMIZATION),
+                        w.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
+                            action: "user_profile_customization",
+                        });
                 },
-                renderVisual: () => s
+                renderVisual: () => s,
             },
-            'profile-item'
+            "profile-item",
         )
     );
 }
@@ -272,13 +276,14 @@ function ec(e) {
     return (0, t.jsx)(
         ei,
         {
-            description: o ? D.intl.format(D.t.couiKC, {}) : D.intl.format(D.t['0hUHi4'], {}),
+            description: o ? D.intl.format(D.t.couiKC, {}) : D.intl.format(D.t["0hUHi4"], {}),
             onLearnMore: () => {
-                (window.open(S.Z.getArticleURL(V.BhN.PREMIUM_DETAILS)), w.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'emojis_stickers' }));
+                window.open(S.Z.getArticleURL(V.BhN.PREMIUM_DETAILS)),
+                    w.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" });
             },
             renderVisual: () =>
                 (null != n && n.length > 0) || (!o && null != a && a.length > 0)
-                    ? (0, t.jsxs)('div', {
+                    ? (0, t.jsxs)("div", {
                           className: K.emojiStickersPersonalizedContainer,
                           children: [
                               n
@@ -288,17 +293,17 @@ function ec(e) {
                                           : R.ZP.getEmojiURL({
                                                 id: e.id,
                                                 animated: !r && e.animated,
-                                                size: 58
-                                            })
+                                                size: 58,
+                                            }),
                                   )
                                   .map((e) =>
                                       null != e
-                                          ? (0, t.jsx)('img', {
+                                          ? (0, t.jsx)("img", {
                                                 className: K.personalizedEmoji,
-                                                alt: '',
-                                                src: e
+                                                alt: "",
+                                                src: e,
                                             })
-                                          : null
+                                          : null,
                                   ),
                               o
                                   ? null
@@ -309,20 +314,20 @@ function ec(e) {
                                                 disableAnimation: r,
                                                 sticker: e,
                                                 size: 58,
-                                                withLoadingIndicator: !1
+                                                withLoadingIndicator: !1,
                                             },
-                                            e.id
-                                        )
-                                    )
-                          ]
+                                            e.id,
+                                        ),
+                                    ),
+                          ],
                       })
-                    : (0, t.jsx)('img', {
+                    : (0, t.jsx)("img", {
                           className: K.nonPersonalizedGraphic,
-                          alt: '',
-                          src: i
-                      })
+                          alt: "",
+                          src: i,
+                      }),
         },
-        'emoji-stickers-item'
+        "emoji-stickers-item",
     );
 }
 function eu(e) {
@@ -333,8 +338,8 @@ function eu(e) {
             let e = Z.Z.boostSlots,
                 s = new Map();
             u()(e)
-                .map('premiumGuildSubscription')
-                .map('guildId')
+                .map("premiumGuildSubscription")
+                .map("guildId")
                 .forEach((e) => {
                     if (null != A.Z.getGuild(e)) {
                         var r;
@@ -344,63 +349,68 @@ function eu(e) {
                 });
             let r = null,
                 t = 0;
-            return (s.size > 0 && ([r, t] = Array.from(s.entries()).reduce((e, s) => (s[1] > e[1] ? s : e))), [A.Z.getGuild(r), t]);
+            return (
+                s.size > 0 && ([r, t] = Array.from(s.entries()).reduce((e, s) => (s[1] > e[1] ? s : e))),
+                [A.Z.getGuild(r), t]
+            );
         }),
         c = null != o && l > 0,
         d = ea().boostItemVisual;
     return (0, t.jsx)(
         ei,
         {
-            description: s === z.p9.TIER_1 ? D.intl.format(D.t['K4Hv6+'], {}) : D.intl.format(D.t.wRxEDQ, {}),
+            description: s === z.p9.TIER_1 ? D.intl.format(D.t["K4Hv6+"], {}) : D.intl.format(D.t.wRxEDQ, {}),
             onLearnMore: () => {
-                (r(), h.Z.open(V.oAB.GUILD_BOOSTING), w.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'boosts' }));
+                r(),
+                    h.Z.open(V.oAB.GUILD_BOOSTING),
+                    w.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
             },
             renderVisual: () =>
                 c
-                    ? (0, t.jsx)('div', {
+                    ? (0, t.jsx)("div", {
                           className: K.boostCardContainer,
-                          children: (0, t.jsxs)('div', {
+                          children: (0, t.jsxs)("div", {
                               className: K.boostCard,
                               children: [
                                   (0, t.jsx)(T.Z, {
                                       guild: o,
                                       size: T.Z.Sizes.MEDIUM,
                                       animate: !a,
-                                      className: K.boostCardIcon
+                                      className: K.boostCardIcon,
                                   }),
-                                  (0, t.jsxs)('div', {
+                                  (0, t.jsxs)("div", {
                                       className: K.boostCardInfo,
                                       children: [
                                           (0, t.jsx)(x.Text, {
-                                              variant: 'text-md/normal',
+                                              variant: "text-md/normal",
                                               className: i()(K.textSingleLineEllipsis, K.boostCardTitle),
-                                              children: o.name
+                                              children: o.name,
                                           }),
-                                          (0, t.jsxs)('div', {
+                                          (0, t.jsxs)("div", {
                                               className: K.boostCardSubtitle,
                                               children: [
                                                   (0, t.jsx)(x.$Eu, {
                                                       color: x.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                                                      className: K.boostCardGem
+                                                      className: K.boostCardGem,
                                                   }),
                                                   (0, t.jsx)(x.Text, {
-                                                      variant: 'text-xs/normal',
+                                                      variant: "text-xs/normal",
                                                       className: i()(K.textSingleLineEllipsis, K.boostCardCount),
-                                                      children: D.intl.format(D.t['Ou/g/P'], { boostCount: l })
-                                                  })
-                                              ]
-                                          })
-                                      ]
-                                  })
-                              ]
-                          })
+                                                      children: D.intl.format(D.t["Ou/g/P"], { boostCount: l }),
+                                                  }),
+                                              ],
+                                          }),
+                                      ],
+                                  }),
+                              ],
+                          }),
                       })
-                    : (0, t.jsx)('img', {
-                          alt: '',
-                          src: d
-                      })
+                    : (0, t.jsx)("img", {
+                          alt: "",
+                          src: d,
+                      }),
         },
-        'boost-item'
+        "boost-item",
     );
 }
 let em = () => {
@@ -410,15 +420,16 @@ let em = () => {
         {
             description: D.intl.format(D.t.wK04T0, {}),
             onLearnMore: () => {
-                (window.open(S.Z.getArticleURL(V.BhN.STREAM_QUALITY_SETTINGS)), w.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'screen_share' }));
+                window.open(S.Z.getArticleURL(V.BhN.STREAM_QUALITY_SETTINGS)),
+                    w.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" });
             },
             renderVisual: () =>
-                (0, t.jsx)('img', {
-                    alt: '',
-                    src: e
-                })
+                (0, t.jsx)("img", {
+                    alt: "",
+                    src: e,
+                }),
         },
-        'screen-share-item'
+        "screen-share-item",
     );
 };
 function ed(e) {
@@ -429,15 +440,16 @@ function ed(e) {
         {
             description: s === z.p9.TIER_2 ? D.intl.format(D.t.GsOFRE, {}) : D.intl.format(D.t.wFWO6O, {}),
             onLearnMore: () => {
-                (window.open(S.Z.getArticleURL(V.BhN.PREMIUM_DETAILS)), w.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'msgs_uploads' }));
+                window.open(S.Z.getArticleURL(V.BhN.PREMIUM_DETAILS)),
+                    w.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
             },
             renderVisual: () =>
-                (0, t.jsx)('img', {
-                    alt: '',
-                    src: r
-                })
+                (0, t.jsx)("img", {
+                    alt: "",
+                    src: r,
+                }),
         },
-        'uploads-item'
+        "uploads-item",
     );
 }
 let ep = n.createContext({ isPremiumRebrand: !1 }),
@@ -456,27 +468,27 @@ function ef(e) {
                               (0, t.jsx)(el, {
                                   currentUser: s,
                                   premiumType: r,
-                                  onClose: a
+                                  onClose: a,
                               }),
                               (0, t.jsx)(em, {}),
                               (0, t.jsx)(eu, {
                                   premiumType: r,
-                                  onClose: a
-                              })
+                                  onClose: a,
+                              }),
                           )
                         : e.push(
                               (0, t.jsx)(el, {
                                   currentUser: s,
                                   premiumType: r,
-                                  onClose: a
+                                  onClose: a,
                               }),
                               (0, t.jsx)(ec, { premiumType: r }),
                               (0, t.jsx)(em, {}),
                               (0, t.jsx)(ed, { premiumType: r }),
                               (0, t.jsx)(eu, {
                                   premiumType: r,
-                                  onClose: a
-                              })
+                                  onClose: a,
+                              }),
                           );
                     break;
                 case z.p9.TIER_2:
@@ -485,47 +497,61 @@ function ef(e) {
                               (0, t.jsx)(el, {
                                   currentUser: s,
                                   premiumType: r,
-                                  onClose: a
+                                  onClose: a,
                               }),
                               (0, t.jsx)(eu, {
                                   premiumType: r,
-                                  onClose: a
+                                  onClose: a,
                               }),
-                              (0, t.jsx)(em, {})
+                              (0, t.jsx)(em, {}),
                           )
                         : e.push(
                               (0, t.jsx)(el, {
                                   currentUser: s,
                                   premiumType: r,
-                                  onClose: a
+                                  onClose: a,
                               }),
                               (0, t.jsx)(ec, { premiumType: r }),
                               (0, t.jsx)(eu, {
                                   premiumType: r,
-                                  onClose: a
+                                  onClose: a,
                               }),
                               (0, t.jsx)(em, {}),
-                              (0, t.jsx)(ed, { premiumType: r })
+                              (0, t.jsx)(ed, { premiumType: r }),
                           );
             }
             return e;
         }, [r, s, a, o]);
     return (0, t.jsx)(ep.Provider, {
         value: { isPremiumRebrand: l },
-        children: (0, t.jsx)('div', {
+        children: (0, t.jsx)("div", {
             className: i()(K.whatYouLoseItemContainer, {
                 [K.premiumRebrand]: l,
-                [K.noMargin]: l && c.length <= 2
+                [K.noMargin]: l && c.length <= 2,
             }),
-            children: c
-        })
+            children: c,
+        }),
     });
 }
 let ej = function (e) {
-    let { premiumType: s, titleText: r, subtitleText: a, footer: i, onClose: o, onDiscountClaim: c, onContinue: u, analyticsLocations: d, isLoading: p = !1, churnUserDiscountOffer: f = null, isDowngrade: j = !1, subtitleIcon: h, subtitleClassName: C } = e,
+    let {
+            premiumType: s,
+            titleText: r,
+            subtitleText: a,
+            footer: i,
+            onClose: o,
+            onDiscountClaim: c,
+            onContinue: u,
+            analyticsLocations: d,
+            isLoading: p = !1,
+            churnUserDiscountOffer: f = null,
+            isDowngrade: j = !1,
+            subtitleIcon: h,
+            subtitleClassName: C,
+        } = e,
         g = (0, m.e7)([P.default], () => {
             let e = P.default.getCurrentUser();
-            return (l()(null != e, 'ProfileItem: currentUser cannot be undefined'), e);
+            return l()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
         });
     n.useEffect(() => {
         (0, _.Z)(g.id, g.getAvatarURL(null, 80));
@@ -535,7 +561,7 @@ let ej = function (e) {
         I &&
             w.default.track(V.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
                 location_stack: d,
-                discount_id: null == f ? void 0 : f.discount_id
+                discount_id: null == f ? void 0 : f.discount_id,
             });
     }, [I, d, f]),
     p)
@@ -543,60 +569,60 @@ let ej = function (e) {
               children: [
                   (0, t.jsx)(F.Z, {
                       premiumType: s,
-                      onClose: o
+                      onClose: o,
                   }),
                   (0, t.jsx)(x.hzk, {
-                      'data-migration-pending': !0,
+                      "data-migration-pending": !0,
                       className: K.body,
-                      children: (0, t.jsx)(x.$jN, { className: K.spinner })
-                  })
-              ]
+                      children: (0, t.jsx)(x.$jN, { className: K.spinner }),
+                  }),
+              ],
           })
         : (0, t.jsxs)(t.Fragment, {
               children: [
                   (0, t.jsx)(F.Z, {
                       premiumType: s,
-                      onClose: o
+                      onClose: o,
                   }),
                   (0, t.jsxs)(x.hzk, {
-                      'data-migration-pending': !0,
+                      "data-migration-pending": !0,
                       className: K.body,
                       children: [
                           (0, t.jsx)(x.X6q, {
-                              variant: 'heading-xl/semibold',
-                              color: 'header-primary',
+                              variant: "heading-xl/semibold",
+                              color: "header-primary",
                               className: K.title,
-                              children: r
+                              children: r,
                           }),
-                          (0, t.jsxs)('div', {
+                          (0, t.jsxs)("div", {
                               className: C,
                               children: [
                                   h,
                                   (0, t.jsx)(x.Text, {
-                                      variant: 'text-md/normal',
-                                      children: a
-                                  })
-                              ]
+                                      variant: "text-md/normal",
+                                      children: a,
+                                  }),
+                              ],
                           }),
                           (0, t.jsx)(ef, {
                               currentUser: g,
                               premiumType: s,
                               onClose: o,
-                              isDowngrade: j
-                          })
-                      ]
+                              isDowngrade: j,
+                          }),
+                      ],
                   }),
                   !I &&
                       (0, t.jsx)(x.mzw, {
-                          'data-migration-pending': !0,
-                          children: i
+                          "data-migration-pending": !0,
+                          children: i,
                       }),
                   I &&
                       (0, t.jsx)(k.Z, {
                           churnUserDiscountOffer: f,
                           onDiscountClaim: c,
-                          onContinue: u
-                      })
-              ]
+                          onContinue: u,
+                      }),
+              ],
           });
 };

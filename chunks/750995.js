@@ -24,22 +24,22 @@ let m = (e) => {
 };
 class b extends o.Z {
     _initialize() {
-        a.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect);
+        a.Z.subscribe("CHANNEL_SELECT", this.handleChannelSelect);
     }
     _terminate() {
-        a.Z.unsubscribe('CHANNEL_SELECT', this.handleChannelSelect);
+        a.Z.unsubscribe("CHANNEL_SELECT", this.handleChannelSelect);
     }
     handleChannelSelect(e) {
         let { guildId: t } = e;
         if (null == t || !m(t)) return;
-        ((0, h.qz)(), (0, c.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL));
+        (0, h.qz)(), (0, c.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
         let a = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.L.DISMISS;
             (0, s.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
         };
         (0, l.ZDy)(
             async () => {
-                let { default: e } = await n.e('18417').then(n.bind(n, 740696));
+                let { default: e } = await n.e("18417").then(n.bind(n, 740696));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
@@ -48,34 +48,34 @@ class b extends o.Z {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, n)),
                         (l = l =
                             {
                                 onClose: (e) => {
-                                    (a(e), n.onClose());
+                                    a(e), n.onClose();
                                 },
                                 guildId: t,
-                                shouldUpsellCreation: !0
+                                shouldUpsellCreation: !0,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -89,14 +89,14 @@ class b extends o.Z {
                               })(Object(l)).forEach(function (e) {
                                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        i)
+                        i),
                     );
                 };
             },
             {
                 onCloseCallback: () => (0, s.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: g.L.DISMISS }),
-                onCloseRequest: f.VqG
-            }
+                onCloseRequest: f.VqG,
+            },
         );
     }
 }

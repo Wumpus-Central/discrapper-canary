@@ -1,55 +1,55 @@
 n.d(t, { X: () => r });
 let r = [
     {
-        label: 'Alberta',
-        value: 'AB'
+        label: "Alberta",
+        value: "AB",
     },
     {
-        label: 'British Columbia',
-        value: 'BC'
+        label: "British Columbia",
+        value: "BC",
     },
     {
-        label: 'Manitoba',
-        value: 'MB'
+        label: "Manitoba",
+        value: "MB",
     },
     {
-        label: 'New Brunswick',
-        value: 'NB'
+        label: "New Brunswick",
+        value: "NB",
     },
     {
-        label: 'Newfoundland and Labrador',
-        value: 'NL'
+        label: "Newfoundland and Labrador",
+        value: "NL",
     },
     {
-        label: 'Nova Scotia',
-        value: 'NS'
+        label: "Nova Scotia",
+        value: "NS",
     },
     {
-        label: 'Ontario',
-        value: 'ON'
+        label: "Ontario",
+        value: "ON",
     },
     {
-        label: 'Prince Edward Island',
-        value: 'PE'
+        label: "Prince Edward Island",
+        value: "PE",
     },
     {
-        label: 'Quebec',
-        value: 'QC'
+        label: "Quebec",
+        value: "QC",
     },
     {
-        label: 'Saskatchewan',
-        value: 'SK'
+        label: "Saskatchewan",
+        value: "SK",
     },
     {
-        label: 'Northwest Territories',
-        value: 'NT'
+        label: "Northwest Territories",
+        value: "NT",
     },
     {
-        label: 'Nunavut',
-        value: 'NU'
+        label: "Nunavut",
+        value: "NU",
     },
     {
-        label: 'Yukon',
-        value: 'YT'
-    }
+        label: "Yukon",
+        value: "YT",
+    },
 ];

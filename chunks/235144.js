@@ -14,32 +14,32 @@ function g() {
     let { analyticsLocations: e } = (0, o.ZP)(),
         t = (0, s.e7)([c.Z], () => c.Z.getActiveInputProfile()),
         { enabledInputProfiles: n } = (0, d.c)({
-            location: 'UserSettingsInputProfile',
-            autoTrackExposure: !1
+            location: "UserSettingsInputProfile",
+            autoTrackExposure: !1,
         }),
         g = r.useCallback(
             (t) => {
                 let { value: n } = t;
                 l.Z.setActiveInputProfile(n, { analyticsLocations: e });
             },
-            [e]
+            [e],
         ),
         h = [
             {
                 value: u._.VOICE_ISOLATION,
                 name: m.intl.string(m.t.cjPbpa),
-                desc: m.intl.string(m.t.CzhvnJ)
+                desc: m.intl.string(m.t.CzhvnJ),
             },
             {
                 value: u._.STUDIO,
                 name: m.intl.string(m.t.VZPR0d),
-                desc: m.intl.string(m.t.ZaJksb)
+                desc: m.intl.string(m.t.ZaJksb),
             },
             {
                 value: u._.CUSTOM,
-                name: m.intl.string(m.t['N/PQjo']),
-                desc: m.intl.string(m.t.SnBmub)
-            }
+                name: m.intl.string(m.t["N/PQjo"]),
+                desc: m.intl.string(m.t.SnBmub),
+            },
         ].filter((e) => {
             let { value: t } = e;
             return n.includes(t);
@@ -50,7 +50,7 @@ function g() {
         children: (0, i.jsx)(a.FXm, {
             onChange: g,
             options: h,
-            value: null != t ? t : u._.CUSTOM
-        })
+            value: null != t ? t : u._.CUSTOM,
+        }),
     });
 }

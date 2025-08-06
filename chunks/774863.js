@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var i,
     o = n(442837),
     a = n(570140),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,25 +69,27 @@ function E(e) {
             messageId: n,
             channelId: r,
             attachments: i,
-            reportSubmit: !1
+            reportSubmit: !1,
         },
         a = null != (t = g[r]) ? t : h;
-    ((g[r] = [...a, o]), (m[n] = o));
+    (g[r] = [...a, o]), (m[n] = o);
 }
 function b(e) {
     let { messageId: t, channelId: n } = e,
         r = g[n];
-    null != r && ((g[n] = r.map((e) => (e.messageId === t ? f(u({}, e), { reportSubmit: !0 }) : e))), (m[t] = f(u({}, m[t]), { reportSubmit: !0 })));
+    null != r &&
+        ((g[n] = r.map((e) => (e.messageId === t ? f(u({}, e), { reportSubmit: !0 }) : e))),
+        (m[t] = f(u({}, m[t]), { reportSubmit: !0 })));
 }
 function y() {
     v();
 }
 function O(e) {
     let { explicitContentScanVersion: t } = e;
-    ((r = t), v());
+    (r = t), v();
 }
 function v() {
-    ((m = {}), (g = {}));
+    (m = {}), (g = {});
 }
 class I extends (i = o.ZP.Store) {
     getFpMessageInfo(e) {
@@ -105,10 +107,10 @@ class I extends (i = o.ZP.Store) {
         return null != r ? r : _;
     }
 }
-c(I, 'displayName', 'FalsePositiveStore');
+c(I, "displayName", "FalsePositiveStore");
 let T = new I(a.Z, {
     LOGOUT: y,
     CONNECTION_OPEN: O,
     MESSAGE_EXPLICIT_CONTENT_FP_CREATE: E,
-    MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: b
+    MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: b,
 });

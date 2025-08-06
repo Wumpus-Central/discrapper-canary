@@ -1,1 +1,1 @@
-e.exports = { iframe: 'iframe__8c55d' };
+e.exports = { iframe: "iframe__8c55d" };

@@ -13,7 +13,21 @@ var i = n(442837),
     _ = n(200669);
 function p(e) {
     var t;
-    let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: b, pendingPronouns: y, pendingLegacyUsernameDisabled: O, pendingBadges: v, isTryItOutFlow: I, hideBioSection: T, shouldOpenBadgeTooltip: S } = e,
+    let {
+            user: n,
+            displayProfile: p,
+            guild: h,
+            pendingAvatar: m,
+            pendingNickname: g,
+            pendingGlobalName: E,
+            pendingBio: b,
+            pendingPronouns: y,
+            pendingLegacyUsernameDisabled: O,
+            pendingBadges: v,
+            isTryItOutFlow: I,
+            hideBioSection: T,
+            shouldOpenBadgeTooltip: S,
+        } = e,
         A = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
         N = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         C = null == p || null == (t = p.getPreviewBio(b)) ? void 0 : t.value,
@@ -22,16 +36,16 @@ function p(e) {
             pendingNickname: g,
             pendingGlobalName: E,
             user: n,
-            guildMember: A
+            guildMember: A,
         }),
         w = () => {
             if (null != A && null !== m && (null != A.avatar || null != m))
                 return (0, r.jsx)(l.Z, {
                     user: n,
-                    nickname: P
+                    nickname: P,
                 });
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: _.body,
         inert: !0,
         children: [
@@ -46,18 +60,18 @@ function p(e) {
                     themeType: f.lY.POPOUT,
                     pendingLegacyUsernameDisabled: O,
                     pendingBadges: v,
-                    shouldOpenBadgeTooltip: S
-                })
+                    shouldOpenBadgeTooltip: S,
+                }),
             }),
             !T &&
                 null != C &&
-                '' !== C &&
+                "" !== C &&
                 (0, r.jsx)(s.Z, {
                     user: n,
                     bio: C,
                     hidePersonalInformation: N,
-                    viewFullBioDisabled: !0
-                })
-        ]
+                    viewFullBioDisabled: !0,
+                }),
+        ],
     });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     $: () => _,
-    Q: () => f
+    Q: () => f,
 });
 var r = n(617735),
     i = n(230826),
@@ -10,7 +10,7 @@ var r = n(617735),
     l = n(979651),
     c = n(938475),
     u = n(981631);
-let d = 'DRAGGABLE_USER';
+let d = "DRAGGABLE_USER";
 function f(e) {
     return (0, r.G)(
         d,
@@ -27,13 +27,14 @@ function f(e) {
             drop(e, t) {
                 let { channel: n } = e,
                     r = l.Z.getVoiceStateForUser(t.getItem().user.id);
-                (null == r ? void 0 : r.channelId) !== n.id && o.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
-            }
+                (null == r ? void 0 : r.channelId) !== n.id &&
+                    o.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
+            },
         },
         (e, t) => ({
             connectUserDropTarget: e.dropTarget(),
-            isUserOver: t.isOver() && t.canDrop()
-        })
+            isUserOver: t.isOver() && t.canDrop(),
+        }),
     )(e);
 }
 function _(e) {
@@ -47,8 +48,8 @@ function _(e) {
             beginDrag(e) {
                 let { user: t } = e;
                 return { user: t };
-            }
+            },
         },
-        (e) => ({ connectUserDragSource: e.dragSource() })
+        (e) => ({ connectUserDragSource: e.dragSource() }),
     )(e);
 }

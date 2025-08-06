@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { openGuildProductLink: () => a }));
+r.r(t), r.d(t, { openGuildProductLink: () => a });
 var n = r(255367);
 r(73800);
 var u = r(481060),
@@ -9,9 +9,11 @@ var u = r(481060),
 function a(e, t) {
     var a;
     let d = i.Z.getGuild(e);
-    o.Z.getGuildProductFetchState(t) === o.M.FETCHED && (null == (a = o.Z.getGuildProduct(t)) ? void 0 : a.published) !== !0 && null != d
+    o.Z.getGuildProductFetchState(t) === o.M.FETCHED &&
+    (null == (a = o.Z.getGuildProduct(t)) ? void 0 : a.published) !== !0 &&
+    null != d
         ? (0, u.ZDy)(async () => {
-              let { default: e } = await r.e('29396').then(r.bind(r, 513239));
+              let { default: e } = await r.e("29396").then(r.bind(r, 513239));
               return (t) =>
                   (0, n.jsx)(
                       e,
@@ -19,27 +21,27 @@ function a(e, t) {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
                                   n = Object.keys(r);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (n = n.concat(
                                       Object.getOwnPropertySymbols(r).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   n.forEach(function (t) {
                                       var n;
-                                      ((n = r[t]),
+                                      (n = r[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: n,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = n));
-                                  }));
+                                              : (e[t] = n);
+                                  });
                           }
                           return e;
-                      })({}, t)
+                      })({}, t),
                   );
           })
         : (null == d ? void 0 : d.features.has(l.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE))

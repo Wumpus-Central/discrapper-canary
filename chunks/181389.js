@@ -1,17 +1,17 @@
-(n.d(t, {
+n.d(t, {
     Jl: () => l,
-    g9: () => c
+    g9: () => c,
 }),
     n(539854),
-    n(35282));
+    n(35282);
 var r = n(395041);
 n(349033);
 var i = n(607802),
     o = n(532428);
-(n(72006), n(981631));
+n(72006), n(981631);
 let a = {
     [o.Qe.FILTER]: r.w,
-    [o.Qe.ANSWER]: r.O
+    [o.Qe.ANSWER]: r.O,
 };
 function s(e, t, n, r) {
     t.findEntityRanges((t) => {
@@ -27,7 +27,7 @@ function l() {
             let r = e[n];
             t.push({
                 strategy: (e, t, r) => s(r, e, t, n),
-                component: a[r.componentType]
+                component: a[r.componentType],
             });
         }),
         t

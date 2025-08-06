@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(627050),
@@ -12,12 +12,23 @@ var r = n(255367),
     _ = n(981631),
     p = n(388032),
     h = n(875231);
-let m = i.lazy(() => Promise.all([n.e('87597'), n.e('85831')]).then(n.bind(n, 120314)));
+let m = i.lazy(() => Promise.all([n.e("87597"), n.e("85831")]).then(n.bind(n, 120314)));
 function g(e, t) {
-    let { hideSimpleEmbedContent: g, formatInline: E = !1, noStyleAndInteraction: b = !1, isInteracting: y = !1, allowHeading: O = !1, allowList: v = !1, allowLinks: I = !1, allowDevLinks: T = !1, previewLinkTarget: S = !1, viewingChannelId: A } = t,
+    let {
+            hideSimpleEmbedContent: g,
+            formatInline: E = !1,
+            noStyleAndInteraction: b = !1,
+            isInteracting: y = !1,
+            allowHeading: O = !1,
+            allowList: v = !1,
+            allowLinks: I = !1,
+            allowDevLinks: T = !1,
+            previewLinkTarget: S = !1,
+            viewingChannelId: A,
+        } = t,
         N = (0, a.p)(),
-        C = o.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        R = (0, f.o)({ location: 'useMessageRenderedContent' }),
+        C = o.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
+        R = (0, f.o)({ location: "useMessageRenderedContent" }),
         [P, w] = i.useState(!1),
         D = i.useCallback((e) => {
             e && w(!0);
@@ -31,7 +42,7 @@ function g(e, t) {
             if (e.isUnsupported)
                 return {
                     content: p.intl.string(p.t.sWi5ER),
-                    hasSpoilerEmbeds: !1
+                    hasSpoilerEmbeds: !1,
                 };
             if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(_.iLy.LOADING)) return (0, u.Z)(e);
             if (e.type === _.uaV.CHANGELOG) {
@@ -39,7 +50,7 @@ function g(e, t) {
                 return t(e, h, {
                     track: (e, t) => {
                         s.default.track(e, t);
-                    }
+                    },
                 });
             }
             return R.enabled
@@ -51,12 +62,12 @@ function g(e, t) {
                                   channelId: e.channel_id,
                                   viewingChannelId: A,
                                   guildId: (0, l.k)(e),
-                                  setHasSpoilerEmbeds: D
+                                  setHasSpoilerEmbeds: D,
                               },
-                              children: (0, r.jsx)(m, { content: e.content })
-                          })
+                              children: (0, r.jsx)(m, { content: e.content }),
+                          }),
                       }),
-                      hasSpoilerEmbeds: P
+                      hasSpoilerEmbeds: P,
                   }
                 : (0, c.ZP)(e, {
                       hideSimpleEmbedContent: g,
@@ -70,8 +81,29 @@ function g(e, t) {
                       previewLinkTarget: S,
                       shouldFilterKeywords: N,
                       viewingChannelId: A,
-                      allowGameMentions: C
+                      allowGameMentions: C,
                   });
-        }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, g, E, b, y, O, v, I, S, N, T, A, R.enabled, C, P])
+        }, [
+            e.content,
+            e.customRenderedContent,
+            e.embeds,
+            e.interaction,
+            e.state,
+            e.type,
+            g,
+            E,
+            b,
+            y,
+            O,
+            v,
+            I,
+            S,
+            N,
+            T,
+            A,
+            R.enabled,
+            C,
+            P,
+        ])
     );
 }

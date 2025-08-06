@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,14 +63,28 @@ async function p(e) {
     if (null == e.targetApplicationId) return !1;
     let n = !1;
     try {
-        ((t = await (0, l.Z)(e.targetApplicationId, e.channelId)), (n = (0, o.R)()));
+        (t = await (0, l.Z)(e.targetApplicationId, e.channelId)), (n = (0, o.R)());
     } catch (e) {
         return !1;
     }
     return (0, o.C)(n, () => h(_(d({}, e), { targetApplication: t })));
 }
 async function h(e) {
-    let { targetApplication: t, locationObject: n, channelId: o, analyticsLocations: l, componentId: u, commandOrigin: d, sectionName: f, source: _, onExecutedCallback: p, referrerId: h, customId: m, inviterUserId: g, onConfirmActivityLaunchChecksAlertOpen: E } = e,
+    let {
+            targetApplication: t,
+            locationObject: n,
+            channelId: o,
+            analyticsLocations: l,
+            componentId: u,
+            commandOrigin: d,
+            sectionName: f,
+            source: _,
+            onExecutedCallback: p,
+            referrerId: h,
+            customId: m,
+            inviterUserId: g,
+            onConfirmActivityLaunchChecksAlertOpen: E,
+        } = e,
         b = (0, c.Z)(),
         y = i.default.getCurrentUser();
     return (
@@ -94,7 +108,7 @@ async function h(e) {
             referrerId: h,
             customId: m,
             inviterUserId: g,
-            onConfirmActivityLaunchChecksAlertOpen: E
+            onConfirmActivityLaunchChecksAlertOpen: E,
         }))
     );
 }

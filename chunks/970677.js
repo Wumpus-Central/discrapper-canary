@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -59,7 +59,14 @@ function _(e, t) {
     );
 }
 function p(e) {
-    let { color: t = 'default', disabled: n, isFocused: o, showDefaultFocus: u = !1, menuItemProps: f, children: p } = e,
+    let {
+            color: t = "default",
+            disabled: n,
+            isFocused: o,
+            showDefaultFocus: u = !1,
+            menuItemProps: f,
+            children: p,
+        } = e,
         h = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
@@ -71,7 +78,7 @@ function p(e) {
             null == t || t.focus();
         }, [o]),
         (0, r.jsx)(
-            'div',
+            "div",
             _(
                 d(
                     {
@@ -79,14 +86,14 @@ function p(e) {
                         className: a()(c.item, l._[t], {
                             [c.disabled]: n,
                             [c.focused]: u && o,
-                            [c.hideInteraction]: !u
+                            [c.hideInteraction]: !u,
                         }),
-                        'aria-disabled': n
+                        "aria-disabled": n,
                     },
-                    f
+                    f,
                 ),
-                { children: p }
-            )
+                { children: p },
+            ),
         )
     );
 }

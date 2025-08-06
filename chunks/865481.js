@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => r }));
+n.r(t), n.d(t, { default: () => r });
 let r = {
     transparent: 0,
     aliceblue: 4042850303,
@@ -149,5 +149,5 @@ let r = {
     white: 4294967295,
     whitesmoke: 4126537215,
     yellow: 4294902015,
-    yellowgreen: 2597139199
+    yellowgreen: 2597139199,
 };

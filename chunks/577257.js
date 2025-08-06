@@ -20,23 +20,23 @@ function u(e, t) {
             l = {
                 width: 376,
                 height: 212,
-                types: e ? c : d
+                types: e ? c : d,
             };
         async function s() {
             let { screenSources: e, windowSources: n, cameraSources: o } = await (0, a.t)(l);
             u.current > i ||
                 (t({
-                    type: 'set_source_candidates',
+                    type: "set_source_candidates",
                     screenSources: e,
                     windowSources: n,
-                    deviceSources: o
+                    deviceSources: o,
                 }),
                 r.start(f, s));
         }
         return (
             s(),
             () => {
-                ((u.current += 1), r.stop());
+                (u.current += 1), r.stop();
             }
         );
     }, [t, f, e, n]);

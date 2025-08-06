@@ -5,9 +5,9 @@ var r = n(154028),
     s = Object;
 e.exports = a
     ? function (e) {
-          return 'symbol' == typeof e;
+          return "symbol" == typeof e;
       }
     : function (e) {
-          var t = r('Symbol');
+          var t = r("Symbol");
           return i(t) && o(t.prototype, s(e));
       };

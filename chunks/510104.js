@@ -25,7 +25,7 @@ function f(e, t) {
         I = void 0 !== v && v,
         T = n.padding,
         S = void 0 === T ? 0 : T,
-        A = (0, u.Z)('number' != typeof S ? S : (0, d.Z)(S, l.mv)),
+        A = (0, u.Z)("number" != typeof S ? S : (0, d.Z)(S, l.mv)),
         N = O === l.k5 ? l.YP : l.k5,
         C = e.rects.popper,
         R = e.elements[I ? N : O],
@@ -34,8 +34,8 @@ function f(e, t) {
         D = (0, a.Z)({
             reference: w,
             element: C,
-            strategy: 'absolute',
-            placement: _
+            strategy: "absolute",
+            placement: _,
         }),
         L = (0, s.Z)(Object.assign({}, C, D)),
         x = O === l.k5 ? L : w,
@@ -43,14 +43,14 @@ function f(e, t) {
             top: P.top - x.top + A.top,
             bottom: x.bottom - P.bottom + A.bottom,
             left: P.left - x.left + A.left,
-            right: x.right - P.right + A.right
+            right: x.right - P.right + A.right,
         },
         k = e.modifiersData.offset;
     if (O === l.k5 && k) {
         var j = k[_];
         Object.keys(M).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
-                n = [l.we, l.I].indexOf(e) >= 0 ? 'y' : 'x';
+                n = [l.we, l.I].indexOf(e) >= 0 ? "y" : "x";
             M[e] += j[n] * t;
         });
     }

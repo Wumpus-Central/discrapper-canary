@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => _ }), r(388685));
+r.d(t, { Z: () => _ }), r(388685);
 var n = r(255367),
     a = r(73800),
     l = r(120356),
@@ -11,15 +11,15 @@ var n = r(255367),
     b = r(976845),
     f = r(48541),
     h = r(718486);
-let O = new s.Z('BalanceCounter'),
+let O = new s.Z("BalanceCounter"),
     y = (0, d.dU)(void 0) === f.C.PRODUCTION,
-    p = (e) => (null === e ? 0 : ''.concat(e.toFixed(0)).length),
+    p = (e) => (null === e ? 0 : "".concat(e.toFixed(0)).length),
     m = (e, t) => {
         let r = e > 0,
-            n = t * b.eg[r ? 'EARN' : 'SPEND'];
+            n = t * b.eg[r ? "EARN" : "SPEND"];
         return {
             duration: n,
-            delay: r ? t - n : 0
+            delay: r ? t - n : 0,
         };
     },
     C = (e, t, r) => (null === r ? Math.max(e, t) : Math.max(t, r)),
@@ -36,11 +36,11 @@ let O = new s.Z('BalanceCounter'),
                 return;
             }
             let e = null !== h.current ? l - h.current : l;
-            (0 !== e && null !== h.current && c(e),
+            0 !== e && null !== h.current && c(e),
                 (C.current = {
                     lastChangedAt: Date.now(),
-                    totalDelta: Math.abs(e)
-                }));
+                    totalDelta: Math.abs(e),
+                });
         }, [l, c]);
         let g = null != l ? l : 0,
             _ = null != (t = h.current) ? t : g,
@@ -52,7 +52,7 @@ let O = new s.Z('BalanceCounter'),
                     mass: 1,
                     tension: 20,
                     friction: 10,
-                    duration: E
+                    duration: E,
                 },
                 delay: R,
                 onStart: () => {
@@ -61,18 +61,18 @@ let O = new s.Z('BalanceCounter'),
                 onRest: () => {
                     if ((f(b + 1), s(), !y && null !== C.current && null !== h.current)) {
                         let e = Date.now();
-                        O.log('Balance Counter finished updating: ', {
+                        O.log("Balance Counter finished updating: ", {
                             time: e - C.current.lastChangedAt,
-                            delta: g - h.current
+                            delta: g - h.current,
                         });
                     }
-                    (i(p(g)), (h.current = g));
-                }
+                    i(p(g)), (h.current = g);
+                },
             }),
             v = p(Math.max(null != l ? l : 0, j.get()));
         return (0, n.jsx)(o.animated.div, {
-            style: { width: 'calc('.concat(v, 'ch)') },
-            children: j.to((e) => ''.concat(e.toFixed(0)))
+            style: { width: "calc(".concat(v, "ch)") },
+            children: j.to((e) => "".concat(e.toFixed(0))),
         });
     },
     _ = (e) => {
@@ -88,26 +88,28 @@ let O = new s.Z('BalanceCounter'),
                             n,
                             a = {},
                             l = Object.keys(e);
-                        for (n = 0; n < l.length; n++) ((r = l[n]), t.indexOf(r) >= 0 || (a[r] = e[r]));
+                        for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
                         return a;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (n = 0; n < l.length; n++) ((r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
+                    for (n = 0; n < l.length; n++)
+                        (r = l[n]),
+                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
                 }
                 return a;
-            })(e, ['value', 'className']);
+            })(e, ["value", "className"]);
         let s = null === r,
             [d, b] = (0, a.useState)(null),
             f = (0, a.useMemo)(() => p(r), [r]),
             O = null != (t = (0, c.Z)(f)) ? t : 0,
             y = (0, a.useMemo)(() => C(O, f, d), [O, f, d]);
         return (0, n.jsx)(u.Text, {
-            variant: 'text-md/semibold',
+            variant: "text-md/semibold",
             className: i()(h.balanceCounterText, s ? void 0 : h.balanceCounterMargin, l),
             style: {
-                width: ''.concat(s ? 0 : y, 'ch'),
-                opacity: s ? '0' : 1
+                width: "".concat(s ? 0 : y, "ch"),
+                opacity: s ? "0" : 1,
             },
             children: s
                 ? null
@@ -117,24 +119,24 @@ let O = new s.Z('BalanceCounter'),
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
                                   n = Object.keys(r);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (n = n.concat(
                                       Object.getOwnPropertySymbols(r).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   n.forEach(function (t) {
                                       var n;
-                                      ((n = r[t]),
+                                      (n = r[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: n,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = n));
-                                  }));
+                                              : (e[t] = n);
+                                  });
                           }
                           return e;
                       })(
@@ -142,10 +144,10 @@ let O = new s.Z('BalanceCounter'),
                               onSetDigitCount: (e) => {
                                   e !== d && b(e);
                               },
-                              value: r
+                              value: r,
                           },
-                          o
-                      )
-                  )
+                          o,
+                      ),
+                  ),
         });
     };

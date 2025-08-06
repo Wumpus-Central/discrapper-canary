@@ -18,7 +18,7 @@ var r = n(442837),
     x = n(388032),
     _ = n(614467);
 let j = () => {
-        ((0, p.XO)(p.wh.APP_ICON), (0, l.xf)());
+        (0, p.XO)(p.wh.APP_ICON), (0, l.xf)();
     },
     E = () => {
         let { analyticsLocations: e } = (0, d.ZP)(c.Z.USER_SETTINGS),
@@ -28,37 +28,37 @@ let j = () => {
                 t &&
                     h.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: b.cd.APP_ICON_UPSELL,
-                        location_stack: e
+                        location_stack: e,
                     });
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: _.selectionGroup,
                 children: [
                     (0, i.jsx)(m.Z, {
                         disabled: t,
                         renderCTAButtons: () =>
-                            (0, i.jsxs)('div', {
+                            (0, i.jsxs)("div", {
                                 className: _.tryItOutButtons,
                                 children: [
                                     (0, i.jsx)(s.zx, {
                                         size: s.zx.Sizes.MEDIUM,
                                         color: t ? s.zx.Colors.PRIMARY : s.zx.Colors.BRAND,
                                         onClick: () => j(),
-                                        children: x.intl.string(x.t['hb/wEx'])
+                                        children: x.intl.string(x.t["hb/wEx"]),
                                     }),
                                     t
                                         ? (0, i.jsx)(g.Z, {
                                               className: _.tryItOutButton,
                                               showGradient: !1,
                                               subscriptionTier: b.Si.TIER_2,
-                                              textOptions: { textOverride: x.intl.string(x.t.mr4K7O) }
+                                              textOptions: { textOverride: x.intl.string(x.t.mr4K7O) },
                                           })
-                                        : null
-                                ]
-                            })
+                                        : null,
+                                ],
+                            }),
                     }),
-                    (0, i.jsx)(a.$i$, { className: _.divider })
-                ]
+                    (0, i.jsx)(a.$i$, { className: _.divider }),
+                ],
             })
         );
     };

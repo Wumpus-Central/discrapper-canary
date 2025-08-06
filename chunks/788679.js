@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => d }));
+n.r(t), n.d(t, { default: () => d });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -22,9 +22,9 @@ function d(e) {
                     t,
                     n,
                     h.map((e) => e.id),
-                    m.map((e) => e.id)
+                    m.map((e) => e.id),
                 );
-            }
+            },
         });
     return (
         h.length > 0 || m.length > 0 || p(),
@@ -37,7 +37,7 @@ function d(e) {
             attachmentPreview: 1 === h.length && 0 === m.length ? h[0] : void 0,
             embedPreview: 1 === m.length && 0 === h.length ? m[0] : void 0,
             transitionState: _,
-            onClose: p
+            onClose: p,
         })
     );
 }

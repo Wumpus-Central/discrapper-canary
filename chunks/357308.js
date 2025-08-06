@@ -19,11 +19,11 @@ function v(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (a = a.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, a));
+            r.push.apply(r, a);
     }
     return r;
 }
@@ -50,10 +50,10 @@ var M = (function (e) {
     var t,
         r =
             ((t = (function () {
-                if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
-                if ('function' == typeof Proxy) return !0;
+                if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
+                if ("function" == typeof Proxy) return !0;
                 try {
-                    return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
+                    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
                 } catch (e) {
                     return !1;
                 }
@@ -61,14 +61,17 @@ var M = (function (e) {
             function () {
                 var e,
                     r = (0, c.Z)(d);
-                return ((e = t ? Reflect.construct(r, arguments, (0, c.Z)(this).constructor) : r.apply(this, arguments)), (0, i.Z)(this, e));
+                return (
+                    (e = t ? Reflect.construct(r, arguments, (0, c.Z)(this).constructor) : r.apply(this, arguments)),
+                    (0, i.Z)(this, e)
+                );
             });
     function d(e) {
         var t;
         return (
             (0, a.Z)(this, d),
             (t = r.call(this, e)),
-            (0, l.Z)((0, s.Z)(t), 'handleClick', function () {
+            (0, l.Z)((0, s.Z)(t), "handleClick", function () {
                 t.props.expandable && t.setState({ expanded: !t.state.expanded });
             }),
             (t.state = w(e)),
@@ -78,25 +81,28 @@ var M = (function (e) {
     return (
         (0, n.Z)(d, [
             {
-                key: 'UNSAFE_componentWillReceiveProps',
+                key: "UNSAFE_componentWillReceiveProps",
                 value: function (e) {
                     var t = w(e);
                     w(this.props).expanded !== t.expanded && this.setState(t);
-                }
+                },
             },
             {
-                key: 'shouldComponentUpdate',
+                key: "shouldComponentUpdate",
                 value: function (e, t) {
                     var r = this;
                     return (
                         !!Object.keys(e).find(function (t) {
-                            return 'circularCache' !== t && ('keyPath' === t ? e[t].join('/') !== r.props[t].join('/') : e[t] !== r.props[t]);
+                            return (
+                                "circularCache" !== t &&
+                                ("keyPath" === t ? e[t].join("/") !== r.props[t].join("/") : e[t] !== r.props[t])
+                            );
                         }) || t.expanded !== this.state.expanded
                     );
-                }
+                },
             },
             {
-                key: 'render',
+                key: "render",
                 value: function () {
                     var e = this.props,
                         t = e.getItemString,
@@ -129,12 +135,12 @@ var M = (function (e) {
                                                       b.createElement(
                                                           y.Z,
                                                           (0, f.Z)({}, t, {
-                                                              key: 'ItemRange--'.concat(r.from, '-').concat(r.to),
+                                                              key: "ItemRange--".concat(r.from, "-").concat(r.to),
                                                               from: r.from,
                                                               to: r.to,
-                                                              renderChildNodes: e
-                                                          })
-                                                      )
+                                                              renderChildNodes: e,
+                                                          }),
+                                                      ),
                                                   );
                                               else {
                                                   var a = r.key,
@@ -146,14 +152,14 @@ var M = (function (e) {
                                                           (0, f.Z)({}, t, {
                                                               postprocessValue: l,
                                                               collectionLimit: o,
-                                                              key: 'Node--'.concat(a),
+                                                              key: "Node--".concat(a),
                                                               keyPath: [a].concat((0, u.Z)(c)),
                                                               value: l(n),
                                                               circularCache: [].concat((0, u.Z)(i), [n]),
                                                               isCircular: s,
-                                                              hideRoot: !1
-                                                          })
-                                                      )
+                                                              hideRoot: !1,
+                                                          }),
+                                                      ),
                                                   );
                                               }
                                           }),
@@ -161,31 +167,47 @@ var M = (function (e) {
                                       );
                                   })(Z(Z({}, this.props), {}, { level: this.props.level + 1 }))
                                 : null,
-                        M = t(a, n, b.createElement('span', i('nestedNodeItemType', v), r), o(n, c), l),
+                        M = t(a, n, b.createElement("span", i("nestedNodeItemType", v), r), o(n, c), l),
                         k = [l, a, v, h];
                     return s
-                        ? b.createElement('li', i.apply(void 0, ['rootNode'].concat(k)), b.createElement('ul', i.apply(void 0, ['rootNodeChildren'].concat(k)), w))
+                        ? b.createElement(
+                              "li",
+                              i.apply(void 0, ["rootNode"].concat(k)),
+                              b.createElement("ul", i.apply(void 0, ["rootNodeChildren"].concat(k)), w),
+                          )
                         : b.createElement(
-                              'li',
-                              i.apply(void 0, ['nestedNode'].concat(k)),
+                              "li",
+                              i.apply(void 0, ["nestedNode"].concat(k)),
                               h &&
                                   b.createElement(p.Z, {
                                       styling: i,
                                       nodeType: a,
                                       expanded: v,
-                                      onClick: this.handleClick
+                                      onClick: this.handleClick,
                                   }),
-                              b.createElement('label', (0, f.Z)({}, i.apply(void 0, [['label', 'nestedNodeLabel']].concat(k)), { onClick: this.handleClick }), d.apply(void 0, k)),
-                              b.createElement('span', (0, f.Z)({}, i.apply(void 0, ['nestedNodeItemString'].concat(k)), { onClick: this.handleClick }), M),
-                              b.createElement('ul', i.apply(void 0, ['nestedNodeChildren'].concat(k)), w)
+                              b.createElement(
+                                  "label",
+                                  (0, f.Z)({}, i.apply(void 0, [["label", "nestedNodeLabel"]].concat(k)), {
+                                      onClick: this.handleClick,
+                                  }),
+                                  d.apply(void 0, k),
+                              ),
+                              b.createElement(
+                                  "span",
+                                  (0, f.Z)({}, i.apply(void 0, ["nestedNodeItemString"].concat(k)), {
+                                      onClick: this.handleClick,
+                                  }),
+                                  M,
+                              ),
+                              b.createElement("ul", i.apply(void 0, ["nestedNodeChildren"].concat(k)), w),
                           );
-                }
-            }
+                },
+            },
         ]),
         d
     );
 })(b.Component);
-((0, l.Z)(M, 'propTypes', {
+(0, l.Z)(M, "propTypes", {
     getItemString: h().func.isRequired,
     nodeTypeIndicator: h().any,
     nodeType: h().string.isRequired,
@@ -200,11 +222,11 @@ var M = (function (e) {
     level: h().number.isRequired,
     sortObjectKeys: h().oneOfType([h().func, h().bool]),
     isCircular: h().bool,
-    expandable: h().bool
+    expandable: h().bool,
 }),
-    (0, l.Z)(M, 'defaultProps', {
+    (0, l.Z)(M, "defaultProps", {
         data: [],
         circularCache: [],
         level: 0,
-        expandable: !0
-    }));
+        expandable: !0,
+    });

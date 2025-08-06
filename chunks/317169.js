@@ -1,6 +1,6 @@
 n.d(t, {
     I: () => s,
-    Z: () => l
+    Z: () => l,
 });
 var r = n(73800),
     i = n(442837),
@@ -14,12 +14,12 @@ function s(e) {
         ? {
               available: 0,
               spend: 0,
-              total: i
+              total: i,
           }
         : {
               available: Math.max(0, i - s),
               spent: s,
-              total: i
+              total: i,
           };
 }
 function l(e) {
@@ -42,13 +42,13 @@ function l(e) {
                 ? {
                       available: 0,
                       spent: 0,
-                      total: n
+                      total: n,
                   }
                 : {
                       available: Math.max(0, n - s),
                       spent: s,
-                      total: n
+                      total: n,
                   },
-        [n, s]
+        [n, s],
     );
 }

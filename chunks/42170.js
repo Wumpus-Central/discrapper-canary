@@ -14,24 +14,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -68,7 +68,7 @@ function p(e) {
         beforeDate: f,
         selectedOption: h,
         isCustomDateRange: j,
-        menuName: 'joined-date',
+        menuName: "joined-date",
         accessibilityLabel: C.intl.string(C.t.XMVinZ),
         onClose: n,
         onSelectDateOption: function (e, n) {
@@ -79,9 +79,9 @@ function p(e) {
                     selectedJoinDateOption: {
                         optionId: e,
                         afterDate: r,
-                        beforeDate: null
-                    }
-                })
+                        beforeDate: null,
+                    },
+                }),
             );
         },
         onToggleCustomDateRange: function () {
@@ -91,9 +91,9 @@ function p(e) {
                     selectedJoinDateOption: {
                         optionId: d.Ol.CUSTOM,
                         afterDate: j ? p : null,
-                        beforeDate: j ? f : null
-                    }
-                })
+                        beforeDate: j ? f : null,
+                    },
+                }),
             );
         },
         onSelectStartDate: function (e) {
@@ -103,9 +103,9 @@ function p(e) {
                     selectedJoinDateOption: {
                         optionId: d.Ol.CUSTOM,
                         afterDate: e.valueOf(),
-                        beforeDate: f
-                    }
-                })
+                        beforeDate: f,
+                    },
+                }),
             );
         },
         onSelectEndDate: function (e) {
@@ -115,10 +115,10 @@ function p(e) {
                     selectedJoinDateOption: {
                         optionId: d.Ol.CUSTOM,
                         afterDate: p,
-                        beforeDate: e.valueOf()
-                    }
-                })
+                        beforeDate: e.valueOf(),
+                    },
+                }),
             );
-        }
+        },
     });
 }

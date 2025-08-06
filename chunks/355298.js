@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(133080),
     i = n(592125),
     o = n(750041);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,20 +24,25 @@ function d(e) {
 }
 function f(e) {
     let t = !1;
-    return (d(e) && !s.has(e.id) && (s.add(e.id), (t = !0)), !d(e) && s.has(e.id) && (s.delete(e.id), (t = !0)), !d(e) && l.has(e.id) && (l.delete(e.id), (t = !0)), t);
+    return (
+        d(e) && !s.has(e.id) && (s.add(e.id), (t = !0)),
+        !d(e) && s.has(e.id) && (s.delete(e.id), (t = !0)),
+        !d(e) && l.has(e.id) && (l.delete(e.id), (t = !0)),
+        t
+    );
 }
 function _(e) {
     var t;
     null != e && (u = null != (t = (0, r.Zz)(e)) ? t : (0, r.K4)());
 }
 function p(e) {
-    ('CONNECTION_OPEN' === e.type && _(e.countryCode),
+    "CONNECTION_OPEN" === e.type && _(e.countryCode),
         s.clear(),
         l.clear(),
         Object.values(i.Z.getMutablePrivateChannels()).forEach((e) => {
             f(e);
         }),
-        (c = !0));
+        (c = !0);
 }
 function h(e) {
     let { channelId: t } = e;
@@ -74,7 +79,7 @@ class O extends o.Z {
     takeSnapshot() {
         return {
             version: O.LATEST_SNAPSHOT_VERSION,
-            data: Array.from(s)
+            data: Array.from(s),
         };
     }
     getMessageRequestChannelIds() {
@@ -105,9 +110,9 @@ class O extends o.Z {
             CHANNEL_UPDATES: g,
             CHANNEL_DELETE: E,
             SET_LOCATION_METADATA: y,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h,
         });
     }
 }
-(a(O, 'displayName', 'MessageRequestStore'), a(O, 'LATEST_SNAPSHOT_VERSION', 1));
+a(O, "displayName", "MessageRequestStore"), a(O, "LATEST_SNAPSHOT_VERSION", 1);
 let v = new O();

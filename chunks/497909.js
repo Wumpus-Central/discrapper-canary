@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685), n(49124));
+n.d(t, { Z: () => p }), n(388685), n(49124);
 var r = n(668757),
     i = n(902704),
     o = n(147913),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,7 +29,7 @@ function f() {
     l.Re.forEach((e) =>
         e.setExperiment(
             (0, a.B)({
-                kind: 'user',
+                kind: "user",
                 id: e.id,
                 label: e.getLabel(),
                 defaultConfig: { treatmentId: -1 },
@@ -38,11 +38,11 @@ function f() {
                     return {
                         id: t,
                         label: n,
-                        config: { treatmentId: t }
+                        config: { treatmentId: t },
                     };
-                })
-            })
-        )
+                }),
+            }),
+        ),
     );
 }
 class _ extends o.Z {
@@ -51,7 +51,7 @@ class _ extends o.Z {
     }
     _terminate() {}
     constructor(...e) {
-        (super(...e), c(this, 'actions', {}), c(this, 'stores', new Map().set(s.Z, d)));
+        super(...e), c(this, "actions", {}), c(this, "stores", new Map().set(s.Z, d));
     }
 }
 let p = new _();

@@ -1,1 +1,1 @@
-e.exports = ('undefined' != typeof Reflect && Reflect.getPrototypeOf) || null;
+e.exports = ("undefined" != typeof Reflect && Reflect.getPrototypeOf) || null;

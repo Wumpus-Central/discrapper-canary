@@ -1,1 +1,1 @@
-e.exports = { divider: 'divider_c87e85' };
+e.exports = { divider: "divider_c87e85" };

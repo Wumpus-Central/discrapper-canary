@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => p }), a(388685), a(35282));
+a.d(t, { Z: () => p }), a(388685), a(35282);
 var n = a(255367);
 a(73800);
 var r = a(404905),
@@ -14,7 +14,7 @@ let d = {
     base08: l.Z.colors.TEXT_MUTED.css,
     base09: l.Z.colors.TEXT_FEEDBACK_POSITIVE.css,
     base0B: l.Z.colors.TEXT_FEEDBACK_WARNING.css,
-    base0D: l.Z.colors.TEXT_BRAND.css
+    base0D: l.Z.colors.TEXT_BRAND.css,
 };
 function u(e) {
     let t = {};
@@ -27,21 +27,21 @@ function h(e) {
     return o.Jn9.test(e)
         ? (0, n.jsx)(s.ZP, {
               type: s.ZP.Types.TEXT,
-              children: () => e
+              children: () => e,
           })
         : e;
 }
 function p(e) {
     let { data: t } = e,
         a = (0, i.ZP)();
-    return (0, n.jsx)('div', {
+    return (0, n.jsx)("div", {
         className: c.inspectorWrapper,
         children: (0, n.jsx)(r.L, {
             data: t,
-            theme: 'light' === a ? x : m,
+            theme: "light" === a ? x : m,
             invertTheme: !1,
             valueRenderer: h,
-            shouldExpandNode: () => !0
-        })
+            shouldExpandNode: () => !0,
+        }),
     });
 }

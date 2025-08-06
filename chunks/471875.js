@@ -1,20 +1,129 @@
-let t = '[A-Za-z$_][0-9A-Za-z$_]*',
-    n = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'function', 'do', 'return', 'void', 'else', 'break', 'catch', 'instanceof', 'with', 'throw', 'case', 'default', 'try', 'switch', 'continue', 'typeof', 'delete', 'let', 'yield', 'const', 'class', 'debugger', 'async', 'await', 'static', 'import', 'from', 'export', 'extends', 'using'],
-    r = ['true', 'false', 'null', 'undefined', 'NaN', 'Infinity'],
-    i = ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'],
-    o = ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError'],
-    a = ['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'],
-    s = ['arguments', 'this', 'super', 'console', 'window', 'document', 'localStorage', 'sessionStorage', 'module', 'global'],
+let t = "[A-Za-z$_][0-9A-Za-z$_]*",
+    n = [
+        "as",
+        "in",
+        "of",
+        "if",
+        "for",
+        "while",
+        "finally",
+        "var",
+        "new",
+        "function",
+        "do",
+        "return",
+        "void",
+        "else",
+        "break",
+        "catch",
+        "instanceof",
+        "with",
+        "throw",
+        "case",
+        "default",
+        "try",
+        "switch",
+        "continue",
+        "typeof",
+        "delete",
+        "let",
+        "yield",
+        "const",
+        "class",
+        "debugger",
+        "async",
+        "await",
+        "static",
+        "import",
+        "from",
+        "export",
+        "extends",
+        "using",
+    ],
+    r = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+    i = [
+        "Object",
+        "Function",
+        "Boolean",
+        "Symbol",
+        "Math",
+        "Date",
+        "Number",
+        "BigInt",
+        "String",
+        "RegExp",
+        "Array",
+        "Float32Array",
+        "Float64Array",
+        "Int8Array",
+        "Uint8Array",
+        "Uint8ClampedArray",
+        "Int16Array",
+        "Int32Array",
+        "Uint16Array",
+        "Uint32Array",
+        "BigInt64Array",
+        "BigUint64Array",
+        "Set",
+        "Map",
+        "WeakSet",
+        "WeakMap",
+        "ArrayBuffer",
+        "SharedArrayBuffer",
+        "Atomics",
+        "DataView",
+        "JSON",
+        "Promise",
+        "Generator",
+        "GeneratorFunction",
+        "AsyncFunction",
+        "Reflect",
+        "Proxy",
+        "Intl",
+        "WebAssembly",
+    ],
+    o = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+    a = [
+        "setInterval",
+        "setTimeout",
+        "clearInterval",
+        "clearTimeout",
+        "require",
+        "exports",
+        "eval",
+        "isFinite",
+        "isNaN",
+        "parseFloat",
+        "parseInt",
+        "decodeURI",
+        "decodeURIComponent",
+        "encodeURI",
+        "encodeURIComponent",
+        "escape",
+        "unescape",
+    ],
+    s = [
+        "arguments",
+        "this",
+        "super",
+        "console",
+        "window",
+        "document",
+        "localStorage",
+        "sessionStorage",
+        "module",
+        "global",
+    ],
     l = [].concat(a, i, o);
 function c(e) {
     let c = e.regex,
         u = (e, { after: t }) => {
-            let n = '</' + e[0].slice(1);
+            let n = "</" + e[0].slice(1);
             return -1 !== e.input.indexOf(n, t);
         },
         d = t,
-        f = '<>',
-        _ = '</>',
+        f = "<>",
+        _ = "</>",
         p = /<[A-Za-z0-9\\._:-]+\s*\/>/,
         h = /<[A-Za-z0-9\\._:-]+/,
         m = /\/[A-Za-z0-9\\._:-]+>|\/>/,
@@ -22,115 +131,124 @@ function c(e) {
             let n,
                 r = e[0].length + e.index,
                 i = e.input[r];
-            if ('<' === i || ',' === i) return void t.ignoreMatch();
-            '>' !== i || u(e, { after: r }) || t.ignoreMatch();
+            if ("<" === i || "," === i) return void t.ignoreMatch();
+            ">" !== i || u(e, { after: r }) || t.ignoreMatch();
             let o = e.input.substring(r);
-            if ((n = o.match(/^\s*=/)) || ((n = o.match(/^\s+extends\s+/)) && 0 === n.index)) return void t.ignoreMatch();
+            if ((n = o.match(/^\s*=/)) || ((n = o.match(/^\s+extends\s+/)) && 0 === n.index))
+                return void t.ignoreMatch();
         },
         E = {
             $pattern: t,
             keyword: n,
             literal: r,
             built_in: l,
-            'variable.language': s
+            "variable.language": s,
         },
-        b = '[0-9](_?[0-9])*',
+        b = "[0-9](_?[0-9])*",
         y = `\\.(${b})`,
-        O = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
+        O = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
         v = {
-            className: 'number',
-            variants: [{ begin: `(\\b(${O})((${y})|\\.)?|(${y}))[eE][+-]?(${b})\\b` }, { begin: `\\b(${O})\\b((${y})\\b|\\.)?|(${y})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
-            relevance: 0
+            className: "number",
+            variants: [
+                { begin: `(\\b(${O})((${y})|\\.)?|(${y}))[eE][+-]?(${b})\\b` },
+                { begin: `\\b(${O})\\b((${y})\\b|\\.)?|(${y})\\b` },
+                { begin: "\\b(0|[1-9](_?[0-9])*)n\\b" },
+                { begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b" },
+                { begin: "\\b0[bB][0-1](_?[0-1])*n?\\b" },
+                { begin: "\\b0[oO][0-7](_?[0-7])*n?\\b" },
+                { begin: "\\b0[0-7]+n?\\b" },
+            ],
+            relevance: 0,
         },
         I = {
-            className: 'subst',
-            begin: '\\$\\{',
-            end: '\\}',
+            className: "subst",
+            begin: "\\$\\{",
+            end: "\\}",
             keywords: E,
-            contains: []
+            contains: [],
         },
         T = {
-            begin: '.?html`',
-            end: '',
+            begin: ".?html`",
+            end: "",
             starts: {
-                end: '`',
+                end: "`",
                 returnEnd: !1,
                 contains: [e.BACKSLASH_ESCAPE, I],
-                subLanguage: 'xml'
-            }
+                subLanguage: "xml",
+            },
         },
         S = {
-            begin: '.?css`',
-            end: '',
+            begin: ".?css`",
+            end: "",
             starts: {
-                end: '`',
+                end: "`",
                 returnEnd: !1,
                 contains: [e.BACKSLASH_ESCAPE, I],
-                subLanguage: 'css'
-            }
+                subLanguage: "css",
+            },
         },
         A = {
-            begin: '.?gql`',
-            end: '',
+            begin: ".?gql`",
+            end: "",
             starts: {
-                end: '`',
+                end: "`",
                 returnEnd: !1,
                 contains: [e.BACKSLASH_ESCAPE, I],
-                subLanguage: 'graphql'
-            }
+                subLanguage: "graphql",
+            },
         },
         N = {
-            className: 'string',
-            begin: '`',
-            end: '`',
-            contains: [e.BACKSLASH_ESCAPE, I]
+            className: "string",
+            begin: "`",
+            end: "`",
+            contains: [e.BACKSLASH_ESCAPE, I],
         },
         C = {
-            className: 'comment',
+            className: "comment",
             variants: [
-                e.COMMENT(/\/\*\*(?!\/)/, '\\*/', {
+                e.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
                     relevance: 0,
                     contains: [
                         {
-                            begin: '(?=@[A-Za-z]+)',
+                            begin: "(?=@[A-Za-z]+)",
                             relevance: 0,
                             contains: [
                                 {
-                                    className: 'doctag',
-                                    begin: '@[A-Za-z]+'
+                                    className: "doctag",
+                                    begin: "@[A-Za-z]+",
                                 },
                                 {
-                                    className: 'type',
-                                    begin: '\\{',
-                                    end: '\\}',
+                                    className: "type",
+                                    begin: "\\{",
+                                    end: "\\}",
                                     excludeEnd: !0,
                                     excludeBegin: !0,
-                                    relevance: 0
+                                    relevance: 0,
                                 },
                                 {
-                                    className: 'variable',
-                                    begin: d + '(?=\\s*(-)|$)',
+                                    className: "variable",
+                                    begin: d + "(?=\\s*(-)|$)",
                                     endsParent: !0,
-                                    relevance: 0
+                                    relevance: 0,
                                 },
                                 {
                                     begin: /(?=[^\n])\s/,
-                                    relevance: 0
-                                }
-                            ]
-                        }
-                    ]
+                                    relevance: 0,
+                                },
+                            ],
+                        },
+                    ],
                 }),
                 e.C_BLOCK_COMMENT_MODE,
-                e.C_LINE_COMMENT_MODE
-            ]
+                e.C_LINE_COMMENT_MODE,
+            ],
         },
         R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, T, S, A, N, { match: /\$\d+/ }, v];
     I.contains = R.concat({
         begin: /\{/,
         end: /\}/,
         keywords: E,
-        contains: ['self'].concat(R)
+        contains: ["self"].concat(R),
     });
     let P = [].concat(C, I.contains),
         w = P.concat([
@@ -138,122 +256,127 @@ function c(e) {
                 begin: /(\s*)\(/,
                 end: /\)/,
                 keywords: E,
-                contains: ['self'].concat(P)
-            }
+                contains: ["self"].concat(P),
+            },
         ]),
         D = {
-            className: 'params',
+            className: "params",
             begin: /(\s*)\(/,
             end: /\)/,
             excludeBegin: !0,
             excludeEnd: !0,
             keywords: E,
-            contains: w
+            contains: w,
         },
         L = {
             variants: [
                 {
-                    match: [/class/, /\s+/, d, /\s+/, /extends/, /\s+/, c.concat(d, '(', c.concat(/\./, d), ')*')],
+                    match: [/class/, /\s+/, d, /\s+/, /extends/, /\s+/, c.concat(d, "(", c.concat(/\./, d), ")*")],
                     scope: {
-                        1: 'keyword',
-                        3: 'title.class',
-                        5: 'keyword',
-                        7: 'title.class.inherited'
-                    }
+                        1: "keyword",
+                        3: "title.class",
+                        5: "keyword",
+                        7: "title.class.inherited",
+                    },
                 },
                 {
                     match: [/class/, /\s+/, d],
                     scope: {
-                        1: 'keyword',
-                        3: 'title.class'
-                    }
-                }
-            ]
+                        1: "keyword",
+                        3: "title.class",
+                    },
+                },
+            ],
         },
         x = {
             relevance: 0,
-            match: c.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
-            className: 'title.class',
+            match: c.either(
+                /\bJSON/,
+                /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/,
+                /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/,
+                /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/,
+            ),
+            className: "title.class",
             keywords: {
-                _: [...i, ...o]
-            }
+                _: [...i, ...o],
+            },
         },
         M = {
-            label: 'use_strict',
-            className: 'meta',
+            label: "use_strict",
+            className: "meta",
             relevance: 10,
-            begin: /^\s*['"]use (strict|asm)['"]/
+            begin: /^\s*['"]use (strict|asm)['"]/,
         },
         k = {
             variants: [
                 {
-                    match: [/function/, /\s+/, d, /(?=\s*\()/]
+                    match: [/function/, /\s+/, d, /(?=\s*\()/],
                 },
                 {
-                    match: [/function/, /\s*(?=\()/]
-                }
+                    match: [/function/, /\s*(?=\()/],
+                },
             ],
             className: {
-                1: 'keyword',
-                3: 'title.function'
+                1: "keyword",
+                3: "title.function",
             },
-            label: 'func.def',
+            label: "func.def",
             contains: [D],
-            illegal: /%/
+            illegal: /%/,
         },
         j = {
             relevance: 0,
             match: /\b[A-Z][A-Z_0-9]+\b/,
-            className: 'variable.constant'
+            className: "variable.constant",
         };
     function U(e) {
-        return c.concat('(?!', e.join('|'), ')');
+        return c.concat("(?!", e.join("|"), ")");
     }
     let G = {
-            match: c.concat(/\b/, U([...a, 'super', 'import'].map((e) => `${e}\\s*\\(`)), d, c.lookahead(/\s*\(/)),
-            className: 'title.function',
-            relevance: 0
+            match: c.concat(/\b/, U([...a, "super", "import"].map((e) => `${e}\\s*\\(`)), d, c.lookahead(/\s*\(/)),
+            className: "title.function",
+            relevance: 0,
         },
         B = {
             begin: c.concat(/\./, c.lookahead(c.concat(d, /(?![0-9A-Za-z$_(])/))),
             end: d,
             excludeBegin: !0,
-            keywords: 'prototype',
-            className: 'property',
-            relevance: 0
+            keywords: "prototype",
+            className: "property",
+            relevance: 0,
         },
         Z = {
             match: [/get|set/, /\s+/, d, /(?=\()/],
             className: {
-                1: 'keyword',
-                3: 'title.function'
+                1: "keyword",
+                3: "title.function",
             },
-            contains: [{ begin: /\(\)/ }, D]
+            contains: [{ begin: /\(\)/ }, D],
         },
-        F = '(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|' + e.UNDERSCORE_IDENT_RE + ')\\s*=>',
+        F = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + e.UNDERSCORE_IDENT_RE + ")\\s*=>",
         V = {
             match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(F)],
-            keywords: 'async',
+            keywords: "async",
             className: {
-                1: 'keyword',
-                3: 'title.function'
+                1: "keyword",
+                3: "title.function",
             },
-            contains: [D]
+            contains: [D],
         };
     return {
-        name: 'JavaScript',
-        aliases: ['js', 'jsx', 'mjs', 'cjs'],
+        name: "JavaScript",
+        aliases: ["js", "jsx", "mjs", "cjs"],
         keywords: E,
         exports: {
             PARAMS_CONTAINS: w,
-            CLASS_REFERENCE: x
+            CLASS_REFERENCE: x,
         },
         illegal: /#(?![$_A-z])/,
         contains: [
             e.SHEBANG({
-                label: 'shebang',
-                binary: 'node',
-                relevance: 5
+                label: "shebang",
+                binary: "node",
+                relevance: 5,
             }),
             M,
             e.APOS_STRING_MODE,
@@ -267,35 +390,35 @@ function c(e) {
             v,
             x,
             {
-                scope: 'attr',
-                match: d + c.lookahead(':'),
-                relevance: 0
+                scope: "attr",
+                match: d + c.lookahead(":"),
+                relevance: 0,
             },
             V,
             {
-                begin: '(' + e.RE_STARTERS_RE + '|\\b(case|return|throw)\\b)\\s*',
-                keywords: 'return throw case',
+                begin: "(" + e.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+                keywords: "return throw case",
                 relevance: 0,
                 contains: [
                     C,
                     e.REGEXP_MODE,
                     {
-                        className: 'function',
+                        className: "function",
                         begin: F,
                         returnBegin: !0,
-                        end: '\\s*=>',
+                        end: "\\s*=>",
                         contains: [
                             {
-                                className: 'params',
+                                className: "params",
                                 variants: [
                                     {
                                         begin: e.UNDERSCORE_IDENT_RE,
-                                        relevance: 0
+                                        relevance: 0,
                                     },
                                     {
                                         className: null,
                                         begin: /\(\s*\)/,
-                                        skip: !0
+                                        skip: !0,
                                     },
                                     {
                                         begin: /(\s*)\(/,
@@ -303,136 +426,152 @@ function c(e) {
                                         excludeBegin: !0,
                                         excludeEnd: !0,
                                         keywords: E,
-                                        contains: w
-                                    }
-                                ]
-                            }
-                        ]
+                                        contains: w,
+                                    },
+                                ],
+                            },
+                        ],
                     },
                     {
                         begin: /,/,
-                        relevance: 0
+                        relevance: 0,
                     },
                     {
                         match: /\s+/,
-                        relevance: 0
+                        relevance: 0,
                     },
                     {
                         variants: [
                             {
                                 begin: f,
-                                end: _
+                                end: _,
                             },
                             { match: p },
                             {
                                 begin: h,
-                                'on:begin': g,
-                                end: m
-                            }
+                                "on:begin": g,
+                                end: m,
+                            },
                         ],
-                        subLanguage: 'xml',
+                        subLanguage: "xml",
                         contains: [
                             {
                                 begin: h,
                                 end: m,
                                 skip: !0,
-                                contains: ['self']
-                            }
-                        ]
-                    }
-                ]
+                                contains: ["self"],
+                            },
+                        ],
+                    },
+                ],
             },
             k,
-            { beginKeywords: 'while if switch catch for' },
+            { beginKeywords: "while if switch catch for" },
             {
-                begin: '\\b(?!function)' + e.UNDERSCORE_IDENT_RE + '\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{',
+                begin:
+                    "\\b(?!function)" +
+                    e.UNDERSCORE_IDENT_RE +
+                    "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
                 returnBegin: !0,
-                label: 'func.def',
+                label: "func.def",
                 contains: [
                     D,
                     e.inherit(e.TITLE_MODE, {
                         begin: d,
-                        className: 'title.function'
-                    })
-                ]
+                        className: "title.function",
+                    }),
+                ],
             },
             {
                 match: /\.\.\./,
-                relevance: 0
+                relevance: 0,
             },
             B,
             {
-                match: '\\$' + d,
-                relevance: 0
+                match: "\\$" + d,
+                relevance: 0,
             },
             {
                 match: [/\bconstructor(?=\s*\()/],
-                className: { 1: 'title.function' },
-                contains: [D]
+                className: { 1: "title.function" },
+                contains: [D],
             },
             G,
             j,
             L,
             Z,
-            { match: /\$[(.]/ }
-        ]
+            { match: /\$[(.]/ },
+        ],
     };
 }
 e.exports = function (e) {
     let i = e.regex,
         o = c(e),
         a = t,
-        u = ['any', 'void', 'number', 'boolean', 'string', 'object', 'never', 'symbol', 'bigint', 'unknown'],
+        u = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
         d = {
             begin: [/namespace/, /\s+/, e.IDENT_RE],
             beginScope: {
-                1: 'keyword',
-                3: 'title.class'
-            }
+                1: "keyword",
+                3: "title.class",
+            },
         },
         f = {
-            beginKeywords: 'interface',
+            beginKeywords: "interface",
             end: /\{/,
             excludeEnd: !0,
             keywords: {
-                keyword: 'interface extends',
-                built_in: u
+                keyword: "interface extends",
+                built_in: u,
             },
-            contains: [o.exports.CLASS_REFERENCE]
+            contains: [o.exports.CLASS_REFERENCE],
         },
         _ = {
-            className: 'meta',
-            relevance: 10
+            className: "meta",
+            relevance: 10,
         },
-        p = ['type', 'interface', 'public', 'private', 'protected', 'implements', 'declare', 'abstract', 'readonly', 'enum', 'override', 'satisfies'],
+        p = [
+            "type",
+            "interface",
+            "public",
+            "private",
+            "protected",
+            "implements",
+            "declare",
+            "abstract",
+            "readonly",
+            "enum",
+            "override",
+            "satisfies",
+        ],
         h = {
             $pattern: t,
             keyword: n.concat(p),
             literal: r,
             built_in: l.concat(u),
-            'variable.language': s
+            "variable.language": s,
         },
         m = {
-            className: 'meta',
-            begin: '@' + a
+            className: "meta",
+            begin: "@" + a,
         },
         g = (e, t, n) => {
             let r = e.contains.findIndex((e) => e.label === t);
-            if (-1 === r) throw Error('can not find mode to replace');
+            if (-1 === r) throw Error("can not find mode to replace");
             e.contains.splice(r, 1, n);
         };
-    (Object.assign(o.keywords, h), o.exports.PARAMS_CONTAINS.push(m));
-    let E = o.contains.find((e) => 'attr' === e.scope),
+    Object.assign(o.keywords, h), o.exports.PARAMS_CONTAINS.push(m);
+    let E = o.contains.find((e) => "attr" === e.scope),
         b = Object.assign({}, E, { match: i.concat(a, i.lookahead(/\s*\?:/)) });
     return (
         o.exports.PARAMS_CONTAINS.push([o.exports.CLASS_REFERENCE, E, b]),
         (o.contains = o.contains.concat([m, d, f, b])),
-        g(o, 'shebang', e.SHEBANG()),
-        g(o, 'use_strict', _),
-        (o.contains.find((e) => 'func.def' === e.label).relevance = 0),
+        g(o, "shebang", e.SHEBANG()),
+        g(o, "use_strict", _),
+        (o.contains.find((e) => "func.def" === e.label).relevance = 0),
         Object.assign(o, {
-            name: 'TypeScript',
-            aliases: ['ts', 'tsx', 'mts', 'cts']
+            name: "TypeScript",
+            aliases: ["ts", "tsx", "mts", "cts"],
         }),
         o
     );

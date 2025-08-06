@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(442837),
     i = n(176919),
     o = n(975060),
@@ -8,6 +8,6 @@ function s() {
         [t, n] = (0, r.Wu)([a.Z], () => [a.Z.error, a.Z.isAwaitingAuthentication]);
     return {
         paymentError: null != t ? t : e,
-        paymentAuthenticationState: n ? i.wr.PENDING : null != t ? i.wr.ERROR : i.wr.NONE
+        paymentAuthenticationState: n ? i.wr.PENDING : null != t ? i.wr.ERROR : i.wr.NONE,
     };
 }

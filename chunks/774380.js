@@ -12,35 +12,35 @@ var i = n(442837),
     m = n(561012);
 let g = (e) => {
         let { onOpenPremiumClick: t } = e,
-            n = (0, r.jsx)('div', {
-                'data-button-hoisted-classname-wrapper': !0,
+            n = (0, r.jsx)("div", {
+                "data-button-hoisted-classname-wrapper": !0,
                 className: m.tier0Button,
                 children: (0, r.jsx)(l.zxk, {
-                    variant: 'overlay-primary',
-                    size: 'md',
+                    variant: "overlay-primary",
+                    size: "md",
                     fullWidth: !0,
                     text: u.intl.string(u.t.hvVgAQ),
                     onClick: () => {
-                        ((0, a.z)(), null != t && t());
-                    }
-                })
+                        (0, a.z)(), null != t && t();
+                    },
+                }),
             });
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: m.tier0Container,
             children: [
                 (0, r.jsx)(l.X6q, {
                     className: m.tier0Heading,
-                    variant: 'heading-xxl/extrabold',
-                    children: u.intl.string(u.t['qUl+Ky'])
+                    variant: "heading-xxl/extrabold",
+                    children: u.intl.string(u.t["qUl+Ky"]),
                 }),
                 (0, r.jsx)(s.wp, {
                     className: m.tier0Card,
                     ctaButton: n,
                     featureSet: s.uZ.BOOSTING,
                     showWumpus: !0,
-                    showYearlyPrice: !0
-                })
-            ]
+                    showYearlyPrice: !0,
+                }),
+            ],
         });
     },
     p = (e) => {

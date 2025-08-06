@@ -8,7 +8,7 @@ n.d(t, {
     Wf: () => U,
     cB: () => x,
     dy: () => w,
-    wP: () => D
+    wP: () => D,
 });
 var r = n(255367);
 n(73800);
@@ -43,7 +43,7 @@ function N(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -53,15 +53,15 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -69,11 +69,11 @@ function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -93,7 +93,7 @@ function w(e) {
     return (0, r.jsx)(o.ua7, {
         text: t.name,
         delay: 750,
-        position: 'top',
+        position: "top",
         children: (e) =>
             (0, r.jsx)(
                 a.Z,
@@ -102,11 +102,11 @@ function w(e) {
                         src: t.src,
                         emojiName: t.name,
                         animated: !1,
-                        surrogate: t.surrogate
+                        surrogate: t.surrogate,
                     },
-                    e
-                )
-            )
+                    e,
+                ),
+            ),
     });
 }
 function D(e) {
@@ -114,7 +114,7 @@ function D(e) {
     return (0, r.jsx)(o.ua7, {
         text: t.name,
         delay: 750,
-        position: 'top',
+        position: "top",
         children: (e) =>
             (0, r.jsx)(
                 a.Z,
@@ -122,11 +122,11 @@ function D(e) {
                     {
                         emojiId: t.emojiId,
                         emojiName: t.name,
-                        animated: t.animated
+                        animated: t.animated,
                     },
-                    e
-                )
-            )
+                    e,
+                ),
+            ),
     });
 }
 function L(e) {
@@ -138,33 +138,33 @@ function x(e) {
         l = (0, i.e7)([b.default], () => b.default.getUser(t)),
         c = (0, i.e7)([E.Z], () => E.Z.hidePersonalInformation),
         u = v.ZP.useName(n, a, l),
-        d = (0, r.jsx)(f.Z, { children: null == u ? '<@'.concat(t, '>') : '@'.concat(u) });
+        d = (0, r.jsx)(f.Z, { children: null == u ? "<@".concat(t, ">") : "@".concat(u) });
     if (null != l) {
-        let e = c || l.hasUniqueUsername() ? null : '#'.concat(l.discriminator);
+        let e = c || l.hasUniqueUsername() ? null : "#".concat(l.discriminator);
         return (0, r.jsx)(o.ua7, {
-            text: (0, r.jsxs)('div', {
+            text: (0, r.jsxs)("div", {
                 className: S.userTooltip,
                 children: [
                     (0, r.jsx)(s.Z, {
                         user: l,
                         animate: !0,
                         size: o.EFr.SIZE_16,
-                        className: S.avatar
+                        className: S.avatar,
                     }),
                     I.ZP.getUserTag(l, {
-                        mode: 'username',
-                        identifiable: c ? 'never' : 'always'
+                        mode: "username",
+                        identifiable: c ? "never" : "always",
                     }),
-                    (0, r.jsx)('span', {
+                    (0, r.jsx)("span", {
                         className: S.discriminator,
-                        children: e
-                    })
-                ]
+                        children: e,
+                    }),
+                ],
             }),
             delay: 750,
-            position: 'top',
-            'aria-label': I.ZP.getUserTag(l, { decoration: 'never' }),
-            children: (e) => (0, r.jsx)(o.P3F, P(C({ tag: 'span' }, e), { children: d }))
+            position: "top",
+            "aria-label": I.ZP.getUserTag(l, { decoration: "never" }),
+            children: (e) => (0, r.jsx)(o.P3F, P(C({ tag: "span" }, e), { children: d })),
         });
     }
     return d;
@@ -175,12 +175,12 @@ function M(e) {
         s = (0, i.e7)([l.Z], () => l.Z.roleStyle),
         c = (0, p._f)(n, a, null == a ? void 0 : a.colorStrings);
     if (null == a)
-        return (0, r.jsxs)('span', {
-            children: ['@', T.intl.string(T.t['YV4F/v'])]
+        return (0, r.jsxs)("span", {
+            children: ["@", T.intl.string(T.t["YV4F/v"])],
         });
     let u = null != a.color && 0 !== a.color,
-        d = 'dot' === s,
-        _ = 'username' === s && u;
+        d = "dot" === s,
+        _ = "username" === s && u;
     return (0, r.jsxs)(f.Z, {
         color: _ ? a.color : null,
         roleColors: _ ? c : null,
@@ -190,29 +190,31 @@ function M(e) {
                     color: a.colorString,
                     colors: c,
                     background: !1,
-                    tooltip: !1
+                    tooltip: !1,
                 }),
-            '@',
-            a.name
-        ]
+            "@",
+            a.name,
+        ],
     });
 }
 function k(e) {
     let { id: t } = e,
         n = (0, i.e7)([h.Z], () => h.Z.getChannel(t)),
         o = T.intl.string(T.t.zLZPmp).toLowerCase(),
-        a = 'text',
+        a = "text",
         s = !0;
     if (null != n) {
         var l;
-        ((o = (0, c.YO)(n) ? n.name : T.intl.string(T.t['/YzI6+'])), (a = (0, c.YO)(n) ? (null != (l = (0, O.wl)(n)) ? l : 'text') : 'locked'), (s = (0, u.B)(n.type)));
+        (o = (0, c.YO)(n) ? n.name : T.intl.string(T.t["/YzI6+"])),
+            (a = (0, c.YO)(n) ? (null != (l = (0, O.wl)(n)) ? l : "text") : "locked"),
+            (s = (0, u.B)(n.type));
     }
     return s
         ? (0, r.jsx)(f.Z, {
               iconType: a,
-              children: o
+              children: o,
           })
-        : (0, r.jsx)('span', { children: '#' + o });
+        : (0, r.jsx)("span", { children: "#" + o });
 }
 function j(e) {
     let { id: t, itemId: n, guildId: i } = e,
@@ -220,20 +222,20 @@ function j(e) {
         a = (0, d.W)(t, n, i);
     return (0, r.jsxs)(f.Z, {
         iconType: t,
-        children: [o, null != a && (0, r.jsx)(_.Z, {}), a]
+        children: [o, null != a && (0, r.jsx)(_.Z, {}), a],
     });
 }
 function U(e) {
     let { text: t, id: n } = e;
     return (0, r.jsxs)(f.Z, {
-        children: [t, '(', n, ')']
+        children: [t, "(", n, ")"],
     });
 }
 function G(e) {
     let { timestamp: t } = e;
-    return (0, r.jsx)('span', {
+    return (0, r.jsx)("span", {
         className: A.timestamp,
-        children: t.formatted
+        children: t.formatted,
     });
 }
 function B(e) {
@@ -242,17 +244,17 @@ function B(e) {
         o = (0, i.e7)([m.Z], () => m.Z.getDetectableGame(n)),
         a =
             null != o
-                ? (0, r.jsx)('img', {
-                      alt: '',
+                ? (0, r.jsx)("img", {
+                      alt: "",
                       className: S.icon,
                       src: y.ZP.getApplicationIconURL({
                           id: o.id,
                           icon: o.icon,
-                          size: 32
-                      })
+                          size: 32,
+                      }),
                   })
                 : null;
     return (0, r.jsxs)(f.Z, {
-        children: [a, null != (t = null == o ? void 0 : o.name) ? t : T.intl.string(T.t['11pdXV'])]
+        children: [a, null != (t = null == o ? void 0 : o.name) ? t : T.intl.string(T.t["11pdXV"])],
     });
 }

@@ -14,7 +14,8 @@ let o = (e) => {
         logger: u,
         postClose: d,
         onSendingToRPCClient: (e, t) => {
-            (r.default.isLoggingOverlayEvents || (e.cmd !== a.Etm.OVERLAY && e.evt !== a.zMe.OVERLAY)) && u.info('Socket Emit: '.concat(t), (0, i.Z)(e));
-        }
+            (r.default.isLoggingOverlayEvents || (e.cmd !== a.Etm.OVERLAY && e.evt !== a.zMe.OVERLAY)) &&
+                u.info("Socket Emit: ".concat(t), (0, i.Z)(e));
+        },
     });
 };

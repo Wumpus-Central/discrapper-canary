@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(539854), n(388685));
+n.d(t, { Z: () => E }), n(539854), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -18,28 +18,40 @@ var i = n(255367),
     _ = n(24085);
 let j = [
     {
-        name: 'gif',
-        extensions: ['gif']
-    }
+        name: "gif",
+        extensions: ["gif"],
+    },
 ];
 function E(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: C, guildId: O, className: v, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: I, withHighlight: N = !1 } = e,
+    let {
+            showRemoveAvatarButton: t,
+            errors: n,
+            onAvatarChange: s,
+            sectionTitle: E,
+            changeAvatarButtonText: C,
+            guildId: O,
+            className: v,
+            disabled: S = !1,
+            isTryItOutFlow: T = !1,
+            forcedDivider: I,
+            withHighlight: N = !1,
+        } = e,
         { newestAnalyticsLocation: y } = (0, d.ZP)(),
         A = N ? c.gtL : o.zx,
-        P = (0, m.T)({ location: 'AvatarSection' }),
+        P = (0, m.T)({ location: "AvatarSection" }),
         R = [];
     P && R.push(l.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE);
     let [D, Z] = (0, u.US)(R),
         w = D === l.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE,
         k = r.useCallback(() => {
-            (Z(h.L.TAKE_ACTION),
+            Z(h.L.TAKE_ACTION),
                 (0, p.$r)({
                     uploadType: f.pC.AVATAR,
                     analyticsSource: y,
                     filters: T ? j : void 0,
                     guildId: O,
-                    isTryItOutFlow: T
-                }));
+                    isTryItOutFlow: T,
+                });
         }, [O, y, T, Z]);
     return (0, i.jsx)(g.Z, {
         className: v,
@@ -47,39 +59,39 @@ function E(e) {
         titleIcon: w
             ? (0, i.jsx)(c.IGR, {
                   text: x.intl.string(x.t.y2b7CA),
-                  className: _.newBadge
+                  className: _.newBadge,
               })
             : void 0,
         description: P
             ? x.intl.format(x.t.U4tZfX, {
                   recentAvatarsLimit: b.iZ,
-                  onClick: k
+                  onClick: k,
               })
             : void 0,
         errors: n,
         disabled: S,
         forcedDivider: I,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: _.buttonsContainer,
             children: [
                 (0, i.jsx)(A, {
                     className: a()({ [_.buttonHighlighted]: N }),
                     size: o.zx.Sizes.SMALL,
                     onClick: k,
-                    children: null != C ? C : x.intl.string(x.t['4OynCA'])
+                    children: null != C ? C : x.intl.string(x.t["4OynCA"]),
                 }),
                 t &&
-                    (0, i.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
+                    (0, i.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
                         className: _.removeButton,
                         children: (0, i.jsx)(c.zxk, {
-                            variant: 'secondary',
-                            size: 'sm',
+                            variant: "secondary",
+                            size: "sm",
                             text: null != O ? x.intl.string(x.t.TDjKDg) : x.intl.string(x.t.twB3f3),
-                            onClick: () => s(null)
-                        })
-                    })
-            ]
-        })
+                            onClick: () => s(null),
+                        }),
+                    }),
+            ],
+        }),
     });
 }

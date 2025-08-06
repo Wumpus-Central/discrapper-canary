@@ -11,13 +11,13 @@ var i = n(106351),
     m = n(914010),
     p = n(981631);
 let g = {
-    binds: ['mod+u'],
+    binds: ["mod+u"],
     comboKeysBindGlobal: !0,
     action() {
         let e = m.Z.getGuildId(),
             t = u.Z.getChannelId(e),
             n = d.Z.getChannel(t);
-        if (null != t && null != n && n.type === i.d.GUILD_VOICE) return (r.Z.updateChatOpen(t, !a.Z.getChatOpen(t)), !1);
+        if (null != t && null != n && n.type === i.d.GUILD_VOICE) return r.Z.updateChatOpen(t, !a.Z.getChatOpen(t)), !1;
         if (null != t && null != n && n.type === i.d.DM) {
             let e = c.ZP.getSection(t, null == n ? void 0 : n.isDM()),
                 i = (0, o.Of)(n.getRecipientId()),
@@ -25,12 +25,12 @@ let g = {
             return (
                 (0, l.TY)({
                     displayProfile: i,
-                    isProfileOpen: !r
+                    isProfileOpen: !r,
                 }),
                 s.Z.toggleUserProfileSidebarSection(),
                 !1
             );
         }
-        return (s.Z.toggleMembersSection(), !1);
-    }
+        return s.Z.toggleMembersSection(), !1;
+    },
 };

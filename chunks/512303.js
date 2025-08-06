@@ -44,11 +44,11 @@ function y(e) {
                   iconLeft: () =>
                       (0, r.jsx)(f.Z, {
                           guild: N,
-                          size: f.Z.Sizes.MINI
+                          size: f.Z.Sizes.MINI,
                       }),
-                  id: 'integration-owner',
+                  id: "integration-owner",
                   label: N.name,
-                  subtext: E.intl.formatToPlainString(E.t.ShLXXF, { application: e.author.username })
+                  subtext: E.intl.formatToPlainString(E.t.ShLXXF, { application: e.author.username }),
               }))
             : null != A &&
               (w = (0, r.jsx)(s.sNh, {
@@ -57,20 +57,20 @@ function y(e) {
                           userId: A.id,
                           guildId: R,
                           channelId: e.channel_id,
-                          sourceAnalyticsLocations: v
+                          sourceAnalyticsLocations: v,
                       }),
                   className: b.interactionInfoMenuItem,
                   iconLeft: () =>
                       (0, r.jsx)(c.Z, {
                           user: A,
-                          size: s.EFr.SIZE_20
+                          size: s.EFr.SIZE_20,
                       }),
-                  id: 'integration-owner',
+                  id: "integration-owner",
                   label: A.username,
-                  subtext: E.intl.formatToPlainString(E.t.ShLXXF, { application: e.author.username })
+                  subtext: E.intl.formatToPlainString(E.t.ShLXXF, { application: e.author.username }),
               })),
         (0, r.jsxs)(s.sNh, {
-            id: 'view-interaction-info',
+            id: "view-interaction-info",
             label: E.intl.string(E.t.Rjezb2),
             children: [
                 w,
@@ -81,20 +81,20 @@ function y(e) {
                                   userId: P.id,
                                   guildId: R,
                                   channelId: e.channel_id,
-                                  sourceAnalyticsLocations: v
+                                  sourceAnalyticsLocations: v,
                               }),
                           className: b.interactionInfoMenuItem,
                           iconLeft: () =>
                               (0, r.jsx)(c.Z, {
                                   user: P,
-                                  size: s.EFr.SIZE_20
+                                  size: s.EFr.SIZE_20,
                               }),
-                          id: 'interaction-user',
+                          id: "interaction-user",
                           label: P.username,
-                          subtext: E.intl.string(E.t['04gxNj'])
+                          subtext: E.intl.string(E.t["04gxNj"]),
                       })
-                    : null
-            ]
+                    : null,
+            ],
         })
     );
 }

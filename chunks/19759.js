@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => _,
-    h: () => c
+    h: () => c,
 });
 var r,
     i = n(442837),
@@ -13,7 +13,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,17 +43,17 @@ let c = 360,
         showDevWidget: !1,
         devWidgetPosition: {
             x: 0,
-            y: 0
+            y: 0,
         },
         sortedScreenKeys: [],
-        isRandomlyChangingPremiumOptions: !1
+        isRandomlyChangingPremiumOptions: !1,
     };
 function d(e) {
     a.Z.isDeveloper && (u = l({}, u, e.settings));
 }
 class f extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        ((u = null != e ? e : u), (o.Z.actionLogger.persist = a.Z.isDeveloper));
+        (u = null != e ? e : u), (o.Z.actionLogger.persist = a.Z.isDeveloper);
     }
     getUserAgnosticState() {
         return u;
@@ -81,5 +81,5 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
         return u.isRandomlyChangingPremiumOptions;
     }
 }
-(s(f, 'displayName', 'DevToolsSettingsStore'), s(f, 'persistKey', 'DevToolsSettingsStore'));
+s(f, "displayName", "DevToolsSettingsStore"), s(f, "persistKey", "DevToolsSettingsStore");
 let _ = new f(o.Z, { DEV_TOOLS_SETTINGS_UPDATE: d });

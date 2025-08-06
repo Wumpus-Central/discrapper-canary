@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => R,
-    j: () => Z
+    j: () => Z,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -44,7 +44,7 @@ function w(e) {
     }, [t.id, h, s]);
     let C = (e) => {
         (0, a.ZDy)(async () => {
-            let { default: i } = await n.e('35641').then(n.bind(n, 89216));
+            let { default: i } = await n.e("35641").then(n.bind(n, 89216));
             return (n) => {
                 var l, a;
                 return (0, r.jsx)(
@@ -53,31 +53,31 @@ function w(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, n)),
                     (a = a =
                         {
                             guildId: t.id,
-                            startingChannelId: e
+                            startingChannelId: e,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
@@ -91,77 +91,77 @@ function w(e) {
                           })(Object(a)).forEach(function (e) {
                               Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                           }),
-                    l)
+                    l),
                 );
             };
         });
     };
     return _ || 0 === b.length
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: T.recommendations,
               children: [
                   (0, r.jsx)(a.Text, {
-                      variant: 'text-md/medium',
-                      color: 'header-primary',
-                      children: S.intl.string(S.t.NN7rDw)
+                      variant: "text-md/medium",
+                      color: "header-primary",
+                      children: S.intl.string(S.t.NN7rDw),
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: T.recsSubheader,
                       children: [
                           (0, r.jsx)(a.Text, {
-                              variant: 'text-xs/normal',
-                              color: 'text-muted',
-                              children: S.intl.string(S.t['3Uuql5'])
+                              variant: "text-xs/normal",
+                              color: "text-muted",
+                              children: S.intl.string(S.t["3Uuql5"]),
                           }),
                           (0, r.jsxs)(a.P3F, {
                               className: T.dismissAll,
                               onClick: () => O(!0),
                               children: [
                                   (0, r.jsx)(a.dz2, {
-                                      size: 'xxs',
-                                      color: 'currentColor',
-                                      className: T.checkmark
+                                      size: "xxs",
+                                      color: "currentColor",
+                                      className: T.checkmark,
                                   }),
                                   (0, r.jsx)(a.Text, {
                                       className: T.dismissAllText,
-                                      variant: 'text-xs/medium',
-                                      color: 'text-brand',
-                                      children: S.intl.string(S.t.ZC3PJy)
-                                  })
-                              ]
-                          })
-                      ]
+                                      variant: "text-xs/medium",
+                                      color: "text-brand",
+                                      children: S.intl.string(S.t.ZC3PJy),
+                                  }),
+                              ],
+                          }),
+                      ],
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: T.recommendedChannels,
                       children: b.map((e, n) =>
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsxs)('div', {
+                                  (0, r.jsxs)("div", {
                                       className: T.channelRow,
                                       children: [
-                                          (0, r.jsxs)('div', {
+                                          (0, r.jsxs)("div", {
                                               className: T.channelInfo,
                                               children: [
-                                                  (0, r.jsxs)('div', {
+                                                  (0, r.jsxs)("div", {
                                                       className: T.channelName,
                                                       children: [
                                                           (0, r.jsx)(u._W, {
                                                               channel: e,
-                                                              guild: t
+                                                              guild: t,
                                                           }),
                                                           (0, r.jsx)(o.Z, {
                                                               className: T.__invalid_name,
                                                               children: (0, r.jsx)(a.Text, {
                                                                   className: T.__invalid_channelText,
-                                                                  variant: 'text-md/medium',
+                                                                  variant: "text-md/medium",
                                                                   lineClamp: 1,
-                                                                  color: 'text-default',
-                                                                  children: e.name
-                                                              })
-                                                          })
-                                                      ]
+                                                                  color: "text-default",
+                                                                  children: e.name,
+                                                              }),
+                                                          }),
+                                                      ],
                                                   }),
                                                   null != e.topic && e.topic.length > 0
                                                       ? (0, r.jsx)(
@@ -170,39 +170,41 @@ function w(e) {
                                                                 className: P.markup,
                                                                 children: (0, r.jsx)(a.Text, {
                                                                     className: T.topic,
-                                                                    variant: 'text-xs/normal',
-                                                                    children: m.Z.parseTopic(e.topic, !0, { channelId: e.id })
-                                                                })
+                                                                    variant: "text-xs/normal",
+                                                                    children: m.Z.parseTopic(e.topic, !0, {
+                                                                        channelId: e.id,
+                                                                    }),
+                                                                }),
                                                             },
-                                                            'topic'
+                                                            "topic",
                                                         )
-                                                      : null
-                                              ]
+                                                      : null,
+                                              ],
                                           }),
                                           (0, c.s)(t.id, e.id)
                                               ? (0, r.jsx)(a.zxk, {
-                                                    size: 'sm',
-                                                    variant: 'primary',
+                                                    size: "sm",
+                                                    variant: "primary",
                                                     text: S.intl.string(S.t.OYkgVl),
-                                                    onClick: () => (0, j.pt)(e.id)
+                                                    onClick: () => (0, j.pt)(e.id),
                                                 })
                                               : (0, r.jsx)(a.zxk, {
-                                                    size: 'sm',
-                                                    variant: 'secondary',
+                                                    size: "sm",
+                                                    variant: "secondary",
                                                     text: S.intl.string(S.t.zA9d1N),
                                                     icon: a.mBM,
-                                                    iconPosition: 'start',
-                                                    onClick: () => C(e.id)
-                                                })
-                                      ]
+                                                    iconPosition: "start",
+                                                    onClick: () => C(e.id),
+                                                }),
+                                      ],
                                   }),
-                                  n < b.length - 1 ? (0, r.jsx)('div', { className: T.separator }) : null
-                              ]
-                          })
-                      )
+                                  n < b.length - 1 ? (0, r.jsx)("div", { className: T.separator }) : null,
+                              ],
+                          }),
+                      ),
                   }),
-                  (0, r.jsx)('div', { className: T.largeSeparator })
-              ]
+                  (0, r.jsx)("div", { className: T.largeSeparator }),
+              ],
           });
 }
 function R(e) {
@@ -235,10 +237,10 @@ function R(e) {
         ? null
         : s
           ? (0, r.jsx)(a.$jN, {})
-          : (0, r.jsxs)('div', {
+          : (0, r.jsxs)("div", {
                 className: T.columns,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: T.channelBrowser,
                         children: [
                             (0, r.jsx)(a.P3F, {
@@ -247,22 +249,22 @@ function R(e) {
                                 children: (0, r.jsx)(x.Z, {
                                     direction: g ? x.Z.Directions.DOWN : x.Z.Directions.UP,
                                     height: 16,
-                                    width: 16
-                                })
+                                    width: 16,
+                                }),
                             }),
                             (0, r.jsx)(a.X6q, {
                                 className: T.header,
-                                variant: 'heading-lg/extrabold',
-                                children: S.intl.string(S.t['4GSygo'])
+                                variant: "heading-lg/extrabold",
+                                children: S.intl.string(S.t["4GSygo"]),
                             }),
                             (0, r.jsx)(a.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'header-secondary',
-                                children: S.intl.string(S.t.Kq7FAQ)
+                                variant: "text-sm/normal",
+                                color: "header-secondary",
+                                children: S.intl.string(S.t.Kq7FAQ),
                             }),
                             (0, r.jsx)(C.Wu, {
                                 className: T.advancedModeToggle,
-                                guildId: n.id
+                                guildId: n.id,
                             }),
                             g
                                 ? null
@@ -274,46 +276,46 @@ function R(e) {
                                               guild: n,
                                               categories: c,
                                               channels: o,
-                                              hasSidebar: !1
-                                          })
-                                      ]
+                                              hasSidebar: !1,
+                                          }),
+                                      ],
                                   }),
                             u &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)('div', { className: T.largeSeparator }),
+                                        (0, r.jsx)("div", { className: T.largeSeparator }),
                                         (0, r.jsx)(a.X6q, {
                                             className: T.prejoinHeader,
-                                            variant: 'heading-lg/extrabold',
-                                            children: S.intl.string(S.t.g2Rnpa)
+                                            variant: "heading-lg/extrabold",
+                                            children: S.intl.string(S.t.g2Rnpa),
                                         }),
                                         (0, r.jsx)(a.Text, {
                                             className: T.prejoinSubHeader,
-                                            variant: 'text-sm/normal',
-                                            color: 'header-secondary',
-                                            children: S.intl.string(S.t.bLDQ1d)
+                                            variant: "text-sm/normal",
+                                            color: "header-secondary",
+                                            children: S.intl.string(S.t.bLDQ1d),
                                         }),
-                                        (0, r.jsx)('div', {
+                                        (0, r.jsx)("div", {
                                             ref: m,
                                             className: T.advancedModeQuestions,
                                             children: (0, r.jsx)(E.Z, {
                                                 guildId: n.id,
                                                 prejoinOnly: !0,
                                                 includeCount: !0,
-                                                singleColumn: !0
-                                            })
-                                        })
-                                    ]
-                                })
-                        ]
+                                                singleColumn: !0,
+                                            }),
+                                        }),
+                                    ],
+                                }),
+                        ],
                     }),
                     (0, r.jsx)(I.Z, {
                         guild: n,
                         scrollToQuestions: () => {
-                            null != m.current && m.current.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    })
-                ]
+                            null != m.current && m.current.scrollIntoView({ behavior: "smooth" });
+                        },
+                    }),
+                ],
             });
 }
 function Z() {
@@ -332,6 +334,6 @@ function Z() {
               },
               onReset: j.BG,
               submitting: t,
-              onSaveText: S.intl.string(S.t.R3BPHx)
+              onSaveText: S.intl.string(S.t.R3BPHx),
           });
 }

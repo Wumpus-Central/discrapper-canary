@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -27,46 +27,50 @@ function j(e) {
         E = g.ZP.getDisplayName(r);
     if (null != l) {
         let e;
-        ((e = new Date(l.status === b.O0b.PAUSED && null != l.pauseEndsAt ? l.pauseEndsAt : l.currentPeriodEnd)), (t = (0, g.N1)(e, d)));
+        (e = new Date(l.status === b.O0b.PAUSED && null != l.pauseEndsAt ? l.pauseEndsAt : l.currentPeriodEnd)),
+            (t = (0, g.N1)(e, d));
     }
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: _.accountCreditRow,
         children: [
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: s()({
                     [_.iconBackgroundTier0]: m.skuId === f.Si.TIER_0,
                     [_.iconBackgroundTier1]: m.skuId === f.Si.TIER_1,
-                    [_.iconBackgroundTier2]: m.skuId === f.Si.TIER_2
+                    [_.iconBackgroundTier2]: m.skuId === f.Si.TIER_2,
                 }),
                 children: (0, i.jsx)(c.SrA, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: _.icon
-                })
+                    size: "md",
+                    color: "currentColor",
+                    className: _.icon,
+                }),
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: _.rowDetails,
                 children: [
                     (0, i.jsx)(c.X6q, {
-                        variant: 'heading-md/semibold',
-                        children: x.intl.format(x.t.LzobT0, { planName: E })
+                        variant: "heading-md/semibold",
+                        children: x.intl.format(x.t.LzobT0, { planName: E }),
                     }),
                     n.hasFreePremium() || (null != l && l.isPurchasedExternally)
                         ? null
                         : (0, i.jsx)(c.X6q, {
                               className: _.rowApplied,
-                              variant: 'heading-sm/semibold',
-                              color: 'header-secondary',
-                              children: j && null != l ? x.intl.formatToPlainString(x.t['5CNRRE'], { date: null != t ? t : 0 }) : x.intl.formatToPlainString(x.t.eNXZ5O, { planName: E })
-                          })
-                ]
+                              variant: "heading-sm/semibold",
+                              color: "header-secondary",
+                              children:
+                                  j && null != l
+                                      ? x.intl.formatToPlainString(x.t["5CNRRE"], { date: null != t ? t : 0 })
+                                      : x.intl.formatToPlainString(x.t.eNXZ5O, { planName: E }),
+                          }),
+                ],
             }),
             (0, i.jsx)(c.Text, {
                 className: _.rowCreditCount,
-                variant: 'text-md/semibold',
-                children: x.intl.format(x.t['ess/xs'], { count: a })
-            })
-        ]
+                variant: "text-md/semibold",
+                children: x.intl.format(x.t["ess/xs"], { count: a }),
+            }),
+        ],
     });
 }
 let E = function (e) {
@@ -85,9 +89,9 @@ let E = function (e) {
         E = (0, o.e7)([d.default], () => d.default.getCurrentUser());
     return null == E
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               children: [
-                  (0, i.jsx)('div', {
+                  (0, i.jsx)("div", {
                       className: s()(t, _.premiumSubscriptionAccountCredit, _.accountCreditsContainer),
                       children: Object.keys(r).map((e) =>
                           (0, i.jsx)(
@@ -97,24 +101,24 @@ let E = function (e) {
                                   count: r[e].length,
                                   userPremiumSubscription: u,
                                   user: E,
-                                  unconsumedFractionalPremiumUnits: a
+                                  unconsumedFractionalPremiumUnits: a,
                               },
-                              e
-                          )
-                      )
+                              e,
+                          ),
+                      ),
                   }),
                   b &&
                       g &&
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           children: [
                               (0, i.jsx)(c.Text, {
                                   className: _.tier1AccountCreditHeader,
-                                  variant: 'text-md/normal',
-                                  children: x.intl.string(x.t['VNr4+P'])
+                                  variant: "text-md/normal",
+                                  children: x.intl.string(x.t["VNr4+P"]),
                               }),
-                              (0, i.jsx)(h.R, {})
-                          ]
-                      })
-              ]
+                              (0, i.jsx)(h.R, {}),
+                          ],
+                      }),
+              ],
           });
 };

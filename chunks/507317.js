@@ -23,7 +23,9 @@ let v = function (e) {
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, a.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e('91689'), n.e('59732'), n.e('77942')]).then(n.bind(n, 712451));
+                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("77942")]).then(
+                        n.bind(n, 712451),
+                    );
                     return (n) =>
                         (0, r.jsx)(
                             l,
@@ -31,24 +33,24 @@ let v = function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })(
@@ -59,39 +61,39 @@ let v = function (e) {
                                         let { imageUri: n } = e;
                                         return g.Z.saveGuild(t.id, { homeHeader: n });
                                     },
-                                    uploadType: f.pC.HOME_HEADER
+                                    uploadType: f.pC.HOME_HEADER,
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         );
                 });
             },
-            [t.id]
+            [t.id],
         ),
         O = i.useCallback(
             (e) => {
-                (e.preventDefault(),
+                e.preventDefault(),
                     e.stopPropagation(),
                     (0, s.yw)(p.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: p.jXE.GUILD_SETTINGS_ONBOARDING,
-                            object: p.qAy.LEARN_MORE
+                            object: p.qAy.LEARN_MORE,
                         },
                         guild_id: null == t ? void 0 : t.id,
-                        location_stack: []
+                        location_stack: [],
                     }),
                     (0, c.Z)({
                         analyticsLocations: [],
                         analyticsSourceLocation: {
                             section: p.jXE.GUILD_SETTINGS_ONBOARDING,
                             object: p.qAy.ONBOARDING_EDIT,
-                            page: p.ZY5.GUILD_SETTINGS
+                            page: p.ZY5.GUILD_SETTINGS,
                         },
                         guild: t,
-                        perks: (0, h.XO)()
-                    }));
+                        perks: (0, h.XO)(),
+                    });
             },
-            [t]
+            [t],
         ),
         y = (0, r.jsx)(d.Z, {
             image: t.homeHeader,
@@ -99,107 +101,107 @@ let v = function (e) {
                 null != e
                     ? m.ZP.getGuildHomeHeaderURL({
                           id: t.id,
-                          homeHeader: e
+                          homeHeader: e,
                       })
                     : null,
             disabled: !v,
             onChange: _,
             hint: b.intl.string(b.t.NyXznp),
             enabled: v,
-            maxFileSizeBytes: x.B
+            maxFileSizeBytes: x.B,
         });
     return v
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: j.sectionHeader,
                       children: [
                           (0, r.jsx)(a.X6q, {
                               className: j.header,
-                              variant: 'heading-lg/extrabold',
-                              children: b.intl.string(b.t.BBj1nZ)
+                              variant: "heading-lg/extrabold",
+                              children: b.intl.string(b.t.BBj1nZ),
                           }),
                           (0, r.jsx)(o.Z, {
                               className: j.boostIndicator,
                               guild: t,
                               guildFeature: p.oNc.BANNER,
-                              onClick: O
-                          })
-                      ]
+                              onClick: O,
+                          }),
+                      ],
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: j.section,
                       children: [
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: j.homeBannerExplainer,
                               children: [
                                   (0, r.jsx)(a.Text, {
-                                      variant: 'text-sm/normal',
-                                      color: 'header-secondary',
-                                      children: b.intl.string(b.t.Vwintr)
+                                      variant: "text-sm/normal",
+                                      color: "header-secondary",
+                                      children: b.intl.string(b.t.Vwintr),
                                   }),
                                   (0, r.jsx)(u.Z, {
                                       color: l.Tt.BRAND,
                                       className: j.uploadButton,
                                       buttonCTA: b.intl.string(b.t.yG2pUl),
                                       onChange: _,
-                                      maxFileSizeBytes: x.B
-                                  })
-                              ]
+                                      maxFileSizeBytes: x.B,
+                                  }),
+                              ],
                           }),
-                          (0, r.jsx)('div', { children: y })
-                      ]
-                  })
-              ]
+                          (0, r.jsx)("div", { children: y }),
+                      ],
+                  }),
+              ],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: j.sectionHeader,
                       children: [
                           (0, r.jsx)(a.X6q, {
                               className: j.header,
-                              variant: 'heading-lg/extrabold',
-                              children: b.intl.string(b.t.BBj1nZ)
+                              variant: "heading-lg/extrabold",
+                              children: b.intl.string(b.t.BBj1nZ),
                           }),
                           (0, r.jsx)(o.Z, {
                               className: j.boostIndicator,
                               guild: t,
                               guildFeature: p.oNc.BANNER,
-                              onClick: O
-                          })
-                      ]
+                              onClick: O,
+                          }),
+                      ],
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: j.section,
                       children: [
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: j.homeBannerExplainer,
                               children: [
                                   (0, r.jsx)(a.Text, {
-                                      variant: 'text-sm/normal',
-                                      color: 'header-secondary',
+                                      variant: "text-sm/normal",
+                                      color: "header-secondary",
                                       className: j.bannerDescription,
-                                      children: b.intl.string(b.t.Vwintr)
+                                      children: b.intl.string(b.t.Vwintr),
                                   }),
                                   (0, r.jsx)(a.zxk, {
-                                      variant: 'expressive',
+                                      variant: "expressive",
                                       icon: a.$Eu,
-                                      text: b.intl.string(b.t['+7XY39']),
-                                      onClick: O
-                                  })
-                              ]
+                                      text: b.intl.string(b.t["+7XY39"]),
+                                      onClick: O,
+                                  }),
+                              ],
                           }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               children: (0, r.jsx)(a.P3F, {
-                                  'aria-hidden': !0,
+                                  "aria-hidden": !0,
                                   tabIndex: -1,
                                   onClick: O,
-                                  children: y
-                              })
-                          })
-                      ]
-                  })
-              ]
+                                  children: y,
+                              }),
+                          }),
+                      ],
+                  }),
+              ],
           });
 };

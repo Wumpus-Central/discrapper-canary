@@ -16,21 +16,29 @@ class c extends (r = s.ZP.Store) {
     }
     isPendingSuccess(e) {
         let i = u[e];
-        return null != i && !o && i.healthScorePending && i.safeEnvironment && 0 === Object.keys(i.nsfwProperties).length && i.size && i.protected;
+        return (
+            null != i &&
+            !o &&
+            i.healthScorePending &&
+            i.safeEnvironment &&
+            0 === Object.keys(i.nsfwProperties).length &&
+            i.size &&
+            i.protected
+        );
     }
     getDiscoveryChecklist(e) {
         return u[e];
     }
 }
-((l = 'DiscoverGuildChecklistStore'),
-    (n = 'displayName') in c
+(l = "DiscoverGuildChecklistStore"),
+    (n = "displayName") in c
         ? Object.defineProperty(c, n, {
               value: l,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (c[n] = l));
+        : (c[n] = l);
 let d = new c(a.Z, {
     DISCOVER_CHECKLIST_FETCH_START: function (e) {
         o = !0;
@@ -41,7 +49,7 @@ let d = new c(a.Z, {
     DISCOVER_CHECKLIST_FETCH_SUCCESS: function (e) {
         var i;
         let { checklist: t, guildId: n } = e;
-        ((o = !1),
+        (o = !1),
             (u[n] = {
                 guildId: t.guild_id,
                 safeEnvironment: t.safe_environment,
@@ -58,7 +66,7 @@ let d = new c(a.Z, {
                 minimumGuildSize: null != t.minimum_size ? t.minimum_size : 1000,
                 healthScore: t.health_score,
                 minimumGuildAge: null != (i = t.minimum_age) ? i : 0,
-                age: t.age
-            }));
-    }
+                age: t.age,
+            });
+    },
 });

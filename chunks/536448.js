@@ -1,7 +1,7 @@
 var e = n(779688),
     o = n(394370),
     i = n(306983),
-    u = o('species');
+    u = o("species");
 t.exports = function (t) {
     return (
         i >= 51 ||

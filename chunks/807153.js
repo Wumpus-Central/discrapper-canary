@@ -13,12 +13,13 @@ var r = n(684342),
         return (
             (e.connect = function (e, t) {
                 var n = new o.r(e, t);
-                (a.C.push(n), s.set(e, n));
+                a.C.push(n), s.set(e, n);
             }),
             (e.observe = function (e, t, n) {
                 if (s.has(e)) {
                     var o = s.get(e);
-                    0 > l(o.observationTargets, t) && (o.observationTargets.push(new i.Q(t, n && n.box)), (0, r.t)(1), r.p.schedule());
+                    0 > l(o.observationTargets, t) &&
+                        (o.observationTargets.push(new i.Q(t, n && n.box)), (0, r.t)(1), r.p.schedule());
                 }
             }),
             (e.unobserve = function (e, t) {
@@ -31,7 +32,7 @@ var r = n(684342),
             (e.disconnect = function (e) {
                 if (s.has(e)) {
                     var t = s.get(e);
-                    (a.C.splice(a.C.indexOf(t), 1), s.delete(e), (0, r.t)(-t.observationTargets.length));
+                    a.C.splice(a.C.indexOf(t), 1), s.delete(e), (0, r.t)(-t.observationTargets.length);
                 }
             }),
             e

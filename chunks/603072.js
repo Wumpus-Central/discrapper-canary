@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => w }), n(388685));
+n.r(t), n.d(t, { default: () => w }), n(388685);
 var l = n(255367),
     r = n(73800),
     i = n(120356),
@@ -29,7 +29,9 @@ function I(e) {
     r.useEffect(() => {
         (0, m.Q3)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: y.L.DISMISS });
     });
-    let i = n ? O.intl.formatToPlainString(O.t.uqZgYW, { guildName: t.name }) : O.intl.formatToPlainString(O.t.velJeX, { guildName: t.name }),
+    let i = n
+            ? O.intl.formatToPlainString(O.t.uqZgYW, { guildName: t.name })
+            : O.intl.formatToPlainString(O.t.velJeX, { guildName: t.name }),
         a = n ? O.intl.string(O.t.h9mGOD) : O.intl.string(O.t.et6wam);
     return (
         (0, u.Tt)({ location: i }),
@@ -42,10 +44,10 @@ function I(e) {
             children: [
                 (0, l.jsx)(h.Z.Icon, {
                     icon: d.H$4,
-                    'aria-hidden': !0
+                    "aria-hidden": !0,
                 }),
-                (0, l.jsx)(h.Z.Title, { children: a })
-            ]
+                (0, l.jsx)(h.Z.Title, { children: a }),
+            ],
         })
     );
 }
@@ -65,18 +67,18 @@ function w(e) {
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, l.jsxs)('div', {
+                  (0, l.jsxs)("div", {
                       className: a()(N.chat, { [N.threadSidebarOpen]: y }),
                       children: [
                           (0, l.jsx)(I, { guild: i }),
-                          (0, l.jsxs)('div', {
+                          (0, l.jsxs)("div", {
                               className: a()(N.content, Z.container),
                               children: [
                                   s &&
                                       (0, l.jsxs)(d.njP, {
                                           className: Z.tabBar,
-                                          type: 'top',
-                                          look: 'brand',
+                                          type: "top",
+                                          look: "brand",
                                           selectedItem: u,
                                           onItemSelect: (e) => m(e),
                                           children: [
@@ -85,46 +87,48 @@ function w(e) {
                                                   {
                                                       className: Z.tabBarItem,
                                                       id: j.l7.CUSTOMIZE,
-                                                      children: O.intl.string(O.t.H2cICQ)
+                                                      children: O.intl.string(O.t.H2cICQ),
                                                   },
-                                                  j.l7.CUSTOMIZE
+                                                  j.l7.CUSTOMIZE,
                                               ),
                                               (0, l.jsxs)(
                                                   d.njP.Item,
                                                   {
                                                       className: Z.tabBarItem,
                                                       id: j.l7.BROWSE,
-                                                      'aria-label': O.intl.string(O.t.et6wam),
+                                                      "aria-label": O.intl.string(O.t.et6wam),
                                                       children: [
                                                           O.intl.string(O.t.et6wam),
                                                           (0, l.jsx)(d.IGR, {
                                                               text: w ? O.intl.string(O.t.psHMa2) : P,
-                                                              color: w ? c.Z.unsafe_rawColors.BRAND_260.css : c.Z.colors.BACKGROUND_ACCENT.css,
-                                                              className: a()({ [Z.newBadge]: w })
-                                                          })
-                                                      ]
+                                                              color: w
+                                                                  ? c.Z.unsafe_rawColors.BRAND_260.css
+                                                                  : c.Z.colors.BACKGROUND_ACCENT.css,
+                                                              className: a()({ [Z.newBadge]: w }),
+                                                          }),
+                                                      ],
                                                   },
-                                                  j.l7.BROWSE
-                                              )
-                                          ]
+                                                  j.l7.BROWSE,
+                                              ),
+                                          ],
                                       }),
                                   (() => {
                                       switch (u) {
                                           case j.l7.CUSTOMIZE:
                                               return (0, l.jsx)(b.Z, {
                                                   guildId: t,
-                                                  onBrowseChannels: () => m(j.l7.BROWSE)
+                                                  onBrowseChannels: () => m(j.l7.BROWSE),
                                               });
                                           case j.l7.BROWSE:
                                           default:
                                               return (0, l.jsx)(f.Z, { guildId: t });
                                       }
-                                  })()
-                              ]
-                          })
-                      ]
+                                  })(),
+                              ],
+                          }),
+                      ],
                   }),
-                  y && (0, l.jsx)(f.I, { channelId: h })
-              ]
+                  y && (0, l.jsx)(f.I, { channelId: h }),
+              ],
           });
 }

@@ -1,16 +1,16 @@
-(n.d(t, {
+n.d(t, {
     JA: () => k,
     Jw: () => w,
     Od: () => M,
     Wj: () => U,
     gK: () => j,
     oD: () => L,
-    vH: () => D
+    vH: () => D,
 }),
     n(35282),
     n(704826),
     n(539854),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(544891),
     o = n(570140),
@@ -40,7 +40,12 @@ var r = n(73800),
     R = n(981631),
     P = n(388032),
     w = (function (e) {
-        return ((e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled'), (e[(e.PrivateOnly = 3)] = 'PrivateOnly'), e);
+        return (
+            (e[(e.Disabled = 1)] = "Disabled"),
+            (e[(e.Enabled = 2)] = "Enabled"),
+            (e[(e.PrivateOnly = 3)] = "PrivateOnly"),
+            e
+        );
     })({});
 function D(e) {
     let t = (0, A.NE)(e);
@@ -51,19 +56,19 @@ function L(e, t) {
     return 3 === t || (null != (n = e.isPrivate) && n);
 }
 function x(e, t) {
-    return e.length > t ? e.substring(0, t) + '...' : e;
+    return e.length > t ? e.substring(0, t) + "..." : e;
 }
 function M(e, t) {
     var n, r, i, o, a, s, l;
     let c = null == t ? null : b.Z.getMessage(e.id, t),
-        u = null != (a = null == c || null == (r = c.embeds) || null == (n = r[0]) ? void 0 : n.rawTitle) ? a : '',
-        d = null != (s = null == c || null == (o = c.poll) || null == (i = o.question) ? void 0 : i.text) ? s : '';
-    if ('' !== u) return x(u, 40);
+        u = null != (a = null == c || null == (r = c.embeds) || null == (n = r[0]) ? void 0 : n.rawTitle) ? a : "",
+        d = null != (s = null == c || null == (o = c.poll) || null == (i = o.question) ? void 0 : i.text) ? s : "";
+    if ("" !== u) return x(u, 40);
     {
-        if ('' !== d) return x(d, 80);
-        let t = p.ZP.unparse(null != (l = null == c ? void 0 : c.content) ? l : '', e.id, !0),
-            n = (0, N.Z)(t.split('\n')[0], !0);
-        n = n.replace(/^[ #-]+/, '');
+        if ("" !== d) return x(d, 80);
+        let t = p.ZP.unparse(null != (l = null == c ? void 0 : c.content) ? l : "", e.id, !0),
+            n = (0, N.Z)(t.split("\n")[0], !0);
+        n = n.replace(/^[ #-]+/, "");
         let r = [];
         for (;;) {
             let e = n.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
@@ -71,7 +76,7 @@ function M(e, t) {
                 r.push(n);
                 break;
             }
-            (r.push(n.substring(0, e.index)), r.push(e[0]), (n = n.substring(e.index + e[0].length)));
+            r.push(n.substring(0, e.index)), r.push(e[0]), (n = n.substring(e.index + e[0].length));
         }
         let i = r[0];
         for (let e = 1; e < r.length; e++) {
@@ -83,16 +88,25 @@ function M(e, t) {
     }
 }
 function k(e) {
-    let { parentChannel: t, parentMessageId: n, threadSettings: o, privateThreadMode: a, location: l, onThreadCreated: u, useDefaultThreadName: d, uploadHandler: f } = e;
+    let {
+        parentChannel: t,
+        parentMessageId: n,
+        threadSettings: o,
+        privateThreadMode: a,
+        location: l,
+        onThreadCreated: u,
+        useDefaultThreadName: d,
+        uploadHandler: f,
+    } = e;
     return r.useCallback(
         async (e, r, _) => {
             var p;
             let h = null == n,
                 m = L(o, a),
-                b = null != (p = o.name) ? p : '';
-            if ('' === b && d) {
+                b = null != (p = o.name) ? p : "";
+            if ("" === b && d) {
                 let e = M(t, n);
-                b = '' !== e ? e : P.intl.string(P.t['7Xm5QE']);
+                b = "" !== e ? e : P.intl.string(P.t["7Xm5QE"]);
             }
             let y = (0, S.WD)(t),
                 O = g.Z.getChannel(I.default.castMessageIdAsChannelId(n)),
@@ -102,16 +116,25 @@ function k(e) {
                         url: e,
                         body: {
                             name: b,
-                            type: m ? R.d4z.PRIVATE_THREAD : t.type === R.d4z.GUILD_ANNOUNCEMENT ? R.d4z.ANNOUNCEMENT_THREAD : R.d4z.PUBLIC_THREAD,
+                            type: m
+                                ? R.d4z.PRIVATE_THREAD
+                                : t.type === R.d4z.GUILD_ANNOUNCEMENT
+                                  ? R.d4z.ANNOUNCEMENT_THREAD
+                                  : R.d4z.PUBLIC_THREAD,
                             auto_archive_duration: y,
-                            location: l
+                            location: l,
                         },
-                        rejectWithError: !1
+                        rejectWithError: !1,
                     });
                 });
-            (v !== O && (s.Z.clearDraft(t.id, E.d.ThreadSettings), s.Z.clearDraft(t.id, E.d.FirstThreadMessage), null == u || u(v), (h || e.length > 0 || (null != r && r.length > 0) || (null != _ && _.length > 0)) && G(v, e, r, _, f)), c.Z.clearAll(t.id, E.d.FirstThreadMessage));
+            v !== O &&
+                (s.Z.clearDraft(t.id, E.d.ThreadSettings),
+                s.Z.clearDraft(t.id, E.d.FirstThreadMessage),
+                null == u || u(v),
+                (h || e.length > 0 || (null != r && r.length > 0) || (null != _ && _.length > 0)) && G(v, e, r, _, f)),
+                c.Z.clearAll(t.id, E.d.FirstThreadMessage);
         },
-        [t, n, o, u, a, l, d, f]
+        [t, n, o, u, a, l, d, f],
     );
 }
 function j(e, t, n, r, o) {
@@ -122,10 +145,10 @@ function j(e, t, n, r, o) {
                 name: t,
                 type: n,
                 auto_archive_duration: r,
-                location: o
+                location: o,
             },
-            rejectWithError: !1
-        })
+            rejectWithError: !1,
+        }),
     );
 }
 function U(e) {
@@ -137,7 +160,7 @@ function U(e) {
                 [g, b] = (0, m.Z)(e);
             g && ((e = b), (h = (0, v.pj)(h, R.iLy.SUPPRESS_NOTIFICATIONS)));
             let y = (0, S.WD)(t, null),
-                O = R.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
+                O = R.ANM.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
                 I = {
                     name: n,
                     auto_archive_duration: y,
@@ -145,32 +168,32 @@ function U(e) {
                     message: {
                         content: e,
                         sticker_ids: r,
-                        flags: 0 !== h ? h : void 0
-                    }
+                        flags: 0 !== h ? h : void 0,
+                    },
                 };
             if (null != d && d.length > 0)
                 try {
                     let e = await u(d);
-                    ((p = e.uploaderFile), (I.message.attachments = e.files.map((e, t) => (0, T.B)(e, t))));
+                    (p = e.uploaderFile), (I.message.attachments = e.files.map((e, t) => (0, T.B)(e, t)));
                 } catch (i) {
                     let { file: e, code: n, reason: r } = i;
                     throw (
-                        (0, _.A)({
+                        ((0, _.A)({
                             file: e,
                             guildId: t.getGuildId(),
                             analyticsLocations: null != a ? a : [],
                             code: n,
-                            reason: r
+                            reason: r,
                         }),
-                        i
+                        i)
                     );
                 }
             let A = await B(t, a, p, () =>
                 i.tn.post({
                     url: O,
                     body: I,
-                    rejectWithError: !1
-                })
+                    rejectWithError: !1,
+                }),
             );
             return (
                 s.Z.clearDraft(t.id, E.d.ThreadSettings),
@@ -179,13 +202,13 @@ function U(e) {
                 (0, f.Je)({
                     guildId: t.guild_id,
                     channelId: t.id,
-                    postId: A.id
+                    postId: A.id,
                 }),
                 null == l || l(A),
                 A
             );
         },
-        [t, n, o, l, a, u]
+        [t, n, o, l, a, u],
     );
 }
 function G(e, t, n, r, i) {
@@ -197,46 +220,46 @@ async function B(e, t, n, r) {
     let i,
         s = e.isForumLikeChannel();
     try {
-        ((i = await r()),
+        (i = await r()),
             null == i.body
                 ? a.Z.show({
                       title: P.intl.string(P.t.j2d6Ki),
-                      body: P.intl.string(P.t.fEptJC)
+                      body: P.intl.string(P.t.fEptJC),
                   })
                 : (o.Z.dispatch({
-                      type: 'SLOWMODE_RESET_COOLDOWN',
+                      type: "SLOWMODE_RESET_COOLDOWN",
                       slowmodeType: y.S.CreateThread,
-                      channelId: e.id
+                      channelId: e.id,
                   }),
                   o.Z.dispatch({
-                      type: 'THREAD_CREATE_LOCAL',
-                      channelId: i.body.id
-                  })));
+                      type: "THREAD_CREATE_LOCAL",
+                      channelId: i.body.id,
+                  }));
     } catch (r) {
         var c, f, p, m, E, b, v, I, T;
         if ((null == (c = r.body) ? void 0 : c.code) === R.evJ.TOO_MANY_THREADS)
             a.Z.show({
-                title: s ? P.intl.string(P.t.vWNFk5) : P.intl.string(P.t['1KEdvL']),
-                body: s ? P.intl.string(P.t.KGaiEB) : P.intl.string(P.t.P0wT5e)
+                title: s ? P.intl.string(P.t.vWNFk5) : P.intl.string(P.t["1KEdvL"]),
+                body: s ? P.intl.string(P.t.KGaiEB) : P.intl.string(P.t.P0wT5e),
             });
         else if ((null == (f = r.body) ? void 0 : f.code) === R.evJ.TOO_MANY_ANNOUNCEMENT_THREADS)
             a.Z.show({
-                title: P.intl.string(P.t['1KEdvL']),
-                body: P.intl.string(P.t.jDMxz8)
+                title: P.intl.string(P.t["1KEdvL"]),
+                body: P.intl.string(P.t.jDMxz8),
             });
         else if ((null == (p = r.body) ? void 0 : p.code) === R.evJ.SLOWMODE_RATE_LIMITED) {
             let t = null != (b = r.body.retry_after) ? b : 0;
             t > 0 &&
                 o.Z.dispatch({
-                    type: 'SLOWMODE_SET_COOLDOWN',
+                    type: "SLOWMODE_SET_COOLDOWN",
                     channelId: e.id,
                     slowmodeType: y.S.CreateThread,
-                    cooldownMs: t * O.Z.Millis.SECOND
+                    cooldownMs: t * O.Z.Millis.SECOND,
                 });
         } else if (429 === r.status)
             a.Z.show({
-                title: s ? P.intl.string(P.t.vWNFk5) : P.intl.string(P.t['1KEdvL']),
-                body: P.intl.string(P.t['Whhv4+'])
+                title: s ? P.intl.string(P.t.vWNFk5) : P.intl.string(P.t["1KEdvL"]),
+                body: P.intl.string(P.t["Whhv4+"]),
             });
         else if (C.fZ.has(null == (m = r.body) ? void 0 : m.code)) throw r;
         else if (C.RN.has(null == (E = r.body) ? void 0 : E.code)) {
@@ -246,10 +269,10 @@ async function B(e, t, n, r) {
                     null != r.body.attachments &&
                         r.body.attachments.length > 0 &&
                         (o.Z.dispatch({
-                            type: 'MESSAGE_EXPLICIT_CONTENT_FP_CREATE',
+                            type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE",
                             messageId: t,
                             channelId: e.id,
-                            attachments: r.body.attachments
+                            attachments: r.body.attachments,
                         }),
                         (0, d.Z)(e.id, t));
                 } else
@@ -258,10 +281,10 @@ async function B(e, t, n, r) {
                         guildId: e.getGuildId(),
                         analyticsLocations: null != t ? t : [],
                         code: null == (I = r.body) ? void 0 : I.code,
-                        reason: null == (T = r.body) ? void 0 : T.reason
+                        reason: null == (T = r.body) ? void 0 : T.reason,
                     });
             return new Promise((e, t) => {
-                (null == r.body && t(),
+                null == r.body && t(),
                     u.Z.addConditionalChangeListener(() => {
                         let n = u.Z.getAndDeleteMostRecentUserCreatedThreadId();
                         if (null != n) {
@@ -273,16 +296,16 @@ async function B(e, t, n, r) {
                                 !1
                             );
                         }
-                    }));
+                    });
             });
         } else
             a.Z.show({
                 title: P.intl.string(P.t.j2d6Ki),
-                body: P.intl.string(P.t.fEptJC)
+                body: P.intl.string(P.t.fEptJC),
             });
     }
     let S = await new Promise((e, t) => {
-        (null == i.body && t(),
+        null == i.body && t(),
             g.Z.addConditionalChangeListener(() => {
                 let t = g.Z.getChannel(i.body.id);
                 if (null != t)
@@ -292,12 +315,12 @@ async function B(e, t, n, r) {
                         }),
                         !1
                     );
-            }));
+            });
     });
     try {
         await l.Z.fetchMessages({
             channelId: S.id,
-            limit: R.AQB
+            limit: R.AQB,
         });
     } catch (e) {}
     return S;

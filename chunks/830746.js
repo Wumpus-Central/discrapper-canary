@@ -19,40 +19,40 @@ let x = () => {
     let e = (0, c.mq)(g.ne.ACTIVE),
         t = (0, o.c)(),
         n = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
-        x = (0, l.o)(f.intl.string(h.default['5RZ8Tk']), f.intl.string(h.default.bmhCnJ)),
-        _ = (0, l.o)(f.intl.string(h.default.XKnFFh), f.intl.string(h.default['68zfxM'])),
-        j = (0, l.o)(f.intl.string(h.default['Rm/6a2']), f.intl.string(h.default['1xPTwM']));
+        x = (0, l.o)(f.intl.string(h.default["5RZ8Tk"]), f.intl.string(h.default.bmhCnJ)),
+        _ = (0, l.o)(f.intl.string(h.default.XKnFFh), f.intl.string(h.default["68zfxM"])),
+        j = (0, l.o)(f.intl.string(h.default["Rm/6a2"]), f.intl.string(h.default["1xPTwM"]));
     return void 0 === n
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               className: b.container,
               children: [
-                  (0, i.jsx)('div', {
+                  (0, i.jsx)("div", {
                       className: b.banner,
-                      children: (0, i.jsx)(d.Z, {})
+                      children: (0, i.jsx)(d.Z, {}),
                   }),
-                  (0, i.jsxs)('div', {
+                  (0, i.jsxs)("div", {
                       className: b.featureCards,
                       children: [
                           (0, i.jsx)(p.Z, {
                               icon: s.eQA,
-                              header: f.intl.string(h.default['001l3t']),
-                              description: x
+                              header: f.intl.string(h.default["001l3t"]),
+                              description: x,
                           }),
                           (0, i.jsx)(p.Z, {
                               icon: s.tEF,
                               header: f.intl.string(h.default.yipAeH),
-                              description: _
+                              description: _,
                           }),
                           (0, i.jsx)(p.Z, {
                               icon: s.IkH,
                               header: f.intl.string(h.default.hhOuMT),
-                              description: j
-                          })
-                      ]
+                              description: j,
+                          }),
+                      ],
                   }),
                   0 === e.length ? (0, i.jsx)(m.Z, {}) : null,
-                  void 0 !== t && e.length > 0 ? (0, i.jsx)(u.Z, { user: t }) : null
-              ]
+                  void 0 !== t && e.length > 0 ? (0, i.jsx)(u.Z, { user: t }) : null,
+              ],
           });
 };

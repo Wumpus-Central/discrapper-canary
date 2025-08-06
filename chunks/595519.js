@@ -2,7 +2,7 @@ n.d(t, {
     NX: () => d,
     WS: () => u,
     l5: () => c,
-    qB: () => _
+    qB: () => _,
 });
 var r = n(106351),
     i = n(442837),
@@ -24,7 +24,9 @@ function d(e) {
     return (0, i.e7)([o.Z, a.Z], () => f(o.Z.getChannel(e), a.Z));
 }
 function f(e, t) {
-    return null != e && void 0 !== e && !!c(e) && (null == e.guild_id || !!t.can(s.Pl.USE_EMBEDDED_ACTIVITIES, e)) && !0;
+    return (
+        null != e && void 0 !== e && !!c(e) && (null == e.guild_id || !!t.can(s.Pl.USE_EMBEDDED_ACTIVITIES, e)) && !0
+    );
 }
 function _() {
     return !1;

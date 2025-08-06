@@ -28,6 +28,6 @@ function h(e) {
               animatable: p,
               selected: f,
               draggable: !1,
-              mediaState: g
+              mediaState: g,
           });
 }

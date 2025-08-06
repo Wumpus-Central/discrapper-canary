@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685), n(539854));
+n.d(t, { Z: () => A }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -25,24 +25,24 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -69,28 +69,28 @@ let T = { offset: 2 },
         serverDeaf: {
             icon: s.Vm4,
             colorize: !0,
-            getStatus: () => I.intl.string(I.t.btxSdH)
+            getStatus: () => I.intl.string(I.t.btxSdH),
         },
         serverMute: {
             icon: s.v0G,
             colorize: !0,
-            getStatus: () => I.intl.string(I.t.uLddbW)
+            getStatus: () => I.intl.string(I.t.uLddbW),
         },
         deaf: {
             icon: s.wE8,
             colorize: !1,
-            getStatus: () => I.intl.string(I.t.NjmiOD)
+            getStatus: () => I.intl.string(I.t.NjmiOD),
         },
         mute: {
             icon: s.nRN,
             colorize: !1,
-            getStatus: () => I.intl.string(I.t.tjtv3N)
+            getStatus: () => I.intl.string(I.t.tjtv3N),
         },
         localMute: {
             icon: s.v0G,
             colorize: !1,
-            getStatus: () => I.intl.string(I.t['9F+xJS'])
-        }
+            getStatus: () => I.intl.string(I.t["9F+xJS"]),
+        },
     };
 function j(e) {
     var t, l;
@@ -100,7 +100,7 @@ function j(e) {
         R = (0, o.e7)([E.Z], () => E.Z.isLocalMute(j.id)),
         D = (0, u.Z)({
             userId: j.id,
-            checkSoundSharing: !0
+            checkSoundSharing: !0,
         }),
         k = null != (t = O.getGuildId()) ? t : void 0,
         M = j.getAvatarURL(O.guild_id, 24),
@@ -108,7 +108,7 @@ function j(e) {
         {
             icon: G,
             colorize: V,
-            getStatus: H
+            getStatus: H,
         } = null !=
         (l = (function (e) {
             let { serverDeaf: t, deaf: n, serverMute: r, mute: i, localMute: l } = e;
@@ -122,21 +122,27 @@ function j(e) {
             deaf: x,
             serverMute: w,
             mute: Z,
-            localMute: R
+            localMute: R,
         }))
             ? l
             : {},
         B =
             null != H
-                ? I.intl.formatToPlainString(I.t['1+MVBA'], {
+                ? I.intl.formatToPlainString(I.t["1+MVBA"], {
                       userName: U,
-                      status: H()
+                      status: H(),
                   })
                 : U;
     function F(e) {
         null != k
             ? (0, c.jW)(e, async () => {
-                  let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('8982'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
+                  let { default: e } = await Promise.all([
+                      n.e("79695"),
+                      n.e("98783"),
+                      n.e("8982"),
+                      n.e("7717"),
+                      n.e("74800"),
+                  ]).then(n.bind(n, 757387));
                   return (t) =>
                       (0, r.jsx)(
                           e,
@@ -145,20 +151,22 @@ function j(e) {
                               guildId: k,
                               channel: O,
                               showMediaItems: !0,
-                              onInteraction: (0, m.u)('GuildChannelUserContextMenu', h.Z.RTC_PANEL, { targetUserId: j.id })
-                          })
+                              onInteraction: (0, m.u)("GuildChannelUserContextMenu", h.Z.RTC_PANEL, {
+                                  targetUserId: j.id,
+                              }),
+                          }),
                       );
               })
             : (0, c.jW)(e, async () => {
-                  let { default: e } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
+                  let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
                   return (t) =>
                       (0, r.jsx)(
                           e,
                           N(S({}, t), {
                               user: j,
                               showMediaItems: !0,
-                              onInteraction: (0, m.u)('UserGenericContextMenu', h.Z.RTC_PANEL, { targetUserId: j.id })
-                          })
+                              onInteraction: (0, m.u)("UserGenericContextMenu", h.Z.RTC_PANEL, { targetUserId: j.id }),
+                          }),
                       );
               });
     }
@@ -167,7 +175,7 @@ function j(e) {
         user: j,
         guildId: k,
         channelId: O.id,
-        position: 'top',
+        position: "top",
         clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(s.ua7, {
@@ -178,7 +186,7 @@ function j(e) {
                         N(S({}, t, e), {
                             innerRef: d,
                             onClick: (t) => {
-                                (e.onClick(t), (0, g.v)(p, g.d.VOICE_USER));
+                                e.onClick(t), (0, g.v)(p, g.d.VOICE_USER);
                             },
                             className: C.avatarContainer,
                             onContextMenu: F,
@@ -186,22 +194,22 @@ function j(e) {
                             children: (0, r.jsx)(b.Z, {
                                 shakeLocation: v.oZ.VOICE_USER,
                                 isShaking: D,
-                                children: (0, r.jsx)('div', {
+                                children: (0, r.jsx)("div", {
                                     className: a()(C.avatar, { [C.speaking]: D }),
-                                    style: { backgroundImage: 'url('.concat(M, ')') },
+                                    style: { backgroundImage: "url(".concat(M, ")") },
                                     children:
                                         null != G
                                             ? (0, r.jsx)(G, {
                                                   className: a()(C.avatarIconOverlay, { [C.avatarIconRed]: V }),
-                                                  color: 'currentColor',
-                                                  size: 'xs'
+                                                  color: "currentColor",
+                                                  size: "xs",
                                               })
-                                            : null
-                                })
-                            })
-                        })
-                    )
-            })
+                                            : null,
+                                }),
+                            }),
+                        }),
+                    ),
+            }),
     });
 }
 function A(e) {
@@ -218,11 +226,11 @@ function A(e) {
                 }),
                 l = (0, d.y)(r, [e], {
                     fireOnMount: !0,
-                    fireOnDepsChange: !0
+                    fireOnDepsChange: !0,
                 });
             return {
                 containerRef: l,
-                maxVisibleAvatars: t
+                maxVisibleAvatars: t,
             };
         })(t.length - 1),
         [m, b] = (function (e, t, n) {
@@ -239,12 +247,12 @@ function A(e) {
             onClick: () => u(!c),
             color: s.YX$.PRIMARY,
             size: s.tT7.SIZE_24,
-            tooltip: c ? I.intl.string(I.t['Z/Tya2']) : I.intl.string(I.t.XR5BAQ),
+            tooltip: c ? I.intl.string(I.t["Z/Tya2"]) : I.intl.string(I.t.XR5BAQ),
             icon: (0, r.jsx)(_, {
-                size: 'xs',
-                color: 'currentColor'
+                size: "xs",
+                color: "currentColor",
             }),
-            focusProps: T
+            focusProps: T,
         }),
         y = b && c ? t : m;
     return y.length <= 0
@@ -252,11 +260,11 @@ function A(e) {
         : (0, r.jsx)(s.zJl, {
               className: a()(C.scroller, l),
               fade: !0,
-              children: (0, r.jsxs)('div', {
+              children: (0, r.jsxs)("div", {
                   ref: f,
                   className: a()(C.voiceUsers, !c && C.collapsed),
-                  role: 'group',
-                  'aria-label': I.intl.string(I.t['/ZgaVV']),
+                  role: "group",
+                  "aria-label": I.intl.string(I.t["/ZgaVV"]),
                   children: [
                       y.map((e) => {
                           let { user: t, nick: i, voiceState: l } = e;
@@ -271,14 +279,14 @@ function A(e) {
                                         deaf: l.isVoiceDeafened(),
                                         video: l.selfVideo,
                                         serverMute: l.mute,
-                                        serverDeaf: l.deaf
+                                        serverDeaf: l.deaf,
                                     },
-                                    t.id
+                                    t.id,
                                 )
                               : null;
                       }),
-                      b ? E : null
-                  ]
-              })
+                      b ? E : null,
+                  ],
+              }),
           });
 }

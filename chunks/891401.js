@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => N }), a(49124));
+a.d(t, { Z: () => N }), a(49124);
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -22,24 +22,24 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(a);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(a).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = a[t]),
+                (n = a[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -64,7 +64,7 @@ function C(e, t) {
 function N() {
     return (0, n.jsxs)(m.Ttm, {
         className: _.container,
-        children: [(0, n.jsx)(O, {}), (0, n.jsx)(E, {})]
+        children: [(0, n.jsx)(O, {}), (0, n.jsx)(E, {})],
     });
 }
 function O() {
@@ -77,25 +77,25 @@ function O() {
             (e) => {
                 null != s && (0, h.i)(s, { opacity: e });
             },
-            [s]
+            [s],
         ),
         v = r.useCallback(
             (e) => {
                 T(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
-            [null == l ? void 0 : l.wallpaperId]
+            [null == l ? void 0 : l.wallpaperId],
         ),
         N = r.useCallback(
             (e) => {
                 P(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
-            [null == l ? void 0 : l.wallpaperId]
+            [null == l ? void 0 : l.wallpaperId],
         ),
         O = r.useCallback(
             (e) => {
                 S(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
-            [null == l ? void 0 : l.wallpaperId]
+            [null == l ? void 0 : l.wallpaperId],
         ),
         E = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         w = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
@@ -104,39 +104,39 @@ function O() {
             (e) => {
                 null != s && (0, h.i)(s, { token_mix_amount: Math.round(e) });
             },
-            [s]
+            [s],
         ),
         k = r.useCallback(() => {
             null != s && (0, h.i)(s, null);
         }, [s]),
         A = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
         Z = null != (t = null == d ? void 0 : d.token_mix_amount) ? t : 100;
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         children: [
             (0, n.jsx)(o.X6, {
                 className: _.header,
-                variant: 'heading-lg/semibold',
-                children: 'DM Wallpapers'
+                variant: "heading-lg/semibold",
+                children: "DM Wallpapers",
             }),
             null == d &&
-                (0, n.jsx)('p', {
+                (0, n.jsx)("p", {
                     className: _.explanation,
-                    children: 'Open a DM with a wallpaper to customize.'
+                    children: "Open a DM with a wallpaper to customize.",
                 }),
             null != d &&
                 (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)(o.X6, {
                             className: _.subheader,
-                            variant: 'heading-md/semibold',
-                            children: 'ChatWallpaperMetadataRecord'
+                            variant: "heading-md/semibold",
+                            children: "ChatWallpaperMetadataRecord",
                         }),
-                        (0, n.jsx)('pre', {
+                        (0, n.jsx)("pre", {
                             className: _.code,
-                            children: JSON.stringify(x.Z.getWallpaperById(s), null, 2)
+                            children: JSON.stringify(x.Z.getWallpaperById(s), null, 2),
                         }),
                         (0, n.jsx)(m.ua7, {
-                            text: 'The opacity of the wallpaper.',
+                            text: "The opacity of the wallpaper.",
                             children: (e) =>
                                 (0, n.jsx)(
                                     o.X6,
@@ -144,13 +144,13 @@ function O() {
                                         y(
                                             {
                                                 className: i()(_.subheader, _.hasTooltip),
-                                                variant: 'heading-md/semibold'
+                                                variant: "heading-md/semibold",
                                             },
-                                            e
+                                            e,
                                         ),
-                                        { children: 'Opacity' }
-                                    )
-                                )
+                                        { children: "Opacity" },
+                                    ),
+                                ),
                         }),
                         (0, n.jsx)(
                             m.iRW,
@@ -160,12 +160,12 @@ function O() {
                                 defaultValue: 1,
                                 minValue: 0,
                                 maxValue: 1,
-                                onValueChange: b
+                                onValueChange: b,
                             },
-                            'opacity-'.concat(A)
+                            "opacity-".concat(A),
                         ),
                         (0, n.jsx)(m.ua7, {
-                            text: 'The most prominent color in the wallpaper. This will be used to adjust the color tokens.',
+                            text: "The most prominent color in the wallpaper. This will be used to adjust the color tokens.",
                             children: (e) =>
                                 (0, n.jsx)(
                                     o.X6,
@@ -173,40 +173,40 @@ function O() {
                                         y(
                                             {
                                                 className: i()(_.subheader, _.hasTooltip),
-                                                variant: 'heading-md/semibold'
+                                                variant: "heading-md/semibold",
                                             },
-                                            e
+                                            e,
                                         ),
-                                        { children: 'Primary Color' }
-                                    )
-                                )
+                                        { children: "Primary Color" },
+                                    ),
+                                ),
                         }),
-                        (0, n.jsxs)('div', {
+                        (0, n.jsxs)("div", {
                             className: _.colorInputContainer,
                             children: [
                                 (0, n.jsx)(
-                                    'input',
+                                    "input",
                                     {
-                                        type: 'color',
+                                        type: "color",
                                         value: d.primary_color,
-                                        onChange: v
+                                        onChange: v,
                                     },
-                                    'primaryColor-'.concat(d.primary_color)
+                                    "primaryColor-".concat(d.primary_color),
                                 ),
                                 (0, n.jsx)(m.M0o, {
-                                    color: 'currentColor',
+                                    color: "currentColor",
                                     tooltip: g.intl.string(g.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
-                                        size: 'xs',
-                                        color: 'currentColor'
+                                        size: "xs",
+                                        color: "currentColor",
                                     }),
                                     onClick: E,
-                                    className: _.removeButton
-                                })
-                            ]
+                                    className: _.removeButton,
+                                }),
+                            ],
                         }),
                         (0, n.jsx)(m.ua7, {
-                            text: 'The second most prominent color in the wallpaper. This will be used to adjust the color tokens.',
+                            text: "The second most prominent color in the wallpaper. This will be used to adjust the color tokens.",
                             children: (e) =>
                                 (0, n.jsx)(
                                     o.X6,
@@ -214,40 +214,40 @@ function O() {
                                         y(
                                             {
                                                 className: i()(_.subheader, _.hasTooltip),
-                                                variant: 'heading-md/semibold'
+                                                variant: "heading-md/semibold",
                                             },
-                                            e
+                                            e,
                                         ),
-                                        { children: 'Secondary Color' }
-                                    )
-                                )
+                                        { children: "Secondary Color" },
+                                    ),
+                                ),
                         }),
-                        (0, n.jsxs)('div', {
+                        (0, n.jsxs)("div", {
                             className: _.colorInputContainer,
                             children: [
                                 (0, n.jsx)(
-                                    'input',
+                                    "input",
                                     {
-                                        type: 'color',
+                                        type: "color",
                                         value: d.secondary_color,
-                                        onChange: N
+                                        onChange: N,
                                     },
-                                    'secondaryColor-'.concat(d.secondary_color)
+                                    "secondaryColor-".concat(d.secondary_color),
                                 ),
                                 (0, n.jsx)(m.M0o, {
-                                    color: 'currentColor',
+                                    color: "currentColor",
                                     tooltip: g.intl.string(g.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
-                                        size: 'xs',
-                                        color: 'currentColor'
+                                        size: "xs",
+                                        color: "currentColor",
                                     }),
                                     onClick: w,
-                                    className: _.removeButton
-                                })
-                            ]
+                                    className: _.removeButton,
+                                }),
+                            ],
                         }),
                         (0, n.jsx)(m.ua7, {
-                            text: 'Controls how much the primary/secondary colors are mixed into the tokens.',
+                            text: "Controls how much the primary/secondary colors are mixed into the tokens.",
                             children: (e) =>
                                 (0, n.jsx)(
                                     o.X6,
@@ -255,13 +255,13 @@ function O() {
                                         y(
                                             {
                                                 className: i()(_.subheader, _.hasTooltip),
-                                                variant: 'heading-md/semibold'
+                                                variant: "heading-md/semibold",
                                             },
-                                            e
+                                            e,
                                         ),
-                                        { children: 'Token Mix Amount' }
-                                    )
-                                )
+                                        { children: "Token Mix Amount" },
+                                    ),
+                                ),
                         }),
                         (0, n.jsx)(
                             m.iRW,
@@ -271,12 +271,12 @@ function O() {
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: R
+                                onValueChange: R,
                             },
-                            'tokenMixAmount-'.concat(Z)
+                            "tokenMixAmount-".concat(Z),
                         ),
                         (0, n.jsx)(m.ua7, {
-                            text: 'The color used for hyperlinks.',
+                            text: "The color used for hyperlinks.",
                             children: (e) =>
                                 (0, n.jsx)(
                                     o.X6,
@@ -284,46 +284,46 @@ function O() {
                                         y(
                                             {
                                                 className: i()(_.subheader, _.hasTooltip),
-                                                variant: 'heading-md/semibold'
+                                                variant: "heading-md/semibold",
                                             },
-                                            e
+                                            e,
                                         ),
-                                        { children: 'Link Color' }
-                                    )
-                                )
+                                        { children: "Link Color" },
+                                    ),
+                                ),
                         }),
-                        (0, n.jsxs)('div', {
+                        (0, n.jsxs)("div", {
                             className: _.colorInputContainer,
                             children: [
                                 (0, n.jsx)(
-                                    'input',
+                                    "input",
                                     {
-                                        type: 'color',
+                                        type: "color",
                                         value: d.link_color,
-                                        onChange: O
+                                        onChange: O,
                                     },
-                                    'linkColor-'.concat(d.link_color)
+                                    "linkColor-".concat(d.link_color),
                                 ),
                                 (0, n.jsx)(m.M0o, {
-                                    color: 'currentColor',
+                                    color: "currentColor",
                                     tooltip: g.intl.string(g.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
-                                        size: 'xs',
-                                        color: 'currentColor'
+                                        size: "xs",
+                                        color: "currentColor",
                                     }),
                                     onClick: I,
-                                    className: _.removeButton
-                                })
-                            ]
+                                    className: _.removeButton,
+                                }),
+                            ],
                         }),
                         (0, n.jsx)(u.zx, {
                             className: _.resetButton,
                             onClick: k,
-                            children: 'Reset'
-                        })
-                    ]
-                })
-        ]
+                            children: "Reset",
+                        }),
+                    ],
+                }),
+        ],
     });
 }
 function E() {
@@ -336,28 +336,28 @@ function E() {
         children: [
             (0, n.jsx)(o.X6, {
                 className: _.header,
-                variant: 'heading-lg/semibold',
-                children: 'Tenure Badges'
+                variant: "heading-lg/semibold",
+                children: "Tenure Badges",
             }),
-            (0, n.jsxs)('p', {
+            (0, n.jsxs)("p", {
                 children: [
-                    'Level Up DC:\xA0',
+                    "Level Up DC:\xA0",
                     null != a &&
-                        (0, n.jsxs)('b', {
-                            children: ['Dismissed (', a.toLocaleDateString(), ')']
+                        (0, n.jsxs)("b", {
+                            children: ["Dismissed (", a.toLocaleDateString(), ")"],
                         }),
-                    null == a && (0, n.jsx)('b', { children: 'Not Dismissed' })
-                ]
+                    null == a && (0, n.jsx)("b", { children: "Not Dismissed" }),
+                ],
             }),
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 className: _.tenureBadgeControls,
                 children: (0, n.jsx)(m.zxk, {
-                    variant: 'primary',
-                    text: 'Reset Level Up DC',
-                    onClick: e
-                })
-            })
-        ]
+                    variant: "primary",
+                    text: "Reset Level Up DC",
+                    onClick: e,
+                }),
+            }),
+        ],
     });
 }
 let T = (0, s.debounce)(function (e, t) {

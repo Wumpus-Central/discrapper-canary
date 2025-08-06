@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685), n(539854));
+n.d(t, { Z: () => y }), n(388685), n(539854);
 var r,
     i = n(442837),
     o = n(570140),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,9 +20,9 @@ function c(e, t, n) {
 }
 let u = new a.Z(l.ZP.isMember, (e, t) => {
     o.Z.dispatch({
-        type: 'GUILD_MEMBERS_REQUEST',
+        type: "GUILD_MEMBERS_REQUEST",
         guildIds: [e],
-        userIds: t
+        userIds: t,
     });
 });
 function d() {
@@ -31,23 +31,23 @@ function d() {
 function f(e) {
     let { chunks: t } = e;
     for (let e of t)
-        (e.members.forEach((t) => {
+        e.members.forEach((t) => {
             u.acknowledge(e.guildId, t.user.id);
         }),
-            null != e.notFound && e.notFound.forEach((t) => u.acknowledge(e.guildId, t)));
+            null != e.notFound && e.notFound.forEach((t) => u.acknowledge(e.guildId, t));
     return !1;
 }
 function _() {
-    return (u.requestUnacknowledged(), !1);
+    return u.requestUnacknowledged(), !1;
 }
 function p(e, t) {
-    return (u.request(e, t), !1);
+    return u.request(e, t), !1;
 }
 function h(e, t) {
     return (
         t.forEach((t) => {
             let { author: n, mentions: r } = t;
-            (null != n && p(e, n.id), null == r || r.forEach((t) => p(e, t.id)));
+            null != n && p(e, n.id), null == r || r.forEach((t) => p(e, t.id));
         }),
         !1
     );
@@ -68,7 +68,7 @@ function g(e) {
             t.map((e) => {
                 let { message: t } = e;
                 return t;
-            })
+            }),
         )
     );
 }
@@ -96,7 +96,7 @@ class b extends (r = i.ZP.Store) {
         p(e, t);
     }
 }
-c(b, 'displayName', 'GuildMemberRequesterStore');
+c(b, "displayName", "GuildMemberRequesterStore");
 let y = new b(o.Z, {
     CONNECTION_CLOSED: d,
     CONNECTION_OPEN: d,
@@ -108,5 +108,5 @@ let y = new b(o.Z, {
     LOAD_MESSAGES_SUCCESS: m,
     LOAD_MESSAGES_AROUND_SUCCESS: m,
     LOAD_RECENT_MENTIONS_SUCCESS: m,
-    LOAD_PINNED_MESSAGES_SUCCESS: g
+    LOAD_PINNED_MESSAGES_SUCCESS: g,
 });

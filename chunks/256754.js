@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -37,11 +37,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -57,23 +57,27 @@ function d(e, t) {
     );
 }
 let f = async function () {
-    let { userImage: e = null, guildId: t = null, analyticsLocation: l = null } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    (o.default.track(s.rMx.OPEN_MODAL, {
-        type: 'Emoji Studio',
-        source: l
+    let {
+        userImage: e = null,
+        guildId: t = null,
+        analyticsLocation: l = null,
+    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    o.default.track(s.rMx.OPEN_MODAL, {
+        type: "Emoji Studio",
+        source: l,
     }),
         await (0, i.ZDy)(
             async () => {
-                let { EmojiStudioModal: i } = await Promise.all([n.e('20087'), n.e('43404')]).then(n.bind(n, 546200));
+                let { EmojiStudioModal: i } = await Promise.all([n.e("20087"), n.e("43404")]).then(n.bind(n, 546200));
                 return (n) =>
                     (0, r.jsx)(
                         i,
                         d(c({}, n), {
                             userImage: e,
-                            guildId: t
-                        })
+                            guildId: t,
+                        }),
                     );
             },
-            { modalKey: a.Hj }
-        ));
+            { modalKey: a.Hj },
+        );
 };

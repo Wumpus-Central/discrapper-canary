@@ -1,1 +1,1 @@
-e.exports = { buttonRow: 'buttonRow_da1bc3' };
+e.exports = { buttonRow: "buttonRow_da1bc3" };

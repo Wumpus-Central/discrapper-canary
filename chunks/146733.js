@@ -13,18 +13,28 @@ var r = n(98405),
     h = i(f.setUint8);
 r(
     {
-        target: 'ArrayBuffer',
+        target: "ArrayBuffer",
         proto: !0,
         unsafe: !0,
         forced: o(function () {
             return !new u(2).slice(1, void 0).byteLength;
-        })
+        }),
     },
     {
         slice: function (e, t) {
             if (_ && void 0 === t) return _(s(this), e);
-            for (var n = s(this).byteLength, r = l(e, n), i = l(void 0 === t ? n : t, n), o = new u(c(i - r)), a = new d(this), f = new d(o), m = 0; r < i; ) h(f, m++, p(a, r++));
+            for (
+                var n = s(this).byteLength,
+                    r = l(e, n),
+                    i = l(void 0 === t ? n : t, n),
+                    o = new u(c(i - r)),
+                    a = new d(this),
+                    f = new d(o),
+                    m = 0;
+                r < i;
+            )
+                h(f, m++, p(a, r++));
             return o;
-        }
-    }
+        },
+    },
 );

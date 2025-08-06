@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,16 +61,12 @@ function h(e, t) {
     );
 }
 function m(e) {
-    let { user: t, location: f = 'ContextMenu', onFriendRequestSent: p, onFriendRemove: m, appContext: g } = e,
+    let { user: t, location: f = "ContextMenu", onFriendRequestSent: p, onFriendRemove: m, appContext: g } = e,
         { id: E, username: b, bot: y } = t,
-        O = (0, o.e7)(
-            [u.default],
-            () => {
-                var e;
-                return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
-            },
-            [E]
-        ),
+        O = (0, o.e7)([u.default], () => {
+            var e;
+            return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
+        }, [E]),
         v = (0, l.n)({ userId: E }),
         [I, T] = (0, o.Wu)([c.Z], () => [c.Z.isFriend(E), c.Z.isBlocked(E)], [E]),
         [S, A] = i.useState(!1);
@@ -87,43 +83,43 @@ function m(e) {
                                 {
                                     header: d.intl.formatToPlainString(d.t.fPLvZW, { name: b }),
                                     confirmText: d.intl.string(d.t.cvSt1N),
-                                    cancelText: d.intl.string(d.t['ETE/oK']),
+                                    cancelText: d.intl.string(d.t["ETE/oK"]),
                                     onConfirm: () => {
-                                        (s.Z.removeFriend(E, { location: f }), A(!1), null == m || m());
-                                    }
+                                        s.Z.removeFriend(E, { location: f }), A(!1), null == m || m();
+                                    },
                                 },
-                                t
+                                t,
                             ),
                             {
                                 children: (0, r.jsx)(a.Text, {
-                                    variant: 'text-md/normal',
-                                    children: d.intl.format(d.t.l5FFq6, { name: b })
-                                })
-                            }
-                        )
+                                    variant: "text-md/normal",
+                                    children: d.intl.format(d.t.l5FFq6, { name: b }),
+                                }),
+                            },
+                        ),
                     );
             },
-            { contextKey: null != g ? (0, a.VnL)(g) : void 0 }
+            { contextKey: null != g ? (0, a.VnL)(g) : void 0 },
         );
     }
     return I
         ? (0, r.jsx)(a.sNh, {
-              id: 'remove-friend',
+              id: "remove-friend",
               label: d.intl.string(d.t.cvSt1N),
-              action: N
+              action: N,
           })
         : (0, r.jsx)(a.sNh, {
-              id: 'add-friend',
+              id: "add-friend",
               label: S ? d.intl.string(d.t.xMH6vL) : v,
               action: () => {
                   S ||
                       (s.Z.addRelationship({
                           userId: E,
-                          context: { location: f }
+                          context: { location: f },
                       }),
                       A(!0),
                       null == p || p());
               },
-              disabled: T || (S && !I)
+              disabled: T || (S && !I),
           });
 }

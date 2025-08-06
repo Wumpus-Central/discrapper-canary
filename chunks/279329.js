@@ -8,12 +8,12 @@ var i = n(442837),
     l = n(388032);
 function c(e, t) {
     let n = (0, i.e7)([s.Z], () => s.Z.isSpeakingMessage(t.id, e.id), [t, e]);
-    return '' === e.content
+    return "" === e.content
         ? null
         : (0, r.jsx)(o.sNh, {
-              id: 'tts',
+              id: "tts",
               label: n ? l.intl.string(l.t.CJ30BA) : l.intl.string(l.t.yGLjXF),
               icon: o.J2R,
-              action: () => (n ? (0, a.NB)() : (0, a.LA)(t, e))
+              action: () => (n ? (0, a.NB)() : (0, a.LA)(t, e)),
           });
 }

@@ -14,16 +14,16 @@ function f(e) {
         { trackUserProfileAction: f } = (0, a.KZ)(),
         { mutualGuilds: p, isFetching: m } = (0, c.Z)(t),
         g = (e) => {
-            ((0, i.X)(e), n(), (0, o.xf)());
+            (0, i.X)(e), n(), (0, o.xf)();
         };
     return (0, r.jsx)(l.zJl, {
         className: u.listScroller,
         fade: !0,
         children:
             null == p && m
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: u.empty,
-                      children: (0, r.jsx)(l.$jN, {})
+                      children: (0, r.jsx)(l.$jN, {}),
                   })
                 : (null != p || m) && (null == p ? void 0 : p.length) !== 0
                   ? null == p
@@ -37,21 +37,21 @@ function f(e) {
                                     guild: n,
                                     nick: l,
                                     onSelect: () => {
-                                        (f({ action: 'PRESS_MUTUAL_GUILD' }), g(n.id));
-                                    }
+                                        f({ action: "PRESS_MUTUAL_GUILD" }), g(n.id);
+                                    },
                                 },
-                                n.id
+                                n.id,
                             );
                         })
-                  : (0, r.jsxs)('div', {
+                  : (0, r.jsxs)("div", {
                         className: u.empty,
                         children: [
-                            (0, r.jsx)('div', { className: u.emptyIconGuilds }),
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", { className: u.emptyIconGuilds }),
+                            (0, r.jsx)("div", {
                                 className: u.emptyText,
-                                children: d.intl.string(d.t.zjVh8v)
-                            })
-                        ]
-                    })
+                                children: d.intl.string(d.t.zjVh8v),
+                            }),
+                        ],
+                    }),
     });
 }

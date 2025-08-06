@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -20,12 +20,12 @@ function c(e) {
                     null != d.current && clearTimeout(d.current);
                 }
             ),
-            [o]
+            [o],
         ),
-        (0, r.jsx)('div', {
-            'data-flash': c,
+        (0, r.jsx)("div", {
+            "data-flash": c,
             className: a()(s.flash, n),
-            children: t
+            children: t,
         })
     );
 }

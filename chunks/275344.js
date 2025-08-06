@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => p,
-    v: () => f
+    v: () => f,
 });
 var r = n(255367),
     i = n(73800),
@@ -14,7 +14,7 @@ let d = i.createContext(void 0);
 function f(e) {
     var t;
     let n = null != (t = i.useContext(d)) ? t : e;
-    return (a()(null != n, 'Using PollReferenceMessageContext without a provider (or a fallback)'), n);
+    return a()(null != n, "Using PollReferenceMessageContext without a provider (or a fallback)"), n;
 }
 function _(e) {
     let { message: t, children: n } = e,
@@ -25,12 +25,12 @@ function _(e) {
             a ||
                 l.Z.focusMessage({
                     channelId: t.channel_id,
-                    messageId: t.id
+                    messageId: t.id,
                 });
         }, [a, t.channel_id, t.id]),
         (0, r.jsx)(d.Provider, {
             value: null != o ? o : t,
-            children: n
+            children: n,
         })
     );
 }
@@ -40,6 +40,6 @@ function p(e) {
         ? n
         : (0, r.jsx)(_, {
               message: t,
-              children: n
+              children: n,
           });
 }

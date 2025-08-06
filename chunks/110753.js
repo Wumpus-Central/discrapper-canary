@@ -5,7 +5,7 @@ var t = {
     today: "'aujourd\u2019hui à' p",
     tomorrow: "'demain à' p'",
     nextWeek: "eeee 'prochain à' p",
-    other: 'P'
+    other: "P",
 };
 let n = function (e, i, a, n) {
     return t[e];

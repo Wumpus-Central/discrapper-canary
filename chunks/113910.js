@@ -5,27 +5,27 @@ let o = {
         formats: {
             full: "EEEE, d 'de' MMMM 'de' y",
             long: "d 'de' MMMM 'de' y",
-            medium: 'd MMM y',
-            short: 'dd/MM/y'
+            medium: "d MMM y",
+            short: "dd/MM/y",
         },
-        defaultWidth: 'full'
+        defaultWidth: "full",
     }),
     time: (0, t.Z)({
         formats: {
-            full: 'HH:mm:ss zzzz',
-            long: 'HH:mm:ss z',
-            medium: 'HH:mm:ss',
-            short: 'HH:mm'
+            full: "HH:mm:ss zzzz",
+            long: "HH:mm:ss z",
+            medium: "HH:mm:ss",
+            short: "HH:mm",
         },
-        defaultWidth: 'full'
+        defaultWidth: "full",
     }),
     dateTime: (0, t.Z)({
         formats: {
             full: "{{date}} 'a las' {{time}}",
             long: "{{date}} 'a las' {{time}}",
-            medium: '{{date}}, {{time}}',
-            short: '{{date}}, {{time}}'
+            medium: "{{date}}, {{time}}",
+            short: "{{date}}, {{time}}",
         },
-        defaultWidth: 'full'
-    })
+        defaultWidth: "full",
+    }),
 };

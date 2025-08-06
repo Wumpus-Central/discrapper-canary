@@ -11,9 +11,9 @@ var i = n(239091),
 function d(e) {
     let { guild: t, selected: d } = e;
     return (0, r.jsx)(s.m, {
-        id: 'subscriptions-'.concat(t.id),
+        id: "subscriptions-".concat(t.id),
         renderIcon: (e) => (0, r.jsx)(l.Z, { className: e }),
-        text: u.intl.string(u.t['KzCF//']),
+        text: u.intl.string(u.t["KzCF//"]),
         selected: d,
         onClick: () => {
             (0, o.uL)(a.Z5c.CHANNEL(t.id, c.oC.ROLE_SUBSCRIPTIONS));
@@ -21,7 +21,7 @@ function d(e) {
         onContextMenu: (e) => {
             null != t &&
                 (0, i.jW)(e, async () => {
-                    let { default: e } = await n.e('28249').then(n.bind(n, 613329));
+                    let { default: e } = await n.e("28249").then(n.bind(n, 613329));
                     return (n) => {
                         var i, l;
                         return (0, r.jsx)(
@@ -30,24 +30,24 @@ function d(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })({}, n)),
@@ -64,10 +64,10 @@ function d(e) {
                                   })(Object(l)).forEach(function (e) {
                                       Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
-                            i)
+                            i),
                         );
                     };
                 });
-        }
+        },
     });
 }

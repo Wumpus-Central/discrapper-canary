@@ -1,6 +1,6 @@
 n.d(t, {
     Y: () => l,
-    Z: () => u
+    Z: () => u,
 });
 var r = n(255367),
     i = n(73800),
@@ -8,28 +8,35 @@ var r = n(255367),
     a = n.n(o),
     s = n(933282),
     l = (function (e) {
-        return ((e.PREMIUM = 'premium'), (e.LIMITED = 'limited'), e);
+        return (e.PREMIUM = "premium"), (e.LIMITED = "limited"), e;
     })({});
 let c = {
         premium: {
             border: s.premiumFeatureBorder,
-            background: s.premiumBackground
+            background: s.premiumBackground,
         },
         limited: {
             border: s.limitedFeatureBorder,
-            background: s.limitedBackground
-        }
+            background: s.limitedBackground,
+        },
     },
     u = i.forwardRef(function (e, t) {
-        let { children: n, type: i = 'premium', isShown: o, hasBackground: l = !1, className: u, backgroundClassName: d } = e;
+        let {
+            children: n,
+            type: i = "premium",
+            isShown: o,
+            hasBackground: l = !1,
+            className: u,
+            backgroundClassName: d,
+        } = e;
         if (!o) return n;
         let { border: f, background: _ } = c[i];
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             ref: t,
             className: a()(f, u),
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: a()(l ? _ : s.background, d),
-                children: n
-            })
+                children: n,
+            }),
         });
     });

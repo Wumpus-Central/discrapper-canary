@@ -13,7 +13,7 @@ var s = n(512722),
 function x(e) {
     let { directoryGuildName: t, guildToAdd: n, isExistingGuildFlow: s, onClose: x } = e;
     return (
-        l()(null != n, 'Missing guild in Hub add guild confirmation'),
+        l()(null != n, "Missing guild in Hub add guild confirmation"),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(r.xBx, {
@@ -24,25 +24,27 @@ function x(e) {
                         null != x &&
                             (0, i.jsx)(r.olH, {
                                 className: m.closeButton,
-                                onClick: x
+                                onClick: x,
                             }),
                         (0, i.jsx)(c.Z, {
                             guild: n,
                             size: c.Z.Sizes.XLARGE,
-                            active: !0
+                            active: !0,
                         }),
                         (0, i.jsx)(r.X6q, {
                             className: m.title,
-                            variant: 'heading-xl/semibold',
-                            children: u.intl.string(u.t.CueiPT)
+                            variant: "heading-xl/semibold",
+                            children: u.intl.string(u.t.CueiPT),
                         }),
                         (0, i.jsx)(r.Text, {
                             className: m.__invalid_subtitle,
-                            color: 'header-secondary',
-                            variant: 'text-md/normal',
-                            children: s ? u.intl.formatToPlainString(u.t.R7Pqn5, { guildName: t }) : u.intl.formatToPlainString(u.t.eIxPSk, { guildName: t })
-                        })
-                    ]
+                            color: "header-secondary",
+                            variant: "text-md/normal",
+                            children: s
+                                ? u.intl.formatToPlainString(u.t.R7Pqn5, { guildName: t })
+                                : u.intl.formatToPlainString(u.t.eIxPSk, { guildName: t }),
+                        }),
+                    ],
                 }),
                 (0, i.jsx)(r.mzw, {
                     className: m.buttonRow,
@@ -51,7 +53,7 @@ function x(e) {
                               className: m.addConfirmButton,
                               color: a.zx.Colors.BRAND,
                               onClick: x,
-                              children: u.intl.string(u.t['X0WK+/'])
+                              children: u.intl.string(u.t["X0WK+/"]),
                           })
                         : (0, i.jsxs)(i.Fragment, {
                               children: [
@@ -59,20 +61,20 @@ function x(e) {
                                       className: m.createSecondaryButton,
                                       color: a.zx.Colors.PRIMARY,
                                       onClick: x,
-                                      children: u.intl.string(u.t['X/VABg'])
+                                      children: u.intl.string(u.t["X/VABg"]),
                                   }),
                                   (0, i.jsx)(a.zx, {
                                       className: m.createConfirmButton,
                                       color: a.zx.Colors.BRAND,
                                       onClick: () => {
-                                          ((0, d.XU)(n.id), null == x || x());
+                                          (0, d.XU)(n.id), null == x || x();
                                       },
-                                      children: u.intl.string(u.t.DymAQk)
-                                  })
-                              ]
-                          })
-                })
-            ]
+                                      children: u.intl.string(u.t.DymAQk),
+                                  }),
+                              ],
+                          }),
+                }),
+            ],
         })
     );
 }

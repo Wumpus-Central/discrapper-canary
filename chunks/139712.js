@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(755721),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,7 +67,8 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,34 +78,36 @@ function g(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function E(e) {
     var { event: t, recurrenceId: n, guildId: f, onRsvp: p } = e,
-        g = m(e, ['event', 'recurrenceId', 'guildId', 'onRsvp']);
+        g = m(e, ["event", "recurrenceId", "guildId", "onRsvp"]);
     let [E, b] = i.useState(l.KX.SERIES),
         y = (0, l.X2)(t.id, null),
         O = (null == y ? void 0 : y.response) === c.gv.INTERESTED ? c.gv.UNINTERESTED : c.gv.INTERESTED,
-        v = O === c.gv.INTERESTED ? u.intl.string(u.t.WtOReX) : u.intl.string(u.t['8MPCVl']),
+        v = O === c.gv.INTERESTED ? u.intl.string(u.t.WtOReX) : u.intl.string(u.t["8MPCVl"]),
         I = () => {
-            (E === l.KX.SERIES ? s.Z.updateRsvp(t.id, null, f, O) : s.Z.updateRsvp(t.id, n, f, O), null == p || p(), g.onClose());
+            E === l.KX.SERIES ? s.Z.updateRsvp(t.id, null, f, O) : s.Z.updateRsvp(t.id, n, f, O),
+                null == p || p(),
+                g.onClose();
         };
     return (0, r.jsx)(
         a.ConfirmModal,
         h(_({}, g), {
             header: v,
             confirmText: u.intl.string(u.t.TyCVIi),
-            cancelText: u.intl.string(u.t['ETE/oK']),
+            cancelText: u.intl.string(u.t["ETE/oK"]),
             onConfirm: I,
             confirmButtonColor: o.zx.Colors.BRAND,
             children: (0, r.jsx)(a.FXm, {
                 className: d.responseOptions,
                 value: E,
                 options: (0, l.pF)(),
-                onChange: (e) => b(e.value)
-            })
-        })
+                onChange: (e) => b(e.value),
+            }),
+        }),
     );
 }
 function b(e, t, n, i) {
@@ -117,10 +120,10 @@ function b(e, t, n, i) {
                         event: e,
                         recurrenceId: t,
                         guildId: n,
-                        onRsvp: i
-                    })
-                )
-            )
+                        onRsvp: i,
+                    }),
+                ),
+            ),
         );
     };
     (0, l.cg)({
@@ -129,6 +132,6 @@ function b(e, t, n, i) {
         guildId: n,
         updateRsvp: (t, r, i, o) => s.Z.updateRsvp(e, r, n, o),
         openRsvpPicker: o,
-        onRsvp: i
+        onRsvp: i,
     });
 }

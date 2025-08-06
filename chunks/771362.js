@@ -17,6 +17,6 @@ function s(e) {
                           r = o.Z.get(n);
                       return null != r && o.Z.isSupported(n) && t(r);
                   }),
-        [null == n ? void 0 : n.connectedAccounts, t]
+        [null == n ? void 0 : n.connectedAccounts, t],
     );
 }

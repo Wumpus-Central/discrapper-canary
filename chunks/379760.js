@@ -16,34 +16,34 @@ function d(e) {
         children: [
             (0, n.jsx)(a.Dx, {
                 className: h.marginBottom8,
-                children: t
+                children: t,
             }),
             (0, n.jsx)(a.DK, {
                 className: u.subTitle,
-                children: r
+                children: r,
             }),
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 children: [
                     (0, n.jsx)(o.Z, {
                         inputClassName: u.codeInput,
-                        onSubmit: p
+                        onSubmit: p,
                     }),
                     null != d
                         ? (0, n.jsx)(i.Text, {
                               className: u.error,
-                              variant: 'text-sm/normal',
-                              children: d
+                              variant: "text-sm/normal",
+                              children: d,
                           })
-                        : null
-                ]
+                        : null,
+                ],
             }),
             null != m &&
                 (0, n.jsx)(s.zx, {
                     className: u.button,
                     onClick: m,
                     color: s.zx.Colors.PRIMARY,
-                    children: c.intl.string(c.t['ETE/oK'])
-                })
-        ]
+                    children: c.intl.string(c.t["ETE/oK"]),
+                }),
+        ],
     });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => u,
-    l: () => d
+    l: () => d,
 });
 var r = n(255367),
     i = n(73800),
@@ -11,10 +11,10 @@ var r = n(255367),
     c = n(742116);
 let u = (e) => {
         let { children: t } = e,
-            n = (0, r.jsxs)('div', {
+            n = (0, r.jsxs)("div", {
                 className: c.coachTipContainer,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: c.iconContainer,
                         children: (0, r.jsx)(a.ZP, {
                             staticPercentage: 100,
@@ -23,57 +23,57 @@ let u = (e) => {
                             progressCircleVariation: a.Qo.NITRO_LOGO,
                             ellipseOpacity: 1,
                             customAnimationClassName: c.customCircleAnimation,
-                            circleColor: 'url(#purple-gradient)'
-                        })
+                            circleColor: "url(#purple-gradient)",
+                        }),
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: c.coachtipContent,
                         children: [
                             (0, r.jsx)(l.X6q, {
-                                variant: 'heading-sm/bold',
-                                children: s.intl.string(s.t.USo4s7)
+                                variant: "heading-sm/bold",
+                                children: s.intl.string(s.t.USo4s7),
                             }),
                             (0, r.jsx)(l.Text, {
-                                variant: 'text-xs/normal',
-                                children: s.intl.format(s.t.AGKQq6, { numReferrals: 3 })
-                            })
-                        ]
-                    })
-                ]
+                                variant: "text-xs/normal",
+                                children: s.intl.format(s.t.AGKQq6, { numReferrals: 3 }),
+                            }),
+                        ],
+                    }),
+                ],
             });
         return (0, r.jsx)(l.ua7, {
             text: n,
-            position: 'right',
-            'aria-label': s.intl.string(s.t.USo4s7),
+            position: "right",
+            "aria-label": s.intl.string(s.t.USo4s7),
             tooltipClassName: c.marketingBadgeTooltip,
             allowOverflow: !0,
             tooltipContentClassName: c.tooltipContent,
             children: (e) => {
                 var n, i;
                 return (0, r.jsx)(
-                    'div',
+                    "div",
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, e)),
@@ -90,9 +90,9 @@ let u = (e) => {
                           })(Object(i)).forEach(function (e) {
                               Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                           }),
-                    n)
+                    n),
                 );
-            }
+            },
         });
     },
     d = (e) => {

@@ -28,72 +28,81 @@ var i = n(255367),
     y = n(20493);
 function A() {
     let e = (0, l.e7)([g.Z], () => g.Z.getHardwareEncoding()),
-        { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: s, clipsLength: A, clipsQuality: P } = (0, l.cj)([b.Z], () => b.Z.getSettings()),
+        {
+            clipsEnabled: t,
+            remindersEnabled: n,
+            decoupledClipsEnabled: s,
+            clipsLength: A,
+            clipsQuality: P,
+        } = (0, l.cj)([b.Z], () => b.Z.getSettings()),
         R = (0, l.e7)([b.Z], () => b.Z.getHardwareClassification()),
         D = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(O.kg4.SAVE_CLIP, !0)),
         Z = b.Z.isDecoupledGameClippingEnabled(),
         w = (0, _.Z)(g.Z),
-        { showClipsHeaderEntrypoint: k } = f.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
-    a()(null != D, 'Save clip keybind unset');
+        { showClipsHeaderEntrypoint: k } = f.NV.useExperiment(
+            { location: "clips_recording_settings" },
+            { autoTrackExposure: !1 },
+        );
+    a()(null != D, "Save clip keybind unset");
     let L = (0, l.e7)([m.default], () => m.default.locale),
         M = r.useMemo(
             () => [
                 {
                     value: C.OT.SECONDS_30,
-                    label: T.intl.formatToPlainString(T.t['bTFv//'], { count: 30 })
+                    label: T.intl.formatToPlainString(T.t["bTFv//"], { count: 30 }),
                 },
                 {
                     value: C.OT.MINUTES_1,
-                    label: T.intl.formatToPlainString(T.t.ICo9Nj, { count: 1 })
+                    label: T.intl.formatToPlainString(T.t.ICo9Nj, { count: 1 }),
                 },
                 {
                     value: C.OT.MINUTES_2,
-                    label: T.intl.formatToPlainString(T.t.ICo9Nj, { count: 2 })
-                }
+                    label: T.intl.formatToPlainString(T.t.ICo9Nj, { count: 2 }),
+                },
             ],
-            [L]
+            [L],
         ),
         B = r.useMemo(
             () => [
                 {
                     value: v.LY.RESOLUTION_480,
-                    label: T.intl.formatToPlainString(T.t.TEOC0N, { resolution: v.LY.RESOLUTION_480 })
+                    label: T.intl.formatToPlainString(T.t.TEOC0N, { resolution: v.LY.RESOLUTION_480 }),
                 },
                 {
                     value: v.LY.RESOLUTION_720,
-                    label: T.intl.formatToPlainString(T.t.TEOC0N, { resolution: v.LY.RESOLUTION_720 })
+                    label: T.intl.formatToPlainString(T.t.TEOC0N, { resolution: v.LY.RESOLUTION_720 }),
                 },
                 {
                     value: v.LY.RESOLUTION_1080,
-                    label: T.intl.formatToPlainString(T.t.TEOC0N, { resolution: v.LY.RESOLUTION_1080 })
+                    label: T.intl.formatToPlainString(T.t.TEOC0N, { resolution: v.LY.RESOLUTION_1080 }),
                 },
                 {
                     value: v.LY.RESOLUTION_1440,
-                    label: T.intl.formatToPlainString(T.t.TEOC0N, { resolution: v.LY.RESOLUTION_1440 })
+                    label: T.intl.formatToPlainString(T.t.TEOC0N, { resolution: v.LY.RESOLUTION_1440 }),
                 },
                 {
                     value: v.LY.RESOLUTION_SOURCE,
-                    label: T.intl.string(T.t.XjXqzs)
-                }
+                    label: T.intl.string(T.t.XjXqzs),
+                },
             ],
-            [L]
+            [L],
         ),
         U = r.useMemo(
             () => [
                 {
                     value: v.ws.FPS_15,
-                    label: T.intl.formatToPlainString(T.t.Qb44XF, { fps: v.ws.FPS_15 })
+                    label: T.intl.formatToPlainString(T.t.Qb44XF, { fps: v.ws.FPS_15 }),
                 },
                 {
                     value: v.ws.FPS_30,
-                    label: T.intl.formatToPlainString(T.t.Qb44XF, { fps: v.ws.FPS_30 })
+                    label: T.intl.formatToPlainString(T.t.Qb44XF, { fps: v.ws.FPS_30 }),
                 },
                 {
                     value: v.ws.FPS_60,
-                    label: T.intl.formatToPlainString(T.t.Qb44XF, { fps: v.ws.FPS_60 })
-                }
+                    label: T.intl.formatToPlainString(T.t.Qb44XF, { fps: v.ws.FPS_60 }),
+                },
             ],
-            [L]
+            [L],
         ),
         V = r.useCallback(
             (e) => {
@@ -103,24 +112,24 @@ function A() {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    ((i = n[t]),
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = i));
-                                }));
+                                            : (e[t] = i);
+                                });
                         }
                         return e;
                     })({}, D)),
@@ -137,10 +146,10 @@ function A() {
                           })(Object(n)).forEach(function (e) {
                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
-                    t)
+                    t),
                 );
             },
-            [D]
+            [D],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -151,13 +160,18 @@ function A() {
                         (0, i.jsx)(p.Z, {
                             look: p.z.WARNING,
                             className: N.formItem,
-                            children: T.intl.format(T.t.kiaF4e, { onClick: () => d.Z.open(O.oAB.VOICE, S.gP, { scrollPosition: S.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
+                            children: T.intl.format(T.t.kiaF4e, {
+                                onClick: () =>
+                                    d.Z.open(O.oAB.VOICE, S.gP, {
+                                        scrollPosition: S.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION,
+                                    }),
+                            }),
                         }),
                     R === x.x.BELOW_MINIMUM
                         ? (0, i.jsx)(p.Z, {
                               look: p.z.WARNING,
                               className: N.formItem,
-                              children: T.intl.string(T.t.SIxrIC)
+                              children: T.intl.string(T.t.SIxrIC),
                           })
                         : null,
                     (0, i.jsx)(o.j7V, {
@@ -165,20 +179,20 @@ function A() {
                         disabled: !e,
                         className: N.formItem,
                         value: t,
-                        note: T.intl.string(T.t['4Qw3ND']),
+                        note: T.intl.string(T.t["4Qw3ND"]),
                         onChange: (e) =>
                             j.em({
                                 clipsEnabled: e,
-                                trackAnalytics: !0
+                                trackAnalytics: !0,
                             }),
-                        children: T.intl.string(T.t.h8rgrK)
+                        children: T.intl.string(T.t.h8rgrK),
                     }),
                     e &&
                         (0, i.jsx)(p.Z, {
                             className: N.formItem,
-                            children: T.intl.string(T.t['Z+Mfqa'])
-                        })
-                ]
+                            children: T.intl.string(T.t["Z+Mfqa"]),
+                        }),
+                ],
             }),
             Z &&
                 w &&
@@ -197,12 +211,12 @@ function A() {
                                 onChange: (e) =>
                                     j._Q({
                                         enabled: e,
-                                        trackAnalytics: !0
+                                        trackAnalytics: !0,
                                     }),
-                                children: T.intl.string(T.t.yXvykp)
-                            })
-                        })
-                    ]
+                                children: T.intl.string(T.t.yXvykp),
+                            }),
+                        }),
+                    ],
                 }),
             k &&
                 (0, i.jsxs)(i.Fragment, {
@@ -216,10 +230,10 @@ function A() {
                                 value: n,
                                 note: T.intl.string(T.t.m4Cjj4),
                                 onChange: (e) => j.N0(e),
-                                children: T.intl.string(T.t['3zwNf3'])
-                            })
-                        })
-                    ]
+                                children: T.intl.string(T.t["3zwNf3"]),
+                            }),
+                        }),
+                    ],
                 }),
             (0, i.jsx)(o.$i$, {}),
             (0, i.jsxs)(o.hjN, {
@@ -231,46 +245,46 @@ function A() {
                         title: T.intl.string(T.t.OgfUio),
                         note: T.intl.string(T.t.H7j4tb),
                         value: A,
-                        options: M
+                        options: M,
                     }),
                     (0, i.jsx)(E.Q, {
                         className: N.formItem,
                         select: (e) =>
                             j.yi({
                                 resolution: e,
-                                frameRate: P.frameRate
+                                frameRate: P.frameRate,
                             }),
                         title: T.intl.string(T.t.aFudZG),
                         note: T.intl.string(T.t.nIrkW1),
                         value: P.resolution,
-                        options: B
+                        options: B,
                     }),
                     (0, i.jsx)(E.Q, {
                         className: N.formItem,
                         select: (e) =>
                             j.yi({
                                 resolution: P.resolution,
-                                frameRate: e
+                                frameRate: e,
                             }),
-                        title: T.intl.string(T.t['2wScLy']),
-                        note: T.intl.string(T.t['Rf9+f3']),
+                        title: T.intl.string(T.t["2wScLy"]),
+                        note: T.intl.string(T.t["Rf9+f3"]),
                         value: P.frameRate,
-                        options: U
+                        options: U,
                     }),
                     (0, i.jsx)(E.O, {
                         className: N.formItem,
                         title: T.intl.string(T.t.pf54ER),
-                        note: T.intl.string(T.t['QyB/jI']),
-                        children: (0, i.jsx)('div', {
+                        note: T.intl.string(T.t["QyB/jI"]),
+                        children: (0, i.jsx)("div", {
                             className: I.keyRecorder,
                             children: (0, i.jsx)(u.Z, {
                                 defaultValue: D.shortcut,
-                                onChange: V
-                            })
-                        })
-                    })
-                ]
-            })
-        ]
+                                onChange: V,
+                            }),
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

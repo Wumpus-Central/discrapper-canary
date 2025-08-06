@@ -4,8 +4,8 @@ n(73800);
 var r = n(979463);
 function s(e) {
     let { children: t } = e;
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: r.categorySubGroup,
-        children: t
+        children: t,
     });
 }

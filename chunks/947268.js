@@ -1,19 +1,19 @@
 var r = n(567701),
-    i = 'Unknown',
-    o = { 'Mac OS': 'Mac OS X' };
+    i = "Unknown",
+    o = { "Mac OS": "Mac OS X" };
 function a(e) {
     return o[e] || e;
 }
 function s(e) {
     if (!e)
         return {
-            major: '',
-            minor: ''
+            major: "",
+            minor: "",
         };
-    var t = e.split('.');
+    var t = e.split(".");
     return {
         major: t[0],
-        minor: t[1]
+        minor: t[1],
     };
 }
 var l = new r().getResult(),
@@ -30,5 +30,5 @@ e.exports = {
     platformArchitecture: l.cpu.architecture || i,
     platformName: a(l.os.name) || i,
     platformVersion: l.os.version || i,
-    platformFullVersion: l.os.version || i
+    platformFullVersion: l.os.version || i,
 };

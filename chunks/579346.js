@@ -18,37 +18,37 @@ function h(e) {
         S = x === l.m.GRADIENT,
         _ = (0, o.useCallback)(
             (e) => {
-                (h([e]),
+                h([e]),
                     c.default.track(u.rMx.DISPLAY_NAME_STYLES_COLOR_SELECTED, {
                         default: e === b,
-                        colors: [e]
-                    }));
+                        colors: [e],
+                    });
             },
-            [h, b]
+            [h, b],
         ),
         O = (0, o.useCallback)(
             (e) => {
-                (h(e),
+                h(e),
                     c.default.track(u.rMx.DISPLAY_NAME_STYLES_COLOR_SELECTED, {
                         default: !1,
-                        colors: e
-                    }));
+                        colors: e,
+                    });
             },
-            [h]
+            [h],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: j,
         children: [
             (0, r.jsxs)(a.X6, {
-                variant: 'heading-md/semibold',
+                variant: "heading-md/semibold",
                 className: g.selectorHeading,
                 children: [
-                    f.intl.string(p.default['JOpi7+']),
+                    f.intl.string(p.default["JOpi7+"]),
                     (0, r.jsx)(i.SrA, {
-                        size: 'xs',
-                        color: i.TVs.colors.TEXT_DEFAULT
-                    })
-                ]
+                        size: "xs",
+                        color: i.TVs.colors.TEXT_DEFAULT,
+                    }),
+                ],
             }),
             (0, r.jsx)(s.default, {
                 className: m.colorPicker,
@@ -59,8 +59,8 @@ function h(e) {
                 secondaryValue: null != (t = n[1]) ? t : void 0,
                 onChange: _,
                 onChangeGradientColors: O,
-                isGradient: S
-            })
-        ]
+                isGradient: S,
+            }),
+        ],
     });
 }

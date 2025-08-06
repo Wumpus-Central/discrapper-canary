@@ -1,4 +1,4 @@
-(a.d(t, { a: () => d }), a(388685));
+a.d(t, { a: () => d }), a(388685);
 var n = a(255367);
 a(73800);
 var r = a(920981),
@@ -11,22 +11,22 @@ let d = () => {
     let e = (0, l.e7)([o.Z], () => o.Z.getShopHomeConfigOverride()),
         t = [
             {
-                label: 'DISABLED (no override)',
-                value: void 0
+                label: "DISABLED (no override)",
+                value: void 0,
             },
             ...Object.values(r.H)
                 .filter((e) => e !== r.H.SUMMER_SALE_TAKEOVER)
                 .map((e) => ({
                     label: e,
-                    value: e
-                }))
+                    value: e,
+                })),
         ];
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: c.container,
         children: [
             (0, n.jsx)(i.Text, {
-                variant: 'text-md/normal',
-                children: 'Shop Home Override'
+                variant: "text-md/normal",
+                children: "Shop Home Override",
             }),
             (0, n.jsx)(i.q4e, {
                 className: c.selector,
@@ -34,8 +34,8 @@ let d = () => {
                 value: e,
                 onChange: (e) => {
                     (0, s.fi)(e);
-                }
-            })
-        ]
+                },
+            }),
+        ],
     });
 };

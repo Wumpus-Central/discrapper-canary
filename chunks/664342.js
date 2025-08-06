@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685));
+n.d(t, { Z: () => N }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -27,24 +27,24 @@ function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -78,8 +78,8 @@ function P(e) {
         targetElementRef: s,
         shouldShow: n,
         animation: l.yRy.Animation.NONE,
-        position: 'bottom',
-        align: 'right',
+        position: "bottom",
+        align: "right",
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
@@ -94,16 +94,16 @@ function P(e) {
                     onClick: o,
                     tooltip: n ? null : c,
                     icon: l.xhG,
-                    'aria-label': c,
-                    selected: n
-                })
+                    "aria-label": c,
+                    selected: n,
+                }),
             );
-        }
+        },
     });
 }
 function T(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
-        y = (0, c.Z)(t, 'Sidebar Overflow'),
+        y = (0, c.Z)(t, "Sidebar Overflow"),
         x = (0, d.Z)(t),
         O = (0, f.Z)(t),
         v = (0, g.Z)(t),
@@ -115,64 +115,64 @@ function T(e) {
         N = (0, s.Z)(t),
         R = (0, b.Z)({
             id: t.id,
-            label: S.intl.string(S.t.DQ797u)
+            label: S.intl.string(S.t.DQ797u),
         }),
         w = (0, m.Z)(t);
     function A() {
         (0, j.Kh)(t.id);
     }
     return (0, r.jsxs)(l.v2r, {
-        navId: 'thread-context',
+        navId: "thread-context",
         onClose: n,
-        'aria-label': S.intl.string(S.t['1NBjqa']),
+        "aria-label": S.intl.string(S.t["1NBjqa"]),
         onSelect: i,
         children: [
             (0, r.jsxs)(l.kSQ, {
                 children: [
                     y,
                     (0, r.jsx)(l.sNh, {
-                        id: 'open',
+                        id: "open",
                         label: S.intl.string(S.t.IxVmZm),
-                        action: A
-                    })
-                ]
+                        action: A,
+                    }),
+                ],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [O, v]
+                children: [O, v],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [P, x, I]
+                children: [P, x, I],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
                     (0, r.jsx)(l.sNh, {
-                        id: 'search',
-                        label: S.intl.string(S.t['5h0QOD']),
+                        id: "search",
+                        label: S.intl.string(S.t["5h0QOD"]),
                         icon: l.rgF,
                         action: function () {
-                            (A(),
+                            A(),
                                 setTimeout(() => {
                                     _.S.dispatch(E.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
-                                }, 2000));
-                        }
+                                }, 2000);
+                        },
                     }),
                     (0, r.jsx)(l.sNh, {
-                        id: 'pins',
-                        label: S.intl.string(S.t['2BSH7u']),
+                        id: "pins",
+                        label: S.intl.string(S.t["2BSH7u"]),
                         icon: l.rgF,
                         action: function () {
-                            (A(), _.S.dispatch(E.CkL.TOGGLE_CHANNEL_PINS));
-                        }
-                    })
-                ]
+                            A(), _.S.dispatch(E.CkL.TOGGLE_CHANNEL_PINS);
+                        },
+                    }),
+                ],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [w, C, Z, T]
+                children: [w, C, Z, T],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [N, R]
-            })
-        ]
+                children: [N, R],
+            }),
+        ],
     });
 }
 function N(e) {
@@ -185,8 +185,8 @@ function N(e) {
             (0, r.jsx)(x.ZP.Icon, {
                 icon: l.Dio,
                 tooltip: S.intl.string(S.t.cpT0Cg),
-                onClick: () => (0, C.vN)((0, y.e)(t), null != n ? n : t.parent_id)
-            })
-        ]
+                onClick: () => (0, C.vN)((0, y.e)(t), null != n ? n : t.parent_id),
+            }),
+        ],
     });
 }

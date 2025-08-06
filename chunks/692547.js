@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(704826), n(35282));
+n.d(t, { Z: () => x }), n(388685), n(704826), n(35282);
 var r = n(688619),
     i = n.n(r),
     o = n(595182),
@@ -48,9 +48,9 @@ let { Themes: E } = n(15202).V,
                     if (1 === f) return R.unsafe_rawColors[d].resolve(t);
                     {
                         let e = C[d];
-                        return (0 !== e.alpha() && 1 !== f && (e = e.alpha(f)), P(e, t.saturation));
+                        return 0 !== e.alpha() && 1 !== f && (e = e.alpha(f)), P(e, t.saturation);
                     }
-                }
+                },
             };
         }),
         unsafe_rawColors: l()(y, (e, t) => {
@@ -61,7 +61,7 @@ let { Themes: E } = n(15202).V,
                 resolve(e) {
                     var t;
                     return P(r, null != (t = null == e ? void 0 : e.saturation) ? t : 1);
-                }
+                },
             };
         }),
         shadows: l()(I, (e, t) => ({
@@ -69,29 +69,29 @@ let { Themes: E } = n(15202).V,
             resolve: (t) => ({
                 boxShadow: e[t.theme].boxShadow,
                 filter: e[t.theme].filter,
-                nativeStyles: e[t.theme].nativeStyles
-            })
+                nativeStyles: e[t.theme].nativeStyles,
+            }),
         })),
         radii: h.w,
-        spacing: l()(T, (e) => ''.concat(e, 'px')),
-        layout: l()(A, (e) => ('number' == typeof e ? ''.concat(e, 'px') : e)),
+        spacing: l()(T, (e) => "".concat(e, "px")),
+        layout: l()(A, (e) => ("number" == typeof e ? "".concat(e, "px") : e)),
         space: l()(N, (e) => ({
             css: e.css,
             resolve(t) {
                 let { density: n } = t;
                 return e.resolve(n);
-            }
-        }))
+            },
+        })),
     };
 function P(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return w(e, t, n).hex('rgba');
+            return w(e, t, n).hex("rgba");
         },
         hsl() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return w(e, t, n).css('hsl');
+            return w(e, t, n).css("hsl");
         },
         hex() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -106,21 +106,21 @@ function P(e, t) {
         rgba() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             return w(e, t, n).rgba();
-        }
+        },
     };
 }
 function w(e, t, n) {
     var r;
     let i = a()(null != (r = n.opacity) ? r : 1, 0, 1),
         o = e;
-    return (1 !== t && (o = o.set('hsl.s', o.get('hsl.s') * t)), 1 !== i && (o = o.alpha(o.alpha() * i)), o);
+    return 1 !== t && (o = o.set("hsl.s", o.get("hsl.s") * t)), 1 !== i && (o = o.alpha(o.alpha() * i)), o;
 }
 function D(e) {
-    return e.toLowerCase().replace(/_/g, '-');
+    return e.toLowerCase().replace(/_/g, "-");
 }
 function L(e, t) {
     let n = null != t ? D(t) : null,
         r = D(e);
-    return 'var(--'.concat([n, r].filter(Boolean).join('-'), ')');
+    return "var(--".concat([n, r].filter(Boolean).join("-"), ")");
 }
 let x = R;

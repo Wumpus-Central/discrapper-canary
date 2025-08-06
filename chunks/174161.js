@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,7 +72,8 @@ function O(e, t) {
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -82,36 +83,32 @@ function v(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function I(e) {
     var { profile: t, disableGuildNameClick: n } = e,
-        s = O(e, ['profile', 'disableGuildNameClick']);
+        s = O(e, ["profile", "disableGuildNameClick"]);
     let c = t.id,
-        f = (0, o.e7)(
-            [d.ZP, u.default],
-            () => {
-                var e;
-                return (null == (e = d.ZP.getMember(c, u.default.getId())) ? void 0 : e.joinedAt) != null;
-            },
-            [c]
-        ),
+        f = (0, o.e7)([d.ZP, u.default], () => {
+            var e;
+            return (null == (e = d.ZP.getMember(c, u.default.getId())) ? void 0 : e.joinedAt) != null;
+        }, [c]),
         _ = i.useCallback(
             (e) => {
                 f && (e.stopPropagation(), (0, l.X)(t.id));
             },
-            [f, t.id]
+            [f, t.id],
         );
     return !f || n
         ? (0, r.jsx)(
               a.X6q,
               y(E({}, s), {
                   className: m.guildName,
-                  variant: 'heading-md/semibold',
-                  color: 'header-primary',
-                  children: t.name
-              })
+                  variant: "heading-md/semibold",
+                  color: "header-primary",
+                  children: t.name,
+              }),
           )
         : (0, r.jsx)(
               a.P3F,
@@ -120,11 +117,11 @@ function I(e) {
                   onClick: _,
                   children: (0, r.jsx)(a.X6q, {
                       className: m.guildName,
-                      variant: 'heading-md/semibold',
-                      color: 'header-primary',
-                      children: t.name
-                  })
-              })
+                      variant: "heading-md/semibold",
+                      color: "header-primary",
+                      children: t.name,
+                  }),
+              }),
           );
 }
 function T(e) {
@@ -135,13 +132,13 @@ function T(e) {
             let e = (0, f.$5)(t);
             return (0, r.jsx)(s.Z, {
                 guild: e,
-                isBannerVisible: !1
+                isBannerVisible: !1,
             });
         }, [t]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: m.header,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: m.nameContainer,
                 children: [
                     (0, r.jsx)(a.ua7, {
@@ -152,48 +149,48 @@ function T(e) {
                                 I,
                                 y(E({}, e), {
                                     profile: t,
-                                    disableGuildNameClick: n
-                                })
-                            )
+                                    disableGuildNameClick: n,
+                                }),
+                            ),
                     }),
-                    d
-                ]
+                    d,
+                ],
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: m.members,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: m.memberCount,
                         children: [
-                            (0, r.jsx)('div', { className: m.dotOnline }),
+                            (0, r.jsx)("div", { className: m.dotOnline }),
                             (0, r.jsx)(a.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-secondary',
-                                children: h.intl.format(h.t['LC+S+v'], { membersOnline: t.onlineCount })
-                            })
-                        ]
+                                variant: "text-sm/normal",
+                                color: "text-secondary",
+                                children: h.intl.format(h.t["LC+S+v"], { membersOnline: t.onlineCount }),
+                            }),
+                        ],
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: m.memberCount,
                         children: [
-                            (0, r.jsx)('div', { className: m.dot }),
+                            (0, r.jsx)("div", { className: m.dot }),
                             (0, r.jsx)(a.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-secondary',
-                                children: h.intl.format(h.t.zRl6XV, { count: t.memberCount })
-                            })
-                        ]
-                    })
-                ]
+                                variant: "text-sm/normal",
+                                color: "text-secondary",
+                                children: h.intl.format(h.t.zRl6XV, { count: t.memberCount }),
+                            }),
+                        ],
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: m.established,
                 children: (0, r.jsx)(a.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-secondary',
-                    children: h.intl.format(h.t['zb2Q5+'], { createdAtDate: u })
-                })
-            })
-        ]
+                    variant: "text-sm/normal",
+                    color: "text-secondary",
+                    children: h.intl.format(h.t["zb2Q5+"], { createdAtDate: u }),
+                }),
+            }),
+        ],
     });
 }

@@ -12,10 +12,10 @@ function r(t) {
         actions: [
             {
                 text: e.intl.string(e.t.BddRzc),
-                variant: 'primary',
-                onClick: n
-            }
+                variant: "primary",
+                onClick: n,
+            },
         ],
-        subtitle: e.intl.string(e.t.nIeRen)
+        subtitle: e.intl.string(e.t.nIeRen),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { v: () => v }), n(539854), n(388685));
+n.d(t, { v: () => v }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,7 +67,8 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,7 +78,7 @@ function g(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function E(e) {
@@ -108,34 +109,47 @@ function b(e) {
     );
 }
 function y(e) {
-    let { renderSection: t, renderRow: n, renderFooter: o, renderListHeader: a, stickyListHeader: s, wrapSection: c, items: u, spacerTop: d } = e,
+    let {
+            renderSection: t,
+            renderRow: n,
+            renderFooter: o,
+            renderListHeader: a,
+            stickyListHeader: s,
+            wrapSection: c,
+            items: u,
+            spacerTop: d,
+        } = e,
         f = [
             (0, r.jsx)(
-                'div',
+                "div",
                 {
-                    'aria-hidden': !0,
-                    style: { height: d }
+                    "aria-hidden": !0,
+                    style: { height: d },
                 },
-                '---list-spacer-top'
-            )
+                "---list-spacer-top",
+            ),
         ],
         _ = [],
         p = 0;
     if (
-        (!0 === s && null != a && f.push((0, r.jsx)(i.Fragment, { children: a() }, '---sticky-header')),
+        (!0 === s && null != a && f.push((0, r.jsx)(i.Fragment, { children: a() }, "---sticky-header")),
         u.forEach((e) => {
             var r;
-            switch ((e.section !== p && _.length > 0 && (f.push(null != c ? c(p, _) : _), (_ = [])), (p = null != (r = e.section) ? r : 0), e.type)) {
-                case 'section':
+            switch (
+                (e.section !== p && _.length > 0 && (f.push(null != c ? c(p, _) : _), (_ = [])),
+                (p = null != (r = e.section) ? r : 0),
+                e.type)
+            ) {
+                case "section":
                     null != t && _.push(t(e));
                     break;
-                case 'row':
+                case "row":
                     _.push(n(e));
                     break;
-                case 'footer':
+                case "footer":
                     null != o && _.push(o(e));
                     break;
-                case 'header':
+                case "header":
                     null != a && !0 !== s && _.push(a());
             }
         }),
@@ -161,8 +175,74 @@ function v(e, t, n, o) {
             });
         });
     return i.forwardRef(function (o, p) {
-        var { className: g, onScroll: v, onResize: I = null, onContentResize: T = null, dir: S = 'ltr', sections: A, sectionHeight: N, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: M, renderListHeader: k, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: Z, fade: F = !1, customTheme: V = !1, chunkSize: H, style: Y, innerId: W, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: X, innerClassName: Q, innerTag: J = 'div' } = o,
-            $ = m(o, ['className', 'onScroll', 'onResize', 'onContentResize', 'dir', 'sections', 'sectionHeight', 'rowHeight', 'footerHeight', 'sidebarHeight', 'listHeaderHeight', 'renderSection', 'renderRow', 'renderFooter', 'renderSidebar', 'renderListHeader', 'stickyListHeader', 'wrapSection', 'getAnchorId', 'paddingTop', 'paddingBottom', 'fade', 'customTheme', 'chunkSize', 'style', 'innerId', 'innerRole', 'innerAriaLabel', 'innerAriaMultiselectable', 'innerAriaOrientation', 'innerClassName', 'innerTag']);
+        var {
+                className: g,
+                onScroll: v,
+                onResize: I = null,
+                onContentResize: T = null,
+                dir: S = "ltr",
+                sections: A,
+                sectionHeight: N,
+                rowHeight: C,
+                footerHeight: R = 0,
+                sidebarHeight: P,
+                listHeaderHeight: w = 0,
+                renderSection: D,
+                renderRow: L,
+                renderFooter: x,
+                renderSidebar: M,
+                renderListHeader: k,
+                stickyListHeader: j,
+                wrapSection: U,
+                getAnchorId: G,
+                paddingTop: B,
+                paddingBottom: Z,
+                fade: F = !1,
+                customTheme: V = !1,
+                chunkSize: H,
+                style: Y,
+                innerId: W,
+                innerRole: K,
+                innerAriaLabel: z,
+                innerAriaMultiselectable: q,
+                innerAriaOrientation: X,
+                innerClassName: Q,
+                innerTag: J = "div",
+            } = o,
+            $ = m(o, [
+                "className",
+                "onScroll",
+                "onResize",
+                "onContentResize",
+                "dir",
+                "sections",
+                "sectionHeight",
+                "rowHeight",
+                "footerHeight",
+                "sidebarHeight",
+                "listHeaderHeight",
+                "renderSection",
+                "renderRow",
+                "renderFooter",
+                "renderSidebar",
+                "renderListHeader",
+                "stickyListHeader",
+                "wrapSection",
+                "getAnchorId",
+                "paddingTop",
+                "paddingBottom",
+                "fade",
+                "customTheme",
+                "chunkSize",
+                "style",
+                "innerId",
+                "innerRole",
+                "innerAriaLabel",
+                "innerAriaMultiselectable",
+                "innerAriaOrientation",
+                "innerClassName",
+                "innerTag",
+            ]);
         let ee = i.useRef(null),
             et = i.useRef(null),
             [en, er] = i.useState(!1),
@@ -171,8 +251,8 @@ function v(e, t, n, o) {
             scrollerRef: ei,
             className: g,
             specs: s,
-            orientation: 'vertical',
-            dir: S
+            orientation: "vertical",
+            dir: S,
         });
         let {
                 spacerTop: es,
@@ -181,7 +261,7 @@ function v(e, t, n, o) {
                 isSidebarVisible: eu,
                 listComputer: ed,
                 forceUpdateOnChunkChange: ef,
-                anchor: e_
+                anchor: e_,
             } = (0, u.aU)({
                 sections: A,
                 sectionHeight: N,
@@ -193,13 +273,13 @@ function v(e, t, n, o) {
                 paddingBottom: Z,
                 chunkSize: H,
                 getScrollerState: ea,
-                getAnchorId: G
+                getAnchorId: G,
             }),
             ep = (0, u.t2)(ei),
             eh = i.useRef(I),
             em = i.useRef(T);
         i.useLayoutEffect(() => {
-            ((eh.current = I), (em.current = T));
+            (eh.current = I), (em.current = T);
         });
         let eg = i.useCallback(
                 function () {
@@ -210,15 +290,15 @@ function v(e, t, n, o) {
                     }
                     ef(e);
                 },
-                [ef, eo]
+                [ef, eo],
             ),
             eE = i.useCallback(() => eg(), [eg]);
-        ((0, u.zn)({
+        (0, u.zn)({
             ref: ei,
             onUpdate: eE,
-            key: 'container',
+            key: "container",
             resizeObserver: f,
-            listenerMap: l
+            listenerMap: l,
         }),
             (0, u.zn)({
                 ref: et,
@@ -226,10 +306,10 @@ function v(e, t, n, o) {
                     var e;
                     return null == (e = em.current) ? void 0 : e.call(em);
                 },
-                key: 'content',
+                key: "content",
                 resizeObserver: f,
-                listenerMap: l
-            }));
+                listenerMap: l,
+            });
         let eb = E(ec),
             ey = b(A);
         i.useImperativeHandle(
@@ -240,22 +320,22 @@ function v(e, t, n, o) {
                         getScrollerNode: () => ei.current,
                         getScrollerState: ea,
                         getItems: eb,
-                        getSectionRowFromIndex: ey
+                        getSectionRowFromIndex: ey,
                     },
-                    (0, u.rH)(ei, ea, ed, ep)
+                    (0, u.rH)(ei, ea, ed, ep),
                 ),
-            [ei, ea, ey, eb, ed, ep]
+            [ei, ea, ey, eb, ed, ep],
         );
         let eO = i.useCallback(
             (e) => {
-                (eg(1),
+                eg(1),
                     null == ee.current ? er(!0) : clearTimeout(ee.current),
                     (ee.current = setTimeout(() => {
-                        ((ee.current = null), er(!1));
+                        (ee.current = null), er(!1);
                     }, 200)),
-                    null != v && v(e));
+                    null != v && v(e);
             },
-            [v, eg]
+            [v, eg],
         );
         return (
             i.useLayoutEffect(() => {
@@ -267,10 +347,10 @@ function v(e, t, n, o) {
                 getScrollerState: ea,
                 listComputer: ed,
                 getAnchorId: G,
-                totalHeight: el
+                totalHeight: el,
             }),
             (0, r.jsxs)(
-                'div',
+                "div",
                 h(
                     _(
                         {
@@ -280,11 +360,11 @@ function v(e, t, n, o) {
                                 [e]: !0,
                                 [t]: F,
                                 [n]: V,
-                                [d.scrolling]: en
+                                [d.scrolling]: en,
                             }),
-                            style: (0, u.uT)(Y)
+                            style: (0, u.uT)(Y),
                         },
-                        $
+                        $,
                     ),
                     {
                         children: [
@@ -293,9 +373,9 @@ function v(e, t, n, o) {
                                     (0, r.jsx)(J, {
                                         id: W,
                                         role: K,
-                                        'aria-label': z,
-                                        'aria-multiselectable': q,
-                                        'aria-orientation': X,
+                                        "aria-label": z,
+                                        "aria-multiselectable": q,
+                                        "aria-orientation": X,
                                         style: { height: el },
                                         className: a()(d.content, Q),
                                         ref: et,
@@ -309,11 +389,11 @@ function v(e, t, n, o) {
                                                 renderRow: L,
                                                 renderFooter: x,
                                                 wrapSection: U,
-                                                spacerTop: es
-                                            })
-                                        })
+                                                spacerTop: es,
+                                            }),
+                                        }),
                                     }),
-                                [J, W, K, z, q, X, el, Q, ec, k, j, D, L, x, U, es]
+                                [J, W, K, z, q, X, el, Q, ec, k, j, D, L, x, U, es],
                             ),
                             i.useMemo(
                                 () =>
@@ -321,13 +401,13 @@ function v(e, t, n, o) {
                                         isSidebarVisible: eu,
                                         renderSidebar: M,
                                         sidebarHeight: P,
-                                        isListVisible: 0 !== ec.length
+                                        isListVisible: 0 !== ec.length,
                                     }),
-                                [eu, M, P, ec.length]
-                            )
-                        ]
-                    }
-                )
+                                [eu, M, P, ec.length],
+                            ),
+                        ],
+                    },
+                ),
             )
         );
     });

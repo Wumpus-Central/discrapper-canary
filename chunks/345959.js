@@ -17,17 +17,18 @@ e.exports = function (e, r) {
         (a =
             2 === d
                 ? (function (e, t) {
-                      for (var r = e.length + t.length, a = new Float32Array(r), n = 0, s = 0; n < r; ) ((a[n++] = e[s]), (a[n++] = t[s]), s++);
+                      for (var r = e.length + t.length, a = new Float32Array(r), n = 0, s = 0; n < r; )
+                          (a[n++] = e[s]), (a[n++] = t[s]), s++;
                       return a;
                   })(e.getChannelData(0), e.getChannelData(1))
                 : e.getChannelData(0)),
         (n = p),
         (s = h),
         (l = (o = d) * (c = (i = 3 === p ? 32 : 16) / 8)),
-        t((f = new DataView((u = new ArrayBuffer(44 + a.length * c)))), 0, 'RIFF'),
+        t((f = new DataView((u = new ArrayBuffer(44 + a.length * c)))), 0, "RIFF"),
         f.setUint32(4, 36 + a.length * c, !0),
-        t(f, 8, 'WAVE'),
-        t(f, 12, 'fmt '),
+        t(f, 8, "WAVE"),
+        t(f, 12, "fmt "),
         f.setUint32(16, 16, !0),
         f.setUint16(20, n, !0),
         f.setUint16(22, o, !0),
@@ -35,7 +36,7 @@ e.exports = function (e, r) {
         f.setUint32(28, s * l, !0),
         f.setUint16(32, l, !0),
         f.setUint16(34, i, !0),
-        t(f, 36, 'data'),
+        t(f, 36, "data"),
         f.setUint32(40, a.length * c, !0),
         1 === n
             ? (function (e, t, r) {

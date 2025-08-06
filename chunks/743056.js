@@ -7,7 +7,7 @@ function o(e) {
             i.Z.cancelFriendRequest({
                 userId: t,
                 applicationId: o ? n : null,
-                location: a
+                location: a,
             });
         }, [n, o, a, t]);
     return {
@@ -17,9 +17,9 @@ function o(e) {
                 applicationId: o ? n : null,
                 location: a,
                 onConfirm: s,
-                onCancel: l
+                onCancel: l,
             });
         }, [n, o, a, l, s, t]),
-        cancelFriendRequest: c
+        cancelFriendRequest: c,
     };
 }

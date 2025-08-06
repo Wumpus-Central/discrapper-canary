@@ -5,7 +5,7 @@ var r = n(134632),
 function a(e) {
     switch (e) {
         case r.w.THINK:
-            return o.intl.string(o.t['45vlm5']);
+            return o.intl.string(o.t["45vlm5"]);
         case r.w.LOVE:
             return o.intl.string(o.t.np9mf3);
         case r.w.EXCITED:
@@ -13,7 +13,7 @@ function a(e) {
         case r.w.RECOMMEND:
             return o.intl.string(o.t.Zx7N1t);
         case r.w.QUESTION:
-            return o.intl.string(o.t['f+PyDw']);
+            return o.intl.string(o.t["f+PyDw"]);
         default:
             (0, i.vE)(e);
     }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685), n(415506));
+n.d(t, { Z: () => N }), n(388685), n(415506);
 var r,
     i = n(255367),
     o = n(73800),
@@ -25,7 +25,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -51,11 +51,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -78,23 +78,23 @@ class A extends (r = o.PureComponent) {
         let { dispatchState: e } = this.props;
         return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1
             ? (0, i.jsxs)(u.P3F, {
-                  'aria-label': y.intl.string(y.t.KTPVLC),
+                  "aria-label": y.intl.string(y.t.KTPVLC),
                   className: O.dropdownArrowHitbox,
                   onClick: this.handleDropdownClick,
                   children: [
-                      (0, i.jsx)('div', { className: O.arrowSeparator }),
+                      (0, i.jsx)("div", { className: O.arrowSeparator }),
                       (0, i.jsx)(u.CJ0, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: O.dropdownArrow
-                      })
-                  ]
+                          size: "md",
+                          color: "currentColor",
+                          className: O.dropdownArrow,
+                      }),
+                  ],
               })
             : null;
     }
     renderDisabledButton(e, t) {
         let { className: n, fullWidth: r, size: o, customDisabledColor: a, tooltipPosition: s } = this.props;
-        return (0, i.jsxs)('div', {
+        return (0, i.jsxs)("div", {
             className: O.disabledButtonWrapper,
             children: [
                 (0, i.jsx)(c.zx, {
@@ -103,20 +103,36 @@ class A extends (r = o.PureComponent) {
                     size: o,
                     color: null != a ? a : O.disabledButtonColor,
                     disabled: !0,
-                    children: e
+                    children: e,
                 }),
                 (0, i.jsx)(u.ua7, {
                     text: t,
                     position: s,
-                    children: (e) => (0, i.jsx)('div', I({ className: O.disabledButtonOverlay }, e))
-                })
-            ]
+                    children: (e) => (0, i.jsx)("div", I({ className: O.disabledButtonOverlay }, e)),
+                }),
+            ],
         });
     }
     render() {
-        let { className: e, fullWidth: t, size: n, color: r, isLaunchable: o, isLaunching: a, isRunning: l, isShiny: d, hideNotLaunchable: f } = this.props;
-        if (!o) return f ? null : this.renderDisabledButton(y.intl.string(y.t['359PbW']), g.isPlatformEmbedded ? y.intl.string(y.t.NASLa2) : y.intl.string(y.t.o1bhkJ));
-        if (l) return this.renderDisabledButton(y.intl.string(y.t['3elwAA']));
+        let {
+            className: e,
+            fullWidth: t,
+            size: n,
+            color: r,
+            isLaunchable: o,
+            isLaunching: a,
+            isRunning: l,
+            isShiny: d,
+            hideNotLaunchable: f,
+        } = this.props;
+        if (!o)
+            return f
+                ? null
+                : this.renderDisabledButton(
+                      y.intl.string(y.t["359PbW"]),
+                      g.isPlatformEmbedded ? y.intl.string(y.t.NASLa2) : y.intl.string(y.t.o1bhkJ),
+                  );
+        if (l) return this.renderDisabledButton(y.intl.string(y.t["3elwAA"]));
         let _ = d ? u.gtL : c.zx;
         return (0, i.jsxs)(_, {
             className: s()(O.playButton, e),
@@ -127,52 +143,64 @@ class A extends (r = o.PureComponent) {
             submitting: a,
             onClick: this.handleClick,
             children: [
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: O.buttonText,
-                    children: y.intl.string(y.t['359PbW'])
+                    children: y.intl.string(y.t["359PbW"]),
                 }),
-                this.renderDropdown()
-            ]
+                this.renderDropdown(),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            v(this, 'handleDropdownClick', (e) => {
+        super(...e),
+            v(this, "handleDropdownClick", (e) => {
                 e.stopPropagation();
                 let { libraryApplication: t, onDropdownOpen: r, onDropdownClose: o } = this.props;
-                if ((null == r || r(e), null == t)) throw Error('Unexpected missing libraryApplication');
+                if ((null == r || r(e), null == t)) throw Error("Unexpected missing libraryApplication");
                 d.jW(
                     e,
                     async () => {
-                        let { default: e } = await n.e('53195').then(n.bind(n, 918306));
+                        let { default: e } = await n.e("53195").then(n.bind(n, 918306));
                         return (n) =>
                             (0, i.jsx)(
                                 e,
                                 S(I({}, n), {
                                     libraryApplication: t,
-                                    onPlay: this.handleClick
-                                })
+                                    onPlay: this.handleClick,
+                                }),
                             );
                     },
-                    { onClose: o }
+                    { onClose: o },
                 );
             }),
-            v(this, 'handleClick', () => {
-                let { applicationId: e, libraryApplication: t, analyticsListSort: n, analyticsListIndex: r } = this.props;
+            v(this, "handleClick", () => {
+                let {
+                    applicationId: e,
+                    libraryApplication: t,
+                    analyticsListSort: n,
+                    analyticsListIndex: r,
+                } = this.props;
                 E.playApplication(e, t, {
                     analyticsParams: {
                         location: this.analyticsLocation,
                         list_sort: n,
-                        list_index: r
-                    }
+                        list_index: r,
+                    },
                 });
-            }));
+            });
     }
 }
 function N(e) {
     let { applicationId: t, libraryApplication: n } = e,
         r = (0, f.O)(),
-        [o, a] = (0, l.Wu)([h.Z, p.Z, m.Z], () => [h.Z.isConnected(t) || p.Z.isLaunchable(t) || (null != n && m.Z.isLaunchable(n.id, n.branchId)), p.Z.launchingGames.has(t)], [t, n]),
+        [o, a] = (0, l.Wu)(
+            [h.Z, p.Z, m.Z],
+            () => [
+                h.Z.isConnected(t) || p.Z.isLaunchable(t) || (null != n && m.Z.isLaunchable(n.id, n.branchId)),
+                p.Z.launchingGames.has(t),
+            ],
+            [t, n],
+        ),
         s = (0, l.e7)([_.ZP], () => new Set(_.ZP.getRunningVerifiedApplicationIds()).has(t), [t]),
         c = (0, l.e7)([m.Z], () => (null != n ? m.Z.getState(n.id, n.branchId) : null), [n]);
     return (0, i.jsx)(
@@ -182,14 +210,14 @@ function N(e) {
             isLaunchable: o,
             isLaunching: a,
             isRunning: s,
-            dispatchState: c
-        })
+            dispatchState: c,
+        }),
     );
 }
-v(A, 'defaultProps', {
+v(A, "defaultProps", {
     fullWidth: !1,
     size: c.zx.Sizes.LARGE,
-    tooltipPosition: 'top',
+    tooltipPosition: "top",
     isShiny: !1,
-    hideNotLaunchable: !1
+    hideNotLaunchable: !1,
 });

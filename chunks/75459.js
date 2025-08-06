@@ -1,6 +1,6 @@
 n.d(t, {
     D_: () => h,
-    cU: () => g
+    cU: () => g,
 });
 var r = n(674746),
     i = n(242433),
@@ -17,12 +17,12 @@ var f = n(335677),
 let p = [
         {
             skuId: i.d.SUMMER_2025_GIFTING_REWARD_SKU_ID,
-            assetId: 'a_f6d7905998db3f6f57671b4ea70fa272'
-        }
+            assetId: "a_f6d7905998db3f6f57671b4ea70fa272",
+        },
     ],
     h = 3,
     m = {
-        gradient: ['rgba(218, 237, 137, 1)', 'rgba(121, 199, 223, 1)', 'rgba(177, 176, 234, 1)']
+        gradient: ["rgba(218, 237, 137, 1)", "rgba(121, 199, 223, 1)", "rgba(177, 176, 234, 1)"],
     },
     g = {
         rewards: p,
@@ -34,13 +34,13 @@ let p = [
             gradientConfig: m,
             getImageUrl: () => u.Z,
             getBackgroundImageUrl: () => d.Z,
-            getCardImageUrl: () => _.Z
+            getCardImageUrl: () => _.Z,
         },
         chatGiftIcon: {
             trinketsAnimation: {
                 getAnimationData: () => n(119452),
-                getGlowAnimationData: () => n(431947)
-            }
+                getGlowAnimationData: () => n(431947),
+            },
         },
         firstTimeNotice: {
             getImageUrl: (e, t) => (t ? u.Z : f.Z),
@@ -48,13 +48,13 @@ let p = [
             description: () => c.intl.string(c.t.EWn7kZ),
             cta: () => c.intl.string(c.t.RzWDqa),
             analyticsLocation: o.Z.GIFTING_PROMOTION_COACHMARK,
-            analyticsPage: l.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION
+            analyticsPage: l.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
         },
         planSelectionBanner: {
             desktopBannerText: () => c.intl.string(c.t.Q0VMqK),
             mobileBannerText: () => c.intl.string(c.t.VBnNJS),
-            getImageUrl: () => '',
-            gradientConfig: () => m
+            getImageUrl: () => "",
+            gradientConfig: () => m,
         },
         billingSettingsMarketingBanner: {
             getAnimatedImageUrl: () => f.Z,
@@ -62,12 +62,12 @@ let p = [
             title: () => c.intl.string(c.t.ydPofH),
             body: () => c.intl.string(c.t.iI74ho),
             gradientConfig: m,
-            textColor: r.Z.NEUTRAL_71
+            textColor: r.Z.NEUTRAL_71,
         },
         giftPurchaseConfirmation: {
             yearGiftText: c.t.xFKdb2,
             monthGiftText: c.t.GnL3Gh,
             collectRewardButtonText: () => c.intl.string(c.t.kMYVws),
-            rewardCollectedText: () => c.intl.string(c.t.eZrmtr)
-        }
+            rewardCollectedText: () => c.intl.string(c.t.eZrmtr),
+        },
     };

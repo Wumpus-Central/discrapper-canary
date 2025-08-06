@@ -13,54 +13,74 @@ n.d(t, {
     fL: () => h,
     ib: () => c,
     ln: () => y,
-    r0: () => O
+    r0: () => O,
 });
 var r = n(70956),
     i = n(411198),
     o = n(981631),
     a = n(388032);
-let s = 'Notifications Inbox',
+let s = "Notifications Inbox",
     l = 88,
     c = r.Z.Millis.WEEK,
     u = 50,
-    d = 'notifications-inbox',
+    d = "notifications-inbox",
     f = (0, i.yS)({
         id: o.STv,
         name: a.intl.string(a.t.HcoRu7),
-        description: '',
+        description: "",
         icon: void 0,
-        features: []
+        features: [],
     });
 var _ = (function (e) {
-        return ((e.UNREAD = 'UNREAD'), (e.TODAY = 'TODAY'), (e.YESTERDAY = 'YESTERDAY'), (e.OLDER = 'OLDER'), e);
+        return (e.UNREAD = "UNREAD"), (e.TODAY = "TODAY"), (e.YESTERDAY = "YESTERDAY"), (e.OLDER = "OLDER"), e;
     })({}),
     p = (function (e) {
-        return ((e.ALL = 'all'), (e.ANNOUNCEMENTS = 'announcements'), (e.MENTIONS = 'mentions'), (e.BOOKMARKS = 'bookmarks'), e);
+        return (
+            (e.ALL = "all"),
+            (e.ANNOUNCEMENTS = "announcements"),
+            (e.MENTIONS = "mentions"),
+            (e.BOOKMARKS = "bookmarks"),
+            e
+        );
     })({}),
     h = (function (e) {
-        return ((e.ALL_MESSAGES_CHANNEL = 'ALL_MESSAGES_CHANNEL'), (e.MENTION = 'MENTION'), (e.BOOKMARK = 'BOOKMARK'), e);
+        return (e.ALL_MESSAGES_CHANNEL = "ALL_MESSAGES_CHANNEL"), (e.MENTION = "MENTION"), (e.BOOKMARK = "BOOKMARK"), e;
     })({});
 let m = {
         UNREAD: a.t.sRUdBw,
         TODAY: a.t.F4jZQk,
         YESTERDAY: a.t.gnv4pK,
-        OLDER: a.t.exrPZm
+        OLDER: a.t.exrPZm,
     },
     g = {
         all: a.intl.string(a.t.iWyjNj),
-        bookmarks: a.intl.string(a.t['+rlGYW']),
+        bookmarks: a.intl.string(a.t["+rlGYW"]),
         announcements: a.intl.string(a.t.jR39HB),
-        mentions: a.intl.string(a.t['GRZF9/'])
+        mentions: a.intl.string(a.t["GRZF9/"]),
     };
 var E = (function (e) {
-        return ((e.UNLOADED = 'unloaded'), (e.LOADED = 'loaded'), (e.LOADED_UNREAD = 'loadedUnread'), e);
+        return (e.UNLOADED = "unloaded"), (e.LOADED = "loaded"), (e.LOADED_UNREAD = "loadedUnread"), e;
     })({}),
     b = (function (e) {
-        return ((e.AUTO_LOAD = 'auto_load'), (e.ON_OPEN = 'on_open'), (e.FILL_SCROLLER = 'fill_scroller'), (e.USER_SCROLL = 'user_scroll'), (e.UNKNOWN = 'unknown'), e);
+        return (
+            (e.AUTO_LOAD = "auto_load"),
+            (e.ON_OPEN = "on_open"),
+            (e.FILL_SCROLLER = "fill_scroller"),
+            (e.USER_SCROLL = "user_scroll"),
+            (e.UNKNOWN = "unknown"),
+            e
+        );
     })({}),
     y = (function (e) {
-        return ((e.MENTION = 'MENTION'), (e.REPLY = 'REPLY'), (e.REACTION = 'REACTION'), (e.ANNOUNCEMENT = 'ANNOUNCEMENT'), (e.MESSAGE = 'MESSAGE'), e);
+        return (
+            (e.MENTION = "MENTION"),
+            (e.REPLY = "REPLY"),
+            (e.REACTION = "REACTION"),
+            (e.ANNOUNCEMENT = "ANNOUNCEMENT"),
+            (e.MESSAGE = "MESSAGE"),
+            e
+        );
     })({}),
     O = (function (e) {
-        return ((e.ACK = 'ACK'), (e.BOOKMARK = 'BOOKMARK'), (e.SETTINGS = 'SETTINGS'), e);
+        return (e.ACK = "ACK"), (e.BOOKMARK = "BOOKMARK"), (e.SETTINGS = "SETTINGS"), e;
     })({});

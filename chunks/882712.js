@@ -1,6 +1,6 @@
 n.d(t, {
     I: () => c,
-    Z: () => g
+    Z: () => g,
 });
 var r,
     i = n(442837),
@@ -14,14 +14,20 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 var c = (function (e) {
-    return ((e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.SUCCESS = 2)] = 'SUCCESS'), (e[(e.ERROR = 3)] = 'ERROR'), e);
+    return (
+        (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
+        (e[(e.PENDING = 1)] = "PENDING"),
+        (e[(e.SUCCESS = 2)] = "SUCCESS"),
+        (e[(e.ERROR = 3)] = "ERROR"),
+        e
+    );
 })({});
 let u = 0,
     d = null,
@@ -32,10 +38,10 @@ function _(e) {
     s.Z.isConnected() && n.code === a.ZP.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (u = 1);
 }
 function p(e) {
-    ((u = 2), (d = e.purchaseTokenHash), (f = e.expiresAt));
+    (u = 2), (d = e.purchaseTokenHash), (f = e.expiresAt);
 }
 function h() {
-    ((u = 0), (d = null), (f = null));
+    (u = 0), (d = null), (f = null);
 }
 class m extends (r = i.ZP.Store) {
     get purchaseTokenAuthState() {
@@ -48,7 +54,7 @@ class m extends (r = i.ZP.Store) {
         return f;
     }
 }
-l(m, 'displayName', 'PurchaseTokenAuthStore');
+l(m, "displayName", "PurchaseTokenAuthStore");
 let g = new m(o.Z, {
     SKU_PURCHASE_FAIL: _,
     PREMIUM_PAYMENT_SUBSCRIBE_FAIL: _,
@@ -65,5 +71,5 @@ let g = new m(o.Z, {
     SKU_PURCHASE_MODAL_CLOSE: h,
     SKU_PURCHASE_MODAL_OPEN: h,
     SKU_PURCHASE_START: h,
-    SKU_PURCHASE_SUCCESS: h
+    SKU_PURCHASE_SUCCESS: h,
 });

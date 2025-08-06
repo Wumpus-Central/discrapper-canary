@@ -17,7 +17,7 @@ let f = () => {
         { avatarSrc: r, eventHandlers: t } = (0, a.Z)({
             userId: null == e ? void 0 : e.id,
             size: u.EF.SIZE_32,
-            animateOnHover: !0
+            animateOnHover: !0,
         }),
         f = (0, o.Fg)(),
         m = (0, i.ap)(f),
@@ -25,10 +25,10 @@ let f = () => {
         h = m ? C.Z : c.Z;
     return null == e
         ? null
-        : (0, n.jsxs)('div', {
+        : (0, n.jsxs)("div", {
               className: _.attributionBannerContainer,
               children: [
-                  (0, n.jsx)('div', {
+                  (0, n.jsx)("div", {
                       className: _.avatarContainer,
                       children: (0, n.jsx)(
                           l.qEK,
@@ -36,42 +36,42 @@ let f = () => {
                               for (var r = 1; r < arguments.length; r++) {
                                   var t = null != arguments[r] ? arguments[r] : {},
                                       n = Object.keys(t);
-                                  ('function' == typeof Object.getOwnPropertySymbols &&
+                                  "function" == typeof Object.getOwnPropertySymbols &&
                                       (n = n.concat(
                                           Object.getOwnPropertySymbols(t).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                                          })
+                                          }),
                                       )),
                                       n.forEach(function (r) {
                                           var n;
-                                          ((n = t[r]),
+                                          (n = t[r]),
                                               r in e
                                                   ? Object.defineProperty(e, r, {
                                                         value: n,
                                                         enumerable: !0,
                                                         configurable: !0,
-                                                        writable: !0
+                                                        writable: !0,
                                                     })
-                                                  : (e[r] = n));
-                                      }));
+                                                  : (e[r] = n);
+                                      });
                               }
                               return e;
                           })(
                               {
                                   src: r,
-                                  'aria-label': e.username,
-                                  size: u.EF.SIZE_32
+                                  "aria-label": e.username,
+                                  size: u.EF.SIZE_32,
                               },
-                              t
-                          )
-                      )
+                              t,
+                          ),
+                      ),
                   }),
                   (0, n.jsx)(l.Text, {
-                      variant: 'text-xs/bold',
+                      variant: "text-xs/bold",
                       className: _.bannerHeader,
-                      children: p.intl.format(p.t.oxhCOj, { userName: x })
+                      children: p.intl.format(p.t.oxhCOj, { userName: x }),
                   }),
-                  (0, n.jsx)(h, { className: _.bannerIcon })
-              ]
+                  (0, n.jsx)(h, { className: _.bannerIcon }),
+              ],
           });
 };

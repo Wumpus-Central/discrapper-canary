@@ -13,247 +13,247 @@ var a = n(388032),
 function p(t) {
     return [
         {
-            tags: [a.intl.string(a.t['/XjSo6']), a.intl.string(a.t['Af/56e']), a.intl.string(a.t.LNsW0N)],
+            tags: [a.intl.string(a.t["/XjSo6"]), a.intl.string(a.t["Af/56e"]), a.intl.string(a.t.LNsW0N)],
             posts: [
                 {
                     user: {
-                        name: 'pocketman',
-                        avatarSrc: d
+                        name: "pocketman",
+                        avatarSrc: d,
                     },
                     tagId: 2,
                     title: a.intl.string(a.t.g1hPk5),
                     messageCount: 8,
                     reactionCount: 0,
                     activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 10 }),
-                    attachment: r
+                    attachment: r,
                 },
                 {
                     user: {
-                        name: 'skaterdood12',
-                        avatarSrc: g
+                        name: "skaterdood12",
+                        avatarSrc: g,
                     },
                     tagId: 1,
-                    title: a.intl.string(a.t['5GM0TU']),
+                    title: a.intl.string(a.t["5GM0TU"]),
                     messageCount: 17,
                     reactionCount: 11,
-                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 24 })
+                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 24 }),
                 },
                 {
                     user: {
-                        name: 'ladydaisy',
-                        avatarSrc: m
+                        name: "ladydaisy",
+                        avatarSrc: m,
                     },
                     tagId: 2,
-                    title: a.intl.string(a.t['2LpQS0']),
+                    title: a.intl.string(a.t["2LpQS0"]),
                     messageCount: 18,
                     reactionCount: 15,
-                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 40 })
+                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 40 }),
                 },
                 {
                     user: {
-                        name: 'kittyx',
-                        avatarSrc: u
+                        name: "kittyx",
+                        avatarSrc: u,
                     },
                     tagId: 0,
                     title: a.intl.string(a.t.gFI7Ly),
                     messageCount: 2,
                     reactionCount: 0,
                     activeAgo: a.intl.formatToPlainString(a.t.p0KedH, { count: 1 }),
-                    attachment: i
-                }
+                    attachment: i,
+                },
             ],
             postPreview: {
-                title: a.intl.string(a.t['5GM0TU']),
+                title: a.intl.string(a.t["5GM0TU"]),
                 messages: [
                     {
                         author: {
-                            name: 'skaterdood12',
+                            name: "skaterdood12",
                             avatarSrc: g,
-                            isOP: !0
+                            isOP: !0,
                         },
-                        content: a.intl.string(a.t.zEDYfn)
+                        content: a.intl.string(a.t.zEDYfn),
                     },
                     {
                         author: {
-                            name: 'pocketman',
+                            name: "pocketman",
                             avatarSrc: d,
-                            isOP: !1
+                            isOP: !1,
                         },
-                        content: a.intl.string(a.t['+XGMDg'])
+                        content: a.intl.string(a.t["+XGMDg"]),
                     },
                     {
                         author: {
-                            name: 'ladydaisy',
+                            name: "ladydaisy",
                             avatarSrc: m,
-                            isOP: !1
+                            isOP: !1,
                         },
-                        content: a.intl.string(a.t.z0qmHB)
-                    }
-                ]
+                        content: a.intl.string(a.t.z0qmHB),
+                    },
+                ],
             },
-            ariaLabel: a.intl.string(a.t.TDOyPj)
+            ariaLabel: a.intl.string(a.t.TDOyPj),
         },
         {
             tags: [a.intl.string(a.t.ogyxen), a.intl.string(a.t.S97ZX1), a.intl.string(a.t.d6GdPz)],
             posts: [
                 {
                     user: {
-                        name: 'ladydaisy',
-                        avatarSrc: m
+                        name: "ladydaisy",
+                        avatarSrc: m,
                     },
                     tagId: 0,
                     title: a.intl.string(a.t.aOyKZ2),
                     messageCount: 8,
                     reactionCount: 11,
                     activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 10 }),
-                    attachment: s
+                    attachment: s,
                 },
                 {
                     user: {
-                        name: 'pocketman',
-                        avatarSrc: d
+                        name: "pocketman",
+                        avatarSrc: d,
                     },
                     tagId: 1,
                     title: a.intl.string(a.t.EQIrvb),
                     messageCount: 24,
                     reactionCount: 0,
-                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 24 })
+                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 24 }),
                 },
                 {
                     user: {
-                        name: 'skaterdood12',
-                        avatarSrc: g
+                        name: "skaterdood12",
+                        avatarSrc: g,
                     },
                     tagId: 1,
                     title: a.intl.string(a.t.f9n6UV),
                     messageCount: 15,
                     reactionCount: 17,
-                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 40 })
+                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 40 }),
                 },
                 {
                     user: {
-                        name: 'kittyx',
-                        avatarSrc: u
+                        name: "kittyx",
+                        avatarSrc: u,
                     },
                     tagId: 2,
                     title: a.intl.string(a.t.lCjd1N),
                     messageCount: 2,
                     reactionCount: 0,
                     activeAgo: a.intl.formatToPlainString(a.t.p0KedH, { count: 1 }),
-                    attachment: o
-                }
+                    attachment: o,
+                },
             ],
             postPreview: {
                 title: a.intl.string(a.t.f9n6UV),
                 messages: [
                     {
                         author: {
-                            name: 'skaterdood12',
+                            name: "skaterdood12",
                             avatarSrc: g,
-                            isOP: !0
+                            isOP: !0,
                         },
-                        content: a.intl.string(a.t.VeQaUl)
+                        content: a.intl.string(a.t.VeQaUl),
                     },
                     {
                         author: {
-                            name: 'pocketman',
+                            name: "pocketman",
                             avatarSrc: d,
-                            isOP: !1
+                            isOP: !1,
                         },
-                        content: a.intl.string(a.t.lwjElJ)
+                        content: a.intl.string(a.t.lwjElJ),
                     },
                     {
                         author: {
-                            name: 'ladydaisy',
+                            name: "ladydaisy",
                             avatarSrc: m,
-                            isOP: !1
+                            isOP: !1,
                         },
-                        content: a.intl.string(a.t.RNqQmJ)
-                    }
-                ]
+                        content: a.intl.string(a.t.RNqQmJ),
+                    },
+                ],
             },
-            ariaLabel: a.intl.string(a.t.iLeWra)
+            ariaLabel: a.intl.string(a.t.iLeWra),
         },
         {
-            tags: [a.intl.string(a.t['5jLvfX']), a.intl.string(a.t.lRgWdX), a.intl.string(a.t.Hy4EPz)],
+            tags: [a.intl.string(a.t["5jLvfX"]), a.intl.string(a.t.lRgWdX), a.intl.string(a.t.Hy4EPz)],
             posts: [
                 {
                     user: {
-                        name: 'skaterdood12',
-                        avatarSrc: g
+                        name: "skaterdood12",
+                        avatarSrc: g,
                     },
                     tagId: null,
                     title: a.intl.string(a.t.to6uUV),
                     messageCount: 11,
                     reactionCount: 17,
                     activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 10 }),
-                    attachment: l
+                    attachment: l,
                 },
                 {
                     user: {
-                        name: 'pocketman',
-                        avatarSrc: d
+                        name: "pocketman",
+                        avatarSrc: d,
                     },
                     tagId: 1,
                     title: a.intl.string(a.t.dsQXOj),
                     messageCount: 24,
                     reactionCount: 0,
-                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 24 })
+                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 24 }),
                 },
                 {
                     user: {
-                        name: 'ladydaisy',
-                        avatarSrc: m
+                        name: "ladydaisy",
+                        avatarSrc: m,
                     },
                     tagId: 0,
-                    title: a.intl.string(a.t['XL/bbW']),
+                    title: a.intl.string(a.t["XL/bbW"]),
                     messageCount: 18,
                     reactionCount: 15,
-                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 40 })
+                    activeAgo: a.intl.formatToPlainString(a.t.N9M4Nz, { count: 40 }),
                 },
                 {
                     user: {
-                        name: 'kittyx',
-                        avatarSrc: u
+                        name: "kittyx",
+                        avatarSrc: u,
                     },
                     tagId: null,
                     title: a.intl.string(a.t.XSYHPz),
                     messageCount: 2,
                     reactionCount: 0,
                     activeAgo: a.intl.formatToPlainString(a.t.p0KedH, { count: 1 }),
-                    attachment: c
-                }
+                    attachment: c,
+                },
             ],
             postPreview: {
                 title: a.intl.string(a.t.to6uUV),
                 messages: [
                     {
                         author: {
-                            name: 'skaterdood12',
+                            name: "skaterdood12",
                             avatarSrc: g,
-                            isOP: !0
+                            isOP: !0,
                         },
-                        content: a.intl.string(a.t['6DyhGh'])
+                        content: a.intl.string(a.t["6DyhGh"]),
                     },
                     {
                         author: {
-                            name: 'pocketman',
+                            name: "pocketman",
                             avatarSrc: d,
-                            isOP: !1
+                            isOP: !1,
                         },
-                        content: a.intl.string(a.t.BLiuYG)
+                        content: a.intl.string(a.t.BLiuYG),
                     },
                     {
                         author: {
-                            name: 'ladydaisy',
+                            name: "ladydaisy",
                             avatarSrc: m,
-                            isOP: !1
+                            isOP: !1,
                         },
-                        content: a.intl.string(a.t.PYLKhI)
-                    }
-                ]
+                        content: a.intl.string(a.t.PYLKhI),
+                    },
+                ],
             },
-            ariaLabel: a.intl.string(a.t.kEMWrK)
-        }
+            ariaLabel: a.intl.string(a.t.kEMWrK),
+        },
     ][t];
 }

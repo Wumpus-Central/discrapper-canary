@@ -7,25 +7,25 @@ var i = n(255367),
     s = n(258163);
 function c(e) {
     let { children: t, icon: n, title: l } = e;
-    return (0, i.jsxs)('header', {
+    return (0, i.jsxs)("header", {
         className: s.header,
         children: [
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: s.name,
                 children: [
                     r.cloneElement(n, {
                         className: o()(n.props.className, s.icon),
                         height: 24,
-                        width: 24
+                        width: 24,
                     }),
                     (0, i.jsx)(a.X6q, {
-                        variant: 'heading-md/semibold',
+                        variant: "heading-md/semibold",
                         className: s.title,
-                        children: l
-                    })
-                ]
+                        children: l,
+                    }),
+                ],
             }),
-            t
-        ]
+            t,
+        ],
     });
 }

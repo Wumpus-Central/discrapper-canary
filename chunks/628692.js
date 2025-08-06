@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => R,
-    ku: () => N
+    ku: () => N,
 });
 var r = n(255367),
     i = n(73800),
@@ -28,7 +28,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -38,15 +38,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -54,11 +54,11 @@ function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -76,24 +76,24 @@ function S(e, t) {
 function A(e) {
     let { playSound: t } = e;
     return (0, r.jsxs)(l.P3F, {
-        title: 'Risky Click',
-        tag: 'span',
+        title: "Risky Click",
+        tag: "span",
         onClick: t,
         className: O.inlineContainer,
         children: [
             (0, r.jsx)(l.gj8, {
-                size: 'md',
-                color: 'currentColor',
-                className: O.unknownSound
+                size: "md",
+                color: "currentColor",
+                className: O.unknownSound,
             }),
-            (0, r.jsx)('span', { children: 'Unknown' })
-        ]
+            (0, r.jsx)("span", { children: "Unknown" }),
+        ],
     });
 }
 function N(e) {
     let { soundId: t } = e,
         n = (0, s.e7)([h.Z], () => h.Z.getSoundById(t)),
-        i = (0, d.V2)({ location: 'SoundboardMentionInline' }),
+        i = (0, d.V2)({ location: "SoundboardMentionInline" }),
         { isPlaying: o, playSound: a } = (0, p.Z)(n);
     return i
         ? null == n
@@ -102,7 +102,7 @@ function N(e) {
                   className: O.inlineTextArea,
                   isPlaying: o,
                   playSound: a,
-                  sound: n
+                  sound: n,
               })
         : null;
 }
@@ -111,12 +111,12 @@ function C(e) {
         s = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
         d = y.intl.formatToPlainString(y.t.tuMUJy, {
             emojiName: null == n ? void 0 : n.emojiName,
-            soundName: null == n ? void 0 : n.name
+            soundName: null == n ? void 0 : n.name,
         });
-    return (0, u.X0)({ location: 'SoundboardMentionInline' })
+    return (0, u.X0)({ location: "SoundboardMentionInline" })
         ? (0, r.jsxs)(l.P3F, {
-              'aria-label': d,
-              tag: 'span',
+              "aria-label": d,
+              tag: "span",
               onClick: i,
               className: a()(O.inlineContainer, O.inlineButton, { [O.playing]: !0 === o }, t),
               children: [
@@ -124,10 +124,10 @@ function C(e) {
                       (0, r.jsx)(c.Z, {
                           emojiId: null == n ? void 0 : n.emojiId,
                           emojiName: null == n ? void 0 : n.emojiName,
-                          className: O.soundmojiEmoji
+                          className: O.soundmojiEmoji,
                       }),
-                  (0, r.jsx)('span', { children: ' '.concat(null == n ? void 0 : n.name, ' ') })
-              ]
+                  (0, r.jsx)("span", { children: " ".concat(null == n ? void 0 : n.name, " ") }),
+              ],
           })
         : null;
 }
@@ -140,7 +140,7 @@ let R = function (e) {
             return null != (e = (0, f.Z)(t, n, o, a)) ? e : y;
         }, [t, n, o, a, y]),
         T = (0, s.e7)([b.Z], () => b.Z.getChannel(t)),
-        N = (0, u.X0)({ location: 'SoundboardMention' }),
+        N = (0, u.X0)({ location: "SoundboardMention" }),
         R = i.useRef(null),
         { isPlaying: P, playSound: w } = (0, p.Z)(v, T),
         D = i.useCallback(async () => {
@@ -167,28 +167,28 @@ let R = function (e) {
                         tooltipClassName: O.tooltip,
                         tooltipContentClassName: O.tooltipContainer,
                         tooltipOverride: (0, r.jsx)(_.Dp, { sound: v }),
-                        soundmojiVisualEffectRef: R
+                        soundmojiVisualEffectRef: R,
                     },
-                    ''.concat(v.soundId)
+                    "".concat(v.soundId),
                 )
               : (0, r.jsx)(l.ua7, {
-                    'aria-label': v.name,
+                    "aria-label": v.name,
                     text: (0, r.jsx)(_.Dp, { sound: v }),
                     tooltipClassName: O.tooltip,
                     tooltipContentClassName: O.tooltipContainer,
-                    position: 'top',
+                    position: "top",
                     delay: 500,
                     children: (e) =>
                         (0, r.jsx)(
-                            'span',
+                            "span",
                             S(I({}, e), {
                                 children: (0, r.jsx)(C, {
                                     sound: v,
                                     playSound: D,
-                                    isPlaying: P
-                                })
-                            })
-                        )
+                                    isPlaying: P,
+                                }),
+                            }),
+                        ),
                 })
         : null;
 };

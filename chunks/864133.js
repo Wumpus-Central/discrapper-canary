@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,7 +29,7 @@ class c extends (i = r.ZP.PersistedStore) {
         return null != (t = o.lastSeenInfos[e]) ? t : null;
     }
 }
-(a(c, 'displayName', 'GuildTagChangedCoachmarkStore'), a(c, 'persistKey', 'GuildTagChangedCoachmarkStore'));
+a(c, "displayName", "GuildTagChangedCoachmarkStore"), a(c, "persistKey", "GuildTagChangedCoachmarkStore");
 let d = new c(s.Z, {
     GUILD_TAG_CHANGED_COACHMARK_SEEN: function (e) {
         let { guildId: t, lastSeenInfo: n } = e;
@@ -37,5 +37,5 @@ let d = new c(s.Z, {
     },
     LOGOUT: function () {
         o = l;
-    }
+    },
 });

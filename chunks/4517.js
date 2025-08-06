@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(388685));
+n.d(t, { Z: () => H }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -36,7 +36,7 @@ function L(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -46,15 +46,15 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 L(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -62,11 +62,11 @@ function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -88,7 +88,8 @@ function j(e, t) {
         i = U(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -98,20 +99,20 @@ function U(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function G(e) {
     let { children: t, className: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(D.referenceContainer, n),
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: D.outer,
-            children: (0, r.jsx)('span', {
+            children: (0, r.jsx)("span", {
                 className: D.inner,
-                children: t
-            })
-        })
+                children: t,
+            }),
+        }),
     });
 }
 let B = i.forwardRef(function (e, t) {
@@ -119,77 +120,87 @@ let B = i.forwardRef(function (e, t) {
             { analyticsLocations: s } = (0, p.ZP)(),
             { trackUserProfileAction: l } = (0, v.KZ)(),
             c = () => {
-                (l({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
+                l({ action: "PRESS_ADD_CUSTOM_STATUS" }),
                     null == i || i(),
                     (0, u.ZDy)(async () => {
-                        let { default: e } = await n.e('31649').then(n.bind(n, 475613));
+                        let { default: e } = await n.e("31649").then(n.bind(n, 475613));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
                                 k(x({}, t), {
                                     sourceAnalyticsLocations: s,
-                                    location: 'UserProfileCustomStatusBubble',
-                                    prompt: o
-                                })
+                                    location: "UserProfileCustomStatusBubble",
+                                    prompt: o,
+                                }),
                             );
-                    }));
+                    });
             },
             d = null != o ? o.label() : w.intl.string(w.t.evw0o6),
-            f = (0, r.jsxs)('div', {
+            f = (0, r.jsxs)("div", {
                 className: D.content,
                 children: [
                     (0, r.jsx)(u.oFk, {
-                        size: 'xs',
+                        size: "xs",
                         className: D.addStatusIcon,
-                        colorClass: D.addStatusIconColor
+                        colorClass: D.addStatusIconColor,
                     }),
                     (0, r.jsx)(u.Text, {
-                        variant: 'text-sm/normal',
+                        variant: "text-sm/normal",
                         className: a()(D.addStatusPrompt, null != o && D.italicPrompt),
-                        children: d
-                    })
-                ]
+                        children: d,
+                    }),
+                ],
             });
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(G, { children: f }),
                 (0, r.jsx)(u.tEY, {
                     ringClassName: D.ring,
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: a()(D.container, D.editable),
                         ref: t,
                         children: (0, r.jsx)(u.P3F, {
                             className: D.outer,
-                            'aria-label': w.intl.string(w.t['zrpF/f']),
+                            "aria-label": w.intl.string(w.t["zrpF/f"]),
                             onClick: c,
                             focusProps: { ringClassName: D.ring },
-                            children: (0, r.jsxs)('span', {
+                            children: (0, r.jsxs)("span", {
                                 className: a()(D.inner, D.clickable),
                                 children: [
                                     (0, r.jsx)(u.oFk, {
-                                        size: 'xs',
+                                        size: "xs",
                                         className: D.addStatusIcon,
-                                        colorClass: D.addStatusIconColor
+                                        colorClass: D.addStatusIconColor,
                                     }),
                                     (0, r.jsx)(u.Text, {
-                                        variant: 'text-sm/normal',
+                                        variant: "text-sm/normal",
                                         className: a()(D.addStatusPrompt, null != o && D.italicPrompt),
-                                        children: d
-                                    })
-                                ]
-                            })
-                        })
-                    })
-                })
-            ]
+                                        children: d,
+                                    }),
+                                ],
+                            }),
+                        }),
+                    }),
+                }),
+            ],
         });
     }),
     Z = i.forwardRef(function (e, t) {
         var n, o;
-        let { emoji: _, text: p, animate: m, className: E, renderToolbar: y, onShowToolbar: O, placeholderText: I, label: S, hasEntered: A = !0 } = e,
+        let {
+                emoji: _,
+                text: p,
+                animate: m,
+                className: E,
+                renderToolbar: y,
+                onShowToolbar: O,
+                placeholderText: I,
+                label: S,
+                hasEntered: A = !0,
+            } = e,
             N = (0, T.yi)(),
             { trackUserProfileAction: C } = (0, v.KZ)(),
-            L = (0, h.p)({ location: 'CustomStatusBubble' }),
+            L = (0, h.p)({ location: "CustomStatusBubble" }),
             [x, M] = i.useState(!1);
         i.useEffect(() => {
             null != W.current ? M(W.current.getBoundingClientRect().height > P.Ow + P.P) : M(!1);
@@ -211,46 +222,49 @@ let B = i.forwardRef(function (e, t) {
             ee = A && z,
             et = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
             [en] = i.useState(() => new c.V7());
-        (i.useEffect(() => () => en.stop(), [en]),
+        i.useEffect(() => () => en.stop(), [en]),
             i.useEffect(() => {
                 null == N || N.onInteractionPopoutTargetRefChange(Z);
-            }, [N]));
+            }, [N]);
         let [er, ei] = (0, u.q_F)(() => ({
-            maxHeight: ''.concat(H.current, 'px'),
+            maxHeight: "".concat(H.current, "px"),
             config: {
                 clamp: !0,
-                duration: P.R1
-            }
+                duration: P.R1,
+            },
         }));
         i.useLayoutEffect(() => {
             if ((q(!0), null == F.current || null == V.current || !ee)) return;
             let e = F.current.getBoundingClientRect().height,
                 t = V.current.getBoundingClientRect().height;
-            ($(t > e), (H.current = e), (Y.current = t), ei({ maxHeight: ''.concat(Math.min(X ? H.current : Y.current, X ? U : B), 'px') }));
+            $(t > e),
+                (H.current = e),
+                (Y.current = t),
+                ei({ maxHeight: "".concat(Math.min(X ? H.current : Y.current, X ? U : B), "px") });
         }, [ee, p, _, S, ei, X, U, B]);
         let eo = (e) => {
                 J &&
                     (e
                         ? ei({
-                              maxHeight: ''.concat(Math.min(Y.current, B), 'px'),
+                              maxHeight: "".concat(Math.min(Y.current, B), "px"),
                               delay: et ? 0 : P.zS,
                               config: {
                                   clamp: !0,
-                                  duration: et ? 0 : P.R1
-                              }
+                                  duration: et ? 0 : P.R1,
+                              },
                           })
                         : ei({
-                              maxHeight: ''.concat(Math.min(H.current, U), 'px'),
-                              delay: 0
+                              maxHeight: "".concat(Math.min(H.current, U), "px"),
+                              delay: 0,
                           }),
                     et ? Q(!e) : en.start(e ? P.zS : P.Sq, () => Q(!e)));
             },
             ea =
                 null != S
-                    ? (0, r.jsx)('div', {
+                    ? (0, r.jsx)("div", {
                           ref: W,
                           className: D.labelRow,
-                          children: (0, r.jsx)(b.Z, { label: S })
+                          children: (0, r.jsx)(b.Z, { label: S }),
                       })
                     : null,
             es =
@@ -260,56 +274,56 @@ let B = i.forwardRef(function (e, t) {
                           animate: m,
                           hideTooltip: !1,
                           tooltipDelay: R.vB,
-                          className: D.statusEmoji
+                          className: D.statusEmoji,
                       })
                     : null,
             el =
                 null != p
                     ? (0, r.jsx)(u.Text, {
-                          variant: 'text-sm/normal',
+                          variant: "text-sm/normal",
                           className: D.statusText,
-                          children: p
+                          children: p,
                       })
                     : null,
             ec =
                 void 0 === I || (null != _ && L)
                     ? null
                     : (0, r.jsx)(u.Text, {
-                          variant: 'text-sm/normal',
-                          color: 'text-muted',
-                          'aria-label': ''.concat(w.intl.string(w.t.EVV6ub), ': ').concat(I),
+                          variant: "text-sm/normal",
+                          color: "text-muted",
+                          "aria-label": "".concat(w.intl.string(w.t.EVV6ub), ": ").concat(I),
                           className: a()(D.statusText, L && D.italicPrompt),
-                          children: null != I ? I : ''
+                          children: null != I ? I : "",
                       }),
-            eu = null == el || '' === p ? ec : el,
-            ed = (0, r.jsxs)('div', {
+            eu = null == el || "" === p ? ec : el,
+            ed = (0, r.jsxs)("div", {
                 ref: F,
                 className: a()(D.content, x && D.singleLineTextClamp),
-                children: [ea, es, eu]
+                children: [ea, es, eu],
             }),
-            ef = (0, r.jsxs)('div', {
+            ef = (0, r.jsxs)("div", {
                 ref: V,
                 className: a()(D.content, D.unclamped),
-                children: [ea, es, eu]
+                children: [ea, es, eu],
             }),
-            e_ = (0, r.jsx)('div', {
+            e_ = (0, r.jsx)("div", {
                 ref: t,
                 className: D.outer,
-                children: (0, r.jsx)('span', {
+                children: (0, r.jsx)("span", {
                     className: D.inner,
                     children: (0, r.jsxs)(s.animated.div, {
                         style: er,
                         className: a()(D.content, {
                             [D.singleLineTextClamp]: x,
-                            [D.unclamped]: !X
+                            [D.unclamped]: !X,
                         }),
-                        children: [ea, es, eu]
-                    })
-                })
+                        children: [ea, es, eu],
+                    }),
+                }),
             }),
             ep = (0, r.jsxs)(G, {
                 className: null != ea ? D.withLabel : void 0,
-                children: [ea, ed, ef]
+                children: [ea, ed, ef],
             });
         return null == O
             ? (0, r.jsxs)(r.Fragment, {
@@ -317,66 +331,66 @@ let B = i.forwardRef(function (e, t) {
                       ep,
                       (0, r.jsx)(u.tEY, {
                           ringClassName: D.ring,
-                          children: (0, r.jsxs)('div', {
+                          children: (0, r.jsxs)("div", {
                               ref: Z,
-                              role: 'tooltip',
+                              role: "tooltip",
                               tabIndex: 0,
                               className: a()(D.container, E),
-                              'aria-label': w.intl.formatToPlainString(w.t.xRGqo6, {
-                                  emoji: null != (n = null == _ ? void 0 : _.name) ? n : '',
+                              "aria-label": w.intl.formatToPlainString(w.t.xRGqo6, {
+                                  emoji: null != (n = null == _ ? void 0 : _.name) ? n : "",
                                   status: p,
-                                  label: null != S ? ''.concat((0, g.Z)(S), ':') : ''
+                                  label: null != S ? "".concat((0, g.Z)(S), ":") : "",
                               }),
                               onMouseEnter: () => {
-                                  (C({ action: 'HOVER_CUSTOM_STATUS' }), eo(!0));
+                                  C({ action: "HOVER_CUSTOM_STATUS" }), eo(!0);
                               },
                               onMouseLeave: () => {
                                   eo(!1);
                               },
                               onFocus: () => eo(!0),
                               onBlur: () => eo(!1),
-                              children: [e_, null == y ? void 0 : y(J)]
-                          })
-                      })
-                  ]
+                              children: [e_, null == y ? void 0 : y(J)],
+                          }),
+                      }),
+                  ],
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       ep,
                       (0, r.jsx)(u.tEY, {
                           ringClassName: D.ring,
-                          children: (0, r.jsxs)('div', {
+                          children: (0, r.jsxs)("div", {
                               ref: Z,
-                              role: 'tooltip',
+                              role: "tooltip",
                               tabIndex: 0,
                               className: a()(D.container, E),
-                              'aria-label': w.intl.formatToPlainString(w.t.xRGqo6, {
-                                  emoji: null != (o = null == _ ? void 0 : _.name) ? o : '',
+                              "aria-label": w.intl.formatToPlainString(w.t.xRGqo6, {
+                                  emoji: null != (o = null == _ ? void 0 : _.name) ? o : "",
                                   status: p,
-                                  label: null != S ? ''.concat((0, g.Z)(S), ':') : ''
+                                  label: null != S ? "".concat((0, g.Z)(S), ":") : "",
                               }),
                               onFocus: () => {
-                                  (O(!0), eo(!0));
+                                  O(!0), eo(!0);
                               },
                               onBlur: (e) => {
                                   var t;
                                   (null == (t = Z.current) ? void 0 : t.contains(e.relatedTarget)) || (O(!1), eo(!1));
                               },
                               onMouseEnter: () => {
-                                  (C({ action: 'HOVER_CUSTOM_STATUS' }), O(!0), eo(!0));
+                                  C({ action: "HOVER_CUSTOM_STATUS" }), O(!0), eo(!0);
                               },
                               onMouseLeave: () => {
-                                  (O(!1), eo(!1));
+                                  O(!1), eo(!1);
                               },
-                              children: [e_, null == y ? void 0 : y(J)]
-                          })
-                      })
-                  ]
+                              children: [e_, null == y ? void 0 : y(J)],
+                          }),
+                      }),
+                  ],
               });
     }),
     F = i.forwardRef(function (e, t) {
         var { emoji: n, text: o, label: a, onCloseProfile: s } = e,
-            l = j(e, ['emoji', 'text', 'label', 'onCloseProfile']);
+            l = j(e, ["emoji", "text", "label", "onCloseProfile"]);
         let [c, u] = i.useState(!1);
         return (0, r.jsx)(
             Z,
@@ -391,14 +405,14 @@ let B = i.forwardRef(function (e, t) {
                     (0, r.jsx)(C.Z, {
                         isVisible: c,
                         isExpandable: e,
-                        onCloseProfile: s
-                    })
-            })
+                        onCloseProfile: s,
+                    }),
+            }),
         );
     });
 function V(e) {
     var { emoji: t, text: n, label: o, user: a, guildId: s, channelId: l, themeType: c } = e,
-        u = j(e, ['emoji', 'text', 'label', 'user', 'guildId', 'channelId', 'themeType']);
+        u = j(e, ["emoji", "text", "label", "user", "guildId", "channelId", "themeType"]);
     let { trackUserProfileAction: d } = (0, v.KZ)(),
         { interactionType: f, interactionSource: _, resetInteraction: p } = (0, T.Xo)(),
         h = _ === R.n_.STATUS && f === R.P.REACT,
@@ -415,14 +429,19 @@ function V(e) {
             (e) => {
                 (e || !E) && P(e);
             },
-            [E]
+            [E],
         ),
-        L = (e) => (null == e ? null : null != e.id ? '`' + ':'.concat(e.name, ':') + '`' : y.ZP.translateSurrogatesToInlineEmoji(e.name)),
-        M = (e, t) => (null == e ? t : ''.concat(e, ' ').concat(t)),
+        L = (e) =>
+            null == e
+                ? null
+                : null != e.id
+                  ? "`" + ":".concat(e.name, ":") + "`"
+                  : y.ZP.translateSurrogatesToInlineEmoji(e.name),
+        M = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
         U = () => {
             let e = L(t),
                 r = null == n ? e : M(e, n);
-            return null != o ? ''.concat((0, g.Z)(o), ':\n> ').concat(r) : r;
+            return null != o ? "".concat((0, g.Z)(o), ":\n> ").concat(r) : r;
         };
     return (0, r.jsx)(S.Z, {
         user: a,
@@ -455,17 +474,37 @@ function V(e) {
                                 sourceType: R.n_.STATUS,
                                 isVisible: C && !E,
                                 isExpandable: e,
-                                onAction: d
-                            })
-                    })
-                )
-            })
+                                onAction: d,
+                            }),
+                    }),
+                ),
+            }),
     });
 }
 let H = i.forwardRef(function (e, t) {
     var n, i;
-    let { location: o, user: a, onCloseProfile: s, previewText: c, previewEmoji: u, previewLabel: d, placeholderText: f, prompt: h, disableToolbar: g = !1 } = e,
-        b = j(e, ['location', 'user', 'onCloseProfile', 'previewText', 'previewEmoji', 'previewLabel', 'placeholderText', 'prompt', 'disableToolbar']),
+    let {
+            location: o,
+            user: a,
+            onCloseProfile: s,
+            previewText: c,
+            previewEmoji: u,
+            previewLabel: d,
+            placeholderText: f,
+            prompt: h,
+            disableToolbar: g = !1,
+        } = e,
+        b = j(e, [
+            "location",
+            "user",
+            "onCloseProfile",
+            "previewText",
+            "previewEmoji",
+            "previewLabel",
+            "placeholderText",
+            "prompt",
+            "disableToolbar",
+        ]),
         y = (0, E.Z)(a.id),
         { analyticsLocations: v } = (0, p.ZP)(_.Z.USER_PROFILE_CUSTOM_STATUS_BUBBLE),
         T = (0, l.e7)([O.default], () => O.default.getId() === a.id),
@@ -474,7 +513,7 @@ let H = i.forwardRef(function (e, t) {
         N = !T && !a.bot && !g && A;
     if (null != c || null != u) {
         let e = null != u ? u : null,
-            n = null != c && '' !== c ? c : null,
+            n = null != c && "" !== c ? c : null,
             i = null != d ? d : null;
         return (0, r.jsx)(p.Gt, {
             value: v,
@@ -486,16 +525,16 @@ let H = i.forwardRef(function (e, t) {
                         text: n,
                         placeholderText: f,
                         label: i,
-                        ref: t
+                        ref: t,
                     },
-                    b
-                )
-            )
+                    b,
+                ),
+            ),
         });
     }
     let C = null != (n = null == y ? void 0 : y.emoji) ? n : null,
         R = null != (i = null == y ? void 0 : y.state) ? i : null,
-        P = null != R && '' !== R ? R : null,
+        P = null != R && "" !== R ? R : null,
         w = null != y ? (0, m.Z)(y) : null;
     return null != C || null != P || S
         ? null == C && null == P
@@ -507,11 +546,11 @@ let H = i.forwardRef(function (e, t) {
                           {
                               onCloseProfile: s,
                               prompt: h,
-                              ref: t
+                              ref: t,
                           },
-                          b
-                      )
-                  )
+                          b,
+                      ),
+                  ),
               })
             : N
               ? (0, r.jsx)(p.Gt, {
@@ -523,11 +562,11 @@ let H = i.forwardRef(function (e, t) {
                                 user: a,
                                 emoji: C,
                                 text: P,
-                                label: w
+                                label: w,
                             },
-                            b
-                        )
-                    )
+                            b,
+                        ),
+                    ),
                 })
               : S
                 ? (0, r.jsx)(p.Gt, {
@@ -540,11 +579,11 @@ let H = i.forwardRef(function (e, t) {
                                   text: P,
                                   label: w,
                                   onCloseProfile: s,
-                                  ref: t
+                                  ref: t,
                               },
-                              b
-                          )
-                      )
+                              b,
+                          ),
+                      ),
                   })
                 : (0, r.jsx)(p.Gt, {
                       value: v,
@@ -555,11 +594,11 @@ let H = i.forwardRef(function (e, t) {
                                   emoji: C,
                                   text: P,
                                   label: w,
-                                  ref: t
+                                  ref: t,
                               },
-                              b
-                          )
-                      )
+                              b,
+                          ),
+                      ),
                   })
         : null;
 });

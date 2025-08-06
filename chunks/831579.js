@@ -4,7 +4,7 @@ var r = n(98405),
     a = n(338045),
     s = n(382698),
     l = n(394227),
-    c = i('URL'),
+    c = i("URL"),
     u =
         l &&
         o(function () {
@@ -15,9 +15,9 @@ var r = n(98405),
     });
 r(
     {
-        target: 'URL',
+        target: "URL",
         stat: !0,
-        forced: !u || d
+        forced: !u || d,
     },
     {
         canParse: function (e) {
@@ -25,10 +25,10 @@ r(
                 n = s(e),
                 r = t < 2 || void 0 === arguments[1] ? void 0 : s(arguments[1]);
             try {
-                return (new c(n, r), !0);
+                return new c(n, r), !0;
             } catch (e) {
                 return !1;
             }
-        }
-    }
+        },
+    },
 );

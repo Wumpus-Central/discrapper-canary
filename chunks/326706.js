@@ -14,7 +14,7 @@ function s(e) {
             playSound: r.useCallback(() => {
                 var t;
                 return !!n({ volume: (0, l.Z)(null != (t = null == e ? void 0 : e.volume) ? t : 1) });
-            }, [n, null == e ? void 0 : e.volume])
+            }, [n, null == e ? void 0 : e.volume]),
         }
     );
 }

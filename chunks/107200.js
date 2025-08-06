@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -16,7 +16,7 @@ function p() {
         p = (0, r.e7)([a.Z], () => a.Z.getChannel(n), [n]),
         f = null == p ? void 0 : p.getGuildId();
     return e && null != p
-        ? (0, i.jsx)('div', {
+        ? (0, i.jsx)("div", {
               className: h.widget,
               children: (0, i.jsx)(s.Z, {
                   width: u.FW.width,
@@ -28,8 +28,8 @@ function p() {
                       let e = (0, d.Z)();
                       null != e && (0, l.oZ)(e);
                   },
-                  analyticsSource: 'overlay'
-              })
+                  analyticsSource: "overlay",
+              }),
           })
         : null;
 }

@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -40,5 +40,5 @@ function u(e) {
             l.lastInitAttemptMayHaveCrashed = !1;
     }
 }
-(s(c, 'displayName', 'VoiceFilterPersistedStore'), s(c, 'persistKey', 'VoiceFilterPersistedStore'));
+s(c, "displayName", "VoiceFilterPersistedStore"), s(c, "persistKey", "VoiceFilterPersistedStore");
 let d = new c(o.Z, { VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: u });

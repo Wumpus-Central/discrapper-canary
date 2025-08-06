@@ -11,13 +11,13 @@ var i = n(442837),
 function d(e) {
     let { channel: t } = e,
         n = (0, i.e7)([s.ZP], () => s.ZP.getVoiceStatesForChannel(t));
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: u.root,
         children: [
             (0, r.jsx)(o.Text, {
-                variant: 'text-xs/bold',
+                variant: "text-xs/bold",
                 className: u.header,
-                children: c.intl.format(c.t.e95u3N, { count: n.length })
+                children: c.intl.format(c.t.e95u3N, { count: n.length }),
             }),
             (0, r.jsx)(o.Ttm, {
                 className: u.scroller,
@@ -28,9 +28,9 @@ function d(e) {
                     channel: t,
                     voiceStates: n,
                     collapsed: !1,
-                    location: l.Sbl.CHANNEL_CALL
-                })
-            })
-        ]
+                    location: l.Sbl.CHANNEL_CALL,
+                }),
+            }),
+        ],
     });
 }

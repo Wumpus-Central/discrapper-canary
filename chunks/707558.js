@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(953529));
+n.d(t, { Z: () => c }), n(953529);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -16,25 +16,25 @@ function c(e) {
                     align: a.Z.Align.CENTER,
                     className: s()(o.marginTop20, l.feature, { [l.featureBorder]: 0 !== t }),
                     children: [
-                        null != e.icon ? (0, i.jsx)('div', { className: s()(l.icon, e.icon) }) : null,
-                        (0, i.jsxs)('div', {
+                        null != e.icon ? (0, i.jsx)("div", { className: s()(l.icon, e.icon) }) : null,
+                        (0, i.jsxs)("div", {
                             children: [
                                 null != e.title
-                                    ? (0, i.jsx)('div', {
+                                    ? (0, i.jsx)("div", {
                                           className: s()(o.marginBottom8, l.title),
-                                          children: e.title
+                                          children: e.title,
                                       })
                                     : null,
-                                (0, i.jsx)('div', {
+                                (0, i.jsx)("div", {
                                     className: l.description,
-                                    children: e.description
-                                })
-                            ]
-                        })
-                    ]
+                                    children: e.description,
+                                }),
+                            ],
+                        }),
+                    ],
                 },
-                t
-            )
-        )
+                t,
+            ),
+        ),
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(953529));
+n.d(t, { Z: () => u }), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -14,12 +14,12 @@ function u(e) {
                     guildId: o,
                     allowLinks: !0,
                     allowHeading: !0,
-                    allowList: !0
+                    allowList: !0,
                 }),
-            [t, o]
+            [t, o],
         );
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(l.descriptionText, n, c.markup, { [l.truncate]: u }),
-        children: d
+        children: d,
     });
 }

@@ -7,7 +7,7 @@ var i = n(73800),
 function o() {
     let e = (0, r.cj)([l.Z], () => ({
         isLoading: l.Z.getIsValidatingUsers(),
-        multiAccountUsers: l.Z.getUsers()
+        multiAccountUsers: l.Z.getUsers(),
     }));
     return (
         i.useEffect(() => {

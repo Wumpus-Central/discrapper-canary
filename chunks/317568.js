@@ -8,8 +8,8 @@ let u = () => {
     n.useEffect(() => {
         e ||
             i.Z.dispatch({
-                type: 'POTIONS_SET_CONFETTI_MODE',
-                enabled: !1
+                type: "POTIONS_SET_CONFETTI_MODE",
+                enabled: !1,
             });
     }, [e]);
 };

@@ -6,14 +6,14 @@ var r = n(481060),
     o = n(458034);
 class s extends l.Z {
     _initialize() {
-        i.Z.subscribe('GUILD_ROLE_CONNECTIONS_MODAL_SHOW', this.handleShow);
+        i.Z.subscribe("GUILD_ROLE_CONNECTIONS_MODAL_SHOW", this.handleShow);
     }
     _terminate() {
-        i.Z.unsubscribe('GUILD_ROLE_CONNECTIONS_MODAL_SHOW', this.handleShow);
+        i.Z.unsubscribe("GUILD_ROLE_CONNECTIONS_MODAL_SHOW", this.handleShow);
     }
     handleShow(e) {
         let { role: t, guildId: n } = e;
-        if (!(0, r.nfh)('GUILD_ROLE_CONNECTIONS_MODAL_KEY')) {
+        if (!(0, r.nfh)("GUILD_ROLE_CONNECTIONS_MODAL_KEY")) {
             var i;
             null != t && (null == (i = t.tags) ? void 0 : i.guild_connections) === null ? (0, a.g)(t, n) : (0, o.Am)(n);
         }

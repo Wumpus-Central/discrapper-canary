@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     E6: () => p,
     HP: () => _,
     II: () => m,
-    pL: () => h
+    pL: () => h,
 }),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(902704),
     o = n(317381),
@@ -13,15 +13,15 @@ var r = n(442837),
     l = n(812206);
 n(358221);
 var c = n(594190);
-(n(569545), n(522474), n(199902), n(314897), n(355863));
+n(569545), n(522474), n(199902), n(314897), n(355863);
 var u = n(293273);
-(n(944486), n(808506));
+n(944486), n(808506);
 var d = n(145597);
 function f() {
     let [e = PopoutWindowStore] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [PopoutWindowStore];
     return e.getWindowVisible(OVERLAY_V3_KEY);
 }
-(n(340101), n(757744), n(501787));
+n(340101), n(757744), n(501787);
 function _(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
@@ -31,7 +31,9 @@ function _(e, t) {
 function p(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
-    for (let n = 0; n < e.length; n++) if (e[n].index !== t[n].index || e[n].notification !== t[n].notification || e[n].locked !== t[n].locked) return !1;
+    for (let n = 0; n < e.length; n++)
+        if (e[n].index !== t[n].index || e[n].notification !== t[n].notification || e[n].locked !== t[n].locked)
+            return !1;
     return !0;
 }
 function h() {
@@ -48,7 +50,7 @@ function h() {
         return {
             id: _.applicationId,
             altId: void 0,
-            name: h.name
+            name: h.name,
         };
     let m = (0, d.getPID)(),
         g = n.getGameForPID(m),
@@ -58,7 +60,7 @@ function h() {
         : {
               id: null != (e = null == g ? void 0 : g.id) ? e : null == E ? void 0 : E.application_id,
               altId: null == E ? void 0 : E.application_id,
-              name: null != (t = null == g ? void 0 : g.name) ? t : null == E ? void 0 : E.name
+              name: null != (t = null == g ? void 0 : g.name) ? t : null == E ? void 0 : E.name,
           };
 }
 function m() {

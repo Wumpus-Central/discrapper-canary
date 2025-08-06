@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,15 +18,15 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,7 +36,7 @@ class s {
         r.K.set(s.storageKey, e);
     }
     static load() {
-        return (null == s._loaded && (s._loaded = s.loadInternal()), s._loaded);
+        return null == s._loaded && (s._loaded = s.loadInternal()), s._loaded;
     }
     static loadInternal() {
         let e = r.K.get(s.storageKey);
@@ -45,7 +45,7 @@ class s {
             return new s(null != (t = e.games) ? t : {});
         }
         let n = new s({});
-        return (n.save(), n);
+        return n.save(), n;
     }
     static getGameSettings(e) {
         var t;
@@ -56,17 +56,20 @@ class s {
         let n = s.load(),
             r = n.games[e];
         if (null == r) {
-            ((n.games[e] = a(
+            (n.games[e] = a(
                 {
                     screen: i.Jx.UNKNOWN,
-                    date: Date.now()
+                    date: Date.now(),
                 },
-                t
+                t,
             )),
-                n.save());
+                n.save();
             return;
         }
-        ('boolean' == typeof t.disabled && (r.disabled = t.disabled), 'number' == typeof t.screen && (r.screen = t.screen), (r.date = Date.now()), n.save());
+        "boolean" == typeof t.disabled && (r.disabled = t.disabled),
+            "number" == typeof t.screen && (r.screen = t.screen),
+            (r.date = Date.now()),
+            n.save();
     }
     static isPromptingForGameDisable(e) {
         var t, n;
@@ -91,7 +94,7 @@ class s {
     }
     static reset() {
         let e = s.load();
-        ((e.games = {}), e.save());
+        (e.games = {}), e.save();
     }
     static isTestMode() {
         return !!window.__GAME_DISPLAY_MODE_TEST_MODE__;
@@ -100,7 +103,7 @@ class s {
         return !!window.__GAME_DISPLAY_MODE_DEBUG__;
     }
     constructor(e) {
-        (o(this, 'games', void 0), (this.games = e));
+        o(this, "games", void 0), (this.games = e);
     }
 }
-(o(s, '_loaded', null), o(s, 'storageKey', 'GameDisplayModeStorage'), setTimeout(() => s.clearOldGameSettings(), 60000));
+o(s, "_loaded", null), o(s, "storageKey", "GameDisplayModeStorage"), setTimeout(() => s.clearOldGameSettings(), 60000);

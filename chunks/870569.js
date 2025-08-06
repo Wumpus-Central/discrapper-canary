@@ -8,21 +8,43 @@ var i = n(255367),
     c = n(686546),
     d = n(168301);
 let u = r.forwardRef(function (e, t) {
-    let { tooltipText: n, children: r, onContextMenu: s, onClick: u, disabled: m, icon: p, iconForeground: g, innerClassName: h, className: f, redGlow: b, orangeGlow: x, tooltipClassName: _, onMouseEnter: j, onMouseLeave: E, 'aria-label': C, 'aria-checked': O, role: v, tooltipColor: S, tooltipForceOpen: T, tooltipContentClassName: I, plated: N } = e,
+    let {
+            tooltipText: n,
+            children: r,
+            onContextMenu: s,
+            onClick: u,
+            disabled: m,
+            icon: p,
+            iconForeground: g,
+            innerClassName: h,
+            className: f,
+            redGlow: b,
+            orangeGlow: x,
+            tooltipClassName: _,
+            onMouseEnter: j,
+            onMouseLeave: E,
+            "aria-label": C,
+            "aria-checked": O,
+            role: v,
+            tooltipColor: S,
+            tooltipForceOpen: T,
+            tooltipContentClassName: I,
+            plated: N,
+        } = e,
         y =
-            'function' == typeof p
+            "function" == typeof p
                 ? (0, i.jsx)(p, {
                       width: 20,
                       height: 20,
-                      size: 'custom',
-                      colorClass: null != g ? g : '',
-                      color: 'currentColor'
+                      size: "custom",
+                      colorClass: null != g ? g : "",
+                      color: "currentColor",
                   })
                 : p;
     return (0, i.jsx)(o.ua7, {
         tooltipClassName: _,
         text: n,
-        'aria-label': C,
+        "aria-label": C,
         color: S,
         tooltipContentClassName: I,
         forceOpen: T,
@@ -40,39 +62,43 @@ let u = r.forwardRef(function (e, t) {
                                 i,
                                 r = {},
                                 s = Object.keys(e);
-                            for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                            for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                             return r;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var s = Object.getOwnPropertySymbols(e);
-                        for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                        for (i = 0; i < s.length; i++)
+                            (n = s[i]),
+                                !(t.indexOf(n) >= 0) &&
+                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                    (r[n] = e[n]);
                     }
                     return r;
-                })(e, ['onClick', 'onMouseEnter', 'onMouseLeave']);
+                })(e, ["onClick", "onMouseEnter", "onMouseLeave"]);
             return (0, i.jsxs)(
                 l.zx,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
                 })({}, C)),
@@ -90,27 +116,27 @@ let u = r.forwardRef(function (e, t) {
                             [d.disabled]: m,
                             [d.enabled]: !m,
                             [d.plated]: N,
-                            [d.plateMuted]: b && N
+                            [d.plateMuted]: b && N,
                         }),
                         onClick: (e) => {
-                            (null != p && p(), null != u && u(e));
+                            null != p && p(), null != u && u(e);
                         },
                         onMouseEnter: () => {
-                            (null == g || g(), null == j || j());
+                            null == g || g(), null == j || j();
                         },
                         onMouseLeave: () => {
-                            (null == _ || _(), null == E || E());
+                            null == _ || _(), null == E || E();
                         },
                         onContextMenu: s,
                         role: v,
-                        'aria-checked': O,
+                        "aria-checked": O,
                         focusProps: {
                             offset: {
                                 left: -1,
                                 top: -1,
                                 right: 1,
-                                bottom: 1
-                            }
+                                bottom: 1,
+                            },
                         },
                         children: [
                             null != r
@@ -118,11 +144,11 @@ let u = r.forwardRef(function (e, t) {
                                       width: 20,
                                       height: 20,
                                       mask: c.ZP.Masks.PANEL_BUTTON,
-                                      children: y
+                                      children: y,
                                   })
                                 : y,
-                            r
-                        ]
+                            r,
+                        ],
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
@@ -136,8 +162,8 @@ let u = r.forwardRef(function (e, t) {
                       })(Object(o)).forEach(function (e) {
                           Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
                       }),
-                n)
+                n),
             );
-        }
+        },
     });
 });

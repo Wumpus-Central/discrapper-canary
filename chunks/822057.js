@@ -5,18 +5,18 @@ var r = n(220159),
     s = n(181794);
 r(
     {
-        target: 'Object',
+        target: "Object",
         stat: !0,
         forced:
             !s ||
             o(function () {
                 i(1);
             }),
-        sham: !s
+        sham: !s,
     },
     {
         getOwnPropertyDescriptor: function (e, t) {
             return i(a(e), t);
-        }
-    }
+        },
+    },
 );

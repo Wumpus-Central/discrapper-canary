@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var r = n(392711),
     i = n.n(r),
     o = n(442837),
@@ -10,11 +10,11 @@ function l() {
         let n = null == (t = null == (e = i()(a.Z.getVideoDevices()).values().first()) ? void 0 : e.disabled) || t;
         return {
             enabled: a.Z.isVideoEnabled(),
-            cameraUnavailable: n || !a.Z.supports(s.AN.VIDEO)
+            cameraUnavailable: n || !a.Z.supports(s.AN.VIDEO),
         };
     });
     return {
         enabled: e,
-        cameraUnavailable: t
+        cameraUnavailable: t,
     };
 }

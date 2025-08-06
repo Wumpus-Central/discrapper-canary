@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,11 +44,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,7 +70,8 @@ function b(e, t) {
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -80,7 +81,7 @@ function y(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function O(e) {
@@ -90,54 +91,65 @@ function O(e) {
             assetUrl: h,
             action: g,
             caretConfig: y = {
-                position: 'bottom',
-                align: 'center'
+                position: "bottom",
+                align: "center",
             },
             badge: O,
             textLink: v,
             onWatchVideo: I,
             onRequestClose: T,
-            popoverRef: S
+            popoverRef: S,
         } = e,
-        A = b(e, ['title', 'body', 'assetUrl', 'action', 'caretConfig', 'badge', 'textLink', 'onWatchVideo', 'onRequestClose', 'popoverRef']);
+        A = b(e, [
+            "title",
+            "body",
+            "assetUrl",
+            "action",
+            "caretConfig",
+            "badge",
+            "textLink",
+            "onWatchVideo",
+            "onRequestClose",
+            "popoverRef",
+        ]);
     let N = i.useRef(null),
-        C = h.endsWith('.gif') || h.endsWith('.webp') || h.endsWith('.png'),
+        C = h.endsWith(".gif") || h.endsWith(".webp") || h.endsWith(".png"),
         R = i.useCallback(
             () => ({
-                type: 'VIDEO',
+                type: "VIDEO",
                 url: h,
                 proxyUrl: h,
                 alt: t,
                 width: 1280,
                 height: 720,
-                className: p.media
+                className: p.media,
             }),
-            [h, t]
+            [h, t],
         ),
         P = i.useCallback(() => {
-            (null !== N.current && N.current.pause(), null == T || T());
+            null !== N.current && N.current.pause(), null == T || T();
         }, [T]),
         w = i.useCallback(() => {
-            (null !== N.current && N.current.pause(), null == T || T());
+            null !== N.current && N.current.pause(), null == T || T();
         }, [T]),
         D = i.useCallback(() => {
             null !== N.current && N.current.pause();
             let e = R();
-            ((0, s.K)({
+            (0, s.K)({
                 items: [e],
                 startingIndex: 0,
-                location: 'VideoPopover',
-                shouldHideMediaOptions: !0
+                location: "VideoPopover",
+                shouldHideMediaOptions: !0,
             }),
                 null == T || T(),
-                null == I || I());
+                null == I || I();
         }, [R, I, T]),
         L = C
-            ? (0, r.jsx)('img', {
+            ? (0, r.jsx)("img", {
                   src: h,
-                  alt: '',
+                  alt: "",
                   draggable: !1,
-                  className: p.inlineAsset
+                  className: p.inlineAsset,
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -152,49 +164,49 @@ function O(e) {
                           playsInline: !0,
                           className: p.inlineAsset,
                           controls: !1,
-                          preload: 'metadata'
+                          preload: "metadata",
                       }),
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: p.playButton,
                           children: (0, r.jsx)(o.J, {
                               playing: !1,
-                              size: 'sm',
-                              'aria-label': 'Play video: '.concat(t),
-                              onClick: D
-                          })
-                      })
-                  ]
+                              size: "sm",
+                              "aria-label": "Play video: ".concat(t),
+                              onClick: D,
+                          }),
+                      }),
+                  ],
               });
     return (0, r.jsx)(
         l.m,
         E(m({}, A), {
             onRequestClose: P,
             hasVideo: !0,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 ref: S,
                 children: [
                     (0, r.jsx)(f.u, {
                         onClick: w,
-                        colorMix: !0
+                        colorMix: !0,
                     }),
                     (0, r.jsx)(u.V, {
-                        asset: (0, r.jsx)('div', {
+                        asset: (0, r.jsx)("div", {
                             className: p.assetContainer,
-                            children: L
+                            children: L,
                         }),
-                        size: 'video'
+                        size: "video",
                     }),
                     (0, r.jsx)(_.Y, {
                         title: t,
                         body: n,
                         badge: O,
                         textLink: v,
-                        hasBottomMargin: null != g
+                        hasBottomMargin: null != g,
                     }),
                     null != g ? (0, r.jsx)(c.k, { actions: [g] }) : null,
-                    (0, r.jsx)(d.$, { caretConfig: y })
-                ]
-            })
-        })
+                    (0, r.jsx)(d.$, { caretConfig: y }),
+                ],
+            }),
+        }),
     );
 }

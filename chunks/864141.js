@@ -31,7 +31,7 @@ function N(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,15 +41,15 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -57,11 +57,11 @@ function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -81,38 +81,43 @@ function w(e) {
         { themeType: w } = (0, m.z)(),
         { analyticsLocations: D } = (0, c.ZP)(l.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
         L = (0, p.Z)({
-            display: 'voice',
-            activity: { type: 'VOICE' },
+            display: "voice",
+            activity: { type: "VOICE" },
             voiceChannelId: i.id,
             user: t,
-            analyticsLocations: D
+            analyticsLocations: D,
         }),
         x = (0, h.Z)({
             userId: t.id,
-            onAction: L
+            onAction: L,
         }),
         M = (0, a.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
         k = (0, _.Z)(i),
         j = (0, u.ZP)(i),
-        { channelStatusEnabled: U } = (0, f.D)({ location: 'UserProfileVoiceActivityCard' }),
+        { channelStatusEnabled: U } = (0, f.D)({ location: "UserProfileVoiceActivityCard" }),
         G = () => {
             if (t.id !== n.id) return null;
-            let e = i.isDM() || i.isGroupDM() ? S.intl.string(S.t['+DsWbW']) : S.intl.string(S.t.xOVEjY);
+            let e = i.isDM() || i.isGroupDM() ? S.intl.string(S.t["+DsWbW"]) : S.intl.string(S.t.xOVEjY);
             return (0, r.jsx)(s.ua7, {
                 text: e,
-                children: (e) => (0, r.jsx)(s.d3s, P(C({}, e), { size: 'xxs' }))
+                children: (e) => (0, r.jsx)(s.d3s, P(C({}, e), { size: "xxs" })),
             });
         },
         B = () =>
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: A.actions,
                 children: (0, r.jsx)(v.Z, {
                     channel: i,
                     onAction: L,
-                    onClose: R
-                })
+                    onClose: R,
+                }),
             }),
-        Z = i.isDM() || i.isGroupDM() ? S.intl.string(S.t['9FaEzs']) : i.isGuildStageVoice() ? S.intl.string(S.t.QygGCA) : S.intl.string(S.t.msxteH);
+        Z =
+            i.isDM() || i.isGroupDM()
+                ? S.intl.string(S.t["9FaEzs"])
+                : i.isGuildStageVoice()
+                  ? S.intl.string(S.t.QygGCA)
+                  : S.intl.string(S.t.msxteH);
     return (0, r.jsx)(c.Gt, {
         value: D,
         children: (0, r.jsxs)(g.Z, {
@@ -120,51 +125,51 @@ function w(e) {
             className: o()(A.card, N),
             onAction: L,
             onClose: R,
-            'aria-label': ''.concat(Z, ', ').concat(j),
+            "aria-label": "".concat(Z, ", ").concat(j),
             children: [
                 (0, r.jsx)(E.Z, {
                     text: Z,
                     tags: G(),
                     contextMenu: (0, r.jsx)(I.Z, {
-                        display: 'voice',
+                        display: "voice",
                         user: t,
-                        onClose: R
-                    })
+                        onClose: R,
+                    }),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: A.body,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: A.content,
                         children: [
                             (0, r.jsx)(y.Z, {
                                 users: k,
-                                channel: i
+                                channel: i,
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: A.details,
                                 children: [
                                     (0, r.jsx)(b.Z, {
                                         channel: i,
                                         guild: M,
                                         onAction: L,
-                                        onClose: R
+                                        onClose: R,
                                     }),
                                     U &&
                                         i.isGuildVoice() &&
                                         (0, r.jsx)(O.Z, {
                                             voiceChannel: i,
                                             onAction: L,
-                                            onClose: R
+                                            onClose: R,
                                         }),
-                                    w === T.lY.MODAL_V2 && B()
-                                ]
+                                    w === T.lY.MODAL_V2 && B(),
+                                ],
                             }),
-                            w === T.lY.MODAL && B()
-                        ]
-                    })
+                            w === T.lY.MODAL && B(),
+                        ],
+                    }),
                 }),
-                w !== T.lY.MODAL && w !== T.lY.MODAL_V2 && B()
-            ]
-        })
+                w !== T.lY.MODAL && w !== T.lY.MODAL_V2 && B(),
+            ],
+        }),
     });
 }

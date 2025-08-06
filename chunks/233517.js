@@ -15,7 +15,7 @@ a.d(e, {
     v: () => I,
     xv: () => L,
     yj: () => P,
-    yl: () => p
+    yl: () => p,
 });
 var r = a(622916),
     _ = a(899517),
@@ -28,8 +28,8 @@ function s(t, e) {
     return (0, o.nZ)().captureException(t, (0, E.U0)(e));
 }
 function l(t, e) {
-    let a = 'string' == typeof e ? e : void 0,
-        r = 'string' != typeof e ? { captureContext: e } : void 0;
+    let a = "string" == typeof e ? e : void 0,
+        r = "string" != typeof e ? { captureContext: e } : void 0;
     return (0, o.nZ)().captureMessage(t, a, r);
 }
 function u(t, e) {
@@ -58,11 +58,13 @@ function T() {
 }
 async function p(t) {
     let e = (0, o.s3)();
-    return e ? e.flush(t) : (i.X && r.kg.warn('Cannot flush events. No client defined.'), Promise.resolve(!1));
+    return e ? e.flush(t) : (i.X && r.kg.warn("Cannot flush events. No client defined."), Promise.resolve(!1));
 }
 async function L(t) {
     let e = (0, o.s3)();
-    return e ? e.close(t) : (i.X && r.kg.warn('Cannot flush events and disable SDK. No client defined.'), Promise.resolve(!1));
+    return e
+        ? e.close(t)
+        : (i.X && r.kg.warn("Cannot flush events and disable SDK. No client defined."), Promise.resolve(!1));
 }
 function h() {
     return !!(0, o.s3)();
@@ -81,16 +83,16 @@ function P(t) {
             environment: E,
             user: r.getUser() || a.getUser(),
             ...(s && { userAgent: s }),
-            ...t
+            ...t,
         }),
         u = a.getSession();
-    return (u && 'ok' === u.status && (0, c.CT)(u, { status: 'exited' }), g(), a.setSession(l), r.setSession(l), l);
+    return u && "ok" === u.status && (0, c.CT)(u, { status: "exited" }), g(), a.setSession(l), r.setSession(l), l;
 }
 function g() {
     let t = (0, o.aF)(),
         e = (0, o.nZ)(),
         a = e.getSession() || t.getSession();
-    (a && (0, c.RJ)(a), D(), t.setSession(), e.setSession());
+    a && (0, c.RJ)(a), D(), t.setSession(), e.setSession();
 }
 function D() {
     let t = (0, o.aF)(),

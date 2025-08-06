@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => B }), n(388685), n(953529), n(781311), n(539854));
+n.d(t, { Z: () => B }), n(388685), n(953529), n(781311), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -37,24 +37,24 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -76,7 +76,7 @@ function M(e, t) {
         e
     );
 }
-let G = 'WELCOME_CHANNEL',
+let G = "WELCOME_CHANNEL",
     U = (e) => {
         var t;
         let l,
@@ -92,11 +92,11 @@ let G = 'WELCOME_CHANNEL',
                 type: G,
                 item: {
                     channel: o,
-                    index: _
+                    index: _,
                 },
                 end: (e, t) => {
                     null == e || t.didDrop() || f(e.channel, null, !0);
-                }
+                },
             }),
             [, F] = (0, d.L)({
                 accept: G,
@@ -105,42 +105,42 @@ let G = 'WELCOME_CHANNEL',
                 },
                 drop: (e) => {
                     f(e.channel, _, !0);
-                }
+                },
             });
         return (
             i.useLayoutEffect(
                 () => (
                     B(F(C)),
                     () => {
-                        (B(null), F(null));
+                        B(null), F(null);
                     }
                 ),
-                [B, F]
+                [B, F],
             ),
             (l = w
                 ? null != T || null != o.emoji_name
                     ? (0, r.jsx)(h.Z, {
                           emojiId: null == T ? void 0 : T.id,
                           emojiName: null != T ? T.name : o.emoji_name,
-                          animated: !!(null == T ? void 0 : T.animated)
+                          animated: !!(null == T ? void 0 : T.animated),
                       })
                     : (0, r.jsx)(R, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: k.channelIcon
+                          size: "md",
+                          color: "currentColor",
+                          className: k.channelIcon,
                       })
                 : (0, r.jsx)(S.Z, {
                       width: 24,
                       height: 24,
-                      className: k.warningIcon
+                      className: k.warningIcon,
                   })),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a()(k.welcomeChannel, { [k.dragging]: x }),
                 ref: C,
-                'data-dnd-name': o.description,
+                "data-dnd-name": o.description,
                 onContextMenu: (e) => {
                     (0, p.jW)(e, async () => {
-                        let { default: e } = await n.e('68535').then(n.bind(n, 602320));
+                        let { default: e } = await n.e("68535").then(n.bind(n, 602320));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
@@ -150,65 +150,65 @@ let G = 'WELCOME_CHANNEL',
                                     onChannelReorder: f,
                                     setShowConfirmModal: y,
                                     onEdit: m,
-                                    index: _
-                                })
+                                    index: _,
+                                }),
                             );
                     });
                 },
                 children: [
                     l,
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: k.channelDescriptionWrapper,
                         children: [
                             (0, r.jsx)(g.Text, {
-                                variant: 'text-md/semibold',
-                                color: 'header-primary',
-                                children: o.description
+                                variant: "text-md/semibold",
+                                color: "header-primary",
+                                children: o.description,
                             }),
                             (0, r.jsxs)(g.Text, {
                                 className: w ? void 0 : k.channelWarning,
-                                variant: 'text-xs/normal',
-                                color: 'header-secondary',
+                                variant: "text-xs/normal",
+                                color: "header-secondary",
                                 children: [
                                     (0, r.jsx)(R, {
                                         className: k.channelTitleIcon,
-                                        size: 'xxs',
-                                        color: 'currentColor'
+                                        size: "xxs",
+                                        color: "currentColor",
                                     }),
-                                    (0, r.jsx)('span', { children: w ? U : A.intl.string(A.t.zFuCsL) })
-                                ]
-                            })
-                        ]
+                                    (0, r.jsx)("span", { children: w ? U : A.intl.string(A.t.zFuCsL) }),
+                                ],
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(g.zxk, {
-                        variant: 'secondary',
-                        size: 'sm',
+                        variant: "secondary",
+                        size: "sm",
                         text: A.intl.string(A.t.bt75u7),
                         disabled: !0,
                         onClick: () =>
                             (0, g.ZDy)(
                                 async () => {
-                                    let { default: e } = await n.e('39143').then(n.bind(n, 737868));
+                                    let { default: e } = await n.e("39143").then(n.bind(n, 737868));
                                     return (t) =>
                                         (0, r.jsx)(
                                             e,
                                             M(L({}, t), {
                                                 welcomeChannel: o,
                                                 guildId: s,
-                                                onSave: m
-                                            })
+                                                onSave: m,
+                                            }),
                                         );
                                 },
-                                { onCloseRequest: () => D.Vq }
-                            )
+                                { onCloseRequest: () => D.Vq },
+                            ),
                     }),
                     O &&
                         (0, r.jsx)(I.Z, {
                             onConfirm: () => m(),
                             onCancel: () => y(!1),
-                            channelId: o.channel_id
-                        })
-                ]
+                            channelId: o.channel_id,
+                        }),
+                ],
             })
         );
     },
@@ -221,7 +221,9 @@ let G = 'WELCOME_CHANNEL',
             [j, v] = i.useState(!1),
             { description: I, channels: E, enabled: P } = a,
             G = () => {
-                null != t && I !== s.description && ((0, C.Es)(t.id, { description: null == I ? void 0 : I.trim() }), b(!0));
+                null != t &&
+                    I !== s.description &&
+                    ((0, C.Es)(t.id, { description: null == I ? void 0 : I.trim() }), b(!0));
             },
             B = (e) => {
                 null != t && (o()(e, s.channels) || ((0, C.Es)(t.id, { channels: e }), b(!0)));
@@ -232,41 +234,45 @@ let G = 'WELCOME_CHANNEL',
             H = (e) => {
                 if (null == e) return;
                 let t = [...(null != E ? E : []), e];
-                ((0, C.VP)({ channels: t }), B(t));
+                (0, C.VP)({ channels: t }), B(t);
             },
             z = (e) => (t) => {
                 let n = [...(null != E ? E : [])];
-                (null == t ? n.splice(e, 1) : (n[e] = t), (0, C.VP)({ channels: n }), B(n), 0 === n.length && P && ((0, C.VP)({ enabled: !1 }), F(!1)));
+                null == t ? n.splice(e, 1) : (n[e] = t),
+                    (0, C.VP)({ channels: n }),
+                    B(n),
+                    0 === n.length && P && ((0, C.VP)({ enabled: !1 }), F(!1));
             },
             W = (e, t, n) => {
                 if (null == E) return;
                 let r = E.indexOf(e),
                     i = [...E];
-                (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, C.VP)({ channels: i })), n ? (B(i), p(null)) : p(t));
+                null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, C.VP)({ channels: i })),
+                    n ? (B(i), p(null)) : p(t);
             },
             V = i.useRef(!1);
-        ((0, f.ZP)(
+        (0, f.ZP)(
             () => (
                 null != t &&
                     l &&
                     (0, g.ZDy)(
                         async () => {
-                            let { default: e } = await n.e('39143').then(n.bind(n, 737868));
+                            let { default: e } = await n.e("39143").then(n.bind(n, 737868));
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
                                     M(L({}, n), {
                                         guildId: t.id,
-                                        onSave: H
-                                    })
+                                        onSave: H,
+                                    }),
                                 );
                         },
-                        { onCloseRequest: () => D.Vq }
+                        { onCloseRequest: () => D.Vq },
                     ),
                 () => {
                     V.current = !0;
                 }
-            )
+            ),
         ),
             i.useEffect(
                 () => () => {
@@ -274,9 +280,9 @@ let G = 'WELCOME_CHANNEL',
                         let e = [],
                             n = [],
                             r = !1;
-                        (null == E ||
+                        null == E ||
                             E.forEach((t) => {
-                                (e.push(t.description), n.push(t.channel_id), null != t.emoji_id && (r = !0));
+                                e.push(t.description), n.push(t.channel_id), null != t.emoji_id && (r = !0);
                             }),
                             T.default.track(Z.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
                                 guild_id: null == t ? void 0 : t.id,
@@ -284,41 +290,41 @@ let G = 'WELCOME_CHANNEL',
                                 options_channel_ids: n,
                                 guild_description: I,
                                 has_custom_emojis: r,
-                                is_enabled: P
-                            }));
+                                is_enabled: P,
+                            });
                     }
                 },
-                [h, E, I, P, t, V]
+                [h, E, I, P, t, V],
             ),
-            i.useEffect(() => () => (0, C.sm)(), []));
+            i.useEffect(() => () => (0, C.sm)(), []);
         let Y = i.useCallback(() => {
             null != t && w.Z.open(t.id, Z.pNK.ONBOARDING);
         }, [t]);
         return null == t
             ? null
             : (0, r.jsxs)(g.hjN, {
-                  title: A.intl.string(A.t['2rkmDg']),
+                  title: A.intl.string(A.t["2rkmDg"]),
                   tag: g.RB0.H1,
                   children: [
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)("div", {
                           className: k.notice,
                           children: (0, r.jsxs)(g.Text, {
-                              variant: 'text-md/normal',
+                              variant: "text-md/normal",
                               children: [
                                   (0, r.jsx)(S.Z, { className: k.noticeIcon }),
                                   A.intl.format(A.t.oj2vi4, {
                                       onboardingLink: (e) =>
                                           (0, r.jsx)(y.Z, {
                                               onClick: Y,
-                                              children: e
-                                          })
-                                  })
-                              ]
-                          })
+                                              children: e,
+                                          }),
+                                  }),
+                              ],
+                          }),
                       }),
                       (0, r.jsx)(g.Text, {
-                          variant: 'text-sm/normal',
-                          children: A.intl.string(A.t['w2d74+'])
+                          variant: "text-sm/normal",
+                          children: A.intl.string(A.t["w2d74+"]),
                       }),
                       (0, r.jsx)(R.Z, {
                           enabled: P,
@@ -328,14 +334,14 @@ let G = 'WELCOME_CHANNEL',
                                   : () => {
                                         null != t &&
                                             (0, g.ZDy)(async () => {
-                                                let { default: e } = await n.e('90542').then(n.bind(n, 184782));
+                                                let { default: e } = await n.e("90542").then(n.bind(n, 184782));
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         e,
                                                         M(L({}, n), {
                                                             guildId: t.id,
-                                                            isPreview: !0
-                                                        })
+                                                            isPreview: !0,
+                                                        }),
                                                     );
                                             });
                                     },
@@ -346,13 +352,13 @@ let G = 'WELCOME_CHANNEL',
                                     }
                                   : void 0,
                           animateStatus: j,
-                          firstLine: P ? A.intl.string(A.t.JbB7Qk) : A.intl.string(A.t['/bd0Qk']),
-                          secondLine: P ? A.intl.string(A.t['TA1g7+']) : A.intl.string(A.t.nc6r1N)
+                          firstLine: P ? A.intl.string(A.t.JbB7Qk) : A.intl.string(A.t["/bd0Qk"]),
+                          secondLine: P ? A.intl.string(A.t["TA1g7+"]) : A.intl.string(A.t.nc6r1N),
                       }),
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: k.previewContainer,
                           children: [
-                              (0, r.jsxs)('div', {
+                              (0, r.jsxs)("div", {
                                   className: k.welcomeHeader,
                                   children: [
                                       (0, r.jsx)(_.Z, {
@@ -360,31 +366,31 @@ let G = 'WELCOME_CHANNEL',
                                           className: k.icon,
                                           guild: t,
                                           animate: !0,
-                                          tabIndex: -1
+                                          tabIndex: -1,
                                       }),
                                       (0, r.jsx)(g.X6q, {
                                           className: k.welcomeTitle,
-                                          variant: 'heading-xl/semibold',
-                                          children: A.intl.format(A.t['0aydCA'], {
+                                          variant: "heading-xl/semibold",
+                                          children: A.intl.format(A.t["0aydCA"], {
                                               guildName: t.name,
                                               guildNameHook: (e, n) =>
                                                   (0, r.jsxs)(
-                                                      'span',
+                                                      "span",
                                                       {
                                                           children: [
                                                               (0, r.jsx)(O.Z, {
                                                                   guild: t,
                                                                   className: k.headerGuildBadge,
-                                                                  flowerStarClassName: k.flowerStar
+                                                                  flowerStarClassName: k.flowerStar,
                                                               }),
-                                                              (0, r.jsx)('strong', { children: e })
-                                                          ]
+                                                              (0, r.jsx)("strong", { children: e }),
+                                                          ],
                                                       },
-                                                      n
-                                                  )
-                                          })
+                                                      n,
+                                                  ),
+                                          }),
                                       }),
-                                      (0, r.jsx)('div', {
+                                      (0, r.jsx)("div", {
                                           className: k.descriptionWrapper,
                                           children: (0, r.jsx)(m.iS, {
                                               className: k.descriptionInput,
@@ -400,20 +406,20 @@ let G = 'WELCOME_CHANNEL',
                                               },
                                               value: I,
                                               maxLength: 140,
-                                              disabled: !0
-                                          })
-                                      })
-                                  ]
+                                              disabled: !0,
+                                          }),
+                                      }),
+                                  ],
                               }),
                               (0, r.jsx)(g.$i$, { className: k.divider }),
-                              (0, r.jsxs)('div', {
+                              (0, r.jsxs)("div", {
                                   className: k.welcomeChannels,
                                   children: [
                                       (0, r.jsx)(g.vwX, { children: A.intl.string(A.t.euJXzc) }),
                                       (0, r.jsx)(g.Text, {
-                                          variant: 'text-sm/normal',
+                                          variant: "text-sm/normal",
                                           className: k.addChannelSubtext,
-                                          children: A.intl.string(A.t.VOnnn5)
+                                          children: A.intl.string(A.t.VOnnn5),
                                       }),
                                       null == E
                                           ? void 0
@@ -426,40 +432,42 @@ let G = 'WELCOME_CHANNEL',
                                                         onEdit: z(n),
                                                         onChannelReorder: W,
                                                         isDropHovered: n === d,
-                                                        index: n
+                                                        index: n,
                                                     },
-                                                    n
-                                                )
+                                                    n,
+                                                ),
                                             ),
                                       (null == E || E.length < 5) &&
-                                          (0, r.jsx)('div', {
-                                              'data-button-hoisted-classname-wrapper': !0,
+                                          (0, r.jsx)("div", {
+                                              "data-button-hoisted-classname-wrapper": !0,
                                               className: k.addChannelButton,
                                               children: (0, r.jsx)(g.zxk, {
-                                                  variant: 'secondary',
+                                                  variant: "secondary",
                                                   text: A.intl.string(A.t.U1BDe3),
                                                   onClick: () =>
                                                       (0, g.ZDy)(
                                                           async () => {
-                                                              let { default: e } = await n.e('39143').then(n.bind(n, 737868));
+                                                              let { default: e } = await n
+                                                                  .e("39143")
+                                                                  .then(n.bind(n, 737868));
                                                               return (n) =>
                                                                   (0, r.jsx)(
                                                                       e,
                                                                       M(L({}, n), {
                                                                           guildId: t.id,
-                                                                          onSave: H
-                                                                      })
+                                                                          onSave: H,
+                                                                      }),
                                                                   );
                                                           },
-                                                          { onCloseRequest: () => D.Vq }
+                                                          { onCloseRequest: () => D.Vq },
                                                       ),
-                                                  disabled: !0
-                                              })
-                                          })
-                                  ]
-                              })
-                          ]
-                      })
-                  ]
+                                                  disabled: !0,
+                                              }),
+                                          }),
+                                  ],
+                              }),
+                          ],
+                      }),
+                  ],
               });
     };

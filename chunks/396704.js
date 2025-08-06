@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     JG: () => p,
     Jt: () => d,
     T3: () => m,
     VG: () => _,
-    o8: () => h
+    o8: () => h,
 }),
     n(388685),
-    n(415506));
+    n(415506);
 var r = n(308521),
     i = n(97519),
     o = n(570833),
@@ -18,7 +18,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,11 +44,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -64,11 +64,11 @@ function u(e, t) {
     );
 }
 var d = (function (e) {
-    return ((e.Loading = 'loading'), (e.Loaded = 'loaded'), e);
+    return (e.Loading = "loading"), (e.Loaded = "loaded"), e;
 })({});
 let f = (0, i.U)(() => ({
     riveAssetCache: new Map(),
-    riveOverrideCache: {}
+    riveOverrideCache: {},
 }));
 function _(e) {
     let t = h(e),
@@ -77,30 +77,30 @@ function _(e) {
         if (null != t || f.getState().riveAssetCache.has(e)) return;
         let n = new r.RiveFile({ src: e }),
             i = () => {
-                (n.init(),
+                n.init(),
                     n.on(r.EventType.Load, () => {
                         let t = {
-                            status: 'loaded',
-                            buffer: n.buffer
+                            status: "loaded",
+                            buffer: n.buffer,
                         };
                         f.setState((n) => ({ riveAssetCache: n.riveAssetCache.set(e, t) }));
                     }),
                     n.on(r.EventType.LoadError, (t) => {
-                        console.error('Rive file load error', e, t);
-                    }));
+                        console.error("Rive file load error", e, t);
+                    });
             };
         (0, o.f)(i);
     }),
     null != t)
         ? {
-              status: 'loaded',
-              buffer: t
+              status: "loaded",
+              buffer: t,
           }
         : null != n
           ? n
           : {
-                status: 'loading',
-                buffer: null
+                status: "loading",
+                buffer: null,
             };
 }
 function p(e, t) {

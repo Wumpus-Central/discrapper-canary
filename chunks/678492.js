@@ -8,10 +8,10 @@ var i = n(755721),
     s = n(388032);
 class c extends o.Z {
     _initialize() {
-        a.Z.subscribe('POGGERMODE_TEMPORARILY_DISABLED', this.handlePoggermodeTemporarilyDisabled);
+        a.Z.subscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled);
     }
     _terminate() {
-        a.Z.unsubscribe('POGGERMODE_TEMPORARILY_DISABLED', this.handlePoggermodeTemporarilyDisabled);
+        a.Z.unsubscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled);
     }
     handlePoggermodeTemporarilyDisabled() {
         (0, l.h7j)((e) => {
@@ -22,36 +22,36 @@ class c extends o.Z {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, e)),
                 (n = n =
                     {
                         header: s.intl.string(s.t.wDQgnZ),
-                        confirmText: s.intl.string(s.t['cY+Ooa']),
+                        confirmText: s.intl.string(s.t["cY+Ooa"]),
                         confirmButtonColor: i.zx.Colors.GREEN,
                         children: (0, r.jsx)(l.Text, {
-                            variant: 'text-md/normal',
-                            children: s.intl.string(s.t.OJklbW)
-                        })
+                            variant: "text-md/normal",
+                            children: s.intl.string(s.t.OJklbW),
+                        }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -65,7 +65,7 @@ class c extends o.Z {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
+                t),
             );
         });
     }

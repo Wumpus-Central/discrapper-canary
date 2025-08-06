@@ -4,5 +4,5 @@ var r = a(185461),
 let n = (0, r.rp)({
     lazyLoadIntegration: _.R,
     getModalIntegration: () => r.gS,
-    getScreenshotIntegration: () => r.U0
+    getScreenshotIntegration: () => r.U0,
 });

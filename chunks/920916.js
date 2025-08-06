@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     default: () => X,
-    m: () => Q
+    m: () => Q,
 }),
     n(457542),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -48,7 +48,7 @@ function B(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -58,15 +58,15 @@ function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 B(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -74,11 +74,11 @@ function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -109,94 +109,106 @@ function W(e) {
             let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
             return null == e ? null : e;
         }, [t, n]),
-        o = () => (null == r ? (S.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), H()));
+        o = () =>
+            null == r
+                ? (S.Z.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), Promise.reject())
+                : ((0, d.cV)(r), H());
     return [r, o];
 }
 function K(e) {
     var t;
-    let { transitionState: n, onClose: o, quest: l, location: d, reward: f, decoration: p, onUseNow: h, preview: m } = e,
+    let {
+            transitionState: n,
+            onClose: o,
+            quest: l,
+            location: d,
+            reward: f,
+            decoration: p,
+            onUseNow: h,
+            preview: m,
+        } = e,
         g = i.useRef(null),
         [b, y] = i.useState(null),
         O = i.useRef(new s.qA()),
         v = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
         I = (0, c.e7)([T.default], () => T.default.getCurrentUser()),
         S = (null == (t = l.userStatus) ? void 0 : t.claimedAt) != null,
-        [A, C] = i.useState(!0 === m || S ? 'claimed' : 'loading');
+        [A, C] = i.useState(!0 === m || S ? "claimed" : "loading");
     i.useEffect(() => {
         S ||
             !0 === m ||
             (0, N.QB)(l.id, R.y$.CROSS_PLATFORM, d)
-                .then(() => C('claimed'))
-                .catch(() => C('error'));
+                .then(() => C("claimed"))
+                .catch(() => C("error"));
     }, [l, d, S, m]);
     let P = () => {
-            (C('applying'), h().finally(o));
+            C("applying"), h().finally(o);
         },
-        w = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== '',
+        w = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== "",
         D = null == p && !0 !== m,
-        x = null == I || D || w || 'loading' === A,
-        M = !v && !S && 'claimed' === A;
+        x = null == I || D || w || "loading" === A,
+        M = !v && !S && "claimed" === A;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.O_, {
                 ref: y,
                 className: G.confettiCanvas,
-                environment: O.current
+                environment: O.current,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 ref: g,
                 children: (0, r.jsx)(u.Y0X, {
                     transitionState: n,
                     size: u.CgR.DYNAMIC,
                     className: a()(G.rootContainer, { [G.rootContainerLoading]: x }),
                     hideShadow: !0,
-                    parentComponent: 'QuestsRewardCollectibleModal',
+                    parentComponent: "QuestsRewardCollectibleModal",
                     children:
-                        'error' === A
+                        "error" === A
                             ? (0, r.jsx)(L.Z, { onClose: o })
                             : x
-                              ? (0, r.jsx)('div', {
+                              ? (0, r.jsx)("div", {
                                     className: G.loadingIndicatorWrapper,
-                                    children: (0, r.jsx)(u.$jN, { type: u.$jN.Type.SPINNING_CIRCLE })
+                                    children: (0, r.jsx)(u.$jN, { type: u.$jN.Type.SPINNING_CIRCLE }),
                                 })
                               : (0, r.jsx)(q, {
                                     quest: l,
                                     user: I,
                                     decoration: p,
-                                    isSaving: 'applying' === A,
+                                    isSaving: "applying" === A,
                                     onClose: o,
-                                    onConfirm: P
-                                })
-                })
+                                    onConfirm: P,
+                                }),
+                }),
             }),
             M &&
                 (0, r.jsx)(E.Z, {
                     confettiTarget: g.current,
                     confettiCanvas: b,
                     sprites: k.CA,
-                    colors: k.Br
-                })
-        ]
+                    colors: k.Br,
+                }),
+        ],
     });
 }
 function z(e) {
     let { quest: t } = e,
-        n = i.useMemo(() => (0, P.fh)(t, P.eC.LOGO_TYPE, 'dark'), [t]),
+        n = i.useMemo(() => (0, P.fh)(t, P.eC.LOGO_TYPE, "dark"), [t]),
         o = w.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[R.y$.CROSS_PLATFORM];
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: G.additionalRedemptionInstructions,
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 src: n.url,
-                alt: '',
-                className: G.sponsorLogo
+                alt: "",
+                className: G.sponsorLogo,
             }),
             (0, r.jsx)(u.Text, {
-                variant: 'text-sm/normal',
-                color: 'always-white',
-                children: b.Z.parse(o, !1, { allowLinks: !0 })
-            })
-        ]
+                variant: "text-sm/normal",
+                color: "always-white",
+                children: b.Z.parse(o, !1, { allowLinks: !0 }),
+            }),
+        ],
     });
 }
 function q(e) {
@@ -207,62 +219,62 @@ function q(e) {
         f = d === j.a$.FP_ONLY,
         _ = (0, C.Qy)(t.config),
         p = c && !f;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: G.claimedRootContainer,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: G.headerContainer,
                 children: [
                     (0, r.jsx)(D.Z, {
                         quest: t,
                         dimensions: {
                             width: 528,
-                            height: 148
+                            height: 148,
                         },
-                        className: G.headerBackground
+                        className: G.headerBackground,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: G.headerForeground,
                         children: (0, r.jsx)(u.olH, {
                             className: G.close,
                             withCircleBackground: !0,
-                            onClick: a
-                        })
-                    })
-                ]
+                            onClick: a,
+                        }),
+                    }),
+                ],
             }),
             (0, r.jsx)(u.mzw, {
                 separator: !1,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: G.footerBody,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: G.previewContainer,
                             children: (0, r.jsx)(h.Z, {
                                 user: n,
                                 guildId: null,
                                 avatarDecorationOverride: i,
                                 avatarSize: u.EFr.SIZE_152,
-                                questPreviewRewardAssetUrl: l
-                            })
+                                questPreviewRewardAssetUrl: l,
+                            }),
                         }),
                         (0, r.jsx)(u.X6q, {
-                            variant: 'heading-lg/bold',
-                            color: 'header-primary',
+                            variant: "heading-lg/bold",
+                            color: "header-primary",
                             className: G.heading,
-                            children: U.intl.string(U.t['0/Yz+f'])
+                            children: U.intl.string(U.t["0/Yz+f"]),
                         }),
                         (0, r.jsx)(u.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-default',
+                            variant: "text-sm/normal",
+                            color: "text-default",
                             className: G.text,
-                            children: _
+                            children: _,
                         }),
                         (0, r.jsx)(u.zxk, {
-                            variant: 'primary',
+                            variant: "primary",
                             text: U.intl.string(U.t.MAS7uL),
                             loading: o,
-                            onClick: s
+                            onClick: s,
                         }),
                         (0, A.zK)(t, x.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(z, { quest: t }),
                         p &&
@@ -270,15 +282,15 @@ function q(e) {
                                 className: G.upsell,
                                 upsellText: U.intl.format(U.t.VHXn7O, {
                                     onNitroClick: () => {
-                                        (Y(), a());
-                                    }
+                                        Y(), a();
+                                    },
                                 }),
-                                buttonAnalyticsObject: { section: M.jXE.PERMADECOS_MARKETING_UPSELL }
-                            })
-                    ]
-                })
-            })
-        ]
+                                buttonAnalyticsObject: { section: M.jXE.PERMADECOS_MARKETING_UPSELL },
+                            }),
+                    ],
+                }),
+            }),
+        ],
     });
 }
 function X(e) {
@@ -294,7 +306,7 @@ function X(e) {
                 onCloseModal: H,
                 onClose: s,
                 analyticsLocations: [],
-                initialSelectedDecoration: d
+                initialSelectedDecoration: d,
             })
           : (0, r.jsx)(K, {
                 onClose: s,
@@ -304,7 +316,7 @@ function X(e) {
                 reward: u,
                 decoration: d,
                 onUseNow: f,
-                preview: c
+                preview: c,
             });
 }
 function Q(e, t, i) {
@@ -316,8 +328,8 @@ function Q(e, t, i) {
                 V(Z({}, n), {
                     quest: e,
                     location: t,
-                    preview: i
-                })
+                    preview: i,
+                }),
             );
     });
 }

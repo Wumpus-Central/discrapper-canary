@@ -7,7 +7,7 @@ var r = Array.prototype.slice,
           }
         : n(973351),
     s = Object.keys;
-((a.shim = function () {
+(a.shim = function () {
     return (
         Object.keys
             ? !(function () {
@@ -21,4 +21,4 @@ var r = Array.prototype.slice,
         Object.keys || a
     );
 }),
-    (e.exports = a));
+    (e.exports = a);

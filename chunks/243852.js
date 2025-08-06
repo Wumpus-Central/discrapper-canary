@@ -19,7 +19,7 @@ var r,
     E = n(19780),
     y = n(944486),
     v = n(981631);
-let I = 'ActivityTrackingStore',
+let I = "ActivityTrackingStore",
     C = 30 * g.Z.Millis.MINUTE,
     S = 5 * g.Z.Millis.MINUTE,
     N = null != (r = s.K.get(I)) ? r : {},
@@ -29,7 +29,7 @@ function j(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     t && A(e, !0);
     let n = T[e.applicationId];
-    (null != n && (n.stop(), delete T[e.applicationId]), delete N[e.applicationId], s.K.set(I, N));
+    null != n && (n.stop(), delete T[e.applicationId]), delete N[e.applicationId], s.K.set(I, N);
 }
 function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -40,7 +40,7 @@ function A(e) {
         l = y.Z.getVoiceChannelId(),
         a = b.default.getSessionId(),
         o = E.Z.getMediaSessionId();
-    (d.Z.updateActivity({
+    d.Z.updateActivity({
         applicationId: e.applicationId,
         distributor: e.isDiscordApplication ? v.GQo.DISCORD : e.distributor,
         shareActivity: i,
@@ -50,11 +50,12 @@ function A(e) {
         exePath: e.exePath,
         voiceChannelId: l,
         sessionId: a,
-        mediaSessionId: o
+        mediaSessionId: o,
     }),
-        (e.updatedAt = n));
+        (e.updatedAt = n);
     let u = T[e.applicationId];
-    (null == u && (u = T[e.applicationId] = new c.Xp()).start(C, () => A(e)), t || ((N[e.applicationId] = e), s.K.set(I, N)));
+    null == u && (u = T[e.applicationId] = new c.Xp()).start(C, () => A(e)),
+        t || ((N[e.applicationId] = e), s.K.set(I, N));
 }
 function Z() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -69,7 +70,7 @@ function Z() {
                     applicationId: t.id,
                     updatedAt: Date.now(),
                     distributor: r,
-                    exePath: (0, p.N6)(null != i ? i : '')
+                    exePath: (0, p.N6)(null != i ? i : ""),
                 }));
     }
     for (let t of Object.keys(N)) n.has(t) || j(N[t], e);
@@ -80,19 +81,19 @@ function x() {
 }
 class w extends (i = o.ZP.Store) {
     initialize() {
-        (this.waitFor(h.ZP, f.Z, O.Z), this.syncWith([f.Z], Z));
+        this.waitFor(h.ZP, f.Z, O.Z), this.syncWith([f.Z], Z);
     }
     getActivities() {
         return N;
     }
 }
-((a = 'ActivityTrackingStore'),
-    (l = 'displayName') in w
+(a = "ActivityTrackingStore"),
+    (l = "displayName") in w
         ? Object.defineProperty(w, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
         : (w[l] = a),
     new w(u.Z, {
@@ -100,7 +101,7 @@ class w extends (i = o.ZP.Store) {
         CONNECTION_OPEN: function () {
             if (P) return !1;
             for (let e of Object.keys(N)) A(N[e]);
-            (Z(!1), (P = !0));
+            Z(!1), (P = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
@@ -111,12 +112,12 @@ class w extends (i = o.ZP.Store) {
             let { applicationId: t, token: n } = e,
                 r = N[t];
             if (null == r) return !1;
-            ((r.token = n), s.K.set(I, N));
+            (r.token = n), s.K.set(I, N);
         },
         ACTIVITY_UPDATE_FAIL: function (e) {
             let { applicationId: t } = e,
                 n = N[t];
             if (null == n) return !1;
-            ((n.token = null), (n.updatedAt = null), s.K.set(I, N));
-        }
-    }));
+            (n.token = null), (n.updatedAt = null), s.K.set(I, N);
+        },
+    });

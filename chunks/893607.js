@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Hw: () => d,
     Ss: () => l,
-    cq: () => c
+    cq: () => c,
 }),
     n(35282),
-    n(388685));
+    n(388685);
 var r = n(392711),
     i = n(860911),
     o = n(981631),
@@ -19,21 +19,23 @@ function c(e) {
 function u(e, t) {
     let { optional: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return new i.Zn(
-        ':'
-            .concat((0, r.escapeRegExp)(e), '(')
-            .concat(t, ')')
-            .concat(n ? '?' : '')
+        ":"
+            .concat((0, r.escapeRegExp)(e), "(")
+            .concat(t, ")")
+            .concat(n ? "?" : ""),
     );
 }
 let d = {
     guildId() {
-        let { name: e = 'guildId', optional: t = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            n = [o.ME, o.I_8, o.o_z, o.STv].map(r.escapeRegExp).join('|');
-        return u(e, ''.concat(n, '|\\d+'), { optional: t });
+        let { name: e = "guildId", optional: t = !1 } =
+                arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            n = [o.ME, o.I_8, o.o_z, o.STv].map(r.escapeRegExp).join("|");
+        return u(e, "".concat(n, "|\\d+"), { optional: t });
     },
     channelId() {
-        let { name: e = 'channelId', optional: t = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            n = [...a.Vg].map(r.escapeRegExp).join('|');
-        return u(e, ''.concat(n, '|\\d+'), { optional: t });
-    }
+        let { name: e = "channelId", optional: t = !1 } =
+                arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            n = [...a.Vg].map(r.escapeRegExp).join("|");
+        return u(e, "".concat(n, "|\\d+"), { optional: t });
+    },
 };

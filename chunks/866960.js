@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,11 +22,14 @@ let c = s.IWh.UNKNOWN,
     d = null;
 function f(e) {
     var t;
-    ((c = null != e.type ? e.type : s.IWh.UNKNOWN), (u = null != (t = e.effectiveSpeed) ? t : s.IyS.UNKNOWN), (d = e.serviceProvider), p.emitChange());
+    (c = null != e.type ? e.type : s.IWh.UNKNOWN),
+        (u = null != (t = e.effectiveSpeed) ? t : s.IyS.UNKNOWN),
+        (d = e.serviceProvider),
+        p.emitChange();
 }
 class _ extends (r = i.ZP.Store) {
     initialize() {
-        (a.Z.getNetworkInformation().then(f), a.Z.addChangeCallback(f));
+        a.Z.getNetworkInformation().then(f), a.Z.addChangeCallback(f);
     }
     getType() {
         return c;
@@ -38,6 +41,6 @@ class _ extends (r = i.ZP.Store) {
         return d;
     }
 }
-l(_, 'displayName', 'NetworkStore');
+l(_, "displayName", "NetworkStore");
 let p = new _(o.Z, {}),
     h = p;

@@ -1,1 +1,1 @@
-e.exports = { eventPrompt: 'eventPrompt_a5e25b' };
+e.exports = { eventPrompt: "eventPrompt_a5e25b" };

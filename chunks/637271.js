@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,18 @@ function d(e) {
     let r = a.Z.getChannel(t),
         i = c[n],
         o = u[n];
-    ((null == r ? void 0 : r.isThread()) && (null == r ? void 0 : r.parent_id) != null && [o, i].includes(null == r ? void 0 : r.parent_id)) || (t !== i && delete c[n], t !== o && delete u[n]);
+    ((null == r ? void 0 : r.isThread()) &&
+        (null == r ? void 0 : r.parent_id) != null &&
+        [o, i].includes(null == r ? void 0 : r.parent_id)) ||
+        (t !== i && delete c[n], t !== o && delete u[n]);
 }
 function f(e) {
     let { channelId: t, guildId: n } = e;
-    (null == t ? delete u[n] : (c[n] = t), delete u[n]);
+    null == t ? delete u[n] : (c[n] = t), delete u[n];
 }
 function _(e) {
     let { channelId: t, guildId: n } = e;
-    (delete c[n], (u[n] = t));
+    delete c[n], (u[n] = t);
 }
 class p extends (r = i.ZP.PersistedStore) {
     initialize(e) {
@@ -51,9 +54,9 @@ class p extends (r = i.ZP.PersistedStore) {
         return null == e ? null : null != (t = c[e]) ? t : u[e];
     }
 }
-(l(p, 'displayName', 'GuildOnboardingHomeNavigationStore'), l(p, 'persistKey', 'GuildOnboardingHomeNavigationStore'));
+l(p, "displayName", "GuildOnboardingHomeNavigationStore"), l(p, "persistKey", "GuildOnboardingHomeNavigationStore");
 let h = new p(o.Z, {
     CHANNEL_SELECT: d,
     SELECT_HOME_RESOURCE_CHANNEL: f,
-    SELECT_NEW_MEMBER_ACTION_CHANNEL: _
+    SELECT_NEW_MEMBER_ACTION_CHANNEL: _,
 });

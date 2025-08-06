@@ -1,4 +1,4 @@
-(n.d(t, { _: () => I }), n(781311), n(953529));
+n.d(t, { _: () => I }), n(781311), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -25,9 +25,9 @@ var r = n(255367),
     P = n(554010);
 let S = [
         {
-            name: 'Media Post Thumbnail',
-            extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp']
-        }
+            name: "Media Post Thumbnail",
+            extensions: ["jpg", "jpeg", "png", "gif", "webp"],
+        },
     ],
     T = (0, b.hQ)();
 function N(e) {
@@ -35,13 +35,13 @@ function N(e) {
         l = (0, _.tu)({
             numAttachments: t.length,
             containerWidth: n,
-            containerHeight: i
+            containerHeight: i,
         });
     return (0, r.jsx)(r.Fragment, {
         children: t.map((e, t) => {
             var n;
             return (0, r.jsx)(
-                'div',
+                "div",
                 {
                     style: l[t],
                     children:
@@ -49,18 +49,18 @@ function N(e) {
                             ? (0, r.jsx)(j.Z, {
                                   src: e.src,
                                   className: P.thumbnail,
-                                  'aria-hidden': !0
+                                  "aria-hidden": !0,
                               })
-                            : (0, r.jsx)('img', {
+                            : (0, r.jsx)("img", {
                                   src: e.src,
                                   className: P.thumbnail,
-                                  'aria-hidden': !0,
-                                  alt: null != (n = null == e ? void 0 : e.alt) ? n : ''
-                              })
+                                  "aria-hidden": !0,
+                                  alt: null != (n = null == e ? void 0 : e.alt) ? n : "",
+                              }),
                 },
-                e.src
+                e.src,
             );
-        })
+        }),
     });
 }
 let I = (e) => {
@@ -78,27 +78,27 @@ let I = (e) => {
             let e = (null == j ? void 0 : j.length) > 1 ? 1.15 : 1;
             return {
                 width: 153 * e,
-                height: 86 * e
+                height: 86 * e,
             };
         }, [j]),
         R = i.useCallback(
             (e) => {
-                (null != _ && h.Z.remove(l.id, _.id, f.Ie.CREATE_FORUM_POST.drafts.type),
+                null != _ && h.Z.remove(l.id, _.id, f.Ie.CREATE_FORUM_POST.drafts.type),
                     (0, y.d)(e.currentTarget.files, l, f.Ie.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0,
-                        origin: 'file_picker'
+                        origin: "file_picker",
                     }),
-                    (e.currentTarget.value = null));
+                    (e.currentTarget.value = null);
             },
-            [l, _]
+            [l, _],
         ),
         M = (e) => {
-            (e.stopPropagation(),
+            e.stopPropagation(),
                 (null == _ ? void 0 : _.upload) != null &&
                     (0, m.ZDy)(async () => {
                         let e = _.upload;
-                        o()(null != e, 'upload should not be null');
+                        o()(null != e, "upload should not be null");
                         let { default: t } = await Promise.resolve().then(n.bind(n, 95152));
                         return (n) => {
                             var i, a;
@@ -108,24 +108,24 @@ let I = (e) => {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                ((r = n[t]),
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = r));
-                                            }));
+                                                        : (e[t] = r);
+                                            });
                                     }
                                     return e;
                                 })({}, n)),
@@ -139,10 +139,10 @@ let I = (e) => {
                                             h.Z.update(l.id, e.id, f.Ie.CREATE_FORUM_POST.drafts.type, {
                                                 filename: n,
                                                 description: r,
-                                                spoiler: i
+                                                spoiler: i,
                                             });
                                         },
-                                        disableSpoiler: !0
+                                        disableSpoiler: !0,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
@@ -156,10 +156,10 @@ let I = (e) => {
                                       })(Object(a)).forEach(function (e) {
                                           Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
-                                i)
+                                i),
                             );
                         };
-                    }));
+                    });
         },
         Z = (0, r.jsx)(v.Z, {
             color: u.Tt.CUSTOM,
@@ -167,54 +167,56 @@ let I = (e) => {
             innerClassName: P.uploadThumbnailContainer,
             onChange: R,
             multiple: !1,
-            'aria-hidden': !0,
+            "aria-hidden": !0,
             filters: S,
-            'aria-describedby': T,
-            'aria-label': I ? w.intl.string(w.t.MxJI3d) : w.intl.string(w.t.CbiofX),
+            "aria-describedby": T,
+            "aria-label": I ? w.intl.string(w.t.MxJI3d) : w.intl.string(w.t.CbiofX),
             children: I
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(N, {
                               mediaAttachments: j,
                               containerWidth: E.width,
-                              containerHeight: E.height
+                              containerHeight: E.height,
                           }),
-                          (0, r.jsxs)('div', {
-                              className: a()(P.changeThumbnailLabelContainer, { [P.changeThumbnailLabelOverflow]: (null == j ? void 0 : j.length) > 2 }),
+                          (0, r.jsxs)("div", {
+                              className: a()(P.changeThumbnailLabelContainer, {
+                                  [P.changeThumbnailLabelOverflow]: (null == j ? void 0 : j.length) > 2,
+                              }),
                               children: [
                                   (0, r.jsx)(m.Text, {
-                                      variant: 'text-xs/medium',
-                                      color: 'header-secondary',
-                                      children: w.intl.string(w.t.MxJI3d)
+                                      variant: "text-xs/medium",
+                                      color: "header-secondary",
+                                      children: w.intl.string(w.t.MxJI3d),
                                   }),
                                   null == _ &&
                                       (0, r.jsx)(m.vdY, {
-                                          size: 'xs',
-                                          color: 'currentColor',
-                                          className: P.editIcon
-                                      })
-                              ]
-                          })
-                      ]
+                                          size: "xs",
+                                          color: "currentColor",
+                                          className: P.editIcon,
+                                      }),
+                              ],
+                          }),
+                      ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(m.FmF, {
-                              size: 'custom',
+                              size: "custom",
                               width: 39,
                               height: 39,
-                              color: 'currentColor',
-                              className: P.uploadIcon
+                              color: "currentColor",
+                              className: P.uploadIcon,
                           }),
                           (0, r.jsx)(m.Text, {
-                              variant: 'text-xs/normal',
-                              color: 'text-muted',
-                              children: w.intl.string(w.t.CbiofX)
-                          })
-                      ]
-                  })
+                              variant: "text-xs/normal",
+                              color: "text-muted",
+                              children: w.intl.string(w.t.CbiofX),
+                          }),
+                      ],
+                  }),
         });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: P.thumbnailContainer,
         style: E,
         children:
@@ -227,9 +229,9 @@ let I = (e) => {
                                   tooltip: w.intl.string(w.t.Y8ujqq),
                                   onClick: M,
                                   children: (0, r.jsx)(m.vdY, {
-                                      size: 'xs',
-                                      color: 'currentColor'
-                                  })
+                                      size: "xs",
+                                      color: "currentColor",
+                                  }),
                               }),
                               (0, r.jsx)(x.Z, {
                                   className: P.action,
@@ -237,11 +239,11 @@ let I = (e) => {
                                   onClick: () => h.Z.remove(l.id, _.id, f.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, r.jsx)(m.XHJ, {
-                                      size: 'md',
-                                      color: 'currentColor'
-                                  })
-                              })
-                          ]
+                                      size: "md",
+                                      color: "currentColor",
+                                  }),
+                              }),
+                          ],
                       }),
                       draftType: f.Ie.CREATE_FORUM_POST.drafts.type,
                       id: _.id,
@@ -250,8 +252,8 @@ let I = (e) => {
                       keyboardModeEnabled: b,
                       size: p.q.SMALL,
                       className: P.attachmentListItem,
-                      children: Z
+                      children: Z,
                   })
-                : Z
+                : Z,
     });
 };

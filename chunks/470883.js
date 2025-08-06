@@ -3,7 +3,7 @@ n.d(t, {
     DX: () => f,
     _j: () => l,
     aK: () => c,
-    dq: () => s
+    dq: () => s,
 });
 var r = n(392711),
     i = n.n(r),
@@ -27,6 +27,6 @@ function d(e) {
 function f(e) {
     return i()(e)
         .filter((e) => !d(e))
-        .keyBy('userId')
+        .keyBy("userId")
         .value();
 }

@@ -35,12 +35,14 @@ function b(e) {
                 price: j.intl.string(j.t.QQsaCQ),
                 isSelected: r === (null == S ? void 0 : S.skuId),
                 onSelect: () => y(e),
-                className: L.giftSelectItem
+                className: L.giftSelectItem,
             },
-            r
+            r,
         );
     };
-    (o()(null != l, 'Expected plan to selected'), o()(null != b, 'Expected selectedSkuId'), o()(null != g, 'Step should be set'));
+    o()(null != l, "Expected plan to selected"),
+        o()(null != b, "Expected selectedSkuId"),
+        o()(null != g, "Step should be set");
     let w = null == E ? void 0 : E.map((e) => I(e)),
         O =
             null != S && null != v
@@ -48,7 +50,7 @@ function b(e) {
                       avatarDecorationOverride: { asset: S.assetId },
                       user: v,
                       guildId: null,
-                      avatarSize: s.EFr.SIZE_152
+                      avatarSize: s.EFr.SIZE_152,
                   })
                 : null,
         M = (0, n.jsx)(x.O3, {
@@ -56,54 +58,54 @@ function b(e) {
                 className: L.modalFooter,
                 children: (0, n.jsx)(c.y, {
                     onStepChange: (e) => {
-                        (null != v &&
+                        null != v &&
                             null != S &&
                             p.default.track(h.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
                                 user_id: v.id,
-                                reward_sku_id: S.skuId
+                                reward_sku_id: S.skuId,
                             }),
-                            r(e));
+                            r(e);
                     },
                     onBackClick: () => r(m.h8.PLAN_SELECT),
                     shouldRenderUpdatedPaymentModal: !0,
                     showBackButton: !0,
                     planOptions: [l.id],
-                    selectedPlanId: l.id
-                })
-            })
+                    selectedPlanId: l.id,
+                }),
+            }),
         }),
         P = (0, n.jsx)(s.X6q, {
-            variant: 'heading-lg/bold',
-            color: 'header-primary',
-            children: j.intl.string(j.t['Rp0+ZG'])
+            variant: "heading-lg/bold",
+            color: "header-primary",
+            children: j.intl.string(j.t["Rp0+ZG"]),
         });
-    return (0, n.jsxs)('div', {
+    return (0, n.jsxs)("div", {
         className: L.container,
         children: [
             (0, n.jsx)(s.xBx, {
                 children: (0, n.jsxs)(s.Kqy, {
-                    direction: 'horizontal',
-                    justify: 'space-between',
-                    align: 'center',
-                    children: [P, (0, n.jsx)(s.olH, { onClick: t })]
-                })
+                    direction: "horizontal",
+                    justify: "space-between",
+                    align: "center",
+                    children: [P, (0, n.jsx)(s.olH, { onClick: t })],
+                }),
             }),
             (0, n.jsx)(s.hzk, {
                 children: (0, n.jsxs)(s.Kqy, {
                     gap: 24,
-                    align: 'center',
+                    align: "center",
                     padding: { top: 24 },
                     children: [
                         O,
                         (0, n.jsx)(s.Kqy, {
                             gap: 8,
                             padding: { top: 12 },
-                            children: w
-                        })
-                    ]
-                })
+                            children: w,
+                        }),
+                    ],
+                }),
             }),
-            M
-        ]
+            M,
+        ],
     });
 }

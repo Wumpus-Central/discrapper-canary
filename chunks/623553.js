@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(668826),
@@ -26,50 +26,50 @@ function x(e) {
         _ = (0, i.eR)(y),
         C = (e) => {
             var t;
-            (null == (t = v.current) || t.removeDrop(e), (P.current = h()), N(!1), clearTimeout(O.current));
+            null == (t = v.current) || t.removeDrop(e), (P.current = h()), N(!1), clearTimeout(O.current);
         },
         Z = (e) => {
-            (N(!0),
+            N(!0),
                 _(),
                 (0, o.KH)(u.yN.LOOTBOXES, P.current),
                 (O.current = setTimeout(() => {
                     C(e);
-                }, 1000)));
+                }, 1000));
         };
     (0, s.useEffect)(() => () => clearTimeout(O.current), []);
     let w = (e) =>
         j
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: p.points,
                           children: [
                               (0, r.jsxs)(c.Z, {
-                                  variant: 'text-lg/normal',
-                                  children: ['+', P.current]
+                                  variant: "text-lg/normal",
+                                  children: ["+", P.current],
                               }),
-                              (0, r.jsx)('img', {
+                              (0, r.jsx)("img", {
                                   src: m,
-                                  alt: f.intl.string(d.default.BropER)
-                              })
-                          ]
+                                  alt: f.intl.string(d.default.BropER),
+                              }),
+                          ],
                       }),
-                      (0, r.jsx)('img', {
+                      (0, r.jsx)("img", {
                           src: b,
                           alt: f.intl.string(d.default.CwZfY2),
                           width: 100,
-                          height: 100
-                      })
-                  ]
+                          height: 100,
+                      }),
+                  ],
               })
             : (0, r.jsx)(a.Z, {
                   onClick: () => Z(e),
-                  children: (0, r.jsx)('img', {
+                  children: (0, r.jsx)("img", {
                       src: g,
                       alt: f.intl.string(d.default.CwZfY2),
                       width: 100,
-                      height: 100
-                  })
+                      height: 100,
+                  }),
               });
     return (0, r.jsx)(l.Z, {
         ref: v,
@@ -82,9 +82,9 @@ function x(e) {
         dropPadding: 200,
         maxDrops: 1,
         children: (e) =>
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: p.lootbox,
-                children: w(e)
-            })
+                children: w(e),
+            }),
     });
 }

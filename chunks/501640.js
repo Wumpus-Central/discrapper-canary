@@ -5,14 +5,10 @@ var r = n(149765),
     a = n(496675),
     o = n(981631);
 function s(e) {
-    let t = (0, i.e7)(
-        [l.ZP],
-        () => {
-            var t;
-            return null != (t = l.ZP.getChannels(e)[l.sH]) ? t : [];
-        },
-        [e]
-    );
+    let t = (0, i.e7)([l.ZP], () => {
+        var t;
+        return null != (t = l.ZP.getChannels(e)[l.sH]) ? t : [];
+    }, [e]);
     return 0 === t.length
         ? 0
         : t.filter((e) => {

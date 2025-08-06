@@ -7,36 +7,36 @@ var l = n(481060),
     s = n(179979);
 let o = (e) => {
     let { guild: t } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: s.container,
         children: [
             (0, r.jsx)(l.X6q, {
                 className: s.header,
-                variant: 'heading-sm/semibold',
-                children: a.intl.string(a.t['0ox7Hh'])
+                variant: "heading-sm/semibold",
+                children: a.intl.string(a.t["0ox7Hh"]),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: s.guildContainer,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: s.guildInfo,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: s.guildIcon,
                             children: (0, r.jsx)(i.Z, {
                                 guild: t,
-                                size: i.Z.Sizes.LARGE
-                            })
+                                size: i.Z.Sizes.LARGE,
+                            }),
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             children: (0, r.jsx)(l.Text, {
-                                variant: 'text-md/semibold',
-                                color: 'header-primary',
-                                children: t.name
-                            })
-                        })
-                    ]
-                })
-            })
-        ]
+                                variant: "text-md/semibold",
+                                color: "header-primary",
+                                children: t.name,
+                            }),
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 };

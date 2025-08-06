@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -20,32 +20,32 @@ function m(e) {
             () =>
                 (0, _.Zn)(m, E, t, {
                     key: O,
-                    messageId: n
+                    messageId: n,
                 }),
-            [E, O, m, t, n]
+            [E, O, m, t, n],
         ),
         [T, S] = i.useState(!1),
         A = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
         N = c.Yk.useSetting(),
         C = i.useCallback(() => {
             a.Z.dispatch({
-                type: 'BURST_REACTION_EFFECT_CLEAR',
+                type: "BURST_REACTION_EFFECT_CLEAR",
                 channelId: t,
                 messageId: n,
-                emoji: m
+                emoji: m,
             });
         }, [m, t, n]);
     return (i.useEffect(() => {
         let e = () => {
             if (T) return;
-            let e = (0, d.vJ)(''.concat(Date.now()).concat(t).concat(n).concat(m.name)) % 10;
+            let e = (0, d.vJ)("".concat(Date.now()).concat(t).concat(n).concat(m.name)) % 10;
             (e += b > 4 ? 4 : b - 1) > 7 &&
                 (S(!0),
                 (0, l.T6)({
                     channelId: t,
                     messageId: n,
                     emoji: m,
-                    key: u.I.RANDOM
+                    key: u.I.RANDOM,
                 }));
         };
         if (T || (A && !N) || !N) return;
@@ -61,7 +61,7 @@ function m(e) {
               className: v.effect,
               effect: I,
               onComplete: C,
-              emojiSize: y
+              emojiSize: y,
           });
 }
 let g = i.memo(m);

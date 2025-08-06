@@ -18,38 +18,38 @@ var n = r(73800),
                             height: u,
                             marginRight: c,
                             marginBottom: c,
-                            transform: 'scale(1)',
-                            transition: '100ms transform ease'
+                            transform: "scale(1)",
+                            transition: "100ms transform ease",
                         },
                         Swatch: {
-                            borderRadius: '50%',
-                            background: 'transparent',
-                            boxShadow: 'inset 0 0 0 ' + (u / 2 + 1) + 'px ' + t,
-                            transition: '100ms box-shadow ease'
-                        }
+                            borderRadius: "50%",
+                            background: "transparent",
+                            boxShadow: "inset 0 0 0 " + (u / 2 + 1) + "px " + t,
+                            transition: "100ms box-shadow ease",
+                        },
                     },
-                    hover: { swatch: { transform: 'scale(1.2)' } },
-                    active: { Swatch: { boxShadow: 'inset 0 0 0 3px ' + t } }
+                    hover: { swatch: { transform: "scale(1.2)" } },
+                    active: { Swatch: { boxShadow: "inset 0 0 0 3px " + t } },
                 },
                 {
                     hover: l,
-                    active: s
-                }
+                    active: s,
+                },
             );
         return n.createElement(
-            'div',
+            "div",
             { style: p.swatch },
             n.createElement(a.m4, {
                 style: p.Swatch,
                 color: t,
                 onClick: r,
                 onHover: i,
-                focusStyle: { boxShadow: p.Swatch.boxShadow + ', 0 0 5px ' + t }
-            })
+                focusStyle: { boxShadow: p.Swatch.boxShadow + ", 0 0 5px " + t },
+            }),
         );
     };
 i.defaultProps = {
     circleSize: 28,
-    circleSpacing: 14
+    circleSpacing: 14,
 };
 let l = (0, o.handleHover)(i);

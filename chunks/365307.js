@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => g,
-    j: () => p
+    j: () => p,
 });
 var r = n(255367);
 n(73800);
@@ -24,7 +24,7 @@ function g(e) {
             webhooks: m,
             editedWebhook: g,
             isFetching: p,
-            errors: h
+            errors: h,
         } = (0, i.cj)([c.default], () => ({
             editedIntegration: c.default.editedIntegration,
             editedWebhook: c.default.editedWebhook,
@@ -33,7 +33,7 @@ function g(e) {
             isFetching: c.default.isFetching(),
             section: c.default.getSection(),
             sectionId: c.default.getSectionId(),
-            webhooks: c.default.webhooks
+            webhooks: c.default.webhooks,
         }));
     return null == n
         ? null
@@ -48,18 +48,18 @@ function g(e) {
               isFetchingWebhooks: p,
               hasChanges: c.default.hasChanges,
               errors: h,
-              refToScroller: t
+              refToScroller: t,
           });
 }
 function p() {
     let { guild: e, submitting: t } = (0, i.cj)([d.Z], () => ({
         guild: d.Z.getGuild(),
-        submitting: d.Z.isSubmitting()
+        submitting: d.Z.isSubmitting(),
     }));
     return (0, r.jsx)(a.Z, {
         submitting: t,
         onReset: () => {
-            (l.Z.init(), u.Ui(), null != e && o.Z.init(e.id));
+            l.Z.init(), u.Ui(), null != e && o.Z.init(e.id);
         },
         onSave: () => {
             if (null != e) {
@@ -73,6 +73,6 @@ function p() {
                 }
                 d.Z.hasChanges() && o.Z.saveGuild(e.id, { features: e.features });
             }
-        }
+        },
     });
 }

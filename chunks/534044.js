@@ -22,61 +22,61 @@ function h(e) {
                 className: u.header,
                 separator: !1,
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: m.iconContainer,
-                        children: (0, i.jsx)('img', {
+                        children: (0, i.jsx)("img", {
                             src: _,
-                            alt: '',
-                            className: m.icon
-                        })
+                            alt: "",
+                            className: m.icon,
+                        }),
                     }),
                     (0, i.jsx)(l.X6q, {
                         className: u.title,
-                        variant: 'heading-xl/semibold',
-                        children: x.intl.string(x.t.QMbTSk)
+                        variant: "heading-xl/semibold",
+                        children: x.intl.string(x.t.QMbTSk),
                     }),
                     (0, i.jsx)(l.X6q, {
                         className: u.subtitle,
-                        color: 'header-secondary',
-                        variant: 'text-md/normal',
-                        children: x.intl.string(x.t.Qdx8AA)
+                        color: "header-secondary",
+                        variant: "text-md/normal",
+                        children: x.intl.string(x.t.Qdx8AA),
                     }),
                     null != s &&
                         (0, i.jsx)(l.olH, {
                             className: u.closeButton,
-                            onClick: s
-                        })
-                ]
+                            onClick: s,
+                        }),
+                ],
             }),
             (0, i.jsxs)(l.hzk, {
                 className: a()(m.modalContent, n),
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)(l.X6q, {
-                        variant: 'heading-md/bold',
-                        color: 'header-primary',
+                        variant: "heading-md/bold",
+                        color: "header-primary",
                         className: m.actionsHeader,
-                        children: x.intl.string(x.t['9BRc1N'])
+                        children: x.intl.string(x.t["9BRc1N"]),
                     }),
                     (0, i.jsx)(c.Z, {
                         text: x.intl.string(x.t.PxL38P),
                         url: d.sQ.COMMUNITY_GUIDELINES,
-                        onClick: () => h(d.n0.ClickCommunityGuidelinesLink)
+                        onClick: () => h(d.n0.ClickCommunityGuidelinesLink),
                     }),
                     (0, i.jsx)(c.Z, {
                         text: x.intl.string(x.t.qC3XKS),
                         url: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
-                        onClick: () => h(d.n0.ClickWarningSystemHelpcenterLink)
-                    })
-                ]
+                        onClick: () => h(d.n0.ClickWarningSystemHelpcenterLink),
+                    }),
+                ],
             }),
             (0, i.jsx)(l.mzw, {
                 children: (0, i.jsx)(l.zxk, {
-                    variant: 'primary',
+                    variant: "primary",
                     text: x.intl.string(x.t.i4jeWV),
-                    onClick: t
-                })
-            })
-        ]
+                    onClick: t,
+                }),
+            }),
+        ],
     });
 }

@@ -15,7 +15,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,21 +42,21 @@ let _ = (e) => {
             f = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
             { avatarDecoration: _, isFetching: p } = (0, l.DU)(t);
         return p
-            ? (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", {
                   className: u.questsCollectibleReward,
-                  children: (0, r.jsx)(o.$jN, {})
+                  children: (0, r.jsx)(o.$jN, {}),
               })
             : null == f || null == _
               ? n
-              : (0, r.jsx)('div', {
+              : (0, r.jsx)("div", {
                     className: u.questsCollectibleReward,
                     children: (0, r.jsx)(a.Z, {
                         avatarSize: c.EF.SIZE_56,
                         user: f,
                         guildId: null,
                         avatarDecorationOverride: _,
-                        animateOnHover: !d
-                    })
+                        animateOnHover: !d,
+                    }),
                 });
     },
     p = (e) => (0, r.jsx)(_, f({}, e));

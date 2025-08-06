@@ -1,5 +1,5 @@
 function r(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 var i = n(512972),
     o = n(359282),
@@ -25,13 +25,13 @@ e.exports = (function (e) {
             return l;
         }),
         (n.getBlockMap = function () {
-            return this.get('blockMap');
+            return this.get("blockMap");
         }),
         (n.getSelectionBefore = function () {
-            return this.get('selectionBefore');
+            return this.get("selectionBefore");
         }),
         (n.getSelectionAfter = function () {
-            return this.get('selectionAfter');
+            return this.get("selectionAfter");
         }),
         (n.getBlockForKey = function (e) {
             return this.getBlockMap().get(e);
@@ -84,28 +84,28 @@ e.exports = (function (e) {
         (n.getPlainText = function (e) {
             return this.getBlockMap()
                 .map(function (e) {
-                    return e ? e.getText() : '';
+                    return e ? e.getText() : "";
                 })
-                .join(e || '\n');
+                .join(e || "\n");
         }),
         (n.getLastCreatedEntityKey = function () {
             return l.__getLastCreatedEntityKey();
         }),
         (n.hasText = function () {
             var e = this.getBlockMap();
-            return e.size > 1 || escape(e.first().getText()).replace(/%u200B/g, '').length > 0;
+            return e.size > 1 || escape(e.first().getText()).replace(/%u200B/g, "").length > 0;
         }),
         (n.createEntity = function (e, t, n) {
-            return (l.__create(e, t, n), this);
+            return l.__create(e, t, n), this;
         }),
         (n.mergeEntityData = function (e, t) {
-            return (l.__mergeData(e, t), this);
+            return l.__mergeData(e, t), this;
         }),
         (n.replaceEntityData = function (e, t) {
-            return (l.__replaceData(e, t), this);
+            return l.__replaceData(e, t), this;
         }),
         (n.addEntity = function (e) {
-            return (l.__add(e), this);
+            return l.__add(e), this;
         }),
         (n.getEntity = function (e) {
             return l.__get(e);
@@ -118,7 +118,7 @@ e.exports = (function (e) {
                 blockMap: o,
                 entityMap: n || l,
                 selectionBefore: a,
-                selectionAfter: a
+                selectionAfter: a,
             });
         }),
         (t.createFromText = function (e) {
@@ -126,11 +126,11 @@ e.exports = (function (e) {
                 r = e.split(n).map(function (e) {
                     return (
                         (e = _(e)),
-                        new (d('draft_tree_data_support') ? s : a)({
+                        new (d("draft_tree_data_support") ? s : a)({
                             key: u(),
                             text: e,
-                            type: 'unstyled',
-                            characterList: p(m(o.EMPTY, e.length))
+                            type: "unstyled",
+                            characterList: p(m(o.EMPTY, e.length)),
                         })
                     );
                 });
@@ -143,6 +143,6 @@ e.exports = (function (e) {
         entityMap: null,
         blockMap: null,
         selectionBefore: null,
-        selectionAfter: null
-    })
+        selectionAfter: null,
+    }),
 );

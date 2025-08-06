@@ -5,5 +5,13 @@ var n = r(6170),
     i = r(175056),
     l = r(69958);
 let s = function (e) {
-    return 'function' == typeof e ? e : null == e ? a.Z : 'object' == typeof e ? ((0, i.Z)(e) ? (0, o.Z)(e[0], e[1]) : (0, n.Z)(e)) : (0, l.Z)(e);
+    return "function" == typeof e
+        ? e
+        : null == e
+          ? a.Z
+          : "object" == typeof e
+            ? (0, i.Z)(e)
+                ? (0, o.Z)(e[0], e[1])
+                : (0, n.Z)(e)
+            : (0, l.Z)(e);
 };

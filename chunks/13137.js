@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var o = n(255367),
     r = n(73800),
     i = n(120356),
@@ -25,24 +25,24 @@ let v = (e) =>
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             o = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (o = o.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             o.forEach(function (t) {
                                 var o;
-                                ((o = n[t]),
+                                (o = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: o,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = o));
-                            }));
+                                        : (e[t] = o);
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -50,7 +50,7 @@ let v = (e) =>
                     {
                         problemOptions: s()
                             .shuffle(e.problemOptions)
-                            .concat(null != (t = e.freeformConfig) ? t : [])
+                            .concat(null != (t = e.freeformConfig) ? t : []),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
@@ -66,13 +66,27 @@ let v = (e) =>
                       }),
                 n
             );
-        })
+        }),
     );
 function y(e) {
     var t;
     let n,
         i,
-        { onMount: a, onSubmit: y, onClose: j, ratingHeader: w, ratingBody: x, ratingOptions: C, ratingEmojiKind: E, initialRating: P = null, categoriesHeader: k, optionsTree: S, hideDontShowAgainCheckbox: D, impression: L, transitionState: R } = e,
+        {
+            onMount: a,
+            onSubmit: y,
+            onClose: j,
+            ratingHeader: w,
+            ratingBody: x,
+            ratingOptions: C,
+            ratingEmojiKind: E,
+            initialRating: P = null,
+            categoriesHeader: k,
+            optionsTree: S,
+            hideDontShowAgainCheckbox: D,
+            impression: L,
+            transitionState: R,
+        } = e,
         N = (0, d.Z)(S),
         [F, I] = r.useState(v(S));
     r.useEffect(() => {
@@ -83,8 +97,8 @@ function y(e) {
         [A, M] = r.useState(P),
         [V, H] = r.useState(null),
         [U, K] = r.useState(null),
-        [z, J] = r.useState('');
-    ((0, u.ZP)(() => (null == a ? void 0 : a())),
+        [z, J] = r.useState("");
+    (0, u.ZP)(() => (null == a ? void 0 : a())),
         (0, u.zq)(() => {
             var e;
             y({
@@ -92,9 +106,9 @@ function y(e) {
                 category: null != (e = null == V ? void 0 : V.value) ? e : null,
                 problem: U,
                 dontShowAgain: T,
-                feedback: z
+                feedback: z,
             });
-        }));
+        });
     let X = !0,
         W = !1;
     return (
@@ -108,9 +122,9 @@ function y(e) {
                               emojiKind: E,
                               selectedRating: A,
                               onChangeRating: function (e) {
-                                  (M(e), e === O.aZ.GOOD && j());
-                              }
-                          })
+                                  M(e), e === O.aZ.GOOD && j();
+                              },
+                          }),
                       }),
                       !D &&
                           (0, o.jsx)(c.mzw, {
@@ -122,12 +136,12 @@ function y(e) {
                                   value: T,
                                   onChange: () => B(!T),
                                   children: (0, o.jsx)(c.Text, {
-                                      variant: 'text-sm/normal',
-                                      children: g.intl.string(g.t['5E9SBw'])
-                                  })
-                              })
-                          })
-                  ]
+                                      variant: "text-sm/normal",
+                                      children: g.intl.string(g.t["5E9SBw"]),
+                                  }),
+                              }),
+                          }),
+                  ],
               })),
               (X = !1))
             : A !== O.aZ.GOOD && null == V
@@ -140,9 +154,9 @@ function y(e) {
                         children: (0, o.jsx)(p.Z, {
                             options: F,
                             onClick: H,
-                            hideCaret: () => !0
-                        })
-                    })
+                            hideCaret: () => !0,
+                        }),
+                    }),
                 })),
                 (i = () => M(null)))
               : null != V && null == U
@@ -156,15 +170,19 @@ function y(e) {
                               options: V.problemOptions,
                               onClick: function (e) {
                                   var t;
-                                  (K(e), null != V && null != e && (null == (t = V.freeformConfig) ? void 0 : t.value) !== e.value && j());
+                                  K(e),
+                                      null != V &&
+                                          null != e &&
+                                          (null == (t = V.freeformConfig) ? void 0 : t.value) !== e.value &&
+                                          j();
                               },
                               hideCaret: (e) => {
                                   var t;
                                   let { value: n } = e;
                                   return (null == (t = V.freeformConfig) ? void 0 : t.value) !== n;
-                              }
-                          })
-                      })
+                              },
+                          }),
+                      }),
                   })),
                   (i = () => H(null)))
                 : null != V &&
@@ -180,28 +198,28 @@ function y(e) {
                               (0, o.jsx)(c.Kx8, {
                                   value: z,
                                   maxLength: O.iF,
-                                  onChange: J
+                                  onChange: J,
                               }),
                               !V.freeformConfig.hideHelpdeskLink &&
                                   (0, o.jsx)(c.Text, {
                                       className: h.helpdeskLink,
-                                      variant: 'text-xs/normal',
-                                      color: 'text-muted',
-                                      children: g.intl.format(g.t.ybi2tL, { helpdeskURL: f.Z.getSubmitRequestURL() })
-                                  })
-                          ]
-                      })
+                                      variant: "text-xs/normal",
+                                      color: "text-muted",
+                                      children: g.intl.format(g.t.ybi2tL, { helpdeskURL: f.Z.getSubmitRequestURL() }),
+                                  }),
+                          ],
+                      }),
                   })),
                   (i = () => {
-                      (J(''), K(null));
+                      J(""), K(null);
                   }),
                   (W = !0)),
         (0, o.jsxs)(c.Y0X, {
             impression: L,
             transitionState: R,
             className: h.modalRoot,
-            'aria-labelledby': Z,
-            parentComponent: 'FeedbackModalV2',
+            "aria-labelledby": Z,
+            parentComponent: "FeedbackModalV2",
             children: [
                 (0, o.jsxs)(c.xBx, {
                     separator: !1,
@@ -209,17 +227,17 @@ function y(e) {
                     children: [
                         (0, o.jsx)(c.X6q, {
                             id: Z,
-                            variant: 'heading-xl/extrabold',
-                            color: 'none',
-                            children: w
+                            variant: "heading-xl/extrabold",
+                            color: "none",
+                            children: w,
                         }),
                         (0, o.jsx)(c.Text, {
-                            variant: 'text-md/normal',
-                            color: 'none',
+                            variant: "text-md/normal",
+                            color: "none",
                             className: h.ratingBody,
-                            children: x
-                        })
-                    ]
+                            children: x,
+                        }),
+                    ],
                 }),
                 n,
                 X &&
@@ -228,21 +246,21 @@ function y(e) {
                         direction: b.Z.Direction.HORIZONTAL,
                         children: [
                             (0, o.jsx)(c.zxk, {
-                                variant: 'secondary',
-                                size: 'sm',
-                                text: g.intl.string(g.t['13/7kZ']),
-                                onClick: i
+                                variant: "secondary",
+                                size: "sm",
+                                text: g.intl.string(g.t["13/7kZ"]),
+                                onClick: i,
                             }),
                             W &&
                                 (0, o.jsx)(c.zxk, {
-                                    variant: 'primary',
-                                    size: 'sm',
+                                    variant: "primary",
+                                    size: "sm",
                                     text: g.intl.string(g.t.geKm7u),
-                                    onClick: j
-                                })
-                        ]
-                    })
-            ]
+                                    onClick: j,
+                                }),
+                        ],
+                    }),
+            ],
         })
     );
 }

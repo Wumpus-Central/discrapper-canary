@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     BC: () => m,
     LR: () => p,
-    ku: () => _
+    ku: () => _,
 }),
     n(953529),
-    n(997841));
+    n(997841);
 var r = n(830121),
     i = n(754688),
     o = n(430824),
@@ -17,7 +17,15 @@ var r = n(830121),
 let f = 40;
 function _(e) {
     var t, n, r, i, o;
-    let { mediaPostEmbedData: c, guild: _, parentChannel: p, postThread: m, user: g, selectedGuildId: E, canAccess: b = !1 } = e;
+    let {
+        mediaPostEmbedData: c,
+        guild: _,
+        parentChannel: p,
+        postThread: m,
+        user: g,
+        selectedGuildId: E,
+        canAccess: b = !1,
+    } = e;
     if (null == c) return null;
     let y = (0, l.EY)(c.thumbnail),
         O = !b && c.has_media_attachment,
@@ -29,12 +37,14 @@ function _(e) {
             id: c.guild_id,
             icon: c.guild_icon,
             size: f,
-            canAnimate: !1
+            canAnimate: !1,
         }));
     let S = h(c.thumbnail) && !O,
-        A = (null == (t = c.thumbnail) ? void 0 : t.filename) != null && (null == (r = c.thumbnail) || null == (n = r.filename) ? void 0 : n.startsWith(u._j));
+        A =
+            (null == (t = c.thumbnail) ? void 0 : t.filename) != null &&
+            (null == (r = c.thumbnail) || null == (n = r.filename) ? void 0 : n.startsWith(u._j));
     return {
-        title: null != (i = c.title) ? i : '',
+        title: null != (i = c.title) ? i : "",
         subtitle: c.description,
         ctaText: v,
         coverImage: y,
@@ -55,7 +65,7 @@ function _(e) {
         shouldSpoiler: A,
         obscureAwaitingScan: !1,
         flags: c.flags,
-        contentScanVersion: c.content_scan_version
+        contentScanVersion: c.content_scan_version,
     };
 }
 function p(e) {

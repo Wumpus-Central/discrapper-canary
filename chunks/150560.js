@@ -10,9 +10,9 @@ let r = (0, n(97519).U)((e) => ({
                 utmSourceCurrent: n,
                 utmMediumCurrent: r,
                 utmCampaignCurrent: i,
-                utmContentCurrent: o
+                utmContentCurrent: o,
             });
         },
-        getUtmCurrentContext: () => r.getState()
+        getUtmCurrentContext: () => r.getState(),
     })),
     i = r;

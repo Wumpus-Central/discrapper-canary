@@ -18,28 +18,28 @@ let g = (e) => {
         g = u.default.getCurrentUser(),
         E = (0, d.yd)(null == g ? void 0 : g.premiumType, p.p9.TIER_2),
         b = (0, f._)({
-            defaultResponse: h.intl.string(h.t['8x0jKS']),
-            onNonTier2Subscriber: h.intl.string(h.t.IJI7ys)
+            defaultResponse: h.intl.string(h.t["8x0jKS"]),
+            onNonTier2Subscriber: h.intl.string(h.t.IJI7ys),
         });
     return E
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: o()(m.upsellContainer, n),
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: m.row,
                       children: [
                           (0, r.jsx)(a.SrA, {
-                              size: 'md',
-                              color: c.JX.PREMIUM_TIER_2
+                              size: "md",
+                              color: c.JX.PREMIUM_TIER_2,
                           }),
                           (0, r.jsx)(s.xv, {
-                              variant: 'text-sm/medium',
-                              color: 'header-primary',
+                              variant: "text-sm/medium",
+                              color: "header-primary",
                               className: m.upsellText,
-                              children: i
-                          })
-                      ]
+                              children: i,
+                          }),
+                      ],
                   }),
                   (0, r.jsx)(_.Z, {
                       className: m.button,
@@ -49,8 +49,8 @@ let g = (e) => {
                       subscriptionTier: p.Si.TIER_2,
                       textOptions: { textOverride: b },
                       premiumModalAnalyticsLocation: t,
-                      showGradient: !0
-                  })
-              ]
+                      showGradient: !0,
+                  }),
+              ],
           });
 };

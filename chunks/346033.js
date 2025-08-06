@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => U }), n(388685));
+n.d(t, { Z: () => U }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -65,7 +65,7 @@ let B = (e) => {
         r.useEffect(() => {
             q(!0);
         }, []);
-        let el = (0, i.jsx)('div', {
+        let el = (0, i.jsx)("div", {
             className: L.premiumTierCardsContainerSettings,
             children: (0, i.jsx)(o.$, {
                 innerRef: n,
@@ -80,7 +80,7 @@ let B = (e) => {
                         className: k.subButton,
                         look: d.iL.OUTLINED,
                         color: d.Tt.WHITE,
-                        buttonShineClassName: k.buttonShine
+                        buttonShineClassName: k.buttonShine,
                     }),
                     tier2CTAButton:
                         et === D.Si.TIER_0
@@ -90,7 +90,7 @@ let B = (e) => {
                                   className: k.subButton,
                                   look: d.iL.OUTLINED,
                                   color: d.Tt.WHITE,
-                                  buttonShineClassName: k.buttonShine
+                                  buttonShineClassName: k.buttonShine,
                               })
                             : (0, i.jsx)(v.Z, {
                                   color: d.Tt.BRAND_INVERTED,
@@ -99,21 +99,21 @@ let B = (e) => {
                                   className: k.subButton,
                                   hasActivePromotion: er,
                                   textOptions: { textClassName: k.subButtonText },
-                                  buttonShineClassName: k.buttonShine
-                              })
-                })
-            })
+                                  buttonShineClassName: k.buttonShine,
+                              }),
+                }),
+            }),
         });
-        return (0, i.jsxs)('div', {
+        return (0, i.jsxs)("div", {
             className: L.container,
-            'data-cy': 'tier-0-marketing-page',
+            "data-cy": "tier-0-marketing-page",
             children: [
                 (0, i.jsx)(I.Z, {
                     premiumSubscription: X,
-                    className: a()(L.existingSubscriberSpacing, { [L.zIndex1]: en })
+                    className: a()(L.existingSubscriberSpacing, { [L.zIndex1]: en }),
                 }),
                 (0, i.jsx)(B, { inOfferExperience: en }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     children: (0, i.jsx)(o.$, {
                         innerRef: s,
                         onChange: (e) => F(e),
@@ -126,54 +126,57 @@ let B = (e) => {
                                 [L.settingsHeroNoBackground]: en,
                                 [L.trialMarketingMargin]: en,
                                 [L.settingsHeroBogoHeight]: ei,
-                                [L.noTopPaddingOverride]: null != X
+                                [L.noTopPaddingOverride]: null != X,
                             }),
-                            isDarkMode: V
-                        })
-                    })
+                            isDarkMode: V,
+                        }),
+                    }),
                 }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: L.promoBannerContainer,
-                    children: (0, i.jsx)(O.Z, { variant: O.C.NITRO_SETTINGS })
+                    children: (0, i.jsx)(O.Z, { variant: O.C.NITRO_SETTINGS }),
                 }),
                 el,
                 null != es &&
                     (0, i.jsx)(S.C, {
                         className: L.giftPromoCard,
-                        config: es
+                        config: es,
                     }),
                 (0, i.jsx)(A.Z, { className: L.perkCardsContainerSpacingSettings }),
-                (0, i.jsx)('div', {
+                (0, i.jsx)("div", {
                     className: L.planComparisonTableContainer,
                     children: (0, i.jsx)(R.Z, {
                         className: L.planComparisonTable,
-                        hideCTAs: !0
-                    })
+                        hideCTAs: !0,
+                    }),
                 }),
-                (0, i.jsx)('div', { className: L.footerSpacing }),
+                (0, i.jsx)("div", { className: L.footerSpacing }),
                 (0, i.jsx)(P.Z, {
                     isVisible: !G && !H && K,
                     subscriptionTier: $,
                     isApplicationHome: !1,
-                    isEligibleForBogoPromotion: ei
+                    isEligibleForBogoPromotion: ei,
                 }),
                 (0, i.jsx)(o.$, {
                     innerRef: N,
                     onChange: (e) => {
-                        e && !W && (b.default.track(Z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: ea }), Y(!0));
+                        e &&
+                            !W &&
+                            (b.default.track(Z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: ea }),
+                            Y(!0));
                     },
-                    children: (0, i.jsx)('div', {
+                    children: (0, i.jsx)("div", {
                         ref: N,
-                        className: L.bottomOfPageVisibilitySensor
-                    })
+                        className: L.bottomOfPageVisibilitySensor,
+                    }),
                 }),
-                (0, i.jsx)('img', {
+                (0, i.jsx)("img", {
                     src: M,
                     className: L.bottomIllustration,
                     width: 112,
                     height: 85,
-                    alt: w.intl.string(w.t.X4IxWF)
-                })
-            ]
+                    alt: w.intl.string(w.t.X4IxWF),
+                }),
+            ],
         });
     };

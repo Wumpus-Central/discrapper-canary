@@ -9,19 +9,19 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let s = 'Note';
+let s = "Note";
 class l extends o.fE {
     getNote(e) {
         return this.get(e);
     }
 }
-a(l, 'displayName', 'NoteStore');
+a(l, "displayName", "NoteStore");
 let c = new l(
     {
         CONNECTION_OPEN: (e, t) => t.reset(),
@@ -31,8 +31,8 @@ let c = new l(
                 e.id,
                 (0, r.bk)(s, {
                     loading: !1,
-                    note: e.note
-                })
+                    note: e.note,
+                }),
             );
         },
         USER_NOTE_LOAD_START: (e, t) => {
@@ -40,10 +40,10 @@ let c = new l(
                 e.userId,
                 (0, r.bk)(s, {
                     loading: !0,
-                    note: null
-                })
+                    note: null,
+                }),
             );
-        }
+        },
     },
-    i.IZ.getCachedKvStoreMode()
+    i.IZ.getCachedKvStoreMode(),
 );

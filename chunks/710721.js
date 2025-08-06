@@ -8,13 +8,13 @@ class s extends o.Z {
         let t = e.body.retry_after,
             n = (0, r.TD)(0, t * i.Z.Millis.SECOND);
         return (0, r.QX)(n, {
-            days: a.t['iXc/IS'],
-            hours: a.t['WW9P5+'],
-            minutes: a.t.I7rYen
+            days: a.t["iXc/IS"],
+            hours: a.t["WW9P5+"],
+            minutes: a.t.I7rYen,
         });
     }
     constructor(e, t) {
-        (super(e, t), 429 === this.status && (this.message = this._getMessageFromRateLimit(e)));
+        super(e, t), 429 === this.status && (this.message = this._getMessageFromRateLimit(e));
     }
 }
 let l = s;

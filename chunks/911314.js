@@ -11,9 +11,9 @@ let s = (0, l.Z)(function () {
             (0, r.jsx)(i.AW, {
                 path: o.Z5c.APPLICATION_STORE,
                 exact: !0,
-                render: () => (0, r.jsx)(a.Z, {})
+                render: () => (0, r.jsx)(a.Z, {}),
             }),
-            (0, r.jsx)(i.l_, { to: o.Z5c.APP })
-        ]
+            (0, r.jsx)(i.l_, { to: o.Z5c.APP }),
+        ],
     });
 });

@@ -15,16 +15,16 @@ function l(e) {
         children: (0, r.jsxs)(a.Z, {
             align: a.Z.Align.CENTER,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: s.buttonIcon,
-                    children: t
+                    children: t,
                 }),
                 (0, r.jsx)(o.Text, {
-                    variant: 'text-md/normal',
-                    color: 'none',
-                    children: l
-                })
-            ]
-        })
+                    variant: "text-md/normal",
+                    color: "none",
+                    children: l,
+                }),
+            ],
+        }),
     });
 }

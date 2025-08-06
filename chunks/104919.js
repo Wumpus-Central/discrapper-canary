@@ -14,7 +14,7 @@ async function d(e) {
         !(0, c.x$)({
             applicationId: f,
             channel: _,
-            commandIntegrationTypes: p
+            commandIntegrationTypes: p,
         })
     )
         return Promise.resolve({ isAuthorized: !0 });
@@ -24,14 +24,20 @@ async function d(e) {
         m = a.ZP.createFromServer(e);
     }
     let g = r.Y.USER_INSTALL,
-        E = null == m || null == (d = m.integrationTypesConfig) || null == (n = d[g]) || null == (t = n.oauth2InstallParams) ? void 0 : t.scopes;
+        E =
+            null == m ||
+            null == (d = m.integrationTypesConfig) ||
+            null == (n = d[g]) ||
+            null == (t = n.oauth2InstallParams)
+                ? void 0
+                : t.scopes;
     return (
         null != h &&
             (0, i.yw)(u.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
                 application_id: f,
                 location: h.location,
                 section_name: h.sectionName,
-                source: h.entrypoint
+                source: h.entrypoint,
             }),
         new Promise((e) => {
             (0, o.openOAuth2Modal)(
@@ -47,15 +53,15 @@ async function d(e) {
                                       application_id: f,
                                       location: h.location,
                                       section_name: h.sectionName,
-                                      source: h.entrypoint
+                                      source: h.entrypoint,
                                   }),
                               e({ isAuthorized: !0 }))
                             : e({ isAuthorized: !1 });
-                    }
+                    },
                 },
                 () => {
                     e({ isAuthorized: !1 });
-                }
+                },
             );
         })
     );

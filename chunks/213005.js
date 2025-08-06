@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685), n(539854));
+n.d(t, { Z: () => d }), n(388685), n(539854);
 var i = n(836560),
     r = n(358085),
     s = n(998502),
@@ -11,7 +11,7 @@ let o = [],
     };
 class d extends i.EventEmitter {
     destroy() {
-        (this.removeAllListeners(), 0 === (o = o.filter((e) => e !== this)).length && s.ZP.setOnInputEventCallback(null));
+        this.removeAllListeners(), 0 === (o = o.filter((e) => e !== this)).length && s.ZP.setOnInputEventCallback(null);
     }
     toString() {
         return (0, a.BB)(this.combo);
@@ -22,21 +22,21 @@ class d extends i.EventEmitter {
                   let [i, r] = t;
                   return i !== e || r !== n;
               }))
-            : (this.combo.push([e, n, (0, a.dU)()]), this.emit('change', this));
+            : (this.combo.push([e, n, (0, a.dU)()]), this.emit("change", this));
     }
     constructor() {
         var e, t;
-        (super(),
+        super(),
             (t = []),
-            (e = 'combo') in this
+            (e = "combo") in this
                 ? Object.defineProperty(this, e, {
                       value: t,
                       enumerable: !0,
                       configurable: !0,
-                      writable: !0
+                      writable: !0,
                   })
                 : (this[e] = t),
             o.push(this),
-            1 === o.length && s.ZP.setOnInputEventCallback(c));
+            1 === o.length && s.ZP.setOnInputEventCallback(c);
     }
 }

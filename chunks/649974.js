@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -70,7 +70,12 @@ function m(e) {
     let t = O[e];
     if (null == t) return !1;
     let n = t.gameId;
-    return (null != N[n] && ((N = p({}, N)), delete N[n][e], 0 === Object.values(N[n]).length && delete N[n]), (O = p({}, O)), delete O[e], !0);
+    return (
+        null != N[n] && ((N = p({}, N)), delete N[n][e], 0 === Object.values(N[n]).length && delete N[n]),
+        (O = p({}, O)),
+        delete O[e],
+        !0
+    );
 }
 function y(e) {
     let { user: t, activities: n } = e;
@@ -90,15 +95,15 @@ function y(e) {
                     o = {
                         userId: t.id,
                         activity: e,
-                        startedPlaying: a
+                        startedPlaying: a,
                     };
                 return (
                     (N = f(p({}, N), { [r]: f(p({}, N[r]), { [o.userId]: o }) })),
                     (O = f(p({}, O), {
                         [o.userId]: {
                             gameId: r,
-                            startedPlaying: o.startedPlaying
-                        }
+                            startedPlaying: o.startedPlaying,
+                        },
                     })),
                     !0
                 );
@@ -122,7 +127,7 @@ function S() {
                     (e =
                         y({
                             user: n,
-                            activities: o.Z.getActivities(t)
+                            activities: o.Z.getActivities(t),
                         }) || e);
             }),
             (t = e)),
@@ -132,7 +137,7 @@ function S() {
 }
 class E extends (i = r.ZP.Store) {
     initialize() {
-        (this.waitFor(a.Z), this.syncWith([a.Z], S));
+        this.waitFor(a.Z), this.syncWith([a.Z], S);
     }
     get games() {
         return N;
@@ -150,10 +155,10 @@ class E extends (i = r.ZP.Store) {
         return O[e];
     }
 }
-d(E, 'displayName', 'NowPlayingStore');
+d(E, "displayName", "NowPlayingStore");
 let I = new E(l.Z, {
     CONNECTION_OPEN: function () {
-        ((N = {}), (O = {}));
+        (N = {}), (O = {});
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
@@ -167,7 +172,7 @@ let I = new E(l.Z, {
         );
     },
     LOGOUT: function () {
-        ((N = {}), (O = {}));
+        (N = {}), (O = {});
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
@@ -176,5 +181,5 @@ let I = new E(l.Z, {
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e;
         return h(t);
-    }
+    },
 });

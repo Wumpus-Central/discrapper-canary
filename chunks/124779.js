@@ -8,7 +8,7 @@ var s = n(82659),
 function o(t) {
     let { channel: i, transitionState: n, onClose: o } = t;
     function l() {
-        (r.default.disconnect(), o());
+        r.default.disconnect(), o();
     }
     return (0, a.jsx)(s.Modal, {
         transitionState: n,
@@ -19,15 +19,15 @@ function o(t) {
             {
                 text: e.intl.string(e.t.xTwqz8),
                 onClick: l,
-                variant: 'secondary'
+                variant: "secondary",
             },
             {
-                text: e.intl.string(e.t['sBP/1t']),
+                text: e.intl.string(e.t["sBP/1t"]),
                 onClick: function () {
-                    ((0, c.NZ)(i), l());
+                    (0, c.NZ)(i), l();
                 },
-                variant: 'critical-primary'
-            }
-        ]
+                variant: "critical-primary",
+            },
+        ],
     });
 }

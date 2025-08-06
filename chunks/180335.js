@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     AZ: () => u,
     RL: () => p,
     cN: () => f,
     gr: () => d,
     pB: () => _,
-    vu: () => h
+    vu: () => h,
 }),
-    n(388685));
+    n(388685);
 var r = n(423875),
     i = n(394821),
     o = n(26033),
@@ -26,7 +26,11 @@ function d(e) {
 }
 function f(e, t) {
     let n = e.extra;
-    return null != n && (('application_id' in t && t.application_id === n.application_id) || ('game_name' in n ? t.name === n.game_name : 'activity_name' in n && t.name === n.activity_name));
+    return (
+        null != n &&
+        (("application_id" in t && t.application_id === n.application_id) ||
+            ("game_name" in n ? t.name === n.game_name : "activity_name" in n && t.name === n.activity_name))
+    );
 }
 function _(e, t) {
     if (u(e)) {
@@ -40,5 +44,11 @@ function p(e, t) {
 }
 function h(e, t) {
     let n = e.filter(a.kr);
-    return t.type === s.IIU.PLAYING ? n.filter(o.dX).find((e) => f(e, t)) : t.type === s.IIU.LISTENING ? n.filter(o.dU).find((e) => _(e, t)) : t.type === s.IIU.WATCHING ? e.filter(o.y0).find((e) => p(e, t)) : void 0;
+    return t.type === s.IIU.PLAYING
+        ? n.filter(o.dX).find((e) => f(e, t))
+        : t.type === s.IIU.LISTENING
+          ? n.filter(o.dU).find((e) => _(e, t))
+          : t.type === s.IIU.WATCHING
+            ? e.filter(o.y0).find((e) => p(e, t))
+            : void 0;
 }

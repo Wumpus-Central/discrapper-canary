@@ -14,7 +14,7 @@ let a = function (e, t, r, a, i, l) {
         h = l.get(t);
     if (d && h) return d == t && h == e;
     var b = !0;
-    (l.set(e, t), l.set(t, e));
+    l.set(e, t), l.set(t, e);
     for (var v = s; ++p < c; ) {
         var g = e[(f = u[p])],
             x = t[f];
@@ -23,12 +23,16 @@ let a = function (e, t, r, a, i, l) {
             b = !1;
             break;
         }
-        v || (v = 'constructor' == f);
+        v || (v = "constructor" == f);
     }
     if (b && !v) {
         var m = e.constructor,
             w = t.constructor;
-        m != w && 'constructor' in e && 'constructor' in t && !('function' == typeof m && m instanceof m && 'function' == typeof w && w instanceof w) && (b = !1);
+        m != w &&
+            "constructor" in e &&
+            "constructor" in t &&
+            !("function" == typeof m && m instanceof m && "function" == typeof w && w instanceof w) &&
+            (b = !1);
     }
-    return (l.delete(e), l.delete(t), b);
+    return l.delete(e), l.delete(t), b;
 };

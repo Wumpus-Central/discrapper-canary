@@ -46,50 +46,54 @@ var r = n(255367),
     K = n(950796),
     z = n(981631),
     q = n(325162);
-(n(167666),
+n(167666),
     Promise.resolve()
         .then(n.bind(n, 62883))
         .then((e) => {
-            G.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
+            G.isPlatformEmbedded
+                ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1)
+                : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1);
         }),
     (0, u.E)({ getDefaultLinkInterceptor: m.default }),
     (0, B.Un)({
-        createPromise: () => Promise.all([n.e('50448'), n.e('80451'), n.e('30634'), n.e('33551')]).then(n.bind(n, 849493)),
-        webpackId: 849493
+        createPromise: () =>
+            Promise.all([n.e("50448"), n.e("80451"), n.e("30634"), n.e("33551")]).then(n.bind(n, 849493)),
+        webpackId: 849493,
     }),
     (0, B.Un)({
-        createPromise: () => Promise.all([n.e('50448'), n.e('80451'), n.e('30634'), n.e('58493')]).then(n.bind(n, 80753)),
-        webpackId: 80753
-    }));
+        createPromise: () =>
+            Promise.all([n.e("50448"), n.e("80451"), n.e("30634"), n.e("58493")]).then(n.bind(n, 80753)),
+        webpackId: 80753,
+    });
 let X = (0, B.Un)({
-        createPromise: () => n.e('67110').then(n.bind(n, 177741)),
-        webpackId: 177741
+        createPromise: () => n.e("67110").then(n.bind(n, 177741)),
+        webpackId: 177741,
     }),
     Q = (0, B.Un)({
-        createPromise: () => n.e('13474').then(n.bind(n, 420541)),
-        webpackId: 420541
+        createPromise: () => n.e("13474").then(n.bind(n, 420541)),
+        webpackId: 420541,
     }),
     J = i.memo(function () {
         let e = (0, c.e7)([U.Z], () => U.Z.hasLayers()),
-            t = (0, k.wy)('AppSkeleton'),
+            t = (0, k.wy)("AppSkeleton"),
             n = (0, c.e7)([U.Z], () => U.Z.getLayers().includes(z.S9g.USER_SETTINGS)),
             i = (0, d.s9z)(d.$sL);
         if (!n || !t)
             return (0, r.jsx)(K.Dg, {
                 fixed: !0,
-                show: e || i || !j.default.isAuthenticated()
+                show: e || i || !j.default.isAuthenticated(),
             });
     }),
     $ = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
             o = (0, G.getPlatform)(),
             u = l.tq || l.Em,
-            m = (0, c.e7)([E.Z], () => (E.Z.useForcedColors ? 'yes' : 'no')),
+            m = (0, c.e7)([E.Z], () => (E.Z.useForcedColors ? "yes" : "no")),
             k = i.useRef(document.body),
-            j = ''.concat(m);
+            j = "".concat(m);
         return (
             (0, C.G)(),
-            (0, P.G)('AppSkeleton'),
+            (0, P.G)("AppSkeleton"),
             (0, r.jsx)(
                 M.w,
                 {
@@ -110,22 +114,27 @@ let X = (0, B.Un)({
                                                 children: (0, r.jsxs)(w.yP, {
                                                     children: [
                                                         null != o ? (0, r.jsx)(J, {}) : null,
-                                                        (0, r.jsxs)('div', {
-                                                            className: a()(q.appAsidePanelWrapper, u && q.mobileAppAsidePanelWrapper),
+                                                        (0, r.jsxs)("div", {
+                                                            className: a()(
+                                                                q.appAsidePanelWrapper,
+                                                                u && q.mobileAppAsidePanelWrapper,
+                                                            ),
                                                             children: [
                                                                 (0, r.jsx)(N.K, {}),
-                                                                (0, r.jsx)('div', {
+                                                                (0, r.jsx)("div", {
                                                                     className: q.notAppAsidePanel,
-                                                                    'data-app-not-dev-tools': !0,
+                                                                    "data-app-not-dev-tools": !0,
                                                                     children: (0, r.jsx)(A.m, {
                                                                         children: (0, r.jsx)(L.OR, {
                                                                             children: (0, r.jsx)(y.Z.Provider, {
                                                                                 value: O.Z,
                                                                                 children: (0, r.jsxs)(S.p, {
                                                                                     children: [
-                                                                                        (0, r.jsx)('div', {
-                                                                                            className: a()(u ? q.mobileApp : q.app),
-                                                                                            children: t
+                                                                                        (0, r.jsx)("div", {
+                                                                                            className: a()(
+                                                                                                u ? q.mobileApp : q.app,
+                                                                                            ),
+                                                                                            children: t,
                                                                                         }),
                                                                                         (0, r.jsx)(f.Z, {}),
                                                                                         (0, r.jsx)(I.Z, {}),
@@ -139,32 +148,32 @@ let X = (0, B.Un)({
                                                                                         (0, r.jsx)(v.Z, {}),
                                                                                         (0, r.jsx)(x.Z, {}),
                                                                                         (0, r.jsx)(X, {}),
-                                                                                        (0, r.jsx)(Q, {})
-                                                                                    ]
-                                                                                })
-                                                                            })
-                                                                        })
-                                                                    })
+                                                                                        (0, r.jsx)(Q, {}),
+                                                                                    ],
+                                                                                }),
+                                                                            }),
+                                                                        }),
+                                                                    }),
                                                                 }),
                                                                 (0, r.jsx)(T.Z, {}),
                                                                 (0, r.jsx)(V.Z, {}),
                                                                 (0, r.jsx)(Z.Z, {}),
-                                                                (0, r.jsx)(R.Z, { mobile: u })
-                                                            ]
+                                                                (0, r.jsx)(R.Z, { mobile: u }),
+                                                            ],
                                                         }),
-                                                        !1
-                                                    ]
-                                                })
+                                                        !1,
+                                                    ],
+                                                }),
                                             }),
-                                            (0, r.jsx)(s.OU, {})
-                                        ]
-                                    })
-                                })
-                            })
-                        ]
-                    })
+                                            (0, r.jsx)(s.OU, {}),
+                                        ],
+                                    }),
+                                }),
+                            }),
+                        ],
+                    }),
                 },
-                j
+                j,
             )
         );
     };

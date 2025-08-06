@@ -16,19 +16,19 @@ e.exports = function (e, t) {
             return n === a
                 ? e.merge({
                       text: r.slice(o, s),
-                      characterList: i.slice(o, s)
+                      characterList: i.slice(o, s),
                   })
                 : t === n
                   ? e.merge({
                         text: r.slice(o),
-                        characterList: i.slice(o)
+                        characterList: i.slice(o),
                     })
                   : t === a
                     ? e.merge({
                           text: r.slice(0, s),
-                          characterList: i.slice(0, s)
+                          characterList: i.slice(0, s),
                       })
                     : e;
-        })
+        }),
     );
 };

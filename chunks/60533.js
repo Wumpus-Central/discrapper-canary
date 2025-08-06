@@ -22,14 +22,14 @@ function u(e) {
         className: d.container,
         children: [
             (0, r.jsx)(l.X6q, {
-                variant: 'heading-lg/semibold',
-                color: 'header-primary',
-                children: c.intl.string(c.t.Ms33Dg)
+                variant: "heading-lg/semibold",
+                color: "header-primary",
+                children: c.intl.string(c.t.Ms33Dg),
             }),
             (0, r.jsx)(l.Text, {
-                variant: 'text-md/normal',
-                color: 'header-secondary',
-                children: c.intl.string(c.t.xK7oiY)
+                variant: "text-md/normal",
+                color: "header-secondary",
+                children: c.intl.string(c.t.xK7oiY),
             }),
             (0, r.jsx)(l.ua7, {
                 text: c.intl.string(c.t.VAIHXV),
@@ -37,40 +37,40 @@ function u(e) {
                 children: (e) => {
                     var t, i;
                     return (0, r.jsx)(
-                        'div',
+                        "div",
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, e)),
                         (i = i =
                             {
                                 children: (0, r.jsx)(l.zxk, {
-                                    variant: 'primary',
+                                    variant: "primary",
                                     text: c.intl.string(c.t.ZXeJbW),
                                     disabled: !n,
-                                    onClick: u
-                                })
+                                    onClick: u,
+                                }),
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
@@ -84,10 +84,10 @@ function u(e) {
                               })(Object(i)).forEach(function (e) {
                                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
                               }),
-                        t)
+                        t),
                     );
-                }
-            })
-        ]
+                },
+            }),
+        ],
     });
 }

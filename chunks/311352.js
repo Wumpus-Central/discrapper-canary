@@ -20,7 +20,7 @@ var r = n(255367),
     C = n(856587);
 function v(e) {
     (0, a.jW)(e, async () => {
-        let { default: e } = await n.e('21960').then(n.bind(n, 999466));
+        let { default: e } = await n.e("21960").then(n.bind(n, 999466));
         return (t) =>
             (0, r.jsx)(
                 e,
@@ -28,40 +28,40 @@ function v(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
-                })({}, t)
+                })({}, t),
             );
     });
 }
 let j = (e) => {
         let { keybindString: t, children: n, targetElementRef: i } = e,
             l = (e, t) => {
-                (e.stopPropagation(), e.preventDefault(), null == t || t());
+                e.stopPropagation(), e.preventDefault(), null == t || t();
             };
         return (0, r.jsx)(s.yRy, {
             targetElementRef: i,
             shouldShow: !1,
-            position: 'top',
-            align: 'center',
+            position: "top",
+            align: "center",
             renderPopout: (e) => {
                 let { closePopout: n } = e;
                 return (0, r.jsx)(d.Z, {
@@ -69,41 +69,41 @@ let j = (e) => {
                     shouldUseHorizontalButtons: !0,
                     inlineArt: !0,
                     artClassName: C.clipsEducationArt,
-                    position: 'top',
-                    header: (0, r.jsx)('div', {
+                    position: "top",
+                    header: (0, r.jsx)("div", {
                         className: C.header,
-                        children: y.intl.format(y.t['o+srEx'], {
+                        children: y.intl.format(y.t["o+srEx"], {
                             keybind: t,
                             keybindHook: () =>
-                                (0, r.jsx)('span', {
+                                (0, r.jsx)("span", {
                                     className: C.keybindHintKeys,
                                     children: (0, r.jsx)(s.M2$, {
                                         className: C.keybindShortcut,
-                                        shortcut: t
-                                    })
-                                })
-                        })
+                                        shortcut: t,
+                                    }),
+                                }),
+                        }),
                     }),
                     headerClassName: C.clipsEducationHeader,
                     body: (0, r.jsx)(s.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'always-white',
+                        variant: "text-sm/normal",
+                        color: "always-white",
                         className: C.bodyText,
                         children: y.intl.format(y.t.DWeRm5, {
                             keybindHook: () =>
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: C.keyCombo,
-                                    children: t
+                                    children: t,
                                 }),
-                            keybind: t
-                        })
+                            keybind: t,
+                        }),
                     }),
                     onClose: (e) => {
                         l(e, n);
-                    }
+                    },
                 });
             },
-            children: () => n
+            children: () => n,
         });
     },
     E = () => {
@@ -113,7 +113,7 @@ let j = (e) => {
             o = (0, m.Go)(),
             { clipsEnabled: a, isAtMaxSavingClipsOperations: d } = (0, l.cj)([b.Z], () => ({
                 clipsEnabled: b.Z.getSettings().clipsEnabled,
-                isAtMaxSavingClipsOperations: b.Z.getIsAtMaxSaveClipOperations()
+                isAtMaxSavingClipsOperations: b.Z.getIsAtMaxSaveClipOperations(),
             })),
             C = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(_.kg4.SAVE_CLIP));
         if (!(o && a) || null == C || n) return null;
@@ -124,12 +124,15 @@ let j = (e) => {
             children: (0, r.jsx)(h.Z, {
                 ref: e,
                 disabled: d,
-                tooltipText: null != C ? y.intl.formatToPlainString(y.t.HIMcv7, { hotkey: g.BB(null == C ? void 0 : C.shortcut, !0) }) : y.intl.string(y.t.s52pjo),
+                tooltipText:
+                    null != C
+                        ? y.intl.formatToPlainString(y.t.HIMcv7, { hotkey: g.BB(null == C ? void 0 : C.shortcut, !0) })
+                        : y.intl.string(y.t.s52pjo),
                 onClick: () => {
-                    ((0, O.C1)(), (0, u.v)(t, u.d.CLIP));
+                    (0, O.C1)(), (0, u.v)(t, u.d.CLIP);
                 },
                 onContextMenu: v,
-                icon: s.AlX
-            })
+                icon: s.AlX,
+            }),
         });
     };

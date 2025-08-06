@@ -12,7 +12,7 @@ function u(e, t, n, r) {
         keybind: e,
         message: t,
         messageWithoutKeybind: n,
-        highlightAdminWarningIfElevated: r
+        highlightAdminWarningIfElevated: r,
     });
 }
 function d(e) {
@@ -23,16 +23,16 @@ function d(e) {
         return null != e && e.elevated && l.ZP.canShowAdminWarning;
     })
         ? (0, i.jsx)(o.Text, {
-              variant: 'text-xxs/semibold',
-              color: d ? 'text-feedback-warning' : 'text-muted',
-              children: c.intl.string(c.t.PIeSHB)
+              variant: "text-xxs/semibold",
+              color: d ? "text-feedback-warning" : "text-muted",
+              children: c.intl.string(c.t.PIeSHB),
           })
         : p
           ? (0, i.jsx)(i.Fragment, {
                 children: c.intl.format(n, {
                     keybind: t,
-                    keybindHook: (e) => (0, i.jsx)(s.Z, { keybind: t }, t.join('+'))
-                })
+                    keybindHook: (e) => (0, i.jsx)(s.Z, { keybind: t }, t.join("+")),
+                }),
             })
           : u;
 }

@@ -13,12 +13,12 @@ function s(e) {
             username: d,
             usernameHook: f,
             otherUsername: s,
-            otherUsernameHook: _
+            otherUsernameHook: _,
         });
     return (0, r.jsx)(o.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: u,
-        children: p
+        children: p,
     });
 }

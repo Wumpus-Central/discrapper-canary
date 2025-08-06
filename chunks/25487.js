@@ -1,6 +1,6 @@
 n.d(t, {
     s: () => i,
-    z: () => r
+    z: () => r,
 });
 var r = {
         month: /^(1[0-2]|0?\d)/,
@@ -21,12 +21,12 @@ var r = {
         singleDigitSigned: /^-?\d/,
         twoDigitsSigned: /^-?\d{1,2}/,
         threeDigitsSigned: /^-?\d{1,3}/,
-        fourDigitsSigned: /^-?\d{1,4}/
+        fourDigitsSigned: /^-?\d{1,4}/,
     },
     i = {
         basicOptionalMinutes: /^([+-])(\d{2})(\d{2})?|Z/,
         basic: /^([+-])(\d{2})(\d{2})|Z/,
         basicOptionalSeconds: /^([+-])(\d{2})(\d{2})((\d{2}))?|Z/,
         extended: /^([+-])(\d{2}):(\d{2})|Z/,
-        extendedOptionalSeconds: /^([+-])(\d{2}):(\d{2})(:(\d{2}))?|Z/
+        extendedOptionalSeconds: /^([+-])(\d{2}):(\d{2})(:(\d{2}))?|Z/,
     };

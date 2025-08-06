@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685), n(642613));
+n.d(t, { Z: () => s }), n(388685), n(642613);
 var r = n(442837),
     i = n(458725),
     o = n(915525);
@@ -8,21 +8,17 @@ let a = {
     [i.u.STREAM_VIEW_HIGH_PACKET_LOSS]: 1,
     [i.u.STREAM_SEND_LOW_FPS]: 2,
     [i.u.STREAM_VIEW_LOW_FPS]: 2,
-    [i.u.STREAM_BAD_NETWORK_QUALITY]: 3
+    [i.u.STREAM_BAD_NETWORK_QUALITY]: 3,
 };
 function s(e) {
     let t = e.id;
-    return (0, r.e7)(
-        [o.Z],
-        () => {
-            let e = Array.from(o.Z.getActiveErrors().values())
-                .filter((e) => 'streamKey' in e && e.streamKey === t && null != a[e.type])
-                .sort((e, t) => {
-                    var n, r;
-                    return (null != (n = a[e.type]) ? n : 0) - (null != (r = a[t.type]) ? r : 0);
-                })[0];
-            return null == e ? void 0 : e.type;
-        },
-        [t]
-    );
+    return (0, r.e7)([o.Z], () => {
+        let e = Array.from(o.Z.getActiveErrors().values())
+            .filter((e) => "streamKey" in e && e.streamKey === t && null != a[e.type])
+            .sort((e, t) => {
+                var n, r;
+                return (null != (n = a[e.type]) ? n : 0) - (null != (r = a[t.type]) ? r : 0);
+            })[0];
+        return null == e ? void 0 : e.type;
+    }, [t]);
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -9,20 +9,20 @@ var r = n(255367),
     u = n(542503);
 function d(e) {
     let { text: t, hasScrolled: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(u.container, { [u.containerHide]: n }),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.notice,
                 children: (0, r.jsx)(s.Text, {
                     className: u.__invalid_label,
-                    variant: 'text-md/medium',
-                    color: 'header-primary',
-                    children: t
-                })
+                    variant: "text-md/medium",
+                    color: "header-primary",
+                    children: t,
+                }),
             }),
-            (0, r.jsx)('div', { className: u.noticeArrow })
-        ]
+            (0, r.jsx)("div", { className: u.noticeArrow }),
+        ],
     });
 }
 function h(e) {
@@ -41,17 +41,17 @@ function h(e) {
                     s
                         ? (0, r.jsx)(d, {
                               text: c.intl.string(c.t.RfAAHx),
-                              hasScrolled: h
+                              hasScrolled: h,
                           })
                         : null,
-                [s, h]
+                [s, h],
             ),
             handleScroll: () => p(!0),
             handleSetScrollerRef: (e) => {
                 var t;
                 return a(null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollWidth);
             },
-            handleSetContainerRef: (e) => n(null == e ? void 0 : e.clientWidth)
+            handleSetContainerRef: (e) => n(null == e ? void 0 : e.clientWidth),
         }
     );
 }

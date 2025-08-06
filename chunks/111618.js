@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,12 +18,12 @@ function a(e, t, n) {
 let s = {};
 function l(e) {
     let { message: t, sendMessageOptions: n } = e;
-    (null != n && (s[t.id] = n), null != t.nonce && t.nonce in s && delete s[t.nonce]);
+    null != n && (s[t.id] = n), null != t.nonce && t.nonce in s && delete s[t.nonce];
 }
 class c extends (r = i.ZP.Store) {
     getOptions(e) {
         return s[e];
     }
 }
-a(c, 'displayName', 'SendMessageOptionsStore');
+a(c, "displayName", "SendMessageOptionsStore");
 let u = new c(o.Z, { MESSAGE_CREATE: l });

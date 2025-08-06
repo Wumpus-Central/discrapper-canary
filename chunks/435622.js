@@ -3,17 +3,17 @@ var n = r(471540).charAt,
     s = r(199838),
     a = r(130006),
     o = r(682564),
-    u = 'String Iterator',
+    u = "String Iterator",
     h = s.set,
     c = s.getterFor(u);
 a(
     String,
-    'String',
+    "String",
     function (t) {
         h(this, {
             type: u,
             string: i(t),
-            index: 0
+            index: 0,
         });
     },
     function () {
@@ -22,5 +22,5 @@ a(
             r = e.string,
             i = e.index;
         return i >= r.length ? o(void 0, !0) : ((t = n(r, i)), (e.index += t.length), o(t, !1));
-    }
+    },
 );

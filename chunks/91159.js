@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     A_: () => T,
     Ok: () => C,
     U4: () => S,
     Ye: () => h.Z,
     ZJ: () => N,
-    q: () => A
+    q: () => A,
 }),
-    n(997841));
+    n(997841);
 var r = n(913527),
     i = n.n(r),
     o = n(442837),
@@ -29,7 +29,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,15 +39,15 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -55,11 +55,11 @@ function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -81,7 +81,8 @@ function v(e, t) {
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -91,7 +92,7 @@ function I(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 n(388032);
@@ -99,14 +100,14 @@ function T() {
     (0, a.yw)(g.rMx.THREAD_BROWSER_TAB_CHANGED);
 }
 function S() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'Modal';
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Modal";
     (0, a.yw)(g.rMx.OPEN_MODAL, {
-        type: 'Thread Browser',
-        location_section: e
+        type: "Thread Browser",
+        location_section: e,
     });
 }
 function A() {
-    u.default.track(g.rMx.OPEN_POPOUT, { type: 'Active Threads Popout' });
+    u.default.track(g.rMx.OPEN_POPOUT, { type: "Active Threads Popout" });
 }
 function N(e, t) {
     var n, r;
@@ -115,13 +116,20 @@ function N(e, t) {
     let o = e.getGuildId(),
         a = e.parent_id,
         l = (0, f.I)(o, a),
-        _ = (e) => ((0, d.yE)(e, m.iN.ALL_MESSAGES) ? f.$R[g.bL.ALL_MESSAGES] : (0, d.yE)(e, m.iN.ONLY_MENTIONS) ? f.$R[g.bL.ONLY_MENTIONS] : (0, d.yE)(e, m.iN.NO_MESSAGES) ? f.$R[g.bL.NO_MESSAGES] : f.$R[g.bL.NULL]),
+        _ = (e) =>
+            (0, d.yE)(e, m.iN.ALL_MESSAGES)
+                ? f.$R[g.bL.ALL_MESSAGES]
+                : (0, d.yE)(e, m.iN.ONLY_MENTIONS)
+                  ? f.$R[g.bL.ONLY_MENTIONS]
+                  : (0, d.yE)(e, m.iN.NO_MESSAGES)
+                    ? f.$R[g.bL.NO_MESSAGES]
+                    : f.$R[g.bL.NULL],
         h = null != (n = p.Z.flags(e.id)) ? n : 0,
         E = _(h),
         y = p.Z.isMuted(e.id),
         I = (0, f.sK)(p.Z.getMuteConfig(e.id)),
         { can_send_message: T, parent_channel_type: S } = i,
-        A = O(b({}, v(i, ['can_send_message', 'parent_channel_type'])), {
+        A = O(b({}, v(i, ["can_send_message", "parent_channel_type"])), {
             channel_id: e.id,
             guild_id: o,
             parent_id: a,
@@ -134,7 +142,7 @@ function N(e, t) {
             old_thread_is_muted: y,
             new_thread_is_muted: null != (r = t.muted) ? r : y,
             old_thread_muted_until: I,
-            new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : I
+            new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : I,
         });
     u.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, A);
 }

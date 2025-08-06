@@ -8,44 +8,51 @@ var r = n(120356),
     o = n(388032),
     c = n(775853);
 function d(e) {
-    let { children: t, className: n, layoutClassName: r, profilePreview: d, profilePreviewTitle: u, nameplatePreview: m } = e;
-    return (0, i.jsx)('div', {
+    let {
+        children: t,
+        className: n,
+        layoutClassName: r,
+        profilePreview: d,
+        profilePreviewTitle: u,
+        nameplatePreview: m,
+    } = e;
+    return (0, i.jsx)("div", {
         className: n,
         children: (0, i.jsx)(a.hjN, {
             className: c.profileCustomizationSection,
-            children: (0, i.jsxs)('div', {
+            children: (0, i.jsxs)("div", {
                 className: s()(c.baseLayout, r),
                 children: [
                     t,
                     null != m
-                        ? (0, i.jsxs)('div', {
+                        ? (0, i.jsxs)("div", {
                               children: [
                                   (0, i.jsx)(l.Z, {
                                       title: null != u ? u : o.intl.string(o.t.Zb06yM),
                                       hideDivider: !0,
                                       className: c.preview,
                                       showViewFullProfileButton: !0,
-                                      children: d
+                                      children: d,
                                   }),
                                   null != m
                                       ? (0, i.jsx)(l.Z, {
-                                            title: o.intl.string(o.t['7KRt6e']),
+                                            title: o.intl.string(o.t["7KRt6e"]),
                                             className: c.preview,
                                             hideDivider: !0,
-                                            children: m
+                                            children: m,
                                         })
-                                      : null
-                              ]
+                                      : null,
+                              ],
                           })
                         : (0, i.jsx)(l.Z, {
                               title: null != u ? u : o.intl.string(o.t.Zb06yM),
                               hideDivider: !0,
                               className: c.preview,
                               showViewFullProfileButton: !0,
-                              children: d
-                          })
-                ]
-            })
-        })
+                              children: d,
+                          }),
+                ],
+            }),
+        }),
     });
 }

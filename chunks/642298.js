@@ -1,4 +1,4 @@
-(n.d(t, { default: () => S }), n(388685));
+n.d(t, { default: () => S }), n(388685);
 var s = n(255367),
     a = n(73800),
     r = n(990547),
@@ -31,21 +31,21 @@ function S(e) {
         [b, k] = a.useState(null),
         [w, L] = a.useState(null),
         [U, D] = a.useState(null),
-        [G, H] = a.useState(''),
+        [G, H] = a.useState(""),
         [P, z] = a.useState(),
-        [Z, F] = a.useState(''),
+        [Z, F] = a.useState(""),
         W = y === h.Ax.CHANGE_EMAIL_WARNING ? C.wumpusExclamationImg : C.emailHeaderImg,
         B = y === h.Ax.CHANGE_EMAIL_WARNING ? f : j,
         X = { impression_group: r.ImpressionGroups.USER_ACCOUNT_EMAIL_CHANGE_FLOW };
     return (0, s.jsxs)(l.Y0X, {
         transitionState: g,
         disableTrack: !0,
-        parentComponent: 'ChangeEmailModal',
+        parentComponent: "ChangeEmailModal",
         children: [
-            (0, s.jsx)('img', {
-                alt: '',
+            (0, s.jsx)("img", {
+                alt: "",
                 className: W,
-                src: B
+                src: B,
             }),
             (0, s.jsxs)(l.MyZ, {
                 activeSlide: y,
@@ -58,8 +58,8 @@ function S(e) {
                         impressionProperties: X,
                         children: (0, s.jsx)(_.Z, {
                             onNext: () => R(h.Ax.CONFIRM_CODE),
-                            onClose: v
-                        })
+                            onClose: v,
+                        }),
                     }),
                     (0, s.jsx)(l.Mi4, {
                         id: h.Ax.CONFIRM_CODE,
@@ -71,21 +71,26 @@ function S(e) {
                             setEmailToken: L,
                             isSlideReady: b === h.Ax.CONFIRM_CODE,
                             onNext: () => R(h.Ax.CHANGE_EMAIL_REASONS),
-                            onClose: v
-                        })
+                            onClose: v,
+                        }),
                     }),
                     (0, s.jsx)(l.Mi4, {
                         id: h.Ax.CHANGE_EMAIL_REASONS,
                         impressionName: r.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_COLLECT_REASONS,
                         impressionProperties: X,
                         children: (0, s.jsx)(x.Z, {
-                            onNext: () => (d.default.track(A.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, { change_email_reason_enum: P }), null != P && p.Mr.has(P) ? R(h.Ax.CHANGE_EMAIL_WARNING) : R(h.Ax.EMAIL_AND_PASSWORD)),
+                            onNext: () => (
+                                d.default.track(A.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, {
+                                    change_email_reason_enum: P,
+                                }),
+                                null != P && p.Mr.has(P) ? R(h.Ax.CHANGE_EMAIL_WARNING) : R(h.Ax.EMAIL_AND_PASSWORD)
+                            ),
                             onClose: v,
                             reason: P,
                             onReasonChange: z,
                             freeTextResponse: Z,
-                            setFreeTextResponse: F
-                        })
+                            setFreeTextResponse: F,
+                        }),
                     }),
                     (0, s.jsx)(l.Mi4, {
                         id: h.Ax.CHANGE_EMAIL_WARNING,
@@ -93,10 +98,13 @@ function S(e) {
                         impressionProperties: X,
                         children: (0, s.jsx)(N.Z, {
                             onNext: () => {
-                                (d.default.track(A.rMx.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: P }), R(h.Ax.EMAIL_AND_PASSWORD));
+                                d.default.track(A.rMx.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, {
+                                    change_email_reason_enum: P,
+                                }),
+                                    R(h.Ax.EMAIL_AND_PASSWORD);
                             },
-                            onClose: v
-                        })
+                            onClose: v,
+                        }),
                     }),
                     (0, s.jsx)(l.Mi4, {
                         id: h.Ax.EMAIL_AND_PASSWORD,
@@ -106,24 +114,24 @@ function S(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         s = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (s = s.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         s.forEach(function (t) {
                                             var s;
-                                            ((s = n[t]),
+                                            (s = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: s,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = s));
-                                        }));
+                                                    : (e[t] = s);
+                                        });
                                 }
                                 return e;
                             })({}, X)),
@@ -144,17 +152,24 @@ function S(e) {
                         children: (0, s.jsx)(E.Z, {
                             emailToken: w,
                             isSlideReady: b === h.Ax.EMAIL_AND_PASSWORD,
-                            onBack: T ? () => R(null != P && p.Mr.has(P) ? h.Ax.CHANGE_EMAIL_WARNING : h.Ax.CHANGE_EMAIL_REASONS) : null,
+                            onBack: T
+                                ? () =>
+                                      R(
+                                          null != P && p.Mr.has(P)
+                                              ? h.Ax.CHANGE_EMAIL_WARNING
+                                              : h.Ax.CHANGE_EMAIL_REASONS,
+                                      )
+                                : null,
                             onNext: (e) => {
-                                (d.default.track(A.rMx.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, {
+                                d.default.track(A.rMx.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, {
                                     change_email_reason_enum: P,
-                                    free_text_response: Z
+                                    free_text_response: Z,
                                 }),
                                     H(e),
-                                    R(h.Ax.COMPLETE));
+                                    R(h.Ax.COMPLETE);
                             },
-                            onClose: v
-                        })
+                            onClose: v,
+                        }),
                     }),
                     (0, s.jsx)(l.Mi4, {
                         id: h.Ax.COMPLETE,
@@ -162,11 +177,11 @@ function S(e) {
                         impressionProperties: X,
                         children: (0, s.jsx)(m.Z, {
                             email: G,
-                            onClose: v
-                        })
-                    })
-                ]
-            })
-        ]
+                            onClose: v,
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

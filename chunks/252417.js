@@ -23,13 +23,13 @@ function x(e) {
         N = i.useMemo(() => t.isNonUserBot() || (0, p.W)(t, P), [t, P]),
         { activities: k, isMobileOnline: E } = (0, a.cj)([b.Z], () => ({
             activities: b.Z.getActivities(t.id),
-            isMobileOnline: b.Z.isMobileOnline(t.id)
+            isMobileOnline: b.Z.isMobileOnline(t.id),
         })),
         M = (0, f.Z)(t.id),
-        { voiceActivityStatusEnabled: C } = (0, c.a)({ location: 'UserProfileMutualFriendRow' }),
+        { voiceActivityStatusEnabled: C } = (0, c.a)({ location: "UserProfileMutualFriendRow" }),
         { voiceChannel: D } = (0, u.Z)({
             userId: C ? t.id : void 0,
-            guildId: h
+            guildId: h,
         });
     return (0, n.jsxs)(l.P3F, {
         focusProps:
@@ -38,15 +38,15 @@ function x(e) {
                       offset: {
                           top: 4,
                           right: 4,
-                          left: 4
-                      }
+                          left: 4,
+                      },
                   }
                 : { offset: { right: 8 } },
         className: O.row,
         onClick: w,
         onContextMenu: (e) => {
             (0, s.jW)(e, async () => {
-                let { default: e } = await Promise.all([r.e('79695'), r.e('69220')]).then(r.bind(r, 881351));
+                let { default: e } = await Promise.all([r.e("79695"), r.e("69220")]).then(r.bind(r, 881351));
                 return (r) => {
                     var i, a;
                     return (0, n.jsx)(
@@ -55,24 +55,24 @@ function x(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(r);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (n = n.concat(
                                         Object.getOwnPropertySymbols(r).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     n.forEach(function (t) {
                                         var n;
-                                        ((n = r[t]),
+                                        (n = r[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: n,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = n));
-                                    }));
+                                                : (e[t] = n);
+                                    });
                             }
                             return e;
                         })({}, r)),
@@ -89,7 +89,7 @@ function x(e) {
                               })(Object(a)).forEach(function (e) {
                                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
-                        i)
+                        i),
                     );
                 };
             });
@@ -97,29 +97,29 @@ function x(e) {
         children: [
             (0, n.jsx)(l.qEK, {
                 src: t.getAvatarURL(h, g),
-                'aria-label': t.username,
+                "aria-label": t.username,
                 size: y,
                 status: N ? v.Skl.UNKNOWN : x,
                 statusBackdropColor: N ? void 0 : (0, l.QFD)(Z),
                 isMobile: E,
-                className: O.avatar
+                className: O.avatar,
             }),
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 className: O.details,
                 children: [
                     (0, n.jsx)(o.Z, {
                         user: t,
                         className: O.tag,
-                        discriminatorClass: O.discriminator
+                        discriminatorClass: O.discriminator,
                     }),
                     (0, n.jsx)(d.Z, {
                         user: t,
                         activities: k,
                         applicationStream: M,
-                        voiceChannel: D
-                    })
-                ]
-            })
-        ]
+                        voiceChannel: D,
+                    }),
+                ],
+            }),
+        ],
     });
 }

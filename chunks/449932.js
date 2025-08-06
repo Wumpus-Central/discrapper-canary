@@ -23,7 +23,7 @@ function C(e) {
         o = null != n.member ? (0, b.CA)(n.member) : null;
     return (0, r.jsx)(a.ua7, {
         text: n.nick,
-        position: 'bottom',
+        position: "bottom",
         children: (e) => {
             var s;
             return (0, r.jsx)(
@@ -32,24 +32,24 @@ function C(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })(
@@ -57,12 +57,12 @@ function C(e) {
                         src: null != o ? o : n.user.getAvatarURL(t, 16),
                         size: a.EFr.SIZE_16,
                         className: l()(i, y.partyAvatar),
-                        'aria-label': null != (s = n.nick) ? s : O.ZP.getName(n.user)
+                        "aria-label": null != (s = n.nick) ? s : O.ZP.getName(n.user),
                     },
-                    e
-                )
+                    e,
+                ),
             );
-        }
+        },
     });
 }
 function v(e) {
@@ -78,19 +78,19 @@ function v(e) {
                 {
                     guildId: n,
                     member: e,
-                    className: t
+                    className: t,
                 },
-                i
+                i,
             ),
         renderMoreUsers: (e, t, n) =>
             (0, r.jsx)(
-                'div',
+                "div",
                 {
                     className: l()(y.morePartyMembers, t),
-                    children: e
+                    children: e,
                 },
-                n
-            )
+                n,
+            ),
     });
 }
 let j = (e) => {
@@ -101,16 +101,20 @@ let j = (e) => {
             if (p) return m.default.getUser(b[0]);
             if (null != i) {
                 var e, t;
-                return i.length <= 0 ? null : null != (t = null == (e = i.find((e) => e.user.id !== g.default.getId())) ? void 0 : e.user) ? t : i[0].user;
+                return i.length <= 0
+                    ? null
+                    : null != (t = null == (e = i.find((e) => e.user.id !== g.default.getId())) ? void 0 : e.user)
+                      ? t
+                      : i[0].user;
             }
         });
     if (null == O) return null;
     let C = p || (0, u.Z)(n),
         j = (0, f.vd)(t.type);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: y.activity,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: y.channelActivityContainer,
                 children: C
                     ? (0, r.jsx)(_.Z, {
@@ -121,7 +125,7 @@ let j = (e) => {
                           sortedVoiceStates: i,
                           onOpenSpotifyTrack: j ? h.aG : void 0,
                           onOpenSpotifyArtist: j ? h.d$ : void 0,
-                          onOpenSpotifyAlbum: j ? h.Z5 : void 0
+                          onOpenSpotifyAlbum: j ? h.Z5 : void 0,
                       })
                     : (0, r.jsx)(c.Z, {
                           type: c.P.VOICE_CHANNEL,
@@ -134,12 +138,12 @@ let j = (e) => {
                                   ? () =>
                                         (0, r.jsx)(v, {
                                             guildId: t.guild_id,
-                                            members: i
+                                            members: i,
                                         })
-                                  : void 0
-                      })
+                                  : void 0,
+                      }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: y.activityActionsContainer,
                 children: (0, r.jsx)(d.Z, {
                     type: c.P.VOICE_CHANNEL,
@@ -150,9 +154,9 @@ let j = (e) => {
                     channelId: t.id,
                     color: s.zx.Colors.PRIMARY,
                     look: s.zx.Looks.FILLED,
-                    onAction: a
-                })
-            })
-        ]
+                    onAction: a,
+                }),
+            }),
+        ],
     });
 };

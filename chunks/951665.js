@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -10,24 +10,24 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -60,7 +60,7 @@ function m(e) {
             (e) => {
                 m(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
-            [m, n]
+            [m, n],
         );
     return (0, a.S)(n.triggerType)
         ? (0, r.jsx)(l.zF9, {
@@ -69,37 +69,37 @@ function m(e) {
                   rule: n,
                   onChangeText: x,
                   className: c.textAreaContainer,
-                  initialValue: null == (t = n.triggerMetadata) ? void 0 : t.regexPatterns
+                  initialValue: null == (t = n.triggerMetadata) ? void 0 : t.regexPatterns,
               }),
               className: c.collapseable,
               children: (e) => {
                   let { onClick: t } = e;
                   return (0, r.jsx)(l.P3F, {
                       onClick: (e) => {
-                          (f(), t(e));
+                          f(), t(e);
                       },
-                      children: (0, r.jsxs)('div', {
+                      children: (0, r.jsxs)("div", {
                           className: c.header,
                           children: [
                               (0, r.jsx)(l.X6q, {
-                                  variant: 'text-sm/medium',
-                                  children: o.intl.string(o.t.dnunm5)
+                                  variant: "text-sm/medium",
+                                  children: o.intl.string(o.t.dnunm5),
                               }),
                               p
                                   ? (0, r.jsx)(l.u04, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: c.arrow
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: c.arrow,
                                     })
                                   : (0, r.jsx)(l.CJ0, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: c.arrow
-                                    })
-                          ]
-                      })
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: c.arrow,
+                                    }),
+                          ],
+                      }),
                   });
-              }
+              },
           })
         : null;
 }

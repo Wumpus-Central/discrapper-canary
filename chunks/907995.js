@@ -18,33 +18,33 @@ function m(e) {
             null != s && (s(), (0, o.l)(p, c.up.DISMISS));
         }, [p, s]),
         f = r.useCallback(() => {
-            (n(), (0, o.l)(p, c.up.LEARN_MORE));
+            n(), (0, o.l)(p, c.up.LEARN_MORE);
         }, [p, n]);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: a()(u.safetySettingsNotice, m),
         children: [
-            (0, i.jsx)(l.d3s, { size: 'md' }),
+            (0, i.jsx)(l.d3s, { size: "md" }),
             (0, i.jsx)(l.Text, {
-                variant: 'text-sm/medium',
-                color: 'interactive-active',
+                variant: "text-sm/medium",
+                color: "interactive-active",
                 children: d.intl.format(t, {
                     hook: (e, t) =>
                         (0, i.jsx)(
                             l.eee,
                             {
                                 onClick: f,
-                                children: e
+                                children: e,
                             },
-                            t
-                        )
-                })
+                            t,
+                        ),
+                }),
             }),
             g &&
                 (0, i.jsx)(l.P3F, {
                     className: u.closeButton,
                     onClick: h,
-                    children: (0, i.jsx)(l.Dio, {})
-                })
-        ]
+                    children: (0, i.jsx)(l.Dio, {}),
+                }),
+        ],
     });
 }

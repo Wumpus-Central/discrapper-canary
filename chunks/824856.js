@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(953529));
+n.d(t, { Z: () => b }), n(953529);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -29,7 +29,7 @@ function b(e) {
               className: a()(f.wrapper, s),
               header: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: f.headerTitle,
                           children: [
                               null != j &&
@@ -37,37 +37,37 @@ function b(e) {
                                       src: j.href,
                                       imageClassName: f.subscriptionImg,
                                       width: 48,
-                                      height: 48
+                                      height: 48,
                                   }),
-                              (0, i.jsxs)('div', {
+                              (0, i.jsxs)("div", {
                                   children: [
                                       (0, i.jsx)(c.X6q, {
-                                          variant: 'heading-md/bold',
-                                          children: n.summary
+                                          variant: "heading-md/bold",
+                                          children: n.summary,
                                       }),
                                       (0, i.jsx)(c.Text, {
-                                          variant: 'text-md/medium',
-                                          children: C
-                                      })
-                                  ]
-                              })
-                          ]
+                                          variant: "text-md/medium",
+                                          children: C,
+                                      }),
+                                  ],
+                              }),
+                          ],
                       }),
-                      t
-                  ]
+                      t,
+                  ],
               }),
               children: [
                   !(0, p.Ew)(_) &&
-                      (0, i.jsx)('div', {
+                      (0, i.jsx)("div", {
                           className: f.description,
                           children: (0, i.jsx)(h.Z, {
-                              variant: 'text-sm/medium',
-                              children: _
-                          })
+                              variant: "text-sm/medium",
+                              children: _,
+                          }),
                       }),
                   null != x &&
                       x.length > 0 &&
-                      (0, i.jsx)('div', {
+                      (0, i.jsx)("div", {
                           className: f.benefits,
                           children: x.map((e) => {
                               let { id: t, name: n, description: r, icon: s } = e;
@@ -76,12 +76,12 @@ function b(e) {
                                   {
                                       header: n,
                                       icon: (0, u.n)(b, s),
-                                      description: r
+                                      description: r,
                                   },
-                                  t
+                                  t,
                               );
-                          })
-                      })
-              ]
+                          }),
+                      }),
+              ],
           });
 }

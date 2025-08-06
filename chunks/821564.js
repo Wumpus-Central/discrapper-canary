@@ -16,12 +16,15 @@ function d(e) {
                 o.k5B,
                 {
                     id: t,
-                    group: 'input-modes',
+                    group: "input-modes",
                     label: i,
                     checked: n === t,
-                    action: () => a.Z.setMode(t, void 0, void 0, { analyticsLocations: e })
+                    action: () => a.Z.setMode(t, void 0, void 0, { analyticsLocations: e }),
                 },
-                t
+                t,
             );
-    return [d(c.pM4.VOICE_ACTIVITY, u.intl.string(u.t.cHCEOD)), d(c.pM4.PUSH_TO_TALK, t ? u.intl.string(u.t['1AINrK']) : u.intl.string(u.t.Q8gkVF))];
+    return [
+        d(c.pM4.VOICE_ACTIVITY, u.intl.string(u.t.cHCEOD)),
+        d(c.pM4.PUSH_TO_TALK, t ? u.intl.string(u.t["1AINrK"]) : u.intl.string(u.t.Q8gkVF)),
+    ];
 }

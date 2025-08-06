@@ -24,23 +24,19 @@ function _(e) {
         { parentAnalyticsLocation: O } = (0, c.ZP)(),
         v = n === x.IlC.POPOUT,
         C = i.useRef(null),
-        { currentLayout: E, mode: S } = (0, l.cj)(
-            [u.Z],
-            () => {
-                let e = u.Z.getMode(t.id),
-                    r = n === x.IlC.POPOUT;
-                r && (e = x.WtW.VIDEO);
-                let i = e === x.WtW.VIDEO ? u.Z.getLayout(t.id, n) : x.AEg.MINIMUM;
-                return (
-                    r && i !== x.AEg.FULL_SCREEN && (i = x.AEg.NO_CHAT),
-                    {
-                        currentLayout: i,
-                        mode: e
-                    }
-                );
-            },
-            [t, n]
-        ),
+        { currentLayout: E, mode: S } = (0, l.cj)([u.Z], () => {
+            let e = u.Z.getMode(t.id),
+                r = n === x.IlC.POPOUT;
+            r && (e = x.WtW.VIDEO);
+            let i = e === x.WtW.VIDEO ? u.Z.getLayout(t.id, n) : x.AEg.MINIMUM;
+            return (
+                r && i !== x.AEg.FULL_SCREEN && (i = x.AEg.NO_CHAT),
+                {
+                    currentLayout: i,
+                    mode: e,
+                }
+            );
+        }, [t, n]),
         Z = (0, l.e7)([f.Z], () => f.Z.getVoiceChannelId() === t.id, [t.id]);
     i.useEffect(() => {
         C.current = S;
@@ -48,20 +44,22 @@ function _(e) {
     let I = i.useRef(E),
         { currentDocument: P, rootNode: T } = i.useMemo(() => {
             let e = null != h && v ? h.document : document,
-                t = _.document.getElementById('app-mount');
+                t = _.document.getElementById("app-mount");
             return {
                 currentWindow: _,
                 currentDocument: e,
-                rootNode: t
+                rootNode: t,
             };
         }, [h, v, _]),
         N = a && !v,
         R = S === x.WtW.VIDEO && Z && !N,
         w = i.useCallback(
             (e, r) => {
-                r !== e && (s.Z.updateLayout(t.id, r, n), r === x.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(x.CkL.TEXTAREA_BLUR));
+                r !== e &&
+                    (s.Z.updateLayout(t.id, r, n),
+                    r === x.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(x.CkL.TEXTAREA_BLUR));
             },
-            [n, t]
+            [n, t],
         ),
         A = i.useCallback(
             (e) => {
@@ -72,13 +70,15 @@ function _(e) {
                         I.current = e;
                     }, P));
             },
-            [P, w, T]
+            [P, w, T],
         ),
         D = i.useCallback(
             (e) => () => {
-                null != T && ((0, d.v)(O, d.d.FULL_SCREEN, e !== x.AEg.FULL_SCREEN), e !== x.AEg.FULL_SCREEN ? ((I.current = e), w(e, x.AEg.FULL_SCREEN), (0, y.Dj)(T)) : A(e));
+                null != T &&
+                    ((0, d.v)(O, d.d.FULL_SCREEN, e !== x.AEg.FULL_SCREEN),
+                    e !== x.AEg.FULL_SCREEN ? ((I.current = e), w(e, x.AEg.FULL_SCREEN), (0, y.Dj)(T)) : A(e));
             },
-            [w, A, T, O]
+            [w, A, T, O],
         );
     i.useEffect(() => {
         let e = () => {
@@ -93,7 +93,7 @@ function _(e) {
     }, [P, E, D, T]);
     let L = {
             channel: t,
-            maybeLeaveFullScreen: A
+            maybeLeaveFullScreen: A,
         },
         k = i.useRef(L);
     return (i.useEffect(() => {
@@ -108,27 +108,27 @@ function _(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
-                })({ video_layout: v ? 'popout' : E }, (0, o.AB)(e.id))
+                })({ video_layout: v ? "popout" : E }, (0, o.AB)(e.id)),
             ),
             () => {
                 (v && (0, b.isMac)()) || t(E);
@@ -146,7 +146,7 @@ function _(e) {
               themeable: !1,
               node: T,
               guestWindow: h,
-              onClick: D(E)
+              onClick: D(E),
           })
         : null;
 }

@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { ItemDetailsModal: () => g }), n(953529), n(781311));
+n.r(t), n.d(t, { ItemDetailsModal: () => g }), n(953529), n(781311);
 var r = n(255367);
 n(73800);
 var i = n(752843),
@@ -21,11 +21,15 @@ function g(e) {
         S = (0, o.e7)([s.Z], () => s.Z.get(O), [O]),
         A = (0, d.M)(O);
     if (null == S) return null;
-    let N = null != (n = S.name) ? n : '',
+    let N = null != (n = S.name) ? n : "",
         C = null != (g = null == T || null == (t = T.description) ? void 0 : t.trim()) ? g : void 0,
-        R = (null == T ? void 0 : T.headerBackground) != null && null != (E = u.Z.toURLSafe((0, c._W)(v, T.headerBackground, 256))) ? E : void 0,
+        R =
+            (null == T ? void 0 : T.headerBackground) != null &&
+            null != (E = u.Z.toURLSafe((0, c._W)(v, T.headerBackground, 256)))
+                ? E
+                : void 0,
         P = S.type === h.epS.DURABLE && A,
-        w = S.type === h.epS.DURABLE ? (P ? m.intl.string(m.t.bm82mp) : m.intl.string(m.t['6gprwc'])) : void 0,
+        w = S.type === h.epS.DURABLE ? (P ? m.intl.string(m.t.bm82mp) : m.intl.string(m.t["6gprwc"])) : void 0,
         { price: D } = S;
     return null == D
         ? null
@@ -37,7 +41,7 @@ function g(e) {
               onClose: b,
               footer: (0, r.jsx)(_.YG, {
                   appId: v,
-                  sku: S
+                  sku: S,
               }),
               children: (0, r.jsx)(p.i, {
                   appId: v,
@@ -46,7 +50,7 @@ function g(e) {
                   description: C,
                   imgSrc: R,
                   tag: null != w ? (0, r.jsx)(i.V, { text: w }) : void 0,
-                  FallbackIcon: a.Prq
-              })
+                  FallbackIcon: a.Prq,
+              }),
           });
 }

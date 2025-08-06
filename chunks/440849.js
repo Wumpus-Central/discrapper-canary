@@ -4,9 +4,9 @@ var i = n(969943),
 function s(e) {
     switch (e) {
         case i.mX.REDUCED_MOTION:
-            return r.intl.format(r.t['1dT9V1'], {});
+            return r.intl.format(r.t["1dT9V1"], {});
         case i.mX.REDUCED_MOTION_STICKERS:
-            return r.intl.string(r.t['2ExvRk']);
+            return r.intl.string(r.t["2ExvRk"]);
         default:
             return;
     }

@@ -13,22 +13,22 @@ var r = n(399606),
     p = n(908406);
 function g() {
     return (0, r.e7)([o.Z], () => o.Z.supports(u.AN.LOOPBACK))
-        ? (0, i.jsx)('div', {
+        ? (0, i.jsx)("div", {
               className: p.micTest,
               children: (0, i.jsx)(l.Z, {
                   title: m.intl.string(m.t.gyljWF),
-                  description: m.intl.string(m.t['8hhsCQ']),
+                  description: m.intl.string(m.t["8hhsCQ"]),
                   notchBackground: l._.GRAY,
                   captionVoice: m.intl.string(m.t.bp3JOT),
                   captionNoVoice: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          m.intl.string(m.t['MA+OZm']),
+                          m.intl.string(m.t["MA+OZm"]),
                           (0, i.jsx)(a.eee, {
                               className: p.micTestHelpLink,
                               href: c.Z.getArticleURL(d.BhN.NO_INPUT_DETECTED),
-                              children: m.intl.string(m.t.RYKKo6)
-                          })
-                      ]
+                              children: m.intl.string(m.t.RYKKo6),
+                          }),
+                      ],
                   }),
                   buttonTest: m.intl.string(m.t.c4qHt7),
                   buttonStop: m.intl.string(m.t.I6OnJy),
@@ -36,9 +36,9 @@ function g() {
                   buttonColor: s.zx.Colors.BRAND,
                   location: {
                       page: d.ZY5.USER_SETTINGS,
-                      section: d.jXE.SETTINGS_VOICE_AND_VIDEO
-                  }
-              })
+                      section: d.jXE.SETTINGS_VOICE_AND_VIDEO,
+                  },
+              }),
           })
         : null;
 }

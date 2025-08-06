@@ -11,17 +11,13 @@ var r = n(255367),
 function m(e) {
     let { guild: t, discoverableGuild: n } = e,
         m = null == t ? void 0 : t.id,
-        { memberCount: g, onlineCount: p } = (0, a.cj)(
-            [d.Z],
-            () => {
-                var e, t;
-                return {
-                    memberCount: null != (e = d.Z.getMemberCount(m)) ? e : 1234,
-                    onlineCount: null != (t = d.Z.getOnlineCount(m)) ? t : 1234
-                };
-            },
-            [m]
-        ),
+        { memberCount: g, onlineCount: p } = (0, a.cj)([d.Z], () => {
+            var e, t;
+            return {
+                memberCount: null != (e = d.Z.getMemberCount(m)) ? e : 1234,
+                onlineCount: null != (t = d.Z.getOnlineCount(m)) ? t : 1234,
+            };
+        }, [m]),
         h = i.useRef((0, l.Z)()),
         f = i.useMemo(() => {
             var e, r;
@@ -33,24 +29,24 @@ function m(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, t)),
@@ -60,7 +56,7 @@ function m(e) {
                         emojis: i,
                         emojiCount: i.length,
                         presenceCount: p,
-                        memberCount: g
+                        memberCount: g,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -74,7 +70,7 @@ function m(e) {
                       })(Object(r)).forEach(function (t) {
                           Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                       }),
-                e)
+                e),
             );
         }, [n, t, g, p]),
         x = i.useMemo(() => {
@@ -82,10 +78,10 @@ function m(e) {
             let t = null == f || null == (e = f.emojis) ? void 0 : e[0];
             return null != t
                 ? {
-                      name: t.require_colons ? ':'.concat(t.name, ':') : t.name,
+                      name: t.require_colons ? ":".concat(t.name, ":") : t.name,
                       emojiId: t.id,
                       animated: t.animated,
-                      jumboable: !0
+                      jumboable: !0,
                   }
                 : {};
         }, [null == f ? void 0 : f.emojis]);
@@ -97,7 +93,7 @@ function m(e) {
               node: x,
               closePopout: u.dG,
               nonce: h.current,
-              demoMode: !0
+              demoMode: !0,
           })
         : null;
 }

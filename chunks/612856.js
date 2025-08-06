@@ -12,26 +12,26 @@ function c(t) {
     let n = (0, s.B)(t);
     return (0, a.e7)([r.Z], () => r.Z.hasJoined(t.id))
         ? (0, i.jsx)(l.sNh, {
-              id: 'thread-notifications',
+              id: "thread-notifications",
               label: u.intl.string(u.t.h850Sk),
               children: (0, d.zb)().map((e) => {
                   let { setting: a, label: r } = e;
                   return (0, i.jsx)(
                       l.k5B,
                       {
-                          group: 'thread-notifications',
-                          id: ''.concat(a),
+                          group: "thread-notifications",
+                          id: "".concat(a),
                           label: r,
                           action: () => o.Z.setNotificationSettings(t, { flags: a }),
-                          checked: a === n
+                          checked: a === n,
                       },
-                      a
+                      a,
                   );
-              })
+              }),
           })
         : (0, i.jsx)(l.sNh, {
-              id: 'notifications-disabled',
+              id: "notifications-disabled",
               label: u.intl.string(u.t.h850Sk),
-              disabled: !0
+              disabled: !0,
           });
 }

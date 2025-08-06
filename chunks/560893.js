@@ -16,23 +16,23 @@ function g(e) {
         g = (0, l.e7)([d.Z], () => d.Z.isFocused()),
         f = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     className: m.errorImage,
                     src: h,
-                    'aria-hidden': !0,
-                    alt: ''
+                    "aria-hidden": !0,
+                    alt: "",
                 }),
                 (0, r.jsx)(i.X6, {
-                    variant: 'heading-xl/semibold',
-                    children: p.intl.string(p.t.UvDfMz)
-                })
-            ]
+                    variant: "heading-xl/semibold",
+                    children: p.intl.string(p.t.UvDfMz),
+                }),
+            ],
         });
     n.forEach((e, r) => {
         e.alt = p.intl.formatToPlainString(p.t.sSEhHR, {
             index: r + 1,
             totalImages: n.length,
-            name: t.name
+            name: t.name,
         });
     });
     let _ = a.useCallback(
@@ -46,17 +46,17 @@ function g(e) {
                     original: e.src,
                     width: e.width,
                     height: e.height,
-                    type: 'IMAGE'
+                    type: "IMAGE",
                 }));
                 (0, c.K)({
                     items: a,
                     startingIndex: r,
                     shouldHideMediaOptions: !0,
-                    location: 'GlobalDiscoveryAppsDetailCarousel'
+                    location: "GlobalDiscoveryAppsDetailCarousel",
                 });
             }
         },
-        [n]
+        [n],
     );
     return 0 === n.length
         ? null
@@ -68,6 +68,6 @@ function g(e) {
               paused: !g,
               videoAutoPlay: !0,
               onCurrentItemClick: _,
-              errorComponent: f
+              errorComponent: f,
           });
 }

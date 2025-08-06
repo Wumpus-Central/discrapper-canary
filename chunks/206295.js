@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(73800),
     i = n(688619),
     o = n.n(i);
@@ -23,7 +23,7 @@ let f = 8,
             for (let e = 1; e < f && !((0, s.Bd)(t) >= _); e++) t = o()(t).darken(0.5).num();
             return {
                 primaryColor: (0, s.Rf)(e),
-                secondaryColor: (0, s.Rf)(t)
+                secondaryColor: (0, s.Rf)(t),
             };
         }, [p, h]);
     };

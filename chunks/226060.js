@@ -20,7 +20,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,7 +71,7 @@ function y(e) {
         E = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         y = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
         O = (0, u.n)();
-    if ((o()(null != E, 'guild cannot be null'), o()(null != m, 'guildProductListing cannot be null'), (0, d.SO)(E)))
+    if ((o()(null != E, "guild cannot be null"), o()(null != m, "guildProductListing cannot be null"), (0, d.SO)(E)))
         return (0, r.jsx)(s.ua7, {
             text: h.intl.string(h.t.sAJr9f),
             children: (e) =>
@@ -80,38 +80,38 @@ function y(e) {
                     b(
                         g(
                             {
-                                variant: 'primary',
-                                text: h.intl.string(h.t.xUi3BA)
+                                variant: "primary",
+                                text: h.intl.string(h.t.xUi3BA),
                             },
-                            e
+                            e,
                         ),
-                        { disabled: !0 }
-                    )
-                )
+                        { disabled: !0 },
+                    ),
+                ),
         });
     if (m.has_entitlement)
         return null != m.attachments
             ? (0, r.jsx)(p.Z, {
                   guildId: E.id,
-                  productId: m.id
+                  productId: m.id,
               })
             : (0, r.jsx)(s.zxk, {
-                  variant: 'secondary',
+                  variant: "secondary",
                   text: h.intl.string(h.t.RcTOGB),
-                  disabled: !0
+                  disabled: !0,
               });
     {
         let e = () =>
             (0, _.z)({
                 guildProductListing: m,
                 guildId: E.id,
-                sourceAnalyticsLocations: i
+                sourceAnalyticsLocations: i,
             });
         return (0, r.jsx)(s.gtL, {
             shineSize: s.gtL.ShineSizes.SMALL,
             pauseAnimation: y || !O,
             onClick: e,
-            children: h.intl.string(h.t.xUi3BA)
+            children: h.intl.string(h.t.xUi3BA),
         });
     }
 }

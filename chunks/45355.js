@@ -1,4 +1,4 @@
 e.exports = {
-    container: 'container__1656b',
-    icon: 'icon__1656b'
+    container: "container__1656b",
+    icon: "icon__1656b",
 };

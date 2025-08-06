@@ -1,13 +1,19 @@
 let r, i;
 n.d(t, {
     Z: () => l,
-    r: () => c
+    r: () => c,
 });
 var o = n(824096),
     a = n(626135),
     s = n(981631);
 function l(e, t, n) {
-    let { featureEnabled: l, windowLength: c, allowedPoorFpsRatio: u, fpsThreshold: d, backoffTimeSec: f } = o.y.defaultConfig;
+    let {
+        featureEnabled: l,
+        windowLength: c,
+        allowedPoorFpsRatio: u,
+        fpsThreshold: d,
+        backoffTimeSec: f,
+    } = o.y.defaultConfig;
     a.default.track(s.rMx.VIDEO_TOGGLED, {
         video_toggle_reason: t,
         toggled_user_id: e,
@@ -17,9 +23,9 @@ function l(e, t, n) {
         video_health_manager_poor_fps_ratio: l ? u : null,
         video_health_manager_fps_threshold: l ? d : null,
         is_video_shown: n,
-        video_health_manager_backoff_time_seconds: l ? f : null
+        video_health_manager_backoff_time_seconds: l ? f : null,
     });
 }
 function c(e, t) {
-    ((r = e), (i = t));
+    (r = e), (i = t);
 }

@@ -16,17 +16,17 @@ function h(e) {
                     c.Z,
                     {
                         threadId: n[e.row],
-                        goToThread: h
+                        goToThread: h,
                     },
-                    ''.concat(e.section, '-').concat(e.row)
+                    "".concat(e.section, "-").concat(e.row),
                 ),
-            [n, h]
+            [n, h],
         );
     return 0 === n.length
         ? (0, r.jsx)(i.Z, {
               channel: t,
               header: d.intl.string(d.t.HgTQ8v),
-              startThread: a
+              startThread: a,
           })
         : (0, r.jsx)(o.aVo, {
               className: s()(u.list, u.activeThreadsList),
@@ -36,6 +36,6 @@ function h(e) {
               rowHeight: 80,
               renderRow: g,
               renderSection: () => null,
-              chunkSize: 20
+              chunkSize: 20,
           });
 }

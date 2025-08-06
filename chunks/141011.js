@@ -1,4 +1,4 @@
-(r.d(n, { Z: () => f }), r(35282));
+r.d(n, { Z: () => f }), r(35282);
 var l = r(255367),
     t = r(73800),
     o = r(120356),
@@ -14,24 +14,24 @@ function m(e) {
     for (var n = 1; n < arguments.length; n++) {
         var r = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             l.forEach(function (n) {
                 var l;
-                ((l = r[n]),
+                (l = r[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[n] = l));
-            }));
+                        : (e[n] = l);
+            });
     }
     return e;
 }
@@ -65,38 +65,43 @@ let O = (e) => null != e && /^http/i.test(e),
                             ? n
                             : (0, d.uV)(n, {
                                   size: r,
-                                  format: 'jpg'
+                                  format: "jpg",
                               }),
                     l = (null == j ? void 0 : j.blur)
                         ? {
-                              filter: 'blur(2px)',
-                              transform: 'scale(1.02)'
+                              filter: "blur(2px)",
+                              transform: "scale(1.02)",
                           }
                         : {};
                 if (1 === B)
                     return m(
                         v(m({}, f), {
-                            backgroundImage: (null == j ? void 0 : j.addGradient) ? 'url('.concat(e, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(e, ')'),
-                            backgroundBlendMode: 'multiply',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center'
+                            backgroundImage: (null == j ? void 0 : j.addGradient)
+                                ? "url(".concat(
+                                      e,
+                                      "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)",
+                                  )
+                                : "url(".concat(e, ")"),
+                            backgroundBlendMode: "multiply",
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
                         }),
-                        l
+                        l,
                     );
                 let t = (0, c.aD)(i.Z.unsafe_rawColors.BLACK_500.resolve().hex(), 1 - B);
                 return m(
                     v(m({}, f), {
-                        backgroundImage: 'linear-gradient('.concat(t, ', ').concat(t, '), url(').concat(e, ')'),
-                        backgroundBlendMode: 'saturation',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
+                        backgroundImage: "linear-gradient(".concat(t, ", ").concat(t, "), url(").concat(e, ")"),
+                        backgroundBlendMode: "saturation",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
                     }),
-                    l
+                    l,
                 );
             }, [n, r, B, f, null == j ? void 0 : j.blur, null == j ? void 0 : j.addGradient]);
-        return (0, l.jsx)('div', {
+        return (0, l.jsx)("div", {
             className: a()(b.banner, o),
             style: h,
-            children: y
+            children: y,
         });
     };

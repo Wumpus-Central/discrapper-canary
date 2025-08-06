@@ -6,7 +6,7 @@ let l = {
         switch (e) {
             case r.jw.CANCELED:
             case r.jw.DEFERRED:
-                return i.intl.string(i.t['0SrNPz']);
+                return i.intl.string(i.t["0SrNPz"]);
             case r.jw.DEFERRED_INTERNAL:
                 return i.intl.string(i.t.OtZ5k5);
             case r.jw.ERROR:
@@ -16,5 +16,5 @@ let l = {
             case r.jw.RISK_REVIEW:
                 return i.intl.string(i.t.rppxMj);
         }
-    }
+    },
 };

@@ -24,50 +24,50 @@ function d(e) {
                         return E[e](t, r, i);
                 }
             },
-            [p, g, E]
+            [p, g, E],
         ),
         y = r.useCallback(
             (e) => {
-                _ && null != m && (e.stopPropagation(), (h.current = !0), b('handleMouseDown', m, e));
+                _ && null != m && (e.stopPropagation(), (h.current = !0), b("handleMouseDown", m, e));
             },
-            [b, m, _]
+            [b, m, _],
         ),
         O = r.useCallback(
             (e) => {
-                _ && null != m && (e.stopPropagation(), h.current && b('handleMouseMove', m, e));
+                _ && null != m && (e.stopPropagation(), h.current && b("handleMouseMove", m, e));
             },
-            [b, m, _]
+            [b, m, _],
         ),
         v = r.useCallback(
             (e) => {
-                _ && null != m && (e.stopPropagation(), (h.current = !1), b('handleMouseUp', m, e));
+                _ && null != m && (e.stopPropagation(), (h.current = !1), b("handleMouseUp", m, e));
             },
-            [b, m, _]
+            [b, m, _],
         ),
         I = r.useCallback(
             (e) => {
-                h.current && null != m && b('handleMouseEnter', m, e);
+                h.current && null != m && b("handleMouseEnter", m, e);
             },
-            [b, m]
+            [b, m],
         );
     return (
         r.useEffect(() => {
             let e = (e) => {
-                null != m && ((h.current = !1), b('handleMouseUp', m, e));
+                null != m && ((h.current = !1), b("handleMouseUp", m, e));
             };
-            return (window.addEventListener('mouseup', e), () => window.removeEventListener('mouseup', e));
+            return window.addEventListener("mouseup", e), () => window.removeEventListener("mouseup", e);
         }, [b, m]),
         {
             handleClick: r.useCallback(
                 (e) => {
                     _ && null != m && e.stopPropagation();
                 },
-                [m, _]
+                [m, _],
             ),
             handleMouseDown: y,
             handleMouseEnter: I,
             handleMouseMove: O,
-            handleMouseUp: v
+            handleMouseUp: v,
         }
     );
 }

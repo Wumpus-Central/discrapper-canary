@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => O,
-    y: () => b
+    y: () => b,
 });
 var r = n(255367),
     i = n(442837),
@@ -23,15 +23,15 @@ function m(e) {
         className: f.chevronButton,
         onClick: n,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: f.chevronButtonContent,
-                children: t
+                children: t,
             }),
             (0, r.jsx)(l.Fbu, {
                 color: l.TVs.colors.TEXT_SECONDARY,
-                size: 'xs'
-            })
-        ]
+                size: "xs",
+            }),
+        ],
     });
 }
 function b(e) {
@@ -44,15 +44,15 @@ function b(e) {
         ? null
         : (0, r.jsxs)(m, {
               onClick: () => {
-                  (t(), g());
+                  t(), g();
               },
               children: [
                   (0, r.jsx)(l.Text, {
-                      variant: 'text-sm/semibold',
-                      children: p.intl.string(n ? h.default['3GrhnJ'] : h.default['54ycKC'])
+                      variant: "text-sm/semibold",
+                      children: p.intl.string(n ? h.default["3GrhnJ"] : h.default["54ycKC"]),
                   }),
-                  (0, r.jsx)(u.c, { guildIds: f })
-              ]
+                  (0, r.jsx)(u.c, { guildIds: f }),
+              ],
           });
 }
 function O(e) {
@@ -60,12 +60,12 @@ function O(e) {
     return (0, r.jsx)(l.P3F, {
         className: f.customizeLink,
         onClick: () => {
-            (t(), g());
+            t(), g();
         },
         children: (0, r.jsx)(l.Text, {
-            variant: 'text-xs/medium',
-            color: 'text-link',
-            children: p.intl.string(p.t['ZrN+DQ'])
-        })
+            variant: "text-xs/medium",
+            color: "text-link",
+            children: p.intl.string(p.t["ZrN+DQ"]),
+        }),
     });
 }

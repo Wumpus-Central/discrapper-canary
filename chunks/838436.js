@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     H: () => p,
-    U: () => f
+    U: () => f,
 }),
-    n(953529));
+    n(953529);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -17,58 +17,58 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
 function p(e) {
     let { header: t, description: n, relatedId: r, disabled: l } = e;
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: u.header,
         children: [
             (0, i.jsx)(a.X6q, {
-                variant: 'text-md/medium',
-                color: 'header-primary',
-                children: (0, i.jsx)('label', {
+                variant: "text-md/medium",
+                color: "header-primary",
+                children: (0, i.jsx)("label", {
                     htmlFor: r,
                     className: s()(u.title, { [u.disabled]: l }),
-                    children: t
-                })
+                    children: t,
+                }),
             }),
             (0, i.jsx)(a.Text, {
-                variant: 'text-sm/normal',
-                color: 'header-secondary',
+                variant: "text-sm/normal",
+                color: "header-secondary",
                 className: s()(u.description, { [u.disabled]: l }),
-                children: n
-            })
-        ]
+                children: n,
+            }),
+        ],
     });
 }
 function g(e) {
     let { setting: t, className: n, children: r } = e;
     return (0, i.jsx)(l.F, {
         setting: t,
-        children: (0, i.jsx)('div', {
+        children: (0, i.jsx)("div", {
             className: s()(u.container, n),
-            children: r
-        })
+            children: r,
+        }),
     });
 }
 function h(e) {
@@ -76,7 +76,7 @@ function h(e) {
         p = (0, o.a)(a);
     return (0, i.jsx)(l.F, {
         setting: t,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: s()(u.container, n, { [d.settingsBackgroundFlashElement]: null != a }),
             ref: p,
             children: [
@@ -84,11 +84,11 @@ function h(e) {
                 null != a
                     ? (0, i.jsx)(c.Z, {
                           animationDelay: m,
-                          scrollPosition: a
+                          scrollPosition: a,
                       })
-                    : null
-            ]
-        })
+                    : null,
+            ],
+        }),
     });
 }
 function f(e) {

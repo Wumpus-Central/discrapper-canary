@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,34 +65,37 @@ function g(e, t) {
 function E(e) {
     let { channel: t, narrow: n } = e;
     i.useEffect(() => {
-        c.default.track(d.rMx.CHANNEL_BANNER_VIEWED, g(h({}, (0, l.hH)(t.getGuildId()), (0, l.v_)(t)), { banner_type: 'channel_opt_in' }));
+        c.default.track(
+            d.rMx.CHANNEL_BANNER_VIEWED,
+            g(h({}, (0, l.hH)(t.getGuildId()), (0, l.v_)(t)), { banner_type: "channel_opt_in" }),
+        );
     }, [t]);
     let o = () => {
-        (c.default.track(
+        c.default.track(
             d.rMx.CHANNEL_BANNER_CTA_CLICKED,
             g(h({}, (0, l.hH)(t.getGuildId()), (0, l.v_)(t)), {
-                banner_type: 'channel_opt_in',
-                cta_type: 'add channel'
-            })
+                banner_type: "channel_opt_in",
+                cta_type: "add channel",
+            }),
         ),
-            (0, u.XQ)(t.guild_id, t.id, !0, { section: d.jXE.CHANNEL }));
+            (0, u.XQ)(t.guild_id, t.id, !0, { section: d.jXE.CHANNEL });
     };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(_.chatHeaderBar, { [_.narrow]: n }),
         children: [
             (0, r.jsx)(s.Text, {
                 className: _.chatHeaderBarText,
-                variant: 'text-sm/normal',
-                color: 'text-default',
-                children: f.intl.string(f.t.iOWmmJ)
+                variant: "text-sm/normal",
+                color: "text-default",
+                children: f.intl.string(f.t.iOWmmJ),
             }),
             (0, r.jsx)(s.zxk, {
-                size: 'sm',
-                variant: 'primary',
+                size: "sm",
+                variant: "primary",
                 onClick: o,
                 text: f.intl.string(f.t.ZtIlQk),
-                icon: s.qJs
-            })
-        ]
+                icon: s.qJs,
+            }),
+        ],
     });
 }

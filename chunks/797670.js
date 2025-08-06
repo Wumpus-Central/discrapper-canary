@@ -17,20 +17,20 @@ function d(e) {
         height: n,
         children:
             null != r
-                ? (0, i.jsx)('img', {
+                ? (0, i.jsx)("img", {
                       src: r,
                       alt: t.name,
                       height: n,
-                      width: n
+                      width: n,
                   })
-                : (0, i.jsx)('div', {
+                : (0, i.jsx)("div", {
                       className: c.textContainer,
                       children: (0, i.jsx)(a.Text, {
                           className: s()({ [c.smallText]: 20 === n }),
-                          color: 'text-secondary',
-                          variant: 'text-md/semibold',
-                          children: d
-                      })
-                  })
+                          color: "text-secondary",
+                          variant: "text-md/semibold",
+                          children: d,
+                      }),
+                  }),
     });
 }

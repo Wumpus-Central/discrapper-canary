@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(804061), n(704826), n(35282), n(539854));
+n.d(t, { Z: () => x }), n(804061), n(704826), n(35282), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(423875),
@@ -30,20 +30,20 @@ var r = n(255367),
 function w(e, t) {
     return C.intl.formatToPlainString(C.t.h2yWWV, {
         username: t.username,
-        activity: e
+        activity: e,
     });
 }
 let D = (e, t, n) => {
     let { artist: r, media: i } = e,
-        o = C.t['6iNxrq'],
+        o = C.t["6iNxrq"],
         a = m.ZP.getName(t.guild_id, t.id, n);
     return C.intl
         .formatToMarkdownString(o, {
             artist: r,
             userName: a,
-            media: i
+            media: i,
         })
-        .replaceAll('*', '');
+        .replaceAll("*", "");
 };
 function L(e) {
     let { activity: t } = e,
@@ -57,31 +57,31 @@ function L(e) {
                 a = r - n,
                 s = Math.floor((Math.max(i - n, 0) / a) * 100);
             return {
-                seekBarStyles: { width: ''.concat(s, '%') },
-                durationTimestamp: (0, E.T_)({ start: 0 }, a)
+                seekBarStyles: { width: "".concat(s, "%") },
+                durationTimestamp: (0, E.T_)({ start: 0 }, a),
             };
         }, [t, o]);
     return null == s
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: R.listeningTimeline,
               children: [
                   (0, r.jsx)(T.x3, { entry: n }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: R.seekBarContainer,
-                      children: (0, r.jsx)('div', {
+                      children: (0, r.jsx)("div", {
                           className: R.seekBarFill,
-                          style: s
-                      })
+                          style: s,
+                      }),
                   }),
                   (0, r.jsx)(l.Text, {
                       className: R.timestamp,
-                      variant: 'text-xs/normal',
+                      variant: "text-xs/normal",
                       tabularNumbers: !0,
                       color: void 0,
-                      children: a
-                  })
-              ]
+                      children: a,
+                  }),
+              ],
           });
 }
 function x(e) {
@@ -94,7 +94,15 @@ function x(e) {
         { activity: G, currentEntry: B, artist: Z, title: F, user: V } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
         W = (0, y.Z)(A.ABu.SPOTIFY),
-        K = (0, a.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != V ? (0, f.Z)(u.Z, p.default, V, G) : void 0), [G, V], s.Z),
+        K = (0, a.e7)(
+            [u.Z, p.default],
+            () =>
+                (null == G ? void 0 : G.type) === A.IIU.LISTENING && null != V
+                    ? (0, f.Z)(u.Z, p.default, V, G)
+                    : void 0,
+            [G, V],
+            s.Z,
+        ),
         z = i.useCallback(() => {
             var e;
             if (null == R || null == V) return;
@@ -108,20 +116,20 @@ function x(e) {
                 description: D(
                     {
                         artist: Z,
-                        media: F
+                        media: F,
                     },
                     R,
-                    V
+                    V,
                 ),
                 colors: [H, Y],
-                badges: (0, b.jE)({ timestamp: n })
+                badges: (0, b.jE)({ timestamp: n }),
             });
         }, [G, Z, R, x, null == U ? void 0 : U.src, H, Y, F, V]);
     if (null == G || null == B) return null;
     let q = Z,
         X = [];
     if (B.media.provider === o.p.SPOTIFY) {
-        ((m = () => {
+        (m = () => {
             (0, c.aG)(G);
         }),
             (T = () => {
@@ -130,7 +138,7 @@ function x(e) {
             (n = () => {
                 var e;
                 null != (e = null == W ? void 0 : W()) || (0, c.aG)(G);
-            }));
+            });
         let e = (e) => {
             (0, c.d$)(G, V.id, e);
         };
@@ -139,12 +147,12 @@ function x(e) {
                 artists: Z,
                 canOpen: null != G.sync_id,
                 linkClassName: P.popoutTextSecondary,
-                onOpenSpotifyArtist: e
+                onOpenSpotifyArtist: e,
             })),
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                ((0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), M());
+                (0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), M();
             };
             X.push(
                 (0, r.jsx)(
@@ -152,10 +160,10 @@ function x(e) {
                     {
                         onClick: e,
                         IconComponent: l.iOO,
-                        children: C.intl.string(C.t.eU3inJ)
+                        children: C.intl.string(C.t.eU3inJ),
                     },
-                    'listen-along'
-                )
+                    "listen-along",
+                ),
             );
         }
     }
@@ -167,8 +175,8 @@ function x(e) {
             B.media.provider === o.p.SPOTIFY
                 ? (0, r.jsx)(S.Z, {
                       onClick: n,
-                      'aria-label': C.intl.string(C.t.rRffNz),
-                      Icon: h.Z
+                      "aria-label": C.intl.string(C.t.rRffNz),
+                      Icon: h.Z,
                   })
                 : null,
         userDescription: (0, E.kr)(x) ? C.t.Tzx5Dw : C.t.CcVI1d,
@@ -176,7 +184,7 @@ function x(e) {
         onClickTitle: m,
         subtitle: q,
         badges: null,
-        children: (null == (t = G.timestamps) ? void 0 : t.start) != null && (0, r.jsx)(L, { activity: G })
+        children: (null == (t = G.timestamps) ? void 0 : t.start) != null && (0, r.jsx)(L, { activity: G }),
     });
     return (0, r.jsxs)(I.yR, {
         children: [
@@ -190,9 +198,9 @@ function x(e) {
                     generateReactionImage: z,
                     reactionImageAltText: w(Z, V),
                     entry: x,
-                    buttons: X
-                })
-            })
-        ]
+                    buttons: X,
+                }),
+            }),
+        ],
     });
 }

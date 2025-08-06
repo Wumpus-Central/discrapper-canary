@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(415506), n(570140));
+n.d(t, { Z: () => f }), n(415506), n(570140);
 var r = n(147913);
 n(471518);
 var i = n(751189),
@@ -33,12 +33,12 @@ function u(e) {
             else if (t === s.g.APP_DIRECTORY_STOREFRONT_SKU);
             else if (t === s.g.APP_OAUTH2_LINK);
             else if (t === s.g.COLLECTIBLES_SHOP);
-            else throw Error('Unknown coded link type: '.concat(t));
+            else throw Error("Unknown coded link type: ".concat(t));
         });
 }
 class d extends r.Z {
     constructor() {
-        (super(), (0, a.Z)(this, u));
+        super(), (0, a.Z)(this, u);
     }
 }
 let f = new d();

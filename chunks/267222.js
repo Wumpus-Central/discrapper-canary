@@ -2,15 +2,15 @@ function r(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -21,7 +21,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,7 +41,7 @@ var o = n(879154),
             depth: e.getDepth(),
             inlineStyleRanges: c(e),
             entityRanges: l(e, t),
-            data: e.getData().toObject()
+            data: e.getData().toObject(),
         };
     },
     f = function (e, t, n, i) {
@@ -60,21 +60,21 @@ var o = n(879154),
             a = 0;
         return (
             e.getBlockMap().forEach(function (e) {
-                (e.findEntityRanges(
+                e.findEntityRanges(
                     function (e) {
                         return null !== e.getEntity();
                     },
                     function (t) {
                         var r = e.getEntityAt(t),
                             i = s.stringify(r);
-                        !o[i] && ((o[i] = r), (n[i] = ''.concat(a)), a++);
-                    }
+                        !o[i] && ((o[i] = r), (n[i] = "".concat(a)), a++);
+                    },
                 ),
-                    f(e, n, r, i));
+                    f(e, n, r, i);
             }),
             {
                 blocks: r,
-                entityMap: n
+                entityMap: n,
             }
         );
     },
@@ -88,19 +88,19 @@ var o = n(879154),
                 i[n] = {
                     type: r.getType(),
                     mutability: r.getMutability(),
-                    data: r.getData()
+                    data: r.getData(),
                 };
             }),
             {
                 blocks: n,
-                entityMap: i
+                entityMap: i,
             }
         );
     };
 e.exports = function (e) {
     var t = {
         entityMap: {},
-        blocks: []
+        blocks: [],
     };
-    return ((t = _(e, t)), (t = p(e, t)));
+    return (t = _(e, t)), (t = p(e, t));
 };

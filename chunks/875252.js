@@ -16,15 +16,15 @@ function c(n) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(r.sNh, {
-                      id: 'delete-safety-warnings',
+                      id: "delete-safety-warnings",
                       label: o.intl.string(o.t.g7o9bm),
-                      action: () => (0, a.Vp)(n.id)
+                      action: () => (0, a.Vp)(n.id),
                   }),
                   (0, i.jsx)(r.sNh, {
-                      id: 'clear-safety-warnings',
+                      id: "clear-safety-warnings",
                       label: o.intl.string(o.t.VuSvGh),
-                      action: () => (0, d.wS)(n.id)
-                  })
-              ]
+                      action: () => (0, d.wS)(n.id),
+                  }),
+              ],
           });
 }

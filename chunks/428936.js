@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(399606),
@@ -13,24 +13,24 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -62,29 +62,29 @@ function p(e) {
             () =>
                 a.LU.map((e) => ({
                     value: e,
-                    label: Number(e).toLocaleString()
+                    label: Number(e).toLocaleString(),
                 })),
-            []
+            [],
         ),
         v = new Intl.NumberFormat(d.intl.currentLocale).format(h),
-        y = d.intl.formatToPlainString(d.t.RNDnQ0, { count: g ? '...' : v }),
+        y = d.intl.formatToPlainString(d.t.RNDnQ0, { count: g ? "..." : v }),
         O = h > j.pageSize || g,
-        H = h > a.LU['0'];
-    return (0, r.jsxs)('div', {
+        H = h > a.LU["0"];
+    return (0, r.jsxs)("div", {
         className: C.paginationContainer,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: C.pageSizeSelection,
                 children: H
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(i.Text, {
-                                  variant: 'text-md/normal',
-                                  color: 'text-muted',
-                                  children: d.intl.string(d.t.jNwLu7)
+                                  variant: "text-md/normal",
+                                  color: "text-muted",
+                                  children: d.intl.string(d.t.jNwLu7),
                               }),
                               (0, r.jsx)(i.PhF, {
-                                  'aria-label': y,
+                                  "aria-label": y,
                                   className: C.pageSizeInput,
                                   options: x,
                                   isSelected: (e) => e === j.pageSize,
@@ -93,9 +93,9 @@ function p(e) {
                                           (0, u._o)(t, b(m({}, j), { pageSize: e }));
                                       });
                                   },
-                                  serialize: (e) => ''.concat(e),
-                                  popoutPosition: 'top',
-                                  popoutWidth: 72
+                                  serialize: (e) => "".concat(e),
+                                  popoutPosition: "top",
+                                  popoutWidth: 72,
                               }),
                               (0, r.jsx)(i.ua7, {
                                   text: d.intl.string(d.t.ZTNur6),
@@ -106,25 +106,25 @@ function p(e) {
                                           b(
                                               m(
                                                   {
-                                                      variant: 'text-md/normal',
-                                                      color: 'text-muted',
-                                                      className: C.pageLabel
+                                                      variant: "text-md/normal",
+                                                      color: "text-muted",
+                                                      className: C.pageLabel,
                                                   },
-                                                  e
+                                                  e,
                                               ),
-                                              { children: y }
-                                          )
-                                      )
-                              })
-                          ]
+                                              { children: y },
+                                          ),
+                                      ),
+                              }),
+                          ],
                       })
                     : (0, r.jsx)(i.Text, {
-                          variant: 'text-md/normal',
-                          color: 'text-muted',
-                          children: d.intl.format(d.t.GZpwMD, { count: h })
-                      })
+                          variant: "text-md/normal",
+                          color: "text-muted",
+                          children: d.intl.format(d.t.GZpwMD, { count: h }),
+                      }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: C.pagination,
                 children:
                     O &&
@@ -136,16 +136,16 @@ function p(e) {
                         hideMaxPage: !0,
                         currentPage: j.currentPage,
                         onPageChange: (e) => {
-                            (null == n || n(e),
+                            null == n || n(e),
                                 requestIdleCallback(() => {
                                     f(() => {
                                         (0, u._o)(t, b(m({}, j), { currentPage: e }));
                                     });
-                                }));
+                                });
                         },
-                        maxVisiblePages: a.hW
-                    })
-            })
-        ]
+                        maxVisiblePages: a.hW,
+                    }),
+            }),
+        ],
     });
 }

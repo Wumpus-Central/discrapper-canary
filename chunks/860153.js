@@ -28,43 +28,43 @@ let E = i.memo(function (e) {
                           (0, r.jsx)(c.Z, {
                               user: t.author,
                               size: s.EFr.SIZE_40,
-                              className: l()(h.authorAvatar, e)
+                              className: l()(h.authorAvatar, e),
                           }),
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: l()(h.author, e),
                               children: [
                                   (0, r.jsx)(s.Rny, {
-                                      children: (0, r.jsx)('div', {
+                                      children: (0, r.jsx)("div", {
                                           className: h.authorNameWrapper,
                                           children: (0, r.jsx)(p.Z, {
                                               className: h.authorName,
                                               message: t,
-                                              channel: n
-                                          })
-                                      })
+                                              channel: n,
+                                          }),
+                                      }),
                                   }),
                                   (0, r.jsx)(d.Z, {
                                       timestamp: t.timestamp,
                                       className: h.timestamp,
-                                      tooltipPosition: 'bottom'
-                                  })
-                              ]
-                          })
-                      ]
-                  })
+                                      tooltipPosition: "bottom",
+                                  }),
+                              ],
+                          }),
+                      ],
+                  }),
           });
 });
 function g(e) {
     var t;
     let { item: n, hideMediaOptions: i, onClose: o } = e,
         a = null == (t = n.sourceMetadata) ? void 0 : t.message;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: h.topBar,
         children: [
             null != a && (0, r.jsx)(E, { message: a }),
             (0, r.jsx)(f.Z, {
                 item: n,
-                hideMediaOptions: i
+                hideMediaOptions: i,
             }),
             (0, r.jsx)(y.ZP, {
                 mode: y.lx.PINNED,
@@ -73,9 +73,9 @@ function g(e) {
                         onClick: o,
                         icon: s.Dio,
                         tooltip: O.intl.string(O.t.cpT0Cg),
-                        className: l()(h.closeButton, e)
-                    })
-            })
-        ]
+                        className: l()(h.closeButton, e),
+                    }),
+            }),
+        ],
     });
 }

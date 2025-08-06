@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => y }));
+n.r(t), n.d(t, { default: () => y });
 var i = n(255367),
     a = n(73800),
     s = n(442837),
@@ -23,14 +23,16 @@ var i = n(255367),
     P = n(981631),
     T = n(388032);
 let j = a.forwardRef(function () {
-        (g.Z.trackExposure({ location: 'cd25e4_1' }), _.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), _.Z.trackExposure({ location: 'user_setting_manual' }));
+        g.Z.trackExposure({ location: "cd25e4_1" }),
+            _.Z.useExperiment({ location: "user_setting_auto" }, { autoTrackExposure: !1 }),
+            _.Z.trackExposure({ location: "user_setting_manual" });
         let e = (0, s.e7)([b.Z], () => b.Z.theme),
             t = (0, h.Ll)(),
             {
                 section: n,
                 subsection: j,
                 analyticsLocation: y,
-                analyticsLocations: A
+                analyticsLocations: A,
             } = (0, s.cj)([S.Z], () => {
                 let e = S.Z.getSection(),
                     t = S.Z.getSubsection(),
@@ -39,7 +41,7 @@ let j = a.forwardRef(function () {
                     section: e,
                     subsection: t,
                     analyticsLocation: n,
-                    analyticsLocations: i
+                    analyticsLocations: i,
                 };
             }),
             w = (0, c.Z)(n),
@@ -50,15 +52,22 @@ let j = a.forwardRef(function () {
             null != n &&
                 (n !== w || j !== C) &&
                 (function (e) {
-                    let { destinationPane: t, originPane: n = null, source: i = null, subsection: a = null, locationStack: s = null, searchQuery: l = null } = e;
+                    let {
+                        destinationPane: t,
+                        originPane: n = null,
+                        source: i = null,
+                        subsection: a = null,
+                        locationStack: s = null,
+                        searchQuery: l = null,
+                    } = e;
                     Z.ZP.trackWithMetadata(P.rMx.SETTINGS_PANE_VIEWED, {
-                        settings_type: 'user',
+                        settings_type: "user",
                         origin_pane: n,
                         destination_pane: t,
                         location_stack: s,
                         source: i,
                         subsection: a,
-                        search_query: l
+                        search_query: l,
                     });
                 })({
                     destinationPane: n,
@@ -66,7 +75,7 @@ let j = a.forwardRef(function () {
                     source: y,
                     subsection: j,
                     locationStack: A,
-                    searchQuery: '' !== G ? G : null
+                    searchQuery: "" !== G ? G : null,
                 });
         }, [n, w, j, C, y, A, G]);
         let { hasSearchResults: N, searchResults: v } = (0, m.E)(),
@@ -93,9 +102,9 @@ let j = a.forwardRef(function () {
                     sections: U,
                     isEligibleForPomelo: q,
                     questsForBadge: M,
-                    showUserSettingsSearch: !0
-                })
-            })
+                    showUserSettingsSearch: !0,
+                }),
+            }),
         });
     }),
     y = a.forwardRef(function () {
@@ -103,6 +112,6 @@ let j = a.forwardRef(function () {
             { analyticsLocations: t } = (0, f.ZP)(e);
         return (0, i.jsx)(f.Gt, {
             value: t,
-            children: (0, i.jsx)(j, {})
+            children: (0, i.jsx)(j, {}),
         });
     });

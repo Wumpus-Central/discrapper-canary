@@ -2,15 +2,17 @@ n.d(t, {
     CC: () => c,
     O: () => a,
     n1: () => o,
-    z0: () => s
+    z0: () => s,
 });
 var r = n(475595),
     i = n(46140),
     o = (function (e) {
-        return ((e.VIDEO = 'video'), (e.VIDEO_LOW_RES = 'videoLowRes'), (e.VIDEO_HLS = 'videoHls'), e);
+        return (e.VIDEO = "video"), (e.VIDEO_LOW_RES = "videoLowRes"), (e.VIDEO_HLS = "videoHls"), e;
     })({}),
     a = (function (e) {
-        return ((e.VIDEO = 'url'), (e.THUMBNAIL = 'thumbnail'), (e.CAPTION = 'caption'), (e.TRANSCRIPT = 'transcript'), e);
+        return (
+            (e.VIDEO = "url"), (e.THUMBNAIL = "thumbnail"), (e.CAPTION = "caption"), (e.TRANSCRIPT = "transcript"), e
+        );
     })({});
 function s(e, t, n, o) {
     let a = e.config.taskConfigV2.tasks[t];
@@ -27,13 +29,13 @@ function s(e, t, n, o) {
     return {
         url: d,
         mimetype: u,
-        isAnimated: f
+        isAnimated: f,
     };
 }
 let l = {
-    video: 'video_player_video',
-    videoLowRes: 'video_player_video_low_res',
-    videoHls: 'video_player_video_hls'
+    video: "video_player_video",
+    videoLowRes: "video_player_video_low_res",
+    videoHls: "video_player_video_hls",
 };
 function c(e) {
     return null == e ? null : l[e];

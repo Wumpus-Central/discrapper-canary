@@ -8,26 +8,26 @@ var r = n(120356),
     c = n(237844);
 function s(t) {
     let { text: e, className: n, button: r, reducedRightPadding: s = !1 } = t;
-    return (0, o.jsxs)('div', {
+    return (0, o.jsxs)("div", {
         className: i()(s ? c.noticeWithoutRightPadding : c.noticeWithRightPadding, n),
         children: [
-            (0, o.jsxs)('div', {
+            (0, o.jsxs)("div", {
                 className: c.noticeLeft,
                 children: [
                     (0, o.jsx)(a.SrA, {
-                        size: 'md',
+                        size: "md",
                         className: c.icon,
-                        color: l.JX.PREMIUM_TIER_2
+                        color: l.JX.PREMIUM_TIER_2,
                     }),
                     (0, o.jsx)(a.Text, {
                         className: c.text,
-                        variant: 'text-md/normal',
-                        color: 'header-primary',
-                        children: e
-                    })
-                ]
+                        variant: "text-md/normal",
+                        color: "header-primary",
+                        children: e,
+                    }),
+                ],
             }),
-            r
-        ]
+            r,
+        ],
     });
 }

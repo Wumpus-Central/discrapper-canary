@@ -1,1 +1,1 @@
-e.exports = { exemptionHint: 'exemptionHint__54558' };
+e.exports = { exemptionHint: "exemptionHint__54558" };

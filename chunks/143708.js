@@ -34,47 +34,47 @@ function m(e) {
         });
     function T() {
         let { id: e } = g,
-            t = '@'.concat(f.ZP.getUserTag(g, { decoration: 'never' })),
-            n = '<@'.concat(e, '>');
-        (d.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
+            t = "@".concat(f.ZP.getUserTag(g, { decoration: "never" })),
+            n = "<@".concat(e, ">");
+        d.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
             plainText: t,
-            rawText: n
+            rawText: n,
         }),
-            null != b && o.Z.startTyping(b));
+            null != b && o.Z.startTyping(b);
     }
     return (
         v
-            ? ((t = p.intl.string(p.t['F/OLvL'])), (m = p.intl.string(p.t.C89OLC)))
-            : ((m = p.intl.string(p.t['YVub5+'])),
+            ? ((t = p.intl.string(p.t["F/OLvL"])), (m = p.intl.string(p.t.C89OLC)))
+            : ((m = p.intl.string(p.t["YVub5+"])),
               E
-                  ? (t = p.intl.string(p.t['57nBt7']))
+                  ? (t = p.intl.string(p.t["57nBt7"]))
                   : null != O && I
-                    ? ((t = p.intl.formatToPlainString(p.t['9Akp1t'], { username: O })),
+                    ? ((t = p.intl.formatToPlainString(p.t["9Akp1t"], { username: O })),
                       (n = (0, r.jsx)(a.Z.Button, {
                           onClick: T,
-                          children: p.intl.string(p.t.P8tvKC)
+                          children: p.intl.string(p.t.P8tvKC),
                       })))
-                    : (t = p.intl.string(p.t['SMJr+f']))),
+                    : (t = p.intl.string(p.t["SMJr+f"]))),
         (0, r.jsxs)(a.Z, {
             children: [
                 (0, r.jsx)(a.Z.Header, { text: m }),
                 (0, r.jsxs)(a.Z.Body, {
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: h.headerLine,
                             children: [
                                 (0, r.jsx)(a.Z.Icon, { expired: !0 }),
                                 (0, r.jsx)(a.Z.Info, {
                                     expired: !0,
-                                    title: p.intl.string(p.t['Jhx/ub']),
-                                    children: t
-                                })
-                            ]
+                                    title: p.intl.string(p.t["Jhx/ub"]),
+                                    children: t,
+                                }),
+                            ],
                         }),
-                        n
-                    ]
-                })
-            ]
+                        n,
+                    ],
+                }),
+            ],
         })
     );
 }

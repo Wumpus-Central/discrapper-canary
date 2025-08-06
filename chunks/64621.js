@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685));
+n.d(t, { Z: () => A }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -25,7 +25,7 @@ let I = 200,
 function A(e) {
     let { sourceType: t, children: n, user: A, targetElementRef: N } = e,
         { themeType: C } = (0, m.z)(),
-        R = (0, h.T)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        R = (0, h.T)({ location: "UserProfilePopoutInteractionCoachmark" }),
         P = (0, o.e7)([p.default], () => {
             var e;
             return (null == (e = p.default.getCurrentUser()) ? void 0 : e.id) === A.id;
@@ -34,9 +34,12 @@ function A(e) {
             _.Z.findActivity(A.id, (e) => {
                 let { type: t } = e;
                 return t === E.IIU.CUSTOM_STATUS;
-            })
+            }),
         ),
-        D = () => !P && C === g.lY.POPOUT && (t === g.n_.AVATAR ? R && null == w : t === g.n_.STATUS ? R : t === g.n_.ACTIVITY && !R),
+        D = () =>
+            !P &&
+            C === g.lY.POPOUT &&
+            (t === g.n_.AVATAR ? R && null == w : t === g.n_.STATUS ? R : t === g.n_.ACTIVITY && !R),
         [L, x] = i.useState(!1);
     (0, c.Z)(() => x(!0), D() ? I : null);
     let {
@@ -46,16 +49,16 @@ function A(e) {
             content: U,
             header: G,
             spacing: B,
-            dismissibleContentType: Z
+            dismissibleContentType: Z,
         } = R
             ? {
                   asset: v,
                   assetClassName: y.profileImage,
                   className: y.profileCoachmark,
                   content: b.intl.string(b.t.HEGlIC),
-                  header: b.intl.string(b.t['R/RaKy']),
+                  header: b.intl.string(b.t["R/RaKy"]),
                   spacing: S,
-                  dismissibleContentType: a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
+                  dismissibleContentType: a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL,
               }
             : {
                   asset: O,
@@ -64,15 +67,15 @@ function A(e) {
                   content: b.intl.string(b.t.LQ32TU),
                   header: b.intl.string(b.t.XDBiPT),
                   spacing: T,
-                  dismissibleContentType: a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY
+                  dismissibleContentType: a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY,
               },
         F = (0, u.Nj)(a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
         V = L && !F ? [Z] : [],
         [H, Y] = (0, d.US)(V);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: N,
-        align: 'center',
-        position: t === g.n_.AVATAR ? 'left' : 'right',
+        align: "center",
+        position: t === g.n_.AVATAR ? "left" : "right",
         shouldShow: null != H,
         spacing: B,
         renderPopout: (e) => {
@@ -83,30 +86,30 @@ function A(e) {
                 },
                 children: (0, r.jsx)(f.ZP, {
                     className: j,
-                    asset: (0, r.jsx)('img', {
-                        alt: '',
+                    asset: (0, r.jsx)("img", {
+                        alt: "",
                         src: M,
-                        className: k
+                        className: k,
                     }),
-                    buttonCTA: b.intl.string(b.t['+IrDzM']),
+                    buttonCTA: b.intl.string(b.t["+IrDzM"]),
                     buttonLayout: f._F.STACKED,
                     buttonProps: {
                         color: s.Tt.BRAND_INVERTED,
-                        size: s.zx.Sizes.SMALL
+                        size: s.zx.Sizes.SMALL,
                     },
-                    caretPosition: 'right' === t ? f.DF.LEFT_CENTER : f.DF.RIGHT_CENTER,
+                    caretPosition: "right" === t ? f.DF.LEFT_CENTER : f.DF.RIGHT_CENTER,
                     content: (0, r.jsx)(l.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'always-white',
-                        children: U
+                        variant: "text-xs/normal",
+                        color: "always-white",
+                        children: U,
                     }),
                     header: G,
                     headerClassName: y.tooltipHeader,
                     markAsDismissed: Y,
-                    onClick: n
-                })
+                    onClick: n,
+                }),
             });
         },
-        children: () => n
+        children: () => n,
     });
 }

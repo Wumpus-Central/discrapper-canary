@@ -17,17 +17,17 @@ function s(e) {
             username: p,
             usernameHook: h,
             otherUsername: m.nick,
-            otherUsernameHook: e
+            otherUsernameHook: e,
         });
     } else
-        t = a.intl.format(a.t['5v2xa2'], {
+        t = a.intl.format(a.t["5v2xa2"], {
             username: p,
-            usernameHook: h
+            usernameHook: h,
         });
     return (0, r.jsx)(o.Z, {
         icon: n(474019),
         timestamp: s.timestamp,
         compact: d,
-        children: t
+        children: t,
     });
 }

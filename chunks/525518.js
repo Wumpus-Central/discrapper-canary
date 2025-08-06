@@ -11,19 +11,19 @@ function d(e) {
     let { skuId: t, tab: n } = e,
         d = i.useCallback(() => {
             l.default.track(c.rMx.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t });
-            let e = ''
-                .concat(location.protocol, '//')
+            let e = ""
+                .concat(location.protocol, "//")
                 .concat(location.host)
                 .concat(c.Z5c.COLLECTIBLES_SHOP)
-                .concat((0, s.aK)(n) ? '?tab='.concat(n) : '', '#itemSkuId=')
+                .concat((0, s.aK)(n) ? "?tab=".concat(n) : "", "#itemSkuId=")
                 .concat(t);
-            (0, o.JG)(e, () => (0, a.showToast)((0, a.createToast)(u.intl.string(u.t['L/PwZW']), a.ToastType.SUCCESS)));
+            (0, o.JG)(e, () => (0, a.showToast)((0, a.createToast)(u.intl.string(u.t["L/PwZW"]), a.ToastType.SUCCESS)));
         }, [t, n]);
     return (0, r.jsx)(a.hU, {
-        'aria-label': u.intl.string(u.t.WqhZsr),
+        "aria-label": u.intl.string(u.t.WqhZsr),
         onClick: d,
         icon: a.xPt,
-        variant: 'overlay-secondary',
-        size: 'sm'
+        variant: "overlay-secondary",
+        size: "sm",
     });
 }

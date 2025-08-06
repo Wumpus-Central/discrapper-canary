@@ -34,20 +34,21 @@ function g(e) {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
                         var t, r;
-                        (m(n, null != (r = null == (t = O.current) ? void 0 : t.getBoundingClientRect()) ? r : null), (e = null));
+                        m(n, null != (r = null == (t = O.current) ? void 0 : t.getBoundingClientRect()) ? r : null),
+                            (e = null);
                     }));
             };
         }, [n, t]);
     return (
         i.useEffect(
             () => (
-                t.addEventListener('resize', v),
+                t.addEventListener("resize", v),
                 c.S.subscribe(h.CkL.REMEASURE_TARGET, v),
                 () => {
-                    (t.removeEventListener('resize', v), c.S.unsubscribe(h.CkL.REMEASURE_TARGET, v));
+                    t.removeEventListener("resize", v), c.S.unsubscribe(h.CkL.REMEASURE_TARGET, v);
                 }
             ),
-            [v, t]
+            [v, t],
         ),
         i.useLayoutEffect(() => {
             let e = O.current;
@@ -59,14 +60,14 @@ function g(e) {
             return (
                 r.observe(e),
                 () => {
-                    (r.disconnect(), m(n, null));
+                    r.disconnect(), m(n, null);
                 }
             );
         }, [n, v]),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             ref: O,
             style: s,
-            className: a
+            className: a,
         })
     );
 }

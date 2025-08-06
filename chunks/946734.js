@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685));
+n.d(t, { Z: () => N }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,7 +36,7 @@ function T(e, t, n) {
 class S {
     updateData(e) {
         let { userId: t, user: n, channelId: r, analyticsLocations: i } = e;
-        ((this.userId = t), (this.user = n), (this.channelId = r), (this.analyticsLocations = i));
+        (this.userId = t), (this.user = n), (this.channelId = r), (this.analyticsLocations = i);
     }
     getNicknameGuildPairs() {
         return this.generateNicknameGuildPairs(this.user);
@@ -45,36 +45,36 @@ class S {
         return this.getNicknameGuildPairs().map((e, t) => {
             let [n, o] = e,
                 a = (0, r.jsx)(l.P3F, {
-                    tag: 'span',
+                    tag: "span",
                     onClick: this.handleClick,
-                    children: n
+                    children: n,
                 });
             return (
                 o.length > 0 &&
                     (a = (0, r.jsx)(l.DY3, {
                         className: I.tooltip,
-                        text: o.join(', '),
-                        position: 'bottom',
-                        children: a
+                        text: o.join(", "),
+                        position: "bottom",
+                        children: a,
                     })),
                 (0, r.jsxs)(
                     i.Fragment,
                     {
-                        children: [0 !== t ? ', ' : null, a]
+                        children: [0 !== t ? ", " : null, a],
                     },
-                    t
+                    t,
                 )
             );
         });
     }
     constructor({ userId: e, user: t, channelId: n, analyticsLocations: i }) {
-        (T(this, 'userId', void 0),
-            T(this, 'user', void 0),
-            T(this, 'channelId', void 0),
-            T(this, 'analyticsLocations', void 0),
+        T(this, "userId", void 0),
+            T(this, "user", void 0),
+            T(this, "channelId", void 0),
+            T(this, "analyticsLocations", void 0),
             T(
                 this,
-                'generateNicknameGuildPairs',
+                "generateNicknameGuildPairs",
                 (0, E.oH)((e) => {
                     var t;
                     return a()(h.ZP.getNicknameGuildsMapping(null != (t = null == e ? void 0 : e.id) ? t : this.userId))
@@ -88,7 +88,7 @@ class S {
                                         var t;
                                         return null == (t = m.Z.getGuild(e)) ? void 0 : t.name;
                                     })
-                                    .filter(b.lm)
+                                    .filter(b.lm),
                             ];
                         })
                         .filter((t) => {
@@ -96,39 +96,39 @@ class S {
                             return n !== (null == e ? void 0 : e.globalName);
                         })
                         .value();
-                })
+                }),
             ),
-            T(this, 'renderMoreAvatars', () =>
+            T(this, "renderMoreAvatars", () =>
                 (0, r.jsx)(
                     l.DY3,
                     {
                         text: v.intl.string(v.t.UTjREx),
-                        position: 'bottom',
+                        position: "bottom",
                         children: (0, r.jsx)(l.P3F, {
                             className: I.moreAvatars,
                             onClick: this.handleClick,
                             children: (0, r.jsx)(l.oFk, {
-                                size: 'xs',
-                                color: 'currentColor',
-                                className: I.plusIcon
-                            })
-                        })
+                                size: "xs",
+                                color: "currentColor",
+                                className: I.plusIcon,
+                            }),
+                        }),
                     },
-                    'more-avatars'
-                )
+                    "more-avatars",
+                ),
             ),
-            T(this, 'handleClick', () => {
+            T(this, "handleClick", () => {
                 (0, p.openUserProfileModal)({
                     userId: this.userId,
                     channelId: this.channelId,
                     sourceAnalyticsLocations: this.analyticsLocations,
-                    section: O.oh.MUTUAL_GUILDS
+                    section: O.oh.MUTUAL_GUILDS,
                 });
             }),
             (this.userId = e),
             (this.user = t),
             (this.channelId = n),
-            (this.analyticsLocations = i));
+            (this.analyticsLocations = i);
     }
 }
 function A(e) {
@@ -140,15 +140,15 @@ function A(e) {
                     user: o,
                     userId: t,
                     channelId: n,
-                    analyticsLocations: r
-                })
+                    analyticsLocations: r,
+                }),
         );
     return (
         a.updateData({
             userId: t,
             user: o,
             channelId: n,
-            analyticsLocations: r
+            analyticsLocations: r,
         }),
         a
     );
@@ -162,7 +162,7 @@ function N(e) {
         s = A({
             userId: n,
             analyticsLocations: a,
-            channelId: t.id
+            channelId: t.id,
         }),
         p = (e, t, n) => {
             var o;
@@ -174,20 +174,20 @@ function N(e) {
                       l.DY3,
                       {
                           text: null == (o = m.Z.getGuild(c)) ? void 0 : o.name,
-                          position: 'bottom',
-                          children: (0, r.jsx)('img', {
-                              alt: '',
+                          position: "bottom",
+                          children: (0, r.jsx)("img", {
+                              alt: "",
                               className: I.avatar,
                               onClick: s.handleClick,
                               src: a.getAvatarURL(c, 16),
-                              'aria-hidden': !0
-                          })
+                              "aria-hidden": !0,
+                          }),
                       },
-                      c[1]
+                      c[1],
                   );
         };
     return 0 === s.getNicknameGuildPairs().length && 0 === i.length
-        ? (0, r.jsx)('div', { className: I.spacer })
+        ? (0, r.jsx)("div", { className: I.spacer })
         : (0, r.jsxs)(d.Gt, {
               value: a,
               children: [
@@ -195,7 +195,7 @@ function N(e) {
                   (0, r.jsx)(l.IGR, {
                       text: v.intl.string(v.t.l1QVfn),
                       disableColor: !0,
-                      className: I.akaBadge
+                      className: I.akaBadge,
                   }),
                   i.length > 0
                       ? (0, r.jsx)(c.ZP, {
@@ -206,16 +206,16 @@ function N(e) {
                             renderMoreUsers: s.renderMoreAvatars,
                             guildId: void 0,
                             max: 3,
-                            className: I.avatars
+                            className: I.avatars,
                         })
                       : null,
                   s.getNicknameGuildPairs().length > 0
                       ? (0, r.jsx)(f.Z, {
-                            position: 'bottom',
+                            position: "bottom",
                             className: I.nicknames,
-                            children: s.renderNicknamePairs()
+                            children: s.renderNicknamePairs(),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           });
 }

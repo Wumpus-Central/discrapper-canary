@@ -5,14 +5,14 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
 var i = n(65183).List,
-    o = '.';
+    o = ".";
 function a(e, t, n) {
     for (var r = t; r < n; r++) if (null != e[r]) return !1;
     return !0;
@@ -22,7 +22,7 @@ function s(e, t, n, r) {
 }
 e.exports = (function () {
     function e(e) {
-        (r(this, '_decorators', void 0), (this._decorators = e.slice()));
+        r(this, "_decorators", void 0), (this._decorators = e.slice());
     }
     var t = e.prototype;
     return (
@@ -36,7 +36,7 @@ e.exports = (function () {
                         function (e, t) {
                             a(n, e, t) && (s(n, e, t, i + o + l), l++);
                         },
-                        t
+                        t,
                     );
                 }),
                 i(n)

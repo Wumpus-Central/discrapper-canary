@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685));
+n.d(t, { Z: () => u }), n(388685);
 var r = n(255367);
 n(73800);
 var l = n(120356),
@@ -16,20 +16,20 @@ let d = (e) => {
             children: [
                 (0, r.jsx)(a.Text, {
                     className: c.childText,
-                    variant: 'text-md/semibold',
-                    children: l
+                    variant: "text-md/semibold",
+                    children: l,
                 }),
                 (0, r.jsx)(s.Z, {
                     className: c.childIcon,
-                    direction: s.Z.Directions.RIGHT
-                })
-            ]
+                    direction: s.Z.Directions.RIGHT,
+                }),
+            ],
         });
     },
     u = (e) => {
         let {
             node: { children: t },
-            onSelectChild: n
+            onSelectChild: n,
         } = e;
         if (null == t || 0 === t.length) return null;
         let l = t.map((e) => {
@@ -38,13 +38,13 @@ let d = (e) => {
                 d,
                 {
                     child: e,
-                    onClick: n
+                    onClick: n,
                 },
-                ''.concat(t, '+').concat(l)
+                "".concat(t, "+").concat(l),
             );
         });
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: o.listElementWrapper,
-            children: l
+            children: l,
         });
     };

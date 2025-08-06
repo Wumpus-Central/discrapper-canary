@@ -29,10 +29,12 @@ function N() {
         S.current = n;
     }),
     i.useEffect(() => {
-        e && (o.default.track(p.rMx.SAFETY_HUB_VIEWED, { account_standing: S.current.state }), c.Z.increment({ name: a.V.SAFETY_HUB_VIEW }));
+        e &&
+            (o.default.track(p.rMx.SAFETY_HUB_VIEWED, { account_standing: S.current.state }),
+            c.Z.increment({ name: a.V.SAFETY_HUB_VIEW }));
     }, [e]),
     t)
-        ? (0, s.jsx)('div', { children: (0, s.jsx)(r.$jN, {}) })
+        ? (0, s.jsx)("div", { children: (0, s.jsx)(r.$jN, {}) })
         : null != N
           ? (0, s.jsxs)(r.qXd, {
                 color: r.DM8.DANGER,
@@ -41,12 +43,12 @@ function N() {
                     f.intl.string(f.t.TDRvqq),
                     (0, s.jsx)(r.EyT, {
                         onClick: () => d.yq(),
-                        children: f.intl.string(f.t.R1AN4O)
-                    })
-                ]
+                        children: f.intl.string(f.t.R1AN4O),
+                    }),
+                ],
             })
-          : (0, s.jsxs)('div', {
+          : (0, s.jsxs)("div", {
                 className: v.container,
-                children: [(0, s.jsx)(g.Z, {}), (0, s.jsx)(j.N, {})]
+                children: [(0, s.jsx)(g.Z, {}), (0, s.jsx)(j.N, {})],
             });
 }

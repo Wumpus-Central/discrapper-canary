@@ -1,7 +1,7 @@
 n.d(t, {
     GI: () => r.GI,
     Un: () => r.Un,
-    wE: () => r.wE
+    wE: () => r.wE,
 });
 var r = n(608787),
     i = n(931619);

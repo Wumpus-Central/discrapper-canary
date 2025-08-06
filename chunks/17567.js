@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var i = n(710845),
     r = n(601964),
     s = n(314897),
@@ -16,7 +16,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -56,24 +56,27 @@ function h(e, t) {
         e
     );
 }
-let f = new i.Z('Guilds'),
+let f = new i.Z("Guilds"),
     b = new (class {
         async getAsync(e) {
             let t = performance.now(),
                 n = await m.Z.guilds(e).getMany(),
                 i = performance.now();
-            return (f.verbose('loaded in '.concat(i - t, 'ms (guilds: ').concat(n.length, ')')), n);
+            return f.verbose("loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n;
         }
         async getOneAsync(e, t) {
             return await m.Z.guilds(e).get(t);
         }
         handleBackgroundSync(e, t) {
             for (let n of e.guilds) {
-                if ('unavailable' === n.data_mode) return;
+                if ("unavailable" === n.data_mode) return;
                 let e = o.Z.getGuild(n.id);
                 if (null != e) {
                     let i = l.Z.getUnsafeMutableRoles(n.id),
-                        r = 'partial' === n.data_mode ? u.EO(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : d.qt(n.id, n.roles);
+                        r =
+                            "partial" === n.data_mode
+                                ? u.EO(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids)
+                                : d.qt(n.id, n.roles);
                     this.put(c.rk(c.sp(n, e), d.an(r), a.ZP.getSelfMember(n.id)), t);
                 }
             }
@@ -103,13 +106,18 @@ let f = new i.Z('Guilds'),
                 let i = g({}, l.Z.getUnsafeMutableRoles(e.guildId));
                 delete i[e.roleId];
                 let r = a.ZP.getSelfMember(e.guildId);
-                (null != r && (r = h(g({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })), this.put(c.rk(n, d.an(i), r), t));
+                null != r && (r = h(g({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })),
+                    this.put(c.rk(n, d.an(i), r), t);
             }
         }
         handleGuildMemberAdd(e, t) {
             if (null != e.joinedAt && e.user.id === s.default.getId()) {
                 let n = o.Z.getGuild(e.guildId);
-                null != n && this.put(c.rk((0, r.kH)(n, e.joinedAt), d.an(l.Z.getUnsafeMutableRoles(n.id)), a.ZP.getSelfMember(n.id)), t);
+                null != n &&
+                    this.put(
+                        c.rk((0, r.kH)(n, e.joinedAt), d.an(l.Z.getUnsafeMutableRoles(n.id)), a.ZP.getSelfMember(n.id)),
+                        t,
+                    );
             }
         }
         handleGuildMemberUpdate(e, t) {
@@ -119,9 +127,9 @@ let f = new i.Z('Guilds'),
                 this.put(
                     c.rk(n, d.an(l.Z.getUnsafeMutableRoles(n.id)), {
                         roles: e.roles,
-                        userId: e.user.id
+                        userId: e.user.id,
                     }),
-                    t
+                    t,
                 );
         }
         resetInMemoryState() {}
@@ -134,9 +142,9 @@ let f = new i.Z('Guilds'),
                     null != n
                         ? {
                               userId: n.user.id,
-                              roles: n.roles
+                              roles: n.roles,
                           }
-                        : null
+                        : null,
                 );
             this.put(r, t);
         }
@@ -150,7 +158,7 @@ let f = new i.Z('Guilds'),
             m.Z.guildsTransaction(e).delete();
         }
         constructor() {
-            p(this, 'actions', {
+            p(this, "actions", {
                 BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
                 CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
                 GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
@@ -160,7 +168,7 @@ let f = new i.Z('Guilds'),
                 GUILD_ROLE_CREATE: (e, t) => this.handleGuildRoleChange(e, t),
                 GUILD_ROLE_DELETE: (e, t) => this.handleGuildRoleDelete(e, t),
                 GUILD_ROLE_UPDATE: (e, t) => this.handleGuildRoleChange(e, t),
-                GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t)
+                GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t),
             });
         }
     })();

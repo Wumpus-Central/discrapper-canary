@@ -1,8 +1,8 @@
-(r.d(t, {
+r.d(t, {
     A4: () => h,
-    b6: () => u.b
+    b6: () => u.b,
 }),
-    r(388685));
+    r(388685);
 var n = r(255367),
     a = r(73800),
     l = r(120356),
@@ -13,21 +13,31 @@ var n = r(255367),
     s = r(976845),
     d = r(738134);
 let b = () =>
-        (0, n.jsx)('img', {
+        (0, n.jsx)("img", {
             className: d.notificationBadge,
             src: r(808824),
-            alt: ''
+            alt: "",
         }),
     f = (e, t) => (e === u.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
     h = (0, a.forwardRef)(function (e, t) {
-        let { id: r, balance: l, balanceWidgetMode: h = u.b.DEFAULT, showNotificationBadge: O, onClick: y, onMouseDown: p, disabled: m, isInModalOverlay: C, className: g } = e,
+        let {
+                id: r,
+                balance: l,
+                balanceWidgetMode: h = u.b.DEFAULT,
+                showNotificationBadge: O,
+                onClick: y,
+                onMouseDown: p,
+                disabled: m,
+                isInModalOverlay: C,
+                className: g,
+            } = e,
             [_, E] = (0, a.useState)(!1),
             R = (0, a.useMemo)(() => f(h, _), [h, _]),
             [j, v] = (0, a.useState)(!1),
             [S, P] = (0, a.useState)(!1),
             [A, w] = (0, a.useState)(0.9 * s.D2),
             L = null === l;
-        ((0, a.useEffect)(() => {
+        (0, a.useEffect)(() => {
             L &&
                 !j &&
                 (v(!0),
@@ -37,26 +47,26 @@ let b = () =>
         }, [L, v, j]),
             (0, a.useEffect)(() => {
                 S && !L && v(!1);
-            }, [L, S]));
+            }, [L, S]);
         let k = L || j,
             D = j ? null : l,
             [N, U] = (0, a.useState)(null),
             I = (0, a.useRef)(null),
             T = (0, a.useCallback)(() => {
-                ((I.current = null), U(null));
+                (I.current = null), U(null);
             }, []),
             V = (0, a.useCallback)(
                 (e) => {
                     let t = N === I.current;
-                    e > 0 && ('earn' !== N || !t) && U('earn');
+                    e > 0 && ("earn" !== N || !t) && U("earn");
                 },
-                [U, N]
+                [U, N],
             );
         return (0, n.jsx)(o.P3F, {
             onClick: k ? void 0 : y,
             className: i()(d.clickable, { [d.disabled]: m }),
-            id: null != r ? r : 'balance-widget-pill',
-            children: (0, n.jsxs)('span', {
+            id: null != r ? r : "balance-widget-pill",
+            children: (0, n.jsxs)("span", {
                 onMouseDown: p,
                 onMouseEnter: m ? void 0 : () => E(!0),
                 onMouseLeave: m ? void 0 : () => E(!1),
@@ -64,10 +74,10 @@ let b = () =>
                 className: i()(d.container, R, g, {
                     [d.containerLoading]: k,
                     [d.inModalOverlay]: C,
-                    [d.disabled]: m
+                    [d.disabled]: m,
                 }),
                 children: [
-                    (0, n.jsx)('div', {
+                    (0, n.jsx)("div", {
                         className: i()(d.orbsLottieContainer, k ? d.orbIconloading : void 0),
                         children: (0, n.jsx)(
                             s.ZP,
@@ -75,24 +85,24 @@ let b = () =>
                                 for (var t = 1; t < arguments.length; t++) {
                                     var r = null != arguments[t] ? arguments[t] : {},
                                         n = Object.keys(r);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (n = n.concat(
                                             Object.getOwnPropertySymbols(r).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         n.forEach(function (t) {
                                             var n;
-                                            ((n = r[t]),
+                                            (n = r[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: n,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = n));
-                                        }));
+                                                    : (e[t] = n);
+                                        });
                                 }
                                 return e;
                             })(
@@ -100,20 +110,20 @@ let b = () =>
                                 {
                                     currentAnimationType: N,
                                     animationTypeRef: I,
-                                    onSetAnimationDurationMS: w
-                                }
-                            )
-                        )
+                                    onSetAnimationDurationMS: w,
+                                },
+                            ),
+                        ),
                     }),
                     (0, n.jsx)(c.Z, {
                         value: D,
                         onValueChange: V,
                         onValueReached: T,
                         targetTotalCounterTime: A,
-                        className: k ? d.counterLoading : void 0
+                        className: k ? d.counterLoading : void 0,
                     }),
-                    O && (0, n.jsx)(b, {})
-                ]
-            })
+                    O && (0, n.jsx)(b, {}),
+                ],
+            }),
         });
     });

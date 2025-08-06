@@ -8,13 +8,13 @@ function s(e, t, n, r) {
         l = new Date(e.scheduled_start_time).getTime(),
         c = {
             start: l - a.VF,
-            end: l
+            end: l,
         };
     if (s.isBetween(c.start, c.end)) {
         if (null != t) {
             let e = i()(t),
                 n = e.isBetween(c.start, c.end),
-                o = e.isBetween(i()(l).subtract(a.zV, 'days'), l);
+                o = e.isBetween(i()(l).subtract(a.zV, "days"), l);
             return n || (o && !r) ? void 0 : a.X_.EVENT_STARTING_SOON;
         }
         return a.X_.EVENT_STARTING_SOON;

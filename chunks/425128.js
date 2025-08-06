@@ -1,7 +1,7 @@
 n.d(t, {
     _7: () => u,
     _b: () => d,
-    pV: () => c
+    pV: () => c,
 });
 var r = n(544891),
     i = n(570140),
@@ -18,13 +18,13 @@ let l = 900000,
                         url: s.ANM.GUILD_LEADERBOARD(t, n),
                         query: {
                             interval_offset: i,
-                            cached: !a
+                            cached: !a,
                         },
-                        rejectWithError: !1
+                        rejectWithError: !1,
                     })
                 ).body,
                 o = null != (c = e.wait_ms_until_next_fetch) ? c : l;
-            return (null != o && (e.expires_at = Date.now() + o), e);
+            return null != o && (e.expires_at = Date.now() + o), e;
         } catch (e) {
             throw new o.Hx(e);
         }
@@ -38,17 +38,17 @@ let l = 900000,
                     body: {
                         riot_connection_id: t,
                         lol_connection_id: n,
-                        only_update_if_stale: l
+                        only_update_if_stale: l,
                     },
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
             ).body;
             return (
                 null != e.update_enqueued_timestamp &&
                     i.Z.dispatch({
-                        type: 'SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED',
+                        type: "SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED",
                         leaderboardId: a.z,
-                        lastUpdateRequested: e.update_enqueued_timestamp
+                        lastUpdateRequested: e.update_enqueued_timestamp,
                     }),
                 e
             );
@@ -65,9 +65,9 @@ let l = 900000,
                     body: {
                         sort_by_statistic_id: i,
                         sort_desc: a,
-                        show_winner_crown: l
+                        show_winner_crown: l,
                     },
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
             ).body;
         } catch (e) {

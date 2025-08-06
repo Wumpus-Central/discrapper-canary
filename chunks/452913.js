@@ -21,7 +21,12 @@ let h = r().throttle(function () {
             let n = e.indexOf(t);
             return -1 === n ? -2 : n;
         })(t);
-    if ((-1 !== (n += e) || (0, a.z)(s.Z, o.Z, c.Z) || (n += e), -3 === n && (n = t.length - 1), n >= t.length || -2 === n)) return void (0, p.z)(m.Z.getHomeLink());
+    if (
+        (-1 !== (n += e) || (0, a.z)(s.Z, o.Z, c.Z) || (n += e),
+        -3 === n && (n = t.length - 1),
+        n >= t.length || -2 === n)
+    )
+        return void (0, p.z)(m.Z.getHomeLink());
     let i = -1 === n ? g.I_8 : t[n],
         r = d.Z.getChannelId(i);
     (0, p.K)(i, r === i ? null : r, !1);

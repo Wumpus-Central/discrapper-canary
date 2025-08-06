@@ -8,29 +8,29 @@ function i(e, t, n) {
     let r = Math.sqrt(Math.pow(e.x - t.x, 2) + Math.pow(e.y - t.y, 2));
     return {
         x: t.x + ((t.x - e.x) / r) * n,
-        y: t.y + ((t.y - e.y) / r) * n
+        y: t.y + ((t.y - e.y) / r) * n,
     };
 }
 function s(e, t, n) {
     let r = {
             x: n.x,
-            y: n.y
+            y: n.y,
         },
         i = {
             x: n.x + n.width,
-            y: n.y
+            y: n.y,
         },
         s = {
             x: n.x,
-            y: n.y + n.height
+            y: n.y + n.height,
         },
         a = {
             x: n.x + n.width,
-            y: n.y + n.height
+            y: n.y + n.height,
         };
     return l(e, t, r, i) || l(e, t, i, a) || l(e, t, a, s) || l(e, t, s, r);
 }
 n.d(t, {
     Vr: () => s,
-    ld: () => i
+    ld: () => i,
 });

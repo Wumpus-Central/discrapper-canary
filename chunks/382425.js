@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => W }), n(388685));
+n.d(t, { Z: () => W }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -55,20 +55,20 @@ function W(e) {
                       let { user: t } = e;
                       return t;
                   })
-                : []
+                : [],
         ),
         er = (0, s.e7)([T.Z], () => T.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
         { analyticsLocations: ei } = (0, m.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         eo = (0, A.Z)({
-            display: 'live',
+            display: "live",
             voiceChannelId: null == et ? void 0 : et.id,
             user: t,
             stream: o,
-            analyticsLocations: ei
+            analyticsLocations: ei,
         }),
         ea = (0, N.Z)({
             userId: t.id,
-            onAction: eo
+            onAction: eo,
         }),
         [es, el] = (0, y.wq)(et),
         ec = (0, p.Kt)() && (0, p.zd)(null == et ? void 0 : et.id),
@@ -79,23 +79,28 @@ function W(e) {
     if (null == ee || null == et || !1 === o.discoverable || null === X) return null;
     let eh = () => {
             let e = (e) => {
-                (e.stopPropagation(), es && (eo({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(o.channelId), (0, u.iV)(o), null == K || K()));
+                e.stopPropagation(),
+                    es &&
+                        (eo({ action: "PRESS_IMAGE" }),
+                        c.default.selectVoiceChannel(o.channelId),
+                        (0, u.iV)(o),
+                        null == K || K());
             };
             return null == ep && ed
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: V.preview,
-                      children: (0, r.jsx)(l.$jN, {})
+                      children: (0, r.jsx)(l.$jN, {}),
                   })
                 : null == ep || ec
                   ? (0, r.jsxs)(l.P3F, {
                         className: a()(V.preview, V.overlay, es ? V.clickable : V.disabled),
                         onClick: e,
-                        'aria-label': (0, y.gR)(el),
-                        'aria-disabled': !es,
+                        "aria-label": (0, y.gR)(el),
+                        "aria-disabled": !es,
                         children: [
-                            (0, r.jsx)('img', {
-                                alt: '',
-                                src: Q === B.BRd.LIGHT ? Y : H
+                            (0, r.jsx)("img", {
+                                alt: "",
+                                src: Q === B.BRd.LIGHT ? Y : H,
                             }),
                             X !== G.lY.MODAL &&
                                 X !== G.lY.MODAL_V2 &&
@@ -103,28 +108,28 @@ function W(e) {
                                     children: [
                                         (0, r.jsx)(l.Text, {
                                             className: V.overlayText,
-                                            variant: 'text-sm/medium',
-                                            color: 'always-white',
-                                            children: (0, y.P9)(el)
+                                            variant: "text-sm/medium",
+                                            color: "always-white",
+                                            children: (0, y.P9)(el),
                                         }),
                                         (0, r.jsx)(l.Text, {
-                                            variant: 'text-sm/medium',
-                                            children: ef ? Z.intl.string(Z.t.uQZTBQ) : Z.intl.string(Z.t.pgUTZG)
-                                        })
-                                    ]
-                                })
-                        ]
+                                            variant: "text-sm/medium",
+                                            children: ef ? Z.intl.string(Z.t.uQZTBQ) : Z.intl.string(Z.t.pgUTZG),
+                                        }),
+                                    ],
+                                }),
+                        ],
                     })
                   : (0, r.jsxs)(l.P3F, {
                         className: a()(V.preview, V.overlay, es ? V.clickable : V.disabled),
                         onClick: e,
-                        'aria-label': (0, y.gR)(el),
-                        'aria-disabled': !es,
+                        "aria-label": (0, y.gR)(el),
+                        "aria-disabled": !es,
                         children: [
-                            (0, r.jsx)('img', {
-                                alt: '',
+                            (0, r.jsx)("img", {
+                                alt: "",
                                 src: ep,
-                                className: V.image
+                                className: V.image,
                             }),
                             X !== G.lY.MODAL &&
                                 X !== G.lY.MODAL_V2 &&
@@ -132,31 +137,31 @@ function W(e) {
                                     children: [
                                         (0, r.jsx)(l.Text, {
                                             className: V.overlayText,
-                                            variant: 'text-sm/medium',
-                                            color: 'always-white',
-                                            children: (0, y.P9)(el)
+                                            variant: "text-sm/medium",
+                                            color: "always-white",
+                                            children: (0, y.P9)(el),
                                         }),
                                         (0, r.jsx)(l.gw7, {
-                                            size: 'xs',
-                                            color: 'currentColor',
-                                            className: V.clyde
-                                        })
-                                    ]
-                                })
-                        ]
+                                            size: "xs",
+                                            color: "currentColor",
+                                            className: V.clyde,
+                                        }),
+                                    ],
+                                }),
+                        ],
                     });
         },
         em = () =>
             X !== G.lY.MODAL && X !== G.lY.MODAL_V2
                 ? null
-                : (0, r.jsxs)('div', {
+                : (0, r.jsxs)("div", {
                       className: F.details,
                       children: [
                           (0, r.jsx)(M.Z, {
                               channel: et,
                               guild: ee,
                               onAction: eo,
-                              onClose: K
+                              onClose: K,
                           }),
                           (0, r.jsx)(E.Z, {
                               users: en,
@@ -165,15 +170,16 @@ function W(e) {
                               maxUsers: k.W,
                               size: l.EFr.SIZE_16,
                               onClickOverflow: (e) => {
-                                  (null == e || e.stopPropagation(), null == eo || eo({ action: 'PRESS_VOICE_CHANNEL_AVATARS' }));
+                                  null == e || e.stopPropagation(),
+                                      null == eo || eo({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
                               },
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
-                              overflowCountColor: 'text-muted',
-                              'aria-label': Z.intl.string(Z.t.jNqDh4)
+                              overflowCountColor: "text-muted",
+                              "aria-label": Z.intl.string(Z.t.jNqDh4),
                           }),
-                          X === G.lY.MODAL_V2 && eE()
-                      ]
+                          X === G.lY.MODAL_V2 && eE(),
+                      ],
                   }),
         eg = () =>
             X === G.lY.MODAL || X === G.lY.MODAL_V2
@@ -183,22 +189,22 @@ function W(e) {
                       guild: ee,
                       channel: et,
                       onAction: eo,
-                      onClose: K
+                      onClose: K,
                   }),
         eE = () =>
             t.id === n.id
                 ? null
-                : (0, r.jsx)('div', {
+                : (0, r.jsx)("div", {
                       className: F.actions,
                       children: (0, r.jsx)(j.Z, {
                           channel: et,
                           onAction: eo,
-                          onClose: K
-                      })
+                          onClose: K,
+                      }),
                   }),
         eb = eu,
         ey = J === G.n_.ACTIVITY && $ === eb,
-        eO = null != er ? Z.intl.formatToPlainString(Z.t['4CQq9f'], { name: er.name }) : Z.intl.string(Z.t['Jpkr/v']);
+        eO = null != er ? Z.intl.formatToPlainString(Z.t["4CQq9f"], { name: er.name }) : Z.intl.string(Z.t["Jpkr/v"]);
     return (0, r.jsx)(m.Gt, {
         value: ei,
         children: (0, r.jsx)(D.Z, {
@@ -221,40 +227,40 @@ function W(e) {
                         interactionSourceId: eb,
                         sourceType: G.n_.ACTIVITY,
                         onAction: eo,
-                        onShowToolbar: () => eo({ action: 'HOVER_ACTIVITY_CARD' }),
+                        onShowToolbar: () => eo({ action: "HOVER_ACTIVITY_CARD" }),
                         renderMoreButtonPopout: (e) =>
                             (0, r.jsx)(U.Z, {
-                                display: 'live',
+                                display: "live",
                                 user: t,
                                 onClose: K,
-                                children: e
+                                children: e,
                             }),
                         children: (0, r.jsxs)(L.Z, {
                             ref: ea,
                             className: a()(W, { [F.hoisted]: ey }),
                             onAction: eo,
                             onClose: K,
-                            'aria-label': eO,
+                            "aria-label": eO,
                             children: [
                                 (0, r.jsx)(x.Z, {
                                     text: eO,
-                                    tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL })
+                                    tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL }),
                                 }),
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: F.body,
                                     children: [
-                                        (0, r.jsxs)('div', {
+                                        (0, r.jsxs)("div", {
                                             className: F.content,
-                                            children: [eh(), em(), X === G.lY.MODAL && eE()]
+                                            children: [eh(), em(), X === G.lY.MODAL && eE()],
                                         }),
-                                        eg()
-                                    ]
+                                        eg(),
+                                    ],
                                 }),
-                                X !== G.lY.MODAL && X !== G.lY.MODAL_V2 && eE()
-                            ]
-                        })
-                    })
-            })
-        })
+                                X !== G.lY.MODAL && X !== G.lY.MODAL_V2 && eE(),
+                            ],
+                        }),
+                    }),
+            }),
+        }),
     });
 }

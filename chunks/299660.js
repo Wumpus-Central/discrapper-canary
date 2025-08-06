@@ -8,10 +8,10 @@ var s = t(481060),
     l = t(388032);
 function a(n) {
     return (0, r.jsx)(s.sNh, {
-        id: 'role-subscription-copy-link',
+        id: "role-subscription-copy-link",
         label: l.intl.string(l.t.WqhZsr),
         action: () => {
             (0, e.JG)((0, o.wR)(n, c.oC.ROLE_SUBSCRIPTIONS));
-        }
+        },
     });
 }

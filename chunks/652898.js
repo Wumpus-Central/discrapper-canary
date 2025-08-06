@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685), n(457542));
+n.d(t, { Z: () => y }), n(388685), n(457542);
 var r = n(990547),
     i = n(283693),
     o = n(44609),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,16 @@ function E(e) {
     let t = null;
     if (null != e && null != e.channel) {
         let n = e.channel;
-        t = e.target_type === f.Iq.STREAM ? _.dAT.STREAM : e.target_type === f.Iq.EMBEDDED_APPLICATION ? _.dAT.APPLICATION : (0, a.bc)(n.type) ? _.dAT.GDM_INVITE : null == n || (0, a.hv)(n.type) ? _.dAT.FRIEND_INVITE : _.dAT.SERVER_INVITE;
+        t =
+            e.target_type === f.Iq.STREAM
+                ? _.dAT.STREAM
+                : e.target_type === f.Iq.EMBEDDED_APPLICATION
+                  ? _.dAT.APPLICATION
+                  : (0, a.bc)(n.type)
+                    ? _.dAT.GDM_INVITE
+                    : null == n || (0, a.hv)(n.type)
+                      ? _.dAT.FRIEND_INVITE
+                      : _.dAT.SERVER_INVITE;
     }
     return t;
 }
@@ -78,7 +87,7 @@ function y(e, t, n) {
             with_counts: !0,
             with_expiration: !0,
             guild_scheduled_event_id: a.guildScheduledEventId,
-            with_permissions: (0, o.gY)({ location: 'resolveInvite' })
+            with_permissions: (0, o.gY)({ location: "resolveInvite" }),
         }),
         p = u.Z.get({
             url: _.ANM.INVITE(a.baseCode),
@@ -105,11 +114,11 @@ function y(e, t, n) {
                         destination_user_id: null == h || null == (f = h.target_user) ? void 0 : f.id,
                         invite_type: E(h),
                         user_banned: m,
-                        user_is_member: null != l.Z.getGuild(null == h || null == (p = h.guild) ? void 0 : p.id)
+                        user_is_member: null != l.Z.getGuild(null == h || null == (p = h.guild) ? void 0 : p.id),
                     });
-                }
+                },
             },
-            rejectWithError: !1
+            rejectWithError: !1,
         })
             .then(
                 (r) => {
@@ -132,14 +141,15 @@ function y(e, t, n) {
                                 size_online: i.approximate_presence_count,
                                 destination_user_id: null != i.target_user ? i.target_user.id : null,
                                 invite_type: E(i),
-                                user_is_member: null != l.Z.getGuild(null == i || null == (o = i.guild) ? void 0 : o.id)
+                                user_is_member:
+                                    null != l.Z.getGuild(null == i || null == (o = i.guild) ? void 0 : o.id),
                             },
-                            { flush: !0 }
+                            { flush: !0 },
                         );
                     }
                     return {
                         invite: i,
-                        code: e
+                        code: e,
                     };
                 },
                 (r) => {
@@ -156,20 +166,20 @@ function y(e, t, n) {
                                 authenticated: s.default.isAuthenticated(),
                                 user_banned: i,
                                 error_code: null == (o = r.body) ? void 0 : o.code,
-                                error_message: null == (l = r.body) ? void 0 : l.message
+                                error_message: null == (l = r.body) ? void 0 : l.message,
                             },
-                            { flush: !0 }
+                            { flush: !0 },
                         );
                     }
                     return {
                         invite: null,
                         code: e,
-                        banned: i
+                        banned: i,
                     };
-                }
+                },
             )
             .finally(() => {
                 b.delete(e);
             });
-    return (b.set(e, p), p);
+    return b.set(e, p), p;
 }

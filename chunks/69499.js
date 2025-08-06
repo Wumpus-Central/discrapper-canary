@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     E: () => b,
-    Z: () => O
+    Z: () => O,
 }),
     n(388685),
-    n(642613));
+    n(642613);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -21,7 +21,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,7 +73,8 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,20 +84,20 @@ function E(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let b = {
     DropdownSizes: l.Z.DropdownSizes,
     Sizes: l.Z.Sizes,
     Colors: l.Z.Colors,
-    Looks: l.Z.Looks
+    Looks: l.Z.Looks,
 };
 class y extends i.PureComponent {
     render() {
         let e = this.props,
             { skus: t, children: n, applicationId: i, primarySKU: o, onSKUSelect: a } = e,
-            s = g(e, ['skus', 'children', 'applicationId', 'primarySKU', 'onSKUSelect']);
+            s = g(e, ["skus", "children", "applicationId", "primarySKU", "onSKUSelect"]);
         return (0, r.jsx)(
             l.Z,
             m(
@@ -104,45 +105,45 @@ class y extends i.PureComponent {
                     {
                         onClick: this.handleClick,
                         onDropdownClick: t.length > 0 ? this.handleContextMenu : null,
-                        onContextMenu: t.length > 0 ? this.handleContextMenu : void 0
+                        onContextMenu: t.length > 0 ? this.handleContextMenu : void 0,
                     },
-                    s
+                    s,
                 ),
-                { children: n }
-            )
+                { children: n },
+            ),
         );
     }
     constructor(...e) {
-        (super(...e),
-            _(this, 'renderContextMenu', () => {
+        super(...e),
+            _(this, "renderContextMenu", () => {
                 let { skus: e, onSKUSelect: t, onMenuSelect: n } = this.props;
                 return (0, r.jsx)(a.v2r, {
                     onSelect: n,
-                    navId: 'test-skus',
-                    'aria-label': f.intl.string(f.t.ogxXGh),
+                    navId: "test-skus",
+                    "aria-label": f.intl.string(f.t.ogxXGh),
                     onClose: s.Zy,
                     children: e.map((e) =>
                         (0, r.jsx)(
                             a.sNh,
                             {
-                                id: ''.concat(e.id),
+                                id: "".concat(e.id),
                                 label: e.name,
                                 action: () => {
                                     null == t || t(e);
-                                }
+                                },
                             },
-                            ''.concat(e.id)
-                        )
-                    )
+                            "".concat(e.id),
+                        ),
+                    ),
                 });
             }),
-            _(this, 'handleContextMenu', (e) => {
-                (e.stopPropagation(), s.vq(e, this.renderContextMenu));
+            _(this, "handleContextMenu", (e) => {
+                e.stopPropagation(), s.vq(e, this.renderContextMenu);
             }),
-            _(this, 'handleClick', () => {
+            _(this, "handleClick", () => {
                 let { onSKUSelect: e, primarySKU: t } = this.props;
                 null != t && (null == e || e(t));
-            }));
+            });
     }
 }
 let O = o.ZP.connectStores([u.Z, c.Z], (e) => {
@@ -150,7 +151,9 @@ let O = o.ZP.connectStores([u.Z, c.Z], (e) => {
     let { applicationId: n } = e,
         r = (0, d.uF)(n, c.Z, u.Z);
     return {
-        skus: (null != (t = u.Z.getForApplication(n)) ? t : []).sort((e, t) => (null != r && e.id === r.id ? -1 : null != r && t.id === r.id ? 1 : e.name >= t.name ? -1 : 1)),
-        primarySKU: r
+        skus: (null != (t = u.Z.getForApplication(n)) ? t : []).sort((e, t) =>
+            null != r && e.id === r.id ? -1 : null != r && t.id === r.id ? 1 : e.name >= t.name ? -1 : 1,
+        ),
+        primarySKU: r,
     };
 })(y);

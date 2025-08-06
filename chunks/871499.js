@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => I,
-    d: () => A
+    d: () => A,
 });
 var r = n(255367),
     i = n(73800),
@@ -23,7 +23,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -75,7 +75,8 @@ function O(e, t) {
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,21 +86,46 @@ function v(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function I(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: u, onContextMenu: d, className: f, wrapperClassName: p, iconClassName: h, iconColor: g = 'currentColor', iconComponent: b, themeable: v = !1, disabled: I = !1, isActive: T = !1, tooltipPosition: S = 'top', shouldShowTooltip: A = !0, forceTooltipOpen: N = !1, buttonRef: C, grow: R, 'aria-label': P, look: w, buttonText: D, size: L, color: x } = e;
+    let {
+        label: t,
+        onClick: n,
+        onKeyDown: i,
+        onMouseEnter: o,
+        onMouseLeave: u,
+        onContextMenu: d,
+        className: f,
+        wrapperClassName: p,
+        iconClassName: h,
+        iconColor: g = "currentColor",
+        iconComponent: b,
+        themeable: v = !1,
+        disabled: I = !1,
+        isActive: T = !1,
+        tooltipPosition: S = "top",
+        shouldShowTooltip: A = !0,
+        forceTooltipOpen: N = !1,
+        buttonRef: C,
+        grow: R,
+        "aria-label": P,
+        look: w,
+        buttonText: D,
+        size: L,
+        color: x,
+    } = e;
     return (0, r.jsx)(_.Z, {
         children: (0, r.jsx)(c.ua7, {
             position: S,
             text: t,
-            'aria-label': P,
+            "aria-label": P,
             shouldShow: A,
             forceOpen: N,
             children: (e) => {
                 var { onClick: t, onContextMenu: c, onMouseEnter: _, onMouseLeave: S } = e,
-                    A = O(e, ['onClick', 'onContextMenu', 'onMouseEnter', 'onMouseLeave']);
+                    A = O(e, ["onClick", "onContextMenu", "onMouseEnter", "onMouseLeave"]);
                 return (0, r.jsxs)(
                     l.zx,
                     y(
@@ -115,22 +141,22 @@ function I(e) {
                                     e.preventDefault();
                                 },
                                 onClick: (e) => {
-                                    (null == t || t(), null == n || n(e));
+                                    null == t || t(), null == n || n(e);
                                 },
                                 onMouseEnter: (e) => {
-                                    (null == _ || _(), null == o || o(e));
+                                    null == _ || _(), null == o || o(e);
                                 },
                                 onMouseLeave: (e) => {
-                                    (null == S || S(), null == u || u(e));
+                                    null == S || S(), null == u || u(e);
                                 },
                                 onContextMenu: (e) => {
-                                    (null == c || c(), null == d || d(e));
+                                    null == c || c(), null == d || d(e);
                                 },
                                 onFocus: (e) => {
-                                    (null == _ || _(), null == o || o(e));
+                                    null == _ || _(), null == o || o(e);
                                 },
                                 onBlur: (e) => {
-                                    (null == S || S(), null == u || u(e));
+                                    null == S || S(), null == u || u(e);
                                 },
                                 disabled: I,
                                 innerClassName: a()(m.lineHeightReset, { [m.buttonInnerWithText]: null != D }),
@@ -138,9 +164,9 @@ function I(e) {
                                 wrapperClassName: p,
                                 buttonRef: C,
                                 grow: R,
-                                'aria-label': P
+                                "aria-label": P,
                             },
-                            A
+                            A,
                         ),
                         {
                             children: [
@@ -149,17 +175,17 @@ function I(e) {
                                     className: a()(h, {
                                         [m.controlIcon]: null == D,
                                         [m.themeable]: v,
-                                        [m.active]: T
+                                        [m.active]: T,
                                     }),
-                                    color: g
+                                    color: g,
                                 }),
-                                D
-                            ]
-                        }
-                    )
+                                D,
+                            ],
+                        },
+                    ),
                 );
-            }
-        })
+            },
+        }),
     });
 }
 let T = {
@@ -172,7 +198,7 @@ let T = {
         primaryDark: m.primaryDark,
         primaryLight: m.primaryDark,
         activeLight: m.activeLight,
-        premiumGradient: m.premiumGradient
+        premiumGradient: m.premiumGradient,
     },
     S = {
         disconnect: m.disconnect,
@@ -184,15 +210,39 @@ let T = {
         primaryDark: m.primaryDark,
         primaryLight: m.primaryDark,
         activeLight: m.activeLight,
-        premiumGradient: m.premiumGradient
+        premiumGradient: m.premiumGradient,
     };
 function A(e) {
     var t,
-        { ref: n, color: o, caretColor: s, isActive: l = !1, className: g, iconClassName: b, onPopoutClick: v, popoutOpen: A = !1, popoutDisabled: N = !1, isTrayButton: C, applyStyles: R = !1 } = e,
-        P = O(e, ['ref', 'color', 'caretColor', 'isActive', 'className', 'iconClassName', 'onPopoutClick', 'popoutOpen', 'popoutDisabled', 'isTrayButton', 'applyStyles']);
+        {
+            ref: n,
+            color: o,
+            caretColor: s,
+            isActive: l = !1,
+            className: g,
+            iconClassName: b,
+            onPopoutClick: v,
+            popoutOpen: A = !1,
+            popoutDisabled: N = !1,
+            isTrayButton: C,
+            applyStyles: R = !1,
+        } = e,
+        P = O(e, [
+            "ref",
+            "color",
+            "caretColor",
+            "isActive",
+            "className",
+            "iconClassName",
+            "onPopoutClick",
+            "popoutOpen",
+            "popoutDisabled",
+            "isTrayButton",
+            "applyStyles",
+        ]);
     let w = (0, p.Z)(o, l),
         D = null != s ? s : w,
-        L = (0, u.Z)('(max-width: 456px)'),
+        L = (0, u.Z)("(max-width: 456px)"),
         x = i.useRef(null),
         M = i.useContext(f.h9);
     i.useEffect(() => {
@@ -208,26 +258,46 @@ function A(e) {
                 grow: !1,
                 onContextMenu: k,
                 iconClassName: a()(b, m.centerIcon, j && m.fullRegionIcon),
-                className: a()(L || R ? g : null, l && m.active, m.centerButton, S[w], j && m.fullRegionButton, G && m.attachedButton)
-            })
+                className: a()(
+                    L || R ? g : null,
+                    l && m.active,
+                    m.centerButton,
+                    S[w],
+                    j && m.fullRegionButton,
+                    G && m.attachedButton,
+                ),
+            }),
         );
     return L
         ? B
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               ref: n,
-              className: a()(m.attachedCaretButtonContainer, A && m.popoutOpen, g, U && [m.fullRegionDropdownButton, T[w]]),
+              className: a()(
+                  m.attachedCaretButtonContainer,
+                  A && m.popoutOpen,
+                  g,
+                  U && [m.fullRegionDropdownButton, T[w]],
+              ),
               children: [
                   B,
                   null != v
                       ? (0, r.jsx)(_.Z, {
                             children: (0, r.jsx)(c.P3F, {
-                                'aria-label': h.intl.string(h.t.PdRCRk),
+                                "aria-label": h.intl.string(h.t.PdRCRk),
                                 onClick: N ? void 0 : v,
-                                className: a()(m.contextMenuNub, C && m.attachedCaret, S[D], A && [m.popoutOpen, m.active], N && m.disabled),
-                                children: (0, r.jsx)(d.Z, { className: a()(m.contextMenuCaret, A && m.open, N && m.disabled) })
-                            })
+                                className: a()(
+                                    m.contextMenuNub,
+                                    C && m.attachedCaret,
+                                    S[D],
+                                    A && [m.popoutOpen, m.active],
+                                    N && m.disabled,
+                                ),
+                                children: (0, r.jsx)(d.Z, {
+                                    className: a()(m.contextMenuCaret, A && m.open, N && m.disabled),
+                                }),
+                            }),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           });
 }

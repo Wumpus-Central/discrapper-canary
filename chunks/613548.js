@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => G }), n(539854));
+n.d(t, { Z: () => G }), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -36,7 +36,7 @@ function L(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -46,15 +46,15 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 L(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -62,11 +62,11 @@ function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -100,7 +100,7 @@ function U(e) {
                   (0, r.jsx)(
                       u.ua7,
                       {
-                          position: 'bottom',
+                          position: "bottom",
                           color: u.ua7.Colors.GREY,
                           text: w.intl.formatToPlainString(w.t.JjdizM, { username: e.user.username }),
                           children: (o) =>
@@ -111,13 +111,13 @@ function U(e) {
                                       user: e.user,
                                       speaking: !0,
                                       collapsed: !0,
-                                      guildId: n
-                                  })
-                              )
+                                      guildId: n,
+                                  }),
+                              ),
                       },
-                      e.id
-                  )
-              )
+                      e.id,
+                  ),
+              ),
           });
 }
 function G(e) {
@@ -129,21 +129,21 @@ function G(e) {
             voiceParticipantsHidden: b,
             selectedParticipant: S,
             userParticipantCount: A,
-            participantsListOpen: w
+            participantsListOpen: w,
         } = (0, c.cj)(
             [N.Z],
             () => ({
                 selectedParticipant: N.Z.getSelectedParticipant(l),
                 voiceParticipantsHidden: N.Z.getVoiceParticipantsHidden(l),
                 userParticipantCount: N.Z.getUserParticipantCount(l),
-                participantsListOpen: N.Z.getParticipantsListOpen(l)
+                participantsListOpen: N.Z.getParticipantsListOpen(l),
             }),
-            [l]
+            [l],
         ),
         L = t.isGuildVoice() && !n,
-        { hasParticipantsPanel: M } = (0, R.Z)({ location: 'ChannelCallHeaderToolbar' }),
+        { hasParticipantsPanel: M } = (0, R.Z)({ location: "ChannelCallHeaderToolbar" }),
         j = !w && M && (t.isGuildVoice() || t.isGroupDM()),
-        { enabled: G, inInbox: B } = g.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
+        { enabled: G, inInbox: B } = g.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
         Z = [];
     return (
         b &&
@@ -152,20 +152,20 @@ function G(e) {
                     U,
                     {
                         channelId: l,
-                        guildId: t.guild_id
+                        guildId: t.guild_id,
                     },
-                    'current-speaker'
-                )
+                    "current-speaker",
+                ),
             ),
         Z.push(
             (0, r.jsx)(
                 h.Z,
                 {
                     className: D.button,
-                    channelId: l
+                    channelId: l,
                 },
-                'clips-enabled-indicator'
-            )
+                "clips-enabled-indicator",
+            ),
         ),
         (null == S ? void 0 : S.type) === P.fO.STREAM &&
             (Z.push(
@@ -173,10 +173,10 @@ function G(e) {
                     y.Z,
                     {
                         className: D.button,
-                        participant: S
+                        participant: S,
                     },
-                    'warning'
-                )
+                    "warning",
+                ),
             ),
             Z.push(
                 (0, r.jsx)(
@@ -186,10 +186,10 @@ function G(e) {
                         className: D.button,
                         participant: S,
                         showQuality: !0,
-                        premiumIndicator: !1
+                        premiumIndicator: !1,
                     },
-                    'live-indicator'
-                )
+                    "live-indicator",
+                ),
             )),
         (null == S ? void 0 : S.type) === P.fO.USER &&
             Z.push(
@@ -197,10 +197,10 @@ function G(e) {
                     O.Z,
                     {
                         className: D.button,
-                        userId: S.id
+                        userId: S.id,
                     },
-                    'video-warning'
-                )
+                    "video-warning",
+                ),
             ),
         b &&
             !M &&
@@ -209,7 +209,7 @@ function G(e) {
                     u.yRy,
                     {
                         targetElementRef: o,
-                        position: 'bottom',
+                        position: "bottom",
                         renderPopout: () => (0, r.jsx)(v.Z, { children: (0, r.jsx)(C.Z, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
@@ -219,26 +219,26 @@ function G(e) {
                                     buttonRef: o,
                                     isActive: n,
                                     count: A,
-                                    key: 'call-members',
-                                    className: D.button
-                                })
+                                    key: "call-members",
+                                    className: D.button,
+                                }),
                             );
-                        }
+                        },
                     },
-                    'call-members-popout'
-                )
+                    "call-members-popout",
+                ),
             ),
-        G && !B && Z.push((0, r.jsx)(E.Z, { className: D.button }, 'for-later')),
+        G && !B && Z.push((0, r.jsx)(E.Z, { className: D.button }, "for-later")),
         j &&
             Z.push(
                 (0, r.jsx)(
                     T.Z,
                     {
                         className: a()(D.button, { [D.lastButton]: n }),
-                        onClick: () => d.Z.toggleParticipantsList(t.id, !w)
+                        onClick: () => d.Z.toggleParticipantsList(t.id, !w),
                     },
-                    'participants-list-button'
-                )
+                    "participants-list-button",
+                ),
             ),
         L &&
             Z.push(
@@ -247,14 +247,14 @@ function G(e) {
                     {
                         channelId: t.id,
                         className: a()(D.button, { [D.lastButton]: w }),
-                        disabled: n
+                        disabled: n,
                     },
-                    'chat-spacer'
-                )
+                    "chat-spacer",
+                ),
             ),
         (0, r.jsx)(_.Gt, {
             value: s,
-            children: Z
+            children: Z,
         })
     );
 }

@@ -18,6 +18,6 @@ function l(t) {
         onContinue: l,
         onError: d,
         onClose: u,
-        redirectUri: _
+        redirectUri: _,
     });
 }

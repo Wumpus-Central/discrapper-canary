@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r,
     i,
     l,
@@ -14,7 +14,7 @@ let f = [],
     g = new Set();
 function m() {
     let e = p.Z.getPrivateChannelIds().filter((e) => d.ZP.getMentionCount(e) > 0);
-    return (e.length > 20 && (e.length = 20), !(0, c.EF)(e, f) && ((f = e), (g = new Set(e)), !0));
+    return e.length > 20 && (e.length = 20), !(0, c.EF)(e, f) && ((f = e), (g = new Set(e)), !0);
 }
 function b() {
     return m();
@@ -32,15 +32,15 @@ class _ extends (r = o.ZP.Store) {
         return f;
     }
 }
-((l = 'PrivateChannelReadStateStore'),
-    (i = 'displayName') in _
+(l = "PrivateChannelReadStateStore"),
+    (i = "displayName") in _
         ? Object.defineProperty(_, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (_[i] = l));
+        : (_[i] = l);
 let y = new _(s.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: b,
@@ -53,7 +53,7 @@ let y = new _(s.Z, {
     },
     CHANNEL_DELETE: function (e) {
         let {
-            channel: { id: t }
+            channel: { id: t },
         } = e;
         return !!g.has(t) && m();
     },
@@ -63,7 +63,7 @@ let y = new _(s.Z, {
     },
     CHANNEL_CREATE: function (e) {
         let {
-                channel: { id: t }
+                channel: { id: t },
             } = e,
             n = u.Z.getChannel(t);
         return null != n && !!(0, a.hv)(n.type) && m();
@@ -76,5 +76,5 @@ let y = new _(s.Z, {
             null != t && (0, a.hv)(t.type) && (n = !0);
         }
         return !!n && m();
-    }
+    },
 });

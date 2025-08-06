@@ -18,21 +18,21 @@ let _ = (e) => {
         f = (0, i.e7)([u.Z], () => u.Z.getChannel(n), [n]),
         v = l.useMemo(() => p.ZP.getName(null == f ? void 0 : f.guild_id, null == f ? void 0 : f.id, t), [f, t]),
         j = l.useCallback(() => {
-            (o.ZP.trackWithMetadata(g.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
+            o.ZP.trackWithMetadata(g.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
-                report_id: _
+                report_id: _,
             }),
-                s.Z.blockUser(t.id, { location: 'ReportMenuBlockUser-iOS' }).then(() => {
+                s.Z.blockUser(t.id, { location: "ReportMenuBlockUser-iOS" }).then(() => {
                     c.Z.showBlockSuccessToast(t.id, n);
-                }));
+                });
         }, [t, _, n]);
     return (0, r.jsx)(d.ZP, {
-        title: x.intl.formatToPlainString(x.t['Q1o/f3'], { username: v }),
+        title: x.intl.formatToPlainString(x.t["Q1o/f3"], { username: v }),
         description: x.intl.string(x.t.G08MKi),
-        buttonText: h ? x.intl.string(x.t.ot2tSk) : x.intl.string(x.t['l+7PZW']),
+        buttonText: h ? x.intl.string(x.t.ot2tSk) : x.intl.string(x.t["l+7PZW"]),
         buttonDisabled: h,
         onButtonPress: j,
-        buttonColor: 'application' === b.name && h ? a.zx.Colors.WHITE : a.zx.Colors.RED,
-        buttonLook: 'application' === b.name && h ? a.zx.Looks.LINK : a.zx.Looks.FILLED
+        buttonColor: "application" === b.name && h ? a.zx.Colors.WHITE : a.zx.Colors.RED,
+        buttonLook: "application" === b.name && h ? a.zx.Looks.LINK : a.zx.Looks.FILLED,
     });
 };

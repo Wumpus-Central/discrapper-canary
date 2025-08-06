@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(361932), n(187205));
+n.d(t, { Z: () => N }), n(361932), n(187205);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -25,27 +25,27 @@ var i = n(120356),
 function S(e) {
     let { isOneStepCheckout: t, headerText: n, step: i, filteredBreadcrumbs: o } = e;
     if (t)
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: E.oneStepCheckoutTextWrapper,
             children: (0, r.jsx)(s.X6q, {
-                variant: 'heading-md/bold',
-                children: n
-            })
+                variant: "heading-md/bold",
+                children: n,
+            }),
         });
     let a = o.length > 1;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: E.headerTextWrapper,
         children: [
             (0, r.jsx)(s.Text, {
-                variant: 'text-lg/semibold',
-                children: n
+                variant: "text-lg/semibold",
+                children: n,
             }),
             a &&
                 (0, r.jsx)(f.Z, {
                     activeId: i,
-                    breadcrumbs: o
-                })
-        ]
+                    breadcrumbs: o,
+                }),
+        ],
     });
 }
 function A(e) {
@@ -54,27 +54,35 @@ function A(e) {
         i = t ? v : y;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 src: n,
-                alt: '',
-                className: E.bigCloud
+                alt: "",
+                className: E.bigCloud,
             }),
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 src: i,
-                alt: '',
-                className: E.mediumCloud
+                alt: "",
+                className: E.mediumCloud,
             }),
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 src: i,
-                alt: '',
-                className: E.smallCloud
-            })
-        ]
+                alt: "",
+                className: E.smallCloud,
+            }),
+        ],
     });
 }
 let N = function (e) {
     var t, n, i;
-    let { hideCloseButton: f = !1, hideCloseOnFullScreen: b, onClose: y, upgradeToPremiumType: O, isEligibleForTrial: v = !1, showTrialBadge: N = !1, showDiscountBadge: C = !1 } = e,
+    let {
+            hideCloseButton: f = !1,
+            hideCloseOnFullScreen: b,
+            onClose: y,
+            upgradeToPremiumType: O,
+            isEligibleForTrial: v = !1,
+            showTrialBadge: N = !1,
+            showDiscountBadge: C = !1,
+        } = e,
         R = (0, s.apv)((0, l.ZP)()),
         P = O === g.p9.TIER_2,
         w = (0, d.Fv)(v),
@@ -91,7 +99,7 @@ let N = function (e) {
             ? {
                   id: e.id,
                   label: t,
-                  sectionHeaderText: n
+                  sectionHeaderText: n,
               }
             : [];
     });
@@ -101,37 +109,42 @@ let N = function (e) {
                 n = e.id === u.h8.ADD_PAYMENT_STEPS && !U.current;
             return !v || (v && (t || n));
         })).find((e) => e.id === k),
-        Z = null != (i = null == B || null == (n = B.sectionHeaderText) ? void 0 : n.call(B)) ? i : null == B ? void 0 : B.label,
+        Z =
+            null != (i = null == B || null == (n = B.sectionHeaderText) ? void 0 : n.call(B))
+                ? i
+                : null == B
+                  ? void 0
+                  : B.label,
         F = null != Z && null != k,
         V = w && F && k === u.h8.REVIEW;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: E.container,
         children: [
             (0, r.jsxs)(a.$, {
-                color: P ? 'nitro-pink' : 'nitro-green',
+                color: P ? "nitro-pink" : "nitro-green",
                 className: o()(E.headerContainer, { [E.containerBottomPadding]: !F }),
                 children: [
                     (0, r.jsx)(A, { isTier2: P }),
                     !f &&
                         (0, r.jsx)(s.olH, {
-                            'data-migration-pending': !0,
+                            "data-migration-pending": !0,
                             hideOnFullscreen: b,
                             onClick: y,
-                            className: E.closeButtonPosition
+                            className: E.closeButtonPosition,
                         }),
-                    (0, r.jsx)('img', {
+                    (0, r.jsx)("img", {
                         src: x,
-                        alt: '',
-                        className: V ? E.bigWumpus : E.wumpus
+                        alt: "",
+                        className: V ? E.bigWumpus : E.wumpus,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: E.textContainer,
                         children: (0, r.jsx)(M, {
-                            color: R ? 'black' : 'white',
-                            className: E.wordmark
-                        })
-                    })
-                ]
+                            color: R ? "black" : "white",
+                            className: E.wordmark,
+                        }),
+                    }),
+                ],
             }),
             (N || C) && (0, r.jsx)(m.Z, { discountAmount: L }),
             F &&
@@ -139,13 +152,13 @@ let N = function (e) {
                     isOneStepCheckout: w,
                     headerText: Z,
                     step: k,
-                    filteredBreadcrumbs: G
+                    filteredBreadcrumbs: G,
                 }),
             V &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: E.bodyGradientContainer,
-                    children: (0, r.jsx)('div', { className: E.bodyGradient })
-                })
-        ]
+                    children: (0, r.jsx)("div", { className: E.bodyGradient }),
+                }),
+        ],
     });
 };

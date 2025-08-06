@@ -5,6 +5,6 @@ function o(n) {
         function () {
             return n.hooks.dropTarget();
         },
-        [n]
+        [n],
     );
 }

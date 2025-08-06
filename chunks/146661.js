@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(147913),
     i = n(430824),
     o = n(70956),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,34 +21,34 @@ function c(e, t, n) {
 let u = 0;
 class d extends r.Z {
     constructor(...e) {
-        (super(...e),
-            c(this, 'actions', {
+        super(...e),
+            c(this, "actions", {
                 POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
-                IDLE: () => this.handleIdleChange()
+                IDLE: () => this.handleIdleChange(),
             }),
-            c(this, 'handleConnectionOpen', (e) => {
-                (this._attemptDeadchatPrompt(), this._triggerGamingStatsSetupExperiment());
+            c(this, "handleConnectionOpen", (e) => {
+                this._attemptDeadchatPrompt(), this._triggerGamingStatsSetupExperiment();
             }),
-            c(this, 'handleIdleChange', () => {
+            c(this, "handleIdleChange", () => {
                 Date.now() - u > o.Z.Millis.HOUR && this._attemptDeadchatPrompt();
             }),
-            c(this, '_attemptDeadchatPrompt', () => {
+            c(this, "_attemptDeadchatPrompt", () => {
                 let e = i.Z.getGuildIds().filter(
                     (e) =>
                         l.Z.getCurrentConfig({
                             guildId: e,
-                            location: 'manager'
-                        }).triggerDeadchat
+                            location: "manager",
+                        }).triggerDeadchat,
                 );
                 e.length > 0 && ((u = Date.now()), (0, a.N7)(e));
             }),
-            c(this, '_triggerGamingStatsSetupExperiment', () => {
+            c(this, "_triggerGamingStatsSetupExperiment", () => {
                 for (let e of i.Z.getGuildIds())
                     s.g.trackExposure({
                         guildId: e,
-                        location: 'manager'
+                        location: "manager",
                     });
-            }));
+            });
     }
 }
 let f = new d();

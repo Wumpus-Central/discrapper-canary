@@ -20,36 +20,36 @@ class E extends i.Component {
     renderReasons(e, t, n) {
         return 0 === e.length && 0 === t.length
             ? null
-            : (0, r.jsx)('div', {
+            : (0, r.jsx)("div", {
                   className: O.section,
-                  children: (0, r.jsxs)('div', {
+                  children: (0, r.jsxs)("div", {
                       className: O.sectionContent,
                       children: [
                           e.map((e) =>
                               (0, r.jsx)(
-                                  'div',
+                                  "div",
                                   {
                                       className: O.unit,
                                       children: (0, r.jsx)(m.Z, {
                                           reason: e,
-                                          hidePersonalInformation: n
-                                      })
+                                          hidePersonalInformation: n,
+                                      }),
                                   },
-                                  e.type
-                              )
+                                  e.type,
+                              ),
                           ),
                           t.map((e) =>
                               (0, r.jsx)(
-                                  'div',
+                                  "div",
                                   {
                                       className: O.unit,
-                                      children: (0, r.jsx)(s.Z, { reason: e })
+                                      children: (0, r.jsx)(s.Z, { reason: e }),
                                   },
-                                  e.type
-                              )
-                          )
-                      ]
-                  })
+                                  e.type,
+                              ),
+                          ),
+                      ],
+                  }),
               });
     }
     getReviewToRender() {
@@ -57,29 +57,35 @@ class E extends i.Component {
         return null != e.staffNotes
             ? {
                   type: b.Z.Types.STAFF_NOTES,
-                  staffNotes: e.staffNotes
+                  staffNotes: e.staffNotes,
               }
             : null;
     }
     render() {
-        let { socialReasons: e, nonSocialReasons: t, storeListing: n, hidePersonalInformation: i, className: l } = this.props;
+        let {
+            socialReasons: e,
+            nonSocialReasons: t,
+            storeListing: n,
+            hidePersonalInformation: i,
+            className: l,
+        } = this.props;
         if (0 === e.length && 0 === t.length && null == n.staffNotes) return null;
         let o = this.getReviewToRender();
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: a()(O.root, l),
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: O.header,
-                    children: _.intl.string(_.t.qABFpa)
+                    children: _.intl.string(_.t.qABFpa),
                 }),
                 this.renderReasons(e, t, i),
                 null != o
                     ? (0, r.jsx)(b.Z, {
                           data: o,
-                          className: O.review
+                          className: O.review,
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     }
 }
@@ -88,6 +94,6 @@ let y = o.ZP.connectStores([h.Z, d.default, f.Z, c.Z, p.Z, u.Z], (e) => {
     return {
         socialReasons: (0, g.Gg)(t.id, h.Z, d.default, c.Z, p.Z),
         nonSocialReasons: (0, g.Ww)(t.id, h.Z, f.Z),
-        hidePersonalInformation: u.Z.hidePersonalInformation
+        hidePersonalInformation: u.Z.hidePersonalInformation,
     };
 })(E);

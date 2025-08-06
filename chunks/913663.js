@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,16 +28,16 @@ function d(e) {
     null != r[t] && delete r[t];
 }
 function f() {
-    ((l = {}), (c = {}));
+    (l = {}), (c = {});
 }
 class _ extends (r = i.ZP.Store) {
     getStickerPreview(e, t) {
         return (t === a.d.FirstThreadMessage ? c : l)[e];
     }
 }
-s(_, 'displayName', 'StickerMessagePreviewStore');
+s(_, "displayName", "StickerMessagePreviewStore");
 let p = new _(o.Z, {
     ADD_STICKER_PREVIEW: u,
     CLEAR_STICKER_PREVIEW: d,
-    LOGOUT: f
+    LOGOUT: f,
 });

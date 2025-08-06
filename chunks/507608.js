@@ -1,11 +1,11 @@
-(t.d(n, {
+t.d(n, {
     AF: () => U,
     hd: () => z,
-    zz: () => B
+    zz: () => B,
 }),
     t(388685),
     t(953529),
-    t(781311));
+    t(781311);
 var r = t(255367),
     i = t(73800),
     l = t(905322),
@@ -43,24 +43,24 @@ function A(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (n) {
                 var r;
-                ((r = t[n]),
+                (r = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[n] = r));
-            }));
+                        : (e[n] = r);
+            });
     }
     return e;
 }
@@ -83,8 +83,8 @@ function C(e, n) {
     );
 }
 let F = new Intl.DateTimeFormat(M.intl.currentLocale, {
-    month: 'short',
-    day: 'numeric'
+    month: "short",
+    day: "numeric",
 });
 function U(e) {
     let { app: n, guildId: t, subscriptions: s, otps: o } = e,
@@ -97,7 +97,7 @@ function U(e) {
                 id: m.id,
                 banner: m.banner,
                 size: 1024,
-                canAnimate: !1
+                canAnimate: !1,
             });
             return null != n && null != (e = w.Z.toURLSafe(n)) ? e : void 0;
         }, [m]),
@@ -108,7 +108,7 @@ function U(e) {
                 id: m.id,
                 banner: m.banner,
                 size: 1024,
-                canAnimate: !0
+                canAnimate: !0,
             });
             return null != n && null != (e = w.Z.toURLSafe(n)) ? e : void 0;
         }, [m]),
@@ -121,10 +121,10 @@ function U(e) {
                 O.default.track(D.rMx.VIEW_PREMIUM_APP_STOREFRONT, {
                     application_id: n.id,
                     sku_ids: j,
-                    location_stack: f
+                    location_stack: f,
                 });
         }, [f, n.id, j]),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: _.wrapper,
             children: [
                 (0, r.jsx)(l.j, {
@@ -132,28 +132,28 @@ function U(e) {
                     iconSrc: a,
                     backgroundSrc: b,
                     animatedBackgroundSrc: v,
-                    prefersReducedMotion: g
+                    prefersReducedMotion: g,
                 }),
                 (0, r.jsx)(L, {
                     appId: n.id,
                     subscriptions: s,
                     otps: o,
-                    guildId: t
-                })
-            ]
+                    guildId: t,
+                }),
+            ],
         })
     );
 }
 function L(e) {
     let { appId: n, subscriptions: t, otps: i, guildId: l } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: _.productsContainer,
         children: [
             t.length > 0 &&
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(R.r, { subscriptions: t }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: _.productSection,
                             children: t.map((e) =>
                                 (0, r.jsx)(
@@ -162,37 +162,37 @@ function L(e) {
                                         appId: n,
                                         guildId: l,
                                         listing: e,
-                                        subscriptionType: (0, v.KW)(e.skuFlags) ? 'user' : 'guild'
+                                        subscriptionType: (0, v.KW)(e.skuFlags) ? "user" : "guild",
                                     },
-                                    e.id
-                                )
-                            )
-                        })
-                    ]
+                                    e.id,
+                                ),
+                            ),
+                        }),
+                    ],
                 }),
             i.length > 0 &&
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(a.X6q, {
-                            variant: 'heading-lg/semibold',
-                            children: M.intl.string(M.t.yUGTs7)
+                            variant: "heading-lg/semibold",
+                            children: M.intl.string(M.t.yUGTs7),
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: _.productSection,
                             children: i.map((e) =>
                                 (0, r.jsx)(
                                     z,
                                     {
                                         skuId: e.skuId,
-                                        appId: n
+                                        appId: n,
                                     },
-                                    e.id
-                                )
-                            )
-                        })
-                    ]
-                })
-        ]
+                                    e.id,
+                                ),
+                            ),
+                        }),
+                    ],
+                }),
+        ],
     });
 }
 function B(e) {
@@ -207,17 +207,20 @@ function B(e) {
         N = null == w ? void 0 : w.subscription,
         E = (0, b.cr)(S, c),
         R = null != N && (0, v.Jf)(N, I),
-        U = null != E && (null == w || null == (n = w.subscriptionPlan) ? void 0 : n.id) !== (null == E ? void 0 : E.subscriptionPlan.id),
+        U =
+            null != E &&
+            (null == w || null == (n = w.subscriptionPlan) ? void 0 : n.id) !==
+                (null == E ? void 0 : E.subscriptionPlan.id),
         L = !1 === R && (null == E ? void 0 : E.subscriptionPlan.skuId) === d.skuId,
         B = (null == w ? void 0 : w.subscriptionPlan.skuId) === d.skuId,
         {
             openModal: z,
             subscriptionPurchaseButtonState: G,
-            isGuildSubscribed: q
+            isGuildSubscribed: q,
         } = (0, h.Z)({
             skuId: d.skuId,
             initialSubscribeForGuild: c,
-            analyticsLocation: D.Sbl.APP_STOREFRONT
+            analyticsLocation: D.Sbl.APP_STOREFRONT,
         }),
         K = i.useMemo(() => {
             var e;
@@ -227,7 +230,7 @@ function B(e) {
                       id: e.id,
                       title: e.name,
                       description: e.description,
-                      icon: (0, f.n)(s, e.icon)
+                      icon: (0, f.n)(s, e.icon),
                   }));
         }, [s, d.benefits]),
         V = i.useMemo(() => (null != d.thumbnail ? (0, Z.q)(s, d.thumbnail, 256) : void 0), [s, d.thumbnail]),
@@ -240,16 +243,16 @@ function B(e) {
                         subscriptionType: p,
                         skuId: d.skuId,
                         subscriptionPlan: O,
-                        state: G
-                    })
+                        state: G,
+                    }),
                 ),
-            [s, p, d.skuId, O, G]
+            [s, p, d.skuId, O, G],
         ),
         X = i.useMemo(() => {
             if (U && (null == N ? void 0 : N.currentPeriodEnd) != null) {
                 let e = F.format(null == N ? void 0 : N.currentPeriodEnd);
                 if (B) return M.intl.formatToPlainString(M.t.EV2lZ2, { date: e });
-                if (L) return M.intl.formatToPlainString(M.t['2w6+ND'], { date: e });
+                if (L) return M.intl.formatToPlainString(M.t["2w6+ND"], { date: e });
             }
             if (q)
                 return (0, r.jsxs)(r.Fragment, {
@@ -257,19 +260,19 @@ function B(e) {
                         null != k &&
                             (0, r.jsx)(m.Z, {
                                 guild: k,
-                                size: m.Z.Sizes.MINI
+                                size: m.Z.Sizes.MINI,
                             }),
-                        M.intl.string(M.t.l8ufqK)
-                    ]
+                        M.intl.string(M.t.l8ufqK),
+                    ],
                 });
         }, [null == N ? void 0 : N.currentPeriodEnd, k, U, B, q, L]),
         H =
             null != X
                 ? (0, r.jsx)(a.Text, {
-                      color: 'header-secondary',
-                      variant: 'text-sm/normal',
+                      color: "header-secondary",
+                      variant: "text-sm/normal",
                       className: _.subscriptionCardSubtext,
-                      children: X
+                      children: X,
                   })
                 : void 0;
     return (0, r.jsx)(o.Uj, {
@@ -287,10 +290,10 @@ function B(e) {
                           o.Gm,
                           {
                               description: e.title,
-                              icon: e.icon
+                              icon: e.icon,
                           },
-                          e.id
-                      )
+                          e.id,
+                      ),
                   )
                 : void 0,
         onDetails:
@@ -308,14 +311,14 @@ function B(e) {
                                             appId: s,
                                             subscriptionType: p,
                                             skuId: d.skuId,
-                                            guildId: c
+                                            guildId: c,
                                         },
-                                        n
-                                    )
+                                        n,
+                                    ),
                                 );
                         });
                     }
-                  : void 0
+                  : void 0,
     });
 }
 function z(e) {
@@ -326,11 +329,15 @@ function z(e) {
         f = (0, u.e7)([y.Z], () => y.Z.get(c), [c]),
         h = (0, E.M)(c);
     if (null == f) return null;
-    let x = null != (i = f.name) ? i : '',
+    let x = null != (i = f.name) ? i : "",
         O = null != (l = null == g || null == (n = g.description) ? void 0 : n.trim()) ? l : void 0,
-        I = (null == g ? void 0 : g.headerBackground) != null && null != (o = w.Z.toURLSafe((0, k._W)(m, g.headerBackground, 256))) ? o : void 0,
+        I =
+            (null == g ? void 0 : g.headerBackground) != null &&
+            null != (o = w.Z.toURLSafe((0, k._W)(m, g.headerBackground, 256)))
+                ? o
+                : void 0,
         N = f.type === D.epS.DURABLE && h,
-        Z = f.type === D.epS.DURABLE ? (N ? M.intl.string(M.t.bm82mp) : M.intl.string(M.t['6gprwc'])) : void 0,
+        Z = f.type === D.epS.DURABLE ? (N ? M.intl.string(M.t.bm82mp) : M.intl.string(M.t["6gprwc"])) : void 0,
         { price: R } = f;
     return null == R
         ? null
@@ -353,10 +360,10 @@ function z(e) {
                                           A(
                                               {
                                                   appId: m,
-                                                  skuId: c
+                                                  skuId: c,
                                               },
-                                              n
-                                          )
+                                              n,
+                                          ),
                                       );
                               });
                           },
@@ -365,15 +372,15 @@ function z(e) {
                       T.YG,
                       C(A({}, e), {
                           appId: m,
-                          sku: f
-                      })
+                          sku: f,
+                      }),
                   ),
               onPurchase: () => {
                   (0, j.r)({
                       appId: m,
                       skuId: f.id,
-                      analyticsLocations: v
+                      analyticsLocations: v,
                   });
-              }
+              },
           });
 }

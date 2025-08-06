@@ -1,4 +1,4 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         loadVideoQuestModal: () => H,
         maybeShowSurveyForQuest: () => V,
@@ -10,8 +10,8 @@
         openQuestOrbsRewardModal: () => G,
         openQuestsNitroRewardModal: () => j,
         openQuestsRewardCodeModal: () => k,
-        openVideoQuestModal: () => Y
-    }));
+        openVideoQuestModal: () => Y,
+    });
 var r = n(255367);
 n(73800);
 var i = n(772848),
@@ -47,7 +47,7 @@ function P(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -57,15 +57,15 @@ function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 P(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -73,11 +73,11 @@ function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -92,12 +92,19 @@ function L(e, t) {
         e
     );
 }
-let x = 'in-app',
-    M = 'Discord Widget';
+let x = "in-app",
+    M = "Discord Widget";
 function k(e) {
-    let { questId: t, questContent: i, questContentPosition: o, preview: a = !1, previewQuest: l = null, sourceQuestContent: c } = e;
+    let {
+        questId: t,
+        questContent: i,
+        questContentPosition: o,
+        preview: a = !1,
+        previewQuest: l = null,
+        sourceQuestContent: c,
+    } = e;
     (0, s.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('27458'), n.e('37082'), n.e('61643')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e("27458"), n.e("37082"), n.e("61643")]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(
                 e,
@@ -107,8 +114,8 @@ function k(e) {
                     questContent: i,
                     preview: a,
                     previewQuest: l,
-                    sourceQuestContent: c
-                })
+                    sourceQuestContent: c,
+                }),
             );
     });
 }
@@ -116,79 +123,79 @@ function j(e, t) {
     var i;
     (null == (i = e.userStatus) ? void 0 : i.claimedAt) == null
         ? (0, s.ZDy)(async () => {
-              let { default: i } = await Promise.all([n.e('8016'), n.e('58011')]).then(n.bind(n, 824393));
+              let { default: i } = await Promise.all([n.e("8016"), n.e("58011")]).then(n.bind(n, 824393));
               return (n) =>
                   (0, r.jsx)(
                       i,
                       L(w({}, n), {
                           quest: e,
-                          location: t
-                      })
+                          location: t,
+                      }),
                   );
           })
         : (0, u.$)();
 }
 function U(e, t, i) {
     (0, s.ZDy)(async () => {
-        let { default: o } = await n.e('88938').then(n.bind(n, 390238));
+        let { default: o } = await n.e("88938").then(n.bind(n, 390238));
         return (n) =>
             (0, r.jsx)(
                 o,
                 L(w({}, n), {
                     quest: e,
                     location: t,
-                    sourceQuestContent: i
-                })
+                    sourceQuestContent: i,
+                }),
             );
     });
 }
 function G(e, t) {
     (0, s.ZDy)(async () => {
-        let { default: i } = await Promise.all([n.e('66317'), n.e('94784')]).then(n.bind(n, 383294));
+        let { default: i } = await Promise.all([n.e("66317"), n.e("94784")]).then(n.bind(n, 383294));
         return (n) =>
             (0, r.jsx)(
                 i,
                 L(w({}, n), {
                     quest: e,
-                    location: t
-                })
+                    location: t,
+                }),
             );
     });
 }
 function B(e, t, i) {
     (0, s.ZDy)(async () => {
-        let { default: o } = await n.e('58641').then(n.bind(n, 828664));
+        let { default: o } = await n.e("58641").then(n.bind(n, 828664));
         return (n) =>
             (0, r.jsx)(
                 o,
                 L(w({}, n), {
                     quest: e,
                     location: t,
-                    sourceQuestContent: i
-                })
+                    sourceQuestContent: i,
+                }),
             );
     });
 }
 function Z(e, t) {
-    ((0, h._3)({
+    (0, h._3)({
         questId: e.id,
         questContent: t.content,
         questContentPosition: t.position,
         questContentCTA: t.ctaContent,
         impressionId: t.impressionId,
-        sourceQuestContent: t.sourceQuestContent
+        sourceQuestContent: t.sourceQuestContent,
     }),
         (0, s.ZDy)(async () => {
-            let { default: i } = await n.e('4266').then(n.bind(n, 316210));
+            let { default: i } = await n.e("4266").then(n.bind(n, 316210));
             return (n) =>
                 (0, r.jsx)(
                     i,
                     L(w({}, n), {
                         questContent: t.content,
-                        quest: e
-                    })
+                        quest: e,
+                    }),
                 );
-        }));
+        });
 }
 function F() {
     let { fromContent: e, questId: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -196,35 +203,47 @@ function F() {
         utmSourceCurrent: M,
         utmMediumCurrent: x,
         utmCampaignCurrent: t,
-        utmContentCurrent: Object.keys(b.jn).find((t) => b.jn[t] === e)
+        utmContentCurrent: Object.keys(b.jn).find((t) => b.jn[t] === e),
     });
-    let n = null != t ? '#'.concat(t) : '';
-    (c.Z.setState({ selectedTab: R.GlobalDiscoveryTab.QUESTS }), (0, l.xf)(), (0, d.uL)(C.Z5c.QUEST_HOME + n));
+    let n = null != t ? "#".concat(t) : "";
+    c.Z.setState({ selectedTab: R.GlobalDiscoveryTab.QUESTS }), (0, l.xf)(), (0, d.uL)(C.Z5c.QUEST_HOME + n);
 }
 function V(e) {
     let t = (0, I.T)({ quest: e }),
         n = { location: N.dr.QUESTS_BAR };
     if (!(0, v.j)(n)) return;
     let r = (0, T.Z)({ entityName: e.config.messages.gameTitle });
-    (t.log('Showing survey '.concat(r.id)),
+    t.log("Showing survey ".concat(r.id)),
         (0, S.C)({
             questId: e.id,
-            survey: r
-        }));
+            survey: r,
+        });
 }
 function H() {
-    return Promise.all([n.e('66816'), n.e('27458'), n.e('32249'), n.e('60333')]).then(n.bind(n, 536687));
+    return Promise.all([n.e("66816"), n.e("27458"), n.e("32249"), n.e("60333")]).then(n.bind(n, 536687));
 }
 function Y(e) {
     var t;
-    let { quest: n, questContent: o, sourceQuestContent: a, sourceQuestContentCTA: l, autoplay: c = !0, skipEnrollmentCheck: u = !1 } = e,
+    let {
+            quest: n,
+            questContent: o,
+            sourceQuestContent: a,
+            sourceQuestContentCTA: l,
+            autoplay: c = !0,
+            skipEnrollmentCheck: u = !1,
+        } = e,
         d = (0, i.Z)();
-    if ((0, O.D)(N.dr.VIDEO_MODAL) && !u && (null == (t = n.userStatus) ? void 0 : t.enrolledAt) == null && !(0, m.zi)(n)) {
+    if (
+        (0, O.D)(N.dr.VIDEO_MODAL) &&
+        !u &&
+        (null == (t = n.userStatus) ? void 0 : t.enrolledAt) == null &&
+        !(0, m.zi)(n)
+    ) {
         E.Z.isEnrolling(n.id) ||
             (0, g.AH)(n.id, {
                 questContent: o,
                 questContentCTA: h.jZ.ACCEPT_QUEST,
-                sourceQuestContent: a
+                sourceQuestContent: a,
             });
         let e = y.ZP.getState().getVideoProgress(n.id);
         null != e &&
@@ -234,7 +253,7 @@ function Y(e) {
                 quest_id: n.id,
                 source_quest_content: (0, h._b)(a),
                 source_quest_content_cta: l,
-                video_session_id: d
+                video_session_id: d,
             }));
     }
     (0, s.ZDy)(
@@ -248,8 +267,8 @@ function Y(e) {
                         questId: n.id,
                         autoplay: c,
                         videoSessionId: d,
-                        sourceQuestContent: a
-                    })
+                        sourceQuestContent: a,
+                    }),
                 );
         },
         {
@@ -259,41 +278,41 @@ function Y(e) {
                 (0, m.Mo)({
                     questId: n.id,
                     sourceQuestContent: a,
-                    videoSessionId: d
-                })
-        }
+                    videoSessionId: d,
+                }),
+        },
     );
 }
 function W(e) {
     var t;
     let n = null == (t = platform.os) ? void 0 : t.family,
-        r = 'quest';
-    if ('Android' === n || 'iOS' === n) {
+        r = "quest";
+    if ("Android" === n || "iOS" === n) {
         let t = f.default.getFingerprint(),
             n = (0, o.WS)(),
-            i = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/quests/').concat(e);
+            i = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, "/quests/").concat(e);
         return (0, o.ZP)(i, {
             utmSource: r,
             fingerprint: t,
-            attemptId: n
+            attemptId: n,
         });
     }
-    return 'discord://';
+    return "discord://";
 }
 function K(e) {
     let t = W(e),
         n = (0, o.zS)(t);
-    (null != n &&
+    null != n &&
         _.default.track(C.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, a.K)(n.fingerprint),
             attempt_id: n.attemptId,
-            source: n.utmSource
+            source: n.utmSource,
         }),
         p.Z.launch(t, (t) => {
             t ||
                 (0, d.dL)({
                     pathname: C.Z5c.QUEST_HOME,
-                    hash: e
+                    hash: e,
                 });
-        }));
+        });
 }

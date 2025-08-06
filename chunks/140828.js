@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,7 +23,7 @@ class l {
     _initStats() {
         let e = {
             effectiveConnectionSpeedBuckets: {},
-            connectionTypeBuckets: {}
+            connectionTypeBuckets: {},
         };
         return (
             Object.values(o.IWh).forEach((t) => {
@@ -49,7 +49,7 @@ class l {
             duration_effective_connection_speed_3g: s(e.effectiveConnectionSpeedBuckets[o.IyS.THREE_G]),
             duration_effective_connection_speed_4g: s(e.effectiveConnectionSpeedBuckets[o.IyS.FOUR_G]),
             duration_effective_connection_speed_5g: s(e.effectiveConnectionSpeedBuckets[o.IyS.FIVE_G]),
-            duration_effective_connection_speed_unknown: s(e.effectiveConnectionSpeedBuckets[o.IyS.UNKNOWN])
+            duration_effective_connection_speed_unknown: s(e.effectiveConnectionSpeedBuckets[o.IyS.UNKNOWN]),
         };
     }
     incrementNetworkStats(e) {
@@ -57,9 +57,15 @@ class l {
             n = i.Z.getEffectiveConnectionSpeed();
         n === o.IyS.SLOW_TWO_G && (n = o.IyS.TWO_G);
         let r = i.Z.getType();
-        (r === o.IWh.WIMAX && (r = o.IWh.WIFI), (this._networkStats.effectiveConnectionSpeedBuckets[n] += t), (this._networkStats.connectionTypeBuckets[r] += t), (this._lastSampleTimestamp = e));
+        r === o.IWh.WIMAX && (r = o.IWh.WIFI),
+            (this._networkStats.effectiveConnectionSpeedBuckets[n] += t),
+            (this._networkStats.connectionTypeBuckets[r] += t),
+            (this._lastSampleTimestamp = e);
     }
     constructor() {
-        (a(this, '_networkStats', void 0), a(this, '_lastSampleTimestamp', void 0), (this._networkStats = this._initStats()), (this._lastSampleTimestamp = (0, r.zO)()));
+        a(this, "_networkStats", void 0),
+            a(this, "_lastSampleTimestamp", void 0),
+            (this._networkStats = this._initStats()),
+            (this._lastSampleTimestamp = (0, r.zO)());
     }
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(539854), n(388685));
+n.d(t, { Z: () => p }), n(539854), n(388685);
 var r = n(275726),
     i = n(135938),
     o = n(55935),
@@ -22,7 +22,7 @@ function f(e, t, n, r) {
             ? ((i = {
                   type: n,
                   content: [],
-                  key: t.id
+                  key: t.id,
               }),
               e.push(i))
             : (o = (i = r).content[i.content.length - 1]),
@@ -30,12 +30,12 @@ function f(e, t, n, r) {
     );
 }
 function _(e, t, n) {
-    (n.isFirstMessageInForumPost(t) ||
+    n.isFirstMessageInForumPost(t) ||
         e.content.push({
             type: u.ys_.DIVIDER,
-            unreadId: n.id
+            unreadId: n.id,
         }),
-        (e.hasUnread = !0));
+        (e.hasUnread = !0);
 }
 function p(e) {
     let t,
@@ -57,23 +57,23 @@ function p(e) {
                         r = a.default.extractTimestamp(E[e].endId);
                     if (t >= n && t <= r) {
                         if (I === E[e].id) break;
-                        (y.push({
+                        y.push({
                             type: u.ys_.DIVIDER,
                             content: E[e].topic,
-                            contentKey: E[e].id
+                            contentKey: E[e].id,
                         }),
-                            (I = E[e].id));
+                            (I = E[e].id);
                         break;
                     }
                 }
             }
-            let T = (0, o.vc)(e.timestamp, 'LL');
+            let T = (0, o.vc)(e.timestamp, "LL");
             T !== t &&
                 null == I &&
                 (y.push({
                     type: u.ys_.DIVIDER,
                     content: T,
-                    contentKey: T
+                    contentKey: T,
                 }),
                 (t = T));
             let S = y[y.length - 1],
@@ -81,7 +81,7 @@ function p(e) {
                 N = (0, l.DQ)(e);
             O = O || N;
             let C = d(p, e, N && g);
-            (null !== C && ([A, S] = f(y, e, C, S)),
+            null !== C && ([A, S] = f(y, e, C, S)),
                 m === e.id && null != v
                     ? (null != S && S.type === u.ys_.DIVIDER
                           ? (S.unreadId = e.id)
@@ -90,7 +90,7 @@ function p(e) {
                             : e.isFirstMessageInForumPost(p) ||
                               y.push({
                                   type: u.ys_.DIVIDER,
-                                  unreadId: e.id
+                                  unreadId: e.id,
                               }),
                       (v = null))
                     : null != v &&
@@ -98,26 +98,26 @@ function p(e) {
                       (e.isFirstMessageInForumPost(p) ||
                           y.push({
                               type: u.ys_.DIVIDER,
-                              unreadId: e.id
+                              unreadId: e.id,
                           }),
-                      (v = null)));
+                      (v = null));
             let R = (0, c.f)(e, p);
             null != R &&
                 y.push({
                     type: u.ys_.MESSAGE,
                     content: R,
-                    groupId: R.id
+                    groupId: R.id,
                 });
             let P = (null == S ? void 0 : S.type) === u.ys_.MESSAGE ? r : S;
             (0, s.J)(p, P, e) && (n = e.id);
             let w = {
                 type: e.type === u.uaV.THREAD_STARTER_MESSAGE ? u.ys_.THREAD_STARTER_MESSAGE : u.ys_.MESSAGE,
                 content: e,
-                groupId: n
+                groupId: n,
             };
             n === e.id && (r = w);
             let { jumpSequenceId: D, jumpFlash: L, jumpTargetId: x } = h;
-            (L && e.id === x && null != D && (w.flashKey = D),
+            L && e.id === x && null != D && (w.flashKey = D),
                 h.jumpTargetId === e.id && (w.jumpTarget = !0),
                 null != b &&
                     e.id === b.startId &&
@@ -126,7 +126,7 @@ function p(e) {
                         type: u.ys_.DIVIDER,
                         content: b.topic,
                         contentKey: b.startId,
-                        isSummaryDivider: !0
+                        isSummaryDivider: !0,
                     }),
                 null !== A ? (A.content.push(w), w.jumpTarget && (A.hasJumpTarget = !0)) : y.push(w),
                 e.isFirstMessageInForumPost(p) && y.push({ type: u.ys_.FORUM_POST_ACTION_BAR }),
@@ -136,10 +136,10 @@ function p(e) {
                     y.push({
                         type: u.ys_.DIVIDER,
                         contentKey: b.endId,
-                        isSummaryDivider: !0
-                    }));
+                        isSummaryDivider: !0,
+                    });
         }),
-        O && (0, l.P1)(p) && i.Z.trackExposure({ location: '416cc9_1' }),
+        O && (0, l.P1)(p) && i.Z.trackExposure({ location: "416cc9_1" }),
         y
     );
 }

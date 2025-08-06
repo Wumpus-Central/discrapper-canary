@@ -10,7 +10,7 @@ function c(e) {
     let { activity: t, user: n, source: c, className: u, size: d, look: f, color: _, fullWidth: p, onAction: h } = e,
         { label: m, tooltip: g, loading: E, disabled: b, onClick: y } = (0, s.Ih)(t, n, c),
         O = () => {
-            (null == h || h(), y());
+            null == h || h(), y();
         };
     return (0, r.jsx)(o.ua7, {
         text: g,
@@ -31,11 +31,11 @@ function c(e) {
                 children: [
                     (0, r.jsx)(a.Z, {
                         width: 16,
-                        height: 16
+                        height: 16,
                     }),
-                    m
-                ]
+                    m,
+                ],
             });
-        }
+        },
     });
 }

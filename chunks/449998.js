@@ -1,1 +1,3 @@
-e.exports = JSON.parse('{"i9e/u7":"Színátmenet","2akt9v":"Wumpus","x68b1N":"Neon","OpWJ3d":"Kitöltött","rN7cub":"Cseresznyevirág","JOpi7+":"Szín kiválasztása","cVTpnp":"Először adj meg színeket","NOGFdn":"Lepj meg"}');
+e.exports = JSON.parse(
+    '{"i9e/u7":"Színátmenet","2akt9v":"Wumpus","x68b1N":"Neon","OpWJ3d":"Kitöltött","rN7cub":"Cseresznyevirág","JOpi7+":"Szín kiválasztása","cVTpnp":"Először adj meg színeket","NOGFdn":"Lepj meg"}',
+);

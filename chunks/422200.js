@@ -33,9 +33,9 @@ let x = (0, a.Z)(
             w = (0, f.Z)(n),
             C = (0, c.Z)({
                 id: n.id,
-                label: _.intl.string(_.t.DQ797u)
+                label: _.intl.string(_.t.DQ797u),
             }),
-            k = (0, b.Z)(n, 'Context Menu'),
+            k = (0, b.Z)(n, "Context Menu"),
             S = (0, j.Z)(n),
             A = (0, m.Z)(n),
             D = (0, g.Z)(n),
@@ -46,43 +46,43 @@ let x = (0, a.Z)(
             I = (0, s.P)(n),
             L = (0, O.Z)(n);
         return (0, r.jsxs)(i.v2r, {
-            navId: 'thread-context',
+            navId: "thread-context",
             onClose: l.Zy,
-            'aria-label': _.intl.string(_.t['1NBjqa']),
+            "aria-label": _.intl.string(_.t["1NBjqa"]),
             onSelect: t,
             children: [
                 (0, r.jsxs)(
                     i.kSQ,
                     {
-                        children: [o, G]
+                        children: [o, G],
                     },
-                    'mark-as-read-or-favorite'
+                    "mark-as-read-or-favorite",
                 ),
                 (0, r.jsxs)(
                     i.kSQ,
                     {
-                        children: [k, U, N, E, D, T, a]
+                        children: [k, U, N, E, D, T, a],
                     },
-                    'thread-actions'
+                    "thread-actions",
                 ),
                 (0, r.jsxs)(
                     i.kSQ,
                     {
-                        children: [x, A]
+                        children: [x, A],
                     },
-                    'notifications'
+                    "notifications",
                 ),
                 (0, r.jsx)(i.kSQ, { children: I }),
                 (0, r.jsxs)(
                     i.kSQ,
                     {
-                        children: [M, S, w, L]
+                        children: [M, S, w, L],
                     },
-                    'admin-actions'
+                    "admin-actions",
                 ),
-                (0, r.jsx)(i.kSQ, { children: C }, 'developer-actions')
-            ]
+                (0, r.jsx)(i.kSQ, { children: C }, "developer-actions"),
+            ],
         });
     },
-    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_LIST_THREAD_MENU]
+    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_LIST_THREAD_MENU],
 );

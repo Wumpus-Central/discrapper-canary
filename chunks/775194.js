@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => p }), r(642613), r(539854), r(388685));
+r.d(t, { Z: () => p }), r(642613), r(539854), r(388685);
 var n = r(255367);
 r(73800);
 var a = r(392711),
@@ -19,20 +19,20 @@ let m = {
     width: 7,
     height: 8,
     audioChannels: 9,
-    sampleRate: 10
+    sampleRate: 10,
 };
 function p(e) {
     let { clips: t } = e;
     if (null == t) return (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
     let r = i().map(t, (e, t) => {
-        if (void 0 !== e && 'buffers' !== t)
+        if (void 0 !== e && "buffers" !== t)
             return (0, n.jsx)(
                 s.ck,
                 {
                     label: t,
-                    value: e
+                    value: e,
                 },
-                t
+                t,
             );
     });
     return (
@@ -40,11 +40,11 @@ function p(e) {
             (0, n.jsx)(
                 s.ck,
                 {
-                    label: 'Frames Per Second',
-                    value: t.recentEncodedFrames / (t.recentDurationMs / 1000)
+                    label: "Frames Per Second",
+                    value: t.recentEncodedFrames / (t.recentDurationMs / 1000),
                 },
-                'framerate'
-            )
+                "framerate",
+            ),
         ),
         (0, n.jsxs)(l.hjN, {
             tag: l.RB0.H2,
@@ -62,31 +62,31 @@ function p(e) {
                             })) {
                                 let a = e[r];
                                 null !== a &&
-                                    'key' !== r &&
+                                    "key" !== r &&
                                     t.push(
                                         (0, n.jsx)(
                                             s.ck,
                                             {
                                                 label: r,
-                                                value: a
+                                                value: a,
                                             },
-                                            r
-                                        )
+                                            r,
+                                        ),
                                     );
                             }
                             return (0, n.jsx)(
                                 l.hjN,
                                 {
                                     className: u.marginBottom40,
-                                    title: 'Buffer: '.concat(e.key),
+                                    title: "Buffer: ".concat(e.key),
                                     titleClassName: d.title,
-                                    children: (0, o.a)(t)
+                                    children: (0, o.a)(t),
                                 },
-                                'Buffer: '.concat(e.key)
+                                "Buffer: ".concat(e.key),
                             );
                         });
-                })(t)
-            ]
+                })(t),
+            ],
         })
     );
 }

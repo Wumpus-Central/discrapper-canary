@@ -14,27 +14,27 @@ var i = n(990547),
 function p(e) {
     let { config: t } = e,
         { noticeText: n, ctaLabel: i, ctaClickable: a, onCtaClicked: s } = t;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: m.__invalid_ctaContainer,
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 className: m.__invalid_heroBanner,
                 src: g,
-                alt: u.intl.string(u.t.Af4klJ)
+                alt: u.intl.string(u.t.Af4klJ),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: m.__invalid_ctaContent,
                 children: [
                     (0, r.jsx)(l.X6q, {
-                        variant: 'heading-xl/semibold',
-                        color: 'header-primary',
-                        children: u.intl.string(u.t.PqYfh4)
+                        variant: "heading-xl/semibold",
+                        color: "header-primary",
+                        children: u.intl.string(u.t.PqYfh4),
                     }),
                     (0, r.jsx)(l.LZC, { size: 12 }),
                     (0, r.jsx)(l.Text, {
-                        variant: 'text-md/normal',
-                        color: 'header-secondary',
-                        children: u.intl.string(u.t['41wkMT'])
+                        variant: "text-md/normal",
+                        color: "header-secondary",
+                        children: u.intl.string(u.t["41wkMT"]),
                     }),
                     (0, r.jsx)(l.LZC, { size: 24 }),
                     (0, r.jsx)(c.Z, {
@@ -45,11 +45,11 @@ function p(e) {
                         ctaLabel: i,
                         ctaDisabled: !a,
                         ctaClassName: m.waitlistCtaButton,
-                        onClick: s
-                    })
-                ]
-            })
-        ]
+                        onClick: s,
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function h(e) {
@@ -58,18 +58,18 @@ function h(e) {
     return ((0, a.Z)({
         type: i.ImpressionTypes.PANE,
         name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
-        properties: { guild_id: t.id }
+        properties: { guild_id: t.id },
     }),
     o)
         ? (0, r.jsx)(l.$jN, {})
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: m.__invalid_container,
               children: [
                   (0, r.jsx)(p, { config: n }),
                   (0, r.jsx)(d.C, {
                       onboardingMarketing: u,
-                      onboardingMarketingError: c
-                  })
-              ]
+                      onboardingMarketingError: c,
+                  }),
+              ],
           });
 }

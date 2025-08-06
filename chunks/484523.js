@@ -1,1 +1,1 @@
-e.exports = { sun: 'sun_b00a1c' };
+e.exports = { sun: "sun_b00a1c" };

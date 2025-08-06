@@ -1,4 +1,4 @@
-(n.d(t, { O: () => S }), n(388685));
+n.d(t, { O: () => S }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(693789),
@@ -22,13 +22,13 @@ var i = n(255367),
     O = n(388032),
     v = n(751318);
 function S() {
-    let { enabled: e } = (0, g.WX)({ location: 'revenue_storybook' });
-    return (0, i.jsxs)('div', {
-        children: [e && (0, i.jsx)(I, {}), (0, i.jsx)(T, {}), (0, i.jsx)(N, {})]
+    let { enabled: e } = (0, g.WX)({ location: "revenue_storybook" });
+    return (0, i.jsxs)("div", {
+        children: [e && (0, i.jsx)(I, {}), (0, i.jsx)(T, {}), (0, i.jsx)(N, {})],
     });
 }
 function T() {
-    let { openIntroToOrbsClaimedCoachmark: e } = (0, m.l)({ location: 'VirtualCurrencyComponents' }),
+    let { openIntroToOrbsClaimedCoachmark: e } = (0, m.l)({ location: "VirtualCurrencyComponents" }),
         [t, n] = r.useState(150),
         [p, g] = r.useState(150),
         [_, j] = r.useState(500),
@@ -49,171 +49,174 @@ function T() {
     return (0, i.jsxs)(E.$0, {
         children: [
             (0, i.jsx)(a.X6q, {
-                variant: 'heading-xl/semibold',
-                children: 'Balance Widget Components'
+                variant: "heading-xl/semibold",
+                children: "Balance Widget Components",
             }),
             (0, i.jsx)(E.E_, {
-                label: 'Balance Widget Menu',
+                label: "Balance Widget Menu",
                 children: (0, i.jsx)(b.V9, {
-                    ctaText: O.intl.string(O.t['J+vlIS']),
+                    ctaText: O.intl.string(O.t["J+vlIS"]),
                     ctaOnClick: C.dG4,
-                    isCoachmarkEnabled: !1
-                })
+                    isCoachmarkEnabled: !1,
+                }),
             }),
             (0, i.jsxs)(E.E_, {
-                label: 'Open Balance Widget Coachmark in Shop',
-                direction: 'vertical',
+                label: "Open Balance Widget Coachmark in Shop",
+                direction: "vertical",
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         children: [
                             (0, i.jsx)(a.Text, {
-                                variant: 'text-md/normal',
-                                style: { marginBottom: '8px' },
-                                children: 'Click the button below to open the Balance Widget Earned Orbs Coachmark in the shop page.'
+                                variant: "text-md/normal",
+                                style: { marginBottom: "8px" },
+                                children:
+                                    "Click the button below to open the Balance Widget Earned Orbs Coachmark in the shop page.",
                             }),
                             (0, i.jsx)(a.Text, {
-                                variant: 'text-md/normal',
-                                color: 'text-feedback-info',
-                                style: { marginBottom: '8px' },
-                                children: 'You will be redirected to the shop page and the coachmark will appear beneath the Balance Widget Pill in the header bar after 0.5 seconds.'
-                            })
-                        ]
+                                variant: "text-md/normal",
+                                color: "text-feedback-info",
+                                style: { marginBottom: "8px" },
+                                children:
+                                    "You will be redirected to the shop page and the coachmark will appear beneath the Balance Widget Pill in the header bar after 0.5 seconds.",
+                            }),
+                        ],
                     }),
                     (0, i.jsx)(s.zx, {
                         onClick: () => {
-                            ((0, l.xf)(),
+                            (0, l.xf)(),
                                 (0, u.s1)().location.pathname.includes(C.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
                                         analyticsLocations: N,
-                                        analyticsSource: o.Z.REVENUE_STORYBOOK_TEST_PAGE
+                                        analyticsSource: o.Z.REVENUE_STORYBOOK_TEST_PAGE,
                                     }),
                                 e({
                                     forceOpen: !0,
-                                    delayMS: 200
-                                }));
+                                    delayMS: 200,
+                                });
                         },
-                        children: 'Open Balance Widget Coachmark'
-                    })
-                ]
+                        children: "Open Balance Widget Coachmark",
+                    }),
+                ],
             }),
             (0, i.jsxs)(E.E_, {
-                label: 'Balance Widget Pill',
+                label: "Balance Widget Pill",
                 children: [
                     (0, i.jsx)(x.A4, {
                         balance: 150,
-                        balanceWidgetMode: h.b.DEFAULT
+                        balanceWidgetMode: h.b.DEFAULT,
                     }),
                     (0, i.jsx)(x.A4, {
                         balance: 150,
-                        balanceWidgetMode: h.b.HIGHLIGHTED
+                        balanceWidgetMode: h.b.HIGHLIGHTED,
                     }),
                     (0, i.jsx)(x.A4, {
                         balance: 150,
-                        balanceWidgetMode: h.b.SELECTED
+                        balanceWidgetMode: h.b.SELECTED,
                     }),
                     (0, i.jsx)(x.A4, {
                         balance: 0,
                         balanceWidgetMode: h.b.DEFAULT,
-                        showNotificationBadge: !0
+                        showNotificationBadge: !0,
                     }),
                     (0, i.jsx)(x.A4, {
                         balance: null,
-                        balanceWidgetMode: h.b.DEFAULT
-                    })
-                ]
+                        balanceWidgetMode: h.b.DEFAULT,
+                    }),
+                ],
             }),
             (0, i.jsxs)(E.E_, {
-                label: 'Balance Widget Pill Interactive (click to change mode)',
-                direction: 'vertical',
+                label: "Balance Widget Pill Interactive (click to change mode)",
+                direction: "vertical",
                 children: [
                     (0, i.jsx)(a.Text, {
-                        variant: 'text-md/normal',
-                        style: { marginBottom: '4px' },
-                        children: 'Enter a number and click Set Balance to see the balance widget pill update:'
+                        variant: "text-md/normal",
+                        style: { marginBottom: "4px" },
+                        children: "Enter a number and click Set Balance to see the balance widget pill update:",
                     }),
                     (0, i.jsx)(a.FiK, {
                         className: v.numberInput,
                         value: t,
-                        onChange: (e) => n(e)
+                        onChange: (e) => n(e),
                     }),
                     (0, i.jsx)(s.zx, {
                         onClick: () => g(t),
-                        children: 'Set Balance'
+                        children: "Set Balance",
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: v.interactivePillContainer,
                         children: (0, i.jsx)(x.A4, {
                             balance: p,
                             balanceWidgetMode: S,
-                            onClick: () => I()
-                        })
+                            onClick: () => I(),
+                        }),
                     }),
                     (0, i.jsx)(a.Text, {
-                        variant: 'text-md/normal',
-                        style: { marginBottom: '4px' },
-                        children: 'Enter a number (loading time in milliseconds) and click Simulate Loading State to see the balance widget pill update:'
+                        variant: "text-md/normal",
+                        style: { marginBottom: "4px" },
+                        children:
+                            "Enter a number (loading time in milliseconds) and click Simulate Loading State to see the balance widget pill update:",
                     }),
                     (0, i.jsx)(a.FiK, {
                         className: v.numberInput,
                         value: _,
-                        onChange: (e) => j(e)
+                        onChange: (e) => j(e),
                     }),
                     (0, i.jsx)(s.zx, {
                         onClick: () => {
-                            (g(null),
+                            g(null),
                                 setTimeout(() => {
                                     g(t);
-                                }, _));
+                                }, _);
                         },
-                        children: 'Simulate Loading State'
+                        children: "Simulate Loading State",
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: v.interactivePillContainer,
                         children: (0, i.jsx)(x.A4, {
                             balance: p,
                             balanceWidgetMode: S,
-                            onClick: () => I()
-                        })
-                    })
-                ]
+                            onClick: () => I(),
+                        }),
+                    }),
+                ],
             }),
             (0, i.jsx)(E.E_, {
-                label: 'Balance Widget Card',
+                label: "Balance Widget Card",
                 children: (0, i.jsx)(f.L, {
-                    ctaText: O.intl.string(O.t['H57f4+']),
-                    linkText: O.intl.string(O.t['7f4H7O']),
-                    ctaOnClick: C.dG4
-                })
-            })
-        ]
+                    ctaText: O.intl.string(O.t["H57f4+"]),
+                    linkText: O.intl.string(O.t["7f4H7O"]),
+                    ctaOnClick: C.dG4,
+                }),
+            }),
+        ],
     });
 }
 function I() {
-    let [e, t] = r.useState('1144308439720394944');
+    let [e, t] = r.useState("1144308439720394944");
     return (0, i.jsxs)(E.$0, {
         children: [
             (0, i.jsx)(a.X6q, {
-                variant: 'heading-xl/semibold',
-                children: 'Orb Checkout Components'
+                variant: "heading-xl/semibold",
+                children: "Orb Checkout Components",
             }),
             (0, i.jsxs)(E.E_, {
-                label: 'Orb Checkout Modal',
-                direction: 'vertical',
+                label: "Orb Checkout Modal",
+                direction: "vertical",
                 children: [
                     (0, i.jsx)(a.Text, {
-                        variant: 'text-md/normal',
-                        children: 'Enter SKU ID here:'
+                        variant: "text-md/normal",
+                        children: "Enter SKU ID here:",
                     }),
                     (0, i.jsx)(a.oil, {
-                        placeholder: 'SKU ID',
+                        placeholder: "SKU ID",
                         value: e,
-                        onChange: (e) => t(e)
+                        onChange: (e) => t(e),
                     }),
                     (0, i.jsx)(a.Text, {
-                        variant: 'text-md/normal',
-                        color: 'text-feedback-info',
-                        children: 'The Orb Checkout Modal will open with the orb price of the product, if it exists'
+                        variant: "text-md/normal",
+                        color: "text-feedback-info",
+                        children: "The Orb Checkout Modal will open with the orb price of the product, if it exists",
                     }),
                     (0, i.jsx)(s.zx, {
                         onClick: () => {
@@ -221,18 +224,22 @@ function I() {
                                 skuId: e,
                                 onCheckoutSuccess: (e) => {
                                     let { skuId: t, entitlements: n } = e;
-                                    console.log('Orb Checkout Success for SKU: '.concat(t, '. Entitlement(s): '), n, Date.now());
+                                    console.log(
+                                        "Orb Checkout Success for SKU: ".concat(t, ". Entitlement(s): "),
+                                        n,
+                                        Date.now(),
+                                    );
                                 },
                                 onCloseCallback: () => {
-                                    console.log('Orb Checkout Closed');
-                                }
+                                    console.log("Orb Checkout Closed");
+                                },
                             });
                         },
-                        children: 'Open Orb Checkout Integrated with Payment Modal'
-                    })
-                ]
-            })
-        ]
+                        children: "Open Orb Checkout Integrated with Payment Modal",
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function N() {
@@ -240,15 +247,15 @@ function N() {
     return (0, i.jsxs)(E.$0, {
         children: [
             (0, i.jsx)(a.X6q, {
-                variant: 'heading-xl/semibold',
-                children: 'Onboarding Components'
+                variant: "heading-xl/semibold",
+                children: "Onboarding Components",
             }),
             (0, i.jsx)(E.E_, {
-                label: 'Announcement Modal',
+                label: "Announcement Modal",
                 children: (0, i.jsx)(s.zx, {
                     onClick: () => {
                         (0, a.ZDy)(async () => {
-                            let { AnnouncementModal: e } = await n.e('86653').then(n.bind(n, 993318));
+                            let { AnnouncementModal: e } = await n.e("86653").then(n.bind(n, 993318));
                             return (t) => {
                                 var n,
                                     r,
@@ -263,46 +270,51 @@ function N() {
                                                     i,
                                                     r = {},
                                                     s = Object.keys(e);
-                                                for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                                                for (i = 0; i < s.length; i++)
+                                                    (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                                                 return r;
                                             })(e, t);
                                         if (Object.getOwnPropertySymbols) {
                                             var s = Object.getOwnPropertySymbols(e);
-                                            for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                                            for (i = 0; i < s.length; i++)
+                                                (n = s[i]),
+                                                    !(t.indexOf(n) >= 0) &&
+                                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                        (r[n] = e[n]);
                                         }
                                         return r;
-                                    })(t, ['onClose']);
+                                    })(t, ["onClose"]);
                                 return (0, i.jsx)(
                                     e,
                                     ((n = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 i = Object.keys(n);
-                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                            "function" == typeof Object.getOwnPropertySymbols &&
                                                 (i = i.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
+                                                    }),
                                                 )),
                                                 i.forEach(function (t) {
                                                     var i;
-                                                    ((i = n[t]),
+                                                    (i = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: i,
                                                                   enumerable: !0,
                                                                   configurable: !0,
-                                                                  writable: !0
+                                                                  writable: !0,
                                                               })
-                                                            : (e[t] = i));
-                                                }));
+                                                            : (e[t] = i);
+                                                });
                                         }
                                         return e;
                                     })({}, a)),
                                     (r = r =
                                         {
                                             onClose: s,
-                                            ctaOnClick: s
+                                            ctaOnClick: s,
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -316,34 +328,35 @@ function N() {
                                           })(Object(r)).forEach(function (e) {
                                               Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                           }),
-                                    n)
+                                    n),
                                 );
                             };
                         });
                     },
-                    children: 'Open Announcement Modal'
-                })
+                    children: "Open Announcement Modal",
+                }),
             }),
             (0, i.jsxs)(E.E_, {
-                label: 'Announcement Modal [Reset Dismissible Content]',
-                direction: 'vertical',
+                label: "Announcement Modal [Reset Dismissible Content]",
+                direction: "vertical",
                 children: [
                     (0, i.jsx)(a.Text, {
-                        variant: 'text-md/normal',
-                        color: 'text-feedback-info',
-                        style: { marginBottom: '8px' },
-                        children: "After resetting your Announcement Modal State and exiting from user settings, you'll be able to see the Announcement Modal again."
+                        variant: "text-md/normal",
+                        color: "text-feedback-info",
+                        style: { marginBottom: "8px" },
+                        children:
+                            "After resetting your Announcement Modal State and exiting from user settings, you'll be able to see the Announcement Modal again.",
                     }),
                     (0, i.jsx)(s.zx, {
                         onClick: () => e(),
-                        children: 'Reset Announcement Modal State'
-                    })
-                ]
+                        children: "Reset Announcement Modal State",
+                    }),
+                ],
             }),
             (0, i.jsx)(E.E_, {
-                label: 'Balance Widget Coachmark',
-                children: (0, i.jsx)(j.E, {})
-            })
-        ]
+                label: "Balance Widget Coachmark",
+                children: (0, i.jsx)(j.E, {}),
+            }),
+        ],
     });
 }

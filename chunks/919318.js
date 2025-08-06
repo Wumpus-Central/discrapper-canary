@@ -1,4 +1,4 @@
-(t.d(n, { ZP: () => L }), t(388685), t(953529));
+t.d(n, { ZP: () => L }), t(388685), t(953529);
 var l = t(255367),
     r = t(73800),
     a = t(120356),
@@ -36,7 +36,7 @@ function k(e) {
         c = (0, s.e7)([j.Z], () => j.Z.getChannel(a)),
         [o, d] = (0, f.hL)({
             media: r,
-            channel: c
+            channel: c,
         }),
         m = (0, f.MC)(d),
         p = (0, s.e7)([Z.Z], () => Z.Z.isFocused()),
@@ -45,7 +45,7 @@ function k(e) {
         { src: v, width: _, height: I, alt: y } = r;
     return (
         I > _ ? (t = 72) : (n = 72),
-        (0, l.jsxs)('div', {
+        (0, l.jsxs)("div", {
             className: E.media,
             children: [
                 (0, g.Yi)({
@@ -59,14 +59,14 @@ function k(e) {
                     animated: x && !o && p,
                     containerClassName: E.thumbnailContainer,
                     imageClassName: i()({ [E.obscured]: o }),
-                    analyticsSource: 'ResourceChannelMedia'
+                    analyticsSource: "ResourceChannelMedia",
                 }),
                 o &&
                     (0, l.jsx)(u.Z, {
                         obscureReason: d,
-                        iconClassname: E.obscuredTag
-                    })
-            ]
+                        iconClassname: E.obscuredTag,
+                    }),
+            ],
         })
     );
 }
@@ -86,7 +86,7 @@ function M(e) {
                 o.Z.fetchMessages({
                     channelId: n.channelId,
                     after: n.channelId,
-                    limit: 5
+                    limit: 5,
                 });
         }, [n.channelId, b]),
         null == t || null == t.guild_id)
@@ -94,7 +94,7 @@ function M(e) {
         return null;
     let C = I.ZP.getResourceChannelIconURL({
             channelId: t.id,
-            icon: n.icon
+            icon: n.icon,
         }),
         Z = null == n.description || 0 === n.description.length;
     return (0, l.jsxs)(c.P3F, {
@@ -105,64 +105,64 @@ function M(e) {
                     ? (0, y.C3)(t.guild_id, t.id)
                     : x.Z.openResourceChannelAsSidebar({
                           guildId: t.guild_id,
-                          channelId: t.id
+                          channelId: t.id,
                       }));
         },
         children: [
-            (0, l.jsxs)('div', {
+            (0, l.jsxs)("div", {
                 className: E.content,
                 children: [
                     (0, l.jsx)(c.Text, {
                         className: E.title,
-                        variant: 'text-md/bold',
-                        color: 'header-primary',
-                        children: n.title
+                        variant: "text-md/bold",
+                        color: "header-primary",
+                        children: n.title,
                     }),
                     Z &&
                         null != f &&
                         (0, l.jsx)(c.Text, {
                             className: E.messageContent,
-                            variant: 'text-sm/normal',
-                            color: 'header-secondary',
+                            variant: "text-sm/normal",
+                            color: "header-secondary",
                             lineClamp: 3,
                             children: m.Z.parse(f, !0, {
                                 guildId: t.guild_id,
-                                channelId: t.id
-                            })
+                                channelId: t.id,
+                            }),
                         }),
                     !Z &&
                         (0, l.jsx)(c.Text, {
                             className: i()(E.messageContent, S.markup),
-                            variant: 'text-sm/normal',
-                            color: 'header-secondary',
+                            variant: "text-sm/normal",
+                            color: "header-secondary",
                             lineClamp: 3,
                             children: m.Z.parse(n.description, !0, {
                                 guildId: t.guild_id,
-                                channelId: t.id
-                            })
-                        })
-                ]
+                                channelId: t.id,
+                            }),
+                        }),
+                ],
             }),
             null != n.icon && null != C
-                ? (0, l.jsx)('div', {
+                ? (0, l.jsx)("div", {
                       className: E.media,
-                      children: (0, l.jsx)('img', {
+                      children: (0, l.jsx)("img", {
                           src: C,
                           className: E.__invalid_thumbnail,
                           width: 72,
                           height: 72,
-                          alt: '',
-                          'aria-hidden': !0
-                      })
+                          alt: "",
+                          "aria-hidden": !0,
+                      }),
                   })
                 : null,
             null == C && null != p
                 ? (0, l.jsx)(k, {
                       firstMedia: p,
-                      channelId: n.channelId
+                      channelId: n.channelId,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }
 function L(e) {
@@ -171,43 +171,43 @@ function L(e) {
     return 0 === r.length
         ? t
             ? null
-            : (0, l.jsxs)('div', {
+            : (0, l.jsxs)("div", {
                   className: E.emptyContainer,
                   children: [
                       (0, l.jsx)(c.X6q, {
-                          variant: 'heading-xl/bold',
-                          color: 'header-primary',
-                          children: w.intl.string(w.t.owvC9f)
+                          variant: "heading-xl/bold",
+                          color: "header-primary",
+                          children: w.intl.string(w.t.owvC9f),
                       }),
-                      (0, l.jsx)('img', {
+                      (0, l.jsx)("img", {
                           className: E.emptyStateImage,
                           src: A,
-                          alt: ''
+                          alt: "",
                       }),
-                      (0, l.jsx)('div', {
+                      (0, l.jsx)("div", {
                           className: E.emptyStateButton,
                           children: (0, l.jsx)(c.zxk, {
-                              size: 'md',
-                              variant: 'primary',
+                              size: "md",
+                              variant: "primary",
                               onClick: () => {
                                   let e = C.ZP.getDefaultChannel(n.id);
                                   null != e && (0, p.uL)(P.Z5c.CHANNEL(n.id, e.id));
                               },
                               fullWidth: !0,
-                              text: w.intl.string(w.t['3iCBUl'])
-                          })
-                      })
-                  ]
+                              text: w.intl.string(w.t["3iCBUl"]),
+                          }),
+                      }),
+                  ],
               })
-        : (0, l.jsxs)('div', {
+        : (0, l.jsxs)("div", {
               className: E.container,
               children: [
                   (0, l.jsx)(c.X6q, {
-                      variant: 'heading-lg/bold',
-                      color: 'header-primary',
-                      children: w.intl.string(w.t.xwY4LS)
+                      variant: "heading-lg/bold",
+                      color: "header-primary",
+                      children: w.intl.string(w.t.xwY4LS),
                   }),
-                  r.map((e) => (0, l.jsx)(M, { resource: e }, e.channelId))
-              ]
+                  r.map((e) => (0, l.jsx)(M, { resource: e }, e.channelId)),
+              ],
           });
 }

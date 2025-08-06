@@ -1,4 +1,4 @@
-(n.d(t, { g: () => p }), n(388685));
+n.d(t, { g: () => p }), n(388685);
 var r = n(392711),
     i = n.n(r),
     o = n(995774),
@@ -14,19 +14,19 @@ let f = 3,
             reactionTooltip1NInteractive: d.t.dgtYDA,
             reactionTooltip1N: d.t.mXild3,
             reactionTooltip1: d.t.Oro30N,
-            reactionTooltip2NInteractive: d.t['0GBwVV'],
+            reactionTooltip2NInteractive: d.t["0GBwVV"],
             reactionTooltip2N: d.t.UWGs2t,
-            reactionTooltip2: d.t['p+0jvr'],
-            reactionTooltip3NInteractive: d.t['dK6/7e'],
+            reactionTooltip2: d.t["p+0jvr"],
+            reactionTooltip3NInteractive: d.t["dK6/7e"],
             reactionTooltip3N: d.t.UnXdX1,
             reactionTooltip3: d.t.bbPMcX,
             reactionTooltipNInteractive: d.t.Thj7LS,
-            reactionTooltipN: d.t.CRrc7e
+            reactionTooltipN: d.t.CRrc7e,
         },
         burst: {
             reactionTooltip1NInteractive: d.t.G98B0d,
-            reactionTooltip1N: d.t['u/03eH'],
-            reactionTooltip1: d.t['z4q3+/'],
+            reactionTooltip1N: d.t["u/03eH"],
+            reactionTooltip1: d.t["z4q3+/"],
             reactionTooltip2NInteractive: d.t.wkcffn,
             reactionTooltip2N: d.t.T4EYUl,
             reactionTooltip2: d.t.R2HykZ,
@@ -34,8 +34,8 @@ let f = 3,
             reactionTooltip3N: d.t.M8bwl5,
             reactionTooltip3: d.t.sNl6XV,
             reactionTooltipNInteractive: d.t.nsITOj,
-            reactionTooltipN: d.t.dkieHx
-        }
+            reactionTooltipN: d.t.dkieHx,
+        },
     };
 function p(e, t) {
     var n, r;
@@ -51,35 +51,38 @@ function p(e, t) {
             .take(f)
             .map((e) => c.ZP.getName(E, null == g ? void 0 : g.id, e))
             .value();
-    if (0 === O.length) return '';
+    if (0 === O.length) return "";
     let v = y ? _.burst : _.standard,
-        I = Math.max(0, (null != (r = y ? (null == b ? void 0 : b.burst_count) : null == b ? void 0 : b.count) ? r : 0) - O.length),
+        I = Math.max(
+            0,
+            (null != (r = y ? (null == b ? void 0 : b.burst_count) : null == b ? void 0 : b.count) ? r : 0) - O.length,
+        ),
         T = (0, o.Lh)(t);
     if (1 === O.length)
         if (!(I > 0))
             return d.intl.formatToPlainString(v.reactionTooltip1, {
                 a: O[0],
-                emojiName: T
+                emojiName: T,
             });
         else if (null != h)
             return d.intl.format(v.reactionTooltip1NInteractive, {
                 a: O[0],
                 n: I,
                 emojiName: T,
-                onClick: h
+                onClick: h,
             });
         else
             return d.intl.formatToPlainString(v.reactionTooltip1N, {
                 a: O[0],
                 n: I,
-                emojiName: T
+                emojiName: T,
             });
     if (2 === O.length)
         if (!(I > 0))
             return d.intl.formatToPlainString(v.reactionTooltip2, {
                 a: O[0],
                 b: O[1],
-                emojiName: T
+                emojiName: T,
             });
         else if (null != h)
             return d.intl.format(v.reactionTooltip2NInteractive, {
@@ -87,25 +90,25 @@ function p(e, t) {
                 b: O[1],
                 n: I,
                 emojiName: T,
-                onClick: h
+                onClick: h,
             });
         else
             return d.intl.formatToPlainString(v.reactionTooltip2N, {
                 a: O[0],
                 b: O[1],
                 n: I,
-                emojiName: T
+                emojiName: T,
             });
     return 3 !== O.length
         ? null != h
             ? d.intl.format(v.reactionTooltipNInteractive, {
                   n: I,
                   emojiName: T,
-                  onClick: h
+                  onClick: h,
               })
             : d.intl.formatToPlainString(v.reactionTooltipN, {
                   n: I,
-                  emojiName: T
+                  emojiName: T,
               })
         : I > 0
           ? null != h
@@ -115,19 +118,19 @@ function p(e, t) {
                     c: O[2],
                     n: I,
                     emojiName: T,
-                    onClick: h
+                    onClick: h,
                 })
               : d.intl.formatToPlainString(v.reactionTooltip3N, {
                     a: O[0],
                     b: O[1],
                     c: O[2],
                     n: I,
-                    emojiName: T
+                    emojiName: T,
                 })
           : d.intl.formatToPlainString(v.reactionTooltip3, {
                 a: O[0],
                 b: O[1],
                 c: O[2],
-                emojiName: T
+                emojiName: T,
             });
 }

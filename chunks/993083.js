@@ -16,32 +16,32 @@ var r = n(621796),
     E = n(655000),
     b = n(920267),
     y = o.isOptionKeyCommand,
-    O = l.isBrowser('Chrome');
+    O = l.isBrowser("Chrome");
 function v(e, t, n) {
     switch (e) {
-        case 'redo':
+        case "redo":
             return i.redo(t);
-        case 'delete':
+        case "delete":
             return g(t);
-        case 'delete-word':
+        case "delete-word":
             return f(t);
-        case 'backspace':
+        case "backspace":
             return m(t);
-        case 'backspace-word':
+        case "backspace-word":
             return d(t);
-        case 'backspace-to-start-of-line':
+        case "backspace-to-start-of-line":
             return u(t, n);
-        case 'split-block':
+        case "split-block":
             return _(t);
-        case 'transpose-characters':
+        case "transpose-characters":
             return E(t);
-        case 'move-selection-to-start-of-block':
+        case "move-selection-to-start-of-block":
             return h(t);
-        case 'move-selection-to-end-of-block':
+        case "move-selection-to-end-of-block":
             return p(t);
-        case 'secondary-cut':
+        case "secondary-cut":
             return s.cut(t);
-        case 'secondary-paste':
+        case "secondary-paste":
             return s.paste(t);
         default:
             return t;
@@ -59,35 +59,35 @@ e.exports = function (e, t) {
             if ((t.preventDefault(), e.props.handleReturn && c(e.props.handleReturn(t, o)))) return;
             break;
         case a.ESC:
-            if ((t.preventDefault(), s('onEscape'))) return;
+            if ((t.preventDefault(), s("onEscape"))) return;
             break;
         case a.TAB:
-            if (s('onTab')) return;
+            if (s("onTab")) return;
             break;
         case a.UP:
-            if (s('onUpArrow')) return;
+            if (s("onUpArrow")) return;
             break;
         case a.RIGHT:
-            if (s('onRightArrow')) return;
+            if (s("onRightArrow")) return;
             break;
         case a.DOWN:
-            if (s('onDownArrow')) return;
+            if (s("onDownArrow")) return;
             break;
         case a.LEFT:
-            if (s('onLeftArrow')) return;
+            if (s("onLeftArrow")) return;
             break;
         case a.SPACE:
             O && y(t) && t.preventDefault();
     }
     var l = e.props.keyBindingFn(t);
-    if (null == l || '' === l) {
+    if (null == l || "" === l) {
         if (n === a.SPACE && O && y(t)) {
-            var u = r.replaceText(o.getCurrentContent(), o.getSelection(), '\xA0');
-            e.update(i.push(o, u, 'insert-characters'));
+            var u = r.replaceText(o.getCurrentContent(), o.getSelection(), "\xA0");
+            e.update(i.push(o, u, "insert-characters"));
         }
         return;
     }
-    if ('undo' === l) return void b(t, o, e.update);
+    if ("undo" === l) return void b(t, o, e.update);
     if ((t.preventDefault(), !(e.props.handleKeyCommand && c(e.props.handleKeyCommand(l, o, t.timeStamp))))) {
         var d = v(l, o, t);
         d !== o && e.update(d);

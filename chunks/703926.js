@@ -18,14 +18,14 @@ let g = {
         [a.Cj.CAKE]: _,
         [a.Cj.CHEST]: p,
         [a.Cj.COFFEE]: h,
-        [a.Cj.SNOWGLOBE]: '',
-        [a.Cj.BOX]: '',
-        [a.Cj.CUP]: '',
+        [a.Cj.SNOWGLOBE]: "",
+        [a.Cj.BOX]: "",
+        [a.Cj.CUP]: "",
         [a.Cj.SEASONAL_CAKE]: c,
         [a.Cj.SEASONAL_CHEST]: u,
         [a.Cj.SEASONAL_COFFEE]: d,
         [a.Cj.SEASONAL_STANDARD_BOX]: l,
-        [a.Cj.NITROWEEN_STANDARD]: m.Z
+        [a.Cj.NITROWEEN_STANDARD]: m.Z,
     },
     E = i.forwardRef(function (e, t) {
         let { isSelected: n, giftStyle: i, setSelectedGiftStyle: a, onFocus: l, onBlur: c } = e;
@@ -35,14 +35,14 @@ let g = {
             onClick: () => a(i),
             onFocus: l,
             onBlur: c,
-            children: (0, r.jsx)('img', {
+            children: (0, r.jsx)("img", {
                 style: {
-                    width: '100%',
-                    height: '100%'
+                    width: "100%",
+                    height: "100%",
                 },
-                alt: '',
+                alt: "",
                 src: g[i],
-                className: n ? s.customGiftBoxHighlighted : s.customGiftBox
-            })
+                className: n ? s.customGiftBoxHighlighted : s.customGiftBox,
+            }),
         });
     });

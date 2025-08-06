@@ -14,20 +14,24 @@ function f(e) {
         { newestAnalyticsLocation: _ } = (0, o.ZP)(),
         p = (0, i.e7)([a.default], () => a.default.getId() === t.id),
         h = (0, i.e7)([s.Z], () => s.Z.getRelationshipType(t.id)),
-        { gameFriends: m, hasOutgoingPendingGameFriends: g, hasIncomingPendingGameFriends: E } = (0, c.H)({ userId: t.id }),
+        {
+            gameFriends: m,
+            hasOutgoingPendingGameFriends: g,
+            hasIncomingPendingGameFriends: E,
+        } = (0, c.H)({ userId: t.id }),
         b = m.length > 0 || g || E;
     if (null == t || t.bot || p || h === d.OGo.BLOCKED) return null;
     if (h === d.OGo.NONE && b)
         return n === u.lY.MODAL
             ? null
             : (0, r.jsx)(l.k9, {
-                  type: 'banner',
+                  type: "banner",
                   user: t,
                   gameFriends: m,
                   hasOutgoingPendingGameFriends: g,
                   hasIncomingPendingGameFriends: E,
                   analyticsLocation: _,
-                  shouldShowTooltip: f
+                  shouldShowTooltip: f,
               });
     switch (h) {
         case d.OGo.FRIEND:
@@ -35,19 +39,19 @@ function f(e) {
         case d.OGo.PENDING_OUTGOING:
             if (n === u.lY.MODAL && h !== d.OGo.FRIEND) return null;
             return (0, r.jsx)(l.g, {
-                type: 'banner',
+                type: "banner",
                 user: t,
                 relationshipType: h,
                 analyticsLocation: _,
-                shouldShowTooltip: f
+                shouldShowTooltip: f,
             });
         default:
             if (n === u.lY.MODAL) return null;
             return (0, r.jsx)(l.Z7, {
-                type: 'banner',
+                type: "banner",
                 userId: t.id,
                 shouldShowTooltip: f,
-                analyticsLocation: _
+                analyticsLocation: _,
             });
     }
 }

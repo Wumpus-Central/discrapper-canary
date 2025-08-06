@@ -1,4 +1,4 @@
-(n.d(t, { default: () => C }), n(388685));
+n.d(t, { default: () => C }), n(388685);
 var i = n(255367);
 n(73800);
 var l = n(481060),
@@ -29,45 +29,45 @@ let C = (0, a.Z)(
                     userId: t.id,
                     channelId: C,
                     guildId: u,
-                    context: g
+                    context: g,
                 }),
                 [Z, T] = (0, A.E)(t, C, u),
                 h = (0, f.Z)(t, u, C),
                 N = (0, o.Z)({
                     id: t.id,
-                    label: v.intl.string(v.t['/AXYnJ'])
+                    label: v.intl.string(v.t["/AXYnJ"]),
                 }),
                 k = (0, c.Z)(t.id, n);
             return (0, i.jsx)(l.v2r, {
-                navId: 'user-context',
+                navId: "user-context",
                 onClose: r.Zy,
-                'aria-label': v.intl.string(v.t.liqwPD),
+                "aria-label": v.intl.string(v.t.liqwPD),
                 onSelect: a,
                 onInteraction: d,
-                variant: 'fixed',
+                variant: "fixed",
                 children:
                     !M &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsxs)(l.kSQ, {
-                                children: [O, b]
+                                children: [O, b],
                             }),
                             k,
                             I,
                             !S &&
                                 (0, i.jsx)(l.kSQ, {
                                     children: (0, i.jsxs)(l.sNh, {
-                                        id: 'more-options',
+                                        id: "more-options",
                                         label: v.intl.string(v.t.PdRCRk),
-                                        children: [Z, (0, i.jsx)(l.kSQ, { children: h }), T]
-                                    })
+                                        children: [Z, (0, i.jsx)(l.kSQ, { children: h }), T],
+                                    }),
                                 }),
-                            S && (0, i.jsx)(l.kSQ, { children: N })
-                        ]
-                    })
+                            S && (0, i.jsx)(l.kSQ, { children: N }),
+                        ],
+                    }),
             });
         },
-        { object: g.qAy.CONTEXT_MENU }
+        { object: g.qAy.CONTEXT_MENU },
     ),
-    [d.Z.VOICE_USER]
+    [d.Z.VOICE_USER],
 );

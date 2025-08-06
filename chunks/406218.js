@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     PC: () => m,
     o_: () => h,
     sO: () => p,
-    xo: () => _
+    xo: () => _,
 }),
     n(388685),
-    n(953529));
+    n(953529);
 var r = n(345074),
     i = n(339085),
     o = n(633302),
@@ -20,7 +20,7 @@ function l(e) {
         else return null;
     return null != r ? o.ZP.getByName(r) : null;
 }
-let c = { label: '' };
+let c = { label: "" };
 function u(e, t) {
     let n = Array(r.Sn).fill(c);
     for (let o of t) {
@@ -34,10 +34,10 @@ function u(e, t) {
                     (i = l({
                         guildId: e,
                         emojiId: o.emoji_id,
-                        emojiName: o.emoji_name
+                        emojiName: o.emoji_name,
                     }))
                         ? i
-                        : void 0
+                        : void 0,
             });
     }
     return n;
@@ -50,21 +50,21 @@ function d(e) {
               return (
                   (e[n.toString()] = {
                       level: r.activity_level,
-                      score: r.activity_score
+                      score: r.activity_score,
                   }),
                   e
               );
           }, {});
 }
 function f(e) {
-    return null == e || '' === e ? null : e;
+    return null == e || "" === e ? null : e;
 }
 function _(e) {
     var t, n, r, i;
     return {
         id: e.id,
         name: e.name,
-        description: null != (t = e.description) ? t : '',
+        description: null != (t = e.description) ? t : "",
         icon: e.icon_hash,
         customBanner: e.custom_banner_hash,
         onlineCount: e.online_count,
@@ -81,7 +81,7 @@ function _(e) {
         badgeColorSecondary: e.badge_color_secondary,
         badgeHash: e.badge_hash,
         premiumSubscriberCount: e.premium_subscription_count,
-        premiumTier: e.premium_tier
+        premiumTier: e.premium_tier,
     };
 }
 function p(e) {
@@ -104,7 +104,7 @@ function p(e) {
                               position: t,
                               emoji_id: null == (n = e.emoji) ? void 0 : n.id,
                               emoji_name: null == (r = e.emoji) ? void 0 : r.name,
-                              emoji_animated: null == (i = e.emoji) ? void 0 : i.animated
+                              emoji_animated: null == (i = e.emoji) ? void 0 : i.animated,
                           };
                 })
                 .filter(a.lm)),
@@ -121,11 +121,11 @@ function h(e) {
         (e, t) => (
             (e[t.game_application_id] = {
                 level: t.activity_level,
-                score: t.activity_score
+                score: t.activity_score,
             }),
             e
         ),
-        {}
+        {},
     );
 }
 function m(e) {
@@ -139,11 +139,13 @@ function m(e) {
           : {
                 id: l.id,
                 name: l.name,
-                description: null != (t = l.description) ? t : '',
+                description: null != (t = l.description) ? t : "",
                 icon: l.icon,
                 customBanner: l.banner,
-                onlineCount: null != (r = null != (n = l.approximate_presence_count) ? n : e.approximate_presence_count) ? r : 0,
-                memberCount: null != (o = null != (i = l.approximate_member_count) ? i : e.approximate_member_count) ? o : 0,
+                onlineCount:
+                    null != (r = null != (n = l.approximate_presence_count) ? n : e.approximate_presence_count) ? r : 0,
+                memberCount:
+                    null != (o = null != (i = l.approximate_member_count) ? i : e.approximate_member_count) ? o : 0,
                 visibility: s.k.NOT_SPECIFIED,
                 traits: [],
                 gameApplicationIds: [],
@@ -156,6 +158,6 @@ function m(e) {
                 badgeColorPrimary: null,
                 badgeColorSecondary: null,
                 premiumSubscriberCount: l.premium_subscription_count,
-                premiumTier: l.premium_tier
+                premiumTier: l.premium_tier,
             };
 }

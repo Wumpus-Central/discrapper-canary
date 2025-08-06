@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(35282));
+n.d(t, { Z: () => g }), n(35282);
 var r = n(512722),
     i = n.n(r),
     l = n(924301),
@@ -15,7 +15,7 @@ function f(e) {
     return null != n
         ? p.intl.format(i, {
               username: t,
-              applicationName: () => r(n)
+              applicationName: () => r(n),
           })
         : p.intl.format(l, { username: t });
 }
@@ -33,13 +33,13 @@ function g(e) {
             return p.intl.format(p.t.g5xyIC, {
                 user: T,
                 user2: A,
-                count: R
+                count: R,
             });
         case d.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-            let D = null != (v = null == (C = I.local_id) ? void 0 : C.split('_').pop()) ? v : 'unknown';
-            return 'Update to build '.concat(D, ' available!');
+            let D = null != (v = null == (C = I.local_id) ? void 0 : C.split("_").pop()) ? v : "unknown";
+            return "Update to build ".concat(D, " available!");
         case d.DY.FRIEND_SUGGESTION_CREATED:
-            return (s.Z.getRelationshipType(N), h.OGo.PENDING_OUTGOING, null != (j = I.body) ? j : '');
+            return s.Z.getRelationshipType(N), h.OGo.PENDING_OUTGOING, null != (j = I.body) ? j : "";
         case d.DY.GUILD_SCHEDULED_EVENT_STARTED:
             let L = I.guild_scheduled_event_id,
                 M = null != L ? l.ZP.getGuildScheduledEvent(L) : null,
@@ -49,18 +49,18 @@ function g(e) {
             return (0, c.Ew)(U) || (0, c.Ew)(k) || !G
                 ? null != (S = I.body)
                     ? S
-                    : ''
+                    : ""
                 : p.intl.format(p.t.AyvfXV, {
                       event_name: k,
-                      guild_name: U
+                      guild_name: U,
                   });
         case d.O7.INCOMING_FRIEND_REQUESTS:
             return f({
                 username: w,
                 applicationId: Z,
                 renderApplication: P,
-                withApplication: p.t['9Dgf1N'],
-                withDefault: p.t.uIomX1
+                withApplication: p.t["9Dgf1N"],
+                withDefault: p.t.uIomX1,
             });
         case d.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
             return f({
@@ -68,7 +68,7 @@ function g(e) {
                 applicationId: Z,
                 renderApplication: P,
                 withApplication: p.t.nnC1q6,
-                withDefault: p.t['5Uzkdn']
+                withDefault: p.t["5Uzkdn"],
             });
         case d.DY.FRIEND_REQUEST_ACCEPTED:
             return f({
@@ -76,30 +76,30 @@ function g(e) {
                 applicationId: Z,
                 renderApplication: P,
                 withApplication: p.t.jXlYiI,
-                withDefault: p.t.McYRBg
+                withDefault: p.t.McYRBg,
             });
         case d.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED:
             return (
-                i()(null != Z, 'Expected application id for '.concat(I.type)),
-                p.intl.format(p.t['BB/0vr'], {
+                i()(null != Z, "Expected application id for ".concat(I.type)),
+                p.intl.format(p.t["BB/0vr"], {
                     username: w,
-                    applicationName: () => P(Z)
+                    applicationName: () => P(Z),
                 })
             );
         case d.O7.INCOMING_GAME_FRIEND_REQUESTS:
             return (
-                i()(null != Z, 'Expected application id for '.concat(I.type)),
-                p.intl.format(p.t['7cqOLC'], {
+                i()(null != Z, "Expected application id for ".concat(I.type)),
+                p.intl.format(p.t["7cqOLC"], {
                     username: w,
-                    applicationName: () => P(Z)
+                    applicationName: () => P(Z),
                 })
             );
         case d.DY.GAME_FRIEND_REQUEST_ACCEPTED:
             if (null == Z) return I.body;
             return p.intl.format(p.t.Wi64vL, {
                 username: w,
-                applicationName: () => P(Z)
+                applicationName: () => P(Z),
             });
     }
-    return null != (x = I.body) ? x : '';
+    return null != (x = I.body) ? x : "";
 }

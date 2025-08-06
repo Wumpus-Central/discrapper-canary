@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     eR: () => m,
     hW: () => b,
-    is: () => g
+    is: () => g,
 }),
-    n(388685));
+    n(388685);
 var i = n(73800),
     r = n(442837),
     s = n(304809),
@@ -39,9 +39,14 @@ function g(e, t) {
         l = (0, r.e7)([a.Z], () => a.Z.volume),
         o = (0, r.e7)([a.Z], () => a.Z.isMuted),
         d = (0, i.useRef)(!0);
-    ((0, i.useEffect)(() => {
+    (0, i.useEffect)(() => {
         (async () => {
-            (null != n.current && p(n), !t && null != s.current && ((n.current = await u(e, s.current)), null != n.current && (n.current.loop = !0), d.current || p(n)));
+            null != n.current && p(n),
+                !t &&
+                    null != s.current &&
+                    ((n.current = await u(e, s.current)),
+                    null != n.current && (n.current.loop = !0),
+                    d.current || p(n));
         })();
     }, [t, e]),
         (0, i.useEffect)(() => {
@@ -49,17 +54,17 @@ function g(e, t) {
         }, [o, l]),
         (0, i.useEffect)(
             () => () => {
-                ((d.current = !1), p(n));
+                (d.current = !1), p(n);
             },
-            []
-        ));
+            [],
+        );
 }
 let h = n(956294),
     f = {
         [o.Vx.DEFAULT]: n(635154),
         [o.Vx.CAT]: n(382399),
         [o.Vx.SWORD]: n(730602),
-        [o.Vx.PIZZA]: n(84171)
+        [o.Vx.PIZZA]: n(84171),
     };
 function b() {
     var e;

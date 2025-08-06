@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     C0: () => R,
     GN: () => P,
     M2: () => L,
@@ -8,9 +8,9 @@
     lF: () => G,
     pI: () => A,
     sR: () => x,
-    tt: () => U
+    tt: () => U,
 }),
-    n(539854));
+    n(539854);
 var r = n(399606),
     i = n(704215),
     o = n(367907),
@@ -40,25 +40,36 @@ function A() {
     return null != (e = null == t ? void 0 : t.volume) ? e : 100;
 }
 function N(e, t) {
-    return (null == t ? void 0 : t.guild_id) == null || _.Z.can(T.Plq.USE_EXTERNAL_SOUNDS, t) || e.guildId === I.X8 || e.guildId === (null == t ? void 0 : t.guild_id);
+    return (
+        (null == t ? void 0 : t.guild_id) == null ||
+        _.Z.can(T.Plq.USE_EXTERNAL_SOUNDS, t) ||
+        e.guildId === I.X8 ||
+        e.guildId === (null == t ? void 0 : t.guild_id)
+    );
 }
 function C(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-    return (m.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === I.X8) && N(t, n) && (!r || t.available);
+    return (
+        (m.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === I.X8) &&
+        N(t, n) &&
+        (!r || t.available)
+    );
 }
 function R(e) {
     let { mute: t, suppress: n } = (0, u.b)({ channel: e });
     return !t && !n;
 }
 function P(e, t, n) {
-    ((0, E.XE)(t, e, y.YQ.SOUNDBOARD), (0, d.kq)(t, e, __OVERLAY__, n));
+    (0, E.XE)(t, e, y.YQ.SOUNDBOARD), (0, d.kq)(t, e, __OVERLAY__, n);
 }
 function w(e, t) {
-    ((0, E.XE)(t, e, y.YQ.JOINED_VOICE_CHANNEL), (0, d.vy)(t, e, __OVERLAY__));
+    (0, E.XE)(t, e, y.YQ.JOINED_VOICE_CHANNEL), (0, d.vy)(t, e, __OVERLAY__);
 }
 function D() {
     var e, t;
-    return Object.values(null != (t = null == (e = c.Z.settings.guilds) ? void 0 : e.guilds) ? t : {}).some((e) => null != e.joinSound);
+    return Object.values(null != (t = null == (e = c.Z.settings.guilds) ? void 0 : e.guilds) ? t : {}).some(
+        (e) => null != e.joinSound,
+    );
 }
 async function L(e) {
     let t = p.default.getCurrentUser(),
@@ -88,15 +99,15 @@ function M(e, t) {
     (0, l.PS)(
         e,
         (n) => {
-            ((n.joinSound = void 0),
+            (n.joinSound = void 0),
                 j({
                     guildId: e,
                     changeType: y.MW.REMOVED,
                     soundType: y.jy.ENTRY,
-                    location: t
-                }));
+                    location: t,
+                });
         },
-        l.fy.INFREQUENT_USER_ACTION
+        l.fy.INFREQUENT_USER_ACTION,
     );
 }
 function k(e, t, n) {
@@ -106,29 +117,29 @@ function k(e, t, n) {
             let i = t.guildId === I.X8,
                 o = i ? y.H$.DEFAULT : y.H$.CUSTOM,
                 a = null != r.joinSound ? y.MW.UPDATED : y.MW.ADDED;
-            ((r.joinSound = {
+            (r.joinSound = {
                 soundId: t.soundId,
-                guildId: i ? I.hY : t.guildId
+                guildId: i ? I.hY : t.guildId,
             }),
                 j({
                     guildId: e,
                     changeType: a,
                     soundSource: o,
                     soundType: y.jy.ENTRY,
-                    location: n
-                }));
+                    location: n,
+                });
         },
-        l.fy.INFREQUENT_USER_ACTION
+        l.fy.INFREQUENT_USER_ACTION,
     );
 }
 function j(e) {
     let { guildId: t, changeType: n, soundType: r, soundSource: i, location: o } = e;
     h.default.track(T.rMx.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
         location_stack: o,
-        guild_id: '' === t ? 0 : Number(t),
+        guild_id: "" === t ? 0 : Number(t),
         change_type: n,
         sound_type: r,
-        sound_source: i
+        sound_source: i,
     });
 }
 function U(e) {
@@ -142,6 +153,6 @@ function G(e) {
         expression_type: S.X1.SOUNDBOARD,
         expression_id: t.soundId,
         expression_name: t.name,
-        expression_guild_id: t.guildId
+        expression_guild_id: t.guildId,
     });
 }

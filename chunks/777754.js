@@ -1,11 +1,22 @@
-(n.d(t, { Z: () => u }), n(35282));
+n.d(t, { Z: () => u }), n(35282);
 let r = /^([\w-+]+(?:\.[\w-+]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,63}(?:\.[a-z]{2})?)$/i,
     i = /^((https:\/\/)?(discord\.gg\/)|(discord\.com\/)(invite\/)?)?[A-Za-z0-9]{8,8}$/,
     o = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
     a = /^(.*)#[0-9]{1,5}$/,
     s = /^(https:\/\/)?(discord\.com\/discovery\/game\/)([0-9-]+)\/?/,
-    l = ['@', '#', ':', '```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage'],
-    c = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord'],
+    l = [
+        "@",
+        "#",
+        ":",
+        "```",
+        "discord",
+        "hypesquad",
+        "system message",
+        "system mesage",
+        "sustem message",
+        "sustem mesage",
+    ],
+    c = ["discordtag", "everyone", "here", "discord nitro", "discord"],
     u = {
         isEmail: function (e) {
             return r.test(e);
@@ -28,5 +39,5 @@ let r = /^([\w-+]+(?:\.[\w-+]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,63}(?:\
         },
         isDiscoveryLink: function (e) {
             return s.test(e);
-        }
+        },
     };

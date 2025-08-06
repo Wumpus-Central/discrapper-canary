@@ -13,65 +13,65 @@ var r = n(255367),
     f = n(388032),
     g = n(507750);
 let m = (0, a.hQ)(),
-    b = ''.concat(m, '-decription');
+    b = "".concat(m, "-decription");
 function _(e, t, n) {
     return (0, r.jsxs)(
-        'button',
+        "button",
         {
             className: g.container,
             onClick: n,
             children: [
-                'function' == typeof e
-                    ? (0, r.jsx)('div', {
+                "function" == typeof e
+                    ? (0, r.jsx)("div", {
                           className: g.icon,
                           children: (0, r.jsx)(e, {
                               className: g.__invalid_iconInner,
-                              color: l.TVs.colors.WHITE.css
-                          })
+                              color: l.TVs.colors.WHITE.css,
+                          }),
                       })
-                    : (0, r.jsx)('img', {
+                    : (0, r.jsx)("img", {
                           className: g.icon,
-                          alt: '',
-                          src: e
+                          alt: "",
+                          src: e,
                       }),
                 (0, r.jsx)(l.Text, {
                     className: g.text,
-                    variant: 'text-md/medium',
-                    children: t
+                    variant: "text-md/medium",
+                    children: t,
                 }),
-                (0, r.jsx)(p.Z, { className: g.arrow })
-            ]
+                (0, r.jsx)(p.Z, { className: g.arrow }),
+            ],
         },
-        t
+        t,
     );
 }
 function O() {
     let e = c.Z.getGuildsArray().filter((e) => e.features.has(h.oNc.HUB)),
         t = (e) => {
-            (u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, s.X)(e));
+            u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, s.X)(e);
         };
     return (0, r.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsxs)('header', {
+            (0, r.jsxs)("header", {
                 className: g.header,
                 children: [
                     (0, r.jsx)(l.vwX, {
-                        tag: 'h1',
+                        tag: "h1",
                         className: g.title,
-                        children: f.intl.string(f.t.IuMx1d)
+                        children: f.intl.string(f.t.IuMx1d),
                     }),
                     (0, r.jsx)(l.R94, {
                         id: b,
                         type: l.R94.Types.DESCRIPTION,
                         children: (0, r.jsx)(l.Text, {
-                            tag: 'div',
-                            variant: 'heading-md/normal',
-                            children: f.intl.string(f.t.DwevPj)
-                        })
-                    })
-                ]
+                            tag: "div",
+                            variant: "heading-md/normal",
+                            children: f.intl.string(f.t.DwevPj),
+                        }),
+                    }),
+                ],
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.grid,
                 children: [
                     e.map((e) =>
@@ -79,19 +79,20 @@ function O() {
                             d.ZP.getGuildIconURL({
                                 id: e.id,
                                 icon: e.icon,
-                                size: 240
+                                size: 240,
                             }),
                             e.name,
                             () => {
                                 t(e.id);
-                            }
-                        )
+                            },
+                        ),
                     ),
                     _(l.Jmo, f.intl.string(f.t.AhKnz8), () => {
-                        (u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, o.uL)(h.Z5c.GUILD_DISCOVERY));
-                    })
-                ]
-            })
-        ]
+                        u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
+                            (0, o.uL)(h.Z5c.GUILD_DISCOVERY);
+                    }),
+                ],
+            }),
+        ],
     });
 }

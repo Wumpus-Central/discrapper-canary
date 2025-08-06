@@ -24,7 +24,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -84,28 +84,28 @@ function S(e) {
             if (e && D && A !== E.oC.MEMBER_SAFETY && L())
                 return void _.default.track(g.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
                     notice_type: g.kVF.GUILD_RAID_NOTIFICATION,
-                    guild_id: C.id
+                    guild_id: C.id,
                 });
             (0, a.ZDy)(async () => {
                 let e = {
                         source: h.Zu.NAGBAR,
-                        alertType: (0, m.T1)(P)
+                        alertType: (0, m.T1)(P),
                     },
-                    { default: t } = await Promise.all([n.e('58175'), n.e('6584')]).then(n.bind(n, 664452));
+                    { default: t } = await Promise.all([n.e("58175"), n.e("6584")]).then(n.bind(n, 664452));
                 return (n) =>
                     (0, r.jsx)(
                         t,
                         T(v({}, n), {
                             guildId: C.id,
-                            analyticsData: e
-                        })
+                            analyticsData: e,
+                        }),
                     );
             });
         },
         M = (0, r.jsx)(s.Z, {
             className: y.guildIcon,
             guild: C,
-            size: s.Z.Sizes.MINI
+            size: s.Z.Sizes.MINI,
         }),
         k = (0, m.OY)(P, C.name);
     if (null != (null != (O = P.dmsDisabledUntil) ? O : P.invitesDisabledUntil) && w)
@@ -115,27 +115,31 @@ function S(e) {
             children: [
                 (0, r.jsx)(a.RyX, {
                     onClick: I,
-                    noticeType: g.kVF.GUILD_RAID_NOTIFICATION
+                    noticeType: g.kVF.GUILD_RAID_NOTIFICATION,
                 }),
                 M,
                 k,
                 (0, r.jsx)(a.EyT, {
                     className: y.actionButton,
                     onClick: () => x(!1),
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: y.actionButtonInner,
                         children: [
                             (0, r.jsx)(a.mBM, {
-                                size: 'xs',
-                                color: 'currentColor'
+                                size: "xs",
+                                color: "currentColor",
                             }),
-                            (0, r.jsx)('span', { children: b.intl.string(b.t['c+7oa2']) })
-                        ]
-                    })
-                })
-            ]
+                            (0, r.jsx)("span", { children: b.intl.string(b.t["c+7oa2"]) }),
+                        ],
+                    }),
+                }),
+            ],
         });
-    let j = (0, m.CG)(P) ? b.intl.formatToPlainString(b.t.tZTx2N, { guildName: C.name }) : (0, m.kk)(P) ? b.intl.formatToPlainString(b.t['1bSmxs'], { guildName: C.name }) : b.intl.formatToPlainString(b.t.W87xDA, { guildName: C.name }),
+    let j = (0, m.CG)(P)
+            ? b.intl.formatToPlainString(b.t.tZTx2N, { guildName: C.name })
+            : (0, m.kk)(P)
+              ? b.intl.formatToPlainString(b.t["1bSmxs"], { guildName: C.name })
+              : b.intl.formatToPlainString(b.t.W87xDA, { guildName: C.name }),
         U = D && A === E.oC.MEMBER_SAFETY;
     return (0, r.jsxs)(a.qXd, {
         className: y.notice,
@@ -143,7 +147,7 @@ function S(e) {
         children: [
             (0, r.jsx)(a.RyX, {
                 onClick: I,
-                noticeType: g.kVF.GUILD_RAID_NOTIFICATION
+                noticeType: g.kVF.GUILD_RAID_NOTIFICATION,
             }),
             M,
             j,
@@ -151,11 +155,11 @@ function S(e) {
                 (0, r.jsx)(a.EyT, {
                     className: y.actionButton,
                     onClick: () => x(!0),
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: y.actionButtonInner,
-                        children: (0, r.jsx)('span', { children: b.intl.string(b.t.zDJDho) })
-                    })
-                })
-        ]
+                        children: (0, r.jsx)("span", { children: b.intl.string(b.t.zDJDho) }),
+                    }),
+                }),
+        ],
     });
 }

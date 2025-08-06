@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -79,7 +79,7 @@ let I = (e) => {
         w = () => {
             switch (P.type) {
                 case s.Z.AVATAR_DECORATION:
-                    return g.intl.string(g.t['7v0T9P']);
+                    return g.intl.string(g.t["7v0T9P"]);
                 case s.Z.PROFILE_EFFECT:
                     return g.intl.string(g.t.wR5wOj);
                 case s.Z.NAMEPLATE:
@@ -92,16 +92,16 @@ let I = (e) => {
         L = () => {
             null != t && null != b && b(t);
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: I,
         children: [
             O &&
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: E.previewTitleContainer,
                     children: [
                         (0, r.jsx)(c.vwX, {
                             className: E.previewTitle,
-                            children: g.intl.string(g.t.PpoJzs)
+                            children: g.intl.string(g.t.PpoJzs),
                         }),
                         D &&
                             (0, r.jsx)(
@@ -119,11 +119,11 @@ let I = (e) => {
                                                 pendingProfileEffectId: P.type === s.Z.PROFILE_EFFECT ? P.id : null,
                                                 canUsePremiumCustomization: !0,
                                                 disabledInputs: !0,
-                                                hideViewFullProfileButton: !0
-                                            })
+                                                hideViewFullProfileButton: !0,
+                                            }),
                                         ),
-                                    align: 'center',
-                                    position: 'right',
+                                    align: "center",
+                                    position: "right",
                                     children: (e) =>
                                         (0, r.jsx)(
                                             c.P3F,
@@ -131,64 +131,64 @@ let I = (e) => {
                                                 className: E.previewLink,
                                                 innerRef: R,
                                                 children: (0, r.jsx)(c.Text, {
-                                                    variant: 'text-xs/medium',
-                                                    color: 'text-link',
-                                                    children: g.intl.string(g.t['2GnJQE'])
-                                                })
-                                            })
-                                        )
+                                                    variant: "text-xs/medium",
+                                                    color: "text-link",
+                                                    children: g.intl.string(g.t["2GnJQE"]),
+                                                }),
+                                            }),
+                                        ),
                                 },
-                                S.id
-                            )
-                    ]
+                                S.id,
+                            ),
+                    ],
                 }),
             (0, r.jsxs)(c.P3F, {
-                tag: 'div',
+                tag: "div",
                 onClick: L,
                 className: a()(E.previewContainer, {
                     [E.previewContainerSelected]: n && null == A,
-                    [E.previewContainerError]: n && null != A
+                    [E.previewContainerError]: n && null != A,
                 }),
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: E.giftInfoContainer,
                         children: [
                             (0, r.jsx)(m.O, {
                                 product: T,
-                                fallbackLabel: null
+                                fallbackLabel: null,
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: E.previewTextContainer,
                                 children: [
                                     (0, r.jsx)(c.Text, {
-                                        variant: 'text-md/semibold',
-                                        children: C
+                                        variant: "text-md/semibold",
+                                        children: C,
                                     }),
                                     (0, r.jsx)(c.X6q, {
-                                        variant: 'heading-sm/medium',
-                                        color: 'header-secondary',
-                                        children: w()
-                                    })
-                                ]
+                                        variant: "heading-sm/medium",
+                                        color: "header-secondary",
+                                        children: w(),
+                                    }),
+                                ],
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: 'text-md/semibold',
-                                children: o
-                            })
-                        ]
+                                variant: "text-md/semibold",
+                                children: o,
+                            }),
+                        ],
                     }),
                     n &&
                         null != A &&
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: E.recipientError,
                             children: (0, r.jsx)(c.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'status-danger',
-                                children: A
-                            })
-                        })
-                ]
-            })
-        ]
+                                variant: "text-sm/normal",
+                                color: "status-danger",
+                                children: A,
+                            }),
+                        }),
+                ],
+            }),
+        ],
     });
 };

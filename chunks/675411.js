@@ -5,6 +5,6 @@ e.exports = function (e) {
         x: t.left,
         y: t.top,
         width: t.right - t.left,
-        height: t.bottom - t.top
+        height: t.bottom - t.top,
     };
 };

@@ -1,4 +1,4 @@
-(n.d(t, { N: () => a }), n(804061), n(704826), n(35282));
+n.d(t, { N: () => a }), n(804061), n(704826), n(35282);
 var r = n(503461),
     i = n(190313);
 function o(e, t, n) {
@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -47,20 +47,20 @@ class a {
     }
     put(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Sn.Replace;
-        return this.transaction((r) => r.put(e, t, n), ''.concat(this.prefix, ' put'));
+        return this.transaction((r) => r.put(e, t, n), "".concat(this.prefix, " put"));
     }
     putAll(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Sn.Replace;
-        return this.transaction((r) => r.putAll(e, t, n), ''.concat(this.prefix, ' putAll'));
+        return this.transaction((r) => r.putAll(e, t, n), "".concat(this.prefix, " putAll"));
     }
     replaceAll(e, t) {
-        return this.transaction((n) => n.replaceAll(e, t), ''.concat(this.prefix, ' replaceAll'));
+        return this.transaction((n) => n.replaceAll(e, t), "".concat(this.prefix, " replaceAll"));
     }
     delete(e, t) {
-        return this.transaction((n) => n.delete(e, t), ''.concat(this.prefix, ' delete'));
+        return this.transaction((n) => n.delete(e, t), "".concat(this.prefix, " delete"));
     }
     deleteGeneration(e, t) {
-        return this.transaction((n) => n.deleteGeneration(e, t), ''.concat(this.prefix, ' deleteGeneration'));
+        return this.transaction((n) => n.deleteGeneration(e, t), "".concat(this.prefix, " deleteGeneration"));
     }
     transaction(e, t) {
         return this.table.transaction((t) => e(new s(t)), t);
@@ -78,11 +78,14 @@ class a {
         return {
             key: [e, t.id],
             data: t,
-            generation: n
+            generation: n,
         };
     }
     constructor(e, t, n, r = !0) {
-        (o(this, 'originalPrefix', void 0), o(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r)));
+        o(this, "originalPrefix", void 0),
+            o(this, "table", void 0),
+            (this.originalPrefix = e),
+            (this.table = new i.i([e], t, n, r));
     }
 }
 class s {
@@ -101,11 +104,11 @@ class s {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Sn.Replace;
         return this.transaction.putAll(
             t.map((t) => a.cell(e, t, null)),
-            n
+            n,
         );
     }
     replaceAll(e, t) {
-        (this.delete(e), this.putAll(e, t));
+        this.delete(e), this.putAll(e, t);
     }
     delete(e, t) {
         switch (arguments.length) {
@@ -121,6 +124,6 @@ class s {
         return this.transaction.deleteGeneration([], e, t);
     }
     constructor(e) {
-        (o(this, 'transaction', void 0), (this.transaction = e));
+        o(this, "transaction", void 0), (this.transaction = e);
     }
 }

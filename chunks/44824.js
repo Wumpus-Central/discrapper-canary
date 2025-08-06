@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(853839), n(570086), n(479048));
+n.d(t, { Z: () => m }), n(853839), n(570086), n(479048);
 var r = n(255367),
     i = n(73800),
     o = n(70097),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -64,7 +64,8 @@ function _(e, t) {
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,18 +75,29 @@ function p(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
-    let { poster: t, src: n, width: a, height: l, naturalWidth: c, naturalHeight: u, play: d = !0, className: f, alt: _, responsive: p } = e,
+    let {
+            poster: t,
+            src: n,
+            width: a,
+            height: l,
+            naturalWidth: c,
+            naturalHeight: u,
+            play: d = !0,
+            className: f,
+            alt: _,
+            responsive: p,
+        } = e,
         h = i.useRef(null);
     return (i.useEffect(() => {
         let { current: e } = h;
         null != e &&
             (d
                 ? e.play().catch((e) => {
-                      if (!(e instanceof DOMException) || 'NotAllowedError' !== e.name) throw e;
+                      if (!(e instanceof DOMException) || "NotAllowedError" !== e.name) throw e;
                   })
                 : e.pause());
     }, [d]),
@@ -102,19 +114,43 @@ function h(e) {
               loop: !0,
               autoPlay: d,
               playsInline: !0,
-              preload: 'none',
-              'aria-label': _
+              preload: "none",
+              "aria-label": _,
           })
-        : (0, r.jsx)('img', {
-              alt: '',
+        : (0, r.jsx)("img", {
+              alt: "",
               src: t,
               width: a,
-              height: l
+              height: l,
           });
 }
 function m(e) {
-    var { src: t, poster: n, naturalWidth: i, naturalHeight: o, responsive: s, autoPlay: c, className: d, playable: p = !0, renderImageComponent: m, alt: g = l.intl.string(l.t.I5gL2N), sourceMetadata: E } = e,
-        b = _(e, ['src', 'poster', 'naturalWidth', 'naturalHeight', 'responsive', 'autoPlay', 'className', 'playable', 'renderImageComponent', 'alt', 'sourceMetadata']);
+    var {
+            src: t,
+            poster: n,
+            naturalWidth: i,
+            naturalHeight: o,
+            responsive: s,
+            autoPlay: c,
+            className: d,
+            playable: p = !0,
+            renderImageComponent: m,
+            alt: g = l.intl.string(l.t.I5gL2N),
+            sourceMetadata: E,
+        } = e,
+        b = _(e, [
+            "src",
+            "poster",
+            "naturalWidth",
+            "naturalHeight",
+            "responsive",
+            "autoPlay",
+            "className",
+            "playable",
+            "renderImageComponent",
+            "alt",
+            "sourceMetadata",
+        ]);
     return (0, r.jsx)(a.h.Consumer, {
         children: (e) =>
             m(
@@ -140,12 +176,12 @@ function m(e) {
                             naturalWidth: i,
                             naturalHeight: o,
                             responsive: s,
-                            play: p && l
+                            play: p && l,
                         });
                     },
                     sourceMetadata: E,
-                    analyticsSource: 'LazyGIFV'
-                })
-            )
+                    analyticsSource: "LazyGIFV",
+                }),
+            ),
     });
 }

@@ -8,15 +8,20 @@ function i(e, t, n) {
             c = i.oneof ? t[i.oneof][e] : t[e],
             u = i.oneof ? n[i.oneof][e] : n[e];
         switch (i.kind) {
-            case 'enum':
-            case 'scalar':
-                let d = 'enum' == i.kind ? r.wx.INT32 : i.T;
+            case "enum":
+            case "scalar":
+                let d = "enum" == i.kind ? r.wx.INT32 : i.T;
                 if (!(i.repeat ? s(d, c, u) : a(d, c, u))) return !1;
                 break;
-            case 'map':
-                if (!('message' == i.V.kind ? l(i.V.T(), o(c), o(u)) : s('enum' == i.V.kind ? r.wx.INT32 : i.V.T, o(c), o(u)))) return !1;
+            case "map":
+                if (
+                    !("message" == i.V.kind
+                        ? l(i.V.T(), o(c), o(u))
+                        : s("enum" == i.V.kind ? r.wx.INT32 : i.V.T, o(c), o(u)))
+                )
+                    return !1;
                 break;
-            case 'message':
+            case "message":
                 let f = i.T();
                 if (!(i.repeat ? l(f, c, u) : f.equals(c, u))) return !1;
         }

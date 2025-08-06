@@ -23,17 +23,17 @@ function x(e) {
         }, []),
         _ = i.useCallback(
             (e) => {
-                (e.preventDefault(),
+                e.preventDefault(),
                     e.stopPropagation(),
                     (0, u.E6)({
                         guild: t,
                         analyticsLocations: j,
                         analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,
                         analyticsObject: m.qAy.UPLOAD_IMAGE,
-                        perks: (0, g.o9)()
-                    }));
+                        perks: (0, g.o9)(),
+                    });
             },
-            [j, t]
+            [j, t],
         ),
         O = (0, r.jsx)(o.Z, {
             image: t.splash,
@@ -41,7 +41,7 @@ function x(e) {
                 null != e
                     ? c.ZP.getGuildSplashURL({
                           id: t.id,
-                          splash: e
+                          splash: e,
                       })
                     : null,
             disabled: !b,
@@ -49,15 +49,15 @@ function x(e) {
             hint: h.intl.string(h.t.uPvxqK),
             enabled: b,
             maxFileSizeBytes: p.B,
-            onFileSizeError: () => (0, s.Z)(p.B)
+            onFileSizeError: () => (0, s.Z)(p.B),
         });
     return x
         ? O
         : (0, r.jsx)(l.P3F, {
-              'aria-hidden': !0,
+              "aria-hidden": !0,
               tabIndex: -1,
               className: f.upsell,
               onClick: _,
-              children: O
+              children: O,
           });
 }

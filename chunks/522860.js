@@ -15,9 +15,9 @@ function u(e) {
         g = _(h),
         E = l.intl.format(l.t.FKXvaG, {
             username: h.nick,
-            activityName: null != d ? d.name : 'unknown',
+            activityName: null != d ? d.name : "unknown",
             onJoinStream: f,
-            usernameHook: g
+            usernameHook: g,
         });
     return (
         null != m &&
@@ -25,21 +25,21 @@ function u(e) {
                 username: h.nick,
                 duration: m.humanize(),
                 channelName: u.name,
-                usernameHook: g
+                usernameHook: g,
             })),
         (0, r.jsx)(s.Z, {
             iconNode:
                 null != m
                     ? (0, r.jsx)(i.g5r, {
-                          size: 'custom',
-                          color: 'currentColor',
+                          size: "custom",
+                          color: "currentColor",
                           width: c,
-                          height: c
+                          height: c,
                       })
                     : (0, r.jsx)(o.ZP, { size: o.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
             compact: p,
-            children: E
+            children: E,
         })
     );
 }

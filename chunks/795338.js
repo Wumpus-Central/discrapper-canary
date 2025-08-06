@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => u,
-    m: () => d
+    m: () => d,
 });
 var r = n(255367),
     i = n(120356),
@@ -11,10 +11,10 @@ var r = n(255367),
     c = n(942570);
 function u(e) {
     let { className: t } = e;
-    return (0, r.jsx)('img', {
+    return (0, r.jsx)("img", {
         className: t,
-        alt: '',
-        src: c
+        alt: "",
+        src: c,
     });
 }
 function d(e) {
@@ -24,10 +24,10 @@ function d(e) {
         case s.Us.LEVEL:
             return (0, r.jsx)(u, {});
         case s.Us.PERK:
-            return (0, r.jsx)('img', {
-                alt: '',
+            return (0, r.jsx)("img", {
+                alt: "",
                 src: c,
-                className: l()(a.background, { [a.gradientRoleColorsImage]: n.skuId === s.If }, t)
+                className: l()(a.background, { [a.gradientRoleColorsImage]: n.skuId === s.If }, t),
             });
     }
 }

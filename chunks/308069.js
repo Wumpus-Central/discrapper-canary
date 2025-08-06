@@ -16,13 +16,22 @@ var r = n(255367),
     h = n(388032),
     b = n(74783);
 let j = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: o, onCtxMenuOpen: j, onCtxMenuClose: _, useReducedMotion: v, isExpanded: C, isExpansionAnimationComplete: y } = e,
+    let {
+            quest: t,
+            expansionSpring: n,
+            onCtxMenuSelect: o,
+            onCtxMenuOpen: j,
+            onCtxMenuClose: _,
+            useReducedMotion: v,
+            isExpanded: C,
+            isExpansionAnimationComplete: y,
+        } = e,
         O = (0, u.aM)(),
         E = s.useCallback(() => {
             (0, f.openDisclosureModal)(t, {
                 content: p.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE,
-                sourceQuestContent: p.jn.QUEST_BAR_V2
+                sourceQuestContent: p.jn.QUEST_BAR_V2,
             });
         }, [t]),
         S = s.useCallback(() => {
@@ -30,7 +39,7 @@ let j = (e) => {
                 content: p.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
                 impressionId: O,
-                sourceQuestContent: p.jn.QUEST_BAR_V2
+                sourceQuestContent: p.jn.QUEST_BAR_V2,
             });
         }, [O, t]),
         w = C && y,
@@ -40,8 +49,8 @@ let j = (e) => {
             children: (0, r.jsx)(m.ZP, {
                 quest: t,
                 logotypeClassName: b.rewardHighlightLogotype,
-                withGameTile: !1
-            })
+                withGameTile: !1,
+            }),
         });
     return (0, r.jsxs)(i.animated.div, {
         className: a()(b.wrapper, b.rewardHighlightWrapper, { [b.interactable]: w }),
@@ -50,11 +59,11 @@ let j = (e) => {
                 [
                     n.to({
                         range: [0, 1],
-                        output: [8, 0]
-                    })
+                        output: [8, 0],
+                    }),
                 ],
-                (e) => 'translateY('.concat(e, 'px')
-            )
+                (e) => "translateY(".concat(e, "px"),
+            ),
         },
         children: [
             (0, r.jsx)(i.animated.div, {
@@ -62,24 +71,24 @@ let j = (e) => {
                 style: {
                     opacity: n.to({
                         range: [0, 1],
-                        output: [0, 1]
-                    })
-                }
+                        output: [0, 1],
+                    }),
+                },
             }),
             (0, r.jsx)(x.Z, {
                 quest: t,
                 expansionSpring: n,
                 isFullyExpanded: w,
                 partnerBranding: T,
-                useReducedMotion: v
+                useReducedMotion: v,
             }),
             (0, r.jsxs)(i.animated.div, {
                 className: b.promotedBadgeWrapper,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
-                        output: [0, 1]
-                    })
+                        output: [0, 1],
+                    }),
                 },
                 children: [
                     (0, r.jsxs)(l.P3F, {
@@ -87,15 +96,15 @@ let j = (e) => {
                         onClick: E,
                         children: [
                             (0, r.jsx)(l.Text, {
-                                color: 'always-white',
-                                variant: 'text-xs/normal',
-                                children: h.intl.string(h.t.o6FLcH)
+                                color: "always-white",
+                                variant: "text-xs/normal",
+                                children: h.intl.string(h.t.o6FLcH),
                             }),
                             (0, r.jsx)(l.idN, {
                                 color: l.TVs.colors.WHITE,
-                                className: b.promotedBadgeIcon
-                            })
-                        ]
+                                className: b.promotedBadgeIcon,
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(g.r, {
                         onOpen: j,
@@ -114,36 +123,36 @@ let j = (e) => {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                ((r = n[t]),
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = r));
-                                            }));
+                                                        : (e[t] = r);
+                                            });
                                     }
                                     return e;
                                 })({}, e)),
                                 (n = n =
                                     {
                                         className: b.submenuWrapper,
-                                        'aria-label': h.intl.string(h.t.DEoVWV),
+                                        "aria-label": h.intl.string(h.t.DEoVWV),
                                         children: (0, r.jsx)(l.xhG, {
-                                            size: 'md',
-                                            color: 'currentColor',
-                                            className: a()(b.submenuIcon, b.white)
-                                        })
+                                            size: "md",
+                                            color: "currentColor",
+                                            className: a()(b.submenuIcon, b.white),
+                                        }),
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -157,12 +166,12 @@ let j = (e) => {
                                       })(Object(n)).forEach(function (e) {
                                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                       }),
-                                t)
+                                t),
                             );
-                        }
-                    })
-                ]
-            })
-        ]
+                        },
+                    }),
+                ],
+            }),
+        ],
     });
 };

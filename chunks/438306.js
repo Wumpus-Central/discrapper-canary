@@ -27,24 +27,24 @@ function g(e) {
                 className: m.markup,
                 children: p.intl.format(p.t.pYMVRU, {
                     channelName: n,
-                    topicHook: () => l.Z.parseTopic(t.topic, !0, { channelId: t.id })
-                })
+                    topicHook: () => l.Z.parseTopic(t.topic, !0, { channelId: t.id }),
+                }),
             }),
             g
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: h.buttonContainer,
                       children: (0, r.jsx)(d.Z, {
-                          label: p.intl.string(p.t['3gUsJS']),
+                          label: p.intl.string(p.t["3gUsJS"]),
                           onClick: () => {
                               a.ZP.open(t.id);
                           },
                           icon: (0, r.jsx)(o.vdY, {
-                              size: 'xs',
-                              color: 'currentColor'
-                          })
-                      })
+                              size: "xs",
+                              color: "currentColor",
+                          }),
+                      }),
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     k: () => a,
-    p: () => o
+    p: () => o,
 });
 var r = n(904245),
     i = n(957730);
@@ -10,7 +10,7 @@ function o(e) {
         c = { unverified_content: o };
     return r.Z.sendMessage(t.id, l, a, {
         contentInventoryEntry: c,
-        doNotNotifyOnError: s
+        doNotNotifyOnError: s,
     });
 }
 function a(e) {

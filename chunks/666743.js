@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(314897);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function l(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 a(e, t, n[t]);
-                            }));
+                            });
                     }
                     return e;
                 })({}, this.props)),
@@ -56,15 +56,15 @@ function l(e) {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
+                t),
             );
         }
         constructor(...e) {
-            (super(...e),
-                a(this, 'state', { isAuthenticated: s.default.isAuthenticated() }),
-                a(this, 'onStoreChange', () => {
+            super(...e),
+                a(this, "state", { isAuthenticated: s.default.isAuthenticated() }),
+                a(this, "onStoreChange", () => {
                     this.setState({ isAuthenticated: s.default.isAuthenticated() });
-                }));
+                });
         }
     };
 }

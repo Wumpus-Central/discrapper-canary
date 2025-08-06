@@ -8,11 +8,11 @@ var r = n(73800),
     c = n(388032);
 let d = {
     [o.m.SOLID]: s.default.OpWJ3d,
-    [o.m.GRADIENT]: s.default['i9e/u7'],
-    [o.m.GLOW]: s.default['Ra3/9/'],
+    [o.m.GRADIENT]: s.default["i9e/u7"],
+    [o.m.GLOW]: s.default["Ra3/9/"],
     [o.m.NEON]: s.default.x68b1N,
     [o.m.TOON]: s.default.otpeeH,
-    [o.m.POP]: s.default.cjQOKS
+    [o.m.POP]: s.default.cjQOKS,
 };
 function u() {
     let e = (0, a.P)();
@@ -26,8 +26,8 @@ function u() {
                     previewStyles: {
                         fontId: l.C.DEFAULT,
                         effectId: n,
-                        colors: e[n]
-                    }
+                        colors: e[n],
+                    },
                 };
             }),
             t

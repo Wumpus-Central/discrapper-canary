@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(388685));
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800),
     i = n(442837),
     l = n(237617),
@@ -12,11 +12,15 @@ function a(e, t) {
     return (
         (0, o.kE)(),
         r.useEffect(() => {
-            c ? (n === o.Uc.Update ? u.current() : n === o.Uc.Cancel && ((0, s.t)(), f.current())) : (null == n || n === o.Uc.Present) && d(!0);
+            c
+                ? n === o.Uc.Update
+                    ? u.current()
+                    : n === o.Uc.Cancel && ((0, s.t)(), f.current())
+                : (null == n || n === o.Uc.Present) && d(!0);
         }, [c, n, u, f]),
         {
             lastPickerAction: n,
-            lastPickerError: a
+            lastPickerError: a,
         }
     );
 }

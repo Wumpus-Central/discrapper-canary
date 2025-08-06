@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => h,
-    m: () => p
+    m: () => p,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(126663),
@@ -25,45 +25,45 @@ function p(e) {
             to: { scaleFactor: 1 === h ? 0.9 : 2 === h ? 1.2 : 1 },
             config: {
                 tension: 380,
-                friction: 7
-            }
+                friction: 7,
+            },
         });
     return (i.useEffect(
         () => () => {
             E.current = !1;
         },
-        []
+        [],
     ),
     b)
         ? t
         : (0, r.jsx)(o.animated.div, {
               className: u.confettiTriggerWrapper,
-              style: { transform: y.to((e) => 'scale('.concat(e, ')')) },
+              style: { transform: y.to((e) => "scale(".concat(e, ")")) },
               children: (0, r.jsx)(s.P3F, {
                   className: u.confettiTrigger,
                   onMouseDown: () => {
-                      (m(1),
+                      m(1),
                           f(!0),
                           c((e) => Math.min(e + 2, _)),
                           window.clearTimeout(g.current),
                           (g.current = window.setTimeout(() => {
                               E.current && c(0);
-                          }, d)));
+                          }, d));
                   },
                   onMouseUp: () => {
-                      (m(0), f(!1));
+                      m(0), f(!1);
                   },
                   onMouseEnter: () => {
                       var e;
-                      (m(2), null == p || null == (e = p.onMouseEnter) || e.call(p));
+                      m(2), null == p || null == (e = p.onMouseEnter) || e.call(p);
                   },
                   onMouseLeave: () => {
                       var e;
-                      (m(0), null == p || null == (e = p.onMouseLeave) || e.call(p));
+                      m(0), null == p || null == (e = p.onMouseLeave) || e.call(p);
                   },
                   innerRef: n,
-                  children: t
-              })
+                  children: t,
+              }),
           });
 }
 let h = function (e) {
@@ -75,7 +75,7 @@ let h = function (e) {
             () => () => {
                 null == o || o.clearConfetti();
             },
-            [o]
+            [o],
         ),
         i.useEffect(() => {
             if (!r || u || null == n.current) return;
@@ -85,18 +85,18 @@ let h = function (e) {
                 e.top + e.height / 2,
                 {
                     velocity: {
-                        type: 'static-random',
+                        type: "static-random",
                         minValue: {
                             x: -180,
-                            y: -180
+                            y: -180,
                         },
                         maxValue: {
                             x: 180,
-                            y: 180
-                        }
-                    }
+                            y: 180,
+                        },
+                    },
                 },
-                Math.max(t, f)
+                Math.max(t, f),
             );
         }, [t, n, s, r, u]),
         null

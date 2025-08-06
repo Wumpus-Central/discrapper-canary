@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(953529));
+n.d(t, { Z: () => E }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -34,13 +34,13 @@ let E = function () {
             (e) => {
                 null != n && (p.Z.updateGuild({ icon: e }), p.Z.updateGuildProfile(n, { icon: e }));
             },
-            [n]
+            [n],
         ),
         R = i.useCallback(
             (e) => {
                 null != n && p.Z.updateGuildProfile(n, { customBanner: e });
             },
-            [n]
+            [n],
         );
     i.useEffect(() => {
         null != n && E();
@@ -54,74 +54,74 @@ let E = function () {
     S === d.a.FETCHED && null == T)
         ? (0, r.jsx)(_.g, { forceFetchGuildProfile: Z })
         : S === d.a.NOT_FETCHED || S === d.a.FETCHING
-          ? (0, r.jsx)('main', {
+          ? (0, r.jsx)("main", {
                 className: I.spinner,
-                children: (0, r.jsx)(a.$jN, {})
+                children: (0, r.jsx)(a.$jN, {}),
             })
           : null == t || null == T
             ? null
             : (0, r.jsx)(c.Gt, {
                   value: e,
-                  children: (0, r.jsxs)('main', {
+                  children: (0, r.jsxs)("main", {
                       className: I.content,
                       children: [
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: I.leftColumn,
                               children: [
-                                  (0, r.jsxs)('div', {
+                                  (0, r.jsxs)("div", {
                                       children: [
                                           (0, r.jsx)(a.X6q, {
-                                              variant: 'heading-lg/semibold',
-                                              color: 'header-primary',
-                                              children: N.intl.string(N.t.txdaxc)
+                                              variant: "heading-lg/semibold",
+                                              color: "header-primary",
+                                              children: N.intl.string(N.t.txdaxc),
                                           }),
                                           (0, r.jsx)(a.Text, {
-                                              variant: 'text-sm/medium',
-                                              color: 'header-secondary',
+                                              variant: "text-sm/medium",
+                                              color: "header-secondary",
                                               className: I.description,
-                                              children: N.intl.string(N.t['5PGZWV'])
-                                          })
-                                      ]
+                                              children: N.intl.string(N.t["5PGZWV"]),
+                                          }),
+                                      ],
                                   }),
                                   (0, r.jsx)(v.Z, {
                                       profile: T,
-                                      canManageGuild: P
+                                      canManageGuild: P,
                                   }),
-                                  (0, r.jsx)('div', { className: I.divider }),
+                                  (0, r.jsx)("div", { className: I.divider }),
                                   (0, r.jsx)(j.Z, {
                                       profile: T,
                                       canManageGuild: P,
-                                      onIconChange: w
+                                      onIconChange: w,
                                   }),
-                                  (0, r.jsx)('div', { className: I.divider }),
+                                  (0, r.jsx)("div", { className: I.divider }),
                                   (0, r.jsx)(f.Z, {
                                       profile: T,
                                       onCustomBannerChange: R,
-                                      canManageGuild: P
+                                      canManageGuild: P,
                                   }),
-                                  (0, r.jsx)('div', { className: I.divider }),
+                                  (0, r.jsx)("div", { className: I.divider }),
                                   (0, r.jsx)(O.Z, {
                                       profile: T,
-                                      canManageGuild: P
+                                      canManageGuild: P,
                                   }),
-                                  (0, r.jsx)('div', { className: I.divider }),
+                                  (0, r.jsx)("div", { className: I.divider }),
                                   (0, r.jsx)(x.Z, {
                                       profile: T,
-                                      canManageGuild: P
+                                      canManageGuild: P,
                                   }),
-                                  (0, r.jsx)('div', { className: I.divider }),
+                                  (0, r.jsx)("div", { className: I.divider }),
                                   (0, r.jsx)(b.Z, {
                                       profile: T,
-                                      canManageGuild: P
+                                      canManageGuild: P,
                                   }),
-                                  (0, r.jsx)('div', { className: I.divider }),
+                                  (0, r.jsx)("div", { className: I.divider }),
                                   (0, r.jsx)(y.Z, {
                                       profile: T,
-                                      canManageGuild: P
-                                  })
-                              ]
+                                      canManageGuild: P,
+                                  }),
+                              ],
                           }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: I.rightColumn,
                               children: (0, r.jsx)(a.Ttm, {
                                   className: I.profilePreviewContainer,
@@ -130,11 +130,11 @@ let E = function () {
                                       profile: T,
                                       disableCTA: !0,
                                       onIconChange: P ? w : void 0,
-                                      disableGuildNameClick: !0
-                                  })
-                              })
-                          })
-                      ]
-                  })
+                                      disableGuildNameClick: !0,
+                                  }),
+                              }),
+                          }),
+                      ],
+                  }),
               });
 };

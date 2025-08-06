@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(481060),
@@ -10,7 +10,16 @@ var r = n(255367),
     u = n(228168),
     f = n(662776);
 function p(e) {
-    let { user: t, currentUser: n, section: l, subsection: o, displayProfile: i, guildId: f, channelId: p, onClose: m } = e;
+    let {
+        user: t,
+        currentUser: n,
+        section: l,
+        subsection: o,
+        displayProfile: i,
+        guildId: f,
+        channelId: p,
+        onClose: m,
+    } = e;
     return l === u.oh.ACTIVITY
         ? (0, r.jsx)(a.Z, {
               user: t,
@@ -19,55 +28,65 @@ function p(e) {
               guildId: f,
               channelId: p,
               subsection: o,
-              onClose: m
+              onClose: m,
           })
         : l === u.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(c.Z, {
                 user: t,
                 guildId: f,
                 channelId: p,
-                onClose: m
+                onClose: m,
             })
           : l === u.oh.MUTUAL_GUILDS
             ? (0, r.jsx)(s.Z, {
                   user: t,
-                  onClose: m
+                  onClose: m,
               })
             : l === u.oh.WIDGETS
               ? (0, r.jsx)(d.Z, {
                     user: t,
                     guildId: f,
-                    channelId: p
+                    channelId: p,
                 })
               : null;
 }
 function m(e) {
     var t, n, a;
-    let { user: c, currentUser: s, displayProfile: d, guildId: u, channelId: m, items: g, initialSection: b, initialSubsection: j, onClose: h } = e,
+    let {
+            user: c,
+            currentUser: s,
+            displayProfile: d,
+            guildId: u,
+            channelId: m,
+            items: g,
+            initialSection: b,
+            initialSubsection: j,
+            onClose: h,
+        } = e,
         { trackUserProfileAction: y } = (0, i.KZ)(),
         [{ section: v, subsection: O, text: x }, _] = l.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })(
@@ -78,7 +97,7 @@ function m(e) {
                         return t === b;
                     }))
                     ? t
-                    : g[0]
+                    : g[0],
             )),
             (a = a = { subsection: j }),
             Object.getOwnPropertyDescriptors
@@ -93,29 +112,29 @@ function m(e) {
                   })(Object(a)).forEach(function (e) {
                       Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                   }),
-            n)
+            n),
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: f.container,
         children: [
             (0, r.jsx)(o.Ttm, {
-                orientation: 'horizontal',
+                orientation: "horizontal",
                 className: f.scroller,
                 fade: !0,
                 paddingFix: !1,
                 children: (0, r.jsx)(o.njP, {
-                    type: 'top',
-                    look: 'custom',
+                    type: "top",
+                    look: "custom",
                     selectedItem: v,
                     onItemSelect: (e) => {
-                        (y({
-                            action: 'PRESS_SECTION',
-                            section: e
+                        y({
+                            action: "PRESS_SECTION",
+                            section: e,
                         }),
                             _((t) => {
                                 var n;
                                 return null != (n = g.find((t) => t.section === e)) ? n : t;
-                            }));
+                            });
                     },
                     children: g.map((e) =>
                         (0, r.jsx)(
@@ -123,17 +142,17 @@ function m(e) {
                             {
                                 className: f.tabBarItem,
                                 id: e.section,
-                                'aria-label': e.text,
-                                children: e.text
+                                "aria-label": e.text,
+                                children: e.text,
                             },
-                            e.section
-                        )
-                    )
-                })
+                            e.section,
+                        ),
+                    ),
+                }),
             }),
             (0, r.jsx)(o.njP.Panel, {
                 id: v,
-                'aria-label': x,
+                "aria-label": x,
                 className: f.tabBarPanel,
                 children: (0, r.jsx)(p, {
                     user: c,
@@ -143,9 +162,9 @@ function m(e) {
                     channelId: m,
                     section: v,
                     subsection: O,
-                    onClose: h
-                })
-            })
-        ]
+                    onClose: h,
+                }),
+            }),
+        ],
     });
 }

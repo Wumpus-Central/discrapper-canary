@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685));
+n.d(t, { Z: () => c }), n(388685);
 var r = n(570140),
     i = n(147913),
     o = n(885110);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -17,15 +17,15 @@ function a(e, t, n) {
 }
 class s extends i.Z {
     constructor(...e) {
-        (super(...e), a(this, 'stores', new Map().set(o.Z, l)));
+        super(...e), a(this, "stores", new Map().set(o.Z, l));
     }
 }
 function l() {
     r.Z.dispatch({
-        type: 'SELF_PRESENCE_STORE_UPDATE',
+        type: "SELF_PRESENCE_STORE_UPDATE",
         status: o.Z.getStatus(),
         activities: o.Z.getActivities(!0),
-        hiddenActivities: o.Z.getHiddenActivities()
+        hiddenActivities: o.Z.getHiddenActivities(),
     });
 }
 let c = new s();

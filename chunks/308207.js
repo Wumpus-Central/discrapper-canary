@@ -25,21 +25,21 @@ var n = r(73800),
             b = (0, o.default)({
                 default: {
                     picker: {
-                        position: 'relative',
+                        position: "relative",
                         width: i,
-                        height: s
+                        height: s,
                     },
                     alpha: {
-                        radius: '2px',
-                        style: p
-                    }
-                }
+                        radius: "2px",
+                        style: p,
+                    },
+                },
             });
         return n.createElement(
-            'div',
+            "div",
             {
                 style: b.picker,
-                className: 'alpha-picker ' + (void 0 === h ? '' : h)
+                className: "alpha-picker " + (void 0 === h ? "" : h),
             },
             n.createElement(
                 a.xV,
@@ -49,15 +49,15 @@ var n = r(73800),
                     pointer: d,
                     renderers: f,
                     onChange: u,
-                    direction: c
-                })
-            )
+                    direction: c,
+                }),
+            ),
         );
     };
-((s.defaultProps = {
-    width: '316px',
-    height: '16px',
-    direction: 'horizontal',
-    pointer: i.Z
+(s.defaultProps = {
+    width: "316px",
+    height: "16px",
+    direction: "horizontal",
+    pointer: i.Z,
 }),
-    (0, a.t1)(s));
+    (0, a.t1)(s);

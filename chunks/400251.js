@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Z: () => R,
-    m: () => T
+    m: () => T,
 }),
     n(388685),
-    n(953529));
+    n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -32,24 +32,24 @@ function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -81,12 +81,13 @@ function P(e, t) {
                 r,
                 i = {},
                 l = Object.keys(e);
-            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < l.length; r++)
+            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -96,17 +97,17 @@ let T = (e) => {
         onClick: t,
         className: E.addEntryCard,
         children: [
-            (0, r.jsx)('img', {
-                alt: '',
-                src: S
+            (0, r.jsx)("img", {
+                alt: "",
+                src: S,
             }),
             (0, r.jsx)(c.Text, {
-                variant: 'text-sm/semibold',
-                color: 'header-primary',
+                variant: "text-sm/semibold",
+                color: "header-primary",
                 className: E.addServerText,
-                children: C.intl.string(C.t.H9jxS0)
-            })
-        ]
+                children: C.intl.string(C.t.H9jxS0),
+            }),
+        ],
     });
 };
 function N(e) {
@@ -114,7 +115,7 @@ function N(e) {
         [l, s] = i.useState(!1),
         o = i.useRef(null),
         { canEdit: u } = (0, _.Z)(t);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(E.actionButtonsContainer, { [E.forceButtonsShow]: l }),
         children: (0, r.jsxs)(p.ZP, {
             children: [
@@ -124,26 +125,26 @@ function N(e) {
                           hideOnClick: !0,
                           children: (e) => {
                               var { onClick: i } = e,
-                                  l = P(e, ['onClick']);
+                                  l = P(e, ["onClick"]);
                               return (0, r.jsx)(
                                   p.zx,
                                   I(Z({}, l), {
                                       onClick: () => {
-                                          (null == i || i(),
+                                          null == i || i(),
                                               (0, c.ZDy)(async () => {
-                                                  let { default: e } = await n.e('34191').then(n.bind(n, 303647));
+                                                  let { default: e } = await n.e("34191").then(n.bind(n, 303647));
                                                   return (n) => (0, r.jsx)(e, I(Z({}, n), { entry: t }));
-                                              }));
+                                              });
                                       },
-                                      'aria-label': C.intl.string(C.t.XnuOvL),
+                                      "aria-label": C.intl.string(C.t.XnuOvL),
                                       children: (0, r.jsx)(c.vdY, {
-                                          size: 'xs',
-                                          color: 'currentColor',
-                                          className: E.overflowIcon
-                                      })
-                                  })
+                                          size: "xs",
+                                          color: "currentColor",
+                                          className: E.overflowIcon,
+                                      }),
+                                  }),
                               );
-                          }
+                          },
                       })
                     : null,
                 (0, r.jsx)(O.Z, {
@@ -154,34 +155,34 @@ function N(e) {
                     hideEditButton: !0,
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = P(e, ['onClick']);
+                            n = P(e, ["onClick"]);
                         return (0, r.jsx)(c.ua7, {
                             text: C.intl.string(C.t.UKOtz8),
                             hideOnClick: !0,
                             children: (e) => {
                                 var { onClick: i } = e,
-                                    l = P(e, ['onClick']);
+                                    l = P(e, ["onClick"]);
                                 return (0, r.jsx)(
                                     p.zx,
                                     I(Z({}, n, l), {
                                         ref: o,
                                         onClick: (e) => {
-                                            (null == i || i(), t(e));
+                                            null == i || i(), t(e);
                                         },
-                                        'aria-label': C.intl.string(C.t.UKOtz8),
+                                        "aria-label": C.intl.string(C.t.UKOtz8),
                                         children: (0, r.jsx)(c.xhG, {
-                                            size: 'md',
-                                            color: 'currentColor',
-                                            className: E.overflowIcon
-                                        })
-                                    })
+                                            size: "md",
+                                            color: "currentColor",
+                                            className: E.overflowIcon,
+                                        }),
+                                    }),
                                 );
-                            }
+                            },
                         });
-                    }
-                })
-            ]
-        })
+                    },
+                }),
+            ],
+        }),
     });
 }
 let R = (e) => {
@@ -200,21 +201,21 @@ let R = (e) => {
         S = x.ZP.getGuildSplashURL({
             id: l.guildId,
             splash: l.splash,
-            size: 300 * (0, m.x_)()
+            size: 300 * (0, m.x_)(),
         }),
         P =
             null !=
             (t = x.ZP.getGuildIconURL({
                 id: l.guildId,
                 icon: l.icon,
-                size: 40
+                size: 40,
             }))
                 ? t
                 : void 0,
         T = C.intl.string(C.t.VJlc0d);
     return (
         _ && (T = C.intl.string(C.t.cqWE2d)),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: E.card,
             onContextMenu: (e) => {
                 (0, u.jW)(e, async () => {
@@ -223,104 +224,108 @@ let R = (e) => {
                 });
             },
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: E.cardHeader,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: E.splash,
                             children:
                                 null != S &&
-                                (0, r.jsx)('img', {
+                                (0, r.jsx)("img", {
                                     src: S,
-                                    alt: '',
-                                    className: E.splashImage
-                                })
+                                    alt: "",
+                                    className: E.splashImage,
+                                }),
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: E.guildIcon,
                             children: (0, r.jsx)(h.ZP, {
                                 mask: h.ZP.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
-                                children: (0, r.jsx)('div', {
+                                children: (0, r.jsx)("div", {
                                     className: E.iconMask,
                                     children: (0, r.jsx)(f.Z, {
                                         className: E.icon,
                                         iconSrc: P,
                                         guild: (0, j.e)(l),
                                         size: f.Z.Sizes.MEDIUM,
-                                        active: !0
-                                    })
-                                })
-                            })
-                        })
-                    ]
+                                        active: !0,
+                                    }),
+                                }),
+                            }),
+                        }),
+                    ],
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: E.guildInfo,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: E.title,
                             children: [
                                 (0, r.jsx)(g.Z, {
                                     className: E.guildBadge,
                                     guild: l,
-                                    tooltipColor: c.ua7.Colors.PRIMARY
+                                    tooltipColor: c.ua7.Colors.PRIMARY,
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     className: E.guildName,
-                                    variant: 'heading-md/semibold',
-                                    color: 'header-primary',
-                                    children: l.name
-                                })
-                            ]
+                                    variant: "heading-md/semibold",
+                                    color: "header-primary",
+                                    children: l.name,
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(c.Text, {
                             className: E.description,
-                            variant: 'text-sm/normal',
-                            color: 'header-secondary',
-                            children: l.description
+                            variant: "text-sm/normal",
+                            color: "header-secondary",
+                            children: l.description,
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: E.memberInfo,
                             children: [
                                 null != l.approximatePresenceCount &&
-                                    (0, r.jsxs)('div', {
+                                    (0, r.jsxs)("div", {
                                         className: E.memberCount,
                                         children: [
-                                            (0, r.jsx)('div', { className: E.dotOnline }),
+                                            (0, r.jsx)("div", { className: E.dotOnline }),
                                             (0, r.jsx)(c.Text, {
-                                                variant: 'text-xs/normal',
-                                                color: 'header-secondary',
-                                                children: C.intl.format(C.t['LC+S+v'], { membersOnline: l.approximatePresenceCount })
-                                            })
-                                        ]
+                                                variant: "text-xs/normal",
+                                                color: "header-secondary",
+                                                children: C.intl.format(C.t["LC+S+v"], {
+                                                    membersOnline: l.approximatePresenceCount,
+                                                }),
+                                            }),
+                                        ],
                                     }),
                                 null != l.approximateMemberCount &&
-                                    (0, r.jsxs)('div', {
+                                    (0, r.jsxs)("div", {
                                         className: E.memberCount,
                                         children: [
-                                            (0, r.jsx)('div', { className: E.dotOffline }),
+                                            (0, r.jsx)("div", { className: E.dotOffline }),
                                             (0, r.jsx)(c.Text, {
-                                                variant: 'text-xs/normal',
-                                                color: 'header-secondary',
-                                                children: C.intl.format(C.t.zRl6XV, { count: l.approximateMemberCount })
-                                            })
-                                        ]
-                                    })
-                            ]
+                                                variant: "text-xs/normal",
+                                                color: "header-secondary",
+                                                children: C.intl.format(C.t.zRl6XV, {
+                                                    count: l.approximateMemberCount,
+                                                }),
+                                            }),
+                                        ],
+                                    }),
+                            ],
                         }),
                         (0, r.jsx)(o.zx, {
                             submitting: a,
                             className: E.joinButton,
                             color: _ ? o.zx.Colors.PRIMARY : o.zx.Colors.GREEN,
                             onClick: O,
-                            children: T
-                        })
-                    ]
+                            children: T,
+                        }),
+                    ],
                 }),
-                (0, r.jsx)(N, { entry: l })
-            ]
+                (0, r.jsx)(N, { entry: l }),
+            ],
         })
     );
 };

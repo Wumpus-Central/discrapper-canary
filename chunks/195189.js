@@ -8,25 +8,25 @@ var i = n(481060),
     o = n(296205);
 function c(e) {
     let { title: t, details: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o.simpleItemWrapper,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: o.itemContent,
                 children: [
                     (0, r.jsx)(i.X6q, {
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
-                        children: t
+                        variant: "text-md/semibold",
+                        color: "header-primary",
+                        children: t,
                     }),
-                    'string' == typeof n
+                    "string" == typeof n
                         ? (0, r.jsx)(i.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'header-secondary',
-                              children: n
+                              variant: "text-sm/medium",
+                              color: "header-secondary",
+                              children: n,
                           })
-                        : n
-                ]
+                        : n,
+                ],
             }),
             (0, r.jsx)(i.ua7, {
                 tooltipContentClassName: o.tooltip,
@@ -37,9 +37,9 @@ function c(e) {
                         disabled: !0,
                         onChange: a.dG,
                         className: o.bringToFront,
-                        tooltipProps: e
-                    })
-            })
-        ]
+                        tooltipProps: e,
+                    }),
+            }),
+        ],
     });
 }

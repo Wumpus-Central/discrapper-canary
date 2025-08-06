@@ -2,10 +2,10 @@ n.d(t, {
     Fs: () => a,
     X4: () => i,
     _N: () => s,
-    fI: () => o
+    fI: () => o,
 });
 var r = n(149765);
-let i = 'GuildRole';
+let i = "GuildRole";
 function o(e) {
     return e.id === e.guildId;
 }

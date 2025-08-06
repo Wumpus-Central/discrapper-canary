@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685), n(539854));
+n.d(t, { Z: () => f }), n(388685), n(539854);
 var r = n(73800),
     i = n(149765),
     l = n(442837),
@@ -17,7 +17,7 @@ function f(e) {
         m = r.useRef(new Set()),
         b = r.useMemo(() => {
             let e = new Set(null == t ? void 0 : t.map((e) => e.author_id));
-            return ((0, a.E)([...m.current], [...e]) || (m.current = e), m.current);
+            return (0, a.E)([...m.current], [...e]) || (m.current = e), m.current;
         }, [t]);
     r.useEffect(() => {
         null != g &&
@@ -25,23 +25,19 @@ function f(e) {
                 o.Z.requestMember(g, e);
             });
     }, [b, g]);
-    let y = (0, l.Wu)(
-            [c.ZP],
-            () => {
-                if (null == g) return h;
-                let e = [];
-                for (let t of b) c.ZP.isMember(g, t) && e.push(t);
-                return e;
-            },
-            [b, g]
-        ),
+    let y = (0, l.Wu)([c.ZP], () => {
+            if (null == g) return h;
+            let e = [];
+            for (let t of b) c.ZP.isMember(g, t) && e.push(t);
+            return e;
+        }, [b, g]),
         x = r.useMemo(() => {
             if (null == f || 0 === y.length) return p;
             let e = new Set();
             for (let t of y) {
                 let n = u.uB({
                     user: t,
-                    context: f
+                    context: f,
                 });
                 i.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t);
             }

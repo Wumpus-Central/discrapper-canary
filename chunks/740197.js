@@ -1,22 +1,22 @@
-(n.d(t, {
+n.d(t, {
     HS: () => d,
     Hg: () => u,
     PW: () => _,
     S5: () => i,
     ZA: () => o,
-    l0: () => f
+    l0: () => f,
 }),
     n(358797),
-    n(539854));
+    n(539854);
 var r = n(65154);
 let i = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
-    o = i && 'setSinkId' in HTMLAudioElement.prototype;
+    o = i && "setSinkId" in HTMLAudioElement.prototype;
 function a(e) {
     return {
         id: r.w5,
         type: e,
         index: 0,
-        name: 'Default'
+        name: "Default",
     };
 }
 function s() {
@@ -61,7 +61,12 @@ function c() {
                               id: e.deviceId,
                               type: e.kind,
                               index: o,
-                              name: null != e.label && '' !== e.label ? e.label : 0 === o ? 'Default' : 'Device '.concat(o)
+                              name:
+                                  null != e.label && "" !== e.label
+                                      ? e.label
+                                      : 0 === o
+                                        ? "Default"
+                                        : "Device ".concat(o),
                           };
                       });
               })

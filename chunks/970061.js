@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685), n(361932), n(187205), n(953529));
+n.d(t, { Z: () => g }), n(388685), n(361932), n(187205), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,24 +10,24 @@ var r = n(255367),
     u = n(648993);
 function m(e) {
     let { checked: t, children: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: u.row,
         children: [
             (0, r.jsx)(c.Text, {
-                variant: 'text-md/normal',
-                color: 'interactive-active',
+                variant: "text-md/normal",
+                color: "interactive-active",
                 className: u.rowText,
-                children: n
+                children: n,
             }),
             t
                 ? (0, r.jsx)(c.owK, {
-                      size: 'md',
-                      color: 'currentColor',
+                      size: "md",
+                      color: "currentColor",
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: a()(u.rowIcon, u.rowIconChecked)
+                      className: a()(u.rowIcon, u.rowIconChecked),
                   })
-                : (0, r.jsx)('div', { className: a()(u.rowIcon, u.rowIconEmpty) })
-        ]
+                : (0, r.jsx)("div", { className: a()(u.rowIcon, u.rowIconEmpty) }),
+        ],
     });
 }
 function g(e) {
@@ -35,8 +35,8 @@ function g(e) {
         [g, p] = i.useState(!1),
         h = n.flatMap((e) => e.items.map((e) => e.completed)),
         f = h.filter((e) => e).length / h.length,
-        x = (0, c.q_F)({ width: ''.concat(100 * f, '%') });
-    return (0, r.jsxs)('div', {
+        x = (0, c.q_F)({ width: "".concat(100 * f, "%") });
+    return (0, r.jsxs)("div", {
         className: u.container,
         children: [
             (0, r.jsxs)(c.P3F, {
@@ -44,22 +44,22 @@ function g(e) {
                 onClick: () => p((e) => !e),
                 children: [
                     (0, r.jsx)(c.X6q, {
-                        variant: 'heading-md/semibold',
+                        variant: "heading-md/semibold",
                         className: u.headerText,
-                        children: t
+                        children: t,
                     }),
                     (0, r.jsx)(d.Z, {
                         direction: g ? d.Z.Directions.DOWN : d.Z.Directions.UP,
-                        className: u.headerCaret
-                    })
-                ]
+                        className: u.headerCaret,
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.progressBarOuter,
                 children: (0, r.jsx)(s.animated.div, {
                     className: u.progressBarInner,
-                    style: x
-                })
+                    style: x,
+                }),
             }),
             !g &&
                 n.map((e, t) => {
@@ -71,42 +71,42 @@ function g(e) {
                                 t > 0 && (0, r.jsx)(c.$i$, { className: u.divider }),
                                 (0, r.jsx)(c.vwX, {
                                     className: u.categoryTitle,
-                                    children: n
+                                    children: n,
                                 }),
                                 l.map((e, t) =>
                                     (0, r.jsx)(
                                         m,
                                         {
                                             children: e.description,
-                                            checked: e.completed
+                                            checked: e.completed,
                                         },
-                                        t
-                                    )
-                                )
-                            ]
+                                        t,
+                                    ),
+                                ),
+                            ],
                         },
-                        t
+                        t,
                     );
                 }),
             null !== l &&
-                '' !== l &&
+                "" !== l &&
                 null !== a &&
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(c.$i$, { className: u.divider }),
-                        (0, r.jsx)('div', {
-                            'data-button-hoisted-classname-wrapper': !0,
+                        (0, r.jsx)("div", {
+                            "data-button-hoisted-classname-wrapper": !0,
                             className: u.button,
                             children: (0, r.jsx)(c.zxk, {
-                                variant: 'primary',
-                                size: 'sm',
+                                variant: "primary",
+                                size: "sm",
                                 text: l,
                                 onClick: a,
-                                disabled: 1 !== f || o
-                            })
-                        })
-                    ]
-                })
-        ]
+                                disabled: 1 !== f || o,
+                            }),
+                        }),
+                    ],
+                }),
+        ],
     });
 }

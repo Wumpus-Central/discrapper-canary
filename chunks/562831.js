@@ -7,6 +7,6 @@ function o(e) {
     return {
         gameFriends: n,
         hasOutgoingPendingGameFriends: (0, r.N8)(t, i.OGo.PENDING_OUTGOING),
-        hasIncomingPendingGameFriends: (0, r.N8)(t, i.OGo.PENDING_INCOMING)
+        hasIncomingPendingGameFriends: (0, r.N8)(t, i.OGo.PENDING_INCOMING),
     };
 }

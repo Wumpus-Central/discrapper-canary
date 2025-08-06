@@ -29,14 +29,14 @@ function C(e) {
         P = (0, l.e7)([p.Z], () => p.Z.isSpam(t.id)),
         j = (0, g.V)(t.id, t.getRecipientId()),
         A = i.useCallback(() => {
-            (b.Z.closeChannelSidebar(_.uZ), T && S && (0, m.Kh)(t.id), P && N && (0, m.Kh)(t.id));
+            b.Z.closeChannelSidebar(_.uZ), T && S && (0, m.Kh)(t.id), P && N && (0, m.Kh)(t.id);
         }, [t.id, P, N, T, S]),
         Z = i.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(y.intl.string(y.t.pIQ3h4), o.ToastType.FAILURE));
         }, []),
         { markAsNotSpam: x } = (0, f.m)({
             onAcceptSuccess: A,
-            onError: Z
+            onError: Z,
         });
     if (null == t || !t.isDM()) return null;
     let w = [
@@ -45,51 +45,51 @@ function C(e) {
             {
                 icon: o.Dio,
                 tooltip: y.intl.string(y.t.cpT0Cg),
-                onClick: () => b.Z.closeChannelSidebar(n)
+                onClick: () => b.Z.closeChannelSidebar(n),
             },
-            'close'
-        )
+            "close",
+        ),
     ];
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.ZP, {
                 toolbar: w,
-                'aria-label': y.intl.string(y.t.BIYAqa),
+                "aria-label": y.intl.string(y.t.BIYAqa),
                 children: (0, u.ud)({
                     channel: t,
                     channelName: C,
-                    inSidebar: !0
-                })
+                    inSidebar: !0,
+                }),
             }),
             P &&
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: I.hamBanner,
                     children: [
                         (0, r.jsx)(o.Text, {
                             className: I.__invalid_hamBannerText,
-                            variant: 'text-sm/normal',
-                            children: y.intl.string(y.t.XVOKgo)
+                            variant: "text-sm/normal",
+                            children: y.intl.string(y.t.XVOKgo),
                         }),
                         (0, r.jsx)(a.zx, {
                             className: I.hamBannerButton,
                             size: a.Ph.SMALL,
                             onClick: () => x(t, j),
-                            children: y.intl.string(y.t.koqL3d)
-                        })
-                    ]
+                            children: y.intl.string(y.t.koqL3d),
+                        }),
+                    ],
                 }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: v.chat,
                 children: (0, r.jsx)(
                     E.Z,
                     {
                         channel: t,
                         guild: null,
-                        chatInputType: s.Ie.SIDEBAR
+                        chatInputType: s.Ie.SIDEBAR,
                     },
-                    t.id
-                )
-            })
-        ]
+                    t.id,
+                ),
+            }),
+        ],
     });
 }

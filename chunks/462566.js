@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,9 +70,9 @@ let y = function (e) {
         [m, E] = i.useState(!1),
         [y, O] = i.useState({}),
         [v, I] = i.useState({
-            name: '',
-            country: '',
-            postalCode: ''
+            name: "",
+            country: "",
+            postalCode: "",
         }),
         [T, S] = i.useState({}),
         [A, N] = i.useState({}),
@@ -90,9 +90,9 @@ let y = function (e) {
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
-            return ((e || T.name) && '' === v.name && (t.name = _.intl.string(_.t.lIkVsr)), t);
+            return (e || T.name) && "" === v.name && (t.name = _.intl.string(_.t.lIkVsr)), t;
         },
-        [T, v]
+        [T, v],
     );
     function D() {
         N(w());
@@ -105,84 +105,105 @@ let y = function (e) {
         {
             fields: [
                 {
-                    name: 'cardNumber',
+                    name: "cardNumber",
                     title: () => _.intl.string(_.t.cVyJ3t),
                     getClassNameForLayout: () => h.width100,
                     renderInput: () =>
                         (0, r.jsx)(f.Z, {
-                            stripeType: 'cardNumber',
+                            stripeType: "cardNumber",
                             flipped: m,
-                            updateCompleted: (e) => P('cardNumber', e),
-                            onFocus: R
-                        })
-                }
-            ]
+                            updateCompleted: (e) => P("cardNumber", e),
+                            onFocus: R,
+                        }),
+                },
+            ],
         },
         {
             fields: [
                 {
-                    name: 'cardExpiry',
-                    title: () => _.intl.string(_.t['CeBa//']),
+                    name: "cardExpiry",
+                    title: () => _.intl.string(_.t["CeBa//"]),
                     getClassNameForLayout: () => h.width50,
                     renderInput: () =>
                         (0, r.jsx)(f.Z, {
-                            stripeType: 'cardExpiry',
-                            updateCompleted: (e) => P('cardExpiry', e),
-                            onFocus: R
-                        })
+                            stripeType: "cardExpiry",
+                            updateCompleted: (e) => P("cardExpiry", e),
+                            onFocus: R,
+                        }),
                 },
                 {
-                    name: 'cardCvc',
+                    name: "cardCvc",
                     title: () => _.intl.string(_.t.Fd3rOz),
                     getClassNameForLayout: () => h.width50,
                     renderInput: () =>
                         (0, r.jsx)(f.Z, {
-                            stripeType: 'cardCvc',
-                            updateCompleted: (e) => P('cardCvc', e),
+                            stripeType: "cardCvc",
+                            updateCompleted: (e) => P("cardCvc", e),
                             onFocus: () => {
-                                (R(), E(!0));
+                                R(), E(!0);
                             },
                             onBlur: () => {
                                 E(!1);
-                            }
-                        })
-                }
-            ]
+                            },
+                        }),
+                },
+            ],
         },
         {
             fields: [
                 {
-                    id: 'card-name',
-                    name: 'name',
+                    id: "card-name",
+                    name: "name",
                     title: () => _.intl.string(_.t.VUlFdX),
-                    autoComplete: 'cc-name',
+                    autoComplete: "cc-name",
                     placeholder: () => _.intl.string(_.t.yf7ms7),
                     getClassNameForLayout: () => h.width100,
-                    renderInput: (e) => (0, r.jsx)(l.oil, g({}, e))
-                }
-            ]
-        }
+                    renderInput: (e) => (0, r.jsx)(l.oil, g({}, e)),
+                },
+            ],
+        },
     ];
     function x(e, t) {
-        if ('name' !== t && 'country' !== t && 'postalCode' !== t) return;
+        if ("name" !== t && "country" !== t && "postalCode" !== t) return;
         let n = g({}, v),
             r = g({}, T),
             i = { name: A.name };
-        (T[t] || '' === e || (r[t] = !0), (n[t] = e), r[t] && '' === e ? 'name' === t && (i.name = _.intl.string(_.t.lIkVsr)) : delete i[t], I(n), S(r), N(i));
+        T[t] || "" === e || (r[t] = !0),
+            (n[t] = e),
+            r[t] && "" === e ? "name" === t && (i.name = _.intl.string(_.t.lIkVsr)) : delete i[t],
+            I(n),
+            S(r),
+            N(i);
     }
     function M() {
         var e;
         return (null == (e = u.default.getCurrentUser()) ? void 0 : e.nsfwAllowed)
-            ? (0, r.jsxs)('div', {
+            ? (0, r.jsxs)("div", {
                   className: p.cardBrands,
-                  children: [(0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.visa, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.mastercard, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.discover, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.amex, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.jcb, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.dinersclub, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.unionpay, p.cardFormHeader) })]
+                  children: [
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.visa, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.mastercard, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.discover, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.amex, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.jcb, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.dinersclub, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.unionpay, p.cardFormHeader) }),
+                  ],
               })
-            : (0, r.jsxs)('div', {
+            : (0, r.jsxs)("div", {
                   className: p.cardBrands,
-                  children: [(0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.visa_monochrome, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.mastercard_monochrome, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.discover_monochrome, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.amex_monochrome, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.jcb_monochrome, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.dinersclub_monochrome, p.cardFormHeader) }), (0, r.jsx)('div', { className: a()(c.Uy.SMALL, p.unionpay_monochrome, p.cardFormHeader) })]
+                  children: [
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.visa_monochrome, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.mastercard_monochrome, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.discover_monochrome, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.amex_monochrome, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.jcb_monochrome, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.dinersclub_monochrome, p.cardFormHeader) }),
+                      (0, r.jsx)("div", { className: a()(c.Uy.SMALL, p.unionpay_monochrome, p.cardFormHeader) }),
+                  ],
               });
     }
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         children: [
             M(),
             (0, r.jsx)(d.Z, {
@@ -191,8 +212,8 @@ let y = function (e) {
                 formError: n,
                 values: v,
                 onFieldChange: x,
-                onFieldBlur: D
-            })
-        ]
+                onFieldBlur: D,
+            }),
+        ],
     });
 };

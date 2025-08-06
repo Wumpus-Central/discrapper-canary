@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Qk: () => N,
     WG: () => P,
-    ZP: () => w
+    ZP: () => w,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -32,7 +32,7 @@ function N(e) {
     let { src: t, width: n, height: r, hasMultiple: i = !1, options: o } = e,
         { width: a, height: s } = (0, b.p)(i, {
             width: n,
-            height: r
+            height: r,
         });
     _.ZP.preloadImage({
         src: t,
@@ -40,9 +40,9 @@ function N(e) {
             maxWidth: a,
             maxHeight: s,
             imageWidth: n,
-            imageHeight: r
+            imageHeight: r,
         },
-        options: o
+        options: o,
     });
 }
 function C(e, t) {
@@ -66,41 +66,47 @@ function R(e) {
                       isSingleMosaicItem: !0,
                       onToggleObscurity: d,
                       children: (e) =>
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: a()(A.obscureWrapper, { [A.obscure]: e }),
-                              children: t(e)
-                          })
+                              children: t(e),
+                          }),
                   },
-                  o
-              )
+                  o,
+              ),
           })
         : (0, r.jsx)(r.Fragment, { children: t(!1) });
 }
 function P(e, t) {
-    if ('IMAGE' === e.type) {
+    if ("IMAGE" === e.type) {
         if (!(0, m._H)(e)) return void (0, f.po)(e.url);
         N({
             src: (0, p.q)({
                 proxyURL: e.proxyUrl,
-                url: e.url
+                url: e.url,
             }),
             width: e.width,
             height: e.height,
             hasMultiple: t,
-            options: e
+            options: e,
         });
     }
 }
 function w(e) {
-    let { items: t, onIndexChange: n, startIndex: o = 0, enabledContentHarmTypeFlags: l = 0, shouldHideMediaOptions: u = !1 } = e,
+    let {
+            items: t,
+            onIndexChange: n,
+            startIndex: o = 0,
+            enabledContentHarmTypeFlags: l = 0,
+            shouldHideMediaOptions: u = !1,
+        } = e,
         [f, _] = i.useState(o),
         p = i.useRef(o),
         { zoomed: m, setZoomed: N } = (0, E.Y)(),
         P = i.useCallback(
             (e) => {
-                (_((e = C(e, t.length))), (p.current = e), null == n || n(e), N(!1));
+                _((e = C(e, t.length))), (p.current = e), null == n || n(e), N(!1);
             },
-            [n, t, N]
+            [n, t, N],
         );
     i.useEffect(() => {
         let e = () => P(p.current + 1),
@@ -109,7 +115,7 @@ function w(e) {
             h.S.subscribe(T.CkL.MODAL_CAROUSEL_NEXT, e),
             h.S.subscribe(T.CkL.MODAL_CAROUSEL_PREV, t),
             () => {
-                (h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_NEXT, e), h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_PREV, t));
+                h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_NEXT, e), h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_PREV, t);
             }
         );
     }, [P, N]);
@@ -117,13 +123,13 @@ function w(e) {
         D = (0, d.g4)(
             {
                 type: c.l.GenericMedia,
-                media: w
+                media: w,
             },
-            l
+            l,
         ),
         L = u
             ? (e) => {
-                  (e.stopPropagation(), e.preventDefault());
+                  e.stopPropagation(), e.preventDefault();
               }
             : () => (0, g.yg)(g.uG.CONTEXT_MENU_OPENED),
         x = t.length > 1;
@@ -136,23 +142,23 @@ function w(e) {
                               children: [
                                   (0, r.jsx)(v.Z, {
                                       onClick: (e) => {
-                                          (e.stopPropagation(), h.S.dispatch(T.CkL.MODAL_CAROUSEL_PREV));
+                                          e.stopPropagation(), h.S.dispatch(T.CkL.MODAL_CAROUSEL_PREV);
                                       },
                                       icon: s.j9r,
                                       tooltip: S.intl.string(S.t.vgfxaG),
-                                      className: a()(A.navPrev, e)
+                                      className: a()(A.navPrev, e),
                                   }),
                                   (0, r.jsx)(v.Z, {
                                       onClick: (e) => {
-                                          (e.stopPropagation(), h.S.dispatch(T.CkL.MODAL_CAROUSEL_NEXT));
+                                          e.stopPropagation(), h.S.dispatch(T.CkL.MODAL_CAROUSEL_NEXT);
                                       },
                                       icon: s.d4D,
                                       tooltip: S.intl.string(S.t.XiOHRU),
-                                      className: a()(A.navNext, e)
-                                  })
-                              ]
+                                      className: a()(A.navNext, e),
+                                  }),
+                              ],
                           })
-                        : void 0
+                        : void 0,
             }),
             (0, r.jsx)(b.Z, {
                 items: t,
@@ -167,9 +173,9 @@ function w(e) {
                                 maxWidth: e,
                                 maxHeight: t,
                                 obscured: n,
-                                onContextMenu: L
-                            })
-                    })
+                                onContextMenu: L,
+                            }),
+                    }),
             }),
             x &&
                 (0, r.jsx)(y.ZP, {
@@ -178,9 +184,9 @@ function w(e) {
                             items: t,
                             currentIndex: f,
                             onGalleryItemClick: P,
-                            className: e
-                        })
-                })
-        ]
+                            className: e,
+                        }),
+                }),
+        ],
     });
 }

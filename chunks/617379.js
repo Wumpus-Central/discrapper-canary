@@ -10,24 +10,24 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -54,28 +54,28 @@ function h(e) {
         n = i.useRef(null);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: n,
-        align: 'right',
+        align: "right",
         animation: l.yRy.Animation.NONE,
-        position: 'bottom',
+        position: "bottom",
         renderPopout: (e) =>
             t.isThread()
                 ? (0, r.jsx)(
                       s.Z,
                       d(u({}, e), {
                           channel: t,
-                          navId: 'recents-thread-notifications',
-                          label: c.intl.string(c.t.ljs3OT)
-                      })
+                          navId: "recents-thread-notifications",
+                          label: c.intl.string(c.t.ljs3OT),
+                      }),
                   )
                 : (0, r.jsx)(
                       o.Z,
                       d(u({}, e), {
                           channel: t,
-                          navId: 'recents-notifications',
+                          navId: "recents-notifications",
                           label: c.intl.string(c.t.ljs3OT),
                           location: { section: a.jXE.INBOX },
-                          includeGuildMute: !0
-                      })
+                          includeGuildMute: !0,
+                      }),
                   ),
         children: (e) => {
             let { onClick: t } = e;
@@ -84,11 +84,11 @@ function h(e) {
                 tooltip: c.intl.string(c.t.h850Sk),
                 color: l.YX$.TERTIARY,
                 icon: (0, r.jsx)(l.Dkj, {
-                    size: 'xs',
-                    color: 'currentColor'
+                    size: "xs",
+                    color: "currentColor",
                 }),
-                onClick: t
+                onClick: t,
             });
-        }
+        },
     });
 }

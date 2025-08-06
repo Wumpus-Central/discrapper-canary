@@ -5,6 +5,6 @@ function r(e) {
         id: e.id,
         icon: e.icon,
         cover_image: e.coverImage,
-        type: e.type
+        type: e.type,
     };
 }

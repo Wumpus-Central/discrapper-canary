@@ -17,11 +17,11 @@ function a(e, t, n) {
                     t >= n &&
                     (r = {
                         start: e,
-                        end: t
+                        end: t,
                     });
-            }
+            },
         ),
-        'object' != typeof r && o(!1),
+        "object" != typeof r && o(!1),
         r
     );
 }
@@ -31,9 +31,10 @@ function s(e, t, n) {
         s = n < i.count() ? i.get(n) : void 0,
         l = o ? o.getEntity() : void 0,
         c = s ? s.getEntity() : void 0;
-    if (c && c === l && 'MUTABLE' !== e.__get(c).getMutability()) {
-        for (var u, d = a(i, c, n), f = d.start, _ = d.end; f < _; ) ((u = i.get(f)), (i = i.set(f, r.applyEntity(u, null))), f++);
-        return t.set('characterList', i);
+    if (c && c === l && "MUTABLE" !== e.__get(c).getMutability()) {
+        for (var u, d = a(i, c, n), f = d.start, _ = d.end; f < _; )
+            (u = i.get(f)), (i = i.set(f, r.applyEntity(u, null))), f++;
+        return t.set("characterList", i);
     }
     return t;
 }
@@ -54,7 +55,7 @@ e.exports = function (e, t) {
     return (_ !== f && (i[u] = _), Object.keys(i).length)
         ? e.merge({
               blockMap: n.merge(i),
-              selectionAfter: t
+              selectionAfter: t,
           })
-        : e.set('selectionAfter', t);
+        : e.set("selectionAfter", t);
 };

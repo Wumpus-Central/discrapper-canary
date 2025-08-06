@@ -19,24 +19,24 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -70,7 +70,11 @@ function j(e) {
                             guildId: t,
                             onContextMenu: (e) => {
                                 (0, d.jW)(e, async () => {
-                                    let { default: e } = await Promise.all([r.e('79695'), r.e('26976'), r.e('88606')]).then(r.bind(r, 415118));
+                                    let { default: e } = await Promise.all([
+                                        r.e("79695"),
+                                        r.e("26976"),
+                                        r.e("88606"),
+                                    ]).then(r.bind(r, 415118));
                                     return (r) => {
                                         var i, u;
                                         return (0, n.jsx)(
@@ -80,7 +84,7 @@ function j(e) {
                                                 {
                                                     user: o,
                                                     guildId: t,
-                                                    showMediaItems: !0
+                                                    showMediaItems: !0,
                                                 }),
                                             Object.getOwnPropertyDescriptors
                                                 ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(u))
@@ -92,21 +96,25 @@ function j(e) {
                                                       }
                                                       return r;
                                                   })(Object(u)).forEach(function (e) {
-                                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(u, e));
+                                                      Object.defineProperty(
+                                                          i,
+                                                          e,
+                                                          Object.getOwnPropertyDescriptor(u, e),
+                                                      );
                                                   }),
-                                            i)
+                                            i),
                                         );
                                     };
                                 });
-                            }
+                            },
                         },
-                        e
+                        e,
                     ),
-                    s.userId
+                    s.userId,
                 );
-            }
+            },
         },
-        o.id
+        o.id,
     );
 }
 function y(e) {
@@ -123,7 +131,7 @@ function y(e) {
                     .sortBy((e) => {
                         var t;
                         let r = g.default.getUser(e.userId);
-                        return (null != r ? (null != (t = e.nick) ? t : r.username) : '').toLocaleLowerCase();
+                        return (null != r ? (null != (t = e.nick) ? t : r.username) : "").toLocaleLowerCase();
                     })
                     .map((e) =>
                         (0, n.jsx)(
@@ -131,24 +139,24 @@ function y(e) {
                             {
                                 guildId: t.id,
                                 guildOwnerId: t.ownerId,
-                                member: e
+                                member: e,
                             },
-                            e.userId
-                        )
+                            e.userId,
+                        ),
                     )
                     .value(),
-            [d, t.id, t.ownerId, a]
+            [d, t.id, t.ownerId, a],
         ),
         h = p.Z.isFetchingFriendsForGuild(t.id);
     return (0, n.jsxs)(l.Modal, {
         title: O.intl.string(O.t.kYxEcH),
         subtitle: O.intl.format(h ? O.t.EtQnZm : O.t.OgMdNT, {
             guildName: t.name,
-            numFriends: f.length
+            numFriends: f.length,
         }),
         actions: void 0,
         transitionState: r,
         onClose: u,
-        children: [h && (0, n.jsx)(c.$jN, {}), f]
+        children: [h && (0, n.jsx)(c.$jN, {}), f],
     });
 }

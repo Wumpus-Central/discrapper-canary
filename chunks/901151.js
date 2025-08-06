@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(642613), n(539854));
+n.d(t, { Z: () => O }), n(642613), n(539854);
 var i = n(255367),
     r = n(73800),
     s = n(524437),
@@ -26,7 +26,7 @@ function j(e) {
                 if (null == i) break;
                 e.push(i.name);
             }
-            let t = e.join(', '),
+            let t = e.join(", "),
                 r = n.length - 3;
             return r > 0
                 ? x.intl.format(x.t.sHFdTk, {
@@ -35,15 +35,15 @@ function j(e) {
                           (0, i.jsx)(
                               a.Text,
                               {
-                                  tag: 'span',
-                                  variant: 'text-sm/medium',
-                                  color: 'text-muted',
-                                  children: x.intl.format(x.t['EADv+/'], { count: r })
+                                  tag: "span",
+                                  variant: "text-sm/medium",
+                                  color: "text-muted",
+                                  children: x.intl.format(x.t["EADv+/"], { count: r }),
                               },
-                              t
-                          )
+                              t,
+                          ),
                   })
-                : e.join(', ');
+                : e.join(", ");
         }, [n]),
         c = r.useMemo(() => {
             let e = [];
@@ -53,7 +53,7 @@ function j(e) {
                 let { icon: s, name: l, id: c } = r,
                     d = o.ZP.getApplicationIconURL({
                         id: c,
-                        icon: s
+                        icon: s,
                     });
                 e.push(
                     (0, i.jsx)(
@@ -62,7 +62,7 @@ function j(e) {
                             text: l,
                             children: (e) =>
                                 (0, i.jsx)(
-                                    'img',
+                                    "img",
                                     (function (e, t) {
                                         return (
                                             (t = null != t ? t : {}),
@@ -76,7 +76,11 @@ function j(e) {
                                                       }
                                                       return n;
                                                   })(Object(t)).forEach(function (n) {
-                                                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                                      Object.defineProperty(
+                                                          e,
+                                                          n,
+                                                          Object.getOwnPropertyDescriptor(t, n),
+                                                      );
                                                   }),
                                             e
                                         );
@@ -85,37 +89,37 @@ function j(e) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     i = Object.keys(n);
-                                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                                "function" == typeof Object.getOwnPropertySymbols &&
                                                     (i = i.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        })
+                                                        }),
                                                     )),
                                                     i.forEach(function (t) {
                                                         var i;
-                                                        ((i = n[t]),
+                                                        (i = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: i,
                                                                       enumerable: !0,
                                                                       configurable: !0,
-                                                                      writable: !0
+                                                                      writable: !0,
                                                                   })
-                                                                : (e[t] = i));
-                                                    }));
+                                                                : (e[t] = i);
+                                                    });
                                             }
                                             return e;
                                         })({}, e),
                                         {
                                             src: d,
-                                            'aria-label': l,
-                                            className: _.icon
-                                        }
-                                    )
-                                )
+                                            "aria-label": l,
+                                            className: _.icon,
+                                        },
+                                    ),
+                                ),
                         },
-                        c
-                    )
+                        c,
+                    ),
                 );
             }
             let t = n.length - 3;
@@ -123,17 +127,17 @@ function j(e) {
                 t > 0 &&
                     e.push(
                         (0, i.jsx)(
-                            'div',
+                            "div",
                             {
                                 className: _.moreIcon,
                                 children: (0, i.jsx)(a.Text, {
-                                    variant: 'text-xs/medium',
-                                    color: 'text-default',
-                                    children: '+'.concat(t)
-                                })
+                                    variant: "text-xs/medium",
+                                    color: "text-default",
+                                    children: "+".concat(t),
+                                }),
                             },
-                            'omitted'
-                        )
+                            "omitted",
+                        ),
                     ),
                 e
             );
@@ -141,41 +145,41 @@ function j(e) {
         u = r.useCallback(() => {
             l.Z.open(b.oAB.AUTHORIZED_APPS);
         }, []);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: _.header,
         children: [
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: _.gameNamesHeader,
                 children: [
                     (0, i.jsx)(a.Text, {
-                        variant: 'text-md/normal',
-                        color: 'header-primary',
-                        children: s
+                        variant: "text-md/normal",
+                        color: "header-primary",
+                        children: s,
                     }),
                     (0, i.jsxs)(a.P3F, {
                         onClick: u,
                         className: _.manageGamesLink,
                         children: [
                             (0, i.jsx)(a.Text, {
-                                variant: 'text-xs/normal',
-                                color: 'interactive-normal',
-                                children: x.intl.format(x.t.oYaYOT, {})
+                                variant: "text-xs/normal",
+                                color: "interactive-normal",
+                                children: x.intl.format(x.t.oYaYOT, {}),
                             }),
                             (0, i.jsx)(a.Fbu, {
-                                size: 'xxs',
+                                size: "xxs",
                                 color: a.TVs.colors.INTERACTIVE_NORMAL,
-                                className: _.manageGamesChevron
-                            })
-                        ]
-                    })
-                ]
+                                className: _.manageGamesChevron,
+                            }),
+                        ],
+                    }),
+                ],
             }),
-            (0, i.jsx)('div', { className: _.divider }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", { className: _.divider }),
+            (0, i.jsx)("div", {
                 className: _.gameIcons,
-                children: c
-            })
-        ]
+                children: c,
+            }),
+        ],
     });
 }
 function E() {
@@ -186,8 +190,8 @@ function E() {
             title: x.intl.string(x.t.XpBObG),
             note: x.intl.format(x.t.oZsHTE, { helpdeskArticle: c.Z.getArticleURL(b.BhN.SLAYER_GAME_FRIENDS) }),
             value: e,
-            onChange: u._j.updateSetting
-        })
+            onChange: u._j.updateSetting,
+        }),
     });
 }
 function C() {
@@ -196,23 +200,23 @@ function C() {
         n = [
             {
                 name: x.intl.string(x.t.JIFnNz),
-                value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL
+                value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
             },
             {
                 name: x.intl.string(x.t.rRdsk5),
-                value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME
+                value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
             },
             {
                 name: x.intl.string(x.t.AolKwM),
-                value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE
-            }
+                value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
+            },
         ];
     return (0, i.jsxs)(g.U, {
         setting: f.s6.PRIVACY_AND_SAFETY_IN_GAME_DMS,
         children: [
             (0, i.jsx)(g.H, {
-                header: x.intl.string(x.t['ms+TmZ']),
-                description: x.intl.string(x.t['4NN4+/'])
+                header: x.intl.string(x.t["ms+TmZ"]),
+                description: x.intl.string(x.t["4NN4+/"]),
             }),
             (0, i.jsx)(a.FXm, {
                 value: t,
@@ -220,9 +224,9 @@ function C() {
                 onChange: (e) => {
                     let { value: t } = e;
                     return u.JG.updateSetting(t);
-                }
-            })
-        ]
+                },
+            }),
+        ],
     });
 }
 function O() {
@@ -232,23 +236,30 @@ function O() {
             ? (0, i.jsx)(a.$jN, {})
             : t.length > 0
               ? (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(j, { applications: t }), (0, i.jsx)(E, {}), (0, i.jsx)('div', { className: _.divider }), (0, i.jsx)(C, {})]
+                    children: [
+                        (0, i.jsx)(j, { applications: t }),
+                        (0, i.jsx)(E, {}),
+                        (0, i.jsx)("div", { className: _.divider }),
+                        (0, i.jsx)(C, {}),
+                    ],
                 })
-              : (0, i.jsxs)('div', {
+              : (0, i.jsxs)("div", {
                     className: _.emptyContainer,
                     children: [
                         (0, i.jsx)(a.Text, {
-                            variant: 'text-md/medium',
-                            color: 'header-primary',
+                            variant: "text-md/medium",
+                            color: "header-primary",
                             className: _.noGamesConnectedText,
-                            children: x.intl.string(x.t['+0U77e'])
+                            children: x.intl.string(x.t["+0U77e"]),
                         }),
                         (0, i.jsx)(a.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-muted',
-                            children: x.intl.format(x.t.V8wClJ, { helpdeskArticle: c.Z.getArticleURL(b.BhN.SOCIAL_LAYER_CONNECTIONS) })
-                        })
-                    ]
-                })
+                            variant: "text-sm/normal",
+                            color: "text-muted",
+                            children: x.intl.format(x.t.V8wClJ, {
+                                helpdeskArticle: c.Z.getArticleURL(b.BhN.SOCIAL_LAYER_CONNECTIONS),
+                            }),
+                        }),
+                    ],
+                }),
     });
 }

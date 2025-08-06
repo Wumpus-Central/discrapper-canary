@@ -20,7 +20,7 @@ function c(e) {
                 type: s.h8.USER,
                 record: e,
                 score: 0,
-                comparator: d
+                comparator: d,
             };
         }
         case l.d4z.GROUP_DM:
@@ -28,7 +28,7 @@ function c(e) {
                 type: s.h8.GROUP_DM,
                 record: u,
                 score: 0,
-                comparator: d
+                comparator: d,
             };
         case l.d4z.GUILD_VOICE:
         case l.d4z.GUILD_STAGE_VOICE:
@@ -36,14 +36,14 @@ function c(e) {
                 type: s.h8.VOICE_CHANNEL,
                 record: u,
                 score: 0,
-                comparator: d
+                comparator: d,
             };
         default:
             return {
                 type: s.h8.TEXT_CHANNEL,
                 record: u,
                 score: 0,
-                comparator: d
+                comparator: d,
             };
     }
 }

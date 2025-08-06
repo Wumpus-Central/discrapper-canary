@@ -10,8 +10,8 @@ function a(n, t) {
     return null == e || e.isMultiUserDM()
         ? null
         : (0, i.jsx)(l.sNh, {
-              id: 'close-dm',
+              id: "close-dm",
               label: s.intl.string(s.t.jsvgc3),
-              action: () => r.Z.closePrivateChannel(n, t)
+              action: () => r.Z.closePrivateChannel(n, t),
           });
 }

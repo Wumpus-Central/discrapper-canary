@@ -18,29 +18,29 @@ let h = 3,
         i.useEffect(() => {
             l.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: f.cd.EMOJI_AUTOCOMPLETE_INLINE,
-                location_stack: n
+                location_stack: n,
             });
         }, [n]);
-        let m = (0, r.jsx)('div', {
+        let m = (0, r.jsx)("div", {
             className: p.emojis,
             children: t.slice(0, h).map((e, t) => {
                 if (null == e.id) return null;
                 let n = 2 === t,
                     i = (0, r.jsx)(
-                        'div',
+                        "div",
                         {
                             className: p.emojiBackground,
-                            children: (0, r.jsx)('img', {
+                            children: (0, r.jsx)("img", {
                                 alt: e.name,
                                 className: p.emoji,
                                 src: c.ZP.getEmojiURL({
                                     id: e.id,
                                     animated: e.animated,
-                                    size: d.$U
-                                })
-                            })
+                                    size: d.$U,
+                                }),
+                            }),
                         },
-                        e.id
+                        e.id,
                     );
                 return n
                     ? i
@@ -49,14 +49,19 @@ let h = 3,
                           {
                               className: p.emojiMask,
                               mask: s.ZP.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI,
-                              children: i
+                              children: i,
                           },
-                          e.id
+                          e.id,
                       );
-            })
+            }),
         });
         return (0, r.jsxs)(a.RX, {
             className: p.upsell,
-            children: [(0, r.jsx)(a.z5, { children: (0, r.jsx)(a.BR, { children: _.intl.format(_.t['uEky4+'], { count: t.length }) }) }), (0, r.jsx)(a.dY, { children: m })]
+            children: [
+                (0, r.jsx)(a.z5, {
+                    children: (0, r.jsx)(a.BR, { children: _.intl.format(_.t["uEky4+"], { count: t.length }) }),
+                }),
+                (0, r.jsx)(a.dY, { children: m }),
+            ],
         });
     };

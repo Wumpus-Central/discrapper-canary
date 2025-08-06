@@ -16,31 +16,33 @@ let c = (e) => {
                         n,
                         l = {},
                         i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]));
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]));
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
             }
             return l;
-        })(e, ['name', 'guildId', 'onClose']);
+        })(e, ["name", "guildId", "onClose"]);
     let s = l.useCallback(() => {
-            (null == c || c(), o.Z.leaveGuild(r));
+            null == c || c(), o.Z.leaveGuild(r);
         }, [r, c]),
         f = l.useMemo(
             () => [
                 {
-                    variant: 'secondary',
+                    variant: "secondary",
                     text: a.intl.string(a.t.J2TBi4),
-                    onClick: s
+                    onClick: s,
                 },
                 {
                     text: a.intl.string(a.t.TyCVIi),
-                    onClick: c
-                }
+                    onClick: c,
+                },
             ],
-            [s, c]
+            [s, c],
         );
     return (0, n.jsx)(
         i.Modal,
@@ -48,34 +50,34 @@ let c = (e) => {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (t) {
                         var n;
-                        ((n = r[t]),
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = n));
-                    }));
+                                : (e[t] = n);
+                    });
             }
             return e;
         })(
             {
                 title: a.intl.string(a.t.aCAiGh),
-                subtitle: a.intl.format(a.t['4cJV9f'], { serverName: t }),
+                subtitle: a.intl.format(a.t["4cJV9f"], { serverName: t }),
                 actions: f,
-                onClose: c
+                onClose: c,
             },
-            u
-        )
+            u,
+        ),
     );
 };

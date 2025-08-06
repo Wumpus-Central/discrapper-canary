@@ -1,1 +1,1 @@
-e.exports = { chat: 'chat_a44415' };
+e.exports = { chat: "chat_a44415" };

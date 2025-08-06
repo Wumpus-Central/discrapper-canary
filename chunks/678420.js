@@ -1,4 +1,4 @@
-(n.d(t, { default: () => f }), n(388685));
+n.d(t, { default: () => f }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(481060),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,21 +27,21 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 class x extends l.PureComponent {
     componentDidMount() {
-        ((this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(d.rMx.CHANGE_LOG_OPENED, {}, !0));
+        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(d.rMx.CHANGE_LOG_OPENED, {}, !0);
     }
     componentWillUnmount() {
         this.track(d.rMx.CHANGE_LOG_CLOSED);
@@ -55,7 +55,7 @@ class x extends l.PureComponent {
                 {
                     onClose: this.close,
                     onScroll: this.handleScroll,
-                    track: this.track
+                    track: this.track,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -69,38 +69,38 @@ class x extends l.PureComponent {
                   })(Object(t)).forEach(function (n) {
                       Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                   }),
-            e)
+            e),
         );
     }
     constructor(...e) {
         var t;
-        (super(...e),
+        super(...e),
             (t = this),
-            p(this, 'maxScrolledPercentage', 0),
-            p(this, 'mountedAt', 0),
-            p(this, 'close', () => {
+            p(this, "maxScrolledPercentage", 0),
+            p(this, "mountedAt", 0),
+            p(this, "close", () => {
                 (0, o.Mr3)(h.Xd);
             }),
-            p(this, 'handleScroll', (e) => {
+            p(this, "handleScroll", (e) => {
                 let { offsetHeight: t, scrollHeight: n, scrollTop: r } = e.getScrollerState();
                 this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, r / (n - t)), 1);
             }),
-            p(this, 'track', function (e) {
+            p(this, "track", function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     { changeLog: l } = t.props,
                     { date: o, revision: a } = l,
-                    i = m({ change_log_id: ''.concat(o, ':').concat(a) }, n);
-                (r ||
+                    i = m({ change_log_id: "".concat(o, ":").concat(a) }, n);
+                r ||
                     (i = m(
                         {
                             seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
-                            max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10)
+                            max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10),
                         },
-                        i
+                        i,
                     )),
-                    s.default.track(e, i));
-            }));
+                    s.default.track(e, i);
+            });
     }
 }
 function f(e) {
@@ -113,40 +113,40 @@ function f(e) {
     )
         return (0, r.jsx)(o.Y0X, {
             transitionState: e.transitionState,
-            parentComponent: 'ChangeLog',
-            children: (0, r.jsx)('div', {
+            parentComponent: "ChangeLog",
+            children: (0, r.jsx)("div", {
                 className: g.empty,
                 children: (0, r.jsx)(o.X6q, {
-                    variant: 'heading-lg/medium',
-                    children: u.intl.string(u.t.V9ospq)
-                })
-            })
+                    variant: "heading-lg/medium",
+                    children: u.intl.string(u.t.V9ospq),
+                }),
+            }),
         });
     if (null == t)
         if (n)
             return (0, r.jsx)(o.Y0X, {
                 transitionState: e.transitionState,
-                parentComponent: 'ChangeLog',
-                children: (0, r.jsx)('div', {
+                parentComponent: "ChangeLog",
+                children: (0, r.jsx)("div", {
                     className: g.empty,
                     children: (0, r.jsx)(o.Text, {
-                        variant: 'text-md/semibold',
-                        children: u.intl.string(u.t.O1iRT0)
-                    })
-                })
+                        variant: "text-md/semibold",
+                        children: u.intl.string(u.t.O1iRT0),
+                    }),
+                }),
             });
         else
             return (0, r.jsx)(o.Y0X, {
                 transitionState: e.transitionState,
-                parentComponent: 'ChangeLog',
-                children: (0, r.jsx)('div', {
+                parentComponent: "ChangeLog",
+                children: (0, r.jsx)("div", {
                     className: g.empty,
-                    children: (0, r.jsx)(o.$jN, { type: o.$jN.Type.WANDERING_CUBES })
-                })
+                    children: (0, r.jsx)(o.$jN, { type: o.$jN.Type.WANDERING_CUBES }),
+                }),
             });
     return (0, r.jsx)(o.Y0X, {
         transitionState: e.transitionState,
-        parentComponent: 'ChangeLog',
-        children: (0, r.jsx)(x, { changeLog: t })
+        parentComponent: "ChangeLog",
+        children: (0, r.jsx)(x, { changeLog: t }),
     });
 }

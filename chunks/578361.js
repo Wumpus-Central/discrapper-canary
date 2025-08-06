@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => f,
-    n: () => p
+    n: () => p,
 });
 var i,
     r = n(255367),
@@ -17,7 +17,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,27 +27,28 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
-var p = (((i = {})[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT'), i);
+var p = (((i = {})[(i.RIGHT = -1)] = "RIGHT"), (i[(i.LEFT = 1)] = "LEFT"), i);
 let g = {
     friction: 7,
     tension: 40,
-    clamp: !0
+    clamp: !0,
 };
 class h extends s.PureComponent {
     componentWillEnter(e) {
-        (this._animated.setValue(-this.props.direction), o.Z.spring(this._animated, m({ toValue: 0 }, this.props.springSettings)).start(e));
+        this._animated.setValue(-this.props.direction),
+            o.Z.spring(this._animated, m({ toValue: 0 }, this.props.springSettings)).start(e);
     }
     componentDidAppear() {
         this._animated.setValue(0);
@@ -61,16 +62,16 @@ class h extends s.PureComponent {
                 {
                     translateX: this._animated.interpolate({
                         inputRange: [0, 1],
-                        outputRange: ['0%', '-100%']
-                    })
-                }
-            ]
+                        outputRange: ["0%", "-100%"],
+                    }),
+                },
+            ],
         });
         return (
             this.props.fadeInOut &&
                 (e.opacity = this._animated.interpolate({
                     inputRange: [-1, 0, 1],
-                    outputRange: [0, 1, 0]
+                    outputRange: [0, 1, 0],
                 })),
             e
         );
@@ -79,17 +80,17 @@ class h extends s.PureComponent {
         return (0, r.jsx)(o.Z.div, {
             style: this.getStyle(),
             className: d.item,
-            children: this.props.children
+            children: this.props.children,
         });
     }
     constructor(e) {
-        (super(e), u(this, '_animated', void 0), (this._animated = new o.Z.Value(-1 * e.direction)));
+        super(e), u(this, "_animated", void 0), (this._animated = new o.Z.Value(-1 * e.direction));
     }
 }
 let f = (e) => {
     let { children: t, step: n, direction: i, className: s, springSettings: a = g, fadeInOut: o = !1 } = e;
     return (0, r.jsx)(c.W, {
-        component: 'div',
+        component: "div",
         className: l()(d.animator, s),
         children: (0, r.jsx)(
             h,
@@ -97,9 +98,9 @@ let f = (e) => {
                 direction: i,
                 springSettings: a,
                 fadeInOut: o,
-                children: t
+                children: t,
             },
-            n
-        )
+            n,
+        ),
     });
 };

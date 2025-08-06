@@ -6,7 +6,7 @@ async function o() {
         await r.tn.post({
             url: i.ANM.VERIFY_AGE,
             body: {},
-            rejectWithError: !0
+            rejectWithError: !0,
         })
     ).body;
 }

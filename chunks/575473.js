@@ -6,24 +6,24 @@ var r = n(466293),
     l = n(433005),
     c = 1,
     u = 2,
-    d = '[object Boolean]',
-    f = '[object Date]',
-    _ = '[object Error]',
-    p = '[object Map]',
-    h = '[object Number]',
-    m = '[object RegExp]',
-    g = '[object Set]',
-    E = '[object String]',
-    b = '[object Symbol]',
-    y = '[object ArrayBuffer]',
-    O = '[object DataView]',
+    d = "[object Boolean]",
+    f = "[object Date]",
+    _ = "[object Error]",
+    p = "[object Map]",
+    h = "[object Number]",
+    m = "[object RegExp]",
+    g = "[object Set]",
+    E = "[object String]",
+    b = "[object Symbol]",
+    y = "[object ArrayBuffer]",
+    O = "[object DataView]",
     v = r ? r.prototype : void 0,
     I = v ? v.valueOf : void 0;
 e.exports = function (e, t, n, r, v, T, S) {
     switch (n) {
         case O:
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
-            ((e = e.buffer), (t = t.buffer));
+            (e = e.buffer), (t = t.buffer);
         case y:
             if (e.byteLength != t.byteLength || !T(new i(e), new i(t))) break;
             return !0;
@@ -35,7 +35,7 @@ e.exports = function (e, t, n, r, v, T, S) {
             return e.name == t.name && e.message == t.message;
         case m:
         case E:
-            return e == t + '';
+            return e == t + "";
         case p:
             var A = s;
         case g:
@@ -43,9 +43,9 @@ e.exports = function (e, t, n, r, v, T, S) {
             if ((A || (A = l), e.size != t.size && !N)) break;
             var C = S.get(e);
             if (C) return C == t;
-            ((r |= u), S.set(e, t));
+            (r |= u), S.set(e, t);
             var R = a(A(e), A(t), r, v, T, S);
-            return (S.delete(e), R);
+            return S.delete(e), R;
         case b:
             if (I) return I.call(e) == I.call(t);
     }

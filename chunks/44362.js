@@ -4,17 +4,17 @@ var r = n(220159),
     i = n(57100),
     s = n(296004).CONSTRUCTOR,
     c = n(933958),
-    l = o('Promise'),
+    l = o("Promise"),
     u = a && !s;
 r(
     {
-        target: 'Promise',
+        target: "Promise",
         stat: !0,
-        forced: a || s
+        forced: a || s,
     },
     {
         resolve: function (e) {
             return c(u && this === l ? i : this, e);
-        }
-    }
+        },
+    },
 );

@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => j }));
+r.r(t), r.d(t, { default: () => j });
 var n = r(255367),
     a = r(120356),
     i = r.n(a),
@@ -23,7 +23,7 @@ let P = [u.S, m.O, p.U, h._];
 function j(e) {
     let { windowKey: t, channelId: r } = e,
         a = (0, s.e7)([D.Z], () => D.Z.getChannel(r));
-    o()(null != a, 'channel cannot be null for popout');
+    o()(null != a, "channel cannot be null for popout");
     let l = (0, s.e7)([y.ZP], () => y.ZP.getSelfEmbeddedActivityForChannel(a.id), [a]);
     return (0, n.jsx)(v.Z, {
         withTitleBar: !0,
@@ -39,26 +39,26 @@ function j(e) {
                       onConfirm: () => {
                           r();
                       },
-                      usesPopoutContext: !0
+                      usesPopoutContext: !0,
                   }))
                 : r();
         },
-        children: (0, n.jsx)('div', {
-            className: i()('root', E.rootPopout),
+        children: (0, n.jsx)("div", {
+            className: i()("root", E.rootPopout),
             children: (0, n.jsxs)(g.Z.Provider, {
                 value: a.guild_id,
                 children: [
                     (0, n.jsx)(d.Z, {
                         channel: a,
-                        draftType: b.d.ChannelMessage
+                        draftType: b.d.ChannelMessage,
                     }),
                     (0, n.jsx)(C.Z, { channel: a }),
                     (0, n.jsx)(c.Z, {
                         popoutWindowKey: t,
-                        popoutWindowHasTitleBar: !0
-                    })
-                ]
-            })
-        })
+                        popoutWindowHasTitleBar: !0,
+                    }),
+                ],
+            }),
+        }),
     });
 }

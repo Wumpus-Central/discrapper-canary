@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685));
+n.d(t, { Z: () => P }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -24,7 +24,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -93,7 +93,7 @@ function N(e) {
             channel: t,
             message: n,
             shouldMention: !0,
-            showMentionToggle: !0
+            showMentionToggle: !0,
         };
     l.Z.sendGreetMessage(t.id, r.id, l.Z.getSendMessageOptionsForReply(i));
 }
@@ -110,46 +110,46 @@ function R(e) {
                 A({
                     assets: d,
                     currentUser: t,
-                    message: o
+                    message: o,
                 }),
-            [d, t, o]
+            [d, t, o],
         ),
         O = i.useMemo(
             () =>
                 A({
                     assets: l,
                     currentUser: t,
-                    message: o
+                    message: o,
                 }),
-            [l, t, o]
+            [l, t, o],
         ),
         v = i.useCallback(async () => {
             let { valid: e } = await (0, E.v)({
                 type: c.Ie.FORM,
-                content: '',
-                channel: n
+                content: "",
+                channel: n,
             });
             e &&
                 (N({
                     channel: n,
                     message: o,
-                    sticker: b
+                    sticker: b,
                 }),
                 C({
                     sticker: b,
                     event: _,
-                    eventProperties: p
+                    eventProperties: p,
                 }));
         }, [n, o, b, _, p]);
     return h
         ? (0, r.jsx)(a.zx, {
-              variant: 'secondary',
-              size: 'md',
+              variant: "secondary",
+              size: "md",
               onClick: v,
-              text: O
+              text: O,
           })
         : (0, r.jsxs)(s.zx, {
-              'data-migration-pending': !0,
+              "data-migration-pending": !0,
               className: y.CTAMessageButtonOuter,
               innerClassName: y.CTAMessageButton,
               color: s.Tt.PRIMARY,
@@ -161,10 +161,10 @@ function R(e) {
                       className: y.CTAMessageSticker,
                       isInteracting: m,
                       sticker: b,
-                      size: 28
+                      size: 28,
                   }),
-                  O
-              ]
+                  O,
+              ],
           });
 }
 function P(e) {
@@ -173,10 +173,10 @@ function P(e) {
         c = S({
             channel: t,
             message: n,
-            currentUser: l
+            currentUser: l,
         });
     return null != l && c
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: y.CTAMessage,
               children: (0, r.jsx)(R, {
                   currentUser: l,
@@ -185,8 +185,8 @@ function P(e) {
                   buttonLabels: i,
                   stickers: o,
                   event: a,
-                  eventProperties: s
-              })
+                  eventProperties: s,
+              }),
           })
         : null;
 }

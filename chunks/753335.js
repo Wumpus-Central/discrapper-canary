@@ -10,16 +10,16 @@ let c = {
         scope: o.lH,
         handler(e) {
             let {
-                args: { guild_id: t, channel_id: n, message_id: o, pid: c }
+                args: { guild_id: t, channel_id: n, message_id: o, pid: c },
             } = e;
             if ((0, a.jU)(c).context === s.IlC.OVERLAY)
                 return void r.Z.dispatch({
-                    type: 'OVERLAY_OPEN_MESSAGE',
+                    type: "OVERLAY_OPEN_MESSAGE",
                     guildId: t,
                     channelId: n,
-                    messageId: o
+                    messageId: o,
                 });
-            ((0, i.dL)({ pathname: s.Z5c.CHANNEL(t, n, o) }), l.ZP.focus());
-        }
-    }
+            (0, i.dL)({ pathname: s.Z5c.CHANNEL(t, n, o) }), l.ZP.focus();
+        },
+    },
 };

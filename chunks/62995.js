@@ -3,11 +3,11 @@ var r = n(220159),
     a = n(206804).f;
 r(
     {
-        target: 'Object',
+        target: "Object",
         stat: !0,
         forced: o(function () {
             return !Object.getOwnPropertyNames(1);
-        })
+        }),
     },
-    { getOwnPropertyNames: a }
+    { getOwnPropertyNames: a },
 );

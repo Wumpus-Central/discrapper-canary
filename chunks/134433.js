@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -26,25 +26,25 @@ function m(e) {
                 ? i
                 : (0, d.B)({
                       backgroundColor: y,
-                      colors: [v, I]
+                      colors: [v, I],
                   }),
         S = n / 8;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         style: {
             background: O,
             width: n,
             height: n,
             borderRadius: n,
-            lineHeight: ''.concat(n, 'px')
+            lineHeight: "".concat(n, "px"),
         },
         className: l,
         children: (0, r.jsx)(c.xPt, {
-            size: 'custom',
+            size: "custom",
             color: T,
             className: o()(f.linkIcon, m),
             width: n - 2 * S,
             height: n - 2 * S,
-            style: { margin: S }
-        })
+            style: { margin: S },
+        }),
     });
 }

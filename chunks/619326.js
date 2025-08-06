@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(388685));
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -15,24 +15,24 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -55,8 +55,8 @@ function f(e, t) {
     );
 }
 let x = (0, u.Un)({
-    createPromise: () => n.e('4848').then(n.bind(n, 797967)),
-    webpackId: 797967
+    createPromise: () => n.e("4848").then(n.bind(n, 797967)),
+    webpackId: 797967,
 });
 function b(e) {
     let t = (0, s.Bd)(e) > 0.25;
@@ -70,19 +70,19 @@ function j(e) {
         n(d);
     }
     function j(e) {
-        (n(e), u(e));
+        n(e), u(e);
     }
     let v = t === m.p6O,
         _ = v ? d : t,
         O = (0, r.jsx)(o.dz2, {
-            size: 'custom',
+            size: "custom",
             width: 32,
             height: 24,
-            color: b(t)
+            color: b(t),
         }),
         y = (0, o.arW)({
-            orientation: 'horizontal',
-            isDisabled: l
+            orientation: "horizontal",
+            isDisabled: l,
         }),
         { ref: C } = y,
         N = (function (e, t) {
@@ -95,37 +95,39 @@ function j(e) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(y, ['ref']),
+        })(y, ["ref"]),
         I = (0, o.xUy)({
             isSelected: v,
-            label: g.intl.formatToPlainString(g.t.ZC69mJ, { colorHex: m.Pbq })
+            label: g.intl.formatToPlainString(g.t.ZC69mJ, { colorHex: m.Pbq }),
         }),
         E = (0, o.xUy)({
             isSelected: !v,
-            label: g.intl.formatToPlainString(g.t['3kiLZW'], { colorHex: (0, s.Rf)(t) })
+            label: g.intl.formatToPlainString(g.t["3kiLZW"], { colorHex: (0, s.Rf)(t) }),
         });
     return (0, r.jsxs)(
-        'div',
+        "div",
         f(
             h(
                 {
                     className: p.buttonsContainer,
-                    'aria-label': g.intl.string(g.t.FJjrIy),
-                    ref: C
+                    "aria-label": g.intl.string(g.t.FJjrIy),
+                    ref: C,
                 },
-                N
+                N,
             ),
             {
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: a()(p.colorSwatch, { [p.disabled]: l }),
                         children: (0, r.jsxs)(
                             o.P3F,
@@ -137,30 +139,30 @@ function j(e) {
                                             : function () {
                                                   n(m.p6O);
                                               },
-                                        'aria-disabled': l
+                                        "aria-disabled": l,
                                     },
-                                    I
+                                    I,
                                 ),
                                 {
                                     children: [
-                                        (0, r.jsx)('div', {
+                                        (0, r.jsx)("div", {
                                             className: p.swatch,
                                             style: { backgroundColor: m.Pbq },
-                                            children: v ? O : null
+                                            children: v ? O : null,
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             className: p.swatchDescription,
-                                            color: 'header-secondary',
-                                            variant: 'text-xs/normal',
-                                            'aria-hidden': !0,
-                                            children: g.intl.string(g.t.Mcfzam)
-                                        })
-                                    ]
-                                }
-                            )
-                        )
+                                            color: "header-secondary",
+                                            variant: "text-xs/normal",
+                                            "aria-hidden": !0,
+                                            children: g.intl.string(g.t.Mcfzam),
+                                        }),
+                                    ],
+                                },
+                            ),
+                        ),
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: a()(p.colorSwatch, { [p.disabled]: l }),
                         children: [
                             (0, r.jsxs)(
@@ -169,27 +171,27 @@ function j(e) {
                                     h(
                                         {
                                             onClick: l ? void 0 : x,
-                                            'aria-disabled': l
+                                            "aria-disabled": l,
                                         },
-                                        E
+                                        E,
                                     ),
                                     {
                                         children: [
-                                            (0, r.jsx)('div', {
+                                            (0, r.jsx)("div", {
                                                 className: a()(p.customSwatch, { [p.defaultSwatch]: _ === m.p6O }),
-                                                style: { '--custom-color': (0, s.Rf)(_) },
-                                                children: v ? null : O
+                                                style: { "--custom-color": (0, s.Rf)(_) },
+                                                children: v ? null : O,
                                             }),
                                             (0, r.jsx)(o.Text, {
                                                 className: p.swatchDescription,
-                                                color: 'header-secondary',
-                                                variant: 'text-xs/normal',
-                                                'aria-hidden': !0,
-                                                children: g.intl.string(g.t['2ArXy8'])
-                                            })
-                                        ]
-                                    }
-                                )
+                                                color: "header-secondary",
+                                                variant: "text-xs/normal",
+                                                "aria-hidden": !0,
+                                                children: g.intl.string(g.t["2ArXy8"]),
+                                            }),
+                                        ],
+                                    },
+                                ),
                             ),
                             !l &&
                                 (0, r.jsx)(o.yRy, {
@@ -200,8 +202,8 @@ function j(e) {
                                             o.Z$W,
                                             f(h({}, e), {
                                                 value: t,
-                                                onChange: j
-                                            })
+                                                onChange: j,
+                                            }),
                                         ),
                                     children: (e) =>
                                         (0, r.jsx)(
@@ -209,22 +211,22 @@ function j(e) {
                                             f(h({}, e), {
                                                 innerRef: c,
                                                 className: p.dropperIconButton,
-                                                'aria-label': g.intl.string(g.t.Qp04hI),
+                                                "aria-label": g.intl.string(g.t.Qp04hI),
                                                 children: (0, r.jsx)(o.ilE, {
-                                                    size: 'custom',
+                                                    size: "custom",
                                                     className: p.dropperIcon,
                                                     width: 14,
                                                     height: 14,
-                                                    color: b(_)
-                                                })
-                                            })
-                                        )
-                                })
-                        ]
-                    })
-                ]
-            }
-        )
+                                                    color: b(_),
+                                                }),
+                                            }),
+                                        ),
+                                }),
+                        ],
+                    }),
+                ],
+            },
+        ),
     );
 }
 function v(e) {
@@ -237,18 +239,18 @@ function v(e) {
                 ? (0, r.jsx)(j, {
                       value: n,
                       onChange: i,
-                      disabled: l
+                      disabled: l,
                   })
                 : (0, r.jsx)(x, {
                       defaultColor: m.p6O,
                       colors: m.pmI,
                       value: n,
                       onChange: i,
-                      disabled: l
+                      disabled: l,
                   })),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             ref: a,
-            children: t
+            children: t,
         })
     );
 }

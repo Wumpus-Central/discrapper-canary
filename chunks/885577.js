@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,6 +18,10 @@ class o {
         return new o(e);
     }
     constructor(e) {
-        (i(this, 'rankedSkuIds', void 0), i(this, 'sortedSkuIds', void 0), (this.type = r.z.FEED), (this.rankedSkuIds = e.ranked_sku_ids), (this.sortedSkuIds = e.sorted_sku_ids));
+        i(this, "rankedSkuIds", void 0),
+            i(this, "sortedSkuIds", void 0),
+            (this.type = r.z.FEED),
+            (this.rankedSkuIds = e.ranked_sku_ids),
+            (this.sortedSkuIds = e.sorted_sku_ids);
     }
 }

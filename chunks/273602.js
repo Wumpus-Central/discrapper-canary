@@ -1,4 +1,4 @@
-(i.d(e, { default: () => A }), i(388685), i(953529));
+i.d(e, { default: () => A }), i(388685), i(953529);
 var s = i(255367),
     n = i(73800),
     a = i(442837),
@@ -32,7 +32,7 @@ async function Z(t) {
         { thread: a, attachments: r, setIsUploading: l, guild: g, onClose: p } = t,
         m = C.default.castChannelIdAsMessageId(a.id),
         F = new u.Z();
-    F.on('progress', (t) => {
+    F.on("progress", (t) => {
         let e = (0, v.dg)(g.id);
         t.currentSize > e && (F.cancel(), l(!1), p(), (0, T.G)(a, (0, _.KZ)(r)));
     });
@@ -47,15 +47,23 @@ async function Z(t) {
     }
     let O = [...y, ...(null != (e = n.map((t, e) => (0, S.B)(t, e))) ? e : [])];
     try {
-        (await o.tn.patch({
+        await o.tn.patch({
             url: x.ANM.MESSAGE(a.id, m),
             body: { attachments: O },
-            rejectWithError: !1
+            rejectWithError: !1,
         }),
             p(),
-            d.Z.clearAll(a.id, f.d.ChannelMessage));
+            d.Z.clearAll(a.id, f.d.ChannelMessage);
     } catch (t) {
-        (l(!1), (null == (i = t.body) ? void 0 : i.code) === x.evJ.EXPLICIT_CONTENT && (p(), h.Z.sendExplicitMediaClydeError(a.id, null == (s = t.body) ? void 0 : s.attachments, c.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), d.Z.clearAll(a.id, f.d.ChannelMessage)));
+        l(!1),
+            (null == (i = t.body) ? void 0 : i.code) === x.evJ.EXPLICIT_CONTENT &&
+                (p(),
+                h.Z.sendExplicitMediaClydeError(
+                    a.id,
+                    null == (s = t.body) ? void 0 : s.attachments,
+                    c.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
+                ),
+                d.Z.clearAll(a.id, f.d.ChannelMessage));
     }
 }
 function A(t) {
@@ -76,12 +84,12 @@ function A(t) {
                       width: w.TJ,
                       height: w.Lp,
                       spoiler: o[0].spoiler,
-                      alt: o[0].description
+                      alt: o[0].description,
                   }
                 : null,
         [_, x] = n.useState(!1),
         A = n.useCallback(() => {
-            ((0, F.xI)({ added: !1 }), h(), u());
+            (0, F.xI)({ added: !1 }), h(), u();
         }, [h, u]),
         M = n.useCallback(() => {
             null != c &&
@@ -92,36 +100,36 @@ function A(t) {
                     attachments: o,
                     setIsUploading: x,
                     guild: f,
-                    onClose: u
+                    onClose: u,
                 }));
         }, [c, o, x, f, u]);
     return null == b
         ? null
         : (0, s.jsx)(l.Modal, {
-              title: I.intl.string(I.t['+SZF6e']),
-              subtitle: I.intl.string(I.t['0Ycgw8']),
+              title: I.intl.string(I.t["+SZF6e"]),
+              subtitle: I.intl.string(I.t["0Ycgw8"]),
               transitionState: d,
               onClose: u,
               actionBarInput: (0, s.jsx)(r.A, {
-                  variant: 'secondary',
+                  variant: "secondary",
                   disabled: _,
                   onClick: u,
-                  text: I.intl.string(I.t['ETE/oK'])
+                  text: I.intl.string(I.t["ETE/oK"]),
               }),
               actions: [
                   {
-                      variant: 'secondary',
-                      text: I.intl.string(I.t['8rKVHB']),
+                      variant: "secondary",
+                      text: I.intl.string(I.t["8rKVHB"]),
                       disabled: _,
-                      onClick: A
+                      onClick: A,
                   },
                   {
-                      variant: 'primary',
+                      variant: "primary",
                       text: I.intl.string(I.t.d611xM),
                       loading: _,
                       onClick: M,
-                      autoFocus: !0
-                  }
+                      autoFocus: !0,
+                  },
               ],
               children: (0, s.jsx)(y.oL, {
                   channel: b,
@@ -129,8 +137,8 @@ function A(t) {
                       threadId: i,
                       goToThread: O.dG,
                       overrideMedia: T,
-                      className: E.forumPost
-                  })
-              })
+                      className: E.forumPost,
+                  }),
+              }),
           });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -14,22 +14,22 @@ function h(e) {
         i = (0, s.E)({ categoryId: n });
     return (0, r.jsx)(a.iG, {
         count: t,
-        name: i
+        name: i,
     });
 }
 function f(e) {
     let { loadId: t } = e,
-        n = o.Z.useField('categoryId'),
+        n = o.Z.useField("categoryId"),
         f = (0, c.q)(),
         g = (0, s.E)({ categoryId: n }),
         m = i.useCallback(
             (e) => {
                 (0, u.I)({
                     loadId: t,
-                    categoryId: Number(e)
+                    categoryId: Number(e),
                 });
             },
-            [t]
+            [t],
         ),
         b = i.useMemo(
             () =>
@@ -38,33 +38,33 @@ function f(e) {
                     : f.map((e) => {
                           let [t, n] = e;
                           return {
-                              id: ''.concat(t),
+                              id: "".concat(t),
                               label: (0, r.jsx)(h, {
                                   categoryId: t,
-                                  count: n
-                              })
+                                  count: n,
+                              }),
                           };
                       }),
-            [f]
+            [f],
         );
     return null == f
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: p.container,
               children: [
                   (0, r.jsx)(l.Text, {
-                      variant: 'text-sm/medium',
-                      color: 'text-secondary',
-                      children: d.intl.string(d.t.f09BQE)
+                      variant: "text-sm/medium",
+                      color: "text-secondary",
+                      children: d.intl.string(d.t.f09BQE),
                   }),
                   (0, r.jsx)(a.ZP, {
                       items: b,
                       title: g,
                       onSelect: m,
-                      selected: ''.concat(n),
-                      'aria-label': d.intl.string(d.t.Ng5cTE),
-                      variant: a.PA.FILLED
-                  })
-              ]
+                      selected: "".concat(n),
+                      "aria-label": d.intl.string(d.t.Ng5cTE),
+                      variant: a.PA.FILLED,
+                  }),
+              ],
           });
 }

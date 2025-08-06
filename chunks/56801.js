@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,7 +68,8 @@ function g(e, t) {
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -78,7 +79,7 @@ function E(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let b = [16, 8, 8, 8],
@@ -86,22 +87,36 @@ let b = [16, 8, 8, 8],
     O = 4,
     v = 8;
 function I(e) {
-    let { className: t, channel: n, sections: o, activeCategoryIndex: _, filteredSectionId: h, onSectionClick: E, applicationCommandListRef: I } = e,
+    let {
+            className: t,
+            channel: n,
+            sections: o,
+            activeCategoryIndex: _,
+            filteredSectionId: h,
+            onSectionClick: E,
+            applicationCommandListRef: I,
+        } = e,
         T = i.useRef(null),
         S = i.useCallback(
             (e, t) => {
                 var n;
                 let r = 2 * O;
-                return ((null == (n = o[t + 1]) ? void 0 : n.type) === u.Qi.BUILT_IN && (r += v), y + r);
+                return (null == (n = o[t + 1]) ? void 0 : n.type) === u.Qi.BUILT_IN && (r += v), y + r;
             },
-            [o]
+            [o],
         ),
         A = i.useCallback(
             (e, t) => {
                 var n;
-                return t ? ((null == (n = o[e + 1]) ? void 0 : n.type) === u.Qi.BUILT_IN ? 0 : 2 * O) : 0 === e ? 0 : 2 * O;
+                return t
+                    ? (null == (n = o[e + 1]) ? void 0 : n.type) === u.Qi.BUILT_IN
+                        ? 0
+                        : 2 * O
+                    : 0 === e
+                      ? 0
+                      : 2 * O;
             },
-            [o]
+            [o],
         ),
         N = i.useCallback(
             (e, t) => {
@@ -117,48 +132,48 @@ function I(e) {
                         padding: l,
                         width: c,
                         height: c,
-                        selectable: !0
+                        selectable: !0,
                     }),
                     v = i.type !== u.Qi.BUILT_IN && t < o.length - 1 && o[t + 1].type === u.Qi.BUILT_IN;
                 return (0, r.jsxs)(
-                    'div',
+                    "div",
                     {
                         className: f.section,
                         children: [
                             (0, r.jsx)(s.ua7, {
                                 text: i.name,
-                                position: 'right',
+                                position: "right",
                                 children: (e) => {
                                     var { onClick: t } = e,
-                                        n = g(e, ['onClick']);
+                                        n = g(e, ["onClick"]);
                                     return (0, r.jsx)(
                                         s.P3F,
                                         m(
                                             p(
                                                 {
-                                                    'aria-label': i.name,
+                                                    "aria-label": i.name,
                                                     onClick: () => {
-                                                        (E(i), null == t || t());
-                                                    }
+                                                        E(i), null == t || t();
+                                                    },
                                                 },
-                                                n
+                                                n,
                                             ),
-                                            { children: b }
-                                        )
+                                            { children: b },
+                                        ),
                                     );
-                                }
+                                },
                             }),
-                            v ? (0, r.jsx)('hr', { className: f.builtInSeparator }) : null
-                        ]
+                            v ? (0, r.jsx)("hr", { className: f.builtInSeparator }) : null,
+                        ],
                     },
-                    i.id
+                    i.id,
                 );
             },
-            [_, n, E, o, h]
+            [_, n, E, o, h],
         );
     return 0 === o.length
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: a()(t, f.wrapper),
               children: (0, r.jsx)(c.Z, {
                   categoryListRef: T,
@@ -170,7 +185,7 @@ function I(e) {
                   rowCount: o.length,
                   categoryHeight: S,
                   listPadding: b,
-                  getScrollOffsetForIndex: A
-              })
+                  getScrollOffsetForIndex: A,
+              }),
           });
 }

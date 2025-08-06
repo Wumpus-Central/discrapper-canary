@@ -10,30 +10,30 @@ function o(t, e) {
         o = l.Sb.useSetting();
     return !__OVERLAY__ && o && a.wS
         ? (0, r.jsxs)(i.sNh, {
-              id: 'application-dev',
+              id: "application-dev",
               label: c.intl.string(c.t.OpuAlJ),
               action: () => (0, a.JG)(e.id),
               children: [
                   (0, r.jsx)(i.sNh, {
-                      id: 'app-id',
+                      id: "app-id",
                       label: c.intl.string(c.t.qSHsho),
-                      action: () => (0, a.JG)(e.id)
+                      action: () => (0, a.JG)(e.id),
                   }),
                   null != t
                       ? (0, r.jsx)(i.sNh, {
-                            id: 'branch-id',
+                            id: "branch-id",
                             label: c.intl.string(c.t.g7oyys),
-                            action: () => (0, a.JG)(t.branchId)
+                            action: () => (0, a.JG)(t.branchId),
                         })
                       : null,
                   null != n
                       ? (0, r.jsx)(i.sNh, {
-                            id: 'sku-id',
+                            id: "sku-id",
                             label: c.intl.string(c.t.hReUdH),
-                            action: () => (0, a.JG)(n)
+                            action: () => (0, a.JG)(n),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           })
         : null;
 }

@@ -28,7 +28,7 @@ let O = o.ZP.connectStores([g.Z, c.Z, f.Z, m.default], (e) => {
         sku: n,
         subscriptionPlan: null != r ? (0, _.oE)(r) : null,
         application: c.Z.getApplication(n.applicationId),
-        gifter: m.default.getUser(t.userId)
+        gifter: m.default.getUser(t.userId),
     };
 })((e) => {
     let { error: t, giftCode: n, gifter: l, sku: o, application: c, subscriptionPlan: m } = e,
@@ -38,7 +38,7 @@ let O = o.ZP.connectStores([g.Z, c.Z, f.Z, m.default], (e) => {
         null != m &&
             (g = E.intl.formatToPlainString(m.interval === b.rV.MONTH ? E.t.CTpcCQ : E.t.rgPWGx, {
                 skuName: o.name,
-                intervalCount: m.intervalCount
+                intervalCount: m.intervalCount,
             })),
         (0, r.jsxs)(i.Fragment, {
             children: [
@@ -46,16 +46,19 @@ let O = o.ZP.connectStores([g.Z, c.Z, f.Z, m.default], (e) => {
                     ? (0, r.jsx)(p.Z, {
                           defaultAnimationState: h.SR.LOOP,
                           giftStyle: n.giftStyle,
-                          className: v.seasonalIcon
+                          className: v.seasonalIcon,
                       })
                     : (0, r.jsx)(u.qE, {
                           src: null != l ? l.getAvatarURL(void 0, 100) : null,
                           size: a.EFr.DEPRECATED_SIZE_100,
-                          className: I.marginBottom20
+                          className: I.marginBottom20,
                       }),
                 null != t
                     ? (0, r.jsxs)(i.Fragment, {
-                          children: [(0, r.jsx)(u.DK, { children: E.intl.string(E.t.mDFGFh) }), (0, r.jsx)(u.Dx, { children: t })]
+                          children: [
+                              (0, r.jsx)(u.DK, { children: E.intl.string(E.t.mDFGFh) }),
+                              (0, r.jsx)(u.Dx, { children: t }),
+                          ],
                       })
                     : (0, r.jsxs)(i.Fragment, {
                           children: [
@@ -68,14 +71,14 @@ let O = o.ZP.connectStores([g.Z, c.Z, f.Z, m.default], (e) => {
                                               size: d.Z.Sizes.MEDIUM,
                                               className: v.applicationIcon,
                                               game: c,
-                                              skuId: o.id
+                                              skuId: o.id,
                                           }),
-                                      g
-                                  ]
-                              })
-                          ]
-                      })
-            ]
+                                      g,
+                                  ],
+                              }),
+                          ],
+                      }),
+            ],
         })
     );
 });

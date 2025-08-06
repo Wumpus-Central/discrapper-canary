@@ -1,4 +1,4 @@
-(n.d(t, { a: () => T }), n(953529), n(415506), n(388685));
+n.d(t, { a: () => T }), n(953529), n(415506), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(913527),
@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -52,22 +52,22 @@ class v extends i.PureComponent {
             innerClassName: E.conflictButtonInner,
             onClick: i,
             children: [
-                (0, r.jsx)('div', { className: n }),
-                (0, r.jsxs)('div', {
+                (0, r.jsx)("div", { className: n }),
+                (0, r.jsxs)("div", {
                     className: E.buttonBody,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: E.conflictTitle,
-                            children: e
+                            children: e,
                         }),
-                        (0, r.jsx)('div', { children: g.intl.string(g.t.gflHOz) }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", { children: g.intl.string(g.t.gflHOz) }),
+                        (0, r.jsx)("div", {
                             className: E.timestamp,
-                            children: a()(t).calendar()
-                        })
-                    ]
-                })
-            ]
+                            children: a()(t).calendar(),
+                        }),
+                    ],
+                }),
+            ],
         });
     }
     renderError() {
@@ -78,13 +78,13 @@ class v extends i.PureComponent {
                     children: [
                         (0, r.jsx)(_.Z, {
                             justify: _.Z.Justify.CENTER,
-                            children: (0, r.jsx)('div', { className: E.errorArt })
+                            children: (0, r.jsx)("div", { className: E.errorArt }),
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: E.description,
-                            children: g.intl.format(g.t.RAaWyc, { applicationName: e.name })
-                        })
-                    ]
+                            children: g.intl.format(g.t.RAaWyc, { applicationName: e.name }),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(c.mzw, {
                     children: (0, r.jsxs)(_.Z, {
@@ -96,59 +96,69 @@ class v extends i.PureComponent {
                                 look: l.zx.Looks.LINK,
                                 color: l.zx.Colors.PRIMARY,
                                 onClick: this.onClose,
-                                children: g.intl.string(g.t['ETE/oK'])
+                                children: g.intl.string(g.t["ETE/oK"]),
                             }),
                             (0, r.jsxs)(_.Z, {
                                 direction: _.Z.Direction.HORIZONTAL,
                                 justify: _.Z.Justify.END,
                                 children: [
-                                    (0, r.jsx)('div', {
-                                        'data-button-hoisted-classname-wrapper': !0,
+                                    (0, r.jsx)("div", {
+                                        "data-button-hoisted-classname-wrapper": !0,
                                         className: E.retryButton,
                                         children: (0, r.jsx)(c.zxk, {
-                                            variant: 'secondary',
-                                            text: g.intl.string(g.t['5911LS']),
-                                            onClick: () => this.handlePlay()
-                                        })
+                                            variant: "secondary",
+                                            text: g.intl.string(g.t["5911LS"]),
+                                            onClick: () => this.handlePlay(),
+                                        }),
                                     }),
                                     (0, r.jsx)(c.zxk, {
-                                        variant: 'primary',
-                                        text: g.intl.string(g.t['359PbW']),
-                                        onClick: () => this.handlePlay(!1)
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                })
-            ]
+                                        variant: "primary",
+                                        text: g.intl.string(g.t["359PbW"]),
+                                        onClick: () => this.handlePlay(!1),
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                }),
+            ],
         });
     }
     renderConflict() {
         let { application: e, cloudSyncState: t } = this.props;
-        if (t.type !== m.TzF.CONFLICT) throw Error('Cannot render conflict for non conflict type');
+        if (t.type !== m.TzF.CONFLICT) throw Error("Cannot render conflict for non conflict type");
         return (0, r.jsxs)(c.hzk, {
             className: b.marginBottom20,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: E.description,
-                    children: g.intl.format(g.t.eyXUPz, { applicationName: e.name })
+                    children: g.intl.format(g.t.eyXUPz, { applicationName: e.name }),
                 }),
-                this.renderConflictButton(g.intl.string(g.t.AQUmkp), t.remote.timestamp, E.conflictDownloadArt, this.handleChooseDownload),
+                this.renderConflictButton(
+                    g.intl.string(g.t.AQUmkp),
+                    t.remote.timestamp,
+                    E.conflictDownloadArt,
+                    this.handleChooseDownload,
+                ),
                 (0, r.jsxs)(_.Z, {
                     className: E.choiceWrapper,
                     align: _.Z.Align.CENTER,
                     children: [
-                        (0, r.jsx)('div', { className: E.choiceLine }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", { className: E.choiceLine }),
+                        (0, r.jsx)("div", {
                             className: E.choiceTitle,
-                            children: g.intl.string(g.t.WUsA2N)
+                            children: g.intl.string(g.t.WUsA2N),
                         }),
-                        (0, r.jsx)('div', { className: E.choiceLine })
-                    ]
+                        (0, r.jsx)("div", { className: E.choiceLine }),
+                    ],
                 }),
-                this.renderConflictButton(g.intl.string(g.t.AXVws7), t.next.timestamp, E.conflictUploadArt, this.handleChooseUpload)
-            ]
+                this.renderConflictButton(
+                    g.intl.string(g.t.AXVws7),
+                    t.next.timestamp,
+                    E.conflictUploadArt,
+                    this.handleChooseUpload,
+                ),
+            ],
         });
     }
     render() {
@@ -157,60 +167,60 @@ class v extends i.PureComponent {
         return (0, r.jsxs)(c.Y0X, {
             transitionState: t,
             className: E.modal,
-            'aria-label': n,
-            parentComponent: 'CloudSyncResolutionModal',
+            "aria-label": n,
+            parentComponent: "CloudSyncResolutionModal",
             children: [
                 (0, r.jsxs)(c.xBx, {
                     separator: !1,
                     children: [
                         (0, r.jsx)(c.olH, {
                             className: E.closeButton,
-                            onClick: this.onClose
+                            onClick: this.onClose,
                         }),
                         (0, r.jsx)(c.vwX, {
-                            tag: 'h2',
+                            tag: "h2",
                             className: b.marginReset,
-                            children: n
-                        })
-                    ]
+                            children: n,
+                        }),
+                    ],
                 }),
-                e.type === m.TzF.CONFLICT ? this.renderConflict() : this.renderError()
-            ]
+                e.type === m.TzF.CONFLICT ? this.renderConflict() : this.renderError(),
+            ],
         });
     }
     constructor(...e) {
         var t;
-        (super(...e),
+        super(...e),
             (t = this),
-            y(this, 'onClose', () => {
+            y(this, "onClose", () => {
                 this.props.onClose();
             }),
-            y(this, 'handlePlay', function () {
+            y(this, "handlePlay", function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                     { libraryApplication: r, analyticsParams: i } = t.props;
-                (t.onClose(),
+                t.onClose(),
                     T(r.id, r, {
                         analyticsParams: i,
                         cloudSync: e,
-                        cloudSyncForceHash: n
-                    }));
+                        cloudSyncForceHash: n,
+                    });
             }),
-            y(this, 'handleChooseDownload', () => {
+            y(this, "handleChooseDownload", () => {
                 let { cloudSyncState: e } = this.props;
                 e.type === m.TzF.CONFLICT && this.handlePlay(!0, e.remote.hash);
             }),
-            y(this, 'handleChooseUpload', () => {
+            y(this, "handleChooseUpload", () => {
                 let { cloudSyncState: e } = this.props;
                 e.type === m.TzF.CONFLICT && this.handlePlay(!0, e.next.hash);
-            }));
+            });
     }
 }
 let I = s.ZP.connectStores([p.Z, f.Z], (e) => {
     let { libraryApplication: t, branchId: n } = e;
     return {
         cloudSyncState: p.Z.getState(t.id, n),
-        application: f.Z.getApplication(t.id)
+        application: f.Z.getApplication(t.id),
     };
 })(v);
 async function T(e, t, n) {
@@ -229,11 +239,11 @@ async function T(e, t, n) {
                         {
                             libraryApplication: t,
                             analyticsParams: s,
-                            branchId: e
+                            branchId: e,
                         },
-                        n
-                    )
-                )
+                        n,
+                    ),
+                ),
             );
             return;
         }
@@ -246,14 +256,14 @@ async function T(e, t, n) {
                     application_id: i.id,
                     application_name: i.name,
                     type: m.q5t.LAUNCH,
-                    distributor: null != t ? t.getDistributor() : null
+                    distributor: null != t ? t.getDistributor() : null,
                 },
-                s
-            )
+                s,
+            ),
         ),
         d.Z.launch({
             applicationId: i.id,
-            branchId: null == t ? void 0 : t.branchId
+            branchId: null == t ? void 0 : t.branchId,
         })
     );
 }

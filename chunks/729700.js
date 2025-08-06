@@ -24,40 +24,40 @@ let g = (e) => {
                 var e;
                 null == (e = E.current) || e.call(E);
             },
-            []
+            [],
         ),
         (0, r.jsx)(l.J2, {
             targetElementRef: n,
-            position: 'right',
-            align: 'top',
-            size: 'md',
+            position: "right",
+            align: "top",
+            size: "md",
             caretConfig: {
-                position: 'left',
-                align: 'start'
+                position: "left",
+                align: "start",
             },
             title: t.title(),
             body: t.body(),
-            asset: (0, r.jsx)('img', {
+            asset: (0, r.jsx)("img", {
                 className: f.art,
                 src: O,
-                alt: ''
+                alt: "",
             }),
             actions: [
                 {
                     text: h.intl.string(h.t.fYfGgI),
-                    variant: 'primary',
+                    variant: "primary",
                     onClick: () => {
-                        (null == m || m(),
+                        null == m || m(),
                             (0, u.uL)(p.Z5c.COLLECTIBLES_SHOP),
                             (0, d.mK)({
                                 openInLayer: !1,
                                 analyticsLocations: b,
-                                analyticsSource: s.Z.HOME_PAGE_SHOP_TAB
-                            }));
-                    }
-                }
+                                analyticsSource: s.Z.HOME_PAGE_SHOP_TAB,
+                            });
+                    },
+                },
             ],
-            onRequestClose: g
+            onRequestClose: g,
         })
     );
 };

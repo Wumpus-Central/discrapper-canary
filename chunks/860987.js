@@ -2,7 +2,7 @@ function r(e) {
     return null != e
         ? {
               wallpaperId: e.wallpaper_id,
-              setterId: e.setter_id
+              setterId: e.setter_id,
           }
         : void 0;
 }
@@ -13,10 +13,10 @@ function i(e) {
         default: e.default,
         variants: e.variants,
         isBlurred: e.is_blurred,
-        designGroupId: e.design_group_id
+        designGroupId: e.design_group_id,
     };
 }
 n.d(t, {
     L: () => r,
-    w: () => i
+    w: () => i,
 });

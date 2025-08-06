@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(539854));
+n.d(t, { Z: () => A }), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(990547),
@@ -23,7 +23,16 @@ var r = n(255367),
     T = n(981631),
     S = n(600295);
 function A(e) {
-    let { participants: t, onClick: n, onDoubleClick: A, onContextMenu: N, channel: C, className: R, inCall: P, totalNumberOfParticipants: w } = e,
+    let {
+            participants: t,
+            onClick: n,
+            onDoubleClick: A,
+            onContextMenu: N,
+            channel: C,
+            className: R,
+            inCall: P,
+            totalNumberOfParticipants: w,
+        } = e,
         D = (0, c.bp)() === T.IlC.POPOUT,
         L = (0, s.e7)([E.Z], () => E.Z.getGuild(C.guild_id), [C.guild_id]),
         { dismissedActivityEntryPointTileChannel: x } = (0, v.d)(),
@@ -61,12 +70,12 @@ function A(e) {
                         onContextMenu: N,
                         inCall: P,
                         width: t,
-                        inPopout: D
+                        inPopout: D,
                     },
-                    e.id
-                )
+                    e.id,
+                ),
         );
-    ((0, f.Z)(
+    (0, f.Z)(
         {
             type: o.ImpressionTypes.VIEW,
             name: o.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
@@ -74,11 +83,11 @@ function A(e) {
                 total_participants: w,
                 can_invite: U,
                 is_afk_channel: G,
-                channel_user_limit: C.userLimit
-            }
+                channel_user_limit: C.userLimit,
+            },
         },
         { trackOnInitialLoad: !0 },
-        []
+        [],
     ),
         null != L &&
             !G &&
@@ -94,16 +103,16 @@ function A(e) {
                                 width: e,
                                 inPopout: D,
                                 handleClose: j,
-                                userParticipantCount: M
-                            })
+                                userParticipantCount: M,
+                            }),
                         )
                       : Y.push((e) =>
                             (0, r.jsx)(I.Z, {
                                 width: e,
                                 channel: C,
                                 guild: L,
-                                inPopout: D
-                            })
+                                inPopout: D,
+                            }),
                         ))
                 : Y.push((e) =>
                       (0, r.jsx)(y.h, {
@@ -112,21 +121,21 @@ function A(e) {
                           width: e,
                           inPopout: D,
                           handleClose: j,
-                          userParticipantCount: M
-                      })
-                  )));
+                          userParticipantCount: M,
+                      }),
+                  ));
     let W = i.useCallback(
         (e) => {
             var t, n;
-            return null != (n = null == (t = k[e]) ? void 0 : t.id) ? n : 'empty-tile';
+            return null != (n = null == (t = k[e]) ? void 0 : t.id) ? n : "empty-tile";
         },
-        [k]
+        [k],
     );
     return (0, r.jsx)(m.Z, {
         className: R,
         keyExtractor: W,
         paddingTop: 64,
         paddingBottom: 64,
-        children: Y
+        children: Y,
     });
 }

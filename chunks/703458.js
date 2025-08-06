@@ -1,6 +1,6 @@
 var e = n(178476),
     o = n(764908),
-    i = e('Symbol'),
+    i = e("Symbol"),
     u = i.keyFor,
     s = o(i.prototype.valueOf);
 t.exports =

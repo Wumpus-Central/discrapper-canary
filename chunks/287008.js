@@ -16,7 +16,7 @@ function u(e) {
                       userId: t.id,
                       image: g,
                       canAnimate: m,
-                      size: u
+                      size: u,
                   })
                 : void 0,
         b = void 0 !== _ ? _ : E,
@@ -27,15 +27,15 @@ function u(e) {
                 null != t
                     ? (0, o.SG)(b, y, t, {
                           canAnimate: m,
-                          size: u
+                          size: u,
                       })
                     : void 0,
-            [b, y, t, m, u]
+            [b, y, t, m, u],
         ),
         isAvatarAnimating: m,
         eventHandlers: {
             onMouseEnter: p,
-            onMouseLeave: h
-        }
+            onMouseLeave: h,
+        },
     };
 }

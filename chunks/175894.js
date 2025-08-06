@@ -8,9 +8,9 @@ function o(e) {
         null != t &&
             null != n &&
             i.Z.dispatch({
-                type: 'EMBEDDED_ACTIVITY_OPEN',
+                type: "EMBEDDED_ACTIVITY_OPEN",
                 location: t.location,
-                applicationId: n
+                applicationId: n,
             });
     }, [n, t]);
 }

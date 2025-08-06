@@ -10,10 +10,13 @@ function u(e, t, n) {
     var u;
     let d = i.default.getUser(t),
         f = r.Z.getChannel(n),
-        _ = null != (u = o.ZP.getName(null == f ? void 0 : f.guild_id, null == f ? void 0 : f.id, d)) ? u : a.ZP.getGlobalName(d);
+        _ =
+            null != (u = o.ZP.getName(null == f ? void 0 : f.guild_id, null == f ? void 0 : f.id, d))
+                ? u
+                : a.ZP.getGlobalName(d);
     switch (e) {
         case s.wQ.IGNORE_SUCCESS:
-            return l.intl.formatToPlainString(l.t['+joqrK'], { username: _ });
+            return l.intl.formatToPlainString(l.t["+joqrK"], { username: _ });
         case s.wQ.UNIGNORE_SUCCESS:
             return l.intl.formatToPlainString(l.t.THExKS, { username: _ });
         case s.wQ.BLOCK_SUCCESS:
@@ -35,6 +38,6 @@ function u(e, t, n) {
         case s.wQ.REPORT_TO_MOD_SUCCESS:
             return l.intl.string(c.default.iBypeX);
         default:
-            return l.intl.string(l.t['+c5xtb']);
+            return l.intl.string(l.t["+c5xtb"]);
     }
 }

@@ -17,25 +17,25 @@ function u(e, t) {
     if (((n.length > 0 && n.length <= 2) || r(!1), 1 === n.length)) return d(n[0], t);
     var i = n[0],
         o = n[1];
-    return ((y(i) && y(o)) || r(!1), d('>=' + i, t) && d('<=' + o, t));
+    return (y(i) && y(o)) || r(!1), d(">=" + i, t) && d("<=" + o, t);
 }
 function d(e, t) {
-    if ('' === (e = e.trim())) return !0;
+    if ("" === (e = e.trim())) return !0;
     var n = t.split(i),
         r = E(e),
         o = r.modifier,
         a = r.rangeComponents;
     switch (o) {
-        case '<':
+        case "<":
             return f(n, a);
-        case '<=':
+        case "<=":
             return _(n, a);
-        case '>=':
+        case ">=":
             return h(n, a);
-        case '>':
+        case ">":
             return m(n, a);
-        case '~':
-        case '~>':
+        case "~":
+        case "~>":
             return g(n, a);
         default:
             return p(n, a);
@@ -64,7 +64,7 @@ function g(e, t) {
     r.length > 1 && r.pop();
     var i = r.length - 1,
         o = parseInt(r[i], 10);
-    return (b(o) && (r[i] = o + 1 + ''), h(e, n) && f(e, r));
+    return b(o) && (r[i] = o + 1 + ""), h(e, n) && f(e, r);
 }
 function E(e) {
     var t = e.split(i),
@@ -73,7 +73,7 @@ function E(e) {
         n || r(!1),
         {
             modifier: n[1],
-            rangeComponents: [n[2]].concat(t.slice(1))
+            rangeComponents: [n[2]].concat(t.slice(1)),
         }
     );
 }
@@ -84,15 +84,16 @@ function y(e) {
     return !E(e).modifier;
 }
 function O(e, t) {
-    for (var n = e.length; n < t; n++) e[n] = '0';
+    for (var n = e.length; n < t; n++) e[n] = "0";
 }
 function v(e, t) {
     O((e = e.slice()), (t = t.slice()).length);
     for (var n = 0; n < t.length; n++) {
         var r = t[n].match(/^[x*]$/i);
-        if (r && ((t[n] = e[n] = '0'), '*' === r[0] && n === t.length - 1)) for (var i = n; i < e.length; i++) e[i] = '0';
+        if (r && ((t[n] = e[n] = "0"), "*" === r[0] && n === t.length - 1))
+            for (var i = n; i < e.length; i++) e[i] = "0";
     }
-    return (O(t, e.length), [e, t]);
+    return O(t, e.length), [e, t];
 }
 function I(e, t) {
     var n = e.match(l)[1],
@@ -114,6 +115,6 @@ function S(e, t) {
 var A = {
     contains: function (e, t) {
         return c(e.trim(), t.trim());
-    }
+    },
 };
 e.exports = A;

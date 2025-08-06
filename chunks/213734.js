@@ -8,8 +8,8 @@ function s(e) {
     let { children: t } = e;
     return null == t
         ? null
-        : (0, r.jsx)('footer', {
+        : (0, r.jsx)("footer", {
               className: o()(a.footer, a.section),
-              children: t
+              children: t,
           });
 }

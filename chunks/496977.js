@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(539854));
+n.d(t, { Z: () => l }), n(539854);
 var r = n(73800),
     i = n(442837),
     o = n(835473),
@@ -15,7 +15,7 @@ function l() {
                 null != t &&
                 n.push({
                     type: s.gc.APPLICATION,
-                    application: t
+                    application: t,
                 }),
             n
         );

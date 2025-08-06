@@ -1,4 +1,4 @@
-(s.d(a, { default: () => p }), s(388685));
+s.d(a, { default: () => p }), s(388685);
 var r = s(255367),
     t = s(73800),
     n = s(442837),
@@ -17,16 +17,16 @@ function p(e) {
             k && (g(!0), await l.Z.saveGuild(a.id, { premiumProgressBarEnabled: !p }), b(!p), g(!1));
         };
     return (0, r.jsx)(i.v2r, {
-        navId: 'progress-bar-context',
+        navId: "progress-bar-context",
         onClose: d.Zy,
-        'aria-label': u.intl.string(u.t['m85s/v']),
+        "aria-label": u.intl.string(u.t["m85s/v"]),
         onSelect: s,
         children: (0, r.jsx)(i.S89, {
-            id: 'progress-bar-enabled',
-            label: u.intl.string(u.t['0CJWPz']),
+            id: "progress-bar-enabled",
+            label: u.intl.string(u.t["0CJWPz"]),
             checked: p,
             disabled: h,
-            action: m
-        })
+            action: m,
+        }),
     });
 }

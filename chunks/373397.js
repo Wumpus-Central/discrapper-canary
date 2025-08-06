@@ -8,11 +8,11 @@ function i(e, t) {
             null ==
                 (i = o.call(a, {
                     theme: e,
-                    saturation: t
+                    saturation: t,
                 })) ||
             null == (n = i.hex)
                 ? void 0
                 : n.call(i))
         ? s
-        : '#000';
+        : "#000";
 }

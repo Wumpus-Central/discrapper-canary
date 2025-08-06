@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,14 +47,14 @@ function p(e) {
             [
                 (0, l.Z)({
                     id: t.id,
-                    label: d.intl.string(d.t['/AXYnJ']),
+                    label: d.intl.string(d.t["/AXYnJ"]),
                     onSuccess: () =>
                         p({
-                            action: 'COPY_USER_ID',
-                            analyticsLocations: h
-                        })
-                })
-            ]
+                            action: "COPY_USER_ID",
+                            analyticsLocations: h,
+                        }),
+                }),
+            ],
         ];
     return m.every((e) => e.every((e) => null == e))
         ? null
@@ -63,11 +63,11 @@ function p(e) {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(o.v2r, {
-                      navId: 'non-user-bot-profile-overflow-menu',
+                      navId: "non-user-bot-profile-overflow-menu",
                       onSelect: void 0,
                       onClose: t,
-                      'aria-label': d.intl.string(d.t.AXIHpa),
-                      children: m.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
+                      "aria-label": d.intl.string(d.t.AXIHpa),
+                      children: m.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t)),
                   });
               },
               children: (e) =>
@@ -76,12 +76,12 @@ function p(e) {
                       _(
                           {
                               ref: f,
-                              action: 'PRESS_OPTIONS',
+                              action: "PRESS_OPTIONS",
                               icon: o.xhG,
-                              tooltipText: d.intl.string(d.t.UKOtz8)
+                              tooltipText: d.intl.string(d.t.UKOtz8),
                           },
-                          e
-                      )
-                  )
+                          e,
+                      ),
+                  ),
           });
 }

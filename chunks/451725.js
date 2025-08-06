@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(388685));
+n.d(t, { Z: () => u }), n(388685);
 var r = n(255367),
     s = n(284539),
     o = n(18582),
@@ -10,7 +10,7 @@ function l(e) {
         l = (0, i.Ly)()[t];
     return (0, r.jsx)(a.Z, {
         text: l.name,
-        borderColor: 'white',
+        borderColor: "white",
         children: (e) => {
             var t, a;
             return (0, r.jsx)(
@@ -19,24 +19,24 @@ function l(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -44,10 +44,10 @@ function l(e) {
                     {
                         onClick: s,
                         className: c.cursor,
-                        children: (0, r.jsx)('img', {
+                        children: (0, r.jsx)("img", {
                             src: n ? l.activeSrc : l.src,
-                            alt: ''
-                        })
+                            alt: "",
+                        }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
@@ -61,16 +61,16 @@ function l(e) {
                       })(Object(a)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
-                t)
+                t),
             );
-        }
+        },
     });
 }
 function u() {
     var e;
     let [t, n] = (0, s.Z)(i.yN.CURSORS),
         o = null != (e = t.selectedCursor) ? e : i.Vx.DEFAULT;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: c.cursors,
         children: i.Wq.map((e) =>
             (0, r.jsx)(
@@ -78,10 +78,10 @@ function u() {
                 {
                     cursor: e,
                     selected: e === o,
-                    onClick: () => n({ selectedCursor: e })
+                    onClick: () => n({ selectedCursor: e }),
                 },
-                e
-            )
-        )
+                e,
+            ),
+        ),
     });
 }

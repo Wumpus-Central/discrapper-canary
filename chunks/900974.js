@@ -7,26 +7,26 @@ let a = !1,
     o = null,
     s = {
         init() {
-            l.Z.subscribe('CONNECTION_OPEN', (e) => {
+            l.Z.subscribe("CONNECTION_OPEN", (e) => {
                 let { pendingPayments: t } = e;
                 if (null != t && t.length > 0) {
                     var l;
                     if (o === t[0] || null == (o = t[0])) return;
-                    ((l = o),
+                    (l = o),
                         a ||
                             ((a = !0),
                             (0, i.ZDy)(async () => {
-                                let { default: e } = await n.e('7232').then(n.bind(n, 645586));
+                                let { default: e } = await n.e("7232").then(n.bind(n, 645586));
                                 return (t) => {
                                     let { transitionState: n, onClose: i } = t;
                                     return (0, r.jsx)(e, {
                                         pendingPayment: l,
                                         transitionState: n,
-                                        onClose: () => ((a = !1), i())
+                                        onClose: () => ((a = !1), i()),
                                     });
                                 };
-                            })));
+                            }));
                 }
             });
-        }
+        },
     };

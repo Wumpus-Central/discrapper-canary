@@ -1,15 +1,15 @@
-(n.d(t, {
+n.d(t, {
     RR: () => A,
     WW: () => T,
     bE: () => C,
     n4: () => M,
     q8: () => N,
     t$: () => S,
-    xl: () => x
+    xl: () => x,
 }),
     n(415506),
     n(388685),
-    n(781311));
+    n(781311);
 var r = n(683860),
     i = n(344185),
     o = n(569471),
@@ -34,7 +34,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -44,15 +44,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -60,11 +60,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -89,7 +89,7 @@ function S(e) {
         case r.z.LATEST_ACTIVITY:
             return b.SX.LATEST_ACTIVITY;
         default:
-            throw Error('Unexpected sort order '.concat(e));
+            throw Error("Unexpected sort order ".concat(e));
     }
 }
 function A(e) {
@@ -137,7 +137,7 @@ function L(e) {
         ? []
         : t.attachments.map((e) => {
               var t;
-              return null != (t = e.content_type) ? t : 'unknown';
+              return null != (t = e.content_type) ? t : "unknown";
           });
 }
 function x(e) {
@@ -149,7 +149,8 @@ function x(e) {
               forum_channel_has_guidelines: null != s.topic && s.topic.trim().length > 0,
               forum_channel_default_emoji_reaction_id: null == (t = s.defaultReactionEmoji) ? void 0 : t.emojiId,
               forum_channel_default_emoji_reaction_name: null == (n = s.defaultReactionEmoji) ? void 0 : n.emojiName,
-              forum_channel_available_tag_ids: null != (i = null == (r = s.availableTags) ? void 0 : r.map((e) => e.id)) ? i : [],
+              forum_channel_available_tag_ids:
+                  null != (i = null == (r = s.availableTags) ? void 0 : r.map((e) => e.id)) ? i : [],
               forum_channel_tag_required: s.hasFlag(E.zZ.REQUIRE_TAG),
               forum_channel_can_create_post: u.Z.can(g.Plq.SEND_MESSAGES, s),
               forum_channel_filter_tag_ids: p.Z.getFilterTagIdsAnalytics(),
@@ -159,7 +160,7 @@ function x(e) {
               forum_channel_default_sort_order: s.defaultSortOrder,
               forum_channel_tag_setting: p.Z.getTagSettingAnalytics(s.id),
               forum_channel_default_layout: s.defaultForumLayout,
-              forum_channel_is_moderator_report_channel: s.isModeratorReportChannel()
+              forum_channel_is_moderator_report_channel: s.isModeratorReportChannel(),
           }
         : null;
 }
@@ -175,15 +176,16 @@ function M(e) {
                   {},
                   x({
                       channelId: g.id,
-                      sessionId: p
-                  })
+                      sessionId: p,
+                  }),
               ),
               {
                   thread_approximate_member_count: a.Z.getMemberCount(_),
                   thread_approximate_message_count: s.Z.getCount(_),
                   thread_archived: (null == (t = m.threadMetadata) ? void 0 : t.archived) === !0,
                   thread_locked: null != (u = null == (n = m.threadMetadata) ? void 0 : n.locked) && u,
-                  thread_auto_archive_duration_minutes: null != (d = null == (r = m.threadMetadata) ? void 0 : r.autoArchiveDuration) ? d : 0,
+                  thread_auto_archive_duration_minutes:
+                      null != (d = null == (r = m.threadMetadata) ? void 0 : r.autoArchiveDuration) ? d : 0,
                   thread_approximate_creation_date: f.default.extractTimestamp(_),
                   forum_post_id: m.id,
                   forum_post_first_message_id: f.default.castChannelIdAsMessageId(m.id),
@@ -194,8 +196,8 @@ function M(e) {
                   forum_post_is_new: null == (i = h.Z.getReadStateSnapshotAnalytics(m.id)) ? void 0 : i.isNew,
                   forum_post_is_unread: null == (c = h.Z.getReadStateSnapshotAnalytics(m.id)) ? void 0 : c.hasUnreads,
                   forum_post_is_following: o.Z.hasJoined(m.id),
-                  forum_post_attachment_mimetypes: L(m.id)
-              }
+                  forum_post_attachment_mimetypes: L(m.id),
+              },
           )
         : null;
 }

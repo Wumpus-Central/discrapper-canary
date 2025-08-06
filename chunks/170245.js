@@ -12,7 +12,7 @@ var u = n(535317);
 let d = function (e) {
     let { user: t, hovered: n, subText: i, showAccountIdentifier: d, status: p, isMobile: h, className: f } = e,
         g = (0, a.e7)([c.Z], () => c.Z.getNickname(t.id));
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: l()(u.userInfo, f, { [u.hovered]: n }),
         children: [
             (0, r.jsx)(s.Z, {
@@ -20,9 +20,9 @@ let d = function (e) {
                 className: u.avatar,
                 animate: n,
                 status: p,
-                isMobile: h
+                isMobile: h,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: u.text,
                 children: [
                     (0, r.jsx)(o.Z, {
@@ -32,14 +32,14 @@ let d = function (e) {
                         className: l()(u.discordTag, { [u.alignPomelo]: t.hasUniqueUsername() }),
                         usernameClass: u.username,
                         discriminatorClass: u.discriminator,
-                        showAccountIdentifier: d
+                        showAccountIdentifier: d,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: u.subtext,
-                        children: i
-                    })
-                ]
-            })
-        ]
+                        children: i,
+                    }),
+                ],
+            }),
+        ],
     });
 };

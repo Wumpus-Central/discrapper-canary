@@ -1,14 +1,14 @@
 function r(e) {
-    if ('custom' === e) return null;
+    if ("custom" === e) return null;
     let t = i[e];
     return {
         width: t,
-        height: t
+        height: t,
     };
 }
 n.d(t, {
     Z: () => i,
-    m: () => r
+    m: () => r,
 });
 let i = {
     xxs: 12,
@@ -17,5 +17,5 @@ let i = {
     md: 24,
     lg: 32,
     custom: void 0,
-    refresh_sm: 20
+    refresh_sm: 20,
 };

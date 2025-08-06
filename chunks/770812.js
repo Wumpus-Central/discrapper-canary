@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(953529));
+n.d(t, { Z: () => v }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(990547),
@@ -32,21 +32,23 @@ function v(e) {
         properties: {
             location_stack: v,
             emoji_guild_id: n,
-            emoji_id: null != a ? a : null
-        }
+            emoji_id: null != a ? a : null,
+        },
     });
     let I = () => {
             (0, _.uL)(g.Z5c.CHANNEL(n, E.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: v });
         },
         T = (0, o.e7)([p.Z], () => p.Z.getGuild(n)),
         S = (0, o.e7)([h.Z], () => null != n && h.Z.getUserSubscriptionRoles(n).size > 0),
-        A = S ? b.intl.string(b.t['GoLM9/']) : b.intl.formatToPlainString(b.t['h0u/Hh'], { serverName: null == T ? void 0 : T.name }),
+        A = S
+            ? b.intl.string(b.t["GoLM9/"])
+            : b.intl.formatToPlainString(b.t["h0u/Hh"], { serverName: null == T ? void 0 : T.name }),
         N = S ? b.intl.string(b.t.PjZ7DQ) : b.intl.string(b.t.p8FG1N);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: y.container,
         children: [
-            (0, r.jsx)('div', { className: y.background }),
-            (0, r.jsxs)('div', {
+            (0, r.jsx)("div", { className: y.background }),
+            (0, r.jsxs)("div", {
                 className: y.content,
                 children: [
                     (0, r.jsx)(s.zx, {
@@ -55,38 +57,38 @@ function v(e) {
                         className: y.closeButton,
                         onClick: t,
                         children: (0, r.jsx)(l.Dio, {
-                            size: 'xs',
-                            color: 'currentColor',
-                            'aria-label': b.intl.string(b.t.cpT0Cg),
-                            className: y.closeButtonIcon
-                        })
+                            size: "xs",
+                            color: "currentColor",
+                            "aria-label": b.intl.string(b.t.cpT0Cg),
+                            className: y.closeButtonIcon,
+                        }),
                     }),
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("img", {
+                        alt: "",
                         src: c,
-                        className: y.upsellImage
+                        className: y.upsellImage,
                     }),
                     (0, r.jsx)(l.LZC, { size: 22 }),
                     (0, r.jsx)(l.X6q, {
-                        color: 'header-primary',
-                        variant: 'heading-lg/extrabold',
+                        color: "header-primary",
+                        variant: "heading-lg/extrabold",
                         className: y.header,
-                        children: b.intl.string(b.t.cBjkc3)
+                        children: b.intl.string(b.t.cBjkc3),
                     }),
                     (0, r.jsx)(l.LZC, { size: 4 }),
                     (0, r.jsx)(l.Text, {
-                        color: 'header-secondary',
-                        variant: 'text-md/normal',
+                        color: "header-secondary",
+                        variant: "text-md/normal",
                         className: y.description,
-                        children: A
+                        children: A,
                     }),
                     (0, r.jsx)(l.LZC, { size: 24 }),
                     (0, r.jsx)(m.Z, {
                         onClick: I,
-                        children: N
-                    })
-                ]
-            })
-        ]
+                        children: N,
+                    }),
+                ],
+            }),
+        ],
     });
 }

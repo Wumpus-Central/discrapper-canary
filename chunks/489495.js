@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     $j: () => _,
     Xv: () => s,
     cq: () => l,
     i0: () => u,
     yR: () => d,
-    z: () => c
+    z: () => c,
 }),
     n(190126),
     n(368063),
@@ -28,7 +28,7 @@
     n(918970),
     n(121784),
     n(644351),
-    n(146733));
+    n(146733);
 var r = n(605387),
     i = n.n(r);
 let o = (e) => i().decode(e),
@@ -44,57 +44,71 @@ let o = (e) => i().decode(e),
             start: 0,
             position: {
                 x: 0,
-                y: 0
+                y: 0,
             },
             zIndex: 100 + n,
             height: 880,
             width: 450,
-            name: t.name
+            name: t.name,
         };
     };
 var l = (function (e) {
-    return ((e.THUMBNAIL = 'Thumbnail'), (e.STATIC = 'Static'), (e.REDUCED_MOTION = 'Reduced Motion'), e);
+    return (e.THUMBNAIL = "Thumbnail"), (e.STATIC = "Static"), (e.REDUCED_MOTION = "Reduced Motion"), e;
 })({});
 let c = (e, t) => ({
         name: t.name,
         src: URL.createObjectURL(t),
-        base64: e
+        base64: e,
     }),
     u = (e, t) => {
         if (null == e) return;
         let n = new FileReader();
-        ((n.onload = (e) => {
-            null != e.target && 'string' == typeof e.target.result && (null == t || t(e.target.result));
+        (n.onload = (e) => {
+            null != e.target && "string" == typeof e.target.result && (null == t || t(e.target.result));
         }),
-            n.readAsDataURL(e));
+            n.readAsDataURL(e);
     },
     d = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'python',
-            n = '\n[';
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "python",
+            n = "\n[";
         return (
-            'python' === t
+            "python" === t
                 ? e.forEach((e) => {
                       n += "\n              ProfileEffectKeyFrame(\n                  src='"
                           .concat(e.name, "',\n                  loop=")
-                          .concat(e.loop ? 'True' : 'False', ',\n                  width=')
-                          .concat(e.width, ',\n                  height=')
-                          .concat(e.height, ',\n                  start=')
-                          .concat(e.start, ',\n                  duration=')
-                          .concat(e.duration, ',\n                  loop_delay=')
-                          .concat(e.loopDelay, ',\n                  position=Point(x=0, y=0),\n                  z_index=')
-                          .concat(e.zIndex, ',\n              ),\n          ');
+                          .concat(e.loop ? "True" : "False", ",\n                  width=")
+                          .concat(e.width, ",\n                  height=")
+                          .concat(e.height, ",\n                  start=")
+                          .concat(e.start, ",\n                  duration=")
+                          .concat(e.duration, ",\n                  loop_delay=")
+                          .concat(
+                              e.loopDelay,
+                              ",\n                  position=Point(x=0, y=0),\n                  z_index=",
+                          )
+                          .concat(e.zIndex, ",\n              ),\n          ");
                   })
-                : 'json' === t &&
+                : "json" === t &&
                   e.forEach((e) => {
-                      n += '\n              {\n                  "src": "'.concat(e.name, '",\n                  "loop": ').concat(e.loop, ',\n                  "width": ').concat(e.width, ',\n                  "height": ').concat(e.height, ',\n                  "start": ').concat(e.start, ',\n                  "duration": ').concat(e.duration, ',\n                  "loop_delay": ').concat(e.loopDelay, ',\n                  "position": {\n                    "x": 0,\n                    "y": 0\n                  },\n                  "zIndex": ').concat(e.zIndex, ',\n              },\n          ');
+                      n += '\n              {\n                  "src": "'
+                          .concat(e.name, '",\n                  "loop": ')
+                          .concat(e.loop, ',\n                  "width": ')
+                          .concat(e.width, ',\n                  "height": ')
+                          .concat(e.height, ',\n                  "start": ')
+                          .concat(e.start, ',\n                  "duration": ')
+                          .concat(e.duration, ',\n                  "loop_delay": ')
+                          .concat(
+                              e.loopDelay,
+                              ',\n                  "position": {\n                    "x": 0,\n                    "y": 0\n                  },\n                  "zIndex": ',
+                          )
+                          .concat(e.zIndex, ",\n              },\n          ");
                   }),
-            (n += '\n]')
+            (n += "\n]")
         );
     },
     f = (e) => {
-        let [t, n] = e.split(','),
+        let [t, n] = e.split(","),
             r = atob(n),
-            i = t.split(';')[0],
+            i = t.split(";")[0],
             o = new Uint8Array(r.length);
         for (let e = 0; e < r.length; e++) o[e] = r.charCodeAt(e);
         return new Blob([o], { type: i });

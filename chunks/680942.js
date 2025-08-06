@@ -18,13 +18,13 @@ let m = (e) => {
     let { product: t, primary: r, selectedVariantIndex: m, returnRef: v, onSuccess: C, tooltipDelay: O } = e,
         { analyticsLocations: E } = (0, o.ZP)(),
         S = l.useRef(null),
-        y = (0, p.hv)('CollectiblesShopGiftButton'),
+        y = (0, p.hv)("CollectiblesShopGiftButton"),
         x = (0, u.sp)(),
         j = (0, g.Z)();
     return (0, d.x6)(t)
         ? null
         : (0, n.jsx)(i.ua7, {
-              text: _.intl.string(_.t['JCFN//']),
+              text: _.intl.string(_.t["JCFN//"]),
               delay: O,
               children: (e) => {
                   var l, o;
@@ -34,36 +34,36 @@ let m = (e) => {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
                                   n = Object.keys(r);
-                              ('function' == typeof Object.getOwnPropertySymbols &&
+                              "function" == typeof Object.getOwnPropertySymbols &&
                                   (n = n.concat(
                                       Object.getOwnPropertySymbols(r).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                      })
+                                      }),
                                   )),
                                   n.forEach(function (t) {
                                       var n;
-                                      ((n = r[t]),
+                                      (n = r[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
                                                     value: n,
                                                     enumerable: !0,
                                                     configurable: !0,
-                                                    writable: !0
+                                                    writable: !0,
                                                 })
-                                              : (e[t] = n));
-                                  }));
+                                              : (e[t] = n);
+                                  });
                           }
                           return e;
                       })({}, e)),
                       (o = o =
                           {
-                              'aria-label': _.intl.string(_.t['JCFN//']),
+                              "aria-label": _.intl.string(_.t["JCFN//"]),
                               buttonRef: S,
-                              variant: r ? 'primary' : 'secondary',
+                              variant: r ? "primary" : "secondary",
                               icon: i.OgN,
-                              size: 'md',
+                              size: "md",
                               onClick: (e) => {
-                                  (e.stopPropagation(),
+                                  e.stopPropagation(),
                                       c.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                           collectibles_shop_session_id: null == x ? void 0 : x.sessionId,
                                           sku_id: t.skuId,
@@ -71,13 +71,13 @@ let m = (e) => {
                                           page_category: null == x ? void 0 : x.pageCategory,
                                           tile_type: a.Z[t.type],
                                           tile_position: String(null == x ? void 0 : x.tilePosition),
-                                          cta_name: 'gift button',
-                                          page_type: j || 'home'
+                                          cta_name: "gift button",
+                                          page_type: j || "home",
                                       }),
                                       (0, s.Z)({
                                           skuId: (0, f.S)({
                                               product: t,
-                                              selectedVariantIndex: m
+                                              selectedVariantIndex: m,
                                           }),
                                           isGift: !0,
                                           giftingOrigin: b.Wt.SHOP_PAGE,
@@ -89,9 +89,9 @@ let m = (e) => {
                                                   ? (e) => {
                                                         e && C();
                                                     }
-                                                  : void 0
-                                      }));
-                              }
+                                                  : void 0,
+                                      });
+                              },
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
@@ -105,8 +105,8 @@ let m = (e) => {
                             })(Object(o)).forEach(function (e) {
                                 Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                             }),
-                      l)
+                      l),
                   );
-              }
+              },
           });
 };

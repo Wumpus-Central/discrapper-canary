@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(73800),
     i = n(392711),
     o = n.n(i),
@@ -11,27 +11,27 @@ var r = n(73800),
 function f(e) {
     var t;
     let { context: n } = e,
-        i = 'channel' === n.type ? n.channel : void 0,
+        i = "channel" === n.type ? n.channel : void 0,
         f = (0, l.LD)(null == i ? void 0 : i.guild_id, !0),
         { commandsByActiveSection: _, loading: p } = c.wi({
             context: n,
             filters: {
-                commandTypes: [a.yU.CHAT, a.yU.PRIMARY_ENTRY_POINT]
+                commandTypes: [a.yU.CHAT, a.yU.PRIMARY_ENTRY_POINT],
             },
             options: {
                 placeholderCount: 0,
                 limit: d.tn,
-                includeFrecency: !0
+                includeFrecency: !0,
             },
-            allowFetch: !0
+            allowFetch: !0,
         }),
         h = r.useMemo(
             () =>
                 _.reduce((e, t) => {
                     let { section: n, data: r } = t;
-                    return (r.length > 0 && e.add(n.id), e);
+                    return r.length > 0 && e.add(n.id), e;
                 }, new Set()),
-            [_]
+            [_],
         ),
         m = r.useMemo(() => {
             var e, t;
@@ -51,11 +51,11 @@ function f(e) {
                         g.map((e) => {
                             let { application: t } = e;
                             return t;
-                        })
+                        }),
                     )
                     .map((e) => ({ application: e })),
-            [g]
+            [g],
         ),
-        isLoading: f.fetchState.fetching || p
+        isLoading: f.fetchState.fetching || p,
     };
 }

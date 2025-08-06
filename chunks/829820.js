@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Fe: () => O,
     Ih: () => y,
-    Lz: () => v
+    Lz: () => v,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(846519),
@@ -28,17 +28,17 @@ function E(e) {
         s && (t !== u || n || i) && (l(!1), c.stop());
     }, [t, u, n, i, s, c]);
     let d = r.useCallback(() => {
-            (l(!0), c.start(g, () => l(!1)));
+            l(!0), c.start(g, () => l(!1));
         }, [c]),
         f = r.useCallback(() => {
-            (l(!1), c.stop());
+            l(!1), c.stop();
         }, [c]);
     return (
         r.useEffect(() => () => c.stop(), [c]),
         {
             loading: s,
             startLoading: d,
-            clearLoading: f
+            clearLoading: f,
         }
     );
 }
@@ -50,7 +50,7 @@ function y(e, t, n) {
         { notPlayable: o, isCurrentUser: a, playingSameTrack: s } = i,
         { loading: l, startLoading: c, clearLoading: u } = E(i),
         _ = r.useCallback(() => {
-            (c(), (0, h.Z)(i, m.kG.USER_ACTIVITY_PLAY, n).catch(u));
+            c(), (0, h.Z)(i, m.kG.USER_ACTIVITY_PLAY, n).catch(u);
         }, [i, n, c, u]);
     return {
         label: (0, d.Z)(i, m.kG.USER_ACTIVITY_PLAY),
@@ -58,7 +58,7 @@ function y(e, t, n) {
         disabled: !l && (a || o || s),
         loading: l,
         onClick: _,
-        spotifyData: i
+        spotifyData: i,
     };
 }
 function O(e, t, n, i) {
@@ -67,7 +67,7 @@ function O(e, t, n, i) {
         { notPlayable: s, syncingWithUser: l, syncingWithParty: u, isCurrentUser: _ } = a,
         { loading: h, startLoading: g, clearLoading: y } = E(a),
         O = r.useCallback(() => {
-            (g(), (0, p.Z)(a, m.kG.USER_ACTIVITY_SYNC, n).catch(y));
+            g(), (0, p.Z)(a, m.kG.USER_ACTIVITY_SYNC, n).catch(y);
         }, [a, n, g, y]);
     return {
         label: (0, d.Z)(a, m.kG.USER_ACTIVITY_SYNC),
@@ -75,7 +75,7 @@ function O(e, t, n, i) {
         disabled: !h && (s || _ || l || u),
         loading: h,
         onClick: O,
-        spotifyData: a
+        spotifyData: a,
     };
 }
 function v(e, t, n) {
@@ -83,7 +83,7 @@ function v(e, t, n) {
         { notPlayable: o, syncingWithUser: a, syncingWithParty: s, isCurrentUser: l } = i,
         { loading: c, startLoading: u, clearLoading: _ } = E(i),
         h = r.useCallback(() => {
-            (u(), (0, p.Z)(i, m.kG.EMBED_SYNC, n).catch(_));
+            u(), (0, p.Z)(i, m.kG.EMBED_SYNC, n).catch(_);
         }, [i, n, u, _]);
     return {
         label: (0, d.Z)(i, m.kG.EMBED_SYNC),
@@ -91,6 +91,6 @@ function v(e, t, n) {
         disabled: !c && (l || a || s || o),
         loading: c,
         onClick: h,
-        spotifyData: i
+        spotifyData: i,
     };
 }

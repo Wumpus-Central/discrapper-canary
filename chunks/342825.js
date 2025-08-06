@@ -1,6 +1,6 @@
 n.d(t, { f: () => r });
 let r = {
-    thermalState: 'UNKNOWN',
+    thermalState: "UNKNOWN",
     batteryLevel: 1,
-    isLowPowerMode: !1
+    isLowPowerMode: !1,
 };

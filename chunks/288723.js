@@ -12,9 +12,9 @@ function u(e) {
     return [(0, o.Z)(e), t, (0, o.Z)(t)];
 }
 let d = {
-    name: 'flip',
+    name: "flip",
     enabled: !0,
-    phase: 'main',
+    phase: "main",
     fn: function (e) {
         var t = e.state,
             n = e.options,
@@ -46,9 +46,9 @@ let d = {
                                       rootBoundary: E,
                                       padding: m,
                                       flipVariations: O,
-                                      allowedAutoPlacements: v
+                                      allowedAutoPlacements: v,
                                   })
-                                : n
+                                : n,
                         );
                     }, []),
                     C = t.rects.reference,
@@ -64,13 +64,13 @@ let d = {
                     M = (0, i.Z)(x),
                     k = (0, c.Z)(x) === l.BL,
                     j = [l.we, l.I].indexOf(M) >= 0,
-                    U = j ? 'width' : 'height',
+                    U = j ? "width" : "height",
                     G = (0, a.Z)(t, {
                         placement: x,
                         boundary: g,
                         rootBoundary: E,
                         altBoundary: b,
-                        padding: m
+                        padding: m,
                     }),
                     B = j ? (k ? l.F2 : l.t$) : k ? l.I : l.we;
                 C[U] > R[U] && (B = (0, r.Z)(B));
@@ -83,7 +83,7 @@ let d = {
                         return e;
                     }))
                 ) {
-                    ((D = x), (w = !1));
+                    (D = x), (w = !1);
                     break;
                 }
                 P.set(x, F);
@@ -99,15 +99,15 @@ let d = {
                                         return e;
                                     });
                             });
-                            if (t) return ((D = t), 'break');
+                            if (t) return (D = t), "break";
                         },
                         Y = V;
-                    Y > 0 && 'break' !== H(Y);
+                    Y > 0 && "break" !== H(Y);
                     Y--
                 );
             t.placement !== D && ((t.modifiersData[o]._skip = !0), (t.placement = D), (t.reset = !0));
         }
     },
-    requiresIfExists: ['offset'],
-    data: { _skip: !1 }
+    requiresIfExists: ["offset"],
+    data: { _skip: !1 },
 };

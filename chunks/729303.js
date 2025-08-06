@@ -1,4 +1,17 @@
-(n.d(t, { Z: () => f }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733));
+n.d(t, { Z: () => f }),
+    n(388685),
+    n(410992),
+    n(227481),
+    n(730884),
+    n(20464),
+    n(341884),
+    n(364341),
+    n(629680),
+    n(505025),
+    n(918970),
+    n(121784),
+    n(644351),
+    n(146733);
 var r,
     i = n(442837),
     o = n(570140);
@@ -9,7 +22,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -39,9 +52,9 @@ class d extends (r = i.ZP.Store) {
         return !0;
     }
 }
-a(d, 'displayName', 'TransientKeyStore');
+a(d, "displayName", "TransientKeyStore");
 let f = new d(o.Z, {
     CONNECTION_OPEN: u,
     SECURE_FRAMES_TRANSIENT_KEY_CREATE: l,
-    SECURE_FRAMES_TRANSIENT_KEY_DELETE: c
+    SECURE_FRAMES_TRANSIENT_KEY_DELETE: c,
 });

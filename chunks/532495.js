@@ -33,7 +33,7 @@ function R() {
     var e, t, n, r, R, D, Z, w;
     let k = (0, a.e7)([N.default], () => {
             let e = N.default.getCurrentUser();
-            return (s()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e);
+            return s()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e;
         }),
         L = (0, a.e7)([S.Z], () => S.Z.getUserProfile(k.id)),
         {
@@ -46,7 +46,7 @@ function R() {
             pendingThemeColors: H,
             pendingLegacyUsernameDisabled: z,
             pendingPrimaryGuildId: W,
-            errors: Y
+            errors: Y,
         } = (0, a.cj)([I.Z], () => {
             var e, t;
             let n = I.Z.getAllPending(),
@@ -56,24 +56,24 @@ function R() {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
                 })({}, n)),
@@ -95,7 +95,7 @@ function R() {
         }),
         K = (0, O.SD)({
             userId: k.id,
-            image: M
+            image: M,
         }),
         q = (0, o.gS)(),
         X = y.ZP.canUsePremiumProfileCustomization(k),
@@ -103,10 +103,20 @@ function R() {
         Q = (0, u.f$)(U, null == L ? void 0 : L.banner),
         $ = (0, T.ZP)(k.id),
         ee = null == $ ? void 0 : $.getLegacyUsername(),
-        et = (null != (n = null == (e = Y.global_name) ? void 0 : e.length) ? n : 0) > 0 ? Y.global_name : null != (r = null == q ? void 0 : q.nick) ? r : [],
-        en = (null != (R = null == (t = Y.bio) ? void 0 : t.length) ? R : 0) > 0 ? Y.bio : null != (D = null == q ? void 0 : q.bio) ? D : [],
+        et =
+            (null != (n = null == (e = Y.global_name) ? void 0 : e.length) ? n : 0) > 0
+                ? Y.global_name
+                : null != (r = null == q ? void 0 : q.nick)
+                  ? r
+                  : [],
+        en =
+            (null != (R = null == (t = Y.bio) ? void 0 : t.length) ? R : 0) > 0
+                ? Y.bio
+                : null != (D = null == q ? void 0 : q.bio)
+                  ? D
+                  : [],
         ei = (0, d.w)();
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: P.sectionsContainer,
         children: [
             (0, i.jsx)(h.Z, {
@@ -115,18 +125,18 @@ function R() {
                 currentGlobalName: k.globalName,
                 pendingGlobalName: B,
                 onGlobalNameChange: l.W0,
-                user: k
+                user: k,
             }),
             (0, i.jsx)(
                 C.Z,
                 {
-                    sectionTitle: A.intl.string(A.t['+T3RIy']),
+                    sectionTitle: A.intl.string(A.t["+T3RIy"]),
                     errors: Y.pronouns,
                     onPronounsChange: v.ID,
                     pendingPronouns: G,
-                    currentPronouns: null != (Z = null == L ? void 0 : L.pronouns) ? Z : ''
+                    currentPronouns: null != (Z = null == L ? void 0 : L.pronouns) ? Z : "",
                 },
-                'pronouns'
+                "pronouns",
             ),
             (0, i.jsx)(
                 g.Z,
@@ -135,26 +145,26 @@ function R() {
                     showRemoveAvatarButton: J,
                     errors: Y.avatar,
                     sectionTitle: A.intl.string(A.t.lqaIxM),
-                    forcedDivider: !0
+                    forcedDivider: !0,
                 },
-                'avatar'
+                "avatar",
             ),
             (0, i.jsx)(
                 p.Z,
                 {
                     user: k,
-                    sectionTitle: A.intl.string(A.t['7v0T9P'])
+                    sectionTitle: A.intl.string(A.t["7v0T9P"]),
                 },
-                'decoration'
+                "decoration",
             ),
             (0, i.jsx)(b.Z, { user: k }),
             (0, i.jsx)(
                 j.Z,
                 {
                     user: k,
-                    sectionTitle: A.intl.string(A.t.wR5wOj)
+                    sectionTitle: A.intl.string(A.t.wR5wOj),
                 },
-                'effect'
+                "effect",
             ),
             X
                 ? (0, i.jsxs)(i.Fragment, {
@@ -165,18 +175,18 @@ function R() {
                                   showRemoveBannerButton: Q,
                                   errors: Y.banner,
                                   onBannerChange: v.g_,
-                                  forcedDivider: !0
+                                  forcedDivider: !0,
                               },
-                              'banner'
+                              "banner",
                           ),
                           (0, i.jsx)(E.Z, {
                               user: k,
                               pendingAvatarSrc: K,
                               pendingColors: H,
                               onThemeColorsChange: v.z5,
-                              forcedDivider: !0
-                          })
-                      ]
+                              forcedDivider: !0,
+                          }),
+                      ],
                   })
                 : (0, i.jsx)(
                       _.Z,
@@ -184,9 +194,9 @@ function R() {
                           user: k,
                           savedUserColor: null == L ? void 0 : L.accentColor,
                           pendingColor: F,
-                          setPendingAccentColor: v.CM
+                          setPendingAccentColor: v.CM,
                       },
-                      'color'
+                      "color",
                   ),
             (0, i.jsx)(
                 m.Z,
@@ -195,25 +205,25 @@ function R() {
                     errors: en,
                     onBioChange: (e) => (0, u.xQ)(e, null == L ? void 0 : L.bio),
                     pendingBio: V,
-                    currentBio: null != (w = null == L ? void 0 : L.bio) ? w : ''
+                    currentBio: null != (w = null == L ? void 0 : L.bio) ? w : "",
                 },
-                'bio'
+                "bio",
             ),
             ei.length > 0 &&
                 (0, i.jsx)(c.Z, {
                     availablePrimaryGuilds: ei,
                     pendingPrimaryGuildId: W,
-                    onChange: (e) => (0, l.s4)(e)
+                    onChange: (e) => (0, l.s4)(e),
                 }),
             null != ee &&
                 (0, i.jsx)(
                     f.Z,
                     {
                         legacyUsername: ee,
-                        pendingLegacyUsernameDisabled: z
+                        pendingLegacyUsernameDisabled: z,
                     },
-                    'legacy_username'
-                )
-        ]
+                    "legacy_username",
+                ),
+        ],
     });
 }

@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => _,
     jA: () => h,
-    sU: () => m
+    sU: () => m,
 }),
-    n(997841));
+    n(997841);
 var r = n(442837),
     i = n(812206),
     o = n(522474),
@@ -18,8 +18,10 @@ function _(e) {
     var t;
     let { application: n, channelId: r } = e;
     if (null != n && (0, a.yE)(null != (t = n.flags) ? t : 0, f.udG.EMBEDDED)) {
-        if (o.Z.getWindowOpen(f.KJ3.ACTIVITY_POPOUT) && l.ZP.getActivityPanelMode() === d.Ez.ACTIVITY_POPOUT_WINDOW) return f.KJ3.ACTIVITY_POPOUT;
-        if (o.Z.getWindowOpen(f.KJ3.CHANNEL_CALL_POPOUT) && (0, u.Z)(r) && !(0, s.R)()) return f.KJ3.CHANNEL_CALL_POPOUT;
+        if (o.Z.getWindowOpen(f.KJ3.ACTIVITY_POPOUT) && l.ZP.getActivityPanelMode() === d.Ez.ACTIVITY_POPOUT_WINDOW)
+            return f.KJ3.ACTIVITY_POPOUT;
+        if (o.Z.getWindowOpen(f.KJ3.CHANNEL_CALL_POPOUT) && (0, u.Z)(r) && !(0, s.R)())
+            return f.KJ3.CHANNEL_CALL_POPOUT;
     }
 }
 function p(e) {
@@ -29,7 +31,7 @@ function p(e) {
     if (null != o)
         return _({
             application: o,
-            channelId: t
+            channelId: t,
         });
 }
 function h(e) {
@@ -40,7 +42,7 @@ function h(e) {
     if (null != r)
         return _({
             application: r,
-            channelId: (0, c.p)(n.location)
+            channelId: (0, c.p)(n.location),
         });
 }
 function m(e) {
@@ -49,7 +51,7 @@ function m(e) {
         let e = p({
             channelId: null != t ? t : l.ZP.getConnectedActivityChannelId(),
             EmbeddedActivitiesStore: l.ZP,
-            ApplicationStore: i.Z
+            ApplicationStore: i.Z,
         });
         return null != e ? o.Z.getWindow(e) : void 0;
     });

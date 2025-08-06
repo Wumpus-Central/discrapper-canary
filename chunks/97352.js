@@ -21,13 +21,13 @@ function d() {
                     channelId: i,
                     messageId: r,
                     emoji: o,
-                    key: c.I.EXTERNAL
+                    key: c.I.EXTERNAL,
                 });
         }
         return (
-            o.Z.subscribe('MESSAGE_REACTION_ADD', n),
+            o.Z.subscribe("MESSAGE_REACTION_ADD", n),
             () => {
-                o.Z.unsubscribe('MESSAGE_REACTION_ADD', n);
+                o.Z.unsubscribe("MESSAGE_REACTION_ADD", n);
             }
         );
     }, [e, t]);

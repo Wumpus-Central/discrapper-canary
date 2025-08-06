@@ -8,9 +8,15 @@ let l = () => {
     let e = o.default.getCurrentUser(),
         t = (0, r.e7)([i.Z], () => {
             var e, t, n;
-            return null == (n = null == (t = i.Z.settings.privacy) || null == (e = t.inappropriateConversationWarnings) ? void 0 : e.value) || n;
+            return (
+                null ==
+                    (n =
+                        null == (t = i.Z.settings.privacy) || null == (e = t.inappropriateConversationWarnings)
+                            ? void 0
+                            : e.value) || n
+            );
         }),
         n = (0, a.U)(),
-        l = (0, s.v4)({ location: 'useSafetyAlertsSettingOrDefault' });
+        l = (0, s.v4)({ location: "useSafetyAlertsSettingOrDefault" });
     return (!!n && !!l) || ((n || (null == e ? void 0 : e.isStaff()) === !0) && t);
 };

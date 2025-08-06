@@ -1,1 +1,1 @@
-e.exports = { animationObj: 'animationObj__6b4ea' };
+e.exports = { animationObj: "animationObj__6b4ea" };

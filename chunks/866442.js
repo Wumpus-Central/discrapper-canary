@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Bd: () => f,
     FX: () => _,
     O: () => l,
@@ -7,13 +7,13 @@
     br: () => d,
     ho: () => c,
     mj: () => m,
-    wK: () => u
+    wK: () => u,
 }),
-    n(35282));
+    n(35282);
 var r = n(688619),
     i = n.n(r);
 function o(e) {
-    return 1 === e.length ? '0'.concat(e) : e;
+    return 1 === e.length ? "0".concat(e) : e;
 }
 function a(e) {
     return i()(e).num();
@@ -23,7 +23,7 @@ function s(e) {
         let t = (e >> 16) & 255,
             n = (e >> 8) & 255,
             r = 255 & e;
-        return '#'
+        return "#"
             .concat(o(t.toString(16)))
             .concat(o(n.toString(16)))
             .concat(o(r.toString(16)));
@@ -32,7 +32,7 @@ function s(e) {
         let t = (e >> 24) & 255,
             n = (e >> 16) & 255,
             r = (e >> 8) & 255;
-        return '#'
+        return "#"
             .concat(o(t.toString(16)))
             .concat(o(n.toString(16)))
             .concat(o(r.toString(16)));
@@ -49,12 +49,14 @@ function l(e) {
         l = 0,
         c = 0;
     return (
-        (s = Math.round(60 * (s = 0 === a ? 0 : o === t ? ((n - r) / a) % 6 : o === n ? (r - t) / a + 2 : (t - n) / a + 4))) < 0 && (s += 360),
+        (s = Math.round(
+            60 * (s = 0 === a ? 0 : o === t ? ((n - r) / a) % 6 : o === n ? (r - t) / a + 2 : (t - n) / a + 4),
+        )) < 0 && (s += 360),
         (c = (o + i) / 2),
         {
             h: s,
             s: (l = +(100 * (l = 0 === a ? 0 : a / (1 - Math.abs(2 * c - 1)))).toFixed(1)),
-            l: (c = +(100 * c).toFixed(1))
+            l: (c = +(100 * c).toFixed(1)),
         }
     );
 }
@@ -64,14 +66,14 @@ function c(e) {
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
         { h: i, s: o, l: a } = l(e);
     return t
-        ? 'hsla('.concat(i, ', calc(var(--saturation-factor, 1) * ').concat(o, '%), ').concat(a, '%, ').concat(r, ')')
+        ? "hsla(".concat(i, ", calc(var(--saturation-factor, 1) * ").concat(o, "%), ").concat(a, "%, ").concat(r, ")")
         : null != n
-          ? 'hsla('
-                .concat(i, ', ')
-                .concat(n * o, '%, ')
-                .concat(a, '%, ')
-                .concat(r, ')')
-          : 'hsla('.concat(i, ', ').concat(o, '%, ').concat(a, '%, ').concat(r, ')');
+          ? "hsla("
+                .concat(i, ", ")
+                .concat(n * o, "%, ")
+                .concat(a, "%, ")
+                .concat(r, ")")
+          : "hsla(".concat(i, ", ").concat(o, "%, ").concat(a, "%, ").concat(r, ")");
 }
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -84,7 +86,7 @@ function d(e, t) {
     let n = (e >> 16) & 255,
         r = (e >> 8) & 255,
         i = 255 & e;
-    return 'rgba('.concat(n, ', ').concat(r, ', ').concat(i, ', ').concat(t, ')');
+    return "rgba(".concat(n, ", ").concat(r, ", ").concat(i, ", ").concat(t, ")");
 }
 function f(e) {
     return 1 - (0.299 * ((e >> 16) & 255) + 0.587 * ((e >> 8) & 255) + 0.114 * (255 & e)) / 255;

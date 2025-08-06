@@ -13,13 +13,13 @@ function u(e) {
     return null != m && f > 0
         ? (0, i.jsx)(s.Z, {
               bar: (0, i.jsx)(l.E1j, {
-                  size: 'sm',
+                  size: "sm",
                   query: b,
                   onChange: g,
-                  onClear: () => g('')
+                  onClear: () => g(""),
               }),
               inModal: !1,
-              title: c.intl.string(c.t['0hKkS0']),
+              title: c.intl.string(c.t["0hKkS0"]),
               children: m.map((e, o) =>
                   (0, i.jsxs)(
                       r.Fragment,
@@ -30,22 +30,22 @@ function u(e) {
                                   applicationName: n,
                                   canNavigate: u,
                                   command: e,
-                                  guildId: p
+                                  guildId: p,
                               }),
-                              o < m.length - 1 ? (0, i.jsx)(l.$i$, {}) : null
-                          ]
+                              o < m.length - 1 ? (0, i.jsx)(l.$i$, {}) : null,
+                          ],
                       },
-                      e.id
-                  )
-              )
+                      e.id,
+                  ),
+              ),
           })
         : (0, i.jsx)(l.Zbd, {
               className: d.emptyCard,
               editable: !0,
               children: (0, i.jsx)(l.Text, {
-                  color: 'text-muted',
-                  variant: 'text-sm/normal',
-                  children: c.intl.string(c.t['x78c+P'])
-              })
+                  color: "text-muted",
+                  variant: "text-sm/normal",
+                  children: c.intl.string(c.t["x78c+P"]),
+              }),
           });
 }

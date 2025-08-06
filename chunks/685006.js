@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => A,
-    xL: () => S
+    xL: () => S,
 });
 var r = n(255367),
     i = n(73800),
@@ -34,7 +34,7 @@ function A(e) {
         { isInitialLoading: a, application: s, primaryEntryPointCommand: l } = (0, _.Z)({ context: t }),
         c = null == s ? void 0 : s.id,
         p = (0, b.Z)({ type: o }),
-        { sectionCommands: O } = (0, g.If)(t, null != c ? c : ''),
+        { sectionCommands: O } = (0, g.If)(t, null != c ? c : ""),
         v = i.useCallback(() => {
             p
                 ? h.yT(m.ti.DISMISSED)
@@ -42,7 +42,7 @@ function A(e) {
                   (0, f.yw)(y.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                       application_id: c,
                       location: d.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
-                      source: m._b.TEXT
+                      source: m._b.TEXT,
                   }));
         }, [c, p]),
         I = null != O && O.filter((e) => e.type === u.yU.CHAT || e.type === u.yU.PRIMARY_ENTRY_POINT).length > 0,
@@ -54,7 +54,7 @@ function A(e) {
                 T(!1);
             }
         ),
-        [S]
+        [S],
     ),
     S)
         ? (0, r.jsx)(N, {
@@ -63,12 +63,19 @@ function A(e) {
               primaryEntryPointCommand: l,
               onOpenButtonPress: v,
               entryPointCommandButtonRef: n,
-              type: o
+              type: o,
           })
         : null;
 }
 function N(e) {
-    let { context: t, application: n, primaryEntryPointCommand: i, onOpenButtonPress: o, entryPointCommandButtonRef: s, type: l } = e,
+    let {
+            context: t,
+            application: n,
+            primaryEntryPointCommand: i,
+            onOpenButtonPress: o,
+            entryPointCommandButtonRef: s,
+            type: l,
+        } = e,
         u = (0, b.Z)({ type: l }),
         {
             isExecutingLaunchInteraction: d,
@@ -78,12 +85,12 @@ function N(e) {
             currentEmbeddedActivity: m,
             channelRecipientUserId: g,
             setIsExecutingLaunchInteraction: E,
-            analyticsLocations: y
+            analyticsLocations: y,
         } = (0, p.Z)({
             context: t,
             primaryEntryPointCommand: i,
             application: n,
-            showAppLauncherPopup: u
+            showAppLauncherPopup: u,
         }),
         I = (0, p.J)({
             context: t,
@@ -94,7 +101,7 @@ function N(e) {
             onOpenButtonPress: o,
             channelRecipientUserId: g,
             setIsExecutingLaunchInteraction: E,
-            analyticsLocations: y
+            analyticsLocations: y,
         }),
         T = _ ? c.zx.Colors.RED : c.zx.Colors.BRAND;
     return (0, r.jsx)(c.zx, {
@@ -104,6 +111,6 @@ function N(e) {
         submitting: d,
         onClick: I,
         buttonRef: s,
-        children: f
+        children: f,
     });
 }

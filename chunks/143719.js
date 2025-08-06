@@ -1,1 +1,1 @@
-e.exports = { widget: 'widget_d0f34c' };
+e.exports = { widget: "widget_d0f34c" };

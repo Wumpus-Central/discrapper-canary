@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(539854), n(388685));
+n.d(t, { Z: () => x }), n(539854), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -28,15 +28,15 @@ function v(e, t, n, r) {
             locked: a,
             pinned: s,
             transitionState: n,
-            cleanUp: r
+            cleanUp: r,
         },
-        e
+        e,
     );
 }
 function E(e) {
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: y.container,
-        children: e
+        children: e,
     });
 }
 let _ = (e) => r.useState(() => new f.AS(e))[0],
@@ -55,25 +55,27 @@ let _ = (e) => r.useState(() => new f.AS(e))[0],
                                 index: i,
                                 locked: t,
                                 pinned: n,
-                                notification: r
+                                notification: r,
                             }),
                             i++);
                     }
                     return e;
                 },
                 [t, n],
-                u.E6
+                u.E6,
             ),
             x = _(t);
-        return (r.useLayoutEffect(() => x.updateState(y, t)), r.useLayoutEffect(() => (x.initialize((0, d.i)()), () => x.cleanUp()), [x]), 0 !== y.length || t)
+        return (r.useLayoutEffect(() => x.updateState(y, t)),
+        r.useLayoutEffect(() => (x.initialize((0, d.i)()), () => x.cleanUp()), [x]),
+        0 !== y.length || t)
             ? (0, i.jsx)(f.S4.Provider, {
                   value: x,
                   children: (0, i.jsx)(l.W3x, {
                       items: y,
                       renderItem: v,
                       getItemKey: b,
-                      wrapChildren: E
-                  })
+                      wrapChildren: E,
+                  }),
               })
             : p
               ? t
@@ -81,7 +83,7 @@ let _ = (e) => r.useState(() => new f.AS(e))[0],
                   : (0, i.jsx)(s.E, {
                         emptyText: g.intl.string(g.t.O1Nbjo),
                         icon: l.Dkj,
-                        absolute: !0
+                        absolute: !0,
                     })
               : null;
     });

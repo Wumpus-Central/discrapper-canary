@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(804061), n(704826), n(35282));
+n.d(t, { Z: () => N }), n(804061), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(317261),
@@ -30,14 +30,14 @@ let S = (e, t, n, r) => {
         return I.intl
             .formatToMarkdownString(i, {
                 artist: a,
-                userName: o
+                userName: o,
             })
-            .replaceAll('*', '');
+            .replaceAll("*", "");
     },
     A = (e, t) =>
         I.intl.formatToPlainString(I.t.Osmpr6, {
             username: t.username,
-            artist: e.extra.artist.name
+            artist: e.extra.artist.name,
         }),
     N = (e) => {
         let { channel: t, entry: n, onReaction: o, onVoiceChannelPreview: f } = e,
@@ -56,19 +56,23 @@ let S = (e, t, n, r) => {
                     artist: R,
                     description: e,
                     colors: [w, D],
-                    badges: (0, p.UU)(n)
+                    badges: (0, p.UU)(n),
                 });
             }, [C, R, t, n, w, L, D, P]),
             M = (0, h.Z)(O.ABu.SPOTIFY);
         if (null == P || !(0, d.Hi)(L, g.y9)) return null;
         let k = () => {
                 let e = v.Hw.ALBUM,
-                    t = l.Z.isProtocolRegistered() ? v.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : v.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
+                    t = l.Z.isProtocolRegistered()
+                        ? v.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id)
+                        : v.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
                 window.open(t);
             },
             j = () => {
                 let e = v.Hw.ARTIST,
-                    t = l.Z.isProtocolRegistered() ? v.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : v.C7.WEB_OPEN(e, n.extra.artist.external_id);
+                    t = l.Z.isProtocolRegistered()
+                        ? v.C7.PLAYER_OPEN(e, n.extra.artist.external_id)
+                        : v.C7.WEB_OPEN(e, n.extra.artist.external_id);
                 window.open(t);
             };
         return (0, r.jsxs)(b.yR, {
@@ -84,7 +88,7 @@ let S = (e, t, n, r) => {
                             ? (0, r.jsx)(y.Z, {
                                   onClick: M,
                                   Icon: u.Z,
-                                  'aria-label': I.intl.string(I.t['0ZB/XF'])
+                                  "aria-label": I.intl.string(I.t["0ZB/XF"]),
                               })
                             : null,
                     userDescription: I.t.CcVI1d,
@@ -92,8 +96,8 @@ let S = (e, t, n, r) => {
                     subtitle: R,
                     badges: (0, r.jsx)(E.Gk, {
                         location: E.Gt.POPOUT,
-                        children: g.Ho.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
-                    })
+                        children: g.Ho.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
+                    }),
                 }),
                 (0, r.jsx)(b.St, {
                     children: (0, r.jsx)(b.WT, {
@@ -103,9 +107,9 @@ let S = (e, t, n, r) => {
                         channel: t,
                         generateReactionImage: x,
                         reactionImageAltText: A(n, P),
-                        entry: n
-                    })
-                })
-            ]
+                        entry: n,
+                    }),
+                }),
+            ],
         });
     };

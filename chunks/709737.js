@@ -1,7 +1,7 @@
 n.d(t, {
     DC: () => c,
     Js: () => u,
-    ZR: () => d
+    ZR: () => d,
 });
 var r = n(255367);
 n(73800);
@@ -15,7 +15,7 @@ function c(e) {
     let { value: t, statisticId: n } = e,
         i = l.intl.formatToPlainString(l.t.yhdo8v, {
             value: t,
-            statisticName: (0, s.C)(n)
+            statisticName: (0, s.C)(n),
         });
     return (0, r.jsx)(d, { text: i });
 }
@@ -24,18 +24,18 @@ function u(e) {
         s = new Date(a.default.extractTimestamp(t)),
         c = new Date(a.default.extractTimestamp(n)),
         u = new Intl.DateTimeFormat(l.intl.currentLocale, {
-            month: 'numeric',
-            day: 'numeric'
+            month: "numeric",
+            day: "numeric",
         }).formatRange(s, c);
     return (0, r.jsx)(o.ej, {
         Icon: i.Que,
-        text: u
+        text: u,
     });
 }
 function d(e) {
     let { text: t } = e;
     return (0, r.jsx)(o.ej, {
         Icon: i.hAD,
-        text: t
+        text: t,
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => a }), n(415506));
+n.d(t, { Z: () => a }), n(415506);
 var r = n(772848),
     i = n(544891),
     l = n(981631);
@@ -8,15 +8,15 @@ let a = {
     },
     createHandoffToken: async function (e) {
         let {
-            body: { handoff_token: t }
+            body: { handoff_token: t },
         } = await i.tn.post({
             url: l.ANM.HANDOFF,
             body: { key: e },
             oldFormErrors: !0,
             retries: 1,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         if (null != t) return t;
-        throw Error('Missing handoff token!');
-    }
+        throw Error("Missing handoff token!");
+    },
 };

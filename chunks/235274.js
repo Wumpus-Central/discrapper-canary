@@ -4,11 +4,11 @@ var r = n(220159),
     i = n(613694).set;
 r(
     {
-        target: 'Map',
+        target: "Map",
         proto: !0,
         real: !0,
         arity: 1,
-        forced: !0
+        forced: !0,
     },
     {
         merge: function (e) {
@@ -18,9 +18,9 @@ r(
                     function (e, n) {
                         i(t, e, n);
                     },
-                    { AS_ENTRIES: !0 }
+                    { AS_ENTRIES: !0 },
                 );
             return t;
-        }
-    }
+        },
+    },
 );

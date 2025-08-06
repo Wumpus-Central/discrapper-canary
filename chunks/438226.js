@@ -1,22 +1,22 @@
-(n.d(t, {
+n.d(t, {
     HV: () => l,
     IS: () => a,
-    VY: () => c
+    VY: () => c,
 }),
     n(804061),
     n(704826),
-    n(35282));
+    n(35282);
 var r = n(5192),
     i = n(561308),
     o = n(388032);
 let a = (e, t) =>
         o.intl.formatToPlainString(o.t.tAwI1t, {
             username: t.username,
-            activity: e.extra.game_name
+            activity: e.extra.game_name,
         }),
     s = (e) => {
         let t = (0, i.kr)(e);
-        return (0, i.Ol)(e) ? (t ? o.t.MHO1AQ : o.t.i7AOz8) : t ? o.t.lLPKY2 : o.t['bES+y8'];
+        return (0, i.Ol)(e) ? (t ? o.t.MHO1AQ : o.t.i7AOz8) : t ? o.t.lLPKY2 : o.t["bES+y8"];
     },
     l = (e, t, n) => {
         let i = s(e),
@@ -25,19 +25,19 @@ let a = (e, t) =>
         return o.intl
             .formatToMarkdownString(i, {
                 gameName: l,
-                userName: a
+                userName: a,
             })
-            .replaceAll('*', '');
+            .replaceAll("*", "");
     },
     c = (e) => {
         let { entry: t, channel: n, users: a, countOthers: s } = e,
-            l = (0, i.kr)(t) ? o.t.QaUWPT : o.t['7j/5mp'];
+            l = (0, i.kr)(t) ? o.t.QaUWPT : o.t["7j/5mp"];
         return o.intl
             .formatToMarkdownString(l, {
                 gameName: t.extra.game_name,
                 user1: r.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, a[0]),
                 user2: r.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, a[1]),
-                countOthers: s
+                countOthers: s,
             })
-            .replaceAll('*', '');
+            .replaceAll("*", "");
     };

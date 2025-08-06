@@ -1,19 +1,19 @@
 n.d(t, {
     M: () => l,
-    s: () => i
+    s: () => i,
 });
 var r = n(570140);
 function i(e) {
     r.Z.dispatch({
-        type: 'VOICE_CATEGORY_EXPAND',
+        type: "VOICE_CATEGORY_EXPAND",
         guildId: e,
-        expand: !0
+        expand: !0,
     });
 }
 function l(e) {
     r.Z.dispatch({
-        type: 'VOICE_CATEGORY_COLLAPSE',
+        type: "VOICE_CATEGORY_COLLAPSE",
         guildId: e,
-        expand: !1
+        expand: !1,
     });
 }

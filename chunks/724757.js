@@ -14,10 +14,10 @@ function s(e, t, n) {
                     (n.focus(),
                     r.scrollIntoViewNode({
                         node: n,
-                        padding: 80
+                        padding: 80,
                     }));
             },
-            [t]
+            [t],
         ),
         c = r.useCallback(
             () =>
@@ -26,10 +26,10 @@ function s(e, t, n) {
                     if (null == n) return e();
                     n.scrollTo({
                         to: 0,
-                        callback: () => requestAnimationFrame(() => e())
+                        callback: () => requestAnimationFrame(() => e()),
                     });
                 }),
-            [t]
+            [t],
         ),
         u = r.useCallback(
             () =>
@@ -38,10 +38,10 @@ function s(e, t, n) {
                     if (null == n) return e();
                     n.scrollTo({
                         to: Number.MAX_SAFE_INTEGER,
-                        callback: () => requestAnimationFrame(() => e())
+                        callback: () => requestAnimationFrame(() => e()),
                     });
                 }),
-            [t]
+            [t],
         );
     return (0, i.ZP)({
         id: e,
@@ -49,6 +49,6 @@ function s(e, t, n) {
         setFocus: l,
         scrollToStart: c,
         scrollToEnd: u,
-        orientation: null == n ? void 0 : n.orientation
+        orientation: null == n ? void 0 : n.orientation,
     });
 }

@@ -9,13 +9,13 @@ var i = n(481060),
 function c() {
     let { analyticsLocations: e } = (0, l.ZP)();
     return [
-        (0, r.jsx)(i.kSQ, { children: (0, o.Z)(e) }, 'input-mode-items'),
+        (0, r.jsx)(i.kSQ, { children: (0, o.Z)(e) }, "input-mode-items"),
         (0, r.jsxs)(
             i.kSQ,
             {
-                children: [(0, a.Z)(e), (0, s.Z)(e)]
+                children: [(0, a.Z)(e), (0, s.Z)(e)],
             },
-            'input-output'
-        )
+            "input-output",
+        ),
     ];
 }

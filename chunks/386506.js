@@ -3,15 +3,15 @@ n.d(t, {
     M3: () => p,
     aD: () => d,
     bF: () => _,
-    f0: () => f
+    f0: () => f,
 });
 var i = n(544891),
     o = n(314897),
     a = n(12647),
     s = n(865427);
-let l = '/__development/build_overrides',
-    c = '/__development/create_build_override_link',
-    u = '/__development/link';
+let l = "/__development/build_overrides",
+    c = "/__development/create_build_override_link",
+    u = "/__development/link";
 async function d(e) {
     try {
         var t;
@@ -19,13 +19,13 @@ async function d(e) {
             url: (0, s.pU)(l),
             body: {
                 overrides: e,
-                version: s.Ji
+                version: s.Ji,
             },
-            headers: { Authorization: null != (t = o.default.getToken()) ? t : '' },
+            headers: { Authorization: null != (t = o.default.getToken()) ? t : "" },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
-        return (await r(n), n);
+        return await r(n), n;
     } catch (e) {
         return e;
     }
@@ -37,12 +37,12 @@ async function f(e) {
             body: {
                 payload: e,
                 token: o.default.getToken(),
-                version: s.Ji
+                version: s.Ji,
             },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
-        return (await r(t), t);
+        return await r(t), t;
     } catch (e) {
         return e;
     }
@@ -51,9 +51,9 @@ async function _() {
     let e = await i.tn.del({
         url: (0, s.pU)(l),
         oldFormErrors: !0,
-        rejectWithError: !1
+        rejectWithError: !1,
     });
-    return (await r(e), e);
+    return await r(e), e;
 }
 function p(e) {
     var t;
@@ -61,25 +61,25 @@ function p(e) {
         .post({
             url: (0, s.pU)(c),
             body: e,
-            headers: { Authorization: null != (t = o.default.getToken()) ? t : '' },
+            headers: { Authorization: null != (t = o.default.getToken()) ? t : "" },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
         .then(
             (e) => ({
                 url: e.body.url,
-                error: !1
+                error: !1,
             }),
             (e) =>
                 400 === e.status
                     ? {
                           url: !1,
-                          error: e.body
+                          error: e.body,
                       }
                     : {
                           url: !1,
-                          error: 'Error making API request ('.concat(e.status, ')')
-                      }
+                          error: "Error making API request (".concat(e.status, ")"),
+                      },
         );
 }
 r = async (e) => {

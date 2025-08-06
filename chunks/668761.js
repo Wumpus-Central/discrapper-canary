@@ -1,6 +1,6 @@
 n.d(t, {
     f: () => h,
-    y: () => u
+    y: () => u,
 });
 var i = n(255367);
 n(73800);
@@ -12,7 +12,9 @@ var r = n(481060),
     c = n(987650),
     d = n(388032);
 function u() {
-    let { trackView: e, trackClick: t } = (0, o.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
+    let { trackView: e, trackClick: t } = (0, o.R)(c.n0.ClipsReminderNotification, {
+            notif_type: c.n0.ClipsReminderNotification,
+        }),
         n = l.ZP.getKeybindForAction(a.kg4.SAVE_CLIP);
     if (null == n) return null;
     let u = s.BB(n.shortcut, !0);
@@ -20,21 +22,21 @@ function u() {
         title: d.intl.format(d.t.S5uhCA, {
             keybind: u,
             keybindHook: () =>
-                (0, i.jsx)('span', {
-                    style: { display: 'inline-block' },
-                    children: (0, i.jsx)(r.M2$, { shortcut: u })
-                })
+                (0, i.jsx)("span", {
+                    style: { display: "inline-block" },
+                    children: (0, i.jsx)(r.M2$, { shortcut: u }),
+                }),
         }),
         icon: (0, i.jsx)(r.AlX, {
-            size: 'xs',
-            color: 'currentColor'
+            size: "xs",
+            color: "currentColor",
         }),
         onNotificationShow: () => {
             e();
         },
         onDismissClick: () => {
-            t('dismiss');
-        }
+            t("dismiss");
+        },
     };
 }
 function h(e) {
@@ -42,14 +44,14 @@ function h(e) {
     return {
         title: e,
         icon: (0, i.jsx)(r.AlX, {
-            size: 'xs',
-            color: 'currentColor'
+            size: "xs",
+            color: "currentColor",
         }),
         onNotificationShow: () => {
             t();
         },
         onDismissClick: () => {
-            n('dismiss');
-        }
+            n("dismiss");
+        },
     };
 }

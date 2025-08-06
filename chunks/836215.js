@@ -8,10 +8,10 @@ var r = n(98405),
     u = Array,
     d = Math.max,
     f = Math.min;
-(r(
+r(
     {
-        target: 'Array',
-        proto: !0
+        target: "Array",
+        proto: !0,
     },
     {
         toSpliced: function (e, t) {
@@ -24,11 +24,17 @@ var r = n(98405),
                 m = s(e, h),
                 g = arguments.length,
                 E = 0;
-            for (0 === g ? (n = r = 0) : 1 === g ? ((n = 0), (r = h - m)) : ((n = g - 2), (r = f(d(c(t), 0), h - m))), _ = u((i = o(h + n - r))); E < m; E++) _[E] = p[E];
+            for (
+                0 === g ? (n = r = 0) : 1 === g ? ((n = 0), (r = h - m)) : ((n = g - 2), (r = f(d(c(t), 0), h - m))),
+                    _ = u((i = o(h + n - r)));
+                E < m;
+                E++
+            )
+                _[E] = p[E];
             for (; E < m + n; E++) _[E] = arguments[E - m + 2];
             for (; E < i; E++) _[E] = p[E + r - n];
             return _;
-        }
-    }
+        },
+    },
 ),
-    i('toSpliced'));
+    i("toSpliced");

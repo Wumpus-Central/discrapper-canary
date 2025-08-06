@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(361932), n(187205), n(539854), n(388685));
+n.d(t, { Z: () => v }), n(361932), n(187205), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -27,15 +27,20 @@ function O(e) {
         if (t && o) {
             let e = r.flatMap((e) => {
                 var t, n;
-                return null != (n = null == (t = u.Z.getSoundsForGuild(e)) ? void 0 : t.filter((e) => e.available)) ? n : [];
+                return null != (n = null == (t = u.Z.getSoundsForGuild(e)) ? void 0 : t.filter((e) => e.available))
+                    ? n
+                    : [];
             });
             i.push(...a().sampleSize(e, y));
         } else if ((null == e ? void 0 : e.guild_id) != null) {
             var s;
-            let t = null == (s = u.Z.getSoundsForGuild(null == e ? void 0 : e.guild_id)) ? void 0 : s.filter((e) => e.available);
+            let t =
+                null == (s = u.Z.getSoundsForGuild(null == e ? void 0 : e.guild_id))
+                    ? void 0
+                    : s.filter((e) => e.available);
             i.push(...a().sampleSize(t, y));
         }
-        return (i.length < y && i.push(...a().sampleSize(null != n ? n : [], y - i.length)), i);
+        return i.length < y && i.push(...a().sampleSize(null != n ? n : [], y - i.length)), i;
     }, [o, null == e ? void 0 : e.guild_id, n, r, t]);
 }
 let v = i.memo(function (e) {
@@ -48,7 +53,7 @@ let v = i.memo(function (e) {
     }, [o]),
     0 === _.length)
         ? (0, r.jsx)(l.$jN, {})
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: b.rowContainer,
               children: _.map((e, t) =>
                   (0, r.jsx)(
@@ -59,10 +64,10 @@ let v = i.memo(function (e) {
                           isSoundmoji: !0,
                           sound: e,
                           channel: a,
-                          onSelectItem: (t) => (null == n ? void 0 : n(e, !t.shiftKey))
+                          onSelectItem: (t) => (null == n ? void 0 : n(e, !t.shiftKey)),
                       },
-                      t
-                  )
-              )
+                      t,
+                  ),
+              ),
           });
 });

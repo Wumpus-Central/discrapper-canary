@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => E,
-    c: () => g
+    c: () => g,
 });
 var r = n(255367);
 n(73800);
@@ -16,56 +16,56 @@ function f(e) {
     return [
         {
             setting: u.bL.NULL,
-            label: null != e.parent_id ? d.intl.string(d.t.wlrV1d) : d.intl.string(d.t['1Wn2Mz'])
+            label: null != e.parent_id ? d.intl.string(d.t.wlrV1d) : d.intl.string(d.t["1Wn2Mz"]),
         },
         {
             setting: u.bL.ALL_MESSAGES,
-            label: d.intl.string(d.t['9sGJkp'])
+            label: d.intl.string(d.t["9sGJkp"]),
         },
         {
             setting: u.bL.ONLY_MENTIONS,
-            label: d.intl.format(d.t.cpcXvb, {})
+            label: d.intl.format(d.t.cpcXvb, {}),
         },
         {
             setting: u.bL.NO_MESSAGES,
-            label: d.intl.string(d.t.CtVGyc)
-        }
+            label: d.intl.string(d.t.CtVGyc),
+        },
     ];
 }
 function _(e) {
     return [
         {
             setting: u.bL.NULL,
-            label: null != e.parent_id ? d.intl.string(d.t.wlrV1d) : d.intl.string(d.t['1Wn2Mz'])
+            label: null != e.parent_id ? d.intl.string(d.t.wlrV1d) : d.intl.string(d.t["1Wn2Mz"]),
         },
         {
             setting: u.bL.ALL_MESSAGES,
-            label: d.intl.string(d.t['n/bTaW'])
+            label: d.intl.string(d.t["n/bTaW"]),
         },
         {
             setting: u.bL.ONLY_MENTIONS,
-            label: d.intl.format(d.t.L2hmY2, {})
+            label: d.intl.format(d.t.L2hmY2, {}),
         },
         {
             setting: u.bL.NO_MESSAGES,
-            label: d.intl.string(d.t.CtVGyc)
-        }
+            label: d.intl.string(d.t.CtVGyc),
+        },
     ];
 }
 function p(e) {
     return [
         {
             setting: u.bL.NULL,
-            label: null != e.parent_id ? d.intl.string(d.t.wlrV1d) : d.intl.string(d.t['1Wn2Mz'])
+            label: null != e.parent_id ? d.intl.string(d.t.wlrV1d) : d.intl.string(d.t["1Wn2Mz"]),
         },
         {
             setting: u.bL.ONLY_MENTIONS,
-            label: d.intl.string(d.t['BENn//'])
+            label: d.intl.string(d.t["BENn//"]),
         },
         {
             setting: u.bL.NO_MESSAGES,
-            label: d.intl.string(d.t.CtVGyc)
-        }
+            label: d.intl.string(d.t.CtVGyc),
+        },
     ];
 }
 function h(e) {
@@ -83,7 +83,7 @@ function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     switch (e) {
         case u.bL.ALL_MESSAGES:
-            return t.type === u.d4z.GUILD_VOICE && n ? d.intl.string(d.t['9sGJkp']) : d.intl.string(d.t['n/bTaW']);
+            return t.type === u.d4z.GUILD_VOICE && n ? d.intl.string(d.t["9sGJkp"]) : d.intl.string(d.t["n/bTaW"]);
         case u.bL.ONLY_MENTIONS:
             return d.intl.format(d.t.L2hmY2, {});
         case u.bL.NO_MESSAGES:
@@ -96,14 +96,13 @@ function m(e, t) {
 function g(e) {
     let t = e.getGuildId(),
         n = e.id,
-        f = (0, i.e7)(
-            [l.ZP],
-            () => {
-                let n = u.bL.NULL;
-                return (null != e.parent_id && (n = l.ZP.getChannelMessageNotifications(t, e.parent_id)), n !== u.bL.NULL ? n : l.ZP.getMessageNotifications(t));
-            },
-            [t, e.parent_id]
-        ),
+        f = (0, i.e7)([l.ZP], () => {
+            let n = u.bL.NULL;
+            return (
+                null != e.parent_id && (n = l.ZP.getChannelMessageNotifications(t, e.parent_id)),
+                n !== u.bL.NULL ? n : l.ZP.getMessageNotifications(t)
+            );
+        }, [t, e.parent_id]),
         _ = (0, i.e7)([l.ZP], () => l.ZP.getNewForumThreadsCreated(e)),
         p = (0, i.e7)([l.ZP], () => l.ZP.getChannelOverrides(t)[n], [t, n]),
         g = null == p ? u.bL.NULL : p.message_notifications,
@@ -119,13 +118,13 @@ function g(e) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(o.S89, {
-                              id: 'new-forum-threads-created',
+                              id: "new-forum-threads-created",
                               label: d.intl.string(d.t.Rkgjpq),
                               checked: _,
-                              action: () => a.Z.setForumThreadsCreated(e, !_)
+                              action: () => a.Z.setForumThreadsCreated(e, !_),
                           }),
-                          (0, r.jsx)(o.Clw, {})
-                      ]
+                          (0, r.jsx)(o.Clw, {}),
+                      ],
                   })
                 : null,
             b.map((t) => {
@@ -133,17 +132,17 @@ function g(e) {
                 return (0, r.jsx)(
                     o.k5B,
                     {
-                        group: 'channel-notifications',
-                        id: ''.concat(n),
+                        group: "channel-notifications",
+                        id: "".concat(n),
                         label: i,
                         subtext: n === u.bL.NULL ? m(f, e, E) : void 0,
                         action: () => y(n),
-                        checked: n === g
+                        checked: n === g,
                     },
-                    n
+                    n,
                 );
-            })
-        ]
+            }),
+        ],
     });
 }
 function E(e) {
@@ -166,10 +165,10 @@ function E(e) {
                   : t.label;
     return null != a
         ? (0, r.jsx)(o.sNh, {
-              id: 'channel-notifications',
+              id: "channel-notifications",
               label: d.intl.string(d.t.h850Sk),
               subtext: m,
-              children: a
+              children: a,
           })
         : null;
 }

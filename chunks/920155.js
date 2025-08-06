@@ -1,4 +1,4 @@
-(n.d(t, { m: () => O }), n(388685));
+n.d(t, { m: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,17 @@ let E = 10,
     b = 4,
     y = f.Vq;
 function O(e) {
-    let { children: t, targetElementRef: n, shouldShow: o = !0, onRequestClose: f, position: p = 'top', align: m = 'center', hasVideo: O = !1, gradientColor: v, caretConfig: I } = e,
+    let {
+            children: t,
+            targetElementRef: n,
+            shouldShow: o = !0,
+            onRequestClose: f,
+            position: p = "top",
+            align: m = "center",
+            hasVideo: O = !1,
+            gradientColor: v,
+            caretConfig: I,
+        } = e,
         [T, S] = i.useState(o);
     i.useEffect(() => {
         o && S(!0);
@@ -76,21 +86,21 @@ function O(e) {
         },
         N = (e) => {
             switch (e) {
-                case 'top':
-                    return 'bottom';
-                case 'bottom':
+                case "top":
+                    return "bottom";
+                case "bottom":
                 default:
-                    return 'top';
-                case 'left':
-                    return 'right';
-                case 'right':
-                    return 'left';
+                    return "top";
+                case "left":
+                    return "right";
+                case "right":
+                    return "left";
             }
         },
         C = (0, d.i)({
             shouldShow: o,
             caretPosition: (null == I ? void 0 : I.position) != null ? I.position : N(p),
-            onExitComplete: A
+            onExitComplete: A,
         }),
         R = (e) =>
             C((i, o) => {
@@ -98,22 +108,24 @@ function O(e) {
                 let c = (0, r.jsx)(
                     l.V,
                     g(h({}, e), {
-                        className: a()(null != v ? _.popoverContentWithGradient : _.popover, { [_['popover--video']]: O }),
+                        className: a()(null != v ? _.popoverContentWithGradient : _.popover, {
+                            [_["popover--video"]]: O,
+                        }),
                         returnRef: n,
-                        children: t
-                    })
+                        children: t,
+                    }),
                 );
                 return (0, r.jsx)(s.animated.div, {
-                    'data-mana-component': 'popover',
+                    "data-mana-component": "popover",
                     style: i,
                     children:
                         null != v
                             ? (0, r.jsx)(u.$, {
                                   color: v,
                                   className: _.popoverGradientWrapper,
-                                  children: c
+                                  children: c,
                               })
-                            : c
+                            : c,
                 });
             });
     return (0, r.jsx)(c.H, {
@@ -130,6 +142,6 @@ function O(e) {
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         renderPopout: R,
-        children: y
+        children: y,
     });
 }

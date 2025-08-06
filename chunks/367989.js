@@ -4,8 +4,8 @@ function i(e) {
     return e === Object(e) && 0 !== Object.keys(e).length;
 }
 function o(e, t) {
-    void 0 === t && (t = 'auto');
-    var n = 'scrollBehavior' in document.body.style;
+    void 0 === t && (t = "auto");
+    var n = "scrollBehavior" in document.body.style;
     e.forEach(function (e) {
         var r = e.el,
             i = e.top,
@@ -14,7 +14,7 @@ function o(e, t) {
             ? r.scroll({
                   top: i,
                   left: o,
-                  behavior: t
+                  behavior: t,
               })
             : ((r.scrollTop = i), (r.scrollLeft = o));
     });
@@ -22,19 +22,19 @@ function o(e, t) {
 function a(e) {
     return !1 === e
         ? {
-              block: 'end',
-              inline: 'nearest'
+              block: "end",
+              inline: "nearest",
           }
         : i(e)
           ? e
           : {
-                block: 'start',
-                inline: 'nearest'
+                block: "start",
+                inline: "nearest",
             };
 }
 let s = function (e, t) {
     var n = e.isConnected || e.ownerDocument.documentElement.contains(e);
-    if (i(t) && 'function' == typeof t.behavior) return t.behavior(n ? (0, r.Z)(e, t) : []);
+    if (i(t) && "function" == typeof t.behavior) return t.behavior(n ? (0, r.Z)(e, t) : []);
     if (n) {
         var s = a(t);
         return o((0, r.Z)(e, s), s.behavior);

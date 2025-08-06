@@ -13,12 +13,12 @@ function u(e) {
         r = (0, a.e7)([c.Z], () => !l().isEmpty(c.Z.getThreadsForGuild(e.id)));
     return t && r
         ? (0, i.jsx)(o.sNh, {
-              id: 'active-threads',
+              id: "active-threads",
               label: d.intl.string(d.t.TM6erq),
               icon: o.kBi,
               action: () => {
                   (0, o.ZDy)(async () => {
-                      let { default: t } = await n.e('22482').then(n.bind(n, 157743));
+                      let { default: t } = await n.e("22482").then(n.bind(n, 157743));
                       return (n) =>
                           (0, i.jsx)(
                               t,
@@ -26,30 +26,30 @@ function u(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           i = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (i = i.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           i.forEach(function (t) {
                                               var i;
-                                              ((i = n[t]),
+                                              (i = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: i,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = i));
-                                          }));
+                                                      : (e[t] = i);
+                                          });
                                   }
                                   return e;
-                              })({ guildId: e.id }, n)
+                              })({ guildId: e.id }, n),
                           );
                   });
-              }
+              },
           })
         : null;
 }

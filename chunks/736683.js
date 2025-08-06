@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => u,
-    j: () => d
+    j: () => d,
 });
 var r = n(255367);
 n(73800);
@@ -17,9 +17,9 @@ function u(e) {
         ? (0, r.jsx)(i.$jN, { className: c.spinner })
         : 0 === n.length
           ? (0, r.jsx)(o.Z, { onClick: () => t(l.e5.ALL) })
-          : (0, r.jsx)('div', {
+          : (0, r.jsx)("div", {
                 className: c.gridContainer,
-                children: n.map((e) => (0, r.jsx)(a.Z, { quest: e }, e.id))
+                children: n.map((e) => (0, r.jsx)(a.Z, { quest: e }, e.id)),
             });
 }
 function d(e) {
@@ -31,6 +31,6 @@ function d(e) {
           ? (0, r.jsx)(o.Z, { onClick: () => t(l.e5.ALL) })
           : (0, r.jsx)(s.Z, {
                 quests: n,
-                isFetching: a
+                isFetching: a,
             });
 }

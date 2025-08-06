@@ -3,7 +3,7 @@ var r = n(73800),
 function o(e, t) {
     return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
 }
-var a = 'function' == typeof Object.is ? Object.is : o,
+var a = "function" == typeof Object.is ? Object.is : o,
     s = i.useSyncExternalStore,
     l = r.useRef,
     c = r.useEffect,
@@ -14,7 +14,7 @@ t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
     if (null === o.current) {
         var f = {
             hasValue: !1,
-            value: null
+            value: null,
         };
         o.current = f;
     } else f = o.current;
@@ -46,19 +46,19 @@ t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
                         ? void 0
                         : function () {
                               return e(c());
-                          }
+                          },
                 ];
             },
-            [t, n, r, i]
+            [t, n, r, i],
         ))[0],
-        o[1]
+        o[1],
     );
     return (
         c(
             function () {
-                ((f.hasValue = !0), (f.value = _));
+                (f.hasValue = !0), (f.value = _);
             },
-            [_]
+            [_],
         ),
         d(_),
         _

@@ -14,37 +14,37 @@ var i = n(512722),
 function p(e) {
     let { handleClose: t } = e,
         { skusById: n, selectedSkuId: i, application: p } = (0, l.JL)();
-    (o()(null != i, 'Expected selectedSkuId'), o()(null != p, 'Expected application'));
+    o()(null != i, "Expected selectedSkuId"), o()(null != p, "Expected application");
     let h = n[i];
-    o()(null != h, 'Expected sku');
+    o()(null != h, "Expected sku");
     let m = f.intl.formatToPlainString(f.t.wK0IbG, {
         applicationName: p.name,
-        itemName: h.name
+        itemName: h.name,
     });
     return (0, r.jsxs)(d.C3, {
         children: [
             (0, r.jsx)(u.Z, {}),
             (0, r.jsx)(c.Z, {}),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: _.confirmation,
                 children: [
                     (0, r.jsx)(s.X6q, {
-                        variant: 'heading-xxl/bold',
+                        variant: "heading-xxl/bold",
                         className: _.confirmationHeader,
-                        children: 'Success!'
+                        children: "Success!",
                     }),
                     (0, r.jsx)(s.Text, {
-                        variant: 'text-md/normal',
-                        children: m
+                        variant: "text-md/normal",
+                        children: m,
                     }),
-                    (0, r.jsx)('div', { className: _.divider }),
+                    (0, r.jsx)("div", { className: _.divider }),
                     (0, r.jsx)(a.z, {
                         onClick: t,
                         text: f.intl.string(f.t.cpT0Cg),
-                        fullWidth: !0
-                    })
-                ]
-            })
-        ]
+                        fullWidth: !0,
+                    }),
+                ],
+            }),
+        ],
     });
 }

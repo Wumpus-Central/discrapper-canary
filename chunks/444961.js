@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(846519),
     i = n(570140),
     l = n(287734),
@@ -15,10 +15,10 @@ let g = new r.V7(),
     m = new r.V7();
 class b extends a.Z {
     _initialize() {
-        i.Z.subscribe('IDLE', this.handleIdleUpdate);
+        i.Z.subscribe("IDLE", this.handleIdleUpdate);
     }
     _terminate() {
-        (g.stop(), m.stop(), i.Z.unsubscribe('IDLE', this.handleIdleUpdate));
+        g.stop(), m.stop(), i.Z.unsubscribe("IDLE", this.handleIdleUpdate);
     }
     handleIdleUpdate() {
         let e = u.Z.getIdleSince();
@@ -36,7 +36,9 @@ class b extends a.Z {
         null != r &&
             (r.isGuildStageVoice() ||
                 g.start(e + n.afkTimeout * p.Z.Millis.SECOND - Date.now(), () => {
-                    null != (n = c.Z.getGuild(d.Z.getGuildId())) && null != n.afkChannelId && l.default.selectVoiceChannel(n.afkChannelId);
+                    null != (n = c.Z.getGuild(d.Z.getGuildId())) &&
+                        null != n.afkChannelId &&
+                        l.default.selectVoiceChannel(n.afkChannelId);
                 }));
     }
 }

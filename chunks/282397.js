@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { ZP: () => G }), n(388685));
+n.d(t, { ZP: () => G }), n(388685);
 var o,
     a = n(442837),
     s = n(570140),
@@ -16,7 +16,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,26 +68,26 @@ let E = 5 * f.Z.Millis.MINUTE,
     v = {},
     I = {};
 function T() {
-    ((y = {}),
+    (y = {}),
         (O = {}),
         (v = {}),
         (I = {}),
         setInterval(() => {
             let e = Date.now();
             for (let [t, n] of Object.entries(I)) e - n.insertedAt > b && delete I[t];
-        }, E));
+        }, E);
 }
 function S(e) {
     let { nonce: t, messageId: n, data: r, onCreate: i, onCancel: o, onSuccess: a, onFailure: s } = e;
-    (null != n && ((O[n] = t), (v[t] = n)),
+    null != n && ((O[n] = t), (v[t] = n)),
         (y[t] = {
             state: _.F.QUEUED,
             data: r,
             onCreate: i,
             onCancel: o,
             onSuccess: a,
-            onFailure: s
-        }));
+            onFailure: s,
+        });
 }
 function A(e) {
     var t;
@@ -95,7 +95,7 @@ function A(e) {
     if (null == n) return !1;
     let i = y[n];
     if (null == i || i.state !== _.F.QUEUED) return !1;
-    ((i.state = _.F.CREATED), null == (t = i.onCreate) || t.call(i, r));
+    (i.state = _.F.CREATED), null == (t = i.onCreate) || t.call(i, r);
 }
 function N(e) {
     let { nonce: t } = e;
@@ -108,7 +108,7 @@ function C(e) {
         var n;
         let e = y[t.nonce];
         if (null == e) return !1;
-        (null == (n = e.onSuccess) || n.call(e), j(t.nonce));
+        null == (n = e.onSuccess) || n.call(e), j(t.nonce);
     }
 }
 function R(e) {
@@ -117,14 +117,14 @@ function R(e) {
     if (null == n) return !1;
     let s = y[n];
     if (null == s) return !1;
-    (null == (t = s.onFailure) || t.call(s, r, i, o, a),
+    null == (t = s.onFailure) || t.call(s, r, i, o, a),
         s.data.interactionType === c.B8.APPLICATION_COMMAND
             ? j(n)
             : (y[n] = g(h({}, s), {
                   state: _.F.FAILED,
                   errorCode: r,
-                  errorMessage: i
-              })));
+                  errorMessage: i,
+              }));
 }
 function P(e) {
     let { channelId: t } = e;
@@ -137,10 +137,10 @@ function w(e) {
 }
 function D(e) {
     let { application: t, nonce: n } = e;
-    ((i = t.id), k(n));
+    (i = t.id), k(n);
 }
 function L() {
-    ((r = void 0), (i = void 0));
+    (r = void 0), (i = void 0);
 }
 function x(e) {
     let { modalKey: t } = e;
@@ -155,28 +155,31 @@ function M(e) {
         a = r.find((e) => e.user_id === o && e.session_id === i);
     if (null == a || null == a.nonce) return;
     let s = I[a.nonce];
-    (null == s ? ((t = v[a.nonce]), (n = y[a.nonce])) : ((t = s.messageId), (n = s.interaction)), null != n && null != t && (j(a.nonce), null != t && 'channelId' in n.data && l.Z.deleteMessage(n.data.channelId, t, !0)));
+    null == s ? ((t = v[a.nonce]), (n = y[a.nonce])) : ((t = s.messageId), (n = s.interaction)),
+        null != n &&
+            null != t &&
+            (j(a.nonce), null != t && "channelId" in n.data && l.Z.deleteMessage(n.data.channelId, t, !0));
 }
 function k(e) {
     var t;
     if (null == e) return !1;
     let n = y[e];
     if (null == n) return !1;
-    (null == (t = n.onSuccess) || t.call(n), j(e));
+    null == (t = n.onSuccess) || t.call(n), j(e);
 }
 function j(e) {
     if (null != I[e]) return void delete I[e];
     let t = y[e];
     delete y[e];
     let n = v[e];
-    (null != n && delete O[n],
+    null != n && delete O[n],
         delete v[e],
         (I[e] = {
             insertedAt: Date.now(),
             nonce: e,
             messageId: n,
-            interaction: t
-        }));
+            interaction: t,
+        });
 }
 class U extends (o = a.ZP.Store) {
     getInteraction(e) {
@@ -202,7 +205,7 @@ class U extends (o = a.ZP.Store) {
         return r;
     }
 }
-p(U, 'displayName', 'InteractionStore');
+p(U, "displayName", "InteractionStore");
 let G = new U(s.Z, {
     LOGOUT: T,
     INTERACTION_QUEUE: S,
@@ -215,5 +218,5 @@ let G = new U(s.Z, {
     INTERACTION_IFRAME_MODAL_CLOSE: L,
     INTERACTION_IFRAME_MODAL_KEY_CREATE: x,
     INTERACTION_MODAL_CREATE: w,
-    EMBEDDED_ACTIVITY_UPDATE_V2: M
+    EMBEDDED_ACTIVITY_UPDATE_V2: M,
 });

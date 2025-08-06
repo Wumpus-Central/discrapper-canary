@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,5 +26,5 @@ class u extends (r = i.ZP.Store) {
         return l;
     }
 }
-s(u, 'displayName', 'InstanceIdStore');
+s(u, "displayName", "InstanceIdStore");
 let d = new u(o.Z, { RPC_SERVER_READY: c });

@@ -24,57 +24,57 @@ function g(e) {
             return (0, r.jsx)(o.Z, {
                 guild: h,
                 guildId: h.id,
-                headerContent: (0, r.jsxs)('div', {
+                headerContent: (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(a.X6q, {
-                            variant: 'text-md/semibold',
-                            color: 'header-primary',
+                            variant: "text-md/semibold",
+                            color: "header-primary",
                             className: m.header,
                             children: u.intl.format(u.t.n1LDQE, {
                                 removedHook: (e, t) =>
                                     (0, r.jsx)(
-                                        'strong',
+                                        "strong",
                                         {
                                             className: m.danger,
-                                            children: e
+                                            children: e,
                                         },
-                                        t
-                                    )
-                            })
+                                        t,
+                                    ),
+                            }),
                         }),
                         (0, r.jsx)(a.Text, {
-                            variant: 'text-sm/medium',
-                            color: 'text-secondary',
-                            children: u.intl.string(u.t.Qgaw3d)
-                        })
-                    ]
-                })
+                            variant: "text-sm/medium",
+                            color: "text-secondary",
+                            children: u.intl.string(u.t.Qgaw3d),
+                        }),
+                    ],
+                }),
             });
         case d.U.ELIGIBLE_DISABLED:
         case d.U.ELIGIBLE_ENABLED:
             return (0, r.jsx)(c.d, {
                 requireTerms: g,
                 rules: p,
-                settingsView: n
+                settingsView: n,
             });
         case d.U.INELIGIBLE:
             return (0, r.jsx)(o.Z, {
                 guild: h,
                 guildId: h.id,
                 headerContent: (0, r.jsx)(a.X6q, {
-                    variant: 'heading-md/semibold',
-                    children: u.intl.format(u.t['+6Hylp'], {
+                    variant: "heading-md/semibold",
+                    children: u.intl.format(u.t["+6Hylp"], {
                         doesNotHook: (e, t) =>
                             (0, r.jsx)(
-                                'strong',
+                                "strong",
                                 {
                                     className: m.danger,
-                                    children: e
+                                    children: e,
                                 },
-                                t
-                            )
-                    })
-                })
+                                t,
+                            ),
+                    }),
+                }),
             });
         default:
             return (0, r.jsx)(a.$jN, {});

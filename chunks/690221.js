@@ -8,24 +8,24 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -59,41 +59,49 @@ let u = i.forwardRef(function (e, t) {
                         r,
                         i = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['href', 'children', 'onClick', 'onKeyPress', 'focusProps']);
+        })(e, ["href", "children", "onClick", "onKeyPress", "focusProps"]);
     let g = i.useCallback(
             (e) => {
-                e.repeat || ((e.charCode === s.yXg.SPACE || e.charCode === s.yXg.ENTER) && (e.preventDefault(), null != n && (0, o.uL)(n), null == d || d()), null == h || h(e));
+                e.repeat ||
+                    ((e.charCode === s.yXg.SPACE || e.charCode === s.yXg.ENTER) &&
+                        (e.preventDefault(), null != n && (0, o.uL)(n), null == d || d()),
+                    null == h || h(e));
             },
-            [n, h, d]
+            [n, h, d],
         ),
         m = i.useCallback(
             (e) => {
-                e.metaKey || e.shiftKey || 0 !== e.button || (e.preventDefault(), e.stopPropagation(), null != n && (0, o.uL)(n), null == d || d());
+                e.metaKey ||
+                    e.shiftKey ||
+                    0 !== e.button ||
+                    (e.preventDefault(), e.stopPropagation(), null != n && (0, o.uL)(n), null == d || d());
             },
-            [n, d]
+            [n, d],
         ),
         b = (0, r.jsx)(
-            'a',
+            "a",
             c(
                 a(
                     {
                         ref: t,
                         href: n,
                         onClick: m,
-                        onKeyPress: g
+                        onKeyPress: g,
                     },
-                    f
+                    f,
                 ),
-                { children: u }
-            )
+                { children: u },
+            ),
         );
     return (0, r.jsx)(l.tEY, c(a({}, p), { children: b }));
 });

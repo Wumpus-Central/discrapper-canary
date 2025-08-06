@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -18,7 +18,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,9 +46,9 @@ function m(e) {
             guildId: t,
             analyticsLocations: n,
             analyticsLocation: i,
-            openWithoutBackstack: !0
+            openWithoutBackstack: !0,
         }),
-        l = s ? _.intl.string(_.t['6ndMcn']) : _.intl.string(_.t['0eiu6O']),
+        l = s ? _.intl.string(_.t["6ndMcn"]) : _.intl.string(_.t["0eiu6O"]),
         c = s ? _.intl.string(_.t.S09nw8) : _.intl.string(_.t.tEttXV);
     return (0, r.jsxs)(o.qXd, {
         color: o.DM8.DANGER,
@@ -56,9 +56,9 @@ function m(e) {
             l,
             (0, r.jsx)(o.EyT, {
                 onClick: a,
-                children: c
-            })
-        ]
+                children: c,
+            }),
+        ],
     });
 }
 function g() {
@@ -69,20 +69,20 @@ function g() {
             _.intl.string(_.t.ZqlecX),
             (0, r.jsx)(o.EyT, {
                 onClick: e,
-                children: _.intl.string(_.t.SJehVV)
-            })
-        ]
+                children: _.intl.string(_.t.SJehVV),
+            }),
+        ],
     });
 }
 function E(e) {
-    let t = (0, i.e7)(
-        [s.default, l.ZP],
-        () => {
-            if (null == e.guildId) return new Set();
-            let t = s.default.getId();
-            return (0, c.no)(l.ZP.getMember(e.guildId, t));
-        },
-        [e.guildId]
-    );
-    return t.has(d.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || t.has(d.q.AUTOMOD_QUARANTINED_BIO) ? (0, r.jsx)(m, h({}, e)) : t.has(d.q.AUTOMOD_QUARANTINED_SERVER_TAG) ? (0, r.jsx)(g, {}) : (0, r.jsx)(m, h({}, e));
+    let t = (0, i.e7)([s.default, l.ZP], () => {
+        if (null == e.guildId) return new Set();
+        let t = s.default.getId();
+        return (0, c.no)(l.ZP.getMember(e.guildId, t));
+    }, [e.guildId]);
+    return t.has(d.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || t.has(d.q.AUTOMOD_QUARANTINED_BIO)
+        ? (0, r.jsx)(m, h({}, e))
+        : t.has(d.q.AUTOMOD_QUARANTINED_SERVER_TAG)
+          ? (0, r.jsx)(g, {})
+          : (0, r.jsx)(m, h({}, e));
 }

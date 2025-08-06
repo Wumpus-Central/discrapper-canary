@@ -1,11 +1,11 @@
-(a.r(t), a.d(t, { default: () => l }));
+a.r(t), a.d(t, { default: () => l });
 var i = a(112147),
     n = a(334778),
     r = a(209576),
     s = a(691921),
     d = a(571972);
 let l = {
-    code: 'hu',
+    code: "hu",
     formatDistance: i.Z,
     formatLong: n.Z,
     formatRelative: r.Z,
@@ -13,6 +13,6 @@ let l = {
     match: d.Z,
     options: {
         weekStartsOn: 1,
-        firstWeekContainsDate: 4
-    }
+        firstWeekContainsDate: 4,
+    },
 };

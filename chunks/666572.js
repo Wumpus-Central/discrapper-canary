@@ -1,17 +1,17 @@
-(n.d(t, {
+n.d(t, {
     _: () => o,
-    e: () => r
+    e: () => r,
 }),
     n(388685),
-    n(35282));
+    n(35282);
 var r = (function (e) {
-    return ((e[(e.MANAGED = 0)] = 'MANAGED'), (e[(e.QUICK = 1)] = 'QUICK'), e);
+    return (e[(e.MANAGED = 0)] = "MANAGED"), (e[(e.QUICK = 1)] = "QUICK"), e;
 })({});
 function i(e) {
     switch (e) {
-        case '0':
+        case "0":
             return 0;
-        case '1':
+        case "1":
             return 1;
         default:
             return null;
@@ -19,13 +19,13 @@ function i(e) {
 }
 function o(e) {
     if (null == e) return null;
-    let [t, n] = e.split('-'),
+    let [t, n] = e.split("-"),
         r = i(t);
     return null == r
         ? null
         : {
               type: r,
               encodedLinkId: e,
-              decodedLinkId: n
+              decodedLinkId: n,
           };
 }

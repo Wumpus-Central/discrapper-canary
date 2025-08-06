@@ -12,17 +12,17 @@ function l(e) {
         l = new a.S(o, new s.V(o)),
         u = new r.f(o, l),
         d = e(u, t, n);
-    return (u.receiveBackend(d), u);
+    return u.receiveBackend(d), u;
 }
 function c(e) {
-    var t = 'undefined' != typeof window && window.__REDUX_DEVTOOLS_EXTENSION__;
+    var t = "undefined" != typeof window && window.__REDUX_DEVTOOLS_EXTENSION__;
     return (0, i.MT)(
         o.u,
         e &&
             t &&
             t({
-                name: 'dnd-core',
-                instanceId: 'dnd-core'
-            })
+                name: "dnd-core",
+                instanceId: "dnd-core",
+            }),
     );
 }

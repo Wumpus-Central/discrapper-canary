@@ -1,11 +1,11 @@
-(t(864733)(r, '__esModule', { value: !0 }),
+t(864733)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !0,
         accessibleNameRequired: !1,
         baseConcepts: [],
         childrenPresentational: !1,
-        nameFrom: ['author'],
+        nameFrom: ["author"],
         prohibitedProps: [],
         props: {},
         relatedConcepts: [],
@@ -13,5 +13,5 @@
         requiredContextRole: [],
         requiredOwnedElements: [],
         requiredProps: {},
-        superClass: [['roletype', 'structure', 'section']]
-    }));
+        superClass: [["roletype", "structure", "section"]],
+    });

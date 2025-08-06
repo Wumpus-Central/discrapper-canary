@@ -15,19 +15,32 @@ var r = n(255367),
     m = n(490897),
     b = n(915887);
 let O = (0, c.B)(function (e) {
-    let { guild: t, selectedChannelId: l, position: c, disableManageChannels: O, sorting: _, sortingType: y, sortingPosition: C, connectChannelDragSource: v, connectChannelDropTarget: j, tabIndex: E } = e,
+    let {
+            guild: t,
+            selectedChannelId: l,
+            position: c,
+            disableManageChannels: O,
+            sorting: _,
+            sortingType: y,
+            sortingPosition: C,
+            connectChannelDragSource: v,
+            connectChannelDropTarget: j,
+            tabIndex: E,
+        } = e,
         S = (0, s.e7)([u.Z, d.ZP], () => {
             let e = d.ZP.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : u.Z.getChannel(e[0]);
         }),
         x = (0, s.e7)([u.Z], () => u.Z.getChannel(null == S ? void 0 : S.parent_id)),
         I = l === (null == S ? void 0 : S.id),
-        P = (0, s.e7)([h.Z], () => (null != x ? h.Z.can(g.Plq.MANAGE_CHANNELS, x) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
+        P = (0, s.e7)([h.Z], () =>
+            null != x ? h.Z.can(g.Plq.MANAGE_CHANNELS, x) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t),
+        ),
         N = i.useCallback(
             (e) => {
                 null != S &&
                     (0, a.jW)(e, async () => {
-                        let { default: e } = await n.e('70623').then(n.bind(n, 99334));
+                        let { default: e } = await n.e("70623").then(n.bind(n, 99334));
                         return (t) => {
                             var n, i;
                             return (0, r.jsx)(
@@ -36,24 +49,24 @@ let O = (0, c.B)(function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                ((r = n[t]),
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = r));
-                                            }));
+                                                        : (e[t] = r);
+                                            });
                                     }
                                     return e;
                                 })({}, t)),
@@ -70,22 +83,22 @@ let O = (0, c.B)(function (e) {
                                       })(Object(i)).forEach(function (e) {
                                           Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                       }),
-                                n)
+                                n),
                             );
                         };
                     });
             },
-            [S]
+            [S],
         );
     if (null == S) return null;
     let w = (0, p.jo)(c, C),
         Z = (0, p.CN)(S, _, y),
-        T = (0, r.jsx)('div', {
+        T = (0, r.jsx)("div", {
             className: o()(w, {
                 [b.disabled]: Z,
-                [b.selected]: I
+                [b.selected]: I,
             }),
-            'data-dnd-name': S.name,
+            "data-dnd-name": S.name,
             children: (0, r.jsxs)(f.ZP, {
                 className: b.iconVisibility,
                 channel: S,
@@ -97,15 +110,15 @@ let O = (0, c.B)(function (e) {
                 children: [
                     (0, r.jsx)(p.eP, {
                         channel: S,
-                        tabIndex: E
+                        tabIndex: E,
                     }),
                     (0, r.jsx)(p.hR, {
                         channel: S,
                         disableManageChannels: O,
-                        tabIndex: E
-                    })
-                ]
-            })
+                        tabIndex: E,
+                    }),
+                ],
+            }),
         });
-    return (P && (T = j(v(T))), T);
+    return P && (T = j(v(T))), T;
 });

@@ -5,7 +5,7 @@ var r = n(7510),
     i = n(617147);
 function s() {
     return (s =
-        'undefined' != typeof Reflect && r
+        "undefined" != typeof Reflect && r
             ? o(r).call(r)
             : function (e, t, n) {
                   var r = (0, i.Z)(e, t);

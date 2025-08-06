@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     c1: () => l,
-    zb: () => s
+    zb: () => s,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367);
 function i(e, t) {
     if (null == e) return {};
@@ -11,7 +11,8 @@ function i(e, t) {
         i = o(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -21,16 +22,16 @@ function o(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 n(73800);
 let [a, s] = (0, n(975104).Z)();
 function l(e) {
     var { children: t } = e,
-        n = i(e, ['children']);
+        n = i(e, ["children"]);
     return (0, r.jsx)(a.Provider, {
         value: n,
-        children: t
+        children: t,
     });
 }

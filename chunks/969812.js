@@ -10,14 +10,22 @@ let s = {
                 url: o.ANM.GUILD_MEMBER_NICK(e, n),
                 body: { nick: s },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             })
             .then(
                 (e) => {
-                    ((s = e.body.nick), i.Z.sendBotMessage(t, null != s && '' !== s ? a.intl.formatToMarkdownString(a.t['gz+HRk'], { nick: s }) : a.intl.string(a.t.Vhpd9P)));
+                    (s = e.body.nick),
+                        i.Z.sendBotMessage(
+                            t,
+                            null != s && "" !== s
+                                ? a.intl.formatToMarkdownString(a.t["gz+HRk"], { nick: s })
+                                : a.intl.string(a.t.Vhpd9P),
+                        );
                 },
                 (e) => {
-                    403 === e.status ? i.Z.sendBotMessage(t, a.intl.formatToMarkdownString(a.t.Izf9jI, {})) : i.Z.sendBotMessage(t, a.intl.string(a.t['5LO/Sk']));
-                }
-            )
+                    403 === e.status
+                        ? i.Z.sendBotMessage(t, a.intl.formatToMarkdownString(a.t.Izf9jI, {}))
+                        : i.Z.sendBotMessage(t, a.intl.string(a.t["5LO/Sk"]));
+                },
+            ),
 };

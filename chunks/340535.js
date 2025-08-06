@@ -9,8 +9,8 @@ e.exports = function () {
             {
                 map: function () {
                     return Array.prototype.map !== e;
-                }
-            }
+                },
+            },
         ),
         e
     );

@@ -14,16 +14,21 @@ function i(e, t) {
     else {
         var n,
             s = (function (e, t) {
-                var r = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
+                var r = ("undefined" != typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
                 if (!r) {
                     if (
                         Array.isArray(e) ||
                         (r = (function (e, t) {
                             if (e) {
-                                if ('string' == typeof e) return o(e, void 0);
+                                if ("string" == typeof e) return o(e, void 0);
                                 var r = Object.prototype.toString.call(e).slice(8, -1);
-                                if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
-                                if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return o(e, t);
+                                if (
+                                    ("Object" === r && e.constructor && (r = e.constructor.name),
+                                    "Map" === r || "Set" === r)
+                                )
+                                    return Array.from(e);
+                                if ("Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r))
+                                    return o(e, t);
                             }
                         })(e))
                     ) {
@@ -37,16 +42,18 @@ function i(e, t) {
                                     ? { done: !0 }
                                     : {
                                           done: !1,
-                                          value: e[a++]
+                                          value: e[a++],
                                       };
                             },
                             e: function (e) {
                                 throw e;
                             },
-                            f: n
+                            f: n,
                         };
                     }
-                    throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
+                    throw TypeError(
+                        "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+                    );
                 }
                 var s,
                     i = !0,
@@ -57,10 +64,10 @@ function i(e, t) {
                     },
                     n: function () {
                         var e = r.next();
-                        return ((i = e.done), e);
+                        return (i = e.done), e;
                     },
                     e: function (e) {
-                        ((c = !0), (s = e));
+                        (c = !0), (s = e);
                     },
                     f: function () {
                         try {
@@ -68,7 +75,7 @@ function i(e, t) {
                         } finally {
                             if (c) throw s;
                         }
-                    }
+                    },
                 };
             })(e);
         try {
@@ -85,19 +92,19 @@ function i(e, t) {
             s.f();
         }
     }
-    return ''
-        .concat(a ? '>' : '')
-        .concat(r, ' ')
-        .concat(1 !== r ? 'entries' : 'entry');
+    return ""
+        .concat(a ? ">" : "")
+        .concat(r, " ")
+        .concat(1 !== r ? "entries" : "entry");
 }
 let c = function (e) {
     var t = (0, a.Z)({}, e);
     return n.createElement(
         s.Z,
         (0, a.Z)({}, t, {
-            nodeType: 'Iterable',
-            nodeTypeIndicator: '()',
-            createItemString: i
-        })
+            nodeType: "Iterable",
+            nodeTypeIndicator: "()",
+            createItemString: i,
+        }),
     );
 };

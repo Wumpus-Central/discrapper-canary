@@ -13,8 +13,8 @@ function _(e) {
     (0, f.Z)(1, arguments);
     var t = (0, d.default)(e.start),
         n = (0, d.default)(e.end);
-    if (isNaN(t.getTime())) throw RangeError('Start Date is invalid');
-    if (isNaN(n.getTime())) throw RangeError('End Date is invalid');
+    if (isNaN(t.getTime())) throw RangeError("Start Date is invalid");
+    if (isNaN(n.getTime())) throw RangeError("End Date is invalid");
     var _ = {};
     _.years = Math.abs((0, u.Z)(n, t));
     var p = (0, r.Z)(n, t),
@@ -27,5 +27,5 @@ function _(e) {
     var E = (0, i.Z)(g, { hours: p * _.hours });
     _.minutes = Math.abs((0, s.Z)(n, E));
     var b = (0, i.Z)(E, { minutes: p * _.minutes });
-    return ((_.seconds = Math.abs((0, c.Z)(n, b))), _);
+    return (_.seconds = Math.abs((0, c.Z)(n, b))), _;
 }

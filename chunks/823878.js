@@ -18,13 +18,17 @@ let n = {
     },
     [r.uG]: class {
         constructor(t) {
-            ((this._last = t), (this._min = t), (this._max = t), (this._sum = t), (this._count = 1));
+            (this._last = t), (this._min = t), (this._max = t), (this._sum = t), (this._count = 1);
         }
         get weight() {
             return 5;
         }
         add(t) {
-            ((this._last = t), t < this._min && (this._min = t), t > this._max && (this._max = t), (this._sum += t), this._count++);
+            (this._last = t),
+                t < this._min && (this._min = t),
+                t > this._max && (this._max = t),
+                (this._sum += t),
+                this._count++;
         }
         toString() {
             return `${this._last}:${this._min}:${this._max}:${this._sum}:${this._count}`;
@@ -41,12 +45,12 @@ let n = {
             this._value.push(t);
         }
         toString() {
-            return this._value.join(':');
+            return this._value.join(":");
         }
     },
     [r.is]: class {
         constructor(t) {
-            ((this.first = t), (this._value = new Set([t])));
+            (this.first = t), (this._value = new Set([t]));
         }
         get weight() {
             return this._value.size;
@@ -56,8 +60,8 @@ let n = {
         }
         toString() {
             return Array.from(this._value)
-                .map((t) => ('string' == typeof t ? (0, _.M)(t) : t))
-                .join(':');
+                .map((t) => ("string" == typeof t ? (0, _.M)(t) : t))
+                .join(":");
         }
-    }
+    },
 };

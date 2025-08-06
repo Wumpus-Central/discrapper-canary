@@ -15,7 +15,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,14 +61,22 @@ function p(e, t) {
     );
 }
 let h = (e) => {
-    let { invertColor: t = !1, type: n = l.Hb.BOT, className: i, verified: d, hideIcon: _ = !1, useRemSizes: h = !1, children: m = [] } = e,
+    let {
+            invertColor: t = !1,
+            type: n = l.Hb.BOT,
+            className: i,
+            verified: d,
+            hideIcon: _ = !1,
+            useRemSizes: h = !1,
+            children: m = [],
+        } = e,
         g = null,
         E = c.intl.string(c.t.g76OcH),
         b = t ? u.botTagInvert : u.botTagRegular;
     switch (n) {
         case l.Hb.SYSTEM_DM:
         case l.Hb.OFFICIAL:
-            ((d = !0), (E = c.intl.string(c.t['7s687u'])), (g = c.intl.string(c.t.lKQ7Wl)));
+            (d = !0), (E = c.intl.string(c.t["7s687u"])), (g = c.intl.string(c.t.lKQ7Wl));
             break;
         case l.Hb.SERVER:
             g = c.intl.string(c.t.PuJGuL);
@@ -80,14 +88,14 @@ let h = (e) => {
             g = c.intl.string(c.t.oMx98P);
             break;
         case l.Hb.NOT_STAFF_WARNING:
-            ((g = c.intl.string(c.t.UWhXbG)), (b = u.botTagNotStaffWarning));
+            (g = c.intl.string(c.t.UWhXbG)), (b = u.botTagNotStaffWarning);
             break;
         case l.Hb.REMIX:
-            ((d = !1), (g = c.intl.string(c.t.uXDG39)));
+            (d = !1), (g = c.intl.string(c.t.uXDG39));
             break;
         case l.Hb.BOT:
         default:
-            g = c.intl.string(c.t['9RNkeH']);
+            g = c.intl.string(c.t["9RNkeH"]);
     }
     let y = n === l.Hb.ORIGINAL_POSTER,
         O = n === l.Hb.REMIX,
@@ -95,47 +103,47 @@ let h = (e) => {
     d &&
         (v = (0, r.jsx)(a.u, {
             text: E,
-            align: 'center',
-            position: 'top',
+            align: "center",
+            position: "top",
             children: (e) =>
                 (0, r.jsx)(
                     s.kSu,
                     p(f({}, e), {
                         className: u.botTagVerified,
-                        color: s.TVs.colors.WHITE
-                    })
-                )
+                        color: s.TVs.colors.WHITE,
+                    }),
+                ),
         }));
     let I = (e) =>
         (0, r.jsxs)(
-            'span',
+            "span",
             p(f({}, e), {
                 className: o()(i, b, h ? u.rem : u.px, {
                     [u.botTagOP]: y,
-                    [u.botTagRemix]: O
+                    [u.botTagRemix]: O,
                 }),
                 children: [
                     _ ? null : v,
                     m,
-                    (0, r.jsx)('span', {
+                    (0, r.jsx)("span", {
                         className: u.botText,
-                        children: g
-                    })
-                ]
-            })
+                        children: g,
+                    }),
+                ],
+            }),
         );
     switch (n) {
         case l.Hb.REMIX:
             return (0, r.jsx)(a.u, {
                 text: c.intl.string(c.t.xb0str),
-                position: 'top',
-                children: (e) => I(e)
+                position: "top",
+                children: (e) => I(e),
             });
         case l.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(a.u, {
                 text: c.intl.string(c.t.uN6Emp),
-                position: 'top',
-                children: (e) => I(e)
+                position: "top",
+                children: (e) => I(e),
             });
         default:
             return I();

@@ -12,7 +12,7 @@ let d = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: d, partnerBranding: p, useReducedMotion: m } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', { className: u.rewardTileSpacer }),
+            (0, r.jsx)("div", { className: u.rewardTileSpacer }),
             (0, r.jsx)(s.animated.div, {
                 className: u.rewardTileContainer,
                 style: {
@@ -20,28 +20,28 @@ let d = (e) => {
                         [
                             n.to({
                                 range: [0, 1],
-                                output: [-8, 0]
+                                output: [-8, 0],
                             }),
                             n.to({
                                 range: [0, 1],
-                                output: [0, 92]
+                                output: [0, 92],
                             }),
                             n.to({
                                 range: [1, 0],
-                                output: [1, 0.75]
-                            })
+                                output: [1, 0.75],
+                            }),
                         ],
-                        (e, t, n) => 'translate('.concat(e, 'px, ').concat(t, 'px) scale(').concat(n, ')')
-                    )
+                        (e, t, n) => "translate(".concat(e, "px, ").concat(t, "px) scale(").concat(n, ")"),
+                    ),
                 },
                 children: (0, r.jsx)(i.Z, {
-                    learnMoreStyle: 'text',
+                    learnMoreStyle: "text",
                     quest: t,
                     questContent: a.jn.QUEST_BAR_V2,
                     location: l.dr.QUESTS_BAR,
                     autoplay: d && !m,
-                    sourceQuestContent: a.jn.QUEST_BAR_V2
-                })
+                    sourceQuestContent: a.jn.QUEST_BAR_V2,
+                }),
             }),
             (0, r.jsxs)(s.animated.div, {
                 className: u.rewardHighlightLogoCTA,
@@ -50,37 +50,37 @@ let d = (e) => {
                         [
                             n.to({
                                 range: [0, 1],
-                                output: [0, -48]
+                                output: [0, -48],
                             }),
                             n.to({
                                 range: [0, 1],
-                                output: [0, 8]
-                            })
+                                output: [0, 8],
+                            }),
                         ],
-                        (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')
-                    )
+                        (e, t) => "translate(".concat(e, "px, ").concat(t, "px)"),
+                    ),
                 },
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: u.partnerBranding,
-                        children: p
+                        children: p,
                     }),
                     (0, r.jsx)(s.animated.div, {
                         className: u.rewardHighlightCTA,
                         style: {
                             opacity: n.to({
                                 range: [0, 1],
-                                output: [0.7, 0]
-                            })
+                                output: [0.7, 0],
+                            }),
                         },
                         children: (0, r.jsx)(o.Text, {
-                            color: 'always-white',
-                            variant: 'text-xs/medium',
-                            children: c.intl.string(c.t['1Wvve3'])
-                        })
-                    })
-                ]
-            })
-        ]
+                            color: "always-white",
+                            variant: "text-xs/medium",
+                            children: c.intl.string(c.t["1Wvve3"]),
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 };

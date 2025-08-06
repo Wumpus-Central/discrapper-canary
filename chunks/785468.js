@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => U }), n(388685));
+n.d(t, { Z: () => U }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(913527),
@@ -27,24 +27,24 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -57,9 +57,9 @@ let T = (e) => e === E.WX.EXTERNAL,
             a = i ? c.gj8 : c.gjC,
             s = i ? c.ewx : c.pki;
         return (0, r.jsx)(l ? s : a, {
-            color: 'currentColor',
-            size: 'md',
-            className: I.channelOptionIcon
+            color: "currentColor",
+            size: "md",
+            className: I.channelOptionIcon,
         });
     },
     w = (e) => {
@@ -68,7 +68,7 @@ let T = (e) => e === E.WX.EXTERNAL,
             d = (0, b.Q)(l, s),
             m = (0, f.sR)(t, n);
         return (0, r.jsxs)(c.xJW, {
-            title: o ? C.intl.string(C.t.S7GjDw) : C.intl.string(C.t['7RYWCA']),
+            title: o ? C.intl.string(C.t.S7GjDw) : C.intl.string(C.t["7RYWCA"]),
             className: I.options,
             disabled: a,
             required: !0,
@@ -77,44 +77,44 @@ let T = (e) => e === E.WX.EXTERNAL,
                     value: null == l ? void 0 : l.id,
                     options: m.map((e) => ({
                         value: e.id,
-                        label: (0, u.F6)(e, h.default, g.Z, !0)
+                        label: (0, u.F6)(e, h.default, g.Z, !0),
                     })),
                     onChange: (e) => {
                         let t = m.find((t) => t.id === e);
                         i(null != t ? t : void 0);
                     },
                     renderOptionPrefix: (e) => P(null == e ? void 0 : e.value, s),
-                    isDisabled: a
+                    isDisabled: a,
                 }),
                 !d &&
                     (0, r.jsx)(c.Text, {
-                        color: 'header-secondary',
+                        color: "header-secondary",
                         className: I.channelPrivate,
-                        variant: 'text-sm/normal',
-                        children: C.intl.string(C.t.F3bDaW)
-                    })
-            ]
+                        variant: "text-sm/normal",
+                        children: C.intl.string(C.t.F3bDaW),
+                    }),
+            ],
         });
     };
 function Z(e, t, n, r) {
     return t
         ? {
               disabled: !0,
-              tooltipText: C.intl.string(C.t.yutP5e)
+              tooltipText: C.intl.string(C.t.yutP5e),
           }
         : n
           ? 0 === r && e !== E.WX.EXTERNAL
               ? {
                     disabled: !0,
-                    tooltipText: C.intl.string(C.t['DkY+cH'])
+                    tooltipText: C.intl.string(C.t["DkY+cH"]),
                 }
               : {
                     disabled: !1,
-                    tooltipText: null
+                    tooltipText: null,
                 }
           : {
                 disabled: !0,
-                tooltipText: C.intl.string(C.t.HeF1kZ)
+                tooltipText: C.intl.string(C.t.HeF1kZ),
             };
 }
 let D = (e) => (t) => {
@@ -128,11 +128,11 @@ let D = (e) => (t) => {
         let { value: r } = n,
             l = {
                 entityType: r,
-                scheduledEndTime: void 0
+                scheduledEndTime: void 0,
             };
         if (T(r)) {
             var i;
-            l.scheduledEndTime = (null != (i = a()(t.scheduledStartTime)) ? i : a()()).add(2, 'hour').toISOString();
+            l.scheduledEndTime = (null != (i = a()(t.scheduledStartTime)) ? i : a()()).add(2, "hour").toISOString();
         }
         e(l);
     };
@@ -164,9 +164,9 @@ function k(e) {
                     onChange: h,
                     placeholder: C.intl.string(C.t.mkCMiY),
                     maxLength: E.gG,
-                    value: null != f ? f : '',
-                    inputRef: g
-                })
+                    value: null != f ? f : "",
+                    inputRef: g,
+                }),
             })
           : null == j
             ? null
@@ -176,7 +176,7 @@ function k(e) {
                   onSelectChannel: p,
                   channel: x,
                   entityType: u,
-                  disabled: b
+                  disabled: b,
               });
 }
 function A(e) {
@@ -196,20 +196,20 @@ function A(e) {
                     {
                         name: C.intl.string(C.t.BVZqJi),
                         value: E.WX.VOICE,
-                        desc: C.intl.string(C.t['EV//4e']),
-                        icon: c.gj8
+                        desc: C.intl.string(C.t["EV//4e"]),
+                        icon: c.gj8,
                     },
-                    Z(E.WX.VOICE, b, u, x.length)
+                    Z(E.WX.VOICE, b, u, x.length),
                 ),
                 S(
                     {
                         name: C.intl.string(C.t.w7ipb2),
                         value: E.WX.EXTERNAL,
                         desc: C.intl.string(C.t.DYxrHh),
-                        icon: c._tJ
+                        icon: c._tJ,
                     },
-                    Z(E.WX.EXTERNAL, b, o, 0)
-                )
+                    Z(E.WX.EXTERNAL, b, o, 0),
+                ),
             ];
             return h
                 ? [
@@ -218,11 +218,11 @@ function A(e) {
                               name: C.intl.string(C.t.EErMzM),
                               value: E.WX.STAGE_INSTANCE,
                               desc: C.intl.string(C.t.LgALpq),
-                              icon: c.ewx
+                              icon: c.ewx,
                           },
-                          Z(E.WX.STAGE_INSTANCE, b, d, g.length)
+                          Z(E.WX.STAGE_INSTANCE, b, d, g.length),
                       ),
-                      ...e
+                      ...e,
                   ]
                 : e;
         }, [o, u, d, h, x.length, g.length, b]);
@@ -230,7 +230,7 @@ function A(e) {
         value: n.entityType,
         options: O,
         onChange: y,
-        className: I.options
+        className: I.options,
     });
 }
 function U(e) {
@@ -242,40 +242,42 @@ function U(e) {
         v = null == d ? void 0 : d.features.has(N.oNc.COMMUNITY),
         p = R(a, l),
         f = v && !T(u) && 0 === g.length && h && null != u;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: I.container,
         children: [
             (0, r.jsx)(c.X6q, {
-                variant: 'heading-xl/semibold',
+                variant: "heading-xl/semibold",
                 className: I.header,
-                children: C.intl.string(C.t['DC+Qm5'])
+                children: C.intl.string(C.t["DC+Qm5"]),
             }),
             (0, r.jsx)(c.Text, {
-                color: 'header-secondary',
+                color: "header-secondary",
                 className: I.text,
-                variant: 'text-sm/normal',
-                children: C.intl.string(C.t.IwmXLC)
+                variant: "text-sm/normal",
+                children: C.intl.string(C.t.IwmXLC),
             }),
             (0, r.jsx)(A, {
                 guildId: t,
                 guildEvent: l,
-                onChange: a
+                onChange: a,
             }),
             (0, r.jsx)(k, {
                 guildId: t,
                 guildEvent: l,
                 isFocusReady: o,
-                onChange: a
+                onChange: a,
             }),
             f
                 ? (0, r.jsx)(O.Z, {
                       onClick: () => {
-                          (p({
+                          p({
                               value: E.WX.STAGE_INSTANCE,
-                              name: C.intl.string(C.t.EErMzM)
+                              name: C.intl.string(C.t.EErMzM),
                           }),
                               (0, c.ZDy)(async () => {
-                                  let { default: e } = await Promise.all([n.e('45094'), n.e('54325')]).then(n.bind(n, 218613));
+                                  let { default: e } = await Promise.all([n.e("45094"), n.e("54325")]).then(
+                                      n.bind(n, 218613),
+                                  );
                                   return (n) => {
                                       var l, i;
                                       return (0, r.jsx)(
@@ -284,7 +286,7 @@ function U(e) {
                                           (i = i =
                                               {
                                                   channelType: N.d4z.GUILD_STAGE_VOICE,
-                                                  guildId: t
+                                                  guildId: t,
                                               }),
                                           Object.getOwnPropertyDescriptors
                                               ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
@@ -298,13 +300,13 @@ function U(e) {
                                                 })(Object(i)).forEach(function (e) {
                                                     Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                                                 }),
-                                          l)
+                                          l),
                                       );
                                   };
-                              }));
-                      }
+                              });
+                      },
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 }

@@ -1,22 +1,22 @@
-(n.d(t, { Z: () => u }), n(388685), n(539854));
+n.d(t, { Z: () => u }), n(388685), n(539854);
 var r = n(485589),
     a = n(424706),
     l = n(14160),
     i = n(247123);
 let u = {
-    id: 'nested-interactive',
-    selector: 'button, a, '.concat(
+    id: "nested-interactive",
+    selector: "button, a, ".concat(
         Array.from(r.roles.entries())
             .reduce((e, t) => {
                 let [n, r] = t;
-                return (!0 === r.childrenPresentational && e.push('[role="'.concat(n, '"]')), e);
+                return !0 === r.childrenPresentational && e.push('[role="'.concat(n, '"]')), e;
             }, [])
-            .join(', ')
+            .join(", "),
     ),
     tags: [],
     metadata: {
-        description: 'Interactive controls must not be nested',
-        help: 'Nested focusable elements are inaccessible to screen readers'
+        description: "Interactive controls must not be nested",
+        help: "Nested focusable elements are inaccessible to screen readers",
     },
     check: function (e) {
         return !(function (e) {
@@ -27,22 +27,22 @@ let u = {
                     n !== e &&
                     (function (e) {
                         switch (e.nodeName) {
-                            case 'IFRAME':
-                            case 'EMBED':
-                            case 'DETAILS':
-                            case 'LABEL':
+                            case "IFRAME":
+                            case "EMBED":
+                            case "DETAILS":
+                            case "LABEL":
                                 return !0;
-                            case 'INPUT':
-                                return 'hidden' !== e.getAttribute('type');
+                            case "INPUT":
+                                return "hidden" !== e.getAttribute("type");
                         }
                         switch ((0, a.cY)(e)) {
-                            case 'link':
-                                return e.hasAttribute('href');
-                            case 'audio':
-                                return e.hasAttribute('controls');
-                            case 'img':
-                                return e.hasAttribute('usemap');
-                            case 'button':
+                            case "link":
+                                return e.hasAttribute("href");
+                            case "audio":
+                                return e.hasAttribute("controls");
+                            case "img":
+                                return e.hasAttribute("usemap");
+                            case "button":
                                 return !0;
                             default:
                                 return !1;
@@ -54,7 +54,7 @@ let u = {
             }
             return !0;
         })(e) && (0, l.p)(e)
-            ? 'Nested interactive element'
+            ? "Nested interactive element"
             : i.w;
-    }
+    },
 };

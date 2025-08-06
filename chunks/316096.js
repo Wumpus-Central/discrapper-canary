@@ -8,6 +8,6 @@ e.exports = function (e, t, n) {
             },
             set: function (e) {
                 t[n] = e;
-            }
+            },
         });
 };

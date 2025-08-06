@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { default: () => d }));
+a.r(t), a.d(t, { default: () => d });
 var c = a(255367),
     n = a(73800),
     i = a(608787),
@@ -6,13 +6,13 @@ var c = a(255367),
     r = a(981631);
 let s = n.lazy(() =>
     (0, i.wE)({
-        createPromise: () => Promise.all([a.e('77803'), a.e('88934'), a.e('15066')]).then(a.bind(a, 319443)),
-        webpackId: 319443
-    })
+        createPromise: () => Promise.all([a.e("77803"), a.e("88934"), a.e("15066")]).then(a.bind(a, 319443)),
+        webpackId: 319443,
+    }),
 );
 function d() {
     return (0, c.jsx)(p.Z, {
         path: r.Z5c.GLOBAL_DISCOVERY_APPS,
-        component: s
+        component: s,
     });
 }

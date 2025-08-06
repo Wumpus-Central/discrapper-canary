@@ -14,7 +14,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -66,7 +66,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,36 +77,42 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e) {
     let { interactionType: t, interactionSource: n, themeType: r } = e;
     return t === c.P.REACT
         ? {
-              position: 'left',
-              align: 'top',
-              animationPosition: 'right',
-              spacing: 8
+              position: "left",
+              align: "top",
+              animationPosition: "right",
+              spacing: 8,
           }
         : r === c.lY.MODAL || r === c.lY.MODAL_V2 || n === c.n_.ACTIVITY
           ? {
-                position: 'bottom',
-                align: 'center',
-                animationPosition: 'top',
-                spacing: 6
+                position: "bottom",
+                align: "center",
+                animationPosition: "top",
+                spacing: 6,
             }
           : {
-                position: 'bottom',
-                align: 'left',
-                animationPosition: 'top',
-                spacing: 6
+                position: "bottom",
+                align: "left",
+                animationPosition: "top",
+                spacing: 6,
             };
 }
 function g(e) {
     var { user: t, guildId: n, channelId: u, themeType: f, onClose: h, children: g } = e,
-        E = p(e, ['user', 'guildId', 'channelId', 'themeType', 'onClose', 'children']);
-    let { interactionType: b, interactionSource: y, resetInteraction: O, interactionSourceId: v, interactionPopoutTargetRef: I } = (0, o.Xo)(),
+        E = p(e, ["user", "guildId", "channelId", "themeType", "onClose", "children"]);
+    let {
+            interactionType: b,
+            interactionSource: y,
+            resetInteraction: O,
+            interactionSourceId: v,
+            interactionPopoutTargetRef: I,
+        } = (0, o.Xo)(),
         T = [c.lY.MODAL, c.lY.MODAL_V2].includes(f) ? (0, a.z)(t.id, n) : void 0,
         S = y === E.sourceType && b === c.P.REACT,
         A = y === E.sourceType && b === c.P.REPLY,
@@ -129,24 +136,24 @@ function g(e) {
                                     themeType: f,
                                     onClose: h,
                                     modalKey: T,
-                                    setPopoutRef: i
+                                    setPopoutRef: i,
                                 },
-                                E
-                            )
+                                E,
+                            ),
                         );
                     },
                     onRequestClose: () => {
-                        (O(), null == h || h());
+                        O(), null == h || h();
                     },
-                    shouldShow: N
+                    shouldShow: N,
                 },
                 m({
                     interactionType: b,
                     interactionSource: y,
-                    themeType: f
-                })
+                    themeType: f,
+                }),
             ),
-            { children: g }
-        )
+            { children: g },
+        ),
     );
 }

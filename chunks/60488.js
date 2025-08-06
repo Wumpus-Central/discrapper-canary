@@ -4,15 +4,15 @@ var n = r(255367),
     l = r(709014);
 let i = {
         earn: {
-            name: 'earn',
+            name: "earn",
             start: 0,
-            duration: 180
+            duration: 180,
         },
         spend: {
-            name: 'spend',
+            name: "spend",
             start: 240,
-            duration: 180
-        }
+            duration: 180,
+        },
     },
     o = (e) => {
         let t = a.useRef(null),
@@ -22,7 +22,7 @@ let i = {
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
-                [e]
+                [e],
             ),
             c = a.useCallback((e) => {
                 var a, u;
@@ -32,33 +32,33 @@ let i = {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
                                 n = Object.keys(r);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (n = n.concat(
                                     Object.getOwnPropertySymbols(r).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 n.forEach(function (t) {
                                     var n;
-                                    ((n = r[t]),
+                                    (n = r[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: n,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = n));
-                                }));
+                                            : (e[t] = n);
+                                });
                         }
                         return e;
                     })({}, e)),
                     (u = u =
                         {
-                            src: () => r.e('44980').then(r.t.bind(r, 304306, 19)),
+                            src: () => r.e("44980").then(r.t.bind(r, 304306, 19)),
                             ref: t,
                             initialAnimation: o.current,
-                            markers: i
+                            markers: i,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(u))
@@ -72,7 +72,7 @@ let i = {
                           })(Object(u)).forEach(function (e) {
                               Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(u, e));
                           }),
-                    a)
+                    a),
                 );
             }, []);
         return {
@@ -86,6 +86,6 @@ let i = {
                 var e, r;
                 return null != (r = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? r : null;
             }, []),
-            Component: c
+            Component: c,
         };
     };

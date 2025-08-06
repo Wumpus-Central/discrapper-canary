@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(572590);
 function o(e) {
     let { pills: t, pillClassName: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: s.container,
         children: t.map((e) =>
             (0, r.jsx)(
@@ -23,24 +23,24 @@ function o(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })({}, t)),
@@ -49,11 +49,11 @@ function o(e) {
                                     className: l()(s.pill, { [s.disabled]: e.disabled }, n),
                                     onClick: e.disabled ? void 0 : e.onClick,
                                     children: (0, r.jsx)(a.Text, {
-                                        tag: 'span',
-                                        variant: 'text-sm/medium',
-                                        color: 'interactive-normal',
-                                        children: e.text
-                                    })
+                                        tag: "span",
+                                        variant: "text-sm/medium",
+                                        color: "interactive-normal",
+                                        children: e.text,
+                                    }),
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
@@ -67,12 +67,12 @@ function o(e) {
                                   })(Object(o)).forEach(function (e) {
                                       Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
                                   }),
-                            i)
+                            i),
                         );
-                    }
+                    },
                 },
-                e.text
-            )
-        )
+                e.text,
+            ),
+        ),
     });
 }

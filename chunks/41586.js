@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685), n(781311));
+n.d(t, { Z: () => O }), n(388685), n(781311);
 var r = n(255367),
     l = n(73800),
     o = n(954955),
@@ -21,24 +21,24 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -74,72 +74,72 @@ let O = l.forwardRef(function (e, t) {
         Z = l.useCallback(
             (e) => {
                 let t = e.trim();
-                (t.length > 0 && w(), (0, f.Dr)(n.id, { query: t }));
+                t.length > 0 && w(), (0, f.Dr)(n.id, { query: t });
             },
-            [n.id, w]
+            [n.id, w],
         ),
         D = l.useMemo(() => i()(Z, 300), [Z]),
         L = l.useCallback(
             (e) => {
-                (S(e), D(e));
+                S(e), D(e);
             },
-            [D]
+            [D],
         ),
         R = l.useCallback(() => {
-            (S(''), Z(''));
+            S(""), Z("");
         }, [Z]);
     return (
         l.useImperativeHandle(t, () => ({
             resetSearchText() {
-                S('');
-            }
+                S("");
+            },
         })),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: x.searchHeaderContainer,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: x.searchHeader,
                     children: a
                         ? (0, r.jsx)(d.X6q, {
-                              variant: 'heading-md/medium',
-                              children: g.intl.string(g.t.y12ALC)
+                              variant: "heading-md/medium",
+                              children: g.intl.string(g.t.y12ALC),
                           })
                         : (0, r.jsx)(d.X6q, {
-                              variant: 'heading-md/medium',
-                              children: g.intl.string(g.t.BUqwKy)
-                          })
+                              variant: "heading-md/medium",
+                              children: g.intl.string(g.t.BUqwKy),
+                          }),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: x.searchInput,
-                    children: (0, r.jsx)('div', {
+                    children: (0, r.jsx)("div", {
                         className: x.searchHeader,
                         children: (0, r.jsx)(d.E1j, {
-                            size: 'sm',
+                            size: "sm",
                             className: x.searchBar,
                             query: N,
                             placeholder: g.intl.string(g.t.NVoAMz),
                             onChange: L,
                             onClear: R,
-                            autoComplete: 'off',
+                            autoComplete: "off",
                             inputProps: {
-                                autoCapitalize: 'none',
-                                autoCorrect: 'off',
-                                spellCheck: 'false'
-                            }
-                        })
-                    })
+                                autoCapitalize: "none",
+                                autoCorrect: "off",
+                                spellCheck: "false",
+                            },
+                        }),
+                    }),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     children: (0, r.jsx)(d.yRy, {
                         targetElementRef: o,
                         animation: d.yRy.Animation.FADE,
-                        position: 'bottom',
+                        position: "bottom",
                         spacing: 4,
-                        align: 'left',
+                        align: "left",
                         renderPopout: () =>
                             (0, r.jsx)(h.Z, {
                                 guildId: n.id,
-                                onClose: void 0
+                                onClose: void 0,
                             }),
                         children: (e) => {
                             var { onClick: t } = e,
@@ -153,46 +153,51 @@ let O = l.forwardRef(function (e, t) {
                                                 r,
                                                 l = {},
                                                 o = Object.keys(e);
-                                            for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+                                            for (r = 0; r < o.length; r++)
+                                                (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                                             return l;
                                         })(e, t);
                                     if (Object.getOwnPropertySymbols) {
                                         var o = Object.getOwnPropertySymbols(e);
-                                        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
+                                        for (r = 0; r < o.length; r++)
+                                            (n = o[r]),
+                                                !(t.indexOf(n) >= 0) &&
+                                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                    (l[n] = e[n]);
                                     }
                                     return l;
-                                })(e, ['onClick']);
+                                })(e, ["onClick"]);
                             return (0, r.jsx)(
                                 d.zxk,
                                 y(v({}, n), {
                                     buttonRef: o,
                                     text: g.intl.string(g.t.XvNMNj),
                                     onClick: t,
-                                    size: 'sm',
-                                    variant: 'secondary',
-                                    icon: d.uVW
-                                })
+                                    size: "sm",
+                                    variant: "secondary",
+                                    icon: d.uVW,
+                                }),
                             );
-                        }
-                    })
+                        },
+                    }),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: x.tableOptions,
                     children:
                         O &&
-                        (0, r.jsx)('div', {
-                            'data-button-hoisted-classname-wrapper': !0,
+                        (0, r.jsx)("div", {
+                            "data-button-hoisted-classname-wrapper": !0,
                             className: x.__invalid_pruneButton,
                             children: (0, r.jsx)(d.zxk, {
-                                variant: 'critical-secondary',
-                                size: 'sm',
-                                text: g.intl.string(g.t['2mIlKS']),
+                                variant: "critical-secondary",
+                                size: "sm",
+                                text: g.intl.string(g.t["2mIlKS"]),
                                 onClick: H,
-                                'aria-label': g.intl.string(g.t.zbyz7u)
-                            })
-                        })
-                })
-            ]
+                                "aria-label": g.intl.string(g.t.zbyz7u),
+                            }),
+                        }),
+                }),
+            ],
         })
     );
 });

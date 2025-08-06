@@ -36,11 +36,11 @@ function _(e) {
         children: [
             (0, r.jsx)(s.Z, {
                 channel: _,
-                draftType: m.d.ChannelMessage
+                draftType: m.d.ChannelMessage,
             }),
             (0, r.jsx)(d.ZP, {
                 toolbar: S,
-                'aria-label': x.intl.string(x.t.Pwe8tL),
+                "aria-label": x.intl.string(x.t.Pwe8tL),
                 children: (0, h.ud)({
                     channel: _,
                     parentChannel: O,
@@ -49,7 +49,7 @@ function _(e) {
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, a.jW)(e, async () => {
-                            let { default: e } = await n.e('40157').then(n.bind(n, 422200));
+                            let { default: e } = await n.e("40157").then(n.bind(n, 422200));
                             return (t) => {
                                 var n, i;
                                 return (0, r.jsx)(
@@ -58,24 +58,24 @@ function _(e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
-                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                            "function" == typeof Object.getOwnPropertySymbols &&
                                                 (r = r.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
+                                                    }),
                                                 )),
                                                 r.forEach(function (t) {
                                                     var r;
-                                                    ((r = n[t]),
+                                                    (r = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: r,
                                                                   enumerable: !0,
                                                                   configurable: !0,
-                                                                  writable: !0
+                                                                  writable: !0,
                                                               })
-                                                            : (e[t] = r));
-                                                }));
+                                                            : (e[t] = r);
+                                                });
                                         }
                                         return e;
                                     })({}, t)),
@@ -92,28 +92,28 @@ function _(e) {
                                           })(Object(i)).forEach(function (e) {
                                               Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                           }),
-                                    n)
+                                    n),
                                 );
                             };
                         });
                     },
                     handleClick: function () {
                         null != _ && (0, p.XU)(_.guild_id, _.id);
-                    }
-                })
+                    },
+                }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: j.chat,
                 children: (0, r.jsx)(
                     c.Z,
                     {
                         channel: _,
                         guild: v,
-                        chatInputType: u.Ie.SIDEBAR
+                        chatInputType: u.Ie.SIDEBAR,
                     },
-                    t
-                )
-            })
-        ]
+                    t,
+                ),
+            }),
+        ],
     });
 }

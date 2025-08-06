@@ -2,7 +2,7 @@ n.d(t, {
     IV: () => o,
     P: () => c,
     fH: () => s,
-    xt: () => u
+    xt: () => u,
 });
 var r = n(166459),
     a = n(476326),
@@ -11,7 +11,7 @@ var r = n(166459),
 async function o(e, t, n) {
     let r = (0, i.Yk)(t, n),
         a = await fetch(n);
-    return (s(e, t, new File([await a.blob()], r, { type: 'image/gif' })), n);
+    return s(e, t, new File([await a.blob()], r, { type: "image/gif" })), n;
 }
 function s(e, t, n) {
     let i = {
@@ -19,12 +19,12 @@ function s(e, t, n) {
         channelId: e,
         file: n,
         platform: a.ow.WEB,
-        origin: 'unknown:poll_attachment'
+        origin: "unknown:poll_attachment",
     };
     r.Z.addFile({
         file: i,
         channelId: e,
-        draftType: l.d.Poll
+        draftType: l.d.Poll,
     });
 }
 async function c(e, t, n) {

@@ -2,13 +2,30 @@ var r = Array.prototype.slice,
     i = n(775569),
     o = n(35262),
     a = (e.exports = function (e, t, n) {
-        return (n || (n = {}), e === t || (e instanceof Date && t instanceof Date ? e.getTime() === t.getTime() : e && t && ('object' == typeof e || 'object' == typeof t) ? c(e, t, n) : n.strict ? e === t : e == t));
+        return (
+            n || (n = {}),
+            e === t ||
+                (e instanceof Date && t instanceof Date
+                    ? e.getTime() === t.getTime()
+                    : e && t && ("object" == typeof e || "object" == typeof t)
+                      ? c(e, t, n)
+                      : n.strict
+                        ? e === t
+                        : e == t)
+        );
     });
 function s(e) {
     return null == e;
 }
 function l(e) {
-    return !!e && 'object' == typeof e && 'number' == typeof e.length && 'function' == typeof e.copy && 'function' == typeof e.slice && (!(e.length > 0) || 'number' == typeof e[0]);
+    return (
+        !!e &&
+        "object" == typeof e &&
+        "number" == typeof e.length &&
+        "function" == typeof e.copy &&
+        "function" == typeof e.slice &&
+        (!(e.length > 0) || "number" == typeof e[0])
+    );
 }
 function c(e, t, n) {
     var c, u;

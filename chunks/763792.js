@@ -1,13 +1,13 @@
 n.d(t, {
     G: () => i,
-    W: () => o
+    W: () => o,
 });
 var r = n(535396);
 let i = [
         {
             type: r.Us.LEVEL,
-            skuId: '1',
-            title: 'Lorem ipsum',
+            skuId: "1",
+            title: "Lorem ipsum",
             cost: 1,
             dependencies: [],
             features: {
@@ -17,15 +17,15 @@ let i = [
                 total_emoji_slots: 50,
                 total_sound_slots: 50,
                 total_sticker_slots: 50,
-                features: []
-            }
+                features: [],
+            },
         },
         {
             type: r.Us.LEVEL,
-            skuId: '2',
-            title: 'Lorem ipsum',
+            skuId: "2",
+            title: "Lorem ipsum",
             cost: 1,
-            dependencies: ['1'],
+            dependencies: ["1"],
             features: {
                 additional_emoji_slots: 50,
                 additional_sound_slots: 50,
@@ -33,15 +33,15 @@ let i = [
                 total_emoji_slots: 50,
                 total_sound_slots: 50,
                 total_sticker_slots: 50,
-                features: []
-            }
+                features: [],
+            },
         },
         {
             type: r.Us.LEVEL,
-            skuId: '3',
-            title: 'Lorem ipsum',
+            skuId: "3",
+            title: "Lorem ipsum",
             cost: 1,
-            dependencies: ['2'],
+            dependencies: ["2"],
             features: {
                 additional_emoji_slots: 50,
                 additional_sound_slots: 50,
@@ -49,41 +49,41 @@ let i = [
                 total_emoji_slots: 50,
                 total_sound_slots: 50,
                 total_sticker_slots: 50,
-                features: []
-            }
-        }
+                features: [],
+            },
+        },
     ],
     o = [
         {
             type: r.Us.PERK,
-            skuId: '4',
-            title: 'Lorem ipsum',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
+            skuId: "4",
+            title: "Lorem ipsum",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao",
             cost: 1,
-            dependencies: []
+            dependencies: [],
         },
         {
             type: r.Us.PERK,
-            skuId: '5',
-            title: 'Lorem ipsum',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
+            skuId: "5",
+            title: "Lorem ipsum",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao",
             cost: 1,
-            dependencies: []
+            dependencies: [],
         },
         {
             type: r.Us.PERK,
-            skuId: '6',
-            title: 'Lorem ipsum',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
+            skuId: "6",
+            title: "Lorem ipsum",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao",
             cost: 1,
-            dependencies: []
+            dependencies: [],
         },
         {
             type: r.Us.PERK,
-            skuId: '7',
-            title: 'Lorem ipsum',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
+            skuId: "7",
+            title: "Lorem ipsum",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao",
             cost: 1,
-            dependencies: []
-        }
+            dependencies: [],
+        },
     ];

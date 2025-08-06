@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Ne: () => f,
     Ny: () => g,
     Or: () => b,
-    jt: () => O
+    jt: () => O,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -20,24 +20,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -45,24 +45,32 @@ function f(e, t, n) {
     return (0, r.jsx)(o.mAB, {
         count: e,
         color: t,
-        'aria-hidden': n
+        "aria-hidden": n,
     });
 }
 function g() {
     return (0, r.jsx)(o.G2e, {
         icon: (0, o.GSL)(u.Z),
         disableColor: !0,
-        className: h.unavailableBadge
+        className: h.unavailableBadge,
     });
 }
 function m(e) {
-    let { enabled: t } = s.c.useExperiment({ location: 'renderMediaBadge' }, { autoTrackExposure: !0 }),
+    let { enabled: t } = s.c.useExperiment({ location: "renderMediaBadge" }, { autoTrackExposure: !0 }),
         n = t ? o.iWm : o.nG3;
     return (0, r.jsx)(n, p({}, e));
 }
 function b(e) {
     let t,
-        { audio: n, video: r, screenshare: i, isCurrentUserConnected: l, liveStage: s, activeEvent: a, activity: c } = e;
+        {
+            audio: n,
+            video: r,
+            screenshare: i,
+            isCurrentUserConnected: l,
+            liveStage: s,
+            activeEvent: a,
+            activity: c,
+        } = e;
     if (a) t = o.Que;
     else if (s) t = o.ewx;
     else if (i) t = o.pzj;
@@ -74,7 +82,7 @@ function b(e) {
     }
     return _({
         icon: t,
-        isCurrentUserConnected: l
+        isCurrentUserConnected: l,
     });
 }
 function O(e) {
@@ -93,7 +101,7 @@ function O(e) {
         })(t);
     return _({
         icon: r,
-        color: n
+        color: n,
     });
 }
 function _(e) {
@@ -104,9 +112,9 @@ function _(e) {
         p(
             {
                 icon: t,
-                className: l()(h.iconBadge, { [h.isCurrentUserConnected]: i })
+                className: l()(h.iconBadge, { [h.isCurrentUserConnected]: i }),
             },
-            s
-        )
+            s,
+        ),
     );
 }

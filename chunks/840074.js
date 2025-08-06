@@ -18,7 +18,7 @@ function o(e) {
     }
     (0, i.ZDy)(
         async () => {
-            let { default: e } = await n.e('83098').then(n.bind(n, 137021));
+            let { default: e } = await n.e("83098").then(n.bind(n, 137021));
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -26,24 +26,24 @@ function o(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })(
@@ -53,18 +53,18 @@ function o(e) {
                             linkId: s,
                             message: c,
                             onCopyLink: g,
-                            onShare: f
+                            onShare: f,
                         },
-                        n
-                    )
+                        n,
+                    ),
                 );
         },
         {
-            modalKey: 'activity-share-moment-modal',
+            modalKey: "activity-share-moment-modal",
             contextKey: p,
             onCloseCallback: () => {
                 u(!1, h);
-            }
-        }
+            },
+        },
     );
 }

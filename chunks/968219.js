@@ -1,11 +1,11 @@
-(t(864733)(r, '__esModule', { value: !0 }),
+t(864733)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
         accessibleNameRequired: !0,
         baseConcepts: [],
         childrenPresentational: !0,
-        nameFrom: ['author'],
+        nameFrom: ["author"],
         prohibitedProps: [],
         props: {},
         relatedConcepts: [
@@ -13,34 +13,34 @@
                 concept: {
                     attributes: [
                         {
-                            constraints: ['set'],
-                            name: 'alt'
-                        }
+                            constraints: ["set"],
+                            name: "alt",
+                        },
                     ],
-                    name: 'img'
+                    name: "img",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
                 concept: {
                     attributes: [
                         {
-                            constraints: ['undefined'],
-                            name: 'alt'
-                        }
+                            constraints: ["undefined"],
+                            name: "alt",
+                        },
                     ],
-                    name: 'img'
+                    name: "img",
                 },
-                module: 'HTML'
+                module: "HTML",
             },
             {
-                concept: { name: 'imggroup' },
-                module: 'DTB'
-            }
+                concept: { name: "imggroup" },
+                module: "DTB",
+            },
         ],
         requireContextRole: [],
         requiredContextRole: [],
         requiredOwnedElements: [],
         requiredProps: {},
-        superClass: [['roletype', 'structure', 'section']]
-    }));
+        superClass: [["roletype", "structure", "section"]],
+    });

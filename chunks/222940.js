@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(399606),
@@ -19,7 +19,7 @@ function h(e) {
     }, [n]),
     i.useEffect(() => {
         if (null == g) return void f(!1);
-        ((0, c.Br)(g), f(!0));
+        (0, c.Br)(g), f(!0);
         let e = new a.V7();
         return (
             e.start(5000, () => {
@@ -35,44 +35,44 @@ function h(e) {
               tooltipClassName: p.tooltip,
               tooltipContentClassName: p.tooltipContent,
               targetElementRef: t,
-              position: 'bottom',
+              position: "bottom",
               color: o.FGA.PRIMARY,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: p.iconContainer,
                       children: [
-                          (0, r.jsx)('img', {
+                          (0, r.jsx)("img", {
                               className: p.inviteImage,
                               src: g.application_asset,
-                              alt: 'Game Invite'
+                              alt: "Game Invite",
                           }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: p.offsetAvatarContainer,
                               children: (0, r.jsx)(o.qEK, {
-                                  'aria-label': 'Inviter',
+                                  "aria-label": "Inviter",
                                   className: p.inviterImage,
                                   src: m.getAvatarURL(null, 24),
-                                  size: o.EFr.SIZE_24
-                              })
-                          })
-                      ]
+                                  size: o.EFr.SIZE_24,
+                              }),
+                          }),
+                      ],
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: p.titleContainer,
                       children: [
                           (0, r.jsx)(o.Text, {
                               className: p.__invalid_title,
-                              variant: 'text-xs/semibold',
-                              children: d.intl.format(d.t['8gTZ8v'], { username: m.username })
+                              variant: "text-xs/semibold",
+                              children: d.intl.format(d.t["8gTZ8v"], { username: m.username }),
                           }),
                           (0, r.jsx)(o.Text, {
                               className: p.__invalid_subtitle,
-                              variant: 'text-xxs/medium',
-                              children: g.application_name
-                          })
-                      ]
-                  })
-              ]
+                              variant: "text-xxs/medium",
+                              children: g.application_name,
+                          }),
+                      ],
+                  }),
+              ],
           })
         : null;
 }

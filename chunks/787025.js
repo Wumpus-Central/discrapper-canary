@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => v,
-    j: () => I
+    j: () => I,
 });
 var r = n(255367);
 n(73800);
@@ -23,7 +23,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -75,7 +75,8 @@ function y(e, t) {
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,26 +86,26 @@ function O(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function v(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: i } = e;
     return (
-        (0, f.Tt)({ location: p.intl.string(p.t['3S249/']) }),
+        (0, f.Tt)({ location: p.intl.string(p.t["3S249/"]) }),
         (0, r.jsx)(d.f6W, {
             theme: _.BRd.DARK,
             children: (e) =>
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: o()(e, h.oauth2PageWrapper, i),
                     children:
                         !0 === n
                             ? t
-                            : (0, r.jsx)('div', {
+                            : (0, r.jsx)("div", {
                                   className: h.oauth2PageContent,
-                                  children: t
-                              })
-                })
+                                  children: t,
+                              }),
+                }),
         })
     );
 }
@@ -112,7 +113,7 @@ function I(e) {
     var t,
         n,
         { hideHeader: i } = e,
-        o = y(e, ['hideHeader']);
+        o = y(e, ["hideHeader"]);
     return (0, r.jsxs)(
         a.I,
         b(g({}, o), {
@@ -124,20 +125,20 @@ function I(e) {
                 i
                     ? null
                     : (0, r.jsx)(u.x, {
-                          title: null != (t = o.title) ? t : '',
-                          subtitle: o.subtitle
+                          title: null != (t = o.title) ? t : "",
+                          subtitle: o.subtitle,
                       }),
                 (0, r.jsx)(l.f, {
                     controls: o.input,
-                    children: o.children
+                    children: o.children,
                 }),
                 (0, r.jsx)(c.m, { children: o.preview }),
                 (0, r.jsx)(s.G, {
                     leading: o.actionBarInput,
                     actions: null != (n = o.actions) ? n : [],
-                    actionsFullWidth: null == o.actionBarInput
-                })
-            ]
-        })
+                    actionsFullWidth: null == o.actionBarInput,
+                }),
+            ],
+        }),
     );
 }

@@ -2,7 +2,7 @@ let r;
 function i(e) {
     r = e;
 }
-(n.d(t, {
+n.d(t, {
     $R: () => A,
     A$: () => et,
     AM: () => W,
@@ -91,7 +91,7 @@ function i(e) {
     z3: () => em,
     z9: () => $,
     zF: () => eN,
-    zr: () => e5
+    zr: () => e5,
 }),
     n(410992),
     n(227481),
@@ -113,22 +113,22 @@ function i(e) {
     n(980754),
     n(824928),
     n(539854),
-    n(563775));
-let o = new ('undefined' == typeof TextDecoder ? (0, module.require)('util').TextDecoder : TextDecoder)('utf-8', {
+    n(563775);
+let o = new ("undefined" == typeof TextDecoder ? (0, module.require)("util").TextDecoder : TextDecoder)("utf-8", {
     ignoreBOM: !0,
-    fatal: !0
+    fatal: !0,
 });
 o.decode();
 let a = null;
 function s() {
-    return ((null === a || 0 === a.byteLength) && (a = new Uint8Array(r.memory.buffer)), a);
+    return (null === a || 0 === a.byteLength) && (a = new Uint8Array(r.memory.buffer)), a;
 }
 function l(e, t) {
-    return ((e >>>= 0), o.decode(s().subarray(e, e + t)));
+    return (e >>>= 0), o.decode(s().subarray(e, e + t));
 }
 function c(e) {
     let t = r.__externref_table_alloc();
-    return (r.__wbindgen_export_2.set(t, e), t);
+    return r.__wbindgen_export_2.set(t, e), t;
 }
 function u(e, t) {
     try {
@@ -139,15 +139,15 @@ function u(e, t) {
     }
 }
 function d(e, t) {
-    return ((e >>>= 0), s().subarray(e / 1, e / 1 + t));
+    return (e >>>= 0), s().subarray(e / 1, e / 1 + t);
 }
 function f(e) {
     return null == e;
 }
 let _ = 0,
-    p = new ('undefined' == typeof TextEncoder ? (0, module.require)('util').TextEncoder : TextEncoder)('utf-8'),
+    p = new ("undefined" == typeof TextEncoder ? (0, module.require)("util").TextEncoder : TextEncoder)("utf-8"),
     h =
-        'function' == typeof p.encodeInto
+        "function" == typeof p.encodeInto
             ? function (e, t) {
                   return p.encodeInto(e, t);
               }
@@ -157,7 +157,7 @@ let _ = 0,
                       t.set(n),
                       {
                           read: e.length,
-                          written: n.length
+                          written: n.length,
                       }
                   );
               };
@@ -183,21 +183,25 @@ function m(e, t, n) {
         o[i + a] = t;
     }
     if (a !== r) {
-        (0 !== a && (e = e.slice(a)), (i = n(i, r, (r = a + 3 * e.length), 1) >>> 0));
+        0 !== a && (e = e.slice(a)), (i = n(i, r, (r = a + 3 * e.length), 1) >>> 0);
         let t = h(e, s().subarray(i + a, i + r));
-        ((a += t.written), (i = n(i, r, a, 1) >>> 0));
+        (a += t.written), (i = n(i, r, a, 1) >>> 0);
     }
-    return ((_ = a), i);
+    return (_ = a), i;
 }
 let g = null;
 function E() {
-    return ((null === g || !0 === g.buffer.detached || (void 0 === g.buffer.detached && g.buffer !== r.memory.buffer)) && (g = new DataView(r.memory.buffer)), g);
+    return (
+        (null === g || !0 === g.buffer.detached || (void 0 === g.buffer.detached && g.buffer !== r.memory.buffer)) &&
+            (g = new DataView(r.memory.buffer)),
+        g
+    );
 }
 let b =
-    'undefined' == typeof FinalizationRegistry
+    "undefined" == typeof FinalizationRegistry
         ? {
               register: () => {},
-              unregister: () => {}
+              unregister: () => {},
           }
         : new FinalizationRegistry((e) => {
               r.__wbindgen_export_5.get(e.dtor)(e.a, e.b);
@@ -207,7 +211,7 @@ function y(e, t, n, i) {
             a: e,
             b: t,
             cnt: 1,
-            dtor: n
+            dtor: n,
         },
         a = function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -220,43 +224,43 @@ function y(e, t, n, i) {
                 0 == --o.cnt ? (r.__wbindgen_export_5.get(o.dtor)(a, o.b), b.unregister(o)) : (o.a = a);
             }
         };
-    return ((a.original = o), b.register(a, o, o), a);
+    return (a.original = o), b.register(a, o, o), a;
 }
 function O(e) {
     let t,
         n = typeof e;
-    if ('number' == n || 'boolean' == n || null == e) return ''.concat(e);
-    if ('string' == n) return '"'.concat(e, '"');
-    if ('symbol' == n) {
+    if ("number" == n || "boolean" == n || null == e) return "".concat(e);
+    if ("string" == n) return '"'.concat(e, '"');
+    if ("symbol" == n) {
         let t = e.description;
-        return null == t ? 'Symbol' : 'Symbol('.concat(t, ')');
+        return null == t ? "Symbol" : "Symbol(".concat(t, ")");
     }
-    if ('function' == n) {
+    if ("function" == n) {
         let t = e.name;
-        return 'string' == typeof t && t.length > 0 ? 'Function('.concat(t, ')') : 'Function';
+        return "string" == typeof t && t.length > 0 ? "Function(".concat(t, ")") : "Function";
     }
     if (Array.isArray(e)) {
         let t = e.length,
-            n = '[';
+            n = "[";
         t > 0 && (n += O(e[0]));
-        for (let r = 1; r < t; r++) n += ', ' + O(e[r]);
-        return n + ']';
+        for (let r = 1; r < t; r++) n += ", " + O(e[r]);
+        return n + "]";
     }
     let r = /\[object ([^\]]+)\]/.exec(toString.call(e));
     if (!r || !(r.length > 1)) return toString.call(e);
-    if ('Object' == (t = r[1]))
+    if ("Object" == (t = r[1]))
         try {
-            return 'Object(' + JSON.stringify(e) + ')';
+            return "Object(" + JSON.stringify(e) + ")";
         } catch (e) {
-            return 'Object';
+            return "Object";
         }
-    return e instanceof Error ? ''.concat(e.name, ': ').concat(e.message, '\n').concat(e.stack) : t;
+    return e instanceof Error ? "".concat(e.name, ": ").concat(e.message, "\n").concat(e.stack) : t;
 }
 function v(e) {
     let t, n;
     try {
         let i = r.generateLaunchSignature(e);
-        return ((t = i[0]), (n = i[1]), l(i[0], i[1]));
+        return (t = i[0]), (n = i[1]), l(i[0], i[1]);
     } finally {
         r.__wbindgen_free(t, n, 1);
     }
@@ -274,10 +278,16 @@ function A() {
     r.crash();
 }
 function N(e, t) {
-    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h2a939e4ee92a7144(e, t);
+    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h2a939e4ee92a7144(
+        e,
+        t,
+    );
 }
 function C(e, t) {
-    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hfd15e1711d7d607c(e, t);
+    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hfd15e1711d7d607c(
+        e,
+        t,
+    );
 }
 function R(e, t, n) {
     r.closure496_externref_shim(e, t, n);
@@ -285,19 +295,19 @@ function R(e, t, n) {
 function P(e, t, n, i) {
     r.closure530_externref_shim(e, t, n, i);
 }
-let w = ['omit', 'same-origin', 'include'],
-    D = ['same-origin', 'no-cors', 'cors', 'navigate'],
+let w = ["omit", "same-origin", "include"],
+    D = ["same-origin", "no-cors", "cors", "navigate"],
     L =
-        'undefined' == typeof FinalizationRegistry
+        "undefined" == typeof FinalizationRegistry
             ? {
                   register: () => {},
-                  unregister: () => {}
+                  unregister: () => {},
               }
             : new FinalizationRegistry((e) => r.__wbg_blockeddomainsstore_free(e >>> 0, 1));
 class x {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return ((this.__wbg_ptr = 0), L.unregister(this), e);
+        return (this.__wbg_ptr = 0), L.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -308,7 +318,7 @@ class x {
             n = m(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
             i = _,
             o = r.blockeddomainsstore_isBlockedDomain(n, i);
-        return (0 !== o[0] && ((t = l(o[0], o[1]).slice()), r.__wbindgen_free(o[0], +o[1], 1)), t);
+        return 0 !== o[0] && ((t = l(o[0], o[1]).slice()), r.__wbindgen_free(o[0], +o[1], 1)), t;
     }
     static startFetchingBlockedDomains(e) {
         let t = m(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
@@ -317,16 +327,16 @@ class x {
     }
 }
 let M =
-    'undefined' == typeof FinalizationRegistry
+    "undefined" == typeof FinalizationRegistry
         ? {
               register: () => {},
-              unregister: () => {}
+              unregister: () => {},
           }
         : new FinalizationRegistry((e) => r.__wbg_experimentcacher_free(e >>> 0, 1));
 class k {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return ((this.__wbg_ptr = 0), M.unregister(this), e);
+        return (this.__wbg_ptr = 0), M.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -345,21 +355,21 @@ class k {
     }
 }
 let j =
-    'undefined' == typeof FinalizationRegistry
+    "undefined" == typeof FinalizationRegistry
         ? {
               register: () => {},
-              unregister: () => {}
+              unregister: () => {},
           }
         : new FinalizationRegistry((e) => r.__wbg_wasmcacheableexperimentconfig_free(e >>> 0, 1));
 class U {
     static __wrap(e) {
         e >>>= 0;
         let t = Object.create(U.prototype);
-        return ((t.__wbg_ptr = e), j.register(t, t.__wbg_ptr, t), t);
+        return (t.__wbg_ptr = e), j.register(t, t.__wbg_ptr, t), t;
     }
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return ((this.__wbg_ptr = 0), j.unregister(this), e);
+        return (this.__wbg_ptr = 0), j.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -484,7 +494,7 @@ function ec(e, t) {
     try {
         var n = {
                 a: e,
-                b: t
+                b: t,
             },
             r = (e, t) => {
                 let r = n.a;
@@ -605,19 +615,19 @@ function eG(e) {
     return e.signal;
 }
 function eB() {
-    let e = 'undefined' == typeof global ? null : global;
+    let e = "undefined" == typeof global ? null : global;
     return f(e) ? 0 : c(e);
 }
 function eZ() {
-    let e = 'undefined' == typeof globalThis ? null : globalThis;
+    let e = "undefined" == typeof globalThis ? null : globalThis;
     return f(e) ? 0 : c(e);
 }
 function eF() {
-    let e = 'undefined' == typeof self ? null : self;
+    let e = "undefined" == typeof self ? null : self;
     return f(e) ? 0 : c(e);
 }
 function eV() {
-    let e = 'undefined' == typeof window ? null : window;
+    let e = "undefined" == typeof window ? null : window;
     return f(e) ? 0 : c(e);
 }
 function eH(e) {
@@ -637,7 +647,7 @@ function eK(e, t, n) {
 function ez(e, t) {
     let n = m(t.url, r.__wbindgen_malloc, r.__wbindgen_realloc),
         i = _;
-    (E().setInt32(e + 4, i, !0), E().setInt32(e + 0, n, !0));
+    E().setInt32(e + 4, i, !0), E().setInt32(e + 0, n, !0);
 }
 function eq(e) {
     return e.value;
@@ -661,22 +671,22 @@ function e0(e, t, n) {
 function e1(e, t) {
     let n = m(O(t), r.__wbindgen_malloc, r.__wbindgen_realloc),
         i = _;
-    (E().setInt32(e + 4, i, !0), E().setInt32(e + 0, n, !0));
+    E().setInt32(e + 4, i, !0), E().setInt32(e + 0, n, !0);
 }
 function e2() {
     let e = r.__wbindgen_export_2,
         t = e.grow(4);
-    (e.set(0, void 0), e.set(t + 0, void 0), e.set(t + 1, null), e.set(t + 2, !0), e.set(t + 3, !1));
+    e.set(0, void 0), e.set(t + 0, void 0), e.set(t + 1, null), e.set(t + 2, !0), e.set(t + 3, !1);
 }
 function e3(e) {
-    return 'function' == typeof e;
+    return "function" == typeof e;
 }
 function e5(e) {
     return null === e;
 }
 function e4(e) {
     let t = e;
-    return 'object' == typeof t && null !== t;
+    return "object" == typeof t && null !== t;
 }
 function e6(e) {
     return void 0 === e;
@@ -686,10 +696,10 @@ function e8() {
 }
 function e7(e, t) {
     let n = t,
-        i = 'string' == typeof n ? n : void 0;
+        i = "string" == typeof n ? n : void 0;
     var o = f(i) ? 0 : m(i, r.__wbindgen_malloc, r.__wbindgen_realloc),
         a = _;
-    (E().setInt32(e + 4, a, !0), E().setInt32(e + 0, o, !0));
+    E().setInt32(e + 4, a, !0), E().setInt32(e + 0, o, !0);
 }
 function e9(e, t) {
     return l(e, t);

@@ -6,7 +6,7 @@ n.d(t, {
     OV: () => h,
     fW: () => O,
     lB: () => b,
-    mA: () => g
+    mA: () => g,
 });
 var r = n(255367);
 n(73800);
@@ -21,7 +21,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,7 +73,8 @@ function f(e, t) {
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,26 +84,34 @@ function _(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let p = {
     ROUND: s.baseShapeRound,
     ROUND_LEFT: s.baseShapeRoundLeft,
     ROUND_RIGHT: s.baseShapeRoundRight,
-    SQUARE: ''
+    SQUARE: "",
 };
 function h(e) {
     return e < 10 ? 16 : e < 100 ? 22 : 30;
 }
 function m(e) {
-    return e < 1000 ? ''.concat(e) : ''.concat(Math.min(Math.floor(e / 1000), 9), 'k+');
+    return e < 1000 ? "".concat(e) : "".concat(Math.min(Math.floor(e / 1000), 9), "k+");
 }
 let g = (e) => {
-        var { count: t, color: n = a.Z.STATUS_DANGER, disableColor: i = !1, shape: l = p.ROUND, className: u, style: _, renderBadgeCount: g = m } = e,
-            E = f(e, ['count', 'color', 'disableColor', 'shape', 'className', 'style', 'renderBadgeCount']);
+        var {
+                count: t,
+                color: n = a.Z.STATUS_DANGER,
+                disableColor: i = !1,
+                shape: l = p.ROUND,
+                className: u,
+                style: _,
+                renderBadgeCount: g = m,
+            } = e,
+            E = f(e, ["count", "color", "disableColor", "shape", "className", "style", "renderBadgeCount"]);
         return (0, r.jsx)(
-            'div',
+            "div",
             d(
                 c(
                     {
@@ -110,70 +119,84 @@ let g = (e) => {
                         style: c(
                             {
                                 backgroundColor: i ? void 0 : n,
-                                width: h(t)
+                                width: h(t),
                             },
-                            _
-                        )
+                            _,
+                        ),
                     },
-                    E
+                    E,
                 ),
-                { children: g(t) }
-            )
+                { children: g(t) },
+            ),
         );
     },
     E = (e) => {
-        var { text: t, className: n, color: i = a.Z.STATUS_DANGER, shape: l = p.ROUND, disableColor: u = !1, style: _ } = e,
-            h = f(e, ['text', 'className', 'color', 'shape', 'disableColor', 'style']);
+        var {
+                text: t,
+                className: n,
+                color: i = a.Z.STATUS_DANGER,
+                shape: l = p.ROUND,
+                disableColor: u = !1,
+                style: _,
+            } = e,
+            h = f(e, ["text", "className", "color", "shape", "disableColor", "style"]);
         return (0, r.jsx)(
-            'div',
+            "div",
             d(
                 c(
                     {
                         className: o()(n, s.textBadge, l),
-                        style: c({ backgroundColor: u ? void 0 : i }, _)
+                        style: c({ backgroundColor: u ? void 0 : i }, _),
                     },
-                    h
+                    h,
                 ),
-                { children: t }
-            )
+                { children: t },
+            ),
         );
     },
     b = (e) => {
         var { text: t, className: n } = e,
-            i = f(e, ['text', 'className']);
+            i = f(e, ["text", "className"]);
         return (0, r.jsx)(
             E,
             c(
                 {
                     className: o()(s.premiumBadge, n),
-                    text: t
+                    text: t,
                 },
-                i
-            )
+                i,
+            ),
         );
     },
     y = (e) => {
-        let { icon: t, className: n, color: i = a.Z.STATUS_DANGER, shape: l = p.ROUND, disableColor: u = !1, style: d } = e;
-        return (0, r.jsx)('div', {
+        let {
+            icon: t,
+            className: n,
+            color: i = a.Z.STATUS_DANGER,
+            shape: l = p.ROUND,
+            disableColor: u = !1,
+            style: d,
+        } = e;
+        return (0, r.jsx)("div", {
             className: o()(n, s.iconBadge, l),
             style: c({ backgroundColor: u ? void 0 : i }, d),
             children: (0, r.jsx)(t, {
                 className: s.icon,
-                color: 'currentColor'
-            })
+                color: "currentColor",
+            }),
         });
     },
     O = (e) => {
         var { className: t, color: n = a.Z.INTERACTIVE_ACTIVE, shape: i = p.ROUND, disableColor: l = !1, style: u } = e,
-            d = f(e, ['className', 'color', 'shape', 'disableColor', 'style']);
+            d = f(e, ["className", "color", "shape", "disableColor", "style"]);
         return (0, r.jsx)(
-            'div',
+            "div",
             c(
                 {
                     className: o()(t, s.circleBadge, i),
-                    style: c({ backgroundColor: l ? void 0 : n }, u)
+                    style: c({ backgroundColor: l ? void 0 : n }, u),
                 },
-                d
-            )
+                d,
+            ),
         );
     };

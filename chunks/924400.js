@@ -6,6 +6,6 @@ function i(e, t, n, i) {
         reason: e,
         feedback: t,
         skipped: n,
-        dont_show_again: i
+        dont_show_again: i,
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(35282));
+n.d(t, { Z: () => p }), n(35282);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -10,20 +10,20 @@ var i = n(481060),
     u = n(388032),
     d = n(932478);
 let p = (e) => {
-    let t = l.$.binds['0']
-        .split('+')
+    let t = l.$.binds["0"]
+        .split("+")
         .map((e) => (null != i.cXz[e] ? i.cXz[e]() : e))
-        .join(' + ')
+        .join(" + ")
         .toUpperCase();
     return (0, r.jsx)(o.Z, {
         guild: e.guild,
         onDismissed: () => e.markAsDismissed(c.L.UNKNOWN),
-        onClick: () => (0, a.$Z)('CHANNEL_NOTICE'),
+        onClick: () => (0, a.$Z)("CHANNEL_NOTICE"),
         message: u.intl.string(u.t.Qhk8cn),
         cta: t,
         trackingSource: s.PsQ.QUICK_SWITCHER_NOTICE,
         type: s.vID.QUICKSWITCHER,
         image: d,
-        imageMarginX: 50
+        imageMarginX: 50,
     });
 };

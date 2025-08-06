@@ -11,7 +11,7 @@ let o = {
         return (0, l.jsx)(r.hzk, {
             className: a.content,
             scrollbarType: n,
-            children: t
+            children: t,
         });
     },
     SlideError: function (e) {
@@ -20,9 +20,9 @@ let o = {
             ? null
             : (0, l.jsx)(r.Text, {
                   className: a.error,
-                  variant: 'text-sm/normal',
-                  color: 'text-danger',
-                  children: t
+                  variant: "text-sm/normal",
+                  color: "text-danger",
+                  children: t,
               });
     },
     SlideFooter: function (e) {
@@ -36,20 +36,20 @@ let o = {
                           i,
                           c &&
                               (0, l.jsx)(r.zxk, {
-                                  variant: 'secondary',
+                                  variant: "secondary",
                                   text: s.intl.string(s.t.Tot4EB),
-                                  onClick: () => n('select')
+                                  onClick: () => n("select"),
                               }),
                           a &&
                               (0, l.jsx)(r.zxk, {
-                                  type: 'submit',
-                                  variant: 'primary',
-                                  text: s.intl.string(s.t['cY+Ooa']),
+                                  type: "submit",
+                                  variant: "primary",
+                                  text: s.intl.string(s.t["cY+Ooa"]),
                                   disabled: o,
-                                  loading: d
-                              })
-                      ]
-                  })
+                                  loading: d,
+                              }),
+                      ],
+                  }),
               })
             : null;
     },
@@ -62,21 +62,21 @@ let o = {
             align: o ? i.Z.Align.START : void 0,
             children: [
                 (0, l.jsx)(r.X6q, {
-                    variant: 'heading-xl/semibold',
-                    children: s.intl.string(s.t.saHocH)
+                    variant: "heading-xl/semibold",
+                    children: s.intl.string(s.t.saHocH),
                 }),
                 null != t &&
                     (0, l.jsx)(r.Text, {
-                        color: 'header-secondary',
-                        variant: 'text-md/normal',
+                        color: "header-secondary",
+                        variant: "text-md/normal",
                         className: a.subtitle,
-                        children: t
+                        children: t,
                     }),
                 (0, l.jsx)(r.olH, {
                     className: a.closeButton,
-                    onClick: n
-                })
-            ]
+                    onClick: n,
+                }),
+            ],
         });
-    }
+    },
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(539854), n(388685));
+n.d(t, { Z: () => R }), n(539854), n(388685);
 var r = n(147913),
     i = n(43267),
     o = n(933557),
@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,34 +27,38 @@ function m(e, t, n) {
 }
 function g() {
     return p.Z.getCurrentConfig(
-        { location: 'NativeIntentsManager' },
+        { location: "NativeIntentsManager" },
         {
             autoTrackExposure: !0,
-            disable: !_.Z.hasSearch()
-        }
+            disable: !_.Z.hasSearch(),
+        },
     ).searchEnabled;
 }
 function E() {
     return p.Z.getCurrentConfig(
-        { location: 'NativeIntentsManager' },
+        { location: "NativeIntentsManager" },
         {
             autoTrackExposure: !0,
-            disable: !_.Z.hasSearch()
-        }
+            disable: !_.Z.hasSearch(),
+        },
     ).clearEnabled;
 }
 function b() {
     return p.Z.getCurrentConfig(
-        { location: 'NativeIntentsManager' },
+        { location: "NativeIntentsManager" },
         {
             autoTrackExposure: !0,
-            disable: !_.Z.hasUserActivity()
-        }
+            disable: !_.Z.hasUserActivity(),
+        },
     ).activityEnabled;
 }
 function y(e) {
     var t;
-    return (null == e || null == (t = e.startsWith) ? void 0 : t.call(e, '/')) ? location.origin + e : null != e ? e : void 0;
+    return (null == e || null == (t = e.startsWith) ? void 0 : t.call(e, "/"))
+        ? location.origin + e
+        : null != e
+          ? e
+          : void 0;
 }
 function O(e, t) {
     var n;
@@ -64,27 +68,27 @@ function O(e, t) {
         u = [],
         f = [s, l],
         _ = [];
-    e.isGuildVocal() && f.push('!'.concat(l));
+    e.isGuildVocal() && f.push("!".concat(l));
     let p = a.Z.getChannel(e.parent_id);
     if (null != p) {
         let e = (0, o.F6)(p, d.default, c.Z, !0),
             t = (0, o.F6)(p, d.default, c.Z, !1);
-        (_.push(e), _.push(t), u.push(e));
+        _.push(e), _.push(t), u.push(e);
     }
     null != t && (_.push(t.name), u.push(t.name));
-    let m = s + (u.length > 0 ? ' ('.concat(u.join(', '), ')') : ''),
+    let m = s + (u.length > 0 ? " (".concat(u.join(", "), ")") : ""),
         g = h.Z5c.CHANNEL(null != (n = null == t ? void 0 : t.id) ? n : h.ME, e.id);
     return {
         id: g,
         relatedUniqueIdentifier: g,
-        type: 'url',
+        type: "url",
         title: m,
         displayName: m,
         thumbnailURL: y((0, i.x)(e, 128, !1)),
         rankingHint: e.type === h.d4z.DM ? 75 : 50,
         keywords: _,
         alternateNames: f,
-        isUpdate: r
+        isUpdate: r,
     };
 }
 function v(e) {
@@ -93,8 +97,8 @@ function v(e) {
               f.ZP.getGuildIconURL({
                   id: e.id,
                   icon: e.icon,
-                  size: 128
-              })
+                  size: 128,
+              }),
           )
         : void 0;
 }
@@ -106,12 +110,12 @@ function I(e) {
             {
                 id: r,
                 relatedUniqueIdentifier: r,
-                type: 'url',
+                type: "url",
                 title: e.name,
                 displayName: e.name,
-                alternateNames: ['*'.concat(e.name)],
-                rankingHint: 100
-            }
+                alternateNames: ["*".concat(e.name)],
+                rankingHint: 100,
+            },
         ],
         o = a.Z.getMutableGuildChannelsForGuild(e.id);
     for (let n in o) {
@@ -123,7 +127,7 @@ function I(e) {
         id: e.id,
         items: i,
         defaultThumbnailURL: n,
-        isUpdate: t
+        isUpdate: t,
     };
 }
 function T(e) {
@@ -131,16 +135,16 @@ function T(e) {
     let t = null != e ? a.Z.getChannel(e) : void 0;
     if (null == t) return void _.Z.resignActivity();
     let n = s.Z.getGuild(t.guild_id),
-        r = (0, o.F6)(t, d.default, c.Z, !0) + (null != n ? ' ('.concat(n.name, ')') : ''),
+        r = (0, o.F6)(t, d.default, c.Z, !0) + (null != n ? " (".concat(n.name, ")") : ""),
         i = h.Z5c.CHANNEL(t.guild_id, t.id),
         l = {
-            webpageURL: ''.concat(h.yXt.BASE_URL).concat(i),
+            webpageURL: "".concat(h.yXt.BASE_URL).concat(i),
             relatedUniqueIdentifier: i,
             eligibleForHandoff: !0,
             eligibleForSearch: !0,
             title: r,
             displayName: r,
-            type: 'com.discord.view-channel'
+            type: "com.discord.view-channel",
         };
     _.Z.setActivity(l);
 }
@@ -153,11 +157,11 @@ function S() {
         let r = n[e];
         t.push(O(r));
     }
-    (e.push({
+    e.push({
         id: h.ME,
-        items: t
+        items: t,
     }),
-        _.Z.indexDomains(e));
+        _.Z.indexDomains(e);
 }
 function A(e) {
     let t = a.Z.getDMChannelFromUserId(e);
@@ -179,19 +183,19 @@ function N(e) {
             else {
                 let i = v(e),
                     o = [a];
-                (t.push({
+                t.push({
                     id: n,
                     items: o,
-                    defaultThumbnailURL: i
+                    defaultThumbnailURL: i,
                 }),
-                    (r[n] = o));
+                    (r[n] = o);
             }
         } else n.push(o.id);
-    (t.length > 0 && _.Z.indexDomains(t), n.length > 0 && _.Z.deleteSearchItems(n));
+    t.length > 0 && _.Z.indexDomains(t), n.length > 0 && _.Z.deleteSearchItems(n);
 }
 class C extends r.Z {
     handleInit() {
-        (T(u.Z.getCurrentlySelectedChannelId()), E() && _.Z.clearSearchIndex(), g() && S());
+        T(u.Z.getCurrentlySelectedChannelId()), E() && _.Z.clearSearchIndex(), g() && S();
     }
     handleLogout() {
         E() && _.Z.clearSearchIndex();
@@ -211,8 +215,8 @@ class C extends r.Z {
             {
                 id: null != (t = null == r ? void 0 : r.id) ? t : h.ME,
                 items: [O(n, r)],
-                defaultThumbnailURL: i
-            }
+                defaultThumbnailURL: i,
+            },
         ]);
     }
     handleChannelDelete(e) {
@@ -227,7 +231,7 @@ class C extends r.Z {
         let { guild: t, type: n } = e;
         if (g()) {
             let e = s.Z.getGuild(t.id);
-            null != e ? _.Z.indexDomains([I(e, 'GUILD_UPDATE' === n)]) : _.Z.deleteSearchDomains([t.id]);
+            null != e ? _.Z.indexDomains([I(e, "GUILD_UPDATE" === n)]) : _.Z.deleteSearchDomains([t.id]);
         }
     }
     handleGuildDelete(e) {
@@ -247,8 +251,8 @@ class C extends r.Z {
         A(t.id);
     }
     constructor(...e) {
-        (super(...e),
-            m(this, 'actions', {
+        super(...e),
+            m(this, "actions", {
                 POST_CONNECTION_OPEN: this.handleInit,
                 LOGOUT: this.handleLogout,
                 CHANNEL_SELECT: this.handleChannelSelect,
@@ -264,8 +268,8 @@ class C extends r.Z {
                 THREAD_CREATE: this.handleChannelCreate,
                 THREAD_DELETE: this.handleChannelDelete,
                 THREAD_UPDATE: this.handleThreadUpdate,
-                USER_UPDATE: this.handleUserUpdate
-            }));
+                USER_UPDATE: this.handleUserUpdate,
+            });
     }
 }
 let R = new C();

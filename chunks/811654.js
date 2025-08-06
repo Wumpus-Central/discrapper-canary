@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     HI: () => h,
     _H: () => m,
     af: () => g,
-    tx: () => E
+    tx: () => E,
 }),
-    n(388685));
+    n(388685);
 var r = n(524846),
     i = n(911969),
     o = n(592125),
@@ -34,7 +34,7 @@ function m(e, t, n) {
             includeAllGuildUsers: !0,
             includeNonMentionableRoles: !0,
             checkRecentlyTalkedOnEmptyQuery: !1,
-            limit: p
+            limit: p,
         });
     return [
         ...l.map((e) => {
@@ -43,14 +43,14 @@ function m(e, t, n) {
             return {
                 type: _.tM.USER,
                 value: e.user.id,
-                label: null != (t = null != i ? i : e.user.globalName) ? t : e.user.username
+                label: null != (t = null != i ? i : e.user.globalName) ? t : e.user.username,
             };
         }),
         ...c.map((e) => ({
             type: _.tM.ROLE,
             value: e.id,
-            label: e.name
-        }))
+            label: e.name,
+        })),
     ];
 }
 function g(e, t, n) {
@@ -61,11 +61,11 @@ function g(e, t, n) {
               query: e,
               channel: r,
               channelTypes: n,
-              limit: p
+              limit: p,
           }).channels.map((e) => ({
               type: _.tM.CHANNEL,
               value: e.id,
-              label: e.name
+              label: e.name,
           }));
 }
 function E(e, t) {
@@ -83,7 +83,7 @@ function E(e, t) {
                     return {
                         type: _.tM.USER,
                         value: n.id,
-                        label: null != (t = null != r ? r : n.globalName) ? t : n.username
+                        label: null != (t = null != r ? r : n.globalName) ? t : n.username,
                     };
                 }
                 case r.$.ROLE: {
@@ -93,7 +93,7 @@ function E(e, t) {
                     return {
                         type: _.tM.ROLE,
                         value: t.id,
-                        label: t.name
+                        label: t.name,
                     };
                 }
                 case r.$.CHANNEL: {
@@ -103,7 +103,7 @@ function E(e, t) {
                     return {
                         type: _.tM.CHANNEL,
                         value: t.id,
-                        label: t.name
+                        label: t.name,
                     };
                 }
             }

@@ -25,18 +25,18 @@ function O(e) {
         u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
         m = _.intl.formatToPlainString(_.t.tuMUJy, {
             emojiName: null == n ? void 0 : n.emojiName,
-            soundName: null == n ? void 0 : n.name
+            soundName: null == n ? void 0 : n.name,
         }),
         h = i.useCallback(() => {
-            (x.default.track(b.rMx.MODERATOR_QUEUE_ACTION, {
+            x.default.track(b.rMx.MODERATOR_QUEUE_ACTION, {
                 guild_id: f.Z.getGuildId(),
-                action: 'airhorn'
+                action: "airhorn",
             }),
-                null != l && l());
+                null != l && l();
         }, [l]);
     return (0, r.jsxs)(o.P3F, {
-        'aria-label': m,
-        tag: 'span',
+        "aria-label": m,
+        tag: "span",
         onClick: h,
         className: a()(y.inlineContainer, y.inlineButton, { [y.playing]: !0 === s }, t),
         children: [
@@ -44,10 +44,10 @@ function O(e) {
                 (0, r.jsx)(c.Z, {
                     emojiId: null == n ? void 0 : n.emojiId,
                     emojiName: null == n ? void 0 : n.emojiName,
-                    className: y.soundmojiEmoji
+                    className: y.soundmojiEmoji,
                 }),
-            (0, r.jsx)('span', { children: ' '.concat(d, ' ') })
-        ]
+            (0, r.jsx)("span", { children: " ".concat(d, " ") }),
+        ],
     });
 }
 function w(e) {
@@ -55,7 +55,7 @@ function w(e) {
         l = i.useRef(null),
         a = (0, s.e7)([g.Z], () => {
             var e;
-            return null == (e = g.Z.getSoundsForGuild(v.X8)) ? void 0 : e.find((e) => 'airhorn' === e.name);
+            return null == (e = g.Z.getSoundsForGuild(v.X8)) ? void 0 : e.find((e) => "airhorn" === e.name);
         }),
         { createMultipleConfettiAt: o } = i.useContext(m.h),
         c = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -70,7 +70,7 @@ function w(e) {
                 let e = t.current.getBoundingClientRect(),
                     n = {
                         x: e.left + e.width / 2,
-                        y: e.top + e.height / 3
+                        y: e.top + e.height / 3,
                     },
                     r = j.CA[Math.floor(Math.random() * j.CA.length)];
                 o(
@@ -78,19 +78,19 @@ function w(e) {
                     n.y,
                     {
                         velocity: {
-                            type: 'static-random',
+                            type: "static-random",
                             minValue: {
                                 x: -500,
-                                y: -500
+                                y: -500,
                             },
                             maxValue: {
                                 x: 500,
-                                y: -100
-                            }
-                        }
+                                y: -100,
+                            },
+                        },
                     },
                     40,
-                    { sprite: r }
+                    { sprite: r },
                 );
             }
         }
@@ -101,51 +101,51 @@ function w(e) {
               sound: a,
               playSound: b,
               isPlaying: f,
-              text: n
+              text: n,
           });
 }
 function P() {
     let e = i.useRef(null);
     return (0, r.jsxs)(o.Kqy, {
         className: y.container,
-        direction: 'vertical',
-        align: 'center',
-        justify: 'center',
+        direction: "vertical",
+        align: "center",
+        justify: "center",
         padding: {
             top: 24,
-            bottom: 24
+            bottom: 24,
         },
         ref: e,
         children: [
             (0, r.jsx)(o.l22, {
-                size: 'custom',
+                size: "custom",
                 width: 48,
-                height: 48
+                height: 48,
             }),
             (0, r.jsxs)(o.Kqy, {
-                direction: 'vertical',
-                align: 'center',
-                justify: 'center',
+                direction: "vertical",
+                align: "center",
+                justify: "center",
                 children: [
                     (0, r.jsx)(o.X6q, {
                         className: y.header,
-                        variant: 'heading-md/medium',
-                        children: _.intl.string(C.default.h6QNk5)
+                        variant: "heading-md/medium",
+                        children: _.intl.string(C.default.h6QNk5),
                     }),
                     (0, r.jsx)(o.Text, {
                         className: y.text,
-                        variant: 'text-md/medium',
-                        color: 'text-secondary',
-                        children: _.intl.format(C.default['8N4c5+'], {
+                        variant: "text-md/medium",
+                        color: "text-secondary",
+                        children: _.intl.format(C.default["8N4c5+"], {
                             airhornHook: (t) =>
                                 (0, r.jsx)(w, {
                                     containerRef: e,
-                                    text: t
-                                })
-                        })
-                    })
-                ]
-            })
-        ]
+                                    text: t,
+                                }),
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

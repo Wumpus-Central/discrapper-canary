@@ -14,13 +14,13 @@ function d(t) {
     if ((t.isArchivedThread() ? u : d) && !e)
         return (null == (n = t.threadMetadata) ? void 0 : n.archived)
             ? (0, i.jsx)(a.sNh, {
-                  id: 'unarchive-thread',
+                  id: "unarchive-thread",
                   label: t.isForumPost() ? s.intl.string(s.t.cnRubW) : s.intl.string(s.t.S9E4Gx),
-                  action: () => r.Z.unarchiveThread(t, !1)
+                  action: () => r.Z.unarchiveThread(t, !1),
               })
             : (0, i.jsx)(a.sNh, {
-                  id: 'archive-thread',
+                  id: "archive-thread",
                   label: t.isForumPost() ? s.intl.string(s.t.BTs4KS) : s.intl.string(s.t.wiIevb),
-                  action: () => r.Z.archiveThread(t, !1)
+                  action: () => r.Z.archiveThread(t, !1),
               });
 }

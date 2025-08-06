@@ -14,25 +14,25 @@ var i = n(255367),
     x = n(388032),
     p = n(721802);
 function v(e) {
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: p.sectionHeader,
         children: (0, i.jsx)(a.X6q, {
-            variant: 'text-xs/bold',
+            variant: "text-xs/bold",
             className: p.sectionHeaderTitle,
-            color: 'text-muted',
-            children: e.title
-        })
+            color: "text-muted",
+            children: e.title,
+        }),
     });
 }
 function j(e) {
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         children: [
             null != e.title && (0, i.jsx)(v, { title: e.title }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: r()(p.sectionContent, { [p.sectionContentPadding]: !0 !== e.noPadding }),
-                children: e.children
-            })
-        ]
+                children: e.children,
+            }),
+        ],
     });
 }
 function S(e) {
@@ -40,27 +40,27 @@ function S(e) {
     return (0, i.jsxs)(a.xBx, {
         className: p.header,
         children: [
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: p.headerLeft,
                 children: [
                     (0, i.jsx)(a.Dkj, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: p.headerBell
+                        size: "md",
+                        color: "currentColor",
+                        className: p.headerBell,
                     }),
                     (0, i.jsx)(a.X6q, {
-                        variant: 'heading-lg/semibold',
-                        children: x.intl.string(x.t.h850Sk)
-                    })
-                ]
+                        variant: "heading-lg/semibold",
+                        children: x.intl.string(x.t.h850Sk),
+                    }),
+                ],
             }),
-            (0, i.jsx)(a.olH, { onClick: t })
-        ]
+            (0, i.jsx)(a.olH, { onClick: t }),
+        ],
     });
 }
 function N(e) {
     let t = s.useRef(null),
-        n = d.Y.useExperiment({ location: 'notification_settings_modal_redesign' }, { autoTrackExposure: !0 }).enabled,
+        n = d.Y.useExperiment({ location: "notification_settings_modal_redesign" }, { autoTrackExposure: !0 }).enabled,
         l = s.useRef(null);
     return (
         (0, o.Ng)(() => {
@@ -71,7 +71,7 @@ function N(e) {
                     t.current.scrollIntoViewNode({
                         node: l.current,
                         shouldScrollToStart: !0,
-                        padding: 40
+                        padding: 40,
                     });
             }, 1000);
             return () => clearTimeout(n);
@@ -79,8 +79,8 @@ function N(e) {
         (0, i.jsxs)(a.Y0X, {
             size: a.CgR.MEDIUM,
             transitionState: e.transitionState,
-            'aria-label': x.intl.string(x.t.h850Sk),
-            parentComponent: 'NotificationSettingsModalRedesign',
+            "aria-label": x.intl.string(x.t.h850Sk),
+            parentComponent: "NotificationSettingsModalRedesign",
             children: [
                 (0, i.jsx)(S, { onClose: e.onClose }),
                 (0, i.jsxs)(a.hzk, {
@@ -89,21 +89,21 @@ function N(e) {
                     children: [
                         (0, i.jsx)(j, { children: (0, i.jsx)(g.Z, { guildId: e.guildId }) }),
                         (0, i.jsx)(j, {
-                            title: x.intl.string(x.t['R9Ej9/']),
+                            title: x.intl.string(x.t["R9Ej9/"]),
                             noPadding: !0,
-                            children: (0, i.jsx)(m.Z, { guildId: e.guildId })
+                            children: (0, i.jsx)(m.Z, { guildId: e.guildId }),
                         }),
                         n &&
                             (0, i.jsx)(j, {
                                 children: (0, i.jsx)(c.Z, {
                                     onClose: e.onClose,
                                     guildId: e.guildId,
-                                    isRedesign: !0
-                                })
+                                    isRedesign: !0,
+                                }),
                             }),
                         (0, i.jsx)(j, {
-                            title: x.intl.string(x.t['31DySk']),
-                            children: (0, i.jsx)(u.Z, { guildId: e.guildId })
+                            title: x.intl.string(x.t["31DySk"]),
+                            children: (0, i.jsx)(u.Z, { guildId: e.guildId }),
                         }),
                         (0, i.jsx)(v, { title: x.intl.string(x.t.JrySi4) }),
                         (0, i.jsx)(h.Z, {
@@ -111,11 +111,11 @@ function N(e) {
                             requestScrollToBottom: () => {
                                 null != t && null != t.current && t.current.scrollToBottom({ animate: !0 });
                             },
-                            ref: l
-                        })
-                    ]
-                })
-            ]
+                            ref: l,
+                        }),
+                    ],
+                }),
+            ],
         })
     );
 }

@@ -12,17 +12,17 @@ function c(e) {
         d = c(u),
         f = s.intl.format(s.t.tv2DNz, {
             username: u.nick,
-            usernameHook: d
+            usernameHook: d,
         });
     return (0, r.jsx)(a.Z, {
         className: l.stageSystemMessage,
         iconNode: (0, r.jsx)(i.V9, {
-            size: 'md',
-            color: 'currentColor'
+            size: "md",
+            color: "currentColor",
         }),
         iconContainerClassName: l.iconContainer,
         timestamp: t.timestamp,
         compact: n,
-        children: f
+        children: f,
     });
 }

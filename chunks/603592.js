@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,18 +11,35 @@ var r = n(255367),
     h = n(329922);
 let p = i.forwardRef(function (e, t) {
     var n, l;
-    let { id: p, onClick: f, onContextMenu: g, icon: m, selected: b, tooltip: O, upperBadge: _, lowerBadge: y, lowerBadgeSize: C, showPill: v = !0, className: j, 'aria-label': E, children: S, onMouseEnter: x, onMouseLeave: I, onMouseDown: P } = e,
+    let {
+            id: p,
+            onClick: f,
+            onContextMenu: g,
+            icon: m,
+            selected: b,
+            tooltip: O,
+            upperBadge: _,
+            lowerBadge: y,
+            lowerBadgeSize: C,
+            showPill: v = !0,
+            className: j,
+            "aria-label": E,
+            children: S,
+            onMouseEnter: x,
+            onMouseLeave: I,
+            onMouseDown: P,
+        } = e,
         N = (0, s.Ie)(p),
         [w, Z] = i.useState(!1);
     return (0, r.jsxs)(u.H, {
         children: [
             v
-                ? (0, r.jsx)('div', {
+                ? (0, r.jsx)("div", {
                       className: h.pill,
                       children: (0, r.jsx)(c.Z, {
                           hovered: w,
-                          selected: b
-                      })
+                          selected: b,
+                      }),
                   })
                 : null,
             (0, r.jsx)(d.Z, {
@@ -39,44 +56,44 @@ let p = i.forwardRef(function (e, t) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })(
                             {
                                 innerRef: t,
                                 onMouseEnter: () => {
-                                    (null == x || x(), Z(!0));
+                                    null == x || x(), Z(!0);
                                 },
                                 onMouseLeave: () => {
-                                    (null == I || I(), Z(!1));
+                                    null == I || I(), Z(!1);
                                 },
                                 onMouseDown: P,
                                 className: o()(h.circleIconButton, j, { [h.selected]: b || w }),
                                 onClick: f,
-                                'aria-label': 'string' == typeof O && null == E ? O : E,
-                                'aria-selected': b,
+                                "aria-label": "string" == typeof O && null == E ? O : E,
+                                "aria-selected": b,
                                 onContextMenu: g,
-                                focusProps: { enabled: !1 }
+                                focusProps: { enabled: !1 },
                             },
-                            N
+                            N,
                         )),
                         (l = l =
                             {
@@ -84,8 +101,8 @@ let p = i.forwardRef(function (e, t) {
                                     null != m &&
                                     (0, r.jsx)(m, {
                                         className: h.circleIcon,
-                                        color: 'currentColor'
-                                    })
+                                        color: "currentColor",
+                                    }),
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -99,11 +116,11 @@ let p = i.forwardRef(function (e, t) {
                               })(Object(l)).forEach(function (e) {
                                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        n)
-                    )
-                })
+                        n),
+                    ),
+                }),
             }),
-            S
-        ]
+            S,
+        ],
     });
 });

@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     UT: () => O,
     _4: () => f,
     cm: () => x,
@@ -6,11 +6,11 @@
     eg: () => _,
     lJ: () => b,
     rY: () => v,
-    uo: () => y
+    uo: () => y,
 }),
     n(539854),
     n(388685),
-    n(781311));
+    n(781311);
 var r = n(73800),
     i = n(658722),
     l = n.n(i),
@@ -27,22 +27,18 @@ var r = n(73800),
 let f = 50,
     x = 1000;
 function b(e, t) {
-    let n = (0, a.Wu)(
-            [s.ZP],
-            () => {
-                let n = s.ZP.getMembers(e);
-                return null == t ? n : n.filter(t);
-            },
-            [e, t]
-        ),
+    let n = (0, a.Wu)([s.ZP], () => {
+            let n = s.ZP.getMembers(e);
+            return null == t ? n : n.filter(t);
+        }, [e, t]),
         i = (0, a.cj)(
             [o.default],
             () =>
                 n.reduce((e, t) => {
                     let n = o.default.getUser(t.userId);
-                    return (null == n || (e[t.userId] = n), e);
+                    return null == n || (e[t.userId] = n), e;
                 }, {}),
-            [n]
+            [n],
         );
     return r.useMemo(() => {
         let t = [];
@@ -60,7 +56,7 @@ function b(e, t) {
                     verifiedBot: n.isVerifiedBot(),
                     roles: l.roles,
                     key: l.userId,
-                    user: n
+                    user: n,
                 });
         }
         return t;
@@ -77,14 +73,17 @@ function j(e, t, n) {
         }, [e, t]),
         b(
             e,
-            r.useCallback((e) => e.roles.includes(t), [t])
+            r.useCallback((e) => e.roles.includes(t), [t]),
         )
     );
 }
 function v(e, t) {
     let n = r.useRef(!1);
     r.useEffect(() => {
-        (u.Z.requestMembers(e, t, 200), '' === t || n.current || (c.default.track(h.rMx.SEARCH_STARTED, { search_type: 'Role Members' }), (n.current = !0)));
+        u.Z.requestMembers(e, t, 200),
+            "" === t ||
+                n.current ||
+                (c.default.track(h.rMx.SEARCH_STARTED, { search_type: "Role Members" }), (n.current = !0));
     }, [e, t]);
 }
 function _(e, t) {
@@ -94,17 +93,17 @@ function _(e, t) {
 function O(e) {
     switch (e) {
         case p.ZI.MEMBERS:
-            return 'Members';
+            return "Members";
         case p.ZI.PERMISSIONS:
-            return 'Permissions';
+            return "Permissions";
         case p.ZI.DISPLAY:
-            return 'Role Settings';
+            return "Role Settings";
         case p.ZI.VERIFICATIONS:
-            return 'Connections';
+            return "Connections";
         default:
             (0, d.vE)(e);
     }
 }
 function y(e, t) {
-    return '' === t || e.name.toLowerCase().includes(t.toLowerCase());
+    return "" === t || e.name.toLowerCase().includes(t.toLowerCase());
 }

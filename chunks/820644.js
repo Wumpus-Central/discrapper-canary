@@ -8,16 +8,16 @@ var i = n(120356),
     l = n(986449);
 function c(e) {
     let { text: t } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(l.toast, s.toast),
         children: [
             (0, r.jsx)(a.b7C, { color: a.TVs.colors.TEXT_BRAND }),
             (0, r.jsx)(a.Text, {
                 className: l.__invalid_content,
-                color: 'header-primary',
-                variant: 'text-md/normal',
-                children: t
-            })
-        ]
+                color: "header-primary",
+                variant: "text-md/normal",
+                children: t,
+            }),
+        ],
     });
 }

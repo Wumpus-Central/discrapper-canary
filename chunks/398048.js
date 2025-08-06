@@ -11,11 +11,11 @@ function u(e, t) {
     return __OVERLAY__ || !u
         ? null
         : (0, r.jsx)(l.sNh, {
-              id: 'clone-channel',
+              id: "clone-channel",
               label: a.intl.string(a.t.dEaPc3),
               action: () =>
                   (0, l.ZDy)(async () => {
-                      let { default: c } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                      let { default: c } = await Promise.all([n.e("45094"), n.e("45822")]).then(n.bind(n, 218613));
                       return (n) => {
                           var l, i;
                           return (0, r.jsx)(
@@ -24,24 +24,24 @@ function u(e, t) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           r.forEach(function (t) {
                                               var r;
-                                              ((r = n[t]),
+                                              (r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: r,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = r));
-                                          }));
+                                                      : (e[t] = r);
+                                          });
                                   }
                                   return e;
                               })({}, n)),
@@ -50,7 +50,7 @@ function u(e, t) {
                                       channelType: e.type,
                                       guildId: t.id,
                                       categoryId: e.parent_id,
-                                      cloneChannelId: e.id
+                                      cloneChannelId: e.id,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
@@ -64,9 +64,9 @@ function u(e, t) {
                                     })(Object(i)).forEach(function (e) {
                                         Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                                     }),
-                              l)
+                              l),
                           );
                       };
-                  })
+                  }),
           });
 }

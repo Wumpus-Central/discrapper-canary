@@ -8,10 +8,10 @@ function c(e) {
     let { onClose: n, onSelect: t, application: c, channelId: u } = e,
         s = (0, i.Z)(c, u, l.IlC.POPOUT);
     return (0, r.jsx)(o.v2r, {
-        navId: 'activity-popout-overflow-popout',
+        navId: "activity-popout-overflow-popout",
         onClose: n,
         onSelect: t,
-        'aria-label': a.intl.string(a.t.SS9Y6O),
-        children: s
+        "aria-label": a.intl.string(a.t.SS9Y6O),
+        children: s,
     });
 }

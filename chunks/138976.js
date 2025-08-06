@@ -3,7 +3,7 @@ var i = n(904245),
     r = n(306680),
     s = n(944486);
 let a = {
-    binds: ['shift+pageup'],
+    binds: ["shift+pageup"],
     comboKeysBindGlobal: !0,
     action() {
         let e = s.Z.getChannelId();
@@ -15,9 +15,9 @@ let a = {
                     channelId: e,
                     messageId: t,
                     offset: 1,
-                    context: 'Keyboard Shortcut'
+                    context: "Keyboard Shortcut",
                 });
         }
         return !1;
-    }
+    },
 };

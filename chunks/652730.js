@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,5 +30,5 @@ class d extends (r = i.ZP.Store) {
         return c === e;
     }
 }
-s(d, 'displayName', 'LurkerModePopoutStore');
+s(d, "displayName", "LurkerModePopoutStore");
 let f = new d(o.Z);

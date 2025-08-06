@@ -7,7 +7,7 @@ function o(e, t, n, r) {
     return !!t && ((o = r ? r(o) : o), i.contains(o, t));
 }
 function a(e) {
-    return 'Windows' === r.platformName ? e.replace(/^\s*NT/, '') : e;
+    return "Windows" === r.platformName ? e.replace(/^\s*NT/, "") : e;
 }
 e.exports = n(267100)(
     {
@@ -28,7 +28,7 @@ e.exports = n(267100)(
         },
         isPlatformArchitecture: function (e) {
             return o(r.platformArchitecture, null, e);
-        }
+        },
     },
-    n(746154)
+    n(746154),
 );

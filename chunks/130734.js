@@ -10,7 +10,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,7 +50,7 @@ function c(e, t) {
         e
     );
 }
-let u = 'hasSeenGuildTemplatePromotionTooltip',
+let u = "hasSeenGuildTemplatePromotionTooltip",
     d = {},
     p = !0 === l.K.get(u);
 function h(e) {
@@ -66,18 +66,18 @@ class f extends (r = i.ZP.Store) {
         return !p;
     }
 }
-o(f, 'displayName', 'GuildTemplateTooltipStore');
+o(f, "displayName", "GuildTemplateTooltipStore");
 let g = new f(a.Z, {
     GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH: function (e) {
         let { guildTemplate: t } = e;
         d = c(s({}, d), { [t.source_guild_id]: t.is_dirty || !1 });
     },
     GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE: function () {
-        (l.K.set(u, !0), (p = !0));
+        l.K.set(u, !0), (p = !0);
     },
     GUILD_TEMPLATE_SYNC_SUCCESS: function (e) {
         d = c(s({}, d), { [e.guildTemplate.source_guild_id]: !1 });
     },
     GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE: h,
-    GUILD_TEMPLATE_DELETE_SUCCESS: h
+    GUILD_TEMPLATE_DELETE_SUCCESS: h,
 });

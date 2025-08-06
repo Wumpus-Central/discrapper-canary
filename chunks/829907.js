@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     DH: () => C,
     H8: () => A,
     HD: () => f,
@@ -9,9 +9,9 @@
     hj: () => T,
     qT: () => P,
     qc: () => S,
-    sS: () => g
+    sS: () => g,
 }),
-    n(388685));
+    n(388685);
 var r = n(593472),
     i = n(710845),
     o = n(594190),
@@ -20,7 +20,7 @@ var r = n(593472),
     l = n(41534),
     c = n(837268),
     u = n(32300);
-let d = new i.Z('OverlayRenderUtils'),
+let d = new i.Z("OverlayRenderUtils"),
     f = 5000;
 function _(e) {
     return (0, u.hS)(e).longTimeout;
@@ -32,10 +32,16 @@ function h(e) {
     let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.ZP],
         n = t.getGameForPID(e);
     try {
-        return null == n ? s.ZP.GetWindowFullscreenTypeByPid(e) : s.ZP.GetWindowFullscreenTypeByPid(n.pid, n.name, n.fullscreenType);
+        return null == n
+            ? s.ZP.GetWindowFullscreenTypeByPid(e)
+            : s.ZP.GetWindowFullscreenTypeByPid(n.pid, n.name, n.fullscreenType);
     } catch (t) {
         var i;
-        return (d.error('Error getting overlay fullscreen type for pid '.concat(e, ': ').concat(t)), (0, l.D1)(t, c.gl.OutOfProcess), null != (i = null == n ? void 0 : n.fullscreenType) ? i : r.Jx.UNKNOWN);
+        return (
+            d.error("Error getting overlay fullscreen type for pid ".concat(e, ": ").concat(t)),
+            (0, l.D1)(t, c.gl.OutOfProcess),
+            null != (i = null == n ? void 0 : n.fullscreenType) ? i : r.Jx.UNKNOWN
+        );
     }
 }
 function m(e) {
@@ -50,37 +56,37 @@ function m(e) {
 function g(e) {
     switch (e) {
         case r.Jx.BORDERLESS_FULLSCREEN:
-            return 'Borderless Fullscreen';
+            return "Borderless Fullscreen";
         case r.Jx.FULLSCREEN:
-            return 'Fullscreen';
+            return "Fullscreen";
         case r.Jx.WINDOWED:
-            return 'Windowed';
+            return "Windowed";
         case r.Jx.MINIMIZED:
-            return 'Minimized';
+            return "Minimized";
         case r.Jx.MAXIMIZED:
-            return 'Maximized';
+            return "Maximized";
         case r.Jx.UNKNOWN:
-            return 'Unknown';
+            return "Unknown";
     }
 }
 function E(e) {
     switch (e) {
         case c.gl.OutOfProcess:
-            return 'Out of Process';
+            return "Out of Process";
         case c.gl.OutOfProcessLimitedInteraction:
-            return 'Out of Process (Limited Interaction)';
+            return "Out of Process (Limited Interaction)";
         case c.gl.Hook:
-            return 'Hook';
+            return "Hook";
         case c.gl.Disabled:
-            return 'Disabled';
+            return "Disabled";
     }
 }
 function b(e, t) {
     let { quns: n } = s.ZP.GetWindowFullscreenTypeExtraByPid(e, t.name);
-    return (d.info('QUNS for '.concat(t.name, ': ').concat(n)), n === r.Ng.QUNS_RUNNING_D3D_FULL_SCREEN);
+    return d.info("QUNS for ".concat(t.name, ": ").concat(n)), n === r.Ng.QUNS_RUNNING_D3D_FULL_SCREEN;
 }
-let y = { '1314682894106497096': (e, t, n) => (b(e, t) ? r.Jx.FULLSCREEN : n) },
-    O = new Set(['762434991303950386', '367827983903490050', '1124351860376096858']),
+let y = { "1314682894106497096": (e, t, n) => (b(e, t) ? r.Jx.FULLSCREEN : n) },
+    O = new Set(["762434991303950386", "367827983903490050", "1124351860376096858"]),
     v = 16,
     I = !0;
 async function T(e) {
@@ -131,7 +137,7 @@ function P(e) {
               source: c.d0.DEFAULT,
               enabledOOP: !1,
               enabledLegacy: !1,
-              overlayMethod: c.gl.Disabled
+              overlayMethod: c.gl.Disabled,
           }
         : (0, o.b6)(e, I);
 }

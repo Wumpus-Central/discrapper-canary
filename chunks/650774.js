@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -35,10 +35,10 @@ let l = {},
     c = {};
 function u(e) {
     let { guilds: t } = e;
-    ((l = {}),
+    (l = {}),
         t.forEach((e) => {
             l[e.id] = e.member_count;
-        }));
+        });
 }
 function d(e) {
     l = s({}, e.guildMemberCounts);
@@ -50,12 +50,12 @@ function f(e) {
 function _(e) {
     let { guild: t } = e;
     if (null == l[t.id] && null == c[t.id]) return !1;
-    (delete l[t.id], delete c[t.id]);
+    delete l[t.id], delete c[t.id];
 }
 function p(e) {
     let { guildId: t, memberCount: n, onlineCount: r } = e,
         i = !1;
-    return (l[t] !== n && ((l[t] = n), (i = !0)), c[t] !== r && ((c[t] = r), (i = !0)), i);
+    return l[t] !== n && ((l[t] = n), (i = !0)), c[t] !== r && ((c[t] = r), (i = !0)), i;
 }
 function h(e) {
     let { invite: t } = e,
@@ -79,7 +79,7 @@ class g extends (r = i.ZP.Store) {
         return null != e ? c[e] : null;
     }
 }
-a(g, 'displayName', 'GuildMemberCountStore');
+a(g, "displayName", "GuildMemberCountStore");
 let E = new g(o.Z, {
     CONNECTION_OPEN: u,
     OVERLAY_INITIALIZE: d,
@@ -88,5 +88,5 @@ let E = new g(o.Z, {
     GUILD_MEMBER_LIST_UPDATE: p,
     INVITE_ACCEPT_SUCCESS: h,
     INVITE_RESOLVE_SUCCESS: h,
-    ONLINE_GUILD_MEMBER_COUNT_UPDATE: m
+    ONLINE_GUILD_MEMBER_COUNT_UPDATE: m,
 });

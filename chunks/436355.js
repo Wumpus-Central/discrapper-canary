@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -68,28 +68,28 @@ function m(e) {
     let E = () => {
             null != f &&
                 (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e('36760').then(n.bind(n, 854360));
+                    let { default: e } = await n.e("36760").then(n.bind(n, 854360));
                     return (n) =>
                         (0, r.jsx)(
                             e,
                             h(_({}, n), {
                                 guildId: t.guild_id,
                                 user: f,
-                                modReportId: t.id
-                            })
+                                modReportId: t.id,
+                            }),
                         );
                 });
         },
-        b = g ? d.intl.string(u.default.Ux67nZ) : d.intl.string(u.default['snp/lJ']),
-        y = 'kick-user-'.concat(null == f ? void 0 : f.id);
+        b = g ? d.intl.string(u.default.Ux67nZ) : d.intl.string(u.default["snp/lJ"]),
+        y = "kick-user-".concat(null == f ? void 0 : f.id);
     return (0, r.jsx)(
         c.Z,
         {
             text: b,
             icon: o.I9k,
             onClick: E,
-            disabled: g
+            disabled: g,
         },
-        y
+        y,
     );
 }

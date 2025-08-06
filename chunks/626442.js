@@ -3,14 +3,14 @@ var r = n(73800),
     i = n(952683),
     o = n(116805);
 let a = (e) => {
-        let t = 'translate('.concat(e.x.toFixed(1), 'px, ').concat(e.y.toFixed(1), 'px)');
+        let t = "translate(".concat(e.x.toFixed(1), "px, ").concat(e.y.toFixed(1), "px)");
         return {
-            pointerEvents: 'none',
-            position: 'fixed',
+            pointerEvents: "none",
+            position: "fixed",
             top: 0,
             left: 0,
             transform: t,
-            WebkitTransform: t
+            WebkitTransform: t,
         };
     },
     s = () => {
@@ -20,7 +20,7 @@ let a = (e) => {
                 isDragging: t.isDragging(),
                 itemType: t.getItemType(),
                 item: t.getItem(),
-                monitor: t
+                monitor: t,
             }));
         return t.isDragging && null !== t.currentOffset
             ? {
@@ -29,7 +29,7 @@ let a = (e) => {
                   item: t.item,
                   style: a(t.currentOffset),
                   monitor: t.monitor,
-                  ref: e
+                  ref: e,
               }
             : { display: !1 };
     };

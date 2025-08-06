@@ -4,7 +4,7 @@ e.exports = function (e, t, n) {
         var c = r(o[i], a[i]);
         if (c) {
             if (i >= l) return c;
-            return c * ('desc' == n[i] ? -1 : 1);
+            return c * ("desc" == n[i] ? -1 : 1);
         }
     }
     return e.index - t.index;

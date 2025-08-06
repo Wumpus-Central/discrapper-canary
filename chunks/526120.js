@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     C3: () => E,
     Fg: () => g,
     Oh: () => y,
     cP: () => m,
-    gp: () => b
+    gp: () => b,
 }),
-    n(388685));
+    n(388685);
 var r = n(544891),
     i = n(570140),
     o = n(904245),
@@ -21,56 +21,56 @@ var r = n(544891),
     h = n(981631);
 let m = async (e) => {
         i.Z.dispatch({
-            type: 'GUILD_HOME_SETTINGS_FETCH_START',
-            guildId: e
+            type: "GUILD_HOME_SETTINGS_FETCH_START",
+            guildId: e,
         });
         try {
             let t = await r.tn.get({
                     url: h.ANM.GUILD_HOME_SETTINGS(e),
                     oldFormErrors: !0,
-                    rejectWithError: !0
+                    rejectWithError: !0,
                 }),
                 n = (0, _.tB)(t.body);
             return (
                 i.Z.dispatch({
-                    type: 'GUILD_HOME_SETTINGS_FETCH_SUCCESS',
+                    type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS",
                     guildId: e,
-                    homeSettings: n
+                    homeSettings: n,
                 }),
                 n
             );
         } catch (t) {
             i.Z.dispatch({
-                type: 'GUILD_HOME_SETTINGS_FETCH_FAIL',
-                guildId: e
+                type: "GUILD_HOME_SETTINGS_FETCH_FAIL",
+                guildId: e,
             });
         }
     },
     g = async (e) => {
         if (!s.Z.isFullServerPreview(e)) {
             i.Z.dispatch({
-                type: 'GUILD_NEW_MEMBER_ACTIONS_FETCH_START',
-                guildId: e
+                type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
+                guildId: e,
             });
             try {
                 let t = await r.tn.get({
                         url: h.ANM.GUILD_MEMBER_ACTIONS(e),
                         oldFormErrors: !0,
-                        rejectWithError: !0
+                        rejectWithError: !0,
                     }),
                     n = (0, _.rk)(t.body);
                 return (
                     i.Z.dispatch({
-                        type: 'GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS',
+                        type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS",
                         guildId: e,
-                        memberActions: n
+                        memberActions: n,
                     }),
                     n
                 );
             } catch (t) {
                 i.Z.dispatch({
-                    type: 'GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL',
-                    guildId: e
+                    type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL",
+                    guildId: e,
                 });
             }
         }
@@ -79,59 +79,59 @@ let m = async (e) => {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         if (
             (i.Z.dispatch({
-                type: 'SELECT_HOME_RESOURCE_CHANNEL',
+                type: "SELECT_HOME_RESOURCE_CHANNEL",
                 guildId: e,
-                channelId: t
+                channelId: t,
             }),
             null == t)
         )
             return;
         let r = c.Z.getChannel(t),
             _ = f.Z.getResourceForChannel(e, t);
-        (null == e ||
+        null == e ||
             s.Z.isFullServerPreview(e) ||
             null == r ||
             null == _ ||
             u.default.track(h.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
                 guild_id: e,
                 channel_id: r.id,
-                server_guide_channel_type: 'resource',
-                channel_action_type: -1
+                server_guide_channel_type: "resource",
+                channel_action_type: -1,
             }),
             n && (0, l.Kh)(t, { navigationReplace: !1 }),
             o.Z.jumpToMessage({
                 channelId: t,
                 messageId: d.default.castChannelIdAsMessageId(t),
                 flash: !1,
-                jumpType: a.SR.INSTANT
-            }));
+                jumpType: a.SR.INSTANT,
+            });
     },
     b = (e, t) => {
         i.Z.dispatch({
-            type: 'SELECT_NEW_MEMBER_ACTION_CHANNEL',
+            type: "SELECT_NEW_MEMBER_ACTION_CHANNEL",
             guildId: e,
-            channelId: t
+            channelId: t,
         });
         let n = c.Z.getChannel(t),
             r = f.Z.getActionForChannel(e, t);
-        (null == e ||
+        null == e ||
             s.Z.isFullServerPreview(e) ||
             null == n ||
             null == r ||
             u.default.track(h.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
                 guild_id: e,
                 channel_id: n.id,
-                server_guide_channel_type: 'member action',
-                channel_action_type: r.actionType
+                server_guide_channel_type: "member action",
+                channel_action_type: r.actionType,
             }),
-            (0, l.Kh)(t));
+            (0, l.Kh)(t);
     },
     y = (e, t) => {
         if (
             (i.Z.dispatch({
-                type: 'COMPLETE_NEW_MEMBER_ACTION',
+                type: "COMPLETE_NEW_MEMBER_ACTION",
                 guildId: e,
-                channelId: t
+                channelId: t,
             }),
             s.Z.isFullServerPreview(e))
         )
@@ -146,11 +146,11 @@ let m = async (e) => {
                 guild_id: n.guild_id,
                 channel_id: n.id,
                 channel_action_type: o.actionType,
-                has_completed_all: r.reduce((e, n) => e && t.includes(n.channelId), !0)
+                has_completed_all: r.reduce((e, n) => e && t.includes(n.channelId), !0),
             });
         }
         r.tn.post({
             url: h.ANM.GUILD_MEMBER_ACTION_UPDATE(e, t),
-            rejectWithError: !0
+            rejectWithError: !0,
         });
     };

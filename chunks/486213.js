@@ -10,7 +10,7 @@ let o = function () {
     return (0, i.jsx)(s.Z, {
         children: (0, i.jsx)(r.Z, {
             tips: t,
-            headerText: a.intl.string(a.t['0QSL1N'])
-        })
+            headerText: a.intl.string(a.t["0QSL1N"]),
+        }),
     });
 };

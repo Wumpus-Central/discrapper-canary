@@ -18,25 +18,25 @@ function u(e) {
         ? {
               color: i.Tt.GREEN,
               look: i.iL.FILLED,
-              text: c.intl.string(c.t.cYzxGh)
+              text: c.intl.string(c.t.cYzxGh),
           }
         : void 0;
     return (0, r.jsx)(l.Z, {
         header: c.intl.string(c.t.zT9Sxc),
         text: c.intl.formatToPlainString(c.t.OKqEAQ, {
             level: g,
-            numAdditional: (0, a.Je)(g)
+            numAdditional: (0, a.Je)(g),
         }),
-        headerColor: 'header-primary',
-        textColor: 'text-default',
+        headerColor: "header-primary",
+        textColor: "text-default",
         buttonProps: h,
         guild: t,
         analyticsLocation: {
             page: s.ZY5.GUILD_SETTINGS,
             section: s.jXE.GUILD_SETTINGS_SOUNDBOARD,
             object: s.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
-            objectType: (0, a.ge)(g)
+            objectType: (0, a.ge)(g),
         },
-        className: d.container
+        className: d.container,
     });
 }

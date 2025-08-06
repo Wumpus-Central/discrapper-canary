@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     FN: () => E,
     NE: () => c,
     NO: () => u,
@@ -16,9 +16,9 @@
     l7: () => g,
     md: () => p,
     qm: () => f,
-    yZ: () => v
+    yZ: () => v,
 }),
-    n(953529));
+    n(953529);
 var r = n(348327),
     i = n.n(r),
     o = n(388032);
@@ -29,7 +29,8 @@ function a(e, t) {
         i = s(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -39,7 +40,7 @@ function s(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let l = 100,
@@ -52,21 +53,25 @@ let l = 100,
     h = 5,
     m = 13;
 var g = (function (e) {
-        return ((e[(e.CUSTOMIZE = 0)] = 'CUSTOMIZE'), (e[(e.BROWSE = 1)] = 'BROWSE'), e);
+        return (e[(e.CUSTOMIZE = 0)] = "CUSTOMIZE"), (e[(e.BROWSE = 1)] = "BROWSE"), e;
     })({}),
     E = (function (e) {
-        return ((e[(e.MULTIPLE_CHOICE = 0)] = 'MULTIPLE_CHOICE'), (e[(e.DROPDOWN = 1)] = 'DROPDOWN'), e);
+        return (e[(e.MULTIPLE_CHOICE = 0)] = "MULTIPLE_CHOICE"), (e[(e.DROPDOWN = 1)] = "DROPDOWN"), e;
     })({}),
     b = (function (e) {
-        return ((e[(e.ONBOARDING_DEFAULT = 0)] = 'ONBOARDING_DEFAULT'), (e[(e.ONBOARDING_ADVANCED = 1)] = 'ONBOARDING_ADVANCED'), e);
+        return (
+            (e[(e.ONBOARDING_DEFAULT = 0)] = "ONBOARDING_DEFAULT"),
+            (e[(e.ONBOARDING_ADVANCED = 1)] = "ONBOARDING_ADVANCED"),
+            e
+        );
     })({});
 function y(e) {
     if (e.options.length > 0) return !1;
     let t = O(),
         { id: n } = t,
-        r = a(t, ['id']),
+        r = a(t, ["id"]),
         { id: o } = e,
-        s = a(e, ['id']);
+        s = a(e, ["id"]);
     return i()(r, s);
 }
 function O() {
@@ -77,18 +82,18 @@ function O() {
         singleSelect: !1,
         required: !1,
         inOnboarding: !0,
-        type: 0
+        type: 0,
     };
 }
 function v(e) {
     return {
         id: String(Date.now()),
-        title: '',
+        title: "",
         options: [],
         singleSelect: !1,
         required: !1,
         inOnboarding: e,
-        type: 0
+        type: 0,
     };
 }
 function I(e) {
@@ -105,7 +110,7 @@ function I(e) {
                 emoji_name: null == (n = e.emoji) ? void 0 : n.name,
                 emoji_animated: null == (r = e.emoji) ? void 0 : r.animated,
                 title: e.title,
-                description: e.description
+                description: e.description,
             };
         }),
         title: e.title,
@@ -113,7 +118,7 @@ function I(e) {
         disabled: e.disabled,
         required: e.required,
         in_onboarding: e.inOnboarding,
-        type: e.type
+        type: e.type,
     };
 }
 function T(e) {
@@ -127,7 +132,7 @@ function T(e) {
                 roleIds: e.role_ids,
                 emoji: e.emoji,
                 title: e.title,
-                description: null != (t = e.description) ? t : ''
+                description: null != (t = e.description) ? t : "",
             };
         }),
         title: e.title,
@@ -135,7 +140,7 @@ function T(e) {
         disabled: e.disabled,
         required: e.required,
         inOnboarding: e.in_onboarding,
-        type: e.type
+        type: e.type,
     };
 }
 function S(e) {
@@ -148,7 +153,7 @@ function S(e) {
         enabled: e.enabled,
         onboardingPromptsSeen: null != (n = e.onboarding_prompts_seen) ? n : {},
         onboardingResponsesSeen: null != (r = e.onboarding_responses_seen) ? r : {},
-        belowRequirements: e.below_requirements
+        belowRequirements: e.below_requirements,
     };
 }
 function A(e) {

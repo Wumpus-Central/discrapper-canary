@@ -1,7 +1,7 @@
 n.d(t, {
     dg: () => l,
     tX: () => u,
-    uu: () => c
+    uu: () => c,
 });
 var r = n(581883),
     i = n(594174),
@@ -13,7 +13,12 @@ function s(e) {
 function l() {
     var e, t, n, o;
     let s = (null == (e = i.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0,
-        l = null == (o = null == (n = r.Z.settings.privacy) || null == (t = n.inappropriateConversationWarnings) ? void 0 : t.value) || o;
+        l =
+            null ==
+                (o =
+                    null == (n = r.Z.settings.privacy) || null == (t = n.inappropriateConversationWarnings)
+                        ? void 0
+                        : t.value) || o;
     return ((0, a.Lm)() || s) && l;
 }
 function c(e) {

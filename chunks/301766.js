@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Q0: () => l,
     ZP: () => c,
-    kH: () => s
+    kH: () => s,
 }),
-    n(388685));
+    n(388685);
 var r = n(81825),
     i = n(474936);
 function o(e, t, n) {
@@ -13,7 +13,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,12 +31,12 @@ class a extends r.Z {
                         (t[n] = {
                             countryPrices: {
                                 countryCode: r.country_prices.country_code,
-                                prices: r.country_prices.prices.map((t) => s(t, e.tax_inclusive))
+                                prices: r.country_prices.prices.map((t) => s(t, e.tax_inclusive)),
                             },
                             paymentSourcePrices: Object.entries(r.payment_source_prices).reduce((t, n) => {
                                 let [r, i] = n;
-                                return ((t[r] = i.map((t) => s(t, e.tax_inclusive))), t);
-                            }, {})
+                                return (t[r] = i.map((t) => s(t, e.tax_inclusive))), t;
+                            }, {}),
                         }),
                         t
                     );
@@ -50,7 +50,7 @@ class a extends r.Z {
                 skuId: e.sku_id,
                 currency: e.currency,
                 price: e.price,
-                prices: t
+                prices: t,
             })
         );
     }
@@ -75,9 +75,9 @@ class a extends r.Z {
                 e[t] = {
                     country_prices: {
                         country_code: n.countryPrices.countryCode,
-                        prices: n.countryPrices.prices
+                        prices: n.countryPrices.prices,
                     },
-                    payment_source_prices: n.paymentSourcePrices
+                    payment_source_prices: n.paymentSourcePrices,
                 };
             }),
             {
@@ -90,12 +90,30 @@ class a extends r.Z {
                 currency: this.currency,
                 price: this.price,
                 prices: e,
-                price_tier: this.price
+                price_tier: this.price,
             }
         );
     }
     constructor(e) {
-        (super(), o(this, 'id', void 0), o(this, 'name', void 0), o(this, 'interval', void 0), o(this, 'intervalCount', void 0), o(this, 'taxInclusive', void 0), o(this, 'skuId', void 0), o(this, 'currency', void 0), o(this, 'price', void 0), o(this, 'prices', void 0), (this.id = e.id), (this.name = e.name), (this.interval = e.interval), (this.intervalCount = e.intervalCount), (this.taxInclusive = e.taxInclusive), (this.skuId = e.skuId), (this.currency = e.currency), (this.price = e.price), (this.prices = e.prices));
+        super(),
+            o(this, "id", void 0),
+            o(this, "name", void 0),
+            o(this, "interval", void 0),
+            o(this, "intervalCount", void 0),
+            o(this, "taxInclusive", void 0),
+            o(this, "skuId", void 0),
+            o(this, "currency", void 0),
+            o(this, "price", void 0),
+            o(this, "prices", void 0),
+            (this.id = e.id),
+            (this.name = e.name),
+            (this.interval = e.interval),
+            (this.intervalCount = e.intervalCount),
+            (this.taxInclusive = e.taxInclusive),
+            (this.skuId = e.skuId),
+            (this.currency = e.currency),
+            (this.price = e.price),
+            (this.prices = e.prices);
     }
 }
 function s(e, t) {
@@ -103,7 +121,7 @@ function s(e, t) {
         amount: e.amount,
         currency: e.currency,
         tax: 0,
-        taxInclusive: t
+        taxInclusive: t,
     };
 }
 function l(e) {

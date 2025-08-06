@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(755721),
@@ -13,11 +13,18 @@ let p = (e) => {
     let { message: t, reportId: n } = e,
         [p, g] = l.useState(!1),
         x = l.useCallback(() => {
-            (g(!0), s.ZP.trackWithMetadata(u.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }), a.Z.deleteMessage(t.getChannelId(), t.id));
+            g(!0),
+                s.ZP.trackWithMetadata(u.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }),
+                a.Z.deleteMessage(t.getChannelId(), t.id);
         }, [t, n]),
         _ = l.useMemo(() => {
             let e = c.Z.getChannel(t.getChannelId());
-            return null != e && e.type !== u.d4z.DM && e.type !== u.d4z.GROUP_DM && d.Z.canWithPartialContext(u.Plq.MANAGE_MESSAGES, { channelId: e.id });
+            return (
+                null != e &&
+                e.type !== u.d4z.DM &&
+                e.type !== u.d4z.GROUP_DM &&
+                d.Z.canWithPartialContext(u.Plq.MANAGE_MESSAGES, { channelId: e.id })
+            );
         }, [t]);
     return null != t && _
         ? (0, r.jsx)(o.ZP, {
@@ -26,7 +33,7 @@ let p = (e) => {
               buttonText: p ? m.intl.string(m.t.f3pnLC) : m.intl.string(m.t.ch2xbm),
               buttonDisabled: p,
               buttonColor: i.zx.Colors.RED,
-              onButtonPress: x
+              onButtonPress: x,
           })
         : null;
 };

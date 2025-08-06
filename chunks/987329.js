@@ -23,12 +23,12 @@ let p = (e) => {
                     onClose: i,
                     channel: t,
                     remoteMode: n,
-                    onInteraction: (0, c.u)('MoreSettingsMenu', p, { entrypoint: f.A5.THREE_DOT })
-                })
+                    onInteraction: (0, c.u)("MoreSettingsMenu", p, { entrypoint: f.A5.THREE_DOT }),
+                }),
             });
         },
-        align: 'right',
-        position: 'top',
+        align: "right",
+        position: "top",
         animation: o.yRy.Animation.FADE,
         spacing: 16,
         children: (e, t) => {
@@ -38,13 +38,13 @@ let p = (e) => {
                 ref: h,
                 isTrayButton: !0,
                 onClick: (e) => {
-                    ((0, l.v)(p, l.d.MORE), n(e));
+                    (0, l.v)(p, l.d.MORE), n(e);
                 },
                 label: _.intl.string(_.t.PdRCRk),
                 iconComponent: o.xhG,
-                color: 'primaryDark',
-                isActive: i
+                color: "primaryDark",
+                isActive: i,
             });
-        }
+        },
     });
 };

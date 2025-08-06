@@ -11,9 +11,9 @@ function s(e) {
     return __OVERLAY__
         ? null
         : (0, i.jsx)(l.S89, {
-              id: 'hide-voice-names',
+              id: "hide-voice-names",
               label: c.intl.string(c.t.LxzNio),
               action: () => a.Z.update(e.id),
-              checked: t
+              checked: t,
           });
 }

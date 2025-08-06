@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(290780));
+n.d(t, { Z: () => p }), n(290780);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -15,7 +15,7 @@ function p() {
         t = (0, l.Wu)([c.Z], () => c.Z.getUnreadPrivateChannelIds()),
         { selectedVoiceGuildId: n, selectedVoiceChannelId: p } = (0, l.cj)([u.Z], () => ({
             selectedVoiceGuildId: u.Z.getGuildId(),
-            selectedVoiceChannelId: u.Z.getChannelId()
+            selectedVoiceChannelId: u.Z.getChannelId(),
         })),
         f = t.map((t) => {
             let n = e[t];
@@ -25,15 +25,15 @@ function p() {
     return (
         null != g && f.unshift((0, r.jsx)(d.Z, { channel: g }, g.id)),
         (0, r.jsx)(s.Kqy, {
-            id: 'guild-list-unread-dms',
-            role: 'group',
-            'aria-label': h.intl.string(h.t.YUU0RE),
-            gap: 'xs',
+            id: "guild-list-unread-dms",
+            role: "group",
+            "aria-label": h.intl.string(h.t.YUU0RE),
+            gap: "xs",
             hidden: f.length < 1,
             children: (0, r.jsx)(o.W, {
                 component: i.Fragment,
-                children: f
-            })
+                children: f,
+            }),
         })
     );
 }

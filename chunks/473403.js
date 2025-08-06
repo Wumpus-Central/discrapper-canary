@@ -2,7 +2,7 @@ e.d(t, {
     ZP: () => X,
     _W: () => L,
     ge: () => y,
-    je: () => x
+    je: () => x,
 });
 var r = e(255367),
     g = e(73800),
@@ -33,24 +33,24 @@ function u(A) {
     for (var t = 1; t < arguments.length; t++) {
         var e = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(e);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(e).filter(function (A) {
                     return Object.getOwnPropertyDescriptor(e, A).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = e[t]),
+                (r = e[t]),
                     t in A
                         ? Object.defineProperty(A, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (A[t] = r));
-            }));
+                        : (A[t] = r);
+            });
     }
     return A;
 }
@@ -78,34 +78,39 @@ let j = {
     UNREAD_IMPORTANT: P.modeUnreadImportant,
     UNREAD_LESS_IMPORTANT: P.modeUnreadLessImportant,
     MUTED: P.modeMuted,
-    LOCKED: P.modeLocked
+    LOCKED: P.modeLocked,
 };
 function Z(A) {
-    (A.preventDefault(), A.stopPropagation());
+    A.preventDefault(), A.stopPropagation();
 }
 let O = p.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function y(A) {
     let { channel: t, size: e = l.EFr.SIZE_20 } = A;
     return (0, r.jsx)(O, {
         src: (0, h.x)(t),
-        'aria-hidden': !0,
-        size: e
+        "aria-hidden": !0,
+        size: e,
     });
 }
 function x(A) {
     let { channel: t, size: e = l.EFr.SIZE_20 } = A,
         g = (0, B.e7)([d.default], () => d.default.getUser(null == t ? void 0 : t.recipients[0])),
-        v = (0, B.e7)([M.Z], () => !(null == g || null == t || t.isMultiUserDM()) && null != M.Z.getTypingUsers(null == t ? void 0 : t.id)[null == g ? void 0 : g.id]),
+        v = (0, B.e7)(
+            [M.Z],
+            () =>
+                !(null == g || null == t || t.isMultiUserDM()) &&
+                null != M.Z.getTypingUsers(null == t ? void 0 : t.id)[null == g ? void 0 : g.id],
+        ),
         { status: n, isMobile: f } = (0, B.cj)([D.Z], () =>
             null == g || null == t || t.isMultiUserDM()
                 ? {
                       status: null,
-                      isMobile: !1
+                      isMobile: !1,
                   }
                 : {
                       status: D.Z.getStatus(g.id),
-                      isMobile: D.Z.isMobileOnline(g.id)
-                  }
+                      isMobile: D.Z.isMobileOnline(g.id),
+                  },
         );
     return (0, r.jsx)(O, {
         size: e,
@@ -113,8 +118,8 @@ function x(A) {
         status: n,
         isMobile: f,
         isTyping: v,
-        'aria-label': null == g ? void 0 : g.username,
-        statusTooltip: !0
+        "aria-label": null == g ? void 0 : g.username,
+        statusTooltip: !0,
     });
 }
 let L = (A) => {
@@ -130,7 +135,7 @@ let L = (A) => {
                 channel: g,
                 guild: i,
                 locked: v,
-                hasActiveThreads: f
+                hasActiveThreads: f,
             });
         else {
             let A = (function (A, t, e) {
@@ -148,29 +153,29 @@ let L = (A) => {
                 }
             })(g, i, {
                 locked: v,
-                hasActiveThreads: f
+                hasActiveThreads: f,
             });
             if (null == A) return null;
             a = (0, r.jsx)(A, {
-                color: 'currentColor',
-                className: n()(P.icon, t)
+                color: "currentColor",
+                className: n()(P.icon, t),
             });
         }
         let w = h ? (null == i ? void 0 : i.name) : (0, o.bT)(g, i, v, f),
-            s = h && null != i ? ''.concat(i.name, ' - ').concat(w, ' icon') : ''.concat(w, ' icon');
+            s = h && null != i ? "".concat(i.name, " - ").concat(w, " icon") : "".concat(w, " icon");
         return (0, r.jsx)(l.ua7, {
             text: w,
             delay: 500,
             children: (A) =>
                 (0, r.jsx)(
-                    'div',
+                    "div",
                     I(u({}, A), {
-                        role: 'img',
-                        'aria-label': s,
+                        role: "img",
+                        "aria-label": s,
                         className: n()(P.iconContainer, e),
-                        children: a
-                    })
-                )
+                        children: a,
+                    }),
+                ),
         });
     },
     X =
@@ -198,7 +203,7 @@ let L = (A) => {
                           channel: { type: Y },
                           onMouseEnter: N,
                           onMouseLeave: K,
-                          'aria-label': z,
+                          "aria-label": z,
                           children: J,
                           guild: W,
                           channelTypeOverride: S,
@@ -207,7 +212,7 @@ let L = (A) => {
                           resolvedUnreadSetting: q,
                           isFavoriteSuggestion: _,
                           withGuildIcon: $,
-                          hasActiveEvent: AA = !1
+                          hasActiveEvent: AA = !1,
                       } = A,
                       At = q === V.i.ALL_MESSAGES || (null != R && R > 0),
                       Ae = (0, f.JA)(h.id),
@@ -222,25 +227,31 @@ let L = (A) => {
                                       r,
                                       g = {},
                                       v = Object.keys(A);
-                                  for (r = 0; r < v.length; r++) ((e = v[r]), t.indexOf(e) >= 0 || (g[e] = A[e]));
+                                  for (r = 0; r < v.length; r++) (e = v[r]), t.indexOf(e) >= 0 || (g[e] = A[e]);
                                   return g;
                               })(A, t);
                           if (Object.getOwnPropertySymbols) {
                               var v = Object.getOwnPropertySymbols(A);
-                              for (r = 0; r < v.length; r++) ((e = v[r]), !(t.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(A, e) && (g[e] = A[e]));
+                              for (r = 0; r < v.length; r++)
+                                  (e = v[r]),
+                                      !(t.indexOf(e) >= 0) &&
+                                          Object.prototype.propertyIsEnumerable.call(A, e) &&
+                                          (g[e] = A[e]);
                           }
                           return g;
-                      })(Ae, ['role']),
+                      })(Ae, ["role"]),
                       Av = g.useRef(null),
                       An = g.useRef(null),
                       Af = (0, s.Z)(h),
                       AB = b.Z5c.CHANNEL(Af, h.id),
                       Al = (0, i.ZP)(h),
                       Ah = null;
-                  h.isPrivate() && 1 === (null != (e = h.rawRecipients) ? e : []).length && (Ah = (0, a.bN)(null == (v = h.rawRecipients[0]) ? void 0 : v.display_name_styles));
+                  h.isPrivate() &&
+                      1 === (null != (e = h.rawRecipients) ? e : []).length &&
+                      (Ah = (0, a.bN)(null == (v = h.rawRecipients[0]) ? void 0 : v.display_name_styles));
                   let Ai = (0, w.j)({ displayNameStyles: Ah }),
                       Ao = h.isGuildVocal(),
-                      AC = (0, r.jsx)('div', {
+                      AC = (0, r.jsx)("div", {
                           className: n()({ [P.favoritesSuggestion]: _ }),
                           ref: An,
                           children: (0, r.jsxs)(
@@ -248,20 +259,20 @@ let L = (A) => {
                               I(
                                   u(
                                       {
-                                          role: Ao && !D ? 'button' : 'link',
+                                          role: Ao && !D ? "button" : "link",
                                           href: Ao ? void 0 : AB,
-                                          target: '_blank',
+                                          target: "_blank",
                                           ref: Av,
                                           className: P.link,
-                                          onClick: () => (null == O ? void 0 : O(h))
+                                          onClick: () => (null == O ? void 0 : O(h)),
                                       },
-                                      Ag
+                                      Ag,
                                   ),
                                   {
-                                      'aria-label': z,
+                                      "aria-label": z,
                                       focusProps: { enabled: !1 },
                                       children: [
-                                          (0, r.jsxs)('div', {
+                                          (0, r.jsxs)("div", {
                                               className: P.linkTop,
                                               children: [
                                                   (0, r.jsx)(L, {
@@ -270,37 +281,37 @@ let L = (A) => {
                                                       guild: W,
                                                       hasActiveThreads: p,
                                                       locked: d,
-                                                      withGuildIcon: $
+                                                      withGuildIcon: $,
                                                   }),
                                                   (0, r.jsx)(C.Z, {
                                                       className: n()(P.name, Ai, { [P.activeEvent]: AA }),
-                                                      'aria-hidden': !0,
-                                                      children: null == o ? Al : o
+                                                      "aria-hidden": !0,
+                                                      children: null == o ? Al : o,
                                                   }),
                                                   g.Children.count(J) > 0
-                                                      ? (0, r.jsx)('div', {
+                                                      ? (0, r.jsx)("div", {
                                                             onClick: Z,
                                                             className: P.children,
-                                                            children: J
+                                                            children: J,
                                                         })
-                                                      : null
-                                              ]
+                                                      : null,
+                                              ],
                                           }),
                                           null != F
-                                              ? (0, r.jsx)('div', {
+                                              ? (0, r.jsx)("div", {
                                                     className: n()(P.linkBottom, { [P.withGuildIcon]: $ }),
                                                     children: (0, r.jsx)(l.Text, {
-                                                        color: null != k ? k : 'text-muted',
-                                                        variant: 'text-xs/medium',
+                                                        color: null != k ? k : "text-muted",
+                                                        variant: "text-xs/medium",
                                                         className: P.subtitle,
-                                                        children: F
-                                                    })
+                                                        children: F,
+                                                    }),
                                                 })
-                                              : null
-                                      ]
-                                  }
-                              )
-                          )
+                                              : null,
+                                      ],
+                                  },
+                              ),
+                          ),
                       });
                   return (0, r.jsx)(l.tEY, {
                       focusTarget: Av,
@@ -308,9 +319,9 @@ let L = (A) => {
                       offset: {
                           top: 2,
                           bottom: 2,
-                          right: 4
+                          right: 4,
                       },
-                      children: (0, r.jsxs)('div', {
+                      children: (0, r.jsxs)("div", {
                           ref: t,
                           className: n()(
                               G,
@@ -342,15 +353,20 @@ let L = (A) => {
                                       default:
                                           return P.typeDefault;
                                   }
-                              })(null != S ? S : Y)
+                              })(null != S ? S : Y),
                           ),
                           onMouseUp: (A) => (null == x ? void 0 : x(A, h)),
                           onMouseDown: (A) => (null == y ? void 0 : y(A, h)),
                           onContextMenu: (A) => (null == X ? void 0 : X(A, h)),
                           onMouseEnter: N,
                           onMouseLeave: K,
-                          children: [Q || !M ? null : (0, r.jsx)('div', { className: n()(P.unread, At ? P.unreadImportant : void 0) }), null != (B = null == m ? void 0 : m(AC)) ? B : AC]
-                      })
+                          children: [
+                              Q || !M
+                                  ? null
+                                  : (0, r.jsx)("div", { className: n()(P.unread, At ? P.unreadImportant : void 0) }),
+                              null != (B = null == m ? void 0 : m(AC)) ? B : AC,
+                          ],
+                      }),
                   });
               })
             : null;

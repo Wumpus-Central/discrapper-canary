@@ -1,11 +1,17 @@
 n.d(t, {
     bG: () => a,
-    bY: () => o
+    bY: () => o,
 });
 var r,
     i = n(358085),
     l = n(75060),
-    a = (((r = {})[(r.UNHANDLED = -1)] = 'UNHANDLED'), (r[(r.NOMINAL = 0)] = 'NOMINAL'), (r[(r.FAIR = 1)] = 'FAIR'), (r[(r.SERIOUS = 2)] = 'SERIOUS'), (r[(r.CRITICAL = 3)] = 'CRITICAL'), r);
+    a =
+        (((r = {})[(r.UNHANDLED = -1)] = "UNHANDLED"),
+        (r[(r.NOMINAL = 0)] = "NOMINAL"),
+        (r[(r.FAIR = 1)] = "FAIR"),
+        (r[(r.SERIOUS = 2)] = "SERIOUS"),
+        (r[(r.CRITICAL = 3)] = "CRITICAL"),
+        r);
 function o() {
     var e = l.Z.getRawThermalState();
     if (null == e) return -1;

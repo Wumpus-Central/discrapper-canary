@@ -1,6 +1,6 @@
 n.d(t, {
     EU: () => a,
-    Xm: () => i
+    Xm: () => i,
 });
 var r = n(4242);
 function i(e) {
@@ -14,13 +14,13 @@ function o(e) {
               skuId: e.sku_id,
               expiresAt: e.expires_at,
               label: e.label,
-              palette: e.palette
+              palette: e.palette,
           };
 }
 function a(e) {
     return {
         src: e.asset,
         imgAlt: e.label,
-        palette: (0, r.t1)(e.palette)
+        palette: (0, r.t1)(e.palette),
     };
 }

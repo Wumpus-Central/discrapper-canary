@@ -14,24 +14,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -71,24 +71,24 @@ let f = [],
                             (0, c.mM)(t, e.channelId, n);
                         }));
                 },
-                [t]
+                [t],
             ),
             y = i.useCallback(() => {
                 if (null != t)
                     return (0, a.ZDy)(async () => {
-                        let { default: e } = await n.e('84725').then(n.bind(n, 462499));
+                        let { default: e } = await n.e("84725").then(n.bind(n, 462499));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
                                 h(p({}, n), {
                                     guildId: t,
                                     onSave: c.r2,
-                                    onIconUpload: O
-                                })
+                                    onIconUpload: O,
+                                }),
                             );
                     });
             }, [t, O]);
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: g.editResources,
             children: [
                 x.map((e, n) =>
@@ -100,10 +100,10 @@ let f = [],
                             index: n,
                             onDragStart: j,
                             onDragReset: v,
-                            onDragComplete: _
+                            onDragComplete: _,
                         },
-                        e.channelId
-                    )
+                        e.channelId,
+                    ),
                 ),
                 x.length < o.x3 &&
                     (0, r.jsxs)(a.P3F, {
@@ -111,16 +111,16 @@ let f = [],
                         onClick: y,
                         children: [
                             (0, r.jsx)(a.oFk, {
-                                size: 'xs',
-                                color: 'currentColor'
+                                size: "xs",
+                                color: "currentColor",
                             }),
                             (0, r.jsx)(a.Text, {
-                                variant: 'text-md/normal',
-                                color: 'none',
-                                children: m.intl.string(m.t['w9/qGR'])
-                            })
-                        ]
-                    })
-            ]
+                                variant: "text-md/normal",
+                                color: "none",
+                                children: m.intl.string(m.t["w9/qGR"]),
+                            }),
+                        ],
+                    }),
+            ],
         });
     };

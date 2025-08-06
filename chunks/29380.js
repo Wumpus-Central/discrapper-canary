@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685));
+n.d(t, { Z: () => N }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(755721),
@@ -24,7 +24,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -76,7 +76,8 @@ function S(e, t) {
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -86,7 +87,7 @@ function A(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function N(e) {
@@ -102,18 +103,18 @@ function N(e) {
             applicationId: n.id,
             context: t,
             launchingComponentId: N,
-            onSubmissionComplete: C
+            onSubmissionComplete: C,
         }),
         [D, L] = i.useState(!1),
         x = (0, s.Qv)({
             applicationId: n.id,
-            context: t
+            context: t,
         }),
         M = i.useMemo(() => (0, h.XZ)(I.displayName), [I.displayName]),
         {
             onActivityItemSelected: k,
             buttonColor: j,
-            buttonText: U
+            buttonText: U,
         } = (0, g.P7)({
             context: t,
             application: n,
@@ -123,12 +124,12 @@ function N(e) {
             autoDismissOnClick: x === s.JS.LEAVE || (0, c.g)(n),
             launchingComponentId: N,
             submitting: null != w ? w : P,
-            onConfirmActivityLaunchChecksAlertOpen: R
+            onConfirmActivityLaunchChecksAlertOpen: R,
         }),
         { disabled: G, reason: B } = (0, p.Z)({
             context: t,
             application: n,
-            activityAction: x
+            activityAction: x,
         });
     return (0, r.jsx)(a.ua7, {
         shouldShow: null != B,
@@ -136,31 +137,31 @@ function N(e) {
         text: B,
         children: (e) => {
             var { onClick: t } = e,
-                i = S(e, ['onClick']);
+                i = S(e, ["onClick"]);
             return (0, r.jsx)(
                 o.zx,
                 T(v({}, i), {
-                    type: 'submit',
+                    type: "submit",
                     size: A,
                     color: j,
                     disabled: G,
                     submitting: D,
                     onClick: () => {
-                        (L(!0),
+                        L(!0),
                             k(),
                             null == t || t(),
                             u.default.track(E.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                                 application_id: n.id,
-                                button_action: _._y.USE_APP_COMMAND
-                            }));
+                                button_action: _._y.USE_APP_COMMAND,
+                            });
                     },
-                    'aria-label': b.intl.formatToPlainString(b.t['XjP/R0'], {
+                    "aria-label": b.intl.formatToPlainString(b.t["XjP/R0"], {
                         buttonText: U,
-                        applicationName: n.name
+                        applicationName: n.name,
                     }),
-                    children: U
-                })
+                    children: U,
+                }),
             );
-        }
+        },
     });
 }

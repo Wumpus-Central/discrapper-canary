@@ -7,10 +7,11 @@ var r = n(592125),
 function l(e, t, n) {
     var l, c;
     a.default.track(s.rMx.VOICE_CALL_TRANSFER, {
-        source_platform: null != n ? (null == (l = o.Z.getSessionById(n)) ? void 0 : l.clientInfo.os) : 'discord_client',
+        source_platform:
+            null != n ? (null == (l = o.Z.getSessionById(n)) ? void 0 : l.clientInfo.os) : "discord_client",
         guild_id: null == (c = r.Z.getChannel(e)) ? void 0 : c.guild_id,
         channel_id: e,
         rtc_connection_id: i.Z.getRTCConnectionId(),
-        target_platform: t
+        target_platform: t,
     });
 }

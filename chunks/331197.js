@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685));
+n.d(t, { Z: () => P }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,7 +80,7 @@ function P(e) {
         {
             Component: D,
             play: L,
-            events: { onMouseEnter: x, onMouseLeave: M }
+            events: { onMouseEnter: x, onMouseLeave: M },
         } = (0, s.j)(),
         k = t.getGuildId(),
         { mute: j, suppress: U } = (0, E.Z)(t),
@@ -91,12 +91,18 @@ function P(e) {
         { analyticsLocations: H } = (0, u.ZP)(),
         { isHovered: Y, setIsHovered: W, onMouseEnter: K, onMouseLeave: z } = (0, p.Z)(R, C);
     function q() {
-        return j ? I.intl.string(I.t['Ox4/zc']) : U ? I.intl.string(I.t['+YBKYG']) : G ? I.intl.string(I.t.X1lQlp) : void 0;
+        return j
+            ? I.intl.string(I.t["Ox4/zc"])
+            : U
+              ? I.intl.string(I.t["+YBKYG"])
+              : G
+                ? I.intl.string(I.t.X1lQlp)
+                : void 0;
     }
     function X(e) {
         null != k &&
             (0, c.jW)(e, async () => {
-                let { default: e } = await n.e('56049').then(n.bind(n, 338991));
+                let { default: e } = await n.e("56049").then(n.bind(n, 338991));
                 return (t) =>
                     (0, r.jsx)(
                         e,
@@ -104,36 +110,39 @@ function P(e) {
                             S(
                                 {
                                     guildId: k,
-                                    sourceAnalyticsLocations: H
+                                    sourceAnalyticsLocations: H,
                                 },
-                                t
+                                t,
                             ),
-                            { onInteraction: (0, f.u)('SoundboardContextMenu', w) }
-                        )
+                            { onInteraction: (0, f.u)("SoundboardContextMenu", w) },
+                        ),
                     );
             });
     }
     function Q() {
-        ((0, d.v)(w, d.d.SOUNDBOARD), A === v.D.SOUNDBOARD ? (null == P || P(void 0), z()) : (null != A ? (L(), K()) : L(), null == P || P(v.D.SOUNDBOARD)));
+        (0, d.v)(w, d.d.SOUNDBOARD),
+            A === v.D.SOUNDBOARD
+                ? (null == P || P(void 0), z())
+                : (null != A ? (L(), K()) : L(), null == P || P(v.D.SOUNDBOARD));
     }
     let J = i.useRef(null);
     return (0, r.jsx)(l.y, {
         targetElementRef: J,
         shouldShow: (Y && (A === v.D.SOUNDBOARD || null == A)) || A === v.D.SOUNDBOARD,
         animation: l.y.Animation.FADE,
-        animationPosition: 'top',
-        position: 'top',
-        align: 'center',
+        animationPosition: "top",
+        position: "top",
+        align: "center",
         spacing: 16,
         onRequestClose: () => {
-            (W(!1), null == P || P(void 0));
+            W(!1), null == P || P(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return B
                 ? null
                 : (0, r.jsx)(y.Z, {
-                      children: (0, r.jsx)('div', {
+                      children: (0, r.jsx)("div", {
                           onMouseEnter: K,
                           onMouseLeave: z,
                           children: (0, r.jsx)(g.Z, {
@@ -144,11 +153,11 @@ function P(e) {
                                   F === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, r.jsx)(m.o, {
                                       onClose: n,
-                                      markAsDismissed: V
+                                      markAsDismissed: V,
                                   }),
-                              analyticsSource: 'action bar button'
-                          })
-                      })
+                              analyticsSource: "action bar button",
+                          }),
+                      }),
                   });
         },
         children: () =>
@@ -162,13 +171,13 @@ function P(e) {
                 onContextMenu: X,
                 onClick: Q,
                 onMouseEnter: () => {
-                    (K(), x());
+                    K(), x();
                 },
                 onMouseLeave: () => {
                     null == A && (z(), M());
                 },
                 isActive: Y || A === v.D.SOUNDBOARD,
-                color: Y || A === v.D.SOUNDBOARD ? 'primaryDark' : void 0
-            })
+                color: Y || A === v.D.SOUNDBOARD ? "primaryDark" : void 0,
+            }),
     });
 }

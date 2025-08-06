@@ -9,17 +9,17 @@ var r = n(255367),
     u = n(929968);
 function d(e) {
     let { setTab: t, closePopout: n, badgeState: i } = e,
-        d = (0, a.Us)({ location: 'ForLaterInbox' });
-    return (0, r.jsxs)('div', {
+        d = (0, a.Us)({ location: "ForLaterInbox" });
+    return (0, r.jsxs)("div", {
         className: l()(u.container, { [u.widerInbox]: d }),
         children: [
             (0, r.jsx)(c.Z, {
                 tab: o.X.BOOKMARKS,
                 setTab: t,
                 closePopout: n,
-                badgeState: i
+                badgeState: i,
             }),
-            (0, r.jsx)(s.K, { closePopout: n })
-        ]
+            (0, r.jsx)(s.K, { closePopout: n }),
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Ar: () => T,
     DO: () => f,
     Fn: () => p,
@@ -10,10 +10,10 @@
     ep: () => g,
     km: () => E,
     nC: () => h,
-    vo: () => _
+    vo: () => _,
 }),
     n(388685),
-    n(415506));
+    n(415506);
 var r = n(581364),
     i = n(314897),
     o = n(866830),
@@ -22,7 +22,7 @@ var r = n(581364),
     l = n(85960),
     c = n(273504),
     u = n(388032);
-let d = (e, t) => ''.concat(e, '-').concat(t, '-new-rule'),
+let d = (e, t) => "".concat(e, "-").concat(t, "-new-rule"),
     f = (e) => (null == e ? void 0 : e.triggerType) === c.fX.KEYWORD,
     _ = (e) => (null == e ? void 0 : e.triggerType) === c.fX.ML_SPAM,
     p = (e) => (null == e ? void 0 : e.triggerType) === c.fX.DEFAULT_KEYWORD_LIST,
@@ -43,11 +43,11 @@ function g(e, t) {
             actions: (0, o.qR)(n),
             position: 0,
             exemptChannels: new Set(),
-            exemptRoles: new Set()
+            exemptRoles: new Set(),
         };
-    if (O(a)) throw Error(u.intl.string(u.t['A/nX8P']));
+    if (O(a)) throw Error(u.intl.string(u.t["A/nX8P"]));
     let c = (0, s.mY)(e, t);
-    return (c > 0 && (a.name += ' '.concat(c + 1)), a);
+    return c > 0 && (a.name += " ".concat(c + 1)), a;
 }
 function E(e, t) {
     if (e.length > t) throw Error(u.intl.formatToPlainString(u.t.mee4qa, { limit: t }));
@@ -57,8 +57,8 @@ function E(e, t) {
                 u.intl.formatToPlainString(u.t.rbRvGR, {
                     keyword: e,
                     max: c.hu,
-                    min: c.Vk
-                })
+                    min: c.Vk,
+                }),
             );
     });
 }
@@ -67,11 +67,11 @@ function b(e) {
     e.forEach((e) => {
         if (e.length > c.aj || e.length < c.uE)
             throw new a.uS(
-                u.intl.formatToPlainString(u.t['WR0m9/'], {
+                u.intl.formatToPlainString(u.t["WR0m9/"], {
                     regex: e,
                     max: c.aj,
-                    min: c.uE
-                })
+                    min: c.uE,
+                }),
             );
     });
 }
@@ -81,20 +81,20 @@ function y(e) {
         let r = null != (t = e.triggerMetadata.keywordFilter) ? t : [],
             i = null != (n = e.triggerMetadata.regexPatterns) ? n : [];
         if (0 === r.length && 0 === i.length) throw Error(u.intl.string(u.t.kz2Av7));
-        (E(r, c.RH), b(i));
+        E(r, c.RH), b(i);
     }
-    if (0 === e.actions.length) throw Error(u.intl.string(u.t['t+gj5e']));
+    if (0 === e.actions.length) throw Error(u.intl.string(u.t["t+gj5e"]));
 }
 function O(e) {
     var t;
-    return (0, r.BH)(null != (t = null == e ? void 0 : e.id) ? t : 'INVALID_SNOWFLAKE');
+    return (0, r.BH)(null != (t = null == e ? void 0 : e.id) ? t : "INVALID_SNOWFLAKE");
 }
 function v(e) {
     switch (e) {
         case c.q4.MESSAGE_SEND:
             return u.intl.string(u.t.NlQW4O);
         case c.q4.GUILD_MEMBER_JOIN_OR_UPDATE:
-            return u.intl.string(u.t['Q+68IS']);
+            return u.intl.string(u.t["Q+68IS"]);
         default:
             return u.intl.string(u.t.SP9BBw);
     }
@@ -104,9 +104,9 @@ function I(e) {
         case c.jj.BLOCK_MESSAGE:
             return u.intl.string(u.t.d1ab8v);
         case c.jj.FLAG_TO_CHANNEL:
-            return u.intl.string(u.t['Y+Vmvb']);
+            return u.intl.string(u.t["Y+Vmvb"]);
         case c.jj.USER_COMMUNICATION_DISABLED:
-            return u.intl.string(u.t['6WPxY2']);
+            return u.intl.string(u.t["6WPxY2"]);
         case c.jj.QUARANTINE_USER:
             return u.intl.string(u.t.NPO8eX);
         default:
@@ -118,7 +118,7 @@ function T(e) {
         case c.fX.KEYWORD:
             return u.intl.string(u.t.ffR2cH);
         case c.fX.ML_SPAM:
-            return u.intl.string(u.t['puF/Oj']);
+            return u.intl.string(u.t["puF/Oj"]);
         case c.fX.DEFAULT_KEYWORD_LIST:
             return u.intl.string(u.t.LnGhZm);
         case c.fX.MENTION_SPAM:

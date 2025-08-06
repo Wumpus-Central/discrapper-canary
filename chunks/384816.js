@@ -35,52 +35,52 @@ function I(e) {
         className: _.scroller,
         children: [
             (null == I ? void 0 : I.bio) != null &&
-                (null == I ? void 0 : I.bio) !== '' &&
+                (null == I ? void 0 : I.bio) !== "" &&
                 !A &&
                 (0, r.jsx)(g.Z, {
                     userBio: I.bio,
-                    setLineClamp: !1
+                    setLineClamp: !1,
                 }),
             (null == I ? void 0 : I.guildId) != null &&
                 (0, r.jsx)(v.Z, {
                     user: t,
                     currentUser: n,
                     guildId: I.guildId,
-                    scrollIntoView: P === O.Tb.ROLES
+                    scrollIntoView: P === O.Tb.ROLES,
                 }),
             t.isProvisional &&
                 (0, r.jsx)(y.Z, {
                     heading: x.intl.string(x.t.Iyka0d),
                     headingIcon: (0, r.jsx)(o.Mgn, {
-                        size: 'xxs',
-                        color: o.TVs.colors.HEADER_PRIMARY
+                        size: "xxs",
+                        color: o.TVs.colors.HEADER_PRIMARY,
                     }),
-                    headingColor: 'header-secondary',
-                    children: (0, r.jsx)(c.n, { userId: t.id })
+                    headingColor: "header-secondary",
+                    children: (0, r.jsx)(c.n, { userId: t.id }),
                 }),
             T.length > 0 &&
                 (0, r.jsx)(y.Z, {
-                    heading: x.intl.string(x.t['Uv/eT0']),
-                    children: (0, r.jsx)(j.Z, { applicationIds: T })
+                    heading: x.intl.string(x.t["Uv/eT0"]),
+                    children: (0, r.jsx)(j.Z, { applicationIds: T }),
                 }),
             (0, r.jsx)(y.Z, {
                 heading: x.intl.string(x.t.a6XYDw),
                 children: (0, r.jsx)(h.Z, {
                     userId: t.id,
                     guildId: null == I ? void 0 : I.guildId,
-                    tooltipDelay: O.vB
-                })
+                    tooltipDelay: O.vB,
+                }),
             }),
             w.length > 0 &&
                 (0, r.jsx)(y.Z, {
-                    heading: x.intl.string(x.t['3fe7U1']),
+                    heading: x.intl.string(x.t["3fe7U1"]),
                     scrollIntoView: P === O.Tb.CONNECTIONS,
                     children: (0, r.jsx)(b.ZP, {
                         connectedAccounts: w,
                         className: _.connections,
                         userId: t.id,
-                        locale: S
-                    })
+                        locale: S,
+                    }),
                 }),
             C.length > 0 &&
                 (0, r.jsx)(y.Z, {
@@ -93,24 +93,24 @@ function I(e) {
                                 applicationRoleConnection: e,
                                 locale: S,
                                 onApplicationClicked: () => {
-                                    (E({ action: 'PRESS_APP_CONNECTION' }), Z());
+                                    E({ action: "PRESS_APP_CONNECTION" }), Z();
                                 },
-                                selectedGuildId: null != N ? N : void 0
+                                selectedGuildId: null != N ? N : void 0,
                             },
-                            e.application.id
-                        )
-                    )
+                            e.application.id,
+                        ),
+                    ),
                 }),
             (0, r.jsx)(y.Z, {
-                heading: x.intl.string(x.t['mQKv+v']),
+                heading: x.intl.string(x.t["mQKv+v"]),
                 scrollIntoView: P === O.Tb.NOTE,
                 children: (0, r.jsx)(i.Z, {
                     userId: t.id,
                     className: _.note,
                     autoFocus: P === O.Tb.NOTE,
-                    onUpdate: () => E({ action: 'SET_NOTE' })
-                })
-            })
-        ]
+                    onUpdate: () => E({ action: "SET_NOTE" }),
+                }),
+            }),
+        ],
     });
 }

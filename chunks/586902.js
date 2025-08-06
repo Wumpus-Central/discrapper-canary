@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     O: () => u,
-    Z: () => c
+    Z: () => c,
 }),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(763296),
     o = n(944486),
@@ -23,7 +23,7 @@ function c(e) {
     return l(
         p,
         (0, r.e7)([i.Z], () => i.Z.isUserPlayingSounds(t) && c),
-        h
+        h,
     );
 }
 function u(e) {

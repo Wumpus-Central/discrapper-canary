@@ -8,24 +8,24 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -54,7 +54,7 @@ let u = function (e) {
         children: [
             (0, r.jsx)(a.vwX, {
                 tag: a.RB0.H5,
-                children: d
+                children: d,
             }),
             (0, r.jsx)(a.yRy, {
                 targetElementRef: p,
@@ -63,26 +63,26 @@ let u = function (e) {
                         a.Z$W,
                         c(l({}, e), {
                             value: n,
-                            onChange: (e) => u(t, (0, o.Rf)(e))
-                        })
+                            onChange: (e) => u(t, (0, o.Rf)(e)),
+                        }),
                     ),
                 children: (e) =>
                     (0, r.jsx)(
                         a.P3F,
                         c(l({}, e), {
                             innerRef: p,
-                            tag: 'span',
-                            'aria-label': 'Select a color',
+                            tag: "span",
+                            "aria-label": "Select a color",
                             className: i.swatchContainer,
                             style: { backgroundColor: n },
                             children: (0, r.jsx)(a.ilE, {
-                                size: 'xs',
-                                color: 'currentColor',
-                                className: i.swatchIcon
-                            })
-                        })
-                    )
-            })
-        ]
+                                size: "xs",
+                                color: "currentColor",
+                                className: i.swatchIcon,
+                            }),
+                        }),
+                    ),
+            }),
+        ],
     });
 };

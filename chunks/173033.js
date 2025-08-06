@@ -6,7 +6,7 @@ function i(e, t) {
     for (; null != i; ) {
         var o;
         if (i === t || !(0, r.k)(i, HTMLElement)) break;
-        ((n += null != (o = i.offsetTop) ? o : 0), (i = i.offsetParent));
+        (n += null != (o = i.offsetTop) ? o : 0), (i = i.offsetParent);
     }
     return n;
 }

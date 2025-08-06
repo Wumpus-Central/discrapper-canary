@@ -3,8 +3,16 @@ var r = n(626135),
     i = n(479313),
     o = n(981631);
 function a(e) {
-    let { summary: t, guildId: n, channelId: a, rating: s = null, problem: l = null, feedback: c = '', location: u } = e;
-    ((0, i.U$)(t, s),
+    let {
+        summary: t,
+        guildId: n,
+        channelId: a,
+        rating: s = null,
+        problem: l = null,
+        feedback: c = "",
+        location: u,
+    } = e;
+    (0, i.U$)(t, s),
         r.default.track(o.rMx.SUMMARIES_REPORT_PROBLEM, {
             reason: l,
             location: u,
@@ -17,6 +25,6 @@ function a(e) {
             channel_id: a,
             summary_id: t.id,
             summary_source: t.source,
-            summary_type: t.type
-        }));
+            summary_type: t.type,
+        });
 }

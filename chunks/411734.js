@@ -1,17 +1,19 @@
-(n.d(t, { R: () => u }), n(388685));
+n.d(t, { R: () => u }), n(388685);
 var r = n(255367),
     i = n(73800);
-let o = 'data-focus-blocked',
+let o = "data-focus-blocked",
     a = 0;
 function s() {
     return a++;
 }
 function l(e) {
-    return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, { acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP) });
+    return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
+        acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP),
+    });
 }
 function c(e, t) {
     let [n] = i.useState(() => s()),
-        r = ''.concat(o, '-').concat(n);
+        r = "".concat(o, "-").concat(n);
     i.useLayoutEffect(() => {
         if (t) {
             let t = e.current;
@@ -21,10 +23,10 @@ function c(e, t) {
                 for (; null !== n; ) {
                     let t = n,
                         i = t.tabIndex;
-                    ((t.tabIndex = -1), t.setAttribute(r, String(i)), (n = e.nextNode()));
+                    (t.tabIndex = -1), t.setAttribute(r, String(i)), (n = e.nextNode());
                 }
                 return () => {
-                    t.querySelectorAll('['.concat(r, ']')).forEach((e) => {
+                    t.querySelectorAll("[".concat(r, "]")).forEach((e) => {
                         let t = e.getAttribute(r);
                         null != t && (e.tabIndex = parseInt(t, 10));
                     });
@@ -38,10 +40,10 @@ function u(e) {
         a = i.useRef(null);
     return (
         c(a, o),
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             ref: a,
             className: n,
-            children: t
+            children: t,
         })
     );
 }

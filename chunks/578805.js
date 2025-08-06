@@ -10,12 +10,12 @@ if (n(738146)() || n(247131)()) {
     var s = n(189612),
         l = n(934660),
         c = n(745872),
-        u = c('%Map%', !0),
-        d = c('%Set%', !0),
+        u = c("%Map%", !0),
+        d = c("%Set%", !0),
         f = n(887937),
-        _ = f('Array.prototype.push'),
-        p = f('String.prototype.charCodeAt'),
-        h = f('String.prototype.slice'),
+        _ = f("Array.prototype.push"),
+        p = f("String.prototype.charCodeAt"),
+        h = f("String.prototype.slice"),
         m = function (e, t) {
             if (t + 1 >= e.length) return t + 1;
             var n = p(e, t);
@@ -33,10 +33,10 @@ if (n(738146)() || n(247131)()) {
                         r || ((n = e[t]), (t += 1)),
                         {
                             done: r,
-                            value: n
+                            value: n,
                         }
                     );
-                }
+                },
             };
         },
         E = function (e, t) {
@@ -51,24 +51,24 @@ if (n(738146)() || n(247131)()) {
                             (n = t),
                             {
                                 done: t > e.length,
-                                value: r
+                                value: r,
                             }
                         );
-                    }
+                    },
                 };
             }
-            if (t && void 0 !== e['_es6-shim iterator_']) return e['_es6-shim iterator_']();
+            if (t && void 0 !== e["_es6-shim iterator_"]) return e["_es6-shim iterator_"]();
         };
     if (u || d) {
         var b = n(913306),
             y = n(282702),
-            O = f('Map.prototype.forEach', !0),
-            v = f('Set.prototype.forEach', !0);
+            O = f("Map.prototype.forEach", !0),
+            v = f("Set.prototype.forEach", !0);
         if (void 0 === r || !r.versions || !r.versions.node)
-            var I = f('Map.prototype.iterator', !0),
-                T = f('Set.prototype.iterator', !0);
-        var S = f('Map.prototype.@@iterator', !0) || f('Map.prototype._es6-shim iterator_', !0),
-            A = f('Set.prototype.@@iterator', !0) || f('Set.prototype._es6-shim iterator_', !0),
+            var I = f("Map.prototype.iterator", !0),
+                T = f("Set.prototype.iterator", !0);
+        var S = f("Map.prototype.@@iterator", !0) || f("Map.prototype._es6-shim iterator_", !0),
+            A = f("Set.prototype.@@iterator", !0) || f("Set.prototype._es6-shim iterator_", !0),
             N = function (e) {
                 if (b(e)) {
                     if (I) return o(I(e));

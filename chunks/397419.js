@@ -1,1 +1,1 @@
-e.exports = { selectorHeading: 'selectorHeading_a1294d' };
+e.exports = { selectorHeading: "selectorHeading_a1294d" };

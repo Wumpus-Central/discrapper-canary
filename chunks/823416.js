@@ -2,15 +2,15 @@ function r(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 i(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -21,7 +21,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,7 +37,7 @@ var o = n(512972),
     f = n(223138),
     _ = n(65183),
     p = n(586026),
-    h = f('draft_tree_data_support'),
+    h = f("draft_tree_data_support"),
     m = h ? l : s,
     g = _.List,
     E = _.Repeat;
@@ -45,21 +45,21 @@ e.exports = {
     insertAtomicBlock: function (e, t, n) {
         var i = e.getCurrentContent(),
             s = e.getSelection(),
-            l = c.removeRange(i, s, 'backward'),
+            l = c.removeRange(i, s, "backward"),
             f = l.getSelectionAfter(),
             _ = c.splitBlock(l, f),
             p = _.getSelectionAfter(),
-            b = c.setBlockType(_, p, 'atomic'),
+            b = c.setBlockType(_, p, "atomic"),
             y = a.create({ entity: t }),
             O = {
                 key: d(),
-                type: 'atomic',
+                type: "atomic",
                 text: n,
-                characterList: g(E(y, n.length))
+                characterList: g(E(y, n.length)),
             },
             v = {
                 key: d(),
-                type: 'unstyled'
+                type: "unstyled",
             };
         h && ((O = r({}, O, { nextSibling: v.key })), (v = r({}, v, { prevSibling: O.key })));
         var I = [new m(O), new m(v)],
@@ -67,34 +67,34 @@ e.exports = {
             S = c.replaceWithFragment(b, p, T),
             A = S.merge({
                 selectionBefore: s,
-                selectionAfter: S.getSelectionAfter().set('hasFocus', !0)
+                selectionAfter: S.getSelectionAfter().set("hasFocus", !0),
             });
-        return u.push(e, A, 'insert-fragment');
+        return u.push(e, A, "insert-fragment");
     },
     moveAtomicBlock: function (e, t, n, r) {
         var i,
             o = e.getCurrentContent(),
             a = e.getSelection();
-        if ('before' === r || 'after' === r) {
-            var s = o.getBlockForKey('before' === r ? n.getStartKey() : n.getEndKey());
+        if ("before" === r || "after" === r) {
+            var s = o.getBlockForKey("before" === r ? n.getStartKey() : n.getEndKey());
             i = p(o, t, s, r);
         } else {
-            var l = c.removeRange(o, n, 'backward'),
+            var l = c.removeRange(o, n, "backward"),
                 d = l.getSelectionAfter(),
                 f = l.getBlockForKey(d.getFocusKey());
-            if (0 === d.getStartOffset()) i = p(l, t, f, 'before');
-            else if (d.getEndOffset() === f.getLength()) i = p(l, t, f, 'after');
+            if (0 === d.getStartOffset()) i = p(l, t, f, "before");
+            else if (d.getEndOffset() === f.getLength()) i = p(l, t, f, "after");
             else {
                 var _ = c.splitBlock(l, d),
                     h = _.getSelectionAfter(),
                     m = _.getBlockForKey(h.getFocusKey());
-                i = p(_, t, m, 'before');
+                i = p(_, t, m, "before");
             }
         }
         var g = i.merge({
             selectionBefore: a,
-            selectionAfter: i.getSelectionAfter().set('hasFocus', !0)
+            selectionAfter: i.getSelectionAfter().set("hasFocus", !0),
         });
-        return u.push(e, g, 'move-block');
-    }
+        return u.push(e, g, "move-block");
+    },
 };

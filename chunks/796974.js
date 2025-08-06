@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,7 +23,7 @@ function d(e) {
     return {
         guildId: e,
         scrollTop: null,
-        scrollTo: null
+        scrollTo: null,
     };
 }
 function f(e) {
@@ -37,7 +37,7 @@ function f(e) {
             channelId: t,
             scrollTop: n,
             scrollHeight: r,
-            offsetHeight: i
+            offsetHeight: i,
         };
         if (null != a && (0, o.Z)(a, e)) return !1;
         l[t] = e;
@@ -58,9 +58,9 @@ function h(e) {
 }
 function m(e) {
     let { guildId: t, scrollTop: n, scrollTo: r } = e;
-    (null == c[t] && (c[t] = d(t)), void 0 !== n && (c[t].scrollTop = n));
+    null == c[t] && (c[t] = d(t)), void 0 !== n && (c[t].scrollTop = n);
     let i = !1;
-    return (void 0 !== r && ((i = c[t].scrollTo !== r), (c[t].scrollTo = r)), null != r || i);
+    return void 0 !== r && ((i = c[t].scrollTo !== r), (c[t].scrollTo = r)), null != r || i;
 }
 class g extends (r = i.ZP.Store) {
     percentageScrolled(e) {
@@ -84,10 +84,10 @@ class g extends (r = i.ZP.Store) {
         return h(e);
     }
 }
-s(g, 'displayName', 'DimensionStore');
+s(g, "displayName", "DimensionStore");
 let E = new g(a.Z, {
     UPDATE_CHANNEL_DIMENSIONS: f,
     UPDATE_CHANNEL_LIST_DIMENSIONS: m,
     UPDATE_GUILD_LIST_DIMENSIONS: _,
-    CALL_CREATE: p
+    CALL_CREATE: p,
 });

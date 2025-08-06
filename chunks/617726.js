@@ -9,7 +9,7 @@ a.d(e, {
     f4: () => I,
     gv: () => E,
     mL: () => A,
-    zQ: () => d
+    zQ: () => d,
 });
 var r = a(967752),
     _ = a(202811),
@@ -33,13 +33,15 @@ function s(t, e) {
     return E(t, (t, a) => e.includes(a));
 }
 function l(t) {
-    return o.n.__SENTRY__ && o.n.__SENTRY__.encodePolyfill ? o.n.__SENTRY__.encodePolyfill(t) : new TextEncoder().encode(t);
+    return o.n.__SENTRY__ && o.n.__SENTRY__.encodePolyfill
+        ? o.n.__SENTRY__.encodePolyfill(t)
+        : new TextEncoder().encode(t);
 }
 function u(t) {
     let [e, a] = t,
         r = JSON.stringify(e);
     function n(t) {
-        'string' == typeof r ? (r = 'string' == typeof t ? r + t : [l(r), t]) : r.push('string' == typeof t ? l(t) : t);
+        "string" == typeof r ? (r = "string" == typeof t ? r + t : [l(r), t]) : r.push("string" == typeof t ? l(t) : t);
     }
     for (let t of a) {
         let [e, a] = t;
@@ -47,7 +49,7 @@ function u(t) {
             (n(`
 ${JSON.stringify(e)}
 `),
-            'string' == typeof a || a instanceof Uint8Array)
+            "string" == typeof a || a instanceof Uint8Array)
         )
             n(a);
         else {
@@ -60,67 +62,75 @@ ${JSON.stringify(e)}
             n(t);
         }
     }
-    return 'string' == typeof r
+    return "string" == typeof r
         ? r
         : (function (t) {
               let e = new Uint8Array(t.reduce((t, e) => t + e.length, 0)),
                   a = 0;
-              for (let r of t) (e.set(r, a), (a += r.length));
+              for (let r of t) e.set(r, a), (a += r.length);
               return e;
           })(r);
 }
 function I(t) {
-    let e = 'string' == typeof t ? l(t) : t;
+    let e = "string" == typeof t ? l(t) : t;
     function a(t) {
         let a = e.subarray(0, t);
-        return ((e = e.subarray(t + 1)), a);
+        return (e = e.subarray(t + 1)), a;
     }
     function r() {
         var t;
         let r = e.indexOf(10);
-        return (r < 0 && (r = e.length), JSON.parse(((t = a(r)), o.n.__SENTRY__ && o.n.__SENTRY__.decodePolyfill ? o.n.__SENTRY__.decodePolyfill(t) : new TextDecoder().decode(t))));
+        return (
+            r < 0 && (r = e.length),
+            JSON.parse(
+                ((t = a(r)),
+                o.n.__SENTRY__ && o.n.__SENTRY__.decodePolyfill
+                    ? o.n.__SENTRY__.decodePolyfill(t)
+                    : new TextDecoder().decode(t)),
+            )
+        );
     }
     let _ = r(),
         n = [];
     for (; e.length; ) {
         let t = r(),
-            e = 'number' == typeof t.length ? t.length : void 0;
+            e = "number" == typeof t.length ? t.length : void 0;
         n.push([t, e ? a(e) : r()]);
     }
     return [_, n];
 }
 function R(t) {
-    return [{ type: 'span' }, t];
+    return [{ type: "span" }, t];
 }
 function d(t) {
-    let e = 'string' == typeof t.data ? l(t.data) : t.data;
+    let e = "string" == typeof t.data ? l(t.data) : t.data;
     return [
         (0, n.Jr)({
-            type: 'attachment',
+            type: "attachment",
             length: e.length,
             filename: t.filename,
             content_type: t.contentType,
-            attachment_type: t.attachmentType
+            attachment_type: t.attachmentType,
         }),
-        e
+        e,
     ];
 }
 let N = {
-    session: 'session',
-    sessions: 'session',
-    attachment: 'attachment',
-    transaction: 'transaction',
-    event: 'error',
-    client_report: 'internal',
-    user_report: 'default',
-    profile: 'profile',
-    profile_chunk: 'profile',
-    replay_event: 'replay',
-    replay_recording: 'replay',
-    check_in: 'monitor',
-    feedback: 'feedback',
-    span: 'span',
-    statsd: 'metric_bucket'
+    session: "session",
+    sessions: "session",
+    attachment: "attachment",
+    transaction: "transaction",
+    event: "error",
+    client_report: "internal",
+    user_report: "default",
+    profile: "profile",
+    profile_chunk: "profile",
+    replay_event: "replay",
+    replay_recording: "replay",
+    check_in: "monitor",
+    feedback: "feedback",
+    span: "span",
+    statsd: "metric_bucket",
 };
 function A(t) {
     return N[t];
@@ -130,7 +140,7 @@ function f(t) {
     let { name: e, version: a } = t.sdk;
     return {
         name: e,
-        version: a
+        version: a,
     };
 }
 function T(t, e, a, _) {
@@ -140,6 +150,6 @@ function T(t, e, a, _) {
         sent_at: new Date().toISOString(),
         ...(e && { sdk: e }),
         ...(!!a && _ && { dsn: (0, r.RA)(_) }),
-        ...(o && { trace: (0, n.Jr)({ ...o }) })
+        ...(o && { trace: (0, n.Jr)({ ...o }) }),
     };
 }

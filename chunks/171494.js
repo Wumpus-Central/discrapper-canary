@@ -1,4 +1,4 @@
-(l.d(n, { default: () => k }), l(388685));
+l.d(n, { default: () => k }), l(388685);
 var a = l(255367),
     i = l(73800),
     e = l(442837),
@@ -27,7 +27,9 @@ function k(t) {
             if (null != S) {
                 N(!0);
                 try {
-                    (await u.Z.setCommunicationDisabledDuration(k, v, null, null, D), (0, s.showToast)((0, s.createToast)(h.intl.string(h.t['/Mmbfn']), s.ToastType.SUCCESS)), g());
+                    await u.Z.setCommunicationDisabledDuration(k, v, null, null, D),
+                        (0, s.showToast)((0, s.createToast)(h.intl.string(h.t["/Mmbfn"]), s.ToastType.SUCCESS)),
+                        g();
                 } catch (t) {
                     (0, s.showToast)((0, s.createToast)(h.intl.string(h.t.epyCur), s.ToastType.FAILURE));
                 } finally {
@@ -43,7 +45,7 @@ function k(t) {
             f.default.track(b.rMx.OPEN_MODAL, {
                 type: C.av,
                 guild_id: k,
-                other_user_id: S.id
+                other_user_id: S.id,
             });
     }),
     i.useEffect(() => {
@@ -54,8 +56,8 @@ function k(t) {
         : (0, a.jsx)(o.Modal, {
               transitionState: T,
               onClose: g,
-              title: h.intl.string(h.t['+ZD3oq']),
-              subtitle: h.intl.format(h.t['t+abNT'], {
+              title: h.intl.string(h.t["+ZD3oq"]),
+              subtitle: h.intl.format(h.t["t+abNT"], {
                   username: S.username,
                   countdown: (t) =>
                       null == Z
@@ -65,26 +67,26 @@ function k(t) {
                                 deadline: new Date(Z),
                                 onInterval: I,
                                 showUnits: !0,
-                                stopAtOneSec: !0
-                            })
+                                stopAtOneSec: !0,
+                            }),
               }),
               actions: [
                   {
-                      text: h.intl.string(h.t['ETE/oK']),
+                      text: h.intl.string(h.t["ETE/oK"]),
                       onClick: g,
-                      variant: 'secondary'
+                      variant: "secondary",
                   },
                   {
                       text: h.intl.string(h.t.qXtNtb),
                       onClick: U,
                       loading: E,
-                      variant: 'critical-primary'
-                  }
+                      variant: "critical-primary",
+                  },
               ],
               children: (0, a.jsx)(s.Text, {
-                  variant: 'text-md/normal',
-                  color: 'interactive-normal',
-                  children: h.intl.format(h.t.KtENkJ, { link: C.cu })
-              })
+                  variant: "text-md/normal",
+                  color: "interactive-normal",
+                  children: h.intl.format(h.t.KtENkJ, { link: C.cu }),
+              }),
           });
 }

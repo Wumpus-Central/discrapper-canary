@@ -10,11 +10,12 @@ function o(e) {
         r = (0, a.Z)(t).filter((e) => null != e);
     if (0 === r.length) return null;
     let o = null;
-    if (1 === r.length) o = s.intl.format(s.t.wQ6ur6, { applicationName: () => (0, n.jsx)(l.Z, { application: r[0] }, r[0].id) });
+    if (1 === r.length)
+        o = s.intl.format(s.t.wQ6ur6, { applicationName: () => (0, n.jsx)(l.Z, { application: r[0] }, r[0].id) });
     else if (2 === r.length)
         o = s.intl.format(s.t.C98CSE, {
             applicationName: () => (0, n.jsx)(l.Z, { application: r[0] }, r[0].id),
-            applicationName2: () => (0, n.jsx)(l.Z, { application: r[1] }, r[1].id)
+            applicationName2: () => (0, n.jsx)(l.Z, { application: r[1] }, r[1].id),
         });
     else {
         let e = r[r.length - 1],
@@ -26,16 +27,16 @@ function o(e) {
                         l.Z,
                         {
                             application: e,
-                            useComma: !0
+                            useComma: !0,
                         },
-                        e.id
-                    )
+                        e.id,
+                    ),
                 ),
-            applicationNameLast: () => (0, n.jsx)(l.Z, { application: e }, e.id)
+            applicationNameLast: () => (0, n.jsx)(l.Z, { application: e }, e.id),
         });
     }
     return (0, n.jsx)(i.Text, {
-        variant: 'text-sm/normal',
-        children: o
+        variant: "text-sm/normal",
+        children: o,
     });
 }

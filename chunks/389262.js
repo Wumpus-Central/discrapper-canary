@@ -12,39 +12,39 @@ function d(t) {
         m = (0, s.Dt)();
     return (0, n.jsxs)(a.Y0X, {
         transitionState: e,
-        'aria-labelledby': m,
-        parentComponent: 'SubscriptionRestartedModal',
+        "aria-labelledby": m,
+        parentComponent: "SubscriptionRestartedModal",
         children: [
             (0, n.jsxs)(a.hzk, {
                 className: o.contentContainer,
                 children: [
-                    (0, n.jsx)('img', {
+                    (0, n.jsx)("img", {
                         src: c,
-                        alt: ''
+                        alt: "",
                     }),
                     (0, n.jsx)(a.X6q, {
                         className: o.title,
-                        variant: 'heading-xl/bold',
-                        color: 'header-primary',
+                        variant: "heading-xl/bold",
+                        color: "header-primary",
                         id: m,
-                        children: l.intl.format(l.t['wLFT6+'], { tier: d.summary })
+                        children: l.intl.format(l.t["wLFT6+"], { tier: d.summary }),
                     }),
                     (0, n.jsx)(a.Text, {
                         className: o.subtitle,
-                        variant: 'text-md/medium',
-                        color: 'header-secondary',
-                        children: l.intl.format(l.t.OsAK9v, { timestamp: null == u ? void 0 : u.currentPeriodEnd })
-                    })
-                ]
+                        variant: "text-md/medium",
+                        color: "header-secondary",
+                        children: l.intl.format(l.t.OsAK9v, { timestamp: null == u ? void 0 : u.currentPeriodEnd }),
+                    }),
+                ],
             }),
             (0, n.jsx)(a.mzw, {
                 children: (0, n.jsx)(r.zx, {
                     size: r.zx.Sizes.MEDIUM,
                     grow: !1,
                     onClick: i,
-                    children: l.intl.string(l.t['JtWl+f'])
-                })
-            })
-        ]
+                    children: l.intl.string(l.t["JtWl+f"]),
+                }),
+            }),
+        ],
     });
 }

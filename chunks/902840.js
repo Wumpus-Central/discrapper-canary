@@ -2,7 +2,7 @@ n.d(t, {
     Lp: () => d,
     l9: () => p,
     tW: () => u,
-    ts: () => _
+    ts: () => _,
 });
 var r = n(399606),
     i = n(601964),
@@ -12,7 +12,7 @@ var r = n(399606),
 function l(e) {
     var t;
     if (null == e) return !1;
-    let n = o.Z.getGuild(null != (t = null == e ? void 0 : e.guild_id) ? t : ''),
+    let n = o.Z.getGuild(null != (t = null == e ? void 0 : e.guild_id) ? t : ""),
         r = null != n && n.rulesChannelId === e.id,
         s = (0, i.Y2)(n);
     return a.TPd.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !r && !s;
@@ -30,7 +30,11 @@ function d(e) {
 }
 function f(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return !(null == e || c(e.id)) && !!e.features.has(a.oNc.SUMMARIES_ENABLED_GA) && (!t || e.features.has(a.oNc.SUMMARIES_ENABLED_BY_USER));
+    return (
+        !(null == e || c(e.id)) &&
+        !!e.features.has(a.oNc.SUMMARIES_ENABLED_GA) &&
+        (!t || e.features.has(a.oNc.SUMMARIES_ENABLED_BY_USER))
+    );
 }
 function _(e) {
     arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -40,13 +44,9 @@ function _(e) {
 function p(e) {
     return (
         arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        (0, r.e7)(
-            [o.Z],
-            () => {
-                var t;
-                return f(o.Z.getGuild(null != (t = null == e ? void 0 : e.id) ? t : a.lds), !1);
-            },
-            [e]
-        )
+        (0, r.e7)([o.Z], () => {
+            var t;
+            return f(o.Z.getGuild(null != (t = null == e ? void 0 : e.id) ? t : a.lds), !1);
+        }, [e])
     );
 }

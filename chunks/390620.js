@@ -18,56 +18,56 @@ function g(e) {
             var e;
             return null == (e = u.Z.getGuild(n)) ? void 0 : e.name;
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: i()(h.toast, m.toast),
         children: [
             (0, r.jsx)(s.Z, {
                 emojiId: t.id,
-                size: 'default'
+                size: "default",
             }),
             (0, r.jsx)(o.Text, {
-                variant: 'text-md/normal',
-                color: 'text-tertiary',
+                variant: "text-md/normal",
+                color: "text-tertiary",
                 children: d.intl.format(d.t.BaxFf3, {
                     emojiName: t.name,
                     emojiNameHook: (e, t) =>
                         (0, r.jsx)(
                             o.Text,
                             {
-                                variant: 'text-md/semibold',
-                                color: 'text-primary',
-                                tag: 'strong',
-                                children: e
+                                variant: "text-md/semibold",
+                                color: "text-primary",
+                                tag: "strong",
+                                children: e,
                             },
-                            t
+                            t,
                         ),
                     guildName: l,
                     guildNameHook: (e, t) =>
                         (0, r.jsx)(
                             o.Text,
                             {
-                                variant: 'text-md/semibold',
-                                color: 'text-primary',
-                                tag: 'strong',
-                                children: e
+                                variant: "text-md/semibold",
+                                color: "text-primary",
+                                tag: "strong",
+                                children: e,
                             },
-                            t
-                        )
-                })
-            })
-        ]
+                            t,
+                        ),
+                }),
+            }),
+        ],
     });
 }
 function x(e) {
     let { emoji: t, guildId: n } = e;
     (0, o.showToast)(
-        (0, o.createToast)('', o.ToastType.CUSTOM, {
+        (0, o.createToast)("", o.ToastType.CUSTOM, {
             position: o.ToastPosition.TOP,
             component: (0, r.jsx)(g, {
                 emoji: t,
-                guildId: n
+                guildId: n,
             }),
-            duration: f
-        })
+            duration: f,
+        }),
     );
 }

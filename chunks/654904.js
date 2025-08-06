@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     $r: () => h,
     DP: () => E,
     Ly: () => g,
-    SG: () => m
+    SG: () => m,
 }),
     n(704826),
-    n(35282));
+    n(35282);
 var r = n(255367);
 n(73800);
 var i = n(866442),
@@ -26,7 +26,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,22 +36,22 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function h(e) {
     let { uploadType: t, guildId: i, analyticsSource: s, filters: l, isTryItOutFlow: _ = !1 } = e;
     (0, o.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('91689'), n.e('89289'), n.e('3974')]).then(n.bind(n, 28130));
+        let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("3974")]).then(n.bind(n, 28130));
         return (n) =>
             (0, r.jsx)(
                 e,
@@ -62,16 +62,16 @@ function h(e) {
                         imageSpecifications: t === d.pC.BANNER ? f.intl.string(f.t.IhzZlp) : void 0,
                         onComplete: (e) => {
                             let { assetOrigin: n, imageUri: r, file: o, originalAsset: l } = e,
-                                u = o.name.replace(/\.[^/.]+$/, ''),
+                                u = o.name.replace(/\.[^/.]+$/, ""),
                                 d = (0, a.Z1)({
                                     filename: u,
-                                    assetOrigin: n
+                                    assetOrigin: n,
                                 }),
                                 f = (0, a.cN)({
                                     assetOrigin: n,
                                     imageUri: r,
                                     description: d,
-                                    originalAsset: l
+                                    originalAsset: l,
                                 });
                             (0, c.j)({
                                 image: f,
@@ -79,14 +79,14 @@ function h(e) {
                                 uploadType: t,
                                 guildId: i,
                                 analyticsSource: s,
-                                isTryItOutFlow: _
+                                isTryItOutFlow: _,
                             });
                         },
                         uploadType: t,
-                        showUpsellHeader: !0
+                        showUpsellHeader: !0,
                     },
-                    n
-                )
+                    n,
+                ),
             );
     });
 }
@@ -95,13 +95,17 @@ function m(e, t, n) {
     if (null != e) return e;
     let { size: i = 80, canAnimate: o = !0 } = r,
         a = null === e;
-    return a && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, o) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, o);
+    return a && null == t
+        ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator)
+        : a || (null == t ? void 0 : t.avatar) == null
+          ? n.getAvatarURL(void 0, i, o)
+          : n.getAvatarURL(null == t ? void 0 : t.guildId, i, o);
 }
 function g(e) {
     var t;
     let { pendingNickname: n, pendingGlobalName: r, user: i, guildMember: o } = e,
-        a = '' === n ? null : null != n ? n : null == o ? void 0 : o.nick,
-        s = '' === r ? i.username : r;
+        a = "" === n ? null : null != n ? n : null == o ? void 0 : o.nick,
+        s = "" === r ? i.username : r;
     return null != (t = null != a ? a : s) ? t : l.ZP.getName(i);
 }
 function E(e) {

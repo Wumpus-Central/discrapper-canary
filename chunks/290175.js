@@ -11,10 +11,10 @@ let o = (e) => {
     return e === n.a.PREMIUM_TIER_2_3_DAY
         ? {
               isDisabled: t,
-              disabledReason: t ? i.intl.string(i.t.NbveHB) : null
+              disabledReason: t ? i.intl.string(i.t.NbveHB) : null,
           }
         : {
               isDisabled: !1,
-              disabledReason: null
+              disabledReason: null,
           };
 };

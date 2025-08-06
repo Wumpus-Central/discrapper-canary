@@ -10,43 +10,56 @@ var r = n(120356),
     d = n(593595);
 let u = (e) => {
     var t;
-    let { title: n, titleClassName: r, buttonClassName: u, perkImage: m, isCarousel: p, onCtaClick: g, perkComponent: h, subtitle: f = '', descriptionCta: b = '', cardVariant: x, subtitleClassName: _, imageOverlayText: j } = e,
+    let {
+            title: n,
+            titleClassName: r,
+            buttonClassName: u,
+            perkImage: m,
+            isCarousel: p,
+            onCtaClick: g,
+            perkComponent: h,
+            subtitle: f = "",
+            descriptionCta: b = "",
+            cardVariant: x,
+            subtitleClassName: _,
+            imageOverlayText: j,
+        } = e,
         E = (0, o._)(x),
         C = null != j;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('div', { className: s()(d.cover, d.below) }),
+            (0, i.jsx)("div", { className: s()(d.cover, d.below) }),
             (0, i.jsx)(c.Z, {
                 title: n,
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: E,
                 titleClassName: r,
                 subtitle: f,
-                subtitleClassName: _
+                subtitleClassName: _,
             }),
             null != m &&
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: s()(d.relative, { [d.cardImage]: !p }),
                     children: [
-                        (0, i.jsx)('img', {
+                        (0, i.jsx)("img", {
                             src: m,
-                            alt: '',
-                            className: p ? (C ? d.carouselCardImageGrayscale : d.carouselCardImage) : ''
+                            alt: "",
+                            className: p ? (C ? d.carouselCardImageGrayscale : d.carouselCardImage) : "",
                         }),
                         C
-                            ? (0, i.jsx)('div', {
+                            ? (0, i.jsx)("div", {
                                   className: d.imageOverlayTextContainer,
                                   children: (0, i.jsx)(l.Text, {
                                       className: d.imageOverlayText,
-                                      variant: 'text-md/bold',
-                                      children: j
-                                  })
+                                      variant: "text-md/bold",
+                                      children: j,
+                                  }),
                               })
-                            : null
-                    ]
+                            : null,
+                    ],
                 }),
             null != h &&
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: d.cardIllustrationNoHover,
                     children: [
                         h,
@@ -56,13 +69,13 @@ let u = (e) => {
                                 className: u,
                                 fullWidth: !0,
                                 onClick: g,
-                                children: (0, i.jsx)('div', {
+                                children: (0, i.jsx)("div", {
                                     className: null == E || null == (t = E.descriptionCta) ? void 0 : t.className,
-                                    children: b
-                                })
-                            })
-                    ]
-                })
-        ]
+                                    children: b,
+                                }),
+                            }),
+                    ],
+                }),
+        ],
     });
 };

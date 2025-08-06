@@ -8,10 +8,10 @@ var r = n(127849),
     u = r.Function,
     d =
         /MSIE .\./.test(s) ||
-        ('BUN' === a &&
+        ("BUN" === a &&
             (function () {
-                var e = r.Bun.version.split('.');
-                return e.length < 3 || ('0' === e[0] && (e[1] < 3 || ('3' === e[1] && '0' === e[2])));
+                var e = r.Bun.version.split(".");
+                return e.length < 3 || ("0" === e[0] && (e[1] < 3 || ("3" === e[1] && "0" === e[2])));
             })());
 e.exports = function (e, t) {
     var n = t ? 2 : 1;

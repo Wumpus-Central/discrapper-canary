@@ -1,4 +1,4 @@
-(Object.defineProperty(t, '__esModule', { value: !0 }), (t.autoprefix = void 0));
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.autoprefix = void 0);
 var n,
     o = (n = r(320403)) && n.__esModule ? n : { default: n },
     a =
@@ -17,7 +17,7 @@ var n,
                 MozBorderRadius: e,
                 OBorderRadius: e,
                 WebkitBorderRadius: e,
-                borderRadius: e
+                borderRadius: e,
             };
         },
         boxShadow: function (e) {
@@ -26,7 +26,7 @@ var n,
                 MozBoxShadow: e,
                 OBoxShadow: e,
                 WebkitBoxShadow: e,
-                boxShadow: e
+                boxShadow: e,
             };
         },
         userSelect: function (e) {
@@ -36,7 +36,7 @@ var n,
                 MozUserSelect: e,
                 msUserSelect: e,
                 WebkitUserSelect: e,
-                userSelect: e
+                userSelect: e,
             };
         },
         flex: function (e) {
@@ -45,19 +45,19 @@ var n,
                 MozBoxFlex: e,
                 WebkitFlex: e,
                 msFlex: e,
-                flex: e
+                flex: e,
             };
         },
         flexBasis: function (e) {
             return {
                 WebkitFlexBasis: e,
-                flexBasis: e
+                flexBasis: e,
             };
         },
         justifyContent: function (e) {
             return {
                 WebkitJustifyContent: e,
-                justifyContent: e
+                justifyContent: e,
             };
         },
         transition: function (e) {
@@ -66,7 +66,7 @@ var n,
                 MozTransition: e,
                 OTransition: e,
                 WebkitTransition: e,
-                transition: e
+                transition: e,
             };
         },
         transform: function (e) {
@@ -75,34 +75,34 @@ var n,
                 MozTransform: e,
                 OTransform: e,
                 WebkitTransform: e,
-                transform: e
+                transform: e,
             };
         },
         absolute: function (e) {
-            var t = e && e.split(' ');
+            var t = e && e.split(" ");
             return {
-                position: 'absolute',
+                position: "absolute",
                 top: t && t[0],
                 right: t && t[1],
                 bottom: t && t[2],
-                left: t && t[3]
+                left: t && t[3],
             };
         },
         extend: function (e, t) {
             var r = t[e];
             return r || { extend: e };
-        }
+        },
     },
     l = (t.autoprefix = function (e) {
         var t = {};
         return (
             (0, o.default)(e, function (e, r) {
                 var n = {};
-                ((0, o.default)(e, function (e, t) {
+                (0, o.default)(e, function (e, t) {
                     var r = i[t];
                     r ? (n = a({}, n, r(e))) : (n[t] = e);
                 }),
-                    (t[r] = n));
+                    (t[r] = n);
             }),
             t
         );

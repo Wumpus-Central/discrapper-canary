@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => c }), r(415506));
+r.r(t), r.d(t, { default: () => c }), r(415506);
 var n = r(255367);
 r(73800);
 var o = r(481060),
@@ -9,24 +9,24 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
                 Object.getOwnPropertySymbols(r).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
+                }),
             )),
             n.forEach(function (t) {
                 var n;
-                ((n = r[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = n));
-            }));
+                        : (e[t] = n);
+            });
     }
     return e;
 }
@@ -36,7 +36,7 @@ let c = {
             { sitekey: c, captchaService: u, options: d } = e;
         (0, o.ZDy)(
             async () => {
-                let { default: e } = await r.e('12192').then(r.bind(r, 718742));
+                let { default: e } = await r.e("12192").then(r.bind(r, 718742));
                 return (r) =>
                     (0, n.jsx)(
                         e,
@@ -45,21 +45,21 @@ let c = {
                                 onCaptchaVerify: (e, r) =>
                                     t({
                                         captcha_key: e,
-                                        captcha_rqtoken: r
+                                        captcha_rqtoken: r,
                                     }),
                                 captchaService: u,
-                                sitekey: c
+                                sitekey: c,
                             },
                             s,
                             d,
-                            r
-                        )
+                            r,
+                        ),
                     );
             },
             {
                 Layer: a.ZP,
-                modalKey: l.A
-            }
+                modalKey: l.A,
+            },
         );
     },
     showCaptchaAsync: function (e) {
@@ -68,7 +68,7 @@ let c = {
         return new Promise((e, m) => {
             (0, o.ZDy)(
                 async () => {
-                    let { default: o } = await r.e('12192').then(r.bind(r, 718742));
+                    let { default: o } = await r.e("12192").then(r.bind(r, 718742));
                     return (r) =>
                         (0, n.jsx)(
                             o,
@@ -78,28 +78,30 @@ let c = {
                                         e({
                                             captcha_key: t,
                                             captcha_rqtoken: r,
-                                            captcha_session_id: d
+                                            captcha_session_id: d,
                                         }),
                                     captchaService: u,
                                     sitekey: c,
                                     onReject: (e) => {
-                                        e === s.CaptchaError.CANCEL ? m(new s.CaptchaCancelError()) : m(Error('cancel captcha'));
-                                    }
+                                        e === s.CaptchaError.CANCEL
+                                            ? m(new s.CaptchaCancelError())
+                                            : m(Error("cancel captcha"));
+                                    },
                                 },
                                 t,
                                 p,
-                                r
-                            )
+                                r,
+                            ),
                         );
                 },
                 {
                     Layer: a.ZP,
-                    modalKey: l.A
-                }
+                    modalKey: l.A,
+                },
             );
         });
     },
     useIsCaptchaModalOpen: function () {
         return (0, o.s9z)((e) => (0, o.DEQ)(e, l.A));
-    }
+    },
 };

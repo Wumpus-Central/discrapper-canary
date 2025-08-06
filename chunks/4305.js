@@ -12,12 +12,12 @@ function l(e) {
         f = i.Z.getSystemMessageUserJoin(t.id),
         _ = s.intl.format(f, {
             username: u.nick,
-            usernameHook: d
+            usernameHook: d,
         });
     return (0, r.jsx)(a.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: c,
-        children: _
+        children: _,
     });
 }

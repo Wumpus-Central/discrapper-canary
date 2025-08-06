@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(399606),
@@ -10,7 +10,7 @@ var r = n(255367),
     d = n(914010),
     h = n(921944);
 function p(e) {
-    return 'dismissible_content_'.concat(h.R.GUILD_TAKEOVER_MODAL, '-').concat(e);
+    return "dismissible_content_".concat(h.R.GUILD_TAKEOVER_MODAL, "-").concat(e);
 }
 let f = i.memo(function () {
     let e = ((0, l.e7)([u.Z], () => u.Z.isConnected()), []),
@@ -29,13 +29,13 @@ let f = i.memo(function () {
                     let { dismissibleContent: t, markAsDismissed: i } = e,
                         l = {
                             onCloseCallback: (e) => i(null != e ? e : h.L.UNKNOWN),
-                            modalKey: p(t)
+                            modalKey: p(t),
                         },
                         s = d.Z.getGuildId();
                     t === a.z.SERVER_SHOP_UPSELL &&
                         null != s &&
                         (0, o.ZDy)(async () => {
-                            let { default: e } = await n.e('7302').then(n.bind(n, 756779));
+                            let { default: e } = await n.e("7302").then(n.bind(n, 756779));
                             return (t) => {
                                 var n, l;
                                 return (0, r.jsx)(
@@ -44,31 +44,31 @@ let f = i.memo(function () {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
-                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                            "function" == typeof Object.getOwnPropertySymbols &&
                                                 (r = r.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
+                                                    }),
                                                 )),
                                                 r.forEach(function (t) {
                                                     var r;
-                                                    ((r = n[t]),
+                                                    (r = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: r,
                                                                   enumerable: !0,
                                                                   configurable: !0,
-                                                                  writable: !0
+                                                                  writable: !0,
                                                               })
-                                                            : (e[t] = r));
-                                                }));
+                                                            : (e[t] = r);
+                                                });
                                         }
                                         return e;
                                     })({}, t)),
                                     (l = l =
                                         {
                                             guildId: s,
-                                            markAsDismissed: i
+                                            markAsDismissed: i,
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -82,13 +82,13 @@ let f = i.memo(function () {
                                           })(Object(l)).forEach(function (e) {
                                               Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                                           }),
-                                    n)
+                                    n),
                                 );
                             };
                         }, l);
                 })({
                     dismissibleContent: t,
-                    markAsDismissed: f
+                    markAsDismissed: f,
                 }),
                 (m.current = t));
         }, [t, g, f]),
@@ -96,7 +96,7 @@ let f = i.memo(function () {
             () => () => {
                 null != t && (0, s.Mr)(p(t));
             },
-            [t]
+            [t],
         ),
         null
     );

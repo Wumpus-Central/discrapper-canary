@@ -2,7 +2,7 @@ let r;
 n.d(t, {
     GN: () => f,
     tu: () => d,
-    uk: () => u
+    uk: () => u,
 });
 var i = n(710845),
     o = n(474873),
@@ -10,7 +10,7 @@ var i = n(710845),
     s = n(246946),
     l = n(509571);
 r = n(146779).WebAudioSound;
-let c = new i.Z('SoundUtils');
+let c = new i.Z("SoundUtils");
 function u(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
@@ -30,7 +30,7 @@ function f(e) {
         u = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.w.DEFAULT;
     if (s.Z.disableSounds) return;
     let f = (0, a.Z)(null != i ? i : o.Z.getSoundpack());
-    null == f && c.log('Unable to find sound for pack name: '.concat(i));
+    null == f && c.log("Unable to find sound for pack name: ".concat(i));
     let _ = d(null != (t = f[e]) ? t : e, e, n, u);
     return (
         null != r

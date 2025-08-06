@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -51,15 +51,17 @@ function v() {
         application_id: E.gD,
         name: null != (i = null != (r = u.topic) ? r : y.topic) ? i : y.name,
         type: (0, g.xJ)(y.id) ? b.IIU.WATCHING : b.IIU.LISTENING,
-        timestamps: { start: null != (o = null == T || null == (n = T.timestamps) ? void 0 : n.start) ? o : new Date().getTime() },
+        timestamps: {
+            start: null != (o = null == T || null == (n = T.timestamps) ? void 0 : n.start) ? o : new Date().getTime(),
+        },
         assets: {
             small_image: null != (a = v.icon) ? a : void 0,
-            small_text: v.name
+            small_text: v.name,
         },
         party: {
             id: I,
-            size: [N, Math.max(C, R)]
-        }
+            size: [N, Math.max(C, R)],
+        },
     };
 }
 function I() {
@@ -86,7 +88,7 @@ class A extends (r = a.ZP.Store) {
         return O;
     }
 }
-y(A, 'displayName', 'StageChannelSelfRichPresenceStore');
+y(A, "displayName", "StageChannelSelfRichPresenceStore");
 let N = new A(s.Z, {
     CONNECTION_OPEN: I,
     STAGE_INSTANCE_CREATE: I,
@@ -94,5 +96,5 @@ let N = new A(s.Z, {
     STAGE_INSTANCE_DELETE: I,
     VOICE_CHANNEL_SELECT: I,
     RTC_CONNECTION_STATE: S,
-    VOICE_STATE_UPDATES: T
+    VOICE_STATE_UPDATES: T,
 });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(314940));
+n.d(t, { Z: () => I }), n(314940);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,53 +29,53 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function E(e) {
     let { media: t } = e;
     return (0, r.jsx)(c.X6q, {
-        variant: 'text-md/medium',
+        variant: "text-md/medium",
         className: h.question,
         scaleFontToUserSetting: !0,
-        children: t.text
+        children: t.text,
     });
 }
 function b(e) {
     let { buttonLabel: t, secondaryLabel: n, handleClick: i, isInteractive: o, className: s } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(h.detailsText, s),
         children: [
             o
                 ? (0, r.jsx)(c.Avr, {
                       text: t,
                       onClick: i,
-                      variant: 'secondary',
-                      textVariant: 'text-sm/medium'
+                      variant: "secondary",
+                      textVariant: "text-sm/medium",
                   })
                 : (0, r.jsx)(c.Text, {
-                      variant: 'text-sm/normal',
-                      color: 'text-muted',
+                      variant: "text-sm/normal",
+                      color: "text-muted",
                       scaleFontToUserSetting: !0,
-                      children: t
+                      children: t,
                   }),
             null != n &&
                 (0, r.jsx)(c.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-muted',
+                    variant: "text-sm/normal",
+                    color: "text-muted",
                     scaleFontToUserSetting: !0,
-                    children: n
-                })
-        ]
+                    children: n,
+                }),
+        ],
     });
 }
 function y(e, t) {
@@ -87,7 +87,7 @@ function y(e, t) {
         canTapAnswers: t.canTapAnswers,
         hasSelectedAnyAnswer: t.hasSelectedAnswer,
         myAvatarUrl: t.myAvatarUrl,
-        canShowVoteCounts: t.canShowVoteCounts
+        canShowVoteCounts: t.canShowVoteCounts,
     };
     return (0, s.EQ)(t.layoutType)
         .with(l.C.DEFAULT, () => (0, r.jsx)(p.K, g({}, n)))
@@ -102,39 +102,39 @@ function O(e) {
                 (await u.Z.handlePollActionTapped({
                     channelId: n,
                     messageId: o,
-                    type: t.type
+                    type: t.type,
                 }),
                 d(t.type));
         }, [null == t ? void 0 : t.type, n, o, d]);
     return null == t
         ? null
-        : 'button' === t.presentation || 'secondaryButton' === t.presentation
+        : "button" === t.presentation || "secondaryButton" === t.presentation
           ? (0, r.jsx)(
                 c.zxk,
                 {
                     buttonRef: l,
                     onClick: f,
                     disabled: !t.enabled,
-                    variant: 'secondaryButton' === t.presentation ? 'secondary' : 'primary',
-                    size: 'sm',
-                    text: t.label
+                    variant: "secondaryButton" === t.presentation ? "secondary" : "primary",
+                    size: "sm",
+                    text: t.label,
                 },
-                t.presentation
+                t.presentation,
             )
-          : 'textButton' === t.presentation
+          : "textButton" === t.presentation
             ? (0, r.jsx)(c.Avr, {
                   buttonRef: l,
                   onClick: f,
                   text: t.label,
-                  variant: 'secondary',
-                  textVariant: 'text-sm/medium'
+                  variant: "secondary",
+                  textVariant: "text-sm/medium",
               })
             : (0, r.jsx)(b, {
                   buttonLabel: t.label,
                   secondaryLabel: t.secondaryLabel,
                   handleClick: f,
                   isInteractive: a,
-                  className: s
+                  className: s,
               });
 }
 function v(e) {
@@ -143,26 +143,26 @@ function v(e) {
         s = y(t, n);
     return null == s
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: a()(h.container, o, i),
               children: (0, r.jsxs)(c.y5t, {
                   children: [
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: h.header,
                           children: [
                               (0, r.jsx)(E, { media: n.question }),
                               null != n.promptLabel &&
                                   (0, r.jsx)(c.Text, {
-                                      variant: 'text-sm/normal',
-                                      color: 'text-muted',
+                                      variant: "text-sm/normal",
+                                      color: "text-muted",
                                       className: h.prompt,
                                       scaleFontToUserSetting: !0,
-                                      children: n.promptLabel
-                                  })
-                          ]
+                                      children: n.promptLabel,
+                                  }),
+                          ],
                       }),
                       s,
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: h.bottomBar,
                           children: [
                               (0, r.jsx)(O, {
@@ -170,23 +170,23 @@ function v(e) {
                                   messageId: t.id,
                                   action: n.secondaryAction,
                                   className: h.secondaryAction,
-                                  isInteractive: n.isInteractive
+                                  isInteractive: n.isInteractive,
                               }),
                               (0, r.jsx)(O, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.tertiaryAction,
-                                  className: h.tertiaryAction
+                                  className: h.tertiaryAction,
                               }),
                               (0, r.jsx)(O, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
-                                  action: n.primaryAction
-                              })
-                          ]
-                      })
-                  ]
-              })
+                                  action: n.primaryAction,
+                              }),
+                          ],
+                      }),
+                  ],
+              }),
           });
 }
 function I(e) {
@@ -198,8 +198,8 @@ function I(e) {
             children: (0, r.jsx)(v, {
                 message: t,
                 poll: n,
-                className: i
-            })
-        })
+                className: i,
+            }),
+        }),
     });
 }

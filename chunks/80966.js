@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,14 +76,72 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 class m extends i.Component {
     render() {
         let e = this.props,
-            { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: f, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: b = !0, volume: y, autoPlay: O, autoMute: v, responsive: I, mediaLayoutType: T, mimeType: S, renderOverlayContent: A, renderLinkComponent: N, onClick: C, onPlay: R, onPause: P, onEnded: w, onControlsShow: D, onControlsHide: L, onVolumeChange: x, onMute: M, disableArrowKeySeek: k, alt: j = c.intl.string(c.t.FlNoSU) } = e,
-            U = p(e, ['src', 'fileSize', 'className', 'mediaPlayerClassName', 'poster', 'fileName', 'naturalWidth', 'naturalHeight', 'playable', 'downloadable', 'volume', 'autoPlay', 'autoMute', 'responsive', 'mediaLayoutType', 'mimeType', 'renderOverlayContent', 'renderLinkComponent', 'onClick', 'onPlay', 'onPause', 'onEnded', 'onControlsShow', 'onControlsHide', 'onVolumeChange', 'onMute', 'disableArrowKeySeek', 'alt']);
+            {
+                src: t,
+                fileSize: n,
+                className: i,
+                mediaPlayerClassName: u,
+                poster: f,
+                fileName: h,
+                naturalWidth: m,
+                naturalHeight: g,
+                playable: E,
+                downloadable: b = !0,
+                volume: y,
+                autoPlay: O,
+                autoMute: v,
+                responsive: I,
+                mediaLayoutType: T,
+                mimeType: S,
+                renderOverlayContent: A,
+                renderLinkComponent: N,
+                onClick: C,
+                onPlay: R,
+                onPause: P,
+                onEnded: w,
+                onControlsShow: D,
+                onControlsHide: L,
+                onVolumeChange: x,
+                onMute: M,
+                disableArrowKeySeek: k,
+                alt: j = c.intl.string(c.t.FlNoSU),
+            } = e,
+            U = p(e, [
+                "src",
+                "fileSize",
+                "className",
+                "mediaPlayerClassName",
+                "poster",
+                "fileName",
+                "naturalWidth",
+                "naturalHeight",
+                "playable",
+                "downloadable",
+                "volume",
+                "autoPlay",
+                "autoMute",
+                "responsive",
+                "mediaLayoutType",
+                "mimeType",
+                "renderOverlayContent",
+                "renderLinkComponent",
+                "onClick",
+                "onPlay",
+                "onPause",
+                "onEnded",
+                "onControlsShow",
+                "onControlsHide",
+                "onVolumeChange",
+                "onMute",
+                "disableArrowKeySeek",
+                "alt",
+            ]);
         return (0, r.jsx)(
             a.ZP,
             _(
@@ -90,9 +149,9 @@ class m extends i.Component {
                     {
                         alt: j,
                         className: i,
-                        src: f
+                        src: f,
                     },
-                    U
+                    U,
                 ),
                 {
                     minWidth: s.ZP.minWidth,
@@ -104,7 +163,7 @@ class m extends i.Component {
                     children: (e) => {
                         let {
                                 src: i,
-                                size: { width: a, height: c }
+                                size: { width: a, height: c },
                             } = e,
                             d = !((m <= l.N_j && g <= l.XKF) || (m <= l.XKF && g <= l.N_j));
                         return (0, r.jsx)(s.ZP, {
@@ -136,11 +195,11 @@ class m extends i.Component {
                             onControlsHide: L,
                             mimeType: S,
                             downloadable: b,
-                            disableArrowKeySeek: k
+                            disableArrowKeySeek: k,
                         });
-                    }
-                }
-            )
+                    },
+                },
+            ),
         );
     }
 }

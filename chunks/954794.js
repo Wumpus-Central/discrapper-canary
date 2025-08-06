@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(642613));
+n.d(t, { Z: () => h }), n(642613);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -21,7 +21,7 @@ function h(e) {
                     .filter(c.lm)
                     .filter((e) => null == n[e.id])
                     .sort((e, t) => e.rarity - t.rarity),
-            [n]
+            [n],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -32,49 +32,49 @@ function h(e) {
                     children: [
                         (0, i.jsx)(o.Z, {
                             direction: o.Z.Directions.LEFT,
-                            className: g.icon
+                            className: g.icon,
                         }),
                         (0, i.jsx)(l.Text, {
-                            variant: 'text-lg/normal',
-                            color: 'text-default',
-                            children: p.intl.string(p.t['13/7kZ'])
-                        })
-                    ]
-                })
+                            variant: "text-lg/normal",
+                            color: "text-default",
+                            children: p.intl.string(p.t["13/7kZ"]),
+                        }),
+                    ],
+                }),
             }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: g.headerContainer,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: g.headerTextContainer,
                         children: [
                             (0, i.jsx)(l.X6q, {
-                                variant: 'heading-lg/extrabold',
-                                color: 'header-primary',
-                                children: p.intl.string(p.t['6jI0hY'])
+                                variant: "heading-lg/extrabold",
+                                color: "header-primary",
+                                children: p.intl.string(p.t["6jI0hY"]),
                             }),
                             (0, i.jsx)(l.Text, {
-                                variant: 'text-md/normal',
-                                color: 'header-secondary',
-                                children: p.intl.string(p.t.GuUItb)
-                            })
-                        ]
+                                variant: "text-md/normal",
+                                color: "header-secondary",
+                                children: p.intl.string(p.t.GuUItb),
+                            }),
+                        ],
                     }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: g.headerIcon,
                         children: (0, i.jsx)(l.rm8, {
-                            size: 'custom',
+                            size: "custom",
                             color: a.Z.unsafe_rawColors.ORANGE_345.css,
                             width: 40,
-                            height: 40
-                        })
-                    })
-                ]
+                            height: 40,
+                        }),
+                    }),
+                ],
             }),
             h.length > 0 &&
                 (0, i.jsx)(l.hjN, {
                     className: g.divider,
-                    children: (0, i.jsx)('div', {
+                    children: (0, i.jsx)("div", {
                         className: g.achievementGrid,
                         children: h.map((e) => {
                             let { achievementId: t, dateUnlocked: n } = e;
@@ -82,35 +82,35 @@ function h(e) {
                                 m.Z,
                                 {
                                     achievementId: t,
-                                    dateUnlocked: n
+                                    dateUnlocked: n,
                                 },
-                                t
+                                t,
                             );
-                        })
-                    })
+                        }),
+                    }),
                 }),
             f.length > 0 &&
                 (0, i.jsxs)(l.hjN, {
                     className: g.divider,
                     children: [
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: g.headerTextContainer,
                             children: (0, i.jsx)(l.Text, {
-                                variant: 'text-md/bold',
-                                color: 'header-secondary',
-                                children: p.intl.string(p.t.GFyMg4)
-                            })
+                                variant: "text-md/bold",
+                                color: "header-secondary",
+                                children: p.intl.string(p.t.GFyMg4),
+                            }),
                         }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: g.achievementGrid,
-                            children: f.map((e) => (0, i.jsx)(m.Z, { achievementId: e.id }, e.id))
-                        })
-                    ]
+                            children: f.map((e) => (0, i.jsx)(m.Z, { achievementId: e.id }, e.id)),
+                        }),
+                    ],
                 }),
             (0, i.jsx)(l.hjN, {
                 className: g.divider,
-                children: (0, i.jsx)('div', { className: g.bottomPadding })
-            })
-        ]
+                children: (0, i.jsx)("div", { className: g.bottomPadding }),
+            }),
+        ],
     });
 }

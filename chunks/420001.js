@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(35282), n(781311), n(704826));
+n.d(t, { Z: () => v }), n(35282), n(781311), n(704826);
 var r = n(911969),
     i = n(10718),
     o = n(367790),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -46,11 +46,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,9 +72,9 @@ function O(e) {
             r = u.default.getUser(n);
         return null != r && r.bot
             ? {
-                  type: 'mention',
+                  type: "mention",
                   cleanedQuery: e.substring(t[0].length).trim(),
-                  user: r
+                  user: r,
               }
             : null;
     }
@@ -84,7 +84,8 @@ let v = y(E({}, h.Z), {
     sentinel: void 0,
     focusMode: p.QZ.MANUAL,
     matches(e, t, n, r, i) {
-        if (i.commands === p.L8.DISABLED || i.commands === p.L8.OLD_BUILT_INS || n.length < 2 || !c.Xk.getSetting()) return !1;
+        if (i.commands === p.L8.DISABLED || i.commands === p.L8.OLD_BUILT_INS || n.length < 2 || !c.Xk.getSetting())
+            return !1;
         let o = O(n);
         return null != o && o.cleanedQuery.length > 0;
     },
@@ -96,24 +97,24 @@ let v = y(E({}, h.Z), {
             { commands: f, sections: _ } = i.JT(
                 {
                     channel: e,
-                    type: 'channel'
+                    type: "channel",
                 },
                 {
                     commandTypes: [r.yU.CHAT],
-                    text: d.text
+                    text: d.text,
                 },
                 {
                     limit: p.AQ,
                     placeholderCount: p.YP,
                     scoreMethod: o.p.COMMAND_OR_APPLICATION,
-                    allowFetch: l
-                }
+                    allowFetch: l,
+                },
             );
         if (null == f) return h.K;
         let m = f.filter((e) => e.section.botId === u.user.id);
         if (d.hasSpaceTerminator) {
             let e = d.text.trim(),
-                t = e + ' ';
+                t = e + " ";
             m = m.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
         }
         return 0 === m.length
@@ -122,9 +123,9 @@ let v = y(E({}, h.Z), {
                   results: {
                       entries: m.slice(0, p.AQ).map((e) => ({
                           command: e,
-                          section: null == _ ? void 0 : _.find((t) => t.id === e.applicationId)
-                      }))
-                  }
+                          section: null == _ ? void 0 : _.find((t) => t.id === e.applicationId),
+                      })),
+                  },
               };
     },
     renderResults(e) {
@@ -136,7 +137,7 @@ let v = y(E({}, h.Z), {
             query: o,
             options: a,
             onHover: s,
-            onClick: c
+            onClick: c,
         } = e;
         return (0, _.HI)({
             query: o,
@@ -145,7 +146,7 @@ let v = y(E({}, h.Z), {
             onHover: s,
             onClick: c,
             titleWithQuery: m.t.HFRoZW,
-            titleWithoutQuery: m.intl.string(m.t['0hKkS0']),
+            titleWithoutQuery: m.intl.string(m.t["0hKkS0"]),
             Component: a.commands === p.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
@@ -155,16 +156,16 @@ let v = y(E({}, h.Z), {
                     channel: i,
                     guildId: i.guild_id,
                     showImage: !0,
-                    section: n
+                    section: n,
                 };
             },
             getQuery: (e) => {
                 let t = O(e);
-                if ('mention' !== t.type) return e;
+                if ("mention" !== t.type) return e;
                 let n = d.ZP.getName(null == r ? void 0 : r.id, i.id, t.user);
-                return e.replace(f.X, '@'.concat(n));
+                return e.replace(f.X, "@".concat(n));
             },
-            key: 'commands'
+            key: "commands",
         });
     },
     onSelect(e) {
@@ -176,8 +177,8 @@ let v = y(E({}, h.Z), {
                 options: i,
                 channel: o,
                 guild: s,
-                location: a.Vh.SUGGESTION
+                location: a.Vh.SUGGESTION,
             });
         return null == l ? null : y(E({}, l), { type: p.z2.COMMAND_SUGGESTION });
-    }
+    },
 });

@@ -15,7 +15,7 @@ function d(e) {
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
-            messageId: t.id
+            messageId: t.id,
         })(f),
         p = (0, o.q)(t.applicationId);
     if (null == p) return null;
@@ -28,22 +28,22 @@ function d(e) {
                 i.Text,
                 {
                     className: u.applicationName,
-                    variant: 'text-md/semibold',
-                    color: 'header-primary',
-                    children: p.name
+                    variant: "text-md/semibold",
+                    color: "header-primary",
+                    children: p.name,
                 },
-                p.name
+                p.name,
             ),
-        helpdeskArticle: '#'
+        helpdeskArticle: "#",
     });
     return (0, r.jsx)(l.Z, {
         iconNode: (0, r.jsx)(i.DuK, {
-            size: 'sm',
-            color: i.TVs.colors.STATUS_POSITIVE
+            size: "sm",
+            color: i.TVs.colors.STATUS_POSITIVE,
         }),
         timestamp: t.timestamp,
         compact: d,
         contentClassName: u.systemMessage,
-        children: h
+        children: h,
     });
 }

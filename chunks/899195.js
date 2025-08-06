@@ -1,9 +1,9 @@
 a.d(e, {
     V: () => o,
-    y: () => n
+    y: () => n,
 });
 var r = a(370336);
-let _ = '_sentryMetrics';
+let _ = "_sentryMetrics";
 function n(t) {
     let e = t[_];
     if (!e) return;
@@ -24,8 +24,8 @@ function o(t, e, a, r, n, o, i) {
                 max: Math.max(t.max, r),
                 count: (t.count += 1),
                 sum: (t.sum += r),
-                tags: t.tags
-            }
+                tags: t.tags,
+            },
         ]);
     } else
         c.set(i, [
@@ -35,7 +35,7 @@ function o(t, e, a, r, n, o, i) {
                 max: r,
                 count: 1,
                 sum: r,
-                tags: o
-            }
+                tags: o,
+            },
         ]);
 }

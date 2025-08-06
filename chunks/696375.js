@@ -15,14 +15,14 @@ function r(e) {
             children: [
                 (0, i.jsx)(s.Text, {
                     className: l.childText,
-                    variant: 'text-md/semibold',
-                    children: t
+                    variant: "text-md/semibold",
+                    children: t,
                 }),
                 (0, i.jsx)(a.Z, {
                     className: l.childIcon,
-                    direction: a.Z.Directions.RIGHT
-                })
-            ]
-        })
+                    direction: a.Z.Directions.RIGHT,
+                }),
+            ],
+        }),
     });
 }

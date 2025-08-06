@@ -1,8 +1,8 @@
-Object.defineProperty(e, '__esModule', { value: !0 });
+Object.defineProperty(e, "__esModule", { value: !0 });
 let i = a(141716);
 e.default = class {
     constructor(t) {
-        ((this.data = { name: null }), void 0 !== t.name && this.name(t.name));
+        (this.data = { name: null }), void 0 !== t.name && this.name(t.name);
     }
     name(t) {
         return void 0 === t ? this.data.name : ((this.data.name = t || null), this);
@@ -11,7 +11,7 @@ e.default = class {
         return Object.assign({}, this.data);
     }
     toString() {
-        if (!this.data.name) throw Error('No value for `name` in ICalCategory given!');
+        if (!this.data.name) throw Error("No value for `name` in ICalCategory given!");
         return (0, i.escape)(this.data.name);
     }
 };

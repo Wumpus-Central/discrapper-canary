@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,7 +10,15 @@ var r = n(255367),
     u = n(212787);
 let m = i.memo(function (e) {
     var t, n;
-    let { renderHeader: l, children: m, isExpanded: g, isStuck: p, onExpand: h, disableAnimation: f, disableBackground: x } = e,
+    let {
+            renderHeader: l,
+            children: m,
+            isExpanded: g,
+            isStuck: p,
+            onExpand: h,
+            disableAnimation: f,
+            disableBackground: x,
+        } = e,
         [b, j] = i.useState(!0),
         [v, _] = i.useState(!1),
         { ref: O, height: y = 0 } = (0, c.ZP)(),
@@ -24,24 +32,24 @@ let m = i.memo(function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, s.config.stiff)),
@@ -64,13 +72,13 @@ let m = i.memo(function (e) {
                 },
                 onRest: () => {
                     _(!0);
-                }
+                },
             },
-            b || f ? 'animate-never' : 'respect-motion-settings'
+            b || f ? "animate-never" : "respect-motion-settings",
         );
     return (
         i.useLayoutEffect(() => {
-            (_(!1), E(g));
+            _(!1), E(g);
         }, [g]),
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {
@@ -81,7 +89,7 @@ let m = i.memo(function (e) {
         (0, r.jsx)(o.P3F, {
             className: a()(u.editCard, {
                 [u.toggled]: g,
-                [u.noBackground]: x
+                [u.noBackground]: x,
             }),
             children: (0, r.jsxs)(s.animated.div, {
                 className: a()(u.contentExpandContainer, { [u.showOverflow]: g && v }),
@@ -91,15 +99,15 @@ let m = i.memo(function (e) {
                         innerRef: O,
                         onClick: p ? void 0 : h,
                         className: a()(u.innerHeader, { [u.toggled]: g && p }),
-                        'aria-label': d.intl.string(d.t.dcl9MT),
-                        children: l
+                        "aria-label": d.intl.string(d.t.dcl9MT),
+                        children: l,
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         ref: C,
-                        children: m
-                    })
-                ]
-            })
+                        children: m,
+                    }),
+                ],
+            }),
         })
     );
 });

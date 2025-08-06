@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var r = n(239091),
     i = n(147913),
     o = n(40851),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,14 +20,14 @@ function c(e, t, n) {
 }
 class u extends i.Z {
     constructor(...e) {
-        (super(...e),
-            c(this, 'actions', {
+        super(...e),
+            c(this, "actions", {
                 OVERLAY_SET_INPUT_LOCKED: () => {
                     null != a.Z.getContextMenu() && (0, r.Zy)();
                     let e = (0, o.Su)();
-                    (null != e && e.windowDispatch.dispatch(l.CkL.POPOUT_CLOSE), s.S.dispatch(l.CkL.MODAL_CLOSE));
-                }
-            }));
+                    null != e && e.windowDispatch.dispatch(l.CkL.POPOUT_CLOSE), s.S.dispatch(l.CkL.MODAL_CLOSE);
+                },
+            });
     }
 }
 let d = new u();

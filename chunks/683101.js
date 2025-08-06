@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     l = n(73800),
     s = n(392711),
@@ -17,7 +17,7 @@ function A(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 A(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -64,17 +64,17 @@ class I extends l.PureComponent {
         if (null == a) return null;
         let u = E.Z.getChannel(a.channel_id);
         if (null == u) return null;
-        let A = 'search-result-'.concat(a.id);
+        let A = "search-result-".concat(a.id);
         return (0, r.jsx)(o.tEY, {
             ringTarget: this.hitRef,
             ringClassName: _.__invalid_searchResultFocusRing,
             offset: 4,
             children: (0, r.jsxs)(
-                'li',
+                "li",
                 m(T({ className: _.container }, t), {
-                    'aria-posinset': 1 + n + l,
-                    'aria-setsize': s,
-                    'aria-labelledby': A,
+                    "aria-posinset": 1 + n + l,
+                    "aria-setsize": s,
+                    "aria-labelledby": A,
                     children: [
                         (0, r.jsx)(o.P3F, {
                             tabIndex: -1,
@@ -83,7 +83,7 @@ class I extends l.PureComponent {
                             className: _.searchResult,
                             focusProps: { enabled: !1 },
                             children: (0, r.jsx)(
-                                'div',
+                                "div",
                                 {
                                     ref: this.hitRef,
                                     className: _.message,
@@ -95,53 +95,53 @@ class I extends l.PureComponent {
                                         animateAvatar: !1,
                                         subscribeToComponentDispatch: !1,
                                         trackAnnouncementViews: !0,
-                                        isSearchResult: !0
-                                    })
+                                        isSearchResult: !0,
+                                    }),
                                 },
-                                a.id
-                            )
+                                a.id,
+                            ),
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: _.buttonsContainer,
-                            'aria-hidden': !0,
+                            "aria-hidden": !0,
                             children: (0, r.jsx)(o.P3F, {
                                 className: _.button,
                                 onClick: this.jumpTo,
-                                children: d.intl.string(d.t.k5WiPT)
-                            })
-                        })
-                    ]
-                })
-            )
+                                children: d.intl.string(d.t.k5WiPT),
+                            }),
+                        }),
+                    ],
+                }),
+            ),
         });
     }
     constructor(...e) {
-        (super(...e),
-            A(this, 'containerRef', l.createRef()),
-            A(this, 'hitRef', l.createRef()),
-            A(this, 'handleContextMenu', (e, t) => {
+        super(...e),
+            A(this, "containerRef", l.createRef()),
+            A(this, "hitRef", l.createRef()),
+            A(this, "handleContextMenu", (e, t) => {
                 let l = E.Z.getChannel(t.channel_id);
                 null != l &&
                     (e.stopPropagation(),
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await n.e('53809').then(n.bind(n, 858341));
+                        let { default: e } = await n.e("53809").then(n.bind(n, 858341));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
                                 m(T({}, n), {
                                     message: t,
-                                    channel: l
-                                })
+                                    channel: l,
+                                }),
                             );
                     }));
             }),
-            A(this, 'jumpTo', (e) => {
+            A(this, "jumpTo", (e) => {
                 null != e && (e.preventDefault(), e.stopPropagation());
                 let { onJump: t, result: n, index: r } = this.props,
                     l = n.find((e) => e.isSearchHit);
                 null != l && t(l, r);
             }),
-            A(this, 'handleMessageClick', (e) => {
+            A(this, "handleMessageClick", (e) => {
                 if (
                     (function (e, t) {
                         var n;
@@ -150,7 +150,7 @@ class I extends l.PureComponent {
                         if (null == e || null == t) return !1;
                         for (; (0, a.k)(e) && e !== t; ) {
                             let { tagName: t } = e;
-                            if ('A' === t || 'IMG' === t || 'BUTTON' === t) return !0;
+                            if ("A" === t || "IMG" === t || "BUTTON" === t) return !0;
                             e = e.parentNode;
                         }
                         return !1;
@@ -158,6 +158,6 @@ class I extends l.PureComponent {
                 )
                     return void e.stopPropagation();
                 this.jumpTo(e);
-            }));
+            });
     }
 }

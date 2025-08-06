@@ -6,7 +6,7 @@ t.a(e, async function (e, r) {
         function u(e, n) {
             return JSON.parse((0, o.Qc)(e, n));
         }
-        ((o = (i.then ? (await i)() : i)[0]), r());
+        (o = (i.then ? (await i)() : i)[0]), r();
     } catch (e) {
         r(e);
     }

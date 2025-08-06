@@ -1,16 +1,22 @@
-(n.d(t, { C: () => p }), n(539854));
+n.d(t, { C: () => p }), n(539854);
 var r,
     i = n(255367),
     a = n(73800),
     s = n(82659),
     c = n(390668),
-    o = (((r = o || {}).UPGRADE = 'UPGRADE'), (r.CANCEL = 'CANCEL'), (r.UNVERIFIED = 'UNVERIFIED'), (r.UNCLAIMED = 'UNCLAIMED'), (r.GRANDFATHERED = 'GRANDFATHERED'), r);
+    o =
+        (((r = o || {}).UPGRADE = "UPGRADE"),
+        (r.CANCEL = "CANCEL"),
+        (r.UNVERIFIED = "UNVERIFIED"),
+        (r.UNCLAIMED = "UNCLAIMED"),
+        (r.GRANDFATHERED = "GRANDFATHERED"),
+        r);
 let l = {
-        UPGRADE: 'imageUpgrade',
-        CANCEL: 'imageCancel',
-        UNVERIFIED: 'imageUnverified',
-        UNCLAIMED: 'imageUnclaimed',
-        GRANDFATHERED: 'imageCancel'
+        UPGRADE: "imageUpgrade",
+        CANCEL: "imageCancel",
+        UNVERIFIED: "imageUnverified",
+        UNCLAIMED: "imageUnclaimed",
+        GRANDFATHERED: "imageCancel",
     },
     u = (e) => {
         var t,
@@ -26,29 +32,31 @@ let l = {
                             r,
                             i = {},
                             a = Object.keys(e);
-                        for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                        for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var a = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                    for (r = 0; r < a.length; r++)
+                        (n = a[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
-            })(e, ['children', 'premiumModalType', 'primary', 'secondary']);
+            })(e, ["children", "premiumModalType", "primary", "secondary"]);
         let d = a.useMemo(() => {
             let e = [];
             return (
                 null != p &&
                     e.push({
-                        variant: 'secondary',
+                        variant: "secondary",
                         text: p.label,
-                        onClick: p.onClick
+                        onClick: p.onClick,
                     }),
                 null != u &&
                     e.push({
-                        variant: 'primary',
+                        variant: "primary",
                         text: u.label,
-                        onClick: u.onClick
+                        onClick: u.onClick,
                     }),
                 e
             );
@@ -59,24 +67,24 @@ let l = {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })({}, b)),
@@ -84,12 +92,12 @@ let l = {
                 {
                     actions: d,
                     children: [
-                        (0, i.jsx)('div', { className: c[l[o]] }),
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", { className: c[l[o]] }),
+                        (0, i.jsx)("div", {
                             className: c.message,
-                            children: r
-                        })
-                    ]
+                            children: r,
+                        }),
+                    ],
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -103,7 +111,7 @@ let l = {
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            t)
+            t),
         );
     };
 u.Types = o;

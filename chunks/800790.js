@@ -4,6 +4,6 @@ var r = n(292403),
 e.exports = function (e) {
     if (!r(e)) return i(e);
     var t = [];
-    for (var n in Object(e)) o.call(e, n) && 'constructor' != n && t.push(n);
+    for (var n in Object(e)) o.call(e, n) && "constructor" != n && t.push(n);
     return t;
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    containerTop: 'containerTop__45edc',
-    containerBottom: 'containerBottom__45edc'
+    containerTop: "containerTop__45edc",
+    containerBottom: "containerBottom__45edc",
 };

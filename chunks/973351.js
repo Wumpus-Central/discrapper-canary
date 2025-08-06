@@ -4,9 +4,17 @@ if (!Object.keys) {
         o = Object.prototype.toString,
         a = n(560640),
         s = Object.prototype.propertyIsEnumerable,
-        l = !s.call({ toString: null }, 'toString'),
-        c = s.call(function () {}, 'prototype'),
-        u = ['toString', 'toLocaleString', 'valueOf', 'hasOwnProperty', 'isPrototypeOf', 'propertyIsEnumerable', 'constructor'],
+        l = !s.call({ toString: null }, "toString"),
+        c = s.call(function () {}, "prototype"),
+        u = [
+            "toString",
+            "toLocaleString",
+            "valueOf",
+            "hasOwnProperty",
+            "isPrototypeOf",
+            "propertyIsEnumerable",
+            "constructor",
+        ],
         d = function (e) {
             var t = e.constructor;
             return t && t.prototype === e;
@@ -34,13 +42,13 @@ if (!Object.keys) {
             $self: !0,
             $webkitIndexedDB: !0,
             $webkitStorageInfo: !0,
-            $window: !0
+            $window: !0,
         },
         _ = (function () {
-            if ('undefined' == typeof window) return !1;
+            if ("undefined" == typeof window) return !1;
             for (var e in window)
                 try {
-                    if (!f['$' + e] && i.call(window, e) && null !== window[e] && 'object' == typeof window[e])
+                    if (!f["$" + e] && i.call(window, e) && null !== window[e] && "object" == typeof window[e])
                         try {
                             d(window[e]);
                         } catch (e) {
@@ -52,7 +60,7 @@ if (!Object.keys) {
             return !1;
         })(),
         p = function (e) {
-            if ('undefined' == typeof window || !_) return d(e);
+            if ("undefined" == typeof window || !_) return d(e);
             try {
                 return d(e);
             } catch (e) {
@@ -60,17 +68,19 @@ if (!Object.keys) {
             }
         };
     r = function (e) {
-        var t = null !== e && 'object' == typeof e,
-            n = '[object Function]' === o.call(e),
+        var t = null !== e && "object" == typeof e,
+            n = "[object Function]" === o.call(e),
             r = a(e),
-            s = t && '[object String]' === o.call(e),
+            s = t && "[object String]" === o.call(e),
             d = [];
-        if (!t && !n && !r) throw TypeError('Object.keys called on a non-object');
+        if (!t && !n && !r) throw TypeError("Object.keys called on a non-object");
         var f = c && n;
         if (s && e.length > 0 && !i.call(e, 0)) for (var _ = 0; _ < e.length; ++_) d.push(String(_));
         if (r && e.length > 0) for (var h = 0; h < e.length; ++h) d.push(String(h));
-        else for (var m in e) !(f && 'prototype' === m) && i.call(e, m) && d.push(String(m));
-        if (l) for (var g = p(e), E = 0; E < u.length; ++E) !(g && 'constructor' === u[E]) && i.call(e, u[E]) && d.push(u[E]);
+        else for (var m in e) !(f && "prototype" === m) && i.call(e, m) && d.push(String(m));
+        if (l)
+            for (var g = p(e), E = 0; E < u.length; ++E)
+                !(g && "constructor" === u[E]) && i.call(e, u[E]) && d.push(u[E]);
         return d;
     };
 }

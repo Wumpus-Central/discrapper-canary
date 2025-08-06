@@ -10,9 +10,9 @@ var r = n(73800),
     c = [];
 function u(e) {
     var t = e.placement,
-        n = void 0 === t ? 'bottom' : t,
+        n = void 0 === t ? "bottom" : t,
         u = e.strategy,
-        d = void 0 === u ? 'absolute' : u,
+        d = void 0 === u ? "absolute" : u,
         f = e.modifiers,
         _ = void 0 === f ? c : f,
         p = e.referenceElement,
@@ -30,7 +30,7 @@ function u(e) {
         function () {
             (0, o.k$)(m, y);
         },
-        [m, y]
+        [m, y],
     );
     var S = r.useMemo(
             function () {
@@ -40,14 +40,14 @@ function u(e) {
                     onFirstUpdate: h,
                     modifiers: [].concat(_, [
                         {
-                            name: 'arrow',
+                            name: "arrow",
                             enabled: null != I,
-                            options: { element: I }
-                        }
-                    ])
+                            options: { element: I },
+                        },
+                    ]),
                 };
             },
-            [n, d, h, _, I]
+            [n, d, h, _, I],
         ),
         A = (0, a.D)(p || E, y, S),
         N = A.state,
@@ -64,13 +64,13 @@ function u(e) {
                     isReferenceHidden: N && N.modifiersData.hide ? N.modifiersData.hide.isReferenceHidden : null,
                     arrowProps: {
                         style: C.arrow,
-                        ref: T
+                        ref: T,
                     },
                     forceUpdate: R || s,
-                    update: P || l
+                    update: P || l,
                 };
             },
-            [O, T, n, N, C, P, R]
+            [O, T, n, N, C, P, R],
         );
     return (0, o.$p)(g)(w);
 }

@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     $2: () => b,
     sZ: () => v,
-    vF: () => T
+    vF: () => T,
 }),
     n(413496),
     n(433524),
-    n(35282));
+    n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -21,7 +21,7 @@ var r = n(255367),
     h = n(453032),
     m = n(493075),
     g = n(405548);
-let E = RegExp('^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$', 'i');
+let E = RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
 function b(e) {
     return E.test(e);
 }
@@ -34,26 +34,26 @@ function O(e) {
     return null == t || t.length < 3 ? null : parseInt(t[2], 10);
 }
 function v(e, t) {
-    return null != t ? 'dev://experiment/'.concat(e, '/').concat(t) : 'dev://experiment/'.concat(e);
+    return null != t ? "dev://experiment/".concat(e, "/").concat(t) : "dev://experiment/".concat(e);
 }
 function I(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
             (0, u.JG)(t, () =>
                 (0, s.showToast)({
-                    id: 'experiment-link-copied',
-                    message: 'Copied experiment link',
-                    type: s.ToastType.SUCCESS
-                })
+                    id: "experiment-link-copied",
+                    message: "Copied experiment link",
+                    type: s.ToastType.SUCCESS,
+                }),
             );
         }, [t]);
     return (0, r.jsx)(s.P3F, {
         className: g.copyLinkButton,
         onClick: n,
         children: (0, r.jsx)(s.xPt, {
-            size: 'sm',
-            color: 'currentColor'
-        })
+            size: "sm",
+            color: "currentColor",
+        }),
     });
 }
 function T(e) {
@@ -70,7 +70,17 @@ function T(e) {
         }, [b, T, n]),
         N = l.default.getId(),
         C = (0, h.a)(S, N),
-        R = i.useMemo(() => (null == C || null == S ? null : S.system === f.I.LEGACY ? d.Z.getExperimentBucketName(C.bucket) : S.system === f.I.APEX ? 'Variant '.concat(C.variantId) : null), [C, S]),
+        R = i.useMemo(
+            () =>
+                null == C || null == S
+                    ? null
+                    : S.system === f.I.LEGACY
+                      ? d.Z.getExperimentBucketName(C.bucket)
+                      : S.system === f.I.APEX
+                        ? "Variant ".concat(C.variantId)
+                        : null,
+            [C, S],
+        ),
         P = (0, o.e7)([c.default], () => {
             let e = c.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
@@ -86,74 +96,76 @@ function T(e) {
         k = null;
     return (1 === D && null != w
         ? (k = (0, r.jsx)(s.Text, {
-              variant: 'text-xs/normal',
-              color: 'text-muted',
-              children: w.label
+              variant: "text-xs/normal",
+              color: "text-muted",
+              children: w.label,
           }))
         : null != C &&
           (k = (0, r.jsxs)(s.Text, {
-              variant: 'text-xs/normal',
-              color: 'text-muted',
-              children: ['Server Config: ', R]
+              variant: "text-xs/normal",
+              color: "text-muted",
+              children: ["Server Config: ", R],
           })),
     P)
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: g.root,
               children: [
-                  (0, r.jsx)('div', {
-                      children: (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
+                      children: (0, r.jsx)("div", {
                           className: g.header,
                           children: (0, r.jsxs)(s.Kqy, {
-                              direction: 'horizontal',
-                              align: 'start',
+                              direction: "horizontal",
+                              align: "start",
                               gap: 8,
                               children: [
-                                  (0, r.jsx)(s.Che, { size: 'lg' }),
+                                  (0, r.jsx)(s.Che, { size: "lg" }),
                                   (0, r.jsxs)(s.Kqy, {
-                                      direction: 'vertical',
+                                      direction: "vertical",
                                       gap: 0,
                                       children: [
                                           (0, r.jsx)(s.Text, {
-                                              variant: 'text-md/semibold',
-                                              children: S.title
+                                              variant: "text-md/semibold",
+                                              children: S.title,
                                           }),
-                                          k
-                                      ]
+                                          k,
+                                      ],
                                   }),
-                                  M
-                              ]
-                          })
-                      })
+                                  M,
+                              ],
+                          }),
+                      }),
                   }),
                   (0, r.jsx)(s.Kqy, {
-                      direction: 'horizontal',
-                      align: 'center',
+                      direction: "horizontal",
+                      align: "center",
                       gap: 4,
-                      justify: 'space-between',
+                      justify: "space-between",
                       children:
                           null != w
                               ? (0, r.jsx)(s.Kqy, {
-                                    direction: 'horizontal',
-                                    align: 'center',
+                                    direction: "horizontal",
+                                    align: "center",
                                     gap: 4,
-                                    justify: 'end',
+                                    justify: "end",
                                     children: (0, r.jsx)(a.zx, {
                                         fullWidth: !0,
                                         onClick: x,
                                         color: L ? a.zx.Colors.RED : a.zx.Colors.BRAND,
-                                        children: L ? 'Clear Treatment '.concat(w.value) : 'Apply Treatment '.concat(w.value)
-                                    })
+                                        children: L
+                                            ? "Clear Treatment ".concat(w.value)
+                                            : "Apply Treatment ".concat(w.value),
+                                    }),
                                 })
-                              : (0, r.jsx)('div', {
+                              : (0, r.jsx)("div", {
                                     className: g.experimentOverride,
                                     children: (0, r.jsx)(_.y, {
                                         experiment: S,
                                         experimentId: n,
-                                        overrideInfo: A
-                                    })
-                                })
-                  })
-              ]
+                                        overrideInfo: A,
+                                    }),
+                                }),
+                  }),
+              ],
           })
         : null;
 }

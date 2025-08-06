@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685), n(457542));
+n.d(t, { Z: () => y }), n(388685), n(457542);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,20 +80,20 @@ function y(e) {
     let S = () => {
             null != m &&
                 (0, s.ZDy)(async () => {
-                    let { default: e } = await n.e('4114').then(n.bind(n, 98746));
+                    let { default: e } = await n.e("4114").then(n.bind(n, 98746));
                     return (n) =>
                         (0, r.jsx)(
                             e,
                             b(g({}, n), {
                                 guildId: t.guild_id,
                                 user: m,
-                                modReportId: t.id
-                            })
+                                modReportId: t.id,
+                            }),
                         );
                 });
         },
         A = !0 === y ? h.intl.string(p.default.dpfwQ0) : h.intl.string(p.default.ASv23d),
-        N = 'ban-user-'.concat(null == m ? void 0 : m.id);
+        N = "ban-user-".concat(null == m ? void 0 : m.id);
     return (0, r.jsx)(
         _.Z,
         {
@@ -102,8 +102,8 @@ function y(e) {
             onClick: S,
             disabled: !0 === y || v,
             submitting: v,
-            color: a.zx.Colors.RED
+            color: a.zx.Colors.RED,
         },
-        N
+        N,
     );
 }

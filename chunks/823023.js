@@ -1,4 +1,4 @@
-(n.d(t, { N: () => b }), n(388685));
+n.d(t, { N: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(126663),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,7 +63,7 @@ let p = 200,
         from: { opacity: 1 },
         enter: { opacity: 1 },
         leave: { opacity: 0 },
-        config: { duration: 200 }
+        config: { duration: 200 },
     },
     m = _(d({}, h), { config: { duration: 50 } }),
     g = _(d({}, h), { config: (e, t) => (t ? { duration: 800 } : { duration: 200 }) });
@@ -81,9 +81,9 @@ function E(e) {
                     style: d({}, s, e),
                     className: c.imagePlaceholder,
                     src: n,
-                    alt: ''
-                })
-        )
+                    alt: "",
+                }),
+        ),
     });
 }
 function b(e) {
@@ -101,7 +101,7 @@ function b(e) {
         };
     }, [h]);
     let O = (0, a.Yzy)(p && m, g);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: c.loadingOverlay,
         style: { aspectRatio: n },
         children: [
@@ -110,7 +110,7 @@ function b(e) {
                 (0, r.jsx)(E, {
                     readyState: t,
                     placeholderImg: y,
-                    placeholderStyle: f
+                    placeholderStyle: f,
                 }),
             O(
                 (e, t) =>
@@ -120,10 +120,10 @@ function b(e) {
                         className: c.imageLoadingOverlay,
                         children: (0, r.jsx)(a.$jN, {
                             type: a.RAz.SPINNING_CIRCLE_SIMPLE,
-                            className: c.cornerLoadingSpinner
-                        })
-                    })
-            )
-        ]
+                            className: c.cornerLoadingSpinner,
+                        }),
+                    }),
+            ),
+        ],
     });
 }

@@ -1,6 +1,6 @@
-(n.d(t, { Z: () => o }), n(388685), n(539854));
+n.d(t, { Z: () => o }), n(388685), n(539854);
 var r = n(887490);
-let i = 'applicationCommand';
+let i = "applicationCommand";
 function o(e, t) {
     if (r.bN.areStylesDisabled(e)) return [];
     let [n, o] = t,
@@ -13,13 +13,13 @@ function o(e, t) {
             a.push({
                 anchor: {
                     path: o,
-                    offset: 0
+                    offset: 0,
                 },
                 focus: {
                     path: o,
-                    offset: 0 + s.command.displayName.length + 1
+                    offset: 0 + s.command.displayName.length + 1,
                 },
-                commandName: !0
+                commandName: !0,
             }),
         a
     );

@@ -18,7 +18,7 @@ function p(e) {
             let e = s.Z.getActivities(t).find((e) => e.type === f.IIU.PLAYING);
             return {
                 sourceName: null == e ? void 0 : e.name,
-                sourceApplicationId: null == e ? void 0 : e.application_id
+                sourceApplicationId: null == e ? void 0 : e.application_id,
             };
         }
     }
@@ -27,7 +27,7 @@ function p(e) {
         u = null != l ? (null != c ? r.ZP.getGameForPID(c) : null) : r.ZP.getVisibleGame();
     return {
         sourceName: null != (t = null == l ? void 0 : l.sourceName) ? t : null == u ? void 0 : u.name,
-        sourceApplicationId: null != (n = null == l ? void 0 : l.id) ? n : null == u ? void 0 : u.id
+        sourceApplicationId: null != (n = null == l ? void 0 : l.id) ? n : null == u ? void 0 : u.id,
     };
 }
 function h(e) {
@@ -42,9 +42,9 @@ function h(e) {
             applicationName: null != t ? t : _.intl.string(_.t.qtSJxc),
             applicationId: n,
             users: i,
-            clipMethod: 'manual',
+            clipMethod: "manual",
             length: 0,
-            thumbnail: ''
+            thumbnail: "",
         }
     );
 }

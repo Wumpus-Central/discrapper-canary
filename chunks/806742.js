@@ -17,24 +17,24 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -65,26 +65,26 @@ let j = function (e) {
         j = i.useCallback(
             () =>
                 (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e('36371').then(n.bind(n, 893626));
+                    let { default: e } = await n.e("36371").then(n.bind(n, 893626));
                     return (n) =>
                         (0, r.jsx)(
                             e,
                             b(x({}, n), {
                                 guildId: t,
                                 welcomeMessage: l,
-                                onSave: (e) => (0, m._N)(e)
-                            })
+                                onSave: (e) => (0, m._N)(e),
+                            }),
                         );
                 }),
-            [t, l]
+            [t, l],
         ),
         v = (0, s.e7)([u.default], () => u.default.getId());
     return (0, c.pw)(l)
         ? (0, r.jsx)(o.zxk, {
-              variant: 'primary',
-              size: 'sm',
-              text: h.intl.string(h.t['9Z+aEB']),
-              onClick: j
+              variant: "primary",
+              size: "sm",
+              text: h.intl.string(h.t["9Z+aEB"]),
+              onClick: j,
           })
         : (0, r.jsxs)(o.P3F, {
               className: f.editWelcomeSection,
@@ -94,26 +94,26 @@ let j = function (e) {
                       guildId: t,
                       welcomeMessage: {
                           authorIds: l.authorIds.length > 0 ? l.authorIds : [v],
-                          message: l.message
-                      }
+                          message: l.message,
+                      },
                   }),
                   (0, r.jsx)(o.ua7, {
                       text: h.intl.string(h.t.bt75u7),
                       children: (e) =>
                           (0, r.jsxs)(
-                              'div',
+                              "div",
                               b(x({}, e), {
                                   className: a()(f.actionItemEditButton, f.editWelcomeButton),
                                   children: [
                                       (0, r.jsx)(o.vdY, {
-                                          size: 'md',
-                                          color: 'currentColor'
+                                          size: "md",
+                                          color: "currentColor",
                                       }),
-                                      (0, r.jsx)(o.nn4, { children: h.intl.string(h.t.bt75u7) })
-                                  ]
-                              })
-                          )
-                  })
-              ]
+                                      (0, r.jsx)(o.nn4, { children: h.intl.string(h.t.bt75u7) }),
+                                  ],
+                              }),
+                          ),
+                  }),
+              ],
           });
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685));
+n.d(t, { Z: () => O }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -18,24 +18,24 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -60,8 +60,26 @@ function _(e, t) {
 let O = (0, h.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: h, responseType: O, redirectUri: E, codeChallenge: y, codeChallengeMethod: v, state: I, guildId: C, channelId: S, prompt: N, disableGuildSelect: T, disclosures: P, integrationType: j, pid: A, signal: Z } = e,
-            x = 'OAuth2Authorize_'.concat(n, '_').concat(C, '_').concat(S),
+        let {
+                clientId: n,
+                authorizations: u,
+                scopes: d,
+                parsedPermissions: h,
+                responseType: O,
+                redirectUri: E,
+                codeChallenge: y,
+                codeChallengeMethod: v,
+                state: I,
+                guildId: C,
+                channelId: S,
+                prompt: N,
+                disableGuildSelect: T,
+                disclosures: P,
+                integrationType: j,
+                pid: A,
+                signal: Z,
+            } = e,
+            x = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(S),
             w = null != j ? (null == u ? void 0 : u.get(j)) : void 0,
             L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
@@ -71,7 +89,7 @@ let O = (0, h.Z)(
             null !=
                 (0, l.ZP)({
                     application: L,
-                    channelId: S
+                    channelId: S,
                 })
                 ? (w = i.u1M)
                 : a.context === g.IlC.POPOUT && (w = i.u1M);
@@ -80,28 +98,29 @@ let O = (0, h.Z)(
                     let { clientId: o, location: s } = l;
                     if (null == o || o === n) {
                         if (((R = !0), null == s)) {
-                            (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, 'OAuth2 Error: No location provided')), a.lock());
+                            t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
+                                a.lock();
                             return;
                         }
                         if ((e(s), null == E || null == L)) return void a.lock();
-                        null == new URL(s).searchParams.get('error')
+                        null == new URL(s).searchParams.get("error")
                             ? (0, i.h7j)(
                                   (e) => (0, r.jsx)(c.$0, b({ application: L }, e)),
                                   {
                                       onCloseCallback: () => {
                                           a.lock();
-                                      }
+                                      },
                                   },
-                                  w
+                                  w,
                               )
                             : (0, i.h7j)(
                                   (e) => (0, r.jsx)(c.ks, b({}, e)),
                                   {
                                       onCloseCallback: () => {
                                           a.lock();
-                                      }
+                                      },
                                   },
-                                  w
+                                  w,
                               );
                     }
                 },
@@ -113,23 +132,23 @@ let O = (0, h.Z)(
                                     s.j,
                                     _(b({}, e), {
                                         title: m.intl.string(m.t.j2d6Ki),
-                                        subtitle: m.intl.string(m.t['4LKmNz']),
+                                        subtitle: m.intl.string(m.t["4LKmNz"]),
                                         actions: [
                                             {
                                                 text: m.intl.string(m.t.cpT0Cg),
-                                                onClick: e.onClose
-                                            }
-                                        ]
-                                    })
-                                )
+                                                onClick: e.onClose,
+                                            },
+                                        ],
+                                    }),
+                                ),
                             );
                     }
                     return (
-                        null == t || t.addEventListener('abort', n),
+                        null == t || t.addEventListener("abort", n),
                         {
                             cleanup: function () {
-                                null == t || t.removeEventListener('abort', n);
-                            }
+                                null == t || t.removeEventListener("abort", n);
+                            },
                         }
                     );
                 })(x, Z);
@@ -152,18 +171,21 @@ let O = (0, h.Z)(
                             guildId: C,
                             channelId: S,
                             prompt: N,
-                            disableGuildSelect: 'boolean' == typeof T ? T : 'true' === T,
+                            disableGuildSelect: "boolean" == typeof T ? T : "true" === T,
                             integrationType: j,
-                            cancelCompletesFlow: !0
-                        })
+                            cancelCompletesFlow: !0,
+                        }),
                     ),
                 {
                     modalKey: x,
                     onCloseCallback: () => {
-                        (k(), R || (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, 'User cancelled authorization')), a.lock()));
-                    }
+                        k(),
+                            R ||
+                                (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, "User cancelled authorization")),
+                                a.lock());
+                    },
                 },
-                w
+                w,
             );
         });
     },
@@ -171,8 +193,8 @@ let O = (0, h.Z)(
         if ((0, f.br)(n) || !u.isPlatformEmbedded) return;
         let r = (0, l.ZP)({
             application: e,
-            channelId: t
+            channelId: t,
         });
-        ((0, u.isWindows)() ? d.ZP.minimize(r) : d.ZP.restore(r), d.ZP.focus(r));
-    }
+        (0, u.isWindows)() ? d.ZP.minimize(r) : d.ZP.restore(r), d.ZP.focus(r);
+    },
 );

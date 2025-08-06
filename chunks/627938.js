@@ -8,12 +8,12 @@ var i = n(481060),
 function l(e, t) {
     return (0, o.NE)(t, e)
         ? (0, r.jsx)(i.sNh, {
-              id: 'thread',
+              id: "thread",
               label: s.intl.string(s.t.rBIGBA),
               icon: i.or_,
               action: () => {
                   (0, a.gK)(t, e);
-              }
+              },
           })
         : null;
 }

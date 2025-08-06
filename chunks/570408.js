@@ -2,9 +2,9 @@ n.d(t, { I: () => s });
 var i = n(585483),
     r = n(981631);
 let s = {
-    binds: ['mod+f'],
+    binds: ["mod+f"],
     comboKeysBindGlobal: !0,
     action(e) {
-        (e.preventDefault(), e.stopPropagation(), i.S.dispatch(r.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !0 }));
-    }
+        e.preventDefault(), e.stopPropagation(), i.S.dispatch(r.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !0 });
+    },
 };

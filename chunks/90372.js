@@ -17,17 +17,17 @@ let s = {
                             guildId: t,
                             channelId: n,
                             isPaused: c,
-                            windowId: o
+                            windowId: o,
                         })),
                         s.current.initialize()),
                     () => {
                         var e;
-                        (null == (e = s.current) || e.terminate(), (s.current = null));
+                        null == (e = s.current) || e.terminate(), (s.current = null);
                     }
                 ),
-                [n, t, c, o]
+                [n, t, c, o],
             ),
             s.current
         );
-    }
+    },
 };

@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => c,
-    Z: () => d
+    Z: () => d,
 });
 var r = n(255367);
 n(73800);
@@ -10,11 +10,11 @@ var i = n(120356),
     s = n(73346),
     l = n(700307),
     c = (function (e) {
-        return ((e[(e.SMALL = 40)] = 'SMALL'), (e[(e.MEDIUM = 66)] = 'MEDIUM'), e);
+        return (e[(e.SMALL = 40)] = "SMALL"), (e[(e.MEDIUM = 66)] = "MEDIUM"), e;
     })({});
 let u = {
         40: l.small,
-        66: l.medium
+        66: l.medium,
     },
     d = (e) => {
         let t,
@@ -26,12 +26,12 @@ let u = {
                     : a.ZP.getApplicationIconURL({
                           id: n.id,
                           icon: n.icon,
-                          size: i
+                          size: i,
                       })),
-            (0, r.jsx)('img', {
-                alt: '',
+            (0, r.jsx)("img", {
+                alt: "",
                 src: t,
-                className: o()(l.icon, u[i], d)
+                className: o()(l.icon, u[i], d),
             })
         );
     };

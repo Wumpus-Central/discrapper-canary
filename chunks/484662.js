@@ -12,73 +12,73 @@ var r = a(481060),
 function m() {
     return (0, n.jsx)(r.zJl, {
         className: u.panel,
-        children: (0, n.jsxs)('div', {
+        children: (0, n.jsxs)("div", {
             className: d.panelInner,
             children: [
-                (0, n.jsxs)('section', {
+                (0, n.jsxs)("section", {
                     className: d.section,
                     children: [
                         (0, n.jsx)(r.X6q, {
-                            variant: 'heading-md/semibold',
-                            children: 'Verification Layer'
+                            variant: "heading-md/semibold",
+                            children: "Verification Layer",
                         }),
-                        (0, n.jsx)('div', {
+                        (0, n.jsx)("div", {
                             className: d.inputRow,
                             children: (0, n.jsx)(r.zxk, {
-                                variant: 'primary',
-                                text: 'Open Verification Layer',
+                                variant: "primary",
+                                text: "Open Verification Layer",
                                 onClick: () => {
                                     (0, l.q4)(() => (0, n.jsx)(o.Z, {}), {
                                         layerKey: c.CV,
-                                        Layer: i.ZP
+                                        Layer: i.ZP,
                                     });
-                                }
-                            })
-                        })
-                    ]
+                                },
+                            }),
+                        }),
+                    ],
                 }),
-                (0, n.jsxs)('section', {
+                (0, n.jsxs)("section", {
                     className: d.section,
                     children: [
                         (0, n.jsx)(r.X6q, {
-                            variant: 'heading-md/semibold',
-                            children: 'Safety Flow'
+                            variant: "heading-md/semibold",
+                            children: "Safety Flow",
                         }),
-                        (0, n.jsx)('div', {
+                        (0, n.jsx)("div", {
                             className: d.inputRow,
                             children: (0, n.jsx)(r.zxk, {
-                                variant: 'primary',
-                                text: 'Open Safety Flow',
+                                variant: "primary",
+                                text: "Open Safety Flow",
                                 onClick: () => {
                                     (0, l.q4)(() => (0, n.jsx)(s.Z, {}), {
                                         layerKey: c.CV,
-                                        Layer: i.ZP
+                                        Layer: i.ZP,
                                     });
-                                }
-                            })
-                        })
-                    ]
+                                },
+                            }),
+                        }),
+                    ],
                 }),
-                (0, n.jsxs)('section', {
+                (0, n.jsxs)("section", {
                     className: d.section,
                     children: [
                         (0, n.jsx)(r.X6q, {
-                            variant: 'heading-md/semibold',
-                            children: 'Layer Controls'
+                            variant: "heading-md/semibold",
+                            children: "Layer Controls",
                         }),
-                        (0, n.jsx)('div', {
+                        (0, n.jsx)("div", {
                             className: d.inputRow,
                             children: (0, n.jsx)(r.zxk, {
-                                variant: 'primary',
-                                text: 'Close All Layers',
+                                variant: "primary",
+                                text: "Close All Layers",
                                 onClick: () => {
                                     l.QP.setState({ fullScreenLayers: [] });
-                                }
-                            })
-                        })
-                    ]
-                })
-            ]
-        })
+                                },
+                            }),
+                        }),
+                    ],
+                }),
+            ],
+        }),
     });
 }

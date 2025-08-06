@@ -1,19 +1,19 @@
-(n.d(t, { A: () => s }), n(388685));
+n.d(t, { A: () => s }), n(388685);
 var r = n(73800),
     i = n(524437),
     o = n(695346);
 function a() {
-    let [e, t] = r.useState('cozy');
+    let [e, t] = r.useState("cozy");
     return (
         r.useEffect(() => {
-            let e = window.matchMedia('(min-width: 1024px) and (min-height: 820px)'),
+            let e = window.matchMedia("(min-width: 1024px) and (min-height: 820px)"),
                 n = (e) => {
-                    t(e.matches ? 'cozy' : 'compact');
+                    t(e.matches ? "cozy" : "compact");
                 };
             return (
-                e.addEventListener('change', n),
+                e.addEventListener("change", n),
                 () => {
-                    e.removeEventListener('change', n);
+                    e.removeEventListener("change", n);
                 }
             );
         }, []),
@@ -27,12 +27,12 @@ function s() {
         case i.Pi.RESPONSIVE:
             return t;
         case i.Pi.COZY:
-            return 'cozy';
+            return "cozy";
         case i.Pi.DEFAULT:
-            return 'default';
+            return "default";
         case i.Pi.COMPACT:
-            return 'compact';
+            return "compact";
         default:
-            return 'default';
+            return "default";
     }
 }

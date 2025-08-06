@@ -15,21 +15,21 @@ let c = (e) => {
             (t = a.ZP.getGuildIconURL({
                 id: c,
                 icon: d,
-                size: 32
+                size: 32,
             }))
                 ? t
                 : void 0;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o.container,
         children: [
             (0, r.jsx)(l.X6q, {
                 className: o.header,
-                variant: 'heading-sm/semibold',
-                children: s.intl.string(s.t.nTe4HB)
+                variant: "heading-sm/semibold",
+                children: s.intl.string(s.t.nTe4HB),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: o.guildContainer,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: o.guildInfo,
                     children: [
                         (0, r.jsx)(i.ZP, {
@@ -37,20 +37,20 @@ let c = (e) => {
                             width: 32,
                             height: 32,
                             className: o.guildIconMask,
-                            children: (0, r.jsx)('img', {
+                            children: (0, r.jsx)("img", {
                                 src: m,
-                                alt: '',
-                                className: o.guildIcon
-                            })
+                                alt: "",
+                                className: o.guildIcon,
+                            }),
                         }),
                         (0, r.jsx)(l.Text, {
-                            color: 'header-secondary',
-                            variant: 'text-sm/normal',
-                            children: u
-                        })
-                    ]
-                })
-            })
-        ]
+                            color: "header-secondary",
+                            variant: "text-sm/normal",
+                            children: u,
+                        }),
+                    ],
+                }),
+            }),
+        ],
     });
 };

@@ -12,8 +12,8 @@ let s = (0, i.throttle)((t, e) => {
 function p(t) {
     let e = o.useCallback((e) => s(t, e), [t]);
     return (0, n.jsx)(a.II_, {
-        id: 'opacity',
-        'aria-haspopup': !0,
+        id: "opacity",
+        "aria-haspopup": !0,
         label: u.intl.string(u.t.OVovCQ),
         control: (r, o) => {
             var i, l;
@@ -23,24 +23,24 @@ function p(t) {
                     for (var e = 1; e < arguments.length; e++) {
                         var r = null != arguments[e] ? arguments[e] : {},
                             n = Object.keys(r);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (n = n.concat(
                                 Object.getOwnPropertySymbols(r).filter(function (t) {
                                     return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                                })
+                                }),
                             )),
                             n.forEach(function (e) {
                                 var n;
-                                ((n = r[e]),
+                                (n = r[e]),
                                     e in t
                                         ? Object.defineProperty(t, e, {
                                               value: n,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (t[e] = n));
-                            }));
+                                        : (t[e] = n);
+                            });
                     }
                     return t;
                 })({}, r)),
@@ -50,13 +50,13 @@ function p(t) {
                         value: 100 * t.opacity,
                         maxValue: 100,
                         onChange: (r) => {
-                            ((0, c.nv)({
+                            (0, c.nv)({
                                 widgetId: t.id,
-                                opacity: r / 100
+                                opacity: r / 100,
                             }),
-                                e(Math.floor(r)));
+                                e(Math.floor(r));
                         },
-                        'aria-label': u.intl.string(u.t.kbFsAA)
+                        "aria-label": u.intl.string(u.t.kbFsAA),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -70,8 +70,8 @@ function p(t) {
                       })(Object(l)).forEach(function (t) {
                           Object.defineProperty(i, t, Object.getOwnPropertyDescriptor(l, t));
                       }),
-                i)
+                i),
             );
-        }
+        },
     });
 }

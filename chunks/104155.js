@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     I: () => j,
-    Z: () => v
+    Z: () => v,
 }),
     n(388685),
-    n(35282));
+    n(35282);
 var l = n(255367),
     r = n(73800),
     i = n(442837),
@@ -29,23 +29,23 @@ function j(e) {
         maxWidth: 600,
         children: (0, l.jsx)(s.Z, {
             channelId: t,
-            baseChannelId: _.oC.CHANNEL_BROWSER
-        })
+            baseChannelId: _.oC.CHANNEL_BROWSER,
+        }),
     });
 }
 function v(e) {
     let { guildId: t } = e,
-        [o, s] = r.useState(''),
+        [o, s] = r.useState(""),
         j = (0, i.e7)([m.Z], () => m.Z.getGuild(t)),
         v = (0, i.e7)([u.ZP], () => u.ZP.getChannels(t)),
         y = (0, i.e7)([d.Z], () => d.Z.getCategories(t)),
         O = (0, f.Fo)(t, y, v, o),
         Z = (0, i.e7)([h.Z], () => h.Z.canWithPartialContext(x.Plq.MANAGE_CHANNELS, { guildId: t })),
         N = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(_.oC.CHANNEL_BROWSER)),
-        I = r.useCallback(() => s(''), [s]),
+        I = r.useCallback(() => s(""), [s]),
         w = r.useCallback(() => {
             (0, a.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                let { default: e } = await Promise.all([n.e("45094"), n.e("45822")]).then(n.bind(n, 218613));
                 return (n) => {
                     var r, i;
                     return (0, l.jsx)(
@@ -54,31 +54,31 @@ function v(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     l = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (l = l.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     l.forEach(function (t) {
                                         var l;
-                                        ((l = n[t]),
+                                        (l = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: l,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = l));
-                                    }));
+                                                : (e[t] = l);
+                                    });
                             }
                             return e;
                         })({}, n)),
                         (i = i =
                             {
                                 channelType: null,
-                                guildId: t
+                                guildId: t,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -92,44 +92,47 @@ function v(e) {
                               })(Object(i)).forEach(function (e) {
                                   Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                               }),
-                        r)
+                        r),
                     );
                 };
             });
         }, [t]);
     return null == j
         ? null
-        : (0, l.jsxs)('div', {
+        : (0, l.jsxs)("div", {
               className: b.pageBody,
               children: [
-                  (0, l.jsxs)('div', {
+                  (0, l.jsxs)("div", {
                       className: b.header,
                       children: [
                           (0, l.jsx)(a.E1j, {
                               className: b.search,
                               query: o,
                               onChange: (e) => {
-                                  ('' === o && '' !== e && p.default.track(x.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), s(e.toLowerCase()));
+                                  "" === o &&
+                                      "" !== e &&
+                                      p.default.track(x.rMx.SEARCH_STARTED, { search_type: "channel browser" }),
+                                      s(e.toLowerCase());
                               },
                               onClear: I,
-                              placeholder: C.intl.string(C.t.s5MnmJ)
+                              placeholder: C.intl.string(C.t.s5MnmJ),
                           }),
                           Z
                               ? (0, l.jsx)(a.zxk, {
                                     icon: a.qJs,
                                     onClick: w,
-                                    text: C.intl.string(C.t.CumH4u)
+                                    text: C.intl.string(C.t.CumH4u),
                                 })
-                              : null
-                      ]
+                              : null,
+                      ],
                   }),
                   (0, l.jsx)(g.Z, {
                       className: b.browser,
                       channels: v,
                       categories: O,
                       guild: j,
-                      hasSidebar: N
-                  })
-              ]
+                      hasSidebar: N,
+                  }),
+              ],
           });
 }

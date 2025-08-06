@@ -17,15 +17,15 @@ class u extends a.PureComponent {
                     c.ck,
                     {
                         label: t,
-                        value: e
+                        value: e,
                     },
-                    t
+                    t,
                 );
         });
         return (0, n.jsx)(o.hjN, {
             tag: o.RB0.H2,
-            title: d.intl.string(d.t['gWbr/f']),
-            children: (0, s.a)(t)
+            title: d.intl.string(d.t["gWbr/f"]),
+            children: (0, s.a)(t),
         });
     }
 }

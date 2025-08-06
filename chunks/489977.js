@@ -15,17 +15,17 @@ let h = (e) => {
         let f = u.default.getCurrentUser(),
             g = null != r ? a.I5 : i.I5,
             m = d.ZP.canUseAnimatedAvatar(f);
-        if (m || 'image/gif' !== n.type) return void g(t);
+        if (m || "image/gif" !== n.type) return void g(t);
         if (null == f) return;
         let b = (0, s.SD)({
             userId: f.id,
-            image: t
+            image: t,
         });
         if (!m)
             return void (0, o.s)({
                 uploadType: p.pC.AVATAR,
                 imageSrc: b,
-                analyticsSource: l
+                analyticsSource: l,
             });
     },
     f = (e) => {
@@ -42,15 +42,15 @@ let h = (e) => {
               : void (0, o.s)({
                     uploadType: p.pC.BANNER,
                     imageSrc: l,
-                    analyticsSource: r
+                    analyticsSource: r,
                 });
     };
 class g extends l.Z {
     _initialize() {
-        r.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
+        r.Z.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal);
     }
     _terminate() {
-        r.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
+        r.Z.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal);
     }
     maybeOpenProfilePreviewModal(e) {
         return e.uploadType === p.pC.AVATAR ? h(e) : e.uploadType === p.pC.BANNER ? f(e) : void 0;

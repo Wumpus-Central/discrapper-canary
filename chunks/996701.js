@@ -10,39 +10,39 @@ var l = n(120356),
     d = n(735247);
 let u = (e) => {
     let {
-        data: { url: t, link_text: n, link_description: l, is_localized: o }
+        data: { url: t, link_text: n, link_description: l, is_localized: o },
     } = e;
     return o
         ? (0, r.jsxs)(a.P3F, {
-              role: 'link',
+              role: "link",
               className: i()(d.linkButton, c.listElement),
               onClick: () => {
                   (0, s.Z)(t);
               },
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: d.linkTextContainer,
                       children: [
                           (0, r.jsx)(a.Text, {
                               className: d.__invalid_linkText,
-                              variant: 'text-md/semibold',
-                              children: n
+                              variant: "text-md/semibold",
+                              children: n,
                           }),
                           null != l &&
-                              '' !== l &&
+                              "" !== l &&
                               (0, r.jsx)(a.Text, {
-                                  variant: 'text-md/normal',
-                                  color: 'text-muted',
-                                  children: l
-                              })
-                      ]
+                                  variant: "text-md/normal",
+                                  color: "text-muted",
+                                  children: l,
+                              }),
+                      ],
                   }),
                   (0, r.jsx)(a.Gr1, {
-                      size: 'sm',
-                      color: 'currentColor',
-                      className: d.linkIcon
-                  })
-              ]
+                      size: "sm",
+                      color: "currentColor",
+                      className: d.linkIcon,
+                  }),
+              ],
           })
         : null;
 };
@@ -60,23 +60,23 @@ function m(e) {
         return null;
     let n = t.map((e, t) => {
             let { data: n } = e;
-            return (0, r.jsx)(u, { data: n }, 'external-link+'.concat(t));
+            return (0, r.jsx)(u, { data: n }, "external-link+".concat(t));
         }),
         l = t.some((e) => {
             let { data: t } = e;
             return t.is_header_hidden;
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: i()(d.linksContainer, c.listElementWrapper),
         children: [
             !l &&
                 (0, r.jsx)(a.X6q, {
-                    variant: 'heading-sm/semibold',
-                    color: 'header-secondary',
+                    variant: "heading-sm/semibold",
+                    color: "header-secondary",
                     className: d.header,
-                    children: o.intl.string(o.t.hvVgAQ)
+                    children: o.intl.string(o.t.hvVgAQ),
                 }),
-            n
-        ]
+            n,
+        ],
     });
 }

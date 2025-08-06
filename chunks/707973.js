@@ -9,13 +9,13 @@ var r = n(255367),
     u = n(761652),
     d = n(388032);
 function f(e) {
-    return ''.concat(u.ME).concat(e.name);
+    return "".concat(u.ME).concat(e.name);
 }
 function _(e) {
-    return '<@$'.concat(e.id, '>');
+    return "<@$".concat(e.id, ">");
 }
 let p = {
-    autocompleteInputElementType: 'gameMentionInput',
+    autocompleteInputElementType: "gameMentionInput",
     stores: [a.Z],
     matches: (e, t, n, r, i) => !0,
     queryResults: (e, t, n) => ({ results: { games: s.ZP.queryGames(n).slice(0, 10) } }),
@@ -25,7 +25,7 @@ let p = {
                 selectedIndex: n,
                 query: a,
                 onHover: s,
-                onClick: c
+                onClick: c,
             } = e,
             f = t.map((e, t) =>
                 (0, r.jsx)(
@@ -35,13 +35,13 @@ let p = {
                         onHover: s,
                         selected: n === t,
                         index: t,
-                        game: e
+                        game: e,
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             ),
             _ = d.t.rPNimp,
-            p = 'Games';
+            p = "Games";
         return (0, r.jsxs)(
             i.Fragment,
             {
@@ -50,21 +50,21 @@ let p = {
                         titleWithQuery: _,
                         titleWithoutQuery: p,
                         query: a,
-                        getQuery: (e) => ''.concat(u.ME).concat(e)
+                        getQuery: (e) => "".concat(u.ME).concat(e),
                     }),
-                    f
-                ]
+                    f,
+                ],
             },
-            'mentions'
+            "mentions",
         );
     },
     onSelect(e) {
         let {
                 results: { games: t },
                 index: n,
-                options: r
+                options: r,
             } = e,
             i = t[n];
-        return (r.replaceInlineInput('gameMentionInput', f(i), _(i)), { type: c.z2.MENTION });
-    }
+        return r.replaceInlineInput("gameMentionInput", f(i), _(i)), { type: c.z2.MENTION };
+    },
 };

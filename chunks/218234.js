@@ -8,21 +8,21 @@ function i(t, e) {
     let a = t.getDsn(),
         i = (function (t, e, a, r) {
             let i = { sent_at: new Date().toISOString() };
-            (a &&
+            a &&
                 a.sdk &&
                 (i.sdk = {
                     name: a.sdk.name,
-                    version: a.sdk.version
+                    version: a.sdk.version,
                 }),
-                r && e && (i.dsn = (0, _.RA)(e)));
+                r && e && (i.dsn = (0, _.RA)(e));
             let c = (function (t) {
                 let e = (0, o.uv)(t);
                 return [
                     {
-                        type: 'statsd',
-                        length: e.length
+                        type: "statsd",
+                        length: e.length,
                     },
-                    e
+                    e,
                 ];
             })(t);
             return (0, n.Jd)(i, [c]);

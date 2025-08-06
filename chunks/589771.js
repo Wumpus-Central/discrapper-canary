@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(89057),
@@ -9,7 +9,18 @@ var i = n(255367),
     u = n(456251);
 function d(e) {
     let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: m, handleClose: f } = e,
-        { blockedPayments: p, setStep: b, hasFetchedSubscriptions: h, hasFetchedSubscriptionPlans: g, currencyLoading: x, selectedSkuId: v, setSelectedSkuId: j, setSelectedPlanId: y, priceOptions: C, setSubscriptionMetadataRequest: O } = (0, c.JL)(),
+        {
+            blockedPayments: p,
+            setStep: b,
+            hasFetchedSubscriptions: h,
+            hasFetchedSubscriptionPlans: g,
+            currencyLoading: x,
+            selectedSkuId: v,
+            setSelectedSkuId: j,
+            setSelectedPlanId: y,
+            priceOptions: C,
+            setSubscriptionMetadataRequest: O,
+        } = (0, c.JL)(),
         { isGift: S } = (0, s.wD)(),
         [P, N] = r.useState(!h || !g || x);
     return (r.useEffect(() => {
@@ -31,24 +42,24 @@ function d(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 i = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 i.forEach(function (t) {
                                     var i;
-                                    ((i = n[t]),
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = i));
-                                }));
+                                            : (e[t] = i);
+                                });
                         }
                         return e;
                     })({}, t)),
@@ -57,7 +68,7 @@ function d(e) {
                             subscription_plan_id: null == e ? void 0 : e.id,
                             price: null == r ? void 0 : r.amount,
                             regular_price: null == e ? void 0 : e.price,
-                            currency: C.currency
+                            currency: C.currency,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

@@ -7,10 +7,10 @@ var r = n(220159),
     l = i.set;
 r(
     {
-        target: 'Map',
+        target: "Map",
         proto: !0,
         real: !0,
-        forced: !0
+        forced: !0,
     },
     {
         mapKeys: function (e) {
@@ -23,6 +23,6 @@ r(
                 }),
                 r
             );
-        }
-    }
+        },
+    },
 );

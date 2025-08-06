@@ -1,1 +1,1 @@
-e.exports = { whatYouLoseButtonContainer: 'whatYouLoseButtonContainer__1fb50' };
+e.exports = { whatYouLoseButtonContainer: "whatYouLoseButtonContainer__1fb50" };

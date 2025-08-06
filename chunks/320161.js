@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(392711),
@@ -12,9 +12,21 @@ var i = n(255367),
 let p = d.Z.Millis.SECOND,
     g = 2 * p,
     h = d.Z.Millis.HALF_SECOND,
-    f = [() => m.intl.string(m.t.MSaeTU), () => m.intl.string(m.t.UmrCw8), () => m.intl.string(m.t.gKE0Ji), () => m.intl.string(m.t['4DSKbm']), () => m.intl.string(m.t['+8ENdX']), () => m.intl.string(m.t.GlWHv7), () => m.intl.string(m.t.hIzxU1), () => m.intl.string(m.t['26uMPD']), () => m.intl.string(m.t.uFs7R0), () => m.intl.string(m.t.bLXdcX), () => m.intl.string(m.t.gPg9fX)];
+    f = [
+        () => m.intl.string(m.t.MSaeTU),
+        () => m.intl.string(m.t.UmrCw8),
+        () => m.intl.string(m.t.gKE0Ji),
+        () => m.intl.string(m.t["4DSKbm"]),
+        () => m.intl.string(m.t["+8ENdX"]),
+        () => m.intl.string(m.t.GlWHv7),
+        () => m.intl.string(m.t.hIzxU1),
+        () => m.intl.string(m.t["26uMPD"]),
+        () => m.intl.string(m.t.uFs7R0),
+        () => m.intl.string(m.t.bLXdcX),
+        () => m.intl.string(m.t.gPg9fX),
+    ];
 function b(e) {
-    let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': b, delay: x = h } = e,
+    let { text: t, copyValue: n, children: d, onCopy: m, "aria-label": b, delay: x = h } = e,
         [_, j] = r.useState(0),
         [E, C] = r.useState(!1),
         [O, v] = r.useState(!1),
@@ -23,9 +35,9 @@ function b(e) {
     if (
         (r.useEffect(
             () => () => {
-                (S.stop(), T.stop());
+                S.stop(), T.stop();
             },
-            [S, T]
+            [S, T],
         ),
         !c.wS)
     )
@@ -34,7 +46,14 @@ function b(e) {
         N = I ? l.FGA.RED : l.FGA.GREEN,
         y = E ? N : l.FGA.PRIMARY,
         A = () => {
-            (null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), O || j(_ + 1), v(!0), C(!0), S.start(p, () => v(!1)), T.start(g, () => j(0)));
+            null == m || m(),
+                (0, c.JG)(n),
+                o.default.track(u.rMx.TEXT_COPIED),
+                O || j(_ + 1),
+                v(!0),
+                C(!0),
+                S.start(p, () => v(!1)),
+                T.start(g, () => j(0));
         };
     return (0, i.jsx)(l.ua7, {
         text: (() => {
@@ -44,11 +63,11 @@ function b(e) {
                 r = null != (e = f[n]) ? e : f[0];
             return (0, i.jsx)(l.UkV, {
                 isShaking: I,
-                children: r()
+                children: r(),
             });
         })(),
         delay: x,
-        'aria-label': b,
+        "aria-label": b,
         color: y,
         forceOpen: O,
         onAnimationRest: (e, t) => {
@@ -63,24 +82,24 @@ function b(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
                 })(
@@ -95,28 +114,32 @@ function b(e) {
                                     i,
                                     r = {},
                                     s = Object.keys(e);
-                                for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                                for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                                 return r;
                             })(e, t);
                         if (Object.getOwnPropertySymbols) {
                             var s = Object.getOwnPropertySymbols(e);
-                            for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                            for (i = 0; i < s.length; i++)
+                                (n = s[i]),
+                                    !(t.indexOf(n) >= 0) &&
+                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                        (r[n] = e[n]);
                         }
                         return r;
-                    })(e, ['onClick', 'onMouseEnter'])
+                    })(e, ["onClick", "onMouseEnter"]),
                 )),
                 (n = n =
                     {
                         onClick: () => {
-                            (null == i || i(), A());
+                            null == i || i(), A();
                         },
                         onMouseEnter: () => {
                             if (!E) {
                                 null == r || r();
                                 return;
                             }
-                            (S.stop(), v(!1));
-                        }
+                            S.stop(), v(!1);
+                        },
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -130,8 +153,8 @@ function b(e) {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
+                t),
             );
-        }
+        },
     });
 }

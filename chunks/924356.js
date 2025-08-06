@@ -17,7 +17,7 @@ function d() {
             onChange: r.xM.updateSetting,
             title: c.intl.string(c.t.XahVjo),
             note: c.intl.string(c.t.R9fXyc),
-            disabled: !n
-        })
+            disabled: !n,
+        }),
     });
 }

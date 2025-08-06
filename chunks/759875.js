@@ -9,12 +9,12 @@ var i = n(481060),
 function c(e, t) {
     return (0, o.a)(e)
         ? (0, r.jsx)(i.sNh, {
-              id: 'forward',
+              id: "forward",
               label: l.intl.string(l.t.I3ltXF),
               icon: a.Z,
               action: () => {
                   (0, s.ts)(t, e);
-              }
+              },
           })
         : null;
 }

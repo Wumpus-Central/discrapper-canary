@@ -22,73 +22,65 @@ function O(e) {
     var t, n, O;
     let { onClose: E, event: N } = e,
         C = null == N ? void 0 : N.guild_id,
-        I = (0, l.e7)(
-            [u.ZP],
-            () => {
-                var e;
-                return null != C ? (null == (e = u.ZP.getDefaultChannel(C)) ? void 0 : e.id) : null;
-            },
-            [C]
-        ),
+        I = (0, l.e7)([u.ZP], () => {
+            var e;
+            return null != C ? (null == (e = u.ZP.getDefaultChannel(C)) ? void 0 : e.id) : null;
+        }, [C]),
         S = (0, l.e7)([d.Z], () => d.Z.getGuild(C), [C]),
         { channel_id: T, id: P } = null != N ? N : {},
-        w = (0, l.e7)(
-            [m.Z],
-            () => {
-                let e = null != T ? T : I;
-                return null == e ? null : m.Z.getInvite(e);
-            },
-            [T, I]
-        );
-    if (null == N) return (E(), null);
+        w = (0, l.e7)([m.Z], () => {
+            let e = null != T ? T : I;
+            return null == e ? null : m.Z.getInvite(e);
+        }, [T, I]);
+    if (null == N) return E(), null;
     let Z = null != (t = null == S ? void 0 : S.vanityURLCode) ? t : null == w ? void 0 : w.code,
         D =
             null != Z
                 ? (0, a.tV)({
                       baseCode: Z,
-                      guildScheduledEventId: P
+                      guildScheduledEventId: P,
                   })
                 : null,
         _ = null == D || null == w,
-        R = (0, s.Z)(null != D ? D : ''),
+        R = (0, s.Z)(null != D ? D : ""),
         k = null != (n = null == w ? void 0 : w.maxAge) ? n : b.value,
         A = null != (O = null == w ? void 0 : w.maxUses) ? O : y.value;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: j.container,
         children: [
             (0, r.jsx)(i.P3F, {
                 onClick: E,
                 className: j.close,
-                'aria-label': f.intl.string(f.t.cpT0Cg),
+                "aria-label": f.intl.string(f.t.cpT0Cg),
                 children: (0, r.jsx)(i.Dio, {
-                    size: 'md',
-                    color: 'currentColor'
-                })
+                    size: "md",
+                    color: "currentColor",
+                }),
             }),
             (0, r.jsx)(c.Z, {
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: j.iconContainer,
                     children: (0, r.jsx)(i.Que, {
-                        size: 'custom',
-                        color: 'currentColor',
+                        size: "custom",
+                        color: "currentColor",
                         height: 30,
                         width: 30,
-                        className: j.icon
-                    })
-                })
+                        className: j.icon,
+                    }),
+                }),
             }),
             (0, r.jsx)(i.X6q, {
-                variant: 'heading-xl/semibold',
+                variant: "heading-xl/semibold",
                 className: j.header,
-                children: f.intl.string(f.t.UzNv7u)
+                children: f.intl.string(f.t.UzNv7u),
             }),
             (0, r.jsx)(i.Text, {
-                variant: 'text-md/normal',
-                color: 'header-secondary',
+                variant: "text-md/normal",
+                color: "header-secondary",
                 className: j.body,
-                children: f.intl.string(f.t.UetJjI)
+                children: f.intl.string(f.t.UetJjI),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: j.invite,
                 children: [
                     (0, r.jsx)(o.S, {
@@ -104,19 +96,19 @@ function O(e) {
                                 channel_type: t,
                                 location: p.t4x.GUILD_EVENTS,
                                 code: w.code,
-                                guild_scheduled_event_id: null == N ? void 0 : N.id
+                                guild_scheduled_event_id: null == N ? void 0 : N.id,
                             });
-                        }
+                        },
                     }),
                     (null == S ? void 0 : S.vanityURLCode) == null &&
                         (0, r.jsx)(i.Text, {
-                            variant: 'text-xs/normal',
-                            color: 'header-secondary',
+                            variant: "text-xs/normal",
+                            color: "header-secondary",
                             className: j.inviteDetail,
-                            children: (0, h.Vg)(k, A)
-                        })
-                ]
-            })
-        ]
+                            children: (0, h.Vg)(k, A),
+                        }),
+                ],
+            }),
+        ],
     });
 }

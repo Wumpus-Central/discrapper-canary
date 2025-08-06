@@ -15,21 +15,21 @@ let d = (e) => {
     return (0, r.jsx)(s.hjN, {
         className: t,
         title: c.intl.string(c.t.mmDvV1),
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: u.cardNumberWrapper,
             children: [
                 (0, r.jsx)(l.ZP, {
                     className: o()(u.cardIcon, { [u.submitting]: n }),
-                    type: f
+                    type: f,
                 }),
                 (0, r.jsx)(a.Is, {
                     value: n && null != d ? c.intl.formatToPlainString(c.t.bCynoK, d) : void 0,
                     editable: !1,
                     readOnly: !0,
-                    placeholder: c.intl.string(c.t['bWMH7+']),
-                    inputClassName: u.cardNumberInput
-                })
-            ]
-        })
+                    placeholder: c.intl.string(c.t["bWMH7+"]),
+                    inputClassName: u.cardNumberInput,
+                }),
+            ],
+        }),
     });
 };

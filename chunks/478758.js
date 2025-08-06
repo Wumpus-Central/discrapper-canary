@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(539854));
+n.d(t, { Z: () => _ }), n(539854);
 var r = n(255367);
 n(73800);
 var i = n(392711),
@@ -11,15 +11,15 @@ let u = 99,
     d = (e) => {
         let { member: t, empty: n, guildId: i } = e;
         return n || null == t
-            ? (0, r.jsx)('div', { className: c.partyMember })
-            : (0, r.jsx)('div', {
+            ? (0, r.jsx)("div", { className: c.partyMember })
+            : (0, r.jsx)("div", {
                   className: c.partyMember,
                   children: (0, r.jsx)(a.qEK, {
                       src: t.getAvatarURL(i, 16),
-                      'aria-label': t.username,
+                      "aria-label": t.username,
                       size: a.EFr.SIZE_16,
-                      className: c.partyMember
-                  })
+                      className: c.partyMember,
+                  }),
               });
     },
     f = (0, s.Z)(d),
@@ -35,10 +35,10 @@ let u = 99,
                         f,
                         {
                             member: e,
-                            guildId: s
+                            guildId: s,
                         },
-                        e.id
-                    )
+                        e.id,
+                    ),
                 )
                 .value(),
             h = d - _;
@@ -48,10 +48,10 @@ let u = 99,
                     f,
                     {
                         empty: !0,
-                        guildId: s
+                        guildId: s,
                     },
-                    'empty-member-'.concat(e)
-                )
+                    "empty-member-".concat(e),
+                ),
             );
         let m = Math.max(Math.min(d - p.length, u), 0);
         if (1 === m) {
@@ -61,25 +61,25 @@ let u = 99,
                     f,
                     {
                         member: e,
-                        guildId: s
+                        guildId: s,
                     },
-                    e.id
-                )
+                    e.id,
+                ),
             );
         }
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: c.wrapper,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: c.partyMembers,
                 children: [
                     p,
                     m > 1
-                        ? (0, r.jsxs)('div', {
+                        ? (0, r.jsxs)("div", {
                               className: c.partyMemberOverflow,
-                              children: ['+', m]
+                              children: ["+", m],
                           })
-                        : null
-                ]
-            })
+                        : null,
+                ],
+            }),
         });
     };

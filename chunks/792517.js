@@ -22,9 +22,9 @@ function E(e) {
             c.Z.getAllActiveStreams().some((e) => {
                 let { ownerId: t } = e;
                 return t !== u.default.getId();
-            })
+            }),
         );
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()(p.content, p.streamHidden, { [p.__invalid_small]: b }),
         children: (0, r.jsx)(f.Z, {
             className: p.streamHiddenEmptyState,
@@ -35,34 +35,34 @@ function E(e) {
             header: b ? null : _.intl.string(_.t.epU4ER),
             description: E
                 ? null
-                : (0, r.jsxs)('div', {
+                : (0, r.jsxs)("div", {
                       className: o()(p.streamHiddenCTA, { [p.largePaddingTop]: !b }),
                       children: [
                           (0, r.jsx)(d.a, {
                               isSmall: b,
                               children: (0, r.jsx)(s.Text, {
-                                  variant: b ? 'text-sm/semibold' : 'text-md/semibold',
-                                  color: 'none',
-                                  children: n < h ? _.intl.string(_.t['I6JG4+']) : _.intl.string(_.t['7Xq/nZ'])
-                              })
+                                  variant: b ? "text-sm/semibold" : "text-md/semibold",
+                                  color: "none",
+                                  children: n < h ? _.intl.string(_.t["I6JG4+"]) : _.intl.string(_.t["7Xq/nZ"]),
+                              }),
                           }),
                           y
                               ? (0, r.jsx)(d.a, {
                                     className: p.addCTA,
                                     tooltip: _.intl.string(_.t.wCrzur),
                                     onClick: (e) => {
-                                        (e.stopPropagation(), (0, l.rn)(t.stream, { forceMultiple: !0 }));
+                                        e.stopPropagation(), (0, l.rn)(t.stream, { forceMultiple: !0 });
                                     },
                                     isSmall: b,
                                     children: (0, r.jsx)(s.OgY, {
-                                        size: 'xs',
-                                        color: 'currentColor',
-                                        className: p.addStreamIcon
-                                    })
+                                        size: "xs",
+                                        color: "currentColor",
+                                        className: p.addStreamIcon,
+                                    }),
                                 })
-                              : null
-                      ]
-                  })
-        })
+                              : null,
+                      ],
+                  }),
+        }),
     });
 }

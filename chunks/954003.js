@@ -1,4 +1,4 @@
-(n.d(t, { O: () => r }), n(388685), n(467055));
+n.d(t, { O: () => r }), n(388685), n(467055);
 var i = n(73800);
 let r = function (e) {
     let { scrollOffset: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollOffset: 60 },
@@ -6,13 +6,13 @@ let r = function (e) {
             (e) => {
                 let n = o.current[e];
                 null != n &&
-                    ((n.style.scrollMarginTop = ''.concat(t, 'px')),
+                    ((n.style.scrollMarginTop = "".concat(t, "px")),
                     n.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                        behavior: "smooth",
+                        block: "start",
                     }));
             },
-            [t]
+            [t],
         ),
         [r, s] = (0, i.useState)(Object.fromEntries(e.map((e) => [e, !1]))),
         [a, l] = (0, i.useState)(e[0]);
@@ -32,24 +32,24 @@ let r = function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         i.forEach(function (t) {
                                             var i;
-                                            ((i = n[t]),
+                                            (i = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: i,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = i));
-                                        }));
+                                                    : (e[t] = i);
+                                        });
                                 }
                                 return e;
                             })({}, t)),
@@ -86,19 +86,19 @@ let r = function (e) {
                             (e[t] = {
                                 id: t,
                                 ref: (e) => {
-                                    ((o.current[t] = e), null != e && (e.id = t));
+                                    (o.current[t] = e), null != e && (e.id = t);
                                 },
                                 scrollToSection: () => n(t),
-                                order: i
+                                order: i,
                             }),
                             e
                         ),
-                        {}
+                        {},
                     ),
-                [e, n]
+                [e, n],
             ),
             activeSectionId: a,
-            setActiveSectionId: l
+            setActiveSectionId: l,
         }
     );
 };

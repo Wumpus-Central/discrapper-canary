@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,7 +27,7 @@ function d(e) {
     let { errorMessage: t, errorCode: n } = e;
     l[a.K3D.SOUND] = {
         errorMessage: t,
-        errorCode: n
+        errorCode: n,
     };
 }
 class f extends (r = i.ZP.Store) {
@@ -35,9 +35,9 @@ class f extends (r = i.ZP.Store) {
         return l[e];
     }
 }
-s(f, 'displayName', 'HookErrorStore');
+s(f, "displayName", "HookErrorStore");
 let _ = new f(o.Z, {
     MEDIA_ENGINE_SET_GO_LIVE_SOURCE: c,
     MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: u,
-    MEDIA_ENGINE_SOUNDSHARE_FAILED: d
+    MEDIA_ENGINE_SOUNDSHARE_FAILED: d,
 });

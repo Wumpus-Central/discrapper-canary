@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(147913),
     i = n(592125),
     o = n(944486),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,7 +20,7 @@ function c(e, t, n) {
 }
 function u(e) {
     let { channelId: t } = e;
-    if (null == t || !(0, s.mG)({ location: 'channel_select' }) || !(0, a.dg)()) return !1;
+    if (null == t || !(0, s.mG)({ location: "channel_select" }) || !(0, a.dg)()) return !1;
     let n = i.Z.getChannel(t);
     if (null == n || !n.isDM()) return !1;
     let r = (0, a.uu)(t);
@@ -30,14 +30,14 @@ function u(e) {
             warningId: r.id,
             warningType: r.type,
             senderId: n.getRecipientId(),
-            channelId: t
+            channelId: t,
         }),
         !0)
     );
 }
 function d(e) {
     let { channels: t } = e;
-    if (!(0, s.mG)({ location: 'channel_updates' }) || !(0, a.dg)()) return !1;
+    if (!(0, s.mG)({ location: "channel_updates" }) || !(0, a.dg)()) return !1;
     let n = o.Z.getCurrentlySelectedChannelId();
     if (null == n) return !1;
     let r = t.find((e) => e.id === n);
@@ -49,18 +49,18 @@ function d(e) {
             warningId: i.id,
             warningType: i.type,
             senderId: r.getRecipientId(),
-            channelId: r.id
+            channelId: r.id,
         }),
         !0)
     );
 }
 class f extends r.Z {
     constructor(...e) {
-        (super(...e),
-            c(this, 'actions', {
+        super(...e),
+            c(this, "actions", {
                 CHANNEL_SELECT: u,
-                CHANNEL_UPDATES: d
-            }));
+                CHANNEL_UPDATES: d,
+            });
     }
 }
 let _ = new f();

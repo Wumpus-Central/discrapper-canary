@@ -1,4 +1,4 @@
-(n.d(t, { l: () => d }), n(953529));
+n.d(t, { l: () => d }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(793030),
@@ -13,40 +13,40 @@ function d(e) {
         title: o.intl.string(o.t.Cv6ANz),
         children: [
             (0, r.jsx)(i.xv, {
-                variant: 'text-sm/medium',
-                color: 'text-secondary',
+                variant: "text-sm/medium",
+                color: "text-secondary",
                 className: c.description,
-                children: o.intl.string(o.t.qxIcra)
+                children: o.intl.string(o.t.qxIcra),
             }),
             (0, r.jsx)(s.W, {
                 canManageGuild: t,
                 guild: n,
-                switchClassName: c.switch
+                switchClassName: c.switch,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: c.systemChannel,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: c.halfWidth,
                         children: [
                             (0, r.jsx)(l.vwX, { children: o.intl.string(o.t.NASFnp) }),
                             (0, r.jsx)(i.xv, {
-                                variant: 'text-sm/medium',
-                                color: 'text-secondary',
-                                children: o.intl.string(o.t.ZhOdpa)
-                            })
-                        ]
+                                variant: "text-sm/medium",
+                                color: "text-secondary",
+                                children: o.intl.string(o.t.ZhOdpa),
+                            }),
+                        ],
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: c.halfWidth,
                         children: (0, r.jsx)(a.u, {
                             canManageGuild: t,
                             guildId: n.id,
-                            systemChannelId: n.systemChannelId
-                        })
-                    })
-                ]
-            })
-        ]
+                            systemChannelId: n.systemChannelId,
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

@@ -8,32 +8,32 @@ function l(t) {
     let { onClose: e, transitionState: i, body: l } = t;
     return (0, n.jsxs)(r.Y0X, {
         transitionState: i,
-        parentComponent: 'ProblemReported',
+        parentComponent: "ProblemReported",
         children: [
             (0, n.jsx)(r.xBx, {
                 separator: !1,
                 children: (0, n.jsx)(r.vwX, {
-                    tag: 'h2',
+                    tag: "h2",
                     className: a.title,
-                    children: s.intl.string(s.t.KTjjrK)
-                })
+                    children: s.intl.string(s.t.KTjjrK),
+                }),
             }),
             (0, n.jsx)(r.hzk, {
                 children:
-                    'string' == typeof l
+                    "string" == typeof l
                         ? (0, n.jsx)(r.Text, {
-                              variant: 'text-md/normal',
-                              children: l
+                              variant: "text-md/normal",
+                              children: l,
                           })
-                        : l
+                        : l,
             }),
             (0, n.jsx)(r.mzw, {
                 children: (0, n.jsx)(r.zxk, {
-                    variant: 'primary',
+                    variant: "primary",
                     text: s.intl.string(s.t.i4jeWV),
-                    onClick: e
-                })
-            })
-        ]
+                    onClick: e,
+                }),
+            }),
+        ],
     });
 }

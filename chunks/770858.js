@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685));
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(91192),
@@ -22,22 +22,25 @@ var r = n(255367),
     j = n(522458);
 function E() {
     let e = (0, o.e7)([f.default], () => f.default.getCurrentUser());
-    return (0, o.e7)([h.ZP], () => (null == e ? void 0 : e.id) != null && h.ZP.getMentionCount(e.id, v.W.NOTIFICATION_CENTER) > 0);
+    return (0, o.e7)(
+        [h.ZP],
+        () => (null == e ? void 0 : e.id) != null && h.ZP.getMentionCount(e.id, v.W.NOTIFICATION_CENTER) > 0,
+    );
 }
 function S(e) {
     var t, n;
     let { onClick: d, selectedOverride: h = !1, popoutProps: f, ref: O } = e,
-        v = (0, l.Ie)('notifications-inbox'),
+        v = (0, l.Ie)("notifications-inbox"),
         [S, x] = i.useState(!1),
         I = (0, m.D)(),
         P = h || I,
-        { notificationCenterVariant: N } = g.Lk.useExperiment({ location: 'NotificationsInboxButtonInner' }),
+        { notificationCenterVariant: N } = g.Lk.useExperiment({ location: "NotificationsInboxButtonInner" }),
         {
             badge: w,
             badgeDimensions: Z,
-            unreadChannelsCount: T
+            unreadChannelsCount: T,
         } = (function (e) {
-            let { notificationCenterVariant: t } = g.Lk.useExperiment({ location: 'NotificationsInboxButtonInner' }),
+            let { notificationCenterVariant: t } = g.Lk.useExperiment({ location: "NotificationsInboxButtonInner" }),
                 { unreadChannelIds: n } = (0, m.O4)(),
                 i = E(),
                 { badge: l, dimensions: o } = (0, b.h6)({ isSelected: e });
@@ -48,21 +51,21 @@ function S(e) {
                                 style: {
                                     height: y.zw,
                                     width: y.zw,
-                                    position: 'relative'
+                                    position: "relative",
                                 },
-                                color: a.Z.STATUS_DANGER
+                                color: a.Z.STATUS_DANGER,
                             })
                           : null,
                       unreadChannelsCount: 0,
                       badgeDimensions: {
                           height: y.zw,
-                          width: y.zw
-                      }
+                          width: y.zw,
+                      },
                   }
                 : {
                       badge: l,
                       unreadChannelsCount: n.length,
-                      badgeDimensions: o
+                      badgeDimensions: o,
                   };
         })(P),
         A = N === g.jP.LEGACY ? s.xx7 : s.Dkj,
@@ -78,7 +81,7 @@ function S(e) {
                 hovered: S && N === g.jP.SIDEBAR,
                 unread: T > 0,
                 className: j.pill,
-                disabled: N === g.jP.LEGACY
+                disabled: N === g.jP.LEGACY,
             }),
             (0, r.jsx)(_.Z, {
                 children: (0, r.jsx)(s.aRk, {
@@ -91,24 +94,24 @@ function S(e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, v, f)),
@@ -120,12 +123,12 @@ function S(e) {
                                 onMouseEnter: () => x(!0),
                                 onMouseLeave: () => x(!1),
                                 children: (0, r.jsx)(A, {
-                                    size: 'custom',
-                                    color: 'currentColor',
+                                    size: "custom",
+                                    color: "currentColor",
                                     className: j.notificationsIcon,
                                     width: 20,
-                                    height: 20
-                                })
+                                    height: 20,
+                                }),
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -139,16 +142,16 @@ function S(e) {
                               })(Object(n)).forEach(function (e) {
                                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                               }),
-                        t)
-                    )
-                })
-            })
-        ]
+                        t),
+                    ),
+                }),
+            }),
+        ],
     });
 }
 function x() {
     let e = i.useRef(null),
-        { notificationCenterVariant: t } = g.Lk.useExperiment({ location: 'NotificationsInboxButton' }),
+        { notificationCenterVariant: t } = g.Lk.useExperiment({ location: "NotificationsInboxButton" }),
         n = E(),
         l = (0, b.mv)();
     return t === g.jP.SIDEBAR
@@ -156,35 +159,35 @@ function x() {
         : t === g.jP.POPOUT
           ? (0, r.jsx)(O.Z, {
                 targetElementRef: e,
-                popoutPosition: 'right',
-                popoutAlign: 'bottom',
+                popoutPosition: "right",
+                popoutAlign: "bottom",
                 children: (t, n, i) =>
                     (0, r.jsx)(S, {
                         ref: e,
                         selectedOverride: n,
                         onClick: () => {
-                            (l(), t());
+                            l(), t();
                         },
-                        popoutProps: i
-                    })
+                        popoutProps: i,
+                    }),
             })
           : t === g.jP.LEGACY
             ? (0, r.jsx)(d.k, {
                   spacing: 0,
                   badgeState: { badgeForYou: n },
                   targetElementRef: e,
-                  popoutPosition: 'right',
-                  popoutAlign: 'top',
+                  popoutPosition: "right",
+                  popoutAlign: "top",
                   dialogClassName: j.positionLayer,
                   children: (t, n, i) =>
                       (0, r.jsx)(S, {
                           ref: e,
                           selectedOverride: n,
                           onClick: () => {
-                              (l(), t());
+                              l(), t();
                           },
-                          popoutProps: i
-                      })
+                          popoutProps: i,
+                      }),
               })
             : null;
 }

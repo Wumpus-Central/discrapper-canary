@@ -36,24 +36,24 @@ function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -85,17 +85,28 @@ function I(e, t) {
                 r,
                 l = {},
                 a = Object.keys(e);
-            for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
             return l;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
     }
     return l;
 }
 function U(e) {
-    let { destination: t, icon: n, label: a, subLabel: i, selected: u, disabled: c, onPressDestination: d, 'aria-setsize': b, 'aria-posinset': p } = e,
+    let {
+            destination: t,
+            icon: n,
+            label: a,
+            subLabel: i,
+            selected: u,
+            disabled: c,
+            onPressDestination: d,
+            "aria-setsize": b,
+            "aria-posinset": p,
+        } = e,
         h = (0, o.JA)(t.id),
         m = l.useCallback(() => {
             c || null == d || d(t);
@@ -107,96 +118,96 @@ function U(e) {
                 {
                     className: s()(M.destinationRow, { [M.disabled]: c }),
                     onClick: m,
-                    'aria-selected': u,
-                    'aria-setsize': b,
-                    'aria-posinset': p
+                    "aria-selected": u,
+                    "aria-setsize": b,
+                    "aria-posinset": p,
                 },
-                h
+                h,
             ),
             {
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: M.identity,
                         children: [
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: M.iconWrapper,
-                                children: n
+                                children: n,
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: M.labels,
                                 children: [
                                     (0, r.jsx)(f.Text, {
-                                        tag: 'strong',
+                                        tag: "strong",
                                         className: M.label,
-                                        variant: 'text-md/semibold',
+                                        variant: "text-md/semibold",
                                         lineClamp: 1,
-                                        children: a
+                                        children: a,
                                     }),
                                     (0, r.jsx)(f.Text, {
                                         className: M.subLabel,
-                                        variant: 'text-xs/normal',
-                                        color: 'text-muted',
-                                        children: i
-                                    })
-                                ]
-                            })
-                        ]
+                                        variant: "text-xs/normal",
+                                        color: "text-muted",
+                                        children: i,
+                                    }),
+                                ],
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(f.XZJ, {
                         type: f.XZJ.Types.INVERTED,
                         displayOnly: !0,
                         size: 24,
                         value: u,
-                        className: M.checkbox
-                    })
-                ]
-            }
-        )
+                        className: M.checkbox,
+                    }),
+                ],
+            },
+        ),
     );
 }
 function H(e) {
     var { user: t, subLabel: n } = e,
-        l = I(e, ['user', 'subLabel']);
+        l = I(e, ["user", "subLabel"]);
     let a = N.ZP.useName(t),
-        s = N.ZP.useUserTag(t, { decoration: 'never' }),
+        s = N.ZP.useUserTag(t, { decoration: "never" }),
         i = (0, c.e7)([P.Z], () => P.Z.getNickname(t.id)),
         u = (0, c.e7)([O.Z], () => O.Z.getStatus(t.id));
     return (0, r.jsx)(
         U,
         A(k({}, l), {
             icon: (0, r.jsx)(b.Z, {
-                'aria-hidden': !0,
+                "aria-hidden": !0,
                 size: f.EFr.SIZE_32,
                 user: t,
-                status: u
+                status: u,
             }),
             label: null != i ? i : a,
-            subLabel: null != n ? n : s
-        })
+            subLabel: null != n ? n : s,
+        }),
     );
 }
 function F(e) {
     var { channel: t, subLabel: n } = e,
-        l = I(e, ['channel', 'subLabel']);
+        l = I(e, ["channel", "subLabel"]);
     let a = (0, m.ZP)(t),
         s = (0, x._)(t);
     return (0, r.jsx)(
         U,
         A(k({}, l), {
             icon: (0, r.jsx)(g.Z, {
-                'aria-hidden': !0,
+                "aria-hidden": !0,
                 size: f.EFr.SIZE_32,
                 channel: t,
-                experimentLocation: 'application-command-modal'
+                experimentLocation: "application-command-modal",
             }),
             label: a,
-            subLabel: null != n ? n : s
-        })
+            subLabel: null != n ? n : s,
+        }),
     );
 }
 function q(e) {
     var { channel: t, subLabel: n } = e,
-        l = I(e, ['channel', 'subLabel']);
+        l = I(e, ["channel", "subLabel"]);
     let a = (0, c.e7)([j.Z], () => j.Z.getGuild(null == t ? void 0 : t.guild_id)),
         s = (0, m.ZP)(t),
         i = (0, c.e7)([E.Z, C.default, P.Z], () => {
@@ -207,37 +218,37 @@ function q(e) {
         d = null == a ? void 0 : a.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? f.Mmi : f.VL1;
-        d = (0, r.jsxs)('div', {
+        d = (0, r.jsxs)("div", {
             className: M.threadSubLabel,
             children: [
                 (0, r.jsx)(e, {
                     color: f.TVs.colors.TEXT_SECONDARY,
-                    className: M.subLabelIcon
+                    className: M.subLabelIcon,
                 }),
                 (0, r.jsx)(f.Text, {
-                    variant: 'text-xs/medium',
-                    color: 'text-secondary',
+                    variant: "text-xs/medium",
+                    color: "text-secondary",
                     lineClamp: 1,
-                    children: i
+                    children: i,
                 }),
                 null != o
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(f.Text, {
                                   className: M.subLabelSeparator,
-                                  variant: 'text-xs/medium',
-                                  color: 'text-secondary',
-                                  children: '\u2022'
+                                  variant: "text-xs/medium",
+                                  color: "text-secondary",
+                                  children: "\u2022",
                               }),
                               (0, r.jsx)(f.Text, {
-                                  variant: 'text-xs/medium',
-                                  color: 'text-secondary',
-                                  children: (0, L.Xf)(u()(o))
-                              })
-                          ]
+                                  variant: "text-xs/medium",
+                                  color: "text-secondary",
+                                  children: (0, L.Xf)(u()(o)),
+                              }),
+                          ],
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     }
     return (0, r.jsx)(
@@ -246,16 +257,16 @@ function q(e) {
             icon: (0, r.jsx)(y.Z, {
                 size: y.E.SMALL_32,
                 guild: a,
-                channel: t
+                channel: t,
             }),
             label: s,
-            subLabel: null != n ? n : d
-        })
+            subLabel: null != n ? n : d,
+        }),
     );
 }
 function z(e) {
     var { rowData: t, selectedDestinations: n, handleToggleDestination: a, disableSelection: s } = e,
-        i = I(e, ['rowData', 'selectedDestinations', 'handleToggleDestination', 'disableSelection']);
+        i = I(e, ["rowData", "selectedDestinations", "handleToggleDestination", "disableSelection"]);
     let u = l.useMemo(() => [t.length], [t.length]),
         c = l.useCallback(() => 48, []),
         f = l.useMemo(() => {
@@ -271,16 +282,23 @@ function z(e) {
                 let o =
                         i === h.h8.USER
                             ? {
-                                  type: 'user',
-                                  id: u.id
+                                  type: "user",
+                                  id: u.id,
                               }
                             : {
-                                  type: 'channel',
-                                  id: u.id
+                                  type: "channel",
+                                  id: u.id,
                               },
                     c = (0, v.hC)(o),
                     d = (function (e) {
-                        if (e instanceof S.Sf && (0, S.Km)(e.type) && null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(Z.Z.can(w.Plq.MANAGE_CHANNELS, e) || Z.Z.can(w.Plq.MANAGE_MESSAGES, e))) return { label: R.intl.string(R.t.Icu3bW) };
+                        if (
+                            e instanceof S.Sf &&
+                            (0, S.Km)(e.type) &&
+                            null != e.rateLimitPerUser &&
+                            e.rateLimitPerUser > 0 &&
+                            !(Z.Z.can(w.Plq.MANAGE_CHANNELS, e) || Z.Z.can(w.Plq.MANAGE_MESSAGES, e))
+                        )
+                            return { label: R.intl.string(R.t.Icu3bW) };
                     })(u),
                     b = f.includes(c),
                     p = {
@@ -290,21 +308,27 @@ function z(e) {
                         disabled: (s && !b) || null != d,
                         selected: b,
                         onPressDestination: a,
-                        'aria-posinset': l + 1,
-                        'aria-setsize': t.length
+                        "aria-posinset": l + 1,
+                        "aria-setsize": t.length,
                     };
-                return i === h.h8.USER ? (0, r.jsx)(H, k({ user: u }, p)) : i === h.h8.GROUP_DM ? (0, r.jsx)(F, k({ channel: u }, p)) : i === h.h8.TEXT_CHANNEL || i === h.h8.VOICE_CHANNEL ? (0, r.jsx)(q, k({ channel: u }, p)) : void (0, T.vE)(i);
+                return i === h.h8.USER
+                    ? (0, r.jsx)(H, k({ user: u }, p))
+                    : i === h.h8.GROUP_DM
+                      ? (0, r.jsx)(F, k({ channel: u }, p))
+                      : i === h.h8.TEXT_CHANNEL || i === h.h8.VOICE_CHANNEL
+                        ? (0, r.jsx)(q, k({ channel: u }, p))
+                        : void (0, T.vE)(i);
             },
-            [s, a, t, f]
+            [s, a, t, f],
         ),
         m = l.useRef(null),
-        g = (0, p.Z)('share-command-modal', m);
+        g = (0, p.Z)("share-command-modal", m);
     return (0, r.jsx)(o.bG, {
         navigator: g,
         children: (0, r.jsx)(o.SJ, {
             children: (e) => {
                 var { ref: t } = e,
-                    n = I(e, ['ref']);
+                    n = I(e, ["ref"]);
                 return (0, r.jsx)(
                     d.Tv,
                     A(
@@ -312,21 +336,22 @@ function z(e) {
                             {
                                 ref: (e) => {
                                     var n;
-                                    ((m.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null));
-                                }
+                                    (m.current = e),
+                                        (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
+                                },
                             },
                             n,
-                            i
+                            i,
                         ),
                         {
                             sections: u,
                             sectionHeight: 0,
                             renderRow: b,
-                            rowHeight: c
-                        }
-                    )
+                            rowHeight: c,
+                        },
+                    ),
                 );
-            }
-        })
+            },
+        }),
     });
 }

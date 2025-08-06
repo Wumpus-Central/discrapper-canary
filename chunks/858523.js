@@ -6,12 +6,12 @@ var e = l(255367),
     c = l(299206),
     r = l(388032);
 function o(n) {
-    let { guild: i, shiftId: l, onSelect: o, closePopout: d, 'aria-label': u } = n,
+    let { guild: i, shiftId: l, onSelect: o, closePopout: d, "aria-label": u } = n,
         h = (0, c.Z)({
             id: i.id,
-            label: r.intl.string(r.t['94lLDw']),
+            label: r.intl.string(r.t["94lLDw"]),
             shiftId: l,
-            onSuccess: d
+            onSuccess: d,
         }),
         p = t.useCallback((n) => {
             n.stopPropagation();
@@ -20,10 +20,10 @@ function o(n) {
         onClick: p,
         children: (0, e.jsx)(a.v2r, {
             onSelect: o,
-            navId: 'guild-discovery-context-menu',
-            'aria-label': null != u ? u : r.intl.string(r.t.ogxXGh),
+            navId: "guild-discovery-context-menu",
+            "aria-label": null != u ? u : r.intl.string(r.t.ogxXGh),
             onClose: s.Zy,
-            children: (0, e.jsx)(a.kSQ, { children: h })
-        })
+            children: (0, e.jsx)(a.kSQ, { children: h }),
+        }),
     });
 }

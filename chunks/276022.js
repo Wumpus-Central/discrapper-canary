@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(539854));
+n.d(t, { Z: () => g }), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -29,7 +29,7 @@ function g(e) {
             if (null == v)
                 return {
                     isGuildApp: !1,
-                    isUserApp: !1
+                    isUserApp: !1,
                 };
             let i = Object.values(null != (n = null == (e = N.result) ? void 0 : e.sections) ? n : {}),
                 o = Object.values(null != (r = null == (t = C.result) ? void 0 : t.sections) ? r : {});
@@ -41,19 +41,22 @@ function g(e) {
                 isUserApp: o.some((e) => {
                     var t;
                     return (null == (t = e.descriptor.application) ? void 0 : t.id) === v;
-                })
+                }),
             };
         }, [N, C, v]);
     i.useEffect(() => {
         n(360606);
     }, []);
     let D = i.useCallback(() => {
-            (null == I ? void 0 : I.id) != null && (u.Z.open(I.id, h.pNK.INTEGRATIONS), s.Z.setSection(h.b4C.APPLICATION, v), null == O || O());
+            (null == I ? void 0 : I.id) != null &&
+                (u.Z.open(I.id, h.pNK.INTEGRATIONS), s.Z.setSection(h.b4C.APPLICATION, v), null == O || O());
         }, [v, null == I ? void 0 : I.id, O]),
         L = i.useCallback(() => {
             l.Z.open(h.oAB.AUTHORIZED_APPS);
-            let e = '';
-            (null != E ? (e = E.name) : null != g && (e = g.username), '' !== e && d.J.setState({ searchQuery: e }), null == O || O());
+            let e = "";
+            null != E ? (e = E.name) : null != g && (e = g.username),
+                "" !== e && d.J.setState({ searchQuery: e }),
+                null == O || O();
         }, [E, O, g]);
     if (y === h.IlC.POPOUT) return null;
     let x = [];
@@ -64,12 +67,12 @@ function g(e) {
                 (0, r.jsx)(
                     a.sNh,
                     {
-                        id: 'manage-server-integration',
+                        id: "manage-server-integration",
                         label: m.intl.string(m.t.IuSJT0),
-                        action: D
+                        action: D,
                     },
-                    'manage-server-integration'
-                )
+                    "manage-server-integration",
+                ),
             ),
         P &&
             R &&
@@ -77,12 +80,12 @@ function g(e) {
                 (0, r.jsx)(
                     a.sNh,
                     {
-                        id: 'manage-authorized-app',
+                        id: "manage-authorized-app",
                         label: m.intl.string(m.t.V8ruv7),
-                        action: L
+                        action: L,
                     },
-                    'manage-authorized-app'
-                )
+                    "manage-authorized-app",
+                ),
             ),
         x
     );

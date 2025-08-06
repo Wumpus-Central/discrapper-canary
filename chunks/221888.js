@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(415506), n(388685));
+n.d(t, { Z: () => L }), n(415506), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,24 +80,24 @@ function R(e, t) {
         case y.fO.STREAM:
             return v.intl.formatToPlainString(v.t.BR7Tnp, { numViewers: t });
         default:
-            throw Error('Unknown participant type.');
+            throw Error("Unknown participant type.");
     }
 }
 function P(e) {
     let { users: t, disableInteraction: n, guildId: i, participantType: o, channelId: s, handleUserContextMenu: l } = e,
         c = R(o, t.length);
     return (0, r.jsx)(d.VqE, {
-        'aria-label': c,
+        "aria-label": c,
         className: I.popoutWrapper,
         children: (0, r.jsxs)(d.Ttm, {
             className: I.scroller,
             children: [
                 (0, r.jsx)(d.X6q, {
-                    variant: 'heading-deprecated-12/semibold',
+                    variant: "heading-deprecated-12/semibold",
                     className: I.memberListHeader,
-                    children: c
+                    children: c,
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     children: t.map((e) =>
                         (0, r.jsx)(
                             h.Z,
@@ -109,14 +109,14 @@ function P(e) {
                                 className: a()(I.memberListItem, { [I.popoutDisabled]: n }),
                                 textClassName: I.memberListItemText,
                                 disablePopout: n,
-                                onContextMenu: (t) => (n ? null : l(t, e))
+                                onContextMenu: (t) => (n ? null : l(t, e)),
                             },
-                            e.id
-                        )
-                    )
-                })
-            ]
-        })
+                            e.id,
+                        ),
+                    ),
+                }),
+            ],
+        }),
     });
 }
 function w(e) {
@@ -126,78 +126,84 @@ function w(e) {
             t.length < o
                 ? t.map((e) =>
                       (0, r.jsx)(
-                          'div',
+                          "div",
                           {
                               className: I.viewersTooltipItem,
-                              children: b.ZP.getName(n, i, e)
+                              children: b.ZP.getName(n, i, e),
                           },
-                          e.id
-                      )
+                          e.id,
+                      ),
                   )
                 : c;
     return (0, r.jsx)(d.DY3, {
         text: u,
-        'aria-label': c,
-        children: (0, r.jsxs)('div', {
+        "aria-label": c,
+        children: (0, r.jsxs)("div", {
             className: a()(I.viewers, s),
             children: [
                 (0, r.jsx)(d.tEF, {
-                    size: 'xs',
-                    color: 'currentColor',
-                    className: I.viewersIcon
+                    size: "xs",
+                    color: "currentColor",
+                    className: I.viewersIcon,
                 }),
-                (0, r.jsx)('span', {
-                    'aria-hidden': 'true',
-                    children: t.length
-                })
-            ]
-        })
+                (0, r.jsx)("span", {
+                    "aria-hidden": "true",
+                    children: t.length,
+                }),
+            ],
+        }),
     });
 }
 let D = [];
 function L(e) {
-    let { channelId: t, guildId: o, participant: s, className: h, compact: b = !1, disableInteraction: v = !1, maxVisibleUsers: T = 3 } = e,
+    let {
+            channelId: t,
+            guildId: o,
+            participant: s,
+            className: h,
+            compact: b = !1,
+            disableInteraction: v = !1,
+            maxVisibleUsers: T = 3,
+        } = e,
         A = i.useRef(null),
         R = (0, p.Z)(),
         [L, x] = i.useState(!1),
         M = i.useRef(new u.sW(C, () => x(!1))),
-        k = (0, c.Wu)(
-            [m.Z, g.default],
-            () => {
-                if (s.type === y.fO.STREAM) {
-                    let e = m.Z.getViewerIds(s.id);
-                    return e.length > 0 ? e.map((e) => g.default.getUser(e)).filter(E.lm) : D;
-                }
-                return s.type === y.fO.ACTIVITY && s.participants.length > 0
-                    ? Array.from(s.participants)
-                          .map((e) => g.default.getUser(e.userId))
-                          .filter(E.lm)
-                    : D;
-            },
-            [s]
-        );
+        k = (0, c.Wu)([m.Z, g.default], () => {
+            if (s.type === y.fO.STREAM) {
+                let e = m.Z.getViewerIds(s.id);
+                return e.length > 0 ? e.map((e) => g.default.getUser(e)).filter(E.lm) : D;
+            }
+            return s.type === y.fO.ACTIVITY && s.participants.length > 0
+                ? Array.from(s.participants)
+                      .map((e) => g.default.getUser(e.userId))
+                      .filter(E.lm)
+                : D;
+        }, [s]);
     i.useEffect(() => {
         R && (M.current.cancel(), x(!1));
     }, [R]);
     let j = i.useCallback(() => {
-            (M.current.cancel(), x(!0));
+            M.current.cancel(), x(!0);
         }, []),
         U = i.useCallback(() => {
             M.current.delay();
         }, []),
         G = i.useCallback(
             (e, t) => {
-                (j(),
+                j(),
                     (0, f.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
+                                n.bind(n, 881351),
+                            );
                             return (n) => (0, r.jsx)(e, N(S({}, n), { user: t }));
                         },
-                        { onClose: U }
-                    ));
+                        { onClose: U },
+                    );
             },
-            [U, j]
+            [U, j],
         );
     if (0 === k.length) return null;
     if (b)
@@ -207,7 +213,7 @@ function L(e) {
             guildId: o,
             channelId: t,
             className: h,
-            participantType: s.type
+            participantType: s.type,
         });
     let B = l()(k)
         .take(T)
@@ -216,27 +222,27 @@ function L(e) {
                 d.qEK,
                 {
                     src: e.getAvatarURL(o, 24),
-                    'aria-label': e.username,
+                    "aria-label": e.username,
                     size: d.EFr.SIZE_24,
-                    className: I.viewer
+                    className: I.viewer,
                 },
-                e.id
-            )
+                e.id,
+            ),
         )
         .value();
     return (
         k.length > T &&
             (B[B.length - 1] = (0, r.jsxs)(
-                'div',
+                "div",
                 {
                     className: I.overflow,
-                    children: ['+', k.length - T + 1]
+                    children: ["+", k.length - T + 1],
                 },
-                'overflow'
+                "overflow",
             )),
         (0, r.jsx)(_.Z, {
             section: O.jXE.STREAM_VIEWER_POPOUT,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 onMouseEnter: j,
                 onMouseLeave: U,
                 children: (0, r.jsx)(d.yRy, {
@@ -248,18 +254,18 @@ function L(e) {
                             guildId: o,
                             channelId: t,
                             users: k,
-                            disableInteraction: v
+                            disableInteraction: v,
                         }),
                     shouldShow: L && !R,
-                    position: 'top',
+                    position: "top",
                     children: () =>
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             ref: A,
                             className: a()(I.viewers, h),
-                            children: B
-                        })
-                })
-            })
+                            children: B,
+                        }),
+                }),
+            }),
         })
     );
 }

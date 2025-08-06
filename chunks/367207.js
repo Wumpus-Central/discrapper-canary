@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(415506), n(388685));
+n.d(t, { Z: () => v }), n(415506), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -22,7 +22,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -64,95 +64,113 @@ function y(e, t) {
 }
 class C extends o.Z {
     _initialize() {
-        __OVERLAY__ ? l.Z.subscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (l.Z.subscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), l.Z.subscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), l.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), l.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), l.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchUserAffinities), l.Z.subscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure));
+        __OVERLAY__
+            ? l.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
+            : (l.Z.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose),
+              l.Z.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell),
+              l.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer),
+              l.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery),
+              l.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchUserAffinities),
+              l.Z.subscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure));
     }
     _terminate() {
-        __OVERLAY__ ? l.Z.unsubscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (l.Z.unsubscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), l.Z.unsubscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), l.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), l.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), l.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchUserAffinities), l.Z.unsubscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure));
+        __OVERLAY__
+            ? l.Z.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
+            : (l.Z.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose),
+              l.Z.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell),
+              l.Z.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer),
+              l.Z.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery),
+              l.Z.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchUserAffinities),
+              l.Z.unsubscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure));
     }
     handleMessageLengthUpsell(e) {
         let { channel: t, content: l } = e;
         (0, i.ZDy)(async () => {
-            let { default: e } = await n.e('33184').then(n.bind(n, 465836));
+            let { default: e } = await n.e("33184").then(n.bind(n, 465836));
             return (n) =>
                 (0, r.jsx)(
                     e,
                     _(
                         {
                             channel: t,
-                            content: l
+                            content: l,
                         },
-                        n
-                    )
+                        n,
+                    ),
                 );
         });
     }
     openPremiumPaymentModalInApp(e) {
-        if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
+        if (__OVERLAY__) throw Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
         return new Promise((t, n) => {
             (0, a.Z)(
                 y(_({}, e), {
                     onClose: (e) => {
                         e ? t() : n();
-                    }
-                })
+                    },
+                }),
             );
         });
     }
     openPremiumPaymentModalInOverlay(e) {
-        if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
+        if (__OVERLAY__) throw Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
         let { initialPlanId: t, subscriptionTier: n, followupSKUInfo: r, analyticsObject: i } = null != e ? e : {};
         return new Promise((e, o) => {
-            ((this._premiumPaymentModalCloseResolve = e),
+            (this._premiumPaymentModalCloseResolve = e),
                 (this._premiumPaymentModalCloseReject = o),
                 l.Z.dispatch({
-                    type: 'PREMIUM_PAYMENT_MODAL_OPEN',
+                    type: "PREMIUM_PAYMENT_MODAL_OPEN",
                     initialPlanId: t,
                     subscriptionTier: n,
                     followupSKUInfo: r,
-                    analyticsObject: i
-                }));
+                    analyticsObject: i,
+                });
         });
     }
     constructor(...e) {
-        (super(...e),
-            O(this, '_premiumPaymentModalCloseResolve', null),
-            O(this, '_premiumPaymentModalCloseReject', null),
-            O(this, '_maybeFetchPremiumOffer', async () => {
+        super(...e),
+            O(this, "_premiumPaymentModalCloseResolve", null),
+            O(this, "_premiumPaymentModalCloseReject", null),
+            O(this, "_maybeFetchPremiumOffer", async () => {
                 let e = u.default.getCurrentUser();
                 if (null != e && e.verified) {
                     let t = (d.Z.canFractionalPremiumUserUseOffer() || !(0, h.I5)(e)) && !d.Z.isFetchingOffer();
-                    await (0, g.T)('PremiumManager', t);
+                    await (0, g.T)("PremiumManager", t);
                 }
-                l.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
+                l.Z.dispatch({ type: "PREMIUM_MARKETING_DATA_READY" });
             }),
-            O(this, '_maybeFetchCheckoutRecovery', async () => {
+            O(this, "_maybeFetchCheckoutRecovery", async () => {
                 let e = u.default.getCurrentUser();
                 null != e && e.verified && !(0, h.I5)(e) && f.Z.shouldFetchCheckoutRecovery() && (await (0, p.o)());
             }),
-            O(this, '_maybeFetchUserAffinities', () => {
-                let { enabled: e } = m.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+            O(this, "_maybeFetchUserAffinities", () => {
+                let { enabled: e } = m.w.getCurrentConfig({ location: "PremiumManager" }, { autoTrackExposure: !1 });
                 e && (0, c._)();
             }),
-            O(this, '_trackCustomNotificationSoundsExposure', () => {
-                b.Y.trackExposure({ location: 'PremiumManager' });
+            O(this, "_trackCustomNotificationSoundsExposure", () => {
+                b.Y.trackExposure({ location: "PremiumManager" });
             }),
-            O(this, '_handlePremiumPaymentModalOpen', (e) => {
+            O(this, "_handlePremiumPaymentModalOpen", (e) => {
                 (0, a.Z)(
                     y(_({}, e), {
                         analyticsLocations: [s.Z.OVERLAY],
                         onClose: (e) => {
                             l.Z.dispatch({
-                                type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
-                                didSucceed: e
+                                type: "PREMIUM_PAYMENT_MODAL_CLOSE",
+                                didSucceed: e,
                             });
-                        }
-                    })
+                        },
+                    }),
                 );
             }),
-            O(this, '_handlePremiumPaymentModalClose', (e) => {
+            O(this, "_handlePremiumPaymentModalClose", (e) => {
                 let { didSucceed: t } = e;
-                (t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), (this._premiumPaymentModalCloseResolve = null), (this._premiumPaymentModalCloseReject = null));
-            }));
+                t && null != this._premiumPaymentModalCloseResolve
+                    ? this._premiumPaymentModalCloseResolve()
+                    : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(),
+                    (this._premiumPaymentModalCloseResolve = null),
+                    (this._premiumPaymentModalCloseReject = null);
+            });
     }
 }
 let v = new C();

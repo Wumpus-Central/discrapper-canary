@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(388685));
+n.d(t, { Z: () => o }), n(388685);
 var r = n(836560);
 function i(e, t, n) {
     return (
@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -44,6 +44,6 @@ class o {
         return this.emitter.listenerCount(e);
     }
     constructor() {
-        i(this, 'emitter', new r.EventEmitter());
+        i(this, "emitter", new r.EventEmitter());
     }
 }

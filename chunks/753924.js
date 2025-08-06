@@ -18,7 +18,8 @@ var r = n(923341),
             (e.observe = function (e, t, n) {
                 var o = s.get(e),
                     c = 0 === o.observationTargets.length;
-                0 > l(o.observationTargets, t) && (c && a.C.push(o), o.observationTargets.push(new i.Q(t, n && n.box)), (0, r.t)(1), r.p.schedule());
+                0 > l(o.observationTargets, t) &&
+                    (c && a.C.push(o), o.observationTargets.push(new i.Q(t, n && n.box)), (0, r.t)(1), r.p.schedule());
             }),
             (e.unobserve = function (e, t) {
                 var n = s.get(e),
@@ -29,10 +30,10 @@ var r = n(923341),
             (e.disconnect = function (e) {
                 var t = this,
                     n = s.get(e);
-                (n.observationTargets.slice().forEach(function (n) {
+                n.observationTargets.slice().forEach(function (n) {
                     return t.unobserve(e, n.target);
                 }),
-                    n.activeTargets.splice(0, n.activeTargets.length));
+                    n.activeTargets.splice(0, n.activeTargets.length);
             }),
             e
         );

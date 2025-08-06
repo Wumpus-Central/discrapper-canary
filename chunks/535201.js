@@ -1,4 +1,4 @@
-(n.d(t, { p: () => s }), n(388685));
+n.d(t, { p: () => s }), n(388685);
 var r = n(73800),
     i = n(913527),
     o = n.n(i),
@@ -11,13 +11,13 @@ function s(e) {
             if (!n) return;
             let e = new a.V7(),
                 r = () => {
-                    let n = Math.min(t.diff(Date.now(), 'millisecond'), 86400000);
+                    let n = Math.min(t.diff(Date.now(), "millisecond"), 86400000);
                     null == e ||
                         e.start(n, () => {
                             t.isBefore(Date.now()) ? i(!1) : r();
                         });
                 };
-            return (r(), () => e.stop());
+            return r(), () => e.stop();
         }, [n, t]),
         n
     );

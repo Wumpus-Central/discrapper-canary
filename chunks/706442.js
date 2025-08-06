@@ -1,1 +1,1 @@
-e.exports = { chatWallpaperDMListCoachmarkArt: 'chatWallpaperDMListCoachmarkArt_f36944' };
+e.exports = { chatWallpaperDMListCoachmarkArt: "chatWallpaperDMListCoachmarkArt_f36944" };

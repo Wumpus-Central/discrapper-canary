@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Es: () => E,
     Eu: () => v,
-    bt: () => O
+    bt: () => O,
 }),
     n(388685),
-    n(539854));
+    n(539854);
 var r = n(73800),
     i = n(392711),
     o = n(442837),
@@ -23,7 +23,7 @@ function g(e, t, n) {
     if ((null == e || 0 === e.length) && 0 === n.length) return t;
     let r = [],
         o = new Set();
-    for (let e of t) (r.push(e), o.add(e.user.id));
+    for (let e of t) r.push(e), o.add(e.user.id);
     return (
         null == e ||
             e.forEach((e) => {
@@ -33,7 +33,7 @@ function g(e, t, n) {
                         return t;
                     }),
                     0,
-                    e
+                    e,
                 );
             }),
         n.length > 0 &&
@@ -45,7 +45,7 @@ function g(e, t, n) {
                             return t;
                         }),
                         0,
-                        e
+                        e,
                     );
             }),
         r
@@ -61,12 +61,15 @@ function E(e, t) {
                 a.map((e) => ({
                     voiceState: new l.Z(e.id),
                     user: e,
-                    member: (null == c ? void 0 : c.guild_id) != null ? d.ZP.getMember(null == c ? void 0 : c.guild_id, e.id) : null,
+                    member:
+                        (null == c ? void 0 : c.guild_id) != null
+                            ? d.ZP.getMember(null == c ? void 0 : c.guild_id, e.id)
+                            : null,
                     nick: e.globalName,
                     comparator: e.globalName,
-                    _isPlaceholder: !1
+                    _isPlaceholder: !1,
                 })),
-            [a, null == c ? void 0 : c.guild_id]
+            [a, null == c ? void 0 : c.guild_id],
         );
     return r.useMemo(() => g(n, t, h), [n, t, h]);
 }
@@ -78,7 +81,7 @@ function b(e, t) {
             n.splice(
                 (0, i.sortedIndexBy)(n, e, (e) => (0, a.Yr)(e)),
                 0,
-                e
+                e,
             );
         }),
         n
@@ -97,8 +100,24 @@ function v(e, t) {
         a = r.useRef(null),
         [s, l] = r.useState(!1),
         [u, d] = r.useState(!1),
-        f = (0, o.e7)([_.Z, h.Z], () => null != t && null != e && _.Z.getChannelId() === e && null != h.Z.isInChannel(e, t) && _.Z.isUserConnected(t)),
-        p = (0, o.e7)([_.Z, h.Z], () => null != t && null != e && _.Z.getChannelId() === e && null != h.Z.isInChannel(e, t) && !_.Z.isUserConnected(t));
+        f = (0, o.e7)(
+            [_.Z, h.Z],
+            () =>
+                null != t &&
+                null != e &&
+                _.Z.getChannelId() === e &&
+                null != h.Z.isInChannel(e, t) &&
+                _.Z.isUserConnected(t),
+        ),
+        p = (0, o.e7)(
+            [_.Z, h.Z],
+            () =>
+                null != t &&
+                null != e &&
+                _.Z.getChannelId() === e &&
+                null != h.Z.isInChannel(e, t) &&
+                !_.Z.isUserConnected(t),
+        );
     return (
         r.useEffect(() => {
             f && d(!0);
@@ -110,14 +129,14 @@ function v(e, t) {
             () => (
                 p && null == a.current
                     ? (a.current = setTimeout(() => {
-                          ((a.current = null), l(!0));
+                          (a.current = null), l(!0);
                       }, 250))
                     : (clearTimeout(a.current), (a.current = null), l(!1)),
                 () => {
-                    (clearTimeout(a.current), (a.current = null));
+                    clearTimeout(a.current), (a.current = null);
                 }
             ),
-            [p]
+            [p],
         ),
         !n && u && s
     );

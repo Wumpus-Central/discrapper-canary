@@ -11,7 +11,7 @@ function l(e) {
             let n = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
                 r = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey),
                 { disabled: l = !1, onSubmit: i } = t.current;
-            'enter' === e.key.toLowerCase() && ('macos' === (0, a.getOS)() ? r : n) && !l && (e.preventDefault(), i());
+            "enter" === e.key.toLowerCase() && ("macos" === (0, a.getOS)() ? r : n) && !l && (e.preventDefault(), i());
         }, [])
     );
 }

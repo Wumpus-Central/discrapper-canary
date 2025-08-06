@@ -1,6 +1,6 @@
 IntlMessageFormat.__addLocaleData({
-    locale: 'bg',
+    locale: "bg",
     pluralRuleFunction: function (e, t) {
-        return t ? 'other' : 1 == e ? 'one' : 'other';
-    }
+        return t ? "other" : 1 == e ? "one" : "other";
+    },
 });

@@ -1,4 +1,4 @@
-(n.d(t, { default: () => v }), n(388685), n(953529));
+n.d(t, { default: () => v }), n(388685), n(953529);
 var r = n(255367),
     o = n(73800),
     l = n(494497),
@@ -31,15 +31,17 @@ function v(e) {
                         r,
                         o = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
-        })(e, ['guildId', 'powerup']);
+        })(e, ["guildId", "powerup"]);
     let [C, k] = o.useState(void 0),
         P = o.useMemo(() => {
             switch (y.skuId) {
@@ -65,97 +67,99 @@ function v(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         var r;
-                        ((r = n[t]),
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = r));
-                    }));
+                                : (e[t] = r);
+                    });
             }
             return e;
         })(
             {
                 className: j.modal,
-                size: i.CgR.DYNAMIC
+                size: i.CgR.DYNAMIC,
             },
-            O
+            O,
         )),
         (n = n =
             {
-                parentComponent: 'GuildPowerupPerkModal',
+                parentComponent: "GuildPowerupPerkModal",
                 children: [
                     (0, r.jsxs)(i.hzk, {
                         className: j.modalContentContainer,
-                        scrollbarType: 'none',
+                        scrollbarType: "none",
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: j.sidebar,
                                 children: [
                                     (0, r.jsx)(a.$, {
                                         className: j.powerupImage,
-                                        children: (0, r.jsx)(m.m, { powerup: y })
+                                        children: (0, r.jsx)(m.m, { powerup: y }),
                                     }),
-                                    (0, r.jsxs)('div', {
+                                    (0, r.jsxs)("div", {
                                         className: j.contentContainer,
                                         children: [
                                             (0, r.jsx)(i.X6q, {
-                                                variant: 'heading-xl/extrabold',
-                                                children: y.title
+                                                variant: "heading-xl/extrabold",
+                                                children: y.title,
                                             }),
                                             (0, r.jsx)(i.Text, {
                                                 className: j.description,
-                                                variant: 'text-sm/normal',
-                                                children: y.description
+                                                variant: "text-sm/normal",
+                                                children: y.description,
                                             }),
                                             null != N &&
                                                 (0, r.jsx)(i.Text, {
                                                     className: j.description,
-                                                    variant: 'text-sm/normal',
-                                                    children: x.intl.formatToPlainString(h.default.NAFGkJ, { level: N.title })
+                                                    variant: "text-sm/normal",
+                                                    children: x.intl.formatToPlainString(h.default.NAFGkJ, {
+                                                        level: N.title,
+                                                    }),
                                                 }),
                                             (0, r.jsx)(g.q, { powerup: y }),
                                             null != C &&
                                                 (0, r.jsx)(i.Text, {
                                                     className: j.error,
-                                                    color: 'status-danger',
-                                                    variant: 'text-sm/semibold',
-                                                    children: C
+                                                    color: "status-danger",
+                                                    variant: "text-sm/semibold",
+                                                    children: C,
                                                 }),
                                             w &&
                                                 (0, r.jsx)(p.ZP, {
                                                     className: j.footer,
                                                     guildId: v,
                                                     powerup: y,
-                                                    onError: k
-                                                })
-                                        ]
-                                    })
-                                ]
+                                                    onError: k,
+                                                }),
+                                        ],
+                                    }),
+                                ],
                             }),
                             null != P &&
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: j.exampleImage,
-                                    children: P
-                                })
-                        ]
+                                    children: P,
+                                }),
+                        ],
                     }),
                     (0, r.jsx)(i.olH, {
                         className: j.close,
-                        onClick: O.onClose
-                    })
-                ]
+                        onClick: O.onClose,
+                    }),
+                ],
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -169,6 +173,6 @@ function v(e) {
               })(Object(n)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
-        t)
+        t),
     );
 }

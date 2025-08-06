@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -26,12 +26,12 @@ let b = () => {
         y = async () => {
             o(!0);
             try {
-                (p.mT(t.id), await u.Z.joinGuild(t.id, { source: h.vtS.NOTICE_BAR }));
+                p.mT(t.id), await u.Z.joinGuild(t.id, { source: h.vtS.NOTICE_BAR });
             } catch (e) {
                 o(!1);
             }
         };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(g.notice, E.notice),
         children: [
             (0, r.jsxs)(l.zx, {
@@ -43,17 +43,17 @@ let b = () => {
                 onClick: b,
                 children: [
                     (0, r.jsx)(c.whL, {
-                        size: 'xs',
-                        color: 'currentColor',
-                        className: g.arrow
+                        size: "xs",
+                        color: "currentColor",
+                        className: g.arrow,
                     }),
-                    m.intl.string(m.t['13/7kZ'])
-                ]
+                    m.intl.string(m.t["13/7kZ"]),
+                ],
             }),
             (0, r.jsx)(c.Text, {
                 className: g.header,
-                variant: 'text-sm/normal',
-                children: m.intl.string(m.t['N/y2WF'])
+                variant: "text-sm/normal",
+                children: m.intl.string(m.t["N/y2WF"]),
             }),
             (0, r.jsx)(l.zx, {
                 className: g.button,
@@ -62,8 +62,8 @@ let b = () => {
                 size: l.zx.Sizes.NONE,
                 submitting: n,
                 onClick: y,
-                children: m.intl.format(m.t.uHN7n5, { guild: t.name })
-            })
-        ]
+                children: m.intl.format(m.t.uHN7n5, { guild: t.name }),
+            }),
+        ],
     });
 };

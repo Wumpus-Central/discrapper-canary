@@ -21,9 +21,9 @@ function c(e) {
                   guildId: null != c ? c : void 0,
                   channelId: u,
                   source: d,
-                  onAction: p
+                  onAction: p,
               },
-              'sync'
+              "sync",
           )
         : null;
 }

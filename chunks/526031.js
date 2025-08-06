@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -44,11 +44,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,52 +67,52 @@ function b(e) {
     let { markAsDismissed: t, onTryFeature: h } = e,
         { analyticsLocations: g } = (0, c.ZP)(l.Z.CUSTOM_STATUS_TAGS_COACHMARK),
         b = () => {
-            (null == h || h(),
+            null == h || h(),
                 t(f.L.TAKE_ACTION),
                 (0, s.ZDy)(async () => {
-                    let { default: e } = await n.e('31649').then(n.bind(n, 475613)),
+                    let { default: e } = await n.e("31649").then(n.bind(n, 475613)),
                         t = (0, d.Z)();
                     return (n) =>
                         (0, r.jsx)(
                             e,
                             E(m({}, n), {
                                 showLabelSelectorNewTooltip: !0,
-                                location: 'CustomStatusTagsCoachmark',
+                                location: "CustomStatusTagsCoachmark",
                                 sourceAnalyticsLocations: g,
-                                prompt: t
-                            })
+                                prompt: t,
+                            }),
                         );
-                }));
+                });
         };
     return (0, r.jsx)(u.Z, {
         hideDismissButton: !0,
         dismissibleContent: o.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
         tryItText: (0, r.jsx)(s.Text, {
-            variant: 'text-xs/semibold',
-            color: 'always-white',
-            children: _.intl.string(_.t.RzWDqa)
+            variant: "text-xs/semibold",
+            color: "always-white",
+            children: _.intl.string(_.t.RzWDqa),
         }),
         tryItButtonColor: a.Tt.BRAND,
         onTryFeature: b,
         header: (0, r.jsx)(s.X6q, {
-            variant: 'heading-sm/bold',
-            color: 'text-primary',
-            children: _.intl.string(_.t.jrzHRk)
+            variant: "heading-sm/bold",
+            color: "text-primary",
+            children: _.intl.string(_.t.jrzHRk),
         }),
         body: (0, r.jsx)(s.Text, {
-            variant: 'text-xs/normal',
-            color: 'text-secondary',
+            variant: "text-xs/normal",
+            color: "text-secondary",
             className: p.body,
-            children: _.intl.string(_.t.hA60Ul)
+            children: _.intl.string(_.t.hA60Ul),
         }),
-        position: 'top',
-        align: 'center',
+        position: "top",
+        align: "center",
         className: p.container,
         contentClassName: p.content,
         pointerClassName: p.pointer,
-        dismissIcon: (0, r.jsx)(i.D, { size: 'xs' }),
+        dismissIcon: (0, r.jsx)(i.D, { size: "xs" }),
         dismissIconClassName: p.dismissIcon,
-        onDismissIconClick: () => t(f.L.USER_DISMISS)
+        onDismissIconClick: () => t(f.L.USER_DISMISS),
     });
 }
 function y(e) {
@@ -120,16 +120,16 @@ function y(e) {
     return (0, r.jsx)(s.yRy, {
         targetElementRef: i,
         onRequestClose: () => n(f.L.INDIRECT_ACTION),
-        position: 'top',
-        align: 'center',
+        position: "top",
+        align: "center",
         shouldShow: !0,
         animation: s.yRy.Animation.TRANSLATE,
         positionKey: a,
         renderPopout: () =>
             (0, r.jsx)(b, {
                 markAsDismissed: n,
-                onTryFeature: o
+                onTryFeature: o,
             }),
-        children: t
+        children: t,
     });
 }

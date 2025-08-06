@@ -1,8 +1,8 @@
-var r = n(209800)('%Reflect.construct%', !0),
+var r = n(209800)("%Reflect.construct%", !0),
     i = n(265518);
 try {
-    i({}, '', {
-        '[[Get]]': function () {}
+    i({}, "", {
+        "[[Get]]": function () {},
     });
 } catch (e) {
     i = null;
@@ -10,11 +10,11 @@ try {
 if (i && r) {
     var o = {},
         a = {};
-    (i(a, 'length', {
-        '[[Get]]': function () {
+    i(a, "length", {
+        "[[Get]]": function () {
             throw o;
         },
-        '[[Enumerable]]': !0
+        "[[Enumerable]]": !0,
     }),
         (e.exports = function (e) {
             try {
@@ -22,8 +22,8 @@ if (i && r) {
             } catch (e) {
                 return e === o;
             }
-        }));
+        });
 } else
     e.exports = function (e) {
-        return 'function' == typeof e && !!e.prototype;
+        return "function" == typeof e && !!e.prototype;
     };

@@ -1,14 +1,14 @@
-(n.d(t, {
+n.d(t, {
     $P: () => c,
     P1: () => f,
     TY: () => u,
     Tx: () => s,
     VR: () => _,
     W6: () => l,
-    wx: () => o.wx
+    wx: () => o.wx,
 }),
     n(749958),
-    n(997431));
+    n(997431);
 var r = n(924301),
     i = n(131704),
     o = n(245335);
@@ -35,5 +35,5 @@ function f(e) {
     return e.target_type === o.Iq.EMBEDDED_APPLICATION;
 }
 function _(e) {
-    return 'number' == typeof e.type ? e.type : a(e) ? o.wx.GROUP_DM : d(e) ? o.wx.FRIEND : o.wx.GUILD;
+    return "number" == typeof e.type ? e.type : a(e) ? o.wx.GROUP_DM : d(e) ? o.wx.FRIEND : o.wx.GUILD;
 }

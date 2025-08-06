@@ -4,35 +4,35 @@ var r = n(544891),
     o = n(981631);
 let a = {
     fetch() {
-        (i.Z.dispatch({ type: 'USER_AUTHORIZED_APPS_REQUEST' }),
+        i.Z.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST" }),
             r.tn
                 .get({
                     url: o.ANM.OAUTH2_TOKENS,
                     oldFormErrors: !0,
-                    rejectWithError: !0
+                    rejectWithError: !0,
                 })
                 .then(
                     (e) =>
                         i.Z.dispatch({
-                            type: 'USER_AUTHORIZED_APPS_UPDATE',
-                            tokens: e.body
+                            type: "USER_AUTHORIZED_APPS_UPDATE",
+                            tokens: e.body,
                         }),
                     () =>
                         i.Z.dispatch({
-                            type: 'USER_AUTHORIZED_APPS_UPDATE',
-                            tokens: []
-                        })
-                ));
+                            type: "USER_AUTHORIZED_APPS_UPDATE",
+                            tokens: [],
+                        }),
+                );
     },
     delete(e) {
         r.tn
             .del({
                 url: o.ANM.OAUTH2_TOKEN(e),
                 oldFormErrors: !0,
-                rejectWithError: !0
+                rejectWithError: !0,
             })
             .then(() => {
                 this.fetch();
             });
-    }
+    },
 };

@@ -9,6 +9,6 @@ function i(e) {
             messageContent: (0, r.yE)(e, a.udG.GATEWAY_MESSAGE_CONTENT),
             guildPresencesLimited: (0, r.yE)(e, a.udG.GATEWAY_PRESENCE_LIMITED),
             guildMembersLimited: (0, r.yE)(e, a.udG.GATEWAY_GUILD_MEMBERS_LIMITED),
-            messageContentLimited: (0, r.yE)(e, a.udG.GATEWAY_MESSAGE_CONTENT_LIMITED)
+            messageContentLimited: (0, r.yE)(e, a.udG.GATEWAY_MESSAGE_CONTENT_LIMITED),
         };
 }

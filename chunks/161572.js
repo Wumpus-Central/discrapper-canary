@@ -8,7 +8,7 @@ var i = n(837411),
 function l(e) {
     let { user: t, guildId: n, channelId: l, onClose: c, appContext: u, disableAutoFocus: d = !1 } = e,
         f = (0, i.Z)(t.id, n);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: s.footer,
         children: [
             f &&
@@ -17,7 +17,7 @@ function l(e) {
                     guildId: n,
                     channelId: l,
                     onClose: c,
-                    disableAutoFocus: d
+                    disableAutoFocus: d,
                 }),
             !f &&
                 (0, r.jsx)(o.Z, {
@@ -25,8 +25,8 @@ function l(e) {
                     guildId: n,
                     onClose: c,
                     fullWidth: !0,
-                    appContext: u
-                })
-        ]
+                    appContext: u,
+                }),
+        ],
     });
 }

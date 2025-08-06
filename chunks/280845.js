@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     U: () => _,
-    o: () => p
+    o: () => p,
 }),
-    n(388685));
+    n(388685);
 var r = n(275726),
     i = n(442837),
     o = n(71619),
@@ -13,7 +13,10 @@ var r = n(275726),
     u = n(231338);
 function d(e, t, n) {
     let i;
-    return (i = e.isPrivate() ? !e.isSystemDM() : n.can(u.Pl.SEND_MESSAGES, e) && n.can(u.Pl.READ_MESSAGE_HISTORY, e)) && r.V.REPLYABLE.has(t.type);
+    return (
+        (i = e.isPrivate() ? !e.isSystemDM() : n.can(u.Pl.SEND_MESSAGES, e) && n.can(u.Pl.READ_MESSAGE_HISTORY, e)) &&
+        r.V.REPLYABLE.has(t.type)
+    );
 }
 function f(e, t, n, r, i) {
     let o = t.hasFlag(c.iLy.EPHEMERAL),

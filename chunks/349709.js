@@ -20,24 +20,24 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             l.forEach(function (t) {
                 var l;
-                ((l = n[t]),
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = l));
-            }));
+                        : (e[t] = l);
+            });
     }
     return e;
 }
@@ -60,46 +60,60 @@ function j(e, t) {
     );
 }
 function w(e) {
-    let { className: t, guildId: n, error: i, emojiId: w, emojiName: N, isRequiredField: C = !0, shouldUpdateBothEmojiFields: S = !1, setEmojiId: O, setEmojiName: E } = e,
+    let {
+            className: t,
+            guildId: n,
+            error: i,
+            emojiId: w,
+            emojiName: N,
+            isRequiredField: C = !0,
+            shouldUpdateBothEmojiFields: S = !1,
+            setEmojiId: O,
+            setEmojiName: E,
+        } = e,
         P = (0, p.Z)({
             emojiId: w,
-            emojiName: N
+            emojiName: N,
         }),
         Z = (0, s.e7)([g.ZP], () => (null != n ? g.ZP.getDefaultChannel(n) : null)),
         M = a.useRef(null),
         k = (0, f.Z)(M),
         I = () => {
-            (E(void 0), O(void 0));
+            E(void 0), O(void 0);
         },
         T = (e) => (t) => {
             let { emoji: n, willClose: l } = t,
                 a = (null == n ? void 0 : n.id) == null;
-            (I(), a ? E(null == n ? void 0 : n.optionallyDiverseSequence) : (S && E(null == n ? void 0 : n.name), O(null == n ? void 0 : n.id)), l && e());
+            I(),
+                a
+                    ? E(null == n ? void 0 : n.optionallyDiverseSequence)
+                    : (S && E(null == n ? void 0 : n.name), O(null == n ? void 0 : n.id)),
+                l && e();
         },
         D = (e) => {
-            (e.stopPropagation(), I());
+            e.stopPropagation(), I();
         },
         R = a.useMemo(() => {
-            let e = null != w && '' !== w,
-                t = null != N && '' !== N,
-                n = null != P && '' !== P,
+            let e = null != w && "" !== w,
+                t = null != N && "" !== N,
+                n = null != P && "" !== P,
                 l = t && !Number.isNaN(parseInt(N)) && !n && !e;
             return {
                 hasEmojiId: e,
                 hasEmojiName: t,
                 hasEmojiDisplayName: n,
-                isDeletedCustomEmoji: l
+                isDeletedCustomEmoji: l,
             };
         }, [w, N, P]);
     return (0, l.jsx)(u.xJW, {
         required: C,
-        title: b.intl.string(b.t['3BQmiI']),
+        title: b.intl.string(b.t["3BQmiI"]),
         className: r()(t, v.section),
         error: i,
         children: (0, l.jsx)(u.yRy, {
             targetElementRef: M,
             animation: u.yRy.Animation.NONE,
-            position: 'top',
+            position: "top",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, l.jsx)(h.Z, {
@@ -108,13 +122,13 @@ function w(e) {
                     onNavigateAway: t,
                     onSelectEmoji: T(t),
                     guildId: n,
-                    channel: Z
+                    channel: Z,
                 });
             },
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, l.jsxs)(
-                    'div',
+                    "div",
                     j(x({}, e), {
                         className: v.emojiInput,
                         ref: M,
@@ -128,15 +142,15 @@ function w(e) {
                                         ? () =>
                                               (0, l.jsx)(c.Z, {
                                                   emojiName: N,
-                                                  emojiId: w
+                                                  emojiId: w,
                                               })
-                                        : null
+                                        : null,
                             }),
                             (0, l.jsx)(o.Is, {
                                 inputClassName: v.emojiText,
                                 placeholder: b.intl.string(b.t.QTK0TE),
-                                value: !R.isDeletedCustomEmoji && R.hasEmojiDisplayName ? ':'.concat(P, ':') : '',
-                                readOnly: !0
+                                value: !R.isDeletedCustomEmoji && R.hasEmojiDisplayName ? ":".concat(P, ":") : "",
+                                readOnly: !0,
                             }),
                             !R.isDeletedCustomEmoji &&
                                 R.hasEmojiDisplayName &&
@@ -145,13 +159,13 @@ function w(e) {
                                     d.Z,
                                     j(x({}, e), {
                                         onClick: D,
-                                        className: v.removeButton
-                                    })
-                                )
-                        ]
-                    })
+                                        className: v.removeButton,
+                                    }),
+                                ),
+                        ],
+                    }),
                 );
-            }
-        })
+            },
+        }),
     });
 }

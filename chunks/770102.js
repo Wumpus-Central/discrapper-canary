@@ -6,8 +6,8 @@ var i = n(120356),
     a = n(814614);
 function s(e) {
     let { className: t, style: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: o()(a.divider, t),
-        style: n
+        style: n,
     });
 }

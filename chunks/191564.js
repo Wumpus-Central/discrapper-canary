@@ -1,4 +1,4 @@
-(r.d(t, { default: () => I }), r(388685));
+r.d(t, { default: () => I }), r(388685);
 var n = r(255367),
     i = r(73800),
     l = r(442837),
@@ -23,7 +23,18 @@ var n = r(255367),
     E = r(388032),
     _ = r(287975);
 function S(e) {
-    let { user: t, product: r, purchase: i, onApply: l, onClose: s, onOpenShop: c, disableApplyButton: a, canUseCollectibles: d, selectedProfileEffectId: f, selectedProfileEffectItem: h } = e,
+    let {
+            user: t,
+            product: r,
+            purchase: i,
+            onApply: l,
+            onClose: s,
+            onOpenShop: c,
+            disableApplyButton: a,
+            canUseCollectibles: d,
+            selectedProfileEffectId: f,
+            selectedProfileEffectItem: h,
+        } = e,
         b = (0, p.M)(),
         j = b && (0, u.G1)(r);
     return (0, n.jsxs)(o.mzw, {
@@ -31,37 +42,52 @@ function S(e) {
         children: [
             (null != i && (!(0, u.qS)(i) || d)) || null === f
                 ? (0, n.jsx)(o.zxk, {
-                      variant: 'primary',
+                      variant: "primary",
                       text: E.intl.string(E.t.Jh8fJy),
                       onClick: l,
-                      disabled: a
+                      disabled: a,
                   })
                 : d || !(0, u.G1)(r)
                   ? (0, n.jsx)(o.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: E.intl.string(E.t.fYfGgI),
-                        onClick: () => c(null == h ? void 0 : h.skuId)
+                        onClick: () => c(null == h ? void 0 : h.skuId),
                     })
                   : (0, n.jsx)(g.Z, {
                         subscriptionTier: P.Si.TIER_2,
                         showGradient: b,
-                        textOptions: { textOverride: y.ZP.isPremium(t) ? E.intl.string(E.t.KXLX7u) : b ? E.intl.string(E.t.pj0XBA) : E.intl.string(E.t.mr4K7O) }
+                        textOptions: {
+                            textOverride: y.ZP.isPremium(t)
+                                ? E.intl.string(E.t.KXLX7u)
+                                : b
+                                  ? E.intl.string(E.t.pj0XBA)
+                                  : E.intl.string(E.t.mr4K7O),
+                        },
                     }),
             j
                 ? (0, n.jsx)(m.Z, {
                       product: r,
-                      onSecondaryClick: s
+                      onSecondaryClick: s,
                   })
                 : (0, n.jsx)(o.zxk, {
-                      variant: 'secondary',
-                      text: E.intl.string(E.t['ETE/oK']),
-                      onClick: s
-                  })
-        ]
+                      variant: "secondary",
+                      text: E.intl.string(E.t["ETE/oK"]),
+                      onClick: s,
+                  }),
+        ],
     });
 }
 function C(e) {
-    let { user: t, guild: r, categories: l, purchases: c, onClose: f, initialSelectedProfileEffectId: p, currentSavedEffectId: m, analyticsLocations: g } = e,
+    let {
+            user: t,
+            guild: r,
+            categories: l,
+            purchases: c,
+            onClose: f,
+            initialSelectedProfileEffectId: p,
+            currentSavedEffectId: m,
+            analyticsLocations: g,
+        } = e,
         { pendingProfileEffectId: b } = (0, h.bd)(r),
         [j, v] = i.useMemo(() => {
             let e = (0, u.bl)(l, c);
@@ -82,18 +108,18 @@ function C(e) {
             (e) => {
                 C(e);
             },
-            [C]
+            [C],
         ),
         G = i.useCallback(
             (e) => {
-                (f(),
+                f(),
                     (0, a.mK)({
                         analyticsLocations: g,
                         analyticsSource: s.Z.EDIT_PROFILE_EFFECT_MODAL,
-                        initialProductSkuId: e
-                    }));
+                        initialProductSkuId: e,
+                    });
             },
-            [g, f]
+            [g, f],
         );
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -102,14 +128,14 @@ function C(e) {
                 className: _.modalHeader,
                 children: [
                     (0, n.jsx)(o.X6q, {
-                        variant: 'heading-lg/semibold',
-                        children: E.intl.string(E.t['/6nv6O'])
+                        variant: "heading-lg/semibold",
+                        children: E.intl.string(E.t["/6nv6O"]),
                     }),
                     (0, n.jsx)(o.olH, {
                         className: _.modalCloseButton,
-                        onClick: f
-                    })
-                ]
+                        onClick: f,
+                    }),
+                ],
             }),
             (0, n.jsxs)(o.hzk, {
                 className: _.modalContent,
@@ -120,7 +146,7 @@ function C(e) {
                         pendingProfileEffect: P,
                         selectedProfileEffectRef: D,
                         onSelect: T,
-                        onOpenShop: G
+                        onOpenShop: G,
                     }),
                     (0, n.jsx)(x.Z, {
                         user: t,
@@ -128,14 +154,14 @@ function C(e) {
                         pendingProfileEffectRecord: I,
                         product: Z,
                         purchase: N,
-                        guild: r
-                    })
-                ]
+                        guild: r,
+                    }),
+                ],
             }),
             (0, n.jsx)(S, {
                 user: t,
                 onApply: () => {
-                    ((0, h.s6)(P, m, null == r ? void 0 : r.id), f());
+                    (0, h.s6)(P, m, null == r ? void 0 : r.id), f();
                 },
                 onClose: f,
                 onOpenShop: G,
@@ -145,14 +171,14 @@ function C(e) {
                 selectedProfileEffectId: P,
                 selectedProfileEffectItem: I,
                 disableApplyButton: A,
-                analyticsLocations: g
-            })
-        ]
+                analyticsLocations: g,
+            }),
+        ],
     });
 }
 function I(e) {
     let { transitionState: t, analyticsLocations: r, initialSelectedEffectId: a, guild: u, onClose: d } = e,
-        { isFetching: p, categories: m, purchases: g } = (0, f.Z)('ProfileEffectModal'),
+        { isFetching: p, categories: m, purchases: g } = (0, f.Z)("ProfileEffectModal"),
         y = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
         { analyticsLocations: x } = (0, c.ZP)(r, s.Z.EDIT_PROFILE_EFFECT_MODAL),
         O = (0, h.Kg)(y, u);
@@ -160,7 +186,7 @@ function I(e) {
         i.useEffect(() => {
             j.default.track(v.rMx.OPEN_MODAL, {
                 type: v.jXE.PROFILE_EFFECT_CUSTOMIZATION,
-                location_stack: x
+                location_stack: x,
             });
         }, [x]),
         (0, n.jsx)(c.Gt, {
@@ -169,12 +195,12 @@ function I(e) {
                 transitionState: t,
                 className: _.modal,
                 size: p ? o.CgR.DYNAMIC : o.CgR.MEDIUM,
-                parentComponent: 'ProfileEffectModal',
-                'data-migration-pending': !0,
+                parentComponent: "ProfileEffectModal",
+                "data-migration-pending": !0,
                 children: p
                     ? (0, n.jsx)(o.$jN, {
                           className: _.spinner,
-                          type: o.$jN.Type.SPINNING_CIRCLE
+                          type: o.$jN.Type.SPINNING_CIRCLE,
                       })
                     : (0, n.jsx)(C, {
                           user: y,
@@ -184,9 +210,9 @@ function I(e) {
                           initialSelectedProfileEffectId: a,
                           currentSavedEffectId: O,
                           onClose: d,
-                          analyticsLocations: x
-                      })
-            })
+                          analyticsLocations: x,
+                      }),
+            }),
         })
     );
 }

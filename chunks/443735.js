@@ -6,9 +6,9 @@ var r = n(475227),
 e.exports = r(
     (function () {
         return arguments;
-    })()
+    })(),
 )
     ? r
     : function (e) {
-          return i(e) && a.call(e, 'callee') && !s.call(e, 'callee');
+          return i(e) && a.call(e, "callee") && !s.call(e, "callee");
       };

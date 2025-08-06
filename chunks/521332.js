@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(953529), n(388685));
+n.d(t, { Z: () => h }), n(953529), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -23,11 +23,11 @@ function b(e) {
         (0, r.jsx)(d.ZP, {
             title: t,
             description: n,
-            buttonText: s ? x.intl.string(x.t['h+WsPT']) : x.intl.string(x.t.A8t4NT),
+            buttonText: s ? x.intl.string(x.t["h+WsPT"]) : x.intl.string(x.t.A8t4NT),
             buttonDisabled: s,
             onButtonPress: () => {
-                (i(), c(!0), a(p.M4.SETTINGS_UPSELLS_APPLY_CLICKED));
-            }
+                i(), c(!0), a(p.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
+            },
         })
     );
 }
@@ -38,15 +38,15 @@ function h(e) {
         j = (0, p.i_)(d, h, o);
     return 0 === v.length
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: _.container,
               children: [
                   (0, r.jsx)(a.X6q, {
-                      variant: 'text-sm/semibold',
+                      variant: "text-sm/semibold",
                       className: _.header,
-                      children: x.intl.string(x.t['1yxTIC'])
+                      children: x.intl.string(x.t["1yxTIC"]),
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: _.upsellsContainer,
                       children: v.map((e, n) => {
                           let { getTitle: l, getDescription: i, onApply: a } = e;
@@ -56,25 +56,25 @@ function h(e) {
                                   title: l(),
                                   description: i(),
                                   onButtonClick: a,
-                                  trackSettingsUpsellsAction: j(t[n])
+                                  trackSettingsUpsellsAction: j(t[n]),
                               },
-                              n
+                              n,
                           );
-                      })
+                      }),
                   }),
                   (0, r.jsx)(a.Avr, {
                       text: x.intl.string(x.t.olebGx),
                       onClick: () => {
-                          (s.Z.open(g.oAB.CONTENT_AND_SOCIAL),
+                          s.Z.open(g.oAB.CONTENT_AND_SOCIAL),
                               l(),
                               c.ZP.trackWithMetadata(g.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: o,
                                   report_type: d.name,
                                   report_subtype: h,
-                                  action: p.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED
-                              }));
-                      }
-                  })
-              ]
+                                  action: p.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
+                              });
+                      },
+                  }),
+              ],
           });
 }

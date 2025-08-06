@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685), n(35282));
+n.d(t, { Z: () => S }), n(388685), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(481060),
@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -83,7 +83,7 @@ function S(e, t) {
         x = 0 === L.length,
         M = n > L.length && !x;
     if (!i.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
-    let k = e.split(' '),
+    let k = e.split(" "),
         j = k.length;
     try {
         (0, s.km)(k, m.RH);
@@ -102,8 +102,8 @@ function S(e, t) {
                         triggerMetadata: {
                             keywordFilter: [e],
                             regexPatterns: [],
-                            allowList: []
-                        }
+                            allowList: [],
+                        },
                     });
                 }, T));
         },
@@ -112,14 +112,21 @@ function S(e, t) {
             if (((0, a.Zy)(), !(await (0, _.XN)(t.name, e)))) return;
             let i = v(y({}, t), {
                 triggerMetadata: v(y({}, t.triggerMetadata), {
-                    keywordFilter: [...(null != (r = null == (n = t.triggerMetadata) ? void 0 : n.keywordFilter) ? r : []), e]
-                })
+                    keywordFilter: [
+                        ...(null != (r = null == (n = t.triggerMetadata) ? void 0 : n.keywordFilter) ? r : []),
+                        e,
+                    ],
+                }),
             });
-            (await O(i, L), D(i), null != S ? (0, o.showToast)((0, o.createToast)(g.intl.string(g.t.wH6L0t), o.ToastType.FAILURE)) : (0, o.showToast)((0, o.createToast)(g.intl.string(g.t['0rdYm5']), o.ToastType.SUCCESS)));
+            await O(i, L),
+                D(i),
+                null != S
+                    ? (0, o.showToast)((0, o.createToast)(g.intl.string(g.t.wH6L0t), o.ToastType.FAILURE))
+                    : (0, o.showToast)((0, o.createToast)(g.intl.string(g.t["0rdYm5"]), o.ToastType.SUCCESS));
         },
         Z = (0, r.jsx)(o.sNh, {
-            id: 'automod-rules-loading',
-            label: g.intl.string(g.t.ZTNur6)
+            id: "automod-rules-loading",
+            label: g.intl.string(g.t.ZTNur6),
         });
     return (
         R ||
@@ -127,10 +134,10 @@ function S(e, t) {
                 children: [
                     x &&
                         (0, r.jsx)(o.sNh, {
-                            id: 'add-first-rule',
+                            id: "add-first-rule",
                             label: g.intl.string(g.t.f72Zqa),
                             action: G,
-                            disabled: b
+                            disabled: b,
                         }),
                     L.map((e) => {
                         let t = (0, c.V9)(I).reduce((t, n) => {
@@ -140,25 +147,25 @@ function S(e, t) {
                             });
                             if (null == r) return t;
                             let i = (0, f.c)(n, r);
-                            return t + ', '.concat(null == i ? void 0 : i.headerText);
-                        }, '');
+                            return t + ", ".concat(null == i ? void 0 : i.headerText);
+                        }, "");
                         return (0, r.jsx)(
                             o.k5B,
                             {
                                 id: e.id,
                                 label: e.name,
                                 subtext: (0, r.jsx)(o.Text, {
-                                    color: 'text-muted',
+                                    color: "text-muted",
                                     className: E.actionTextHeader,
-                                    variant: 'text-xs/normal',
-                                    children: t.slice(2)
+                                    variant: "text-xs/normal",
+                                    children: t.slice(2),
                                 }),
-                                group: 'automod-rule-selection',
+                                group: "automod-rule-selection",
                                 checked: !1,
                                 disabled: b,
-                                action: () => B(e)
+                                action: () => B(e),
                             },
-                            e.id
+                            e.id,
                         );
                     }),
                     M &&
@@ -166,20 +173,20 @@ function S(e, t) {
                             children: [
                                 (0, r.jsx)(o.Clw, {}),
                                 (0, r.jsx)(o.sNh, {
-                                    id: 'add-another-rule',
-                                    label: g.intl.string(g.t['0K5jDA']),
+                                    id: "add-another-rule",
+                                    label: g.intl.string(g.t["0K5jDA"]),
                                     action: G,
-                                    disabled: b
-                                })
-                            ]
-                        })
-                ]
+                                    disabled: b,
+                                }),
+                            ],
+                        }),
+                ],
             })),
         (0, r.jsx)(o.sNh, {
-            id: 'guild-automod-add-selection',
+            id: "guild-automod-add-selection",
             label: g.intl.formatToPlainString(g.t.Kkjv1t, { keywordCount: j }),
             onFocus: U,
-            children: Z
+            children: Z,
         })
     );
 }

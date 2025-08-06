@@ -8,15 +8,15 @@ function s(e) {
     let { className: t } = e;
     return (0, r.jsx)(l.Z, {
         className: t,
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsx)("div", {
             className: a.background,
             children: (0, r.jsx)(i.ewx, {
-                size: 'custom',
-                color: 'currentColor',
+                size: "custom",
+                color: "currentColor",
                 className: a.foreground,
                 width: 32,
-                height: 32
-            })
-        })
+                height: 32,
+            }),
+        }),
     });
 }

@@ -24,18 +24,23 @@ function f(e) {
         { error: j, loading: v, createEnableRequest: _, submittedRequest: O } = (0, d.Z)(null == e ? void 0 : e.id),
         { loading: y, error: C, refresh: N, eligibility: I } = (0, u.Z)(null == e ? void 0 : e.id),
         { isApplicationRejected: E, requestCooldownDuration: S } = (0, m.Z)(I),
-        T = (null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
+        T =
+            (null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 ||
+            (null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: P } = (0, l.eC)(null == e ? void 0 : e.id),
         w = O || (null == I ? void 0 : I.isApplicationPending) === !0,
         R = (null == I ? void 0 : I.canApply) === !0,
         Z = h.intl.format(h.t.aJUdOj, { faqUrl: o.Z.getArticleURL(p.BhN.CREATOR_FAQ) });
     E && P
-        ? (t = !0 === f ? h.intl.format(h.t['0o1Q+v'], { communityGuidelineUrl: p.EYA.GUIDELINES }) : h.intl.format(h.t.b6h59v, { communityGuidelineUrl: p.EYA.GUIDELINES }))
+        ? (t =
+              !0 === f
+                  ? h.intl.format(h.t["0o1Q+v"], { communityGuidelineUrl: p.EYA.GUIDELINES })
+                  : h.intl.format(h.t.b6h59v, { communityGuidelineUrl: p.EYA.GUIDELINES }))
         : E &&
           null != S &&
           (t = h.intl.format(h.t.TvX209, {
               requestCooldownDuration: S,
-              creatorRevenuePolicyUrl: o.Z.getArticleURL(p.BhN.CREATOR_POLICY)
+              creatorRevenuePolicyUrl: o.Z.getArticleURL(p.BhN.CREATOR_POLICY),
           }));
     let D = n && b && !1 === x,
         A = n && !1 === f,
@@ -63,7 +68,7 @@ function f(e) {
             showAcceptTermsFlow: A,
             wasRejectedInV1: A && (T || E),
             requirementsFinePrintText: Z,
-            acceptTermsCheckboxText: k
+            acceptTermsCheckboxText: k,
         }
     );
 }

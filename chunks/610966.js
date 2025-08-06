@@ -16,12 +16,12 @@ function u(e) {
         f = (0, l.Cf)(g, h, !1),
         b = (0, r._i)(f[0]);
     return (0, i.jsx)(c.Z, {
-        title: d.intl.string(d.t['/X3fkZ']),
+        title: d.intl.string(d.t["/X3fkZ"]),
         children: (0, i.jsx)(o.Z, {
             onChange: (e) => p(e),
             color: null != (t = null != m ? m : u) ? t : b,
             suggestedColors: f,
-            showEyeDropper: !0
-        })
+            showEyeDropper: !0,
+        }),
     });
 }

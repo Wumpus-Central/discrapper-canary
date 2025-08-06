@@ -24,7 +24,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -76,7 +76,8 @@ function S(e, t) {
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -86,7 +87,7 @@ function A(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let N = i.forwardRef(function (e, t) {
@@ -95,29 +96,29 @@ let N = i.forwardRef(function (e, t) {
         { canRemove: N, className: C, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
         x = (0, s.JA)(R.id),
         { tabIndex: M } = x,
-        k = S(x, ['tabIndex']),
+        k = S(x, ["tabIndex"]),
         j = (0, g.p9)({
             roleId: R.id,
             size: 16,
-            guildId: w
+            guildId: w,
         }),
         U = (0, c.e7)([_.Z], () => _.Z.roleStyle),
         G = (null == (o = R.tags) ? void 0 : o.guild_connections) === null,
         B = i.useCallback(
             (e) => {
                 (0, f.jW)(e, async () => {
-                    let { default: e } = await n.e('5396').then(n.bind(n, 731646));
+                    let { default: e } = await n.e("5396").then(n.bind(n, 731646));
                     return (t) =>
                         (0, r.jsx)(
                             e,
                             T(v({}, t), {
                                 id: R.id,
-                                label: b.intl.string(b.t.sMsaLi)
-                            })
+                                label: b.intl.string(b.t.sMsaLi),
+                            }),
                         );
                 });
             },
-            [R.id]
+            [R.id],
         ),
         Z = (0, d.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
         F = null != (O = R.colorString) ? O : Z,
@@ -131,20 +132,20 @@ let N = i.forwardRef(function (e, t) {
               className: y.roleFlowerStar,
               iconClassName: N ? y.roleVerifiedIcon : void 0,
               color: F,
-              size: 14
+              size: 14,
           })
-        : 'dot' === U
+        : "dot" === U
           ? (0, r.jsx)(d.FhE, {
                 className: y.roleDot,
                 color: F,
                 background: !1,
                 colors: W,
-                tooltip: !1
+                tooltip: !1,
             })
           : (0, r.jsx)(d.xko, {
                 color: F,
                 colors: W,
-                className: y.roleCircle
+                className: y.roleCircle,
             });
     let K = i.useMemo(() => {
             var t;
@@ -159,30 +160,30 @@ let N = i.forwardRef(function (e, t) {
                           onClick: P,
                           tabIndex: M,
                           focusProps: { focusClassName: y.roleRemoveIconFocused },
-                          'aria-hidden': !1,
-                          'aria-label': b.intl.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
+                          "aria-hidden": !1,
+                          "aria-label": b.intl.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
                           children: [
                               A,
                               (0, r.jsx)(d.Dio, {
-                                  size: 'md',
+                                  size: "md",
                                   color: H,
                                   className: y.roleRemoveIcon,
-                                  'aria-hidden': !0
-                              })
-                          ]
-                      })
+                                  "aria-hidden": !0,
+                              }),
+                          ],
+                      }),
                   })
                 : (0, r.jsx)(d.P3F, {
                       className: y.roleRemoveButton,
                       tabIndex: -1,
                       focusProps: { focusClassName: y.roleRemoveIconFocused },
-                      'aria-hidden': !0,
-                      'aria-label': b.intl.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
-                      children: A
+                      "aria-hidden": !0,
+                      "aria-label": b.intl.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
+                      children: A,
                   });
     return (0, r.jsx)(d.tEY, {
         children: (0, r.jsxs)(
-            'div',
+            "div",
             T(
                 v(
                     {
@@ -191,26 +192,26 @@ let N = i.forwardRef(function (e, t) {
                         style: K,
                         onContextMenu: B,
                         onMouseDown: L,
-                        'aria-label': R.name,
-                        tabIndex: M
+                        "aria-label": R.name,
+                        tabIndex: M,
                     },
-                    k
+                    k,
                 ),
                 {
                     children: [
                         z(),
                         null != j ? (0, r.jsx)(m.Z, T(v({ className: y.roleIcon }, j), { enableTooltip: !1 })) : null,
-                        (0, r.jsx)('div', {
-                            'aria-hidden': !0,
+                        (0, r.jsx)("div", {
+                            "aria-hidden": !0,
                             className: y.roleName,
                             children: (0, r.jsx)(d.Text, {
-                                variant: 'text-xs/medium',
-                                children: (0, r.jsx)(h.Z, { children: R.name })
-                            })
-                        })
-                    ]
-                }
-            )
-        )
+                                variant: "text-xs/medium",
+                                children: (0, r.jsx)(h.Z, { children: R.name }),
+                            }),
+                        }),
+                    ],
+                },
+            ),
+        ),
     });
 });

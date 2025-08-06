@@ -9,7 +9,7 @@ var r = n(220159),
     d = !1;
 r(
     {
-        target: 'Promise',
+        target: "Promise",
         stat: !0,
         forced:
             !u ||
@@ -19,7 +19,7 @@ r(
                     d = 8 === e;
                 }, 8);
             }).error ||
-            !d
+            !d,
     },
     {
         try: function (e) {
@@ -28,7 +28,7 @@ r(
                 r = l(function () {
                     return a(c(e), void 0, t);
                 });
-            return ((r.error ? n.reject : n.resolve)(r.value), n.promise);
-        }
-    }
+            return (r.error ? n.reject : n.resolve)(r.value), n.promise;
+        },
+    },
 );

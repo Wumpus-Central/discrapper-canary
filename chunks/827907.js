@@ -2,7 +2,7 @@ n.d(t, {
     EH: () => m,
     Mf: () => d,
     lL: () => g,
-    t4: () => u
+    t4: () => u,
 });
 var r = n(442837),
     i = n(592125),
@@ -12,13 +12,22 @@ var r = n(442837),
     o = n(981631),
     c = n(388032);
 function d(e, t) {
-    return (0, r.e7)([s.Z], () => s.Z.editedDefaultChannelIds.has(e) || (null != t && s.Z.editedDefaultChannelIds.has(t)));
+    return (0, r.e7)(
+        [s.Z],
+        () => s.Z.editedDefaultChannelIds.has(e) || (null != t && s.Z.editedDefaultChannelIds.has(t)),
+    );
 }
 function u(e, t) {
     return (0, r.e7)([s.Z], () => e === t || (null != t && s.Z.editedDefaultChannelIds.has(t)));
 }
 function m(e, t) {
-    return (0, r.e7)([s.Z, i.Z], () => (null != t && s.Z.editedDefaultChannelIds.has(t) ? c.intl.string(c.t.Lz94y8) : a.Uu(o.Plq.VIEW_CHANNEL, i.Z.getChannel(e)) ? void 0 : c.intl.string(c.t['031cXl'])));
+    return (0, r.e7)([s.Z, i.Z], () =>
+        null != t && s.Z.editedDefaultChannelIds.has(t)
+            ? c.intl.string(c.t.Lz94y8)
+            : a.Uu(o.Plq.VIEW_CHANNEL, i.Z.getChannel(e))
+              ? void 0
+              : c.intl.string(c.t["031cXl"]),
+    );
 }
 function g(e, t) {
     let n = (0, r.e7)([l.Z], () => {
@@ -29,5 +38,5 @@ function g(e, t) {
             var e;
             return null == (e = i.Z.getChannel(t)) ? void 0 : e.isGuildVocal();
         });
-    return n ? c.intl.string(c.t['2XWEKy']) : a ? c.intl.string(c.t.t6iJLS) : void 0;
+    return n ? c.intl.string(c.t["2XWEKy"]) : a ? c.intl.string(c.t.t6iJLS) : void 0;
 }

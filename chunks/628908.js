@@ -1,4 +1,4 @@
-(n.d(t, { default: () => A }), n(388685));
+n.d(t, { default: () => A }), n(388685);
 var r = n(255367),
     o = n(73800),
     i = n(512722),
@@ -26,7 +26,7 @@ function C(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,15 +36,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 C(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -62,15 +62,17 @@ let x = (e) => {
                         r,
                         o = {},
                         i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
-        })(e, ['label', 'text', 'children']);
+        })(e, ["label", "text", "children"]);
     return (0, r.jsxs)(
         h.Z,
         ((t = O({ direction: h.Z.Direction.VERTICAL }, s)),
@@ -78,21 +80,21 @@ let x = (e) => {
             {
                 children: [
                     (0, r.jsx)(c.vwX, {
-                        tag: 'h2',
-                        children: o
+                        tag: "h2",
+                        children: o,
                     }),
                     null != i
                         ? (0, r.jsx)(c.Text, {
-                              variant: 'text-md/normal',
+                              variant: "text-md/normal",
                               className: g.sectionBody,
-                              children: i
+                              children: i,
                           })
                         : null,
                     (0, r.jsx)(h.Z.Child, {
                         wrap: !0,
-                        children: a
-                    })
-                ]
+                        children: a,
+                    }),
+                ],
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -106,7 +108,7 @@ let x = (e) => {
               })(Object(n)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
-        t)
+        t),
     );
 };
 class w extends o.PureComponent {
@@ -121,12 +123,12 @@ class w extends o.PureComponent {
                   text: M.intl.string(M.t.fspJ4O),
                   children: [
                       (0, r.jsxs)(c.Text, {
-                          variant: 'text-md/normal',
+                          variant: "text-md/normal",
                           className: g.sectionBody,
                           children: [
-                              (0, r.jsx)('strong', {
+                              (0, r.jsx)("strong", {
                                   className: g.phoneNumber,
-                                  children: M.intl.format(M.t.PXVoEB, { phoneNumber: e.phone })
+                                  children: M.intl.format(M.t.PXVoEB, { phoneNumber: e.phone }),
                               }),
                               (0, r.jsx)(l.zx, {
                                   look: l.zx.Looks.LINK,
@@ -134,29 +136,33 @@ class w extends o.PureComponent {
                                   size: l.zx.Sizes.MIN,
                                   className: g.linkButton,
                                   onClick: this.handleChangePhoneNumber,
-                                  children: M.intl.string(M.t.Ulqq6O)
-                              })
-                          ]
+                                  children: M.intl.string(M.t.Ulqq6O),
+                              }),
+                          ],
                       }),
                       (0, r.jsx)(c.zxk, {
-                          variant: 'active',
-                          size: 'sm',
-                          text: o ? M.intl.string(M.t.Sq6Q1t) : n ? M.intl.string(M.t.kSbHTE) : M.intl.string(M.t.DZQe29),
+                          variant: "active",
+                          size: "sm",
+                          text: o
+                              ? M.intl.string(M.t.Sq6Q1t)
+                              : n
+                                ? M.intl.string(M.t.kSbHTE)
+                                : M.intl.string(M.t.DZQe29),
                           onClick: this.handleEnableSMS,
-                          disabled: n || o
-                      })
-                  ]
+                          disabled: n || o,
+                      }),
+                  ],
               })
             : (0, r.jsx)(x, {
                   label: M.intl.string(M.t.DZQe29),
                   text: M.intl.string(M.t.fspJ4O),
                   children: (0, r.jsx)(c.zxk, {
-                      variant: 'active',
-                      size: 'sm',
-                      text: o ? M.intl.string(M.t.Sq6Q1t) : M.intl.string(M.t['O5qS/v']),
+                      variant: "active",
+                      size: "sm",
+                      text: o ? M.intl.string(M.t.Sq6Q1t) : M.intl.string(M.t["O5qS/v"]),
                       onClick: this.handleEnableSMS,
-                      disabled: o
-                  })
+                      disabled: o,
+                  }),
               });
     }
     renderBackupCodesSection(e) {
@@ -165,15 +171,15 @@ class w extends o.PureComponent {
             text: e,
             children: (0, r.jsx)(p.Z, {
                 fileContents: this.getDownloadFileContents,
-                contentType: 'text/plain',
-                fileName: 'discord_backup_codes.txt',
-                onDownload: () => d.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }),
+                contentType: "text/plain",
+                fileName: "discord_backup_codes.txt",
+                onDownload: () => d.Z.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }),
                 children: (0, r.jsx)(c.zxk, {
-                    variant: 'active',
-                    size: 'sm',
-                    text: M.intl.string(M.t.qZZUy8)
-                })
-            })
+                    variant: "active",
+                    size: "sm",
+                    text: M.intl.string(M.t.qZZUy8),
+                }),
+            }),
         });
     }
     renderHeader(e, t) {
@@ -185,22 +191,22 @@ class w extends o.PureComponent {
                     shrink: 1,
                     children: [
                         (0, r.jsx)(c.X6q, {
-                            variant: 'heading-lg/semibold',
+                            variant: "heading-lg/semibold",
                             className: g.header,
-                            children: f.Z.parse(e)
+                            children: f.Z.parse(e),
                         }),
                         (0, r.jsx)(c.Text, {
-                            variant: 'text-xs/normal',
+                            variant: "text-xs/normal",
                             className: g.subHeader,
-                            children: t
-                        })
-                    ]
+                            children: t,
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(h.Z.Child, {
                     grow: 0,
-                    children: (0, r.jsx)(c.olH, { onClick: this.handleCloseModal })
-                })
-            ]
+                    children: (0, r.jsx)(c.olH, { onClick: this.handleCloseModal }),
+                }),
+            ],
         });
     }
     renderConfirmModal(e) {
@@ -209,16 +215,16 @@ class w extends o.PureComponent {
             dismissable: !0,
             header: M.intl.string(M.t.mwVXnJ),
             confirmText: M.intl.string(M.t.MwSEo6),
-            cancelText: M.intl.string(M.t['ETE/oK']),
+            cancelText: M.intl.string(M.t["ETE/oK"]),
             onCancel: () => this.setState({ showConfirmModal: !1 }),
             onConfirm: () => {
-                (d.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }), t());
+                d.Z.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }), t();
             },
             children: (0, r.jsx)(c.Text, {
-                variant: 'text-md/normal',
-                color: 'text-default',
-                children: e
-            })
+                variant: "text-md/normal",
+                color: "text-default",
+                children: e,
+            }),
         });
     }
     render() {
@@ -231,15 +237,19 @@ class w extends o.PureComponent {
         return (0, r.jsxs)(c.Y0X, {
             transitionState: e,
             className: g.modal,
-            parentComponent: 'MFAEnableSuccess',
+            parentComponent: "MFAEnableSuccess",
             children: [
-                this.renderHeader(M.intl.string(M.t['681MPT']), M.intl.format(M.t.pQioMz, {})),
+                this.renderHeader(M.intl.string(M.t["681MPT"]), M.intl.format(M.t.pQioMz, {})),
                 (0, r.jsxs)(c.hzk, {
                     className: g.modalInner,
-                    children: [this.renderSMSSection(), (0, r.jsx)(c.$i$, { className: g.divider }), this.renderBackupCodesSection(M.intl.format(M.t.M0Dogo, {}))]
+                    children: [
+                        this.renderSMSSection(),
+                        (0, r.jsx)(c.$i$, { className: g.divider }),
+                        this.renderBackupCodesSection(M.intl.format(M.t.M0Dogo, {})),
+                    ],
                 }),
-                t && this.renderConfirmModal(M.intl.string(M.t.WJFPHB))
-            ]
+                t && this.renderConfirmModal(M.intl.string(M.t.WJFPHB)),
+            ],
         });
     }
     renderWebAuthn() {
@@ -248,15 +258,15 @@ class w extends o.PureComponent {
         return (0, r.jsxs)(c.Y0X, {
             transitionState: e,
             className: g.modal,
-            parentComponent: 'MFAEnableSuccess',
+            parentComponent: "MFAEnableSuccess",
             children: [
                 this.renderHeader(M.intl.string(M.t.x6ielJ), M.intl.format(M.t.Xb5JGh, {})),
                 (0, r.jsx)(c.hzk, {
                     className: g.modalInner,
-                    children: this.renderBackupCodesSection(M.intl.format(M.t.p59QLS, {}))
+                    children: this.renderBackupCodesSection(M.intl.format(M.t.p59QLS, {})),
                 }),
-                t && this.renderConfirmModal(M.intl.string(M.t.aoNIXF))
-            ]
+                t && this.renderConfirmModal(M.intl.string(M.t.aoNIXF)),
+            ],
         });
     }
     openPhoneVerificationModal() {
@@ -264,42 +274,42 @@ class w extends o.PureComponent {
         (0, c.h7j)((t) => (0, r.jsx)(S.default, O({ reason: _.L.MFA_PHONE_UPDATE }, t, e)), { modalKey: y.M });
     }
     constructor(...e) {
-        (super(...e),
-            C(this, 'state', { showConfirmModal: !1 }),
-            C(this, 'handleCloseModal', () => {
+        super(...e),
+            C(this, "state", { showConfirmModal: !1 }),
+            C(this, "handleCloseModal", () => {
                 let { onClose: e, hasSeenBackupPrompt: t } = this.props;
                 t ? null == e || e() : this.setState({ showConfirmModal: !0 });
             }),
-            C(this, 'getDownloadFileContents', () => {
+            C(this, "getDownloadFileContents", () => {
                 let e = this.props.backupCodes
                         .map((e) => {
                             let { consumed: t, code: n } = e;
-                            return '* '
-                                .concat(n.substr(0, 4), '-')
-                                .concat(n.substr(4), ' ')
-                                .concat(t ? '('.concat(M.intl.string(M.t['ycME+/']), ')') : '');
+                            return "* "
+                                .concat(n.substr(0, 4), "-")
+                                .concat(n.substr(4), " ")
+                                .concat(t ? "(".concat(M.intl.string(M.t["ycME+/"]), ")") : "");
                         })
-                        .join('\r\n'),
+                        .join("\r\n"),
                     t = M.intl.formatToPlainString(M.t.uYWwh4, { email: this.props.currentUser.email });
-                return ''.concat(t, '\r\n\r\n').concat(e);
+                return "".concat(t, "\r\n\r\n").concat(e);
             }),
-            C(this, 'handleChangePhoneNumber', () => {
+            C(this, "handleChangePhoneNumber", () => {
                 this.openPhoneVerificationModal();
             }),
-            C(this, 'handleEnableSMS', () => {
+            C(this, "handleEnableSMS", () => {
                 let { currentUser: e } = this.props;
                 null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: u.Z.enableSMS }) : u.Z.enableSMS();
-            }));
+            });
     }
 }
 let A = s.ZP.connectStores([b.default, m.Z], () => {
     let e = b.default.getCurrentUser();
     return (
-        a()(null != e, 'MFAEnableSuccess: currentUser cannot be undefined'),
+        a()(null != e, "MFAEnableSuccess: currentUser cannot be undefined"),
         {
             currentUser: e,
             backupCodes: m.Z.getBackupCodes(),
-            hasSeenBackupPrompt: m.Z.hasSeenBackupPrompt
+            hasSeenBackupPrompt: m.Z.hasSeenBackupPrompt,
         }
     );
 })(w);

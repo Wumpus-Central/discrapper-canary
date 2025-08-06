@@ -5,7 +5,7 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -15,15 +15,15 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 r(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -31,11 +31,11 @@ function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -70,35 +70,35 @@ function s(e, t) {
     }
     function d(e) {
         let { channelId: t, messages: n } = e;
-        (o.add(t), null == r || r(), n.forEach((e) => s(e)));
+        o.add(t), null == r || r(), n.forEach((e) => s(e));
     }
     function f(e) {
         let { messages: n } = e;
-        (null == r || r(), n.forEach((e) => t(e)));
+        null == r || r(), n.forEach((e) => t(e));
     }
     function _(e) {
         let { pins: n } = e;
-        (null == r || r(),
+        null == r || r(),
             n.forEach((e) => {
                 let { message: n } = e;
                 return t(n);
-            }));
+            });
     }
     function p(e) {
         let { data: n } = e;
-        (null == r || r(),
+        null == r || r(),
             n.forEach((e) => {
                 let { messages: n } = e;
                 n.forEach((e) => {
                     e.forEach((e) => t(e));
                 });
-            }));
+            });
     }
     e.actions = a(i({}, e.actions), {
         POST_CONNECTION_OPEN: l,
         MESSAGE_CREATE: {
             callback: u,
-            autoSubscribe: !1
+            autoSubscribe: !1,
         },
         MESSAGE_UPDATE: u,
         LOAD_MESSAGES_SUCCESS: d,
@@ -109,8 +109,8 @@ function s(e, t) {
         MOD_VIEW_SEARCH_MESSAGES_SUCCESS: p,
         CHANNEL_SELECT: {
             callback: c,
-            autoSubscribe: !1
-        }
+            autoSubscribe: !1,
+        },
     });
 }
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);

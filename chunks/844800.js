@@ -12,26 +12,26 @@ class d extends (l = s.ZP.Store) {
         return {
             verifySuccess: a,
             verifyErrors: c,
-            redirectGuildId: u
+            redirectGuildId: u,
         };
     }
 }
-((i = 'HubEmailVerificationStore'),
-    (r = 'displayName') in d
+(i = "HubEmailVerificationStore"),
+    (r = "displayName") in d
         ? Object.defineProperty(d, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (d[r] = i));
+        : (d[r] = i);
 let h = new d(o.Z, {
     HUB_VERIFY_EMAIL_SUCCESS: function (e) {
         let { guildId: t } = e;
-        ((a = !0), (c = null), (u = t));
+        (a = !0), (c = null), (u = t);
     },
     HUB_VERIFY_EMAIL_FAILURE: function (e) {
         let { errors: t } = e;
-        ((a = !1), (c = t));
-    }
+        (a = !1), (c = t);
+    },
 });

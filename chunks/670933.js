@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => a }));
+n.r(t), n.d(t, { default: () => a });
 var r = n(250327),
     i = n(951516),
     o = n(217224);
@@ -8,8 +8,8 @@ function a(e, t) {
         r,
         a,
         s = (0, o.Z)(null != (n = null == t ? void 0 : t.additionalDigits) ? n : 2);
-    if (2 !== s && 1 !== s && 0 !== s) throw RangeError('additionalDigits must be 0, 1 or 2');
-    if ('string' != typeof e && '[object String]' !== Object.prototype.toString.call(e)) return new Date(NaN);
+    if (2 !== s && 1 !== s && 0 !== s) throw RangeError("additionalDigits must be 0, 1 or 2");
+    if ("string" != typeof e && "[object String]" !== Object.prototype.toString.call(e)) return new Date(NaN);
     var l = d(e);
     if (l.date) {
         var c = f(l.date, s);
@@ -24,14 +24,18 @@ function a(e, t) {
     } else {
         var m = new Date(u + p),
             E = new Date(0);
-        return (E.setFullYear(m.getUTCFullYear(), m.getUTCMonth(), m.getUTCDate()), E.setHours(m.getUTCHours(), m.getUTCMinutes(), m.getUTCSeconds(), m.getUTCMilliseconds()), E);
+        return (
+            E.setFullYear(m.getUTCFullYear(), m.getUTCMonth(), m.getUTCDate()),
+            E.setHours(m.getUTCHours(), m.getUTCMinutes(), m.getUTCSeconds(), m.getUTCMilliseconds()),
+            E
+        );
     }
     return new Date(u + p + a);
 }
 var s = {
         dateTimeDelimiter: /[T ]/,
         timeZoneDelimiter: /[Z ]/i,
-        timezone: /([Z+-].*)$/
+        timezone: /([Z+-].*)$/,
     },
     l = /^-?(?:(\d{3})|(\d{2})(?:-?(\d{2}))?|W(\d{2})(?:-?(\d{1}))?|)$/,
     c = /^(\d{2}(?:[.,]\d*)?)(?::?(\d{2}(?:[.,]\d*)?))?(?::?(\d{2}(?:[.,]\d*)?))?$/,
@@ -41,25 +45,33 @@ function d(e) {
         n = {},
         r = e.split(s.dateTimeDelimiter);
     if (r.length > 2) return n;
-    if ((/:/.test(r[0]) ? (t = r[0]) : ((n.date = r[0]), (t = r[1]), s.timeZoneDelimiter.test(n.date) && ((n.date = e.split(s.timeZoneDelimiter)[0]), (t = e.substr(n.date.length, e.length)))), t)) {
+    if (
+        (/:/.test(r[0])
+            ? (t = r[0])
+            : ((n.date = r[0]),
+              (t = r[1]),
+              s.timeZoneDelimiter.test(n.date) &&
+                  ((n.date = e.split(s.timeZoneDelimiter)[0]), (t = e.substr(n.date.length, e.length)))),
+        t)
+    ) {
         var i = s.timezone.exec(t);
-        i ? ((n.time = t.replace(i[1], '')), (n.timezone = i[1])) : (n.time = t);
+        i ? ((n.time = t.replace(i[1], "")), (n.timezone = i[1])) : (n.time = t);
     }
     return n;
 }
 function f(e, t) {
-    var n = RegExp('^(?:(\\d{4}|[+-]\\d{' + (4 + t) + '})|(\\d{2}|[+-]\\d{' + (2 + t) + '})$)'),
+    var n = RegExp("^(?:(\\d{4}|[+-]\\d{" + (4 + t) + "})|(\\d{2}|[+-]\\d{" + (2 + t) + "})$)"),
         r = e.match(n);
     if (!r)
         return {
             year: NaN,
-            restDateString: ''
+            restDateString: "",
         };
     var i = r[1] ? parseInt(r[1]) : null,
         o = r[2] ? parseInt(r[2]) : null;
     return {
         year: null === o ? i : 100 * o,
-        restDateString: e.slice((r[1] || r[2]).length)
+        restDateString: e.slice((r[1] || r[2]).length),
     };
 }
 function _(e, t) {
@@ -88,13 +100,13 @@ function h(e) {
     return T(n, i, o) ? n * r.vh + i * r.yJ + 1000 * o : NaN;
 }
 function m(e) {
-    return (e && parseFloat(e.replace(',', '.'))) || 0;
+    return (e && parseFloat(e.replace(",", "."))) || 0;
 }
 function g(e) {
-    if ('Z' === e) return 0;
+    if ("Z" === e) return 0;
     var t = e.match(u);
     if (!t) return 0;
-    var n = '+' === t[1] ? -1 : 1,
+    var n = "+" === t[1] ? -1 : 1,
         i = parseInt(t[2]),
         o = (t[3] && parseInt(t[3])) || 0;
     return S(i, o) ? n * (i * r.vh + o * r.yJ) : NaN;
@@ -103,7 +115,7 @@ function E(e, t, n) {
     var r = new Date(0);
     r.setUTCFullYear(e, 0, 4);
     var i = (t - 1) * 7 + n + 1 - (r.getUTCDay() || 7);
-    return (r.setUTCDate(r.getUTCDate() + i), r);
+    return r.setUTCDate(r.getUTCDate() + i), r;
 }
 var b = [31, null, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 function y(e) {

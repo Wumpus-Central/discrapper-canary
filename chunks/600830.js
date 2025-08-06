@@ -22,10 +22,10 @@ function g(t) {
             return null == t || null != e
                 ? null
                 : (0, l.jsx)(i.sNh, {
-                      id: 'popout-call',
+                      id: "popout-call",
                       label: j.intl.string(j.t.JzWez8),
                       icon: i.rgF,
-                      action: () => s.hP(t)
+                      action: () => s.hP(t),
                   });
         })(null != e ? e : void 0),
         y = (function (t) {
@@ -34,13 +34,13 @@ function g(t) {
                 o = (0, u.Z)(null != t ? t : null);
             return null != t && t.isGuildVocal()
                 ? (0, l.jsxs)(i.kSQ, {
-                      children: [n, o]
+                      children: [n, o],
                   })
                 : null;
         })(e);
     return (0, l.jsxs)(i.v2r, {
-        navId: 'rtc-channel',
-        'aria-label': j.intl.string(j.t.ogxXGh),
+        navId: "rtc-channel",
+        "aria-label": j.intl.string(j.t.ogxXGh),
         onClose: o.Zy,
         onSelect: n,
         onInteraction: g,
@@ -51,13 +51,13 @@ function g(t) {
                 children: [
                     v,
                     (0, l.jsx)(i.S89, {
-                        id: 'show-voice-states',
+                        id: "show-voice-states",
                         checked: h,
                         action: () => d.Fg.updateSetting(!h),
-                        label: j.intl.string(j.t.vkbSBw)
-                    })
-                ]
-            })
-        ]
+                        label: j.intl.string(j.t.vkbSBw),
+                    }),
+                ],
+            }),
+        ],
     });
 }

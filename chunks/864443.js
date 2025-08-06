@@ -1,1 +1,1 @@
-e.exports = { premiumOptionContainer: 'premiumOptionContainer__87cb7' };
+e.exports = { premiumOptionContainer: "premiumOptionContainer__87cb7" };

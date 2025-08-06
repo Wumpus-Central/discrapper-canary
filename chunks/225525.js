@@ -1,4 +1,4 @@
-(r.d(e, { default: () => f }), r(388685));
+r.d(e, { default: () => f }), r(388685);
 var n = r(255367),
     o = r(73800),
     a = r(755721),
@@ -20,20 +20,22 @@ function f(t) {
                         n,
                         o = {},
                         a = Object.keys(t);
-                    for (n = 0; n < a.length; n++) ((r = a[n]), e.indexOf(r) >= 0 || (o[r] = t[r]));
+                    for (n = 0; n < a.length; n++) (r = a[n]), e.indexOf(r) >= 0 || (o[r] = t[r]);
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < a.length; n++) ((r = a[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]));
+                for (n = 0; n < a.length; n++)
+                    (r = a[n]),
+                        !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
             }
             return o;
-        })(t, ['avatarId', 'storageHash', 'avatarDescription', 'onConfirmDelete', 'onClose']);
+        })(t, ["avatarId", "storageHash", "avatarDescription", "onConfirmDelete", "onClose"]);
     let [O, m] = o.useState(!1),
         { avatarSrc: v, eventHandlers: j } = (0, c.Z)({
             avatarId: f,
             storageHash: u,
-            size: i.EFr.SIZE_120
+            size: i.EFr.SIZE_120,
         }),
         { onMouseEnter: g, onMouseLeave: x } = j;
     return (0, n.jsxs)(
@@ -42,24 +44,24 @@ function f(t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (e) {
                         var n;
-                        ((n = r[e]),
+                        (n = r[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (t[e] = n));
-                    }));
+                                : (t[e] = n);
+                    });
             }
             return t;
         })(
@@ -67,7 +69,7 @@ function f(t) {
                 bodyClassName: l.modalContent,
                 header: s.intl.string(s.t.rfaLTE),
                 confirmText: s.intl.string(s.t.Lh0uy8),
-                cancelText: s.intl.string(s.t['ETE/oK']),
+                cancelText: s.intl.string(s.t["ETE/oK"]),
                 confirmButtonColor: a.zx.Colors.RED,
                 loading: O,
                 onConfirm: async () => {
@@ -80,39 +82,39 @@ function f(t) {
                     }
                     y();
                 },
-                onClose: y
+                onClose: y,
             },
-            d
+            d,
         )),
         (r = r =
             {
                 children: [
                     (0, n.jsx)(i.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'text-secondary',
-                        children: s.intl.string(s.t.EKmxKS)
+                        variant: "text-sm/normal",
+                        color: "text-secondary",
+                        children: s.intl.string(s.t.EKmxKS),
                     }),
-                    (0, n.jsx)('div', {
+                    (0, n.jsx)("div", {
                         onMouseEnter: g,
                         onMouseLeave: x,
                         className: l.avatarContainer,
-                        children: (0, n.jsx)('img', {
+                        children: (0, n.jsx)("img", {
                             src: v,
                             alt: p,
-                            className: l.avatar
-                        })
+                            className: l.avatar,
+                        }),
                     }),
                     (0, n.jsx)(i.Text, {
-                        variant: 'eyebrow',
-                        color: 'text-feedback-positive',
-                        children: s.intl.string(s.t['2Ld8DA'])
+                        variant: "eyebrow",
+                        color: "text-feedback-positive",
+                        children: s.intl.string(s.t["2Ld8DA"]),
                     }),
                     (0, n.jsx)(i.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-secondary',
-                        children: s.intl.string(s.t.Oe0xqq)
-                    })
-                ]
+                        variant: "text-xs/normal",
+                        color: "text-secondary",
+                        children: s.intl.string(s.t.Oe0xqq),
+                    }),
+                ],
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -126,6 +128,6 @@ function f(t) {
               })(Object(r)).forEach(function (t) {
                   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
               }),
-        e)
+        e),
     );
 }

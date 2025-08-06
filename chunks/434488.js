@@ -31,7 +31,7 @@ function C(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,15 +41,15 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 C(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -57,11 +57,11 @@ function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -83,7 +83,8 @@ function D(e, t) {
         i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -93,7 +94,7 @@ function L(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let x = 250;
@@ -106,7 +107,7 @@ function M(e) {
               width: i,
               inPopout: o,
               handleClose: a,
-              userParticipantCount: s
+              userParticipantCount: s,
           })
         : s > 1
           ? (0, r.jsx)(U, {
@@ -115,31 +116,31 @@ function M(e) {
                 width: i,
                 inPopout: o,
                 handleClose: a,
-                userParticipantCount: s
+                userParticipantCount: s,
             })
           : (0, r.jsx)(j, {
                 channel: t,
                 guild: n,
                 width: i,
-                inPopout: o
+                inPopout: o,
             });
 }
 function k(e) {
     let { channel: t, inPopout: n, handleClose: i } = e,
         { analyticsLocations: o, newestAnalyticsLocation: s } = (0, m.ZP)(h.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
-        { enabled: c } = f.c.useExperiment({ location: 'ActivityShelfButtonTile' }, { autoTrackExposure: !0 }),
+        { enabled: c } = f.c.useExperiment({ location: "ActivityShelfButtonTile" }, { autoTrackExposure: !0 }),
         d = c ? u.iWm : u.gQj,
         _ = () => {
             (0, g.Z)({
                 context:
                     null != t
                         ? {
-                              type: 'channel',
-                              channel: t
+                              type: "channel",
+                              channel: t,
                           }
-                        : { type: 'contextless' },
+                        : { type: "contextless" },
                 openInPopout: n,
-                analyticsLocation: s
+                analyticsLocation: s,
             });
         };
     return (0, r.jsx)(m.Gt, {
@@ -151,26 +152,26 @@ function k(e) {
                     text: S.intl.string(S.t.qJvTKS),
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = D(e, ['onClick']);
+                            n = D(e, ["onClick"]);
                         return (0, r.jsx)(
                             u.P3F,
                             w(R({}, n), {
                                 className: A.clickableTile,
                                 onClick: () => {
-                                    (null == t || t(), _());
+                                    null == t || t(), _();
                                 },
-                                children: (0, r.jsx)('div', {
+                                children: (0, r.jsx)("div", {
                                     className: A.iconContainer,
                                     children: (0, r.jsx)(d, {
-                                        size: 'custom',
-                                        color: 'currentColor',
+                                        size: "custom",
+                                        color: "currentColor",
                                         width: 40,
-                                        height: 40
-                                    })
-                                })
-                            })
+                                        height: 40,
+                                    }),
+                                }),
+                            }),
                         );
-                    }
+                    },
                 }),
                 (0, r.jsx)(u.f6W, {
                     theme: T.BRd.DARK,
@@ -179,43 +180,45 @@ function k(e) {
                             onClick: i,
                             className: a()(e, A.shelfButtonCloseButton),
                             children: (0, r.jsx)(u.k$p, {
-                                size: 'md',
-                                color: 'currentColor',
+                                size: "md",
+                                color: "currentColor",
                                 className: A.closeButtonIcon,
-                                secondaryColor: l.Z.colors.INTERACTIVE_NORMAL.css
-                            })
-                        })
-                })
-            ]
-        })
+                                secondaryColor: l.Z.colors.INTERACTIVE_NORMAL.css,
+                            }),
+                        }),
+                }),
+            ],
+        }),
     });
 }
 function j(e) {
     let { channel: t, guild: o, inPopout: s } = e;
     i.useEffect(() => {
         v.default.track(T.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
-            tile_type: 'activity invite',
-            n_participants: 1
+            tile_type: "activity invite",
+            n_participants: 1,
         });
     }, []);
     let { analyticsLocations: l, newestAnalyticsLocation: d } = (0, m.ZP)(h.Z.VC_TILE_ACTIVITY_INVITE),
-        { entrypoints: _ } = (0, y._k)({ location: 'single_user_tile' }),
-        { enabled: p } = f.c.useExperiment({ location: 'SingleUserTile' }, { autoTrackExposure: !0 });
+        { entrypoints: _ } = (0, y._k)({ location: "single_user_tile" }),
+        { enabled: p } = f.c.useExperiment({ location: "SingleUserTile" }, { autoTrackExposure: !0 });
     function E() {
         (0, u.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('7654'), n.e('49049'), n.e('29328')]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("29328")]).then(
+                    n.bind(n, 560114),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         e,
                         w(R({}, n), {
                             guild: o,
                             channel: t,
-                            source: T.t4x.ACTIVITY_ENTRY_POINT_TILE
-                        })
+                            source: T.t4x.ACTIVITY_ENTRY_POINT_TILE,
+                        }),
                     );
             },
-            { contextKey: s ? u.u1M : u.z1l }
+            { contextKey: s ? u.u1M : u.z1l },
         );
     }
     function b() {
@@ -223,12 +226,12 @@ function j(e) {
             context:
                 null != t
                     ? {
-                          type: 'channel',
-                          channel: t
+                          type: "channel",
+                          channel: t,
                       }
-                    : { type: 'contextless' },
+                    : { type: "contextless" },
             openInPopout: s,
-            analyticsLocation: d
+            analyticsLocation: d,
         });
     }
     let O = p ? u.iWm : u.nG3,
@@ -242,12 +245,12 @@ function j(e) {
                 (0, r.jsxs)(I.Z, {
                     className: a()(A.root, A.singleUserRoot, e),
                     children: [
-                        (0, r.jsx)('img', {
+                        (0, r.jsx)("img", {
                             src: N,
                             className: A.art,
-                            alt: ''
+                            alt: "",
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: A.buttonContainer,
                             children: [
                                 (0, r.jsxs)(c.zx, {
@@ -257,11 +260,11 @@ function j(e) {
                                     onClick: E,
                                     children: [
                                         (0, r.jsx)(C, {
-                                            size: 'xs',
-                                            color: 'currentColor'
+                                            size: "xs",
+                                            color: "currentColor",
                                         }),
-                                        _ ? S.intl.string(S.t['EE+P0N']) : S.intl.string(S.t['6Qgren'])
-                                    ]
+                                        _ ? S.intl.string(S.t["EE+P0N"]) : S.intl.string(S.t["6Qgren"]),
+                                    ],
                                 }),
                                 (0, r.jsxs)(c.zx, {
                                     size: c.zx.Sizes.LARGE,
@@ -270,51 +273,51 @@ function j(e) {
                                     onClick: b,
                                     children: [
                                         (0, r.jsx)(O, {
-                                            size: 'xs',
-                                            color: 'currentColor'
+                                            size: "xs",
+                                            color: "currentColor",
                                         }),
-                                        S.intl.string(S.t.qnFavb)
-                                    ]
-                                })
-                            ]
-                        })
-                    ]
-                })
-        })
+                                        S.intl.string(S.t.qnFavb),
+                                    ],
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+        }),
     });
 }
 function U(e) {
     let { channel: t, guild: n, handleClose: o, width: l, userParticipantCount: c } = e;
     (0, d.ZP)(() => {
         v.default.track(T.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
-            tile_type: 'activity suggestion',
-            n_participants: c
+            tile_type: "activity suggestion",
+            n_participants: c,
         });
     });
     let f = (0, _.Z)({ guildId: n.id }).slice(0, 3);
     function g() {
-        (v.default.track(T.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
-            tile_type: 'activity suggestion',
-            close_type: 'permanent',
-            n_participants: c
+        v.default.track(T.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+            tile_type: "activity suggestion",
+            close_type: "permanent",
+            n_participants: c,
         }),
-            (0, b.Q3)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT));
+            (0, b.Q3)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
     }
     function y() {
-        (v.default.track(T.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
-            tile_type: 'activity suggestion',
-            close_type: 'temporary',
-            n_participants: c
+        v.default.track(T.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+            tile_type: "activity suggestion",
+            close_type: "temporary",
+            n_participants: c,
         }),
-            o());
+            o();
     }
     let { analyticsLocations: N } = (0, m.ZP)(h.Z.VC_TILE_ACTIVITY_SUGGESTION),
         C = i.useMemo(
             () => ({
                 channel: t,
-                type: 'channel'
+                type: "channel",
             }),
-            [t]
+            [t],
         );
     return (0, r.jsx)(m.Gt, {
         value: N,
@@ -324,11 +327,11 @@ function U(e) {
                 l > 300
                     ? (0, r.jsx)(u.Text, {
                           className: A.heading,
-                          variant: l > 550 ? 'text-md/semibold' : 'text-sm/semibold',
-                          children: S.intl.string(S.t['7BKMcH'])
+                          variant: l > 550 ? "text-md/semibold" : "text-sm/semibold",
+                          children: S.intl.string(S.t["7BKMcH"]),
                       })
                     : null,
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: a()(A.activitiesContainer, { [A.activitiesContainerSmol]: l <= 300 }),
                     children: f.map((e) =>
                         (0, r.jsx)(
@@ -338,11 +341,11 @@ function U(e) {
                                 activityItem: e,
                                 aspectRatio: p.Y.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: A.activitySuggestion,
-                                commandOrigin: E.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS
+                                commandOrigin: E.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
-                            e.application.id
-                        )
-                    )
+                            e.application.id,
+                        ),
+                    ),
                 }),
                 (0, r.jsxs)(u.P3F, {
                     className: A.checkboxContainer,
@@ -350,21 +353,21 @@ function U(e) {
                     children: [
                         (0, r.jsx)(O.Z, {}),
                         (0, r.jsx)(u.Text, {
-                            variant: 'text-sm/medium',
-                            children: S.intl.string(S.t['5E9SBw'])
-                        })
-                    ]
+                            variant: "text-sm/medium",
+                            children: S.intl.string(S.t["5E9SBw"]),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(u.P3F, {
                     className: A.closeButtonContainer,
                     onClick: y,
                     children: (0, r.jsx)(u.Dio, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: A.closeButton
-                    })
-                })
-            ]
-        })
+                        size: "md",
+                        color: "currentColor",
+                        className: A.closeButton,
+                    }),
+                }),
+            ],
+        }),
     });
 }

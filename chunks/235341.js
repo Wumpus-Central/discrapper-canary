@@ -1,1 +1,1 @@
-e.exports = 'undefined' != typeof Reflect && Reflect && Reflect.apply;
+e.exports = "undefined" != typeof Reflect && Reflect && Reflect.apply;

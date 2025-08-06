@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     I: () => c,
-    g: () => d
+    g: () => d,
 }),
-    n(415506));
+    n(415506);
 var i = n(544891),
     r = n(570140),
     s = n(981631),
@@ -12,46 +12,52 @@ function l(e) {
         null != e &&
             null != e.body &&
             r.Z.dispatch({
-                type: 'UPDATE_CONSENTS',
+                type: "UPDATE_CONSENTS",
                 consents: (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
-                })({}, e.body)
+                })({}, e.body),
             }),
         e.body
     );
 }
 function o(e) {
     let t;
-    throw Error(e.status >= 500 && e.status <= 599 ? a.intl.string(a.t.cvJdtr) : null != e && null != e.body && null != e.body.message ? e.body.message : a.intl.string(a.t.cvJdtr));
+    throw Error(
+        e.status >= 500 && e.status <= 599
+            ? a.intl.string(a.t.cvJdtr)
+            : null != e && null != e.body && null != e.body.message
+              ? e.body.message
+              : a.intl.string(a.t.cvJdtr),
+    );
 }
 function c() {
     return i.tn
         .get({
             url: s.ANM.SETTINGS_CONSENT,
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
         .then(l, (e) => Promise.reject(Error(e.body.message)));
 }
@@ -61,10 +67,10 @@ function d(e, t) {
             url: s.ANM.SETTINGS_CONSENT,
             body: {
                 grant: e,
-                revoke: t
+                revoke: t,
             },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
         .then(l, o);
 }

@@ -13,7 +13,7 @@ let m = function (e) {
     let { onClose: n, onComplete: t, onCancel: s, transitionState: m, webviewUrl: g, useV1: p = !1 } = e,
         h = (0, o.GE)(),
         x = i.useCallback(() => {
-            (t(), n());
+            t(), n();
         }, [t, n]),
         v = i.useCallback(() => {
             (0, l.nfh)(d.zJ) && x();
@@ -21,75 +21,75 @@ let m = function (e) {
     (0, c.F5)(v);
     let j = i.useCallback(
         (e) => {
-            if (h && '' !== g) {
+            if (h && "" !== g) {
                 var n;
-                (null == e || null == (n = e.data) ? void 0 : n.eventType) === 'Verification.Result' && x();
+                (null == e || null == (n = e.data) ? void 0 : n.eventType) === "Verification.Result" && x();
             }
         },
-        [g, x, h]
+        [g, x, h],
     );
     return (
         i.useEffect(
             () => (
-                window.addEventListener('message', j),
+                window.addEventListener("message", j),
                 () => {
-                    window.removeEventListener('message', j);
+                    window.removeEventListener("message", j);
                 }
             ),
-            [j]
+            [j],
         ),
         (0, a.jsxs)(l.Y0X, {
-            'data-migration-pending': !0,
+            "data-migration-pending": !0,
             transitionState: m,
             className: u.root,
-            parentComponent: 'AgeVerificationModal',
+            parentComponent: "AgeVerificationModal",
             size: l.CgR.MEDIUM,
             children: [
                 (0, a.jsxs)(l.hzk, {
-                    'data-migration-pending': !0,
+                    "data-migration-pending": !0,
                     className: r()(u.content, { [u.fullbleed]: !p }),
-                    scrollbarType: 'none',
+                    scrollbarType: "none",
                     children: [
                         p &&
                             (0, a.jsx)(l.X6q, {
-                                variant: 'heading-xl/bold',
-                                children: f.intl.string(f.t.tYNaXF)
+                                variant: "heading-xl/bold",
+                                children: f.intl.string(f.t.tYNaXF),
                             }),
-                        (0, a.jsx)('iframe', {
-                            id: 'frame',
+                        (0, a.jsx)("iframe", {
+                            id: "frame",
                             src: g,
                             className: u.iframe,
-                            allow: 'camera; microphone'
-                        })
-                    ]
+                            allow: "camera; microphone",
+                        }),
+                    ],
                 }),
                 (0, a.jsx)(l.mzw, {
-                    'data-migration-pending': !0,
+                    "data-migration-pending": !0,
                     children: p
                         ? (0, a.jsx)(l.Avr, {
-                              text: f.intl.string(f.t['4gTnU1']),
-                              onClick: n
+                              text: f.intl.string(f.t["4gTnU1"]),
+                              onClick: n,
                           })
-                        : (0, a.jsx)('div', {
+                        : (0, a.jsx)("div", {
                               className: u.footer,
                               children: (0, a.jsxs)(l.hE2, {
-                                  justify: 'space-between',
+                                  justify: "space-between",
                                   children: [
                                       (0, a.jsx)(l.Avr, {
-                                          variant: 'secondary',
+                                          variant: "secondary",
                                           text: f.intl.string(f.t.fjKFaW),
-                                          onClick: n
+                                          onClick: n,
                                       }),
                                       (0, a.jsx)(l.Avr, {
-                                          variant: 'secondary',
-                                          text: f.intl.string(f.t['4gTnU1']),
-                                          onClick: s
-                                      })
-                                  ]
-                              })
-                          })
-                })
-            ]
+                                          variant: "secondary",
+                                          text: f.intl.string(f.t["4gTnU1"]),
+                                          onClick: s,
+                                      }),
+                                  ],
+                              }),
+                          }),
+                }),
+            ],
         })
     );
 };

@@ -1,17 +1,17 @@
-(n.d(t, {
+n.d(t, {
     t: () => a,
-    v: () => o
+    v: () => o,
 }),
-    n(415506));
+    n(415506);
 var r = n(73800),
     i = n(981631);
 function o() {
     let e = r.useContext(a);
-    if (null == e) throw Error('useModalContext must be used within a ModalContext.Provider');
+    if (null == e) throw Error("useModalContext must be used within a ModalContext.Provider");
     return e;
 }
 let a = r.createContext({
     onClose: i.dG4,
-    id: 'modal-id',
-    headingId: 'modal-heading-id'
+    id: "modal-id",
+    headingId: "modal-heading-id",
 });

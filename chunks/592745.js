@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r,
     i = n(442837),
     o = n(570140);
@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,13 +41,13 @@ class f extends (r = i.ZP.Store) {
             ? l[e]
             : ((l[e] = !1),
               o.Z.dispatch({
-                  type: 'CHECK_LAUNCHABLE_GAME',
-                  gameId: e
+                  type: "CHECK_LAUNCHABLE_GAME",
+                  gameId: e,
               }),
               !1);
     }
 }
-a(f, 'displayName', 'LaunchableGameStore');
+a(f, "displayName", "LaunchableGameStore");
 let _ = new f(o.Z, {
     GAME_LAUNCHABLE_UPDATE: c,
     GAME_CLOUD_SYNC_START: u,
@@ -56,5 +56,5 @@ let _ = new f(o.Z, {
     GAME_LAUNCH_FAIL: d,
     GAME_CLOUD_SYNC_CONFLICT: d,
     GAME_CLOUD_SYNC_ERROR: d,
-    GAME_CLOUD_SYNC_COMPLETE: d
+    GAME_CLOUD_SYNC_COMPLETE: d,
 });

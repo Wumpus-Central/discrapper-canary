@@ -11,7 +11,7 @@ function s(e) {
         canCreateEmojisAndStickers: a,
         canManageEmojisAndStickers: c,
         canManageWebhooks: u,
-        canViewAuditLog: d
+        canViewAuditLog: d,
     } = (0, i.cj)(
         [r.Z],
         () => ({
@@ -22,9 +22,9 @@ function s(e) {
             canCreateEmojisAndStickers: r.Z.can(l.Plq.CREATE_GUILD_EXPRESSIONS, e),
             canManageEmojisAndStickers: r.Z.can(l.Plq.MANAGE_GUILD_EXPRESSIONS, e),
             canManageWebhooks: r.Z.can(l.Plq.MANAGE_WEBHOOKS, e),
-            canViewAuditLog: r.Z.can(l.Plq.VIEW_AUDIT_LOG, e)
+            canViewAuditLog: r.Z.can(l.Plq.VIEW_AUDIT_LOG, e),
         }),
-        [e]
+        [e],
     );
     return t || n || s || o || a || c || u || d;
 }

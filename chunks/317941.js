@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685), n(415506));
+n.d(t, { Z: () => R }), n(388685), n(415506);
 var i = n(255367),
     r = n(73800),
     s = n(913527),
@@ -32,7 +32,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -68,45 +68,48 @@ class A extends r.PureComponent {
                     text: this.copyButtonText,
                     mode: n,
                     supportsCopy: O.wS,
-                    hideMessage: e ? I.intl.string(I.t['0RLn4+']) : null,
+                    hideMessage: e ? I.intl.string(I.t["0RLn4+"]) : null,
                     onCopy: this.handleCopy,
                     buttonColor: c.Tt.BRAND,
-                    buttonLook: c.iL.FILLED
+                    buttonLook: c.iL.FILLED,
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: N.subTextRow,
                     children: [
                         null != t.expiresAt
                             ? (0, i.jsxs)(r.Fragment, {
-                                  children: [I.intl.format(I.t.ltVZcH, { hours: t.expiresAt.diff(a()(), 'h') }), ' \u2014\xA0']
+                                  children: [
+                                      I.intl.format(I.t.ltVZcH, { hours: t.expiresAt.diff(a()(), "h") }),
+                                      " \u2014\xA0",
+                                  ],
                               })
                             : null,
                         (0, i.jsx)(d.P3F, {
-                            tag: 'a',
+                            tag: "a",
                             onClick: () => this.handleRevoke(t.code),
-                            children: I.intl.string(I.t.v6Yaz8)
-                        })
-                    ]
-                })
-            ]
+                            children: I.intl.string(I.t.v6Yaz8),
+                        }),
+                    ],
+                }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            y(this, '_copyModeTimeout', new o.V7()),
-            y(this, 'state', { copyMode: d.uA3.DEFAULT }),
-            y(this, 'handleCopy', (e) => {
+        super(...e),
+            y(this, "_copyModeTimeout", new o.V7()),
+            y(this, "state", { copyMode: d.uA3.DEFAULT }),
+            y(this, "handleCopy", (e) => {
                 let { giftCode: t, sku: n } = this.props;
-                ((0, v.dM)(t, n),
+                (0, v.dM)(t, n),
                     (0, O.JG)(
                         e,
                         () => this.setState({ copyMode: d.uA3.SUCCESS }),
-                        () => this.setState({ copyMode: d.uA3.ERROR })
+                        () => this.setState({ copyMode: d.uA3.ERROR }),
                     ),
                     this._copyModeTimeout.start(1000, () => {
                         this.setState({ copyMode: d.uA3.DEFAULT });
-                    }));
-            }));
+                    });
+            });
     }
 }
 class P extends r.PureComponent {
@@ -123,17 +126,17 @@ class P extends r.PureComponent {
                     : r === T.rX && null != n
                       ? I.intl.formatToPlainString(n.interval === T.rV.MONTH ? I.t.uZjpiI : I.t.bJW1EB, {
                             skuName: t.name,
-                            intervalCount: n.intervalCount
+                            intervalCount: n.intervalCount,
                         })
                       : null == n
                         ? t.name
                         : I.intl.formatToPlainString(n.interval === T.rV.MONTH ? I.t.rCJvqq : I.t.Vd3Iu7, {
                               skuName: t.name,
-                              intervalCount: n.intervalCount
+                              intervalCount: n.intervalCount,
                           })),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: N.gameName,
-                children: e
+                children: e,
             })
         );
     }
@@ -144,24 +147,33 @@ class P extends r.PureComponent {
             className: N.generateCodeRow,
             children: [
                 (0, i.jsx)(d.Text, {
-                    variant: 'text-md/normal',
-                    children: I.intl.string(I.t.lELyPj)
+                    variant: "text-md/normal",
+                    children: I.intl.string(I.t.lELyPj),
                 }),
                 (0, i.jsx)(d.zxk, {
-                    variant: 'primary',
-                    size: 'sm',
+                    variant: "primary",
+                    size: "sm",
                     text: I.intl.string(I.t.Q3Qgur),
                     loading: this.state.isCreating,
-                    onClick: this.handleGenerateGiftCode
-                })
-            ]
+                    onClick: this.handleGenerateGiftCode,
+                }),
+            ],
         });
     }
     setIsHovered(e) {
         this.setState({ isHovered: e });
     }
     render() {
-        let { entitlements: e, application: t, giftCodes: n, className: s, sku: a, isFetching: l, hideCodes: o, giftStyle: c } = this.props,
+        let {
+                entitlements: e,
+                application: t,
+                giftCodes: n,
+                className: s,
+                sku: a,
+                isFetching: l,
+                hideCodes: o,
+                giftStyle: c,
+            } = this.props,
             { isOpen: u } = this.state;
         return (0, i.jsxs)(m.Z, {
             className: s,
@@ -173,7 +185,7 @@ class P extends r.PureComponent {
                     onMouseLeave: () => this.setIsHovered(!1),
                     children: (0, i.jsx)(m.Z.Header, {
                         splashArtURL: t.getSplashURL(512),
-                        children: (0, i.jsxs)('div', {
+                        children: (0, i.jsxs)("div", {
                             className: N.cardHeader,
                             children: [
                                 (0, i.jsxs)(g.Z, {
@@ -183,32 +195,32 @@ class P extends r.PureComponent {
                                             ? (0, i.jsx)(f.Z, {
                                                   giftStyle: c,
                                                   className: N.seasonalGiftBox,
-                                                  shouldAnimate: this.state.isHovered
+                                                  shouldAnimate: this.state.isHovered,
                                               })
                                             : (0, i.jsx)(h.Z, {
                                                   game: t,
                                                   size: h.Z.Sizes.MEDIUM,
-                                                  skuId: a.id
+                                                  skuId: a.id,
                                               }),
-                                        (0, i.jsxs)('div', {
+                                        (0, i.jsxs)("div", {
                                             className: N.headerText,
                                             children: [
                                                 this.renderTitle(),
-                                                (0, i.jsx)('div', {
+                                                (0, i.jsx)("div", {
                                                     className: N.subTextHeader,
-                                                    children: I.intl.format(I.t.zMcvcH, { copies: e.length })
-                                                })
-                                            ]
-                                        })
-                                    ]
+                                                    children: I.intl.format(I.t.zMcvcH, { copies: e.length }),
+                                                }),
+                                            ],
+                                        }),
+                                    ],
                                 }),
                                 (0, i.jsx)(C.Z, {
                                     direction: u ? C.Z.Directions.UP : C.Z.Directions.DOWN,
-                                    className: N.expandIcon
-                                })
-                            ]
-                        })
-                    })
+                                    className: N.expandIcon,
+                                }),
+                            ],
+                        }),
+                    }),
                 }),
                 u
                     ? (0, i.jsx)(m.Z.Body, {
@@ -223,47 +235,48 @@ class P extends r.PureComponent {
                                                 {
                                                     giftCode: e,
                                                     sku: a,
-                                                    hideCode: o
+                                                    hideCode: o,
                                                 },
-                                                e.code
-                                            )
-                                        )
-                                    ]
-                                })
+                                                e.code,
+                                            ),
+                                        ),
+                                    ],
+                                }),
                       })
-                    : null
-            ]
+                    : null,
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            y(this, '_loadedAt', null),
-            y(this, 'state', {
+        super(...e),
+            y(this, "_loadedAt", null),
+            y(this, "state", {
                 isOpen: !1,
                 isCreating: !1,
-                isHovered: !1
+                isHovered: !1,
             }),
-            y(this, 'handleGenerateGiftCode', async (e) => {
+            y(this, "handleGenerateGiftCode", async (e) => {
                 e.stopPropagation();
                 let { skuId: t, subscriptionPlanId: n, giftStyle: i } = this.props;
-                (this.setState({ isCreating: !0 }),
+                this.setState({ isCreating: !0 }),
                     await u.Z.createGiftCode(t, n, i),
                     this.setState({
                         isCreating: !1,
-                        isOpen: !0
-                    }));
+                        isOpen: !0,
+                    });
             }),
-            y(this, 'handleToggleOpen', () => {
+            y(this, "handleToggleOpen", () => {
                 let { skuId: e, subscriptionPlanId: t, loadedAt: n } = this.props,
                     i = !this.state.isOpen;
-                ((null == n || null == this._loadedAt || n < this._loadedAt) && i && u.Z.fetchUserGiftCodesForSKU(e, t), this.setState({ isOpen: !this.state.isOpen }));
-            }));
+                (null == n || null == this._loadedAt || n < this._loadedAt) && i && u.Z.fetchUserGiftCodesForSKU(e, t),
+                    this.setState({ isOpen: !this.state.isOpen });
+            });
     }
 }
 let R = l.ZP.connectStores([E.Z, _.Z, x.Z, p.Z, j.Z, b.default], (e) => {
     let { skuId: t, subscriptionPlanId: n, giftStyle: i } = e,
         r = E.Z.get(t);
-    if (null == r) throw Error('SKU was unavailable while rendering gift.');
+    if (null == r) throw Error("SKU was unavailable while rendering gift.");
     let s = x.Z.getForGifterSKUAndPlan(b.default.getId(), t, n)
         .filter((e) => !e.isClaimed)
         .filter((e) => e.giftStyle === i);
@@ -274,6 +287,6 @@ let R = l.ZP.connectStores([E.Z, _.Z, x.Z, p.Z, j.Z, b.default], (e) => {
         loadedAt: x.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, n),
         application: p.Z.getApplication(r.applicationId),
         subscriptionPlan: null != n ? (0, S.oE)(n) : null,
-        giftCodes: s
+        giftCodes: s,
     };
 })(P);

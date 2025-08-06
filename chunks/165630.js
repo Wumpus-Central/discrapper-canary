@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(539854));
+n.d(t, { Z: () => m }), n(539854);
 var i,
     r = n(442837),
     s = n(570140),
@@ -11,7 +11,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,13 +22,13 @@ let c = {},
         c = {
             guildAffinitiesByGuildId: {},
             guildAffinities: [],
-            lastFetched: 0
+            lastFetched: 0,
         };
     };
 d();
 class u extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        (null != e && (c = e), this.waitFor(l.Z));
+        null != e && (c = e), this.waitFor(l.Z);
     }
     getState() {
         return c;
@@ -43,14 +43,14 @@ class u extends (i = r.ZP.PersistedStore) {
         return 0 !== c.lastFetched;
     }
 }
-(o(u, 'displayName', 'GuildAffinitiesStore'), o(u, 'persistKey', 'GuildAffinitiesStore'));
+o(u, "displayName", "GuildAffinitiesStore"), o(u, "persistKey", "GuildAffinitiesStore");
 let m = new u(s.Z, {
     CONNECTION_OPEN: function () {
-        return (Date.now() - c.lastFetched > 86400000 && (0, a.j)(), !1);
+        return Date.now() - c.lastFetched > 86400000 && (0, a.j)(), !1;
     },
     LOAD_GUILD_AFFINITIES_SUCCESS: function (e) {
         let { guildAffinities: t } = e;
-        ((c.guildAffinities = []),
+        (c.guildAffinities = []),
             (c.guildAffinitiesByGuildId = {}),
             (c.lastFetched = Date.now()),
             t.forEach((e, t) => {
@@ -58,12 +58,12 @@ let m = new u(s.Z, {
                     r = {
                         score: n,
                         guildId: i,
-                        index: t
+                        index: t,
                     };
-                ((c.guildAffinitiesByGuildId[i] = r), c.guildAffinities.push(r));
-            }));
+                (c.guildAffinitiesByGuildId[i] = r), c.guildAffinities.push(r);
+            });
     },
     LOGOUT: function () {
         d();
-    }
+    },
 });

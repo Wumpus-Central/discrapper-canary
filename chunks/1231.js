@@ -17,5 +17,5 @@ e.exports = {
     setLeft: function (e, n) {
         var r = e.ownerDocument;
         t(e, r) ? (r.body.scrollLeft = r.documentElement.scrollLeft = n) : (e.scrollLeft = n);
-    }
+    },
 };

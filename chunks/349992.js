@@ -5,7 +5,7 @@ function o(e) {
     let t = {};
     for (let n of (Object.defineProperty(t, i.C, {
         enumerable: !1,
-        value: e
+        value: e,
     }),
     e.fields)) {
         let e = n.localName;
@@ -14,13 +14,13 @@ function o(e) {
             else if (n.repeat) t[e] = [];
             else
                 switch (n.kind) {
-                    case 'scalar':
+                    case "scalar":
                         t[e] = (0, r.N)(n.T, n.L);
                         break;
-                    case 'enum':
+                    case "enum":
                         t[e] = 0;
                         break;
-                    case 'map':
+                    case "map":
                         t[e] = {};
                 }
     }

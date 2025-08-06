@@ -1,4 +1,4 @@
-(n.d(t, { n: () => v }), n(388685));
+n.d(t, { n: () => v }), n(388685);
 var l = n(255367),
     r = n(73800),
     a = n(442837),
@@ -17,7 +17,15 @@ var l = n(255367),
     b = n(388032),
     y = n(691176);
 function v(e) {
-    let { message: t, forwardOptions: n, sendLabel: v, canSend: x, selectedDestinations: E, isSending: C, onSend: S } = e,
+    let {
+            message: t,
+            forwardOptions: n,
+            sendLabel: v,
+            canSend: x,
+            selectedDestinations: E,
+            isSending: C,
+            onSend: S,
+        } = e,
         O = (0, h.Z)(),
         P = (0, m.nm)(E),
         w = (0, m.y)(E),
@@ -30,43 +38,43 @@ function v(e) {
         k = r.useCallback(() => A(!1), []),
         D = r.useCallback(
             (e, n, l) => {
-                (I({
+                I({
                     textValue: n,
-                    richValue: l
+                    richValue: l,
                 }),
                     o.Z.saveDraft(t.channel_id, n, f.d.ForwardContextMessage),
-                    Z(t.channel_id, t.id));
+                    Z(t.channel_id, t.id);
             },
-            [Z, t]
+            [Z, t],
         ),
         U = r.useCallback(() => {
-            (o.Z.clearDraft(t.channel_id, f.d.ForwardContextMessage), S(T));
+            o.Z.clearDraft(t.channel_id, f.d.ForwardContextMessage), S(T);
         }, [t.channel_id, S, T]),
         W = r.useCallback(
             () => (
                 !x || T.length > O || U(),
                 Promise.resolve({
                     shouldClear: !1,
-                    shouldRefocus: !0
+                    shouldRefocus: !0,
                 })
             ),
-            [U, T, O, x]
+            [U, T, O, x],
         );
     return (0, l.jsxs)(s.mzw, {
         className: y.footerWithMessage,
         children: [
-            (0, l.jsx)('div', {
+            (0, l.jsx)("div", {
                 className: y.forwardPreviewWrapper,
                 children: (0, l.jsx)(p.O, {
                     message: t,
                     forwardOptions: n,
-                    channel: P
-                })
+                    channel: P,
+                }),
             }),
-            (0, l.jsxs)('div', {
+            (0, l.jsxs)("div", {
                 className: y.footerWarningWrapper,
                 children: [
-                    (0, l.jsxs)('div', {
+                    (0, l.jsxs)("div", {
                         className: y.footerButtons,
                         children: [
                             (0, l.jsx)(d.ZP, {
@@ -82,31 +90,31 @@ function v(e) {
                                 focused: R,
                                 onSubmit: W,
                                 parentModalKey: _.so,
-                                autoCompletePosition: 'bottom',
+                                autoCompletePosition: "bottom",
                                 emojiPickerCloseOnModalOuterClick: !0,
-                                disableThemedBackground: !0
+                                disableThemedBackground: !0,
                             }),
                             (0, l.jsx)(i.zx, {
                                 className: y.sendWithMessage,
                                 submitting: C,
                                 disabled: !x || T.length > O,
                                 onClick: U,
-                                children: v
-                            })
-                        ]
+                                children: v,
+                            }),
+                        ],
                     }),
                     w.length > 0 &&
                         T.length > 0 &&
                         (0, l.jsx)(s.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'text-feedback-warning',
+                            variant: "text-sm/normal",
+                            color: "text-feedback-warning",
                             children: b.intl.format(b.t.xJFpio, {
                                 count: w.length,
-                                channelNames: w.join(', ')
-                            })
-                        })
-                ]
-            })
-        ]
+                                channelNames: w.join(", "),
+                            }),
+                        }),
+                ],
+            }),
+        ],
     });
 }

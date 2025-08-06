@@ -1,1 +1,1 @@
-t.exports = { tags: 'tags__0b5a5' };
+t.exports = { tags: "tags__0b5a5" };

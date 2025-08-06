@@ -1,4 +1,4 @@
-(n.d(t, { S: () => o }), n(388685));
+n.d(t, { S: () => o }), n(388685);
 var r = n(73800);
 function i(e, t, n) {
     return (
@@ -7,7 +7,7 @@ function i(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,12 +18,12 @@ class o extends r.PureComponent {
         return { error: e };
     }
     componentDidCatch(e, t) {
-        console.error('ErrorBoundary caught an error', e, t);
+        console.error("ErrorBoundary caught an error", e, t);
     }
     render() {
         return null != this.state.error ? this.props.fallback : this.props.children;
     }
     constructor(...e) {
-        (super(...e), i(this, 'state', { error: null }));
+        super(...e), i(this, "state", { error: null });
     }
 }

@@ -1,47 +1,51 @@
 e.exports = function (e) {
-    let t = 'true false yes no null',
+    let t = "true false yes no null",
         n = "[\\w#;/?:@&=+$,.~*'()[\\]]+",
         r = {
-            className: 'attr',
-            variants: [{ begin: /[\w*@][\w*@ :()\./-]*:(?=[ \t]|$)/ }, { begin: /"[\w*@][\w*@ :()\./-]*":(?=[ \t]|$)/ }, { begin: /'[\w*@][\w*@ :()\./-]*':(?=[ \t]|$)/ }]
+            className: "attr",
+            variants: [
+                { begin: /[\w*@][\w*@ :()\./-]*:(?=[ \t]|$)/ },
+                { begin: /"[\w*@][\w*@ :()\./-]*":(?=[ \t]|$)/ },
+                { begin: /'[\w*@][\w*@ :()\./-]*':(?=[ \t]|$)/ },
+            ],
         },
         i = {
-            className: 'template-variable',
+            className: "template-variable",
             variants: [
                 {
                     begin: /\{\{/,
-                    end: /\}\}/
+                    end: /\}\}/,
                 },
                 {
                     begin: /%\{/,
-                    end: /\}/
-                }
-            ]
+                    end: /\}/,
+                },
+            ],
         },
         o = {
-            className: 'string',
+            className: "string",
             relevance: 0,
             begin: /'/,
             end: /'/,
             contains: [
                 {
                     match: /''/,
-                    scope: 'char.escape',
-                    relevance: 0
-                }
-            ]
+                    scope: "char.escape",
+                    relevance: 0,
+                },
+            ],
         },
         a = {
-            className: 'string',
+            className: "string",
             relevance: 0,
             variants: [
                 {
                     begin: /"/,
-                    end: /"/
+                    end: /"/,
                 },
-                { begin: /\S+/ }
+                { begin: /\S+/ },
             ],
-            contains: [e.BACKSLASH_ESCAPE, i]
+            contains: [e.BACKSLASH_ESCAPE, i],
         },
         s = e.inherit(a, {
             variants: [
@@ -51,105 +55,105 @@ e.exports = function (e) {
                     contains: [
                         {
                             begin: /''/,
-                            relevance: 0
-                        }
-                    ]
+                            relevance: 0,
+                        },
+                    ],
                 },
                 {
                     begin: /"/,
-                    end: /"/
+                    end: /"/,
                 },
-                { begin: /[^\s,{}[\]]+/ }
-            ]
+                { begin: /[^\s,{}[\]]+/ },
+            ],
         }),
         l = {
-            className: 'number',
-            begin: '\\b[0-9]{4}(-[0-9][0-9]){0,2}([Tt \\t][0-9][0-9]?(:[0-9][0-9]){2})?(\\.[0-9]*)?([ \\t])*(Z|[-+][0-9][0-9]?(:[0-9][0-9])?)?\\b'
+            className: "number",
+            begin: "\\b[0-9]{4}(-[0-9][0-9]){0,2}([Tt \\t][0-9][0-9]?(:[0-9][0-9]){2})?(\\.[0-9]*)?([ \\t])*(Z|[-+][0-9][0-9]?(:[0-9][0-9])?)?\\b",
         },
         c = {
-            end: ',',
+            end: ",",
             endsWithParent: !0,
             excludeEnd: !0,
             keywords: t,
-            relevance: 0
+            relevance: 0,
         },
         u = {
             begin: /\{/,
             end: /\}/,
             contains: [c],
-            illegal: '\\n',
-            relevance: 0
+            illegal: "\\n",
+            relevance: 0,
         },
         d = {
-            begin: '\\[',
-            end: '\\]',
+            begin: "\\[",
+            end: "\\]",
             contains: [c],
-            illegal: '\\n',
-            relevance: 0
+            illegal: "\\n",
+            relevance: 0,
         },
         f = [
             r,
             {
-                className: 'meta',
-                begin: '^---\\s*$',
-                relevance: 10
+                className: "meta",
+                begin: "^---\\s*$",
+                relevance: 10,
             },
             {
-                className: 'string',
-                begin: '[\\|>]([1-9]?[+-])?[ ]*\\n( +)[^ ][^\\n]*\\n(\\2[^\\n]+\\n?)*'
+                className: "string",
+                begin: "[\\|>]([1-9]?[+-])?[ ]*\\n( +)[^ ][^\\n]*\\n(\\2[^\\n]+\\n?)*",
             },
             {
-                begin: '<%[%=-]?',
-                end: '[%-]?%>',
-                subLanguage: 'ruby',
+                begin: "<%[%=-]?",
+                end: "[%-]?%>",
+                subLanguage: "ruby",
                 excludeBegin: !0,
                 excludeEnd: !0,
-                relevance: 0
+                relevance: 0,
             },
             {
-                className: 'type',
-                begin: '!\\w+!' + n
+                className: "type",
+                begin: "!\\w+!" + n,
             },
             {
-                className: 'type',
-                begin: '!<' + n + '>'
+                className: "type",
+                begin: "!<" + n + ">",
             },
             {
-                className: 'type',
-                begin: '!' + n
+                className: "type",
+                begin: "!" + n,
             },
             {
-                className: 'type',
-                begin: '!!' + n
+                className: "type",
+                begin: "!!" + n,
             },
             {
-                className: 'meta',
-                begin: '&' + e.UNDERSCORE_IDENT_RE + '$'
+                className: "meta",
+                begin: "&" + e.UNDERSCORE_IDENT_RE + "$",
             },
             {
-                className: 'meta',
-                begin: '\\*' + e.UNDERSCORE_IDENT_RE + '$'
+                className: "meta",
+                begin: "\\*" + e.UNDERSCORE_IDENT_RE + "$",
             },
             {
-                className: 'bullet',
-                begin: '-(?=[ ]|$)',
-                relevance: 0
+                className: "bullet",
+                begin: "-(?=[ ]|$)",
+                relevance: 0,
             },
             e.HASH_COMMENT_MODE,
             {
                 beginKeywords: t,
-                keywords: { literal: t }
+                keywords: { literal: t },
             },
             l,
             {
-                className: 'number',
-                begin: e.C_NUMBER_RE + '\\b',
-                relevance: 0
+                className: "number",
+                begin: e.C_NUMBER_RE + "\\b",
+                relevance: 0,
             },
             u,
             d,
             o,
-            a
+            a,
         ],
         _ = [...f];
     return (
@@ -157,10 +161,10 @@ e.exports = function (e) {
         _.push(s),
         (c.contains = _),
         {
-            name: 'YAML',
+            name: "YAML",
             case_insensitive: !0,
-            aliases: ['yml'],
-            contains: f
+            aliases: ["yml"],
+            contains: f,
         }
     );
 };

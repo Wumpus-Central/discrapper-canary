@@ -14,7 +14,7 @@ function g(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([u.Z], () => u.Z.getGuild(t));
     return (
-        l()(null != n, 'Guild not found'),
+        l()(null != n, "Guild not found"),
         (0, r.jsxs)(o.AL, {
             guildId: t,
             children: [
@@ -22,9 +22,9 @@ function g(e) {
                 (0, r.jsx)(s.LZC, { size: 32 }),
                 (0, r.jsx)(d.Z, {
                     guild: n,
-                    isGuildProducts: !0
-                })
-            ]
+                    isGuildProducts: !0,
+                }),
+            ],
         })
     );
 }

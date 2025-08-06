@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Zq: () => h,
     _8: () => u,
-    s$: () => d
+    s$: () => d,
 }),
-    n(388685));
+    n(388685);
 var r = n(97519),
     i = n(286379),
     l = n(731965),
@@ -12,24 +12,24 @@ function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -57,7 +57,13 @@ function u() {
 }
 function d(e) {
     (0, l.j)(() => {
-        c.setState((t) => (null == e ? t : e in t.captchaServeVolume ? { captchaServeVolume: a(o({}, t.captchaServeVolume), { [e]: t.captchaServeVolume[e] + 1 }) } : { captchaServeVolume: a(o({}, t.captchaServeVolume), { [e]: 1 }) }));
+        c.setState((t) =>
+            null == e
+                ? t
+                : e in t.captchaServeVolume
+                  ? { captchaServeVolume: a(o({}, t.captchaServeVolume), { [e]: t.captchaServeVolume[e] + 1 }) }
+                  : { captchaServeVolume: a(o({}, t.captchaServeVolume), { [e]: 1 }) },
+        );
     });
 }
 function h() {
@@ -65,10 +71,10 @@ function h() {
         s.Z.distribution(
             {
                 name: i.V.CAPTCHA_SERVE_VOLUME_DISTRIBUTION,
-                tags: ['user_flow:'.concat(e)]
+                tags: ["user_flow:".concat(e)],
             },
             t,
-            !0
+            !0,
         );
     (0, l.j)(() => c.setState({ captchaServeVolume: {} }));
 }

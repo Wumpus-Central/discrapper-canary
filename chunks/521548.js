@@ -2,7 +2,7 @@ function r(e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
     if (e === t) return !0;
-    if ('object' != typeof e || !e || 'object' != typeof t || !t) return !1;
+    if ("object" != typeof e || !e || "object" != typeof t || !t) return !1;
     var o = Object.keys(e),
         a = Object.keys(t);
     if (o.length !== a.length) return !1;

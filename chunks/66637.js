@@ -7,17 +7,17 @@ var r = n(255367),
     o = n(66418);
 let c = a.memo(
     a.forwardRef(function (e, t) {
-        let { onClick: n, onContextMenu: a, className: i, disabled: c, children: d, 'aria-label': u } = e;
+        let { onClick: n, onContextMenu: a, className: i, disabled: c, children: d, "aria-label": u } = e;
         return (0, r.jsx)(s.kL8, {
             ref: t,
             className: l()(o.card, i, {
                 [o.clickable]: null != n,
-                [o.disabled]: c
+                [o.disabled]: c,
             }),
             onContextMenu: a,
             onClick: c ? void 0 : n,
-            'aria-label': u,
-            children: d
+            "aria-label": u,
+            children: d,
         });
-    })
+    }),
 );

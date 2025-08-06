@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -21,27 +21,27 @@ function _(e) {
         channelId: n.id,
         className: f.container,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: f.iconWrapper,
                 children: (0, r.jsx)(m, {
                     className: f.icon,
-                    strokeWidth: 1.75
-                })
+                    strokeWidth: 1.75,
+                }),
             }),
             (0, r.jsx)(u.Ot, {
                 className: f.header,
-                children: n.name
+                children: n.name,
             }),
             null == p &&
                 (0, r.jsx)(o.Text, {
-                    variant: 'text-md/normal',
-                    color: 'header-secondary',
-                    children: d.intl.string(d.t.mE3KJC)
+                    variant: "text-md/normal",
+                    color: "header-secondary",
+                    children: d.intl.string(d.t.mE3KJC),
                 }),
             (0, r.jsx)(c.Z, {
                 appliedTags: h,
-                wrap: n.isModeratorReportChannel()
-            })
-        ]
+                wrap: n.isModeratorReportChannel(),
+            }),
+        ],
     });
 }

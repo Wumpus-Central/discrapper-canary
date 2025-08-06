@@ -1,5 +1,5 @@
 function r(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 var i = n(359282),
     o = n(720379),
@@ -15,12 +15,12 @@ var i = n(359282),
         characterList: s(),
         data: l(),
         depth: 0,
-        key: '',
-        text: '',
-        type: 'unstyled',
+        key: "",
+        text: "",
+        type: "unstyled",
         children: s(),
         prevSibling: null,
-        nextSibling: null
+        nextSibling: null,
     },
     p = function (e, t) {
         return e.getStyle() === t.getStyle();
@@ -32,7 +32,7 @@ var i = n(359282),
         if (!e) return e;
         var t = e.characterList,
             n = e.text;
-        return (n && !t && (e.characterList = s(d(i.EMPTY, n.length))), e);
+        return n && !t && (e.characterList = s(d(i.EMPTY, n.length))), e;
     };
 e.exports = (function (e) {
     function t() {
@@ -43,25 +43,25 @@ e.exports = (function (e) {
     var n = t.prototype;
     return (
         (n.getKey = function () {
-            return this.get('key');
+            return this.get("key");
         }),
         (n.getType = function () {
-            return this.get('type');
+            return this.get("type");
         }),
         (n.getText = function () {
-            return this.get('text');
+            return this.get("text");
         }),
         (n.getCharacterList = function () {
-            return this.get('characterList');
+            return this.get("characterList");
         }),
         (n.getLength = function () {
             return this.getText().length;
         }),
         (n.getDepth = function () {
-            return this.get('depth');
+            return this.get("depth");
         }),
         (n.getData = function () {
-            return this.get('data');
+            return this.get("data");
         }),
         (n.getInlineStyleAt = function (e) {
             var t = this.getCharacterList().get(e);
@@ -72,16 +72,16 @@ e.exports = (function (e) {
             return t ? t.getEntity() : null;
         }),
         (n.getChildKeys = function () {
-            return this.get('children');
+            return this.get("children");
         }),
         (n.getParentKey = function () {
-            return this.get('parent');
+            return this.get("parent");
         }),
         (n.getPrevSiblingKey = function () {
-            return this.get('prevSibling');
+            return this.get("prevSibling");
         }),
         (n.getNextSiblingKey = function () {
-            return this.get('nextSibling');
+            return this.get("nextSibling");
         }),
         (n.findStyleRanges = function (e, t) {
             o(this.getCharacterList(), p, e, t);

@@ -16,12 +16,12 @@ e.exports = function (e, t, n) {
                         return t(e);
                     }),
                     index: ++u,
-                    value: e
+                    value: e,
                 };
             }),
             function (e, t) {
                 return l(e, t, n);
-            }
+            },
         )
     );
 };

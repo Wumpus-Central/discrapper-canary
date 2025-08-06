@@ -1,4 +1,4 @@
-(n.d(t, { q: () => s }), n(291175), n(848572));
+n.d(t, { q: () => s }), n(291175), n(848572);
 var i = n(474936),
     r = n(388032);
 let s = (e, t) => {
@@ -13,7 +13,7 @@ let s = (e, t) => {
         case i.VU.PREMIUM_TENURE_60_MONTH:
             return r.intl.formatToPlainString(r.t.IfYQVF, { years: t / 12 });
         case i.VU.PREMIUM_TENURE_72_MONTH:
-            return r.intl.formatToPlainString(r.t.IfYQVF, { years: '6+' });
+            return r.intl.formatToPlainString(r.t.IfYQVF, { years: "6+" });
         default:
             return null;
     }

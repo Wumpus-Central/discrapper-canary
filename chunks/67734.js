@@ -19,21 +19,21 @@ function p(e) {
                 let { imageUri: n, file: r } = e;
                 (0, o.f4)(t, h, n, r);
             },
-            [h, t]
+            [h, t],
         ),
         b = i.useCallback(
             (e) => {
-                (e.preventDefault(),
+                e.preventDefault(),
                     e.stopPropagation(),
                     (0, o.E6)({
                         guild: t,
                         analyticsLocations: h,
                         analyticsSection: c.jXE.GUILD_BANNER,
                         analyticsObject: c.qAy.BUTTON_CTA,
-                        perks: (0, d.XO)()
-                    }));
+                        perks: (0, d.XO)(),
+                    });
             },
-            [h, t]
+            [h, t],
         );
     return f
         ? (0, r.jsx)(l.zx, {
@@ -47,14 +47,14 @@ function p(e) {
                       onComplete: x,
                       analyticsLocation: {
                           page: c.ZY5.GUILD_SETTINGS,
-                          section: c.jXE.GUILD_BANNER
+                          section: c.jXE.GUILD_BANNER,
                       },
-                      analyticsLocations: h
+                      analyticsLocations: h,
                   }),
-              children: g.intl.string(g.t.yG2pUl)
+              children: g.intl.string(g.t.yG2pUl),
           })
         : (0, r.jsx)(s.P, {
               className: p,
-              onClick: b
+              onClick: b,
           });
 }

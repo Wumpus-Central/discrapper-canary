@@ -13,24 +13,24 @@ n.d(t, {
     ut: () => u,
     we: () => r,
     xs: () => g,
-    zV: () => d
+    zV: () => d,
 });
-var r = 'top',
-    i = 'bottom',
-    o = 'right',
-    a = 'left',
-    s = 'auto',
+var r = "top",
+    i = "bottom",
+    o = "right",
+    a = "left",
+    s = "auto",
     l = [r, i, o, a],
-    c = 'start',
-    u = 'end',
-    d = 'clippingParents',
-    f = 'viewport',
-    _ = 'popper',
-    p = 'reference',
+    c = "start",
+    u = "end",
+    d = "clippingParents",
+    f = "viewport",
+    _ = "popper",
+    p = "reference",
     h = l.reduce(function (e, t) {
-        return e.concat([t + '-' + c, t + '-' + u]);
+        return e.concat([t + "-" + c, t + "-" + u]);
     }, []),
     m = [].concat(l, [s]).reduce(function (e, t) {
-        return e.concat([t, t + '-' + c, t + '-' + u]);
+        return e.concat([t, t + "-" + c, t + "-" + u]);
     }, []),
-    g = ['beforeRead', 'read', 'afterRead', 'beforeMain', 'main', 'afterMain', 'beforeWrite', 'write', 'afterWrite'];
+    g = ["beforeRead", "read", "afterRead", "beforeMain", "main", "afterMain", "beforeWrite", "write", "afterWrite"];

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(35282), n(539854), n(583741));
+n.d(t, { Z: () => A }), n(35282), n(539854), n(583741);
 var r = n(765085),
     i = n(937490),
     o = n.n(i),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -65,7 +65,8 @@ function p(e, t) {
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,28 +76,34 @@ function h(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e) {
     let t = Object.keys(e)[0];
-    return ''.concat(t, '(').concat(e[t], ')');
+    return "".concat(t, "(").concat(e[t], ")");
 }
 let g = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
 function E(e) {
     let t = e.match(g);
     return (
         null != t &&
-            (e = 'rgba('
-                .concat(0 | t[1], ', ')
-                .concat(0 | t[2], ', ')
-                .concat(0 | t[3], ', ')
-                .concat(t[4], ')')),
+            (e = "rgba("
+                .concat(0 | t[1], ", ")
+                .concat(0 | t[2], ", ")
+                .concat(0 | t[3], ", ")
+                .concat(t[4], ")")),
         e
     );
 }
 function b(e) {
-    return (e && (e.transform && (e.transform = e.WebkitTransform = e.MozTransform = e.transform.map(m).join(' ')), e.color && (e.color = E(e.color)), e.backgroundColor && (e.backgroundColor = E(e.backgroundColor))), e);
+    return (
+        e &&
+            (e.transform && (e.transform = e.WebkitTransform = e.MozTransform = e.transform.map(m).join(" ")),
+            e.color && (e.color = E(e.color)),
+            e.backgroundColor && (e.backgroundColor = E(e.backgroundColor))),
+        e
+    );
 }
 function y(e, t, n) {
     if (e.setNativeProps) e.setNativeProps(t);
@@ -106,15 +113,41 @@ function y(e, t, n) {
     }
 }
 function O(e) {
-    return ((e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e);
+    return (e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e;
 }
 function v(e, t, n) {
     return void 0 !== t && void 0 != n ? s()(t, n) : e;
 }
 function I(e, t) {
     let n,
-        { toValueMin: i, toValueMax: o, tension: a = 0, friction: s = 0, loop: l, reverse: c, invert: u, callback: f, type: h = 'spring', shouldLoop: m, durationMin: g, durationMax: E } = t,
-        b = p(t, ['toValueMin', 'toValueMax', 'tension', 'friction', 'loop', 'reverse', 'invert', 'callback', 'type', 'shouldLoop', 'durationMin', 'durationMax']),
+        {
+            toValueMin: i,
+            toValueMax: o,
+            tension: a = 0,
+            friction: s = 0,
+            loop: l,
+            reverse: c,
+            invert: u,
+            callback: f,
+            type: h = "spring",
+            shouldLoop: m,
+            durationMin: g,
+            durationMax: E,
+        } = t,
+        b = p(t, [
+            "toValueMin",
+            "toValueMax",
+            "tension",
+            "friction",
+            "loop",
+            "reverse",
+            "invert",
+            "callback",
+            "type",
+            "shouldLoop",
+            "durationMin",
+            "durationMax",
+        ]),
         y = e._value,
         O = v(t.duration, g, E),
         T = v(t.toValue, i, o),
@@ -124,22 +157,22 @@ function I(e, t) {
                 toValue: T,
                 tension: a,
                 friction: s,
-                duration: O
-            })
+                duration: O,
+            }),
         ),
         A = S;
     if (c || u) {
         let i = v(t.duration, g, E);
-        ((n = r[h](
+        (n = r[h](
             e,
             _(d({}, b), {
                 toValue: c ? y : -T,
                 tension: a,
                 friction: s,
-                duration: i
-            })
+                duration: i,
+            }),
         )),
-            (A = r.sequence([S, n])));
+            (A = r.sequence([S, n]));
     }
     l
         ? A.start(() => {
@@ -151,27 +184,27 @@ function T(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     return e.interpolate({
         inputRange: [0, 1],
-        outputRange: n
+        outputRange: n,
     });
 }
 r.inject.ApplyAnimatedValues(y, (e) => e);
-let S = { CLAMP: 'clamp' },
+let S = { CLAMP: "clamp" },
     A = _(d({}, r), {
         Easing: o(),
         accelerate: O,
         animate: I,
         interpolate: T,
         Extrapolate: S,
-        div: r.createAnimatedComponent('div'),
-        span: r.createAnimatedComponent('span'),
-        img: r.createAnimatedComponent('img'),
-        a: r.createAnimatedComponent('a'),
-        form: r.createAnimatedComponent('form'),
-        ul: r.createAnimatedComponent('ul'),
-        li: r.createAnimatedComponent('li'),
-        g: r.createAnimatedComponent('g'),
-        use: r.createAnimatedComponent('use'),
-        path: r.createAnimatedComponent('path'),
-        section: r.createAnimatedComponent('section'),
-        video: r.createAnimatedComponent('video')
+        div: r.createAnimatedComponent("div"),
+        span: r.createAnimatedComponent("span"),
+        img: r.createAnimatedComponent("img"),
+        a: r.createAnimatedComponent("a"),
+        form: r.createAnimatedComponent("form"),
+        ul: r.createAnimatedComponent("ul"),
+        li: r.createAnimatedComponent("li"),
+        g: r.createAnimatedComponent("g"),
+        use: r.createAnimatedComponent("use"),
+        path: r.createAnimatedComponent("path"),
+        section: r.createAnimatedComponent("section"),
+        video: r.createAnimatedComponent("video"),
     });

@@ -14,10 +14,10 @@ function d(e) {
     return __OVERLAY__ || (t !== s.I_8 && !n)
         ? null
         : (0, r.jsx)(l.sNh, {
-              id: 'go-to-original-guild',
+              id: "go-to-original-guild",
               label: u.intl.string(u.t.WYj55e),
               action: function () {
                   (0, c.XU)(e.guild_id, e.id);
-              }
+              },
           });
 }

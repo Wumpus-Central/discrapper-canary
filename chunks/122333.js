@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => w }), n(388685), n(583741));
+n.d(t, { Z: () => w }), n(388685), n(583741);
 var i = n(255367);
 n(73800);
 var l = n(481060),
@@ -30,24 +30,24 @@ function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -74,10 +74,10 @@ function Z() {
 }
 class x extends o.Z {
     _initialize() {
-        (a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('LOGOUT', Z));
+        a.Z.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), a.Z.subscribe("LOGOUT", Z);
     }
     _terminate() {
-        (a.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.unsubscribe('LOGOUT', Z));
+        a.Z.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), a.Z.unsubscribe("LOGOUT", Z);
     }
     handleConnectionOpen() {
         var e;
@@ -102,9 +102,9 @@ class x extends o.Z {
         }
         let x = () => 0 === m.Z.totalGuilds && !y.isPlatformEmbedded,
             w = s.bN();
-        ((e = [
+        (e = [
             {
-                key: 'Unified NUF Modal',
+                key: "Unified NUF Modal",
                 open: async function (e) {
                     let t = (e) => {
                         switch (e) {
@@ -137,54 +137,65 @@ class x extends o.Z {
                     };
                     r = await (0, l.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e('6583'), n.e('1337'), n.e('42483'), n.e('57015')]).then(n.bind(n, 599219));
+                            let { default: e } = await Promise.all([
+                                n.e("6583"),
+                                n.e("1337"),
+                                n.e("42483"),
+                                n.e("57015"),
+                            ]).then(n.bind(n, 599219));
                             return (n) => (0, i.jsx)(e, A(j({}, n), { onSlideChange: t }));
                         },
                         {
                             onCloseRequest: N.dG4,
                             onCloseCallback: e,
-                            modalKey: r
-                        }
+                            modalKey: r,
+                        },
                     );
                 },
-                predicate: () => x() && !T.a
+                predicate: () => x() && !T.a,
             },
             {
-                key: 'New User Age Gate',
+                key: "New User Age Gate",
                 open: c.i,
-                predicate: () => w && !x() && !T.a
+                predicate: () => w && !x() && !T.a,
             },
             {
-                key: 'Claim Account Modal',
+                key: "Claim Account Modal",
                 open: (e) => c.j(y.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
-                    return !o && null != O.default.getCurrentUser() && !(null == (e = O.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a && !(0, p.g)('new_user_manager');
-                }
+                    return (
+                        !o &&
+                        null != O.default.getCurrentUser() &&
+                        !(null == (e = O.default.getCurrentUser()) ? void 0 : e.isClaimed()) &&
+                        !T.a &&
+                        !(0, p.g)("new_user_manager")
+                    );
+                },
             },
             {
-                key: 'Verification Gate with Claim Account',
+                key: "Verification Gate with Claim Account",
                 open: (e) => (0, u.hk)(Z, null != e ? e : void 0),
                 predicate: () => {
                     var e;
                     return o && !(null == (e = O.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a;
-                }
+                },
             },
             {
-                key: 'Guild Welcome Modal',
+                key: "Guild Welcome Modal",
                 open: (e) =>
                     (0, l.ZDy)(
                         async () => {
-                            let { default: e } = await n.e('77578').then(n.bind(n, 184782));
+                            let { default: e } = await n.e("77578").then(n.bind(n, 184782));
                             return (t) => (0, i.jsx)(e, A(j({}, t), { guildId: Z }));
                         },
-                        { onCloseCallback: e }
+                        { onCloseCallback: e },
                     ),
-                predicate: () => null != Z && null != g.Z.get(Z) && g.Z.get(Z) !== g.a
-            }
+                predicate: () => null != Z && null != g.Z.get(Z) && g.Z.get(Z) !== g.a,
+            },
         ]),
             (t = () => {
-                (v.H(), h.Z.flowStep(P.MK.ANY, P.EW.NUF_COMPLETE, !0));
+                v.H(), h.Z.flowStep(P.MK.ANY, P.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;
@@ -192,7 +203,7 @@ class x extends o.Z {
                     e.predicate() ? e.open(n) : n();
                 };
             }),
-            t());
+            t();
     }
 }
 let w = new x();

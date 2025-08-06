@@ -1,25 +1,25 @@
 n.d(t, {
     W: () => a,
-    l: () => o
+    l: () => o,
 });
 var r = n(485386),
     i = n(388032);
 let o = (e) => {
         switch (e) {
-            case 'home':
-            case 'guide':
+            case "home":
+            case "guide":
                 return i.intl.string(i.t.VbpLyc);
-            case 'browse':
+            case "browse":
                 return i.intl.string(i.t.et6wam);
-            case 'customize':
+            case "customize":
                 return i.intl.string(i.t.h9mGOD);
-            case 'linked-roles':
+            case "linked-roles":
                 return i.intl.string(i.t.ghtnsr);
         }
         return null;
     },
     a = (e, t, n) => {
-        if ('linked-roles' === e) {
+        if ("linked-roles" === e) {
             var i;
             if (null == n) return null;
             let e = r.Z.getRole(n, t);

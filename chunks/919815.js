@@ -10,10 +10,10 @@ function c(e, t) {
     let n = e.id,
         c = (0, r.e7)([s.default], () => s.default.getGuildHasUnreadIgnoreMuted(n), [n]);
     return (0, i.jsx)(l.sNh, {
-        id: 'mark-guild-read',
+        id: "mark-guild-read",
         label: a.intl.string(a.t.e6RscX),
         icon: void 0,
         action: () => (0, o.Z)([n], t.section),
-        disabled: !c
+        disabled: !c,
     });
 }

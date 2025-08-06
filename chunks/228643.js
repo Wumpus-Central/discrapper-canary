@@ -1,7 +1,7 @@
 n.d(t, {
     L_: () => s,
     nj: () => c,
-    sE: () => a
+    sE: () => a,
 });
 var i = n(544891),
     r = n(570140),
@@ -11,25 +11,25 @@ function a(e, t) {
     i.tn
         .get({
             url: o.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
-            rejectWithError: !0
+            rejectWithError: !0,
         })
         .then((e) => {
             let n = [];
-            (e.body.length > 0 &&
+            e.body.length > 0 &&
                 (n = e.body.map((e) =>
                     e.map((e) => ({
                         connectionType: e.connection_type,
                         connectionMetadataField: e.connection_metadata_field,
                         applicationId: e.application_id,
                         operator: e.operator,
-                        value: e.value
-                    }))
+                        value: e.value,
+                    })),
                 )),
                 r.Z.dispatch({
-                    type: 'GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS',
+                    type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
                     roleId: t,
-                    roleConnectionConfigurations: n
-                }));
+                    roleConnectionConfigurations: n,
+                });
         })
         .catch(() => {});
 }
@@ -40,15 +40,15 @@ async function s(e, t, n) {
                 connection_metadata_field: e.connectionMetadataField,
                 application_id: e.applicationId,
                 operator: e.operator,
-                value: e.value
-            }))
+                value: e.value,
+            })),
         ),
         s = await i.tn
             .put({
                 url: o.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
                 body: 0 === a.length ? [] : a,
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             })
             .then((e) => {
                 let t = [];
@@ -60,31 +60,31 @@ async function s(e, t, n) {
                                 connectionMetadataField: e.connection_metadata_field,
                                 applicationId: e.application_id,
                                 operator: e.operator,
-                                value: e.value
-                            }))
+                                value: e.value,
+                            })),
                         )),
                     t
                 );
             }),
         c = await (0, l.H)(e, t, !1);
-    (null != c &&
+    null != c &&
         r.Z.dispatch({
-            type: 'GUILD_ROLE_MEMBER_COUNT_UPDATE',
+            type: "GUILD_ROLE_MEMBER_COUNT_UPDATE",
             guildId: e,
             roleId: t,
-            count: c
+            count: c,
         }),
         r.Z.dispatch({
-            type: 'GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS',
+            type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
             roleId: t,
-            roleConnectionConfigurations: s
-        }));
+            roleConnectionConfigurations: s,
+        });
 }
 async function c() {
     return (
         await i.tn.get({
             url: o.ANM.APPLICATION_USER_ROLE_CONNECTIONS,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     ).body;
 }

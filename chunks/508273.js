@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685));
+n.d(t, { Z: () => A }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -45,7 +45,7 @@ function A(e) {
             return A && (null == (e = f.current) ? void 0 : e.clientHeight) != null
                 ? {
                       height: p ? I : f.current.clientHeight + T + S,
-                      transition: P ? void 0 : 'height 0.2s ease'
+                      transition: P ? void 0 : "height 0.2s ease",
                   }
                 : {};
         }, [p, A, P]);
@@ -56,41 +56,41 @@ function A(e) {
               onClick: D,
               style: x,
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: v.cardHeightMeasure,
                       ref: f,
                       children: [
                           (0, r.jsx)(E.Z7, {
                               profile: w,
-                              className: v.banner
+                              className: v.banner,
                           }),
                           (0, r.jsx)(E.N3, { profile: w }),
                           (0, r.jsx)(g.Z, { profile: w }),
                           (0, r.jsx)(h.E, {
                               profile: w,
-                              className: v.mainContent
-                          })
-                      ]
+                              className: v.mainContent,
+                          }),
+                      ],
                   }),
                   A && !p
-                      ? (0, r.jsx)('div', {
+                      ? (0, r.jsx)("div", {
                             className: v.hideDetailsButtonContainer,
                             children: (0, r.jsx)(l.Avr, {
-                                textVariant: 'text-xs/medium',
-                                variant: 'secondary',
-                                size: 'sm',
+                                textVariant: "text-xs/medium",
+                                variant: "secondary",
+                                size: "sm",
                                 onClick: L,
-                                text: O.intl.string(O.t.xdCLeH)
-                            })
+                                text: O.intl.string(O.t.xdCLeH),
+                            }),
                         })
                       : null,
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: a()(v.footer, { [v.floatingFooter]: A }),
                       children: [
-                          A && p ? (0, r.jsx)('div', { className: v.gradient }) : null,
-                          (0, r.jsx)('div', {
+                          A && p ? (0, r.jsx)("div", { className: v.gradient }) : null,
+                          (0, r.jsx)("div", {
                               className: a()(v.footerContent, { [v.collapsedFooterContent]: A && p }),
-                              children: (0, r.jsx)('div', {
+                              children: (0, r.jsx)("div", {
                                   className: v.buttonContainer,
                                   children: (0, r.jsx)(N, {
                                       invite: t,
@@ -99,29 +99,37 @@ function A(e) {
                                       message: o,
                                       submitting: R,
                                       onTransitionToInviteChannel: c,
-                                      onAcceptInstantInvite: d
-                                  })
-                              })
-                          })
-                      ]
-                  })
-              ]
+                                      onAcceptInstantInvite: d,
+                                  }),
+                              }),
+                          }),
+                      ],
+                  }),
+              ],
           });
 }
 function N(e) {
-    let { invite: t, profile: n, isMemberOfGuild: o, message: a, submitting: s, onTransitionToInviteChannel: l, onAcceptInstantInvite: u } = e,
+    let {
+            invite: t,
+            profile: n,
+            isMemberOfGuild: o,
+            message: a,
+            submitting: s,
+            onTransitionToInviteChannel: l,
+            onAcceptInstantInvite: u,
+        } = e,
         { guildId: _, ctaType: h } = (0, p.ZP)(n, p.F3.INVITE),
         { analyticsLocations: g } = (0, f.ZP)(d.Z.INVITE_EMBED),
         E = i.useCallback(() => {
-            let e = o ? 'transition' : 'accept';
+            let e = o ? "transition" : "accept";
             (0, c.r$)(
                 {
                     invite: t,
                     action: e,
                     inviter_id: a.author.id,
-                    invite_message_id: a.id
+                    invite_message_id: a.id,
                 },
-                g
+                g,
             );
         }, [t, a, g, o]);
     return null == h
@@ -133,6 +141,6 @@ function N(e) {
               onGoToGuild: l,
               onAcceptInvite: u,
               onStartApplication: u,
-              onComplete: E
+              onComplete: E,
           });
 }

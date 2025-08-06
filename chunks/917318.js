@@ -13,11 +13,11 @@ var i = n(275726),
 let _ = {
         [i.u.REPORT_TO_MOD_BAN_USER]: () => d.default.komFTk,
         [i.u.REPORT_TO_MOD_KICK_USER]: () => d.default.FAJmJS,
-        [i.u.REPORT_TO_MOD_TIMEOUT_USER]: () => d.default['90r/sb']
+        [i.u.REPORT_TO_MOD_TIMEOUT_USER]: () => d.default["90r/sb"],
     },
     p = {
-        [i.u.REPORT_TO_MOD_DELETED_MESSAGE]: () => d.default['4023i4'],
-        [i.u.REPORT_TO_MOD_CLOSED_REPORT]: () => d.default.UE81zc
+        [i.u.REPORT_TO_MOD_DELETED_MESSAGE]: () => d.default["4023i4"],
+        [i.u.REPORT_TO_MOD_CLOSED_REPORT]: () => d.default.UE81zc,
     };
 function h(e) {
     let { type: t } = e,
@@ -40,8 +40,8 @@ function h(e) {
     }
     return null != n
         ? (0, r.jsx)(n, {
-              size: 'refresh_sm',
-              color: 'currentColor'
+              size: "refresh_sm",
+              color: "currentColor",
           })
         : null;
 }
@@ -57,14 +57,14 @@ function m(e) {
             user: d,
             channelId: E,
             guildId: i.guild_id,
-            messageId: n.id
+            messageId: n.id,
         })(y),
         v = (0, s.Sw)(b, i),
         I = (0, l.l)({
             user: b,
             channelId: E,
             guildId: i.guild_id,
-            messageId: n.id
+            messageId: n.id,
         })(v),
         T = null != (t = _[m]) ? t : null;
     if (null == T) return null;
@@ -72,13 +72,13 @@ function m(e) {
         actorName: g.nick,
         actorHook: O,
         targetName: null == v ? void 0 : v.nick,
-        targetHook: I
+        targetHook: I,
     });
     return (0, r.jsx)(c.Z, {
         iconNode: (0, r.jsx)(h, { type: m }),
         timestamp: n.timestamp,
         compact: a,
-        children: S
+        children: S,
     });
 }
 function g(e) {
@@ -92,19 +92,19 @@ function g(e) {
             user: a,
             channelId: _,
             guildId: i.guild_id,
-            messageId: n.id
+            messageId: n.id,
         })(m),
         E = null != (t = p[u]) ? t : null;
     if (null == E) return null;
     let b = f.intl.format(E(), {
         actorName: d.nick,
-        actorHook: g
+        actorHook: g,
     });
     return (0, r.jsx)(c.Z, {
         iconNode: (0, r.jsx)(h, { type: u }),
         timestamp: n.timestamp,
         compact: o,
-        children: b
+        children: b,
     });
 }
 function E(e) {
@@ -114,11 +114,11 @@ function E(e) {
         ? (0, r.jsx)(m, {
               message: t,
               channel: n,
-              compact: o
+              compact: o,
           })
         : (0, r.jsx)(g, {
               message: t,
               channel: n,
-              compact: o
+              compact: o,
           });
 }

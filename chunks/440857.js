@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(692547),
@@ -21,24 +21,24 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -68,7 +68,7 @@ function O(e) {
         N = async (e, t, n, r) => {
             try {
                 let l = await u.Z.banMultipleUsers(e, t, n, r);
-                ((0, c.showToast)((0, c.createToast)(g.intl.string(g.t.AsCe5O), c.ToastType.SUCCESS)),
+                (0, c.showToast)((0, c.createToast)(g.intl.string(g.t.AsCe5O), c.ToastType.SUCCESS)),
                     b.default.track(
                         j.rMx.BULK_MODERATION_ACTION_COMPLETED,
                         y(v({}, (0, C.hH)(e)), {
@@ -76,9 +76,9 @@ function O(e) {
                             target_user_ids: [...H],
                             mod_user_id: m.default.getId(),
                             successful_user_ids: l.body.banned_users,
-                            location
-                        })
-                    ));
+                            location,
+                        }),
+                    );
             } catch (e) {
                 (0, c.showToast)((0, c.createToast)(g.intl.string(g.t.mICAWV), c.ToastType.FAILURE));
             }
@@ -87,62 +87,62 @@ function O(e) {
         S = l.useCallback(() => {
             _();
         }, [_]),
-        Z = (0, r.jsxs)('span', {
+        Z = (0, r.jsxs)("span", {
             className: x.messageContainer,
             children: [
                 (0, r.jsx)(c.tBG, {
-                    size: 'custom',
+                    size: "custom",
                     width: 24,
                     height: 24,
-                    color: (0, a.d)(o.Z.unsafe_rawColors.PRIMARY_500).hex()
+                    color: (0, a.d)(o.Z.unsafe_rawColors.PRIMARY_500).hex(),
                 }),
                 (0, r.jsx)(c.Text, {
-                    variant: 'heading-md/bold',
-                    color: 'text-default',
-                    children: g.intl.format(g.t.TstoSU, { count: H.size })
+                    variant: "heading-md/bold",
+                    color: "text-default",
+                    children: g.intl.format(g.t.TstoSU, { count: H.size }),
                 }),
                 (0, r.jsx)(c.Avr, {
                     text: g.intl.string(g.t.yW6ZdH),
-                    onClick: S
-                })
-            ]
+                    onClick: S,
+                }),
+            ],
         }),
-        D = (0, r.jsxs)('span', {
+        D = (0, r.jsxs)("span", {
             className: x.buttonContainer,
             children: [
                 (0, r.jsx)(c.pgN, {
-                    size: 'custom',
-                    color: 'currentColor',
+                    size: "custom",
+                    color: "currentColor",
                     width: 20,
-                    height: 20
+                    height: 20,
                 }),
                 (0, r.jsx)(c.Text, {
-                    variant: 'text-sm/semibold',
-                    color: 'currentColor',
-                    children: g.intl.string(g.t['2a50fH'])
-                })
-            ]
+                    variant: "text-sm/semibold",
+                    color: "currentColor",
+                    children: g.intl.string(g.t["2a50fH"]),
+                }),
+            ],
         });
     return O
         ? (0, r.jsx)(i.W, {
-              component: 'div',
+              component: "div",
               className: x.saveNoticeContainer,
               children:
                   w &&
                   (0, r.jsx)(c.oXn, {
                       children: (0, r.jsx)(d.Z, {
                           onSave: () => {
-                              (b.default.track(
+                              b.default.track(
                                   j.rMx.BULK_MODERATION_ACTION_STARTED,
                                   y(v({}, (0, C.hH)(t)), {
                                       action_type: p.jQ.BAN,
                                       target_user_ids: [...H],
                                       mod_user_id: m.default.getId(),
-                                      location
-                                  })
+                                      location,
+                                  }),
                               ),
                                   (0, c.ZDy)(async () => {
-                                      let { default: e } = await n.e('43350').then(n.bind(n, 98746));
+                                      let { default: e } = await n.e("43350").then(n.bind(n, 98746));
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
@@ -150,16 +150,16 @@ function O(e) {
                                                   guildId: t,
                                                   canBulkBan: O,
                                                   userIds: H,
-                                                  onBanMultiple: N
-                                              })
+                                                  onBanMultiple: N,
+                                              }),
                                           );
-                                  }));
+                                  });
                           },
                           onSaveText: D,
                           onSaveButtonColor: s.Tt.RED,
-                          message: Z
-                      })
-                  })
+                          message: Z,
+                      }),
+                  }),
           })
         : null;
 }

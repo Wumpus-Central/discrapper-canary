@@ -17,48 +17,50 @@ function m(e) {
     var t, n;
     let { tooltipText: a, onClick: c } = e,
         { parentAnalyticsLocation: u } = (0, o.ZP)(),
-        { changeLeaveCallAndActivityIcons: d, isRTCIconRed: p } = (0, h.A)({ location: 'RTCConnectionDisconnectButton' }),
+        { changeLeaveCallAndActivityIcons: d, isRTCIconRed: p } = (0, h.A)({
+            location: "RTCConnectionDisconnectButton",
+        }),
         { events: m, Component: b } = (0, i.K)(),
         _ = d
             ? (0, r.jsx)(l.PBZ, {
                   color: p ? l.TVs.colors.STATUS_DANGER : void 0,
-                  size: 'refresh_sm'
+                  size: "refresh_sm",
               })
-            : (0, r.jsx)(b, { size: 'refresh_sm' });
+            : (0, r.jsx)(b, { size: "refresh_sm" });
     return (0, r.jsx)(
         f.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         var r;
-                        ((r = n[t]),
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = r));
-                    }));
+                                : (e[t] = r);
+                    });
             }
             return e;
         })(
             {
-                tooltipText: d ? g.intl.string(g.t['Hi1/aW']) : a,
+                tooltipText: d ? g.intl.string(g.t["Hi1/aW"]) : a,
                 onClick: () => {
-                    ((0, s.v)(u, s.d.DISCONNECT), c());
-                }
+                    (0, s.v)(u, s.d.DISCONNECT), c();
+                },
             },
-            m
+            m,
         )),
         (n = n = { icon: _ }),
         Object.getOwnPropertyDescriptors
@@ -73,7 +75,7 @@ function m(e) {
               })(Object(n)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
-        t)
+        t),
     );
 }
 function b(e) {
@@ -83,17 +85,17 @@ function b(e) {
         onClick: () => {
             if ((0, p.Z)(t)) return void (0, d.Us)(t);
             a.default.disconnect();
-        }
+        },
     });
 }
 function _(e) {
     let { channel: t } = e;
     return (0, r.jsx)(m, {
-        tooltipText: g.intl.string(g.t['6vrfgo']),
+        tooltipText: g.intl.string(g.t["6vrfgo"]),
         onClick: () => {
             if ((0, u.Z)(t)) return void (0, c.lC)(t);
             a.default.disconnect();
-        }
+        },
     });
 }
 function O(e) {

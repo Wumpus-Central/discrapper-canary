@@ -10,8 +10,8 @@ function o(t, e) {
     if (c <= 0) return;
     let h = {
             timestamp: (0, i.yW)(),
-            ...t
+            ...t,
         },
         u = a ? (0, n.Cf)(() => a(h, e)) : h;
-    null !== u && (s.emit && s.emit('beforeAddBreadcrumb', u, e), o.addBreadcrumb(u, c));
+    null !== u && (s.emit && s.emit("beforeAddBreadcrumb", u, e), o.addBreadcrumb(u, c));
 }

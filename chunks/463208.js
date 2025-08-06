@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,7 +67,8 @@ function m(e, t) {
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,7 +78,7 @@ function g(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function E(e, t) {
@@ -85,10 +86,11 @@ function E(e, t) {
     return (
         i.useEffect(() => {
             var r, i;
-            (null == (r = n.setHasValue) || r.call(n, (null != t && '' !== t) || (null != e && '' !== e)), null == (i = n.setIsFocused) || i.call(n, !1));
+            null == (r = n.setHasValue) || r.call(n, (null != t && "" !== t) || (null != e && "" !== e)),
+                null == (i = n.setIsFocused) || i.call(n, !1);
         }, []),
         i.useEffect(() => {
-            if (null != e && '' !== e) {
+            if (null != e && "" !== e) {
                 var t;
                 null == (t = n.setHasValue) || t.call(n, !0);
             }
@@ -98,8 +100,46 @@ function E(e, t) {
 }
 function b(e) {
     var t;
-    let { disabled: n = !1, editable: o, inputRef: l, focusProps: f, name: p = '', type: g = 'text', placeholder: b = '', maxLength: y = 999, value: O, defaultValue: v, minLength: I, error: T, defaultDirty: S = !1, leading: A, trailing: N, validateOn: C = 'change', size: R = 'md', fullWidth: P = !1 } = e,
-        w = m(e, ['disabled', 'editable', 'inputRef', 'focusProps', 'name', 'type', 'placeholder', 'maxLength', 'value', 'defaultValue', 'minLength', 'error', 'defaultDirty', 'leading', 'trailing', 'validateOn', 'size', 'fullWidth']),
+    let {
+            disabled: n = !1,
+            editable: o,
+            inputRef: l,
+            focusProps: f,
+            name: p = "",
+            type: g = "text",
+            placeholder: b = "",
+            maxLength: y = 999,
+            value: O,
+            defaultValue: v,
+            minLength: I,
+            error: T,
+            defaultDirty: S = !1,
+            leading: A,
+            trailing: N,
+            validateOn: C = "change",
+            size: R = "md",
+            fullWidth: P = !1,
+        } = e,
+        w = m(e, [
+            "disabled",
+            "editable",
+            "inputRef",
+            "focusProps",
+            "name",
+            "type",
+            "placeholder",
+            "maxLength",
+            "value",
+            "defaultValue",
+            "minLength",
+            "error",
+            "defaultDirty",
+            "leading",
+            "trailing",
+            "validateOn",
+            "size",
+            "fullWidth",
+        ]),
         D = E(O, v),
         L = (0, u.m)({
             validateOn: C,
@@ -107,21 +147,21 @@ function b(e) {
             value: O,
             minLength: I,
             maxLength: y,
-            defaultDirty: S
+            defaultDirty: S,
         }),
         { setShouldValidate: x } = L,
         M = (e) => {
             var t, n;
             let r = e.currentTarget.value;
-            (null == (t = w.onChange) || t.call(w, r, p), x(!0), null == (n = D.setHasValue) || n.call(D, '' !== r));
+            null == (t = w.onChange) || t.call(w, r, p), x(!0), null == (n = D.setHasValue) || n.call(D, "" !== r);
         },
         k = (e) => {
             var t, n;
-            (null == (t = w.onFocus) || t.call(w, e), null == (n = D.setIsFocused) || n.call(D, !0));
+            null == (t = w.onFocus) || t.call(w, e), null == (n = D.setIsFocused) || n.call(D, !0);
         },
         j = (e) => {
             var t, n;
-            (null == (t = w.onBlur) || t.call(w, e), null == (n = D.setIsFocused) || n.call(D, !1));
+            null == (t = w.onBlur) || t.call(w, e), null == (n = D.setIsFocused) || n.call(D, !1);
         },
         U = i.useRef(null),
         G = !1 === o || void 0;
@@ -131,7 +171,7 @@ function b(e) {
         readOnly: G,
         className: a()(d[R], {
             [d.leading]: null != A,
-            [d.trailing]: null != N
+            [d.trailing]: null != N,
         }),
         children: [
             A,
@@ -139,7 +179,7 @@ function b(e) {
                 s.t,
                 h(_({ ringTarget: U }, f), {
                     children: (0, r.jsx)(
-                        'input',
+                        "input",
                         h(
                             _(
                                 {
@@ -152,22 +192,22 @@ function b(e) {
                                     maxLength: y,
                                     minLength: I,
                                     value: O,
-                                    defaultValue: v
+                                    defaultValue: v,
                                 },
-                                w
+                                w,
                             ),
                             {
-                                'aria-labelledby': null != (t = w['aria-labelledby']) ? t : D.titleId,
+                                "aria-labelledby": null != (t = w["aria-labelledby"]) ? t : D.titleId,
                                 onChange: M,
                                 onBlur: j,
                                 onFocus: k,
-                                ref: l
-                            }
-                        )
-                    )
-                })
+                                ref: l,
+                            },
+                        ),
+                    ),
+                }),
             ),
-            N
-        ]
+            N,
+        ],
     });
 }

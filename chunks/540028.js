@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(539854), n(388685));
+n.d(t, { Z: () => S }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -84,9 +84,13 @@ function T(e) {
         if (e.pipWindow.component === m.NYg.ACTIVITY && null != b) {
             var t;
             let e = null == (t = d.Z.getApplication(b.applicationId)) ? void 0 : t.name;
-            return null == e ? E.intl.string(E.t['8raC1N']) : E.intl.formatToPlainString(E.t['a9+V+f'], { activityName: e });
+            return null == e
+                ? E.intl.string(E.t["8raC1N"])
+                : E.intl.formatToPlainString(E.t["a9+V+f"], { activityName: e });
         }
-        return null == e.participant || e.participant.type !== g.fO.STREAM ? E.intl.string(E.t['ng/Kws']) : E.intl.formatToPlainString(E.t.sqmFRk, { username: e.participant.userNick });
+        return null == e.participant || e.participant.type !== g.fO.STREAM
+            ? E.intl.string(E.t["ng/Kws"])
+            : E.intl.formatToPlainString(E.t.sqmFRk, { username: e.participant.userNick });
     }
     function S() {
         let e = [],
@@ -101,7 +105,7 @@ function T(e) {
                         e.push({
                             pipWindow: t,
                             participant: n,
-                            stream: r
+                            stream: r,
                         });
                 }),
             e
@@ -112,23 +116,23 @@ function T(e) {
         let n = e.pipWindow.id,
             i = null == (t = e.participant) ? void 0 : t.id,
             o = T(e),
-            a = ''.concat(n).concat(null != i ? i : '');
+            a = "".concat(n).concat(null != i ? i : "");
         return (0, r.jsx)(
             s.sNh,
             {
                 id: a,
                 label: o,
-                action: () => I(e)
+                action: () => I(e),
             },
-            a
+            a,
         );
     }
     return (0, r.jsx)(s.v2r, {
-        navId: 'pip-menu',
-        'aria-label': 'switch PIP',
+        navId: "pip-menu",
+        "aria-label": "switch PIP",
         onClose: t,
         onSelect: h,
-        children: S().map(A)
+        children: S().map(A),
     });
 }
 let S = function (e) {
@@ -145,7 +149,7 @@ let S = function (e) {
         ? null
         : (0, r.jsx)(s.yRy, {
               targetElementRef: l,
-              position: 'bottom',
+              position: "bottom",
               renderPopout: (e) =>
                   (0, r.jsx)(
                       T,
@@ -153,10 +157,10 @@ let S = function (e) {
                           {
                               voiceChannelId: t,
                               pipWindows: c,
-                              idle: n
+                              idle: n,
                           },
-                          e
-                      )
+                          e,
+                      ),
                   ),
               children: (e) =>
                   (0, r.jsx)(
@@ -164,10 +168,10 @@ let S = function (e) {
                       I(O({ className: b.menuIcon }, e), {
                           innerRef: l,
                           children: (0, r.jsx)(s.Huf, {
-                              size: 'md',
-                              color: a.Z.unsafe_rawColors.WHITE_500.css
-                          })
-                      })
-                  )
+                              size: "md",
+                              color: a.Z.unsafe_rawColors.WHITE_500.css,
+                          }),
+                      }),
+                  ),
           });
 };

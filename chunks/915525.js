@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685), n(539854));
+n.d(t, { Z: () => _ }), n(388685), n(539854);
 var r,
     i = n(843991),
     o = n(442837),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,7 +27,7 @@ class d extends (r = o.ZP.Store) {
         return (null != (t = c.get(e)) ? t : []).length > 0;
     }
     getActiveErrors() {
-        return (l instanceof Map || (l = new Map()), l);
+        return l instanceof Map || (l = new Map()), l;
     }
     getActiveErrorsOfType(e) {
         let t = [],
@@ -50,8 +50,8 @@ function f(e) {
         for (let [e, n] of ((l = t), (c = new Map()), l.entries())) {
             var o;
             let t = null != (o = c.get(n.type)) ? o : [];
-            (t.push(e), c.set(n.type, t));
+            t.push(e), c.set(n.type, t);
         }
 }
-s(d, 'displayName', 'AVErrorStore');
+s(d, "displayName", "AVErrorStore");
 let _ = new d(a.Z, { ACTIVE_AV_ERRORS_CHANGED: f });

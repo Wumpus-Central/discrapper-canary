@@ -6,6 +6,6 @@ var r = n(481060),
     a = n(388032);
 let l = () =>
     (0, i.jsx)(r.DY3, {
-        text: a.intl.string(a.t['/fgfWl']),
-        children: (0, i.jsx)(s.Z, {})
+        text: a.intl.string(a.t["/fgfWl"]),
+        children: (0, i.jsx)(s.Z, {}),
     });

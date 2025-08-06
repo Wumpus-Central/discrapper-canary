@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => _,
-    z: () => f
+    z: () => f,
 }),
-    n(388685));
+    n(388685);
 var r = n(392711),
     i = n.n(r),
     o = n(442837),
@@ -13,7 +13,10 @@ var r = n(392711),
     u = n(362658),
     d = n(231338);
 function f(e, t, n) {
-    let { canShow: r, isFavoritesPerk: o } = u.Z.getCurrentConfig({ location: 'isFavoritesGuildVisible' }, { autoTrackExposure: !1 });
+    let { canShow: r, isFavoritesPerk: o } = u.Z.getCurrentConfig(
+        { location: "isFavoritesGuildVisible" },
+        { autoTrackExposure: !1 },
+    );
     if (o) return !0;
     if (!r) return !1;
     let a = e.getFavoriteChannels();
@@ -25,7 +28,7 @@ function f(e, t, n) {
     return !i().isEmpty(s);
 }
 function _() {
-    let { canShow: e, isFavoritesPerk: t } = (0, u.z)('useIsFavoritesGuildVisible'),
+    let { canShow: e, isFavoritesPerk: t } = (0, u.z)("useIsFavoritesGuildVisible"),
         n = (0, o.e7)([c.Z, a.Z, s.Z], () => e && f(c.Z, a.Z, s.Z));
     return !!t || n;
 }

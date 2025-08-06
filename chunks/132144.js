@@ -1,4 +1,4 @@
-(n.d(t, { W: () => h }), n(388685));
+n.d(t, { W: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(704215),
@@ -32,12 +32,12 @@ let p = (e) =>
             if (n === f.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
                 return (0, r.jsx)(s.Z, {
                     dismissCurrentNotice: () => c(d.L.USER_DISMISS),
-                    subscriptionTier: _.Si.TIER_2
+                    subscriptionTier: _.Si.TIER_2,
                 });
             if (n === f.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING)
                 return (0, r.jsx)(a.Z, {
                     dismissCurrentNotice: () => c(d.L.USER_DISMISS),
-                    subscriptionTier: _.Si.TIER_2
+                    subscriptionTier: _.Si.TIER_2,
                 });
         }
     };

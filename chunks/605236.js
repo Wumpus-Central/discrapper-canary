@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Bn: () => v,
     Ei: () => N,
     F8: () => O,
@@ -20,9 +20,9 @@
     u9: () => k,
     wH: () => G,
     wx: () => y,
-    z2: () => I
+    z2: () => I,
 }),
-    n(388685));
+    n(388685);
 var r = n(442837),
     i = n(704215),
     o = n(570140),
@@ -45,28 +45,28 @@ function O(e) {
     return {
         lastDismissedVersion: (0, h.lg)(e) ? (0, g.t)(e) : 0,
         lastDismissedAtMs: new Date().getTime().toString(),
-        lastDismissedObjectId: (0, h.I0)(e) ? c.default.fromTimestamp(Date.now() + y) : '0'
+        lastDismissedObjectId: (0, h.I0)(e) ? c.default.fromTimestamp(Date.now() + y) : "0",
     };
 }
 function v(e, t) {
     return (0, a.Cd)(e, {
         lastDismissedVersion: t,
         lastDismissedAtMs: Date.now().toString(),
-        lastDismissedObjectId: '0'
+        lastDismissedObjectId: "0",
     });
 }
 function I(e) {
     return (0, a.Cd)(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: Date.now().toString(),
-        lastDismissedObjectId: '0'
+        lastDismissedObjectId: "0",
     });
 }
 function T(e, t) {
     return (0, a.Cd)(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: Date.now().toString(),
-        lastDismissedObjectId: t
+        lastDismissedObjectId: t,
     });
 }
 function S(e, t) {
@@ -74,7 +74,7 @@ function S(e, t) {
         dismissed: !0,
         lastDismissedVersion: 0,
         lastDismissedAtMs: Date.now().toString(),
-        lastDismissedObjectId: '0'
+        lastDismissedObjectId: "0",
     });
 }
 function A(e, t) {
@@ -82,7 +82,7 @@ function A(e, t) {
         dismissed: !1,
         lastDismissedVersion: 0,
         lastDismissedAtMs: Date.now().toString(),
-        lastDismissedObjectId: '0'
+        lastDismissedObjectId: "0",
     });
 }
 function N(e, t) {
@@ -90,15 +90,15 @@ function N(e, t) {
         dismissed: !1,
         lastDismissedVersion: 0,
         lastDismissedAtMs: Date.now().toString(),
-        lastDismissedObjectId: '0'
+        lastDismissedObjectId: "0",
     });
 }
 function C(e, t) {
     return (0, a.m9)(e, t, {
         dismissed: !1,
         lastDismissedVersion: 0,
-        lastDismissedAtMs: '0',
-        lastDismissedObjectId: '0'
+        lastDismissedAtMs: "0",
+        lastDismissedObjectId: "0",
     });
 }
 function R(e, t) {
@@ -106,13 +106,16 @@ function R(e, t) {
     if ((0, m.Bh)(e))
         return {
             isDismissed: !0,
-            lastDismissedVersion: null
+            lastDismissedVersion: null,
         };
-    let i = null == (r = s.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates[e]) ? void 0 : n.lastDismissedVersion,
+    let i =
+            null == (r = s.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates[e])
+                ? void 0
+                : n.lastDismissedVersion,
         o = null != t ? t : (0, g.t)(e);
     return {
         isDismissed: null != i && i >= o,
-        lastDismissedVersion: i
+        lastDismissedVersion: i,
     };
 }
 function P(e, t) {
@@ -120,14 +123,17 @@ function P(e, t) {
     if ((0, m.Bh)(e))
         return {
             isDismissed: !0,
-            lastDismissedAtMs: null
+            lastDismissedAtMs: null,
         };
-    let i = null == (r = s.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates[e]) ? void 0 : n.lastDismissedAtMs,
-        o = null != i && '0' !== i ? (Number.isNaN(Number(i)) ? void 0 : Number(i)) : void 0;
+    let i =
+            null == (r = s.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates[e])
+                ? void 0
+                : n.lastDismissedAtMs,
+        o = null != i && "0" !== i ? (Number.isNaN(Number(i)) ? void 0 : Number(i)) : void 0;
     if (void 0 === o)
         return {
             isDismissed: !1,
-            lastDismissedAtMs: void 0
+            lastDismissedAtMs: void 0,
         };
     let a = !0;
     if (null != t) {
@@ -138,15 +144,21 @@ function P(e, t) {
     }
     return {
         isDismissed: a,
-        lastDismissedAtMs: o
+        lastDismissedAtMs: o,
     };
 }
 function w(e, t, n) {
     var r, i, o, a;
     if ((0, m.Bh)(e)) return !0;
-    let l = null == (i = s.Z.settings.userContent) || null == (r = i.recurringDismissibleContentStates[e]) ? void 0 : r.lastDismissedObjectId,
-        u = null == (a = s.Z.settings.userContent) || null == (o = a.recurringDismissibleContentStates[e]) ? void 0 : o.lastDismissedAtMs,
-        d = null != u && '0' !== u ? (Number.isNaN(Number(u)) ? void 0 : Number(u)) : void 0,
+    let l =
+            null == (i = s.Z.settings.userContent) || null == (r = i.recurringDismissibleContentStates[e])
+                ? void 0
+                : r.lastDismissedObjectId,
+        u =
+            null == (a = s.Z.settings.userContent) || null == (o = a.recurringDismissibleContentStates[e])
+                ? void 0
+                : o.lastDismissedAtMs,
+        d = null != u && "0" !== u ? (Number.isNaN(Number(u)) ? void 0 : Number(u)) : void 0,
         f = !1;
     if (null != n && null != d) {
         let e = d + n.cooldownDurationMs,
@@ -168,15 +180,15 @@ function L(e, t) {
 function x(e, t) {
     if ((0, m.Bh)(e)) return !0;
     let n = s.Z.getGuildDismissedContentState(t);
-    return null != n && null != n[e] && null != n[e].lastDismissedAtMs && '0' !== n[e].lastDismissedAtMs;
+    return null != n && null != n[e] && null != n[e].lastDismissedAtMs && "0" !== n[e].lastDismissedAtMs;
 }
 function M(e, t, n) {
     !((0, p.cI)(e) || _.Z.hasUserHitDCCap(e, null == t ? void 0 : t.guildId)) &&
         (n ||
             (o.Z.dispatch({
-                type: 'DCF_EVENT_LOGGED',
+                type: "DCF_EVENT_LOGGED",
                 eventType: u.D.DC_SHOW_REQUEST,
-                dismissibleContent: e
+                dismissibleContent: e,
             }),
             (0, p.f0)({
                 content: e,
@@ -184,7 +196,7 @@ function M(e, t, n) {
                 onAdded: () => {
                     var n;
                     let [r, o] = (0, p.Aq)();
-                    ((0, f.cm)(e, null == t ? void 0 : t.guildId),
+                    (0, f.cm)(e, null == t ? void 0 : t.guildId),
                         l.default.track(b.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                             type: i.z[e],
                             content_count: r,
@@ -192,15 +204,15 @@ function M(e, t, n) {
                             group_name: null == t ? void 0 : t.groupName,
                             bypass_fatigue: d.O.has(e),
                             guild_id: null == t ? void 0 : t.guildId,
-                            version: null == t ? void 0 : t.version
+                            version: null == t ? void 0 : t.version,
                         }),
-                        null == t || null == (n = t.onShown) || n.call(t));
-                }
+                        null == t || null == (n = t.onShown) || n.call(t);
+                },
             })));
 }
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    (((0, p.cI)(e) || t.forceTrack) && F(e, t), (0, f.Vr)(e));
+    ((0, p.cI)(e) || t.forceTrack) && F(e, t), (0, f.Vr)(e);
 }
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -208,9 +220,9 @@ function j(e) {
     (0, p.gE)(
         {
             content: e,
-            groupName: null == t ? void 0 : t.groupName
+            groupName: null == t ? void 0 : t.groupName,
         },
-        n
+        n,
     );
 }
 async function U(e) {
@@ -220,14 +232,14 @@ async function U(e) {
 }
 async function G(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    (k(e, n), await v(e, t), j(e, n));
+    k(e, n), await v(e, t), j(e, n);
 }
 async function B(e, t, n) {
-    (k(e, n), await T(e, t), j(e, n));
+    k(e, n), await T(e, t), j(e, n);
 }
 async function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    (k(e, t), await I(e), j(e, t));
+    k(e, t), await I(e), j(e, t);
 }
 function F(e, t) {
     var n;
@@ -243,6 +255,6 @@ function F(e, t) {
         bypass_fatigue: d.O.has(e),
         guild_id: null == t ? void 0 : t.guildId,
         shown_duration: s,
-        version: null == t ? void 0 : t.version
+        version: null == t ? void 0 : t.version,
     });
 }

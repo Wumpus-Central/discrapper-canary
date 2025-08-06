@@ -8,9 +8,9 @@ function a(e, t, n) {
     return null == n
         ? s
         : (null == a ? void 0 : a.name) != null
-          ? o.intl.formatToPlainString(o.t['9jpVOT'], {
+          ? o.intl.formatToPlainString(o.t["9jpVOT"], {
                 applicationName: null == a ? void 0 : a.name,
-                username: s
+                username: s,
             })
-          : o.intl.formatToPlainString(o.t['+h0Z5+'], { username: s });
+          : o.intl.formatToPlainString(o.t["+h0Z5+"], { username: s });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { default: () => k }), n(388685));
+n.d(t, { default: () => k }), n(388685);
 var i = n(255367),
     r = n(73800),
     a = n(512722),
@@ -41,21 +41,24 @@ function k(e) {
         V = (0, R.Kt)() && a !== z.L0.FAMILY_CENTER,
         { verifyAgreementButtonText: B, verifyGateDescription: q } = (0, R.a1)(a),
         W = a === z.L0.NSFW_SERVER || a === z.L0.NSFW_SERVER_INVITE || a === z.L0.NSFW_SERVER_INVITE_EMBED,
-        K = null != v ? o()().diff(v, 'years') : null;
+        K = null != v ? o()().diff(v, "years") : null;
     function O() {
         if (a === z.L0.NSFW_SERVER_INVITE_EMBED) return void (0, C.qV)(a);
         let e = null == k ? void 0 : k.getGuildId();
-        (m.Z.nsfwReturnToSafety(e), (0, C.qV)(a));
+        m.Z.nsfwReturnToSafety(e), (0, C.qV)(a);
     }
     async function X() {
-        l()(null != v, 'Cannot submit null birthday.');
+        l()(null != v, "Cannot submit null birthday.");
         try {
-            return (M(null), F(!0), await (0, y.Av)(v, a));
+            return M(null), F(!0), await (0, y.Av)(v, a);
         } catch (t) {
             if (null != t.body && null != t.body.date_of_birth) (0, C.C8)(a, t.body.date_of_birth);
             else {
                 var e;
-                ((null == t || null == (e = t.body) ? void 0 : e.username) != null ? M(S.intl.string(S.t['TGg/2t'])) : M(null == t ? void 0 : t.body.message), F(!1));
+                (null == t || null == (e = t.body) ? void 0 : e.username) != null
+                    ? M(S.intl.string(S.t["TGg/2t"]))
+                    : M(null == t ? void 0 : t.body.message),
+                    F(!1);
             }
         }
     }
@@ -64,25 +67,25 @@ function k(e) {
         await X();
     }
     async function J(e) {
-        (e.preventDefault(), w || null == v || (await Q()));
+        e.preventDefault(), w || null == v || (await Q());
     }
     async function H() {
         null == (await X()) && Z(0);
     }
-    (r.useEffect(() => {
+    r.useEffect(() => {
         null == s || null == s.nsfwAllowed || V || (0, C.qq)(a);
     }),
         r.useEffect(() => {
             A.default.track(L.rMx.AGE_GATE_ACTION, {
                 source: a,
-                action: z.Al.AGE_GATE_OPEN
+                action: z.Al.AGE_GATE_OPEN,
             });
-        }, [a]));
+        }, [a]);
     let $ = r.useCallback(
             (e) => {
                 G(e);
             },
-            [G]
+            [G],
         ),
         ee = r.useCallback(() => {
             var e;
@@ -96,49 +99,49 @@ function k(e) {
               impression: { impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY },
               transitionState: t,
               size: f.CgR.SMALL,
-              parentComponent: 'ExistingUserAgeGatePrompt',
+              parentComponent: "ExistingUserAgeGatePrompt",
               children: [
                   (0, i.jsx)(f.hzk, {
-                      children: (0, i.jsxs)('div', {
+                      children: (0, i.jsxs)("div", {
                           className: T.container,
                           children: [
-                              (0, i.jsx)('img', {
-                                  alt: '',
+                              (0, i.jsx)("img", {
+                                  alt: "",
                                   src: n(559325),
-                                  className: T.img
+                                  className: T.img,
                               }),
                               (0, i.jsx)(f.X6q, {
-                                  variant: 'heading-xl/semibold',
+                                  variant: "heading-xl/semibold",
                                   className: T.title,
-                                  children: W ? S.intl.string(S.t.xi46lp) : S.intl.string(S.t.ZmwvDQ)
+                                  children: W ? S.intl.string(S.t.xi46lp) : S.intl.string(S.t.ZmwvDQ),
                               }),
                               (0, i.jsx)(f.Text, {
-                                  color: 'header-secondary',
-                                  variant: 'text-sm/normal',
-                                  children: q
-                              })
-                          ]
-                      })
+                                  color: "header-secondary",
+                                  variant: "text-sm/normal",
+                                  children: q,
+                              }),
+                          ],
+                      }),
                   }),
                   (0, i.jsxs)(f.mzw, {
                       justify: _.Z.Justify.BETWEEN,
                       children: [
                           (0, i.jsx)(f.zxk, {
-                              variant: 'primary',
-                              size: 'sm',
+                              variant: "primary",
+                              size: "sm",
                               text: B,
-                              onClick: et
+                              onClick: et,
                           }),
                           (0, i.jsx)(u.zx, {
                               look: u.zx.Looks.LINK,
                               size: u.zx.Sizes.NONE,
                               color: u.zx.Colors.PRIMARY,
                               onClick: O,
-                              children: S.intl.string(S.t.f3Pet7)
-                          })
-                      ]
-                  })
-              ]
+                              children: S.intl.string(S.t.f3Pet7),
+                          }),
+                      ],
+                  }),
+              ],
           })
         : 0 === Y
           ? (function () {
@@ -156,95 +159,95 @@ function k(e) {
                 return (0, i.jsxs)(f.Y0X, {
                     transitionState: t,
                     size: f.CgR.SMALL,
-                    'aria-labelledby': P,
-                    parentComponent: 'ExistingUserAgeGatePrompt',
+                    "aria-labelledby": P,
+                    parentComponent: "ExistingUserAgeGatePrompt",
                     children: [
                         (0, i.jsxs)(f.hzk, {
                             children: [
-                                (0, i.jsxs)('div', {
+                                (0, i.jsxs)("div", {
                                     className: T.container,
                                     children: [
-                                        (0, i.jsx)('img', {
-                                            alt: '',
+                                        (0, i.jsx)("img", {
+                                            alt: "",
                                             src: n(559325),
-                                            className: T.img
+                                            className: T.img,
                                         }),
                                         (0, i.jsx)(f.X6q, {
-                                            variant: 'heading-xl/semibold',
+                                            variant: "heading-xl/semibold",
                                             className: T.title,
                                             id: P,
-                                            children: e
+                                            children: e,
                                         }),
                                         (0, i.jsx)(f.Text, {
-                                            color: 'header-secondary',
-                                            variant: 'text-sm/normal',
-                                            children: r
-                                        })
-                                    ]
+                                            color: "header-secondary",
+                                            variant: "text-sm/normal",
+                                            children: r,
+                                        }),
+                                    ],
                                 }),
-                                (0, i.jsx)('form', {
+                                (0, i.jsx)("form", {
                                     onSubmit: J,
                                     children: (0, i.jsx)(j.Z, {
                                         label: S.intl.string(S.t.rhBeKS),
                                         wrapperClassName: T.birthday,
-                                        name: 'date_of_birth',
+                                        name: "date_of_birth",
                                         onChange: $,
                                         onPopulated: ee,
                                         error: I,
                                         value: v,
                                         ref: U,
-                                        autoFocus: !0
-                                    })
-                                })
-                            ]
+                                        autoFocus: !0,
+                                    }),
+                                }),
+                            ],
                         }),
                         (0, i.jsxs)(f.mzw, {
                             justify: _.Z.Justify.BETWEEN,
                             children: [
                                 (0, i.jsx)(f.zxk, {
-                                    variant: 'primary',
-                                    size: 'sm',
+                                    variant: "primary",
+                                    size: "sm",
                                     text: S.intl.string(S.t.uBFuoq),
                                     buttonRef: D,
                                     loading: w,
                                     disabled: null == v,
-                                    onClick: Q
+                                    onClick: Q,
                                 }),
                                 (0, i.jsx)(u.zx, {
                                     look: u.zx.Looks.LINK,
                                     size: u.zx.Sizes.NONE,
                                     color: u.zx.Colors.PRIMARY,
                                     onClick: O,
-                                    children: S.intl.string(S.t['1MrpWF'])
-                                })
-                            ]
-                        })
-                    ]
+                                    children: S.intl.string(S.t["1MrpWF"]),
+                                }),
+                            ],
+                        }),
+                    ],
                 });
             })()
           : (0, i.jsxs)(f.Y0X, {
                 transitionState: f.Dvm.ENTERED,
                 size: f.CgR.SMALL,
-                'aria-labelledby': P,
-                parentComponent: 'ExistingUserAgeGatePrompt',
+                "aria-labelledby": P,
+                parentComponent: "ExistingUserAgeGatePrompt",
                 children: [
                     (0, i.jsx)(f.hzk, {
-                        children: (0, i.jsxs)('div', {
+                        children: (0, i.jsxs)("div", {
                             className: T.confirmContainer,
                             children: [
                                 (0, i.jsx)(f.X6q, {
-                                    variant: 'heading-xl/semibold',
+                                    variant: "heading-xl/semibold",
                                     className: T.confirmTitle,
                                     id: P,
-                                    children: S.intl.format(S.t.wumolZ, { age: K })
+                                    children: S.intl.format(S.t.wumolZ, { age: K }),
                                 }),
                                 (0, i.jsx)(f.Text, {
-                                    color: 'header-secondary',
-                                    variant: 'text-sm/normal',
-                                    children: S.intl.format(S.t.n3QjDA, { helpURL: p.Z.getArticleURL(L.BhN.AGE_GATE) })
-                                })
-                            ]
-                        })
+                                    color: "header-secondary",
+                                    variant: "text-sm/normal",
+                                    children: S.intl.format(S.t.n3QjDA, { helpURL: p.Z.getArticleURL(L.BhN.AGE_GATE) }),
+                                }),
+                            ],
+                        }),
                     }),
                     (0, i.jsxs)(f.mzw, {
                         className: T.confirmFooter,
@@ -254,15 +257,15 @@ function k(e) {
                                 size: u.zx.Sizes.NONE,
                                 color: u.zx.Colors.PRIMARY,
                                 onClick: () => Z(0),
-                                children: S.intl.string(S.t.cfYCra)
+                                children: S.intl.string(S.t.cfYCra),
                             }),
                             (0, i.jsx)(f.zxk, {
-                                variant: 'primary',
-                                text: S.intl.string(S.t['6tahio']),
-                                onClick: H
-                            })
-                        ]
-                    })
-                ]
+                                variant: "primary",
+                                text: S.intl.string(S.t["6tahio"]),
+                                onClick: H,
+                            }),
+                        ],
+                    }),
+                ],
             });
 }

@@ -5,14 +5,14 @@ var i = n(146187),
     o = n(388032),
     a = n(669546);
 function s(e) {
-    let { onClick: t, 'aria-label': n = o.intl.string(o.t.cpT0Cg), colorMix: s } = e;
-    return (0, r.jsx)('div', {
+    let { onClick: t, "aria-label": n = o.intl.string(o.t.cpT0Cg), colorMix: s } = e;
+    return (0, r.jsx)("div", {
         className: a.closeButton,
         children: (0, r.jsx)(i.P, {
-            size: 'sm',
-            'aria-label': n,
+            size: "sm",
+            "aria-label": n,
             onClick: t,
-            colorMix: s
-        })
+            colorMix: s,
+        }),
     });
 }

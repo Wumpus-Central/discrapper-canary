@@ -13,13 +13,13 @@ let c = (e) => {
         case i.wk.GORE_CONTENT:
             return (0, r.jsx)(l.fFY, {
                 className: s()(n, o.obscuredIcon),
-                color: 'white'
+                color: "white",
             });
         case i.wk.SPOILER:
             return (0, r.jsx)(l.tEF, {
-                size: 'md',
-                color: 'currentColor',
-                className: n
+                size: "md",
+                color: "currentColor",
+                className: n,
             });
         default:
             return null;

@@ -1,17 +1,47 @@
-(n.d(t, { t: () => d }), n(35282), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733), n(608445), n(853839), n(570086), n(479048));
+n.d(t, { t: () => d }),
+    n(35282),
+    n(388685),
+    n(410992),
+    n(227481),
+    n(730884),
+    n(20464),
+    n(341884),
+    n(364341),
+    n(629680),
+    n(505025),
+    n(918970),
+    n(121784),
+    n(644351),
+    n(146733),
+    n(608445),
+    n(853839),
+    n(570086),
+    n(479048);
 var r = n(788900),
     i = n(268146),
     l = n(141038),
     s = n(131951),
     o = n(830461),
     a = n(388032);
-let c = ['GQgGHISKZ5aYqYeYhX9isDUHGw', 'bAgKFITWhoVvmHVRuokCdjVQaA', 'XAgGDIJ/ipadd3iCiYUcWpCZBA', 'HRkGDIT5aXRneomGdlvUawB7qA', 'I9gNDISmlqqPmHiKd3isTp/5lg', 'XxgGBIIwT2ZGpneUeZev6fWLXQ', 'KzsKNIZDeYmfd3ihe1bXfr8Jxg', 'J9cRDIJ6iHd/d4h4eIUJf5LyRw', 'DggKFIQwtndKe3hVfXnAWQmddQ', 'WggKDILeh3ePZpd6l4jln1b5SQ', '4PgJJIJVl3eAaod2iJeHj7tE8Q'];
+let c = [
+    "GQgGHISKZ5aYqYeYhX9isDUHGw",
+    "bAgKFITWhoVvmHVRuokCdjVQaA",
+    "XAgGDIJ/ipadd3iCiYUcWpCZBA",
+    "HRkGDIT5aXRneomGdlvUawB7qA",
+    "I9gNDISmlqqPmHiKd3isTp/5lg",
+    "XxgGBIIwT2ZGpneUeZev6fWLXQ",
+    "KzsKNIZDeYmfd3ihe1bXfr8Jxg",
+    "J9cRDIJ6iHd/d4h4eIUJf5LyRw",
+    "DggKFIQwtndKe3hVfXnAWQmddQ",
+    "WggKDILeh3ePZpd6l4jln1b5SQ",
+    "4PgJJIJVl3eAaod2iJeHj7tE8Q",
+];
 async function d(e) {
     let { width: t, height: n, types: d = [i.vA.CAMERA, i.vA.SCREEN, i.vA.WINDOW] } = e,
         u = s.Z.getVideoDevices(),
         f = (0, l.Z)(s.Z.getMediaEngine(), d, {
             width: t,
-            height: n
+            height: n,
         }),
         m = (0, o._)(),
         h = await m,
@@ -22,29 +52,32 @@ async function d(e) {
                 var t, n;
                 let r = e.name;
                 return (
-                    'Entire screen' === r ? (r = a.intl.string(a.t.R4wpLC)) : /^Screen \d+$/.test(r) && (r = a.intl.formatToPlainString(a.t['y/R7n5'], { index: parseInt(r.split(' ')[1]) })),
+                    "Entire screen" === r
+                        ? (r = a.intl.string(a.t.R4wpLC))
+                        : /^Screen \d+$/.test(r) &&
+                          (r = a.intl.formatToPlainString(a.t["y/R7n5"], { index: parseInt(r.split(" ")[1]) })),
                     (t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
+                            "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
+                                    }),
                                 )),
                                 r.forEach(function (t) {
                                     var r;
-                                    ((r = n[t]),
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
-                                                  writable: !0
+                                                  writable: !0,
                                               })
-                                            : (e[t] = r));
-                                }));
+                                            : (e[t] = r);
+                                });
                         }
                         return e;
                     })({}, e)),
@@ -77,7 +110,7 @@ async function d(e) {
             );
         })(
             p.filter((e) => e.id.startsWith(i.vA.WINDOW)),
-            h
+            h,
         ),
         _ = [];
     return (
@@ -93,15 +126,15 @@ async function d(e) {
                         s = Uint8Array.from(atob(l), (e) => e.charCodeAt(0)),
                         o = (0, r.xS)(s);
                     return {
-                        id: 'camera:' + i.id,
+                        id: "camera:" + i.id,
                         name: i.name,
-                        url: o
+                        url: o,
                     };
                 })),
         {
             windowSources: g,
             screenSources: x,
-            cameraSources: _
+            cameraSources: _,
         }
     );
 }

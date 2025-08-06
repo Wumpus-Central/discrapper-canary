@@ -11,7 +11,7 @@ var r = n(98405),
 if (
     (r(
         {
-            target: 'Promise',
+            target: "Promise",
             proto: !0,
             real: !0,
             forced:
@@ -19,15 +19,15 @@ if (
                 a(function () {
                     f.finally.call(
                         {
-                            then: function () {}
+                            then: function () {},
                         },
-                        function () {}
+                        function () {},
                     );
-                })
+                }),
         },
         {
             finally: function (e) {
-                var t = c(this, s('Promise')),
+                var t = c(this, s("Promise")),
                     n = l(e);
                 return this.then(
                     n
@@ -43,13 +43,13 @@ if (
                                   throw n;
                               });
                           }
-                        : e
+                        : e,
                 );
-            }
-        }
+            },
+        },
     ),
     !i && l(o))
 ) {
-    var _ = s('Promise').prototype.finally;
-    f.finally !== _ && d(f, 'finally', _, { unsafe: !0 });
+    var _ = s("Promise").prototype.finally;
+    f.finally !== _ && d(f, "finally", _, { unsafe: !0 });
 }

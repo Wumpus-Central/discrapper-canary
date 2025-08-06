@@ -1,5 +1,5 @@
 function r(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 e.exports = (function (e) {
     function t() {
@@ -9,20 +9,20 @@ e.exports = (function (e) {
     var n = t.prototype;
     return (
         (n.getType = function () {
-            return this.get('type');
+            return this.get("type");
         }),
         (n.getMutability = function () {
-            return this.get('mutability');
+            return this.get("mutability");
         }),
         (n.getData = function () {
-            return this.get('data');
+            return this.get("data");
         }),
         t
     );
 })(
     (0, n(65183).Record)({
-        type: 'TOKEN',
-        mutability: 'IMMUTABLE',
-        data: Object
-    })
+        type: "TOKEN",
+        mutability: "IMMUTABLE",
+        data: Object,
+    }),
 );

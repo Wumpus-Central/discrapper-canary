@@ -19,31 +19,31 @@ function b(e) {
         contentClassName: p.popoutContent,
         children: (0, r.jsx)(c.Z.Provider, {
             value: n.guild_id,
-            children: (0, r.jsx)(s.Z, { providedChannel: n })
-        })
+            children: (0, r.jsx)(s.Z, { providedChannel: n }),
+        }),
     });
 }
 function f(e, t) {
     let n = (0, u.P)(t),
         c = i.useCallback(() => {
             a.bA(
-                ''.concat(d.KJ3.CHANNEL_POPOUT, '-').concat(e.id),
+                "".concat(d.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
                 (t) =>
                     (0, r.jsx)(b, {
                         windowKey: t,
-                        channel: e
+                        channel: e,
                     }),
                 {
                     defaultWidth: 854,
-                    defaultHeight: 480
-                }
+                    defaultHeight: 480,
+                },
             );
         }, [e]);
     return n
         ? (0, r.jsx)(l.sNh, {
-              id: 'channel-pop-out',
-              label: 'Open in Popout',
-              action: () => c()
+              id: "channel-pop-out",
+              label: "Open in Popout",
+              action: () => c(),
           })
         : null;
 }

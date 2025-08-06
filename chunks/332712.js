@@ -13,7 +13,10 @@ function c(e) {
         });
     return (
         r.useEffect(() => {
-            0 === n.length && null != t && null == a.Z.getMutualGuilds(e) && l.Z.wait(() => (0, o.Z)(e, void 0, { withMutualGuilds: !0 }));
+            0 === n.length &&
+                null != t &&
+                null == a.Z.getMutualGuilds(e) &&
+                l.Z.wait(() => (0, o.Z)(e, void 0, { withMutualGuilds: !0 }));
         }, [n, t, e]),
         n
     );

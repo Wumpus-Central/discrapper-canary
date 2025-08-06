@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(224706),
     i = n(978085),
     o = n(147913),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,13 +23,23 @@ function f(e, t, n) {
 }
 class _ extends o.Z {
     handlePostConnectionOpen() {
-        ((0, d.isDesktop)() || (0, a.l)() || s.d.getCurrentConfig({ location: 'DetectableGamesManager.handlePostConnectionOpen' }).enabled) && (c.Z.fetched || (0, i.b8)(), r.Z.getDetectableGames(), (this.intervalId = setInterval(r.Z.getDetectableGames, l.Z.detectableGamesTtl + Math.random() * u.Z.Millis.HOUR)));
+        ((0, d.isDesktop)() ||
+            (0, a.l)() ||
+            s.d.getCurrentConfig({ location: "DetectableGamesManager.handlePostConnectionOpen" }).enabled) &&
+            (c.Z.fetched || (0, i.b8)(),
+            r.Z.getDetectableGames(),
+            (this.intervalId = setInterval(
+                r.Z.getDetectableGames,
+                l.Z.detectableGamesTtl + Math.random() * u.Z.Millis.HOUR,
+            )));
     }
     _terminate() {
         null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0));
     }
     constructor(...e) {
-        (super(...e), f(this, 'intervalId', void 0), f(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }));
+        super(...e),
+            f(this, "intervalId", void 0),
+            f(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
 let p = new _();

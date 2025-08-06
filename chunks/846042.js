@@ -7,7 +7,7 @@ n.d(t, {
     ie: () => a,
     jg: () => o,
     kT: () => _,
-    n8: () => l
+    n8: () => l,
 });
 var r = n(250327),
     i = n(25487);
@@ -15,7 +15,7 @@ function o(e, t) {
     return e
         ? {
               value: t(e.value),
-              rest: e.rest
+              rest: e.rest,
           }
         : e;
 }
@@ -24,25 +24,25 @@ function a(e, t) {
     return n
         ? {
               value: parseInt(n[0], 10),
-              rest: t.slice(n[0].length)
+              rest: t.slice(n[0].length),
           }
         : null;
 }
 function s(e, t) {
     var n = t.match(e);
     if (!n) return null;
-    if ('Z' === n[0])
+    if ("Z" === n[0])
         return {
             value: 0,
-            rest: t.slice(1)
+            rest: t.slice(1),
         };
-    var i = '+' === n[1] ? 1 : -1,
+    var i = "+" === n[1] ? 1 : -1,
         o = n[2] ? parseInt(n[2], 10) : 0,
         a = n[3] ? parseInt(n[3], 10) : 0,
         s = n[5] ? parseInt(n[5], 10) : 0;
     return {
         value: i * (o * r.vh + a * r.yJ + s * r.qk),
-        rest: t.slice(n[0].length)
+        rest: t.slice(n[0].length),
     };
 }
 function l(e) {
@@ -59,7 +59,7 @@ function c(e, t) {
         case 4:
             return a(i.z.fourDigits, t);
         default:
-            return a(RegExp('^\\d{1,' + e + '}'), t);
+            return a(RegExp("^\\d{1," + e + "}"), t);
     }
 }
 function u(e, t) {
@@ -73,18 +73,18 @@ function u(e, t) {
         case 4:
             return a(i.z.fourDigitsSigned, t);
         default:
-            return a(RegExp('^-?\\d{1,' + e + '}'), t);
+            return a(RegExp("^-?\\d{1," + e + "}"), t);
     }
 }
 function d(e) {
     switch (e) {
-        case 'morning':
+        case "morning":
             return 4;
-        case 'evening':
+        case "evening":
             return 17;
-        case 'pm':
-        case 'noon':
-        case 'afternoon':
+        case "pm":
+        case "noon":
+        case "afternoon":
             return 12;
         default:
             return 0;

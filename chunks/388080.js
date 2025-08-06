@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -25,7 +25,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -38,44 +38,44 @@ class E extends l.PureComponent {
         this.props.track(e, t, n);
     }
     renderFooter() {
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: b.footer,
             children: [
                 (0, r.jsx)(c.eee, {
-                    'aria-label': C.intl.string(C.t['/84uiI']),
+                    "aria-label": C.intl.string(C.t["/84uiI"]),
                     className: b.socialLink,
                     href: (0, p.Z)(j.RK.TWITTER),
-                    target: 'blank',
+                    target: "blank",
                     children: (0, r.jsx)(c.TAi, {
-                        size: 'xs',
-                        color: 'currentColor'
-                    })
+                        size: "xs",
+                        color: "currentColor",
+                    }),
                 }),
                 (0, r.jsx)(c.eee, {
-                    'aria-label': C.intl.string(C.t['h0or/v']),
+                    "aria-label": C.intl.string(C.t["h0or/v"]),
                     className: b.socialLink,
                     href: j.fK7.FACEBOOK_URL,
-                    target: 'blank',
+                    target: "blank",
                     children: (0, r.jsx)(c.tdR, {
-                        size: 'xs',
-                        color: 'currentColor'
-                    })
+                        size: "xs",
+                        color: "currentColor",
+                    }),
                 }),
                 (0, r.jsx)(c.eee, {
-                    'aria-label': C.intl.string(C.t['5uVPyc']),
+                    "aria-label": C.intl.string(C.t["5uVPyc"]),
                     className: b.socialLink,
                     href: j.fK7.INSTAGRAM_URL,
-                    target: 'blank',
+                    target: "blank",
                     children: (0, r.jsx)(c.gST, {
-                        size: 'xs',
-                        color: 'currentColor'
-                    })
+                        size: "xs",
+                        color: "currentColor",
+                    }),
                 }),
                 (0, r.jsx)(c.Text, {
-                    variant: 'text-xs/normal',
-                    children: C.intl.string(C.t.EjVVIy)
-                })
-            ]
+                    variant: "text-xs/normal",
+                    children: C.intl.string(C.t.EjVVIy),
+                }),
+            ],
         });
     }
     renderVideo() {
@@ -83,20 +83,20 @@ class E extends l.PureComponent {
             t = e.youtube_video_id,
             l = e.video,
             o = e.image;
-        if (null != t && '' !== t)
+        if (null != t && "" !== t)
             return (0, r.jsx)(d.BC, {
                 className: b.video,
                 allowFullScreen: !1,
-                href: 'https://youtu.be/'.concat(t),
+                href: "https://youtu.be/".concat(t),
                 thumbnail: {
-                    url: 'https://i.ytimg.com/vi/'.concat(t, '/hqdefault.jpg'),
+                    url: "https://i.ytimg.com/vi/".concat(t, "/hqdefault.jpg"),
                     width: 451,
-                    height: 254
+                    height: 254,
                 },
                 video: {
-                    url: 'https://www.youtube.com/embed/'.concat(t, '?vq=large&rel=0&controls=0&showinfo=0'),
+                    url: "https://www.youtube.com/embed/".concat(t, "?vq=large&rel=0&controls=0&showinfo=0"),
                     width: 451,
-                    height: 254
+                    height: 254,
                 },
                 provider: h.pn.YOUTUBE,
                 maxWidth: 451,
@@ -106,10 +106,10 @@ class E extends l.PureComponent {
                 renderLinkComponent: x.iT,
                 onPlay: () => {
                     this.track(j.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
-                }
+                },
             });
-        if (null != l && '' !== l) {
-            let e = l.startsWith('https://') ? l : n(595173)('./'.concat(l));
+        if (null != l && "" !== l) {
+            let e = l.startsWith("https://") ? l : n(595173)("./".concat(l));
             return (0, r.jsx)(g.Z, {
                 src: e,
                 poster: o,
@@ -121,18 +121,18 @@ class E extends l.PureComponent {
                 className: b.video,
                 onPlay: () => {
                     this.track(j.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
-                }
+                },
             });
         }
-        if (null == o || '' === o) return null;
+        if (null == o || "" === o) return null;
         {
-            let e = o.startsWith('https://') ? o : n(595173)('./'.concat(o));
-            return (0, r.jsx)('img', {
+            let e = o.startsWith("https://") ? o : n(595173)("./".concat(o));
+            return (0, r.jsx)("img", {
                 className: b.image,
-                alt: '',
+                alt: "",
                 src: e,
                 width: 451,
-                height: 254
+                height: 254,
             });
         }
     }
@@ -141,7 +141,7 @@ class E extends l.PureComponent {
         return (0, r.jsxs)(c.Y0X, {
             transitionState: c.Dvm.ENTERED,
             className: O.modal,
-            parentComponent: 'ChangelogStandardTemplate',
+            parentComponent: "ChangelogStandardTemplate",
             children: [
                 (0, r.jsxs)(c.xBx, {
                     align: u.Z.Justify.BETWEEN,
@@ -150,73 +150,75 @@ class E extends l.PureComponent {
                         this.renderHeader(),
                         (0, r.jsx)(u.Z.Child, {
                             grow: 0,
-                            children: (0, r.jsx)(c.olH, { onClick: this.props.onClose })
-                        })
-                    ]
+                            children: (0, r.jsx)(c.olH, { onClick: this.props.onClose }),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(c.hzk, {
                     className: a()(O.content, b.container, {}),
                     scrollerRef: this.scrollerRef,
                     onScroll: this.handleScroll,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         tabIndex: 0,
-                        role: 'region',
-                        'aria-label': C.intl.string(C.t.HzBchI),
+                        role: "region",
+                        "aria-label": C.intl.string(C.t.HzBchI),
                         children: [
                             this.renderVideo(),
                             k(e.body, !1, {
                                 changeLog: this,
                                 interpolations: S,
-                                onLinkClick: this.trackLinkClick
-                            })
-                        ]
-                    })
+                                onLinkClick: this.trackLinkClick,
+                            }),
+                        ],
+                    }),
                 }),
                 (0, r.jsx)(c.mzw, {
                     direction: u.Z.Direction.HORIZONTAL,
-                    children: this.renderFooter()
-                })
-            ]
+                    children: this.renderFooter(),
+                }),
+            ],
         });
     }
     constructor(...e) {
-        (super(...e),
-            y(this, 'scrollerRef', l.createRef()),
-            y(this, 'handleScroll', () => {
+        super(...e),
+            y(this, "scrollerRef", l.createRef()),
+            y(this, "handleScroll", () => {
                 let { current: e } = this.scrollerRef;
                 if (null != e) {
                     var t, n;
                     null == (t = (n = this.props).onScroll) || t.call(n, e);
                 }
             }),
-            y(this, 'trackLinkClick', (e) => {
+            y(this, "trackLinkClick", (e) => {
                 this.props.track(
                     j.rMx.CHANGE_LOG_CTA_CLICKED,
                     {
-                        cta_type: 'inline_link',
-                        target: e
+                        cta_type: "inline_link",
+                        target: e,
                     },
-                    !1
+                    !1,
                 );
             }),
-            y(this, 'renderHeader', () => {
+            y(this, "renderHeader", () => {
                 let { changeLog: e } = this.props;
                 return (0, r.jsxs)(u.Z.Child, {
                     grow: 1,
                     shrink: 1,
                     children: [
                         (0, r.jsx)(c.X6q, {
-                            variant: 'heading-lg/semibold',
-                            children: C.intl.string(C.t.LRmNAg)
+                            variant: "heading-lg/semibold",
+                            children: C.intl.string(C.t.LRmNAg),
                         }),
                         (0, r.jsx)(c.Text, {
-                            variant: 'text-xs/normal',
+                            variant: "text-xs/normal",
                             className: b.date,
-                            children: C.intl.format(C.t.Fb8xx8, { date: null != e.date && '' !== e.date ? s()(e.date).toDate() : new Date() })
-                        })
-                    ]
+                            children: C.intl.format(C.t.Fb8xx8, {
+                                date: null != e.date && "" !== e.date ? s()(e.date).toDate() : new Date(),
+                            }),
+                        }),
+                    ],
                 });
-            }));
+            });
     }
 }
 let _ = E;

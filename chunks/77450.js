@@ -5,7 +5,7 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -17,6 +17,6 @@ class i {
         return this.cpuCoreCount;
     }
     constructor() {
-        r(this, 'cpuCoreCount', void 0);
+        r(this, "cpuCoreCount", void 0);
     }
 }

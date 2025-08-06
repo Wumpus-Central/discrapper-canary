@@ -1,4 +1,4 @@
-(i.d(t, { Z: () => o }), i(388685), i(539854), i(415506));
+i.d(t, { Z: () => o }), i(388685), i(539854), i(415506);
 var r = i(250906),
     n = i(86104);
 function a(e, t, i) {
@@ -8,7 +8,7 @@ function a(e, t, i) {
                   value: i,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = i),
         e
@@ -18,7 +18,7 @@ async function s(e, t, i, a, s) {
     let o = s;
     if (null == o) {
         let e = await fetch(a);
-        if (!e.ok) throw Error('Error fetching sticker at '.concat(a));
+        if (!e.ok) throw Error("Error fetching sticker at ".concat(a));
         o = await e.text();
     }
     if (null == o) return null;
@@ -34,9 +34,15 @@ let o = new (class {
             if ((this.referenceCounts.set(e, (null != (h = this.referenceCounts.get(e)) ? h : 0) + 1), o)) return o;
             let l = {
                 key: e,
-                promise: s(e, t, i, r, n)
+                promise: s(e, t, i, r, n),
             };
-            return (a && (this.entries.push(l), l.promise.then((t) => (null == t && this.removeEntry(e), t)).catch((t) => this.removeEntry(e)), this.entries.length > 50 && this.removeEntryAt(0)), l.promise);
+            return (
+                a &&
+                    (this.entries.push(l),
+                    l.promise.then((t) => (null == t && this.removeEntry(e), t)).catch((t) => this.removeEntry(e)),
+                    this.entries.length > 50 && this.removeEntryAt(0)),
+                l.promise
+            );
         });
     }
     drop(e) {
@@ -46,7 +52,11 @@ let o = new (class {
         let t = this.entries.findIndex((t) => t.key === e);
         if (t >= 0) {
             let e = this.entries[t];
-            return (this.entries.splice(t, 1), this.entries.push(e), e.promise.then((e) => (null == e && this.removeEntryAt(t), e)));
+            return (
+                this.entries.splice(t, 1),
+                this.entries.push(e),
+                e.promise.then((e) => (null == e && this.removeEntryAt(t), e))
+            );
         }
         return Promise.resolve(null);
     }
@@ -58,9 +68,17 @@ let o = new (class {
     removeEntryAt(e) {
         let t = this.entries[e],
             i = this.referenceCounts.get(t.key);
-        return null != i && i > 1 ? (this.referenceCounts.set(t.key, i - 1), null) : (this.entries.splice(e, 1), this.referenceCounts.delete(t.key), t.promise.then((e) => (null == e ? void 0 : e.drop())), t);
+        return null != i && i > 1
+            ? (this.referenceCounts.set(t.key, i - 1), null)
+            : (this.entries.splice(e, 1),
+              this.referenceCounts.delete(t.key),
+              t.promise.then((e) => (null == e ? void 0 : e.drop())),
+              t);
     }
     constructor() {
-        (a(this, 'entries', void 0), a(this, 'referenceCounts', void 0), (this.entries = []), (this.referenceCounts = new Map()));
+        a(this, "entries", void 0),
+            a(this, "referenceCounts", void 0),
+            (this.entries = []),
+            (this.referenceCounts = new Map());
     }
 })();

@@ -9,13 +9,13 @@ function c(e) {
     let { userId: t, onClick: n } = e;
     if (!(0, i.e7)([s.Z], () => s.Z.isIgnored(t))) return null;
     let c = () => {
-        (a.Rt.updateSetting(!0), n());
+        a.Rt.updateSetting(!0), n();
     };
     return (0, r.jsx)(o.Avr, {
         onClick: c,
-        variant: 'primary',
-        size: 'sm',
-        textVariant: 'text-sm/medium',
-        text: l.intl.string(l.t.QbcRCA)
+        variant: "primary",
+        size: "sm",
+        textVariant: "text-sm/medium",
+        text: l.intl.string(l.t.QbcRCA),
     });
 }

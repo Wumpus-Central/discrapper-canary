@@ -30,10 +30,14 @@ function g(e) {
         I = (0, i.e7)([c.Z], () => c.Z.getAppIdForBotUserId(null == y ? void 0 : y.id)),
         T = (0, i.e7)([d.Z], () => {
             var e;
-            return null !== y ? (null == (e = d.Z.getUserProfile(null == y ? void 0 : y.id)) ? void 0 : e.application) : void 0;
+            return null !== y
+                ? null == (e = d.Z.getUserProfile(null == y ? void 0 : y.id))
+                    ? void 0
+                    : e.application
+                : void 0;
         }),
         S = null != I ? I : null == T ? void 0 : T.id;
-    (r.useEffect(() => {
+    r.useEffect(() => {
         if (null == S) {
             var e;
             (0, f.Z)(null != (e = null == y ? void 0 : y.id) ? e : h.lds, void 0, { withMutualGuilds: !0 });
@@ -42,24 +46,24 @@ function g(e) {
         r.useEffect(() => {
             (null == y ? void 0 : y.id) != null &&
                 o.Z.dispatch({
-                    type: 'APP_DM_OPEN',
-                    botUserId: y.id
+                    type: "APP_DM_OPEN",
+                    botUserId: y.id,
                 });
-        }, [null == y ? void 0 : y.id]));
+        }, [null == y ? void 0 : y.id]);
     let A = (0, l.v1)(
             {
                 channel: b,
-                type: 'channel'
+                type: "channel",
             },
             { commandTypes: m },
             {
                 applicationId: S,
                 allowFetch: (null == y ? void 0 : y.id) != null,
-                allowApplicationState: !0
-            }
+                allowApplicationState: !0,
+            },
         ),
         N = A.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === S)[0],
-        C = A.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
+        C = A.commands.filter((e) => "0" !== e.id && !e.id.startsWith("-")),
         R = A.loading,
         P =
             null ==
@@ -82,6 +86,6 @@ function g(e) {
         wasProfileFetching: null != v ? v : null,
         applicationId: S,
         channelId: b.id,
-        commands: C
+        commands: C,
     };
 }

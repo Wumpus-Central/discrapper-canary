@@ -11,7 +11,17 @@ var i = n(481060),
     d = n(388032),
     f = n(83561);
 function _(e) {
-    let { user: t, displayProfile: n, guildId: _, canUsePremiumCustomization: p, pendingBanner: h, pendingAccentColor: m, isTryItOutFlow: g, disabledInputs: E, onUpsellClick: b } = e,
+    let {
+            user: t,
+            displayProfile: n,
+            guildId: _,
+            canUsePremiumCustomization: p,
+            pendingBanner: h,
+            pendingAccentColor: m,
+            isTryItOutFlow: g,
+            disabledInputs: E,
+            onUpsellClick: b,
+        } = e,
         { newestAnalyticsLocation: y } = (0, o.ZP)(),
         O = p || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
         v = O ? i.vdY : i.SrA,
@@ -25,7 +35,7 @@ function _(e) {
                 uploadType: c.pC.BANNER,
                 analyticsSource: y,
                 guildId: _,
-                isTryItOutFlow: g
+                isTryItOutFlow: g,
             });
         };
     return (0, r.jsx)(s.Z, {
@@ -43,15 +53,15 @@ function _(e) {
                 className: f.clickable,
                 children: [
                     (0, r.jsx)(v, {
-                        size: 'xs',
-                        color: 'white'
+                        size: "xs",
+                        color: "white",
                     }),
                     (0, r.jsx)(i.X6q, {
-                        variant: 'text-sm/medium',
-                        color: 'always-white',
-                        children: O || I ? d.intl.string(d.t.N0bC3N) : d.intl.string(d.t.O1sT5u)
-                    })
-                ]
-            })
+                        variant: "text-sm/medium",
+                        color: "always-white",
+                        children: O || I ? d.intl.string(d.t.N0bC3N) : d.intl.string(d.t.O1sT5u),
+                    }),
+                ],
+            }),
     });
 }

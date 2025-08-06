@@ -28,45 +28,45 @@ function g(e) {
                 className: _.headerImage,
                 listing: t,
                 imageSize: j,
-                alt: ''
+                alt: "",
             }),
             (0, a.jsx)(c.LZC, {
                 size: 16,
-                horizontal: !0
+                horizontal: !0,
             }),
-            (0, a.jsxs)('div', {
+            (0, a.jsxs)("div", {
                 className: _.headerTextColumn,
                 children: [
                     (0, a.jsx)(c.X6q, {
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
-                        children: t.name
+                        variant: "text-md/semibold",
+                        color: "header-primary",
+                        children: t.name,
                     }),
                     (0, a.jsx)(c.LZC, { size: 8 }),
                     (0, a.jsx)(c.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'text-muted',
+                        variant: "text-sm/normal",
+                        color: "text-muted",
                         className: _.__invalid_description,
-                        children: l
+                        children: l,
                     }),
                     (0, a.jsx)(c.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'text-muted',
+                        variant: "text-sm/normal",
+                        color: "text-muted",
                         className: _.__invalid_description,
-                        children: x.intl.format(x.t['6dOuaG'], { count: t.attachments_count })
-                    })
-                ]
+                        children: x.intl.format(x.t["6dOuaG"], { count: t.attachments_count }),
+                    }),
+                ],
             }),
             (0, a.jsx)(c.olH, {
                 className: _.closeButton,
-                onClick: r
-            })
-        ]
+                onClick: r,
+            }),
+        ],
     });
 }
 function p(e) {
     let { attachment: t, guildId: n, productId: r } = e;
-    return (0, a.jsxs)('li', {
+    return (0, a.jsxs)("li", {
         className: _.attachmentRow,
         children: [
             (0, a.jsx)(f.Z, { attachment: t }),
@@ -76,33 +76,33 @@ function p(e) {
                 productId: r,
                 attachmentId: t.id,
                 children: (0, a.jsx)(c._8t, {
-                    size: 'md',
-                    color: 'currentColor'
-                })
-            })
-        ]
+                    size: "md",
+                    color: "currentColor",
+                }),
+            }),
+        ],
     });
 }
 function v(e) {
     var t;
     let { guildId: n, productId: r, onClose: o, transitionState: s } = e,
         d = (0, i.e7)([m.Z], () => m.Z.getGuildProduct(r));
-    l()(null != d, 'guildProductListing cannot be null');
+    l()(null != d, "guildProductListing cannot be null");
     let u = null != (t = d.attachments) ? t : [];
     return (0, a.jsxs)(c.Y0X, {
         className: _.modal,
         size: c.CgR.MEDIUM,
         transitionState: s,
-        'aria-label': x.intl.string(x.t['3jaCaW']),
-        parentComponent: 'GuildProductDownloadModal',
+        "aria-label": x.intl.string(x.t["3jaCaW"]),
+        parentComponent: "GuildProductDownloadModal",
         children: [
             (0, a.jsx)(g, {
                 guildId: n,
                 guildProductListing: d,
-                onClose: o
+                onClose: o,
             }),
             (0, a.jsx)(c.hzk, {
-                children: (0, a.jsx)('ul', {
+                children: (0, a.jsx)("ul", {
                     className: _.__invalid_attachmentsList,
                     children: u.map((e) =>
                         (0, a.jsx)(
@@ -110,13 +110,13 @@ function v(e) {
                             {
                                 guildId: n,
                                 productId: d.id,
-                                attachment: e
+                                attachment: e,
                             },
-                            e.id
-                        )
-                    )
-                })
-            })
-        ]
+                            e.id,
+                        ),
+                    ),
+                }),
+            }),
+        ],
     });
 }

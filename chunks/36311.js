@@ -25,7 +25,9 @@ function O(e) {
             return (null == (e = m.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
         a = (0, p.Kt)(),
-        { verifyAgreementButtonText: c, verifyGateDescription: O } = (0, p.a1)((0, g.Y2)(t) ? x.L0.NSFW_SERVER : x.L0.NSFW_CHANNEL),
+        { verifyAgreementButtonText: c, verifyGateDescription: O } = (0, p.a1)(
+            (0, g.Y2)(t) ? x.L0.NSFW_SERVER : x.L0.NSFW_CHANNEL,
+        ),
         v = i.useCallback(() => {
             null != t && u.Z.nsfwReturnToSafety(t.id);
         }, [t]),
@@ -48,8 +50,8 @@ function O(e) {
               description: O,
               agreement: c,
               agreementButtonColor: o.zx.Colors.BRAND,
-              disagreement: j.intl.string(j.t['/g10LC']),
-              imageClassName: _.ageGatedImage
+              disagreement: j.intl.string(j.t["/g10LC"]),
+              imageClassName: _.ageGatedImage,
           })
         : l
           ? (0, r.jsx)(f.Z, {
@@ -59,10 +61,10 @@ function O(e) {
                 onAgree: C,
                 onDisagree: v,
                 title: j.intl.string(j.t.NEabBQ),
-                description: j.intl.format(j.t['2kHZen'], { helpURL: b.Z.getArticleURL(y.BhN.NSFW_AGE_GATING) }),
+                description: j.intl.format(j.t["2kHZen"], { helpURL: b.Z.getArticleURL(y.BhN.NSFW_AGE_GATING) }),
                 agreement: null,
-                disagreement: j.intl.string(j.t['/g10LC']),
-                imageClassName: _.ageGatedImage
+                disagreement: j.intl.string(j.t["/g10LC"]),
+                imageClassName: _.ageGatedImage,
             })
           : (0, r.jsx)(f.Z, {
                 guildId: null == t ? void 0 : t.id,
@@ -73,7 +75,7 @@ function O(e) {
                 title: Z,
                 description: j.intl.string(S ? j.t.ZtuRtr : j.t.E4Cd5O),
                 agreement: j.intl.string(j.t.wVq7ur),
-                disagreement: j.intl.string(j.t['/g10LC'])
+                disagreement: j.intl.string(j.t["/g10LC"]),
             });
 }
 let v = function (e) {
@@ -87,13 +89,13 @@ let v = function (e) {
         (0, r.jsx)(c.Den, {
             ref: s,
             className: _.scroller,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: a()(l, _.wrapper),
                 children: (0, r.jsx)(O, {
                     guild: t,
-                    channelId: n
-                })
-            })
+                    channelId: n,
+                }),
+            }),
         })
     );
 };

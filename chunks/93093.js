@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(442837),
     i = n(570140);
 function o(e, t, n) {
@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,18 +37,18 @@ class a extends r.ZP.Store {
         !0 !== e.guild.unavailable && this.guildIds.delete(e.guild.id);
     }
     constructor() {
-        (super(
+        super(
             i.Z,
             {
                 CACHE_LOADED: (e) => this.handleCacheLoaded(e),
                 CACHE_LOADED_LAZY: (e) => this.handleCacheLoadedLazy(e),
                 CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 GUILD_CREATE: (e) => this.handleGuildCreate(e),
-                GUILD_DELETE: (e) => this.handleGuildDelete(e)
+                GUILD_DELETE: (e) => this.handleGuildDelete(e),
             },
-            i.c.Early
+            i.c.Early,
         ),
-            o(this, 'guildIds', new Set()));
+            o(this, "guildIds", new Set());
     }
 }
 let s = new a();

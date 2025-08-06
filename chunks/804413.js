@@ -5,7 +5,7 @@ var i = n(792481),
     a = n(474936);
 function l() {
     let e = (0, s.GG)(),
-        t = i.X.useExperiment({ location: 'useRecentlyLeveledTenureBadge' }).bypassTimeLimit,
+        t = i.X.useExperiment({ location: "useRecentlyLeveledTenureBadge" }).bypassTimeLimit,
         n = (0, r.EK)();
     if (null == e || !n) return null;
     let l = new Date().getTime();

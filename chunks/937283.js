@@ -22,15 +22,15 @@ function h(e) {
     return null != n && f && null != j
         ? (0, l.jsx)(s.Gt, {
               value: h,
-              children: (0, l.jsx)('div', {
+              children: (0, l.jsx)("div", {
                   className: x.__invalid_sidebarContainer,
                   style: { width: m.$Y6 },
                   children: (0, l.jsx)(o.Z, {
                       userId: j.details.userId,
                       guildId: j.details.guildId,
-                      onClose: b
-                  })
-              })
+                      onClose: b,
+                  }),
+              }),
           })
         : null;
 }

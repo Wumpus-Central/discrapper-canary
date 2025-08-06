@@ -15,15 +15,15 @@ function d(e) {
             (0, i.jsx)(l.Z, {
                 contained: !0,
                 dragStart: t,
-                locked: d
+                locked: d,
             }),
             (0, i.jsx)(s.Z, {
                 dragStart: t,
                 locked: d,
                 pinned: r,
                 dragging: n,
-                contained: !0
-            })
-        ]
+                contained: !0,
+            }),
+        ],
     });
 }

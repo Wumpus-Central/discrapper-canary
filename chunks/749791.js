@@ -11,7 +11,7 @@ function i() {
         }).apply(this, arguments);
 }
 function o(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 var a = n(152477),
     s = n(73800),
@@ -34,11 +34,11 @@ e.exports = (function (e) {
                 f = e.leafSet,
                 _ = e.text,
                 p = t.getKey(),
-                h = f.get('leaves'),
+                h = f.get("leaves"),
                 m = o.getComponentForKey(u),
                 g = o.getPropsForKey(u),
                 E = a.encode(p, parseInt(u, 10), 0),
-                b = _.slice(h.first().get('start'), h.last().get('end')),
+                b = _.slice(h.first().get("start"), h.last().get("end")),
                 y = c.getHTMLDirIfDifferent(l.getDirection(b), d);
             return s.createElement(
                 m,
@@ -47,10 +47,10 @@ e.exports = (function (e) {
                     decoratedText: b,
                     dir: y,
                     key: E,
-                    entityKey: t.getEntityAt(f.get('start')),
-                    offsetKey: E
+                    entityKey: t.getEntityAt(f.get("start")),
+                    offsetKey: E,
                 }),
-                n
+                n,
             );
         }),
         t

@@ -8,6 +8,7 @@ async function a(e, t) {
     let n = l.Z.getSettings(e);
     if ((n === l.P && (await (0, i.cP)(e), (n = l.Z.getSettings(e))), n !== l.P && null != n)) {
         if (null != n.newMemberActions && null != n.newMemberActions.find((e) => e.channelId === t)) return r.j.TODO;
-        if (null != n.resourceChannels && null != n.resourceChannels.find((e) => e.channelId === t)) return r.j.RESOURCE;
+        if (null != n.resourceChannels && null != n.resourceChannels.find((e) => e.channelId === t))
+            return r.j.RESOURCE;
     }
 }

@@ -6,6 +6,6 @@ function i(n, e, t) {
         guild: e,
         channel: n,
         stageInstance: t,
-        source: l.t4x.CONTEXT_MENU
+        source: l.t4x.CONTEXT_MENU,
     });
 }

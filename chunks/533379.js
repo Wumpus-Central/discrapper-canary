@@ -7,7 +7,9 @@ function a(e) {
         a = (0, o.g)(t),
         { activeCommand: s } = (0, r.cj)([i.Z], () => {
             var e;
-            return { activeCommand: (null == (e = n.commands) ? void 0 : e.enabled) ? i.Z.getActiveCommand(t.id) : null };
+            return {
+                activeCommand: (null == (e = n.commands) ? void 0 : e.enabled) ? i.Z.getActiveCommand(t.id) : null,
+            };
         });
     return null == s && a;
 }

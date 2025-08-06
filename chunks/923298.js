@@ -11,7 +11,17 @@ var o = r(399606),
 function f(e) {
     var t,
         r,
-        { header: f, children: b, sku_id: O, sku_name: p, guild_id: y, cancelLabel: d, confirmLabel: g, transitionState: m, onClose: j } = e,
+        {
+            header: f,
+            children: b,
+            sku_id: O,
+            sku_name: p,
+            guild_id: y,
+            cancelLabel: d,
+            confirmLabel: g,
+            transitionState: m,
+            onClose: j,
+        } = e,
         v = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -22,15 +32,27 @@ function f(e) {
                         n,
                         o = {},
                         i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, ['header', 'children', 'sku_id', 'sku_name', 'guild_id', 'cancelLabel', 'confirmLabel', 'transitionState', 'onClose']);
+        })(e, [
+            "header",
+            "children",
+            "sku_id",
+            "sku_name",
+            "guild_id",
+            "cancelLabel",
+            "confirmLabel",
+            "transitionState",
+            "onClose",
+        ]);
     let P = (0, o.e7)([c.default], () => c.default.getCurrentUser());
     return (0, n.jsx)(
         i.ConfirmModal,
@@ -38,46 +60,46 @@ function f(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (t) {
                         var n;
-                        ((n = r[t]),
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = n));
-                    }));
+                                : (e[t] = n);
+                    });
             }
             return e;
         })(
             {
-                header: null != f ? f : s.intl.string(s.t['+78Pfn']),
-                cancelText: null != d ? d : s.intl.string(s.t['ETE/oK']),
-                confirmText: null != g ? g : s.intl.string(s.t['+78Pfn']),
+                header: null != f ? f : s.intl.string(s.t["+78Pfn"]),
+                cancelText: null != d ? d : s.intl.string(s.t["ETE/oK"]),
+                confirmText: null != g ? g : s.intl.string(s.t["+78Pfn"]),
                 onConfirm: () => {
-                    (a.default.track(u.rMx.TNS_SKU_REPORT_SUBMITTED, {
+                    a.default.track(u.rMx.TNS_SKU_REPORT_SUBMITTED, {
                         sku_id: O,
                         guild_id: y,
-                        user_id: null == P ? void 0 : P.id
+                        user_id: null == P ? void 0 : P.id,
                     }),
                         l.Z.show({
                             title: s.intl.string(s.t.sUvCKS),
-                            body: s.intl.format(s.t['7KJnk5'], { skuName: p })
-                        }));
+                            body: s.intl.format(s.t["7KJnk5"], { skuName: p }),
+                        });
                 },
                 transitionState: m,
-                onClose: j
+                onClose: j,
             },
-            v
+            v,
         )),
         (r = r = { children: b }),
         Object.getOwnPropertyDescriptors
@@ -92,6 +114,6 @@ function f(e) {
               })(Object(r)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
-        t)
+        t),
     );
 }

@@ -1,4 +1,4 @@
-(n.d(t, { U: () => f }), n(539854), n(388685), n(290780));
+n.d(t, { U: () => f }), n(539854), n(388685), n(290780);
 var i = n(73800),
     r = n(512722),
     l = n.n(r),
@@ -14,7 +14,7 @@ var i = n(73800),
     g = n(981631);
 function f(e) {
     let t = (0, o.e7)([d.Z], () => d.Z.getGuild(e));
-    l()(null != t, 'guild must be present to be editing its integration settings');
+    l()(null != t, "guild must be present to be editing its integration settings");
     let n = (0, o.e7)([u.Z], () => u.Z.getHighestRole(t)),
         r = (0, o.Wu)([s.ZP], () => s.ZP.getMembers(e), [e]),
         f = (0, o.cj)([p.default], () => p.default.getUsers()),
@@ -29,14 +29,14 @@ function f(e) {
                     !m.BT({
                         permission: g.Plq.ADMINISTRATOR,
                         user: i,
-                        context: t
+                        context: t,
                     }) &&
                     u.Z.canManageUser(g.Plq.USE_APPLICATION_COMMANDS, i, t);
                 e.push({
                     id: i.id,
                     canManage: r,
                     nick: n.nick,
-                    username: i.username
+                    username: i.username,
                 });
             }
             return e;
@@ -53,27 +53,27 @@ function f(e) {
                     l = {
                         id: i.id,
                         name: i.name,
-                        canManage: r
+                        canManage: r,
                     };
                 (0, a.fI)(i) ? e.unshift(l) : e.push(l);
             }
             return e;
         }, [j, t, n]),
-        [_, C] = i.useState(''),
+        [_, C] = i.useState(""),
         N = i.useMemo(() => {
             var t;
-            let n = (t = _).startsWith('@') ? t.substr(1) : t,
-                i = _.startsWith('@') ? y.filter((t) => t.id === e) : y;
+            let n = (t = _).startsWith("@") ? t.substr(1) : t,
+                i = _.startsWith("@") ? y.filter((t) => t.id === e) : y;
             return {
                 members: (0, b.B)(v, h, n),
-                roles: (0, b.B)(i, x, n)
+                roles: (0, b.B)(i, x, n),
             };
         }, [e, v, _, y]);
     return {
         query: _,
         results: N,
         setQuery: C,
-        unfilteredCount: N.members.length + N.roles.length
+        unfilteredCount: N.members.length + N.roles.length,
     };
 }
 function h(e) {
@@ -82,13 +82,13 @@ function h(e) {
         (null == e ? void 0 : e.nick) != null && t.push(e.nick),
         {
             id: e.id,
-            names: t
+            names: t,
         }
     );
 }
 function x(e) {
     return {
         id: e.id,
-        names: [e.name]
+        names: [e.name],
     };
 }

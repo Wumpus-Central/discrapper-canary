@@ -6,40 +6,40 @@ var r = n(255367),
     s = n(375613);
 function a(e) {
     let { children: t } = e,
-        { notificationCenterVariant: n } = l.Lk.useExperiment({ location: 'NotificationsInboxTooltip' }),
+        { notificationCenterVariant: n } = l.Lk.useExperiment({ location: "NotificationsInboxTooltip" }),
         a = n === l.jP.LEGACY ? o.intl.string(o.t.GSmTKC) : o.intl.string(o.t.HcoRu7);
     return (0, r.jsx)(i.ua7, {
         hideOnClick: !0,
         spacing: 12,
-        position: 'right',
+        position: "right",
         text: a,
         tooltipClassName: s.listItemTooltip,
         children: (e) => {
             var n, i;
             return (0, r.jsx)(
-                'div',
+                "div",
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -56,8 +56,8 @@ function a(e) {
                       })(Object(i)).forEach(function (e) {
                           Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
-                n)
+                n),
             );
-        }
+        },
     });
 }

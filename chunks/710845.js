@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(579092),
     i = n(569611);
 let o = Date.now(),
@@ -8,16 +8,16 @@ let o = Date.now(),
     let u = Date.now(),
         d = ((u - o) / 1000).toFixed(3),
         f = ((u - a) / 1000).toFixed(3),
-        _ = 'Σ:'.concat(d, 's, Δ:').concat(f, 's');
-    ((a = u),
+        _ = "Σ:".concat(d, "s, Δ:").concat(f, "s");
+    (a = u),
         i.Hj(
             {
                 name: e,
-                timing: _
+                timing: _,
             },
             n,
-            ...l
+            ...l,
         ),
-        (0, r.Sm)(e, t, n, ...l));
+        (0, r.Sm)(e, t, n, ...l);
 });
 let s = r.Yd;

@@ -1,13 +1,13 @@
-(n.d(t, {
+n.d(t, {
     W3: () => s,
-    pJ: () => i
+    pJ: () => i,
 }),
     n(388685),
     n(539854),
-    n(255367));
+    n(255367);
 var r = n(73800),
     i = (function (e) {
-        return ((e[(e.MOUNTED = 0)] = 'MOUNTED'), (e[(e.ENTERED = 1)] = 'ENTERED'), (e[(e.YEETED = 2)] = 'YEETED'), e);
+        return (e[(e.MOUNTED = 0)] = "MOUNTED"), (e[(e.ENTERED = 1)] = "ENTERED"), (e[(e.YEETED = 2)] = "YEETED"), e;
     })({});
 let o = {};
 function a(e) {
@@ -33,7 +33,18 @@ function s(e) {
                         i = () => {
                             var e, n;
                             let r = null == (e = d.current) ? void 0 : e.get(t);
-                            null == r || (2 === r.state ? (null == (n = d.current) || n.delete(t), null != l ? (clearTimeout(c.current), (c.current = setTimeout(() => u({}), l))) : u({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)));
+                            null == r ||
+                                (2 === r.state
+                                    ? (null == (n = d.current) || n.delete(t),
+                                      null != l
+                                          ? (clearTimeout(c.current), (c.current = setTimeout(() => u({}), l)))
+                                          : u({}))
+                                    : __DEV__ &&
+                                      console.warn(
+                                          "SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(
+                                              t,
+                                          ),
+                                      ));
                         },
                         o = n(t, e, r, i);
                     a = {
@@ -41,7 +52,7 @@ function s(e) {
                         children: o,
                         state: r,
                         cleanUp: i,
-                        renderItem: n
+                        renderItem: n,
                     };
                 } else if (a.item !== e || a.renderItem !== n || 2 === a.state) {
                     let { cleanUp: r } = a,
@@ -52,10 +63,10 @@ function s(e) {
                         children: o,
                         state: i,
                         cleanUp: r,
-                        renderItem: n
+                        renderItem: n,
                     };
                 }
-                (o.set(t, a), r.delete(t));
+                o.set(t, a), r.delete(t);
             }
             for (let e of r) {
                 let t = o.get(e);
@@ -68,7 +79,7 @@ function s(e) {
                             children: n(e, t.item, 2, t.cleanUp),
                             state: 2,
                             cleanUp: i,
-                            renderItem: n
+                            renderItem: n,
                         }).children
                             ? o.set(e, t)
                             : o.delete(e);
@@ -84,7 +95,7 @@ function s(e) {
                 return null == (e = d.current) ? void 0 : e.clear();
             }
         ),
-        [f]
+        [f],
     );
     let _ = [];
     for (let [, e] of f) _.push(e.children);

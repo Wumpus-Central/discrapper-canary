@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Y }), n(388685), n(539854), n(467055), n(472816), n(794429));
+n.d(t, { Z: () => Y }), n(388685), n(539854), n(467055), n(472816), n(794429);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,21 +35,21 @@ let E = new Map(),
     T = new Map(),
     S = !1;
 function A() {
-    (E.clear(), b.clear(), T.clear(), (S = !1), (v = 0), (O = 0));
+    E.clear(), b.clear(), T.clear(), (S = !1), (v = 0), (O = 0);
 }
 function N() {
-    (b.clear(), T.clear());
+    b.clear(), T.clear();
 }
 function C() {
     v = 1;
 }
 function R(e) {
     let { updates: t } = e;
-    (t.forEach((e) => {
+    t.forEach((e) => {
         let { guildId: t, sounds: n } = e;
         E.set(t, n);
     }),
-        (v = 2));
+        (v = 2);
 }
 function P(e) {
     let { guild: t } = e;
@@ -59,7 +59,9 @@ function w(e) {
     let { sound: t } = e,
         n = E.get(t.guildId),
         r = null == n ? void 0 : n.findIndex((e) => e.soundId === t.soundId);
-    null != n && null != r && -1 !== r ? ((n[r] = t), E.set(t.guildId, [...n])) : null != n && (null == n || n.push(t), E.set(t.guildId, [...n]));
+    null != n && null != r && -1 !== r
+        ? ((n[r] = t), E.set(t.guildId, [...n]))
+        : null != n && (null == n || n.push(t), E.set(t.guildId, [...n]));
 }
 function D(e) {
     let { guildId: t, soundboardSounds: n } = e;
@@ -76,28 +78,28 @@ function x() {
 }
 function M(e) {
     let { soundboardSounds: t } = e;
-    (E.set(p.X8, t), (O = 2));
+    E.set(p.X8, t), (O = 2);
 }
 function k(e) {
     var t, n, r;
     let { soundId: i, userId: o } = e,
         a = (null != (n = b.get(i)) ? n : 0) + 1,
         s = (null != (r = T.get(o)) ? r : 0) + 1;
-    (b.set(i, a), T.set(o, s), o !== (null == (t = u.default.getCurrentUser()) ? void 0 : t.id) && (S = !0));
+    b.set(i, a), T.set(o, s), o !== (null == (t = u.default.getCurrentUser()) ? void 0 : t.id) && (S = !0);
 }
 function j(e) {
     var t, n;
     let { soundId: r, userId: i } = e,
         o = (null != (t = b.get(r)) ? t : 0) - 1,
         a = (null != (n = T.get(i)) ? n : 0) - 1;
-    (o <= 0 ? b.delete(r) : b.set(r, o), a <= 0 ? T.delete(i) : T.set(i, a));
+    o <= 0 ? b.delete(r) : b.set(r, o), a <= 0 ? T.delete(i) : T.set(i, a);
 }
 let U = o().debounce((e, t) => {
-    (d.default.track(h.rMx.UPDATE_SOUNDBOARD_SETTINGS, {
+    d.default.track(h.rMx.UPDATE_SOUNDBOARD_SETTINGS, {
         volume: Math.round((0, f.P)(e)),
-        location_stack: t
+        location_stack: t,
     }),
-        l.kU.updateSetting({ volume: e }));
+        l.kU.updateSetting({ volume: e });
 }, 1000);
 function G(e) {
     let { volume: t, location: n } = e;
@@ -123,17 +125,19 @@ function F(e) {
 }
 function V(e) {
     let { soundboardStoreState: t } = e;
-    ((E = new Map(_.default.entries(t.soundboardSounds))), (I = new Set(t.favoritedSoundIds)), (y = new Set(t.localSoundboardMutes)));
+    (E = new Map(_.default.entries(t.soundboardSounds))),
+        (I = new Set(t.favoritedSoundIds)),
+        (y = new Set(t.localSoundboardMutes));
 }
 class H extends (r = a.ZP.Store) {
     initialize() {
-        (this.waitFor(c.Z), B(c.Z.settings));
+        this.waitFor(c.Z), B(c.Z.settings);
     }
     getOverlaySerializedState() {
         return {
             soundboardSounds: Object.fromEntries(E),
             favoritedSoundIds: Array.from(I),
-            localSoundboardMutes: Array.from(y)
+            localSoundboardMutes: Array.from(y),
         };
     }
     getSounds() {
@@ -189,7 +193,7 @@ class H extends (r = a.ZP.Store) {
         return 2 === v && 2 === O;
     }
 }
-g(H, 'displayName', 'SoundboardStore');
+g(H, "displayName", "SoundboardStore");
 let Y = new H(s.Z, {
     LOGOUT: A,
     GUILD_SOUNDBOARD_FETCH: C,
@@ -207,5 +211,5 @@ let Y = new H(s.Z, {
     SOUNDBOARD_SOUNDS_RECEIVED: R,
     GUILD_DELETE: P,
     AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: F,
-    OVERLAY_INITIALIZE: V
+    OVERLAY_INITIALIZE: V,
 });

@@ -16,7 +16,14 @@ var r = n(255367),
     g = n(65154),
     E = n(388032);
 function b(e) {
-    let { stream: t, handleGoLive: n, showReportOption: b = !1, disableChangeWindows: y = !1, minimal: O = !1, appContext: v = h.IlC.APP } = e,
+    let {
+            stream: t,
+            handleGoLive: n,
+            showReportOption: b = !1,
+            disableChangeWindows: y = !1,
+            minimal: O = !1,
+            appContext: v = h.IlC.APP,
+        } = e,
         { desktopSourceId: I } = (0, o.cj)([d.Z], () => {
             var e;
             let { desktopSource: t } = null != (e = d.Z.getGoLiveSource()) ? e : {};
@@ -28,10 +35,10 @@ function b(e) {
         N = (0, o.e7)([d.Z], () => d.Z.supportsScreenSoundshare()),
         C = (0, p.Z)(t, v),
         R = (0, _.Z)(t, v, m.Vq),
-        P = null != I && A && (!I.startsWith('screen') || N),
+        P = null != I && A && (!I.startsWith("screen") || N),
         w = (0, o.e7)([d.Z], () => d.Z.getUseSystemScreensharePicker() && (0, f.isLinux)()),
         D = i.useCallback(() => {
-            (null == I ? void 0 : I.startsWith('prepicked:'))
+            (null == I ? void 0 : I.startsWith("prepicked:"))
                 ? d.Z.getMediaEngine().eachConnection((e) => {
                       e.context === g.Yn.STREAM && e.presentDesktopSourcePicker();
                   })
@@ -43,65 +50,65 @@ function b(e) {
                     qualityOptions: {
                         preset: e,
                         resolution: t,
-                        frameRate: n
+                        frameRate: n,
                     },
-                    context: g.Yn.STREAM
+                    context: g.Yn.STREAM,
                 };
-            (null != I &&
+            null != I &&
                 (r.desktopSettings = {
                     sourceId: I,
-                    sound: !T
+                    sound: !T,
                 }),
                 (0, l.Rc)({
                     preset: e,
                     resolution: t,
                     frameRate: n,
-                    soundshareEnabled: !T
+                    soundshareEnabled: !T,
                 }),
-                s.Z.setGoLiveSource(r));
+                s.Z.setGoLiveSource(r);
         }, [I, T]);
     if (null == t)
         return (0, r.jsx)(a.sNh, {
-            id: 'share-your-screen',
+            id: "share-your-screen",
             label: E.intl.string(E.t.fjBNo6),
             icon: a.hGI,
-            action: n
+            action: n,
         });
     let x = f.isPlatformEmbedded
             ? (0, r.jsx)(a.sNh, {
-                  id: 'stream-settings',
+                  id: "stream-settings",
                   label: E.intl.string(E.t.ytAD9f),
-                  children: C
+                  children: C,
               })
             : null,
         M = P
             ? (0, r.jsx)(a.S89, {
-                  id: 'stream-settings-audio-enable',
+                  id: "stream-settings-audio-enable",
                   label: O ? E.intl.string(E.t.af2Tw8) : E.intl.string(E.t.ZJEHt7),
                   checked: T,
-                  action: L
+                  action: L,
               })
             : null,
         k =
             !S || y || w
                 ? null
                 : (0, r.jsx)(a.sNh, {
-                      id: 'change-windows',
+                      id: "change-windows",
                       label: O ? E.intl.string(E.t.eAktHh) : E.intl.string(E.t.qntSam),
                       icon: a.hGI,
-                      action: D
+                      action: D,
                   }),
         j = (0, r.jsx)(a.sNh, {
-            id: 'stop-streaming',
+            id: "stop-streaming",
             label: E.intl.string(E.t.S5anIS),
             icon: a.g5r,
-            action: () => (0, c.Z)(t)
+            action: () => (0, c.Z)(t),
         });
     return O
         ? (0, r.jsxs)(r.Fragment, {
-              children: [j, k, x, M]
+              children: [j, k, x, M],
           })
         : (0, r.jsxs)(r.Fragment, {
-              children: [x, b ? R : null, M, k, j]
+              children: [x, b ? R : null, M, k, j],
           });
 }

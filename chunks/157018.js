@@ -23,10 +23,10 @@ function u(e) {
                               return (0, r.ZP)({ channel: e });
                       }
                   })(t)
-                : '';
+                : "";
         }
         case o.Qs.INTANGIBLE:
             var t;
-            return null != (t = e.name) ? t : '';
+            return null != (t = e.name) ? t : "";
     }
 }

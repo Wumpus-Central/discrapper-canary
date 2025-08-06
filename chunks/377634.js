@@ -16,14 +16,14 @@ t.exports = function (t) {
                 function (t) {
                     if (n.includes(t)) return !1;
                 },
-                !0
+                !0,
             )
         );
     var a = n.getIterator();
     return (
         !1 !==
         c(a, function (t) {
-            if (o(r, t)) return f(a, 'normal', !1);
+            if (o(r, t)) return f(a, "normal", !1);
         })
     );
 };

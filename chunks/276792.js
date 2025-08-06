@@ -19,24 +19,24 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -62,14 +62,17 @@ function E(e) {
     var t, n, E, y;
     let v,
         { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: N, isLightTheme: T } = e,
-        P = 'AnnouncementModalVariant1_'.concat(i.z[Number(I.dismissKey)]),
+        P = "AnnouncementModalVariant1_".concat(i.z[Number(I.dismissKey)]),
         { onClose: j } = C,
         A = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : g.intl.string(g.t.YScQSE),
-        Z = (null == (n = I.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
+        Z =
+            (null == (n = I.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
+                ? "jump_to_mkt_button"
+                : "get_nitro_button";
     switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case l.Wc.OPEN_MARKETING_PAGE:
             v = () => {
-                ((0, c.uL)(f.Z5c.APPLICATION_STORE), j());
+                (0, c.uL)(f.Z5c.APPLICATION_STORE), j();
             };
             break;
         case l.Wc.OPEN_TIER_1_PAYMENT_MODAL:
@@ -79,11 +82,11 @@ function E(e) {
                     analyticsLocations: S,
                     analyticsObject: O(_({}, N), {
                         object: f.qAy.BUTTON_CTA,
-                        objectType: f.Qqv.TIER_1
+                        objectType: f.Qqv.TIER_1,
                     }),
                     onClose: (e) => {
                         e && j();
-                    }
+                    },
                 });
             break;
         case l.Wc.OPEN_TIER_2_PAYMENT_MODAL:
@@ -95,48 +98,48 @@ function E(e) {
                     analyticsLocations: S,
                     analyticsObject: O(_({}, N), {
                         object: f.qAy.BUTTON_CTA,
-                        objectType: f.Qqv.TIER_2
+                        objectType: f.Qqv.TIER_2,
                     }),
                     onClose: (e) => {
                         e && j();
-                    }
+                    },
                 });
     }
     let x =
-            '' !== I.helpArticleId
+            "" !== I.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              '\xA0',
+                              "\xA0",
                               (0, r.jsx)(o.eee, {
                                   className: m.termsApplyAnchor,
                                   href: d.Z.getArticleURL(I.helpArticleId),
-                                  children: g.intl.string(g.t['sBp+u7'])
-                              })
-                          ]
+                                  children: g.intl.string(g.t["sBp+u7"]),
+                              }),
+                          ],
                       })
                 : void 0,
         w = {
-            type: 'video',
-            src: T ? I.heroArtVideoLinkLightTheme : I.videoLink
+            type: "video",
+            src: T ? I.heroArtVideoLinkLightTheme : I.videoLink,
         };
-    (null != I.heroArtVideoSubtitles &&
+    null != I.heroArtVideoSubtitles &&
         (w.subtitles = I.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
-            isDefault: !1
+            isDefault: !1,
         }))),
-        ('' !== I.heroArtImageLinkDarkTheme || '' !== I.heroArtImageLinkLightTheme) &&
+        ("" !== I.heroArtImageLinkDarkTheme || "" !== I.heroArtImageLinkLightTheme) &&
             (w = {
-                type: 'image',
-                src: T ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme
-            }));
+                type: "image",
+                src: T ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme,
+            });
     let L =
-        '' !== I.modalTopPill
+        "" !== I.modalTopPill
             ? () =>
                   (0, r.jsx)(p.mn, {
                       text: I.modalTopPill,
-                      className: m.modalTopPill
+                      className: m.modalTopPill,
                   })
             : void 0;
     return {
@@ -151,7 +154,7 @@ function E(e) {
             header: e.header,
             subHeader: e.body,
             imageSrc: T ? e.imageLinkLightTheme : e.imageLink,
-            tagText: '' !== e.pill ? e.pill : void 0
+            tagText: "" !== e.pill ? e.pill : void 0,
         })),
         changeLogId: P,
         button: () => {
@@ -162,24 +165,24 @@ function E(e) {
                 wrapperClassName: m.tier2Gradient,
                 size: a.zx.Sizes.SMALL,
                 onClick: () => {
-                    (u.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
+                    u.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: P,
                         cta_type: Z,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: P
+                        target: P,
                     }),
-                        v());
+                        v();
                 },
                 children: [
-                    (0, r.jsx)('img', {
-                        alt: '',
+                    (0, r.jsx)("img", {
+                        alt: "",
                         className: m.nitroIconSubHeader,
-                        src: b
+                        src: b,
                     }),
-                    A
-                ]
+                    A,
+                ],
             });
         },
-        modalDismissibleContent: '' !== I.dismissKey ? Number(I.dismissKey) : void 0
+        modalDismissibleContent: "" !== I.dismissKey ? Number(I.dismissKey) : void 0,
     };
 }

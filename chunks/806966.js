@@ -3,7 +3,7 @@ n.d(t, {
     Xn: () => f,
     ZN: () => u,
     c: () => a,
-    kJ: () => c
+    kJ: () => c,
 });
 var r = n(296574),
     i = n(362383),
@@ -12,11 +12,11 @@ let a = -1,
     s = Object.freeze({
         inspectedExpressionPosition: {
             rowIndex: 0,
-            columnIndex: 0
+            columnIndex: 0,
         },
         activeCategoryIndex: 0,
         searchPlaceholder: null,
-        bottomPosition: null
+        bottomPosition: null,
     });
 function l() {
     let e = (0, i.F)()((0, r.XR)((e) => s)),
@@ -27,9 +27,9 @@ function l() {
                     inspectedExpressionPosition: {
                         rowIndex: n,
                         columnIndex: t,
-                        source: r
-                    }
-                })
+                        source: r,
+                    },
+                }),
             );
         },
         a = (t) => {
@@ -53,7 +53,7 @@ function l() {
         setActiveCategoryIndex: a,
         setSearchPlaceholder: l,
         resetStoreState: u,
-        setBottomPosition: c
+        setBottomPosition: c,
     };
 }
 let c = l(),

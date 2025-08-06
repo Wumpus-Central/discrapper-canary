@@ -7,9 +7,9 @@ function o(e, t) {
     return e.filter((e) => {
         let t = l.I0({
                 forceRoles: n,
-                context: e
+                context: e,
             }),
             o = r.Plq.VIEW_CHANNEL;
-        return (e.isGuildVocal() && (o = i.IH(o, r.Plq.CONNECT)), i.e$(t, o) && !l.Uu(o, e));
+        return e.isGuildVocal() && (o = i.IH(o, r.Plq.CONNECT)), i.e$(t, o) && !l.Uu(o, e);
     });
 }

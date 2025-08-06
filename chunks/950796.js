@@ -1,7 +1,7 @@
 n.d(t, {
     Dg: () => v,
     TF: () => O,
-    q8: () => h
+    q8: () => h,
 });
 var r = n(255367),
     i = n(73800),
@@ -27,47 +27,47 @@ function y(e) {
         i = (0, r.jsx)(s.P3F, {
             className: a()(p.winButton, p.winButtonClose),
             onClick: () => m(t),
-            'aria-label': _.intl.string(_.t.ZdNUj4),
+            "aria-label": _.intl.string(_.t.ZdNUj4),
             tabIndex: -1,
-            children: (0, r.jsx)(l.Z, {})
+            children: (0, r.jsx)(l.Z, {}),
         }),
         o = (0, r.jsx)(s.P3F, {
             className: a()(p.winButton, p.winButtonMinMax),
             onClick: () => E(t),
-            'aria-label': _.intl.string(_.t.G1u0hI),
+            "aria-label": _.intl.string(_.t.G1u0hI),
             tabIndex: -1,
-            children: (0, r.jsx)(c.Z, {})
+            children: (0, r.jsx)(c.Z, {}),
         }),
         d = (0, r.jsx)(s.P3F, {
             className: a()(p.winButton, p.winButtonMinMax),
             onClick: () => g(t),
-            'aria-label': _.intl.string(_.t.CxOC4e),
+            "aria-label": _.intl.string(_.t.CxOC4e),
             tabIndex: -1,
-            children: (0, r.jsx)(u.Z, {})
+            children: (0, r.jsx)(u.Z, {}),
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(p.winButtons, { [p.winButtonsWithDivider]: n }),
-        children: [d, o, i]
+        children: [d, o, i],
     });
 }
 function O(e) {
     let { leading: t, title: n, trailing: o, windowKey: s, short: l, className: c } = e,
         u = (0, d.getPlatform)(),
         f = i.useCallback(() => E(s), [s]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(p.bar, c, { [p.shortBar]: l }),
         onDoubleClick: f,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: p.title,
-                children: n
+                children: n,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: p.leading,
                 onDoubleClick: b,
-                children: t
+                children: t,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: p.trailing,
                 onDoubleClick: b,
                 children: [
@@ -75,11 +75,11 @@ function O(e) {
                     u === d.PlatformTypes.WINDOWS &&
                         (0, r.jsx)(y, {
                             windowKey: s,
-                            showDivider: null != o
-                        })
-                ]
-            })
-        ]
+                            showDivider: null != o,
+                        }),
+                ],
+            }),
+        ],
     });
 }
 function v(e) {
@@ -89,18 +89,18 @@ function v(e) {
         c = s === d.PlatformTypes.WINDOWS;
     return s === d.PlatformTypes.WEB
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: a()(p.bar, p.systemBar, {
                   [p.fixed]: t,
-                  [p.show]: n
+                  [p.show]: n,
               }),
               onDoubleClick: l,
               children:
                   c &&
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: p.trailing,
                       onDoubleClick: b,
-                      children: (0, r.jsx)(y, { windowKey: o })
-                  })
+                      children: (0, r.jsx)(y, { windowKey: o }),
+                  }),
           });
 }

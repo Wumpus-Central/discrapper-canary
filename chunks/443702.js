@@ -22,24 +22,33 @@ var i = n(255367),
     O = n(388032),
     v = n(189435);
 let S = () =>
-    (0, i.jsx)('div', {
+    (0, i.jsx)("div", {
         className: v.syncing,
-        children: (0, i.jsx)(a.$jN, {})
+        children: (0, i.jsx)(a.$jN, {}),
     });
 class T extends r.PureComponent {
     componentDidMount() {
         l.Z.wait(() => {
-            (o.tZ(), o.jg());
+            o.tZ(), o.jg();
         });
     }
     handleRedemptionRedirect() {
         c.Z.setSection(C.oAB.INVENTORY);
     }
     render() {
-        let { syncing: e, hide: t, paymentSources: n, defaultPaymentSourceId: r, locale: s, premiumSubscription: l, isRemovingPaymentSource: o, isUpdatingPaymentSource: c } = this.props;
+        let {
+            syncing: e,
+            hide: t,
+            paymentSources: n,
+            defaultPaymentSourceId: r,
+            locale: s,
+            premiumSubscription: l,
+            isRemovingPaymentSource: o,
+            isUpdatingPaymentSource: c,
+        } = this.props;
         return t
             ? (0, i.jsx)(d.Z, {})
-            : (0, i.jsxs)('div', {
+            : (0, i.jsxs)("div", {
                   className: v.__invalid_userSettingsBilling,
                   children: [
                       e && 0 === Object.keys(n).length
@@ -49,31 +58,32 @@ class T extends r.PureComponent {
                                 children: (0, i.jsx)(m.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: r,
-                                    premiumSubscriptionPaymentSourceId: null != l && l.status !== C.O0b.CANCELED ? l.paymentSourceId : null,
+                                    premiumSubscriptionPaymentSourceId:
+                                        null != l && l.status !== C.O0b.CANCELED ? l.paymentSourceId : null,
                                     locale: s,
                                     removing: o,
-                                    submitting: c
-                                })
+                                    submitting: c,
+                                }),
                             }),
                       (0, i.jsx)(g.F, {
                           setting: E.s6.BILLING_TRANSACTION_HISTORY,
-                          children: (0, i.jsx)('div', {
+                          children: (0, i.jsx)("div", {
                               className: v.paymentHistory,
                               children: (0, i.jsxs)(a.y5t, {
                                   component: (0, i.jsx)(a.vwX, {
-                                      tag: 'h1',
-                                      children: O.intl.string(O.t.obLrcH)
+                                      tag: "h1",
+                                      children: O.intl.string(O.t.obLrcH),
                                   }),
-                                  children: [(0, i.jsx)(p.oQ, {}), (0, i.jsx)(u.Z, { locale: s })]
-                              })
-                          })
+                                  children: [(0, i.jsx)(p.oQ, {}), (0, i.jsx)(u.Z, { locale: s })],
+                              }),
+                          }),
                       }),
                       (0, i.jsx)(a.Zbd, {
                           className: v.codeRedemptionRedirect,
                           type: a.Zbd.Types.CUSTOM,
-                          children: O.intl.format(O.t['8b+FXF'], { onClick: this.handleRedemptionRedirect })
-                      })
-                  ]
+                          children: O.intl.format(O.t["8b+FXF"], { onClick: this.handleRedemptionRedirect }),
+                      }),
+                  ],
               });
     }
 }
@@ -94,7 +104,7 @@ function I() {
                   paymentSources: x.Z.paymentSources,
                   syncing: b.Z.isSyncing,
                   isRemovingPaymentSource: b.Z.isRemovingPaymentSource,
-                  isUpdatingPaymentSource: b.Z.isUpdatingPaymentSource
+                  isUpdatingPaymentSource: b.Z.isUpdatingPaymentSource,
               };
     });
     if (!e.shouldRenderBillingSettings) return (0, i.jsx)(S, {});
@@ -109,41 +119,43 @@ function I() {
                         i,
                         r = {},
                         s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (i = 0; i < s.length; i++)
+                    (n = s[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(e, ['shouldRenderBillingSettings']);
+        })(e, ["shouldRenderBillingSettings"]);
     return (0, i.jsx)(
         T,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     i = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     i.forEach(function (t) {
                         var i;
-                        ((i = n[t]),
+                        (i = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: i,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = i));
-                    }));
+                                : (e[t] = i);
+                    });
             }
             return e;
-        })({}, n)
+        })({}, n),
     );
 }

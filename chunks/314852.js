@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Z: () => C,
-    a: () => f
+    a: () => f,
 }),
     n(388685),
-    n(953529));
+    n(953529);
 var r,
     i = n(442837),
     o = n(570140),
@@ -16,7 +16,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,20 +62,20 @@ function d(e, t) {
     );
 }
 var f = (function (e) {
-    return ((e.NOT_FETCHED = 'NOT_FETCHED'), (e.FETCHING = 'FETCHING'), (e.FETCHED = 'FETCHED'), e);
+    return (e.NOT_FETCHED = "NOT_FETCHED"), (e.FETCHING = "FETCHING"), (e.FETCHED = "FETCHED"), e;
 })({});
 let _ = new Map(),
     p = {
         profile: null,
         lastSyncTimestamp: null,
-        fetchStatus: 'NOT_FETCHED',
+        fetchStatus: "NOT_FETCHED",
         isUpdating: !1,
-        error: null
+        error: null,
     };
 function h(e) {
     let { guildId: t } = e,
         n = _.get(t);
-    null == n ? _.set(t, d(c({}, p), { fetchStatus: 'FETCHING' })) : _.set(t, d(c({}, n), { fetchStatus: 'FETCHING' }));
+    null == n ? _.set(t, d(c({}, p), { fetchStatus: "FETCHING" })) : _.set(t, d(c({}, n), { fetchStatus: "FETCHING" }));
 }
 function m(e) {
     let { guildId: t, profile: n } = e,
@@ -86,16 +86,16 @@ function m(e) {
               d(c({}, p), {
                   profile: n,
                   lastSyncTimestamp: Date.now(),
-                  fetchStatus: 'FETCHED'
-              })
+                  fetchStatus: "FETCHED",
+              }),
           )
         : _.set(
               t,
               d(c({}, r), {
                   profile: n,
                   lastSyncTimestamp: Date.now(),
-                  fetchStatus: 'FETCHED'
-              })
+                  fetchStatus: "FETCHED",
+              }),
           );
 }
 function g(e) {
@@ -106,15 +106,15 @@ function g(e) {
               t,
               d(c({}, p), {
                   error: n,
-                  fetchStatus: 'FETCHED'
-              })
+                  fetchStatus: "FETCHED",
+              }),
           )
         : _.set(
               t,
               d(c({}, r), {
                   error: n,
-                  fetchStatus: 'FETCHED'
-              })
+                  fetchStatus: "FETCHED",
+              }),
           );
 }
 function E(e) {
@@ -131,8 +131,8 @@ function b(e) {
               t,
               d(c({}, r), {
                   profile: n,
-                  isUpdating: !1
-              })
+                  isUpdating: !1,
+              }),
           );
 }
 function y(e) {
@@ -144,8 +144,8 @@ function y(e) {
               t,
               d(c({}, r), {
                   error: n,
-                  isUpdating: !1
-              })
+                  isUpdating: !1,
+              }),
           );
 }
 function O(e) {
@@ -158,8 +158,8 @@ function O(e) {
             t,
             d(c({}, r), {
                 isUpdating: !1,
-                profile: d(c({}, i), { visibility: n })
-            })
+                profile: d(c({}, i), { visibility: n }),
+            }),
         );
 }
 function v(e) {
@@ -173,16 +173,16 @@ function v(e) {
               d(c({}, p), {
                   profile: r,
                   lastSyncTimestamp: Date.now(),
-                  fetchStatus: 'FETCHED'
-              })
+                  fetchStatus: "FETCHED",
+              }),
           )
         : _.set(
               n,
               d(c({}, i), {
                   profile: r,
                   lastSyncTimestamp: Date.now(),
-                  fetchStatus: 'FETCHED'
-              })
+                  fetchStatus: "FETCHED",
+              }),
           );
 }
 function I(e) {
@@ -197,16 +197,16 @@ function I(e) {
               d(c({}, p), {
                   profile: i,
                   lastSyncTimestamp: Date.now(),
-                  fetchStatus: 'FETCHED'
-              })
+                  fetchStatus: "FETCHED",
+              }),
           )
         : _.set(
               n.id,
               d(c({}, r), {
                   profile: i,
                   lastSyncTimestamp: Date.now(),
-                  fetchStatus: 'FETCHED'
-              })
+                  fetchStatus: "FETCHED",
+              }),
           );
 }
 function T(e) {
@@ -225,8 +225,8 @@ function A(e) {
     let a = d(c({}, o.profile), {
         name: i.name,
         icon: null != (t = i.icon) ? t : null,
-        description: null != (n = i.description) ? n : '',
-        customBanner: null != (r = i.discovery_splash) ? r : null
+        description: null != (n = i.description) ? n : "",
+        customBanner: null != (r = i.discovery_splash) ? r : null,
     });
     _.set(i.id, d(c({}, o), { profile: a }));
 }
@@ -237,7 +237,11 @@ class N extends (r = i.ZP.Store) {
     }
     getFetchStatus(e) {
         var t, n;
-        return null == e ? 'NOT_FETCHED' : null != (n = null == (t = _.get(e)) ? void 0 : t.fetchStatus) ? n : 'NOT_FETCHED';
+        return null == e
+            ? "NOT_FETCHED"
+            : null != (n = null == (t = _.get(e)) ? void 0 : t.fetchStatus)
+              ? n
+              : "NOT_FETCHED";
     }
     getLastSyncTimestamp(e) {
         var t, n;
@@ -249,10 +253,14 @@ class N extends (r = i.ZP.Store) {
     }
     getErrorCode(e) {
         var t, n, r;
-        return null == e ? null : null != (r = null == (n = _.get(e)) || null == (t = n.error) ? void 0 : t.code) ? r : null;
+        return null == e
+            ? null
+            : null != (r = null == (n = _.get(e)) || null == (t = n.error) ? void 0 : t.code)
+              ? r
+              : null;
     }
 }
-l(N, 'displayName', 'GuildProfileStore');
+l(N, "displayName", "GuildProfileStore");
 let C = new N(o.Z, {
     GUILD_PROFILE_FETCH: h,
     GUILD_PROFILE_FETCH_SUCCESS: m,
@@ -268,5 +276,5 @@ let C = new N(o.Z, {
     GUILD_UPDATE: A,
     GUILD_PROFILE_UPDATE_VISIBILITY: E,
     GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: O,
-    GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: y
+    GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: y,
 });

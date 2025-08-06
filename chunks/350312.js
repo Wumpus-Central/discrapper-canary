@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -13,10 +13,10 @@ function f(e) {
     let { asset: t } = e;
     return null == t
         ? null
-        : (0, r.jsx)('img', {
+        : (0, r.jsx)("img", {
               src: t.url,
-              alt: '',
-              className: m.endScreenImageBackground
+              alt: "",
+              className: m.endScreenImageBackground,
           });
 }
 function p(e) {
@@ -28,49 +28,49 @@ function p(e) {
               questContent: c.jn.VIDEO_MODAL_END_CARD,
               sourceQuestContent: l,
               children: (e) =>
-                  (0, r.jsx)('img', {
+                  (0, r.jsx)("img", {
                       ref: (t) => {
                           e.current = t;
                       },
                       src: n.url,
-                      alt: 'Video thumbnail',
-                      className: m.endScreenCard
-                  })
+                      alt: "Video thumbnail",
+                      className: m.endScreenCard,
+                  }),
           });
 }
 function v(e) {
     let { ctaBtnLabel: t, title: n, subtitle: l, onCTAClick: o } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: m.endScreenCtaContainer,
         children: [
             (0, r.jsx)(E, {
                 title: n,
-                subtitle: l
+                subtitle: l,
             }),
             (0, r.jsx)(g, {
                 label: t,
                 icon: s.d4D,
-                onClick: o
-            })
-        ]
+                onClick: o,
+            }),
+        ],
     });
 }
 function E(e) {
     let { title: t, subtitle: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: m.endScreenCtaTitleContainer,
         children: [
             (0, r.jsx)(s.X6q, {
-                variant: 'heading-md/semibold',
+                variant: "heading-md/semibold",
                 className: m.endScreenCtaTitle,
-                children: t
+                children: t,
             }),
             (0, r.jsx)(s.X6q, {
-                variant: 'heading-sm/normal',
+                variant: "heading-sm/normal",
                 className: m.endScreenCtaSubtitle,
-                children: n
-            })
-        ]
+                children: n,
+            }),
+        ],
     });
 }
 function g(e) {
@@ -91,16 +91,16 @@ function g(e) {
         onClick: o,
         children: [
             (0, r.jsx)(s.X6q, {
-                variant: 'heading-md/semibold',
+                variant: "heading-md/semibold",
                 className: m.endScreenCtaBtnTitle,
-                children: t
+                children: t,
             }),
             (0, r.jsx)(n, {
-                size: 'md',
-                color: c ? s.TVs.colors.WHITE : '#B5BAC1',
-                className: m.endScreenIcon
-            })
-        ]
+                size: "md",
+                color: c ? s.TVs.colors.WHITE : "#B5BAC1",
+                className: m.endScreenIcon,
+            }),
+        ],
     });
 }
 let O = function (e) {
@@ -109,23 +109,23 @@ let O = function (e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(f, { asset: d }),
-            (0, r.jsx)('div', { className: m.endScreenOverlay }),
-            (0, r.jsxs)('div', {
+            (0, r.jsx)("div", { className: m.endScreenOverlay }),
+            (0, r.jsxs)("div", {
                 className: m.endScreenContainer,
                 children: [
                     (0, r.jsx)(p, {
                         quest: t,
                         asset: d,
-                        sourceQuestContent: c
+                        sourceQuestContent: c,
                     }),
                     (0, r.jsx)(v, {
                         title: o,
                         subtitle: i,
                         ctaBtnLabel: n,
-                        onCTAClick: s
-                    })
-                ]
-            })
-        ]
+                        onCTAClick: s,
+                    }),
+                ],
+            }),
+        ],
     });
 };

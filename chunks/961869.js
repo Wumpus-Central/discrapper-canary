@@ -1,13 +1,13 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         getKrispModel: () => i,
         setKrispModelOverride: () => a,
-        setKrispSuppressionLevel: () => o
-    }));
+        setKrispSuppressionLevel: () => o,
+    });
 var r = n(579806);
 function i() {
     try {
-        return r.Z.nativeModules.requireModule('discord_krisp').getNcModelFilename();
+        return r.Z.nativeModules.requireModule("discord_krisp").getNcModelFilename();
     } catch (e) {
         return Promise.resolve(null);
     }
@@ -15,11 +15,11 @@ function i() {
 function o(e) {
     try {
         var t, n;
-        null == (t = (n = r.Z.nativeModules.requireModule('discord_krisp')).setSuppressionLevel) || t.call(n, e);
+        null == (t = (n = r.Z.nativeModules.requireModule("discord_krisp")).setSuppressionLevel) || t.call(n, e);
     } catch (e) {}
 }
 function a(e) {
     try {
-        r.Z.nativeModules.requireModule('discord_krisp').setNcModel(e);
+        r.Z.nativeModules.requireModule("discord_krisp").setNcModel(e);
     } catch (e) {}
 }

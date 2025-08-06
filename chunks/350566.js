@@ -8,8 +8,8 @@ var i = n(544891),
 let d = {
     acceptGuildTemplate: (e, t, n) => (
         r.Z.dispatch({
-            type: 'GUILD_TEMPLATE_ACCEPT',
-            code: e
+            type: "GUILD_TEMPLATE_ACCEPT",
+            code: e,
         }),
         new Promise((d, u) => {
             i.tn
@@ -17,33 +17,33 @@ let d = {
                     url: c.ANM.UNRESOLVED_GUILD_TEMPLATE(e),
                     body: {
                         name: t,
-                        icon: n
+                        icon: n,
                     },
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !1,
                 })
                 .then(
                     (t) => {
                         let n = t.body;
-                        (r.Z.dispatch({
-                            type: 'GUILD_TEMPLATE_ACCEPT_SUCCESS',
+                        r.Z.dispatch({
+                            type: "GUILD_TEMPLATE_ACCEPT_SUCCESS",
                             code: e,
-                            guild: n
+                            guild: n,
                         }),
                             s.Z.isConnected()
                                 ? a.Z.addConditionalChangeListener(() => {
-                                      if (null != a.Z.getGuild(n.id)) return ((0, l.X)(n.id), d(n), !1);
+                                      if (null != a.Z.getGuild(n.id)) return (0, l.X)(n.id), d(n), !1;
                                   })
-                                : ((0, l.X)(n.id), d(n)));
+                                : ((0, l.X)(n.id), d(n));
                     },
                     (t) => {
-                        (r.Z.dispatch({
-                            type: 'GUILD_TEMPLATE_ACCEPT_FAILURE',
-                            code: e
+                        r.Z.dispatch({
+                            type: "GUILD_TEMPLATE_ACCEPT_FAILURE",
+                            code: e,
                         }),
-                            u(t.body));
-                    }
+                            u(t.body);
+                    },
                 );
         })
-    )
+    ),
 };

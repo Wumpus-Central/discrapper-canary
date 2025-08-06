@@ -1,7 +1,12 @@
-(Object.defineProperty(t, '__esModule', { value: !0 }), (t.dataFormatterCache = void 0));
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.dataFormatterCache = void 0);
 class n {
     constructor() {
-        ((this.dateTime = new Map()), (this.duration = new Map()), (this.list = new Map()), (this.number = new Map()), (this.pluralRules = new Map()), (this.relativeTime = new Map()));
+        (this.dateTime = new Map()),
+            (this.duration = new Map()),
+            (this.list = new Map()),
+            (this.number = new Map()),
+            (this.pluralRules = new Map()),
+            (this.relativeTime = new Map());
     }
     getDateTimeFormatter(...e) {
         return this._getCached(this.dateTime, e, (e) => new Intl.DateTimeFormat(...e));
@@ -26,7 +31,7 @@ class n {
             i = e.get(r);
         if (i) return i;
         let o = n(t);
-        return (e.set(r, o), o);
+        return e.set(r, o), o;
     }
     _getKey(...e) {
         return JSON.stringify(e);

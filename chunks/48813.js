@@ -1,4 +1,4 @@
-(n.d(t, { I: () => R }), n(388685), n(415506));
+n.d(t, { I: () => R }), n(388685), n(415506);
 var i = n(255367),
     r = n(73800),
     a = n(505266),
@@ -29,13 +29,20 @@ var i = n(255367),
 let S = [I.O0b.PAST_DUE, I.O0b.PAUSED, I.O0b.BILLING_RETRY],
     R = (e) => {
         var t, n, s;
-        let { analyticsLocation: R, analyticsLocations: w, onClose: D, transitionState: k, premiumSubscription: A, discountPrimary: L } = e,
+        let {
+                analyticsLocation: R,
+                analyticsLocations: w,
+                onClose: D,
+                transitionState: k,
+                premiumSubscription: A,
+                discountPrimary: L,
+            } = e,
             { initialStep: M } = e,
             U = r.useRef(new a.qA()),
             [B, Z] = r.useState(null),
             z = null == (t = (0, _.Af)(A)) ? void 0 : t.planId,
             F = null != z ? _.ZP.getPremiumType(z) : null;
-        o()(null != F, 'Should not be cancelling Nitro without premiumType');
+        o()(null != F, "Should not be cancelling Nitro without premiumType");
         let Y = F === N.p9.TIER_0 || F === N.p9.TIER_1 || F === N.p9.TIER_2;
         null == M && (M = Y ? j.R.WHAT_YOU_LOSE : j.R.CONFIRM);
         let [H, W, X, q] = (0, v.q)(M, A, w),
@@ -48,40 +55,40 @@ let S = [I.O0b.PAST_DUE, I.O0b.PAUSED, I.O0b.BILLING_RETRY],
                 items: (0, _.Ue)(null != (s = null == (n = A.renewalMutations) ? void 0 : n.items) ? s : A.items),
                 renewal: !0,
                 analyticsLocations: w,
-                analyticsLocation: u.Z.CANCEL_INVOICE_PREVIEW
+                analyticsLocation: u.Z.CANCEL_INVOICE_PREVIEW,
             }),
             ee = null !== $ ? _.ZP.getIntervalForInvoice($) : null,
             et = (0, _.aS)(N.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
                 currency: A.currency,
-                paymentSourceId: A.paymentSourceId
+                paymentSourceId: A.paymentSourceId,
             }),
             en = (0, f.T4)(et.amount, et.currency),
             ei = (e) => {
-                (D(),
+                D(),
                     p.default.track(
                         I.rMx.CANCELLATION_FLOW_STEP,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     i = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     i.forEach(function (t) {
                                         var i;
-                                        ((i = n[t]),
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = i));
-                                    }));
+                                                : (e[t] = i);
+                                    });
                             }
                             return e;
                         })(
@@ -90,11 +97,11 @@ let S = [I.O0b.PAST_DUE, I.O0b.PAUSED, I.O0b.BILLING_RETRY],
                                 to_step: null,
                                 step_duration_ms: Date.now() - X,
                                 flow_duration_ms: Date.now() - q,
-                                location_stack: w
+                                location_stack: w,
                             },
-                            (0, v.b)(A)
-                        )
-                    ));
+                            (0, v.b)(A),
+                        ),
+                    );
             },
             er = r.useCallback(() => {
                 switch (H) {
@@ -122,20 +129,20 @@ let S = [I.O0b.PAST_DUE, I.O0b.PAUSED, I.O0b.BILLING_RETRY],
                         { items: i },
                         {
                             amount: 0,
-                            currency: A.currency
+                            currency: A.currency,
                         },
                         (0, _.UX)(i, A.currency, A.paymentSourceId),
                         w,
-                        R
+                        R,
                     );
                 }
             }, [A, w, R]),
             es = r.useCallback(async () => {
-                if (null == K) throw Error('Churn user discount offer is null');
+                if (null == K) throw Error("Churn user discount offer is null");
                 await l.tn.post({
                     url: I.ANM.USER_OFFER_REDEEM,
                     body: { user_discount_offer_id: K.id },
-                    rejectWithError: !0
+                    rejectWithError: !0,
                 });
             }, [K]);
         return (0, i.jsx)(d.Gt, {
@@ -160,16 +167,16 @@ let S = [I.O0b.PAST_DUE, I.O0b.PAUSED, I.O0b.BILLING_RETRY],
                     renewalInvoice: $,
                     renewalInvoiceDetails: ee,
                     handleCancellation: ea,
-                    applyOffer: es
+                    applyOffer: es,
                 },
                 children: [
                     (0, i.jsx)(a.O_, {
                         ref: Z,
                         className: T.confettiCanvas,
-                        environment: U.current
+                        environment: U.current,
                     }),
-                    er()
-                ]
-            })
+                    er(),
+                ],
+            }),
         });
     };

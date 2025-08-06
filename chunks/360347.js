@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,15 +19,15 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 a(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,8 +39,8 @@ function l() {
             num_incoming_requests: i.Z.getPendingCount(),
             num_game_friends: r.Z.getGameFriendCount(),
             num_game_outgoing_requests: r.Z.getPendingOutgoingCount(),
-            num_game_incoming_requests: r.Z.getPendingIncomingCount()
+            num_game_incoming_requests: r.Z.getPendingIncomingCount(),
         },
-        (0, o.X)()
+        (0, o.X)(),
     );
 }

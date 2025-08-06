@@ -21,17 +21,17 @@ let f = (e) => {
         x = (0, s.apv)((0, a.ZP)());
     if (f) {
         let e = x ? h.Z : m.Z;
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: n,
-            children: (0, i.jsx)('img', {
+            children: (0, i.jsx)("img", {
                 src: e,
-                alt: ''
-            })
+                alt: "",
+            }),
         });
     }
     return (
         (t = b ? (x ? p.Z : d.Z) : x ? g.Z : u.Z),
-        (0, i.jsx)('div', {
+        (0, i.jsx)("div", {
             className: n,
             children: (0, i.jsx)(
                 o.Z,
@@ -40,10 +40,10 @@ let f = (e) => {
                     autoPlay: !0,
                     playsInline: !0,
                     loop: !0,
-                    children: (0, i.jsx)('source', { src: t })
+                    children: (0, i.jsx)("source", { src: t }),
                 },
-                t
-            )
+                t,
+            ),
         })
     );
 };

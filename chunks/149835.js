@@ -15,24 +15,24 @@ function f(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                })
+                }),
             )),
             r.forEach(function (e) {
                 var r;
-                ((r = n[e]),
+                (r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (t[e] = r));
-            }));
+                        : (t[e] = r);
+            });
     }
     return t;
 }
@@ -42,11 +42,15 @@ function O(t, e) {
     if (n && !t.isHidden()) return null;
     function y() {
         let e = (0, d.x9)(t.getFlags(), b.eHb.HIDDEN);
-        (c.h(t.id, t.branchId, e), s.default.track(b.rMx.APPLICATION_SETTINGS_UPDATED, f({ hidden_enabled: (0, d.yE)(e, b.eHb.HIDDEN) }, t.getAnalyticsData())));
+        c.h(t.id, t.branchId, e),
+            s.default.track(
+                b.rMx.APPLICATION_SETTINGS_UPDATED,
+                f({ hidden_enabled: (0, d.yE)(e, b.eHb.HIDDEN) }, t.getAnalyticsData()),
+            );
     }
     return (0, r.jsx)(a.sNh, {
-        id: 'in-library',
-        label: t.isHidden() ? p.intl.string(p.t['0dnEUF']) : p.intl.string(p.t.TuJXLy),
+        id: "in-library",
+        label: t.isHidden() ? p.intl.string(p.t["0dnEUF"]) : p.intl.string(p.t.TuJXLy),
         action: function () {
             null != t &&
                 null != e &&
@@ -60,18 +64,18 @@ function O(t, e) {
                                   {
                                       header: p.intl.string(p.t.oB7isr),
                                       confirmText: p.intl.string(p.t.OWjIiY),
-                                      cancelText: p.intl.string(p.t['ETE/oK']),
+                                      cancelText: p.intl.string(p.t["ETE/oK"]),
                                       onConfirm: () => y(),
-                                      confirmButtonColor: l.zx.Colors.BRAND
+                                      confirmButtonColor: l.zx.Colors.BRAND,
                                   },
-                                  t
+                                  t,
                               )),
                               (i = i =
                                   {
                                       children: (0, r.jsx)(a.Text, {
-                                          variant: 'text-md/normal',
-                                          children: p.intl.format(p.t.HXfjKi, { name: e.name })
-                                      })
+                                          variant: "text-md/normal",
+                                          children: p.intl.format(p.t.HXfjKi, { name: e.name }),
+                                      }),
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -85,9 +89,9 @@ function O(t, e) {
                                     })(Object(i)).forEach(function (t) {
                                         Object.defineProperty(n, t, Object.getOwnPropertyDescriptor(i, t));
                                     }),
-                              n)
+                              n),
                           );
                       }));
-        }
+        },
     });
 }

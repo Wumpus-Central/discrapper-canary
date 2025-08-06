@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     AT: () => m,
     DQ: () => T,
     Hz: () => R,
@@ -13,13 +13,13 @@
     kC: () => y,
     kh: () => b,
     px: () => j,
-    rb: () => g
+    rb: () => g,
 }),
     n(388685),
     n(361932),
     n(187205),
     n(997841),
-    n(539854));
+    n(539854);
 var r = n(524437),
     i = n(911969),
     o = n(432877),
@@ -50,7 +50,9 @@ let h = -1,
     },
     b = (e) => {
         let t = m();
-        return null == e ? p.qn.NONE : R(t.map((t) => (k(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(d.lm));
+        return null == e
+            ? p.qn.NONE
+            : R(t.map((t) => (k(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(d.lm));
     };
 function y(e) {
     let t = g(e);
@@ -67,10 +69,10 @@ function O(e, t) {
                       S(
                           {
                               type: f.l.Attachment,
-                              media: e
+                              media: e,
                           },
-                          t
-                      ).length > 0
+                          t,
+                      ).length > 0,
               )) ||
         (null == (r = e.embeds)
             ? void 0
@@ -79,15 +81,19 @@ function O(e, t) {
                       S(
                           {
                               type: f.l.Embed,
-                              media: e
+                              media: e,
                           },
-                          t
-                      ).length > 0
+                          t,
+                      ).length > 0,
               ))
     )
         return !0;
     let i = null;
-    if (('messageSnapshots' in e ? (i = e.messageSnapshots) : 'message_snapshots' in e && (i = e.message_snapshots), null == i || 0 === i.length)) return !1;
+    if (
+        ("messageSnapshots" in e ? (i = e.messageSnapshots) : "message_snapshots" in e && (i = e.message_snapshots),
+        null == i || 0 === i.length)
+    )
+        return !1;
     for (let e of i) if (O(e.message, t)) return !0;
     return !1;
 }
@@ -108,7 +114,7 @@ function v(e) {
                     return [];
             }
         })
-        .map((e) => ('proxy_url' in e ? (0, a.ym)(e) : e));
+        .map((e) => ("proxy_url" in e ? (0, a.ym)(e) : e));
 }
 function I(e, t) {
     var n, r;
@@ -121,10 +127,10 @@ function I(e, t) {
                   N(
                       {
                           type: f.l.Attachment,
-                          media: e
+                          media: e,
                       },
-                      i
-                  )
+                      i,
+                  ),
               )) ||
         (null == (r = e.embeds)
             ? void 0
@@ -132,25 +138,29 @@ function I(e, t) {
                   N(
                       {
                           type: f.l.Embed,
-                          media: e
+                          media: e,
                       },
-                      i
-                  )
+                      i,
+                  ),
               )) ||
         (null != e.components &&
             v(e.components).some((e) =>
                 N(
                     {
                         type: f.l.GenericMedia,
-                        media: e
+                        media: e,
                     },
-                    i
-                )
+                    i,
+                ),
             ))
     )
         return !0;
     let o = null;
-    if (('messageSnapshots' in e ? (o = e.messageSnapshots) : 'message_snapshots' in e && (o = e.message_snapshots), null == o || 0 === o.length)) return !1;
+    if (
+        ("messageSnapshots" in e ? (o = e.messageSnapshots) : "message_snapshots" in e && (o = e.message_snapshots),
+        null == o || 0 === o.length)
+    )
+        return !1;
     for (let e of o) if (I(e.message, i)) return !0;
     return !1;
 }
@@ -160,7 +170,7 @@ function T(e) {
     if (o === p.qn.NONE)
         return {
             attachmentIds: [],
-            embedIds: []
+            embedIds: [],
         };
     let a =
             null == (t = e.attachments)
@@ -169,10 +179,10 @@ function T(e) {
                       N(
                           {
                               type: f.l.Attachment,
-                              media: e
+                              media: e,
                           },
-                          o
-                      )
+                          o,
+                      ),
                   ),
         s =
             null == (n = e.embeds)
@@ -181,14 +191,14 @@ function T(e) {
                       N(
                           {
                               type: f.l.Embed,
-                              media: e
+                              media: e,
                           },
-                          o
-                      )
+                          o,
+                      ),
                   );
     return {
         attachmentIds: null != (r = null == a ? void 0 : a.map((e) => e.id).filter(Boolean)) ? r : [],
-        embedIds: null != (i = null == s ? void 0 : s.map((e, t) => 'embed_'.concat(t)).filter(Boolean)) ? i : []
+        embedIds: null != (i = null == s ? void 0 : s.map((e, t) => "embed_".concat(t)).filter(Boolean)) ? i : [],
     };
 }
 function S(e, t) {
@@ -202,7 +212,7 @@ function A(e, t) {
     return 0 !== n.length && n.filter((t) => C(t, e)).length > 0;
 }
 function N(e, t) {
-    if (t === p.qn.NONE || o.ZP.get('explicit_media_redaction_ignore_pending_scan')) return !1;
+    if (t === p.qn.NONE || o.ZP.get("explicit_media_redaction_ignore_pending_scan")) return !1;
     let n = P(t);
     if (0 === n.length) return !1;
     switch (e.type) {
@@ -227,7 +237,10 @@ function C(e, t) {
         case f.l.Attachment:
             return (0, u.yE)(null != (r = t.media.flags) ? r : 0, s.attachmentFlag);
         case f.l.GenericMedia:
-            return (0, u.yE)(null != (a = null == (i = t.media.contentScanMetadata) ? void 0 : i.flags) ? a : 0, s.genericMediaFlag);
+            return (0, u.yE)(
+                null != (a = null == (i = t.media.contentScanMetadata) ? void 0 : i.flags) ? a : 0,
+                s.genericMediaFlag,
+            );
         default:
             return !1;
     }
@@ -255,7 +268,13 @@ function w(e, t) {
         [r, i] = n,
         o = r.getChannel(e),
         a = c.default.getCurrentUser();
-    return null == a || t === a.id || null == o ? null : o.isDM() || o.isGroupDM() ? (null != t && i.getFriendIDs().includes(t) ? f.n.FRIEND_DM : f.n.NON_FRIEND_DM) : f.n.GUILD;
+    return null == a || t === a.id || null == o
+        ? null
+        : o.isDM() || o.isGroupDM()
+          ? null != t && i.getFriendIDs().includes(t)
+              ? f.n.FRIEND_DM
+              : f.n.NON_FRIEND_DM
+          : f.n.GUILD;
 }
 function D(e, t) {
     var n, r, i, o, a, s, l;
@@ -268,13 +287,23 @@ function D(e, t) {
                     (t) =>
                         !C(t, {
                             type: f.l.Embed,
-                            media: e
-                        })
+                            media: e,
+                        }),
                 ).length ||
-            ('video' in e && null != e.video && (null == (n = e.video) ? void 0 : n.width) === 0 && (null == (r = e.video) ? void 0 : r.height) === 0) ||
-            ('thumbnail' in e && null != e.thumbnail && (null == (i = e.thumbnail) ? void 0 : i.width) === 0 && (null == (o = e.thumbnail) ? void 0 : o.height) === 0) ||
-            ('image' in e && null != e.image && (null == (a = e.image) ? void 0 : a.width) === 0 && (null == (s = e.image) ? void 0 : s.height) === 0) ||
-            ('images' in e && (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
+            ("video" in e &&
+                null != e.video &&
+                (null == (n = e.video) ? void 0 : n.width) === 0 &&
+                (null == (r = e.video) ? void 0 : r.height) === 0) ||
+            ("thumbnail" in e &&
+                null != e.thumbnail &&
+                (null == (i = e.thumbnail) ? void 0 : i.width) === 0 &&
+                (null == (o = e.thumbnail) ? void 0 : o.height) === 0) ||
+            ("image" in e &&
+                null != e.image &&
+                (null == (a = e.image) ? void 0 : a.width) === 0 &&
+                (null == (s = e.image) ? void 0 : s.height) === 0) ||
+            ("images" in e &&
+                (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
         ) && M(U(e), t)
     );
 }
@@ -287,8 +316,8 @@ function L(e, t) {
                 (t) =>
                     !C(t, {
                         type: f.l.Attachment,
-                        media: e
-                    })
+                        media: e,
+                    }),
             ).length &&
         M(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
     );
@@ -302,8 +331,8 @@ function x(e, t) {
                 (t) =>
                     !C(t, {
                         type: f.l.GenericMedia,
-                        media: e
-                    })
+                        media: e,
+                    }),
             ).length &&
         M(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
     );
@@ -321,17 +350,21 @@ function j(e) {
     if (null == e)
         return {
             channelId: t,
-            authorId: n
+            authorId: n,
         };
-    if (('channel_id' in e && (t = e.channel_id), 'author' in e)) {
+    if (("channel_id" in e && (t = e.channel_id), "author" in e)) {
         var r;
         n = null == (r = e.author) ? void 0 : r.id;
-    } else 'author_id' in e && (n = e.author_id);
+    } else "author_id" in e && (n = e.author_id);
     return {
         channelId: t,
-        authorId: n
+        authorId: n,
     };
 }
 function U(e) {
-    return null != e.content_scan_version ? e.content_scan_version : null != e.contentScanVersion || null != e.contentScanVersion ? e.contentScanVersion : null;
+    return null != e.content_scan_version
+        ? e.content_scan_version
+        : null != e.contentScanVersion || null != e.contentScanVersion
+          ? e.contentScanVersion
+          : null;
 }

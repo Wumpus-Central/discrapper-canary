@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => c,
-    N: () => u
+    N: () => u,
 });
 var r = n(255367);
 n(73800);
@@ -11,57 +11,57 @@ var i = n(680018),
     l = n(231571);
 let c = (e) => {
         let { className: t, isEmailResent: n, resendEmail: i } = e;
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: t,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: l.awaitingWrapper,
                 children: [
                     (0, r.jsx)(o.X6q, {
-                        variant: 'heading-xl/bold',
-                        children: s.intl.string(s.t.Q03WWV)
+                        variant: "heading-xl/bold",
+                        children: s.intl.string(s.t.Q03WWV),
                     }),
-                    (0, r.jsxs)('p', {
+                    (0, r.jsxs)("p", {
                         children: [
                             (0, r.jsx)(o.Text, {
-                                variant: 'text-md/normal',
-                                children: s.intl.string(s.t.BxPxhI)
+                                variant: "text-md/normal",
+                                children: s.intl.string(s.t.BxPxhI),
                             }),
-                            (0, r.jsx)('br', {}),
+                            (0, r.jsx)("br", {}),
                             (0, r.jsx)(o.Text, {
-                                variant: 'text-md/normal',
-                                children: s.intl.string(s.t.Y3fdOj)
+                                variant: "text-md/normal",
+                                children: s.intl.string(s.t.Y3fdOj),
                             }),
-                            (0, r.jsx)('br', {}),
+                            (0, r.jsx)("br", {}),
                             (0, r.jsxs)(o.Text, {
-                                variant: 'text-md/normal',
+                                variant: "text-md/normal",
                                 children: [
                                     s.intl.string(s.t.Paa4v7),
-                                    '\xA0',
+                                    "\xA0",
                                     n
                                         ? s.intl.string(s.t.StGVvL)
                                         : (0, r.jsx)(o.eee, {
                                               onClick: i,
-                                              children: s.intl.string(s.t.Ex7sk5)
-                                          })
-                                ]
-                            })
-                        ]
-                    })
-                ]
-            })
+                                              children: s.intl.string(s.t.Ex7sk5),
+                                          }),
+                                ],
+                            }),
+                        ],
+                    }),
+                ],
+            }),
         });
     },
     u = () =>
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             children: (0, r.jsx)(o.mzw, {
                 justify: a.Z.Justify.BETWEEN,
                 align: a.Z.Align.CENTER,
-                'data-migration-pending': !0,
+                "data-migration-pending": !0,
                 children: (0, r.jsx)(i.z, {
-                    'data-testid': 'continue',
-                    variant: 'primary',
+                    "data-testid": "continue",
+                    variant: "primary",
                     disabled: !0,
-                    text: s.intl.string(s.t.g8vPz8)
-                })
-            })
+                    text: s.intl.string(s.t.g8vPz8),
+                }),
+            }),
         });

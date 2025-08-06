@@ -17,15 +17,15 @@ function v(t) {
         {
             rsvped: p,
             baseRsvp: j,
-            recurrenceRsvp: h
+            recurrenceRsvp: h,
         } = (0, i.cj)(
             [c.ZP],
             () => ({
                 rsvped: c.ZP.isInterestedInEventRecurrence(n, v),
                 baseRsvp: c.ZP.getRsvp(n, null, f),
-                recurrenceRsvp: c.ZP.getRsvp(n, v, f)
+                recurrenceRsvp: c.ZP.getRsvp(n, v, f),
             }),
-            [v, n, f]
+            [v, n, f],
         ),
         y = (0, u.Z)(v, n);
     if (b || (null == y ? void 0 : y.is_canceled)) return null;
@@ -36,21 +36,21 @@ function v(t) {
         s.Z.updateRsvp(n, i, e, l);
     };
     return (0, l.jsxs)(r.sNh, {
-        id: p ? g.intl.string(g.t['7M5gaG']) : g.intl.string(g.t.FXixvL),
-        label: p ? g.intl.string(g.t['7M5gaG']) : g.intl.string(g.t.FXixvL),
+        id: p ? g.intl.string(g.t["7M5gaG"]) : g.intl.string(g.t.FXixvL),
+        label: p ? g.intl.string(g.t["7M5gaG"]) : g.intl.string(g.t.FXixvL),
         action: void 0,
         children: [
             (0, l.jsx)(r.sNh, {
                 id: g.intl.string(g.t.lwZCFR),
                 label: g.intl.string(g.t.lwZCFR),
-                action: () => Z(!1)
+                action: () => Z(!1),
             }),
             (0, l.jsx)(r.sNh, {
                 id: g.intl.string(g.t.uoorxs),
                 label: g.intl.string(g.t.uoorxs),
                 action: () => Z(!0),
-                disabled: null != h
-            })
-        ]
+                disabled: null != h,
+            }),
+        ],
     });
 }

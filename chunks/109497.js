@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -38,20 +38,20 @@ class f extends (r = i.ZP.PersistedStore) {
         return { x: a.Cr.getSetting() };
     }
 }
-(u(f, 'displayName', 'HabitualDNDStore'),
-    u(f, 'persistKey', 'habitualDND'),
+u(f, "displayName", "HabitualDNDStore"),
+    u(f, "persistKey", "habitualDND"),
     new f(l.Z, {
         POST_CONNECTION_OPEN: function () {
-            o.Z.getStatus() === c.Skl.DND && '0' === a.Cr.getSetting()
+            o.Z.getStatus() === c.Skl.DND && "0" === a.Cr.getSetting()
                 ? (d.push(Date.now()),
                   (d = d.filter((e) => e > Date.now() - 5 * s.Z.Millis.DAY)),
                   h() &&
                       setTimeout(() => {
-                          l.Z.dispatch({ type: 'HABITUAL_DND_CLEAR' });
+                          l.Z.dispatch({ type: "HABITUAL_DND_CLEAR" });
                       }, 15 * s.Z.Millis.SECOND))
                 : (d = []);
         },
         HABITUAL_DND_CLEAR: function () {
-            ((p = !!h()), (d = []));
-        }
-    }));
+            (p = !!h()), (d = []);
+        },
+    });

@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => d,
-    i: () => u
+    i: () => u,
 });
 var r = n(255367),
     i = n(97519),
@@ -19,23 +19,23 @@ let l = 4,
         },
         setVerticalSpacing: (t) => {
             e({ verticalSpacing: Math.round(Math.min(Math.max(t, 0), c)) });
-        }
+        },
     }));
 function d() {
     let e = (0, o.e7)([a.default], () => a.default.layoutDebuggingEnabled),
         { horizontalSpacing: t, verticalSpacing: n } = u();
     return e
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: s.container,
-              children: (0, r.jsx)('div', {
+              children: (0, r.jsx)("div", {
                   className: s.gridOverlay,
-                  'data-horizontal': t > 0,
-                  'data-vertical': n > 0,
+                  "data-horizontal": t > 0,
+                  "data-vertical": n > 0,
                   style: {
-                      '--custom-grid-horizontal-spacing': ''.concat(t, 'px'),
-                      '--custom-grid-vertical-spacing': ''.concat(n, 'px')
-                  }
-              })
+                      "--custom-grid-horizontal-spacing": "".concat(t, "px"),
+                      "--custom-grid-vertical-spacing": "".concat(n, "px"),
+                  },
+              }),
           })
         : null;
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(704826), n(35282), n(953529));
+n.d(t, { Z: () => b }), n(704826), n(35282), n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -26,32 +26,48 @@ function E(e) {
             (0, r.jsx)(
                 c.Text,
                 {
-                    variant: 'text-xs/normal',
-                    color: 'text-danger',
+                    variant: "text-xs/normal",
+                    color: "text-danger",
                     className: m.errorMessage,
-                    children: g(e)
+                    children: g(e),
                 },
-                t
-            )
-        )
+                t,
+            ),
+        ),
     });
 }
 let b = i.forwardRef(function (e, t) {
-    let { title: n, titleIcon: i, titleId: o, description: f, children: g, className: b, errors: y, disabled: O = !1, hideDivider: v = !1, showBorder: I = !1, borderType: T, hasBackground: S = !1, forcedDivider: A = !1, showPremiumIcon: N = !1, showViewFullProfileButton: C = !1 } = e,
+    let {
+            title: n,
+            titleIcon: i,
+            titleId: o,
+            description: f,
+            children: g,
+            className: b,
+            errors: y,
+            disabled: O = !1,
+            hideDivider: v = !1,
+            showBorder: I = !1,
+            borderType: T,
+            hasBackground: S = !1,
+            forcedDivider: A = !1,
+            showPremiumIcon: N = !1,
+            showViewFullProfileButton: C = !1,
+        } = e,
         R = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
         P = () => {
             null != R &&
                 (0, u.openUserProfileModal)({
                     userId: R.id,
-                    disableActionsForPreview: !0
+                    disableActionsForPreview: !0,
                 });
         };
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(m.customizationSection, b, {
             [m.disabled]: O,
             [m.hideDivider]: v,
             [m.showBorder]: I,
-            [m.withDivider]: A
+            [m.withDivider]: A,
         }),
         ref: t,
         children: (0, r.jsxs)(p.Z, {
@@ -77,22 +93,22 @@ let b = i.forwardRef(function (e, t) {
                                 className: m.viewFullProfileButton,
                                 onClick: P,
                                 children: (0, r.jsx)(c.Text, {
-                                    variant: 'text-xs/normal',
-                                    children: h.intl.string(h.t['+Xp3ho'])
-                                })
-                            })
-                    ]
+                                    variant: "text-xs/normal",
+                                    children: h.intl.string(h.t["+Xp3ho"]),
+                                }),
+                            }),
+                    ],
                 }),
                 null != f
                     ? (0, r.jsx)(c.R94, {
                           type: c.R94.Types.DESCRIPTION,
                           className: m.sectionDescription,
-                          children: f
+                          children: f,
                       })
                     : null,
                 g,
-                null != y && (0, r.jsx)(E, { errors: y })
-            ]
-        })
+                null != y && (0, r.jsx)(E, { errors: y }),
+            ],
+        }),
     });
 });

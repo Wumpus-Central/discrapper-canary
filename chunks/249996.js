@@ -19,26 +19,26 @@ function c(e) {
                     return null;
             }
         }, [t]);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: o.rowContainer,
         children: [
             null != c &&
                 (0, i.jsx)(c, {
-                    size: 'xs',
-                    color: 'currentColor'
+                    size: "xs",
+                    color: "currentColor",
                 }),
             (0, i.jsx)(l.Text, {
-                variant: 'text-md/normal',
-                color: 'header-secondary',
-                children: n
-            })
-        ]
+                variant: "text-md/normal",
+                color: "header-secondary",
+                children: n,
+            }),
+        ],
     });
 }
 let d = r.memo(function (e) {
     let { option: t } = e;
     return (0, i.jsx)(c, {
         redactionType: t.value,
-        label: t.label
+        label: t.label,
     });
 });

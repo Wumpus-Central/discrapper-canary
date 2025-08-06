@@ -1,6 +1,6 @@
 n.d(t, {
     G6: () => p,
-    O5: () => f
+    O5: () => f,
 });
 var r = n(255367),
     i = n(73800),
@@ -8,7 +8,7 @@ var r = n(255367),
     o = n(664915),
     s = n(543936),
     a = n(432792);
-let c = 'bottom',
+let c = "bottom",
     u = (e) => {
         let { isGuildBarScrolling: t } = e,
             n = i.useRef(null),
@@ -37,7 +37,7 @@ let c = 'bottom',
             calculateVisibility: s,
             defaultCoachmarkAlign: c,
             spacing: 8,
-            position: 'right',
+            position: "right",
             align: c,
             targetElementRef: t,
             popoutElement: (0, r.jsx)(
@@ -46,40 +46,49 @@ let c = 'bottom',
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
-                })({}, l)
+                })({}, l),
             ),
-            children: i
+            children: i,
         });
     },
     p = (e) => {
-        let { renderDiscoveryButton: t, showingCoachmark: n, errorBoundarySource: l, onDiscoveryButtonClick: o, targetQuestId: a, isGuildBarScrolling: c, targetElementRef: u, innerCoachmarkProps: d } = e,
+        let {
+                renderDiscoveryButton: t,
+                showingCoachmark: n,
+                errorBoundarySource: l,
+                onDiscoveryButtonClick: o,
+                targetQuestId: a,
+                isGuildBarScrolling: c,
+                targetElementRef: u,
+                innerCoachmarkProps: d,
+            } = e,
             p = i.useMemo(
                 () =>
                     t({
                         onClick: n ? o : void 0,
-                        questId: n ? a : void 0
+                        questId: n ? a : void 0,
                     }),
-                [t, o, n, a]
+                [t, o, n, a],
             );
         return n
             ? (0, r.jsx)(s.x, {
@@ -89,8 +98,8 @@ let c = 'bottom',
                       targetElementRef: u,
                       isGuildBarScrolling: c,
                       innerCoachmarkProps: d,
-                      children: p
-                  })
+                      children: p,
+                  }),
               })
             : p;
     },

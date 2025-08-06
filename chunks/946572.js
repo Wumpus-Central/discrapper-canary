@@ -5,7 +5,7 @@ function t(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -13,7 +13,7 @@ function t(e, t, n) {
 }
 e.exports = (function () {
     function e(e) {
-        (t(this, '_uri', void 0), (this._uri = e));
+        t(this, "_uri", void 0), (this._uri = e);
     }
     return (
         (e.prototype.toString = function () {

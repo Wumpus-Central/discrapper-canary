@@ -1,4 +1,4 @@
-(n.d(t, { e: () => f }), n(388685));
+n.d(t, { e: () => f }), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -16,50 +16,50 @@ let f = (e) => {
         [v] = o._T(t),
         [p] = o.d9(t, g),
         [j] = o.H9(t);
-    return (0, i.jsxs)('div', {
+    return (0, i.jsxs)("div", {
         className: m.container,
         children: [
             (0, i.jsx)(d.BM, { image: p }),
-            (0, i.jsxs)('div', {
+            (0, i.jsxs)("div", {
                 className: m.tierTextInfoContainer,
                 children: [
                     (0, i.jsx)(d.Ey, { listingName: v }),
-                    (0, i.jsxs)('div', {
+                    (0, i.jsxs)("div", {
                         className: m.tierPriceContainer,
                         children: [
                             !n && (0, i.jsx)(l.v, {}),
                             (0, i.jsxs)(r.Text, {
-                                variant: 'text-xs/normal',
+                                variant: "text-xs/normal",
                                 className: m.tierPrice,
                                 children: [
                                     (0, a.T4)(j.price, j.currency),
-                                    ' ',
+                                    " ",
                                     u.intl.format(u.t.isLGyc, {
                                         period: (0, s.JE)({
                                             interval: j.interval,
-                                            interval_count: j.interval_count
-                                        })
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                ]
+                                            interval_count: j.interval_count,
+                                        }),
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                ],
             }),
             (0, i.jsx)(r.P3F, {
                 onClick: h,
                 children: f
                     ? (0, i.jsx)(r.u04, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: m.toggleButton
+                          size: "md",
+                          color: "currentColor",
+                          className: m.toggleButton,
                       })
                     : (0, i.jsx)(r.CJ0, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: m.toggleButton
-                      })
-            })
-        ]
+                          size: "md",
+                          color: "currentColor",
+                          className: m.toggleButton,
+                      }),
+            }),
+        ],
     });
 };

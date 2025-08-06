@@ -21,7 +21,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,20 +31,30 @@ function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 E(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function y(e) {
-    let { stream: t, game: n, textVariant: u, textClassName: h, iconClassName: E, hideIcon: b = !1, hideText: y = !1, hideTooltip: O = !1, canTruncate: v = !0 } = e,
+    let {
+            stream: t,
+            game: n,
+            textVariant: u,
+            textClassName: h,
+            iconClassName: E,
+            hideIcon: b = !1,
+            hideText: y = !1,
+            hideTooltip: O = !1,
+            canTruncate: v = !0,
+        } = e,
         I = (0, o.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
         T = (0, c.ZP)(I),
         { analyticsLocations: S } = (0, s.ZP)(),
@@ -52,12 +62,12 @@ function y(e) {
             (0, f.A)({
                 analyticsLocations: S,
                 activityType: m.IIU.STREAMING,
-                voiceChannelId: t.channelId
+                voiceChannelId: t.channelId,
             });
         }, [S, t.channelId]);
     if (b && y) return null;
-    let N = (null == n ? void 0 : n.name) === '' ? null : null == n ? void 0 : n.name,
-        C = null != N ? g.intl.format(g.t['0wJXSk'], { name: N }) : g.intl.string(g.t.eXan7O),
+    let N = (null == n ? void 0 : n.name) === "" ? null : null == n ? void 0 : n.name,
+        C = null != N ? g.intl.format(g.t["0wJXSk"], { name: N }) : g.intl.string(g.t.eXan7O),
         R = !O && null != I && null != T;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -67,7 +77,7 @@ function y(e) {
                     tooltipText: R ? T : void 0,
                     tooltipAriaLabel: R ? (0, l.ZP)({ channel: I }) : void 0,
                     className: E,
-                    onTooltipShow: R ? A : void 0
+                    onTooltipShow: R ? A : void 0,
                 }),
             !y &&
                 (0, r.jsx)(p.Z, {
@@ -75,32 +85,43 @@ function y(e) {
                     className: h,
                     canTruncate: v,
                     hideTooltip: O,
-                    children: C
-                })
-        ]
+                    children: C,
+                }),
+        ],
     });
 }
 function O(e) {
-    let { stream: t, game: n, textVariant: i, textClassName: s, iconClassName: l, hideIcon: u = !1, hideText: f = !1, hideTooltip: p = !1, canTruncate: m = !0, showChannelName: E = !1 } = e,
+    let {
+            stream: t,
+            game: n,
+            textVariant: i,
+            textClassName: s,
+            iconClassName: l,
+            hideIcon: u = !1,
+            hideText: f = !1,
+            hideTooltip: p = !1,
+            canTruncate: m = !0,
+            showChannelName: E = !1,
+        } = e,
         b = (0, o.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
         y = (0, c.ZP)(b),
-        O = (null == n ? void 0 : n.name) === '' ? null : null == n ? void 0 : n.name,
-        v = null != O ? g.intl.format(g.t['0wJXSk'], { name: O }) : g.intl.string(g.t.eXan7O),
-        I = null != O ? g.intl.formatToPlainString(g.t['0wJXSk'], { name: O }) : g.intl.string(g.t.eXan7O),
+        O = (null == n ? void 0 : n.name) === "" ? null : null == n ? void 0 : n.name,
+        v = null != O ? g.intl.format(g.t["0wJXSk"], { name: O }) : g.intl.string(g.t.eXan7O),
+        I = null != O ? g.intl.formatToPlainString(g.t["0wJXSk"], { name: O }) : g.intl.string(g.t.eXan7O),
         T =
             null != y
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [v, ' (', y, ')']
+                      children: [v, " (", y, ")"],
                   })
                 : v,
         S = E ? T : v,
-        A = null != y ? ''.concat(I, ' (').concat(y, ')') : I;
+        A = null != y ? "".concat(I, " (").concat(y, ")") : I;
     return (0, r.jsx)(h.Z, {
         icon: u
             ? void 0
             : (0, r.jsx)(_.Z, {
                   icon: a.ARS,
-                  className: l
+                  className: l,
               }),
         text: S,
         tooltipText: p ? void 0 : T,
@@ -108,10 +129,12 @@ function O(e) {
         className: s,
         canTruncate: m,
         hideTooltip: p,
-        'aria-label': A,
-        hideText: f
+        "aria-label": A,
+        hideText: f,
     });
 }
 function v(e) {
-    return (0, u.b)({ location: 'VoiceActivityStatusExperimentWrapper' }) ? (0, r.jsx)(O, b({}, e)) : (0, r.jsx)(y, b({}, e));
+    return (0, u.b)({ location: "VoiceActivityStatusExperimentWrapper" })
+        ? (0, r.jsx)(O, b({}, e))
+        : (0, r.jsx)(y, b({}, e));
 }

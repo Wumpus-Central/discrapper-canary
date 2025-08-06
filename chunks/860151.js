@@ -9,19 +9,27 @@ var i = n(120356),
     c = n(644646),
     u = n(817447);
 let d = function (e) {
-    let { className: t, autoplay: n, quest: i, questContent: d, taskDetails: f, location: _, sourceQuestContent: p } = e,
+    let {
+            className: t,
+            autoplay: n,
+            quest: i,
+            questContent: d,
+            taskDetails: f,
+            location: _,
+            sourceQuestContent: p,
+        } = e,
         h = (0, l.DD)({
             quest: i,
             taskDetails: f,
             location: _,
             questContent: d,
-            sourceQuestContent: p
+            sourceQuestContent: p,
         }),
         m = (0, s.h)({
             location: _,
-            questConfig: i.config
+            questConfig: i.config,
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(u.wrapper, t),
         style: m ? void 0 : { color: i.config.colors.primary },
         children: [
@@ -31,16 +39,16 @@ let d = function (e) {
                 quest: i,
                 questContent: d,
                 location: _,
-                sourceQuestContent: p
+                sourceQuestContent: p,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.copy,
                 children: (0, r.jsx)(a.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-default',
-                    children: h
-                })
-            })
-        ]
+                    variant: "text-sm/normal",
+                    color: "text-default",
+                    children: h,
+                }),
+            }),
+        ],
     });
 };

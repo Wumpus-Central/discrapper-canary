@@ -12,7 +12,18 @@ var r = n(255367),
     f = n(30804);
 let p = i.memo(function (e) {
     var t;
-    let { message: n, channel: a, compact: p, className: v, isGroupStart: h, hideSimpleEmbedContent: b = !0, disableInteraction: P, previewGuildId: g, preview: x, author: j } = e,
+    let {
+            message: n,
+            channel: a,
+            compact: p,
+            className: v,
+            isGroupStart: h,
+            hideSimpleEmbedContent: b = !0,
+            disableInteraction: P,
+            previewGuildId: g,
+            preview: x,
+            author: j,
+        } = e,
         O = null != g ? g : (0, s.k)(n),
         _ = (0, o.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         { content: w } = (0, u.Z)(n, {
@@ -20,7 +31,7 @@ let p = i.memo(function (e) {
             allowList: _,
             allowHeading: _,
             allowLinks: !0,
-            previewLinkTarget: !0
+            previewLinkTarget: !0,
         }),
         C = i.useMemo(() => {
             var t, n;
@@ -29,31 +40,31 @@ let p = i.memo(function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, e)),
                 (n = n =
                     {
                         channel: a,
-                        guildId: O
+                        guildId: O,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -67,7 +78,7 @@ let p = i.memo(function (e) {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
+                t),
             );
         }, [e, a, O]);
     return (0, r.jsx)(c.Z, {
@@ -75,12 +86,12 @@ let p = i.memo(function (e) {
         className: l()(v, {
             [f.message]: !0,
             [f.cozyMessage]: !p,
-            [f.groupStart]: h
+            [f.groupStart]: h,
         }),
         childrenHeader: C,
         childrenMessageContent: (0, d.Z)(e, w),
         disableInteraction: P,
         author: j,
-        preview: x
+        preview: x,
     });
 });

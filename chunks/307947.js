@@ -20,9 +20,9 @@ function p(e) {
                 width: 415,
                 height: 200,
                 lightSrc: d,
-                darkSrc: u
+                darkSrc: u,
             }),
-            (0, r.jsx)(l.OZU, { note: t === o.pS.SPAM ? s.intl.string(s.t.hasFPT) : s.intl.string(s.t.SXrqTU) })
-        ]
+            (0, r.jsx)(l.OZU, { note: t === o.pS.SPAM ? s.intl.string(s.t.hasFPT) : s.intl.string(s.t.SXrqTU) }),
+        ],
     });
 }

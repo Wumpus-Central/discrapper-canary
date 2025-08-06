@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685), n(539854));
+n.d(t, { Z: () => m }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -24,15 +24,15 @@ function p(e, t) {
 }
 function h(e) {
     let { application: t } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: f.subtext,
         children: [
             (0, r.jsx)(l.Z, {
                 game: t,
-                size: l.Z.Sizes.XXSMALL
+                size: l.Z.Sizes.XXSMALL,
             }),
-            (0, r.jsx)('span', { children: t.name })
-        ]
+            (0, r.jsx)("span", { children: t.name }),
+        ],
     });
 }
 function m(e) {
@@ -52,7 +52,7 @@ function m(e) {
                     let { applicationId: t } = e;
                     return t;
                 }),
-            [O]
+            [O],
         ),
         A = (0, o.e7)([c.Z], () => c.Z.getRelationshipType(E), [E]),
         N = p(S, v || 1 === O.length);
@@ -68,7 +68,7 @@ function m(e) {
                   label: s,
                   subtext: (0, r.jsx)(h, { application: n }),
                   onFocus: T,
-                  action: () => m(n)
+                  action: () => m(n),
               });
     }
     let C = [];
@@ -84,12 +84,12 @@ function m(e) {
                         label: n.name,
                         icon: (0, r.jsx)(l.Z, {
                             game: n,
-                            size: l.Z.Sizes.XXSMALL
+                            size: l.Z.Sizes.XXSMALL,
                         }),
-                        action: () => m(n)
+                        action: () => m(n),
                     },
-                    t
-                )
+                    t,
+                ),
             );
     }),
     0 === C.length)
@@ -99,6 +99,6 @@ function m(e) {
               id: t,
               label: s,
               onFocus: T,
-              children: C
+              children: C,
           });
 }

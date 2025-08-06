@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(477690),
@@ -22,7 +22,7 @@ function b(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 b(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -75,7 +75,7 @@ let I = (0, d.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 expression_id: e.id,
                 expression_name: e.name,
                 is_animated: (0, _.aQ)(e.format_type),
-                is_custom: (0, _.z)(e.type)
+                is_custom: (0, _.z)(e.type),
             });
     },
     S = (e) => {
@@ -85,21 +85,21 @@ let I = (0, d.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
             [m, g] = i.useState(String(Date.now())),
             [b] = (0, f.XW)(t, o),
             { analyticsLocations: O } = (0, c.ZP)(s.Z.STICKER_MESSAGE),
-            S = (0, r.jsxs)('span', {
+            S = (0, r.jsxs)("span", {
                 className: E.stickerName,
                 children: [
                     (0, r.jsx)(a.B7q, {
-                        size: 'xs',
-                        color: 'currentColor',
-                        className: E.stickerIcon
+                        size: "xs",
+                        color: "currentColor",
+                        className: E.stickerIcon,
                     }),
-                    (null != b ? b : t).name
-                ]
+                    (null != b ? b : t).name,
+                ],
             });
         return (0, r.jsx)(c.Gt, {
             value: O,
             children: (0, r.jsx)(a.yRy, {
-                align: 'center',
+                align: "center",
                 animation: a.yRy.Animation.TRANSLATE,
                 positionKey: m,
                 onRequestClose: () => {
@@ -111,8 +111,8 @@ let I = (0, d.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                         v(y({}, e), {
                             renderableSticker: t,
                             channel: n,
-                            refreshPositionKey: () => g(String(Date.now()))
-                        })
+                            refreshPositionKey: () => g(String(Date.now())),
+                        }),
                     ),
                 targetElementRef: l,
                 children: (e) => {
@@ -122,7 +122,7 @@ let I = (0, d.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                         v(y({}, u.b_), {
                             shouldShow: d,
                             text: (0, u.Y)(S),
-                            'aria-label': !1,
+                            "aria-label": !1,
                             onTooltipShow: () => {
                                 T(b);
                             },
@@ -133,19 +133,19 @@ let I = (0, d.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                         innerRef: l,
                                         className: E.clickableSticker,
                                         onClick: (e) => {
-                                            (_(!d), n(e));
+                                            _(!d), n(e);
                                         },
-                                        tag: 'span',
+                                        tag: "span",
                                         children: (0, r.jsx)(p.Z, {
                                             isInteracting: o,
                                             size: I,
-                                            sticker: null != b ? b : t
-                                        })
-                                    })
-                                )
-                        })
+                                            sticker: null != b ? b : t,
+                                        }),
+                                    }),
+                                ),
+                        }),
                     );
-                }
-            })
+                },
+            }),
         });
     };

@@ -16,41 +16,41 @@ function p(e) {
             [d.Z],
             () => ({
                 isBlocked: d.Z.isBlockedForMessage(t),
-                isIgnored: d.Z.isIgnoredForMessage(t)
+                isIgnored: d.Z.isIgnoredForMessage(t),
             }),
-            [t]
+            [t],
         ),
         p = (0, s.p)(),
         m = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
     (0, a.$)(m);
     let g = i.useMemo(
         () =>
-            null != t.content && '' !== t.content
+            null != t.content && "" !== t.content
                 ? (0, l.ZP)(t, {
                       formatInline: !0,
-                      shouldFilterKeywords: p
+                      shouldFilterKeywords: p,
                   }).content
                 : null,
-        [t, p]
+        [t, p],
     );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: _.threadMessageAccessory,
         children: [
-            (0, r.jsx)('img', {
-                alt: '',
+            (0, r.jsx)("img", {
+                alt: "",
                 src: t.author.getAvatarURL(n.guild_id, 16),
-                className: _.threadMessageAccessoryAvatar
+                className: _.threadMessageAccessoryAvatar,
             }),
             (0, r.jsx)(u.Z, {
                 message: t,
                 channel: n,
-                compact: !0
+                compact: !0,
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: _.threadMessageAccessoryPreview,
-                children: h(t, g, c, f)
-            })
-        ]
+                children: h(t, g, c, f),
+            }),
+        ],
     });
 }
 function h(e, t, n, i) {
@@ -58,22 +58,22 @@ function h(e, t, n, i) {
         contentPlaceholder: o,
         renderedContent: a,
         leadingIcon: s,
-        trailingIcon: l
+        trailingIcon: l,
     } = (0, c.f)(e, t, n, i, _.threadMessageAccessoryContent, {
         trailingIconClass: _.threadMessageAccessoryContentTrailingIcon,
         leadingIconClass: _.threadMessageAccessoryContentLeadingIcon,
-        iconSize: f.WW
+        iconSize: f.WW,
     });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             s,
             null != a
                 ? a
-                : (0, r.jsx)('span', {
+                : (0, r.jsx)("span", {
                       className: _.threadMessageAccessoryPlaceholder,
-                      children: o
+                      children: o,
                   }),
-            l
-        ]
+            l,
+        ],
     });
 }

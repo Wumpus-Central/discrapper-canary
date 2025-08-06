@@ -10,6 +10,6 @@ function s(e) {
         ? null
         : (0, r.jsx)(o.B1, {
               label: a.intl.string(a.t.jiRvCw),
-              value: (0, i.T4)(t.tax, t.currency)
+              value: (0, i.T4)(t.tax, t.currency),
           });
 }

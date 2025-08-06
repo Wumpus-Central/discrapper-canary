@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685), n(539854));
+n.d(t, { Z: () => L }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -27,7 +27,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -37,15 +37,15 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 T(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -53,11 +53,11 @@ function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -79,7 +79,8 @@ function C(e, t) {
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,32 +90,32 @@ function R(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let P = [];
 function w(e) {
     let { channelId: t, type: n, ignoreFile: o, smallAttachments: T = !1 } = e,
         A = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
-        R = (0, p.Z)('attachments', l.hy.HORIZONTAL),
+        R = (0, p.Z)("attachments", l.hy.HORIZONTAL),
         w = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: D,
             commandOptions: L,
-            commandOptionStates: x
+            commandOptionStates: x,
         } = (0, c.cj)([h.Z], () => {
             let e = h.Z.getActiveCommand(t);
             if (null == e)
                 return {
                     isApplicationCommand: !1,
                     commandOptions: P,
-                    commandOptionStates: null
+                    commandOptionStates: null,
                 };
             let n = h.Z.getOptionStates(t);
             return {
                 isApplicationCommand: !0,
                 commandOptions: e.options,
-                commandOptionStates: n
+                commandOptionStates: n,
             };
         }),
         M = i.useMemo(() => {
@@ -125,7 +126,10 @@ function w(e) {
                         ? void 0
                         : L.filter((e) => {
                               var t;
-                              return e.type === f.jw.ATTACHMENT && (null == x || null == (t = x[e.name]) ? void 0 : t.hasValue);
+                              return (
+                                  e.type === f.jw.ATTACHMENT &&
+                                  (null == x || null == (t = x[e.name]) ? void 0 : t.hasValue)
+                              );
                           }))
                 ? e
                 : [];
@@ -135,37 +139,40 @@ function w(e) {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
         };
-        return (u.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => u.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e));
+        return (
+            u.Z.subscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e),
+            () => u.Z.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
+        );
     }, [t, n]);
     let U = i.useCallback(() => {
         R.focusFirstVisibleItem();
     }, [R]);
     (0, g.yp)({
         event: O.CkL.FOCUS_ATTACHMENT_AREA,
-        handler: U
+        handler: U,
     });
     let G = {
             isApplicationCommand: D,
             previousUploadOptions: k,
-            uploadOptions: M
+            uploadOptions: M,
         },
         B = i.useRef(G);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         B.current = G;
     }),
         i.useEffect(() => {
             let { isApplicationCommand: e, previousUploadOptions: r, uploadOptions: i } = B.current;
             if (e) {
                 let e = [];
-                (r.forEach((t) => {
+                r.forEach((t) => {
                     i.some((e) => t.name === e.name) || e.push(t);
                 }),
                     e.forEach((e) => {
                         d.Z.remove(t, e.name, n.drafts.type);
                     }),
-                    j(i));
+                    j(i);
             }
-        }, [t, M.length, n]));
+        }, [t, M.length, n]);
     let Z = w.filter((e) => e.filename !== o);
     return (!D && 0 === Z.length) || (D && 0 === M.length)
         ? null
@@ -174,9 +181,9 @@ function w(e) {
               children: (0, r.jsx)(s.SJ, {
                   children: (e) => {
                       var { ref: i } = e,
-                          o = C(e, ['ref']);
+                          o = C(e, ["ref"]);
                       return (0, r.jsx)(
-                          'ul',
+                          "ul",
                           N(S({ ref: i }, o), {
                               className: a()(v.channelAttachmentArea, I.scrollbarGhost),
                               children: D
@@ -186,10 +193,10 @@ function w(e) {
                                             {
                                                 channelId: t,
                                                 keyboardModeEnabled: A,
-                                                option: e
+                                                option: e,
                                             },
-                                            e.name
-                                        )
+                                            e.name,
+                                        ),
                                     )
                                   : Z.map((e) =>
                                         (0, r.jsx)(
@@ -200,15 +207,15 @@ function w(e) {
                                                 upload: e,
                                                 keyboardModeEnabled: A,
                                                 clip: e.clip,
-                                                size: T ? E.q.SMALL : E.q.MEDIUM
+                                                size: T ? E.q.SMALL : E.q.MEDIUM,
                                             },
-                                            e.id
-                                        )
-                                    )
-                          })
+                                            e.id,
+                                        ),
+                                    ),
+                          }),
                       );
-                  }
-              })
+                  },
+              }),
           });
 }
 function D(e) {
@@ -218,7 +225,7 @@ function D(e) {
               channelId: t,
               type: n,
               ignoreFile: o,
-              smallAttachments: a
+              smallAttachments: a,
           })
         : null;
 }

@@ -1,4 +1,4 @@
-(n.d(t, { U: () => h }), n(388685), n(781311));
+n.d(t, { U: () => h }), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
     l = n(544891),
@@ -14,7 +14,7 @@ async function d(e) {
             url: c.ANM.AI_TITLE,
             body: { content: e },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         });
         return r.ok && null != (n = null == (t = r.body) ? void 0 : t.title) ? n : null;
     } catch (e) {
@@ -25,7 +25,7 @@ function h(e) {
     let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: c, textAreaState: h } = e,
         [p, f] = i.useState(!1),
         [g, m] = i.useState(!1),
-        { enableAIFeatures: b } = s.C.useExperiment({ location: 'CreateThreadSidebar' }),
+        { enableAIFeatures: b } = s.C.useExperiment({ location: "CreateThreadSidebar" }),
         y = i.useCallback(async () => {
             if (b) {
                 f(!0);
@@ -38,19 +38,19 @@ function h(e) {
                     } else h.textValue.trim().length >= 10 && (r = h.textValue);
                     if (null != r) {
                         let e = await d(r);
-                        null != e && '' !== e.trim() && l({ name: e });
+                        null != e && "" !== e.trim() && l({ name: e });
                     }
                 } finally {
                     f(!1);
                 }
             }
         }, [t.id, n, l, b, h.textValue]);
-    (i.useEffect(() => {
-        (m(!1), f(!1), l({ name: '' }));
+    i.useEffect(() => {
+        m(!1), f(!1), l({ name: "" });
     }, [n, l]),
         i.useEffect(() => {
-            (null == c.name || '' === c.name.trim()) && !g && b && null != n && (m(!0), y());
-        }, [t.id, n, l, c.name, g, b, y]));
+            (null == c.name || "" === c.name.trim()) && !g && b && null != n && (m(!0), y());
+        }, [t.id, n, l, c.name, g, b, y]);
     let x = i.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -65,37 +65,37 @@ function h(e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
+                                      "function" == typeof Object.getOwnPropertySymbols &&
                                           (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
+                                              }),
                                           )),
                                           r.forEach(function (t) {
                                               var r;
-                                              ((r = n[t]),
+                                              (r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
                                                             value: r,
                                                             enumerable: !0,
                                                             configurable: !0,
-                                                            writable: !0
+                                                            writable: !0,
                                                         })
-                                                      : (e[t] = r));
-                                          }));
+                                                      : (e[t] = r);
+                                          });
                                   }
                                   return e;
                               })({}, t)),
                               (l = l =
                                   {
                                       icon: a.$2U,
-                                      variant: 'secondary',
-                                      size: 'sm',
-                                      'aria-label': u.intl.string(u.t.ZF2oBg),
+                                      variant: "secondary",
+                                      size: "sm",
+                                      "aria-label": u.intl.string(u.t.ZF2oBg),
                                       onClick: y,
                                       disabled: e || p || (null == n && h.textValue.trim().length < 10),
                                       loading: p,
-                                      type: 'button'
+                                      type: "button",
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -109,18 +109,18 @@ function h(e) {
                                     })(Object(l)).forEach(function (e) {
                                         Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
-                              i)
+                              i),
                           );
-                      }
+                      },
                   })
                 : null;
         },
-        [b, p, n, h.textValue, y]
+        [b, p, n, h.textValue, y],
     );
     return {
         isGeneratingAI: p,
         generateAIName: y,
         enableAIFeatures: b,
-        renderAiGenerateButton: x
+        renderAiGenerateButton: x,
     };
 }

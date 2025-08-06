@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(388685));
+n.d(t, { Z: () => d }), n(388685);
 var r = n(73800),
     i = n(392711),
     o = n.n(i),
@@ -31,12 +31,12 @@ function d(e) {
                         let [t, n] = e;
                         return c.default.getUser(t);
                     })
-                    .filter((e) => null != e)
+                    .filter((e) => null != e),
             );
         }, [n]),
         {
             friends: i,
-            friendsLastPlayed: n
+            friendsLastPlayed: n,
         }
     );
 }

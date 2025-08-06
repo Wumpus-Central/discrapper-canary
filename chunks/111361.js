@@ -3,7 +3,7 @@ n.d(t, {
     M5: () => s,
     ZP: () => l,
     xI: () => o,
-    yd: () => i
+    yd: () => i,
 });
 var r = n(474936);
 function i(e, t) {
@@ -21,5 +21,5 @@ function s(e, t) {
 let l = {
     isPremiumAtLeast: i,
     isPremium: a,
-    isPremiumExactly: s
+    isPremiumExactly: s,
 };

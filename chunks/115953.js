@@ -12,7 +12,7 @@ function i(e, t) {
                 return i(e, t[n]);
             })
         );
-    if ('object' == typeof e || 'object' == typeof t) {
+    if ("object" == typeof e || "object" == typeof t) {
         var n = r(e),
             o = r(t);
         return n !== e || o !== t

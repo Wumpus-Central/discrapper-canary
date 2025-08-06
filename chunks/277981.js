@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(35282), n(781311));
+n.d(t, { Z: () => T }), n(35282), n(781311);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -21,17 +21,20 @@ let O = {
     results: {
         command: null,
         integrations: [],
-        isLoading: !1
-    }
+        isLoading: !1,
+    },
 };
 function v(e, t, n) {
     var r, i;
     let o;
     return (
-        n.commands === m.L8.OLD_BUILT_INS ? ((o = t.split(' ')[0].substring(g.GI.length)), (t = t.substring((null != (r = o.length) ? r : 0) + g.GI.length))) : (o = null == (i = d.Z.getActiveCommand(e.id)) ? void 0 : i.untranslatedName),
+        n.commands === m.L8.OLD_BUILT_INS
+            ? ((o = t.split(" ")[0].substring(g.GI.length)),
+              (t = t.substring((null != (r = o.length) ? r : 0) + g.GI.length)))
+            : (o = null == (i = d.Z.getActiveCommand(e.id)) ? void 0 : i.untranslatedName),
         {
             command: o,
-            query: t.trim()
+            query: t.trim(),
         }
     );
 }
@@ -42,7 +45,13 @@ let T = {
     stores: [d.Z, h.Z],
     matches(e, t, n, r, i) {
         var o;
-        return i.commands !== m.L8.DISABLED && (i.commands === m.L8.OLD_BUILT_INS ? n.startsWith(g.GI + 'gif') || n.startsWith(g.GI + 'tenor') : (null == (o = d.Z.getActiveCommand(e.id)) ? void 0 : o.integrationType) === E.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
+        return (
+            i.commands !== m.L8.DISABLED &&
+            (i.commands === m.L8.OLD_BUILT_INS
+                ? n.startsWith(g.GI + "gif") || n.startsWith(g.GI + "tenor")
+                : (null == (o = d.Z.getActiveCommand(e.id)) ? void 0 : o.integrationType) === E.q9n.GIF &&
+                  d.Z.getOptionStates(e.id).query.hasValue)
+        );
     },
     queryResults(e, t, n, r, i) {
         let { command: o, query: s } = v(e, n, r);
@@ -56,8 +65,8 @@ let T = {
                   results: {
                       command: o,
                       integrations: u.results,
-                      isLoading: u.loading
-                  }
+                      isLoading: u.loading,
+                  },
               };
     },
     renderResults(e) {
@@ -68,14 +77,14 @@ let T = {
                 query: l,
                 options: c,
                 onHover: u,
-                onClick: f
+                onClick: f,
             } = e,
             { command: h, query: g } = v(a, l, c);
         if (null == h || 0 === g.length) return null;
         if (n)
             return (0, r.jsx)(s.$jN, {
                 className: y.spinner,
-                type: s.$jN.Type.SPINNING_CIRCLE
+                type: s.$jN.Type.SPINNING_CIRCLE,
             });
         if (null != t) {
             var O, I;
@@ -95,20 +104,25 @@ let T = {
                                     index: n,
                                     width: null != (i = t.meta.width) ? i : 0,
                                     height: null != (a = t.meta.height) ? a : 0,
-                                    src: null != (s = t.meta.src) ? s : '',
-                                    url: t.meta.url
+                                    src: null != (s = t.meta.src) ? s : "",
+                                    url: t.meta.url,
                                 },
-                                ''.concat(t.meta.url).concat(t.meta.src)
+                                "".concat(t.meta.url).concat(t.meta.src),
                             )
                         );
                     }
                 }),
-                s = c.commands === m.L8.OLD_BUILT_INS ? h : null != (I = null == (O = d.Z.getActiveCommand(a.id)) ? void 0 : O.integrationTitle) ? I : h,
+                s =
+                    c.commands === m.L8.OLD_BUILT_INS
+                        ? h
+                        : null != (I = null == (O = d.Z.getActiveCommand(a.id)) ? void 0 : O.integrationTitle)
+                          ? I
+                          : h,
                 l =
                     g.length > 0 && null != s
-                        ? b.intl.format(b.t['3njXz8'], {
+                        ? b.intl.format(b.t["3njXz8"], {
                               query: g,
-                              command: s
+                              command: s,
                           })
                         : null != s
                           ? s
@@ -121,12 +135,12 @@ let T = {
                         e
                             ? (0, r.jsx)(p.Z, {
                                   className: y.horizontalAutocompletes,
-                                  children: n
+                                  children: n,
                               })
-                            : n
-                    ]
+                            : n,
+                    ],
                 },
-                'gifs'
+                "gifs",
             );
         }
     },
@@ -137,7 +151,7 @@ let T = {
             type: i,
             options: o,
             channel: a,
-            guild: s
+            guild: s,
         } = e;
         if (null == t) return { type: null };
         let c = n[r];
@@ -146,28 +160,28 @@ let T = {
             u.ZP.trackWithMetadata(E.rMx.SEARCH_RESULT_SELECTED, {
                 search_type: E.aib.GIF,
                 index_num: r,
-                source_object: '/'.concat(t)
+                source_object: "/".concat(t),
             }),
             o.commands !== m.L8.OLD_BUILT_INS)
         ) {
             let e = d.Z.getActiveCommand(a.id);
             (null == e ? void 0 : e.inputType) === f.iw.BUILT_IN_INTEGRATION &&
                 (l.Z.dispatch({
-                    type: 'APPLICATION_COMMAND_USED',
+                    type: "APPLICATION_COMMAND_USED",
                     context: {
                         channel: a,
-                        guild: s
+                        guild: s,
                     },
                     command: e,
-                    commandOrigin: f.bB.CHAT
+                    commandOrigin: f.bB.CHAT,
                 }),
                 u.ZP.trackWithMetadata(E.rMx.APPLICATION_COMMAND_USED, {
                     command_id: e.id,
                     application_id: e.applicationId,
                     command_type: e.type,
-                    source: d.Z.getSource(a.id)
+                    source: d.Z.getSource(a.id),
                 }));
         }
         return { type: m.z2.GIF };
-    }
+    },
 };

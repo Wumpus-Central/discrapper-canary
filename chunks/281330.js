@@ -6,7 +6,7 @@ var r = n(872715),
     s = Array.prototype,
     c = {
         DOMTokenList: !0,
-        NodeList: !0
+        NodeList: !0,
     };
 e.exports = function (e) {
     var t = e.values;

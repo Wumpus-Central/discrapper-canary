@@ -1,33 +1,33 @@
 n.d(t, {
     HM: () => i,
-    J_: () => o
+    J_: () => o,
 });
 let r = (0, n(818083).B)({
-    kind: 'user',
-    id: '2025-05_flamingo_prefetch',
-    label: 'Flamingo Prefetch (Download Experiments)',
+    kind: "user",
+    id: "2025-05_flamingo_prefetch",
+    label: "Flamingo Prefetch (Download Experiments)",
     defaultConfig: {
         isPrefetchEnabled: !1,
-        isDownloadIconEnabled: !1
+        isDownloadIconEnabled: !1,
     },
     treatments: [
         {
             id: 1,
-            label: 'Prefetch (Download on Popout)',
+            label: "Prefetch (Download on Popout)",
             config: {
                 isPrefetchEnabled: !0,
-                isDownloadIconEnabled: !1
-            }
+                isDownloadIconEnabled: !1,
+            },
         },
         {
             id: 2,
-            label: 'Download Icon',
+            label: "Download Icon",
             config: {
                 isPrefetchEnabled: !1,
-                isDownloadIconEnabled: !0
-            }
-        }
-    ]
+                isDownloadIconEnabled: !0,
+            },
+        },
+    ],
 });
 function i(e) {
     let { location: t, autoTrackExposure: n } = e,
@@ -35,8 +35,8 @@ function i(e) {
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: __OVERLAY__
-            }
+                disable: __OVERLAY__,
+            },
         );
     return i;
 }
@@ -46,8 +46,8 @@ function o(e) {
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: __OVERLAY__ || i
-            }
+                disable: __OVERLAY__ || i,
+            },
         );
     return o;
 }

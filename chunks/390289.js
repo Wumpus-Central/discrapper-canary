@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => U }), n(388685), n(997841));
+n.d(t, { Z: () => U }), n(388685), n(997841);
 var r,
     i = n(442837),
     o = n(570140),
@@ -21,7 +21,7 @@ function E(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,23 +31,23 @@ let b = [
         {
             timeSinceJoin: +d.Z.Millis.HOUR,
             sends: 1,
-            viewTime: +d.Z.Millis.MINUTE
+            viewTime: +d.Z.Millis.MINUTE,
         },
         {
             timeSinceJoin: +d.Z.Millis.DAY,
             sends: 2,
-            viewTime: 2 * d.Z.Millis.MINUTE
+            viewTime: 2 * d.Z.Millis.MINUTE,
         },
         {
             timeSinceJoin: +d.Z.Millis.WEEK,
             sends: 5,
-            viewTime: 5 * d.Z.Millis.MINUTE
+            viewTime: 5 * d.Z.Millis.MINUTE,
         },
         {
             timeSinceJoin: +d.Z.Millis.DAYS_30,
             sends: 10,
-            viewTime: 30 * d.Z.Millis.MINUTE
-        }
+            viewTime: 30 * d.Z.Millis.MINUTE,
+        },
     ],
     y = 5 * b[b.length - 1].viewTime,
     O = d.Z.Millis.WEEK,
@@ -58,19 +58,25 @@ let b = [
     A = 0;
 function N(e) {
     var t;
-    if (e.optimistic || e.isPushNotification || (null == (t = e.message.author) ? void 0 : t.id) !== a.default.getId() || !L(e.channelId)) return !1;
+    if (
+        e.optimistic ||
+        e.isPushNotification ||
+        (null == (t = e.message.author) ? void 0 : t.id) !== a.default.getId() ||
+        !L(e.channelId)
+    )
+        return !1;
     let n = D(e.channelId);
-    ((n.lastActionTime = Date.now()), n.numSends++);
+    (n.lastActionTime = Date.now()), n.numSends++;
 }
 function C() {
     if (null == T || !L(T)) return !1;
     let e = D(T);
     if (e.lastActionTime > Date.now() - d.Z.Millis.DAY && e.viewDuration > y) return !1;
     let t = Date.now();
-    ((e.lastActionTime = t), (e.viewDuration += t - S), (S = t));
+    (e.lastActionTime = t), (e.viewDuration += t - S), (S = t);
 }
 function R() {
-    ((T = c.Z.getChannelId()), (S = Date.now()), P());
+    (T = c.Z.getChannelId()), (S = Date.now()), P();
     let e = Date.now() - O;
     _.default.forEach(v.channels, (t, n) => {
         let { lastActionTime: r } = t;
@@ -89,7 +95,7 @@ function P() {
 }
 function w() {
     let e = C();
-    return ((T = c.Z.getChannelId()), (S = Date.now()), e);
+    return (T = c.Z.getChannelId()), (S = Date.now()), e;
 }
 function D(e) {
     return (
@@ -97,7 +103,7 @@ function D(e) {
             (v.channels[e] = {
                 lastActionTime: 0,
                 viewDuration: 0,
-                numSends: 0
+                numSends: 0,
             }),
         v.channels[e]
     );
@@ -105,7 +111,14 @@ function D(e) {
 function L(e) {
     if (!u.ZP.useNewNotifications || I.has(e)) return !1;
     let t = s.Z.getBasicChannel(e);
-    if (null == t || null == t.guild_id || u.ZP.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) || M(t.guild_id, t.id) || M(t.guild_id, t.parent_id)) return !1;
+    if (
+        null == t ||
+        null == t.guild_id ||
+        u.ZP.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
+        M(t.guild_id, t.id) ||
+        M(t.guild_id, t.parent_id)
+    )
+        return !1;
     let n = u.ZP.resolveUnreadSetting(t);
     return u.ZP.getChannelUnreadSetting(t.guild_id, t.id) === m.i.UNSET && n !== m.i.ALL_MESSAGES;
 }
@@ -122,11 +135,17 @@ function x(e) {
 function M(e, t) {
     if (null == t) return !1;
     let n = u.ZP.getChannelOverrides(e)[t];
-    return null != n && !!((null != n.message_notifications && n.message_notifications !== h.bL.NULL) || (null != n.flags && (0, f.EB)(n.flags, g.ic.UNREADS_ALL_MESSAGES | g.ic.UNREADS_ONLY_MENTIONS)));
+    return (
+        null != n &&
+        !!(
+            (null != n.message_notifications && n.message_notifications !== h.bL.NULL) ||
+            (null != n.flags && (0, f.EB)(n.flags, g.ic.UNREADS_ALL_MESSAGES | g.ic.UNREADS_ONLY_MENTIONS))
+        )
+    );
 }
 class k extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, s.Z));
+        null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, s.Z);
     }
     getState() {
         return v;
@@ -138,13 +157,18 @@ class k extends (r = i.ZP.PersistedStore) {
     maybeAutoUpgradeChannel(e) {
         if (!L(e)) return !1;
         let t = s.Z.getBasicChannel(e);
-        return null != t && null != t.guild_id && !!x(t) && (delete v.channels[e], I.add(e), (0, p.IG)(t.guild_id, t.id, m.i.ALL_MESSAGES), !0);
+        return (
+            null != t &&
+            null != t.guild_id &&
+            !!x(t) &&
+            (delete v.channels[e], I.add(e), (0, p.IG)(t.guild_id, t.id, m.i.ALL_MESSAGES), !0)
+        );
     }
 }
-(E(k, 'displayName', 'UnreadSettingNoticeStore2'), E(k, 'persistKey', 'UnreadSettingNoticeStore2'));
+E(k, "displayName", "UnreadSettingNoticeStore2"), E(k, "persistKey", "UnreadSettingNoticeStore2");
 let j = new k(o.Z, {
         CHANNEL_SELECT: w,
         CONNECTION_OPEN: R,
-        MESSAGE_CREATE: N
+        MESSAGE_CREATE: N,
     }),
     U = j;

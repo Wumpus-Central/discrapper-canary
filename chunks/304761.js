@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => y,
-    Z: () => d
+    Z: () => d,
 });
 var r,
     i = n(442837),
@@ -13,7 +13,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -59,7 +59,13 @@ function u(e, t) {
     );
 }
 var d = (function (e) {
-    return ((e[(e.NotResolved = 0)] = 'NotResolved'), (e[(e.Resolving = 1)] = 'Resolving'), (e[(e.Resolved = 2)] = 'Resolved'), (e[(e.Invalid = 3)] = 'Invalid'), e);
+    return (
+        (e[(e.NotResolved = 0)] = "NotResolved"),
+        (e[(e.Resolving = 1)] = "Resolving"),
+        (e[(e.Resolved = 2)] = "Resolved"),
+        (e[(e.Invalid = 3)] = "Invalid"),
+        e
+    );
 })({});
 let f = 0,
     _ = null,
@@ -69,14 +75,14 @@ function h() {
         ((f = 1),
         (0, a.Ce)().then((e) => {
             o.Z.dispatch({
-                type: 'CURRENT_BUILD_OVERRIDE_RESOLVED',
-                overrides: e
+                type: "CURRENT_BUILD_OVERRIDE_RESOLVED",
+                overrides: e,
             });
         }));
 }
 function m(e) {
     let { overrides: t } = e;
-    ((f = 2), (_ = t));
+    (f = 2), (_ = t);
 }
 function g(e) {
     if (e in p) return;
@@ -85,26 +91,26 @@ function g(e) {
         p = u(l({}, p), {
             [e]: {
                 url: e,
-                state: 3
-            }
+                state: 3,
+            },
         });
         return;
     }
-    ((p = u(l({}, p), {
+    (p = u(l({}, p), {
         [e]: {
             url: e,
             validatedURL: t.url,
             payload: String(t.payload),
-            state: 1
-        }
+            state: 1,
+        },
     })),
         (0, a._I)(t.url).then((t) => {
             o.Z.dispatch({
-                type: 'BUILD_OVERRIDE_RESOLVED',
+                type: "BUILD_OVERRIDE_RESOLVED",
                 url: e,
-                override: t
+                override: t,
             });
-        }));
+        });
 }
 function E(e) {
     let { url: t, override: n } = e,
@@ -112,8 +118,8 @@ function E(e) {
     p = u(l({}, p), {
         [t]: u(l({}, p[t]), {
             state: r,
-            override: n
-        })
+            override: n,
+        }),
     });
 }
 class b extends (r = i.ZP.Store) {
@@ -122,19 +128,19 @@ class b extends (r = i.ZP.Store) {
             h(),
             {
                 state: f,
-                overrides: _
+                overrides: _,
             }
         );
     }
     getBuildOverride(e) {
-        return (g(e), p[e]);
+        return g(e), p[e];
     }
     getBuildOverrides() {
         return p;
     }
 }
-s(b, 'displayName', 'BuildOverrideStore');
+s(b, "displayName", "BuildOverrideStore");
 let y = new b(o.Z, {
     BUILD_OVERRIDE_RESOLVED: E,
-    CURRENT_BUILD_OVERRIDE_RESOLVED: m
+    CURRENT_BUILD_OVERRIDE_RESOLVED: m,
 });

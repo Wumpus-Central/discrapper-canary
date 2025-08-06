@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(979590),
     i = n.n(r),
     o = n(399606),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,7 +42,7 @@ let u = 50,
         return i()({
             r: o,
             g: a,
-            b: l
+            b: l,
         });
     },
     _ = (e, t) => {
@@ -52,13 +52,13 @@ let u = 50,
                       primary: t[0],
                       secondary: t[0],
                       border: t[0].setAlpha(d),
-                      label: t[0].isLight() ? e.dark : e.light
+                      label: t[0].isLight() ? e.dark : e.light,
                   }
                 : {
                       primary: t[0],
                       secondary: t[1],
                       border: f(t[0], t[1]).setAlpha(d),
-                      label: f(t[0], t[1]).isLight() ? e.dark : e.light
+                      label: f(t[0], t[1]).isLight() ? e.dark : e.light,
                   };
     },
     p = (e, t) => {
@@ -67,12 +67,12 @@ let u = 50,
                 ? {
                       primary: t[0],
                       secondary: t[0],
-                      text: t[0].isLight() ? e.dark : e.light
+                      text: t[0].isLight() ? e.dark : e.light,
                   }
                 : {
                       primary: t[0],
                       secondary: t[1],
-                      text: f(t[0], t[1]).isLight() ? e.dark : e.light
+                      text: f(t[0], t[1]).isLight() ? e.dark : e.light,
                   };
     },
     h = (e, t) => {
@@ -80,7 +80,7 @@ let u = 50,
         return i()({
             h: n,
             s: r * t,
-            l: o
+            l: o,
         });
     },
     m = (e) => (t) => {
@@ -89,7 +89,7 @@ let u = 50,
         let r = {
             backgroundColors: _(e, t.backgroundColors),
             buttonColors: p(e, t.buttonColors),
-            confettiColors: t.confettiColors
+            confettiColors: t.confettiColors,
         };
         return 1 === n
             ? c({}, r)
@@ -100,7 +100,7 @@ let u = 50,
                                 primary: h(r.backgroundColors.primary, n),
                                 secondary: h(r.backgroundColors.secondary, n),
                                 border: h(r.backgroundColors.border, n),
-                                label: h(r.backgroundColors.label, n)
+                                label: h(r.backgroundColors.label, n),
                             }
                           : void 0,
                   buttonColors:
@@ -108,9 +108,9 @@ let u = 50,
                           ? {
                                 primary: h(r.buttonColors.primary, n),
                                 secondary: h(r.buttonColors.secondary, n),
-                                text: h(r.buttonColors.text, n)
+                                text: h(r.buttonColors.text, n),
                             }
                           : void 0,
-                  confettiColors: r.confettiColors.map((e) => h(e, n))
+                  confettiColors: r.confettiColors.map((e) => h(e, n)),
               };
     };

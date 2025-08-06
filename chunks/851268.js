@@ -4,6 +4,6 @@ var r = n(544891),
 function o(e) {
     r.tn.post({
         url: i.ANM.VOICE_CHANNEL_NOTIFICATIONS(e),
-        rejectWithError: !0
+        rejectWithError: !0,
     });
 }

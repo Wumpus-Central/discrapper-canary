@@ -17,7 +17,7 @@ let p = (0, o.Z)(
             a = (0, d.Z)({ userId: t.id }),
             p = (0, s.Z)({
                 id: t.id,
-                label: b.intl.string(b.t['/AXYnJ'])
+                label: b.intl.string(b.t["/AXYnJ"]),
             }),
             O = (0, u.Z)(t.id),
             h = t.isNonUserBot();
@@ -25,18 +25,18 @@ let p = (0, o.Z)(
             context: n,
             object: f.qAy.CONTEXT_MENU,
             children: (0, r.jsxs)(i.v2r, {
-                navId: 'user-context',
+                navId: "user-context",
                 onClose: l.Zy,
-                'aria-label': b.intl.string(b.t.liqwPD),
+                "aria-label": b.intl.string(b.t.liqwPD),
                 onSelect: o,
                 children: [
                     (0, r.jsxs)(i.kSQ, {
-                        children: [!h && a, !h && O]
+                        children: [!h && a, !h && O],
                     }),
-                    (0, r.jsx)(i.kSQ, { children: p })
-                ]
-            })
+                    (0, r.jsx)(i.kSQ, { children: p }),
+                ],
+            }),
         });
     },
-    [a.Z.CONTEXT_MENU, a.Z.BANNED_USER_MENU]
+    [a.Z.CONTEXT_MENU, a.Z.BANNED_USER_MENU],
 );

@@ -1,4 +1,4 @@
-(t.d(n, { d: () => f }), t(388685));
+t.d(n, { d: () => f }), t(388685);
 var r = t(255367),
     l = t(73800),
     c = t(120356),
@@ -16,35 +16,35 @@ function h(e) {
             (0, s.JG)(
                 n,
                 () => c(!0),
-                () => c(!1)
+                () => c(!1),
             );
         },
         children: t
             ? (0, r.jsx)(o.dz2, {
-                  size: 'xs',
-                  color: 'currentColor'
+                  size: "xs",
+                  color: "currentColor",
               })
             : (0, r.jsx)(o.TIy, {
-                  size: 'xs',
-                  color: 'currentColor'
-              })
+                  size: "xs",
+                  color: "currentColor",
+              }),
     });
 }
 function f(e) {
     let { language: n, content: l } = e,
         c = () =>
-            (0, r.jsx)('code', {
-                className: i()(d.scrollbarGhostHairline, 'hljs'),
-                children: l
+            (0, r.jsx)("code", {
+                className: i()(d.scrollbarGhostHairline, "hljs"),
+                children: l,
             });
-    return (0, r.jsx)('pre', {
-        children: (0, r.jsxs)('div', {
+    return (0, r.jsx)("pre", {
+        children: (0, r.jsxs)("div", {
             className: u.codeContainer,
             children: [
                 s.wS
-                    ? (0, r.jsx)('div', {
+                    ? (0, r.jsx)("div", {
                           className: u.codeActions,
-                          children: (0, r.jsx)(h, { text: l })
+                          children: (0, r.jsx)(h, { text: l }),
                       })
                     : null,
                 (0, r.jsx)(a.GI, {
@@ -57,14 +57,14 @@ function f(e) {
                             let t = e.highlight(n, l, !0);
                             return null == t
                                 ? c()
-                                : (0, r.jsx)('code', {
-                                      className: i()(d.scrollbarGhostHairline, 'hljs', t.language),
-                                      dangerouslySetInnerHTML: { __html: t.value }
+                                : (0, r.jsx)("code", {
+                                      className: i()(d.scrollbarGhostHairline, "hljs", t.language),
+                                      dangerouslySetInnerHTML: { __html: t.value },
                                   });
                         }
-                    }
-                })
-            ]
-        })
+                    },
+                }),
+            ],
+        }),
     });
 }

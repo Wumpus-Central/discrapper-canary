@@ -1,4 +1,4 @@
-(n.d(t, { f: () => f }), n(415506));
+n.d(t, { f: () => f }), n(415506);
 var r = n(255367);
 n(73800);
 var i = n(608787),
@@ -13,24 +13,34 @@ async function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.R5.UNSET,
         t = {
             outOfProcessOverlay: !0,
-            focusable: !1
+            focusable: !1,
         },
-        f = (0, c.Rb)('openOverlayPopout').overlayV3UI;
+        f = (0, c.Rb)("openOverlayPopout").overlayV3UI;
     if (!f && e === l.R5.UNSET) return;
     let _ = e === l.R5.OUT_OF_PROCESS_V3 || e === l.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
         p = (e) => null;
     if (f || _) {
         let e = (0, i.Un)({
-            createPromise: () => Promise.all([n.e('35535'), n.e('70205'), n.e('88712'), n.e('82096'), n.e('92922'), n.e('89298'), n.e('29709'), n.e('13368')]).then(n.bind(n, 989373)),
+            createPromise: () =>
+                Promise.all([
+                    n.e("35535"),
+                    n.e("70205"),
+                    n.e("88712"),
+                    n.e("82096"),
+                    n.e("92922"),
+                    n.e("89298"),
+                    n.e("29709"),
+                    n.e("13368"),
+                ]).then(n.bind(n, 989373)),
             webpackId: 989373,
-            name: 'AppOverlay'
+            name: "AppOverlay",
         });
-        ((p = (t) =>
+        (p = (t) =>
             (0, r.jsx)(e, {
                 withTitleBar: !1,
-                windowKey: t
+                windowKey: t,
             })),
-            (0, o.te)(u.$S, s.Z.getDefaultLayout(u.$S, u.HN), u.HN));
-    } else throw Error('OverlayV3Utils: No overlay rendering mode found');
+            (0, o.te)(u.$S, s.Z.getDefaultLayout(u.$S, u.HN), u.HN);
+    } else throw Error("OverlayV3Utils: No overlay rendering mode found");
     await a.bA(d.$J, p, t);
 }

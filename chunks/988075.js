@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(35282), n(388685));
+n.d(t, { Z: () => h }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -14,7 +14,13 @@ var r = n(255367),
 function h(e) {
     let { file: t, name: n, size: o, spoiler: h } = e,
         m = (0, s.e7)([f.Z], () => f.Z.getChannelId()),
-        g = i.useMemo(() => (null != t.contentType && -1 !== t.contentType.indexOf('/') ? t.contentType.split('/') : ['unknown', 'unknown']), [t.contentType]),
+        g = i.useMemo(
+            () =>
+                null != t.contentType && -1 !== t.contentType.indexOf("/")
+                    ? t.contentType.split("/")
+                    : ["unknown", "unknown"],
+            [t.contentType],
+        ),
         [E, b] = i.useState(h),
         y = i.useMemo(
             () => () =>
@@ -24,9 +30,9 @@ function h(e) {
                     showDownload: !0,
                     showImageAppPicker: !1,
                     isVisualMediaType: !1,
-                    channelId: m
+                    channelId: m,
                 }),
-            [t, g, m]
+            [t, g, m],
         ),
         O = (e) =>
             (0, r.jsx)(l.Z, {
@@ -34,9 +40,9 @@ function h(e) {
                 url: t.url,
                 fileName: null != n ? n : _.intl.string(_.t.GnuJ5u),
                 fileSize: null != o ? o : 0,
-                renderAdjacentContent: y
+                renderAdjacentContent: y,
             });
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: p.fileDisplayContainer,
         children: h
             ? (0, r.jsx)(c.ZP, {
@@ -44,8 +50,8 @@ function h(e) {
                   reason: u.wk.SPOILER,
                   obscured: E,
                   onToggleObscurity: () => b((e) => !e),
-                  children: (e) => O(e)
+                  children: (e) => O(e),
               })
-            : O(!1)
+            : O(!1),
     });
 }

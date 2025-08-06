@@ -1,4 +1,4 @@
-(n.d(t, { $: () => o }), n(388685));
+n.d(t, { $: () => o }), n(388685);
 var r = n(73800),
     i = n(881052);
 function o(e) {
@@ -10,7 +10,7 @@ function o(e) {
             if (!l) {
                 s(!0);
                 try {
-                    (await o(), null == n || n());
+                    await o(), null == n || n();
                 } catch (n) {
                     let e = new i.Hx(n);
                     null == t || t(e);
@@ -19,6 +19,6 @@ function o(e) {
                 }
             }
         }, [l, t, n, o]),
-        isReportFalsePositiveLoading: a
+        isReportFalsePositiveLoading: a,
     };
 }

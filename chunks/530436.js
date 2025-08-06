@@ -12,7 +12,7 @@ function g(e) {
     let { guild: t, error: n, onClose: g } = e,
         h = t.id,
         m = i.useCallback(() => {
-            (g(), a.Z.open(h, u.pNK.INVITES));
+            g(), a.Z.open(h, u.pNK.INVITES);
         }, [h, g]),
         p = i.useCallback(
             (e) =>
@@ -20,45 +20,45 @@ function g(e) {
                     className: c.errorLink,
                     onClick: m,
                     children: (0, l.jsx)(r.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-link',
-                        tag: 'span',
-                        children: e
-                    })
+                        variant: "text-xs/normal",
+                        color: "text-link",
+                        tag: "span",
+                        children: e,
+                    }),
                 }),
-            [m]
+            [m],
         ),
         v = i.useCallback(
             (e) =>
                 (0, l.jsx)(r.eee, {
                     href: u.EYA.INVITES_HELP,
-                    target: '_blank',
+                    target: "_blank",
                     children: (0, l.jsx)(r.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-link',
-                        tag: 'span',
-                        children: e
-                    })
+                        variant: "text-xs/normal",
+                        color: "text-link",
+                        tag: "span",
+                        children: e,
+                    }),
                 }),
-            []
+            [],
         ),
         x =
             n instanceof s.Z
                 ? n.code !== u.evJ.TOO_MANY_INVITES
                     ? n.getAnyErrorMessage()
                     : o.Z.can(u.Plq.MANAGE_GUILD, t)
-                      ? d.intl.format(d.t['H/RUY2'], {
+                      ? d.intl.format(d.t["H/RUY2"], {
                             inviteListHook: p,
-                            inviteHelpHook: v
+                            inviteHelpHook: v,
                         })
-                      : d.intl.string(d.t['/FxH6O'])
-                : 'message' in n
+                      : d.intl.string(d.t["/FxH6O"])
+                : "message" in n
                   ? n.message
                   : d.intl.string(d.t.eAn6z8);
     return (0, l.jsx)(r.Text, {
         className: c.errorMessage,
-        variant: 'text-xs/normal',
-        color: 'text-danger',
-        children: x
+        variant: "text-xs/normal",
+        color: "text-danger",
+        children: x,
     });
 }

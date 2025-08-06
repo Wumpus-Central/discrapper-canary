@@ -1,6 +1,6 @@
 n.d(t, {
     E: () => g,
-    Z: () => E
+    Z: () => E,
 });
 var r = n(255367),
     i = n(73800),
@@ -19,7 +19,9 @@ var r = n(255367),
 function g(e, t, n) {
     let r = (0, o.e7)([l.Z], () => (null != e ? l.Z.getSelectedParticipantId(e.id) : null)),
         a = (0, o.e7)([f.Z], () => (null != r ? f.Z.getActiveStreamForStreamKey(r) : null), [r]),
-        s = (0, o.cj)([_.default], () => n.reduce((e, t) => ((e[t.ownerId] = _.default.getUser(t.ownerId)), e), {}), [n]);
+        s = (0, o.cj)([_.default], () => n.reduce((e, t) => ((e[t.ownerId] = _.default.getUser(t.ownerId)), e), {}), [
+            n,
+        ]);
     return i.useMemo(() => {
         if (null == e) return [];
         let r = n.filter((e) => e.ownerId !== (null == t ? void 0 : t.id));
@@ -27,13 +29,25 @@ function g(e, t, n) {
             ? []
             : r.map((t) => ({
                   stream: t,
-                  username: p.ZP.getName(e.getGuildId(), e.id, s[t.ownerId])
+                  username: p.ZP.getName(e.getGuildId(), e.id, s[t.ownerId]),
               }));
     }, [s, n, e, a, null == t ? void 0 : t.id]);
 }
 function E(e) {
     var t;
-    let { channel: n, currentUser: i, activeStreams: o, hideSelfOptions: l = !1, showReportOption: f = !1, handleGoLive: _, onClose: p, onSelect: E, appContext: b = h.IlC.APP, disableChangeWindows: y = !1, onInteraction: O } = e,
+    let {
+            channel: n,
+            currentUser: i,
+            activeStreams: o,
+            hideSelfOptions: l = !1,
+            showReportOption: f = !1,
+            handleGoLive: _,
+            onClose: p,
+            onSelect: E,
+            appContext: b = h.IlC.APP,
+            disableChangeWindows: y = !1,
+            onInteraction: O,
+        } = e,
         v = null != (t = o.find((e) => e.ownerId === (null == i ? void 0 : i.id))) ? t : null,
         I = g(n, i, o),
         T = (0, c.Z)(v, b),
@@ -43,16 +57,16 @@ function E(e) {
             showReportOption: f,
             handleGoLive: _,
             minimal: !0,
-            appContext: b
+            appContext: b,
         });
     return (0, r.jsx)(s.Z, {
         section: h.jXE.CONTEXT_MENU,
         children: (0, r.jsxs)(a.v2r, {
             onSelect: E,
-            navId: 'manage-streams',
+            navId: "manage-streams",
             onClose: p,
             onInteraction: O,
-            'aria-label': null != v ? m.intl.string(m.t.S5anIS) : m.intl.string(m.t.fjBNo6),
+            "aria-label": null != v ? m.intl.string(m.t.S5anIS) : m.intl.string(m.t.fjBNo6),
             children: [
                 (0, r.jsx)(a.kSQ, {
                     children: I.map((e) => {
@@ -61,25 +75,25 @@ function E(e) {
                             a.sNh,
                             {
                                 id: t.ownerId,
-                                label: m.intl.formatToPlainString(m.t['7rkg+/'], { username: n }),
+                                label: m.intl.formatToPlainString(m.t["7rkg+/"], { username: n }),
                                 icon: a.g5r,
-                                action: () => (0, d.Z)(t)
+                                action: () => (0, d.Z)(t),
                             },
-                            'manage-stream-menu'.concat(t.ownerId)
+                            "manage-stream-menu".concat(t.ownerId),
                         );
-                    })
+                    }),
                 }),
                 l ? null : S,
                 l
                     ? null
                     : (0, r.jsx)(a.kSQ, {
                           children: (0, r.jsx)(a.sNh, {
-                              id: 'more-options',
+                              id: "more-options",
                               label: m.intl.string(m.t.PdRCRk),
-                              children: T
-                          })
-                      })
-            ]
-        })
+                              children: T,
+                          }),
+                      }),
+            ],
+        }),
     });
 }

@@ -13,15 +13,15 @@ let s = (e) => {
                   emoji: s.emoji,
                   className: n,
                   hideTooltip: !0,
-                  animate: l
+                  animate: l,
               })
             : null;
     let c = null == (t = (0, o.tV)(s)) ? void 0 : t.icon;
     return null != c
-        ? (0, r.jsx)('img', {
+        ? (0, r.jsx)("img", {
               src: c,
-              alt: '',
-              className: null != n ? n : void 0
+              alt: "",
+              className: null != n ? n : void 0,
           })
         : null;
 };

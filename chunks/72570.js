@@ -10,7 +10,7 @@ t.exports = function (t, r) {
                     function () {
                         return 1;
                     },
-                1
+                1,
             );
         })
     );

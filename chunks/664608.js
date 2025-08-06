@@ -6,5 +6,5 @@ var i = n(114858),
     a = n(106939),
     o = n(981631);
 function s() {
-    return !1 === (0, l.Z)() ? (0, r.jsx)(i.l_, { to: o.Z5c.SETTINGS('family-center') }) : (0, r.jsx)(a.Z, {});
+    return !1 === (0, l.Z)() ? (0, r.jsx)(i.l_, { to: o.Z5c.SETTINGS("family-center") }) : (0, r.jsx)(a.Z, {});
 }

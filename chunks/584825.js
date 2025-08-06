@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     GG: () => m,
     HQ: () => O,
     JH: () => T,
@@ -10,10 +10,10 @@
     oC: () => S,
     qi: () => g,
     r4: () => b,
-    sp: () => E
+    sp: () => E,
 }),
     n(388685),
-    n(539854));
+    n(539854);
 var r = n(73800),
     i = n(442837),
     o = n(990169),
@@ -26,9 +26,16 @@ var l = n(730647),
     d = n(697227);
 let f = [],
     _ = function (e) {
-        let { refetchOnMount: t = !1, includeSoftDeleted: n = !0, countryCode: a, dontFetchWhileTrue: l } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        let {
+                refetchOnMount: t = !1,
+                includeSoftDeleted: n = !0,
+                countryCode: a,
+                dontFetchWhileTrue: l,
+            } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             d = (0, i.e7)([s.Z], () => s.Z.isConnected()),
-            f = (0, i.e7)([u.Z], () => (null != e ? u.Z.getSubscriptionGroupListingsForGuildFetchState(e) : u.M.FETCHED)),
+            f = (0, i.e7)([u.Z], () =>
+                null != e ? u.Z.getSubscriptionGroupListingsForGuildFetchState(e) : u.M.FETCHED,
+            ),
             _ = r.useRef(t);
         r.useEffect(() => {
             if (null == e || !d || !0 === l) return;
@@ -37,33 +44,30 @@ let f = [],
                 ((_.current = !1),
                 c.FP(e, {
                     includeSoftDeleted: n,
-                    countryCode: a
+                    countryCode: a,
                 }));
         }, [d, e, n, t, a, l]);
         let p = (0, o.Z)(_);
         return { listingsLoaded: f === u.M.FETCHED && !0 !== p };
     },
     p = function (e) {
-        let { includeSoftDeleted: t = !1, includeUnpublished: n = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return (0, i.Wu)(
-            [u.Z],
-            () => {
-                if (null == e) return [];
-                let r = u.Z.getSubscriptionGroupListing(e);
-                if (null == r) return [];
-                let i = [];
-                for (let e of r.subscription_listings_ids) {
-                    let r = u.Z.getSubscriptionListing(e);
-                    null != r && (!r.soft_deleted || t) && (r.published || n) && i.push(r);
-                }
-                return i;
-            },
-            [e, t, n]
-        );
+        let { includeSoftDeleted: t = !1, includeUnpublished: n = !0 } =
+            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return (0, i.Wu)([u.Z], () => {
+            if (null == e) return [];
+            let r = u.Z.getSubscriptionGroupListing(e);
+            if (null == r) return [];
+            let i = [];
+            for (let e of r.subscription_listings_ids) {
+                let r = u.Z.getSubscriptionListing(e);
+                null != r && (!r.soft_deleted || t) && (r.published || n) && i.push(r);
+            }
+            return i;
+        }, [e, t, n]);
     },
     h = (e) => (0, i.e7)([u.Z], () => (null != e ? u.Z.getSubscriptionListing(e) : null)),
     m = (e) => {
-        let t = (0, l.f)('useGroupListingsForGuild');
+        let t = (0, l.f)("useGroupListingsForGuild");
         return (0, i.e7)([u.Z], () => (null != e && t ? u.Z.getSubscriptionGroupListingsForGuild(e) : f));
     },
     g = function (e) {
@@ -72,7 +76,7 @@ let f = [],
                 ? arguments[1]
                 : {
                       includeSoftDeleted: !1,
-                      sortDeletedListingsLast: !1
+                      sortDeletedListingsLast: !1,
                   };
         return (
             _(e),
@@ -84,7 +88,9 @@ let f = [],
                         let e = u.Z.getSubscriptionListing(n);
                         null != e && (t.includeSoftDeleted || !e.soft_deleted) && r.push(e);
                     }
-                return t.includeSoftDeleted && t.sortDeletedListingsLast ? [...r.filter((e) => !e.soft_deleted), ...r.filter((e) => e.soft_deleted)] : r;
+                return t.includeSoftDeleted && t.sortDeletedListingsLast
+                    ? [...r.filter((e) => !e.soft_deleted), ...r.filter((e) => e.soft_deleted)]
+                    : r;
             })
         );
     },
@@ -114,13 +120,13 @@ let f = [],
             submitting: e,
             deleteSubscriptionListing: async (e, n, r) => {
                 try {
-                    return (t(!0), i(null), await c._d(e, n, r), !0);
+                    return t(!0), i(null), await c._d(e, n, r), !0;
                 } catch (e) {
                     i(e);
                 } finally {
                     t(!1);
                 }
-            }
+            },
         };
     },
     y = () => {
@@ -129,7 +135,7 @@ let f = [],
         return {
             error: r,
             submitting: n,
-            archiveSubscriptionListing: e
+            archiveSubscriptionListing: e,
         };
     },
     O = () => {
@@ -148,7 +154,7 @@ let f = [],
                             guildId: n,
                             groupListingId: r,
                             listingId: o,
-                            data: { published: !0 }
+                            data: { published: !0 },
                         }),
                         !0
                     );
@@ -158,7 +164,7 @@ let f = [],
                     t(!1);
                 }
             },
-            clearError: () => i(null)
+            clearError: () => i(null),
         };
     },
     v = (e) => (0, i.e7)([u.Z], () => (null != e ? u.Z.getSubscriptionSettings(e) : void 0)),
@@ -168,7 +174,7 @@ let f = [],
         return {
             loading: e,
             updateSubscriptionsSettings: r.useCallback(async (e, n) => {
-                (t(!0), i(null));
+                t(!0), i(null);
                 try {
                     await c.W2(e, n);
                 } catch (e) {
@@ -177,7 +183,7 @@ let f = [],
                     t(!1);
                 }
             }, []),
-            error: n
+            error: n,
         };
     },
     T = () => {
@@ -186,7 +192,7 @@ let f = [],
         return {
             loading: e,
             fetchSubscriptionsSettings: r.useCallback(async (e) => {
-                (t(!0), i(null));
+                t(!0), i(null);
                 try {
                     await c.Qb(e);
                 } catch (e) {
@@ -195,7 +201,7 @@ let f = [],
                     t(!1);
                 }
             }, []),
-            error: n
+            error: n,
         };
     },
     S = (e) => (0, i.e7)([u.Z], () => (null != e ? u.Z.getSubscriptionTrial(e) : null));

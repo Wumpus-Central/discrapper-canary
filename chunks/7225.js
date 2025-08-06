@@ -1,4 +1,4 @@
-(s.d(e, { default: () => v }), s(388685));
+s.d(e, { default: () => v }), s(388685);
 var r = s(255367),
     a = s(73800),
     i = s(541822),
@@ -32,7 +32,7 @@ function v(t) {
                 .catch((t) => {
                     T({
                         status: 3,
-                        error: t.message
+                        error: t.message,
                     });
                 }));
     }, [v, A.status]);
@@ -41,25 +41,25 @@ function v(t) {
     let P = j.intl.formatToPlainString(j.t.XDRjs7, { appName: b.name });
     return (0, r.jsxs)(c.Y0X, {
         transitionState: s,
-        'aria-label': P,
+        "aria-label": P,
         size: c.CgR.DYNAMIC,
         className: C.modal,
-        parentComponent: 'AppStorefrontModal',
+        parentComponent: "AppStorefrontModal",
         children: [
             (0, r.jsxs)(c.xBx, {
                 className: C.modalHeader,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: C.modalTitle,
                         children: [
                             (0, r.jsx)(u.Z, {}),
                             (0, r.jsx)(c.X6q, {
-                                variant: 'heading-md/semibold',
-                                children: P
-                            })
-                        ]
+                                variant: "heading-md/semibold",
+                                children: P,
+                            }),
+                        ],
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: C.modalHeaderLinks,
                         children: [
                             _.wS &&
@@ -67,22 +67,35 @@ function v(t) {
                                     look: o.iL.BLANK,
                                     size: o.Ph.ICON,
                                     color: o.Tt.TRANSPARENT,
-                                    'aria-label': j.intl.string(j.t.WqhZsr),
+                                    "aria-label": j.intl.string(j.t.WqhZsr),
                                     onClick: () => {
-                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(v, g.GlobalDiscoveryAppsSections.STORE));
-                                        ((0, _.JG)(t, () => (0, c.showToast)((0, c.createToast)(j.intl.string(j.t['L/PwZW']), c.ToastType.SUCCESS))), (0, f.X)(v, f.B.STORE_MODAL));
+                                        let t = ""
+                                            .concat(location.protocol, "//")
+                                            .concat(location.host)
+                                            .concat(
+                                                S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
+                                                    v,
+                                                    g.GlobalDiscoveryAppsSections.STORE,
+                                                ),
+                                            );
+                                        (0, _.JG)(t, () =>
+                                            (0, c.showToast)(
+                                                (0, c.createToast)(j.intl.string(j.t["L/PwZW"]), c.ToastType.SUCCESS),
+                                            ),
+                                        ),
+                                            (0, f.X)(v, f.B.STORE_MODAL);
                                     },
-                                    children: (0, r.jsx)(c.xPt, { size: 'sm' })
+                                    children: (0, r.jsx)(c.xPt, { size: "sm" }),
                                 }),
                             (0, r.jsx)(c.olH, {
                                 onClick: e,
-                                className: C.modalCloseBtn
-                            })
-                        ]
-                    })
-                ]
+                                className: C.modalCloseBtn,
+                            }),
+                        ],
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: C.scrollerWrapper,
                 children: (0, r.jsx)(i.Z, {
                     className: C.scroller,
@@ -90,23 +103,23 @@ function v(t) {
                         app: b,
                         guildId: N,
                         subscriptions: Z,
-                        otps: w
-                    })
-                })
+                        otps: w,
+                    }),
+                }),
             }),
             (0, r.jsx)(c.mzw, {
                 justify: d.Z.Justify.END,
                 children: (0, r.jsx)(c.Text, {
-                    variant: 'text-md/normal',
+                    variant: "text-md/normal",
                     children:
                         null != b.termsOfServiceUrl || null != b.privacyPolicyUrl
                             ? (0, r.jsx)(h.Z, {
                                   termsOfServiceUrl: b.termsOfServiceUrl,
-                                  privacyPolicyUrl: b.privacyPolicyUrl
+                                  privacyPolicyUrl: b.privacyPolicyUrl,
                               })
-                            : j.intl.string(j.t['3ZY+0N'])
-                })
-            })
-        ]
+                            : j.intl.string(j.t["3ZY+0N"]),
+                }),
+            }),
+        ],
     });
 }

@@ -1,5 +1,5 @@
 let l, i, r, s, a, o;
-(n.d(t, { Z: () => P }), n(388685), n(642613));
+n.d(t, { Z: () => P }), n(388685), n(642613);
 var u,
     d,
     c,
@@ -21,13 +21,14 @@ let S = new Set(),
         numFriends: 0,
         numDms: 0,
         numGroupDms: 0,
-        numChannels: 0
+        numChannels: 0,
     };
 function O(e) {
     let t = new Set(),
         n = null == r || o === _.Iq.EMBEDDED_APPLICATION ? void 0 : r.id,
         l = (0, x.rh)(S, n);
-    for (let e of (null == l || j.Z.isBlockedOrIgnored(l.id) || t.add(l.id), p.Z.getUserAffinities())) t.add(e.otherUserId);
+    for (let e of (null == l || j.Z.isBlockedOrIgnored(l.id) || t.add(l.id), p.Z.getUserAffinities()))
+        t.add(e.otherUserId);
     let i = new Set();
     return (
         o === _.Iq.EMBEDDED_APPLICATION &&
@@ -45,16 +46,16 @@ function O(e) {
             maxRowsWithoutQuery: 100,
             omitGuildId: n,
             suggestedChannelIds: i,
-            inviteTargetType: o
+            inviteTargetType: o,
         })
     );
 }
 function y(e) {
-    ((E = e),
+    (E = e),
         (b = new Map()),
         e.forEach((e, t) => {
             b.set(e, { index: t });
-        }));
+        });
 }
 class C extends (u = g.ZP.Store) {
     initialize() {
@@ -78,24 +79,24 @@ class C extends (u = g.ZP.Store) {
                   isAffinitySuggestion: e.isSuggested,
                   numTotal: E.length,
                   numAffinityConnections: n.length,
-                  isFiltered: i
+                  isFiltered: i,
               }
             : null;
     }
 }
-((c = 'InviteSuggestionsStore'),
-    (d = 'displayName') in C
+(c = "InviteSuggestionsStore"),
+    (d = "displayName") in C
         ? Object.defineProperty(C, d, {
               value: c,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (C[d] = c));
+        : (C[d] = c);
 let P = new C(h.Z, {
     LOAD_INVITE_SUGGESTIONS: function (e) {
         let { omitUserIds: t, guild: n, channel: u, applicationId: d, inviteTargetType: c } = e;
-        ((r = null != u ? n : null),
+        (r = null != u ? n : null),
             (s = u),
             (a = d),
             (o = c),
@@ -105,17 +106,17 @@ let P = new C(h.Z, {
                 ...(0, x.Sz)({
                     channel: s,
                     applicationId: a,
-                    inviteTargetType: c
-                })
+                    inviteTargetType: c,
+                }),
             ])),
-            (i = !1));
-        let { rows: g, counts: h } = O('');
-        (y(g), (T = h), (l = E.length));
+            (i = !1);
+        let { rows: g, counts: h } = O("");
+        y(g), (T = h), (l = E.length);
     },
     INVITE_SUGGESTIONS_SEARCH: function (e) {
         let { query: t } = e;
-        i = '' !== t;
+        i = "" !== t;
         let { rows: n } = O(t);
-        (n.sort((e, t) => (null != e.score && null != t.score ? e.score - t.score : 0)), y(n));
-    }
+        n.sort((e, t) => (null != e.score && null != t.score ? e.score - t.score : 0)), y(n);
+    },
 });

@@ -4,7 +4,7 @@ var r = n(796581),
     a = n(135615);
 e.exports = Object.getOwnPropertySymbols
     ? function (e) {
-          for (var t = []; e; ) (r(t, o(e)), (e = i(e)));
+          for (var t = []; e; ) r(t, o(e)), (e = i(e));
           return t;
       }
     : a;

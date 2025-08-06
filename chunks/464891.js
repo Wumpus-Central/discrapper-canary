@@ -1,11 +1,11 @@
-(n.d(t, {
+n.d(t, {
     CF: () => et,
     ZP: () => es,
-    nD: () => er
+    nD: () => er,
 }),
     n(539854),
     n(388685),
-    n(997841));
+    n(997841);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -56,7 +56,7 @@ function W(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -66,15 +66,15 @@ function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 W(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -82,11 +82,11 @@ function z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -105,10 +105,23 @@ let X = 32,
     Q = 80,
     J = 80;
 function $(e) {
-    let { avatarSrc: t, avatarDecorationSrc: n, compact: i, onClick: o, onContextMenu: s, onMouseDown: l, onMouseEnter: c, onMouseLeave: u, onKeyDown: d, showCommunicationDisabledStyles: f = !1, className: _, avatarImgRef: p } = e;
+    let {
+        avatarSrc: t,
+        avatarDecorationSrc: n,
+        compact: i,
+        onClick: o,
+        onContextMenu: s,
+        onMouseDown: l,
+        onMouseEnter: c,
+        onMouseLeave: u,
+        onKeyDown: d,
+        showCommunicationDisabledStyles: f = !1,
+        className: _,
+        avatarImgRef: p,
+    } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('img', {
+            (0, r.jsx)("img", {
                 ref: p,
                 onClick: o,
                 onContextMenu: s,
@@ -117,27 +130,43 @@ function $(e) {
                 onMouseEnter: c,
                 onMouseLeave: u,
                 src: t,
-                'aria-hidden': !0,
+                "aria-hidden": !0,
                 className: a()(_, H.avatar, {
                     [H.compact]: i,
                     [H.clickable]: null != o,
-                    [H.communicationDisabledOpacity]: f
+                    [H.communicationDisabledOpacity]: f,
                 }),
-                alt: ' '
+                alt: " ",
             }),
             null == n || i
                 ? null
-                : (0, r.jsx)('img', {
+                : (0, r.jsx)("img", {
                       className: H.avatarDecoration,
                       src: n,
-                      alt: ' ',
-                      'aria-hidden': !0
-                  })
-        ]
+                      alt: " ",
+                      "aria-hidden": !0,
+                  }),
+        ],
     });
 }
 let ee = i.memo(function (e) {
-    let { message: t, author: n, channel: o, guildId: a, compact: s = !1, roleIconProps: u, showUsernamePopout: d, renderPopout: f, onClickUsername: h, onContextMenu: E, displayCompactAvatars: b = !1, onPopoutRequestClose: y, preview: O, subscribeToGroupId: v, hideGuildTag: I } = e,
+    let {
+            message: t,
+            author: n,
+            channel: o,
+            guildId: a,
+            compact: s = !1,
+            roleIconProps: u,
+            showUsernamePopout: d,
+            renderPopout: f,
+            onClickUsername: h,
+            onContextMenu: E,
+            displayCompactAvatars: b = !1,
+            onPopoutRequestClose: y,
+            preview: O,
+            subscribeToGroupId: v,
+            hideGuildTag: I,
+        } = e,
         T = (0, M.ZP)(t, n),
         S = i.useMemo(
             () =>
@@ -146,9 +175,9 @@ let ee = i.memo(function (e) {
                     channel: o,
                     user: null == t ? void 0 : t.author,
                     compact: s,
-                    isRepliedMessage: !1
+                    isRepliedMessage: !1,
                 }),
-            [t, o, s]
+            [t, o, s],
         ),
         A = i.useRef(null),
         C = (0, l.e7)([N.Z], () => N.Z.getGuild(a)),
@@ -163,14 +192,14 @@ let ee = i.memo(function (e) {
                             {
                                 targetElementRef: A,
                                 animation: c.yRy.Animation.TRANSLATE,
-                                align: 'center',
+                                align: "center",
                                 autoInvert: !0,
                                 nudgeAlignIntoViewport: !0,
-                                position: 'right',
+                                position: "right",
                                 renderPopout: () =>
                                     (0, r.jsx)(G.Z, {
                                         roleIcon: u,
-                                        guild: C
+                                        guild: C,
                                     }),
                                 clickTrap: !0,
                                 children: (e) => {
@@ -179,17 +208,17 @@ let ee = i.memo(function (e) {
                                         p.Z,
                                         q(K({ ref: A }, u), {
                                             className: H.roleIcon,
-                                            onClick: t
-                                        })
+                                            onClick: t,
+                                        }),
                                     );
-                                }
+                                },
                             },
-                            'role-icon-children'
+                            "role-icon-children",
                         )
                       : 2 === P
-                        ? (0, r.jsx)(p.Z, q(K({}, u), { className: H.roleIcon }), 'role-icon-children')
+                        ? (0, r.jsx)(p.Z, q(K({}, u), { className: H.roleIcon }), "role-icon-children")
                         : null,
-            [P, u, C]
+            [P, u, C],
         ),
         D = (0, l.e7)([R.default], () => R.default.getCurrentUser()),
         j = i.useMemo(() => {
@@ -198,7 +227,7 @@ let ee = i.memo(function (e) {
                 i = L.ZP.isPremium(D),
                 a = null == o ? void 0 : o.isPrivate();
             return (
-                (0, x.R)(null != u, 'Message Username') &&
+                (0, x.R)(null != u, "Message Username") &&
                     n &&
                     !s &&
                     !a &&
@@ -207,10 +236,10 @@ let ee = i.memo(function (e) {
                             ea,
                             {
                                 currentUserIsPremium: i,
-                                author: t.author
+                                author: t.author,
                             },
-                            'nitro-author'
-                        )
+                            "nitro-author",
+                        ),
                     ),
                 null != w && e.push(w),
                 null != C &&
@@ -219,20 +248,20 @@ let ee = i.memo(function (e) {
                             m.Z,
                             {
                                 guild: C,
-                                message: t
+                                message: t,
                             },
-                            'new-member'
-                        )
+                            "new-member",
+                        ),
                     ),
                     e.push(
                         (0, r.jsx)(
                             g.Z,
                             {
                                 guild: C,
-                                message: t
+                                message: t,
                             },
-                            'leaderboard-champion'
-                        )
+                            "leaderboard-champion",
+                        ),
                     )),
                 null != o &&
                     null != C &&
@@ -243,10 +272,10 @@ let ee = i.memo(function (e) {
                                 guild: C,
                                 channel: o,
                                 userId: t.author.id,
-                                messageId: t.id
+                                messageId: t.id,
                             },
-                            'connections'
-                        )
+                            "connections",
+                        ),
                     ),
                 e
             );
@@ -268,29 +297,39 @@ let ee = i.memo(function (e) {
                       onPopoutRequestClose: y,
                       decorations: {
                           [k.a.SYSTEM_TAG]: S,
-                          [k.a.BADGES]: j
+                          [k.a.BADGES]: j,
                       },
                       renderRemixTag: !0,
                       previewGuildId: a,
                       preview: O,
                       subscribeToGroupId: v,
-                      hideGuildTag: I
+                      hideGuildTag: I,
                   }),
                   s &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)('i', {
+                              (0, r.jsx)("i", {
                                   className: H.separator,
-                                  children: ':'
+                                  children: ":",
                               }),
-                              ' '
-                          ]
-                      })
-              ]
+                              " ",
+                          ],
+                      }),
+              ],
           });
 });
 function et(e, t, n) {
-    let { message: i, channel: o, author: a, compact: s = !1, onContextMenu: l, showUsernamePopout: c, roleIcon: u, onClickUsername: d, onPopoutRequestClose: f } = e;
+    let {
+        message: i,
+        channel: o,
+        author: a,
+        compact: s = !1,
+        onContextMenu: l,
+        showUsernamePopout: c,
+        roleIcon: u,
+        onClickUsername: d,
+        onPopoutRequestClose: f,
+    } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(k.Z, {
@@ -306,25 +345,35 @@ function et(e, t, n) {
                 onPopoutRequestClose: f,
                 decorations: n,
                 preview: !0,
-                renderRemixTag: !0
+                renderRemixTag: !0,
             }),
             s &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)('i', {
+                        (0, r.jsx)("i", {
                             className: H.separator,
-                            children: ':'
+                            children: ":",
                         }),
-                        ' '
-                    ]
-                })
-        ]
+                        " ",
+                    ],
+                }),
+        ],
     });
 }
 function en(e) {
     var t, n;
     let { props: o, guildId: a, handleRenderPopout: c, showCommunicationDisabledStyles: f = !1, className: _ } = e,
-        { message: p, author: h, compact: m = !1, subscribeToGroupId: g, animate: E = !0, onContextMenu: b, onClickAvatar: y, onPopoutRequestClose: O, showAvatarPopout: v } = o,
+        {
+            message: p,
+            author: h,
+            compact: m = !1,
+            subscribeToGroupId: g,
+            animate: E = !0,
+            onContextMenu: b,
+            onClickAvatar: y,
+            onPopoutRequestClose: O,
+            showAvatarPopout: v,
+        } = o,
         T = i.useRef(null),
         [N, C] = i.useState(!1),
         { analyticsLocations: R } = (0, d.ZP)(u.Z.AVATAR),
@@ -337,13 +386,13 @@ function en(e) {
         {
             avatarSrc: M,
             avatarDecorationSrc: k,
-            eventHandlers: j
+            eventHandlers: j,
         } = (0, I.Z)({
             userId: p.author.id,
             guildId: a,
             size: x,
             animateOnHover: null != g ? !N : !E,
-            showPending: !0
+            showPending: !0,
         }),
         U = p.isInteractionPlaceholder(),
         G = i.useMemo(() => {
@@ -354,7 +403,7 @@ function en(e) {
                       id: p.application.id,
                       icon: p.application.icon,
                       size: x,
-                      fallbackAvatar: !1
+                      fallbackAvatar: !1,
                   }))
                     ? t
                     : M
@@ -364,16 +413,30 @@ function en(e) {
                             avatar: p.author.avatar,
                             id: p.author.id,
                             discriminator: p.author.discriminator,
-                            bot: !0
+                            bot: !0,
                         },
                         !1,
-                        x
+                        x,
                     )
                   : M;
-        }, [U, p.author.avatar, p.author.id, p.author.discriminator, null == (t = p.application) ? void 0 : t.icon, null == (n = p.application) ? void 0 : n.id, p.webhookId, M, x]);
+        }, [
+            U,
+            p.author.avatar,
+            p.author.id,
+            p.author.discriminator,
+            null == (t = p.application) ? void 0 : t.icon,
+            null == (n = p.application) ? void 0 : n.id,
+            p.webhookId,
+            M,
+            x,
+        ]);
     if (
         (i.useEffect(() => {
-            if (null != g) return (w.S.subscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, ''.concat(g, ':').concat(p.author.id), C), () => void w.S.unsubscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, ''.concat(g, ':').concat(p.author.id), C));
+            if (null != g)
+                return (
+                    w.S.subscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, "".concat(g, ":").concat(p.author.id), C),
+                    () => void w.S.unsubscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, "".concat(g, ":").concat(p.author.id), C)
+                );
         }, [p.author.id, g]),
         !m || D)
     )
@@ -389,14 +452,14 @@ function en(e) {
                       shouldShow: v,
                       shouldPreload: L,
                       renderPopout: c,
-                      position: s.tq ? 'window_center' : 'right',
+                      position: s.tq ? "window_center" : "right",
                       avatarUrl:
                           null != h.guildMemberAvatar && null != a
                               ? P.ZP.getGuildMemberAvatarURLSimple({
                                     guildId: a,
                                     userId: p.author.id,
                                     avatar: h.guildMemberAvatar,
-                                    size: J
+                                    size: J,
                                 })
                               : p.author.getAvatarURL(void 0, J, !1),
                       onRequestClose: O,
@@ -413,10 +476,10 @@ function en(e) {
                                   onKeyDown: e.onKeyDown,
                                   showCommunicationDisabledStyles: f,
                                   className: _,
-                                  avatarImgRef: T
-                              })
-                          )
-                  })
+                                  avatarImgRef: T,
+                              }),
+                          ),
+                  }),
               })
             : (0, r.jsx)(d.Gt, {
                   value: R,
@@ -430,13 +493,27 @@ function en(e) {
                           onMouseDown: void 0,
                           onKeyDown: void 0,
                           showCommunicationDisabledStyles: f,
-                          className: _
-                      })
-                  )
+                          className: _,
+                      }),
+                  ),
               });
 }
 function er(e) {
-    let { message: t, avatar: n, username: i, usernameSpanId: o, usernameClassName: s, compact: l, showTimestamp: u, showTimestampOnHover: d, ariaLabelledBy: _, ariaDescribedBy: p, className: h, messageClassname: m, badges: g } = e,
+    let {
+            message: t,
+            avatar: n,
+            username: i,
+            usernameSpanId: o,
+            usernameClassName: s,
+            compact: l,
+            showTimestamp: u,
+            showTimestampOnHover: d,
+            ariaLabelledBy: _,
+            ariaDescribedBy: p,
+            className: h,
+            messageClassname: m,
+            badges: g,
+        } = e,
         E = (0, D.yE)(t.flags, F.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) ? t.applicationId : null,
         b = (0, f.q)(E);
     return (0, r.jsxs)(r.Fragment, {
@@ -444,8 +521,8 @@ function er(e) {
             !l && n,
             (0, r.jsxs)(c.H, {
                 className: a()(H.header, h),
-                'aria-describedby': p,
-                'aria-labelledby': _,
+                "aria-describedby": p,
+                "aria-labelledby": _,
                 children: [
                     u &&
                         l &&
@@ -456,13 +533,13 @@ function er(e) {
                             isVisibleOnlyOnHover: d,
                             className: m,
                             isInline: !1,
-                            application: b
+                            application: b,
                         }),
                     l && n,
-                    (0, r.jsx)('span', {
+                    (0, r.jsx)("span", {
                         id: o,
                         className: s,
-                        children: i
+                        children: i,
                     }),
                     u &&
                         !l &&
@@ -470,17 +547,17 @@ function er(e) {
                             id: (0, j.Dv)(t),
                             timestamp: t.timestamp,
                             className: m,
-                            application: b
+                            application: b,
                         }),
                     null != g && g.length > 0
-                        ? (0, r.jsx)('div', {
+                        ? (0, r.jsx)("div", {
                               className: H.badgesContainer,
-                              children: g
+                              children: g,
                           })
-                        : null
-                ]
-            })
-        ]
+                        : null,
+                ],
+            }),
+        ],
     });
 }
 let ei = (e) => {
@@ -498,45 +575,54 @@ let ea = i.memo(function (e) {
         return (0, r.jsx)(c.ua7, {
             tooltipClassName: H.nitroAuthorBadgeTootip,
             shouldShow: null != i,
-            text: V.intl.formatToPlainString(V.t['8zbGNT'], { date: i }),
+            text: V.intl.formatToPlainString(V.t["8zbGNT"], { date: i }),
             onTooltipShow: () => (0, T.Z)(n.id),
             children: (e) =>
                 (0, r.jsx)(c.P3F, {
                     className: H.nitroAuthorBadgeContainer,
                     onClick: () => ei(t),
-                    'aria-label': V.intl.formatToPlainString(V.t['8zbGNT'], { date: i }),
+                    "aria-label": V.intl.formatToPlainString(V.t["8zbGNT"], { date: i }),
                     children: (0, r.jsx)(
-                        'img',
+                        "img",
                         K(
                             {
-                                alt: '',
+                                alt: "",
                                 className: H.nitroBadgeSvg,
-                                src: Y
+                                src: Y,
                             },
-                            e
-                        )
-                    )
-                })
+                            e,
+                        ),
+                    ),
+                }),
         });
     }),
     es = i.memo(function (e) {
-        let { message: t, repliedMessage: n, compact: o = !1, renderPopout: s, showTimestampOnHover: u, roleIcon: d, subscribeToGroupId: f, hideTimestamp: _, hideGuildTag: p, className: m, channel: g, preview: b } = e,
+        let {
+                message: t,
+                repliedMessage: n,
+                compact: o = !1,
+                renderPopout: s,
+                showTimestampOnHover: u,
+                roleIcon: d,
+                subscribeToGroupId: f,
+                hideTimestamp: _,
+                hideGuildTag: p,
+                className: m,
+                channel: g,
+                preview: b,
+            } = e,
             v = i.useMemo(() => (null != s ? (e) => s(e, t) : void 0), [s, t]),
             [, I] = (0, h.ZP)(t.author.id, e.guildId),
-            T = (0, l.e7)(
-                [C.Z, N.Z],
-                () => {
-                    let n = N.Z.getGuild(e.guildId);
-                    return null != t.author && null != n && C.Z.canManageUser(F.Plq.MODERATE_MEMBERS, t.author, n);
-                },
-                [t.author, e.guildId]
-            ),
+            T = (0, l.e7)([C.Z, N.Z], () => {
+                let n = N.Z.getGuild(e.guildId);
+                return null != t.author && null != n && C.Z.canManageUser(F.Plq.MODERATE_MEMBERS, t.author, n);
+            }, [t.author, e.guildId]),
             S = I && T,
             R = en({
                 props: e,
                 guildId: e.guildId,
                 handleRenderPopout: v,
-                showCommunicationDisabledStyles: S
+                showCommunicationDisabledStyles: S,
             }),
             P = (0, l.e7)([A.ZP], () => {
                 var t;
@@ -549,18 +635,23 @@ let ea = i.memo(function (e) {
                         channel: g,
                         user: null == t ? void 0 : t.author,
                         compact: o,
-                        isRepliedMessage: !1
+                        isRepliedMessage: !1,
                     }),
-                [t, g, o]
+                [t, g, o],
             ),
             L = (0, l.e7)([N.Z], () => eo(o, P, d, N.Z.getGuild(e.guildId)), [o, P, d, e.guildId]),
             x = i.useMemo(() => {
                 let e = [];
-                return ((0, D.yE)(t.flags, F.iLy.SUPPRESS_NOTIFICATIONS) && e.push((0, r.jsx)(O.Z, {}, 'suppress-notifications')), t.hasPotions() && e.push((0, r.jsx)(E.Z, { message: t })), e);
+                return (
+                    (0, D.yE)(t.flags, F.iLy.SUPPRESS_NOTIFICATIONS) &&
+                        e.push((0, r.jsx)(O.Z, {}, "suppress-notifications")),
+                    t.hasPotions() && e.push((0, r.jsx)(E.Z, { message: t })),
+                    e
+                );
             }, [t]),
             M = (0, j.XX)(t, f),
             k = (0, j.Dv)(t),
-            U = _ ? ''.concat(M) : ''.concat(M, ' ').concat(k),
+            U = _ ? "".concat(M) : "".concat(M, " ").concat(k),
             G = (null == n ? void 0 : n.state) === y.Y.LOADED ? (0, j.Gq)(t) : void 0,
             Z = !0 !== _;
         return (0, r.jsx)(er, {
@@ -579,17 +670,21 @@ let ea = i.memo(function (e) {
                                             q(
                                                 K(
                                                     {
-                                                        size: 'xxs',
-                                                        color: 'currentColor'
+                                                        size: "xxs",
+                                                        color: "currentColor",
                                                     },
-                                                    e
+                                                    e,
                                                 ),
-                                                { className: o ? H.compactCommunicationDisabled : H.communicationDisabled }
-                                            )
+                                                {
+                                                    className: o
+                                                        ? H.compactCommunicationDisabled
+                                                        : H.communicationDisabled,
+                                                },
+                                            ),
                                         ),
-                                        (0, r.jsx)(c.nn4, { children: V.intl.string(V.t.AmHag4) })
-                                    ]
-                                })
+                                        (0, r.jsx)(c.nn4, { children: V.intl.string(V.t.AmHag4) }),
+                                    ],
+                                }),
                         }),
                     (0, r.jsx)(
                         ee,
@@ -601,15 +696,15 @@ let ea = i.memo(function (e) {
                             renderPopout: v,
                             preview: b,
                             subscribeToGroupId: f,
-                            hideGuildTag: p
-                        })
-                    )
-                ]
+                            hideGuildTag: p,
+                        }),
+                    ),
+                ],
             }),
             usernameSpanId: (0, j.XX)(t, f),
             usernameClassName: a()(H.headerText, {
                 [H.hasRoleIcon]: 0 !== L,
-                [H.hasBadges]: null != w || x.length > 0
+                [H.hasBadges]: null != w || x.length > 0,
             }),
             compact: o,
             showTimestamp: Z,
@@ -617,6 +712,6 @@ let ea = i.memo(function (e) {
             ariaLabelledBy: U,
             ariaDescribedBy: G,
             className: m,
-            badges: x
+            badges: x,
         });
     });

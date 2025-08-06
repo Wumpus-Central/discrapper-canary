@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685));
+n.d(t, { Z: () => N }), n(388685);
 var r = n(392711),
     i = n.n(r),
     o = n(25209),
@@ -12,7 +12,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -60,23 +60,40 @@ function f(e, t) {
 let _ = null;
 function p(e, t) {
     let n = {};
-    return (null != e.mention && null != _ && (n = { mention: _ }), (0, l.Z)([e, ...t, n]));
+    return null != e.mention && null != _ && (n = { mention: _ }), (0, l.Z)([e, ...t, n]);
 }
 _ = n(878611).Z;
 let h = {
         enableBuildOverrides: !1,
-        enableEmojiClick: !0
+        enableEmojiClick: !0,
     },
     m = p(s.Z.RULES, [(0, a.Z)({ enableBuildOverrides: !0 })]),
-    g = i().omit(p(s.Z.RULES, [(0, a.Z)(h)]), 'paragraph', 'newline'),
-    E = p(s.Z.CHANNEL_TOPIC_RULES, [(0, a.Z)(f(u({}, h), { emojiTooltipPosition: 'bottom' })), { codeBlock: { react: s.Z.RULES.text.react } }]),
+    g = i().omit(p(s.Z.RULES, [(0, a.Z)(h)]), "paragraph", "newline"),
+    E = p(s.Z.CHANNEL_TOPIC_RULES, [
+        (0, a.Z)(f(u({}, h), { emojiTooltipPosition: "bottom" })),
+        { codeBlock: { react: s.Z.RULES.text.react } },
+    ]),
     b = p(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, a.Z)(f(u({}, h), { enableEmojiClick: !1 }))]),
     y = p(s.Z.EMBED_TITLE_RULES, [(0, a.Z)(h)]),
     O = p(s.Z.INLINE_REPLY_RULES, [(0, a.Z)(h)]),
     v = p(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, a.Z)(h)]),
     I = p(s.Z.GUILD_EVENT_RULES, [(0, a.Z)(h)]),
     T = p(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.Z)(h)]),
-    S = i().omit(p(s.Z.RULES, [(0, a.Z)(h)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
+    S = i().omit(
+        p(s.Z.RULES, [(0, a.Z)(h)]),
+        "paragraph",
+        "newline",
+        "strong",
+        "codeBlock",
+        "inlineCode",
+        "u",
+        "link",
+        "url",
+        "autolink",
+        "list",
+        "heading",
+        "subtext",
+    ),
     A = { text: s.Z.RULES.text },
     N = {
         combineAndInjectMentionRule: p,
@@ -101,5 +118,5 @@ let h = {
         parseTopicToAST: o._p(E),
         parseEmbedTitleToAST: o._p(y),
         parseInlineReplyToAST: o._p(O),
-        parseAutoModerationSystemMessageToAST: o._p(T)
+        parseAutoModerationSystemMessageToAST: o._p(T),
     };

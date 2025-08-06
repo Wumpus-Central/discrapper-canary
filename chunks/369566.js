@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(73800),
     i = n(392711),
     o = n(442837),
@@ -14,7 +14,7 @@ var r = n(73800),
 let h = [],
     m = [];
 function g(e) {
-    let { recentActivityTabEnabled: t } = (0, _.O)({ location: 'useUserProfileActivity' }),
+    let { recentActivityTabEnabled: t } = (0, _.O)({ location: "useUserProfileActivity" }),
         n = (0, o.e7)([d.default], () => d.default.getId() === e),
         g = (0, a.Z)(e),
         E = (0, o.e7)([f.Z], () => f.Z.getActivities(e)),
@@ -25,18 +25,33 @@ function g(e) {
                         let { type: t } = e;
                         return t !== p.IIU.CUSTOM_STATUS;
                     }),
-                    (e, t) => (null != e.application_id && null != t.application_id && e.application_id === t.application_id) || (null != e.name && null != t.name && e.name === t.name)
+                    (e, t) =>
+                        (null != e.application_id &&
+                            null != t.application_id &&
+                            e.application_id === t.application_id) ||
+                        (null != e.name && null != t.name && e.name === t.name),
                 ),
-                t = null == b ? void 0 : b.entries.filter((t) => !(0, u.Jg)(t) && ((0, l.dU)(t) ? t.extra.entries.length > 0 && !e.some((e) => null != e && (0, c.pB)(t, e)) : (0, l.y0)(t) ? !e.some((e) => null != e && (0, c.RL)(t, e)) : (0, l.Rh)(t)));
+                t =
+                    null == b
+                        ? void 0
+                        : b.entries.filter(
+                              (t) =>
+                                  !(0, u.Jg)(t) &&
+                                  ((0, l.dU)(t)
+                                      ? t.extra.entries.length > 0 && !e.some((e) => null != e && (0, c.pB)(t, e))
+                                      : (0, l.y0)(t)
+                                        ? !e.some((e) => null != e && (0, c.RL)(t, e))
+                                        : (0, l.Rh)(t)),
+                          );
             return {
                 live: 0 === e.length ? h : e,
-                recent: null == t || 0 === t.length ? m : t
+                recent: null == t || 0 === t.length ? m : t,
             };
         }, [E, null == b ? void 0 : b.entries]);
     return {
         live: y,
         recent: O,
         stream: g,
-        outbox: b
+        outbox: b,
     };
 }

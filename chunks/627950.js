@@ -13,7 +13,7 @@ t.exports = function (t) {
                 function (t) {
                     if (!n.includes(t)) return !1;
                 },
-                !0
+                !0,
             )
     );
 };

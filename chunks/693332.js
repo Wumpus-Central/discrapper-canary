@@ -8,12 +8,12 @@ var n = r(593007),
     u = Function.prototype.toString,
     c = s.hasOwnProperty,
     p = RegExp(
-        '^' +
+        "^" +
             u
                 .call(c)
-                .replace(/[\\^$.*+?()[\]{}|]/g, '\\$&')
-                .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') +
-            '$'
+                .replace(/[\\^$.*+?()[\]{}|]/g, "\\$&")
+                .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") +
+            "$",
     );
 let f = function (e) {
     return !(!(0, a.Z)(e) || (0, o.Z)(e)) && ((0, n.Z)(e) ? p : l).test((0, i.Z)(e));

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -23,113 +23,116 @@ function p(e) {
         y = _ >= u.X,
         C = j.length - x.length,
         N = (0, r.jsx)(a.owK, {
-            size: 'sm',
+            size: "sm",
             color: l.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: l.Z.unsafe_rawColors.WHITE_100.css,
-            className: g.icon
+            className: g.icon,
         }),
         I = (0, r.jsx)(a.k$p, {
-            size: 'sm',
+            size: "sm",
             className: g.icon,
             color: l.Z.colors.WHITE.css,
-            secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css
+            secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
         }),
         E = [(Math.min(u.X, _) / u.md) * 100, (Math.min(u.md, v) / u.md) * 100],
-        S = !O && y ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css, l.Z.colors.TEXT_FEEDBACK_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
-    return (0, r.jsxs)('div', {
+        S =
+            !O && y
+                ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css, l.Z.colors.TEXT_FEEDBACK_POSITIVE.css]
+                : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
+    return (0, r.jsxs)("div", {
         className: g.container,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.header,
                 children: [
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-xs/bold',
-                        color: 'text-brand',
-                        children: m.intl.format(m.t.kvroKC, { count: _ })
+                        variant: "text-xs/bold",
+                        color: "text-brand",
+                        children: m.intl.format(m.t.kvroKC, { count: _ }),
                     }),
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-xs/bold',
-                        color: 'text-muted',
-                        children: m.intl.format(m.t['0MjxJy'], { count: v })
-                    })
-                ]
+                        variant: "text-xs/bold",
+                        color: "text-muted",
+                        children: m.intl.format(m.t["0MjxJy"], { count: v }),
+                    }),
+                ],
             }),
             (0, r.jsx)(a.yGy, {
                 foregroundColors: S,
                 percents: E,
-                size: a.yGy.Sizes.XSMALL
+                size: a.yGy.Sizes.XSMALL,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.requiredItem,
                 children: [
                     O ? I : N,
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-muted',
-                        children: m.intl.format(m.t.k0COZW, { count: u.md })
-                    })
-                ]
+                        variant: "text-xs/normal",
+                        color: "text-muted",
+                        children: m.intl.format(m.t.k0COZW, { count: u.md }),
+                    }),
+                ],
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.requiredItem,
                 children: [
                     y ? N : I,
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-muted',
-                        children: m.intl.format(m.t.PwXgS0, { count: u.X })
-                    })
-                ]
+                        variant: "text-xs/normal",
+                        color: "text-muted",
+                        children: m.intl.format(m.t.PwXgS0, { count: u.X }),
+                    }),
+                ],
             }),
             p &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: g.requiredItem,
                             children: [
                                 (0, r.jsx)(a.d3s, {
-                                    size: 'sm',
+                                    size: "sm",
                                     color: l.Z.colors.WHITE.css,
                                     secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
-                                    className: g.icon
+                                    className: g.icon,
                                 }),
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-xs/normal',
-                                    color: 'text-muted',
-                                    children: m.intl.string(m.t.AyvkOD)
-                                })
-                            ]
+                                    variant: "text-xs/normal",
+                                    color: "text-muted",
+                                    children: m.intl.string(m.t.AyvkOD),
+                                }),
+                            ],
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: g.requiredItem,
                             children: [
                                 (0, r.jsx)(a.d3s, {
-                                    size: 'sm',
+                                    size: "sm",
                                     color: l.Z.colors.WHITE.css,
                                     secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
-                                    className: g.icon
+                                    className: g.icon,
                                 }),
                                 (0, r.jsx)(a.Text, {
-                                    variant: 'text-xs/normal',
-                                    color: 'text-muted',
-                                    children: m.intl.format(m.t['8Geut7'], {
+                                    variant: "text-xs/normal",
+                                    color: "text-muted",
+                                    children: m.intl.format(m.t["8Geut7"], {
                                         count: C,
                                         prejoinHook: (e) =>
                                             (0, r.jsx)(a.eee, {
                                                 onClick: n,
                                                 children: (0, r.jsx)(a.Text, {
-                                                    tag: 'span',
-                                                    variant: 'text-xs/normal',
-                                                    color: 'text-link',
-                                                    children: e
-                                                })
-                                            })
-                                    })
-                                })
-                            ]
-                        })
-                    ]
-                })
-        ]
+                                                    tag: "span",
+                                                    variant: "text-xs/normal",
+                                                    color: "text-link",
+                                                    children: e,
+                                                }),
+                                            }),
+                                    }),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+        ],
     });
 }

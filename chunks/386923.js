@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -23,20 +23,20 @@ let y = {
         mass: 1,
         tension: 250,
         friction: 18,
-        clamp: !0
+        clamp: !0,
     },
     O = () => {
         let [e, t] = i.useState(!0);
         return {
             transitions: (0, c.Yzy)(e, {
-                keys: (e) => (e ? 'shown' : 'hidden'),
+                keys: (e) => (e ? "shown" : "hidden"),
                 config: y,
                 from: { opacity: 0 },
                 enter: { opacity: 1 },
                 leave: { opacity: 0 },
-                unique: !0
+                unique: !0,
             }),
-            setVisible: t
+            setVisible: t,
         };
     },
     w = (e) =>
@@ -44,191 +44,196 @@ let y = {
             from: { maxHeight: 0 },
             enter: { maxHeight: 850 },
             leave: { maxHeight: 0 },
-            config: { duration: 200 }
+            config: { duration: 200 },
         }),
     P = (e) => {
         let { guild: t } = e,
             n = (0, o.e7)([g.Z], () => g.Z.can(x.Plq.MANAGE_GUILD, t));
         return (0, r.jsxs)(c.Kqy, {
-            direction: 'horizontal',
+            direction: "horizontal",
             gap: 8,
             children: [
                 (0, r.jsxs)(c.Kqy, {
-                    direction: 'vertical',
+                    direction: "vertical",
                     gap: 16,
                     children: [
                         (0, r.jsx)(c.Kqy, {
-                            direction: 'vertical',
+                            direction: "vertical",
                             gap: 4,
                             children: (0, r.jsx)(c.Text, {
-                                variant: 'text-md/medium',
-                                color: 'header-secondary',
-                                children: b.intl.string(p.default.fP8DV1)
-                            })
+                                variant: "text-md/medium",
+                                color: "header-secondary",
+                                children: b.intl.string(p.default.fP8DV1),
+                            }),
                         }),
                         (0, r.jsxs)(c.Kqy, {
-                            direction: 'vertical',
+                            direction: "vertical",
                             gap: 8,
                             children: [
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-lg/semibold',
-                                    color: 'header-secondary',
-                                    children: b.intl.string(p.default['i7CH/P'])
+                                    variant: "text-lg/semibold",
+                                    color: "header-secondary",
+                                    children: b.intl.string(p.default["i7CH/P"]),
                                 }),
-                                (0, r.jsxs)('ol', {
+                                (0, r.jsxs)("ol", {
                                     className: a()(j.list, j.orderedList, j.topLevelList),
                                     children: [
-                                        (0, r.jsx)('li', {
+                                        (0, r.jsx)("li", {
                                             children: (0, r.jsx)(c.Text, {
-                                                variant: 'text-md/normal',
-                                                color: 'header-secondary',
-                                                children: b.intl.string(p.default['+Izoz8'])
-                                            })
+                                                variant: "text-md/normal",
+                                                color: "header-secondary",
+                                                children: b.intl.string(p.default["+Izoz8"]),
+                                            }),
                                         }),
-                                        (0, r.jsxs)('li', {
+                                        (0, r.jsxs)("li", {
                                             children: [
                                                 (0, r.jsx)(c.Text, {
-                                                    variant: 'text-md/normal',
-                                                    color: 'header-secondary',
-                                                    children: b.intl.string(p.default['iu/RkZ'])
+                                                    variant: "text-md/normal",
+                                                    color: "header-secondary",
+                                                    children: b.intl.string(p.default["iu/RkZ"]),
                                                 }),
-                                                (0, r.jsxs)('ul', {
+                                                (0, r.jsxs)("ul", {
                                                     className: a()(j.list, j.innerList, j.unorderedList),
                                                     children: [
-                                                        (0, r.jsx)('li', {
+                                                        (0, r.jsx)("li", {
                                                             children: (0, r.jsx)(c.Text, {
-                                                                variant: 'text-md/normal',
-                                                                color: 'header-secondary',
-                                                                children: b.intl.string(p.default.QogKbG)
-                                                            })
+                                                                variant: "text-md/normal",
+                                                                color: "header-secondary",
+                                                                children: b.intl.string(p.default.QogKbG),
+                                                            }),
                                                         }),
-                                                        (0, r.jsx)('li', {
+                                                        (0, r.jsx)("li", {
                                                             children: (0, r.jsx)(c.Text, {
-                                                                variant: 'text-md/normal',
-                                                                color: 'header-secondary',
-                                                                children: b.intl.string(p.default.V4orHR)
-                                                            })
+                                                                variant: "text-md/normal",
+                                                                color: "header-secondary",
+                                                                children: b.intl.string(p.default.V4orHR),
+                                                            }),
                                                         }),
-                                                        (0, r.jsx)('li', {
+                                                        (0, r.jsx)("li", {
                                                             children: (0, r.jsx)(c.Text, {
-                                                                variant: 'text-md/normal',
-                                                                color: 'header-secondary',
-                                                                children: b.intl.string(p.default.VrrQXV)
-                                                            })
+                                                                variant: "text-md/normal",
+                                                                color: "header-secondary",
+                                                                children: b.intl.string(p.default.VrrQXV),
+                                                            }),
                                                         }),
-                                                        (0, r.jsx)('li', {
+                                                        (0, r.jsx)("li", {
                                                             children: (0, r.jsx)(c.Text, {
-                                                                variant: 'text-md/normal',
-                                                                color: 'header-secondary',
-                                                                children: b.intl.string(p.default.pSuM5e)
-                                                            })
+                                                                variant: "text-md/normal",
+                                                                color: "header-secondary",
+                                                                children: b.intl.string(p.default.pSuM5e),
+                                                            }),
                                                         }),
-                                                        (0, r.jsx)('li', {
+                                                        (0, r.jsx)("li", {
                                                             children: (0, r.jsx)(c.Text, {
-                                                                variant: 'text-md/normal',
-                                                                color: 'header-secondary',
-                                                                children: b.intl.string(p.default['/RLXlJ'])
-                                                            })
-                                                        })
-                                                    ]
-                                                })
-                                            ]
+                                                                variant: "text-md/normal",
+                                                                color: "header-secondary",
+                                                                children: b.intl.string(p.default["/RLXlJ"]),
+                                                            }),
+                                                        }),
+                                                    ],
+                                                }),
+                                            ],
                                         }),
-                                        (0, r.jsx)('li', {
+                                        (0, r.jsx)("li", {
                                             children: (0, r.jsx)(c.Text, {
-                                                variant: 'text-md/normal',
-                                                color: 'header-secondary',
-                                                children: b.intl.string(p.default.j4AmY2)
-                                            })
+                                                variant: "text-md/normal",
+                                                color: "header-secondary",
+                                                children: b.intl.string(p.default.j4AmY2),
+                                            }),
                                         }),
-                                        (0, r.jsx)('li', {
+                                        (0, r.jsx)("li", {
                                             children: (0, r.jsx)(c.Text, {
-                                                variant: 'text-md/normal',
-                                                color: 'header-secondary',
-                                                children: b.intl.format(p.default['/g+Pvb'], {
+                                                variant: "text-md/normal",
+                                                color: "header-secondary",
+                                                children: b.intl.format(p.default["/g+Pvb"], {
                                                     termsOfService: x.EYA.TERMS,
                                                     communityGuidelines: x.EYA.GUIDELINES,
-                                                    helpArticle: f.Z.getArticleURL(x.BhN.FLAG_TO_MOD)
-                                                })
-                                            })
-                                        })
-                                    ]
-                                })
-                            ]
+                                                    helpArticle: f.Z.getArticleURL(x.BhN.FLAG_TO_MOD),
+                                                }),
+                                            }),
+                                        }),
+                                    ],
+                                }),
+                            ],
                         }),
                         (0, r.jsxs)(c.Kqy, {
-                            direction: 'vertical',
+                            direction: "vertical",
                             gap: 8,
                             children: [
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-lg/semibold',
-                                    color: 'header-secondary',
-                                    children: b.intl.string(p.default.qJWXs7)
+                                    variant: "text-lg/semibold",
+                                    color: "header-secondary",
+                                    children: b.intl.string(p.default.qJWXs7),
                                 }),
-                                (0, r.jsxs)('ul', {
+                                (0, r.jsxs)("ul", {
                                     className: a()(j.list, j.unorderedList, j.topLevelList),
                                     children: [
-                                        (0, r.jsx)('li', {
+                                        (0, r.jsx)("li", {
                                             children: (0, r.jsx)(c.Text, {
-                                                variant: 'text-md/normal',
-                                                color: 'header-secondary',
-                                                children: b.intl.format(p.default.FUBV1N, { survey: 'https://discord.sjc1.qualtrics.com/jfe/form/SV_3WvT7SqlWpCJ4HQ' })
-                                            })
+                                                variant: "text-md/normal",
+                                                color: "header-secondary",
+                                                children: b.intl.format(p.default.FUBV1N, {
+                                                    survey: "https://discord.sjc1.qualtrics.com/jfe/form/SV_3WvT7SqlWpCJ4HQ",
+                                                }),
+                                            }),
                                         }),
-                                        (0, r.jsx)('li', {
+                                        (0, r.jsx)("li", {
                                             children: (0, r.jsx)(c.Text, {
-                                                variant: 'text-md/normal',
-                                                color: 'header-secondary',
-                                                children: b.intl.format(p.default.W4MIAA, { feedback: 'https://forms.gle/RbDhW46PMmR39XUP7' })
-                                            })
-                                        })
-                                    ]
-                                })
-                            ]
+                                                variant: "text-md/normal",
+                                                color: "header-secondary",
+                                                children: b.intl.format(p.default.W4MIAA, {
+                                                    feedback: "https://forms.gle/RbDhW46PMmR39XUP7",
+                                                }),
+                                            }),
+                                        }),
+                                    ],
+                                }),
+                            ],
                         }),
                         (0, r.jsxs)(c.Kqy, {
-                            direction: 'vertical',
+                            direction: "vertical",
                             gap: 8,
                             children: [
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'header-secondary',
-                                    children: b.intl.string(p.default.J3HKm5)
+                                    variant: "text-md/normal",
+                                    color: "header-secondary",
+                                    children: b.intl.string(p.default.J3HKm5),
                                 }),
                                 n &&
                                     (0, r.jsx)(c.Text, {
-                                        variant: 'text-md/normal',
-                                        color: 'header-secondary',
-                                        children: b.intl.format(p.default['9x2vbG'], {
+                                        variant: "text-md/normal",
+                                        color: "header-secondary",
+                                        children: b.intl.format(p.default["9x2vbG"], {
                                             optOutHook: (e) =>
                                                 (0, r.jsx)(h.Z, {
-                                                    onClick: () => m.Z.open(t.id, x.pNK.MODERATION, null, x.KsC.SAFETY_OVERVIEW),
-                                                    children: e
-                                                })
-                                        })
+                                                    onClick: () =>
+                                                        m.Z.open(t.id, x.pNK.MODERATION, null, x.KsC.SAFETY_OVERVIEW),
+                                                    children: e,
+                                                }),
+                                        }),
                                     }),
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'header-secondary',
-                                    children: b.intl.string(p.default.KcCY29)
-                                })
-                            ]
-                        })
-                    ]
+                                    variant: "text-md/normal",
+                                    color: "header-secondary",
+                                    children: b.intl.string(p.default.KcCY29),
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     src: _,
                     alt: b.intl.string(b.t.gAlJzc),
                     width: u.TJ,
-                    height: u.TJ
-                })
-            ]
+                    height: u.TJ,
+                }),
+            ],
         });
     };
 function S(e) {
     let { guild: t } = e,
-        [n, l] = (0, d.R)('report-to-mod-education-dismissed', !1),
-        [o, u] = (0, d.R)('report-to-mod-education-expanded', !1),
+        [n, l] = (0, d.R)("report-to-mod-education-dismissed", !1),
+        [o, u] = (0, d.R)("report-to-mod-education-expanded", !1),
         { transitions: m, setVisible: h } = O(),
         g = w(null != o && o);
     return (i.useEffect(() => {
@@ -243,56 +248,59 @@ function S(e) {
                         onClick: () => u(!o),
                         className: a()(C.container, j.container, v.mainCard),
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: j.inline,
                                 children: [
-                                    (0, r.jsxs)('div', {
+                                    (0, r.jsxs)("div", {
                                         className: j.author,
                                         children: [
                                             (0, r.jsx)(c.gw7, {
-                                                size: 'custom',
+                                                size: "custom",
                                                 width: 28,
                                                 height: 28,
-                                                color: 'currentColor',
-                                                className: j.discordIcon
+                                                color: "currentColor",
+                                                className: j.discordIcon,
                                             }),
                                             (0, r.jsx)(c.Text, {
-                                                variant: 'text-sm/semibold',
-                                                color: 'header-primary',
-                                                children: b.intl.string(b.t.uvGmCw)
+                                                variant: "text-sm/semibold",
+                                                color: "header-primary",
+                                                children: b.intl.string(b.t.uvGmCw),
                                             }),
                                             (0, r.jsx)(c.Text, {
-                                                variant: 'text-sm/semibold',
-                                                color: 'header-primary',
-                                                children: '\u2014'
+                                                variant: "text-sm/semibold",
+                                                color: "header-primary",
+                                                children: "\u2014",
                                             }),
                                             (0, r.jsx)(c.X6q, {
-                                                variant: 'text-md/semibold',
-                                                color: 'header-primary',
-                                                children: b.intl.string(p.default['95qQRE'])
-                                            })
-                                        ]
+                                                variant: "text-md/semibold",
+                                                color: "header-primary",
+                                                children: b.intl.string(p.default["95qQRE"]),
+                                            }),
+                                        ],
                                     }),
                                     (0, r.jsx)(c.P3F, {
                                         onClick: () => l(!0),
                                         children: (0, r.jsx)(c.Dio, {
-                                            size: 'xs',
-                                            color: 'currentColor',
-                                            className: j.closeIcon
-                                        })
-                                    })
-                                ]
+                                            size: "xs",
+                                            color: "currentColor",
+                                            className: j.closeIcon,
+                                        }),
+                                    }),
+                                ],
                             }),
                             g((e, n) =>
                                 n
                                     ? (0, r.jsxs)(s.animated.div, {
                                           style: e,
-                                          children: [(0, r.jsx)('hr', { className: j.separator }), (0, r.jsx)(P, { guild: t })]
+                                          children: [
+                                              (0, r.jsx)("hr", { className: j.separator }),
+                                              (0, r.jsx)(P, { guild: t }),
+                                          ],
                                       })
-                                    : null
-                            )
-                        ]
+                                    : null,
+                            ),
+                        ],
                     })
-                  : null
+                  : null,
           );
 }

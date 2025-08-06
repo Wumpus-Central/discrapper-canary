@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => _,
-    Z: () => O
+    Z: () => O,
 });
 var r,
     i = n(31775),
@@ -14,7 +14,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,11 +61,17 @@ function d(e, t) {
 }
 let f = 20;
 var _ = (function (e) {
-    return ((e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.ERROR = 3)] = 'ERROR'), e);
+    return (
+        (e[(e.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+        (e[(e.FETCHING = 1)] = "FETCHING"),
+        (e[(e.FETCHED = 2)] = "FETCHED"),
+        (e[(e.ERROR = 3)] = "ERROR"),
+        e
+    );
 })({});
 function p(e) {
     let { applicationId: t, guildId: n, page: r } = e;
-    return 'applicationId:'.concat(t, ' guildId:').concat(n, ' page:').concat(r);
+    return "applicationId:".concat(t, " guildId:").concat(n, " page:").concat(r);
 }
 let h = new (o())({ max: f }),
     m = {};
@@ -74,7 +80,7 @@ function g(e) {
         i = p({
             applicationId: t,
             guildId: n,
-            page: r
+            page: r,
         });
     m = d(c({}, m), { [i]: 1 });
 }
@@ -83,23 +89,23 @@ function E(e) {
         s = p({
             applicationId: t,
             guildId: n,
-            page: o
+            page: o,
         });
-    (h.set(s, {
+    h.set(s, {
         lastFetchTimeMs: Date.now(),
         applications: r,
         loadId: i,
         page: o,
-        totalPages: a
+        totalPages: a,
     }),
-        (m = d(c({}, m), { [s]: 2 })));
+        (m = d(c({}, m), { [s]: 2 }));
 }
 function b(e) {
     let { applicationId: t, guildId: n, page: r } = e,
         i = p({
             applicationId: t,
             guildId: n,
-            page: r
+            page: r,
         });
     m = d(c({}, m), { [i]: 3 });
 }
@@ -110,7 +116,7 @@ class y extends (r = a.ZP.Store) {
         let i = p({
             applicationId: t,
             guildId: n,
-            page: r
+            page: r,
         });
         return h.get(i);
     }
@@ -121,14 +127,14 @@ class y extends (r = a.ZP.Store) {
                 p({
                     applicationId: t,
                     guildId: n,
-                    page: r
+                    page: r,
                 })
             ];
     }
 }
-l(y, 'displayName', 'ApplicationDirectorySimilarApplicationsStore');
+l(y, "displayName", "ApplicationDirectorySimilarApplicationsStore");
 let O = new y(s.Z, {
     APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: g,
     APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: E,
-    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: b
+    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: b,
 });

@@ -11,36 +11,36 @@ var r = n(255367),
     m = n(981631),
     g = n(388032),
     p = n(387136);
-let h = 'NO_SYSTEM_CHANNEL';
+let h = "NO_SYSTEM_CHANNEL";
 function f(e) {
     var t;
     let { guild: n, canManageGuild: f, switchClassName: x } = e,
         { enableDeadchat: b } = a.Z.useExperiment(
             {
                 guildId: n.id,
-                location: 'guild_settings'
+                location: "guild_settings",
             },
             {
                 disable: null == n,
-                autoTrackExposure: !0
-            }
+                autoTrackExposure: !0,
+            },
         ),
         { enabled: j } = s.Z.useExperiment(
             {
                 guildId: n.id,
-                location: 'guild_settings'
+                location: "guild_settings",
             },
             {
                 disable: null == n,
-                autoTrackExposure: !1
-            }
+                autoTrackExposure: !1,
+            },
         ),
         v = i.useCallback(
             (e, t) => {
                 let r = (0, d.mB)(n.systemChannelFlags, e, t);
                 u.Z.updateGuild({ systemChannelFlags: r });
             },
-            [n.systemChannelFlags]
+            [n.systemChannelFlags],
         ),
         _ = i.useCallback((e) => v(m.xmn.SUPPRESS_JOIN_NOTIFICATIONS, !e), [v]),
         O = i.useCallback((e) => v(m.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !e), [v]),
@@ -62,7 +62,7 @@ function f(e) {
                 value: !(0, d.yE)(n.systemChannelFlags, m.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
                 hideBorder: !0,
                 disabled: !f || T === h,
-                children: g.intl.string(g.t['+f0bXV'])
+                children: g.intl.string(g.t["+f0bXV"]),
             }),
             (0, r.jsx)(l.j7V, {
                 className: x,
@@ -70,7 +70,7 @@ function f(e) {
                 value: !(0, d.yE)(n.systemChannelFlags, m.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
                 hideBorder: !0,
                 disabled: !f || T === h,
-                children: g.intl.string(g.t['72k7jY'])
+                children: g.intl.string(g.t["72k7jY"]),
             }),
             (0, r.jsx)(l.j7V, {
                 className: x,
@@ -78,7 +78,7 @@ function f(e) {
                 value: !(0, d.yE)(n.systemChannelFlags, m.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
                 hideBorder: !0,
                 disabled: !f || T === h,
-                children: g.intl.string(g.t['2L8NCA'])
+                children: g.intl.string(g.t["2L8NCA"]),
             }),
             (0, r.jsx)(l.j7V, {
                 className: x,
@@ -86,7 +86,7 @@ function f(e) {
                 value: !(0, d.yE)(n.systemChannelFlags, m.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
                 hideBorder: !0,
                 disabled: !f || T === h,
-                children: g.intl.string(g.t['NvnW+f'])
+                children: g.intl.string(g.t["NvnW+f"]),
             }),
             j &&
                 (0, r.jsx)(l.j7V, {
@@ -95,7 +95,7 @@ function f(e) {
                     value: !(0, d.yE)(n.systemChannelFlags, m.xmn.SUPPRESS_UGC_ADDED_NOTIFICATIONS),
                     hideBorder: !0,
                     disabled: !f || T === h,
-                    children: g.intl.string(g.t.CLCoc3)
+                    children: g.intl.string(g.t.CLCoc3),
                 }),
             w &&
                 (0, r.jsx)(l.j7V, {
@@ -104,16 +104,19 @@ function f(e) {
                     value: !(0, d.yE)(n.systemChannelFlags, m.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
                     hideBorder: !0,
                     disabled: !f || T === h,
-                    children: g.intl.string(g.t['54n19f'])
+                    children: g.intl.string(g.t["54n19f"]),
                 }),
             R &&
                 (0, r.jsx)(l.j7V, {
                     className: x,
                     onChange: S,
-                    value: !(0, d.yE)(n.systemChannelFlags, m.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+                    value: !(0, d.yE)(
+                        n.systemChannelFlags,
+                        m.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES,
+                    ),
                     hideBorder: !0,
                     disabled: !f || T === h,
-                    children: g.intl.string(g.t.IhF5d3)
+                    children: g.intl.string(g.t.IhF5d3),
                 }),
             b &&
                 (0, r.jsx)(l.j7V, {
@@ -122,11 +125,11 @@ function f(e) {
                     value: !(0, d.yE)(n.systemChannelFlags, m.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
                     hideBorder: !0,
                     disabled: !f || T === h,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: p.flexRow,
-                        children: [g.intl.string(g.t['3yOX19']), (0, r.jsx)(o.Z, {})]
-                    })
-                })
-        ]
+                        children: [g.intl.string(g.t["3yOX19"]), (0, r.jsx)(o.Z, {})],
+                    }),
+                }),
+        ],
     });
 }

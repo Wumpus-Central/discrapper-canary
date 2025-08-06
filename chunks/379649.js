@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     A3: () => h,
     CI: () => E,
     G9: () => u,
@@ -7,10 +7,10 @@
     _v: () => _,
     jU: () => g,
     sX: () => d,
-    zO: () => s
+    zO: () => s,
 }),
     n(415506),
-    n(149182));
+    n(149182);
 var r = n(627698),
     i = n.n(r),
     o = n(643191);
@@ -21,7 +21,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,10 +41,24 @@ class c {
         return this.milliseconds >= e.milliseconds;
     }
     constructor(e, t, n, r) {
-        (a(this, 'milliseconds', 0), a(this, 'asMilliseconds', () => this.milliseconds), a(this, 'asSeconds', () => this.milliseconds / 1000), a(this, 'asMinutes', () => this.milliseconds / 1000 / 60), a(this, 'asHours', () => this.milliseconds / 1000 / 60 / 60), a(this, 'add', (e) => c.fromMilliseconds(this.milliseconds + e.milliseconds)), a(this, 'subtract', (e) => c.fromMilliseconds(this.milliseconds - e.milliseconds)), a(this, 'subtractOrZero', (e) => c.fromMilliseconds(Math.max(this.milliseconds - e.milliseconds, 0))), (this.milliseconds += r || 0), (this.milliseconds += 1000 * (n || 0)), (this.milliseconds += 1000 * (t || 0) * 60), (this.milliseconds += 1000 * (e || 0) * 3600));
+        a(this, "milliseconds", 0),
+            a(this, "asMilliseconds", () => this.milliseconds),
+            a(this, "asSeconds", () => this.milliseconds / 1000),
+            a(this, "asMinutes", () => this.milliseconds / 1000 / 60),
+            a(this, "asHours", () => this.milliseconds / 1000 / 60 / 60),
+            a(this, "add", (e) => c.fromMilliseconds(this.milliseconds + e.milliseconds)),
+            a(this, "subtract", (e) => c.fromMilliseconds(this.milliseconds - e.milliseconds)),
+            a(this, "subtractOrZero", (e) => c.fromMilliseconds(Math.max(this.milliseconds - e.milliseconds, 0))),
+            (this.milliseconds += r || 0),
+            (this.milliseconds += 1000 * (n || 0)),
+            (this.milliseconds += 1000 * (t || 0) * 60),
+            (this.milliseconds += 1000 * (e || 0) * 3600);
     }
 }
-(a(c, 'fromMilliseconds', (e) => new c(0, 0, 0, e)), a(c, 'fromSeconds', (e) => new c(0, 0, e)), a(c, 'fromMinutes', (e) => new c(0, e)), a(c, 'fromHours', (e) => new c(e)));
+a(c, "fromMilliseconds", (e) => new c(0, 0, 0, e)),
+    a(c, "fromSeconds", (e) => new c(0, 0, e)),
+    a(c, "fromMinutes", (e) => new c(0, e)),
+    a(c, "fromHours", (e) => new c(e));
 class u {
     get lastElapsed() {
         return this.timePassed;
@@ -59,10 +73,11 @@ class u {
         this.startTime = this.timestampProducer.now();
     }
     reset() {
-        ((this.startTime = void 0), (this.timePassed = 0));
+        (this.startTime = void 0), (this.timePassed = 0);
     }
     stop() {
-        null != this.startTime && ((this.timePassed += this.timestampProducer.now() - this.startTime), (this.startTime = void 0));
+        null != this.startTime &&
+            ((this.timePassed += this.timestampProducer.now() - this.startTime), (this.startTime = void 0));
     }
     toggle(e) {
         e !== this.isRunning() && (e ? this.start() : this.stop());
@@ -77,21 +92,26 @@ class u {
     }
     static startNew() {
         let e = new u();
-        return (e.start(), e);
+        return e.start(), e;
     }
     constructor(e = l) {
-        (a(this, 'timestampProducer', void 0), a(this, 'startTime', void 0), a(this, 'timePassed', void 0), (this.timestampProducer = e), (this.startTime = void 0), (this.timePassed = 0));
+        a(this, "timestampProducer", void 0),
+            a(this, "startTime", void 0),
+            a(this, "timePassed", void 0),
+            (this.timestampProducer = e),
+            (this.startTime = void 0),
+            (this.timePassed = 0);
     }
 }
 class d {
     set value(e) {
-        (this.stopwatch.toggle(e), (this.state = e));
+        this.stopwatch.toggle(e), (this.state = e);
     }
     get value() {
         return this.state;
     }
     reset() {
-        (this.stopwatch.reset(), this.stopwatch.toggle(this.state));
+        this.stopwatch.reset(), this.stopwatch.toggle(this.state);
     }
     totalDuration() {
         return this.stopwatch.elapsed().asMilliseconds();
@@ -100,12 +120,16 @@ class d {
         return this.stopwatch.elapsed().asSeconds();
     }
     constructor(e, t = l) {
-        (a(this, 'stopwatch', void 0), a(this, 'state', void 0), (this.stopwatch = new u(t)), (this.state = e), this.stopwatch.toggle(e));
+        a(this, "stopwatch", void 0),
+            a(this, "state", void 0),
+            (this.stopwatch = new u(t)),
+            (this.state = e),
+            this.stopwatch.toggle(e);
     }
 }
 class f {
     hasTimedOut() {
-        if (!this.watch.isRunning()) throw Error('`start` must be called before `hasTimedOut`');
+        if (!this.watch.isRunning()) throw Error("`start` must be called before `hasTimedOut`");
         return this.watch.elapsed().isGreaterOrEqualTo(this.timeout);
     }
     start() {
@@ -113,7 +137,7 @@ class f {
     }
     static startNew(e) {
         let t = new f(e);
-        return (t.start(), t);
+        return t.start(), t;
     }
     static async waitFor(e, t) {
         let n,
@@ -127,76 +151,86 @@ class f {
         return !1;
     }
     constructor(e) {
-        (a(this, 'timeout', void 0), a(this, 'watch', void 0), (this.timeout = e), (this.watch = new u()));
+        a(this, "timeout", void 0), a(this, "watch", void 0), (this.timeout = e), (this.watch = new u());
     }
 }
 function _(e) {
-    let t = 'number' == typeof e ? e : e.asMilliseconds();
+    let t = "number" == typeof e ? e : e.asMilliseconds();
     return new Promise((e) => {
         setTimeout(() => e(), t);
     });
 }
 var p = (function (e) {
-    return ((e.NONE = 'NONE'), (e.SECONDS = 'SECONDS'), (e.MINUTES = 'MINUTES'), (e.HOURS = 'HOURS'), (e.DAYS = 'DAYS'), (e.WEEKS = 'WEEKS'), (e.MONTHS = 'MONTHS'), (e.YEARS = 'YEARS'), e);
+    return (
+        (e.NONE = "NONE"),
+        (e.SECONDS = "SECONDS"),
+        (e.MINUTES = "MINUTES"),
+        (e.HOURS = "HOURS"),
+        (e.DAYS = "DAYS"),
+        (e.WEEKS = "WEEKS"),
+        (e.MONTHS = "MONTHS"),
+        (e.YEARS = "YEARS"),
+        e
+    );
 })({});
 function h(e, t) {
     switch (t) {
-        case 'NONE':
+        case "NONE":
             return 0;
-        case 'SECONDS':
+        case "SECONDS":
             return 60 * e;
-        case 'MINUTES':
+        case "MINUTES":
             return e;
-        case 'HOURS':
+        case "HOURS":
             return e / 60;
-        case 'DAYS':
+        case "DAYS":
             return e / 60 / 24;
-        case 'WEEKS':
+        case "WEEKS":
             return e / 60 / 24 / 7;
-        case 'MONTHS':
+        case "MONTHS":
             return e / 60 / 24 / 31;
-        case 'YEARS':
+        case "YEARS":
             return e / 60 / 24 / 365;
     }
 }
 let m = [
     {
-        unit: 'NONE',
-        max: 0
+        unit: "NONE",
+        max: 0,
     },
     {
-        unit: 'SECONDS',
-        max: 1
+        unit: "SECONDS",
+        max: 1,
     },
     {
-        unit: 'MINUTES',
-        max: 60
+        unit: "MINUTES",
+        max: 60,
     },
     {
-        unit: 'HOURS',
-        max: 1440
+        unit: "HOURS",
+        max: 1440,
     },
     {
-        unit: 'DAYS',
-        max: 44640
+        unit: "DAYS",
+        max: 44640,
     },
     {
-        unit: 'WEEKS',
-        max: 40320
+        unit: "WEEKS",
+        max: 40320,
     },
     {
-        unit: 'MONTHS',
-        max: 525600
+        unit: "MONTHS",
+        max: 525600,
     },
     {
-        unit: 'YEARS',
-        max: 1 / 0
-    }
+        unit: "YEARS",
+        max: 1 / 0,
+    },
 ];
 function g(e, t) {
     let n = m.findIndex((t) => {
             let { max: n, unit: r } = t;
-            return ('NONE' === r && e === n) || e < n;
+            return ("NONE" === r && e === n) || e < n;
         }),
         r = i()(
             m,
@@ -204,7 +238,7 @@ function g(e, t) {
                 let { unit: n } = e;
                 return t(n);
             },
-            n
+            n,
         );
     if (null != r) return r.unit;
     let o = m.find((e) => {
@@ -216,13 +250,13 @@ function g(e, t) {
 function E(e, t) {
     if (null == e)
         return {
-            unit: 'NONE',
-            time: 0
+            unit: "NONE",
+            time: 0,
         };
     let n = g(e, (e) => t.includes(e)),
         r = null != n ? h(e, n) : null;
     return {
         unit: n,
-        time: null != r ? Math.floor(r) : null
+        time: null != r ? Math.floor(r) : null,
     };
 }

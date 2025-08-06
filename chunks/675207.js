@@ -1,13 +1,13 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         VerifyAccountDeekLink: () => E,
         VerifyAccountLoading: () => m,
-        default: () => S
+        default: () => S,
     }),
     n(388685),
     n(704826),
     n(35282),
-    n(457542));
+    n(457542);
 var r = n(255367),
     c = n(73800),
     o = n(114858),
@@ -30,21 +30,21 @@ function S() {
     var e, t;
     let n = (0, o.k6)(),
         i = (0, f.l)(),
-        s = i.get('code'),
-        O = i.get('oauth_verifier'),
-        b = null != (e = i.get('state')) ? e : '',
-        y = i.get('loading'),
-        S = null != (t = i.get('iss')) ? t : void 0,
+        s = i.get("code"),
+        O = i.get("oauth_verifier"),
+        b = null != (e = i.get("state")) ? e : "",
+        y = i.get("loading"),
+        S = null != (t = i.get("iss")) ? t : void 0,
         { type: w } = (0, o.UO)(),
         R = (0, N.vJ)(w),
         [A, T] = c.useState(!1),
         [x, D] = c.useState(!1),
         Z = (0, d.Z)(),
-        k = null == O ? (null != s ? s : '') : O;
-    (c.useEffect(() => {
+        k = null == O ? (null != s ? s : "") : O;
+    c.useEffect(() => {
         let e;
         if (null != y) return;
-        for (let t of i.keys()) t.startsWith('openid.') && (null == e && (e = {}), (e[t] = i.get(t)));
+        for (let t of i.keys()) t.startsWith("openid.") && (null == e && (e = {}), (e[t] = i.get(t)));
         let t = (0, N.vJ)(w);
         !(async function () {
             if (null == t || !p.Z.isSupported(t)) return;
@@ -56,10 +56,11 @@ function S() {
                         return;
                     }
                     if ([200, 204].includes(r)) {
-                        (n.replace(C.Z5c.CONNECTIONS_SUCCESS(t)), v && window.close());
+                        n.replace(C.Z5c.CONNECTIONS_SUCCESS(t)), v && window.close();
                         return;
                     }
-                    ((null == c ? void 0 : c.code) != null && i.append('error-code', c.code), n.replace(''.concat(C.Z5c.CONNECTIONS_ERROR(t), '?').concat(i.toString())));
+                    (null == c ? void 0 : c.code) != null && i.append("error-code", c.code),
+                        n.replace("".concat(C.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()));
                 }
             }
             if (
@@ -69,7 +70,7 @@ function S() {
                     state: b,
                     openidParams: e,
                     iss: S,
-                    handleCallbackResponse: r
+                    handleCallbackResponse: r,
                 })
             )
                 return;
@@ -77,22 +78,24 @@ function S() {
             0 === c
                 ? T(!0)
                 : 1 === c
-                  ? n.replace(''.concat(C.Z5c.CONNECTIONS_ERROR(t), '?').concat(i.toString()))
+                  ? n.replace("".concat(C.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()))
                   : 3 === c
                     ? l.tq
                         ? D(!0)
-                        : n.replace(''.concat(C.Z5c.CONNECTIONS_ERROR(t), '?').concat(i.toString()))
+                        : n.replace("".concat(C.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()))
                     : j({
                           platformType: t,
                           state: b,
                           handleCallbackResponse: r,
                           handleCallbackError: (e) => {
                               var r;
-                              ((null == e || null == (r = e.body) ? void 0 : r.code) != null && i.append('error-code', e.body.code), n.replace(''.concat(C.Z5c.CONNECTIONS_ERROR(t), '?').concat(i.toString())));
+                              (null == e || null == (r = e.body) ? void 0 : r.code) != null &&
+                                  i.append("error-code", e.body.code),
+                                  n.replace("".concat(C.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()));
                           },
                           openidParams: e,
                           code: k,
-                          iss: S
+                          iss: S,
                       });
         })();
     }, [k, n, y, w, i, b, S]),
@@ -120,9 +123,9 @@ function S() {
                     null != e && clearTimeout(e);
                 }
             );
-        }, [Z, n, R, A, b]));
+        }, [Z, n, R, A, b]);
     let I = c.useMemo(() => {
-        if (null != R) return 'discord://'.concat(C.Z5c.CONNECTIONS(R), '/?').concat(i.toString());
+        if (null != R) return "discord://".concat(C.Z5c.CONNECTIONS(R), "/?").concat(i.toString());
     }, [R, i]);
     return null != R && p.Z.isSupported(R)
         ? x
@@ -130,8 +133,8 @@ function S() {
                   platformType: R,
                   deeplink: I,
                   onClick: () => {
-                      (D(!1), T(!0));
-                  }
+                      D(!1), T(!0);
+                  },
               })
             : (0, r.jsx)(m, { platformType: R })
         : null;
@@ -142,19 +145,19 @@ function m(e) {
     return (0, r.jsxs)(N.UV, {
         platformType: t,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: y.message,
-                children: b.intl.format(b.t.AOKOe3, { name: n.name })
+                children: b.intl.format(b.t.AOKOe3, { name: n.name }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: y.buttonContainer,
                 children: (0, r.jsx)(i.zx, {
                     className: y.btn,
                     disabled: !0,
-                    children: (0, r.jsx)(s.$jN, { itemClassName: y.spinnerItem })
-                })
-            })
-        ]
+                    children: (0, r.jsx)(s.$jN, { itemClassName: y.spinnerItem }),
+                }),
+            }),
+        ],
     });
 }
 function E(e) {
@@ -162,25 +165,25 @@ function E(e) {
         o = p.Z.get(c);
     return (0, r.jsx)(N.UV, {
         platformType: c,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: y.buttonContainer,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: y.message,
-                    children: b.intl.format(b.t['6ig6i4'], { connectionName: o.name })
+                    children: b.intl.format(b.t["6ig6i4"], { connectionName: o.name }),
                 }),
                 (0, r.jsx)(s.P3F, {
-                    tag: 'a',
+                    tag: "a",
                     href: t,
                     onClick: n,
-                    target: '_self',
+                    target: "_self",
                     children: (0, r.jsx)(i.zx, {
                         className: y.btn,
-                        children: b.intl.string(b.t.flvacH)
-                    })
-                })
-            ]
-        })
+                        children: b.intl.string(b.t.flvacH),
+                    }),
+                }),
+            ],
+        }),
     });
 }
 async function _(e) {
@@ -195,24 +198,24 @@ async function _(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })(
@@ -221,8 +224,8 @@ async function _(e) {
                         code: n,
                         openid_params: c,
                         iss: o,
-                        state: r
-                    }
+                        state: r,
+                    },
                 )),
                 (s = { providerType: t }),
                 (s = null != s ? s : {}),
@@ -238,19 +241,19 @@ async function _(e) {
                       })(Object(s)).forEach(function (e) {
                           Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
                       }),
-                i)
+                i),
             )
             .finally(() => {
                 O.default.disconnect();
             });
-        return (a(e), !0);
+        return a(e), !0;
     } catch (e) {
         return !1;
     }
 }
 async function h(e, t, n, r, c) {
     try {
-        return (await u.Z.sessionHandoff(e, t, n, r, c), 0);
+        return await u.Z.sessionHandoff(e, t, n, r, c), 0;
     } catch (e) {
         var o, l;
         if ((null == e || null == (o = e.body) ? void 0 : o.code) === 10020) return 2;
@@ -259,7 +262,15 @@ async function h(e, t, n, r, c) {
     }
 }
 async function j(e) {
-    let { platformType: t, state: n, handleCallbackResponse: r, handleCallbackError: c, openidParams: o, code: l, iss: a } = e;
+    let {
+        platformType: t,
+        state: n,
+        handleCallbackResponse: r,
+        handleCallbackError: c,
+        openidParams: o,
+        code: l,
+        iss: a,
+    } = e;
     try {
         let e = await u.Z.callback(
             t,
@@ -267,12 +278,12 @@ async function j(e) {
                 code: l,
                 openid_params: o,
                 state: n,
-                iss: a
+                iss: a,
             },
-            !v
+            !v,
         );
-        return (r(e), !0);
+        return r(e), !0;
     } catch (e) {
-        return (c(e), !0);
+        return c(e), !0;
     }
 }

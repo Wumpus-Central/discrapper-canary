@@ -1,6 +1,6 @@
 n.d(t, {
     vg: () => p,
-    w7: () => _
+    w7: () => _,
 });
 var r = n(961742),
     i = n(295415),
@@ -9,12 +9,12 @@ let a = /url\((['"]?)([^'"]+?)\1\)/g,
     s = /url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,
     l = /src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;
 function c(e) {
-    let t = e.replace(/([.*+?^${}()|\[\]\/\\])/g, '\\$1');
-    return RegExp(`(url\\(['"]?)(${t})(['"]?\\))`, 'g');
+    let t = e.replace(/([.*+?^${}()|\[\]\/\\])/g, "\\$1");
+    return RegExp(`(url\\(['"]?)(${t})(['"]?\\))`, "g");
 }
 function u(e) {
     let t = [];
-    return (e.replace(a, (e, n, r) => (t.push(r), e)), t.filter((e) => !(0, o.pZ)(e)));
+    return e.replace(a, (e, n, r) => (t.push(r), e)), t.filter((e) => !(0, o.pZ)(e));
 }
 async function d(e, t, n, a, s) {
     try {
@@ -34,7 +34,7 @@ function f(e, { preferredFontFormat: t }) {
         ? e.replace(l, (e) => {
               for (;;) {
                   let [n, , r] = s.exec(e) || [];
-                  if (!r) return '';
+                  if (!r) return "";
                   if (r === t) return `src: ${n};`;
               }
           })

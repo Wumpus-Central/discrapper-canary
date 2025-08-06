@@ -5,7 +5,7 @@ n.d(t, {
     YH: () => E,
     bl: () => b,
     j4: () => O,
-    ux: () => I
+    ux: () => I,
 });
 var r = n(995638),
     i = n(114858),
@@ -19,7 +19,7 @@ var r = n(995638),
     f = n(430824);
 n(375954);
 var _ = n(306680);
-(n(594174), n(70956));
+n(594174), n(70956);
 var p = n(709054),
     h = n(787879),
     m = n(982183),
@@ -59,39 +59,35 @@ function v() {
             return null != (e = s.ZP.getSettingsFilteredMentions()) ? e : [];
         });
     return {
-        unreadRecentMentionsCount: (0, o.e7)(
-            [_.ZP, d.Z, f.Z],
-            () => {
-                var e, t;
-                return null !=
-                    (t =
-                        null == n ||
-                        null ==
-                            (e = n.filter((e) => {
-                                let t = d.Z.getBasicChannel(e.channel_id);
-                                return (
-                                    null != t &&
-                                    E({
-                                        messageId: e.id,
-                                        channelId: e.channel_id,
-                                        guildId: t.guild_id,
-                                        ReadStateStore_: _.ZP,
-                                        GuildStore_: f.Z
-                                    })
-                                );
-                            }))
-                            ? void 0
-                            : e.length)
-                    ? t
-                    : 0;
-            },
-            [n]
-        ),
-        unreadChannelIds: t
+        unreadRecentMentionsCount: (0, o.e7)([_.ZP, d.Z, f.Z], () => {
+            var e, t;
+            return null !=
+                (t =
+                    null == n ||
+                    null ==
+                        (e = n.filter((e) => {
+                            let t = d.Z.getBasicChannel(e.channel_id);
+                            return (
+                                null != t &&
+                                E({
+                                    messageId: e.id,
+                                    channelId: e.channel_id,
+                                    guildId: t.guild_id,
+                                    ReadStateStore_: _.ZP,
+                                    GuildStore_: f.Z,
+                                })
+                            );
+                        }))
+                        ? void 0
+                        : e.length)
+                ? t
+                : 0;
+        }, [n]),
+        unreadChannelIds: t,
     };
 }
 function I() {
-    let { enabled: e, inInbox: t } = l.Z.useExperiment({ location: 'NotificationsInboxUtils' }),
+    let { enabled: e, inInbox: t } = l.Z.useExperiment({ location: "NotificationsInboxUtils" }),
         n = (0, o.e7)([c.Z], () => c.Z.getSavedMessageCount());
     return e && t && (n > 0 || (0, u.Z)());
 }

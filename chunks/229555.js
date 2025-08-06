@@ -16,7 +16,7 @@ let p = (e, t) =>
             : (null == e ? void 0 : e.status) === c.Vq.UPCOMING
               ? u.intl.format(u.t.E85flp, {
                     date: null != t ? t : new Date(),
-                    days: e.daysLeft
+                    days: e.daysLeft,
                 })
               : null,
     g = () => {
@@ -28,40 +28,40 @@ let p = (e, t) =>
         let { id: g, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: b } = t,
             x = u.intl.string(h),
             _ = (0, o.q)(g, f),
-            j = { '--custom-badge-glow-color': (0, l.rj)(t.glowColor, 0.5) };
-        return (0, i.jsxs)('div', {
+            j = { "--custom-badge-glow-color": (0, l.rj)(t.glowColor, 0.5) };
+        return (0, i.jsxs)("div", {
             className: m.container,
             style: j,
             children: [
-                (0, i.jsx)('div', {}),
-                ' ',
-                (0, i.jsx)('img', {
+                (0, i.jsx)("div", {}),
+                " ",
+                (0, i.jsx)("img", {
                     src: r,
                     alt: x,
                     className: s()(m.badgeImage, {
                         [m.upcomingBadge]: t.status === c.Vq.UPCOMING,
-                        [m.wide]: b
-                    })
+                        [m.wide]: b,
+                    }),
                 }),
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: m.textColumn,
                     children: [
                         (0, i.jsx)(a.xv, {
-                            variant: 'text-lg/semibold',
+                            variant: "text-lg/semibold",
                             className: m.badgeText,
-                            children: x
+                            children: x,
                         }),
                         (0, i.jsx)(a.xv, {
-                            variant: 'text-md/normal',
+                            variant: "text-md/normal",
                             className: m.badgeText,
-                            children: _
+                            children: _,
                         }),
                         (0, i.jsx)(a.xv, {
-                            variant: 'text-xs/normal',
-                            children: p(t, n)
-                        })
-                    ]
-                })
-            ]
+                            variant: "text-xs/normal",
+                            children: p(t, n),
+                        }),
+                    ],
+                }),
+            ],
         });
     };

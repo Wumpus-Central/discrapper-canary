@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685), n(539854));
+n.d(t, { Z: () => j }), n(388685), n(539854);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -33,12 +33,12 @@ let _ = (0, o.hQ)(),
                             (null == (n = t.profile) ? void 0 : n.tag) != null &&
                                 e.push({
                                     label: t.name,
-                                    value: t.id
+                                    value: t.id,
                                 }),
                             e
                         );
                     }, []),
-                [t]
+                [t],
             ),
             T = r.useCallback(
                 (e) => {
@@ -55,28 +55,28 @@ let _ = (0, o.hQ)(),
                               guildId: s.id,
                               guildName: e.label,
                               guildIcon: s.icon,
-                              guildIconSize: 32
+                              guildIconSize: 32,
                           });
                 },
-                [C]
+                [C],
             ),
             I = r.useCallback(
                 (e) => {
                     let t = e[0];
                     return null == t ? null : (0, i.jsx)(i.Fragment, { children: T(t) });
                 },
-                [T]
+                [T],
             ),
             N = r.useCallback(
                 (e) => {
-                    (E(h.L.TAKE_ACTION), null == o || o(e));
+                    E(h.L.TAKE_ACTION), null == o || o(e);
                 },
-                [E, o]
+                [E, o],
             ),
             y = r.useCallback((e) => e === v, [v]),
             A = r.useCallback((e) => e, []),
             P = r.useCallback(() => {
-                (E(h.L.TAKE_ACTION), null == o || o(null));
+                E(h.L.TAKE_ACTION), null == o || o(null);
             }, [E, o]),
             R = r.useRef(null);
         return (
@@ -89,13 +89,13 @@ let _ = (0, o.hQ)(),
                     j === a.z.GUILD_TAG_USER_PROFILE_NEW_BADGE &&
                     (0, i.jsx)(l.IGR, {
                         text: b.intl.string(b.t.y2b7CA),
-                        className: x.newBadge
+                        className: x.newBadge,
                     }),
                 children: [
                     (0, i.jsx)(l.Text, {
                         className: x.subtitle,
-                        variant: 'text-sm/normal',
-                        children: b.intl.string(b.t.mlZ6Jy)
+                        variant: "text-sm/normal",
+                        children: b.intl.string(b.t.mlZ6Jy),
                     }),
                     (0, i.jsx)(l.PhF, {
                         className: x.select,
@@ -107,9 +107,9 @@ let _ = (0, o.hQ)(),
                         renderOptionLabel: T,
                         serialize: A,
                         clear: P,
-                        clearable: null != v
-                    })
-                ]
+                        clearable: null != v,
+                    }),
+                ],
             })
         );
     });

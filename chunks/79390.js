@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     D$: () => P,
     N4: () => k,
     UI: () => R,
@@ -9,12 +9,12 @@
     eQ: () => C,
     fw: () => N,
     uY: () => D,
-    x9: () => x
+    x9: () => x,
 }),
     n(704826),
     n(35282),
     n(388685),
-    n(781311));
+    n(781311);
 var r = n(392711),
     i = n.n(r),
     o = n(772848),
@@ -40,7 +40,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -50,15 +50,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -66,11 +66,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -89,7 +89,7 @@ function S() {
     return {
         text: void 0,
         image: void 0,
-        localCreationAnswerId: A()
+        localCreationAnswerId: A(),
     };
 }
 function A() {
@@ -97,14 +97,21 @@ function A() {
 }
 function N(e) {
     let t = /\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i;
-    return e.replace(t, '');
+    return e.replace(t, "");
 }
 function C(e) {
     for (let t of e.reactions) if (null == t.me_vote) return !0;
     return !1;
 }
 function R(e) {
-    return (0, s.e7)([p.Z], () => null != e && e.id !== l.V && !!b.TPd.POLLS.has(e.type) && (!!e.isPrivate() || (p.Z.can(b.Plq.SEND_MESSAGES, e) && p.Z.can(b.Plq.SEND_POLLS, e))));
+    return (0, s.e7)(
+        [p.Z],
+        () =>
+            null != e &&
+            e.id !== l.V &&
+            !!b.TPd.POLLS.has(e.type) &&
+            (!!e.isPrivate() || (p.Z.can(b.Plq.SEND_MESSAGES, e) && p.Z.can(b.Plq.SEND_POLLS, e))),
+    );
 }
 function P(e, t) {
     return 0 === e.length && null == t.find((e) => w(e));
@@ -136,24 +143,33 @@ function x(e) {
                                   null != i
                                       ? {
                                             id: i.id,
-                                            name: null != (r = i.name) ? r : ''
+                                            name: null != (r = i.name) ? r : "",
                                         }
-                                      : void 0
+                                      : void 0,
                           });
                       return T(v({}, e), {
                           answer_id: t + 1,
-                          poll_media: o
+                          poll_media: o,
                       });
                   }),
-        r = (null == e ? void 0 : e.duration) != null ? L(e.duration) : '0';
+        r = (null == e ? void 0 : e.duration) != null ? L(e.duration) : "0";
     return T(v({}, e), {
         expiry: r,
-        answers: n
+        answers: n,
     });
 }
 function M(e, t) {
     var n, r, i, o;
-    let s = null != (o = null == (i = e.embeds[0]) || null == (r = i.fields) || null == (n = r.find((e) => 'poll_question_text' === e.rawName)) ? void 0 : n.rawValue) ? o : '';
+    let s =
+        null !=
+        (o =
+            null == (i = e.embeds[0]) ||
+            null == (r = i.fields) ||
+            null == (n = r.find((e) => "poll_question_text" === e.rawName))
+                ? void 0
+                : n.rawValue)
+            ? o
+            : "";
     return null != t ? (0, a.aF)(s, t) : s;
 }
 function k(e) {
@@ -161,7 +177,7 @@ function k(e) {
         n = M(e, E.Dv);
     return y.intl.format(y.t.Vn97KS, {
         username: t.nick,
-        title: n
+        title: n,
     });
 }
 function j(e) {
@@ -174,8 +190,8 @@ function U(e, t) {
     var n;
     let r = {
             id: t,
-            name: '',
-            animated: !1
+            name: "",
+            animated: !1,
         },
         o = e.getChannelId(),
         a = f.Z.getReactions(o, e.id, r, E.$J, c.O.VOTE),
@@ -191,9 +207,9 @@ function G(e, t) {
     let n = Math.max(0, t - e.length);
     if (1 === e.length)
         if (n > 0)
-            return y.intl.formatToPlainString(y.t['SV/iZm'], {
+            return y.intl.formatToPlainString(y.t["SV/iZm"], {
                 a: e[0],
-                n: n.toLocaleString()
+                n: n.toLocaleString(),
             });
         else return e[0];
     if (2 === e.length)
@@ -201,38 +217,38 @@ function G(e, t) {
             return y.intl.formatToPlainString(y.t.YBnZKy, {
                 a: e[0],
                 b: e[1],
-                n: n.toLocaleString()
+                n: n.toLocaleString(),
             });
         else
-            return y.intl.formatToPlainString(y.t['O5+f5e'], {
+            return y.intl.formatToPlainString(y.t["O5+f5e"], {
                 a: e[0],
-                b: e[1]
+                b: e[1],
             });
     return 3 !== e.length
         ? y.intl.formatToPlainString(y.t.yVX6kJ, { n: n.toLocaleString() })
         : n > 0
-          ? y.intl.formatToPlainString(y.t['ThXp+P'], {
+          ? y.intl.formatToPlainString(y.t["ThXp+P"], {
                 a: e[0],
                 b: e[1],
                 c: e[2],
-                n: n.toLocaleString()
+                n: n.toLocaleString(),
             })
-          : y.intl.formatToPlainString(y.t['0UzBMz'], {
+          : y.intl.formatToPlainString(y.t["0UzBMz"], {
                 a: e[0],
                 b: e[1],
-                c: e[2]
+                c: e[2],
             });
 }
 function B(e, t, n) {
     var r, i;
     let o = _.Z.getMessage(t, e);
-    if (null == o) return '';
+    if (null == o) return "";
     let a = o.getReaction({
             id: n,
-            name: '',
-            animated: !1
+            name: "",
+            animated: !1,
         }),
         s = null != (i = null == a || null == (r = a.count_details) ? void 0 : r.vote) ? i : 0,
         l = U(o, n);
-    return 0 === l.length ? '' : G(l, s);
+    return 0 === l.length ? "" : G(l, s);
 }

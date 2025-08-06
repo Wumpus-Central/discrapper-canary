@@ -9,11 +9,11 @@ function c(e) {
     let t = a.Z.isLive(e.id);
     return e.isGuildStageVoice() && t
         ? (0, i.jsx)(r.sNh, {
-              id: 'report-stage',
+              id: "report-stage",
               label: o.intl.string(o.t.JGj6Cg),
               action: () => (0, l.ic)(e),
               icon: r.U65,
-              color: 'danger'
+              color: "danger",
           })
         : null;
 }

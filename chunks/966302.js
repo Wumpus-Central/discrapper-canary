@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => es }), n(388685));
+n.d(t, { Z: () => es }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -53,7 +53,7 @@ function X(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -63,15 +63,15 @@ function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 X(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -79,11 +79,11 @@ function J(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -100,11 +100,11 @@ function $(e, t) {
 }
 let ee = {
         width: 232,
-        height: 315
+        height: 315,
     },
     et = {
         width: 232,
-        height: 267
+        height: 267,
     },
     en = 475,
     er = 267,
@@ -122,24 +122,24 @@ function eo(e) {
                 (0, v.FU)(t, o, { track: !1 }).catch(H.dG4);
             }
         }, [a, o]),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: z.previewRoot,
             children: [
                 (0, r.jsx)(c.$jN, {}),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: z.preview,
                     children: (0, r.jsx)(n, {
                         disabled: !1,
                         deviceId: o,
                         width: en,
-                        height: er
-                    })
+                        height: er,
+                    }),
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: z.previewChannelHeader,
-                    children: t
-                })
-            ]
+                    children: t,
+                }),
+            ],
         })
     );
 }
@@ -150,7 +150,7 @@ function ea(e) {
         _ = (0, S.Z)(n),
         p = i.useRef(null),
         g = o > 1;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(z.wrapper, z.actions),
         children: [
             (0, r.jsx)(N.Z, {
@@ -158,19 +158,19 @@ function ea(e) {
                 label: W.intl.string(W.t.WAI6xs),
                 className: z.actionButton,
                 onClick: () => {
-                    ((0, Z.v)(s, Z.d.DISCONNECT),
+                    (0, Z.v)(s, Z.d.DISCONNECT),
                         k.default.track(
                             H.rMx.RING_CALL_DECLINED,
                             Q(
                                 {
                                     location: s,
-                                    guild_id: n.guild_id
+                                    guild_id: n.guild_id,
                                 },
-                                (0, h.v_)(n)
-                            )
+                                (0, h.v_)(n),
+                            ),
                         ),
-                        u.Z.stopRinging(n.id));
-                }
+                        u.Z.stopRinging(n.id);
+                },
             }),
             t &&
                 (0, r.jsx)(c.yRy, {
@@ -179,11 +179,11 @@ function ea(e) {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(B.Z, {
                             onClose: t,
-                            onInteraction: (0, F.u)('VideoDeviceMenu', s, { entrypoint: V.A5.CARET })
+                            onInteraction: (0, F.u)("VideoDeviceMenu", s, { entrypoint: V.A5.CARET }),
                         });
                     },
-                    position: 'top',
-                    align: 'center',
+                    position: "top",
+                    align: "center",
                     animation: c.yRy.Animation.FADE,
                     children: (e, t) => {
                         let { onClick: i } = e,
@@ -193,7 +193,7 @@ function ea(e) {
                             join: !0,
                             enabled: d,
                             className: a()(z.actionButton, { [z.fullRegionDropdownButtonOverride]: g }),
-                            color: 'green',
+                            color: "green",
                             centerButton: !0,
                             hasPermission: _,
                             cameraUnavailable: l,
@@ -203,26 +203,26 @@ function ea(e) {
                             onCameraUnavailable: A.Z,
                             onChange: () => {
                                 var e;
-                                ((0, Z.v)(s, Z.d.JOIN_VIDEO_CALL),
+                                (0, Z.v)(s, Z.d.JOIN_VIDEO_CALL),
                                     k.default.track(
                                         H.rMx.RING_CALL_ACCEPTED,
                                         Q(
                                             {
                                                 location: s,
-                                                guild_id: n.guild_id
+                                                guild_id: n.guild_id,
                                             },
-                                            (0, h.v_)(n)
-                                        )
+                                            (0, h.v_)(n),
+                                        ),
                                     ),
                                     f.default.selectVoiceChannel(n.id, !0),
-                                    (0, y.XU)(null != (e = n.guild_id) ? e : H.ME, n.id));
-                            }
+                                    (0, y.XU)(null != (e = n.guild_id) ? e : H.ME, n.id);
+                            },
                         });
-                    }
+                    },
                 }),
             (0, r.jsx)(C.Z, {
                 channel: n,
-                color: 'join',
+                color: "join",
                 centerButton: !0,
                 onCallJoined: () =>
                     k.default.track(
@@ -230,14 +230,14 @@ function ea(e) {
                         Q(
                             {
                                 location: s,
-                                guild_id: n.guild_id
+                                guild_id: n.guild_id,
                             },
-                            (0, h.v_)(n)
-                        )
+                            (0, h.v_)(n),
+                        ),
                     ),
-                className: z.actionButton
-            })
-        ]
+                className: z.actionButton,
+            }),
+        ],
     });
 }
 function es(e) {
@@ -251,13 +251,13 @@ function es(e) {
                 ? j.ZP.getGuildIconURL({
                       id: I.id,
                       icon: I.icon,
-                      size: ei
+                      size: ei,
                   })
                 : null,
         S = null != (t = (0, g.x)(h, ei, !0)) ? t : T,
         A = (0, E.ZP)(h),
         [N, C] = (0, l.Wu)([L.Z], () => [L.Z.supports(Y.AN.VIDEO), Object.keys(L.Z.getVideoDevices()).length]),
-        R = null != I ? ''.concat(A, ', ').concat(I.name) : A,
+        R = null != I ? "".concat(A, ", ").concat(I.name) : A,
         x = (0, l.e7)([M.Z], () => M.Z.isFocused()),
         k = (0, l.e7)([U.Z], () => U.Z.getMode(h.id)),
         B = i.useCallback((e) => {
@@ -266,66 +266,69 @@ function es(e) {
         Z = (0, c.q_F)(
             {
                 value: +!!O,
-                config: $(Q({}, s.config.stiff), { clamp: !0 })
+                config: $(Q({}, s.config.stiff), { clamp: !0 }),
             },
-            'animate-always'
+            "animate-always",
         );
     i.useEffect(() => {
         let e = (e) => {
             e.keyCode === H.yXg.ESCAPE && u.Z.stopRinging(h.id);
         };
-        return (window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e));
+        return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [h]);
     let F = k === H.WtW.VIDEO && N && C > 0,
         { enabled: V } = P.Z.useExperiment({
             guildId: null == h ? void 0 : h.guild_id,
-            location: 'IncomingCallModal'
+            location: "IncomingCallModal",
         }),
-        X = k === H.WtW.VOICE || (V && h.type === H.d4z.GUILD_VOICE) ? W.intl.string(W.t.Js8cKy) : W.intl.string(W.t.KcnWCA),
+        X =
+            k === H.WtW.VOICE || (V && h.type === H.d4z.GUILD_VOICE)
+                ? W.intl.string(W.t.Js8cKy)
+                : W.intl.string(W.t.KcnWCA),
         J = (0, r.jsxs)(r.Fragment, {
             children: [
                 null != I && null == T
-                    ? (0, r.jsx)('div', {
+                    ? (0, r.jsx)("div", {
                           className: a()(z.icon, K.wrapper, K.ringingIncoming),
                           children: (0, r.jsx)(b.ZP, {
                               className: z.mask,
                               mask: b.QS.AVATAR_DEFAULT,
                               width: O ? 40 : 80,
                               height: O ? 40 : 80,
-                              children: (0, r.jsx)('div', {
+                              children: (0, r.jsx)("div", {
                                   className: a()(z.guildIcon, z.guildIconWithoutImage),
-                                  children: (0, r.jsx)('div', {
+                                  children: (0, r.jsx)("div", {
                                       className: z.guildAcronym,
-                                      children: (0, w.gM)(I)
-                                  })
-                              })
-                          })
+                                      children: (0, w.gM)(I),
+                                  }),
+                              }),
+                          }),
                       })
                     : (0, r.jsx)(G.Z, {
                           className: z.icon,
                           ringing: x,
-                          src: null != S ? S : '',
+                          src: null != S ? S : "",
                           ringingType: G.Z.RingingType.INCOMING,
-                          size: O ? c.EFr.SIZE_40 : c.EFr.SIZE_80
+                          size: O ? c.EFr.SIZE_40 : c.EFr.SIZE_80,
                       }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: z.titleGroup,
                     children: [
                         (0, r.jsx)(c.Text, {
                             className: z.title,
-                            color: 'header-primary',
-                            variant: O ? 'text-md/semibold' : 'text-lg/semibold',
-                            children: R
+                            color: "header-primary",
+                            variant: O ? "text-md/semibold" : "text-lg/semibold",
+                            children: R,
                         }),
                         (0, r.jsx)(c.Text, {
-                            color: 'header-secondary',
+                            color: "header-secondary",
                             className: z.subtitle,
-                            variant: O ? 'text-sm/normal' : 'text-md/normal',
-                            children: X
-                        })
-                    ]
-                })
-            ]
+                            variant: O ? "text-sm/normal" : "text-md/normal",
+                            children: X,
+                        }),
+                    ],
+                }),
+            ],
         }),
         es = F ? ee : et,
         el = (0, l.e7)([M.Z], () => M.Z.windowSize());
@@ -333,10 +336,10 @@ function es(e) {
         value: y,
         children: (0, r.jsx)(_.Z, {
             className: z.wrapper,
-            selector: '.'.concat(z.root),
+            selector: ".".concat(z.root),
             initialPosition: {
                 left: f,
-                top: o
+                top: o,
             },
             maxX: el.width,
             maxY: el.height,
@@ -350,36 +353,36 @@ function es(e) {
                         style: $(Q({}, n), {
                             width: Z.value.interpolate([0, 1], [es.width, en]),
                             minHeight: Z.value.interpolate([0, 1], [es.height, er]),
-                            translateX: Z.value.interpolate([0, 1], [0, (-1 * Math.abs(en - es.width)) / 2])
+                            translateX: Z.value.interpolate([0, 1], [0, (-1 * Math.abs(en - es.width)) / 2]),
                         }),
                         children: [
                             O
                                 ? (0, r.jsx)(eo, { header: J })
-                                : (0, r.jsx)('div', {
+                                : (0, r.jsx)("div", {
                                       className: z.mainChannelInfo,
-                                      children: J
+                                      children: J,
                                   }),
                             (0, r.jsx)(ea, {
                                 canVideo: F,
                                 channel: h,
-                                numVideoDevices: C
+                                numVideoDevices: C,
                             }),
                             F && !O
-                                ? (0, r.jsx)('div', {
-                                      'data-button-hoisted-classname-wrapper': !0,
+                                ? (0, r.jsx)("div", {
+                                      "data-button-hoisted-classname-wrapper": !0,
                                       className: z.previewButton,
                                       children: (0, r.jsx)(c.zxk, {
-                                          variant: 'secondary',
-                                          size: 'sm',
-                                          text: W.intl.string(W.t['8B0UDg']),
+                                          variant: "secondary",
+                                          size: "sm",
+                                          text: W.intl.string(W.t["8B0UDg"]),
                                           fullWidth: !0,
-                                          onClick: () => v(!0)
-                                      })
+                                          onClick: () => v(!0),
+                                      }),
                                   })
-                                : null
-                        ]
-                    })
-            })
-        })
+                                : null,
+                        ],
+                    }),
+            }),
+        }),
     });
 }

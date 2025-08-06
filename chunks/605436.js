@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     $7: () => X,
     $e: () => W,
     RZ: () => x,
@@ -17,10 +17,10 @@
     nT: () => q,
     pM: () => C,
     yv: () => H,
-    zB: () => V
+    zB: () => V,
 }),
     n(642613),
-    n(539854));
+    n(539854);
 var r = n(149765),
     i = n(741361),
     o = n(911969),
@@ -45,7 +45,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -55,15 +55,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -83,8 +83,8 @@ function T(e) {
         name: e.name,
         id: e.id,
         disabled: v(e) || n,
-        key: ''.concat(r, ':').concat(e.id),
-        tags: e.tags
+        key: "".concat(r, ":").concat(e.id),
+        tags: e.tags,
     };
 }
 function S(e, t) {
@@ -100,8 +100,8 @@ function A() {
             colorString: E.Pbq,
             name: e,
             disabled: !0,
-            id: 'EMPTY_STATE'
-        }
+            id: "EMPTY_STATE",
+        },
     ];
 }
 function N(e, t, n, i) {
@@ -109,7 +109,7 @@ function N(e, t, n, i) {
     if (null == o) return !1;
     if (null == e) return o.id !== t;
     let a = e.permissionOverwrites[t];
-    return ((null == i ? void 0 : i[t]) != null && (a = i[t]), null == a || !r.e$(a.allow, n));
+    return (null == i ? void 0 : i[t]) != null && (a = i[t]), null == a || !r.e$(a.allow, n);
 }
 function C(e, t) {
     return h.default.castGuildIdAsEveryoneGuildRoleId(e) === t;
@@ -134,7 +134,11 @@ function w(e, t, n, r, i) {
 function D(e, t, n, i, o) {
     return t.filter((e) => {
         var t;
-        return v(e) || (!N(n, e.id, i, o) && !(0, l.fI)(e)) || r.e$(r.$e(e.permissions, null == (t = n.permissionOverwrites[e.id]) ? void 0 : t.allow), i);
+        return (
+            v(e) ||
+            (!N(n, e.id, i, o) && !(0, l.fI)(e)) ||
+            r.e$(r.$e(e.permissions, null == (t = n.permissionOverwrites[e.id]) ? void 0 : t.allow), i)
+        );
     });
 }
 function L(e, t, n, r, i) {
@@ -178,11 +182,13 @@ function U(e, t) {
         bot: e.bot,
         verifiedBot: e.isVerifiedBot(),
         disabled: k(e, t),
-        key: ''.concat(r, ':').concat(e.id)
+        key: "".concat(r, ":").concat(e.id),
     };
 }
 function G(e, t) {
-    return e.rowType !== t.rowType ? e.rowType - t.rowType : e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase());
+    return e.rowType !== t.rowType
+        ? e.rowType - t.rowType
+        : e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase());
 }
 function B(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
@@ -217,7 +223,7 @@ function V(e, t) {
         case g.aC.USER:
             return b.intl.string(b.t.KD6OJC);
         case g.aC.GUILD:
-            return b.intl.string(b.t['5qyruL']);
+            return b.intl.string(b.t["5qyruL"]);
         case g.aC.EMPTY_STATE:
             return null;
     }
@@ -225,13 +231,13 @@ function V(e, t) {
 function H(e) {
     switch (e) {
         case g.aC.ROLE:
-            return b.intl.string(b.t['Gzc/a2']);
+            return b.intl.string(b.t["Gzc/a2"]);
         case g.aC.OWNER:
             return b.intl.string(b.t.icuNBA);
         case g.aC.ADMINISTRATOR:
             return b.intl.string(b.t.eTmN5e);
         case g.aC.MEMBER:
-            return b.intl.string(b.t['Gzc/a2']);
+            return b.intl.string(b.t["Gzc/a2"]);
         case g.aC.EMPTY_STATE:
         default:
             return null;
@@ -241,7 +247,7 @@ function Y(e, t, n) {
     let i = e.permissionOverwrites[e.guild_id];
     null == i && (i = p.we(e.guild_id));
     let o = O({}, i);
-    return ((o.deny = r.Od(o.deny, t)), (o.allow = r.Od(o.allow, t)), n || (o.deny = r.IH(o.deny, t)), o);
+    return (o.deny = r.Od(o.deny, t)), (o.allow = r.Od(o.allow, t)), n || (o.deny = r.IH(o.deny, t)), o;
 }
 function W(e, t, n) {
     let r = Y(e, t, n);
@@ -256,22 +262,27 @@ function K(e, t) {
             id: n.id,
             type: o.BN.MEMBER,
             allow: r.IH(p.Hn, t),
-            deny: p.Hn
+            deny: p.Hn,
         };
         return (0, i.hw)(e.id, [a], !0);
     }
     {
         let { allow: n, deny: o } = a;
-        return ((n = r.IH(n, t)), (0, i.kY)(e, a.id, n, o));
+        return (n = r.IH(n, t)), (0, i.kY)(e, a.id, n, o);
     }
 }
 function z(e, t) {
     if (null == e) return !1;
     let n = e.permissionOverwrites[e.guild_id];
-    return ((null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && r.e$(n.deny, e.accessPermissions));
+    return (
+        (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]),
+        null != n && r.e$(n.deny, e.accessPermissions)
+    );
 }
 function q(e, t, n) {
-    return e === E.d4z.GUILD_TEXT || e === E.d4z.GUILD_ANNOUNCEMENT ? t : (!(0, a.bw)(e) && e !== E.d4z.GUILD_CATEGORY) || (t && n);
+    return e === E.d4z.GUILD_TEXT || e === E.d4z.GUILD_ANNOUNCEMENT
+        ? t
+        : (!(0, a.bw)(e) && e !== E.d4z.GUILD_CATEGORY) || (t && n);
 }
 function X(e) {
     switch (e) {
@@ -291,7 +302,11 @@ function Q(e, t) {
     return (
         Object.values(e).forEach((e) => {
             let { row: r } = e;
-            null != r.id && '' !== r.id && (r.rowType === g.aC.ROLE ? n.push((0, d.rX)(r.id, t)) : r.rowType === g.aC.MEMBER && n.push((0, d.jZ)(r.id, t)));
+            null != r.id &&
+                "" !== r.id &&
+                (r.rowType === g.aC.ROLE
+                    ? n.push((0, d.rX)(r.id, t))
+                    : r.rowType === g.aC.MEMBER && n.push((0, d.jZ)(r.id, t)));
         }),
         n
     );

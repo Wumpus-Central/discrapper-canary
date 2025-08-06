@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(388685));
+n.d(t, { Z: () => L }), n(388685);
 var i,
     r = n(255367),
     s = n(73800),
@@ -34,7 +34,7 @@ function P(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -44,15 +44,15 @@ function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 P(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -90,9 +90,9 @@ function Z(e) {
                 let n = t[t.length - 1].id;
                 e >= a - 2 && p !== n && ((0, g.cQ)(10, n), h(n));
             },
-            [t, a, p]
+            [t, a, p],
         ),
-        j = (0, b.Z)('billing-history', o);
+        j = (0, b.Z)("billing-history", o);
     return (0, r.jsx)(d.bG, {
         navigator: j,
         children: (0, r.jsx)(d.SJ, {
@@ -108,15 +108,19 @@ function Z(e) {
                                     i,
                                     r = {},
                                     s = Object.keys(e);
-                                for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                                for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                                 return r;
                             })(e, t);
                         if (Object.getOwnPropertySymbols) {
                             var s = Object.getOwnPropertySymbols(e);
-                            for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                            for (i = 0; i < s.length; i++)
+                                (n = s[i]),
+                                    !(t.indexOf(n) >= 0) &&
+                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                        (r[n] = e[n]);
                         }
                         return r;
-                    })(e, ['ref']);
+                    })(e, ["ref"]);
                 return (0, r.jsx)(
                     _.Z,
                     D(
@@ -127,9 +131,9 @@ function Z(e) {
                                 onChangePage: x,
                                 numPages: a,
                                 showPageCount: !1,
-                                ref: t
+                                ref: t,
                             },
-                            s
+                            s,
                         ),
                         {
                             children: (0, r.jsx)(m.Den, {
@@ -142,17 +146,17 @@ function Z(e) {
                                             className: l()(y.paymentRow, y.bottomDivider),
                                             payment: e,
                                             locale: n,
-                                            compactMode: i
+                                            compactMode: i,
                                         },
-                                        t
-                                    )
-                                )
-                            })
-                        }
-                    )
+                                        t,
+                                    ),
+                                ),
+                            }),
+                        },
+                    ),
                 );
-            }
-        })
+            },
+        }),
     });
 }
 class w extends (i = s.PureComponent) {
@@ -161,27 +165,27 @@ class w extends (i = s.PureComponent) {
     }
     componentDidMount() {
         p.Z.wait(() => {
-            ((0, h.N)(), (0, g.cQ)(30));
+            (0, h.N)(), (0, g.cQ)(30);
         });
     }
     renderPremiumExternalSubscription(e) {
         return (
-            c()(null != e.paymentGateway, 'Expected payment gateway when rendering for external subscription'),
+            c()(null != e.paymentGateway, "Expected payment gateway when rendering for external subscription"),
             (0, r.jsxs)(m.Zbd, {
                 className: y.externalRow,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: y.externalRowHeader,
-                        children: N.intl.format(N.t['6mIX6u'], { paymentGatewayName: I.Vz[e.paymentGateway] })
+                        children: N.intl.format(N.t["6mIX6u"], { paymentGatewayName: I.Vz[e.paymentGateway] }),
                     }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         className: y.externalRowBody,
                         children: N.intl.format(N.t.eG0uZG, {
                             paymentGatewayName: I.Vz[e.paymentGateway],
-                            billingHistoryLink: (0, O.JE)(e.paymentGateway, 'BILLING_HISTORY')
-                        })
-                    })
-                ]
+                            billingHistoryLink: (0, O.JE)(e.paymentGateway, "BILLING_HISTORY"),
+                        }),
+                    }),
+                ],
             })
         );
     }
@@ -189,51 +193,51 @@ class w extends (i = s.PureComponent) {
         let { compactMode: e, payments: t, subscription: n, locale: i } = this.props,
             s = null != n && n.isPurchasedExternally;
         return 0 !== t.length || s
-            ? (0, r.jsxs)('div', {
+            ? (0, r.jsxs)("div", {
                   className: y.verticalFit,
                   children: [
                       null != n && s ? this.renderPremiumExternalSubscription(n) : null,
                       t.length > 0
-                          ? (0, r.jsxs)('div', {
+                          ? (0, r.jsxs)("div", {
                                 className: l()(y.paymentPane, y.verticalFit),
                                 children: [
                                     e
                                         ? null
-                                        : (0, r.jsx)('div', {
+                                        : (0, r.jsx)("div", {
                                               className: l()(y.paymentRow, y.bottomDivider),
                                               children: (0, r.jsxs)(x.Z, {
                                                   className: y.paymentRowHeader,
                                                   children: [
-                                                      (0, r.jsx)('div', {
+                                                      (0, r.jsx)("div", {
                                                           className: A.date,
-                                                          children: N.intl.string(N.t['5t11BQ'])
+                                                          children: N.intl.string(N.t["5t11BQ"]),
                                                       }),
-                                                      (0, r.jsx)('div', {
+                                                      (0, r.jsx)("div", {
                                                           className: y.paymentRowHeaderDescription,
-                                                          children: N.intl.string(N.t.yAAPb2)
+                                                          children: N.intl.string(N.t.yAAPb2),
                                                       }),
-                                                      (0, r.jsx)('div', {
+                                                      (0, r.jsx)("div", {
                                                           className: A.amount,
-                                                          children: N.intl.string(N.t['6MqHXV'])
-                                                      })
-                                                  ]
-                                              })
+                                                          children: N.intl.string(N.t["6MqHXV"]),
+                                                      }),
+                                                  ],
+                                              }),
                                           }),
                                     (0, r.jsx)(Z, {
                                         compactMode: e,
                                         locale: i,
                                         payments: t,
-                                        numPages: this.numPages
-                                    })
-                                ]
+                                        numPages: this.numPages,
+                                    }),
+                                ],
                             })
-                          : null
-                  ]
+                          : null,
+                  ],
               })
             : null;
     }
     constructor(...e) {
-        (super(...e), P(this, 'scrollerRef', s.createRef()));
+        super(...e), P(this, "scrollerRef", s.createRef());
     }
 }
 function k(e) {
@@ -251,9 +255,9 @@ function L(e) {
                     t.filter(k).map((e) => {
                         let { subscription: t } = e;
                         return null == t ? void 0 : t.items[0].planId;
-                    })
+                    }),
                 ),
-            [t]
+            [t],
         ),
         a = s.useMemo(
             () =>
@@ -261,9 +265,9 @@ function L(e) {
                     t.filter(k).map((e) => {
                         let { skuId: t } = e;
                         return t;
-                    })
+                    }),
                 ),
-            [t]
+            [t],
         ),
         l = (0, u.Wu)([E.Z], () => E.Z.getPlanIdsForSkus(Array.from(a))),
         o = s.useCallback(() => l.length === i.size, [l, i]),
@@ -279,9 +283,9 @@ function L(e) {
             w,
             D(R({}, e), {
                 payments: c,
-                subscription: n
-            })
+                subscription: n,
+            }),
         )
     );
 }
-P(w, 'defaultProps', { compactMode: !1 });
+P(w, "defaultProps", { compactMode: !1 });

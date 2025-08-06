@@ -1,1 +1,1 @@
-e.exports = { message: 'message_dae006' };
+e.exports = { message: "message_dae006" };

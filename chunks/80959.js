@@ -11,7 +11,7 @@ function u(e) {
         n = (0, s.e7)([o.Z], () => o.Z.lifetimePoints),
         u = (0, a.Z)(n, t);
     return (0, r.jsxs)(i.Z, {
-        variant: 'text-md/medium',
-        children: [u, ' ', l.intl.string(c.default.tqTTws)]
+        variant: "text-md/medium",
+        children: [u, " ", l.intl.string(c.default.tqTTws)],
     });
 }

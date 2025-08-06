@@ -10,7 +10,18 @@ var r = n(255367),
     d = n(62753);
 let p = function (e) {
     var t;
-    let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: f, onCtxMenuOpened: g, onCtxMenuClosed: x, onCtxMenuSelection: h, quest: b, useReducedMotion: j, collapsedHeight: _ } = e,
+    let {
+            expandedContentRef: n,
+            expansionSpring: p,
+            isExpanded: m,
+            isExpansionAnimationComplete: f,
+            onCtxMenuOpened: g,
+            onCtxMenuClosed: x,
+            onCtxMenuSelection: h,
+            quest: b,
+            useReducedMotion: j,
+            collapsedHeight: _,
+        } = e,
         v = s.useRef(null),
         C = s.useRef(null),
         y = (null == (t = b.userStatus) ? void 0 : t.enrolledAt) != null,
@@ -28,7 +39,7 @@ let p = function (e) {
                 isExpansionAnimationComplete: f,
                 quest: b,
                 useReducedMotion: j,
-                taskDetails: O
+                taskDetails: O,
             }),
             (0, r.jsx)(c.Z, {
                 expansionSpring: p,
@@ -48,7 +59,7 @@ let p = function (e) {
                     children: [
                         (0, r.jsx)(u.Z, {
                             expansionSpring: p,
-                            isExpanded: m
+                            isExpanded: m,
                         }),
                         !y &&
                             (0, r.jsx)(a.Z, {
@@ -59,15 +70,15 @@ let p = function (e) {
                                 isExpansionAnimationComplete: f,
                                 onCtxMenuOpen: g,
                                 onCtxMenuClose: x,
-                                onCtxMenuSelect: h
-                            })
-                    ]
-                })
+                                onCtxMenuSelect: h,
+                            }),
+                    ],
+                }),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 ref: C,
-                className: d.overlay
-            })
-        ]
+                className: d.overlay,
+            }),
+        ],
     });
 };

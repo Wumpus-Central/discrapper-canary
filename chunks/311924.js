@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -20,16 +20,16 @@ var r = n(255367),
     b = n(496958);
 function S(e) {
     let { label: t, children: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: b.setting,
         children: [
             (0, r.jsx)(s.Text, {
-                variant: 'text-sm/semibold',
-                color: 'header-secondary',
-                children: t
+                variant: "text-sm/semibold",
+                color: "header-secondary",
+                children: t,
             }),
-            n
-        ]
+            n,
+        ],
     });
 }
 function C() {
@@ -51,31 +51,31 @@ function C() {
                 name: (0, f.M)(t),
                 tooltipAriaLabel: n ? void 0 : j.intl.string(j.t.sEAnVF),
                 tooltip: n ? void 0 : (0, r.jsx)(d.W, {}),
-                className: n ? void 0 : b.premiumOption
+                className: n ? void 0 : b.premiumOption,
             };
         }),
         U = p.YX.map((e) => {
             let t = (0, c.Z)(C, _.LY.RESOLUTION_720, e, N, w);
             return {
                 value: e,
-                name: ''.concat(e, 'fps'),
+                name: "".concat(e, "fps"),
                 tooltipAriaLabel: t ? void 0 : j.intl.string(j.t.sEAnVF),
                 tooltip: t ? void 0 : (0, r.jsx)(d.W, {}),
-                className: t ? void 0 : b.premiumOption
+                className: t ? void 0 : b.premiumOption,
             };
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: b.root,
         children: [
             (0, r.jsx)(S, {
-                label: j.intl.string(v.default['7eHfrq']),
+                label: j.intl.string(v.default["7eHfrq"]),
                 children: (0, r.jsx)(s.PhF, {
                     isSelected: (e) => C === e,
                     serialize: (e) => String(e),
                     select: (e) => {
                         Z({
-                            type: 'set_preset',
-                            preset: e
+                            type: "set_preset",
+                            preset: e,
                         });
                     },
                     options: p.PG.filter((e) => {
@@ -85,59 +85,61 @@ function C() {
                         let { value: t } = e;
                         return {
                             value: t,
-                            label: (0, u.L)(t)
+                            label: (0, u.L)(t),
                         };
-                    })
-                })
+                    }),
+                }),
             }),
             (0, r.jsx)(S, {
                 label: j.intl.string(v.default.PYBXFR),
                 children: (0, r.jsx)(s.sY7, {
                     className: b.segmentedControl,
                     options: B,
-                    look: 'pill',
+                    look: "pill",
                     disabled: D,
                     value: k,
                     onChange: (e) =>
                         !D &&
                         (function (e) {
-                            if (!(0, c.Z)(C, e, y, N, w)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
-                            (Z({
-                                type: 'set_resolution',
-                                resolution: e
+                            if (!(0, c.Z)(C, e, y, N, w))
+                                return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                            Z({
+                                type: "set_resolution",
+                                resolution: e,
                             }),
                                 e !== A &&
                                     Z({
-                                        type: 'set_preset',
-                                        preset: _.tI.PRESET_CUSTOM
-                                    }));
-                        })(e.value)
-                })
+                                        type: "set_preset",
+                                        preset: _.tI.PRESET_CUSTOM,
+                                    });
+                        })(e.value),
+                }),
             }),
             (0, r.jsx)(S, {
-                label: j.intl.string(v.default['/ssDMT']),
+                label: j.intl.string(v.default["/ssDMT"]),
                 children: (0, r.jsx)(s.sY7, {
                     className: b.segmentedControl,
                     disabled: D,
                     options: U,
                     value: L,
-                    look: 'pill',
+                    look: "pill",
                     onChange: (e) =>
                         !D &&
                         (function (e) {
-                            if (!(0, c.Z)(C, I, e, N, w)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
-                            (Z({
-                                type: 'set_fps',
-                                fps: e
+                            if (!(0, c.Z)(C, I, e, N, w))
+                                return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                            Z({
+                                type: "set_fps",
+                                fps: e,
                             }),
                                 e !== M &&
                                     Z({
-                                        type: 'set_preset',
-                                        preset: _.tI.PRESET_CUSTOM
-                                    }));
-                        })(e.value)
-                })
-            })
-        ]
+                                        type: "set_preset",
+                                        preset: _.tI.PRESET_CUSTOM,
+                                    });
+                        })(e.value),
+                }),
+            }),
+        ],
     });
 }

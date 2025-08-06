@@ -8,25 +8,25 @@ let a = (e) => {
     return (0, i.jsx)(r.P3F, {
         onClick: a ? void 0 : n,
         className: s.button,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: s.contentContainer,
             children: [
                 a
                     ? (0, i.jsx)(r.$jN, {
                           type: r.$jN.Type.PULSING_ELLIPSIS,
-                          className: s.__invalid_spinner
+                          className: s.__invalid_spinner,
                       })
                     : (0, i.jsx)(r.Text, {
-                          variant: 'text-md/medium',
+                          variant: "text-md/medium",
                           className: s.label,
-                          children: t
+                          children: t,
                       }),
                 (0, i.jsx)(r.CJ0, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: s.arrow
-                })
-            ]
-        })
+                    size: "md",
+                    color: "currentColor",
+                    className: s.arrow,
+                }),
+            ],
+        }),
     });
 };

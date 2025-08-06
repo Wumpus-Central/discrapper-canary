@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+n.d(t, { Z: () => g }), n(388685);
 var r = n(442837),
     i = n(715903),
     o = n(71619),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -77,7 +77,7 @@ function g(e) {
             disableReactionUpdates: !0,
             isLurking: !1,
             isGuest: !1,
-            isPendingMember: !1
+            isPendingMember: !1,
         };
     let O = (0, d.Z)({
         channel: e,
@@ -88,11 +88,11 @@ function g(e) {
         isGuest: h,
         communicationDisabled: b,
         isActiveChannelOrUnarchivableThread: y,
-        isAutomodQuarantined: E
+        isAutomodQuarantined: E,
     });
     return m(p({}, O), {
         isLurking: _,
         isGuest: h,
-        isPendingMember: !1
+        isPendingMember: !1,
     });
 }

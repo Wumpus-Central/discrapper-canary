@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(539854));
+n.d(t, { Z: () => d }), n(539854);
 var r = n(255367);
 n(73800);
 var i = n(998698),
@@ -8,7 +8,7 @@ var i = n(998698),
     l = n(388032);
 let c = { results: { commandOptions: [] } };
 function u(e) {
-    return ''.concat(e.displayName, ':');
+    return "".concat(e.displayName, ":");
 }
 let d = {
     stores: [i.Z],
@@ -30,7 +30,7 @@ let d = {
                 selectedIndex: n,
                 query: i,
                 onHover: s,
-                onClick: c
+                onClick: c,
             } = e,
             u = [],
             d = [];
@@ -45,16 +45,16 @@ let d = {
                           autocompletes: u,
                           onHover: s,
                           onClick: c,
-                          titleWithQuery: l.t['iO/jnJ'],
-                          titleWithoutQuery: l.intl.string(l.t['7II2Gx']),
+                          titleWithQuery: l.t["iO/jnJ"],
+                          titleWithoutQuery: l.intl.string(l.t["7II2Gx"]),
                           Component: o.ZP.Generic,
                           getProps: (e, t) => ({
                               key: t.toString(),
                               text: e.displayName,
-                              description: e.displayDescription
+                              description: e.displayDescription,
                           }),
                           getQuery: (e) => e,
-                          key: 'required-options'
+                          key: "required-options",
                       })
                     : null,
             _ =
@@ -66,29 +66,29 @@ let d = {
                           onHover: s,
                           onClick: c,
                           titleWithQuery: l.t.pg0anJ,
-                          titleWithoutQuery: u.length > 0 ? l.intl.string(l.t.TpDXm5) : l.intl.string(l.t['+1H47u']),
+                          titleWithoutQuery: u.length > 0 ? l.intl.string(l.t.TpDXm5) : l.intl.string(l.t["+1H47u"]),
                           Component: o.ZP.Generic,
                           getProps: (e, t) => ({
                               key: t.toString(),
                               text: e.displayName,
-                              description: e.displayDescription
+                              description: e.displayDescription,
                           }),
                           getQuery: (e) => e,
-                          key: 'optional-options',
-                          indexOffset: u.length
+                          key: "optional-options",
+                          indexOffset: u.length,
                       })
                     : null;
         return (0, r.jsxs)(r.Fragment, {
-            children: [f, _]
+            children: [f, _],
         });
     },
     onSelect(e) {
         let {
                 results: { commandOptions: t },
                 index: n,
-                options: r
+                options: r,
             } = e,
             i = t[n];
-        return (r.insertText(u(i)), { type: s.z2.COMMAND_OPTION });
-    }
+        return r.insertText(u(i)), { type: s.z2.COMMAND_OPTION };
+    },
 };

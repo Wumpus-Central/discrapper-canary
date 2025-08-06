@@ -7,23 +7,33 @@ var o = n(73800),
     s = n(344282),
     l = n(363160),
     c = n(941951),
-    u = 'unmounted',
-    d = 'exited',
-    f = 'entering',
-    _ = 'entered',
-    p = 'exiting',
+    u = "unmounted",
+    d = "exited",
+    f = "entering",
+    _ = "entered",
+    p = "exiting",
     h = (function (e) {
         function t(t, n) {
             var r,
                 i = e.call(this, t, n) || this,
                 o = n,
                 a = o && !o.isMounting ? t.enter : t.appear;
-            return ((i.appearStatus = null), t.in ? (a ? ((r = d), (i.appearStatus = f)) : (r = _)) : (r = t.unmountOnExit || t.mountOnEnter ? u : d), (i.state = { status: r }), (i.nextCallback = null), i);
+            return (
+                (i.appearStatus = null),
+                t.in
+                    ? a
+                        ? ((r = d), (i.appearStatus = f))
+                        : (r = _)
+                    : (r = t.unmountOnExit || t.mountOnEnter ? u : d),
+                (i.state = { status: r }),
+                (i.nextCallback = null),
+                i
+            );
         }
-        ((0, i.Z)(t, e),
+        (0, i.Z)(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
                 return e.in && t.status === u ? { status: d } : null;
-            }));
+            });
         var n = t.prototype;
         return (
             (n.componentDidMount = function () {
@@ -47,11 +57,13 @@ var o = n(73800),
                     r = this.props.timeout;
                 return (
                     (e = t = n = r),
-                    null != r && 'number' != typeof r && ((e = r.exit), (t = r.enter), (n = void 0 !== r.appear ? r.appear : t)),
+                    null != r &&
+                        "number" != typeof r &&
+                        ((e = r.exit), (t = r.enter), (n = void 0 !== r.appear ? r.appear : t)),
                     {
                         exit: e,
                         enter: t,
-                        appear: n
+                        appear: n,
                     }
                 );
             }),
@@ -79,15 +91,15 @@ var o = n(73800),
                     return void this.safeSetState({ status: _ }, function () {
                         t.props.onEntered(o);
                     });
-                (this.props.onEnter(o, l),
+                this.props.onEnter(o, l),
                     this.safeSetState({ status: f }, function () {
-                        (t.props.onEntering(o, l),
+                        t.props.onEntering(o, l),
                             t.onTransitionEnd(u, function () {
                                 t.safeSetState({ status: _ }, function () {
                                     t.props.onEntered(o, l);
                                 });
-                            }));
-                    }));
+                            });
+                    });
             }),
             (n.performExit = function () {
                 var e = this,
@@ -98,21 +110,21 @@ var o = n(73800),
                     return void this.safeSetState({ status: d }, function () {
                         e.props.onExited(r);
                     });
-                (this.props.onExit(r),
+                this.props.onExit(r),
                     this.safeSetState({ status: p }, function () {
-                        (e.props.onExiting(r),
+                        e.props.onExiting(r),
                             e.onTransitionEnd(n.exit, function () {
                                 e.safeSetState({ status: d }, function () {
                                     e.props.onExited(r);
                                 });
-                            }));
-                    }));
+                            });
+                    });
             }),
             (n.cancelNextCallback = function () {
                 null !== this.nextCallback && (this.nextCallback.cancel(), (this.nextCallback = null));
             }),
             (n.safeSetState = function (e, t) {
-                ((t = this.setNextCallback(t)), this.setState(e, t));
+                (t = this.setNextCallback(t)), this.setState(e, t);
             }),
             (n.setNextCallback = function (e) {
                 var t = this,
@@ -145,14 +157,51 @@ var o = n(73800),
                 if (e === u) return null;
                 var t = this.props,
                     n = t.children,
-                    i = (t.in, t.mountOnEnter, t.unmountOnExit, t.appear, t.enter, t.exit, t.timeout, t.addEndListener, t.onEnter, t.onEntering, t.onEntered, t.onExit, t.onExiting, t.onExited, t.nodeRef, (0, r.Z)(t, ['children', 'in', 'mountOnEnter', 'unmountOnExit', 'appear', 'enter', 'exit', 'timeout', 'addEndListener', 'onEnter', 'onEntering', 'onEntered', 'onExit', 'onExiting', 'onExited', 'nodeRef']));
-                return o.createElement(l.Z.Provider, { value: null }, 'function' == typeof n ? n(e, i) : o.cloneElement(o.Children.only(n), i));
+                    i =
+                        (t.in,
+                        t.mountOnEnter,
+                        t.unmountOnExit,
+                        t.appear,
+                        t.enter,
+                        t.exit,
+                        t.timeout,
+                        t.addEndListener,
+                        t.onEnter,
+                        t.onEntering,
+                        t.onEntered,
+                        t.onExit,
+                        t.onExiting,
+                        t.onExited,
+                        t.nodeRef,
+                        (0, r.Z)(t, [
+                            "children",
+                            "in",
+                            "mountOnEnter",
+                            "unmountOnExit",
+                            "appear",
+                            "enter",
+                            "exit",
+                            "timeout",
+                            "addEndListener",
+                            "onEnter",
+                            "onEntering",
+                            "onEntered",
+                            "onExit",
+                            "onExiting",
+                            "onExited",
+                            "nodeRef",
+                        ]));
+                return o.createElement(
+                    l.Z.Provider,
+                    { value: null },
+                    "function" == typeof n ? n(e, i) : o.cloneElement(o.Children.only(n), i),
+                );
             }),
             t
         );
     })(o.Component);
 function m() {}
-((h.contextType = l.Z),
+(h.contextType = l.Z),
     (h.propTypes = {}),
     (h.defaultProps = {
         in: !1,
@@ -166,11 +215,11 @@ function m() {}
         onEntered: m,
         onExit: m,
         onExiting: m,
-        onExited: m
+        onExited: m,
     }),
     (h.UNMOUNTED = u),
     (h.EXITED = d),
     (h.ENTERING = f),
     (h.ENTERED = _),
-    (h.EXITING = p));
+    (h.EXITING = p);
 let g = h;

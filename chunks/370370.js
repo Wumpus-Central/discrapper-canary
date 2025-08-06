@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => f,
-    j: () => u
+    j: () => u,
 });
 var r = n(255367),
     i = n(73800),
@@ -14,7 +14,7 @@ let u = [s.OV, s.EE, s.Af, s.U9, s.n8, s.pQ],
         let { entry: t, channel: n, selected: i, hovered: d } = e,
             { largeImage: f } = (0, o.rv)({
                 entry: t,
-                showCoverImage: !1
+                showCoverImage: !1,
             });
         return (0, r.jsxs)(l.Zb, {
             selected: i,
@@ -24,7 +24,7 @@ let u = [s.OV, s.EE, s.Af, s.U9, s.n8, s.pQ],
                         (0, r.jsx)(l.F9, {
                             entry: t,
                             channelId: n.id,
-                            guildId: n.guild_id
+                            guildId: n.guild_id,
                         }),
                         (0, r.jsx)(l.ll, { children: t.extra.activity_name }),
                         (0, r.jsx)(s.Gk, {
@@ -34,21 +34,21 @@ let u = [s.OV, s.EE, s.Af, s.U9, s.n8, s.pQ],
                                     e,
                                     {
                                         entry: t,
-                                        hovered: d
+                                        hovered: d,
                                     },
-                                    n
-                                )
-                            )
-                        })
-                    ]
+                                    n,
+                                ),
+                            ),
+                        }),
+                    ],
                 }),
                 (0, r.jsx)(a.f, {
                     alt: null == f ? void 0 : f.alt,
                     src: null == f ? void 0 : f.src,
                     size: 48,
-                    className: c.thumbnail
-                })
-            ]
+                    className: c.thumbnail,
+                }),
+            ],
         });
     },
     f = i.memo(d);

@@ -1,16 +1,16 @@
-(n.d(t, {
+n.d(t, {
     IN: () => o,
-    oZ: () => c
+    oZ: () => c,
 }),
     n(255367),
-    n(73800));
+    n(73800);
 var r = n(570140),
     l = n(610394);
-(n(238246), n(788983), n(592125), n(19780));
+n(238246), n(788983), n(592125), n(19780);
 var i = n(237997);
-(n(998502), n(487029));
+n(998502), n(487029);
 var s = n(710111);
-(n(981631), n(388032));
+n(981631), n(388032);
 let a = {
     width: s.FW.width,
     height: s.FW.height,
@@ -22,31 +22,31 @@ let a = {
     hasShadow: !1,
     skipTaskbar: !0,
     menubar: !0,
-    backgroundColor: '#00000000',
-    titleBarStyle: null
+    backgroundColor: "#00000000",
+    titleBarStyle: null,
 };
 function o(e, t) {
     let n = l.ZP.isOverlayV3EnabledForPID(t),
         s = i.default.disableClickableRegions;
-    (n ||
+    n ||
         s ||
         r.Z.dispatch({
-            type: 'OVERLAY_SET_INPUT_LOCKED',
+            type: "OVERLAY_SET_INPUT_LOCKED",
             locked: !1,
-            pid: t
+            pid: t,
         }),
         r.Z.dispatch({
-            type: 'SOUNDBOARD_SET_OVERLAY_ENABLED',
+            type: "SOUNDBOARD_SET_OVERLAY_ENABLED",
             pid: t,
             enabled: !0,
-            keepOpen: e
-        }));
+            keepOpen: e,
+        });
 }
 function c(e) {
     r.Z.dispatch({
-        type: 'SOUNDBOARD_SET_OVERLAY_ENABLED',
+        type: "SOUNDBOARD_SET_OVERLAY_ENABLED",
         pid: e,
-        enabled: !1
+        enabled: !1,
     });
     let t = l.ZP.isOverlayV3EnabledForPID(e),
         n = i.default.disableClickableRegions;
@@ -54,9 +54,9 @@ function c(e) {
         t ||
         n ||
         r.Z.dispatch({
-            type: 'OVERLAY_SET_INPUT_LOCKED',
+            type: "OVERLAY_SET_INPUT_LOCKED",
             locked: !0,
-            pid: e
+            pid: e,
         });
 }
-(s.FW.padding, a.width, a.height);
+s.FW.padding, a.width, a.height;

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     Z: () => D,
-    c: () => M
+    c: () => M,
 }),
-    n(388685));
+    n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(120356),
@@ -37,24 +37,24 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             i.forEach(function (t) {
                 var i;
-                ((i = n[t]),
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = i));
-            }));
+                        : (e[t] = i);
+            });
     }
     return e;
 }
@@ -82,48 +82,48 @@ let z = (e) => {
             o = a ? t : t.slice(0, 5),
             d = t.length > 5,
             m = t.length - 5,
-            f = E.intl.formatToPlainString(E.t['XSdy7+'], { numTruncated: m }),
+            f = E.intl.formatToPlainString(E.t["XSdy7+"], { numTruncated: m }),
             h = (0, u.Dt)();
         return 0 === t.length
             ? null
-            : (0, i.jsxs)('div', {
+            : (0, i.jsxs)("div", {
                   className: w.benefitsSection,
                   children: [
                       (0, i.jsx)(c.X6q, {
-                          variant: 'text-xs/bold',
-                          color: 'header-secondary',
+                          variant: "text-xs/bold",
+                          color: "header-secondary",
                           className: w.sectionHeader,
                           id: h,
-                          children: n
+                          children: n,
                       }),
                       (0, i.jsx)(c.LZC, { size: 12 }),
-                      (0, i.jsx)('ul', {
+                      (0, i.jsx)("ul", {
                           className: w.benefitsList,
-                          'aria-labelledby': h,
+                          "aria-labelledby": h,
                           children: o.map((e, t) =>
                               (0, i.jsx)(
-                                  'li',
+                                  "li",
                                   {
                                       children: (0, i.jsx)(
                                           O.Z,
                                           {
                                               guildId: l,
-                                              benefit: e
+                                              benefit: e,
                                           },
-                                          (0, g.ab)(e)
-                                      )
+                                          (0, g.ab)(e),
+                                      ),
                                   },
-                                  t
-                              )
-                          )
+                                  t,
+                              ),
+                          ),
                       }),
                       d &&
                           (0, i.jsx)(R, {
                               isViewAll: a,
                               onToggle: () => s((e) => !e),
-                              showMoreText: f
-                          })
-                  ]
+                              showMoreText: f,
+                          }),
+                  ],
               });
     },
     A = (e) => {
@@ -133,17 +133,17 @@ let z = (e) => {
             a = r.filter((e) => l.has(e.id));
         return 0 === a.length
             ? null
-            : (0, i.jsxs)('div', {
+            : (0, i.jsxs)("div", {
                   className: w.benefitsSection,
                   children: [
                       (0, i.jsx)(c.X6q, {
-                          variant: 'text-xs/bold',
-                          color: 'header-secondary',
+                          variant: "text-xs/bold",
+                          color: "header-secondary",
                           className: w.sectionHeader,
-                          children: E.intl.format(E.t.NAnXEh, { count: a.length })
+                          children: E.intl.format(E.t.NAnXEh, { count: a.length }),
                       }),
                       (0, i.jsx)(c.LZC, { size: 12 }),
-                      (0, i.jsx)('div', {
+                      (0, i.jsx)("div", {
                           className: w.emojiList,
                           children: a.map((e, t) => {
                               var n;
@@ -151,28 +151,28 @@ let z = (e) => {
                                   c.ua7,
                                   {
                                       text: e.name,
-                                      'aria-label': !1,
+                                      "aria-label": !1,
                                       children: (t) =>
                                           (0, i.jsx)(
-                                              'img',
+                                              "img",
                                               k(L({}, t), {
                                                   className: w.emojiListEmoji,
                                                   src: h.ZP.getEmojiURL({
                                                       id: e.id,
                                                       animated: e.animated,
-                                                      size: 24
+                                                      size: 24,
                                                   }),
                                                   width: 24,
                                                   height: 24,
-                                                  alt: e.name
-                                              })
-                                          )
+                                                  alt: e.name,
+                                              }),
+                                          ),
                                   },
-                                  null != (n = e.id) ? n : t
+                                  null != (n = e.id) ? n : t,
                               );
-                          })
-                      })
-                  ]
+                          }),
+                      }),
+                  ],
               });
     },
     M = (e) => {
@@ -185,41 +185,41 @@ let z = (e) => {
             [m] = p.XZ(t, n);
         return null == l && 0 === o.length && 0 === d.length && 0 === m.size
             ? null
-            : (0, i.jsxs)('div', {
+            : (0, i.jsxs)("div", {
                   className: a()(w.subscriptionPerks, r),
                   children: [
                       null != l &&
                           (0, i.jsxs)(c.y5t, {
                               component: (0, i.jsx)(c.X6q, {
-                                  variant: 'text-xs/bold',
-                                  color: 'header-secondary',
+                                  variant: "text-xs/bold",
+                                  color: "header-secondary",
                                   className: w.sectionHeader,
-                                  children: E.intl.string(E.t.FJZmY2)
+                                  children: E.intl.string(E.t.FJZmY2),
                               }),
                               children: [
                                   (0, i.jsx)(c.LZC, { size: 8 }),
                                   (0, i.jsx)(Z.Z, {
                                       role: u,
                                       guildId: n,
-                                      className: w.roleMessagePreview
-                                  })
-                              ]
+                                      className: w.roleMessagePreview,
+                                  }),
+                              ],
                           }),
                       (0, i.jsx)(z, {
                           header: E.intl.string(E.t.LtfhAg),
                           benefits: o,
-                          guildId: n
+                          guildId: n,
                       }),
                       (0, i.jsx)(z, {
-                          header: E.intl.string(E.t['8oxWpK']),
+                          header: E.intl.string(E.t["8oxWpK"]),
                           benefits: d,
-                          guildId: n
+                          guildId: n,
                       }),
                       (0, i.jsx)(A, {
                           guildId: n,
-                          listingId: t
-                      })
-                  ]
+                          listingId: t,
+                      }),
+                  ],
               });
     },
     R = (e) => {
@@ -229,23 +229,23 @@ let z = (e) => {
             (t = r
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          E.intl.string(E.t['r/xxPT']),
+                          E.intl.string(E.t["r/xxPT"]),
                           (0, i.jsx)(c.u04, {
-                              size: 'md',
-                              color: 'currentColor',
-                              className: w.toggleTruncationButtonIcon
-                          })
-                      ]
+                              size: "md",
+                              color: "currentColor",
+                              className: w.toggleTruncationButtonIcon,
+                          }),
+                      ],
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           l,
                           (0, i.jsx)(c.CJ0, {
-                              size: 'md',
-                              color: 'currentColor',
-                              className: w.toggleTruncationButtonIcon
-                          })
-                      ]
+                              size: "md",
+                              color: "currentColor",
+                              className: w.toggleTruncationButtonIcon,
+                          }),
+                      ],
                   })),
             (0, i.jsx)(o.zx, {
                 look: o.zx.Looks.BLANK,
@@ -253,7 +253,7 @@ let z = (e) => {
                 className: w.toggleTruncationButton,
                 innerClassName: w.toggleTruncationButtonInner,
                 onClick: n,
-                children: t
+                children: t,
             })
         );
     },
@@ -261,7 +261,12 @@ let z = (e) => {
         var t;
         let { listingId: n, guildId: l, groupListingId: u, analyticsLocation: h } = e,
             x = (0, v.jO)(n),
-            { openModal: _, canOpenModal: y, cannotOpenReason: Z, isCheckingTrialEligibility: O } = (0, T.Z)(x, l, u, h),
+            {
+                openModal: _,
+                canOpenModal: y,
+                cannotOpenReason: Z,
+                isCheckingTrialEligibility: O,
+            } = (0, T.Z)(x, l, u, h),
             z = (0, s.e7)([f.Z], () => f.Z.isSyncing),
             { activeSubscription: A, activeSubscriptionListing: D } = (0, j.Z)(u),
             B = (null == D ? void 0 : D.id) === n,
@@ -270,7 +275,7 @@ let z = (e) => {
             [H, W] = r.useState(!1),
             Y = r.useCallback((e) => {
                 let t = !1;
-                (null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t));
+                null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t);
             }, []),
             [K] = p._T(n),
             [V] = p.PK(n),
@@ -286,42 +291,44 @@ let z = (e) => {
             el = (null == x ? void 0 : x.soft_deleted) === !0,
             ea = E.intl.string(E.t.KzmEAw);
         return (er || ei) && !el
-            ? (0, i.jsxs)('article', {
+            ? (0, i.jsxs)("article", {
                   className: w.container,
-                  'aria-label': K,
+                  "aria-label": K,
                   children: [
                       Q &&
-                          (0, i.jsxs)('div', {
+                          (0, i.jsxs)("div", {
                               className: a()(w.tierTrialIndicator, w.tierTopIndicator),
                               children: [
                                   E.intl.format(E.t.L2ouio, {
                                       trialPeriodDuration: (0, g.iG)({
                                           interval: X.interval,
-                                          interval_count: X.interval_count
-                                      })
+                                          interval_count: X.interval_count,
+                                      }),
                                   }),
                                   (0, i.jsx)(c.ua7, {
                                       clickableOnMobile: !0,
-                                      text: E.intl.formatToPlainString(E.t.FYyR4u, { activeTrialUserLimit: null != q ? q : 0 }),
+                                      text: E.intl.formatToPlainString(E.t.FYyR4u, {
+                                          activeTrialUserLimit: null != q ? q : 0,
+                                      }),
                                       children: (e) =>
                                           (0, i.jsx)(
                                               c.d3s,
                                               L(
                                                   {
-                                                      size: 'xs',
-                                                      color: 'currentColor',
-                                                      className: w.tierTrialIndicatorIcon
+                                                      size: "xs",
+                                                      color: "currentColor",
+                                                      className: w.tierTrialIndicatorIcon,
                                                   },
-                                                  e
-                                              )
-                                          )
-                                  })
-                              ]
+                                                  e,
+                                              ),
+                                          ),
+                                  }),
+                              ],
                           }),
-                      (0, i.jsxs)('div', {
+                      (0, i.jsxs)("div", {
                           className: Q ? void 0 : w.cardContainerWithoutTopIndicator,
                           children: [
-                              (0, i.jsxs)('div', {
+                              (0, i.jsxs)("div", {
                                   className: w.tierInfoContainer,
                                   children: [
                                       $
@@ -329,27 +336,29 @@ let z = (e) => {
                                                 listingId: n,
                                                 isListingPublished: er,
                                                 expanded: en,
-                                                onToggleExpanded: () => et((e) => !e)
+                                                onToggleExpanded: () => et((e) => !e),
                                             })
                                           : (0, i.jsx)(I.xv, {
                                                 listingId: n,
-                                                isListingPublished: er
+                                                isListingPublished: er,
                                             }),
                                       en &&
                                           (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  $ && (0, i.jsx)('div', { className: w.divider }),
+                                                  $ && (0, i.jsx)("div", { className: w.divider }),
                                                   B
                                                       ? (0, i.jsx)(o.zx, {
                                                             fullWidth: !0,
                                                             look: o.zx.Looks.OUTLINED,
                                                             color: o.zx.Colors.PRIMARY,
                                                             disabled: !0,
-                                                            children: F ? E.intl.string(E.t.iKHmu7) : E.intl.string(E.t.XvAuMj)
+                                                            children: F
+                                                                ? E.intl.string(E.t.iKHmu7)
+                                                                : E.intl.string(E.t.XvAuMj),
                                                         })
                                                       : (0, i.jsx)(c.ua7, {
                                                             text: y ? null : Z,
-                                                            'aria-label': null != (t = y && Z) && t,
+                                                            "aria-label": null != (t = y && Z) && t,
                                                             children: (e) =>
                                                                 (0, i.jsx)(
                                                                     N.Z,
@@ -359,40 +368,40 @@ let z = (e) => {
                                                                         submitting: O,
                                                                         onClick: _,
                                                                         onlyShineOnHover: !0,
-                                                                        children: E.intl.string(E.t.fM5Zsb)
-                                                                    })
-                                                                )
+                                                                        children: E.intl.string(E.t.fM5Zsb),
+                                                                    }),
+                                                                ),
                                                         }),
                                                   (0, i.jsx)(c.LZC, { size: 16 }),
                                                   (0, i.jsx)(c.Text, {
-                                                      variant: 'text-sm/normal',
-                                                      color: 'text-default',
+                                                      variant: "text-sm/normal",
+                                                      color: "text-default",
                                                       className: a()((!H || !G) && w.tierDescriptionTruncate),
-                                                      children: (0, i.jsx)('div', {
+                                                      children: (0, i.jsx)("div", {
                                                           ref: Y,
-                                                          children: V
-                                                      })
+                                                          children: V,
+                                                      }),
                                                   }),
                                                   H &&
                                                       (0, i.jsx)(R, {
                                                           isViewAll: G,
                                                           onToggle: () => U((e) => !e),
-                                                          showMoreText: ea
-                                                      })
-                                              ]
-                                          })
-                                  ]
+                                                          showMoreText: ea,
+                                                      }),
+                                              ],
+                                          }),
+                                  ],
                               }),
                               en &&
                                   (0, i.jsx)(c.y5t, {
                                       children: (0, i.jsx)(M, {
                                           listingId: n,
-                                          guildId: l
-                                      })
-                                  })
-                          ]
-                      })
-                  ]
+                                          guildId: l,
+                                      }),
+                                  }),
+                          ],
+                      }),
+                  ],
               })
             : null;
     };

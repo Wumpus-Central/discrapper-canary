@@ -19,14 +19,14 @@ function p() {
                 name: d.intl.string(d.t.b8Cei4),
                 value: u.BR.DARK,
                 icon: i.Z6G,
-                className: _(t, u.BR.DARK)
+                className: _(t, u.BR.DARK),
             },
             {
                 name: d.intl.string(d.t.K2sFfn),
                 value: u.BR.LIGHT,
                 icon: i.chG,
-                className: _(t, u.BR.LIGHT)
-            }
+                className: _(t, u.BR.LIGHT),
+            },
         ];
     return (0, r.jsx)(a.sY7, {
         className: f.themeSelector,
@@ -34,8 +34,8 @@ function p() {
         value: t,
         onChange: (e) => {
             let { value: t } = e;
-            ((0, c.HV)(), (0, l.Bv)(t));
+            (0, c.HV)(), (0, l.Bv)(t);
         },
-        look: 'pill'
+        look: "pill",
     });
 }

@@ -20,11 +20,11 @@ function m(e, t, n) {
         b = (0, i.e7)([u.Z], () => null != n && u.Z.canWithPartialContext(g.Plq.MUTE_MEMBERS, { channelId: n }), [n]);
     return null != Z && null != P && (b || v) && E.speaker
         ? (0, l.jsx)(r.sNh, {
-              id: 'audience',
-              label: v ? f.intl.string(f.t['6C6PJy']) : f.intl.string(f.t.VK3vQ0),
+              id: "audience",
+              label: v ? f.intl.string(f.t["6C6PJy"]) : f.intl.string(f.t.VK3vQ0),
               action: () => {
                   v ? (0, d.yi)(Z) : (0, d.hz)(e, Z);
-              }
+              },
           })
         : null;
 }

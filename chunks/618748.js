@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(953529));
+n.d(t, { Z: () => M }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -37,8 +37,12 @@ function k(e) {
     let { application: t, guild: n } = e,
         l = (0, j.YB)(n.id),
         a = (0, j.qi)(n.id),
-        s = a.some((e) => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset),
-        o = (0, i.Wu)([h.Z], () => a.map((e) => h.Z.getRole(n.id, e.role_id)), [n.id, a]).some((e) => null != e && 0 !== e.color),
+        s = a.some(
+            (e) => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset,
+        ),
+        o = (0, i.Wu)([h.Z], () => a.map((e) => h.Z.getRole(n.id, e.role_id)), [n.id, a]).some(
+            (e) => null != e && 0 !== e.color,
+        ),
         c = a.some((e) => e.role_benefits.benefits.length > 0),
         d = null != t && n.features.has(w.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         u = [
@@ -47,44 +51,44 @@ function k(e) {
                 items: [
                     {
                         description: D.intl.string(D.t.zbO7fX),
-                        completed: d
-                    }
-                ]
+                        completed: d,
+                    },
+                ],
             },
             {
-                title: D.intl.string(D.t['/CfKoK']),
+                title: D.intl.string(D.t["/CfKoK"]),
                 items: [
                     {
                         description: D.intl.string(D.t.zvuI3d),
-                        completed: !0
+                        completed: !0,
                     },
                     {
                         description: D.intl.string(D.t.cVcEYG),
-                        completed: (null == l ? void 0 : l.description) != null && '' !== l.description
+                        completed: (null == l ? void 0 : l.description) != null && "" !== l.description,
                     },
                     {
-                        description: D.intl.string(D.t['88XnXF']),
-                        completed: (null == l ? void 0 : l.cover_image_asset) != null
-                    }
-                ]
+                        description: D.intl.string(D.t["88XnXF"]),
+                        completed: (null == l ? void 0 : l.cover_image_asset) != null,
+                    },
+                ],
             },
             {
                 title: D.intl.string(D.t.pXbGYW),
                 items: [
                     {
                         description: D.intl.string(D.t.pCxWKC),
-                        completed: s
+                        completed: s,
                     },
                     {
-                        description: D.intl.string(D.t['+amv5e']),
-                        completed: o
+                        description: D.intl.string(D.t["+amv5e"]),
+                        completed: o,
                     },
                     {
-                        description: D.intl.string(D.t['/P03Cw']),
-                        completed: c
-                    }
-                ]
-            }
+                        description: D.intl.string(D.t["/P03Cw"]),
+                        completed: c,
+                    },
+                ],
+            },
         ];
     return (0, r.jsx)(E.Z, { children: u });
 }
@@ -96,9 +100,16 @@ function L(e) {
             return e.id === (null == t || null == (n = t.team) ? void 0 : n.id);
         }),
         a = [Z.C.ACTION_REQUIRED, Z.C.BLOCKED, Z.C.SUSPENDED];
-    return (null == i ? void 0 : i.payout_account_status) != null && a.includes(null == i ? void 0 : i.payout_account_status)
+    return (null == i ? void 0 : i.payout_account_status) != null &&
+        a.includes(null == i ? void 0 : i.payout_account_status)
         ? (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)(l.LZC, { size: 16 }), (0, r.jsx)(C.Z, { children: D.intl.format(D.t.Yo0ZBw, { url: w.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }) }), (0, r.jsx)(l.LZC, { size: 16 })]
+              children: [
+                  (0, r.jsx)(l.LZC, { size: 16 }),
+                  (0, r.jsx)(C.Z, {
+                      children: D.intl.format(D.t.Yo0ZBw, { url: w.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }),
+                  }),
+                  (0, r.jsx)(l.LZC, { size: 16 }),
+              ],
           })
         : null;
 }
@@ -119,10 +130,10 @@ function M(e) {
                     initialTab: t,
                     children: (0, r.jsx)(G, {
                         guild: n,
-                        application: l
-                    })
-                })
-            })
+                        application: l,
+                    }),
+                }),
+            }),
         })
     );
 }
@@ -139,14 +150,14 @@ function G(e) {
             let e = h.Z.getEveryoneRole(n);
             o.Z.close();
             let t = { [e.id]: e };
-            ((0, d.iD)(n.id, {
+            (0, d.iD)(n.id, {
                 type: u.z.SERVER_SHOP,
                 roles: t,
-                initialTab: 'role_subscriptions',
-                returnToSection: w.pNK.ROLE_SUBSCRIPTIONS
+                initialTab: "role_subscriptions",
+                returnToSection: w.pNK.ROLE_SUBSCRIPTIONS,
             }),
                 (0, _.be)(n.id),
-                (0, m.uL)(w.Z5c.CHANNEL(n.id, R.oC.ROLE_SUBSCRIPTIONS)));
+                (0, m.uL)(w.Z5c.CHANNEL(n.id, R.oC.ROLE_SUBSCRIPTIONS));
         };
     if (!v) return (0, r.jsx)(l.$jN, {});
     switch (g) {
@@ -165,65 +176,65 @@ function G(e) {
         default:
             (0, x.vE)(g);
     }
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: A.container,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: A.mainContent,
                 children: [
                     (0, r.jsx)(l.vwX, {
-                        tag: 'h1',
-                        children: D.intl.string(D.t['KzCF//'])
+                        tag: "h1",
+                        children: D.intl.string(D.t["KzCF//"]),
                     }),
                     (0, r.jsx)(l.R94, {
                         type: l.R94.Types.DESCRIPTION,
-                        children: D.intl.string(D.t.KyGv0t)
+                        children: D.intl.string(D.t.KyGv0t),
                     }),
                     (0, r.jsx)(y.Z, { guild: n }),
                     c && (0, r.jsx)(L, { application: s }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: A.tabBarContainer,
                         children: [
                             (0, r.jsxs)(l.njP, {
                                 className: A.tabBar,
-                                'aria-label': D.intl.string(D.t['+1H47u']),
+                                "aria-label": D.intl.string(D.t["+1H47u"]),
                                 selectedItem: g,
-                                type: 'top',
-                                look: 'brand',
+                                type: "top",
+                                look: "brand",
                                 onItemSelect: j,
                                 children: [
                                     (0, r.jsx)(a.Z, {
                                         id: T.ue.BASIC_INFO,
                                         disabledTooltip: D.intl.string(D.t.NVDuUV),
                                         disabled: !c,
-                                        children: D.intl.string(D.t['/CfKoK'])
+                                        children: D.intl.string(D.t["/CfKoK"]),
                                     }),
                                     (0, r.jsx)(a.Z, {
                                         id: T.ue.TIERS,
                                         disabledTooltip: D.intl.string(D.t.NVDuUV),
                                         disabled: !c,
-                                        children: D.intl.string(D.t.pXbGYW)
+                                        children: D.intl.string(D.t.pXbGYW),
                                     }),
                                     (0, r.jsx)(a.Z, {
                                         id: T.ue.EMOJIS,
                                         disabledTooltip: D.intl.string(D.t.NVDuUV),
                                         disabled: !c,
-                                        children: D.intl.string(D.t.XBkDoK)
+                                        children: D.intl.string(D.t.XBkDoK),
                                     }),
                                     Z
                                         ? (0, r.jsx)(l.njP.Item, {
                                               className: A.__invalid_tabBarItem,
                                               id: T.ue.PAYMENT,
-                                              children: D.intl.string(D.t.p2Rsdn)
+                                              children: D.intl.string(D.t.p2Rsdn),
                                           })
-                                        : null
-                                ]
+                                        : null,
+                                ],
                             }),
                             c &&
-                                (0, r.jsx)('div', {
+                                (0, r.jsx)("div", {
                                     className: A.previewButton,
                                     children: (0, r.jsx)(l.ua7, {
-                                        text: D.intl.string(D.t['1wCH4O']),
+                                        text: D.intl.string(D.t["1wCH4O"]),
                                         children: (e) => {
                                             let { onMouseEnter: t, onMouseLeave: n } = e;
                                             return (0, r.jsx)(l.zxk, {
@@ -232,21 +243,21 @@ function G(e) {
                                                 onMouseLeave: E ? n : void 0,
                                                 onClick: M,
                                                 text: D.intl.string(D.t.vM81yc),
-                                                size: 'sm',
-                                                variant: 'secondary'
+                                                size: "sm",
+                                                variant: "secondary",
                                             });
-                                        }
-                                    })
-                                })
-                        ]
+                                        },
+                                    }),
+                                }),
+                        ],
                     }),
-                    t
-                ]
+                    t,
+                ],
             }),
             (0, r.jsx)(k, {
                 application: s,
-                guild: n
-            })
-        ]
+                guild: n,
+            }),
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => s }), n(388685));
+n.d(t, { Z: () => s }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(558381),
@@ -16,13 +16,13 @@ class o extends i.Component {
             slug: n,
             storeListingId: i,
             location: o,
-            pageSize: l
+            pageSize: l,
         });
     }
     constructor(...e) {
         var t, n;
-        (super(...e),
-            (t = 'fetchStoreListing'),
+        super(...e),
+            (t = "fetchStoreListing"),
             (n = (e) => {
                 let { storeListingId: t, skuId: n, applicationId: r } = this.props,
                     i = null != e ? e : n;
@@ -33,9 +33,9 @@ class o extends i.Component {
                       value: n,
                       enumerable: !0,
                       configurable: !0,
-                      writable: !0
+                      writable: !0,
                   })
-                : (this[t] = n));
+                : (this[t] = n);
     }
 }
 let s = o;

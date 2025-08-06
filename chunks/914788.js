@@ -1,4 +1,4 @@
-(n.d(e, { Z: () => X }), n(388685), n(539854), n(35282));
+n.d(e, { Z: () => X }), n(388685), n(539854), n(35282);
 var i,
     r,
     l,
@@ -18,7 +18,7 @@ function f(t, e, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (t[e] = n),
         t
@@ -28,15 +28,15 @@ function S(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                })
+                }),
             )),
             i.forEach(function (e) {
                 f(t, e, n[e]);
-            }));
+            });
     }
     return t;
 }
@@ -64,7 +64,12 @@ let C = null,
     y = U(),
     p = Y(),
     N = null,
-    L = (null == (r = window) || null == (i = r.location) ? void 0 : i.pathname) === T.ix.FAMILY_CENTER_MY_FAMILY ? T.dG.REQUESTS : (null == (a = window) || null == (l = a.location) ? void 0 : l.pathname) === T.ix.FAMILY_CENTER_SETTINGS ? T.dG.SETTINGS : T.dG.ACTIVITY,
+    L =
+        (null == (r = window) || null == (i = r.location) ? void 0 : i.pathname) === T.ix.FAMILY_CENTER_MY_FAMILY
+            ? T.dG.REQUESTS
+            : (null == (a = window) || null == (l = a.location) ? void 0 : l.pathname) === T.ix.FAMILY_CENTER_SETTINGS
+              ? T.dG.SETTINGS
+              : T.dG.ACTIVITY,
     h = !1,
     R = !1,
     M = null,
@@ -76,7 +81,7 @@ function U() {
         [T.MY.GUILD_ADD]: {},
         [T.MY.USER_INTERACTION]: {},
         [T.MY.GUILD_INTERACTION]: {},
-        [T.MY.USER_CALLED]: {}
+        [T.MY.USER_CALLED]: {},
     };
 }
 function Y() {
@@ -85,12 +90,15 @@ function Y() {
         [T.MY.GUILD_ADD]: 0,
         [T.MY.USER_INTERACTION]: 0,
         [T.MY.GUILD_INTERACTION]: 0,
-        [T.MY.USER_CALLED]: 0
+        [T.MY.USER_CALLED]: 0,
     };
 }
 function O() {
     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    return (arguments.length > 1 && arguments[1], (g = t.length > 0 ? t.reduce((t, e) => I(S({}, t), { [e.user_id]: e }), {}) : {}));
+    return (
+        arguments.length > 1 && arguments[1],
+        (g = t.length > 0 ? t.reduce((t, e) => I(S({}, t), { [e.user_id]: e }), {}) : {})
+    );
 }
 function m(t) {
     void 0 !== t && (p = t);
@@ -99,13 +107,17 @@ function v(t, e) {
     let n = e ? y : U();
     return (y = t.reduce((t, e) => {
         let i = e.display_type;
-        return (void 0 !== n[i] && void 0 === n[i][e.event_id] && (t[i][e.event_id] = e), t);
+        return void 0 !== n[i] && void 0 === n[i][e.event_id] && (t[i][e.event_id] = e), t;
     }, n));
 }
 function F(t) {
     D = t.reduce((t, e) => {
         var n;
-        return I(S({}, t), { [e.id]: I(S({}, (0, o.Jh)(e)), { approximateMemberCount: null != (n = e.approximate_member_count) ? n : 0 }) });
+        return I(S({}, t), {
+            [e.id]: I(S({}, (0, o.Jh)(e)), {
+                approximateMemberCount: null != (n = e.approximate_member_count) ? n : 0,
+            }),
+        });
     }, D);
 }
 function w() {
@@ -114,7 +126,7 @@ function w() {
 function j(t) {
     let { linkedUsers: e, familyCenterTeenActivity: n } = t,
         { actions: i, guilds: r, totals: l, teenId: a, rangeStartId: d } = n;
-    ((C = a), (A = d), v(i), m(l), F(r), O(e), (R = !1), (M = E.default.fromTimestamp(Date.now())), (h = !0));
+    (C = a), (A = d), v(i), m(l), F(r), O(e), (R = !1), (M = E.default.fromTimestamp(Date.now())), (h = !0);
 }
 function P(t) {
     let { linkedUsers: e } = t;
@@ -128,12 +140,12 @@ function H(t) {
     let { familyCenterTeenActivity: e } = t;
     if (void 0 === e) return;
     let { actions: n, totals: i, guilds: r, teenId: l, rangeStartId: a } = e;
-    ((C = l), (A = a), v(n), m(i), F(r), (R = !1), (M = E.default.fromTimestamp(Date.now())));
+    (C = l), (A = a), v(n), m(i), F(r), (R = !1), (M = E.default.fromTimestamp(Date.now()));
 }
 function G(t) {
     let { familyCenterTeenActivity: e } = t,
         { actions: n, guilds: i } = e;
-    (v(n, !0), F(i));
+    v(n, !0), F(i);
 }
 function V(t) {
     let { linkedUsers: e } = t;
@@ -168,7 +180,7 @@ function x(t) {
     null != n && (b = null != (e = (0, d.Zz)(n)) ? e : null);
 }
 function z() {
-    ((C = null), (A = null), (g = {}), (y = U()), (p = Y()), (D = {}), (R = !1), (M = null));
+    (C = null), (A = null), (g = {}), (y = U()), (p = Y()), (D = {}), (R = !1), (M = null);
 }
 class B extends u.Z {
     initialize() {
@@ -181,7 +193,7 @@ class B extends u.Z {
             F(t.guilds),
             v(t.teenActivity),
             (p = t.teenActivityTotals.reduce((t, e) => {
-                let [n, i] = e.split(':'),
+                let [n, i] = e.split(":"),
                     r = (0, _.jV)(n);
                 return void 0 === r ? t : I(S({}, t), { [r]: parseInt(i, 10) });
             }, Y())));
@@ -193,7 +205,7 @@ class B extends u.Z {
                 linkedUsers: Object.values(g),
                 teenActivityTotals: Object.entries(p).map((t) => {
                     let [e, n] = t;
-                    return ''.concat(e, ':').concat(n);
+                    return "".concat(e, ":").concat(n);
                 }),
                 teenActivity: (function () {
                     let t = [];
@@ -205,8 +217,8 @@ class B extends u.Z {
                         t
                     );
                 })(),
-                guilds: Object.values(D)
-            }
+                guilds: Object.values(D),
+            },
         };
     }
     getSelectedTeenId() {
@@ -268,9 +280,9 @@ class B extends u.Z {
             FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: Z,
             FAMILY_CENTER_HANDLE_TAB_SELECT: W,
             SET_LOCATION_METADATA: x,
-            LOGOUT: z
+            LOGOUT: z,
         });
     }
 }
-(f(B, 'displayName', 'FamilyCenterStore'), f(B, 'LATEST_SNAPSHOT_VERSION', 3));
+f(B, "displayName", "FamilyCenterStore"), f(B, "LATEST_SNAPSHOT_VERSION", 3);
 let X = new B();

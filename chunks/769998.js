@@ -21,77 +21,81 @@ function p(e) {
         O = (0, i.e7)([s.Z, a.Z], () => s.Z.can(d.Plq.MODERATE_MEMBERS, a.Z.getGuild(h)), [h]);
     if (null == j) return null;
     let { headerText: y, descriptionText: C, icon: N } = j;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.actionContainer,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: g.actionIconContainer,
                 children: (0, r.jsx)(N, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: g.actionIcon
-                })
+                    size: "md",
+                    color: "currentColor",
+                    className: g.actionIcon,
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: g.actionTextContainer,
                 children: [
                     (0, r.jsx)(l.X6q, {
-                        variant: 'heading-sm/semibold',
-                        children: y
+                        variant: "heading-sm/semibold",
+                        children: y,
                     }),
                     (0, r.jsx)(l.Text, {
-                        color: 'interactive-normal',
-                        variant: 'text-xs/medium',
-                        children: C
+                        color: "interactive-normal",
+                        variant: "text-xs/medium",
+                        children: C,
                     }),
                     f &&
                         (0, r.jsxs)(l.Text, {
-                            color: 'interactive-normal',
-                            variant: 'text-xs/medium',
+                            color: "interactive-normal",
+                            variant: "text-xs/medium",
                             children: [
-                                null === _ ? null : p === c.fX.MENTION_SPAM ? m.intl.format(m.t.i3lsKC, { friendlyDurationString: _ }) : m.intl.format(m.t.mvHxzc, { friendlyDurationString: _ }),
+                                null === _
+                                    ? null
+                                    : p === c.fX.MENTION_SPAM
+                                      ? m.intl.format(m.t.i3lsKC, { friendlyDurationString: _ })
+                                      : m.intl.format(m.t.mvHxzc, { friendlyDurationString: _ }),
                                 O &&
                                     (0, r.jsx)(l.P3F, {
                                         onClick: b(!0),
                                         className: g.editChannel,
-                                        tag: 'span',
-                                        role: 'link',
-                                        children: m.intl.string(m.t['0B95RE'])
-                                    })
-                            ]
-                        })
-                ]
+                                        tag: "span",
+                                        role: "link",
+                                        children: m.intl.string(m.t["0B95RE"]),
+                                    }),
+                            ],
+                        }),
+                ],
             }),
             (0, r.jsx)(l.ua7, {
                 text: m.intl.format(m.t.wx6Vb2, {}),
-                'aria-label': m.intl.formatToMarkdownString(m.t.wx6Vb2, {}),
+                "aria-label": m.intl.formatToMarkdownString(m.t.wx6Vb2, {}),
                 shouldShow: !O,
                 children: (e) => {
                     var t, n;
                     return (0, r.jsx)(
-                        'div',
+                        "div",
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, e)),
@@ -102,8 +106,8 @@ function p(e) {
                                     value: f,
                                     onChange: b(!1),
                                     disabled: !O,
-                                    className: g.__invalid_actionCheckbox
-                                })
+                                    className: g.__invalid_actionCheckbox,
+                                }),
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -117,10 +121,10 @@ function p(e) {
                               })(Object(n)).forEach(function (e) {
                                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                               }),
-                        t)
+                        t),
                     );
-                }
-            })
-        ]
+                },
+            }),
+        ],
     });
 }

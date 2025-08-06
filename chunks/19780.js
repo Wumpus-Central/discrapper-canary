@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { Z: () => q }), n(415506), n(388685));
+n.d(t, { Z: () => q }), n(415506), n(388685);
 var o,
     a = n(442837),
     s = n(570140),
@@ -18,7 +18,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,15 +28,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,13 +50,13 @@ let E = [],
     S = null,
     A = !1;
 function N(e, t) {
-    if (null == i) throw Error('Creating RTCConnection without session.');
+    if (null == i) throw Error("Creating RTCConnection without session.");
     let r = f.default.getId(),
         o = new (n(861687).Z)({
             userId: r,
             sessionId: i,
             guildId: e,
-            channelId: t
+            channelId: t,
         });
     return (
         o.on(l.z.State, (e, t, n) => {
@@ -64,44 +64,44 @@ function N(e, t) {
                 s.Z.dispatch(
                     g(
                         {
-                            type: 'RTC_CONNECTION_STATE',
-                            state: e
+                            type: "RTC_CONNECTION_STATE",
+                            state: e,
                         },
                         t,
-                        n
-                    )
-                )
+                        n,
+                    ),
+                ),
             );
         }),
         o.on(l.z.Video, (e, t, n, r, i) => {
             s.Z.wait(() =>
                 s.Z.dispatch({
-                    type: 'RTC_CONNECTION_VIDEO',
+                    type: "RTC_CONNECTION_VIDEO",
                     guildId: e,
                     channelId: t,
                     userId: n,
                     streamId: r,
                     rtcServerId: i,
                     context: h.Yn.DEFAULT,
-                    mediaEngineConnectionId: o.getMediaEngineConnectionId()
-                })
+                    mediaEngineConnectionId: o.getMediaEngineConnectionId(),
+                }),
             );
         }),
         o.on(l.z.Ping, (e, t) => {
             s.Z.wait(() =>
                 s.Z.dispatch({
-                    type: 'RTC_CONNECTION_PING',
+                    type: "RTC_CONNECTION_PING",
                     pings: e,
-                    quality: t
-                })
+                    quality: t,
+                }),
             );
         }),
         o.on(l.z.OutboundLossRate, (e) => {
             s.Z.wait(() =>
                 s.Z.dispatch({
-                    type: 'RTC_CONNECTION_LOSS_RATE',
-                    lossRate: e
-                })
+                    type: "RTC_CONNECTION_LOSS_RATE",
+                    lossRate: e,
+                }),
             );
         }),
         o.on(l.z.Speaking, (e, t) => {
@@ -110,64 +110,64 @@ function N(e, t) {
         o.on(l.z.Flags, (e, t) => {
             s.Z.wait(() => {
                 s.Z.dispatch({
-                    type: 'RTC_CONNECTION_FLAGS',
+                    type: "RTC_CONNECTION_FLAGS",
                     flags: t,
                     userId: e,
                     guildId: o.guildId,
                     channelId: o.channelId,
-                    context: o.context
+                    context: o.context,
                 });
             });
         }),
         o.on(l.z.UsersMerged, (e, t) => {
             s.Z.dispatch({
-                type: 'RTC_CONNECTION_USERS_MERGED',
+                type: "RTC_CONNECTION_USERS_MERGED",
                 userIds: e,
-                context: t
+                context: t,
             });
         }),
         o.on(l.z.ClientConnect, (e) => {
             s.Z.wait(() => {
                 s.Z.dispatch({
-                    type: 'RTC_CONNECTION_CLIENT_CONNECT',
+                    type: "RTC_CONNECTION_CLIENT_CONNECT",
                     userIds: e,
                     guildId: o.guildId,
                     channelId: o.channelId,
-                    context: o.context
+                    context: o.context,
                 });
             });
         }),
         o.on(l.z.ClientDisconnect, (e) => {
             s.Z.wait(() => {
                 s.Z.dispatch({
-                    type: 'RTC_CONNECTION_CLIENT_DISCONNECT',
+                    type: "RTC_CONNECTION_CLIENT_DISCONNECT",
                     userId: e,
                     guildId: o.guildId,
                     channelId: o.channelId,
-                    context: o.context
+                    context: o.context,
                 });
             });
         }),
         o.on(l.z.Platform, (e, t, n) => {
             s.Z.wait(() => {
                 s.Z.dispatch({
-                    type: 'RTC_CONNECTION_PLATFORM',
+                    type: "RTC_CONNECTION_PLATFORM",
                     platform: t,
                     userId: e,
-                    channelId: n
+                    channelId: n,
                 });
             });
         }),
         o.on(l.z.SecureFramesUpdate, () => {
             s.Z.wait(() => {
-                s.Z.dispatch({ type: 'RTC_CONNECTION_SECURE_FRAMES_UPDATE' });
+                s.Z.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
             });
         }),
         o.on(l.z.RosterMapUpdate, (e) => {
             s.Z.wait(() => {
                 s.Z.dispatch({
-                    type: 'RTC_CONNECTION_ROSTER_MAP_UPDATE',
-                    userIds: e
+                    type: "RTC_CONNECTION_ROSTER_MAP_UPDATE",
+                    userIds: e,
                 });
             });
         }),
@@ -180,37 +180,65 @@ function N(e, t) {
 }
 function C() {
     if (null == r) return !1;
-    ((v = r.getDuration()),
+    (v = r.getDuration()),
         s.Z.dispatch({
-            type: 'MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET',
-            mediaEngineConnectionId: r.getMediaEngineConnectionId()
+            type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
+            mediaEngineConnectionId: r.getMediaEngineConnectionId(),
         }),
         r.destroy(),
         (r = null),
         (O = null),
-        (A = !1));
+        (A = !1);
 }
 function R(e) {
-    return ((i = e.sessionId), (b = null), (y = null), C(), !1);
+    return (i = e.sessionId), (b = null), (y = null), C(), !1;
 }
 function P() {
-    ((i = null), (b = null), (y = null), C());
+    (i = null), (b = null), (y = null), C();
 }
 function w(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         var n, o, a;
-        if ((null == O || O.updateVoiceStates(t.userId, t.channelId), (I = I || (null != (n = null == O ? void 0 : O.getStats().max_voice_state_count) ? n : 0) > 1), f.default.getId() !== t.userId)) return !1;
-        if (null != r) t.sessionId === i ? ((null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId) ? (null == t.channelId ? C() : ((r.channelId = t.channelId), (A = !0))) : ((t.guildId !== r.guildId && null == t.channelId) || C(), null != t.channelId && ((b = null), (y = null), (r = N(t.guildId, t.channelId)), (I = (null != (o = null == O ? void 0 : O.getStats().max_voice_state_count) ? o : 0) > 1)))) : t.guildId === r.guildId && ((null == u.Z.getAwaitingRemoteSessionInfo() || null == u.Z.getRemoteSessionId()) && (b = r.channelId), C());
+        if (
+            (null == O || O.updateVoiceStates(t.userId, t.channelId),
+            (I = I || (null != (n = null == O ? void 0 : O.getStats().max_voice_state_count) ? n : 0) > 1),
+            f.default.getId() !== t.userId)
+        )
+            return !1;
+        if (null != r)
+            t.sessionId === i
+                ? (null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId)
+                    ? null == t.channelId
+                        ? C()
+                        : ((r.channelId = t.channelId), (A = !0))
+                    : ((t.guildId !== r.guildId && null == t.channelId) || C(),
+                      null != t.channelId &&
+                          ((b = null),
+                          (y = null),
+                          (r = N(t.guildId, t.channelId)),
+                          (I = (null != (o = null == O ? void 0 : O.getStats().max_voice_state_count) ? o : 0) > 1)))
+                : t.guildId === r.guildId &&
+                  ((null == u.Z.getAwaitingRemoteSessionInfo() || null == u.Z.getRemoteSessionId()) &&
+                      (b = r.channelId),
+                  C());
         else {
             if (t.sessionId !== i || null == t.channelId) return e;
-            ((b = null), (y = null), (r = N(t.guildId, t.channelId)), (I = (null != (a = null == O ? void 0 : O.getStats().max_voice_state_count) ? a : 0) > 1));
+            (b = null),
+                (y = null),
+                (r = N(t.guildId, t.channelId)),
+                (I = (null != (a = null == O ? void 0 : O.getStats().max_voice_state_count) ? a : 0) > 1);
         }
         return !0;
     }, !1);
 }
 function D(e) {
-    if (null == r || (null != e.guildId && e.guildId !== r.guildId) || (null != e.channelId && e.channelId !== r.channelId)) return !1;
+    if (
+        null == r ||
+        (null != e.guildId && e.guildId !== r.guildId) ||
+        (null != e.channelId && e.channelId !== r.channelId)
+    )
+        return !1;
     r.connect(e.endpoint, e.token);
 }
 function L() {
@@ -240,10 +268,10 @@ function U(e) {
     C();
 }
 function G(e) {
-    return (e.state === p.$7l.ACTIVE && null != r && r.resetBackoff('App state is active'), !1);
+    return e.state === p.$7l.ACTIVE && null != r && r.resetBackoff("App state is active"), !1;
 }
 function B(e) {
-    return (e.state === p.hes.RTC_CONNECTED && (T = !0), !0);
+    return e.state === p.hes.RTC_CONNECTED && (T = !0), !0;
 }
 function Z(e) {
     null == r || r.setNoiseCancellationEnabled(e.enabled);
@@ -257,7 +285,7 @@ function V(e) {
         t !== h.Yn.DEFAULT ||
         !Object.entries(n).some((e) => {
             let [t, n] = e;
-            return 'any' !== t && 0 !== n;
+            return "any" !== t && 0 !== n;
         })
     )
         return !1;
@@ -276,7 +304,7 @@ function W(e) {
 }
 class K extends (o = a.ZP.Store) {
     initialize() {
-        (this.waitFor(_.ZP), (0, d.r)(this.getRTCConnectionId, this.getMediaSessionId));
+        this.waitFor(_.ZP), (0, d.r)(this.getRTCConnectionId, this.getMediaSessionId);
     }
     getRTCConnection() {
         return r;
@@ -306,7 +334,7 @@ class K extends (o = a.ZP.Store) {
         return null == r ? void 0 : r.channelId;
     }
     getHostname() {
-        return null != r ? r.hostname : '';
+        return null != r ? r.hostname : "";
     }
     getQuality() {
         return null != r ? r.quality : p.IE4.UNKNOWN;
@@ -368,7 +396,7 @@ class K extends (o = a.ZP.Store) {
         return A;
     }
 }
-m(K, 'displayName', 'RTCConnectionStore');
+m(K, "displayName", "RTCConnectionStore");
 let z = new K(
     s.Z,
     __OVERLAY__
@@ -397,8 +425,8 @@ let z = new K(
               THREAD_DELETE: j,
               CALL_DELETE: k,
               APP_STATE_UPDATE: G,
-              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: Y
-          }
+              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: Y,
+          },
 );
 Promise.resolve()
     .then(n.bind(n, 626135))

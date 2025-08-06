@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,7 +69,8 @@ function E(e, t) {
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -79,7 +80,7 @@ function b(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let y = function (e) {
@@ -101,42 +102,68 @@ let y = function (e) {
             focusProps: C = {
                 offset: {
                     left: 4,
-                    right: 4
-                }
+                    right: 4,
+                },
             },
             hasThread: R,
             isSystemMessage: P,
             hasReply: w,
             author: D,
             onMouseEnter: L,
-            onMouseLeave: x
+            onMouseLeave: x,
         } = e,
-        M = E(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'author', 'onMouseEnter', 'onMouseLeave']);
-    let k = (0, s.e7)([f.Z], () => ((null == D ? void 0 : D.guildId) == null || (null == D ? void 0 : D.colorRoleId) == null ? null : f.Z.getRole(D.guildId, D.colorRoleId))),
+        M = E(e, [
+            "className",
+            "compact",
+            "contentOnly",
+            "zalgo",
+            "preview",
+            "disableInteraction",
+            "childrenRepliedMessage",
+            "childrenExecutedCommand",
+            "childrenHeader",
+            "childrenSystemMessage",
+            "childrenButtons",
+            "childrenMessageContent",
+            "childrenAccessories",
+            "messageRef",
+            "focusProps",
+            "hasThread",
+            "isSystemMessage",
+            "hasReply",
+            "author",
+            "onMouseEnter",
+            "onMouseLeave",
+        ]);
+    let k = (0, s.e7)([f.Z], () =>
+            (null == D ? void 0 : D.guildId) == null || (null == D ? void 0 : D.colorRoleId) == null
+                ? null
+                : f.Z.getRole(D.guildId, D.colorRoleId),
+        ),
         j = (0, d.yH)(null == D ? void 0 : D.guildId, k) && (0, u.S2)(D),
         [U, G] = i.useState(!1),
         B = i.useCallback(
             (e) => {
-                (G(!0), null == L || L(e));
+                G(!0), null == L || L(e);
             },
-            [L]
+            [L],
         ),
         Z = i.useCallback(
             (e) => {
-                (G(!1), null == x || x(e));
+                G(!1), null == x || x(e);
             },
-            [x]
+            [x],
         ),
         F = (0, r.jsx)(l.d.Provider, {
             value: {
                 animate: U,
-                setAnimate: G
+                setAnimate: G,
             },
             children: (0, r.jsx)(
                 c.tEY,
                 g(h({}, C), {
                     children: (0, r.jsxs)(
-                        'div',
+                        "div",
                         g(
                             h(
                                 {
@@ -150,36 +177,36 @@ let y = function (e) {
                                         [_.zalgo]: p,
                                         [_.hasThread]: R,
                                         [_.isSystemMessage]: P,
-                                        [_.hasReply]: w
+                                        [_.hasReply]: w,
                                     }),
-                                    ref: N
+                                    ref: N,
                                 },
-                                M
+                                M,
                             ),
                             {
-                                role: 'article',
+                                role: "article",
                                 onMouseEnter: B,
                                 onMouseLeave: Z,
                                 children: [
                                     y,
                                     O,
-                                    (0, r.jsxs)('div', {
+                                    (0, r.jsxs)("div", {
                                         className: _.contents,
-                                        children: [I, v, null == I && S]
+                                        children: [I, v, null == I && S],
                                     }),
                                     A,
                                     null != T
-                                        ? (0, r.jsx)('div', {
+                                        ? (0, r.jsx)("div", {
                                               className: _.buttonContainer,
-                                              children: T
+                                              children: T,
                                           })
-                                        : null
-                                ]
-                            }
-                        )
-                    )
-                })
-            )
+                                        : null,
+                                ],
+                            },
+                        ),
+                    ),
+                }),
+            ),
         });
     return b ? (0, r.jsx)(c.Rny, { children: F }) : F;
 };

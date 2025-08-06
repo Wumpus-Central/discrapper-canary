@@ -23,10 +23,10 @@ function v(e) {
         { themeType: P } = (0, m.z)(),
         { interactionSource: Z, interactionSourceId: E } = (0, u.Xo)(),
         N = (0, d.Z)({
-            display: 'recent',
+            display: "recent",
             user: t,
             entry: n,
-            analyticsLocations: I
+            analyticsLocations: I,
         });
     return null != P && (0, s.Rh)(n)
         ? (0, r.jsx)(c.Gt, {
@@ -51,26 +51,26 @@ function v(e) {
                               interactionSourceId: n.id,
                               sourceType: h.n_.ACTIVITY,
                               onAction: N,
-                              onShowToolbar: () => N({ action: 'HOVER_ACTIVITY_CARD' }),
+                              onShowToolbar: () => N({ action: "HOVER_ACTIVITY_CARD" }),
                               renderMoreButtonPopout: x
                                   ? void 0
                                   : (e) =>
                                         (0, r.jsx)(j.Z, {
-                                            display: 'recent',
+                                            display: "recent",
                                             entry: n,
                                             user: t,
                                             onClose: O,
-                                            children: e
+                                            children: e,
                                         }),
                               children: (0, r.jsx)(b.Z, {
                                   entry: n,
                                   user: t,
                                   onClose: O,
-                                  className: i()(v, { [y.hoisted]: Z === h.n_.ACTIVITY && E === n.id })
-                              })
-                          })
-                  })
-              })
+                                  className: i()(v, { [y.hoisted]: Z === h.n_.ACTIVITY && E === n.id }),
+                              }),
+                          }),
+                  }),
+              }),
           })
         : null;
 }

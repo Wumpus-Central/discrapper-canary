@@ -1,7 +1,7 @@
 n.d(t, {
     KV: () => c,
     ZP: () => f,
-    dj: () => l
+    dj: () => l,
 });
 var r = n(392711),
     i = n.n(r),
@@ -14,7 +14,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -51,6 +51,6 @@ class f {
         return !i().isEqual(r.get(t), n) && (r.set(t, n), (this._subscriptions[e] = r), this._onChange(e, u(r)), !0);
     }
     constructor(e) {
-        (s(this, '_subscriptions', {}), s(this, '_onChange', void 0), (this._onChange = e));
+        s(this, "_subscriptions", {}), s(this, "_onChange", void 0), (this._onChange = e);
     }
 }

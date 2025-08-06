@@ -1,1 +1,1 @@
-e.exports = { operations: 'operations_bab751' };
+e.exports = { operations: "operations_bab751" };

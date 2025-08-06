@@ -11,130 +11,130 @@ let u = function (e) {
     let { iconType: t, children: n } = e,
         i = null;
     switch (t) {
-        case 'voice':
+        case "voice":
             i = (0, r.jsx)(a.gj8, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.BVZqJi)
+                "aria-label": l.intl.string(l.t.BVZqJi),
             });
             break;
-        case 'voice-locked':
+        case "voice-locked":
             i = (0, r.jsx)(a.mBM, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.aa0FYm)
+                "aria-label": l.intl.string(l.t.aa0FYm),
             });
             break;
-        case 'stage':
+        case "stage":
             i = (0, r.jsx)(a.ewx, {
-                size: 'lg',
-                color: 'currentColor',
+                size: "lg",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.EErMzM)
+                "aria-label": l.intl.string(l.t.EErMzM),
             });
             break;
-        case 'stage-locked':
+        case "stage-locked":
             i = (0, r.jsx)(a.mBM, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.pKZ4Iy)
+                "aria-label": l.intl.string(l.t.pKZ4Iy),
             });
             break;
-        case 'thread':
+        case "thread":
             i = (0, r.jsx)(a.or_, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t['7Xm5QE'])
+                "aria-label": l.intl.string(l.t["7Xm5QE"]),
             });
             break;
-        case 'text':
+        case "text":
             i = (0, r.jsx)(a.VL1, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.GK18KC)
+                "aria-label": l.intl.string(l.t.GK18KC),
             });
             break;
-        case 'forum':
+        case "forum":
             i = (0, r.jsx)(a.Mmi, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.GbryDQ)
+                "aria-label": l.intl.string(l.t.GbryDQ),
             });
             break;
-        case 'post':
+        case "post":
             i = (0, r.jsx)(a.kBi, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.Y4REmJ)
+                "aria-label": l.intl.string(l.t.Y4REmJ),
             });
             break;
-        case 'home':
-        case 'guide':
+        case "home":
+        case "guide":
             i = (0, r.jsx)(a.Vy8, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.VbpLyc)
+                "aria-label": l.intl.string(l.t.VbpLyc),
             });
             break;
-        case 'browse':
-        case 'customize':
+        case "browse":
+        case "customize":
             i = (0, r.jsx)(a.H$4, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.et6wam)
+                "aria-label": l.intl.string(l.t.et6wam),
             });
             break;
-        case 'message':
+        case "message":
             i = (0, r.jsx)(a.kBi, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.BAB0yM)
+                "aria-label": l.intl.string(l.t.BAB0yM),
             });
             break;
-        case 'locked':
+        case "locked":
             i = (0, r.jsx)(a.mBM, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t['/YzI6+'])
+                "aria-label": l.intl.string(l.t["/YzI6+"]),
             });
             break;
-        case 'media':
+        case "media":
             i = (0, r.jsx)(a.XBm, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.seKITE)
+                "aria-label": l.intl.string(l.t.seKITE),
             });
             break;
-        case 'linked-roles':
+        case "linked-roles":
             i = (0, r.jsx)(a.xPt, {
-                size: 'md',
-                color: 'currentColor',
+                size: "md",
+                color: "currentColor",
                 className: c.icon,
-                'aria-label': l.intl.string(l.t.ghtnsr)
+                "aria-label": l.intl.string(l.t.ghtnsr),
             });
     }
-    return (0, r.jsxs)('span', {
-        className: o()('channelWithIcon', { [c.iconMentionText]: 'text' === t }),
+    return (0, r.jsxs)("span", {
+        className: o()("channelWithIcon", { [c.iconMentionText]: "text" === t }),
         children: [
             (0, r.jsx)(s.Z, { children: i }),
-            null != n && '' !== n
-                ? (0, r.jsx)('span', {
+            null != n && "" !== n
+                ? (0, r.jsx)("span", {
                       className: c.name,
-                      children: n
+                      children: n,
                   })
-                : null
-        ]
+                : null,
+        ],
     });
 };

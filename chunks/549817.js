@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(472816), n(794429), n(415506), n(388685), n(997841));
+n.d(t, { Z: () => L }), n(472816), n(794429), n(415506), n(388685), n(997841);
 var r = n(392711),
     i = n.n(r),
     o = n(544891),
@@ -30,7 +30,7 @@ function N(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -40,15 +40,15 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -56,11 +56,11 @@ function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -84,7 +84,7 @@ function w(e) {
         s = {},
         l = {};
     return (n.forEach((e) => {
-        ((s[e.id] = Date.now()), e.options.forEach((e) => (l[e.id] = Date.now())));
+        (s[e.id] = Date.now()), e.options.forEach((e) => (l[e.id] = Date.now()));
     }),
     t)
         ? o.tn
@@ -93,18 +93,18 @@ function w(e) {
                   body: {
                       onboarding_responses: i.map((e) => e.id),
                       onboarding_prompts_seen: s,
-                      onboarding_responses_seen: l
+                      onboarding_responses_seen: l,
                   },
-                  rejectWithError: !0
+                  rejectWithError: !0,
               })
               .then((t) => {
                   null != t.body &&
                       a.Z.dispatch({
-                          type: 'GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS',
+                          type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS",
                           guildId: e,
                           options: t.body.onboarding_responses,
                           prompts_seen: t.body.onboarding_prompts_seen,
-                          options_seen: t.body.onboarding_responses_seen
+                          options_seen: t.body.onboarding_responses_seen,
                       });
               })
               .catch((e) => b.Z.captureException(e))
@@ -114,22 +114,26 @@ function w(e) {
                   body: {
                       onboarding_responses: i.map((e) => e.id),
                       onboarding_prompts_seen: s,
-                      onboarding_responses_seen: l
+                      onboarding_responses_seen: l,
                   },
-                  rejectWithError: !1
+                  rejectWithError: !1,
               })
               .then((t) => {
                   null != t.body &&
                       a.Z.dispatch({
-                          type: 'GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS',
+                          type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS",
                           guildId: e,
                           options: t.body.onboarding_responses,
                           prompts_seen: t.body.onboarding_prompts_seen,
-                          options_seen: t.body.onboarding_responses_seen
+                          options_seen: t.body.onboarding_responses_seen,
                       });
               })
               .catch((t) => {
-                  b.Z.captureException(Error('Failed to update onboarding responses for guild '.concat(e, ': ').concat(t.statusCode), { cause: t }));
+                  b.Z.captureException(
+                      Error("Failed to update onboarding responses for guild ".concat(e, ": ").concat(t.statusCode), {
+                          cause: t,
+                      }),
+                  );
               });
 }
 function D(e, t, n) {
@@ -138,25 +142,25 @@ function D(e, t, n) {
     if (d.Z.isViewingRoles(e)) return void (0, u.og)(e, i().difference(i().union(s, t), n));
     (t.length > 0 || n.length > 0) &&
         a.Z.dispatch({
-            type: 'GUILD_MEMBER_UPDATE_LOCAL',
+            type: "GUILD_MEMBER_UPDATE_LOCAL",
             guildId: e,
             roles: i().difference(i().union(s, t), n),
             addedRoleIds: t,
-            removedRoleIds: n
+            removedRoleIds: n,
         });
 }
 let L = {
     selectOption(e, t, n, r) {
         let o = O.Z.getOnboardingPrompt(t);
         if (null == o) return;
-        let s = o.singleSelect ? i().without(i().map(o.options, 'id'), n) : [];
+        let s = o.singleSelect ? i().without(i().map(o.options, "id"), n) : [];
         a.Z.dispatch({
-            type: 'GUILD_ONBOARDING_SELECT_OPTION',
+            type: "GUILD_ONBOARDING_SELECT_OPTION",
             guildId: e,
             promptId: t,
             optionId: n,
             selected: r,
-            removedOptionIds: s
+            removedOptionIds: s,
         });
     },
     updateOnboardingResponses: i().debounce(w, 1000),
@@ -185,14 +189,14 @@ let L = {
                     roles_granted: i.size,
                     channels_granted: R,
                     guild_onboarding_covered_channel_ids: c.map((e) => e.id),
-                    guild_onboarding_uncovered_channel_ids: f.map((e) => e.id)
-                })
+                    guild_onboarding_uncovered_channel_ids: f.map((e) => e.id),
+                }),
             ),
             (0, s.Ju)(e, A.W.GUILD_ONBOARDING_QUESTION, y.default.fromTimestamp(Date.now())),
             w(e, !0),
             d.Z.isFullServerPreview(e))
         ) {
-            ((0, u.zS)(e, b, []), (0, u.aq)(e, { optInEnabled: !0 }), (0, u.og)(e, Array.from(i)));
+            (0, u.zS)(e, b, []), (0, u.aq)(e, { optInEnabled: !0 }), (0, u.og)(e, Array.from(i));
             let t = h.default.getCurrentUser();
             if (null != t) {
                 var L, x;
@@ -203,19 +207,20 @@ let L = {
     },
     onboardExistingMember(e, t) {
         let n = new Set(t);
-        ((O.Z.getEnabled(e) ? O.Z.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)), n.size > 0 && (0, f.Mo)(e, Array.from(n), !0, { page: T.ZY5.GUILD_ONBOARDING }));
+        (O.Z.getEnabled(e) ? O.Z.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)),
+            n.size > 0 && (0, f.Mo)(e, Array.from(n), !0, { page: T.ZY5.GUILD_ONBOARDING });
     },
     finishOnboarding(e) {
         a.Z.dispatch({
-            type: 'GUILD_ONBOARDING_COMPLETE',
-            guildId: e
+            type: "GUILD_ONBOARDING_COMPLETE",
+            guildId: e,
         });
     },
     setUserOnboardingStep(e, t) {
         a.Z.dispatch({
-            type: 'GUILD_ONBOARDING_SET_STEP',
+            type: "GUILD_ONBOARDING_SET_STEP",
             guildId: e,
-            step: t
+            step: t,
         });
     },
     async resetOnboarding(e) {
@@ -225,5 +230,5 @@ let L = {
             let i = null != (r = null == (n = p.ZP.getMember(e, t.id)) ? void 0 : n.flags) ? r : 0;
             await (0, c.e)(e, { flags: (0, g.mB)(i, S.q.COMPLETED_ONBOARDING, !1) });
         }
-    }
+    },
 };

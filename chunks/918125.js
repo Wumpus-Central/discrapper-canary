@@ -18,12 +18,12 @@ function h(e) {
                     {
                         threadId: a,
                         goToThread: n,
-                        showChannelName: !0
+                        showChannelName: !0,
                     },
-                    ''.concat(e.section, '-').concat(e.row)
+                    "".concat(e.section, "-").concat(e.row),
                 );
             },
-            [o, n]
+            [o, n],
         );
     return (0, s.jsx)(c.aVo, {
         className: t()(d.list, d.activeThreadsList),
@@ -33,6 +33,6 @@ function h(e) {
         sectionHeight: 0,
         rowHeight: 80,
         renderRow: h,
-        chunkSize: 20
+        chunkSize: 20,
     });
 }

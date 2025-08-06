@@ -15,14 +15,14 @@ function p(e) {
         {
             connectedChannelId: p,
             connectedActivity: f,
-            activityPanelMode: g
+            activityPanelMode: g,
         } = (0, i.cj)([s.ZP], () => {
             let e = s.ZP.getConnectedActivityLocation(),
                 t = s.ZP.getSelfEmbeddedActivityForLocation(e);
             return {
                 connectedChannelId: (0, o.p)(e),
                 connectedActivity: t,
-                activityPanelMode: s.ZP.getActivityPanelMode()
+                activityPanelMode: s.ZP.getActivityPanelMode(),
             };
         }),
         m = (0, i.e7)([l.Z], () => l.Z.getWindowOpen(h.KJ3.ACTIVITY_POPOUT));
@@ -33,6 +33,6 @@ function p(e) {
         : (0, r.jsx)(u.Z, {
               maxHeight: t,
               connectedLocation: f.location,
-              renderExternalHeader: n
+              renderExternalHeader: n,
           });
 }

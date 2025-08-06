@@ -19,7 +19,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 h(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -79,15 +79,15 @@ function b(e) {
             (0, r.jsx)(o.nn4, { children: _.intl.string(_.t.EJRzg4) }),
             null != h &&
                 !n &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     children: (0, r.jsx)(o.qEK, {
                         status: g,
                         isMobile: b,
                         className: p.avatar,
                         size: o.EFr.SIZE_20,
-                        'aria-label': d.ZP.getName(h),
-                        src: h.getAvatarURL(void 0, 20)
-                    })
+                        "aria-label": d.ZP.getName(h),
+                        src: h.getAvatarURL(void 0, 20),
+                    }),
                 }),
             (0, r.jsx)(f.Z.Title, {
                 level: e.level,
@@ -98,9 +98,9 @@ function b(e) {
                     children: [
                         (0, r.jsx)(o.DY3, {
                             text: O,
-                            position: 'bottom',
+                            position: "bottom",
                             className: v,
-                            children: null != y ? y : d.ZP.getName(h)
+                            children: null != y ? y : d.ZP.getName(h),
                         }),
                         I &&
                             (0, r.jsx)(o.ua7, {
@@ -109,16 +109,16 @@ function b(e) {
                                     (0, r.jsx)(
                                         o.tQf,
                                         E(m({}, e), {
-                                            size: 'xs',
-                                            'aria-label': _.intl.string(_.t.VHXh8f),
+                                            size: "xs",
+                                            "aria-label": _.intl.string(_.t.VHXh8f),
                                             color: o.TVs.colors.INTERACTIVE_NORMAL,
-                                            className: p.secureFramesIcon
-                                        })
-                                    )
-                            })
-                    ]
-                })
-            })
-        ]
+                                            className: p.secureFramesIcon,
+                                        }),
+                                    ),
+                            }),
+                    ],
+                }),
+            }),
+        ],
     });
 }

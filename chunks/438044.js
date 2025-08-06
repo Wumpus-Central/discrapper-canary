@@ -1,6 +1,6 @@
 t.d(r, {
     u: () => o,
-    y: () => i
+    y: () => i,
 });
 var e = t(73800);
 function o(n) {
@@ -8,7 +8,7 @@ function o(n) {
         function () {
             return n.hooks.dragSource();
         },
-        [n]
+        [n],
     );
 }
 function i(n) {
@@ -16,6 +16,6 @@ function i(n) {
         function () {
             return n.hooks.dragPreview();
         },
-        [n]
+        [n],
     );
 }

@@ -1,8 +1,8 @@
-(r.r(n),
+r.r(n),
     r.d(n, {
         ManaPlayground: () => i,
-        default: () => s
-    }));
+        default: () => s,
+    });
 var t = r(255367);
 r(73800);
 var u = r(51251),

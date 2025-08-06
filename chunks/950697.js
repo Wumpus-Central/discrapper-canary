@@ -15,29 +15,30 @@ class o {
             if (r.oneof) n.includes(r.oneof) || (n.push(r.oneof), e.push(r.oneof), t.push(r.oneof));
             else
                 switch ((t.push(r.localName), r.kind)) {
-                    case 'scalar':
-                    case 'enum':
+                    case "scalar":
+                    case "enum":
                         (!r.opt || r.repeat) && e.push(r.localName);
                         break;
-                    case 'message':
+                    case "message":
                         r.repeat && e.push(r.localName);
                         break;
-                    case 'map':
+                    case "map":
                         e.push(r.localName);
                 }
         this.data = {
             req: e,
             known: t,
-            oneofs: Object.values(n)
+            oneofs: Object.values(n),
         };
     }
     is(e, t, n = !1) {
         if (t < 0) return !0;
-        if (null == e || 'object' != typeof e) return !1;
+        if (null == e || "object" != typeof e) return !1;
         this.prepare();
         let r = Object.keys(e),
             o = this.data;
-        if (r.length < o.req.length || o.req.some((e) => !r.includes(e)) || (!n && r.some((e) => !o.known.includes(e)))) return !1;
+        if (r.length < o.req.length || o.req.some((e) => !r.includes(e)) || (!n && r.some((e) => !o.known.includes(e))))
+            return !1;
         if (t < 1) return !0;
         for (let r of o.oneofs) {
             let o = e[r];
@@ -52,28 +53,28 @@ class o {
     field(e, t, n, i) {
         let o = t.repeat;
         switch (t.kind) {
-            case 'scalar':
+            case "scalar":
                 if (void 0 === e) return t.opt;
                 if (o) return this.scalars(e, t.T, i, t.L);
                 return this.scalar(e, t.T, t.L);
-            case 'enum':
+            case "enum":
                 if (void 0 === e) return t.opt;
                 if (o) return this.scalars(e, r.wx.INT32, i);
                 return this.scalar(e, r.wx.INT32);
-            case 'message':
+            case "message":
                 if (void 0 === e) break;
                 if (o) return this.messages(e, t.T(), n, i);
                 return this.message(e, t.T(), n, i);
-            case 'map':
-                if ('object' != typeof e || null === e) return !1;
+            case "map":
+                if ("object" != typeof e || null === e) return !1;
                 if (i < 2) break;
                 if (!this.mapKeys(e, t.K, i)) return !1;
                 switch (t.V.kind) {
-                    case 'scalar':
+                    case "scalar":
                         return this.scalars(Object.values(e), t.V.T, i, t.V.L);
-                    case 'enum':
+                    case "enum":
                         return this.scalars(Object.values(e), r.wx.INT32, i);
-                    case 'message':
+                    case "message":
                         return this.messages(Object.values(e), t.V.T(), n, i);
                 }
         }
@@ -100,23 +101,23 @@ class o {
             case r.wx.SINT64:
                 switch (n) {
                     case r.pz.BIGINT:
-                        return 'bigint' == i;
+                        return "bigint" == i;
                     case r.pz.NUMBER:
-                        return 'number' == i && !isNaN(e);
+                        return "number" == i && !isNaN(e);
                     default:
-                        return 'string' == i;
+                        return "string" == i;
                 }
             case r.wx.BOOL:
-                return 'boolean' == i;
+                return "boolean" == i;
             case r.wx.STRING:
-                return 'string' == i;
+                return "string" == i;
             case r.wx.BYTES:
                 return e instanceof Uint8Array;
             case r.wx.DOUBLE:
             case r.wx.FLOAT:
-                return 'number' == i && !isNaN(e);
+                return "number" == i && !isNaN(e);
             default:
-                return 'number' == i && Number.isInteger(e);
+                return "number" == i && Number.isInteger(e);
         }
     }
     scalars(e, t, n, r) {
@@ -138,13 +139,13 @@ class o {
                 return this.scalars(
                     i.slice(0, n).map((e) => parseInt(e)),
                     t,
-                    n
+                    n,
                 );
             case r.wx.BOOL:
                 return this.scalars(
-                    i.slice(0, n).map((e) => 'true' == e || ('false' != e && e)),
+                    i.slice(0, n).map((e) => "true" == e || ("false" != e && e)),
                     t,
-                    n
+                    n,
                 );
             default:
                 return this.scalars(i, t, n, r.pz.STRING);

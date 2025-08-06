@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var r = n(147913),
     i = n(839606);
 function o(e, t, n) {
@@ -8,7 +8,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,7 +21,7 @@ function a(e) {
 }
 class s extends r.Z {
     constructor(...e) {
-        (super(...e), o(this, 'actions', { CHANNEL_SELECT: a }));
+        super(...e), o(this, "actions", { CHANNEL_SELECT: a });
     }
 }
 let l = new s();

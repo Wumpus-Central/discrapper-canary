@@ -21,7 +21,7 @@ function p(e) {
                       ? (0, l.rs)(t.message, d.u)
                       : (0, l.p6)({
                             channelId: t.channelId,
-                            renderOptions: d.u
+                            renderOptions: d.u,
                         })),
               s.Z.parse(e, !0, n));
     }, [e, t]);
@@ -30,8 +30,8 @@ function h(e) {
     let { content: t, className: n } = e,
         i = p(t),
         o = (0, u.Gt)();
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(n, _.markup, f.markdownContainer, { [f.containerSizedText]: o }),
-        children: i
+        children: i,
     });
 }

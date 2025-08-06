@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,5 +33,6 @@ class u extends (i = o.ZP.DeviceSettingsStore) {
         return r.lastGuildDismissedTime[e];
     }
 }
-(s(u, 'displayName', 'ApplicationSubscriptionChannelNoticeStore'), s(u, 'persistKey', 'ApplicationSubscriptionChannelNoticeStore'));
+s(u, "displayName", "ApplicationSubscriptionChannelNoticeStore"),
+    s(u, "persistKey", "ApplicationSubscriptionChannelNoticeStore");
 let d = new u(a.Z, { APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED: c });

@@ -1,9 +1,9 @@
-(r.d(t, {
+r.d(t, {
     EB: () => b,
     MV: () => f,
-    q3: () => h
+    q3: () => h,
 }),
-    r(388685));
+    r(388685);
 var n = r(73800),
     l = r(442837),
     a = r(100527),
@@ -40,7 +40,7 @@ let g = (e) => {
             analyticsSource: t,
             analyticsLocations: o,
             newestAnalyticsLocation: s,
-            currentTabLocation: n
+            currentTabLocation: n,
         };
     },
     h = (e, t, r, l, a) => {
@@ -52,8 +52,8 @@ let g = (e) => {
                 location_stack: i,
                 source: n,
                 page_session_id: e,
-                page_type: t === u.AW.CATALOG ? 'full' : t,
-                category: t === u.AW.HOME ? void 0 : r
+                page_type: t === u.AW.CATALOG ? "full" : t,
+                category: t === u.AW.HOME ? void 0 : r,
             });
         }, [i, e, t, r, c, l, a, s, p]);
     },
@@ -64,7 +64,7 @@ let g = (e) => {
                 s.ZP.canUseCollectibles(t) ||
                 o.default.track(d.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: p.cd.COLLECTIBLES_SHOP,
-                    location_stack: r
+                    location_stack: r,
                 });
         }, [r, t]);
     };

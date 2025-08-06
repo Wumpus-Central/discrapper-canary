@@ -1,4 +1,4 @@
-(n.d(t, { K: () => c }), n(539854));
+n.d(t, { K: () => c }), n(539854);
 var r = n(392711),
     i = n.n(r),
     o = n(379649),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,14 +19,14 @@ function l(e, t, n) {
 }
 class c {
     reset(e) {
-        ((this.current = null), (this.history = []), null != e && this.update(e));
+        (this.current = null), (this.history = []), null != e && this.update(e);
     }
     update(e) {
         this.current !== e &&
             ((this.current = e),
             this.history.push({
                 state: e,
-                startTime: (0, o.zO)()
+                startTime: (0, o.zO)(),
             }));
     }
     getVoiceConnectionSuccessStats() {
@@ -41,25 +41,25 @@ class c {
             state_ice_checking_ms: n(s.hes.ICE_CHECKING),
             state_no_route_ms: n(s.hes.NO_ROUTE),
             state_rtc_connecting_ms: n(s.hes.RTC_CONNECTING),
-            state_rtc_disconnected_ms: n(s.hes.RTC_DISCONNECTED)
+            state_rtc_disconnected_ms: n(s.hes.RTC_DISCONNECTED),
         };
     }
     getStateDurations(e) {
         if (0 === this.history.length) return [];
         let t = (0, a.Z)(this.history, (e, t) => ({
                 state: e.state,
-                durationMs: t.startTime - e.startTime
+                durationMs: t.startTime - e.startTime,
             })),
             n = () => {
                 let t = i().last(this.history);
                 return {
                     state: t.state,
-                    durationMs: e - t.startTime
+                    durationMs: e - t.startTime,
                 };
             };
-        return (t.push(n()), t);
+        return t.push(n()), t;
     }
     constructor(e) {
-        (l(this, 'current', null), l(this, 'history', []), null != e && this.update(e));
+        l(this, "current", null), l(this, "history", []), null != e && this.update(e);
     }
 }

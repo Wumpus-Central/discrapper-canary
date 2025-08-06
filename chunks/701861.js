@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685));
+n.d(t, { Z: () => A }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -30,7 +30,7 @@ function T(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -41,63 +41,63 @@ function P(e) {
         p = i.useCallback(() => {
             u.Z.openPrivateChannel({
                 recipientIds: t.id,
-                joinCall: !0
+                joinCall: !0,
             });
         }, [t.id]),
         h = i.useCallback(() => {
             u.Z.openPrivateChannel({
                 recipientIds: t.id,
                 joinCall: !0,
-                joinCallVideo: !0
+                joinCallVideo: !0,
             });
         }, [t.id]),
         f = i.useCallback(() => {
             _.Z.removeFriend({
                 userId: t.id,
                 applicationId: l ? n : null,
-                location: 'Friends'
+                location: "Friends",
             });
         }, [n, l, t.id]),
         m = i.useCallback(() => {
-            let e = l ? S.intl.string(S.t['RLcE6+']) : S.intl.string(S.t.cvSt1N);
+            let e = l ? S.intl.string(S.t["RLcE6+"]) : S.intl.string(S.t.cvSt1N);
             c.Z.show({
                 title: S.intl.formatToPlainString(S.t.fPLvZW, { name: b.ZP.getName(t) }),
                 body: S.intl.formatToPlainString(S.t.l5FFq6, { name: b.ZP.getName(t) }),
                 confirmText: e,
-                confirmVariant: 'critical-primary',
-                cancelText: S.intl.string(S.t['ETE/oK']),
-                onConfirm: f
+                confirmVariant: "critical-primary",
+                cancelText: S.intl.string(S.t["ETE/oK"]),
+                onConfirm: f,
             });
         }, [f, l, t]),
         O = (0, o.e7)([g.Z], () => g.Z.supports(C.AN.VIDEO)),
         E = t.isProvisional,
-        y = l ? S.intl.string(S.t['RLcE6+']) : S.intl.string(S.t.cvSt1N);
+        y = l ? S.intl.string(S.t["RLcE6+"]) : S.intl.string(S.t.cvSt1N);
     return (0, r.jsxs)(s.v2r, {
-        navId: 'friend-row',
-        'aria-label': S.intl.string(S.t.liqwPD),
+        navId: "friend-row",
+        "aria-label": S.intl.string(S.t.liqwPD),
         onClose: d.Zy,
         onSelect: a,
         children: [
             !E && O
                 ? (0, r.jsx)(s.sNh, {
-                      id: 'start-video-call',
+                      id: "start-video-call",
                       label: S.intl.string(S.t.oCqlGB),
-                      action: h
+                      action: h,
                   })
                 : null,
             !E &&
                 (0, r.jsx)(s.sNh, {
-                    id: 'start-voice-call',
+                    id: "start-voice-call",
                     label: S.intl.string(S.t.focH1t),
-                    action: p
+                    action: p,
                 }),
             (0, r.jsx)(s.sNh, {
-                id: 'remove-friend',
+                id: "remove-friend",
                 label: y,
                 action: m,
-                color: 'danger'
-            })
-        ]
+                color: "danger",
+            }),
+        ],
     });
 }
 class j extends i.PureComponent {
@@ -108,7 +108,16 @@ class j extends i.PureComponent {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillEnter(e);
     }
     render() {
-        let { user: e, isFocused: t, activities: n, applicationStream: i, status: l, isMobile: a, isGameRelationship: o, giftIntentType: c } = this.props,
+        let {
+                user: e,
+                isFocused: t,
+                activities: n,
+                applicationStream: i,
+                status: l,
+                isMobile: a,
+                isGameRelationship: o,
+                giftIntentType: c,
+            } = this.props,
             { isActiveRow: u } = this.state;
         return (0, r.jsx)(E.Z, {
             ref: this.peopleListItemRef,
@@ -118,7 +127,7 @@ class j extends i.PureComponent {
             onOtherHover: () => (u ? null : (0, d.Zy)()),
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: N.listItemContents,
                     children: [
                         (0, r.jsx)(v.Z, {
@@ -131,12 +140,12 @@ class j extends i.PureComponent {
                                 applicationStream: i,
                                 status: l,
                                 user: e,
-                                userIgnored: m.Z.isIgnored(e.id)
+                                userIgnored: m.Z.isIgnored(e.id),
                             }),
                             hovered: t,
-                            showAccountIdentifier: !o && !e.isProvisional
+                            showAccountIdentifier: !o && !e.isProvisional,
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: N.actions,
                             children: [
                                 null != c &&
@@ -144,39 +153,42 @@ class j extends i.PureComponent {
                                         recipientUser: e,
                                         giftIntentType: c,
                                         analyticsPage: I.ZY5.FRIENDS_LIST,
-                                        shouldHighlight: t
+                                        shouldHighlight: t,
                                     }),
                                 (0, r.jsx)(O.Z, {
                                     icon: s.kBi,
-                                    tooltip: S.intl.string(S.t['g33r/P']),
+                                    tooltip: S.intl.string(S.t["g33r/P"]),
                                     onClick: this.handleOpenPrivateChannel,
-                                    shouldHighlight: t
+                                    shouldHighlight: t,
                                 }),
                                 (0, r.jsx)(O.Z, {
                                     icon: s.Huf,
                                     tooltip: S.intl.string(S.t.UKOtz8),
                                     onClick: this.handleOpenActionsMenu,
-                                    shouldHighlight: t
-                                })
-                            ]
-                        })
-                    ]
-                })
+                                    shouldHighlight: t,
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
         });
     }
     constructor(...e) {
-        (super(...e),
-            T(this, 'peopleListItemRef', i.createRef()),
-            T(this, 'state', { isActiveRow: !1 }),
-            T(this, 'handleOpenPrivateChannel', (e) => {
+        super(...e),
+            T(this, "peopleListItemRef", i.createRef()),
+            T(this, "state", { isActiveRow: !1 }),
+            T(this, "handleOpenPrivateChannel", (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
-                let n = a().find(f.Z.getMutablePrivateChannels(), (e) => e.type === I.d4z.DM && e.getRecipientId() === t.id);
+                let n = a().find(
+                    f.Z.getMutablePrivateChannels(),
+                    (e) => e.type === I.d4z.DM && e.getRecipientId() === t.id,
+                );
                 null != n ? (0, h.uL)(I.Z5c.CHANNEL(I.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
             }),
-            T(this, 'handleOpenActionsMenu', (e) => {
+            T(this, "handleOpenActionsMenu", (e) => {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;
-                ((0, d.vq)(
+                (0, d.vq)(
                     e,
                     (e) => {
                         var l, a;
@@ -186,15 +198,15 @@ class j extends i.PureComponent {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             T(e, t, n[t]);
-                                        }));
+                                        });
                                 }
                                 return e;
                             })({}, e)),
@@ -202,7 +214,7 @@ class j extends i.PureComponent {
                                 {
                                     user: t,
                                     applicationId: i,
-                                    isGameRelationship: n
+                                    isGameRelationship: n,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
@@ -216,17 +228,17 @@ class j extends i.PureComponent {
                                   })(Object(a)).forEach(function (e) {
                                       Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
-                            l)
+                            l),
                         );
                     },
                     {
                         onClose: () => {
                             this.setState({ isActiveRow: !1 });
-                        }
-                    }
+                        },
+                    },
                 ),
-                    this.setState({ isActiveRow: !0 }));
-            }));
+                    this.setState({ isActiveRow: !0 });
+            });
     }
 }
 let A = j;

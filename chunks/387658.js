@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Z }), n(388685));
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -31,20 +31,20 @@ var r = n(255367),
     D = n(85884),
     L = n(100260);
 let x = 5,
-    M = 'placeholder',
+    M = "placeholder",
     k = [, , , , ,].fill(M);
 function j(e) {
     var t, n;
     let { context: o, command: a, section: l, sectionName: c } = e,
         d = i.useCallback(() => {
             let e = O.Z.entrypoint();
-            (y.yT(v.ti.COMMAND),
+            y.yT(v.ti.COMMAND),
                 (0, E.Mo)({
                     command: a,
                     location: m.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-                    sectionName: c
+                    sectionName: c,
                 }),
-                'channel' === o.type &&
+                "channel" === o.type &&
                     (_.Po({
                         channelId: o.channel.id,
                         command: a,
@@ -52,31 +52,31 @@ function j(e) {
                         location: m.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                         sectionName: c,
                         source: e,
-                        commandOrigin: m.bB.APPLICATION_LAUNCHER
+                        commandOrigin: m.bB.APPLICATION_LAUNCHER,
                     }),
-                    b.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: o.channel.id })));
+                    b.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: o.channel.id }));
         }, [o, a, l, c]),
         f = (null != (n = null == (t = a.options) ? void 0 : t.length) ? n : 0) > 0,
         p = i.useMemo(() => (0, N.ae)(a.displayDescription, void 0), [a.displayDescription]),
         h = i.useMemo(
             () =>
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: L.commandTextContainer,
                     children: [
                         (0, r.jsx)(u.Text, {
-                            variant: 'text-sm/semibold',
-                            color: 'header-primary',
-                            children: a.displayName
+                            variant: "text-sm/semibold",
+                            color: "header-primary",
+                            children: a.displayName,
                         }),
                         (0, r.jsx)(u.Text, {
-                            variant: 'text-xs/medium',
-                            color: 'text-muted',
+                            variant: "text-xs/medium",
+                            color: "text-muted",
                             lineClamp: 1,
-                            children: p
-                        })
-                    ]
+                            children: p,
+                        }),
+                    ],
                 }),
-            [a.displayName, p]
+            [a.displayName, p],
         );
     return (0, r.jsxs)(u.P3F, {
         className: L.command,
@@ -84,16 +84,16 @@ function j(e) {
         children: [
             (0, r.jsx)(u.Rny, {
                 className: L.commandFocusBlock,
-                children: h
+                children: h,
             }),
             f
                 ? (0, r.jsx)(s.F, {})
                 : (0, r.jsx)(G, {
                       context: o,
                       command: a,
-                      sectionName: c
-                  })
-        ]
+                      sectionName: c,
+                  }),
+        ],
     });
 }
 function U() {
@@ -101,72 +101,72 @@ function U() {
         { styleLarge: t, styleSmall: n } = i.useMemo(
             () => ({
                 styleLarge: {
-                    width: ''.concat(10 + 20 * Math.random(), '%'),
-                    height: 'auto'
+                    width: "".concat(10 + 20 * Math.random(), "%"),
+                    height: "auto",
                 },
                 styleSmall: {
-                    width: ''.concat(30 + 60 * Math.random(), '%'),
-                    height: 'auto'
-                }
+                    width: "".concat(30 + 60 * Math.random(), "%"),
+                    height: "auto",
+                },
             }),
-            []
+            [],
         ),
         o = i.useMemo(
             () =>
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: L.commandTextContainerPlaceholder,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: D.textPlaceholder,
                             style: t,
                             children: (0, r.jsx)(u.Text, {
                                 className: D.hidden,
-                                variant: 'text-sm/semibold',
-                                color: 'header-primary',
+                                variant: "text-sm/semibold",
+                                color: "header-primary",
                                 lineClamp: 1,
-                                children: '_'
-                            })
+                                children: "_",
+                            }),
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: D.textPlaceholder,
                             style: n,
                             children: (0, r.jsx)(u.Text, {
                                 className: D.hidden,
-                                variant: 'text-xs/medium',
-                                color: 'text-muted',
+                                variant: "text-xs/medium",
+                                color: "text-muted",
                                 lineClamp: 1,
-                                children: '_'
-                            })
-                        })
-                    ]
+                                children: "_",
+                            }),
+                        }),
+                    ],
                 }),
-            [t, n]
+            [t, n],
         );
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(L.command, D.loadingAnimation, { [D.noAnimation]: e }),
-        children: o
+        children: o,
     });
 }
 function G(e) {
     let { context: t, command: n, sectionName: o } = e;
-    ((0, p.PL)(!0, !0), (0, p.em)(t, !0, !0));
+    (0, p.PL)(!0, !0), (0, p.em)(t, !0, !0);
     let a = (0, I.D)(t),
         [s, c] = i.useState(!1),
         d = i.useCallback(
             async (e) => {
-                if ('channel' !== t.type) return;
+                if ("channel" !== t.type) return;
                 e.stopPropagation();
                 let r = O.Z.lastShownEntrypoint();
                 try {
                     let { isAuthorized: e } = await (0, g.L)({
                         applicationId: n.applicationId,
-                        channel: 'channel' === t.type ? t.channel : void 0,
+                        channel: "channel" === t.type ? t.channel : void 0,
                         commandIntegrationTypes: n.integration_types,
                         appLauncherContext: {
                             entrypoint: r,
                             location: m.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-                            sectionName: o
-                        }
+                            sectionName: o,
+                        },
                     });
                     e &&
                         (await (0, A.Y$)({
@@ -174,25 +174,25 @@ function G(e) {
                             optionValues: {},
                             context: a,
                             sectionName: o,
-                            commandOrigin: m.bB.APP_LAUNCHER_APPLICATION_VIEW
+                            commandOrigin: m.bB.APP_LAUNCHER_APPLICATION_VIEW,
                         }),
                         y.yT(v.ti.COMMAND));
                 } finally {
                     c(!1);
                 }
             },
-            [n, t, o, a]
+            [n, t, o, a],
         );
     return (0, r.jsx)(u.zxk, {
-        type: 'submit',
+        type: "submit",
         onClick: d,
         disabled: s,
-        variant: 'secondary',
-        'aria-label': w.intl.formatToPlainString(w.t.UXw6W1, { commandName: n.untranslatedName }),
+        variant: "secondary",
+        "aria-label": w.intl.formatToPlainString(w.t.UXw6W1, { commandName: n.untranslatedName }),
         text: w.intl.string(w.t.TXNS7e),
         icon: l.U,
-        iconPosition: 'end',
-        size: 'md'
+        iconPosition: "end",
+        size: "md",
     });
 }
 function B(e) {
@@ -201,19 +201,19 @@ function B(e) {
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: L.commandListHeader,
                       children: [
                           (0, r.jsx)(u.X6q, {
-                              variant: 'heading-sm/semibold',
-                              children: o
+                              variant: "heading-sm/semibold",
+                              children: o,
                           }),
-                          s
-                      ]
+                          s,
+                      ],
                   }),
-                  (0, r.jsx)('ul', {
+                  (0, r.jsx)("ul", {
                       className: L.commandContainer,
-                      'aria-label': o,
+                      "aria-label": o,
                       children: n.map((e, n) =>
                           e === M
                               ? (0, r.jsx)(U, {}, e + n)
@@ -223,13 +223,13 @@ function B(e) {
                                         context: t,
                                         command: e,
                                         section: i,
-                                        sectionName: a
+                                        sectionName: a,
                                     },
-                                    e.id
-                                )
-                      )
-                  })
-              ]
+                                    e.id,
+                                ),
+                      ),
+                  }),
+              ],
           });
 }
 function Z(e) {
@@ -239,7 +239,7 @@ function Z(e) {
             filterSection: c,
             commandsByActiveSection: u,
             sectionDescriptors: f,
-            loading: _
+            loading: _,
         } = h.wi({
             context: n,
             filters: { commandTypes: [d.yU.CHAT] },
@@ -249,19 +249,19 @@ function Z(e) {
                 includeFrecency: !0,
                 allowApplicationState: s,
                 installOnDemand: s,
-                applicationId: o.id
+                applicationId: o.id,
             },
-            allowFetch: !0
+            allowFetch: !0,
         }),
         p = null != (t = f.find((e) => e.id === o.id)) ? t : null,
         {
             sortOrder: m,
             setSortOrder: g,
             commands: E,
-            canSort: b
+            canSort: b,
         } = (0, S.Z)({
             sectionId: o.id,
-            commandsByActiveSection: u
+            commandsByActiveSection: u,
         });
     i.useEffect(() => {
         c(o.id);
@@ -269,13 +269,13 @@ function Z(e) {
     let y = (0, T.Z)({
         context: n,
         commands: E,
-        limit: x
+        limit: x,
     });
     return (i.useEffect(() => {
         l(E.length > 0);
     }, [l, E]),
     _ || 0 !== E.length)
-        ? (0, r.jsxs)('ul', {
+        ? (0, r.jsxs)("ul", {
               className: L.contentContainer,
               children: [
                   (0, r.jsx)(B, {
@@ -283,7 +283,7 @@ function Z(e) {
                       section: p,
                       commands: y,
                       headerName: w.intl.string(w.t.acSE0t),
-                      sectionName: a
+                      sectionName: a,
                   }),
                   (0, r.jsx)(B, {
                       context: n,
@@ -295,10 +295,10 @@ function Z(e) {
                           b &&
                           (0, r.jsx)(C.Z, {
                               sortOrder: m,
-                              onSortOptionClick: g
-                          })
-                  })
-              ]
+                              onSortOptionClick: g,
+                          }),
+                  }),
+              ],
           })
         : null;
 }

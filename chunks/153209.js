@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685), n(642613));
+n.d(t, { Z: () => S }), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -23,21 +23,21 @@ var r = n(255367),
 function E(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(c.M0o, {
-        tooltip: C.intl.string(C.t['8k+6QU']),
+        tooltip: C.intl.string(C.t["8k+6QU"]),
         color: c.YX$.TERTIARY,
         icon: (0, r.jsx)(c.W6s, {
-            size: 'xs',
-            color: 'currentColor'
+            size: "xs",
+            color: "currentColor",
         }),
         className: j.controlButton,
-        onClick: t
+        onClick: t,
     });
 }
 function S(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
         { initialized: c, items: C, loading: j, loadMore: S } = (0, p.y6)(),
         x = (0, s.e7)([u.Z], () => u.Z.localItems),
-        I = (0, g.Us)({ location: 'ForYou' }),
+        I = (0, g.Us)({ location: "ForYou" }),
         P = i.useMemo(() => [...[...C, ...x].sort((e, t) => -1 * O.default.compare(e.id, t.id))], [C, x]),
         N = C.length > 0 ? C[0] : null,
         w = m.d$.useSetting(),
@@ -49,7 +49,7 @@ function S(e) {
             }
             return !1;
         }, [N, w, P]);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(v.container, { [v.widerInbox]: I }),
         children: [
             (0, r.jsx)(_.Z, {
@@ -60,17 +60,21 @@ function S(e) {
                 children: Z
                     ? (0, r.jsx)(E, {
                           onClick: () => {
-                              null != N && (m.d$.updateSetting(N.id), b.default.track(y.rMx.NOTIFICATION_CENTER_ACTION, { action_type: d.ud.MARK_ALL_READ }));
-                          }
+                              null != N &&
+                                  (m.d$.updateSetting(N.id),
+                                  b.default.track(y.rMx.NOTIFICATION_CENTER_ACTION, {
+                                      action_type: d.ud.MARK_ALL_READ,
+                                  }));
+                          },
                       })
-                    : null
+                    : null,
             }),
             (0, r.jsx)(f.Z, {
                 initialized: c,
                 items: P,
                 loading: j,
-                loadMore: S
-            })
-        ]
+                loadMore: S,
+            }),
+        ],
     });
 }

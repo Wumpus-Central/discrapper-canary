@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(539854), n(388685));
+n.d(t, { Z: () => k }), n(539854), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -28,7 +28,7 @@ let p = null,
 function g() {
     return {
         _categories: [],
-        null: []
+        null: [],
     };
 }
 let E = g();
@@ -41,19 +41,19 @@ function y(e) {
         r = (e) => {
             var t;
             let { channel: r } = e;
-            (null != (t = n[null != r.parent_id ? r.parent_id : 'null']) ? t : n.null).push({
+            (null != (t = n[null != r.parent_id ? r.parent_id : "null"]) ? t : n.null).push({
                 channel: r,
-                index: -1
+                index: -1,
             });
         };
     return (
         t[f.d4z.GUILD_CATEGORY].forEach((e) => {
             let { channel: t } = e;
-            (n._categories.push({
+            n._categories.push({
                 channel: t,
-                index: -1
+                index: -1,
             }),
-                (n[t.id] = []));
+                (n[t.id] = []);
         }),
         t[u.sH].forEach(r),
         t[u.Zb].forEach(r),
@@ -63,26 +63,26 @@ function y(e) {
     );
 }
 function O() {
-    ((h = {}), null != p && y(p));
+    (h = {}), null != p && y(p);
 }
 function v(e) {
     let {
-        guild: { id: t }
+        guild: { id: t },
     } = e;
-    ((h[t] = void 0), p === t && y(t));
+    (h[t] = void 0), p === t && y(t);
 }
 function I(e) {
     let {
-        guild: { id: t }
+        guild: { id: t },
     } = e;
     delete h[t];
 }
 function T(e) {
     let {
-        channel: { guild_id: t }
+        channel: { guild_id: t },
     } = e;
     if (null == t) return !1;
-    ((h[t] = void 0), p === t && y(t));
+    (h[t] = void 0), p === t && y(t);
 }
 function S(e) {
     let { channels: t } = e,
@@ -93,7 +93,7 @@ function S(e) {
 function A(e) {
     let { guildId: t, user: n } = e;
     if (l.default.getId() !== n.id) return !1;
-    ((h[t] = void 0), t === p && y(t));
+    (h[t] = void 0), t === p && y(t);
 }
 function N() {
     if (null == p) return !1;
@@ -101,7 +101,7 @@ function N() {
 }
 function C(e) {
     let { guildId: t } = e;
-    ((h[t] = void 0), t === p && y(t));
+    (h[t] = void 0), t === p && y(t);
 }
 function R(e, t) {
     if (((m = t), null == e || null == e.getGuildId())) return !1;
@@ -133,13 +133,13 @@ function x(e) {
 }
 class M extends (r = i.ZP.Store) {
     initialize() {
-        (this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], L));
+        this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], L);
     }
     getCategories(e) {
         return null != e ? x(e) : E;
     }
 }
-_(M, 'displayName', 'GuildCategoryStore');
+_(M, "displayName", "GuildCategoryStore");
 let k = new M(o.Z, {
     CHANNEL_SELECT: D,
     CONNECTION_OPEN: O,
@@ -159,5 +159,5 @@ let k = new M(o.Z, {
     IMPERSONATE_UPDATE: C,
     IMPERSONATE_STOP: C,
     VOICE_CHANNEL_SELECT: P,
-    VOICE_STATE_UPDATES: w
+    VOICE_STATE_UPDATES: w,
 });

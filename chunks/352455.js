@@ -17,37 +17,37 @@ function f(e) {
         className: l()(h.card, t),
         children: [
             (0, r.jsx)(a.X6q, {
-                variant: 'heading-md/semibold',
+                variant: "heading-md/semibold",
                 className: h.header,
-                children: p.intl.string(p.t.HcbnMD)
+                children: p.intl.string(p.t.HcbnMD),
             }),
             (0, r.jsx)(a.Text, {
-                variant: 'text-sm/normal',
+                variant: "text-sm/normal",
                 children: p.intl.format(p.t.NkFrzM, {
                     onPrivacyClick: () => {
                         s.Z.open(u.oAB.DATA_AND_PRIVACY);
-                    }
-                })
+                    },
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: h.buttonContainer,
                 children: [
                     (0, r.jsx)(a.zxk, {
-                        variant: 'primary',
-                        size: 'sm',
+                        variant: "primary",
+                        size: "sm",
                         fullWidth: !0,
                         text: p.intl.string(p.t.ebojgI),
-                        onClick: () => (0, o.g)([u.pjP.PERSONALIZATION], [])
+                        onClick: () => (0, o.g)([u.pjP.PERSONALIZATION], []),
                     }),
                     (0, r.jsx)(a.zxk, {
-                        variant: 'secondary',
-                        size: 'sm',
+                        variant: "secondary",
+                        size: "sm",
                         fullWidth: !0,
                         text: p.intl.string(p.t.f3Pet7),
-                        onClick: () => n(d.L.DISMISS)
-                    })
-                ]
-            })
-        ]
+                        onClick: () => n(d.L.DISMISS),
+                    }),
+                ],
+            }),
+        ],
     });
 }

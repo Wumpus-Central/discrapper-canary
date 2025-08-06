@@ -9,12 +9,16 @@ function o(e) {
         () => () => {
             null != s.current && (clearTimeout(s.current), (s.current = null));
         },
-        []
+        [],
     );
     let l = (e) => {
-        if ((null == s.current || e || !1 !== a.current || (clearTimeout(s.current), (s.current = null)), !e || !0 === a.current)) return;
+        if (
+            (null == s.current || e || !1 !== a.current || (clearTimeout(s.current), (s.current = null)),
+            !e || !0 === a.current)
+        )
+            return;
         let n = () => {
-            (t(), (a.current = !0), (s.current = null));
+            t(), (a.current = !0), (s.current = null);
         };
         null != o ? (s.current = setTimeout(n, o)) : n();
     };

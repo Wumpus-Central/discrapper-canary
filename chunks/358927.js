@@ -12,7 +12,7 @@ let s = (e) => {
     let { modalProps: s, onConfirm: u, onCancel: b, newInvoice: f } = e,
         O = {
             newCurrencyAndPrice: (0, l.T4)(f.total, f.currency),
-            helpCenterLink: i.Z.getArticleURL(a.BhN.LOCALIZED_PRICING)
+            helpCenterLink: i.Z.getArticleURL(a.BhN.LOCALIZED_PRICING),
         };
     return (0, n.jsx)(
         c.ConfirmModal,
@@ -20,24 +20,24 @@ let s = (e) => {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (t) {
                         var n;
-                        ((n = r[t]),
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = n));
-                    }));
+                                : (e[t] = n);
+                    });
             }
             return e;
         })(
@@ -47,16 +47,16 @@ let s = (e) => {
                 cancelText: p.intl.string(p.t.gm1Ven),
                 onConfirm: u,
                 onCancel: b,
-                confirmButtonColor: o.zx.Colors.BRAND
+                confirmButtonColor: o.zx.Colors.BRAND,
             },
-            s
+            s,
         )),
         (r = r =
             {
                 children: (0, n.jsx)(c.Text, {
-                    variant: 'text-md/normal',
-                    children: p.intl.format(p.t.oZBduL, O)
-                })
+                    variant: "text-md/normal",
+                    children: p.intl.format(p.t.oZBduL, O),
+                }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -70,6 +70,6 @@ let s = (e) => {
               })(Object(r)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
-        t)
+        t),
     );
 };

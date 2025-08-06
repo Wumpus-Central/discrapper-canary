@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(290780));
+n.d(t, { Z: () => u }), n(290780);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -12,47 +12,47 @@ function u() {
             saturation: e,
             useReducedMotion: t,
             roleStyle: n,
-            highContrastMode: u
+            highContrastMode: u,
         } = (0, i.cj)([o.Z], () => ({
             saturation: o.Z.saturation,
             useReducedMotion: o.Z.useReducedMotion,
             roleStyle: o.Z.roleStyle,
-            highContrastMode: o.Z.isHighContrastModeEnabled
+            highContrastMode: o.Z.isHighContrastModeEnabled,
         })),
-        d = s.U.useExperiment({ location: 'useAccessibilityItems' }, { autoTrackExposure: !0 }).enabled,
+        d = s.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled,
         p = [
             {
                 name: c.intl.string(c.t.YEOEi4),
-                value: 'username'
+                value: "username",
             },
             {
                 name: c.intl.string(c.t.mQaro6),
-                value: 'dot'
+                value: "dot",
             },
             {
                 name: c.intl.string(c.t.Ji2EVF),
-                value: 'hidden'
-            }
+                value: "hidden",
+            },
         ],
         g = [
             (0, r.jsx)(
                 l.kSQ,
                 {
                     children: (0, r.jsx)(l.S89, {
-                        id: 'reduced-motion',
+                        id: "reduced-motion",
                         label: c.intl.string(c.t.b3XBzs),
                         checked: t,
-                        action: () => (0, a.Zt)(t ? 'no-preference' : 'reduce')
-                    })
+                        action: () => (0, a.Zt)(t ? "no-preference" : "reduce"),
+                    }),
                 },
-                'reduced-motion'
+                "reduced-motion",
             ),
             (0, r.jsx)(
                 l.kSQ,
                 {
                     children: (0, r.jsx)(l.II_, {
-                        id: 'input',
-                        label: c.intl.string(c.t['5PWWCQ']),
+                        id: "input",
+                        label: c.intl.string(c.t["5PWWCQ"]),
                         control: (t, n) => {
                             var i, o;
                             return (0, r.jsx)(
@@ -61,24 +61,24 @@ function u() {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                ((r = n[t]),
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = r));
-                                            }));
+                                                        : (e[t] = r);
+                                            });
                                     }
                                     return e;
                                 })({}, t)),
@@ -87,7 +87,7 @@ function u() {
                                         ref: n,
                                         value: 100 * e,
                                         onChange: (e) => (0, a.o2)(e / 100),
-                                        'aria-label': c.intl.string(c.t['5PWWCQ'])
+                                        "aria-label": c.intl.string(c.t["5PWWCQ"]),
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
@@ -101,18 +101,18 @@ function u() {
                                       })(Object(o)).forEach(function (e) {
                                           Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
                                       }),
-                                i)
+                                i),
                             );
-                        }
-                    })
+                        },
+                    }),
                 },
-                'input'
+                "input",
             ),
             (0, r.jsx)(
                 l.kSQ,
                 {
                     children: (0, r.jsx)(l.sNh, {
-                        id: 'role-colors',
+                        id: "role-colors",
                         label: c.intl.string(c.t.uSOPWl),
                         children: p.map((e) => {
                             let { name: t, value: i } = e;
@@ -120,18 +120,18 @@ function u() {
                                 l.k5B,
                                 {
                                     id: i,
-                                    group: 'role-colors',
+                                    group: "role-colors",
                                     checked: i === n,
                                     label: t,
-                                    action: () => (0, a.u1)(i)
+                                    action: () => (0, a.u1)(i),
                                 },
-                                i
+                                i,
                             );
-                        })
-                    })
+                        }),
+                    }),
                 },
-                'role-colors'
-            )
+                "role-colors",
+            ),
         ];
     return (
         d &&
@@ -140,14 +140,14 @@ function u() {
                     l.kSQ,
                     {
                         children: (0, r.jsx)(l.S89, {
-                            id: 'high-contrast',
-                            label: 'Enable High Contrast Mode',
+                            id: "high-contrast",
+                            label: "Enable High Contrast Mode",
                             checked: u,
-                            action: () => (0, a.vW)(u ? o.X.DEFAULT : o.X.HIGH)
-                        })
+                            action: () => (0, a.vW)(u ? o.X.DEFAULT : o.X.HIGH),
+                        }),
                     },
-                    'high-contrast'
-                )
+                    "high-contrast",
+                ),
             ),
         g
     );

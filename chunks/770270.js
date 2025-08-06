@@ -1,6 +1,6 @@
 n.d(t, {
     i: () => l,
-    p: () => a
+    p: () => a,
 });
 var r = n(981631),
     i = n(388032);
@@ -17,11 +17,13 @@ function l(e) {
         case r.evJ.VANITY_URL_EMPLOYEE_ONLY_GUILD_DISABLED:
             return i.intl.string(i.t.tSBmIi);
         case r.evJ.VANITY_URL_REQUIREMENTS_NOT_MET:
-            return i.intl.string(i.t['w+yGQU']);
+            return i.intl.string(i.t["w+yGQU"]);
         default:
             return i.intl.string(i.t.ckQidX);
     }
 }
 function a(e) {
-    return e.features.has(r.oNc.VANITY_URL) || (e.features.has(r.oNc.GUILD_WEB_PAGE_VANITY_URL) && null != e.vanityURLCode);
+    return (
+        e.features.has(r.oNc.VANITY_URL) || (e.features.has(r.oNc.GUILD_WEB_PAGE_VANITY_URL) && null != e.vanityURLCode)
+    );
 }

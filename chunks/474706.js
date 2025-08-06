@@ -14,34 +14,34 @@ function u() {
         u = null == n ? void 0 : n.planSelection;
     return null == u || null == t || 0 === t.length
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, i.jsxs)("div", {
               className: d.container,
               children: [
-                  (0, i.jsx)('div', {
+                  (0, i.jsx)("div", {
                       className: d.avatar,
                       children: (0, i.jsx)(c.Z, {
                           maxRewardImageSrc: u.getImageUrl(!0, e),
                           claimableRewards: t,
-                          size: s.EFr.SIZE_48
-                      })
+                          size: s.EFr.SIZE_48,
+                      }),
                   }),
-                  (0, i.jsxs)('div', {
+                  (0, i.jsxs)("div", {
                       className: d.textSection,
                       children: [
                           (0, i.jsx)(s.Text, {
-                              variant: 'text-md/medium',
-                              color: 'text-primary',
-                              children: u.heading()
+                              variant: "text-md/medium",
+                              color: "text-primary",
+                              children: u.heading(),
                           }),
                           null != u.subheading &&
                               t.length > 1 &&
                               (0, i.jsx)(s.Text, {
-                                  variant: 'text-md/medium',
+                                  variant: "text-md/medium",
                                   className: d.subheading,
-                                  children: u.subheading(t.length)
-                              })
-                      ]
-                  })
-              ]
+                                  children: u.subheading(t.length),
+                              }),
+                      ],
+                  }),
+              ],
           });
 }

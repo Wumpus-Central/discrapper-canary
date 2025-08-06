@@ -15,24 +15,24 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -61,47 +61,51 @@ function x(e) {
             (e) => {
                 O(f(h({}, _), { triggerMetadata: f(h({}, _.triggerMetadata), { keywordFilter: e }) }));
             },
-            [O, _]
+            [O, _],
         ),
         C = i.useCallback(
             (e) => {
                 O(f(h({}, _), { triggerMetadata: f(h({}, _.triggerMetadata), { allowList: e }) }));
             },
-            [O, _]
+            [O, _],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: p.cardContentsContainer,
         children: [
             (0, r.jsxs)(d.Z, {
                 step: 1,
-                header: g.intl.string(g.t['ue+tnZ']),
+                header: g.intl.string(g.t["ue+tnZ"]),
                 children: [
                     (0, r.jsx)(o.Z, {
                         onChangeText: y,
                         maxWordCount: m.RH,
-                        initialValue: null == (t = _.triggerMetadata) ? void 0 : t.keywordFilter
+                        initialValue: null == (t = _.triggerMetadata) ? void 0 : t.keywordFilter,
                     }),
                     (0, r.jsx)(s.Z, {
                         rule: _,
                         onChangeRule: O,
-                        collapsed: (null == _ || null == (n = _.triggerMetadata) ? void 0 : n.regexPatterns) == null || (null == _ || null == (x = _.triggerMetadata) ? void 0 : x.regexPatterns.length) === 0
+                        collapsed:
+                            (null == _ || null == (n = _.triggerMetadata) ? void 0 : n.regexPatterns) == null ||
+                            (null == _ || null == (x = _.triggerMetadata) ? void 0 : x.regexPatterns.length) === 0,
                     }),
                     (0, r.jsx)(l.Z, {
                         onChange: C,
                         initialValue: null == (b = _.triggerMetadata) ? void 0 : b.allowList,
                         maxWordCount: m.n4,
-                        collapsed: (null == (j = _.triggerMetadata) ? void 0 : j.allowList) == null || (null == (v = _.triggerMetadata) ? void 0 : v.allowList.length) === 0
-                    })
-                ]
+                        collapsed:
+                            (null == (j = _.triggerMetadata) ? void 0 : j.allowList) == null ||
+                            (null == (v = _.triggerMetadata) ? void 0 : v.allowList.length) === 0,
+                    }),
+                ],
             }),
             (0, r.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
             (0, r.jsx)(d.Z, {
                 step: 2,
-                header: g.intl.string(g.t['18TOiY']),
+                header: g.intl.string(g.t["18TOiY"]),
                 children: (0, r.jsx)(a.Z, {
                     rule: _,
-                    onChangeRule: O
-                })
+                    onChangeRule: O,
+                }),
             }),
             (0, r.jsx)(u.Z, { type: u.Z.Type.CROSS }),
             (0, r.jsx)(d.Z, {
@@ -109,9 +113,9 @@ function x(e) {
                 header: g.intl.string(g.t.eq3gjo),
                 children: (0, r.jsx)(c.Z, {
                     rule: _,
-                    onChangeRule: O
-                })
-            })
-        ]
+                    onChangeRule: O,
+                }),
+            }),
+        ],
     });
 }

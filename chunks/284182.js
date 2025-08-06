@@ -16,26 +16,26 @@ function h(e) {
             let e = d.Z.getUploads(t.id, a.Ie.CREATE_FORUM_POST.drafts.type);
             return null == e ? void 0 : e.filter((e) => !0 !== e.isThumbnail);
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: m.container,
         children: [
             (0, r.jsx)(l.Text, {
-                variant: 'text-md/semibold',
-                color: 'text-muted',
-                children: u.intl.string(u.t.omKGKi)
+                variant: "text-md/semibold",
+                color: "text-muted",
+                children: u.intl.string(u.t.omKGKi),
             }),
             (0, r.jsx)(l.Text, {
-                variant: 'text-sm/normal',
-                color: 'text-muted',
-                children: u.intl.string(u.t.zUjLl5)
+                variant: "text-sm/normal",
+                color: "text-muted",
+                children: u.intl.string(u.t.zUjLl5),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 children: (0, r.jsx)(l.zJl, {
                     className: m.uploadsContainer,
-                    orientation: 'horizontal',
+                    orientation: "horizontal",
                     paddingFix: !1,
                     fade: !0,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: m.uploads,
                         children: [
                             n.map((e) =>
@@ -47,16 +47,16 @@ function h(e) {
                                         upload: e,
                                         keyboardModeEnabled: !0,
                                         hideFileName: !0,
-                                        size: s.q.SMALL
+                                        size: s.q.SMALL,
                                     },
-                                    e.id
-                                )
+                                    e.id,
+                                ),
                             ),
-                            (0, r.jsx)(c._, { channelId: t.id })
-                        ]
-                    })
-                })
-            })
-        ]
+                            (0, r.jsx)(c._, { channelId: t.id }),
+                        ],
+                    }),
+                }),
+            }),
+        ],
     });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Eg: () => u,
-    XL: () => h
+    XL: () => h,
 });
 var r = n(73800),
     i = n(94171),
@@ -10,24 +10,24 @@ function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -60,7 +60,7 @@ function u(e) {
 function d(e) {
     if (null == e) return !1;
     try {
-        return window.getComputedStyle(e).overflow.includes('scroll');
+        return window.getComputedStyle(e).overflow.includes("scroll");
     } catch (e) {
         return !1;
     }
@@ -75,21 +75,28 @@ function h(e, t) {
                     requestAnimationFrame(() => {
                         var r, l, u;
                         let d = null != (l = null == (r = i.current) ? void 0 : r.getBoundingClientRect()) ? l : null;
-                        ((u = {
+                        (u = {
                             name: t,
                             guildId: e,
                             disabled: n,
-                            boundingRect: null != d ? d : null
+                            boundingRect: null != d ? d : null,
                         }),
                             (0, o.j)(() => {
                                 c.setState((e) => {
                                     var t, n;
-                                    return { upsellsByGuildId: a(s({}, null != (t = e.upsellsByGuildId) ? t : {}), { [u.guildId]: a(s({}, null != (n = e.upsellsByGuildId[u.guildId]) ? n : {}), { [u.name]: u }) }) };
+                                    return {
+                                        upsellsByGuildId: a(s({}, null != (t = e.upsellsByGuildId) ? t : {}), {
+                                            [u.guildId]: a(
+                                                s({}, null != (n = e.upsellsByGuildId[u.guildId]) ? n : {}),
+                                                { [u.name]: u },
+                                            ),
+                                        }),
+                                    };
                                 });
-                            }));
+                            });
                     });
                 };
-            if (null == r) return (l(), () => {});
+            if (null == r) return l(), () => {};
             let u = (function (e) {
                 let t = e.parentNode;
                 for (; null != t && t !== document.body && !d(t); ) t = t.parentNode;
@@ -97,9 +104,9 @@ function h(e, t) {
             })(r);
             return (
                 l(),
-                null == u || u.addEventListener('scroll', l, { passive: !0 }),
+                null == u || u.addEventListener("scroll", l, { passive: !0 }),
                 () => {
-                    null == u || u.removeEventListener('scroll', l);
+                    null == u || u.removeEventListener("scroll", l);
                 }
             );
         }, [e, t, n]),

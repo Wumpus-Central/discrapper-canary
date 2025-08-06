@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     O: () => u,
-    S: () => s
+    S: () => s,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(237617),
     o = n(266338);
@@ -35,7 +35,7 @@ function s(e, t) {
 let l = new Map([[1, { threshold: 1 }]]);
 function c(e) {
     let t = l.get(e);
-    return (null != t || ((t = { threshold: e }), l.set(e, t)), t);
+    return null != t || ((t = { threshold: e }), l.set(e, t)), t;
 }
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,

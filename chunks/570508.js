@@ -1,4 +1,4 @@
 var r = n(613078);
 e.exports = function (e) {
-    return !!e && !!e.ownerDocument && r(e) && 'IMG' === e.nodeName;
+    return !!e && !!e.ownerDocument && r(e) && "IMG" === e.nodeName;
 };

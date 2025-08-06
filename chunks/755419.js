@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => f,
-    X: () => _
+    X: () => _,
 });
 var r = n(255367),
     i = n(120356),
@@ -15,28 +15,28 @@ let f = {
         [l.Vt.FRACTIONAL_PREMIUM]: {
             render: (e) => {
                 let { alt: t, className: n } = e;
-                return (0, r.jsx)('img', {
+                return (0, r.jsx)("img", {
                     src: u,
                     className: n,
                     alt: t,
-                    height: 120
+                    height: 120,
                 });
-            }
+            },
         },
         [l.Vt.ORB_PROFILE_BADGE]: {
             render: (e) => {
-                let { animationState: t = 'on', className: n } = e;
+                let { animationState: t = "on", className: n } = e;
                 return (0, r.jsx)(s.Z, {
                     animationState: t,
-                    className: o()(c.orbProfileBadgeAsset, n)
+                    className: o()(c.orbProfileBadgeAsset, n),
                 });
-            }
-        }
+            },
+        },
     },
     _ = () => ({
         id: a.l.ORB_PROFILE_BADGE,
         icon: a.l.ORB_PROFILE_BADGE,
         iconSrc: d.Z,
-        description: '',
-        isPreviewMode: !0
+        description: "",
+        isPreviewMode: !0,
     });

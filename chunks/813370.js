@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     A: () => u,
-    g: () => c
+    g: () => c,
 }),
-    n(997841));
+    n(997841);
 var r = n(73800),
     i = n(783097),
     o = n(630388),
@@ -17,9 +17,9 @@ function l(e) {
     return r && a;
 }
 function c(e) {
-    return !!l(e) && (0, a.QK)('canLaunchFrame').enabled;
+    return !!l(e) && (0, a.QK)("canLaunchFrame").enabled;
 }
 function u(e) {
-    let { enabled: t } = (0, a.u$)('canLaunchFrame');
+    let { enabled: t } = (0, a.u$)("canLaunchFrame");
     return r.useMemo(() => null != e && l(e) && t, [e, t]);
 }

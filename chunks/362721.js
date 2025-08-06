@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => d,
-    wQ: () => u
+    wQ: () => u,
 });
 var r = n(442837),
     i = n(496675),
@@ -15,8 +15,8 @@ function c(e, t, n, r) {
             : o.BT({
                   permission: n,
                   user: r,
-                  context: e
-              })
+                  context: e,
+              }),
     );
 }
 function u(e) {

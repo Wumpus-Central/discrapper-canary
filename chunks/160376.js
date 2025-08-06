@@ -1,4 +1,4 @@
-(Object.defineProperty(t, '__esModule', { value: !0 }), (t.Swatch = void 0));
+Object.defineProperty(t, "__esModule", { value: !0 }), (t.Swatch = void 0);
 var n =
         Object.assign ||
         function (e) {
@@ -26,22 +26,22 @@ var u = (t.Swatch = function (e) {
         f = e.children,
         d = e.focus,
         h = e.focusStyle,
-        b = 'transparent' === t,
+        b = "transparent" === t,
         v = (0, a.default)({
             default: {
                 swatch: n(
                     {
                         background: t,
-                        height: '100%',
-                        width: '100%',
-                        cursor: 'pointer',
-                        position: 'relative',
-                        outline: 'none'
+                        height: "100%",
+                        width: "100%",
+                        cursor: "pointer",
+                        position: "relative",
+                        outline: "none",
                     },
                     r,
-                    d ? (void 0 === h ? {} : h) : {}
-                )
-            }
+                    d ? (void 0 === h ? {} : h) : {},
+                ),
+            },
         }),
         g = {};
     return (
@@ -50,7 +50,7 @@ var u = (t.Swatch = function (e) {
                 return u(t, e);
             }),
         o.default.createElement(
-            'div',
+            "div",
             n(
                 {
                     style: v.swatch,
@@ -61,16 +61,16 @@ var u = (t.Swatch = function (e) {
                     tabIndex: 0,
                     onKeyDown: function (e) {
                         return 13 === e.keyCode && s(t, e);
-                    }
+                    },
                 },
-                g
+                g,
             ),
             f,
             b &&
                 o.default.createElement(l.default, {
                     borderRadius: v.swatch.borderRadius,
-                    boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
-                })
+                    boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.1)",
+                }),
         )
     );
 });

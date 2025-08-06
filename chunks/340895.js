@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => k }), n(388685));
+n.d(t, { Z: () => k }), n(388685);
 var i,
     o = n(442837),
     a = n(433517),
@@ -20,16 +20,16 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
     );
 }
-let E = 'IncomingCallStore',
+let E = "IncomingCallStore",
     b = {
         width: 232,
-        height: 315
+        height: 315,
     },
     y = 10,
     O = new Set(),
@@ -43,20 +43,20 @@ function A() {
         ? r
         : {
               x: e.width / 2 - b.width / 2,
-              y: e.height / 2 - b.height / 2
+              y: e.height / 2 - b.height / 2,
           };
 }
 function N(e) {
     if (null == e || null == I.get(e)) return !1;
-    (I.delete(e), (T = new Set(T)).delete(e));
+    I.delete(e), (T = new Set(T)).delete(e);
 }
 function C(e) {
     let { channelId: t, ringing: n } = e;
     if (
-        'GUILD_RING_START' === e.type &&
+        "GUILD_RING_START" === e.type &&
         !d.Z.getCurrentConfig({
             guildId: e.guildId,
-            location: 'IncomingCallCreate'
+            location: "IncomingCallCreate",
         }).enabled
     )
         return !1;
@@ -70,7 +70,7 @@ function C(e) {
             I.set(t, {
                 channel: e,
                 x: r + n,
-                y: i + n
+                y: i + n,
             }),
             void (T = new Set(T)).add(t)
         );
@@ -80,10 +80,10 @@ function C(e) {
 function R(e) {
     let { channelId: t } = e;
     return (
-        ('GUILD_RING_STOP' !== e.type ||
+        ("GUILD_RING_STOP" !== e.type ||
             (!!d.Z.getCurrentConfig({
                 guildId: e.guildId,
-                location: 'IncomingCallDelete'
+                location: "IncomingCallDelete",
             }).enabled &&
                 !!e.ringing.includes(f.default.getId()))) &&
         N(t)
@@ -98,7 +98,7 @@ function w(e) {
     return (
         (r = {
             x: t,
-            y: n
+            y: n,
         }),
         a.K.set(E, r),
         !1
@@ -121,7 +121,7 @@ function x() {
 }
 class M extends (i = o.ZP.Store) {
     initialize() {
-        (this.waitFor(_.Z, p.Z), this.syncWith([p.Z], L), this.syncWith([u.Z], L), this.syncWith([l.Z], x));
+        this.waitFor(_.Z, p.Z), this.syncWith([p.Z], L), this.syncWith([u.Z], L), this.syncWith([l.Z], x);
     }
     getIncomingCalls() {
         return S ? v : Array.from(I.values());
@@ -136,7 +136,7 @@ class M extends (i = o.ZP.Store) {
         return !S && T.size > 0;
     }
 }
-g(M, 'displayName', 'IncomingCallStore');
+g(M, "displayName", "IncomingCallStore");
 let k = new M(s.Z, {
     CALL_CREATE: C,
     CALL_UPDATE: C,
@@ -145,5 +145,5 @@ let k = new M(s.Z, {
     GUILD_RING_STOP: R,
     VOICE_CHANNEL_SELECT: P,
     INCOMING_CALL_MOVE: w,
-    CHANNEL_DELETE: D
+    CHANNEL_DELETE: D,
 });

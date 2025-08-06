@@ -1,4 +1,4 @@
-(n.d(t, { R: () => g }), n(388685));
+n.d(t, { R: () => g }), n(388685);
 var r = n(73800),
     i = n(442837),
     o = n(704215),
@@ -15,23 +15,28 @@ var r = n(73800),
     m = n(921944);
 function g(e) {
     let { isSettingsOpen: t } = e,
-        { activePickerChannelId: n, openPickerForChannel: g, setLastShownChatWallpaperPickerType: E, lastShownChatWallpaperPickerType: b } = (0, _.B)(),
+        {
+            activePickerChannelId: n,
+            openPickerForChannel: g,
+            setLastShownChatWallpaperPickerType: E,
+            lastShownChatWallpaperPickerType: b,
+        } = (0, _.B)(),
         y = (0, i.e7)([u.Z], () => u.Z.getCurrentlySelectedChannelId()),
         { isChatWallpaperEnabled: O, channelType: v } = (0, i.cj)([c.Z], () => {
             let e = c.Z.getChannel(y);
             return {
                 isChatWallpaperEnabled: null == e ? void 0 : e.isChatWallpaperEnabled,
-                channelType: null == e ? void 0 : e.type
+                channelType: null == e ? void 0 : e.type,
             };
         }),
         {
             canAccessPicker: I,
             entryPoint: T,
             isChatWallpaperSetterExperimentEnabled: S,
-            isDarkTheme: A
+            isDarkTheme: A,
         } = (0, p.m)({
-            location: 'useChatWallpaperPickerConfig',
-            channelId: y
+            location: "useChatWallpaperPickerConfig",
+            channelId: y,
         }),
         N = I && !t,
         [C, R] = (0, l.US)(N ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : [], void 0, !0),
@@ -51,7 +56,7 @@ function g(e) {
                     is_settings_open: t,
                     is_dark_theme: A,
                     is_overseer_dismissible_content_selected: P,
-                    last_dismissible_content_winner: null != L ? o.z[L] : 'None'
+                    last_dismissible_content_winner: null != L ? o.z[L] : "None",
                 });
         }, [O, S, v, y, x, w]),
         !I)
@@ -66,9 +71,9 @@ function g(e) {
                 pickerType: e,
                 markDismissed: M
                     ? (e) => {
-                          (D(e), T === f.FN.TOOLBAR && R(m.L.INDIRECT_ACTION));
+                          D(e), T === f.FN.TOOLBAR && R(m.L.INDIRECT_ACTION);
                       }
-                    : void 0
+                    : void 0,
             }
         );
     }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => l }), n(388685));
+n.d(t, { Z: () => l }), n(388685);
 var r = n(73800),
     i = n(846519),
     o = n(864106),
@@ -10,13 +10,13 @@ function l(e) {
     return (
         r.useEffect(() => {
             let t = () => {
-                if (null == e || !('expiresAt' in e) || null == e.expiresAt) return void n(!1);
+                if (null == e || !("expiresAt" in e) || null == e.expiresAt) return void n(!1);
                 let r = (0, o.fO)(e);
                 n(r);
                 let c = 1000 * e.expiresAt + a.Cm - Date.now();
                 if (!r && c > 0) {
                     let e = new i.V7();
-                    (e.start(Math.min(s, c), () => t()), (l.current = e));
+                    e.start(Math.min(s, c), () => t()), (l.current = e);
                 }
             };
             return (

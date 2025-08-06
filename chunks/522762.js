@@ -9,9 +9,9 @@ var r = n(442837),
 function c(e) {
     let t = (0, r.e7)([o.ZP], () => o.ZP.isGuildCollapsed(e), [e]);
     return (0, i.jsx)(l.S89, {
-        id: 'hide-muted-channels',
+        id: "hide-muted-channels",
         label: a.intl.string(a.t.UwOLJC),
         action: () => s.Z.toggleCollapseGuild(e),
-        checked: t
+        checked: t,
     });
 }

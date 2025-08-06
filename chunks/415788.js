@@ -1,4 +1,4 @@
-(a.d(t, { default: () => S }), a(388685));
+a.d(t, { default: () => S }), a(388685);
 var s = a(255367),
     n = a(73800),
     r = a(948789),
@@ -21,7 +21,7 @@ function S(e) {
             () => () => {
                 T(l.L.USER_DISMISS);
             },
-            [T]
+            [T],
         ),
         (0, s.jsx)(_.Z, {
             artURL: A,
@@ -41,7 +41,7 @@ function S(e) {
             footerClassName: b.footer,
             headerClassName: b.header,
             onSecondaryClick: function () {
-                (T(l.L.TAKE_ACTION), a(), (0, r.uL)(d.Z5c.APPLICATION_STORE));
+                T(l.L.TAKE_ACTION), a(), (0, r.uL)(d.Z5c.APPLICATION_STORE);
             },
             subscribeButtonText: C.intl.string(C.t.J61px8),
             subscribeButtonClassname: b.subscribeButton,
@@ -51,10 +51,10 @@ function S(e) {
             hideBackButton: !0,
             analyticsLocation: {
                 section: d.jXE.REVERSE_TRIAL_UPSELL_MODAL,
-                object: d.qAy.BUTTON_CTA
+                object: d.qAy.BUTTON_CTA,
             },
             transitionState: S,
-            onClose: () => (T(l.L.USER_DISMISS), a())
+            onClose: () => (T(l.L.USER_DISMISS), a()),
         })
     );
 }

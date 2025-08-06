@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(539854), n(388685));
+n.d(t, { Z: () => P }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -20,24 +20,24 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -69,10 +69,10 @@ function O(e) {
                               h.Z,
                               {
                                   actionType: e,
-                                  triggerType: n
+                                  triggerType: n,
                               },
-                              e
-                          )
+                              e,
+                          ),
                       )
                     : (0, m.V9)(n).reduce((e, i) => {
                           var l;
@@ -88,26 +88,26 @@ function O(e) {
                                           {
                                               actionType: i,
                                               action: a,
-                                              triggerType: null != (l = null == t ? void 0 : t.triggerType) ? l : n
+                                              triggerType: null != (l = null == t ? void 0 : t.triggerType) ? l : n,
                                           },
-                                          i
-                                      )
+                                          i,
+                                      ),
                                   ),
                               e
                           );
                       }, []),
-            [t, n]
+            [t, n],
         );
     return 0 === l.length
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: j.actionRuleListContainer,
-              children: l
+              children: l,
           });
 }
 let y = (e, t) => () => t(_(v({}, e), { enabled: !e.enabled })),
     C = (e) => {
-        (e.stopPropagation(), e.preventDefault());
+        e.stopPropagation(), e.preventDefault();
     },
     N = (e) => {
         var { className: t, children: n } = e,
@@ -121,15 +121,17 @@ let y = (e, t) => () => t(_(v({}, e), { enabled: !e.enabled })),
                             r,
                             i = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
-            })(e, ['className', 'children']);
+            })(e, ["className", "children"]);
         return (0, r.jsx)(
             a.P3F,
             _(
@@ -138,12 +140,12 @@ let y = (e, t) => () => t(_(v({}, e), { enabled: !e.enabled })),
                         className: t,
                         onClick: C,
                         onMouseDown: C,
-                        onMouseUp: C
+                        onMouseUp: C,
                     },
-                    i
+                    i,
                 ),
-                { children: n }
-            )
+                { children: n },
+            ),
         );
     };
 function I(e) {
@@ -151,16 +153,16 @@ function I(e) {
     let { rule: n, onChangeRule: i, onContextMenu: l } = e,
         s = y(n, i),
         o = (e) => {
-            (C(e), l(e));
+            C(e), l(e);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: j.ruleTextContainer,
                 children: (0, r.jsx)(f.Z, {
                     rule: n,
-                    onChangeRule: i
-                })
+                    onChangeRule: i,
+                }),
             }),
             (0, r.jsxs)(N, {
                 className: j.actionContainer,
@@ -168,12 +170,12 @@ function I(e) {
                     (0, r.jsx)(a.rsf, {
                         className: j.toggle,
                         onChange: s,
-                        checked: null != (t = null == n ? void 0 : n.enabled) && t
+                        checked: null != (t = null == n ? void 0 : n.enabled) && t,
                     }),
                     (0, r.jsx)(a.ua7, {
                         text: b.intl.string(b.t.UKOtz8),
-                        position: 'top',
-                        'aria-label': b.intl.string(b.t.PdRCRk),
+                        position: "top",
+                        "aria-label": b.intl.string(b.t.PdRCRk),
                         children: (e) =>
                             (0, r.jsx)(
                                 a.P3F,
@@ -181,20 +183,24 @@ function I(e) {
                                     onClick: o,
                                     className: j.menuIconButton,
                                     children: (0, r.jsx)(a.Huf, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: j.menuIcon
-                                    })
-                                })
-                            )
-                    })
-                ]
-            })
-        ]
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: j.menuIcon,
+                                    }),
+                                }),
+                            ),
+                    }),
+                ],
+            }),
+        ],
     });
 }
 function E(e) {
-    return (0, m.r5)(e, m.vT.ALPHA) ? (0, r.jsx)(o.Z, { className: j.alphaBetaTag }) : (0, m.r5)(e, m.vT.BETA) ? (0, r.jsx)(c.Z, { className: j.alphaBetaTag }) : null;
+    return (0, m.r5)(e, m.vT.ALPHA)
+        ? (0, r.jsx)(o.Z, { className: j.alphaBetaTag })
+        : (0, m.r5)(e, m.vT.BETA)
+          ? (0, r.jsx)(c.Z, { className: j.alphaBetaTag })
+          : null;
 }
 function S(e) {
     let { rule: t, isDefaultRule: n, onContextMenu: s } = e,
@@ -211,51 +217,51 @@ function S(e) {
             }
         }, 300),
         I = (e) => {
-            (C(e), s(e));
+            C(e), s(e);
         };
     if (null == o) return null;
     let { headerText: S, headerSubtext: T, descriptionText: P, icon: w } = o,
         R = !(0, d.Vb)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: j.ruleIconContainer,
                 children: (0, r.jsx)(w, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: j.ruleIcon
-                })
+                    size: "md",
+                    color: "currentColor",
+                    className: j.ruleIcon,
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: j.ruleTextContainer,
                 children: [
                     (0, r.jsxs)(a.X6q, {
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
+                        variant: "text-md/semibold",
+                        color: "header-primary",
                         className: j.ruleTextHeaderContainer,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: j.ruleTextHeader,
-                                children: [S, E(t.triggerType)]
+                                children: [S, E(t.triggerType)],
                             }),
                             (0, r.jsx)(a.Text, {
                                 className: j.ruleSubtextHeader,
-                                variant: 'text-sm/normal',
-                                children: T
-                            })
-                        ]
+                                variant: "text-sm/normal",
+                                children: T,
+                            }),
+                        ],
                     }),
                     R &&
                         (0, r.jsx)(a.Text, {
                             className: j.ruleTextDescription,
-                            variant: 'text-sm/normal',
-                            children: P
+                            variant: "text-sm/normal",
+                            children: P,
                         }),
                     (0, r.jsx)(O, {
                         rule: t,
-                        triggerType: t.triggerType
-                    })
-                ]
+                        triggerType: t.triggerType,
+                    }),
+                ],
             }),
             (0, r.jsxs)(N, {
                 className: j.actionContainer,
@@ -263,13 +269,13 @@ function S(e) {
                     (0, r.jsx)(a.rsf, {
                         className: j.toggle,
                         onChange: y,
-                        checked: null != f && f
+                        checked: null != f && f,
                     }),
                     !n &&
                         (0, r.jsx)(a.ua7, {
                             text: b.intl.string(b.t.UKOtz8),
-                            position: 'top',
-                            'aria-label': b.intl.string(b.t.PdRCRk),
+                            position: "top",
+                            "aria-label": b.intl.string(b.t.PdRCRk),
                             children: (e) =>
                                 (0, r.jsx)(
                                     a.P3F,
@@ -277,16 +283,16 @@ function S(e) {
                                         onClick: I,
                                         className: j.menuIconButton,
                                         children: (0, r.jsx)(a.Huf, {
-                                            size: 'md',
-                                            color: 'currentColor',
-                                            className: j.menuIcon
-                                        })
-                                    })
-                                )
-                        })
-                ]
-            })
-        ]
+                                            size: "md",
+                                            color: "currentColor",
+                                            className: j.menuIcon,
+                                        }),
+                                    }),
+                                ),
+                        }),
+                ],
+            }),
+        ],
     });
 }
 function T(e) {
@@ -296,60 +302,68 @@ function T(e) {
     let { headerText: s, descriptionText: o, icon: c } = l;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: j.ruleIconContainer,
                 children: (0, r.jsx)(c, {
-                    color: 'currentColor',
-                    size: 'md',
-                    className: j.ruleIcon
-                })
+                    color: "currentColor",
+                    size: "md",
+                    className: j.ruleIcon,
+                }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: j.ruleTextContainer,
                 children: [
                     (0, r.jsx)(a.X6q, {
                         className: j.ruleTextHeader,
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
-                        children: (0, r.jsxs)('div', {
+                        variant: "text-md/semibold",
+                        color: "header-primary",
+                        children: (0, r.jsxs)("div", {
                             className: j.ruleTextHeader,
-                            children: [s, E(t)]
-                        })
+                            children: [s, E(t)],
+                        }),
                     }),
                     (0, r.jsx)(a.Text, {
                         className: j.ruleTextDescription,
-                        variant: 'text-sm/normal',
-                        children: o
+                        variant: "text-sm/normal",
+                        children: o,
                     }),
-                    (0, r.jsx)(O, { triggerType: t })
-                ]
+                    (0, r.jsx)(O, { triggerType: t }),
+                ],
             }),
             (0, r.jsx)(N, {
                 className: j.actionContainer,
                 children: (0, r.jsx)(a.zxk, {
-                    variant: 'primary',
-                    size: 'sm',
+                    variant: "primary",
+                    size: "sm",
                     text: t === x.fX.KEYWORD ? b.intl.string(b.t.CumH4u) : b.intl.string(b.t.oRs6mJ),
-                    onClick: n
-                })
-            })
-        ]
+                    onClick: n,
+                }),
+            }),
+        ],
     });
 }
 function P(e) {
-    let { rule: t, triggerType: i, isEditMode: l, isDefaultRule: o, forceSetup: c, onSetupRule: d, onChangeRule: u } = e,
+    let {
+            rule: t,
+            triggerType: i,
+            isEditMode: l,
+            isDefaultRule: o,
+            forceSetup: c,
+            onSetupRule: d,
+            onChangeRule: u,
+        } = e,
         m = (e) => {
             null != t &&
                 (e.preventDefault(),
                 e.stopPropagation(),
                 (0, s.jW)(e, async () => {
-                    let { default: e } = await n.e('25443').then(n.bind(n, 46577));
+                    let { default: e } = await n.e("25443").then(n.bind(n, 46577));
                     return (n) => (0, r.jsx)(e, v({ rule: t }, n));
                 }));
         },
         g = (0, r.jsx)(T, {
             triggerType: i,
-            onSetupRule: d
+            onSetupRule: d,
         });
     return (
         null == t ||
@@ -358,17 +372,17 @@ function P(e) {
                 ? (0, r.jsx)(I, {
                       rule: t,
                       onChangeRule: u,
-                      onContextMenu: m
+                      onContextMenu: m,
                   })
                 : (0, r.jsx)(S, {
                       rule: t,
                       isDefaultRule: o,
-                      onContextMenu: m
+                      onContextMenu: m,
                   })),
         (0, r.jsx)(a.P3F, {
             className: j.mainContainer,
             onContextMenu: m,
-            children: g
+            children: g,
         })
     );
 }

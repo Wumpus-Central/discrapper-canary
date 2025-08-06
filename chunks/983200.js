@@ -3,7 +3,7 @@ n.d(t, {
     GV: () => s,
     S$: () => g,
     Vn: () => o,
-    tu: () => m
+    tu: () => m,
 });
 var r = n(73800),
     i = n(31775),
@@ -11,7 +11,7 @@ var r = n(73800),
 let a = 0,
     s = 4,
     o = 4,
-    c = 'absolute',
+    c = "absolute",
     d = (e, t, n, r) => {
         if (0 === n) return [];
         if (1 === n)
@@ -21,8 +21,8 @@ let a = 0,
                     height: t,
                     top: 0,
                     left: 0,
-                    position: c
-                }
+                    position: c,
+                },
             ];
         if (2 === n) {
             let n = Math.ceil((e - r) / 2);
@@ -32,15 +32,15 @@ let a = 0,
                     left: 0,
                     position: c,
                     width: n,
-                    height: t
+                    height: t,
                 },
                 {
                     top: 0,
                     left: n + r,
                     position: c,
                     width: n,
-                    height: t
-                }
+                    height: t,
+                },
             ];
         }
         if (3 === n) {
@@ -52,22 +52,22 @@ let a = 0,
                     left: 0,
                     position: c,
                     width: n,
-                    height: t
+                    height: t,
                 },
                 {
                     top: 0,
                     left: n + r,
                     position: c,
                     width: n,
-                    height: i
+                    height: i,
                 },
                 {
                     top: i + r,
                     left: n + r,
                     position: c,
                     width: n,
-                    height: i
-                }
+                    height: i,
+                },
             ];
         }
         {
@@ -79,29 +79,29 @@ let a = 0,
                     left: 0,
                     position: c,
                     width: n,
-                    height: i
+                    height: i,
                 },
                 {
                     top: i + r,
                     left: 0,
                     position: c,
                     width: n,
-                    height: i
+                    height: i,
                 },
                 {
                     top: 0,
                     left: n + r,
                     position: c,
                     width: n,
-                    height: i
+                    height: i,
                 },
                 {
                     top: i + r,
                     left: n + r,
                     position: c,
                     width: n,
-                    height: i
-                }
+                    height: i,
+                },
             ];
         }
     },
@@ -112,19 +112,19 @@ function m(e) {
         () =>
             (function (e) {
                 let { numAttachments: t, containerWidth: n, containerHeight: r } = e,
-                    i = ''.concat(t, '-').concat(n, '-').concat(r),
+                    i = "".concat(t, "-").concat(n, "-").concat(r),
                     l = u.get(i);
                 if (null != l) return l;
                 {
                     let e = d(n, r, t, 4);
-                    return (u.set(i, e), e);
+                    return u.set(i, e), e;
                 }
             })({
                 numAttachments: t,
                 containerWidth: n,
-                containerHeight: i
+                containerHeight: i,
             }),
-        [t, n, i]
+        [t, n, i],
     );
 }
 function h(e) {
@@ -132,7 +132,7 @@ function h(e) {
         minWidth: 2 * e[n].width,
         minHeight: 2 * e[n].height,
         maxWidth: 2 * e[n].width,
-        maxHeight: 2 * e[n].height
+        maxHeight: 2 * e[n].height,
     }));
 }
 function g(e) {
@@ -142,5 +142,5 @@ function g(e) {
         s = r.useRef(i),
         o = n > a.current + 100,
         c = i > s.current + 100;
-    return ((o || c) && (l.current = h(t)), l.current);
+    return (o || c) && (l.current = h(t)), l.current;
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     V6: () => c,
     fn: () => s,
-    xP: () => l
+    xP: () => l,
 });
 var r = n(544891),
     i = n(570140),
@@ -9,31 +9,31 @@ var r = n(544891),
     a = n(981631);
 function s(e) {
     i.Z.dispatch({
-        type: 'DISMISS_MEDIA_POST_SHARE_PROMPT',
-        threadId: e
+        type: "DISMISS_MEDIA_POST_SHARE_PROMPT",
+        threadId: e,
     });
 }
 async function l(e) {
     i.Z.dispatch({
-        type: 'MEDIA_POST_EMBED_FETCH',
-        threadId: e
+        type: "MEDIA_POST_EMBED_FETCH",
+        threadId: e,
     });
     try {
         let t = (
             await r.tn.get({
                 url: a.ANM.MEDIA_POST_RESHARE_GET_PREVIEW(e),
-                rejectWithError: !0
+                rejectWithError: !0,
             })
         ).body;
         i.Z.dispatch({
-            type: 'MEDIA_POST_EMBED_FETCH_SUCCESS',
+            type: "MEDIA_POST_EMBED_FETCH_SUCCESS",
             threadId: e,
-            mediaPostEmbed: t
+            mediaPostEmbed: t,
         });
     } catch (t) {
         i.Z.dispatch({
-            type: 'MEDIA_POST_EMBED_FETCH_FAILURE',
-            threadId: e
+            type: "MEDIA_POST_EMBED_FETCH_FAILURE",
+            threadId: e,
         });
     }
 }
@@ -43,7 +43,7 @@ async function c(e) {
             await r.tn.post({
                 url: a.ANM.UNFURL_EMBED_URLS,
                 body: { urls: e },
-                rejectWithError: !1
+                rejectWithError: !1,
             })
         ).body;
     } catch (e) {

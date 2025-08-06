@@ -1,1 +1,1 @@
-e.exports = { premiumChannelIcon: 'premiumChannelIcon__15e7f' };
+e.exports = { premiumChannelIcon: "premiumChannelIcon__15e7f" };

@@ -8,7 +8,7 @@ e.exports = {
     fromOrigamiTensionAndFriction: function (e, r) {
         return {
             tension: t(e),
-            friction: n(r)
+            friction: n(r),
         };
     },
     fromBouncinessAndSpeed: function (e, r) {
@@ -42,7 +42,7 @@ e.exports = {
             p = s(f, d(_), 0.01);
         return {
             tension: t(_),
-            friction: n(p)
+            friction: n(p),
         };
-    }
+    },
 };

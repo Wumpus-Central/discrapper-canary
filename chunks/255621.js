@@ -5,7 +5,21 @@ var r = n(358085),
     a = n(620662),
     s = n(981631);
 function l(e) {
-    let { user: t, activity: n, application: l, channelId: c, currentUser: u, isEmbedded: d, ChannelStore: f, GuildStore: _, GuildMemberCountStore: p, RelationshipStore: h, SelectedChannelStore: m, VoiceStateStore: g, PermissionStore: E } = e,
+    let {
+            user: t,
+            activity: n,
+            application: l,
+            channelId: c,
+            currentUser: u,
+            isEmbedded: d,
+            ChannelStore: f,
+            GuildStore: _,
+            GuildMemberCountStore: p,
+            RelationshipStore: h,
+            SelectedChannelStore: m,
+            VoiceStateStore: g,
+            PermissionStore: E,
+        } = e,
         b = (0, i.a)();
     if (null == t) return !1;
     if (d && null != c)
@@ -20,7 +34,7 @@ function l(e) {
                 ChannelStore: f,
                 VoiceStateStore: g,
                 PermissionStore: E,
-                GuildStore: _
+                GuildStore: _,
             }) === o.Fw.CAN_JOIN
         );
     if ((d && null == c && !(0, a.Z)(n, s.xjy.CONTEXTLESS)) || (!(0, r.isDesktop)() && !d)) return !1;

@@ -6,9 +6,9 @@ var r = n(255367),
     s = n(811752);
 let l = i.forwardRef(function (e, t) {
     let { isActive: n, children: i } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: a()(s.wrapper, { [s.wrapperActive]: n }),
         ref: t,
-        children: i
+        children: i,
     });
 });

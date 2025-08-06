@@ -1,4 +1,4 @@
-(n.d(t, { N: () => _ }), n(388685));
+n.d(t, { N: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -17,13 +17,13 @@ var r = n(255367),
     y = n(201838);
 let x = (e) => {
         let { user: t, markAsDismissed: n } = e;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: y.assetContainer,
             children: [
                 (0, r.jsx)(f.Z, {
                     user: t,
                     rank: 1,
-                    avatarSize: o.EFr.SIZE_56
+                    avatarSize: o.EFr.SIZE_56,
                 }),
                 (0, r.jsx)(o.P3F, {
                     className: y.closeIcon,
@@ -31,11 +31,11 @@ let x = (e) => {
                         n(m.L.USER_DISMISS);
                     },
                     children: (0, r.jsx)(o.Dio, {
-                        color: 'currentColor',
-                        size: 'sm'
-                    })
-                })
-            ]
+                        color: "currentColor",
+                        size: "sm",
+                    }),
+                }),
+            ],
         });
     },
     j = (e) => {
@@ -43,21 +43,21 @@ let x = (e) => {
         return (0, r.jsx)(d.ZP, {
             asset: (0, r.jsx)(x, {
                 user: t,
-                markAsDismissed: n
+                markAsDismissed: n,
             }),
             header: b.intl.string(b.t.wAtFS0),
             content: b.intl.string(b.t.qIZICA),
             buttonCTA: b.intl.string(b.t.hvVgAQ),
             onClick: () => {
-                ((0, c.Z)(p.Z.getArticleURL(g.BhN.GUILD_LEADERBOARD)), n(m.L.USER_DISMISS));
+                (0, c.Z)(p.Z.getArticleURL(g.BhN.GUILD_LEADERBOARD)), n(m.L.USER_DISMISS);
             },
             markAsDismissed: n,
             caretPosition: d.DF.RIGHT_TOP,
             buttonProps: {
                 color: s.zx.Colors.WHITE,
                 look: s.zx.Looks.LINK,
-                size: s.zx.Sizes.MIN
-            }
+                size: s.zx.Sizes.MIN,
+            },
         });
     };
 function _(e) {
@@ -73,15 +73,15 @@ function _(e) {
               renderPopout: () =>
                   j({
                       user: d,
-                      markAsDismissed: c
+                      markAsDismissed: c,
                   }),
-              position: 'left',
+              position: "left",
               animation: o.yRy.Animation.TRANSLATE,
               shouldShow: !0,
               children: () =>
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       ref: p,
-                      children: t
-                  })
+                      children: t,
+                  }),
           });
 }

@@ -14,39 +14,41 @@ function m(e) {
     return (0, r.jsxs)(i.hjN, {
         className: u.container,
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: u.column,
                 children: [
                     (0, r.jsxs)(i.vwX, {
                         className: u.title,
-                        children: [d.intl.string(d.t['0r0AzM']), (0, r.jsx)(o.zA, { guild: t })]
+                        children: [d.intl.string(d.t["0r0AzM"]), (0, r.jsx)(o.zA, { guild: t })],
                     }),
                     (0, r.jsx)(i.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'text-secondary',
+                        variant: "text-sm/medium",
+                        color: "text-secondary",
                         className: u.text,
-                        children: d.intl.string(d.t.UfqmIS)
+                        children: d.intl.string(d.t.UfqmIS),
                     }),
                     (0, r.jsx)(i.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'text-secondary',
+                        variant: "text-sm/medium",
+                        color: "text-secondary",
                         className: u.text,
-                        children: d.intl.format(d.t.vBcWUl, { articleURL: l.Z.getArticleURL(c.BhN.GUILD_BANNER_SPLASH) })
+                        children: d.intl.format(d.t.vBcWUl, {
+                            articleURL: l.Z.getArticleURL(c.BhN.GUILD_BANNER_SPLASH),
+                        }),
                     }),
                     (0, r.jsx)(a.F, {
                         guild: t,
                         canManageGuild: n,
-                        buttonClassName: u.button
-                    })
-                ]
+                        buttonClassName: u.button,
+                    }),
+                ],
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: u.column,
                 children: (0, r.jsx)(s.O, {
                     guild: t,
-                    canManageGuild: n
-                })
-            })
-        ]
+                    canManageGuild: n,
+                }),
+            }),
+        ],
     });
 }

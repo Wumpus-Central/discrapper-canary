@@ -1,4 +1,4 @@
-(i.d(e, { default: () => y }), i(388685));
+i.d(e, { default: () => y }), i(388685);
 var s = i(255367),
     n = i(73800),
     o = i(505266),
@@ -24,15 +24,24 @@ var s = i(255367),
     k = i(854402);
 let O = () => {
         let t = (0, l.Z)({ forceFetch: !0 }),
-            e = (0, f.vc)(t.endsAt, 'L');
+            e = (0, f.vc)(t.endsAt, "L");
         return {
             isLoading: !t.fetched,
             isFractionalPremiumActive: t.isFractionalPremiumActive,
-            expiresAt: e
+            expiresAt: e,
         };
     },
     y = (t) => {
-        let { transitionState: e, product: i, onClose: l, analyticsLocations: f, overrideTitle: y, overrideDescription: N, itemConsumed: S = !0, purchaseType: A = P.o8.ORB } = t,
+        let {
+                transitionState: e,
+                product: i,
+                onClose: l,
+                analyticsLocations: f,
+                overrideTitle: y,
+                overrideDescription: N,
+                itemConsumed: S = !0,
+                purchaseType: A = P.o8.ORB,
+            } = t,
             Z = (0, r.e7)([C.Z], () => C.Z.purchases),
             g = (0, L.o)(i, Z),
             B = (0, j.W)(i, g),
@@ -41,13 +50,19 @@ let O = () => {
             P.Vt.ORB_PROFILE_BADGE === B.skuId && (0, p.Ls)([(0, _.X)()], 600);
         }, [B.skuId]);
         let { isLoading: T, isFractionalPremiumActive: b, expiresAt: w } = O(),
-            { environment: F, modalRef: G, confettiCanvas: $, setConfettiCanvas: D, customConfettiDisplayOptions: V } = (0, x.$0)(B, A);
+            {
+                environment: F,
+                modalRef: G,
+                confettiCanvas: $,
+                setConfettiCanvas: D,
+                customConfettiDisplayOptions: V,
+            } = (0, x.$0)(B, A);
         (0, x.f1)(B, R);
         let W = (0, E.k)(B),
             { handleUseNow: X, isApplying: K } = (0, v.W)({
                 product: B,
                 onSuccess: l,
-                onError: l
+                onError: l,
             });
         if (T) return (0, s.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE });
         let M = (0, x.Xw)({
@@ -58,7 +73,7 @@ let O = () => {
                 shouldShowPromotionalExperience: !1,
                 productName: W,
                 pairedProductName: void 0,
-                itemConsumed: S
+                itemConsumed: S,
             }),
             q = (0, x.ys)({
                 product: B,
@@ -66,7 +81,7 @@ let O = () => {
                 productName: W,
                 itemConsumed: S,
                 isFractionalPremiumActive: b,
-                expiresAt: w
+                expiresAt: w,
             }),
             z = (0, x.cf)({
                 product: B,
@@ -74,41 +89,41 @@ let O = () => {
                 analyticsLocations: R,
                 handleUseNow: X,
                 isApplying: K,
-                itemConsumed: S
+                itemConsumed: S,
             });
         return (0, s.jsx)(d.Gt, {
             value: R,
-            children: (0, s.jsxs)('div', {
+            children: (0, s.jsxs)("div", {
                 ref: G,
                 children: [
                     (0, s.jsx)(o.O_, {
                         ref: D,
                         className: k.confettiCanvas,
-                        environment: F
+                        environment: F,
                     }),
                     (0, s.jsx)(a.I, {
                         graphic: {
-                            type: 'dynamic',
+                            type: "dynamic",
                             component: c.AX$.COLLECTIBLES_PREVIEW,
                             props: {
                                 product: B,
-                                itemConsumed: S
-                            }
+                                itemConsumed: S,
+                            },
                         },
                         title: M,
                         subtitle: null != q ? q : void 0,
                         onClose: l,
                         transitionState: e,
-                        actions: z
+                        actions: z,
                     }),
                     null != V
                         ? (0, s.jsx)(I.i, { options: V })
                         : (0, s.jsx)(h.Z, {
                               confettiTarget: G.current,
                               confettiCanvas: $,
-                              sprites: (0, m.vK)(B.categorySkuId)
-                          })
-                ]
-            })
+                              sprites: (0, m.vK)(B.categorySkuId),
+                          }),
+                ],
+            }),
         });
     };

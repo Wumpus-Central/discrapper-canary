@@ -15,17 +15,17 @@ function o(t) {
         actions: [
             {
                 text: l.intl.string(l.t.WAI6xs),
-                onClick: o
-            }
+                onClick: o,
+            },
         ],
         children: (0, e.jsx)(a.Text, {
-            variant: 'text-md/normal',
-            color: 'header-secondary',
+            variant: "text-md/normal",
+            color: "header-secondary",
             children: l.intl.format(l.t.Ge0HUl, {
                 handleFalsePositiveHook: () => {
-                    (o(), (0, r.e)(i, n));
-                }
-            })
-        })
+                    o(), (0, r.e)(i, n);
+                },
+            }),
+        }),
     });
 }

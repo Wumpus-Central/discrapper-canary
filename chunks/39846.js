@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r = n(147913),
     i = n(751571),
     o = n(88751),
@@ -18,7 +18,7 @@ function h(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,10 +26,10 @@ function h(e, t, n) {
 }
 let m = null;
 function g() {
-    (i.Z.requestPermission(p.Eu.AUDIO).then((e) => {
+    i.Z.requestPermission(p.Eu.AUDIO).then((e) => {
         e && (0, f.Z)(!0);
     }),
-        u.Z.getMode() === _.pM4.PUSH_TO_TALK && i.Z.requestPermission(p.Eu.INPUT_MONITORING));
+        u.Z.getMode() === _.pM4.PUSH_TO_TALK && i.Z.requestPermission(p.Eu.INPUT_MONITORING);
 }
 function E(e, t) {
     var n;
@@ -49,7 +49,7 @@ class y extends r.Z {
             let { userId: t, channelId: n } = e;
             if (null != n && l.default.getId() === t && null != d.Z.getRTCConnectionId() && m !== n) {
                 if (E(t, n)) {
-                    ((m = n), g());
+                    (m = n), g();
                     return;
                 }
                 b(new s.Z(e)) && ((m = n), g());
@@ -57,11 +57,11 @@ class y extends r.Z {
         });
     }
     constructor(...e) {
-        (super(...e),
-            h(this, 'actions', {
+        super(...e),
+            h(this, "actions", {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
-                VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect
-            }));
+                VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
+            });
     }
 }
 let O = new y();

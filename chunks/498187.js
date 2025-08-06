@@ -16,7 +16,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,15 +26,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -42,11 +42,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,7 +63,7 @@ function m(e, t) {
 }
 let g = {
         [i.z.XBOX]: c.kG.XBOX,
-        [i.z.PLAYSTATION]: c.kG.PLAYSTATION
+        [i.z.PLAYSTATION]: c.kG.PLAYSTATION,
     },
     E = { [u._.EMBED]: a.m1.Embed };
 function b(e) {
@@ -85,9 +85,9 @@ function b(e) {
                 applicationId: i.extra.application_id,
                 source: b,
                 trackEntryPointImpression: !0,
-                sourceUserId: i.author_id
+                sourceUserId: i.author_id,
             }),
-            ariaDescription: f.intl.formatToPlainString(f.t['9sZWVl'], { gameName: h })
+            ariaDescription: f.intl.formatToPlainString(f.t["9sZWVl"], { gameName: h }),
         };
     return m(p({}, c), {
         thumbnailUrl: _,
@@ -95,6 +95,6 @@ function b(e) {
         titleClickable: y,
         thumbnailClickable: y,
         userDescription: n,
-        providerIconProps: t
+        providerIconProps: t,
     });
 }

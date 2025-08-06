@@ -12,6 +12,6 @@ function i(e, t, n) {
         total_results: l,
         page_results: null != s ? s : null,
         num_modifiers: Object.keys(i).length,
-        modifiers: i
+        modifiers: i,
     };
 }

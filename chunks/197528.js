@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => E }), n(388685), n(35282));
+n.r(t), n.d(t, { default: () => E }), n(388685), n(35282);
 var a = n(255367),
     r = n(73800),
     o = n(593473),
@@ -27,102 +27,102 @@ function w() {
             if (t.pathname === C.Z5c.ACTIVATE_HANDOFF) {
                 let { user_code: e } = o.parse(window.location.search);
                 return {
-                    type: 'handoff',
-                    code: e
+                    type: "handoff",
+                    code: e,
                 };
             }
             return {
-                type: 'user-code-input',
-                usePrefilledCode: !0
+                type: "user-code-input",
+                usePrefilledCode: !0,
             };
         }),
         w = (0, l.e7)([f.Z], () => f.Z.hasLoadedExperiments);
-    (r.useEffect(() => {
+    r.useEffect(() => {
         h.default.isAuthenticated() && !w && s.Z.getExperiments();
     }, [w]),
         (0, c.Z)(),
-        (0, x.Y)(n));
+        (0, x.Y)(n);
     let N = r.useCallback(() => {
-            d({ type: 'user-code-input' });
+            d({ type: "user-code-input" });
         }, [d]),
         E = r.useCallback(
             (e) => {
                 d({
-                    type: 'authorization',
-                    userCodeData: e
+                    type: "authorization",
+                    userCodeData: e,
                 });
             },
-            [d]
+            [d],
         ),
         k = r.useCallback(
             (e) => {
                 d({
-                    type: 'success',
-                    userCodeData: e
+                    type: "success",
+                    userCodeData: e,
                 });
             },
-            [d]
+            [d],
         ),
         I = r.useCallback(
             (e) => {
                 d({
-                    type: 'error',
-                    userCodeData: e
+                    type: "error",
+                    userCodeData: e,
                 });
             },
-            [d]
+            [d],
         ),
         T = !0;
     switch (n.type) {
-        case 'handoff':
-            ((e = (0, a.jsx)(b.c, { code: n.code })), (T = !1));
+        case "handoff":
+            (e = (0, a.jsx)(b.c, { code: n.code })), (T = !1);
             break;
-        case 'user-code-input':
+        case "user-code-input":
             e = (0, a.jsx)(g.v, {
                 usePrefilledCode: n.usePrefilledCode || !1,
-                onUserCodeAccepted: E
+                onUserCodeAccepted: E,
             });
             break;
-        case 'authorization':
-            ((e = (0, a.jsx)(m.B, {
+        case "authorization":
+            (e = (0, a.jsx)(m.B, {
                 data: n.userCodeData,
                 onDenied: N,
                 onError: I,
-                onSuccess: k
+                onSuccess: k,
             })),
-                (T = !1));
+                (T = !1);
             break;
-        case 'success':
+        case "success":
             e = (0, a.jsx)(_.u, {
                 onComplete: () => (0, p.uL)(C.Z5c.ME),
-                data: n.userCodeData
+                data: n.userCodeData,
             });
             break;
-        case 'error':
+        case "error":
             e = (0, a.jsx)(v.c, { onTryAgain: N });
             break;
         default:
             e = null;
     }
-    return (0, a.jsxs)('div', {
+    return (0, a.jsxs)("div", {
         className: y.activatePage,
         children: [
-            (0, a.jsx)('img', {
+            (0, a.jsx)("img", {
                 className: y.artwork,
                 src: j,
-                alt: ''
+                alt: "",
             }),
             (0, a.jsx)(u.Z, {
                 show: !0,
-                className: y.logo
+                className: y.logo,
             }),
             T
-                ? (0, a.jsx)('div', {
+                ? (0, a.jsx)("div", {
                       className: y.content,
-                      children: e
+                      children: e,
                   })
-                : e
-        ]
+                : e,
+        ],
     });
 }
 let N = (0, d.e)(w),

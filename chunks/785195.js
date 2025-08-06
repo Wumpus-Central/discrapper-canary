@@ -5,7 +5,7 @@ var l = n(325767);
 function s(e) {
     var t,
         n,
-        { width: s = 24, height: i = 24, color: a = 'currentColor', foreground: o } = e,
+        { width: s = 24, height: i = 24, color: a = "currentColor", foreground: o } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -16,39 +16,41 @@ function s(e) {
                         r,
                         l = {},
                         s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) ((n = s[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) ((n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
+                for (r = 0; r < s.length; r++)
+                    (n = s[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ['width', 'height', 'color', 'foreground']);
+        })(e, ["width", "height", "color", "foreground"]);
     return (0, r.jsxs)(
-        'svg',
+        "svg",
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     r.forEach(function (t) {
                         var r;
-                        ((r = n[t]),
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (e[t] = r));
-                    }));
+                                : (e[t] = r);
+                    });
             }
             return e;
         })({}, (0, l.Z)(u))),
@@ -56,24 +58,24 @@ function s(e) {
             {
                 width: s,
                 height: i,
-                viewBox: '0 0 24 24',
+                viewBox: "0 0 24 24",
                 children: [
-                    (0, r.jsx)('path', {
-                        d: 'M20.414 2.58599C21.195 3.36699 21.195 4.63299 20.414 5.41399L14.051 11.779L11.222 8.94999L17.586 2.58599C18.367 1.80499 19.633 1.80499 20.414 2.58599Z',
+                    (0, r.jsx)("path", {
+                        d: "M20.414 2.58599C21.195 3.36699 21.195 4.63299 20.414 5.41399L14.051 11.779L11.222 8.94999L17.586 2.58599C18.367 1.80499 19.633 1.80499 20.414 2.58599Z",
                         className: o,
-                        fill: a
+                        fill: a,
                     }),
-                    (0, r.jsx)('path', {
-                        d: 'M13.622 15.035L6.552 16.449L7.966 9.378L13.344 4H4C2.897 4 2 4.898 2 6V20C2 21.103 2.897 22 4 22H18C19.103 22 20 21.103 20 20V8.656L13.622 15.035Z',
+                    (0, r.jsx)("path", {
+                        d: "M13.622 15.035L6.552 16.449L7.966 9.378L13.344 4H4C2.897 4 2 4.898 2 6V20C2 21.103 2.897 22 4 22H18C19.103 22 20 21.103 20 20V8.656L13.622 15.035Z",
                         className: o,
-                        fill: a
+                        fill: a,
                     }),
-                    (0, r.jsx)('path', {
-                        d: 'M9.80801 10.365L12.636 13.192L9.10101 13.899L9.80801 10.365Z',
+                    (0, r.jsx)("path", {
+                        d: "M9.80801 10.365L12.636 13.192L9.10101 13.899L9.80801 10.365Z",
                         className: o,
-                        fill: a
-                    })
-                ]
+                        fill: a,
+                    }),
+                ],
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -87,6 +89,6 @@ function s(e) {
               })(Object(n)).forEach(function (e) {
                   Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
-        t)
+        t),
     );
 }

@@ -9,9 +9,9 @@ e.exports = function (e, t) {
             function (e, t) {
                 n.push({
                     start: e,
-                    end: t
+                    end: t,
                 });
-            }
+            },
         ),
         n.length || r(!1),
         n

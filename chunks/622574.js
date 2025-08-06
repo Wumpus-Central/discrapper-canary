@@ -12,10 +12,10 @@ let r = (t, e, a) => {
                     Object.assign(
                         {
                             type: t,
-                            buffered: !0
+                            buffered: !0,
                         },
-                        a || {}
-                    )
+                        a || {},
+                    ),
                 ),
                 r
             );

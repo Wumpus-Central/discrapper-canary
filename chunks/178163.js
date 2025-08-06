@@ -5,7 +5,7 @@ function r(e, t, n) {
         i,
         function () {
             return r.removeTarget(i);
-        }
+        },
     ];
 }
 function i(e, t, n) {
@@ -15,10 +15,10 @@ function i(e, t, n) {
         i,
         function () {
             return r.removeSource(i);
-        }
+        },
     ];
 }
 n.d(t, {
     n: () => r,
-    w: () => i
+    w: () => i,
 });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685), n(472816), n(794429), n(953529));
+n.d(t, { Z: () => C }), n(388685), n(472816), n(794429), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -31,27 +31,27 @@ function C(e) {
         { rulesByTriggerType: Z } = (0, g.pH)(P),
         D = {
             [p.vh.MEMBERS]: O.intl.string(O.t.sx4E5u),
-            [p.vh.CONTENT]: O.intl.string(O.t.fphZb2)
+            [p.vh.CONTENT]: O.intl.string(O.t.fphZb2),
         },
         A = i.useMemo(
             () =>
                 Object.values(null != Z ? Z : {})
                     .flat()
                     .filter(d.lm),
-            [Z]
+            [Z],
         ),
         k = {
             isInEditMode: w,
-            setEditingRule: E
+            setEditingRule: E,
         },
         L = i.useRef(k);
-    (i.useEffect(() => {
+    i.useEffect(() => {
         L.current = k;
     }),
         i.useEffect(() => {
             let { isInEditMode: e, setEditingRule: t } = L.current;
             e && t(null);
-        }, [P]));
+        }, [P]);
     let M = i.useCallback(
             (e, t) => {
                 if (null != e) {
@@ -70,11 +70,14 @@ function C(e) {
                 }
                 return null != t ? p.I6[t].getDefaultRuleName() : null;
             },
-            [A]
+            [A],
         ),
         G = i.useMemo(() => {
             var e, t;
-            return M(null != (e = null == I ? void 0 : I.id) ? e : null, null != (t = null == I ? void 0 : I.triggerType) ? t : null);
+            return M(
+                null != (e = null == I ? void 0 : I.id) ? e : null,
+                null != (t = null == I ? void 0 : I.triggerType) ? t : null,
+            );
         }, [M, I]);
     i.useEffect(() => {
         N(w, (0, j.af)(G));
@@ -90,66 +93,68 @@ function C(e) {
                             guildId: P,
                             triggerType: e,
                             rules: null != (t = Z[e]) ? t : [],
-                            initWithEdit: T === _.KsC.AUTOMOD_MENTION_SPAM && e === v.fX.MENTION_SPAM
+                            initWithEdit: T === _.KsC.AUTOMOD_MENTION_SPAM && e === v.fX.MENTION_SPAM,
                         },
-                        e
+                        e,
                     );
-                })
+                }),
             });
     return (0, r.jsxs)(s.hjN, {
         title: O.intl.string(O.t.uRelg4),
-        tag: 'h1',
+        tag: "h1",
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: y.descriptionContainer,
                 children: [
                     (0, r.jsxs)(s.hjN, {
-                        tag: 'h3',
+                        tag: "h3",
                         className: y.description,
                         titleClassName: y.descriptionHeader,
                         children: [
                             (0, r.jsx)(s.Text, {
-                                variant: 'text-md/medium',
-                                color: 'header-secondary',
-                                children: O.intl.string(O.t.EwuSCQ)
+                                variant: "text-md/medium",
+                                color: "header-secondary",
+                                children: O.intl.string(O.t.EwuSCQ),
                             }),
                             (0, r.jsx)(s.Text, {
-                                variant: 'text-sm/medium',
+                                variant: "text-sm/medium",
                                 className: y.helpUrl,
-                                children: O.intl.format(O.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
-                            })
-                        ]
+                                children: O.intl.format(O.t["B+sgGh"], {
+                                    helpUrl: u.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
+                                }),
+                            }),
+                        ],
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: y.descriptionAvatarContainer,
                         children: [
                             (0, r.jsx)(s.qEK, {
                                 src: (0, m.j)(),
                                 size: s.EFr.SIZE_80,
-                                'aria-label': O.intl.string(O.t.hG1StL)
+                                "aria-label": O.intl.string(O.t.hG1StL),
                             }),
                             (0, r.jsx)(s.IGR, {
-                                text: (0, r.jsxs)('div', {
+                                text: (0, r.jsxs)("div", {
                                     className: y.automodBadgeText,
                                     children: [
                                         (0, r.jsx)(s.sV5, {
-                                            size: 'xxs',
-                                            color: 'currentColor',
-                                            className: y.checkmarkIcon
+                                            size: "xxs",
+                                            color: "currentColor",
+                                            className: y.checkmarkIcon,
                                         }),
                                         (0, r.jsx)(s.Text, {
-                                            variant: 'text-xs/bold',
+                                            variant: "text-xs/bold",
                                             className: y.automodText,
-                                            children: O.intl.string(O.t.hG1StL)
-                                        })
-                                    ]
+                                            children: O.intl.string(O.t.hG1StL),
+                                        }),
+                                    ],
                                 }),
                                 color: a.Z.unsafe_rawColors.BRAND_500.css,
-                                className: y.textBadge
-                            })
-                        ]
-                    })
-                ]
+                                className: y.textBadge,
+                            }),
+                        ],
+                    }),
+                ],
             }),
             R
                 ? (0, r.jsx)(h.Z, {})
@@ -159,35 +164,35 @@ function C(e) {
                       let l =
                           null != D[t]
                               ? (0, r.jsx)(s.hjN, {
-                                    tag: 'h3',
+                                    tag: "h3",
                                     className: y.categoryHeader,
                                     children: (0, r.jsx)(s.Text, {
-                                        variant: 'text-lg/normal',
-                                        color: 'header-primary',
-                                        children: D[t]
-                                    })
+                                        variant: "text-lg/normal",
+                                        color: "header-primary",
+                                        children: D[t],
+                                    }),
                                 })
                               : null;
                       return (0, r.jsxs)(
-                          'div',
+                          "div",
                           {
                               className: y.categoryContainer,
-                              children: [l, B(n)]
+                              children: [l, B(n)],
                           },
-                          t
+                          t,
                       );
                   }),
             null != S &&
                 (0, r.jsx)(c.k0, {
                     guild: S,
                     withDivider: !1,
-                    className: y.explicitContentFilterSection
+                    className: y.explicitContentFilterSection,
                 }),
             (0, r.jsx)(x.Z, {
                 guildId: P,
-                existingRules: A
+                existingRules: A,
             }),
-            w && (0, r.jsx)('div', { className: y.endSpacer })
-        ]
+            w && (0, r.jsx)("div", { className: y.endSpacer }),
+        ],
     });
 }

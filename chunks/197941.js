@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(243814),
@@ -19,16 +19,16 @@ var i = n(243814),
 let O = {
     [_.Etm.TOGGLE_VIDEO]: {
         scope: {
-            [b.Gp.ALL]: [i.x.RPC, i.x.RPC_VIDEO_WRITE]
+            [b.Gp.ALL]: [i.x.RPC, i.x.RPC_VIDEO_WRITE],
         },
         handler() {
             let e = p.Z.isVideoEnabled();
             null != (0, m.Z)() && (e ? a.Z.setVideoEnabled(!1) : (0, u.Z)(() => a.Z.setVideoEnabled(!0), _.IlC.APP));
-        }
+        },
     },
     [_.Etm.TOGGLE_SCREENSHARE]: {
         scope: {
-            [b.Gp.ALL]: [i.x.RPC, i.x.RPC_SCREENSHARE_WRITE]
+            [b.Gp.ALL]: [i.x.RPC, i.x.RPC_SCREENSHARE_WRITE],
         },
         validation: (e) =>
             (0, g.Z)(e)
@@ -36,7 +36,7 @@ let O = {
                 .keys({ pid: e.number().optional().min(0) }),
         handler(e) {
             let {
-                    args: { pid: t }
+                    args: { pid: t },
                 } = e,
                 i = d.Z.getCurrentUserActiveStream(),
                 a = d.Z.getStreamerActiveStreamMetadata(),
@@ -52,7 +52,7 @@ let O = {
                         : null != u
                           ? (0, o.WH)(p.guild_id, p.id, { pid: u.pid })
                           : (0, l.ZDy)(async () => {
-                                let { default: e } = await n.e('46746').then(n.bind(n, 60594));
+                                let { default: e } = await n.e("46746").then(n.bind(n, 60594));
                                 return (t) => {
                                     var n, i;
                                     return (0, r.jsx)(
@@ -61,31 +61,31 @@ let O = {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     r = Object.keys(n);
-                                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                                "function" == typeof Object.getOwnPropertySymbols &&
                                                     (r = r.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        })
+                                                        }),
                                                     )),
                                                     r.forEach(function (t) {
                                                         var r;
-                                                        ((r = n[t]),
+                                                        (r = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
                                                                       value: r,
                                                                       enumerable: !0,
                                                                       configurable: !0,
-                                                                      writable: !0
+                                                                      writable: !0,
                                                                   })
-                                                                : (e[t] = r));
-                                                    }));
+                                                                : (e[t] = r);
+                                                    });
                                             }
                                             return e;
                                         })({}, t)),
                                         (i = i =
                                             {
                                                 guildId: p.guild_id,
-                                                analyticsLocation: _.Sbl.ACTIVITY_RPC
+                                                analyticsLocation: _.Sbl.ACTIVITY_RPC,
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -99,10 +99,10 @@ let O = {
                                               })(Object(i)).forEach(function (e) {
                                                   Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                               }),
-                                        n)
+                                        n),
                                     );
                                 };
                             }));
-        }
-    }
+        },
+    },
 };

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => Q }), n(388685));
+n.d(t, { Z: () => Q }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -44,7 +44,7 @@ function Z(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -54,15 +54,15 @@ function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 Z(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -70,11 +70,11 @@ function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -100,10 +100,10 @@ function X(e) {
         a = (0, T.P0)(t),
         [s, d] = i.useState(!1),
         f = () => {
-            (d(!0),
+            d(!0),
                 I.Z.resolveFlag(t.id).then(() => {
                     d(!1);
-                }));
+                });
         };
     if (!a) return null;
     let _ = () => {
@@ -116,7 +116,7 @@ function X(e) {
                       return (0, r.jsx)(e, {
                           transitionState: n,
                           onClose: i,
-                          handleResolveFlag: f
+                          handleResolveFlag: f,
                       });
                   };
               });
@@ -131,13 +131,13 @@ function X(e) {
         submitting: s,
         children: [
             (0, r.jsx)(u.dz2, {
-                size: 'custom',
-                color: 'currentColor',
+                size: "custom",
+                color: "currentColor",
                 width: Y,
-                height: Y
+                height: Y,
             }),
-            o ? j.intl.string(U.default['2Y4vkp']) : j.intl.string(U.default.YIbR4u)
-        ]
+            o ? j.intl.string(U.default["2Y4vkp"]) : j.intl.string(U.default.YIbR4u),
+        ],
     });
 }
 function Q(e) {
@@ -149,7 +149,13 @@ function Q(e) {
         $ = (0, s.e7)([P.Z], () => P.Z.getChannel(t), [t]),
         { firstMessage: ee } = (0, x.cl)($),
         et = (0, s.e7)([C.Z], () => C.Z.hasJoined(t)),
-        { disableReactionUpdates: en, disableReactionCreates: er, isLurking: ei, isGuest: eo, isPendingMember: ea } = (0, E.Z)($),
+        {
+            disableReactionUpdates: en,
+            disableReactionCreates: er,
+            isLurking: ei,
+            isGuest: eo,
+            isPendingMember: ea,
+        } = (0, E.Z)($),
         es = (0, S.nw)($),
         el = (0, s.e7)([P.Z], () => P.Z.getChannel(l)),
         ec = (0, L.Bs)(el),
@@ -163,7 +169,7 @@ function Q(e) {
                     V((e.bottom - e.top) / (n.bottom - n.top) < 1);
                 }
             },
-            [n]
+            [n],
         );
     i.useLayoutEffect(() => {
         let e = I.current;
@@ -186,45 +192,45 @@ function Q(e) {
         return null;
     let ep = ee.reactions.length > 0,
         eh = () => {
-            et ? R.Z.leaveThread($, 'Forum Toolbar') : R.Z.joinThread($, 'Forum Toolbar');
+            et ? R.Z.leaveThread($, "Forum Toolbar") : R.Z.joinThread($, "Forum Toolbar");
         },
         em = () => {
-            ((0, M.B)({
+            (0, M.B)({
                 postId: $.id,
-                location: { section: k.jXE.CHANNEL_HEADER }
+                location: { section: k.jXE.CHANNEL_HEADER },
             }),
-                (0, D.JG)((0, w.EO)($, el), () => J(!0)));
+                (0, D.JG)((0, w.EO)($, el), () => J(!0));
         },
         eg = () => {
             d.Z.jumpToMessage({
                 channelId: $.id,
                 messageId: $.id,
                 flash: !0,
-                jumpType: f.SR.INSTANT
+                jumpType: f.SR.INSTANT,
             });
         },
         eE = et ? u.dz2 : u.Dkj,
         eb = !ep && !er;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a()(G.container, { [G.header]: Z }),
                 ref: I,
                 children: [
                     es
-                        ? (0, r.jsx)('div', {
+                        ? (0, r.jsx)("div", {
                               className: G.reportedMessageActions,
                               children: (0, r.jsx)(N.Z, {
                                   message: ee,
-                                  channel: $
-                              })
+                                  channel: $,
+                              }),
                           })
-                        : (0, r.jsxs)('div', {
+                        : (0, r.jsxs)("div", {
                               className: a()(G.reactButtons, { [G.loading]: ef }),
                               children: [
                                   eb &&
                                       null != ec &&
-                                      (0, r.jsx)('div', {
+                                      (0, r.jsx)("div", {
                                           className: B.reactions,
                                           children: (0, r.jsx)(v.le, {
                                               message: ee,
@@ -240,8 +246,8 @@ function Q(e) {
                                               me: !1,
                                               burst_count: 0,
                                               me_burst: !1,
-                                              emojiSize: 'reaction'
-                                          })
+                                              emojiSize: "reaction",
+                                          }),
                                       }),
                                   (0, r.jsx)(O.Z, {
                                       message: ee,
@@ -255,7 +261,7 @@ function Q(e) {
                                       className: G.reactions,
                                       useChatFontScaling: !1,
                                       isForumToolbar: !0,
-                                      forceHideReactionCreates: !0
+                                      forceHideReactionCreates: !0,
                                   }),
                                   !er &&
                                       (0, r.jsx)(b.X, {
@@ -265,11 +271,11 @@ function Q(e) {
                                           useChatFontScaling: !1,
                                           className: a()(G.addReactButton, { [G.hasNoReactions]: !ep }),
                                           isForumToolbar: !0,
-                                          children: !ep && j.intl.string(j.t.xpOyTE)
-                                      })
-                              ]
+                                          children: !ep && j.intl.string(j.t.xpOyTE),
+                                      }),
+                              ],
                           }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: G.buttons,
                         children: [
                             es
@@ -287,13 +293,13 @@ function Q(e) {
                                                   innerClassName: a()(G.buttonInner, { [G.active]: et }),
                                                   children: [
                                                       (0, r.jsx)(eE, {
-                                                          size: 'xs',
-                                                          color: 'currentColor'
+                                                          size: "xs",
+                                                          color: "currentColor",
                                                       }),
-                                                      et ? j.intl.string(j.t['7OkUzs']) : j.intl.string(j.t['3aOv+v'])
-                                                  ]
-                                              })
-                                          )
+                                                      et ? j.intl.string(j.t["7OkUzs"]) : j.intl.string(j.t["3aOv+v"]),
+                                                  ],
+                                              }),
+                                          ),
                                   }),
                             (0, r.jsx)(u.ua7, {
                                 text: j.intl.string(j.t.WqhZsr),
@@ -309,21 +315,21 @@ function Q(e) {
                                             children: [
                                                 Q
                                                     ? (0, r.jsx)(u.dz2, {
-                                                          size: 'custom',
-                                                          color: 'currentColor',
+                                                          size: "custom",
+                                                          color: "currentColor",
                                                           width: Y,
-                                                          height: Y
+                                                          height: Y,
                                                       })
                                                     : (0, r.jsx)(u.xPt, {
-                                                          size: 'custom',
-                                                          color: 'currentColor',
+                                                          size: "custom",
+                                                          color: "currentColor",
                                                           width: Y,
-                                                          height: Y
+                                                          height: Y,
                                                       }),
-                                                Q ? j.intl.string(j.t['t5VZ8/']) : null
-                                            ]
-                                        })
-                                    )
+                                                Q ? j.intl.string(j.t["t5VZ8/"]) : null,
+                                            ],
+                                        }),
+                                    ),
                             }),
                             !n &&
                                 (0, r.jsx)(u.ua7, {
@@ -338,23 +344,23 @@ function Q(e) {
                                                 className: G.button,
                                                 innerClassName: G.buttonInner,
                                                 children: (0, r.jsx)(u.Za2, {
-                                                    size: 'custom',
-                                                    color: 'currentColor',
+                                                    size: "custom",
+                                                    color: "currentColor",
                                                     width: Y,
-                                                    height: Y
-                                                })
-                                            })
-                                        )
-                                })
-                        ]
-                    })
-                ]
+                                                    height: Y,
+                                                }),
+                                            }),
+                                        ),
+                                }),
+                        ],
+                    }),
+                ],
             }),
             eu && (0, r.jsx)(m.Z, { threadId: t }),
             (0, r.jsx)(y.Z, {
                 channel: $,
-                isLastItem: o
-            })
-        ]
+                isLastItem: o,
+            }),
+        ],
     });
 }

@@ -12,27 +12,27 @@ var i = n(481060),
     m = n(309818);
 function g(e) {
     let { guild: t, banner: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: m.guildBanner,
-        style: { backgroundImage: 'url('.concat(n) },
-        children: (0, r.jsxs)('div', {
+        style: { backgroundImage: "url(".concat(n) },
+        children: (0, r.jsxs)("div", {
             className: m.guildHeader,
             children: [
                 (0, r.jsx)(a.Z, {
                     guild: t,
-                    isBannerVisible: !0
+                    isBannerVisible: !0,
                 }),
                 (0, r.jsx)(i.X6q, {
                     className: m.guildName,
-                    variant: 'heading-md/semibold',
-                    children: t.name
+                    variant: "heading-md/semibold",
+                    children: t.name,
                 }),
                 (0, r.jsx)(l.Z, {
                     className: m.dropdown,
-                    open: !1
-                })
-            ]
-        })
+                    open: !1,
+                }),
+            ],
+        }),
     });
 }
 function p(e) {
@@ -44,17 +44,19 @@ function p(e) {
             analyticsSourceLocation: n,
             guild: i,
             headerProps: {
-                title: u.intl.string(u.t['rv2H+/']),
+                title: u.intl.string(u.t["rv2H+/"]),
                 subtitle: (function (e, t) {
                     let n = (0, s.nW)(e);
-                    return t ? u.intl.formatToPlainString(u.t['TR/Uys'], { targetLevelOrPlan: n }) : u.intl.formatToPlainString(u.t.B253V1, { targetLevelOrPlan: n });
+                    return t
+                        ? u.intl.formatToPlainString(u.t["TR/Uys"], { targetLevelOrPlan: n })
+                        : u.intl.formatToPlainString(u.t.B253V1, { targetLevelOrPlan: n });
                 })(m, l),
                 image: (0, r.jsx)(g, {
                     guild: i,
-                    banner: a
-                })
+                    banner: a,
+                }),
             },
             perkIntro: u.intl.string(u.t.ZuItcH),
-            perks: l ? (0, c.zC)() : (0, c.XO)()
+            perks: l ? (0, c.zC)() : (0, c.XO)(),
         });
 }

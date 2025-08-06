@@ -28,11 +28,11 @@ function b(e) {
                 imageData: {
                     src: (0, l.ap)(n) ? h : f,
                     width: 70,
-                    height: 40
+                    height: 40,
                 },
                 align: c.Z.Align.CENTER,
-                body: p.intl.string(p.t['2nDAzM'])
-            })
-        })
+                body: p.intl.string(p.t["2nDAzM"]),
+            }),
+        }),
     });
 }

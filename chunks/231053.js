@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Fi: () => p,
     JO: () => h,
-    w6: () => _
+    w6: () => _,
 }),
-    n(953529));
+    n(953529);
 var r = n(843991),
     i = n(544891),
     o = n(81825),
@@ -17,7 +17,7 @@ function c(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 c(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -63,7 +63,7 @@ function f(e, t) {
     );
 }
 var _ = (function (e) {
-    return ((e.GUILD = 'GUILD'), (e.APPLICATION = 'APPLICATION'), e);
+    return (e.GUILD = "GUILD"), (e.APPLICATION = "APPLICATION"), e;
 })({});
 let p = async (e) => {
     let t = null;
@@ -73,18 +73,18 @@ let p = async (e) => {
                 url: l.ANM.EMOJI_SOURCE_DATA(e),
                 oldFormErrors: !0,
                 timeout: 5000,
-                rejectWithError: !0
+                rejectWithError: !0,
             })
         ).body;
-        (null == n ? void 0 : n.type) === 'GUILD'
+        (null == n ? void 0 : n.type) === "GUILD"
             ? (t = {
                   guild: h.createFromServer(n.guild),
-                  type: n.type
+                  type: n.type,
               })
-            : (null == n ? void 0 : n.type) === 'APPLICATION' &&
+            : (null == n ? void 0 : n.type) === "APPLICATION" &&
               (t = {
                   application: m.createFromServer(n.application),
-                  type: n.type
+                  type: n.type,
               });
     } catch (e) {}
     return t;
@@ -96,7 +96,7 @@ class h extends o.Z {
             id: this.id,
             size: e,
             icon: this.icon,
-            canAnimate: t
+            canAnimate: t,
         });
     }
     getIconSource(e) {
@@ -106,8 +106,8 @@ class h extends o.Z {
                 id: this.id,
                 size: e,
                 icon: this.icon,
-                canAnimate: t
-            })
+                canAnimate: t,
+            }),
         );
     }
     hasFeature(e) {
@@ -118,7 +118,7 @@ class h extends o.Z {
     }
     static async getGuildFromEmojiId(e) {
         let t = await p(e);
-        return null != t && (null == t ? void 0 : t.type) === 'GUILD' ? t.guild : null;
+        return null != t && (null == t ? void 0 : t.type) === "GUILD" ? t.guild : null;
     }
     static _mapCommon(e) {
         return {
@@ -126,7 +126,7 @@ class h extends o.Z {
             name: e.name,
             icon: e.icon,
             description: e.description,
-            features: (0, r.G)(e.features)
+            features: (0, r.G)(e.features),
         };
     }
     static createFromGuildRecord(e) {
@@ -136,8 +136,8 @@ class h extends o.Z {
                 premiumSubscriberCount: e.premiumSubscriberCount,
                 presenceCount: null,
                 memberCount: null,
-                emojis: null
-            })
+                emojis: null,
+            }),
         );
     }
     static createFromDiscoverableGuild(e) {
@@ -147,8 +147,8 @@ class h extends o.Z {
                 premiumSubscriberCount: e.premiumSubscriptionCount,
                 presenceCount: e.presenceCount,
                 memberCount: e.memberCount,
-                emojis: e.emojis
-            })
+                emojis: e.emojis,
+            }),
         );
     }
     static createFromServer(e) {
@@ -158,25 +158,45 @@ class h extends o.Z {
                 premiumSubscriberCount: e.premium_subscription_count,
                 presenceCount: e.approximate_presence_count,
                 memberCount: e.approximate_member_count,
-                emojis: e.emojis
-            })
+                emojis: e.emojis,
+            }),
         );
     }
     static createFromGuildType(e) {
         return e instanceof h ? e : (0, s.lM)(e) ? h.createFromGuildRecord(e) : h.createFromDiscoverableGuild(e);
     }
     constructor(e) {
-        (super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'icon', void 0), c(this, 'description', void 0), c(this, 'features', void 0), c(this, 'premiumTier', void 0), c(this, 'premiumSubscriberCount', void 0), c(this, 'presenceCount', void 0), c(this, 'memberCount', void 0), c(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis));
+        super(),
+            c(this, "id", void 0),
+            c(this, "name", void 0),
+            c(this, "icon", void 0),
+            c(this, "description", void 0),
+            c(this, "features", void 0),
+            c(this, "premiumTier", void 0),
+            c(this, "premiumSubscriberCount", void 0),
+            c(this, "presenceCount", void 0),
+            c(this, "memberCount", void 0),
+            c(this, "emojis", void 0),
+            (this.id = e.id),
+            (this.name = e.name),
+            (this.icon = e.icon),
+            (this.description = e.description),
+            (this.features = e.features),
+            (this.premiumTier = e.premiumTier),
+            (this.premiumSubscriberCount = e.premiumSubscriberCount),
+            (this.presenceCount = e.presenceCount),
+            (this.memberCount = e.memberCount),
+            (this.emojis = e.emojis);
     }
 }
 class m extends o.Z {
     static createFromServer(e) {
         return new m({
             id: e.id,
-            name: e.name
+            name: e.name,
         });
     }
     constructor(e) {
-        (super(), c(this, 'id', void 0), c(this, 'name', void 0), (this.id = e.id), (this.name = e.name));
+        super(), c(this, "id", void 0), c(this, "name", void 0), (this.id = e.id), (this.name = e.name);
     }
 }

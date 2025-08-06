@@ -17,7 +17,17 @@ var i = n(255367),
     x = n(388032),
     _ = n(482470);
 function j(e) {
-    let { user: t, guild: n, className: s, sectionTitle: j, forcedDivider: E = !1, withTutorial: C = !1, showBorder: O = !1, isTryItOutFlow: v = !1, initialSelectedEffectId: S } = e,
+    let {
+            user: t,
+            guild: n,
+            className: s,
+            sectionTitle: j,
+            forcedDivider: E = !1,
+            withTutorial: C = !1,
+            showBorder: O = !1,
+            isTryItOutFlow: v = !1,
+            initialSelectedEffectId: S,
+        } = e,
         T = (0, p.Kg)(t, n),
         I = m.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: N } = (0, c.ZP)(),
@@ -27,15 +37,15 @@ function j(e) {
                 (0, d.H)({
                     analyticsLocations: N,
                     initialSelectedEffectId: S,
-                    guild: n
+                    guild: n,
                 }),
-            [N, S, n]
+            [N, S, n],
         );
     r.useEffect(() => {
         I &&
             u.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: b.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: N
+                location_stack: N,
             });
     }, [I, N]);
     let R = null != n,
@@ -48,29 +58,29 @@ function j(e) {
         showBorder: O,
         errors: A,
         className: s,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: _.buttonsContainer,
             children: [
                 (0, i.jsx)(D, {
                     size: l.zx.Sizes.SMALL,
                     onClick: P,
                     className: a()({ [_.buttonHighlighted]: C }),
-                    children: x.intl.string(x.t['/dRfCQ'])
+                    children: x.intl.string(x.t["/dRfCQ"]),
                 }),
                 (v || void 0 !== y ? null != y : null != T) &&
-                    (0, i.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
+                    (0, i.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
                         className: _.removeButton,
                         children: (0, i.jsx)(o.zxk, {
-                            variant: 'secondary',
-                            size: 'sm',
+                            variant: "secondary",
+                            size: "sm",
                             text: R ? x.intl.string(x.t.CHf9iI) : x.intl.string(x.t.uMuafH),
                             onClick: function () {
                                 (0, p.s6)(null, T, null == n ? void 0 : n.id);
-                            }
-                        })
-                    })
-            ]
-        })
+                            },
+                        }),
+                    }),
+            ],
+        }),
     });
 }

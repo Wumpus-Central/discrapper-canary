@@ -2,7 +2,7 @@ n.d(t, {
     Ci: () => g,
     DY: () => m,
     WN: () => h,
-    hn: () => p
+    hn: () => p,
 });
 var r = n(695170),
     i = n(135891),
@@ -22,7 +22,7 @@ var r = n(695170),
         TH: new f.O(3),
         FR: new f.O(4),
         SA: new f.O(5),
-        SU: new f.O(6)
+        SU: new f.O(6),
     },
     h = {
         freq: s.D.YEARLY,
@@ -43,12 +43,15 @@ var r = n(695170),
         byhour: null,
         byminute: null,
         bysecond: null,
-        byeaster: null
+        byeaster: null,
     },
     m = Object.keys(h),
     g = (function () {
         function e(e, t) {
-            (void 0 === e && (e = {}), void 0 === t && (t = !1), (this._cache = t ? null : new d.C()), (this.origOptions = (0, l.Fx)(e)));
+            void 0 === e && (e = {}),
+                void 0 === t && (t = !1),
+                (this._cache = t ? null : new d.C()),
+                (this.origOptions = (0, l.Fx)(e));
             var n = (0, l.I6)(e).parsedOptions;
             this.options = n;
         }
@@ -72,38 +75,39 @@ var r = n(695170),
                 if (this._cache) return this._cache._cacheAdd(e, t, n);
             }),
             (e.prototype.all = function (e) {
-                if (e) return this._iter(new o.Z('all', {}, e));
-                var t = this._cacheGet('all');
-                return (!1 === t && ((t = this._iter(new i.Z('all', {}))), this._cacheAdd('all', t)), t);
+                if (e) return this._iter(new o.Z("all", {}, e));
+                var t = this._cacheGet("all");
+                return !1 === t && ((t = this._iter(new i.Z("all", {}))), this._cacheAdd("all", t)), t;
             }),
             (e.prototype.between = function (e, t, n, a) {
-                if ((void 0 === n && (n = !1), !(0, r.qb)(e) || !(0, r.qb)(t))) throw Error('Invalid date passed in to RRule.between');
+                if ((void 0 === n && (n = !1), !(0, r.qb)(e) || !(0, r.qb)(t)))
+                    throw Error("Invalid date passed in to RRule.between");
                 var s = {
                     before: t,
                     after: e,
-                    inc: n
+                    inc: n,
                 };
-                if (a) return this._iter(new o.Z('between', s, a));
-                var l = this._cacheGet('between', s);
-                return (!1 === l && ((l = this._iter(new i.Z('between', s))), this._cacheAdd('between', l, s)), l);
+                if (a) return this._iter(new o.Z("between", s, a));
+                var l = this._cacheGet("between", s);
+                return !1 === l && ((l = this._iter(new i.Z("between", s))), this._cacheAdd("between", l, s)), l;
             }),
             (e.prototype.before = function (e, t) {
-                if ((void 0 === t && (t = !1), !(0, r.qb)(e))) throw Error('Invalid date passed in to RRule.before');
+                if ((void 0 === t && (t = !1), !(0, r.qb)(e))) throw Error("Invalid date passed in to RRule.before");
                 var n = {
                         dt: e,
-                        inc: t
+                        inc: t,
                     },
-                    o = this._cacheGet('before', n);
-                return (!1 === o && ((o = this._iter(new i.Z('before', n))), this._cacheAdd('before', o, n)), o);
+                    o = this._cacheGet("before", n);
+                return !1 === o && ((o = this._iter(new i.Z("before", n))), this._cacheAdd("before", o, n)), o;
             }),
             (e.prototype.after = function (e, t) {
-                if ((void 0 === t && (t = !1), !(0, r.qb)(e))) throw Error('Invalid date passed in to RRule.after');
+                if ((void 0 === t && (t = !1), !(0, r.qb)(e))) throw Error("Invalid date passed in to RRule.after");
                 var n = {
                         dt: e,
-                        inc: t
+                        inc: t,
                     },
-                    o = this._cacheGet('after', n);
-                return (!1 === o && ((o = this._iter(new i.Z('after', n))), this._cacheAdd('after', o, n)), o);
+                    o = this._cacheGet("after", n);
+                return !1 === o && ((o = this._iter(new i.Z("after", n))), this._cacheAdd("after", o, n)), o;
             }),
             (e.prototype.count = function () {
                 return this.all().length;
@@ -120,7 +124,7 @@ var r = n(695170),
             (e.prototype.clone = function () {
                 return new e(this.origOptions);
             }),
-            (e.FREQUENCIES = ['YEARLY', 'MONTHLY', 'WEEKLY', 'DAILY', 'HOURLY', 'MINUTELY', 'SECONDLY']),
+            (e.FREQUENCIES = ["YEARLY", "MONTHLY", "WEEKLY", "DAILY", "HOURLY", "MINUTELY", "SECONDLY"]),
             (e.YEARLY = s.D.YEARLY),
             (e.MONTHLY = s.D.MONTHLY),
             (e.WEEKLY = s.D.WEEKLY),

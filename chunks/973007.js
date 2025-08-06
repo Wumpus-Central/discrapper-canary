@@ -11,19 +11,19 @@ function d(e) {
     return C
         ? (0, n.jsx)(i.P3F, {
               onClick: r,
-              style: { cursor: 'pointer' },
+              style: { cursor: "pointer" },
               children: (0, n.jsx)(l.IL, {
                   ctaButton: null,
                   showPromotionalGiftBanner: d,
                   showYearlyPrice: !0,
                   isGift: t,
                   isModal: !0,
-                  priceOptions: a
-              })
+                  priceOptions: a,
+              }),
           })
         : (0, n.jsx)(i.P3F, {
               onClick: r,
-              style: { cursor: 'pointer' },
+              style: { cursor: "pointer" },
               children: (0, n.jsx)(o.wp, {
                   className: s.tier2MarketingCard,
                   ctaButton: null,
@@ -32,8 +32,8 @@ function d(e) {
                   showYearlyPrice: !0,
                   isGift: t,
                   isModal: !0,
-                  priceOptions: a
-              })
+                  priceOptions: a,
+              }),
           });
 }
 function C(e) {
@@ -41,26 +41,26 @@ function C(e) {
     return d
         ? (0, n.jsx)(i.P3F, {
               onClick: r,
-              style: { cursor: 'pointer' },
+              style: { cursor: "pointer" },
               children: (0, n.jsx)(l.UQ, {
                   className: s.premiumBrandRefreshTier0Card,
                   ctaButton: null,
                   showYearlyPrice: !0,
                   isGift: t,
-                  priceOptions: a
-              })
+                  priceOptions: a,
+              }),
           })
         : (0, n.jsx)(i.P3F, {
               onClick: r,
-              style: { cursor: 'pointer' },
+              style: { cursor: "pointer" },
               children: (0, n.jsx)(o.Gq, {
                   className: s.tier0MarketingCard,
                   ctaButton: null,
                   showWumpus: !0,
                   showYearlyPrice: !0,
                   isGift: t,
-                  priceOptions: a
-              })
+                  priceOptions: a,
+              }),
           });
 }
 let c = function (e) {
@@ -72,14 +72,14 @@ let c = function (e) {
                 isGift: t,
                 priceOptions: i,
                 showPromotionalGiftBanner: l,
-                enablePremiumBrandRefresh: o
+                enablePremiumBrandRefresh: o,
             }),
             (0, n.jsx)(C, {
                 onClick: () => r(a.Si.TIER_0),
                 isGift: t,
                 priceOptions: i,
-                enablePremiumBrandRefresh: o
-            })
-        ]
+                enablePremiumBrandRefresh: o,
+            }),
+        ],
     });
 };

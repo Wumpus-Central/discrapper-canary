@@ -14,35 +14,42 @@ var i = n(255367),
 let p = [s.K8.OTHER, s.K8.ADS, s.K8.NOT_FUN];
 function f(e) {
     var t;
-    let { channel: f, embeddedActivityLocation: g, activityApplication: v, onClose: y, transitionState: h, analyticsData: O } = e;
+    let {
+        channel: f,
+        embeddedActivityLocation: g,
+        activityApplication: v,
+        onClose: y,
+        transitionState: h,
+        analyticsData: O,
+    } = e;
     a.useEffect(() => {
         r.default.track(u.rMx.OPEN_MODAL, {
-            type: 'Activity Feedback Modal',
+            type: "Activity Feedback Modal",
             application_id: v.id,
             application_name: v.name,
             game_id: v.id,
-            source: 'Activity End'
+            source: "Activity End",
         });
     }, [v]);
     let T = (null == (t = v.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
     return (0, i.jsx)(c.Z, {
-        modalType: 'activity',
+        modalType: "activity",
         header: m.intl.formatToPlainString(m.t.QXYwoK, { applicationName: v.name }),
-        body: m.intl.string(m.t['9hk2KC']),
+        body: m.intl.string(m.t["9hk2KC"]),
         problemTitle: m.intl.string(m.t.g1q5fn),
         problems: (0, _.Z)(!0, T),
         freeformNeededProblems: p,
         onSubmit: function (e) {
             var t;
             let { rating: a, problem: c, dontShowAgain: _, feedback: s } = e;
-            (_ &&
+            _ &&
                 (r.default.track(u.rMx.ACTIVITY_REPORT_DONT_SHOW, {
                     application_id: v.id,
-                    rating: a
+                    rating: a,
                 }),
                 (0, l.Uv)({
                     feedbackType: b.nw.ACTIVITY,
-                    location: 'ActivityFeedback'
+                    location: "ActivityFeedback",
                 })),
                 null != a &&
                     ((0, d.Z)({
@@ -52,12 +59,12 @@ function f(e) {
                         feedback: s,
                         activityApplication: v,
                         analyticsData: O,
-                        location: 'Activity End',
-                        rating: a
+                        location: "Activity End",
+                        rating: a,
                     }),
                     null != c &&
                         (0, o.ZDy)(async () => {
-                            let { default: e } = await n.e('14466').then(n.bind(n, 729328));
+                            let { default: e } = await n.e("14466").then(n.bind(n, 729328));
                             return (t) =>
                                 (0, i.jsx)(
                                     e,
@@ -65,32 +72,32 @@ function f(e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 i = Object.keys(n);
-                                            ('function' == typeof Object.getOwnPropertySymbols &&
+                                            "function" == typeof Object.getOwnPropertySymbols &&
                                                 (i = i.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
+                                                    }),
                                                 )),
                                                 i.forEach(function (t) {
                                                     var i;
-                                                    ((i = n[t]),
+                                                    (i = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
                                                                   value: i,
                                                                   enumerable: !0,
                                                                   configurable: !0,
-                                                                  writable: !0
+                                                                  writable: !0,
                                                               })
-                                                            : (e[t] = i));
-                                                }));
+                                                            : (e[t] = i);
+                                                });
                                         }
                                         return e;
-                                    })({ body: m.intl.string(m.t['zuHR+/']) }, t)
+                                    })({ body: m.intl.string(m.t["zuHR+/"]) }, t),
                                 );
-                        })));
+                        }));
         },
         onClose: y,
         transitionState: h,
-        otherKey: s.K8.OTHER
+        otherKey: s.K8.OTHER,
     });
 }

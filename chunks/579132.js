@@ -10,14 +10,14 @@ function l(e) {
         if (null == e) return null;
         let n = {
             theme: e,
-            saturation: t
+            saturation: t,
         };
         return {
             overlaySyncedWithUserTheme: a.Z.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve(n).hex(),
             overlay: a.Z.colors.PROFILE_GRADIENT_OVERLAY.resolve(n).hex(),
             sectionBox: a.Z.colors.PROFILE_GRADIENT_SECTION_BOX.resolve(n).hex(),
             dividerOpacity: e === (0, o.RC)().DARK ? 0.24 : 0.12,
-            rolePillBackgroundColor: a.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve(n).hex()
+            rolePillBackgroundColor: a.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve(n).hex(),
         };
     }, [e, t]);
 }

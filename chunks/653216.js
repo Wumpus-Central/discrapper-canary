@@ -15,11 +15,11 @@ var r = n(214788),
         return e.withMutations(function (e) {
             var r = t.getKey(),
                 i = n.getKey();
-            (u(t.getParentKey(), e, function (e) {
+            u(t.getParentKey(), e, function (e) {
                 var t = e.getChildKeys(),
                     n = t.indexOf(r) + 1,
                     o = t.toArray();
-                return (o.splice(n, 0, i), e.merge({ children: l(o) }));
+                return o.splice(n, 0, i), e.merge({ children: l(o) });
             }),
                 u(t.getNextSiblingKey(), e, function (e) {
                     return e.merge({ prevSibling: i });
@@ -29,7 +29,7 @@ var r = n(214788),
                 }),
                 u(i, e, function (e) {
                     return e.merge({ prevSibling: r });
-                }));
+                });
         });
     };
 e.exports = function (e, t) {
@@ -40,11 +40,11 @@ e.exports = function (e, t) {
         u = l.getText();
     if (!u) {
         var f = l.getType();
-        if ('unordered-list-item' === f || 'ordered-list-item' === f)
+        if ("unordered-list-item" === f || "ordered-list-item" === f)
             return s(e, t, function (e) {
                 return e.merge({
-                    type: 'unstyled',
-                    depth: 0
+                    type: "unstyled",
+                    depth: 0,
                 });
             });
     }
@@ -54,13 +54,13 @@ e.exports = function (e, t) {
         m = l instanceof r,
         g = l.merge({
             text: u.slice(0, _),
-            characterList: p.slice(0, _)
+            characterList: p.slice(0, _),
         }),
         E = g.merge({
             key: h,
             text: u.slice(_),
             characterList: p.slice(_),
-            data: c()
+            data: c(),
         }),
         b = o.toSeq().takeUntil(function (e) {
             return e === l;
@@ -75,9 +75,9 @@ e.exports = function (e, t) {
             .concat(
                 [
                     [n, g],
-                    [h, E]
+                    [h, E],
                 ],
-                y
+                y,
             )
             .toOrderedMap();
     return (
@@ -90,8 +90,8 @@ e.exports = function (e, t) {
                 anchorOffset: 0,
                 focusKey: h,
                 focusOffset: 0,
-                isBackward: !1
-            })
+                isBackward: !1,
+            }),
         })
     );
 };

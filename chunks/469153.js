@@ -9,19 +9,19 @@ var i = n(126663),
     c = n(719142),
     u = n(986449);
 let d = () =>
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: u.toast,
             children: [
                 (0, r.jsx)(a.$jN, {
                     type: a.RAz.SPINNING_CIRCLE_SIMPLE,
-                    className: c.loadingSpinner
+                    className: c.loadingSpinner,
                 }),
                 (0, r.jsx)(a.Text, {
-                    color: 'header-primary',
-                    variant: 'text-md/normal',
-                    children: l.intl.string(l.t['5z/hlJ'])
-                })
-            ]
+                    color: "header-primary",
+                    variant: "text-md/normal",
+                    children: l.intl.string(l.t["5z/hlJ"]),
+                }),
+            ],
         }),
     f = (e) => {
         let { shown: t, sent: n, className: c } = e,
@@ -30,26 +30,26 @@ let d = () =>
                 t,
                 {
                     from: {
-                        transform: u ? 'translateY(0)' : 'translateY(16px)',
-                        opacity: 0
+                        transform: u ? "translateY(0)" : "translateY(16px)",
+                        opacity: 0,
                     },
                     enter: {
-                        transform: 'translateY(0)',
-                        opacity: 1
+                        transform: "translateY(0)",
+                        opacity: 1,
                     },
                     leave: {
-                        transform: u ? 'translateY(0)' : 'translateY(16px)',
-                        opacity: 0
+                        transform: u ? "translateY(0)" : "translateY(16px)",
+                        opacity: 0,
                     },
                     config: {
                         mass: 1,
                         tension: 500,
                         friction: 18,
-                        clamp: !0
+                        clamp: !0,
                     },
-                    delay: 200
+                    delay: 200,
                 },
-                'animate-always'
+                "animate-always",
             );
         return (0, r.jsx)(r.Fragment, {
             children: f(
@@ -62,15 +62,15 @@ let d = () =>
                             ? (0, r.jsx)(a.FNi, {
                                   message: l.intl.string(l.t.fjcCk5),
                                   type: a.ToastType.SUCCESS,
-                                  id: 'success_message_toast'
+                                  id: "success_message_toast",
                               })
                             : (0, r.jsx)(a.FNi, {
-                                  message: '',
+                                  message: "",
                                   type: a.ToastType.CUSTOM,
-                                  id: 'custom_loading_message_toast',
-                                  options: { component: (0, r.jsx)(d, {}) }
-                              })
-                    })
-            )
+                                  id: "custom_loading_message_toast",
+                                  options: { component: (0, r.jsx)(d, {}) },
+                              }),
+                    }),
+            ),
         });
     };

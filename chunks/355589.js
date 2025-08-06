@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => eg }), n(539854), n(388685), n(953529));
+n.d(t, { Z: () => eg }), n(539854), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -46,7 +46,7 @@ function U(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -56,15 +56,15 @@ function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 U(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -88,19 +88,19 @@ function G(e, t) {
 }
 let q = {
         width: 28,
-        height: 28
+        height: 28,
     },
     W = {
         width: 20,
         height: 20,
-        borderRadius: 10
+        borderRadius: 10,
     },
     X = (e) => {
         (0, k.e5)({ onboardingCTA: e });
     };
 class K {
     addStep(e) {
-        (++this.currentIndex, this.steps.push(V({ index: this.currentIndex }, e)), e.isDone && this.completedSteps++);
+        ++this.currentIndex, this.steps.push(V({ index: this.currentIndex }, e)), e.isDone && this.completedSteps++;
     }
     getSteps() {
         return this.steps;
@@ -109,18 +109,18 @@ class K {
         return this.steps.every((e) => e.isDone);
     }
     constructor() {
-        (U(this, 'currentIndex', 0), U(this, 'steps', []), U(this, 'completedSteps', 0));
+        U(this, "currentIndex", 0), U(this, "steps", []), U(this, "completedSteps", 0);
     }
 }
 let J = (e) => {
         let t = null != e.topic && e.topic.length > 0;
         return {
             name: B.intl.string(B.t.UgJu1d),
-            description: B.intl.string(B.t['3C6/Gx']),
+            description: B.intl.string(B.t["3C6/Gx"]),
             clickHandler: () => {
-                (X(D.ZI.GUIDELINES), f.ZP.open(e.id, void 0, z.ZfP.TOPIC));
+                X(D.ZI.GUIDELINES), f.ZP.open(e.id, void 0, z.ZfP.TOPIC);
             },
-            isDone: t
+            isDone: t,
         };
     },
     Y = (e) => {
@@ -129,42 +129,42 @@ let J = (e) => {
             name: B.intl.string(B.t.xiBFCg),
             description: B.intl.string(B.t.wCv4Oz),
             clickHandler: () => {
-                (X(D.ZI.TAGS),
+                X(D.ZI.TAGS),
                     f.ZP.open(e.id),
                     (0, g.ZDy)(async () => {
-                        let { default: t } = await n.e('21971').then(n.bind(n, 201049));
+                        let { default: t } = await n.e("21971").then(n.bind(n, 201049));
                         return (n) =>
                             (0, r.jsx)(
                                 t,
                                 G(V({}, n), {
                                     channelId: e.id,
-                                    guildId: e.guild_id
-                                })
+                                    guildId: e.guild_id,
+                                }),
                             );
-                    }));
+                    });
             },
-            isDone: t
+            isDone: t,
         };
     },
     Q = (e) => {
         let t = null != e.defaultReactionEmoji;
         return {
             name: B.intl.string(B.t.QlyC9v),
-            description: B.intl.string(B.t['+50LJi']),
+            description: B.intl.string(B.t["+50LJi"]),
             clickHandler: () => {
-                (X(D.ZI.DEFAULT_REACTION),
+                X(D.ZI.DEFAULT_REACTION),
                     (0, g.ZDy)(async () => {
-                        let { default: t } = await n.e('80404').then(n.bind(n, 158586));
+                        let { default: t } = await n.e("80404").then(n.bind(n, 158586));
                         return (n) => (0, r.jsx)(t, G(V({}, n), { channel: e }));
-                    }));
+                    });
             },
-            isDone: t
+            isDone: t,
         };
     },
     $ = (e, t, i) => ({
-        name: B.intl.string(B.t['6A0O6+']),
+        name: B.intl.string(B.t["6A0O6+"]),
         description: t
-            ? B.intl.string(B.t['8hI5vr'])
+            ? B.intl.string(B.t["8hI5vr"])
             : B.intl.format(B.t.ysxcAw, {
                   onClick: (e) => {
                       null != i &&
@@ -172,20 +172,20 @@ let J = (e) => {
                           e.stopPropagation(),
                           (0, k.qz)(),
                           (0, g.ZDy)(async () => {
-                              let { default: e } = await n.e('18417').then(n.bind(n, 740696));
+                              let { default: e } = await n.e("18417").then(n.bind(n, 740696));
                               return (t) => (0, r.jsx)(e, G(V({}, t), { guildId: i }));
                           }));
-                  }
+                  },
               }),
         clickHandler: () => {
-            (X(D.ZI.CREATE_POST), S.S.dispatch(z.CkL.FOCUS_COMPOSER_TITLE));
+            X(D.ZI.CREATE_POST), S.S.dispatch(z.CkL.FOCUS_COMPOSER_TITLE);
         },
-        isDone: e
+        isDone: e,
     }),
     ee = (e, t) => i.useCallback(() => (t(!1), E.Z.hideAdminOnboarding(e, !0)), [e, t]),
     et = (e) => {
         let t = N.default.extractTimestamp(e);
-        return o()().isBefore(o()(t).add(o().duration(15, 'days')));
+        return o()().isBefore(o()(t).add(o().duration(15, "days")));
     },
     en = (e, t, n) => {
         i.useEffect(() => {
@@ -203,7 +203,7 @@ let J = (e) => {
                       }, 60 * T.Z.Millis.SECOND)),
                 () => clearTimeout(l.current)
             ),
-            [e, t, r, n]
+            [e, t, r, n],
         );
     },
     ei = (e, t, n) => {
@@ -225,14 +225,14 @@ let J = (e) => {
         let [e, t] = i.useState(!0);
         return {
             transitions: (0, g.Yzy)(e, {
-                keys: (e) => (e ? 'shown' : 'hidden'),
+                keys: (e) => (e ? "shown" : "hidden"),
                 config: ec,
                 from: { opacity: 0 },
                 enter: { opacity: 1 },
                 leave: { opacity: 0 },
-                unique: !0
+                unique: !0,
             }),
-            setVisible: t
+            setVisible: t,
         };
     },
     es = (e) =>
@@ -240,13 +240,13 @@ let J = (e) => {
             from: { maxHeight: 0 },
             enter: { maxHeight: 500 },
             leave: { maxHeight: 0 },
-            config: { duration: 200 }
+            config: { duration: 200 },
         }),
     eo = (e) => {
         let { guild: t, roles: n } = e;
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: H.rolesList,
-            'aria-label': B.intl.formatToPlainString(B.t.PCs0oq, { numRoles: n.length }),
+            "aria-label": B.intl.formatToPlainString(B.t.PCs0oq, { numRoles: n.length }),
             children: n.map((e) =>
                 (0, r.jsx)(
                     x.UB,
@@ -255,18 +255,18 @@ let J = (e) => {
                         canRemove: !1,
                         onRemove: z.VqG,
                         guildId: t.id,
-                        className: H.rolePill
+                        className: H.rolePill,
                     },
-                    e.id
-                )
-            )
+                    e.id,
+                ),
+            ),
         });
     },
     ec = {
         mass: 1,
         tension: 250,
         friction: 18,
-        clamp: !0
+        clamp: !0,
     },
     ed = (e) => {
         let { guild: t, channel: l, hasAnyThread: a, handleHide: s } = e,
@@ -286,26 +286,34 @@ let J = (e) => {
                             null == o ||
                             i.addStep(
                                 (function (e, t, i, l) {
-                                    let a = (0, b.Z)(i) ? m.$e(z.Plq.VIEW_CHANNEL, z.Plq.SEND_MESSAGES) : z.Plq.SEND_MESSAGES,
-                                        s = null != e ? (0, R.E)(t, i, a).filter((e) => i.permissionOverwrites.hasOwnProperty(e.id) || (0, y.fI)(e)) : [],
+                                    let a = (0, b.Z)(i)
+                                            ? m.$e(z.Plq.VIEW_CHANNEL, z.Plq.SEND_MESSAGES)
+                                            : z.Plq.SEND_MESSAGES,
+                                        s =
+                                            null != e
+                                                ? (0, R.E)(t, i, a).filter(
+                                                      (e) =>
+                                                          i.permissionOverwrites.hasOwnProperty(e.id) || (0, y.fI)(e),
+                                                  )
+                                                : [],
                                         o = s.length > 0,
                                         c = s.some((e) => (0, y.fI)(e));
                                     return {
-                                        name: B.intl.string(B.t['/Ax2go']),
+                                        name: B.intl.string(B.t["/Ax2go"]),
                                         description: B.intl.string(B.t.gAIOfn),
                                         isDone: o && c,
                                         shouldWarn: o && !c,
                                         children: o
                                             ? (0, r.jsx)(eo, {
                                                   guild: e,
-                                                  roles: s
+                                                  roles: s,
                                               })
                                             : null,
                                         clickHandler: () => {
-                                            (X(D.ZI.PERMISSIONS),
+                                            X(D.ZI.PERMISSIONS),
                                                 (0, g.ZDy)(
                                                     async () => {
-                                                        let { default: t } = await n.e('78704').then(n.bind(n, 560602));
+                                                        let { default: t } = await n.e("78704").then(n.bind(n, 560602));
                                                         return (
                                                             l(!0),
                                                             (n) =>
@@ -315,20 +323,20 @@ let J = (e) => {
                                                                         channel: i,
                                                                         guild: e,
                                                                         permission: a,
-                                                                        currentSelectedRoles: s
-                                                                    })
+                                                                        currentSelectedRoles: s,
+                                                                    }),
                                                                 )
                                                         );
                                                     },
                                                     {
-                                                        modalKey: 'SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY',
+                                                        modalKey: "SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY",
                                                         onCloseRequest: z.VqG,
-                                                        onCloseCallback: () => l(!1)
-                                                    }
-                                                ));
-                                        }
+                                                        onCloseCallback: () => l(!1),
+                                                    },
+                                                );
+                                        },
                                     };
-                                })(e, o, t, a)
+                                })(e, o, t, a),
                             ),
                         s || i.addStep(J(t)),
                         i.addStep(Y(t)),
@@ -345,7 +353,7 @@ let J = (e) => {
                 onboardingSteps: f,
                 isHidden: u,
                 isDismissed: d,
-                isAllDone: x
+                isAllDone: x,
             }
         );
     },
@@ -359,12 +367,12 @@ let J = (e) => {
         return (0, r.jsx)(g.P3F, {
             onClick: t,
             className: H.closeButton,
-            'aria-label': B.intl.string(B.t.WAI6xs),
+            "aria-label": B.intl.string(B.t.WAI6xs),
             children: (0, r.jsx)(g.Dio, {
-                size: 'md',
-                color: 'currentColor',
-                className: H.closeIcon
-            })
+                size: "md",
+                color: "currentColor",
+                className: H.closeIcon,
+            }),
         });
     },
     eh = (e) => {
@@ -372,18 +380,18 @@ let J = (e) => {
         return (0, r.jsx)(g.P3F, {
             onClick: n,
             className: H.closeButton,
-            'aria-label': t ? B.intl.string(B.t.iTcumZ) : B.intl.string(B.t.dcl9MT),
+            "aria-label": t ? B.intl.string(B.t.iTcumZ) : B.intl.string(B.t.dcl9MT),
             children: t
                 ? (0, r.jsx)(g.dOc, {
-                      size: 'xs',
-                      color: 'currentColor',
-                      className: H.closeIcon
+                      size: "xs",
+                      color: "currentColor",
+                      className: H.closeIcon,
                   })
                 : (0, r.jsx)(g.bJT, {
-                      size: 'xs',
-                      color: 'currentColor',
-                      className: H.closeIcon
-                  })
+                      size: "xs",
+                      color: "currentColor",
+                      className: H.closeIcon,
+                  }),
         });
     },
     eg = (e) => {
@@ -403,12 +411,12 @@ let J = (e) => {
                 onboardingSteps: S,
                 isDismissed: T,
                 isHidden: N,
-                isAllDone: I
+                isAllDone: I,
             } = ed({
                 guild: o,
                 channel: i,
                 hasAnyThread: t,
-                handleHide: O
+                handleHide: O,
             }),
             E = !N && !T,
             R = (0, F.AF)(),
@@ -420,7 +428,7 @@ let J = (e) => {
             isVisible: E,
             canManageChannel: m,
             guildId: null == o ? void 0 : o.id,
-            channel: i
+            channel: i,
         }),
         en(T, N, x),
         (0, p.ZP)(() => {
@@ -434,7 +442,7 @@ let J = (e) => {
                       ? null
                       : (0, r.jsx)(C.Z, { guild: o })
                   : (0, r.jsxs)(r.Fragment, {
-                        children: [(0, r.jsx)(C.Z, { guild: o }), (0, r.jsx)(_.q, {})]
+                        children: [(0, r.jsx)(C.Z, { guild: o }), (0, r.jsx)(_.q, {})],
                     })
               : E && m
                 ? k
@@ -447,120 +455,129 @@ let J = (e) => {
                                   ? (0, r.jsx)(c.animated.div, {
                                         style: e,
                                         className: H.container,
-                                        children: (0, r.jsxs)('div', {
+                                        children: (0, r.jsxs)("div", {
                                             className: H.wrapper,
                                             children: [
-                                                (0, r.jsx)('div', {
+                                                (0, r.jsx)("div", {
                                                     className: H.headerRow,
                                                     children: (0, r.jsxs)(g.y5t, {
                                                         component: (0, r.jsx)(g.X6q, {
-                                                            variant: 'heading-md/semibold',
-                                                            children: B.intl.string(B.t.LhlgY2)
+                                                            variant: "heading-md/semibold",
+                                                            children: B.intl.string(B.t.LhlgY2),
                                                         }),
                                                         children: [
                                                             (0, r.jsx)(g.X6q, {
-                                                                variant: 'heading-md/medium',
+                                                                variant: "heading-md/medium",
                                                                 className: H.header,
-                                                                children: B.intl.format(B.t['9L+8b2'], {
+                                                                children: B.intl.format(B.t["9L+8b2"], {
                                                                     numCompleted: S.completedSteps.toString(),
-                                                                    numSteps: S.steps.length.toString()
-                                                                })
+                                                                    numSteps: S.steps.length.toString(),
+                                                                }),
                                                             }),
                                                             (0, r.jsxs)(g.Text, {
-                                                                variant: 'text-xs/normal',
+                                                                variant: "text-xs/normal",
                                                                 className: H.visibilityInfo,
                                                                 children: [
                                                                     (0, r.jsx)(g.d3s, {
-                                                                        size: 'xxs',
-                                                                        color: 'currentColor',
-                                                                        className: H.icon
+                                                                        size: "xxs",
+                                                                        color: "currentColor",
+                                                                        className: H.icon,
                                                                     }),
-                                                                    B.intl.string(B.t.znhX2d)
-                                                                ]
+                                                                    B.intl.string(B.t.znhX2d),
+                                                                ],
                                                             }),
                                                             (0, r.jsx)(eh, {
                                                                 expanded: l,
-                                                                onClick: () => A(!l)
+                                                                onClick: () => A(!l),
                                                             }),
-                                                            (0, r.jsx)(em, { handleHide: O })
-                                                        ]
-                                                    })
+                                                            (0, r.jsx)(em, { handleHide: O }),
+                                                        ],
+                                                    }),
                                                 }),
                                                 b((e, t) =>
                                                     t
                                                         ? (0, r.jsx)(c.animated.div, {
                                                               style: e,
                                                               className: H.listContainer,
-                                                              children: (0, r.jsx)('ol', {
+                                                              children: (0, r.jsx)("ol", {
                                                                   className: H.checklist,
                                                                   children: S.getSteps().map((e) =>
                                                                       (0, r.jsxs)(
                                                                           g.P3F,
                                                                           {
-                                                                              tag: 'li',
-                                                                              'aria-label': e.name,
+                                                                              tag: "li",
+                                                                              "aria-label": e.name,
                                                                               onClick: () => y(e),
-                                                                              className: a()(H.stepContainer, { [H.completed]: e.isDone }),
+                                                                              className: a()(H.stepContainer, {
+                                                                                  [H.completed]: e.isDone,
+                                                                              }),
                                                                               children: [
                                                                                   e.shouldWarn
                                                                                       ? (0, r.jsx)(g.Mgn, {
-                                                                                            size: 'custom',
+                                                                                            size: "custom",
                                                                                             width: 20,
                                                                                             height: 20,
                                                                                             color: u.Z.STATUS_DANGER,
-                                                                                            className: H.stepStatus
+                                                                                            className: H.stepStatus,
                                                                                         })
                                                                                       : e.isDone
                                                                                         ? (0, r.jsx)(g.G2e, {
-                                                                                              color: u.Z.STATUS_POSITIVE_BACKGROUND,
+                                                                                              color: u.Z
+                                                                                                  .STATUS_POSITIVE_BACKGROUND,
                                                                                               icon: g.dz2,
                                                                                               style: W,
-                                                                                              className: H.stepStatus
+                                                                                              className: H.stepStatus,
                                                                                           })
                                                                                         : (0, r.jsx)(g.G2e, {
                                                                                               disableColor: !0,
                                                                                               icon: (0, g.GSL)(P.Z),
                                                                                               style: q,
-                                                                                              className: a()(H.stepStatus, H.completed)
+                                                                                              className: a()(
+                                                                                                  H.stepStatus,
+                                                                                                  H.completed,
+                                                                                              ),
                                                                                           }),
-                                                                                  (0, r.jsxs)('div', {
+                                                                                  (0, r.jsxs)("div", {
                                                                                       className: H.step,
                                                                                       children: [
                                                                                           (0, r.jsx)(g.Text, {
-                                                                                              variant: 'text-md/medium',
-                                                                                              color: e.isDone ? 'header-secondary' : 'header-primary',
+                                                                                              variant: "text-md/medium",
+                                                                                              color: e.isDone
+                                                                                                  ? "header-secondary"
+                                                                                                  : "header-primary",
                                                                                               className: H.stepName,
-                                                                                              children: e.name
+                                                                                              children: e.name,
                                                                                           }),
                                                                                           (0, r.jsx)(g.Text, {
-                                                                                              variant: 'text-sm/normal',
-                                                                                              color: 'header-secondary',
-                                                                                              className: H.stepDescription,
-                                                                                              children: e.description
+                                                                                              variant: "text-sm/normal",
+                                                                                              color: "header-secondary",
+                                                                                              className:
+                                                                                                  H.stepDescription,
+                                                                                              children: e.description,
                                                                                           }),
-                                                                                          e.children
-                                                                                      ]
+                                                                                          e.children,
+                                                                                      ],
                                                                                   }),
                                                                                   (0, r.jsx)(g.Fbu, {
-                                                                                      size: 'custom',
-                                                                                      color: 'currentColor',
+                                                                                      size: "custom",
+                                                                                      color: "currentColor",
                                                                                       width: 12,
-                                                                                      className: H.stepStatus
-                                                                                  })
-                                                                              ]
+                                                                                      className: H.stepStatus,
+                                                                                  }),
+                                                                              ],
                                                                           },
-                                                                          'onboard-step-'.concat(e.index)
-                                                                      )
-                                                                  )
-                                                              })
+                                                                          "onboard-step-".concat(e.index),
+                                                                      ),
+                                                                  ),
+                                                              }),
                                                           })
-                                                        : null
-                                                )
-                                            ]
-                                        })
+                                                        : null,
+                                                ),
+                                            ],
+                                        }),
                                     })
-                                  : null
-                          )
+                                  : null,
+                          ),
                       })
                 : t
                   ? null
@@ -568,6 +585,6 @@ let J = (e) => {
                         channelName: i.name,
                         guildId: i.guild_id,
                         tagFilter: s,
-                        channel: i
+                        channel: i,
                     });
     };

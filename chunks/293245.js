@@ -1,5 +1,5 @@
 let r, i, o;
-(n.d(t, { Z: () => T }), n(388685));
+n.d(t, { Z: () => T }), n(388685);
 var a,
     s = n(442837),
     l = n(570140),
@@ -17,7 +17,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,7 +34,7 @@ function g() {
                 } catch (e) {}
             });
     }
-    return ((o = e), !1);
+    return (o = e), !1;
 }
 function E(e) {
     let { applicationId: t, branchId: n } = e,
@@ -48,7 +48,7 @@ function b(e) {
         i.delete(o),
         (r[o] = {
             type: h.TzF.DONE,
-            timestamp: Date.now()
+            timestamp: Date.now(),
         }),
         !0
     );
@@ -60,21 +60,21 @@ function y(e) {
 function O(e) {
     let { applicationId: t, branchId: n, next: o, remote: a } = e,
         s = (0, f.Tu)(t, n);
-    ((r[s] = {
+    (r[s] = {
         type: h.TzF.CONFLICT,
         next: o,
-        remote: a
+        remote: a,
     }),
-        i.delete(s));
+        i.delete(s);
 }
 function v(e) {
     let { applicationId: t, branchId: n } = e,
         o = (0, f.Tu)(t, n);
-    ((r[o] = { type: h.TzF.ERROR }), i.delete(o));
+    (r[o] = { type: h.TzF.ERROR }), i.delete(o);
 }
 class I extends (a = s.ZP.Store) {
     initialize() {
-        (_.isPlatformEmbedded && p.S(), (r = {}), (i = new Set()), (o = []));
+        _.isPlatformEmbedded && p.S(), (r = {}), (i = new Set()), (o = []);
     }
     getState(e, t) {
         return r[(0, f.Tu)(e, t)];
@@ -84,12 +84,12 @@ class I extends (a = s.ZP.Store) {
         return i.has(n);
     }
 }
-m(I, 'displayName', 'CloudSyncStore');
+m(I, "displayName", "CloudSyncStore");
 let T = new I(l.Z, {
     GAME_CLOUD_SYNC_START: E,
     GAME_CLOUD_SYNC_UPDATE: y,
     GAME_CLOUD_SYNC_COMPLETE: b,
     GAME_CLOUD_SYNC_CONFLICT: O,
     GAME_CLOUD_SYNC_ERROR: v,
-    RUNNING_GAMES_CHANGE: g
+    RUNNING_GAMES_CHANGE: g,
 });

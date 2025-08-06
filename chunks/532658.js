@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => Q,
     e5: () => T,
-    px: () => M
+    px: () => M,
 }),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -39,24 +39,24 @@ function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -93,7 +93,7 @@ function T(e) {
 }
 let R = () =>
         n
-            .e('43841')
+            .e("43841")
             .then(n.t.bind(n, 737848, 19))
             .then((e) => {
                 let { default: t } = e;
@@ -104,35 +104,35 @@ let R = () =>
             config: {
                 mass: 0.2,
                 tension: 180,
-                friction: 14
-            }
+                friction: 14,
+            },
         },
         exiting: {
             config: {
                 mass: 1,
                 tension: 80,
                 friction: 10,
-                clamp: !0
-            }
-        }
+                clamp: !0,
+            },
+        },
     },
     G = {
         entering: {
             config: {
                 mass: 0.5,
                 tension: 240,
-                friction: 10
-            }
+                friction: 10,
+            },
         },
         exiting: {
             config: {
                 mass: 1.5,
                 tension: 300,
                 friction: 30,
-                clamp: !0
+                clamp: !0,
             },
-            delay: 300
-        }
+            delay: 300,
+        },
     };
 function W(e, t) {
     let [n, r] = i.useState(null != e && e > Date.now() - 10000),
@@ -149,10 +149,10 @@ function W(e, t) {
         }),
         (0, O.ZP)(() => {
             let e = setTimeout(() => {
-                (r(!1),
+                r(!1),
                     setTimeout(() => {
                         o(!1);
-                    }, 16));
+                    }, 16);
             }, 2600);
             return () => clearTimeout(e);
         }),
@@ -161,78 +161,83 @@ function W(e, t) {
                 showConnectedAnimation: l,
                 recentlyConnected: n,
                 hideConnectedAnimation: a,
-                setHideConnectedAnimation: s
+                setHideConnectedAnimation: s,
             }),
-            [l, n, a, s]
+            [l, n, a, s],
         )
     );
 }
 let F = i.memo(function (e) {
         let { nick: t, connectedOn: n, isSettingsPreview: l, voiceBackgroundWidth: u, rightAlign: d = !1 } = e,
-            { showConnectedAnimation: f, recentlyConnected: p, hideConnectedAnimation: m, setHideConnectedAnimation: O } = W(n, l),
+            {
+                showConnectedAnimation: f,
+                recentlyConnected: p,
+                hideConnectedAnimation: m,
+                setHideConnectedAnimation: O,
+            } = W(n, l),
             { ref: v, width: h } = (0, g.ZP)(),
             y = (0, s.e7)([b.Z], () => b.Z.useReducedMotion),
-            j = p ? 'entering' : 'exiting',
+            j = p ? "entering" : "exiting",
             { width: P } = (0, a.useSpring)(_(A({}, L[j]), { width: f ? h : u })),
             { opacity: x } = (0, a.useSpring)(
                 _(A({}, G[j]), {
                     opacity: +!!f,
                     onRest: () => {
                         f || O(!0);
-                    }
-                })
+                    },
+                }),
             ),
-            S = i.useMemo(() => (m || y ? 'none' : 'block'), [m, y]);
+            S = i.useMemo(() => (m || y ? "none" : "block"), [m, y]);
         return (0, r.jsx)(a.animated.div, {
             className: o()(D.connectedAnimationContainer, { [D.right]: d }),
             style: {
                 width: P,
                 opacity: x,
-                display: S
+                display: S,
             },
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 ref: v,
                 className: o()(D.connectedAnimationInnerContainer, {
-                    [D.exiting]: 'exiting' === j,
+                    [D.exiting]: "exiting" === j,
                     [D.left]: !d,
-                    [D.right]: d
+                    [D.right]: d,
                 }),
                 children: [
                     d &&
                         (0, r.jsx)(c.Fmz, {
                             importData: R,
                             shouldAnimate: !y,
-                            className: D.animation
+                            className: D.animation,
                         }),
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)("div", {
                         children: (0, r.jsx)(c.Text, {
-                            variant: 'text-xs/medium',
-                            color: 'text-default',
-                            children: N.intl.format(N.t.uFcRen, { nick: t })
-                        })
+                            variant: "text-xs/medium",
+                            color: "text-default",
+                            children: N.intl.format(N.t.uFcRen, { nick: t }),
+                        }),
                     }),
                     !d &&
                         (0, r.jsx)(c.Fmz, {
                             importData: R,
                             shouldAnimate: !y,
-                            className: D.animation
+                            className: D.animation,
                         }),
-                    (0, r.jsx)('div', { className: D.emptySpace })
-                ]
-            })
+                    (0, r.jsx)("div", { className: D.emptySpace }),
+                ],
+            }),
         });
     }),
     U = i.memo(function (e) {
         let { avatarSize: t, userId: n, channelId: i, guildId: l } = e,
             o = 2 * t,
             a = -(t / 2);
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: D.effect,
             style: {
                 top: a,
                 left: a,
                 width: o,
-                height: o
+                height: o,
             },
             children: (0, r.jsx)(v.Z, {
                 userId: n,
@@ -240,14 +245,34 @@ let F = i.memo(function (e) {
                 guildId: l,
                 containerDimensions: {
                     width: o,
-                    height: o
-                }
-            })
+                    height: o,
+                },
+            }),
         });
     }),
     z = i.memo(c.qEK),
     Y = i.memo(function (e) {
-        let { channel: t, flipped: n = !1, locked: l = !1, user: a, nick: u, displayNameMode: d, displayUserMode: f, size: O = k.ipw.LARGE, onClick: b, onContextMenu: v, context: j, guildId: w, isSettingsPreview: C = !1, voiceState: N, showStreamPreview: A, onShowStreamPreview: _, onWatchStream: R, connectedOn: L, ref: G } = e,
+        let {
+                channel: t,
+                flipped: n = !1,
+                locked: l = !1,
+                user: a,
+                nick: u,
+                displayNameMode: d,
+                displayUserMode: f,
+                size: O = k.ipw.LARGE,
+                onClick: b,
+                onContextMenu: v,
+                context: j,
+                guildId: w,
+                isSettingsPreview: C = !1,
+                voiceState: N,
+                showStreamPreview: A,
+                onShowStreamPreview: _,
+                onWatchStream: R,
+                connectedOn: L,
+                ref: G,
+            } = e,
             Y = (0, s.e7)([S.default], () => S.default.getId() === a.id, [a.id]),
             { ref: Q, width: B } = (0, g.ZP)(),
             { showConnectedAnimation: K } = W(L, C),
@@ -258,26 +283,32 @@ let F = i.memo(function (e) {
                 [E.Z],
                 () => {
                     var e;
-                    return [null != (e = E.Z.getVoiceStateForChannel(H, $)) ? e : E.Z.getVoiceStateForSession($, q), E.Z.getVoiceStateVersion()];
+                    return [
+                        null != (e = E.Z.getVoiceStateForChannel(H, $)) ? e : E.Z.getVoiceStateForSession($, q),
+                        E.Z.getVoiceStateVersion(),
+                    ];
                 },
                 [H, $, q],
-                Z.Q
+                Z.Q,
             ),
             X = C ? N : null != J ? J : N,
-            [ee, et, en] = (0, s.Wu)([I.Z], () => (Y ? [!I.Z.isSupported() || I.Z.isSelfMute() || I.Z.isSelfMutedTemporarily(), I.Z.isSelfDeaf(), !1] : [!I.Z.isSupported() || I.Z.isLocalMute(a.id), !1, I.Z.isLocalVideoDisabled(a.id)]), [Y, a.id]),
-            er = (0, s.e7)(
-                [x.Z],
-                () => {
-                    let e = x.Z.getCurrentUserActiveStream();
-                    return null != e && e.ownerId !== a.id && x.Z.getViewerIds(e).filter((e) => e === a.id).length > 0;
-                },
-                [a.id]
+            [ee, et, en] = (0, s.Wu)(
+                [I.Z],
+                () =>
+                    Y
+                        ? [!I.Z.isSupported() || I.Z.isSelfMute() || I.Z.isSelfMutedTemporarily(), I.Z.isSelfDeaf(), !1]
+                        : [!I.Z.isSupported() || I.Z.isLocalMute(a.id), !1, I.Z.isLocalVideoDisabled(a.id)],
+                [Y, a.id],
             ),
+            er = (0, s.e7)([x.Z], () => {
+                let e = x.Z.getCurrentUserActiveStream();
+                return null != e && e.ownerId !== a.id && x.Z.getViewerIds(e).filter((e) => e === a.id).length > 0;
+            }, [a.id]),
             ei = C && (null == N ? void 0 : N.discoverable),
             el =
                 (0, m.Z)({
                     userId: a.id,
-                    context: j
+                    context: j,
                 }) || ei,
             eo = (0, s.e7)([x.Z], () => x.Z.getStreamForUser(a.id, w)),
             ea = null != eo,
@@ -293,7 +324,7 @@ let F = i.memo(function (e) {
                             null != eo &&
                                 ((0, p.rn)(eo, {
                                     forceMultiple: !0,
-                                    noFocus: !0
+                                    noFocus: !0,
                                 }),
                                 es(),
                                 R(null != eo ? eo : null));
@@ -301,15 +332,15 @@ let F = i.memo(function (e) {
                         onAction: () => R,
                         previewIsOpen: A,
                         location: k.Sbl.UNLOCKED_OVERLAY,
-                        hideTip: !0
+                        hideTip: !0,
                     }),
-                [a, t, eo, A, es, R]
+                [a, t, eo, A, es, R],
             ),
             eu = i.useCallback(
                 (e) => {
                     l || null == v || v(e, a);
                 },
-                [l, v, a]
+                [l, v, a],
             ),
             ed = i.useCallback(() => {
                 l || (null != ea && _(a.id));
@@ -327,7 +358,7 @@ let F = i.memo(function (e) {
                         [D.speaking]: el,
                         [D.interactive]: !l,
                         [D.flipped]: n,
-                        [D.justConnected]: K
+                        [D.justConnected]: K,
                     }),
                     onClick: l ? void 0 : (e) => (null == b ? void 0 : b(e, a)),
                     onContextMenu: eu,
@@ -338,13 +369,13 @@ let F = i.memo(function (e) {
                             ? null
                             : (0, r.jsx)(c.yRy, {
                                   targetElementRef: Q,
-                                  position: 'left',
+                                  position: "left",
                                   renderPopout: ec,
                                   shouldShow: A,
                                   onRequestClose: es,
                                   spacing: 0,
                                   children: () =>
-                                      (0, r.jsxs)('div', {
+                                      (0, r.jsxs)("div", {
                                           className: D.username,
                                           ref: Q,
                                           children: [
@@ -362,7 +393,7 @@ let F = i.memo(function (e) {
                                                   deaf: X.isVoiceDeafened() || (et && !Y),
                                                   serverMute: X.mute || X.suppress,
                                                   serverDeaf: X.deaf,
-                                                  disabled: !1
+                                                  disabled: !1,
                                               }),
                                               !C &&
                                                   (0, r.jsx)(y.ZP, {
@@ -375,17 +406,17 @@ let F = i.memo(function (e) {
                                                           (0, V.Ws)(k.Odu.VOICE_V3, {
                                                               type: V.Qu.VOICE,
                                                               value: V.bk.PROFILE_OPENED,
-                                                              userId: a.id
+                                                              userId: a.id,
                                                           });
-                                                      }
+                                                      },
                                                   }),
                                               (0, r.jsx)(c.Text, {
-                                                  variant: 'text-xs/medium',
-                                                  color: 'text-default',
-                                                  children: u
-                                              })
-                                          ]
-                                      })
+                                                  variant: "text-xs/medium",
+                                                  color: "text-default",
+                                                  children: u,
+                                              }),
+                                          ],
+                                      }),
                               }),
                         !Y &&
                             (0, r.jsx)(F, {
@@ -393,21 +424,21 @@ let F = i.memo(function (e) {
                                 connectedOn: L,
                                 isSettingsPreview: C,
                                 voiceBackgroundWidth: B,
-                                rightAlign: !0
+                                rightAlign: !0,
                             }),
                         (0, r.jsx)(z, {
                             className: D.avatar,
                             size: ep,
                             src: em,
-                            'aria-hidden': !0
+                            "aria-hidden": !0,
                         }),
                         (0, r.jsx)(U, {
                             avatarSize: eg,
                             userId: a.id,
                             channelId: t.id,
-                            guildId: t.getGuildId()
-                        })
-                    ]
+                            guildId: t.getGuildId(),
+                        }),
+                    ],
                 })
               : (0, r.jsxs)(c.P3F, {
                     innerRef: G,
@@ -415,7 +446,7 @@ let F = i.memo(function (e) {
                         [D.speaking]: el,
                         [D.interactive]: !l,
                         [D.flipped]: n,
-                        [D.justConnected]: K
+                        [D.justConnected]: K,
                     }),
                     onClick: l ? void 0 : (e) => (null == b ? void 0 : b(e, a)),
                     onContextMenu: eu,
@@ -426,33 +457,33 @@ let F = i.memo(function (e) {
                             className: D.avatar,
                             size: ep,
                             src: em,
-                            'aria-hidden': !0
+                            "aria-hidden": !0,
                         }),
                         !Y &&
                             (0, r.jsx)(F, {
                                 nick: u,
                                 connectedOn: L,
                                 isSettingsPreview: C,
-                                voiceBackgroundWidth: B
+                                voiceBackgroundWidth: B,
                             }),
                         ef && (d === k.wC$.NEVER || (!el && d === k.wC$.ONLY_WHILE_SPEAKING))
                             ? null
                             : (0, r.jsx)(c.yRy, {
                                   targetElementRef: Q,
-                                  position: 'right',
+                                  position: "right",
                                   renderPopout: ec,
                                   shouldShow: A,
                                   onRequestClose: es,
                                   spacing: 0,
                                   children: () =>
-                                      (0, r.jsxs)('div', {
+                                      (0, r.jsxs)("div", {
                                           className: o()(D.username, { [D.streaming]: ea }),
                                           ref: Q,
                                           children: [
                                               (0, r.jsx)(c.Text, {
-                                                  variant: 'text-xs/medium',
-                                                  color: 'text-default',
-                                                  children: u
+                                                  variant: "text-xs/medium",
+                                                  color: "text-default",
+                                                  children: u,
                                               }),
                                               !C &&
                                                   (0, r.jsx)(y.ZP, {
@@ -465,9 +496,9 @@ let F = i.memo(function (e) {
                                                           (0, V.Ws)(k.Odu.VOICE_V3, {
                                                               type: V.Qu.VOICE,
                                                               value: V.bk.PROFILE_OPENED,
-                                                              userId: a.id
+                                                              userId: a.id,
                                                           });
-                                                      }
+                                                      },
                                                   }),
                                               (0, r.jsx)(P.nm, {
                                                   guildId: w,
@@ -483,42 +514,54 @@ let F = i.memo(function (e) {
                                                   deaf: X.isVoiceDeafened() || (et && !Y),
                                                   serverMute: X.mute || X.suppress,
                                                   serverDeaf: X.deaf,
-                                                  disabled: !1
-                                              })
-                                          ]
-                                      })
-                              })
-                    ]
+                                                  disabled: !1,
+                                              }),
+                                          ],
+                                      }),
+                              }),
+                    ],
                 });
     }),
     Q = i.memo(function (e) {
-        let { widgetId: t, channel: l, sortedVoiceState: o, displayNameMode: a, displayUserMode: s, locked: c, flipped: p, size: g, isPreviewingInGame: m, isSettingsPreview: O, context: b } = e,
+        let {
+                widgetId: t,
+                channel: l,
+                sortedVoiceState: o,
+                displayNameMode: a,
+                displayUserMode: s,
+                locked: c,
+                flipped: p,
+                size: g,
+                isPreviewingInGame: m,
+                isSettingsPreview: O,
+                context: b,
+            } = e,
             v = i.useRef(null),
             { user: h, member: y, voiceState: P, connectedOn: x } = o,
             [S, I] = i.useState(null),
             [E, Z] = i.useState(null);
-        (i.useEffect(() => {
+        i.useEffect(() => {
             c && Z(null);
         }, [c]),
             i.useEffect(() => {
                 null != S &&
                     (0, V.Ws)(k.Odu.VOICE_V3, {
                         type: V.Qu.GO_LIVE,
-                        value: V.bk.STREAM_PREVIEWED
+                        value: V.bk.STREAM_PREVIEWED,
                     });
-            }, [S]));
+            }, [S]);
         let N = (e) => {
                 I(e);
             },
             D = (e, t) => {
                 O ||
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('6524')]).then(n.bind(n, 27900));
+                        let { default: e } = await Promise.all([n.e("79695"), n.e("6524")]).then(n.bind(n, 27900));
                         return (
                             (0, V.Ws)(k.Odu.VOICE_V3, {
                                 type: V.Qu.VOICE,
                                 value: V.bk.SETTINGS_OPENED,
-                                userId: t.id
+                                userId: t.id,
                             }),
                             (n) =>
                                 (0, r.jsx)(
@@ -534,10 +577,10 @@ let F = i.memo(function (e) {
                                             (0, V.Ws)(k.Odu.VOICE_V3, {
                                                 type: V.Qu.GO_LIVE,
                                                 value: V.bk.ENABLED,
-                                                userId: t.id
+                                                userId: t.id,
                                             });
-                                        }
-                                    })
+                                        },
+                                    }),
                                 )
                         );
                     });
@@ -546,8 +589,13 @@ let F = i.memo(function (e) {
                 (e) => {
                     var n, r;
                     let i = null == (n = w.Z.getWidget(t)) ? void 0 : n.layoutId,
-                        o = null != i ? (null == (r = w.Z.getWidgetsForLayout(i)) ? void 0 : r.find((e) => e.type === k.Odu.GO_LIVE)) : null;
-                    (null == o ||
+                        o =
+                            null != i
+                                ? null == (r = w.Z.getWidgetsForLayout(i))
+                                    ? void 0
+                                    : r.find((e) => e.type === k.Odu.GO_LIVE)
+                                : null;
+                    null == o ||
                         o.pinned ||
                         ((0, d.xh)(o.id),
                         f.Z.track(k.rMx.OVERLAY_PIN_TOGGLED, {
@@ -555,17 +603,17 @@ let F = i.memo(function (e) {
                             guild_id: null == l ? void 0 : l.guild_id,
                             channel_id: null == l ? void 0 : l.id,
                             channel_type: null == l ? void 0 : l.type,
-                            widget_type: k.Odu.GO_LIVE
+                            widget_type: k.Odu.GO_LIVE,
                         })),
                         null != e &&
                             null != o &&
                             (0, V.Ws)(k.Odu.VOICE_V3, {
                                 type: V.Qu.GO_LIVE,
                                 value: V.bk.ENABLED,
-                                userId: e.ownerId
-                            }));
+                                userId: e.ownerId,
+                            });
                 },
-                [l, t]
+                [l, t],
             );
         if (null == h || null == l || null == P) return null;
         let T = c || m;
@@ -601,10 +649,10 @@ let F = i.memo(function (e) {
                         showStreamPreview: h.id === S,
                         onShowStreamPreview: N,
                         onWatchStream: M,
-                        isSettingsPreview: O
+                        isSettingsPreview: O,
                     });
-                }
+                },
             },
-            h.id
+            h.id,
         );
     });

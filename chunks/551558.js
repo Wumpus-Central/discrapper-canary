@@ -2,5 +2,5 @@ var t = {},
     n = 16777216;
 e.exports = function () {
     for (var e; void 0 === e || t.hasOwnProperty(e) || !isNaN(+e); ) e = Math.floor(Math.random() * n).toString(32);
-    return ((t[e] = !0), e);
+    return (t[e] = !0), e;
 };

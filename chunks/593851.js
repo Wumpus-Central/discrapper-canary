@@ -1,4 +1,4 @@
-(n.d(t, { default: () => p }), n(388685));
+n.d(t, { default: () => p }), n(388685);
 var r = n(255367),
     a = n(73800),
     c = n(481060),
@@ -10,24 +10,24 @@ function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -54,21 +54,21 @@ function p(e) {
         [O, f] = a.useState(t),
         g = a.useCallback(
             (e) => {
-                (f((t) => b(u({}, t), { max_age: e })), n(e));
+                f((t) => b(u({}, t), { max_age: e })), n(e);
             },
-            [f, n]
+            [f, n],
         ),
         y = a.useCallback(
             (e) => {
-                (f((t) => b(u({}, t), { max_uses: e })), p(e));
+                f((t) => b(u({}, t), { max_uses: e })), p(e);
             },
-            [f, p]
+            [f, p],
         );
     return (0, r.jsxs)(c.v2r, {
-        navId: 'instant_invite_options',
+        navId: "instant_invite_options",
         onSelect: s.dG4,
         onClose: i.Zy,
-        'aria-label': l.intl.string(l.t.b85Vws),
+        "aria-label": l.intl.string(l.t.b85Vws),
         children: [
             (0, r.jsx)(c.kSQ, {
                 label: l.intl.string(l.t.Sdarfn),
@@ -77,33 +77,33 @@ function p(e) {
                     return (0, r.jsx)(
                         c.k5B,
                         {
-                            id: 'max-age-'.concat(t),
-                            group: 'instant_invite_max_age',
+                            id: "max-age-".concat(t),
+                            group: "instant_invite_max_age",
                             checked: t === O.max_age,
                             label: n,
-                            action: () => g(t)
+                            action: () => g(t),
                         },
-                        'max-age-'.concat(t)
+                        "max-age-".concat(t),
                     );
-                })
+                }),
             }),
             (0, r.jsx)(c.kSQ, {
-                label: l.intl.string(l.t['/2yRSE']),
+                label: l.intl.string(l.t["/2yRSE"]),
                 children: o.p.map((e) => {
                     let { value: t, label: n } = e;
                     return (0, r.jsx)(
                         c.k5B,
                         {
-                            id: 'max-uses-'.concat(t),
-                            group: 'instant_invite_max_uses',
+                            id: "max-uses-".concat(t),
+                            group: "instant_invite_max_uses",
                             checked: t === O.max_uses,
                             label: n,
-                            action: () => y(t)
+                            action: () => y(t),
                         },
-                        'max-uses-'.concat(t)
+                        "max-uses-".concat(t),
                     );
-                })
-            })
-        ]
+                }),
+            }),
+        ],
     });
 }

@@ -29,15 +29,15 @@ function p(e) {
                     loop: !0,
                     muted: !0,
                     playsInline: !0,
-                    autoPlay: !0
+                    autoPlay: !0,
                 }),
                 (0, r.jsx)(l.Z, {
                     itemId: u.yN.AT_SOMEONE,
                     pointsPerInterval: g,
                     interval: 1000,
-                    isPaused: t
-                })
-            ]
+                    isPaused: t,
+                }),
+            ],
         })
     );
 }

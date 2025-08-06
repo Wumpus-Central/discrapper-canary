@@ -13,29 +13,29 @@ function u(e) {
         tooltipClassName: c.reminderTooltip,
         tooltipContentClassName: c.tooltipContent,
         targetElementRef: { current: n },
-        position: 'bottom',
+        position: "bottom",
         color: l.FGA.PRIMARY,
         children: [
             (0, r.jsx)(o.Z, {}),
             (0, r.jsx)(l.X6q, {
-                variant: 'heading-md/extrabold',
-                children: s.intl.format(s.t['+qxkzM'], { count: u.newClipIds.length })
+                variant: "heading-md/extrabold",
+                children: s.intl.format(s.t["+qxkzM"], { count: u.newClipIds.length }),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: c.buttonContainer,
                 children: [
                     (0, r.jsx)(i.zx, {
                         color: i.zx.Colors.TRANSPARENT,
                         onClick: a.eL,
-                        children: s.intl.string(s.t.WAI6xs)
+                        children: s.intl.string(s.t.WAI6xs),
                     }),
                     (0, r.jsx)(l.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: s.intl.string(s.t.tQPBmp),
-                        onClick: t
-                    })
-                ]
-            })
-        ]
+                        onClick: t,
+                    }),
+                ],
+            }),
+        ],
     });
 }

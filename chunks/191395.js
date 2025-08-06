@@ -14,7 +14,7 @@ var a = o.Map,
         if (!e) return n;
         for (var r = t.get(e); r && r.getParentKey(); ) {
             var i = r.getParentKey();
-            (i && n.push(i), (r = i ? t.get(i) : null));
+            i && n.push(i), (r = i ? t.get(i) : null);
         }
         return n;
     },
@@ -23,7 +23,7 @@ var a = o.Map,
         if (!e) return n;
         for (var r = i(e, t); r && t.get(r); ) {
             var o = t.get(r);
-            (n.push(r), (r = o.getParentKey() ? i(o, t) : null));
+            n.push(r), (r = o.getParentKey() ? i(o, t) : null);
         }
         return n;
     },
@@ -43,13 +43,13 @@ var a = o.Map,
                 (s(t.getKey(), i, function (e) {
                     return e.merge({
                         nextSibling: u(e, i, r),
-                        prevSibling: d(e, i, r)
+                        prevSibling: d(e, i, r),
                     });
                 }),
                 s(n.getKey(), i, function (e) {
                     return e.merge({
                         nextSibling: u(e, i, r),
-                        prevSibling: d(e, i, r)
+                        prevSibling: d(e, i, r),
                     });
                 }),
                 l(t.getKey(), r).forEach(function (e) {
@@ -59,7 +59,7 @@ var a = o.Map,
                                 return i.get(e);
                             }),
                             nextSibling: u(e, i, r),
-                            prevSibling: d(e, i, r)
+                            prevSibling: d(e, i, r),
                         });
                     });
                 }),
@@ -82,7 +82,7 @@ var a = o.Map,
                                 return i.get(e);
                             }),
                             nextSibling: u(e, i, r),
-                            prevSibling: d(e, i, r)
+                            prevSibling: d(e, i, r),
                         });
                     });
                 }),
@@ -90,19 +90,22 @@ var a = o.Map,
                     return s(e, i, function (e) {
                         return e.merge({
                             nextSibling: u(e, i, r),
-                            prevSibling: d(e, i, r)
+                            prevSibling: d(e, i, r),
                         });
                     });
                 }),
-                null == e.get(t.getKey()) && null != e.get(n.getKey()) && n.getParentKey() === t.getKey() && null == n.getPrevSiblingKey())
+                null == e.get(t.getKey()) &&
+                    null != e.get(n.getKey()) &&
+                    n.getParentKey() === t.getKey() &&
+                    null == n.getPrevSiblingKey())
             ) {
                 var o = t.getPrevSiblingKey();
-                (s(n.getKey(), i, function (e) {
+                s(n.getKey(), i, function (e) {
                     return e.merge({ prevSibling: o });
                 }),
                     s(o, i, function (e) {
                         return e.merge({ nextSibling: n.getKey() });
-                    }));
+                    });
                 var a = o ? e.get(o) : null,
                     f = a ? a.getParentKey() : null;
                 if (
@@ -125,14 +128,14 @@ var a = o.Map,
                     i,
                     function (e) {
                         return e.merge({ nextSibling: t.getNextSiblingKey() });
-                    }
+                    },
                 );
             }
         });
     },
     _ = function (e, t, n) {
-        if (0 === t) for (; t < n; ) ((e = e.shift()), t++);
-        else if (n === e.count()) for (; n > t; ) ((e = e.pop()), n--);
+        if (0 === t) for (; t < n; ) (e = e.shift()), t++;
+        else if (n === e.count()) for (; n > t; ) (e = e.pop()), n--;
         else {
             var r = e.slice(0, t),
                 i = e.slice(n);
@@ -155,12 +158,17 @@ e.exports = function (e, t) {
     if (m) {
         var E = h.getChildKeys(),
             b = l(u, o);
-        (h.getNextSiblingKey() && (g = g.concat(b)), E.isEmpty() || (g = g.concat(b.concat([u]))), (g = g.concat(l(i(h, o), o))));
+        h.getNextSiblingKey() && (g = g.concat(b)),
+            E.isEmpty() || (g = g.concat(b.concat([u]))),
+            (g = g.concat(l(i(h, o), o)));
     }
-    n = p === h ? _(p.getCharacterList(), c, d) : p.getCharacterList().slice(0, c).concat(h.getCharacterList().slice(d));
+    n =
+        p === h
+            ? _(p.getCharacterList(), c, d)
+            : p.getCharacterList().slice(0, c).concat(h.getCharacterList().slice(d));
     var y = p.merge({
             text: p.getText().slice(0, c) + h.getText().slice(d),
-            characterList: n
+            characterList: n,
         }),
         O =
             m && 0 === c && 0 === d && h.getParentKey() === s && null == h.getPrevSiblingKey()
@@ -193,8 +201,8 @@ e.exports = function (e, t) {
                 anchorOffset: c,
                 focusKey: s,
                 focusOffset: c,
-                isBackward: !1
-            })
+                isBackward: !1,
+            }),
         })
     );
 };

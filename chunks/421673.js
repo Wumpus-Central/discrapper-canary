@@ -1,4 +1,4 @@
-(n.d(t, { cK: () => N }), n(642613));
+n.d(t, { cK: () => N }), n(642613);
 var r = n(658722),
     i = n.n(r),
     o = n(954955),
@@ -24,7 +24,7 @@ function T(e, t) {
     c.default.track(d.rMx.SEARCH_STARTED, {
         channel_id: t,
         search_type: d.aib.SOUNDBOARD,
-        location_stack: e
+        location_stack: e,
     });
 }
 function S(e, t, n, r) {
@@ -33,7 +33,7 @@ function S(e, t, n, r) {
         channel_id: n,
         query: r,
         total_results: e.length,
-        location_stack: t
+        location_stack: t,
     });
 }
 function A(e, t, n, r) {
@@ -44,10 +44,24 @@ function A(e, t, n, r) {
         O = null != t.emojiName ? l.ZP.convertSurrogateToName(t.emojiName, !1) : null,
         v = null != O ? l.ZP.getByName(O) : null,
         I = null != d ? [d.name] : null != (o = null == v ? void 0 : v.names) ? o : [];
-    return (e === c && (a += _), I.includes(e) && (a += p), c.startsWith(e) && (a += h), I.some((t) => t.startsWith(e)) && (a += m), c.endsWith(e) && (a += g), I.some((t) => t.endsWith(e)) && (a += E), i()(e, t.name.toLocaleLowerCase()) && (a += b), I.some((t) => i()(e, t)) && (a += y), a > 0 && (0, u.Nq)(n, t, r) && (a += f), a);
+    return (
+        e === c && (a += _),
+        I.includes(e) && (a += p),
+        c.startsWith(e) && (a += h),
+        I.some((t) => t.startsWith(e)) && (a += m),
+        c.endsWith(e) && (a += g),
+        I.some((t) => t.endsWith(e)) && (a += E),
+        i()(e, t.name.toLocaleLowerCase()) && (a += b),
+        I.some((t) => i()(e, t)) && (a += y),
+        a > 0 && (0, u.Nq)(n, t, r) && (a += f),
+        a
+    );
 }
 function N(e, t, n, r, i) {
-    let o = t.reduce((t, o) => (v(i, null == r ? void 0 : r.id), (t[o.soundId] = A(e.toLocaleLowerCase(), o, n, r)), t), {}),
+    let o = t.reduce(
+            (t, o) => (v(i, null == r ? void 0 : r.id), (t[o.soundId] = A(e.toLocaleLowerCase(), o, n, r)), t),
+            {},
+        ),
         a = t.filter((e) => o[e.soundId] > 0).sort((e, t) => o[t.soundId] - o[e.soundId]);
-    return (I(a, i, null == r ? void 0 : r.id, e), a);
+    return I(a, i, null == r ? void 0 : r.id, e), a;
 }

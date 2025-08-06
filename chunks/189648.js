@@ -16,14 +16,14 @@ function d(e) {
                 s.ck,
                 {
                     label: t,
-                    value: e
+                    value: e,
                 },
-                t
+                t,
             );
     });
     return (0, n.jsx)(l.hjN, {
         tag: l.RB0.H2,
-        title: c.intl.string(c.t['2AGBWF']),
-        children: (0, o.a)(r)
+        title: c.intl.string(c.t["2AGBWF"]),
+        children: (0, o.a)(r),
     });
 }

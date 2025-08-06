@@ -11,7 +11,7 @@ function c(e) {
         { url: c } = (0, o.Z)({
             applicationId: n ? e.id : void 0,
             size: 600,
-            names: ['embedded_cover']
+            names: ["embedded_cover"],
         });
     return r.useMemo(() => {
         let r,
@@ -19,11 +19,11 @@ function c(e) {
             u = l.u.BOT;
         if (null != t) {
             let { banner: e } = t;
-            ((r = (0, s.aN)({
+            (r = (0, s.aN)({
                 id: t.id,
                 banner: e,
                 size: 512,
-                canAnimate: !1
+                canAnimate: !1,
             })),
                 (0, s.xR)(e) &&
                     null == c &&
@@ -31,8 +31,8 @@ function c(e) {
                         id: t.id,
                         banner: e,
                         size: 512,
-                        canAnimate: !0
-                    })));
+                        canAnimate: !0,
+                    }));
         }
         if (n) {
             let t = (0, a.yJ)(e);
@@ -43,7 +43,7 @@ function c(e) {
         return {
             staticBannerSrc: r,
             videoBannerSrc: o,
-            bannerAspectRatio: u
+            bannerAspectRatio: u,
         };
     }, [c, t, n, e]);
 }

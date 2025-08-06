@@ -5,6 +5,6 @@ e.exports = function (e) {
     if (void 0 === e) return 0;
     var t = r(e),
         n = i(t);
-    if (t !== n) throw new o('Wrong length or index');
+    if (t !== n) throw new o("Wrong length or index");
     return n;
 };

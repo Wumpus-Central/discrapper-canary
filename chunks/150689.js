@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => c }), n(388685), n(781311));
+n.d(t, { Z: () => c }), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
     l = n(130341),
@@ -7,7 +7,7 @@ var r = n(255367),
     o = n(494831);
 function c(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: c, otherRoles: d, setSelectedSection: u } = e,
-        [m, g] = i.useState(''),
+        [m, g] = i.useState(""),
         [p, h] = i.useState(o.Cl),
         f = m.trim(),
         x = i.useMemo(() => d.filter((e) => (0, l.uo)(e, f)), [d, f]),
@@ -22,11 +22,11 @@ function c(e) {
                         setEditRoleId: t,
                         query: m,
                         setQuery: g,
-                        setHeaderHeight: h
+                        setHeaderHeight: h,
                     },
-                    'header'
+                    "header",
                 ),
-            [n, c, x, t, m]
+            [n, c, x, t, m],
         );
     return (0, r.jsx)(a.Z, {
         setEditRoleId: t,
@@ -36,6 +36,6 @@ function c(e) {
         setSelectedSection: u,
         renderHeader: b,
         headerHeight: p,
-        query: m
+        query: m,
     });
 }

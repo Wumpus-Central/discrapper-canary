@@ -1,7 +1,7 @@
 a.d(e, {
     L2: () => c,
     _6: () => E,
-    iK: () => s
+    iK: () => s,
 });
 var r = a(694043),
     _ = a(622916),
@@ -14,12 +14,12 @@ function c(t) {
     let a = o.m[t];
     if ((0, r.QC)(a)) return (i[t] = a.bind(o.m));
     let c = o.m.document;
-    if (c && 'function' == typeof c.createElement)
+    if (c && "function" == typeof c.createElement)
         try {
-            let e = c.createElement('iframe');
-            ((e.hidden = !0), c.head.appendChild(e));
+            let e = c.createElement("iframe");
+            (e.hidden = !0), c.head.appendChild(e);
             let r = e.contentWindow;
-            (r && r[t] && (a = r[t]), c.head.removeChild(e));
+            r && r[t] && (a = r[t]), c.head.removeChild(e);
         } catch (e) {
             n.X && _.kg.warn(`Could not create sandbox iframe for ${t} check, bailing to window.${t}: `, e);
         }
@@ -29,5 +29,5 @@ function E(t) {
     i[t] = void 0;
 }
 function s(...t) {
-    return c('setTimeout')(...t);
+    return c("setTimeout")(...t);
 }

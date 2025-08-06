@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     ER: () => d,
     kk: () => f,
-    s$: () => _
+    s$: () => _,
 }),
     n(388685),
-    n(392711));
+    n(392711);
 var r = n(19780),
     i = n(5192),
     o = n(700785),
@@ -23,7 +23,7 @@ function d(e, t, n, r) {
           ? u.intl.formatToPlainString(u.t.chmM9P, { count: s })
           : u.intl.formatToPlainString(u.t.GhkJ29, {
                 name: a,
-                count: s - 1
+                count: s - 1,
             });
 }
 function f(e, t) {
@@ -47,6 +47,6 @@ function _(e) {
         topic: null == t ? void 0 : t.topic,
         media_session_id: r.Z.getMediaSessionId(),
         request_to_speak_state: o.Uu(l.Plq.REQUEST_TO_SPEAK, e) ? s.BM.EVERYONE : s.BM.NO_ONE,
-        stage_instance_id: null == t ? void 0 : t.id
+        stage_instance_id: null == t ? void 0 : t.id,
     };
 }

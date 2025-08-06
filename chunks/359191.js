@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var r,
     i,
     l,
@@ -21,11 +21,11 @@ let j = new Set(),
 function O(e) {
     let { subsection: t } = e;
     if (d.Z.getGuildId() === _) return !1;
-    ((v = t === b.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (_ = d.Z.getGuildId()));
+    (v = t === b.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (_ = d.Z.getGuildId());
 }
 class y extends (r = a.ZP.Store) {
     initialize() {
-        (this.waitFor(o.Z, g.Z, h.Z, p.Z, u.Z), this.syncWith([o.Z, g.Z, h.Z, p.Z, u.Z], () => !0));
+        this.waitFor(o.Z, g.Z, h.Z, p.Z, u.Z), this.syncWith([o.Z, g.Z, h.Z, p.Z, u.Z], () => !0);
     }
     isEducationUpsellDismissed(e) {
         return j.has(e);
@@ -42,7 +42,15 @@ class y extends (r = a.ZP.Store) {
         return v === f.PG.CUSTOMIZATION_QUESTIONS ? h.Z.hasChanges() : v === f.PG.HOME_SETTINGS && p.Z.hasChanges();
     }
     hasConfiguredAnythingForCurrentStep() {
-        return null != _ && (v === f.PG.SAFETY_CHECK || (v === f.PG.DEFAULT_CHANNELS ? g.Z.editedDefaultChannelIds.size > 0 : v === f.PG.CUSTOMIZATION_QUESTIONS ? h.Z.editedOnboardingPrompts.length > 0 : v === f.PG.HOME_SETTINGS && !(0, c.av)(p.Z.getSettings())));
+        return (
+            null != _ &&
+            (v === f.PG.SAFETY_CHECK ||
+                (v === f.PG.DEFAULT_CHANNELS
+                    ? g.Z.editedDefaultChannelIds.size > 0
+                    : v === f.PG.CUSTOMIZATION_QUESTIONS
+                      ? h.Z.editedOnboardingPrompts.length > 0
+                      : v === f.PG.HOME_SETTINGS && !(0, c.av)(p.Z.getSettings())))
+        );
     }
     hasErrors() {
         return v === f.PG.CUSTOMIZATION_QUESTIONS && null != h.Z.errors.find((e) => null != e);
@@ -57,15 +65,15 @@ class y extends (r = a.ZP.Store) {
         return null == _ || (!this.hasErrors() && (!(0, x.C)(_) || !this.hasChanges()));
     }
 }
-((l = 'GuildSettingsOnboardingStore'),
-    (i = 'displayName') in y
+(l = "GuildSettingsOnboardingStore"),
+    (i = "displayName") in y
         ? Object.defineProperty(y, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
-        : (y[i] = l));
+        : (y[i] = l);
 let C = new y(s.Z, {
     GUILD_SETTINGS_INIT: O,
     GUILD_SETTINGS_SET_SECTION: O,
@@ -76,5 +84,5 @@ let C = new y(s.Z, {
     GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED: function (e) {
         let { upsellType: t } = e;
         j.add(t);
-    }
+    },
 });

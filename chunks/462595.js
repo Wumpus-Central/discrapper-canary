@@ -27,9 +27,9 @@ var t = {
                 return "'prošli' EEEE 'u' p";
         }
     },
-    other: 'P'
+    other: "P",
 };
 let i = function (o, e, n, i) {
     var a = t[o];
-    return 'function' == typeof a ? a(e) : a;
+    return "function" == typeof a ? a(e) : a;
 };

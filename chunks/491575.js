@@ -24,7 +24,7 @@ let v = i.memo(function () {
             let { duration: n, intensity: r } = t;
             if (p.Z.useReducedMotion || !m.Z.isFocused()) return;
             let { current: i } = e;
-            (a()(null != i, 'Shakeable is shaken when not mounted'), i.shake(n, r));
+            a()(null != i, "Shakeable is shaken when not mounted"), i.shake(n, r);
         }, []);
     return (
         i.useEffect(() => (d.Z.setLayout(u.ZP), d.Z.enable(), () => d.Z.disable()), []),
@@ -35,7 +35,7 @@ let v = i.memo(function () {
                     b.S.unsubscribe(E.CkL.SHAKE_APP, t);
                 }
             ),
-            [t]
+            [t],
         ),
         (0, h.Z)(),
         (0, r.jsxs)(o.F0h, {
@@ -44,14 +44,14 @@ let v = i.memo(function () {
             children: [
                 (0, r.jsx)(O.Z, {
                     className: y.layers,
-                    children: (0, r.jsx)(s.Z, {})
+                    children: (0, r.jsx)(s.Z, {}),
                 }),
                 (0, r.jsx)(f.Z, {}),
                 (0, r.jsx)(c.Z, {}),
                 (0, r.jsx)(_.Z, {}),
                 (0, r.jsx)(g.Z, {}),
-                (0, r.jsx)(o.c43, {})
-            ]
+                (0, r.jsx)(o.c43, {}),
+            ],
         })
     );
 });

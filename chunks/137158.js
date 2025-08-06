@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,24 +17,24 @@ function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -45,22 +45,22 @@ function b(e) {
                 case p.QJ.MULTIPLE_CHOICE:
                     return {
                         icon: m.jE$,
-                        text: h.intl.string(h.t.ooKh3t)
+                        text: h.intl.string(h.t.ooKh3t),
                     };
                 case p.QJ.PARAGRAPH:
                     return {
                         icon: m.OvV,
-                        text: h.intl.string(h.t.gG0JBA)
+                        text: h.intl.string(h.t.gG0JBA),
                     };
                 case p.QJ.TEXT_INPUT:
                     return {
                         icon: (0, m.GSL)(g.Z),
-                        text: h.intl.string(h.t.w6Q9w8)
+                        text: h.intl.string(h.t.w6Q9w8),
                     };
                 case p.QJ.TERMS:
                     return {
                         icon: m.snC,
-                        text: h.intl.string(h.t['3pz9t7'])
+                        text: h.intl.string(h.t["3pz9t7"]),
                     };
                 default:
                     return null;
@@ -68,52 +68,52 @@ function b(e) {
         }, [t]);
     return null == n
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: f.typeTag,
               children: [
                   (0, r.jsx)(n.icon, {
-                      size: 'xs',
-                      color: 'currentColor'
+                      size: "xs",
+                      color: "currentColor",
                   }),
                   (0, r.jsx)(d.xv, {
-                      variant: 'text-sm/medium',
-                      tag: 'span',
-                      children: n.text
-                  })
-              ]
+                      variant: "text-sm/medium",
+                      tag: "span",
+                      children: n.text,
+                  }),
+              ],
           });
 }
 function j(e) {
     let { title: t, children: n, fieldStyle: i, field: l } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: f.backgroundContainer,
         children:
             i === p.it.REGULAR
-                ? (0, r.jsxs)('div', {
+                ? (0, r.jsxs)("div", {
                       className: f.containerPadding,
                       children: [
                           (0, r.jsx)(m.vwX, {
-                              tag: 'h3',
+                              tag: "h3",
                               className: f.containerTitle,
-                              children: t
+                              children: t,
                           }),
-                          n
-                      ]
+                          n,
+                      ],
                   })
-                : (0, r.jsxs)('div', {
+                : (0, r.jsxs)("div", {
                       className: f.compactContainer,
                       children: [
                           (0, r.jsx)(m.vwX, {
-                              tag: 'h3',
+                              tag: "h3",
                               className: f.compactTitle,
-                              children: t
+                              children: t,
                           }),
-                          (0, r.jsx)(b, { type: l.field_type })
-                      ]
-                  })
+                          (0, r.jsx)(b, { type: l.field_type }),
+                      ],
+                  }),
     });
 }
-let v = 'FORM_FIELD';
+let v = "FORM_FIELD";
 function _(e) {
     let { index: t, field: n, isDropHovered: l, onDrop: d, fieldStyle: g } = e,
         h = (0, s.debounce)(async (e, t, n) => {
@@ -124,11 +124,11 @@ function _(e) {
             type: v,
             item: {
                 index: t,
-                field: n
+                field: n,
             },
             end: (e, t) => {
                 null == e || t.didDrop() || h(e.field, null, !0);
-            }
+            },
         }),
         [, O] = (0, c.L)({
             accept: v,
@@ -144,66 +144,66 @@ function _(e) {
             },
             drop: (e) => {
                 h(e.field, t, !0);
-            }
+            },
         });
     return (
         i.useLayoutEffect(
             () => (
                 _(O(b)),
                 () => {
-                    (O(null), _(null));
+                    O(null), _(null);
                 }
             ),
-            [_, O]
+            [_, O],
         ),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             ref: b,
-            'data-dnd-name': 'field-'.concat(t),
+            "data-dnd-name": "field-".concat(t),
             className: a()(f.dragContainer, { [f.dropHovered]: l }),
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: a()(f.dragIconContainer, { [f.compact]: g === p.it.COMPACT }),
                     children: (0, r.jsx)(m.Vni, {
-                        size: 'xs',
+                        size: "xs",
                         className: f.dragIcon,
-                        color: u.Z.unsafe_rawColors.PRIMARY_400.css
-                    })
+                        color: u.Z.unsafe_rawColors.PRIMARY_400.css,
+                    }),
                 }),
-                (0, r.jsx)(j, x({}, e))
-            ]
+                (0, r.jsx)(j, x({}, e)),
+            ],
         })
     );
 }
 function O(e) {
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(f.formFieldContainer, { [f.compact]: e.fieldStyle === p.it.COMPACT }),
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: f.spacingContainer,
-                children: e.isDragEnabled ? (0, r.jsx)(_, x({}, e)) : (0, r.jsx)(j, x({}, e))
+                children: e.isDragEnabled ? (0, r.jsx)(_, x({}, e)) : (0, r.jsx)(j, x({}, e)),
             }),
-            'side' === e.actionsLocation &&
-                (0, r.jsxs)('div', {
+            "side" === e.actionsLocation &&
+                (0, r.jsxs)("div", {
                     className: a()(f.actionButtonsContainer, {
                         [f.compact]: e.fieldStyle === p.it.COMPACT,
-                        [f.canRemove]: e.canRemove
+                        [f.canRemove]: e.canRemove,
                     }),
                     children: [
                         (0, r.jsx)(m.P3F, {
                             className: f.actionButton,
                             onClick: e.onEdit,
-                            'aria-label': h.intl.string(h.t.bt75u7),
-                            children: (0, r.jsx)(m.vdY, { size: 'xs' })
+                            "aria-label": h.intl.string(h.t.bt75u7),
+                            children: (0, r.jsx)(m.vdY, { size: "xs" }),
                         }),
                         e.canRemove &&
                             (0, r.jsx)(m.P3F, {
                                 className: f.actionButton,
                                 onClick: e.onRemove,
-                                'aria-label': h.intl.string(h.t.N86XcH),
-                                children: (0, r.jsx)(m.XHJ, { size: 'xs' })
-                            })
-                    ]
-                })
-        ]
+                                "aria-label": h.intl.string(h.t.N86XcH),
+                                children: (0, r.jsx)(m.XHJ, { size: "xs" }),
+                            }),
+                    ],
+                }),
+        ],
     });
 }

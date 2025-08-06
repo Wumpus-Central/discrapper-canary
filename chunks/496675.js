@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => ee }), n(388685));
+n.d(t, { Z: () => ee }), n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -29,7 +29,7 @@ function A(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -51,7 +51,7 @@ function w(e) {
         : (N[e] = b.uB({
               user: r,
               context: i,
-              checkElevated: t
+              checkElevated: t,
           }));
 }
 function D(e) {
@@ -68,7 +68,7 @@ function D(e) {
         : b.uB({
               user: r,
               context: i,
-              checkElevated: n
+              checkElevated: n,
           });
 }
 function L(e) {
@@ -103,17 +103,17 @@ function G(e) {
 }
 function B(e) {
     let {
-            channel: { id: t }
+            channel: { id: t },
         } = e,
         n = y.Z.getChannel(t);
     if (null == n || n.isPrivate()) return !1;
     let r = I.default.getCurrentUser(),
         i = b.uB({
             user: r,
-            context: n
+            context: n,
         });
     if (C[n.id] === i) return !1;
-    ((C[n.id] = i), (P += 1), x(n.getGuildId()));
+    (C[n.id] = i), (P += 1), x(n.getGuildId());
 }
 function Z(e) {
     let { channels: t } = e,
@@ -124,7 +124,7 @@ function Z(e) {
         let r = I.default.getCurrentUser(),
             i = b.uB({
                 user: r,
-                context: t
+                context: t,
             });
         C[t.id] !== i && ((C[t.id] = i), x(t.getGuildId()), (n = !0));
     }
@@ -153,17 +153,17 @@ function W(e) {
 }
 function K(e) {
     let { channel: t } = e;
-    return (delete C[t.id], (P += 1), x(t.guild_id), !1);
+    return delete C[t.id], (P += 1), x(t.guild_id), !1;
 }
 function z(e) {
     let { guildId: t } = e;
     delete N[t];
     let n = y.Z.getMutableBasicGuildChannelsForGuild(t);
-    (o().forEach(n, (e) => {
+    o().forEach(n, (e) => {
         delete C[e.id];
     }),
         (P += 1),
-        x(t));
+        x(t);
 }
 function q(e) {
     let { instance: t } = e,
@@ -172,20 +172,20 @@ function q(e) {
     let r = I.default.getCurrentUser(),
         i = b.uB({
             user: r,
-            context: n
+            context: n,
         });
     if (i === C[n.id]) return !1;
-    ((C[n.id] = i), (P += 1));
+    (C[n.id] = i), (P += 1);
 }
 function X(e) {
     let { guildId: t } = e;
     delete N[t];
     let n = y.Z.getMutableBasicGuildChannelsForGuild(t);
-    (o().forEach(n, (e) => {
+    o().forEach(n, (e) => {
         delete C[e.id];
     }),
         (P += 1),
-        x(t));
+        x(t);
 }
 function Q(e, t, n, r) {
     let i = b.Hn;
@@ -203,7 +203,7 @@ function Q(e, t, n, r) {
               overwrites: t,
               roles: n,
               checkElevated: !0,
-              excludeGuildPermissions: r
+              excludeGuildPermissions: r,
           })
         : i;
 }
@@ -225,7 +225,8 @@ class J extends (r = s.ZP.Store) {
             canManageRoles: this.can(T.Plq.MANAGE_ROLES, e),
             canManageBans: this.can(T.Plq.BAN_MEMBERS, e),
             canManageNicknames: this.can(T.Plq.MANAGE_NICKNAMES, e),
-            canManageGuildExpressions: this.can(T.Plq.MANAGE_GUILD_EXPRESSIONS, e) || this.can(T.Plq.CREATE_GUILD_EXPRESSIONS, e),
+            canManageGuildExpressions:
+                this.can(T.Plq.MANAGE_GUILD_EXPRESSIONS, e) || this.can(T.Plq.CREATE_GUILD_EXPRESSIONS, e),
             canViewAuditLog: this.can(T.Plq.VIEW_AUDIT_LOG, e),
             canViewAuditLogV2: this.can(T.Plq.VIEW_AUDIT_LOG, e),
             canManageWebhooks: this.can(T.Plq.MANAGE_WEBHOOKS, e),
@@ -234,7 +235,7 @@ class J extends (r = s.ZP.Store) {
             isGuildAdmin: this.can(T.Plq.ADMINISTRATOR, e),
             isOwner: null != t && (0, h.eM)(e, t),
             isOwnerWithRequiredMfaLevel: null != t && (0, h.yn)(e, t),
-            guild: e
+            guild: e,
         };
     }
     canAccessMemberSafetyPage(e) {
@@ -244,20 +245,22 @@ class J extends (r = s.ZP.Store) {
         return a.Db(w(e.id), b.ym);
     }
     canWithPartialContext(e, t) {
-        return 'channelId' in t && 'string' == typeof t.channelId ? this.can(e, y.Z.getChannel(t.channelId)) : 'guildId' in t && 'string' == typeof t.guildId && this.can(e, v.Z.getGuild(t.guildId));
+        return "channelId" in t && "string" == typeof t.channelId
+            ? this.can(e, y.Z.getChannel(t.channelId))
+            : "guildId" in t && "string" == typeof t.guildId && this.can(e, v.Z.getGuild(t.guildId));
     }
     can(e, t, n, r, i) {
         let o = Q(t, n, r, i);
         return a.e$(o, e);
     }
     canBasicChannel(e, t, n, r, i) {
-        return 'basicPermissions' in t ? g.Z.has(t.basicPermissions, e) : a.e$(Q(t, n, r, i), g.Z.asBigFlag(e));
+        return "basicPermissions" in t ? g.Z.has(t.basicPermissions, e) : a.e$(Q(t, n, r, i), g.Z.asBigFlag(e));
     }
     computePermissions(e, t, n, r) {
         return Q(e, t, n, r);
     }
     computeBasicPermissions(e) {
-        return 'basicPermissions' in e ? e.basicPermissions : g.Z.asBasicFlag(Q(e));
+        return "basicPermissions" in e ? e.basicPermissions : g.Z.asBasicFlag(Q(e));
     }
     canManageUser(e, t, n) {
         let r = t instanceof m.Z ? t.id : t;
@@ -292,9 +295,9 @@ class J extends (r = s.ZP.Store) {
     }
 }
 function $() {
-    ((C = {}), (N = {}), (R = {}), (P = 0));
+    (C = {}), (N = {}), (R = {}), (P = 0);
 }
-A(J, 'displayName', 'PermissionStore');
+A(J, "displayName", "PermissionStore");
 let ee = new J(l.Z, {
     BACKGROUND_SYNC: k,
     CONNECTION_OPEN: k,
@@ -329,5 +332,5 @@ let ee = new J(l.Z, {
     STAGE_INSTANCE_UPDATE: q,
     STAGE_INSTANCE_DELETE: q,
     IMPERSONATE_UPDATE: X,
-    IMPERSONATE_STOP: X
+    IMPERSONATE_STOP: X,
 });

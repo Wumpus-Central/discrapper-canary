@@ -1,6 +1,6 @@
-(n.d(t, {
+n.d(t, {
     M: () => I,
-    a: () => T
+    a: () => T,
 }),
     n(190126),
     n(368063),
@@ -9,7 +9,7 @@
     n(490233),
     n(97749),
     n(388685),
-    n(953529));
+    n(953529);
 var r = n(255367),
     i = n(73800),
     o = n(772848),
@@ -34,29 +34,38 @@ function v(e, t, n, r, i) {
         l = new URL(f.Z.makeUrl(g.Z5c.BILLING_LOGIN_HANDOFF)),
         c = (0, o.Z)();
     return (
-        l.searchParams.append('handoff_key', c),
-        l.searchParams.append('redirect_to', s),
+        l.searchParams.append("handoff_key", c),
+        l.searchParams.append("redirect_to", s),
         a.tn
             .post({
                 url: g.ANM.HANDOFF,
                 body: { key: c },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             })
             .then(
                 (e) => {
-                    (l.searchParams.append('handoff_token', e.body.handoff_token), window.open(l.href));
+                    l.searchParams.append("handoff_token", e.body.handoff_token), window.open(l.href);
                 },
                 () => {
                     r();
-                }
+                },
             )
     );
 }
 let I = (e) => {
         let t,
             { step: n, onPurchaseComplete: o, onHandoffFailure: a } = e,
-            { selectedPlan: u, setSelectedPlanId: d, setSelectedSkuId: f, browserCheckoutState: I, browserCheckoutStateLoadId: T, browserCheckoutStateSkuId: S, browserCheckoutStatePlanId: A, contextMetadata: N } = (0, p.JL)(),
+            {
+                selectedPlan: u,
+                setSelectedPlanId: d,
+                setSelectedSkuId: f,
+                browserCheckoutState: I,
+                browserCheckoutStateLoadId: T,
+                browserCheckoutStateSkuId: S,
+                browserCheckoutStatePlanId: A,
+                contextMetadata: N,
+            } = (0, p.JL)(),
             { isGift: C } = (0, _.wD)(),
             [R, P] = i.useState(!1);
         switch (n) {
@@ -70,43 +79,48 @@ let I = (e) => {
             i.useEffect(() => {
                 let e = setTimeout(() => {
                     var e;
-                    R || (P(!0), (0, l.r5)(N.loadId), v(null != (e = null == u ? void 0 : u.id) ? e : E.Xh.PREMIUM_MONTH_TIER_2, C, N.loadId, a, t));
+                    R ||
+                        (P(!0),
+                        (0, l.r5)(N.loadId),
+                        v(null != (e = null == u ? void 0 : u.id) ? e : E.Xh.PREMIUM_MONTH_TIER_2, C, N.loadId, a, t));
                 }, O);
                 return () => clearTimeout(e);
             }, [u, C, N, a, P, R, t]),
             i.useEffect(() => {
-                (null !== S && (E.YQ.includes(S) && ((0, c.GZ)(S), (0, l.jg)()), f(S)), null !== A && d(A), T === N.loadId && I === m.Y.DONE && o());
+                null !== S && (E.YQ.includes(S) && ((0, c.GZ)(S), (0, l.jg)()), f(S)),
+                    null !== A && d(A),
+                    T === N.loadId && I === m.Y.DONE && o();
             }, [f, d, I, T, S, A, N, o]),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: y.body,
                 children: [
                     (0, r.jsx)(s.X6q, {
-                        variant: 'heading-xl/bold',
-                        children: b.intl.string(b.t.C4HYf3)
+                        variant: "heading-xl/bold",
+                        children: b.intl.string(b.t.C4HYf3),
                     }),
                     (0, r.jsx)(s.Text, {
-                        variant: 'text-md/normal',
+                        variant: "text-md/normal",
                         className: y.description,
-                        children: b.intl.string(b.t.xfG7Ji)
-                    })
-                ]
+                        children: b.intl.string(b.t.xfG7Ji),
+                    }),
+                ],
             })
         );
     },
     T = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             children: (0, r.jsxs)(s.mzw, {
                 justify: u.Z.Justify.BETWEEN,
                 align: u.Z.Align.CENTER,
-                'data-migration-pending': !0,
+                "data-migration-pending": !0,
                 children: [
                     (0, r.jsx)(d.y, {
                         onClick: t,
-                        children: b.intl.string(b.t['4Qvmmp'])
+                        children: b.intl.string(b.t["4Qvmmp"]),
                     }),
-                    (0, r.jsx)(d.Z, { onClick: n })
-                ]
-            })
+                    (0, r.jsx)(d.Z, { onClick: n }),
+                ],
+            }),
         });
     };

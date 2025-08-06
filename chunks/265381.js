@@ -1,1 +1,1 @@
-e.exports = { stack: 'stack_dbd263' };
+e.exports = { stack: "stack_dbd263" };

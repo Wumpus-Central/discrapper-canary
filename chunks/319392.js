@@ -12,62 +12,62 @@ var r = n(481060),
     p = n(544200),
     f = n(629582);
 function b() {
-    return (0, o.jsxs)('div', {
+    return (0, o.jsxs)("div", {
         className: p.getXboxApp,
         children: [
-            (0, o.jsxs)('div', {
+            (0, o.jsxs)("div", {
                 className: p.getXboxAppBody,
                 children: [
                     (0, o.jsxs)(r.X6q, {
                         className: p.getXboxAppHeading,
-                        variant: 'text-lg/semibold',
+                        variant: "text-lg/semibold",
                         children: [
-                            (0, o.jsx)('div', {
+                            (0, o.jsx)("div", {
                                 className: p.xboxLogoBox,
-                                children: (0, o.jsx)('img', {
+                                children: (0, o.jsx)("img", {
                                     src: i.Z.get(c.ABu.XBOX).icon.whiteSVG,
-                                    alt: ''
-                                })
+                                    alt: "",
+                                }),
                             }),
-                            u.intl.string(u.t['12Kx2t'])
-                        ]
+                            u.intl.string(u.t["12Kx2t"]),
+                        ],
                     }),
                     (0, o.jsx)(r.Text, {
-                        tag: 'p',
-                        variant: 'text-md/normal',
-                        color: 'header-secondary',
-                        children: u.intl.string(u.t.M5yEcX)
+                        tag: "p",
+                        variant: "text-md/normal",
+                        color: "header-secondary",
+                        children: u.intl.string(u.t.M5yEcX),
                     }),
                     (0, o.jsx)(r.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'header-secondary',
+                        variant: "text-sm/medium",
+                        color: "header-secondary",
                         children: (0, o.jsx)(r.eee, {
                             href: a.Z.getArticleURL(c.BhN.XBOX_CONNECTION),
-                            children: u.intl.string(u.t.hvVgAQ)
-                        })
-                    })
-                ]
+                            children: u.intl.string(u.t.hvVgAQ),
+                        }),
+                    }),
+                ],
             }),
             (0, o.jsx)(s.ZP, {
                 className: p.getXboxAppQR,
                 text: d.X3,
-                size: 90
-            })
-        ]
+                size: 90,
+            }),
+        ],
     });
 }
 function x(e) {
     let { onClose: t } = e;
     return (0, o.jsx)(l.L, {
-        img: (0, o.jsx)('img', {
+        img: (0, o.jsx)("img", {
             src: f.Z,
-            width: '124',
-            height: '160',
-            alt: ''
+            width: "124",
+            height: "160",
+            alt: "",
         }),
-        title: u.intl.string(u.t['7QsHmp']),
+        title: u.intl.string(u.t["7QsHmp"]),
         body: u.intl.string(u.t.byYNPT),
         content: (0, o.jsx)(b, {}),
-        onClose: t
+        onClose: t,
     });
 }

@@ -15,32 +15,32 @@ function m(e) {
         p = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
         g = (0, l.pxk)(m);
     return i.length > 2
-        ? (0, n.jsx)('img', {
-              alt: '',
+        ? (0, n.jsx)("img", {
+              alt: "",
               src: t,
-              style: { height: 1.2 * g }
+              style: { height: 1.2 * g },
           })
-        : (0, n.jsxs)('div', {
+        : (0, n.jsxs)("div", {
               className: c.container,
               children: [
                   (1 === i.length || 2 === i.length) &&
                       (0, n.jsx)(l.Xo$, {
-                          'aria-label': null == C ? void 0 : C.username,
+                          "aria-label": null == C ? void 0 : C.username,
                           size: m,
                           className: c.firstPromotionalAvatar,
                           src: 1 === i.length ? (null == C ? void 0 : C.getAvatarURL(void 0, (0, l.pxk)(m), !p)) : d,
-                          avatarDecoration: (0, s.Z)(i[0].assetId, m, !p)
+                          avatarDecoration: (0, s.Z)(i[0].assetId, m, !p),
                       }),
                   2 === i.length &&
-                      (0, n.jsx)('div', {
+                      (0, n.jsx)("div", {
                           style: { marginRight: -Math.round(0.321 * g) },
                           children: (0, n.jsx)(l.Xo$, {
-                              'aria-label': null == C ? void 0 : C.username,
+                              "aria-label": null == C ? void 0 : C.username,
                               size: m,
                               src: u,
-                              avatarDecoration: (0, s.Z)(i[1].assetId, m, !p)
-                          })
-                      })
-              ]
+                              avatarDecoration: (0, s.Z)(i[1].assetId, m, !p),
+                          }),
+                      }),
+              ],
           });
 }

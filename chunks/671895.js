@@ -13,14 +13,14 @@ let d = a.memo(function (e) {
     return (0, l.jsx)(i.hjN, {
         className: c.section,
         title: u.intl.string(u.t.CCRKNz),
-        children: (0, l.jsxs)('div', {
+        children: (0, l.jsxs)("div", {
             className: c.fakeInput,
             children: [
                 null != t &&
                     (0, l.jsx)(o.Z, {
                         sound: t,
                         volume: n,
-                        disabled: a
+                        disabled: a,
                     }),
                 null == t &&
                     null != f &&
@@ -28,9 +28,9 @@ let d = a.memo(function (e) {
                         className: c.audioTrimmer,
                         volume: n,
                         disabled: a,
-                        onChange: d
-                    })
-            ]
-        })
+                        onChange: d,
+                    }),
+            ],
+        }),
     });
 });

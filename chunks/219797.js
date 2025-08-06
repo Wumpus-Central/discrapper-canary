@@ -1,14 +1,14 @@
-(n.d(t, {
+n.d(t, {
     L9: () => w,
     ZK: () => P,
     d4: () => R,
     dS: () => S,
     jY: () => C,
     q7: () => N,
-    vZ: () => A
+    vZ: () => A,
 }),
     n(953529),
-    n(997841));
+    n(997841);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -34,7 +34,7 @@ function O(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -44,15 +44,15 @@ function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 O(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -60,11 +60,11 @@ function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -87,7 +87,7 @@ function S(e) {
             alt: n.description,
             src: (0, _.q)({
                 proxyURL: n.proxy_url,
-                url: n.url
+                url: n.url,
             }),
             original: n.url,
             placeholder: n.placeholder,
@@ -96,15 +96,15 @@ function S(e) {
             sourceMetadata: {
                 message: e.message,
                 identifier: {
-                    type: 'attachment',
+                    type: "attachment",
                     attachmentId: n.id,
                     filename: n.filename,
                     title: n.title,
-                    size: n.size
-                }
+                    size: n.size,
+                },
             },
-            analyticsSource: 'ImageComponentForMessageAttachment'
-        })
+            analyticsSource: "ImageComponentForMessageAttachment",
+        }),
     );
 }
 function A(e) {
@@ -114,26 +114,26 @@ function A(e) {
             var e;
             return (0, p.yE)(null != (e = n.flags) ? e : 0, E.J0y.IS_CLIP)
                 ? (0, r.jsxs)(s.DY, {
-                      text: b.intl.string(b.t['/fgfWl']),
+                      text: b.intl.string(b.t["/fgfWl"]),
                       className: y.clipPill,
                       children: [
                           (0, r.jsx)(l.AlX, {
-                              size: 'xs',
-                              color: 'currentColor'
+                              size: "xs",
+                              color: "currentColor",
                           }),
                           (0, r.jsx)(a.x, {
-                              variant: 'text-xs/semibold',
-                              color: 'always-white',
-                              children: b.intl.string(b.t.oA4afH)
-                          })
-                      ]
+                              variant: "text-xs/semibold",
+                              color: "always-white",
+                              children: b.intl.string(b.t.oA4afH),
+                          }),
+                      ],
                   })
                 : null;
         }, [n]),
         c = h.Z.toURLSafe(n.proxy_url);
     return null == c
         ? null
-        : (c.searchParams.append('format', 'webp'),
+        : (c.searchParams.append("format", "webp"),
           (0, g.lV)(
               T(v({}, e), {
                   alt: n.description,
@@ -148,13 +148,13 @@ function A(e) {
                   sourceMetadata: {
                       message: e.message,
                       identifier: {
-                          type: 'attachment',
+                          type: "attachment",
                           attachmentId: n.id,
                           filename: n.filename,
-                          size: n.size
-                      }
-                  }
-              })
+                          size: n.size,
+                      },
+                  },
+              }),
           ));
 }
 function N(e) {
@@ -163,8 +163,8 @@ function N(e) {
         T(v({}, e), {
             fileSize: t.size,
             fileName: (0, m.Z)(t),
-            src: t.url
-        })
+            src: t.url,
+        }),
     );
 }
 function C(e) {
@@ -176,21 +176,21 @@ function C(e) {
                 var o;
                 (0, d.tb)(t.id, null != (o = r.duration_secs) ? o : null, n, t.author.id);
             },
-            [t, r.duration_secs]
+            [t, r.duration_secs],
         ),
         s = i.useCallback(
             (e, n) => {
                 var i;
                 (0, d.EW)(t.id, null != (i = r.duration_secs) ? i : null, e, t.author.id, n);
             },
-            [t, r.duration_secs]
+            [t, r.duration_secs],
         ),
         l = i.useCallback(
             (e) => {
                 var n;
                 (0, d.Np)(t.id, null != (n = null == e ? void 0 : e.message) ? n : null);
             },
-            [t]
+            [t],
         );
     return (0, g.wj)(
         T(v({}, e), {
@@ -202,8 +202,8 @@ function C(e) {
             onPlay: a,
             onPause: s,
             onError: l,
-            playbackCacheKey: o
-        })
+            playbackCacheKey: o,
+        }),
     );
 }
 function R(e) {
@@ -213,8 +213,8 @@ function R(e) {
             url: t.url,
             fileName: (0, m.Z)(t),
             fileSize: t.size,
-            contentType: t.content_type
-        })
+            contentType: t.content_type,
+        }),
     );
 }
 function P(e) {
@@ -223,15 +223,15 @@ function P(e) {
         T(v({}, e), {
             url: t.url,
             fileName: (0, m.Z)(t),
-            fileSize: t.size
-        })
+            fileSize: t.size,
+        }),
     );
 }
 function w(e) {
-    return 'CLIP' === e.item.type
+    return "CLIP" === e.item.type
         ? (0, r.jsx)(D, {
               attachment: e.item.originalItem,
-              message: e.message
+              message: e.message,
           })
         : null;
 }
@@ -259,6 +259,6 @@ function D(e) {
                 : [],
         applicationId: null == _ ? void 0 : _.id,
         title: d,
-        guildId: s
+        guildId: s,
     });
 }

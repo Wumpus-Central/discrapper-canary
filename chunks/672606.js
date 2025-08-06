@@ -16,7 +16,7 @@ var r,
     g = c.document,
     b = c.process,
     _ = c.Promise,
-    k = l('queueMicrotask');
+    k = l("queueMicrotask");
 if (!k) {
     var C = new p(),
         Z = function () {
@@ -29,7 +29,7 @@ if (!k) {
                 }
             e && e.enter();
         };
-    (h || y || m || !v || !g
+    h || y || m || !v || !g
         ? !f && _ && _.resolve
             ? (((i = _.resolve(void 0)).constructor = _),
               (s = u(i.then, i)),
@@ -45,13 +45,13 @@ if (!k) {
                     d(Z);
                 }))
         : ((o = !0),
-          (a = g.createTextNode('')),
+          (a = g.createTextNode("")),
           new v(Z).observe(a, { characterData: !0 }),
           (r = function () {
               a.data = o = !o;
           })),
         (k = function (e) {
-            (C.head || r(), C.add(e));
-        }));
+            C.head || r(), C.add(e);
+        });
 }
 e.exports = k;

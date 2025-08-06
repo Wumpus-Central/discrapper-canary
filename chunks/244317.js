@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(35282), n(388685));
+n.d(t, { Z: () => h }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(873546),
@@ -26,8 +26,8 @@ function h(e) {
                         type: u.jE.ACTIVITIES,
                         params: {
                             applicationId: t,
-                            url: location.href
-                        }
+                            url: location.href,
+                        },
                     })
                         .then((e) => {
                             b(null != e && e);
@@ -39,33 +39,33 @@ function h(e) {
     }, [t, _]),
     _ && !1 !== m)
         ? !0 === m
-            ? (0, r.jsxs)('div', {
+            ? (0, r.jsxs)("div", {
                   className: p.container,
                   children: [
                       (0, r.jsx)(a.X6q, {
-                          variant: 'heading-xxl/bold',
-                          children: d.intl.string(d.t.csrAMD)
+                          variant: "heading-xxl/bold",
+                          children: d.intl.string(d.t.csrAMD),
                       }),
                       (0, r.jsx)(a.Text, {
-                          variant: 'text-xs/semibold',
-                          children: d.intl.string(d.t['m1+IBg'])
+                          variant: "text-xs/semibold",
+                          children: d.intl.string(d.t["m1+IBg"]),
                       }),
                       (0, r.jsx)(a.zxk, {
-                          variant: 'primary',
+                          variant: "primary",
                           text: d.intl.string(d.t.fIv16O),
-                          onClick: () => f(!0)
-                      })
-                  ]
+                          onClick: () => f(!0),
+                      }),
+                  ],
               })
-            : (0, r.jsxs)('div', {
+            : (0, r.jsxs)("div", {
                   className: p.container,
                   children: [
                       (0, r.jsx)(a.X6q, {
-                          variant: 'heading-xxl/bold',
-                          children: d.intl.string(d.t['Z+hCVV'])
+                          variant: "heading-xxl/bold",
+                          children: d.intl.string(d.t["Z+hCVV"]),
                       }),
-                      (0, r.jsx)(a.$jN, {})
-                  ]
+                      (0, r.jsx)(a.$jN, {}),
+                  ],
               })
         : (0, r.jsx)(
               s.Z,
@@ -73,26 +73,26 @@ function h(e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
                           r = Object.keys(n);
-                      ('function' == typeof Object.getOwnPropertySymbols &&
+                      "function" == typeof Object.getOwnPropertySymbols &&
                           (r = r.concat(
                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                              })
+                              }),
                           )),
                           r.forEach(function (t) {
                               var r;
-                              ((r = n[t]),
+                              (r = n[t]),
                                   t in e
                                       ? Object.defineProperty(e, t, {
                                             value: r,
                                             enumerable: !0,
                                             configurable: !0,
-                                            writable: !0
+                                            writable: !0,
                                         })
-                                      : (e[t] = r));
-                          }));
+                                      : (e[t] = r);
+                          });
                   }
                   return e;
-              })({}, e)
+              })({}, e),
           );
 }

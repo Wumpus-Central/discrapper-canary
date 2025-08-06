@@ -6,40 +6,43 @@ var i = n(481060),
     a = n(568410);
 function o(e) {
     let { onDiscardApplication: t, onContinueApplication: n, guild: o } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a.confirmation,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a.iconWrapper,
                 children: (0, r.jsx)(i.Gzi, {
-                    size: 'md',
-                    color: i.TVs.colors.INTERACTIVE_ACTIVE
-                })
+                    size: "md",
+                    color: i.TVs.colors.INTERACTIVE_ACTIVE,
+                }),
             }),
             (0, r.jsx)(i.X6q, {
-                variant: 'heading-lg/semibold',
-                color: 'header-primary',
-                children: null != o ? l.intl.formatToPlainString(l.t.f5Jaw8, { guildName: o.name }) : l.intl.string(l.t['0sTyER'])
+                variant: "heading-lg/semibold",
+                color: "header-primary",
+                children:
+                    null != o
+                        ? l.intl.formatToPlainString(l.t.f5Jaw8, { guildName: o.name })
+                        : l.intl.string(l.t["0sTyER"]),
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: a.incompleteButtonsContainer,
                 children: [
                     (0, r.jsx)(i.zxk, {
                         fullWidth: !0,
                         onClick: n,
-                        variant: 'secondary',
-                        size: 'md',
-                        text: l.intl.string(l.t.h3aGmp)
+                        variant: "secondary",
+                        size: "md",
+                        text: l.intl.string(l.t.h3aGmp),
                     }),
                     (0, r.jsx)(i.zxk, {
                         fullWidth: !0,
                         onClick: t,
-                        variant: 'critical-primary',
-                        size: 'md',
-                        text: l.intl.string(l.t.OQFlFB)
-                    })
-                ]
-            })
-        ]
+                        variant: "critical-primary",
+                        size: "md",
+                        text: l.intl.string(l.t.OQFlFB),
+                    }),
+                ],
+            }),
+        ],
     });
 }

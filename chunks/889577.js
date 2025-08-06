@@ -5,7 +5,7 @@ function r(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,6 +20,6 @@ class i {
         if (null != this.desktopMaxHeight) return { maxHeight: this.desktopMaxHeight };
     }
     constructor(e) {
-        (r(this, 'desktopMaxHeight', void 0), (this.desktopMaxHeight = e.desktop_max_height));
+        r(this, "desktopMaxHeight", void 0), (this.desktopMaxHeight = e.desktop_max_height);
     }
 }

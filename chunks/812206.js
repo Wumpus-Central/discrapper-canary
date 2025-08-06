@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => q }), n(388685), n(642613), n(539854));
+n.d(t, { Z: () => q }), n(388685), n(642613), n(539854);
 var r,
     i = n(442837),
     o = n(570140),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -36,11 +36,11 @@ function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,11 +67,15 @@ function b(e) {
     let t = f[e.id];
     h[e.id] = Date.now();
     let n = e;
-    for (let r of (null != t && (n = t.mergeFromApplicationUpdate(e)), (f[e.id] = n), (p[e.name.toLowerCase()] = n), e.aliases)) p[r.toLowerCase()] = n;
+    for (let r of (null != t && (n = t.mergeFromApplicationUpdate(e)),
+    (f[e.id] = n),
+    (p[e.name.toLowerCase()] = n),
+    e.aliases))
+        p[r.toLowerCase()] = n;
     delete m[e.id];
 }
 function y() {
-    ((f = {}), (_ = {}), (p = {}), (h = {}), (m = {}));
+    (f = {}), (_ = {}), (p = {}), (h = {}), (m = {});
 }
 function O(e) {
     let { applications: t } = e;
@@ -80,7 +84,7 @@ function O(e) {
 function v(e) {
     let { applicationId: t } = e,
         n = m[t];
-    return ((m[t] = !0), !0 !== n);
+    return (m[t] = !0), !0 !== n;
 }
 function I(e) {
     let { application: t } = e;
@@ -99,11 +103,11 @@ function A(e) {
     null == r
         ? (g.botUserIdToAppUsage[t] = {
               applicationId: n,
-              lastUsedMs: Date.now()
+              lastUsedMs: Date.now(),
           })
         : (g.botUserIdToAppUsage[t] = {
               applicationId: n,
-              lastUsedMs: r.lastUsedMs
+              lastUsedMs: r.lastUsedMs,
           });
     let i = new Map();
     for (let [e, t] of Object.entries(g.botUserIdToAppUsage)) i.set(e, t);
@@ -117,14 +121,14 @@ function A(e) {
 function N(e) {
     let { applicationId: t } = e,
         n = m[t];
-    return ((m[t] = !1), !1 !== n);
+    return (m[t] = !1), !1 !== n;
 }
 function C(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
         let t = m[e];
-        ((m[e] = !0), (n = !0 !== t));
+        (m[e] = !0), (n = !0 !== t);
     }
     return n;
 }
@@ -155,7 +159,7 @@ function L(e) {
         null != r &&
         A({
             userId: n.id,
-            applicationId: r.id
+            applicationId: r.id,
         });
 }
 function x(e) {
@@ -168,20 +172,21 @@ function M(e) {
         n = !1;
     for (let e of t) {
         let t = m[e];
-        ((m[e] = !1), (n = !1 !== t));
+        (m[e] = !1), (n = !1 !== t);
     }
     return n;
 }
 function k(e) {
     let { entitlements: t } = e,
         n = !1;
-    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (b(a.ZP.createFromServer(e.application)), (n = !0));
+    for (let { sku: e } of t)
+        (null == e ? void 0 : e.application) != null && (b(a.ZP.createFromServer(e.application)), (n = !0));
     return n;
 }
 function j(e) {
     let { guildId: t, applications: n } = e,
         r = [];
-    for (let e of n) (r.push(e.id), b(a.ZP.createFromServer(e)));
+    for (let e of n) r.push(e.id), b(a.ZP.createFromServer(e));
     _[t] = r;
 }
 function U(e) {
@@ -238,7 +243,7 @@ function W(e) {
         null != t &&
             A({
                 userId: t.id,
-                applicationId: e.application.id
+                applicationId: e.application.id,
             });
     });
 }
@@ -249,18 +254,18 @@ function K(e) {
 }
 class z extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        if (null != e && 'object' == typeof e.botUserIdToAppUsage)
+        if (null != e && "object" == typeof e.botUserIdToAppUsage)
             for (let t in e.botUserIdToAppUsage) {
                 let n = e.botUserIdToAppUsage[t],
                     r = n.applicationId,
                     i = n.lastUsedMs;
-                'string' == typeof r &&
+                "string" == typeof r &&
                     r.length > 0 &&
-                    'number' == typeof i &&
+                    "number" == typeof i &&
                     i > 0 &&
                     (g.botUserIdToAppUsage[t] = {
                         applicationId: r,
-                        lastUsedMs: i
+                        lastUsedMs: i,
                     });
             }
     }
@@ -307,7 +312,7 @@ class z extends (r = i.ZP.PersistedStore) {
         if (null != e) return null == (t = g.botUserIdToAppUsage[e]) ? void 0 : t.applicationId;
     }
 }
-(s(z, 'displayName', 'ApplicationStore'), s(z, 'persistKey', 'ApplicationStore'));
+s(z, "displayName", "ApplicationStore"), s(z, "persistKey", "ApplicationStore");
 let q = new z(o.Z, {
     LOGOUT: y,
     OVERLAY_INITIALIZE: O,
@@ -335,5 +340,5 @@ let q = new z(o.Z, {
     USER_AUTHORIZED_APPS_UPDATE: W,
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: K,
     OAUTH2_TOKEN_CREATE: Y,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: P
+    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: P,
 });

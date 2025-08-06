@@ -4,34 +4,34 @@ function r(e) {
         n = {};
     for (let r of e.fields)
         switch (r.rawName) {
-            case 'poll_question_text':
+            case "poll_question_text":
                 t.questionText = r.rawValue;
                 break;
-            case 'victor_answer_id':
+            case "victor_answer_id":
                 t.victorAnswerId = r.rawValue;
                 break;
-            case 'victor_answer_text':
+            case "victor_answer_text":
                 t.victorAnswerText = r.rawValue;
                 break;
-            case 'victor_answer_votes':
+            case "victor_answer_votes":
                 t.victorAnswerVotes = parseInt(r.rawValue, 10);
                 break;
-            case 'total_votes':
+            case "total_votes":
                 t.totalVotes = parseInt(r.rawValue, 10);
                 break;
-            case 'victor_answer_emoji_id':
+            case "victor_answer_emoji_id":
                 n.id = r.rawValue;
                 break;
-            case 'victor_answer_emoji_name':
+            case "victor_answer_emoji_name":
                 n.name = r.rawValue;
                 break;
-            case 'victor_answer_emoji_animated':
-                n.animated = 'true' === r.rawValue;
+            case "victor_answer_emoji_animated":
+                n.animated = "true" === r.rawValue;
         }
     if (null != n.name) {
         var r;
-        ((n.animated = null != (r = n.animated) && r), (t.victorEmoji = n));
+        (n.animated = null != (r = n.animated) && r), (t.victorEmoji = n);
     }
     return t;
 }
-(n.d(t, { Z: () => r }), n(388685));
+n.d(t, { Z: () => r }), n(388685);

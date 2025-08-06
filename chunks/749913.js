@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => es }), n(388685), n(781311), n(290780));
+n.d(t, { Z: () => es }), n(388685), n(781311), n(290780);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -58,24 +58,24 @@ function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -104,13 +104,13 @@ function es(e) {
         {
             textAreaState: m,
             formOpen: g,
-            previewing: x
+            previewing: x,
         } = (0, K.xH)((e) => {
             let { textAreaState: t, formOpen: n, previewing: r } = e;
             return {
                 textAreaState: t,
                 formOpen: n,
-                previewing: r
+                previewing: r,
             };
         }, c.X),
         [p, b] = i.useState(null),
@@ -126,15 +126,27 @@ function es(e) {
             let n = (0, K.AF)(),
                 r = (0, G.ql)(e);
             return i.useCallback(() => {
-                let { formOpen: i, setFormOpenFromUserAction: l, name: a, textAreaState: s, hasClickedForm: o } = n.getState();
+                let {
+                    formOpen: i,
+                    setFormOpenFromUserAction: l,
+                    name: a,
+                    textAreaState: s,
+                    hasClickedForm: o,
+                } = n.getState();
                 !i &&
                     (setTimeout(() => {
                         if (t.current instanceof f.lcI) {
                             var e, n, r, i;
-                            (null == (n = t.current) || null == (e = n._textArea) || e.setSelectionRange(a.length, a.length), null == (i = t.current) || null == (r = i._textArea) || r.focus());
+                            null == (n = t.current) ||
+                                null == (e = n._textArea) ||
+                                e.setSelectionRange(a.length, a.length),
+                                null == (i = t.current) || null == (r = i._textArea) || r.focus();
                         }
                     }, 0),
-                    ((o && a.length > 0) || (s.textValue.trim().length > 0 && s.textValue.trim() !== r) || L.Z.getUploads(e.id, Z.d.FirstThreadMessage).length > 0) && l());
+                    ((o && a.length > 0) ||
+                        (s.textValue.trim().length > 0 && s.textValue.trim() !== r) ||
+                        L.Z.getUploads(e.id, Z.d.FirstThreadMessage).length > 0) &&
+                        l());
             }, [n, e.id, r, t]);
         })(t, d),
         A = (function (e) {
@@ -146,22 +158,25 @@ function es(e) {
                 r = (0, R.r)({ parentChannel: e });
             i.useEffect(() => {
                 let { setNameError: e, setMessageError: t } = n.getState();
-                (e(null), t(null));
+                e(null), t(null);
             }, [t, n]);
             let l = i.useCallback(
                 (t, r, i) => {
                     let { name: l, textAreaState: a } = n.getState();
-                    (null == t && (t = a.textValue), (t = t.trim()));
+                    null == t && (t = a.textValue), (t = t.trim());
                     let { content: s } = O.ZP.parse(e, t);
                     if (((t = s), null == r || 0 === r.length)) {
                         var o;
                         r = null == (o = T.Z.getStickerPreview(e.id, ea.drafts.type)) ? void 0 : o.map((e) => e.id);
                     }
-                    if (((null == i || 0 === i.length) && (i = L.Z.getUploads(e.id, Z.d.FirstThreadMessage)), null != i && i.length > 0 && e.isMediaChannel())) {
+                    if (
+                        ((null == i || 0 === i.length) && (i = L.Z.getUploads(e.id, Z.d.FirstThreadMessage)),
+                        null != i && i.length > 0 && e.isMediaChannel())
+                    ) {
                         let e = i.findIndex((e) => !0 === e.isThumbnail);
                         if (e > -1) {
                             let t = i[e];
-                            (i.splice(e, 1), i.unshift(t));
+                            i.splice(e, 1), i.unshift(t);
                         }
                     }
                     let c = 0 === l.length,
@@ -171,33 +186,43 @@ function es(e) {
                         stickers: r,
                         uploads: i,
                         hasNameError: c,
-                        hasMessageError: d
+                        hasMessageError: d,
                     };
                 },
-                [e, n]
+                [e, n],
             );
             return i.useCallback(
                 async (t, i, a) => {
-                    let { setNameError: s, setMessageError: o, setSubmitting: c, resetFormState: d, formOpen: u, setFormOpen: m, setPreviewing: h, setFormOpenFromUserAction: g, setGuidelinesOpen: f } = n.getState(),
+                    let {
+                            setNameError: s,
+                            setMessageError: o,
+                            setSubmitting: c,
+                            resetFormState: d,
+                            formOpen: u,
+                            setFormOpen: m,
+                            setPreviewing: h,
+                            setFormOpenFromUserAction: g,
+                            setGuidelinesOpen: f,
+                        } = n.getState(),
                         x = V.Z.hasSeen(e.id);
                     if (!u)
                         return (
                             (0, q.P_)({
                                 guildId: e.guild_id,
-                                channelId: e.id
+                                channelId: e.id,
                             }),
                             x || n.getState().setGuidelinesOpen(!0),
                             g(),
                             {
                                 shouldClear: !1,
-                                shouldRefocus: !1
+                                shouldRefocus: !1,
                             }
                         );
                     let { content: p, stickers: b, uploads: j, hasNameError: v, hasMessageError: C } = l(t, i, a);
                     if ((s(v ? (0, H.V_)() : null), o(C ? (0, H.T4)() : null), v || C))
                         return {
                             shouldClear: !1,
-                            shouldRefocus: !0
+                            shouldRefocus: !0,
                         };
                     try {
                         c(!0);
@@ -206,12 +231,12 @@ function es(e) {
                             stickers: b,
                             uploads: j,
                             type: ea,
-                            channel: e
+                            channel: e,
                         });
                         if (!t)
                             return {
                                 shouldClear: !1,
-                                shouldRefocus: !0
+                                shouldRefocus: !0,
                             };
                         let n = await r(p, b, j);
                         return (
@@ -225,48 +250,51 @@ function es(e) {
                             f(!1),
                             {
                                 shouldClear: !0,
-                                shouldRefocus: !1
+                                shouldRefocus: !1,
                             }
                         );
                     } catch (t) {
                         var _, y;
                         return (
-                            (null == (_ = t.body) ? void 0 : _.code) === ee.evJ.AUTOMOD_TITLE_BLOCKED ? s((0, H.Gx)(t.body, e)) : (null == (y = t.body) ? void 0 : y.code) === ee.evJ.AUTOMOD_MESSAGE_BLOCKED && o((0, H.Gx)(t.body, e)),
+                            (null == (_ = t.body) ? void 0 : _.code) === ee.evJ.AUTOMOD_TITLE_BLOCKED
+                                ? s((0, H.Gx)(t.body, e))
+                                : (null == (y = t.body) ? void 0 : y.code) === ee.evJ.AUTOMOD_MESSAGE_BLOCKED &&
+                                  o((0, H.Gx)(t.body, e)),
                             {
                                 shouldClear: !1,
-                                shouldRefocus: !0
+                                shouldRefocus: !0,
                             }
                         );
                     } finally {
                         c(!1);
                     }
                 },
-                [r, l, e, n]
+                [r, l, e, n],
             );
         })(t);
     return (
         i.useLayoutEffect(s, [g, m, w, s]),
         (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsx)('div', {
-                'aria-label': u ? en.intl.string(en.t.dq7mAQ) : en.intl.string(en.t['5h0QOD']),
+            children: (0, r.jsx)("div", {
+                "aria-label": u ? en.intl.string(en.t.dq7mAQ) : en.intl.string(en.t["5h0QOD"]),
                 className: a()(er.container, { [er.collapsed]: !g }),
                 onClick: !g && u ? M : void 0,
-                children: (0, r.jsxs)('form', {
+                children: (0, r.jsxs)("form", {
                     onMouseDown: v,
                     onFocus: v,
                     onSubmit: (e) => {
-                        (e.preventDefault(), u && A());
+                        e.preventDefault(), u && A();
                     },
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: er.formContainer,
                             children: [
                                 (0, r.jsx)(eo, {
                                     parentChannel: t,
                                     isSearchLoading: n,
-                                    inputRef: d
+                                    inputRef: d,
                                 }),
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: x ? er.previewForm : er.form,
                                     children: [
                                         (0, r.jsx)(ec, {
@@ -275,7 +303,7 @@ function es(e) {
                                             isSearchLoading: n,
                                             numResults: l,
                                             inputRef: d,
-                                            canCreatePost: u
+                                            canCreatePost: u,
                                         }),
                                         g &&
                                             (0, r.jsx)(em, {
@@ -283,15 +311,15 @@ function es(e) {
                                                 setEditorRef: b,
                                                 parentChannel: t,
                                                 submit: A,
-                                                disabled: !u
+                                                disabled: !u,
                                             }),
-                                        x && (0, r.jsx)(eh, {})
-                                    ]
+                                        x && (0, r.jsx)(eh, {}),
+                                    ],
                                 }),
-                                P && (I ? (0, r.jsx)(y._, { parentChannel: t }) : (0, r.jsx)(X.Z, { channelId: t.id }))
-                            ]
+                                P && (I ? (0, r.jsx)(y._, { parentChannel: t }) : (0, r.jsx)(X.Z, { channelId: t.id })),
+                            ],
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: er.form,
                             children: [
                                 P && I && (0, r.jsx)(_.Z, { parentChannel: t }),
@@ -299,13 +327,13 @@ function es(e) {
                                     (0, r.jsx)(ep, {
                                         className: er.horizontalPadding,
                                         parentChannel: t,
-                                        canCreatePost: u
-                                    })
-                            ]
-                        })
-                    ]
-                })
-            })
+                                        canCreatePost: u,
+                                    }),
+                            ],
+                        }),
+                    ],
+                }),
+            }),
         })
     );
 }
@@ -316,9 +344,17 @@ let eo = i.memo(function (e) {
                 name: s,
                 textAreaState: o,
                 hasClickedForm: d,
-                submitting: u
+                submitting: u,
             } = (0, K.xH)((e) => {
-                let { formOpen: t, nameError: n, name: r, previewing: i, textAreaState: l, hasClickedForm: a, submitting: s } = e;
+                let {
+                    formOpen: t,
+                    nameError: n,
+                    name: r,
+                    previewing: i,
+                    textAreaState: l,
+                    hasClickedForm: a,
+                    submitting: s,
+                } = e;
                 return {
                     formOpen: t,
                     nameError: n,
@@ -326,14 +362,14 @@ let eo = i.memo(function (e) {
                     textAreaState: l,
                     previewing: i,
                     hasClickedForm: a,
-                    submitting: s
+                    submitting: s,
                 };
             }, c.X),
             m = (0, K.AF)(),
             h = (0, G.ql)(t),
             g = i.useCallback(() => {
                 var e;
-                (m.getState().resetFormState(),
+                m.getState().resetFormState(),
                     x.Z.clearDraft(t.id, Z.d.ThreadSettings),
                     x.Z.clearDraft(t.id, Z.d.FirstThreadMessage),
                     p.Z.clearAll(t.id, Z.d.FirstThreadMessage),
@@ -345,51 +381,55 @@ let eo = i.memo(function (e) {
                     null == (e = l.current) || e.blur(),
                     (0, q.Oq)({
                         guildId: t.guild_id,
-                        channelId: t.id
-                    }));
+                        channelId: t.id,
+                    });
             }, [m, t.id, t.guild_id, l]),
             b = i.useMemo(
                 () =>
                     n && !a
                         ? (0, r.jsx)(eC, {})
                         : n || a || (0 !== o.textValue.trim().length && o.textValue.trim() !== h)
-                          ? !a && (s.trim().length > 0 || (o.textValue.trim().length > 0 && o.textValue.trim() !== h) || L.Z.getUploads(t.id, Z.d.FirstThreadMessage).length > 0) && d
+                          ? !a &&
+                            (s.trim().length > 0 ||
+                                (o.textValue.trim().length > 0 && o.textValue.trim() !== h) ||
+                                L.Z.getUploads(t.id, Z.d.FirstThreadMessage).length > 0) &&
+                            d
                               ? (0, r.jsx)(f.vdY, {
-                                    size: 'md',
-                                    color: 'currentColor',
-                                    className: er.pencilIcon
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: er.pencilIcon,
                                 })
                               : u
                                 ? (0, r.jsx)(f.k$p, {
-                                      size: 'md',
-                                      color: 'currentColor',
-                                      className: er.closeIconDisabled
+                                      size: "md",
+                                      color: "currentColor",
+                                      className: er.closeIconDisabled,
                                   })
                                 : (0, r.jsx)(f.ua7, {
-                                      text: en.intl.string(en.t['98EPQE']),
+                                      text: en.intl.string(en.t["98EPQE"]),
                                       children: (e) =>
                                           (0, r.jsx)(
                                               f.P3F,
                                               el(ei({}, e), {
                                                   onClick: g,
                                                   children: (0, r.jsx)(f.k$p, {
-                                                      size: 'md',
-                                                      color: 'currentColor',
-                                                      className: er.closeIcon
-                                                  })
-                                              })
-                                          )
+                                                      size: "md",
+                                                      color: "currentColor",
+                                                      className: er.closeIcon,
+                                                  }),
+                                              }),
+                                          ),
                                   })
                           : (0, r.jsx)(f._Ve, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: er.searchIcon
+                                size: "md",
+                                color: "currentColor",
+                                className: er.searchIcon,
                             }),
-                [n, a, d, s, o.textValue, g, t.id, h, u]
+                [n, a, d, s, o.textValue, g, t.id, h, u],
             );
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: er.prefixElement,
-            children: b
+            children: b,
         });
     }),
     ec = i.memo(function (e) {
@@ -399,9 +439,17 @@ let eo = i.memo(function (e) {
                 nameError: m,
                 name: x,
                 textAreaState: p,
-                previewing: b
+                previewing: b,
             } = (0, K.xH)((e) => {
-                let { formOpen: t, nameError: n, name: r, previewing: i, textAreaState: l, hasClickedForm: a, submitting: s } = e;
+                let {
+                    formOpen: t,
+                    nameError: n,
+                    name: r,
+                    previewing: i,
+                    textAreaState: l,
+                    hasClickedForm: a,
+                    submitting: s,
+                } = e;
                 return {
                     formOpen: t,
                     nameError: n,
@@ -409,7 +457,7 @@ let eo = i.memo(function (e) {
                     textAreaState: l,
                     previewing: i,
                     hasClickedForm: a,
-                    submitting: s
+                    submitting: s,
                 };
             }, c.X),
             j = (0, K.AF)(),
@@ -417,36 +465,47 @@ let eo = i.memo(function (e) {
             C = V.Z.hasSeen(t.id),
             _ = (0, G.ql)(t),
             y = (0, h.e7)([F.default], () => F.default.getCurrentUser());
-        (o()(null != y, 'current user cannot be null'),
+        o()(null != y, "current user cannot be null"),
             (0, D.yp)({
                 event: ee.CkL.FOCUS_COMPOSER_TITLE,
                 handler: () => {
                     var e;
                     let t = n.current instanceof f.lcI ? (null == (e = n.current) ? void 0 : e._textArea) : n.current;
-                    (null == t || t.focus(), j.getState().setTitleFocused(!0), j.getState().setFormOpen(!0), j.getState().setHasClickedForm(!0));
-                }
-            }));
+                    null == t || t.focus(),
+                        j.getState().setTitleFocused(!0),
+                        j.getState().setFormOpen(!0),
+                        j.getState().setHasClickedForm(!0);
+                },
+            });
         let O = i.useCallback(
                 (e) => {
                     let n = e.clipboardData.files[0];
-                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, B.d)([n], t, Z.d.FirstThreadMessage, { origin: 'clipboard' }), j.getState().setFormOpenFromUserAction());
+                    null != n &&
+                        n.type.startsWith("image/") &&
+                        (e.preventDefault(),
+                        (0, B.d)([n], t, Z.d.FirstThreadMessage, { origin: "clipboard" }),
+                        j.getState().setFormOpenFromUserAction());
                 },
-                [t, j]
+                [t, j],
             ),
             w = (0, H.Op)(m, { content: x });
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: er.titleContainer,
             onPaste: O,
             children: [
                 u && b
                     ? (0, r.jsx)(f.X6q, {
-                          variant: 'heading-md/semibold',
+                          variant: "heading-md/semibold",
                           className: er.title,
-                          children: x
+                          children: x,
                       })
                     : (0, r.jsx)(g.iS, {
                           value: x,
-                          placeholder: l ? (u || (p.textValue.length > 0 && p.textValue.trim() !== _) ? en.intl.string(en.t.lU4dDQ) : en.intl.string(en.t.CjmivL)) : en.intl.string(en.t['5h0QOD']),
+                          placeholder: l
+                              ? u || (p.textValue.length > 0 && p.textValue.trim() !== _)
+                                  ? en.intl.string(en.t.lU4dDQ)
+                                  : en.intl.string(en.t.CjmivL)
+                              : en.intl.string(en.t["5h0QOD"]),
                           flex: !0,
                           autosize: u,
                           rows: 1,
@@ -459,10 +518,11 @@ let eo = i.memo(function (e) {
                               let r = 0 === n.trim().length,
                                   i = 0 === p.textValue.trim().length,
                                   l = p.textValue.trim() === _;
-                              (r && (i || l) && j.getState().setHasClickedForm(!1), u || U.Z.updateForumSearchQuery(t.id, n));
+                              r && (i || l) && j.getState().setHasClickedForm(!1),
+                                  u || U.Z.updateForumSearchQuery(t.id, n);
                           },
                           onFocus: () => {
-                              (j.getState().setTitleFocused(!0), j.getState().setBodyFocused(!1));
+                              j.getState().setTitleFocused(!0), j.getState().setBodyFocused(!1);
                           },
                           onBlur: () => {
                               j.getState().setTitleFocused(!1);
@@ -471,7 +531,7 @@ let eo = i.memo(function (e) {
                           },
                           onKeyDown: (e) => {
                               var r, i;
-                              'Enter' === e.key &&
+                              "Enter" === e.key &&
                                   (e.preventDefault(),
                                   e.stopPropagation(),
                                   u && x.length > 0
@@ -479,29 +539,45 @@ let eo = i.memo(function (e) {
                                       : l && e.shiftKey
                                         ? ((0, q.nH)({
                                               guildId: t.guild_id,
-                                              channelId: t.id
+                                              channelId: t.id,
                                           }),
                                           v && !C && j.getState().setGuidelinesOpen(!0),
                                           j.getState().setFormOpenFromUserAction(),
-                                          x.trim().length > 0 && (j.getState().setBodyFocused(!0), null == a || a.focus()))
-                                        : u || !(x.length > 0) || null != d || s || U.Z.updateForumSearchQuery(t.id, x));
-                              let o = n.current instanceof f.lcI ? (null == (r = n.current) ? void 0 : r._textArea) : n.current;
-                              if ('Home' === e.key || 'End' === e.key) {
+                                          x.trim().length > 0 &&
+                                              (j.getState().setBodyFocused(!0), null == a || a.focus()))
+                                        : u ||
+                                          !(x.length > 0) ||
+                                          null != d ||
+                                          s ||
+                                          U.Z.updateForumSearchQuery(t.id, x));
+                              let o =
+                                  n.current instanceof f.lcI
+                                      ? null == (r = n.current)
+                                          ? void 0
+                                          : r._textArea
+                                      : n.current;
+                              if ("Home" === e.key || "End" === e.key) {
                                   if (null == o) return;
-                                  if ((e.preventDefault(), e.stopPropagation(), 'Home' === e.key)) {
+                                  if ((e.preventDefault(), e.stopPropagation(), "Home" === e.key)) {
                                       let t = e.shiftKey ? Math.max(o.selectionStart, o.selectionEnd) : 0;
-                                      o.setSelectionRange(0, t, 'backward');
+                                      o.setSelectionRange(0, t, "backward");
                                   } else {
                                       let t = e.shiftKey ? Math.min(o.selectionStart, o.selectionEnd) : x.length,
                                           n = x.length;
-                                      o.setSelectionRange(t, n, 'forward');
+                                      o.setSelectionRange(t, n, "forward");
                                   }
                               }
-                              'Escape' !== e.key || j.getState().submitting || (null == (i = n.current) || i.blur(), j.getState().setFormOpen(!1), j.getState().setTitleFocused(!1), j.getState().setBodyFocused(!1), j.getState().setPreviewing(!1));
+                              "Escape" !== e.key ||
+                                  j.getState().submitting ||
+                                  (null == (i = n.current) || i.blur(),
+                                  j.getState().setFormOpen(!1),
+                                  j.getState().setTitleFocused(!1),
+                                  j.getState().setBodyFocused(!1),
+                                  j.getState().setPreviewing(!1));
                           },
                           error: w,
                           className: er.title,
-                          inputRef: n
+                          inputRef: n,
                       }),
                 u
                     ? null
@@ -510,11 +586,11 @@ let eo = i.memo(function (e) {
                               (0, r.jsx)(ed, { parentChannel: t }),
                               (0, r.jsx)(eb, {
                                   parentChannel: t,
-                                  canCreatePost: l
-                              })
-                          ]
-                      })
-            ]
+                                  canCreatePost: l,
+                              }),
+                          ],
+                      }),
+            ],
         });
     });
 function ed(e) {
@@ -530,7 +606,7 @@ function ed(e) {
         };
     return l
         ? (0, r.jsx)(f.ua7, {
-              text: en.intl.string(en.t['4d4T4u']),
+              text: en.intl.string(en.t["4d4T4u"]),
               children: (e) =>
                   (0, r.jsx)(
                       f.P3F,
@@ -541,14 +617,14 @@ function ed(e) {
                               f.snC,
                               ei(
                                   {
-                                      size: 'md',
-                                      color: 'currentColor'
+                                      size: "md",
+                                      color: "currentColor",
                                   },
-                                  e
-                              )
-                          )
-                      })
-                  )
+                                  e,
+                              ),
+                          ),
+                      }),
+                  ),
           })
         : null;
 }
@@ -556,7 +632,7 @@ let eu = i.memo(function (e) {
         let { parentChannel: t, textValue: n } = e,
             i = new M.ZP({
                 channelId: t.id,
-                content: n
+                content: n,
             }),
             { content: l } = (0, w.Z)(i, {
                 hideSimpleEmbedContent: !0,
@@ -565,32 +641,32 @@ let eu = i.memo(function (e) {
                 allowList: !0,
                 allowHeading: !0,
                 previewLinkTarget: !0,
-                allowLinks: !0
+                allowLinks: !0,
             }),
             s = (0, P.Z)(
                 {
                     message: i,
                     channel: t,
-                    compact: !1
+                    compact: !1,
                 },
                 l,
-                !1
+                !1,
             );
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: a()(er.channelTextAreaInner, er.previewTextArea),
-            children: s
+            children: s,
         });
     }),
     em = i.memo(function (e) {
         let { parentChannel: t, submit: n, disabled: l = !1, editorRef: s, setEditorRef: d } = e,
             u = (0, h.e7)([F.default], () => F.default.getCurrentUser());
-        o()(null != u, 'current user cannot be null');
+        o()(null != u, "current user cannot be null");
         let {
                 messageError: m,
                 previewing: g,
                 textAreaState: x,
                 bodyFocused: p,
-                formOpen: b
+                formOpen: b,
             } = (0, K.xH)((e) => {
                 let { messageError: t, textAreaState: n, previewing: r, bodyFocused: i, formOpen: l } = e;
                 return {
@@ -598,7 +674,7 @@ let eu = i.memo(function (e) {
                     textAreaState: n,
                     previewing: r,
                     bodyFocused: i,
-                    formOpen: l
+                    formOpen: l,
                 };
             }, c.X),
             j = (0, K.AF)();
@@ -606,9 +682,9 @@ let eu = i.memo(function (e) {
             () => () =>
                 (0, q.Vn)({
                     guildId: t.guild_id,
-                    channelId: t.id
+                    channelId: t.id,
                 }),
-            [t.guild_id, t.id]
+            [t.guild_id, t.id],
         );
         let C = i.useCallback(() => {
                 j.getState().setBodyFocused(!0);
@@ -621,72 +697,82 @@ let eu = i.memo(function (e) {
                     let { setTextAreaState: r } = j.getState();
                     r({
                         textValue: t,
-                        richValue: n
+                        richValue: n,
                     });
                 },
-                [j]
+                [j],
             ),
             O = i.useCallback(
                 (e) => {
                     let { value: t, uploads: r, stickers: i } = e;
                     return n(t, i, r);
                 },
-                [n]
+                [n],
             );
-        ((0, D.yp)({
+        (0, D.yp)({
             event: ee.CkL.TEXTAREA_FOCUS,
-            handler: C
+            handler: C,
         }),
             (0, D.yp)({
                 event: ee.CkL.TEXTAREA_BLUR,
-                handler: _
-            }));
+                handler: _,
+            });
         let w = (0, H.Op)(m, { content: x.textValue });
-        return (0, r.jsx)('div', {
+        return (0, r.jsx)("div", {
             className: er.bodyContainer,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: er.contentContainer,
                 children: [
                     g
                         ? (0, r.jsx)(eu, {
                               parentChannel: t,
-                              textValue: x.textValue
+                              textValue: x.textValue,
                           })
-                        : (0, r.jsx)('div', {
+                        : (0, r.jsx)("div", {
                               onClick: C,
                               children: (0, r.jsx)(v.ZP, {
                                   type: ea,
                                   setEditorRef: d,
                                   channel: t,
-                                  placeholder: en.intl.string(en.t['8IPnv7']),
+                                  placeholder: en.intl.string(en.t["8IPnv7"]),
                                   textValue: x.textValue,
                                   richValue: x.richValue,
                                   focused: p,
                                   className: er.channelTextArea,
-                                  innerClassName: a()(er.channelTextAreaInner, { [er.channelTextAreaInnerError]: null != w }),
+                                  innerClassName: a()(er.channelTextAreaInner, {
+                                      [er.channelTextAreaInnerError]: null != w,
+                                  }),
                                   onChange: y,
                                   onSubmit: O,
                                   promptToUpload: B.d,
                                   disabled: l,
                                   onKeyDown: (e) => {
-                                      (('ArrowUp' === e.key || 'ArrowDown' === e.key) && e.stopPropagation(), b && 'Escape' === e.key && !j.getState().submitting && (null == s || s.blur(), j.getState().setFormOpen(!1), j.getState().setTitleFocused(!1), j.getState().setBodyFocused(!1), j.getState().setPreviewing(!1)));
+                                      ("ArrowUp" === e.key || "ArrowDown" === e.key) && e.stopPropagation(),
+                                          b &&
+                                              "Escape" === e.key &&
+                                              !j.getState().submitting &&
+                                              (null == s || s.blur(),
+                                              j.getState().setFormOpen(!1),
+                                              j.getState().setTitleFocused(!1),
+                                              j.getState().setBodyFocused(!1),
+                                              j.getState().setPreviewing(!1));
                                   },
-                                  autoCompletePosition: 'bottom'
-                              })
+                                  autoCompletePosition: "bottom",
+                              }),
                           }),
-                    (0, r.jsx)(f.pdY, { error: w })
-                ]
-            })
+                    (0, r.jsx)(f.pdY, { error: w }),
+                ],
+            }),
         });
     });
 function eh() {
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: er.previewModeIndicator,
         children: (0, r.jsx)(f.Text, {
-            variant: 'text-sm/normal',
-            color: 'interactive-normal',
-            children: en.intl.string(en.t['WE/cYm'])
-        })
+            variant: "text-sm/normal",
+            color: "interactive-normal",
+            children: en.intl.string(en.t["WE/cYm"]),
+        }),
     });
 }
 function eg(e) {
@@ -703,7 +789,7 @@ function ef(e) {
             let { appliedTags: t, name: n } = e;
             return {
                 appliedTags: t,
-                name: n
+                name: n,
             };
         }, c.X);
     return i.useMemo(() => e.hasFlag(et.zZ.REQUIRE_TAG) && 0 === n.size && r.length > 0 && t, [n, r, e, t]);
@@ -715,7 +801,7 @@ function ex() {
         }, c.X),
         t = (0, K.AF)(),
         n = i.useCallback(() => {
-            (t.getState().setPreviewing(!e), (0, q.nE)());
+            t.getState().setPreviewing(!e), (0, q.nE)();
         }, [e, t]);
     return (0, r.jsx)(f.ua7, {
         text: e ? en.intl.string(en.t.ojM1xM) : en.intl.string(en.t.SKNnqq),
@@ -730,24 +816,24 @@ function ex() {
                               f.kZF,
                               ei(
                                   {
-                                      size: 'md',
-                                      color: 'currentColor'
+                                      size: "md",
+                                      color: "currentColor",
                                   },
-                                  t
-                              )
+                                  t,
+                              ),
                           )
                         : (0, r.jsx)(
                               f.tEF,
                               ei(
                                   {
-                                      size: 'md',
-                                      color: 'currentColor'
+                                      size: "md",
+                                      color: "currentColor",
                                   },
-                                  t
-                              )
-                          )
-                })
-            )
+                                  t,
+                              ),
+                          ),
+                }),
+            ),
     });
 }
 let ep = i.memo(function (e) {
@@ -756,7 +842,7 @@ let ep = i.memo(function (e) {
             let { textAreaState: t, name: n } = e;
             return {
                 textAreaState: t,
-                name: n
+                name: n,
             };
         }, c.X),
         { rateLimitPerUser: o } = t,
@@ -768,38 +854,38 @@ let ep = i.memo(function (e) {
         p = i.useCallback(() => {
             x.getState().setBodyFocused(!1);
         }, [x]),
-        b = i.useMemo(() => '' !== s.trim() && '' !== a.textValue.trim(), [s, a.textValue]);
+        b = i.useMemo(() => "" !== s.trim() && "" !== a.textValue.trim(), [s, a.textValue]);
     return (
         i.useEffect(() => {
             b || x.getState().setPreviewing(!1);
         }, [b, x]),
-        (0, r.jsxs)('div', {
+        (0, r.jsxs)("div", {
             className: l,
             children: [
                 (0, r.jsx)(ev, { parentChannel: t }),
-                (0, r.jsx)('div', { className: er.tagsDivider }),
-                (0, r.jsxs)('div', {
+                (0, r.jsx)("div", { className: er.tagsDivider }),
+                (0, r.jsxs)("div", {
                     className: er.controlsContainer,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: er.controls,
                             children: [
-                                (0, r.jsxs)('div', {
+                                (0, r.jsxs)("div", {
                                     className: er.wrappedControls,
                                     children: [
                                         (0, r.jsx)(C.Z, {
                                             type: ea,
                                             textValue: a.textValue,
-                                            className: er.characterCount
+                                            className: er.characterCount,
                                         }),
                                         d &&
                                             (0, r.jsx)(Y.Z, {
                                                 rateLimitPerUser: o,
                                                 slowmodeCooldownGuess: u,
                                                 isBypassSlowmode: m,
-                                                leadingIcon: !0
-                                            })
-                                    ]
+                                                leadingIcon: !0,
+                                            }),
+                                    ],
                                 }),
                                 (0, r.jsx)(ed, { parentChannel: t }),
                                 b && (0, r.jsx)(ex, {}),
@@ -807,29 +893,29 @@ let ep = i.memo(function (e) {
                                     parentChannel: t,
                                     disableIfInvalid: !0,
                                     canCreatePost: n,
-                                    disabled: d && !m && u > 0
-                                })
-                            ]
+                                    disabled: d && !m && u > 0,
+                                }),
+                            ],
                         }),
                         (0, r.jsx)(
                             j.Z,
                             {
                                 type: ea,
                                 className: er.expressionPicker,
-                                onClick: p
+                                onClick: p,
                             },
-                            'expression'
-                        )
-                    ]
+                            "expression",
+                        ),
+                    ],
                 }),
                 g &&
                     (0, r.jsx)(f.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'text-danger',
+                        variant: "text-sm/normal",
+                        color: "text-danger",
                         className: er.requiredError,
-                        children: en.intl.string(en.t.xPfNQk)
-                    })
-            ]
+                        children: en.intl.string(en.t.xPfNQk),
+                    }),
+            ],
         })
     );
 });
@@ -839,13 +925,13 @@ function eb(e) {
         {
             submitting: s,
             name: o,
-            formOpen: d
+            formOpen: d,
         } = (0, K.xH)((e) => {
             let { submitting: t, name: n, formOpen: r } = e;
             return {
                 submitting: t,
                 name: n,
-                formOpen: r
+                formOpen: r,
             };
         }, c.X),
         u = eg(t),
@@ -859,29 +945,29 @@ function eb(e) {
                 size: g.zx.Sizes.SMALL,
                 className: er.submitButton,
                 innerClassName: er.submitButtonInner,
-                type: 'submit',
+                type: "submit",
                 submitting: s,
                 disabled: (l && !m) || i || !n,
                 children: [
                     (0, r.jsx)(f.kBi, {
-                        size: 'xs',
-                        color: 'currentColor',
-                        className: er.submitIcon
+                        size: "xs",
+                        color: "currentColor",
+                        className: er.submitIcon,
                     }),
                     (0, r.jsx)(f.Text, {
-                        variant: 'text-md/semibold',
-                        color: 'none',
-                        children: d ? en.intl.string(en.t.pIuQIy) : en.intl.string(en.t.TyAuoa)
-                    })
-                ]
-            })
+                        variant: "text-md/semibold",
+                        color: "none",
+                        children: d ? en.intl.string(en.t.pIuQIy) : en.intl.string(en.t.TyAuoa),
+                    }),
+                ],
+            }),
         );
     };
     return n
         ? h()
         : (0, r.jsx)(f.ua7, {
               text: en.intl.string(en.t.iyzwnJ),
-              children: (e) => h(e)
+              children: (e) => h(e),
           });
 }
 function ej() {
@@ -892,23 +978,23 @@ function ev(e) {
         {
             appliedTags: n,
             toggleAppliedTag: l,
-            setPopoutOpen: s
+            setPopoutOpen: s,
         } = (0, K.xH)((e) => {
             let { appliedTags: t, toggleAppliedTag: n, setPopoutOpen: r } = e;
             return {
                 appliedTags: t,
                 toggleAppliedTag: n,
-                setPopoutOpen: r
+                setPopoutOpen: r,
             };
         }, c.X),
         o = n.size >= $.Cn,
         h = (0, d.ZP)({
-            id: ''.concat(t.id, '-post-form-tags-navigator'),
+            id: "".concat(t.id, "-post-form-tags-navigator"),
             isEnabled: !0,
             wrap: !0,
             scrollToStart: ej,
             scrollToEnd: ej,
-            orientation: m.hy.HORIZONTAL
+            orientation: m.hy.HORIZONTAL,
         }),
         { containerRef: x, containerWidth: p } = (0, Q.Z)(),
         b = i.useRef(null),
@@ -934,16 +1020,16 @@ function ev(e) {
     }, [_, v, x, p]),
     0 === _.length)
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: er.tagsContainer,
               ref: x,
               children: [
                   (0, r.jsx)(f.lO_, {
-                      size: 'xs',
-                      color: 'currentColor',
-                      className: er.tagsIcon
+                      size: "xs",
+                      color: "currentColor",
+                      className: er.tagsIcon,
                   }),
-                  (0, r.jsx)('div', {
+                  (0, r.jsx)("div", {
                       className: er.tagList,
                       ref: b,
                       children: (0, r.jsx)(u.bG, {
@@ -961,46 +1047,53 @@ function ev(e) {
                                                       r,
                                                       i = {},
                                                       l = Object.keys(e);
-                                                  for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                                  for (r = 0; r < l.length; r++)
+                                                      (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                                   return i;
                                               })(e, t);
                                           if (Object.getOwnPropertySymbols) {
                                               var l = Object.getOwnPropertySymbols(e);
-                                              for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                                              for (r = 0; r < l.length; r++)
+                                                  (n = l[r]),
+                                                      !(t.indexOf(n) >= 0) &&
+                                                          Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                          (i[n] = e[n]);
                                           }
                                           return i;
-                                      })(e, ['ref']);
+                                      })(e, ["ref"]);
                                   return (0, r.jsx)(
-                                      'div',
+                                      "div",
                                       el(
                                           ei(
                                               {
                                                   className: er.tagListInner,
-                                                  ref: t
+                                                  ref: t,
                                               },
-                                              i
+                                              i,
                                           ),
                                           {
                                               children: _.map((e) =>
                                                   (0, r.jsx)(
                                                       J.Z,
                                                       {
-                                                          ariaLabel: en.intl.formatToPlainString(en.t.FSZVIS, { tagName: e.name }),
+                                                          ariaLabel: en.intl.formatToPlainString(en.t.FSZVIS, {
+                                                              tagName: e.name,
+                                                          }),
                                                           tag: e,
                                                           onClick: o && !n.has(e.id) ? void 0 : () => l(e.id),
                                                           disabled: !n.has(e.id) && n.size >= $.Cn,
                                                           selected: n.has(e.id),
-                                                          size: J.Z.Sizes.SMALL
+                                                          size: J.Z.Sizes.SMALL,
                                                       },
-                                                      e.id
-                                                  )
-                                              )
-                                          }
-                                      )
+                                                      e.id,
+                                                  ),
+                                              ),
+                                          },
+                                      ),
                                   );
-                              }
-                          })
-                      })
+                              },
+                          }),
+                      }),
                   }),
                   v &&
                       (0, r.jsx)(f.yRy, {
@@ -1014,11 +1107,11 @@ function ev(e) {
                                   appliedTags: n,
                                   maxTagsApplied: o,
                                   onSelectTag: l,
-                                  onClose: i
+                                  onClose: i,
                               });
                           },
-                          position: 'bottom',
-                          align: 'center',
+                          position: "bottom",
+                          align: "center",
                           children: (e) =>
                               (0, r.jsxs)(
                                   g.zx,
@@ -1029,41 +1122,41 @@ function ev(e) {
                                       innerClassName: er.tagsButtonInner,
                                       style: { left: y },
                                       look: g.zx.Looks.LINK,
-                                      'aria-label': en.intl.string(en.t.N5vP9P),
+                                      "aria-label": en.intl.string(en.t.N5vP9P),
                                       children: [
                                           en.intl.string(en.t.IkpM1d),
                                           (0, r.jsx)(f.CJ0, {
-                                              size: 'custom',
-                                              color: 'currentColor',
-                                              width: 16
-                                          })
-                                      ]
-                                  })
-                              )
+                                              size: "custom",
+                                              color: "currentColor",
+                                              width: 16,
+                                          }),
+                                      ],
+                                  }),
+                              ),
                       }),
                   (0, r.jsxs)(g.zx, {
                       size: g.zx.Sizes.TINY,
                       className: a()(er.tagsButton, er.tagsButtonPlaceholder),
                       innerClassName: er.tagsButtonInner,
                       look: g.zx.Looks.LINK,
-                      'aria-label': en.intl.string(en.t.N5vP9P),
+                      "aria-label": en.intl.string(en.t.N5vP9P),
                       children: [
                           en.intl.string(en.t.IkpM1d),
                           (0, r.jsx)(f.CJ0, {
-                              size: 'custom',
-                              color: 'currentColor',
-                              width: 16
-                          })
-                      ]
-                  })
-              ]
+                              size: "custom",
+                              color: "currentColor",
+                              width: 16,
+                          }),
+                      ],
+                  }),
+              ],
           });
 }
 function eC(e) {
     let { style: t, className: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: n,
         style: t,
-        children: (0, r.jsx)('div', { className: er.loader })
+        children: (0, r.jsx)("div", { className: er.loader }),
     });
 }

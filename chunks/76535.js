@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => c,
-    R: () => l
+    R: () => l,
 });
 var r = n(73800),
     i = n(442837),
@@ -16,7 +16,7 @@ function l(e, t) {
         }, [e, o, t]),
         {
             loading: o === s.M.FETCHING,
-            priceTiers: n
+            priceTiers: n,
         }
     );
 }
@@ -30,6 +30,6 @@ function c(e) {
         loaded: null != a && !n,
         subscriptionsSettings: a,
         loading: n,
-        error: i
+        error: i,
     };
 }

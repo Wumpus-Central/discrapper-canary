@@ -9,6 +9,6 @@ let s = a.forwardRef(function (e, t) {
         onScroll: n,
         className: l.scroller,
         ref: t,
-        children: a
+        children: a,
     });
 });

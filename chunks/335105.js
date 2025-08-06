@@ -8,22 +8,22 @@ var l = n(780384),
     a = n(859218),
     L = n(297100);
 let H = (t, e) => {
-        let n = (0, l.wj)(e) ? 'white' : 'black';
+        let n = (0, l.wj)(e) ? "white" : "black";
         switch (t) {
             case s.Yk.PREMIUM_UPDATED:
                 return (0, i.jsx)(a.Z, {
                     color: n,
-                    className: L.svgCopy
+                    className: L.svgCopy,
                 });
             case s.Yk.PREMIUM_ACTIVATED:
                 return (0, i.jsx)(C.Z, {
                     color: n,
-                    className: L.svgCopy
+                    className: L.svgCopy,
                 });
             case s.Yk.PREMIUM_PAYMENT_STARTED:
                 return (0, i.jsx)(r.Z, {
                     color: n,
-                    className: L.svgCopy
+                    className: L.svgCopy,
                 });
             default:
                 return null;
@@ -31,11 +31,11 @@ let H = (t, e) => {
     },
     c = (t) => {
         let { type: e, theme: n } = t;
-        return (0, i.jsx)('div', {
+        return (0, i.jsx)("div", {
             className: L.gradientOuterBorder,
-            children: (0, i.jsx)('div', {
+            children: (0, i.jsx)("div", {
                 className: L.gradientInnerBorder,
-                children: H(e, n)
-            })
+                children: H(e, n),
+            }),
         });
     };

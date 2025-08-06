@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => I,
-    h: () => v
+    h: () => v,
 });
 var r = n(73800),
     i = n(348327),
@@ -23,7 +23,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -33,15 +33,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -49,11 +49,11 @@ function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,7 +71,7 @@ function y(e, t) {
 let O = (0, l.trackMaker)({
     analyticEventConfigs: p.AnalyticEventConfigs,
     dispatcher: c.Z,
-    TRACK_ACTION_NAME: 'TRACK'
+    TRACK_ACTION_NAME: "TRACK",
 });
 function v(e) {
     var t, n;
@@ -93,15 +93,15 @@ function v(e) {
             E(
                 {
                     impression_type: o,
-                    location: (0, m.k$)()
+                    location: (0, m.k$)(),
                 },
                 (0, h.hH)(s),
                 (0, h.v_)(d.Z.getChannel(c)),
-                a
-            )
+                a,
+            ),
         );
     if (r) return void (0, m.dT)(null, null);
-    (null != i && null != o && ((0, p.debugLogEvent)(i, u), O(i, u)), (0, m.dT)(i, u));
+    null != i && null != o && ((0, p.debugLogEvent)(i, u), O(i, u)), (0, m.dT)(i, u);
 }
 function I(e) {
     let t =
@@ -109,7 +109,7 @@ function I(e) {
                 ? arguments[1]
                 : {
                       disableTrack: !1,
-                      trackOnInitialLoad: !1
+                      trackOnInitialLoad: !1,
                   },
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = r.useRef(void 0),
@@ -119,7 +119,7 @@ function I(e) {
             r && (i.current = e);
             let l = !o()(a.current, n);
             if ((l && (a.current = n), !r && !l)) return;
-            let c = y(E({}, e), { sequenceId: s()('impression_') });
+            let c = y(E({}, e), { sequenceId: s()("impression_") });
             return (
                 v(c, t.disableTrack),
                 () => {
@@ -127,10 +127,10 @@ function I(e) {
                 }
             );
         };
-    ((0, u.ZP)(() => {
+    (0, u.ZP)(() => {
         if (t.trackOnInitialLoad) return l();
     }),
         r.useEffect(() => {
             if (!t.trackOnInitialLoad) return l();
-        }));
+        });
 }

@@ -5,9 +5,9 @@ var r = n(940151),
     a = o && o.exports === i && r.process,
     s = (function () {
         try {
-            var e = o && o.require && o.require('util').types;
+            var e = o && o.require && o.require("util").types;
             if (e) return e;
-            return a && a.binding && a.binding('util');
+            return a && a.binding && a.binding("util");
         } catch (e) {}
     })();
 e.exports = s;

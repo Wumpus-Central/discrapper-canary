@@ -11,10 +11,10 @@ var i = n(255367),
 function m() {
     var e;
     let t = (0, r.e7)([l.Z], () => l.Z.getStatus()),
-        n = null != (e = (0, o.u5)(t)) ? e : '',
+        n = null != (e = (0, o.u5)(t)) ? e : "",
         m = t === c.Sk.INVISIBLE || t === c.Sk.OFFLINE,
-        p = (0, a.V)({ location: 'UserProfileAccountPopoutMenuItemStatusLabel' });
-    return (0, i.jsxs)('div', {
+        p = (0, a.V)({ location: "UserProfileAccountPopoutMenuItemStatusLabel" });
+    return (0, i.jsxs)("div", {
         className: u.container,
         children: [
             n,
@@ -30,35 +30,35 @@ function m() {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         i.forEach(function (t) {
                                             var i;
-                                            ((i = n[t]),
+                                            (i = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: i,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = i));
-                                        }));
+                                                    : (e[t] = i);
+                                        });
                                 }
                                 return e;
                             })(
                                 {
-                                    size: 'xs',
-                                    color: s.TVs.colors.STATUS_WARNING
+                                    size: "xs",
+                                    color: s.TVs.colors.STATUS_WARNING,
                                 },
-                                e
-                            )
-                        )
-                })
-        ]
+                                e,
+                            ),
+                        ),
+                }),
+        ],
     });
 }

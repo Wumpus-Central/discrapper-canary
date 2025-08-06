@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+n.d(t, { Z: () => p }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -10,56 +10,56 @@ var i = n(255367),
     u = n(512072);
 let m = (e) => {
         let { setTab: t } = e;
-        return (0, i.jsxs)('div', {
+        return (0, i.jsxs)("div", {
             children: [
                 (0, i.jsx)(o.P3F, {
                     onClick: () => {
                         t(1);
                     },
-                    children: (0, i.jsx)('div', {
+                    children: (0, i.jsx)("div", {
                         className: a()(u.banner, u.pfxBanner),
                         children: (0, i.jsx)(l.xv, {
-                            variant: 'text-md/bold',
-                            color: 'always-white',
-                            children: 'Profile Effects'
-                        })
-                    })
+                            variant: "text-md/bold",
+                            color: "always-white",
+                            children: "Profile Effects",
+                        }),
+                    }),
                 }),
                 (0, i.jsx)(o.P3F, {
                     onClick: () => {
                         t(2);
                     },
-                    children: (0, i.jsx)('div', {
+                    children: (0, i.jsx)("div", {
                         className: a()(u.banner, u.nameplateBanner),
                         children: (0, i.jsx)(l.xv, {
-                            variant: 'text-md/bold',
-                            color: 'always-white',
-                            children: 'Nameplates'
-                        })
-                    })
-                })
-            ]
+                            variant: "text-md/bold",
+                            color: "always-white",
+                            children: "Nameplates",
+                        }),
+                    }),
+                }),
+            ],
         });
     },
     p = () => {
         let [e, t] = r.useState(0);
-        return (0, i.jsxs)('div', {
+        return (0, i.jsxs)("div", {
             className: u.wrapper,
             children: [
-                (0, i.jsxs)('div', {
+                (0, i.jsxs)("div", {
                     className: u.nav,
                     children: [
                         (0, i.jsx)(l.X6, {
-                            variant: 'heading-xxl/medium',
-                            children: 'ShopKeeper'
+                            variant: "heading-xxl/medium",
+                            children: "ShopKeeper",
                         }),
                         0 !== e &&
                             (0, i.jsx)(o.zxk, {
-                                variant: 'primary',
+                                variant: "primary",
                                 onClick: () => t(0),
-                                text: 'Back'
-                            })
-                    ]
+                                text: "Back",
+                            }),
+                    ],
                 }),
                 (() => {
                     switch (e) {
@@ -70,7 +70,7 @@ let m = (e) => {
                         default:
                             return (0, i.jsx)(m, { setTab: t });
                     }
-                })()
-            ]
+                })(),
+            ],
         });
     };

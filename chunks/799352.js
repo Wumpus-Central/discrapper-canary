@@ -7,7 +7,7 @@ function a(e) {
         (0, i.g6)(e),
         r.tn.post({
             url: o.ANM.CHANNEL_BLOCKED_USER_WARNING_ACK(e),
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     );
 }

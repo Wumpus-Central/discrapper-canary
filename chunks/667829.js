@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => U }), n(388685), n(539854), n(35282));
+n.d(t, { Z: () => U }), n(388685), n(539854), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -35,7 +35,7 @@ function D(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -45,15 +45,15 @@ function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 D(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -61,11 +61,11 @@ function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,7 +80,7 @@ function M(e, t) {
         e
     );
 }
-new E.Z('ChannelEditor.tsx');
+new E.Z("ChannelEditor.tsx");
 let k = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
@@ -88,7 +88,14 @@ let k = function () {
 class U extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
-        let o = null == (i = this.ref) || null == (r = i.current) || null == (n = r.getSlateEditor) || null == (t = n.call(r)) || null == (e = t.windowContext) ? void 0 : e.renderWindow;
+        let o =
+            null == (i = this.ref) ||
+            null == (r = i.current) ||
+            null == (n = r.getSlateEditor) ||
+            null == (t = n.call(r)) ||
+            null == (e = t.windowContext)
+                ? void 0
+                : e.renderWindow;
         if (null == this._cachedEditorWindow || this._cachedEditorWindow !== o) {
             if (null != this._cachedEditorWindow && null == o) return null;
             this._cachedEditorWindow = null != o ? o : window;
@@ -96,18 +103,29 @@ class U extends i.Component {
         return this._cachedEditorWindow;
     }
     componentDidMount() {
-        (this.props.focused && requestAnimationFrame(() => this.focus()), document.addEventListener('selectionchange', this.handleSelectionChange), window.addEventListener('beforeunload', this.handleBeforeUnload), (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), j)));
+        this.props.focused && requestAnimationFrame(() => this.focus()),
+            document.addEventListener("selectionchange", this.handleSelectionChange),
+            window.addEventListener("beforeunload", this.handleBeforeUnload),
+            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), j));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            ((e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, I.JM)(e)));
+            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: "plain" })),
+                null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, I.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
         var e, t;
-        (this.saveCurrentText(), null == (e = (t = this)._unsubscribe) || e.call(t), window.removeEventListener('beforeunload', this.handleBeforeUnload), document.removeEventListener('selectionchange', this.handleSelectionChange), (this._focusBlurQueue = null), (this._unsubscribe = null), (this._cachedEditorWindow = null), null != this._initTimeoutId && clearTimeout(this._initTimeoutId));
+        this.saveCurrentText(),
+            null == (e = (t = this)._unsubscribe) || e.call(t),
+            window.removeEventListener("beforeunload", this.handleBeforeUnload),
+            document.removeEventListener("selectionchange", this.handleSelectionChange),
+            (this._focusBlurQueue = null),
+            (this._unsubscribe = null),
+            (this._cachedEditorWindow = null),
+            null != this._initTimeoutId && clearTimeout(this._initTimeoutId);
     }
     blur() {
         let e = this.ref.current;
@@ -124,30 +142,33 @@ class U extends i.Component {
             null != r &&
             (r.insertEmoji({
                 emoji: t,
-                addSpace: n
+                addSpace: n,
             }),
             n && this.focus());
     }
     insertGIF(e) {
         let { textValue: t } = this.props,
             n = this.ref.current;
-        null != e && null != n && (t.endsWith(' ') || n.insertText(' ', void 0, !1), n.insertText(e.url));
+        null != e && null != n && (t.endsWith(" ") || n.insertText(" ", void 0, !1), n.insertText(e.url));
     }
     insertSound(e) {
         let { textValue: t } = this.props,
             n = this.ref.current;
-        null != e && null != n && (t.endsWith(' ') || n.insertText(' ', void 0, !1), n.insertText('<sound:'.concat(e.guildId, ':').concat(e.soundId, '>'), void 0, !0));
+        null != e &&
+            null != n &&
+            (t.endsWith(" ") || n.insertText(" ", void 0, !1),
+            n.insertText("<sound:".concat(e.guildId, ":").concat(e.soundId, ">"), void 0, !0));
     }
     handleOuterClick() {
         this.focus();
     }
     clearValue() {
         let { channel: e, type: t } = this.props;
-        (this.setState({
+        this.setState({
             focused: !0,
-            submitting: !1
+            submitting: !1,
         }),
-            _.Z.saveDraft(e.id, '', t.drafts.type));
+            _.Z.saveDraft(e.id, "", t.drafts.type);
     }
     getCurrentWord() {
         var e;
@@ -156,7 +177,7 @@ class U extends i.Component {
             ? e
             : {
                   word: null,
-                  isAtStart: !1
+                  isAtStart: !1,
               };
     }
     insertAutocomplete(e, t, n) {
@@ -210,13 +231,35 @@ class U extends i.Component {
     }
     render() {
         var e, t, n, i, o, s;
-        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, useSlate: E, spellcheckEnabled: b, useNewSlashCommands: O, canOnlyUseTextCommands: T, className: S, id: C, required: P, maxCharacterCount: D, allowNewLines: x, 'aria-describedby': k, 'aria-labelledby': j, accessibilityLabel: U } = this.props,
+        let {
+                textValue: l,
+                richValue: c,
+                disabled: u,
+                onChange: d,
+                onKeyDown: _,
+                onResize: p,
+                onSubmit: h,
+                channel: m,
+                type: g,
+                useSlate: E,
+                spellcheckEnabled: b,
+                useNewSlashCommands: O,
+                canOnlyUseTextCommands: T,
+                className: S,
+                id: C,
+                required: P,
+                maxCharacterCount: D,
+                allowNewLines: x,
+                "aria-describedby": k,
+                "aria-labelledby": j,
+                accessibilityLabel: U,
+            } = this.props,
             { submitting: G, popup: B } = this.state,
             Z = {
                 channel: m,
                 className: a()(S, w.textArea, {
                     [w.textAreaSlate]: E,
-                    [w.textAreaDisabled]: u || G
+                    [w.textAreaDisabled]: u || G,
                 }),
                 id: C,
                 placeholder: this.getPlaceholder(),
@@ -242,62 +285,64 @@ class U extends i.Component {
                     [w.textAreaForPostCreation]: g === v.Ie.CREATE_FORUM_POST,
                     [w.textAreaCustomGift]: g === v.Ie.CUSTOM_GIFT,
                     [w.textAreaForUserProfile]: g === v.Ie.USER_PROFILE,
-                    [w.textAreaForOverlayInlineReply]: g === v.Ie.OVERLAY_INLINE_REPLY
+                    [w.textAreaForOverlayInlineReply]: g === v.Ie.OVERLAY_INLINE_REPLY,
                 }),
                 spellcheckEnabled: b,
                 useNewSlashCommands: O,
                 disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
-                'aria-controls': null != (o = B.id) ? o : void 0,
-                'aria-haspopup': 'listbox',
-                'aria-expanded': null !== B.id || void 0,
-                'aria-activedescendant': null != (s = B.activeDescendant) ? s : void 0,
-                'aria-invalid': l.length > D,
-                'aria-describedby': k,
-                'aria-labelledby': j,
-                'aria-autocomplete': 'list'
+                "aria-controls": null != (o = B.id) ? o : void 0,
+                "aria-haspopup": "listbox",
+                "aria-expanded": null !== B.id || void 0,
+                "aria-activedescendant": null != (s = B.activeDescendant) ? s : void 0,
+                "aria-invalid": l.length > D,
+                "aria-describedby": k,
+                "aria-labelledby": j,
+                "aria-autocomplete": "list",
             },
             F = E
                 ? (0, r.jsx)(
                       N.Z,
                       M(L({ ref: this.ref }, Z), {
                           type: g,
-                          value: u ? (0, I.JM)('') : c,
+                          value: u ? (0, I.JM)("") : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
-                          canOnlyUseTextCommands: T
-                      })
+                          canOnlyUseTextCommands: T,
+                      }),
                   )
-                : (0, r.jsx)(A.Z, M(L({ ref: this.ref }, Z), { value: u ? '' : l }));
+                : (0, r.jsx)(A.Z, M(L({ ref: this.ref }, Z), { value: u ? "" : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(y.d9, {
                     event: R.CkL.INSERT_TEXT,
-                    handler: this.handleInsertText
+                    handler: this.handleInsertText,
                 }),
                 (0, r.jsx)(y.d9, {
                     event: R.CkL.CLEAR_TEXT,
-                    handler: this.handleClearText
+                    handler: this.handleClearText,
                 }),
-                F
-            ]
+                F,
+            ],
         });
     }
     constructor(e) {
         var t;
-        (super(e),
+        super(e),
             (t = this),
-            D(this, 'ref', i.createRef()),
-            D(this, '_focusBlurQueue', Promise.resolve()),
-            D(this, '_unsubscribe', void 0),
-            D(this, '_initTimeoutId', null),
-            D(this, '_cachedEditorWindow', null),
-            D(this, 'handleSelectionChange', () => {
+            D(this, "ref", i.createRef()),
+            D(this, "_focusBlurQueue", Promise.resolve()),
+            D(this, "_unsubscribe", void 0),
+            D(this, "_initTimeoutId", null),
+            D(this, "_cachedEditorWindow", null),
+            D(this, "handleSelectionChange", () => {
                 if (this.props.focused) {
                     var e, t, n;
-                    this.props.onSelectionChanged(null == (t = (n = document).getSelection) || null == (e = t.call(n)) ? void 0 : e.toString());
+                    this.props.onSelectionChanged(
+                        null == (t = (n = document).getSelection) || null == (e = t.call(n)) ? void 0 : e.toString(),
+                    );
                 }
             }),
-            D(this, 'focus', () => {
+            D(this, "focus", () => {
                 var e;
                 null == (e = this._focusBlurQueue) ||
                     e.then(() => {
@@ -307,58 +352,65 @@ class U extends i.Component {
                         });
                     });
             }),
-            D(this, 'saveCurrentText', function () {
+            D(this, "saveCurrentText", function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     { type: n, channel: r } = t.props;
                 n.drafts.autoSave && (e && t.saveCurrentTextThrottled.cancel(), t.handleSaveCurrentText(r.id));
             }),
-            D(this, 'handleBeforeUnload', () => this.saveCurrentText()),
-            D(this, 'saveCurrentTextThrottled', l().throttle(this.saveCurrentText.bind(this, !1), 500)),
-            D(this, 'handleEnter', (e) => {
+            D(this, "handleBeforeUnload", () => this.saveCurrentText()),
+            D(this, "saveCurrentTextThrottled", l().throttle(this.saveCurrentText.bind(this, !1), 500)),
+            D(this, "handleEnter", (e) => {
                 var t, n;
                 return null == (t = (n = this.props).onEnter) ? void 0 : t.call(n, e);
             }),
-            D(this, 'handleTab', () => {
+            D(this, "handleTab", () => {
                 var e, t;
                 return null == (e = (t = this.props).onTab) ? void 0 : e.call(t);
             }),
-            D(this, 'handleMoveSelection', (e) => {
+            D(this, "handleMoveSelection", (e) => {
                 var t, n;
                 return null == (t = (n = this.props).onMoveSelection) ? void 0 : t.call(n, e);
             }),
-            D(this, 'maybeShowAutocomplete', () => {
+            D(this, "maybeShowAutocomplete", () => {
                 var e, t;
                 return null == (e = (t = this.props).onMaybeShowAutocomplete) ? void 0 : e.call(t);
             }),
-            D(this, 'hideAutocomplete', () => {
+            D(this, "hideAutocomplete", () => {
                 var e, t;
                 return null == (e = (t = this.props).onHideAutocomplete) ? void 0 : e.call(t);
             }),
-            D(this, 'handleSaveCurrentText', (e) => {
+            D(this, "handleSaveCurrentText", (e) => {
                 _.Z.saveDraft(e, this.props.textValue, this.props.type.drafts.type);
             }),
-            D(this, 'handleClearText', () => {
+            D(this, "handleClearText", () => {
                 var e, t;
-                null == (e = (t = this.props).onChange) || e.call(t, null, '', (0, I.JM)(''));
+                null == (e = (t = this.props).onChange) || e.call(t, null, "", (0, I.JM)(""));
             }),
-            D(this, 'handleInsertText', (e) => {
+            D(this, "handleInsertText", (e) => {
                 let { plainText: t, rawText: n, addSpace: r = !1 } = e;
                 this.props.disabled || (this.appendText(t, n, r), this.focus());
             }),
-            D(this, 'handleFocus', (e) => {
+            D(this, "handleFocus", (e) => {
                 let { onFocus: t } = this.props,
                     { focused: n } = this.state;
-                (null == t || t(e), n || this.setState({ focused: !0 }));
+                null == t || t(e), n || this.setState({ focused: !0 });
             }),
-            D(this, 'handleBlur', (e) => {
+            D(this, "handleBlur", (e) => {
                 let { onBlur: t } = this.props,
                     { focused: n } = this.state;
-                (null == t || t(e), n && this.setState({ focused: !1 }));
+                null == t || t(e), n && this.setState({ focused: !1 });
             }),
-            D(this, 'handlePaste', (e) => {
+            D(this, "handlePaste", (e) => {
                 var t, n, r;
                 let i = null == (n = e.target) || null == (t = n.ownerDocument) ? void 0 : t.defaultView,
-                    { channel: o, canPasteFiles: a, uploadPromptCharacterCount: s, promptToUpload: l, maxCharacterCount: c, type: u } = this.props,
+                    {
+                        channel: o,
+                        canPasteFiles: a,
+                        uploadPromptCharacterCount: s,
+                        promptToUpload: l,
+                        maxCharacterCount: c,
+                        type: u,
+                    } = this.props,
                     d = null != i ? (0, S.im)(i) : null,
                     f = (0, S.Mo)(),
                     _ = null != (r = null != d ? d : f) ? r : o,
@@ -371,7 +423,7 @@ class U extends i.Component {
                             return l(e, E, u.drafts.type, {
                                 requireConfirm: !0,
                                 showLargeMessageDialog: t,
-                                origin: 'clipboard'
+                                origin: "clipboard",
                             });
                         let o = null != (n = u.drafts.commandType) ? n : u.drafts.type,
                             a = null,
@@ -383,7 +435,8 @@ class U extends i.Component {
                                     : null == (r = i.options)
                                       ? void 0
                                       : r.find((e) => {
-                                            if (e.type === h.jw.ATTACHMENT) return null == b.Z.getUpload(E.id, e.name, o);
+                                            if (e.type === h.jw.ATTACHMENT)
+                                                return null == b.Z.getUpload(E.id, e.name, o);
                                         })) &&
                             p.Z.setFile({
                                 channelId: E.id,
@@ -392,20 +445,20 @@ class U extends i.Component {
                                 file: {
                                     id: a.name,
                                     platform: m.ow.WEB,
-                                    file: e[0]
-                                }
+                                    file: e[0],
+                                },
                             });
                     },
                     O = null != s ? s : c,
                     { files: v } = G(e.clipboardData, u.uploadLongMessages ? O : null);
                 return (
                     k(
-                        'onPaste',
+                        "onPaste",
                         [...e.clipboardData.items].map((e) => {
-                            if ('file' !== e.kind)
+                            if ("file" !== e.kind)
                                 return {
                                     kind: e.kind,
-                                    type: e.type
+                                    type: e.type,
                                 };
                             {
                                 let t = e.getAsFile();
@@ -413,12 +466,13 @@ class U extends i.Component {
                                     kind: e.kind,
                                     type: e.type,
                                     name: null == t ? void 0 : t.name,
-                                    path: null == t ? void 0 : t.path
+                                    path: null == t ? void 0 : t.path,
                                 };
                             }
-                        })
+                        }),
                     ),
-                    0 !== v.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), y(v), this.focus(), !0)
+                    0 !== v.length &&
+                        (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), y(v), this.focus(), !0)
                 );
             }),
             (this._unsubscribe = T.p8.subscribe((e) => {
@@ -429,8 +483,8 @@ class U extends i.Component {
             (this.state = {
                 focused: !1,
                 submitting: !1,
-                popup: T.p8.getState()
-            }));
+                popup: T.p8.getState(),
+            });
     }
 }
 function G(e, t) {
@@ -439,14 +493,16 @@ function G(e, t) {
         i = null,
         o = null;
     for (let t of e.items)
-        if ('file' === t.kind) {
+        if ("file" === t.kind) {
             let e = t.getAsFile();
             if (null == e) continue;
             null != e.path && e.path.length > 0 ? n.push(e) : r.push(e);
-        } else 'string' === t.kind && ('text/plain' === t.type && null == i ? (i = t) : 'text/html' === t.type && null == o && (o = t));
+        } else
+            "string" === t.kind &&
+                ("text/plain" === t.type && null == i ? (i = t) : "text/html" === t.type && null == o && (o = t));
     if (n.length > 0) return { files: n };
     if (r.length > 0) {
-        if (1 === r.length && 'image/png' === r[0].type && null != o) {
+        if (1 === r.length && "image/png" === r[0].type && null != o) {
             var a;
             let t = r[0],
                 n = null != (a = B(e.getData(o.type))) ? a : t.name;
@@ -457,23 +513,23 @@ function G(e, t) {
     if (null != i && null != t) {
         let n = e.getData(i.type);
         if (n.length > t) {
-            let e = new Blob([n], { type: 'text/plain' });
+            let e = new Blob([n], { type: "text/plain" });
             return {
-                files: [(0, O.dp)(e, 'message.txt', 'text/plain')],
-                convertedStringToFile: !0
+                files: [(0, O.dp)(e, "message.txt", "text/plain")],
+                convertedStringToFile: !0,
             };
         }
     }
     return { files: [] };
 }
 function B(e) {
-    let t = new DOMParser().parseFromString(e, 'text/html').querySelector('img');
+    let t = new DOMParser().parseFromString(e, "text/html").querySelector("img");
     if (null != t) {
         let e;
         try {
             let { pathname: n } = d.parse(t.src);
-            null != n && n.length > 0 && (e = u().basename(n).split('.')[0]);
+            null != n && n.length > 0 && (e = u().basename(n).split(".")[0]);
         } catch (e) {}
-        if (null != e && e.length > 0) return ''.concat(e, '.png');
+        if (null != e && e.length > 0) return "".concat(e, ".png");
     }
 }

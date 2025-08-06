@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => o }), n(539854), n(642613));
+n.d(t, { Z: () => o }), n(539854), n(642613);
 var r = n(442837),
     i = n(977258),
     l = n(958832),
@@ -7,7 +7,9 @@ var r = n(442837),
 function o(e) {
     return (0, r.Wu)([l.Z, a.Z], () => {
         var t;
-        let n = (null != (t = l.Z.getTopChannelIds(e.id)) ? t : []).map((e) => a.Z.getChannel(e)).filter((t) => null == t || t.id !== e.rulesChannelId),
+        let n = (null != (t = l.Z.getTopChannelIds(e.id)) ? t : [])
+                .map((e) => a.Z.getChannel(e))
+                .filter((t) => null == t || t.id !== e.rulesChannelId),
             r = [],
             o = 0;
         return (

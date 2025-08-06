@@ -1,7 +1,7 @@
-(n.d(t, { Z: () => a }), n(388685), n(539854));
+n.d(t, { Z: () => a }), n(388685), n(539854);
 var r = n(341702),
     i = n(887490);
-let o = 'line';
+let o = "line";
 function a(e, t) {
     if (i.bN.areStylesDisabled(e)) return [];
     let [n, a] = t,
@@ -14,7 +14,7 @@ function a(e, t) {
         s.push({
             hljsTypes: t.types,
             anchor: (0, r.t)(e, a, o, t.start),
-            focus: (0, r.t)(e, a, o, t.end)
+            focus: (0, r.t)(e, a, o, t.end),
         });
     }
     return s;

@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,22 +20,24 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let c = {
     getActiveErrors: (e) => {
         let { activeStreams: t } = e;
-        return t.filter((e) => e.state === a.jm8.RECONNECTING).map((e) => l({ type: i.u.STREAM_RECONNECTING }, (0, o.rT)((0, r.V9)(e))));
+        return t
+            .filter((e) => e.state === a.jm8.RECONNECTING)
+            .map((e) => l({ type: i.u.STREAM_RECONNECTING }, (0, o.rT)((0, r.V9)(e))));
     },
-    makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
+    makeErrorContextKey: (e) => "".concat(e.streamKey, ":").concat(e.mediaSessionId),
 };

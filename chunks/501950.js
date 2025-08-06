@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     C1: () => s,
     HS: () => c,
     Hg: () => l,
-    l0: () => u
+    l0: () => u,
 }),
     n(35282),
     n(704826),
-    n(290780));
+    n(290780);
 var r = n(264344),
     i = n.n(r),
     o = n(992774),
@@ -17,7 +17,9 @@ function s(e, t) {
         o = t.map((t, n) => {
             let { guid: i, guid: o, name: s, name: l, index: c, facing: u, hardwareId: d, containerId: f } = t;
             return (
-                /^default/.test(s) ? ((r = !0), (i = a.w5), (s = s.replace('default', 'Default'))) : (i = null != i && '' !== i ? i : s),
+                /^default/.test(s)
+                    ? ((r = !0), (i = a.w5), (s = s.replace("default", "Default")))
+                    : (i = null != i && "" !== i ? i : s),
                 null != c && (n = c),
                 {
                     id: i,
@@ -28,7 +30,7 @@ function s(e, t) {
                     originalId: o,
                     facing: u,
                     hardwareId: d,
-                    containerId: f
+                    containerId: f,
                 }
             );
         });
@@ -41,7 +43,7 @@ function s(e, t) {
                 id: a.w5,
                 type: e,
                 index: -1,
-                name: 'Default'
+                name: "Default",
             }),
         o
     );

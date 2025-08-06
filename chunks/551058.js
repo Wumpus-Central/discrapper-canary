@@ -7,39 +7,39 @@ var r = n(255367),
     l = n(52565);
 let c = 16,
     u = i.memo(function (e) {
-        let { children: t, trailing: n, className: i, icon: o, isCollapsed: u, onClick: d, 'aria-label': f } = e;
-        return (0, r.jsxs)('div', {
+        let { children: t, trailing: n, className: i, icon: o, isCollapsed: u, onClick: d, "aria-label": f } = e;
+        return (0, r.jsxs)("div", {
             className: a()(l.wrapper, i),
             children: [
                 (0, r.jsxs)(s.P3F, {
                     onClick: d,
                     onKeyDown: (e) => e.stopPropagation(),
                     className: a()(l.header, { [l.interactive]: null != u }),
-                    'aria-expanded': null != u ? !u : void 0,
-                    'aria-label': f,
+                    "aria-expanded": null != u ? !u : void 0,
+                    "aria-label": f,
                     children: [
                         null != o &&
-                            (0, r.jsx)('div', {
-                                'aria-hidden': !0,
+                            (0, r.jsx)("div", {
+                                "aria-hidden": !0,
                                 className: l.headerIcon,
-                                children: o
+                                children: o,
                             }),
-                        (0, r.jsx)('span', {
+                        (0, r.jsx)("span", {
                             className: l.headerLabel,
-                            children: t
+                            children: t,
                         }),
                         null != u
                             ? (0, r.jsx)(s.CJ0, {
-                                  size: 'custom',
-                                  color: 'currentColor',
+                                  size: "custom",
+                                  color: "currentColor",
                                   className: a()(l.headerCollapseIcon, { [l.headerCollapseIconCollapsed]: u }),
                                   height: c,
-                                  width: c
+                                  width: c,
                               })
-                            : null
-                    ]
+                            : null,
+                    ],
                 }),
-                n
-            ]
+                n,
+            ],
         });
     });

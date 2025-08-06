@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -12,11 +12,11 @@ var r = n(255367),
     m = n(464121);
 let f = [0, 0.5, 1],
     g = {
-        'layers[1].shapes[1].g.k.k': [0, 0.522, 0.278, 0.776, 0.5, 0.522, 0.278, 0.776, 1, 0.522, 0.278, 0.776],
-        'layers[2].shapes[1].g.k.k': [0, 0.714, 0.271, 0.757, 0.5, 0.714, 0.271, 0.757, 1, 0.714, 0.271, 0.757]
+        "layers[1].shapes[1].g.k.k": [0, 0.522, 0.278, 0.776, 0.5, 0.522, 0.278, 0.776, 1, 0.522, 0.278, 0.776],
+        "layers[2].shapes[1].g.k.k": [0, 0.714, 0.271, 0.757, 0.5, 0.714, 0.271, 0.757, 1, 0.714, 0.271, 0.757],
     };
 async function x(e, t) {
-    let r = (await n.e('30166').then(n.t.bind(n, 235630, 19))).default;
+    let r = (await n.e("30166").then(n.t.bind(n, 235630, 19))).default;
     return (
         (function (e, t, n) {
             for (let r in t) {
@@ -44,7 +44,7 @@ function h(e) {
                 t = {
                     r: e.r / 255,
                     g: e.g / 255,
-                    b: e.b / 255
+                    b: e.b / 255,
                 },
                 n = f.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
             return x(i.id, n);
@@ -53,17 +53,23 @@ function h(e) {
         C = !l && g;
     s.useEffect(() => {
         var e, t, n, r;
-        g ? C && (null == (r = h.current) || null == (n = r.animation) || n.play()) : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
+        g
+            ? C && (null == (r = h.current) || null == (n = r.animation) || n.play())
+            : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
     }, [C, g]);
     let y = s.useCallback(() => {
         j(!0);
     }, []);
     return null == _ || v
-        ? (0, r.jsx)('div', {
+        ? (0, r.jsx)("div", {
               className: m.backgroundFallback,
-              style: { backgroundImage: 'linear-gradient(90deg, '.concat(i.config.colors.primary, ', ').concat(i.config.colors.secondary, ')') }
+              style: {
+                  backgroundImage: "linear-gradient(90deg, "
+                      .concat(i.config.colors.primary, ", ")
+                      .concat(i.config.colors.secondary, ")"),
+              },
           })
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: a()(m.lottieAnimationBackgroundWrapper, o),
               children: (0, r.jsx)(
                   u.Fmz,
@@ -74,9 +80,9 @@ function h(e) {
                       shouldAnimate: !b && C,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
                       loop: 0,
-                      rendererSettings: { preserveAspectRatio: 'none' }
+                      rendererSettings: { preserveAspectRatio: "none" },
                   },
-                  i.config.colors.primary
-              )
+                  i.config.colors.primary,
+              ),
           });
 }

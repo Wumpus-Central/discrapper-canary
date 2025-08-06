@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => A }), n(388685), n(415506));
+n.d(t, { Z: () => A }), n(388685), n(415506);
 var i,
     o = n(442837),
     a = n(570140),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,10 +29,13 @@ function m(e) {
         n = e.sku.id,
         r = d[t],
         i = l.Z.createFromServer(e);
-    (null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion()) || (!1 === e.published ? (null == _[n] && (_[n] = new Set()), _[n].add(t)) : (p[n] = t), (d[t] = i), h.delete(e.sku.id));
+    (null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion()) ||
+        (!1 === e.published ? (null == _[n] && (_[n] = new Set()), _[n].add(t)) : (p[n] = t),
+        (d[t] = i),
+        h.delete(e.sku.id));
 }
 function g(e, t) {
-    return ''.concat(e, ':').concat(t);
+    return "".concat(e, ":").concat(t);
 }
 function E(e) {
     let { storeListings: t } = e;
@@ -42,7 +45,7 @@ function b(e) {
     let { storeListing: t, channelId: n } = e;
     if (null != n) {
         let e = l.Z.createFromServer(t);
-        ((f[g(n, e.skuId)] = e), (p[e.skuId] = e.id));
+        (f[g(n, e.skuId)] = e), (p[e.skuId] = e.id);
     } else m(t);
 }
 function y(e) {
@@ -59,15 +62,15 @@ function v(e) {
     h.delete(t);
 }
 function I() {
-    ((d = {}), (p = {}), (_ = {}), (f = {}), (h = new Set()));
+    (d = {}), (p = {}), (_ = {}), (f = {}), (h = new Set());
 }
 function T() {
     if (r === s.default.locale) return !1;
-    (I(), (r = s.default.locale));
+    I(), (r = s.default.locale);
 }
 class S extends (i = o.ZP.Store) {
     initialize() {
-        (this.waitFor(s.default), this.syncWith([s.default], T), (r = s.default.locale));
+        this.waitFor(s.default), this.syncWith([s.default], T), (r = s.default.locale);
     }
     get(e) {
         return d[e];
@@ -98,13 +101,13 @@ class S extends (i = o.ZP.Store) {
         }
         if (null != t) return this.get(t);
         if (null != r) {
-            if (null == n) throw Error('getStoreListing with channel expects a skuId');
+            if (null == n) throw Error("getStoreListing with channel expects a skuId");
             return this.getForChannel(r, n);
         }
         return null != n ? this.getForSKU(n) : null;
     }
 }
-u(S, 'displayName', 'StoreListingStore');
+u(S, "displayName", "StoreListingStore");
 let A = new S(a.Z, {
     STORE_LISTINGS_FETCH_START: O,
     STORE_LISTINGS_FETCH_FAIL: v,
@@ -112,5 +115,5 @@ let A = new S(a.Z, {
     STORE_LISTING_FETCH_SUCCESS: b,
     USER_SETTINGS_PROTO_UPDATE: T,
     APPLICATION_STORE_CLEAR_DATA: I,
-    GIFT_CODE_RESOLVE_SUCCESS: y
+    GIFT_CODE_RESOLVE_SUCCESS: y,
 });

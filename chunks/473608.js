@@ -1,4 +1,4 @@
-(n.d(t, { O: () => N }), n(388685), n(314940));
+n.d(t, { O: () => N }), n(388685), n(314940);
 var r = n(255367),
     i = n(73800),
     o = n(512722),
@@ -25,7 +25,7 @@ function v(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -35,15 +35,15 @@ function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 v(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -54,20 +54,20 @@ let T = (e) => {
                 user: i,
                 onlyAnimateOnHover: !0,
                 avatarDecorationOverride: t,
-                size: (0, d.y9)(u.EFr.SIZE_40)
+                size: (0, d.y9)(u.EFr.SIZE_40),
             });
         return null == t
             ? n
             : (0, r.jsx)(
-                  'img',
+                  "img",
                   I(
                       {
                           src: o,
                           alt: t.label,
-                          className: y.avatarDecoration
+                          className: y.avatarDecoration,
                       },
-                      a
-                  )
+                      a,
+                  ),
               );
     },
     S = (e) => {
@@ -75,21 +75,25 @@ let T = (e) => {
         let { profileEffect: n, fallbackLabel: i } = e,
             o = (0, h.V)(null == n ? void 0 : n.id);
         if (null == o) return i;
-        let { accessibilityLabel: a, thumbnailPreviewSrc: s, title: l } = null != (t = null == o ? void 0 : o.config) ? t : {};
-        return (0, r.jsxs)('div', {
+        let {
+            accessibilityLabel: a,
+            thumbnailPreviewSrc: s,
+            title: l,
+        } = null != (t = null == o ? void 0 : o.config) ? t : {};
+        return (0, r.jsxs)("div", {
             className: y.profileEffectContainer,
             children: [
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     src: O,
                     alt: a,
-                    className: y.profileEffectBackground
+                    className: y.profileEffectBackground,
                 }),
-                (0, r.jsx)('img', {
+                (0, r.jsx)("img", {
                     className: y.profileEffect,
                     src: s,
-                    alt: l
-                })
-            ]
+                    alt: l,
+                }),
+            ],
         });
     },
     A = (e) => {
@@ -99,15 +103,15 @@ let T = (e) => {
             l = i.useCallback(() => a(!1), []);
         return null == t
             ? n
-            : (0, r.jsx)('div', {
+            : (0, r.jsx)("div", {
                   className: y.nameplateContainer,
                   onMouseEnter: s,
                   onMouseLeave: l,
                   children: (0, r.jsx)(p.Z, {
                       nameplate: (0, E.EU)(t),
                       hovered: o,
-                      placement: _.i.MINI_PREVIEW
-                  })
+                      placement: _.i.MINI_PREVIEW,
+                  }),
               });
     },
     N = (e) => {
@@ -119,39 +123,39 @@ let T = (e) => {
             [_] = null != (t = null == f ? void 0 : f.items) ? t : [];
         return void 0 !== u && u in b.K
             ? b.K[u].render({
-                  animationState: 'on_hover',
-                  className: y.externalProductAsset
+                  animationState: "on_hover",
+                  className: y.externalProductAsset,
               })
             : (0, s.EQ)(null == _ ? void 0 : _.type)
                   .with(
                       l.Z.AVATAR_DECORATION,
                       () => (
-                          a()(_.type === l.Z.AVATAR_DECORATION, 'ts-match checked the type'),
+                          a()(_.type === l.Z.AVATAR_DECORATION, "ts-match checked the type"),
                           (0, r.jsx)(T, {
                               avatarDecoration: _,
-                              fallbackLabel: o
+                              fallbackLabel: o,
                           })
-                      )
+                      ),
                   )
                   .with(
                       l.Z.PROFILE_EFFECT,
                       () => (
-                          a()(_.type === l.Z.PROFILE_EFFECT, 'ts-match checked the type'),
+                          a()(_.type === l.Z.PROFILE_EFFECT, "ts-match checked the type"),
                           (0, r.jsx)(S, {
                               profileEffect: _,
-                              fallbackLabel: o
+                              fallbackLabel: o,
                           })
-                      )
+                      ),
                   )
                   .with(
                       l.Z.NAMEPLATE,
                       () => (
-                          a()(_.type === l.Z.NAMEPLATE, 'ts-match checked the type'),
+                          a()(_.type === l.Z.NAMEPLATE, "ts-match checked the type"),
                           (0, r.jsx)(A, {
                               nameplate: _,
-                              fallbackLabel: o
+                              fallbackLabel: o,
                           })
-                      )
+                      ),
                   )
                   .otherwise(() => o);
     };

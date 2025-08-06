@@ -12,7 +12,7 @@ var r = n(442837),
 function _(e) {
     let t,
         { context: n, application: _, activityAction: p } = e,
-        h = 'channel' === n.type ? n.channel : void 0,
+        h = "channel" === n.type ? n.channel : void 0,
         m = (0, r.e7)([c.Z], () => c.Z.can(d.Pl.USE_EMBEDDED_ACTIVITIES, h)),
         g = (0, o.KF)(null == h ? void 0 : h.id),
         E = !1;
@@ -21,7 +21,11 @@ function _(e) {
             E = !1;
             break;
         case s.JS.START:
-            null == h ? (E = !1) : (null == h ? void 0 : h.isGuildVoice()) ? g !== o.jy.CAN_LAUNCH && (E = !0) : (0, i.WS)(h) || (E = !0);
+            null == h
+                ? (E = !1)
+                : (null == h ? void 0 : h.isGuildVoice())
+                  ? g !== o.jy.CAN_LAUNCH && (E = !0)
+                  : (0, i.WS)(h) || (E = !0);
             break;
         case s.JS.JOIN:
             (null == h ? void 0 : h.isGuildVoice()) ? (E = !m) : (0, i.WS)(h) || (E = !0);
@@ -29,13 +33,15 @@ function _(e) {
     if (p !== s.JS.LEAVE) {
         let e = _ instanceof l.ZP ? _.embeddedActivityConfig : _.embedded_activity_config,
             n = (0, a.Z)((0, u.getOS)());
-        null == e || e.supported_platforms.includes(n) ? (null == h ? void 0 : h.isThread()) && ((E = !0), (t = f.intl.string(f.t.ddSR3t))) : ((E = !1), (t = f.intl.string(f.t.z2YTgI)));
+        null == e || e.supported_platforms.includes(n)
+            ? (null == h ? void 0 : h.isThread()) && ((E = !0), (t = f.intl.string(f.t.ddSR3t)))
+            : ((E = !1), (t = f.intl.string(f.t.z2YTgI)));
     }
     return (
         E && null == t && (t = f.intl.string(f.t.f41E1t)),
         {
             disabled: E,
-            reason: t
+            reason: t,
         }
     );
 }

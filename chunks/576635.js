@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(866442),
     i = n(442837),
     o = n(780384),
@@ -20,7 +20,7 @@ function f(e) {
         return {
             theme: b,
             primaryColor: null,
-            secondaryColor: null
+            secondaryColor: null,
         };
     let S = null == p ? void 0 : p.getPreviewThemeColors(h),
         A = null != (t = null == S ? void 0 : S[0]) ? t : (0, r._i)(I),
@@ -31,7 +31,7 @@ function f(e) {
         {
             theme: C,
             primaryColor: A,
-            secondaryColor: N
+            secondaryColor: N,
         }
     );
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     $A: () => E,
-    j8: () => b
+    j8: () => b,
 });
 var r = n(255367);
 n(73800);
@@ -9,7 +9,7 @@ var i = n(512722),
     a = n(442837),
     s = n(481060),
     l = n(40851);
-(n(358221), n(431368), n(167675), n(418469), n(673539));
+n(358221), n(431368), n(167675), n(418469), n(673539);
 var c = n(218035),
     u = n(775666),
     d = n(423589),
@@ -29,21 +29,21 @@ function E(e) {
     return (null == t ? void 0 : t.isGuildStageVoice()) && n
         ? null != i
             ? (0, r.jsx)(s.sNh, {
-                  id: 'edit-stage',
-                  label: g.intl.string(g.t['I+9bLy']),
-                  action: c
+                  id: "edit-stage",
+                  label: g.intl.string(g.t["I+9bLy"]),
+                  action: c,
               })
             : (0, r.jsx)(s.sNh, {
-                  id: 'start-stage',
+                  id: "start-stage",
                   label: g.intl.string(g.t.OYbHfn),
-                  action: c
+                  action: c,
               })
         : null;
 }
 function b(e) {
     let t = (0, a.e7)([f.Z], () => f.Z.getChannel(e), [e]);
-    o()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
-    let n = (0, d.Mn)('StageChannelCallOverflowMenu'),
+    o()(null != t, "useNotificationSettingsItem: channel cannot be undefined");
+    let n = (0, d.Mn)("StageChannelCallOverflowMenu"),
         r = (0, u.ZP)(t),
         i = (0, c.Z)(t);
     return n ? r : i;

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => c,
-    v: () => l
+    v: () => l,
 });
 var r = n(399606),
     i = n(375954),
@@ -19,9 +19,9 @@ let l = (e, t, n) => {
                       (0, a.g4)(
                           {
                               type: o.l.Attachment,
-                              media: e
+                              media: e,
                           },
-                          d
+                          d,
                       );
         return null != (c = null == u || null == (l = u.attachments) ? void 0 : l.filter(f)) ? c : [];
     },
@@ -37,9 +37,9 @@ let l = (e, t, n) => {
                       (0, a.g4)(
                           {
                               type: o.l.Embed,
-                              media: e
+                              media: e,
                           },
-                          d
+                          d,
                       );
         return null != (c = null == u || null == (l = u.embeds) ? void 0 : l.filter(f)) ? c : [];
     };

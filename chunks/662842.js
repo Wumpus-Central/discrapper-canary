@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => D }), n(388685));
+n.d(t, { Z: () => D }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -41,9 +41,9 @@ function D(e) {
             [m.Z],
             () => ({
                 isStageNoticeHidden: m.Z.isLiveChannelNoticeHidden({ stageId: null == P ? void 0 : P.id }),
-                isEventNoticeHidden: m.Z.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id })
+                isEventNoticeHidden: m.Z.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id }),
             }),
-            [P, d]
+            [P, d],
         ),
         U = null == l ? void 0 : l.id,
         G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
@@ -64,48 +64,62 @@ function D(e) {
         buttonText: Q,
         users: J,
         overflowUsers: $,
-        onClose: ee
+        onClose: ee,
     } = i.useMemo(
         () =>
             (function (e) {
-                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: l, myRole: a, eventCreator: o, speakers: s, listenerCount: u, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
+                let {
+                        guildEvent: t,
+                        stageInstance: n,
+                        activeChannel: i,
+                        canConnect: l,
+                        myRole: a,
+                        eventCreator: o,
+                        speakers: s,
+                        listenerCount: u,
+                        isEventNoticeHidden: d,
+                        isStageNoticeHidden: h,
+                        isStudyRoomNotice: m,
+                    } = e,
                     _ = null != n && null != i && !h,
                     O = null != t ? (0, y.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
                         noticeType: 3,
-                        title: '\uD83D\uDCDA\u2615 '.concat(i.name),
+                        title: "\uD83D\uDCDA\u2615 ".concat(i.name),
                         location: L.intl.string(L.t.LZA6NT),
                         locationIcon:
                             null != e
                                 ? (0, r.jsx)(e, {
-                                      size: 'xs',
-                                      color: 'currentColor',
-                                      className: R.locationIcon
+                                      size: "xs",
+                                      color: "currentColor",
+                                      className: R.locationIcon,
                                   })
                                 : null,
                         canListenIn: l,
                         buttonText: L.intl.string(L.t.wBoE6O),
                         users: [],
-                        overflowUsers: null
+                        overflowUsers: null,
                     };
                 }
                 if (null == t || d) {
                     if (_) {
                         let e = L.intl.string(L.t.ZYO5OD);
                         return (
-                            (null == a ? void 0 : a.speaker) ? (e = L.intl.string(L.t['/cnSFR'])) : null != a && (e = L.intl.string(L.t.btSGOj)),
+                            (null == a ? void 0 : a.speaker)
+                                ? (e = L.intl.string(L.t["/cnSFR"]))
+                                : null != a && (e = L.intl.string(L.t.btSGOj)),
                             {
                                 noticeType: 0,
                                 title: n.topic,
                                 location: i.name,
                                 locationIcon: (0, r.jsx)(c.ewx, {
-                                    size: 'custom',
-                                    color: 'currentColor',
+                                    size: "custom",
+                                    color: "currentColor",
                                     width: 16,
                                     height: 16,
-                                    className: R.locationIcon
+                                    className: R.locationIcon,
                                 }),
                                 canListenIn: l,
                                 buttonText: e,
@@ -114,41 +128,43 @@ function D(e) {
                                 overflowUsers:
                                     u < 1
                                         ? null
-                                        : (0, r.jsxs)('div', {
+                                        : (0, r.jsxs)("div", {
                                               className: R.pill,
                                               children: [
                                                   (0, r.jsx)(c.VWR, {
-                                                      size: 'custom',
-                                                      color: 'currentColor',
+                                                      size: "custom",
+                                                      color: "currentColor",
                                                       width: 12,
                                                       height: 12,
-                                                      className: R.pillIcon
+                                                      className: R.pillIcon,
                                                   }),
                                                   (0, r.jsx)(c.Text, {
-                                                      variant: 'text-xs/medium',
-                                                      color: 'header-secondary',
+                                                      variant: "text-xs/medium",
+                                                      color: "header-secondary",
                                                       className: R.pillLabel,
-                                                      children: u
-                                                  })
-                                              ]
-                                          })
+                                                      children: u,
+                                                  }),
+                                              ],
+                                          }),
                             }
                         );
                     }
                 } else if (t.entity_type === w.WX.STAGE_INSTANCE && _) {
                     let e = L.intl.string(L.t.ZYO5OD);
                     return (
-                        (null == a ? void 0 : a.speaker) ? (e = L.intl.string(L.t['/cnSFR'])) : null != a && (e = L.intl.string(L.t.btSGOj)),
+                        (null == a ? void 0 : a.speaker)
+                            ? (e = L.intl.string(L.t["/cnSFR"]))
+                            : null != a && (e = L.intl.string(L.t.btSGOj)),
                         {
                             noticeType: 0,
                             title: n.topic,
                             location: i.name,
                             locationIcon: (0, r.jsx)(c.ewx, {
-                                size: 'custom',
-                                color: 'currentColor',
+                                size: "custom",
+                                color: "currentColor",
                                 width: 16,
                                 height: 16,
-                                className: R.locationIcon
+                                className: R.locationIcon,
                             }),
                             canListenIn: l,
                             buttonText: e,
@@ -157,24 +173,24 @@ function D(e) {
                             overflowUsers:
                                 u < 1
                                     ? null
-                                    : (0, r.jsxs)('div', {
+                                    : (0, r.jsxs)("div", {
                                           className: R.pill,
                                           children: [
                                               (0, r.jsx)(c.VWR, {
-                                                  size: 'custom',
-                                                  color: 'currentColor',
+                                                  size: "custom",
+                                                  color: "currentColor",
                                                   width: 12,
                                                   height: 12,
-                                                  className: R.pillIcon
+                                                  className: R.pillIcon,
                                               }),
                                               (0, r.jsx)(c.Text, {
-                                                  variant: 'text-xs/medium',
-                                                  color: 'header-secondary',
+                                                  variant: "text-xs/medium",
+                                                  color: "header-secondary",
                                                   className: R.pillLabel,
-                                                  children: u
-                                              })
-                                          ]
-                                      })
+                                                  children: u,
+                                              }),
+                                          ],
+                                      }),
                         }
                     );
                 } else if (t.entity_type === w.WX.EXTERNAL) {
@@ -186,11 +202,11 @@ function D(e) {
                         title: t.name,
                         location: (0, b.m)(e, !0),
                         locationIcon: (0, r.jsx)(c._tJ, {
-                            size: 'custom',
-                            color: 'currentColor',
+                            size: "custom",
+                            color: "currentColor",
                             width: 16,
                             height: 16,
-                            className: R.locationIcon
+                            className: R.locationIcon,
                         }),
                         canListenIn: !1,
                         buttonText: L.intl.string(L.t.iW6Xur),
@@ -199,24 +215,24 @@ function D(e) {
                         overflowUsers:
                             n < 1
                                 ? null
-                                : (0, r.jsxs)('div', {
+                                : (0, r.jsxs)("div", {
                                       className: R.pill,
                                       children: [
                                           (0, r.jsx)(c.r7p, {
-                                              size: 'custom',
-                                              color: 'currentColor',
+                                              size: "custom",
+                                              color: "currentColor",
                                               width: 12,
                                               height: 12,
-                                              className: R.pillIcon
+                                              className: R.pillIcon,
                                           }),
                                           (0, r.jsx)(c.Text, {
-                                              variant: 'text-xs/medium',
-                                              color: 'header-secondary',
+                                              variant: "text-xs/medium",
+                                              color: "header-secondary",
                                               className: R.pillLabel,
-                                              children: n
-                                          })
-                                      ]
-                                  })
+                                              children: n,
+                                          }),
+                                      ],
+                                  }),
                     };
                 } else if (t.entity_type === w.WX.VOICE && null != i) {
                     let e = (0, p.KS)(i),
@@ -228,9 +244,9 @@ function D(e) {
                         locationIcon:
                             null != e
                                 ? (0, r.jsx)(e, {
-                                      size: 'xs',
-                                      color: 'currentColor',
-                                      className: R.locationIcon
+                                      size: "xs",
+                                      color: "currentColor",
+                                      className: R.locationIcon,
                                   })
                                 : null,
                         canListenIn: l,
@@ -240,24 +256,24 @@ function D(e) {
                         overflowUsers:
                             n < 1
                                 ? null
-                                : (0, r.jsxs)('div', {
+                                : (0, r.jsxs)("div", {
                                       className: R.pill,
                                       children: [
                                           (0, r.jsx)(c.r7p, {
-                                              size: 'custom',
-                                              color: 'currentColor',
+                                              size: "custom",
+                                              color: "currentColor",
                                               width: 12,
                                               height: 12,
-                                              className: R.pillIcon
+                                              className: R.pillIcon,
                                           }),
                                           (0, r.jsx)(c.Text, {
-                                              variant: 'text-xs/medium',
-                                              color: 'header-secondary',
+                                              variant: "text-xs/medium",
+                                              color: "header-secondary",
                                               className: R.pillLabel,
-                                              children: n
-                                          })
-                                      ]
-                                  })
+                                              children: n,
+                                          }),
+                                      ],
+                                  }),
                     };
                 }
                 return { noticeType: null };
@@ -272,44 +288,44 @@ function D(e) {
                 listenerCount: V,
                 isEventNoticeHidden: M,
                 isStageNoticeHidden: D,
-                isStudyRoomNotice: n
+                isStudyRoomNotice: n,
             }),
-        [d, P, l, H, B, z, G, V, M, D, n]
+        [d, P, l, H, B, z, G, V, M, D, n],
     );
     return null == W
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, r.jsxs)("div", {
               className: R.container,
               children: [
                   null != ee
                       ? (0, r.jsx)(c.P3F, {
                             onClick: ee,
                             className: R.close,
-                            'aria-label': L.intl.string(L.t.WAI6xs),
+                            "aria-label": L.intl.string(L.t.WAI6xs),
                             children: (0, r.jsx)(c.Dio, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: R.closeIcon
-                            })
+                                size: "md",
+                                color: "currentColor",
+                                className: R.closeIcon,
+                            }),
                         })
                       : null,
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: R.header,
                       children: [
                           (0, r.jsx)(Z.Z, {
                               color: s.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
-                              height: 16
+                              height: 16,
                           }),
                           (0, r.jsx)(c.Text, {
-                              variant: 'text-xs/semibold',
-                              color: 'text-feedback-positive',
-                              children: L.intl.string(L.t.dI3q4u)
-                          })
-                      ]
+                              variant: "text-xs/semibold",
+                              color: "text-feedback-positive",
+                              children: L.intl.string(L.t.dI3q4u),
+                          }),
+                      ],
                   }),
                   (J.length > 0 || null != $) &&
-                      (0, r.jsxs)('div', {
+                      (0, r.jsxs)("div", {
                           className: R.participants,
                           children: [
                               J.map((e) =>
@@ -317,52 +333,55 @@ function D(e) {
                                       k,
                                       {
                                           user: e,
-                                          guildId: t.id
+                                          guildId: t.id,
                                       },
-                                      e.id
-                                  )
+                                      e.id,
+                                  ),
                               ),
-                              $
-                          ]
+                              $,
+                          ],
                       }),
                   (0, r.jsx)(c.Text, {
-                      variant: 'text-md/medium',
-                      color: 'header-primary',
+                      variant: "text-md/medium",
+                      color: "header-primary",
                       className: a()(R.title, R.live),
-                      children: Y
+                      children: Y,
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, r.jsxs)("div", {
                       className: R.locationContainer,
                       children: [
                           q,
                           (0, r.jsx)(c.Text, {
-                              variant: 'text-xs/normal',
-                              color: 'text-muted',
+                              variant: "text-xs/normal",
+                              color: "text-muted",
                               className: R.location,
-                              children: K
-                          })
-                      ]
+                              children: K,
+                          }),
+                      ],
                   }),
                   X || 1 === W
-                      ? (0, r.jsx)('div', {
-                            'data-button-hoisted-classname-wrapper': !0,
+                      ? (0, r.jsx)("div", {
+                            "data-button-hoisted-classname-wrapper": !0,
                             className: R.button,
                             children: (0, r.jsx)(c.zxk, {
-                                variant: 'active',
-                                size: 'sm',
+                                variant: "active",
+                                size: "sm",
                                 text: Q,
                                 onClick: () => {
-                                    if (X) null != l && null != l.getGuildId() && ((0, I.Cq)(l), (0, v.XU)(l.getGuildId(), l.id));
+                                    if (X)
+                                        null != l &&
+                                            null != l.getGuildId() &&
+                                            ((0, I.Cq)(l), (0, v.XU)(l.getGuildId(), l.id));
                                     else {
                                         if (null == d) return;
                                         (0, h.bO)({ eventId: d.id });
                                     }
                                 },
-                                fullWidth: !0
-                            })
+                                fullWidth: !0,
+                            }),
                         })
-                      : null
-              ]
+                      : null,
+              ],
           });
 }
 function k(e) {
@@ -382,24 +401,24 @@ function k(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({}, e)),
@@ -407,9 +426,9 @@ function k(e) {
                     {
                         ref: l,
                         src: t.getAvatarURL(n, 24),
-                        'aria-label': t.username,
+                        "aria-label": t.username,
                         size: c.EFr.SIZE_24,
-                        className: R.avatar
+                        className: R.avatar,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
@@ -423,8 +442,8 @@ function k(e) {
                       })(Object(a)).forEach(function (e) {
                           Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
-                i)
+                i),
             );
-        }
+        },
     });
 }

@@ -24,7 +24,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -34,15 +34,15 @@ function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 y(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -50,11 +50,11 @@ function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -73,15 +73,15 @@ function T(e) {
     var t;
     let { channel: n, children: y, user: v } = e,
         T = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
-        S = null != (t = (0, d.ZP)(n)) ? t : '',
+        S = null != (t = (0, d.ZP)(n)) ? t : "",
         {
             avatarDecorationSrc: A,
             eventHandlers: N,
-            isAnimating: C
+            isAnimating: C,
         } = (0, m.Z)({
             userId: null == v ? void 0 : v.id,
             size: s.EFr.SIZE_80,
-            animateOnHover: !0
+            animateOnHover: !0,
         }),
         R = () => {
             let e = !T && C;
@@ -93,16 +93,16 @@ function T(e) {
                       children: (0, r.jsx)(f.Z, {
                           channel: n,
                           size: s.EFr.SIZE_80,
-                          experimentLocation: 'empty_messages',
+                          experimentLocation: "empty_messages",
                           animated: e,
-                          'aria-label': S
-                      })
+                          "aria-label": S,
+                      }),
                   })
                 : (0, r.jsx)(s.qEK, {
-                      'aria-label': S,
+                      "aria-label": S,
                       size: s.EFr.SIZE_80,
                       src: (0, u.x)(n, 80, e),
-                      avatarDecoration: A
+                      avatarDecoration: A,
                   });
         };
     return (0, r.jsxs)(
@@ -119,14 +119,14 @@ function T(e) {
                             (0, r.jsx)(h.l, { channel: n }),
                             (0, r.jsx)(o.z, {
                                 icon: s.vdY,
-                                variant: 'secondary',
-                                text: E.intl.string(E.t['5Q9+/P']),
-                                'aria-label': E.intl.string(E.t['5Q9+/P']),
-                                onClick: () => (0, p.B)(n.id, c.Z.EMPTY_GROUP_DM)
-                            })
-                        ]
-                    })
-            ]
-        })
+                                variant: "secondary",
+                                text: E.intl.string(E.t["5Q9+/P"]),
+                                "aria-label": E.intl.string(E.t["5Q9+/P"]),
+                                onClick: () => (0, p.B)(n.id, c.Z.EMPTY_GROUP_DM),
+                            }),
+                        ],
+                    }),
+            ],
+        }),
     );
 }

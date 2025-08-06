@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(255367),
     o = n(73800),
@@ -14,7 +14,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,26 +22,32 @@ function d(e, t, n) {
 }
 function f(e) {
     let { percentage: t, isSingleLine: n } = e;
-    return (0, i.jsx)('div', {
+    return (0, i.jsx)("div", {
         className: s()({
             [u.bar]: n,
-            [u.barInMultiLine]: !n
+            [u.barInMultiLine]: !n,
         }),
-        children: (0, i.jsx)('div', {
+        children: (0, i.jsx)("div", {
             className: u.barInner,
-            style: { width: ''.concat(100 * Math.max(Math.min(t, 1), 0), '%') }
-        })
+            style: { width: "".concat(100 * Math.max(Math.min(t, 1), 0), "%") },
+        }),
     });
 }
 function _(e) {
-    return String(e).padStart(2, '0');
+    return String(e).padStart(2, "0");
 }
 function p(e) {
     let { time: t, padLargestUnit: n } = e,
         r = Math.floor(t) % 60,
         i = Math.floor(t / 60) % 60,
         o = Math.floor(t / 3600);
-    return 0 === o ? (n ? ''.concat(_(i), ':').concat(_(r)) : ''.concat(i, ':').concat(_(r))) : n ? ''.concat(_(o), ':').concat(_(i), ':').concat(_(r)) : ''.concat(o, ':').concat(_(i), ':').concat(_(r));
+    return 0 === o
+        ? n
+            ? "".concat(_(i), ":").concat(_(r))
+            : "".concat(i, ":").concat(_(r))
+        : n
+          ? "".concat(_(o), ":").concat(_(i), ":").concat(_(r))
+          : "".concat(o, ":").concat(_(i), ":").concat(_(r));
 }
 class h extends (r = o.PureComponent) {
     componentDidMount() {
@@ -58,38 +64,38 @@ class h extends (r = o.PureComponent) {
             l = (t - e) / 1000,
             d = Math.max(Math.min((a - e) / 1000, l), 0);
         return o
-            ? (0, i.jsxs)('div', {
+            ? (0, i.jsxs)("div", {
                   className: s()(n, { [u.themed]: r }, u.singleLineContainer),
                   children: [
-                      (0, i.jsx)('div', {
+                      (0, i.jsx)("div", {
                           className: u.textLeftInSingleLine,
                           children: p({
                               time: d,
-                              padLargestUnit: !0
-                          })
+                              padLargestUnit: !0,
+                          }),
                       }),
-                      (0, i.jsx)('div', {
+                      (0, i.jsx)("div", {
                           className: u.barInSingleLine,
                           children: (0, i.jsx)(f, {
                               percentage: d / l,
-                              isSingleLine: !0
-                          })
+                              isSingleLine: !0,
+                          }),
                       }),
-                      (0, i.jsx)('div', {
+                      (0, i.jsx)("div", {
                           className: u.textRight,
                           children: p({
                               time: l,
-                              padLargestUnit: !0
-                          })
-                      })
-                  ]
+                              padLargestUnit: !0,
+                          }),
+                      }),
+                  ],
               })
-            : (0, i.jsxs)('div', {
+            : (0, i.jsxs)("div", {
                   className: s()(n, { [u.themed]: r }),
                   children: [
                       (0, i.jsx)(f, {
                           percentage: d / l,
-                          isSingleLine: !1
+                          isSingleLine: !1,
                       }),
                       (0, i.jsxs)(c.Z, {
                           children: [
@@ -98,25 +104,25 @@ class h extends (r = o.PureComponent) {
                                   className: u.textLeft,
                                   children: p({
                                       time: d,
-                                      padLargestUnit: !1
-                                  })
+                                      padLargestUnit: !1,
+                                  }),
                               }),
                               (0, i.jsx)(c.Z.Child, {
                                   grow: 0,
                                   className: u.textRight,
                                   children: p({
                                       time: l,
-                                      padLargestUnit: !1
-                                  })
-                              })
-                          ]
-                      })
-                  ]
+                                      padLargestUnit: !1,
+                                  }),
+                              }),
+                          ],
+                      }),
+                  ],
               });
     }
     constructor(...e) {
-        (super(...e), d(this, 'timer', new l.Xp()), d(this, 'state', { now: Date.now() }));
+        super(...e), d(this, "timer", new l.Xp()), d(this, "state", { now: Date.now() });
     }
 }
-d(h, 'defaultProps', { themed: !1 });
+d(h, "defaultProps", { themed: !1 });
 let m = h;

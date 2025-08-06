@@ -1,1 +1,1 @@
-e.exports = { roleDot: 'roleDot__57082' };
+e.exports = { roleDot: "roleDot__57082" };

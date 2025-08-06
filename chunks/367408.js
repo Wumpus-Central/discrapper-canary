@@ -1,4 +1,4 @@
-(n.d(t, { M: () => d }), n(642613), n(482853));
+n.d(t, { M: () => d }), n(642613), n(482853);
 var r = n(70956),
     i = n(359119),
     l = n(116347),
@@ -14,7 +14,9 @@ function d(e) {
         d = (0, o.o)(e);
     if (null == n || d || (0, l.tX)(r)) return;
     let h = r.some((e) => e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_1),
-        p = r.filter((e) => null != e.dismiss_timestamp).sort((e, t) => (t.dismiss_timestamp < e.dismiss_timestamp ? -1 : 1));
+        p = r
+            .filter((e) => null != e.dismiss_timestamp)
+            .sort((e, t) => (t.dismiss_timestamp < e.dismiss_timestamp ? -1 : 1));
     if (
         p.length < 1 ||
         !(function (e) {
@@ -26,5 +28,7 @@ function d(e) {
     )
         return;
     let f = r.filter((e) => null == e.dismiss_timestamp);
-    return null != (t = f.findLast((e) => e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_1)) ? t : f.findLast((e) => e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_2);
+    return null != (t = f.findLast((e) => e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_1))
+        ? t
+        : f.findLast((e) => e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_2);
 }

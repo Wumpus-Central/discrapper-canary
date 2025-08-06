@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     O: () => c,
-    a: () => u
+    a: () => u,
 }),
-    n(388685));
+    n(388685);
 var r = n(544891),
     i = n(570140),
     o = n(19780),
@@ -13,8 +13,8 @@ async function c(e) {
     let t = s.Z.lurkingGuildIds().filter((t) => !e.includes(t));
     0 !== t.length &&
         (i.Z.dispatch({
-            type: 'GUILD_STOP_LURKING',
-            ignoredGuildIds: e
+            type: "GUILD_STOP_LURKING",
+            ignoredGuildIds: e,
         }),
         await Promise.all(
             t.map(async (e) => {
@@ -24,16 +24,16 @@ async function c(e) {
                         url: l.ANM.GUILD_LEAVE(e),
                         body: { lurking: !0 },
                         oldFormErrors: !0,
-                        rejectWithError: !0
+                        rejectWithError: !0,
                     });
                 } catch (n) {
                     i.Z.dispatch({
-                        type: 'GUILD_STOP_LURKING_FAILURE',
+                        type: "GUILD_STOP_LURKING_FAILURE",
                         lurkingGuildId: e,
-                        lurkingSource: t
+                        lurkingSource: t,
                     });
                 }
-            })
+            }),
         ));
 }
 async function u() {

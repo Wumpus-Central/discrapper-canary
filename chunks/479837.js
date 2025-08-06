@@ -45,7 +45,7 @@ function b() {
                             r.Z.setVideoEnabled(!0);
                         },
                         g.IlC.APP,
-                        !0
+                        !0,
                     )
                   : _ || (0, c.Z)(),
             !1

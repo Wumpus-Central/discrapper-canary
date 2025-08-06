@@ -18,10 +18,10 @@ function m() {
                 a.gw.updateSetting({
                     profanity: e,
                     slurs: e,
-                    sexualContent: e
+                    sexualContent: e,
                 }),
             title: u.intl.string(u.t.CB5reH),
-            note: u.intl.format(u.t.kAyJIS, { learnMoreLink: s.Z.getArticleURL(d.BhN.KEYWORD_FILTERS) })
-        })
+            note: u.intl.format(u.t.kAyJIS, { learnMoreLink: s.Z.getArticleURL(d.BhN.KEYWORD_FILTERS) }),
+        }),
     });
 }

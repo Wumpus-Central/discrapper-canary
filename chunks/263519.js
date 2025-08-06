@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(361932), n(187205), n(997841));
+n.d(t, { Z: () => y }), n(361932), n(187205), n(997841);
 var r = n(73800),
     i = n(512722),
     o = n.n(i),
@@ -24,17 +24,17 @@ function y(e) {
         A = null == (t = (0, a.Wu)([_.Z], () => (null != O ? _.Z.getForSKU(O) : []), [O])[0]) ? void 0 : t.id,
         N = (0, a.e7)([p.Z], () => (null != O ? p.Z.getParentSKU(O) : void 0), [O]),
         C = null == N ? void 0 : N.bundledSkuIds,
-        R = (0, a.Wu)(
-            [_.Z],
-            () => {
-                var e;
-                return null != (e = null == C ? void 0 : C.flatMap(_.Z.getForSKU)) ? e : [];
-            },
-            [C]
-        ),
+        R = (0, a.Wu)([_.Z], () => {
+            var e;
+            return null != (e = null == C ? void 0 : C.flatMap(_.Z.getForSKU)) ? e : [];
+        }, [C]),
         P = r.useMemo(() => R.map((e) => e.id), [R]),
         w = (0, E.KK)(null != (n = null == T ? void 0 : T.flags) ? n : 0),
-        D = (0, a.e7)([g.Z], () => null != i && !1 !== w && g.Z.getEntitlementsForGuild(i, !0).some((e) => e.skuId === O), [w, O, i]),
+        D = (0, a.e7)(
+            [g.Z],
+            () => null != i && !1 !== w && g.Z.getEntitlementsForGuild(i, !0).some((e) => e.skuId === O),
+            [w, O, i],
+        ),
         L = null == T ? void 0 : T.applicationId,
         x = (null == S ? void 0 : S.published) === !0 && (null == T ? void 0 : T.isAvailable()) === !0,
         { app: M } = (0, d.Rt)(L),
@@ -70,9 +70,9 @@ function y(e) {
         }, [x, O, V]),
         {
             openModal: r.useCallback(() => {
-                (o()(null != M, 'No application'),
-                    o()(null != O, 'No SKU ID'),
-                    o()(x, 'Cannot purchase this unpublished plan'),
+                o()(null != M, "No application"),
+                    o()(null != O, "No SKU ID"),
+                    o()(x, "Cannot purchase this unpublished plan"),
                     (0, b.H)({
                         subscriptionPlanId: A,
                         sku: T,
@@ -80,13 +80,13 @@ function y(e) {
                         initialSubscribeForGuild: i,
                         disableGuildSelector: I,
                         analyticsLocations: k,
-                        analyticsLocation: y
+                        analyticsLocation: y,
                     }).then(() => {
                         null == v || v();
-                    }));
+                    });
             }, [M, O, x, A, T, P, i, I, k, y, v]),
             subscriptionPurchaseButtonState: Y,
-            isGuildSubscribed: D
+            isGuildSubscribed: D,
         }
     );
 }

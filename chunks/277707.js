@@ -12,5 +12,11 @@ function i(e) {
         else if (a) return r.intl.string(r.t.FdPNr6);
         else if (o) return r.intl.string(r.t.f4gmra);
         else return r.intl.string(r.t.H39rER);
-    return n ? (i ? r.intl.string(r.t.UxmnHx) : r.intl.string(r.t.sigPER)) : i ? r.intl.string(r.t['oU/lsr']) : r.intl.string(r.t.BoQUFR);
+    return n
+        ? i
+            ? r.intl.string(r.t.UxmnHx)
+            : r.intl.string(r.t.sigPER)
+        : i
+          ? r.intl.string(r.t["oU/lsr"])
+          : r.intl.string(r.t.BoQUFR);
 }

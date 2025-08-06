@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     ZP: () => h,
-    vE: () => p
+    vE: () => p,
 }),
-    n(539854));
+    n(539854);
 var r = n(223892),
     i = n(738774),
     l = n(676317),
@@ -14,12 +14,23 @@ var r = n(223892),
     u = n(388032);
 let { getSectionDefinition: m } = c.Z,
     g = {
-        HEADER: 'HEADER',
-        DIVIDER: 'DIVIDER'
+        HEADER: "HEADER",
+        DIVIDER: "DIVIDER",
     };
 function p(e) {
     var t, n;
-    let { guild: c, canManageGuild: p, canViewAuditLog: h, canManageRoles: f, canManageBans: x, canAccessMembersPage: b, canViewGuildAnalytics: j, isOwner: v, isGuildAdmin: _, canManageGuildExpressions: O } = e,
+    let {
+            guild: c,
+            canManageGuild: p,
+            canViewAuditLog: h,
+            canManageRoles: f,
+            canManageBans: x,
+            canAccessMembersPage: b,
+            canViewGuildAnalytics: j,
+            isOwner: v,
+            isGuildAdmin: _,
+            canManageGuildExpressions: O,
+        } = e,
         y = () =>
             (0, s.X$)({
                 guild: c,
@@ -29,31 +40,31 @@ function p(e) {
                 isGuildEligibleForRoleSubscriptions: (0, a.kT)(c.id),
                 isExpeditedMonetizationOnboardingGuild: (0, r.Rw)(c),
                 isUserInCreatorMonetizationEligibleCountry: (0, r.DB)(),
-                shouldRestrictUpdatingRoleSubscriptionSettings: (0, i.cu)(c.id)
+                shouldRestrictUpdatingRoleSubscriptionSettings: (0, i.cu)(c.id),
             }),
         C =
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })({}, e)),
@@ -72,9 +83,9 @@ function p(e) {
                   }),
             t),
         N = [];
-    (N.push({
+    N.push({
         section: g.HEADER,
-        label: '' !== c.name ? c.name : u.intl.string(u.t['154/bG'])
+        label: "" !== c.name ? c.name : u.intl.string(u.t["154/bG"]),
     }),
         N.push(m(d.pNK.PROFILE, C)),
         N.push(m(d.pNK.TAG, C)),
@@ -84,7 +95,7 @@ function p(e) {
             (N.push({ section: g.DIVIDER }),
             N.push({
                 section: g.HEADER,
-                label: u.intl.string(u.t.m6lkGx)
+                label: u.intl.string(u.t.m6lkGx),
             }),
             N.push(m(d.pNK.EMOJI, C)),
             N.push(m(d.pNK.STICKERS, C)),
@@ -93,7 +104,7 @@ function p(e) {
             (N.push({ section: g.DIVIDER }),
             N.push({
                 section: g.HEADER,
-                label: u.intl.string(u.t.bMAKMD)
+                label: u.intl.string(u.t.bMAKMD),
             }),
             N.push(m(d.pNK.MEMBERS, C)),
             N.push(m(d.pNK.ROLES, C)),
@@ -102,16 +113,16 @@ function p(e) {
         N.push({ section: g.DIVIDER }),
         N.push({
             section: g.HEADER,
-            label: u.intl.string(u.t.wF3KJy)
+            label: u.intl.string(u.t.wF3KJy),
         }),
         N.push(m(d.pNK.INTEGRATIONS, C)),
-        N.push(m(d.pNK.APP_DIRECTORY, C)));
+        N.push(m(d.pNK.APP_DIRECTORY, C));
     let I = !c.features.has(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
     (p || h || x || I) &&
         (N.push({ section: g.DIVIDER }),
         N.push({
             section: g.HEADER,
-            label: u.intl.string(u.t['5tbTdX'])
+            label: u.intl.string(u.t["5tbTdX"]),
         }),
         N.push(m(d.pNK.SAFETY, C)),
         N.push(m(d.pNK.MODERATION, C)),
@@ -120,6 +131,22 @@ function p(e) {
         N.push(m(d.pNK.GUILD_AUTOMOD, C)));
     let E = c.features.has(d.oNc.COMMUNITY) && j,
         S = y();
-    return ((p || E || S) && (N.push({ section: g.DIVIDER }), N.push(m(d.pNK.COMMUNITY, C)), N.push(m(d.pNK.ONBOARDING, C)), N.push(m(d.pNK.ANALYTICS, C)), N.push(m(d.pNK.COMMUNITY_WELCOME, C)), N.push(m(d.pNK.DISCOVERY_LANDING_PAGE, C)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS, C)), N.push(m(d.pNK.GUILD_PRODUCTS, C)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, C))), N.push({ section: g.DIVIDER }), N.push(m(d.pNK.GUILD_PREMIUM, C)), N.push(m(d.pNK.GUILD_TEMPLATES, C)), N.push(m(d.pNK.DELETE, C)), N.filter(o.lm));
+    return (
+        (p || E || S) &&
+            (N.push({ section: g.DIVIDER }),
+            N.push(m(d.pNK.COMMUNITY, C)),
+            N.push(m(d.pNK.ONBOARDING, C)),
+            N.push(m(d.pNK.ANALYTICS, C)),
+            N.push(m(d.pNK.COMMUNITY_WELCOME, C)),
+            N.push(m(d.pNK.DISCOVERY_LANDING_PAGE, C)),
+            N.push(m(d.pNK.ROLE_SUBSCRIPTIONS, C)),
+            N.push(m(d.pNK.GUILD_PRODUCTS, C)),
+            N.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, C))),
+        N.push({ section: g.DIVIDER }),
+        N.push(m(d.pNK.GUILD_PREMIUM, C)),
+        N.push(m(d.pNK.GUILD_TEMPLATES, C)),
+        N.push(m(d.pNK.DELETE, C)),
+        N.filter(o.lm)
+    );
 }
 let h = { generateSections: p };

@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     dO: () => l,
-    pq: () => _
+    pq: () => _,
 }),
-    n(388685));
+    n(388685);
 var r = n(688619),
     i = n.n(r);
 function o(e, t, n) {
@@ -20,10 +20,10 @@ function a(e, t, n) {
 let s = [0, 2];
 function l(e, t, n) {
     let r = i()(e);
-    if ('background' !== t) return r.set('hsl.s', '*'.concat(n)).hex();
+    if ("background" !== t) return r.set("hsl.s", "*".concat(n)).hex();
     {
         let e = a([0, 1], [0.25, 1], n);
-        return r.set('hsl.s', '*'.concat(e)).hex();
+        return r.set("hsl.s", "*".concat(e)).hex();
     }
 }
 let c = [1.3, 0.7],
@@ -32,14 +32,14 @@ let c = [1.3, 0.7],
     f = [1.45, 0.45];
 function _(e, t, n, r) {
     switch (t) {
-        case 'background':
-        case 'border':
+        case "background":
+        case "border":
             return i()(e)
-                .set('hsl.l', '*'.concat(o(s, 'light' === n ? u : c, r)))
+                .set("hsl.l", "*".concat(o(s, "light" === n ? u : c, r)))
                 .hex();
-        case 'text':
+        case "text":
             return i()(e)
-                .set('hsl.l', '*'.concat(o(s, 'light' === n ? f : d, r)))
+                .set("hsl.l", "*".concat(o(s, "light" === n ? f : d, r)))
                 .hex();
         default:
             return e;

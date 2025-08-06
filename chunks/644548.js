@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(804061), n(704826), n(35282));
+n.d(t, { Z: () => v }), n(804061), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(317261),
@@ -16,7 +16,7 @@ var r = n(255367),
     g = n(797342),
     E = n(388032);
 function b(e) {
-    if (e === o._.WEEK) return E.t['7TXfc3'];
+    if (e === o._.WEEK) return E.t["7TXfc3"];
 }
 let y = (e, t, n, r) => {
         let i = b(r),
@@ -25,14 +25,14 @@ let y = (e, t, n, r) => {
         return E.intl
             .formatToMarkdownString(i, {
                 gameName: a,
-                userName: o
+                userName: o,
             })
-            .replaceAll('*', '');
+            .replaceAll("*", "");
     },
     O = (e, t) =>
         E.intl.formatToPlainString(E.t.tAwI1t, {
             username: t.username,
-            activity: e.extra.game_name
+            activity: e.extra.game_name,
         }),
     v = (e) => {
         let { channel: t, entry: n, disableGameProfileLinks: o, onReaction: s, onVoiceChannelPreview: b } = e,
@@ -49,12 +49,14 @@ let y = (e, t, n, r) => {
                             applicationImageSrc: null == v ? void 0 : v.src,
                             avatarSrcs: [I.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
                             description: y(n, t, I, R),
-                            timestamp: E.intl.formatToPlainString(E.t.YL7UEx, { hours: Math.round(C / a.Z.Seconds.HOUR) }),
+                            timestamp: E.intl.formatToPlainString(E.t.YL7UEx, {
+                                hours: Math.round(C / a.Z.Seconds.HOUR),
+                            }),
                             colors: [A, N],
-                            channelId: e
+                            channelId: e,
                         });
                 },
-                [null == v ? void 0 : v.src, t, C, n, A, R, N, I]
+                [null == v ? void 0 : v.src, t, C, n, A, R, N, I],
             );
         if (null == I || null == C || null == R || !(0, _.qy)(R)) return null;
         let w = null != n.extra.platform ? f.v[n.extra.platform] : null;
@@ -67,7 +69,7 @@ let y = (e, t, n, r) => {
                             ? null
                             : (0, r.jsx)(m.Z, {
                                   Icon: w,
-                                  'aria-label': E.intl.string(E.t.YR4cHB)
+                                  "aria-label": E.intl.string(E.t.YR4cHB),
                               }),
                     entry: n,
                     userDescription: E.t.rPqqtr,
@@ -75,9 +77,9 @@ let y = (e, t, n, r) => {
                     subtitle: T,
                     badges: (0, r.jsx)(p.Gk, {
                         location: p.Gt.POPOUT,
-                        children: _.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
+                        children: _.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
                     }),
-                    disableGameProfileLinks: o
+                    disableGameProfileLinks: o,
                 }),
                 (0, r.jsx)(h.St, {
                     children: (0, r.jsx)(h.WT, {
@@ -87,9 +89,9 @@ let y = (e, t, n, r) => {
                         channel: t,
                         generateReactionImage: P,
                         reactionImageAltText: O(n, I),
-                        entry: n
-                    })
-                })
-            ]
+                        entry: n,
+                    }),
+                }),
+            ],
         });
     };

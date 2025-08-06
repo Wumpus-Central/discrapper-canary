@@ -4,6 +4,6 @@ var i = n(626135),
 function l(e, t) {
     i.default.track(r.rMx.CUSTOM_NOTIFICATION_SOUND_OPTION_PLAYED, {
         location: t,
-        soundpack: e
+        soundpack: e,
     });
 }

@@ -1,19 +1,19 @@
 n.d(t, {
     O: () => i,
-    x: () => o
+    x: () => o,
 });
 let r = (0, n(818083).B)({
-        kind: 'user',
-        id: '2024-12_user_profile_modal_recent_activity',
-        label: 'User Profile Modal Recent Activity',
+        kind: "user",
+        id: "2024-12_user_profile_modal_recent_activity",
+        label: "User Profile Modal Recent Activity",
         defaultConfig: { recentActivityTabEnabled: !1 },
         treatments: [
             {
                 id: 1,
-                label: 'Recent Activity Tab Enabled',
-                config: { recentActivityTabEnabled: !0 }
-            }
-        ]
+                label: "Recent Activity Tab Enabled",
+                config: { recentActivityTabEnabled: !0 },
+            },
+        ],
     }),
     i = (e) => {
         let { location: t, autoTrackExposure: n = !0 } = e;

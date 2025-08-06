@@ -31,14 +31,14 @@ function S(e) {
         p.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
             type: O.cd.EMPTY_STICKER_PICKER_UPSELL,
             source: { section: y.jXE.EMPTY_STICKER_PICKER_UPSELL },
-            location_stack: N
+            location_stack: N,
         });
     }, [N]);
     let R = (0, f.N)(),
         P = (0, d.Ng)(),
         w = null != R || null != P,
         D = (null == R || null == (t = R.subscription_trial) ? void 0 : t.sku_id) === O.Si.TIER_0;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a()(I.emptyState, S, { [I.unifyTrialUpsell]: w }),
         children: [
             w
@@ -47,23 +47,26 @@ function S(e) {
                       trialOffer: R,
                       onClose: A,
                       type: O.cd.EMPTY_STICKER_PICKER_UPSELL,
-                      subscriptionTier: null != (o = null == R || null == (n = R.subscription_trial) ? void 0 : n.sku_id) ? o : O.Si.TIER_2,
-                      children: v.intl.string(v.t.FnNud3)
+                      subscriptionTier:
+                          null != (o = null == R || null == (n = R.subscription_trial) ? void 0 : n.sku_id)
+                              ? o
+                              : O.Si.TIER_2,
+                      children: v.intl.string(v.t.FnNud3),
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.X6q, {
                               className: I.header,
-                              variant: 'heading-xl/semibold',
-                              children: v.intl.string(v.t.HEm04O)
+                              variant: "heading-xl/semibold",
+                              children: v.intl.string(v.t.HEm04O),
                           }),
                           (0, r.jsx)(l.Text, {
                               className: I.subtitle,
-                              color: 'header-secondary',
-                              variant: 'text-md/normal',
-                              children: v.intl.string(v.t.FnNud3)
+                              color: "header-secondary",
+                              variant: "text-md/normal",
+                              children: v.intl.string(v.t.FnNud3),
                           }),
-                          (0, r.jsx)('div', {
+                          (0, r.jsx)("div", {
                               className: I.stickersRow,
                               children: C.filter((e) => null != e).map((e) =>
                                   (0, r.jsx)(
@@ -71,19 +74,19 @@ function S(e) {
                                       {
                                           sticker: e,
                                           className: I.sticker,
-                                          size: T
+                                          size: T,
                                       },
-                                      null == e ? void 0 : e.id
-                                  )
-                              )
-                          })
-                      ]
+                                      null == e ? void 0 : e.id,
+                                  ),
+                              ),
+                          }),
+                      ],
                   }),
             !w &&
                 (0, r.jsx)(E.Z, {
                     analyticsSection: y.jXE.EXPRESSION_PICKER,
-                    buttonText: w ? (D ? v.intl.string(v.t.hz78hI) : v.intl.string(v.t['Gd/XHB'])) : void 0
-                })
-        ]
+                    buttonText: w ? (D ? v.intl.string(v.t.hz78hI) : v.intl.string(v.t["Gd/XHB"])) : void 0,
+                }),
+        ],
     });
 }

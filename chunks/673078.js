@@ -1,4 +1,4 @@
-(r.d(e, { default: () => O }), r(388685));
+r.d(e, { default: () => O }), r(388685);
 var n = r(255367),
     o = r(73800),
     i = r(512722),
@@ -24,25 +24,25 @@ function m(t) {
               children: [
                   (0, n.jsxs)(a.X6q, {
                       className: b.warningSectionHeader,
-                      variant: 'text-md/medium',
-                      color: 'text-default',
+                      variant: "text-md/medium",
+                      color: "text-default",
                       children: [
                           (0, n.jsx)(a.Mgn, {
-                              size: 'sm',
-                              color: 'currentColor'
+                              size: "sm",
+                              color: "currentColor",
                           }),
                           (0, n.jsx)(a.LZC, {
                               horizontal: !0,
-                              size: 8
+                              size: 8,
                           }),
-                          p.intl.string(p.t.bi7buL)
-                      ]
+                          p.intl.string(p.t.bi7buL),
+                      ],
                   }),
                   (0, n.jsx)(a.Text, {
-                      variant: 'text-md/normal',
-                      children: p.intl.format(p.t['4kglOT'], { roleName: o.name })
-                  })
-              ]
+                      variant: "text-md/normal",
+                      children: p.intl.format(p.t["4kglOT"], { roleName: o.name }),
+                  }),
+              ],
           });
 }
 function O(t) {
@@ -59,25 +59,27 @@ function O(t) {
                         n,
                         o = {},
                         i = Object.keys(t);
-                    for (n = 0; n < i.length; n++) ((r = i[n]), e.indexOf(r) >= 0 || (o[r] = t[r]));
+                    for (n = 0; n < i.length; n++) (r = i[n]), e.indexOf(r) >= 0 || (o[r] = t[r]);
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < i.length; n++) ((r = i[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]));
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
+                        !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
             }
             return o;
-        })(t, ['guildId', 'productId']);
+        })(t, ["guildId", "productId"]);
     let [g] = o.useState(() => f.Z.getGuildProduct(c));
-    l()(null != g, 'guildProductListing cannot be null');
+    l()(null != g, "guildProductListing cannot be null");
     let [O, y] = o.useState(!1),
         j = async () => {
             try {
-                (y(!0), await d.mh(i, c));
+                y(!0), await d.mh(i, c);
             } catch (t) {
                 s.Z.show({
                     title: p.intl.string(p.t.OzgkxM),
-                    body: t.message
+                    body: t.message,
                 });
             } finally {
                 y(!1);
@@ -89,45 +91,45 @@ function O(t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
                     n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (t) {
                             return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                        })
+                        }),
                     )),
                     n.forEach(function (e) {
                         var n;
-                        ((n = r[e]),
+                        (n = r[e]),
                             e in t
                                 ? Object.defineProperty(t, e, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
-                                      writable: !0
+                                      writable: !0,
                                   })
-                                : (t[e] = n));
-                    }));
+                                : (t[e] = n);
+                    });
             }
             return t;
         })({}, u)),
         (r = r =
             {
                 className: b.modalContainer,
-                header: p.intl.string(p.t['/gaTp6']),
+                header: p.intl.string(p.t["/gaTp6"]),
                 confirmText: p.intl.string(p.t.E4nVWF),
-                cancelText: p.intl.string(p.t['ETE/oK']),
+                cancelText: p.intl.string(p.t["ETE/oK"]),
                 loading: O,
                 onConfirm: j,
                 children: [
                     (0, n.jsx)(a.Text, {
-                        variant: 'text-md/normal',
-                        children: p.intl.format(p.t.CPQsjo, { productName: g.name })
+                        variant: "text-md/normal",
+                        children: p.intl.format(p.t.CPQsjo, { productName: g.name }),
                     }),
                     (0, n.jsx)(m, {
                         guildProductListing: g,
-                        guildId: i
-                    })
-                ]
+                        guildId: i,
+                    }),
+                ],
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -141,6 +143,6 @@ function O(t) {
               })(Object(r)).forEach(function (t) {
                   Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
               }),
-        e)
+        e),
     );
 }

@@ -19,10 +19,10 @@ function u(e, t) {
                       channel: n,
                       connected: o.Z.isInChannel(n.id),
                       needSubscriptionToAccess: !1,
-                      routeDirectlyToChannel: !0
+                      routeDirectlyToChannel: !0,
                   })
                 : (0, a.uL)(d.Z5c.CHANNEL(e, n.id));
         },
-        ariaLabel: (0, r.ZP)({ channel: n })
+        ariaLabel: (0, r.ZP)({ channel: n }),
     };
 }

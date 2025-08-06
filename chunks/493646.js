@@ -1,13 +1,13 @@
 n.d(t, {
     K: () => l,
-    v: () => i
+    v: () => i,
 });
 var r = n(979007),
     a = n(388032);
 function i(e) {
     switch (e.id) {
         case 4:
-            return a.intl.string(a.t['3m9EgY']);
+            return a.intl.string(a.t["3m9EgY"]);
         case 6:
             return a.intl.string(a.t.VJRr3d);
         case 8:
@@ -17,11 +17,11 @@ function i(e) {
         case 10:
             return a.intl.string(a.t.lfBt2d);
     }
-    return '';
+    return "";
 }
 function l() {
     return {
         id: r.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID,
-        name: a.intl.string(a.t.ijDDw8)
+        name: a.intl.string(a.t.ijDDw8),
     };
 }

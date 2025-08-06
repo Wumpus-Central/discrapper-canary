@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(924826),
@@ -25,7 +25,7 @@ function j(e) {
         y = (0, s.e7)([d.Z], () => d.Z.keyboardModeEnabled),
         O = i.useCallback(
             (e) => {
-                ((0, h.e7)({
+                (0, h.e7)({
                     guildId: t.guild_id,
                     channelId: t.id,
                     tagId: e,
@@ -34,29 +34,29 @@ function j(e) {
                     location: {
                         page: f.ZY5.GUILD_CHANNEL,
                         section: f.jXE.FORUM_CHANNEL_HEADER,
-                        object: f.qAy.CHANNEL_TAG
-                    }
+                        object: f.qAy.CHANNEL_TAG,
+                    },
                 }),
-                    _.getState().toggleTagFilter(t.id, e));
+                    _.getState().toggleTagFilter(t.id, e);
             },
-            [t, C, _]
+            [t, C, _],
         ),
         w = i.useCallback(() => {
-            (_.getState().setTagFilter(t.id, new Set()), y || n());
+            _.getState().setTagFilter(t.id, new Set()), y || n();
         }, [_, t.id, y, n]),
         P = (0, l.ZP)({
-            id: ''.concat(t.id, '-all-tags-dropdown-navigator'),
+            id: "".concat(t.id, "-all-tags-dropdown-navigator"),
             isEnabled: !0,
             wrap: !0,
             scrollToStart: b,
-            scrollToEnd: b
+            scrollToEnd: b,
         }),
         S = i.useRef(null);
     return (
         i.useEffect(() => {
             requestAnimationFrame(() => {
                 if (null != S.current) {
-                    let e = S.current.querySelector('.'.concat(p.tag));
+                    let e = S.current.querySelector(".".concat(p.tag));
                     null != e && e.focus();
                 }
             });
@@ -65,32 +65,32 @@ function j(e) {
             ref: (e) => {
                 null == j || j(e);
             },
-            'aria-label': x.intl.string(x.t.TdqRTk),
+            "aria-label": x.intl.string(x.t.TdqRTk),
             className: p.container,
             children: [
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: p.header,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: p.headerLeft,
                         children: [
                             (0, r.jsx)(c.X6q, {
-                                color: 'interactive-normal',
-                                variant: 'heading-md/semibold',
+                                color: "interactive-normal",
+                                variant: "heading-md/semibold",
                                 className: p.headerText,
-                                children: x.intl.string(x.t.HPu3kp)
+                                children: x.intl.string(x.t.HPu3kp),
                             }),
-                            (0, r.jsx)('div', {
+                            (0, r.jsx)("div", {
                                 className: p.countContainer,
                                 children: (0, r.jsx)(c.Text, {
                                     className: p.countText,
-                                    color: 'none',
-                                    variant: 'text-xs/medium',
+                                    color: "none",
+                                    variant: "text-xs/medium",
                                     tabularNumbers: !0,
-                                    children: C.size
-                                })
-                            })
-                        ]
-                    })
+                                    children: C.size,
+                                }),
+                            }),
+                        ],
+                    }),
                 }),
                 (0, r.jsx)(a.bG, {
                     navigator: P,
@@ -109,48 +109,53 @@ function j(e) {
                                                 r,
                                                 i = {},
                                                 l = Object.keys(e);
-                                            for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                            for (r = 0; r < l.length; r++)
+                                                (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                             return i;
                                         })(e, t);
                                     if (Object.getOwnPropertySymbols) {
                                         var l = Object.getOwnPropertySymbols(e);
-                                        for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                                        for (r = 0; r < l.length; r++)
+                                            (n = l[r]),
+                                                !(t.indexOf(n) >= 0) &&
+                                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                    (i[n] = e[n]);
                                     }
                                     return i;
-                                })(e, ['ref']);
+                                })(e, ["ref"]);
                             return (0, r.jsx)(
-                                'div',
+                                "div",
                                 ((t = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
+                                        "function" == typeof Object.getOwnPropertySymbols &&
                                             (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
+                                                }),
                                             )),
                                             r.forEach(function (t) {
                                                 var r;
-                                                ((r = n[t]),
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
                                                               value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
-                                                              writable: !0
+                                                              writable: !0,
                                                           })
-                                                        : (e[t] = r));
-                                            }));
+                                                        : (e[t] = r);
+                                            });
                                     }
                                     return e;
                                 })(
                                     {
                                         ref: (e) => {
-                                            ((i.current = e), (S.current = e));
-                                        }
+                                            (i.current = e), (S.current = e);
+                                        },
                                     },
-                                    l
+                                    l,
                                 )),
                                 (n = n =
                                     {
@@ -162,11 +167,11 @@ function j(e) {
                                                     className: p.tag,
                                                     tag: e,
                                                     selected: C.has(e.id),
-                                                    onClick: () => O(e.id)
+                                                    onClick: () => O(e.id),
                                                 },
-                                                e.id
-                                            )
-                                        )
+                                                e.id,
+                                            ),
+                                        ),
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -180,26 +185,26 @@ function j(e) {
                                       })(Object(n)).forEach(function (e) {
                                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                       }),
-                                t)
+                                t),
                             );
-                        }
-                    })
+                        },
+                    }),
                 }),
-                (0, r.jsx)('div', { className: p.separator }),
+                (0, r.jsx)("div", { className: p.separator }),
                 (0, r.jsx)(o.zx, {
                     look: o.zx.Looks.LINK,
                     size: o.zx.Sizes.MIN,
                     color: o.zx.Colors.CUSTOM,
                     className: p.clear,
-                    'aria-label': x.intl.string(x.t['98EPQE']),
+                    "aria-label": x.intl.string(x.t["98EPQE"]),
                     onClick: w,
                     children: (0, r.jsx)(c.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'text-link',
-                        children: x.intl.string(x.t['98EPQE'])
-                    })
-                })
-            ]
+                        variant: "text-sm/medium",
+                        color: "text-link",
+                        children: x.intl.string(x.t["98EPQE"]),
+                    }),
+                }),
+            ],
         })
     );
 }

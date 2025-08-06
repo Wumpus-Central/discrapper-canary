@@ -12,4 +12,4 @@ function c() {
         return 0 !== e.length && e.some((e) => e.overlayMethod !== s.gl.Disabled && o.default.isInputLocked(e.pid));
     });
 }
-new i.Z('OverlayUtils');
+new i.Z("OverlayUtils");

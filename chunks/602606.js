@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685), n(457542));
+n.d(t, { Z: () => f }), n(388685), n(457542);
 var r = n(73800),
     i = n(442837),
     o = n(430824),
@@ -19,13 +19,13 @@ function f(e) {
                 return {
                     joinRequest: null,
                     isModmin: !1,
-                    guild: null
+                    guild: null,
                 };
             let n = null != (e = o.Z.getGuild(t.guildId)) ? e : u.Z.getJoinRequestGuild(t.guildId);
             return {
                 joinRequest: t,
                 isModmin: null != n && a.Z.can(d.Plq.KICK_MEMBERS, n),
-                guild: n
+                guild: n,
             };
         });
     return (
@@ -42,7 +42,7 @@ function f(e) {
         {
             loading: t,
             joinRequest: h,
-            joinRequestGuild: m
+            joinRequestGuild: m,
         }
     );
 }

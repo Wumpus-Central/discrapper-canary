@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => c }), r(314940));
+r.d(t, { Z: () => c }), r(314940);
 var n = r(255367);
 r(73800);
 var i = r(278074),
@@ -11,15 +11,15 @@ function c(e) {
         c = (0, s.M)((0, o.R_)(t), !0, !1, r);
     if (null == c) return null;
     let u = (0, i.EQ)(c.type)
-        .with(a.K.RATE_LIMIT, () => 'info')
-        .with(a.K.ERROR, () => 'error')
-        .with(a.K.AVAILABLE, () => 'success')
+        .with(a.K.RATE_LIMIT, () => "info")
+        .with(a.K.ERROR, () => "error")
+        .with(a.K.AVAILABLE, () => "success")
         .with(a.K.INTERNAL_ERROR, () => null)
         .exhaustive();
     return null == u
         ? null
         : (0, n.jsx)(l.Z, {
               type: u,
-              children: c.message
+              children: c.message,
           });
 }

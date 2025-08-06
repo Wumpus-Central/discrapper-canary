@@ -7,10 +7,10 @@ class i extends n.ZP.Store {
         return l;
     }
     setOverrideWidgets(e) {
-        ((l = e), this.emitChange());
+        (l = e), this.emitChange();
     }
     clearOverrides() {
-        ((l = null), this.emitChange());
+        (l = null), this.emitChange();
     }
 }
 let s = new i(r.Z, {});

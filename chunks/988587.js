@@ -1,4 +1,4 @@
-(n.d(t, { b: () => u }), n(388685));
+n.d(t, { b: () => u }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(255432),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -20,15 +20,15 @@ function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 s(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -55,25 +55,25 @@ function u(e) {
         let e = t.component;
         return (0, r.jsx)(e, l({}, s));
     };
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a.main,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a.canvas,
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: a.storyContent,
-                    children: d()
-                })
+                    children: d(),
+                }),
             }),
             null != t.controls &&
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     className: a.controls,
                     children: (0, r.jsx)(o.a, {
                         controls: t.controls,
                         props: s,
-                        onPropsChange: u
-                    })
-                })
-        ]
+                        onPropsChange: u,
+                    }),
+                }),
+        ],
     });
 }

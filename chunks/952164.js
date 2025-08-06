@@ -1,17 +1,17 @@
-(n.d(t, {
+n.d(t, {
     KK: () => l,
     Z5: () => u,
     aG: () => c,
-    d$: () => d
+    d$: () => d,
 }),
-    n(415506));
+    n(415506);
 var r = n(358085),
     i = n(18323),
     o = n(647162),
     a = n(616922);
 function s(e, t, n) {
     let s;
-    ((0, r.isDesktop)() || (s = window.open('', '_blank')),
+    (0, r.isDesktop)() || (s = window.open("", "_blank")),
         (0, o.iy)(e, t)
             .then((e) => n(e))
             .then((e) => {
@@ -21,7 +21,7 @@ function s(e, t, n) {
             })
             .catch(() => {
                 null != s && s.close();
-            }));
+            });
 }
 function l() {
     window.open(a.C7.PREMIUM_SITE);
@@ -40,20 +40,21 @@ function u(e, t) {
         var n;
         let { album_id: r } = t;
         return {
-            resourceType: (0, a.c8)(null == (n = e.metadata) ? void 0 : n.type) === a.Hw.EPISODE ? a.Hw.SHOW : a.Hw.ALBUM,
-            resourceId: r
+            resourceType:
+                (0, a.c8)(null == (n = e.metadata) ? void 0 : n.type) === a.Hw.EPISODE ? a.Hw.SHOW : a.Hw.ALBUM,
+            resourceId: r,
         };
     });
 }
 function d(e, t, n) {
     s(e, t, (e) => {
         let { artist_ids: t } = e;
-        if (null == t) throw Error('no artist ids in metadata');
+        if (null == t) throw Error("no artist ids in metadata");
         let r = t[n];
-        if (null == r) throw Error('invalid artist index');
+        if (null == r) throw Error("invalid artist index");
         return {
             resourceType: a.Hw.ARTIST,
-            resourceId: r
+            resourceId: r,
         };
     });
 }

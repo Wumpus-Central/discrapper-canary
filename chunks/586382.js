@@ -1,7 +1,7 @@
 n.d(t, {
     hH: () => g,
     xl: () => p,
-    zA: () => m
+    zA: () => m,
 });
 var r = n(255367),
     i = n(73800),
@@ -12,11 +12,18 @@ var r = n(255367),
     c = n(30513),
     d = n(187561);
 function u(e) {
-    let { guild: t, guildFeature: n, analyticsSection: o, analyticsObject: c, getPerks: u, targetPremiumGuildTier: m } = e,
+    let {
+            guild: t,
+            guildFeature: n,
+            analyticsSection: o,
+            analyticsObject: c,
+            getPerks: u,
+            targetPremiumGuildTier: m,
+        } = e,
         { analyticsLocations: g } = (0, l.ZP)(),
         p = i.useCallback(
             (e) => {
-                (e.preventDefault(),
+                e.preventDefault(),
                     e.stopPropagation(),
                     (0, s.E6)({
                         guild: t,
@@ -24,16 +31,16 @@ function u(e) {
                         analyticsSection: o,
                         analyticsObject: c,
                         perks: u(),
-                        targetPremiumGuildTier: m
-                    }));
+                        targetPremiumGuildTier: m,
+                    });
             },
-            [g, c, o, t, u, m]
+            [g, c, o, t, u, m],
         );
     return (0, r.jsx)(a.Z, {
         guild: t,
         guildFeature: n,
         className: d.guildFeatureAvailabilityIndicator,
-        onClick: p
+        onClick: p,
     });
 }
 function m(e) {
@@ -43,7 +50,7 @@ function m(e) {
         guildFeature: o.oNc.BANNER,
         analyticsSection: o.jXE.GUILD_BANNER,
         analyticsObject: o.qAy.BADGE,
-        getPerks: c.XO
+        getPerks: c.XO,
     });
 }
 function g(e) {
@@ -53,7 +60,7 @@ function g(e) {
         guildFeature: o.oNc.INVITE_SPLASH,
         analyticsSection: o.jXE.GUILD_INVITE_BACKGROUND,
         analyticsObject: o.qAy.BADGE,
-        getPerks: c.o9
+        getPerks: c.o9,
     });
 }
 function p(e) {
@@ -64,6 +71,6 @@ function p(e) {
         analyticsSection: o.jXE.GUILD_SETTINGS_VANITY_URL,
         analyticsObject: o.qAy.BADGE,
         getPerks: c.WW,
-        targetPremiumGuildTier: o.Eu4.TIER_3
+        targetPremiumGuildTier: o.Eu4.TIER_3,
     });
 }

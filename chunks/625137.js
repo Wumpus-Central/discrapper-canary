@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     BL: () => s,
     C$: () => c,
     EO: () => u,
-    y2: () => l
+    y2: () => l,
 }),
     n(642613),
     n(388685),
-    n(512722));
+    n(512722);
 var r = n(539600),
     i = n(709054);
 function o(e, t, n) {
@@ -16,7 +16,7 @@ function o(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -26,24 +26,32 @@ function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 o(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function s(e) {
-    return (e.sort(l), e);
+    return e.sort(l), e;
 }
 function l(e, t) {
     let n = e.guildId;
-    return e.id === n ? (t.id === n ? i.default.compare(e.id, t.id) : 1) : t.id === n ? -1 : e.position !== t.position ? t.position - e.position : i.default.compare(e.id, t.id);
+    return e.id === n
+        ? t.id === n
+            ? i.default.compare(e.id, t.id)
+            : 1
+        : t.id === n
+          ? -1
+          : e.position !== t.position
+            ? t.position - e.position
+            : i.default.compare(e.id, t.id);
 }
 function c(e, t) {
     return 0 > l(e, t);

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => V }), n(388685), n(997841), n(358797));
+n.d(t, { Z: () => V }), n(388685), n(997841), n(358797);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -62,7 +62,7 @@ function g(e, t) {
         e
     );
 }
-let E = 'LibraryApplicationStore';
+let E = "LibraryApplicationStore";
 function b() {
     var e;
     return null != (e = s.K.get(E)) ? e : {};
@@ -91,7 +91,7 @@ function P() {
 }
 function w(e) {
     let { libraryApplications: t } = e;
-    ((O = {}), R(t), (y = !0));
+    (O = {}), R(t), (y = !0);
 }
 function D(e) {
     let { libraryApplications: t } = e;
@@ -101,22 +101,22 @@ function L(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.Tu)(t, n),
         o = B(t, n);
-    (null != o && !o.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i));
+    null != o && !o.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i);
 }
 function x(e) {
     let { libraryApplication: t } = e,
         n = c.Z.createFromServer(t),
         r = (0, d.Tu)(n.id, n.branchId);
-    ((O[r] = n), I.delete(r));
+    (O[r] = n), I.delete(r);
 }
 function M(e) {
     let { applicationId: t, branchId: n, launchOptionId: r } = e;
-    ((S[(0, d.Tu)(t, n)] = r), N());
+    (S[(0, d.Tu)(t, n)] = r), N();
 }
 function k(e) {
     let { applicationId: t, branchId: n } = e;
     if (T[t] === n) return !1;
-    ((T[t] = n), C());
+    (T[t] = n), C();
 }
 function j(e) {
     let { libraryApplications: t } = e;
@@ -146,7 +146,9 @@ class F extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = s.K.get(E);
-        null != e && (null == e.activeLaunchOptionIds ? N() : (S = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (T = e.activeLibraryApplicationBranchIds));
+        null != e &&
+            (null == e.activeLaunchOptionIds ? N() : (S = e.activeLaunchOptionIds),
+            null == e.activeLibraryApplicationBranchIds ? C() : (T = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
         return G((e) => !e.isHidden());
@@ -204,11 +206,11 @@ class F extends (r = a.ZP.Store) {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (y) return (setImmediate(e), !1);
+            if (y) return setImmediate(e), !1;
         });
     }
 }
-p(F, 'displayName', 'LibraryApplicationStore');
+p(F, "displayName", "LibraryApplicationStore");
 let V = new F(l.Z, {
     LOGOUT: P,
     LIBRARY_FETCH_SUCCESS: w,
@@ -219,5 +221,5 @@ let V = new F(l.Z, {
     LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: M,
     LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: k,
     LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: j,
-    DEVELOPER_TEST_MODE_RESET: U
+    DEVELOPER_TEST_MODE_RESET: U,
 });

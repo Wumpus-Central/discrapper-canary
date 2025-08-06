@@ -5,19 +5,27 @@ var r = n(73800),
     a = n(691251),
     s = n(98528);
 let l = (e) => {
-    let { columnCounts: t, stickersGrid: n, stickersListRef: l, store: c, gridNavigatorId: u, setInspectedStickerPosition: d, onGridItemSelect: f } = e,
+    let {
+            columnCounts: t,
+            stickersGrid: n,
+            stickersListRef: l,
+            store: c,
+            gridNavigatorId: u,
+            setInspectedStickerPosition: d,
+            onGridItemSelect: f,
+        } = e,
         _ = (0, o.O)(),
         p = r.useCallback(
             (e) => {
                 f(e, _);
             },
-            [f, _]
+            [f, _],
         ),
         h = r.useCallback(
             (e, t) => {
                 d(e, t, a.u.GRID_NAVIGATOR_EVENT);
             },
-            [d]
+            [d],
         ),
         {
             gridDispatch: m,
@@ -25,14 +33,14 @@ let l = (e) => {
             getRowProps: E,
             gridContainerProps: b,
             handleGridContainerKeyDown: y,
-            isUsingKeyboardNavigation: O
+            isUsingKeyboardNavigation: O,
         } = (0, s.VO)({
             columnCounts: t,
             gridNavigatorId: u,
             itemGrid: n,
             itemList: l,
             onGridNavigatorItemSelect: p,
-            onGridNavigatorPositionChange: h
+            onGridNavigatorPositionChange: h,
         });
     return (
         r.useEffect(
@@ -46,18 +54,18 @@ let l = (e) => {
                             m({
                                 type: i.s.SET_FOCUSED_POSITION,
                                 x: t,
-                                y: n
+                                y: n,
                             });
-                    }
+                    },
                 ),
-            [m, c]
+            [m, c],
         ),
         {
             getItemProps: g,
             getRowProps: E,
             gridContainerProps: b,
             handleGridContainerKeyDown: y,
-            isUsingKeyboardNavigation: O
+            isUsingKeyboardNavigation: O,
         }
     );
 };

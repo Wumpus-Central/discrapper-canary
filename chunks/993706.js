@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685), n(467055));
+n.d(t, { Z: () => E }), n(388685), n(467055);
 var r,
     i = n(442837),
     o = n(570140),
@@ -10,7 +10,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,7 +21,7 @@ let l = null,
     u = { reportedMessages: {} };
 function d(e) {
     let { channelId: t, messageId: n } = e;
-    (null == u.reportedMessages[t] && (u.reportedMessages[t] = new Set()), u.reportedMessages[t].add(n));
+    null == u.reportedMessages[t] && (u.reportedMessages[t] = new Set()), u.reportedMessages[t].add(n);
 }
 function f() {
     let e = a.Z.getLastSelectedGuildId();
@@ -42,30 +42,30 @@ function h(e) {
             t.map((e) => {
                 var t;
                 return null == (t = e.user) ? void 0 : t.id;
-            })
+            }),
         ),
         o = Array.from(new Set(null != r ? r : [])).filter((e) => !i.has(e));
-    (null == c && (c = new Map()),
+    null == c && (c = new Map()),
         i.forEach((e) => {
             null == c || c.set(e, !0);
         }),
         o.forEach((e) => {
             null == c || c.set(e, !1);
-        }));
+        });
 }
 function m() {
-    ((l = null), (c = null), (u.reportedMessages = {}));
+    (l = null), (c = null), (u.reportedMessages = {});
 }
 class g extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (null != e &&
+        null != e &&
             (u.reportedMessages = Object.fromEntries(
                 Object.entries(e.reportedMessages).map((e) => {
                     let [t, n] = e;
                     return [t, new Set(n)];
-                })
+                }),
             )),
-            this.syncWith([a.Z], f));
+            this.syncWith([a.Z], f);
     }
     getState() {
         return u;
@@ -82,18 +82,18 @@ class g extends (r = i.ZP.PersistedStore) {
         return null != (r = null == (n = u.reportedMessages[e]) ? void 0 : n.has(t)) && r;
     }
 }
-(s(g, 'displayName', 'ReportToModStore'),
-    s(g, 'persistKey', 'ReportToModStore'),
-    s(g, 'migrations', [
+s(g, "displayName", "ReportToModStore"),
+    s(g, "persistKey", "ReportToModStore"),
+    s(g, "migrations", [
         (e) => {
             var t;
             return { reportedMessages: null != (t = null == e ? void 0 : e.reportedMessages) ? t : {} };
-        }
-    ]));
+        },
+    ]);
 let E = new g(o.Z, {
     REPORT_TO_MOD_REPORT_MESSAGE_SUCCESS: d,
     GUILD_BAN_ADD: _,
     GUILD_BAN_REMOVE: p,
     GUILD_SETTINGS_LOADED_BANS_BATCH: h,
-    LOGOUT: m
+    LOGOUT: m,
 });

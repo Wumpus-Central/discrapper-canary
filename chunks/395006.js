@@ -17,21 +17,21 @@ var e = n(220159),
             return (
                 1 !==
                 p
-                    .groupBy('ab', function (t) {
+                    .groupBy("ab", function (t) {
                         return t;
                     })
-                    .get('a').length
+                    .get("a").length
             );
         });
 e(
     {
-        target: 'Map',
+        target: "Map",
         stat: !0,
-        forced: f || x
+        forced: f || x,
     },
     {
         groupBy: function (t, r) {
-            (u(t), i(r));
+            u(t), i(r);
             var n = new p(),
                 e = 0;
             return (
@@ -41,6 +41,6 @@ e(
                 }),
                 n
             );
-        }
-    }
+        },
+    },
 );

@@ -25,24 +25,24 @@ let b = function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
+                                "function" == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
+                                        }),
                                     )),
                                     r.forEach(function (t) {
                                         var r;
-                                        ((r = n[t]),
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
-                                                      writable: !0
+                                                      writable: !0,
                                                   })
-                                                : (e[t] = r));
-                                    }));
+                                                : (e[t] = r);
+                                    });
                             }
                             return e;
                         })({}, e)),
@@ -51,7 +51,7 @@ let b = function (e) {
                                 presenceCount: void 0,
                                 memberCount: void 0,
                                 premiumSubscriptionCount: void 0,
-                                emojis: void 0
+                                emojis: void 0,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -68,15 +68,15 @@ let b = function (e) {
                         t
                     );
                 }),
-            [n]
+            [n],
         );
     return (0, r.jsxs)(u.Z, {
         onScroll: t,
         children: [
             (0, r.jsx)(s.Z, {
                 title: f.intl.string(f.t.X5xPlZ),
-                description: f.intl.string(f.t['F/IQCA']),
-                children: (0, r.jsx)(o.Z, {})
+                description: f.intl.string(f.t["F/IQCA"]),
+                children: (0, r.jsx)(o.Z, {}),
             }),
             (0, r.jsxs)(c.Z, {
                 children: [
@@ -85,11 +85,11 @@ let b = function (e) {
                               children: [
                                   (0, r.jsx)(l.X6q, {
                                       className: g.sectionTitle,
-                                      variant: 'heading-lg/semibold',
-                                      color: 'header-primary',
-                                      children: f.intl.string(f.t['2DfZIS'])
+                                      variant: "heading-lg/semibold",
+                                      color: "header-primary",
+                                      children: f.intl.string(f.t["2DfZIS"]),
                                   }),
-                                  (0, r.jsxs)('div', {
+                                  (0, r.jsxs)("div", {
                                       className: g.content,
                                       children: [
                                           b.map((e) =>
@@ -97,40 +97,40 @@ let b = function (e) {
                                                   h.VD,
                                                   {
                                                       guild: e,
-                                                      onClick: () => a.Z.transitionToGuildSync(e.id)
+                                                      onClick: () => a.Z.transitionToGuildSync(e.id),
                                                   },
-                                                  e.id
-                                              )
+                                                  e.id,
+                                              ),
                                           ),
-                                          (0, r.jsx)(d.Z, { hasHub: !0 })
-                                      ]
-                                  })
-                              ]
+                                          (0, r.jsx)(d.Z, { hasHub: !0 }),
+                                      ],
+                                  }),
+                              ],
                           })
-                        : (0, r.jsx)('div', {
+                        : (0, r.jsx)("div", {
                               className: g.content,
-                              children: (0, r.jsx)(d.Z, { hasHub: !1 })
+                              children: (0, r.jsx)(d.Z, { hasHub: !1 }),
                           }),
-                    (0, r.jsx)('div', { className: m.divider }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsx)("div", { className: m.divider }),
+                    (0, r.jsxs)("div", {
                         className: m.disclaimer,
                         children: [
                             (0, r.jsxs)(l.Text, {
                                 className: m.text,
-                                variant: 'text-sm/medium',
-                                color: 'header-secondary',
-                                children: [f.intl.string(f.t.O1k9XV), ' ']
+                                variant: "text-sm/medium",
+                                color: "header-secondary",
+                                children: [f.intl.string(f.t.O1k9XV), " "],
                             }),
                             (0, r.jsx)(l.Text, {
                                 className: m.text,
-                                variant: 'text-sm/medium',
-                                color: 'header-secondary',
-                                children: f.intl.string(f.t.FV5dvr)
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
+                                variant: "text-sm/medium",
+                                color: "header-secondary",
+                                children: f.intl.string(f.t.FV5dvr),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
     });
 };

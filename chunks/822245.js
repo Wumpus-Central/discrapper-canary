@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(539854));
+n.d(t, { Z: () => N }), n(539854);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,15 +27,15 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -43,11 +43,11 @@ function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -69,12 +69,12 @@ let E = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
         computeWeight: (e) => (e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1),
         lookupKey: (e) => e,
         afterCompute: () => {},
-        numFrequentlyItems: f.yP
+        numFrequentlyItems: f.yP,
     });
 function O(e) {
     let {
         settings: { type: t },
-        wasSaved: n
+        wasSaved: n,
     } = e;
     if (t !== _.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     b.pendingUsages = [];
@@ -90,24 +90,27 @@ function I(e) {
     T(t);
 }
 function T(e) {
-    (b.pendingUsages.push({
+    b.pendingUsages.push({
         key: e,
-        timestamp: Date.now()
+        timestamp: Date.now(),
     }),
         y.track(e),
-        y.compute());
+        y.compute();
 }
 function S() {
     var e, t;
-    let n = null != (t = null == (e = d.Z.frecencyWithoutFetchingLatest.applicationFrecency) ? void 0 : e.applications) ? t : {};
+    let n =
+        null != (t = null == (e = d.Z.frecencyWithoutFetchingLatest.applicationFrecency) ? void 0 : e.applications)
+            ? t
+            : {};
     y.overwriteHistory(
         o().mapValues(n, (e) => g(h({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
-        b.pendingUsages
+        b.pendingUsages,
     );
 }
 class A extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        (null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], S));
+        null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], S);
     }
     getState() {
         return b;
@@ -126,9 +129,9 @@ class A extends (r = a.ZP.PersistedStore) {
         return y.frequently;
     }
 }
-(p(A, 'displayName', 'ApplicationFrecencyStore'), p(A, 'persistKey', 'ApplicationFrecency'));
+p(A, "displayName", "ApplicationFrecencyStore"), p(A, "persistKey", "ApplicationFrecency");
 let N = new A(s.Z, {
     APPLICATION_COMMAND_USED: v,
     EMBEDDED_ACTIVITY_OPEN: I,
-    USER_SETTINGS_PROTO_UPDATE: O
+    USER_SETTINGS_PROTO_UPDATE: O,
 });

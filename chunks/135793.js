@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     default: () => G,
-    s: () => U
+    s: () => U,
 }),
     n(388685),
     n(704826),
-    n(35282));
+    n(35282);
 var r = n(255367),
     i = n(73800),
     o = n(990547),
@@ -40,7 +40,7 @@ function w(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -50,15 +50,15 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 w(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -66,11 +66,11 @@ function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -87,9 +87,9 @@ function x(e, t) {
 }
 let M = 190,
     k = 178,
-    j = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
+    j = "MESSAGE_CONFETTI_POTION_MODAL_KEY",
     U = (e) => {
-        let { channelId: t, message: i, onRedeem: o, onClose: a, buttonUseState: c = 'activate', source: u } = e,
+        let { channelId: t, message: i, onRedeem: o, onClose: a, buttonUseState: c = "activate", source: u } = e,
             d = h.Z.getChannel(t);
         null != d &&
             ((0, f.Q3)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
@@ -105,11 +105,11 @@ let M = 190,
                                 onRedeem: o,
                                 onUnmount: a,
                                 source: u,
-                                buttonUseState: c
-                            })
+                                buttonUseState: c,
+                            }),
                         );
                 },
-                { modalKey: j }
+                { modalKey: j },
             ));
     };
 function G(e) {
@@ -121,15 +121,15 @@ function G(e) {
             transitionState: t,
             impression: {
                 impressionName: o.ImpressionNames.CONFETTI_POTION_MODAL,
-                impressionProperties: { source: d }
+                impressionProperties: { source: d },
             },
-            parentComponent: 'MessageConfettiConsumableModal',
+            parentComponent: "MessageConfettiConsumableModal",
             children: (0, r.jsx)(B, {
                 channel: n,
                 message: a,
                 onRedeem: s,
-                buttonUseState: u
-            })
+                buttonUseState: u,
+            }),
         })
     );
 }
@@ -148,7 +148,7 @@ function B(e) {
         () => () => {
             N && (0, E.SN)(O.D1);
         },
-        [N, c]
+        [N, c],
     );
     let w = (0, i.useCallback)(() => {
             null != _ && ((0, l.pTH)(), o(_));
@@ -158,15 +158,15 @@ function B(e) {
                 skuId: O.D1,
                 analyticsLocations: C,
                 onComplete: () => {
-                    (w(), (0, E.gA)(O.D1));
+                    w(), (0, E.gA)(O.D1);
                 },
-                variantsReturnStyle: a.v.INDIVIDUAL_PRODUCTS
+                variantsReturnStyle: a.v.INDIVIDUAL_PRODUCTS,
             });
         }, [w, C]),
         L = (0, i.useCallback)(() => (R ? w() : D()), [w, D, R]),
         x = (0, i.useMemo)(() => {
             if (null != y) {
-                if ('apply' === s) return 3;
+                if ("apply" === s) return 3;
                 if (y.type === A.qc2.DEVELOPER_GIFT) return 1;
                 if (R) return 2;
             }
@@ -181,11 +181,20 @@ function B(e) {
         onActionClick: L,
         loading: P,
         selectedEmoji: null != _ ? _ : void 0,
-        isReaction: c
+        isReaction: c,
     });
 }
 let Z = (e) => {
-        let { channel: t, buttonPurchaseState: n, buttonDisabledState: o, price: a, onActionClick: s, loading: l, selectedEmoji: c, isReaction: u } = e,
+        let {
+                channel: t,
+                buttonPurchaseState: n,
+                buttonDisabledState: o,
+                price: a,
+                onActionClick: s,
+                loading: l,
+                selectedEmoji: c,
+                isReaction: u,
+            } = e,
             d = (0, i.useRef)(null);
         return ((0, i.useEffect)(() => {
             var e;
@@ -200,10 +209,10 @@ let Z = (e) => {
                     x: r,
                     y: i,
                     w: o,
-                    h: a
+                    h: a,
                 },
                 !0,
-                y.LL.ConfettiPreview
+                y.LL.ConfettiPreview,
             );
         }, [c]),
         l)
@@ -212,69 +221,71 @@ let Z = (e) => {
               ? (0, r.jsx)(K, {})
               : (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: R.modal,
                             ref: d,
                             children: (0, r.jsx)(F, {
                                 channel: t,
                                 selectedEmoji: c,
-                                isReaction: u
-                            })
+                                isReaction: u,
+                            }),
                         }),
                         (0, r.jsx)(H, {
                             buttonPurchaseState: n,
                             buttonDisabledState: o,
                             price: a,
-                            onActionClick: s
-                        })
-                    ]
+                            onActionClick: s,
+                        }),
+                    ],
                 });
     },
     F = (e) => {
         let { channel: t, selectedEmoji: n, isReaction: i } = e;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: R.body,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: R.header,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: R.heading,
                             children: [
                                 (0, r.jsx)(l.X6q, {
-                                    variant: 'heading-lg/bold',
-                                    children: C.intl.string(C.t['5/knv7'])
+                                    variant: "heading-lg/bold",
+                                    children: C.intl.string(C.t["5/knv7"]),
                                 }),
-                                (0, r.jsx)(_.Z, {})
-                            ]
+                                (0, r.jsx)(_.Z, {}),
+                            ],
                         }),
                         (0, r.jsx)(l.Text, {
-                            variant: 'text-sm/normal',
-                            children: C.intl.string(C.t.NFTQoa)
+                            variant: "text-sm/normal",
+                            children: C.intl.string(C.t.NFTQoa),
                         }),
                         (0, r.jsx)(l.Text, {
-                            color: 'text-link',
-                            variant: 'text-sm/normal',
-                            children: C.intl.format(C.t['jerM9/'], { helpCenterLink: m.Z.getArticleURL(A.BhN.CONFETTI_POTION) })
-                        })
-                    ]
+                            color: "text-link",
+                            variant: "text-sm/normal",
+                            children: C.intl.format(C.t["jerM9/"], {
+                                helpCenterLink: m.Z.getArticleURL(A.BhN.CONFETTI_POTION),
+                            }),
+                        }),
+                    ],
                 }),
-                (0, r.jsx)('div', { className: R.divider }),
-                (0, r.jsxs)('div', {
+                (0, r.jsx)("div", { className: R.divider }),
+                (0, r.jsxs)("div", {
                     className: R.selectContainer,
                     children: [
                         (0, r.jsx)(l.Text, {
-                            variant: 'eyebrow',
-                            children: C.intl.string(C.t.o8XwoK)
+                            variant: "eyebrow",
+                            children: C.intl.string(C.t.o8XwoK),
                         }),
                         (0, r.jsx)(V, {
                             channel: t,
                             selectedEmoji: n,
-                            isReaction: i
-                        })
-                    ]
-                })
-            ]
+                            isReaction: i,
+                        }),
+                    ],
+                }),
+            ],
         });
     },
     V = (e) => {
@@ -289,13 +300,13 @@ let Z = (e) => {
                     null == n
                         ? {
                               emojiName: null,
-                              selectionText: C.intl.string(C.t.KgK5qq)
+                              selectionText: C.intl.string(C.t.KgK5qq),
                           }
                         : {
                               emojiName: null == n.id ? n.optionallyDiverseSequence : n.name,
-                              selectionText: n.name.replace(/_/g, ' ')
+                              selectionText: n.name.replace(/_/g, " "),
                           },
-                [n]
+                [n],
             ),
             p = (0, i.useRef)(null);
         return (0, r.jsx)(T.Z, {
@@ -304,70 +315,70 @@ let Z = (e) => {
             onRequestClose: u,
             setEmojiConfetti: d,
             positionRef: p,
-            position: 'left',
-            align: 'top',
+            position: "left",
+            align: "top",
             children: () =>
                 (0, r.jsx)(l.P3F, {
                     onClick: () => s(!a),
                     className: R.emojiSelect,
-                    children: (0, r.jsxs)('div', {
+                    children: (0, r.jsxs)("div", {
                         className: R.emojiContent,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)("div", {
                                 className: R.selectedEmoji,
                                 children: [
-                                    (0, r.jsx)('div', {
+                                    (0, r.jsx)("div", {
                                         ref: p,
                                         children:
                                             null == n
                                                 ? (0, r.jsx)(l.EO4, {
-                                                      color: 'currentColor',
-                                                      size: 'custom',
-                                                      className: R.emojiIcon
+                                                      color: "currentColor",
+                                                      size: "custom",
+                                                      className: R.emojiIcon,
                                                   })
                                                 : (0, r.jsx)(c.Z, {
                                                       animated: !1,
                                                       emojiId: n.id,
                                                       emojiName: f,
-                                                      className: R.emojiIcon
-                                                  })
+                                                      className: R.emojiIcon,
+                                                  }),
                                     }),
                                     (0, r.jsx)(l.Text, {
-                                        color: 'interactive-active',
-                                        variant: 'text-sm/normal',
-                                        children: _
-                                    })
-                                ]
+                                        color: "interactive-active",
+                                        variant: "text-sm/normal",
+                                        children: _,
+                                    }),
+                                ],
                             }),
                             a
                                 ? (0, r.jsx)(l.u04, {
-                                      color: 'currentColor',
-                                      size: 'custom',
-                                      className: R.chevron
+                                      color: "currentColor",
+                                      size: "custom",
+                                      className: R.chevron,
                                   })
                                 : (0, r.jsx)(l.CJ0, {
-                                      color: 'currentColor',
-                                      size: 'custom',
-                                      className: R.chevron
-                                  })
-                        ]
-                    })
-                })
+                                      color: "currentColor",
+                                      size: "custom",
+                                      className: R.chevron,
+                                  }),
+                        ],
+                    }),
+                }),
         });
     },
     H = (e) => {
         let { buttonPurchaseState: t, buttonDisabledState: n, price: i, onActionClick: o } = e;
-        return (0, r.jsxs)('div', {
+        return (0, r.jsxs)("div", {
             className: R.footer,
             children: [
                 (0, r.jsx)(l.zxk, {
-                    variant: 'secondary',
+                    variant: "secondary",
                     text: C.intl.string(C.t.w2Qbd3),
                     onClick: () => {
                         (0, l.Mr3)(j);
-                    }
+                    },
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: R.footerRight,
                     children: [
                         (0, r.jsx)(Y, {}),
@@ -375,30 +386,30 @@ let Z = (e) => {
                             buttonPurchaseState: t,
                             buttonDisabledState: n,
                             price: i,
-                            onActionClick: o
-                        })
-                    ]
-                })
-            ]
+                            onActionClick: o,
+                        }),
+                    ],
+                }),
+            ],
         });
     },
     Y = () => {
         let { entitlement: e, numPotions: t } = (0, S.t6)(O.D1);
         if (null == t || 0 === t) return null;
-        let n = (null == e ? void 0 : e.type) === A.qc2.DEVELOPER_GIFT ? C.t['b+P6ra'] : C.t.RiQ4cn;
-        return (0, r.jsxs)('div', {
+        let n = (null == e ? void 0 : e.type) === A.qc2.DEVELOPER_GIFT ? C.t["b+P6ra"] : C.t.RiQ4cn;
+        return (0, r.jsxs)("div", {
             className: R.remaining,
             children: [
                 (0, r.jsx)(l.l22, {
-                    color: 'currentColor',
-                    className: R.shootingStar
+                    color: "currentColor",
+                    className: R.shootingStar,
                 }),
                 (0, r.jsx)(l.Text, {
-                    color: 'none',
-                    variant: 'text-sm/semibold',
-                    children: C.intl.formatToPlainString(n, { numPotions: t })
-                })
-            ]
+                    color: "none",
+                    variant: "text-sm/semibold",
+                    children: C.intl.formatToPlainString(n, { numPotions: t }),
+                }),
+            ],
         });
     },
     W = (e) => {
@@ -406,27 +417,27 @@ let Z = (e) => {
             {
                 isDisabled: s,
                 copy: c,
-                tooltipCopy: u
+                tooltipCopy: u,
             } = (0, i.useMemo)(() => {
                 let e = {
                         0: C.intl.formatToPlainString(C.t.POGRmp, {
                             amount: O.pe,
-                            price: (0, g.T4)(o.amount, o.currency)
+                            price: (0, g.T4)(o.amount, o.currency),
                         }),
                         1: C.intl.string(C.t.RrKeDw),
                         2: C.intl.string(C.t.WOXaWF),
-                        3: C.intl.string(C.t['1Qm829'])
+                        3: C.intl.string(C.t["1Qm829"]),
                     },
                     r = {
-                        1: C.intl.string(C.t['Cb8/7+']),
+                        1: C.intl.string(C.t["Cb8/7+"]),
                         2: C.intl.string(C.t.fMkB9P),
-                        3: C.intl.string(C.t['59ElNj'])
+                        3: C.intl.string(C.t["59ElNj"]),
                     },
                     i = 0 !== n;
                 return {
                     isDisabled: i,
                     copy: e[t],
-                    tooltipCopy: i ? r[n] : ''
+                    tooltipCopy: i ? r[n] : "",
                 };
             }, [n, t, o.amount, o.currency]);
         return (0, r.jsx)(l.ua7, {
@@ -439,34 +450,34 @@ let Z = (e) => {
                     x(D({}, e), {
                         onClick: a,
                         disabled: s,
-                        text: c
-                    })
-                )
+                        text: c,
+                    }),
+                ),
         });
     },
     K = () =>
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: R.anomaly,
-            children: (0, r.jsxs)('div', {
+            children: (0, r.jsxs)("div", {
                 className: R.error,
                 children: [
                     (0, r.jsx)(l.Eep, {
                         src: P,
                         width: k,
-                        height: M
+                        height: M,
                     }),
                     (0, r.jsx)(l.Text, {
-                        variant: 'text-md/normal',
-                        children: C.intl.string(C.t.oKJdSk)
-                    })
-                ]
-            })
+                        variant: "text-md/normal",
+                        children: C.intl.string(C.t.oKJdSk),
+                    }),
+                ],
+            }),
         }),
     z = () =>
-        (0, r.jsx)('div', {
+        (0, r.jsx)("div", {
             className: R.anomaly,
-            children: (0, r.jsx)('div', {
+            children: (0, r.jsx)("div", {
                 className: R.spinner,
-                children: (0, r.jsx)(l.$jN, {})
-            })
+                children: (0, r.jsx)(l.$jN, {}),
+            }),
         });

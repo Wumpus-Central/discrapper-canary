@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => S }), r(388685), r(35282));
+r.d(t, { Z: () => S }), r(388685), r(35282);
 var n = r(255367),
     l = r(73800),
     a = r(120356),
@@ -23,7 +23,7 @@ function S(e) {
     var t;
     let { isFetchingCategories: r, isFullScreen: a, scrollerRef: S, tab: y } = e,
         x = (0, d.sp)(),
-        j = null != (t = null == x ? void 0 : x.sessionId) ? t : '',
+        j = null != (t = null == x ? void 0 : x.sessionId) ? t : "",
         { noCache: P, includeUnpublished: T } = (0, v.Z)(),
         L = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         { skus: I, currentPage: k, totalCount: N, isFetchingResults: A } = (0, h.a)(),
@@ -32,7 +32,7 @@ function S(e) {
             var e;
             null == S || null == (e = S.current) || e.scrollToTop({ animate: !0 });
         }, [S]),
-        R = null == I ? void 0 : I.join('');
+        R = null == I ? void 0 : I.join("");
     l.useEffect(() => {
         B();
     }, [R, B]);
@@ -46,7 +46,7 @@ function S(e) {
                 tab: y,
                 isFullScreen: a,
                 unpublishedCategoriesShown: T,
-                cacheDisabled: P
+                cacheDisabled: P,
             });
     }, [j, a, T, P, r, y]);
     let F = l.useRef(null),
@@ -62,30 +62,30 @@ function S(e) {
         let e = new ResizeObserver(() => {
             null != F.current && M(Math.floor(5 * getComputedStyle(F.current).gridTemplateColumns.split(/\s+/).length));
         });
-        if (null != F.current) return (e.observe(F.current), () => e.disconnect());
+        if (null != F.current) return e.observe(F.current), () => e.disconnect();
     }, [M]);
     let q = l.useCallback(
         (e) => {
-            (u.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            u.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: null == x ? void 0 : x.sessionId,
                 page_section: null == x ? void 0 : x.pageSection,
                 page_category: null == x ? void 0 : x.pageCategory,
                 page_index: e,
                 page_size: W,
-                cta_name: 'filter results page '.concat(e),
-                page_type: 'catalog'
+                cta_name: "filter results page ".concat(e),
+                page_type: "catalog",
             }),
-                H((e - 1) * W));
+                H((e - 1) * W);
         },
-        [x, W, H]
+        [x, W, H],
     );
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsxs)('div', {
+            (0, n.jsxs)("div", {
                 className: i()({ [E.productsEmpty]: G }),
                 children: [
                     G && (0, n.jsx)(C.Z, {}),
-                    (0, n.jsxs)('div', {
+                    (0, n.jsxs)("div", {
                         className: i()(E.products, { [E.loadIn]: V }),
                         ref: F,
                         children: [
@@ -105,31 +105,31 @@ function S(e) {
                                                           product: e,
                                                           user: L,
                                                           category: r,
-                                                          tab: y
+                                                          tab: y,
                                                       },
-                                                      e.skuId
-                                                  )
+                                                      e.skuId,
+                                                  ),
                                               },
-                                              e.skuId
+                                              e.skuId,
                                           );
-                                })
-                        ]
-                    })
-                ]
+                                }),
+                        ],
+                    }),
+                ],
             }),
             N > W &&
-                (0, n.jsx)('div', {
+                (0, n.jsx)("div", {
                     className: E.paginationContainer,
-                    children: (0, n.jsx)('div', {
+                    children: (0, n.jsx)("div", {
                         children: (0, n.jsx)(s.DsT, {
                             currentPage: k,
                             totalCount: N,
                             pageSize: W,
                             onPageChange: q,
-                            disablePaginationGap: !0
-                        })
-                    })
-                })
-        ]
+                            disablePaginationGap: !0,
+                        }),
+                    }),
+                }),
+        ],
     });
 }

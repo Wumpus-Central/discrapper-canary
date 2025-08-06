@@ -11,13 +11,13 @@ class u extends i.PureComponent {
         return (0, r.jsx)(a.Z, {
             guild: this.props.guild,
             onClick: () => l.Z.open(o.oAB.ACCOUNT),
-            message: s.intl.format(s.t['oCd+am'], {}),
-            cta: s.intl.string(s.t['8dCrV1']),
+            message: s.intl.format(s.t["oCd+am"], {}),
+            cta: s.intl.string(s.t["8dCrV1"]),
             trackingSource: o.PsQ.GUILD_MFA_WARNING,
             type: o.vID.MFA_WARNING,
             image: c,
             imageMarginX: 54,
-            undismissable: !0
+            undismissable: !0,
         });
     }
 }

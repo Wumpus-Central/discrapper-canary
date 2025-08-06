@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -24,7 +24,7 @@ let I = 2048,
 function S(e) {
     var t;
     let { context: n, application: l, sectionName: c } = e,
-        I = 'channel' === n.type ? n.channel : void 0,
+        I = "channel" === n.type ? n.channel : void 0,
         S = (0, o.e7)([f.Z], () => f.Z.entrypoint()),
         N = null != (t = (0, d.q)(l.id === b.bi.BUILT_IN ? null : l.id)) ? t : l,
         C = (0, p.ye)(N) ? A : E.Z,
@@ -34,9 +34,9 @@ function S(e) {
             () =>
                 (0, p.sl)(N, {
                     fakeAppIconURL: v,
-                    size: T
+                    size: T,
                 }),
-            [N]
+            [N],
         ),
         x = (0, u.PL)(!0, !0),
         M = (0, u.LD)(null == I ? void 0 : I.guild_id, !0),
@@ -50,8 +50,8 @@ function S(e) {
             className: O.container,
             fade: !0,
             ref: R,
-            role: 'region',
-            'aria-label': y.intl.formatToPlainString(y.t['4OP4Ul'], { applicationName: L }),
+            role: "region",
+            "aria-label": y.intl.formatToPlainString(y.t["4OP4Ul"], { applicationName: L }),
             children: [
                 (0, r.jsx)(g.Z, {
                     application: N,
@@ -59,19 +59,19 @@ function S(e) {
                     name: L,
                     iconURL: D,
                     scrollerRef: R,
-                    sectionName: c
+                    sectionName: c,
                 }),
                 null != D &&
                     (0, r.jsx)(h.Z, {
                         src: D,
-                        className: O.appIcon
+                        className: O.appIcon,
                     }),
                 (0, r.jsx)(a.Z, { size: 54 }),
                 (0, r.jsx)(C, {
                     context: n,
                     application: N,
                     sectionName: c,
-                    hasCommands: P
+                    hasCommands: P,
                 }),
                 S === _._b.TEXT
                     ? (0, r.jsx)(m.Z, {
@@ -79,10 +79,10 @@ function S(e) {
                           application: N,
                           sectionName: c,
                           installOnDemand: j,
-                          setHasCommands: w
+                          setHasCommands: w,
                       })
-                    : null
-            ]
+                    : null,
+            ],
         })
     );
 }
@@ -91,16 +91,19 @@ function A(e) {
         a = (0, c.Z)({
             applicationId: n.id,
             size: I,
-            names: ['embedded_cover']
+            names: ["embedded_cover"],
         }),
         s = (0, p.yJ)(n),
-        u = null != s && null != s.activity_preview_video_asset_id ? (0, l.Z)(n.id, s.activity_preview_video_asset_id) : null;
+        u =
+            null != s && null != s.activity_preview_video_asset_id
+                ? (0, l.Z)(n.id, s.activity_preview_video_asset_id)
+                : null;
     return (0, r.jsx)(E.Z, {
         context: t,
         application: n,
         imageCoverUrl: a.url,
         videoUrl: u,
         sectionName: i,
-        hasCommands: o
+        hasCommands: o,
     });
 }

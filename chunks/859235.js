@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => S,
-    q: () => v
+    q: () => v,
 });
 var r = n(255367),
     i = n(73800),
@@ -22,7 +22,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -32,15 +32,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,11 +48,11 @@ function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -74,7 +74,8 @@ function y(e, t) {
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -84,20 +85,31 @@ function O(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var v = (function (e) {
-    return ((e[(e.SMALL = 0)] = 'SMALL'), (e[(e.MEDIUM = 1)] = 'MEDIUM'), (e[(e.CLIP = 2)] = 'CLIP'), e);
+    return (e[(e.SMALL = 0)] = "SMALL"), (e[(e.MEDIUM = 1)] = "MEDIUM"), (e[(e.CLIP = 2)] = "CLIP"), e;
 })({});
 function I(e) {
     e.stopPropagation();
 }
 function T(e, t) {
-    let { id: n, channelId: i, className: o, children: m, actions: E, handleEditModal: O, keyboardModeEnabled: v, onKeyDown: T, draftType: S, size: A = 1 } = e,
+    let {
+            id: n,
+            channelId: i,
+            className: o,
+            children: m,
+            actions: E,
+            handleEditModal: O,
+            keyboardModeEnabled: v,
+            onKeyDown: T,
+            draftType: S,
+            size: A = 1,
+        } = e,
         N = (0, s.JA)(n),
         { onFocus: C } = N,
-        R = y(N, ['onFocus']),
+        R = y(N, ["onFocus"]),
         { handleFocus: P, handleBlur: w } = (0, f.b)(C),
         D = 0 === A,
         L = null != E,
@@ -105,53 +117,55 @@ function T(e, t) {
             if (v) {
                 switch (e.which) {
                     case _.yXg.D:
-                        (e.preventDefault(), c.Z.remove(i, n, S));
+                        e.preventDefault(), c.Z.remove(i, n, S);
                         return;
                     case _.yXg.E:
                         null != O && (e.preventDefault(), O(e));
                         return;
                     case _.yXg.BACKSPACE:
-                        e.ctrlKey ? (e.preventDefault(), c.Z.clearAll(i, S)) : (e.preventDefault(), c.Z.remove(i, n, S));
+                        e.ctrlKey
+                            ? (e.preventDefault(), c.Z.clearAll(i, S))
+                            : (e.preventDefault(), c.Z.remove(i, n, S));
                         return;
                     case _.yXg.ARROW_UP:
                         let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
                         if (t) return;
-                        (e.preventDefault(), d.S.dispatchToLastSubscribed(_.CkL.FOCUS_MESSAGES, { atEnd: !0 }));
+                        e.preventDefault(), d.S.dispatchToLastSubscribed(_.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                 }
                 null == T || T(e);
             }
         };
     return (0, r.jsx)(l.tEY, {
         children: (0, r.jsx)(
-            'li',
+            "li",
             b(g({}, R), {
                 onFocus: P,
                 onBlur: w,
                 onKeyDown: x,
                 className: a()(h.upload, o, { [h.sizeClip]: 2 === A }),
                 ref: t,
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: h.uploadContainer,
                     children: [
                         m,
                         L
-                            ? (0, r.jsx)('div', {
+                            ? (0, r.jsx)("div", {
                                   className: h.actionBarContainer,
-                                  children: (0, r.jsx)('div', {
+                                  children: (0, r.jsx)("div", {
                                       className: a()(h.actionBar, { [h.smallActionBar]: D }),
                                       onContextMenu: I,
-                                      'aria-label': p.intl.string(p.t['8Lu3Dg']),
+                                      "aria-label": p.intl.string(p.t["8Lu3Dg"]),
                                       children: (0, r.jsx)(u.ZP, {
                                           className: a()({ [h.miniPopover]: D }),
-                                          children: E
-                                      })
-                                  })
+                                          children: E,
+                                      }),
+                                  }),
                               })
-                            : null
-                    ]
-                })
-            })
-        )
+                            : null,
+                    ],
+                }),
+            }),
+        ),
     });
 }
 let S = i.forwardRef(T);

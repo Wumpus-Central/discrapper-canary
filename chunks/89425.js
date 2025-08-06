@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(415506));
+n.d(t, { Z: () => f }), n(415506);
 var r = n(430198),
     i = n(557135),
     o = n(66999),
@@ -18,13 +18,13 @@ async function f(e) {
             bypassChangeModal: f,
             channel: _,
             connected: c.Z.isInChannel(t),
-            needSubscriptionToAccess: (0, o.$)(t, a.Z, r.Z, s.Z).needSubscriptionToAccess
+            needSubscriptionToAccess: (0, o.$)(t, a.Z, r.Z, s.Z).needSubscriptionToAccess,
         }))
     )
         return !1;
     let p = new Promise((e, r) => {
         let i = setTimeout(() => {
-            r(new d('Joining voice channel has timed out.'));
+            r(new d("Joining voice channel has timed out."));
         }, n);
         l.Z.addConditionalChangeListener(() => l.Z.getVoiceChannelId() !== t || (clearTimeout(i), e(), !1));
     });

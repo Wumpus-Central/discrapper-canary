@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(539854));
+n.d(t, { Z: () => p }), n(539854);
 var r = n(255367);
 n(73800);
 var i = n(952265),
@@ -14,7 +14,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -24,15 +24,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -40,11 +40,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,37 +61,52 @@ function _(e, t) {
 }
 let p = {
     show(e) {
-        let { title: t, body: n, confirmColor: u, confirmText: f, confirmVariant: p = 'primary', cancelText: h, onConfirm: m, onCancel: g, onCloseCallback: E, secondaryConfirmText: b, onConfirmSecondary: y, className: O, titleClassName: v, contextKey: I } = e,
-            T = l.Z.getCurrentConfig({ location: 'AlertActionCreators' }, { autoTrackExposure: !0 }).enabled;
+        let {
+                title: t,
+                body: n,
+                confirmColor: u,
+                confirmText: f,
+                confirmVariant: p = "primary",
+                cancelText: h,
+                onConfirm: m,
+                onCancel: g,
+                onCloseCallback: E,
+                secondaryConfirmText: b,
+                onConfirmSecondary: y,
+                className: O,
+                titleClassName: v,
+                contextKey: I,
+            } = e,
+            T = l.Z.getCurrentConfig({ location: "AlertActionCreators" }, { autoTrackExposure: !0 }).enabled;
         (0, i.h7)(
             (e) => {
                 if (null == b && T) {
                     let i = [];
                     return (
                         null != h &&
-                            '' !== h &&
+                            "" !== h &&
                             i.push({
                                 text: h,
                                 onClick: () => {
-                                    (null == g || g(), e.onClose());
+                                    null == g || g(), e.onClose();
                                 },
-                                variant: 'secondary'
+                                variant: "secondary",
                             }),
                         i.push({
                             text: null != f ? f : c.intl.string(c.t.BddRzc),
                             onClick: () => {
-                                (null == m || m(), e.onClose());
+                                null == m || m(), e.onClose();
                             },
-                            variant: p
+                            variant: p,
                         }),
                         (0, r.jsx)(
                             o.Modal,
                             _(d({}, e), {
-                                size: 'sm',
+                                size: "sm",
                                 title: t,
                                 subtitle: n,
-                                actions: i
-                            })
+                                actions: i,
+                            }),
                         )
                     );
                 }
@@ -100,7 +115,7 @@ let p = {
                     _(d({}, e), {
                         title: t,
                         body: n,
-                        confirmColor: 'critical-primary' === p ? a.Tt.RED : a.Tt.BRAND,
+                        confirmColor: "critical-primary" === p ? a.Tt.RED : a.Tt.BRAND,
                         confirmText: f,
                         cancelText: h,
                         onConfirm: m,
@@ -108,12 +123,12 @@ let p = {
                         secondaryConfirmText: b,
                         onConfirmSecondary: y,
                         className: O,
-                        titleClassName: v
-                    })
+                        titleClassName: v,
+                    }),
                 );
             },
             { onCloseCallback: E },
-            I
+            I,
         );
     },
     close() {},
@@ -125,14 +140,14 @@ let p = {
                         onConfirm() {
                             t(!0);
                         },
-                        cancelText: c.intl.string(c.t['ETE/oK']),
+                        cancelText: c.intl.string(c.t["ETE/oK"]),
                         onCancel() {
                             t(!1);
-                        }
+                        },
                     },
-                    e
-                )
+                    e,
+                ),
             );
         });
-    }
+    },
 };

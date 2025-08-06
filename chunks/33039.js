@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(388685));
+n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,15 +21,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -37,11 +37,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,7 +61,7 @@ let f = null,
     p = {},
     h = {};
 function m(e, t) {
-    return ''.concat(e, ':').concat(t);
+    return "".concat(e, ":").concat(t);
 }
 function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
@@ -77,15 +77,15 @@ function E(e, t, n, r) {
     var i;
     e in p || (p[e] = {});
     let o = null != (i = p[e][null != t ? t : a.kod]) ? i : {};
-    ((p[e][null != t ? t : a.kod] = d(c({}, o), { [r]: { streamId: n } })), delete h[m(r, e)]);
+    (p[e][null != t ? t : a.kod] = d(c({}, o), { [r]: { streamId: n } })), delete h[m(r, e)];
 }
 function b(e) {
     let { user: t, sessionId: n } = e;
-    ((f = t.id), (_ = n));
+    (f = t.id), (_ = n);
 }
 function y(e) {
     let { user: t, sessionId: n } = e;
-    ((f = t.id), (_ = n));
+    (f = t.id), (_ = n);
 }
 function O(e) {
     let { userId: t, guildId: n, streamId: r, context: i } = e;
@@ -98,7 +98,7 @@ function v(e) {
         let { userId: r, sessionId: i, channelId: o, guildId: s } = t;
         if (null == o && r === f)
             if (i !== _) return e;
-            else ((p = {}), (h = {}));
+            else (p = {}), (h = {});
         else {
             if (null != o || (null == (n = p[r]) ? void 0 : n[null != s ? s : a.kod]) == null) return e;
             g(r, s);
@@ -112,7 +112,7 @@ function I(e) {
         videoStreamId: t,
         userId: n,
         streamKey: r,
-        mediaContext: i
+        mediaContext: i,
     };
 }
 function T(e) {
@@ -139,12 +139,12 @@ class S extends (r = i.ZP.Store) {
         return h[m(e, t)];
     }
 }
-l(S, 'displayName', 'VideoStreamStore');
+l(S, "displayName", "VideoStreamStore");
 let A = new S(o.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: y,
     RTC_CONNECTION_VIDEO: O,
     VOICE_STATE_UPDATES: v,
     VIDEO_STREAM_READY_TIMEOUT: I,
-    CLEAR_VIDEO_STREAM_READY_TIMEOUT: T
+    CLEAR_VIDEO_STREAM_READY_TIMEOUT: T,
 });

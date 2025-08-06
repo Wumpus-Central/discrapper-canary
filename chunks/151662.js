@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -18,23 +18,23 @@ function a(e, t, n) {
 let l = {},
     o = null;
 function c() {
-    ((l = {}), (o = null));
+    (l = {}), (o = null);
 }
 class d extends (i = r.ZP.Store) {
     getEmailSettings() {
         return {
             categories: l,
-            initialized: o
+            initialized: o,
         };
     }
 }
-a(d, 'displayName', 'EmailSettingsStore');
+a(d, "displayName", "EmailSettingsStore");
 let u = new d(s.Z, {
     CONNECTION_OPEN: c,
     LOGOUT: c,
     EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {
         let { settings: t } = e;
-        ((l = t.categories), (o = t.initialized));
+        (l = t.categories), (o = t.initialized);
     },
     EMAIL_SETTINGS_UPDATE_SUCCESS: function (e) {
         let { settings: t } = e;
@@ -46,17 +46,17 @@ let u = new d(s.Z, {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     i = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
+                "function" == typeof Object.getOwnPropertySymbols &&
                     (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
+                        }),
                     )),
                     i.forEach(function (t) {
                         a(e, t, n[t]);
-                    }));
+                    });
             }
             return e;
         })({}, l, t);
-    }
+    },
 });

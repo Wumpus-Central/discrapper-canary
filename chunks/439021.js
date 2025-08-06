@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -21,21 +21,28 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function u(e) {
     let t,
-        { onChooseType: n, onStripePaymentMethodReceived: l, onPaymentRequestFailure: u, onValidPaymentRequest: d, paymentRequestRef: f, paymentRequestWallet: _ } = e,
+        {
+            onChooseType: n,
+            onStripePaymentMethodReceived: l,
+            onPaymentRequestFailure: u,
+            onValidPaymentRequest: d,
+            paymentRequestRef: f,
+            paymentRequestWallet: _,
+        } = e,
         p = {
             paymentLabel: a.intl.string(a.t.ZURqX1),
             paymentRequestRef: f,
@@ -46,17 +53,17 @@ function u(e) {
             onChooseType: n,
             loadingComponent: (0, r.jsx)(i.$jN, {
                 style: { marginTop: 16 },
-                type: i.RAz.PULSING_ELLIPSIS
-            })
+                type: i.RAz.PULSING_ELLIPSIS,
+            }),
         };
     return (
-        (t = 'applePay' === _ ? (0, r.jsx)(o.Ch, c({}, p)) : (0, r.jsx)(o.Tr, c({}, p))),
-        (0, r.jsx)('div', {
+        (t = "applePay" === _ ? (0, r.jsx)(o.Ch, c({}, p)) : (0, r.jsx)(o.Tr, c({}, p))),
+        (0, r.jsx)("div", {
             className: s.body,
             children: (0, r.jsx)(i.hjN, {
                 title: a.intl.string(a.t.eQ2bLi),
-                children: t
-            })
+                children: t,
+            }),
         })
     );
 }

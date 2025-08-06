@@ -1,4 +1,4 @@
-(n.d(e, { Z: () => d }), n(781311));
+n.d(e, { Z: () => d }), n(781311);
 var l = n(913527),
     a = n.n(l),
     r = n(381499),
@@ -8,35 +8,44 @@ var l = n(913527),
     u = n(875425),
     c = n(981631);
 function d(t) {
-    let { text: e, emojiInfo: n, clearAfter: l, analyticsContext: d, createdAtMs: m, prompt: f, customStatusLabel: h, analyticsLocations: p } = t,
+    let {
+            text: e,
+            emojiInfo: n,
+            clearAfter: l,
+            analyticsContext: d,
+            createdAtMs: m,
+            prompt: f,
+            customStatusLabel: h,
+            analyticsLocations: p,
+        } = t,
         b = e.trim();
     if (!(b.length > 0) && null == n) return i.Ok.updateSetting(void 0);
     {
         let t = i.Ok.updateSetting({
-            text: b.length > 0 ? b : '',
+            text: b.length > 0 ? b : "",
             expiresAtMs:
                 null != l && l !== u.FO.DONT_CLEAR
                     ? String(
                           a()()
-                              .add((0, s.Z)(l), 'ms')
+                              .add((0, s.Z)(l), "ms")
                               .toDate()
-                              .getTime()
+                              .getTime(),
                       )
-                    : '0',
-            emojiId: null != n && null != n.id ? n.id : '0',
-            emojiName: null != n ? n.name : '',
+                    : "0",
+            emojiId: null != n && null != n.id ? n.id : "0",
+            emojiName: null != n ? n.name : "",
             createdAtMs: String(null != m ? m : a()().toDate().getTime()),
-            label: null != h ? r.Gm.create({ value: h }) : void 0
+            label: null != h ? r.Gm.create({ value: h }) : void 0,
         });
         return (
             o.default.track(c.rMx.CUSTOM_STATUS_UPDATED, {
                 location: null != d ? d.location : null,
-                emoji_type: null == n ? null : null != n.id ? 'custom' : 'unicode',
+                emoji_type: null == n ? null : null != n.id ? "custom" : "unicode",
                 text_len: b.length,
-                clear_after: null != l ? ''.concat(l) : null,
+                clear_after: null != l ? "".concat(l) : null,
                 prompt_type: null == f ? void 0 : f.value,
                 label: null != h ? h : null,
-                location_stack: p
+                location_stack: p,
             }),
             t
         );

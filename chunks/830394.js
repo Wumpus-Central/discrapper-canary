@@ -1,4 +1,4 @@
-(e.d(n, { Z: () => d }), e(388685));
+e.d(n, { Z: () => d }), e(388685);
 var l = e(255367);
 e(73800);
 var i = e(442837),
@@ -21,7 +21,7 @@ function d(t) {
               label: u.intl.string(u.t.b8606O),
               action: () => {
                   null != e && null != j && (0, c.Z)(j, d.id, n, e);
-              }
+              },
           })
         : null;
 }

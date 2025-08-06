@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -13,7 +13,7 @@ function u(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,15 +23,15 @@ function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 u(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -39,11 +39,11 @@ function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -61,7 +61,7 @@ function _(e, t) {
 let p = {},
     h = new Set();
 function m() {
-    ((p = {}), h.clear());
+    (p = {}), h.clear();
 }
 function g(e) {
     return l.Z.isMessageRequest(e) || c.Z.isSpam(e);
@@ -73,7 +73,7 @@ function E(e, t) {
     p[e] = {
         loaded: !0,
         error: n,
-        message: r
+        message: r,
     };
 }
 function b(e) {
@@ -90,7 +90,7 @@ function O(e) {
 }
 function v(e) {
     let { channel: t } = e;
-    (h.delete(t.id), delete p[t.id]);
+    h.delete(t.id), delete p[t.id];
 }
 function I(e) {
     let t = e.message.channel_id;
@@ -104,14 +104,14 @@ function T(e) {
     p[e.channelId] = {
         loaded: !0,
         error: !1,
-        message: null
+        message: null,
     };
 }
 function S(e) {
     let { requestedChannelIds: t, supplementalData: n } = e,
         r = new Set([...t]);
     for (let e of (n.forEach((e) => {
-        (E(e.channel_id, e.message_preview), r.delete(e.channel_id));
+        E(e.channel_id, e.message_preview), r.delete(e.channel_id);
     }),
     Array.from(r)))
         E(e, null);
@@ -135,13 +135,13 @@ class N extends (r = i.ZP.Store) {
                 (p[e] = {
                     loaded: !1,
                     error: !1,
-                    message: null
+                    message: null,
                 }),
             p[e]
         );
     }
 }
-u(N, 'displayName', 'MessageRequestPreviewStore');
+u(N, "displayName", "MessageRequestPreviewStore");
 let C = new N(o.Z, {
     CONNECTION_OPEN: m,
     CHANNEL_CREATE: y,
@@ -151,5 +151,5 @@ let C = new N(o.Z, {
     MESSAGE_UPDATE: I,
     MESSAGE_DELETE: T,
     LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: S,
-    LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: A
+    LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: A,
 });

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685));
+n.d(t, { Z: () => P }), n(388685);
 var r = n(237997),
     i = n(998502),
     l = n(576027),
@@ -25,24 +25,24 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -55,8 +55,8 @@ let N = S({}, l.A, u.Z, d.Z, h.Z, g.Z, f.Z, m.Z, b.Z, _.Z, O.Z, y.Z, I.Z, v.Z, p
         stores: [r.default],
         transports: [C.Z],
         registerTransportsForEmbeddedPlatform: function () {
-            i.ZP.ensureModule('discord_rpc').then(() => {
+            i.ZP.ensureModule("discord_rpc").then(() => {
                 for (let e of [n(178318).Z, n(967351).Z]) o.Z.registerTransport(e);
             });
-        }
+        },
     };

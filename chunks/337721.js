@@ -12,19 +12,19 @@ function u(e) {
     return (0, r.jsx)(l.ZP, {
         header: o.intl.string(o.t.Hgd22t),
         content: o.intl.string(o.t.SorTPD),
-        asset: (0, r.jsx)('div', {
+        asset: (0, r.jsx)("div", {
             className: s.image,
-            children: (0, r.jsx)('img', {
-                alt: '',
-                src: c
-            })
+            children: (0, r.jsx)("img", {
+                alt: "",
+                src: c,
+            }),
         }),
-        buttonCTA: o.intl.string(o.t['9l+df3']),
+        buttonCTA: o.intl.string(o.t["9l+df3"]),
         onClick: (e) => {
             i.Z.open(t.id, a.pNK.DISCOVERY_LANDING_PAGE);
         },
         secondaryButtonCTA: o.intl.string(o.t.duVdqq),
         onSecondaryClick: () => {},
-        markAsDismissed: n
+        markAsDismissed: n,
     });
 }

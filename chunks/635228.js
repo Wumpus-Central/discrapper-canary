@@ -26,11 +26,11 @@ function m(e) {
         isPaused: t,
         children: (e) =>
             (0, r.jsx)(a.Z, {
-                className: 'left' === e ? u.butterflyImageLeft : u.butterflyImageRight,
+                className: "left" === e ? u.butterflyImageLeft : u.butterflyImageRight,
                 isPaused: t,
                 interval: 200,
-                sources: [d, f]
-            })
+                sources: [d, f],
+            }),
     });
 }
 function g(e) {
@@ -44,13 +44,13 @@ function g(e) {
                     interval: 1000,
                     pointsPerInterval: o.points,
                     isPaused: t,
-                    itemId: l.yN.BUTTERFLY
+                    itemId: l.yN.BUTTERFLY,
                 }),
                 (0, r.jsx)(m, {
                     isPaused: t,
-                    width: n
-                })
-            ]
+                    width: n,
+                }),
+            ],
         })
     );
 }

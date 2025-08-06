@@ -12,10 +12,10 @@ function d(e, t) {
     return null == n
         ? null
         : (0, i.jsx)(r.sNh, {
-              id: 'watch-stream',
-              label: u.intl.string(u.t['7Xq/nZ']),
+              id: "watch-stream",
+              label: u.intl.string(u.t["7Xq/nZ"]),
               action: () => {
-                  (null == t || t(), window.open(n, '_blank'));
-              }
+                  null == t || t(), window.open(n, "_blank");
+              },
           });
 }

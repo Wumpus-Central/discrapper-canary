@@ -1,1 +1,1 @@
-e.exports = { infoMessage: 'infoMessage__56d1c' };
+e.exports = { infoMessage: "infoMessage__56d1c" };

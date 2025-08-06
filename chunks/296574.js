@@ -1,7 +1,7 @@
 n.d(t, {
     FL: () => o,
     XR: () => i,
-    tJ: () => s
+    tJ: () => s,
 });
 let r = new Map(),
     i = (e) => (t, n, r) => {
@@ -12,14 +12,14 @@ let r = new Map(),
                 if (t) {
                     let i = (null == n ? void 0 : n.equalityFn) || Object.is,
                         a = e(r.getState());
-                    ((o = (n) => {
+                    (o = (n) => {
                         let r = e(n);
                         if (!i(a, r)) {
                             let e = a;
                             t((a = r), e);
                         }
                     }),
-                        (null == n ? void 0 : n.fireImmediately) && t(a, a));
+                        (null == n ? void 0 : n.fireImmediately) && t(a, a);
                 }
                 return i(o);
             }),
@@ -41,7 +41,7 @@ function o(e, t) {
             return o instanceof Promise ? o.then(i) : i(o);
         },
         setItem: (e, r) => n.setItem(e, JSON.stringify(r, null == t ? void 0 : t.replacer)),
-        removeItem: (e) => n.removeItem(e)
+        removeItem: (e) => n.removeItem(e),
     };
 }
 let a = (e) => (t) => {
@@ -52,14 +52,14 @@ let a = (e) => (t) => {
                 then: (e) => a(e)(n),
                 catch(e) {
                     return this;
-                }
+                },
             };
         } catch (e) {
             return {
                 then(e) {
                     return this;
                 },
-                catch: (t) => a(t)(e)
+                catch: (t) => a(t)(e),
             };
         }
     },
@@ -71,9 +71,9 @@ let a = (e) => (t) => {
                 version: 0,
                 merge: (e, t) => ({
                     ...t,
-                    ...e
+                    ...e,
                 }),
-                ...t
+                ...t,
             },
             c = !1,
             u = new Set(),
@@ -82,46 +82,51 @@ let a = (e) => (t) => {
         if (!f)
             return e(
                 (...e) => {
-                    (console.warn(`[zustand persist middleware] Unable to update item '${l.name}', the given storage is currently unavailable.`), n(...e));
+                    console.warn(
+                        `[zustand persist middleware] Unable to update item '${l.name}', the given storage is currently unavailable.`,
+                    ),
+                        n(...e);
                 },
                 r,
-                i
+                i,
             );
         let _ = () => {
                 let e = l.partialize({ ...r() });
                 return f.setItem(l.name, {
                     state: e,
-                    version: l.version
+                    version: l.version,
                 });
             },
             p = i.setState;
         i.setState = (e, t) => {
-            (p(e, t), _());
+            p(e, t), _();
         };
         let h = e(
             (...e) => {
-                (n(...e), _());
+                n(...e), _();
             },
             r,
-            i
+            i,
         );
         i.getInitialState = () => h;
         let m = () => {
             var e, t;
             if (!f) return;
-            ((c = !1),
+            (c = !1),
                 u.forEach((e) => {
                     var t;
                     return e(null != (t = r()) ? t : h);
-                }));
+                });
             let i = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = r()) ? e : h)) || void 0;
             return a(f.getItem.bind(f))(l.name)
                 .then((e) => {
                     if (e)
-                        if ('number' != typeof e.version || e.version === l.version) return [!1, e.state];
+                        if ("number" != typeof e.version || e.version === l.version) return [!1, e.state];
                         else {
                             if (l.migrate) return [!0, l.migrate(e.state, e.version)];
-                            console.error("State loaded from storage couldn't be migrated since no migrate function was provided");
+                            console.error(
+                                "State loaded from storage couldn't be migrated since no migrate function was provided",
+                            );
                         }
                     return [!1, void 0];
                 })
@@ -131,7 +136,7 @@ let a = (e) => (t) => {
                     if ((n((s = l.merge(o, null != (t = r()) ? t : h)), !0), i)) return _();
                 })
                 .then(() => {
-                    (null == i || i(s, void 0), (s = r()), (c = !0), d.forEach((e) => e(s)));
+                    null == i || i(s, void 0), (s = r()), (c = !0), d.forEach((e) => e(s));
                 })
                 .catch((e) => {
                     null == i || i(void 0, e);
@@ -140,11 +145,11 @@ let a = (e) => (t) => {
         return (
             (i.persist = {
                 setOptions: (e) => {
-                    ((l = {
+                    (l = {
                         ...l,
-                        ...e
+                        ...e,
                     }),
-                        e.storage && (f = e.storage));
+                        e.storage && (f = e.storage);
                 },
                 clearStorage: () => {
                     null == f || f.removeItem(l.name);
@@ -163,7 +168,7 @@ let a = (e) => (t) => {
                     () => {
                         d.delete(e);
                     }
-                )
+                ),
             }),
             l.skipHydration || m(),
             s || h

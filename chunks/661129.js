@@ -11,20 +11,21 @@ let s = [100, 300],
         (0, E.A)(() => {
             let a,
                 E = (0, _.Y)(),
-                l = (0, n.I)('FID'),
+                l = (0, n.I)("FID"),
                 u = (t) => {
-                    t.startTime < E.firstHiddenTime && ((l.value = t.processingStart - t.startTime), l.entries.push(t), a(!0));
+                    t.startTime < E.firstHiddenTime &&
+                        ((l.value = t.processingStart - t.startTime), l.entries.push(t), a(!0));
                 },
                 I = (t) => {
                     t.forEach(u);
                 },
-                R = (0, o.N)('first-input', I);
-            ((a = (0, r._)(t, l, s, e.reportAllChanges)),
+                R = (0, o.N)("first-input", I);
+            (a = (0, r._)(t, l, s, e.reportAllChanges)),
                 R &&
                     (0, i.u)(
                         (0, c.R)(() => {
-                            (I(R.takeRecords()), R.disconnect());
-                        })
-                    ));
+                            I(R.takeRecords()), R.disconnect();
+                        }),
+                    );
         });
     };

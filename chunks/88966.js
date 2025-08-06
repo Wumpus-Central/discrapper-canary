@@ -14,11 +14,14 @@ function g(e, t, n) {
     return (0, i.e7)([u.default], () => u.default.getId() === e) || t === d.IlC.POPOUT
         ? null
         : (0, l.jsx)(r.sNh, {
-              id: 'message-user',
+              id: "message-user",
               label: c.intl.string(c.t.OAJQlJ),
               action: () => {
-                  ((0, s.i)(t, !0), o.Z.openPrivateChannel({ recipientIds: e }), g.dispatch(d.CkL.POPOUT_CLOSE), (0, r.pTH)());
+                  (0, s.i)(t, !0),
+                      o.Z.openPrivateChannel({ recipientIds: e }),
+                      g.dispatch(d.CkL.POPOUT_CLOSE),
+                      (0, r.pTH)();
               },
-              icon: n
+              icon: n,
           });
 }

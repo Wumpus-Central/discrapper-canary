@@ -6,5 +6,5 @@ function i(e) {
 }
 n.d(t, {
     J: () => r,
-    b: () => i
+    b: () => i,
 });

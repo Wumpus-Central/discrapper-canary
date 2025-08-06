@@ -3,12 +3,12 @@ var r = n(220159),
     a = n(592802),
     i = n(565130),
     s = n(91345),
-    c = o('URL');
+    c = o("URL");
 r(
     {
-        target: 'URL',
+        target: "URL",
         stat: !0,
-        forced: !s
+        forced: !s,
     },
     {
         parse: function (e) {
@@ -20,6 +20,6 @@ r(
             } catch (e) {
                 return null;
             }
-        }
-    }
+        },
+    },
 );

@@ -13,7 +13,7 @@ function l(e) {
               isShaking: t,
               intensity: u,
               className: c,
-              children: l
+              children: l,
           })
         : l;
 }

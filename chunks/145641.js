@@ -22,7 +22,7 @@ let p = function (e) {
                 let { section: t } = e;
                 return p(t);
             },
-            [p]
+            [p],
         ),
         m = (0, o.e7)([c.Z], () => c.Z.keyboardModeEnabled),
         b = i.useRef(null),
@@ -33,7 +33,7 @@ let p = function (e) {
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            []
+            [],
         ),
         O = i.useCallback(
             () =>
@@ -42,7 +42,7 @@ let p = function (e) {
                     if (null == t) return e();
                     t.scrollToBottom({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            []
+            [],
         ),
         E = i.useCallback((e) => {
             let t = document.querySelector(e),
@@ -52,15 +52,15 @@ let p = function (e) {
                 n.scrollIntoViewNode({
                     node: t,
                     padding: 8,
-                    callback: () => (null == t ? void 0 : t.focus())
+                    callback: () => (null == t ? void 0 : t.focus()),
                 });
         }, []),
         y = (0, l.ZP)({
-            id: 'people-list',
+            id: "people-list",
             isEnabled: m,
             scrollToStart: _,
             scrollToEnd: O,
-            setFocus: E
+            setFocus: E,
         }),
         v = i.useMemo(() => t.map((e) => e.length), [t]);
     return (0, r.jsx)(a.bG, {
@@ -78,15 +78,19 @@ let p = function (e) {
                                     r,
                                     i = {},
                                     l = Object.keys(e);
-                                for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+                                for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                 return i;
                             })(e, t);
                         if (Object.getOwnPropertySymbols) {
                             var l = Object.getOwnPropertySymbols(e);
-                            for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                            for (r = 0; r < l.length; r++)
+                                (n = l[r]),
+                                    !(t.indexOf(n) >= 0) &&
+                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                        (i[n] = e[n]);
                         }
                         return i;
-                    })(e, ['ref']);
+                    })(e, ["ref"]);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(
@@ -95,46 +99,48 @@ let p = function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
                             })(
                                 {
                                     ref: (e) => {
                                         var n;
-                                        ((b.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null));
+                                        (b.current = e),
+                                            (t.current =
+                                                null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
                                     },
                                     renderRow: f,
                                     rowHeight: u.NV,
                                     renderSection: g,
                                     sectionHeight: u.aS,
                                     sections: v,
-                                    className: d.peopleList
+                                    className: d.peopleList,
                                 },
-                                n
-                            )
+                                n,
+                            ),
                         ),
-                        h
-                    ]
+                        h,
+                    ],
                 });
-            }
-        })
+            },
+        }),
     });
 };

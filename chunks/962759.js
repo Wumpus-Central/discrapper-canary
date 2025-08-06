@@ -15,7 +15,7 @@ function o(e) {
     return e;
 }
 function a(e, t) {
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
 function s(e, t, n) {
     return (
@@ -24,7 +24,7 @@ function s(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -51,13 +51,18 @@ var l = n(963956),
 e.exports = (function (e) {
     function t() {
         for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-        return (s(o((t = e.call.apply(e, [this].concat(r)) || this)), '_node', void 0), t);
+        return s(o((t = e.call.apply(e, [this].concat(r)) || this)), "_node", void 0), t;
     }
     a(t, e);
     var n = t.prototype;
     return (
         (n.shouldComponentUpdate = function (e) {
-            return this.props.block !== e.block || this.props.tree !== e.tree || this.props.direction !== e.direction || (I(e.selection, e.block.getKey()) && e.forceSelection);
+            return (
+                this.props.block !== e.block ||
+                this.props.tree !== e.tree ||
+                this.props.direction !== e.direction ||
+                (I(e.selection, e.block.getKey()) && e.forceSelection)
+            );
         }),
         (n.componentDidMount = function () {
             if (!this.props.preventScroll) {
@@ -72,7 +77,10 @@ e.exports = (function (e) {
                         if (i === window) {
                             var a = m(r);
                             (e = a.y + a.height - E().height) > 0 && window.scrollTo(o.x, o.y + e + v);
-                        } else (y(r) || b(!1), (e = r.offsetHeight + r.offsetTop - (i.offsetTop + i.offsetHeight + o.y)) > 0 && d.setTop(i, d.getTop(i) + e + v));
+                        } else
+                            y(r) || b(!1),
+                                (e = r.offsetHeight + r.offsetTop - (i.offsetTop + i.offsetHeight + o.y)) > 0 &&
+                                    d.setTop(i, d.getTop(i) + e + v);
                     }
                 }
             }
@@ -86,14 +94,14 @@ e.exports = (function (e) {
                 a = I(this.props.selection, n);
             return this.props.tree
                 .map(function (s, d) {
-                    var f = s.get('leaves');
+                    var f = s.get("leaves");
                     if (0 === f.size) return null;
                     var h = f.size - 1,
                         m = f
                             .map(function (i, s) {
                                 var f = c.encode(n, d, s),
-                                    _ = i.get('start'),
-                                    p = i.get('end');
+                                    _ = i.get("start"),
+                                    p = i.get("end");
                                 return u.createElement(l, {
                                     key: f,
                                     offsetKey: f,
@@ -105,21 +113,21 @@ e.exports = (function (e) {
                                     styleSet: t.getInlineStyleAt(_),
                                     customStyleMap: e.props.customStyleMap,
                                     customStyleFn: e.props.customStyleFn,
-                                    isLast: d === o && s === h
+                                    isLast: d === o && s === h,
                                 });
                             })
                             .toArray(),
-                        g = s.get('decoratorKey');
+                        g = s.get("decoratorKey");
                     if (null == g || !e.props.decorator) return m;
                     var E = O(e.props.decorator),
                         b = E.getComponentForKey(g);
                     if (!b) return m;
                     var y = E.getPropsForKey(g),
                         v = c.encode(n, d, 0),
-                        I = f.first().get('start'),
-                        T = f.last().get('end'),
+                        I = f.first().get("start"),
+                        T = f.last().get("end"),
                         S = r.slice(I, T),
-                        A = t.getEntityAt(s.get('start')),
+                        A = t.getEntityAt(s.get("start")),
                         N = p.getHTMLDirIfDifferent(_.getDirection(S), e.props.direction),
                         C = {
                             contentState: e.props.contentState,
@@ -129,7 +137,7 @@ e.exports = (function (e) {
                             end: T,
                             blockKey: n,
                             entityKey: A,
-                            offsetKey: v
+                            offsetKey: v,
                         };
                     return u.createElement(b, i({}, y, C, { key: v }), m);
                 })
@@ -141,20 +149,20 @@ e.exports = (function (e) {
                 n = t.direction,
                 r = t.offsetKey,
                 i = h({
-                    'public/DraftStyleDefault/block': !0,
-                    'public/DraftStyleDefault/ltr': 'LTR' === n,
-                    'public/DraftStyleDefault/rtl': 'RTL' === n
+                    "public/DraftStyleDefault/block": !0,
+                    "public/DraftStyleDefault/ltr": "LTR" === n,
+                    "public/DraftStyleDefault/rtl": "RTL" === n,
                 });
             return u.createElement(
-                'div',
+                "div",
                 {
-                    'data-offset-key': r,
+                    "data-offset-key": r,
                     className: i,
                     ref: function (t) {
                         return (e._node = t);
-                    }
+                    },
                 },
-                this._renderChildren()
+                this._renderChildren(),
             );
         }),
         t

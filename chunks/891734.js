@@ -31,7 +31,7 @@ function s(e, t) {
                 placement: n,
                 boundary: l,
                 rootBoundary: c,
-                padding: u
+                padding: u,
             })[(0, a.Z)(n)]),
             t
         );

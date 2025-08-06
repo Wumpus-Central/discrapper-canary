@@ -1,4 +1,4 @@
-(s.d(t, { default: () => N }), s(388685));
+s.d(t, { default: () => N }), s(388685);
 var n = s(255367),
     i = s(73800),
     a = s(990547),
@@ -18,7 +18,7 @@ function N(e) {
     let { transitionState: t, onClose: s } = e,
         { currentUser: N, multiAccountUsers: v } = (0, r.cj)([d.default, u.Z], () => ({
             currentUser: d.default.getCurrentUser(),
-            multiAccountUsers: u.Z.getUsers()
+            multiAccountUsers: u.Z.getUsers(),
         })),
         [T, A] = i.useState(!1),
         [C, E] = i.useState(_.lds),
@@ -26,25 +26,25 @@ function N(e) {
     return (
         i.useEffect(() => {
             if (T)
-                (b(
+                b(
                     (0, n.jsx)(c.Wn, {
                         messageType: c.QYI.ERROR,
                         className: g.infoMessage,
-                        children: f.intl.format(f.t.HAuRSE, { maxNumAccounts: h.$H })
-                    })
+                        children: f.intl.format(f.t.HAuRSE, { maxNumAccounts: h.$H }),
+                    }),
                 ),
-                    E(_.lds));
+                    E(_.lds);
             else if (null != C) {
                 let e = d.default.getUser(C);
-                (null != e &&
+                null != e &&
                     b(
                         (0, n.jsx)(c.Wn, {
                             messageType: c.QYI.POSITIVE,
                             className: g.infoMessage,
-                            children: f.intl.format(f.t['09qidX'], { username: e.username })
-                        })
+                            children: f.intl.format(f.t["09qidX"], { username: e.username }),
+                        }),
                     ),
-                    A(!1));
+                    A(!1);
             }
         }, [C, T]),
         i.useEffect(() => {
@@ -52,24 +52,24 @@ function N(e) {
         }, [v]),
         (0, o.Z)({
             type: a.ImpressionTypes.MODAL,
-            name: a.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING
+            name: a.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
         }),
         (0, n.jsxs)(l.Modal, {
             onClose: s,
             transitionState: t,
-            size: 'md',
-            'aria-label': f.intl.string(f.t.WbFpq6),
+            size: "md",
+            "aria-label": f.intl.string(f.t.WbFpq6),
             title: f.intl.string(f.t.WbFpq6),
-            subtitle: f.intl.string(f.t['+1Uk3d']),
+            subtitle: f.intl.string(f.t["+1Uk3d"]),
             actions: [
                 {
-                    text: f.intl.string(f.t['9g2mqa']),
-                    variant: 'secondary',
+                    text: f.intl.string(f.t["9g2mqa"]),
+                    variant: "secondary",
                     onClick: () => {
                         if (v.length >= h.$H) return void A(!0);
-                        (s(), (0, x.y)());
-                    }
-                }
+                        s(), (0, x.y)();
+                    },
+                },
             ],
             children: [
                 p,
@@ -78,17 +78,17 @@ function N(e) {
                     onAction: (e, t) => {
                         switch (e) {
                             case m.W.LOGIN_REQUIRED:
-                                (s(), (0, x.y)());
+                                s(), (0, x.y)();
                                 break;
                             case m.W.SWITCHED:
                                 s();
                                 break;
                             case m.W.REMOVED:
-                                (t === (null == N ? void 0 : N.id) && s(), E(t));
+                                t === (null == N ? void 0 : N.id) && s(), E(t);
                         }
-                    }
-                })
-            ]
+                    },
+                }),
+            ],
         })
     );
 }

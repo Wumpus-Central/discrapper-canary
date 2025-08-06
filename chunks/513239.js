@@ -16,35 +16,35 @@ function x(t) {
         h = (0, a.wj)((0, l.ZP)());
     return (0, s.jsxs)(c.Y0X, {
         transitionState: n,
-        'aria-labelledby': x,
+        "aria-labelledby": x,
         size: c.CgR.SMALL,
-        parentComponent: 'UnavailableGuildProductModal',
+        parentComponent: "UnavailableGuildProductModal",
         children: [
             (0, s.jsxs)(c.hzk, {
                 className: d.content,
                 children: [
                     (0, s.jsx)(c.olH, {
                         className: d.closeButton,
-                        onClick: e
+                        onClick: e,
                     }),
-                    (0, s.jsx)('img', {
+                    (0, s.jsx)("img", {
                         className: d.image,
                         src: h ? u : m,
-                        alt: ''
+                        alt: "",
                     }),
                     (0, s.jsx)(c.Text, {
-                        variant: 'text-lg/semibold',
-                        color: 'header-primary',
+                        variant: "text-lg/semibold",
+                        color: "header-primary",
                         className: d.title,
-                        children: r.intl.string(r.t.wLrh09)
+                        children: r.intl.string(r.t.wLrh09),
                     }),
                     (0, s.jsx)(c.Text, {
-                        variant: 'text-md/normal',
-                        color: 'header-secondary',
+                        variant: "text-md/normal",
+                        color: "header-secondary",
                         className: d.body,
-                        children: r.intl.string(r.t.DW9yJi)
-                    })
-                ]
+                        children: r.intl.string(r.t.DW9yJi),
+                    }),
+                ],
             }),
             (0, s.jsx)(c.mzw, {
                 children: (0, s.jsx)(i.zx, {
@@ -52,9 +52,9 @@ function x(t) {
                     color: i.zx.Colors.BRAND,
                     onClick: e,
                     size: i.zx.Sizes.LARGE,
-                    children: r.intl.string(r.t.BddRzc)
-                })
-            })
-        ]
+                    children: r.intl.string(r.t.BddRzc),
+                }),
+            }),
+        ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(539854), n(388685));
+n.d(t, { Z: () => _ }), n(539854), n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(120356),
@@ -21,7 +21,24 @@ var i = n(255367),
     y = n(694095);
 function _(e) {
     var t, n, l;
-    let { name: _, icon: C, imageSrc: N, iconBackgroundColor: S, iconClassName: I, iconWrapperClassName: w, details: Z, integration: E, buttonText: P, buttonDisabled: T, hasNextSection: k, onButtonClick: A, guildId: R, isScrolling: D, canShowMigrationTooltip: L, trailing: M } = e,
+    let {
+            name: _,
+            icon: C,
+            imageSrc: N,
+            iconBackgroundColor: S,
+            iconClassName: I,
+            iconWrapperClassName: w,
+            details: Z,
+            integration: E,
+            buttonText: P,
+            buttonDisabled: T,
+            hasNextSection: k,
+            onButtonClick: A,
+            guildId: R,
+            isScrolling: D,
+            canShowMigrationTooltip: L,
+            trailing: M,
+        } = e,
         [B, U] = r.useState(!1),
         [W, H] = r.useState(!1),
         G = L && !D && !W && void 0 !== R && null != E,
@@ -37,19 +54,19 @@ function _(e) {
                             ref: F,
                             children: [
                                 (0, i.jsx)(d.Text, {
-                                    variant: 'text-sm/normal',
-                                    children: e
+                                    variant: "text-sm/normal",
+                                    children: e,
                                 }),
                                 n
                                     ? (0, i.jsx)(d.Fbu, {
-                                          size: 'custom',
-                                          color: 'currentColor',
+                                          size: "custom",
+                                          color: "currentColor",
                                           width: 10,
                                           height: 10,
-                                          className: y.caret
+                                          className: y.caret,
                                       })
-                                    : null
-                            ]
+                                    : null,
+                            ],
                         })
                       : (0, i.jsx)(c.zx, {
                             buttonRef: z,
@@ -58,9 +75,9 @@ function _(e) {
                             color: n ? c.zx.Colors.PRIMARY : c.zx.Colors.BRAND,
                             disabled: t,
                             onClick: r,
-                            children: e
+                            children: e,
                         }),
-            [z, F]
+            [z, F],
         )(P, T, k, A);
     r.useEffect(() => {
         var e, t;
@@ -71,31 +88,31 @@ function _(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             i.forEach(function (t) {
                                 var i;
-                                ((i = n[t]),
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = i));
-                            }));
+                                        : (e[t] = i);
+                            });
                     }
                     return e;
                 })({}, (0, u.hH)(R))),
                 (t = t =
                     {
                         application_id: null == E ? void 0 : E.application.id,
-                        location: 'overview'
+                        location: "overview",
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -109,7 +126,7 @@ function _(e) {
                       })(Object(t)).forEach(function (n) {
                           Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                       }),
-                e)
+                e),
             );
     }, [R, null == E ? void 0 : E.application.id, G]);
     let K = G
@@ -118,26 +135,34 @@ function _(e) {
                   renderPopout: () =>
                       (0, i.jsx)(d.P3F, {
                           onClick: (e) => {
-                              (e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(R, E.integration));
+                              e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(R, E.integration);
                           },
                           children: (0, i.jsx)(g.ZP, {
                               content: O.intl.string(O.t.TyMJwM),
-                              onClick: () => {}
-                          })
+                              onClick: () => {},
+                          }),
                       }),
-                  position: 'bottom',
-                  align: 'center',
+                  position: "bottom",
+                  align: "center",
                   animation: d.yRy.Animation.TRANSLATE,
                   shouldShow: !0,
-                  children: () => V
+                  children: () => V,
               })
             : V,
         q = (0, s.Wu)([b.Z], () => {
             var e;
-            return null != E && null != R && null != (e = b.Z.getApplicationEntitlementsForGuild(E.application.id, R)) ? e : [];
+            return null != E && null != R && null != (e = b.Z.getApplicationEntitlementsForGuild(E.application.id, R))
+                ? e
+                : [];
         }),
         Y = (0, p.LD)(R, !0),
-        X = (null == E ? void 0 : E.application) != null && Object.keys(null != (l = null == (n = Y.result) || null == (t = n.sections[E.application.id]) ? void 0 : t.commands) ? l : {}).length > 0,
+        X =
+            (null == E ? void 0 : E.application) != null &&
+            Object.keys(
+                null != (l = null == (n = Y.result) || null == (t = n.sections[E.application.id]) ? void 0 : t.commands)
+                    ? l
+                    : {},
+            ).length > 0,
         $ = (0, i.jsxs)(m.Z, {
             children: [
                 (0, i.jsx)(x.Z, {
@@ -148,7 +173,7 @@ function _(e) {
                     iconClassName: I,
                     iconWrapperClassName: w,
                     details: Z,
-                    isPremium: q.length > 0
+                    isPremium: q.length > 0,
                 }),
                 (0, i.jsx)(m.Z.Child, {
                     shrink: 0,
@@ -170,16 +195,18 @@ function _(e) {
                                                 d.DY3,
                                                 {
                                                     forceOpen: t,
-                                                    text: new f.Z(s.bot).isVerifiedBot() ? O.intl.string(O.t.xxcTGx) : O.intl.string(O.t.AOdOYm),
+                                                    text: new f.Z(s.bot).isVerifiedBot()
+                                                        ? O.intl.string(O.t.xxcTGx)
+                                                        : O.intl.string(O.t.AOdOYm),
                                                     className: y.feature,
                                                     children: (0, i.jsx)(d.wGt, {
-                                                        size: 'md',
-                                                        color: 'currentColor',
-                                                        className: y.featureIcon
-                                                    })
+                                                        size: "md",
+                                                        color: "currentColor",
+                                                        className: y.featureIcon,
+                                                    }),
                                                 },
-                                                'bot'
-                                            )
+                                                "bot",
+                                            ),
                                         ),
                                     u.length > 0 &&
                                         o.push(
@@ -187,61 +214,65 @@ function _(e) {
                                                 d.DY3,
                                                 {
                                                     forceOpen: t,
-                                                    text: O.intl.formatToPlainString(O.t['6HqDfX'], { count: u.length }),
+                                                    text: O.intl.formatToPlainString(O.t["6HqDfX"], {
+                                                        count: u.length,
+                                                    }),
                                                     className: y.feature,
                                                     children: (0, i.jsx)(d.tYf, {
-                                                        size: 'md',
-                                                        color: 'currentColor',
-                                                        className: y.featureIcon
-                                                    })
+                                                        size: "md",
+                                                        color: "currentColor",
+                                                        className: y.featureIcon,
+                                                    }),
                                                 },
-                                                'webhooks'
-                                            )
+                                                "webhooks",
+                                            ),
                                         ),
-                                    (null == c || null == (l = c.scopes) ? void 0 : l.includes(a.x.APPLICATIONS_COMMANDS)) === !0 &&
+                                    (null == c || null == (l = c.scopes)
+                                        ? void 0
+                                        : l.includes(a.x.APPLICATIONS_COMMANDS)) === !0 &&
                                         n &&
                                         o.push(
                                             (0, i.jsx)(
                                                 d.DY3,
                                                 {
                                                     forceOpen: t,
-                                                    text: O.intl.string(O.t['0hKkS0']),
+                                                    text: O.intl.string(O.t["0hKkS0"]),
                                                     className: y.feature,
                                                     children: (0, i.jsx)(d.SsZ, {
-                                                        size: 'md',
-                                                        color: 'currentColor',
-                                                        className: y.featureIcon
-                                                    })
+                                                        size: "md",
+                                                        color: "currentColor",
+                                                        className: y.featureIcon,
+                                                    }),
                                                 },
-                                                'commands'
-                                            )
+                                                "commands",
+                                            ),
                                         ),
                                     o
                                 );
                             })(E, B, X),
                             K,
-                            M
-                        ]
-                    })
-                })
-            ]
+                            M,
+                        ],
+                    }),
+                }),
+            ],
         });
     return k
         ? (0, i.jsx)(d.P3F, {
               onClick: () => {
-                  (L && null != R && null != E && j.Z.dismissOverviewTooltip(R, E.integration), null == A || A());
+                  L && null != R && null != E && j.Z.dismissOverviewTooltip(R, E.integration), null == A || A();
               },
               onFocus: () => U(!0),
               onBlur: () => U(!1),
               children: (0, i.jsx)(d.Zbd, {
                   editable: !0,
                   className: o()(y.card, y.clickable),
-                  children: $
-              })
+                  children: $,
+              }),
           })
         : (0, i.jsx)(d.Zbd, {
               editable: !0,
               className: y.card,
-              children: $
+              children: $,
           });
 }

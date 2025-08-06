@@ -16,13 +16,13 @@ class d extends (l = a.ZP.Store) {
         super(o.Z, { CONNECTION_OPEN: u }, o.c.Early);
     }
 }
-((i = 'ExperimentTriggerPointStore'),
-    (r = 'displayName') in d
+(i = "ExperimentTriggerPointStore"),
+    (r = "displayName") in d
         ? Object.defineProperty(d, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
-              writable: !0
+              writable: !0,
           })
         : (d[r] = i),
-    new d());
+    new d();

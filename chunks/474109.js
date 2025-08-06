@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -12,20 +12,25 @@ var r = n(255367),
     p = n(251625),
     f = n(981631),
     g = n(388032);
-let m = 'app-download-item',
-    b = 'add-server-item';
+let m = "app-download-item",
+    b = "add-server-item";
 function O() {
     return !1;
 }
 function _(e) {
     var t;
     let n = a.default.getMutableGuildStates();
-    return (e === f.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(f.x8Z.SERVER_DISCOVERY_BADGE)) || (e !== m && e !== b && (null == (t = n[null != e ? e : 'null']) ? void 0 : t.highImportanceMentionCount) > 0);
+    return (
+        (e === f.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(f.x8Z.SERVER_DISCOVERY_BADGE)) ||
+        (e !== m && e !== b && (null == (t = n[null != e ? e : "null"]) ? void 0 : t.highImportanceMentionCount) > 0)
+    );
 }
-let y = (0, p.oH)((e, t, n) => ['null', ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY_BADGE, m]),
+let y = (0, p.oH)((e, t, n) => ["null", ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY_BADGE, m]),
     C = i.forwardRef(function (e, t) {
         var n, i;
-        let d = (0, l.Wu)([u.ZP, c.Z, a.default], () => y(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), a.default.getStoreChangeSentinel())),
+        let d = (0, l.Wu)([u.ZP, c.Z, a.default], () =>
+                y(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), a.default.getStoreChangeSentinel()),
+            ),
             p = (0, l.e7)([h.Z], () => h.Z.isFocused()),
             f = (0, l.e7)([s.Z], () => s.Z.getExpandedFolders());
         return (0, r.jsx)(
@@ -34,24 +39,24 @@ let y = (0, p.oH)((e, t, n) => ['null', ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
+                    "function" == typeof Object.getOwnPropertySymbols &&
                         (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
+                            }),
                         )),
                         r.forEach(function (t) {
                             var r;
-                            ((r = n[t]),
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
                                           value: r,
                                           enumerable: !0,
                                           configurable: !0,
-                                          writable: !0
+                                          writable: !0,
                                       })
-                                    : (e[t] = r));
-                        }));
+                                    : (e[t] = r);
+                        });
                 }
                 return e;
             })({}, e)),
@@ -64,7 +69,7 @@ let y = (0, p.oH)((e, t, n) => ['null', ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY
                     textMention: g.intl.string(g.t.y2b7CA),
                     isMentioned: _,
                     animate: p,
-                    expandedFolders: f
+                    expandedFolders: f,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -78,6 +83,6 @@ let y = (0, p.oH)((e, t, n) => ['null', ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY
                   })(Object(i)).forEach(function (e) {
                       Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                   }),
-            n)
+            n),
         );
     });

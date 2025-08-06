@@ -10,9 +10,9 @@ function a(e) {
             (e) => {
                 t(e - 1);
             },
-            [t]
+            [t],
         );
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: i.container,
         children: (0, r.jsx)(s.DsT, {
             currentPage: c,
@@ -20,7 +20,7 @@ function a(e) {
             pageSize: o,
             onPageChange: E,
             maxVisiblePages: 5,
-            renderPageWrapper: u
-        })
+            renderPageWrapper: u,
+        }),
     });
 }

@@ -1,8 +1,8 @@
 var o = r(933982);
 function n(t, e) {
-    ((this.totalCount = t), (this.dataCount = e));
+    (this.totalCount = t), (this.dataCount = e);
 }
-((n.RS_BLOCK_TABLE = [
+(n.RS_BLOCK_TABLE = [
     [1, 26, 19],
     [1, 26, 16],
     [1, 26, 13],
@@ -162,12 +162,13 @@ function n(t, e) {
     [19, 148, 118, 6, 149, 119],
     [18, 75, 47, 31, 76, 48],
     [34, 54, 24, 34, 55, 25],
-    [20, 45, 15, 61, 46, 16]
+    [20, 45, 15, 61, 46, 16],
 ]),
     (n.getRSBlocks = function (t, e) {
         var r = n.getRsBlockTable(t, e);
-        if (void 0 == r) throw Error('bad rs block @ typeNumber:' + t + '/errorCorrectLevel:' + e);
-        for (var o = r.length / 3, i = [], a = 0; a < o; a++) for (var u = r[3 * a + 0], s = r[3 * a + 1], l = r[3 * a + 2], f = 0; f < u; f++) i.push(new n(s, l));
+        if (void 0 == r) throw Error("bad rs block @ typeNumber:" + t + "/errorCorrectLevel:" + e);
+        for (var o = r.length / 3, i = [], a = 0; a < o; a++)
+            for (var u = r[3 * a + 0], s = r[3 * a + 1], l = r[3 * a + 2], f = 0; f < u; f++) i.push(new n(s, l));
         return i;
     }),
     (n.getRsBlockTable = function (t, e) {
@@ -184,4 +185,4 @@ function n(t, e) {
                 return;
         }
     }),
-    (t.exports = n));
+    (t.exports = n);

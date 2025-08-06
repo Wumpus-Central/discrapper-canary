@@ -17,7 +17,7 @@ function p(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -27,21 +27,21 @@ function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 p(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 function m(e, t, n) {
     let i = _.intl.formatToPlainString(_.t.QWGvxM, { applicationName: e.name });
-    ((0, a.h7j)((e) =>
+    (0, a.h7j)((e) =>
         (0, r.jsx)(
             l.default,
             h(
@@ -50,18 +50,18 @@ function m(e, t, n) {
                     body: i,
                     confirmText: _.intl.string(_.t.xUqheH),
                     confirmColor: o.Tt.RED,
-                    cancelText: _.intl.string(_.t['ETE/oK']),
-                    onConfirm: t
+                    cancelText: _.intl.string(_.t["ETE/oK"]),
+                    onConfirm: t,
                 },
-                e
-            )
-        )
+                e,
+            ),
+        ),
     ),
         d.default.track(f.rMx.APP_MANAGE_CTA_CLICKED, {
             application_id: e.id,
             channel_id: n.id,
-            channel_type: n.type
-        }));
+            channel_type: n.type,
+        });
 }
 let g = (e) => {
     let { className: t, channel: n, user: a, application: l, oauth2Token: d } = e,
@@ -73,7 +73,7 @@ let g = (e) => {
         null != e &&
             u.Z.leaveActivity({
                 location: e.location,
-                applicationId: l.id
+                applicationId: l.id,
             });
     }
     return (0, r.jsx)(o.zx, {
@@ -81,6 +81,6 @@ let g = (e) => {
         size: o.Ph.SMALL,
         color: o.zx.Colors.PRIMARY,
         onClick: () => m(l, p, n),
-        children: _.intl.string(_.t['5S3sQE'])
+        children: _.intl.string(_.t["5S3sQE"]),
     });
 };

@@ -20,64 +20,64 @@ let m = (e) => {
         n = d.intl.formatToPlainString(d.t.oEwLe3, {
             hours: e,
             minutes: t,
-            seconds: r
+            seconds: r,
         });
     } else if (i >= 60) {
         let e = Math.floor(i / 60);
         n = d.intl.formatToPlainString(d.t.DARKYm, {
             minutes: e,
-            seconds: i - 60 * e
+            seconds: i - 60 * e,
         });
-    } else n = d.intl.formatToPlainString(d.t['9yE8GR'], { seconds: i });
+    } else n = d.intl.formatToPlainString(d.t["9yE8GR"], { seconds: i });
     if (!m && a > 0) {
         let e = s().duration(a);
         if (a > c.Z.Millis.HOUR) {
-            let n = ''.concat(e.minutes()).padStart(2, '0'),
-                r = ''.concat(e.seconds()).padStart(2, '0');
-            t = ''.concat(e.hours(), ':').concat(n, ':').concat(r);
+            let n = "".concat(e.minutes()).padStart(2, "0"),
+                r = "".concat(e.seconds()).padStart(2, "0");
+            t = "".concat(e.hours(), ":").concat(n, ":").concat(r);
         } else {
-            let n = ''.concat(e.seconds()).padStart(2, '0');
-            t = ''.concat(e.minutes(), ':').concat(n);
+            let n = "".concat(e.seconds()).padStart(2, "0");
+            t = "".concat(e.minutes(), ":").concat(n);
         }
     } else t = m ? d.intl.string(d.t.SSzXvb) : d.intl.string(d.t.Icu3bW);
     let g = (0, r.jsx)(o.Text, {
-            variant: 'text-sm/normal',
-            color: 'text-muted',
-            children: t
+            variant: "text-sm/normal",
+            color: "text-muted",
+            children: t,
         }),
         f = (0, r.jsx)(o.ANZ, {
-            size: 'xs',
-            color: 'currentColor',
-            className: l()(u.slowModeIcon, { [u.leadingIcon]: h })
+            size: "xs",
+            color: "currentColor",
+            className: l()(u.slowModeIcon, { [u.leadingIcon]: h }),
         });
     return (0, r.jsx)(o.ua7, {
         text: n,
         children: (e) => {
             var t, n;
             return (0, r.jsx)(
-                'div',
+                "div",
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
+                                }),
                             )),
                             r.forEach(function (t) {
                                 var r;
-                                ((r = n[t]),
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
                                               value: r,
                                               enumerable: !0,
                                               configurable: !0,
-                                              writable: !0
+                                              writable: !0,
                                           })
-                                        : (e[t] = r));
-                            }));
+                                        : (e[t] = r);
+                            });
                     }
                     return e;
                 })({ className: u.cooldownWrapper }, e)),
@@ -85,11 +85,11 @@ let m = (e) => {
                     {
                         children: h
                             ? (0, r.jsxs)(r.Fragment, {
-                                  children: [f, g]
+                                  children: [f, g],
                               })
                             : (0, r.jsxs)(r.Fragment, {
-                                  children: [g, f]
-                              })
+                                  children: [g, f],
+                              }),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -103,8 +103,8 @@ let m = (e) => {
                       })(Object(n)).forEach(function (e) {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
-                t)
+                t),
             );
-        }
+        },
     });
 };

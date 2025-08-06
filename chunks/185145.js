@@ -1,4 +1,4 @@
-(n.d(t, { T: () => m }), n(388685));
+n.d(t, { T: () => m }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -22,31 +22,31 @@ function m(e) {
         m
             ? (0, r.jsx)(f.Z, {
                   onClose: () => g(t.id),
-                  guildName: t.name
+                  guildName: t.name,
               })
             : null;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         children: [
             b(),
             (0, r.jsx)(s.i, {
                 bannerIcon: (0, r.jsx)(o.YlB, {
-                    size: 'md',
-                    color: 'currentColor',
-                    className: h.bannerIcon
+                    size: "md",
+                    color: "currentColor",
+                    className: h.bannerIcon,
                 }),
-                bannerHeader: p.intl.string(p.t['9UoK6e']),
-                bannerSubtext: p.intl.format(p.t['4ZwD5O'], { link: _.cu }),
+                bannerHeader: p.intl.string(p.t["9UoK6e"]),
+                bannerSubtext: p.intl.format(p.t["4ZwD5O"], { link: _.cu }),
                 textStyles: h.bannerContainer,
                 headerStyles: h.bannerHeader,
                 children: (0, r.jsx)(o.Text, {
-                    variant: 'text-sm/semibold',
+                    variant: "text-sm/semibold",
                     children: (0, r.jsx)(a.Z, {
                         deadline: new Date(n),
                         showUnits: !0,
-                        stopAtOneSec: !0
-                    })
-                })
-            })
-        ]
+                        stopAtOneSec: !0,
+                    }),
+                }),
+            }),
+        ],
     });
 }

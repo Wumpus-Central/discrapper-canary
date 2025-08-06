@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(290780));
+n.d(t, { Z: () => I }), n(290780);
 var r = n(255367),
     i = n(73800),
     o = n(780384),
@@ -16,90 +16,99 @@ var r = n(255367),
     g = n(470794),
     E = n(886777);
 function b(e) {
-    let { movDark: t = d, movLight: n = h, mp4Dark: i = f, mp4Light: o = m, pngDark: a = _, pngLight: s = g, webmDark: c = p, webmLight: b = E } = e,
+    let {
+            movDark: t = d,
+            movLight: n = h,
+            mp4Dark: i = f,
+            mp4Light: o = m,
+            pngDark: a = _,
+            pngLight: s = g,
+            webmDark: c = p,
+            webmLight: b = E,
+        } = e,
         y = (0, l.vu)(),
         O = [
             (0, r.jsx)(
-                'source',
+                "source",
                 {
                     src: i,
-                    type: 'video/mp4'
+                    type: "video/mp4",
                 },
-                'mp4'
+                "mp4",
             ),
             (0, r.jsx)(
-                'img',
+                "img",
                 {
-                    alt: '',
-                    src: a
+                    alt: "",
+                    src: a,
                 },
-                'png'
-            )
+                "png",
+            ),
         ],
         v = [
             (0, r.jsx)(
-                'source',
+                "source",
                 {
                     src: o,
-                    type: 'video/mp4'
+                    type: "video/mp4",
                 },
-                'mp4'
+                "mp4",
             ),
             (0, r.jsx)(
-                'img',
+                "img",
                 {
-                    alt: '',
-                    src: s
+                    alt: "",
+                    src: s,
                 },
-                'png'
-            )
+                "png",
+            ),
         ];
     return (
         (y > 52 || -1 === y) &&
             (O.unshift(
                 (0, r.jsx)(
-                    'source',
+                    "source",
                     {
                         src: c,
-                        type: 'video/webm'
+                        type: "video/webm",
                     },
-                    'webm'
-                )
+                    "webm",
+                ),
             ),
             v.unshift(
                 (0, r.jsx)(
-                    'source',
+                    "source",
                     {
                         src: b,
-                        type: 'video/webm'
+                        type: "video/webm",
                     },
-                    'webm'
-                )
+                    "webm",
+                ),
             )),
         (0, l.rO)() &&
             (O.unshift(
                 (0, r.jsx)(
-                    'source',
+                    "source",
                     {
                         src: t,
-                        type: 'video/mp4'
+                        type: "video/mp4",
                     },
-                    'hevc'
-                )
+                    "hevc",
+                ),
             ),
             v.unshift(
                 (0, r.jsx)(
-                    'source',
+                    "source",
                     {
                         src: n,
-                        type: 'video/mp4'
+                        type: "video/mp4",
                     },
-                    'hevc'
-                )
+                    "hevc",
+                ),
             )),
         {
             [u.BRd.DARK]: O,
-            [u.BRd.LIGHT]: v
+            [u.BRd.LIGHT]: v,
         }
     );
 }
@@ -123,9 +132,9 @@ let y = s.Z.getAppSpinnerSources(),
                 loop: !p.enabled && n,
                 autoPlay: !p.enabled && s,
                 playsInline: !0,
-                'data-testid': 'app-spinner',
-                children: m
+                "data-testid": "app-spinner",
+                children: m,
             },
-            _
+            _,
         );
     };

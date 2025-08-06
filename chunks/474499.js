@@ -5,13 +5,13 @@ var r = n(220159),
     s = [1, 2];
 r(
     {
-        target: 'Array',
+        target: "Array",
         proto: !0,
-        forced: String(s) === String(s.reverse())
+        forced: String(s) === String(s.reverse()),
     },
     {
         reverse: function () {
-            return (a(this) && (this.length = this.length), i(this));
-        }
-    }
+            return a(this) && (this.length = this.length), i(this);
+        },
+    },
 );

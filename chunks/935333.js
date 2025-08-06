@@ -1,4 +1,4 @@
-(n.d(e, { default: () => c }), n(953529));
+n.d(e, { default: () => c }), n(953529);
 var i = n(255367),
     a = n(73800),
     s = n(481060),
@@ -15,8 +15,8 @@ let c = (t) => {
         (0, i.jsx)(s.Y0X, {
             transitionState: e,
             size: s.CgR.SMALL,
-            'aria-label': l.intl.string(l.t['B/HSDQ']),
-            parentComponent: 'ImageInputUploadModal',
+            "aria-label": l.intl.string(l.t["B/HSDQ"]),
+            parentComponent: "ImageInputUploadModal",
             children: (0, i.jsxs)(s.hzk, {
                 className: r.modalContent,
                 children: [
@@ -24,16 +24,16 @@ let c = (t) => {
                     (0, i.jsx)(s.hjN, {
                         tag: s.RB0.H1,
                         titleClassName: r.title,
-                        title: l.intl.string(l.t['B/HSDQ']),
+                        title: l.intl.string(l.t["B/HSDQ"]),
                         className: r.__invalid_content,
                         children: (0, i.jsx)(s.R94, {
                             type: s.geA.DESCRIPTION,
                             className: r.description,
-                            children: l.intl.string(l.t.k7OALi)
-                        })
-                    })
-                ]
-            })
+                            children: l.intl.string(l.t.k7OALi),
+                        }),
+                    }),
+                ],
+            }),
         })
     );
 };

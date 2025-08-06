@@ -10,16 +10,16 @@ function u(e) {
     return (0, l.jsxs)(i.Fragment, {
         children: [
             (0, l.jsx)(a.zxk, {
-                variant: 'primary',
+                variant: "primary",
                 text: o.intl.string(o.t.pz1lRE),
-                onClick: t
+                onClick: t,
             }),
             (0, l.jsx)(s.zx, {
                 look: s.zx.Looks.LINK,
                 color: (0, r.ap)(u) ? s.zx.Colors.PRIMARY : s.zx.Colors.WHITE,
                 onClick: n,
-                children: o.intl.string(o.t['ETE/oK'])
-            })
-        ]
+                children: o.intl.string(o.t["ETE/oK"]),
+            }),
+        ],
     });
 }

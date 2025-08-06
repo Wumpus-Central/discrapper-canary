@@ -1,10 +1,10 @@
-(n.d(e, {
+n.d(e, {
     KM: () => c,
     U0: () => U,
     YG: () => s,
-    y9: () => T
+    y9: () => T,
 }),
-    n(642613));
+    n(642613);
 var i = n(73800),
     E = n(442837),
     _ = n(709054),
@@ -15,7 +15,9 @@ var i = n(73800),
     u = n(788080),
     o = n(800530);
 function S() {
-    return (0, E.Wu)([r.Z], () => r.Z.getClassifications()).sort((t, e) => _.default.extractTimestamp(e.id) - _.default.extractTimestamp(t.id));
+    return (0, E.Wu)([r.Z], () => r.Z.getClassifications()).sort(
+        (t, e) => _.default.extractTimestamp(e.id) - _.default.extractTimestamp(t.id),
+    );
 }
 function s(t) {
     let e,
@@ -23,10 +25,13 @@ function s(t) {
         _ = (0, E.e7)([r.Z], () => r.Z.getClassificationRequestState(t)),
         S = (0, E.e7)([r.Z], () => r.Z.getIsDsaEligible()),
         s = (0, E.e7)([r.Z], () => r.Z.getIsAppealEligible()),
-        T = (0, A.A)('classification_detail');
+        T = (0, A.A)("classification_detail");
     if ((0, u.FB)(n)) {
         var c;
-        e = (null == (c = n.guild_metadata) ? void 0 : c.member_type) === a.wO.OWNER ? o.qS.GUILD_OWNER : o.qS.GUILD_MEMBER;
+        e =
+            (null == (c = n.guild_metadata) ? void 0 : c.member_type) === a.wO.OWNER
+                ? o.qS.GUILD_OWNER
+                : o.qS.GUILD_MEMBER;
     } else e = o.qS.USER;
     return (
         i.useEffect(() => {
@@ -37,7 +42,7 @@ function s(t) {
             classificationRequestState: _,
             isDsaEligible: S,
             isAppealEligible: s && null != n && null == n.appeal_status && (!(0, u.FB)(n) || T),
-            violationType: e
+            violationType: e,
         }
     );
 }

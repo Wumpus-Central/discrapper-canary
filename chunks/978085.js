@@ -1,7 +1,7 @@
 n.d(t, {
     GR: () => c,
     b8: () => l,
-    ul: () => u
+    ul: () => u,
 });
 var r = n(544891),
     i = n(570140),
@@ -14,18 +14,18 @@ async function l() {
             {
                 url: s.ANM.LIBRARY,
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             },
-            !1
+            !1,
         );
         i.Z.dispatch({
-            type: 'LIBRARY_FETCH_SUCCESS',
-            libraryApplications: e.body
+            type: "LIBRARY_FETCH_SUCCESS",
+            libraryApplications: e.body,
         });
     } catch (e) {
         i.Z.dispatch({
-            type: 'LIBRARY_FETCH_FAIL',
-            error: e
+            type: "LIBRARY_FETCH_FAIL",
+            error: e,
         });
     }
 }
@@ -37,26 +37,26 @@ async function c(e) {
             .get({
                 url: s.ANM.APPLICATION_BRANCH_LIST(e.id),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             })
             .then((e) => e.body)
     ).map((n) =>
         o.Z.createForTestMode({
             id: e.id,
             skuId: t,
-            branch: n
-        })
+            branch: n,
+        }),
     );
     i.Z.dispatch({
-        type: 'LIBRARY_APPLICATIONS_TEST_MODE_ENABLED',
-        libraryApplications: n
+        type: "LIBRARY_APPLICATIONS_TEST_MODE_ENABLED",
+        libraryApplications: n,
     });
 }
 function u(e, t, n) {
     i.Z.dispatch({
-        type: 'LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE',
+        type: "LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE",
         applicationId: e,
         branchId: t,
-        launchOptionId: n
+        launchOptionId: n,
     });
 }

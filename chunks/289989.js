@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -20,79 +20,79 @@ var i = n(120356),
 function j(e) {
     let { id: t, text: n, icon: i, selected: s, onClick: o } = e;
     return (0, r.jsx)(c.P3F, {
-        role: 'radio',
-        'aria-checked': s,
+        role: "radio",
+        "aria-checked": s,
         onClick: () => o(t),
         tabIndex: 0,
         className: l()(v.nativeSourceTypeButton, v.nativePickerRadioItem, { [v.selected]: s }),
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: v.nativeSourceTypeButtonInner,
             children: [
-                (0, r.jsx)(i, { size: 'lg' }),
+                (0, r.jsx)(i, { size: "lg" }),
                 (0, r.jsx)(a.xv, {
-                    variant: 'text-sm/medium',
-                    color: 'none',
-                    children: n
-                })
-            ]
-        })
+                    variant: "text-sm/medium",
+                    color: "none",
+                    children: n,
+                }),
+            ],
+        }),
     });
 }
 function b(e) {
     let { onSourceSelect: t } = e;
-    ((0, f.UB)(), (0, m.Z)(t, g.Vq));
+    (0, f.UB)(), (0, m.Z)(t, g.Vq);
     let [{ nativeSourceType: n }, i] = (0, p.E_)(),
         l = (0, u.isMac)() && o().satisfies(null === d.Z || void 0 === d.Z ? void 0 : d.Z.os.release, x.jR);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: v.root,
         children: [
             (0, r.jsx)(a.X6, {
                 className: v.header,
-                variant: 'heading-lg/semibold',
-                color: 'text-default',
-                children: _.intl.string(_.t.XyYoFR)
+                variant: "heading-lg/semibold",
+                color: "text-default",
+                children: _.intl.string(_.t.XyYoFR),
             }),
             l
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(a.xv, {
                               className: v.body,
-                              variant: 'text-sm/medium',
-                              color: 'text-secondary',
-                              children: _.intl.format(_.t.sbbPhY, { buttonName: _.intl.string(_.t.FiBjwc) })
+                              variant: "text-sm/medium",
+                              color: "text-secondary",
+                              children: _.intl.format(_.t.sbbPhY, { buttonName: _.intl.string(_.t.FiBjwc) }),
                           }),
-                          (0, r.jsx)(h.Z, {})
-                      ]
+                          (0, r.jsx)(h.Z, {}),
+                      ],
                   })
-                : (0, r.jsxs)('div', {
+                : (0, r.jsxs)("div", {
                       className: v.sourceTypeButtons,
                       children: [
                           (0, r.jsx)(j, {
-                              selected: 'screen' === n,
+                              selected: "screen" === n,
                               onClick: () => {
                                   i({
-                                      type: 'set_native_source_type',
-                                      sourceType: 'screen'
+                                      type: "set_native_source_type",
+                                      sourceType: "screen",
                                   });
                               },
-                              id: 'screen',
+                              id: "screen",
                               text: _.intl.string(_.t.cVUFXV),
-                              icon: c.pzj
+                              icon: c.pzj,
                           }),
                           (0, r.jsx)(j, {
-                              selected: 'window' === n,
+                              selected: "window" === n,
                               onClick: () => {
                                   i({
-                                      type: 'set_native_source_type',
-                                      sourceType: 'window'
+                                      type: "set_native_source_type",
+                                      sourceType: "window",
                                   });
                               },
-                              id: 'window',
+                              id: "window",
                               text: _.intl.string(_.t.dG2A1N),
-                              icon: c.GON
-                          })
-                      ]
-                  })
-        ]
+                              icon: c.GON,
+                          }),
+                      ],
+                  }),
+        ],
     });
 }

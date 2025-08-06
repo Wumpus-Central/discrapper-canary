@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -20,7 +20,7 @@ function g(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -30,15 +30,15 @@ function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 g(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -55,16 +55,34 @@ class b extends i.Component {
         return (null == e.eulaId || t.hasAcceptedEULA) && (!e.showWithdrawalWaiver || t.hasAcceptedWithdrawalWaiver);
     }
     render() {
-        let { eulaId: e, applicationName: t, hasPreviouslyAcceptedEULA: i, forceShow: o, disabled: s, className: c, checkboxClassname: d, checkboxLabelClassname: g, finePrint: b, showPricingLink: y, showWithdrawalWaiver: O, isTrial: v, inReverseTrial: I, isDiscount: T, subscriptionPlan: S, finePrintClassname: A } = this.props,
+        let {
+                eulaId: e,
+                applicationName: t,
+                hasPreviouslyAcceptedEULA: i,
+                forceShow: o,
+                disabled: s,
+                className: c,
+                checkboxClassname: d,
+                checkboxLabelClassname: g,
+                finePrint: b,
+                showPricingLink: y,
+                showWithdrawalWaiver: O,
+                isTrial: v,
+                inReverseTrial: I,
+                isDiscount: T,
+                subscriptionPlan: S,
+                finePrintClassname: A,
+            } = this.props,
             { hasAcceptedEULA: N, hasAcceptedWithdrawalWaiver: C } = this.state;
-        return (l()(!v || null != S, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), o || (null != e && !i) || O)
-            ? (0, r.jsxs)('div', {
+        return (l()(!v || null != S, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"),
+        o || (null != e && !i) || O)
+            ? (0, r.jsxs)("div", {
                   className: c,
                   children: [
                       O &&
                           (0, r.jsx)(u.vwX, {
                               className: m.formTitle,
-                              children: h.intl.string(h.t.Ogvn5u)
+                              children: h.intl.string(h.t.Ogvn5u),
                           }),
                       null != e && (o || !i)
                           ? (0, r.jsx)(u.XZJ, {
@@ -73,29 +91,29 @@ class b extends i.Component {
                                 onChange: this.handleToggleEULAAcceptance,
                                 disabled: s,
                                 className: m.checkbox,
-                                children: (0, r.jsx)('div', {
+                                children: (0, r.jsx)("div", {
                                     className: m.checkboxLabel,
                                     children: h.intl.format(h.t.IodJKS, {
                                         applicationName: t,
                                         onClick: (t) => {
-                                            ((0, u.ZDy)(async () => {
-                                                let { default: t } = await n.e('51868').then(n.bind(n, 796504));
+                                            (0, u.ZDy)(async () => {
+                                                let { default: t } = await n.e("51868").then(n.bind(n, 796504));
                                                 return (n) => (0, r.jsx)(t, E({ eulaId: e }, n));
                                             }),
-                                                t.preventDefault());
-                                        }
-                                    })
-                                })
+                                                t.preventDefault();
+                                        },
+                                    }),
+                                }),
                             })
                           : null,
                       null == b
                           ? null
-                          : (0, r.jsx)('div', {
+                          : (0, r.jsx)("div", {
                                 className: a()(m.finePrint, A),
-                                children: b
+                                children: b,
                             }),
                       O
-                          ? (0, r.jsxs)('div', {
+                          ? (0, r.jsxs)("div", {
                                 className: c,
                                 children: [
                                     (0, r.jsx)(u.XZJ, {
@@ -104,75 +122,80 @@ class b extends i.Component {
                                         onChange: this.handleToggleEUWithdralWaiverAcceptance,
                                         disabled: s,
                                         className: a()(m.checkbox, d),
-                                        children: (0, r.jsx)('div', {
+                                        children: (0, r.jsx)("div", {
                                             className: a()(m.checkboxLabel, g),
-                                            children: h.intl.string(h.t.DFCVNz)
-                                        })
+                                            children: h.intl.string(h.t.DFCVNz),
+                                        }),
                                     }),
-                                    (0, r.jsx)('div', {
+                                    (0, r.jsx)("div", {
                                         className: m.finePrint,
-                                        children: h.intl.string(h.t.jhu6zs)
-                                    })
-                                ]
+                                        children: h.intl.string(h.t.jhu6zs),
+                                    }),
+                                ],
                             })
                           : null,
                       y &&
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)("div", {
                               className: m.finePrint,
-                              children: ['*', h.intl.format(h.t['5zmY3N'], { documentationLink: f.Z.getArticleURL(p.BhN.LOCALIZED_PRICING) })]
+                              children: [
+                                  "*",
+                                  h.intl.format(h.t["5zmY3N"], {
+                                      documentationLink: f.Z.getArticleURL(p.BhN.LOCALIZED_PRICING),
+                                  }),
+                              ],
                           }),
                       v &&
                           null != S &&
                           (0, r.jsx)(u.Text, {
-                              variant: 'text-xs/medium',
-                              color: 'interactive-normal',
-                              children: h.intl.format(h.t['Hvo/Z2'], {
+                              variant: "text-xs/medium",
+                              color: "interactive-normal",
+                              children: h.intl.format(h.t["Hvo/Z2"], {
                                   buttonText: (0, _.W_)(null, S),
                                   interval: _.ZP.formatInterval(null == S ? void 0 : S.interval),
                                   cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
-                              })
+                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS),
+                              }),
                           }),
                       I &&
                           null != S &&
                           (0, r.jsx)(u.Text, {
-                              variant: 'text-xs/medium',
-                              color: 'interactive-normal',
+                              variant: "text-xs/medium",
+                              color: "interactive-normal",
                               children: h.intl.format(h.t.Oo2FeX, {
                                   buttonText: (0, _.W_)(null, S),
                                   interval: _.ZP.formatInterval(null == S ? void 0 : S.interval),
                                   cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
-                              })
+                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS),
+                              }),
                           }),
                       T &&
                           null != S &&
                           (0, r.jsx)(u.Text, {
-                              variant: 'text-xs/medium',
-                              color: 'interactive-normal',
-                              children: h.intl.format(h.t['Z2c+aW'], {
+                              variant: "text-xs/medium",
+                              color: "interactive-normal",
+                              children: h.intl.format(h.t["Z2c+aW"], {
                                   buttonText: (0, _.W_)(null, S),
                                   interval: _.ZP.formatInterval(null == S ? void 0 : S.interval),
                                   cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
-                              })
-                          })
-                  ]
+                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS),
+                              }),
+                          }),
+                  ],
               })
             : null;
     }
     constructor(...e) {
-        (super(...e),
-            g(this, 'state', {
+        super(...e),
+            g(this, "state", {
                 hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
-                hasAcceptedWithdrawalWaiver: !1
+                hasAcceptedWithdrawalWaiver: !1,
             }),
-            g(this, 'handleToggleEUWithdralWaiverAcceptance', (e, t) => {
+            g(this, "handleToggleEUWithdralWaiverAcceptance", (e, t) => {
                 this.setState({ hasAcceptedWithdrawalWaiver: t });
             }),
-            g(this, 'handleToggleEULAAcceptance', (e, t) => {
+            g(this, "handleToggleEULAAcceptance", (e, t) => {
                 this.setState({ hasAcceptedEULA: t });
-            }));
+            });
     }
 }
 let y = c.ZP.connectStores([d.Z], (e) => {

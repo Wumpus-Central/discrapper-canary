@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => m }), n(388685));
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(392711),
@@ -10,37 +10,56 @@ var r = n(255367),
     d = n(204922);
 let f = 20,
     _ = i.forwardRef(function (e, t) {
-        let { categories: n, store: o, hasSearchResults: c, listPadding: _, renderRow: h, renderSection: m, renderSectionHeader: g, renderSectionFooter: E, renderInspector: b, renderEmptySearchState: y, rowCount: O, rowCountBySection: v, rowHeight: I, sectionHeaderHeight: T, sectionFooterHeight: S, renderUpsell: A } = e,
+        let {
+                categories: n,
+                store: o,
+                hasSearchResults: c,
+                listPadding: _,
+                renderRow: h,
+                renderSection: m,
+                renderSectionHeader: g,
+                renderSectionFooter: E,
+                renderInspector: b,
+                renderEmptySearchState: y,
+                rowCount: O,
+                rowCountBySection: v,
+                rowHeight: I,
+                sectionHeaderHeight: T,
+                sectionFooterHeight: S,
+                renderUpsell: A,
+            } = e,
             N = i.useRef(!1),
             C = i.useRef(null),
             R = (0, l.Iu)((e) => e.searchQuery),
             P = o.useStore((e) => e.activeCategoryIndex),
-            w = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
+            w = n.map((e) =>
+                (0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 },
+            ),
             D = (0, u.Qs)({
                 activeCategoryIndex: P,
                 isScrolling: N,
                 listRef: C,
                 onActiveCategoryIndexChange: o.setActiveCategoryIndex,
                 scrollOffset: f,
-                searchQuery: R
+                searchQuery: R,
             }),
             L = i.useCallback(
                 (e) => {
-                    (D(e),
+                    D(e),
                         p({
                             listRef: C,
                             searchQuery: R,
                             nitroLockedSectionStates: w,
-                            scrollTop: e
-                        }));
+                            scrollTop: e,
+                        });
                 },
-                [D, R, w]
+                [D, R, w],
             );
         return (
             (0, u.Xs)({
                 searchQuery: R,
                 activeCategoryIndex: P,
-                listRef: C
+                listRef: C,
             }),
             i.useImperativeHandle(
                 t,
@@ -79,19 +98,19 @@ let f = 20,
                             ? t
                             : {
                                   height: -1,
-                                  totalHeight: -1
+                                  totalHeight: -1,
                               };
-                    }
+                    },
                 }),
-                []
+                [],
             ),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: d.wrapper,
                 children: [
                     R.length > 0 && !c && null != y
                         ? y()
                         : (0, r.jsx)(a.Z, {
-                              role: 'none presentation',
+                              role: "none presentation",
                               listPadding: _,
                               onScroll: L,
                               renderRow: h,
@@ -104,17 +123,17 @@ let f = 20,
                               sectionHeaderHeight: T,
                               sectionFooterHeight: S,
                               stickyHeaders: !0,
-                              ref: C
+                              ref: C,
                           }),
                     null == A ? void 0 : A(),
-                    null == b ? void 0 : b()
-                ]
+                    null == b ? void 0 : b(),
+                ],
             })
         );
     }),
     p = (0, o.throttle)(h, 300, {
         leading: !1,
-        trailing: !0
+        trailing: !0,
     });
 function h(e) {
     let { listRef: t, searchQuery: n, nitroLockedSectionStates: r, scrollTop: i } = e;
@@ -123,11 +142,11 @@ function h(e) {
         listRef: t,
         searchQuery: n,
         nitroLockedSectionStates: r,
-        scrollTop: i
+        scrollTop: i,
     });
     l.Iu.setState({
         isNitroLockedSectionVisible: o.isNitroLockedSectionVisible,
-        areOnlyNitroLockedSectionsVisible: o.areOnlyNitroLockedSectionsVisible
+        areOnlyNitroLockedSectionsVisible: o.areOnlyNitroLockedSectionsVisible,
     });
 }
 let m = _;

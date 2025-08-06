@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     $3: () => z,
     Go: () => Y,
     JC: () => k,
@@ -14,10 +14,10 @@
     rY: () => G,
     sR: () => H,
     tn: () => W,
-    wq: () => F
+    wq: () => F,
 }),
     n(997841),
-    n(388685));
+    n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(239091),
@@ -49,7 +49,7 @@ function N(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -59,15 +59,15 @@ function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 N(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -75,11 +75,11 @@ function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -105,49 +105,49 @@ function D(e, t, n) {
             let i = g.default.getUser(e);
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
-            let o = '@'.concat(v.ZP.getUserTag(i, { decoration: 'never' })),
-                a = '<@'.concat(e, '>');
-            (E.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
+            let o = "@".concat(v.ZP.getUserTag(i, { decoration: "never" })),
+                a = "<@".concat(e, ">");
+            E.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
                 plainText: o,
-                rawText: a
+                rawText: a,
             }),
-                s.Z.startTyping(t));
+                s.Z.startTyping(t);
         },
-        [e, t, n]
+        [e, t, n],
     );
 }
 function L(e, t, n, r) {
-    let i = w('usernameProfile', n, r);
+    let i = w("usernameProfile", n, r);
     return D(e.author.id, t.id, i);
 }
 function x(e, t, n, r) {
-    let i = w('referencedUsernameProfile', n, r);
+    let i = w("referencedUsernameProfile", n, r);
     return D(null == e ? void 0 : e.author.id, t.id, i);
 }
 function M(e, t, n, r) {
-    let i = w('interactionUsernameProfile', n, r);
+    let i = w("interactionUsernameProfile", n, r);
     return D(null == e ? void 0 : e.user.id, t.id, i);
 }
 function k(e, t, n, r) {
-    let i = w('referencedUsernameProfile', n, r);
+    let i = w("referencedUsernameProfile", n, r);
     return D(e, t.id, i);
 }
 function j(e) {
     return i.useCallback(
         (t) => {
-            (t.preventDefault(), t.stopPropagation(), e());
+            t.preventDefault(), t.stopPropagation(), e();
         },
-        [e]
+        [e],
     );
 }
 function U(e, t) {
-    return j(w('avatarProfile', e, t));
+    return j(w("avatarProfile", e, t));
 }
 function G(e, t) {
-    return j(w('referencedAvatarProfile', e, t));
+    return j(w("referencedAvatarProfile", e, t));
 }
 function B(e, t) {
-    return j(w('interactionAvatarProfile', e, t));
+    return j(w("interactionAvatarProfile", e, t));
 }
 function Z(e, t, a, s) {
     let { id: c } = t,
@@ -159,7 +159,7 @@ function Z(e, t, a, s) {
             if (f) return;
             if (!O.isPlatformEmbedded) {
                 let t = e.target;
-                if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
+                if (("A" === t.tagName && "" !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
@@ -181,17 +181,17 @@ function Z(e, t, a, s) {
                                     message: l,
                                     channel: i,
                                     mediaItem: t,
-                                    shouldHideMediaOptions: s
-                                })
+                                    shouldHideMediaOptions: s,
+                                }),
                             );
                     },
                     {
                         onClose: () => a({ contextMenu: !1 }),
-                        context: _
-                    }
+                        context: _,
+                    },
                 ));
         },
-        [f, c, u, a, _, s]
+        [f, c, u, a, _, s],
     );
 }
 function F(e, t) {
@@ -201,7 +201,7 @@ function F(e, t) {
                 i = p.Z.getChannel(t);
             null != r && null != i && (n.stopPropagation(), (0, I.Pv)(n, r, i));
         },
-        [e, t]
+        [e, t],
     );
 }
 function V(e, t, n) {
@@ -215,10 +215,10 @@ function V(e, t, n) {
                 (0, I._j)(r, {
                     user: i,
                     channel: o,
-                    moderationAlertId: n
+                    moderationAlertId: n,
                 }));
         },
-        [e, t, n]
+        [e, t, n],
     );
 }
 function H(e, t) {
@@ -228,7 +228,7 @@ function H(e, t) {
                 i = p.Z.getChannel(t);
             null != r && null != i && (n.stopPropagation(), (0, I.xS)(n, r, i.guild_id));
         },
-        [e, t]
+        [e, t],
     );
 }
 function Y(e, t) {
@@ -238,32 +238,35 @@ function Y(e, t) {
         (e) => {
             e.altKey && (e.preventDefault(), (0, T.Z)(r, n));
         },
-        [r, n]
+        [r, n],
     );
 }
 function W(e) {
     let { groupId: t, message: n, defaultValue: r, popouts: o } = e,
-        { canShowReactionsOnMessageHover: a } = c.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
+        { canShowReactionsOnMessageHover: a } = c.ZP.useExperiment(
+            { location: "useHoveredMessage" },
+            { autoTrackExposure: !1 },
+        ),
         s = n.author.id,
-        l = ''.concat(t, ':').concat(s),
+        l = "".concat(t, ":").concat(s),
         u = i.useRef(r),
         d = X(n, o),
         [f, p] = i.useState(r);
     u.current = f || u.current;
     let h = i.useCallback(
             (e) => {
-                (a && (0, _.T6)(), f || (E.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, l, !0), d(e), p(!0)));
+                a && (0, _.T6)(), f || (E.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, l, !0), d(e), p(!0));
             },
-            [f, l, a, d]
+            [f, l, a, d],
         ),
         m = i.useCallback(() => {
-            (E.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, l, !1), p(!1));
+            E.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, l, !1), p(!1);
         }, [l]);
     return {
         hasHovered: u.current,
         isHovered: f,
         handleMouseEnter: h,
-        handleMouseLeave: m
+        handleMouseLeave: m,
     };
 }
 function K(e, t) {
@@ -274,20 +277,20 @@ function K(e, t) {
             (t) => {
                 var n, i;
                 let o = null != (i = null == (n = (0, b.uB)(t)) ? void 0 : n.activeElement) ? i : null;
-                ((t.target === t.currentTarget || t.currentTarget.contains(o)) && (a(!0), r(!0)), null != e && e(t));
+                (t.target === t.currentTarget || t.currentTarget.contains(o)) && (a(!0), r(!0)), null != e && e(t);
             },
-            [e]
+            [e],
         ),
         handleBlur: i.useCallback(
             (e) => {
                 var n, i;
                 let o = null != (i = null == (n = (0, b.uB)(e)) ? void 0 : n.activeElement) ? i : null;
-                ((e.target !== e.currentTarget && e.currentTarget.contains(o)) || r(!1), null != t && t(e));
+                (e.target !== e.currentTarget && e.currentTarget.contains(o)) || r(!1), null != t && t(e);
             },
-            [t]
+            [t],
         ),
         isFocused: n,
-        hasFocused: o
+        hasFocused: o,
     };
 }
 function z(e, t) {
@@ -298,17 +301,17 @@ function z(e, t) {
                 channelId: n.channel_id,
                 messageId: n.message_id,
                 flash: !0,
-                returnMessageId: e.id
+                returnMessageId: e.id,
             });
     }, [t, e]);
 }
 function q(e, t) {
-    let n = w('interactionData', e, t);
+    let n = w("interactionData", e, t);
     return i.useCallback(
         (e) => {
-            (e.preventDefault(), e.stopPropagation(), n());
+            e.preventDefault(), e.stopPropagation(), n();
         },
-        [n]
+        [n],
     );
 }
 function X(e, t) {
@@ -324,13 +327,13 @@ function X(e, t) {
                         x: t,
                         y: n,
                         w: i,
-                        h: o
+                        h: o,
                     },
                     !1,
-                    u.LL.UserTriggered
+                    u.LL.UserTriggered,
                 );
             }
         },
-        [e, t]
+        [e, t],
     );
 }

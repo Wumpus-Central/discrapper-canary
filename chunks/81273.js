@@ -50,7 +50,17 @@ let w = (e, t, n, l) => {
         { analyticsLocations: J } = (0, f.ZP)(),
         Q = (null == F ? void 0 : F.paymentGateway) === S.gg$.APPLE_PARTNER,
         $ = !w && null != B && U && !z && !Y && !K && !Q;
-    z || (w && !L) ? (s = E.intl.string(E.t.pQK5ho)) : W === M ? (s = E.intl.formatToPlainString(E.t.UlBRTk, { changeDate: null != F ? o()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : Y ? (s = E.intl.string(E.t.ePFYOT)) : K ? (s = E.intl.string(E.t['0lPoT0'])) : Q && (s = E.intl.string(E.t.cEMaCg));
+    z || (w && !L)
+        ? (s = E.intl.string(E.t.pQK5ho))
+        : W === M
+          ? (s = E.intl.formatToPlainString(E.t.UlBRTk, {
+                changeDate: null != F ? o()(F.currentPeriodEnd).format("MMM DD, YYYY") : "",
+            }))
+          : Y
+            ? (s = E.intl.string(E.t.ePFYOT))
+            : K
+              ? (s = E.intl.string(E.t["0lPoT0"]))
+              : Q && (s = E.intl.string(E.t.cEMaCg));
     let ee = (0, m.Z)(P.iP);
     r.useEffect(() => {
         R &&
@@ -61,7 +71,12 @@ let w = (e, t, n, l) => {
     }, [R, D]);
     let et = r.useCallback(async () => {
             let n, r;
-            if ((a()(null != e, 'No subscription listing'), a()(null != A, 'No subscription plan'), a()(R, 'Cannot purchase this unpublished plan'), (null == q ? void 0 : q.active_trial) != null)) {
+            if (
+                (a()(null != e, "No subscription listing"),
+                a()(null != A, "No subscription plan"),
+                a()(R, "Cannot purchase this unpublished plan"),
+                (null == q ? void 0 : q.active_trial) != null)
+            ) {
                 let i = await X(t, e.id, q.active_trial.id);
                 if ((null == i ? void 0 : i.is_eligible) === !0) {
                     var s;
@@ -82,7 +97,7 @@ let w = (e, t, n, l) => {
                               cancelSubscriptionArticle: _.Z.getArticleURL(S.BhN.ROLE_SUBSCRIPTION_CANCEL),
                               helpdeskArticle: _.Z.getArticleURL(S.BhN.ROLE_SUBSCRIPTION_TRIAL),
                               paidServiceTermsArticle: _.Z.getArticleURL(S.BhN.PAID_TERMS),
-                              tierName: A.name
+                              tierName: A.name,
                           })
                         : void 0,
                 analyticsLocations: J,
@@ -92,7 +107,7 @@ let w = (e, t, n, l) => {
                         onClose: r,
                         listing: e,
                         step: l,
-                        guildId: t
+                        guildId: t,
                     }),
                 initialPlanId: A.id,
                 skuId: A.sku_id,
@@ -102,14 +117,14 @@ let w = (e, t, n, l) => {
                         ? (0, i.jsx)(C.m, {
                               listing: e,
                               onClose: r,
-                              guildId: t
+                              guildId: t,
                           })
                         : (0, i.jsx)(T.x, {
                               listing: e,
                               onClose: r,
-                              guildId: t
+                              guildId: t,
                           }),
-                reviewWarningMessage: r
+                reviewWarningMessage: r,
             });
         }, [R, e, A, F, H, t, J, l, X, q, ee]),
         en = r.useCallback(() => {
@@ -119,6 +134,6 @@ let w = (e, t, n, l) => {
         openModal: L ? en : et,
         canOpenModal: $,
         cannotOpenReason: s,
-        isCheckingTrialEligibility: V
+        isCheckingTrialEligibility: V,
     };
 };

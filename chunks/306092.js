@@ -9,19 +9,19 @@ function s(e) {
     return t.currency === i.pK.DISCORD_ORB
         ? (0, n.jsx)(a.Z, {
               orbAmount: t.amount,
-              className: c ? void 0 : o.disabled
+              className: c ? void 0 : o.disabled,
           })
         : (0, n.jsx)(l.F, {
               price: t,
               discount: s,
-              nitroIconType: r ? 'default' : void 0,
-              nitroIconSize: 'md',
-              discountOfferAmount: u
+              nitroIconType: r ? "default" : void 0,
+              nitroIconSize: "md",
+              discountOfferAmount: u,
           });
 }
 function c(e) {
     let { displayPrices: t, isPremiumUser: r, discount: l, hasSufficientOrbs: a, discountOfferAmount: i } = e;
-    return (0, n.jsx)('div', {
+    return (0, n.jsx)("div", {
         className: o.priceLine,
         children: t.map((e, t) =>
             (0, n.jsx)(
@@ -31,10 +31,10 @@ function c(e) {
                     isPremiumUser: r,
                     discount: l,
                     hasSufficientOrbs: a,
-                    discountOfferAmount: i
+                    discountOfferAmount: i,
                 },
-                t
-            )
-        )
+                t,
+            ),
+        ),
     });
 }

@@ -5,9 +5,9 @@ function i(e, t) {
         i = window.GLOBAL_ENV.CDN_HOST,
         o = window.GLOBAL_ENV.API_ENDPOINT;
     return null != i
-        ? 'https://'.concat(i, '/app-assets/').concat(e, '/store/').concat(t, '.mp4')
-        : ''
+        ? "https://".concat(i, "/app-assets/").concat(e, "/store/").concat(t, ".mp4")
+        : ""
               .concat(location.protocol)
               .concat(o)
-              .concat(r.ANM.STORE_ASSET(e, t, 'mp4'));
+              .concat(r.ANM.STORE_ASSET(e, t, "mp4"));
 }

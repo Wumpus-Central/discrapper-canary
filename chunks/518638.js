@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     A2: () => I,
     BU: () => T,
     Pz: () => y,
@@ -6,12 +6,12 @@
     ZC: () => N,
     a0: () => S,
     t8: () => v,
-    tq: () => A
+    tq: () => A,
 }),
     n(704826),
     n(35282),
     n(997841),
-    n(642613));
+    n(642613);
 var r = n(544891),
     i = n(704215),
     o = n(780384),
@@ -27,20 +27,27 @@ var r = n(544891),
     h = n(1844),
     m = n(474936),
     g = n(981631);
-let E = '{code}',
+let E = "{code}",
     b = 259200000;
 function y(e, t) {
-    let n = (0, o.wj)(t) ? 'logo-dark' : 'logo-light',
+    let n = (0, o.wj)(t) ? "logo-dark" : "logo-light",
         r = window.GLOBAL_ENV.CDN_HOST,
-        i = '?size=256';
-    return null != r ? 'https://'.concat(r, '/promotions/').concat(e, '/').concat(n).concat(i) : ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/promotions/').concat(e, '/').concat(n).concat(i);
+        i = "?size=256";
+    return null != r
+        ? "https://".concat(r, "/promotions/").concat(e, "/").concat(n).concat(i)
+        : ""
+              .concat(location.protocol)
+              .concat(window.GLOBAL_ENV.API_ENDPOINT, "/promotions/")
+              .concat(e, "/")
+              .concat(n)
+              .concat(i);
 }
 function O(e) {
     return {
         code: e.code,
         userId: e.user_id,
         claimedAt: e.claimed_at,
-        promotion: c.Z.createFromServer(e.promotion)
+        promotion: c.Z.createFromServer(e.promotion),
     };
 }
 async function v() {
@@ -49,7 +56,7 @@ async function v() {
             url: g.ANM.CLAIMED_OUTBOUND_PROMOTION_CODES,
             query: { locale: s.default.locale },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !1,
         })
     ).body.map(O);
 }
@@ -58,14 +65,18 @@ async function I(e) {
         (
             await r.tn.post({
                 url: g.ANM.CLAIM_OUTBOUND_PROMOTION_CODE(e),
-                rejectWithError: !1
+                rejectWithError: !1,
             })
-        ).body
+        ).body,
     );
 }
 function T(e, t) {
     var n;
-    return null != t.outboundRedemptionUrlFormat && '' !== t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace(E, encodeURIComponent(e)) : null != (n = t.outboundRedemptionPageLink) ? n : '';
+    return null != t.outboundRedemptionUrlFormat && "" !== t.outboundRedemptionUrlFormat
+        ? t.outboundRedemptionUrlFormat.replace(E, encodeURIComponent(e))
+        : null != (n = t.outboundRedemptionPageLink)
+          ? n
+          : "";
 }
 function S() {
     var e, t;
@@ -75,7 +86,11 @@ function S() {
             let { id: t, flags: n } = e;
             return t !== r && !(0, f.yE)(n, m.TD.SUPPRESS_NOTIFICATION);
         }),
-        a = null == (t = l.Z.settings.userContent) || null == (e = t.recurringDismissibleContentStates[i.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR]) ? void 0 : e.lastDismissedObjectId,
+        a =
+            null == (t = l.Z.settings.userContent) ||
+            null == (e = t.recurringDismissibleContentStates[i.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR])
+                ? void 0
+                : e.lastDismissedObjectId,
         s =
             null == a
                 ? o

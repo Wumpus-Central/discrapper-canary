@@ -5,7 +5,7 @@ var _ = a(370336),
     o = a(151122);
 let i = new WeakMap(),
     c = (0, o._I)(() => ({
-        name: 'FunctionToString',
+        name: "FunctionToString",
         setupOnce() {
             r = Function.prototype.toString;
             try {
@@ -18,5 +18,5 @@ let i = new WeakMap(),
         },
         setup(t) {
             i.set(t, !0);
-        }
+        },
     }));

@@ -9,33 +9,33 @@ function s(e) {
         {
             elapsed: s,
             duration: l,
-            percentage: c
+            percentage: c,
         } = (0, o.Z)({
             start: t,
-            end: n
+            end: n,
         });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: a.container,
         children: [
             (0, r.jsx)(i.Text, {
-                variant: 'text-xs/normal',
-                color: 'text-default',
+                variant: "text-xs/normal",
+                color: "text-default",
                 className: a.text,
-                children: (0, o.m)(s)
+                children: (0, o.m)(s),
             }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: a.bar,
-                children: (0, r.jsx)('div', {
+                children: (0, r.jsx)("div", {
                     className: a.progress,
-                    style: { width: ''.concat(100 * c, '%') }
-                })
+                    style: { width: "".concat(100 * c, "%") },
+                }),
             }),
             (0, r.jsx)(i.Text, {
-                variant: 'text-xs/normal',
-                color: 'text-default',
+                variant: "text-xs/normal",
+                color: "text-default",
                 className: a.text,
-                children: (0, o.m)(l)
-            })
-        ]
+                children: (0, o.m)(l),
+            }),
+        ],
     });
 }

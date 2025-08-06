@@ -1,4 +1,4 @@
-(n.d(t, { default: () => w }), n(415506), n(388685));
+n.d(t, { default: () => w }), n(415506), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(392711),
@@ -34,10 +34,10 @@ function P(e) {
         t.isPurchasedExternally && null != t.paymentGateway
             ? (l = y.intl.format(y.t.HbpFLi, {
                   paymentGatewayName: N.Vz[t.paymentGateway],
-                  subscriptionManagementLink: (0, v.JE)(t.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+                  subscriptionManagementLink: (0, v.JE)(t.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
               }))
             : t.isPausedForFractionalPremium
-              ? (l = y.intl.format(y.t['Hzqe6+'], { expirationDate: n.endsAt.toDate() }))
+              ? (l = y.intl.format(y.t["Hzqe6+"], { expirationDate: n.endsAt.toDate() }))
               : r && (l = y.intl.format(y.t.gXSnur, { endDate: t.currentPeriodEnd })),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -46,14 +46,14 @@ function P(e) {
                     children: [
                         (0, i.jsx)(o.vwX, {
                             tag: o.RB0.H4,
-                            children: r ? y.intl.string(y.t.iIoSd3) : y.intl.string(y.t.Skzv0t)
+                            children: r ? y.intl.string(y.t.iIoSd3) : y.intl.string(y.t.Skzv0t),
                         }),
-                        (0, i.jsx)(o.olH, { onClick: a })
-                    ]
+                        (0, i.jsx)(o.olH, { onClick: a }),
+                    ],
                 }),
                 (0, i.jsxs)(o.hzk, {
                     className: A.body,
-                    children: [(0, i.jsx)('div', { className: A.cancelImage }), (0, i.jsx)('div', { children: l })]
+                    children: [(0, i.jsx)("div", { className: A.cancelImage }), (0, i.jsx)("div", { children: l })],
                 }),
                 t.isPurchasedExternally
                     ? null
@@ -62,21 +62,21 @@ function P(e) {
                           align: g.Z.Align.CENTER,
                           children: [
                               (0, i.jsx)(o.zxk, {
-                                  variant: 'primary',
+                                  variant: "primary",
                                   text: y.intl.string(y.t.PDTjLC),
-                                  onClick: s
+                                  onClick: s,
                               }),
-                              (0, i.jsx)('div', {
+                              (0, i.jsx)("div", {
                                   className: A.textButton,
                                   children: (0, i.jsx)(o.Avr, {
-                                      variant: 'primary',
-                                      text: y.intl.string(y.t['ETE/oK']),
-                                      onClick: a
-                                  })
-                              })
-                          ]
-                      })
-            ]
+                                      variant: "primary",
+                                      text: y.intl.string(y.t["ETE/oK"]),
+                                      onClick: a,
+                                  }),
+                              }),
+                          ],
+                      }),
+            ],
         })
     );
 }
@@ -88,23 +88,26 @@ async function R(e, t, n, i) {
                   let e = Object.values(j.Z.boostSlots),
                       t = a().sortBy(
                           e.filter((e) => !(0, O.tl)(e)),
-                          (e) => [null != e.premiumGuildSubscription, null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null]
+                          (e) => [
+                              null != e.premiumGuildSubscription,
+                              null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null,
+                          ],
                       )[0];
                   return null != t ? t.id : null;
               })();
-    if (null == r) throw Error('No slot to cancel');
+    if (null == r) throw Error("No slot to cancel");
     let s = (0, v.MY)(e, t);
-    (await (0, d.pD)(r),
+    await (0, d.pD)(r),
         await (0, c.Mg)(
             e,
             { items: s },
             {
                 amount: 0,
-                currency: e.currency
+                currency: e.currency,
             },
             (0, v.UX)(s, e.currency, e.paymentSourceId),
-            n
-        ));
+            n,
+        );
 }
 function D(e) {
     var t, n, s;
@@ -119,17 +122,18 @@ function D(e) {
             }
         }, [a]),
         k = r.useRef(C);
-    (r.useEffect(() => {
+    r.useEffect(() => {
         k.current = C;
     }),
         r.useEffect(() => {
             w && k.current();
-        }, [w]));
+        }, [w]);
     let { premiumSubscriptionPlan: L, premiumGuildPlan: M } = (0, l.cj)([E.Z], () => {
             let e = E.Z.get(a.planId);
             return {
                 premiumSubscriptionPlan: e,
-                premiumGuildPlan: null != e ? E.Z.getForSkuAndInterval((0, v.Wz)(I.Si.GUILD), e.interval, e.intervalCount) : null
+                premiumGuildPlan:
+                    null != e ? E.Z.getForSkuAndInterval((0, v.Wz)(I.Si.GUILD), e.interval, e.intervalCount) : null,
             };
         }),
         { analyticsLocations: B } = (0, m.ZP)(),
@@ -139,7 +143,7 @@ function D(e) {
             currency: a.currency,
             paymentSourceId: a.paymentSourceId,
             analyticsLocations: B,
-            analyticsLocation: u.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW
+            analyticsLocation: u.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW,
         }),
         V = null != M ? (0, v.Zx)(a, null != (s = null == (t = Z[0]) ? void 0 : t.quantity) ? s : 0, M.id) : null,
         [G] = (0, h.ED)({
@@ -147,7 +151,7 @@ function D(e) {
             items: V,
             renewal: !0,
             analyticsLocations: B,
-            analyticsLocation: u.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW
+            analyticsLocation: u.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW,
         });
     if (null == G || null == L || null == M || null == U) return (0, i.jsx)(o.$jN, {});
     let F =
@@ -168,9 +172,11 @@ function D(e) {
         }),
         z = F || H ? G.total - U.total : -U.total,
         { interval: W, intervalCount: Y } = L,
-        K = y.intl.format(y.t['0W23cn'], { endDate: G.subscriptionPeriodStart });
+        K = y.intl.format(y.t["0W23cn"], { endDate: G.subscriptionPeriodStart });
     return (
-        a.isPausedForFractionalPremium && d.fetched && (K = y.intl.format(y.t.eb0xgY, { expirationDate: d.endsAt.toDate() })),
+        a.isPausedForFractionalPremium &&
+            d.fetched &&
+            (K = y.intl.format(y.t.eb0xgY, { expirationDate: d.endsAt.toDate() })),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(T.Z, { onClose: C }),
@@ -180,54 +186,54 @@ function D(e) {
                         null !== P &&
                             (0, i.jsx)(o.kzN, {
                                 className: A.error,
-                                children: P
+                                children: P,
                             }),
-                        (0, i.jsx)('div', { children: K }),
+                        (0, i.jsx)("div", { children: K }),
                         (0, i.jsxs)(b.aO, {
                             className: A.invoiceTable,
                             children: [
                                 (0, i.jsx)(b.Z9, { children: y.intl.string(y.t.iqhIp6) }),
                                 (0, i.jsx)(b.B1, {
-                                    label: y.intl.format(y.t['Vg+LRk'], { subscriptionCount: 1 }),
+                                    label: y.intl.format(y.t["Vg+LRk"], { subscriptionCount: 1 }),
                                     value: (0, S.og)((0, S.T4)(z, a.currency), W, Y),
-                                    className: A.invoiceCancelRow
+                                    className: A.invoiceCancelRow,
                                 }),
                                 null != V && V.length > 0
-                                    ? (0, i.jsxs)('div', {
+                                    ? (0, i.jsxs)("div", {
                                           children: [
                                               (0, i.jsx)(b.UN, {}),
                                               (0, i.jsx)(_.nd, {
                                                   premiumSubscription: a,
                                                   renewalInvoice: G,
-                                                  isUpdate: !0
-                                              })
-                                          ]
+                                                  isUpdate: !0,
+                                              }),
+                                          ],
                                       })
-                                    : null
-                            ]
-                        })
-                    ]
+                                    : null,
+                            ],
+                        }),
+                    ],
                 }),
                 (0, i.jsxs)(o.mzw, {
                     align: g.Z.Align.CENTER,
                     justify: g.Z.Justify.BETWEEN,
                     children: [
                         (0, i.jsx)(o.zxk, {
-                            variant: 'critical-primary',
-                            text: y.intl.string(y.t['/AS/gI']),
+                            variant: "critical-primary",
+                            text: y.intl.string(y.t["/AS/gI"]),
                             disabled: O,
                             onClick: async () => {
                                 try {
-                                    (N(!0), D(null), await R(a, Z, B, c), j());
+                                    N(!0), D(null), await R(a, Z, B, c), j();
                                 } catch (e) {
-                                    (D(y.intl.string(y.t['5mlOCQ'])), N(!1));
+                                    D(y.intl.string(y.t["5mlOCQ"])), N(!1);
                                 }
-                            }
+                            },
                         }),
-                        (0, i.jsx)(x.Z, { onClick: p })
-                    ]
-                })
-            ]
+                        (0, i.jsx)(x.Z, { onClick: p }),
+                    ],
+                }),
+            ],
         })
     );
 }
@@ -243,23 +249,26 @@ function Z(e) {
                     children: [
                         (0, i.jsx)(o.vwX, {
                             tag: o.RB0.H4,
-                            children: y.intl.string(y.t['fZzV/P'])
+                            children: y.intl.string(y.t["fZzV/P"]),
                         }),
-                        (0, i.jsx)(o.olH, { onClick: r })
-                    ]
+                        (0, i.jsx)(o.olH, { onClick: r }),
+                    ],
                 }),
                 (0, i.jsxs)(o.hzk, {
                     className: A.body,
-                    children: [(0, i.jsx)('div', { className: A.cancelImage }), (0, i.jsx)('div', { children: y.intl.format(y.t['H+z0np'], { endDate: s }) })]
+                    children: [
+                        (0, i.jsx)("div", { className: A.cancelImage }),
+                        (0, i.jsx)("div", { children: y.intl.format(y.t["H+z0np"], { endDate: s }) }),
+                    ],
                 }),
                 (0, i.jsx)(o.mzw, {
                     children: (0, i.jsx)(o.zxk, {
-                        variant: 'primary',
+                        variant: "primary",
                         text: y.intl.string(y.t.BddRzc),
-                        onClick: r
-                    })
-                })
-            ]
+                        onClick: r,
+                    }),
+                }),
+            ],
         })
     );
 }
@@ -282,7 +291,7 @@ function w(e) {
                     fractionalPremiumInfo: g,
                     isInventory: null == n.premiumGuildSubscription,
                     onNext: () => f(2),
-                    onClose: a
+                    onClose: a,
                 });
                 break;
             case 2:
@@ -292,25 +301,25 @@ function w(e) {
                     fractionalPremiumInfo: g,
                     onBack: () => f(1),
                     onNext: () => f(3),
-                    onClose: a
+                    onClose: a,
                 });
                 break;
             case 3:
                 t = (0, i.jsx)(Z, {
                     premiumSubscription: d,
                     fractionalPremiumInfo: g,
-                    onClose: a
+                    onClose: a,
                 });
                 break;
             default:
-                throw Error('Unexpected step: '.concat(h));
+                throw Error("Unexpected step: ".concat(h));
         }
     return (0, i.jsx)(m.Gt, {
         value: b,
         children: (0, i.jsx)(o.Y0X, {
             transitionState: s,
-            parentComponent: 'GuildBoostSlotCancellationModal',
-            children: t
-        })
+            parentComponent: "GuildBoostSlotCancellationModal",
+            children: t,
+        }),
     });
 }

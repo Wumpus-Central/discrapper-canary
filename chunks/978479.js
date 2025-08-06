@@ -12,7 +12,7 @@ t.exports = function (t) {
     return (
         !1 !==
         s(f, function (t) {
-            if (!o(r, t)) return c(f, 'normal', !1);
+            if (!o(r, t)) return c(f, "normal", !1);
         })
     );
 };

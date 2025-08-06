@@ -3,7 +3,7 @@ n.d(t, {
     Z0: () => o,
     d1: () => c,
     fy: () => a,
-    r5: () => l
+    r5: () => l,
 });
 var r = n(313201),
     i = n(388032);
@@ -15,23 +15,27 @@ function c() {
     [
         {
             id: o,
-            text: ','
+            text: ",",
         },
         {
             id: a,
-            text: ','
+            text: ",",
         },
         {
             id: s,
-            text: i.intl.string(i.t.gHp0Cw)
+            text: i.intl.string(i.t.gHp0Cw),
         },
         {
             id: l,
-            text: i.intl.string(i.t.SO93ur)
-        }
+            text: i.intl.string(i.t.SO93ur),
+        },
     ].forEach((e) => {
         let { id: t, text: n } = e,
             r = document.getElementById(t);
-        null == r && ((r = document.createElement('div')).setAttribute('id', t), (r.innerText = n), (r.style.display = 'none'), document.body.appendChild(r));
+        null == r &&
+            ((r = document.createElement("div")).setAttribute("id", t),
+            (r.innerText = n),
+            (r.style.display = "none"),
+            document.body.appendChild(r));
     });
 }

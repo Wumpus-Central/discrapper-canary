@@ -15,16 +15,16 @@ function p(e) {
         { analyticsLocations: p } = (0, a.ZP)(),
         g = r.useCallback(
             (e) => {
-                ((0, c.Z)('stream_previews_disabled', e, o.I0.getSetting(), p), o.I0.updateSetting(e));
+                (0, c.Z)("stream_previews_disabled", e, o.I0.getSetting(), p), o.I0.updateSetting(e);
             },
-            [p]
+            [p],
         ),
         h = (0, i.jsx)(s.j7V, {
             value: n,
             onChange: g,
             note: u.intl.string(u.t.jTNPHB),
             hideBorder: t,
-            children: u.intl.string(u.t['1CzWUF'])
+            children: u.intl.string(u.t["1CzWUF"]),
         });
     return (0, i.jsx)(l.F, {
         setting: d.s6.VOICE_AND_VIDEO_STREAM_PREVIEWS,
@@ -33,7 +33,7 @@ function p(e) {
             : (0, i.jsx)(s.hjN, {
                   className: m.marginBottom20,
                   title: u.intl.string(u.t.OBwCXF),
-                  children: h
-              })
+                  children: h,
+              }),
     });
 }

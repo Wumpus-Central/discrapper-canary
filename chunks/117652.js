@@ -35,7 +35,7 @@ function w(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -45,15 +45,15 @@ function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 w(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -62,8 +62,8 @@ let L = {
     renderStep: (e) => (0, r.jsx)(M, D({}, e)),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => C.intl.string(C.t['W685+f'])
-    }
+        useBreadcrumbLabel: () => C.intl.string(C.t["W685+f"]),
+    },
 };
 function x(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: a = !1, loading: s = !1 } = e,
@@ -75,28 +75,49 @@ function x(e) {
                 onClick: () => t(c),
                 disabled: a,
                 loading: s,
-                text: C.intl.string(C.t.XiOHRU)
+                text: C.intl.string(C.t.XiOHRU),
             }),
-            i ? (0, r.jsx)(m.Z, { onClick: n }) : null
-        ]
+            i ? (0, r.jsx)(m.Z, { onClick: n }) : null,
+        ],
     });
 }
 function M(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { customGiftMessage: s = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: T, validatingGiftRecipient: w, giftRecipient: D, recommendedGiftSkuIds: L, giftingOrigin: M, setValidatingGiftRecipient: j } = (0, v.wD)(),
-        { selectedSkuId: U, setSelectedSkuId: G, selectedSkuPricePreview: B, paymentSourceId: Z, skuPricePreviewsById: F } = (0, I.JL)(),
+        {
+            customGiftMessage: s = "",
+            setCustomGiftMessage: l,
+            giftRecipientError: m,
+            setGiftRecipientError: T,
+            validatingGiftRecipient: w,
+            giftRecipient: D,
+            recommendedGiftSkuIds: L,
+            giftingOrigin: M,
+            setValidatingGiftRecipient: j,
+        } = (0, v.wD)(),
+        {
+            selectedSkuId: U,
+            setSelectedSkuId: G,
+            selectedSkuPricePreview: B,
+            paymentSourceId: Z,
+            skuPricePreviewsById: F,
+        } = (0, I.JL)(),
         V = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
-        { enabled: H, giftRecommendationAlgorithm: Y } = _.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
+        { enabled: H, giftRecommendationAlgorithm: Y } = _.G.useExperiment(
+            { location: "CollectiblesPaymentModalGiftCustomizationStep" },
+            { autoTrackExposure: !1 },
+        ),
         W = H && M === N.Wt.DM_CHANNEL,
         K = Y === _.u.POPULAR ? C.intl.string(C.t.Kwgrrq) : C.intl.string(C.t.r1huYW),
         z = async (e, t) => {
-            (j(!0), null != m && T(), (await (0, c.B1)(e.id, t)) || T(C.intl.string(C.t['4kgVqa'])), j(!1));
+            j(!0), null != m && T(), (await (0, c.B1)(e.id, t)) || T(C.intl.string(C.t["4kgVqa"])), j(!1);
         };
     (0, a.ZP)(() => {
-        null != U && null != D && (y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: U }), z(D, U));
+        null != U &&
+            null != D &&
+            (y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: U }), z(D, U));
     });
     let q = (e) => {
-            (y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != D && z(D, e), G(e));
+            y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != D && z(D, e), G(e);
         },
         X = (e) => {
             let t = F[e],
@@ -114,9 +135,9 @@ function M(e) {
                     price: o,
                     isSelected: e === U,
                     onSelect: (e) => q(e),
-                    className: R.recommendedGiftPreview
+                    className: R.recommendedGiftPreview,
                 },
-                e
+                e,
             );
         },
         Q = () =>
@@ -127,49 +148,49 @@ function M(e) {
                 currentText: s,
                 disableThemedBackground: !0,
                 className: R.customGiftMessageWrapper,
-                innerClassName: R.customGiftMessage
+                innerClassName: R.customGiftMessage,
             }),
         J = () =>
             W
-                ? (0, r.jsxs)('div', {
+                ? (0, r.jsxs)("div", {
                       className: R.bodyColumnLeft,
                       children: [
                           (0, r.jsx)(o.Text, {
-                              variant: 'text-xs/bold',
-                              color: 'header-secondary',
+                              variant: "text-xs/bold",
+                              color: "header-secondary",
                               className: R.selectGiftTitle,
-                              children: K.toLocaleUpperCase()
+                              children: K.toLocaleUpperCase(),
                           }),
                           L.map((e) => X(e)),
-                          (0, r.jsx)(k, { handleClose: n })
-                      ]
+                          (0, r.jsx)(k, { handleClose: n }),
+                      ],
                   })
-                : (0, r.jsx)('div', {
+                : (0, r.jsx)("div", {
                       className: R.bodyColumnMiddle,
-                      children: (0, r.jsx)(h.q, { isShopGift: !0 })
+                      children: (0, r.jsx)(h.q, { isShopGift: !0 }),
                   }),
         $ = () => {
             if (W)
-                return (0, r.jsxs)('div', {
+                return (0, r.jsxs)("div", {
                     className: R.bodyColumnRight,
                     children: [
                         (0, r.jsx)(g.s, { giftRecipient: D }),
                         (0, r.jsx)(h.q, {
                             isShopGift: !0,
                             className: P.adjustedGiftMainAnimation,
-                            optionsContainerClassName: P.adjustedGiftBoxOptionContainer
+                            optionsContainerClassName: P.adjustedGiftBoxOptionContainer,
                         }),
-                        Q()
-                    ]
+                        Q(),
+                    ],
                 });
             let e = null != B ? (0, O.T4)(B.amount, B.currency) : void 0;
-            return (0, r.jsxs)('div', {
+            return (0, r.jsxs)("div", {
                 className: R.bodyColumnRight,
                 children: [
                     (0, r.jsx)(d.Z, {
                         selectedSkuId: U,
                         className: R.sendTo,
-                        validateSelectedGift: z
+                        validateSelectedGift: z,
                     }),
                     Q(),
                     null != e &&
@@ -178,18 +199,18 @@ function M(e) {
                             price: e,
                             className: R.giftPreview,
                             isSelected: !0,
-                            shouldDisplayHeader: !0
-                        })
-                ]
+                            shouldDisplayHeader: !0,
+                        }),
+                ],
             });
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(S.C3, {
-                children: (0, r.jsxs)('div', {
+                children: (0, r.jsxs)("div", {
                     className: R.stepBody,
-                    children: [J(), $()]
-                })
+                    children: [J(), $()],
+                }),
             }),
             (0, r.jsx)(S.O3, {
                 children: (0, r.jsx)(o.mzw, {
@@ -199,68 +220,68 @@ function M(e) {
                         onStepChange: t,
                         onBackClick: n,
                         disabled: null != m || null == D || D.id === (null == V ? void 0 : V.id) || s.length > N.$n,
-                        loading: w
-                    })
-                })
-            })
-        ]
+                        loading: w,
+                    }),
+                }),
+            }),
+        ],
     });
 }
 function k(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, l.ZP)(s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     function i() {
-        (t(),
+        t(),
             (0, o.pTH)(),
             (0, c.mK)({
                 openInLayer: !1,
                 analyticsLocations: n,
-                analyticsSource: s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL
-            }));
+                analyticsSource: s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL,
+            });
     }
     return (0, r.jsx)(o.P3F, {
         onClick: i,
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsxs)("div", {
             className: R.navigateToShopButton,
             children: [
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)("div", {
                     className: R.navigateToShopBody,
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, r.jsx)("div", {
                             className: R.shopIcon,
                             children: (0, r.jsx)(o.EOn, {
-                                size: 'custom',
+                                size: "custom",
                                 width: 18,
                                 height: 18,
-                                color: 'var(--header-primary)'
-                            })
+                                color: "var(--header-primary)",
+                            }),
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, r.jsxs)("div", {
                             className: R.navigateToShopTextWrapper,
                             children: [
                                 (0, r.jsx)(o.Text, {
-                                    color: 'header-primary',
-                                    variant: 'text-md/semibold',
-                                    children: C.intl.string(C.t['1+Co8P'])
+                                    color: "header-primary",
+                                    variant: "text-md/semibold",
+                                    children: C.intl.string(C.t["1+Co8P"]),
                                 }),
                                 (0, r.jsx)(o.X6q, {
-                                    color: 'header-secondary',
-                                    variant: 'heading-sm/medium',
-                                    children: C.intl.string(C.t.nYn52N)
-                                })
-                            ]
-                        })
-                    ]
+                                    color: "header-secondary",
+                                    variant: "heading-sm/medium",
+                                    children: C.intl.string(C.t.nYn52N),
+                                }),
+                            ],
+                        }),
+                    ],
                 }),
-                (0, r.jsx)('div', {
+                (0, r.jsx)("div", {
                     children: (0, r.jsx)(o.d4D, {
-                        size: 'custom',
+                        size: "custom",
                         width: 20,
                         height: 20,
-                        color: 'var(--header-primary)'
-                    })
-                })
-            ]
-        })
+                        color: "var(--header-primary)",
+                    }),
+                }),
+            ],
+        }),
     });
 }

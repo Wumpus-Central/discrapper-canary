@@ -1,4 +1,4 @@
-(n.d(t, { t: () => p }), n(415506));
+n.d(t, { t: () => p }), n(415506);
 var a = n(73800),
     r = n(512722),
     o = n.n(r),
@@ -10,32 +10,38 @@ var a = n(73800),
 async function u(e, t, n) {
     var a, r, c, u;
     let p = (0, d.B)(e);
-    if (null == p) throw (await f(n, 1, 'authorize'), Error('Unsupported client_id for two way link'));
+    if (null == p) throw (await f(n, 1, "authorize"), Error("Unsupported client_id for two way link"));
     let h = null;
     try {
         let { body: e } = await l.Z.authorize(p, {
             twoWayLinkType: i.g.DEVICE_CODE,
-            userCode: n
+            userCode: n,
         });
         h = e.url;
     } catch (e) {
-        throw (await f(n, null != (r = null == e || null == (a = e.body) ? void 0 : a.code) ? r : 0, 'authorize'), Error('error during two way authorize'));
+        throw (
+            (await f(n, null != (r = null == e || null == (a = e.body) ? void 0 : a.code) ? r : 0, "authorize"),
+            Error("error during two way authorize"))
+        );
     }
     let x = null;
     try {
-        o()(null != h, 'No URL in authorize response');
+        o()(null != h, "No URL in authorize response");
         let { state: e } = (0, s.xp)(h);
-        (o()(null != e, 'Authorize URL state query parameter must be present'), (x = e));
+        o()(null != e, "Authorize URL state query parameter must be present"), (x = e);
     } catch (e) {
-        throw (await f(n, 2, 'authorize'), Error('error parsing callback params'));
+        throw (await f(n, 2, "authorize"), Error("error parsing callback params"));
     }
     try {
         await l.Z.callback(p, {
             code: t,
-            state: x
+            state: x,
         });
     } catch (e) {
-        throw (await f(n, null != (u = null == e || null == (c = e.body) ? void 0 : c.code) ? u : 0, 'callback'), Error('error during two way callback'));
+        throw (
+            (await f(n, null != (u = null == e || null == (c = e.body) ? void 0 : c.code) ? u : 0, "callback"),
+            Error("error during two way callback"))
+        );
     }
 }
 async function f(e, t, n) {
@@ -48,24 +54,24 @@ function p(e, t, n) {
         async (a, r) => {
             if (!r) {
                 try {
-                    await (0, c.tR)(a.userCode, 'denied');
+                    await (0, c.tR)(a.userCode, "denied");
                 } catch (e) {}
                 e();
                 return;
             }
             if (null == a.twoWayLinkCode)
                 try {
-                    (await (0, c.tR)(a.userCode, 'granted'), n(a));
+                    await (0, c.tR)(a.userCode, "granted"), n(a);
                 } catch (e) {
                     t(a);
                 }
             else
                 try {
-                    (await u(a.clientId, a.twoWayLinkCode, a.userCode), n(a));
+                    await u(a.clientId, a.twoWayLinkCode, a.userCode), n(a);
                 } catch (e) {
                     t(a);
                 }
         },
-        [e, t, n]
+        [e, t, n],
     );
 }

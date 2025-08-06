@@ -22,32 +22,37 @@ function p(t) {
             [h.Z],
             () => ({
                 canAccessChannel: h.Z.can(t.accessPermissions, t),
-                canManageChannel: h.Z.can(t.isThread() ? g.Plq.MANAGE_THREADS : g.Plq.MANAGE_CHANNELS, t)
+                canManageChannel: h.Z.can(t.isThread() ? g.Plq.MANAGE_THREADS : g.Plq.MANAGE_CHANNELS, t),
             }),
-            [t]
+            [t],
         ),
-        m = (0, a.e7)(
-            [c.Z],
-            () => {
-                var n;
-                return null != (n = c.Z.getCount(t.id)) ? n : 0;
-            },
-            [t.id]
-        ),
+        m = (0, a.e7)([c.Z], () => {
+            var n;
+            return null != (n = c.Z.getCount(t.id)) ? n : 0;
+        }, [t.id]),
         { firstMessage: _ } = (0, a.e7)([d.Z], () => d.Z.getMessage(t.id), [t.id]),
         E = p && b && null == _,
         O = n && (b || (e && m < 1) || E),
         N = n && e && !b && m > 0 && null != _;
     return C && (!p || E) && (b || O || N)
         ? (0, i.jsx)(l.sNh, {
-              id: 'delete-channel',
-              label: t.type === g.d4z.GUILD_CATEGORY ? Z.intl.string(Z.t.ifbXnJ) : t.isForumPost() ? (O ? Z.intl.string(Z.t.nEOg1N) : Z.intl.string(Z.t.xwMqDw)) : t.isThread() ? Z.intl.string(Z.t.H7vTe3) : Z.intl.string(Z.t['8D8Rsb']),
-              color: 'danger',
+              id: "delete-channel",
+              label:
+                  t.type === g.d4z.GUILD_CATEGORY
+                      ? Z.intl.string(Z.t.ifbXnJ)
+                      : t.isForumPost()
+                        ? O
+                            ? Z.intl.string(Z.t.nEOg1N)
+                            : Z.intl.string(Z.t.xwMqDw)
+                        : t.isThread()
+                          ? Z.intl.string(Z.t.H7vTe3)
+                          : Z.intl.string(Z.t["8D8Rsb"]),
+              color: "danger",
               action: () => {
                   (0, s.w)(t, function () {
                       N ? o.Z.deleteMessage(t.id, v.default.castChannelIdAsMessageId(t.id)) : r.ZP.deleteChannel(t.id);
                   });
-              }
+              },
           })
         : null;
 }

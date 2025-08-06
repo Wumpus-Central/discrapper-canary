@@ -12,7 +12,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,15 +22,15 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -38,11 +38,11 @@ function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -64,7 +64,8 @@ function f(e, t) {
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,7 +75,7 @@ function _(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function p(e) {
@@ -83,43 +84,43 @@ function p(e) {
 let h = {
     showAgeVerification: (e) => {
         var { onClose: t, entryPoint: o } = e,
-            a = f(e, ['onClose', 'entryPoint']);
+            a = f(e, ["onClose", "entryPoint"]);
         (0, i.ZDy)(
             async () => {
-                let { default: e } = await n.e('12014').then(n.bind(n, 879367));
+                let { default: e } = await n.e("12014").then(n.bind(n, 879367));
                 return (t) => (0, r.jsx)(e, c({}, a, t));
             },
             {
                 modalKey: s.zJ,
                 onCloseCallback: t,
-                backdropStyle: p(o)
-            }
+                backdropStyle: p(o),
+            },
         );
     },
     showAgeVerificationGetStartedModal: (e) => {
-        if ((0, a.kJ)() && (0, o.G7)('age_verification_utils'))
+        if ((0, a.kJ)() && (0, o.G7)("age_verification_utils"))
             return void (0, i.ZDy)(
                 async () => {
-                    let { default: t } = await n.e('22447').then(n.bind(n, 686768));
+                    let { default: t } = await n.e("22447").then(n.bind(n, 686768));
                     return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
                 },
                 {
                     modalKey: s.ux,
-                    backdropStyle: p(e)
-                }
+                    backdropStyle: p(e),
+                },
             );
         (0, i.ZDy)(
             async () => {
-                let { default: t } = await n.e('80144').then(n.bind(n, 634997));
+                let { default: t } = await n.e("80144").then(n.bind(n, 634997));
                 return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
             },
             {
                 modalKey: s.ux,
-                backdropStyle: p(e)
-            }
+                backdropStyle: p(e),
+            },
         );
     },
     openUrl: (e) => {
-        window.open(e, '_blank');
-    }
+        window.open(e, "_blank");
+    },
 };

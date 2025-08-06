@@ -16,14 +16,14 @@ function d(e) {
                 interval: 1000,
                 pointsPerInterval: n.points,
                 isPaused: t,
-                itemId: i.yN.WATERING_CAN
+                itemId: i.yN.WATERING_CAN,
             }),
             (0, r.jsx)(o.Z, {
                 className: c.wateringCan,
                 isPaused: t,
                 interval: 1000,
-                sources: [l, u]
-            })
-        ]
+                sources: [l, u],
+            }),
+        ],
     });
 }

@@ -19,33 +19,33 @@ var r = n(924628),
 function _() {
     return (0, i.jsxs)(h.Z, {
         title: x.intl.string(x.t.WWaFn5),
-        description: x.intl.format(x.t['/6sFWV'], { helpArticle: (0, a.uV)() }),
+        description: x.intl.format(x.t["/6sFWV"], { helpArticle: (0, a.uV)() }),
         webSetting: b.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-        children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(f.Z, {})]
+        children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(f.Z, {})],
     });
 }
 function j() {
     return (0, i.jsx)(h.Z, {
         title: x.intl.string(x.t.BG7Qsb),
         webSetting: b.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
-        children: (0, i.jsx)(c.Z, {})
+        children: (0, i.jsx)(c.Z, {}),
     });
 }
 function E() {
     return (0, i.jsxs)(h.Z, {
         title: x.intl.string(x.t.SRZyHh),
         webSetting: b.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-        children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(d.Z, {})]
+        children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(d.Z, {})],
     });
 }
 function C() {
     return (
         (0, s.ZP)(() => {
-            ((0, r.I)(), (0, l.A)());
+            (0, r.I)(), (0, l.A)();
         }),
         (0, i.jsxs)(o.N, {
             header: x.intl.string(x.t.OAuOHB),
-            children: [(0, i.jsx)(E, {}), (0, i.jsx)(j, {}), (0, i.jsx)(_, {})]
+            children: [(0, i.jsx)(E, {}), (0, i.jsx)(j, {}), (0, i.jsx)(_, {})],
         })
     );
 }

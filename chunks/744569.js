@@ -3,5 +3,5 @@ var r = n(46015),
     o = Math.random(),
     a = r((1).toString);
 e.exports = function (e) {
-    return 'Symbol(' + (void 0 === e ? '' : e) + ')_' + a(++i + o, 36);
+    return "Symbol(" + (void 0 === e ? "" : e) + ")_" + a(++i + o, 36);
 };

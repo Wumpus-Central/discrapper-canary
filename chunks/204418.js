@@ -12,7 +12,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -22,32 +22,42 @@ function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 l(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
 let u = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
     d = (e) => {
-        let { user: t, guildId: n, avatarDecorationOverride: a, status: l, avatarSize: d = i.EFr.SIZE_120, 'aria-hidden': f = !1, className: _, animateOnHover: p = !1, questPreviewRewardAssetUrl: h = null } = e,
+        let {
+                user: t,
+                guildId: n,
+                avatarDecorationOverride: a,
+                status: l,
+                avatarSize: d = i.EFr.SIZE_120,
+                "aria-hidden": f = !1,
+                className: _,
+                animateOnHover: p = !1,
+                questPreviewRewardAssetUrl: h = null,
+            } = e,
             {
                 avatarDecorationSrc: m,
                 avatarSrc: g,
-                eventHandlers: E
+                eventHandlers: E,
             } = (0, o.Z)({
                 userId: t.id,
                 guildId: n,
                 size: d,
                 showPending: !0,
                 avatarDecorationOverride: a,
-                animateOnHover: p
+                animateOnHover: p,
             });
         return (0, r.jsx)(
             u,
@@ -57,11 +67,11 @@ let u = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
                     src: g,
                     size: d,
                     status: l,
-                    'aria-label': f ? void 0 : s.intl.string(s.t.lqaIxM),
-                    'aria-hidden': f,
-                    className: _
+                    "aria-label": f ? void 0 : s.intl.string(s.t.lqaIxM),
+                    "aria-hidden": f,
+                    className: _,
                 },
-                E
-            )
+                E,
+            ),
         );
     };

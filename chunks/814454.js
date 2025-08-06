@@ -8,6 +8,6 @@ function a(e) {
         location_stack: t,
         activity_type: (0, r.te)(n),
         activity_application_id: a,
-        voice_channel_id: s
+        voice_channel_id: s,
     });
 }

@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => l }), r(388685));
+r.d(t, { Z: () => l }), r(388685);
 var n = r(255367),
     s = r(73800),
     i = r(748780),
@@ -7,21 +7,21 @@ var n = r(255367),
 class l extends s.Component {
     componentWillEnter(e) {
         let { offset: t } = this.state;
-        (t.setValue(1),
+        t.setValue(1),
             i.Z.spring(t, {
                 toValue: 0,
-                duration: 75
-            }).start(e));
+                duration: 75,
+            }).start(e);
     }
     componentWillLeave(e) {
         let { offset: t } = this.state;
-        (t.setValue(0),
+        t.setValue(0),
             this.setState({ isExiting: !0 }, () => {
                 i.Z.spring(t, {
                     toValue: -1,
-                    duration: 75
+                    duration: 75,
                 }).start(e);
-            }));
+            });
     }
     render() {
         let { isExiting: e, offset: t } = this.state;
@@ -29,39 +29,39 @@ class l extends s.Component {
             className: a.wrapper,
             style: {
                 left: 0,
-                position: e ? 'absolute' : 'relative',
+                position: e ? "absolute" : "relative",
                 top: 0,
                 transform: [
                     {
                         translateX: t.interpolate({
                             inputRange: [-1, 1],
-                            outputRange: ['-100%', '100%']
-                        })
-                    }
-                ]
+                            outputRange: ["-100%", "100%"],
+                        }),
+                    },
+                ],
             },
             children: (0, n.jsx)(o.hzk, {
                 className: a.contentWrapper,
-                children: this.props.children
-            })
+                children: this.props.children,
+            }),
         });
     }
     constructor(...e) {
         var t, r;
-        (super(...e),
-            (t = 'state'),
+        super(...e),
+            (t = "state"),
             (r = {
                 isExiting: !1,
                 offset: new i.Z.Value(0),
-                selectedValue: null
+                selectedValue: null,
             }),
             t in this
                 ? Object.defineProperty(this, t, {
                       value: r,
                       enumerable: !0,
                       configurable: !0,
-                      writable: !0
+                      writable: !0,
                   })
-                : (this[t] = r));
+                : (this[t] = r);
     }
 }

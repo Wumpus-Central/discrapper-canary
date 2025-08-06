@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => o }), n(388685));
+n.d(t, { Z: () => o }), n(388685);
 var r = n(73800),
     i = n(920103);
 function o(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vertical",
         [n] = (0, r.useState)(
             () =>
                 new i.Z({
@@ -13,13 +13,16 @@ function o(e) {
                     callback: (n, r) => {
                         let { current: i } = e;
                         if (null == i) return r();
-                        'horizontal' === t ? (i.scrollLeft = n) : (i.scrollTop = n);
+                        "horizontal" === t ? (i.scrollLeft = n) : (i.scrollTop = n);
                     },
                     getNodeWindow: () => {
                         var t, n, r;
-                        return null != (r = null == (n = e.current) || null == (t = n.ownerDocument) ? void 0 : t.defaultView) ? r : null;
-                    }
-                })
+                        return null !=
+                            (r = null == (n = e.current) || null == (t = n.ownerDocument) ? void 0 : t.defaultView)
+                            ? r
+                            : null;
+                    },
+                }),
         );
     return n;
 }

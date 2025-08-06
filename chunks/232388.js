@@ -17,7 +17,7 @@ function m(e) {
             onChange: (e) => a.Z.setQoS(e),
             note: d.intl.string(d.t.I1Eoqq),
             hideBorder: t,
-            children: d.intl.string(d.t['3CqDxs'])
+            children: d.intl.string(d.t["3CqDxs"]),
         });
     return (0, i.jsx)(l.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
@@ -26,7 +26,7 @@ function m(e) {
             : (0, i.jsx)(s.hjN, {
                   className: u.marginBottom20,
                   title: d.intl.string(d.t.uancuL),
-                  children: m
-              })
+                  children: m,
+              }),
     });
 }

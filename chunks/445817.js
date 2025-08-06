@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+n.d(t, { Z: () => _ }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -16,7 +16,7 @@ var i = n(255367),
     b = n(959963);
 let x = {
     width: 387,
-    height: 218
+    height: 218,
 };
 function _(e) {
     let { previewEnabled: t, onEnablePreview: n, onCancelPreview: _ } = e,
@@ -31,37 +31,37 @@ function _(e) {
             () => () => {
                 O.current && l.Z.wait(() => (0, d.Up)(v.current));
             },
-            []
+            [],
         ),
         (0, i.jsx)(m.Z, {
             selectedBackgroundOption: E,
             onSelectBackgroundOption: (e) => {
-                ((O.current = !0), (v.current = e), C(e), (0, u.wG)(e, { location: S.location }).catch(h.dG4));
+                (O.current = !0), (v.current = e), C(e), (0, u.wG)(e, { location: S.location }).catch(h.dG4);
             },
             onCancelPreview: _,
             renderCamera: (e) =>
                 t
-                    ? (0, i.jsx)('div', {
+                    ? (0, i.jsx)("div", {
                           className: b.cameraWrapper,
-                          children: (0, i.jsxs)('div', {
+                          children: (0, i.jsxs)("div", {
                               className: b.camera,
                               children: [
                                   (0, i.jsx)(j, {
                                       deviceId: e,
                                       width: x.width,
                                       height: x.height,
-                                      disabled: !t
+                                      disabled: !t,
                                   }),
-                                  (0, i.jsx)(m.S, {})
-                              ]
-                          })
+                                  (0, i.jsx)(m.S, {}),
+                              ],
+                          }),
                       })
-                    : (0, i.jsxs)('div', {
+                    : (0, i.jsxs)("div", {
                           className: b.cameraWrapper,
                           children: [
-                              (0, i.jsx)('div', { className: b.previewImage }),
+                              (0, i.jsx)("div", { className: b.previewImage }),
                               (0, i.jsx)(a.ua7, {
-                                  text: T ? null : f.intl.string(f.t['8jSzSU']),
+                                  text: T ? null : f.intl.string(f.t["8jSzSU"]),
                                   children: (e) => {
                                       var t, r;
                                       return (0, i.jsx)(
@@ -70,37 +70,37 @@ function _(e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
                                                       i = Object.keys(n);
-                                                  ('function' == typeof Object.getOwnPropertySymbols &&
+                                                  "function" == typeof Object.getOwnPropertySymbols &&
                                                       (i = i.concat(
                                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                          })
+                                                          }),
                                                       )),
                                                       i.forEach(function (t) {
                                                           var i;
-                                                          ((i = n[t]),
+                                                          (i = n[t]),
                                                               t in e
                                                                   ? Object.defineProperty(e, t, {
                                                                         value: i,
                                                                         enumerable: !0,
                                                                         configurable: !0,
-                                                                        writable: !0
+                                                                        writable: !0,
                                                                     })
-                                                                  : (e[t] = i));
-                                                      }));
+                                                                  : (e[t] = i);
+                                                      });
                                               }
                                               return e;
                                           })(
                                               {
-                                                  variant: 'primary',
-                                                  text: f.intl.string(f.t.JIf4v7)
+                                                  variant: "primary",
+                                                  text: f.intl.string(f.t.JIf4v7),
                                               },
-                                              e
+                                              e,
                                           )),
                                           (r = r =
                                               {
                                                   onClick: n,
-                                                  disabled: !T
+                                                  disabled: !T,
                                               }),
                                           Object.getOwnPropertyDescriptors
                                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -114,12 +114,12 @@ function _(e) {
                                                 })(Object(r)).forEach(function (e) {
                                                     Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                                                 }),
-                                          t)
+                                          t),
                                       );
-                                  }
-                              })
-                          ]
-                      })
+                                  },
+                              }),
+                          ],
+                      }),
         })
     );
 }

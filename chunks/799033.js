@@ -1,6 +1,6 @@
 a.d(e, {
     L7: () => P,
-    k3: () => O
+    k3: () => O,
 });
 var r = a(157079),
     _ = a(501684),
@@ -25,7 +25,7 @@ let L = new WeakMap(),
     O = {
         traceFetch: !0,
         traceXHR: !0,
-        enableHTTPTimings: !0
+        enableHTTPTimings: !0,
     };
 function P(t, e) {
     let {
@@ -33,20 +33,20 @@ function P(t, e) {
             traceXHR: _,
             shouldCreateSpanForRequest: N,
             enableHTTPTimings: P,
-            tracePropagationTargets: D
+            tracePropagationTargets: D,
         } = {
             traceFetch: O.traceFetch,
             traceXHR: O.traceXHR,
-            ...e
+            ...e,
         },
-        m = 'function' == typeof N ? N : (t) => !0,
+        m = "function" == typeof N ? N : (t) => !0,
         v = (t) =>
             (function (t, e) {
                 let a = p.m9.location && p.m9.location.href;
                 if (a) {
                     let r, _;
                     try {
-                        ((r = new URL(t, a)), (_ = new URL(a).origin));
+                        (r = new URL(t, a)), (_ = new URL(a).origin);
                     } catch (t) {
                         return !1;
                     }
@@ -59,19 +59,19 @@ function P(t, e) {
                 }
             })(t, D),
         y = {};
-    (a &&
+    a &&
         (t.addEventProcessor(
             (t) => (
-                'transaction' === t.type &&
+                "transaction" === t.type &&
                     t.spans &&
                     t.spans.forEach((t) => {
-                        if ('http.client' === t.op) {
+                        if ("http.client" === t.op) {
                             let e = h.get(t.span_id);
                             e && ((t.timestamp = e / 1000), h.delete(t.span_id));
                         }
                     }),
                 t
-            )
+            ),
         ),
         (0, R.cf)((t) => {
             if (t.response) {
@@ -85,8 +85,8 @@ function P(t, e) {
                 let a = C(t.fetchData.url),
                     r = a ? (0, d.en)(a).host : void 0;
                 e.setAttributes({
-                    'http.url': a,
-                    'server.address': r
+                    "http.url": a,
+                    "server.address": r,
                 });
             }
             P && e && g(e);
@@ -113,17 +113,17 @@ function P(t, e) {
                                 ? (0, E.qp)({
                                       name: `${R.method} ${R.url}`,
                                       attributes: {
-                                          type: 'xhr',
-                                          'http.method': R.method,
-                                          'http.url': A,
+                                          type: "xhr",
+                                          "http.method": R.method,
+                                          "http.url": A,
                                           url: R.url,
-                                          'server.address': p,
-                                          [s.S3]: 'auto.http.browser',
-                                          [s.$J]: 'http.client'
-                                      }
+                                          "server.address": p,
+                                          [s.S3]: "auto.http.browser",
+                                          [s.$J]: "http.client",
+                                      },
                                   })
                                 : new l.b();
-                    ((n.__sentry_xhr_span_id__ = h.spanContext().spanId), (_[n.__sentry_xhr_span_id__] = h));
+                    (n.__sentry_xhr_span_id__ = h.spanContext().spanId), (_[n.__sentry_xhr_span_id__] = h);
                     let O = (0, u.s3)();
                     return (
                         n.setRequestHeader &&
@@ -135,47 +135,47 @@ function P(t, e) {
                                         traceId: _,
                                         spanId: n,
                                         sampled: c,
-                                        dsc: E
+                                        dsc: E,
                                     } = {
                                         ...(0, u.aF)().getPropagationContext(),
-                                        ...r.getPropagationContext()
+                                        ...r.getPropagationContext(),
                                     },
                                     s = a && (0, i.z)() ? (0, o.Hb)(a) : (0, f.$p)(_, n, c);
                                 var l = t,
                                     R = s,
                                     d = (0, T.IQ)(E || (a ? (0, I.jC)(a) : (0, I._l)(_, e)));
                                 try {
-                                    (l.setRequestHeader('sentry-trace', R), d && l.setRequestHeader(T.bU, d));
+                                    l.setRequestHeader("sentry-trace", R), d && l.setRequestHeader(T.bU, d);
                                 } catch (t) {}
                             })(n, O, (0, i.z)() && L ? h : void 0),
                         h
                     );
                 })(t, m, v, y);
                 P && e && g(e);
-            }));
+            });
 }
 function g(t) {
     let { url: e } = (0, o.XU)(t).data || {};
-    if (!e || 'string' != typeof e) return;
-    let a = (0, _._j)('resource', ({ entries: r }) => {
+    if (!e || "string" != typeof e) return;
+    let a = (0, _._j)("resource", ({ entries: r }) => {
         r.forEach((r) => {
-            'resource' === r.entryType &&
-                'initiatorType' in r &&
-                'string' == typeof r.nextHopProtocol &&
-                ('fetch' === r.initiatorType || 'xmlhttprequest' === r.initiatorType) &&
+            "resource" === r.entryType &&
+                "initiatorType" in r &&
+                "string" == typeof r.nextHopProtocol &&
+                ("fetch" === r.initiatorType || "xmlhttprequest" === r.initiatorType) &&
                 r.name.endsWith(e) &&
                 ((function (t) {
                     let { name: e, version: a } = (function (t) {
-                            let e = 'unknown',
-                                a = 'unknown',
-                                r = '';
+                            let e = "unknown",
+                                a = "unknown",
+                                r = "";
                             for (let _ of t) {
-                                if ('/' === _) {
-                                    [e, a] = t.split('/');
+                                if ("/" === _) {
+                                    [e, a] = t.split("/");
                                     break;
                                 }
                                 if (!isNaN(Number(_))) {
-                                    ((e = 'h' === r ? 'http' : r), (a = t.split(r)[1]));
+                                    (e = "h" === r ? "http" : r), (a = t.split(r)[1]);
                                     break;
                                 }
                                 r += _;
@@ -184,12 +184,26 @@ function g(t) {
                                 r === t && (e = r),
                                 {
                                     name: e,
-                                    version: a
+                                    version: a,
                                 }
                             );
                         })(t.nextHopProtocol),
                         r = [];
-                    return (r.push(['network.protocol.version', a], ['network.protocol.name', e]), N.Z1) ? [...r, ['http.request.redirect_start', D(t.redirectStart)], ['http.request.fetch_start', D(t.fetchStart)], ['http.request.domain_lookup_start', D(t.domainLookupStart)], ['http.request.domain_lookup_end', D(t.domainLookupEnd)], ['http.request.connect_start', D(t.connectStart)], ['http.request.secure_connection_start', D(t.secureConnectionStart)], ['http.request.connection_end', D(t.connectEnd)], ['http.request.request_start', D(t.requestStart)], ['http.request.response_start', D(t.responseStart)], ['http.request.response_end', D(t.responseEnd)]] : r;
+                    return (r.push(["network.protocol.version", a], ["network.protocol.name", e]), N.Z1)
+                        ? [
+                              ...r,
+                              ["http.request.redirect_start", D(t.redirectStart)],
+                              ["http.request.fetch_start", D(t.fetchStart)],
+                              ["http.request.domain_lookup_start", D(t.domainLookupStart)],
+                              ["http.request.domain_lookup_end", D(t.domainLookupEnd)],
+                              ["http.request.connect_start", D(t.connectStart)],
+                              ["http.request.secure_connection_start", D(t.secureConnectionStart)],
+                              ["http.request.connection_end", D(t.connectEnd)],
+                              ["http.request.request_start", D(t.requestStart)],
+                              ["http.request.response_start", D(t.responseStart)],
+                              ["http.request.response_end", D(t.responseEnd)],
+                          ]
+                        : r;
                 })(r).forEach((e) => t.setAttribute(...e)),
                 setTimeout(a));
         });

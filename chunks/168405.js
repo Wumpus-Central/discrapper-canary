@@ -8,10 +8,10 @@ var i = n(481060),
 function l(e, t) {
     return (0, o.$R)(t)
         ? (0, r.jsx)(i.sNh, {
-              id: 'mark-unread',
+              id: "mark-unread",
               label: s.intl.string(s.t.RpE9k5),
               action: () => (0, a.Z)(t.id, e.id),
-              icon: i.z7b
+              icon: i.z7b,
           })
         : null;
 }

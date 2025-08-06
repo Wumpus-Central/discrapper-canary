@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => A }), n(539854), n(388685));
+n.d(t, { Z: () => A }), n(539854), n(388685);
 var r = n(392711),
     i = n(570140),
     o = n(235820),
@@ -19,7 +19,7 @@ function m(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 m(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -48,7 +48,8 @@ function E(e, t) {
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -58,7 +59,7 @@ function b(e, t) {
         r,
         i = {},
         o = Object.keys(e);
-    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let y = 5,
@@ -69,7 +70,7 @@ function v(e) {
         limit: h.DJj,
         roles: l.ZP.roleFilter,
         everyone: l.ZP.everyoneFilter,
-        feature: p.Lr
+        feature: p.Lr,
     });
 }
 let I = (0, r.throttle)(S, O);
@@ -85,7 +86,7 @@ function T(e) {
         let s = a.Z.fetchMessages({
             channelId: i,
             limit: p.AQ,
-            feature: p.Lr
+            feature: p.Lr,
         });
         !1 !== s && null != s && n.push(s);
     }
@@ -94,7 +95,7 @@ function T(e) {
 async function S(e) {
     var t,
         { preload: n = !1 } = e,
-        r = E(e, ['preload']);
+        r = E(e, ["preload"]);
     let o = Date.now(),
         a = _.Z.getNotifyingChannelIds();
     if (null == a) return;
@@ -104,9 +105,9 @@ async function S(e) {
         d = !1;
     if ((l.ZP.hasMore && !l.ZP.loading && (s.push(v(u)), (d = !0)), 0 === s.length))
         return void i.Z.dispatch({
-            type: 'NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS',
+            type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS",
             preload: n,
-            finished: !0
+            finished: !0,
         });
     try {
         await Promise.all(s);
@@ -115,43 +116,43 @@ async function S(e) {
             loadingTrigger: null != (t = r.loadingTrigger) ? t : p.X.UNKNOWN,
             viewId: r.viewId,
             channelsFetched: s.length - +!!d,
-            mentionsFetched: d
+            mentionsFetched: d,
         };
-        (n && (0, f.CP)(e),
+        n && (0, f.CP)(e),
             i.Z.dispatch({
-                type: 'NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS',
+                type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS",
                 preload: n,
-                analyticsPayload: e
-            }));
+                analyticsPayload: e,
+            });
     } catch (e) {
-        i.Z.dispatch({ type: 'NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE' });
+        i.Z.dispatch({ type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE" });
     }
 }
 let A = {
     loadMoreInbox() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         var { preload: t = !1 } = e,
-            n = E(e, ['preload']);
+            n = E(e, ["preload"]);
         if (!_.Z.canLoadMore({ preload: t })) return !1;
-        (i.Z.dispatch({
-            type: 'NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START',
-            preload: t
+        i.Z.dispatch({
+            type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START",
+            preload: t,
         }),
-            I(g({ preload: t }, n)));
+            I(g({ preload: t }, n));
     },
     inboxItemClick: function (e) {
         let { message: t, channel: n, isUnread: r, isSidebar: o, viewId: l, track: u = !0 } = e;
-        (i.Z.dispatch({
-            type: 'NOTIFICATIONS_INBOX_ITEM_CLICK',
+        i.Z.dispatch({
+            type: "NOTIFICATIONS_INBOX_ITEM_CLICK",
             messageId: t.id,
             channelId: n.id,
-            isUnread: r
+            isUnread: r,
         }),
             u &&
                 (0, f.Qz)({
                     interactionType: f.s_.CLICK,
                     message: t,
-                    viewId: l
+                    viewId: l,
                 }),
             r &&
                 s.In(
@@ -159,14 +160,14 @@ let A = {
                     {
                         section: h.jXE.INBOX,
                         object: h.qAy.ACK_MESSAGE_VIEWED,
-                        objectType: h.Qqv.ACK_SEMI_AUTOMATIC
+                        objectType: h.Qqv.ACK_SEMI_AUTOMATIC,
                     },
                     !0,
                     void 0,
-                    t.id
+                    t.id,
                 ),
-            a.Z.trackJump(n.id, t.id, p.JP));
+            a.Z.trackJump(n.id, t.id, p.JP);
         let d = o ? h.STv : n.guild_id;
         (0, c.uL)(h.Z5c.CHANNEL(d, n.id, t.id));
-    }
+    },
 };

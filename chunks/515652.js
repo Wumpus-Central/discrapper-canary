@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -23,32 +23,32 @@ var s =
             },
             items: function (e) {
                 return e.items;
-            }
+            },
         },
-        matchesTypes: ['Files']
+        matchesTypes: ["Files"],
     }),
     a(r, i.HTML, {
         exposeProperties: {
             html: function (e, t) {
-                return (0, o.R)(e, t, '');
-            }
+                return (0, o.R)(e, t, "");
+            },
         },
-        matchesTypes: ['Html', 'text/html']
+        matchesTypes: ["Html", "text/html"],
     }),
     a(r, i.URL, {
         exposeProperties: {
             urls: function (e, t) {
-                return (0, o.R)(e, t, '').split('\n');
-            }
+                return (0, o.R)(e, t, "").split("\n");
+            },
         },
-        matchesTypes: ['Url', 'text/uri-list']
+        matchesTypes: ["Url", "text/uri-list"],
     }),
     a(r, i.TEXT, {
         exposeProperties: {
             text: function (e, t) {
-                return (0, o.R)(e, t, '');
-            }
+                return (0, o.R)(e, t, "");
+            },
         },
-        matchesTypes: ['Text', 'text/plain']
+        matchesTypes: ["Text", "text/plain"],
     }),
     r);

@@ -1,6 +1,6 @@
 n.d(t, {
     E: () => y,
-    J: () => g
+    J: () => g,
 });
 var r = n(255367);
 n(73800);
@@ -19,7 +19,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -29,15 +29,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -45,11 +45,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -67,27 +67,27 @@ function h(e, t) {
 let m = {
     none: void 0,
     default: d.aspectRatio,
-    crunchyroll: o()(d.aspectRatio, d.crunchyroll)
+    crunchyroll: o()(d.aspectRatio, d.crunchyroll),
 };
 var g = (function (e) {
-    return ((e.SIZE_60 = 'size-60'), (e.SIZE_72 = 'size-72'), (e.SIZE_100 = 'size-100'), e);
+    return (e.SIZE_60 = "size-60"), (e.SIZE_72 = "size-72"), (e.SIZE_100 = "size-100"), e;
 })({});
 let E = {
-    'size-60': {
+    "size-60": {
         imageSize: 60,
         smallImageSize: 24,
-        mask: s.QS.CONTENT_IMAGE_60
+        mask: s.QS.CONTENT_IMAGE_60,
     },
-    'size-72': {
+    "size-72": {
         imageSize: 72,
         smallImageSize: 32,
-        mask: s.QS.CONTENT_IMAGE_72
+        mask: s.QS.CONTENT_IMAGE_72,
     },
-    'size-100': {
+    "size-100": {
         imageSize: 100,
         smallImageSize: 32,
-        mask: s.QS.CONTENT_IMAGE_100
-    }
+        mask: s.QS.CONTENT_IMAGE_100,
+    },
 };
 function b(e) {
     let { children: t, onClick: n } = e;
@@ -96,7 +96,7 @@ function b(e) {
         : (0, r.jsx)(a.P3F, {
               onClick: n,
               className: d.clickable,
-              children: t
+              children: t,
           });
 }
 function y(e) {
@@ -106,19 +106,19 @@ function y(e) {
     if (null == i)
         return (0, r.jsx)(l.f, {
             src: void 0,
-            alt: u.intl.string(u.t['2B/phI']),
+            alt: u.intl.string(u.t["2B/phI"]),
             size: v,
-            className: o()(d.contentImage, m[null != p ? p : 'default'], O),
-            constrain: 'width'
+            className: o()(d.contentImage, m[null != p ? p : "default"], O),
+            constrain: "width",
         });
     let S = (0, r.jsx)(l.f, {
         src: i.src,
-        alt: null != (n = null != (t = i.alt) ? t : i.text) ? n : u.intl.string(u.t['2B/phI']),
+        alt: null != (n = null != (t = i.alt) ? t : i.text) ? n : u.intl.string(u.t["2B/phI"]),
         size: v,
-        className: o()(d.contentImage, m[null != p ? p : 'default']),
-        constrain: 'width'
+        className: o()(d.contentImage, m[null != p ? p : "default"]),
+        constrain: "width",
     });
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(d.imagePosition, O),
         children: [
             (0, r.jsx)(a.ua7, {
@@ -137,18 +137,18 @@ function y(e) {
                                               mask: T,
                                               width: v,
                                               height: v,
-                                              children: S
-                                          })
+                                              children: S,
+                                          }),
                                       )
                                     : (0, r.jsx)(
-                                          'div',
+                                          "div",
                                           h(_({}, e), {
                                               className: d.imageContainer,
-                                              children: S
-                                          })
-                                      )
-                        })
-                    })
+                                              children: S,
+                                          }),
+                                      ),
+                        }),
+                    }),
             }),
             null != f &&
                 (0, r.jsx)(a.ua7, {
@@ -158,7 +158,7 @@ function y(e) {
                         return (0, r.jsx)(c._, {
                             href: f.url,
                             children: (0, r.jsx)(
-                                'div',
+                                "div",
                                 h(_({}, e), {
                                     className: d.smallImageContainer,
                                     children: (0, r.jsx)(l.f, {
@@ -166,13 +166,13 @@ function y(e) {
                                         alt: null != (t = f.alt) ? t : f.text,
                                         size: I,
                                         className: d.contentImage,
-                                        constrain: 'width'
-                                    })
-                                })
-                            )
+                                        constrain: "width",
+                                    }),
+                                }),
+                            ),
                         });
-                    }
-                })
-        ]
+                    },
+                }),
+        ],
     });
 }

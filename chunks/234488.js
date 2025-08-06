@@ -5,14 +5,14 @@ var r = n(46015),
     s = n(154028),
     l = n(845691),
     c = function () {},
-    u = s('Reflect', 'construct'),
+    u = s("Reflect", "construct"),
     d = /^\s*(?:class|function)\b/,
     f = r(d.exec),
     _ = !d.test(c),
     p = function (e) {
         if (!o(e)) return !1;
         try {
-            return (u(c, [], e), !0);
+            return u(c, [], e), !0;
         } catch (e) {
             return !1;
         }
@@ -20,9 +20,9 @@ var r = n(46015),
     h = function (e) {
         if (!o(e)) return !1;
         switch (a(e)) {
-            case 'AsyncFunction':
-            case 'GeneratorFunction':
-            case 'AsyncGeneratorFunction':
+            case "AsyncFunction":
+            case "GeneratorFunction":
+            case "AsyncGeneratorFunction":
                 return !1;
         }
         try {
@@ -31,7 +31,7 @@ var r = n(46015),
             return !0;
         }
     };
-((h.sham = !0),
+(h.sham = !0),
     (e.exports =
         !u ||
         i(function () {
@@ -46,4 +46,4 @@ var r = n(46015),
             );
         })
             ? h
-            : p));
+            : p);

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(539854));
+n.d(t, { Z: () => b }), n(539854);
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -22,7 +22,7 @@ function b(e, t) {
     null != f && g.push(f);
     let h = (0, c.Z)({
         id: t.id,
-        label: m.intl.string(m.t.sMsaLi)
+        label: m.intl.string(m.t.sMsaLi),
     });
     null != h && g.push(h);
     let x = (null == (n = t.tags) ? void 0 : n.guild_connections) === null,
@@ -37,24 +37,24 @@ function b(e, t) {
                     l.kSQ,
                     {
                         children: (0, i.jsx)(l.sNh, {
-                            id: 'delete-role',
+                            id: "delete-role",
                             label: m.intl.string(m.t.oyYWHB),
-                            color: 'danger',
+                            color: "danger",
                             icon: l.XHJ,
                             action: () => {
                                 a.Z.show({
                                     title: m.intl.string(m.t.YWISbW),
-                                    body: m.intl.format(m.t['9+nrUV'], { name: t.name }),
-                                    cancelText: m.intl.string(m.t['ETE/oK']),
+                                    body: m.intl.format(m.t["9+nrUV"], { name: t.name }),
+                                    cancelText: m.intl.string(m.t["ETE/oK"]),
                                     onConfirm: async () => {
-                                        (x && (await (0, s.L_)(e.id, t.id, [])), o.Z.deleteRole(e.id, t.id));
-                                    }
+                                        x && (await (0, s.L_)(e.id, t.id, [])), o.Z.deleteRole(e.id, t.id);
+                                    },
                                 });
-                            }
-                        })
+                            },
+                        }),
                     },
-                    'delete-role'
-                )
+                    "delete-role",
+                ),
             ),
         g
     );

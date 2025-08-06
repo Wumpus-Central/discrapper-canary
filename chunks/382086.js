@@ -1,6 +1,6 @@
 e.d(n, {
     Z: () => _,
-    v: () => u
+    v: () => u,
 });
 var i = e(255367);
 e(73800);
@@ -21,14 +21,14 @@ function u(t) {
             look: l.zx.Looks.BLANK,
             size: l.zx.Sizes.MIN,
             onClick: e,
-            children: m.intl.string(m.t['13/7kZ'])
+            children: m.intl.string(m.t["13/7kZ"]),
         });
     function g(t) {
-        (r.default.track(o.rMx.GUILD_CREATION_INTENT_SELECTED, {
+        r.default.track(o.rMx.GUILD_CREATION_INTENT_SELECTED, {
             skipped: null == t,
-            is_community: t === c.lr.COMMUNITY
+            is_community: t === c.lr.COMMUNITY,
         }),
-            u(t));
+            u(t);
     }
     return {
         content: (0, i.jsxs)(i.Fragment, {
@@ -40,21 +40,21 @@ function u(t) {
                     children: [
                         (0, i.jsx)(a.X6q, {
                             className: C.title,
-                            variant: 'heading-xl/semibold',
-                            children: m.intl.string(m.t.f3MvGR)
+                            variant: "heading-xl/semibold",
+                            children: m.intl.string(m.t.f3MvGR),
                         }),
                         (0, i.jsx)(a.Text, {
                             className: C.subtitle,
-                            color: 'header-secondary',
-                            variant: 'text-md/normal',
-                            children: m.intl.string(m.t['nOzc7+'])
+                            color: "header-secondary",
+                            variant: "text-md/normal",
+                            children: m.intl.string(m.t["nOzc7+"]),
                         }),
                         null != n &&
                             (0, i.jsx)(a.olH, {
                                 className: C.closeButton,
-                                onClick: n
-                            })
-                    ]
+                                onClick: n,
+                            }),
+                    ],
                 }),
                 (0, i.jsxs)(a.hzk, {
                     className: C.optionsList,
@@ -65,45 +65,45 @@ function u(t) {
                                       (0, i.jsx)(d.Z, {
                                           icon: a.Nye,
                                           message: m.intl.string(m.t.uE7zcn),
-                                          onClick: () => g(c.lr.FRIENDS)
+                                          onClick: () => g(c.lr.FRIENDS),
                                       }),
                                       (0, i.jsx)(d.Z, {
                                           icon: a.q3d,
                                           message: m.intl.string(m.t.h9Q1lJ),
-                                          onClick: () => g(c.lr.COMMUNITY)
-                                      })
-                                  ]
+                                          onClick: () => g(c.lr.COMMUNITY),
+                                      }),
+                                  ],
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(d.Z, {
                                           icon: a.q3d,
                                           message: m.intl.string(m.t.h9Q1lJ),
-                                          onClick: () => g(c.lr.COMMUNITY)
+                                          onClick: () => g(c.lr.COMMUNITY),
                                       }),
                                       (0, i.jsx)(d.Z, {
                                           icon: a.Nye,
                                           message: m.intl.string(m.t.uE7zcn),
-                                          onClick: () => g(c.lr.FRIENDS)
-                                      })
-                                  ]
+                                          onClick: () => g(c.lr.FRIENDS),
+                                      }),
+                                  ],
                               }),
                         (0, i.jsx)(a.Text, {
                             className: C.skip,
-                            color: 'header-secondary',
-                            variant: 'text-sm/normal',
-                            children: m.intl.format(m.t['SMc+Gx'], { onSkip: () => g(null) })
-                        })
-                    ]
+                            color: "header-secondary",
+                            variant: "text-sm/normal",
+                            children: m.intl.format(m.t["SMc+Gx"], { onSkip: () => g(null) }),
+                        }),
+                    ],
                 }),
                 _ &&
                     (0, i.jsx)(a.mzw, {
                         justify: s.Z.Justify.BETWEEN,
-                        children: L
-                    })
-            ]
+                        children: L,
+                    }),
+            ],
         }),
-        footer: L
+        footer: L,
     };
 }
 function _(t) {

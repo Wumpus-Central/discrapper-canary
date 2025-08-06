@@ -14,7 +14,7 @@ function u(e, t, n) {
         if (null == u || d.type === a.A3.LEVEL_ACTIVATED)
             return {
                 disabled: !0,
-                reason: void 0
+                reason: void 0,
             };
         let { allPowerups: o, unlockedPowerups: l } = u,
             s = n
@@ -28,7 +28,12 @@ function u(e, t, n) {
                 : t.dependencies.find((e) => null == l[e]);
         return {
             disabled: null != s,
-            reason: null != s && null != o[s] ? i.intl.formatToPlainString(n ? c.default.vCEBiY : c.default['1B8AZm'], { perk: null == (r = o[s]) ? void 0 : r.title }) : void 0
+            reason:
+                null != s && null != o[s]
+                    ? i.intl.formatToPlainString(n ? c.default.vCEBiY : c.default["1B8AZm"], {
+                          perk: null == (r = o[s]) ? void 0 : r.title,
+                      })
+                    : void 0,
         };
     }, [u, t.skuId, t.dependencies, n, d.type]);
 }

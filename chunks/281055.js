@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     Yy: () => c,
     xU: () => u,
-    zw: () => s
+    zw: () => s,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     l = n(442837),
     o = n(434650),
@@ -16,7 +16,7 @@ function c() {
     return {
         visible: e,
         visibleChanged: n,
-        targetRef: (0, o.O)((e) => t(e), 0.6)
+        targetRef: (0, o.O)((e) => t(e), 0.6),
     };
 }
 function u() {
@@ -24,6 +24,6 @@ function u() {
         t = e !== (0, i.Z)(e);
     return {
         focused: e,
-        focusedChanged: t
+        focusedChanged: t,
     };
 }

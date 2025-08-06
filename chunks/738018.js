@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => q }), n(388685), n(539854), n(781311), n(290780), n(35282));
+n.d(t, { Z: () => q }), n(388685), n(539854), n(781311), n(290780), n(35282);
 var r,
     i = n(442837),
     o = n(570140),
@@ -23,7 +23,7 @@ function y(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -36,7 +36,7 @@ let O = null,
     S = 3;
 function A(e) {
     let t = (0, m.R6)(e),
-        n = (0, g.Z)({ location: 'getEmptySearchOptions' });
+        n = (0, g.Z)({ location: "getEmptySearchOptions" });
     return new Map([
         [b.dCx.FILTER_FROM, !d.Z.hidePersonalInformation],
         [b.dCx.FILTER_MENTIONS, !d.Z.hidePersonalInformation],
@@ -46,12 +46,16 @@ function A(e) {
         [b.dCx.FILTER_ON, !0],
         [b.dCx.FILTER_IN, t],
         [b.dCx.FILTER_PINNED, !0],
-        [b.dCx.FILTER_AUTHOR_TYPE, n]
+        [b.dCx.FILTER_AUTHOR_TYPE, n],
     ]);
 }
 function N(e) {
     let t = [b.dCx.FILTER_HAS];
-    return (d.Z.hidePersonalInformation || (t.push(b.dCx.FILTER_FROM), t.push(b.dCx.FILTER_MENTIONS)), (0, m.R6)(e) && t.push(b.dCx.FILTER_IN), t);
+    return (
+        d.Z.hidePersonalInformation || (t.push(b.dCx.FILTER_FROM), t.push(b.dCx.FILTER_MENTIONS)),
+        (0, m.R6)(e) && t.push(b.dCx.FILTER_IN),
+        t
+    );
 }
 function C(e) {
     let { searchContext: t, query: n, mode: r, tokens: i, cursorScope: o, autocompletes: s } = e,
@@ -61,30 +65,30 @@ function C(e) {
         null == c &&
             ((c = {
                 results: [],
-                context: a.Z.getUserSearchContext(P.bind(null, t))
+                context: a.Z.getUserSearchContext(P.bind(null, t)),
             }),
             (I[l] = c)),
         {
             searchContext: t,
-            query: null != n ? n : '',
+            query: null != n ? n : "",
             mode:
                 null != r
                     ? r
                     : {
                           type: b.Sap.EMPTY,
                           filter: null,
-                          token: null
+                          token: null,
                       },
             tokens: null != i ? i : [],
             cursorScope: null != o ? o : null,
-            autocompletes: null != s ? s : []
+            autocompletes: null != s ? s : [],
         }
     );
 }
 function R(e) {
     let { id: t } = e,
         n = I[t];
-    (null != n && (n.context.destroy(), (n.results = []), delete I[t]), delete v[t], (O = null));
+    null != n && (n.context.destroy(), (n.results = []), delete I[t]), delete v[t], (O = null);
 }
 function P(e, t) {
     let { results: n } = t,
@@ -95,19 +99,19 @@ function P(e, t) {
     let { type: a, filter: s } = o.mode;
     if (a === b.Sap.EMPTY || (a === b.Sap.FILTER && s !== b.dCx.FILTER_FROM && s !== b.dCx.FILTER_MENTIONS)) return;
     let l = S;
-    (o.mode.type === b.Sap.FILTER && (l = T), (i.results = w(n, l)));
+    o.mode.type === b.Sap.FILTER && (l = T), (i.results = w(n, l));
     let { query: c, mode: u, tokens: d, cursorScope: f } = o,
         { autocompletes: _ } = o;
-    ((_ = G(e, u, d)),
+    (_ = G(e, u, d)),
         (v[r] = C({
             searchContext: e,
             query: c,
             mode: u,
             tokens: d,
             cursorScope: f,
-            autocompletes: _
+            autocompletes: _,
         })),
-        z.emitChange());
+        z.emitChange();
 }
 function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T,
@@ -120,14 +124,14 @@ function w(e) {
         null != i &&
             n.push({
                 text: i,
-                user: e
+                user: e,
             });
     }
     return n;
 }
 function D(e) {
     let { searchContext: t } = e;
-    ((O = t), H(t));
+    (O = t), H(t);
 }
 function L(e) {
     var t;
@@ -140,20 +144,24 @@ function L(e) {
         c = null != (t = v[l]) ? t : {},
         u = I[l],
         d = !0;
-    if (a === c.query && (null == c.mode || c.mode.filter === s.filter)) ((n = c.autocompletes), (d = !1));
-    else if (s.type === b.Sap.EMPTY || (s.type === b.Sap.FILTER && s.filter !== b.dCx.FILTER_FROM && s.filter !== b.dCx.FILTER_MENTIONS)) (null != u && (u.context.clearQuery(), (u.results = [])), (n = G(r, s, i)));
+    if (a === c.query && (null == c.mode || c.mode.filter === s.filter)) (n = c.autocompletes), (d = !1);
+    else if (
+        s.type === b.Sap.EMPTY ||
+        (s.type === b.Sap.FILTER && s.filter !== b.dCx.FILTER_FROM && s.filter !== b.dCx.FILTER_MENTIONS)
+    )
+        null != u && (u.context.clearQuery(), (u.results = [])), (n = G(r, s, i));
     else if (null != u) {
         let { token: e } = s;
         if (null != e && e.getFullMatch().trim().length > 0) {
             let t = (0, m.s5)(r);
-            (null != t && p.Z.requestMembers(t, e.getFullMatch().trim(), T),
+            null != t && p.Z.requestMembers(t, e.getFullMatch().trim(), T),
                 u.context.setQuery({
                     query: e.getFullMatch().trim(),
-                    filters: { guild: null != t ? t : void 0 }
+                    filters: { guild: null != t ? t : void 0 },
                 }),
                 (n = c.autocompletes),
-                (d = !1));
-        } else (u.context.clearQuery(), (n = G(r, s, i)));
+                (d = !1);
+        } else u.context.clearQuery(), (n = G(r, s, i));
     }
     return (
         (v[l] = C({
@@ -162,7 +170,7 @@ function L(e) {
             mode: s,
             tokens: i,
             cursorScope: o,
-            autocompletes: n
+            autocompletes: n,
         })),
         d
     );
@@ -173,7 +181,7 @@ function x(e) {
         { filter: o, token: a, searchContext: s, maxResults: l = T, tokens: c } = e;
     if (null == o) return null;
     let d = (0, m.Tm)(s),
-        p = null != (n = null == a || null == (t = a.getFullMatch()) ? void 0 : t.trim()) ? n : '',
+        p = null != (n = null == a || null == (t = a.getFullMatch()) ? void 0 : t.trim()) ? n : "",
         g = o === b.dCx.FILTER_FROM || o === b.dCx.FILTER_MENTIONS;
     if ((0, m.b7)(s) && g) {
         let e = I[d];
@@ -185,7 +193,7 @@ function x(e) {
                     let { record: t } = e;
                     return {
                         user: t,
-                        text: h.ZP.getUserTag(t)
+                        text: h.ZP.getUserTag(t),
                     };
                 });
             }
@@ -199,7 +207,7 @@ function x(e) {
                       query: p,
                       searchContext: s,
                       maxResults: null != l ? l : T,
-                      tokens: c
+                      tokens: c,
                   })
                 : [];
     }
@@ -211,31 +219,31 @@ function x(e) {
                 return (null == n ? void 0 : n.id) !== e.id;
             })).unshift({
                 text: b.ME,
-                user: e
+                user: e,
             });
     }
     return null == i || 0 === i.length
         ? null
         : {
               group: o,
-              results: i
+              results: i,
           };
 }
 function M(e, t) {
-    let n = (null != e ? e.getFullMatch() : '').trim(),
+    let n = (null != e ? e.getFullMatch() : "").trim(),
         r = A(t),
         i = (0, E.nB)(n).filter((e) => null != e.token && !0 === r.get(e.token));
     return {
         group: b.rtL.SEARCH_OPTIONS,
-        results: i
+        results: i,
     };
 }
 function k(e, t, n) {
-    let r = (null != e ? e.getFullMatch() : '').trim(),
+    let r = (null != e ? e.getFullMatch() : "").trim(),
         i = [];
     return (
         null != r &&
-            '' !== r &&
+            "" !== r &&
             (N(t).forEach((r) => {
                 if (null == r) return;
                 let o = x({
@@ -243,7 +251,7 @@ function k(e, t, n) {
                     token: e,
                     searchContext: t,
                     maxResults: S,
-                    tokens: n
+                    tokens: n,
                 });
                 null != o && i.push(o);
             }),
@@ -253,8 +261,8 @@ function k(e, t, n) {
     );
 }
 function j(e, t) {
-    let n = (null != e ? e.getFullMatch() : '').trim();
-    if (null != n && '' !== n) {
+    let n = (null != e ? e.getFullMatch() : "").trim();
+    if (null != n && "" !== n) {
         var r, i, o, a, s, l, c, u, d;
         let e =
                 null == (o = E.ZP[b.dCx.FILTER_BEFORE]) ||
@@ -263,7 +271,7 @@ function j(e, t) {
                     (r = i.call(o, {
                         query: n,
                         searchContext: t,
-                        maxResults: 1
+                        maxResults: 1,
                     }))
                     ? void 0
                     : r[0],
@@ -274,7 +282,7 @@ function j(e, t) {
                     (a = s.call(l, {
                         query: n,
                         searchContext: t,
-                        maxResults: 1
+                        maxResults: 1,
                     }))
                     ? void 0
                     : a[0],
@@ -285,7 +293,7 @@ function j(e, t) {
                     (c = u.call(d, {
                         query: n,
                         searchContext: t,
-                        maxResults: 1
+                        maxResults: 1,
                     }))
                     ? void 0
                     : c[0];
@@ -296,7 +304,7 @@ function j(e, t) {
             null != _ && p.push(_),
             {
                 group: b.rtL.DATES,
-                results: p
+                results: p,
             }
         );
     }
@@ -311,7 +319,7 @@ function U(e) {
             ? null
             : {
                   group: b.rtL.HISTORY,
-                  results: i.map((e) => ({ text: e }))
+                  results: i.map((e) => ({ text: e })),
               };
     }
 }
@@ -325,8 +333,8 @@ function G(e, t, n) {
                       token: t.token,
                       searchContext: e,
                       maxResults: T,
-                      tokens: n
-                  })
+                      tokens: n,
+                  }),
               )
             : t.type === b.Sap.FILTER_ALL
               ? (r = k(t.token, e, n))
@@ -347,7 +355,7 @@ function Z(e) {
         mode: i,
         tokens: o,
         cursorScope: a,
-        autocompletes: s.map((e) => ((null == e ? void 0 : e.group) === b.rtL.HISTORY ? null : e))
+        autocompletes: s.map((e) => ((null == e ? void 0 : e.group) === b.rtL.HISTORY ? null : e)),
     });
 }
 function F(e) {
@@ -367,7 +375,7 @@ function H(e) {
         mode: r,
         tokens: i,
         cursorScope: o,
-        autocompletes: G(e, r, i)
+        autocompletes: G(e, r, i),
     });
 }
 function Y() {
@@ -410,8 +418,8 @@ class K extends (r = i.ZP.Store) {
                         (s = [
                             {
                                 user: e,
-                                text: h.ZP.getUserTag(e)
-                            }
+                                text: h.ZP.getUserTag(e),
+                            },
                         ]);
                 }
                 if ((0, m.b7)(e)) {
@@ -423,7 +431,7 @@ class K extends (r = i.ZP.Store) {
                                 let { record: t } = e;
                                 s.push({
                                     user: t,
-                                    text: h.ZP.getUserTag(t)
+                                    text: h.ZP.getUserTag(t),
                                 });
                             }),
                             s
@@ -436,7 +444,7 @@ class K extends (r = i.ZP.Store) {
                               query: n,
                               searchContext: e,
                               maxResults: T,
-                              tokens: a
+                              tokens: a,
                           })
                         : []);
             default:
@@ -447,13 +455,13 @@ class K extends (r = i.ZP.Store) {
                               query: n,
                               searchContext: e,
                               maxResults: T,
-                              tokens: a
+                              tokens: a,
                           })
                         : []);
         }
     }
 }
-y(K, 'displayName', 'SearchAutocompleteStore');
+y(K, "displayName", "SearchAutocompleteStore");
 let z = new K(o.Z, {
         SEARCH_AUTOCOMPLETE_QUERY_UPDATE: L,
         SEARCH_EDITOR_STATE_CLEAR: R,
@@ -463,6 +471,6 @@ let z = new K(o.Z, {
         SEARCH_SCREEN_OPEN: D,
         CHANNEL_SELECT: W,
         LOGOUT: V,
-        SEARCH_HISTORY_WEB_CLEAR_ITEMS: F
+        SEARCH_HISTORY_WEB_CLEAR_ITEMS: F,
     }),
     q = z;

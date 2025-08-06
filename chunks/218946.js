@@ -5,7 +5,7 @@ function r(e) {
         size: e.size,
         width: e.width,
         height: e.height,
-        mimeType: e.mime_type
+        mimeType: e.mime_type,
     };
 }
 n.d(t, { m: () => r });

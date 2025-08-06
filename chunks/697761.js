@@ -10,7 +10,7 @@ function c(e) {
     let { activity: t, user: n, look: c, color: u, onAction: d } = e;
     if (!(0, o.Z)(t, s.xjy.INSTANCE)) return null;
     let f = () => {
-        (null == d || d(), new i.Z('UserActivityActions').log('notify', n.id, t));
+        null == d || d(), new i.Z("UserActivityActions").log("notify", n.id, t);
     };
     return (0, r.jsx)(
         a.Z,
@@ -19,8 +19,8 @@ function c(e) {
             color: u,
             onClick: f,
             fullWidth: !0,
-            children: l.intl.string(l.t.vwl1PD)
+            children: l.intl.string(l.t.vwl1PD),
         },
-        'notify'
+        "notify",
     );
 }

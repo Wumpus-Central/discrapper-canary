@@ -1,4 +1,4 @@
-(r.d(e, { default: () => w }), r(388685));
+r.d(e, { default: () => w }), r(388685);
 var n = r(255367),
     i = r(73800),
     l = r(442837),
@@ -23,12 +23,12 @@ function w(t) {
         v = (function (t) {
             let { editingRule: e, setEditingRule: r } = (0, y.V)();
             return (0, n.jsx)(c.sNh, {
-                id: 'edit-automod-rule',
+                id: "edit-automod-rule",
                 label: m.intl.string(m.t.uQq6Pz),
                 action: () => {
                     r(t);
                 },
-                disabled: null != e
+                disabled: null != e,
             });
         })(e),
         P = (function (t) {
@@ -40,20 +40,28 @@ function w(t) {
                     if (!r && (await (0, j.gK)(t.name))) {
                         a(!0);
                         try {
-                            (await (0, g.mm)(t.id, t.guildId), e(null), s(t.id, t.guildId));
+                            await (0, g.mm)(t.id, t.guildId), e(null), s(t.id, t.guildId);
                         } catch (e) {
                             var n;
                             let t = new u.Hx(e);
-                            (0, c.showToast)((0, c.createToast)(null != (n = t.getAnyErrorMessage()) ? n : m.intl.string(m.t.fEptJC), c.ToastType.FAILURE));
+                            (0, c.showToast)(
+                                (0, c.createToast)(
+                                    null != (n = t.getAnyErrorMessage()) ? n : m.intl.string(m.t.fEptJC),
+                                    c.ToastType.FAILURE,
+                                ),
+                            );
                         } finally {
                             a(!1);
                         }
                     }
                 },
-                w = t.triggerType === O.fX.MENTION_SPAM && (null == d ? void 0 : d.features) != null && d.features.has(h.oNc.COMMUNITY);
+                w =
+                    t.triggerType === O.fX.MENTION_SPAM &&
+                    (null == d ? void 0 : d.features) != null &&
+                    d.features.has(h.oNc.COMMUNITY);
             return (0, n.jsx)(c.sNh, {
-                id: 'delete-automod-rule',
-                label: m.intl.string(m.t['92m/09']),
+                id: "delete-automod-rule",
+                label: m.intl.string(m.t["92m/09"]),
                 action: w
                     ? () => {
                           (0, c.h7j)((t) => {
@@ -64,40 +72,40 @@ function w(t) {
                                       for (var e = 1; e < arguments.length; e++) {
                                           var r = null != arguments[e] ? arguments[e] : {},
                                               n = Object.keys(r);
-                                          ('function' == typeof Object.getOwnPropertySymbols &&
+                                          "function" == typeof Object.getOwnPropertySymbols &&
                                               (n = n.concat(
                                                   Object.getOwnPropertySymbols(r).filter(function (t) {
                                                       return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                                                  })
+                                                  }),
                                               )),
                                               n.forEach(function (e) {
                                                   var n;
-                                                  ((n = r[e]),
+                                                  (n = r[e]),
                                                       e in t
                                                           ? Object.defineProperty(t, e, {
                                                                 value: n,
                                                                 enumerable: !0,
                                                                 configurable: !0,
-                                                                writable: !0
+                                                                writable: !0,
                                                             })
-                                                          : (t[e] = n));
-                                              }));
+                                                          : (t[e] = n);
+                                              });
                                       }
                                       return t;
                                   })(
                                       {
                                           header: m.intl.string(m.t.MmpqMD),
                                           confirmText: m.intl.string(m.t.BddRzc),
-                                          confirmButtonColor: o.zx.Colors.BRAND
+                                          confirmButtonColor: o.zx.Colors.BRAND,
                                       },
-                                      t
+                                      t,
                                   )),
                                   (r = r =
                                       {
                                           children: (0, n.jsx)(c.Text, {
-                                              variant: 'text-md/normal',
-                                              children: m.intl.string(m.t.XMdBLy)
-                                          })
+                                              variant: "text-md/normal",
+                                              children: m.intl.string(m.t.XMdBLy),
+                                          }),
                                       }),
                                   Object.getOwnPropertyDescriptors
                                       ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -111,31 +119,31 @@ function w(t) {
                                         })(Object(r)).forEach(function (t) {
                                             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                                         }),
-                                  e)
+                                  e),
                               );
                           });
                       }
-                    : p
+                    : p,
             });
         })(e),
         T = (0, d.Z)({
             id: e.id,
-            label: m.intl.string(m.t.F64hjo)
+            label: m.intl.string(m.t.F64hjo),
         });
     return (0, n.jsx)(s.Z, {
         context: r,
         object: h.qAy.CONTEXT_MENU,
         children: (0, n.jsxs)(c.v2r, {
-            navId: 'automod-rule-context',
+            navId: "automod-rule-context",
             onClose: a.Zy,
-            'aria-label': m.intl.string(m.t.uT36Sk),
+            "aria-label": m.intl.string(m.t.uT36Sk),
             onSelect: w,
             children: [
                 (0, n.jsxs)(c.kSQ, {
-                    children: [v, x && P]
+                    children: [v, x && P],
                 }),
-                x && (0, n.jsx)(c.kSQ, { children: T })
-            ]
-        })
+                x && (0, n.jsx)(c.kSQ, { children: T }),
+            ],
+        }),
     });
 }

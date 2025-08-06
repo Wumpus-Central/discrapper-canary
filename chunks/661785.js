@@ -13,14 +13,14 @@ e.exports = function (e, t, n, r) {
         f = d.getText(),
         _ = d.merge({
             text: f.slice(0, u) + n + f.slice(u, d.getLength()),
-            characterList: i(d.getCharacterList(), a(r, s).toList(), u)
+            characterList: i(d.getCharacterList(), a(r, s).toList(), u),
         }),
         p = u + s;
     return e.merge({
         blockMap: l.set(c, _),
         selectionAfter: t.merge({
             anchorOffset: p,
-            focusOffset: p
-        })
+            focusOffset: p,
+        }),
     });
 };

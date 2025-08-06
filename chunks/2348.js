@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(539854));
+n.d(t, { Z: () => E }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -21,24 +21,24 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -63,29 +63,29 @@ function O(e, t) {
 function y(e) {
     let { guild: t, channel: i } = e,
         l = (0, f.Mf)(i.id);
-    return 'null' === i.id
-        ? (0, r.jsx)('div', {
+    return "null" === i.id
+        ? (0, r.jsx)("div", {
               className: a()(v.categoryRow, v.uncategorized),
               children: (0, r.jsx)(o.Text, {
                   className: v.categoryText,
-                  color: 'text-muted',
-                  variant: 'text-xs/semibold',
+                  color: "text-muted",
+                  variant: "text-xs/semibold",
                   lineClamp: 1,
-                  children: i.name
-              })
+                  children: i.name,
+              }),
           })
         : (0, r.jsxs)(o.P3F, {
-              className: a()(v.categoryRow, { [v.uncategorized]: 'null' === i.id }),
+              className: a()(v.categoryRow, { [v.uncategorized]: "null" === i.id }),
               onContextMenu: (e) => {
                   (0, c.jW)(e, async () => {
-                      let { default: e } = await Promise.all([n.e('8965'), n.e('23899')]).then(n.bind(n, 139035));
+                      let { default: e } = await Promise.all([n.e("8965"), n.e("23899")]).then(n.bind(n, 139035));
                       return (n) =>
                           (0, r.jsx)(
                               e,
                               O(_({}, n), {
                                   channel: i,
-                                  guild: t
-                              })
+                                  guild: t,
+                              }),
                           );
                   });
               },
@@ -94,14 +94,14 @@ function y(e) {
                   (0, u.s)(t.id, i.id)
                       ? (0, h.pt)(i.id)
                       : (0, o.ZDy)(async () => {
-                            let { default: e } = await n.e('35641').then(n.bind(n, 89216));
+                            let { default: e } = await n.e("35641").then(n.bind(n, 89216));
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
                                     O(_({}, n), {
                                         guildId: t.id,
-                                        startingChannelId: i.id
-                                    })
+                                        startingChannelId: i.id,
+                                    }),
                                 );
                         }),
                   !0
@@ -109,38 +109,45 @@ function y(e) {
               children: [
                   (0, r.jsx)(o.Text, {
                       className: v.categoryText,
-                      color: 'text-muted',
-                      variant: 'text-xs/semibold',
+                      color: "text-muted",
+                      variant: "text-xs/semibold",
                       lineClamp: 1,
-                      children: i.name
+                      children: i.name,
                   }),
                   (0, r.jsx)(o.XZJ, {
-                      'aria-checked': l,
+                      "aria-checked": l,
                       value: l,
                       type: o.XZJ.Types.INVERTED,
                       className: v.checkbox,
-                      displayOnly: !0
-                  })
-              ]
+                      displayOnly: !0,
+                  }),
+              ],
           });
 }
 let C = i.memo(function () {
-        return (0, r.jsx)('div', { className: v.separator });
+        return (0, r.jsx)("div", { className: v.separator });
     }),
     N = i.memo(function (e) {
         let { index: t } = e;
         return (0, r.jsx)(
             o.Text,
             {
-                variant: 'text-xs/normal',
+                variant: "text-xs/normal",
                 className: v.subtitleSeparator,
-                children: '\xB7'
+                children: "\xB7",
             },
-            'separator-'.concat(t)
+            "separator-".concat(t),
         );
     }),
     I = i.memo(function (e) {
-        let { channel: t, category: i, guild: l, isFirstChannel: p, isLastChannel: y, tooltipDirection: I = 'right' } = e,
+        let {
+                channel: t,
+                category: i,
+                guild: l,
+                isFirstChannel: p,
+                isLastChannel: y,
+                tooltipDirection: I = "right",
+            } = e,
             E = (0, f.Mf)(t.id, i.id),
             S = (0, f.t4)(t.id, i.id),
             T = (0, f.EH)(t.id, i.id),
@@ -154,14 +161,14 @@ let C = i.memo(function () {
                         (0, u.s)(l.id, t.id)
                             ? (0, h.pt)(t.id)
                             : (0, o.ZDy)(async () => {
-                                  let { default: e } = await n.e('35641').then(n.bind(n, 89216));
+                                  let { default: e } = await n.e("35641").then(n.bind(n, 89216));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
                                           O(_({}, n), {
                                               guildId: l.id,
-                                              startingChannelId: t.id
-                                          })
+                                              startingChannelId: t.id,
+                                          }),
                                       );
                               }),
                         !0
@@ -170,25 +177,39 @@ let C = i.memo(function () {
             D = (e) => {
                 t.isGuildVocal()
                     ? (0, c.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('5442')]).then(n.bind(n, 213202));
+                          let { default: e } = await Promise.all([
+                              n.e("79695"),
+                              n.e("18320"),
+                              n.e("83331"),
+                              n.e("5442"),
+                          ]).then(n.bind(n, 213202));
                           return (n) =>
                               (0, r.jsx)(
                                   e,
                                   O(_({}, n), {
                                       channel: t,
-                                      guild: l
-                                  })
+                                      guild: l,
+                                  }),
                               );
                       })
                     : (0, c.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('25548'), n.e('46154'), n.e('91315'), n.e('16459'), n.e('49152'), n.e('18320'), n.e('14826')]).then(n.bind(n, 373651));
+                          let { default: e } = await Promise.all([
+                              n.e("79695"),
+                              n.e("25548"),
+                              n.e("46154"),
+                              n.e("91315"),
+                              n.e("16459"),
+                              n.e("49152"),
+                              n.e("18320"),
+                              n.e("14826"),
+                          ]).then(n.bind(n, 373651));
                           return (n) =>
                               (0, r.jsx)(
                                   e,
                                   O(_({}, n), {
                                       channel: t,
-                                      guild: l
-                                  })
+                                      guild: l,
+                                  }),
                               );
                       });
             };
@@ -207,77 +228,79 @@ let C = i.memo(function () {
                                         className: a()(v.channelRow, {
                                             [v.firstChannel]: p,
                                             [v.lastChannel]: y,
-                                            [v.disabled]: S
-                                        })
+                                            [v.disabled]: S,
+                                        }),
                                     },
-                                    e
+                                    e,
                                 ),
                                 {
                                     onClick: Z,
                                     onContextMenu: D,
                                     children: [
-                                        (0, r.jsx)('div', {
+                                        (0, r.jsx)("div", {
                                             className: v.channelInfo,
-                                            children: (0, r.jsxs)('div', {
+                                            children: (0, r.jsxs)("div", {
                                                 className: v.channelName,
                                                 children: [
                                                     (0, r.jsx)(g._W, {
                                                         channel: t,
-                                                        guild: l
+                                                        guild: l,
                                                     }),
                                                     (0, r.jsx)(d.Z, {
                                                         className: v.__invalid_name,
                                                         children: (0, r.jsx)(o.Text, {
                                                             className: v.channelText,
-                                                            variant: 'text-md/medium',
+                                                            variant: "text-md/medium",
                                                             lineClamp: 1,
-                                                            color: S ? 'text-muted' : 'text-default',
-                                                            children: t.name
-                                                        })
+                                                            color: S ? "text-muted" : "text-default",
+                                                            children: t.name,
+                                                        }),
                                                     }),
                                                     w
                                                         ? (0, r.jsxs)(r.Fragment, {
                                                               children: [
                                                                   (0, r.jsx)(N, { index: 0 }),
                                                                   (0, r.jsx)(o.Text, {
-                                                                      variant: 'text-xs/medium',
+                                                                      variant: "text-xs/medium",
                                                                       className: v.channelSubtitle,
-                                                                      color: 'text-brand',
-                                                                      children: j.intl.string(j.t.mPxmeH)
-                                                                  })
-                                                              ]
+                                                                      color: "text-brand",
+                                                                      children: j.intl.string(j.t.mPxmeH),
+                                                                  }),
+                                                              ],
                                                           })
-                                                        : null
-                                                ]
-                                            })
+                                                        : null,
+                                                ],
+                                            }),
                                         }),
-                                        (0, r.jsx)('div', {
+                                        (0, r.jsx)("div", {
                                             className: v.channelActions,
                                             children: (0, u.s)(t.guild_id, t.id)
                                                 ? (0, r.jsx)(o.XZJ, {
-                                                      'aria-checked': E,
+                                                      "aria-checked": E,
                                                       value: E,
                                                       type: o.XZJ.Types.INVERTED,
                                                       disabled: S,
-                                                      color: R ? s.Z.colors.BG_BRAND.css : s.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
+                                                      color: R
+                                                          ? s.Z.colors.BG_BRAND.css
+                                                          : s.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
                                                       innerClassName: v.checkboxInner,
-                                                      displayOnly: !0
+                                                      displayOnly: !0,
                                                   })
                                                 : (0, r.jsx)(o.zxk, {
-                                                      size: 'sm',
-                                                      variant: 'secondary',
+                                                      size: "sm",
+                                                      variant: "secondary",
                                                       text: j.intl.string(j.t.zA9d1N),
                                                       icon: o.mBM,
-                                                      onClick: b.dG4
-                                                  })
-                                        })
-                                    ]
-                                }
-                            )
-                        )
+                                                      onClick: b.dG4,
+                                                  }),
+                                        }),
+                                    ],
+                                },
+                            ),
+                        ),
                 }),
-                !y && (0, r.jsx)(C, {})
-            ]
+                !y && (0, r.jsx)(C, {}),
+            ],
         });
     });
 function E(e) {
@@ -289,12 +312,12 @@ function E(e) {
                     y,
                     {
                         channel: i.channel,
-                        guild: n
+                        guild: n,
                     },
-                    i.channel.id
+                    i.channel.id,
                 );
             },
-            [t, n]
+            [t, n],
         ),
         o = i.useCallback(
             (e, i) => {
@@ -310,15 +333,15 @@ function E(e) {
                               guild: n,
                               isFirstChannel: 0 === i,
                               isLastChannel: t[l.channel.id].length - 1 === i,
-                              tooltipDirection: a ? 'right' : 'top'
+                              tooltipDirection: a ? "right" : "top",
                           },
-                          s.channel.id
+                          s.channel.id,
                       );
             },
-            [t, n, a]
+            [t, n, a],
         ),
         c = (0, p.tn)(n.id, t, 64);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: l,
         children: c.map((e, t) => {
             let n = s(t),
@@ -327,8 +350,8 @@ function E(e) {
             if (0 === l) return null;
             for (let e = 0; e < l; e++) i.push(o(t, e));
             return (0, r.jsxs)(r.Fragment, {
-                children: [n, i]
+                children: [n, i],
             });
-        })
+        }),
     });
 }

@@ -1,9 +1,9 @@
 e.exports = function (e) {
     return {
-        name: 'Tagger Script',
+        name: "Tagger Script",
         contains: [
             {
-                className: 'comment',
+                className: "comment",
                 begin: /\$noop\(/,
                 end: /\)/,
                 contains: [
@@ -11,27 +11,27 @@ e.exports = function (e) {
                     {
                         begin: /\(/,
                         end: /\)/,
-                        contains: [{ begin: /\\[()]/ }, 'self']
-                    }
+                        contains: [{ begin: /\\[()]/ }, "self"],
+                    },
                 ],
-                relevance: 10
+                relevance: 10,
             },
             {
-                className: 'keyword',
-                begin: /\$[_a-zA-Z0-9]+(?=\()/
+                className: "keyword",
+                begin: /\$[_a-zA-Z0-9]+(?=\()/,
             },
             {
-                className: 'variable',
-                begin: /%[_a-zA-Z0-9:]+%/
+                className: "variable",
+                begin: /%[_a-zA-Z0-9:]+%/,
             },
             {
-                className: 'symbol',
-                begin: /\\[\\nt$%,()]/
+                className: "symbol",
+                begin: /\\[\\nt$%,()]/,
             },
             {
-                className: 'symbol',
-                begin: /\\u[a-fA-F0-9]{4}/
-            }
-        ]
+                className: "symbol",
+                begin: /\\u[a-fA-F0-9]{4}/,
+            },
+        ],
     };
 };

@@ -9,7 +9,7 @@ function a(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -60,12 +60,12 @@ class m extends (r = i.ZP.PersistedStore) {
         return s;
     }
 }
-(a(m, 'displayName', 'LoginRequiredActionStore'), a(m, 'persistKey', 'LoginRequiredActionStore'));
+a(m, "displayName", "LoginRequiredActionStore"), a(m, "persistKey", "LoginRequiredActionStore");
 let g = new m(o.Z, {
     LOGIN_ATTEMPTED: d,
     CONNECTION_OPEN: f,
     CURRENT_USER_UPDATE: f,
     LOGOUT: p,
     PASSWORD_UPDATED: _,
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: h
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: h,
 });

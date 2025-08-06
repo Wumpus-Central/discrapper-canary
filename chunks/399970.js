@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(35282));
+n.d(t, { Z: () => x }), n(388685), n(35282);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -19,15 +19,15 @@ function x(e) {
         {
             authorizedApplicationId: x,
             authorizationError: _,
-            authorizing: j
+            authorizing: j,
         } = (0, s.cj)([p.Z], () => ({
             authorizedApplicationId: p.Z.testModeApplicationId,
             authorizationError: p.Z.error,
-            authorizing: p.Z.isFetchingAuthorization
+            authorizing: p.Z.isFetchingAuthorization,
         })),
-        [E, C] = r.useState(null != x ? x : ''),
-        [O, v] = r.useState('8080'),
-        [S, T] = r.useState('localhost'),
+        [E, C] = r.useState(null != x ? x : ""),
+        [O, v] = r.useState("8080"),
+        [S, T] = r.useState("localhost"),
         I = (0, m.Dt)(),
         N = b.test(E);
     async function y() {
@@ -35,9 +35,9 @@ function x(e) {
         let e = (function (e, t, n) {
             if (null == e) return null;
             switch (e) {
-                case 'localhost':
-                    return 'https://localhost:'.concat(t);
-                case 'proxy':
+                case "localhost":
+                    return "https://localhost:".concat(t);
+                case "proxy":
                     return (0, d.ZP)(n);
             }
         })(S, O, E);
@@ -47,13 +47,13 @@ function x(e) {
     let A = null != x && x === E,
         P = A
             ? function () {
-                  (c.mc(), C(''), T(null));
+                  c.mc(), C(""), T(null);
               }
             : y;
     return (0, i.jsxs)(l.Y0X, {
-        'aria-labelledby': I,
+        "aria-labelledby": I,
         transitionState: n,
-        parentComponent: 'TestModeModal',
+        parentComponent: "TestModeModal",
         children: [
             (0, i.jsxs)(l.xBx, {
                 justify: u.Z.Justify.BETWEEN,
@@ -61,12 +61,12 @@ function x(e) {
                 children: [
                     (0, i.jsx)(l.vwX, {
                         id: I,
-                        tag: 'h1',
+                        tag: "h1",
                         className: f.marginReset,
-                        children: g.intl.string(g.t.f8fzk5)
+                        children: g.intl.string(g.t.f8fzk5),
                     }),
-                    (0, i.jsx)(l.olH, { onClick: t })
-                ]
+                    (0, i.jsx)(l.olH, { onClick: t }),
+                ],
             }),
             (0, i.jsxs)(l.hzk, {
                 className: h.modalContent,
@@ -74,17 +74,17 @@ function x(e) {
                     (0, i.jsx)(l.R94, {
                         className: f.marginBottom20,
                         type: l.R94.Types.DESCRIPTION,
-                        children: g.intl.string(g.t.a6Vilp)
+                        children: g.intl.string(g.t.a6Vilp),
                     }),
                     null == _
                         ? null
                         : (0, i.jsx)(l.kzN, {
                               className: f.marginBottom20,
-                              children: _
+                              children: _,
                           }),
-                    (0, i.jsx)('form', {
+                    (0, i.jsx)("form", {
                         onSubmit: (e) => {
-                            (e.preventDefault(), P());
+                            e.preventDefault(), P();
                         },
                         children: (0, i.jsxs)(u.Z, {
                             direction: u.Z.Direction.VERTICAL,
@@ -101,34 +101,34 @@ function x(e) {
                                         onChange: function (e) {
                                             C(e);
                                         },
-                                        disabled: j
-                                    })
+                                        disabled: j,
+                                    }),
                                 }),
                                 (0, i.jsx)(l.xJW, {
                                     className: h.inputWrapper,
-                                    title: g.intl.string(g.t['/GTqXF']),
+                                    title: g.intl.string(g.t["/GTqXF"]),
                                     children: (0, i.jsx)(l.q4e, {
-                                        isDisabled: !N || '' === E,
+                                        isDisabled: !N || "" === E,
                                         value: S,
                                         options: [
                                             {
-                                                value: 'localhost',
-                                                label: g.intl.string(g.t['+Y9Y6u']),
-                                                key: 'localhost'
+                                                value: "localhost",
+                                                label: g.intl.string(g.t["+Y9Y6u"]),
+                                                key: "localhost",
                                             },
                                             {
-                                                value: 'proxy',
+                                                value: "proxy",
                                                 label: g.intl.string(g.t.uaksyc),
-                                                key: 'proxy'
-                                            }
+                                                key: "proxy",
+                                            },
                                         ],
                                         onChange: function (e) {
                                             T(e);
                                         },
-                                        placeholder: 'URL Origin Type'
-                                    })
+                                        placeholder: "URL Origin Type",
+                                    }),
                                 }),
-                                'localhost' !== S
+                                "localhost" !== S
                                     ? null
                                     : (0, i.jsx)(l.xJW, {
                                           className: h.inputWrapper,
@@ -138,21 +138,21 @@ function x(e) {
                                               value: O,
                                               maxLength: 5,
                                               onChange: (e) => v(e),
-                                              disabled: j
-                                          })
+                                              disabled: j,
+                                          }),
                                       }),
                                 (0, i.jsx)(a.zx, {
                                     submitting: j,
-                                    type: 'submit',
-                                    disabled: !N || 0 === E.length || ('localhost' === S && 0 === O.length),
+                                    type: "submit",
+                                    disabled: !N || 0 === E.length || ("localhost" === S && 0 === O.length),
                                     color: A ? a.zx.Colors.RED : a.zx.Colors.GREEN,
-                                    children: A ? g.intl.string(g.t.d6TR3N) : g.intl.string(g.t.qwuK5O)
-                                })
-                            ]
-                        })
-                    })
-                ]
-            })
-        ]
+                                    children: A ? g.intl.string(g.t.d6TR3N) : g.intl.string(g.t.qwuK5O),
+                                }),
+                            ],
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

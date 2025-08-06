@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => u }), n(953529));
+n.d(t, { Z: () => u }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -6,56 +6,65 @@ var i = n(120356),
     a = n(481060),
     s = n(388032),
     l = n(661475);
-let c = '\u2022';
+let c = "\u2022";
 function u(e) {
-    let { className: t, iconContainerClassName: n, icon: i, title: u, description: d, userCount: f, onClick: _, highlight: p } = e;
+    let {
+        className: t,
+        iconContainerClassName: n,
+        icon: i,
+        title: u,
+        description: d,
+        userCount: f,
+        onClick: _,
+        highlight: p,
+    } = e;
     return (0, r.jsxs)(a.P3F, {
         className: o()(l.container, t, null != p && { [l.pulse]: p }),
         onClick: _,
         children: [
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", {
                 className: o()(l.icon, n),
-                children: i
+                children: i,
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: l.textContainer,
                 children: [
                     (0, r.jsx)(a.X6q, {
-                        variant: 'heading-md/semibold',
-                        color: 'text-primary',
-                        children: u
+                        variant: "heading-md/semibold",
+                        color: "text-primary",
+                        children: u,
                     }),
                     (0, r.jsx)(a.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-primary',
+                        variant: "text-xs/normal",
+                        color: "text-primary",
                         className: l.inline,
-                        children: d
+                        children: d,
                     }),
                     null != f && f > 0
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(a.Text, {
-                                      variant: 'text-xs/normal',
-                                      color: 'text-primary',
+                                      variant: "text-xs/normal",
+                                      color: "text-primary",
                                       className: l.dot,
-                                      children: c
+                                      children: c,
                                   }),
                                   (0, r.jsx)(a.Text, {
-                                      variant: 'text-xs/normal',
-                                      color: 'text-primary',
+                                      variant: "text-xs/normal",
+                                      color: "text-primary",
                                       className: l.inline,
-                                      children: s.intl.format(s.t.NywdIi, { count: f })
-                                  })
-                              ]
+                                      children: s.intl.format(s.t.NywdIi, { count: f }),
+                                  }),
+                              ],
                           })
-                        : null
-                ]
+                        : null,
+                ],
             }),
             (0, r.jsx)(a.Fbu, {
-                size: 'xs',
-                color: 'currentColor',
-                className: l.caret
-            })
-        ]
+                size: "xs",
+                color: "currentColor",
+                className: l.caret,
+            }),
+        ],
     });
 }

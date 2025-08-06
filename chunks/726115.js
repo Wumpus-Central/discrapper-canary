@@ -1,4 +1,4 @@
-(n.d(t, {
+n.d(t, {
     Ew: () => y,
     Iv: () => v,
     Mf: () => m,
@@ -9,19 +9,19 @@
     a$: () => g,
     lg: () => b,
     vL: () => T,
-    vb: () => h
+    vb: () => h,
 }),
     n(415506),
     n(953529),
     n(388685),
     n(704826),
-    n(35282));
+    n(35282);
 var r = n(772848),
     i = n(706454),
     o = n(626135),
     a = n(823379),
     s = n(900849);
-(n(275131), n(356164));
+n(275131), n(356164);
 var l = n(128449),
     c = n(981631),
     u = n(388032);
@@ -32,7 +32,7 @@ function d(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -42,15 +42,15 @@ function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 d(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -58,11 +58,11 @@ function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -80,19 +80,19 @@ function p(e, t) {
 function h(e) {
     switch (e) {
         case l.vf.FEATURED:
-            return u.intl.string(u.t['RU+DCQ']);
+            return u.intl.string(u.t["RU+DCQ"]);
         case l.vf.GAMING:
-            return u.intl.string(u.t['CD/USE']);
+            return u.intl.string(u.t["CD/USE"]);
         case l.vf.MUSIC:
             return u.intl.string(u.t.nt9PLy);
         case l.vf.ENTERTAINMENT:
             return u.intl.string(u.t.gSbmdn);
         case l.vf.TECH:
-            return u.intl.string(u.t['0A0By8']);
+            return u.intl.string(u.t["0A0By8"]);
         case l.vf.EDUCATION:
             return u.intl.string(u.t.Gy9woq);
         case l.vf.HUBS:
-            return u.intl.string(u.t['q469/f']);
+            return u.intl.string(u.t["q469/f"]);
     }
 }
 function m(e) {
@@ -100,19 +100,19 @@ function m(e) {
         case l.vf.FEATURED:
             return u.intl.string(u.t.OlDfzM);
         case l.vf.GAMING:
-            return u.intl.string(u.t['CD/USE']);
+            return u.intl.string(u.t["CD/USE"]);
         case l.vf.MUSIC:
             return u.intl.string(u.t.nt9PLy);
         case l.vf.ENTERTAINMENT:
             return u.intl.string(u.t.gSbmdn);
         case l.vf.TECH:
-            return u.intl.string(u.t['0A0By8']);
+            return u.intl.string(u.t["0A0By8"]);
         case l.vf.EDUCATION:
             return u.intl.string(u.t.Gy9woq);
         case l.vf.HUBS:
             return u.intl.string(u.t.X5xPlZ);
         default:
-            throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
+            throw Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: ".concat(e));
     }
 }
 function g(e) {
@@ -122,17 +122,17 @@ function g(e) {
         case l.vf.GAMING:
             return u.intl.string(u.t.AAJ5oq);
         case l.vf.MUSIC:
-            return u.intl.string(u.t['SOio+P']);
+            return u.intl.string(u.t["SOio+P"]);
         case l.vf.ENTERTAINMENT:
             return u.intl.string(u.t.R09vf3);
         case l.vf.TECH:
-            return u.intl.string(u.t['Ew4d5+']);
+            return u.intl.string(u.t["Ew4d5+"]);
         case l.vf.EDUCATION:
             return u.intl.string(u.t.sasIWV);
         case l.vf.HUBS:
-            return u.intl.string(u.t['F/IQCA']);
+            return u.intl.string(u.t["F/IQCA"]);
         default:
-            throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
+            throw Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: ".concat(e));
     }
 }
 function E(e) {
@@ -146,7 +146,7 @@ function E(e) {
         case l.vf.ENTERTAINMENT:
             return u.intl.string(u.t.k1CYxs);
         case l.vf.TECH:
-            return u.intl.string(u.t['4dawpq']);
+            return u.intl.string(u.t["4dawpq"]);
         case l.vf.EDUCATION:
             return u.intl.string(u.t.uexPgY);
         default:
@@ -191,7 +191,7 @@ function O(e) {
         preferredLocale: e.preferred_locale,
         discoverySplash: e.discovery_splash,
         emojis: e.emojis,
-        emojiCount: e.emoji_count
+        emojiCount: e.emoji_count,
     };
 }
 function v(e) {
@@ -208,7 +208,7 @@ function v(e) {
         premiumSubscriptionCount: void 0,
         preferredLocale: void 0,
         discoverySplash: e.discovery_splash,
-        emojis: []
+        emojis: [],
     };
 }
 function I() {
@@ -221,15 +221,15 @@ function I() {
 async function T(e) {
     let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: a, options: l } = e,
         u = p(f({}, l), { loadId: t });
-    (await s.Ub(n, a, u),
+    await s.Ub(n, a, u),
         o.default.track(c.rMx.GUILD_DISCOVERY_GUILD_SELECTED, {
             guild_id: n,
             load_id: t,
             card_index: r,
             category_id: i,
-            location: a
-        }));
+            location: a,
+        });
 }
 function S() {
-    return (0, r.Z)().replace(/-/g, '');
+    return (0, r.Z)().replace(/-/g, "");
 }

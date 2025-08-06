@@ -10,10 +10,10 @@ let o = {
                 url: l.ANM.GUILD_PRUNE(e),
                 query: {
                     days: t,
-                    include_roles: n
+                    include_roles: n,
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !1,
             })
         ).body.pruned;
     },
@@ -23,9 +23,9 @@ let o = {
             body: {
                 days: t,
                 compute_prune_count: !1,
-                include_roles: n
+                include_roles: n,
             },
             oldFormErrors: !0,
-            rejectWithError: !1
-        })
+            rejectWithError: !1,
+        }),
 };

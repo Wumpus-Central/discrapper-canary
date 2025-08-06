@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => d,
-    b: () => u
+    b: () => u,
 });
 var r = n(442837),
     i = n(160404),
@@ -11,7 +11,14 @@ var r = n(442837),
     c = n(981631);
 function u(e) {
     var t;
-    let { channel: n, authenticationStore: r = o.default, voiceStateStore: u = l.Z, mediaEngineStore: d = a.Z, permissionStore: f = s.Z, impersonateStore: _ = i.Z } = e,
+    let {
+            channel: n,
+            authenticationStore: r = o.default,
+            voiceStateStore: u = l.Z,
+            mediaEngineStore: d = a.Z,
+            permissionStore: f = s.Z,
+            impersonateStore: _ = i.Z,
+        } = e,
         p = null != n ? u.getVoiceState(n.getGuildId(), r.getId()) : null,
         h = d.isSelfMute() || d.isSelfMutedTemporarily(),
         m = null == n ? void 0 : n.getGuildId(),
@@ -19,7 +26,7 @@ function u(e) {
     return {
         selfMute: h,
         suppress: (null == p ? void 0 : p.suppress) || g,
-        mute: null != (t = null == p ? void 0 : p.mute) && t
+        mute: null != (t = null == p ? void 0 : p.mute) && t,
     };
 }
 function d(e) {
@@ -30,7 +37,7 @@ function d(e) {
             voiceStateStore: l.Z,
             mediaEngineStore: a.Z,
             permissionStore: s.Z,
-            impersonateStore: i.Z
-        })
+            impersonateStore: i.Z,
+        }),
     );
 }

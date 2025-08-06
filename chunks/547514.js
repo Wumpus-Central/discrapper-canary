@@ -1,4 +1,4 @@
-var r = n(751736)('iterator'),
+var r = n(751736)("iterator"),
     i = !1;
 try {
     var o = 0,
@@ -8,14 +8,14 @@ try {
             },
             return: function () {
                 i = !0;
-            }
+            },
         };
-    ((a[r] = function () {
+    (a[r] = function () {
         return this;
     }),
         Array.from(a, function () {
             throw 2;
-        }));
+        });
 } catch (e) {}
 e.exports = function (e, t) {
     try {
@@ -26,14 +26,14 @@ e.exports = function (e, t) {
     var n = !1;
     try {
         var o = {};
-        ((o[r] = function () {
+        (o[r] = function () {
             return {
                 next: function () {
                     return { done: (n = !0) };
-                }
+                },
             };
         }),
-            e(o));
+            e(o);
     } catch (e) {}
     return n;
 };

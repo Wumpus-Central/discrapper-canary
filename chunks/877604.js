@@ -1,4 +1,4 @@
-(i.d(e, { Z: () => u }), i(415506));
+i.d(e, { Z: () => u }), i(415506);
 var s,
     n = i(255367),
     a = i(73800),
@@ -12,7 +12,7 @@ function l(t, e, i) {
                   value: i,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (t[e] = i),
         t
@@ -20,9 +20,9 @@ function l(t, e, i) {
 }
 let d = (t) =>
     new Promise((e, i) => {
-        null == t && i(Error('No image src passed'));
+        null == t && i(Error("No image src passed"));
         let s = new Image();
-        ((s.src = t), (s.onload = () => e(s)), (s.onerror = (t) => i(t)));
+        (s.src = t), (s.onload = () => e(s)), (s.onerror = (t) => i(t));
     });
 class c extends (s = a.PureComponent) {
     componentDidUpdate(t) {
@@ -40,29 +40,29 @@ class c extends (s = a.PureComponent) {
         var t, e;
         let { className: i, src: s, alt: a, width: h, height: d, onLoad: c, style: u, imageClassName: p } = this.props,
             { loaded: f } = this.state;
-        return (0, n.jsx)('div', {
+        return (0, n.jsx)("div", {
             className: i,
             style:
                 ((t = (function (t) {
                     for (var e = 1; e < arguments.length; e++) {
                         var i = null != arguments[e] ? arguments[e] : {},
                             s = Object.keys(i);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
+                        "function" == typeof Object.getOwnPropertySymbols &&
                             (s = s.concat(
                                 Object.getOwnPropertySymbols(i).filter(function (t) {
                                     return Object.getOwnPropertyDescriptor(i, t).enumerable;
-                                })
+                                }),
                             )),
                             s.forEach(function (e) {
                                 l(t, e, i[e]);
-                            }));
+                            });
                     }
                     return t;
                 })({}, u)),
                 (e = e =
                     {
                         width: h,
-                        height: d
+                        height: d,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
@@ -77,23 +77,23 @@ class c extends (s = a.PureComponent) {
                           Object.defineProperty(t, i, Object.getOwnPropertyDescriptor(e, i));
                       }),
                 t),
-            children: (0, n.jsx)('img', {
+            children: (0, n.jsx)("img", {
                 className: r()(o.image, p, { [o.loaded]: f }),
                 width: h,
                 height: d,
                 src: s,
                 alt: a,
-                onLoad: c
-            })
+                onLoad: c,
+            }),
         });
     }
     constructor(t) {
-        (super(t), l(this, 'unmounting', !1), l(this, 'state', { loaded: !1 }), this.initialize());
+        super(t), l(this, "unmounting", !1), l(this, "state", { loaded: !1 }), this.initialize();
     }
 }
-l(c, 'defaultProps', {
+l(c, "defaultProps", {
     width: 0,
     height: 0,
-    alt: ''
+    alt: "",
 });
 let u = c;

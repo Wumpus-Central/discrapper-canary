@@ -3,7 +3,7 @@ function n(e, t) {
     for (e.push(t); 0 < n; ) {
         var r = (n - 1) >>> 1,
             i = e[r];
-        if (0 < o(i, t)) ((e[r] = t), (e[n] = i), (n = r));
+        if (0 < o(i, t)) (e[r] = t), (e[n] = i), (n = r);
         else break;
     }
 }
@@ -21,8 +21,9 @@ function i(e) {
                 l = e[s],
                 c = s + 1,
                 u = e[c];
-            if (0 > o(l, n)) c < i && 0 > o(u, l) ? ((e[r] = u), (e[c] = n), (r = c)) : ((e[r] = l), (e[s] = n), (r = s));
-            else if (c < i && 0 > o(u, n)) ((e[r] = u), (e[c] = n), (r = c));
+            if (0 > o(l, n))
+                c < i && 0 > o(u, l) ? ((e[r] = u), (e[c] = n), (r = c)) : ((e[r] = l), (e[s] = n), (r = s));
+            else if (c < i && 0 > o(u, n)) (e[r] = u), (e[c] = n), (r = c);
             else break;
         }
     }
@@ -32,7 +33,7 @@ function o(e, t) {
     var n = e.sortIndex - t.sortIndex;
     return 0 !== n ? n : e.id - t.id;
 }
-if (((t.unstable_now = void 0), 'object' == typeof performance && 'function' == typeof performance.now)) {
+if (((t.unstable_now = void 0), "object" == typeof performance && "function" == typeof performance.now)) {
     var a,
         s = performance;
     t.unstable_now = function () {
@@ -53,20 +54,20 @@ var u = [],
     h = !1,
     m = !1,
     g = !1,
-    E = 'function' == typeof setTimeout ? setTimeout : null,
-    b = 'function' == typeof clearTimeout ? clearTimeout : null,
-    y = 'undefined' != typeof setImmediate ? setImmediate : null;
+    E = "function" == typeof setTimeout ? setTimeout : null,
+    b = "function" == typeof clearTimeout ? clearTimeout : null,
+    y = "undefined" != typeof setImmediate ? setImmediate : null;
 function O(e) {
     for (var t = r(d); null !== t; ) {
         if (null === t.callback) i(d);
-        else if (t.startTime <= e) (i(d), (t.sortIndex = t.expirationTime), n(u, t));
+        else if (t.startTime <= e) i(d), (t.sortIndex = t.expirationTime), n(u, t);
         else break;
         t = r(d);
     }
 }
 function v(e) {
     if (((g = !1), O(e), !m))
-        if (null !== r(u)) ((m = !0), w());
+        if (null !== r(u)) (m = !0), w();
         else {
             var t = r(d);
             null !== t && D(v, t.startTime - e);
@@ -86,32 +87,32 @@ function C() {
         var n = !0;
         try {
             e: {
-                ((m = !1), g && ((g = !1), b(T), (T = -1)), (h = !0));
+                (m = !1), g && ((g = !1), b(T), (T = -1)), (h = !0);
                 var o = p;
                 try {
                     o: {
                         for (O(e), _ = r(u); null !== _ && !(_.expirationTime > e && N()); ) {
                             var s = _.callback;
-                            if ('function' == typeof s) {
-                                ((_.callback = null), (p = _.priorityLevel));
+                            if ("function" == typeof s) {
+                                (_.callback = null), (p = _.priorityLevel);
                                 var l = s(_.expirationTime <= e);
-                                if (((e = t.unstable_now()), 'function' == typeof l)) {
-                                    ((_.callback = l), O(e), (n = !0));
+                                if (((e = t.unstable_now()), "function" == typeof l)) {
+                                    (_.callback = l), O(e), (n = !0);
                                     break o;
                                 }
-                                (_ === r(u) && i(u), O(e));
+                                _ === r(u) && i(u), O(e);
                             } else i(u);
                             _ = r(u);
                         }
                         if (null !== _) n = !0;
                         else {
                             var c = r(d);
-                            (null !== c && D(v, c.startTime - e), (n = !1));
+                            null !== c && D(v, c.startTime - e), (n = !1);
                         }
                     }
                     break e;
                 } finally {
-                    ((_ = null), (p = o), (h = !1));
+                    (_ = null), (p = o), (h = !1);
                 }
             }
         } finally {
@@ -119,17 +120,17 @@ function C() {
         }
     }
 }
-if ('function' == typeof y)
+if ("function" == typeof y)
     a = function () {
         y(C);
     };
-else if ('undefined' != typeof MessageChannel) {
+else if ("undefined" != typeof MessageChannel) {
     var R = new MessageChannel(),
         P = R.port2;
-    ((R.port1.onmessage = C),
+    (R.port1.onmessage = C),
         (a = function () {
             P.postMessage(null);
-        }));
+        });
 } else
     a = function () {
         E(C, 0);
@@ -142,7 +143,7 @@ function D(e, n) {
         e(t.unstable_now());
     }, n);
 }
-((t.unstable_IdlePriority = 5),
+(t.unstable_IdlePriority = 5),
     (t.unstable_ImmediatePriority = 1),
     (t.unstable_LowPriority = 4),
     (t.unstable_NormalPriority = 3),
@@ -155,7 +156,11 @@ function D(e, n) {
         m || h || ((m = !0), w());
     }),
     (t.unstable_forceFrameRate = function (e) {
-        0 > e || 125 < e ? console.error('forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported') : (S = 0 < e ? Math.floor(1000 / e) : 5);
+        0 > e || 125 < e
+            ? console.error(
+                  "forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported",
+              )
+            : (S = 0 < e ? Math.floor(1000 / e) : 5);
     }),
     (t.unstable_getCurrentPriorityLevel = function () {
         return p;
@@ -204,7 +209,9 @@ function D(e, n) {
     }),
     (t.unstable_scheduleCallback = function (e, i, o) {
         var a = t.unstable_now();
-        switch (((o = 'object' == typeof o && null !== o && 'number' == typeof (o = o.delay) && 0 < o ? a + o : a), e)) {
+        switch (
+            ((o = "object" == typeof o && null !== o && "number" == typeof (o = o.delay) && 0 < o ? a + o : a), e)
+        ) {
             case 1:
                 var s = -1;
                 break;
@@ -228,9 +235,13 @@ function D(e, n) {
                 priorityLevel: e,
                 startTime: o,
                 expirationTime: s,
-                sortIndex: -1
+                sortIndex: -1,
             }),
-            o > a ? ((e.sortIndex = o), n(d, e), null === r(u) && e === r(d) && (g ? (b(T), (T = -1)) : (g = !0), D(v, o - a))) : ((e.sortIndex = s), n(u, e), m || h || ((m = !0), w())),
+            o > a
+                ? ((e.sortIndex = o),
+                  n(d, e),
+                  null === r(u) && e === r(d) && (g ? (b(T), (T = -1)) : (g = !0), D(v, o - a)))
+                : ((e.sortIndex = s), n(u, e), m || h || ((m = !0), w())),
             e
         );
     }),
@@ -246,4 +257,4 @@ function D(e, n) {
                 p = n;
             }
         };
-    }));
+    });

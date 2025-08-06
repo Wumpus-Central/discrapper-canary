@@ -15,21 +15,21 @@ function s(e) {
     return (0, i.jsx)(o.x, {
         title: m,
         className: r.settingButtonContainer,
-        children: (0, i.jsxs)('div', {
+        children: (0, i.jsxs)("div", {
             className: r.settingButtonContent,
             children: [
                 null != b &&
                     (0, i.jsx)(l.R, {
                         type: l.g.DESCRIPTION,
-                        children: b
+                        children: b,
                     }),
                 (0, i.jsx)(a.zxk, {
                     onClick: f,
                     text: v,
                     variant: g,
-                    disabled: x
-                })
-            ]
-        })
+                    disabled: x,
+                }),
+            ],
+        }),
     });
 }

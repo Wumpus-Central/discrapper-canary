@@ -1,7 +1,7 @@
 n.d(t, {
     KJ: () => d,
     UV: () => u,
-    vJ: () => s
+    vJ: () => s,
 });
 var r = n(255367);
 n(73800);
@@ -16,24 +16,24 @@ function s(e) {
 function u(e) {
     let { children: t, platformType: n } = e,
         c = l.Z.get(n);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: i.verifyConnectedAccount,
-        children: (0, r.jsxs)('div', {
-            children: [(0, r.jsx)(d, { platform: c }), t]
-        })
+        children: (0, r.jsxs)("div", {
+            children: [(0, r.jsx)(d, { platform: c }), t],
+        }),
     });
 }
 function d(e) {
     let { platform: t, className: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: o()(i.logos, n),
         children: [
-            (0, r.jsx)('div', { className: o()(i.logo, i.logoDiscord) }),
-            (0, r.jsx)('div', { className: i.logosDivider }),
-            (0, r.jsx)('div', {
+            (0, r.jsx)("div", { className: o()(i.logo, i.logoDiscord) }),
+            (0, r.jsx)("div", { className: i.logosDivider }),
+            (0, r.jsx)("div", {
                 className: i.logo,
-                style: { backgroundImage: 'url("'.concat(t.icon.whiteSVG, '")') }
-            })
-        ]
+                style: { backgroundImage: 'url("'.concat(t.icon.whiteSVG, '")') },
+            }),
+        ],
     });
 }

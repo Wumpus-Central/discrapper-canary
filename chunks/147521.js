@@ -1,6 +1,6 @@
 var r = n(169774),
     i = n(727584),
-    o = r.isPlatform('Mac OS X'),
+    o = r.isPlatform("Mac OS X"),
     a = {
         isCtrlKeyCommand: function (e) {
             return !!e.ctrlKey && !e.altKey;
@@ -14,6 +14,6 @@ var r = n(169774),
         hasCommandModifier: function (e) {
             return o ? !!e.metaKey && !e.altKey : a.isCtrlKeyCommand(e);
         },
-        isSoftNewlineEvent: i
+        isSoftNewlineEvent: i,
     };
 e.exports = a;

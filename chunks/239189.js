@@ -1,4 +1,4 @@
-(n.r(t),
+n.r(t),
     n.d(t, {
         assign: () => p,
         batchedUpdates: () => f,
@@ -9,8 +9,8 @@
         requestAnimationFrame: () => d,
         skipAnimation: () => u,
         to: () => i,
-        willAdvance: () => _
-    }));
+        willAdvance: () => _,
+    });
 var r,
     i,
     o = n(19784),
@@ -22,7 +22,7 @@ var r,
     c = null,
     u = !1,
     d =
-        'undefined' != typeof window
+        "undefined" != typeof window
             ? window.requestAnimationFrame
             : function () {
                   return -1;
@@ -44,9 +44,9 @@ var r,
                     createStringInterpolator: r,
                     requestAnimationFrame: d,
                     batchedUpdates: f,
-                    willAdvance: _
+                    willAdvance: _,
                 },
-                h(e)
+                h(e),
             )).to),
             (l = t.now),
             (s = t.frameLoop),

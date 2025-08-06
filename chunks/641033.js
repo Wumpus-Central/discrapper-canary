@@ -1,10 +1,10 @@
-(n.d(t, {
+n.d(t, {
     Eo: () => f,
     KH: () => a,
     nc: () => u,
-    yz: () => d
+    yz: () => d,
 }),
-    n(388685));
+    n(388685);
 var r = n(524484),
     i = n(981631);
 let o = function (e, t) {
@@ -26,7 +26,7 @@ let o = function (e, t) {
                           return ((s - t) / l) * (a - e) + e;
                       }
                       return s === t ? o[n] : e;
-                  }, 0)
+                  }, 0),
               );
     },
     a = function (e) {
@@ -40,7 +40,7 @@ let o = function (e, t) {
         [250, 0.8],
         [500, 0.9],
         [2500, 0.95],
-        [9001, 1]
+        [9001, 1],
     ],
     l = s.map((e) => {
         let [t] = e;
@@ -59,16 +59,16 @@ let o = function (e, t) {
               : 4 === e || 5 === e
                 ? {
                       color: i.Ilk.YELLOW_300,
-                      square: !0
+                      square: !0,
                   }
                 : 6 === e
                   ? {
                         color: i.Ilk.RED_400,
-                        square: !0
+                        square: !0,
                     }
                   : {
                         color: i.Ilk.ORANGE_345,
-                        flair: !0
+                        flair: !0,
                     };
 function f(e) {
     var t;

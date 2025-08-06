@@ -11,7 +11,7 @@ function l(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -19,17 +19,17 @@ function l(e, t, n) {
 }
 let c = {
         lastViewedPath: null,
-        lastViewedNonVoicePath: null
+        lastViewedNonVoicePath: null,
     },
     u = c,
-    d = 'LAST_VIEWED_PATH';
+    d = "LAST_VIEWED_PATH";
 function f(e) {
     let { path: t } = e;
-    return ((u.lastViewedPath = t), !0);
+    return (u.lastViewedPath = t), !0;
 }
 function _(e) {
     let { path: t } = e;
-    return ((u.lastViewedNonVoicePath = t), !0);
+    return (u.lastViewedNonVoicePath = t), !0;
 }
 class p extends (r = i.ZP.PersistedStore) {
     initialize() {
@@ -50,15 +50,15 @@ class p extends (r = i.ZP.PersistedStore) {
         return u;
     }
 }
-(l(p, 'displayName', 'DefaultRouteStore'),
-    l(p, 'persistKey', 'DefaultRouteStore'),
-    l(p, 'migrations', [
+l(p, "displayName", "DefaultRouteStore"),
+    l(p, "persistKey", "DefaultRouteStore"),
+    l(p, "migrations", [
         () => {
             let e = o.K.get(d, null);
-            return (o.K.remove(d), { lastViewedPath: e });
-        }
-    ]));
+            return o.K.remove(d), { lastViewedPath: e };
+        },
+    ]);
 let h = new p(a.Z, {
     SAVE_LAST_ROUTE: f,
-    SAVE_LAST_NON_VOICE_ROUTE: _
+    SAVE_LAST_NON_VOICE_ROUTE: _,
 });

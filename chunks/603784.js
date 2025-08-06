@@ -28,24 +28,24 @@ function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -70,31 +70,50 @@ function T(e, t) {
 class P extends i.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;
-        return (0, r.jsxs)('span', {
+        return (0, r.jsxs)("span", {
             onContextMenu: t,
             className: E.userHook,
             children: [
                 (0, r.jsx)(d.Text, {
-                    variant: 'text-md/normal',
-                    children: _.ZP.getUserTag(e, { mode: 'username' })
+                    variant: "text-md/normal",
+                    children: _.ZP.getUserTag(e, { mode: "username" }),
                 }),
-                '0' !== e.discriminator &&
+                "0" !== e.discriminator &&
                     (0, r.jsxs)(d.Text, {
-                        variant: 'text-xs/normal',
+                        variant: "text-xs/normal",
                         className: E.discrim,
-                        children: ['#', e.discriminator]
-                    })
-            ]
+                        children: ["#", e.discriminator],
+                    }),
+            ],
         });
     }
 }
 let w = i.forwardRef((e, t) => {
     let n,
-        { log: l, className: o, expanded: h, guildId: _, guild: w, onChannelContextMenu: R, onContentClick: Z, onHeaderClick: D, onTargetContextMenu: A, onUserContextMenu: k, theme: L } = e,
+        {
+            log: l,
+            className: o,
+            expanded: h,
+            guildId: _,
+            guild: w,
+            onChannelContextMenu: R,
+            onContentClick: Z,
+            onHeaderClick: D,
+            onTargetContextMenu: A,
+            onUserContextMenu: k,
+            theme: L,
+        } = e,
         M = i.useRef(null),
         G = (function () {
             let { changes: e } = l;
-            return (l.actionType !== N.vB8.DELETE || l.action === N.rsA.MEMBER_BAN_ADD || l.action === N.rsA.MEMBER_KICK || l.action === N.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, C.xO)(l, e));
+            return (
+                (l.actionType !== N.vB8.DELETE ||
+                    l.action === N.rsA.MEMBER_BAN_ADD ||
+                    l.action === N.rsA.MEMBER_KICK ||
+                    l.action === N.rsA.MEMBER_PRUNE) &&
+                null != e &&
+                e.some((e) => !(0, C.xO)(l, e))
+            );
         })(),
         U = E.headerDefault;
     h ? (U = E.headerExpanded) : G && (U = E.headerClickable);
@@ -104,19 +123,19 @@ let w = i.forwardRef((e, t) => {
         B === F
             ? (0, r.jsx)(d.Text, {
                   className: E.timestamp,
-                  variant: 'text-sm/normal',
-                  children: B
+                  variant: "text-sm/normal",
+                  children: B,
               })
             : (0, r.jsxs)(d.Text, {
                   className: E.timestamp,
-                  variant: 'text-sm/normal',
-                  children: [B, '\u2014', F]
+                  variant: "text-sm/normal",
+                  children: [B, "\u2014", F],
               });
     let H = G ? D : N.dG4;
     return (0, r.jsx)(s.mh, {
         id: l.id,
         children: (e) =>
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 ref: t,
                 className: a()(E.auditLog, o),
                 children: [
@@ -126,23 +145,23 @@ let w = i.forwardRef((e, t) => {
                             S(
                                 {
                                     className: U,
-                                    'aria-expanded': h,
-                                    onClick: H
+                                    "aria-expanded": h,
+                                    onClick: H,
                                 },
-                                e
+                                e,
                             ),
                             {
                                 children: [
                                     (0, r.jsx)(C.mp, {
                                         action: l.action,
                                         actionType: l.actionType,
-                                        targetType: l.targetType
+                                        targetType: l.targetType,
                                     }),
                                     (function () {
                                         let {
                                             user: e,
                                             userId: t,
-                                            options: { integration_type: n }
+                                            options: { integration_type: n },
                                         } = l;
                                         if (null != e && null != t)
                                             return (0, r.jsx)(p.Z, {
@@ -157,15 +176,24 @@ let w = i.forwardRef((e, t) => {
                                                         T(S({}, e), {
                                                             ref: M,
                                                             onClick: (t) => {
-                                                                (t.stopPropagation(), e.onClick(t));
+                                                                t.stopPropagation(), e.onClick(t);
                                                             },
                                                             className: E.avatar,
-                                                            src: l.action === N.rsA.AUTO_MODERATION_BLOCK_MESSAGE || l.action === N.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || l.action === N.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || l.action === N.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, O.j)() : null == (t = l.user) ? void 0 : t.getAvatarURL(_, 40),
-                                                            'aria-hidden': !0,
-                                                            size: d.EFr.SIZE_40
-                                                        })
+                                                            src:
+                                                                l.action === N.rsA.AUTO_MODERATION_BLOCK_MESSAGE ||
+                                                                l.action === N.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL ||
+                                                                l.action ===
+                                                                    N.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
+                                                                l.action === N.rsA.AUTO_MODERATION_QUARANTINE_USER
+                                                                    ? (0, O.j)()
+                                                                    : null == (t = l.user)
+                                                                      ? void 0
+                                                                      : t.getAvatarURL(_, 40),
+                                                            "aria-hidden": !0,
+                                                            size: d.EFr.SIZE_40,
+                                                        }),
                                                     );
-                                                }
+                                                },
                                             });
                                         if (null != n) {
                                             let e = u.Z.get(n);
@@ -174,17 +202,17 @@ let w = i.forwardRef((e, t) => {
                                                 return (0, r.jsx)(d.qEK, {
                                                     className: E.avatar,
                                                     src: t,
-                                                    'aria-hidden': !0,
-                                                    size: d.EFr.SIZE_40
+                                                    "aria-hidden": !0,
+                                                    size: d.EFr.SIZE_40,
                                                 });
                                             }
                                         }
                                         return null;
                                     })(),
-                                    (0, r.jsxs)('div', {
+                                    (0, r.jsxs)("div", {
                                         className: E.timeWrap,
                                         children: [
-                                            (0, r.jsx)('div', {
+                                            (0, r.jsx)("div", {
                                                 className: E.title,
                                                 children: (function () {
                                                     let e,
@@ -192,7 +220,7 @@ let w = i.forwardRef((e, t) => {
                                                     e = (0, v.lM)(n) ? n.name : n.toString();
                                                     let a = y.N5(l);
                                                     return null != a
-                                                        ? (0, r.jsx)('div', {
+                                                        ? (0, r.jsx)("div", {
                                                               className: E.overflowEllipsis,
                                                               children: I.intl.format(a, {
                                                                   user: t,
@@ -203,78 +231,85 @@ let w = i.forwardRef((e, t) => {
                                                                               P,
                                                                               {
                                                                                   user: l.user,
-                                                                                  onContextMenu: k
+                                                                                  onContextMenu: k,
                                                                               },
-                                                                              t
+                                                                              t,
                                                                           );
                                                                       if (null != l.options.integration_type) {
                                                                           var n;
                                                                           let e = u.Z.get(l.options.integration_type);
-                                                                          return null != (n = null == e ? void 0 : e.name) ? n : I.intl.string(I.t['n+olu7']);
+                                                                          return null !=
+                                                                              (n = null == e ? void 0 : e.name)
+                                                                              ? n
+                                                                              : I.intl.string(I.t["n+olu7"]);
                                                                       }
-                                                                      return I.intl.string(I.t['30mdIy']);
+                                                                      return I.intl.string(I.t["30mdIy"]);
                                                                   },
                                                                   targetHook: (e, t) =>
-                                                                      l.targetType === N.KFR.USER && l.target instanceof f.Z
+                                                                      l.targetType === N.KFR.USER &&
+                                                                      l.target instanceof f.Z
                                                                           ? (0, r.jsx)(
                                                                                 P,
                                                                                 {
                                                                                     user: l.target,
-                                                                                    onContextMenu: A
+                                                                                    onContextMenu: A,
                                                                                 },
-                                                                                t
+                                                                                t,
                                                                             )
                                                                           : (0, r.jsx)(
-                                                                                'span',
+                                                                                "span",
                                                                                 {
                                                                                     onContextMenu: A,
-                                                                                    children: e
+                                                                                    children: e,
                                                                                 },
-                                                                                t
+                                                                                t,
                                                                             ),
                                                                   count: i.count,
-                                                                  channel: null == i.channel || 'string' == typeof i.channel ? i.channel : (0, g.F6)(i.channel, b.default, x.Z, !0),
+                                                                  channel:
+                                                                      null == i.channel || "string" == typeof i.channel
+                                                                          ? i.channel
+                                                                          : (0, g.F6)(i.channel, b.default, x.Z, !0),
                                                                   channelHook: (e, t) =>
                                                                       (0, r.jsx)(
-                                                                          'span',
+                                                                          "span",
                                                                           {
                                                                               onContextMenu: R,
-                                                                              children: e
+                                                                              children: e,
                                                                           },
-                                                                          t
+                                                                          t,
                                                                       ),
-                                                                  subtarget: i.subtarget
-                                                              })
+                                                                  subtarget: i.subtarget,
+                                                              }),
                                                           })
                                                         : null;
-                                                })()
+                                                })(),
                                             }),
-                                            n
-                                        ]
+                                            n,
+                                        ],
                                     }),
                                     G
                                         ? (0, r.jsx)(j.Z, {
                                               className: E.expand,
                                               foreground: E.expandForeground,
                                               expanded: h,
-                                              'aria-hidden': !0
+                                              "aria-hidden": !0,
                                           })
-                                        : null
-                                ]
-                            }
-                        )
+                                        : null,
+                                ],
+                            },
+                        ),
                     ),
-                    h ? (0, r.jsx)('div', { className: E.divider }) : null,
+                    h ? (0, r.jsx)("div", { className: E.divider }) : null,
                     h && null != w
                         ? (0, r.jsx)(C.tP, {
                               log: l,
                               guild: w,
-                              onContentClick: Z
+                              onContentClick: Z,
                           })
-                        : null
-                ]
-            })
+                        : null,
+                ],
+            }),
     });
 });
-w.displayName = 'GuildSettingsAuditLogEntry';
+w.displayName = "GuildSettingsAuditLogEntry";
 let R = o.ZP.connectStores([h.Z], () => ({ theme: h.Z.theme }), { forwardRef: !0 })(w);

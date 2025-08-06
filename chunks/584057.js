@@ -22,9 +22,9 @@ function f(e, t) {
                         LaunchableGameStore: a.Z,
                         DispatchApplicationStore: c.Z,
                         ConnectedAppsStore: s.Z,
-                        applicationId: f
+                        applicationId: f,
                     })),
-            [f, _]
+            [f, _],
         ),
         h = (0, i.Z)(e, d.xjy.JOIN) || _;
     return !(_ && null == t && (null == e || !(0, i.Z)(e, d.xjy.CONTEXTLESS))) && null != f && h && p;

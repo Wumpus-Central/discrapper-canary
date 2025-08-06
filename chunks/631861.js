@@ -19,22 +19,22 @@ let p = (0, a.Z)(
                 b = (0, s.Z)(e, n, c),
                 p = (0, u.Z)({
                     id: e.id,
-                    label: d.intl.string(d.t['FfCL+/'])
+                    label: d.intl.string(d.t["FfCL+/"]),
                 });
             return (0, r.jsxs)(o.v2r, {
-                navId: 'game-context',
+                navId: "game-context",
                 onClose: i.Zy,
-                'aria-label': d.intl.string(d.t.liqwPD),
+                "aria-label": d.intl.string(d.t.liqwPD),
                 onSelect: a,
                 children: [
                     (0, r.jsxs)(o.kSQ, {
-                        children: [l, b]
+                        children: [l, b],
                     }),
-                    (0, r.jsx)(o.kSQ, { children: p })
-                ]
+                    (0, r.jsx)(o.kSQ, { children: p }),
+                ],
             });
         },
-        { object: b.qAy.CONTEXT_MENU }
+        { object: b.qAy.CONTEXT_MENU },
     ),
-    [l.Z.CONTEXT_MENU, l.Z.GAME_MENU]
+    [l.Z.CONTEXT_MENU, l.Z.GAME_MENU],
 );

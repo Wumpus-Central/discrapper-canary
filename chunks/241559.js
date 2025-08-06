@@ -1,12 +1,12 @@
-(n.d(t, {
+n.d(t, {
     hB: () => g,
     lv: () => f,
     n2: () => p,
     nX: () => m,
     rX: () => E,
-    xC: () => h
+    xC: () => h,
 }),
-    n(388685));
+    n(388685);
 var r = n(149765),
     i = n(442837),
     o = n(430824),
@@ -21,7 +21,7 @@ let d = function (e) {
             i = n.getGuild(e);
         return {
             user: r.getCurrentUser(),
-            guild: i
+            guild: i,
         };
     },
     f = function (e) {
@@ -33,9 +33,9 @@ let d = function (e) {
                 l.uB({
                     user: n.user,
                     context: n.guild,
-                    checkElevated: !1
+                    checkElevated: !1,
                 }),
-                c.N
+                c.N,
             )
         );
     },
@@ -53,24 +53,16 @@ function h(e) {
     return t && n;
 }
 function m(e) {
-    return (0, i.e7)(
-        [o.Z, a.Z],
-        () => {
-            let t = o.Z.getGuild(e);
-            return null != t && a.Z.can(u.Plq.MANAGE_GUILD, t);
-        },
-        [e]
-    );
+    return (0, i.e7)([o.Z, a.Z], () => {
+        let t = o.Z.getGuild(e);
+        return null != t && a.Z.can(u.Plq.MANAGE_GUILD, t);
+    }, [e]);
 }
 function g(e, t, n) {
-    return (0, i.e7)(
-        [a.Z, o.Z],
-        () => {
-            let r = o.Z.getGuild(e);
-            return null != r && t && a.Z.canManageUser(u.Plq.BAN_MEMBERS, n, r);
-        },
-        [t, e, n]
-    );
+    return (0, i.e7)([a.Z, o.Z], () => {
+        let r = o.Z.getGuild(e);
+        return null != r && t && a.Z.canManageUser(u.Plq.BAN_MEMBERS, n, r);
+    }, [t, e, n]);
 }
 function E(e, t, n) {
     let r = o.Z.getGuild(e);

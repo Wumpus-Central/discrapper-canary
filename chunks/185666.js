@@ -9,13 +9,16 @@ var i = n(481060),
     c = n(379164),
     u = n(590965),
     d = n(981631);
-let h = 'INVITE_MODAL_KEY';
+let h = "INVITE_MODAL_KEY";
 class p extends o.Z {
     _initialize() {
-        (l.Z.subscribe('INVITE_MODAL_OPEN', this.handleOpenModal), l.Z.subscribe('INVITE_MODAL_CLOSE', this.handleCloseModal));
+        l.Z.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
+            l.Z.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     _terminate() {
-        ((0, i.Mr3)(h), l.Z.unsubscribe('INVITE_MODAL_OPEN', this.handleOpenModal), l.Z.unsubscribe('INVITE_MODAL_CLOSE', this.handleCloseModal));
+        (0, i.Mr3)(h),
+            l.Z.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
+            l.Z.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     handleOpenModal(e) {
         let { context: t } = e;
@@ -23,7 +26,7 @@ class p extends o.Z {
             !(0, i.nfh)(h) &&
             (0, i.ZDy)(
                 async () => {
-                    let { default: e } = await n.e('86872').then(n.bind(n, 472365));
+                    let { default: e } = await n.e("86872").then(n.bind(n, 472365));
                     return (t) =>
                         (0, r.jsx)(
                             e,
@@ -31,27 +34,27 @@ class p extends o.Z {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
-                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                    "function" == typeof Object.getOwnPropertySymbols &&
                                         (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            })
+                                            }),
                                         )),
                                         r.forEach(function (t) {
                                             var r;
-                                            ((r = n[t]),
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
                                                           value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
-                                                          writable: !0
+                                                          writable: !0,
                                                       })
-                                                    : (e[t] = r));
-                                        }));
+                                                    : (e[t] = r);
+                                        });
                                 }
                                 return e;
-                            })({}, t)
+                            })({}, t),
                         );
                 },
                 {
@@ -60,13 +63,13 @@ class p extends o.Z {
                     onCloseRequest: () => {
                         let e = (0, s.e7)(),
                             t = (0, s._J)();
-                        (a.default.track(d.rMx.INVITE_ACCEPT_DISMISSED, {
+                        a.default.track(d.rMx.INVITE_ACCEPT_DISMISSED, {
                             invite_code: e,
-                            guild_id: t
+                            guild_id: t,
                         }),
-                            c.Z.close());
-                    }
-                }
+                            c.Z.close();
+                    },
+                },
             );
     }
     handleCloseModal() {

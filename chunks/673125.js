@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(539854), n(388685));
+n.d(t, { Z: () => C }), n(539854), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -15,7 +15,7 @@ function f(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -25,15 +25,15 @@ function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 f(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -41,11 +41,11 @@ function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -71,7 +71,7 @@ function O(e) {
         if (null == t) return;
         let n = t.getAvatarURL(null, d.Ks),
             r = new Image();
-        ((r.src = n), (g[e] = r));
+        (r.src = n), (g[e] = r);
     }
 }
 function v(e) {
@@ -83,8 +83,8 @@ function v(e) {
                 type: c.W.LINE,
                 id: t,
                 userId: r,
-                points: n
-            }
+                points: n,
+            },
         ];
     else {
         let e = o.find((e) => e.id === t);
@@ -93,7 +93,7 @@ function v(e) {
                   type: c.W.LINE,
                   id: t,
                   userId: r,
-                  points: n
+                  points: n,
               })
             : (0, u.P7)(e) && e.points.push(...n);
     }
@@ -108,18 +108,18 @@ function I(e) {
         let e = m[o].findIndex((e) => e.id === i.id);
         e >= 0 ? (m[o][e] = _({}, m[o][e], u)) : m[o].push(u);
     }
-    let f = null != (n = null != (t = i.emojiId) ? t : i.emojiName) ? n : '';
+    let f = null != (n = null != (t = i.emojiId) ? t : i.emojiName) ? n : "";
     if (null == E[f]) {
         let e = null != i.emojiName ? a.ZP.convertNameToSurrogate(i.emojiName) : null;
-        ((E[f] = new Image()),
+        (E[f] = new Image()),
             (E[f].src = (0, l.qc)(
                 {
                     id: i.emojiId,
-                    name: null != (r = null != e ? e : i.emojiName) ? r : '',
-                    animated: !1
+                    name: null != (r = null != e ? e : i.emojiName) ? r : "",
+                    animated: !1,
                 },
-                d.qh
-            )));
+                d.qh,
+            ));
     }
     O(s);
 }
@@ -127,7 +127,7 @@ function T(e) {
     let { drawables: t, streamerId: n } = e;
     if (null != m[n]) {
         let e = new Set();
-        (t.forEach((t) => e.add(t.id)), (m[n] = m[n].filter((t) => !e.has(t.id))));
+        t.forEach((t) => e.add(t.id)), (m[n] = m[n].filter((t) => !e.has(t.id)));
     }
 }
 function S(e) {
@@ -155,11 +155,11 @@ class N extends (r = i.ZP.Store) {
         return y;
     }
 }
-f(N, 'displayName', 'SharedCanvasStore');
+f(N, "displayName", "SharedCanvasStore");
 let C = new N(o.Z, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: v,
     SHARED_CANVAS_UPDATE_EMOJI_HOSE: I,
     SHARED_CANVAS_CLEAR_DRAWABLES: T,
     SHARED_CANVAS_SET_DRAW_MODE: S,
-    TOGGLE_OVERLAY_CANVAS: A
+    TOGGLE_OVERLAY_CANVAS: A,
 });

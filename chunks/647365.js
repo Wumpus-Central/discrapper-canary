@@ -5,7 +5,18 @@ var s = n(453217),
     o = n(578080),
     a = n(665600);
 let i = function (e) {
-    let { collapsedHeight: t, expandedContentRef: n, expansionSpring: i, isExpanded: l, isExpansionAnimationComplete: c, onCtxMenuOpened: u, onCtxMenuClosed: d, onCtxMenuSelection: p, quest: m, useReducedMotion: f } = e;
+    let {
+        collapsedHeight: t,
+        expandedContentRef: n,
+        expansionSpring: i,
+        isExpanded: l,
+        isExpansionAnimationComplete: c,
+        onCtxMenuOpened: u,
+        onCtxMenuClosed: d,
+        onCtxMenuSelection: p,
+        quest: m,
+        useReducedMotion: f,
+    } = e;
     return (0, r.jsx)(o.Z, {
         expansionSpring: i,
         className: a.content,
@@ -24,7 +35,7 @@ let i = function (e) {
             isExpanded: l,
             isExpansionAnimationComplete: c,
             quest: m,
-            useReducedMotion: f
-        })
+            useReducedMotion: f,
+        }),
     });
 };

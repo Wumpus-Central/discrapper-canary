@@ -1,9 +1,9 @@
-(n.d(t, {
+n.d(t, {
     L: () => y,
-    p: () => b
+    p: () => b,
 }),
     n(704826),
-    n(35282));
+    n(35282);
 var r = n(73800),
     i = n(392711),
     o = n(442837),
@@ -21,7 +21,7 @@ function _(e, t, n) {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
-                  writable: !0
+                  writable: !0,
               })
             : (e[t] = n),
         e
@@ -31,15 +31,15 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 _(e, t, n[t]);
-            }));
+            });
     }
     return e;
 }
@@ -47,11 +47,11 @@ function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        (t &&
+        t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r));
+            n.push.apply(n, r);
     }
     return n;
 }
@@ -72,20 +72,20 @@ function g(e) {
             getRawDevices: (e) => e.getInputDevices(),
             getAllDeviceIdsSortedByFrecency: (e) => e.getInputDeviceIdsSortedByFrecency(),
             getCurrentDeviceId: (e) => e.getInputDeviceId(),
-            getNoDevicesMessage: () => f.intl.string(f.t['/QIjDA'])
+            getNoDevicesMessage: () => f.intl.string(f.t["/QIjDA"]),
         },
         [d.h7.AUDIO_OUTPUT]: {
             getRawDevices: (e) => e.getOutputDevices(),
             getAllDeviceIdsSortedByFrecency: (e) => e.getOutputDeviceIdsSortedByFrecency(),
             getCurrentDeviceId: (e) => e.getOutputDeviceId(),
-            getNoDevicesMessage: () => f.intl.string(f.t.xlUg0t)
+            getNoDevicesMessage: () => f.intl.string(f.t.xlUg0t),
         },
         [d.h7.VIDEO_INPUT]: {
             getRawDevices: (e) => e.getVideoDevices(),
             getAllDeviceIdsSortedByFrecency: (e) => e.getVideoDeviceIdsSortedByFrecency(),
             getCurrentDeviceId: (e) => e.getVideoDeviceId(),
-            getNoDevicesMessage: () => f.intl.string(f.t.WKWARU)
-        }
+            getNoDevicesMessage: () => f.intl.string(f.t.WKWARU),
+        },
     }[e];
 }
 function E(e) {
@@ -95,7 +95,11 @@ function E(e) {
     return (0, r.useMemo)(() => {
         let e = p({}, i),
             t = e[d.w5];
-        return (null != t && (e[d.w5] = m(p({}, t), { name: t.disabled ? a : t.name.replace(d.fU, f.intl.string(f.t.bBvAEB)) })), e);
+        return (
+            null != t &&
+                (e[d.w5] = m(p({}, t), { name: t.disabled ? a : t.name.replace(d.fU, f.intl.string(f.t.bBvAEB)) })),
+            e
+        );
     }, [i, a]);
 }
 function b(e) {
@@ -117,6 +121,10 @@ function y(e, t) {
         if (!s) return [t, []].map(e);
         let n = (0, i.intersection)(p, t),
             r = (0, i.difference)(t, p);
-        return d && (null == n ? void 0 : n.length) !== 0 ? (r.some((e) => e === h) ? [(0, i.union)(n, [h]), (0, i.difference)(r, [h])].map(e) : [n, r].map(e)) : [(0, i.union)(n, r), []].map(e);
+        return d && (null == n ? void 0 : n.length) !== 0
+            ? r.some((e) => e === h)
+                ? [(0, i.union)(n, [h]), (0, i.difference)(r, [h])].map(e)
+                : [n, r].map(e)
+            : [(0, i.union)(n, r), []].map(e);
     }, [f, p, h, s, d]);
 }

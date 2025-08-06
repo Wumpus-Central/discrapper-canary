@@ -18,7 +18,7 @@ var s = n(392711),
     j = n(490958);
 let S = (e) => {
     let {
-        channel: { type: t }
+        channel: { type: t },
     } = e;
     return (0, u.r8)(t) || t === p.d4z.GUILD_CATEGORY;
 };
@@ -28,7 +28,7 @@ function N(e) {
             let e = g.Z.getCategories(t);
             return {
                 channels: (0, o.Z)(e._categories, e, S),
-                categories: e
+                categories: e,
             };
         }),
         N = l()(s)
@@ -40,7 +40,7 @@ function N(e) {
                 let { channel: t } = e;
                 return {
                     value: t.id,
-                    label: (0, d.F6)(t, x.default, m.Z)
+                    label: (0, d.F6)(t, x.default, m.Z),
                 };
             })
             .value();
@@ -48,9 +48,9 @@ function N(e) {
         children: [
             (0, i.jsx)(a.R94, {
                 type: a.R94.Types.DESCRIPTION,
-                children: v.intl.string(v.t['2Y9ZfH'])
+                children: v.intl.string(v.t["2Y9ZfH"]),
             }),
-            (0, i.jsx)('div', {
+            (0, i.jsx)("div", {
                 className: j.input,
                 children: (0, i.jsx)(a.VcW, {
                     value: p.lds,
@@ -64,12 +64,12 @@ function N(e) {
                         return (0, i.jsx)(a.ZZ$, {
                             icon: (0, c.KS)(t),
                             title: e.label,
-                            subtitle: s
+                            subtitle: s,
                         });
                     },
-                    placeholder: v.intl.string(v.t['Z+oF8v'])
-                })
-            })
-        ]
+                    placeholder: v.intl.string(v.t["Z+oF8v"]),
+                }),
+            }),
+        ],
     });
 }

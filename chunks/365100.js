@@ -12,14 +12,14 @@ function s(e, t) {
         d = 0,
         f = 0;
     if (l) {
-        ((c = l.width), (u = l.height));
+        (c = l.width), (u = l.height);
         var _ = (0, a.Z)();
-        (_ || (!_ && 'fixed' === t)) && ((d = l.offsetLeft), (f = l.offsetTop));
+        (_ || (!_ && "fixed" === t)) && ((d = l.offsetLeft), (f = l.offsetTop));
     }
     return {
         width: c,
         height: u,
         x: d + (0, o.Z)(e),
-        y: f
+        y: f,
     };
 }

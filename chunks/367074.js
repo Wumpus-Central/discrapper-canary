@@ -1,7 +1,7 @@
 n.d(t, {
     Qw: () => R,
     Vi: () => C,
-    l2: () => P
+    l2: () => P,
 });
 var r = n(913527),
     i = n.n(r),
@@ -33,12 +33,12 @@ function N(e) {
     if (null != r && r.status === S.O0b.ENDED) {
         let e = r.endedAt,
             t = r.hasPremiumAtLeast(T.p9.TIER_2);
-        if (null != e && t && i()().subtract(A, 'days').isBefore(e)) return !1;
+        if (null != e && t && i()().subtract(A, "days").isBefore(e)) return !1;
     }
     if (null != a && a.status === S.O0b.ENDED) {
         let e = a.endedAt,
             t = a.hasPremiumAtLeast(T.p9.TIER_2);
-        if (null != e && t && i()().subtract(A, 'days').isBefore(e)) return !1;
+        if (null != e && t && i()().subtract(A, "days").isBefore(e)) return !1;
     }
     if (null != n) {
         let e = n.hasPremiumAtLeast(T.p9.TIER_2),
@@ -52,18 +52,18 @@ function N(e) {
 function C() {
     var e;
     let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        { paymentsBlocked: n } = l.Z.useExperiment({ location: '153d31_1' }, { autoTrackExposure: !1 }),
+        { paymentsBlocked: n } = l.Z.useExperiment({ location: "153d31_1" }, { autoTrackExposure: !1 }),
         { promotion: r } = (0, v.mq)(),
         { enabled: i } = (0, g.ZP)(),
         { enabled: s } = (0, m.ZP)(),
         {
             mostRecentSubscription: c,
             premiumSubscription: d,
-            previousPremiumSubscription: f
+            previousPremiumSubscription: f,
         } = (0, a.cj)([u.Z], () => ({
             mostRecentSubscription: u.Z.getMostRecentPremiumTypeSubscription(),
             premiumSubscription: u.Z.getPremiumTypeSubscription(),
-            previousPremiumSubscription: u.Z.getPreviousPremiumTypeSubscription()
+            previousPremiumSubscription: u.Z.getPreviousPremiumTypeSubscription(),
         })),
         p = (0, b.N)(),
         O = (0, E.Ng)(),
@@ -76,15 +76,15 @@ function C() {
             experimentEnabled: i,
             premiumSubscription: d,
             mostRecentSubscription: c,
-            previousPremiumSubscription: f
+            previousPremiumSubscription: f,
         }),
         R = A && C && null == p && null != r && !n && null == O,
         { enabled: P } = h.Z.useExperiment(
-            { location: '153d31_2' },
+            { location: "153d31_2" },
             {
                 autoTrackExposure: R,
-                disable: !R
-            }
+                disable: !R,
+            },
         );
     return !S && (t ? P : R);
 }
@@ -93,19 +93,30 @@ async function R() {
     let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         n = c.default.getCurrentUser(),
         r = !(null == n ? void 0 : n.isClaimed()),
-        { paymentsBlocked: i } = l.Z.getCurrentConfig({ location: '153d31_3' }, { autoTrackExposure: !1 }),
+        { paymentsBlocked: i } = l.Z.getCurrentConfig({ location: "153d31_3" }, { autoTrackExposure: !1 }),
         { enabled: a } = (0, g.aW)(),
         { enabled: f } = (0, m.oW)(),
-        { enabled: _ } = h.Z.getCurrentConfig({ location: '153d31_4' }, { autoTrackExposure: !1 }),
+        { enabled: _ } = h.Z.getCurrentConfig({ location: "153d31_4" }, { autoTrackExposure: !1 }),
         p = !o.tq || f;
-    if (r || i || !a || (t && !_) || !p || (d.Z.hasFetchedOffer() && (d.Z.hasAnyUnexpiredOffer() || d.Z.hasAnyUnexpiredDiscountOffer()))) return !1;
-    (!u.Z.hasFetchedMostRecentPremiumTypeSubscription() && (null == (e = c.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(T.in.PREMIUM_TIER_2)) && (await (0, s.ou)()), u.Z.hasFetchedSubscriptions() || (await (0, s.jg)()));
+    if (
+        r ||
+        i ||
+        !a ||
+        (t && !_) ||
+        !p ||
+        (d.Z.hasFetchedOffer() && (d.Z.hasAnyUnexpiredOffer() || d.Z.hasAnyUnexpiredDiscountOffer()))
+    )
+        return !1;
+    !u.Z.hasFetchedMostRecentPremiumTypeSubscription() &&
+        (null == (e = c.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(T.in.PREMIUM_TIER_2)) &&
+        (await (0, s.ou)()),
+        u.Z.hasFetchedSubscriptions() || (await (0, s.jg)());
     let E = u.Z.getMostRecentPremiumTypeSubscription();
     return N({
         experimentEnabled: a,
         premiumSubscription: u.Z.getPremiumTypeSubscription(),
         mostRecentSubscription: E,
-        previousPremiumSubscription: u.Z.getPreviousPremiumTypeSubscription()
+        previousPremiumSubscription: u.Z.getPreviousPremiumTypeSubscription(),
     });
 }
 async function P() {

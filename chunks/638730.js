@@ -1,8 +1,8 @@
-(n.d(t, {
+n.d(t, {
     T: () => a,
-    h: () => s
+    h: () => s,
 }),
-    n(388685));
+    n(388685);
 var r = n(73800),
     i = n(392711);
 let l = (e) => e,
@@ -31,7 +31,7 @@ let l = (e) => e,
                         null == (e = a.current) || e.cancel();
                     }
                 ),
-                [e, t, l, ...n]
+                [e, t, l, ...n],
             ),
             a.current
         );

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(126663),
@@ -14,24 +14,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -64,32 +64,32 @@ function f(e) {
         [C, N] = i.useState(y ? v : x),
         I = (0, s.q_F)({
             opacity: +!y,
-            pointerEvents: y ? 'none' : 'all',
-            config: h(p({}, l.config.stiff), { clamp: !0 })
+            pointerEvents: y ? "none" : "all",
+            config: h(p({}, l.config.stiff), { clamp: !0 }),
         }),
         E = (0, s.q_F)({
             opacity: +!!y,
-            pointerEvents: y ? 'all' : 'none',
+            pointerEvents: y ? "all" : "none",
             config: h(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
                 N(y ? v : x);
             },
             onRest: () => {
-                (N(y ? v : x), j(y));
-            }
+                N(y ? v : x), j(y);
+            },
         });
     return null == v || y
-        ? (0, r.jsxs)('div', {
+        ? (0, r.jsxs)("div", {
               className: g.mainRuleContainer,
-              style: { height: y ? 'auto' : '60px' },
+              style: { height: y ? "auto" : "60px" },
               children: [
                   (0, r.jsx)(l.animated.div, {
                       className: g.animatedRuleCardContainer,
                       style: E,
                       children: (0, r.jsx)(u.Z, {
                           rule: C,
-                          persistEdit: b
-                      })
+                          persistEdit: b,
+                      }),
                   }),
                   (0, r.jsx)(l.animated.div, {
                       className: g.animatedNewRuleContainer,
@@ -101,21 +101,21 @@ function f(e) {
                           },
                           children: [
                               (0, r.jsx)(s.oFk, {
-                                  size: 'custom',
+                                  size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: a.Z.BLUE_345,
-                                  className: g.plusIcon
+                                  className: g.plusIcon,
                               }),
                               (0, r.jsx)(s.Text, {
-                                  variant: 'text-md/semibold',
-                                  color: 'text-link',
-                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: O() })
-                              })
-                          ]
-                      })
-                  })
-              ]
+                                  variant: "text-md/semibold",
+                                  color: "text-link",
+                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: O() }),
+                              }),
+                          ],
+                      }),
+                  }),
+              ],
           })
         : null;
 }

@@ -1,6 +1,6 @@
 b.a(_, async function (_, a) {
     try {
-        (b.r(e),
+        b.r(e),
             b.d(e, {
                 BlockedDomainsStore: () => c.dJ,
                 ExperimentCacher: () => c.vz,
@@ -90,11 +90,11 @@ b.a(_, async function (_, a) {
                 generateLaunchSignature: () => c.Ub,
                 initLibdiscore: () => c.eW,
                 installLogCallback: () => c.B8,
-                rustMultiply: () => c.rs
-            }));
+                rustMultiply: () => c.rs,
+            });
         var c = b(981),
             n = _([c]);
-        ((c = (n.then ? (await n)() : n)[0]), a());
+        (c = (n.then ? (await n)() : n)[0]), a();
     } catch (_) {
         a(_);
     }

@@ -1,6 +1,6 @@
 n.d(t, {
     W: () => v,
-    Z: () => I
+    Z: () => I,
 });
 var r = n(255367);
 n(73800);
@@ -30,69 +30,73 @@ function I(e) {
         C = (0, s.ZP)(I),
         { canViewChannel: R, canConnect: P } = (0, i.cj)([_.Z], () => ({
             canViewChannel: _.Z.can(b.Plq.VIEW_CHANNEL, I),
-            canConnect: I.isPrivate() || _.Z.can(b.Plq.CONNECT, I)
+            canConnect: I.isPrivate() || _.Z.can(b.Plq.CONNECT, I),
         }));
     if (!R) return null;
     let w = () => {
             let e = (e) => {
-                (e.stopPropagation(), (0, f.X)(n.id), null == T || T({ action: 'OPEN_VOICE_GUILD' }), null == S || S());
+                e.stopPropagation(), (0, f.X)(n.id), null == T || T({ action: "OPEN_VOICE_GUILD" }), null == S || S();
             };
             return (0, r.jsx)(o.DY3, {
                 text: n.name,
-                'aria-label': !1,
+                "aria-label": !1,
                 children: (0, r.jsx)(u.Z, {
                     guild: n,
                     size: u.Z.Sizes.SMOL,
                     className: O.guildIcon,
-                    onClick: e
-                })
+                    onClick: e,
+                }),
             });
         },
         D = () => {
             if (!P)
                 return (0, r.jsx)(o.Text, {
-                    variant: 'text-xs/normal',
-                    color: 'text-secondary',
+                    variant: "text-xs/normal",
+                    color: "text-secondary",
                     lineClamp: 1,
-                    children: (0, r.jsx)(l.Z, { children: C })
+                    children: (0, r.jsx)(l.Z, { children: C }),
                 });
             let e = (e) => {
-                (e.stopPropagation(), a.default.selectVoiceChannel(I.id), (0, d.Kh)(I.id), null == T || T({ action: 'OPEN_VOICE_CHANNEL' }), null == S || S());
+                e.stopPropagation(),
+                    a.default.selectVoiceChannel(I.id),
+                    (0, d.Kh)(I.id),
+                    null == T || T({ action: "OPEN_VOICE_CHANNEL" }),
+                    null == S || S();
             };
             return (0, r.jsx)(o.P3F, {
                 onClick: e,
                 className: O.clickableText,
                 children: (0, r.jsx)(o.Text, {
-                    variant: 'text-xs/normal',
-                    color: 'text-secondary',
+                    variant: "text-xs/normal",
+                    color: "text-secondary",
                     lineClamp: 1,
-                    children: (0, r.jsx)(l.Z, { children: C })
-                })
+                    children: (0, r.jsx)(l.Z, { children: C }),
+                }),
             });
         },
         L = A !== E.lY.MODAL && A !== E.lY.MODAL_V2 && A !== E.lY.SIDEBAR;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(h.Z, { className: O.voiceChannelDivider }),
-            (0, r.jsxs)('div', {
+            (0, r.jsxs)("div", {
                 className: O.voiceChannel,
                 children: [
                     w(),
                     (0, r.jsx)(o.Fbu, {
-                        size: 'xxs',
-                        color: o.TVs.colors.TEXT_SECONDARY
+                        size: "xxs",
+                        color: o.TVs.colors.TEXT_SECONDARY,
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, r.jsxs)("div", {
                         className: O.voiceChannelText,
                         children: [
                             (0, r.jsx)(g.Z, {
                                 channel: I,
-                                size: 'xxs',
+                                size: "xxs",
                                 color: o.TVs.colors.TEXT_SECONDARY,
-                                className: O.voiceIcon
+                                className: O.voiceIcon,
                             }),
-                            D()
-                        ]
+                            D(),
+                        ],
                     }),
                     (0, r.jsx)(c.Z, {
                         users: N,
@@ -100,17 +104,17 @@ function I(e) {
                         channelId: I.id,
                         maxUsers: v,
                         size: o.EFr.SIZE_16,
-                        overflowCountColor: 'text-secondary',
+                        overflowCountColor: "text-secondary",
                         overflowCountClassName: O.voiceChannelOverflowCount,
                         onClickOverflow: (e) => {
-                            (e.stopPropagation(), null == T || T({ action: 'PRESS_VOICE_CHANNEL_AVATARS' }));
+                            e.stopPropagation(), null == T || T({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
                         },
                         onUserClick: (e) => e.stopPropagation(),
                         disableUserPopout: !!L || ((e) => e === t.id),
-                        'aria-label': y.intl.string(y.t.jNqDh4)
-                    })
-                ]
-            })
-        ]
+                        "aria-label": y.intl.string(y.t.jNqDh4),
+                    }),
+                ],
+            }),
+        ],
     });
 }

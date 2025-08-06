@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(481060),
@@ -16,7 +16,7 @@ function f(e) {
         m = (0, s.Z)({
             guildId: t.id,
             leaderboardId: u.z,
-            intervalOffset: 0
+            intervalOffset: 0,
         }),
         g = i.useMemo(() => {
             var e;
@@ -26,39 +26,39 @@ function f(e) {
         }, [m, n]);
     if (null == m || !g) return null;
     let E = () => {
-            ((h.current = !0), p(!0));
+            (h.current = !0), p(!0);
         },
         b = () => {
-            ((h.current = !1),
+            (h.current = !1),
                 setTimeout(() => {
                     h.current || p(!1);
-                }, 100));
+                }, 100);
         };
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)("div", {
         className: d.badge,
         onMouseEnter: E,
         onMouseLeave: b,
         children: (0, r.jsx)(o.yRy, {
             targetElementRef: f,
             animation: o.yRy.Animation.TRANSLATE,
-            align: 'center',
+            align: "center",
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
-            position: 'top',
+            position: "top",
             shouldShow: _,
             renderPopout: () =>
                 (0, r.jsx)(l.Z, {
                     guildId: t.id,
                     previewMode: !0,
                     source: a.Z.MEMBER_LIST,
-                    leaderboardId: m.leaderboard_id
+                    leaderboardId: m.leaderboard_id,
                 }),
             children: () =>
                 (0, r.jsx)(c.Z, {
                     leaderboard: m,
                     className: d.image,
-                    ref: f
-                })
-        })
+                    ref: f,
+                }),
+        }),
     });
 }

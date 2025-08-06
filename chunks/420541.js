@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => f }));
+r.r(t), r.d(t, { default: () => f });
 var n = r(255367),
     a = r(73800),
     i = r(597846),
@@ -12,16 +12,16 @@ let d = () => {
             t = a.useMemo(
                 () => ({
                     w: e.width,
-                    h: e.height
+                    h: e.height,
                 }),
-                [e]
+                [e],
             ),
             r = (0, s.Z)(t);
         return (
             (0, c.Z)(),
-            (0, n.jsx)('div', {
+            (0, n.jsx)("div", {
                 className: o.canvasWrapper,
-                id: 'simple-confetti-canvas',
+                id: "simple-confetti-canvas",
                 children: (0, n.jsx)(i.z, {
                     playing: r.playing,
                     size: t,
@@ -29,13 +29,13 @@ let d = () => {
                         minInterval: r.tickRate,
                         droppedFramesCallbackThreshold: 10,
                         droppedFramesResetTime: 2000,
-                        droppedFramesCallback: r.improvePerformance
+                        droppedFramesCallback: r.improvePerformance,
                     },
                     drawCallback: (e, t) => {
-                        (r.update(t), r.draw(e));
-                    }
-                })
+                        r.update(t), r.draw(e);
+                    },
+                }),
             })
         );
     },
-    f = () => ((0, u.kf)('ConfettiCanvasComponent') ? (0, n.jsx)(d, {}) : null);
+    f = () => ((0, u.kf)("ConfettiCanvasComponent") ? (0, n.jsx)(d, {}) : null);

@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => C }), t(953529), t(388685));
+t.d(n, { Z: () => C }), t(953529), t(388685);
 var i = t(255367),
     s = t(73800),
     a = t(442837),
@@ -22,17 +22,17 @@ function C(e) {
         v = (0, a.e7)([d.Z], () => d.Z.getAppealSignal()),
         f = (0, a.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
         [S, k] = s.useState(!1),
-        [A, Z] = s.useState(''),
+        [A, Z] = s.useState(""),
         L = s.useCallback((e) => {
             r.Z.dispatch({
-                type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
-                userInput: e
+                type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
+                userInput: e,
             });
         }, []),
         b = s.useCallback(async () => {
             if (null !== j)
                 try {
-                    (Z(''), await c.uR(j, v, f), null == N || N());
+                    Z(""), await c.uR(j, v, f), null == N || N();
                 } catch (n) {
                     var e;
                     Z((0, x.Zs)(null == (e = n.body) ? void 0 : e.code));
@@ -47,113 +47,113 @@ function C(e) {
                 children: [
                     (0, i.jsx)(l.X6q, {
                         className: p.title,
-                        variant: 'heading-xl/semibold',
-                        children: _.intl.string(_.t['C5q+pa'])
+                        variant: "heading-xl/semibold",
+                        children: _.intl.string(_.t["C5q+pa"]),
                     }),
                     (0, i.jsx)(l.Text, {
                         className: p.subtitle,
-                        color: 'header-secondary',
-                        variant: 'text-md/normal',
-                        children: _.intl.string(_.t['G2g/g4'])
+                        color: "header-secondary",
+                        variant: "text-md/normal",
+                        children: _.intl.string(_.t["G2g/g4"]),
                     }),
                     null != C &&
                         (0, i.jsx)(l.olH, {
                             className: p.closeButton,
-                            onClick: C
-                        })
-                ]
+                            onClick: C,
+                        }),
+                ],
             }),
             (0, i.jsxs)(l.hzk, {
                 className: n,
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)('ul', {
+                    (0, i.jsx)("ul", {
                         className: h.listContainer,
                         children: [(0, x.ox)(v), f]
                             .filter((e) => e.length > 0)
                             .map((e, n) =>
                                 (0, i.jsx)(
-                                    'li',
+                                    "li",
                                     {
                                         className: h.listItem,
                                         children: (0, i.jsx)(l.Text, {
-                                            tag: 'span',
-                                            variant: 'text-md/normal',
-                                            children: e
-                                        })
+                                            tag: "span",
+                                            variant: "text-md/normal",
+                                            children: e,
+                                        }),
                                     },
-                                    n
-                                )
-                            )
+                                    n,
+                                ),
+                            ),
                     }),
                     t &&
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: h.anchorContainer,
                             children: (0, i.jsx)(l.eee, {
                                 onClick: () => k((e) => !e),
                                 children: (0, i.jsx)(l.X6q, {
-                                    variant: 'heading-md/normal',
-                                    color: 'text-link',
-                                    children: f.length > 0 ? _.intl.string(_.t.tnE3bW) : _.intl.string(_.t.uoQFIi)
-                                })
-                            })
+                                    variant: "heading-md/normal",
+                                    color: "text-link",
+                                    children: f.length > 0 ? _.intl.string(_.t.tnE3bW) : _.intl.string(_.t.uoQFIi),
+                                }),
+                            }),
                         }),
                     S &&
                         t &&
-                        (0, i.jsx)('div', {
+                        (0, i.jsx)("div", {
                             className: h.inputContainer,
                             children: (0, i.jsx)(l.Kx8, {
                                 value: f,
-                                onChange: L
-                            })
+                                onChange: L,
+                            }),
                         }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: p.policyContainer,
                         children: (0, i.jsx)(l.Text, {
-                            variant: 'text-md/semibold',
-                            children: E
-                        })
+                            variant: "text-md/semibold",
+                            children: E,
+                        }),
                     }),
                     (0, i.jsx)(l.Text, {
-                        variant: 'text-xs/medium',
-                        color: 'header-secondary',
+                        variant: "text-xs/medium",
+                        color: "header-secondary",
                         className: h.footerText,
-                        children: _.intl.string(_.t.d6qgY2)
-                    })
-                ]
+                        children: _.intl.string(_.t.d6qgY2),
+                    }),
+                ],
             }),
             (0, i.jsxs)(l.mzw, {
                 direction: o.Z.Direction.VERTICAL,
                 children: [
-                    '' !== A &&
+                    "" !== A &&
                         (0, i.jsx)(l.Text, {
                             className: h.errorText,
-                            variant: 'text-lg/normal',
-                            color: 'text-danger',
-                            children: A
+                            variant: "text-lg/normal",
+                            color: "text-danger",
+                            children: A,
                         }),
-                    (0, i.jsx)('div', {
+                    (0, i.jsx)("div", {
                         className: h.buttonContainer,
                         children: (0, i.jsxs)(l.hE2, {
-                            direction: 'horizontal-reverse',
+                            direction: "horizontal-reverse",
                             children: [
                                 (0, i.jsx)(l.zxk, {
-                                    variant: 'secondary',
-                                    text: _.intl.string(_.t['13/7kZ']),
+                                    variant: "secondary",
+                                    text: _.intl.string(_.t["13/7kZ"]),
                                     onClick: g,
-                                    disabled: T
+                                    disabled: T,
                                 }),
                                 (0, i.jsx)(l.zxk, {
-                                    variant: 'critical-primary',
+                                    variant: "critical-primary",
                                     text: _.intl.string(_.t.geKm7u),
                                     onClick: b,
-                                    loading: T
-                                })
-                            ]
-                        })
-                    })
-                ]
-            })
-        ]
+                                    loading: T,
+                                }),
+                            ],
+                        }),
+                    }),
+                ],
+            }),
+        ],
     });
 }

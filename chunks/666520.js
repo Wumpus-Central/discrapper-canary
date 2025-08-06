@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(35282));
+n.d(t, { Z: () => p }), n(35282);
 var r = n(255367),
     l = n(73800),
     o = n(442837),
@@ -21,28 +21,29 @@ function p(e) {
     }, [t, g]),
     g)
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsx)("div", {
               className: n,
               children: (0, r.jsx)(i.lcI, {
                   ref: h,
                   className: f.textarea,
                   disabled: b,
-                  placeholder: b ? u.intl.string(u.t['WLKx//']) : u.intl.string(u.t.VBhOe3),
-                  'aria-label': u.intl.string(u.t.PbMNh4),
+                  placeholder: b ? u.intl.string(u.t["WLKx//"]) : u.intl.string(u.t.VBhOe3),
+                  "aria-label": u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let t = e.currentTarget.value;
-                      (null != j ? j : '') !== t && (null == m || m(), a.Z.updateNote(p, t));
+                      (null != j ? j : "") !== t && (null == m || m(), a.Z.updateNote(p, t));
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which)
                           if (e.shiftKey) {
                               var t;
-                              (null != (t = e.currentTarget.value.match(/\n/g)) ? t : []).length >= 5 && e.preventDefault();
-                          } else (e.preventDefault(), e.currentTarget.blur());
+                              (null != (t = e.currentTarget.value.match(/\n/g)) ? t : []).length >= 5 &&
+                                  e.preventDefault();
+                          } else e.preventDefault(), e.currentTarget.blur();
                       else e.which === d.yXg.SPACE && e.stopPropagation();
                   },
                   defaultValue: null != j ? j : void 0,
-                  maxLength: d.vuo
-              })
+                  maxLength: d.vuo,
+              }),
           });
 }

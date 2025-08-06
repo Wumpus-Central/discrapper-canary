@@ -14,24 +14,24 @@ function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
+        "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
+                }),
             )),
             r.forEach(function (t) {
                 var r;
-                ((r = n[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
-                              writable: !0
+                              writable: !0,
                           })
-                        : (e[t] = r));
-            }));
+                        : (e[t] = r);
+            });
     }
     return e;
 }
@@ -60,9 +60,9 @@ function f(e) {
             (e) => {
                 b(h(p({}, x), { triggerMetadata: h(p({}, x.triggerMetadata), { allowList: e }) }));
             },
-            [b, x]
+            [b, x],
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)("div", {
         className: g.cardContentsContainer,
         children: [
             (0, r.jsxs)(c.Z, {
@@ -71,24 +71,26 @@ function f(e) {
                 children: [
                     (0, r.jsx)(a.Z, {
                         rule: x,
-                        onChangeRule: b
+                        onChangeRule: b,
                     }),
                     (0, r.jsx)(l.Z, {
                         onChange: j,
                         initialValue: null == (t = x.triggerMetadata) ? void 0 : t.allowList,
                         maxWordCount: u.I3,
-                        collapsed: (null == (n = x.triggerMetadata) ? void 0 : n.allowList) == null || (null == (f = x.triggerMetadata) ? void 0 : f.allowList.length) === 0
-                    })
-                ]
+                        collapsed:
+                            (null == (n = x.triggerMetadata) ? void 0 : n.allowList) == null ||
+                            (null == (f = x.triggerMetadata) ? void 0 : f.allowList.length) === 0,
+                    }),
+                ],
             }),
             (0, r.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
             (0, r.jsx)(c.Z, {
                 step: 2,
-                header: m.intl.string(m.t['18TOiY']),
+                header: m.intl.string(m.t["18TOiY"]),
                 children: (0, r.jsx)(s.Z, {
                     rule: x,
-                    onChangeRule: b
-                })
+                    onChangeRule: b,
+                }),
             }),
             (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
             (0, r.jsx)(c.Z, {
@@ -96,9 +98,9 @@ function f(e) {
                 header: m.intl.string(m.t.eq3gjo),
                 children: (0, r.jsx)(o.Z, {
                     rule: x,
-                    onChangeRule: b
-                })
-            })
-        ]
+                    onChangeRule: b,
+                }),
+            }),
+        ],
     });
 }

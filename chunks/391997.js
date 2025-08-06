@@ -1,6 +1,6 @@
 n.d(t, {
     p: () => _,
-    t: () => p
+    t: () => p,
 });
 var r = n(608748),
     i = n(388388),
@@ -14,20 +14,35 @@ var r = n(608748),
         attributes: !0,
         characterData: !0,
         childList: !0,
-        subtree: !0
+        subtree: !0,
     },
-    u = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
+    u = [
+        "resize",
+        "load",
+        "transitionend",
+        "animationend",
+        "animationstart",
+        "animationiteration",
+        "keyup",
+        "keydown",
+        "mouseup",
+        "mousedown",
+        "mouseover",
+        "mouseout",
+        "blur",
+        "focus",
+    ],
     d = function (e) {
-        return (void 0 === e && (e = 0), Date.now() + e);
+        return void 0 === e && (e = 0), Date.now() + e;
     },
     f = !1,
     _ = new ((function () {
         function e() {
             var e = this;
-            ((this.stopped = !0),
+            (this.stopped = !0),
                 (this.listener = function () {
                     return e.schedule();
-                }));
+                });
         }
         return (
             (e.prototype.run = function (e) {
@@ -47,14 +62,14 @@ var r = n(608748),
                 }
             }),
             (e.prototype.schedule = function () {
-                (this.stop(), this.run());
+                this.stop(), this.run();
             }),
             (e.prototype.observe = function () {
                 var e = this,
                     t = function () {
                         return e.observer && e.observer.observe(document.body, c);
                     };
-                document.body ? t() : i.C.addEventListener('DOMContentLoaded', t);
+                document.body ? t() : i.C.addEventListener("DOMContentLoaded", t);
             }),
             (e.prototype.start = function () {
                 var e = this;
@@ -79,5 +94,5 @@ var r = n(608748),
         );
     })())(),
     p = function (e) {
-        (!a && e > 0 && _.start(), (a += e) || _.stop());
+        !a && e > 0 && _.start(), (a += e) || _.stop();
     };
